@@ -1,61 +1,25 @@
-.class public final LX/2su;
-.super Ljava/lang/Object;
+.class public abstract LX/2sU;
+.super LX/2sT;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/util/Set;
-
-.field public final A01:Ljava/util/Set;
-
-.field public final A02:LX/1Nw;
+.field public final A00:LX/3o5;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public constructor <init>(LX/3o5;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/2sT;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2su;->A02:LX/1Nw;
+    iput-object p1, p0, LX/2sU;->A00:LX/3o5;
 
     .line 4
     .line 5
-    sget v0, LX/2eq;->A4m:I
-
-    .line 6
-    .line 7
-    invoke-static {v0}, LX/1z6;->A0Y(I)Ljava/util/Set;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/2su;->A00:Ljava/util/Set;
-
-    .line 12
-    .line 13
-    sget v0, LX/2eq;->A70:I
-
-    .line 14
-    .line 15
-    invoke-static {v0}, LX/1z6;->A0Y(I)Ljava/util/Set;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, LX/2su;->A01:Ljava/util/Set;
-
-    .line 20
-    .line 21
     return-void
 .end method

@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/6Ly;
 
 
 # static fields
@@ -12,7 +11,7 @@
 
 .field public static final A06:Lcom/google/android/exoplayer2/video/ColorInfo;
 
-.field public static final CREATOR:LX/54Y;
+.field public static final CREATOR:LX/5H6;
 
 
 # instance fields
@@ -70,23 +69,19 @@
 
     .line 17
     .line 18
-    const/16 v1, 0xd
+    new-instance v0, LX/5H5;
 
     .line 19
     .line 20
-    new-instance v0, LX/6Pm;
+    invoke-direct {v0}, LX/5H5;-><init>()V
 
     .line 21
     .line 22
-    invoke-direct {v0, v1}, LX/6Pm;-><init>(I)V
-
     .line 23
+    sput-object v0, Lcom/google/android/exoplayer2/video/ColorInfo;->CREATOR:LX/5H6;
+
     .line 24
     .line 25
-    sput-object v0, Lcom/google/android/exoplayer2/video/ColorInfo;->CREATOR:LX/54Y;
-
-    .line 26
-    .line 27
     return-void
 .end method
 
@@ -135,7 +130,7 @@
 
     .line 20
     .line 21
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 22
     .line 23
@@ -492,7 +487,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -673,7 +668,7 @@
 
     .line 85
     .line 86
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 87
     .line 88
@@ -690,7 +685,7 @@
 
     .line 94
     .line 95
-    invoke-static {v0, v2}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 96
     .line 97
@@ -848,7 +843,7 @@
 
     .line 16
     .line 17
-    invoke-static {v1}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v1}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 18
     .line 19

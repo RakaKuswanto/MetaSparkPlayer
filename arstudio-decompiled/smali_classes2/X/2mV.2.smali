@@ -1,17 +1,17 @@
-.class public interface abstract LX/2mV;
+.class public final LX/2mv;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ADW()LX/44F;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract ADr()LX/3II;
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract AGx()LX/3wm;
-.end method
-
-.method public abstract AKL()LX/2yp;
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

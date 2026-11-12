@@ -1,31 +1,63 @@
 .class public final LX/4Of;
-.super Ljava/lang/Object;
+.super Landroid/database/DataSetObserver;
 .source ""
 
 
 # instance fields
-.field public final synthetic A00:LX/4Og;
-
-.field public final synthetic A01:LX/4Oe;
+.field public final synthetic A00:LX/4Oa;
 
 
 # direct methods
-.method public constructor <init>(LX/4Og;LX/4Oe;)V
+.method public constructor <init>(LX/4Oa;)V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/4Of;->A01:LX/4Oe;
+    iput-object p1, p0, LX/4Of;->A00:LX/4Oa;
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/4Of;->A00:LX/4Og;
+    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 5
-    .line 6
-    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onChanged()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/4Of;->A00:LX/4Oa;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    iput-boolean v0, v1, LX/4Oa;->A06:Z
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final onInvalidated()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/4Of;->A00:LX/4Oa;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    iput-boolean v0, v1, LX/4Oa;->A06:Z
+
+    .line 4
+    .line 5
     return-void
 .end method

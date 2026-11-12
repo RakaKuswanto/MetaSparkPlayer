@@ -13,50 +13,82 @@
 
 
 # direct methods
+.method public static synthetic $values()[Lcom/google/common/base/Functions$ToStringFunction;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    new-array v2, v0, [Lcom/google/common/base/Functions$ToStringFunction;
+
+    .line 2
+    .line 3
+    sget-object v1, Lcom/google/common/base/Functions$ToStringFunction;->INSTANCE:Lcom/google/common/base/Functions$ToStringFunction;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
     .locals 3
 
     .line 0
-    const-string v0, "INSTANCE"
+    const-string v2, "INSTANCE"
 
     .line 1
     .line 2
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 3
-    new-instance v1, Lcom/google/common/base/Functions$ToStringFunction;
+    new-instance v0, Lcom/google/common/base/Functions$ToStringFunction;
 
     .line 4
     .line 5
-    invoke-direct {v1, v0, v2}, Lcom/google/common/base/Functions$ToStringFunction;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/common/base/Functions$ToStringFunction;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v1, Lcom/google/common/base/Functions$ToStringFunction;->INSTANCE:Lcom/google/common/base/Functions$ToStringFunction;
+    sput-object v0, Lcom/google/common/base/Functions$ToStringFunction;->INSTANCE:Lcom/google/common/base/Functions$ToStringFunction;
 
     .line 9
     .line 10
-    const/4 v0, 0x1
+    invoke-static {}, Lcom/google/common/base/Functions$ToStringFunction;->$values()[Lcom/google/common/base/Functions$ToStringFunction;
 
     .line 11
-    new-array v0, v0, [Lcom/google/common/base/Functions$ToStringFunction;
-
     .line 12
     .line 13
-    aput-object v1, v0, v2
+    move-result-object v0
 
     .line 14
-    .line 15
     sput-object v0, Lcom/google/common/base/Functions$ToStringFunction;->$VALUES:[Lcom/google/common/base/Functions$ToStringFunction;
 
+    .line 15
     .line 16
-    .line 17
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
@@ -69,6 +101,14 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/google/common/base/Functions$ToStringFunction;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
     .line 0
     const-class v0, Lcom/google/common/base/Functions$ToStringFunction;
@@ -117,6 +157,14 @@
 # virtual methods
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     .line 268435456
     invoke-virtual {p0, p1}, Lcom/google/common/base/Functions$ToStringFunction;->apply(Ljava/lang/Object;)Ljava/lang/String;
@@ -132,6 +180,14 @@
 
 .method public apply(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

@@ -1,23 +1,17 @@
-.class public interface abstract LX/5bV;
+.class public abstract LX/5bV;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ATA()Z
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract Aml(J)V
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract getHeight()I
-.end method
-
-.method public abstract getWidth()I
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract swapBuffers()V
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

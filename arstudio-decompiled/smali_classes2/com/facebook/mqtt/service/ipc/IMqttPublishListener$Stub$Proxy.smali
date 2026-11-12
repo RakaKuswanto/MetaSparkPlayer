@@ -53,62 +53,63 @@
 
     .line 4
     :try_start_0
-    const-string v0, "com.facebook.mqtt.service.ipc.IMqttPublishListener"
+    const-string/jumbo v0, "com.facebook.mqtt.service.ipc.IMqttPublishListener"
 
     .line 5
     .line 6
+    .line 7
     invoke-virtual {v4, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 7
     .line 8
     .line 9
+    .line 10
     invoke-virtual {v4, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 10
     .line 11
     .line 12
+    .line 13
     invoke-virtual {v4, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 13
     .line 14
     .line 15
+    .line 16
     iget-object v3, p0, Lcom/facebook/mqtt/service/ipc/IMqttPublishListener$Stub$Proxy;->A00:Landroid/os/IBinder;
 
-    .line 16
     .line 17
+    .line 18
     const/4 v2, 0x2
 
-    .line 18
+    .line 19
     const/4 v1, 0x0
 
-    .line 19
+    .line 20
     const/4 v0, 0x1
 
-    .line 20
+    .line 21
     invoke-interface {v3, v2, v4, v1, v0}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
     .line 22
     .line 23
+    .line 24
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 24
     .line 25
     .line 26
+    .line 27
     return-void
 
-    .line 27
+    .line 28
     :catchall_0
     move-exception v0
 
-    .line 28
+    .line 29
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 29
     .line 30
     .line 31
+    .line 32
     throw v0
 .end method
 
@@ -125,54 +126,55 @@
 
     .line 4
     :try_start_0
-    const-string v0, "com.facebook.mqtt.service.ipc.IMqttPublishListener"
+    const-string/jumbo v0, "com.facebook.mqtt.service.ipc.IMqttPublishListener"
 
     .line 5
     .line 6
+    .line 7
     invoke-virtual {v3, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 7
     .line 8
     .line 9
+    .line 10
     invoke-virtual {v3, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 10
     .line 11
     .line 12
+    .line 13
     iget-object v2, p0, Lcom/facebook/mqtt/service/ipc/IMqttPublishListener$Stub$Proxy;->A00:Landroid/os/IBinder;
 
-    .line 13
     .line 14
+    .line 15
     const/4 v1, 0x0
 
-    .line 15
+    .line 16
     const/4 v0, 0x1
 
-    .line 16
+    .line 17
     invoke-interface {v2, v0, v3, v1, v0}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
-    .line 20
     .line 21
     .line 22
+    .line 23
     return-void
 
-    .line 23
+    .line 24
     :catchall_0
     move-exception v0
 
-    .line 24
+    .line 25
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
-    .line 25
     .line 26
     .line 27
+    .line 28
     throw v0
 .end method
 
@@ -189,72 +191,73 @@
 
     .line 4
     :try_start_0
-    const-string v0, "com.facebook.mqtt.service.ipc.IMqttPublishListener"
+    const-string/jumbo v0, "com.facebook.mqtt.service.ipc.IMqttPublishListener"
 
     .line 5
     .line 6
+    .line 7
     invoke-virtual {v4, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 7
     .line 8
     .line 9
+    .line 10
     invoke-virtual {v4, p1}, Landroid/os/Parcel;->writeInt(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     .line 11
     .line 12
+    .line 13
     const/4 v3, 0x1
 
-    .line 13
-    invoke-static {p2}, LX/001;->A1L(I)Z
-
     .line 14
+    invoke-static {p2}, LX/001;->A1K(I)Z
+
     .line 15
     .line 16
+    .line 17
     move-result v0
 
-    .line 17
+    .line 18
     :try_start_1
     invoke-virtual {v4, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 18
     .line 19
     .line 20
+    .line 21
     iget-object v2, p0, Lcom/facebook/mqtt/service/ipc/IMqttPublishListener$Stub$Proxy;->A00:Landroid/os/IBinder;
 
-    .line 21
     .line 22
+    .line 23
     const/4 v1, 0x3
 
-    .line 23
+    .line 24
     const/4 v0, 0x0
 
-    .line 24
+    .line 25
     invoke-interface {v2, v1, v4, v0, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 25
     .line 26
     .line 27
+    .line 28
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 28
     .line 29
     .line 30
+    .line 31
     return-void
 
-    .line 31
+    .line 32
     :catchall_0
     move-exception v0
 
-    .line 32
+    .line 33
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 33
     .line 34
     .line 35
+    .line 36
     throw v0
 .end method

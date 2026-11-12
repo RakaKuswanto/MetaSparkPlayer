@@ -1,25 +1,69 @@
-.class public final LX/3KW;
+.class public abstract LX/3KW;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nw;
-
-
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 0
+.method public static final A00(LX/3Nf;LX/3Jn;)Z
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p1, :cond_1
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/3KW;->A00:LX/1Nw;
+    if-eqz p0, :cond_1
 
+    .line 3
     .line 4
+    invoke-static {p0}, LX/0X7;->A0A(LX/3Nf;)Landroid/graphics/Bitmap;
+
     .line 5
-    return-void
+    .line 6
+    .line 7
+    move-result-object v2
+
+    .line 8
+    const/4 p0, 0x1
+
+    .line 9
+    invoke-virtual {v2, p0}, Landroid/graphics/Bitmap;->setHasAlpha(Z)V
+
+    .line 10
+    .line 11
+    .line 12
+    iget-boolean v1, p1, LX/3Jn;->A01:Z
+
+    .line 13
+    .line 14
+    iget-boolean v0, p1, LX/3Jn;->A00:Z
+
+    .line 15
+    .line 16
+    if-eqz v1, :cond_0
+
+    .line 17
+    .line 18
+    invoke-static {v2, v0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
+
+    .line 19
+    .line 20
+    .line 21
+    return p0
+
+    .line 22
+    :cond_0
+    invoke-static {v2, v0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircle(Landroid/graphics/Bitmap;Z)V
+
+    .line 23
+    .line 24
+    .line 25
+    return p0
+
+    .line 26
+    :cond_1
+    const/4 p0, 0x0
+
+    .line 27
+    return p0
 .end method

@@ -3,24 +3,24 @@
 .source ""
 
 # interfaces
-.implements LX/5U9;
+.implements LX/67W;
 
 
 # instance fields
-.field public final eventInput:LX/5UC;
+.field public final eventInput:LX/6Ah;
 
 .field public final mHybridData:Lcom/facebook/jni/HybridData;
 
 
 # direct methods
-.method public constructor <init>(LX/5UC;)V
+.method public constructor <init>(LX/6Ah;)V
     .locals 1
 
     .line 0
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -30,7 +30,7 @@
     .line 5
     .line 6
     .line 7
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputHybrid;->eventInput:LX/5UC;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputHybrid;->eventInput:LX/6Ah;
 
     .line 8
     .line 9
@@ -73,7 +73,7 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputHybrid;->eventInput:LX/5UC;
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputHybrid;->eventInput:LX/6Ah;
 
     .line 1
     .line 2
@@ -84,7 +84,7 @@
 
     .line 4
     .line 5
-    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/5U9;
+    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/67W;
 
     .line 6
     .line 7
@@ -107,7 +107,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -124,7 +124,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputHybrid;->eventInput:LX/5UC;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputHybrid;->eventInput:LX/6Ah;
 
     .line 1
     .line 2
@@ -132,7 +132,7 @@
 
     .line 3
     .line 4
-    iput-object p0, v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/5U9;
+    iput-object p0, v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/67W;
 
     .line 5
     .line 6
@@ -146,7 +146,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -166,7 +166,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

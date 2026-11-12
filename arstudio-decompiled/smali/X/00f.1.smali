@@ -1,115 +1,33 @@
-.class public final LX/00f;
+.class public abstract LX/00f;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/07T;
-
-
-# instance fields
-.field public A00:Ljava/lang/Object;
-
-.field public final A01:I
-
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput p2, p0, LX/00f;->A01:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/00f;->A00:Ljava/lang/Object;
-
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final AkV()Landroid/os/Bundle;
+.method public abstract A03(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
+.end method
+
+.method public A04(Landroid/content/Context;Ljava/lang/Object;)LX/00e;
     .locals 1
 
-    .line 0
-    iget v0, p0, LX/00f;->A01:I
+    const/4 v0, 0x0
 
-    .line 1
-    .line 2
-    packed-switch v0, :pswitch_data_0
-
-    .line 3
-    .line 4
-    .line 5
-    iget-object v0, p0, LX/00f;->A00:Ljava/lang/Object;
-
-    .line 6
-    .line 7
-    check-cast v0, LX/0Sf;
-
-    .line 8
-    .line 9
-    invoke-virtual {v0}, LX/0Sf;->A0P()Landroid/os/Bundle;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
     return-object v0
+.end method
 
-    .line 14
-    :pswitch_0
-    iget-object v0, p0, LX/00f;->A00:Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    check-cast v0, Landroidx/activity/ComponentActivity;
-
-    .line 17
-    .line 18
-    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->A03()Landroid/os/Bundle;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    return-object v0
-
-    .line 23
-    :pswitch_1
-    iget-object v0, p0, LX/00f;->A00:Ljava/lang/Object;
-
-    .line 24
-    .line 25
-    check-cast v0, Landroidx/fragment/app/FragmentActivity;
-
-    .line 26
-    .line 27
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->A0D()Landroid/os/Bundle;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    return-object v0
-
-    .line 32
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+.method public abstract A05(Landroid/content/Intent;I)Ljava/lang/Object;
 .end method

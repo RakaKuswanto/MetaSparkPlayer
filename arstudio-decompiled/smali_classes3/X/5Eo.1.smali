@@ -1,128 +1,152 @@
 .class public final LX/5Eo;
-.super Ljava/lang/Object;
+.super LX/5Ep;
 .source ""
-
-# interfaces
-.implements LX/5Er;
 
 
 # instance fields
-.field public final A00:LX/5Er;
+.field public final A00:LX/5Ey;
 
-.field public final A01:LX/5Ex;
+.field public final A01:LX/6Vp;
+
+.field public final A02:LX/6Vp;
+
+.field public final A03:Z
 
 
 # direct methods
-.method public constructor <init>(LX/5Er;LX/5Ex;)V
-    .locals 0
+.method public constructor <init>(LX/5Ey;LX/5EI;LX/5Ez;LX/6Vp;LX/6Vp;JJJJJJJZZ)V
+    .locals 22
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p3
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/5Eo;->A00:LX/5Er;
-
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/5Eo;->A01:LX/5Ex;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ANj(LX/0TQ;)J
-    .locals 5
-
-    .line 0
-    iget-object v0, p0, LX/5Eo;->A00:LX/5Er;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/5Er;->ANj(LX/0TQ;)J
+    if-eqz p3, :cond_1
 
     .line 3
     .line 4
-    .line 5
-    move-result-wide v3
+    iget-object v4, v0, LX/5Ez;->A02:Ljava/util/List;
 
+    .line 5
     .line 6
-    const-wide/16 v1, 0x2
+    iget v5, v0, LX/5Ez;->A00:I
 
     .line 7
     .line 8
-    cmp-long v0, v1, v3
+    iget-wide v0, v0, LX/5Ez;->A01:J
 
     .line 9
     .line 10
-    if-nez v0, :cond_1
+    :goto_0
+    move-wide/from16 v12, p12
 
     .line 11
     .line 12
-    iget-object v0, p0, LX/5Eo;->A01:LX/5Ex;
+    move-wide/from16 v8, p8
 
     .line 13
     .line 14
-    iget-object v0, v0, LX/5Ez;->A00:Ljava/lang/String;
+    move-object/from16 v2, p0
 
     .line 15
     .line 16
-    invoke-interface {p1, v0}, LX/0TQ;->ABo(Ljava/lang/String;)Ljava/lang/String;
+    move-wide/from16 v14, p14
 
     .line 17
     .line 18
-    .line 19
-    move-result-object v1
+    move-object/from16 v3, p2
 
+    .line 19
     .line 20
-    if-nez v1, :cond_0
+    move-wide/from16 v16, p16
 
     .line 21
     .line 22
-    const-string v1, ""
+    move-wide/from16 v18, p18
 
     .line 23
     .line 24
-    :cond_0
-    const-string v0, "network"
+    move-wide/from16 v6, p6
 
     .line 25
     .line 26
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-wide/from16 v10, p10
 
     .line 27
     .line 28
-    .line 29
-    move-result v0
+    move-wide/from16 v20, v0
 
+    .line 29
     .line 30
-    if-eqz v0, :cond_1
+    invoke-direct/range {v2 .. v21}, LX/5Ep;-><init>(LX/5EI;Ljava/util/List;IJJJJJJJJ)V
 
     .line 31
     .line 32
-    const-wide/16 v0, 0x1
-
     .line 33
-    .line 34
-    return-wide v0
+    move-object/from16 v0, p4
 
+    .line 34
     .line 35
-    :cond_1
-    const-wide/16 v0, 0x0
+    iput-object v0, v2, LX/5Eo;->A01:LX/6Vp;
 
     .line 36
     .line 37
-    return-wide v0
-.end method
+    move-object/from16 v0, p5
 
-.method public final getName()Ljava/lang/String;
-    .locals 1
+    .line 38
+    .line 39
+    iput-object v0, v2, LX/5Eo;->A02:LX/6Vp;
 
-    const-string v0, "is_action_id_success_and_origin_network"
+    .line 40
+    .line 41
+    move-object/from16 v0, p1
 
-    return-object v0
+    .line 42
+    .line 43
+    iput-object v0, v2, LX/5Eo;->A00:LX/5Ey;
+
+    .line 44
+    .line 45
+    if-eqz p1, :cond_0
+
+    .line 46
+    .line 47
+    if-eqz p20, :cond_0
+
+    .line 48
+    .line 49
+    iget-object v0, v2, LX/5Ep;->A06:Ljava/util/List;
+
+    .line 50
+    .line 51
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 52
+    .line 53
+    .line 54
+    :cond_0
+    move/from16 v0, p21
+
+    .line 55
+    .line 56
+    iput-boolean v0, v2, LX/5Eo;->A03:Z
+
+    .line 57
+    .line 58
+    return-void
+
+    .line 59
+    :cond_1
+    const/4 v4, 0x0
+
+    .line 60
+    const/4 v5, 0x0
+
+    .line 61
+    const-wide/16 v0, 0x0
+
+    .line 62
+    .line 63
+    goto :goto_0
 .end method

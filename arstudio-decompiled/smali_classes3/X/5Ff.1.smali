@@ -1,36 +1,17 @@
 .class public final LX/5Ff;
-.super Ljava/lang/Throwable;
+.super Ljava/lang/Exception;
 .source ""
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
-
-    .line 0
-    const-string v0, "Failure occurred while trying to finish a future."
-
-    .line 1
-    .line 2
-    invoke-direct {p0, v0}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
     .locals 0
 
     .line 0
-    monitor-enter p0
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     .line 1
-    monitor-exit p0
-
     .line 2
-    return-object p0
+    .line 3
+    return-void
 .end method

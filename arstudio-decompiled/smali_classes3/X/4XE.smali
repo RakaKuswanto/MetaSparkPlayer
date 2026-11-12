@@ -1,27 +1,24 @@
-.class public LX/4XE;
-.super Ljava/lang/Object;
+.class public final LX/4XE;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source ""
-
-# interfaces
-.implements LX/4XF;
 
 
 # instance fields
-.field public final synthetic A00:LX/4X0;
+.field public final A00:Landroid/graphics/drawable/Drawable$ConstantState;
 
 
 # direct methods
-.method public constructor <init>(LX/4X0;)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable$ConstantState;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4XE;->A00:LX/4X0;
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/4XE;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
+
     .line 4
     .line 5
     return-void
@@ -29,15 +26,15 @@
 
 
 # virtual methods
-.method public final AC8()I
+.method public final canApplyTheme()Z
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
+    iget-object v0, p0, LX/4XE;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/4X0;->A02(LX/4X0;)I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->canApplyTheme()Z
 
     .line 3
     .line 4
@@ -48,15 +45,15 @@
     return v0
 .end method
 
-.method public final AC9()I
+.method public final getChangingConfigurations()I
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
+    iget-object v0, p0, LX/4XE;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/4X0;->A03(LX/4X0;)I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
 
     .line 3
     .line 4
@@ -67,154 +64,125 @@
     return v0
 .end method
 
-.method public final ACA()I
-    .locals 1
+.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 3
+
+    .line 536870912
+    new-instance v2, LX/4XO;
+
+    .line 536870913
+    .line 536870914
+    invoke-direct {v2}, LX/4XO;-><init>()V
+
+    .line 536870915
+    .line 536870916
+    .line 536870917
+    iget-object v0, p0, LX/4XE;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
+
+    .line 536870918
+    .line 536870919
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
+
+    .line 536870920
+    .line 536870921
+    .line 536870922
+    move-result-object v1
+
+    .line 536870923
+    iput-object v1, v2, LX/4X8;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 536870924
+    .line 536870925
+    iget-object v0, v2, LX/4XO;->A03:Landroid/graphics/drawable/Drawable$Callback;
+
+    .line 536870926
+    .line 536870927
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    .line 536870928
+    .line 536870929
+    .line 536870930
+    return-object v2
+.end method
+
+.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+    .locals 3
+
+    .line 268435456
+    new-instance v2, LX/4XO;
+
+    .line 268435457
+    .line 268435458
+    invoke-direct {v2}, LX/4XO;-><init>()V
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    iget-object v0, p0, LX/4XE;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
+
+    .line 268435462
+    .line 268435463
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    move-result-object v1
+
+    .line 268435467
+    iput-object v1, v2, LX/4X8;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 268435468
+    .line 268435469
+    iget-object v0, v2, LX/4XO;->A03:Landroid/graphics/drawable/Drawable$Callback;
+
+    .line 268435470
+    .line 268435471
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    .line 268435472
+    .line 268435473
+    .line 268435474
+    return-object v2
+.end method
+
+.method public final newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
+    new-instance v2, LX/4XO;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/4X0;->A04(LX/4X0;)I
+    invoke-direct {v2}, LX/4XO;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    move-result v0
+    iget-object v0, p0, LX/4XE;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
 
     .line 6
-    return v0
-.end method
+    .line 7
+    invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
-.method public final ACB()[I
-    .locals 1
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
 
-    .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
+    .line 11
+    iput-object v1, v2, LX/4X8;->A00:Landroid/graphics/drawable/Drawable;
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/4X0;->A0F(LX/4X0;)[I
+    .line 12
+    .line 13
+    iget-object v0, v2, LX/4XO;->A03:Landroid/graphics/drawable/Drawable$Callback;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    .line 14
+    .line 15
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 6
-    return-object v0
-.end method
-
-.method public final ACC()I
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/4X0;->A05(LX/4X0;)I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final AMv()Landroid/view/textclassifier/TextClassifier;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/4X0;->A06(LX/4X0;)Landroid/view/textclassifier/TextClassifier;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final Al9(IIII)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p1, p2, p3, p4}, LX/4X0;->A0D(LX/4X0;IIII)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final AlA([II)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p1, p2}, LX/4X0;->A0E(LX/4X0;[II)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final AlB(I)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p1}, LX/4X0;->A0C(LX/4X0;I)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public Alo(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Am9(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AnL(Landroid/view/textclassifier/TextClassifier;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4XE;->A00:LX/4X0;
-
-    .line 1
-    .line 2
-    invoke-static {p1, v0}, LX/4X0;->A08(Landroid/view/textclassifier/TextClassifier;LX/4X0;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    .line 16
+    .line 17
+    .line 18
+    return-object v2
 .end method

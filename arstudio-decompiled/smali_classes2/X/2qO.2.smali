@@ -4,14 +4,20 @@
 
 
 # instance fields
-.field public final A00:Landroid/util/SparseArray;
+.field public A00:I
 
-.field public final A01:LX/0Gk;
+.field public A01:I
+
+.field public A02:J
+
+.field public A03:J
+
+.field public A04:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,30 +25,37 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1z6;->A06()LX/0Gk;
+    const/4 v0, -0x1
 
     .line 4
+    iput v0, p0, LX/2qO;->A01:I
+
     .line 5
     .line 6
-    move-result-object v0
+    iput v0, p0, LX/2qO;->A00:I
 
     .line 7
-    iput-object v0, p0, LX/2qO;->A01:LX/0Gk;
-
     .line 8
+    const-wide/16 v0, -0x1
+
     .line 9
-    new-instance v0, Landroid/util/SparseArray;
-
     .line 10
-    .line 11
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+    iput-wide v0, p0, LX/2qO;->A02:J
 
+    .line 11
     .line 12
+    iput-wide v0, p0, LX/2qO;->A03:J
+
     .line 13
     .line 14
-    iput-object v0, p0, LX/2qO;->A00:Landroid/util/SparseArray;
+    const-string/jumbo v0, "not set"
 
     .line 15
     .line 16
+    .line 17
+    iput-object v0, p0, LX/2qO;->A04:Ljava/lang/String;
+
+    .line 18
+    .line 19
     return-void
 .end method

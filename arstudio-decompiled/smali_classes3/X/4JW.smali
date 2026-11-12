@@ -1,18 +1,19 @@
-.class public final LX/4JW;
+.class public abstract LX/4JW;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4JU;
-
 
 # instance fields
-.field public final A00:LX/4Jo;
+.field public final A00:LX/4JU;
+
+.field public final A01:LX/4rj;
+
+.field public final A02:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(LX/4Jo;)V
-    .locals 0
+.method public constructor <init>(LX/4rj;LX/4JV;)V
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -20,68 +21,46 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4JW;->A00:LX/4Jo;
+    invoke-static {p1}, LX/4va;->A03(Ljava/lang/Object;)V
 
     .line 4
     .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final APs()Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4JW;->A00:LX/4Jo;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/4Jo;->A05()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
     .line 6
-    xor-int/lit8 v0, v0, 0x1
+    iput-object p1, p0, LX/4JW;->A01:LX/4rj;
 
     .line 7
     .line 8
-    return v0
-.end method
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
-.method public final AX4(Landroid/view/View;LX/4JI;)V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/4JW;->A00:LX/4Jo;
-
-    .line 1
-    .line 2
-    new-instance v0, LX/4JV;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, p0, p2}, LX/4JV;-><init>(LX/4JW;LX/4JI;)V
-
-    .line 5
-    .line 6
-    .line 7
-    invoke-virtual {v2, v0}, LX/4Jo;->A04(LX/4Jv;)V
-
-    .line 8
     .line 9
     .line 10
-    const-wide/16 v0, 0x0
-
     .line 11
+    move-result-object v0
+
     .line 12
-    invoke-virtual {v2, v0, v1}, LX/4Jo;->A03(D)V
+    iput-object v0, p0, LX/4JW;->A02:Ljava/util/List;
 
     .line 13
     .line 14
+    new-instance v1, LX/4JU;
+
     .line 15
+    .line 16
+    invoke-direct {v1, p0, p2}, LX/4JU;-><init>(LX/4JW;LX/4JV;)V
+
+    .line 17
+    .line 18
+    .line 19
+    const/4 v0, 0x1
+
+    .line 20
+    iput-boolean v0, v1, LX/4JU;->A04:Z
+
+    .line 21
+    .line 22
+    iput-object v1, p0, LX/4JW;->A00:LX/4JU;
+
+    .line 23
+    .line 24
     return-void
 .end method

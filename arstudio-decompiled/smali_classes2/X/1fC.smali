@@ -3,584 +3,254 @@
 .source ""
 
 # interfaces
-.implements Ljava/util/ListIterator;
+.implements LX/2AX;
 
 
 # instance fields
-.field public A00:I
-
-.field public A01:LX/1fI;
-
-.field public A02:LX/1fI;
-
-.field public A03:LX/1fI;
-
-.field public final A04:Ljava/lang/Object;
-
-.field public final synthetic A05:Lcom/google/common/collect/LinkedListMultimap;
+.field public final A00:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    iput-object p1, p0, LX/1fC;->A05:Lcom/google/common/collect/LinkedListMultimap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
     .line 4
     .line 5
-    iput-object p2, p0, LX/1fC;->A04:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 6
     .line 7
-    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
-
     .line 8
+    iput-object v0, p0, LX/1fC;->A00:Ljava/util/List;
+
     .line 9
-    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    check-cast v0, LX/1fJ;
-
-    .line 14
-    .line 15
-    if-nez v0, :cond_0
-
-    .line 16
-    .line 17
-    const/4 v0, 0x0
-
-    .line 18
-    :goto_0
-    iput-object v0, p0, LX/1fC;->A02:LX/1fI;
-
-    .line 19
-    .line 20
-    return-void
-
-    .line 21
-    :cond_0
-    iget-object v0, v0, LX/1fJ;->A01:LX/1fI;
-
-    .line 22
-    .line 23
-    goto :goto_0
-.end method
-
-.method public constructor <init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;I)V
-    .locals 4
-
-    .line 268435456
-    iput-object p1, p0, LX/1fC;->A05:Lcom/google/common/collect/LinkedListMultimap;
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
-
-    .line 268435462
-    .line 268435463
-    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 268435464
-    .line 268435465
-    .line 268435466
-    move-result-object v3
-
-    .line 268435467
-    check-cast v3, LX/1fJ;
-
-    .line 268435468
-    .line 268435469
-    if-nez v3, :cond_1
-
-    .line 268435470
-    .line 268435471
-    const/4 v2, 0x0
-
-    .line 268435472
-    :goto_0
-    invoke-static {p3, v2}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
-
-    .line 268435473
-    .line 268435474
-    .line 268435475
-    div-int/lit8 v0, v2, 0x2
-
-    .line 268435476
-    .line 268435477
-    const/4 v1, 0x0
-
-    .line 268435478
-    if-lt p3, v0, :cond_2
-
-    .line 268435479
-    .line 268435480
-    if-nez v3, :cond_0
-
-    .line 268435481
-    .line 268435482
-    move-object v0, v1
-
-    .line 268435483
-    :goto_1
-    iput-object v0, p0, LX/1fC;->A03:LX/1fI;
-
-    .line 268435484
-    .line 268435485
-    iput v2, p0, LX/1fC;->A00:I
-
-    .line 268435486
-    .line 268435487
-    :goto_2
-    add-int/lit8 v0, p3, 0x1
-
-    .line 268435488
-    .line 268435489
-    if-ge p3, v2, :cond_4
-
-    .line 268435490
-    .line 268435491
-    invoke-virtual {p0}, LX/1fC;->previous()Ljava/lang/Object;
-
-    .line 268435492
-    .line 268435493
-    .line 268435494
-    move p3, v0
-
-    .line 268435495
-    goto :goto_2
-
-    .line 268435496
-    :cond_0
-    iget-object v0, v3, LX/1fJ;->A02:LX/1fI;
-
-    .line 268435497
-    .line 268435498
-    goto :goto_1
-
-    .line 268435499
-    :cond_1
-    iget v2, v3, LX/1fJ;->A00:I
-
-    .line 268435500
-    .line 268435501
-    goto :goto_0
-
-    .line 268435502
-    :cond_2
-    if-nez v3, :cond_3
-
-    .line 268435503
-    .line 268435504
-    move-object v0, v1
-
-    .line 268435505
-    :goto_3
-    iput-object v0, p0, LX/1fC;->A02:LX/1fI;
-
-    .line 268435506
-    .line 268435507
-    :goto_4
-    add-int/lit8 v0, p3, -0x1
-
-    .line 268435508
-    .line 268435509
-    if-lez p3, :cond_4
-
-    .line 268435510
-    .line 268435511
-    invoke-virtual {p0}, LX/1fC;->next()Ljava/lang/Object;
-
-    .line 268435512
-    .line 268435513
-    .line 268435514
-    move p3, v0
-
-    .line 268435515
-    goto :goto_4
-
-    .line 268435516
-    :cond_3
-    iget-object v0, v3, LX/1fJ;->A01:LX/1fI;
-
-    .line 268435517
-    .line 268435518
-    goto :goto_3
-
-    .line 268435519
-    :cond_4
-    iput-object p2, p0, LX/1fC;->A04:Ljava/lang/Object;
-
-    .line 268435520
-    .line 268435521
-    iput-object v1, p0, LX/1fC;->A01:LX/1fI;
-
-    .line 268435522
-    .line 268435523
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)V
-    .locals 3
+.method public final A00(LX/1fE;)V
+    .locals 1
 
     .line 0
-    iget-object v2, p0, LX/1fC;->A05:Lcom/google/common/collect/LinkedListMultimap;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    iget-object v1, p0, LX/1fC;->A04:Ljava/lang/Object;
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    iget-object v0, p0, LX/1fC;->A02:LX/1fI;
+    iget-object v0, p0, LX/1fC;->A00:Ljava/util/List;
 
     .line 5
     .line 6
-    invoke-static {v0, v2, v1, p1}, Lcom/google/common/collect/LinkedListMultimap;->A00(LX/1fI;Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;Ljava/lang/Object;)LX/1fI;
+    invoke-static {p1, v0}, LX/0X6;->A1M(Ljava/lang/Object;Ljava/util/List;)V
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
-
-    .line 10
-    iput-object v0, p0, LX/1fC;->A03:LX/1fI;
-
-    .line 11
-    .line 12
-    iget v0, p0, LX/1fC;->A00:I
-
-    .line 13
-    .line 14
-    add-int/lit8 v0, v0, 0x1
-
-    .line 15
-    .line 16
-    iput v0, p0, LX/1fC;->A00:I
-
-    .line 17
-    .line 18
-    const/4 v0, 0x0
-
-    .line 19
-    iput-object v0, p0, LX/1fC;->A01:LX/1fI;
-
-    .line 20
-    .line 21
     return-void
 .end method
 
-.method public final hasNext()Z
+.method public final AEy()Ljava/lang/String;
     .locals 1
 
+    const-string v0, "VideoRealtimeMqttHandler"
+
+    return-object v0
+.end method
+
+.method public final AYD(Ljava/lang/Long;Ljava/lang/String;[BIJ)V
+    .locals 11
+
     .line 0
-    iget-object v0, p0, LX/1fC;->A02:LX/1fI;
+    move-object v7, p2
 
     .line 1
+    move-object v8, p3
+
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {p2, p3}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
     .line 4
     .line 5
+    iget-object v3, p0, LX/1fC;->A00:Ljava/util/List;
+
+    .line 6
+    .line 7
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v4
+
+    .line 11
+    const/4 v2, 0x0
+
+    .line 12
+    :cond_0
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 13
+    .line 14
+    .line 15
     move-result v0
 
-    .line 6
-    return v0
-.end method
-
-.method public final hasPrevious()Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1fC;->A03:LX/1fI;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/1fC;->A02:LX/1fI;
-
-    .line 1
-    .line 2
-    if-eqz v1, :cond_0
-
-    .line 3
-    .line 4
-    iput-object v1, p0, LX/1fC;->A01:LX/1fI;
-
-    .line 5
-    .line 6
-    iput-object v1, p0, LX/1fC;->A03:LX/1fI;
-
-    .line 7
-    .line 8
-    iget-object v0, v1, LX/1fI;->A00:LX/1fI;
-
-    .line 9
-    .line 10
-    iput-object v0, p0, LX/1fC;->A02:LX/1fI;
-
-    .line 11
-    .line 12
-    iget v0, p0, LX/1fC;->A00:I
-
-    .line 13
-    .line 14
-    add-int/lit8 v0, v0, 0x1
-
-    .line 15
     .line 16
-    iput v0, p0, LX/1fC;->A00:I
+    if-eqz v0, :cond_4
 
     .line 17
     .line 18
-    iget-object v0, v1, LX/1fI;->A04:Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 19
     .line 20
-    return-object v0
-
     .line 21
-    :cond_0
-    invoke-static {}, LX/0Yj;->A0d()Ljava/util/NoSuchElementException;
-
-    .line 22
-    .line 23
-    .line 24
     move-result-object v0
 
-    .line 25
-    throw v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/1fC;->A00:I
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/1fC;->A03:LX/1fI;
-
-    .line 1
-    .line 2
-    if-eqz v1, :cond_0
-
-    .line 3
-    .line 4
-    iput-object v1, p0, LX/1fC;->A01:LX/1fI;
-
-    .line 5
-    .line 6
-    iput-object v1, p0, LX/1fC;->A02:LX/1fI;
-
-    .line 7
-    .line 8
-    iget-object v0, v1, LX/1fI;->A01:LX/1fI;
-
-    .line 9
-    .line 10
-    iput-object v0, p0, LX/1fC;->A03:LX/1fI;
-
-    .line 11
-    .line 12
-    iget v0, p0, LX/1fC;->A00:I
-
-    .line 13
-    .line 14
-    add-int/lit8 v0, v0, -0x1
-
-    .line 15
-    .line 16
-    iput v0, p0, LX/1fC;->A00:I
-
-    .line 17
-    .line 18
-    iget-object v0, v1, LX/1fI;->A04:Ljava/lang/Object;
-
-    .line 19
-    .line 20
-    return-object v0
-
-    .line 21
-    :cond_0
-    invoke-static {}, LX/0Yj;->A0d()Ljava/util/NoSuchElementException;
-
     .line 22
+    check-cast v0, Ljava/lang/ref/Reference;
+
     .line 23
     .line 24
-    move-result-object v0
-
-    .line 25
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/1fC;->A00:I
-
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, -0x1
-
-    .line 3
-    .line 4
-    return v0
-.end method
-
-.method public final remove()V
-    .locals 4
-
-    .line 0
-    iget-object v3, p0, LX/1fC;->A01:LX/1fI;
-
-    .line 1
-    .line 2
-    const/4 v2, 0x1
-
-    .line 3
-    invoke-static {v3}, LX/001;->A1S(Ljava/lang/Object;)Z
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v1
-
-    .line 7
-    const-string/jumbo v0, "no calls to next() since the last call to remove()"
-
-    .line 8
-    .line 9
-    .line 10
-    invoke-static {v1, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
-
-    .line 11
-    .line 12
-    .line 13
-    iget-object v0, p0, LX/1fC;->A02:LX/1fI;
-
-    .line 14
-    .line 15
-    if-eq v3, v0, :cond_0
-
-    .line 16
-    .line 17
-    iget-object v0, v3, LX/1fI;->A01:LX/1fI;
-
-    .line 18
-    .line 19
-    iput-object v0, p0, LX/1fC;->A03:LX/1fI;
-
-    .line 20
-    .line 21
-    iget v0, p0, LX/1fC;->A00:I
-
-    .line 22
-    .line 23
-    sub-int/2addr v0, v2
-
-    .line 24
-    iput v0, p0, LX/1fC;->A00:I
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     .line 25
     .line 26
-    :goto_0
-    iget-object v0, p0, LX/1fC;->A05:Lcom/google/common/collect/LinkedListMultimap;
-
     .line 27
+    move-result-object v6
+
     .line 28
-    invoke-static {v3, v0}, Lcom/google/common/collect/LinkedListMultimap;->A01(LX/1fI;Lcom/google/common/collect/LinkedListMultimap;)V
+    check-cast v6, LX/1fE;
 
     .line 29
     .line 30
-    .line 31
-    const/4 v0, 0x0
+    if-nez v6, :cond_2
 
+    .line 31
     .line 32
-    iput-object v0, p0, LX/1fC;->A01:LX/1fI;
+    if-nez v2, :cond_1
 
     .line 33
     .line 34
-    return-void
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 35
-    :cond_0
-    iget-object v0, v3, LX/1fI;->A00:LX/1fI;
-
     .line 36
     .line 37
-    iput-object v0, p0, LX/1fC;->A02:LX/1fI;
+    move-result-object v2
 
     .line 38
+    :cond_1
+    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
     .line 39
+    .line 40
+    .line 41
     goto :goto_0
-.end method
 
-.method public final set(Ljava/lang/Object;)V
-    .locals 2
+    .line 42
+    :cond_2
+    move-object v1, v6
 
-    .line 0
-    iget-object v1, p0, LX/1fC;->A01:LX/1fI;
+    .line 43
+    check-cast v1, LX/29h;
 
-    .line 1
-    .line 2
-    invoke-static {v1}, LX/001;->A1S(Ljava/lang/Object;)Z
+    .line 44
+    .line 45
+    iget-object v0, v1, LX/29h;->A01:Ljava/util/Set;
 
-    .line 3
-    .line 4
-    .line 5
+    .line 46
+    .line 47
+    invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    .line 48
+    .line 49
+    .line 50
     move-result v0
 
-    .line 6
-    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
+    .line 51
+    if-eqz v0, :cond_0
 
-    .line 7
-    .line 8
-    .line 9
-    iput-object p1, v1, LX/1fI;->A04:Ljava/lang/Object;
+    .line 52
+    .line 53
+    iget-object v0, v1, LX/29h;->A00:LX/1fB;
 
-    .line 10
-    .line 11
+    .line 54
+    .line 55
+    iget-object v0, v0, LX/1fB;->A01:LX/0RP;
+
+    .line 56
+    .line 57
+    check-cast v0, LX/0lu;
+
+    .line 58
+    .line 59
+    invoke-static {v0}, LX/0lu;->A0B(LX/0lu;)Ljava/util/concurrent/Executor;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v0
+
+    .line 63
+    move-wide/from16 v9, p5
+
+    .line 64
+    .line 65
+    if-eqz v0, :cond_3
+
+    .line 66
+    .line 67
+    new-instance v5, LX/1fD;
+
+    .line 68
+    .line 69
+    invoke-direct/range {v5 .. v10}, LX/1fD;-><init>(LX/1fE;Ljava/lang/String;[BJ)V
+
+    .line 70
+    .line 71
+    .line 72
+    invoke-interface {v0, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 73
+    .line 74
+    .line 75
+    goto :goto_0
+
+    .line 76
+    :cond_3
+    invoke-interface {v6, p2, p3, v9, v10}, LX/1fE;->AN6(Ljava/lang/String;[BJ)V
+
+    .line 77
+    .line 78
+    .line 79
+    goto :goto_0
+
+    .line 80
+    :cond_4
+    if-eqz v2, :cond_5
+
+    .line 81
+    .line 82
+    invoke-interface {v3, v2}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
+
+    .line 83
+    .line 84
+    .line 85
+    :cond_5
     return-void
 .end method

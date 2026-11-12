@@ -3,12 +3,89 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s likerklikk på side</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s likerklikk</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">for %1$d dager siden</item>
+        <item quantity="one">for 1 dag siden</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d dager</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d dager</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d timer</item>
+        <item quantity="one">1 time</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minutter</item>
+        <item quantity="one">1 minutt</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d måneder</item>
+        <item quantity="one">1 måned</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d sekunder</item>
+        <item quantity="one">1 sekund</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d uker</item>
+        <item quantity="one">1 uke</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">%1$d dager til</item>
+        <item quantity="one">1 dag til</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">%1$d timer til</item>
+        <item quantity="one">1 time til</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">%1$d minutter til</item>
+        <item quantity="one">1 minutt til</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">%1$d måneder til</item>
+        <item quantity="one">1 måned til</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">%1$d sekunder til</item>
+        <item quantity="one">1 sekund til</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">%1$d uker til</item>
+        <item quantity="one">1 uke til</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">%1$d år til</item>
+        <item quantity="one">1 år til</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d år</item>
+        <item quantity="one">1 år</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">for %1$d timer siden</item>
         <item quantity="one">for 1 time siden</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d timer</item>
+        <item quantity="one">1 t</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d t</item>
+        <item quantity="one">1 t</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d t</item>
+        <item quantity="one">1 t</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">for %1$d t siden</item>
+        <item quantity="one">for 1 t siden</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">om %1$d timer</item>
@@ -18,8 +95,68 @@
         <item quantity="other">om %1$d minutter</item>
         <item quantity="one">om 1 minutt</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">for %1$d min siden</item>
+        <item quantity="one">for 1 min siden</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">for %1$d minutter siden</item>
         <item quantity="one">for 1 minutt siden</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">For %1$d måneder siden</item>
+        <item quantity="one">For 1 måned siden</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">for %1$d sekunder siden</item>
+        <item quantity="one">1 sekund</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">for %1$d uker siden</item>
+        <item quantity="one">For 1 uke siden</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d t igjen</item>
+        <item quantity="one">1 t igjen</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d min igjen</item>
+        <item quantity="one">1 min igjen</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">for %1$d år siden</item>
+        <item quantity="one">for 1 år siden</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Du besøkte for %1$d dager siden</item>
+        <item quantity="one">Du besøkte for 1 dag siden</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Du besøkte for %1$d timer siden</item>
+        <item quantity="one">Du besøkte for 1 time siden</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Du besøkte for %1$d minutter siden</item>
+        <item quantity="one">Du besøkte for 1 minutt siden</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Du besøkte for %1$d måneder siden</item>
+        <item quantity="one">Du besøkte for 1 måned siden</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Du besøkte for %1$d uker siden</item>
+        <item quantity="one">Du besøkte for 1 uke siden</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Du besøkte for %1$d år siden</item>
+        <item quantity="one">Du besøkte for 1 år siden</item>
     </plurals>
 </resources>

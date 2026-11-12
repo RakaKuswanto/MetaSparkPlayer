@@ -12,7 +12,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/1Wd;->A00()V
+    invoke-static {}, LX/3hX;->A00()V
 
     .line 1
     .line 2

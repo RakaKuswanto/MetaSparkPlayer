@@ -45,11 +45,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x60
+    const/16 v0, 0x47
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -80,24 +80,24 @@
 
     .line 268435461
     .line 268435462
-    new-instance v1, LX/18w;
+    new-instance v1, LX/1Sw;
 
     .line 268435463
     .line 268435464
-    invoke-direct {v1}, LX/18w;-><init>()V
+    invoke-direct {v1}, LX/1Sw;-><init>()V
 
     .line 268435465
     .line 268435466
     .line 268435467
-    iput-object v0, v1, LX/18w;->A0A:Ljava/lang/String;
+    iput-object v0, v1, LX/1Sw;->A0A:Ljava/lang/String;
 
     .line 268435468
     .line 268435469
-    iput-object v0, v1, LX/18w;->A08:Ljava/lang/String;
+    iput-object v0, v1, LX/1Sw;->A08:Ljava/lang/String;
 
     .line 268435470
     .line 268435471
-    invoke-static {v1}, LX/18w;->A00(LX/18w;)V
+    invoke-static {v1}, LX/1Sw;->A00(LX/1Sw;)V
 
     .line 268435472
     .line 268435473
@@ -106,7 +106,7 @@
 
     .line 268435475
     .line 268435476
-    invoke-direct {v0, v1}, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;-><init>(LX/18w;)V
+    invoke-direct {v0, v1}, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;-><init>(LX/1Sw;)V
 
     .line 268435477
     .line 268435478
@@ -195,20 +195,20 @@
     move-result v2
 
     .line 37
-    new-instance v1, LX/18w;
+    new-instance v1, LX/1Sw;
 
     .line 38
     .line 39
-    invoke-direct {v1}, LX/18w;-><init>()V
+    invoke-direct {v1}, LX/1Sw;-><init>()V
 
     .line 40
     .line 41
     .line 42
-    iput-object v7, v1, LX/18w;->A0A:Ljava/lang/String;
+    iput-object v7, v1, LX/1Sw;->A0A:Ljava/lang/String;
 
     .line 43
     .line 44
-    iput-object v0, v1, LX/18w;->A08:Ljava/lang/String;
+    iput-object v0, v1, LX/1Sw;->A08:Ljava/lang/String;
 
     .line 45
     .line 46
@@ -216,31 +216,31 @@
 
     .line 47
     .line 48
-    iput-object v0, v1, LX/18w;->A09:Ljava/lang/String;
+    iput-object v0, v1, LX/1Sw;->A09:Ljava/lang/String;
 
     .line 49
     .line 50
-    invoke-virtual {v1, v6}, LX/18w;->A02(F)V
+    invoke-virtual {v1, v6}, LX/1Sw;->A02(F)V
 
     .line 51
     .line 52
     .line 53
-    invoke-virtual {v1, v5}, LX/18w;->A03(F)V
+    invoke-virtual {v1, v5}, LX/1Sw;->A03(F)V
 
     .line 54
     .line 55
     .line 56
-    invoke-virtual {v1, v4}, LX/18w;->A04(F)V
+    invoke-virtual {v1, v4}, LX/1Sw;->A04(F)V
 
     .line 57
     .line 58
     .line 59
-    invoke-virtual {v1, v3}, LX/18w;->A01(F)V
+    invoke-virtual {v1, v3}, LX/1Sw;->A01(F)V
 
     .line 60
     .line 61
     .line 62
-    iput v2, v1, LX/18w;->A02:F
+    iput v2, v1, LX/1Sw;->A02:F
 
     .line 63
     .line 64
@@ -248,7 +248,7 @@
 
     .line 65
     .line 66
-    invoke-direct {v0, v1}, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;-><init>(LX/18w;)V
+    invoke-direct {v0, v1}, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;-><init>(LX/1Sw;)V
 
     .line 67
     .line 68
@@ -291,7 +291,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Yg;->A1N(I)Z
+    invoke-static {v0}, LX/0X4;->A1N(I)Z
 
     .line 14
     .line 15
@@ -460,7 +460,7 @@
 
     .line 68
     .line 69
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 70
     .line 71
@@ -480,7 +480,7 @@
 
     .line 78
     .line 79
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 80
     .line 81
@@ -501,7 +501,7 @@
 
     .line 88
     .line 89
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 90
     .line 91
@@ -510,7 +510,7 @@
 
     .line 93
     :goto_1
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 94
     .line 95
@@ -534,7 +534,7 @@
 
     .line 104
     .line 105
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 106
     .line 107
@@ -555,7 +555,7 @@
 
     .line 114
     .line 115
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 116
     .line 117
@@ -564,7 +564,7 @@
 
     .line 119
     :goto_3
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 120
     .line 121
@@ -621,75 +621,78 @@
     .end annotation
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/DoodleParams;->id:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/DoodleParams;->id:Ljava/lang/String;
 
     .line 1
     .line 2
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    const/16 v0, 0x20f
+    const/16 v1, 0x20f
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/0Yi;->A07(Ljava/lang/String;I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 7
     .line 8
     .line 9
-    move-result v1
+    move-result v0
 
     .line 10
+    add-int/2addr v1, v0
+
+    .line 11
     :goto_0
     iget-object v2, p0, Lcom/facebook/photos/creativeediting/model/DoodleParams;->overlayParams:Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;
 
-    .line 11
     .line 12
+    .line 13
     iget-object v0, v2, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A0A:Ljava/lang/String;
 
-    .line 13
     .line 14
-    invoke-static {v0, v1}, LX/0Yf;->A07(Ljava/lang/String;I)I
-
     .line 15
+    invoke-static {v0, v1}, LX/0X3;->A04(Ljava/lang/String;I)I
+
     .line 16
     .line 17
-    move-result v0
-
     .line 18
-    mul-int/lit8 v1, v0, 0x1f
+    move-result v0
 
     .line 19
+    mul-int/lit8 v1, v0, 0x1f
+
     .line 20
+    .line 21
     iget v0, v2, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A01:F
 
-    .line 21
     .line 22
+    .line 23
     invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    .line 23
     .line 24
     .line 25
-    move-result v0
-
     .line 26
-    invoke-static {v2, v1, v0}, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A00(Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;II)I
+    move-result v0
 
     .line 27
+    invoke-static {v2, v1, v0}, LX/0X2;->A07(Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;II)I
+
     .line 28
     .line 29
+    .line 30
     move-result v0
 
-    .line 30
+    .line 31
     return v0
 
-    .line 31
+    .line 32
     :cond_0
     const/16 v1, 0x11
 
-    .line 32
     .line 33
+    .line 34
     goto :goto_0
 .end method
 
@@ -700,7 +703,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

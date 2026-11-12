@@ -1,324 +1,147 @@
 .class public final LX/284;
-.super LX/279;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # instance fields
-.field public A00:I
+.field public final synthetic A00:Landroid/view/View;
 
-.field public A01:I
-
-.field public A02:Ljava/lang/String;
-
-.field public A03:LX/284;
-
-.field public final A04:LX/284;
+.field public final synthetic A01:LX/2Db;
 
 
 # direct methods
-.method public constructor <init>(LX/284;III)V
-    .locals 1
+.method public constructor <init>(Landroid/view/View;LX/2Db;)V
+    .locals 0
 
-    .line 0
-    invoke-direct {p0}, LX/279;-><init>()V
+    iput-object p2, p0, LX/284;->A01:LX/2Db;
 
-    .line 1
-    .line 2
-    .line 3
-    const/4 v0, 0x0
+    iput-object p1, p0, LX/284;->A00:Landroid/view/View;
 
-    .line 4
-    iput-object v0, p0, LX/284;->A03:LX/284;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    iput p2, p0, LX/279;->A01:I
-
-    .line 7
-    .line 8
-    iput-object p1, p0, LX/284;->A04:LX/284;
-
-    .line 9
-    .line 10
-    iput p3, p0, LX/284;->A01:I
-
-    .line 11
-    .line 12
-    iput p4, p0, LX/284;->A00:I
-
-    .line 13
-    .line 14
-    const/4 v0, -0x1
-
-    .line 15
-    iput v0, p0, LX/279;->A00:I
-
-    .line 16
-    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01(II)LX/284;
-    .locals 2
+.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 7
 
     .line 0
-    iget-object v1, p0, LX/284;->A03:LX/284;
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
-    const/4 v0, 0x1
-
     .line 3
-    if-nez v1, :cond_0
+    const/4 v6, 0x0
 
     .line 4
+    :try_start_0
+    iget-object v0, p0, LX/284;->A01:LX/2Db;
+
     .line 5
-    new-instance v1, LX/284;
-
     .line 6
-    .line 7
-    invoke-direct {v1, p0, v0, p1, p2}, LX/284;-><init>(LX/284;III)V
-
-    .line 8
-    .line 9
-    .line 10
-    iput-object v1, p0, LX/284;->A03:LX/284;
-
-    .line 11
-    .line 12
-    return-object v1
-
-    .line 13
-    :cond_0
-    iput v0, v1, LX/279;->A01:I
-
-    .line 14
-    .line 15
-    const/4 v0, -0x1
-
-    .line 16
-    iput v0, v1, LX/279;->A00:I
-
-    .line 17
-    .line 18
-    iput p1, v1, LX/284;->A01:I
-
-    .line 19
-    .line 20
-    iput p2, v1, LX/284;->A00:I
-
-    .line 21
-    .line 22
-    const/4 v0, 0x0
-
-    .line 23
-    iput-object v0, v1, LX/284;->A02:Ljava/lang/String;
-
-    .line 24
-    .line 25
-    return-object v1
-.end method
-
-.method public final A02(II)LX/284;
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/284;->A03:LX/284;
-
-    .line 1
-    .line 2
-    const/4 v0, 0x2
-
-    .line 3
-    if-nez v1, :cond_0
-
-    .line 4
-    .line 5
-    new-instance v1, LX/284;
-
-    .line 6
-    .line 7
-    invoke-direct {v1, p0, v0, p1, p2}, LX/284;-><init>(LX/284;III)V
-
-    .line 8
-    .line 9
-    .line 10
-    iput-object v1, p0, LX/284;->A03:LX/284;
-
-    .line 11
-    .line 12
-    return-object v1
-
-    .line 13
-    :cond_0
-    iput v0, v1, LX/279;->A01:I
-
-    .line 14
-    .line 15
-    const/4 v0, -0x1
-
-    .line 16
-    iput v0, v1, LX/279;->A00:I
-
-    .line 17
-    .line 18
-    iput p1, v1, LX/284;->A01:I
-
-    .line 19
-    .line 20
-    iput p2, v1, LX/284;->A00:I
-
-    .line 21
-    .line 22
-    const/4 v0, 0x0
-
-    .line 23
-    iput-object v0, v1, LX/284;->A02:Ljava/lang/String;
-
-    .line 24
-    .line 25
-    return-object v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    const/16 v0, 0x40
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v2
-
-    .line 6
-    iget v1, p0, LX/279;->A01:I
+    invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
 
     .line 7
     .line 8
-    if-eqz v1, :cond_3
-
     .line 9
+    invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
+
     .line 10
-    const/4 v0, 0x1
-
     .line 11
-    if-eq v1, v0, :cond_1
-
     .line 12
+    move-result v5
+
     .line 13
-    const/16 v0, 0x7b
+    invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
 
     .line 14
     .line 15
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
     .line 16
+    invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
+
     .line 17
     .line 18
-    iget-object v1, p0, LX/284;->A02:Ljava/lang/String;
-
     .line 19
+    move-result v4
+
     .line 20
-    const/16 v0, 0x3f
+    iget-object v1, v0, LX/2Db;->A00:Landroid/view/View;
 
     .line 21
     .line 22
-    if-eqz v1, :cond_0
+    iget-object v3, v0, LX/2Db;->A01:Landroid/view/View;
 
     .line 23
     .line 24
-    const/16 v0, 0x22
+    const/4 v2, -0x1
 
     .line 25
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
     .line 26
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
     .line 27
+    invoke-direct {v0, v2, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
     .line 28
     .line 29
-    invoke-static {v2, v1}, LX/29Z;->A00(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
     .line 30
+    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
     .line 31
     .line 32
-    :cond_0
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
     .line 33
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
     .line 34
     .line 35
-    const/16 v0, 0x7d
+    invoke-direct {v1, v2, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     .line 36
     .line 37
-    :goto_0
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
     .line 38
+    const/16 v0, 0x50
+
     .line 39
     .line 40
-    :goto_1
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 41
     .line 42
+    invoke-virtual {v3, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 43
-    move-result-object v0
-
     .line 44
-    return-object v0
-
     .line 45
-    :cond_1
-    const/16 v0, 0x5b
+    invoke-virtual {p1, p2}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
     .line 46
     .line 47
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
     .line 48
+    move-result-object v0
+
     .line 49
+    return-object v0
+
     .line 50
-    iget v0, p0, LX/279;->A00:I
+    :catchall_0
+    move-exception v1
 
     .line 51
+    iget-object v0, p0, LX/284;->A00:Landroid/view/View;
+
     .line 52
-    if-gez v0, :cond_2
-
     .line 53
+    invoke-virtual {v0, v6}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
+
     .line 54
-    const/4 v0, 0x0
-
     .line 55
-    :cond_2
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
     .line 56
-    .line 57
-    .line 58
-    const/16 v0, 0x5d
-
-    .line 59
-    .line 60
-    goto :goto_0
-
-    .line 61
-    :cond_3
-    const-string v0, "/"
-
-    .line 62
-    .line 63
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 64
-    .line 65
-    .line 66
-    goto :goto_1
+    throw v1
 .end method

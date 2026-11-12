@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/common/dextricks/DexOptimization$Service;
-.super LX/01L;
+.super LX/01T;
 .source ""
 
 
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/01L;-><init>()V
+    invoke-direct {p0}, LX/01T;-><init>()V
 
     .line 1
     .line 2
@@ -74,7 +74,7 @@
     .locals 3
 
     .line 0
-    invoke-super {p0}, LX/01L;->onCreate()V
+    invoke-super {p0}, LX/01T;->onCreate()V
 
     .line 1
     .line 2
@@ -135,12 +135,12 @@
 
     .line 32
     .line 33
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-static {v0, p0, v1}, LX/0Cj;->A00(Landroid/content/BroadcastReceiver;Landroid/content/Context;Landroid/content/IntentFilter;)V
 
     .line 34
     .line 35
     .line 36
-    iput-boolean v2, p0, LX/01L;->mInterruptIfStopped:Z
+    iput-boolean v2, p0, LX/01T;->mInterruptIfStopped:Z
 
     .line 37
     .line 38
@@ -172,7 +172,7 @@
     .line 9
     .line 10
     :cond_0
-    invoke-super {p0}, LX/01L;->onDestroy()V
+    invoke-super {p0}, LX/01T;->onDestroy()V
 
     .line 11
     .line 12
@@ -297,7 +297,7 @@
 
     .line 52
     :cond_0
-    invoke-static {v6}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v6}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 53
     .line 54
@@ -352,7 +352,7 @@
 
     .line 79
     .line 80
-    invoke-static {v0, v6}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0, v6}, LX/004;->A03(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 81
     .line 82

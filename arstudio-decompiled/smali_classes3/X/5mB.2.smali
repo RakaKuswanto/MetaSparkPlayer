@@ -1,35 +1,25 @@
-.class public interface abstract LX/5mB;
+.class public final LX/5mB;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AKP()LX/5mm;
-.end method
+# instance fields
+.field public final A00:LX/5ky;
 
-.method public abstract AKS()LX/5mb;
-.end method
 
-.method public abstract AMm(IIIIIIII)Landroid/graphics/SurfaceTexture;
-.end method
+# direct methods
+.method public constructor <init>(LX/5ky;)V
+    .locals 0
 
-.method public abstract AMn()Landroid/graphics/SurfaceTexture;
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract ANy()LX/5nZ;
-.end method
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/5mB;->A00:LX/5ky;
 
-.method public abstract AVh(I)V
-.end method
-
-.method public abstract AWv(I)V
-.end method
-
-.method public abstract AcR(Landroid/graphics/SurfaceTexture;II)V
-.end method
-
-.method public abstract Aid(Landroid/graphics/SurfaceTexture;)V
-.end method
-
-.method public abstract ArL()Z
+    .line 4
+    .line 5
+    return-void
 .end method

@@ -51,135 +51,91 @@
 .method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/util/List;JLjava/util/Map;Ljava/lang/String;IZZZ)V
     .locals 2
 
-    .line 0
+    .line 805659
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    .line 805660
     iput-wide p1, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->userId:J
 
-    .line 4
-    .line 5
+    .line 805661
     iput-object p3, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->clientId:Ljava/lang/String;
 
-    .line 6
-    .line 7
+    .line 805662
     iput-object p4, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->password:Ljava/lang/String;
 
-    .line 8
-    .line 9
+    .line 805663
     iput-object p5, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->host:Ljava/lang/String;
 
-    .line 10
-    .line 11
+    .line 805664
     iput-object p6, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->port:Ljava/lang/String;
 
-    .line 12
-    .line 13
+    .line 805665
     iput-object p7, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->userAgent:Ljava/lang/String;
 
-    .line 14
-    .line 15
+    .line 805666
     iput-object p8, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->deviceId:Ljava/lang/String;
 
-    .line 16
-    .line 17
+    .line 805667
     iput-wide p9, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->mqttSessionId:J
 
-    .line 18
-    .line 19
+    .line 805668
     iput-object p11, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->clientType:Ljava/lang/String;
 
-    .line 20
-    .line 21
+    .line 805669
     iput-object p12, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->phpOverride:Ljava/lang/String;
 
-    .line 22
-    .line 23
+    .line 805670
     iput-object p13, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->appId:Ljava/lang/String;
 
-    .line 24
-    .line 25
+    .line 805671
     move-object/from16 v0, p14
 
-    .line 26
-    .line 27
     iput-object v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->initialNetworkState:Ljava/lang/String;
 
-    .line 28
-    .line 29
+    .line 805672
     move/from16 v0, p15
 
-    .line 30
-    .line 31
     iput v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->initialNetworkTransports:I
 
-    .line 32
-    .line 33
+    .line 805673
     move-object/from16 v0, p16
 
-    .line 34
-    .line 35
     iput-object v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->subscribeTopics:Ljava/util/List;
 
-    .line 36
-    .line 37
+    .line 805674
     move-wide/from16 v0, p17
 
-    .line 38
-    .line 39
     iput-wide v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->capabilities:J
 
-    .line 40
-    .line 41
+    .line 805675
     move-object/from16 v0, p19
 
-    .line 42
-    .line 43
     iput-object v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->appSpecificInfo:Ljava/util/Map;
 
-    .line 44
-    .line 45
+    .line 805676
     move-object/from16 v0, p20
 
-    .line 46
-    .line 47
     iput-object v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->regionHint:Ljava/lang/String;
 
-    .line 48
-    .line 49
+    .line 805677
     move/from16 v0, p21
 
-    .line 50
-    .line 51
     iput v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->configurationMask:I
 
-    .line 52
-    .line 53
+    .line 805678
     move/from16 v0, p22
 
-    .line 54
-    .line 55
     iput-boolean v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->qplEnabled:Z
 
-    .line 56
-    .line 57
+    .line 805679
     move/from16 v0, p23
 
-    .line 58
-    .line 59
     iput-boolean v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->disablePingOverlaps:Z
 
-    .line 60
-    .line 61
+    .line 805680
     move/from16 v0, p24
 
-    .line 62
-    .line 63
     iput-boolean v0, p0, Lcom/facebook/proxygen/XplatMQTTConnectPayload;->disablePreemptiveReconnectOverlaps:Z
 
-    .line 64
-    .line 65
     return-void
 .end method

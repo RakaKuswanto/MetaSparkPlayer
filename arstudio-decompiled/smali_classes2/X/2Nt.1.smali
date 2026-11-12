@@ -2,71 +2,144 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "GrootPlayerLogger$logPlaybackSpeedChanged$1"
+.field public static final A01:LX/28F;
+
+.field public static final A02:LX/28F;
+
+.field public static final A03:LX/28F;
+
+.field public static final A04:LX/28F;
+
+.field public static final A05:LX/28F;
 
 
 # instance fields
-.field public final synthetic A00:F
-
-.field public final synthetic A01:J
-
-.field public final synthetic A02:LX/47P;
-
-.field public final synthetic A03:Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/47P;Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;FJ)V
-    .locals 0
-
-    iput-object p1, p0, LX/2Nt;->A02:LX/47P;
-
-    iput p3, p0, LX/2Nt;->A00:F
-
-    iput-wide p4, p0, LX/2Nt;->A01:J
-
-    iput-object p2, p0, LX/2Nt;->A03:Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 5
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/2Nt;->A02:LX/47P;
+    sget-object v1, LX/1GN;->A00:LX/28F;
 
     .line 1
     .line 2
-    iget-object v4, v0, LX/47P;->A02:LX/49f;
+    const-string/jumbo v0, "qe/"
 
     .line 3
     .line 4
-    iget v3, p0, LX/2Nt;->A00:F
-
     .line 5
-    .line 6
-    iget-wide v1, p0, LX/2Nt;->A01:J
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
 
+    .line 6
     .line 7
     .line 8
-    iget-object v0, p0, LX/2Nt;->A03:Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;
+    move-result-object v1
 
     .line 9
-    .line 10
-    invoke-interface {v4, v0, v3, v1, v2}, LX/49f;->ASg(Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;FJ)V
+    sput-object v1, LX/2Nt;->A05:LX/28F;
 
+    .line 10
     .line 11
+    const-string/jumbo v0, "latest_users"
+
     .line 12
     .line 13
+    .line 14
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    sput-object v0, LX/2Nt;->A02:LX/28F;
+
+    .line 19
+    .line 20
+    const-string/jumbo v0, "experiments_filter"
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    sput-object v0, LX/2Nt;->A01:LX/28F;
+
+    .line 28
+    .line 29
+    const-string/jumbo v0, "first_visible_item_index"
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
+
+    .line 36
+    sput-object v0, LX/2Nt;->A03:LX/28F;
+
+    .line 37
+    .line 38
+    const-string/jumbo v0, "first_visible_item_offset"
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v0
+
+    .line 45
+    sput-object v0, LX/2Nt;->A04:LX/28F;
+
+    .line 46
+    .line 47
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    sget v0, LX/2I6;->A1d:I
+
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/2Nt;->A00:LX/0RP;
+
+    .line 10
+    .line 11
     return-void
 .end method

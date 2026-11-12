@@ -1,76 +1,133 @@
 .class public final LX/3Dz;
-.super LX/3E0;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:Z
+.field public A00:Landroid/content/Context;
 
-.field public A01:Z
+.field public A01:Ljava/util/Set;
 
-.field public A02:Z
-
-.field public A03:Z
-
-.field public A04:Z
-
-.field public A05:Z
-
-.field public A06:Z
-
-.field public A07:Z
-
-.field public A08:Z
-
-.field public A09:Z
-
-.field public final A0A:LX/0ZF;
+.field public A02:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/3E0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 4
-    iput-boolean v0, p0, LX/3Dz;->A07:Z
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/3Dz;->A01:Ljava/util/Set;
+
+    .line 8
+    .line 9
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/3Dz;->A00:Landroid/content/Context;
+
+    .line 14
+    .line 15
+    if-nez v0, :cond_0
+
+    .line 16
+    .line 17
+    iput-object p1, p0, LX/3Dz;->A00:Landroid/content/Context;
+
+    .line 18
+    .line 19
+    :cond_0
+    return-void
+.end method
+
+.method public static A00(Landroid/content/Context;)LX/2eD;
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/3Dz;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p0}, LX/3Dz;-><init>(Landroid/content/Context;)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, LX/3Dz;->A01()LX/2eD;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final A01()LX/2eD;
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/3Dz;->A02:Ljava/util/concurrent/Executor;
+
+    .line 1
+    .line 2
+    if-nez v3, :cond_0
+
+    .line 3
+    .line 4
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     .line 5
     .line 6
-    iput-boolean v0, p0, LX/3Dz;->A05:Z
-
     .line 7
+    move-result-object v3
+
     .line 8
-    iput-boolean v0, p0, LX/3Dz;->A01:Z
+    :cond_0
+    const/16 v0, 0x29
 
     .line 9
     .line 10
-    iput-boolean v0, p0, LX/3Dz;->A03:Z
+    invoke-static {p0, v0}, LX/0Xf;->A00(Ljava/lang/Object;I)LX/0Xf;
 
     .line 11
     .line 12
-    iput-boolean v0, p0, LX/3Dz;->A09:Z
-
     .line 13
+    move-result-object v2
+
     .line 14
-    invoke-static {}, LX/1z6;->A0M()LX/0ZF;
+    iget-object v1, p0, LX/3Dz;->A01:Ljava/util/Set;
 
     .line 15
     .line 16
-    .line 17
-    move-result-object v0
+    new-instance v0, LX/2eD;
 
+    .line 17
     .line 18
-    iput-object v0, p0, LX/3Dz;->A0A:LX/0ZF;
+    invoke-direct {v0, v1, v3, v2}, LX/2eD;-><init>(Ljava/util/Set;Ljava/util/concurrent/Executor;LX/0VC;)V
 
     .line 19
     .line 20
-    return-void
+    .line 21
+    return-object v0
 .end method

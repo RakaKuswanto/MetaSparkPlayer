@@ -3,15 +3,15 @@
 .source ""
 
 # interfaces
-.implements LX/3jB;
+.implements LX/1ky;
 
 
 # instance fields
 .field public A00:J
 
-.field public A01:LX/0JA;
+.field public A01:LX/0I5;
 
-.field public A02:LX/30F;
+.field public A02:LX/2yW;
 
 
 # direct methods
@@ -29,63 +29,68 @@
 
 
 # virtual methods
-.method public final A0K(Landroid/os/Bundle;)V
+.method public final A1I(Landroid/os/Bundle;)V
     .locals 6
 
     .line 0
     move-object v1, p0
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/30F;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbFragmentActivity;->A0D(Lcom/facebook/base/activity/FbFragmentActivity;)LX/2Sv;
 
     .line 2
     .line 3
+    .line 4
+    iget-object v0, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/2yW;
+
+    .line 5
+    .line 6
     if-eqz v0, :cond_0
 
-    .line 4
-    .line 5
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    .line 6
     .line 7
     .line 8
-    move-result-object v2
+    invoke-static {p0}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 9
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 10
     .line 11
+    move-result-object v2
+
     .line 12
-    iget-wide v4, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A00:J
+    invoke-static {v2}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 13
     .line 14
-    move-object v3, p1
-
     .line 15
-    invoke-virtual/range {v0 .. v5}, LX/30F;->A03(Landroid/app/Activity;Landroid/content/Intent;Landroid/os/Bundle;J)V
+    iget-wide v4, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A00:J
 
     .line 16
     .line 17
+    move-object v3, p1
+
     .line 18
-    return-void
+    invoke-virtual/range {v0 .. v5}, LX/2yW;->A04(Landroid/app/Activity;Landroid/content/Intent;Landroid/os/Bundle;J)V
 
     .line 19
-    :cond_0
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
-
     .line 20
     .line 21
+    return-void
+
     .line 22
-    move-result-object v0
+    :cond_0
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
 
     .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
     throw v0
 .end method
 
 .method public final onActivityResult(IILandroid/content/Intent;)V
-    .locals 4
+    .locals 6
 
     .line 0
     invoke-super {p0, p1, p2, p3}, Lcom/facebook/base/activity/FbFragmentActivity;->onActivityResult(IILandroid/content/Intent;)V
@@ -93,15 +98,15 @@
     .line 1
     .line 2
     .line 3
-    iget-object v3, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/30F;
+    iget-object v3, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/2yW;
 
     .line 4
     .line 5
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_9
 
     .line 6
     .line 7
-    iget-boolean v0, v3, LX/30F;->A09:Z
+    iget-boolean v0, v3, LX/2yW;->A09:Z
 
     .line 8
     .line 9
@@ -122,11 +127,11 @@
     const/4 v0, 0x0
 
     .line 16
-    iput-boolean v0, v3, LX/30F;->A09:Z
+    iput-boolean v0, v3, LX/2yW;->A09:Z
 
     .line 17
     .line 18
-    iget-object v0, v3, LX/30F;->A05:LX/33r;
+    iget-object v0, v3, LX/2yW;->A05:LX/31S;
 
     .line 19
     .line 20
@@ -134,7 +139,7 @@
 
     .line 21
     .line 22
-    iput-object v2, v3, LX/30F;->A05:LX/33r;
+    iput-object v2, v3, LX/2yW;->A05:LX/31S;
 
     .line 23
     .line 24
@@ -142,19 +147,19 @@
     const/4 v2, 0x1
 
     .line 25
-    iget-object v0, v3, LX/30F;->A02:Landroid/app/Activity;
+    iget-object v0, v3, LX/2yW;->A02:Landroid/app/Activity;
 
     .line 26
     .line 27
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
     .line 28
     .line 29
-    iget-object v0, v3, LX/30F;->A0E:LX/1Nm;
+    iget-object v0, v3, LX/2yW;->A0E:LX/0lu;
 
     .line 30
     .line 31
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 32
     .line 33
@@ -162,19 +167,19 @@
     move-result-object v1
 
     .line 35
-    check-cast v1, LX/3Gv;
+    check-cast v1, LX/0n5;
 
     .line 36
     .line 37
-    iget-object v0, v3, LX/30F;->A02:Landroid/app/Activity;
+    iget-object v0, v3, LX/2yW;->A02:Landroid/app/Activity;
 
     .line 38
     .line 39
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_7
 
     .line 40
     .line 41
-    invoke-interface {v1, v0, v2}, LX/3Gv;->Ai6(Landroid/app/Activity;Z)V
+    invoke-interface {v1, v0, v2}, LX/0n5;->AgR(Landroid/app/Activity;Z)V
 
     .line 42
     .line 43
@@ -192,126 +197,224 @@
 
     .line 48
     .line 49
-    if-nez p2, :cond_3
+    if-nez p2, :cond_5
 
     .line 50
     .line 51
-    iget-object v0, v3, LX/30F;->A06:Lcom/facebook/platform/common/action/PlatformAppCall;
+    iget-object v5, v3, LX/2yW;->A06:Lcom/facebook/platform/common/action/PlatformAppCall;
 
     .line 52
     .line 53
-    invoke-static {v0}, LX/30j;->A00(Lcom/facebook/platform/common/action/PlatformAppCall;)Landroid/os/Bundle;
+    const-string v4, "User canceled login"
 
     .line 54
     .line 55
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
+
     .line 56
-    move-result-object v0
-
     .line 57
-    goto :goto_0
-
     .line 58
-    :cond_3
-    iget-object v1, v3, LX/30F;->A05:LX/33r;
+    move-result-object v2
 
     .line 59
+    if-eqz v5, :cond_4
+
     .line 60
-    if-nez v1, :cond_4
-
     .line 61
-    .line 62
-    iget-object v0, v3, LX/30F;->A03:Landroid/content/Intent;
+    iget-boolean v0, v5, Lcom/facebook/platform/common/action/PlatformAppCall;->A04:Z
 
+    .line 62
     .line 63
-    .line 64
     if-eqz v0, :cond_4
 
+    .line 64
     .line 65
-    .line 66
-    invoke-static {v0, v3}, LX/30F;->A00(Landroid/content/Intent;LX/30F;)LX/30T;
+    iget v1, v5, Lcom/facebook/platform/common/action/PlatformAppCall;->A00:I
 
+    .line 66
     .line 67
+    const v0, 0x1335433
+
     .line 68
     .line 69
-    move-result-object v1
-
     .line 70
-    iput-object v1, v3, LX/30F;->A05:LX/33r;
+    if-lt v1, v0, :cond_4
 
     .line 71
     .line 72
-    :cond_4
-    if-eqz v1, :cond_1
+    const-string/jumbo v1, "error_type"
 
     .line 73
     .line 74
-    const/4 v0, 0x1
-
     .line 75
-    iput-boolean v0, v3, LX/30F;->A08:Z
+    :goto_0
+    const-string v0, "UserCanceled"
 
     .line 76
     .line 77
-    invoke-virtual {v1, v2}, LX/33r;->A00(Landroid/os/Bundle;)V
+    invoke-virtual {v2, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 78
     .line 79
     .line 80
-    return-void
+    if-eqz v5, :cond_3
 
     .line 81
-    :cond_5
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
-
     .line 82
+    iget-boolean v0, v5, Lcom/facebook/platform/common/action/PlatformAppCall;->A04:Z
+
     .line 83
     .line 84
-    move-result-object v0
+    if-eqz v0, :cond_3
 
     .line 85
-    throw v0
-
     .line 86
-    :cond_6
-    const-string v2, "PermissionDenied"
+    iget v1, v5, Lcom/facebook/platform/common/action/PlatformAppCall;->A00:I
 
     .line 87
     .line 88
-    const-string v1, "No user is logged in and app is unable to display login screen"
+    const v0, 0x1335433
 
     .line 89
     .line 90
-    new-instance v0, LX/30i;
-
     .line 91
-    .line 92
-    invoke-direct {v0, v2, v1}, LX/30i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    if-lt v1, v0, :cond_3
 
+    .line 92
     .line 93
+    const-string/jumbo v0, "error_description"
+
     .line 94
     .line 95
-    iget-object v0, v0, LX/30i;->A00:Landroid/os/Bundle;
-
     .line 96
-    .line 97
-    :goto_0
-    invoke-static {v0, v3}, LX/30F;->A02(Landroid/os/Bundle;LX/30F;)V
+    :goto_1
+    invoke-virtual {v2, v0, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 97
     .line 98
     .line 99
+    goto :goto_2
+
     .line 100
-    return-void
+    :cond_3
+    const-string/jumbo v0, "com.facebook.platform.status.ERROR_DESCRIPTION"
 
     .line 101
-    :cond_7
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
-
     .line 102
     .line 103
+    goto :goto_1
+
     .line 104
-    move-result-object v0
+    :cond_4
+    const-string/jumbo v1, "com.facebook.platform.status.ERROR_TYPE"
 
     .line 105
+    .line 106
+    .line 107
+    goto :goto_0
+
+    .line 108
+    :cond_5
+    iget-object v1, v3, LX/2yW;->A05:LX/31S;
+
+    .line 109
+    .line 110
+    if-nez v1, :cond_6
+
+    .line 111
+    .line 112
+    iget-object v0, v3, LX/2yW;->A03:Landroid/content/Intent;
+
+    .line 113
+    .line 114
+    if-eqz v0, :cond_6
+
+    .line 115
+    .line 116
+    invoke-static {v0, v3}, LX/2yW;->A01(Landroid/content/Intent;LX/2yW;)LX/2yY;
+
+    .line 117
+    .line 118
+    .line 119
+    move-result-object v1
+
+    .line 120
+    iput-object v1, v3, LX/2yW;->A05:LX/31S;
+
+    .line 121
+    .line 122
+    :cond_6
+    if-eqz v1, :cond_1
+
+    .line 123
+    .line 124
+    const/4 v0, 0x1
+
+    .line 125
+    iput-boolean v0, v3, LX/2yW;->A08:Z
+
+    .line 126
+    .line 127
+    invoke-virtual {v1, v2}, LX/31S;->A00(Landroid/os/Bundle;)V
+
+    .line 128
+    .line 129
+    .line 130
+    return-void
+
+    .line 131
+    :cond_7
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
+
+    .line 132
+    .line 133
+    .line 134
+    move-result-object v0
+
+    .line 135
+    throw v0
+
+    .line 136
+    :cond_8
+    const-string v2, "PermissionDenied"
+
+    .line 137
+    .line 138
+    const-string v1, "No user is logged in and app is unable to display login screen"
+
+    .line 139
+    .line 140
+    new-instance v0, LX/2zP;
+
+    .line 141
+    .line 142
+    invoke-direct {v0, v2, v1}, LX/2zP;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 143
+    .line 144
+    .line 145
+    iget-object v2, v0, LX/2zP;->A00:Landroid/os/Bundle;
+
+    .line 146
+    .line 147
+    :goto_2
+    invoke-static {v2, v3}, LX/2yW;->A03(Landroid/os/Bundle;LX/2yW;)V
+
+    .line 148
+    .line 149
+    .line 150
+    return-void
+
+    .line 151
+    :cond_9
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
+
+    .line 152
+    .line 153
+    .line 154
+    move-result-object v0
+
+    .line 155
     throw v0
 .end method
 
@@ -319,7 +422,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/30F;
+    iget-object v0, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/2yW;
 
     .line 1
     .line 2
@@ -336,7 +439,7 @@
 
     .line 8
     :cond_0
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
 
     .line 9
     .line 10
@@ -356,7 +459,7 @@
     .line 1
     .line 2
     .line 3
-    iget-object v2, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/30F;
+    iget-object v2, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/2yW;
 
     .line 4
     .line 5
@@ -364,7 +467,7 @@
 
     .line 6
     .line 7
-    iget-object v0, v2, LX/30F;->A02:Landroid/app/Activity;
+    iget-object v0, v2, LX/2yW;->A02:Landroid/app/Activity;
 
     .line 8
     .line 9
@@ -392,7 +495,7 @@
 
     .line 19
     :cond_1
-    iget-object v1, v2, LX/30F;->A05:LX/33r;
+    iget-object v1, v2, LX/2yW;->A05:LX/31S;
 
     .line 20
     .line 21
@@ -400,7 +503,7 @@
 
     .line 22
     .line 23
-    iget-boolean v0, v2, LX/30F;->A08:Z
+    iget-boolean v0, v2, LX/2yW;->A08:Z
 
     .line 24
     .line 25
@@ -408,7 +511,7 @@
 
     .line 26
     .line 27
-    check-cast v1, LX/30T;
+    check-cast v1, LX/2yY;
 
     .line 28
     .line 29
@@ -416,7 +519,7 @@
 
     .line 30
     .line 31
-    iget-boolean v0, v1, LX/30T;->A00:Z
+    iget-boolean v0, v1, LX/2yY;->A00:Z
 
     .line 32
     .line 33
@@ -424,7 +527,7 @@
 
     .line 34
     .line 35
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 36
     .line 37
@@ -432,7 +535,7 @@
     move-result-object v2
 
     .line 39
-    iget-object v1, v1, LX/33r;->A00:LX/30F;
+    iget-object v1, v1, LX/31S;->A00:LX/2yW;
 
     .line 40
     .line 41
@@ -443,7 +546,7 @@
     const/4 v0, 0x0
 
     .line 44
-    invoke-static {v2, v0, v1}, LX/30F;->A01(Landroid/os/Bundle;Landroid/os/Bundle;LX/30F;)V
+    invoke-static {v2, v0, v1}, LX/2yW;->A02(Landroid/os/Bundle;Landroid/os/Bundle;LX/2yW;)V
 
     .line 45
     .line 46
@@ -452,7 +555,7 @@
 
     .line 48
     :cond_2
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
 
     .line 49
     .line 50
@@ -470,7 +573,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -480,7 +583,7 @@
     .line 5
     .line 6
     .line 7
-    iget-object v0, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/30F;
+    iget-object v0, p0, Lcom/facebook/platform/common/activity/PlatformWrapperActivity;->A02:LX/2yW;
 
     .line 8
     .line 9
@@ -488,7 +591,7 @@
 
     .line 10
     .line 11
-    invoke-virtual {v0, p1}, LX/30F;->A04(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, LX/2yW;->A05(Landroid/os/Bundle;)V
 
     .line 12
     .line 13
@@ -497,7 +600,7 @@
 
     .line 15
     :cond_0
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
 
     .line 16
     .line 17

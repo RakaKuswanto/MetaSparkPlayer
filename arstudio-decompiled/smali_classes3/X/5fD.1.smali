@@ -1,32 +1,38 @@
-.class public interface abstract LX/5fD;
+.class public final synthetic LX/5Fd;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5gT;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final A00:LX/5gS;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultDrmSessionManager$PreacquiredSessionReference$$ExternalSyntheticLambda0"
+
+
+# instance fields
+.field public final synthetic A00:LX/5FU;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public synthetic constructor <init>(LX/5FU;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/5Fd;->A00:LX/5FU;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 1
 
-    .line 0
-    new-instance v0, LX/5gS;
+    iget-object v0, p0, LX/5Fd;->A00:LX/5FU;
 
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/5gS;-><init>()V
+    invoke-virtual {v0}, LX/5FU;->A00()V
 
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/5fD;->A00:LX/5gS;
-
-    .line 6
-    .line 7
     return-void
 .end method

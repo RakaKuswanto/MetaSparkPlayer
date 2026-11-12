@@ -4,11 +4,17 @@
 
 
 # virtual methods
-.method public abstract ARo()Z
+.method public abstract A50()LX/0Vx;
 .end method
 
-.method public abstract ARp()Z
+.method public abstract AfZ(Ljava/lang/String;I)LX/0Vx;
 .end method
 
-.method public abstract Aqw()V
+.method public abstract Afd(Ljava/lang/String;J)LX/0Vx;
+.end method
+
+.method public abstract Afh(Ljava/lang/String;Ljava/lang/String;)LX/0Vx;
+.end method
+
+.method public abstract commit()V
 .end method

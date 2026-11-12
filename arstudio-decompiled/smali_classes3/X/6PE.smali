@@ -1,284 +1,314 @@
-.class public final LX/6PE;
-.super Ljava/lang/Object;
+.class public final enum LX/6PE;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/6PE;
+
+.field public static final Companion:LX/6PF;
+
+.field public static final enum DDMM:LX/6PE;
+
+.field public static final enum DDMMYYYY:LX/6PE;
+
+.field public static final enum MMDD:LX/6PE;
+
+.field public static final enum MMDDYYYY:LX/6PE;
+
+.field public static final enum MMYY:LX/6PE;
+
+.field public static final enum MMYYYY:LX/6PE;
 
 
 # instance fields
-.field public A00:Ljava/lang/Object;
-
-.field public A01:Ljava/lang/Object;
-
-.field public final A02:I
+.field public final text:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+.method public static final synthetic $values()[LX/6PE;
+    .locals 3
+
+    const/4 v0, 0x6
+
+    new-array v2, v0, [LX/6PE;
+
+    sget-object v1, LX/6PE;->DDMM:LX/6PE;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/6PE;->MMDD:LX/6PE;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/6PE;->DDMMYYYY:LX/6PE;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/6PE;->MMYYYY:LX/6PE;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/6PE;->MMDDYYYY:LX/6PE;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/6PE;->MMYY:LX/6PE;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iput p2, p0, LX/6PE;->A02:I
+    const-string v2, "DDMM"
 
     .line 1
     .line 2
-    iput-object p3, p0, LX/6PE;->A00:Ljava/lang/Object;
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/6PE;
+
     .line 4
-    iput-object p1, p0, LX/6PE;->A01:Ljava/lang/Object;
-
     .line 5
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v2, v1, v2}, LX/6PE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 6
     .line 7
     .line 8
-    .line 9
-    return-void
-.end method
-
-.method public static final A00(LX/6PE;)V
-    .locals 1
-
-    .line 0
-    iget-object p0, p0, LX/6PE;->A01:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    check-cast p0, Landroid/view/View;
-
-    .line 3
-    .line 4
-    const/16 v0, 0x8
-
-    .line 5
-    .line 6
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    .line 0
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/6PE;->A02:I
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-static {p0}, LX/6PE;->A00(LX/6PE;)V
-
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 6
-
-    .line 0
-    iget v0, p0, LX/6PE;->A02:I
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 3
-    .line 4
-    iget-object v4, p0, LX/6PE;->A00:Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    check-cast v4, LX/4UK;
-
-    .line 7
-    .line 8
-    iget-object v3, p0, LX/6PE;->A01:Ljava/lang/Object;
+    sput-object v0, LX/6PE;->DDMM:LX/6PE;
 
     .line 9
     .line 10
-    check-cast v3, LX/4UL;
+    const-string v2, "MMDD"
 
     .line 11
     .line 12
-    const/high16 v5, 0x3f800000    # 1.0f
+    const/4 v1, 0x1
 
     .line 13
-    .line 14
-    const/4 v0, 0x1
+    new-instance v0, LX/6PE;
 
+    .line 14
     .line 15
-    invoke-virtual {v4, v3, v5, v0}, LX/4UK;->A02(LX/4UL;FZ)V
+    invoke-direct {v0, v2, v1, v2}, LX/6PE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 16
     .line 17
     .line 18
-    iget v0, v3, LX/4UL;->A04:F
+    sput-object v0, LX/6PE;->MMDD:LX/6PE;
 
     .line 19
     .line 20
-    iput v0, v3, LX/4UL;->A07:F
+    const-string v2, "DDMMYYYY"
 
     .line 21
     .line 22
-    iget v0, v3, LX/4UL;->A01:F
+    const/4 v1, 0x2
 
     .line 23
+    new-instance v0, LX/6PE;
+
     .line 24
-    iput v0, v3, LX/4UL;->A05:F
-
     .line 25
-    .line 26
-    iget v0, v3, LX/4UL;->A03:F
+    invoke-direct {v0, v2, v1, v2}, LX/6PE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 26
     .line 27
     .line 28
-    iput v0, v3, LX/4UL;->A06:F
+    sput-object v0, LX/6PE;->DDMMYYYY:LX/6PE;
 
     .line 29
     .line 30
-    iget v0, v3, LX/4UL;->A0C:I
+    const-string v2, "MMYYYY"
 
     .line 31
     .line 32
-    add-int/lit8 v2, v0, 0x1
+    const/4 v1, 0x3
 
     .line 33
+    new-instance v0, LX/6PE;
+
     .line 34
-    iget-object v1, v3, LX/4UL;->A0G:[I
-
     .line 35
+    invoke-direct {v0, v2, v1, v2}, LX/6PE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 36
-    array-length v0, v1
-
     .line 37
-    rem-int/2addr v2, v0
-
     .line 38
-    iput v2, v3, LX/4UL;->A0C:I
+    sput-object v0, LX/6PE;->MMYYYY:LX/6PE;
 
     .line 39
     .line 40
-    aget v0, v1, v2
+    const-string v2, "MMDDYYYY"
 
     .line 41
     .line 42
-    iput v0, v3, LX/4UL;->A0D:I
+    const/4 v1, 0x4
 
     .line 43
+    new-instance v0, LX/6PE;
+
     .line 44
-    iget-boolean v0, v4, LX/4UK;->A04:Z
-
     .line 45
-    .line 46
-    if-eqz v0, :cond_1
+    invoke-direct {v0, v2, v1, v2}, LX/6PE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 46
     .line 47
     .line 48
-    const/4 v2, 0x0
+    sput-object v0, LX/6PE;->MMDDYYYY:LX/6PE;
 
     .line 49
-    iput-boolean v2, v4, LX/4UK;->A04:Z
-
     .line 50
+    const-string v2, "MMYY"
+
     .line 51
-    invoke-virtual {p1}, Landroid/animation/Animator;->cancel()V
-
     .line 52
+    const/4 v1, 0x5
+
     .line 53
+    new-instance v0, LX/6PE;
+
     .line 54
-    const-wide/16 v0, 0x534
-
     .line 55
-    .line 56
-    invoke-virtual {p1, v0, v1}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
+    invoke-direct {v0, v2, v1, v2}, LX/6PE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 56
     .line 57
     .line 58
-    .line 59
-    invoke-virtual {p1}, Landroid/animation/Animator;->start()V
+    sput-object v0, LX/6PE;->MMYY:LX/6PE;
 
+    .line 59
     .line 60
+    invoke-static {}, LX/6PE;->$values()[LX/6PE;
+
     .line 61
     .line 62
-    iget-boolean v0, v3, LX/4UL;->A0F:Z
-
     .line 63
+    move-result-object v0
+
     .line 64
-    if-eq v0, v2, :cond_0
+    sput-object v0, LX/6PE;->$VALUES:[LX/6PE;
 
     .line 65
     .line 66
-    iput-boolean v2, v3, LX/4UL;->A0F:Z
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
     .line 67
     .line 68
-    :cond_0
-    return-void
-
     .line 69
-    :cond_1
-    iget v0, v4, LX/4UK;->A01:F
+    move-result-object v0
 
     .line 70
-    .line 71
-    add-float/2addr v0, v5
+    sput-object v0, LX/6PE;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
+    .line 71
     .line 72
-    iput v0, v4, LX/4UK;->A01:F
+    new-instance v0, LX/6PF;
 
     .line 73
     .line 74
+    invoke-direct {v0}, LX/6PF;-><init>()V
+
+    .line 75
+    .line 76
+    .line 77
+    sput-object v0, LX/6PE;->Companion:LX/6PF;
+
+    .line 78
+    .line 79
     return-void
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
     .line 0
-    iget v0, p0, LX/6PE;->A02:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
-
     .line 3
+    iput-object p3, p0, LX/6PE;->text:Ljava/lang/String;
+
     .line 4
-    iget-object v1, p0, LX/6PE;->A00:Ljava/lang/Object;
-
     .line 5
-    .line 6
-    check-cast v1, LX/4UK;
-
-    .line 7
-    .line 8
-    const/4 v0, 0x0
-
-    .line 9
-    iput v0, v1, LX/4UK;->A01:F
-
-    .line 10
-    .line 11
-    :cond_0
     return-void
+.end method
+
+.method public static final fromString(Ljava/lang/String;)LX/6PE;
+    .locals 0
+
+    invoke-static {p0}, LX/6PF;->A00(Ljava/lang/String;)LX/6PE;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/6PE;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/6PE;
+    .locals 1
+
+    const-class v0, LX/6PE;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/6PE;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/6PE;
+    .locals 1
+
+    sget-object v0, LX/6PE;->$VALUES:[LX/6PE;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/6PE;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getText()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/6PE;->text:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

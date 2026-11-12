@@ -192,36 +192,32 @@
     .line 38
     .line 39
     if-eqz v0, :cond_1
-
-    .line 40
-    .line 41
-    goto :goto_1
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 40
+    .line 41
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
     .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
     :catch_1
     move-exception v1
 
-    .line 43
+    .line 46
     const-string v0, "Could not retrieve value from Resources#mDrawableCache"
 
-    .line 44
-    .line 45
-    invoke-static {v3, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 46
     .line 47
     .line 48
-    return-void
+    invoke-static {v3, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 49
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-
     .line 50
     .line 51
-    .line 52
     :cond_1
     return-void
 .end method

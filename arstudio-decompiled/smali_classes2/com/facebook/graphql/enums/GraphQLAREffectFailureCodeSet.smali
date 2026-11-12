@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLAREffectFailureCodeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLAREffectFailureCodeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x41
+    const/16 v0, 0x43
 
     .line 1
     .line 2
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "DISCONTINUED_SDK_VERSION"
+    const-string v0, "DISCONTINUED_BETA_SDK_VERSION"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "EVENT_ATTENDANCE_CONSTRAINT"
+    const-string v0, "DISCONTINUED_SDK_VERSION"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "EVENT_ELIGIBILITY_CONSTRAINT"
+    const-string v0, "EVENT_ATTENDANCE_CONSTRAINT"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "EXCEEDS_TESTING_LINK_LIMIT"
+    const-string v0, "EVENT_ELIGIBILITY_CONSTRAINT"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "FORM_FACTOR_MISMATCH"
+    const-string v0, "EXCEEDS_TESTING_LINK_LIMIT"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "GATEKEEPER_CONSTRAINT"
+    const-string v0, "FORM_FACTOR_MISMATCH"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "GATELOGIC_CONSTRAINT"
+    const-string v0, "GATEKEEPER_CONSTRAINT"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "GENDER_CONSTRAINT"
+    const-string v0, "GATELOGIC_CONSTRAINT"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "HAS_SCRIPTS"
+    const-string v0, "GENDER_CONSTRAINT"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "HOLDOUT_GK"
+    const-string v0, "HAS_SCRIPTS"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "IG_CAMERA_FORMAT_CONSTRAINT"
+    const-string v0, "HOLDOUT_GK"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "INACTIVE"
+    const-string v0, "IG_CAMERA_FORMAT_CONSTRAINT"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "INCOMPATIBLE_CAPABILITIES"
+    const-string v0, "INACTIVE"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "INCOMPATIBLE_CAPABILITY_LIST"
+    const-string v0, "INCOMPATIBLE_BETA_SDK_VERSION"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "INCOMPATIBLE_COMPRESSION"
+    const-string v0, "INCOMPATIBLE_CAPABILITIES"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "INCOMPATIBLE_SDK_VERSION"
+    const-string v0, "INCOMPATIBLE_CAPABILITY_LIST"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "INSPIRATIONS_TIME_RANGE_CONSTRAINT"
+    const-string v0, "INCOMPATIBLE_COMPRESSION"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "INVALID_ATTRIBUTION"
+    const-string v0, "INCOMPATIBLE_SDK_VERSION"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "INVALID_MAX_SUPPORTED_VERSIONS"
+    const-string v0, "INSPIRATIONS_TIME_RANGE_CONSTRAINT"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "INVALID_TESTING_LINK"
+    const-string v0, "INVALID_ATTRIBUTION"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "INVALID_USERNAME"
+    const-string v0, "INVALID_MAX_SUPPORTED_VERSIONS"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "IN_ANY_CITY_CONSTRAINT"
+    const-string v0, "INVALID_TESTING_LINK"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "LOCALE_CONSTRAINT"
+    const-string v0, "INVALID_USERNAME"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "LOCATION_PAGE_CONSTRAINT"
+    const-string v0, "IN_ANY_CITY_CONSTRAINT"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "METAL_MIGRATION"
+    const-string v0, "LOCALE_CONSTRAINT"
 
     .line 227
     .line 228
@@ -484,7 +484,7 @@
 
     .line 231
     .line 232
-    const-string v0, "MULTI_COUNTRY_CONSTRAINT"
+    const-string v0, "LOCATION_PAGE_CONSTRAINT"
 
     .line 233
     .line 234
@@ -496,7 +496,7 @@
 
     .line 237
     .line 238
-    const-string v0, "MULTI_LOCATION_CONSTRAINT"
+    const-string v0, "METAL_MIGRATION"
 
     .line 239
     .line 240
@@ -508,7 +508,7 @@
 
     .line 243
     .line 244
-    const-string v0, "NMLML_REASON_UNAVAILABLE"
+    const-string v0, "MULTI_COUNTRY_CONSTRAINT"
 
     .line 245
     .line 246
@@ -520,7 +520,7 @@
 
     .line 249
     .line 250
-    const-string v0, "NOT_APPROVED"
+    const-string v0, "MULTI_LOCATION_CONSTRAINT"
 
     .line 251
     .line 252
@@ -532,7 +532,7 @@
 
     .line 255
     .line 256
-    const-string v0, "NOT_FAN_CLUB_MEMBER"
+    const-string v0, "NMLML_REASON_UNAVAILABLE"
 
     .line 257
     .line 258
@@ -544,7 +544,7 @@
 
     .line 261
     .line 262
-    const-string v0, "NO_APPROVED_INSTANCE"
+    const-string v0, "NOT_APPROVED"
 
     .line 263
     .line 264
@@ -556,7 +556,7 @@
 
     .line 267
     .line 268
-    const-string v0, "NO_GYRO"
+    const-string v0, "NO_APPROVED_INSTANCE"
 
     .line 269
     .line 270
@@ -568,7 +568,7 @@
 
     .line 273
     .line 274
-    const-string v0, "NO_OWNER"
+    const-string v0, "NO_GYRO"
 
     .line 275
     .line 276
@@ -580,7 +580,7 @@
 
     .line 279
     .line 280
-    const-string v0, "NO_PASSING_ACTIVATIONS"
+    const-string v0, "NO_OWNER"
 
     .line 281
     .line 282
@@ -592,7 +592,7 @@
 
     .line 285
     .line 286
-    const-string v0, "NO_PERMISSION"
+    const-string v0, "NO_PASSING_ACTIVATIONS"
 
     .line 287
     .line 288
@@ -604,7 +604,7 @@
 
     .line 291
     .line 292
-    const-string v0, "OLD_SDK_VERSION"
+    const-string v0, "NO_PERMISSION"
 
     .line 293
     .line 294
@@ -616,7 +616,7 @@
 
     .line 297
     .line 298
-    const-string v0, "OTHER"
+    const-string v0, "OLD_BETA_SDK_VERSION"
 
     .line 299
     .line 300
@@ -628,7 +628,7 @@
 
     .line 303
     .line 304
-    const-string v0, "PAGE_LIKE_CONSTRAINT"
+    const-string v0, "OLD_SDK_VERSION"
 
     .line 305
     .line 306
@@ -640,7 +640,7 @@
 
     .line 309
     .line 310
-    const-string v0, "PLACE_CONSTRAINT"
+    const-string v0, "OTHER"
 
     .line 311
     .line 312
@@ -652,7 +652,7 @@
 
     .line 315
     .line 316
-    const-string v0, "PRODUCT_VISIBILITY"
+    const-string v0, "PAGE_LIKE_CONSTRAINT"
 
     .line 317
     .line 318
@@ -664,7 +664,7 @@
 
     .line 321
     .line 322
-    const-string v0, "SUPER_APP_DISALLOWED"
+    const-string v0, "PLACE_CONSTRAINT"
 
     .line 323
     .line 324
@@ -676,7 +676,7 @@
 
     .line 327
     .line 328
-    const-string v0, "TEST_CONSTRAINT"
+    const-string v0, "PRODUCT_VISIBILITY"
 
     .line 329
     .line 330
@@ -688,7 +688,7 @@
 
     .line 333
     .line 334
-    const-string v0, "TEST_EFFECT_NOT_WHITELISTED"
+    const-string v0, "SUPER_APP_DISALLOWED"
 
     .line 335
     .line 336
@@ -700,7 +700,7 @@
 
     .line 339
     .line 340
-    const-string v0, "THIRD_PARTY_ACCESS"
+    const-string v0, "TEST_CONSTRAINT"
 
     .line 341
     .line 342
@@ -712,7 +712,7 @@
 
     .line 345
     .line 346
-    const-string v0, "TIME_OF_DAY_CONSTRAINT"
+    const-string v0, "TEST_EFFECT_NOT_WHITELISTED"
 
     .line 347
     .line 348
@@ -724,7 +724,7 @@
 
     .line 351
     .line 352
-    const-string v0, "TIME_OF_WEEK_CONSTRAINT"
+    const-string v0, "THIRD_PARTY_ACCESS"
 
     .line 353
     .line 354
@@ -736,7 +736,7 @@
 
     .line 357
     .line 358
-    const-string v0, "TIME_RANGE_CONSTRAINT"
+    const-string v0, "TIME_OF_DAY_CONSTRAINT"
 
     .line 359
     .line 360
@@ -748,7 +748,7 @@
 
     .line 363
     .line 364
-    const-string v0, "UNKNOWN_PRODUCT"
+    const-string v0, "TIME_OF_WEEK_CONSTRAINT"
 
     .line 365
     .line 366
@@ -760,7 +760,7 @@
 
     .line 369
     .line 370
-    const-string v0, "VERSION_CONFIG_GK"
+    const-string v0, "TIME_RANGE_CONSTRAINT"
 
     .line 371
     .line 372
@@ -772,7 +772,7 @@
 
     .line 375
     .line 376
-    const-string v0, "VERSION_CONFIG_QE"
+    const-string v0, "UNKNOWN_PRODUCT"
 
     .line 377
     .line 378
@@ -784,22 +784,47 @@
 
     .line 381
     .line 382
-    const-string v0, "WRONG_SURFACE"
+    const-string v0, "VERSION_CONFIG_GK"
 
     .line 383
     .line 384
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 385
     .line 386
-    .line 387
-    move-result-object v0
+    const/16 v1, 0x41
 
+    .line 387
     .line 388
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAREffectFailureCodeSet;->A00:Ljava/util/Set;
+    const-string v0, "VERSION_CONFIG_QE"
 
     .line 389
     .line 390
+    aput-object v0, v2, v1
+
+    .line 391
+    .line 392
+    const/16 v1, 0x42
+
+    .line 393
+    .line 394
+    const-string/jumbo v0, "WRONG_SURFACE"
+
+    .line 395
+    .line 396
+    .line 397
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 398
+    .line 399
+    .line 400
+    move-result-object v0
+
+    .line 401
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAREffectFailureCodeSet;->A00:Ljava/util/HashSet;
+
+    .line 402
+    .line 403
     return-void
 .end method
 
@@ -815,11 +840,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAREffectFailureCodeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAREffectFailureCodeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

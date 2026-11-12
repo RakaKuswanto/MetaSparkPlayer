@@ -1,33 +1,37 @@
 .class public final LX/0ad;
-.super Ljava/lang/Object;
+.super LX/0ax;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
+# static fields
+.field public static final serialVersionUID:J = 0x1L
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, LX/0ax;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "The SDK has not been initialized, make sure to call FacebookSdk.sdkInitialize() first."
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-direct {p0, v0}, LX/0ax;-><init>(Ljava/lang/String;)V
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/0ad;->A00:LX/1zG;
-
-    .line 8
-    .line 9
     return-void
 .end method

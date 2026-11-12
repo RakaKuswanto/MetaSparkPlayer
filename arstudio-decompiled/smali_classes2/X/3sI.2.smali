@@ -2,90 +2,224 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/view/TextureView$SurfaceTextureListener;
+
+
+# instance fields
+.field public final A00:LX/3rh;
+
 
 # direct methods
-.method public static A00(Landroid/graphics/Bitmap;Landroid/os/Handler;Landroid/view/SurfaceView;)V
-    .locals 1
+.method public constructor <init>(LX/3rh;)V
+    .locals 0
 
     .line 0
-    if-eqz p2, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {p2}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
-
     .line 3
+    iput-object p1, p0, LX/3sI;->A00:LX/3rh;
+
     .line 4
     .line 5
-    move-result-object v0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
+    .locals 2
+
+    .line 0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/3sI;->A00:LX/3rh;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x1
 
     .line 6
-    if-eqz v0, :cond_0
+    invoke-virtual {v1, p1, v0}, LX/3rh;->A07(Landroid/graphics/SurfaceTexture;Z)V
 
     .line 7
     .line 8
-    invoke-virtual {p2}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
+    .line 9
+    return-void
+.end method
+
+.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
+    .locals 4
+
+    .line 0
+    const-string/jumbo v3, "onSurfaceTextureDestroyed"
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v2, p0, LX/3sI;->A00:LX/3rh;
+
+    .line 4
+    .line 5
+    if-nez p1, :cond_0
+
+    .line 6
+    .line 7
+    const/4 v1, 0x0
+
+    .line 8
+    const-string/jumbo v0, "onSurfaceTextureDestroyed with null SurfaceTexture"
 
     .line 9
     .line 10
     .line 11
-    move-result-object v0
+    invoke-virtual {v2, v3, v0, v1}, LX/3rh;->A08(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 12
-    invoke-interface {v0}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
-
     .line 13
     .line 14
+    const/4 v0, 0x1
+
     .line 15
-    move-result-object v0
+    return v0
 
     .line 16
-    if-eqz v0, :cond_0
+    :cond_0
+    iget-object v1, v2, LX/3rh;->A02:LX/3vm;
 
     .line 17
     .line 18
-    invoke-virtual {p2}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
+    sget-object v0, LX/3vm;->USES_MANAGED_SURFACETEXTURE:LX/3vm;
 
     .line 19
     .line 20
-    .line 21
-    move-result-object v0
+    if-eq v1, v0, :cond_1
 
+    .line 21
     .line 22
-    invoke-interface {v0}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
+    sget-object v0, LX/3vm;->USES_SPHERICAL_MANAGED_SURFACETEXTURE:LX/3vm;
 
     .line 23
     .line 24
-    .line 25
-    move-result-object v0
+    if-eq v1, v0, :cond_1
 
+    .line 25
     .line 26
-    invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
+    invoke-virtual {v2, p1, v3}, LX/3rh;->A06(Landroid/graphics/SurfaceTexture;Ljava/lang/String;)V
 
     .line 27
     .line 28
     .line 29
-    move-result v0
+    :cond_1
+    const/4 v0, 0x0
 
     .line 30
+    return v0
+.end method
+
+.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/3sI;->A00:LX/3rh;
+
+    .line 1
+    .line 2
+    iget-object v1, v0, LX/3rf;->A02:LX/3rF;
+
+    .line 3
+    .line 4
+    if-eqz v1, :cond_0
+
+    .line 5
+    .line 6
+    const-string v0, "FbHeroPlayer.onSurfaceSizeChanged"
+
+    .line 7
+    .line 8
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    :try_start_0
+    iget-object v0, v1, LX/3rF;->A00:LX/3q7;
+
+    .line 12
+    .line 13
+    iget-object v1, v0, LX/3q7;->A0S:LX/3qf;
+
+    .line 14
+    .line 15
+    iget-object v0, v0, LX/3q7;->A04:Lcom/facebook/video/engine/api/VideoPlayerParams;
+
+    .line 16
+    .line 17
+    invoke-virtual {v1, v0}, LX/3qf;->A02(Lcom/facebook/video/engine/api/VideoPlayerParams;)V
+
+    .line 18
+    .line 19
+    .line 20
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 21
+    :catchall_0
+    move-exception v0
+
+    .line 22
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 23
+    .line 24
+    .line 25
+    throw v0
+
+    .line 26
+    :goto_0
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 27
+    .line 28
+    .line 29
+    :cond_0
+    return-void
+.end method
+
+.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3sI;->A00:LX/3rh;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x1
+
+    .line 3
+    iput-boolean v0, v1, LX/3rh;->A04:Z
+
+    .line 4
+    .line 5
+    iget-object v0, v1, LX/3rf;->A02:LX/3rF;
+
+    .line 6
+    .line 7
     if-eqz v0, :cond_0
 
-    .line 31
-    .line 32
-    new-instance v0, LX/3wU;
+    .line 8
+    .line 9
+    invoke-virtual {v0}, LX/3rF;->A00()V
 
-    .line 33
-    .line 34
-    invoke-direct {v0}, LX/3wU;-><init>()V
-
-    .line 35
-    .line 36
-    .line 37
-    invoke-static {p2, p0, v0, p1}, Landroid/view/PixelCopy;->request(Landroid/view/SurfaceView;Landroid/graphics/Bitmap;Landroid/view/PixelCopy$OnPixelCopyFinishedListener;Landroid/os/Handler;)V
-
-    .line 38
-    .line 39
-    .line 40
+    .line 10
+    .line 11
+    .line 12
     :cond_0
     return-void
 .end method

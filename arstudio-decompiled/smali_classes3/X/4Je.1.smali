@@ -1,123 +1,97 @@
 .class public final LX/4Je;
-.super Ljava/lang/Object;
+.super Ljava/io/IOException;
 .source ""
 
 
+# static fields
+.field public static final serialVersionUID:J = 0x1L
+
+
+# instance fields
+.field public final index:I
+
+
 # direct methods
-.method public static A00(Landroid/view/View;Ljava/lang/CharSequence;)V
+.method public constructor <init>(ILjava/lang/Throwable;)V
     .locals 3
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-string v2, "Null"
 
     .line 1
     .line 2
-    const/16 v0, 0x1a
+    if-nez p2, :cond_0
 
     .line 3
     .line 4
-    if-lt v1, v0, :cond_0
+    move-object v1, v2
 
     .line 5
+    :goto_0
+    const/4 v0, 0x3
+
     .line 6
-    invoke-static {p0, p1}, LX/4Jh;->A00(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {v1, v0}, LX/0X4;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 7
     .line 8
     .line 9
-    return-void
+    move-result-object v1
 
     .line 10
-    :cond_0
-    sget-object v0, LX/4Jd;->A0B:LX/4Jd;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 11
     .line 12
-    const/4 v2, 0x0
-
     .line 13
-    if-eqz v0, :cond_1
+    move-result-object v0
 
     .line 14
-    .line 15
-    iget-object v0, v0, LX/4Jd;->A06:Landroid/view/View;
+    invoke-static {v1, v0, v2}, LX/0X4;->A1L([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 15
     .line 16
     .line 17
-    if-ne v0, p0, :cond_1
+    const-string v0, "%s #%,d: %s"
 
     .line 18
     .line 19
-    invoke-static {v2}, LX/4Jd;->A00(LX/4Jd;)V
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 20
     .line 21
     .line 22
-    :cond_1
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    move-result-object v0
 
     .line 23
+    invoke-direct {p0, v0, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 24
     .line 25
-    move-result v0
-
     .line 26
-    if-eqz v0, :cond_3
+    iput p1, p0, LX/4Je;->index:I
 
     .line 27
     .line 28
-    sget-object v1, LX/4Jd;->A0A:LX/4Jd;
+    return-void
 
     .line 29
-    .line 30
-    if-eqz v1, :cond_2
+    :cond_0
+    invoke-static {p2}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 30
     .line 31
     .line 32
-    iget-object v0, v1, LX/4Jd;->A06:Landroid/view/View;
+    move-result-object v1
 
     .line 33
-    .line 34
-    if-ne v0, p0, :cond_2
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
+    .line 34
     .line 35
     .line 36
-    invoke-virtual {v1}, LX/4Jd;->A02()V
+    move-result-object v2
 
     .line 37
-    .line 38
-    .line 39
-    :cond_2
-    invoke-virtual {p0, v2}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
-
-    .line 40
-    .line 41
-    .line 42
-    const/4 v0, 0x0
-
-    .line 43
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLongClickable(Z)V
-
-    .line 44
-    .line 45
-    .line 46
-    invoke-virtual {p0, v2}, Landroid/view/View;->setOnHoverListener(Landroid/view/View$OnHoverListener;)V
-
-    .line 47
-    .line 48
-    .line 49
-    return-void
-
-    .line 50
-    :cond_3
-    new-instance v0, LX/4Jd;
-
-    .line 51
-    .line 52
-    invoke-direct {v0, p0, p1}, LX/4Jd;-><init>(Landroid/view/View;Ljava/lang/CharSequence;)V
-
-    .line 53
-    .line 54
-    .line 55
-    return-void
+    goto :goto_0
 .end method

@@ -1,6 +1,29 @@
-.class public interface abstract LX/0Cu;
+.class public abstract LX/0CU;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0H9;
+
+# static fields
+.field public static final A00:LX/4qb;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/4qb;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/4qb;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/0CU;->A00:LX/4qb;
+
+    .line 6
+    .line 7
+    return-void
+.end method

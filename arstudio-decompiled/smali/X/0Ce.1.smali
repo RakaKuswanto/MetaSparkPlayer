@@ -1,249 +1,586 @@
-.class public final LX/0Ce;
-.super Ljava/lang/Object;
+.class public LX/0Ce;
+.super Landroid/app/Dialog;
 .source ""
+
+# interfaces
+.implements LX/07B;
+.implements LX/08K;
+.implements LX/0QB;
+
+
+# instance fields
+.field public A00:LX/0Kj;
+
+.field public final A01:LX/00M;
+
+.field public final A02:LX/07x;
 
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-direct {p0, p1, p2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
+
+    .line 5
+    .line 6
+    .line 7
+    new-instance v0, LX/07x;
+
+    .line 8
+    .line 9
+    invoke-direct {v0, p0}, LX/07x;-><init>(LX/08K;)V
+
+    .line 10
+    .line 11
+    .line 12
+    iput-object v0, p0, LX/0Ce;->A02:LX/07x;
+
+    .line 13
+    .line 14
+    new-instance v1, LX/00G;
+
+    .line 15
+    .line 16
+    invoke-direct {v1, p0}, LX/00G;-><init>(LX/0Ce;)V
+
+    .line 17
+    .line 18
+    .line 19
+    new-instance v0, LX/00M;
+
+    .line 20
+    .line 21
+    invoke-direct {v0, v1}, LX/00M;-><init>(Ljava/lang/Runnable;)V
+
+    .line 22
+    .line 23
+    .line 24
+    iput-object v0, p0, LX/0Ce;->A01:LX/00M;
+
+    .line 25
+    .line 26
+    return-void
+.end method
+
+.method private final A00()V
+    .locals 2
+
+    .line 0
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 12
+    .line 13
+    .line 14
+    const v0, 0x7f09054b
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-virtual {v1, v0, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v1
+
+    .line 31
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 32
+    .line 33
+    .line 34
+    const v0, 0x7f09054c
+
+    .line 35
+    .line 36
+    .line 37
+    invoke-virtual {v1, v0, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    .line 38
+    .line 39
+    .line 40
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-object v1
+
+    .line 51
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 52
+    .line 53
+    .line 54
+    const v0, 0x7f09054d
+
+    .line 55
+    .line 56
+    .line 57
+    invoke-virtual {v1, v0, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    .line 58
+    .line 59
+    .line 60
+    return-void
+.end method
+
+.method public static final A01(LX/0Ce;)V
     .locals 1
 
-    const/4 v0, 0x3
+    .line 0
+    const/4 v0, 0x0
 
-    if-eq p0, v0, :cond_9
+    .line 1
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    const/4 v0, 0x4
+    .line 2
+    .line 3
+    .line 4
+    invoke-super {p0}, Landroid/app/Dialog;->onBackPressed()V
 
-    if-eq p0, v0, :cond_8
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
 
-    const/16 v0, 0xd
 
-    if-eq p0, v0, :cond_7
+# virtual methods
+.method public final AHp()LX/00M;
+    .locals 1
 
-    const/16 v0, 0xe
+    .line 0
+    iget-object v0, p0, LX/0Ce;->A01:LX/00M;
 
-    if-eq p0, v0, :cond_6
-
-    const/16 v0, 0x18
-
-    if-eq p0, v0, :cond_5
-
-    const/16 v0, 0x19
-
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x1b
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x1c
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x1e
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x1f
-
-    if-eq p0, v0, :cond_0
-
-    sparse-switch p0, :sswitch_data_0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
+    .line 1
+    .line 2
     return-object v0
+.end method
 
-    :pswitch_0
-    const-string v0, "AppCreateToLoginActivityCreate"
+.method public addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 1
 
-    return-object v0
+    .line 0
+    const/4 v0, 0x0
 
-    :pswitch_1
-    const-string v0, "InterstitialPreparation"
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    return-object v0
+    .line 2
+    .line 3
+    .line 4
+    invoke-direct {p0}, LX/0Ce;->A00()V
 
-    :pswitch_2
-    const-string v0, "Authentication"
+    .line 5
+    .line 6
+    .line 7
+    invoke-super {p0, p1, p2}, Landroid/app/Dialog;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    return-object v0
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
 
-    :pswitch_3
-    const-string v0, "LoginToFeedStory"
+.method public final getLifecycle()LX/077;
+    .locals 1
 
-    return-object v0
+    .line 0
+    iget-object v0, p0, LX/0Ce;->A00:LX/0Kj;
 
-    :pswitch_4
-    const-string v0, "LOGIN_LOGOUT"
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
 
-    return-object v0
+    .line 3
+    .line 4
+    new-instance v0, LX/0Kj;
 
-    :pswitch_5
-    const-string v0, "LOGIN_FETCH_PERSISTENT_COMPONENTS"
+    .line 5
+    .line 6
+    invoke-direct {v0, p0}, LX/0Kj;-><init>(LX/07B;)V
 
-    return-object v0
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/0Ce;->A00:LX/0Kj;
 
-    :pswitch_6
-    const-string v0, "LOGIN_LOAD_PERSISTENT_COMPONENTS"
-
-    return-object v0
-
-    :sswitch_0
-    const-string v0, "LOGIN_FB4A_POST_LOGOUT"
-
-    return-object v0
-
-    :sswitch_1
-    const-string v0, "LOGIN_ASSISTIVE_ID"
-
-    return-object v0
-
-    :sswitch_2
-    const-string v0, "LOGIN_CROSS_SESSION"
-
-    return-object v0
-
-    :sswitch_3
-    const-string v0, "LOGIN_HEADER_FALLBACK"
-
-    return-object v0
-
-    :sswitch_4
-    const-string v0, "LOGIN_CONTACT_POINT_LOGIN"
-
-    return-object v0
-
-    :sswitch_5
-    const-string v0, "LOGIN_AR_ASSISTIVE_ID"
-
-    return-object v0
-
-    :sswitch_6
-    const-string v0, "LOGIN_OPENID_TO_ACCOUNT_SWITCHER"
-
-    return-object v0
-
-    :sswitch_7
-    const-string v0, "LOGIN_OPENID_ACCOUNT_SWITCHER_MANAGER"
-
-    return-object v0
-
-    :sswitch_8
-    const-string v0, "LOGIN_OPENID_ACCOUNT_SWITCHER_LOGIN"
-
-    return-object v0
-
-    :sswitch_9
-    const-string v0, "LOGIN_ADDITIONAL_ACCOUNT_SIGNAL_FETCH_TIME"
-
-    return-object v0
-
-    :sswitch_a
-    const-string v0, "LOGIN_SMARTLOCK"
-
-    return-object v0
-
-    :sswitch_b
-    const-string v0, "LOGIN_SMARTLOCK_SAVE"
-
-    return-object v0
-
-    :sswitch_c
-    const-string v0, "LOGIN_ACCOUNT_SWITCHER_LOGGER"
-
-    return-object v0
-
-    :sswitch_d
-    const-string v0, "LOGIN_FETCH_LOGIN_COMPONENTS"
-
-    return-object v0
-
-    :sswitch_e
-    const-string v0, "NewLogin"
-
-    return-object v0
-
+    .line 10
+    .line 11
     :cond_0
-    const-string v0, "LOGIN_ACCOUNT_SWITCH"
-
     return-object v0
+.end method
 
+.method public final getSavedStateRegistry()LX/07v;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0Ce;->A02:LX/07x;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/07x;->A01:LX/07v;
+
+    .line 3
+    .line 4
+    return-object v0
+.end method
+
+.method public final onBackPressed()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0Ce;->A01:LX/00M;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, LX/00M;->A07()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 2
+
+    .line 0
+    invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
+
+    .line 1
+    .line 2
+    .line 3
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 4
+    .line 5
+    const/16 v0, 0x21
+
+    .line 6
+    .line 7
+    if-lt v1, v0, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v1, p0, LX/0Ce;->A01:LX/00M;
+
+    .line 10
+    .line 11
+    invoke-virtual {p0}, LX/0Ce;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {v1, v0}, LX/00M;->A08(Landroid/window/OnBackInvokedDispatcher;)V
+
+    .line 19
+    .line 20
+    .line 21
+    :cond_0
+    iget-object v0, p0, LX/0Ce;->A02:LX/07x;
+
+    .line 22
+    .line 23
+    invoke-virtual {v0, p1}, LX/07x;->A01(Landroid/os/Bundle;)V
+
+    .line 24
+    .line 25
+    .line 26
+    iget-object v1, p0, LX/0Ce;->A00:LX/0Kj;
+
+    .line 27
+    .line 28
+    if-nez v1, :cond_1
+
+    .line 29
+    .line 30
+    new-instance v1, LX/0Kj;
+
+    .line 31
+    .line 32
+    invoke-direct {v1, p0}, LX/0Kj;-><init>(LX/07B;)V
+
+    .line 33
+    .line 34
+    .line 35
+    iput-object v1, p0, LX/0Ce;->A00:LX/0Kj;
+
+    .line 36
+    .line 37
     :cond_1
-    const-string v0, "Fb4aLocalesTTL"
+    sget-object v0, LX/075;->ON_CREATE:LX/075;
 
-    return-object v0
+    .line 38
+    .line 39
+    invoke-virtual {v1, v0}, LX/0Kj;->A0B(LX/075;)V
 
-    :cond_2
-    const-string v0, "LOGIN_LIAS_ANDROID"
+    .line 40
+    .line 41
+    .line 42
+    return-void
+.end method
 
-    return-object v0
+.method public final onSaveInstanceState()Landroid/os/Bundle;
+    .locals 2
 
-    :cond_3
-    const-string v0, "LOGIN_LOAD_PARALLEL_COMPONENTS"
+    .line 0
+    invoke-super {p0}, Landroid/app/Dialog;->onSaveInstanceState()Landroid/os/Bundle;
 
-    return-object v0
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
 
-    :cond_4
-    const-string v0, "AndroidLoginTTI"
+    .line 4
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
-    return-object v0
+    .line 5
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/0Ce;->A02:LX/07x;
 
-    :cond_5
-    const-string v0, "LOGIN_LOAD_ACTIVITY_AFTER_FETCH_IG_LINKED_FBID"
+    .line 8
+    .line 9
+    iget-object v0, v0, LX/07x;->A01:LX/07v;
 
-    return-object v0
+    .line 10
+    .line 11
+    invoke-virtual {v0, v1}, LX/07v;->A02(Landroid/os/Bundle;)V
 
-    :cond_6
-    const-string v0, "ColdStartNuxTTI"
+    .line 12
+    .line 13
+    .line 14
+    return-object v1
+.end method
 
-    return-object v0
+.method public onStart()V
+    .locals 2
 
-    :cond_7
-    const-string v0, "LOGIN_SILENT_LOGIN"
+    .line 0
+    invoke-super {p0}, Landroid/app/Dialog;->onStart()V
 
-    return-object v0
+    .line 1
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/0Ce;->A00:LX/0Kj;
 
-    :cond_8
-    const-string v0, "LOGIN_FETCH_LOGIN_DATA_TTI"
+    .line 4
+    .line 5
+    if-nez v1, :cond_0
 
-    return-object v0
+    .line 6
+    .line 7
+    new-instance v1, LX/0Kj;
 
-    :cond_9
-    const-string v0, "LoginToBeforeFeedFetch"
+    .line 8
+    .line 9
+    invoke-direct {v1, p0}, LX/0Kj;-><init>(LX/07B;)V
 
-    return-object v0
+    .line 10
+    .line 11
+    .line 12
+    iput-object v1, p0, LX/0Ce;->A00:LX/0Kj;
 
-    nop
+    .line 13
+    .line 14
+    :cond_0
+    sget-object v0, LX/075;->ON_RESUME:LX/075;
 
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_e
-        0xa -> :sswitch_d
-        0x495 -> :sswitch_c
-        0xc29 -> :sswitch_b
-        0x11d9 -> :sswitch_a
-        0x12eb -> :sswitch_9
-        0x1860 -> :sswitch_8
-        0x19a5 -> :sswitch_7
-        0x1fbe -> :sswitch_6
-        0x26f9 -> :sswitch_5
-        0x2f6e -> :sswitch_4
-        0x3173 -> :sswitch_3
-        0x3896 -> :sswitch_2
-        0x38bc -> :sswitch_1
-        0x39b0 -> :sswitch_0
-    .end sparse-switch
+    .line 15
+    .line 16
+    invoke-virtual {v1, v0}, LX/0Kj;->A0B(LX/075;)V
 
-    :pswitch_data_0
-    .packed-switch 0x10
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    .line 17
+    .line 18
+    .line 19
+    return-void
+.end method
+
+.method public onStop()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/0Ce;->A00:LX/0Kj;
+
+    .line 1
+    .line 2
+    if-nez v1, :cond_0
+
+    .line 3
+    .line 4
+    new-instance v1, LX/0Kj;
+
+    .line 5
+    .line 6
+    invoke-direct {v1, p0}, LX/0Kj;-><init>(LX/07B;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v1, p0, LX/0Ce;->A00:LX/0Kj;
+
+    .line 10
+    .line 11
+    :cond_0
+    sget-object v0, LX/075;->ON_DESTROY:LX/075;
+
+    .line 12
+    .line 13
+    invoke-virtual {v1, v0}, LX/0Kj;->A0B(LX/075;)V
+
+    .line 14
+    .line 15
+    .line 16
+    const/4 v0, 0x0
+
+    .line 17
+    iput-object v0, p0, LX/0Ce;->A00:LX/0Kj;
+
+    .line 18
+    .line 19
+    invoke-super {p0}, Landroid/app/Dialog;->onStop()V
+
+    .line 20
+    .line 21
+    .line 22
+    return-void
+.end method
+
+.method public setContentView(I)V
+    .locals 0
+
+    .line 536870912
+    invoke-direct {p0}, LX/0Ce;->A00()V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(I)V
+
+    .line 536870916
+    .line 536870917
+    .line 536870918
+    return-void
+.end method
+
+.method public setContentView(Landroid/view/View;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-direct {p0}, LX/0Ce;->A00()V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 1
+
+    .line 268435456
+    const/4 v0, 0x0
+
+    .line 268435457
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    invoke-direct {p0}, LX/0Ce;->A00()V
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    invoke-super {p0, p1, p2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    return-void
 .end method

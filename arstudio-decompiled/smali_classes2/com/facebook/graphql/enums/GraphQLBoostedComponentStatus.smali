@@ -63,64 +63,64 @@
     const/4 v1, 0x0
 
     .line 3
-    new-instance v23, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    new-instance v15, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 4
     .line 5
-    move-object/from16 v0, v23
+    invoke-direct {v15, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 6
     .line 7
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
     .line 8
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+
     .line 9
     .line 10
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const-string v2, "ACTIVE"
 
     .line 11
     .line 12
-    const-string v2, "ACTIVE"
-
-    .line 13
-    .line 14
     const/4 v1, 0x1
 
+    .line 13
+    new-instance v23, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+
+    .line 14
     .line 15
-    new-instance v22, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    move-object/from16 v0, v23
 
     .line 16
     .line 17
-    move-object/from16 v0, v22
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 18
     .line 19
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
     .line 20
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->ACTIVE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+
     .line 21
     .line 22
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->ACTIVE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const-string v2, "AUTHENTICATION_NEEDED"
 
     .line 23
     .line 24
-    const-string v2, "AUTHENTICATION_NEEDED"
-
-    .line 25
-    .line 26
     const/4 v1, 0x2
 
+    .line 25
+    new-instance v22, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+
+    .line 26
     .line 27
-    new-instance v15, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    move-object/from16 v0, v22
 
     .line 28
     .line 29
-    invoke-direct {v15, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 30
     .line 31
     .line 32
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->AUTHENTICATION_NEEDED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->AUTHENTICATION_NEEDED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 33
     .line 34
@@ -131,372 +131,372 @@
     const/4 v1, 0x3
 
     .line 37
-    new-instance v14, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    new-instance v21, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 38
     .line 39
-    invoke-direct {v14, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-object/from16 v0, v21
 
     .line 40
     .line 41
-    .line 42
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->CANCELED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 42
     .line 43
     .line 44
-    const-string v2, "CONFIRMATION_REQUIRED"
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->CANCELED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 45
     .line 46
-    const/4 v1, 0x4
+    const-string v2, "CONFIRMATION_REQUIRED"
 
     .line 47
-    new-instance v21, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
-
     .line 48
+    const/4 v1, 0x4
+
     .line 49
-    move-object/from16 v0, v21
+    new-instance v20, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 50
     .line 51
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-object/from16 v0, v20
 
     .line 52
     .line 53
-    .line 54
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->CONFIRMATION_REQUIRED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 54
     .line 55
     .line 56
-    const-string v2, "CREATING"
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->CONFIRMATION_REQUIRED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 57
     .line 58
-    const/4 v1, 0x5
+    const-string v2, "CREATING"
 
     .line 59
-    new-instance v20, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
-
     .line 60
+    const/4 v1, 0x5
+
     .line 61
-    move-object/from16 v0, v20
+    new-instance v19, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 62
     .line 63
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-object/from16 v0, v19
 
     .line 64
     .line 65
-    .line 66
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->CREATING:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 66
     .line 67
     .line 68
-    const-string v2, "DRAFT"
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->CREATING:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 69
     .line 70
-    const/4 v1, 0x6
+    const-string v2, "DRAFT"
 
     .line 71
-    new-instance v19, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
-
     .line 72
+    const/4 v1, 0x6
+
     .line 73
-    move-object/from16 v0, v19
+    new-instance v18, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 74
     .line 75
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-object/from16 v0, v18
 
     .line 76
     .line 77
-    .line 78
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->DRAFT:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 78
     .line 79
     .line 80
-    const-string v2, "ERROR"
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->DRAFT:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 81
     .line 82
-    const/4 v1, 0x7
+    const-string v2, "ERROR"
 
     .line 83
-    new-instance v18, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
-
     .line 84
+    const/4 v1, 0x7
+
     .line 85
-    move-object/from16 v0, v18
+    new-instance v17, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 86
     .line 87
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-object/from16 v0, v17
 
     .line 88
     .line 89
-    .line 90
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->ERROR:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 90
     .line 91
     .line 92
-    const-string v2, "EXTENDABLE"
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->ERROR:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 93
     .line 94
-    const/16 v1, 0x8
+    const-string v2, "EXTENDABLE"
 
     .line 95
     .line 96
-    new-instance v17, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v1, 0x8
 
     .line 97
     .line 98
-    move-object/from16 v0, v17
+    new-instance v16, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 99
     .line 100
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-object/from16 v0, v16
 
     .line 101
     .line 102
-    .line 103
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->EXTENDABLE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 103
     .line 104
     .line 105
-    const-string v1, "FINISHED"
+    sput-object v16, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->EXTENDABLE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 106
     .line 107
-    const/16 v0, 0x9
+    const-string v1, "FINISHED"
 
     .line 108
     .line 109
-    new-instance v13, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0x9
 
     .line 110
     .line 111
-    invoke-direct {v13, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v14, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 112
     .line 113
-    .line 114
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->FINISHED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v14, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 114
     .line 115
     .line 116
-    const-string v1, "INACTIVE"
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->FINISHED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 117
     .line 118
-    const/16 v0, 0xa
+    const-string v1, "INACTIVE"
 
     .line 119
     .line 120
-    new-instance v12, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0xa
 
     .line 121
     .line 122
-    invoke-direct {v12, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v13, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 123
     .line 124
-    .line 125
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->INACTIVE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v13, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 125
     .line 126
     .line 127
-    const-string v1, "LIMITED_DELIVERY"
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->INACTIVE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 128
     .line 129
-    const/16 v0, 0xb
+    const-string v1, "LIMITED_DELIVERY"
 
     .line 130
     .line 131
-    new-instance v11, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0xb
 
     .line 132
     .line 133
-    invoke-direct {v11, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v12, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 134
     .line 135
-    .line 136
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->LIMITED_DELIVERY:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v12, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 136
     .line 137
     .line 138
-    const-string v1, "NOT_DELIVERING"
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->LIMITED_DELIVERY:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 139
     .line 140
-    const/16 v0, 0xc
+    const-string v1, "NOT_DELIVERING"
 
     .line 141
     .line 142
-    new-instance v10, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0xc
 
     .line 143
     .line 144
-    invoke-direct {v10, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v11, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 145
     .line 146
-    .line 147
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->NOT_DELIVERING:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v11, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 147
     .line 148
     .line 149
-    const-string v1, "NO_CTA"
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->NOT_DELIVERING:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 150
     .line 151
-    const/16 v0, 0xd
+    const-string v1, "NO_CTA"
 
     .line 152
     .line 153
-    new-instance v9, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0xd
 
     .line 154
     .line 155
-    invoke-direct {v9, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v10, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 156
     .line 157
-    .line 158
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->NO_CTA:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v10, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 158
     .line 159
     .line 160
-    const-string v1, "PAUSED"
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->NO_CTA:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 161
     .line 162
-    const/16 v0, 0xe
+    const-string v1, "PAUSED"
 
     .line 163
     .line 164
-    new-instance v8, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0xe
 
     .line 165
     .line 166
-    invoke-direct {v8, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v9, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 167
     .line 168
-    .line 169
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->PAUSED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v9, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 169
     .line 170
     .line 171
-    const-string v1, "PENDING"
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->PAUSED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 172
     .line 173
-    const/16 v0, 0xf
+    const-string v1, "PENDING"
 
     .line 174
     .line 175
-    new-instance v7, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0xf
 
     .line 176
     .line 177
-    invoke-direct {v7, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v8, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 178
     .line 179
-    .line 180
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->PENDING:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v8, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 180
     .line 181
     .line 182
-    const-string v1, "PENDING_FUNDING_SOURCE"
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->PENDING:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 183
     .line 184
-    const/16 v0, 0x10
+    const-string v1, "PENDING_FUNDING_SOURCE"
 
     .line 185
     .line 186
-    new-instance v6, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0x10
 
     .line 187
     .line 188
-    invoke-direct {v6, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v7, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 189
     .line 190
-    .line 191
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->PENDING_FUNDING_SOURCE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v7, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 191
     .line 192
     .line 193
-    const-string v1, "REJECTED"
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->PENDING_FUNDING_SOURCE:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 194
     .line 195
-    const/16 v0, 0x11
+    const-string v1, "REJECTED"
 
     .line 196
     .line 197
-    new-instance v5, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0x11
 
     .line 198
     .line 199
-    invoke-direct {v5, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v6, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 200
     .line 201
-    .line 202
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->REJECTED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v6, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 202
     .line 203
     .line 204
-    const-string v1, "REVIEW_NEEDED"
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->REJECTED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 205
     .line 206
-    const/16 v0, 0x12
+    const-string v1, "REVIEW_NEEDED"
 
     .line 207
     .line 208
-    new-instance v4, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0x12
 
     .line 209
     .line 210
-    invoke-direct {v4, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v5, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 211
     .line 212
-    .line 213
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->REVIEW_NEEDED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    invoke-direct {v5, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 213
     .line 214
     .line 215
-    const-string v1, "SCHEDULED"
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->REVIEW_NEEDED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 216
     .line 217
-    const/16 v16, 0x13
+    const-string v1, "SCHEDULED"
 
     .line 218
     .line 219
-    new-instance v3, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    const/16 v0, 0x13
 
     .line 220
     .line 221
-    move/from16 v0, v16
+    new-instance v4, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 222
     .line 223
-    invoke-direct {v3, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v4, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 224
     .line 225
     .line 226
-    sput-object v3, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->SCHEDULED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->SCHEDULED:Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 227
     .line 228
@@ -504,84 +504,79 @@
 
     .line 229
     .line 230
-    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+    new-array v3, v0, [Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
 
     .line 231
     .line 232
-    move-object/from16 v1, v23
+    move-object/from16 v2, v23
 
     .line 233
     .line 234
-    move-object/from16 v0, v22
+    move-object/from16 v1, v22
 
     .line 235
     .line 236
-    invoke-static {v2, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v0, v21
 
     .line 237
     .line 238
-    .line 239
-    move-object/from16 v1, v21
+    invoke-static {v15, v2, v1, v0, v3}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 239
     .line 240
     .line 241
-    move-object/from16 v0, v20
+    move-object/from16 v15, v20
 
     .line 242
     .line 243
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v2, v19
 
     .line 244
     .line 245
+    move-object/from16 v1, v18
+
     .line 246
-    move-object/from16 v1, v19
-
     .line 247
-    .line 248
-    move-object/from16 v0, v18
-
-    .line 249
-    .line 250
-    invoke-static {v2, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 251
-    .line 252
-    .line 253
     move-object/from16 v0, v17
 
-    .line 254
-    .line 255
-    invoke-static {v0, v13, v12, v11, v2}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 248
+    .line 249
+    invoke-static {v15, v2, v1, v0, v3}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 250
+    .line 251
+    .line 252
+    move-object/from16 v0, v16
+
+    .line 253
+    .line 254
+    invoke-static {v0, v14, v13, v12, v3}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 255
     .line 256
     .line 257
-    .line 258
-    invoke-static {v2, v10, v9}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/16 v0, 0xc
 
+    .line 258
     .line 259
+    aput-object v11, v3, v0
+
     .line 260
     .line 261
-    invoke-static {v8, v7, v6, v5, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v10, v9, v8, v7, v3}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 262
     .line 263
     .line 264
-    const/16 v0, 0x12
+    invoke-static {v6, v5, v4, v3}, LX/0X3;->A1K(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 265
     .line 266
-    aput-object v4, v2, v0
-
     .line 267
+    sput-object v3, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
+
     .line 268
-    aput-object v3, v2, v16
-
     .line 269
-    .line 270
-    sput-object v2, Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLBoostedComponentStatus;
-
-    .line 271
-    .line 272
     return-void
 .end method
 
@@ -609,7 +604,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

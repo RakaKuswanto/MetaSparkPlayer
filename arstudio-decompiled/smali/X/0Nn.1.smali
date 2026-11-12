@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final A00:LX/0Ni;
+.field public final A00:LX/0UF;
 
-.field public final A01:Ljava/lang/ThreadLocal;
+.field public final A01:Ljava/util/concurrent/ExecutorService;
 
-.field public final A02:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final A02:Ljavax/net/ssl/SSLSocketFactory;
 
 
 # direct methods
-.method public constructor <init>(LX/0Ni;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -21,35 +21,58 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, Ljava/lang/ThreadLocal;
+    const/4 v0, 0x2
 
     .line 4
-    .line 5
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
 
+    .line 5
     .line 6
     .line 7
+    move-result-object v0
+
     .line 8
-    iput-object v0, p0, LX/0Nn;->A01:Ljava/lang/ThreadLocal;
+    iput-object v0, p0, LX/0Nn;->A01:Ljava/util/concurrent/ExecutorService;
 
     .line 9
     .line 10
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {}, Ljavax/net/ssl/SSLSocketFactory;->getDefault()Ljavax/net/SocketFactory;
 
     .line 11
     .line 12
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
-
     .line 13
+    move-result-object v0
+
     .line 14
+    check-cast v0, Ljavax/net/ssl/SSLSocketFactory;
+
     .line 15
-    iput-object v0, p0, LX/0Nn;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
-
     .line 16
-    .line 17
-    iput-object p1, p0, LX/0Nn;->A00:LX/0Ni;
+    iput-object v0, p0, LX/0Nn;->A02:Ljavax/net/ssl/SSLSocketFactory;
 
+    .line 17
     .line 18
+    new-instance v1, LX/05J;
+
     .line 19
+    .line 20
+    invoke-direct {v1}, LX/05J;-><init>()V
+
+    .line 21
+    .line 22
+    .line 23
+    new-instance v0, LX/0UF;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v1}, LX/0UF;-><init>(Ljavax/net/ssl/HostnameVerifier;)V
+
+    .line 26
+    .line 27
+    .line 28
+    iput-object v0, p0, LX/0Nn;->A00:LX/0UF;
+
+    .line 29
+    .line 30
     return-void
 .end method

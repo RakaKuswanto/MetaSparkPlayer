@@ -28,7 +28,7 @@
     return-void
 .end method
 
-.method public static create(Ljava/lang/String;Landroid/content/Context;[LX/0VP;)Lcom/facebook/soloader/SoLoaderDSONotFoundError;
+.method public static create(Ljava/lang/String;Landroid/content/Context;[LX/0CG;)Lcom/facebook/soloader/SoLoaderDSONotFoundError;
     .locals 3
 
     .line 0
@@ -97,7 +97,7 @@
 
     .line 33
     .line 34
-    invoke-static {v2, v0}, LX/001;->A10(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+    invoke-static {v2, v0}, LX/001;->A11(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
 
     .line 35
     .line 36

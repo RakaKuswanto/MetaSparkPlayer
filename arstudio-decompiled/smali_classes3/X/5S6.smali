@@ -1,72 +1,43 @@
-.class public final LX/5S6;
+.class public interface abstract LX/5S6;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/io/Serializable;
-
 
 # static fields
-.field public static final serialVersionUID:J
-
-
-# instance fields
-.field public final algorithmName:Ljava/lang/String;
-
-.field public final bytes:I
-
-.field public final toString:Ljava/lang/String;
+.field public static final A00:LX/5S6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/5Sa;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/5S6;->algorithmName:Ljava/lang/String;
+    invoke-direct {v0}, LX/5Sa;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput p2, p0, LX/5S6;->bytes:I
+    sput-object v0, LX/5S6;->A00:LX/5S6;
 
     .line 6
     .line 7
-    iput-object p3, p0, LX/5S6;->toString:Ljava/lang/String;
-
-    .line 8
-    .line 9
     return-void
 .end method
 
-.method private readResolve()Ljava/lang/Object;
-    .locals 4
 
-    .line 0
-    iget-object v3, p0, LX/5S6;->algorithmName:Ljava/lang/String;
+# virtual methods
+.method public abstract AMh()F
+.end method
 
-    .line 1
-    .line 2
-    iget v2, p0, LX/5S6;->bytes:I
+.method public abstract Ajb(LX/5Rd;)V
+.end method
 
-    .line 3
-    .line 4
-    iget-object v1, p0, LX/5S6;->toString:Ljava/lang/String;
+.method public abstract ApJ(ZI)I
+.end method
 
-    .line 5
-    .line 6
-    new-instance v0, LX/5S3;
-
-    .line 7
-    .line 8
-    invoke-direct {v0, v3, v2, v1}, LX/5S3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 9
-    .line 10
-    .line 11
-    return-object v0
+.method public abstract release()V
 .end method

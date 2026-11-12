@@ -200,11 +200,11 @@
     move-result-object v11
 
     .line 56
-    new-instance p1, Lorg/webrtc/JavaI420Buffer$$ExternalSyntheticLambda0;
+    new-instance p1, Lorg/webrtc/JavaI420Buffer$$ExternalSyntheticLambda1;
 
     .line 57
     .line 58
-    invoke-direct {p1, v1}, Lorg/webrtc/JavaI420Buffer$$ExternalSyntheticLambda0;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {p1, v1}, Lorg/webrtc/JavaI420Buffer$$ExternalSyntheticLambda1;-><init>(Ljava/nio/ByteBuffer;)V
 
     .line 59
     .line 60
@@ -273,7 +273,7 @@
     move-result v0
 
     .line 19
-    invoke-static {v2, v1, p3, v0}, LX/4BE;->A0i(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/IllegalArgumentException;
+    invoke-static {v2, v1, p3, v0}, LX/432;->A0g(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/IllegalArgumentException;
 
     .line 20
     .line 21
@@ -464,11 +464,11 @@
     move-result v13
 
     .line 88
-    new-instance v3, Lorg/webrtc/JavaI420Buffer$$ExternalSyntheticLambda1;
+    new-instance v3, Lorg/webrtc/JavaI420Buffer$$ExternalSyntheticLambda0;
 
     .line 89
     .line 90
-    invoke-direct {v3, p0}, Lorg/webrtc/JavaI420Buffer$$ExternalSyntheticLambda1;-><init>(Lorg/webrtc/VideoFrame$I420Buffer;)V
+    invoke-direct {v3, p0}, Lorg/webrtc/JavaI420Buffer$$ExternalSyntheticLambda0;-><init>(Lorg/webrtc/VideoFrame$I420Buffer;)V
 
     .line 91
     .line 92
@@ -745,7 +745,7 @@
 
     .line 60
     .line 61
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 62
     .line 63
@@ -761,7 +761,7 @@
 
     .line 67
     .line 68
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 69
     .line 70

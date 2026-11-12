@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<X.4KJ android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<X.3va android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <X.6H3 android:layout_gravity="center_vertical" android:id="@id/autofill_incomplete_payment_data_entry_card_icon" android:layout_width="@dimen/action_sheet_native_base_header_dragger_width" android:layout_height="@dimen/fb_autofill_payment_card_icon_height" android:layout_marginRight="@dimen/action_button_optional_padding_right" android:layout_weight="0.0" android:layout_marginEnd="@dimen/action_button_optional_padding_right" />
-    <X.4KJ android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/autofill_incomplete_payment_data_entry_card_info" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
-        <X.4Qk android:id="@id/autofill_incomplete_payment_data_entry_card_number" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/headline4" />
-        <X.4Qk android:gravity="start" android:id="@id/autofill_incomplete_payment_data_entry_card_expiry_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/autofill_missing_payment_info_button_top_margin" style="@style/meta4" />
-    </X.4KJ>
-</X.4KJ>
+    <X.6dz android:layout_gravity="center_vertical" android:id="@id/autofill_incomplete_payment_data_entry_card_icon" android:layout_width="@dimen/action_sheet_native_base_header_dragger_width" android:layout_height="@dimen/fb_autofill_payment_card_icon_height" android:layout_marginRight="@dimen/action_button_optional_padding_right" android:layout_weight="0.0" android:layout_marginEnd="@dimen/action_button_optional_padding_right" />
+    <X.3va android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/autofill_incomplete_payment_data_entry_card_info" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <X.4RJ android:id="@id/autofill_incomplete_payment_data_entry_card_number" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/headline4" />
+        <X.4RJ android:gravity="start" android:id="@id/autofill_incomplete_payment_data_entry_card_expiry_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/autofill_missing_payment_info_button_top_margin" style="@style/meta4" />
+    </X.3va>
+</X.3va>

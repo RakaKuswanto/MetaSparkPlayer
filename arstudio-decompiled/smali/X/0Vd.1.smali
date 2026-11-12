@@ -2,20 +2,17 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/io/Serializable;
+
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:LX/0Vl;
-
-.field public final A02:LX/0Ve;
-
-.field public final A03:Z
+.field public final exception:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(LX/0Ve;Ljava/lang/Throwable;IZ)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -23,58 +20,71 @@
     .line 1
     .line 2
     .line 3
-    iput-boolean p4, p0, LX/0Vd;->A03:Z
+    iput-object p1, p0, LX/0Vd;->exception:Ljava/lang/Throwable;
 
     .line 4
     .line 5
-    iput-object p1, p0, LX/0Vd;->A02:LX/0Ve;
-
-    .line 6
-    .line 7
-    iput p3, p0, LX/0Vd;->A00:I
-
-    .line 8
-    .line 9
-    if-nez p2, :cond_0
-
-    .line 10
-    .line 11
-    sget-object v0, LX/0MG;->A00:LX/0MG;
-
-    .line 12
-    .line 13
-    :goto_0
-    iput-object v0, p0, LX/0Vd;->A01:LX/0Vl;
-
-    .line 14
-    .line 15
     return-void
-
-    .line 16
-    :cond_0
-    new-instance v0, LX/0MF;
-
-    .line 17
-    .line 18
-    invoke-direct {v0, p2}, LX/0MF;-><init>(Ljava/lang/Object;)V
-
-    .line 19
-    .line 20
-    .line 21
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
     .line 0
-    iget-object v1, p0, LX/0Vd;->A01:LX/0Vl;
+    instance-of v0, p1, LX/0Vd;
 
     .line 1
     .line 2
-    invoke-virtual {v1}, LX/0Vl;->A03()Z
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v1, p0, LX/0Vd;->exception:Ljava/lang/Throwable;
+
+    .line 5
+    .line 6
+    check-cast p1, LX/0Vd;
+
+    .line 7
+    .line 8
+    iget-object v0, p1, LX/0Vd;->exception:Ljava/lang/Throwable;
+
+    .line 9
+    .line 10
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v1
+
+    .line 14
+    const/4 v0, 0x1
+
+    .line 15
+    if-nez v1, :cond_1
+
+    .line 16
+    .line 17
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 18
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0Vd;->exception:Ljava/lang/Throwable;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     .line 3
     .line 4
@@ -82,122 +92,50 @@
     move-result v0
 
     .line 6
-    if-eqz v0, :cond_0
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    const-string v0, "Failure("
+
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
-    invoke-virtual {v1}, LX/0Vl;->A02()Ljava/lang/Object;
-
     .line 9
+    iget-object v0, p0, LX/0Vd;->exception:Ljava/lang/Throwable;
+
     .line 10
     .line 11
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 12
-    check-cast v0, Ljava/lang/Throwable;
-
     .line 13
     .line 14
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
+    const/16 v0, 0x29
 
     .line 15
     .line 16
+    invoke-static {v1, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
     .line 17
-    move-result-object v2
-
     .line 18
-    :goto_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
     .line 19
-    .line 20
-    .line 21
-    move-result-object v1
-
-    .line 22
-    const-string v0, "NetworkState{mConnected="
-
-    .line 23
-    .line 24
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 25
-    .line 26
-    .line 27
-    iget-boolean v0, p0, LX/0Vd;->A03:Z
-
-    .line 28
-    .line 29
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 30
-    .line 31
-    .line 32
-    const-string v0, ", mConnectionType="
-
-    .line 33
-    .line 34
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 35
-    .line 36
-    .line 37
-    iget-object v0, p0, LX/0Vd;->A02:LX/0Ve;
-
-    .line 38
-    .line 39
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 40
-    .line 41
-    .line 42
-    const-string v0, ", mNetworkType="
-
-    .line 43
-    .line 44
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 45
-    .line 46
-    .line 47
-    iget v0, p0, LX/0Vd;->A00:I
-
-    .line 48
-    .line 49
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 50
-    .line 51
-    .line 52
-    const-string v0, ", mThrowable="
-
-    .line 53
-    .line 54
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 55
-    .line 56
-    .line 57
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 58
-    .line 59
-    .line 60
-    invoke-static {v1}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 61
-    .line 62
-    .line 63
     move-result-object v0
 
-    .line 64
+    .line 20
     return-object v0
-
-    .line 65
-    :cond_0
-    const-string v2, "None"
-
-    .line 66
-    .line 67
-    goto :goto_0
 .end method

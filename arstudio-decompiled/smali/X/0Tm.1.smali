@@ -2,120 +2,80 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbnsConnectionManager$9"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/util/Pair;
+
+.field public final synthetic A01:LX/0TS;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(Landroid/util/Pair;LX/0TS;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 0
+    iput-object p2, p0, LX/0Tm;->A01:LX/0TS;
 
-    if-eq p0, v0, :cond_b
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/0Tm;->A00:Landroid/util/Pair;
 
-    const/4 v0, 0x2
+    .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p0, v0, :cond_a
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
 
-    const/4 v0, 0x3
 
-    if-eq p0, v0, :cond_9
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    const/4 v0, 0x4
+    .line 0
+    iget-object v2, p0, LX/0Tm;->A01:LX/0TS;
 
-    if-eq p0, v0, :cond_8
+    .line 1
+    .line 2
+    iget-object v1, p0, LX/0Tm;->A00:Landroid/util/Pair;
 
-    const/16 v0, 0xd4b
+    .line 3
+    .line 4
+    iget-object v0, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    if-eq p0, v0, :cond_7
+    .line 5
+    .line 6
+    check-cast v0, Ljava/util/List;
 
-    const/16 v0, 0x1cab
+    .line 7
+    .line 8
+    invoke-virtual {v2, v0}, LX/0TS;->A0S(Ljava/util/List;)Z
 
-    if-eq p0, v0, :cond_6
+    .line 9
+    .line 10
+    .line 11
+    iget-object v0, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    const/16 v0, 0x22d9
+    .line 12
+    .line 13
+    check-cast v0, Ljava/util/List;
 
-    if-eq p0, v0, :cond_5
+    .line 14
+    .line 15
+    invoke-virtual {v2, v0}, LX/0TS;->A0T(Ljava/util/List;)Z
 
-    const/16 v0, 0x2494
-
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x2632
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x2846
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x38a0
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x3e8b
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "ACT_PRE_ARMADILLO_REGISTRATION"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "ACT_PRE_ADVANCED_CRYPTO_THREAD_VIEW"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "ACT_PRE_TAM_THREAD_MEDIA_LOAD_SUMMARY"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "ACT_PRE_ARMADILLO_ACT_MEDIA_DOWNLOAD"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "ACT_PRE_ACT_OFFLINE_SYNC"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "ACT_PRE_ACT_MESSAGE_SEND_MEDIA_V2"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "ACT_PRE_THREAD_MEDIA_LOAD_SUMMARY"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "ACT_PRE_ACT_MESSAGE_SEND_V2"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "ACT_PRE_ARMADILLO_CONNECTION"
-
-    return-object v0
-
-    :cond_9
-    const-string v0, "ACT_PRE_ACT_MESSAGE_RECEIVE"
-
-    return-object v0
-
-    :cond_a
-    const-string v0, "ACT_PRE_ACT_MESSAGE_SEND_MEDIA"
-
-    return-object v0
-
-    :cond_b
-    const-string v0, "ACT_PRE_ACT_MESSAGE_SEND"
-
-    return-object v0
+    .line 16
+    .line 17
+    .line 18
+    return-void
 .end method

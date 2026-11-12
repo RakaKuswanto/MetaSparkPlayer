@@ -1,9 +1,10 @@
 .class public final LX/1V4;
-.super LX/1Bn;
+.super LX/1gb;
 .source ""
 
 # interfaces
-.implements LX/1V3;
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1H2;
 
 
 # direct methods
@@ -11,7 +12,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2

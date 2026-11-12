@@ -29,15 +29,15 @@
     .locals 2
 
     .line 0
-    const/16 v1, 0x11
+    const/16 v1, 0xc
 
     .line 1
     .line 2
-    new-instance v0, LX/1QO;
+    new-instance v0, LX/1b7;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/1QO;-><init>(I)V
+    invoke-direct {v0, v1}, LX/1b7;-><init>(I)V
 
     .line 5
     .line 6
@@ -149,7 +149,7 @@
 
     .line 29
     .line 30
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 31
     .line 32
@@ -209,51 +209,6 @@
     move-result-object v0
 
     .line 14
-    return-object v0
-.end method
-
-.method public final A05()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;->A04:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final A06()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    const-string v0, "callbackID"
-
-    .line 1
-    .line 2
-    invoke-virtual {p0, v0}, Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;->A04(Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, Ljava/lang/String;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public final A07()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;->A05:Ljava/lang/String;
-
-    .line 1
-    .line 2
     return-object v0
 .end method
 

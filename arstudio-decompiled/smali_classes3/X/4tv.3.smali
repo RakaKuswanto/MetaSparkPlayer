@@ -1,476 +1,206 @@
-.class public abstract LX/4tv;
-.super LX/4uq;
+.class public final synthetic LX/4tv;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
-.field public A00:Landroid/widget/Scroller;
-
-.field public A01:Landroidx/recyclerview/widget/RecyclerView;
-
-.field public final A02:LX/4uZ;
+.field public final synthetic A00:LX/4tt;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(LX/4tt;)V
+    .locals 0
 
-    .line 0
-    invoke-direct {p0}, LX/4uq;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    new-instance v0, LX/4uR;
+    iput-object p1, p0, LX/4tv;->A00:LX/4tt;
 
-    .line 4
-    .line 5
-    invoke-direct {v0, p0}, LX/4uR;-><init>(LX/4tv;)V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/4tv;->A02:LX/4uZ;
-
-    .line 9
-    .line 10
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()V
-    .locals 10
+.method public final binderDied()V
+    .locals 7
 
     .line 0
-    iget-object v0, p0, LX/4tv;->A01:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v6, p0, LX/4tv;->A00:LX/4tt;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_7
+    iget-object v3, v6, LX/4tt;->A06:LX/6WC;
 
     .line 3
     .line 4
-    iget-object v8, v0, Landroidx/recyclerview/widget/RecyclerView;->A0H:LX/4ta;
+    const-string v1, "reportBinderDeath"
 
     .line 5
     .line 6
-    if-eqz v8, :cond_7
+    const/4 v2, 0x0
 
     .line 7
-    .line 8
-    move-object v1, p0
+    new-array v0, v2, [Ljava/lang/Object;
 
+    .line 8
     .line 9
-    check-cast v1, LX/4tx;
+    invoke-virtual {v3, v1, v0}, LX/6WC;->A01(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 10
     .line 11
-    invoke-virtual {v8}, LX/4ta;->canScrollVertically()Z
-
     .line 12
+    iget-object v0, v6, LX/4tt;->A08:Ljava/lang/ref/WeakReference;
+
     .line 13
     .line 14
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     .line 15
-    if-eqz v0, :cond_3
-
     .line 16
     .line 17
-    iget-object v9, v1, LX/4tx;->A01:LX/4u4;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 18
     .line 19
-    if-eqz v9, :cond_0
-
     .line 20
+    move-result-object v1
+
     .line 21
-    iget-object v0, v9, LX/4u4;->A02:LX/4ta;
+    const-string v5, "SplitInstallService"
 
     .line 22
     .line 23
-    if-eq v0, v8, :cond_1
+    aput-object v5, v1, v2
 
     .line 24
     .line 25
-    :cond_0
-    new-instance v9, LX/4u5;
+    const-string v0, "%s : Binder has died."
 
     .line 26
     .line 27
-    invoke-direct {v9, v8}, LX/4u5;-><init>(LX/4ta;)V
+    invoke-virtual {v3, v0, v1}, LX/6WC;->A01(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 28
     .line 29
     .line 30
-    iput-object v9, v1, LX/4tx;->A01:LX/4u4;
+    iget-object v4, v6, LX/4tt;->A09:Ljava/util/List;
 
     .line 31
     .line 32
-    :cond_1
-    :goto_0
-    invoke-virtual {v8}, LX/4ta;->getChildCount()I
+    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 33
     .line 34
     .line 35
-    move-result v7
+    move-result-object v3
 
     .line 36
-    const/4 v6, 0x0
+    :cond_0
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     .line 37
-    if-eqz v7, :cond_7
-
     .line 38
     .line 39
-    invoke-virtual {v9}, LX/4u4;->A03()I
-
-    .line 40
-    .line 41
-    .line 42
-    move-result v5
-
-    .line 43
-    invoke-virtual {v9}, LX/4u4;->A04()I
-
-    .line 44
-    .line 45
-    .line 46
     move-result v0
 
+    .line 40
+    if-eqz v0, :cond_1
+
+    .line 41
+    .line 42
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v2
+
+    .line 46
+    check-cast v2, LX/4ty;
+
     .line 47
-    div-int/lit8 v0, v0, 0x2
-
     .line 48
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
     .line 49
-    add-int/2addr v5, v0
-
     .line 50
-    const v4, 0x7fffffff
-
     .line 51
-    .line 52
-    .line 53
-    const/4 v3, 0x0
+    move-result-object v1
 
+    .line 52
+    const-string v0, " : Binder has died."
+
+    .line 53
     .line 54
-    :goto_1
-    if-ge v3, v7, :cond_5
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     .line 55
     .line 56
-    invoke-virtual {v8, v3}, LX/4ta;->getChildAt(I)Landroid/view/View;
-
     .line 57
-    .line 58
-    .line 59
-    move-result-object v2
+    move-result-object v0
 
+    .line 58
+    new-instance v1, Landroid/os/RemoteException;
+
+    .line 59
     .line 60
-    invoke-virtual {v9, v2}, LX/4u4;->A08(Landroid/view/View;)I
+    invoke-direct {v1, v0}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
 
     .line 61
     .line 62
     .line 63
-    move-result v1
+    iget-object v0, v2, LX/4ty;->A00:LX/0fX;
 
     .line 64
-    invoke-virtual {v9, v2}, LX/4u4;->A06(Landroid/view/View;)I
-
     .line 65
+    if-eqz v0, :cond_0
+
     .line 66
     .line 67
-    move-result v0
+    invoke-virtual {v0, v1}, LX/0fX;->A00(Ljava/lang/Exception;)V
 
     .line 68
-    div-int/lit8 v0, v0, 0x2
-
     .line 69
     .line 70
-    add-int/2addr v1, v0
+    goto :goto_0
 
     .line 71
-    invoke-static {v1, v5}, LX/4BF;->A05(II)I
+    :cond_1
+    invoke-interface {v4}, Ljava/util/List;->clear()V
 
     .line 72
     .line 73
     .line 74
-    move-result v0
+    iget-object v1, v6, LX/4tt;->A07:Ljava/lang/Object;
 
     .line 75
-    if-ge v0, v4, :cond_2
-
     .line 76
+    monitor-enter v1
+
     .line 77
-    move-object v6, v2
+    :try_start_0
+    invoke-static {v6}, LX/4tt;->A00(LX/4tt;)V
 
     .line 78
-    move v4, v0
-
     .line 79
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
     .line 80
+    monitor-exit v1
+
     .line 81
-    goto :goto_1
+    return-void
 
     .line 82
-    :cond_3
-    invoke-virtual {v8}, LX/4ta;->canScrollHorizontally()Z
+    :catchall_0
+    move-exception v0
 
     .line 83
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 84
-    .line 85
-    move-result v0
-
-    .line 86
-    if-eqz v0, :cond_7
-
-    .line 87
-    .line 88
-    iget-object v9, v1, LX/4tx;->A00:LX/4u4;
-
-    .line 89
-    .line 90
-    if-eqz v9, :cond_4
-
-    .line 91
-    .line 92
-    iget-object v0, v9, LX/4u4;->A02:LX/4ta;
-
-    .line 93
-    .line 94
-    if-eq v0, v8, :cond_1
-
-    .line 95
-    .line 96
-    :cond_4
-    new-instance v9, LX/4u6;
-
-    .line 97
-    .line 98
-    invoke-direct {v9, v8}, LX/4u6;-><init>(LX/4ta;)V
-
-    .line 99
-    .line 100
-    .line 101
-    iput-object v9, v1, LX/4tx;->A00:LX/4u4;
-
-    .line 102
-    .line 103
-    goto :goto_0
-
-    .line 104
-    :cond_5
-    if-eqz v6, :cond_7
-
-    .line 105
-    .line 106
-    invoke-virtual {p0, v6, v8}, LX/4tv;->A01(Landroid/view/View;LX/4ta;)[I
-
-    .line 107
-    .line 108
-    .line 109
-    move-result-object v4
-
-    .line 110
-    const/4 v0, 0x0
-
-    .line 111
-    aget v3, v4, v0
-
-    .line 112
-    .line 113
-    const/4 v1, 0x1
-
-    .line 114
-    if-nez v3, :cond_6
-
-    .line 115
-    .line 116
-    aget v0, v4, v1
-
-    .line 117
-    .line 118
-    if-eqz v0, :cond_7
-
-    .line 119
-    .line 120
-    :cond_6
-    iget-object v2, p0, LX/4tv;->A01:Landroidx/recyclerview/widget/RecyclerView;
-
-    .line 121
-    .line 122
-    aget v1, v4, v1
-
-    .line 123
-    .line 124
-    const/4 v0, 0x0
-
-    .line 125
-    invoke-virtual {v2, v3, v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->A0l(IIZ)V
-
-    .line 126
-    .line 127
-    .line 128
-    :cond_7
-    return-void
-.end method
-
-.method public final A01(Landroid/view/View;LX/4ta;)[I
-    .locals 6
-
-    .line 0
-    move-object v5, p0
-
-    .line 1
-    check-cast v5, LX/4tx;
-
-    .line 2
-    .line 3
-    invoke-static {}, LX/4BF;->A1R()[I
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v4
-
-    .line 7
-    invoke-virtual {p2}, LX/4ta;->canScrollHorizontally()Z
-
-    .line 8
-    .line 9
-    .line 10
-    move-result v0
-
-    .line 11
-    const/4 v3, 0x0
-
-    .line 12
-    if-eqz v0, :cond_4
-
-    .line 13
-    .line 14
-    iget-object v1, v5, LX/4tx;->A00:LX/4u4;
-
-    .line 15
-    .line 16
-    if-eqz v1, :cond_0
-
-    .line 17
-    .line 18
-    iget-object v0, v1, LX/4u4;->A02:LX/4ta;
-
-    .line 19
-    .line 20
-    if-eq v0, p2, :cond_1
-
-    .line 21
-    .line 22
-    :cond_0
-    new-instance v1, LX/4u6;
-
-    .line 23
-    .line 24
-    invoke-direct {v1, p2}, LX/4u6;-><init>(LX/4ta;)V
-
-    .line 25
-    .line 26
-    .line 27
-    iput-object v1, v5, LX/4tx;->A00:LX/4u4;
-
-    .line 28
-    .line 29
-    :cond_1
-    invoke-static {p1, v1}, LX/4u4;->A00(Landroid/view/View;LX/4u4;)I
-
-    .line 30
-    .line 31
-    .line 32
-    move-result v0
-
-    .line 33
-    aput v0, v4, v3
-
-    .line 34
-    .line 35
-    :goto_0
-    invoke-virtual {p2}, LX/4ta;->canScrollVertically()Z
-
-    .line 36
-    .line 37
-    .line 38
-    move-result v0
-
-    .line 39
-    const/4 v2, 0x1
-
-    .line 40
-    if-eqz v0, :cond_5
-
-    .line 41
-    .line 42
-    iget-object v1, v5, LX/4tx;->A01:LX/4u4;
-
-    .line 43
-    .line 44
-    if-eqz v1, :cond_2
-
-    .line 45
-    .line 46
-    iget-object v0, v1, LX/4u4;->A02:LX/4ta;
-
-    .line 47
-    .line 48
-    if-eq v0, p2, :cond_3
-
-    .line 49
-    .line 50
-    :cond_2
-    new-instance v1, LX/4u5;
-
-    .line 51
-    .line 52
-    invoke-direct {v1, p2}, LX/4u5;-><init>(LX/4ta;)V
-
-    .line 53
-    .line 54
-    .line 55
-    iput-object v1, v5, LX/4tx;->A01:LX/4u4;
-
-    .line 56
-    .line 57
-    :cond_3
-    invoke-static {p1, v1}, LX/4u4;->A00(Landroid/view/View;LX/4u4;)I
-
-    .line 58
-    .line 59
-    .line 60
-    move-result v0
-
-    .line 61
-    aput v0, v4, v2
-
-    .line 62
-    .line 63
-    return-object v4
-
-    .line 64
-    :cond_4
-    aput v3, v4, v3
-
-    .line 65
-    .line 66
-    goto :goto_0
-
-    .line 67
-    :cond_5
-    aput v3, v4, v2
-
-    .line 68
-    .line 69
-    return-object v4
+    throw v0
 .end method

@@ -2,12 +2,9 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5Xz;
-
 
 # static fields
-.field public static final Companion:LX/5YU;
+.field public static final Companion:LX/6As;
 
 .field public static final TAG:Ljava/lang/Class;
 
@@ -21,16 +18,16 @@
     .locals 4
 
     .line 0
-    new-instance v0, LX/5YU;
+    new-instance v0, LX/6As;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5YU;-><init>()V
+    invoke-direct {v0}, LX/6As;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/gputimer/GPUTimerImpl;->Companion:LX/5YU;
+    sput-object v0, Lcom/facebook/gputimer/GPUTimerImpl;->Companion:LX/6As;
 
     .line 6
     .line 7
@@ -47,7 +44,7 @@
     .line 12
     .line 13
     :try_start_0
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 14
     .line 15
@@ -73,7 +70,7 @@
 
     .line 23
     .line 24
-    invoke-static {v3, v0, v2, v1}, LX/0Jt;->A06(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v2, v1}, LX/0Il;->A06(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 25
     .line 26

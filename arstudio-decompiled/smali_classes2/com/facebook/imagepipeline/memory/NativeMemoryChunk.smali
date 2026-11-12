@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/io/Closeable;
-.implements LX/3z9;
+.implements LX/3MD;
 
 
 # instance fields
@@ -28,7 +28,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 5
     .line 6
@@ -82,7 +82,7 @@
     const/4 v2, 0x0
 
     .line 4
-    invoke-static {p1}, LX/001;->A1N(I)Z
+    invoke-static {p1}, LX/001;->A1M(I)Z
 
     .line 5
     .line 6
@@ -90,7 +90,7 @@
     move-result v0
 
     .line 8
-    invoke-static {v0}, LX/3ap;->A02(Z)V
+    invoke-static {v0}, LX/0X1;->A1Q(Z)V
 
     .line 9
     .line 10
@@ -118,7 +118,7 @@
     return-void
 .end method
 
-.method private doCopy(ILX/3z9;II)V
+.method private doCopy(ILX/3MD;II)V
     .locals 6
 
     .line 0
@@ -142,12 +142,12 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/3ap;->A03(Z)V
+    invoke-static {v0}, LX/0H2;->A01(Z)V
 
     .line 11
     .line 12
     .line 13
-    invoke-interface {p2}, LX/3z9;->isClosed()Z
+    invoke-interface {p2}, LX/3MD;->isClosed()Z
 
     .line 14
     .line 15
@@ -159,12 +159,12 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/3ap;->A03(Z)V
+    invoke-static {v0}, LX/0H2;->A01(Z)V
 
     .line 20
     .line 21
     .line 22
-    invoke-interface {p2}, LX/3z9;->getSize()I
+    invoke-interface {p2}, LX/3MD;->getSize()I
 
     .line 23
     .line 24
@@ -176,12 +176,12 @@
 
     .line 27
     .line 28
-    invoke-static {p1, v1, p3, p4, v0}, LX/44D;->A00(IIIII)V
+    invoke-static {p1, v1, p3, p4, v0}, LX/3ME;->A00(IIIII)V
 
     .line 29
     .line 30
     .line 31
-    invoke-interface {p2}, LX/3z9;->getNativePtr()J
+    invoke-interface {p2}, LX/3MD;->getNativePtr()J
 
     .line 32
     .line 33
@@ -218,7 +218,7 @@
 
     .line 46
     .line 47
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 48
     .line 49
@@ -300,8 +300,8 @@
     throw v0
 .end method
 
-.method public copy(ILX/3z9;II)V
-    .locals 9
+.method public copy(ILX/3MD;II)V
+    .locals 10
 
     .line 0
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -309,7 +309,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-interface {p2}, LX/3z9;->getUniqueId()J
+    invoke-interface {p2}, LX/3MD;->getUniqueId()J
 
     .line 4
     .line 5
@@ -329,190 +329,211 @@
 
     .line 12
     .line 13
-    const-string v2, "NativeMemoryChunk"
+    const-string v3, "NativeMemoryChunk"
 
     .line 14
     .line 15
-    const-string v3, "Copying from NativeMemoryChunk "
+    const-string v4, "Copying from NativeMemoryChunk "
 
     .line 16
     .line 17
-    invoke-static {p0}, LX/0Yi;->A0n(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     .line 18
     .line 19
     .line 20
-    move-result-object v4
+    move-result v2
 
     .line 21
-    const-string v5, " to NativeMemoryChunk "
+    invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     .line 22
     .line 23
-    invoke-static {p2}, LX/0Yi;->A0n(Ljava/lang/Object;)Ljava/lang/String;
-
     .line 24
-    .line 25
-    .line 26
-    move-result-object v6
+    move-result-object v5
 
+    .line 25
+    const-string v6, " to NativeMemoryChunk "
+
+    .line 26
     .line 27
-    const-string v7, " which share the same address "
+    invoke-static {p2}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     .line 28
     .line 29
-    invoke-static {v0, v1}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
-
     .line 30
+    move-result v2
+
     .line 31
+    invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
     .line 32
-    move-result-object v8
-
     .line 33
-    invoke-static/range {v3 .. v8}, LX/00I;->A0P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 34
-    .line 35
-    .line 36
-    move-result-object v0
+    move-result-object v7
 
+    .line 35
+    const-string v8, " which share the same address "
+
+    .line 36
     .line 37
-    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
 
     .line 38
     .line 39
     .line 40
-    const/4 v0, 0x0
+    move-result-object v9
 
     .line 41
-    invoke-static {v0}, LX/3ap;->A02(Z)V
+    invoke-static/range {v4 .. v9}, LX/004;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 42
     .line 43
     .line 44
-    const/4 v0, 0x0
+    move-result-object v0
 
     .line 45
-    throw v0
+    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 46
+    .line 47
+    .line 48
+    const/4 v0, 0x0
+
+    .line 49
+    invoke-static {v0}, LX/0X1;->A1Q(Z)V
+
+    .line 50
+    .line 51
+    .line 52
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v0
+
+    .line 56
+    throw v0
+
+    .line 57
     :cond_0
     cmp-long v2, v3, v0
 
-    .line 47
-    .line 48
+    .line 58
+    .line 59
     if-gez v2, :cond_1
 
-    .line 49
-    .line 50
+    .line 60
+    .line 61
     monitor-enter p2
 
-    .line 51
+    .line 62
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 52
+    .line 63
     :try_start_1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->doCopy(ILX/3z9;II)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->doCopy(ILX/3MD;II)V
 
-    .line 53
-    .line 54
-    .line 55
+    .line 64
+    .line 65
+    .line 66
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 56
+    .line 67
     :try_start_2
     monitor-exit p2
 
-    .line 57
+    .line 68
     return-void
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 58
+    .line 69
     :catchall_0
     move-exception v0
 
-    .line 59
+    .line 70
     :try_start_3
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 60
+    .line 71
     :try_start_4
     throw v0
 
-    .line 61
+    .line 72
     :catchall_1
     move-exception v0
 
-    .line 62
+    .line 73
     monitor-exit p2
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 63
+    .line 74
     throw v0
 
-    .line 64
+    .line 75
     :cond_1
     monitor-enter p0
 
-    .line 65
+    .line 76
     :try_start_5
     monitor-enter p2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 66
+    .line 77
     :try_start_6
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->doCopy(ILX/3z9;II)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->doCopy(ILX/3MD;II)V
 
-    .line 67
-    .line 68
-    .line 69
+    .line 78
+    .line 79
+    .line 80
     monitor-exit p2
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 70
+    .line 81
     :try_start_7
     monitor-exit p0
 
-    .line 71
+    .line 82
     return-void
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 72
+    .line 83
     :catchall_2
     move-exception v0
 
-    .line 73
+    .line 84
     :try_start_8
     monitor-exit p2
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 74
+    .line 85
     :try_start_9
     throw v0
 
-    .line 75
+    .line 86
     :catchall_3
     move-exception v0
 
-    .line 76
+    .line 87
     monitor-exit p0
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 77
+    .line 88
     throw v0
 .end method
 
@@ -537,63 +558,65 @@
     .line 7
     .line 8
     .line 9
-    invoke-static {p0}, LX/0Yi;->A0n(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     .line 10
     .line 11
     .line 12
-    move-result-object v1
+    move-result v0
 
     .line 13
-    const-string v0, " still active. "
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     .line 14
     .line 15
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 16
-    .line 17
-    .line 18
     move-result-object v1
 
+    .line 17
+    const-string v0, " still active. "
+
+    .line 18
     .line 19
-    const-string v0, "NativeMemoryChunk"
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 20
     .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    const-string v0, "NativeMemoryChunk"
+
+    .line 24
+    .line 25
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
-    .line 23
-    .line 24
+    .line 26
+    .line 27
+    .line 28
     :try_start_0
     invoke-virtual {p0}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->close()V
+
+    .line 29
+    .line 30
+    .line 31
+    goto :goto_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 25
-    .line 26
-    .line 27
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 28
-    .line 29
-    .line 30
-    return-void
-
-    .line 31
+    .line 32
     :catchall_0
     move-exception v0
 
-    .line 32
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
     .line 33
-    .line 34
-    .line 35
     throw v0
 
-    .line 36
+    .line 34
+    :goto_0
+    return-void
+
+    .line 35
     :cond_0
     return-void
 .end method
@@ -690,7 +713,7 @@
     const/4 v1, 0x1
 
     .line 6
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 7
     .line 8
@@ -699,14 +722,14 @@
 
     .line 10
     :try_start_1
-    invoke-static {v0}, LX/3ap;->A03(Z)V
+    invoke-static {v0}, LX/0H2;->A01(Z)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 11
     .line 12
     .line 13
-    invoke-static {p1}, LX/0Ye;->A1W(I)Z
+    invoke-static {p1}, LX/0X2;->A1P(I)Z
 
     .line 14
     .line 15
@@ -715,7 +738,7 @@
 
     .line 17
     :try_start_2
-    invoke-static {v0}, LX/3ap;->A02(Z)V
+    invoke-static {v0}, LX/0X1;->A1Q(Z)V
 
     .line 18
     .line 19
@@ -732,7 +755,7 @@
 
     .line 25
     :cond_0
-    invoke-static {v1}, LX/3ap;->A02(Z)V
+    invoke-static {v1}, LX/0X1;->A1Q(Z)V
 
     .line 26
     .line 27
@@ -796,7 +819,7 @@
     move-result v0
 
     .line 268435464
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 268435465
     .line 268435466
@@ -805,7 +828,7 @@
 
     .line 268435468
     :try_start_1
-    invoke-static {v0}, LX/3ap;->A03(Z)V
+    invoke-static {v0}, LX/0H2;->A01(Z)V
 
     .line 268435469
     .line 268435470
@@ -814,7 +837,7 @@
 
     .line 268435472
     .line 268435473
-    invoke-static {v1, p1, p4}, LX/0Yf;->A01(III)I
+    invoke-static {v1, p1, p4}, LX/0X4;->A02(III)I
 
     .line 268435474
     .line 268435475
@@ -825,7 +848,7 @@
     array-length v0, p2
 
     .line 268435478
-    invoke-static {p1, v0, p3, v4, v1}, LX/44D;->A00(IIIII)V
+    invoke-static {p1, v0, p3, v4, v1}, LX/3ME;->A00(IIIII)V
 
     .line 268435479
     .line 268435480
@@ -886,7 +909,7 @@
     move-result v0
 
     .line 8
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 9
     .line 10
@@ -895,7 +918,7 @@
 
     .line 12
     :try_start_1
-    invoke-static {v0}, LX/3ap;->A03(Z)V
+    invoke-static {v0}, LX/0H2;->A01(Z)V
 
     .line 13
     .line 14
@@ -904,7 +927,7 @@
 
     .line 16
     .line 17
-    invoke-static {v1, p1, p4}, LX/0Yf;->A01(III)I
+    invoke-static {v1, p1, p4}, LX/0X4;->A02(III)I
 
     .line 18
     .line 19
@@ -915,7 +938,7 @@
     array-length v0, p2
 
     .line 22
-    invoke-static {p1, v0, p3, v4, v1}, LX/44D;->A00(IIIII)V
+    invoke-static {p1, v0, p3, v4, v1}, LX/3ME;->A00(IIIII)V
 
     .line 23
     .line 24

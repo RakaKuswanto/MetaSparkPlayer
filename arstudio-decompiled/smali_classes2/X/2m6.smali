@@ -1,119 +1,105 @@
-.class public final LX/2m6;
+.class public final LX/2M6;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3C4;
+.implements LX/2M1;
 
 
-# static fields
-.field public static final A00:LX/2m6;
+# instance fields
+.field public final A00:LX/2M7;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(LX/2M7;)V
     .locals 1
 
     .line 0
-    new-instance v0, LX/2m6;
+    const/4 v0, 0x1
 
     .line 1
-    .line 2
-    invoke-direct {v0}, LX/2m6;-><init>()V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    .line 5
-    sput-object v0, LX/2m6;->A00:LX/2m6;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    .line 5
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/2M6;->A00:LX/2M7;
+
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic AAd(LX/2kX;Ljava/lang/Object;)I
+.method public final A6K(Landroid/content/res/Resources;LX/3T3;LX/3OQ;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
     .line 0
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {p1, p3, p2}, LX/0X1;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    iget-object v1, p0, LX/2M6;->A00:LX/2M7;
 
     .line 4
-    invoke-virtual {p1, v0}, LX/2kX;->A08(Ljava/lang/String;)I
-
     .line 5
+    invoke-interface {v1, p3}, LX/2M7;->AoG(LX/3OQ;)Z
+
     .line 6
     .line 7
-    move-result v1
-
     .line 8
-    const/4 v0, 0x1
+    move-result v0
 
     .line 9
-    invoke-virtual {p1, v0}, LX/2kX;->A0A(I)V
+    if-eqz v0, :cond_1
 
     .line 10
     .line 11
-    .line 12
-    const/4 v0, 0x0
+    instance-of v0, v1, LX/2M1;
 
+    .line 12
     .line 13
-    invoke-virtual {p1, v0, v1}, LX/2kX;->A0B(II)V
+    if-eqz v0, :cond_0
 
     .line 14
     .line 15
-    .line 16
-    invoke-virtual {p1}, LX/2kX;->A06()I
+    check-cast v1, LX/2M1;
 
+    .line 16
     .line 17
+    invoke-interface {v1, p1, p2, p3}, LX/2M1;->A6K(Landroid/content/res/Resources;LX/3T3;LX/3OQ;)Landroid/graphics/drawable/Drawable;
+
     .line 18
     .line 19
-    move-result v0
-
     .line 20
-    return v0
-.end method
+    move-result-object v0
 
-.method public final bridge synthetic APL(Ljava/nio/ByteBuffer;I)Ljava/lang/Object;
-    .locals 1
+    .line 21
+    return-object v0
 
-    .line 0
+    .line 22
+    :cond_0
+    invoke-interface {v1, p3}, LX/2M7;->A6J(LX/3OQ;)Landroid/graphics/drawable/Drawable;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    return-object v0
+
+    .line 27
+    :cond_1
     const/4 v0, 0x0
 
-    .line 1
-    invoke-static {p1, p2, v0}, LX/34M;->A04(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
-
-    .line 2
-    .line 3
-    .line 4
-    move-result-object v0
-
-    .line 5
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
+    .line 28
     return-object v0
 .end method

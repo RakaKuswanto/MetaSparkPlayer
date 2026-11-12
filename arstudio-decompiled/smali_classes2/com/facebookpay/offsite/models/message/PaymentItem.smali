@@ -55,114 +55,129 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/facebookpay/offsite/models/message/PaymentCurrencyAmount;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    .line 268435456
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 0
+    const/4 v0, 0x1
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
+    .line 1
+    invoke-static {p1, v0, p3}, LX/0X1;->A0y(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    .line 2
+    .line 3
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268435460
-    .line 268435461
-    .line 268435462
+    .line 5
+    .line 6
+    .line 7
     iput-object p1, p0, Lcom/facebookpay/offsite/models/message/PaymentItem;->label:Ljava/lang/String;
 
-    .line 268435463
-    .line 268435464
+    .line 8
+    .line 9
     iput-object p2, p0, Lcom/facebookpay/offsite/models/message/PaymentItem;->quantity:Ljava/lang/String;
 
-    .line 268435465
-    .line 268435466
+    .line 10
+    .line 11
     iput-object p3, p0, Lcom/facebookpay/offsite/models/message/PaymentItem;->amount:Lcom/facebookpay/offsite/models/message/PaymentCurrencyAmount;
 
-    .line 268435467
-    .line 268435468
+    .line 12
+    .line 13
     iput-object p4, p0, Lcom/facebookpay/offsite/models/message/PaymentItem;->imageURI:Ljava/lang/String;
 
-    .line 268435469
-    .line 268435470
+    .line 14
+    .line 15
     iput-object p5, p0, Lcom/facebookpay/offsite/models/message/PaymentItem;->secondaryLabel:Ljava/lang/String;
 
-    .line 268435471
-    .line 268435472
+    .line 16
+    .line 17
     iput-object p6, p0, Lcom/facebookpay/offsite/models/message/PaymentItem;->contentId:Ljava/lang/String;
 
-    .line 268435473
-    .line 268435474
+    .line 18
+    .line 19
     iput-object p7, p0, Lcom/facebookpay/offsite/models/message/PaymentItem;->contentType:Ljava/lang/String;
 
-    .line 268435475
-    .line 268435476
+    .line 20
+    .line 21
     iput-object p8, p0, Lcom/facebookpay/offsite/models/message/PaymentItem;->contentCategory:Ljava/lang/String;
 
-    .line 268435477
-    .line 268435478
+    .line 22
+    .line 23
     return-void
 .end method
 
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/facebookpay/offsite/models/message/PaymentCurrencyAmount;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 2
 
-    .line 0
-    and-int/lit8 v0, p9, 0x10
+    .line 268435456
+    and-int/lit8 v0, p9, 0x2
 
-    .line 1
-    .line 2
+    .line 268435457
+    .line 268435458
     const/4 v1, 0x0
 
-    .line 3
+    .line 268435459
     if-eqz v0, :cond_0
 
-    .line 4
-    .line 5
-    move-object p5, v1
+    .line 268435460
+    .line 268435461
+    move-object p2, v1
 
-    .line 6
+    .line 268435462
     :cond_0
-    and-int/lit8 v0, p9, 0x20
+    and-int/lit8 v0, p9, 0x10
 
-    .line 7
-    .line 8
+    .line 268435463
+    .line 268435464
     if-eqz v0, :cond_1
 
-    .line 9
-    .line 10
-    move-object p6, v1
+    .line 268435465
+    .line 268435466
+    move-object p5, v1
 
-    .line 11
+    .line 268435467
     :cond_1
-    and-int/lit8 v0, p9, 0x40
+    and-int/lit8 v0, p9, 0x20
 
-    .line 12
-    .line 13
+    .line 268435468
+    .line 268435469
     if-eqz v0, :cond_2
 
-    .line 14
-    .line 15
-    move-object p7, v1
+    .line 268435470
+    .line 268435471
+    move-object p6, v1
 
-    .line 16
+    .line 268435472
     :cond_2
-    and-int/lit16 v0, p9, 0x80
+    and-int/lit8 v0, p9, 0x40
 
-    .line 17
-    .line 18
+    .line 268435473
+    .line 268435474
     if-eqz v0, :cond_3
 
-    .line 19
-    .line 20
+    .line 268435475
+    .line 268435476
+    move-object p7, v1
+
+    .line 268435477
+    :cond_3
+    and-int/lit16 v0, p9, 0x80
+
+    .line 268435478
+    .line 268435479
+    if-eqz v0, :cond_4
+
+    .line 268435480
+    .line 268435481
     move-object p8, v1
 
-    .line 21
-    :cond_3
+    .line 268435482
+    :cond_4
     invoke-direct/range {p0 .. p8}, Lcom/facebookpay/offsite/models/message/PaymentItem;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/facebookpay/offsite/models/message/PaymentCurrencyAmount;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 22
-    .line 23
-    .line 24
+    .line 268435483
+    .line 268435484
+    .line 268435485
     return-void
 .end method
 

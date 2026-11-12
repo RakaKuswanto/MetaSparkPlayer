@@ -30,7 +30,7 @@
 .method private native reportAuthenticationChallengeReceived()Lcom/facebook/flipper/core/FlipperObject;
 .end method
 
-.method private native reportConnectionEvent(I)V
+.method private native reportConnectionEvent(ILjava/lang/String;)V
 .end method
 
 .method private native reportMessageReceived(Ljava/lang/String;)V
@@ -53,7 +53,7 @@
     return-object v0
 .end method
 
-.method public final onConnectionEvent(Lcom/facebook/flipper/core/FlipperSocketEventHandler$SocketEvent;)V
+.method public final onConnectionEvent(Lcom/facebook/flipper/core/FlipperSocketEventHandler$SocketEvent;Ljava/lang/String;)V
     .locals 1
 
     .line 0
@@ -65,7 +65,7 @@
     move-result v0
 
     .line 4
-    invoke-direct {p0, v0}, Lcom/facebook/flipper/android/FlipperSocketEventHandlerImpl;->reportConnectionEvent(I)V
+    invoke-direct {p0, v0, p2}, Lcom/facebook/flipper/android/FlipperSocketEventHandlerImpl;->reportConnectionEvent(ILjava/lang/String;)V
 
     .line 5
     .line 6

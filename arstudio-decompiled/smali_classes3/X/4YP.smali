@@ -2,37 +2,56 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4YY;
 
+# instance fields
+.field public A00:F
 
-# static fields
-.field public static final A00:LX/4YP;
+.field public A01:F
+
+.field public A02:F
+
+.field public A03:F
+
+.field public A04:F
+
+.field public A05:I
+
+.field public A06:I
+
+.field public A07:I
+
+.field public A08:I
+
+.field public A09:I
+
+.field public A0A:I
+
+.field public A0B:I
+
+.field public A0C:I
+
+.field public A0D:J
+
+.field public A0E:J
+
+.field public A0F:J
+
+.field public A0G:Z
+
+.field public A0H:Z
+
+.field public A0I:Z
+
+.field public final A0J:Landroid/graphics/RectF;
+
+.field public final A0K:[F
+
+.field public final A0L:[I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/4YP;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/4YP;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/4YP;->A00:LX/4YP;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,89 +59,137 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A6i(Ljava/lang/CharSequence;II)I
-    .locals 4
-
-    .line 0
-    add-int/2addr p3, p2
-
-    .line 1
-    const/4 v3, 0x0
-
-    .line 2
-    const/4 v2, 0x0
-
-    .line 3
-    :goto_0
-    if-ge p2, p3, :cond_1
+    const/4 v1, 0x4
 
     .line 4
-    .line 5
-    invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
+    new-array v0, v1, [F
 
+    .line 5
     .line 6
+    iput-object v0, p0, LX/4YP;->A0K:[F
+
     .line 7
     .line 8
-    move-result v0
+    new-array v0, v1, [I
 
     .line 9
-    invoke-static {v0}, Ljava/lang/Character;->getDirectionality(C)B
-
     .line 10
+    iput-object v0, p0, LX/4YP;->A0L:[I
+
     .line 11
     .line 12
-    move-result v1
+    invoke-static {}, LX/435;->A04()Landroid/graphics/RectF;
 
     .line 13
-    const/4 v0, 0x1
-
     .line 14
-    if-eqz v1, :cond_0
-
     .line 15
+    move-result-object v0
+
     .line 16
-    if-eq v1, v0, :cond_2
+    iput-object v0, p0, LX/4YP;->A0J:Landroid/graphics/RectF;
 
     .line 17
     .line 18
-    const/4 v0, 0x2
+    const/4 v2, 0x0
 
     .line 19
-    if-eq v1, v0, :cond_2
+    iput v2, p0, LX/4YP;->A06:I
 
     .line 20
     .line 21
-    :goto_1
-    add-int/lit8 p2, p2, 0x1
+    const/4 v1, -0x1
 
     .line 22
-    .line 23
-    goto :goto_0
+    iput v1, p0, LX/4YP;->A09:I
 
+    .line 23
     .line 24
-    :cond_0
-    const/4 v2, 0x1
+    const v0, 0x4cffffff    # 1.3421772E8f
 
     .line 25
-    goto :goto_1
-
     .line 26
-    :cond_1
-    const/4 v3, 0x2
-
     .line 27
-    if-eqz v2, :cond_2
+    iput v0, p0, LX/4YP;->A05:I
 
     .line 28
     .line 29
-    const/4 v3, 0x1
+    iput v2, p0, LX/4YP;->A0C:I
 
     .line 30
-    :cond_2
-    return v3
+    .line 31
+    iput v2, p0, LX/4YP;->A08:I
+
+    .line 32
+    .line 33
+    iput v2, p0, LX/4YP;->A07:I
+
+    .line 34
+    .line 35
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 36
+    .line 37
+    iput v0, p0, LX/4YP;->A04:F
+
+    .line 38
+    .line 39
+    iput v0, p0, LX/4YP;->A01:F
+
+    .line 40
+    .line 41
+    const/4 v0, 0x0
+
+    .line 42
+    iput v0, p0, LX/4YP;->A02:F
+
+    .line 43
+    .line 44
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    .line 45
+    .line 46
+    iput v0, p0, LX/4YP;->A00:F
+
+    .line 47
+    .line 48
+    const/high16 v0, 0x41a00000    # 20.0f
+
+    .line 49
+    .line 50
+    iput v0, p0, LX/4YP;->A03:F
+
+    .line 51
+    .line 52
+    const/4 v0, 0x1
+
+    .line 53
+    iput-boolean v0, p0, LX/4YP;->A0I:Z
+
+    .line 54
+    .line 55
+    iput-boolean v0, p0, LX/4YP;->A0H:Z
+
+    .line 56
+    .line 57
+    iput-boolean v0, p0, LX/4YP;->A0G:Z
+
+    .line 58
+    .line 59
+    iput v1, p0, LX/4YP;->A0A:I
+
+    .line 60
+    .line 61
+    iput v0, p0, LX/4YP;->A0B:I
+
+    .line 62
+    .line 63
+    const-wide/16 v0, 0x3e8
+
+    .line 64
+    .line 65
+    iput-wide v0, p0, LX/4YP;->A0D:J
+
+    .line 66
+    .line 67
+    return-void
 .end method

@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static A00:LX/0Rr;
+.field public static A00:LX/0OI;
 
 .field public static A01:Ljava/util/ArrayList;
 
@@ -32,7 +32,7 @@
 
     .line 6
     .line 7
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 8
     .line 9

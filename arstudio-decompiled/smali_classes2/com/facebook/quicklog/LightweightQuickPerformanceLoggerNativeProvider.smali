@@ -20,7 +20,7 @@
     .locals 1
 
     .line 0
-    sget-object v0, LX/0TX;->A00:LX/0N6;
+    sget-object v0, LX/0QH;->A00:LX/0PU;
 
     .line 1
     .line 2

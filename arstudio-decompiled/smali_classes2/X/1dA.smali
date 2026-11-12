@@ -1,52 +1,67 @@
-.class public abstract LX/1dA;
-.super LX/1bX;
+.class public final LX/1Da;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/ListIterator;
+
+# instance fields
+.field public final A00:Lcom/google/common/collect/ImmutableList;
+
+.field public final A01:Lcom/google/common/collect/ImmutableList;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, LX/1bX;-><init>()V
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    move-result-object v0
+
+    .line 268435463
+    iput-object v0, p0, LX/1Da;->A00:Lcom/google/common/collect/ImmutableList;
+
+    .line 268435464
+    .line 268435465
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
+    .line 268435466
+    .line 268435467
+    .line 268435468
+    move-result-object v0
+
+    .line 268435469
+    iput-object v0, p0, LX/1Da;->A01:Lcom/google/common/collect/ImmutableList;
+
+    .line 268435470
+    .line 268435471
     return-void
 .end method
 
-
-# virtual methods
-.method public final add(Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;)V
+    .locals 0
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    iput-object p1, p0, LX/1Da;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 4
-    throw v0
-.end method
+    .line 5
+    iput-object p2, p0, LX/1Da;->A01:Lcom/google/common/collect/ImmutableList;
 
-.method public final set(Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
+    .line 6
+    .line 7
+    return-void
 .end method

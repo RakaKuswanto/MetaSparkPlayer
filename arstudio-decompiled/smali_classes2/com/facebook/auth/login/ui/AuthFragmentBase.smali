@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/3H4;
+.implements LX/32w;
 
 
 # static fields
@@ -11,13 +11,13 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public authStateMachineConfig:LX/3FJ;
+.field public authStateMachineConfig:LX/2vk;
 
 .field public mFirstAuthFragment:Z
 
-.field public final mSecureContextHelper:LX/0Na;
+.field public final mSecureContextHelper:LX/0RP;
 
 .field public viewClass:Ljava/lang/Class;
 
@@ -32,11 +32,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AG4:I
+    sget v0, LX/2I6;->ACo:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -44,7 +44,7 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentBase;->mSecureContextHelper:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentBase;->mSecureContextHelper:LX/0RP;
 
     .line 10
     .line 11
@@ -210,7 +210,7 @@
 
     .line 56
     :goto_0
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 57
     .line 58
@@ -218,7 +218,7 @@
     move-result-object v0
 
     .line 60
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 61
     .line 62
@@ -226,7 +226,7 @@
     move-result-object v0
 
     .line 64
-    invoke-static {v0, v3}, LX/0Yj;->A0O(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0, v3}, LX/0X7;->A0W(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 65
     .line 66
@@ -245,11 +245,11 @@
     goto :goto_0
 .end method
 
-.method public getAuthStateMachineConfig()LX/3FJ;
+.method public getAuthStateMachineConfig()LX/2vk;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentBase;->authStateMachineConfig:LX/3FJ;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentBase;->authStateMachineConfig:LX/2vk;
 
     .line 1
     .line 2
@@ -269,11 +269,11 @@
 
     .line 9
     .line 10
-    iget-object v0, v0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/3FJ;
+    iget-object v0, v0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/2vk;
 
     .line 11
     .line 12
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentBase;->authStateMachineConfig:LX/3FJ;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentBase;->authStateMachineConfig:LX/2vk;
 
     .line 13
     .line 14
@@ -285,7 +285,7 @@
     .locals 2
 
     .line 0
-    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentBase;->getAuthStateMachineConfig()LX/3FJ;
+    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentBase;->getAuthStateMachineConfig()LX/2vk;
 
     .line 1
     .line 2
@@ -301,7 +301,7 @@
     move-result-object v0
 
     .line 8
-    iget-object v1, v1, LX/3FJ;->A01:Lcom/google/common/collect/ImmutableMap;
+    iget-object v1, v1, LX/2vk;->A01:Lcom/google/common/collect/ImmutableMap;
 
     .line 9
     .line 10
@@ -328,11 +328,11 @@
     return-object v0
 .end method
 
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/37j;->A00()LX/37j;
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
@@ -340,7 +340,7 @@
     move-result-object v0
 
     .line 4
-    return-object v0
+    throw v0
 .end method
 
 .method public isFirstAuthFragment()Z
@@ -358,7 +358,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0, p1}, LX/3e4;->onAttach(Landroid/content/Context;)V
+    invoke-super {p0, p1}, LX/3FR;->onAttach(Landroid/content/Context;)V
 
     .line 1
     .line 2
@@ -441,7 +441,7 @@
     .locals 2
 
     .line 0
-    invoke-super {p0, p1}, LX/3e4;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, LX/3FR;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 1
     .line 2
@@ -480,11 +480,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/3CC;
+    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/2vx;
 
     .line 1
     .line 2
-    invoke-interface {v0, p0}, LX/3CC;->Abm(Lcom/facebook/base/fragment/NavigableFragment;)Z
+    invoke-interface {v0, p0}, LX/2vx;->AaG(Lcom/facebook/base/fragment/NavigableFragment;)Z
 
     .line 3
     .line 4
@@ -512,7 +512,7 @@
     .locals 3
 
     .line 0
-    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentBase;->getAuthStateMachineConfig()LX/3FJ;
+    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentBase;->getAuthStateMachineConfig()LX/2vk;
 
     .line 1
     .line 2
@@ -520,40 +520,41 @@
     move-result-object v0
 
     .line 4
-    iget-object v1, v0, LX/3FJ;->A02:Ljava/lang/Class;
+    iget-object v1, v0, LX/2vk;->A02:Ljava/lang/Class;
 
     .line 5
     .line 6
-    new-instance v0, LX/3FR;
+    new-instance v0, LX/333;
 
     .line 7
     .line 8
-    invoke-direct {v0, v1}, LX/3FR;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v0, v1}, LX/333;-><init>(Ljava/lang/Class;)V
 
     .line 9
     .line 10
     .line 11
-    iget-object v2, v0, LX/3FR;->A00:Landroid/content/Intent;
+    iget-object v2, v0, LX/333;->A00:Landroid/content/Intent;
 
     .line 12
     .line 13
-    const-string v1, "com.facebook.fragment.CLEAR_BACK_STACK"
+    const-string/jumbo v1, "com.facebook.fragment.CLEAR_BACK_STACK"
 
     .line 14
     .line 15
+    .line 16
     const/4 v0, 0x1
 
-    .line 16
+    .line 17
     invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     invoke-virtual {p0, v2}, Lcom/facebook/base/fragment/AbstractNavigableFragment;->finish(Landroid/content/Intent;)V
 
-    .line 20
     .line 21
     .line 22
+    .line 23
     return-void
 .end method
 
@@ -561,11 +562,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentBase;->mSecureContextHelper:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentBase;->mSecureContextHelper:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -573,15 +574,15 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/2iT;
+    check-cast v0, LX/2Ie;
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/2iT;->A02:LX/0Na;
+    iget-object v0, v0, LX/2Ie;->A02:LX/0RP;
 
     .line 9
     .line 10
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 11
     .line 12
@@ -589,7 +590,7 @@
     move-result-object v1
 
     .line 14
-    check-cast v1, LX/0Ic;
+    check-cast v1, LX/0KI;
 
     .line 15
     .line 16
@@ -601,7 +602,7 @@
     move-result-object v0
 
     .line 20
-    invoke-virtual {v1, v0, p1}, LX/0Ic;->A05(Landroid/content/Context;Landroid/content/Intent;)Z
+    invoke-virtual {v1, v0, p1}, LX/0KI;->A05(Landroid/content/Context;Landroid/content/Intent;)Z
 
     .line 21
     .line 22

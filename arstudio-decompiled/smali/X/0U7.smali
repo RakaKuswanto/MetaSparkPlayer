@@ -1,37 +1,54 @@
-.class public final LX/0U7;
+.class public abstract LX/0U7;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0Vl;
-
-.field public final A01:Z
-
-.field public final A02:Z
+# static fields
+.field public static final A00:[C
 
 
 # direct methods
-.method public constructor <init>(LX/0Vl;ZZ)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x10
 
     .line 1
     .line 2
+    new-array v0, v0, [C
+
     .line 3
-    iput-boolean p2, p0, LX/0U7;->A01:Z
-
     .line 4
-    .line 5
-    iput-boolean p3, p0, LX/0U7;->A02:Z
+    fill-array-data v0, :array_0
 
+    .line 5
     .line 6
     .line 7
-    iput-object p1, p0, LX/0U7;->A00:LX/0Vl;
+    sput-object v0, LX/0U7;->A00:[C
 
     .line 8
     .line 9
     return-void
+
+    .line 10
+    :array_0
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x61s
+        0x62s
+        0x63s
+        0x64s
+        0x65s
+        0x66s
+    .end array-data
 .end method

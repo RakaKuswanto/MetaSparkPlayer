@@ -19,6 +19,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/RegularContiguousSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/collect/RegularContiguousSet$3;->this$0:Lcom/google/common/collect/RegularContiguousSet;
@@ -46,6 +54,14 @@
 
 .method private final A01(I)Ljava/lang/Integer;
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "i"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
@@ -81,113 +97,111 @@
     move-result-object v6
 
     .line 17
-    int-to-long v4, p1
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 18
-    check-cast v6, Ljava/lang/Number;
-
     .line 19
     .line 20
-    const-string v3, "distance"
+    int-to-long v4, p1
 
     .line 21
+    check-cast v6, Ljava/lang/Number;
+
     .line 22
-    const-wide/16 v1, 0x0
-
     .line 23
-    .line 24
-    cmp-long v0, v4, v1
+    const-string/jumbo v3, "distance"
 
+    .line 24
     .line 25
     .line 26
-    if-ltz v0, :cond_0
+    const-wide/16 v1, 0x0
 
     .line 27
     .line 28
-    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
+    cmp-long v0, v4, v1
 
     .line 29
     .line 30
-    .line 31
-    move-result-wide v2
+    if-ltz v0, :cond_0
 
+    .line 31
     .line 32
-    add-long/2addr v2, v4
+    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
 
     .line 33
-    long-to-int v6, v2
-
     .line 34
-    int-to-long v4, v6
-
     .line 35
-    cmp-long v0, v4, v2
+    move-result-wide v2
 
     .line 36
+    add-long/2addr v2, v4
+
     .line 37
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    long-to-int v6, v2
 
     .line 38
-    .line 39
-    .line 40
-    move-result v1
+    int-to-long v4, v6
 
+    .line 39
+    cmp-long v0, v4, v2
+
+    .line 40
     .line 41
-    const/16 v0, 0x16
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 42
     .line 43
-    invoke-static {v0}, LX/4BC;->A00(I)Ljava/lang/String;
-
     .line 44
-    .line 45
-    .line 46
-    move-result-object v0
+    move-result v1
 
+    .line 45
+    const/16 v0, 0x13
+
+    .line 46
     .line 47
-    invoke-static {v1, v0, v2, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
+    invoke-static {v0}, LX/430;->A00(I)Ljava/lang/String;
 
     .line 48
     .line 49
     .line 50
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 51
-    .line 52
-    .line 53
     move-result-object v0
 
+    .line 51
+    invoke-static {v1, v0, v2, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
+
+    .line 52
+    .line 53
     .line 54
-    return-object v0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 55
-    :cond_0
-    invoke-static {v3}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 56
     .line 57
+    move-result-object v0
+
     .line 58
-    move-result-object v1
+    return-object v0
 
     .line 59
-    const-string v0, " cannot be negative but was: "
+    :cond_0
+    invoke-static {v3}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 60
     .line 61
+    .line 62
+    move-result-object v1
+
+    .line 63
+    const-string v0, " cannot be negative but was: "
+
+    .line 64
+    .line 65
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 62
-    .line 63
-    .line 64
-    invoke-static {v1, v4, v5}, LX/0Yg;->A0s(Ljava/lang/StringBuilder;J)Ljava/lang/String;
-
-    .line 65
     .line 66
     .line 67
-    move-result-object v0
-
     .line 68
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v1, v4, v5}, LX/0X5;->A0h(Ljava/lang/StringBuilder;J)Ljava/lang/String;
 
     .line 69
     .line 70
@@ -195,6 +209,14 @@
     move-result-object v0
 
     .line 72
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v0
+
+    .line 76
     throw v0
 .end method
 
@@ -217,9 +239,32 @@
 
 .method public final bridge synthetic get(I)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "i"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0, p1}, Lcom/google/common/collect/RegularContiguousSet$3;->A01(I)Ljava/lang/Integer;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableAsList;->writeReplace()Ljava/lang/Object;
 
     .line 1
     .line 2

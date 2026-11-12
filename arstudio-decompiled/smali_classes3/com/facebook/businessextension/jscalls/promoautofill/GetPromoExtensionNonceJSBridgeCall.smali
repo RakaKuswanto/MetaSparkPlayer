@@ -6,7 +6,7 @@
 # static fields
 .field public static final A00:Ljava/lang/String;
 
-.field public static final CREATOR:LX/4N8;
+.field public static final CREATOR:LX/4EE;
 
 
 # direct methods
@@ -14,56 +14,47 @@
     .locals 2
 
     .line 0
-    const-class v1, Lcom/facebook/businessextension/jscalls/promoautofill/GetPromoExtensionNonceJSBridgeCall;
+    const-class v0, Lcom/facebook/businessextension/jscalls/promoautofill/GetPromoExtensionNonceJSBridgeCall;
 
     .line 1
     .line 2
-    new-instance v0, LX/2Ht;
+    invoke-static {v0}, LX/6Zp;->A00(Ljava/lang/Class;)Ljava/lang/String;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/2Ht;-><init>(Ljava/lang/Class;)V
-
     .line 5
-    .line 6
-    .line 7
-    invoke-virtual {v0}, LX/2Ht;->AMD()Ljava/lang/String;
-
-    .line 8
-    .line 9
-    .line 10
     move-result-object v0
 
-    .line 11
+    .line 6
     if-nez v0, :cond_0
 
-    .line 12
-    .line 13
+    .line 7
+    .line 8
     const-string v0, "GetPromoExtensionNonceJSBridgeCall"
 
-    .line 14
-    .line 15
+    .line 9
+    .line 10
     :cond_0
     sput-object v0, Lcom/facebook/businessextension/jscalls/promoautofill/GetPromoExtensionNonceJSBridgeCall;->A00:Ljava/lang/String;
 
+    .line 11
+    .line 12
+    const/4 v1, 0x4
+
+    .line 13
+    new-instance v0, LX/6gp;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v1}, LX/6gp;-><init>(I)V
+
     .line 16
     .line 17
-    const/4 v1, 0x6
-
     .line 18
-    new-instance v0, LX/6QC;
+    sput-object v0, Lcom/facebook/businessextension/jscalls/promoautofill/GetPromoExtensionNonceJSBridgeCall;->CREATOR:LX/4EE;
 
     .line 19
     .line 20
-    invoke-direct {v0, v1}, LX/6QC;-><init>(I)V
-
-    .line 21
-    .line 22
-    .line 23
-    sput-object v0, Lcom/facebook/businessextension/jscalls/promoautofill/GetPromoExtensionNonceJSBridgeCall;->CREATOR:LX/4N8;
-
-    .line 24
-    .line 25
     return-void
 .end method
 

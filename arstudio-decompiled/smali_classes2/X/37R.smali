@@ -1,56 +1,107 @@
-.class public abstract LX/37R;
-.super Ljava/lang/Object;
+.class public final LX/37R;
+.super Landroid/telephony/PhoneStateListener;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/1b2;
-
-.field public static final A01:LX/1b2;
+# instance fields
+.field public final synthetic A00:LX/37W;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(LX/37W;)V
+    .locals 0
 
     .line 0
-    sget-object v1, LX/1b0;->A02:LX/1b2;
+    iput-object p1, p0, LX/37R;->A00:LX/37W;
 
     .line 1
     .line 2
-    const-string/jumbo v0, "headers_last_infra_flow_id"
+    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    invoke-static {v1, v0}, LX/1b3;->A06(LX/1b3;Ljava/lang/String;)LX/1b2;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final onCellInfoChanged(Ljava/util/List;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/37R;->A00:LX/37W;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/37W;->A01:LX/36X;
+
+    .line 3
+    .line 4
+    invoke-static {v0, p1}, LX/36X;->A0g(LX/36X;Ljava/util/List;)V
+
+    .line 5
     .line 6
     .line 7
-    .line 8
-    move-result-object v0
+    return-void
+.end method
 
-    .line 9
-    sput-object v0, LX/37R;->A01:LX/1b2;
+.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
+    .locals 1
 
-    .line 10
-    .line 11
-    const-string/jumbo v0, "headers_curr_infra_flow_id"
+    .line 0
+    iget-object v0, p0, LX/37R;->A00:LX/37W;
 
-    .line 12
-    .line 13
-    .line 14
-    invoke-static {v1, v0}, LX/1b3;->A06(LX/1b3;Ljava/lang/String;)LX/1b2;
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/37W;->A01:LX/36X;
 
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
+    .line 3
+    .line 4
+    invoke-static {p1, v0}, LX/36X;->A0d(Landroid/telephony/TelephonyDisplayInfo;LX/36X;)V
 
-    .line 18
-    sput-object v0, LX/37R;->A00:LX/1b2;
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
 
-    .line 19
-    .line 20
+.method public final onServiceStateChanged(Landroid/telephony/ServiceState;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/37R;->A00:LX/37W;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/37W;->A01:LX/36X;
+
+    .line 3
+    .line 4
+    invoke-static {p1, v0}, LX/36X;->A0Z(Landroid/telephony/ServiceState;LX/36X;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public final onSignalStrengthsChanged(Landroid/telephony/SignalStrength;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/37R;->A00:LX/37W;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/37W;->A01:LX/36X;
+
+    .line 3
+    .line 4
+    invoke-static {p1, v0}, LX/36X;->A0a(Landroid/telephony/SignalStrength;LX/36X;)V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method

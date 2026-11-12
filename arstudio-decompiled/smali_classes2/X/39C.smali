@@ -1,10 +1,16 @@
-.class public abstract LX/39C;
+.class public final LX/39C;
 .super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public A00:Ljava/util/ArrayList;
+
+.field public final A01:Ljava/util/Map;
+
+
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/util/ArrayList;Ljava/util/Map;)V
     .locals 0
 
     .line 0
@@ -13,17 +19,13 @@
     .line 1
     .line 2
     .line 3
+    iput-object p2, p0, LX/39C;->A01:Ljava/util/Map;
+
+    .line 4
+    .line 5
+    iput-object p1, p0, LX/39C;->A00:Ljava/util/ArrayList;
+
+    .line 6
+    .line 7
     return-void
-.end method
-
-
-# virtual methods
-.method public A02()LX/1we;
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return-object v0
 .end method

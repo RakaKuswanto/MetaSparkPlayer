@@ -49,7 +49,7 @@
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 6
     .line 7

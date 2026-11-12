@@ -30,7 +30,7 @@
     .locals 5
 
     .line 0
-    invoke-static {}, LX/04A;->A01()LX/037;
+    invoke-static {}, LX/0TW;->A01()LX/0Vz;
 
     .line 1
     .line 2
@@ -38,7 +38,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1, p2, p0}, LX/037;->A02(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1, p2, p0}, LX/0Vz;->A02(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)Z
 
     .line 5
     .line 6

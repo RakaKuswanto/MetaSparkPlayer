@@ -1,57 +1,36 @@
-.class public final LX/4Nm;
+.class public final synthetic LX/4Nm;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/4Cg;
+.implements LX/02V;
+
+
+# instance fields
+.field public final synthetic A00:LX/4NL;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(LX/4NL;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p1, p0, LX/4Nm;->A00:LX/4NL;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final AXx()V
-    .locals 2
+.method public final AoB(Landroid/view/KeyEvent;)Z
+    .locals 1
 
-    .line 0
-    const-string v1, "BaseShopsLiteSDKInjector"
+    iget-object v0, p0, LX/4Nm;->A00:LX/4NL;
 
-    .line 1
-    .line 2
-    const/16 v0, 0x3f
+    invoke-virtual {v0, p1}, LX/4NL;->A05(Landroid/view/KeyEvent;)Z
 
-    .line 3
-    .line 4
-    invoke-static {v0}, LX/0Yb;->A00(I)Ljava/lang/String;
+    move-result v0
 
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    invoke-static {v1, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 9
-    .line 10
-    .line 11
-    return-void
-.end method
-
-.method public final AcC(Ljava/lang/String;)V
-    .locals 0
-
-    .line 0
-    return-void
+    return v0
 .end method

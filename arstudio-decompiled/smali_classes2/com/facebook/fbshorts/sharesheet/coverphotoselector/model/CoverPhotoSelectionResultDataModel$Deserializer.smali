@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 8
 
     .line 0
@@ -37,7 +37,7 @@
     const/4 v5, 0x0
 
     .line 5
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 6
     .line 7
@@ -47,7 +47,7 @@
     .line 9
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 10
     .line 11
@@ -55,7 +55,7 @@
     move-result-object v1
 
     .line 13
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 14
     .line 15
@@ -63,7 +63,7 @@
 
     .line 16
     .line 17
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 18
     .line 19
@@ -85,14 +85,14 @@
     .line 27
     .line 28
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 29
     .line 30
     .line 31
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 32
     .line 33
@@ -100,7 +100,7 @@
     move-result-object v1
 
     .line 35
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 36
     .line 37
@@ -112,202 +112,210 @@
 
     .line 40
     :sswitch_0
-    const-string v0, "cover_photo_uri"
+    const-string/jumbo v0, "cover_photo_uri"
 
     .line 41
     .line 42
+    .line 43
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 43
     .line 44
     .line 45
+    .line 46
     move-result v0
 
-    .line 46
+    .line 47
     if-eqz v0, :cond_1
 
-    .line 47
     .line 48
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 49
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 50
     .line 51
+    .line 52
     move-result-object v4
 
-    .line 52
+    .line 53
     goto :goto_0
 
-    .line 53
+    .line 54
     :sswitch_1
     const-string/jumbo v0, "is_cover_photo_valid"
 
-    .line 54
     .line 55
     .line 56
+    .line 57
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 57
     .line 58
     .line 59
-    move-result v0
-
     .line 60
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 61
-    .line 62
-    invoke-virtual {p1}, LX/27m;->A15()Z
-
-    .line 63
-    .line 64
-    .line 65
-    move-result v7
-
-    .line 66
-    goto :goto_0
-
-    .line 67
-    :sswitch_2
-    const-string v0, "cover_photo_source"
-
-    .line 68
-    .line 69
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 70
-    .line 71
-    .line 72
-    move-result v0
-
-    .line 73
     if-eqz v0, :cond_1
 
+    .line 62
+    .line 63
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
+    .line 64
+    .line 65
+    .line 66
+    move-result v7
+
+    .line 67
+    goto :goto_0
+
+    .line 68
+    :sswitch_2
+    const-string/jumbo v0, "cover_photo_source"
+
+    .line 69
+    .line 70
+    .line 71
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 72
+    .line 73
     .line 74
+    move-result v0
+
     .line 75
-    const-class v0, LX/11T;
+    if-eqz v0, :cond_1
 
     .line 76
     .line 77
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    const-class v0, LX/1J7;
 
     .line 78
     .line 79
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
     .line 80
+    .line 81
+    .line 82
     move-result-object v2
 
-    .line 81
-    check-cast v2, LX/11T;
-
-    .line 82
     .line 83
-    const-string v0, "coverPhotoSource"
+    check-cast v2, LX/1J7;
 
     .line 84
     .line 85
-    invoke-static {v2, v0, v6}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0L(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
+    const-string/jumbo v0, "coverPhotoSource"
 
     .line 86
     .line 87
     .line 88
-    move-result-object v6
+    invoke-static {v2, v0, v6}, LX/1O4;->A08(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
 
     .line 89
+    .line 90
+    .line 91
+    move-result-object v6
+
+    .line 92
     goto :goto_0
 
-    .line 90
+    .line 93
     :sswitch_3
     const-string/jumbo v0, "frame_progress_in_percent"
-
-    .line 91
-    .line 92
-    .line 93
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 94
     .line 95
     .line 96
-    move-result v0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 97
-    if-eqz v0, :cond_1
-
     .line 98
     .line 99
-    invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0G(LX/27m;LX/2DN;)Ljava/lang/Integer;
+    move-result v0
 
     .line 100
+    if-eqz v0, :cond_1
+
     .line 101
     .line 102
-    move-result-object v3
+    invoke-static {p1, p2}, LX/27L;->A0B(LX/3oD;LX/6HS;)Ljava/lang/Integer;
 
     .line 103
+    .line 104
+    .line 105
+    move-result-object v3
+
+    .line 106
     goto :goto_0
 
-    .line 104
+    .line 107
     :sswitch_4
     const-string/jumbo v0, "video_download_path"
-
-    .line 105
-    .line 106
-    .line 107
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 108
     .line 109
     .line 110
-    move-result v0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 111
-    if-eqz v0, :cond_1
-
     .line 112
     .line 113
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    move-result v0
 
     .line 114
+    if-eqz v0, :cond_1
+
     .line 115
     .line 116
-    move-result-object v5
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 117
+    .line 118
+    .line 119
+    move-result-object v5
+
+    .line 120
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 118
+    .line 121
     :goto_1
     new-instance v1, Lcom/facebook/fbshorts/sharesheet/coverphotoselector/model/CoverPhotoSelectionResultDataModel;
 
-    .line 119
-    .line 120
-    invoke-direct/range {v1 .. v7}, Lcom/facebook/fbshorts/sharesheet/coverphotoselector/model/CoverPhotoSelectionResultDataModel;-><init>(LX/11T;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Z)V
-
-    .line 121
     .line 122
     .line 123
-    return-object v1
+    invoke-direct/range {v1 .. v7}, Lcom/facebook/fbshorts/sharesheet/coverphotoselector/model/CoverPhotoSelectionResultDataModel;-><init>(LX/1J7;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Z)V
 
     .line 124
+    .line 125
+    .line 126
+    return-object v1
+
+    .line 127
     :catch_0
     move-exception v1
 
-    .line 125
+    .line 128
     const-class v0, Lcom/facebook/fbshorts/sharesheet/coverphotoselector/model/CoverPhotoSelectionResultDataModel;
 
-    .line 126
-    .line 127
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
-    .line 128
     .line 129
     .line 130
-    const/4 v0, 0x0
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 131
+    .line 132
+    .line 133
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 134
+    .line 135
+    .line 136
+    move-result-object v0
+
+    .line 137
     throw v0
 
-    .line 132
+    .line 138
     :sswitch_data_0
     .sparse-switch
         -0x4964a348 -> :sswitch_4

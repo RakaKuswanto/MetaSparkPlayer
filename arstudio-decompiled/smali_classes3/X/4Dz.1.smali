@@ -1,21 +1,31 @@
 .class public final LX/4Dz;
-.super LX/4Em;
+.super LX/4EC;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:LX/4Cm;
+
+.field public final synthetic A01:LX/44M;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/4Cm;LX/44M;)V
+    .locals 0
 
     .line 0
-    const-string v0, "ACTION_GO_FORWARD"
+    iput-object p1, p0, LX/4Dz;->A00:LX/4Cm;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4Em;-><init>(Ljava/lang/String;)V
+    iput-object p2, p0, LX/4Dz;->A01:LX/44M;
 
     .line 3
     .line 4
+    invoke-direct {p0}, LX/4EC;-><init>()V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method

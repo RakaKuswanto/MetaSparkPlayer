@@ -1,49 +1,61 @@
 .class public final LX/2lA;
-.super LX/3Bf;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbNetworkManager$ActivityLifecycleListener$1$1"
+
+
+# instance fields
+.field public final synthetic A00:LX/2kx;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(LX/2kx;)V
+    .locals 0
 
     .line 0
-    sget v0, LX/2eq;->A5E:I
+    iput-object p1, p0, LX/2lA;->A00:LX/2kx;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/2lA;->A00:LX/2kx;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/2kx;->A00:Lcom/facebook/common/network/FbNetworkManager$ActivityLifecycleListener;
+
+    .line 3
+    .line 4
+    iget-object v1, v0, Lcom/facebook/common/network/FbNetworkManager$ActivityLifecycleListener;->A00:Lcom/facebook/common/network/FbNetworkManager;
+
+    .line 5
     .line 6
-    check-cast v1, Landroid/content/pm/PackageManager;
+    const/4 v0, 0x1
 
     .line 7
-    .line 8
-    sget v0, LX/2eq;->A7H:I
+    invoke-static {v1, v0}, Lcom/facebook/common/network/FbNetworkManager;->A01(Lcom/facebook/common/network/FbNetworkManager;Z)Landroid/net/NetworkInfo;
 
+    .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    check-cast v0, Landroid/content/pm/ApplicationInfo;
-
-    .line 15
-    .line 16
-    invoke-direct {p0, v0, v1}, LX/3Bf;-><init>(Landroid/content/pm/ApplicationInfo;Landroid/content/pm/PackageManager;)V
-
-    .line 17
-    .line 18
-    .line 19
     return-void
 .end method

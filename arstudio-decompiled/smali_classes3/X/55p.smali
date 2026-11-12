@@ -1,41 +1,86 @@
-.class public final enum LX/55p;
-.super Lcom/google/ar/core/ArCoreApk$Availability;
+.class public final LX/55P;
+.super LX/55h;
 .source ""
 
 
+# static fields
+.field public static final A02:Ljava/util/regex/Pattern;
+
+
+# instance fields
+.field public final A00:Ljava/nio/charset/CharsetDecoder;
+
+.field public final A01:Ljava/nio/charset/CharsetDecoder;
+
+
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 4
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    const-string v3, "SUPPORTED_NOT_INSTALLED"
+    const-string v1, "(.+?)=\'(.*?)\';"
 
     .line 1
     .line 2
-    const/4 v2, 0x4
+    const/16 v0, 0x20
 
     .line 3
-    const/16 v1, 0xc9
-
     .line 4
+    invoke-static {v1, v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
     .line 5
-    const/4 v0, 0x0
-
     .line 6
-    invoke-direct {p0, v3, v2, v1, v0}, Lcom/google/ar/core/ArCoreApk$Availability;-><init>(Ljava/lang/String;IILcom/google/ar/core/ArCoreApk$Availability-IA;)V
-
     .line 7
+    move-result-object v0
+
     .line 8
+    sput-object v0, LX/55P;->A02:Ljava/util/regex/Pattern;
+
     .line 9
+    .line 10
     return-void
 .end method
 
-
-# virtual methods
-.method public final isSupported()Z
+.method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x1
+    .line 0
+    invoke-direct {p0}, LX/55h;-><init>()V
 
-    return v0
+    .line 1
+    .line 2
+    .line 3
+    sget-object v0, Lcom/google/common/base/Charsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/55P;->A01:Ljava/nio/charset/CharsetDecoder;
+
+    .line 10
+    .line 11
+    sget-object v0, Lcom/google/common/base/Charsets;->ISO_8859_1:Ljava/nio/charset/Charset;
+
+    .line 12
+    .line 13
+    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    iput-object v0, p0, LX/55P;->A00:Ljava/nio/charset/CharsetDecoder;
+
+    .line 18
+    .line 19
+    return-void
 .end method

@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static volatile mCrashDirectory:Ljava/io/File;
+.field public static volatile initialized:Z
 
-.field public static mNativeLibraryName:Ljava/lang/String;
+.field public static volatile mCrashDirectory:Ljava/io/File;
 
 
 # direct methods
@@ -29,98 +29,107 @@
     .locals 6
 
     .line 0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->isActive()Z
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
-
     .line 3
-    .line 4
-    .line 5
     move-result v0
 
-    .line 6
+    .line 4
     const/4 v5, 0x0
 
-    .line 7
+    .line 5
     if-nez v0, :cond_1
+
+    .line 6
+    .line 7
+    const-string v1, "BreakpadManager"
 
     .line 8
     .line 9
-    const-string v1, "BreakpadManager"
+    const-string v0, "Breakpad is not active (containsKey)."
 
     .line 10
     .line 11
-    const-string v0, "Breakpad is not active (containsKey)."
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
     .line 13
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 14
-    .line 15
-    .line 16
     :cond_0
     return v5
 
-    .line 17
+    .line 15
     :cond_1
-    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->getMinidumpFlags()J
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->ensureLoadLibrary()V
 
+    .line 16
+    .line 17
     .line 18
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->nativeGetMinidumpFlags()J
+
     .line 19
     .line 20
+    .line 21
     move-result-wide v3
 
-    .line 21
+    .line 22
     const-wide/32 v1, 0x8000
 
-    .line 22
     .line 23
     .line 24
+    .line 25
     and-long/2addr v3, v1
 
-    .line 25
+    .line 26
     cmp-long v0, v3, v1
 
-    .line 26
     .line 27
-    if-eqz v0, :cond_0
-
     .line 28
-    .line 29
-    const-class v1, Lcom/facebook/breakpad/BreakpadManager;
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
+    .line 29
     .line 30
     .line 31
-    monitor-enter v1
+    move-result v0
 
     .line 32
-    :try_start_0
-    invoke-static {p0}, Lcom/facebook/breakpad/BreakpadManager;->nativeContainsKey(Ljava/lang/String;)Z
+    if-eqz v0, :cond_0
 
     .line 33
     .line 34
-    .line 35
-    move-result v5
+    const-class v1, Lcom/facebook/breakpad/BreakpadManager;
 
+    .line 35
     .line 36
-    monitor-exit v1
+    monitor-enter v1
 
     .line 37
-    return v5
+    :try_start_0
+    invoke-static {p0}, Lcom/facebook/breakpad/BreakpadManager;->nativeContainsKey(Ljava/lang/String;)Z
 
     .line 38
+    .line 39
+    .line 40
+    move-result v5
+
+    .line 41
+    monitor-exit v1
+
+    .line 42
+    return v5
+
+    .line 43
     :catchall_0
     move-exception v0
 
-    .line 39
+    .line 44
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 40
+    .line 45
     throw v0
 .end method
 
@@ -143,211 +152,210 @@
     .locals 5
 
     .line 0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mNativeLibraryName:Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->ensureLoadLibrary()V
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
-
     .line 3
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
     .line 4
-    const-string v0, "breakpad"
-
     .line 5
-    .line 6
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    const/16 v0, 0x18
 
+    .line 6
     .line 7
+    if-ge v1, v0, :cond_0
+
     .line 8
     .line 9
-    sput-object v0, Lcom/facebook/breakpad/BreakpadManager;->mNativeLibraryName:Ljava/lang/String;
+    const-string v4, "BreakpadManager"
 
     .line 10
     .line 11
-    :cond_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-string v0, "/proc/sys/kernel/core_pattern"
 
     .line 12
     .line 13
-    const/16 v0, 0x18
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 14
     .line 15
-    if-ge v1, v0, :cond_1
-
     .line 16
-    .line 17
-    const-string v4, "BreakpadManager"
-
-    .line 18
-    .line 19
-    const-string v0, "/proc/sys/kernel/core_pattern"
-
-    .line 20
-    .line 21
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
-
-    .line 22
-    .line 23
-    .line 24
     move-result-object v1
 
-    .line 25
+    .line 17
     const/4 v2, 0x0
 
-    .line 26
+    .line 18
     :try_start_0
     new-instance v0, Ljava/io/FileReader;
 
-    .line 27
-    .line 28
+    .line 19
+    .line 20
     invoke-direct {v0, v1}, Ljava/io/FileReader;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 29
-    .line 30
-    .line 31
+    .line 21
+    .line 22
+    .line 23
     new-instance v3, Ljava/io/BufferedReader;
 
-    .line 32
-    .line 33
+    .line 24
+    .line 25
     invoke-direct {v3, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 34
-    .line 35
-    .line 36
+    .line 26
+    .line 27
+    .line 28
     :try_start_1
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    .line 37
-    .line 38
-    .line 39
+    .line 29
+    .line 30
+    .line 31
     move-result-object v0
 
-    .line 40
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    .line 32
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
-    .line 41
-    .line 42
-    .line 43
+    .line 33
+    .line 34
+    .line 35
     move-result-object v2
 
-    .line 44
+    .line 36
     goto :goto_0
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 45
+    .line 37
     :catch_0
     move-exception v1
 
-    .line 46
+    .line 38
     const-string v0, "There was a problem reading core pattern file"
 
-    .line 47
-    .line 48
+    .line 39
+    .line 40
     invoke-static {v4, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 49
-    .line 50
-    .line 51
+    .line 41
+    .line 42
+    .line 43
     :goto_0
     :try_start_2
     invoke-virtual {v3}, Ljava/io/Reader;->close()V
 
-    .line 52
-    .line 53
-    .line 54
+    .line 44
+    .line 45
+    .line 46
     goto :goto_1
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 55
+    .line 47
     :catch_1
     move-exception v1
 
-    .line 56
+    .line 48
     const-string v0, "Core pattern file not found or blocked by SELinux"
 
-    .line 57
-    .line 58
-    invoke-static {v0, v1}, LX/00I;->A0Q(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
+    .line 49
+    .line 50
+    invoke-static {v0, v1}, LX/004;->A0N(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
 
-    .line 59
-    .line 60
-    .line 61
+    .line 51
+    .line 52
+    .line 53
     move-result-object v0
 
-    .line 62
+    .line 54
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
-    .line 64
-    .line 65
-    :cond_1
+    .line 55
+    .line 56
+    .line 57
+    :cond_0
     invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->isCoreResourceHardUnlimited()Z
 
-    .line 66
-    .line 67
-    .line 68
+    .line 58
+    .line 59
+    .line 60
     move-result v0
 
+    .line 61
+    if-eqz v0, :cond_1
+
+    .line 62
+    .line 63
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v0
+
+    .line 67
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
+
+    .line 68
     .line 69
-    if-eqz v0, :cond_2
+    invoke-static {v0}, Lcom/facebook/breakpad/BreakpadManager;->enableCoreDumpingImpl(Ljava/lang/String;)Z
 
     .line 70
     .line 71
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
     .line 72
+    move-result v0
+
     .line 73
+    return v0
+
     .line 74
-    move-result-object v0
+    :catch_2
+    move-exception v1
 
     .line 75
-    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
+    const-string v0, "There was a problem closing core pattern file"
 
     .line 76
     .line 77
-    invoke-static {v0}, Lcom/facebook/breakpad/BreakpadManager;->enableCoreDumpingImpl(Ljava/lang/String;)Z
+    invoke-static {v4, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 78
     .line 79
     .line 80
-    move-result v0
+    :goto_1
+    if-eqz v2, :cond_0
 
     .line 81
-    return v0
-
     .line 82
-    :catch_2
-    move-exception v1
+    invoke-virtual {v2}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     .line 83
-    const-string v0, "There was a problem closing core pattern file"
-
     .line 84
     .line 85
-    invoke-static {v4, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    move-result-object v1
 
     .line 86
+    invoke-virtual {v2}, Ljava/io/File;->isAbsolute()Z
+
     .line 87
     .line 88
-    :goto_1
-    if-eqz v2, :cond_1
-
     .line 89
+    move-result v0
+
     .line 90
-    invoke-virtual {v2}, Ljava/io/File;->getParentFile()Ljava/io/File;
+    if-eqz v0, :cond_0
 
     .line 91
     .line 92
-    .line 93
-    move-result-object v1
+    if-eqz v1, :cond_0
 
+    .line 93
     .line 94
-    invoke-virtual {v2}, Ljava/io/File;->isAbsolute()Z
+    invoke-virtual {v1}, Ljava/io/File;->canWrite()Z
 
     .line 95
     .line 96
@@ -355,34 +363,73 @@
     move-result v0
 
     .line 98
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
     .line 99
     .line 100
-    if-eqz v1, :cond_1
-
-    .line 101
-    .line 102
-    invoke-virtual {v1}, Ljava/io/File;->canWrite()Z
-
-    .line 103
-    .line 104
-    .line 105
-    move-result v0
-
-    .line 106
-    if-nez v0, :cond_1
-
-    .line 107
-    .line 108
-    :cond_2
+    :cond_1
     const/4 v0, 0x0
 
-    .line 109
+    .line 101
     return v0
 .end method
 
 .method public static native enableCoreDumpingImpl(Ljava/lang/String;)Z
+.end method
+
+.method public static declared-synchronized ensureLoadLibrary()V
+    .locals 2
+
+    .line 0
+    const-class v1, Lcom/facebook/breakpad/BreakpadManager;
+
+    .line 1
+    .line 2
+    monitor-enter v1
+
+    .line 3
+    :try_start_0
+    sget-boolean v0, Lcom/facebook/breakpad/BreakpadManager;->initialized:Z
+
+    .line 4
+    .line 5
+    if-nez v0, :cond_0
+
+    .line 6
+    .line 7
+    const-string v0, "breakpad"
+
+    .line 8
+    .line 9
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
+    .line 10
+    .line 11
+    .line 12
+    const/4 v0, 0x1
+
+    .line 13
+    sput-boolean v0, Lcom/facebook/breakpad/BreakpadManager;->initialized:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 14
+    .line 15
+    :cond_0
+    monitor-exit v1
+
+    .line 16
+    return-void
+
+    .line 17
+    :catchall_0
+    move-exception v0
+
+    .line 18
+    monitor-exit v1
+
+    .line 19
+    throw v0
 .end method
 
 .method public static getCrashDirectory()Ljava/io/File;
@@ -409,7 +456,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 10
     .line 11
@@ -424,132 +471,142 @@
     .locals 5
 
     .line 0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->isActive()Z
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
-
     .line 3
-    .line 4
-    .line 5
     move-result v0
 
-    .line 6
+    .line 4
     if-nez v0, :cond_1
+
+    .line 5
+    .line 6
+    const-string v1, "BreakpadManager"
 
     .line 7
     .line 8
-    const-string v1, "BreakpadManager"
+    const-string v0, "Breakpad is not active (getCustomData)."
 
     .line 9
     .line 10
-    const-string v0, "Breakpad is not active (getCustomData)."
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     .line 12
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 13
-    .line 14
-    .line 15
     :cond_0
     const-string v0, ""
 
-    .line 16
-    .line 17
+    .line 14
+    .line 15
     return-object v0
 
-    .line 18
+    .line 16
     :cond_1
-    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->getMinidumpFlags()J
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->ensureLoadLibrary()V
 
+    .line 17
+    .line 18
     .line 19
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->nativeGetMinidumpFlags()J
+
     .line 20
     .line 21
+    .line 22
     move-result-wide v3
 
-    .line 22
+    .line 23
     const-wide/32 v1, 0x8000
 
-    .line 23
     .line 24
     .line 25
+    .line 26
     and-long/2addr v3, v1
 
-    .line 26
+    .line 27
     cmp-long v0, v3, v1
 
-    .line 27
     .line 28
-    invoke-static {v0}, LX/001;->A1L(I)Z
-
     .line 29
+    invoke-static {v0}, LX/001;->A1K(I)Z
+
     .line 30
     .line 31
+    .line 32
     move-result v0
 
-    .line 32
+    .line 33
     if-eqz v0, :cond_0
 
-    .line 33
     .line 34
+    .line 35
     const-class v1, Lcom/facebook/breakpad/BreakpadManager;
 
-    .line 35
     .line 36
+    .line 37
     monitor-enter v1
 
-    .line 37
+    .line 38
     :try_start_0
     invoke-static {p0}, Lcom/facebook/breakpad/BreakpadManager;->nativeGetCustomData(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 38
     .line 39
     .line 40
+    .line 41
     move-result-object v0
 
-    .line 41
+    .line 42
     monitor-exit v1
 
-    .line 42
+    .line 43
     return-object v0
 
-    .line 43
+    .line 44
     :catchall_0
     move-exception v0
 
-    .line 44
+    .line 45
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 45
+    .line 46
     throw v0
 .end method
 
-.method public static native getMinidumpFlags()J
-.end method
-
-.method public static native install(Ljava/lang/String;Ljava/lang/String;II)V
+.method public static native install(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZ)V
 .end method
 
 .method public static isActive()Z
-    .locals 1
+    .locals 2
 
     .line 0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
+    sget-boolean v0, Lcom/facebook/breakpad/BreakpadManager;->initialized:Z
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    .line 5
-    move-result v0
+    sget-object v1, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
 
+    .line 5
     .line 6
+    const/4 v0, 0x1
+
+    .line 7
+    if-nez v1, :cond_1
+
+    .line 8
+    .line 9
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 10
+    :cond_1
     return v0
 .end method
 
@@ -568,6 +625,9 @@
 .method public static native nativeGetCustomDataSnapshot(Ljava/util/TreeMap;)V
 .end method
 
+.method public static native nativeGetMinidumpFlags()J
+.end method
+
 .method public static native nativeRemoveCustomData(Ljava/lang/String;)V
 .end method
 
@@ -577,96 +637,108 @@
 .method public static native nativeSetJvmStreamEnabled(ZZ)Z
 .end method
 
+.method public static native nativeSetMinidumpFlags(J)V
+.end method
+
 .method public static removeCustomData(Ljava/lang/String;)V
     .locals 5
 
     .line 0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->isActive()Z
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
-
     .line 3
-    .line 4
-    .line 5
     move-result v0
 
-    .line 6
+    .line 4
     if-nez v0, :cond_1
+
+    .line 5
+    .line 6
+    const-string v1, "BreakpadManager"
 
     .line 7
     .line 8
-    const-string v1, "BreakpadManager"
+    const-string v0, "Breakpad is not active (removeCustomData)."
 
     .line 9
     .line 10
-    const-string v0, "Breakpad is not active (removeCustomData)."
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     .line 12
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 13
-    .line 14
-    .line 15
     :cond_0
     return-void
 
-    .line 16
+    .line 14
     :cond_1
-    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->getMinidumpFlags()J
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->ensureLoadLibrary()V
 
+    .line 15
+    .line 16
     .line 17
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->nativeGetMinidumpFlags()J
+
     .line 18
     .line 19
+    .line 20
     move-result-wide v3
 
-    .line 20
+    .line 21
     const-wide/32 v1, 0x8000
 
-    .line 21
     .line 22
     .line 23
+    .line 24
     and-long/2addr v3, v1
 
-    .line 24
+    .line 25
     cmp-long v0, v3, v1
 
-    .line 25
     .line 26
-    if-eqz v0, :cond_0
-
     .line 27
-    .line 28
-    const-class v1, Lcom/facebook/breakpad/BreakpadManager;
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
+    .line 28
     .line 29
     .line 30
-    monitor-enter v1
+    move-result v0
 
     .line 31
-    :try_start_0
-    invoke-static {p0}, Lcom/facebook/breakpad/BreakpadManager;->nativeRemoveCustomData(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
     .line 32
     .line 33
-    .line 34
-    monitor-exit v1
+    const-class v1, Lcom/facebook/breakpad/BreakpadManager;
 
+    .line 34
     .line 35
-    return-void
+    monitor-enter v1
 
     .line 36
+    :try_start_0
+    invoke-static {p0}, Lcom/facebook/breakpad/BreakpadManager;->nativeRemoveCustomData(Ljava/lang/String;)V
+
+    .line 37
+    .line 38
+    .line 39
+    monitor-exit v1
+
+    .line 40
+    return-void
+
+    .line 41
     :catchall_0
     move-exception v0
 
-    .line 37
+    .line 42
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
+    .line 43
     throw v0
 .end method
 
@@ -674,139 +746,148 @@
     .locals 5
 
     .line 0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->isActive()Z
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
-
     .line 3
-    .line 4
-    .line 5
     move-result v0
 
-    .line 6
+    .line 4
     if-nez v0, :cond_1
+
+    .line 5
+    .line 6
+    const-string v1, "BreakpadManager"
 
     .line 7
     .line 8
-    const-string v1, "BreakpadManager"
+    const-string v0, "Breakpad is not active (setCustomData)."
 
     .line 9
     .line 10
-    const-string v0, "Breakpad is not active (setCustomData)."
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     .line 12
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 13
-    .line 14
-    .line 15
     :cond_0
     return-void
 
-    .line 16
+    .line 14
     :cond_1
-    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->getMinidumpFlags()J
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->ensureLoadLibrary()V
 
+    .line 15
+    .line 16
     .line 17
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->nativeGetMinidumpFlags()J
+
     .line 18
     .line 19
+    .line 20
     move-result-wide v3
 
-    .line 20
+    .line 21
     const-wide/32 v1, 0x8000
 
-    .line 21
     .line 22
     .line 23
+    .line 24
     and-long/2addr v3, v1
 
-    .line 24
+    .line 25
     cmp-long v0, v3, v1
 
-    .line 25
     .line 26
-    if-eqz v0, :cond_0
-
     .line 27
-    .line 28
-    const-class v2, Lcom/facebook/breakpad/BreakpadManager;
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
+    .line 28
     .line 29
     .line 30
-    monitor-enter v2
+    move-result v0
 
     .line 31
+    if-eqz v0, :cond_0
+
+    .line 32
+    .line 33
+    const-class v2, Lcom/facebook/breakpad/BreakpadManager;
+
+    .line 34
+    .line 35
+    monitor-enter v2
+
+    .line 36
     :try_start_0
     array-length v0, p2
 
-    .line 32
+    .line 37
     if-lez v0, :cond_2
 
-    .line 33
-    .line 34
-    if-eqz p1, :cond_2
-
-    .line 35
-    .line 36
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 37
     .line 38
     .line 39
-    move-result-object v1
+    if-eqz p1, :cond_2
 
     .line 40
-    new-instance v0, Ljava/util/Formatter;
-
     .line 41
-    .line 42
-    invoke-direct {v0, v1}, Ljava/util/Formatter;-><init>(Ljava/lang/Appendable;)V
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
+    .line 42
     .line 43
     .line 44
+    move-result-object v1
+
     .line 45
-    invoke-virtual {v0, p1, p2}, Ljava/util/Formatter;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/util/Formatter;
+    new-instance v0, Ljava/util/Formatter;
 
     .line 46
     .line 47
-    .line 48
-    invoke-virtual {v0}, Ljava/util/Formatter;->close()V
+    invoke-direct {v0, v1}, Ljava/util/Formatter;-><init>(Ljava/lang/Appendable;)V
 
+    .line 48
     .line 49
     .line 50
-    .line 51
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1, p2}, Ljava/util/Formatter;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/util/Formatter;
 
+    .line 51
     .line 52
     .line 53
+    invoke-virtual {v0}, Ljava/util/Formatter;->close()V
+
     .line 54
+    .line 55
+    .line 56
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 57
+    .line 58
+    .line 59
     move-result-object p1
 
-    .line 55
+    .line 60
     :cond_2
     invoke-static {p0, p1}, Lcom/facebook/breakpad/BreakpadManager;->nativeSetCustomData(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
-    .line 57
-    .line 58
+    .line 61
+    .line 62
+    .line 63
     monitor-exit v2
 
-    .line 59
+    .line 64
     return-void
 
-    .line 60
+    .line 65
     :catchall_0
     move-exception v0
 
-    .line 61
+    .line 66
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 62
+    .line 67
     throw v0
 .end method
 
@@ -892,7 +973,7 @@
 
     .line 34
     .line 35
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 36
     .line 37
@@ -922,9 +1003,6 @@
     throw v0
 .end method
 
-.method public static native setMinidumpFlags(J)V
-.end method
-
 .method public static native setVersionInfo(ILjava/lang/String;Ljava/lang/String;)V
 .end method
 
@@ -932,177 +1010,173 @@
 .end method
 
 .method public static start(Landroid/content/Context;)V
-    .locals 9
+    .locals 12
 
     .line 0
-    const-wide/16 v7, 0x0
+    const-wide/16 v4, 0x0
 
     .line 1
     .line 2
-    const v6, 0x177000
+    const/4 v8, 0x0
 
     .line 3
+    const v9, 0x177000
+
     .line 4
     .line 5
-    const-class v5, Lcom/facebook/breakpad/BreakpadManager;
-
     .line 6
+    const/4 v11, 0x0
+
     .line 7
-    monitor-enter v5
+    const-class v3, Lcom/facebook/breakpad/BreakpadManager;
 
     .line 8
-    const/4 v4, 0x0
-
     .line 9
-    :try_start_0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mNativeLibraryName:Ljava/lang/String;
+    monitor-enter v3
 
     .line 10
-    .line 11
-    if-nez v0, :cond_0
+    :try_start_0
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->ensureLoadLibrary()V
 
+    .line 11
     .line 12
     .line 13
-    const-string v0, "breakpad"
+    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
     .line 16
     .line 17
-    .line 18
-    sput-object v0, Lcom/facebook/breakpad/BreakpadManager;->mNativeLibraryName:Ljava/lang/String;
+    const v0, 0x6fbf05fb
 
+    .line 18
     .line 19
     .line 20
-    :cond_0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
+    invoke-static {p0, v0}, LX/0Jr;->A00(Landroid/content/Context;I)Ljava/io/File;
 
     .line 21
     .line 22
-    if-nez v0, :cond_1
-
     .line 23
+    move-result-object v0
+
     .line 24
-    const v0, 0x6fbf05fb
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     .line 25
     .line 26
     .line 27
-    invoke-static {p0, v0}, LX/0YP;->A00(Landroid/content/Context;I)Ljava/io/File;
+    move-result-object v6
 
     .line 28
+    const-string v7, ""
+
     .line 29
     .line 30
-    move-result-object v3
+    sget v10, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 31
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
     .line 32
+    invoke-static/range {v6 .. v11}, Lcom/facebook/breakpad/BreakpadManager;->install(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZ)V
+
     .line 33
     .line 34
-    move-result-object v2
-
     .line 35
-    const-string v1, ""
+    sput-object v0, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
 
     .line 36
     .line 37
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->ensureLoadLibrary()V
 
     .line 38
     .line 39
-    invoke-static {v2, v1, v6, v0}, Lcom/facebook/breakpad/BreakpadManager;->install(Ljava/lang/String;Ljava/lang/String;II)V
-
     .line 40
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->nativeGetMinidumpFlags()J
+
     .line 41
     .line 42
-    sput-object v3, Lcom/facebook/breakpad/BreakpadManager;->mCrashDirectory:Ljava/io/File;
-
     .line 43
-    .line 44
-    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->getMinidumpFlags()J
-
-    .line 45
-    .line 46
-    .line 47
     move-result-wide v0
 
-    .line 48
-    or-long/2addr v7, v0
+    .line 44
+    or-long/2addr v4, v0
 
-    .line 49
+    .line 45
     const-wide/16 v0, 0x2
 
-    .line 50
-    .line 51
-    or-long/2addr v7, v0
+    .line 46
+    .line 47
+    or-long/2addr v4, v0
 
-    .line 52
+    .line 48
     const-wide/16 v0, 0x4
 
+    .line 49
+    .line 50
+    or-long/2addr v4, v0
+
+    .line 51
+    invoke-static {}, Lcom/facebook/breakpad/BreakpadManager;->ensureLoadLibrary()V
+
+    .line 52
     .line 53
     .line 54
-    or-long/2addr v7, v0
+    invoke-static {v4, v5}, Lcom/facebook/breakpad/BreakpadManager;->nativeSetMinidumpFlags(J)V
 
     .line 55
-    invoke-static {v7, v8}, Lcom/facebook/breakpad/BreakpadManager;->setMinidumpFlags(J)V
-
     .line 56
     .line 57
-    .line 58
-    invoke-static {}, LX/0E5;->A01()I
+    invoke-static {}, LX/0DC;->A01()I
 
+    .line 58
     .line 59
     .line 60
-    .line 61
     move-result v1
 
-    .line 62
-    const-string v0, "175.0.0.28.488"
+    .line 61
+    const-string v0, "187.0.0.8.277"
 
+    .line 62
     .line 63
-    .line 64
     sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
+    .line 64
     .line 65
-    .line 66
     invoke-static {v1, v0, v2}, Lcom/facebook/breakpad/BreakpadManager;->setVersionInfo(ILjava/lang/String;Ljava/lang/String;)V
 
+    .line 66
     .line 67
     .line 68
-    .line 69
     const-string v1, "Fingerprint"
 
+    .line 69
     .line 70
-    .line 71
-    new-array v0, v4, [Ljava/lang/Object;
+    new-array v0, v11, [Ljava/lang/Object;
 
+    .line 71
     .line 72
-    .line 73
     invoke-static {v1, v2, v0}, Lcom/facebook/breakpad/BreakpadManager;->setCustomData(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 73
     .line 74
     .line 75
-    .line 76
-    :cond_1
-    monitor-exit v5
+    :cond_0
+    monitor-exit v3
 
-    .line 77
+    .line 76
     return-void
 
-    .line 78
+    .line 77
     :catchall_0
     move-exception v0
 
-    .line 79
-    monitor-exit v5
+    .line 78
+    monitor-exit v3
 
-    .line 80
+    .line 79
     throw v0
 .end method
 

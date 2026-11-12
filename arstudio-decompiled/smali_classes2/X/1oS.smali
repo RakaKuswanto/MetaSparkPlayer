@@ -1,6 +1,9 @@
-.class public final LX/1oS;
+.class public final LX/1os;
 .super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/12w;
 
 
 # direct methods

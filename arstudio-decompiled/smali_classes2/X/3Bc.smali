@@ -1,29 +1,27 @@
-.class public final LX/3Bc;
+.class public abstract LX/3BC;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Landroid/content/Intent;
-
-.field public final A01:Ljava/util/Collection;
+# static fields
+.field public static final A00:LX/3H0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Ljava/util/Collection;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/3H0;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/3Bc;->A00:Landroid/content/Intent;
+    invoke-direct {v0}, LX/3H0;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/3Bc;->A01:Ljava/util/Collection;
+    sput-object v0, LX/3BC;->A00:LX/3H0;
 
     .line 6
     .line 7

@@ -1,45 +1,53 @@
-.class public final LX/2Tc;
-.super Ljava/lang/Object;
+.class public final LX/2tC;
+.super Ljava/lang/RuntimeException;
 .source ""
 
-# interfaces
-.implements Ljava/io/FilenameFilter;
+
+# instance fields
+.field public final errorCode:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
+.method public constructor <init>(I)V
     .locals 1
 
     .line 0
-    const-string v0, ".nomedia"
+    const-string v0, "Headwind error: "
 
     .line 1
     .line 2
-    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 3
     .line 4
     .line 5
-    move-result v0
+    move-result-object v0
 
     .line 6
-    xor-int/lit8 v0, v0, 0x1
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     .line 7
     .line 8
-    return v0
+    .line 9
+    iput p1, p0, LX/2tC;->errorCode:I
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput p1, p0, LX/2tC;->errorCode:I
+
+    .line 268435460
+    .line 268435461
+    return-void
 .end method

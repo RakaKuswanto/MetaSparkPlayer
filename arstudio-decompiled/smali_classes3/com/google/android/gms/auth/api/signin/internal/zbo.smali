@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/google/android/gms/auth/api/signin/internal/zbp;
+.implements Landroid/os/IInterface;
 
 
 # direct methods

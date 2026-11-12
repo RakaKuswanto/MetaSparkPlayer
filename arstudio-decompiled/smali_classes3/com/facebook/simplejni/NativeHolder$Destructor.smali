@@ -1,5 +1,5 @@
 .class public Lcom/facebook/simplejni/NativeHolder$Destructor;
-.super LX/68B;
+.super LX/5oi;
 .source ""
 
 
@@ -18,7 +18,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -30,7 +30,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/68B;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p1}, LX/5oi;-><init>(Ljava/lang/Object;)V
 
     .line 1
     .line 2

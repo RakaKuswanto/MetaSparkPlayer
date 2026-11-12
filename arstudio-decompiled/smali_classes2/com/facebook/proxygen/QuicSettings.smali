@@ -44,6 +44,10 @@
 
 .field public mInitAckThresh:I
 
+.field public mInitiateKeyUpdates:Z
+
+.field public mKeyUpdatePacketCountInterval:I
+
 .field public mKnobs:Ljava/lang/String;
 
 .field public mMaxBatchSize:I
@@ -60,7 +64,11 @@
 
 .field public mNotifyOnNewStreamsExplicitly:Z
 
+.field public mOpportunisticAcking:Z
+
 .field public mPacingEnabled:Z
+
+.field public mQuicAutotuneReceiveStreamFlowControl:Z
 
 .field public mQuicBatchingMode:I
 
@@ -70,15 +78,17 @@
 
 .field public mQuicEnableSplitCallbacks:Z
 
-.field public mQuicHostsAckRxTimestampsDisabled:Ljava/lang/String;
-
 .field public mQuicNewTokenCacheSettings:Lcom/facebook/proxygen/PersistentSSLCacheSettings;
+
+.field public mQuicUseNewStreamBlockedCondition:Z
 
 .field public mReadLoopDetectionLimit:I
 
 .field public mReceiveTimestampsExponent:I
 
 .field public mRecvBatchSize:I
+
+.field public mScheduleTimerForExcessWrites:Z
 
 .field public mShouldRecvBatch:Z
 
@@ -102,361 +112,271 @@
 
 .field public mZeroRttEnabledHostsList:Ljava/lang/String;
 
+.field public mquicHostSubstringsAckRxTimestampsEnabled:Ljava/lang/String;
+
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZZZIZIZIIIZIIZILjava/lang/String;ZIIIIZZIZLjava/lang/String;IZLjava/lang/String;ZZILjava/lang/String;Lcom/facebook/proxygen/PersistentSSLCacheSettings;ZZZIIILjava/lang/String;ZIILjava/lang/String;Z)V
+.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZZZIZIZIIIZIIZILjava/lang/String;ZIIIIZZIZLjava/lang/String;IZLjava/lang/String;ZZILjava/lang/String;Lcom/facebook/proxygen/PersistentSSLCacheSettings;ZZZIIILjava/lang/String;ZIILjava/lang/String;ZZIZZZZ)V
     .locals 1
 
-    .line 0
+    .line 387624
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    .line 387625
     iput-object p1, p0, Lcom/facebook/proxygen/QuicSettings;->mBlocklistedQuicHosts:Ljava/lang/String;
 
-    .line 4
-    .line 5
+    .line 387626
     iput-boolean p2, p0, Lcom/facebook/proxygen/QuicSettings;->mUseQuicBlocklist:Z
 
-    .line 6
-    .line 7
+    .line 387627
     iput-object p3, p0, Lcom/facebook/proxygen/QuicSettings;->mHostsWithQuicEnabled:Ljava/lang/String;
 
-    .line 8
-    .line 9
+    .line 387628
     iput-boolean p4, p0, Lcom/facebook/proxygen/QuicSettings;->mEnableQuicFbStatic:Z
 
-    .line 10
-    .line 11
+    .line 387629
     iput-boolean p5, p0, Lcom/facebook/proxygen/QuicSettings;->mEnableQuicIgStatic:Z
 
-    .line 12
-    .line 13
+    .line 387630
     iput-boolean p6, p0, Lcom/facebook/proxygen/QuicSettings;->mEnableQuicFbDevserver:Z
 
-    .line 14
-    .line 15
+    .line 387631
     iput p7, p0, Lcom/facebook/proxygen/QuicSettings;->mMaxRecvPacketSize:I
 
-    .line 16
-    .line 17
+    .line 387632
     iput-boolean p8, p0, Lcom/facebook/proxygen/QuicSettings;->mConnectUDP:Z
 
-    .line 18
-    .line 19
+    .line 387633
     iput p9, p0, Lcom/facebook/proxygen/QuicSettings;->mMaxNumRTOs:I
 
-    .line 20
-    .line 21
+    .line 387634
     iput-boolean p10, p0, Lcom/facebook/proxygen/QuicSettings;->mEnableSocketErrMsgCallback:Z
 
-    .line 22
-    .line 23
+    .line 387635
     iput p11, p0, Lcom/facebook/proxygen/QuicSettings;->mConnFlowControlWindow:I
 
-    .line 24
-    .line 25
+    .line 387636
     iput p12, p0, Lcom/facebook/proxygen/QuicSettings;->mStreamFlowControlWindow:I
 
-    .line 26
-    .line 27
+    .line 387637
     iput p13, p0, Lcom/facebook/proxygen/QuicSettings;->mTcpQuicRaceDelayMilliseconds:I
 
-    .line 28
-    .line 29
+    .line 387638
     iput-boolean p14, p0, Lcom/facebook/proxygen/QuicSettings;->mTcpDelayOnlyIfQuicSucceeds:Z
 
-    .line 30
-    .line 31
+    .line 387639
     move/from16 v0, p15
 
-    .line 32
-    .line 33
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mMaxCwndInMss:I
 
-    .line 34
-    .line 35
+    .line 387640
     move/from16 v0, p16
 
-    .line 36
-    .line 37
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mIdleTimeoutInSeconds:I
 
-    .line 38
-    .line 39
+    .line 387641
     move/from16 v0, p17
 
-    .line 40
-    .line 41
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mPacingEnabled:Z
 
-    .line 42
-    .line 43
+    .line 387642
     move/from16 v0, p18
 
-    .line 44
-    .line 45
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mWriteConnectionDataPacketsLimit:I
 
-    .line 46
-    .line 47
+    .line 387643
     move-object/from16 v0, p19
 
-    .line 48
-    .line 49
     iput-object v0, p0, Lcom/facebook/proxygen/QuicSettings;->mCongestionController:Ljava/lang/String;
 
-    .line 50
-    .line 51
+    .line 387644
     move/from16 v0, p20
 
-    .line 52
-    .line 53
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mShouldRecvBatch:Z
 
-    .line 54
-    .line 55
+    .line 387645
     move/from16 v0, p21
 
-    .line 56
-    .line 57
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mRecvBatchSize:I
 
-    .line 58
-    .line 59
+    .line 387646
     move/from16 v0, p22
 
-    .line 60
-    .line 61
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mAckIntervalBeforeThresh:I
 
-    .line 62
-    .line 63
+    .line 387647
     move/from16 v0, p23
 
-    .line 64
-    .line 65
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mAckIntervalAfterThresh:I
 
-    .line 66
-    .line 67
+    .line 387648
     move/from16 v0, p24
 
-    .line 68
-    .line 69
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mInitAckThresh:I
 
-    .line 70
-    .line 71
+    .line 387649
     move/from16 v0, p25
 
-    .line 72
-    .line 73
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mEndConnRaceWithQuicFirstPeerPacket:Z
 
-    .line 74
-    .line 75
+    .line 387650
     move/from16 v0, p26
 
-    .line 76
-    .line 77
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mCancelQuicZeroRttOnTcpFailure:Z
 
-    .line 78
-    .line 79
+    .line 387651
     move/from16 v0, p27
 
-    .line 80
-    .line 81
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mReadLoopDetectionLimit:I
 
-    .line 82
-    .line 83
+    .line 387652
     move/from16 v0, p28
 
-    .line 84
-    .line 85
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mShouldUseRecvmmsgForBatch:Z
 
-    .line 86
-    .line 87
+    .line 387653
     move-object/from16 v0, p29
 
-    .line 88
-    .line 89
     iput-object v0, p0, Lcom/facebook/proxygen/QuicSettings;->mKnobs:Ljava/lang/String;
 
-    .line 90
-    .line 91
+    .line 387654
     move/from16 v0, p30
 
-    .line 92
-    .line 93
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mSocketNotSentBufferSize:I
 
-    .line 94
-    .line 95
+    .line 387655
     move/from16 v0, p31
 
-    .line 96
-    .line 97
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mEarlyRetransmit0Rtt:Z
 
-    .line 98
-    .line 99
+    .line 387656
     move-object/from16 v0, p32
 
-    .line 100
-    .line 101
     iput-object v0, p0, Lcom/facebook/proxygen/QuicSettings;->mZeroRttEnabledHostsList:Ljava/lang/String;
 
-    .line 102
-    .line 103
+    .line 387657
     move/from16 v0, p33
 
-    .line 104
-    .line 105
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mQuicEnableSplitCallbacks:Z
 
-    .line 106
-    .line 107
+    .line 387658
     move/from16 v0, p34
 
-    .line 108
-    .line 109
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mQuicDisableZeroRttForVideos:Z
 
-    .line 110
-    .line 111
+    .line 387659
     move/from16 v0, p35
 
-    .line 112
-    .line 113
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mSocketReceiveBufferSize:I
 
-    .line 114
-    .line 115
+    .line 387660
     move-object/from16 v0, p36
 
-    .line 116
-    .line 117
     iput-object v0, p0, Lcom/facebook/proxygen/QuicSettings;->mFlowPriming:Ljava/lang/String;
 
-    .line 118
-    .line 119
+    .line 387661
     move-object/from16 v0, p37
 
-    .line 120
-    .line 121
     iput-object v0, p0, Lcom/facebook/proxygen/QuicSettings;->mQuicNewTokenCacheSettings:Lcom/facebook/proxygen/PersistentSSLCacheSettings;
 
-    .line 122
-    .line 123
+    .line 387662
     move/from16 v0, p38
 
-    .line 124
-    .line 125
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mQuicEnableNewToken:Z
 
-    .line 126
-    .line 127
+    .line 387663
     move/from16 v0, p39
 
-    .line 128
-    .line 129
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mNotifyOnNewStreamsExplicitly:Z
 
-    .line 130
-    .line 131
+    .line 387664
     move/from16 v0, p40
 
-    .line 132
-    .line 133
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mAckReceiveTimestampsEnabled:Z
 
-    .line 134
-    .line 135
+    .line 387665
     move/from16 v0, p41
 
-    .line 136
-    .line 137
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mMaxReceiveTimestampsPerAck:I
 
-    .line 138
-    .line 139
+    .line 387666
     move/from16 v0, p42
 
-    .line 140
-    .line 141
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mReceiveTimestampsExponent:I
 
-    .line 142
-    .line 143
+    .line 387667
     move/from16 v0, p43
 
-    .line 144
-    .line 145
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mMaxReceivedPktsTimestampsStored:I
 
-    .line 146
-    .line 147
+    .line 387668
     move-object/from16 v0, p44
 
-    .line 148
-    .line 149
     iput-object v0, p0, Lcom/facebook/proxygen/QuicSettings;->mCcaConfigJSON:Ljava/lang/String;
 
-    .line 150
-    .line 151
+    .line 387669
     move/from16 v0, p45
 
-    .line 152
-    .line 153
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mUseContinuousMemoryEgressDataPath:Z
 
-    .line 154
-    .line 155
+    .line 387670
     move/from16 v0, p46
 
-    .line 156
-    .line 157
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mQuicBatchingMode:I
 
-    .line 158
-    .line 159
+    .line 387671
     move/from16 v0, p47
 
-    .line 160
-    .line 161
     iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mMaxBatchSize:I
 
-    .line 162
-    .line 163
+    .line 387672
     move-object/from16 v0, p48
 
-    .line 164
-    .line 165
-    iput-object v0, p0, Lcom/facebook/proxygen/QuicSettings;->mQuicHostsAckRxTimestampsDisabled:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/proxygen/QuicSettings;->mquicHostSubstringsAckRxTimestampsEnabled:Ljava/lang/String;
 
-    .line 166
-    .line 167
+    .line 387673
     move/from16 v0, p49
 
-    .line 168
-    .line 169
     iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mEnableKeepalive:Z
 
-    .line 170
-    .line 171
+    .line 387674
+    move/from16 v0, p50
+
+    iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mInitiateKeyUpdates:Z
+
+    .line 387675
+    move/from16 v0, p51
+
+    iput v0, p0, Lcom/facebook/proxygen/QuicSettings;->mKeyUpdatePacketCountInterval:I
+
+    .line 387676
+    move/from16 v0, p52
+
+    iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mQuicUseNewStreamBlockedCondition:Z
+
+    .line 387677
+    move/from16 v0, p53
+
+    iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mQuicAutotuneReceiveStreamFlowControl:Z
+
+    .line 387678
+    move/from16 v0, p54
+
+    iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mScheduleTimerForExcessWrites:Z
+
+    .line 387679
+    move/from16 v0, p55
+
+    iput-boolean v0, p0, Lcom/facebook/proxygen/QuicSettings;->mOpportunisticAcking:Z
+
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZZZIZIZIIIZIIZILjava/lang/String;ZIIIIZZIZLjava/lang/String;IZLjava/lang/String;ZZILjava/lang/String;Lcom/facebook/proxygen/PersistentSSLCacheSettings;ZZZIIILjava/lang/String;ZIILjava/lang/String;ZLcom/facebook/proxygen/QuicSettings$1;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZZZIZIZIIIZIIZILjava/lang/String;ZIIIIZZIZLjava/lang/String;IZLjava/lang/String;ZZILjava/lang/String;Lcom/facebook/proxygen/PersistentSSLCacheSettings;ZZZIIILjava/lang/String;ZIILjava/lang/String;ZZIZZZZLcom/facebook/proxygen/QuicSettings$1;)V
     .locals 0
 
     .line 268435456
-    invoke-direct/range {p0 .. p49}, Lcom/facebook/proxygen/QuicSettings;-><init>(Ljava/lang/String;ZLjava/lang/String;ZZZIZIZIIIZIIZILjava/lang/String;ZIIIIZZIZLjava/lang/String;IZLjava/lang/String;ZZILjava/lang/String;Lcom/facebook/proxygen/PersistentSSLCacheSettings;ZZZIIILjava/lang/String;ZIILjava/lang/String;Z)V
+    invoke-direct/range {p0 .. p55}, Lcom/facebook/proxygen/QuicSettings;-><init>(Ljava/lang/String;ZLjava/lang/String;ZZZIZIZIIIZIIZILjava/lang/String;ZIIIIZZIZLjava/lang/String;IZLjava/lang/String;ZZILjava/lang/String;Lcom/facebook/proxygen/PersistentSSLCacheSettings;ZZZIIILjava/lang/String;ZIILjava/lang/String;ZZIZZZZ)V
 
     .line 268435457
     .line 268435458

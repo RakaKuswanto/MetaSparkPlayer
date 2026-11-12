@@ -1,35 +1,29 @@
 .class public final LX/6OK;
-.super LX/6Ny;
+.super LX/6Ni;
 .source ""
+
+
+# instance fields
+.field public A00:Ljava/util/List;
+
+.field public A01:Ljava/util/List;
+
+.field public A02:Ljava/util/List;
+
+.field public A03:Ljava/util/List;
+
+.field public A04:Ljava/util/List;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0}, LX/6Ni;-><init>()V
 
     .line 1
-    new-array v2, v0, [Ljava/lang/String;
-
     .line 2
     .line 3
-    const/4 v1, 0x0
-
-    .line 4
-    const-string v0, "*"
-
-    .line 5
-    .line 6
-    aput-object v0, v2, v1
-
-    .line 7
-    .line 8
-    invoke-direct {p0, v2}, LX/6Ny;-><init>([Ljava/lang/String;)V
-
-    .line 9
-    .line 10
-    .line 11
     return-void
 .end method

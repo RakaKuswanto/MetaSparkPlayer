@@ -1,17 +1,31 @@
-.class public interface abstract LX/5bY;
+.class public abstract synthetic LX/5by;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ALZ(I)I
-.end method
+# direct methods
+.method public static synthetic A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)Z
+    .locals 1
 
-.method public abstract AWo()V
-.end method
+    :cond_0
+    invoke-virtual {p3, p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public abstract AdT(Landroid/graphics/SurfaceTexture;)V
-.end method
+    move-result v0
 
-.method public abstract Adb()V
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    invoke-virtual {p3, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eq v0, p1, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

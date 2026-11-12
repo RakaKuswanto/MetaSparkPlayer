@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/1or;
+.field public static final Companion:LX/1ws;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/1or;
+    new-instance v0, LX/1ws;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1or;-><init>()V
+    invoke-direct {v0}, LX/1ws;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/pando/PandoFlipperUtil;->Companion:LX/1or;
+    sput-object v0, Lcom/facebook/pando/PandoFlipperUtil;->Companion:LX/1ws;
 
     .line 6
     .line 7
@@ -30,7 +30,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 11
     .line 12

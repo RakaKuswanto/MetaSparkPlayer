@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5B6;
+.implements LX/54H;
 
 
 # instance fields
@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public onError(LX/5AE;)V
+.method public onError(LX/53i;)V
     .locals 2
 
     .line 0
@@ -41,7 +41,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0, p1}, LX/0Jt;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, p1}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 5
     .line 6
@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method public onLocationChanged(LX/4r5;)V
+.method public onLocationChanged(LX/5ER;)V
     .locals 7
 
     .line 0
@@ -67,7 +67,7 @@
 
     .line 1
     .line 2
-    iget-object v1, v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/5BI;
+    iget-object v1, v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/54o;
 
     .line 3
     .line 4
@@ -75,7 +75,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0, p1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->access$000(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;LX/4r5;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
+    invoke-static {v0, p1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->access$000(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;LX/5ER;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
 
     .line 7
     .line 8
@@ -83,7 +83,7 @@
     move-result-object v0
 
     .line 10
-    invoke-interface {v1, v0}, LX/5BI;->onLocationDataUpdated(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;)V
+    invoke-interface {v1, v0}, LX/54o;->onLocationDataUpdated(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;)V
 
     .line 11
     .line 12
@@ -105,7 +105,7 @@
 
     .line 20
     .line 21
-    iget-object v0, p1, LX/4r5;->A00:Landroid/location/Location;
+    iget-object v0, p1, LX/5ER;->A00:Landroid/location/Location;
 
     .line 22
     .line 23
@@ -152,7 +152,7 @@
 
     .line 43
     .line 44
-    invoke-static {v2}, LX/0Yg;->A0d(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {v2}, LX/0X4;->A0f(Ljava/util/List;)Ljava/lang/Object;
 
     .line 45
     .line 46
@@ -218,7 +218,7 @@
 
     .line 76
     .line 77
-    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/5BI;
+    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/54o;
 
     .line 78
     .line 79
@@ -248,7 +248,7 @@
 
     .line 89
     .line 90
-    invoke-static {v1, v0, v2}, LX/0Jt;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 91
     .line 92

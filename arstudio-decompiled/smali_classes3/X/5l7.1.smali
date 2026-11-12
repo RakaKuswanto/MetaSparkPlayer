@@ -1,548 +1,114 @@
-.class public final enum LX/5l7;
-.super Ljava/lang/Enum;
+.class public final synthetic LX/5l7;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/5l7;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "Schedulers$$ExternalSyntheticLambda0"
 
-.field public static final enum CLOSED:LX/5l7;
 
-.field public static final enum CLOSE_IN_PROGRESS:LX/5l7;
+# instance fields
+.field public final synthetic A00:LX/5kD;
 
-.field public static final enum OPENED:LX/5l7;
+.field public final synthetic A01:Landroidx/work/impl/WorkDatabase;
 
-.field public static final enum OPEN_IN_PROGRESS:LX/5l7;
+.field public final synthetic A02:LX/5ky;
 
-.field public static final enum PREVIEW:LX/5l7;
-
-.field public static final enum PREVIEW_IN_PROGRESS:LX/5l7;
-
-.field public static final enum WARMED_UP:LX/5l7;
-
-.field public static final enum WARM_UP_IN_PROGRESS:LX/5l7;
+.field public final synthetic A03:Ljava/util/List;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 15
-
-    .line 0
-    const-string v0, "WARM_UP_IN_PROGRESS"
-
-    .line 1
-    .line 2
-    const/4 v14, 0x0
-
-    .line 3
-    new-instance v13, LX/5l7;
-
-    .line 4
-    .line 5
-    invoke-direct {v13, v0, v14}, LX/5l7;-><init>(Ljava/lang/String;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    sput-object v13, LX/5l7;->WARM_UP_IN_PROGRESS:LX/5l7;
-
-    .line 9
-    .line 10
-    const-string v0, "WARMED_UP"
-
-    .line 11
-    .line 12
-    const/4 v12, 0x1
-
-    .line 13
-    new-instance v11, LX/5l7;
-
-    .line 14
-    .line 15
-    invoke-direct {v11, v0, v12}, LX/5l7;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v11, LX/5l7;->WARMED_UP:LX/5l7;
-
-    .line 19
-    .line 20
-    const-string v0, "OPEN_IN_PROGRESS"
-
-    .line 21
-    .line 22
-    const/4 v10, 0x2
-
-    .line 23
-    new-instance v9, LX/5l7;
-
-    .line 24
-    .line 25
-    invoke-direct {v9, v0, v10}, LX/5l7;-><init>(Ljava/lang/String;I)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v9, LX/5l7;->OPEN_IN_PROGRESS:LX/5l7;
-
-    .line 29
-    .line 30
-    const-string v0, "OPENED"
-
-    .line 31
-    .line 32
-    const/4 v8, 0x3
-
-    .line 33
-    new-instance v7, LX/5l7;
-
-    .line 34
-    .line 35
-    invoke-direct {v7, v0, v8}, LX/5l7;-><init>(Ljava/lang/String;I)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v7, LX/5l7;->OPENED:LX/5l7;
-
-    .line 39
-    .line 40
-    const-string v0, "PREVIEW_IN_PROGRESS"
-
-    .line 41
-    .line 42
-    const/4 v6, 0x4
-
-    .line 43
-    new-instance v5, LX/5l7;
-
-    .line 44
-    .line 45
-    invoke-direct {v5, v0, v6}, LX/5l7;-><init>(Ljava/lang/String;I)V
-
-    .line 46
-    .line 47
-    .line 48
-    sput-object v5, LX/5l7;->PREVIEW_IN_PROGRESS:LX/5l7;
-
-    .line 49
-    .line 50
-    const-string v1, "PREVIEW"
-
-    .line 51
-    .line 52
-    const/4 v0, 0x5
-
-    .line 53
-    new-instance v4, LX/5l7;
-
-    .line 54
-    .line 55
-    invoke-direct {v4, v1, v0}, LX/5l7;-><init>(Ljava/lang/String;I)V
-
-    .line 56
-    .line 57
-    .line 58
-    sput-object v4, LX/5l7;->PREVIEW:LX/5l7;
-
-    .line 59
-    .line 60
-    const-string v1, "CLOSE_IN_PROGRESS"
-
-    .line 61
-    .line 62
-    const/4 v0, 0x6
-
-    .line 63
-    new-instance v3, LX/5l7;
-
-    .line 64
-    .line 65
-    invoke-direct {v3, v1, v0}, LX/5l7;-><init>(Ljava/lang/String;I)V
-
-    .line 66
-    .line 67
-    .line 68
-    sput-object v3, LX/5l7;->CLOSE_IN_PROGRESS:LX/5l7;
-
-    .line 69
-    .line 70
-    const-string v0, "CLOSED"
-
-    .line 71
-    .line 72
-    const/4 v2, 0x7
-
-    .line 73
-    new-instance v1, LX/5l7;
-
-    .line 74
-    .line 75
-    invoke-direct {v1, v0, v2}, LX/5l7;-><init>(Ljava/lang/String;I)V
-
-    .line 76
-    .line 77
-    .line 78
-    sput-object v1, LX/5l7;->CLOSED:LX/5l7;
-
-    .line 79
-    .line 80
-    const/16 v0, 0x8
-
-    .line 81
-    .line 82
-    new-array v0, v0, [LX/5l7;
-
-    .line 83
-    .line 84
-    aput-object v13, v0, v14
-
-    .line 85
-    .line 86
-    aput-object v11, v0, v12
-
-    .line 87
-    .line 88
-    aput-object v9, v0, v10
-
-    .line 89
-    .line 90
-    aput-object v7, v0, v8
-
-    .line 91
-    .line 92
-    aput-object v5, v0, v6
-
-    .line 93
-    .line 94
-    invoke-static {v0, v4, v3}, LX/0Ye;->A1U([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 95
-    .line 96
-    .line 97
-    aput-object v1, v0, v2
-
-    .line 98
-    .line 99
-    sput-object v0, LX/5l7;->$VALUES:[LX/5l7;
-
-    .line 100
-    .line 101
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(LX/5kD;Landroidx/work/impl/WorkDatabase;LX/5ky;Ljava/util/List;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p4, p0, LX/5l7;->A03:Ljava/util/List;
+
+    iput-object p3, p0, LX/5l7;->A02:LX/5ky;
+
+    iput-object p1, p0, LX/5l7;->A00:LX/5kD;
+
+    iput-object p2, p0, LX/5l7;->A01:Landroidx/work/impl/WorkDatabase;
+
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/5l7;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/5l7;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/5l7;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/5l7;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/5l7;->$VALUES:[LX/5l7;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/5l7;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public isClosedOrClosing()Z
-    .locals 3
+.method public final run()V
+    .locals 7
 
     .line 0
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    iget-object v6, p0, LX/5l7;->A03:Ljava/util/List;
 
     .line 1
     .line 2
-    .line 3
-    move-result v2
+    iget-object v5, p0, LX/5l7;->A02:LX/5ky;
 
+    .line 3
     .line 4
-    const/4 v1, 0x1
+    iget-object v4, p0, LX/5l7;->A00:LX/5kD;
 
     .line 5
-    const/4 v0, 0x6
-
     .line 6
-    if-eq v2, v0, :cond_0
+    iget-object v3, p0, LX/5l7;->A01:Landroidx/work/impl/WorkDatabase;
 
     .line 7
     .line 8
-    const/4 v0, 0x7
+    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 9
-    if-eq v2, v0, :cond_0
-
     .line 10
     .line 11
-    const/4 v1, 0x0
+    move-result-object v2
 
     .line 12
-    :cond_0
-    return v1
-.end method
-
-.method public isInProgress()Z
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v2
-
-    .line 4
-    const/4 v1, 0x1
-
-    .line 5
-    const/4 v0, 0x6
-
-    .line 6
-    if-eq v2, v0, :cond_0
-
-    .line 7
-    .line 8
-    const/4 v0, 0x2
-
-    .line 9
-    if-eq v2, v0, :cond_0
-
-    .line 10
-    .line 11
-    const/4 v0, 0x4
-
-    .line 12
-    if-eq v2, v0, :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     .line 13
     .line 14
-    const/4 v0, 0x0
-
     .line 15
-    if-eq v2, v0, :cond_0
+    move-result v0
 
     .line 16
+    if-eqz v0, :cond_0
+
     .line 17
-    return v0
-
     .line 18
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v1
+
+    .line 22
+    check-cast v1, LX/5lZ;
+
+    .line 23
+    .line 24
+    iget-object v0, v5, LX/5ky;->A01:Ljava/lang/String;
+
+    .line 25
+    .line 26
+    invoke-interface {v1, v0}, LX/5lZ;->A4g(Ljava/lang/String;)V
+
+    .line 27
+    .line 28
+    .line 29
+    goto :goto_0
+
+    .line 30
     :cond_0
-    return v1
-.end method
+    invoke-static {v4, v3, v6}, LX/5kH;->A00(LX/5kD;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
 
-.method public isOpened()Z
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v2
-
-    .line 4
-    const/4 v0, 0x3
-
-    .line 5
-    if-eq v2, v0, :cond_0
-
-    .line 6
-    .line 7
-    const/4 v0, 0x4
-
-    .line 8
-    if-eq v2, v0, :cond_0
-
-    .line 9
-    .line 10
-    const/4 v1, 0x5
-
-    .line 11
-    const/4 v0, 0x0
-
-    .line 12
-    if-ne v2, v1, :cond_1
-
-    .line 13
-    .line 14
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 15
-    :cond_1
-    return v0
-.end method
-
-.method public isPreviewOrPreviewing()Z
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v2
-
-    .line 4
-    const/4 v0, 0x4
-
-    .line 5
-    if-eq v2, v0, :cond_0
-
-    .line 6
-    .line 7
-    const/4 v1, 0x5
-
-    .line 8
-    const/4 v0, 0x0
-
-    .line 9
-    if-ne v2, v1, :cond_1
-
-    .line 10
-    .line 11
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 12
-    :cond_1
-    return v0
-.end method
-
-.method public isShownOrShowing()Z
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v2
-
-    .line 4
-    const/4 v0, 0x2
-
-    .line 5
-    if-eq v2, v0, :cond_0
-
-    .line 6
-    .line 7
-    const/4 v0, 0x3
-
-    .line 8
-    if-eq v2, v0, :cond_0
-
-    .line 9
-    .line 10
-    const/4 v0, 0x4
-
-    .line 11
-    if-eq v2, v0, :cond_0
-
-    .line 12
-    .line 13
-    const/4 v1, 0x5
-
-    .line 14
-    const/4 v0, 0x0
-
-    .line 15
-    if-ne v2, v1, :cond_1
-
-    .line 16
-    .line 17
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 18
-    :cond_1
-    return v0
-.end method
-
-.method public isWarmedUpOrWarmingUp()Z
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v2
-
-    .line 4
-    const/4 v0, 0x1
-
-    .line 5
-    if-eq v2, v0, :cond_0
-
-    .line 6
-    .line 7
-    const/4 v1, 0x0
-
-    .line 8
-    const/4 v0, 0x0
-
-    .line 9
-    if-ne v2, v1, :cond_1
-
-    .line 10
-    .line 11
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 12
-    :cond_1
-    return v0
+    .line 31
+    .line 32
+    .line 33
+    return-void
 .end method

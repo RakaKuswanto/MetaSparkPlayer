@@ -1,39 +1,39 @@
 .class public final LX/2YC;
-.super LX/2YL;
+.super LX/2oP;
 .source ""
 
 
 # instance fields
-.field public A00:Ljava/util/List;
+.field public final A00:LX/3GS;
 
 
 # direct methods
-.method public varargs constructor <init>([LX/2YL;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/2YL;-><init>()V
+    invoke-direct {p0}, LX/2oP;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    sget v0, LX/2I6;->AYK:I
 
     .line 4
     .line 5
+    invoke-static {v0}, LX/0X3;->A0d(I)Ljava/lang/Object;
+
     .line 6
-    move-result-object v0
-
     .line 7
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
-
     .line 8
-    .line 9
-    .line 10
     move-result-object v0
 
+    .line 9
+    check-cast v0, LX/3GS;
+
+    .line 10
     .line 11
-    iput-object v0, p0, LX/2YC;->A00:Ljava/util/List;
+    iput-object v0, p0, LX/2YC;->A00:LX/3GS;
 
     .line 12
     .line 13

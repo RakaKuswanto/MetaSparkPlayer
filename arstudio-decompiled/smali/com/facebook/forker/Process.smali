@@ -77,7 +77,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -244,9 +244,9 @@
     const/4 v9, 0x3
 
     .line 67
-    if-ge v12, v9, :cond_b
+    if-ge v12, v9, :cond_a
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     .line 68
     .line 69
@@ -280,151 +280,151 @@
 
     .line 81
     .line 82
-    aget v0, p5, v12
+    if-gez v1, :cond_9
 
     .line 83
     .line 84
-    if-ltz v0, :cond_a
+    goto :goto_5
 
     .line 85
-    .line 86
-    aget v1, p5, v12
-
-    .line 87
-    .line 88
-    goto :goto_4
-
-    .line 89
     :cond_3
     if-ne v3, v2, :cond_4
 
-    .line 90
-    .line 91
+    .line 86
+    .line 87
     const-string v0, "/dev/null"
 
-    .line 92
-    .line 93
+    .line 88
+    .line 89
     invoke-static {v0}, Lcom/facebook/forker/Process;->nativeUnixOpen(Ljava/lang/String;)I
 
-    .line 94
-    .line 95
-    .line 96
+    .line 90
+    .line 91
+    .line 92
     move-result v3
 
-    .line 97
+    .line 93
     :cond_4
     if-ne v3, v2, :cond_5
 
-    .line 98
-    .line 99
+    .line 94
+    .line 95
     if-eqz p6, :cond_6
 
-    .line 100
-    .line 101
+    .line 96
+    .line 97
     invoke-virtual/range {p6 .. p6}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    .line 98
+    .line 99
+    .line 100
+    move-result-object v0
+
+    .line 101
+    invoke-static {v0}, Lcom/facebook/forker/Process;->nativeUnixCreateTmpFile(Ljava/lang/String;)I
 
     .line 102
     .line 103
     .line 104
-    move-result-object v0
-
-    .line 105
-    invoke-static {v0}, Lcom/facebook/forker/Process;->nativeUnixCreateTmpFile(Ljava/lang/String;)I
-
-    .line 106
-    .line 107
-    .line 108
     move-result v1
 
-    .line 109
+    .line 105
     goto :goto_3
 
-    .line 110
+    .line 106
     :cond_5
     move v1, v3
 
-    .line 111
+    .line 107
     :goto_3
     if-ne v1, v2, :cond_9
 
-    .line 112
-    .line 113
+    .line 108
+    .line 109
     :cond_6
     const/4 v1, -0x1
 
-    .line 114
+    .line 110
     goto :goto_4
 
-    .line 115
+    .line 111
     :cond_7
     move v1, v12
 
-    .line 116
+    .line 112
     goto :goto_4
 
-    .line 117
+    .line 113
     :cond_8
     mul-int/lit8 v0, v12, 0x2
 
-    .line 118
-    .line 119
+    .line 114
+    .line 115
     add-int/lit8 v0, v0, 0x1
 
-    .line 120
-    .line 121
+    .line 116
+    .line 117
     aget v1, v4, v0
 
-    .line 122
-    .line 123
+    .line 118
+    .line 119
     :cond_9
     :goto_4
     mul-int/lit8 v0, v12, 0x2
 
+    .line 120
+    .line 121
+    aput v1, v11, v0
+
+    .line 122
+    .line 123
+    add-int/lit8 v0, v0, 0x1
+
     .line 124
     .line 125
-    aput v1, v11, v0
+    aput v12, v11, v0
 
     .line 126
     .line 127
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v12, v12, 0x1
 
     .line 128
     .line 129
-    aput v12, v11, v0
-
-    .line 130
-    .line 131
-    add-int/lit8 v12, v12, 0x1
-
-    .line 132
-    .line 133
     goto :goto_2
 
-    .line 134
-    :cond_a
+    .line 130
+    :goto_5
     const-string v6, "illegal stream disposition %s for fd %s"
+
+    .line 131
+    .line 132
+    new-array v1, v7, [Ljava/lang/Object;
+
+    .line 133
+    .line 134
+    aget v0, p5, v12
 
     .line 135
     .line 136
-    new-array v1, v7, [Ljava/lang/Object;
+    invoke-static {v1, v0, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
 
     .line 137
     .line 138
-    aget v0, p5, v12
-
     .line 139
-    .line 140
-    invoke-static {v1, v0, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
-
-    .line 141
-    .line 142
-    .line 143
     invoke-static {v1, v12, v8}, LX/001;->A1A([Ljava/lang/Object;II)V
 
+    .line 140
+    .line 141
+    .line 142
+    invoke-static {v6, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 143
     .line 144
     .line 145
+    move-result-object v0
+
     .line 146
-    invoke-static {v6, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 147
     .line 148
@@ -432,277 +432,269 @@
     move-result-object v0
 
     .line 150
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 151
-    .line 152
-    .line 153
-    move-result-object v0
-
-    .line 154
     throw v0
 
-    .line 155
-    :cond_b
+    .line 151
+    :cond_a
     const/4 v6, 0x0
 
-    .line 156
-    :cond_c
+    .line 152
+    :cond_b
     aget v0, p5, v6
+
+    .line 153
+    .line 154
+    if-ne v0, v10, :cond_c
+
+    .line 155
+    .line 156
+    mul-int/lit8 v1, v6, 0x2
 
     .line 157
     .line 158
-    if-ne v0, v10, :cond_d
+    aget v0, v11, v7
 
     .line 159
     .line 160
-    mul-int/lit8 v1, v6, 0x2
+    aput v0, v11, v1
 
     .line 161
     .line 162
-    aget v0, v11, v7
+    :cond_c
+    add-int/lit8 v6, v6, 0x1
 
     .line 163
     .line 164
-    aput v0, v11, v1
+    if-lt v6, v9, :cond_b
 
     .line 165
     .line 166
-    :cond_d
-    add-int/lit8 v6, v6, 0x1
+    move-object/from16 v14, p1
 
     .line 167
     .line 168
-    if-lt v6, v9, :cond_c
+    move-object/from16 v15, p2
 
     .line 169
     .line 170
-    move-object/from16 v14, p1
+    move-object/from16 v16, p3
 
     .line 171
     .line 172
-    move-object/from16 v15, p2
+    move-object/from16 v18, p4
 
     .line 173
     .line 174
-    move-object/from16 v16, p3
+    move-object/from16 v17, v11
 
     .line 175
     .line 176
-    move-object/from16 v18, p4
+    invoke-direct/range {v13 .. v18}, Lcom/facebook/forker/Process;->nativeLaunch(Ljava/lang/String;[Ljava/lang/String;[B[I[I)I
 
     .line 177
     .line 178
-    move-object/from16 v17, v11
-
     .line 179
+    move-result v6
+
     .line 180
-    invoke-direct/range {v13 .. v18}, Lcom/facebook/forker/Process;->nativeLaunch(Ljava/lang/String;[Ljava/lang/String;[B[I[I)I
+    iput v6, v13, Lcom/facebook/forker/Process;->mPid:I
 
     .line 181
     .line 182
-    .line 183
-    move-result v6
+    iget-object v1, v13, Lcom/facebook/forker/Process;->mWaiterThread:Lcom/facebook/forker/Process$WaiterThread;
 
+    .line 183
     .line 184
-    iput v6, v13, Lcom/facebook/forker/Process;->mPid:I
+    const-string v0, "PidWaiter:"
 
     .line 185
     .line 186
-    iget-object v1, v13, Lcom/facebook/forker/Process;->mWaiterThread:Lcom/facebook/forker/Process$WaiterThread;
+    invoke-static {v0, v6}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 187
     .line 188
-    const-string v0, "PidWaiter:"
-
     .line 189
+    move-result-object v0
+
     .line 190
-    invoke-static {v0, v6}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     .line 191
     .line 192
     .line 193
-    move-result-object v0
-
-    .line 194
-    invoke-virtual {v1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
-
-    .line 195
-    .line 196
-    .line 197
     aget v0, v4, v5
 
-    .line 198
-    .line 199
+    .line 194
+    .line 195
     invoke-static {v0, v8}, Lcom/facebook/forker/Process;->openFdStream(II)Ljava/lang/Object;
+
+    .line 196
+    .line 197
+    .line 198
+    move-result-object v0
+
+    .line 199
+    check-cast v0, Ljava/io/OutputStream;
 
     .line 200
     .line 201
-    .line 202
-    move-result-object v0
+    iput-object v0, v13, Lcom/facebook/forker/Process;->mChildStdin:Ljava/io/OutputStream;
 
+    .line 202
     .line 203
-    check-cast v0, Ljava/io/OutputStream;
+    aget v0, v4, v7
 
     .line 204
     .line 205
-    iput-object v0, v13, Lcom/facebook/forker/Process;->mChildStdin:Ljava/io/OutputStream;
+    invoke-static {v0, v5}, Lcom/facebook/forker/Process;->openFdStream(II)Ljava/lang/Object;
 
     .line 206
     .line 207
-    aget v0, v4, v7
-
     .line 208
+    move-result-object v0
+
     .line 209
-    invoke-static {v0, v5}, Lcom/facebook/forker/Process;->openFdStream(II)Ljava/lang/Object;
+    check-cast v0, Ljava/io/InputStream;
 
     .line 210
     .line 211
-    .line 212
-    move-result-object v0
-
-    .line 213
-    check-cast v0, Ljava/io/InputStream;
-
-    .line 214
-    .line 215
     iput-object v0, v13, Lcom/facebook/forker/Process;->mChildStdout:Ljava/io/InputStream;
 
-    .line 216
-    .line 217
+    .line 212
+    .line 213
     const/4 v0, 0x4
 
-    .line 218
+    .line 214
     aget v0, v4, v0
 
-    .line 219
-    .line 220
+    .line 215
+    .line 216
     invoke-static {v0, v5}, Lcom/facebook/forker/Process;->openFdStream(II)Ljava/lang/Object;
+
+    .line 217
+    .line 218
+    .line 219
+    move-result-object v0
+
+    .line 220
+    check-cast v0, Ljava/io/InputStream;
 
     .line 221
     .line 222
-    .line 223
-    move-result-object v0
+    iput-object v0, v13, Lcom/facebook/forker/Process;->mChildStderr:Ljava/io/InputStream;
 
+    .line 223
     .line 224
-    check-cast v0, Ljava/io/InputStream;
+    iget-object v0, v13, Lcom/facebook/forker/Process;->mWaiterThread:Lcom/facebook/forker/Process$WaiterThread;
 
     .line 225
     .line 226
-    iput-object v0, v13, Lcom/facebook/forker/Process;->mChildStderr:Ljava/io/InputStream;
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 227
     .line 228
-    iget-object v0, v13, Lcom/facebook/forker/Process;->mWaiterThread:Lcom/facebook/forker/Process$WaiterThread;
-
     .line 229
-    .line 230
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    .line 231
-    .line 232
-    .line 233
     invoke-static {v3}, Lcom/facebook/forker/Process;->unixClose(I)V
 
-    .line 234
-    .line 235
-    .line 236
+    .line 230
+    .line 231
+    .line 232
     invoke-static {v4}, Lcom/facebook/forker/Process;->unixClose([I)V
 
-    .line 237
-    .line 238
-    .line 239
+    .line 233
+    .line 234
+    .line 235
     return-void
 
-    .line 240
+    .line 236
     :catchall_0
     move-exception v1
 
-    .line 241
-    goto :goto_5
+    .line 237
+    goto :goto_7
 
-    .line 242
+    .line 238
     :catchall_1
     move-exception v1
 
-    .line 243
+    .line 239
     const/4 v4, 0x0
 
-    .line 244
-    :goto_5
-    const/4 v3, -0x1
-
-    .line 245
+    .line 240
     goto :goto_6
 
-    .line 246
+    .line 241
     :catchall_2
     move-exception v1
 
-    .line 247
+    .line 242
     :goto_6
+    const/4 v3, -0x1
+
+    .line 243
+    :goto_7
     invoke-static {v3}, Lcom/facebook/forker/Process;->unixClose(I)V
 
-    .line 248
-    .line 249
-    .line 250
+    .line 244
+    .line 245
+    .line 246
     invoke-static {v4}, Lcom/facebook/forker/Process;->unixClose([I)V
 
-    .line 251
-    .line 252
-    .line 253
+    .line 247
+    .line 248
+    .line 249
     iget-object v0, v13, Lcom/facebook/forker/Process;->mChildStdin:Ljava/io/OutputStream;
 
-    .line 254
-    .line 255
+    .line 250
+    .line 251
     invoke-static {v0}, Lcom/facebook/forker/Process;->safeClose(Ljava/io/Closeable;)V
 
-    .line 256
-    .line 257
-    .line 258
+    .line 252
+    .line 253
+    .line 254
     iget-object v0, v13, Lcom/facebook/forker/Process;->mChildStdout:Ljava/io/InputStream;
 
-    .line 259
-    .line 260
+    .line 255
+    .line 256
     invoke-static {v0}, Lcom/facebook/forker/Process;->safeClose(Ljava/io/Closeable;)V
 
-    .line 261
-    .line 262
-    .line 263
+    .line 257
+    .line 258
+    .line 259
     iget-object v0, v13, Lcom/facebook/forker/Process;->mChildStderr:Ljava/io/InputStream;
 
-    .line 264
-    .line 265
+    .line 260
+    .line 261
     invoke-static {v0}, Lcom/facebook/forker/Process;->safeClose(Ljava/io/Closeable;)V
 
+    .line 262
+    .line 263
+    .line 264
+    iget v0, v13, Lcom/facebook/forker/Process;->mPid:I
+
+    .line 265
     .line 266
+    if-eq v0, v2, :cond_d
+
     .line 267
     .line 268
-    iget v0, v13, Lcom/facebook/forker/Process;->mPid:I
+    const/16 v0, 0x9
 
     .line 269
     .line 270
-    if-eq v0, v2, :cond_e
+    invoke-direct {v13, v0}, Lcom/facebook/forker/Process;->nativeKill(I)V
 
     .line 271
     .line 272
-    const/16 v0, 0x9
-
     .line 273
-    .line 274
-    invoke-direct {v13, v0}, Lcom/facebook/forker/Process;->nativeKill(I)V
-
-    .line 275
-    .line 276
-    .line 277
     invoke-direct {v13}, Lcom/facebook/forker/Process;->nativeWait()V
 
-    .line 278
-    .line 279
-    .line 280
-    :cond_e
+    .line 274
+    .line 275
+    .line 276
+    :cond_d
     throw v1
 .end method
 
@@ -726,7 +718,7 @@
 
     .line 1
     .line 2
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 3
     .line 4
@@ -768,7 +760,7 @@
 
     .line 21
     .line 22
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 23
     .line 24
@@ -828,7 +820,7 @@
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 15
     .line 16
@@ -851,7 +843,7 @@
     .line 25
     .line 26
     .line 27
-    invoke-static {v1, v0, p0}, LX/001;->A0L(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-static {v1, v0, p0}, LX/001;->A0P(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
     .line 28
     .line 29
@@ -1242,7 +1234,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 15
     .line 16
@@ -1409,7 +1401,7 @@
     const/4 v3, 0x4
 
     .line 8
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     .line 9
     .line 10
@@ -1417,7 +1409,7 @@
 
     .line 11
     .line 12
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_3
 
     .line 13
     .line 14
@@ -1497,116 +1489,112 @@
 
     .line 47
     :cond_2
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_3
 
     .line 48
     .line 49
-    goto :goto_1
+    const-string v0, "process entered unexpected state "
 
     .line 50
-    :cond_3
-    const/4 v0, 0x1
-
     .line 51
-    if-eq v4, v0, :cond_6
+    invoke-static {v0, v3}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 52
     .line 53
-    const/4 v0, 0x2
-
     .line 54
-    if-eq v4, v0, :cond_5
+    move-result-object v0
 
     .line 55
-    .line 56
-    if-ne v4, v3, :cond_4
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
+    .line 56
     .line 57
     .line 58
-    iget v0, p0, Lcom/facebook/forker/Process;->mExitStatus:I
+    move-result-object v0
 
     .line 59
+    goto :goto_1
+
     .line 60
-    goto :goto_3
+    :cond_3
+    const/high16 v0, -0x80000000
 
     .line 61
-    :cond_4
-    new-instance v0, Ljava/lang/AssertionError;
-
     .line 62
-    .line 63
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    .line 64
-    .line 65
-    .line 66
     goto :goto_2
 
+    .line 63
+    :cond_4
+    const/4 v0, 0x1
+
+    .line 64
+    if-eq v4, v0, :cond_6
+
+    .line 65
+    .line 66
+    const/4 v0, 0x2
+
     .line 67
-    :goto_1
-    const-string v0, "process entered unexpected state "
+    if-eq v4, v0, :cond_7
 
     .line 68
     .line 69
-    invoke-static {v0, v3}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    if-ne v4, v3, :cond_5
 
     .line 70
     .line 71
-    .line 72
-    move-result-object v0
+    iget v0, p0, Lcom/facebook/forker/Process;->mExitStatus:I
 
+    .line 72
     .line 73
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    goto :goto_2
 
     .line 74
+    :cond_5
+    new-instance v0, Ljava/lang/AssertionError;
+
     .line 75
     .line 76
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
     .line 77
-    :goto_2
+    .line 78
+    .line 79
+    :goto_1
     throw v0
 
-    .line 78
-    :cond_5
-    const v0, -0x7fffffff
-
-    .line 79
     .line 80
-    .line 81
-    goto :goto_3
-
-    .line 82
     :cond_6
     const v0, -0x7ffffffe
 
+    .line 81
+    .line 82
     .line 83
-    .line 84
-    .line 85
-    goto :goto_3
+    goto :goto_2
 
-    .line 86
+    .line 84
     :cond_7
-    const/high16 v0, -0x80000000
+    const v0, -0x7fffffff
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 85
+    .line 86
     .line 87
-    .line 88
-    :goto_3
+    :goto_2
     monitor-exit p0
 
-    .line 89
+    .line 88
     return v0
 
-    .line 90
+    .line 89
     :catchall_0
     move-exception v0
 
-    .line 91
+    .line 90
     monitor-exit p0
 
-    .line 92
+    .line 91
     throw v0
 .end method
 

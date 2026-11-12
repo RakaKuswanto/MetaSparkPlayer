@@ -1,68 +1,44 @@
-.class public final synthetic LX/5zu;
+.class public abstract LX/5zu;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DrmSessionEventListener$EventDispatcher$$ExternalSyntheticLambda5"
-
-
-# instance fields
-.field public final synthetic A00:LX/5zj;
-
-.field public final synthetic A01:LX/5zz;
-
-.field public final synthetic A02:Ljava/lang/Exception;
-
 
 # direct methods
-.method public synthetic constructor <init>(LX/5zj;LX/5zz;Ljava/lang/Exception;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/5zu;->A00:LX/5zj;
-
-    iput-object p2, p0, LX/5zu;->A01:LX/5zz;
-
-    iput-object p3, p0, LX/5zu;->A02:Ljava/lang/Exception;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 4
+.method public static A00()J
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5zu;->A00:LX/5zj;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    iget-object v3, p0, LX/5zu;->A01:LX/5zz;
+    const/16 v0, 0x11
 
     .line 3
     .line 4
-    iget-object v2, p0, LX/5zu;->A02:Ljava/lang/Exception;
+    if-lt v1, v0, :cond_0
 
     .line 5
     .line 6
-    iget v1, v0, LX/5zj;->A00:I
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/5zj;->A01:LX/61D;
-
     .line 9
+    move-result-wide v0
+
     .line 10
-    invoke-interface {v3, v0, v2, v1}, LX/5zz;->AXG(LX/61D;Ljava/lang/Exception;I)V
+    return-wide v0
 
     .line 11
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
     .line 12
     .line 13
-    return-void
+    .line 14
+    move-result-wide v0
+
+    .line 15
+    return-wide v0
 .end method

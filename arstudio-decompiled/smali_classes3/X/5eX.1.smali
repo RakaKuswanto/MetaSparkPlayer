@@ -1,43 +1,37 @@
-.class public final LX/5eX;
+.class public abstract LX/5Ex;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/0JB;
+.field public final A00:J
 
-.field public final synthetic A01:LX/5e1;
+.field public final A01:J
+
+.field public final A02:LX/5EI;
 
 
 # direct methods
-.method public constructor <init>(LX/5e1;)V
-    .locals 1
+.method public constructor <init>(LX/5EI;JJ)V
+    .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5eX;->A01:LX/5e1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/5Ex;->A02:LX/5EI;
+
     .line 4
     .line 5
-    iget-object v0, p1, LX/5e1;->A01:LX/5dF;
+    iput-wide p2, p0, LX/5Ex;->A01:J
 
     .line 6
     .line 7
-    invoke-interface {v0}, LX/5dF;->AIz()LX/0JB;
+    iput-wide p4, p0, LX/5Ex;->A00:J
 
     .line 8
     .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/5eX;->A00:LX/0JB;
-
-    .line 12
-    .line 13
     return-void
 .end method

@@ -1,25 +1,11 @@
-.class public final LX/0QE;
+.class public interface abstract LX/0QE;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/0C6;
+# virtual methods
+.method public abstract AA0(I)Ljava/lang/String;
+.end method
 
-
-# direct methods
-.method public constructor <init>(LX/0C6;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/0QE;->A00:LX/0C6;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+.method public abstract AH2(I)Ljava/lang/String;
 .end method

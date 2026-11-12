@@ -2,276 +2,201 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/63I;
-
 
 # instance fields
-.field public final synthetic A00:LX/622;
+.field public final A00:Landroid/util/SparseArray;
+
+.field public final A01:LX/67A;
+
+.field public final A02:Landroid/util/SparseArray;
 
 
 # direct methods
-.method public constructor <init>(LX/622;)V
-    .locals 0
+.method public constructor <init>(LX/67A;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/62U;->A00:LX/622;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    invoke-static {}, LX/434;->A0S()Landroid/util/SparseArray;
+
     .line 4
     .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/62U;->A02:Landroid/util/SparseArray;
+
+    .line 8
+    .line 9
+    invoke-static {}, LX/434;->A0S()Landroid/util/SparseArray;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/62U;->A00:Landroid/util/SparseArray;
+
+    .line 14
+    .line 15
+    iput-object p1, p0, LX/62U;->A01:LX/67A;
+
+    .line 16
+    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final AVB(Ljava/lang/Exception;)V
-    .locals 3
+.method public final A00(LX/63Y;LX/63Q;)V
+    .locals 4
 
     .line 0
-    const-string v1, "MediaCodecAudioRenderer2"
+    const/4 v1, 0x0
 
     .line 1
+    :try_start_0
+    const-string v0, "sendOutputData"
+
     .line 2
-    const-string v0, "Audio sink error"
-
     .line 3
-    .line 4
-    invoke-static {v1, v0, p1}, LX/52Q;->A08(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0}, LX/5VH;->A01(Ljava/lang/String;)V
 
+    .line 4
     .line 5
     .line 6
+    iget-object v0, p0, LX/62U;->A00:Landroid/util/SparseArray;
+
     .line 7
-    iget-object v0, p0, LX/62U;->A00:LX/622;
-
     .line 8
-    .line 9
-    iget-object v2, v0, LX/622;->A0B:LX/63E;
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
+    .line 9
     .line 10
     .line 11
-    iget-object v1, v2, LX/63E;->A00:Landroid/os/Handler;
+    move-result-object v3
 
     .line 12
+    check-cast v3, LX/629;
+
     .line 13
-    new-instance v0, LX/63R;
-
     .line 14
-    .line 15
-    invoke-direct {v0, v2, p1}, LX/63R;-><init>(LX/63E;Ljava/lang/Exception;)V
+    if-nez v3, :cond_0
 
+    .line 15
     .line 16
+    iget-object v1, p0, LX/62U;->A01:LX/67A;
+
     .line 17
     .line 18
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sget-object v0, LX/62B;->GL_COPY_RENDERER_SKIP_OUTPUT_NOT_SET:LX/62B;
 
     .line 19
     .line 20
+    invoke-virtual {v1, v0}, LX/67A;->A00(LX/62B;)V
+
     .line 21
-    return-void
-.end method
+    .line 22
+    .line 23
+    goto :goto_0
 
-.method public final AaM()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/62U;->A00:LX/622;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/622;->A05:LX/61v;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    check-cast v0, LX/61o;
-
-    .line 7
-    .line 8
-    iget-object v0, v0, LX/61o;->A00:LX/60l;
-
-    .line 9
-    .line 10
-    iget-object v1, v0, LX/60l;->A0g:LX/61n;
-
-    .line 11
-    .line 12
-    const/4 v0, 0x2
-
-    .line 13
-    invoke-static {v1, v0}, LX/4BD;->A1I(Ljava/lang/Object;I)V
-
-    .line 14
-    .line 15
-    .line 16
+    .line 24
     :cond_0
+    if-eqz p2, :cond_2
+
+    .line 25
+    .line 26
+    invoke-interface {p2}, LX/63Q;->AI5()I
+
+    .line 27
+    .line 28
+    .line 29
+    iget-object v0, v3, LX/629;->A00:LX/61z;
+
+    .line 30
+    .line 31
+    invoke-virtual {v0}, LX/61z;->A01()LX/62V;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v2
+
+    .line 35
+    iget-object v0, v3, LX/629;->A01:LX/62A;
+
+    .line 36
+    .line 37
+    if-nez v0, :cond_1
+
+    .line 38
+    .line 39
+    iget-object v1, v3, LX/629;->A02:LX/67A;
+
+    .line 40
+    .line 41
+    new-instance v0, LX/62A;
+
+    .line 42
+    .line 43
+    invoke-direct {v0, v1}, LX/62A;-><init>(LX/67A;)V
+
+    .line 44
+    .line 45
+    .line 46
+    iput-object v0, v3, LX/629;->A01:LX/62A;
+
+    .line 47
+    .line 48
+    invoke-virtual {v0, v2}, LX/62A;->A3w(LX/62V;)V
+
+    .line 49
+    .line 50
+    .line 51
+    :cond_1
+    iget-object v0, v3, LX/629;->A01:LX/62A;
+
+    .line 52
+    .line 53
+    invoke-static {v2, p1, p2, v0}, LX/62A;->A00(LX/62V;LX/63Y;LX/63Q;LX/62A;)V
+
+    .line 54
+    .line 55
+    .line 56
+    goto :goto_0
+
+    .line 57
+    :cond_2
+    invoke-virtual {v3, p1}, LX/629;->A01(LX/63Y;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 58
+    .line 59
+    .line 60
+    :goto_0
+    invoke-static {}, LX/5VH;->A00()V
+
+    .line 61
+    .line 62
+    .line 63
     return-void
-.end method
 
-.method public final AaN()V
-    .locals 2
+    .line 64
+    :catchall_0
+    move-exception v0
 
-    .line 0
-    iget-object v0, p0, LX/62U;->A00:LX/622;
+    .line 65
+    invoke-static {}, LX/5VH;->A00()V
 
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/622;->A05:LX/61v;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    check-cast v0, LX/61o;
-
-    .line 7
-    .line 8
-    iget-object v1, v0, LX/61o;->A00:LX/60l;
-
-    .line 9
-    .line 10
-    const/4 v0, 0x1
-
-    .line 11
-    iput-boolean v0, v1, LX/60l;->A0N:Z
-
-    .line 12
-    .line 13
-    :cond_0
-    return-void
-.end method
-
-.method public final Ab0(J)V
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/62U;->A00:LX/622;
-
-    .line 1
-    .line 2
-    iget-object v2, v0, LX/622;->A0B:LX/63E;
-
-    .line 3
-    .line 4
-    iget-object v1, v2, LX/63E;->A00:Landroid/os/Handler;
-
-    .line 5
-    .line 6
-    new-instance v0, LX/63Y;
-
-    .line 7
-    .line 8
-    invoke-direct {v0, v2, p1, p2}, LX/63Y;-><init>(LX/63E;J)V
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 12
-    .line 13
-    .line 14
-    return-void
-.end method
-
-.method public final Ab2()V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/62U;->A00:LX/622;
-
-    .line 1
-    .line 2
-    const/4 v0, 0x1
-
-    .line 3
-    iput-boolean v0, v1, LX/622;->A07:Z
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final Acf(Z)V
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/62U;->A00:LX/622;
-
-    .line 1
-    .line 2
-    iget-object v2, v0, LX/622;->A0B:LX/63E;
-
-    .line 3
-    .line 4
-    iget-object v1, v2, LX/63E;->A00:Landroid/os/Handler;
-
-    .line 5
-    .line 6
-    new-instance v0, LX/63b;
-
-    .line 7
-    .line 8
-    invoke-direct {v0, v2, p1}, LX/63b;-><init>(LX/63E;Z)V
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 12
-    .line 13
-    .line 14
-    return-void
-.end method
-
-.method public final AeO(JJI)V
-    .locals 8
-
-    .line 0
-    iget-object v0, p0, LX/62U;->A00:LX/622;
-
-    .line 1
-    .line 2
-    iget-object v2, v0, LX/622;->A0B:LX/63E;
-
-    .line 3
-    .line 4
-    iget-object v0, v2, LX/63E;->A00:Landroid/os/Handler;
-
-    .line 5
-    .line 6
-    new-instance v1, LX/63Z;
-
-    .line 7
-    .line 8
-    move-wide v4, p1
-
-    .line 9
-    move-wide v6, p3
-
-    .line 10
-    move v3, p5
-
-    .line 11
-    invoke-direct/range {v1 .. v7}, LX/63Z;-><init>(LX/63E;IJJ)V
-
-    .line 12
-    .line 13
-    .line 14
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 15
-    .line 16
-    .line 17
-    return-void
+    .line 66
+    .line 67
+    .line 68
+    throw v0
 .end method

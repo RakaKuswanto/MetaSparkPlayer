@@ -3,47 +3,35 @@
 .source ""
 
 
+# instance fields
+.field public final A00:I
+
+.field public final A01:I
+
+.field public final A02:Ljava/lang/String;
+
+
 # direct methods
-.method public static A00(Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(IILjava/lang/String;)V
+    .locals 0
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/16 v0, 0x19
-
     .line 3
+    iput p1, p0, LX/0Q6;->A00:I
+
     .line 4
-    if-gt v1, v0, :cond_0
-
     .line 5
-    .line 6
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    iput p2, p0, LX/0Q6;->A01:I
 
+    .line 6
     .line 7
+    iput-object p3, p0, LX/0Q6;->A02:Ljava/lang/String;
+
     .line 8
     .line 9
-    move-result v0
-
-    .line 10
-    const/16 v1, 0x17
-
-    .line 11
-    .line 12
-    if-le v0, v1, :cond_0
-
-    .line 13
-    .line 14
-    const/4 v0, 0x0
-
-    .line 15
-    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    .line 16
-    .line 17
-    .line 18
-    :cond_0
     return-void
 .end method

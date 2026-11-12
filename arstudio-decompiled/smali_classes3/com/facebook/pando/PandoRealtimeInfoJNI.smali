@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/6AT;
+.field public static final Companion:LX/6SE;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/6AT;
+    new-instance v0, LX/6SE;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/6AT;-><init>()V
+    invoke-direct {v0}, LX/6SE;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/pando/PandoRealtimeInfoJNI;->Companion:LX/6AT;
+    sput-object v0, Lcom/facebook/pando/PandoRealtimeInfoJNI;->Companion:LX/6SE;
 
     .line 6
     .line 7
@@ -33,7 +33,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -92,9 +92,9 @@
 .method public static final forLiveQuery(Ljava/lang/String;)Lcom/facebook/pando/PandoRealtimeInfoJNI;
     .locals 1
 
-    sget-object v0, Lcom/facebook/pando/PandoRealtimeInfoJNI;->Companion:LX/6AT;
+    sget-object v0, Lcom/facebook/pando/PandoRealtimeInfoJNI;->Companion:LX/6SE;
 
-    invoke-virtual {v0, p0}, LX/6AT;->forLiveQuery(Ljava/lang/String;)Lcom/facebook/pando/PandoRealtimeInfoJNI;
+    invoke-virtual {v0, p0}, LX/6SE;->forLiveQuery(Ljava/lang/String;)Lcom/facebook/pando/PandoRealtimeInfoJNI;
 
     move-result-object v0
 
@@ -104,9 +104,9 @@
 .method public static final forLiveQuery(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/pando/PandoRealtimeInfoJNI;
     .locals 1
 
-    sget-object v0, Lcom/facebook/pando/PandoRealtimeInfoJNI;->Companion:LX/6AT;
+    sget-object v0, Lcom/facebook/pando/PandoRealtimeInfoJNI;->Companion:LX/6SE;
 
-    invoke-virtual {v0, p0, p1, p2}, LX/6AT;->forLiveQuery(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/pando/PandoRealtimeInfoJNI;
+    invoke-virtual {v0, p0, p1, p2}, LX/6SE;->forLiveQuery(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/pando/PandoRealtimeInfoJNI;
 
     move-result-object v0
 
@@ -120,7 +120,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

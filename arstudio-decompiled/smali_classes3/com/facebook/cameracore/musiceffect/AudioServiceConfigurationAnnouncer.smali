@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5T9;
+.field public static final Companion:LX/5av;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5T9;
+    new-instance v0, LX/5av;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5T9;-><init>()V
+    invoke-direct {v0}, LX/5av;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/musiceffect/AudioServiceConfigurationAnnouncer;->Companion:LX/5T9;
+    sput-object v0, Lcom/facebook/cameracore/musiceffect/AudioServiceConfigurationAnnouncer;->Companion:LX/5av;
 
     .line 6
     .line 7
@@ -33,7 +33,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -50,7 +50,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/4BF;->A1N()Z
+    invoke-static {}, LX/434;->A1V()Z
 
     .line 4
     .line 5

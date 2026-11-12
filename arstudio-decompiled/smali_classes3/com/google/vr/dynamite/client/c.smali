@@ -1,5 +1,5 @@
-.class public Lcom/google/vr/dynamite/client/c;
-.super Lcom/google/ar/core/dependencies/e;
+.class public abstract Lcom/google/vr/dynamite/client/c;
+.super Lcom/google/ar/core/dependencies/d;
 .source ""
 
 # interfaces
@@ -15,7 +15,7 @@
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, Lcom/google/ar/core/dependencies/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/google/ar/core/dependencies/d;-><init>(Ljava/lang/String;)V
 
     .line 3
     .line 4

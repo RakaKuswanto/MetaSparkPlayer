@@ -20,6 +20,7 @@ arstudio-decompiled/.codegraph/
 # Java & DEX build caches
 build_loader/bin/
 build_loader/dex_out/
+build_loader/test_bin/
 
 # Android Studio / VS Code
 .idea/

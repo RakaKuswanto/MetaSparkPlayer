@@ -1,4 +1,4 @@
-.class public synthetic Lcom/facebook/acra/anr/multisignal/MultiSignalANRDetector$10;
+.class public abstract synthetic Lcom/facebook/acra/anr/multisignal/MultiSignalANRDetector$10;
 .super Ljava/lang/Object;
 .source ""
 
@@ -148,7 +148,7 @@
     .line 53
     .line 54
     :catch_4
-    invoke-static {}, LX/0X3;->values()[LX/0X3;
+    invoke-static {}, LX/0U2;->values()[LX/0U2;
 
     .line 55
     .line 56
@@ -168,7 +168,7 @@
     .line 62
     .line 63
     :try_start_5
-    sget-object v0, LX/0X3;->NO_ANR_DETECTED:LX/0X3;
+    sget-object v0, LX/0U2;->NO_ANR_DETECTED:LX/0U2;
 
     .line 64
     .line 65
@@ -188,7 +188,7 @@
     .line 71
     :catch_5
     :try_start_6
-    sget-object v0, LX/0X3;->SIGQUIT_RECEIVED_AM_UNCONFIRMED_MT_BLOCKED:LX/0X3;
+    sget-object v0, LX/0U2;->SIGQUIT_RECEIVED_AM_UNCONFIRMED_MT_BLOCKED:LX/0U2;
 
     .line 72
     .line 73
@@ -208,7 +208,7 @@
     .line 79
     :catch_6
     :try_start_7
-    sget-object v0, LX/0X3;->SIGQUIT_RECEIVED_AM_CONFIRMED_MT_BLOCKED:LX/0X3;
+    sget-object v0, LX/0U2;->SIGQUIT_RECEIVED_AM_CONFIRMED_MT_BLOCKED:LX/0U2;
 
     .line 80
     .line 81
@@ -228,7 +228,7 @@
     .line 87
     :catch_7
     :try_start_8
-    sget-object v0, LX/0X3;->SIGQUIT_RECEIVED_AM_CONFIRMED_MT_UNBLOCKED:LX/0X3;
+    sget-object v0, LX/0U2;->SIGQUIT_RECEIVED_AM_CONFIRMED_MT_UNBLOCKED:LX/0U2;
 
     .line 88
     .line 89
@@ -248,7 +248,7 @@
     .line 95
     :catch_8
     :try_start_9
-    sget-object v0, LX/0X3;->NO_SIGQUIT_AM_CONFIRMED_MT_BLOCKED:LX/0X3;
+    sget-object v0, LX/0U2;->NO_SIGQUIT_AM_CONFIRMED_MT_BLOCKED:LX/0U2;
 
     .line 96
     .line 97
@@ -268,7 +268,7 @@
     .line 103
     :catch_9
     :try_start_a
-    sget-object v0, LX/0X3;->NO_SIGQUIT_AM_CONFIRMED_MT_UNBLOCKED:LX/0X3;
+    sget-object v0, LX/0U2;->NO_SIGQUIT_AM_CONFIRMED_MT_UNBLOCKED:LX/0U2;
 
     .line 104
     .line 105
@@ -291,7 +291,7 @@
     .line 112
     :catch_a
     :try_start_b
-    sget-object v0, LX/0X3;->SIGQUIT_RECEIVED_AM_UNCONFIRMED_MT_UNBLOCKED:LX/0X3;
+    sget-object v0, LX/0U2;->SIGQUIT_RECEIVED_AM_UNCONFIRMED_MT_UNBLOCKED:LX/0U2;
 
     .line 113
     .line 114
@@ -314,7 +314,7 @@
     .line 121
     :catch_b
     :try_start_c
-    sget-object v0, LX/0X3;->SIGQUIT_RECEIVED_AM_EXPIRED_MT_BLOCKED:LX/0X3;
+    sget-object v0, LX/0U2;->SIGQUIT_RECEIVED_AM_EXPIRED_MT_BLOCKED:LX/0U2;
 
     .line 122
     .line 123

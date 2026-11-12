@@ -1,26 +1,32 @@
-.class public final LX/2KB;
-.super LX/2KF;
+.class public abstract LX/2KB;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A00:Ljava/util/concurrent/atomic/AtomicInteger;
+
+
 # direct methods
-.method public constructor <init>(LX/2Kr;LX/2Kr;)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yc;->A0M(Ljava/lang/Object;Ljava/lang/Object;)V
+    const v0, 0x1e8480
 
     .line 1
     .line 2
     .line 3
-    const-string/jumbo v0, "kotlin.collections.LinkedHashMap"
+    invoke-static {v0}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 4
     .line 5
     .line 6
-    invoke-direct {p0, v0, p1, p2}, LX/2KF;-><init>(Ljava/lang/String;LX/2Kr;LX/2Kr;)V
+    move-result-object v0
 
     .line 7
+    sput-object v0, LX/2KB;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 8
     .line 9
     return-void

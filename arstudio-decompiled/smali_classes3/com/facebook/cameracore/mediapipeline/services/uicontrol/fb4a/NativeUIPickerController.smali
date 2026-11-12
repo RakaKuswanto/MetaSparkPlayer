@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/4gr;
+.implements LX/4pD;
 
 
 # static fields
@@ -21,11 +21,11 @@
 
 .field public mLoaded:Z
 
-.field public mNativePickerSelectionListener:LX/4h5;
+.field public mNativePickerSelectionListener:LX/4n4;
 
-.field public mOnGalleryPickerSelectedListener:LX/4h3;
+.field public mOnGalleryPickerSelectedListener:LX/4my;
 
-.field public mOnPickerItemSelectedListener:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;
+.field public mOnPickerItemSelectedListener:LX/4mx;
 
 .field public mPickerAdapter:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;
 
@@ -35,7 +35,7 @@
 
 .field public mVibratorDisabled:Z
 
-.field public mViewLazy:LX/4hI;
+.field public mViewLazy:LX/4mf;
 
 
 # direct methods
@@ -73,7 +73,7 @@
 
     .line 15
     .line 16
-    invoke-direct {v0, v2, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;-><init>(Landroid/content/Context;LX/4Wa;)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;-><init>(Landroid/content/Context;LX/4Yv;)V
 
     .line 17
     .line 18
@@ -82,7 +82,7 @@
 
     .line 20
     .line 21
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 22
     .line 23
@@ -97,11 +97,11 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;)LX/4h3;
+.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;)LX/4my;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnGalleryPickerSelectedListener:LX/4h3;
+    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnGalleryPickerSelectedListener:LX/4my;
 
     .line 1
     .line 2
@@ -131,11 +131,11 @@
     return-void
 .end method
 
-.method public static synthetic access$300(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;II)LX/4ti;
+.method public static synthetic access$300(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;II)LX/4nI;
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->newSmoothScroller(II)LX/4ti;
+    invoke-direct {p0, p1, p2}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->newSmoothScroller(II)LX/4nI;
 
     .line 1
     .line 2
@@ -262,11 +262,11 @@
 
     .line 6
     .line 7
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mViewLazy:LX/4hI;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mViewLazy:LX/4mf;
 
     .line 8
     .line 9
-    invoke-virtual {v0}, LX/4hI;->A00()Landroid/view/View;
+    invoke-virtual {v0}, LX/4mf;->A00()Landroid/view/View;
 
     .line 10
     .line 11
@@ -274,12 +274,12 @@
     move-result-object v1
 
     .line 13
-    const v0, 0x7f0a03f9
+    const v0, 0x7f090391
 
     .line 14
     .line 15
     .line 16
-    invoke-static {v1, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {v1, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 17
     .line 18
@@ -291,12 +291,12 @@
 
     .line 21
     .line 22
-    const v0, 0x7f0a03fa
+    const v0, 0x7f090392
 
     .line 23
     .line 24
     .line 25
-    invoke-static {v1, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {v1, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 26
     .line 27
@@ -316,12 +316,12 @@
 
     .line 34
     .line 35
-    const v0, 0x7f0a03fb
+    const v0, 0x7f090393
 
     .line 36
     .line 37
     .line 38
-    invoke-static {v1, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {v1, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 39
     .line 40
@@ -345,7 +345,7 @@
     move-result-object v1
 
     .line 50
-    const v0, 0x7f07000d
+    const v0, 0x7f07000c
 
     .line 51
     .line 52
@@ -386,7 +386,7 @@
 
     .line 70
     .line 71
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(LX/4ta;)V
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(LX/4nQ;)V
 
     .line 72
     .line 73
@@ -399,7 +399,7 @@
 
     .line 77
     .line 78
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(LX/4sv;)V
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(LX/4nZ;)V
 
     .line 79
     .line 80
@@ -408,7 +408,7 @@
 
     .line 82
     .line 83
-    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->newScrollListener()LX/4uZ;
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->newScrollListener()LX/4oH;
 
     .line 84
     .line 85
@@ -416,7 +416,7 @@
     move-result-object v0
 
     .line 87
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->A0q(LX/4uZ;)V
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->A0r(LX/4oH;)V
 
     .line 88
     .line 89
@@ -434,7 +434,7 @@
     .line 95
     .line 96
     .line 97
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->A0o(LX/4Ps;)V
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->A0p(LX/4mX;)V
 
     .line 98
     .line 99
@@ -483,7 +483,7 @@
     return-object v0
 .end method
 
-.method private newScrollListener()LX/4uZ;
+.method private newScrollListener()LX/4oH;
     .locals 2
 
     .line 0
@@ -519,7 +519,7 @@
     return-object v0
 .end method
 
-.method private newSmoothScroller(II)LX/4ti;
+.method private newSmoothScroller(II)LX/4nI;
     .locals 2
 
     .line 0
@@ -652,7 +652,7 @@
 
     .line 35
     .line 36
-    invoke-static {v6, v0}, LX/4BF;->A05(II)I
+    invoke-static {v6, v0}, LX/433;->A08(II)I
 
     .line 37
     .line 38
@@ -684,73 +684,85 @@
 
     .line 49
     :cond_2
-    invoke-static {v4}, Landroidx/recyclerview/widget/RecyclerView;->A02(Landroid/view/View;)I
+    invoke-static {v4}, Landroidx/recyclerview/widget/RecyclerView;->A03(Landroid/view/View;)LX/4nS;
 
     .line 50
     .line 51
     .line 52
-    move-result v1
+    move-result-object v0
 
     .line 53
-    if-ltz v1, :cond_3
+    if-eqz v0, :cond_3
 
     .line 54
     .line 55
-    if-nez v5, :cond_4
+    invoke-virtual {v0}, LX/4nS;->getAbsoluteAdapterPosition()I
 
     .line 56
     .line 57
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;
-
     .line 58
+    move-result v1
+
     .line 59
-    if-eqz v0, :cond_3
+    if-ltz v1, :cond_3
 
     .line 60
     .line 61
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mPickerAdapter:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;
+    if-nez v5, :cond_4
 
     .line 62
     .line 63
-    invoke-virtual {v0, v1}, LX/4sv;->getItemViewType(I)I
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:LX/4mx;
 
     .line 64
     .line 65
-    .line 66
-    move-result v0
+    if-eqz v0, :cond_3
 
+    .line 66
     .line 67
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mPickerAdapter:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;
 
     .line 68
     .line 69
+    invoke-virtual {v0, v1}, LX/4nZ;->getItemViewType(I)I
+
     .line 70
+    .line 71
+    .line 72
     move-result v0
 
-    .line 71
-    if-eqz v0, :cond_3
-
-    .line 72
     .line 73
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 74
     .line 75
-    invoke-virtual {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;->onPickerItemSelected(I)V
-
     .line 76
-    .line 77
-    .line 78
-    :cond_3
-    return-void
+    move-result v0
 
+    .line 77
+    if-eqz v0, :cond_3
+
+    .line 78
     .line 79
-    :cond_4
-    invoke-virtual {p0, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->scrollToPosition(I)V
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:LX/4mx;
 
     .line 80
     .line 81
+    invoke-interface {v0, v1}, LX/4mx;->onPickerItemSelected(I)V
+
     .line 82
+    .line 83
+    .line 84
+    :cond_3
+    return-void
+
+    .line 85
+    :cond_4
+    invoke-virtual {p0, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->scrollToPosition(I)V
+
+    .line 86
+    .line 87
+    .line 88
     return-void
 .end method
 
@@ -776,7 +788,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p1, p2}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 1
     .line 2
@@ -800,16 +812,16 @@
     .locals 1
 
     .line 268435456
-    new-instance v0, LX/4hI;
+    new-instance v0, LX/4mf;
 
     .line 268435457
     .line 268435458
-    invoke-direct {v0, p1}, LX/4hI;-><init>(Landroid/view/ViewStub;)V
+    invoke-direct {v0, p1}, LX/4mf;-><init>(Landroid/view/ViewStub;)V
 
     .line 268435459
     .line 268435460
     .line 268435461
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mViewLazy:LX/4hI;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mViewLazy:LX/4mf;
 
     .line 268435462
     .line 268435463
@@ -852,7 +864,7 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:LX/4mx;
 
     .line 2
     .line 3
@@ -897,7 +909,7 @@
     return-void
 .end method
 
-.method public onPickerShow(Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;)V
+.method public onPickerShow(Ljava/lang/String;LX/4mx;)V
     .locals 2
 
     .line 0
@@ -926,7 +938,7 @@
     .line 11
     .line 12
     .line 13
-    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;
+    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:LX/4mx;
 
     .line 14
     .line 15
@@ -982,7 +994,7 @@
 
     .line 7
     .line 8
-    iget-object v1, v2, Landroidx/recyclerview/widget/RecyclerView;->A0H:LX/4ta;
+    iget-object v1, v2, Landroidx/recyclerview/widget/RecyclerView;->A0E:LX/4nQ;
 
     .line 9
     .line 10
@@ -1005,7 +1017,7 @@
     .line 19
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:LX/4mx;
 
     .line 20
     .line 21
@@ -1017,7 +1029,7 @@
 
     .line 24
     .line 25
-    invoke-virtual {v0, p1}, LX/4sv;->getItemViewType(I)I
+    invoke-virtual {v0, p1}, LX/4nZ;->getItemViewType(I)I
 
     .line 26
     .line 27
@@ -1025,7 +1037,7 @@
     move-result v0
 
     .line 29
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 30
     .line 31
@@ -1037,11 +1049,11 @@
 
     .line 34
     .line 35
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnPickerItemSelectedListener:LX/4mx;
 
     .line 36
     .line 37
-    invoke-virtual {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/OnPickerItemSelectedListener;->onPickerItemSelected(I)V
+    invoke-interface {v0, p1}, LX/4mx;->onPickerItemSelected(I)V
 
     .line 38
     .line 39
@@ -1057,11 +1069,11 @@
 
     .line 44
     :cond_3
-    iget-object v0, v2, Landroidx/recyclerview/widget/RecyclerView;->mState:LX/4tq;
+    iget-object v0, v2, Landroidx/recyclerview/widget/RecyclerView;->mState:LX/4nf;
 
     .line 45
     .line 46
-    invoke-virtual {v1, v2, v0, p1}, LX/4ta;->smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;LX/4tq;I)V
+    invoke-virtual {v1, v2, v0, p1}, LX/4nQ;->smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;LX/4nf;I)V
 
     .line 47
     .line 48
@@ -1119,22 +1131,22 @@
     return-void
 .end method
 
-.method public setNativePickerSelectionListener(LX/4h5;)V
+.method public setNativePickerSelectionListener(LX/4n4;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mNativePickerSelectionListener:LX/4h5;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mNativePickerSelectionListener:LX/4n4;
 
     .line 1
     .line 2
     return-void
 .end method
 
-.method public setOnGalleryPickerSelectedListener(LX/4h3;)V
+.method public setOnGalleryPickerSelectedListener(LX/4my;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnGalleryPickerSelectedListener:LX/4h3;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnGalleryPickerSelectedListener:LX/4my;
 
     .line 1
     .line 2

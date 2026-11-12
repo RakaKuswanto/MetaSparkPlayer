@@ -10,10 +10,6 @@
 
 .field public mNetworkClient:Lcom/facebook/cameracore/mediapipeline/services/networking/interfaces/NetworkClient;
 
-.field public mTouchInput:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;
-
-.field public mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchService;
-
 
 # direct methods
 .method public static constructor <clinit>()V
@@ -24,7 +20,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -32,7 +28,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHostConfig;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/5Yj;Lcom/facebook/cameracore/mediapipeline/arsessioncompression/VideoEncoderAndroid;Lcom/facebook/cameracore/mediapipeline/arsessionplayer/interfaces/SessionPlayer;Lcom/facebook/cameracore/mediapipeline/arclass/common/ARClass;LX/0Gk;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceModule;Z)V
+.method public constructor <init>(Landroid/content/Context;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHostConfig;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/6BX;Lcom/facebook/cameracore/mediapipeline/arsessioncompression/VideoEncoderAndroid;Lcom/facebook/cameracore/mediapipeline/arsessionplayer/interfaces/SessionPlayer;Lcom/facebook/cameracore/mediapipeline/arclass/common/ARClass;LX/0Ft;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceModule;Z)V
     .locals 12
 
     .line 0
@@ -42,16 +38,16 @@
     const/4 v1, 0x0
 
     .line 2
-    new-instance v8, LX/5UH;
+    new-instance v8, LX/5vi;
 
     .line 3
     .line 4
-    invoke-direct {v8}, LX/5UH;-><init>()V
+    invoke-direct {v8}, LX/5vi;-><init>()V
 
     .line 5
     .line 6
     .line 7
-    invoke-static/range {p9 .. p9}, LX/0Yi;->A0u(Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static/range {p9 .. p9}, LX/432;->A10(Ljava/lang/Object;)Ljava/util/ArrayList;
 
     .line 8
     .line 9
@@ -73,7 +69,7 @@
     .line 17
     .line 18
     .line 19
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/multiplayer/interfaces/MultiplayerServiceConfiguration;->MULTIPLAYER_SERVICE_TYPE_KEY:LX/5TT;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/multiplayer/interfaces/MultiplayerServiceConfiguration;->MULTIPLAYER_SERVICE_TYPE_KEY:LX/67w;
 
     .line 20
     .line 21
@@ -81,7 +77,7 @@
 
     .line 22
     .line 23
-    invoke-static {v0, v2, v9}, LX/5TS;->A00(LX/5TT;LX/0Gk;Ljava/util/AbstractCollection;)V
+    invoke-static {v0, v2, v9}, LX/63v;->A00(LX/67w;LX/0Ft;Ljava/util/AbstractCollection;)V
 
     .line 24
     .line 25
@@ -103,52 +99,52 @@
     .line 33
     .line 34
     .line 35
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/interfaces/MultiplayerDataProviderConfiguration;->MULTIPLAYER_DATA_PROVIDER_TYPE_KEY:LX/5TT;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/interfaces/MultiplayerDataProviderConfiguration;->MULTIPLAYER_DATA_PROVIDER_TYPE_KEY:LX/67w;
 
     .line 36
     .line 37
-    invoke-static {v0, v2, v9}, LX/5TS;->A00(LX/5TT;LX/0Gk;Ljava/util/AbstractCollection;)V
+    invoke-static {v0, v2, v9}, LX/63v;->A00(LX/67w;LX/0Ft;Ljava/util/AbstractCollection;)V
 
     .line 38
     .line 39
     .line 40
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/graphql/interfaces/GraphQLServiceConfiguration;->GRAPHQL_SERVICE_TYPE_KEY:LX/5TT;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/graphql/interfaces/GraphQLServiceConfiguration;->GRAPHQL_SERVICE_TYPE_KEY:LX/67w;
 
     .line 41
     .line 42
-    invoke-static {v0, v2, v9}, LX/5TS;->A00(LX/5TT;LX/0Gk;Ljava/util/AbstractCollection;)V
+    invoke-static {v0, v2, v9}, LX/63v;->A00(LX/67w;LX/0Ft;Ljava/util/AbstractCollection;)V
 
     .line 43
     .line 44
     .line 45
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceConfiguration;->PERSISTENCE_SERVICE_TYPE_KEY:LX/5TT;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceConfiguration;->PERSISTENCE_SERVICE_TYPE_KEY:LX/67w;
 
     .line 46
     .line 47
-    invoke-static {v0, v2, v9}, LX/5TS;->A00(LX/5TT;LX/0Gk;Ljava/util/AbstractCollection;)V
+    invoke-static {v0, v2, v9}, LX/63v;->A00(LX/67w;LX/0Ft;Ljava/util/AbstractCollection;)V
 
     .line 48
     .line 49
     .line 50
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->PERSON_SEGMENTATION_SERVICE_TYPE_KEY:LX/5TT;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->PERSON_SEGMENTATION_SERVICE_TYPE_KEY:LX/67w;
 
     .line 51
     .line 52
-    invoke-static {v0, v2, v9}, LX/5TS;->A00(LX/5TT;LX/0Gk;Ljava/util/AbstractCollection;)V
+    invoke-static {v0, v2, v9}, LX/63v;->A00(LX/67w;LX/0Ft;Ljava/util/AbstractCollection;)V
 
     .line 53
     .line 54
     .line 55
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->HAIR_SEGMENTATION_SERVICE_TYPE_KEY:LX/5TT;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->HAIR_SEGMENTATION_SERVICE_TYPE_KEY:LX/67w;
 
     .line 56
     .line 57
-    invoke-static {v0, v2, v9}, LX/5TS;->A00(LX/5TT;LX/0Gk;Ljava/util/AbstractCollection;)V
+    invoke-static {v0, v2, v9}, LX/63v;->A00(LX/67w;LX/0Ft;Ljava/util/AbstractCollection;)V
 
     .line 58
     .line 59
     .line 60
-    sget-object v1, LX/5Tf;->A01:LX/5Ti;
+    sget-object v1, LX/63u;->A01:LX/68u;
 
     .line 61
     .line 62
@@ -156,7 +152,7 @@
 
     .line 63
     .line 64
-    invoke-direct {v0, v1, v10, v2}, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;-><init>(LX/5TP;LX/5TQ;LX/0Gk;)V
+    invoke-direct {v0, v1, v10, v2}, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;-><init>(LX/67X;LX/6B8;LX/0Ft;)V
 
     .line 65
     .line 66
@@ -166,7 +162,7 @@
     .line 68
     .line 69
     .line 70
-    sget-object v1, LX/5Tf;->A00:LX/5Ti;
+    sget-object v1, LX/63u;->A00:LX/68u;
 
     .line 71
     .line 72
@@ -174,7 +170,7 @@
 
     .line 73
     .line 74
-    invoke-direct {v0, v1, v10, v2}, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;-><init>(LX/5TP;LX/5TQ;LX/0Gk;)V
+    invoke-direct {v0, v1, v10, v2}, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;-><init>(LX/67X;LX/6B8;LX/0Ft;)V
 
     .line 75
     .line 76
@@ -231,7 +227,7 @@
     move-object v11, v1
 
     .line 103
-    invoke-direct/range {v5 .. v11}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;-><init>(Landroid/content/Context;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHostConfig;LX/5UH;Ljava/util/Collection;Ljava/lang/String;LX/5Yj;)V
+    invoke-direct/range {v5 .. v11}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;-><init>(Landroid/content/Context;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHostConfig;LX/5vi;Ljava/util/Collection;Ljava/lang/String;LX/6BX;)V
 
     .line 104
     .line 105
@@ -240,7 +236,7 @@
 
     .line 107
     .line 108
-    invoke-direct {v0, p3, v10}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;-><init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/0tE;)V
+    invoke-direct {v0, p3, v10}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;-><init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/3FN;)V
 
     .line 109
     .line 110
@@ -253,7 +249,7 @@
 
     .line 114
     .line 115
-    invoke-direct {v7, v1}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/common/ARExperimentConfigImpl;-><init>(LX/5Yj;)V
+    invoke-direct {v7, v1}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/common/ARExperimentConfigImpl;-><init>(LX/6BX;)V
 
     .line 116
     .line 117
@@ -279,7 +275,7 @@
 
     .line 128
     .line 129
-    invoke-direct {v6, v0}, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/NetworkClientImpl;-><init>(LX/2IQ;)V
+    invoke-direct {v6, v0}, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/NetworkClientImpl;-><init>(LX/39A;)V
 
     .line 130
     .line 131
@@ -324,59 +320,6 @@
 
 
 # virtual methods
-.method public createTouchService()Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchService;
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchService;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 3
-    .line 4
-    const/4 v1, 0x1
-
-    .line 5
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
-
-    .line 6
-    .line 7
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;-><init>(Z)V
-
-    .line 8
-    .line 9
-    .line 10
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchService;
-
-    .line 11
-    .line 12
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;->mTouchInput:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;
-
-    .line 13
-    .line 14
-    if-eqz v1, :cond_0
-
-    .line 15
-    .line 16
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->mGestureProcessor:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;
-
-    .line 17
-    .line 18
-    invoke-virtual {v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->setGestureProcessor(LX/5a9;)V
-
-    .line 19
-    .line 20
-    .line 21
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchService;
-
-    .line 22
-    .line 23
-    return-object v0
-.end method
-
 .method public destroy()V
     .locals 1
 
@@ -434,33 +377,5 @@
 
     .line 26
     .line 27
-    return-void
-.end method
-
-.method public destroyTouchService()V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;->mTouchInput:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;
-
-    .line 1
-    .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    if-eqz v1, :cond_0
-
-    .line 4
-    .line 5
-    invoke-virtual {v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->setGestureProcessor(LX/5a9;)V
-
-    .line 6
-    .line 7
-    .line 8
-    :cond_0
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchService;
-
-    .line 9
-    .line 10
     return-void
 .end method

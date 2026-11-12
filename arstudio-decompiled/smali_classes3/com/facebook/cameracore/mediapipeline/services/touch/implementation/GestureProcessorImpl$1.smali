@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl$HitTestCallback;
+.implements Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchGesturesListener$HitTestCallback;
 
 
 # instance fields

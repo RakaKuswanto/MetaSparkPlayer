@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLEventCreationStepTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLEventCreationStepTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0xf
+    const/16 v0, 0xe
 
     .line 1
     .line 2
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "LIVE_SHOPPING_PLAYLIST"
+    const-string v0, "LOCATION"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "LOCATION"
+    const-string v0, "ONLINE_FORMAT"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "ONLINE_FORMAT"
+    const-string v0, "PREVIEW"
 
     .line 59
     .line 60
@@ -148,58 +148,49 @@
 
     .line 63
     .line 64
-    const-string v0, "PREVIEW"
+    const-string/jumbo v0, "WORK_EVENT_DETAILS"
 
     .line 65
     .line 66
+    .line 67
     aput-object v0, v2, v1
 
-    .line 67
     .line 68
+    .line 69
     const/16 v1, 0xc
 
-    .line 69
     .line 70
-    const-string v0, "WORK_EVENT_DETAILS"
-
     .line 71
-    .line 72
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORK_LOCATION"
 
+    .line 72
     .line 73
     .line 74
-    const/16 v1, 0xd
+    aput-object v0, v2, v1
 
     .line 75
     .line 76
-    const-string v0, "WORK_LOCATION"
+    const/16 v1, 0xd
 
     .line 77
     .line 78
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORK_SETTINGS"
 
     .line 79
     .line 80
-    const/16 v1, 0xe
-
     .line 81
-    .line 82
-    const-string v0, "WORK_SETTINGS"
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
+    .line 82
     .line 83
     .line 84
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
-    .line 85
-    .line 86
-    .line 87
     move-result-object v0
 
-    .line 88
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLEventCreationStepTypeSet;->A00:Ljava/util/Set;
+    .line 85
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLEventCreationStepTypeSet;->A00:Ljava/util/HashSet;
 
-    .line 89
-    .line 90
+    .line 86
+    .line 87
     return-void
 .end method
 
@@ -215,11 +206,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLEventCreationStepTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLEventCreationStepTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

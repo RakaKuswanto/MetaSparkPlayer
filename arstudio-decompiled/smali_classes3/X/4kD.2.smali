@@ -1,14 +1,18 @@
 .class public final LX/4kD;
-.super LX/6MF;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-.end field
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:I
+
+.field public A03:I
+
+.field public A04:Z
 
 
 # direct methods
@@ -16,7 +20,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/6MF;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

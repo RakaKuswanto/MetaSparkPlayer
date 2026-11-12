@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0z()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A13()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -100,22 +100,23 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "WEATHER"
+    const-string/jumbo v0, "WEATHER"
 
     .line 41
     .line 42
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 43
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 44
     .line 45
+    .line 46
     move-result-object v0
 
-    .line 46
+    .line 47
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLLocalAlertTypeSet;->A00:Ljava/util/Set;
 
-    .line 47
     .line 48
+    .line 49
     return-void
 .end method
 

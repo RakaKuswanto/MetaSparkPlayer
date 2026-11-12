@@ -16,11 +16,11 @@
     return-void
 .end method
 
-.method public static read(LX/4gJ;)Landroidx/core/graphics/drawable/IconCompat;
+.method public static read(LX/4eL;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 0
 
     .line 0
-    invoke-static {p0}, Landroidx/core/graphics/drawable/IconCompatParcelizer;->read(LX/4gJ;)Landroidx/core/graphics/drawable/IconCompat;
+    invoke-static {p0}, Landroidx/core/graphics/drawable/IconCompatParcelizer;->read(LX/4eL;)Landroidx/core/graphics/drawable/IconCompat;
 
     .line 1
     .line 2
@@ -31,11 +31,11 @@
     return-object p0
 .end method
 
-.method public static write(Landroidx/core/graphics/drawable/IconCompat;LX/4gJ;)V
+.method public static write(Landroidx/core/graphics/drawable/IconCompat;LX/4eL;)V
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Landroidx/core/graphics/drawable/IconCompatParcelizer;->write(Landroidx/core/graphics/drawable/IconCompat;LX/4gJ;)V
+    invoke-static {p0, p1}, Landroidx/core/graphics/drawable/IconCompatParcelizer;->write(Landroidx/core/graphics/drawable/IconCompat;LX/4eL;)V
 
     .line 1
     .line 2

@@ -1,25 +1,14 @@
-.class public final LX/4kF;
-.super LX/6MF;
+.class public interface abstract LX/4kF;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-.end field
+# virtual methods
+.method public abstract A2z(LX/4lM;)V
+.end method
 
+.method public abstract AMf()LX/4i3;
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/6MF;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract Ahc(LX/4lM;)V
 .end method

@@ -1,41 +1,96 @@
-.class public final LX/1nQ;
+.class public final LX/1nq;
 .super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A02:Lcom/google/common/collect/ImmutableList;
+
+
 # instance fields
-.field public final A00:LX/1Nm;
+.field public final A00:Landroid/content/Context;
 
-.field public final A01:Ljava/util/Map;
-
-.field public final A02:Ljava/util/Map;
-
-.field public final A03:LX/1Nw;
+.field public final A01:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1vx;LX/1Nw;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 9
 
     .line 0
-    const/4 v0, 0x2
+    const-string v0, "-journal"
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    const-string v1, "-shm"
+
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "-wal"
 
     .line 5
     .line 6
+    const-string v3, "-uid"
+
     .line 7
-    iput-object p2, p0, LX/1nQ;->A03:LX/1Nw;
+    .line 8
+    const-string v4, "-corrupt"
+
+    .line 9
+    .line 10
+    const-string v5, ".back"
+
+    .line 11
+    .line 12
+    const-string v6, ".old"
+
+    .line 13
+    .line 14
+    const-string v7, "-journalcorrupted"
+
+    .line 15
+    .line 16
+    const-string v8, "-corrupted"
+
+    .line 17
+    .line 18
+    invoke-static/range {v0 .. v8}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    sput-object v0, LX/1nq;->A02:Lcom/google/common/collect/ImmutableList;
+
+    .line 23
+    .line 24
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/1nq;->A00:Landroid/content/Context;
 
     .line 8
     .line 9
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
 
     .line 10
     .line 11
@@ -43,41 +98,9 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, LX/1nQ;->A02:Ljava/util/Map;
+    iput-object v0, p0, LX/1nq;->A01:LX/0RP;
 
     .line 14
     .line 15
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, LX/1nQ;->A01:Ljava/util/Map;
-
-    .line 20
-    .line 21
-    sget v1, LX/2eq;->AdP:I
-
-    .line 22
-    .line 23
-    iget-object v0, p2, LX/1Nw;->A00:LX/1zG;
-
-    .line 24
-    .line 25
-    invoke-static {p1, v0, v1}, LX/1ni;->A00(LX/1vx;LX/1zG;I)LX/1Nm;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    iput-object v0, p0, LX/1nQ;->A00:LX/1Nm;
-
-    .line 30
-    .line 31
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/3Cv;
+.implements LX/2gj;
 
 
 # instance fields
@@ -11,23 +11,21 @@
 
 .field public A01:Z
 
-.field public A02:LX/1zG;
+.field public final A02:Landroid/os/Handler;
 
-.field public final A03:Landroid/os/Handler;
+.field public final A03:LX/1pp;
 
-.field public final A04:LX/1mT;
+.field public final A04:LX/0RP;
 
-.field public final A05:LX/0Na;
+.field public final A05:LX/0RP;
 
-.field public final A06:LX/0Na;
+.field public final A06:Ljava/util/Set;
 
-.field public final A07:Ljava/util/Set;
-
-.field public final A08:LX/0Na;
+.field public final A07:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 3
 
     .line 0
@@ -36,148 +34,147 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1zE;->A00()Landroid/content/Context;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 4
     .line 5
     .line 6
-    move-result-object v0
+    move-result-object v1
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A00:Landroid/content/Context;
+    iput-object v1, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A00:Landroid/content/Context;
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/1zD;->A00(Landroid/content/Context;)LX/1mT;
+    sget v0, LX/2I6;->A5H:I
 
     .line 10
     .line 11
+    invoke-static {v1, v0}, LX/3Fb;->A02(Landroid/content/Context;I)Ljava/lang/Object;
+
     .line 12
+    .line 13
+    .line 14
     move-result-object v0
 
-    .line 13
-    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A04:LX/1mT;
-
-    .line 14
     .line 15
-    sget v0, LX/2eq;->AXM:I
+    check-cast v0, LX/1pp;
 
     .line 16
     .line 17
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A03:LX/1pp;
 
     .line 18
     .line 19
-    .line 20
-    move-result-object v0
+    sget v0, LX/2I6;->AQX:I
 
+    .line 20
     .line 21
-    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A05:LX/0Na;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 22
     .line 23
-    sget v0, LX/2eq;->AWz:I
-
     .line 24
+    move-result-object v0
+
     .line 25
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A04:LX/0RP;
 
     .line 26
     .line 27
-    .line 28
-    move-result-object v0
+    sget v0, LX/2I6;->AQB:I
 
+    .line 28
     .line 29
-    check-cast v0, Landroid/os/Handler;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 30
     .line 31
-    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A03:Landroid/os/Handler;
-
     .line 32
+    move-result-object v0
+
     .line 33
-    sget v0, LX/2eq;->AXC:I
+    check-cast v0, Landroid/os/Handler;
 
     .line 34
     .line 35
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A02:Landroid/os/Handler;
 
     .line 36
     .line 37
-    .line 38
-    move-result-object v2
+    sget v0, LX/2I6;->AQN:I
 
+    .line 38
     .line 39
-    iput-object v2, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A08:LX/0Na;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 40
     .line 41
-    sget v0, LX/2eq;->AHm:I
-
     .line 42
+    move-result-object v2
+
     .line 43
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object v2, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A07:LX/0RP;
 
     .line 44
     .line 45
-    .line 46
-    move-result-object v0
+    sget v0, LX/2I6;->AIt:I
 
+    .line 46
     .line 47
-    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A06:LX/0Na;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 48
     .line 49
-    new-instance v1, LX/32t;
-
     .line 50
+    move-result-object v0
+
     .line 51
-    invoke-direct {v1}, LX/32t;-><init>()V
+    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A05:LX/0RP;
 
     .line 52
     .line 53
+    const/4 v0, 0x0
+
     .line 54
-    iput-object v1, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A07:Ljava/util/Set;
+    new-instance v1, LX/00s;
 
     .line 55
     .line 56
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-direct {v1, v0}, LX/00s;-><init>(I)V
 
     .line 57
     .line 58
     .line 59
-    move-result-object v0
+    iput-object v1, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A06:Ljava/util/Set;
 
     .line 60
-    iput-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A02:LX/1zG;
-
     .line 61
-    .line 62
-    invoke-virtual {v2}, LX/0Zq;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, LX/0lf;->get()Ljava/lang/Object;
 
+    .line 62
     .line 63
     .line 64
-    .line 65
     move-result-object v0
+
+    .line 65
+    check-cast v0, LX/1fF;
 
     .line 66
-    check-cast v0, LX/1cM;
-
     .line 67
-    .line 68
-    invoke-virtual {v0}, LX/1cM;->A00()Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {v0}, LX/1fF;->A00()Lcom/google/common/collect/ImmutableList;
 
+    .line 68
     .line 69
     .line 70
-    .line 71
     move-result-object v0
 
-    .line 72
-    invoke-virtual {v1, v0}, LX/32t;->addAll(Ljava/util/Collection;)Z
+    .line 71
+    invoke-virtual {v1, v0}, LX/00s;->addAll(Ljava/util/Collection;)Z
 
+    .line 72
     .line 73
     .line 74
-    .line 75
     return-void
 .end method
 
@@ -192,11 +189,11 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A08:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A07:LX/0RP;
 
     .line 3
     .line 4
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 5
     .line 6
@@ -204,11 +201,11 @@
     move-result-object v0
 
     .line 8
-    check-cast v0, LX/1cM;
+    check-cast v0, LX/1fF;
 
     .line 9
     .line 10
-    invoke-virtual {v0}, LX/1cM;->A01()Lcom/google/common/collect/ImmutableMap;
+    invoke-virtual {v0}, LX/1fF;->A01()Lcom/google/common/collect/ImmutableMap;
 
     .line 11
     .line 12
@@ -227,7 +224,7 @@
 
     .line 17
     .line 18
-    sget-object v1, LX/1cN;->APP_USE:LX/1cN;
+    sget-object v1, LX/15i;->APP_USE:LX/15i;
 
     .line 19
     .line 20
@@ -235,7 +232,7 @@
 
     .line 21
     :cond_0
-    sget-object v1, LX/1cN;->ALWAYS:LX/1cN;
+    sget-object v1, LX/15i;->ALWAYS:LX/15i;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -246,11 +243,11 @@
     const/4 v0, 0x0
 
     .line 24
-    new-instance v2, LX/1U9;
+    new-instance v2, LX/0Xk;
 
     .line 25
     .line 26
-    invoke-direct {v2, v1, v0}, LX/1U9;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v2, v1, v0}, LX/0Xk;-><init>(Ljava/lang/Object;I)V
 
     .line 27
     .line 28
@@ -268,7 +265,7 @@
     .line 34
     .line 35
     .line 36
-    invoke-static {v0, v3}, LX/1bx;->A02(Lcom/google/common/base/Predicate;Ljava/util/Map;)LX/1bt;
+    invoke-static {v0, v3}, LX/1tD;->A02(Lcom/google/common/base/Predicate;Ljava/util/Map;)LX/1tC;
 
     .line 37
     .line 38
@@ -276,7 +273,7 @@
     move-result-object v0
 
     .line 40
-    invoke-virtual {v0}, Ljava/util/AbstractMap;->keySet()Ljava/util/Set;
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     .line 41
     .line 42
@@ -284,210 +281,182 @@
     move-result-object v7
 
     .line 44
-    iget-object v6, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A07:Ljava/util/Set;
+    iget-object v6, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A06:Ljava/util/Set;
 
     .line 45
     .line 46
-    const-string/jumbo v1, "set1"
+    invoke-static {v7, v6}, LX/1ta;->A01(Ljava/util/Set;Ljava/util/Set;)LX/1tn;
 
     .line 47
     .line 48
     .line 49
-    invoke-static {v7, v1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v2
 
     .line 50
+    invoke-static {v6, v7}, LX/1ta;->A01(Ljava/util/Set;Ljava/util/Set;)LX/1tn;
+
     .line 51
     .line 52
-    const-string/jumbo v0, "set2"
-
     .line 53
-    .line 54
-    .line 55
-    invoke-static {v6, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
+    .line 54
+    if-eqz p1, :cond_1
+
+    .line 55
     .line 56
+    iget-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A04:LX/0RP;
+
     .line 57
     .line 58
-    new-instance v2, LX/1dS;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 59
     .line 60
-    invoke-direct {v2, v7, v6}, LX/1dS;-><init>(Ljava/util/Set;Ljava/util/Set;)V
-
     .line 61
-    .line 62
-    .line 63
-    invoke-static {v6, v1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v5
 
+    .line 62
+    check-cast v5, LX/1u4;
+
+    .line 63
     .line 64
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
     .line 65
     .line 66
-    invoke-static {v7, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 67
-    .line 68
-    .line 69
-    new-instance v1, LX/1dS;
+    move-result v4
 
+    .line 68
+    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+
+    .line 69
     .line 70
     .line 71
-    invoke-direct {v1, v6, v7}, LX/1dS;-><init>(Ljava/util/Set;Ljava/util/Set;)V
+    move-result-object v3
 
     .line 72
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+
     .line 73
     .line 74
-    if-eqz p1, :cond_1
-
     .line 75
+    move-result-object v2
+
     .line 76
-    iget-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A05:LX/0Na;
+    iget-object v1, v5, LX/1u4;->A02:LX/2jL;
 
     .line 77
     .line 78
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    new-instance v0, LX/1u5;
 
     .line 79
     .line 80
+    invoke-direct {v0, v5, v3, v2, v4}, LX/1u5;-><init>(LX/1u4;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Z)V
+
     .line 81
-    move-result-object v5
-
     .line 82
-    check-cast v5, LX/1ha;
-
     .line 83
-    .line 84
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 85
-    .line 86
-    .line 87
-    move-result v4
-
-    .line 88
-    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
-
-    .line 89
-    .line 90
-    .line 91
-    move-result-object v3
-
-    .line 92
-    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
-
-    .line 93
-    .line 94
-    .line 95
-    move-result-object v2
-
-    .line 96
-    iget-object v1, v5, LX/1ha;->A02:LX/3Iq;
-
-    .line 97
-    .line 98
-    new-instance v0, LX/1hY;
-
-    .line 99
-    .line 100
-    invoke-direct {v0, v5, v3, v2, v4}, LX/1hY;-><init>(LX/1ha;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Z)V
-
-    .line 101
-    .line 102
-    .line 103
     invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 104
-    .line 105
-    .line 106
-    goto :goto_1
-
-    .line 107
-    :cond_1
-    iget-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A05:LX/0Na;
-
-    .line 108
-    .line 109
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 110
-    .line 111
-    .line 112
-    move-result-object v4
-
-    .line 113
-    check-cast v4, LX/1ha;
-
-    .line 114
-    .line 115
-    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
-
-    .line 116
-    .line 117
-    .line 118
-    move-result-object v3
-
-    .line 119
-    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
-
-    .line 120
-    .line 121
-    .line 122
-    move-result-object v2
-
-    .line 123
-    iget-object v1, v4, LX/1ha;->A02:LX/3Iq;
-
-    .line 124
-    .line 125
-    new-instance v0, LX/1hX;
-
-    .line 126
-    .line 127
-    invoke-direct {v0, v4, v3, v2}, LX/1hX;-><init>(LX/1ha;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;)V
-
-    .line 128
-    .line 129
-    .line 130
-    invoke-interface {v1, v0}, LX/1iJ;->ApK(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 131
-    .line 132
-    .line 133
+    .line 84
+    .line 85
+    .line 86
     :goto_1
     invoke-interface {v6}, Ljava/util/Set;->clear()V
 
-    .line 134
-    .line 135
-    .line 136
+    .line 87
+    .line 88
+    .line 89
     invoke-interface {v6, v7}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    .line 90
+    .line 91
+    .line 92
+    goto :goto_2
+
+    .line 93
+    :cond_1
+    iget-object v0, p0, Lcom/facebook/push/mqtt/service/ClientSubscriptionAutoSubscriber;->A04:LX/0RP;
+
+    .line 94
+    .line 95
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 96
+    .line 97
+    .line 98
+    move-result-object v4
+
+    .line 99
+    check-cast v4, LX/1u4;
+
+    .line 100
+    .line 101
+    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+
+    .line 102
+    .line 103
+    .line 104
+    move-result-object v3
+
+    .line 105
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+
+    .line 106
+    .line 107
+    .line 108
+    move-result-object v2
+
+    .line 109
+    iget-object v1, v4, LX/1u4;->A02:LX/2jL;
+
+    .line 110
+    .line 111
+    new-instance v0, LX/1u3;
+
+    .line 112
+    .line 113
+    invoke-direct {v0, v4, v3, v2}, LX/1u3;-><init>(LX/1u4;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;)V
+
+    .line 114
+    .line 115
+    .line 116
+    invoke-interface {v1, v0}, LX/26x;->Ao4(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 117
+    .line 118
+    .line 119
+    goto :goto_1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 137
-    .line 138
-    .line 139
+    .line 120
+    :goto_2
     monitor-exit v8
 
-    .line 140
+    .line 121
     return-void
 
-    .line 141
+    .line 122
     :catchall_0
     move-exception v0
 
-    .line 142
+    .line 123
     :try_start_3
     throw v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 143
+    .line 124
     :catchall_1
     move-exception v0
 
-    .line 144
+    .line 125
     monitor-exit v8
 
-    .line 145
+    .line 126
     throw v0
 .end method
 
@@ -527,7 +496,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized AUp()V
+.method public final declared-synchronized AT9()V
     .locals 1
 
     .line 0
@@ -573,7 +542,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized AUq()V
+.method public final declared-synchronized ATB()V
     .locals 1
 
     .line 0
@@ -619,7 +588,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized AWu()V
+.method public final declared-synchronized AVK()V
     .locals 1
 
     .line 0
@@ -650,7 +619,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized AWw()V
+.method public final declared-synchronized AVM()V
     .locals 1
 
     .line 0

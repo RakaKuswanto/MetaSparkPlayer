@@ -2,30 +2,224 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultEvictionPluginController$1"
+
 
 # instance fields
-.field public final A00:I
+.field public final synthetic A00:LX/3HV;
 
-.field public final A01:Ljava/lang/Object;
+.field public final synthetic A01:LX/3HX;
+
+.field public final synthetic A02:LX/3Ii;
+
+.field public final synthetic A03:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(LX/3HV;LX/3HX;LX/3Ii;Ljava/io/File;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/3Ht;->A01:LX/3HX;
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/3Ht;->A00:LX/3HV;
+
     .line 3
-    iput p1, p0, LX/3Ht;->A00:I
-
     .line 4
-    .line 5
-    iput-object p2, p0, LX/3Ht;->A01:Ljava/lang/Object;
+    iput-object p3, p0, LX/3Ht;->A02:LX/3Ii;
 
+    .line 5
     .line 6
+    iput-object p4, p0, LX/3Ht;->A03:Ljava/io/File;
+
     .line 7
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 7
+
+    .line 0
+    iget-object v4, p0, LX/3Ht;->A01:LX/3HX;
+
+    .line 1
+    .line 2
+    iget-object v5, p0, LX/3Ht;->A00:LX/3HV;
+
+    .line 3
+    .line 4
+    iget-object v6, p0, LX/3Ht;->A02:LX/3Ii;
+
+    .line 5
+    .line 6
+    iget-object v3, p0, LX/3Ht;->A03:Ljava/io/File;
+
+    .line 7
+    .line 8
+    :try_start_0
+    invoke-static {}, LX/002;->A0D()Lorg/json/JSONObject;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v2
+
+    .line 12
+    iget-object v0, v6, LX/3Ii;->A01:LX/3Em;
+
+    .line 13
+    .line 14
+    if-eqz v0, :cond_0
+
+    .line 15
+    .line 16
+    invoke-virtual {v0}, LX/3Em;->AoS()Lorg/json/JSONObject;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v1
+
+    .line 20
+    const-string/jumbo v0, "size_config"
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 24
+    .line 25
+    .line 26
+    :cond_0
+    iget-object v0, v6, LX/3Ii;->A02:LX/3IL;
+
+    .line 27
+    .line 28
+    if-eqz v0, :cond_1
+
+    .line 29
+    .line 30
+    invoke-virtual {v0}, LX/3IL;->AoS()Lorg/json/JSONObject;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v1
+
+    .line 34
+    const-string/jumbo v0, "staleness_config"
+
+    .line 35
+    .line 36
+    .line 37
+    invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 38
+    .line 39
+    .line 40
+    :cond_1
+    iget-object v1, v6, LX/3Ii;->A03:Ljava/lang/String;
+
+    .line 41
+    .line 42
+    const-string/jumbo v0, "eviction_type"
+
+    .line 43
+    .line 44
+    .line 45
+    invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 46
+    .line 47
+    .line 48
+    iget-object v1, v6, LX/3Ii;->A00:Ljava/lang/String;
+
+    .line 49
+    .line 50
+    if-eqz v1, :cond_2
+
+    .line 51
+    .line 52
+    const-string/jumbo v0, "cache_name"
+
+    .line 53
+    .line 54
+    .line 55
+    invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 56
+    .line 57
+    .line 58
+    :cond_2
+    const-string/jumbo v1, "feature_name"
+
+    .line 59
+    .line 60
+    .line 61
+    iget-object v0, v5, LX/3HV;->A02:Ljava/lang/String;
+
+    .line 62
+    .line 63
+    invoke-virtual {v2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 64
+    .line 65
+    .line 66
+    iget-object v1, v4, LX/3HX;->A02:LX/2uZ;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 67
+    .line 68
+    :try_start_1
+    invoke-virtual {v3}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v0
+
+    .line 72
+    goto :goto_0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 73
+    :catch_0
+    :try_start_2
+    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v0
+
+    .line 77
+    :goto_0
+    invoke-virtual {v1, v0, v2}, LX/2uZ;->A03(Ljava/lang/String;Lorg/json/JSONObject;)V
+    :try_end_2
+    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
+
+    .line 78
+    .line 79
+    .line 80
+    :catch_1
     return-void
 .end method

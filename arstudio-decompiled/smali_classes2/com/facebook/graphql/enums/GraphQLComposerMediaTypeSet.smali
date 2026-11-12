@@ -1,44 +1,29 @@
-.class public Lcom/facebook/graphql/enums/GraphQLComposerMediaTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLComposerMediaTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yi;->A1Z()[Ljava/lang/String;
+    invoke-static {}, LX/1fN;->A01()Ljava/util/HashSet;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v2
-
-    .line 4
-    const/4 v1, 0x1
-
-    .line 5
-    const-string v0, "VIDEO"
-
-    .line 6
-    .line 7
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
-    .line 8
-    .line 9
-    .line 10
     move-result-object v0
 
-    .line 11
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLComposerMediaTypeSet;->A00:Ljava/util/Set;
+    .line 4
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLComposerMediaTypeSet;->A00:Ljava/util/HashSet;
 
-    .line 12
-    .line 13
+    .line 5
+    .line 6
     return-void
 .end method
 
@@ -54,11 +39,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLComposerMediaTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLComposerMediaTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

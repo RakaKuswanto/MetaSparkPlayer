@@ -1,40 +1,21 @@
-.class public final LX/3u8;
-.super Ljava/lang/Object;
+.class public final LX/3U8;
+.super LX/3UE;
 .source ""
-
-# interfaces
-.implements LX/2yW;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, LX/3UD;->A00:LX/0GZ;
 
     .line 1
     .line 2
+    invoke-direct {p0, v0}, LX/3UE;-><init>(LX/0GZ;)V
+
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ASS(LX/3WZ;IJJJZZ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final ASx(Lcom/facebook/video/heroplayer/ipc/LiveState;Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;Ljava/lang/String;IJZZ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AT1()V
-    .locals 0
-
+    .line 4
+    .line 5
     return-void
 .end method

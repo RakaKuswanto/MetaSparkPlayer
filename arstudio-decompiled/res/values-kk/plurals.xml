@@ -3,12 +3,53 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">Бетте %1$s лайк бар</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s ұнатушы</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d күн бұрын</item>
+        <item quantity="one">1 күн бұрын</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d күн</item>
+        <item quantity="one">1 күн</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d күн</item>
+        <item quantity="one">1 күн</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d сағат</item>
+        <item quantity="one">1 сағат</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d минут</item>
+        <item quantity="one">1 минут</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d апта</item>
+        <item quantity="one">1 апта</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d жыл</item>
+        <item quantity="one">1 жыл</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">%1$d сағат бұрын</item>
         <item quantity="one">1 сағат бұрын</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d сағ.</item>
+        <item quantity="one">1 сағ.</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d сағ.</item>
+        <item quantity="one">1 сағ.</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d сағ</item>
+        <item quantity="one">1 сағ</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">%1$d сағ. бұрын</item>
+        <item quantity="one">1 сағ. бұрын</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">%1$d сағаттан кейін</item>
@@ -18,8 +59,60 @@
         <item quantity="other">%1$d минуттан кейін</item>
         <item quantity="one">1 минуттан кейін</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d мин. бұрын</item>
+        <item quantity="one">1 мин. бұрын</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d минут бұрын</item>
         <item quantity="one">1 минут бұрын</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d мин.</item>
+        <item quantity="one">1 мин</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d мин.</item>
+        <item quantity="one">1 мин.</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d ай бұрын</item>
+        <item quantity="one">1 ай бұрын</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d секунд бұрын</item>
+        <item quantity="one">1 секунд</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d апта бұрын</item>
+        <item quantity="one">1 апта бұрын</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d жыл бұрын</item>
+        <item quantity="one">1 жыл бұрын</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">%1$d күн бұрын кірдіңіз</item>
+        <item quantity="one">1 күн бұрын кірдіңіз</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">%1$d сағат бұрын кірдіңіз</item>
+        <item quantity="one">1 сағат бұрын кірдіңіз</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">%1$d минут бұрын кірдіңіз</item>
+        <item quantity="one">1 минут бұрын кірдіңіз</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">%1$d ай бұрын кірдіңіз</item>
+        <item quantity="one">1 ай бұрын кірдіңіз</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">%1$d апта бұрын кірдіңіз</item>
+        <item quantity="one">1 апта бұрын кірдіңіз</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">%1$d жыл бұрын мұнда болдыңыз</item>
+        <item quantity="one">1 жыл бұрын мұнда болдыңыз</item>
     </plurals>
 </resources>

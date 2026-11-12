@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract Ab6(Landroid/os/Bundle;Landroid/os/IBinder;I)V
+.method public abstract AZW(Landroid/os/Bundle;Landroid/os/IBinder;I)V
 .end method

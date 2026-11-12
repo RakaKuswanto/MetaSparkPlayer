@@ -1,28 +1,29 @@
-.class public final LX/4ke;
+.class public final LX/4kE;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:I
+# instance fields
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:I
+
+.field public A03:I
+
+.field public A04:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    sget-object v0, LX/4Nn;->PRIMARY_TEXT:LX/4Nn;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget v0, v0, LX/4Nn;->attr:I
-
     .line 3
-    .line 4
-    sput v0, LX/4ke;->A00:I
-
-    .line 5
-    .line 6
     return-void
 .end method

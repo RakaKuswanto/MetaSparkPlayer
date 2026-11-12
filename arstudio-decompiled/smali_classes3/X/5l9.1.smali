@@ -1,164 +1,158 @@
-.class public final LX/5l9;
+.class public final synthetic LX/5l9;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Landroid/hardware/Camera$OnZoomChangeListener;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "WorkForegroundRunnable$$ExternalSyntheticLambda0"
 
 
 # instance fields
-.field public A00:Ljava/util/List;
+.field public final synthetic A00:LX/5kQ;
 
-.field public final synthetic A01:LX/5kr;
+.field public final synthetic A01:LX/5mC;
 
 
 # direct methods
-.method public constructor <init>(LX/5kr;)V
-    .locals 2
+.method public synthetic constructor <init>(LX/5kQ;LX/5mC;)V
+    .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/5l9;->A01:LX/5kr;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    invoke-virtual {p1}, LX/5kr;->A06()Z
+    iput-object p1, p0, LX/5l9;->A00:LX/5kQ;
 
-    .line 6
-    .line 7
-    .line 8
-    move-result v0
+    iput-object p2, p0, LX/5l9;->A01:LX/5mC;
 
-    .line 9
-    if-eqz v0, :cond_0
-
-    .line 10
-    .line 11
-    iget-object v1, p1, LX/5kr;->A08:LX/5ks;
-
-    .line 12
-    .line 13
-    monitor-enter v1
-
-    .line 14
-    :try_start_0
-    iget-object v0, v1, LX/5ks;->A00:Landroid/hardware/Camera$Parameters;
-
-    .line 15
-    .line 16
-    invoke-virtual {v0}, Landroid/hardware/Camera$Parameters;->getZoomRatios()Ljava/util/List;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 20
-    monitor-exit v1
-
-    .line 21
-    iput-object v0, p0, LX/5l9;->A00:Ljava/util/List;
-
-    .line 22
-    .line 23
     return-void
-
-    .line 24
-    :catchall_0
-    move-exception v0
-
-    .line 25
-    monitor-exit v1
-
-    .line 26
-    throw v0
-
-    .line 27
-    :cond_0
-    const-string v1, "Failed to create a zoom controller."
-
-    .line 28
-    .line 29
-    new-instance v0, LX/5lR;
-
-    .line 30
-    .line 31
-    invoke-direct {v0, p1, v1}, LX/5lR;-><init>(LX/5kr;Ljava/lang/String;)V
-
-    .line 32
-    .line 33
-    .line 34
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final onZoomChange(IZLandroid/hardware/Camera;)V
-    .locals 2
+.method public final run()V
+    .locals 5
 
     .line 0
-    if-eqz p2, :cond_0
+    iget-object v1, p0, LX/5l9;->A00:LX/5kQ;
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/5l9;->A01:LX/5kr;
+    iget-object v4, p0, LX/5l9;->A01:LX/5mC;
 
     .line 3
     .line 4
-    iget-object v1, v0, LX/5kr;->A08:LX/5ks;
+    iget-object v0, v1, LX/5kQ;->A04:LX/5mC;
 
     .line 5
     .line 6
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, LX/5q4;->isCancelled()Z
 
     .line 7
     .line 8
-    monitor-enter v1
-
     .line 9
-    :try_start_0
-    iget-object v0, v1, LX/5ks;->A00:Landroid/hardware/Camera$Parameters;
+    move-result v0
 
     .line 10
-    .line 11
-    invoke-virtual {v0, p1}, Landroid/hardware/Camera$Parameters;->setZoom(I)V
+    if-nez v0, :cond_1
 
+    .line 11
     .line 12
+    iget-object v3, v1, LX/5kQ;->A02:LX/5ka;
+
     .line 13
     .line 14
-    const/4 v0, 0x1
+    instance-of v0, v3, Landroidx/work/Worker;
 
     .line 15
-    invoke-virtual {v1, v0}, LX/5ks;->A0A(Z)V
-
     .line 16
+    if-eqz v0, :cond_0
+
     .line 17
     .line 18
-    goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast v3, Landroidx/work/Worker;
 
     .line 19
-    :catchall_0
-    move-exception v0
-
     .line 20
-    monitor-exit v1
+    new-instance v2, LX/5mC;
 
     .line 21
-    throw v0
-
     .line 22
-    :goto_0
-    monitor-exit v1
+    invoke-direct {v2}, LX/5mC;-><init>()V
 
     .line 23
+    .line 24
+    .line 25
+    iget-object v0, v3, LX/5ka;->A01:Landroidx/work/WorkerParameters;
+
+    .line 26
+    .line 27
+    iget-object v1, v0, Landroidx/work/WorkerParameters;->A04:Ljava/util/concurrent/Executor;
+
+    .line 28
+    .line 29
+    new-instance v0, LX/5l5;
+
+    .line 30
+    .line 31
+    invoke-direct {v0, v3, v2}, LX/5l5;-><init>(Landroidx/work/Worker;LX/5mC;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 35
+    .line 36
+    .line 37
+    :goto_0
+    invoke-virtual {v4, v2}, LX/5q4;->A05(Lcom/google/common/util/concurrent/ListenableFuture;)V
+
+    .line 38
+    .line 39
+    .line 40
+    return-void
+
+    .line 41
     :cond_0
+    new-instance v2, LX/5mC;
+
+    .line 42
+    .line 43
+    invoke-direct {v2}, LX/5mC;-><init>()V
+
+    .line 44
+    .line 45
+    .line 46
+    const-string v0, "Expedited WorkRequests require a ListenableWorker to provide an implementation for `getForegroundInfoAsync()`"
+
+    .line 47
+    .line 48
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    invoke-virtual {v2, v0}, LX/5q4;->A07(Ljava/lang/Throwable;)V
+
+    .line 53
+    .line 54
+    .line 55
+    goto :goto_0
+
+    .line 56
+    :cond_1
+    const/4 v0, 0x1
+
+    .line 57
+    invoke-virtual {v4, v0}, LX/5q4;->cancel(Z)Z
+
+    .line 58
+    .line 59
+    .line 60
     return-void
 .end method

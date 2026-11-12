@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/19i;
+.implements LX/1gn;
 
 
 # direct methods
@@ -21,86 +21,6 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0B()Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-    .locals 4
-
-    .line 0
-    invoke-static {p0}, LX/191;->A02(Lcom/facebook/graphql/model/GraphQLFeedback;)LX/191;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v3
-
-    .line 4
-    const-class v2, Lcom/facebook/graphql/model/GraphQLFeedback;
-
-    .line 5
-    .line 6
-    const-string v1, "Feedback"
-
-    .line 7
-    .line 8
-    const v0, -0x415b3d38
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-virtual {v3, v2, v1, v0}, LX/197;->A43(Ljava/lang/Class;Ljava/lang/String;I)Lcom/facebook/graphservice/interfaces/Tree;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    check-cast v0, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-
-    .line 16
-    .line 17
-    return-object v0
-.end method
-
-.method public final bridge synthetic A0C()Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-    .locals 4
-
-    .line 0
-    invoke-static {p0}, LX/191;->A02(Lcom/facebook/graphql/model/GraphQLFeedback;)LX/191;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v3
-
-    .line 4
-    const-class v2, Lcom/facebook/graphql/model/GraphQLFeedback;
-
-    .line 5
-    .line 6
-    const-string v1, "Feedback"
-
-    .line 7
-    .line 8
-    const v0, -0x415b3d38
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-virtual {v3, v2, v1, v0}, LX/197;->A42(Ljava/lang/Class;Ljava/lang/String;I)Lcom/facebook/graphservice/interfaces/Tree;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    check-cast v0, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-
-    .line 16
-    .line 17
-    return-object v0
-.end method
-
 .method public final getTypeName()Ljava/lang/String;
     .locals 1
 
@@ -110,10 +30,10 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 12
+    .locals 11
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -121,7 +41,7 @@
     move-result-object v6
 
     .line 4
-    const-class v7, Lcom/facebook/graphql/modelutil/GQLTypeModelWTreeShape1S0000000;
+    const-class v3, LX/1fl;
 
     .line 5
     .line 6
@@ -135,7 +55,7 @@
     .line 10
     .line 11
     .line 12
-    invoke-virtual {p0, v7, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0D(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
+    invoke-virtual {p0, v3, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0O(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
 
     .line 13
     .line 14
@@ -143,616 +63,616 @@
     move-result-object v2
 
     .line 16
-    const-string v9, ","
+    const-string v8, ","
 
     .line 17
     .line 18
-    const-string/jumbo v8, "node.id"
+    const-string/jumbo v7, "node.id"
 
     .line 19
     .line 20
     .line 21
-    const-string v5, "]}"
+    const-string/jumbo v4, "]}"
 
     .line 22
     .line 23
-    const-string/jumbo v3, "null"
-
     .line 24
+    const-string/jumbo v9, "null"
+
     .line 25
     .line 26
-    if-eqz v2, :cond_1
-
     .line 27
+    if-eqz v2, :cond_2
+
     .line 28
+    .line 29
     const-string v0, "GraphQLTopReactionConnection{edges=["
 
-    .line 29
     .line 30
+    .line 31
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 31
     .line 32
     .line 33
+    .line 34
     const v1, 0x5be4a56
 
-    .line 34
     .line 35
     .line 36
+    .line 37
     const v0, -0x64d82c27
 
-    .line 37
     .line 38
     .line 39
-    invoke-virtual {v2, v1, v7, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0E(ILjava/lang/Class;I)Lcom/google/common/collect/ImmutableList;
-
     .line 40
+    invoke-virtual {v2, v1, v3, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0P(ILjava/lang/Class;I)Lcom/google/common/collect/ImmutableList;
+
     .line 41
     .line 42
+    .line 43
     move-result-object v0
 
-    .line 43
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
-
     .line 44
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
+
     .line 45
     .line 46
-    move-result-object v11
-
     .line 47
-    :cond_0
-    :goto_0
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 48
-    .line 49
-    .line 50
-    move-result v0
-
-    .line 51
-    if-eqz v0, :cond_2
-
-    .line 52
-    .line 53
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 54
-    .line 55
-    .line 56
     move-result-object v10
 
+    .line 48
+    :cond_0
+    :goto_0
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 49
+    .line 50
+    .line 51
+    move-result v0
+
+    .line 52
+    if-eqz v0, :cond_1
+
+    .line 53
+    .line 54
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 55
+    .line 56
     .line 57
-    check-cast v10, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
+    move-result-object v5
 
     .line 58
-    .line 59
-    const v1, 0x33ae02
+    check-cast v5, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
 
+    .line 59
     .line 60
+    const v2, 0x33ae02
+
     .line 61
     .line 62
-    const v0, 0x665e9772
-
     .line 63
+    const-class v1, LX/1fq;
+
     .line 64
     .line 65
-    invoke-virtual {v10, v7, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0D(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
+    const v0, 0x665e9772
 
     .line 66
     .line 67
     .line 68
-    move-result-object v4
+    invoke-virtual {v5, v1, v2, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0O(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
 
     .line 69
-    if-eqz v4, :cond_0
-
     .line 70
     .line 71
-    invoke-static {v10}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    move-result-object v3
 
     .line 72
+    if-eqz v3, :cond_0
+
     .line 73
     .line 74
-    move-result-object v2
+    invoke-static {v5}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 75
-    const v0, 0x1be28b79
-
     .line 76
     .line 77
+    move-result-object v2
+
     .line 78
-    invoke-virtual {v10, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A09(I)I
+    const v0, 0x1be28b79
 
     .line 79
     .line 80
     .line 81
-    move-result v1
+    invoke-virtual {v5, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0K(I)I
 
     .line 82
-    const-string/jumbo v0, "reaction_count"
-
     .line 83
     .line 84
+    move-result v1
+
     .line 85
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "reaction_count"
 
     .line 86
     .line 87
     .line 88
-    const/16 v0, 0xd1b
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 89
     .line 90
-    invoke-virtual {v4, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0I(I)Ljava/lang/String;
-
     .line 91
+    const/16 v0, 0xd1b
+
     .line 92
     .line 93
-    move-result-object v0
+    invoke-virtual {v3, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0T(I)Ljava/lang/String;
 
     .line 94
-    invoke-virtual {v2, v8, v0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
-
     .line 95
     .line 96
+    move-result-object v0
+
     .line 97
-    sget-object v1, Lcom/facebook/graphql/enums/GraphQLFeedbackReactionType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFeedbackReactionType;
+    invoke-virtual {v2, v7, v0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 98
     .line 99
-    const v0, -0x622aa070
-
     .line 100
+    sget-object v1, Lcom/facebook/graphql/enums/GraphQLFeedbackReactionType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFeedbackReactionType;
+
     .line 101
     .line 102
-    invoke-virtual {v4, v0, v1}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0G(ILjava/lang/Enum;)Ljava/lang/Enum;
+    const v0, -0x622aa070
 
     .line 103
     .line 104
     .line 105
-    move-result-object v1
+    invoke-virtual {v3, v0, v1}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0R(ILjava/lang/Enum;)Ljava/lang/Enum;
 
     .line 106
-    const-string/jumbo v0, "node.reaction_type"
-
     .line 107
     .line 108
+    move-result-object v1
+
     .line 109
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "node.reaction_type"
 
     .line 110
     .line 111
     .line 112
-    invoke-static {v6, v2}, LX/001;->A10(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 113
     .line 114
     .line 115
-    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v6, v2}, LX/001;->A11(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
 
     .line 116
     .line 117
     .line 118
-    goto :goto_0
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 119
-    :cond_1
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 120
     .line 121
+    goto :goto_0
+
     .line 122
-    goto :goto_1
+    :cond_1
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 123
-    :cond_2
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 124
     .line 125
+    goto :goto_1
+
     .line 126
-    :goto_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    :cond_2
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 127
     .line 128
     .line 129
-    move-result-object v4
+    :goto_1
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 130
-    const v1, -0x5233ff72
-
     .line 131
     .line 132
+    move-result-object v5
+
     .line 133
-    const v0, -0x66b712b2
+    const-class v2, LX/1fo;
 
     .line 134
     .line 135
-    .line 136
-    invoke-virtual {p0, v7, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0D(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
+    const v1, -0x5233ff72
 
+    .line 136
     .line 137
     .line 138
+    const v0, -0x66b712b2
+
     .line 139
-    move-result-object v2
-
     .line 140
-    check-cast v2, Lcom/facebook/graphql/modelutil/GQLTypeModelWTreeShape1S0000000;
-
     .line 141
-    .line 142
-    if-eqz v2, :cond_3
+    invoke-virtual {p0, v2, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0O(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
 
+    .line 142
     .line 143
     .line 144
-    const-string v0, "GraphQLImportantReactorsConnection{nodes=["
+    move-result-object v3
 
     .line 145
-    .line 146
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v3, :cond_4
 
+    .line 146
     .line 147
+    const-string v0, "GraphQLImportantReactorsConnection{nodes=["
+
     .line 148
     .line 149
-    const v1, 0x64212b1
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 150
     .line 151
     .line 152
-    const v0, 0x1cc84619
+    const v2, 0x64212b1
 
     .line 153
     .line 154
     .line 155
-    invoke-virtual {v2, v1, v7, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0E(ILjava/lang/Class;I)Lcom/google/common/collect/ImmutableList;
+    const-class v1, LX/1fs;
 
     .line 156
     .line 157
+    const v0, 0x1cc84619
+
     .line 158
-    move-result-object v0
-
     .line 159
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
-
     .line 160
+    invoke-virtual {v3, v2, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0P(ILjava/lang/Class;I)Lcom/google/common/collect/ImmutableList;
+
     .line 161
     .line 162
+    .line 163
+    move-result-object v0
+
+    .line 164
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
+
+    .line 165
+    .line 166
+    .line 167
     move-result-object v3
 
-    .line 163
+    .line 168
     :goto_2
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 164
-    .line 165
-    .line 166
-    move-result v0
-
-    .line 167
-    if-eqz v0, :cond_4
-
-    .line 168
     .line 169
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 170
     .line 171
+    move-result v0
+
     .line 172
-    move-result-object v1
+    if-eqz v0, :cond_3
 
     .line 173
-    check-cast v1, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-
     .line 174
-    .line 175
-    invoke-static {v1}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 175
     .line 176
     .line 177
-    .line 178
-    move-result-object v2
-
-    .line 179
-    const/16 v0, 0xd1b
-
-    .line 180
-    .line 181
-    invoke-virtual {v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0I(I)Ljava/lang/String;
-
-    .line 182
-    .line 183
-    .line 184
-    move-result-object v0
-
-    .line 185
-    invoke-virtual {v2, v8, v0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
-
-    .line 186
-    .line 187
-    .line 188
-    const v0, 0x337a8b
-
-    .line 189
-    .line 190
-    .line 191
-    invoke-virtual {v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0I(I)Ljava/lang/String;
-
-    .line 192
-    .line 193
-    .line 194
     move-result-object v1
 
-    .line 195
-    const-string/jumbo v0, "node.name"
+    .line 178
+    check-cast v1, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
 
+    .line 179
+    .line 180
+    invoke-static {v1}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
+    .line 181
+    .line 182
+    .line 183
+    move-result-object v2
+
+    .line 184
+    const/16 v0, 0xd1b
+
+    .line 185
+    .line 186
+    invoke-virtual {v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0T(I)Ljava/lang/String;
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-object v0
+
+    .line 190
+    invoke-virtual {v2, v7, v0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
+    .line 191
+    .line 192
+    .line 193
+    const v0, 0x337a8b
+
+    .line 194
+    .line 195
     .line 196
+    invoke-virtual {v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0T(I)Ljava/lang/String;
+
     .line 197
     .line 198
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
-
     .line 199
-    .line 200
-    .line 201
-    invoke-static {v4, v2}, LX/001;->A10(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+    move-result-object v1
 
+    .line 200
+    const-string/jumbo v0, "node.name"
+
+    .line 201
     .line 202
     .line 203
-    .line 204
-    invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 204
     .line 205
     .line 206
+    invoke-static {v5, v2}, LX/001;->A11(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+
     .line 207
-    goto :goto_2
-
     .line 208
-    :cond_3
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 209
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 210
     .line 211
-    goto :goto_3
-
     .line 212
-    :cond_4
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_2
 
     .line 213
+    :cond_3
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 214
     .line 215
-    :goto_3
-    const-class v0, Lcom/facebook/graphql/model/GraphQLFeedback;
-
     .line 216
+    goto :goto_3
+
     .line 217
-    invoke-static {v0}, LX/0Yg;->A0R(Ljava/lang/Class;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    :cond_4
+    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 218
     .line 219
     .line 220
-    move-result-object v3
+    :goto_3
+    const-class v0, Lcom/facebook/graphql/model/GraphQLFeedback;
 
     .line 221
-    const/16 v0, 0xd1b
-
     .line 222
-    .line 223
-    invoke-virtual {p0, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0I(I)Ljava/lang/String;
+    invoke-static {v0}, LX/0X4;->A0U(Ljava/lang/Class;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 223
     .line 224
     .line 225
+    move-result-object v4
+
     .line 226
-    move-result-object v1
+    const/16 v0, 0xd1b
 
     .line 227
-    const-string/jumbo v0, "id"
-
     .line 228
+    invoke-virtual {p0, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0T(I)Ljava/lang/String;
+
     .line 229
     .line 230
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
-
     .line 231
-    .line 232
-    .line 233
-    const v0, 0xe1be87f
-
-    .line 234
-    .line 235
-    .line 236
-    invoke-virtual {p0, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0I(I)Ljava/lang/String;
-
-    .line 237
-    .line 238
-    .line 239
     move-result-object v1
 
-    .line 240
-    const-string/jumbo v0, "legacy_api_post_id"
+    .line 232
+    const-string/jumbo v0, "id"
 
+    .line 233
+    .line 234
+    .line 235
+    invoke-virtual {v4, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
+    .line 236
+    .line 237
+    .line 238
+    const v0, 0xe1be87f
+
+    .line 239
+    .line 240
     .line 241
+    invoke-virtual {p0, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0T(I)Ljava/lang/String;
+
     .line 242
     .line 243
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
-
     .line 244
-    .line 245
-    .line 246
-    const v0, -0x41bacbe8
+    move-result-object v1
 
+    .line 245
+    const-string/jumbo v0, "legacy_api_post_id"
+
+    .line 246
     .line 247
     .line 248
-    .line 249
-    const v2, 0x13a013b3
+    invoke-virtual {v4, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 249
     .line 250
     .line 251
-    .line 252
-    invoke-virtual {p0, v7, v0, v2}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0D(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
+    const-class v3, LX/1fr;
 
+    .line 252
     .line 253
+    const v0, -0x41bacbe8
+
     .line 254
     .line 255
-    move-result-object v0
-
     .line 256
-    if-nez v0, :cond_5
+    const v2, 0x13a013b3
 
     .line 257
     .line 258
-    const/4 v0, 0x0
-
     .line 259
-    invoke-static {v0, v2}, LX/191;->A31(Lcom/facebook/graphservice/tree/TreeJNI;I)LX/191;
+    invoke-virtual {p0, v3, v0, v2}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0O(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
 
     .line 260
     .line 261
     .line 262
-    move-result-object v1
+    move-result-object v0
 
     .line 263
-    const-string v0, "LikersOfContentConnection"
+    if-nez v0, :cond_5
 
     .line 264
     .line 265
-    invoke-virtual {v1, v7, v0, v2}, LX/197;->A42(Ljava/lang/Class;Ljava/lang/String;I)Lcom/facebook/graphservice/interfaces/Tree;
+    const/4 v0, 0x0
 
     .line 266
+    invoke-static {v0, v2}, LX/1fh;->A0C(Lcom/facebook/graphservice/tree/TreeJNI;I)LX/1fh;
+
     .line 267
     .line 268
-    move-result-object v0
-
     .line 269
-    check-cast v0, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
+    move-result-object v1
 
     .line 270
-    .line 271
-    :cond_5
-    const v5, 0x5a7510f
+    const-string v0, "LikersOfContentConnection"
 
+    .line 271
     .line 272
+    invoke-virtual {v1, v3, v0, v2}, LX/1g1;->A29(Ljava/lang/Class;Ljava/lang/String;I)Lcom/facebook/graphservice/interfaces/Tree;
+
     .line 273
     .line 274
-    invoke-virtual {v0, v5}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A09(I)I
-
     .line 275
-    .line 276
-    .line 277
-    move-result v1
+    move-result-object v0
 
+    .line 276
+    check-cast v0, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
+
+    .line 277
     .line 278
-    const-string v0, "LikeCount"
+    :cond_5
+    const v7, 0x5a7510f
 
     .line 279
     .line 280
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
-
     .line 281
+    invoke-virtual {v0, v7}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0K(I)I
+
     .line 282
     .line 283
-    const/4 v2, 0x0
-
     .line 284
-    const v1, -0x4e289f87
+    move-result v1
 
     .line 285
+    const-string v0, "LikeCount"
+
     .line 286
     .line 287
-    const v0, -0x471c4568
+    invoke-virtual {v4, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 288
     .line 289
     .line 290
-    invoke-virtual {p0, v7, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0D(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
+    const/4 v3, 0x0
 
     .line 291
+    const-class v2, LX/1fj;
+
     .line 292
     .line 293
-    move-result-object v1
+    const v1, -0x4e289f87
 
     .line 294
-    if-eqz v1, :cond_6
-
     .line 295
     .line 296
-    const v0, -0x184df3ac
+    const v0, -0x471c4568
 
     .line 297
     .line 298
     .line 299
-    invoke-virtual {v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A09(I)I
+    invoke-virtual {p0, v2, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0O(Ljava/lang/Class;II)Lcom/facebook/graphql/modelutil/BaseModelWithTree;
 
     .line 300
     .line 301
     .line 302
-    move-result v2
+    move-result-object v1
 
     .line 303
-    if-nez v2, :cond_6
+    if-eqz v1, :cond_6
 
     .line 304
     .line 305
-    invoke-virtual {v1, v5}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A09(I)I
+    const v0, -0x184df3ac
 
     .line 306
     .line 307
     .line 308
-    move-result v2
+    invoke-virtual {v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0K(I)I
 
     .line 309
-    :cond_6
-    const-string v0, "CommentCount"
-
     .line 310
     .line 311
-    invoke-virtual {v3, v0, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    move-result v3
 
     .line 312
+    if-nez v3, :cond_6
+
     .line 313
     .line 314
-    const v0, 0x726744de
+    invoke-virtual {v1, v7}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0K(I)I
 
     .line 315
     .line 316
     .line 317
-    invoke-virtual {p0, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0K(I)Z
+    move-result v3
 
     .line 318
+    :cond_6
+    const-string v0, "CommentCount"
+
     .line 319
     .line 320
-    move-result v1
+    invoke-virtual {v4, v0, v3}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 321
-    const-string v0, "doesViewerLike"
-
     .line 322
     .line 323
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const v0, 0x726744de
 
     .line 324
     .line 325
     .line 326
-    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0V(I)Z
 
     .line 327
     .line 328
     .line 329
-    move-result-object v1
+    move-result v1
 
     .line 330
-    const-string/jumbo v0, "top_reactions"
+    const-string/jumbo v0, "doesViewerLike"
 
     .line 331
     .line 332
     .line 333
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v4, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 334
     .line 335
     .line 336
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 337
     .line 338
@@ -760,18 +680,36 @@
     move-result-object v1
 
     .line 340
-    const-string/jumbo v0, "important_reactors"
+    const-string/jumbo v0, "top_reactions"
 
     .line 341
     .line 342
     .line 343
-    invoke-static {v3, v1, v0}, LX/0Yg;->A0j(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 344
     .line 345
     .line 346
-    move-result-object v0
+    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 347
+    .line 348
+    .line 349
+    move-result-object v1
+
+    .line 350
+    const-string/jumbo v0, "important_reactors"
+
+    .line 351
+    .line 352
+    .line 353
+    invoke-static {v4, v1, v0}, LX/0X5;->A0c(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 354
+    .line 355
+    .line 356
+    move-result-object v0
+
+    .line 357
     return-object v0
 .end method

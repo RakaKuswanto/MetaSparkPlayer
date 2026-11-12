@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5Wl;
+.implements LX/5b0;
 
 
 # instance fields
@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public onRelease(LX/5Wi;Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;)V
+.method public onRelease(LX/5rO;Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;)V
     .locals 2
 
     .line 0
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method public bridge synthetic onRelease(LX/5Wi;Ljava/lang/Object;)V
+.method public bridge synthetic onRelease(LX/5rO;Ljava/lang/Object;)V
     .locals 0
 
     .line 268435456
@@ -77,7 +77,7 @@
 
     .line 268435457
     .line 268435458
-    invoke-virtual {p0, p1, p2}, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioServiceConfigurationHybrid$1;->onRelease(LX/5Wi;Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;)V
+    invoke-virtual {p0, p1, p2}, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioServiceConfigurationHybrid$1;->onRelease(LX/5rO;Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;)V
 
     .line 268435459
     .line 268435460

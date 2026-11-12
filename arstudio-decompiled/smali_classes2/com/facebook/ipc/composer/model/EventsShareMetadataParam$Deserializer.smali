@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 8
 
     .line 0
@@ -41,7 +41,7 @@
     .line 7
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 8
     .line 9
@@ -49,7 +49,7 @@
     move-result-object v1
 
     .line 11
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 12
     .line 13
@@ -57,7 +57,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 16
     .line 17
@@ -79,14 +79,14 @@
     .line 25
     .line 26
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 27
     .line 28
     .line 29
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 30
     .line 31
@@ -94,7 +94,7 @@
     move-result-object v1
 
     .line 33
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 34
     .line 35
@@ -106,12 +106,12 @@
 
     .line 38
     :sswitch_0
-    const-string/jumbo v0, "ref_mechanism"
+    const-string/jumbo v1, "mechanism"
 
     .line 39
     .line 40
     .line 41
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 42
     .line 43
@@ -123,52 +123,52 @@
 
     .line 46
     .line 47
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1, v1}, LX/1O4;->A06(LX/3oD;Ljava/lang/String;)Ljava/lang/String;
 
     .line 48
     .line 49
     .line 50
-    move-result-object v5
+    move-result-object v4
 
     .line 51
-    const-string/jumbo v0, "refMechanism"
-
-    .line 52
-    .line 53
-    .line 54
-    invoke-static {v0, v5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 55
-    .line 56
-    .line 57
     goto :goto_0
 
-    .line 58
+    .line 52
     :sswitch_1
-    const-string/jumbo v1, "surface"
+    const-string/jumbo v0, "event_id"
+
+    .line 53
+    .line 54
+    .line 55
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 56
+    .line 57
+    .line 58
+    move-result v0
 
     .line 59
+    if-eqz v0, :cond_1
+
     .line 60
     .line 61
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 62
     .line 63
     .line 64
-    move-result v0
+    move-result-object v3
 
     .line 65
-    if-eqz v0, :cond_1
+    const-string/jumbo v0, "eventId"
 
     .line 66
     .line 67
-    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0K(LX/27m;Ljava/lang/String;)Ljava/lang/String;
-
     .line 68
+    invoke-static {v3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 69
     .line 70
-    move-result-object v7
-
     .line 71
     goto :goto_0
 
@@ -191,7 +191,7 @@
 
     .line 80
     .line 81
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 82
     .line 83
@@ -204,7 +204,7 @@
     .line 86
     .line 87
     .line 88
-    invoke-static {v0, v6}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v6, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 89
     .line 90
@@ -213,111 +213,121 @@
 
     .line 92
     :sswitch_3
-    const-string v0, "event_id"
+    const-string/jumbo v1, "surface"
 
     .line 93
     .line 94
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 95
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 96
     .line 97
+    .line 98
     move-result v0
 
-    .line 98
+    .line 99
     if-eqz v0, :cond_1
 
-    .line 99
     .line 100
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 101
+    invoke-static {p1, v1}, LX/1O4;->A06(LX/3oD;Ljava/lang/String;)Ljava/lang/String;
+
     .line 102
     .line 103
-    move-result-object v3
-
     .line 104
-    const-string v0, "eventId"
+    move-result-object v7
 
     .line 105
+    goto :goto_0
+
     .line 106
-    invoke-static {v0, v3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    :sswitch_4
+    const-string/jumbo v0, "ref_mechanism"
 
     .line 107
     .line 108
     .line 109
-    goto :goto_0
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 110
-    :sswitch_4
-    const-string/jumbo v1, "mechanism"
-
     .line 111
     .line 112
+    move-result v0
+
     .line 113
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 114
     .line 115
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 116
-    move-result v0
-
     .line 117
-    if-eqz v0, :cond_1
-
     .line 118
+    move-result-object v5
+
     .line 119
-    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0K(LX/27m;Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v0, "refMechanism"
 
     .line 120
     .line 121
     .line 122
-    move-result-object v4
+    invoke-static {v5, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 123
+    .line 124
+    .line 125
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 124
+    .line 126
     :goto_1
     new-instance v2, Lcom/facebook/ipc/composer/model/EventsShareMetadataParam;
 
-    .line 125
-    .line 126
-    invoke-direct/range {v2 .. v7}, Lcom/facebook/ipc/composer/model/EventsShareMetadataParam;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 127
     .line 128
+    invoke-direct/range {v2 .. v7}, Lcom/facebook/ipc/composer/model/EventsShareMetadataParam;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
     .line 129
+    .line 130
+    .line 131
     return-object v2
 
-    .line 130
+    .line 132
     :catch_0
     move-exception v1
 
-    .line 131
-    const-class v0, Lcom/facebook/ipc/composer/model/EventsShareMetadataParam;
-
-    .line 132
     .line 133
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    const-class v0, Lcom/facebook/ipc/composer/model/EventsShareMetadataParam;
 
     .line 134
     .line 135
-    .line 136
-    const/4 v0, 0x0
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
+    .line 136
     .line 137
+    .line 138
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 139
+    .line 140
+    .line 141
+    move-result-object v0
+
+    .line 142
     throw v0
 
-    .line 138
+    .line 143
+    nop
+
+    .line 144
     :sswitch_data_0
     .sparse-switch
-        -0x7d2b4553 -> :sswitch_0
-        -0x6e761353 -> :sswitch_1
+        -0x7d2b4553 -> :sswitch_4
+        -0x6e761353 -> :sswitch_3
         -0x1fd0f6ff -> :sswitch_2
-        0x1093c0e0 -> :sswitch_3
-        0x49056359 -> :sswitch_4
+        0x1093c0e0 -> :sswitch_1
+        0x49056359 -> :sswitch_0
     .end sparse-switch
 .end method

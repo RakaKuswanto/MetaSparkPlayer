@@ -1,11 +1,6 @@
-.class public interface abstract LX/01I;
+.class public interface abstract LX/01i;
 .super Ljava/lang/Object;
 .source ""
 
-
-# virtual methods
-.method public abstract A78()Landroid/os/IBinder;
-.end method
-
-.method public abstract A95()LX/0Xp;
-.end method
+# interfaces
+.implements Landroid/view/Menu;

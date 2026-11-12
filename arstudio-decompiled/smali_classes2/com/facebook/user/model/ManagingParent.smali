@@ -39,11 +39,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x2c
+    const/16 v0, 0x1c
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -201,7 +201,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 3
     .line 4

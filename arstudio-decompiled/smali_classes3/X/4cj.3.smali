@@ -4,11 +4,11 @@
 
 
 # direct methods
-.method public static A00(Landroid/view/Menu;Landroid/view/Window$Callback;Ljava/util/List;I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-interface {p1, p2, p0, p3}, Landroid/view/Window$Callback;->onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

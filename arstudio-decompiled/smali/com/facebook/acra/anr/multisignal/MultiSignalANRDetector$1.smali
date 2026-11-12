@@ -45,7 +45,7 @@
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     .line 8
@@ -90,11 +90,11 @@
 
     .line 28
     .line 29
-    iget-object v0, v1, Lcom/facebook/acra/anr/multisignal/MultiSignalANRDetector;->mAnrDetectorConfig:LX/0M1;
+    iget-object v0, v1, Lcom/facebook/acra/anr/multisignal/MultiSignalANRDetector;->mAnrDetectorConfig:LX/0Kf;
 
     .line 30
     .line 31
-    iget-object v2, v0, LX/0M1;->A07:Lcom/facebook/acra/anrreport/ANRReport;
+    iget-object v2, v0, LX/0Kf;->A07:Lcom/facebook/acra/anrreport/ANRReport;
 
     .line 32
     .line 33

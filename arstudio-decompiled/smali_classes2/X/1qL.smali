@@ -2,16 +2,15 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/1pB;
-
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0lu;
+
+.field public final A01:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -20,7 +19,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-static {}, LX/2I6;->A0L()LX/0lu;
 
     .line 4
     .line 5
@@ -28,58 +27,82 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, LX/1qL;->A00:LX/1zG;
+    iput-object v0, p0, LX/1qL;->A01:LX/0lu;
 
     .line 8
     .line 9
+    sget v0, LX/2I6;->A0E:I
+
+    .line 10
+    .line 11
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    iput-object v0, p0, LX/1qL;->A00:LX/0lu;
+
+    .line 16
+    .line 17
     return-void
 .end method
 
-
-# virtual methods
-.method public final A6T(LX/46D;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final AGH(LX/46D;)Lcom/facebook/graphservice/interfaces/GraphQLService;
-    .locals 3
+.method public static final A00(LX/1qL;)Ljava/lang/String;
+    .locals 0
 
     .line 0
-    sget v0, LX/2eq;->A6E:I
+    iget-object p0, p0, LX/1qL;->A00:LX/0lu;
 
     .line 1
     .line 2
-    iget-object v2, p0, LX/1qL;->A00:LX/1zG;
+    invoke-static {p0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 3
     .line 4
-    invoke-static {v2, v0}, LX/1zE;->A04(LX/1zG;I)LX/1tK;
-
     .line 5
-    .line 6
-    .line 7
-    move-result-object v1
+    move-result-object p0
 
+    .line 6
+    check-cast p0, Lcom/facebook/common/network/FbNetworkManager;
+
+    .line 7
     .line 8
-    sget v0, LX/2eq;->AE8:I
+    invoke-virtual {p0}, Lcom/facebook/common/network/FbNetworkManager;->A0B()Landroid/net/NetworkInfo;
 
     .line 9
     .line 10
-    invoke-static {v1, v2, v0}, LX/1z1;->A02(LX/1tK;LX/1zG;I)Ljava/lang/Object;
-
     .line 11
-    .line 12
-    .line 13
-    move-result-object v0
+    move-result-object p0
 
+    .line 12
+    if-nez p0, :cond_0
+
+    .line 13
     .line 14
-    check-cast v0, Lcom/facebook/graphservice/interfaces/GraphQLService;
+    const-string/jumbo p0, "not_available"
 
     .line 15
     .line 16
-    return-object v0
+    .line 17
+    return-object p0
+
+    .line 18
+    :cond_0
+    invoke-virtual {p0}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object p0
+
+    .line 22
+    invoke-static {p0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 23
+    .line 24
+    .line 25
+    return-object p0
 .end method

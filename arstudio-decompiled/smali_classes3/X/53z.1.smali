@@ -1,3 +1,25 @@
-.class public interface abstract LX/53z;
-.super Ljava/lang/Object;
+.class public final LX/53z;
+.super LX/54N;
 .source ""
+
+
+# instance fields
+.field public final synthetic A00:LX/534;
+
+
+# direct methods
+.method public constructor <init>(LX/534;LX/53e;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/53z;->A00:LX/534;
+
+    .line 1
+    .line 2
+    invoke-direct {p0, p2}, LX/54N;-><init>(LX/53e;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method

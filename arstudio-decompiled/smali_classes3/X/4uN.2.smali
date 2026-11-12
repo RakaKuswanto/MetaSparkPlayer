@@ -2,106 +2,105 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RecyclerView$1"
-
 
 # instance fields
-.field public final synthetic A00:Landroidx/recyclerview/widget/RecyclerView;
+.field public A00:F
+
+.field public A01:F
+
+.field public A02:F
+
+.field public A03:I
+
+.field public A04:I
+
+.field public A05:I
+
+.field public A06:I
+
+.field public A07:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4uN;->A00:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    invoke-virtual {p0}, LX/4uN;->A00()V
+
     .line 4
     .line 5
+    .line 6
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final A00()V
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/4uN;->A00:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    iget-boolean v0, v1, Landroidx/recyclerview/widget/RecyclerView;->A01:Z
+    iput-object v0, p0, LX/4uN;->A07:Ljava/lang/CharSequence;
 
+    .line 2
     .line 3
+    const/4 v0, 0x2
+
     .line 4
-    if-eqz v0, :cond_0
+    iput v0, p0, LX/4uN;->A06:I
 
     .line 5
     .line 6
-    invoke-virtual {v1}, Landroid/view/View;->isLayoutRequested()Z
+    const v1, -0x800001
 
     .line 7
     .line 8
     .line 9
-    move-result v0
+    iput v1, p0, LX/4uN;->A00:F
 
     .line 10
-    if-nez v0, :cond_0
-
     .line 11
+    const/4 v0, 0x1
+
     .line 12
-    iget-boolean v0, v1, Landroidx/recyclerview/widget/RecyclerView;->A0U:Z
+    iput v0, p0, LX/4uN;->A04:I
 
     .line 13
     .line 14
-    if-nez v0, :cond_1
+    const/4 v0, 0x0
 
     .line 15
-    .line 16
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->requestLayout()V
+    iput v0, p0, LX/4uN;->A03:I
 
+    .line 16
     .line 17
+    iput v1, p0, LX/4uN;->A01:F
+
     .line 18
     .line 19
-    :cond_0
-    return-void
+    const/high16 v0, -0x80000000
 
     .line 20
-    :cond_1
-    iget-boolean v0, v1, Landroidx/recyclerview/widget/RecyclerView;->A0W:Z
-
     .line 21
+    iput v0, p0, LX/4uN;->A05:I
+
     .line 22
-    if-eqz v0, :cond_2
-
     .line 23
-    .line 24
-    const/4 v0, 0x1
+    const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 24
     .line 25
-    iput-boolean v0, v1, Landroidx/recyclerview/widget/RecyclerView;->A03:Z
+    iput v0, p0, LX/4uN;->A02:F
 
     .line 26
     .line 27
-    return-void
-
-    .line 28
-    :cond_2
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->A0c()V
-
-    .line 29
-    .line 30
-    .line 31
     return-void
 .end method

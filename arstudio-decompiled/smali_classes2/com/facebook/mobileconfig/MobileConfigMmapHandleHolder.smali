@@ -1,5 +1,5 @@
 .class public Lcom/facebook/mobileconfig/MobileConfigMmapHandleHolder;
-.super LX/3l7;
+.super LX/34b;
 .source ""
 
 
@@ -12,7 +12,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/0Yh;->A0l()V
+    invoke-static {}, LX/0X4;->A0y()V
 
     .line 1
     .line 2
@@ -24,7 +24,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3l7;-><init>()V
+    invoke-direct {p0}, LX/34b;-><init>()V
 
     .line 1
     .line 2
@@ -45,7 +45,7 @@
     .locals 1
 
     .line 0
-    invoke-virtual {p0}, Lcom/facebook/mobileconfig/MobileConfigMmapHandleHolder;->getFilename()Ljava/lang/String;
+    invoke-virtual {p0}, LX/339;->getFilename()Ljava/lang/String;
 
     .line 1
     .line 2
@@ -53,7 +53,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, LX/3l7;->A00(Ljava/lang/String;)Ljava/nio/MappedByteBuffer;
+    invoke-static {v0}, LX/34b;->A00(Ljava/lang/String;)Ljava/nio/MappedByteBuffer;
 
     .line 5
     .line 6

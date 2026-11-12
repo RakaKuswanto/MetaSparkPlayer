@@ -1,5 +1,5 @@
 .class public final LX/5W0;
-.super Ljava/lang/Object;
+.super LX/5Vy;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/5Vy;-><init>()V
 
     .line 1
     .line 2

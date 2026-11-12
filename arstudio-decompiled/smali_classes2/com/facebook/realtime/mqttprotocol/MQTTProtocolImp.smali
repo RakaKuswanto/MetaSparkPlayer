@@ -4,21 +4,19 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
-
-.field public final mBRStreamSender:LX/0Na;
+.field public final mBRStreamSender:LX/0RP;
 
 .field public final mConnectionCallback:Ljava/util/Map;
 
-.field public final mConnectionStarter:LX/0Na;
+.field public final mConnectionStarter:LX/0RP;
 
-.field public final mExecutorService:LX/0Na;
+.field public final mExecutorService:LX/0RP;
 
 .field public final mMessageCallback:Ljava/util/Map;
 
-.field public final mMonotonicClock:LX/0Na;
+.field public final mMonotonicClock:LX/0RP;
 
-.field public final mMqttConnectionConfigManager:LX/0Na;
+.field public final mMqttConnectionConfigManager:LX/0RP;
 
 
 # direct methods
@@ -31,7 +29,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -39,8 +37,8 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,121 +46,106 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->Ajb:I
+    sget v0, LX/2I6;->AbO:I
 
     .line 4
     .line 5
-    const/4 v1, 0x0
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 6
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
     .line 7
     .line 8
-    .line 9
     move-result-object v0
+
+    .line 9
+    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mExecutorService:LX/0RP;
 
     .line 10
-    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mExecutorService:LX/0Na;
-
     .line 11
+    sget v0, LX/2I6;->AQI:I
+
     .line 12
-    sget v0, LX/2eq;->AX6:I
-
     .line 13
-    .line 14
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
+    .line 14
     .line 15
     .line 16
-    .line 17
     move-result-object v0
+
+    .line 17
+    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMqttConnectionConfigManager:LX/0RP;
 
     .line 18
-    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMqttConnectionConfigManager:LX/0Na;
-
     .line 19
+    sget v0, LX/2I6;->A0A:I
+
     .line 20
-    sget v0, LX/2eq;->A0C:I
-
     .line 21
-    .line 22
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
+    .line 22
     .line 23
     .line 24
-    .line 25
     move-result-object v0
+
+    .line 25
+    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mConnectionStarter:LX/0RP;
 
     .line 26
-    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mConnectionStarter:LX/0Na;
-
     .line 27
+    sget v0, LX/2I6;->AbP:I
+
     .line 28
-    sget v0, LX/2eq;->Ajc:I
-
     .line 29
-    .line 30
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
+    .line 30
     .line 31
     .line 32
-    .line 33
     move-result-object v0
+
+    .line 33
+    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mBRStreamSender:LX/0RP;
 
     .line 34
-    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mBRStreamSender:LX/0Na;
-
     .line 35
-    .line 36
-    invoke-static {}, LX/0Zq;->A02()LX/0Zq;
+    invoke-static {}, LX/0lf;->A02()LX/0lf;
 
+    .line 36
     .line 37
     .line 38
-    .line 39
     move-result-object v0
+
+    .line 39
+    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMonotonicClock:LX/0RP;
 
     .line 40
-    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMonotonicClock:LX/0Na;
-
     .line 41
-    .line 42
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-static {}, LX/0X2;->A0p()Ljava/util/Map;
 
+    .line 42
     .line 43
     .line 44
+    move-result-object v0
+
     .line 45
-    move-result-object v0
-
-    .line 46
-    iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->_UL_mInjectionContext:LX/1zG;
-
-    .line 47
-    .line 48
-    invoke-static {}, LX/0Ye;->A0b()Ljava/util/Map;
-
-    .line 49
-    .line 50
-    .line 51
-    move-result-object v0
-
-    .line 52
     iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMessageCallback:Ljava/util/Map;
 
-    .line 53
-    .line 54
-    invoke-static {}, LX/0Ye;->A0b()Ljava/util/Map;
+    .line 46
+    .line 47
+    invoke-static {}, LX/0X2;->A0p()Ljava/util/Map;
 
-    .line 55
-    .line 56
-    .line 57
+    .line 48
+    .line 49
+    .line 50
     move-result-object v0
 
-    .line 58
+    .line 51
     iput-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mConnectionCallback:Ljava/util/Map;
 
-    .line 59
-    .line 60
+    .line 52
+    .line 53
     return-void
 .end method
 
@@ -172,11 +155,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMqttConnectionConfigManager:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMqttConnectionConfigManager:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -184,15 +167,15 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/1sW;
+    check-cast v0, LX/1l2;
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/1sW;->A06:LX/0UP;
+    iget-object v0, v0, LX/1l2;->A05:LX/0Un;
 
     .line 9
     .line 10
-    iget-object v0, v0, LX/0UP;->A0T:Ljava/lang/String;
+    iget-object v0, v0, LX/0Un;->A0U:Ljava/lang/String;
 
     .line 11
     .line 12
@@ -224,7 +207,7 @@
     move-result-object v0
 
     .line 11
-    invoke-static {v0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v0}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 12
     .line 13
@@ -245,7 +228,7 @@
 
     .line 20
     .line 21
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 22
     .line 23
@@ -286,7 +269,7 @@
     .locals 8
 
     .line 0
-    sget-object v0, LX/1cP;->A00:Ljava/util/HashSet;
+    sget-object v0, LX/1f3;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2
@@ -308,11 +291,11 @@
     move-object v3, p0
 
     .line 10
-    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMonotonicClock:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mMonotonicClock:LX/0RP;
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/0Yd;->A07(LX/0Na;)J
+    invoke-static {v0}, LX/0X1;->A04(LX/0RP;)J
 
     .line 13
     .line 14
@@ -320,11 +303,11 @@
     move-result-wide v6
 
     .line 16
-    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mExecutorService:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mExecutorService:LX/0RP;
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/0Yi;->A0b(LX/0Na;)LX/1iJ;
+    invoke-static {v0}, LX/0X6;->A0c(LX/0RP;)LX/26x;
 
     .line 19
     .line 20
@@ -332,11 +315,11 @@
     move-result-object v2
 
     .line 22
-    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mBRStreamSender:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mBRStreamSender:LX/0RP;
 
     .line 23
     .line 24
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 25
     .line 26
@@ -344,20 +327,20 @@
     move-result-object v1
 
     .line 28
-    check-cast v1, LX/2e5;
+    check-cast v1, LX/0kY;
 
     .line 29
     .line 30
-    new-instance v0, LX/2k8;
+    new-instance v0, LX/0nM;
 
     .line 31
     .line 32
-    invoke-direct {v0, v1, p1, p2}, LX/2k8;-><init>(LX/2e5;Ljava/lang/String;[B)V
+    invoke-direct {v0, v1, p1, p2}, LX/0nM;-><init>(LX/0kY;Ljava/lang/String;[B)V
 
     .line 33
     .line 34
     .line 35
-    invoke-interface {v2, v0}, LX/1iJ;->ApL(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-interface {v2, v0}, LX/26x;->Ao5(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 36
     .line 37
@@ -365,23 +348,23 @@
     move-result-object v1
 
     .line 39
-    new-instance v2, LX/2k7;
+    new-instance v2, LX/1f5;
 
     .line 40
     .line 41
     move-object v4, p3
 
     .line 42
-    invoke-direct/range {v2 .. v7}, LX/2k7;-><init>(Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;Lcom/facebook/realtime/mqttprotocol/PublishCallback;Ljava/lang/String;J)V
+    invoke-direct/range {v2 .. v7}, LX/1f5;-><init>(Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;Lcom/facebook/realtime/mqttprotocol/PublishCallback;Ljava/lang/String;J)V
 
     .line 43
     .line 44
     .line 45
-    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mExecutorService:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mExecutorService:LX/0RP;
 
     .line 46
     .line 47
-    invoke-static {v0, v2, v1}, LX/1xZ;->A00(LX/0Na;LX/1RS;Lcom/google/common/util/concurrent/ListenableFuture;)V
+    invoke-static {v0, v2, v1}, LX/3fC;->A00(LX/0RP;LX/1tL;Lcom/google/common/util/concurrent/ListenableFuture;)V
 
     .line 48
     .line 49
@@ -394,7 +377,7 @@
     .locals 1
 
     .line 0
-    sget-object v0, LX/1cP;->A01:Ljava/util/HashSet;
+    sget-object v0, LX/1f3;->A01:Ljava/util/HashSet;
 
     .line 1
     .line 2
@@ -427,7 +410,7 @@
     .locals 6
 
     .line 0
-    sget-object v0, LX/1cP;->A01:Ljava/util/HashSet;
+    sget-object v0, LX/1f3;->A01:Ljava/util/HashSet;
 
     .line 1
     .line 2
@@ -456,11 +439,11 @@
     .line 13
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mConnectionStarter:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->mConnectionStarter:LX/0RP;
 
     .line 16
     .line 17
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 18
     .line 19
@@ -468,11 +451,11 @@
     move-result-object v5
 
     .line 21
-    check-cast v5, LX/2iN;
+    check-cast v5, LX/1f6;
 
     .line 22
     .line 23
-    iget-object v4, v5, LX/2iN;->A05:Ljava/lang/Object;
+    iget-object v4, v5, LX/1f6;->A04:Ljava/lang/Object;
 
     .line 24
     .line 25
@@ -480,7 +463,7 @@
 
     .line 26
     :try_start_0
-    iget-boolean v0, v5, LX/2iN;->A01:Z
+    iget-boolean v0, v5, LX/1f6;->A01:Z
 
     .line 27
     .line 28
@@ -488,11 +471,11 @@
 
     .line 29
     .line 30
-    iget-object v0, v5, LX/2iN;->A04:LX/0Na;
+    iget-object v0, v5, LX/1f6;->A03:LX/0RP;
 
     .line 31
     .line 32
-    invoke-static {v0}, LX/24c;->A00(LX/0Na;)LX/24c;
+    invoke-static {v0}, LX/1Ct;->A00(LX/0RP;)LX/1Ct;
 
     .line 33
     .line 34
@@ -500,112 +483,105 @@
     move-result-object v3
 
     .line 36
-    const-string v2, "com.facebook.push.mqtt.ACTION_CHANNEL_STATE_CHANGED"
+    const-string/jumbo v2, "com.facebook.push.mqtt.ACTION_CHANNEL_STATE_CHANGED"
 
     .line 37
     .line 38
-    const/4 v1, 0x2
-
     .line 39
-    new-instance v0, LX/1ns;
+    const/4 v1, 0x1
 
     .line 40
-    .line 41
-    invoke-direct {v0, v5, v1, p0}, LX/1ns;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    new-instance v0, LX/0Z0;
 
+    .line 41
     .line 42
+    invoke-direct {v0, v5, v1, p0}, LX/0Z0;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
     .line 43
     .line 44
-    invoke-virtual {v3, v0, v2}, LX/24c;->A04(LX/05i;Ljava/lang/String;)V
-
     .line 45
+    invoke-static {v3, v0, v2}, LX/1Ct;->A02(LX/1Ct;LX/0Lj;Ljava/lang/String;)V
+
     .line 46
     .line 47
-    invoke-static {v3}, LX/24c;->A01(LX/24c;)V
-
     .line 48
+    iput-boolean v1, v5, LX/1f6;->A01:Z
+
     .line 49
     .line 50
-    const/4 v0, 0x1
-
-    .line 51
-    iput-boolean v0, v5, LX/2iN;->A01:Z
-
-    .line 52
-    .line 53
     :cond_0
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 54
-    iget-object v0, v5, LX/2iN;->A03:LX/0Na;
+    .line 51
+    iget-object v0, v5, LX/1f6;->A02:LX/0RP;
 
+    .line 52
+    .line 53
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 54
     .line 55
     .line 56
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 57
-    .line 58
-    .line 59
     move-result-object v0
 
-    .line 60
-    check-cast v0, LX/30C;
+    .line 57
+    check-cast v0, LX/1rs;
 
+    .line 58
+    .line 59
+    invoke-virtual {v0}, LX/1rs;->A01()Z
+
+    .line 60
     .line 61
     .line 62
-    invoke-virtual {v0}, LX/30C;->A01()Z
-
-    .line 63
-    .line 64
-    .line 65
     move-result v0
 
-    .line 66
+    .line 63
     if-eqz v0, :cond_2
 
-    .line 67
-    .line 68
+    .line 64
+    .line 65
     invoke-virtual {p0}, Lcom/facebook/realtime/mqttprotocol/MQTTProtocolImp;->onConnected()V
 
-    .line 69
-    .line 70
-    .line 71
+    .line 66
+    .line 67
+    .line 68
     return-void
 
-    .line 72
+    .line 69
     :catchall_0
     move-exception v0
 
-    .line 73
+    .line 70
     :try_start_1
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 74
+    .line 71
     throw v0
 
-    .line 75
+    .line 72
     :cond_1
     invoke-static {p1}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 76
-    .line 77
-    .line 78
+    .line 73
+    .line 74
+    .line 75
     move-result-object v1
 
-    .line 79
+    .line 76
     const-string v0, "MQTT subscribeToStateChange topic %s not supported"
 
+    .line 77
+    .line 78
+    invoke-static {v2, v0, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 79
     .line 80
     .line 81
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 82
-    .line 83
-    .line 84
     :cond_2
     return-void
 .end method
@@ -614,7 +590,7 @@
     .locals 1
 
     .line 0
-    sget-object v0, LX/1cP;->A01:Ljava/util/HashSet;
+    sget-object v0, LX/1f3;->A01:Ljava/util/HashSet;
 
     .line 1
     .line 2
@@ -647,7 +623,7 @@
     .locals 3
 
     .line 0
-    sget-object v0, LX/1cP;->A01:Ljava/util/HashSet;
+    sget-object v0, LX/1f3;->A01:Ljava/util/HashSet;
 
     .line 1
     .line 2
@@ -692,7 +668,7 @@
 
     .line 21
     .line 22
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 23
     .line 24

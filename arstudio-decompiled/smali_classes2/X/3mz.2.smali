@@ -1,5 +1,5 @@
-.class public final LX/3mz;
-.super Ljava/lang/ThreadLocal;
+.class public final LX/3mZ;
+.super LX/3nV;
 .source ""
 
 
@@ -8,27 +8,10 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
+    invoke-direct {p0}, LX/3nV;-><init>()V
 
     .line 1
     .line 2
     .line 3
     return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic initialValue()Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x400
-
-    .line 1
-    .line 2
-    new-array v0, v0, [C
-
-    .line 3
-    .line 4
-    return-object v0
 .end method

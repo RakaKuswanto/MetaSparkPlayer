@@ -1,185 +1,124 @@
-.class public final LX/0MF;
-.super LX/0Vl;
+.class public final LX/0Mf;
+.super LX/01S;
 .source ""
 
 
-# static fields
-.field public static final serialVersionUID:J
-
-
 # instance fields
-.field public final reference:Ljava/lang/Object;
+.field public final A00:Landroid/app/job/JobInfo;
+
+.field public final A01:Landroid/app/job/JobScheduler;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/ComponentName;Landroid/content/Context;I)V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, LX/0Vl;-><init>()V
+    invoke-direct {p0, p1}, LX/01S;-><init>(Landroid/content/ComponentName;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/0MF;->reference:Ljava/lang/Object;
+    invoke-virtual {p0, p3}, LX/01S;->A03(I)V
 
     .line 4
     .line 5
-    return-void
-.end method
-
-.method public static A00(Ljava/lang/Object;)LX/0MF;
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 1
-    .line 2
-    .line 3
-    new-instance v0, LX/0MF;
-
-    .line 4
-    .line 5
-    invoke-direct {v0, p0}, LX/0MF;-><init>(Ljava/lang/Object;)V
-
     .line 6
+    iget-object v0, p0, LX/01S;->A02:Landroid/content/ComponentName;
+
     .line 7
     .line 8
-    return-object v0
+    new-instance v2, Landroid/app/job/JobInfo$Builder;
+
+    .line 9
+    .line 10
+    invoke-direct {v2, p3, v0}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
+
+    .line 11
+    .line 12
+    .line 13
+    const-wide/16 v0, 0x0
+
+    .line 14
+    .line 15
+    invoke-virtual {v2, v0, v1}, Landroid/app/job/JobInfo$Builder;->setOverrideDeadline(J)Landroid/app/job/JobInfo$Builder;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-virtual {v0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    iput-object v0, p0, LX/0Mf;->A00:Landroid/app/job/JobInfo;
+
+    .line 24
+    .line 25
+    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v1
+
+    .line 29
+    const-string v0, "jobscheduler"
+
+    .line 30
+    .line 31
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
+
+    .line 35
+    check-cast v0, Landroid/app/job/JobScheduler;
+
+    .line 36
+    .line 37
+    iput-object v0, p0, LX/0Mf;->A01:Landroid/app/job/JobScheduler;
+
+    .line 38
+    .line 39
+    return-void
 .end method
 
 
 # virtual methods
-.method public final A02()Ljava/lang/Object;
-    .locals 1
+.method public final A04(Landroid/content/Intent;)V
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/0MF;->reference:Ljava/lang/Object;
+    iget-object v2, p0, LX/0Mf;->A01:Landroid/app/job/JobScheduler;
 
     .line 1
     .line 2
-    return-object v0
-.end method
-
-.method public final A03()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    .line 0
-    instance-of v0, p1, LX/0MF;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    iget-object v1, p0, LX/0Mf;->A00:Landroid/app/job/JobInfo;
 
     .line 3
     .line 4
-    check-cast p1, LX/0MF;
+    new-instance v0, Landroid/app/job/JobWorkItem;
 
     .line 5
     .line 6
-    iget-object v1, p0, LX/0MF;->reference:Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    iget-object v0, p1, LX/0MF;->reference:Ljava/lang/Object;
-
-    .line 9
-    .line 10
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    return v0
-
-    .line 15
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 16
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/0MF;->reference:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v1
-
-    .line 6
-    const v0, 0x598df91c
+    invoke-direct {v0, p1}, Landroid/app/job/JobWorkItem;-><init>(Landroid/content/Intent;)V
 
     .line 7
     .line 8
     .line 9
-    add-int/2addr v1, v0
-
-    .line 10
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    const-string v0, "Optional.of("
-
-    .line 5
-    .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 7
-    .line 8
-    .line 9
-    iget-object v0, p0, LX/0MF;->reference:Ljava/lang/Object;
+    invoke-virtual {v2, v1, v0}, Landroid/app/job/JobScheduler;->enqueue(Landroid/app/job/JobInfo;Landroid/app/job/JobWorkItem;)I
 
     .line 10
     .line 11
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 12
-    .line 13
-    .line 14
-    const-string v0, ")"
-
-    .line 15
-    .line 16
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
-    return-object v0
+    return-void
 .end method

@@ -1,3 +1,34 @@
-.class public interface abstract LX/5vq;
+.class public abstract LX/5vQ;
 .super Ljava/lang/Object;
 .source ""
+
+
+# instance fields
+.field public A00:LX/5uh;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    new-instance v0, LX/5uh;
+
+    .line 4
+    .line 5
+    invoke-direct {v0}, LX/5uh;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    iput-object v0, p0, LX/5vQ;->A00:LX/5uh;
+
+    .line 9
+    .line 10
+    return-void
+.end method

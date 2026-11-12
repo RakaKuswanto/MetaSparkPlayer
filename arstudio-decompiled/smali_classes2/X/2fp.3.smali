@@ -4,44 +4,22 @@
 
 
 # instance fields
-.field public A00:Ljava/util/concurrent/atomic/AtomicReference;
+.field public A00:LX/2g4;
 
-.field public final A01:LX/1Nm;
+.field public A01:Lcom/facebook/privacy/zone/api/ZonedValue;
 
-.field public final A02:Landroid/content/Context;
+.field public A02:Ljava/util/Stack;
 
-.field public final A03:LX/1Nw;
+.field public A03:[LX/2gl;
 
-.field public final A04:LX/1Nm;
+.field public final A04:LX/0RP;
 
-.field public final A05:LX/1Nm;
-
-.field public final A06:LX/1Nm;
-
-.field public final A07:LX/1Nm;
-
-.field public final A08:LX/1Nm;
-
-.field public final A09:LX/1Nm;
-
-.field public final A0A:LX/1Nm;
-
-.field public final A0B:LX/1Nm;
-
-.field public final A0C:LX/1Nm;
-
-.field public final A0D:LX/1Nm;
-
-.field public final A0E:LX/3KI;
-
-.field public final A0F:LX/3KH;
-
-.field public final A0G:Ljava/util/Timer;
+.field public final A05:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,27 +27,276 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2fp;->A03:LX/1Nw;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 4
     .line 5
-    invoke-static {}, LX/1Nl;->A05()LX/1Nm;
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/2fp;->A05:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    const/4 v0, 0x0
+
+    .line 10
+    iput-object v0, p0, LX/2fp;->A03:[LX/2gl;
+
+    .line 11
+    .line 12
+    new-instance v0, Ljava/util/Stack;
+
+    .line 13
+    .line 14
+    invoke-direct {v0}, Ljava/util/Stack;-><init>()V
+
+    .line 15
+    .line 16
+    .line 17
+    iput-object v0, p0, LX/2fp;->A02:Ljava/util/Stack;
+
+    .line 18
+    .line 19
+    sget v0, LX/2I6;->A40:I
+
+    .line 20
+    .line 21
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    iput-object v0, p0, LX/2fp;->A04:LX/0RP;
+
+    .line 26
+    .line 27
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()Lcom/google/common/base/Optional;
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/2fp;->A05:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v2
+
+    .line 3
+    :try_start_0
+    iget-object v1, p0, LX/2fp;->A00:LX/2g4;
+
+    .line 4
+    .line 5
+    if-eqz v1, :cond_0
+
+    .line 6
+    .line 7
+    new-instance v0, Lcom/google/common/base/Present;
+
+    .line 8
+    .line 9
+    invoke-direct {v0, v1}, Lcom/google/common/base/Present;-><init>(Ljava/lang/Object;)V
+
+    .line 10
+    .line 11
+    .line 12
+    :goto_0
+    monitor-exit v2
+
+    .line 13
+    goto :goto_1
+
+    .line 14
+    :cond_0
+    iget-object v0, p0, LX/2fp;->A02:Ljava/util/Stack;
+
+    .line 15
+    .line 16
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    if-eqz v0, :cond_1
+
+    .line 21
+    .line 22
+    sget-object v0, Lcom/google/common/base/Absent;->INSTANCE:Lcom/google/common/base/Absent;
+
+    .line 23
+    .line 24
+    goto :goto_0
+
+    .line 25
+    :cond_1
+    iget-object v0, p0, LX/2fp;->A02:Ljava/util/Stack;
+
+    .line 26
+    .line 27
+    invoke-virtual {v0}, Ljava/util/Stack;->peek()Ljava/lang/Object;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    check-cast v0, LX/2g4;
+
+    .line 32
+    .line 33
+    invoke-static {v0}, Lcom/google/common/base/Optional;->fromNullable(Ljava/lang/Object;)Lcom/google/common/base/Optional;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    goto :goto_0
+
+    .line 38
+    :goto_1
+    return-object v0
+
+    .line 39
+    :catchall_0
+    move-exception v0
+
+    .line 40
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 41
+    throw v0
+.end method
+
+.method public final A01()Lcom/google/common/base/Optional;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/2fp;->A05:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v1
+
+    .line 3
+    :try_start_0
+    iget-object v0, p0, LX/2fp;->A02:Ljava/util/Stack;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     .line 6
     .line 7
     .line 8
-    move-result-object v0
+    move-result v0
 
     .line 9
-    iput-object v0, p0, LX/2fp;->A0A:LX/1Nm;
+    if-eqz v0, :cond_0
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->A0M:I
+    sget-object v0, Lcom/google/common/base/Absent;->INSTANCE:Lcom/google/common/base/Absent;
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    :goto_0
+    monitor-exit v1
+
+    .line 14
+    goto :goto_1
+
+    .line 15
+    :cond_0
+    iget-object v0, p0, LX/2fp;->A02:Ljava/util/Stack;
+
+    .line 16
+    .line 17
+    invoke-virtual {v0}, Ljava/util/Stack;->peek()Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    check-cast v0, LX/2g4;
+
+    .line 22
+    .line 23
+    invoke-static {v0}, Lcom/google/common/base/Optional;->fromNullable(Ljava/lang/Object;)Lcom/google/common/base/Optional;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    goto :goto_0
+
+    .line 28
+    :goto_1
+    return-object v0
+
+    .line 29
+    :catchall_0
+    move-exception v0
+
+    .line 30
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 31
+    throw v0
+.end method
+
+.method public final A02()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    const-string/jumbo v2, "unknown"
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0}, LX/2fp;->A00()Lcom/google/common/base/Optional;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    invoke-virtual {v1}, Lcom/google/common/base/Optional;->isPresent()Z
+
+    .line 8
+    .line 9
+    .line 10
+    move-result v0
+
+    .line 11
+    if-eqz v0, :cond_0
+
+    .line 12
+    .line 13
+    invoke-virtual {v1}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
 
     .line 14
     .line 15
@@ -77,223 +304,22 @@
     move-result-object v0
 
     .line 17
-    iput-object v0, p0, LX/2fp;->A06:LX/1Nm;
+    check-cast v0, LX/2g4;
 
     .line 18
     .line 19
-    const/4 v0, 0x0
+    iget-object v0, v0, LX/2g4;->A02:Ljava/lang/String;
 
     .line 20
-    invoke-static {v0}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
-
     .line 21
+    if-nez v0, :cond_1
+
     .line 22
     .line 23
-    move-result-object v0
+    :cond_0
+    return-object v2
 
     .line 24
-    iput-object v0, p0, LX/2fp;->A00:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 25
-    .line 26
-    sget v0, LX/2eq;->A5B:I
-
-    .line 27
-    .line 28
-    iget-object v2, p1, LX/1Nw;->A00:LX/1zG;
-
-    .line 29
-    .line 30
-    invoke-static {v2, v0}, LX/1zE;->A02(LX/1zG;I)Landroid/content/Context;
-
-    .line 31
-    .line 32
-    .line 33
-    move-result-object v1
-
-    .line 34
-    iput-object v1, p0, LX/2fp;->A02:Landroid/content/Context;
-
-    .line 35
-    .line 36
-    sget v0, LX/2eq;->A8C:I
-
-    .line 37
-    .line 38
-    invoke-static {v1, v0}, LX/2vY;->A00(Landroid/content/Context;I)LX/1Nm;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-
-    .line 42
-    iput-object v0, p0, LX/2fp;->A04:LX/1Nm;
-
-    .line 43
-    .line 44
-    sget v0, LX/2eq;->AHw:I
-
-    .line 45
-    .line 46
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    iput-object v0, p0, LX/2fp;->A0B:LX/1Nm;
-
-    .line 51
-    .line 52
-    sget v0, LX/2eq;->AVc:I
-
-    .line 53
-    .line 54
-    invoke-static {v2, v0}, LX/1PK;->A01(LX/1zG;I)LX/1Nm;
-
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v0
-
-    .line 58
-    iput-object v0, p0, LX/2fp;->A0D:LX/1Nm;
-
-    .line 59
-    .line 60
-    sget v0, LX/2eq;->ABV:I
-
-    .line 61
-    .line 62
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    iput-object v0, p0, LX/2fp;->A0C:LX/1Nm;
-
-    .line 67
-    .line 68
-    sget v0, LX/2eq;->A8I:I
-
-    .line 69
-    .line 70
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 71
-    .line 72
-    .line 73
-    move-result-object v0
-
-    .line 74
-    iput-object v0, p0, LX/2fp;->A01:LX/1Nm;
-
-    .line 75
-    .line 76
-    invoke-static {}, LX/1Nl;->A06()LX/1Nm;
-
-    .line 77
-    .line 78
-    .line 79
-    move-result-object v0
-
-    .line 80
-    iput-object v0, p0, LX/2fp;->A05:LX/1Nm;
-
-    .line 81
-    .line 82
-    sget v0, LX/2eq;->AVe:I
-
-    .line 83
-    .line 84
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 85
-    .line 86
-    .line 87
-    move-result-object v0
-
-    .line 88
-    iput-object v0, p0, LX/2fp;->A07:LX/1Nm;
-
-    .line 89
-    .line 90
-    sget v0, LX/2eq;->AVX:I
-
-    .line 91
-    .line 92
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 93
-    .line 94
-    .line 95
-    move-result-object v0
-
-    .line 96
-    iput-object v0, p0, LX/2fp;->A09:LX/1Nm;
-
-    .line 97
-    .line 98
-    sget v0, LX/2eq;->AVY:I
-
-    .line 99
-    .line 100
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 101
-    .line 102
-    .line 103
-    move-result-object v0
-
-    .line 104
-    iput-object v0, p0, LX/2fp;->A08:LX/1Nm;
-
-    .line 105
-    .line 106
-    new-instance v0, Ljava/util/Timer;
-
-    .line 107
-    .line 108
-    invoke-direct {v0}, Ljava/util/Timer;-><init>()V
-
-    .line 109
-    .line 110
-    .line 111
-    iput-object v0, p0, LX/2fp;->A0G:Ljava/util/Timer;
-
-    .line 112
-    .line 113
-    new-instance v0, LX/3KI;
-
-    .line 114
-    .line 115
-    invoke-direct {v0, p0}, LX/3KI;-><init>(LX/2fp;)V
-
-    .line 116
-    .line 117
-    .line 118
-    iput-object v0, p0, LX/2fp;->A0E:LX/3KI;
-
-    .line 119
-    .line 120
-    new-instance v0, LX/3KH;
-
-    .line 121
-    .line 122
-    invoke-direct {v0, p0}, LX/3KH;-><init>(LX/2fp;)V
-
-    .line 123
-    .line 124
-    .line 125
-    iput-object v0, p0, LX/2fp;->A0F:LX/3KH;
-
-    .line 126
-    .line 127
-    return-void
+    :cond_1
+    return-object v0
 .end method

@@ -1,28 +1,28 @@
 .class public final LX/6Pm;
-.super Ljava/lang/Object;
+.super Lcom/facebook/msys/mci/EventLogSubscriber;
 .source ""
-
-# interfaces
-.implements LX/54Y;
 
 
 # instance fields
-.field public final A00:I
+.field public final synthetic A00:Lcom/facebook/msys/mci/NoOpAnalytics;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Lcom/facebook/msys/mci/NoOpAnalytics;[Ljava/lang/String;)V
+    .locals 1
 
     .line 0
-    iput p1, p0, LX/6Pm;->A00:I
+    const/4 v0, 0x1
 
     .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/6Pm;->A00:Lcom/facebook/msys/mci/NoOpAnalytics;
 
+    .line 2
     .line 3
+    invoke-direct {p0, v0, p2}, Lcom/facebook/msys/mci/EventLogSubscriber;-><init>(I[Ljava/lang/String;)V
+
     .line 4
     .line 5
+    .line 6
     return-void
 .end method

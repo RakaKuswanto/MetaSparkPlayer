@@ -4,11 +4,9 @@
 
 
 # instance fields
-.field public final A00:Landroid/util/SparseArray;
+.field public final A00:Ljava/util/Map;
 
-.field public final A01:Ljava/util/List;
-
-.field public final A02:Ljava/util/Map;
+.field public final A01:Ljava/util/Map;
 
 
 # direct methods
@@ -21,7 +19,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/0X2;->A0p()Ljava/util/Map;
 
     .line 4
     .line 5
@@ -29,34 +27,21 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, LX/18B;->A02:Ljava/util/Map;
+    iput-object v0, p0, LX/18B;->A01:Ljava/util/Map;
 
     .line 8
     .line 9
-    new-instance v0, Landroid/util/SparseArray;
+    invoke-static {}, LX/0X2;->A0p()Ljava/util/Map;
 
     .line 10
     .line 11
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
     .line 12
-    .line 13
-    .line 14
-    iput-object v0, p0, LX/18B;->A00:Landroid/util/SparseArray;
-
-    .line 15
-    .line 16
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 17
-    .line 18
-    .line 19
     move-result-object v0
 
-    .line 20
-    iput-object v0, p0, LX/18B;->A01:Ljava/util/List;
+    .line 13
+    iput-object v0, p0, LX/18B;->A00:Ljava/util/Map;
 
-    .line 21
-    .line 22
+    .line 14
+    .line 15
     return-void
 .end method

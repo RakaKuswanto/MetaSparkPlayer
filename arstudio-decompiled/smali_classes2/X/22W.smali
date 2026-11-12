@@ -1,25 +1,211 @@
-.class public final LX/22W;
-.super Ljava/io/IOException;
+.class public final LX/22w;
+.super LX/22M;
 .source ""
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "LX/22M<",
+        "TE;>;"
+    }
+.end annotation
+
+
 # instance fields
-.field public final mStatusCode:I
+.field public final synthetic A00:LX/22u;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;)V
+.method public constructor <init>(LX/22u;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, LX/22w;->A00:LX/22u;
 
     .line 1
     .line 2
-    .line 3
-    iput p1, p0, LX/22W;->mStatusCode:I
+    invoke-direct {p0}, LX/22M;-><init>()V
 
+    .line 3
     .line 4
     .line 5
     return-void
+.end method
+
+
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/22w;->A00:LX/22u;
+
+    .line 1
+    .line 2
+    instance-of v0, v2, Lcom/google/common/collect/TreeMultiset;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    check-cast v2, Lcom/google/common/collect/TreeMultiset;
+
+    .line 7
+    .line 8
+    const/4 v1, 0x1
+
+    .line 9
+    new-instance v0, LX/0Xx;
+
+    .line 10
+    .line 11
+    invoke-direct {v0, v2, v1}, LX/0Xx;-><init>(Lcom/google/common/collect/TreeMultiset;I)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-object v0
+
+    .line 15
+    :cond_0
+    check-cast v2, Lcom/google/common/collect/AbstractMapBasedMultiset;
+
+    .line 16
+    .line 17
+    new-instance v0, LX/22z;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, v2}, LX/22z;-><init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
+
+    .line 20
+    .line 21
+    .line 22
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 8
+
+    .line 0
+    iget-object v7, p0, LX/22w;->A00:LX/22u;
+
+    .line 1
+    .line 2
+    instance-of v0, v7, Lcom/google/common/collect/TreeMultiset;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_2
+
+    .line 5
+    .line 6
+    check-cast v7, Lcom/google/common/collect/TreeMultiset;
+
+    .line 7
+    .line 8
+    sget-object v6, Lcom/google/common/collect/TreeMultiset$Aggregate;->DISTINCT:Lcom/google/common/collect/TreeMultiset$Aggregate;
+
+    .line 9
+    .line 10
+    iget-object v0, v7, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
+
+    .line 11
+    .line 12
+    iget-object v5, v0, LX/24K;->A00:Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    check-cast v5, LX/24B;
+
+    .line 15
+    .line 16
+    invoke-virtual {v6, v5}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/24B;)J
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-wide v3
+
+    .line 20
+    iget-object v2, v7, Lcom/google/common/collect/TreeMultiset;->A00:Lcom/google/common/collect/GeneralRange;
+
+    .line 21
+    .line 22
+    iget-boolean v0, v2, Lcom/google/common/collect/GeneralRange;->hasLowerBound:Z
+
+    .line 23
+    .line 24
+    if-eqz v0, :cond_0
+
+    .line 25
+    .line 26
+    invoke-static {v6, v5, v7}, Lcom/google/common/collect/TreeMultiset;->A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-wide v0
+
+    .line 30
+    sub-long/2addr v3, v0
+
+    .line 31
+    :cond_0
+    iget-boolean v0, v2, Lcom/google/common/collect/GeneralRange;->hasUpperBound:Z
+
+    .line 32
+    .line 33
+    if-eqz v0, :cond_1
+
+    .line 34
+    .line 35
+    invoke-static {v6, v5, v7}, Lcom/google/common/collect/TreeMultiset;->A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-wide v0
+
+    .line 39
+    sub-long/2addr v3, v0
+
+    .line 40
+    :cond_1
+    invoke-static {v3, v4}, LX/212;->A00(J)I
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v0
+
+    .line 44
+    return v0
+
+    .line 45
+    :cond_2
+    check-cast v7, Lcom/google/common/collect/AbstractMapBasedMultiset;
+
+    .line 46
+    .line 47
+    iget-object v0, v7, Lcom/google/common/collect/AbstractMapBasedMultiset;->A01:LX/231;
+
+    .line 48
+    .line 49
+    iget v0, v0, LX/231;->A02:I
+
+    .line 50
+    .line 51
+    return v0
 .end method

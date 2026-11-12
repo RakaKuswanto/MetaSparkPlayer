@@ -1,38 +1,25 @@
-.class public final LX/2Ro;
-.super Ljava/lang/Object;
+.class public final LX/2ro;
+.super LX/2sI;
 .source ""
 
 
 # instance fields
-.field public A00:J
-
-.field public A01:Z
+.field public final A00:LX/2Ui;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(LX/2Ui;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/2sI;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const-wide/16 v0, 0x0
+    iput-object p1, p0, LX/2ro;->A00:LX/2Ui;
 
     .line 4
     .line 5
-    iput-wide v0, p0, LX/2Ro;->A00:J
-
-    .line 6
-    .line 7
-    const/4 v0, 0x0
-
-    .line 8
-    iput-boolean v0, p0, LX/2Ro;->A01:Z
-
-    .line 9
-    .line 10
     return-void
 .end method

@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public delegate:LX/5UV;
+.field public delegate:LX/6BB;
 
 
 # direct methods
-.method public constructor <init>(LX/5UV;)V
+.method public constructor <init>(LX/6BB;)V
     .locals 0
 
     .line 0
@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/5UV;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/6BB;
 
     .line 4
     .line 5
@@ -30,7 +30,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/5UV;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/6BB;
 
     .line 1
     .line 2
@@ -38,11 +38,11 @@
 
     .line 3
     .line 4
-    check-cast v0, LX/5VS;
+    check-cast v0, LX/67R;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/5VS;->A00:Ljava/util/Map;
+    iget-object v0, v0, LX/67R;->A00:Ljava/util/Map;
 
     .line 7
     .line 8
@@ -75,7 +75,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/5UV;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/6BB;
 
     .line 1
     .line 2
@@ -83,11 +83,11 @@
 
     .line 3
     .line 4
-    check-cast v0, LX/5VS;
+    check-cast v0, LX/67R;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/5VS;->A01:Ljava/util/Map;
+    iget-object v0, v0, LX/67R;->A01:Ljava/util/Map;
 
     .line 7
     .line 8
@@ -120,7 +120,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/5UV;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/6BB;
 
     .line 1
     .line 2
@@ -128,11 +128,11 @@
 
     .line 3
     .line 4
-    check-cast v0, LX/5VS;
+    check-cast v0, LX/67R;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/5VS;->A00:Ljava/util/Map;
+    iget-object v0, v0, LX/67R;->A00:Ljava/util/Map;
 
     .line 7
     .line 8
@@ -149,7 +149,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/5UV;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;->delegate:LX/6BB;
 
     .line 1
     .line 2
@@ -157,11 +157,11 @@
 
     .line 3
     .line 4
-    check-cast v0, LX/5VS;
+    check-cast v0, LX/67R;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/5VS;->A01:Ljava/util/Map;
+    iget-object v0, v0, LX/67R;->A01:Ljava/util/Map;
 
     .line 7
     .line 8

@@ -4,24 +4,12 @@
 
 
 # instance fields
-.field public A00:I
-
-.field public A01:LX/2HC;
-
-.field public A02:Ljava/lang/Object;
-
-.field public final A03:LX/2DN;
-
-.field public final A04:LX/2Fs;
-
-.field public final A05:[Ljava/lang/Object;
-
-.field public final A06:LX/27m;
+.field public final A00:Landroid/content/pm/PackageManager;
 
 
 # direct methods
-.method public constructor <init>(LX/27m;LX/2DN;LX/2Fs;I)V
-    .locals 1
+.method public constructor <init>(Landroid/content/pm/PackageManager;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,144 +17,238 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2Ew;->A06:LX/27m;
+    iput-object p1, p0, LX/2Ew;->A00:Landroid/content/pm/PackageManager;
 
     .line 4
     .line 5
-    iput-object p2, p0, LX/2Ew;->A03:LX/2DN;
-
-    .line 6
-    .line 7
-    iput p4, p0, LX/2Ew;->A00:I
-
-    .line 8
-    .line 9
-    iput-object p3, p0, LX/2Ew;->A04:LX/2Fs;
-
-    .line 10
-    .line 11
-    new-array v0, p4, [Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    iput-object v0, p0, LX/2Ew;->A05:[Ljava/lang/Object;
-
-    .line 14
-    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(LX/2E2;Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 2
+.method public final A00()LX/2F0;
+    .locals 8
 
     .line 0
-    iget-object v1, p0, LX/2Ew;->A01:LX/2HC;
+    const/16 v2, 0x1088
 
     .line 1
     .line 2
-    new-instance v0, LX/2Gq;
+    const/4 v6, 0x0
 
     .line 3
-    .line 4
-    invoke-direct {v0, p1, v1, p2, p3}, LX/2Gq;-><init>(LX/2E2;LX/2HC;Ljava/lang/Object;Ljava/lang/String;)V
+    :try_start_0
+    iget-object v1, p0, LX/2Ew;->A00:Landroid/content/pm/PackageManager;
 
+    .line 4
     .line 5
+    const-string/jumbo v0, "com.LogiaGroup.LogiaDeck"
+
     .line 6
     .line 7
-    iput-object v0, p0, LX/2Ew;->A01:LX/2HC;
-
     .line 8
+    invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
     .line 9
-    return-void
-.end method
-
-.method public final A01(LX/2Dv;Ljava/lang/Object;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/2Ew;->A01:LX/2HC;
-
-    .line 1
-    .line 2
-    new-instance v0, LX/2Gs;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, p1, v1, p2}, LX/2Gs;-><init>(LX/2Dv;LX/2HC;Ljava/lang/Object;)V
-
-    .line 5
-    .line 6
-    .line 7
-    iput-object v0, p0, LX/2Ew;->A01:LX/2HC;
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final A02(Ljava/lang/String;)Z
-    .locals 3
-
-    .line 0
-    iget-object v1, p0, LX/2Ew;->A04:LX/2Fs;
-
-    .line 1
-    .line 2
-    if-eqz v1, :cond_0
-
-    .line 3
-    .line 4
-    iget-object v0, v1, LX/2Fs;->propertyName:Ljava/lang/String;
-
-    .line 5
-    .line 6
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 7
-    .line 8
-    .line 9
-    move-result v0
-
     .line 10
-    if-eqz v0, :cond_0
-
     .line 11
+    move-result-object v4
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 12
-    iget-object v2, v1, LX/2Fs;->deserializer:Lcom/fasterxml/jackson/databind/JsonDeserializer;
+    iget-object v0, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     .line 13
     .line 14
-    iget-object v1, p0, LX/2Ew;->A06:LX/27m;
+    if-eqz v0, :cond_2
 
     .line 15
     .line 16
-    iget-object v0, p0, LX/2Ew;->A03:LX/2DN;
+    iget-object v1, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     .line 17
     .line 18
-    invoke-virtual {v2, v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+    if-eqz v1, :cond_2
 
     .line 19
     .line 20
-    .line 21
-    move-result-object v0
+    const-string v0, "CarrierAttribution"
 
+    .line 21
     .line 22
-    iput-object v0, p0, LX/2Ew;->A02:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 23
     .line 24
-    const/4 v0, 0x1
-
     .line 25
-    return v0
+    move-result-object v1
 
     .line 26
-    :cond_0
-    const/4 v0, 0x0
+    const-string v0, "Verizon"
 
     .line 27
-    return v0
+    .line 28
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v0
+
+    .line 32
+    if-eqz v0, :cond_2
+
+    .line 33
+    .line 34
+    iget-object v7, v4, Landroid/content/pm/PackageInfo;->providers:[Landroid/content/pm/ProviderInfo;
+
+    .line 35
+    .line 36
+    if-eqz v7, :cond_2
+
+    .line 37
+    .line 38
+    array-length v5, v7
+
+    .line 39
+    const/4 v3, 0x0
+
+    .line 40
+    :goto_0
+    if-ge v3, v5, :cond_2
+
+    .line 41
+    .line 42
+    aget-object v2, v7, v3
+
+    .line 43
+    .line 44
+    iget-object v1, v2, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+
+    .line 45
+    .line 46
+    const-string/jumbo v0, "com.digitalturbine.ignite.installer"
+
+    .line 47
+    .line 48
+    .line 49
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 50
+    .line 51
+    .line 52
+    move-result v0
+
+    .line 53
+    if-eqz v0, :cond_1
+
+    .line 54
+    .line 55
+    iget-boolean v0, v2, Landroid/content/pm/ComponentInfo;->enabled:Z
+
+    .line 56
+    .line 57
+    if-eqz v0, :cond_2
+
+    .line 58
+    .line 59
+    iget-boolean v0, v2, Landroid/content/pm/ComponentInfo;->exported:Z
+
+    .line 60
+    .line 61
+    if-eqz v0, :cond_2
+
+    .line 62
+    .line 63
+    iget-object v0, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    .line 64
+    .line 65
+    if-eqz v0, :cond_2
+
+    .line 66
+    .line 67
+    sget-object v3, LX/2F1;->TRITIUM:LX/2F1;
+
+    .line 68
+    .line 69
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 70
+    .line 71
+    .line 72
+    move-result-object v2
+
+    .line 73
+    invoke-static {v4}, LX/2AH;->A00(Landroid/content/pm/PackageInfo;)Ljava/util/HashSet;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v1
+
+    .line 77
+    const-string/jumbo v0, "android.permission.INSTALL_PACKAGES"
+
+    .line 78
+    .line 79
+    .line 80
+    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    .line 81
+    .line 82
+    .line 83
+    move-result v0
+
+    .line 84
+    if-eqz v0, :cond_0
+
+    .line 85
+    .line 86
+    sget-object v0, LX/2F2;->INSTALL:LX/2F2;
+
+    .line 87
+    .line 88
+    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 89
+    .line 90
+    .line 91
+    :cond_0
+    iget v1, v4, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    .line 92
+    .line 93
+    iget-object v0, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    .line 94
+    .line 95
+    iget-boolean v0, v0, Landroid/content/pm/ApplicationInfo;->enabled:Z
+
+    .line 96
+    .line 97
+    new-instance v6, LX/2F0;
+
+    .line 98
+    .line 99
+    invoke-direct {v6, v3, v2, v1, v0}, LX/2F0;-><init>(LX/2F1;Ljava/util/Set;IZ)V
+
+    .line 100
+    .line 101
+    .line 102
+    :catch_0
+    return-object v6
+
+    .line 103
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
+
+    .line 104
+    .line 105
+    goto :goto_0
+
+    .line 106
+    :cond_2
+    return-object v6
 .end method

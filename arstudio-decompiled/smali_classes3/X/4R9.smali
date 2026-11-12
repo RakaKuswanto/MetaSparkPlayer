@@ -1,20 +1,25 @@
 .class public final LX/4R9;
-.super LX/20m;
+.super LX/4RF;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:LX/4R5;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/4R5;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x6
+    iput-object p1, p0, LX/4R9;->A00:LX/4R5;
 
     .line 1
-    invoke-direct {p0, v0}, LX/20m;-><init>(I)V
-
     .line 2
+    invoke-direct {p0}, LX/4RF;-><init>()V
+
     .line 3
     .line 4
+    .line 5
     return-void
 .end method

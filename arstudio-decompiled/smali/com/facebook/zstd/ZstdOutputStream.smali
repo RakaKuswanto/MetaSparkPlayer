@@ -1,5 +1,5 @@
 .class public Lcom/facebook/zstd/ZstdOutputStream;
-.super LX/07V;
+.super LX/0TT;
 .source ""
 
 
@@ -25,7 +25,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 4
     .line 5
@@ -57,7 +57,7 @@
     .locals 1
 
     .line 268435456
-    invoke-direct {p0, p1}, LX/07V;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {p0, p1}, LX/0TT;-><init>(Ljava/io/OutputStream;)V
 
     .line 268435457
     .line 268435458
@@ -140,7 +140,7 @@
 
     .line 10
     .line 11
-    iget-object v2, p0, Lcom/facebook/zstd/ZstdOutputStream;->out:Ljava/io/OutputStream;
+    iget-object v2, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     .line 12
     .line 13
@@ -314,7 +314,7 @@
 
     .line 268435504
     .line 268435505
-    iget-object v1, p0, Lcom/facebook/zstd/ZstdOutputStream;->out:Ljava/io/OutputStream;
+    iget-object v1, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     .line 268435506
     .line 268435507

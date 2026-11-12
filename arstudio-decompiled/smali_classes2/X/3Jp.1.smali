@@ -1,59 +1,30 @@
-.class public LX/3Jp;
-.super LX/3eZ;
+.class public final LX/3Jp;
+.super LX/3Ma;
 .source ""
 
 
+# instance fields
+.field public final A00:Landroid/content/ContentResolver;
+
+
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/ContentResolver;LX/3Mb;Ljava/util/concurrent/Executor;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/3eZ;-><init>(Landroid/content/Context;)V
+    invoke-static {p3, p2, p1}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    invoke-direct {p0, p2, p3}, LX/3Ma;-><init>(LX/3Mb;Ljava/util/concurrent/Executor;)V
 
-
-# virtual methods
-.method public final declared-synchronized A02()I
-    .locals 2
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    invoke-super {p0}, LX/3eZ;->A02()I
-
-    .line 2
-    .line 3
     .line 4
-    move-result v1
-
     .line 5
-    const/4 v0, -0x1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 6
-    sub-int/2addr v1, v0
+    iput-object p1, p0, LX/3Jp;->A00:Landroid/content/ContentResolver;
 
     .line 7
-    monitor-exit p0
-
     .line 8
-    return v1
-
-    .line 9
-    :catchall_0
-    move-exception v0
-
-    .line 10
-    monitor-exit p0
-
-    .line 11
-    throw v0
+    return-void
 .end method

@@ -58,6 +58,16 @@
 
 .method public constructor <init>(Lcom/google/common/collect/ImmutableList;Ljava/util/Comparator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "elements",
+            "comparator"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0, p2}, Lcom/google/common/collect/ImmutableSortedSet;-><init>(Ljava/util/Comparator;)V
@@ -74,6 +84,16 @@
 
 .method public static A05(Ljava/lang/Iterable;Ljava/util/Comparator;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "comparator",
+            "elements"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -128,7 +148,7 @@
 
     .line 25
     :cond_1
-    instance-of v0, p0, LX/1ef;
+    instance-of v0, p0, LX/23j;
 
     .line 26
     .line 27
@@ -136,11 +156,11 @@
 
     .line 28
     .line 29
-    check-cast p0, LX/1ef;
+    check-cast p0, LX/23j;
 
     .line 30
     .line 31
-    invoke-interface {p0}, LX/1ef;->comparator()Ljava/util/Comparator;
+    invoke-interface {p0}, LX/23j;->comparator()Ljava/util/Comparator;
 
     .line 32
     .line 33
@@ -160,8 +180,18 @@
 
 
 # virtual methods
-.method public final A0K(Ljava/lang/Object;Z)I
+.method public final A0J(Ljava/lang/Object;Z)I
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "toElement",
+            "inclusive"
+        }
+    .end annotation
 
     .line 0
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableSortedSet;->A00:Lcom/google/common/collect/ImmutableList;
@@ -213,8 +243,18 @@
     return v0
 .end method
 
-.method public final A0L(II)Lcom/google/common/collect/RegularImmutableSortedSet;
+.method public final A0K(II)Lcom/google/common/collect/RegularImmutableSortedSet;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "newFromIndex",
+            "newToIndex"
+        }
+    .end annotation
 
     .line 0
     if-nez p1, :cond_0
@@ -298,6 +338,14 @@
 
 .method public final contains(Ljava/lang/Object;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     .line 0
     const/4 v2, 0x0
@@ -340,9 +388,17 @@
 
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "targets"
+        }
+    .end annotation
 
     .line 0
-    instance-of v0, p1, LX/1f6;
+    instance-of v0, p1, LX/22O;
 
     .line 1
     .line 2
@@ -350,11 +406,11 @@
 
     .line 3
     .line 4
-    check-cast p1, LX/1f6;
+    check-cast p1, LX/22O;
 
     .line 5
     .line 6
-    invoke-interface {p1}, LX/1f6;->A9g()Ljava/util/Set;
+    invoke-interface {p1}, LX/22O;->A80()Ljava/util/Set;
 
     .line 7
     .line 8
@@ -402,7 +458,7 @@
 
     .line 28
     .line 29
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 30
     .line 31
@@ -553,13 +609,23 @@
 
 .method public final copyIntoArray([Ljava/lang/Object;I)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dst",
+            "offset"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableSortedSet;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2}, Lcom/google/common/collect/ImmutableList;->copyIntoArray([Ljava/lang/Object;I)I
+    invoke-virtual {v0, p1, p2}, Lcom/google/common/collect/ImmutableCollection;->copyIntoArray([Ljava/lang/Object;I)I
 
     .line 3
     .line 4
@@ -572,6 +638,14 @@
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     const/4 v6, 0x1
@@ -657,7 +731,7 @@
 
     .line 39
     .line 40
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 41
     .line 42
@@ -737,7 +811,7 @@
     return v6
 .end method
 
-.method public final iterator()LX/1bX;
+.method public final iterator()LX/1tw;
     .locals 1
 
     .line 0
@@ -745,7 +819,7 @@
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 3
     .line 4
@@ -764,7 +838,7 @@
 
     .line 268435457
     .line 268435458
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 268435459
     .line 268435460
@@ -792,4 +866,19 @@
 
     .line 6
     return v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableSortedSet;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

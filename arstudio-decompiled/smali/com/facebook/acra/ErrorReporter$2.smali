@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public putCustomData(LX/0L8;Ljava/lang/String;)V
+.method public putCustomData(LX/0K4;Ljava/lang/String;)V
     .locals 1
 
     .line 0
-    iget-object v0, p1, LX/0L8;->A00:Ljava/lang/String;
+    iget-object v0, p1, LX/0K4;->A00:Ljava/lang/String;
 
     .line 1
     .line 2
@@ -34,7 +34,7 @@
     return-void
 .end method
 
-.method public putLazyCustomData(LX/0L8;LX/0Gd;)V
+.method public putLazyCustomData(LX/0K4;LX/0VC;)V
     .locals 3
 
     .line 0
@@ -46,7 +46,7 @@
     move-result-object v2
 
     .line 4
-    iget-object v1, p1, LX/0L8;->A00:Ljava/lang/String;
+    iget-object v1, p1, LX/0K4;->A00:Ljava/lang/String;
 
     .line 5
     .line 6
@@ -54,7 +54,7 @@
 
     .line 7
     .line 8
-    invoke-direct {v0, p0, p2}, Lcom/facebook/acra/ErrorReporter$2$1;-><init>(Lcom/facebook/acra/ErrorReporter$2;LX/0Gd;)V
+    invoke-direct {v0, p0, p2}, Lcom/facebook/acra/ErrorReporter$2$1;-><init>(Lcom/facebook/acra/ErrorReporter$2;LX/0VC;)V
 
     .line 9
     .line 10
@@ -67,11 +67,11 @@
     return-void
 .end method
 
-.method public removeCustomData(LX/0L8;)V
+.method public removeCustomData(LX/0K4;)V
     .locals 1
 
     .line 0
-    iget-object v0, p1, LX/0L8;->A00:Ljava/lang/String;
+    iget-object v0, p1, LX/0K4;->A00:Ljava/lang/String;
 
     .line 1
     .line 2
@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public removeLazyCustomData(LX/0L8;)V
+.method public removeLazyCustomData(LX/0K4;)V
     .locals 2
 
     .line 0
@@ -95,7 +95,7 @@
     move-result-object v1
 
     .line 4
-    iget-object v0, p1, LX/0L8;->A00:Ljava/lang/String;
+    iget-object v0, p1, LX/0K4;->A00:Ljava/lang/String;
 
     .line 5
     .line 6

@@ -3,19 +3,19 @@
 .source ""
 
 # interfaces
-.implements LX/06k;
-.implements LX/02L;
+.implements LX/07B;
+.implements LX/02V;
 
 
 # instance fields
-.field public A00:LX/010;
+.field public A00:LX/012;
 
-.field public A01:LX/0SQ;
+.field public A01:LX/0Kj;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
@@ -23,36 +23,39 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/010;
+    const/4 v1, 0x0
 
     .line 4
-    .line 5
-    invoke-direct {v0}, LX/010;-><init>()V
+    new-instance v0, LX/012;
 
+    .line 5
     .line 6
+    invoke-direct {v0, v1}, LX/012;-><init>(I)V
+
     .line 7
     .line 8
-    iput-object v0, p0, Landroidx/core/app/ComponentActivity;->A00:LX/010;
-
     .line 9
+    iput-object v0, p0, Landroidx/core/app/ComponentActivity;->A00:LX/012;
+
     .line 10
-    new-instance v0, LX/0SQ;
-
     .line 11
-    .line 12
-    invoke-direct {v0, p0}, LX/0SQ;-><init>(LX/06k;)V
+    new-instance v0, LX/0Kj;
 
+    .line 12
     .line 13
+    invoke-direct {v0, p0}, LX/0Kj;-><init>(LX/07B;)V
+
     .line 14
     .line 15
-    iput-object v0, p0, Landroidx/core/app/ComponentActivity;->A01:LX/0SQ;
-
     .line 16
+    iput-object v0, p0, Landroidx/core/app/ComponentActivity;->A01:LX/0Kj;
+
     .line 17
+    .line 18
     return-void
 .end method
 
-.method public static A03([Ljava/lang/String;)Z
+.method public static A04([Ljava/lang/String;)Z
     .locals 3
 
     .line 0
@@ -92,7 +95,7 @@
 
     .line 16
     :sswitch_0
-    const-string v0, "--autofill"
+    const-string v0, "--translation"
 
     .line 17
     .line 18
@@ -112,7 +115,7 @@
 
     .line 25
     .line 26
-    const/16 v0, 0x1a
+    const/16 v0, 0x1f
 
     .line 27
     .line 28
@@ -120,47 +123,47 @@
 
     .line 29
     :sswitch_1
-    const-string v0, "--contentcapture"
+    const-string v0, "--dump-dumpable"
 
     .line 30
     .line 31
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
     .line 32
-    .line 33
-    .line 34
-    move-result v0
-
-    .line 35
-    if-eqz v0, :cond_0
-
-    .line 36
-    .line 37
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 38
-    .line 39
-    const/16 v0, 0x1d
-
-    .line 40
-    .line 41
-    goto :goto_1
-
-    .line 42
     :sswitch_2
     const-string v0, "--list-dumpables"
 
+    .line 33
+    .line 34
+    :goto_0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    if-eqz v0, :cond_0
+
+    .line 39
+    .line 40
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 41
+    .line 42
+    const/16 v0, 0x21
+
     .line 43
     .line 44
-    goto :goto_0
+    goto :goto_1
 
     .line 45
     :sswitch_3
-    const-string v0, "--dump-dumpable"
+    const-string v0, "--contentcapture"
 
     .line 46
     .line 47
-    :goto_0
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 48
@@ -173,19 +176,19 @@
 
     .line 52
     .line 53
-    invoke-static {}, LX/4Ok;->A01()Z
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 54
     .line 55
-    .line 56
-    move-result v2
+    const/16 v0, 0x1d
 
+    .line 56
     .line 57
-    return v2
+    goto :goto_1
 
     .line 58
     :sswitch_4
-    const-string v0, "--translation"
+    const-string v0, "--autofill"
 
     .line 59
     .line 60
@@ -205,7 +208,7 @@
 
     .line 67
     .line 68
-    const/16 v0, 0x1f
+    const/16 v0, 0x1a
 
     .line 69
     .line 70
@@ -222,17 +225,17 @@
     .line 74
     :sswitch_data_0
     .sparse-switch
-        -0x2673d6ef -> :sswitch_4
-        0x5fd0f67 -> :sswitch_3
+        -0x2673d6ef -> :sswitch_0
+        0x5fd0f67 -> :sswitch_1
         0x1c2b8816 -> :sswitch_2
-        0x4519f64d -> :sswitch_1
-        0x56b9c952 -> :sswitch_0
+        0x4519f64d -> :sswitch_3
+        0x56b9c952 -> :sswitch_4
     .end sparse-switch
 .end method
 
 
 # virtual methods
-.method public final ApU(Landroid/view/KeyEvent;)Z
+.method public final AoB(Landroid/view/KeyEvent;)Z
     .locals 1
 
     .line 0
@@ -263,7 +266,7 @@
 
     .line 5
     .line 6
-    invoke-static {p1, v1}, LX/03G;->A0k(Landroid/view/KeyEvent;Landroid/view/View;)Z
+    invoke-static {p1, v1}, LX/03U;->A0r(Landroid/view/KeyEvent;Landroid/view/View;)Z
 
     .line 7
     .line 8
@@ -282,7 +285,7 @@
 
     .line 14
     :cond_0
-    invoke-static {p1, v1, p0, p0}, LX/02M;->A00(Landroid/view/KeyEvent;Landroid/view/View;Landroid/view/Window$Callback;LX/02L;)Z
+    invoke-static {p1, v1, p0, p0}, LX/02W;->A00(Landroid/view/KeyEvent;Landroid/view/View;Landroid/view/Window$Callback;LX/02V;)Z
 
     .line 15
     .line 16
@@ -309,7 +312,7 @@
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/03G;->A0k(Landroid/view/KeyEvent;Landroid/view/View;)Z
+    invoke-static {p1, v0}, LX/03U;->A0r(Landroid/view/KeyEvent;Landroid/view/View;)Z
 
     .line 7
     .line 8
@@ -339,9 +342,6 @@
     return v0
 .end method
 
-.method public abstract getLifecycle()LX/06g;
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
@@ -351,7 +351,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/4xF;->A00(Landroid/app/Activity;)V
+    invoke-static {p0}, LX/5ha;->A00(Landroid/app/Activity;)V
 
     .line 4
     .line 5
@@ -363,11 +363,11 @@
     .locals 3
 
     .line 0
-    iget-object v2, p0, Landroidx/core/app/ComponentActivity;->A01:LX/0SQ;
+    iget-object v2, p0, Landroidx/core/app/ComponentActivity;->A01:LX/0Kj;
 
     .line 1
     .line 2
-    sget-object v1, LX/06f;->CREATED:LX/06f;
+    sget-object v1, LX/076;->CREATED:LX/076;
 
     .line 3
     .line 4
@@ -375,12 +375,12 @@
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/0SQ;->A06(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0Kj;->A06(Ljava/lang/String;)V
 
     .line 7
     .line 8
     .line 9
-    invoke-static {v1, v2}, LX/06g;->A00(LX/06f;LX/0SQ;)V
+    invoke-static {v1, v2}, LX/077;->A00(LX/076;LX/0Kj;)V
 
     .line 10
     .line 11

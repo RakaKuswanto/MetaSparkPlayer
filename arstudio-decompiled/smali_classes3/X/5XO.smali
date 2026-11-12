@@ -1,163 +1,251 @@
-.class public final enum LX/5XO;
-.super Ljava/lang/Enum;
+.class public final LX/5XO;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5WP;
 
-# static fields
-.field public static final synthetic $VALUES:[LX/5XO;
 
-.field public static final enum LUM:LX/5XO;
+# instance fields
+.field public A00:Z
 
-.field public static final enum NONE:LX/5XO;
+.field public final A01:LX/5Vz;
 
-.field public static final enum RGBA:LX/5XO;
+.field public final synthetic A02:LX/5Wo;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(LX/5Wo;)V
+    .locals 2
 
     .line 0
-    const-string v0, "NONE"
+    iput-object p1, p0, LX/5XO;->A02:LX/5Wo;
 
     .line 1
     .line 2
-    const/4 v6, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    new-instance v5, LX/5XO;
-
     .line 4
     .line 5
-    invoke-direct {v5, v0, v6}, LX/5XO;-><init>(Ljava/lang/String;I)V
+    iget-object v0, p1, LX/5Wo;->A05:LX/5Xc;
 
     .line 6
     .line 7
-    .line 8
-    sput-object v5, LX/5XO;->NONE:LX/5XO;
+    invoke-interface {v0}, LX/5WP;->AoR()LX/5Vy;
 
+    .line 8
     .line 9
     .line 10
-    const-string v0, "RGBA"
+    move-result-object v1
 
     .line 11
-    .line 12
-    const/4 v4, 0x1
+    new-instance v0, LX/5Vz;
 
+    .line 12
     .line 13
-    new-instance v3, LX/5XO;
+    invoke-direct {v0, v1}, LX/5Vz;-><init>(LX/5Vy;)V
 
     .line 14
     .line 15
-    invoke-direct {v3, v0, v4}, LX/5XO;-><init>(Ljava/lang/String;I)V
-
     .line 16
+    iput-object v0, p0, LX/5XO;->A01:LX/5Vz;
+
     .line 17
     .line 18
-    sput-object v3, LX/5XO;->RGBA:LX/5XO;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AoR()LX/5Vy;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5XO;->A01:LX/5Vz;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final AqH(LX/5WA;J)V
+    .locals 7
+
+    .line 0
+    iget-boolean v0, p0, LX/5XO;->A00:Z
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
+    .line 4
+    iget-wide v1, p1, LX/5WA;->A00:J
+
+    .line 5
+    .line 6
+    const-wide/16 v5, 0x0
+
+    .line 7
+    .line 8
+    or-long v3, v5, p2
+
+    .line 9
+    .line 10
+    cmp-long v0, v3, v5
+
+    .line 11
+    .line 12
+    if-ltz v0, :cond_0
+
+    .line 13
+    .line 14
+    cmp-long v0, v5, v1
+
+    .line 15
+    .line 16
+    if-gtz v0, :cond_0
+
+    .line 17
+    .line 18
+    sub-long/2addr v1, v5
 
     .line 19
+    cmp-long v0, v1, p2
+
     .line 20
-    const-string v0, "LUM"
-
     .line 21
-    .line 22
-    const/4 v2, 0x2
+    if-ltz v0, :cond_0
 
+    .line 22
     .line 23
-    new-instance v1, LX/5XO;
+    iget-object v0, p0, LX/5XO;->A02:LX/5Wo;
 
     .line 24
     .line 25
-    invoke-direct {v1, v0, v2}, LX/5XO;-><init>(Ljava/lang/String;I)V
+    iget-object v0, v0, LX/5Wo;->A05:LX/5Xc;
 
     .line 26
     .line 27
-    .line 28
-    sput-object v1, LX/5XO;->LUM:LX/5XO;
+    invoke-interface {v0, p1, p2, p3}, LX/5WP;->AqH(LX/5WA;J)V
 
+    .line 28
     .line 29
     .line 30
-    const/4 v0, 0x3
+    return-void
 
     .line 31
-    new-array v0, v0, [LX/5XO;
+    :cond_0
+    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     .line 32
     .line 33
-    aput-object v5, v0, v6
+    invoke-direct {v0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
 
     .line 34
     .line 35
-    aput-object v3, v0, v4
-
     .line 36
+    throw v0
+
     .line 37
-    aput-object v1, v0, v2
+    :cond_1
+    invoke-static {}, LX/432;->A0i()Ljava/lang/IllegalStateException;
 
     .line 38
     .line 39
-    sput-object v0, LX/5XO;->$VALUES:[LX/5XO;
-
     .line 40
+    move-result-object v0
+
     .line 41
-    return-void
+    throw v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public final close()V
+    .locals 4
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-boolean v0, p0, LX/5XO;->A00:Z
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/5XO;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/5XO;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-nez v0, :cond_0
 
     .line 3
     .line 4
+    const/4 v0, 0x1
+
     .line 5
-    move-result-object v0
+    iput-boolean v0, p0, LX/5XO;->A00:Z
 
     .line 6
-    check-cast v0, LX/5XO;
-
     .line 7
+    iget-object v3, p0, LX/5XO;->A02:LX/5Wo;
+
     .line 8
-    return-object v0
+    .line 9
+    iget-object v2, p0, LX/5XO;->A01:LX/5Vz;
+
+    .line 10
+    .line 11
+    iget-object v1, v2, LX/5Vz;->A00:LX/5Vy;
+
+    .line 12
+    .line 13
+    sget-object v0, LX/5Vy;->A03:LX/5Vy;
+
+    .line 14
+    .line 15
+    iput-object v0, v2, LX/5Vz;->A00:LX/5Vy;
+
+    .line 16
+    .line 17
+    invoke-virtual {v1}, LX/5Vy;->A01()LX/5Vy;
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, LX/5Vy;->A02()LX/5Vy;
+
+    .line 21
+    .line 22
+    .line 23
+    const/4 v0, 0x3
+
+    .line 24
+    iput v0, v3, LX/5Wo;->A00:I
+
+    .line 25
+    .line 26
+    :cond_0
+    return-void
 .end method
 
-.method public static values()[LX/5XO;
+.method public final flush()V
     .locals 1
 
     .line 0
-    sget-object v0, LX/5XO;->$VALUES:[LX/5XO;
+    iget-boolean v0, p0, LX/5XO;->A00:Z
 
     .line 1
     .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-nez v0, :cond_0
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iget-object v0, p0, LX/5XO;->A02:LX/5Wo;
 
+    .line 5
     .line 6
-    check-cast v0, [LX/5XO;
+    iget-object v0, v0, LX/5Wo;->A05:LX/5Xc;
 
     .line 7
     .line 8
-    return-object v0
+    invoke-interface {v0}, LX/5Xc;->flush()V
+
+    .line 9
+    .line 10
+    .line 11
+    :cond_0
+    return-void
 .end method

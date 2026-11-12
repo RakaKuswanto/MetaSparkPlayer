@@ -32,7 +32,7 @@
 # instance fields
 .field public final mBottomGroup:Landroid/view/View;
 
-.field public mDynamicLayoutUtil:LX/3ev;
+.field public mDynamicLayoutUtil:LX/32A;
 
 .field public final mEnterTransitionAnimation:I
 
@@ -42,7 +42,7 @@
 
 .field public final mHideLogoOnSmallDisplays:Z
 
-.field public final mLayoutDelegate:LX/3hQ;
+.field public final mLayoutDelegate:LX/335;
 
 .field public final mLogo1ResId:I
 
@@ -74,20 +74,20 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/3H4;)V
+.method public constructor <init>(Landroid/content/Context;LX/32w;)V
     .locals 5
 
     .line 0
-    invoke-direct {p0, p1, p2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;-><init>(Landroid/content/Context;LX/3H4;)V
+    invoke-direct {p0, p1, p2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;-><init>(Landroid/content/Context;LX/32w;)V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->Agn:I
+    sget v1, LX/2I6;->AYX:I
 
     .line 4
     .line 5
-    invoke-static {p1, v0}, LX/1zE;->A09(Landroid/content/Context;I)Ljava/lang/Object;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 6
     .line 7
@@ -95,477 +95,489 @@
     move-result-object v0
 
     .line 9
-    check-cast v0, LX/3ev;
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 10
     .line 11
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mDynamicLayoutUtil:LX/3ev;
-
     .line 12
+    move-result-object v0
+
     .line 13
-    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->getDefaultLayoutResource()I
+    check-cast v0, LX/32A;
 
     .line 14
     .line 15
-    .line 16
-    move-result v1
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mDynamicLayoutUtil:LX/32A;
 
+    .line 16
     .line 17
-    const-string/jumbo v0, "orca:authparam:layout_resource"
+    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->getDefaultLayoutResource()I
 
     .line 18
     .line 19
     .line 20
-    invoke-virtual {p0, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
+    move-result v1
 
     .line 21
+    const-string/jumbo v0, "orca:authparam:layout_resource"
+
     .line 22
     .line 23
-    move-result v0
-
     .line 24
-    invoke-virtual {p0, v0}, LX/4QS;->setContentView(I)V
+    invoke-virtual {p0, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
 
     .line 25
     .line 26
     .line 27
-    const v0, 0x7f0a03aa
+    move-result v0
 
     .line 28
+    invoke-virtual {p0, v0}, LX/3h6;->setContentView(I)V
+
     .line 29
     .line 30
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
-
     .line 31
+    const v0, 0x7f090353
+
     .line 32
     .line 33
-    move-result-object v0
-
     .line 34
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashGroup:Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 35
     .line 36
-    const v0, 0x7f0a03a4
-
     .line 37
-    .line 38
-    .line 39
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
-
-    .line 40
-    .line 41
-    .line 42
     move-result-object v0
 
+    .line 38
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashGroup:Landroid/view/View;
+
+    .line 39
+    .line 40
+    const v0, 0x7f09034d
+
+    .line 41
+    .line 42
     .line 43
-    check-cast v0, Landroid/widget/ImageView;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 44
     .line 45
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1View:Landroid/widget/ImageView;
-
     .line 46
+    move-result-object v0
+
     .line 47
-    const v0, 0x7f0a03a6
+    check-cast v0, Landroid/widget/ImageView;
 
     .line 48
     .line 49
-    .line 50
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1View:Landroid/widget/ImageView;
 
+    .line 50
     .line 51
+    const v0, 0x7f09034f
+
     .line 52
     .line 53
-    move-result-object v0
-
     .line 54
-    check-cast v0, Landroid/widget/ImageView;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 55
     .line 56
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo2View:Landroid/widget/ImageView;
-
     .line 57
+    move-result-object v0
+
     .line 58
-    const v0, 0x7f0a03a9
+    check-cast v0, Landroid/widget/ImageView;
 
     .line 59
     .line 60
-    .line 61
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo2View:Landroid/widget/ImageView;
 
+    .line 61
     .line 62
+    const v0, 0x7f090352
+
     .line 63
     .line 64
-    move-result-object v0
-
     .line 65
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mRootGroup:Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 66
     .line 67
-    const v0, 0x7f0a03a8
-
     .line 68
-    .line 69
-    .line 70
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
-
-    .line 71
-    .line 72
-    .line 73
     move-result-object v0
 
+    .line 69
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mRootGroup:Landroid/view/View;
+
+    .line 70
+    .line 71
+    const v0, 0x7f090351
+
+    .line 72
+    .line 73
     .line 74
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mMainGroup:Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 75
     .line 76
-    const v0, 0x7f0a039d
-
     .line 77
-    .line 78
-    .line 79
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
-
-    .line 80
-    .line 81
-    .line 82
     move-result-object v0
 
+    .line 78
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mMainGroup:Landroid/view/View;
+
+    .line 79
+    .line 80
+    const v0, 0x7f090346
+
+    .line 81
+    .line 82
     .line 83
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mBottomGroup:Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 84
     .line 85
-    const v0, 0x7f0a03a7
-
     .line 86
-    .line 87
-    .line 88
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
-
-    .line 89
-    .line 90
-    .line 91
     move-result-object v0
 
+    .line 87
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mBottomGroup:Landroid/view/View;
+
+    .line 88
+    .line 89
+    const v0, 0x7f090350
+
+    .line 90
+    .line 91
     .line 92
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogoGroup:Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 93
     .line 94
-    const v0, 0x7f0a03a3
-
     .line 95
-    .line 96
-    .line 97
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
-
-    .line 98
-    .line 99
-    .line 100
     move-result-object v0
 
+    .line 96
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogoGroup:Landroid/view/View;
+
+    .line 97
+    .line 98
+    const v0, 0x7f09034c
+
+    .line 99
+    .line 100
     .line 101
-    check-cast v0, Landroid/widget/ImageView;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 102
     .line 103
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo1View:Landroid/widget/ImageView;
-
     .line 104
+    move-result-object v0
+
     .line 105
-    const v0, 0x7f0a03a5
+    check-cast v0, Landroid/widget/ImageView;
 
     .line 106
     .line 107
-    .line 108
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo1View:Landroid/widget/ImageView;
 
+    .line 108
     .line 109
+    const v0, 0x7f09034e
+
     .line 110
     .line 111
-    move-result-object v0
-
     .line 112
-    check-cast v0, Landroid/widget/ImageView;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 113
     .line 114
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo2View:Landroid/widget/ImageView;
-
     .line 115
+    move-result-object v0
+
     .line 116
-    const v0, 0x7f0a03a2
+    check-cast v0, Landroid/widget/ImageView;
 
     .line 117
     .line 118
-    .line 119
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo2View:Landroid/widget/ImageView;
 
+    .line 119
     .line 120
+    const v0, 0x7f09034b
+
     .line 121
     .line 122
-    move-result-object v0
-
     .line 123
-    check-cast v0, Landroid/widget/ImageButton;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 124
     .line 125
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mHelpButton:Landroid/widget/ImageButton;
-
     .line 126
+    move-result-object v0
+
     .line 127
-    const-string/jumbo v0, "orca:authparam:logo1"
+    check-cast v0, Landroid/widget/ImageButton;
 
     .line 128
     .line 129
-    .line 130
-    const/4 v2, 0x0
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mHelpButton:Landroid/widget/ImageButton;
 
+    .line 130
     .line 131
-    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
+    const-string/jumbo v0, "orca:authparam:logo1"
 
     .line 132
     .line 133
     .line 134
-    move-result v4
+    const/4 v2, 0x0
 
     .line 135
-    iput v4, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo1ResId:I
+    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
 
     .line 136
     .line 137
+    .line 138
+    move-result v4
+
+    .line 139
+    iput v4, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo1ResId:I
+
+    .line 140
+    .line 141
     const-string/jumbo v0, "orca:authparam:logo2"
 
-    .line 138
-    .line 139
-    .line 140
-    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
-
-    .line 141
     .line 142
     .line 143
-    move-result v3
-
     .line 144
-    iput v3, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo2ResId:I
+    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
 
     .line 145
     .line 146
+    .line 147
+    move-result v3
+
+    .line 148
+    iput v3, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo2ResId:I
+
+    .line 149
+    .line 150
     const-string/jumbo v0, "orca:authparam:spash_logo1"
 
-    .line 147
-    .line 148
-    .line 149
-    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
-
-    .line 150
     .line 151
     .line 152
-    move-result v0
-
     .line 153
-    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1ResId:I
+    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
 
     .line 154
     .line 155
+    .line 156
+    move-result v0
+
+    .line 157
+    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1ResId:I
+
+    .line 158
+    .line 159
     const-string/jumbo v0, "orca:authparam:spash_logo2"
 
-    .line 156
-    .line 157
-    .line 158
-    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
-
-    .line 159
     .line 160
     .line 161
-    move-result v1
-
     .line 162
-    iput v1, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo2ResId:I
+    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
 
     .line 163
     .line 164
-    iget v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1ResId:I
-
     .line 165
+    move-result v1
+
     .line 166
-    if-nez v0, :cond_0
+    iput v1, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo2ResId:I
 
     .line 167
     .line 168
-    iput v4, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1ResId:I
+    iget v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1ResId:I
 
     .line 169
     .line 170
-    :cond_0
-    if-nez v1, :cond_1
+    if-nez v0, :cond_0
 
     .line 171
     .line 172
-    iput v3, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo2ResId:I
+    iput v4, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1ResId:I
 
     .line 173
     .line 174
-    :cond_1
-    const-string v0, "com.facebook.fragment.ENTER_ANIM"
+    :cond_0
+    if-nez v1, :cond_1
 
     .line 175
     .line 176
-    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
+    iput v3, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo2ResId:I
 
     .line 177
     .line 178
+    :cond_1
+    const-string/jumbo v0, "com.facebook.fragment.ENTER_ANIM"
+
     .line 179
-    move-result v0
-
     .line 180
-    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mEnterTransitionAnimation:I
-
     .line 181
-    .line 182
-    const-string v0, "com.facebook.fragment.EXIT_ANIM"
-
-    .line 183
-    .line 184
     invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
 
-    .line 185
-    .line 186
-    .line 187
+    .line 182
+    .line 183
+    .line 184
     move-result v0
 
-    .line 188
-    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mExitTransitionAnimation:I
+    .line 185
+    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mEnterTransitionAnimation:I
 
+    .line 186
+    .line 187
+    const-string/jumbo v0, "com.facebook.fragment.EXIT_ANIM"
+
+    .line 188
     .line 189
     .line 190
-    const-string v0, "com.facebook.fragment.POP_ENTER_ANIM"
+    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
 
     .line 191
     .line 192
-    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
-
     .line 193
-    .line 194
-    .line 195
     move-result v0
 
+    .line 194
+    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mExitTransitionAnimation:I
+
+    .line 195
     .line 196
-    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mPopEnterTransitionAnimation:I
+    const-string/jumbo v0, "com.facebook.fragment.POP_ENTER_ANIM"
 
     .line 197
     .line 198
-    const-string v0, "com.facebook.fragment.POP_EXIT_ANIM"
-
     .line 199
-    .line 200
     invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
 
+    .line 200
     .line 201
     .line 202
-    .line 203
     move-result v0
 
+    .line 203
+    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mPopEnterTransitionAnimation:I
+
     .line 204
-    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mPopExitTransitionAnimation:I
-
     .line 205
-    .line 206
-    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getArguments()Landroid/os/Bundle;
+    const-string/jumbo v0, "com.facebook.fragment.POP_EXIT_ANIM"
 
+    .line 206
     .line 207
     .line 208
+    invoke-virtual {p0, v0, v2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getResourceArgument(Ljava/lang/String;I)I
+
     .line 209
-    move-result-object v0
-
     .line 210
-    if-eqz v0, :cond_3
-
     .line 211
+    move-result v0
+
     .line 212
-    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getArguments()Landroid/os/Bundle;
+    iput v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mPopExitTransitionAnimation:I
 
     .line 213
     .line 214
+    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getArguments()Landroid/os/Bundle;
+
     .line 215
-    move-result-object v1
-
     .line 216
-    const-string/jumbo v0, "orca:authparam:hide_logo"
-
     .line 217
-    .line 218
-    .line 219
-    invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    move-result-object v0
 
+    .line 218
+    if-eqz v0, :cond_3
+
+    .line 219
     .line 220
+    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->getArguments()Landroid/os/Bundle;
+
     .line 221
     .line 222
-    move-result v0
-
     .line 223
-    iput-boolean v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mHideLogoOnSmallDisplays:Z
+    move-result-object v1
 
     .line 224
+    const-string/jumbo v0, "orca:authparam:hide_logo"
+
     .line 225
+    .line 226
+    .line 227
+    invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    .line 228
+    .line 229
+    .line 230
+    move-result v0
+
+    .line 231
+    iput-boolean v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mHideLogoOnSmallDisplays:Z
+
+    .line 232
+    .line 233
     :goto_0
     invoke-direct {p0}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->setupViewSizeBasedVisibility()V
 
-    .line 226
-    .line 227
-    .line 228
-    invoke-direct {p0}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->isLegacyLayout()Z
-
-    .line 229
-    .line 230
-    .line 231
-    move-result v0
-
-    .line 232
-    if-eqz v0, :cond_2
-
-    .line 233
     .line 234
-    new-instance v0, LX/3hA;
-
     .line 235
     .line 236
-    invoke-direct {v0, p0}, LX/3hA;-><init>(Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;)V
+    invoke-direct {p0}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->isLegacyLayout()Z
 
     .line 237
     .line 238
     .line 239
-    :goto_1
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLayoutDelegate:LX/3hQ;
+    move-result v0
 
     .line 240
-    .line 241
-    return-void
+    if-eqz v0, :cond_2
 
+    .line 241
     .line 242
-    :cond_2
-    new-instance v0, LX/3et;
+    new-instance v0, LX/334;
 
     .line 243
     .line 244
-    invoke-direct {v0, p0}, LX/3et;-><init>(Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;)V
+    invoke-direct {v0, p0}, LX/334;-><init>(Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;)V
 
     .line 245
     .line 246
     .line 247
-    goto :goto_1
+    :goto_1
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLayoutDelegate:LX/335;
 
     .line 248
+    .line 249
+    return-void
+
+    .line 250
+    :cond_2
+    new-instance v0, LX/32y;
+
+    .line 251
+    .line 252
+    invoke-direct {v0, p0}, LX/32y;-><init>(Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;)V
+
+    .line 253
+    .line 254
+    .line 255
+    goto :goto_1
+
+    .line 256
     :cond_3
     iput-boolean v2, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mHideLogoOnSmallDisplays:Z
 
-    .line 249
-    .line 250
+    .line 257
+    .line 258
     goto :goto_0
 .end method
 
@@ -704,118 +716,118 @@
 .method public static createParameterBundle(III)Landroid/os/Bundle;
     .locals 7
 
-    .line 805306368
-    sget-object v5, LX/0tN;->NONE:LX/0tN;
+    .line 536870912
+    sget-object v5, LX/332;->NONE:LX/332;
 
-    .line 805306369
-    .line 805306370
+    .line 536870913
+    .line 536870914
     const/4 v3, 0x0
 
-    .line 805306371
+    .line 536870915
     const/4 v6, 0x0
 
-    .line 805306372
+    .line 536870916
     move v0, p0
 
-    .line 805306373
+    .line 536870917
     move v1, p1
 
-    .line 805306374
+    .line 536870918
     move v2, p2
 
-    .line 805306375
+    .line 536870919
     move v4, v3
 
-    .line 805306376
-    invoke-static/range {v0 .. v6}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->createParameterBundle(IIIIILX/0tN;Ljava/lang/String;)Landroid/os/Bundle;
+    .line 536870920
+    invoke-static/range {v0 .. v6}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->createParameterBundle(IIIIILX/332;Ljava/lang/String;)Landroid/os/Bundle;
 
-    .line 805306377
-    .line 805306378
-    .line 805306379
+    .line 536870921
+    .line 536870922
+    .line 536870923
     move-result-object v0
 
-    .line 805306380
+    .line 536870924
     return-object v0
 .end method
 
-.method public static createParameterBundle(IIIIILX/0tN;IIIIZLjava/lang/String;)Landroid/os/Bundle;
+.method public static createParameterBundle(IIIIILX/332;IIIIZLjava/lang/String;)Landroid/os/Bundle;
     .locals 2
 
-    .line 537367140
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    .line 805692738
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 537367141
+    .line 805692739
     const-string/jumbo v0, "orca:authparam:layout_resource"
 
-    .line 537367142
+    .line 805692740
     invoke-virtual {v1, v0, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "orca:authparam:logo1"
 
-    .line 537367143
+    .line 805692741
     invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "orca:authparam:logo2"
 
-    .line 537367144
+    .line 805692742
     invoke-virtual {v1, v0, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "orca:authparam:spash_logo1"
 
-    .line 537367145
+    .line 805692743
     invoke-virtual {v1, v0, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "orca:authparam:spash_logo2"
 
-    .line 537367146
+    .line 805692744
     invoke-virtual {v1, v0, p4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "orca:authparam:splash_transition"
 
-    .line 537367147
+    .line 805692745
     invoke-virtual {v1, v0, p5}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    const-string v0, "com.facebook.fragment.ENTER_ANIM"
+    const-string/jumbo v0, "com.facebook.fragment.ENTER_ANIM"
 
-    .line 537367148
+    .line 805692746
     invoke-virtual {v1, v0, p6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    const-string v0, "com.facebook.fragment.EXIT_ANIM"
+    const-string/jumbo v0, "com.facebook.fragment.EXIT_ANIM"
 
-    .line 537367149
+    .line 805692747
     invoke-virtual {v1, v0, p7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    const-string v0, "com.facebook.fragment.POP_ENTER_ANIM"
+    const-string/jumbo v0, "com.facebook.fragment.POP_ENTER_ANIM"
 
-    .line 537367150
+    .line 805692748
     invoke-virtual {v1, v0, p8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    const-string v0, "com.facebook.fragment.POP_EXIT_ANIM"
+    const-string/jumbo v0, "com.facebook.fragment.POP_EXIT_ANIM"
 
-    .line 537367151
+    .line 805692749
     invoke-virtual {v1, v0, p9}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "orca:authparam:help_url"
 
-    .line 537367152
+    .line 805692750
     invoke-virtual {v1, v0, p11}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "orca:authparam:hide_logo"
 
-    .line 537367153
+    .line 805692751
     invoke-virtual {v1, v0, p10}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     return-object v1
 .end method
 
-.method public static createParameterBundle(IIIIILX/0tN;Ljava/lang/String;)Landroid/os/Bundle;
+.method public static createParameterBundle(IIIIILX/332;Ljava/lang/String;)Landroid/os/Bundle;
     .locals 7
 
     const/4 v6, 0x0
 
-    .line 1074239011
+    .line 1074128228
     move v0, p0
 
     move v1, p1
@@ -838,7 +850,7 @@
 
     move p3, v6
 
-    invoke-static/range {v0 .. v11}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->createParameterBundle(IIIIILX/0tN;IIIIZLjava/lang/String;)Landroid/os/Bundle;
+    invoke-static/range {v0 .. v11}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->createParameterBundle(IIIIILX/332;IIIIZLjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -849,7 +861,7 @@
     .locals 6
 
     .line 268435456
-    sget-object v5, LX/0tN;->NONE:LX/0tN;
+    sget-object v5, LX/332;->NONE:LX/332;
 
     .line 268435457
     .line 268435458
@@ -871,7 +883,7 @@
     move v4, v3
 
     .line 268435464
-    invoke-static/range {v0 .. v6}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->createParameterBundle(IIIIILX/0tN;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-static/range {v0 .. v6}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->createParameterBundle(IIIIILX/332;Ljava/lang/String;)Landroid/os/Bundle;
 
     .line 268435465
     .line 268435466
@@ -886,7 +898,7 @@
     .locals 12
 
     .line 0
-    sget-object v5, LX/0tN;->NONE:LX/0tN;
+    sget-object v5, LX/332;->NONE:LX/332;
 
     .line 1
     .line 2
@@ -923,7 +935,7 @@
     move v9, v3
 
     .line 13
-    invoke-static/range {v0 .. v11}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->createParameterBundle(IIIIILX/0tN;IIIIZLjava/lang/String;)Landroid/os/Bundle;
+    invoke-static/range {v0 .. v11}, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->createParameterBundle(IIIIILX/332;IIIIZLjava/lang/String;)Landroid/os/Bundle;
 
     .line 14
     .line 15
@@ -1073,11 +1085,11 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mDynamicLayoutUtil:LX/3ev;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mDynamicLayoutUtil:LX/32A;
 
     .line 5
     .line 6
-    invoke-static {p0, v0}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->A00(Landroid/view/View;LX/3ev;)Landroid/content/res/Resources;
+    invoke-static {p0, v0}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->A00(Landroid/view/View;LX/32A;)Landroid/content/res/Resources;
 
     .line 7
     .line 8
@@ -1085,7 +1097,7 @@
     move-result-object v1
 
     .line 10
-    iget-object v2, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mDynamicLayoutUtil:LX/3ev;
+    iget-object v2, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mDynamicLayoutUtil:LX/32A;
 
     .line 11
     .line 12
@@ -1097,7 +1109,7 @@
     move-result-object v3
 
     .line 16
-    const v0, 0x7f0b0003
+    const v0, 0x7f0a0003
 
     .line 17
     .line 18
@@ -1110,7 +1122,7 @@
     move-result v7
 
     .line 23
-    const v0, 0x7f0a05d7
+    const v0, 0x7f09050b
 
     .line 24
     .line 25
@@ -1131,7 +1143,7 @@
     move-result-object v4
 
     .line 34
-    const v0, 0x7f0700c0
+    const v0, 0x7f0700ac
 
     .line 35
     .line 36
@@ -1152,7 +1164,7 @@
     move-result-object v5
 
     .line 45
-    const v0, 0x7f0700bf
+    const v0, 0x7f0700ab
 
     .line 46
     .line 47
@@ -1173,7 +1185,7 @@
     move-result-object v6
 
     .line 56
-    invoke-virtual/range {v2 .. v7}, LX/3ev;->A00(Landroid/view/View;Ljava/util/List;Ljava/util/List;Ljava/util/List;I)V
+    invoke-virtual/range {v2 .. v7}, LX/32A;->A00(Landroid/view/View;Ljava/util/List;Ljava/util/List;Ljava/util/List;I)V
 
     .line 57
     .line 58
@@ -1196,11 +1208,11 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLayoutDelegate:LX/3hQ;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLayoutDelegate:LX/335;
 
     .line 4
     .line 5
-    invoke-interface {v0}, LX/3hQ;->onAttachedToWindow()V
+    invoke-interface {v0}, LX/335;->onAttachedToWindow()V
 
     .line 6
     .line 7
@@ -1217,11 +1229,11 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLayoutDelegate:LX/3hQ;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLayoutDelegate:LX/335;
 
     .line 4
     .line 5
-    invoke-interface {v0, p1}, LX/3hQ;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p1}, LX/335;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 6
     .line 7
@@ -1267,7 +1279,7 @@
     move-result-object v0
 
     .line 18
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 19
     .line 20
@@ -1275,32 +1287,33 @@
     move-result-object v3
 
     .line 22
-    iget-object v2, p0, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->control:LX/3H4;
+    iget-object v2, p0, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->control:LX/32w;
 
     .line 23
     .line 24
-    const-string v1, "android.intent.action.VIEW"
+    const-string/jumbo v1, "android.intent.action.VIEW"
 
     .line 25
     .line 26
+    .line 27
     new-instance v0, Landroid/content/Intent;
 
-    .line 27
     .line 28
+    .line 29
     invoke-direct {v0, v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 29
     .line 30
     .line 31
-    invoke-interface {v2, v0}, LX/3H4;->startNonFacebookActivity(Landroid/content/Intent;)V
-
     .line 32
+    invoke-interface {v2, v0}, LX/32w;->startNonFacebookActivity(Landroid/content/Intent;)V
+
     .line 33
     .line 34
+    .line 35
     return-void
 .end method
 
-.method public setCustomAnimations(LX/3FR;)V
+.method public setCustomAnimations(LX/333;)V
     .locals 6
 
     .line 0
@@ -1320,45 +1333,49 @@
 
     .line 7
     .line 8
-    iget-object v1, p1, LX/3FR;->A00:Landroid/content/Intent;
+    iget-object v1, p1, LX/333;->A00:Landroid/content/Intent;
 
     .line 9
     .line 10
-    const-string v0, "com.facebook.fragment.ENTER_ANIM"
+    const-string/jumbo v0, "com.facebook.fragment.ENTER_ANIM"
 
     .line 11
     .line 12
+    .line 13
     invoke-virtual {v1, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 13
     .line 14
     .line 15
-    const-string v0, "com.facebook.fragment.EXIT_ANIM"
-
     .line 16
-    .line 17
-    invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    const-string/jumbo v0, "com.facebook.fragment.EXIT_ANIM"
 
+    .line 17
     .line 18
     .line 19
-    .line 20
-    const-string v0, "com.facebook.fragment.POP_ENTER_ANIM"
+    invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 20
     .line 21
     .line 22
-    invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    const-string/jumbo v0, "com.facebook.fragment.POP_ENTER_ANIM"
 
     .line 23
     .line 24
     .line 25
-    const-string v0, "com.facebook.fragment.POP_EXIT_ANIM"
+    invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 26
     .line 27
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
     .line 28
+    const-string/jumbo v0, "com.facebook.fragment.POP_EXIT_ANIM"
+
     .line 29
     .line 30
+    .line 31
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 32
+    .line 33
+    .line 34
     return-void
 .end method

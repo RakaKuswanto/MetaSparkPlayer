@@ -1,25 +1,21 @@
 .class public final LX/1VE;
-.super LX/1VF;
+.super LX/1gb;
 .source ""
 
-
-# instance fields
-.field public final synthetic A00:LX/1VG;
+# interfaces
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(LX/1VG;)V
+.method public constructor <init>(I[I)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/1VE;->A00:LX/1VG;
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/1VF;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method

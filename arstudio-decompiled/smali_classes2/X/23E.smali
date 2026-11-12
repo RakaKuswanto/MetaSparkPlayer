@@ -1,73 +1,221 @@
 .class public final LX/23E;
-.super Ljava/io/IOException;
+.super Ljava/util/AbstractSet;
 .source ""
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/AbstractSet<",
+        "TK;>;"
+    }
+.end annotation
+
+
 # instance fields
-.field public final mExcessBytes:I
+.field public final synthetic A00:Lcom/google/common/collect/CompactHashMap;
 
 
 # direct methods
-.method public constructor <init>(JI)V
-    .locals 2
+.method public constructor <init>(Lcom/google/common/collect/CompactHashMap;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    iput-object p1, p0, LX/23E;->A00:Lcom/google/common/collect/CompactHashMap;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+
     .line 3
-    move-result-object v1
-
     .line 4
-    const-string v0, "Exceeded limit of "
-
     .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final clear()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/23E;->A00:Lcom/google/common/collect/CompactHashMap;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/23E;->A00:Lcom/google/common/collect/CompactHashMap;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
     .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/23E;->A00:Lcom/google/common/collect/CompactHashMap;
+
+    .line 1
+    .line 2
+    invoke-virtual {v1}, Lcom/google/common/collect/CompactHashMap;->A06()Ljava/util/Map;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    if-eqz v0, :cond_0
 
     .line 7
     .line 8
-    .line 9
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/0X3;->A0q(Ljava/util/Map;)Ljava/util/Iterator;
 
+    .line 9
     .line 10
     .line 11
+    move-result-object v0
+
     .line 12
-    const-string v0, " bytes by "
+    return-object v0
+
+    .line 13
+    :cond_0
+    new-instance v0, LX/23R;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v1}, LX/23R;-><init>(Lcom/google/common/collect/CompactHashMap;)V
+
+    .line 16
+    .line 17
+    .line 18
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v1, p0, LX/23E;->A00:Lcom/google/common/collect/CompactHashMap;
+
+    .line 1
+    .line 2
+    invoke-virtual {v1}, Lcom/google/common/collect/CompactHashMap;->A06()Ljava/util/Map;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 13
     .line 14
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 15
+    move-result v0
+
     .line 16
+    return v0
+
     .line 17
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-static {v1, p1}, Lcom/google/common/collect/CompactHashMap;->A02(Lcom/google/common/collect/CompactHashMap;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 18
     .line 19
     .line 20
-    const-string v0, " bytes"
+    move-result-object v1
 
     .line 21
-    .line 22
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    sget-object v0, Lcom/google/common/collect/CompactHashMap;->A09:Ljava/lang/Object;
 
+    .line 22
     .line 23
+    invoke-static {v1, v0}, LX/0X4;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 24
     .line 25
-    move-result-object v0
-
     .line 26
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
     .line 27
-    .line 28
-    .line 29
-    iput p3, p0, LX/23E;->mExcessBytes:I
+    return v0
+.end method
 
-    .line 30
-    .line 31
-    return-void
+.method public final size()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/23E;->A00:Lcom/google/common/collect/CompactHashMap;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->size()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
 .end method

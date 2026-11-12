@@ -1,293 +1,189 @@
-.class public final LX/2Ut;
+.class public abstract LX/2UT;
 .super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static A00:Ljava/lang/Boolean;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static final A00(Landroid/net/wifi/ScanResult;)LX/26j;
+.method public static final A00(Ljava/lang/Object;)Ljava/lang/Boolean;
     .locals 5
 
     .line 0
-    invoke-static {}, LX/1we;->A01()LX/26j;
+    check-cast p0, Landroid/content/Context;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v3
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    .line 3
     .line 4
-    iget-object v1, p0, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
+    const/4 v4, 0x0
 
     .line 5
-    .line 6
-    const-string/jumbo v0, "hardware_address"
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 6
     .line 7
     .line 8
+    move-result-object v3
+
     .line 9
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0U(Ljava/lang/String;Ljava/lang/String;)V
+    const/16 v0, 0x1d
 
     .line 10
     .line 11
+    if-lt v1, v0, :cond_0
+
     .line 12
-    iget v1, p0, Landroid/net/wifi/ScanResult;->level:I
-
     .line 13
-    .line 14
-    const-string/jumbo v0, "signal_strength"
+    invoke-static {}, LX/2I6;->A0T()LX/30K;
 
+    .line 14
     .line 15
     .line 16
+    move-result-object v2
+
     .line 17
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0S(Ljava/lang/String;I)V
+    const-wide v0, 0x810124000a0df9L
 
     .line 18
     .line 19
     .line 20
-    iget v1, p0, Landroid/net/wifi/ScanResult;->frequency:I
-
     .line 21
     .line 22
-    const-string/jumbo v0, "frequency"
+    invoke-static {v2, v0, v1}, LX/302;->A0L(Ljava/lang/Object;J)Z
 
     .line 23
     .line 24
     .line 25
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0S(Ljava/lang/String;I)V
+    move-result v0
 
     .line 26
+    if-eqz v0, :cond_3
+
     .line 27
     .line 28
-    iget-object v1, p0, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
+    sget-object v0, LX/2UT;->A00:Ljava/lang/Boolean;
 
     .line 29
     .line 30
-    const-string v0, "capabilities"
+    if-eqz v0, :cond_3
 
     .line 31
     .line 32
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0U(Ljava/lang/String;Ljava/lang/String;)V
+    :goto_0
+    move-object v3, v0
 
     .line 33
+    :catchall_0
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
     .line 34
     .line 35
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
-
     .line 36
+    move-result v0
+
     .line 37
-    const/16 v0, 0x11
+    if-nez v0, :cond_1
 
     .line 38
     .line 39
-    if-lt v4, v0, :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 40
     .line 41
-    iget-wide v1, p0, Landroid/net/wifi/ScanResult;->timestamp:J
-
     .line 42
+    move-result-object v1
+
     .line 43
-    const-string/jumbo v0, "timestamp_ms"
+    const v0, 0x7f050004
 
     .line 44
     .line 45
     .line 46
-    invoke-virtual {v3, v0, v1, v2}, LX/26j;->A0T(Ljava/lang/String;J)V
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     .line 47
     .line 48
     .line 49
-    const/16 v0, 0x17
+    move-result v1
 
     .line 50
+    const/4 v0, 0x1
+
     .line 51
-    if-lt v4, v0, :cond_0
+    if-nez v1, :cond_2
 
     .line 52
     .line 53
-    iget v1, p0, Landroid/net/wifi/ScanResult;->centerFreq0:I
+    :cond_1
+    const/4 v0, 0x0
 
     .line 54
-    .line 55
-    const-string v0, "center_freq_0"
+    :cond_2
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 55
     .line 56
     .line 57
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0S(Ljava/lang/String;I)V
+    move-result-object v0
 
     .line 58
-    .line 59
-    .line 60
-    iget v1, p0, Landroid/net/wifi/ScanResult;->centerFreq1:I
+    return-object v0
 
+    .line 59
+    :cond_3
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    .line 60
     .line 61
     .line 62
-    const-string v0, "center_freq_1"
+    move-result-object v1
 
     .line 63
-    .line 64
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0S(Ljava/lang/String;I)V
+    if-eqz v1, :cond_4
 
+    .line 64
     .line 65
+    const-string/jumbo v0, "com.microsoft.device.display.displaymask"
+
     .line 66
     .line 67
-    iget v1, p0, Landroid/net/wifi/ScanResult;->channelWidth:I
-
     .line 68
-    .line 69
-    const-string v0, "channel_width"
+    invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
+    .line 69
     .line 70
     .line 71
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0S(Ljava/lang/String;I)V
-
-    .line 72
-    .line 73
-    .line 74
-    invoke-virtual {p0}, Landroid/net/wifi/ScanResult;->is80211mcResponder()Z
-
-    .line 75
-    .line 76
-    .line 77
-    move-result v1
-
-    .line 78
-    const-string/jumbo v0, "is_80211_mc_responder"
-
-    .line 79
-    .line 80
-    .line 81
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0V(Ljava/lang/String;Z)V
-
-    .line 82
-    .line 83
-    .line 84
-    invoke-virtual {p0}, Landroid/net/wifi/ScanResult;->isPasspointNetwork()Z
-
-    .line 85
-    .line 86
-    .line 87
-    move-result v1
-
-    .line 88
-    const-string/jumbo v0, "is_passpoint"
-
-    .line 89
-    .line 90
-    .line 91
-    invoke-virtual {v3, v0, v1}, LX/26j;->A0V(Ljava/lang/String;Z)V
-
-    .line 92
-    .line 93
-    .line 94
-    :cond_0
-    return-object v3
-.end method
-
-.method public static final A01(Landroid/net/wifi/ScanResult$InformationElement;)Ljava/lang/String;
-    .locals 2
-
-    .line 0
-    :try_start_0
-    invoke-virtual {p0}, Landroid/net/wifi/ScanResult$InformationElement;->getBytes()Ljava/nio/ByteBuffer;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    .line 5
-    .line 6
-    .line 7
     move-result v0
 
-    .line 8
-    new-array v1, v0, [B
+    .line 72
+    if-eqz v0, :cond_4
 
-    .line 9
-    .line 10
-    invoke-virtual {p0}, Landroid/net/wifi/ScanResult$InformationElement;->getBytes()Ljava/nio/ByteBuffer;
+    .line 73
+    .line 74
+    const/4 v4, 0x1
 
-    .line 11
-    .line 12
-    .line 13
+    .line 75
+    :cond_4
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 76
+    .line 77
+    .line 78
     move-result-object v0
 
-    .line 14
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+    .line 79
+    sput-object v0, LX/2UT;->A00:Ljava/lang/Boolean;
 
-    .line 15
-    .line 16
-    .line 17
-    invoke-static {}, Ljava/util/Base64;->getEncoder()Ljava/util/Base64$Encoder;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    invoke-virtual {v0, v1}, Ljava/util/Base64$Encoder;->encodeToString([B)Ljava/lang/String;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 26
-    .line 27
-    .line 28
-    return-object v0
+    .line 80
+    .line 81
+    goto :goto_0
     :try_end_0
-    .catch Ljava/nio/BufferUnderflowException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 29
-    :catch_0
-    const-string v0, "Error: Illegal Argument"
-
-    .line 30
-    .line 31
-    return-object v0
-
-    .line 32
-    :catch_1
-    const-string v0, "Error: Buffer Underflow"
-
-    .line 33
-    .line 34
-    return-object v0
-.end method
-
-.method public static final synthetic A02(Landroid/net/wifi/ScanResult$InformationElement;)Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    invoke-static {p0}, LX/2Ut;->A01(Landroid/net/wifi/ScanResult$InformationElement;)Ljava/lang/String;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    return-object p0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 .end method

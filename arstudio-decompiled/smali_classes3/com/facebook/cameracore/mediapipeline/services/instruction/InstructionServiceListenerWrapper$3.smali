@@ -43,7 +43,7 @@
 
     .line 1
     .line 2
-    iget-object v1, v0, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceListenerWrapper;->mListener:LX/4su;
+    iget-object v1, v0, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceListenerWrapper;->mListener:LX/4nG;
 
     .line 3
     .line 4
@@ -55,11 +55,11 @@
 
     .line 7
     .line 8
-    check-cast v1, LX/4sW;
+    check-cast v1, LX/4n7;
 
     .line 9
     .line 10
-    invoke-static {v1, v0}, LX/4sW;->A04(LX/4sW;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/4n7;->A04(LX/4n7;Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -67,7 +67,7 @@
     const/4 v0, 0x0
 
     .line 14
-    invoke-static {v1, v0}, LX/4sW;->A03(LX/4sW;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/4n7;->A03(LX/4n7;Ljava/lang/String;)V
 
     .line 15
     .line 16
@@ -75,11 +75,11 @@
     const/4 v0, 0x1
 
     .line 18
-    iput-boolean v0, v1, LX/4sW;->A03:Z
+    iput-boolean v0, v1, LX/4n7;->A03:Z
 
     .line 19
     .line 20
-    invoke-static {v1}, LX/4sW;->A02(LX/4sW;)V
+    invoke-static {v1}, LX/4n7;->A02(LX/4n7;)V
 
     .line 21
     .line 22

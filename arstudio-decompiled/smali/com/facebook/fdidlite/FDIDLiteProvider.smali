@@ -1,5 +1,5 @@
-.class public Lcom/facebook/fdidlite/FDIDLiteProvider;
-.super LX/0Il;
+.class public final Lcom/facebook/fdidlite/FDIDLiteProvider;
+.super LX/0KK;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/0Il;-><init>()V
+    invoke-direct {p0}, LX/0KK;-><init>()V
 
     .line 1
     .line 2
@@ -22,7 +22,7 @@
     .locals 15
 
     .line 0
-    invoke-virtual {p0}, LX/0BA;->A03()V
+    invoke-virtual {p0}, LX/0CM;->A03()V
 
     .line 1
     .line 2
@@ -112,7 +112,7 @@
 
     .line 43
     .line 44
-    invoke-static {v0, v1}, LX/0Pp;->A02(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, LX/0M3;->A02(Landroid/content/Context;Ljava/lang/String;)Z
 
     .line 45
     .line 46
@@ -172,7 +172,7 @@
 
     .line 72
     :cond_0
-    invoke-static {v0}, LX/0Pq;->A00(Landroid/content/Context;)Ljava/util/HashMap;
+    invoke-static {v0}, LX/0M5;->A00(Landroid/content/Context;)Ljava/util/HashMap;
 
     .line 73
     .line 74
@@ -266,86 +266,91 @@
 
     .line 117
     .line 118
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 119
     .line 120
     .line 121
-    move-result-wide v3
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
     .line 122
+    .line 123
+    .line 124
+    move-result-wide v3
+
+    .line 125
     :goto_0
     const-string v0, "origin"
 
-    .line 123
-    .line 124
-    invoke-virtual {v7, v0}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 125
     .line 126
     .line 127
-    move-result-object v2
+    invoke-virtual {v7, v0}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 128
-    new-array v0, v8, [Ljava/lang/String;
-
     .line 129
     .line 130
-    aput-object v14, v0, v9
+    move-result-object v2
 
     .line 131
+    new-array v0, v8, [Ljava/lang/String;
+
     .line 132
+    .line 133
+    aput-object v14, v0, v9
+
+    .line 134
+    .line 135
     aput-object v13, v0, v10
 
-    .line 133
-    .line 134
+    .line 136
+    .line 137
     aput-object v11, v0, v12
 
-    .line 135
-    .line 136
+    .line 138
+    .line 139
     new-instance v7, Landroid/database/MatrixCursor;
 
-    .line 137
-    .line 138
-    invoke-direct {v7, v0}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
-
-    .line 139
     .line 140
     .line 141
-    new-array v1, v8, [Ljava/lang/String;
+    invoke-direct {v7, v0}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
     .line 142
     .line 143
+    .line 144
+    new-array v1, v8, [Ljava/lang/String;
+
+    .line 145
+    .line 146
     aput-object v5, v1, v9
 
-    .line 144
-    .line 145
-    invoke-static {v3, v4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    .line 146
     .line 147
     .line 148
-    move-result-object v0
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     .line 149
-    aput-object v0, v1, v10
-
     .line 150
     .line 151
-    aput-object v2, v1, v12
+    move-result-object v0
 
     .line 152
-    .line 153
-    invoke-virtual {v7, v1}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
+    aput-object v0, v1, v10
 
+    .line 153
     .line 154
+    aput-object v2, v1, v12
+
     .line 155
     .line 156
+    invoke-virtual {v7, v1}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
+
+    .line 157
+    .line 158
+    .line 159
     return-object v7
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 157
+    .line 160
     :catch_0
     :cond_3
     return-object v6

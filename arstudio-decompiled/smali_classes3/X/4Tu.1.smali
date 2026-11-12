@@ -2,17 +2,22 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4Vo;
-
 
 # instance fields
-.field public final A00:F
+.field public final A00:Landroid/content/res/ColorStateList;
+
+.field public final A01:Landroid/content/res/ColorStateList;
+
+.field public final A02:Landroid/content/res/ColorStateList;
+
+.field public final A03:Landroid/graphics/Rect;
+
+.field public final A04:LX/4Vd;
 
 
 # direct methods
-.method public constructor <init>(F)V
-    .locals 0
+.method public constructor <init>(Landroid/content/res/ColorStateList;Landroid/content/res/ColorStateList;Landroid/content/res/ColorStateList;Landroid/graphics/Rect;LX/4Vd;)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -20,124 +25,258 @@
     .line 1
     .line 2
     .line 3
-    iput p1, p0, LX/4Tu;->A00:F
+    iget v0, p4, Landroid/graphics/Rect;->left:I
 
     .line 4
     .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ADt(Landroid/graphics/RectF;)F
-    .locals 2
-
-    .line 0
-    iget v1, p0, LX/4Tu;->A00:F
-
-    .line 1
-    .line 2
-    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    invoke-static {v0}, LX/01t;->A00(I)V
 
     .line 6
-    mul-float/2addr v1, v0
-
-    .line 7
-    return v1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    .line 0
-    const/4 v2, 0x1
-
-    .line 1
-    if-eq p0, p1, :cond_1
-
-    .line 2
-    .line 3
-    instance-of v1, p1, LX/4Tu;
-
-    .line 4
-    .line 5
-    const/4 v0, 0x0
-
-    .line 6
-    if-nez v1, :cond_0
-
     .line 7
     .line 8
-    return v0
+    iget v0, p4, Landroid/graphics/Rect;->top:I
 
     .line 9
-    :cond_0
-    check-cast p1, LX/4Tu;
-
     .line 10
-    .line 11
-    iget v1, p0, LX/4Tu;->A00:F
+    invoke-static {v0}, LX/01t;->A00(I)V
 
+    .line 11
     .line 12
     .line 13
-    iget v0, p1, LX/4Tu;->A00:F
+    iget v0, p4, Landroid/graphics/Rect;->right:I
 
     .line 14
     .line 15
-    cmpl-float v0, v1, v0
+    invoke-static {v0}, LX/01t;->A00(I)V
 
     .line 16
     .line 17
-    if-eqz v0, :cond_1
-
     .line 18
-    .line 19
-    const/4 v2, 0x0
+    iget v0, p4, Landroid/graphics/Rect;->bottom:I
 
+    .line 19
     .line 20
-    :cond_1
-    return v2
+    invoke-static {v0}, LX/01t;->A00(I)V
+
+    .line 21
+    .line 22
+    .line 23
+    iput-object p4, p0, LX/4Tu;->A03:Landroid/graphics/Rect;
+
+    .line 24
+    .line 25
+    iput-object p2, p0, LX/4Tu;->A02:Landroid/content/res/ColorStateList;
+
+    .line 26
+    .line 27
+    iput-object p1, p0, LX/4Tu;->A00:Landroid/content/res/ColorStateList;
+
+    .line 28
+    .line 29
+    iput-object p3, p0, LX/4Tu;->A01:Landroid/content/res/ColorStateList;
+
+    .line 30
+    .line 31
+    iput-object p5, p0, LX/4Tu;->A04:LX/4Vd;
+
+    .line 32
+    .line 33
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static A00(Landroid/content/Context;I)LX/4Tu;
+    .locals 9
 
     .line 0
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    const/4 v1, 0x0
 
     .line 1
+    invoke-static {p1}, LX/001;->A1K(I)Z
+
     .line 2
     .line 3
-    move-result-object v2
-
     .line 4
-    iget v0, p0, LX/4Tu;->A00:F
+    move-result v2
 
     .line 5
-    .line 6
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    const-string v0, "Cannot create a CalendarItemStyle with a styleResId of 0"
 
+    .line 6
     .line 7
+    invoke-static {v2, v0}, LX/01t;->A02(ZLjava/lang/Object;)V
+
     .line 8
     .line 9
-    move-result-object v1
-
     .line 10
-    const/4 v0, 0x0
+    sget-object v0, LX/4LY;->A0A:[I
 
     .line 11
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
-
     .line 12
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+
     .line 13
     .line 14
+    .line 15
+    move-result-object v4
+
+    .line 16
+    invoke-virtual {v4, v1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v5
+
+    .line 20
+    const/4 v0, 0x2
+
+    .line 21
+    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v3
+
+    .line 25
+    const/4 v0, 0x1
+
+    .line 26
+    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v2
+
+    .line 30
+    const/4 v0, 0x3
+
+    .line 31
+    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    .line 32
+    .line 33
+    .line 34
     move-result v0
 
-    .line 15
-    return v0
+    .line 35
+    new-instance v8, Landroid/graphics/Rect;
+
+    .line 36
+    .line 37
+    invoke-direct {v8, v5, v3, v2, v0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 38
+    .line 39
+    .line 40
+    const/4 v0, 0x4
+
+    .line 41
+    invoke-static {p0, v4, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v5
+
+    .line 45
+    const/16 v0, 0x9
+
+    .line 46
+    .line 47
+    invoke-static {p0, v4, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-object v6
+
+    .line 51
+    const/4 v0, 0x7
+
+    .line 52
+    invoke-static {p0, v4, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v7
+
+    .line 56
+    const/16 v0, 0x8
+
+    .line 57
+    .line 58
+    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    .line 59
+    .line 60
+    .line 61
+    const/4 v0, 0x5
+
+    .line 62
+    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    .line 63
+    .line 64
+    .line 65
+    move-result v3
+
+    .line 66
+    const/4 v0, 0x6
+
+    .line 67
+    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    .line 68
+    .line 69
+    .line 70
+    move-result v2
+
+    .line 71
+    int-to-float v1, v1
+
+    .line 72
+    new-instance v0, LX/4Tw;
+
+    .line 73
+    .line 74
+    invoke-direct {v0, v1}, LX/4Tw;-><init>(F)V
+
+    .line 75
+    .line 76
+    .line 77
+    invoke-static {p0, v0, v3, v2}, LX/4Vd;->A02(Landroid/content/Context;LX/4Wk;II)LX/4Vi;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v0
+
+    .line 81
+    new-instance p0, LX/4Vd;
+
+    .line 82
+    .line 83
+    invoke-direct {p0, v0}, LX/4Vd;-><init>(LX/4Vi;)V
+
+    .line 84
+    .line 85
+    .line 86
+    invoke-virtual {v4}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 87
+    .line 88
+    .line 89
+    new-instance v4, LX/4Tu;
+
+    .line 90
+    .line 91
+    invoke-direct/range {v4 .. v9}, LX/4Tu;-><init>(Landroid/content/res/ColorStateList;Landroid/content/res/ColorStateList;Landroid/content/res/ColorStateList;Landroid/graphics/Rect;LX/4Vd;)V
+
+    .line 92
+    .line 93
+    .line 94
+    return-object v4
 .end method

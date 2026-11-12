@@ -1,40 +1,11 @@
-.class public final LX/2SU;
+.class public interface abstract LX/2SU;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public static final A00(Ljava/util/Collection;)Z
-    .locals 1
+# virtual methods
+.method public abstract AWW(ILjava/lang/Throwable;)V
+.end method
 
-    .line 0
-    if-eqz p0, :cond_0
-
-    .line 1
-    .line 2
-    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result p0
-
-    .line 6
-    const/4 v0, 0x0
-
-    .line 7
-    if-eqz p0, :cond_1
-
-    .line 8
-    .line 9
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 10
-    :cond_1
-    xor-int/lit8 v0, v0, 0x1
-
-    .line 11
-    .line 12
-    return v0
+.method public abstract Abk(Ljava/lang/String;I)V
 .end method

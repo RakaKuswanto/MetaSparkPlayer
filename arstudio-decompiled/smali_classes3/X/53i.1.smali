@@ -1,46 +1,45 @@
-.class public LX/53i;
-.super LX/53Z;
+.class public final LX/53i;
+.super Ljava/lang/Exception;
 .source ""
 
 
 # instance fields
-.field public A00:I
+.field public final type:LX/53h;
 
 
 # direct methods
-.method public constructor <init>(LX/53V;)V
-    .locals 1
+.method public constructor <init>(LX/53h;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0, p1}, LX/53Z;-><init>(LX/53V;)V
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
     .line 3
-    instance-of v0, p1, LX/53R;
+    move-result-object v1
 
     .line 4
+    const-string v0, "Location error: "
+
     .line 5
-    if-eqz v0, :cond_0
-
     .line 6
-    .line 7
-    sget-object v0, LX/014;->A01:Ljava/lang/Integer;
+    invoke-static {p1, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 7
     .line 8
     .line 9
-    :goto_0
-    iput-object v0, p0, LX/53Z;->A06:Ljava/lang/Integer;
+    move-result-object v0
 
     .line 10
+    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
     .line 11
-    return-void
-
     .line 12
-    :cond_0
-    sget-object v0, LX/014;->A0B:Ljava/lang/Integer;
-
     .line 13
+    iput-object p1, p0, LX/53i;->type:LX/53h;
+
     .line 14
-    goto :goto_0
+    .line 15
+    return-void
 .end method

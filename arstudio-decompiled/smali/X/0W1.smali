@@ -2,218 +2,327 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0HQ;
+
+
+# static fields
+.field public static final A01:LX/0W1;
+
+
+# instance fields
+.field public A00:I
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/0W1;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/0W1;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/0W1;->A01:LX/0W1;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    const/4 v0, 0x5
+
+    .line 4
+    iput v0, p0, LX/0W1;->A00:I
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method private A00(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V
+    .locals 3
+
+    .line 0
+    const-string v1, "unknown"
+
+    .line 1
+    .line 2
+    const-string v0, ":"
+
+    .line 3
+    .line 4
+    invoke-static {v1, v0, p1}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v2
+
+    .line 8
+    const/16 v1, 0xa
+
+    .line 9
+    .line 10
+    if-nez p4, :cond_0
+
+    .line 11
+    .line 12
+    const-string v0, ""
+
+    .line 13
+    .line 14
+    :goto_0
+    invoke-static {p2, v0, v1}, LX/004;->A0D(Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    invoke-static {p3, v2, v0}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
+
+    .line 22
+    :cond_0
+    invoke-static {p4}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final A7t(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x6
+
+    .line 1
+    const-string v1, "unknown"
+
+    .line 2
+    .line 3
+    const-string v0, ":"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0, p1}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    invoke-static {v2, v0, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public final A7u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x6
+
+    .line 1
+    invoke-direct {p0, p1, p2, v0, p3}, LX/0W1;->A00(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public final AHN()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/0W1;->A00:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final APR(I)Z
+    .locals 2
+
+    .line 0
+    iget v1, p0, LX/0W1;->A00:I
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    if-gt v1, p1, :cond_0
+
+    .line 4
+    .line 5
+    const/4 v0, 0x1
+
+    .line 6
+    :cond_0
+    return v0
+.end method
+
+.method public final AQl(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    const-string v1, "unknown"
+
+    .line 1
+    .line 2
+    const-string v0, ":"
+
+    .line 3
+    .line 4
+    invoke-static {v1, v0, p2}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-static {p1, v0, p3}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public final Akx(I)V
     .locals 0
 
-    sparse-switch p0, :sswitch_data_0
+    .line 0
+    iput p1, p0, LX/0W1;->A00:I
 
-    const-string p0, "UNDEFINED_QPL_EVENT"
+    .line 1
+    .line 2
+    return-void
+.end method
 
-    return-object p0
+.method public final Aq2(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    :sswitch_0
-    const-string p0, "STELLA_COMPPHOTO_STELLA_AUTO_MONTAGE_CREATION_SUCCESS_RATE"
+    .line 0
+    const/4 v2, 0x5
 
-    return-object p0
+    .line 1
+    const-string v1, "unknown"
 
-    :sswitch_1
-    const-string p0, "STELLA_COMPPHOTO_STELLA_AUTO_MONTAGE_CREATION"
+    .line 2
+    .line 3
+    const-string v0, ":"
 
-    return-object p0
+    .line 4
+    .line 5
+    invoke-static {v1, v0, p1}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :sswitch_2
-    const-string p0, "STELLA_COMPPHOTO_STELLA_BURST_PHOTO"
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
 
-    return-object p0
+    .line 9
+    invoke-static {v2, v0, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
-    :sswitch_3
-    const-string p0, "STELLA_COMPPHOTO_STELLA_PHOTO_EDITING"
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
 
-    return-object p0
+.method public final Aq3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
 
-    :sswitch_4
-    const-string p0, "STELLA_COMPPHOTO_STELLA_COMPILATION_EXPORT_TTI"
+    .line 0
+    const/4 v0, 0x5
 
-    return-object p0
+    .line 1
+    invoke-direct {p0, p1, p2, v0, p3}, LX/0W1;->A00(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V
 
-    :sswitch_5
-    const-string p0, "STELLA_COMPPHOTO_STELLA_TREATMENT_EXPORT_TTI"
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
 
-    return-object p0
+.method public final Aqc(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    :sswitch_6
-    const-string p0, "STELLA_COMPPHOTO_STELLA_COMPILATION_PREVIEW_TTI"
+    .line 0
+    const/4 v2, 0x6
 
-    return-object p0
+    .line 1
+    const-string v1, "unknown"
 
-    :sswitch_7
-    const-string p0, "STELLA_COMPPHOTO_STELLA_PHOTO_IMPORT"
+    .line 2
+    .line 3
+    const-string v0, ":"
 
-    return-object p0
+    .line 4
+    .line 5
+    invoke-static {v1, v0, p1}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :sswitch_8
-    const-string p0, "STELLA_COMPPHOTO_STELLA_VIDEO_EDITING"
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
 
-    return-object p0
+    .line 9
+    invoke-static {v2, v0, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
-    :sswitch_9
-    const-string p0, "STELLA_COMPPHOTO_STELLA_PHOTO_SAVING"
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
 
-    return-object p0
+.method public final Aqd(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
 
-    :sswitch_a
-    const-string p0, "STELLA_COMPPHOTO_STELLA_VIDEO_IMPORT"
+    .line 0
+    const/4 v0, 0x6
 
-    return-object p0
+    .line 1
+    invoke-direct {p0, p1, p2, v0, p3}, LX/0W1;->A00(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V
 
-    :sswitch_b
-    const-string p0, "STELLA_COMPPHOTO_STELLA_COMPILATION_GRAPH"
-
-    return-object p0
-
-    :sswitch_c
-    const-string p0, "STELLA_COMPPHOTO_STELLA_PHOTO_IMPORT_LOW_PRI"
-
-    return-object p0
-
-    :sswitch_d
-    const-string p0, "STELLA_COMPPHOTO_STELLA_VIDEO_SAVING"
-
-    return-object p0
-
-    :sswitch_e
-    const-string p0, "STELLA_COMPPHOTO_STELLA_AUTO_MONTAGE_PREPROCESSING_MODELS_RUNTIME"
-
-    return-object p0
-
-    :sswitch_f
-    const-string p0, "STELLA_COMPPHOTO_STELLA_MULTI_IMPORT_JEST"
-
-    return-object p0
-
-    :sswitch_10
-    const-string p0, "STELLA_COMPPHOTO_STELLA_TREATMENT_EDIT"
-
-    return-object p0
-
-    :sswitch_11
-    const-string p0, "STELLA_COMPPHOTO_STELLA_TREATMENT_SAVE"
-
-    return-object p0
-
-    :sswitch_12
-    const-string p0, "STELLA_COMPPHOTO_STELLA_TREATMENT_PREVIEW_TTI"
-
-    return-object p0
-
-    :sswitch_13
-    const-string p0, "STELLA_COMPPHOTO_STELLA_COMPILATION_EDIT"
-
-    return-object p0
-
-    :sswitch_14
-    const-string p0, "STELLA_COMPPHOTO_STELLA_TREATMENT_STEREO_GRAPH"
-
-    return-object p0
-
-    :sswitch_15
-    const-string p0, "STELLA_COMPPHOTO_STELLA_VIDEO_IMPORT_LOW_PRI"
-
-    return-object p0
-
-    :sswitch_16
-    const-string p0, "STELLA_COMPPHOTO_STELLA_VIDEO_THUMBNAIL"
-
-    return-object p0
-
-    :sswitch_17
-    const-string p0, "STELLA_COMPPHOTO_STELLA_TREATMENT_EDIT_TTI"
-
-    return-object p0
-
-    :sswitch_18
-    const-string p0, "STELLA_COMPPHOTO_STELLA_VIDEO_IMPORT_PROCESSED"
-
-    return-object p0
-
-    :sswitch_19
-    const-string p0, "STELLA_COMPPHOTO_STELLA_TREATMENT_GRAPH"
-
-    return-object p0
-
-    :sswitch_1a
-    const-string p0, "STELLA_COMPPHOTO_STELLA_AUTO_MONTAGE_IMPORT_TO_PREVIEW_TTI"
-
-    return-object p0
-
-    :sswitch_1b
-    const-string p0, "STELLA_COMPPHOTO_STELLA_VIDEO_CLOUD_RESTORE"
-
-    return-object p0
-
-    :sswitch_1c
-    const-string p0, "STELLA_COMPPHOTO_STELLA_AUTO_MONTAGE_CREATION_E2E"
-
-    return-object p0
-
-    :sswitch_1d
-    const-string p0, "STELLA_COMPPHOTO_STELLA_AUTO_MONTAGE_METADATA_CREATION"
-
-    return-object p0
-
-    :sswitch_1e
-    const-string p0, "STELLA_COMPPHOTO_STELLA_PHOTO_THUMBNAIL"
-
-    return-object p0
-
-    :sswitch_1f
-    const-string p0, "STELLA_COMPPHOTO_STELLA_PHOTO_CLOUD_RESTORE"
-
-    return-object p0
-
-    :sswitch_20
-    const-string p0, "STELLA_COMPPHOTO_STELLA_CLOUD_AUTO_MONTAGE_CREATION_E2E"
-
-    return-object p0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x4e2 -> :sswitch_20
-        0x777 -> :sswitch_1f
-        0x9cb -> :sswitch_1e
-        0xa09 -> :sswitch_1d
-        0xa73 -> :sswitch_1c
-        0xbc6 -> :sswitch_1b
-        0xc67 -> :sswitch_1a
-        0xd45 -> :sswitch_19
-        0xf2c -> :sswitch_18
-        0x1297 -> :sswitch_17
-        0x13ee -> :sswitch_16
-        0x144c -> :sswitch_15
-        0x162e -> :sswitch_14
-        0x1810 -> :sswitch_13
-        0x18e0 -> :sswitch_12
-        0x1a2a -> :sswitch_11
-        0x1cca -> :sswitch_10
-        0x1ce4 -> :sswitch_f
-        0x1f22 -> :sswitch_e
-        0x1fe7 -> :sswitch_d
-        0x259a -> :sswitch_c
-        0x268d -> :sswitch_b
-        0x2696 -> :sswitch_a
-        0x2705 -> :sswitch_9
-        0x2888 -> :sswitch_8
-        0x2b9b -> :sswitch_7
-        0x2e34 -> :sswitch_6
-        0x3111 -> :sswitch_5
-        0x3730 -> :sswitch_4
-        0x3a2a -> :sswitch_3
-        0x3aec -> :sswitch_2
-        0x3c05 -> :sswitch_1
-        0x3e9b -> :sswitch_0
-    .end sparse-switch
+    .line 2
+    .line 3
+    .line 4
+    return-void
 .end method

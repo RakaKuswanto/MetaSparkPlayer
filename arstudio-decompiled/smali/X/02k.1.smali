@@ -1,20 +1,14 @@
 .class public final LX/02k;
-.super Ljava/lang/Object;
+.super LX/0Bi;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:I
-
-
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/view/Window;LX/035;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/0Bi;-><init>(Landroid/view/Window;LX/035;)V
 
     .line 1
     .line 2

@@ -1,38 +1,115 @@
-.class public final synthetic LX/4Bt;
+.class public final LX/4bT;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "HotInstanceManagerForWebView$WebViewHotInstanceBag$$ExternalSyntheticLambda0"
-
-
-# instance fields
-.field public final synthetic A00:LX/4CY;
+.implements LX/4aI;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/4CY;)V
+.method public constructor <init>()V
     .locals 0
 
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/4Bt;->A00:LX/4CY;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final A5I(LX/4D6;)Lcom/facebook/dsp/core/ColorData;
     .locals 1
 
-    iget-object v0, p0, LX/4Bt;->A00:LX/4CY;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, LX/4CY;->A0K()V
+    return-object v0
+.end method
 
-    return-void
+.method public final A5t(LX/4aT;)Ljava/lang/Integer;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AIH()LX/6Vc;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/6Vc;->DEFAULT:LX/6Vc;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final Ama(LX/4aV;)LX/4aY;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final An3(LX/4aU;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AnK(LX/4aG;)Ljava/lang/Float;
+    .locals 2
+
+    .line 0
+    invoke-static {p1}, LX/431;->A0B(Ljava/lang/Enum;)I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
+
+    .line 4
+    const/16 v0, 0x26
+
+    .line 5
+    .line 6
+    if-ne v1, v0, :cond_0
+
+    .line 7
+    .line 8
+    const/high16 v0, 0x41400000    # 12.0f
+
+    .line 9
+    .line 10
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+
+    .line 15
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 16
+    return-object v0
+.end method
+
+.method public final Aou(LX/4ah;)LX/4ak;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

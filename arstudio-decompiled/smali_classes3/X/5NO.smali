@@ -1,17 +1,8 @@
-.class public final LX/5NO;
-.super LX/5NQ;
+.class public interface abstract LX/5NO;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;LX/5KN;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, LX/5NQ;-><init>(Landroid/content/Context;LX/5KN;)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract A6Z(Landroid/os/Handler;LX/5PJ;LX/5K0;LX/5Fu;LX/5NR;LX/5PT;)[LX/5R7;
 .end method

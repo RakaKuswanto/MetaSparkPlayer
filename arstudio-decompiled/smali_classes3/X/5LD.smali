@@ -1,30 +1,24 @@
-.class public interface abstract LX/5LD;
+.class public final synthetic LX/5LD;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5LL;
+
+
+# direct methods
+.method public synthetic constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract A6X(Ljava/lang/String;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "workSpecId"
-        }
-    .end annotation
-.end method
+.method public final accept(Ljava/lang/Object;)V
+    .locals 0
 
-.method public abstract AOk()Z
-.end method
-
-.method public varargs abstract AkW([LX/5Lq;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "workSpecs"
-        }
-    .end annotation
+    return-void
 .end method

@@ -44,7 +44,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 12
     .line 13

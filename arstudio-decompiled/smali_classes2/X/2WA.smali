@@ -1,140 +1,77 @@
 .class public final LX/2WA;
-.super LX/2WC;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Z
+# static fields
+.field public static final A01:LX/2oU;
 
-.field public final A01:LX/1Nw;
+.field public static volatile A02:LX/2WA;
+
+
+# instance fields
+.field public final A00:LX/2Ui;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 7
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    const/4 v6, 0x1
+    new-instance v0, LX/2oU;
 
     .line 1
-    invoke-direct {p0}, LX/2WC;-><init>()V
-
     .line 2
+    invoke-direct {v0}, LX/2oU;-><init>()V
+
     .line 3
     .line 4
-    iput-object p1, p0, LX/2WA;->A01:LX/1Nw;
+    .line 5
+    sput-object v0, LX/2WA;->A01:LX/2oU;
 
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {p1}, LX/3Dz;->A00(Landroid/content/Context;)LX/2eD;
+
+    .line 4
     .line 5
     .line 6
-    invoke-static {}, Lcom/facebook/endtoend/EndToEnd;->isRunningEndToEndTest()Z
+    move-result-object v1
 
     .line 7
+    const-string/jumbo v0, "pretos"
+
     .line 8
     .line 9
-    move-result v0
-
     .line 10
-    const-string v5, "analytics_logger_to_logcat"
+    invoke-virtual {v1, v0}, LX/2eD;->A01(Ljava/lang/String;)LX/2Ui;
 
     .line 11
     .line 12
-    const-string v4, "false"
-
     .line 13
+    move-result-object v0
+
     .line 14
-    const/4 v3, 0x0
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 15
-    if-eqz v0, :cond_0
-
     .line 16
     .line 17
-    invoke-static {v5}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    iput-object v0, p0, LX/2WA;->A00:LX/2Ui;
 
     .line 18
     .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v1
-
-    .line 25
-    const/4 v0, 0x1
-
-    .line 26
-    if-eqz v1, :cond_1
-
-    .line 27
-    .line 28
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 29
-    :cond_1
-    iput-boolean v0, p0, LX/2WA;->A00:Z
-
-    .line 30
-    .line 31
-    const-string v2, "EndToEndAnalyticsEventListener"
-
-    .line 32
-    .line 33
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v1
-
-    .line 37
-    invoke-static {v5}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v0
-
-    .line 41
-    aput-object v0, v1, v3
-
-    .line 42
-    .line 43
-    invoke-static {}, Lcom/facebook/endtoend/EndToEnd;->isRunningEndToEndTest()Z
-
-    .line 44
-    .line 45
-    .line 46
-    move-result v0
-
-    .line 47
-    if-eqz v0, :cond_2
-
-    .line 48
-    .line 49
-    const-string/jumbo v4, "true"
-
-    .line 50
-    .line 51
-    .line 52
-    :cond_2
-    aput-object v4, v1, v6
-
-    .line 53
-    .line 54
-    const-string v0, "WRITE_ANALYTICS_TO_LOGCAT = %s, EndToEnd.isRunningEndToEndTest() = %s"
-
-    .line 55
-    .line 56
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 57
-    .line 58
-    .line 59
     return-void
 .end method

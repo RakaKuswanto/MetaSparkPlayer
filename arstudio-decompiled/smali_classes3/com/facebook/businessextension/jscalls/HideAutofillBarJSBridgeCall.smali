@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final CREATOR:LX/4N8;
+.field public static final CREATOR:LX/4EE;
 
 
 # direct methods
@@ -12,19 +12,19 @@
     .locals 2
 
     .line 0
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
     .line 1
-    new-instance v0, LX/6QC;
+    new-instance v0, LX/6gp;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/6QC;-><init>(I)V
+    invoke-direct {v0, v1}, LX/6gp;-><init>(I)V
 
     .line 4
     .line 5
     .line 6
-    sput-object v0, Lcom/facebook/businessextension/jscalls/HideAutofillBarJSBridgeCall;->CREATOR:LX/4N8;
+    sput-object v0, Lcom/facebook/businessextension/jscalls/HideAutofillBarJSBridgeCall;->CREATOR:LX/4EE;
 
     .line 7
     .line 8

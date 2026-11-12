@@ -1,17 +1,37 @@
-.class public final LX/5Yk;
+.class public final LX/5yK;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5bo;
+
+# static fields
+.field public static final A01:LX/5yr;
 
 
 # instance fields
-.field public final A00:Ljava/util/List;
+.field public final A00:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    sput-object v0, LX/5yK;->A01:LX/5yr;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/Map;)V
     .locals 1
 
     .line 0
@@ -20,7 +40,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 4
     .line 5
@@ -28,30 +48,14 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, LX/5Yk;->A00:Ljava/util/List;
+    iput-object v0, p0, LX/5yK;->A00:Ljava/util/Map;
 
     .line 8
     .line 9
+    invoke-virtual {v0, p1}, Ljava/util/AbstractMap;->putAll(Ljava/util/Map;)V
+
+    .line 10
+    .line 11
+    .line 12
     return-void
-.end method
-
-
-# virtual methods
-.method public final deliverOnRenderThread()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final getType()LX/5X9;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/5X9;->GL_RENDERER:LX/5X9;
-
-    .line 1
-    .line 2
-    return-object v0
 .end method

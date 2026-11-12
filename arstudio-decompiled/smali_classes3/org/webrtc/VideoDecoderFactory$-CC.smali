@@ -1,4 +1,4 @@
-.class public final synthetic Lorg/webrtc/VideoDecoderFactory$-CC;
+.class public abstract synthetic Lorg/webrtc/VideoDecoderFactory$-CC;
 .super Ljava/lang/Object;
 .source ""
 
@@ -12,7 +12,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {p0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 3
     .line 4

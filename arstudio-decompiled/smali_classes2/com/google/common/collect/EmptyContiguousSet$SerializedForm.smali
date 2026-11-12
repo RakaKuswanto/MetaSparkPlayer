@@ -11,12 +11,20 @@
 
 
 # instance fields
-.field public final domain:LX/1fk;
+.field public final domain:LX/1ox;
 
 
 # direct methods
-.method public constructor <init>(LX/1fk;)V
+.method public constructor <init>(LX/1ox;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "domain"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +32,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;->domain:LX/1fk;
+    iput-object p1, p0, Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;->domain:LX/1ox;
 
     .line 4
     .line 5
@@ -35,7 +43,7 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;->domain:LX/1fk;
+    iget-object v1, p0, Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;->domain:LX/1ox;
 
     .line 1
     .line 2
@@ -43,7 +51,7 @@
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, Lcom/google/common/collect/EmptyContiguousSet;-><init>(LX/1fk;)V
+    invoke-direct {v0, v1}, Lcom/google/common/collect/EmptyContiguousSet;-><init>(LX/1ox;)V
 
     .line 5
     .line 6

@@ -1,52 +1,43 @@
-.class public final LX/5eW;
+.class public final LX/5Ew;
 .super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:Ljava/lang/String;
+
+.field public final A02:[J
+
+.field public final A03:[Lcom/google/android/exoplayer2/metadata/emsg/EventMessage;
+
+
 # direct methods
-.method public static A00(LX/5eX;)J
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Lcom/google/android/exoplayer2/metadata/emsg/EventMessage;)V
+    .locals 0
 
     .line 0
-    if-eqz p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
     .line 3
+    iput-object p1, p0, LX/5Ew;->A00:Ljava/lang/String;
+
     .line 4
-    iget-object v0, p0, LX/5eX;->A00:LX/0JB;
-
     .line 5
-    .line 6
-    invoke-interface {v0}, LX/0JB;->nowNanos()J
+    iput-object p2, p0, LX/5Ew;->A01:Ljava/lang/String;
 
+    .line 6
     .line 7
+    iput-object p3, p0, LX/5Ew;->A02:[J
+
     .line 8
     .line 9
-    move-result-wide v0
+    iput-object p4, p0, LX/5Ew;->A03:[Lcom/google/android/exoplayer2/metadata/emsg/EventMessage;
 
     .line 10
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
     .line 11
-    .line 12
-    .line 13
-    move-result-wide v0
-
-    .line 14
-    return-wide v0
-
-    .line 15
-    :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-wide v0
-
-    .line 19
-    return-wide v0
+    return-void
 .end method

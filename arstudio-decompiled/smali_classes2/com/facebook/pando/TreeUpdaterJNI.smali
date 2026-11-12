@@ -1,4 +1,4 @@
-.class public Lcom/facebook/pando/TreeUpdaterJNI;
+.class public abstract Lcom/facebook/pando/TreeUpdaterJNI;
 .super Lcom/facebook/jni/HybridClassBase;
 .source ""
 
@@ -13,7 +13,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -75,4 +75,7 @@
 
 # virtual methods
 .method public final native applyToTree(Lcom/facebook/pando/TreeJNI;)Lcom/facebook/pando/TreeJNI;
+.end method
+
+.method public final native treeFromUpdater(Ljava/lang/Class;)Lcom/facebook/pando/TreeJNI;
 .end method

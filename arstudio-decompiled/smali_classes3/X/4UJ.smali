@@ -1,3 +1,20 @@
-.class public interface abstract LX/4UJ;
+.class public abstract LX/4UJ;
 .super Ljava/lang/Object;
 .source ""
+
+
+# direct methods
+.method public static A00()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/4UI;->A00()Ljava/util/Set;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method

@@ -1,34 +1,40 @@
-.class public interface abstract LX/5vQ;
-.super Ljava/lang/Object;
+.class public final LX/5Vq;
+.super LX/5Vs;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/5vQ;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    new-instance v0, LX/5vP;
+    const/4 v1, 0x0
 
     .line 1
-    .line 2
-    invoke-direct {v0}, LX/5vP;-><init>()V
+    const/16 v0, 0xff
 
+    .line 2
     .line 3
+    invoke-direct {p0}, LX/5Vs;-><init>()V
+
     .line 4
     .line 5
-    sput-object v0, LX/5vQ;->A00:LX/5vQ;
-
     .line 6
+    iput v1, p0, LX/5Vs;->A03:I
+
     .line 7
+    .line 8
+    iput v1, p0, LX/5Vs;->A02:I
+
+    .line 9
+    .line 10
+    iput v1, p0, LX/5Vs;->A01:I
+
+    .line 11
+    .line 12
+    iput v0, p0, LX/5Vs;->A00:I
+
+    .line 13
+    .line 14
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract AET(Ljava/lang/String;ZZ)Ljava/util/List;
 .end method

@@ -1,657 +1,561 @@
-.class public LX/41M;
-.super LX/42v;
+.class public abstract LX/41M;
+.super LX/3oD;
 .source ""
-
-# interfaces
-.implements Lcom/facebook/common/callercontext/CallerContextable;
-
-
-# static fields
-.field public static final A03:Lcom/facebook/common/callercontext/CallerContext;
-
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbDraweeView"
 
 
 # instance fields
-.field public A00:LX/3oe;
-
-.field public final A01:LX/41a;
-
-.field public final A02:LX/2vG;
+.field public A00:LX/3ns;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 0
-    const-class v2, LX/41M;
-
-    .line 1
-    .line 2
-    const-string/jumbo v1, "unknown"
-
-    .line 3
-    .line 4
-    .line 5
-    new-instance v0, Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 6
-    .line 7
-    invoke-direct {v0, v2, v1, v1, v1}, Lcom/facebook/common/callercontext/CallerContext;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 8
-    .line 9
-    .line 10
-    sput-object v0, LX/41M;->A03:Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0, p1}, LX/42v;-><init>(Landroid/content/Context;)V
-
-    .line 1
-    .line 2
-    .line 3
-    sget v0, LX/2eq;->AMG:I
-
-    .line 4
-    .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    check-cast v0, LX/41a;
-
-    .line 10
-    .line 11
-    iput-object v0, p0, LX/41M;->A01:LX/41a;
-
-    .line 12
-    .line 13
-    new-instance v0, LX/2vG;
-
-    .line 14
-    .line 15
-    invoke-direct {v0}, LX/2vG;-><init>()V
-
-    .line 16
-    .line 17
-    .line 18
-    iput-object v0, p0, LX/41M;->A02:LX/2vG;
-
-    .line 19
-    .line 20
-    const/4 v0, 0x0
-
-    .line 21
-    invoke-direct {p0, p1, v0}, LX/41M;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 22
-    .line 23
-    .line 24
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;LX/42x;)V
-    .locals 1
-
-    .line 805306368
-    invoke-direct {p0, p1, p2}, LX/42v;-><init>(Landroid/content/Context;LX/42x;)V
-
-    .line 805306369
-    .line 805306370
-    .line 805306371
-    sget v0, LX/2eq;->AMG:I
-
-    .line 805306372
-    .line 805306373
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 805306374
-    .line 805306375
-    .line 805306376
-    move-result-object v0
-
-    .line 805306377
-    check-cast v0, LX/41a;
-
-    .line 805306378
-    .line 805306379
-    iput-object v0, p0, LX/41M;->A01:LX/41a;
-
-    .line 805306380
-    .line 805306381
-    new-instance v0, LX/2vG;
-
-    .line 805306382
-    .line 805306383
-    invoke-direct {v0}, LX/2vG;-><init>()V
-
-    .line 805306384
-    .line 805306385
-    .line 805306386
-    iput-object v0, p0, LX/41M;->A02:LX/2vG;
-
-    .line 805306387
-    .line 805306388
-    const/4 v0, 0x0
-
-    .line 805306389
-    invoke-direct {p0, p1, v0}, LX/41M;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 805306390
-    .line 805306391
-    .line 805306392
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    .line 1074238997
-    invoke-direct {p0, p1, p2}, LX/42v;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 1074238998
-    sget v0, LX/2eq;->AMG:I
-
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, LX/41a;
-
-    iput-object v0, p0, LX/41M;->A01:LX/41a;
-
-    .line 1074238999
-    new-instance v0, LX/2vG;
-
-    invoke-direct {v0}, LX/2vG;-><init>()V
-
-    iput-object v0, p0, LX/41M;->A02:LX/2vG;
-
-    .line 1074239000
-    invoke-direct {p0, p1, p2}, LX/41M;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 1
-
-    .line 536870912
-    invoke-direct {p0, p1, p2, p3}, LX/42v;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    sget v0, LX/2eq;->AMG:I
-
-    .line 536870916
-    .line 536870917
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 536870918
-    .line 536870919
-    .line 536870920
-    move-result-object v0
-
-    .line 536870921
-    check-cast v0, LX/41a;
-
-    .line 536870922
-    .line 536870923
-    iput-object v0, p0, LX/41M;->A01:LX/41a;
-
-    .line 536870924
-    .line 536870925
-    new-instance v0, LX/2vG;
-
-    .line 536870926
-    .line 536870927
-    invoke-direct {v0}, LX/2vG;-><init>()V
-
-    .line 536870928
-    .line 536870929
-    .line 536870930
-    iput-object v0, p0, LX/41M;->A02:LX/2vG;
-
-    .line 536870931
-    .line 536870932
-    invoke-direct {p0, p1, p2}, LX/41M;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 536870933
-    .line 536870934
-    .line 536870935
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 268435456
-    invoke-direct {p0, p1, p2, p3, p4}, LX/42v;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0}, LX/3oD;-><init>()V
 
     .line 268435457
     .line 268435458
     .line 268435459
-    sget v0, LX/2eq;->AMG:I
-
-    .line 268435460
-    .line 268435461
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 268435462
-    .line 268435463
-    .line 268435464
-    move-result-object v0
-
-    .line 268435465
-    check-cast v0, LX/41a;
-
-    .line 268435466
-    .line 268435467
-    iput-object v0, p0, LX/41M;->A01:LX/41a;
-
-    .line 268435468
-    .line 268435469
-    new-instance v0, LX/2vG;
-
-    .line 268435470
-    .line 268435471
-    invoke-direct {v0}, LX/2vG;-><init>()V
-
-    .line 268435472
-    .line 268435473
-    .line 268435474
-    iput-object v0, p0, LX/41M;->A02:LX/2vG;
-
-    .line 268435475
-    .line 268435476
-    invoke-direct {p0, p1, p2}, LX/41M;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 268435477
-    .line 268435478
-    .line 268435479
     return-void
 .end method
 
-.method private A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 1
 
     .line 0
-    sget v0, LX/2eq;->AMH:I
-
-    .line 1
-    .line 2
-    invoke-static {p1, v0}, LX/1zE;->A09(Landroid/content/Context;I)Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/3oe;
-
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/41M;->A00:LX/3oe;
-
-    .line 9
-    .line 10
-    sget-object v0, LX/4OX;->A0N:[I
-
-    .line 11
-    .line 12
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v1
-
-    .line 16
     const/4 v0, 0x0
 
-    .line 17
-    invoke-virtual {v1, v0, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    .line 1
+    invoke-direct {p0, v0}, LX/3oD;-><init>(I)V
 
-    .line 18
-    .line 19
-    .line 20
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final A0D(I)Ljava/lang/String;
+    .locals 5
+
+    .line 0
+    int-to-char v4, p0
+
+    .line 1
+    invoke-static {v4}, Ljava/lang/Character;->isISOControl(C)Z
+
+    .line 2
+    .line 3
+    .line 4
     move-result v0
 
+    .line 5
+    const-string v3, ")"
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_1
+
+    .line 8
+    .line 9
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v1
+
+    .line 13
+    const-string v0, "(CTRL-CHAR, code "
+
+    .line 14
+    .line 15
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_0
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 19
+    .line 20
     .line 21
-    if-eqz v0, :cond_0
+    :goto_0
+    invoke-static {v3, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 22
     .line 23
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
     .line 24
-    .line 25
-    .line 26
     move-result-object v0
 
-    .line 27
-    invoke-virtual {p0, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    .line 25
+    return-object v0
 
+    .line 26
+    :cond_1
+    const-string v2, "\' (code "
+
+    .line 27
     .line 28
+    const-string v1, "\'"
+
     .line 29
     .line 30
-    :cond_0
-    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+    const/16 v0, 0xff
 
     .line 31
     .line 32
-    .line 33
-    iget-object v1, p0, LX/41M;->A02:LX/2vG;
+    invoke-static {v1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 33
     .line 34
     .line 35
-    iget-boolean v0, v1, LX/2vG;->A01:Z
+    move-result-object v1
 
     .line 36
-    .line 37
-    if-eqz v0, :cond_1
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 37
     .line 38
     .line 39
-    invoke-static {p1, p2}, LX/42u;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)LX/42p;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 40
     .line 41
     .line 42
-    move-result-object v0
+    if-le p0, v0, :cond_0
 
     .line 43
-    iput-object v0, v1, LX/2vG;->A00:LX/42p;
-
     .line 44
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     .line 45
-    :cond_1
-    return-void
+    .line 46
+    .line 47
+    const-string v0, " / 0x"
+
+    .line 48
+    .line 49
+    invoke-static {v0, v1, p0}, LX/0X2;->A1K(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+
+    .line 50
+    .line 51
+    .line 52
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public getActualImageFocusPoint()Landroid/graphics/PointF;
-    .locals 3
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    const/4 v1, 0x2
-
-    .line 5
-    invoke-static {v2, v1}, LX/42x;->A00(LX/42x;I)LX/45Y;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    instance-of v0, v0, LX/434;
-
-    .line 10
-    .line 11
-    if-nez v0, :cond_0
-
-    .line 12
-    .line 13
-    const/4 v0, 0x0
-
-    .line 14
-    return-object v0
-
-    .line 15
-    :cond_0
-    invoke-static {v2, v1}, LX/42x;->A01(LX/42x;I)LX/434;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iget-object v0, v0, LX/434;->A03:Landroid/graphics/PointF;
-
-    .line 20
-    .line 21
-    return-object v0
-.end method
-
-.method public getActualImageScaleType()LX/69a;
-    .locals 3
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    const/4 v1, 0x2
-
-    .line 5
-    invoke-static {v2, v1}, LX/42x;->A00(LX/42x;I)LX/45Y;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    instance-of v0, v0, LX/434;
-
-    .line 10
-    .line 11
-    if-nez v0, :cond_0
-
-    .line 12
-    .line 13
-    const/4 v0, 0x0
-
-    .line 14
-    return-object v0
-
-    .line 15
-    :cond_0
-    invoke-static {v2, v1}, LX/42x;->A01(LX/42x;I)LX/434;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iget-object v0, v0, LX/434;->A04:LX/69a;
-
-    .line 20
-    .line 21
-    return-object v0
-.end method
-
-.method public getControllerBuilder()LX/3oe;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/41M;->A00:LX/3oe;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 3
-    .line 4
-    .line 5
-    return-object v0
-.end method
-
-.method public getFadeDuration()I
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    iget-object v0, v0, LX/42x;->A03:LX/431;
-
-    .line 5
-    .line 6
-    iget v0, v0, LX/431;->A02:I
-
-    .line 7
-    .line 8
-    return v0
-.end method
-
-.method public getRoundingParams()LX/438;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    iget-object v0, v0, LX/42x;->A00:LX/438;
-
-    .line 5
-    .line 6
-    return-object v0
-.end method
-
-.method public getTopLevelDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    iget-object v0, v0, LX/42x;->A05:LX/43Z;
-
-    .line 5
-    .line 6
-    return-object v0
-.end method
-
-.method public getVitoState()LX/2vG;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/41M;->A02:LX/2vG;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public onDraw(Landroid/graphics/Canvas;)V
+.method public A1G()LX/3oD;
     .locals 4
 
     .line 0
-    :try_start_0
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
+    iget-object v1, p0, LX/41M;->A00:LX/3ns;
 
     .line 1
     .line 2
-    .line 3
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v0, LX/3ns;->START_OBJECT:LX/3ns;
 
+    .line 3
     .line 4
-    :catch_0
-    move-exception v3
+    if-eq v1, v0, :cond_0
 
     .line 5
-    iget-object v0, p0, LX/42o;->A01:LX/41W;
-
     .line 6
+    sget-object v0, LX/3ns;->START_ARRAY:LX/3ns;
+
     .line 7
-    iget-object v1, v0, LX/41W;->A00:LX/44d;
-
     .line 8
-    .line 9
-    if-eqz v1, :cond_0
+    if-eq v1, v0, :cond_0
 
+    .line 9
     .line 10
+    return-object p0
+
     .line 11
-    instance-of v0, v1, LX/41L;
+    :cond_0
+    const/4 v3, 0x1
 
     .line 12
+    const/4 v2, 0x1
+
     .line 13
-    if-eqz v0, :cond_0
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, LX/3oD;->A1H()LX/3ns;
 
     .line 14
     .line 15
-    check-cast v1, LX/41L;
-
     .line 16
+    move-result-object v0
+
     .line 17
-    iget-object v2, v1, LX/41L;->A06:Ljava/lang/Object;
+    if-nez v0, :cond_2
 
     .line 18
     .line 19
-    if-eqz v2, :cond_0
+    invoke-virtual {p0}, LX/41M;->A1K()V
 
     .line 20
     .line 21
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
-
     .line 22
+    return-object p0
+
     .line 23
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
     .line 24
-    move-result-object v1
-
     .line 25
-    const/4 v0, 0x0
-
     .line 26
-    invoke-static {v2, v1, v0}, LX/0Yf;->A1B(Ljava/lang/Object;[Ljava/lang/Object;I)V
+    move-result v1
 
     .line 27
+    if-eq v1, v3, :cond_4
+
     .line 28
     .line 29
-    const-string v0, "Exception in onDraw, callerContext=%s"
+    const/4 v0, 0x3
+
+    .line 30
+    if-eq v1, v0, :cond_4
+
+    .line 31
+    .line 32
+    const/4 v0, 0x2
+
+    .line 33
+    if-eq v1, v0, :cond_3
+
+    .line 34
+    .line 35
+    const/4 v0, 0x4
+
+    .line 36
+    if-eq v1, v0, :cond_3
+
+    .line 37
+    .line 38
+    goto :goto_0
+
+    .line 39
+    :cond_3
+    add-int/lit8 v2, v2, -0x1
+
+    .line 40
+    .line 41
+    if-nez v2, :cond_1
+
+    .line 42
+    .line 43
+    return-object p0
+
+    .line 44
+    :cond_4
+    add-int/lit8 v2, v2, 0x1
+
+    .line 45
+    .line 46
+    goto :goto_0
+.end method
+
+.method public A1J(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/41M;->A00:LX/3ns;
+
+    .line 1
+    .line 2
+    sget-object v0, LX/3ns;->VALUE_STRING:LX/3ns;
+
+    .line 3
+    .line 4
+    if-eq v1, v0, :cond_1
+
+    .line 5
+    .line 6
+    if-eqz v1, :cond_0
+
+    .line 7
+    .line 8
+    sget-object v0, LX/3ns;->VALUE_NULL:LX/3ns;
+
+    .line 9
+    .line 10
+    if-eq v1, v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-virtual {v1}, LX/3ns;->isScalarValue()Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    if-nez v0, :cond_1
+
+    .line 17
+    .line 18
+    :cond_0
+    return-object p1
+
+    .line 19
+    :cond_1
+    invoke-virtual {p0}, LX/3oD;->A13()Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object p1
+
+    .line 23
+    return-object p1
+.end method
+
+.method public final A1K()V
+    .locals 12
+
+    .line 0
+    instance-of v0, p0, LX/3rT;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    const-string v0, "Internal error: this code path should never get executed"
+
+    .line 5
+    .line 6
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    throw v0
+
+    .line 11
+    :cond_0
+    instance-of v0, p0, LX/3SH;
+
+    .line 12
+    .line 13
+    if-eqz v0, :cond_1
+
+    .line 14
+    .line 15
+    const-string v0, "Internal error: this code path should never get executed"
+
+    .line 16
+    .line 17
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    throw v0
+
+    .line 22
+    :cond_1
+    move-object v3, p0
+
+    .line 23
+    check-cast v3, LX/41N;
+
+    .line 24
+    .line 25
+    iget-object v2, v3, LX/41N;->A0E:LX/3t1;
+
+    .line 26
+    .line 27
+    iget v0, v2, LX/3ST;->A01:I
+
+    .line 28
+    .line 29
+    if-nez v0, :cond_2
 
     .line 30
     .line 31
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    return-void
+
+    .line 32
+    :cond_2
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v1
+
+    .line 36
+    const-string v0, ": expected close marker for "
+
+    .line 37
+    .line 38
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v2}, LX/3ST;->A00()Ljava/lang/String;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v0
+
+    .line 45
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 46
+    .line 47
+    .line 48
+    const-string v0, " (from "
+
+    .line 49
+    .line 50
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 51
+    .line 52
+    .line 53
+    iget-object v0, v3, LX/41N;->A0N:LX/40l;
+
+    .line 54
+    .line 55
+    iget-object v5, v0, LX/40l;->A07:Ljava/lang/Object;
+
+    .line 56
+    .line 57
+    iget v6, v2, LX/3t1;->A01:I
+
+    .line 58
+    .line 59
+    iget v7, v2, LX/3t1;->A00:I
+
+    .line 60
+    .line 61
+    const-wide/16 v8, -0x1
+
+    .line 62
+    .line 63
+    new-instance v4, LX/3uZ;
+
+    .line 64
+    .line 65
+    move-wide v10, v8
+
+    .line 66
+    invoke-direct/range {v4 .. v11}, LX/3uZ;-><init>(Ljava/lang/Object;IIJJ)V
+
+    .line 67
+    .line 68
+    .line 69
+    invoke-static {v4, v1}, LX/0X2;->A0i(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 70
+    .line 71
+    .line 72
+    move-result-object v0
+
+    .line 73
+    invoke-virtual {v3, v0}, LX/41M;->A1Q(Ljava/lang/String;)V
+
+    .line 74
+    .line 75
+    .line 76
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
+
+    .line 80
+    throw v0
+.end method
+
+.method public final A1L(C)V
+    .locals 2
+
+    .line 0
+    sget-object v0, LX/41b;->ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER:LX/41b;
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, v0}, LX/3oD;->A1D(LX/41b;)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    .line 8
+    const/16 v0, 0x27
+
+    .line 9
+    .line 10
+    if-ne p1, v0, :cond_1
+
+    .line 11
+    .line 12
+    sget-object v0, LX/41b;->ALLOW_SINGLE_QUOTES:LX/41b;
+
+    .line 13
+    .line 14
+    invoke-virtual {p0, v0}, LX/3oD;->A1D(LX/41b;)Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    if-eqz v0, :cond_1
+
+    .line 19
+    .line 20
+    :cond_0
+    return-void
+
+    .line 21
+    :cond_1
+    const-string v0, "Unrecognized character escape "
+
+    .line 22
+    .line 23
+    invoke-static {p1}, LX/41M;->A0D(I)Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v1
+
+    .line 27
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 32
     .line 33
@@ -659,7 +563,7 @@
     move-result-object v0
 
     .line 35
-    invoke-static {v0, v3}, LX/0Yj;->A0O(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {p0, v0}, LX/3oD;->A05(LX/3oD;Ljava/lang/String;)LX/41o;
 
     .line 36
     .line 37
@@ -668,490 +572,206 @@
 
     .line 39
     throw v0
-
-    .line 40
-    :cond_0
-    throw v3
-
-    .line 41
-    :goto_0
-    return-void
 .end method
 
-.method public setActualImageColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    iget-object v0, v0, LX/42x;->A04:LX/2i3;
-
-    .line 5
-    .line 6
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public setActualImageFocusPoint(Landroid/graphics/PointF;)V
-    .locals 2
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 5
-    .line 6
-    .line 7
-    const/4 v0, 0x2
-
-    .line 8
-    invoke-static {v1, v0}, LX/42x;->A01(LX/42x;I)LX/434;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    invoke-virtual {v0, p1}, LX/434;->A02(Landroid/graphics/PointF;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public setActualImageScaleType(LX/69a;)V
-    .locals 2
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 5
-    .line 6
-    .line 7
-    const/4 v0, 0x2
-
-    .line 8
-    invoke-static {v1, v0}, LX/42x;->A01(LX/42x;I)LX/434;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    invoke-virtual {v0, p1}, LX/434;->A03(LX/69a;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public setBackgroundImage(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    const/4 v0, 0x0
-
-    .line 5
-    invoke-static {p1, v1, v0}, LX/42x;->A04(Landroid/graphics/drawable/Drawable;LX/42x;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public setControllerOverlay(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    iget-object v0, v0, LX/42x;->A05:LX/43Z;
-
-    .line 5
-    .line 6
-    iput-object p1, v0, LX/43Z;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    .line 9
-    .line 10
-    .line 11
-    return-void
-.end method
-
-.method public setFadeDuration(I)V
+.method public final A1M(I)V
     .locals 3
 
     .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
+    int-to-char v0, p1
 
     .line 1
+    const-string v2, "Illegal character ("
+
     .line 2
     .line 3
-    move-result-object v0
+    invoke-static {v0}, LX/41M;->A0D(I)Ljava/lang/String;
 
     .line 4
-    iget-object v2, v0, LX/42x;->A03:LX/431;
-
     .line 5
     .line 6
-    iput p1, v2, LX/431;->A02:I
-
-    .line 7
-    .line 8
-    iget v1, v2, LX/431;->A04:I
-
-    .line 9
-    .line 10
-    const/4 v0, 0x1
-
-    .line 11
-    if-ne v1, v0, :cond_0
-
-    .line 12
-    .line 13
-    const/4 v0, 0x0
-
-    .line 14
-    iput v0, v2, LX/431;->A04:I
-
-    .line 15
-    .line 16
-    :cond_0
-    return-void
-.end method
-
-.method public setFailureImage(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
     move-result-object v1
 
-    .line 4
-    const/4 v0, 0x5
-
-    .line 5
-    invoke-static {p1, v1, v0}, LX/42x;->A04(Landroid/graphics/drawable/Drawable;LX/42x;I)V
-
-    .line 6
     .line 7
-    .line 8
-    return-void
-.end method
-
-.method public setImageRequest(LX/3xw;Lcom/facebook/common/callercontext/CallerContext;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/41M;->A00:LX/3oe;
-
-    .line 1
-    .line 2
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 3
-    .line 4
-    .line 5
-    iput-object p2, v1, LX/3p2;->A02:Ljava/lang/Object;
-
-    .line 6
-    .line 7
-    iget-object v0, p0, LX/42o;->A01:LX/41W;
+    const-string v0, "): only regular white space (\\r, \\n, \\t) is allowed between tokens"
 
     .line 8
     .line 9
-    iget-object v0, v0, LX/41W;->A00:LX/44d;
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 10
     .line 11
-    iput-object v0, v1, LX/3p2;->A01:LX/44d;
-
     .line 12
+    move-result-object v0
+
     .line 13
-    iput-object p1, v1, LX/3p2;->A03:Ljava/lang/Object;
+    invoke-static {p0, v0}, LX/3oD;->A05(LX/3oD;Ljava/lang/String;)LX/41o;
 
     .line 14
     .line 15
-    invoke-virtual {v1}, LX/3oe;->A07()LX/3nf;
-
     .line 16
+    move-result-object v0
+
     .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    invoke-virtual {p0, v0}, LX/42o;->setController(LX/44d;)V
-
-    .line 20
-    .line 21
-    .line 22
-    return-void
+    throw v0
 .end method
 
-.method public setImageRequest(LX/3xw;Lcom/facebook/common/callercontext/CallerContext;LX/41e;)V
-    .locals 2
-
-    .line 268435456
-    iget-object v1, p0, LX/41M;->A00:LX/3oe;
-
-    .line 268435457
-    .line 268435458
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    iput-object p2, v1, LX/3p2;->A02:Ljava/lang/Object;
-
-    .line 268435462
-    .line 268435463
-    iget-object v0, p0, LX/42o;->A01:LX/41W;
-
-    .line 268435464
-    .line 268435465
-    iget-object v0, v0, LX/41W;->A00:LX/44d;
-
-    .line 268435466
-    .line 268435467
-    iput-object v0, v1, LX/3p2;->A01:LX/44d;
-
-    .line 268435468
-    .line 268435469
-    iput-object p1, v1, LX/3p2;->A03:Ljava/lang/Object;
-
-    .line 268435470
-    .line 268435471
-    iput-object p3, v1, LX/3p2;->A00:LX/41e;
-
-    .line 268435472
-    .line 268435473
-    invoke-virtual {v1}, LX/3oe;->A07()LX/3nf;
-
-    .line 268435474
-    .line 268435475
-    .line 268435476
-    move-result-object v0
-
-    .line 268435477
-    invoke-virtual {p0, v0}, LX/42o;->setController(LX/44d;)V
-
-    .line 268435478
-    .line 268435479
-    .line 268435480
-    return-void
-.end method
-
-.method public setImageURI(Landroid/net/Uri;)V
-    .locals 1
+.method public final A1N(ILjava/lang/String;)V
+    .locals 3
 
     .line 0
-    invoke-static {p0}, LX/41a;->A00(Landroid/view/View;)Lcom/facebook/common/callercontext/CallerContext;
+    const-string v2, "Unexpected character ("
 
     .line 1
     .line 2
+    invoke-static {p1}, LX/41M;->A0D(I)Ljava/lang/String;
+
     .line 3
-    move-result-object v0
-
     .line 4
-    if-nez v0, :cond_0
-
     .line 5
+    move-result-object v1
+
     .line 6
-    sget-object v0, LX/41M;->A03:Lcom/facebook/common/callercontext/CallerContext;
+    const-string v0, ")"
 
     .line 7
     .line 8
-    :cond_0
-    invoke-virtual {p0, p1, v0}, LX/41M;->setImageURI(Landroid/net/Uri;Lcom/facebook/common/callercontext/CallerContext;)V
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 9
     .line 10
     .line 11
-    return-void
-.end method
+    move-result-object v1
 
-.method public setImageURI(Landroid/net/Uri;Lcom/facebook/common/callercontext/CallerContext;)V
-    .locals 2
+    .line 12
+    if-eqz p2, :cond_0
 
-    .line 536870912
-    iget-object v1, p0, LX/41M;->A00:LX/3oe;
+    .line 13
+    .line 14
+    const-string v0, ": "
 
-    .line 536870913
-    .line 536870914
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 15
+    .line 16
+    invoke-static {v1, v0, p2}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 536870915
-    .line 536870916
-    .line 536870917
-    iput-object p2, v1, LX/3p2;->A02:Ljava/lang/Object;
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v1
 
-    .line 536870918
-    .line 536870919
-    iget-object v0, p0, LX/42o;->A01:LX/41W;
+    .line 20
+    :cond_0
+    invoke-static {p0, v1}, LX/3oD;->A05(LX/3oD;Ljava/lang/String;)LX/41o;
 
-    .line 536870920
-    .line 536870921
-    iget-object v0, v0, LX/41W;->A00:LX/44d;
-
-    .line 536870922
-    .line 536870923
-    iput-object v0, v1, LX/3p2;->A01:LX/44d;
-
-    .line 536870924
-    .line 536870925
-    invoke-virtual {v1, p1}, LX/3oe;->A08(Landroid/net/Uri;)V
-
-    .line 536870926
-    .line 536870927
-    .line 536870928
-    invoke-virtual {v1}, LX/3oe;->A07()LX/3nf;
-
-    .line 536870929
-    .line 536870930
-    .line 536870931
+    .line 21
+    .line 22
+    .line 23
     move-result-object v0
 
-    .line 536870932
-    invoke-virtual {p0, v0}, LX/42o;->setController(LX/44d;)V
-
-    .line 536870933
-    .line 536870934
-    .line 536870935
-    return-void
+    .line 24
+    throw v0
 .end method
 
-.method public setImageURI(Landroid/net/Uri;Lcom/facebook/common/callercontext/CallerContext;LX/41e;)V
-    .locals 2
-
-    .line 268435456
-    iget-object v1, p0, LX/41M;->A00:LX/3oe;
-
-    .line 268435457
-    .line 268435458
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    iput-object p2, v1, LX/3p2;->A02:Ljava/lang/Object;
-
-    .line 268435462
-    .line 268435463
-    iput-object p3, v1, LX/3p2;->A00:LX/41e;
-
-    .line 268435464
-    .line 268435465
-    iget-object v0, p0, LX/42o;->A01:LX/41W;
-
-    .line 268435466
-    .line 268435467
-    iget-object v0, v0, LX/41W;->A00:LX/44d;
-
-    .line 268435468
-    .line 268435469
-    iput-object v0, v1, LX/3p2;->A01:LX/44d;
-
-    .line 268435470
-    .line 268435471
-    invoke-virtual {v1, p1}, LX/3oe;->A08(Landroid/net/Uri;)V
-
-    .line 268435472
-    .line 268435473
-    .line 268435474
-    invoke-virtual {v1}, LX/3oe;->A07()LX/3nf;
-
-    .line 268435475
-    .line 268435476
-    .line 268435477
-    move-result-object v0
-
-    .line 268435478
-    invoke-virtual {p0, v0}, LX/42o;->setController(LX/44d;)V
-
-    .line 268435479
-    .line 268435480
-    .line 268435481
-    return-void
-.end method
-
-.method public setOverlayImage(Landroid/graphics/drawable/Drawable;)V
-    .locals 4
+.method public final A1O(ILjava/lang/String;)V
+    .locals 3
 
     .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
+    sget-object v0, LX/41b;->ALLOW_UNQUOTED_CONTROL_CHARS:LX/41b;
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, v0}, LX/3oD;->A1D(LX/41b;)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    const/16 v0, 0x20
+
+    .line 9
+    .line 10
+    if-ge p1, v0, :cond_0
+
+    .line 11
+    .line 12
+    return-void
+
+    .line 13
+    :cond_0
+    int-to-char v0, p1
+
+    .line 14
+    const-string v2, "Illegal unquoted character ("
+
+    .line 15
+    .line 16
+    invoke-static {v0}, LX/41M;->A0D(I)Ljava/lang/String;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v1
+
+    .line 20
+    const-string v0, "): has to be escaped using backslash to be included in "
+
+    .line 21
+    .line 22
+    invoke-static {v2, v1, v0, p2}, LX/004;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    invoke-static {p0, v0}, LX/3oD;->A05(LX/3oD;Ljava/lang/String;)LX/41o;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    throw v0
+.end method
+
+.method public final A1P(LX/41Q;LX/41I;Ljava/lang/String;)V
+    .locals 11
+
+    .line 0
+    :try_start_0
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
 
     .line 1
     .line 2
     .line 3
-    move-result-object v3
+    move-result v7
 
     .line 4
-    const/4 v2, 0x6
+    const/4 v6, 0x0
 
     .line 5
-    iget-object v0, v3, LX/42x;->A03:LX/431;
+    const/4 v2, 0x0
 
     .line 6
+    :goto_0
+    if-ge v2, v7, :cond_b
+
     .line 7
-    iget-object v0, v0, LX/2hu;->A04:[Landroid/graphics/drawable/Drawable;
-
     .line 8
-    .line 9
-    array-length v0, v0
+    :goto_1
+    add-int/lit8 v4, v2, 0x1
 
+    .line 9
     .line 10
-    invoke-static {v2, v0}, LX/001;->A1P(II)Z
+    invoke-virtual {p3, v2}, Ljava/lang/String;->charAt(I)C
 
     .line 11
     .line 12
@@ -1159,192 +779,440 @@
     move-result v1
 
     .line 14
-    const-string v0, "The given index does not correspond to an overlay image."
+    if-ge v4, v7, :cond_b
 
     .line 15
     .line 16
-    invoke-static {v1, v0}, LX/3ap;->A04(ZLjava/lang/Object;)V
+    const/16 v0, 0x20
 
     .line 17
     .line 18
+    if-le v1, v0, :cond_0
+
     .line 19
-    invoke-static {p1, v3, v2}, LX/42x;->A04(Landroid/graphics/drawable/Drawable;LX/42x;I)V
-
     .line 20
+    goto :goto_2
+
     .line 21
+    :cond_0
+    move v2, v4
+
     .line 22
-    return-void
-.end method
+    goto :goto_1
 
-.method public setPlaceholderImage(I)V
-    .locals 3
+    .line 23
+    :goto_2
+    invoke-virtual {p1, v1}, LX/41Q;->A01(C)I
 
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
+    .line 24
+    .line 25
+    .line 26
+    move-result v3
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
+    .line 27
+    const/4 v8, 0x0
 
-    .line 4
-    iget-object v0, v2, LX/42x;->A01:Landroid/content/res/Resources;
+    .line 28
+    if-gez v3, :cond_1
 
-    .line 5
-    .line 6
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    .line 29
+    .line 30
+    invoke-static {p1, v8, v1, v6}, LX/41Q;->A00(LX/41Q;Ljava/lang/String;CI)V
 
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
+    .line 31
+    .line 32
+    .line 33
+    goto/16 :goto_7
 
-    .line 10
+    .line 34
+    .line 35
+    :cond_1
+    if-ge v4, v7, :cond_a
+
+    .line 36
+    .line 37
+    add-int/lit8 v2, v4, 0x1
+
+    .line 38
+    .line 39
+    invoke-virtual {p3, v4}, Ljava/lang/String;->charAt(I)C
+
+    .line 40
+    .line 41
+    .line 42
+    move-result v1
+
+    .line 43
+    invoke-virtual {p1, v1}, LX/41Q;->A01(C)I
+
+    .line 44
+    .line 45
+    .line 46
+    move-result v0
+
+    .line 47
+    if-gez v0, :cond_2
+
+    .line 48
+    .line 49
     const/4 v0, 0x1
 
-    .line 11
-    invoke-static {v1, v2, v0}, LX/42x;->A04(Landroid/graphics/drawable/Drawable;LX/42x;I)V
+    .line 50
+    invoke-static {p1, v8, v1, v0}, LX/41Q;->A00(LX/41Q;Ljava/lang/String;CI)V
 
-    .line 12
-    .line 13
-    .line 14
+    .line 51
+    .line 52
+    .line 53
+    goto :goto_7
+
+    .line 54
+    :cond_2
+    shl-int/lit8 v10, v3, 0x6
+
+    .line 55
+    .line 56
+    or-int/2addr v10, v0
+
+    .line 57
+    if-lt v2, v7, :cond_3
+
+    .line 58
+    .line 59
+    goto :goto_3
+
+    .line 60
+    :cond_3
+    add-int/lit8 v9, v2, 0x1
+
+    .line 61
+    .line 62
+    invoke-virtual {p3, v2}, Ljava/lang/String;->charAt(I)C
+
+    .line 63
+    .line 64
+    .line 65
+    move-result v2
+
+    .line 66
+    invoke-virtual {p1, v2}, LX/41Q;->A01(C)I
+
+    .line 67
+    .line 68
+    .line 69
+    move-result v1
+
+    .line 70
+    const/4 v5, 0x3
+
+    .line 71
+    const/4 v4, -0x2
+
+    .line 72
+    const/4 v0, 0x2
+
+    .line 73
+    if-gez v1, :cond_5
+
+    .line 74
+    .line 75
+    if-eq v1, v4, :cond_4
+
+    .line 76
+    .line 77
+    goto :goto_4
+
+    .line 78
+    :cond_4
+    if-ge v9, v7, :cond_a
+
+    .line 79
+    .line 80
+    add-int/lit8 v2, v9, 0x1
+
+    .line 81
+    .line 82
+    invoke-virtual {p3, v9}, Ljava/lang/String;->charAt(I)C
+
+    .line 83
+    .line 84
+    .line 85
+    move-result v4
+
+    .line 86
+    iget-char v3, p1, LX/41Q;->A00:C
+
+    .line 87
+    .line 88
+    if-ne v4, v3, :cond_9
+
+    .line 89
+    .line 90
+    shr-int/lit8 v0, v10, 0x4
+
+    .line 91
+    .line 92
+    invoke-virtual {p2, v0}, LX/41I;->A02(I)V
+
+    .line 93
+    .line 94
+    .line 95
+    goto :goto_0
+
+    .line 96
+    :cond_5
+    shl-int/lit8 v3, v10, 0x6
+
+    .line 97
+    .line 98
+    or-int/2addr v3, v1
+
+    .line 99
+    if-lt v9, v7, :cond_6
+
+    .line 100
+    .line 101
+    goto :goto_5
+
+    .line 102
+    :cond_6
+    add-int/lit8 v2, v9, 0x1
+
+    .line 103
+    .line 104
+    invoke-virtual {p3, v9}, Ljava/lang/String;->charAt(I)C
+
+    .line 105
+    .line 106
+    .line 107
+    move-result v0
+
+    .line 108
+    invoke-virtual {p1, v0}, LX/41Q;->A01(C)I
+
+    .line 109
+    .line 110
+    .line 111
+    move-result v1
+
+    .line 112
+    if-gez v1, :cond_8
+
+    .line 113
+    .line 114
+    if-eq v1, v4, :cond_7
+
+    .line 115
+    .line 116
+    goto :goto_6
+
+    .line 117
+    :cond_7
+    shr-int/lit8 v0, v3, 0x2
+
+    .line 118
+    .line 119
+    invoke-virtual {p2, v0}, LX/41I;->A04(I)V
+
+    .line 120
+    .line 121
+    .line 122
+    goto :goto_0
+
+    .line 123
+    :cond_8
+    shl-int/lit8 v0, v3, 0x6
+
+    .line 124
+    .line 125
+    or-int/2addr v0, v1
+
+    .line 126
+    invoke-virtual {p2, v0}, LX/41I;->A03(I)V
+
+    .line 127
+    .line 128
+    .line 129
+    goto :goto_0
+
+    .line 130
+    :goto_3
+    iget-boolean v0, p1, LX/41Q;->A02:Z
+
+    .line 131
+    .line 132
+    if-nez v0, :cond_a
+
+    .line 133
+    .line 134
+    shr-int/lit8 v0, v10, 0x4
+
+    .line 135
+    .line 136
+    invoke-virtual {p2, v0}, LX/41I;->A02(I)V
+
+    .line 137
+    .line 138
+    .line 139
     return-void
-.end method
 
-.method public setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
+    .line 140
+    :goto_4
+    invoke-static {p1, v8, v2, v0}, LX/41Q;->A00(LX/41Q;Ljava/lang/String;CI)V
 
-    .line 268435456
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
+    .line 141
+    .line 142
+    .line 143
+    goto :goto_7
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    move-result-object v1
+    .line 144
+    :cond_9
+    const-string/jumbo v1, "expected padding character \'"
 
-    .line 268435460
-    const/4 v0, 0x1
+    .line 145
+    .line 146
+    .line 147
+    const-string v0, "\'"
 
-    .line 268435461
-    invoke-static {p1, v1, v0}, LX/42x;->A04(Landroid/graphics/drawable/Drawable;LX/42x;I)V
+    .line 148
+    .line 149
+    invoke-static {v1, v0, v3}, LX/004;->A0D(Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
 
-    .line 268435462
-    .line 268435463
-    .line 268435464
-    return-void
-.end method
-
-.method public setPlaceholderImage(Landroid/graphics/drawable/Drawable;LX/69a;)V
-    .locals 2
-
-    .line 536870912
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    move-result-object v1
-
-    .line 536870916
-    const/4 v0, 0x1
-
-    .line 536870917
-    invoke-static {p1, v1, v0}, LX/42x;->A04(Landroid/graphics/drawable/Drawable;LX/42x;I)V
-
-    .line 536870918
-    .line 536870919
-    .line 536870920
-    invoke-static {v1, v0}, LX/42x;->A01(LX/42x;I)LX/434;
-
-    .line 536870921
-    .line 536870922
-    .line 536870923
+    .line 150
+    .line 151
+    .line 152
     move-result-object v0
 
-    .line 536870924
-    invoke-virtual {v0, p2}, LX/434;->A03(LX/69a;)V
+    .line 153
+    invoke-static {p1, v0, v4, v5}, LX/41Q;->A00(LX/41Q;Ljava/lang/String;CI)V
 
-    .line 536870925
-    .line 536870926
-    .line 536870927
+    .line 154
+    .line 155
+    .line 156
+    goto :goto_7
+
+    .line 157
+    :goto_5
+    iget-boolean v0, p1, LX/41Q;->A02:Z
+
+    .line 158
+    .line 159
+    if-nez v0, :cond_a
+
+    .line 160
+    .line 161
+    shr-int/lit8 v0, v3, 0x2
+
+    .line 162
+    .line 163
+    invoke-virtual {p2, v0}, LX/41I;->A04(I)V
+
+    .line 164
+    .line 165
+    .line 166
     return-void
-.end method
 
-.method public setPlaceholderImageFocusPoint(Landroid/graphics/PointF;)V
-    .locals 2
+    .line 167
+    :goto_6
+    invoke-static {p1, v8, v0, v5}, LX/41Q;->A00(LX/41Q;Ljava/lang/String;CI)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
+    .line 168
+    .line 169
+    .line 170
+    :goto_7
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 5
-    .line 6
-    .line 7
-    const/4 v0, 0x1
-
-    .line 8
-    invoke-static {v1, v0}, LX/42x;->A01(LX/42x;I)LX/434;
-
-    .line 9
-    .line 10
-    .line 11
+    .line 171
+    .line 172
+    .line 173
     move-result-object v0
 
-    .line 12
-    invoke-virtual {v0, p1}, LX/434;->A02(Landroid/graphics/PointF;)V
+    .line 174
+    goto :goto_8
 
-    .line 13
-    .line 14
-    .line 15
+    .line 175
+    :cond_a
+    :try_start_1
+    const-string v0, "Unexpected end-of-String in base64 content"
+
+    .line 176
+    .line 177
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 178
+    .line 179
+    .line 180
+    move-result-object v0
+
+    .line 181
+    :goto_8
+    throw v0
+
+    .line 182
+    :cond_b
     return-void
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 183
+    :catch_0
+    move-exception v0
+
+    .line 184
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 185
+    .line 186
+    .line 187
+    move-result-object v0
+
+    .line 188
+    invoke-static {p0, v0}, LX/3oD;->A05(LX/3oD;Ljava/lang/String;)LX/41o;
+
+    .line 189
+    .line 190
+    .line 191
+    move-result-object v0
+
+    .line 192
+    throw v0
 .end method
 
-.method public setProgressBarImage(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
-
-    .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    const/4 v0, 0x3
-
-    .line 5
-    invoke-static {p1, v1, v0}, LX/42x;->A04(Landroid/graphics/drawable/Drawable;LX/42x;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public setRoundingParams(LX/438;)V
+.method public final A1Q(Ljava/lang/String;)V
     .locals 1
 
     .line 0
-    invoke-static {p0}, LX/42o;->A01(LX/42o;)LX/42x;
+    const-string v0, "Unexpected end-of-input"
 
     .line 1
     .line 2
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 4
-    invoke-virtual {v0, p1}, LX/42x;->A0A(LX/438;)V
-
-    .line 5
     .line 6
+    invoke-static {p1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 7
-    return-void
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {p0, v0}, LX/3oD;->A05(LX/3oD;Ljava/lang/String;)LX/41o;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    throw v0
+.end method
+
+.method public abstract close()V
 .end method

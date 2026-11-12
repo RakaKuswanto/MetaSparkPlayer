@@ -1,305 +1,363 @@
-.class public final LX/2E7;
-.super LX/2E4;
+.class public abstract LX/2E7;
+.super Landroid/app/IntentService;
 .source ""
 
-# interfaces
-.implements Ljava/io/Serializable;
 
-
-# static fields
-.field public static final serialVersionUID:J = 0x4a2f47f9ad71b962L
+# instance fields
+.field public A00:LX/03i;
 
 
 # direct methods
-.method public constructor <init>(LX/2Bn;LX/2E7;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/2E4;-><init>(LX/2Bn;LX/2E4;)V
+    invoke-direct {p0, p1}, Landroid/app/IntentService;-><init>(Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-.method public constructor <init>(LX/2EI;LX/2Gu;Ljava/lang/String;Z)V
-    .locals 6
-
-    .line 268435456
-    const/4 v3, 0x0
-
-    .line 268435457
-    move-object v0, p0
-
-    .line 268435458
-    move-object v1, p1
-
-    .line 268435459
-    move-object v2, p2
-
-    .line 268435460
-    move-object v4, p3
-
-    .line 268435461
-    move v5, p4
-
-    .line 268435462
-    invoke-direct/range {v0 .. v5}, LX/2E4;-><init>(LX/2EI;LX/2Gu;Ljava/lang/Class;Ljava/lang/String;Z)V
-
-    .line 268435463
-    .line 268435464
-    .line 268435465
-    return-void
-.end method
-
-.method public static final A01(LX/27m;LX/2DN;LX/2E7;)Ljava/lang/Object;
-    .locals 5
-
-    .line 0
-    invoke-virtual {p0}, LX/27m;->A0q()LX/270;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
+    sget-object v0, LX/03i;->A00:LX/03i;
 
     .line 4
-    sget-object v4, LX/270;->START_OBJECT:LX/270;
-
     .line 5
+    iput-object v0, p0, LX/2E7;->A00:LX/03i;
+
     .line 6
-    if-ne v0, v4, :cond_3
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onHandleIntent(Landroid/content/Intent;)V
+    .locals 4
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    invoke-static {}, LX/0TW;->A01()LX/0Vz;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0, p0, p1, p0}, LX/0Vz;->A02(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)Z
 
     .line 7
     .line 8
-    invoke-virtual {p0}, LX/27m;->A1H()LX/270;
-
     .line 9
-    .line 10
-    .line 11
-    move-result-object v0
+    move-result v0
 
+    .line 10
+    if-eqz v0, :cond_4
+
+    .line 11
     .line 12
-    sget-object v3, LX/270;->FIELD_NAME:LX/270;
+    move-object v2, p0
 
     .line 13
+    monitor-enter v2
+
     .line 14
-    if-ne v0, v3, :cond_2
+    :try_start_0
+    iget-object v1, p0, LX/2E7;->A00:LX/03i;
 
     .line 15
     .line 16
-    invoke-virtual {p0}, LX/27m;->A1D()Ljava/lang/String;
+    const/4 v0, 0x0
 
     .line 17
+    invoke-virtual {v1, p0, p1, v0, p0}, LX/03i;->A00(Landroid/content/Context;Landroid/content/Intent;LX/01U;Ljava/lang/Object;)Z
+
     .line 18
     .line 19
-    move-result-object v3
-
     .line 20
-    invoke-virtual {p2, p1, v3}, LX/2E4;->A07(LX/2DN;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 21
-    .line 22
-    .line 23
-    move-result-object v2
+    monitor-exit v2
 
+    .line 22
+    if-nez v0, :cond_0
+
+    .line 23
     .line 24
-    invoke-virtual {p0}, LX/27m;->A1H()LX/270;
+    return-void
 
     .line 25
+    :catchall_0
+    move-exception v0
+
     .line 26
+    monitor-exit v2
+
     .line 27
-    iget-boolean v0, p2, LX/2E4;->_typeIdVisible:Z
+    throw v0
 
     .line 28
+    :cond_0
+    move-object v3, p0
+
     .line 29
-    if-eqz v0, :cond_0
+    check-cast v3, LX/2E5;
 
     .line 30
     .line 31
-    invoke-virtual {p0}, LX/27m;->A0q()LX/270;
+    iget-object v2, v3, LX/2E5;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
 
     .line 32
     .line 33
-    .line 34
-    move-result-object v0
+    if-eqz v2, :cond_1
 
+    .line 34
     .line 35
-    if-ne v0, v4, :cond_0
+    const v1, 0x29b0003
 
     .line 36
     .line 37
-    const/4 v0, 0x0
-
     .line 38
-    new-instance v1, LX/286;
+    const-string/jumbo v0, "handle-intent"
 
     .line 39
     .line 40
-    invoke-direct {v1, v0}, LX/286;-><init>(LX/1j1;)V
-
     .line 41
+    invoke-interface {v2, v1, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerPoint(ILjava/lang/String;)V
+
     .line 42
     .line 43
-    invoke-virtual {v1}, LX/28C;->A0M()V
-
     .line 44
+    :cond_1
+    invoke-static {v3}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
+
     .line 45
     .line 46
-    iget-object v0, p2, LX/2E4;->_typePropertyName:Ljava/lang/String;
-
     .line 47
+    move-result-object v1
+
     .line 48
-    invoke-virtual {v1, v0}, LX/28C;->A0W(Ljava/lang/String;)V
+    const-string v0, "FbIntentService[%s].onSecuredHandleIntent"
 
     .line 49
     .line 50
-    .line 51
-    invoke-virtual {v1, v3}, LX/28C;->A0a(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/facebook/debug/tracer/Tracer;->A03(Ljava/lang/String;Ljava/lang/Object;)V
 
+    .line 51
     .line 52
     .line 53
-    .line 54
-    invoke-virtual {v1, p0}, LX/286;->A0h(LX/27m;)LX/283;
+    :try_start_1
+    sget-object v0, LX/2Tq;->NORMAL:LX/2Tq;
 
+    .line 54
     .line 55
+    invoke-virtual {v0}, LX/2Tq;->getAndroidThreadPriority()I
+
     .line 56
     .line 57
-    move-result-object v0
-
     .line 58
-    invoke-static {v0, p0}, LX/21d;->A00(LX/27m;LX/27m;)LX/21d;
+    move-result v0
 
     .line 59
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
     .line 60
     .line 61
-    move-result-object p0
-
     .line 62
-    invoke-virtual {p0}, LX/27m;->A1H()LX/270;
+    const-string/jumbo v1, "overridden_viewer_context"
 
     .line 63
     .line 64
     .line 65
-    :cond_0
-    invoke-virtual {v2, p0, p1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+    if-eqz p1, :cond_2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
     .line 66
     .line 67
+    :try_start_2
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
     .line 68
-    move-result-object v2
-
     .line 69
-    invoke-virtual {p0}, LX/27m;->A1H()LX/270;
-
     .line 70
-    .line 71
-    .line 72
-    move-result-object v0
+    move-result v0
 
+    .line 71
+    if-eqz v0, :cond_2
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3
+
+    .line 72
     .line 73
-    sget-object v1, LX/270;->END_OBJECT:LX/270;
+    :try_start_3
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     .line 74
     .line 75
-    if-ne v0, v1, :cond_1
-
     .line 76
+    move-result-object v1
+
     .line 77
-    return-object v2
+    check-cast v1, Lcom/facebook/auth/viewercontext/ViewerContext;
 
     .line 78
-    :cond_1
-    const-string v0, "expected closing END_OBJECT after type information and deserialized value"
-
     .line 79
-    .line 80
-    invoke-static {p0, v1, v0}, LX/2DN;->A00(LX/27m;LX/270;Ljava/lang/String;)LX/28X;
+    iget-object v0, v3, LX/2E5;->A02:LX/0RP;
 
+    .line 80
     .line 81
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 82
     .line 83
+    .line 84
     move-result-object v0
 
-    .line 84
-    throw v0
-
     .line 85
-    :cond_2
-    const-string/jumbo v2, "need JSON String that contains type id (for subtype of "
+    check-cast v0, LX/1xX;
 
     .line 86
     .line 87
-    .line 88
-    iget-object v0, p2, LX/2E4;->_baseType:LX/2EI;
+    invoke-interface {v0, v1}, LX/1xX;->AfM(Lcom/facebook/auth/viewercontext/ViewerContext;)LX/2EH;
 
+    .line 88
     .line 89
     .line 90
-    iget-object v0, v0, LX/2EI;->_class:Ljava/lang/Class;
+    move-result-object v0
 
     .line 91
+    goto :goto_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
     .line 92
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    :cond_2
+    :try_start_4
+    sget-object v0, LX/2EH;->A00:LX/2EH;
 
     .line 93
     .line 94
+    goto :goto_0
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
+
     .line 95
-    move-result-object v1
+    :catch_0
+    :try_start_5
+    move-exception v2
 
     .line 96
-    const-string v0, ")"
+    iget-object v0, v3, LX/2E5;->A01:LX/0RP;
 
     .line 97
     .line 98
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
 
     .line 99
     .line 100
     .line 101
-    move-result-object v0
+    move-result-object v1
 
     .line 102
-    invoke-static {p0, v3, v0}, LX/2DN;->A00(LX/27m;LX/270;Ljava/lang/String;)LX/28X;
+    const-string/jumbo v0, "cant_get_overriden_viewer_context"
 
     .line 103
     .line 104
     .line 105
-    move-result-object v0
+    invoke-interface {v1, v0, v2}, LX/0Ft;->softReport(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 106
-    throw v0
-
     .line 107
-    :cond_3
-    const-string/jumbo v1, "need JSON Object to contain As.WRAPPER_OBJECT type information for class "
-
     .line 108
+    sget-object v0, LX/2EH;->A00:LX/2EH;
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
     .line 109
     .line 110
-    iget-object v0, p2, LX/2E4;->_baseType:LX/2EI;
+    :goto_0
+    :try_start_6
+    invoke-virtual {v3, p1}, LX/2E5;->A00(Landroid/content/Intent;)V
 
     .line 111
     .line 112
-    iget-object v0, v0, LX/2EI;->_class:Ljava/lang/Class;
-
     .line 113
-    .line 114
-    invoke-static {v0, v1}, LX/0Yg;->A0k(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v0, :cond_3
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
+    .line 114
     .line 115
+    :try_start_7
+    invoke-interface {v0}, LX/2EH;->close()V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+
     .line 116
     .line 117
-    move-result-object v0
-
     .line 118
-    invoke-static {p0, v4, v0}, LX/2DN;->A00(LX/27m;LX/270;Ljava/lang/String;)LX/28X;
+    :cond_3
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
 
     .line 119
     .line 120
     .line 121
-    move-result-object v0
+    :cond_4
+    return-void
 
     .line 122
+    :catchall_1
+    move-exception v1
+
+    .line 123
+    if-eqz v0, :cond_5
+
+    .line 124
+    .line 125
+    :try_start_8
+    invoke-interface {v0}, LX/2EH;->close()V
+
+    .line 126
+    .line 127
+    .line 128
+    goto :goto_1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+
+    .line 129
+    :catchall_2
+    move-exception v0
+
+    .line 130
+    :try_start_9
+    invoke-static {v1, v0}, LX/6dW;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 131
+    .line 132
+    .line 133
+    :cond_5
+    :goto_1
+    throw v1
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    .line 134
+    :catchall_3
+    move-exception v0
+
+    .line 135
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 136
+    .line 137
+    .line 138
     throw v0
 .end method

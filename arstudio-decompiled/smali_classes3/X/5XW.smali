@@ -1,57 +1,45 @@
 .class public final LX/5XW;
-.super Ljava/lang/Object;
+.super LX/6Zy;
 .source ""
 
-# interfaces
-.implements LX/5bo;
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "Http2Connection$4"
 
 
 # instance fields
-.field public A00:Ljava/util/HashMap;
+.field public final synthetic A00:I
+
+.field public final synthetic A01:Ljava/util/List;
+
+.field public final synthetic A02:LX/5Wy;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public varargs constructor <init>(Ljava/util/List;LX/5Wy;[Ljava/lang/Object;I)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "OkHttp %s Push Request[%s]"
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iput-object p2, p0, LX/5XW;->A02:LX/5Wy;
 
+    .line 3
     .line 4
+    iput p4, p0, LX/5XW;->A00:I
+
     .line 5
     .line 6
-    move-result-object v0
+    iput-object p1, p0, LX/5XW;->A01:Ljava/util/List;
 
     .line 7
-    iput-object v0, p0, LX/5XW;->A00:Ljava/util/HashMap;
-
     .line 8
+    invoke-direct {p0, v0, p3}, LX/6Zy;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
+
     .line 9
+    .line 10
+    .line 11
     return-void
-.end method
-
-
-# virtual methods
-.method public final deliverOnRenderThread()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getType()LX/5X9;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/5X9;->CONFIGURATION:LX/5X9;
-
-    .line 1
-    .line 2
-    return-object v0
 .end method

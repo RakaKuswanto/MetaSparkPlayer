@@ -7,8 +7,8 @@
 
 
 # virtual methods
-.method public abstract AXx()V
+.method public abstract AWM()V
 .end method
 
-.method public abstract AdK(J)V
+.method public abstract Abj(J)V
 .end method

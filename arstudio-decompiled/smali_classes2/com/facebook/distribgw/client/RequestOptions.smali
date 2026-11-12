@@ -31,80 +31,80 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/List;Ljava/util/Map;ZZ)V
     .locals 0
 
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, Lcom/facebook/distribgw/client/RequestOptions;->streamGroupLoggingId:Ljava/lang/String;
-
-    .line 268435460
-    .line 268435461
-    iput-object p2, p0, Lcom/facebook/distribgw/client/RequestOptions;->authToken:Ljava/lang/String;
-
-    .line 268435462
-    .line 268435463
-    iput-object p3, p0, Lcom/facebook/distribgw/client/RequestOptions;->overrideUrl:Ljava/lang/String;
-
-    .line 268435464
-    .line 268435465
-    iput-object p4, p0, Lcom/facebook/distribgw/client/RequestOptions;->serviceTier:Ljava/lang/String;
-
-    .line 268435466
-    .line 268435467
-    iput-object p5, p0, Lcom/facebook/distribgw/client/RequestOptions;->regionHint:Ljava/lang/String;
-
-    .line 268435468
-    .line 268435469
-    iput-object p6, p0, Lcom/facebook/distribgw/client/RequestOptions;->creationTimeoutSeconds:Ljava/lang/Long;
-
-    .line 268435470
-    .line 268435471
-    iput-object p7, p0, Lcom/facebook/distribgw/client/RequestOptions;->streamErrorOnConnectivityError:Ljava/lang/Boolean;
-
-    .line 268435472
-    .line 268435473
-    iput-object p8, p0, Lcom/facebook/distribgw/client/RequestOptions;->metadataTags:Ljava/util/List;
-
-    .line 268435474
-    .line 268435475
-    iput-object p9, p0, Lcom/facebook/distribgw/client/RequestOptions;->streamGroupHeaders:Ljava/util/Map;
-
-    .line 268435476
-    .line 268435477
-    iput-boolean p10, p0, Lcom/facebook/distribgw/client/RequestOptions;->eagerlyStartTransport:Z
-
-    .line 268435478
-    .line 268435479
-    iput-boolean p11, p0, Lcom/facebook/distribgw/client/RequestOptions;->keepStreamGroupAfterLastStream:Z
-
-    .line 268435480
-    .line 268435481
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/List;Ljava/util/Map;ZZLX/2Vv;)V
-    .locals 0
-
     .line 0
-    invoke-direct/range {p0 .. p11}, Lcom/facebook/distribgw/client/RequestOptions;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/List;Ljava/util/Map;ZZ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, Lcom/facebook/distribgw/client/RequestOptions;->streamGroupLoggingId:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    iput-object p2, p0, Lcom/facebook/distribgw/client/RequestOptions;->authToken:Ljava/lang/String;
+
+    .line 6
+    .line 7
+    iput-object p3, p0, Lcom/facebook/distribgw/client/RequestOptions;->overrideUrl:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    iput-object p4, p0, Lcom/facebook/distribgw/client/RequestOptions;->serviceTier:Ljava/lang/String;
+
+    .line 10
+    .line 11
+    iput-object p5, p0, Lcom/facebook/distribgw/client/RequestOptions;->regionHint:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    iput-object p6, p0, Lcom/facebook/distribgw/client/RequestOptions;->creationTimeoutSeconds:Ljava/lang/Long;
+
+    .line 14
+    .line 15
+    iput-object p7, p0, Lcom/facebook/distribgw/client/RequestOptions;->streamErrorOnConnectivityError:Ljava/lang/Boolean;
+
+    .line 16
+    .line 17
+    iput-object p8, p0, Lcom/facebook/distribgw/client/RequestOptions;->metadataTags:Ljava/util/List;
+
+    .line 18
+    .line 19
+    iput-object p9, p0, Lcom/facebook/distribgw/client/RequestOptions;->streamGroupHeaders:Ljava/util/Map;
+
+    .line 20
+    .line 21
+    iput-boolean p10, p0, Lcom/facebook/distribgw/client/RequestOptions;->eagerlyStartTransport:Z
+
+    .line 22
+    .line 23
+    iput-boolean p11, p0, Lcom/facebook/distribgw/client/RequestOptions;->keepStreamGroupAfterLastStream:Z
+
+    .line 24
+    .line 25
     return-void
 .end method
 
-.method public static newBuilder()LX/2Vu;
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/List;Ljava/util/Map;ZZLX/0sw;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct/range {p0 .. p11}, Lcom/facebook/distribgw/client/RequestOptions;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Boolean;Ljava/util/List;Ljava/util/Map;ZZ)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public static newBuilder()LX/0sv;
     .locals 1
 
     .line 0
-    new-instance v0, LX/2Vu;
+    new-instance v0, LX/0sv;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/2Vu;-><init>()V
+    invoke-direct {v0}, LX/0sv;-><init>()V
 
     .line 3
     .line 4

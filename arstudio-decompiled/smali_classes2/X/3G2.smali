@@ -3,26 +3,35 @@
 .source ""
 
 # interfaces
-.implements LX/3iq;
-
-
-# instance fields
-.field public final synthetic A00:LX/35I;
+.implements LX/1rT;
 
 
 # direct methods
-.method public constructor <init>(LX/35I;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3G2;->A00:LX/35I;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
+.end method
+
+
+# virtual methods
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-static {p1}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

@@ -1,61 +1,44 @@
-.class public final LX/4kC;
+.class public abstract LX/4kC;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "OfflineGameEngine$startCountdown$1"
+.field public static A00:Z
 
+.field public static A01:Z
 
-# instance fields
-.field public final synthetic A00:LX/4j9;
+.field public static A02:Z
 
 
 # direct methods
-.method public constructor <init>(LX/4j9;)V
-    .locals 0
-
-    iput-object p1, p0, LX/4kC;->A00:LX/4j9;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 4
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iget-object v3, p0, LX/4kC;->A00:LX/4j9;
+    const-string v0, "IS_TESTING"
 
     .line 1
     .line 2
-    iget-wide v1, v3, LX/4j9;->A09:J
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     .line 3
     .line 4
-    new-instance v0, LX/4j8;
-
     .line 5
+    move-result-object v0
+
     .line 6
-    invoke-direct {v0, v3, v1, v2}, LX/4j8;-><init>(LX/4j9;J)V
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 7
     .line 8
     .line 9
-    iput-object v0, v3, LX/4j9;->A0A:Landroid/os/CountDownTimer;
+    move-result v0
 
     .line 10
-    .line 11
-    invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
+    sput-boolean v0, LX/4kC;->A00:Z
 
+    .line 11
     .line 12
-    .line 13
-    .line 14
     return-void
 .end method

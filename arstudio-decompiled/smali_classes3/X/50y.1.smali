@@ -1,22 +1,139 @@
-.class public final synthetic LX/50y;
+.class public final LX/50y;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/50z;
+.implements LX/4dd;
 
 
-# instance fields
-.field public final synthetic A00:LX/50v;
+# static fields
+.field public static final A00:LX/50y;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/50v;)V
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/50y;
+
+    invoke-direct {v0}, LX/50y;-><init>()V
+
+    sput-object v0, LX/50y;->A00:LX/50y;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/50y;->A00:LX/50v;
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x1
+
+    .line 1
+    if-eq p1, p0, :cond_0
+
+    .line 2
+    .line 3
+    instance-of v1, p1, LX/50y;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    if-nez v1, :cond_0
+
+    .line 7
+    .line 8
+    return v0
+
+    .line 9
+    :cond_0
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    .line 0
+    const/16 v0, 0x9
+
+    .line 1
+    .line 2
+    new-array v3, v0, [Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v2
+
+    .line 9
+    aput-object v2, v3, v0
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    aput-object v2, v3, v0
+
+    .line 13
+    .line 14
+    const/4 v1, 0x0
+
+    .line 15
+    invoke-static {v3, v1, v2}, LX/0X3;->A1V([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-static {v3, v2, v1}, LX/0X3;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 19
+    .line 20
+    .line 21
+    const/4 v0, 0x6
+
+    .line 22
+    aput-object v1, v3, v0
+
+    .line 23
+    .line 24
+    const/4 v0, 0x7
+
+    .line 25
+    aput-object v1, v3, v0
+
+    .line 26
+    .line 27
+    const/16 v0, 0x8
+
+    .line 28
+    .line 29
+    invoke-static {v1, v3, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v0
+
+    .line 33
+    return v0
 .end method

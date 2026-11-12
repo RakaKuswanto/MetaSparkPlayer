@@ -2,52 +2,120 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "Fragment$3"
-
 
 # instance fields
-.field public final synthetic A00:Landroidx/fragment/app/Fragment;
+.field public final A00:LX/05F;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
+.method public constructor <init>(LX/05F;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/05G;->A00:Landroidx/fragment/app/Fragment;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/05G;->A00:LX/05F;
+
     .line 4
     .line 5
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public constructor <init>(Landroid/net/Uri;Landroid/content/ClipDescription;Landroid/net/Uri;)V
     .locals 2
 
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 268435460
+    .line 268435461
+    const/16 v0, 0x19
+
+    .line 268435462
+    .line 268435463
+    if-lt v1, v0, :cond_0
+
+    .line 268435464
+    .line 268435465
+    new-instance v0, LX/0Fg;
+
+    .line 268435466
+    .line 268435467
+    invoke-direct {v0, p1, p2, p3}, LX/0Fg;-><init>(Landroid/net/Uri;Landroid/content/ClipDescription;Landroid/net/Uri;)V
+
+    .line 268435468
+    .line 268435469
+    .line 268435470
+    :goto_0
+    iput-object v0, p0, LX/05G;->A00:LX/05F;
+
+    .line 268435471
+    .line 268435472
+    return-void
+
+    .line 268435473
+    :cond_0
+    new-instance v0, LX/0FY;
+
+    .line 268435474
+    .line 268435475
+    invoke-direct {v0, p1, p2, p3}, LX/0FY;-><init>(Landroid/net/Uri;Landroid/content/ClipDescription;Landroid/net/Uri;)V
+
+    .line 268435476
+    .line 268435477
+    .line 268435478
+    goto :goto_0
+.end method
+
+.method public static A00(Ljava/lang/Object;)LX/05G;
+    .locals 3
+
     .line 0
-    iget-object v1, p0, LX/05G;->A00:Landroidx/fragment/app/Fragment;
+    const/4 v2, 0x0
 
     .line 1
-    .line 2
-    const/4 v0, 0x0
+    if-eqz p0, :cond_0
 
+    .line 2
     .line 3
-    invoke-virtual {v1, v0}, Landroidx/fragment/app/Fragment;->callStartTransitionListener(Z)V
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 4
     .line 5
+    const/16 v0, 0x19
+
     .line 6
-    return-void
+    .line 7
+    if-lt v1, v0, :cond_0
+
+    .line 8
+    .line 9
+    new-instance v0, LX/0Fg;
+
+    .line 10
+    .line 11
+    invoke-direct {v0, p0}, LX/0Fg;-><init>(Ljava/lang/Object;)V
+
+    .line 12
+    .line 13
+    .line 14
+    new-instance v2, LX/05G;
+
+    .line 15
+    .line 16
+    invoke-direct {v2, v0}, LX/05G;-><init>(LX/05F;)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_0
+    return-object v2
 .end method

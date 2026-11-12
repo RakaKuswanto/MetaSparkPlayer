@@ -324,7 +324,7 @@
     .line 24
     .line 25
     :cond_0
-    invoke-static {}, LX/0HY;->A00()Ljava/util/UUID;
+    invoke-static {}, LX/0Gj;->A00()Ljava/util/UUID;
 
     .line 26
     .line 27

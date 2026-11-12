@@ -3,10 +3,52 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s seneng Kaca</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s seneng</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d dina kepungkur</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d dina</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d dina</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d jam</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d menit</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d Wulan</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d Dhetik</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d minggu</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">%1$d jam maneh</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">%1$d sasi maneh</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d taun</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d jam kepungkur</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d jam</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$dj</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d jam</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d jam kepungkur</item>
     </plurals>
     <plurals name="time_in_x_hours">
@@ -15,7 +57,49 @@
     <plurals name="time_in_x_minutes">
         <item quantity="other">%1$d menit teka saiki</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d menit kepungkur</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d menit kepungkur</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d menit</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d wulan kepungkur</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d detik kepungkur</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d minggu kepungkur</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d jam kasisa</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">Sisa %1$d menit</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d taun kepungkur</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Sampeyan berkunjung %1$d dina kepungkur</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Sampeyan mbukak %1$d jam kepungkur</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Sampeyan mbukak %1$d menit kepungkur</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Sampeyan mbukak %1$d sasi kepungkur</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Sampeyan berkunjung %1$d minggu kepungkur</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Sampeyan berkunjung %1$d taun kepungkur</item>
     </plurals>
 </resources>

@@ -1,113 +1,203 @@
 .class public final LX/0Vr;
-.super LX/00U;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0Hs;
 
-# instance fields
-.field public final synthetic A00:Landroidx/activity/ComponentActivity;
+
+# static fields
+.field public static volatile A00:Ljava/lang/reflect/Method;
+
+.field public static volatile A01:Ljava/lang/reflect/Method;
+
+.field public static volatile A02:Ljava/lang/reflect/Method;
+
+.field public static volatile A03:Z
+
+.field public static volatile A04:Z
+
+.field public static volatile A05:Z
 
 
 # direct methods
-.method public constructor <init>(Landroidx/activity/ComponentActivity;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/0Vr;->A00:Landroidx/activity/ComponentActivity;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/00U;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
-
-# virtual methods
-.method public final A04(LX/00a;LX/6Eg;Ljava/lang/Object;I)V
-    .locals 11
+.method public static A00()LX/0Vr;
+    .locals 2
 
     .line 0
-    iget-object v3, p0, LX/0Vr;->A00:Landroidx/activity/ComponentActivity;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    invoke-virtual {p1, v3, p3}, LX/00a;->A03(Landroid/content/Context;Ljava/lang/Object;)LX/00Z;
+    const/16 v0, 0x19
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v2
+    if-gt v1, v0, :cond_0
 
+    .line 5
     .line 6
-    move v5, p4
+    invoke-static {}, LX/0Vr;->A02()Ljava/lang/reflect/Method;
 
     .line 7
-    if-eqz v2, :cond_0
-
     .line 8
     .line 9
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    .line 10
-    .line 11
-    .line 12
     move-result-object v0
 
-    .line 13
-    new-instance v1, Landroid/os/Handler;
+    .line 10
+    if-eqz v0, :cond_0
 
+    .line 11
+    .line 12
+    invoke-static {}, LX/0Vr;->A03()Ljava/lang/reflect/Method;
+
+    .line 13
     .line 14
     .line 15
-    invoke-direct {v1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    move-result-object v0
 
     .line 16
+    if-eqz v0, :cond_0
+
     .line 17
     .line 18
-    new-instance v0, LX/006;
+    invoke-static {}, LX/0Vr;->A04()Ljava/lang/reflect/Method;
 
     .line 19
     .line 20
-    invoke-direct {v0, p0, v2, p4}, LX/006;-><init>(LX/0Vr;LX/00Z;I)V
+    .line 21
+    move-result-object v0
+
+    .line 22
+    if-eqz v0, :cond_0
+
+    .line 23
+    .line 24
+    new-instance v0, LX/0Vr;
+
+    .line 25
+    .line 26
+    invoke-direct {v0}, LX/0Vr;-><init>()V
+
+    .line 27
+    .line 28
+    .line 29
+    return-object v0
+
+    .line 30
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 31
+    return-object v0
+.end method
+
+.method public static varargs A01(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    .line 0
+    const-string v4, ")"
+
+    .line 1
+    .line 2
+    if-eqz p0, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v1, 0x0
+
+    .line 5
+    const/4 v0, 0x6
+
+    .line 6
+    :try_start_0
+    invoke-virtual {p0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 11
+    :catch_0
+    move-exception v3
+
+    .line 12
+    const-string v2, "OldProcReader"
+
+    .line 13
+    .line 14
+    invoke-static {v2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    if-eqz v0, :cond_0
+
+    .line 19
+    .line 20
+    const-string v1, "Error (InvocationTargetException - "
 
     .line 21
     .line 22
+    goto :goto_0
+
     .line 23
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :catch_1
+    move-exception v3
 
     .line 24
+    const-string v2, "OldProcReader"
+
     .line 25
     .line 26
-    return-void
+    invoke-static {v2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     .line 27
-    :cond_0
-    invoke-virtual {p1, v3, p3}, LX/00a;->A02(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
-
     .line 28
     .line 29
+    move-result v0
+
     .line 30
-    move-result-object v2
+    if-eqz v0, :cond_0
 
     .line 31
-    const/4 v10, 0x0
-
     .line 32
-    invoke-virtual {v2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    const-string v1, "Error (IllegalAccessException - "
 
     .line 33
     .line 34
+    :goto_0
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
+
     .line 35
+    .line 36
+    .line 37
     move-result-object v0
 
-    .line 36
-    if-eqz v0, :cond_1
-
-    .line 37
     .line 38
-    invoke-virtual {v2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    invoke-static {v1, v0, v4}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 39
     .line 40
@@ -115,7 +205,116 @@
     move-result-object v0
 
     .line 42
-    invoke-virtual {v0}, Landroid/os/Bundle;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {v2, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 43
+    .line 44
+    .line 45
+    :cond_0
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    .line 46
+    .line 47
+    return-object v0
+.end method
+
+.method public static A02()Ljava/lang/reflect/Method;
+    .locals 3
+
+    .line 0
+    sget-boolean v0, LX/0Vr;->A03:Z
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x7
+
+    .line 5
+    new-array v2, v0, [Ljava/lang/Class;
+
+    .line 6
+    .line 7
+    const/4 v1, 0x0
+
+    .line 8
+    const-class v0, [B
+
+    .line 9
+    .line 10
+    aput-object v0, v2, v1
+
+    .line 11
+    .line 12
+    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    .line 13
+    .line 14
+    const/4 v0, 0x1
+
+    .line 15
+    aput-object v1, v2, v0
+
+    .line 16
+    .line 17
+    const/4 v0, 0x2
+
+    .line 18
+    aput-object v1, v2, v0
+
+    .line 19
+    .line 20
+    const/4 v1, 0x3
+
+    .line 21
+    const-class v0, [I
+
+    .line 22
+    .line 23
+    aput-object v0, v2, v1
+
+    .line 24
+    .line 25
+    const/4 v1, 0x4
+
+    .line 26
+    const-class v0, [Ljava/lang/String;
+
+    .line 27
+    .line 28
+    aput-object v0, v2, v1
+
+    .line 29
+    .line 30
+    const/4 v1, 0x5
+
+    .line 31
+    const-class v0, [J
+
+    .line 32
+    .line 33
+    aput-object v0, v2, v1
+
+    .line 34
+    .line 35
+    const/4 v1, 0x6
+
+    .line 36
+    const-class v0, [F
+
+    .line 37
+    .line 38
+    aput-object v0, v2, v1
+
+    .line 39
+    .line 40
+    const-string v0, "parseProcLine"
+
+    .line 41
+    .line 42
+    invoke-static {v0, v2}, LX/0Vr;->A05(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     .line 43
     .line 44
@@ -123,224 +322,518 @@
     move-result-object v0
 
     .line 46
-    if-nez v0, :cond_1
+    sput-object v0, LX/0Vr;->A00:Ljava/lang/reflect/Method;
 
     .line 47
     .line 48
-    invoke-virtual {v3}, Landroid/content/ContextWrapper;->getClassLoader()Ljava/lang/ClassLoader;
+    const/4 v0, 0x1
 
     .line 49
+    sput-boolean v0, LX/0Vr;->A03:Z
+
     .line 50
     .line 51
-    move-result-object v0
+    :cond_0
+    sget-object v0, LX/0Vr;->A00:Ljava/lang/reflect/Method;
 
     .line 52
-    invoke-virtual {v2, v0}, Landroid/content/Intent;->setExtrasClassLoader(Ljava/lang/ClassLoader;)V
-
     .line 53
-    .line 54
-    .line 55
-    :cond_1
-    const-string v1, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
+    return-object v0
+.end method
 
-    .line 56
-    .line 57
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+.method public static A03()Ljava/lang/reflect/Method;
+    .locals 3
 
-    .line 58
-    .line 59
-    .line 60
-    move-result v0
+    .line 0
+    sget-boolean v0, LX/0Vr;->A04:Z
 
-    .line 61
-    if-eqz v0, :cond_2
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
 
-    .line 62
-    .line 63
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
+    .line 3
+    .line 4
+    const/4 v0, 0x5
 
-    .line 64
-    .line 65
-    .line 66
-    move-result-object v10
+    .line 5
+    new-array v2, v0, [Ljava/lang/Class;
 
-    .line 67
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
+    .line 6
+    .line 7
+    const/4 v1, 0x0
 
-    .line 68
-    .line 69
-    .line 70
-    :cond_2
-    invoke-virtual {v2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    .line 8
+    const-class v0, Ljava/lang/String;
 
-    .line 71
-    .line 72
-    .line 73
-    move-result-object v1
+    .line 9
+    .line 10
+    aput-object v0, v2, v1
 
-    .line 74
-    const-string v0, "androidx.activity.result.contract.action.REQUEST_PERMISSIONS"
+    .line 11
+    .line 12
+    const/4 v1, 0x1
 
-    .line 75
-    .line 76
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 13
+    const-class v0, [I
 
-    .line 77
-    .line 78
-    .line 79
-    move-result v0
+    .line 14
+    .line 15
+    aput-object v0, v2, v1
 
-    .line 80
-    if-eqz v0, :cond_4
+    .line 16
+    .line 17
+    const/4 v1, 0x2
 
-    .line 81
-    .line 82
-    const-string v0, "androidx.activity.result.contract.extra.PERMISSIONS"
+    .line 18
+    const-class v0, [Ljava/lang/String;
 
-    .line 83
-    .line 84
-    invoke-virtual {v2, v0}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
+    .line 19
+    .line 20
+    aput-object v0, v2, v1
 
-    .line 85
-    .line 86
-    .line 87
+    .line 21
+    .line 22
+    const/4 v1, 0x3
+
+    .line 23
+    const-class v0, [J
+
+    .line 24
+    .line 25
+    aput-object v0, v2, v1
+
+    .line 26
+    .line 27
+    const/4 v1, 0x4
+
+    .line 28
+    const-class v0, [F
+
+    .line 29
+    .line 30
+    aput-object v0, v2, v1
+
+    .line 31
+    .line 32
+    const-string v0, "readProcFile"
+
+    .line 33
+    .line 34
+    invoke-static {v0, v2}, LX/0Vr;->A05(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    .line 35
+    .line 36
+    .line 37
     move-result-object v0
 
-    .line 88
-    if-nez v0, :cond_3
+    .line 38
+    sput-object v0, LX/0Vr;->A01:Ljava/lang/reflect/Method;
 
-    .line 89
-    .line 90
-    const/4 v0, 0x0
+    .line 39
+    .line 40
+    const/4 v0, 0x1
 
-    .line 91
-    new-array v0, v0, [Ljava/lang/String;
+    .line 41
+    sput-boolean v0, LX/0Vr;->A04:Z
 
-    .line 92
-    .line 93
-    :cond_3
-    invoke-static {v3, v0, p4}, LX/4Fw;->A06(Landroid/app/Activity;[Ljava/lang/String;I)V
+    .line 42
+    .line 43
+    :cond_0
+    sget-object v0, LX/0Vr;->A01:Ljava/lang/reflect/Method;
 
-    .line 94
-    .line 95
-    .line 96
-    return-void
+    .line 44
+    .line 45
+    return-object v0
+.end method
 
-    .line 97
-    :cond_4
-    invoke-virtual {v2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+.method public static A04()Ljava/lang/reflect/Method;
+    .locals 3
 
-    .line 98
-    .line 99
-    .line 100
-    move-result-object v1
+    .line 0
+    sget-boolean v0, LX/0Vr;->A05:Z
 
-    .line 101
-    const-string v0, "androidx.activity.result.contract.action.INTENT_SENDER_REQUEST"
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
 
-    .line 102
-    .line 103
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 3
+    .line 4
+    const/4 v0, 0x3
 
-    .line 104
-    .line 105
-    .line 106
-    move-result v0
+    .line 5
+    new-array v2, v0, [Ljava/lang/Class;
 
-    .line 107
-    if-eqz v0, :cond_5
+    .line 6
+    .line 7
+    const/4 v1, 0x0
 
-    .line 108
-    .line 109
-    const-string v0, "androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST"
+    .line 8
+    const-class v0, Ljava/lang/String;
 
-    .line 110
-    .line 111
-    invoke-virtual {v2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+    .line 9
+    .line 10
+    aput-object v0, v2, v1
 
-    .line 112
-    .line 113
-    .line 114
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    const-class v0, [Ljava/lang/String;
+
+    .line 14
+    .line 15
+    aput-object v0, v2, v1
+
+    .line 16
+    .line 17
+    const/4 v1, 0x2
+
+    .line 18
+    const-class v0, [J
+
+    .line 19
+    .line 20
+    aput-object v0, v2, v1
+
+    .line 21
+    .line 22
+    const-string v0, "readProcLines"
+
+    .line 23
+    .line 24
+    invoke-static {v0, v2}, LX/0Vr;->A05(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    .line 25
+    .line 26
+    .line 27
     move-result-object v0
 
-    .line 115
-    check-cast v0, Landroidx/activity/result/IntentSenderRequest;
+    .line 28
+    sput-object v0, LX/0Vr;->A02:Ljava/lang/reflect/Method;
 
-    .line 116
-    .line 117
+    .line 29
+    .line 30
+    const/4 v0, 0x1
+
+    .line 31
+    sput-boolean v0, LX/0Vr;->A05:Z
+
+    .line 32
+    .line 33
+    :cond_0
+    sget-object v0, LX/0Vr;->A02:Ljava/lang/reflect/Method;
+
+    .line 34
+    .line 35
+    return-object v0
+.end method
+
+.method public static varargs A05(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    .locals 3
+
+    .line 0
     :try_start_0
-    iget-object v4, v0, Landroidx/activity/result/IntentSenderRequest;->A03:Landroid/content/IntentSender;
+    const-class v0, Landroid/os/Process;
 
-    .line 118
-    .line 119
-    iget-object v6, v0, Landroidx/activity/result/IntentSenderRequest;->A02:Landroid/content/Intent;
+    .line 1
+    .line 2
+    invoke-virtual {v0, p0, p1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    .line 120
-    .line 121
-    iget v7, v0, Landroidx/activity/result/IntentSenderRequest;->A00:I
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 122
-    .line 123
-    iget v8, v0, Landroidx/activity/result/IntentSenderRequest;->A01:I
-
-    .line 124
-    .line 125
-    const/4 v9, 0x0
-
-    .line 126
-    invoke-virtual/range {v3 .. v10}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
-
-    .line 127
-    .line 128
-    .line 129
-    return-void
+    .line 6
+    return-object v0
     :try_end_0
-    .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 130
+    .line 7
     :catch_0
     move-exception v2
 
-    .line 131
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    .line 8
+    const-string v1, "OldProcReader"
 
-    .line 132
-    .line 133
-    .line 134
+    .line 9
+    .line 10
+    const/4 v0, 0x5
+
+    .line 11
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 16
+    .line 17
+    const-string v0, "Warning! Could not get access to JNI method - "
+
+    .line 18
+    .line 19
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 20
+    .line 21
+    .line 22
     move-result-object v0
 
-    .line 135
-    new-instance v1, Landroid/os/Handler;
+    .line 23
+    invoke-static {p0, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-    .line 136
-    .line 137
-    invoke-direct {v1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
 
-    .line 138
-    .line 139
-    .line 140
-    new-instance v0, LX/007;
+    .line 27
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 141
-    .line 142
-    invoke-direct {v0, v2, p0, p4}, LX/007;-><init>(Landroid/content/IntentSender$SendIntentException;LX/0Vr;I)V
+    .line 28
+    .line 29
+    .line 30
+    :cond_0
+    const/4 v0, 0x0
 
-    .line 143
-    .line 144
-    .line 145
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    .line 31
+    return-object v0
+.end method
 
-    .line 146
-    .line 147
-    .line 148
-    return-void
 
-    .line 149
-    :cond_5
-    invoke-virtual {v3, v2, p4, v10}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
+# virtual methods
+.method public final Ae3([B[F[I[J[Ljava/lang/String;II)Z
+    .locals 4
 
-    .line 150
-    .line 151
-    .line 152
-    return-void
+    .line 0
+    invoke-static {}, LX/0Vr;->A02()Ljava/lang/reflect/Method;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v3
+
+    .line 4
+    const/4 v0, 0x7
+
+    .line 5
+    new-array v2, v0, [Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    const/4 v1, 0x0
+
+    .line 8
+    aput-object p1, v2, v1
+
+    .line 9
+    .line 10
+    invoke-static {v2, p6}, LX/001;->A19([Ljava/lang/Object;I)V
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-static {p7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-static {v2, v0, p3}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 18
+    .line 19
+    .line 20
+    const/4 v0, 0x4
+
+    .line 21
+    aput-object p5, v2, v0
+
+    .line 22
+    .line 23
+    const/4 v0, 0x5
+
+    .line 24
+    aput-object p4, v2, v0
+
+    .line 25
+    .line 26
+    const/4 v0, 0x6
+
+    .line 27
+    aput-object p2, v2, v0
+
+    .line 28
+    .line 29
+    invoke-static {v3, v2}, LX/0Vr;->A01(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    if-eqz v0, :cond_0
+
+    .line 34
+    .line 35
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v1
+
+    .line 39
+    :cond_0
+    return v1
+.end method
+
+.method public final Ag7(Ljava/lang/String;[F[I[J[Ljava/lang/String;)I
+    .locals 5
+
+    .line 0
+    invoke-static {}, LX/0Vr;->A03()Ljava/lang/reflect/Method;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v4
+
+    .line 4
+    const/4 v0, 0x5
+
+    .line 5
+    new-array v3, v0, [Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    const/4 v2, 0x0
+
+    .line 8
+    invoke-static {v3, p1, p3}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 9
+    .line 10
+    .line 11
+    const/4 v1, 0x2
+
+    .line 12
+    aput-object p5, v3, v1
+
+    .line 13
+    .line 14
+    const/4 v0, 0x3
+
+    .line 15
+    aput-object p4, v3, v0
+
+    .line 16
+    .line 17
+    const/4 v0, 0x4
+
+    .line 18
+    aput-object p2, v3, v0
+
+    .line 19
+    .line 20
+    invoke-static {v4, v3}, LX/0Vr;->A01(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    if-nez v0, :cond_0
+
+    .line 25
+    .line 26
+    return v1
+
+    .line 27
+    :cond_0
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v0
+
+    .line 31
+    if-nez v0, :cond_1
+
+    .line 32
+    .line 33
+    const/4 v2, 0x3
+
+    .line 34
+    :cond_1
+    return v2
+.end method
+
+.method public final Ag8(Ljava/lang/String;[J[Ljava/lang/String;)Z
+    .locals 3
+
+    .line 0
+    invoke-static {}, LX/0Vr;->A04()Ljava/lang/reflect/Method;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
+
+    .line 4
+    const/4 v0, 0x3
+
+    .line 5
+    new-array v1, v0, [Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    invoke-static {v1, p1, p3}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 8
+    .line 9
+    .line 10
+    const/4 v0, 0x2
+
+    .line 11
+    aput-object p2, v1, v0
+
+    .line 12
+    .line 13
+    invoke-static {v2, v1}, LX/0Vr;->A01(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    .line 18
+    .line 19
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    xor-int/lit8 v0, v0, 0x1
+
+    .line 24
+    .line 25
+    return v0
 .end method

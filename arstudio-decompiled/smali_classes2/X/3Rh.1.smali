@@ -1,14 +1,17 @@
-.class public interface abstract LX/3Rh;
+.class public abstract LX/3Rh;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract Agd(LX/3P0;)V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract Agg(LX/3UI;)V
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract Agh(LX/3UZ;)V
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

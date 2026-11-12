@@ -1,236 +1,281 @@
-.class public final LX/0Ra;
-.super Ljava/lang/Object;
+.class public final enum LX/0RA;
+.super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static final A00:[Ljava/lang/String;
+.field public static final synthetic $VALUES:[LX/0RA;
+
+.field public static final enum ACKNOWLEDGED_DELIVERY:LX/0RA;
+
+.field public static final enum ASSURED_DELIVERY:LX/0RA;
+
+.field public static final enum FIRE_AND_FORGET:LX/0RA;
+
+
+# instance fields
+.field public final mValue:I
 
 
 # direct methods
+.method public static synthetic $values()[LX/0RA;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x3
+
+    .line 1
+    new-array v2, v0, [LX/0RA;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/0RA;->FIRE_AND_FORGET:LX/0RA;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/0RA;->ACKNOWLEDGED_DELIVERY:LX/0RA;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/0RA;->ASSURED_DELIVERY:LX/0RA;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
     .locals 3
 
     .line 0
-    const/16 v0, 0x12
+    const-string v2, "FIRE_AND_FORGET"
 
     .line 1
     .line 2
-    new-array v2, v0, [Ljava/lang/String;
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/0RA;
+
     .line 4
-    const-string v1, "x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4="
-
     .line 5
+    invoke-direct {v0, v2, v1, v1}, LX/0RA;-><init>(Ljava/lang/String;II)V
+
     .line 6
-    const/4 v0, 0x0
-
     .line 7
-    aput-object v1, v2, v0
-
     .line 8
+    sput-object v0, LX/0RA;->FIRE_AND_FORGET:LX/0RA;
+
     .line 9
-    const-string v1, "ICGRfpgmOUXIWcQ/HXPLQTkFPEFPoDyjvH7ohhQpjzs="
-
     .line 10
-    .line 11
-    const/4 v0, 0x1
+    const-string v2, "ACKNOWLEDGED_DELIVERY"
 
+    .line 11
     .line 12
-    aput-object v1, v2, v0
+    const/4 v1, 0x1
 
     .line 13
+    new-instance v0, LX/0RA;
+
     .line 14
-    const-string v1, "grX4Ta9HpZx6tSHkmCrvpApTQGo67CYDnvprLg5yRME="
-
     .line 15
+    invoke-direct {v0, v2, v1, v1}, LX/0RA;-><init>(Ljava/lang/String;II)V
+
     .line 16
-    const/4 v0, 0x2
-
     .line 17
-    aput-object v1, v2, v0
-
     .line 18
-    .line 19
-    const/4 v1, 0x3
+    sput-object v0, LX/0RA;->ACKNOWLEDGED_DELIVERY:LX/0RA;
 
+    .line 19
     .line 20
-    const-string v0, "58qRu/uxh4gFezqAcERupSkRYBlBAvfcw7mEjGPLnNU="
+    const-string v2, "ASSURED_DELIVERY"
 
     .line 21
     .line 22
-    aput-object v0, v2, v1
+    const/4 v1, 0x2
 
     .line 23
-    .line 24
-    const/4 v1, 0x4
+    new-instance v0, LX/0RA;
 
+    .line 24
     .line 25
-    const-string v0, "r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="
+    invoke-direct {v0, v2, v1, v1}, LX/0RA;-><init>(Ljava/lang/String;II)V
 
     .line 26
     .line 27
-    aput-object v0, v2, v1
-
     .line 28
-    .line 29
-    const/4 v1, 0x5
+    sput-object v0, LX/0RA;->ASSURED_DELIVERY:LX/0RA;
 
+    .line 29
     .line 30
-    const-string v0, "i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY="
+    invoke-static {}, LX/0RA;->$values()[LX/0RA;
 
     .line 31
     .line 32
-    aput-object v0, v2, v1
-
     .line 33
+    move-result-object v0
+
     .line 34
-    const/4 v1, 0x6
+    sput-object v0, LX/0RA;->$VALUES:[LX/0RA;
 
     .line 35
-    const-string v0, "uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc="
-
     .line 36
-    .line 37
-    aput-object v0, v2, v1
-
-    .line 38
-    .line 39
-    const/4 v1, 0x7
-
-    .line 40
-    const-string v0, "WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="
-
-    .line 41
-    .line 42
-    aput-object v0, v2, v1
-
-    .line 43
-    .line 44
-    const/16 v1, 0x8
-
-    .line 45
-    .line 46
-    const-string v0, "Wd8xe/qfTwq3ylFNd3IpaqLHZbh2ZNCLluVzmeNkcpw="
-
-    .line 47
-    .line 48
-    aput-object v0, v2, v1
-
-    .line 49
-    .line 50
-    const/16 v1, 0x9
-
-    .line 51
-    .line 52
-    const-string v0, "ape1HIIZ6T5d7GS61YBs3rD4NVvkfnVwELcCRW4Bqv0="
-
-    .line 53
-    .line 54
-    aput-object v0, v2, v1
-
-    .line 55
-    .line 56
-    const/16 v1, 0xa
-
-    .line 57
-    .line 58
-    const-string v0, "oC+voZLIy4HLE0FVT5wFtxzKKokLDRKY1oNkfJYe+98="
-
-    .line 59
-    .line 60
-    aput-object v0, v2, v1
-
-    .line 61
-    .line 62
-    const/16 v1, 0xb
-
-    .line 63
-    .line 64
-    const-string v0, "K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q="
-
-    .line 65
-    .line 66
-    aput-object v0, v2, v1
-
-    .line 67
-    .line 68
-    const/16 v1, 0xc
-
-    .line 69
-    .line 70
-    const-string v0, "cGuxAXyFXFkWm61cF4HPWX8S0srS9j0aSqN0k4AP+4A="
-
-    .line 71
-    .line 72
-    aput-object v0, v2, v1
-
-    .line 73
-    .line 74
-    const/16 v1, 0xd
-
-    .line 75
-    .line 76
-    const-string v0, "aCdH+LpiG4fN07wpXtXKvOciocDANj0daLOJKNJ4fx4="
-
-    .line 77
-    .line 78
-    aput-object v0, v2, v1
-
-    .line 79
-    .line 80
-    const/16 v1, 0xe
-
-    .line 81
-    .line 82
-    const-string v0, "rn+WLLnmp9v3uDP7GPqbcaiRdd+UnCMrap73yz3yu/w="
-
-    .line 83
-    .line 84
-    aput-object v0, v2, v1
-
-    .line 85
-    .line 86
-    const/16 v1, 0xf
-
-    .line 87
-    .line 88
-    const-string v0, "C5+lpZ7tcVwmwQIMcRtPbsQtWLABXhQzejna0wHFr8M="
-
-    .line 89
-    .line 90
-    aput-object v0, v2, v1
-
-    .line 91
-    .line 92
-    const/16 v1, 0x10
-
-    .line 93
-    .line 94
-    const-string v0, "diGVwiVYbubAI3RW4hB9xU8e/CH2GnkuvVFZE8zmgzI="
-
-    .line 95
-    .line 96
-    aput-object v0, v2, v1
-
-    .line 97
-    .line 98
-    const/16 v1, 0x11
-
-    .line 99
-    .line 100
-    const-string v0, "q4PO2G2cbkZhZ82+JgmRUyGMoAeozA+BSXVXQWB8XWQ="
-
-    .line 101
-    .line 102
-    aput-object v0, v2, v1
-
-    .line 103
-    .line 104
-    sput-object v2, LX/0Ra;->A00:[Ljava/lang/String;
-
-    .line 105
-    .line 106
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput p3, p0, LX/0RA;->mValue:I
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static fromInt(I)LX/0RA;
+    .locals 1
+
+    .line 0
+    if-eqz p0, :cond_2
+
+    .line 1
+    .line 2
+    const/4 v0, 0x1
+
+    .line 3
+    if-eq p0, v0, :cond_1
+
+    .line 4
+    .line 5
+    const/4 v0, 0x2
+
+    .line 6
+    if-ne p0, v0, :cond_0
+
+    .line 7
+    .line 8
+    sget-object v0, LX/0RA;->ASSURED_DELIVERY:LX/0RA;
+
+    .line 9
+    .line 10
+    return-object v0
+
+    .line 11
+    :cond_0
+    const-string v0, "Unknown QOS level "
+
+    .line 12
+    .line 13
+    invoke-static {v0, p0}, LX/004;->A02(Ljava/lang/String;I)Ljava/lang/IllegalArgumentException;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    throw v0
+
+    .line 18
+    :cond_1
+    sget-object v0, LX/0RA;->ACKNOWLEDGED_DELIVERY:LX/0RA;
+
+    .line 19
+    .line 20
+    return-object v0
+
+    .line 21
+    :cond_2
+    sget-object v0, LX/0RA;->FIRE_AND_FORGET:LX/0RA;
+
+    .line 22
+    .line 23
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/0RA;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/0RA;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/0RA;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/0RA;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/0RA;->$VALUES:[LX/0RA;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/0RA;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getValue()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/0RA;->mValue:I
+
+    .line 1
+    .line 2
+    return v0
 .end method

@@ -1,10 +1,10 @@
-.class public Lcom/facebook/bugreporter/core/scheduler/LollipopBugReportService;
+.class public final Lcom/facebook/bugreporter/core/scheduler/LollipopBugReportService;
 .super Lcom/facebook/common/jobscheduler/compatmodule/FbJobServiceCompat;
 .source ""
 
 
 # instance fields
-.field public A00:LX/2lx;
+.field public A00:LX/26q;
 
 
 # direct methods
@@ -22,38 +22,47 @@
 
 
 # virtual methods
-.method public final A00()LX/3kr;
-    .locals 1
+.method public final A00()LX/3B3;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/bugreporter/core/scheduler/LollipopBugReportService;->A00:LX/2lx;
+    iget-object v1, p0, Lcom/facebook/bugreporter/core/scheduler/LollipopBugReportService;->A00:LX/26q;
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
     .line 3
     .line 4
-    sget v0, LX/2eq;->AQF:I
+    sget v0, LX/2I6;->ALP:I
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
+    move-result-object v1
 
     .line 10
-    check-cast v0, LX/2lx;
+    check-cast v1, LX/26q;
 
     .line 11
     .line 12
-    iput-object v0, p0, Lcom/facebook/bugreporter/core/scheduler/LollipopBugReportService;->A00:LX/2lx;
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/bugreporter/core/scheduler/LollipopBugReportService;->A00:LX/26q;
 
     .line 13
     .line 14
-    :cond_0
-    return-object v0
+    if-nez v0, :cond_1
+
+    .line 15
+    .line 16
+    iput-object v1, p0, Lcom/facebook/bugreporter/core/scheduler/LollipopBugReportService;->A00:LX/26q;
+
+    .line 17
+    .line 18
+    :cond_1
+    return-object v1
 .end method

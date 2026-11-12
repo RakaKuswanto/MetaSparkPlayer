@@ -3,32 +3,16 @@
 .source ""
 
 
-# static fields
-.field public static final A00:LX/4kw;
+# instance fields
+.field public final A00:I
+
+.field public final A01:Ljava/lang/Object;
+
+.field public final A02:Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/4kw;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/4kw;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/4kw;->A00:LX/4kw;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
     .line 0
@@ -37,5 +21,17 @@
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/4kw;->A01:Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    iput p2, p0, LX/4kw;->A00:I
+
+    .line 6
+    .line 7
+    iput-object p3, p0, LX/4kw;->A02:Ljava/lang/Object;
+
+    .line 8
+    .line 9
     return-void
 .end method

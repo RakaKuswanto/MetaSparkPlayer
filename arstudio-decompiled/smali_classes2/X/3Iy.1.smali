@@ -1,37 +1,20 @@
-.class public final LX/3Iy;
+.class public interface abstract LX/3Iy;
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:J
-
-.field public A01:J
-
-.field public A02:LX/3Iu;
+# interfaces
+.implements Lcom/google/common/base/Supplier;
 
 
-# direct methods
-.method public constructor <init>(LX/3Iu;JJ)V
-    .locals 0
+# virtual methods
+.method public abstract A5C()V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract A78()V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    iput-wide p2, p0, LX/3Iy;->A01:J
+.method public abstract A9a()Landroid/database/sqlite/SQLiteDatabase;
+.end method
 
-    .line 4
-    .line 5
-    iput-wide p4, p0, LX/3Iy;->A00:J
-
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/3Iy;->A02:LX/3Iu;
-
-    .line 8
-    .line 9
-    return-void
+.method public abstract ACk()J
 .end method

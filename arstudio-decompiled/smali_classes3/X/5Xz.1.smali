@@ -1,17 +1,17 @@
-.class public interface abstract LX/5Xz;
-.super Ljava/lang/Object;
+.class public final LX/5Xz;
+.super Ljava/io/IOException;
 .source ""
 
 
-# virtual methods
-.method public abstract beginFrame()V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract beginMarker(I)V
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/io/IOException;-><init>()V
 
-.method public abstract endFrame()V
-.end method
-
-.method public abstract endMarker()V
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

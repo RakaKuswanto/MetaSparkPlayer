@@ -202,7 +202,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -237,7 +237,7 @@
 
     .line 16
     .line 17
-    invoke-static {v0, v2}, LX/0Ye;->A08(Ljava/lang/Object;[Ljava/lang/Object;)I
+    invoke-static {v2, v0}, LX/0X2;->A0D([Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 18
     .line 19

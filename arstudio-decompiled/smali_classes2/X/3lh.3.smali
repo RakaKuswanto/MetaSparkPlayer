@@ -1,174 +1,78 @@
 .class public final LX/3lh;
-.super Ljava/lang/Thread;
+.super LX/2ml;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "HighPriUploadRetryReceiver$1"
-
-
 # instance fields
-.field public final synthetic A00:Landroid/content/BroadcastReceiver$PendingResult;
+.field public A00:LX/3m1;
 
-.field public final synthetic A01:Landroid/content/Context;
+.field public final A01:Ljava/lang/ref/SoftReference;
 
-.field public final synthetic A02:Landroid/content/Intent;
+.field public final A02:Ljava/lang/ref/SoftReference;
 
-.field public final synthetic A03:Lcom/facebook/analytics2/logger/HighPriUploadRetryReceiver;
+.field public final A03:LX/302;
+
+.field public final A04:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/BroadcastReceiver$PendingResult;Landroid/content/Context;Landroid/content/Intent;Lcom/facebook/analytics2/logger/HighPriUploadRetryReceiver;)V
-    .locals 0
+.method public constructor <init>(LX/3TB;Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3m1;)V
+    .locals 2
 
     .line 0
-    iput-object p4, p0, LX/3lh;->A03:Lcom/facebook/analytics2/logger/HighPriUploadRetryReceiver;
+    const/4 v1, 0x0
 
     .line 1
-    .line 2
-    iput-object p3, p0, LX/3lh;->A02:Landroid/content/Intent;
+    invoke-direct {p0}, LX/2ml;-><init>()V
 
+    .line 2
     .line 3
     .line 4
-    iput-object p2, p0, LX/3lh;->A01:Landroid/content/Context;
+    invoke-static {}, LX/2I6;->A0X()LX/302;
 
     .line 5
     .line 6
-    iput-object p1, p0, LX/3lh;->A00:Landroid/content/BroadcastReceiver$PendingResult;
-
     .line 7
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 15
-
-    .line 0
-    :try_start_0
-    iget-object v0, p0, LX/3lh;->A02:Landroid/content/Intent;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-
-    .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
-    iget-object v2, p0, LX/3lh;->A01:Landroid/content/Context;
-
-    .line 7
     .line 8
-    invoke-static {v2, v0}, LX/3lg;->A00(Landroid/content/Context;Landroid/os/Bundle;)LX/3lg;
+    iput-object v0, p0, LX/3lh;->A03:LX/302;
 
     .line 9
     .line 10
-    .line 11
-    move-result-object v1
+    new-instance v0, Ljava/lang/ref/SoftReference;
 
+    .line 11
     .line 12
-    invoke-static {v2}, LX/3lf;->A00(Landroid/content/Context;)LX/3lf;
+    invoke-direct {v0, v1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
 
     .line 13
     .line 14
     .line 15
-    move-result-object v0
+    iput-object v0, p0, LX/3lh;->A02:Ljava/lang/ref/SoftReference;
 
     .line 16
-    const-string v7, "com.facebook.analytics2.logger.UPLOAD_NOW"
-
     .line 17
-    .line 18
-    const/4 v3, 0x0
+    new-instance v0, Ljava/lang/ref/SoftReference;
 
+    .line 18
     .line 19
-    iget-object v5, v1, LX/3lg;->A06:LX/3lV;
+    invoke-direct {v0, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
 
     .line 20
     .line 21
-    iget v8, v1, LX/3lg;->A02:I
-
     .line 22
+    iput-object v0, p0, LX/3lh;->A01:Ljava/lang/ref/SoftReference;
+
     .line 23
-    const-wide/16 v10, 0x0
-
     .line 24
+    iput-object p3, p0, LX/3lh;->A00:LX/3m1;
+
     .line 25
-    new-instance v6, LX/3lq;
-
     .line 26
+    iput-object p2, p0, LX/3lh;->A04:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+
     .line 27
-    move-object v9, v6
-
     .line 28
-    move-wide v12, v10
-
-    .line 29
-    move-object v14, v7
-
-    .line 30
-    invoke-direct/range {v9 .. v14}, LX/3lq;-><init>(JJLjava/lang/String;)V
-
-    .line 31
-    .line 32
-    .line 33
-    new-instance v1, LX/3lg;
-
-    .line 34
-    .line 35
-    move-object v4, v3
-
-    .line 36
-    invoke-direct/range {v1 .. v8}, LX/3lg;-><init>(Landroid/content/Context;Landroid/os/Bundle;Landroid/os/Messenger;LX/3lV;LX/3lq;Ljava/lang/String;I)V
-
-    .line 37
-    .line 38
-    .line 39
-    invoke-virtual {v0, v1, v7}, LX/3lf;->A06(LX/3lg;Ljava/lang/String;)V
-
-    .line 40
-    .line 41
-    .line 42
-    iget-object v0, p0, LX/3lh;->A00:Landroid/content/BroadcastReceiver$PendingResult;
-
-    .line 43
-    .line 44
-    invoke-virtual {v0}, Landroid/content/BroadcastReceiver$PendingResult;->finish()V
-
-    .line 45
-    .line 46
-    .line 47
-    return-void
-    :try_end_0
-    .catch LX/3kp; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 48
-    :catch_0
-    move-exception v2
-
-    .line 49
-    const-string v1, "HighPriUploadRetryReceiver"
-
-    .line 50
-    .line 51
-    const-string v0, "Exception when scheduling high pri upload via alarm"
-
-    .line 52
-    .line 53
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 54
-    .line 55
-    .line 56
     return-void
 .end method

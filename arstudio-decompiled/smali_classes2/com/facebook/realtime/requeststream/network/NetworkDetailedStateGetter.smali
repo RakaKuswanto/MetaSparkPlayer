@@ -7,15 +7,13 @@
 
 
 # static fields
-.field public static final synthetic $$delegatedProperties:[LX/2TZ;
+.field public static final synthetic $$delegatedProperties:[LX/5hU;
 
 
 # instance fields
-.field public final fbDataConnectionManager$delegate:LX/1Nm;
+.field public final fbDataConnectionManager$delegate:LX/0lu;
 
-.field public final fbNetworkManager$delegate:LX/1Nm;
-
-.field public final kinjector:LX/1Nw;
+.field public final fbNetworkManager$delegate:LX/0lu;
 
 
 # direct methods
@@ -30,109 +28,99 @@
     const/4 v0, 0x2
 
     .line 3
-    new-array v3, v0, [LX/2TZ;
+    new-array v3, v0, [LX/5hU;
 
     .line 4
     .line 5
-    const-string v1, "fbDataConnectionManager"
+    const-string/jumbo v1, "fbDataConnectionManager"
 
     .line 6
     .line 7
+    .line 8
     const-string/jumbo v0, "getFbDataConnectionManager()Lcom/facebook/common/connectionstatus/FbDataConnectionManager;"
 
-    .line 8
     .line 9
     .line 10
-    invoke-static {v4, v1, v0, v3}, LX/2TS;->A00(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
     .line 11
+    invoke-static {v4, v1, v0, v3}, LX/0X2;->A1A(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
     .line 12
     .line 13
-    const-string v2, "fbNetworkManager"
-
     .line 14
-    .line 15
-    const-string/jumbo v0, "getFbNetworkManager()Lcom/facebook/common/network/FbNetworkManager;"
+    const-string/jumbo v2, "fbNetworkManager"
 
+    .line 15
     .line 16
     .line 17
-    .line 18
-    new-instance v1, LX/2TS;
+    const-string/jumbo v0, "getFbNetworkManager()Lcom/facebook/common/network/FbNetworkManager;"
 
+    .line 18
     .line 19
     .line 20
-    invoke-direct {v1, v4, v2, v0}, LX/2TS;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v1, LX/5hS;
 
     .line 21
     .line 22
+    invoke-direct {v1, v4, v2, v0}, LX/5hS;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
     .line 23
+    .line 24
+    .line 25
     const/4 v0, 0x1
 
-    .line 24
-    aput-object v1, v3, v0
-
-    .line 25
     .line 26
-    sput-object v3, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->$$delegatedProperties:[LX/2TZ;
+    aput-object v1, v3, v0
 
     .line 27
     .line 28
+    sput-object v3, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->$$delegatedProperties:[LX/5hU;
+
+    .line 29
+    .line 30
     return-void
 .end method
 
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
+    sget v0, LX/2I6;->A7H:I
+
+    .line 4
     .line 5
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
     .line 6
     .line 7
-    iput-object p1, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->kinjector:LX/1Nw;
-
     .line 8
+    move-result-object v0
+
     .line 9
-    sget v0, LX/2eq;->AAR:I
+    iput-object v0, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->fbDataConnectionManager$delegate:LX/0lu;
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    sget v0, LX/2I6;->A0E:I
 
     .line 12
     .line 13
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
     .line 14
+    .line 15
+    .line 16
     move-result-object v0
 
-    .line 15
-    iput-object v0, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->fbDataConnectionManager$delegate:LX/1Nm;
-
-    .line 16
     .line 17
-    sget v0, LX/2eq;->A0M:I
+    iput-object v0, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->fbNetworkManager$delegate:LX/0lu;
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    iput-object v0, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->fbNetworkManager$delegate:LX/1Nm;
-
-    .line 24
-    .line 25
     return-void
 .end method
 
@@ -140,11 +128,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->fbDataConnectionManager$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->fbDataConnectionManager$delegate:LX/0lu;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -163,11 +151,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->fbNetworkManager$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;->fbNetworkManager$delegate:LX/0lu;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -196,7 +184,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lcom/facebook/common/network/FbNetworkManager;->A0D()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/facebook/common/network/FbNetworkManager;->A0E()Ljava/lang/String;
 
     .line 5
     .line 6
@@ -204,7 +192,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 9
     .line 10
@@ -224,7 +212,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lcom/facebook/common/network/FbNetworkManager;->A0E()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/facebook/common/network/FbNetworkManager;->A0F()Ljava/lang/String;
 
     .line 5
     .line 6
@@ -232,7 +220,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 9
     .line 10
@@ -252,7 +240,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lcom/facebook/common/connectionstatus/FbDataConnectionManager;->A05()LX/0Zh;
+    invoke-virtual {v0}, Lcom/facebook/common/connectionstatus/FbDataConnectionManager;->A05()LX/2pz;
 
     .line 5
     .line 6

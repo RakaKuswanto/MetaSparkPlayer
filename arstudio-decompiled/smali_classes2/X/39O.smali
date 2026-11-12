@@ -1,13 +1,30 @@
-.class public final LX/39O;
+.class public final LX/39o;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+
+# instance fields
+.field public final A00:I
+
+.field public final A01:I
+
+.field public final A02:I
+
+.field public final A03:I
+
+.field public final A04:I
+
+.field public final A05:I
+
+.field public final A06:I
+
+.field public final A07:I
+
+.field public final A08:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(IIIIIIIII)V
     .locals 0
 
     .line 0
@@ -16,36 +33,41 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput p1, p0, LX/39o;->A07:I
 
-
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
-
-    .line 0
-    new-instance v2, LX/39P;
-
-    .line 1
-    .line 2
-    invoke-direct {v2, p0, p1}, LX/39P;-><init>(LX/39O;Ljava/lang/Runnable;)V
-
-    .line 3
     .line 4
     .line 5
-    const-string v1, "SimpleTigonCallbacks"
+    iput p2, p0, LX/39o;->A00:I
 
     .line 6
     .line 7
-    new-instance v0, Ljava/lang/Thread;
+    iput p3, p0, LX/39o;->A06:I
 
     .line 8
     .line 9
-    invoke-direct {v0, v2, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    iput p4, p0, LX/39o;->A01:I
 
     .line 10
     .line 11
+    iput p5, p0, LX/39o;->A03:I
+
     .line 12
-    return-object v0
+    .line 13
+    iput p6, p0, LX/39o;->A02:I
+
+    .line 14
+    .line 15
+    iput p7, p0, LX/39o;->A08:I
+
+    .line 16
+    .line 17
+    iput p8, p0, LX/39o;->A04:I
+
+    .line 18
+    .line 19
+    iput p9, p0, LX/39o;->A05:I
+
+    .line 20
+    .line 21
+    return-void
 .end method

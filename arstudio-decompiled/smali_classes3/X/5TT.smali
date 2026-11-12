@@ -2,38 +2,12 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:LX/5Tk;
-
-.field public final A01:Ljava/lang/String;
+# interfaces
+.implements LX/1kh;
 
 
 # direct methods
-.method public constructor <init>(LX/5Tk;)V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, LX/5TT;->A00:LX/5Tk;
-
-    .line 268435460
-    .line 268435461
-    const/4 v0, 0x0
-
-    .line 268435462
-    iput-object v0, p0, LX/5TT;->A01:Ljava/lang/String;
-
-    .line 268435463
-    .line 268435464
-    return-void
-.end method
-
-.method public constructor <init>(LX/5Tk;Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -42,13 +16,61 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5TT;->A00:LX/5Tk;
-
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/5TT;->A01:Ljava/lang/String;
-
-    .line 6
-    .line 7
     return-void
+.end method
+
+
+# virtual methods
+.method public final AHm(I)I
+    .locals 3
+
+    const/4 v2, 0x3
+
+    const/4 v1, 0x2
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_3
+
+    const/16 v0, 0xb
+
+    if-eq p1, v0, :cond_3
+
+    if-eq p1, v1, :cond_2
+
+    const/16 v0, 0xc
+
+    if-eq p1, v0, :cond_2
+
+    if-lt p1, v2, :cond_1
+
+    const/16 v0, 0xa
+
+    if-le p1, v0, :cond_0
+
+    const/16 v0, 0xd
+
+    if-lt p1, v0, :cond_1
+
+    const/16 v0, 0x13
+
+    if-gt p1, v0, :cond_1
+
+    :cond_0
+    return v2
+
+    :cond_1
+    const/4 v2, 0x5
+
+    return v2
+
+    :cond_2
+    const/4 v2, 0x2
+
+    return v2
+
+    :cond_3
+    const/4 v2, 0x1
+
+    return v2
 .end method

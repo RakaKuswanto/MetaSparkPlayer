@@ -1,58 +1,240 @@
 .class public final LX/0Kf;
-.super LX/0L1;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public A00:LX/0Kg;
+
+.field public final A01:I
+
+.field public final A02:I
+
+.field public final A03:I
+
+.field public final A04:I
+
+.field public final A05:Landroid/content/Context;
+
+.field public final A06:Landroid/os/Handler;
+
+.field public final A07:Lcom/facebook/acra/anrreport/ANRReport;
+
+.field public final A08:Ljava/lang/String;
+
+.field public final A09:Ljava/lang/String;
+
+.field public final A0A:Ljava/lang/String;
+
+.field public final A0B:Ljava/lang/String;
+
+.field public final A0C:Ljava/lang/String;
+
+.field public final A0D:Z
+
+.field public final A0E:Z
+
+.field public final A0F:Z
+
+.field public final A0G:Z
+
+.field public final A0H:Z
+
+.field public final A0I:Z
+
+
 # direct methods
-.method public constructor <init>(LX/0LR;LX/0LP;LX/0LO;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lcom/facebook/acra/anrreport/ANRReport;LX/0Kg;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIZZZZZZ)V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0, p3, p2, p1}, LX/0L1;-><init>(LX/0LO;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 30814
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    .line 30815
+    iput-object p1, p0, LX/0Kf;->A05:Landroid/content/Context;
+
+    .line 30816
+    iput-object p5, p0, LX/0Kf;->A0A:Ljava/lang/String;
+
+    .line 30817
+    iput-object p3, p0, LX/0Kf;->A07:Lcom/facebook/acra/anrreport/ANRReport;
+
+    .line 30818
+    iput-object p4, p0, LX/0Kf;->A00:LX/0Kg;
+
+    .line 30819
+    iput-object p2, p0, LX/0Kf;->A06:Landroid/os/Handler;
+
+    .line 30820
+    iput p10, p0, LX/0Kf;->A01:I
+
+    .line 30821
+    iput-boolean p13, p0, LX/0Kf;->A0E:Z
+
+    .line 30822
+    iput-boolean p14, p0, LX/0Kf;->A0I:Z
+
+    .line 30823
+    move/from16 v0, p15
+
+    iput-boolean v0, p0, LX/0Kf;->A0G:Z
+
+    .line 30824
+    move/from16 v0, p16
+
+    iput-boolean v0, p0, LX/0Kf;->A0F:Z
+
+    .line 30825
+    iput p11, p0, LX/0Kf;->A03:I
+
+    .line 30826
+    move/from16 v0, p17
+
+    iput-boolean v0, p0, LX/0Kf;->A0H:Z
+
+    .line 30827
+    move/from16 v0, p18
+
+    iput-boolean v0, p0, LX/0Kf;->A0D:Z
+
+    .line 30828
+    iput-object p6, p0, LX/0Kf;->A08:Ljava/lang/String;
+
+    .line 30829
+    iput-object p7, p0, LX/0Kf;->A09:Ljava/lang/String;
+
+    .line 30830
+    iput-object p8, p0, LX/0Kf;->A0C:Ljava/lang/String;
+
+    .line 30831
+    iput-object p9, p0, LX/0Kf;->A0B:Ljava/lang/String;
+
+    .line 30832
+    iput p12, p0, LX/0Kf;->A02:I
+
+    .line 30833
+    iput p11, p0, LX/0Kf;->A04:I
+
+    .line 30834
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final A00()I
+    .locals 2
 
     .line 0
-    invoke-super {p0}, LX/0L1;->toString()Ljava/lang/String;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v2
+    const/16 v0, 0x17
 
+    .line 3
     .line 4
-    const-string v1, " "
+    if-gt v1, v0, :cond_0
 
     .line 5
     .line 6
-    iget-object v0, p0, LX/0L1;->A01:Ljava/lang/Object;
+    iget v0, p0, LX/0Kf;->A04:I
 
     .line 7
     .line 8
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    return v0
 
     .line 9
+    :cond_0
+    iget v0, p0, LX/0Kf;->A03:I
+
     .line 10
     .line 11
-    move-result-object v0
+    return v0
+.end method
+
+.method public final A01()Ljava/lang/String;
+    .locals 4
+
+    .line 0
+    iget-object v1, p0, LX/0Kf;->A05:Landroid/content/Context;
+
+    .line 1
+    .line 2
+    const v0, 0xb92ec5a
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/0Jr;->A00(Landroid/content/Context;I)Ljava/io/File;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v3
+
+    .line 9
+    iget-object v1, p0, LX/0Kf;->A0A:Ljava/lang/String;
+
+    .line 10
+    .line 11
+    const/16 v0, 0x2e
 
     .line 12
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 13
+    const/16 v2, 0x5f
+
     .line 14
     .line 15
-    move-result-object v0
+    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     .line 16
+    .line 17
+    .line 18
+    move-result-object v1
+
+    .line 19
+    const/16 v0, 0x3a
+
+    .line 20
+    .line 21
+    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    :try_start_0
+    invoke-static {v3, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    invoke-virtual {v0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    return-object v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 34
+    :catch_0
+    invoke-static {}, LX/0Lm;->A00()LX/0TD;
+
+    .line 35
+    .line 36
+    .line 37
+    const/4 v0, 0x0
+
+    .line 38
     return-object v0
 .end method

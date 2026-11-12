@@ -17,11 +17,11 @@
     .line 1
     .line 2
     .line 3
-    new-instance v1, LX/4y9;
+    new-instance v1, LX/4rZ;
 
     .line 4
     .line 5
-    invoke-direct {v1, p1}, LX/4y9;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, LX/4rZ;-><init>(Ljava/lang/String;)V
 
     .line 6
     .line 7
@@ -60,11 +60,11 @@
 
     .line 5
     .line 6
-    new-instance v0, LX/4yD;
+    new-instance v0, LX/4ra;
 
     .line 7
     .line 8
-    invoke-direct {v0, v1}, LX/4yD;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, LX/4ra;-><init>(Ljava/lang/String;)V
 
     .line 9
     .line 10
@@ -90,11 +90,11 @@
 
     .line 20
     .line 21
-    new-instance v0, LX/4yD;
+    new-instance v0, LX/4ra;
 
     .line 22
     .line 23
-    invoke-direct {v0, v1}, LX/4yD;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, LX/4ra;-><init>(Ljava/lang/String;)V
 
     .line 24
     .line 25

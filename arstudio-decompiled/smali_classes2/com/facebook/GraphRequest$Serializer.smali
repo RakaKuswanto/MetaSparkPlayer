@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1tk;
+.implements LX/0Zj;
 
 
 # instance fields
@@ -11,13 +11,13 @@
 
 .field public A01:Z
 
-.field public final A02:LX/2I1;
+.field public final A02:LX/0bA;
 
 .field public final A03:Ljava/io/OutputStream;
 
 
 # direct methods
-.method public constructor <init>(LX/2I1;Ljava/io/OutputStream;Z)V
+.method public constructor <init>(LX/0bA;Ljava/io/OutputStream;Z)V
     .locals 1
 
     .line 0
@@ -37,7 +37,7 @@
 
     .line 7
     .line 8
-    iput-object p1, p0, Lcom/facebook/GraphRequest$Serializer;->A02:LX/2I1;
+    iput-object p1, p0, Lcom/facebook/GraphRequest$Serializer;->A02:LX/0bA;
 
     .line 9
     .line 10
@@ -60,7 +60,7 @@
 
     .line 3
     .line 4
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 5
     .line 6
@@ -124,79 +124,80 @@
 
     .line 1
     .line 2
-    const-string p3, "content/unknown"
+    const-string/jumbo p3, "content/unknown"
 
     .line 3
     .line 4
+    .line 5
     :cond_0
     invoke-static {p0, p2, p2, p3}, Lcom/facebook/GraphRequest$Serializer;->A04(Lcom/facebook/GraphRequest$Serializer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     .line 6
     .line 7
+    .line 8
     invoke-static {}, Lcom/facebook/internal/Validate;->A00()V
 
-    .line 8
     .line 9
     .line 10
+    .line 11
     sget-object v0, Lcom/facebook/FacebookSdk;->A00:Landroid/content/Context;
 
-    .line 11
     .line 12
+    .line 13
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    .line 13
     .line 14
     .line 15
-    move-result-object v0
-
     .line 16
-    invoke-virtual {v0, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+    move-result-object v0
 
     .line 17
+    invoke-virtual {v0, p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+
     .line 18
     .line 19
+    .line 20
     move-result-object v1
 
-    .line 20
+    .line 21
     iget-object v0, p0, Lcom/facebook/GraphRequest$Serializer;->A03:Ljava/io/OutputStream;
 
-    .line 21
     .line 22
+    .line 23
     const/4 v2, 0x0
 
-    .line 23
-    invoke-static {v1, v0}, LX/2Sz;->A00(Ljava/io/InputStream;Ljava/io/OutputStream;)I
-
     .line 24
+    invoke-static {v1, v0}, LX/0bS;->A00(Ljava/io/InputStream;Ljava/io/OutputStream;)I
+
     .line 25
     .line 26
+    .line 27
     move-result v1
 
-    .line 27
+    .line 28
     invoke-static {p0, p2}, Lcom/facebook/GraphRequest$Serializer;->A03(Lcom/facebook/GraphRequest$Serializer;Ljava/lang/String;)V
 
-    .line 28
     .line 29
     .line 30
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
-
     .line 31
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
+
     .line 32
     .line 33
+    .line 34
     move-result-object v0
 
-    .line 34
+    .line 35
     invoke-static {v0, v1, v2}, LX/001;->A1A([Ljava/lang/Object;II)V
 
-    .line 35
     .line 36
     .line 37
+    .line 38
     invoke-static {}, Lcom/facebook/FacebookSdk;->A01()V
 
-    .line 38
     .line 39
     .line 40
+    .line 41
     return-void
 .end method
 
@@ -208,63 +209,64 @@
 
     .line 1
     .line 2
-    const-string p3, "content/unknown"
+    const-string/jumbo p3, "content/unknown"
 
     .line 3
     .line 4
+    .line 5
     :cond_0
     invoke-static {p0, p2, p2, p3}, Lcom/facebook/GraphRequest$Serializer;->A04(Lcom/facebook/GraphRequest$Serializer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     .line 6
     .line 7
+    .line 8
     iget-object v1, p0, Lcom/facebook/GraphRequest$Serializer;->A03:Ljava/io/OutputStream;
 
-    .line 8
     .line 9
+    .line 10
     const/4 v2, 0x0
 
-    .line 10
+    .line 11
     new-instance v0, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
-    .line 11
     .line 12
+    .line 13
     invoke-direct {v0, p1}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 13
     .line 14
     .line 15
-    invoke-static {v0, v1}, LX/2Sz;->A00(Ljava/io/InputStream;Ljava/io/OutputStream;)I
-
     .line 16
+    invoke-static {v0, v1}, LX/0bS;->A00(Ljava/io/InputStream;Ljava/io/OutputStream;)I
+
     .line 17
     .line 18
+    .line 19
     move-result v1
 
-    .line 19
+    .line 20
     invoke-static {p0, p2}, Lcom/facebook/GraphRequest$Serializer;->A03(Lcom/facebook/GraphRequest$Serializer;Ljava/lang/String;)V
 
-    .line 20
     .line 21
     .line 22
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
-
     .line 23
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
+
     .line 24
     .line 25
+    .line 26
     move-result-object v0
 
-    .line 26
+    .line 27
     invoke-static {v0, v1, v2}, LX/001;->A1A([Ljava/lang/Object;II)V
 
-    .line 27
     .line 28
     .line 29
+    .line 30
     invoke-static {}, Lcom/facebook/FacebookSdk;->A01()V
 
-    .line 30
     .line 31
     .line 32
+    .line 33
     return-void
 .end method
 
@@ -297,7 +299,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0, p1}, LX/00I;->A0E(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, LX/004;->A0B(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 14
     .line 15
@@ -379,7 +381,7 @@
 
     .line 34
     .line 35
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 36
     .line 37
@@ -623,7 +625,7 @@
 
     .line 6
     .line 7
-    invoke-static {}, LX/0Yj;->A0q()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0v()[Ljava/lang/Object;
 
     .line 8
     .line 9
@@ -748,189 +750,190 @@
 
     .line 49
     .line 50
-    const-string v0, "content/unknown"
+    const-string/jumbo v0, "content/unknown"
 
     .line 51
     .line 52
+    .line 53
     invoke-static {p0, p2, p2, v0}, Lcom/facebook/GraphRequest$Serializer;->A04(Lcom/facebook/GraphRequest$Serializer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 53
     .line 54
     .line 55
+    .line 56
     invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write([B)V
 
-    .line 56
     .line 57
     .line 58
+    .line 59
     const/4 v2, 0x0
 
-    .line 59
+    .line 60
     invoke-static {p0, p2}, Lcom/facebook/GraphRequest$Serializer;->A03(Lcom/facebook/GraphRequest$Serializer;Ljava/lang/String;)V
 
-    .line 60
     .line 61
     .line 62
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
-
     .line 63
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
+
     .line 64
     .line 65
+    .line 66
     move-result-object v1
 
-    .line 66
+    .line 67
     array-length v0, p1
 
-    .line 67
+    .line 68
     invoke-static {v1, v0, v2}, LX/001;->A1A([Ljava/lang/Object;II)V
 
-    .line 68
     .line 69
     .line 70
+    .line 71
     goto :goto_0
 
-    .line 71
+    .line 72
     :cond_1
     instance-of v0, p1, Landroid/net/Uri;
 
-    .line 72
     .line 73
+    .line 74
     const/4 v1, 0x0
 
-    .line 74
+    .line 75
     if-eqz v0, :cond_2
 
-    .line 75
     .line 76
+    .line 77
     check-cast p1, Landroid/net/Uri;
 
-    .line 77
     .line 78
+    .line 79
     invoke-direct {p0, p1, p2, v1}, Lcom/facebook/GraphRequest$Serializer;->A01(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     .line 80
     .line 81
+    .line 82
     return-void
 
-    .line 82
+    .line 83
     :cond_2
     instance-of v0, p1, Landroid/os/ParcelFileDescriptor;
 
-    .line 83
     .line 84
+    .line 85
     if-eqz v0, :cond_3
 
-    .line 85
     .line 86
+    .line 87
     check-cast p1, Landroid/os/ParcelFileDescriptor;
 
-    .line 87
     .line 88
+    .line 89
     invoke-direct {p0, p1, p2, v1}, Lcom/facebook/GraphRequest$Serializer;->A02(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 89
     .line 90
     .line 91
+    .line 92
     return-void
 
-    .line 92
+    .line 93
     :cond_3
     instance-of v0, p1, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;
 
-    .line 93
     .line 94
+    .line 95
     if-eqz v0, :cond_5
 
-    .line 95
     .line 96
+    .line 97
     check-cast p1, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;
 
-    .line 97
     .line 98
+    .line 99
     iget-object v2, p1, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->A00:Landroid/os/Parcelable;
 
-    .line 99
     .line 100
+    .line 101
     iget-object v1, p1, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->A01:Ljava/lang/String;
 
-    .line 101
     .line 102
+    .line 103
     instance-of v0, v2, Landroid/os/ParcelFileDescriptor;
 
-    .line 103
     .line 104
+    .line 105
     if-eqz v0, :cond_4
 
-    .line 105
     .line 106
+    .line 107
     check-cast v2, Landroid/os/ParcelFileDescriptor;
 
-    .line 107
     .line 108
+    .line 109
     invoke-direct {p0, v2, p2, v1}, Lcom/facebook/GraphRequest$Serializer;->A02(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 109
     .line 110
     .line 111
+    .line 112
     return-void
 
-    .line 112
+    .line 113
     :cond_4
     instance-of v0, v2, Landroid/net/Uri;
 
-    .line 113
     .line 114
+    .line 115
     if-eqz v0, :cond_5
 
-    .line 115
     .line 116
+    .line 117
     check-cast v2, Landroid/net/Uri;
 
-    .line 117
     .line 118
+    .line 119
     invoke-direct {p0, v2, p2, v1}, Lcom/facebook/GraphRequest$Serializer;->A01(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 119
     .line 120
     .line 121
+    .line 122
     return-void
 
-    .line 122
+    .line 123
     :cond_5
     const-string/jumbo v0, "value is not a supported type."
 
-    .line 123
     .line 124
     .line 125
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
     .line 126
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 127
     .line 128
+    .line 129
     move-result-object v0
 
-    .line 129
+    .line 130
     throw v0
 
-    .line 130
+    .line 131
     :cond_6
     invoke-static {p1}, Lcom/facebook/GraphRequest;->A01(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 131
     .line 132
     .line 133
+    .line 134
     move-result-object v0
 
-    .line 134
-    invoke-virtual {p0, p2, v0}, Lcom/facebook/GraphRequest$Serializer;->Ark(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 135
+    invoke-virtual {p0, p2, v0}, Lcom/facebook/GraphRequest$Serializer;->AqZ(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 136
     .line 137
+    .line 138
     return-void
 .end method
 
-.method public final Ark(Ljava/lang/String;Ljava/lang/String;)V
+.method public final AqZ(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .line 0
@@ -968,7 +971,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, p1}, LX/00I;->A0E(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, LX/004;->A0B(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 19
     .line 20

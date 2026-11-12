@@ -1,100 +1,88 @@
-.class public final LX/4Fi;
+.class public final LX/4FI;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
 
 # instance fields
-.field public A00:I
-
-.field public A01:Landroid/view/View;
-
-.field public A02:Landroid/widget/FrameLayout$LayoutParams;
+.field public final synthetic A00:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;)V
-    .locals 3
+.method public constructor <init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/4FI;->A00:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
     .line 1
     .line 2
-    .line 3
-    const v0, 0x1020002
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4FI;->A00:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->A00:Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
     .line 6
-    invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
+    :cond_0
+    return-void
+.end method
 
+.method public final onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/4FI;->A00:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x2
+
+    .line 3
+    invoke-virtual {v1, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->A0B(I)V
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v0, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->A00:Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    .line 7
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
     .line 10
-    check-cast v0, Landroid/view/ViewGroup;
+    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/4BF;->A0Z(Landroid/view/ViewGroup;)Landroid/view/View;
-
     .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    iput-object v0, p0, LX/4Fi;->A01:Landroid/view/View;
-
-    .line 17
-    .line 18
-    if-eqz v0, :cond_0
-
-    .line 19
-    .line 20
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v2
-
-    .line 24
-    const/4 v1, 0x5
-
-    .line 25
-    new-instance v0, LX/6Q2;
-
-    .line 26
-    .line 27
-    invoke-direct {v0, p0, v1}, LX/6Q2;-><init>(Ljava/lang/Object;I)V
-
-    .line 28
-    .line 29
-    .line 30
-    invoke-virtual {v2, v0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    .line 31
-    .line 32
-    .line 33
-    iget-object v0, p0, LX/4Fi;->A01:Landroid/view/View;
-
-    .line 34
-    .line 35
-    invoke-static {v0}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
-
-    .line 36
-    .line 37
-    .line 38
-    move-result-object v0
-
-    .line 39
-    iput-object v0, p0, LX/4Fi;->A02:Landroid/widget/FrameLayout$LayoutParams;
-
-    .line 40
-    .line 41
     :cond_0
     return-void
 .end method

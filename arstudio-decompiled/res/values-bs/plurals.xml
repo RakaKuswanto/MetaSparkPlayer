@@ -3,10 +3,86 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">Sviđanja stranice: %1$s</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s sviđanja</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">Prije %1$d dana</item>
+        <item quantity="one">Prije %1$d dan</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d dana</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d dana</item>
+        <item quantity="one">%1$d dan</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d sati</item>
+        <item quantity="one">%1$d sat</item>
+        <item quantity="few">%1$d sata</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minuta</item>
+        <item quantity="few">%1$d minute</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d mjeseci</item>
+        <item quantity="one">%1$d mjesec</item>
+        <item quantity="few">%1$d mjeseca</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d sekundi</item>
+        <item quantity="one">%1$d sekunda</item>
+        <item quantity="few">%1$d sekunde</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d sedmica</item>
+        <item quantity="few">%1$d sedmice</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">još %1$d dan/a</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">Još %1$d sati</item>
+        <item quantity="one">Još %1$d sat</item>
+        <item quantity="few">Još %1$d sata</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">još %1$d minuta</item>
+        <item quantity="few">još %1$d minute</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">Još %1$d mj.</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">Još %1$d sek.</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">još %1$d sedmica</item>
+        <item quantity="few">još %1$d sedmice</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">Još %1$d god.</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d godina</item>
+        <item quantity="few">%1$d godine</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">prije %1$d sati</item>
+        <item quantity="one">prije %1$d sat</item>
+        <item quantity="few">prije %1$d sata</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d h</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d sati</item>
+        <item quantity="one">%1$d sat</item>
+        <item quantity="few">%1$d sata</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d h</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">prije %1$d sati</item>
         <item quantity="one">prije %1$d sat</item>
         <item quantity="few">prije %1$d sata</item>
@@ -19,9 +95,73 @@
         <item quantity="one">Za %1$d minutu od sada</item>
         <item quantity="few">Za %1$d minute od sada</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">prije %1$d min.</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">Prije %1$d minuta</item>
         <item quantity="one">Prije %1$d minutu</item>
         <item quantity="few">Prije %1$d minute</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d min.</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d m</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">prije %1$d mjeseci</item>
+        <item quantity="one">prije %1$d mjesec</item>
+        <item quantity="few">prije %1$d mjeseca</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">prije %1$d sekundi</item>
+        <item quantity="one">prije %1$d sekunde</item>
+        <item quantity="few">prije %1$d sekunde</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">Prije %1$d sedmica</item>
+        <item quantity="one">Prije %1$d sedmice</item>
+        <item quantity="few">Prije %1$d sedmice</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">preostalo je %1$d h</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">Ostalj %1$d min.</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">Prije %1$d godina</item>
+        <item quantity="one">Prije %1$d godinu</item>
+        <item quantity="few">Prije %1$d godine</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Posjetili ste prije %1$d dana</item>
+        <item quantity="one">Posjetili ste prije %1$d dan</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Posjetili ste prije %1$d sati</item>
+        <item quantity="one">Posjetili ste prije %1$d sat</item>
+        <item quantity="few">Posjetili ste prije %1$d sata</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Posjetili ste prije %1$d minuta</item>
+        <item quantity="one">Posjetili ste prije %1$d minutu</item>
+        <item quantity="few">Posjetili ste prije %1$d minute</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Posjetili ste prije %1$d mjeseci</item>
+        <item quantity="one">Posjetili ste prije %1$d mjesec</item>
+        <item quantity="few">Posjetili ste prije %1$d mjeseca</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Posjetili ste prije %1$d sedmica</item>
+        <item quantity="one">Posjetili ste prije %1$d sedmicu</item>
+        <item quantity="few">Posjetili ste prije %1$d sedmice</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Posjetili ste prije %1$d godina</item>
+        <item quantity="one">Posjetili ste prije %1$d godinu</item>
+        <item quantity="few">Posjetili ste prije %1$d godine</item>
     </plurals>
 </resources>

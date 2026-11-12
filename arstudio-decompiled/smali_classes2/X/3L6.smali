@@ -1,25 +1,14 @@
-.class public final LX/3L6;
+.class public interface abstract LX/3L6;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nw;
+# virtual methods
+.method public abstract AAM(Landroid/content/Context;)LX/2M7;
+.end method
 
+.method public abstract AEn()LX/3M2;
+.end method
 
-# direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/3L6;->A00:LX/1Nw;
-
-    .line 4
-    .line 5
-    return-void
+.method public abstract AMi()LX/3M2;
 .end method

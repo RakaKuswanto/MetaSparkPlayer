@@ -3,21 +3,21 @@
 .source ""
 
 # interfaces
-.implements LX/3FX;
+.implements LX/2vr;
 
 
 # instance fields
 .field public final TOAST_TAG:Ljava/lang/String;
 
-.field public mSp:LX/0Na;
+.field public mSp:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/3Fl;)V
+.method public constructor <init>(Landroid/content/Context;LX/32i;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;-><init>(Landroid/content/Context;LX/3H4;)V
+    invoke-direct {p0, p1, p2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;-><init>(Landroid/content/Context;LX/32w;)V
 
     .line 1
     .line 2
@@ -30,17 +30,17 @@
 
     .line 6
     .line 7
-    const v0, 0x7f0d011a
+    const v0, 0x7f0c00f1
 
     .line 8
     .line 9
     .line 10
-    invoke-virtual {p0, v0}, LX/4QS;->setContentView(I)V
+    invoke-virtual {p0, v0}, LX/3h6;->setContentView(I)V
 
     .line 11
     .line 12
     .line 13
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 14
     .line 15
@@ -48,40 +48,40 @@
     move-result-object v0
 
     .line 17
-    iput-object v0, p0, Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;->mSp:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;->mSp:LX/0RP;
 
     .line 18
     .line 19
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;)LX/3H4;
+.method public static synthetic access$000(Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;)LX/32w;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->control:LX/3H4;
+    iget-object p0, p0, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->control:LX/32w;
 
     .line 1
     .line 2
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;)LX/0Na;
+.method public static synthetic access$100(Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;)LX/0RP;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;->mSp:LX/0Na;
+    iget-object p0, p0, Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;->mSp:LX/0RP;
 
     .line 1
     .line 2
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;)LX/3H4;
+.method public static synthetic access$200(Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;)LX/32w;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->control:LX/3H4;
+    iget-object p0, p0, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;->control:LX/32w;
 
     .line 1
     .line 2
@@ -95,11 +95,11 @@
     const/4 v1, 0x0
 
     .line 1
-    new-instance v0, LX/1nN;
+    new-instance v0, LX/0Yj;
 
     .line 2
     .line 3
-    invoke-direct {v0, p0, p2, p3, v1}, LX/1nN;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, p0, p2, p3, v1}, LX/0Yj;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 4
     .line 5
@@ -132,12 +132,12 @@
     move-result-object v3
 
     .line 8
-    const v0, 0x7f0a04b0
+    const v0, 0x7f0903f9
 
     .line 9
     .line 10
     .line 11
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 12
     .line 13
@@ -157,7 +157,7 @@
     move-result-object v1
 
     .line 21
-    const v0, 0x7f120269
+    const v0, 0x7f110236
 
     .line 22
     .line 23
@@ -178,7 +178,7 @@
     move-result-object v0
 
     .line 32
-    invoke-static {v1, v0}, LX/0Yg;->A0r(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/0X4;->A0q(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 33
     .line 34
@@ -191,11 +191,11 @@
     .line 37
     .line 38
     .line 39
-    const/16 v0, 0xf
+    const/16 v0, 0x10
 
     .line 40
     .line 41
-    invoke-static {v2, p0, v0}, LX/1n2;->A00(Landroid/view/View;Ljava/lang/Object;I)V
+    invoke-static {v2, p0, v0}, LX/0Yx;->A00(Landroid/view/View;Ljava/lang/Object;I)V
 
     .line 42
     .line 43
@@ -241,26 +241,26 @@
     move-result-object v1
 
     .line 16
-    invoke-static {v2}, LX/0PS;->A07(Ljava/lang/Object;)V
+    invoke-static {v2}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 17
     .line 18
     .line 19
-    new-instance v0, LX/3Rv;
+    new-instance v0, LX/1ki;
 
     .line 20
     .line 21
-    invoke-direct {v0, v2}, LX/3Rv;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, LX/1ki;-><init>(Landroid/content/Context;)V
 
     .line 22
     .line 23
     .line 24
-    invoke-virtual {v0}, LX/3Rv;->A06()Z
+    invoke-virtual {v0}, LX/1ki;->A03()Z
 
     .line 25
     .line 26
     .line 27
-    invoke-static {v2, v1}, LX/0Ye;->A0g(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {v2, v1}, LX/0X3;->A0y(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 28
     .line 29
@@ -288,12 +288,12 @@
     .line 3
     .line 4
     .line 5
-    const v0, 0x7f0a04af
+    const v0, 0x7f0903f8
 
     .line 6
     .line 7
     .line 8
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 9
     .line 10
@@ -301,21 +301,21 @@
     move-result-object v1
 
     .line 12
-    const/16 v0, 0xd
+    const/16 v0, 0xe
 
     .line 13
     .line 14
-    invoke-static {v1, p0, v0}, LX/1n2;->A00(Landroid/view/View;Ljava/lang/Object;I)V
+    invoke-static {v1, p0, v0}, LX/0Yx;->A00(Landroid/view/View;Ljava/lang/Object;I)V
 
     .line 15
     .line 16
     .line 17
-    const v0, 0x7f0a01a0
+    const v0, 0x7f09017c
 
     .line 18
     .line 19
     .line 20
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 21
     .line 22
@@ -323,21 +323,21 @@
     move-result-object v1
 
     .line 24
-    const/16 v0, 0xe
+    const/16 v0, 0xf
 
     .line 25
     .line 26
-    invoke-static {v1, p0, v0}, LX/1n2;->A00(Landroid/view/View;Ljava/lang/Object;I)V
+    invoke-static {v1, p0, v0}, LX/0Yx;->A00(Landroid/view/View;Ljava/lang/Object;I)V
 
     .line 27
     .line 28
     .line 29
-    const v0, 0x7f0a019f
+    const v0, 0x7f09017b
 
     .line 30
     .line 31
     .line 32
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 33
     .line 34
@@ -353,7 +353,7 @@
     move-result-object v3
 
     .line 40
-    const v0, 0x7f1201f1
+    const v0, 0x7f1101be
 
     .line 41
     .line 42
@@ -376,12 +376,12 @@
     .line 51
     .line 52
     .line 53
-    const v0, 0x7f0a01a1
+    const v0, 0x7f09017d
 
     .line 54
     .line 55
     .line 56
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 57
     .line 58
@@ -389,7 +389,7 @@
     move-result-object v2
 
     .line 60
-    const v0, 0x7f12024a
+    const v0, 0x7f110217
 
     .line 61
     .line 62
@@ -412,12 +412,12 @@
     .line 71
     .line 72
     .line 73
-    const v0, 0x7f0a019e
+    const v0, 0x7f09017a
 
     .line 74
     .line 75
     .line 76
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 77
     .line 78
@@ -425,7 +425,7 @@
     move-result-object v2
 
     .line 80
-    const v0, 0x7f120249
+    const v0, 0x7f110216
 
     .line 81
     .line 82

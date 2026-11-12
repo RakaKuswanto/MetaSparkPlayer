@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLPaymentActivityActionIdentifierSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLPaymentActivityActionIdentifierSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0xab
+    const/16 v0, 0xac
 
     .line 1
     .line 2
@@ -1372,7 +1372,7 @@
 
     .line 675
     .line 676
-    const-string v0, "P2P_ACCEPT_MONEY"
+    const-string v0, "P2M_SEND_OR_REFRESH_MESSAGE"
 
     .line 677
     .line 678
@@ -1384,7 +1384,7 @@
 
     .line 681
     .line 682
-    const-string v0, "P2P_CANCEL_REQUEST"
+    const-string v0, "P2P_ACCEPT_MONEY"
 
     .line 683
     .line 684
@@ -1396,7 +1396,7 @@
 
     .line 687
     .line 688
-    const-string v0, "P2P_DECLINE_REQUEST"
+    const-string v0, "P2P_CANCEL_REQUEST"
 
     .line 689
     .line 690
@@ -1408,7 +1408,7 @@
 
     .line 693
     .line 694
-    const-string v0, "P2P_DECLINE_TRANSFER"
+    const-string v0, "P2P_DECLINE_REQUEST"
 
     .line 695
     .line 696
@@ -1420,7 +1420,7 @@
 
     .line 699
     .line 700
-    const-string v0, "P2P_DISMISS_FLOW"
+    const-string v0, "P2P_DECLINE_TRANSFER"
 
     .line 701
     .line 702
@@ -1432,7 +1432,7 @@
 
     .line 705
     .line 706
-    const-string v0, "P2P_GENERAL_CONTINUE"
+    const-string v0, "P2P_DISMISS_FLOW"
 
     .line 707
     .line 708
@@ -1444,7 +1444,7 @@
 
     .line 711
     .line 712
-    const-string v0, "P2P_GENERAL_LINK"
+    const-string v0, "P2P_GENERAL_CONTINUE"
 
     .line 713
     .line 714
@@ -1456,7 +1456,7 @@
 
     .line 717
     .line 718
-    const-string v0, "P2P_OPEN_DIALOG"
+    const-string v0, "P2P_GENERAL_LINK"
 
     .line 719
     .line 720
@@ -1468,7 +1468,7 @@
 
     .line 723
     .line 724
-    const-string v0, "P2P_OPEN_RECEIPT"
+    const-string v0, "P2P_OPEN_DIALOG"
 
     .line 725
     .line 726
@@ -1480,7 +1480,7 @@
 
     .line 729
     .line 730
-    const-string v0, "P2P_PAY_REQUEST"
+    const-string v0, "P2P_OPEN_RECEIPT"
 
     .line 731
     .line 732
@@ -1492,7 +1492,7 @@
 
     .line 735
     .line 736
-    const-string v0, "P2P_TRIGGER_RECEIVE"
+    const-string v0, "P2P_PAY_REQUEST"
 
     .line 737
     .line 738
@@ -1504,7 +1504,7 @@
 
     .line 741
     .line 742
-    const-string v0, "P2P_UPDATE_CARD"
+    const-string v0, "P2P_TRIGGER_RECEIVE"
 
     .line 743
     .line 744
@@ -1516,7 +1516,7 @@
 
     .line 747
     .line 748
-    const-string v0, "P2P_VERIFY_INFO"
+    const-string v0, "P2P_UPDATE_CARD"
 
     .line 749
     .line 750
@@ -1528,7 +1528,7 @@
 
     .line 753
     .line 754
-    const-string v0, "PAUSE_SUBSCRIPTION"
+    const-string v0, "P2P_VERIFY_INFO"
 
     .line 755
     .line 756
@@ -1540,7 +1540,7 @@
 
     .line 759
     .line 760
-    const-string v0, "PAYMENT_CAPTURE_FAILURE"
+    const-string v0, "PAUSE_SUBSCRIPTION"
 
     .line 761
     .line 762
@@ -1552,7 +1552,7 @@
 
     .line 765
     .line 766
-    const-string v0, "PAY_CONFIRMATION_CONFIGURATION_DONE"
+    const-string v0, "PAYMENT_CAPTURE_FAILURE"
 
     .line 767
     .line 768
@@ -1564,7 +1564,7 @@
 
     .line 771
     .line 772
-    const-string v0, "PAY_CONFIRMATION_CONFIGURATION_SETUP_FBPAY_PIN"
+    const-string v0, "PAY_CONFIRMATION_CONFIGURATION_DONE"
 
     .line 773
     .line 774
@@ -1576,7 +1576,7 @@
 
     .line 777
     .line 778
-    const-string v0, "PAY_CONFIRMATION_CONFIGURATION_VIEW_DETAILS"
+    const-string v0, "PAY_CONFIRMATION_CONFIGURATION_SETUP_FBPAY_PIN"
 
     .line 779
     .line 780
@@ -1588,7 +1588,7 @@
 
     .line 783
     .line 784
-    const-string v0, "PURCHASE_PROTECTION"
+    const-string v0, "PAY_CONFIRMATION_CONFIGURATION_VIEW_DETAILS"
 
     .line 785
     .line 786
@@ -1600,7 +1600,7 @@
 
     .line 789
     .line 790
-    const-string v0, "RECEIPT_STATUS_COMPONENT"
+    const-string v0, "PURCHASE_PROTECTION"
 
     .line 791
     .line 792
@@ -1612,7 +1612,7 @@
 
     .line 795
     .line 796
-    const-string v0, "REQUEST_CANCELLATION"
+    const-string v0, "RECEIPT_STATUS_COMPONENT"
 
     .line 797
     .line 798
@@ -1624,7 +1624,7 @@
 
     .line 801
     .line 802
-    const-string v0, "REQUEST_NEW_RECEIPT"
+    const-string v0, "REQUEST_CANCELLATION"
 
     .line 803
     .line 804
@@ -1636,7 +1636,7 @@
 
     .line 807
     .line 808
-    const-string v0, "REQUEST_REFUND"
+    const-string v0, "REQUEST_NEW_RECEIPT"
 
     .line 809
     .line 810
@@ -1648,7 +1648,7 @@
 
     .line 813
     .line 814
-    const-string v0, "REQUEST_RETURN"
+    const-string v0, "REQUEST_REFUND"
 
     .line 815
     .line 816
@@ -1660,7 +1660,7 @@
 
     .line 819
     .line 820
-    const-string v0, "RESTART_SUBSCRIPTION"
+    const-string v0, "REQUEST_RETURN"
 
     .line 821
     .line 822
@@ -1672,7 +1672,7 @@
 
     .line 825
     .line 826
-    const-string v0, "RESTORE_SUBSCRIPTION"
+    const-string v0, "RESTART_SUBSCRIPTION"
 
     .line 827
     .line 828
@@ -1684,7 +1684,7 @@
 
     .line 831
     .line 832
-    const-string v0, "RESUBSCRIBE_SUBSCRIPTION"
+    const-string v0, "RESTORE_SUBSCRIPTION"
 
     .line 833
     .line 834
@@ -1696,7 +1696,7 @@
 
     .line 837
     .line 838
-    const-string v0, "REVOKE_AND_REFUND_SUBSCRIPTION"
+    const-string v0, "RESUBSCRIBE_SUBSCRIPTION"
 
     .line 839
     .line 840
@@ -1708,7 +1708,7 @@
 
     .line 843
     .line 844
-    const-string v0, "SELLER_CHARGEBACK_REPRESENTMENT"
+    const-string v0, "REVOKE_AND_REFUND_SUBSCRIPTION"
 
     .line 845
     .line 846
@@ -1720,7 +1720,7 @@
 
     .line 849
     .line 850
-    const-string v0, "SELLER_CLAIM_APPEALS"
+    const-string v0, "SELLER_CHARGEBACK_REPRESENTMENT"
 
     .line 851
     .line 852
@@ -1732,7 +1732,7 @@
 
     .line 855
     .line 856
-    const-string v0, "SHARE"
+    const-string v0, "SELLER_CLAIM_APPEALS"
 
     .line 857
     .line 858
@@ -1744,7 +1744,7 @@
 
     .line 861
     .line 862
-    const-string v0, "SUPPORT_EXPERIENCE_RATING_SUBMITTED"
+    const-string v0, "SHARE"
 
     .line 863
     .line 864
@@ -1756,7 +1756,7 @@
 
     .line 867
     .line 868
-    const-string v0, "TRACK"
+    const-string v0, "SUPPORT_EXPERIENCE_RATING_SUBMITTED"
 
     .line 869
     .line 870
@@ -1768,7 +1768,7 @@
 
     .line 873
     .line 874
-    const-string v0, "UNKNOWN_OR_SUSPICIOUS"
+    const-string v0, "TRACK"
 
     .line 875
     .line 876
@@ -1780,7 +1780,7 @@
 
     .line 879
     .line 880
-    const-string v0, "UNPAUSE_SUBSCRIPTION"
+    const-string v0, "UNKNOWN_OR_SUSPICIOUS"
 
     .line 881
     .line 882
@@ -1792,7 +1792,7 @@
 
     .line 885
     .line 886
-    const-string v0, "UPDATE_EMAIL"
+    const-string v0, "UNPAUSE_SUBSCRIPTION"
 
     .line 887
     .line 888
@@ -1804,7 +1804,7 @@
 
     .line 891
     .line 892
-    const-string v0, "UPDATE_ORDER"
+    const-string v0, "UPDATE_EMAIL"
 
     .line 893
     .line 894
@@ -1816,7 +1816,7 @@
 
     .line 897
     .line 898
-    const-string v0, "UPDATE_PAYMENT_METHOD"
+    const-string v0, "UPDATE_ORDER"
 
     .line 899
     .line 900
@@ -1828,7 +1828,7 @@
 
     .line 903
     .line 904
-    const-string v0, "UPDATE_SHIPPING_ADDRESS"
+    const-string v0, "UPDATE_PAYMENT_METHOD"
 
     .line 905
     .line 906
@@ -1840,7 +1840,7 @@
 
     .line 909
     .line 910
-    const-string v0, "VIEW_CLAIMS"
+    const-string v0, "UPDATE_SHIPPING_ADDRESS"
 
     .line 911
     .line 912
@@ -1852,7 +1852,7 @@
 
     .line 915
     .line 916
-    const-string v0, "VIEW_CLAIM_REDIRECT"
+    const-string v0, "VIEW_CLAIMS"
 
     .line 917
     .line 918
@@ -1864,7 +1864,7 @@
 
     .line 921
     .line 922
-    const-string v0, "VIEW_CLOSED_CLAIM"
+    const-string v0, "VIEW_CLAIM_REDIRECT"
 
     .line 923
     .line 924
@@ -1876,7 +1876,7 @@
 
     .line 927
     .line 928
-    const-string v0, "VIEW_GIFTCARD"
+    const-string v0, "VIEW_CLOSED_CLAIM"
 
     .line 929
     .line 930
@@ -1888,7 +1888,7 @@
 
     .line 933
     .line 934
-    const-string v0, "VIEW_ITEM"
+    const-string v0, "VIEW_GIFTCARD"
 
     .line 935
     .line 936
@@ -1900,7 +1900,7 @@
 
     .line 939
     .line 940
-    const-string v0, "VIEW_MERCHANT_INFORMATION"
+    const-string v0, "VIEW_ITEM"
 
     .line 941
     .line 942
@@ -1912,7 +1912,7 @@
 
     .line 945
     .line 946
-    const-string v0, "VIEW_MERCHANT_TERMS"
+    const-string v0, "VIEW_MERCHANT_INFORMATION"
 
     .line 947
     .line 948
@@ -1924,7 +1924,7 @@
 
     .line 951
     .line 952
-    const-string v0, "VIEW_NO_PP_CLAIM"
+    const-string v0, "VIEW_MERCHANT_TERMS"
 
     .line 953
     .line 954
@@ -1936,7 +1936,7 @@
 
     .line 957
     .line 958
-    const-string v0, "VIEW_OPEN_CLAIM"
+    const-string v0, "VIEW_NO_PP_CLAIM"
 
     .line 959
     .line 960
@@ -1948,7 +1948,7 @@
 
     .line 963
     .line 964
-    const-string v0, "VIEW_ORDER"
+    const-string v0, "VIEW_OPEN_CLAIM"
 
     .line 965
     .line 966
@@ -1960,7 +1960,7 @@
 
     .line 969
     .line 970
-    const-string v0, "VIEW_ORDERS"
+    const-string v0, "VIEW_ORDER"
 
     .line 971
     .line 972
@@ -1972,7 +1972,7 @@
 
     .line 975
     .line 976
-    const-string v0, "VIEW_ORDER_DETAILS"
+    const-string v0, "VIEW_ORDERS"
 
     .line 977
     .line 978
@@ -1984,7 +1984,7 @@
 
     .line 981
     .line 982
-    const-string v0, "VIEW_PDP"
+    const-string v0, "VIEW_ORDER_DETAILS"
 
     .line 983
     .line 984
@@ -1996,7 +1996,7 @@
 
     .line 987
     .line 988
-    const-string v0, "VIEW_RECEIPT"
+    const-string v0, "VIEW_PDP"
 
     .line 989
     .line 990
@@ -2008,7 +2008,7 @@
 
     .line 993
     .line 994
-    const-string v0, "VIEW_REFUNDED_CLAIM"
+    const-string v0, "VIEW_RECEIPT"
 
     .line 995
     .line 996
@@ -2020,7 +2020,7 @@
 
     .line 999
     .line 1000
-    const-string v0, "VIEW_RETURN_LABEL"
+    const-string v0, "VIEW_REFUNDED_CLAIM"
 
     .line 1001
     .line 1002
@@ -2032,7 +2032,7 @@
 
     .line 1005
     .line 1006
-    const-string v0, "VIEW_SELLER"
+    const-string v0, "VIEW_RETURN_LABEL"
 
     .line 1007
     .line 1008
@@ -2044,7 +2044,7 @@
 
     .line 1011
     .line 1012
-    const-string v0, "VIEW_SHOP_ORDER"
+    const-string v0, "VIEW_SELLER"
 
     .line 1013
     .line 1014
@@ -2056,22 +2056,35 @@
 
     .line 1017
     .line 1018
-    const-string v0, "WRITE_REVIEW"
+    const-string v0, "VIEW_SHOP_ORDER"
 
     .line 1019
     .line 1020
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 1021
     .line 1022
-    .line 1023
-    move-result-object v0
+    const/16 v1, 0xab
 
+    .line 1023
     .line 1024
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentActivityActionIdentifierSet;->A00:Ljava/util/Set;
+    const-string/jumbo v0, "WRITE_REVIEW"
 
     .line 1025
     .line 1026
+    .line 1027
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 1028
+    .line 1029
+    .line 1030
+    move-result-object v0
+
+    .line 1031
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentActivityActionIdentifierSet;->A00:Ljava/util/HashSet;
+
+    .line 1032
+    .line 1033
     return-void
 .end method
 
@@ -2087,11 +2100,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentActivityActionIdentifierSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentActivityActionIdentifierSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

@@ -1,6 +1,21 @@
-.class public interface abstract LX/1V3;
-.super Ljava/lang/Object;
+.class public final LX/1V3;
+.super LX/1gb;
 .source ""
 
 # interfaces
-.implements LX/0yO;
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1H2;
+
+
+# direct methods
+.method public constructor <init>(I[I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method

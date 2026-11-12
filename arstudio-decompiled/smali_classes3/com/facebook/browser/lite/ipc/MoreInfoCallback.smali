@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract AVd(Landroid/os/Bundle;)V
+.method public abstract ATy(Landroid/os/Bundle;)V
 .end method

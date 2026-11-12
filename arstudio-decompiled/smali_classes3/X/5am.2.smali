@@ -1,136 +1,170 @@
-.class public final LX/5am;
+.class public abstract synthetic LX/5aM;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/5al;
-
-.field public A01:Ljava/util/ArrayList;
-
-.field public A02:Ljava/util/ArrayList;
+# static fields
+.field public static final synthetic A00:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 2
     .line 3
-    .line 4
-    iput-object v0, p0, LX/5am;->A00:LX/5al;
-
-    .line 5
-    .line 6
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 7
-    .line 8
-    .line 9
     move-result-object v0
 
-    .line 10
-    iput-object v0, p0, LX/5am;->A02:Ljava/util/ArrayList;
-
-    .line 11
-    .line 12
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    iput-object v0, p0, LX/5am;->A01:Ljava/util/ArrayList;
-
-    .line 17
-    .line 18
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00()Z
-    .locals 4
-
-    .line 0
-    const/4 v3, 0x0
-
-    .line 1
-    const/4 v2, 0x0
-
-    .line 2
-    :goto_0
-    iget-object v1, p0, LX/5am;->A01:Ljava/util/ArrayList;
-
-    .line 3
     .line 4
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
+    array-length v0, v0
 
     .line 5
+    new-array v2, v0, [I
+
     .line 6
     .line 7
-    move-result v0
+    sput-object v2, LX/5aM;->A00:[I
 
     .line 8
-    if-ge v2, v0, :cond_0
-
     .line 9
-    .line 10
-    invoke-virtual {v1, v2}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    :try_start_0
+    sget-object v0, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
 
+    .line 10
     .line 11
+    invoke-static {v0, v2}, LX/431;->A1A(Ljava/lang/Enum;[I)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 12
     .line 13
-    move-result-object v1
-
     .line 14
-    check-cast v1, LX/5ZX;
+    :catch_0
+    :try_start_1
+    sget-object v0, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
 
     .line 15
     .line 16
-    iget-boolean v0, v1, LX/5ZX;->A08:Z
+    invoke-static {v0, v2}, LX/431;->A1B(Ljava/lang/Enum;[I)V
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 17
     .line 18
-    if-eqz v0, :cond_1
-
     .line 19
+    :catch_1
+    :try_start_2
+    sget-object v0, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
+
     .line 20
-    iget-object v0, v1, LX/5ZX;->A05:LX/5Zy;
-
     .line 21
-    .line 22
-    invoke-interface {v0}, LX/5Zy;->isEnabled()Z
+    invoke-static {v0, v2}, LX/431;->A1C(Ljava/lang/Enum;[I)V
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
+    .line 22
     .line 23
     .line 24
-    .line 25
-    move-result v0
+    :catch_2
+    :try_start_3
+    sget-object v0, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
 
+    .line 25
     .line 26
-    if-eqz v0, :cond_1
+    invoke-static {v0, v2}, LX/433;->A1H(Ljava/lang/Enum;[I)V
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
     .line 27
     .line 28
-    const/4 v3, 0x1
-
     .line 29
-    :cond_0
-    return v3
+    :catch_3
+    :try_start_4
+    sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
 
     .line 30
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
     .line 31
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
     .line 32
-    goto :goto_0
+    .line 33
+    .line 34
+    move-result v1
+
+    .line 35
+    const/4 v0, 0x5
+
+    .line 36
+    aput v0, v2, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    .line 37
+    .line 38
+    :catch_4
+    :try_start_5
+    sget-object v0, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
+
+    .line 39
+    .line 40
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v1
+
+    .line 44
+    const/4 v0, 0x6
+
+    .line 45
+    aput v0, v2, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    .line 46
+    .line 47
+    :catch_5
+    :try_start_6
+    sget-object v0, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
+
+    .line 48
+    .line 49
+    invoke-static {v0, v2}, LX/433;->A1I(Ljava/lang/Enum;[I)V
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    .line 50
+    .line 51
+    .line 52
+    :catch_6
+    :try_start_7
+    sget-object v0, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
+
+    .line 53
+    .line 54
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 55
+    .line 56
+    .line 57
+    move-result v1
+
+    .line 58
+    const/16 v0, 0x8
+
+    .line 59
+    .line 60
+    aput v0, v2, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    .line 61
+    .line 62
+    :catch_7
+    return-void
 .end method

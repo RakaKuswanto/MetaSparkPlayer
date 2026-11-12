@@ -1,5 +1,5 @@
 .class public abstract LX/0BY;
-.super Landroid/app/Application;
+.super Landroid/content/BroadcastReceiver;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Landroid/app/Application;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     .line 1
     .line 2

@@ -1,111 +1,200 @@
 .class public final LX/5mv;
-.super Ljava/lang/Object;
+.super LX/5mu;
 .source ""
-
-# interfaces
-.implements LX/5nx;
 
 
 # instance fields
-.field public final synthetic A00:LX/5mK;
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/5mK;)V
-    .locals 0
+.method public constructor <init>(LX/5n9;LX/5mz;)V
+    .locals 4
 
     .line 0
-    iput-object p1, p0, LX/5mv;->A00:LX/5mK;
+    invoke-direct {p0, p1, p2}, LX/5mu;-><init>(LX/5n9;LX/5mz;)V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iget-object v0, p1, LX/5n9;->_class:Ljava/lang/Class;
+
     .line 4
     .line 5
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v3
+
+    .line 9
+    const/16 v0, 0x2e
+
+    .line 10
+    .line 11
+    invoke-virtual {v3, v0}, Ljava/lang/String;->lastIndexOf(I)I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v2
+
+    .line 15
+    if-gez v2, :cond_0
+
+    .line 16
+    .line 17
+    const-string v0, ""
+
+    .line 18
+    .line 19
+    iput-object v0, p0, LX/5mv;->A01:Ljava/lang/String;
+
+    .line 20
+    .line 21
+    const-string v0, "."
+
+    .line 22
+    .line 23
+    iput-object v0, p0, LX/5mv;->A00:Ljava/lang/String;
+
+    .line 24
+    .line 25
+    return-void
+
+    .line 26
+    :cond_0
+    add-int/lit8 v0, v2, 0x1
+
+    .line 27
+    .line 28
+    const/4 v1, 0x0
+
+    .line 29
+    invoke-virtual {v3, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    iput-object v0, p0, LX/5mv;->A00:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    invoke-virtual {v3, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v0
+
+    .line 39
+    iput-object v0, p0, LX/5mv;->A01:Ljava/lang/String;
+
+    .line 40
+    .line 41
     return-void
 .end method
 
 
 # virtual methods
-.method public final AYS(LX/5mO;)V
+.method public final Aot(Ljava/lang/String;)LX/5n9;
     .locals 3
 
     .line 0
-    iget-object v1, p0, LX/5mv;->A00:LX/5mK;
+    const-string v0, "."
 
     .line 1
     .line 2
-    iput-object p1, v1, LX/5mK;->A00:LX/5mO;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     .line 3
     .line 4
-    iget-object v0, v1, LX/5mK;->A01:LX/5jl;
-
     .line 5
+    move-result v0
+
     .line 6
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 7
     .line 8
-    invoke-virtual {v0}, LX/5jl;->A09()Z
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     .line 9
     .line 10
     .line 11
-    move-result v0
+    move-result v1
 
     .line 12
-    if-eqz v0, :cond_0
+    iget-object v2, p0, LX/5mv;->A01:Ljava/lang/String;
 
     .line 13
     .line 14
-    invoke-static {v1}, LX/5mK;->A03(LX/5mK;)V
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     .line 15
     .line 16
     .line 17
-    :catch_0
-    return-void
+    move-result v0
 
     .line 18
-    :cond_0
-    invoke-static {v1}, LX/5mK;->A00(LX/5mK;)Landroid/media/Image;
+    add-int/2addr v1, v0
 
     .line 19
+    invoke-static {v1}, LX/0X7;->A0X(I)Ljava/lang/StringBuilder;
+
     .line 20
     .line 21
-    move-result-object v0
-
     .line 22
-    if-eqz v0, :cond_1
+    move-result-object v1
 
     .line 23
-    .line 24
-    :try_start_0
-    iget-object v2, v1, LX/5mK;->A01:LX/5jl;
+    if-nez v0, :cond_1
 
+    .line 24
     .line 25
+    const/4 v0, 0x1
+
     .line 26
-    iget-object v1, v1, LX/5mK;->A08:Ljava/util/concurrent/Callable;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     .line 27
     .line 28
-    const-string v0, "onFrameCaptured"
-
     .line 29
+    move-result-object p1
+
     .line 30
-    invoke-virtual {v2, v0, v1}, LX/5jl;->A07(Ljava/lang/String;Ljava/util/concurrent/Callable;)V
+    :goto_0
+    invoke-static {p1, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 31
     .line 32
     .line 33
-    return-void
+    move-result-object p1
 
     .line 34
+    :cond_0
+    invoke-super {p0, p1}, LX/5mu;->Aot(Ljava/lang/String;)LX/5n9;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    return-object v0
+
+    .line 39
     :cond_1
-    return-void
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 40
+    .line 41
+    .line 42
+    goto :goto_0
 .end method

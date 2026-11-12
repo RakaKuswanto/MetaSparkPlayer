@@ -16,7 +16,7 @@
     .locals 1
 
     .line 0
-    sget-object v0, LX/55D;->A06:LX/55D;
+    sget-object v0, LX/4xI;->A06:LX/4xI;
 
     .line 1
     .line 2
@@ -33,7 +33,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 3
     .line 4

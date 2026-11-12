@@ -1,55 +1,32 @@
 .class public final LX/2co;
-.super Ljava/lang/Object;
+.super LX/2oS;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AppJobsSchedulerTriggersQueue$runNextTrigger$2"
 
 
 # instance fields
-.field public final synthetic A00:LX/2cN;
-
-.field public final synthetic A01:Ljava/util/List;
+.field public final A00:LX/302;
 
 
 # direct methods
-.method public constructor <init>(LX/2cN;Ljava/util/List;)V
-    .locals 0
-
-    iput-object p1, p0, LX/2co;->A00:LX/2cN;
-
-    iput-object p2, p0, LX/2co;->A01:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/2co;->A00:LX/2cN;
+    invoke-direct {p0}, LX/2oS;-><init>()V
 
     .line 1
     .line 2
-    iget-object v1, v0, LX/2cN;->A00:LX/2cy;
-
     .line 3
-    .line 4
-    iget-object v0, p0, LX/2co;->A01:Ljava/util/List;
+    invoke-static {}, LX/0X1;->A0B()LX/302;
 
+    .line 4
     .line 5
     .line 6
-    invoke-interface {v1, v0}, LX/2cy;->A4u(Ljava/util/List;)V
+    move-result-object v0
 
     .line 7
+    iput-object v0, p0, LX/2co;->A00:LX/302;
+
     .line 8
     .line 9
     return-void

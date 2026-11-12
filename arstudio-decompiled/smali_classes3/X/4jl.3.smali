@@ -1,253 +1,44 @@
-.class public final LX/4jl;
+.class public final synthetic LX/4jl;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentTree$$ExternalSyntheticLambda12"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic A01:Landroid/view/View;
+
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p1, p0, LX/4jl;->A00:Landroid/graphics/drawable/Drawable;
+
+    iput-object p2, p0, LX/4jl;->A01:Landroid/view/View;
+
     return-void
-.end method
-
-.method public static final A00(LX/4jM;)I
-    .locals 2
-
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    packed-switch v0, :pswitch_data_0
-
-    .line 5
-    .line 6
-    .line 7
-    const-string v1, "Given unsupported edge "
-
-    .line 8
-    .line 9
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    invoke-static {v1, v0}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    throw v0
-
-    .line 18
-    :pswitch_0
-    const/4 v0, 0x0
-
-    .line 19
-    return v0
-
-    .line 20
-    :pswitch_1
-    const/4 v0, 0x1
-
-    .line 21
-    return v0
-
-    .line 22
-    :pswitch_2
-    const/4 v0, 0x2
-
-    .line 23
-    return v0
-
-    .line 24
-    :pswitch_3
-    const/4 v0, 0x3
-
-    .line 25
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final A01(LX/4jM;[I)I
+.method public final run()V
     .locals 2
 
-    .line 0
-    const/4 v0, 0x1
+    iget-object v1, p0, LX/4jl;->A00:Landroid/graphics/drawable/Drawable;
 
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    iget-object v0, p0, LX/4jl;->A01:Landroid/view/View;
 
-    .line 2
-    .line 3
-    .line 4
-    array-length v1, p2
+    invoke-static {v1, v0}, Lcom/facebook/litho/ComponentTree;->A04(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
-    .line 5
-    const/4 v0, 0x4
-
-    .line 6
-    if-ne v1, v0, :cond_0
-
-    .line 7
-    .line 8
-    invoke-static {p1}, LX/4jl;->A00(LX/4jM;)I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    aget v0, p2, v0
-
-    .line 13
-    .line 14
-    return v0
-
-    .line 15
-    :cond_0
-    const-string v0, "Given wrongly sized array"
-
-    .line 16
-    .line 17
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    throw v0
-.end method
-
-.method public final A02(LX/4jM;[II)V
-    .locals 4
-
-    .line 0
-    const/4 v3, 0x0
-
-    .line 1
-    const/4 v2, 0x1
-
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    const/4 v1, 0x0
-
-    .line 7
-    packed-switch v0, :pswitch_data_0
-
-    .line 8
-    .line 9
-    .line 10
-    :cond_0
     return-void
-
-    .line 11
-    :goto_0
-    const/4 v0, 0x4
-
-    .line 12
-    if-ge v1, v0, :cond_0
-
-    .line 13
-    .line 14
-    :pswitch_0
-    aput p3, p2, v1
-
-    .line 15
-    .line 16
-    add-int/lit8 v1, v1, 0x1
-
-    .line 17
-    .line 18
-    goto :goto_0
-
-    .line 19
-    :pswitch_1
-    invoke-static {p1}, LX/4jl;->A00(LX/4jM;)I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    goto :goto_1
-
-    .line 24
-    :pswitch_2
-    aput p3, p2, v3
-
-    .line 25
-    .line 26
-    const/4 v0, 0x2
-
-    .line 27
-    goto :goto_1
-
-    .line 28
-    :pswitch_3
-    aput p3, p2, v2
-
-    .line 29
-    .line 30
-    const/4 v0, 0x3
-
-    .line 31
-    :goto_1
-    aput p3, p2, v0
-
-    .line 32
-    .line 33
-    return-void
-
-    .line 34
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_0
-    .end packed-switch
 .end method

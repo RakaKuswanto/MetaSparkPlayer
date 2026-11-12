@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 13
 
     .line 0
@@ -49,7 +49,7 @@
     const/4 v2, 0x0
 
     .line 9
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 10
     .line 11
@@ -63,7 +63,7 @@
     .line 15
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 16
     .line 17
@@ -71,7 +71,7 @@
     move-result-object v1
 
     .line 19
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 20
     .line 21
@@ -79,7 +79,7 @@
 
     .line 22
     .line 23
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 24
     .line 25
@@ -101,14 +101,14 @@
     .line 33
     .line 34
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 35
     .line 36
     .line 37
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 38
     .line 39
@@ -116,7 +116,7 @@
     move-result-object v1
 
     .line 41
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 42
     .line 43
@@ -146,7 +146,7 @@
 
     .line 55
     .line 56
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 57
     .line 58
@@ -175,7 +175,7 @@
 
     .line 69
     .line 70
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 71
     .line 72
@@ -204,329 +204,293 @@
 
     .line 83
     .line 84
-    const-class v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    invoke-static {p1, p2}, LX/27L;->A04(LX/3oD;LX/6HS;)Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
     .line 85
     .line 86
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
     .line 87
-    .line 88
-    .line 89
     move-result-object v7
 
-    .line 90
-    check-cast v7, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
-    .line 91
-    .line 92
+    .line 88
     goto :goto_0
 
-    .line 93
+    .line 89
     :sswitch_3
     const-string/jumbo v0, "initial_audio_source_type"
 
+    .line 90
+    .line 91
+    .line 92
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 93
     .line 94
     .line 95
+    move-result v0
+
     .line 96
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 97
     .line 98
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 99
-    move-result v0
-
     .line 100
-    if-eqz v0, :cond_1
-
     .line 101
-    .line 102
-    invoke-virtual {p1}, LX/27m;->A0i()I
-
-    .line 103
-    .line 104
-    .line 105
     move-result v12
 
-    .line 106
+    .line 102
     goto :goto_0
 
-    .line 107
+    .line 103
     :sswitch_4
     const-string/jumbo v0, "remix_layout_type"
 
+    .line 104
+    .line 105
+    .line 106
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 107
     .line 108
     .line 109
+    move-result v0
+
     .line 110
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 111
     .line 112
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 113
-    move-result v0
-
     .line 114
-    if-eqz v0, :cond_1
-
     .line 115
+    move-result-object v10
+
     .line 116
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    const-string/jumbo v0, "remixLayoutType"
 
     .line 117
     .line 118
     .line 119
-    move-result-object v10
+    invoke-static {v10, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 120
-    const-string/jumbo v0, "remixLayoutType"
-
     .line 121
     .line 122
+    goto :goto_0
+
     .line 123
-    invoke-static {v0, v10}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    :sswitch_5
+    const-string/jumbo v0, "selected_layout_configuration"
 
     .line 124
     .line 125
     .line 126
-    goto :goto_0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 127
-    :sswitch_5
-    const-string/jumbo v0, "selected_layout_configuration"
-
     .line 128
     .line 129
+    move-result v0
+
     .line 130
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 131
     .line 132
-    .line 133
-    move-result v0
+    const-class v0, LX/1En;
 
+    .line 133
     .line 134
-    if-eqz v0, :cond_1
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 135
     .line 136
-    const-class v0, LX/0rY;
-
     .line 137
+    move-result-object v2
+
     .line 138
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    check-cast v2, LX/1En;
 
     .line 139
     .line 140
-    .line 141
-    move-result-object v2
-
-    .line 142
-    check-cast v2, LX/0rY;
-
-    .line 143
-    .line 144
     const-string/jumbo v0, "selectedLayoutConfiguration"
 
+    .line 141
+    .line 142
+    .line 143
+    invoke-static {v2, v0, v11}, LX/1O4;->A08(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
+
+    .line 144
     .line 145
     .line 146
-    .line 147
-    invoke-static {v2, v0, v11}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0L(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
-
-    .line 148
-    .line 149
-    .line 150
     move-result-object v11
 
-    .line 151
+    .line 147
     goto :goto_0
 
-    .line 152
+    .line 148
     :sswitch_6
     const-string/jumbo v0, "recorded_video_dest_bounds"
 
+    .line 149
+    .line 150
+    .line 151
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 152
     .line 153
     .line 154
+    move-result v0
+
     .line 155
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 156
     .line 157
+    invoke-static {p1, p2}, LX/27L;->A04(LX/3oD;LX/6HS;)Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+
     .line 158
-    move-result v0
-
     .line 159
-    if-eqz v0, :cond_1
-
     .line 160
-    .line 161
-    const-class v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
-    .line 162
-    .line 163
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
-    .line 164
-    .line 165
-    .line 166
     move-result-object v6
 
-    .line 167
-    check-cast v6, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    .line 161
+    goto :goto_0
 
+    .line 162
+    :sswitch_7
+    const-string/jumbo v0, "original_video_media_data"
+
+    .line 163
+    .line 164
+    .line 165
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 166
+    .line 167
     .line 168
+    move-result v0
+
     .line 169
-    goto/16 :goto_0
+    if-eqz v0, :cond_1
 
     .line 170
     .line 171
-    :sswitch_7
-    const-string/jumbo v0, "original_video_media_data"
+    invoke-static {p1, p2}, LX/27L;->A03(LX/3oD;LX/6HS;)Lcom/facebook/ipc/media/data/MediaData;
 
     .line 172
     .line 173
     .line 174
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 175
-    .line 176
-    .line 177
-    move-result v0
-
-    .line 178
-    if-eqz v0, :cond_1
-
-    .line 179
-    .line 180
-    const-class v0, Lcom/facebook/ipc/media/data/MediaData;
-
-    .line 181
-    .line 182
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
-    .line 183
-    .line 184
-    .line 185
     move-result-object v3
 
-    .line 186
-    check-cast v3, Lcom/facebook/ipc/media/data/MediaData;
-
-    .line 187
-    .line 188
+    .line 175
     goto/16 :goto_0
 
-    .line 189
-    .line 190
+    .line 176
+    .line 177
     :sswitch_8
     const-string/jumbo v0, "original_video_dest_bounds"
 
-    .line 191
-    .line 192
-    .line 193
+    .line 178
+    .line 179
+    .line 180
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 194
-    .line 195
-    .line 196
+    .line 181
+    .line 182
+    .line 183
     move-result v0
 
-    .line 197
+    .line 184
     if-eqz v0, :cond_1
 
+    .line 185
+    .line 186
+    invoke-static {p1, p2}, LX/27L;->A04(LX/3oD;LX/6HS;)Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-object v4
+
+    .line 190
+    goto/16 :goto_0
+
+    .line 191
+    .line 192
+    :sswitch_9
+    const-string/jumbo v0, "original_video_src_bounds"
+
+    .line 193
+    .line 194
+    .line 195
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 196
+    .line 197
     .line 198
+    move-result v0
+
     .line 199
-    const-class v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    if-eqz v0, :cond_1
 
     .line 200
     .line 201
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-static {p1, p2}, LX/27L;->A04(LX/3oD;LX/6HS;)Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
     .line 202
     .line 203
     .line 204
-    move-result-object v4
-
-    .line 205
-    check-cast v4, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
-    .line 206
-    .line 207
-    goto/16 :goto_0
-
-    .line 208
-    .line 209
-    :sswitch_9
-    const-string/jumbo v0, "original_video_src_bounds"
-
-    .line 210
-    .line 211
-    .line 212
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 213
-    .line 214
-    .line 215
-    move-result v0
-
-    .line 216
-    if-eqz v0, :cond_1
-
-    .line 217
-    .line 218
-    const-class v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
-    .line 219
-    .line 220
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
-    .line 221
-    .line 222
-    .line 223
     move-result-object v5
 
-    .line 224
-    check-cast v5, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
-    .line 225
-    .line 226
+    .line 205
     goto/16 :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 227
-    .line 228
+    .line 206
+    .line 207
     :goto_1
     new-instance v1, Lcom/facebook/photos/creativeediting/model/RemixParams;
 
-    .line 229
-    .line 230
-    invoke-direct/range {v1 .. v12}, Lcom/facebook/photos/creativeediting/model/RemixParams;-><init>(LX/0rY;Lcom/facebook/ipc/media/data/MediaData;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;I)V
+    .line 208
+    .line 209
+    invoke-direct/range {v1 .. v12}, Lcom/facebook/photos/creativeediting/model/RemixParams;-><init>(LX/1En;Lcom/facebook/ipc/media/data/MediaData;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;I)V
 
-    .line 231
-    .line 232
-    .line 233
+    .line 210
+    .line 211
+    .line 212
     return-object v1
 
-    .line 234
+    .line 213
     :catch_0
     move-exception v1
 
-    .line 235
+    .line 214
     const-class v0, Lcom/facebook/photos/creativeediting/model/RemixParams;
 
-    .line 236
-    .line 237
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    .line 215
+    .line 216
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
-    .line 238
-    .line 239
-    .line 240
-    const/4 v0, 0x0
+    .line 217
+    .line 218
+    .line 219
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
-    .line 241
+    .line 220
+    .line 221
+    .line 222
+    move-result-object v0
+
+    .line 223
     throw v0
 
-    .line 242
+    .line 224
     :sswitch_data_0
     .sparse-switch
         -0x6dcea79e -> :sswitch_9

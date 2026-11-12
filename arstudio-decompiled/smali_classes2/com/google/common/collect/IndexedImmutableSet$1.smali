@@ -19,6 +19,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/IndexedImmutableSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/collect/IndexedImmutableSet$1;->this$0:Lcom/google/common/collect/IndexedImmutableSet;
@@ -56,6 +64,14 @@
 
 .method public final get(I)Ljava/lang/Object;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
     iget-object v1, p0, Lcom/google/common/collect/IndexedImmutableSet$1;->this$0:Lcom/google/common/collect/IndexedImmutableSet;
@@ -78,11 +94,11 @@
 
     .line 9
     .line 10
-    iget-object v1, v0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/1g5;
+    iget-object v1, v0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/231;
 
     .line 11
     .line 12
-    iget v0, v1, LX/1g5;->A02:I
+    iget v0, v1, LX/231;->A02:I
 
     .line 13
     .line 14
@@ -91,7 +107,7 @@
     .line 15
     .line 16
     .line 17
-    iget-object v0, v1, LX/1g5;->A07:[Ljava/lang/Object;
+    iget-object v0, v1, LX/231;->A07:[Ljava/lang/Object;
 
     .line 18
     .line 19
@@ -115,11 +131,11 @@
 
     .line 27
     .line 28
-    iget-object v1, v0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/1g5;
+    iget-object v1, v0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/231;
 
     .line 29
     .line 30
-    iget v0, v1, LX/1g5;->A02:I
+    iget v0, v1, LX/231;->A02:I
 
     .line 31
     .line 32
@@ -128,11 +144,11 @@
     .line 33
     .line 34
     .line 35
-    new-instance v0, LX/1g1;
+    new-instance v0, LX/22s;
 
     .line 36
     .line 37
-    invoke-direct {v0, v1, p1}, LX/1g1;-><init>(LX/1g5;I)V
+    invoke-direct {v0, v1, p1}, LX/22s;-><init>(LX/231;I)V
 
     .line 38
     .line 39
@@ -157,4 +173,19 @@
 
     .line 6
     return v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

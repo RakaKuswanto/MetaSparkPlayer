@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final CREATOR:LX/4N8;
+.field public static final CREATOR:LX/4EE;
 
 
 # direct methods
@@ -12,19 +12,19 @@
     .locals 2
 
     .line 0
-    const/4 v1, 0x4
+    const/4 v1, 0x2
 
     .line 1
-    new-instance v0, LX/6QC;
+    new-instance v0, LX/6gp;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/6QC;-><init>(I)V
+    invoke-direct {v0, v1}, LX/6gp;-><init>(I)V
 
     .line 4
     .line 5
     .line 6
-    sput-object v0, Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCall;->CREATOR:LX/4N8;
+    sput-object v0, Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCall;->CREATOR:LX/4EE;
 
     .line 7
     .line 8
@@ -166,7 +166,7 @@
 
     .line 19
     .line 20
-    invoke-static {v2, v0, v3, v1}, LX/4E2;->A00(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v1}, LX/45q;->A00(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 21
     .line 22
@@ -197,7 +197,7 @@
     .line 33
     .line 34
     .line 35
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 36
     .line 37
@@ -221,7 +221,7 @@
 
     .line 45
     .line 46
-    invoke-static {v2, v3, v1}, LX/0Yf;->A08(Ljava/util/AbstractCollection;Lorg/json/JSONArray;I)I
+    invoke-static {v2, v3, v1}, LX/0X3;->A05(Ljava/util/AbstractCollection;Lorg/json/JSONArray;I)I
 
     .line 47
     .line 48
@@ -260,7 +260,7 @@
 
     .line 62
     .line 63
-    invoke-static {v3}, LX/0Yh;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {v3}, LX/0X5;->A1Z(Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 64
     .line 65
@@ -272,7 +272,7 @@
 
     .line 68
     .line 69
-    invoke-static {v2, v0, v3, v1}, LX/4E2;->A00(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v1}, LX/45q;->A00(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 70
     .line 71
@@ -303,7 +303,7 @@
     .line 82
     .line 83
     .line 84
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 85
     .line 86
@@ -327,7 +327,7 @@
 
     .line 94
     .line 95
-    invoke-static {v2, v3, v1}, LX/0Yf;->A08(Ljava/util/AbstractCollection;Lorg/json/JSONArray;I)I
+    invoke-static {v2, v3, v1}, LX/0X3;->A05(Ljava/util/AbstractCollection;Lorg/json/JSONArray;I)I
 
     .line 96
     .line 97
@@ -366,7 +366,7 @@
 
     .line 111
     .line 112
-    invoke-static {v3}, LX/0Yh;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {v3}, LX/0X5;->A1Z(Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 113
     .line 114
@@ -378,7 +378,7 @@
 
     .line 117
     .line 118
-    invoke-static {v2, v0, v3, v1}, LX/4E2;->A00(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v1}, LX/45q;->A00(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 119
     .line 120
@@ -410,7 +410,7 @@
 
 
 # virtual methods
-.method public final A08()Ljava/lang/String;
+.method public final A05()Ljava/lang/String;
     .locals 1
 
     .line 0
@@ -448,7 +448,7 @@
     return-object v0
 .end method
 
-.method public final A09()Ljava/util/LinkedHashSet;
+.method public final A06()Ljava/util/LinkedHashSet;
     .locals 1
 
     .line 0

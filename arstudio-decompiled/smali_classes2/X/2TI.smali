@@ -1,411 +1,426 @@
-.class public abstract LX/2TI;
-.super LX/2TJ;
+.class public final LX/2TI;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements LX/2TZ;
 
 
 # instance fields
-.field public final syntheticJavaProperty:Z
+.field public A00:LX/1rU;
+
+.field public final A01:LX/0RP;
+
+.field public final A02:Landroid/content/Context;
+
+.field public final A03:LX/1zq;
+
+.field public final A04:LX/0RP;
+
+.field public final A05:LX/3Yf;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0}, LX/2TJ;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    const/4 v0, 0x0
-
-    .line 268435460
-    iput-boolean v0, p0, LX/2TI;->syntheticJavaProperty:Z
-
-    .line 268435461
-    .line 268435462
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 9
+.method public constructor <init>(LX/3Ft;)V
+    .locals 3
 
     .line 0
-    and-int/lit8 v1, p5, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/4 v2, 0x0
-
     .line 3
-    const/4 v0, 0x1
+    sget v0, LX/2I6;->A2S:I
 
     .line 4
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
-
     .line 5
+    const/4 v2, 0x0
+
     .line 6
+    invoke-static {v2, v2, v0}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
+
     .line 7
-    move-result v8
-
     .line 8
-    move-object v3, p0
-
     .line 9
-    move-object v4, p1
+    move-result-object v1
 
     .line 10
-    move-object v5, p2
+    check-cast v1, Landroid/content/Context;
 
     .line 11
-    move-object v6, p3
-
     .line 12
-    move-object v7, p4
+    iput-object v1, p0, LX/2TI;->A02:Landroid/content/Context;
 
     .line 13
-    invoke-direct/range {v3 .. v8}, LX/2TJ;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
-
     .line 14
+    sget v0, LX/2I6;->ACq:I
+
     .line 15
     .line 16
-    const/4 v1, 0x2
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 17
-    and-int/lit8 v0, p5, 0x2
-
     .line 18
     .line 19
-    if-ne v0, v1, :cond_0
+    move-result-object v0
 
     .line 20
-    .line 21
-    const/4 v2, 0x1
+    check-cast v0, LX/3Yf;
 
+    .line 21
     .line 22
-    :cond_0
-    iput-boolean v2, p0, LX/2TI;->syntheticJavaProperty:Z
+    iput-object v0, p0, LX/2TI;->A05:LX/3Yf;
 
     .line 23
     .line 24
+    sget v0, LX/2I6;->ABh:I
+
+    .line 25
+    .line 26
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    check-cast v0, LX/1zq;
+
+    .line 31
+    .line 32
+    iput-object v0, p0, LX/2TI;->A03:LX/1zq;
+
+    .line 33
+    .line 34
+    sget v0, LX/2I6;->ACp:I
+
+    .line 35
+    .line 36
+    invoke-static {v2, v0}, LX/3FX;->A02(LX/1rU;I)LX/3FX;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    iput-object v0, p0, LX/2TI;->A04:LX/0RP;
+
+    .line 41
+    .line 42
+    invoke-static {p1}, LX/1rU;->A00(LX/3Ft;)LX/1rU;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v0
+
+    .line 46
+    iput-object v0, p0, LX/2TI;->A00:LX/1rU;
+
+    .line 47
+    .line 48
+    sget v0, LX/2I6;->ADS:I
+
+    .line 49
+    .line 50
+    invoke-static {v1, v0}, LX/3FW;->A00(Landroid/content/Context;I)LX/3FW;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v0
+
+    .line 54
+    iput-object v0, p0, LX/2TI;->A01:LX/0RP;
+
+    .line 55
+    .line 56
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A02()LX/2TN;
-    .locals 1
+.method public final A00()Ljava/util/ArrayList;
+    .locals 7
 
     .line 0
-    invoke-virtual {p0}, LX/2TI;->A04()LX/2TZ;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    move-result-object v3
 
     .line 4
-    return-object v0
-.end method
-
-.method public final A04()LX/2TZ;
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/2TI;->syntheticJavaProperty:Z
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-super {p0}, LX/2TJ;->A02()LX/2TN;
+    const/4 v2, 0x0
 
     .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    check-cast v0, LX/2TZ;
-
-    .line 9
-    .line 10
-    return-object v0
-
-    .line 11
     :cond_0
-    const-string v0, "Kotlin reflection is not yet supported for synthetic Java properties"
-
-    .line 12
-    .line 13
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    throw v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    .line 0
-    const/4 v2, 0x1
-
-    .line 1
-    if-eq p1, p0, :cond_0
-
-    .line 2
-    .line 3
-    instance-of v0, p1, LX/2TI;
-
-    .line 4
-    .line 5
-    const/4 v1, 0x0
+    iget-object v0, p0, LX/2TI;->A01:LX/0RP;
 
     .line 6
-    if-eqz v0, :cond_2
-
     .line 7
-    .line 8
-    check-cast p1, LX/2TJ;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
+    .line 8
     .line 9
     .line 10
-    invoke-virtual {p0}, LX/2TJ;->A03()LX/2Hs;
+    move-result-object v4
 
     .line 11
+    check-cast v4, LX/2TJ;
+
     .line 12
     .line 13
-    move-result-object v1
+    const/4 v0, 0x0
 
     .line 14
-    invoke-virtual {p1}, LX/2TJ;->A03()LX/2Hs;
+    const-string v6, "FbTelephonyManager"
 
     .line 15
     .line 16
-    .line 17
-    move-result-object v0
+    iget-object v1, v4, LX/2TJ;->A02:Landroid/content/Context;
 
+    .line 17
     .line 18
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     .line 19
     .line 20
     .line 21
-    move-result v0
+    move-result-object v5
 
     .line 22
-    if-eqz v0, :cond_1
+    const-string/jumbo v1, "com.facebook.workchat"
 
     .line 23
     .line 24
-    iget-object v1, p0, LX/2TJ;->name:Ljava/lang/String;
-
     .line 25
-    .line 26
-    iget-object v0, p1, LX/2TJ;->name:Ljava/lang/String;
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
+    .line 26
     .line 27
     .line 28
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v1
 
     .line 29
+    if-eqz v1, :cond_3
+
     .line 30
     .line 31
-    move-result v0
+    const-string/jumbo v1, "Workchat Sim serial number access"
 
     .line 32
-    if-eqz v0, :cond_1
-
     .line 33
     .line 34
-    iget-object v1, p0, LX/2TJ;->signature:Ljava/lang/String;
+    invoke-static {v6, v1}, LX/0Il;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 35
     .line 36
-    iget-object v0, p1, LX/2TJ;->signature:Ljava/lang/String;
-
     .line 37
-    .line 38
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_1
+    :goto_0
+    invoke-static {v0}, LX/3ED;->A02(Ljava/lang/CharSequence;)Z
 
+    .line 38
     .line 39
     .line 40
+    move-result v1
+
     .line 41
-    move-result v0
+    if-nez v1, :cond_2
 
     .line 42
-    if-eqz v0, :cond_1
-
     .line 43
-    .line 44
-    iget-object v1, p0, LX/2TJ;->receiver:Ljava/lang/Object;
+    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
+    .line 44
     .line 45
     .line 46
-    iget-object v0, p1, LX/2TJ;->receiver:Ljava/lang/Object;
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
 
     .line 47
     .line 48
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v0, 0x2
 
     .line 49
+    if-lt v2, v0, :cond_0
+
     .line 50
     .line 51
-    move-result v0
+    return-object v3
 
     .line 52
-    if-eqz v0, :cond_1
+    :cond_3
+    iget-object v5, v4, LX/2TJ;->A07:LX/3Yf;
 
     .line 53
     .line 54
-    :cond_0
-    return v2
+    const-string/jumbo v1, "android.permission.READ_PHONE_STATE"
 
     .line 55
-    :cond_1
-    const/4 v2, 0x0
-
     .line 56
-    return v2
-
     .line 57
-    :cond_2
-    instance-of v0, p1, LX/2TZ;
+    invoke-virtual {v5, v1}, LX/3Yf;->A06(Ljava/lang/String;)Z
 
     .line 58
     .line 59
-    if-eqz v0, :cond_3
-
     .line 60
+    move-result v1
+
     .line 61
-    invoke-virtual {p0}, LX/2TJ;->A01()LX/2TN;
+    if-eqz v1, :cond_1
 
     .line 62
     .line 63
+    invoke-static {}, LX/2ii;->A00()Z
+
     .line 64
-    move-result-object v0
-
     .line 65
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
     .line 66
-    .line 67
-    .line 68
-    move-result v2
-
-    .line 69
-    return v2
-
-    .line 70
-    :cond_3
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    .line 0
-    invoke-virtual {p0}, LX/2TJ;->A03()LX/2Hs;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-static {v0}, LX/0Yi;->A04(Ljava/lang/Object;)I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v1
-
-    .line 8
-    iget-object v0, p0, LX/2TJ;->name:Ljava/lang/String;
-
-    .line 9
-    .line 10
-    invoke-static {v0, v1}, LX/001;->A02(Ljava/lang/String;I)I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v1
-
-    .line 14
-    iget-object v0, p0, LX/2TJ;->signature:Ljava/lang/String;
-
-    .line 15
-    .line 16
-    invoke-static {v0, v1}, LX/0Yi;->A07(Ljava/lang/String;I)I
-
-    .line 17
-    .line 18
-    .line 19
     move-result v0
 
-    .line 20
-    return v0
-.end method
+    .line 67
+    if-eqz v0, :cond_4
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    .line 68
+    .line 69
+    :try_start_0
+    const-string v0, "Stub!"
 
-    .line 0
-    invoke-virtual {p0}, LX/2TJ;->A01()LX/2TN;
+    .line 70
+    .line 71
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
-    .line 1
-    .line 2
-    .line 3
+    .line 72
+    .line 73
+    .line 74
     move-result-object v0
 
-    .line 4
-    if-eq v0, p0, :cond_0
+    .line 75
+    throw v0
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5
-    .line 6
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 76
+    :catch_0
+    move-exception v1
 
-    .line 7
-    .line 8
-    .line 9
+    .line 77
+    const-string v0, "Error attempting to get SIM card serial number from MediaTek API."
+
+    .line 78
+    .line 79
+    invoke-static {v6, v0, v1}, LX/0Il;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 80
+    .line 81
+    .line 82
+    :cond_4
+    invoke-static {v4, v2}, LX/2TJ;->A02(LX/2TJ;I)Ljava/lang/String;
+
+    .line 83
+    .line 84
+    .line 85
     move-result-object v0
 
-    .line 10
-    return-object v0
+    .line 86
+    invoke-static {v0}, LX/3ED;->A02(Ljava/lang/CharSequence;)Z
 
-    .line 11
-    :cond_0
-    const-string/jumbo v2, "property "
+    .line 87
+    .line 88
+    .line 89
+    move-result v1
 
-    .line 12
-    .line 13
-    .line 14
-    iget-object v1, p0, LX/2TJ;->name:Ljava/lang/String;
+    .line 90
+    if-eqz v1, :cond_1
 
-    .line 15
-    .line 16
-    const-string v0, " (Kotlin reflection is not available)"
+    .line 91
+    .line 92
+    iget-object v0, v4, LX/2TJ;->A03:LX/36Z;
 
-    .line 17
-    .line 18
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 93
+    .line 94
+    if-eqz v0, :cond_5
 
-    .line 19
-    .line 20
-    .line 21
+    .line 95
+    .line 96
+    if-nez v2, :cond_5
+
+    .line 97
+    .line 98
+    :try_start_1
+    iget-object v0, v0, LX/36Z;->A00:Landroid/telephony/TelephonyManager;
+
+    .line 99
+    .line 100
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
+
+    .line 101
+    .line 102
+    .line 103
     move-result-object v0
 
-    .line 22
-    return-object v0
+    .line 104
+    goto :goto_0
+    :try_end_1
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 105
+    :catch_1
+    const/4 v0, 0x0
+
+    .line 106
+    goto :goto_0
+
+    .line 107
+    :cond_5
+    iget-object v1, v4, LX/2TJ;->A01:LX/2Tw;
+
+    .line 108
+    .line 109
+    if-nez v1, :cond_6
+
+    .line 110
+    .line 111
+    sget v1, LX/2I6;->ACr:I
+
+    .line 112
+    .line 113
+    iget-object v0, v4, LX/2TJ;->A00:LX/1rU;
+
+    .line 114
+    .line 115
+    invoke-static {v0, v1}, LX/0X3;->A0f(LX/1rU;I)Ljava/lang/Object;
+
+    .line 116
+    .line 117
+    .line 118
+    move-result-object v1
+
+    .line 119
+    check-cast v1, LX/2Tw;
+
+    .line 120
+    .line 121
+    iput-object v1, v4, LX/2TJ;->A01:LX/2Tw;
+
+    .line 122
+    .line 123
+    :cond_6
+    const-string/jumbo v0, "getIccSerialNumber"
+
+    .line 124
+    .line 125
+    .line 126
+    invoke-static {v1, v0, v2}, LX/2Tw;->A00(LX/2Tw;Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 127
+    .line 128
+    .line 129
+    move-result-object v0
+
+    .line 130
+    goto :goto_0
 .end method

@@ -135,7 +135,7 @@
 
     .line 15
     .line 16
-    invoke-static {v0, p0}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, p0}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 17
     .line 18
@@ -187,7 +187,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -338,7 +338,7 @@
 
     .line 65
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 66
     :try_start_1
@@ -349,8 +349,19 @@
     .line 67
     .line 68
     .line 69
+    throw v1
+
+    .line 70
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 71
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 72
+    .line 73
+    .line 74
+    throw v1
 .end method
 
 .method public static readFromRoot(Ljava/io/File;)Lcom/facebook/common/dextricks/DexStore$OptimizationLog;
@@ -361,7 +372,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -419,7 +430,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -565,7 +576,7 @@
 
     .line 55
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 56
     :try_start_1
@@ -576,8 +587,19 @@
     .line 57
     .line 58
     .line 59
+    throw v1
+
+    .line 60
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 61
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 62
+    .line 63
+    .line 64
+    throw v1
 .end method
 
 .method public writeFromRoot(Ljava/io/File;)V
@@ -588,7 +610,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4

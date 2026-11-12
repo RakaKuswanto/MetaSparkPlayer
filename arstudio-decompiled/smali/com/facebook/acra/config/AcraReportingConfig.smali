@@ -24,13 +24,10 @@
 .method public abstract crashReportUrl()Ljava/lang/String;
 .end method
 
-.method public abstract createANRDetector(ILX/0M1;I)Lcom/facebook/acra/anr/IANRDetector;
+.method public abstract createANRDetector(ILX/0Kf;I)Lcom/facebook/acra/anr/IANRDetector;
 .end method
 
 .method public abstract createReportSender()Lcom/facebook/acra/sender/FlexibleReportSender;
-.end method
-
-.method public abstract enableLeanCrashReporting()Z
 .end method
 
 .method public abstract getAppBuildTimestamp()J
@@ -39,19 +36,7 @@
 .method public abstract getApplicationContext()Landroid/content/Context;
 .end method
 
-.method public abstract getDefaultCrashLogUrl()Ljava/lang/String;
-.end method
-
 .method public abstract getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
-.end method
-
-.method public abstract getMaxPendingAnrReports(I)I
-.end method
-
-.method public abstract getMaxPendingJavaCrashReports(I)I
-.end method
-
-.method public abstract getMaxPendingMiniDumpReports(I)I
 .end method
 
 .method public abstract getOomReservationOverride()I

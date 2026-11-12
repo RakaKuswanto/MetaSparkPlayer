@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0JA;
+.implements LX/0I5;
 
 
 # static fields
@@ -68,5 +68,32 @@
     move-result-wide v0
 
     .line 4
+    return-wide v0
+.end method
+
+.method public final nowNanos()J
+    .locals 3
+
+    .line 0
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 1
+    .line 2
+    invoke-virtual {p0}, Lcom/facebook/common/time/RealtimeSinceBootClock;->now()J
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-wide v0
+
+    .line 6
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-wide v0
+
+    .line 10
     return-wide v0
 .end method

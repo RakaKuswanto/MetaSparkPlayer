@@ -1,243 +1,239 @@
-.class public final LX/1dU;
-.super LX/1cK;
+.class public final LX/1DU;
+.super Ljava/lang/Object;
 .source ""
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "LX/1cK<",
-        "TE;>;"
-    }
-.end annotation
-
-
 # instance fields
-.field public final synthetic A00:Ljava/util/Set;
+.field public A00:I
 
-.field public final synthetic A01:Ljava/util/Set;
+.field public A01:I
+
+.field public A02:LX/14d;
+
+.field public final A03:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;Ljava/util/Set;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/1dU;->A00:Ljava/util/Set;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/1dU;->A01:Ljava/util/Set;
-
     .line 3
-    .line 4
-    invoke-direct {p0}, LX/1cK;-><init>()V
+    sget v0, LX/2I6;->AVP:I
 
+    .line 4
     .line 5
+    invoke-static {v0}, LX/0jq;->A00(I)LX/0lu;
+
     .line 6
     .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/1DU;->A03:LX/0lu;
+
+    .line 10
+    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 2
+.method public final A00(LX/1DW;)V
+    .locals 6
 
     .line 0
-    iget-object v0, p0, LX/1dU;->A00:Ljava/util/Set;
+    const/4 v3, 0x0
 
     .line 1
+    iget-object v0, p0, LX/1DU;->A02:LX/14d;
+
     .line 2
-    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
     .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
     if-eqz v0, :cond_0
 
-    .line 7
-    .line 8
-    iget-object v0, p0, LX/1dU;->A01:Ljava/util/Set;
-
-    .line 9
-    .line 10
-    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v1
-
-    .line 14
-    const/4 v0, 0x1
-
-    .line 15
-    if-nez v1, :cond_1
-
-    .line 16
-    .line 17
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 18
-    :cond_1
-    return v0
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/1dU;->A00:Ljava/util/Set;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
-
-    .line 3
     .line 4
     .line 5
-    move-result v0
+    iget-object v0, p0, LX/1DU;->A03:LX/0lu;
 
     .line 6
-    if-eqz v0, :cond_0
-
     .line 7
-    .line 8
-    iget-object v0, p0, LX/1dU;->A01:Ljava/util/Set;
-
-    .line 9
-    .line 10
-    invoke-interface {v0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v1
-
-    .line 14
-    const/4 v0, 0x1
-
-    .line 15
-    if-nez v1, :cond_1
-
-    .line 16
-    .line 17
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 18
-    :cond_1
-    return v0
-.end method
-
-.method public final isEmpty()Z
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/1dU;->A01:Ljava/util/Set;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/1dU;->A00:Ljava/util/Set;
-
-    .line 3
-    .line 4
-    invoke-static {v1, v0}, Ljava/util/Collections;->disjoint(Ljava/util/Collection;Ljava/util/Collection;)Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-.end method
-
-.method public final bridge synthetic iterator()Ljava/util/Iterator;
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/1dT;
-
-    .line 1
-    .line 2
-    invoke-direct {v0, p0}, LX/1dT;-><init>(LX/1dU;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 4
-
-    .line 0
-    iget-object v0, p0, LX/1dU;->A00:Ljava/util/Set;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v3
-
-    .line 6
-    const/4 v2, 0x0
-
-    .line 7
-    :cond_0
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 8
     .line 9
     .line 10
-    move-result v0
-
-    .line 11
-    if-eqz v0, :cond_1
-
-    .line 12
-    .line 13
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 14
-    .line 15
-    .line 16
     move-result-object v1
 
-    .line 17
-    iget-object v0, p0, LX/1dU;->A01:Ljava/util/Set;
+    .line 11
+    check-cast v1, LX/0h0;
 
+    .line 12
+    .line 13
+    iget-object v5, p0, LX/1DU;->A02:LX/14d;
+
+    .line 14
+    .line 15
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 16
+    .line 17
     .line 18
+    move-result-object v4
+
     .line 19
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    const/4 v0, 0x1
 
     .line 20
+    invoke-static {v4, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 21
     .line 22
-    move-result v0
-
     .line 23
-    if-eqz v0, :cond_0
+    iget-object v0, v1, LX/0h0;->A00:LX/0lu;
 
     .line 24
     .line 25
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {v0}, LX/0lu;->A03(LX/0lu;)LX/0B4;
 
     .line 26
     .line 27
-    goto :goto_0
-
     .line 28
+    move-result-object v1
+
+    .line 29
+    const-string/jumbo v0, "pmv_interruptions_events"
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-interface {v1, v0}, LX/0B4;->A2Y(Ljava/lang/String;)LX/0B8;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v2
+
+    .line 36
+    invoke-interface {v2}, LX/0B8;->isSampled()Z
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v0
+
+    .line 40
+    if-eqz v0, :cond_0
+
+    .line 41
+    .line 42
+    const-string/jumbo v1, "counter_reset"
+
+    .line 43
+    .line 44
+    .line 45
+    const-string/jumbo v0, "event"
+
+    .line 46
+    .line 47
+    .line 48
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    invoke-static {v4}, LX/1DV;->valueOf(Ljava/lang/String;)LX/1DV;
+
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v1
+
+    .line 55
+    const-string/jumbo v0, "reset_reason"
+
+    .line 56
+    .line 57
+    .line 58
+    invoke-interface {v2, v1, v0}, LX/0B8;->A2q(LX/0B2;Ljava/lang/String;)V
+
+    .line 59
+    .line 60
+    .line 61
+    if-nez v5, :cond_1
+
+    .line 62
+    .line 63
+    const/4 v1, 0x0
+
+    .line 64
+    :goto_0
+    const-string/jumbo v0, "player_origin"
+
+    .line 65
+    .line 66
+    .line 67
+    invoke-interface {v2, v1, v0}, LX/0B8;->A2q(LX/0B2;Ljava/lang/String;)V
+
+    .line 68
+    .line 69
+    .line 70
+    invoke-interface {v2}, LX/0B8;->AQk()V
+
+    .line 71
+    .line 72
+    .line 73
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 74
+    iput-object v0, p0, LX/1DU;->A02:LX/14d;
+
+    .line 75
+    .line 76
+    iput v3, p0, LX/1DU;->A01:I
+
+    .line 77
+    .line 78
+    iput v3, p0, LX/1DU;->A00:I
+
+    .line 79
+    .line 80
+    return-void
+
+    .line 81
     :cond_1
-    return v2
+    :try_start_0
+    invoke-virtual {v5}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v0
+
+    .line 85
+    invoke-static {v0}, LX/14c;->valueOf(Ljava/lang/String;)LX/14c;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v1
+
+    .line 89
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 90
+    :catch_0
+    sget-object v1, LX/14c;->UNKNOWN:LX/14c;
+
+    .line 91
+    .line 92
+    goto :goto_0
 .end method

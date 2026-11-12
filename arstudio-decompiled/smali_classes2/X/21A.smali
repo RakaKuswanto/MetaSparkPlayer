@@ -1,294 +1,193 @@
 .class public final LX/21A;
-.super Ljava/lang/Object;
+.super LX/1ro;
 .source ""
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "LX/1ro<",
+        "TK;>;"
+    }
+.end annotation
+
+
 # instance fields
-.field public final A00:Landroid/content/ContentResolver;
-
-.field public final A01:LX/1ev;
-
-.field public final A02:LX/2Xj;
-
-.field public final A03:LX/3A3;
-
-.field public final A04:Lcom/google/common/base/Supplier;
+.field public final synthetic A00:Lcom/google/common/collect/LinkedListMultimap;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/ContentResolver;Landroid/content/Context;LX/2Xp;LX/2Xj;LX/3A3;)V
-    .locals 5
+.method public constructor <init>(Lcom/google/common/collect/LinkedListMultimap;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/21A;->A00:Lcom/google/common/collect/LinkedListMultimap;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p4, p0, LX/21A;->A02:LX/2Xj;
+    invoke-direct {p0}, LX/1ro;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p1, p0, LX/21A;->A00:Landroid/content/ContentResolver;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21A;->A00:Lcom/google/common/collect/LinkedListMultimap;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
+
+    .line 3
+    .line 4
+    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 5
     .line 6
     .line 7
-    iput-object p5, p0, LX/21A;->A03:LX/3A3;
+    move-result v0
+
+    .line 8
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/21A;->A00:Lcom/google/common/collect/LinkedListMultimap;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/21E;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, v1}, LX/21E;-><init>(Lcom/google/common/collect/LinkedListMultimap;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v2, p0, LX/21A;->A00:Lcom/google/common/collect/LinkedListMultimap;
+
+    .line 1
+    .line 2
+    new-instance v1, LX/21C;
+
+    .line 3
+    .line 4
+    invoke-direct {v1, v2, p1}, LX/21C;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 8
     .line 9
-    invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
     .line 10
+    move-result-object v0
+
     .line 11
+    invoke-static {v0, v1}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
+
     .line 12
-    move-result-object v3
-
     .line 13
-    if-eqz v3, :cond_4
-
     .line 14
-    .line 15
-    new-instance v4, Lcom/google/common/collect/CompactHashMap;
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
+    .line 15
     .line 16
     .line 17
-    invoke-direct {v4}, Lcom/google/common/collect/CompactHashMap;-><init>()V
+    move-result-object v1
 
     .line 18
+    new-instance v0, LX/21C;
+
     .line 19
     .line 20
-    sget-object v1, LX/3Du;->A00:Landroid/content/pm/Signature;
+    invoke-direct {v0, v2, p1}, LX/21C;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
 
     .line 21
     .line 22
-    const-string v2, "com.facebook.appmanager"
-
     .line 23
-    .line 24
-    invoke-static {v2, v1}, LX/1dQ;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v0}, LX/1uG;->A01(Ljava/util/Iterator;)V
 
+    .line 24
     .line 25
     .line 26
-    .line 27
-    invoke-interface {v4, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
+    .line 27
     .line 28
     .line 29
+    move-result v0
+
     .line 30
-    move-result-object v0
+    xor-int/lit8 v0, v0, 0x1
 
     .line 31
-    check-cast v0, Ljava/util/Collection;
-
     .line 32
-    .line 33
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    .line 34
-    .line 35
-    new-instance v0, Lcom/google/common/collect/CompactHashSet;
+.method public final size()I
+    .locals 1
 
-    .line 36
-    .line 37
-    invoke-direct {v0}, Lcom/google/common/collect/CompactHashSet;-><init>()V
+    .line 0
+    iget-object v0, p0, LX/21A;->A00:Lcom/google/common/collect/LinkedListMultimap;
 
-    .line 38
-    .line 39
-    .line 40
-    invoke-interface {v4, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 1
+    .line 2
+    iget-object v0, v0, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
 
-    .line 41
-    .line 42
-    .line 43
-    :cond_0
-    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    .line 3
+    .line 4
+    invoke-interface {v0}, Ljava/util/Map;->size()I
 
-    .line 44
-    .line 45
-    .line 46
-    sget-object v1, LX/3Du;->A01:Landroid/content/pm/Signature;
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
 
-    .line 47
-    .line 48
-    invoke-static {v2, v1}, LX/1dQ;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 49
-    .line 50
-    .line 51
-    invoke-interface {v4, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 52
-    .line 53
-    .line 54
-    move-result-object v0
-
-    .line 55
-    check-cast v0, Ljava/util/Collection;
-
-    .line 56
-    .line 57
-    if-nez v0, :cond_1
-
-    .line 58
-    .line 59
-    new-instance v0, Lcom/google/common/collect/CompactHashSet;
-
-    .line 60
-    .line 61
-    invoke-direct {v0}, Lcom/google/common/collect/CompactHashSet;-><init>()V
-
-    .line 62
-    .line 63
-    .line 64
-    invoke-interface {v4, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 65
-    .line 66
-    .line 67
-    :cond_1
-    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    .line 68
-    .line 69
-    .line 70
-    sget-object v1, LX/3Du;->A02:Landroid/content/pm/Signature;
-
-    .line 71
-    .line 72
-    invoke-static {v2, v1}, LX/1dQ;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 73
-    .line 74
-    .line 75
-    invoke-interface {v4, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v0
-
-    .line 79
-    check-cast v0, Ljava/util/Collection;
-
-    .line 80
-    .line 81
-    if-nez v0, :cond_2
-
-    .line 82
-    .line 83
-    new-instance v0, Lcom/google/common/collect/CompactHashSet;
-
-    .line 84
-    .line 85
-    invoke-direct {v0}, Lcom/google/common/collect/CompactHashSet;-><init>()V
-
-    .line 86
-    .line 87
-    .line 88
-    invoke-interface {v4, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 89
-    .line 90
-    .line 91
-    :cond_2
-    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    .line 92
-    .line 93
-    .line 94
-    invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    .line 95
-    .line 96
-    .line 97
-    move-result-object v0
-
-    .line 98
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableSetMultimap;->A00(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSetMultimap;
-
-    .line 99
-    .line 100
-    .line 101
-    move-result-object v2
-
-    .line 102
-    sget-object v1, Lcom/google/common/collect/RegularImmutableSet;->A05:Lcom/google/common/collect/RegularImmutableSet;
-
-    .line 103
-    .line 104
-    new-instance v0, LX/1ev;
-
-    .line 105
-    .line 106
-    invoke-direct {v0, v3, v2, v1}, LX/1ev;-><init>(Landroid/content/pm/PackageManager;Lcom/google/common/collect/ImmutableSetMultimap;Ljava/util/Set;)V
-
-    .line 107
-    .line 108
-    .line 109
-    iput-object v0, p0, LX/21A;->A01:LX/1ev;
-
-    .line 110
-    .line 111
-    new-instance v1, LX/21G;
-
-    .line 112
-    .line 113
-    invoke-direct {v1, p2, v3, p3, p5}, LX/21G;-><init>(Landroid/content/Context;Landroid/content/pm/PackageManager;LX/2Xp;LX/3A3;)V
-
-    .line 114
-    .line 115
-    .line 116
-    instance-of v0, v1, Ljava/io/Serializable;
-
-    .line 117
-    .line 118
-    if-eqz v0, :cond_3
-
-    .line 119
-    .line 120
-    new-instance v0, Lcom/google/common/base/Suppliers$MemoizingSupplier;
-
-    .line 121
-    .line 122
-    invoke-direct {v0, v1}, Lcom/google/common/base/Suppliers$MemoizingSupplier;-><init>(Lcom/google/common/base/Supplier;)V
-
-    .line 123
-    .line 124
-    .line 125
-    :goto_0
-    iput-object v0, p0, LX/21A;->A04:Lcom/google/common/base/Supplier;
-
-    .line 126
-    .line 127
-    return-void
-
-    .line 128
-    :cond_3
-    new-instance v0, Lcom/google/common/base/Suppliers$NonSerializableMemoizingSupplier;
-
-    .line 129
-    .line 130
-    invoke-direct {v0, v1}, Lcom/google/common/base/Suppliers$NonSerializableMemoizingSupplier;-><init>(Lcom/google/common/base/Supplier;)V
-
-    .line 131
-    .line 132
-    .line 133
-    goto :goto_0
-
-    .line 134
-    :cond_4
-    const-string v0, "PackageManager is null"
-
-    .line 135
-    .line 136
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 137
-    .line 138
-    .line 139
-    move-result-object v0
-
-    .line 140
-    throw v0
+    .line 8
+    return v0
 .end method

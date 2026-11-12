@@ -8,6 +8,7 @@
         <item>Rechercher</item>
         <item>Notifications</item>
         <item>Onglet des éléments en vedette</item>
+        <item>Stories</item>
         <item>Autre</item>
     </string-array>
 </resources>

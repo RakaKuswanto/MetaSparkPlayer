@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final Companion:LX/2aO;
+.field public static final Companion:LX/2HC;
 
 
 # instance fields
-.field public volatile latestSessionId:LX/2aP;
+.field public volatile latestSessionId:LX/2Gq;
 
 .field public final mHybridData:Lcom/facebook/jni/HybridData;
 
@@ -20,28 +20,29 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/2aO;
+    new-instance v0, LX/2HC;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/2aO;-><init>()V
+    invoke-direct {v0}, LX/2HC;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/tigon/appnetsessionid/SessionIdGenerator;->Companion:LX/2aO;
+    sput-object v0, Lcom/facebook/tigon/appnetsessionid/SessionIdGenerator;->Companion:LX/2HC;
 
     .line 6
     .line 7
-    const-string v0, "appnetsessionid"
+    const-string/jumbo v0, "appnetsessionid"
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 10
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 11
     .line 12
+    .line 13
     return-void
 .end method
 
@@ -66,7 +67,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 10
     .line 11
@@ -96,16 +97,16 @@
     .locals 3
 
     .line 0
-    new-instance v2, LX/2aP;
+    new-instance v2, LX/2Gq;
 
     .line 1
     .line 2
-    invoke-direct {v2, p1}, LX/2aP;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, p1, p2, p3}, LX/2Gq;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     .line 4
     .line 5
-    iput-object v2, p0, Lcom/facebook/tigon/appnetsessionid/SessionIdGenerator;->latestSessionId:LX/2aP;
+    iput-object v2, p0, Lcom/facebook/tigon/appnetsessionid/SessionIdGenerator;->latestSessionId:LX/2Gq;
 
     .line 6
     .line 7
@@ -146,7 +147,7 @@
 
     .line 24
     .line 25
-    invoke-virtual {v0, v2}, Lcom/facebook/tigon/analyticslog/AppNetSessionIdLogger;->A00(LX/2aP;)V
+    invoke-virtual {v0, v2}, Lcom/facebook/tigon/analyticslog/AppNetSessionIdLogger;->A00(LX/2Gq;)V
 
     .line 26
     .line 27

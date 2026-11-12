@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLCreditCardAssociationSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLCreditCardAssociationSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -46,31 +46,23 @@
 
     .line 15
     .line 16
-    invoke-static {v2, v0}, LX/4BD;->A1X([Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v0}, LX/432;->A1X([Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 17
     .line 18
     .line 19
-    const/16 v1, 0xc
+    invoke-static {v2}, LX/1fN;->A04([Ljava/lang/Object;)Ljava/util/HashSet;
 
     .line 20
     .line 21
-    const-string v0, "VISA"
-
     .line 22
+    move-result-object v0
+
     .line 23
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCreditCardAssociationSet;->A00:Ljava/util/HashSet;
 
     .line 24
     .line 25
-    .line 26
-    move-result-object v0
-
-    .line 27
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCreditCardAssociationSet;->A00:Ljava/util/Set;
-
-    .line 28
-    .line 29
     return-void
 .end method
 
@@ -86,11 +78,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCreditCardAssociationSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCreditCardAssociationSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

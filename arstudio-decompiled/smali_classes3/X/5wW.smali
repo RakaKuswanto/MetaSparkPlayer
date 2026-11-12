@@ -1,750 +1,530 @@
-.class public final LX/5wW;
-.super Ljava/lang/Object;
+.class public final LX/5Ww;
+.super LX/5XJ;
 .source ""
 
 
 # instance fields
-.field public A00:I
+.field public A00:J
 
-.field public A01:I
+.field public A01:Z
 
-.field public A02:I
+.field public final A02:LX/5W6;
 
-.field public A03:I
-
-.field public A04:LX/5x0;
-
-.field public A05:LX/5we;
-
-.field public A06:Z
-
-.field public final A07:LX/5vy;
-
-.field public final A08:LX/5wZ;
-
-.field public final A09:LX/6Gb;
-
-.field public final A0A:LX/6Gb;
-
-.field public final A0B:LX/6Gb;
+.field public final synthetic A03:LX/5Wo;
 
 
 # direct methods
-.method public constructor <init>(LX/5vy;LX/5x0;LX/5we;)V
+.method public constructor <init>(LX/5W6;LX/5Wo;)V
     .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/5Ww;->A03:LX/5Wo;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/5wW;->A07:LX/5vy;
+    invoke-direct {p0, p2}, LX/5XJ;-><init>(LX/5Wo;)V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p3, p0, LX/5wW;->A05:LX/5we;
+    const-wide/16 v0, -0x1
 
     .line 6
     .line 7
-    iput-object p2, p0, LX/5wW;->A04:LX/5x0;
+    iput-wide v0, p0, LX/5Ww;->A00:J
 
     .line 8
     .line 9
-    new-instance v0, LX/5wZ;
+    const/4 v0, 0x1
 
     .line 10
-    .line 11
-    invoke-direct {v0}, LX/5wZ;-><init>()V
+    iput-boolean v0, p0, LX/5Ww;->A01:Z
 
+    .line 11
     .line 12
+    iput-object p1, p0, LX/5Ww;->A02:LX/5W6;
+
     .line 13
     .line 14
-    iput-object v0, p0, LX/5wW;->A08:LX/5wZ;
-
-    .line 15
-    .line 16
-    new-instance v0, LX/6Gb;
-
-    .line 17
-    .line 18
-    invoke-direct {v0}, LX/6Gb;-><init>()V
-
-    .line 19
-    .line 20
-    .line 21
-    iput-object v0, p0, LX/5wW;->A09:LX/6Gb;
-
-    .line 22
-    .line 23
-    const/4 v1, 0x1
-
-    .line 24
-    new-instance v0, LX/6Gb;
-
-    .line 25
-    .line 26
-    invoke-direct {v0, v1}, LX/6Gb;-><init>(I)V
-
-    .line 27
-    .line 28
-    .line 29
-    iput-object v0, p0, LX/5wW;->A0B:LX/6Gb;
-
-    .line 30
-    .line 31
-    new-instance v0, LX/6Gb;
-
-    .line 32
-    .line 33
-    invoke-direct {v0}, LX/6Gb;-><init>()V
-
-    .line 34
-    .line 35
-    .line 36
-    iput-object v0, p0, LX/5wW;->A0A:LX/6Gb;
-
-    .line 37
-    .line 38
-    iput-object p3, p0, LX/5wW;->A05:LX/5we;
-
-    .line 39
-    .line 40
-    iput-object p2, p0, LX/5wW;->A04:LX/5x0;
-
-    .line 41
-    .line 42
-    iget-object v0, p3, LX/5we;->A03:LX/5wl;
-
-    .line 43
-    .line 44
-    iget-object v0, v0, LX/5wl;->A07:Lcom/google/android/exoplayer2/Format;
-
-    .line 45
-    .line 46
-    invoke-interface {p1, v0}, LX/5vy;->AAt(Lcom/google/android/exoplayer2/Format;)V
-
-    .line 47
-    .line 48
-    .line 49
-    invoke-virtual {p0}, LX/5wW;->A02()V
-
-    .line 50
-    .line 51
-    .line 52
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(II)I
-    .locals 13
+.method public final Afv(LX/5WA;J)J
+    .locals 9
 
     .line 0
-    invoke-virtual {p0}, LX/5wW;->A01()LX/5wb;
+    const-wide/16 v7, 0x0
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    cmp-long v0, p2, v7
 
+    .line 3
     .line 4
-    const/4 v1, 0x0
+    if-ltz v0, :cond_9
 
     .line 5
-    if-nez v0, :cond_0
-
     .line 6
-    .line 7
-    return v1
+    iget-boolean v0, p0, LX/5XJ;->A00:Z
 
+    .line 7
     .line 8
-    :cond_0
-    iget v8, v0, LX/5wb;->A00:I
+    if-nez v0, :cond_8
 
     .line 9
     .line 10
-    if-eqz v8, :cond_6
+    iget-boolean v0, p0, LX/5Ww;->A01:Z
 
     .line 11
     .line 12
-    iget-object v0, p0, LX/5wW;->A08:LX/5wZ;
+    const-wide/16 v5, -0x1
 
     .line 13
     .line 14
-    iget-object v5, v0, LX/5wZ;->A0G:LX/6Gb;
+    if-eqz v0, :cond_7
 
     .line 15
     .line 16
-    :goto_0
-    iget-object v11, p0, LX/5wW;->A08:LX/5wZ;
+    iget-wide v1, p0, LX/5Ww;->A00:J
 
     .line 17
     .line 18
-    iget v2, p0, LX/5wW;->A01:I
+    cmp-long v0, v1, v7
 
     .line 19
     .line 20
-    iget-boolean v0, v11, LX/5wZ;->A07:Z
+    if-eqz v0, :cond_0
 
     .line 21
     .line 22
-    if-eqz v0, :cond_1
+    cmp-long v0, v1, v5
 
     .line 23
     .line 24
-    iget-object v0, v11, LX/5wZ;->A0E:[Z
+    if-nez v0, :cond_5
 
     .line 25
     .line 26
-    aget-boolean v0, v0, v2
+    :cond_0
+    cmp-long v0, v1, v5
 
     .line 27
     .line 28
-    const/4 v12, 0x1
+    if-eqz v0, :cond_1
 
     .line 29
-    if-nez v0, :cond_2
-
     .line 30
-    .line 31
-    :cond_1
-    const/4 v12, 0x0
+    iget-object v0, p0, LX/5Ww;->A03:LX/5Wo;
 
+    .line 31
     .line 32
-    :cond_2
-    const/4 v9, 0x1
+    iget-object v0, v0, LX/5Wo;->A06:LX/5WL;
 
     .line 33
-    if-nez v12, :cond_3
-
     .line 34
+    invoke-interface {v0}, LX/5WL;->AgC()Ljava/lang/String;
+
     .line 35
-    const/4 v4, 0x0
-
     .line 36
-    if-eqz p2, :cond_4
-
     .line 37
-    .line 38
-    :cond_3
-    const/4 v4, 0x1
+    :cond_1
+    :try_start_0
+    iget-object v3, p0, LX/5Ww;->A03:LX/5Wo;
 
+    .line 38
     .line 39
-    :cond_4
-    iget-object v3, p0, LX/5wW;->A0B:LX/6Gb;
+    iget-object v2, v3, LX/5Wo;->A06:LX/5WL;
 
     .line 40
     .line 41
-    iget-object v2, v3, LX/6Gb;->A02:[B
+    invoke-interface {v2}, LX/5WL;->Ag3()J
 
     .line 42
     .line 43
-    const/4 v0, 0x0
-
     .line 44
-    if-eqz v4, :cond_5
+    move-result-wide v0
 
     .line 45
+    iput-wide v0, p0, LX/5Ww;->A00:J
+
     .line 46
-    const/16 v0, 0x80
-
     .line 47
+    invoke-interface {v2}, LX/5WL;->AgC()Ljava/lang/String;
+
     .line 48
-    :cond_5
-    or-int/2addr v0, v8
-
     .line 49
-    int-to-byte v0, v0
-
     .line 50
-    aput-byte v0, v2, v1
+    move-result-object v0
 
     .line 51
-    .line 52
-    invoke-virtual {v3, v1}, LX/6Gb;->A0M(I)V
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
+    .line 52
     .line 53
     .line 54
+    move-result-object v4
+
     .line 55
-    iget-object v7, p0, LX/5wW;->A07:LX/5vy;
+    iget-wide v1, p0, LX/5Ww;->A00:J
 
     .line 56
     .line 57
-    invoke-interface {v7, v3, v9, v9}, LX/5vy;->AkM(LX/6Gb;II)V
+    cmp-long v0, v1, v7
 
     .line 58
     .line 59
-    .line 60
-    invoke-interface {v7, v5, v8, v9}, LX/5vy;->AkM(LX/6Gb;II)V
+    if-ltz v0, :cond_4
 
+    .line 60
     .line 61
+    invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
+
     .line 62
     .line 63
-    if-nez v4, :cond_7
-
     .line 64
+    move-result v0
+
     .line 65
-    add-int/lit8 v0, v8, 0x1
+    if-nez v0, :cond_2
 
     .line 66
     .line 67
-    return v0
+    const-string v0, ";"
 
     .line 68
-    :cond_6
-    iget-object v0, v0, LX/5wb;->A04:[B
-
     .line 69
-    .line 70
-    iget-object v5, p0, LX/5wW;->A0A:LX/6Gb;
+    invoke-virtual {v4, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
+    .line 70
     .line 71
     .line 72
-    array-length v8, v0
+    move-result v0
 
     .line 73
-    invoke-virtual {v5, v0, v8}, LX/6Gb;->A0O([BI)V
+    if-eqz v0, :cond_4
 
     .line 74
     .line 75
-    .line 76
-    goto :goto_0
+    :cond_2
+    cmp-long v0, v1, v7
 
+    .line 76
     .line 77
-    :cond_7
-    const/4 v4, 0x6
+    if-nez v0, :cond_3
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 78
-    const/4 v6, 0x3
-
     .line 79
-    const/4 v5, 0x2
+    const/4 v0, 0x0
 
     .line 80
-    const/16 v10, 0x8
+    iput-boolean v0, p0, LX/5Ww;->A01:Z
 
     .line 81
     .line 82
-    if-nez v12, :cond_8
+    invoke-static {v3}, LX/5Wo;->A00(LX/5Wo;)LX/6Zu;
 
     .line 83
     .line 84
-    iget-object v3, p0, LX/5wW;->A09:LX/6Gb;
-
     .line 85
+    move-result-object v2
+
     .line 86
-    invoke-virtual {v3, v10}, LX/6Gb;->A0K(I)V
+    iput-object v2, v3, LX/5Wo;->A02:LX/6Zu;
 
     .line 87
     .line 88
+    iget-object v0, v3, LX/5Wo;->A03:LX/3os;
+
     .line 89
-    iget-object v2, v3, LX/6Gb;->A02:[B
-
     .line 90
+    iget-object v1, v0, LX/3os;->A0F:LX/5VT;
+
     .line 91
-    aput-byte v1, v2, v1
-
     .line 92
+    iget-object v0, p0, LX/5Ww;->A02:LX/5W6;
+
     .line 93
-    aput-byte v9, v2, v9
-
     .line 94
-    .line 95
-    shr-int/lit8 v0, p2, 0x8
+    invoke-static {v1, v2, v0}, LX/5VS;->A01(LX/5VT;LX/6Zu;LX/5W6;)V
 
+    .line 95
     .line 96
     .line 97
-    invoke-static {v0, v2, v5}, LX/4BF;->A1C(I[BI)V
+    invoke-virtual {p0}, LX/5XJ;->A00()V
 
     .line 98
     .line 99
     .line 100
-    invoke-static {p2, v2, v6}, LX/4BF;->A1C(I[BI)V
+    :cond_3
+    iget-boolean v0, p0, LX/5Ww;->A01:Z
 
     .line 101
     .line 102
-    .line 103
-    const/4 v1, 0x4
+    if-nez v0, :cond_5
 
+    .line 103
     .line 104
-    shr-int/lit8 v0, p1, 0x18
+    return-wide v5
 
     .line 105
-    .line 106
-    invoke-static {v0, v2, v1}, LX/4BF;->A1C(I[BI)V
+    :cond_4
+    :try_start_1
+    const-string v0, "expected chunk size and optional extensions but was \""
 
+    .line 106
     .line 107
+    const-string v3, "\""
+
     .line 108
     .line 109
-    const/4 v1, 0x5
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 110
-    shr-int/lit8 v0, p1, 0x10
-
     .line 111
     .line 112
-    invoke-static {v0, v2, v1}, LX/4BF;->A1C(I[BI)V
+    move-result-object v0
 
     .line 113
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
     .line 114
     .line 115
-    shr-int/lit8 v0, p1, 0x8
-
     .line 116
-    .line 117
-    invoke-static {v0, v2, v4}, LX/4BF;->A1C(I[BI)V
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 117
     .line 118
     .line 119
+    invoke-static {v3, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 120
-    const/4 v0, 0x7
-
     .line 121
-    invoke-static {p1, v2, v0}, LX/4BF;->A1C(I[BI)V
-
     .line 122
-    .line 123
-    .line 124
-    invoke-interface {v7, v3, v10, v9}, LX/5vy;->AkM(LX/6Gb;II)V
+    move-result-object v1
 
+    .line 123
+    new-instance v0, Ljava/net/ProtocolException;
+
+    .line 124
     .line 125
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
     .line 126
     .line 127
-    add-int/lit8 v0, v8, 0x1
-
     .line 128
+    throw v0
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
+
     .line 129
-    add-int/lit8 v0, v0, 0x8
+    :catch_0
+    move-exception v0
 
     .line 130
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
     .line 131
-    return v0
-
     .line 132
-    :cond_8
-    iget-object v11, v11, LX/5wZ;->A0G:LX/6Gb;
-
     .line 133
+    move-result-object v1
+
     .line 134
-    invoke-virtual {v11}, LX/6Gb;->A0B()I
+    new-instance v0, Ljava/net/ProtocolException;
 
     .line 135
     .line 136
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
     .line 137
-    move-result v2
-
     .line 138
-    const/4 v0, -0x2
-
     .line 139
-    invoke-virtual {v11, v0}, LX/6Gb;->A0N(I)V
+    throw v0
 
     .line 140
+    :cond_5
+    iget-wide v0, p0, LX/5Ww;->A00:J
+
     .line 141
     .line 142
-    mul-int/lit8 v0, v2, 0x6
+    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     .line 143
     .line 144
-    add-int/lit8 v4, v0, 0x2
-
     .line 145
+    move-result-wide v0
+
     .line 146
-    if-eqz p2, :cond_9
+    invoke-super {p0, p1, v0, v1}, LX/5XJ;->Afv(LX/5WA;J)J
 
     .line 147
     .line 148
-    iget-object v3, p0, LX/5wW;->A09:LX/6Gb;
-
     .line 149
+    move-result-wide v2
+
     .line 150
-    invoke-virtual {v3, v4}, LX/6Gb;->A0K(I)V
+    cmp-long v0, v2, v5
 
     .line 151
     .line 152
+    if-eqz v0, :cond_6
+
     .line 153
-    iget-object v2, v3, LX/6Gb;->A02:[B
-
     .line 154
+    iget-wide v0, p0, LX/5Ww;->A00:J
+
     .line 155
-    invoke-virtual {v11, v2, v1, v4}, LX/6Gb;->A0P([BII)V
-
     .line 156
-    .line 157
-    .line 158
-    aget-byte v0, v2, v5
+    sub-long/2addr v0, v2
 
+    .line 157
+    iput-wide v0, p0, LX/5Ww;->A00:J
+
+    .line 158
     .line 159
+    return-wide v2
+
     .line 160
-    and-int/lit16 v1, v0, 0xff
+    :cond_6
+    iget-object v0, p0, LX/5Ww;->A03:LX/5Wo;
 
     .line 161
     .line 162
-    shl-int/2addr v1, v10
+    iget-object v0, v0, LX/5Wo;->A04:LX/5Wr;
 
     .line 163
-    aget-byte v0, v2, v6
-
     .line 164
-    .line 165
-    and-int/lit16 v0, v0, 0xff
+    invoke-virtual {v0}, LX/5Wr;->A01()V
 
+    .line 165
     .line 166
     .line 167
-    or-int/2addr v1, v0
+    const-string v0, "unexpected end of stream"
 
     .line 168
-    add-int/2addr v1, p2
-
     .line 169
-    shr-int/lit8 v0, v1, 0x8
+    new-instance v1, Ljava/net/ProtocolException;
 
     .line 170
     .line 171
-    invoke-static {v0, v2, v5}, LX/4BF;->A1C(I[BI)V
+    invoke-direct {v1, v0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
 
     .line 172
     .line 173
     .line 174
-    invoke-static {v1, v2, v6}, LX/4BF;->A1C(I[BI)V
+    invoke-virtual {p0}, LX/5XJ;->A00()V
 
     .line 175
     .line 176
     .line 177
-    move-object v11, v3
+    throw v1
 
     .line 178
-    :cond_9
-    invoke-interface {v7, v11, v4, v9}, LX/5vy;->AkM(LX/6Gb;II)V
+    :cond_7
+    return-wide v5
 
     .line 179
+    :cond_8
+    invoke-static {}, LX/432;->A0i()Ljava/lang/IllegalStateException;
+
     .line 180
     .line 181
-    add-int/lit8 v0, v8, 0x1
-
     .line 182
+    move-result-object v1
+
     .line 183
-    add-int/2addr v0, v4
+    throw v1
 
     .line 184
-    return v0
+    :cond_9
+    const-string v0, "byteCount < 0: "
+
+    .line 185
+    .line 186
+    invoke-static {v0, p2, p3}, LX/431;->A0T(Ljava/lang/String;J)Ljava/lang/IllegalArgumentException;
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-object v1
+
+    .line 190
+    throw v1
 .end method
 
-.method public final A01()LX/5wb;
-    .locals 4
+.method public final close()V
+    .locals 2
 
     .line 0
-    iget-boolean v0, p0, LX/5wW;->A06:Z
+    iget-boolean v0, p0, LX/5XJ;->A00:Z
 
     .line 1
     .line 2
-    const/4 v3, 0x0
+    if-nez v0, :cond_1
 
     .line 3
-    if-eqz v0, :cond_1
-
     .line 4
+    iget-boolean v0, p0, LX/5Ww;->A01:Z
+
     .line 5
-    iget-object v2, p0, LX/5wW;->A08:LX/5wZ;
-
     .line 6
-    .line 7
-    iget-object v0, v2, LX/5wZ;->A05:LX/5x0;
-
-    .line 8
-    .line 9
-    iget v1, v0, LX/5x0;->A02:I
-
-    .line 10
-    .line 11
-    iget-object v0, v2, LX/5wZ;->A06:LX/5wb;
-
-    .line 12
-    .line 13
-    if-nez v0, :cond_0
-
-    .line 14
-    .line 15
-    iget-object v0, p0, LX/5wW;->A05:LX/5we;
-
-    .line 16
-    .line 17
-    iget-object v0, v0, LX/5we;->A03:LX/5wl;
-
-    .line 18
-    .line 19
-    iget-object v0, v0, LX/5wl;->A0A:[LX/5wb;
-
-    .line 20
-    .line 21
-    aget-object v0, v0, v1
-
-    .line 22
-    .line 23
-    if-eqz v0, :cond_1
-
-    .line 24
-    .line 25
-    :cond_0
-    iget-boolean v1, v0, LX/5wb;->A03:Z
-
-    .line 26
-    .line 27
-    if-eqz v1, :cond_1
-
-    .line 28
-    .line 29
-    return-object v0
-
-    .line 30
-    :cond_1
-    return-object v3
-.end method
-
-.method public final A02()V
-    .locals 4
-
-    .line 0
-    iget-object v3, p0, LX/5wW;->A08:LX/5wZ;
-
-    .line 1
-    .line 2
-    const/4 v2, 0x0
-
-    .line 3
-    iput v2, v3, LX/5wZ;->A01:I
-
-    .line 4
-    .line 5
-    const-wide/16 v0, 0x0
-
-    .line 6
-    .line 7
-    iput-wide v0, v3, LX/5wZ;->A04:J
-
-    .line 8
-    .line 9
-    iput-boolean v2, v3, LX/5wZ;->A08:Z
-
-    .line 10
-    .line 11
-    iput-boolean v2, v3, LX/5wZ;->A07:Z
-
-    .line 12
-    .line 13
-    iput-boolean v2, v3, LX/5wZ;->A09:Z
-
-    .line 14
-    .line 15
-    const/4 v0, 0x0
-
-    .line 16
-    iput-object v0, v3, LX/5wZ;->A06:LX/5wb;
-
-    .line 17
-    .line 18
-    iput v2, p0, LX/5wW;->A01:I
-
-    .line 19
-    .line 20
-    iput v2, p0, LX/5wW;->A02:I
-
-    .line 21
-    .line 22
-    iput v2, p0, LX/5wW;->A00:I
-
-    .line 23
-    .line 24
-    iput v2, p0, LX/5wW;->A03:I
-
-    .line 25
-    .line 26
-    iput-boolean v2, p0, LX/5wW;->A06:Z
-
-    .line 27
-    .line 28
-    return-void
-.end method
-
-.method public final A03()Z
-    .locals 5
-
-    .line 0
-    iget v0, p0, LX/5wW;->A01:I
-
-    .line 1
-    .line 2
-    const/4 v4, 0x1
-
-    .line 3
-    add-int/lit8 v0, v0, 0x1
-
-    .line 4
-    .line 5
-    iput v0, p0, LX/5wW;->A01:I
-
-    .line 6
-    .line 7
-    iget-boolean v0, p0, LX/5wW;->A06:Z
-
-    .line 8
-    .line 9
-    const/4 v3, 0x0
-
-    .line 10
     if-eqz v0, :cond_0
 
+    .line 7
+    .line 8
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 9
+    .line 10
+    const/16 v0, 0x64
+
     .line 11
     .line 12
-    iget v0, p0, LX/5wW;->A00:I
+    :try_start_0
+    invoke-static {v1, p0, v0}, LX/5Vw;->A0B(Ljava/util/concurrent/TimeUnit;LX/5W4;I)Z
 
     .line 13
     .line 14
-    add-int/lit8 v2, v0, 0x1
-
     .line 15
+    move-result v0
+
     .line 16
-    iput v2, p0, LX/5wW;->A00:I
+    if-nez v0, :cond_0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 17
     .line 18
-    iget-object v0, p0, LX/5wW;->A08:LX/5wZ;
+    :catch_0
+    iget-object v0, p0, LX/5Ww;->A03:LX/5Wo;
 
     .line 19
     .line 20
-    iget-object v0, v0, LX/5wZ;->A0B:[I
+    iget-object v0, v0, LX/5Wo;->A04:LX/5Wr;
 
     .line 21
     .line 22
-    iget v1, p0, LX/5wW;->A02:I
+    invoke-virtual {v0}, LX/5Wr;->A01()V
 
     .line 23
     .line 24
-    aget v0, v0, v1
-
     .line 25
-    .line 26
-    if-ne v2, v0, :cond_1
+    invoke-virtual {p0}, LX/5XJ;->A00()V
 
+    .line 26
     .line 27
     .line 28
-    add-int/lit8 v0, v1, 0x1
+    :cond_0
+    const/4 v0, 0x1
 
     .line 29
+    iput-boolean v0, p0, LX/5XJ;->A00:Z
+
     .line 30
-    iput v0, p0, LX/5wW;->A02:I
-
     .line 31
-    .line 32
-    iput v3, p0, LX/5wW;->A00:I
-
-    .line 33
-    .line 34
-    :cond_0
-    return v3
-
-    .line 35
     :cond_1
-    return v4
+    return-void
 .end method

@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public deserialize(Ljava/lang/Object;LX/27m;LX/2DN;)V
+.method public deserialize(Ljava/lang/Object;LX/3oD;LX/6HS;)V
     .locals 5
 
     .line 0
@@ -47,7 +47,7 @@
     .line 10
     .line 11
     :goto_0
-    invoke-static {p2, p3, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-static {p2, p3, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 12
     .line 13
@@ -132,13 +132,18 @@
     move-exception v0
 
     .line 49
-    invoke-static {v0}, LX/0Yg;->A1F(Ljava/lang/Throwable;)V
+    invoke-static {v0}, LX/0X4;->A1E(Ljava/lang/Throwable;)V
 
     .line 50
     .line 51
     .line 52
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 53
+    .line 54
+    .line 55
+    move-result-object v0
+
+    .line 56
     throw v0
 .end method

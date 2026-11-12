@@ -4,86 +4,16 @@
 
 
 # instance fields
-.field public A00:Landroid/net/Uri;
+.field public final A00:LX/66k;
 
-.field public A01:Landroid/net/Uri;
+.field public final A01:LX/69Y;
 
-.field public A02:Landroid/os/Bundle;
-
-.field public A03:LX/61c;
-
-.field public A04:LX/61c;
-
-.field public A05:Ljava/lang/Boolean;
-
-.field public A06:Ljava/lang/CharSequence;
-
-.field public A07:Ljava/lang/CharSequence;
-
-.field public A08:Ljava/lang/CharSequence;
-
-.field public A09:Ljava/lang/CharSequence;
-
-.field public A0A:Ljava/lang/CharSequence;
-
-.field public A0B:Ljava/lang/CharSequence;
-
-.field public A0C:Ljava/lang/CharSequence;
-
-.field public A0D:Ljava/lang/CharSequence;
-
-.field public A0E:Ljava/lang/CharSequence;
-
-.field public A0F:Ljava/lang/CharSequence;
-
-.field public A0G:Ljava/lang/CharSequence;
-
-.field public A0H:Ljava/lang/CharSequence;
-
-.field public A0I:Ljava/lang/CharSequence;
-
-.field public A0J:Ljava/lang/Integer;
-
-.field public A0K:Ljava/lang/Integer;
-
-.field public A0L:Ljava/lang/Integer;
-
-.field public A0M:Ljava/lang/Integer;
-
-.field public A0N:Ljava/lang/Integer;
-
-.field public A0O:Ljava/lang/Integer;
-
-.field public A0P:Ljava/lang/Integer;
-
-.field public A0Q:Ljava/lang/Integer;
-
-.field public A0R:Ljava/lang/Integer;
-
-.field public A0S:Ljava/lang/Integer;
-
-.field public A0T:Ljava/lang/Integer;
-
-.field public A0U:Ljava/lang/Integer;
-
-.field public A0V:[B
+.field public final A02:LX/680;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
-
-.method public constructor <init>(LX/60q;)V
-    .locals 1
+.method public constructor <init>(LX/680;)V
+    .locals 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -91,326 +21,174 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p1, LX/60q;->A0H:Ljava/lang/CharSequence;
+    iput-object p1, p0, LX/60r;->A02:LX/680;
 
     .line 4
     .line 5
-    iput-object v0, p0, LX/60r;->A0H:Ljava/lang/CharSequence;
+    new-instance v2, LX/66k;
 
     .line 6
     .line 7
-    iget-object v0, p1, LX/60q;->A08:Ljava/lang/CharSequence;
+    invoke-direct {v2}, LX/66k;-><init>()V
 
     .line 8
     .line 9
-    iput-object v0, p0, LX/60r;->A08:Ljava/lang/CharSequence;
-
     .line 10
+    iput-object v2, p0, LX/60r;->A00:LX/66k;
+
     .line 11
-    iget-object v0, p1, LX/60q;->A07:Ljava/lang/CharSequence;
-
     .line 12
+    new-instance v1, LX/69Y;
+
     .line 13
-    iput-object v0, p0, LX/60r;->A07:Ljava/lang/CharSequence;
-
     .line 14
-    .line 15
-    iget-object v0, p1, LX/60q;->A06:Ljava/lang/CharSequence;
+    invoke-direct {v1}, LX/69Y;-><init>()V
 
+    .line 15
     .line 16
     .line 17
-    iput-object v0, p0, LX/60r;->A06:Ljava/lang/CharSequence;
+    iput-object v1, p0, LX/60r;->A01:LX/69Y;
 
     .line 18
     .line 19
-    iget-object v0, p1, LX/60q;->A0D:Ljava/lang/CharSequence;
+    const/4 v0, 0x0
 
     .line 20
+    iput-short v0, v2, LX/66k;->A04:S
+
     .line 21
-    iput-object v0, p0, LX/60r;->A0D:Ljava/lang/CharSequence;
-
     .line 22
+    iput-short v0, v2, LX/66k;->A03:S
+
     .line 23
-    iget-object v0, p1, LX/60q;->A0G:Ljava/lang/CharSequence;
-
     .line 24
+    iput v0, v2, LX/66k;->A00:I
+
     .line 25
-    iput-object v0, p0, LX/60r;->A0G:Ljava/lang/CharSequence;
-
     .line 26
+    iput v0, v2, LX/66k;->A02:I
+
     .line 27
-    iget-object v0, p1, LX/60q;->A0C:Ljava/lang/CharSequence;
-
     .line 28
+    iput v0, v2, LX/66k;->A01:I
+
     .line 29
-    iput-object v0, p0, LX/60r;->A0C:Ljava/lang/CharSequence;
-
     .line 30
+    iput-boolean v0, v1, LX/69Y;->A00:Z
+
     .line 31
-    iget-object v0, p1, LX/60q;->A01:Landroid/net/Uri;
-
     .line 32
+    iput-boolean v0, v1, LX/69Y;->A01:Z
+
     .line 33
-    iput-object v0, p0, LX/60r;->A01:Landroid/net/Uri;
-
     .line 34
-    .line 35
-    iget-object v0, p1, LX/60q;->A04:LX/61c;
-
-    .line 36
-    .line 37
-    iput-object v0, p0, LX/60r;->A04:LX/61c;
-
-    .line 38
-    .line 39
-    iget-object v0, p1, LX/60q;->A03:LX/61c;
-
-    .line 40
-    .line 41
-    iput-object v0, p0, LX/60r;->A03:LX/61c;
-
-    .line 42
-    .line 43
-    iget-object v0, p1, LX/60q;->A0W:[B
-
-    .line 44
-    .line 45
-    iput-object v0, p0, LX/60r;->A0V:[B
-
-    .line 46
-    .line 47
-    iget-object v0, p1, LX/60q;->A0J:Ljava/lang/Integer;
-
-    .line 48
-    .line 49
-    iput-object v0, p0, LX/60r;->A0J:Ljava/lang/Integer;
-
-    .line 50
-    .line 51
-    iget-object v0, p1, LX/60q;->A00:Landroid/net/Uri;
-
-    .line 52
-    .line 53
-    iput-object v0, p0, LX/60r;->A00:Landroid/net/Uri;
-
-    .line 54
-    .line 55
-    iget-object v0, p1, LX/60q;->A0U:Ljava/lang/Integer;
-
-    .line 56
-    .line 57
-    iput-object v0, p0, LX/60r;->A0U:Ljava/lang/Integer;
-
-    .line 58
-    .line 59
-    iget-object v0, p1, LX/60q;->A0T:Ljava/lang/Integer;
-
-    .line 60
-    .line 61
-    iput-object v0, p0, LX/60r;->A0T:Ljava/lang/Integer;
-
-    .line 62
-    .line 63
-    iget-object v0, p1, LX/60q;->A0L:Ljava/lang/Integer;
-
-    .line 64
-    .line 65
-    iput-object v0, p0, LX/60r;->A0L:Ljava/lang/Integer;
-
-    .line 66
-    .line 67
-    iget-object v0, p1, LX/60q;->A05:Ljava/lang/Boolean;
-
-    .line 68
-    .line 69
-    iput-object v0, p0, LX/60r;->A05:Ljava/lang/Boolean;
-
-    .line 70
-    .line 71
-    iget-object v0, p1, LX/60q;->A0O:Ljava/lang/Integer;
-
-    .line 72
-    .line 73
-    iput-object v0, p0, LX/60r;->A0O:Ljava/lang/Integer;
-
-    .line 74
-    .line 75
-    iget-object v0, p1, LX/60q;->A0N:Ljava/lang/Integer;
-
-    .line 76
-    .line 77
-    iput-object v0, p0, LX/60r;->A0N:Ljava/lang/Integer;
-
-    .line 78
-    .line 79
-    iget-object v0, p1, LX/60q;->A0M:Ljava/lang/Integer;
-
-    .line 80
-    .line 81
-    iput-object v0, p0, LX/60r;->A0M:Ljava/lang/Integer;
-
-    .line 82
-    .line 83
-    iget-object v0, p1, LX/60q;->A0R:Ljava/lang/Integer;
-
-    .line 84
-    .line 85
-    iput-object v0, p0, LX/60r;->A0R:Ljava/lang/Integer;
-
-    .line 86
-    .line 87
-    iget-object v0, p1, LX/60q;->A0Q:Ljava/lang/Integer;
-
-    .line 88
-    .line 89
-    iput-object v0, p0, LX/60r;->A0Q:Ljava/lang/Integer;
-
-    .line 90
-    .line 91
-    iget-object v0, p1, LX/60q;->A0P:Ljava/lang/Integer;
-
-    .line 92
-    .line 93
-    iput-object v0, p0, LX/60r;->A0P:Ljava/lang/Integer;
-
-    .line 94
-    .line 95
-    iget-object v0, p1, LX/60q;->A0I:Ljava/lang/CharSequence;
-
-    .line 96
-    .line 97
-    iput-object v0, p0, LX/60r;->A0I:Ljava/lang/CharSequence;
-
-    .line 98
-    .line 99
-    iget-object v0, p1, LX/60q;->A0A:Ljava/lang/CharSequence;
-
-    .line 100
-    .line 101
-    iput-object v0, p0, LX/60r;->A0A:Ljava/lang/CharSequence;
-
-    .line 102
-    .line 103
-    iget-object v0, p1, LX/60q;->A0B:Ljava/lang/CharSequence;
-
-    .line 104
-    .line 105
-    iput-object v0, p0, LX/60r;->A0B:Ljava/lang/CharSequence;
-
-    .line 106
-    .line 107
-    iget-object v0, p1, LX/60q;->A0K:Ljava/lang/Integer;
-
-    .line 108
-    .line 109
-    iput-object v0, p0, LX/60r;->A0K:Ljava/lang/Integer;
-
-    .line 110
-    .line 111
-    iget-object v0, p1, LX/60q;->A0S:Ljava/lang/Integer;
-
-    .line 112
-    .line 113
-    iput-object v0, p0, LX/60r;->A0S:Ljava/lang/Integer;
-
-    .line 114
-    .line 115
-    iget-object v0, p1, LX/60q;->A0E:Ljava/lang/CharSequence;
-
-    .line 116
-    .line 117
-    iput-object v0, p0, LX/60r;->A0E:Ljava/lang/CharSequence;
-
-    .line 118
-    .line 119
-    iget-object v0, p1, LX/60q;->A09:Ljava/lang/CharSequence;
-
-    .line 120
-    .line 121
-    iput-object v0, p0, LX/60r;->A09:Ljava/lang/CharSequence;
-
-    .line 122
-    .line 123
-    iget-object v0, p1, LX/60q;->A0F:Ljava/lang/CharSequence;
-
-    .line 124
-    .line 125
-    iput-object v0, p0, LX/60r;->A0F:Ljava/lang/CharSequence;
-
-    .line 126
-    .line 127
-    iget-object v0, p1, LX/60q;->A02:Landroid/os/Bundle;
-
-    .line 128
-    .line 129
-    iput-object v0, p0, LX/60r;->A02:Landroid/os/Bundle;
-
-    .line 130
-    .line 131
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Ljava/lang/Integer;[B)V
-    .locals 1
+.method public final A00()V
+    .locals 2
 
     .line 0
-    invoke-virtual {p2}, [B->clone()Ljava/lang/Object;
+    iget-object v0, p0, LX/60r;->A02:LX/680;
 
     .line 1
     .line 2
+    const/4 v1, 0x0
+
     .line 3
-    move-result-object v0
+    iput v1, v0, LX/680;->A01:I
 
     .line 4
-    check-cast v0, [B
-
     .line 5
+    iput v1, v0, LX/680;->A04:I
+
     .line 6
-    iput-object v0, p0, LX/60r;->A0V:[B
-
     .line 7
-    .line 8
-    iput-object p1, p0, LX/60r;->A0J:Ljava/lang/Integer;
+    iput v1, v0, LX/680;->A02:I
 
+    .line 8
     .line 9
+    iput v1, v0, LX/680;->A03:I
+
     .line 10
+    .line 11
+    iput v1, v0, LX/680;->A00:I
+
+    .line 12
+    .line 13
+    iget-object v0, p0, LX/60r;->A00:LX/66k;
+
+    .line 14
+    .line 15
+    iput-short v1, v0, LX/66k;->A04:S
+
+    .line 16
+    .line 17
+    iput-short v1, v0, LX/66k;->A03:S
+
+    .line 18
+    .line 19
+    iput v1, v0, LX/66k;->A00:I
+
+    .line 20
+    .line 21
+    iput v1, v0, LX/66k;->A02:I
+
+    .line 22
+    .line 23
+    iput v1, v0, LX/66k;->A01:I
+
+    .line 24
+    .line 25
+    iget-object v0, p0, LX/60r;->A01:LX/69Y;
+
+    .line 26
+    .line 27
+    iput-boolean v1, v0, LX/69Y;->A00:Z
+
+    .line 28
+    .line 29
+    iput-boolean v1, v0, LX/69Y;->A01:Z
+
+    .line 30
+    .line 31
     return-void
 .end method
 
 .method public final A01([BI)V
-    .locals 3
+    .locals 10
 
     .line 0
-    iget-object v0, p0, LX/60r;->A0V:[B
+    if-eqz p1, :cond_c
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    if-eqz p2, :cond_c
 
     .line 3
     .line 4
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v2
+    move-result-object v0
 
     .line 8
-    const/4 v0, 0x3
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asShortBuffer()Ljava/nio/ShortBuffer;
 
     .line 9
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     .line 10
     .line 11
+    move-result-object v6
+
     .line 12
-    move-result-object v1
+    array-length v0, p1
 
     .line 13
-    invoke-static {v2, v1}, Lcom/google/android/exoplayer2/util/Util;->A0Q(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Ljava/lang/Math;->min(II)I
 
     .line 14
     .line 15
@@ -418,55 +196,297 @@
     move-result v0
 
     .line 17
-    if-nez v0, :cond_0
+    div-int/lit8 v8, v0, 0x2
 
     .line 18
     .line 19
-    iget-object v0, p0, LX/60r;->A0J:Ljava/lang/Integer;
+    const/4 v3, 0x0
 
     .line 20
+    const/4 v7, 0x0
+
     .line 21
-    invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->A0Q(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :goto_0
+    if-ge v7, v8, :cond_9
 
     .line 22
     .line 23
+    invoke-virtual {v6, v7}, Ljava/nio/ShortBuffer;->get(I)S
+
     .line 24
-    move-result v0
-
     .line 25
-    if-nez v0, :cond_1
-
     .line 26
+    move-result v5
+
     .line 27
-    :cond_0
-    invoke-virtual {p1}, [B->clone()Ljava/lang/Object;
+    iget-object v9, p0, LX/60r;->A01:LX/69Y;
 
     .line 28
     .line 29
-    .line 30
-    move-result-object v0
+    iget-object v4, p0, LX/60r;->A00:LX/66k;
 
+    .line 30
     .line 31
-    check-cast v0, [B
+    invoke-static {v5}, Ljava/lang/Math;->abs(I)I
 
     .line 32
     .line 33
-    iput-object v0, p0, LX/60r;->A0V:[B
-
     .line 34
+    move-result v0
+
     .line 35
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    int-to-short v2, v0
 
     .line 36
+    iget-boolean v0, v9, LX/69Y;->A01:Z
+
     .line 37
     .line 38
-    move-result-object v0
+    const/4 v1, 0x1
 
     .line 39
-    iput-object v0, p0, LX/60r;->A0J:Ljava/lang/Integer;
+    if-nez v0, :cond_0
 
     .line 40
     .line 41
+    if-eqz v5, :cond_0
+
+    .line 42
+    .line 43
+    iput-boolean v1, v9, LX/69Y;->A01:Z
+
+    .line 44
+    .line 45
+    :cond_0
+    iget-boolean v0, v9, LX/69Y;->A00:Z
+
+    .line 46
+    .line 47
+    if-nez v0, :cond_1
+
+    .line 48
+    .line 49
+    const/16 v0, 0xb8
+
+    .line 50
+    .line 51
+    if-le v2, v0, :cond_1
+
+    .line 52
+    .line 53
+    iput-boolean v1, v9, LX/69Y;->A00:Z
+
+    .line 54
+    .line 55
     :cond_1
+    iget-short v9, v4, LX/66k;->A03:S
+
+    .line 56
+    .line 57
+    const/16 v0, 0x7eb8
+
+    .line 58
+    .line 59
+    if-le v9, v0, :cond_2
+
+    .line 60
+    .line 61
+    iget-short v1, v4, LX/66k;->A04:S
+
+    .line 62
+    .line 63
+    if-le v1, v0, :cond_7
+
+    .line 64
+    .line 65
+    if-gt v5, v0, :cond_8
+
+    .line 66
+    .line 67
+    :cond_2
+    iget v0, v4, LX/66k;->A00:I
+
+    .line 68
+    .line 69
+    if-lez v0, :cond_3
+
+    .line 70
+    .line 71
+    iget v1, v4, LX/66k;->A02:I
+
+    .line 72
+    .line 73
+    add-int/lit8 v0, v0, 0x1
+
+    .line 74
+    .line 75
+    add-int/2addr v1, v0
+
+    .line 76
+    iput v1, v4, LX/66k;->A02:I
+
+    .line 77
+    .line 78
+    iput v3, v4, LX/66k;->A00:I
+
+    .line 79
+    .line 80
+    :cond_3
+    :goto_1
+    iget-short v1, v4, LX/66k;->A04:S
+
+    .line 81
+    .line 82
+    const/16 v0, 0x800
+
+    .line 83
+    .line 84
+    if-nez v1, :cond_4
+
+    .line 85
+    .line 86
+    if-gt v2, v0, :cond_5
+
+    .line 87
+    .line 88
+    :cond_4
+    if-nez v5, :cond_6
+
+    .line 89
+    .line 90
+    if-le v9, v0, :cond_6
+
+    .line 91
+    .line 92
+    :cond_5
+    iget v0, v4, LX/66k;->A01:I
+
+    .line 93
+    .line 94
+    add-int/lit8 v0, v0, 0x1
+
+    .line 95
+    .line 96
+    iput v0, v4, LX/66k;->A01:I
+
+    .line 97
+    .line 98
+    :cond_6
+    iput-short v5, v4, LX/66k;->A04:S
+
+    .line 99
+    .line 100
+    iput-short v2, v4, LX/66k;->A03:S
+
+    .line 101
+    .line 102
+    add-int/lit8 v7, v7, 0x1
+
+    .line 103
+    .line 104
+    goto :goto_0
+
+    .line 105
+    :cond_7
+    const/16 v0, -0x7eb8
+
+    .line 106
+    .line 107
+    if-ge v1, v0, :cond_2
+
+    .line 108
+    .line 109
+    if-ge v5, v0, :cond_2
+
+    .line 110
+    .line 111
+    :cond_8
+    iget v0, v4, LX/66k;->A00:I
+
+    .line 112
+    .line 113
+    add-int/lit8 v0, v0, 0x1
+
+    .line 114
+    .line 115
+    iput v0, v4, LX/66k;->A00:I
+
+    .line 116
+    .line 117
+    goto :goto_1
+
+    .line 118
+    :cond_9
+    iget-object v2, p0, LX/60r;->A02:LX/680;
+
+    .line 119
+    .line 120
+    iget v0, v2, LX/680;->A01:I
+
+    .line 121
+    .line 122
+    add-int/lit8 v0, v0, 0x1
+
+    .line 123
+    .line 124
+    iput v0, v2, LX/680;->A01:I
+
+    .line 125
+    .line 126
+    iget-object v1, p0, LX/60r;->A01:LX/69Y;
+
+    .line 127
+    .line 128
+    iget-boolean v0, v1, LX/69Y;->A01:Z
+
+    .line 129
+    .line 130
+    if-nez v0, :cond_a
+
+    .line 131
+    .line 132
+    iget v0, v2, LX/680;->A04:I
+
+    .line 133
+    .line 134
+    add-int/lit8 v0, v0, 0x1
+
+    .line 135
+    .line 136
+    iput v0, v2, LX/680;->A04:I
+
+    .line 137
+    .line 138
+    :cond_a
+    iget-boolean v0, v1, LX/69Y;->A00:Z
+
+    .line 139
+    .line 140
+    if-nez v0, :cond_b
+
+    .line 141
+    .line 142
+    iget v0, v2, LX/680;->A02:I
+
+    .line 143
+    .line 144
+    add-int/lit8 v0, v0, 0x1
+
+    .line 145
+    .line 146
+    iput v0, v2, LX/680;->A02:I
+
+    .line 147
+    .line 148
+    :cond_b
+    iput-boolean v3, v1, LX/69Y;->A00:Z
+
+    .line 149
+    .line 150
+    iput-boolean v3, v1, LX/69Y;->A01:Z
+
+    .line 151
+    .line 152
+    :cond_c
     return-void
 .end method

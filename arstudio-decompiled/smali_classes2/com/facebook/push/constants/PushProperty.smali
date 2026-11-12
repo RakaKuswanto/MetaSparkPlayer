@@ -19,7 +19,7 @@
 
 .field public final A03:J
 
-.field public final A04:LX/2en;
+.field public final A04:LX/27n;
 
 .field public final A05:Ljava/lang/Integer;
 
@@ -37,7 +37,13 @@
 
 .field public final A0C:Ljava/lang/String;
 
-.field public final A0D:Z
+.field public final A0D:Ljava/lang/String;
+
+.field public final A0E:Ljava/lang/String;
+
+.field public final A0F:Ljava/lang/String;
+
+.field public final A0G:Z
 
 
 # direct methods
@@ -45,11 +51,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0xc
+    const/16 v0, 0x5d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -64,7 +70,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/2en;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJJZ)V
+.method public constructor <init>(LX/27n;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJJZ)V
     .locals 2
 
     .line 268435456
@@ -73,70 +79,90 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    iput-object p1, p0, Lcom/facebook/push/constants/PushProperty;->A04:LX/2en;
+    iput-object p1, p0, Lcom/facebook/push/constants/PushProperty;->A04:LX/27n;
 
     .line 268435460
     .line 268435461
-    iput-object p3, p0, Lcom/facebook/push/constants/PushProperty;->A09:Ljava/lang/String;
+    iput-object p3, p0, Lcom/facebook/push/constants/PushProperty;->A0A:Ljava/lang/String;
 
     .line 268435462
     .line 268435463
-    iput-wide p11, p0, Lcom/facebook/push/constants/PushProperty;->A02:J
+    move-wide/from16 v0, p14
 
     .line 268435464
     .line 268435465
-    iput-object p4, p0, Lcom/facebook/push/constants/PushProperty;->A07:Ljava/lang/String;
+    iput-wide v0, p0, Lcom/facebook/push/constants/PushProperty;->A02:J
 
     .line 268435466
     .line 268435467
-    iput-object p5, p0, Lcom/facebook/push/constants/PushProperty;->A0A:Ljava/lang/String;
+    iput-object p4, p0, Lcom/facebook/push/constants/PushProperty;->A08:Ljava/lang/String;
 
     .line 268435468
     .line 268435469
-    iput-object p6, p0, Lcom/facebook/push/constants/PushProperty;->A0C:Ljava/lang/String;
+    iput-object p5, p0, Lcom/facebook/push/constants/PushProperty;->A0B:Ljava/lang/String;
 
     .line 268435470
     .line 268435471
-    iput-wide p13, p0, Lcom/facebook/push/constants/PushProperty;->A03:J
+    iput-object p6, p0, Lcom/facebook/push/constants/PushProperty;->A0E:Ljava/lang/String;
 
     .line 268435472
     .line 268435473
-    move/from16 v0, p17
+    move-wide/from16 v0, p16
 
     .line 268435474
     .line 268435475
-    iput-boolean v0, p0, Lcom/facebook/push/constants/PushProperty;->A0D:Z
+    iput-wide v0, p0, Lcom/facebook/push/constants/PushProperty;->A03:J
 
     .line 268435476
     .line 268435477
-    iput-object p7, p0, Lcom/facebook/push/constants/PushProperty;->A06:Ljava/lang/String;
+    move/from16 v0, p20
 
     .line 268435478
     .line 268435479
-    iput-object p8, p0, Lcom/facebook/push/constants/PushProperty;->A0B:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/facebook/push/constants/PushProperty;->A0G:Z
 
     .line 268435480
     .line 268435481
-    iput-object p9, p0, Lcom/facebook/push/constants/PushProperty;->A08:Ljava/lang/String;
+    iput-object p7, p0, Lcom/facebook/push/constants/PushProperty;->A06:Ljava/lang/String;
 
     .line 268435482
     .line 268435483
-    iput p10, p0, Lcom/facebook/push/constants/PushProperty;->A00:I
+    iput-object p8, p0, Lcom/facebook/push/constants/PushProperty;->A0C:Ljava/lang/String;
 
     .line 268435484
     .line 268435485
-    iput-object p2, p0, Lcom/facebook/push/constants/PushProperty;->A05:Ljava/lang/Integer;
+    iput-object p9, p0, Lcom/facebook/push/constants/PushProperty;->A09:Ljava/lang/String;
 
     .line 268435486
     .line 268435487
-    move-wide/from16 v0, p15
+    iput-object p10, p0, Lcom/facebook/push/constants/PushProperty;->A07:Ljava/lang/String;
 
     .line 268435488
     .line 268435489
-    iput-wide v0, p0, Lcom/facebook/push/constants/PushProperty;->A01:J
+    iput-object p11, p0, Lcom/facebook/push/constants/PushProperty;->A0F:Ljava/lang/String;
 
     .line 268435490
     .line 268435491
+    iput-object p12, p0, Lcom/facebook/push/constants/PushProperty;->A0D:Ljava/lang/String;
+
+    .line 268435492
+    .line 268435493
+    iput p13, p0, Lcom/facebook/push/constants/PushProperty;->A00:I
+
+    .line 268435494
+    .line 268435495
+    iput-object p2, p0, Lcom/facebook/push/constants/PushProperty;->A05:Ljava/lang/Integer;
+
+    .line 268435496
+    .line 268435497
+    move-wide/from16 v0, p18
+
+    .line 268435498
+    .line 268435499
+    iput-wide v0, p0, Lcom/facebook/push/constants/PushProperty;->A01:J
+
+    .line 268435500
+    .line 268435501
     return-void
 .end method
 
@@ -162,16 +188,16 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v1, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     .line 12
     .line 13
-    check-cast v1, LX/2en;
+    check-cast v1, LX/27n;
 
     .line 14
     .line 15
-    iput-object v1, p0, Lcom/facebook/push/constants/PushProperty;->A04:LX/2en;
+    iput-object v1, p0, Lcom/facebook/push/constants/PushProperty;->A04:LX/27n;
 
     .line 16
     .line 17
@@ -183,7 +209,7 @@
     move-result-object v0
 
     .line 21
-    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A09:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0A:Ljava/lang/String;
 
     .line 22
     .line 23
@@ -207,7 +233,7 @@
     move-result-object v0
 
     .line 33
-    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A07:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A08:Ljava/lang/String;
 
     .line 34
     .line 35
@@ -219,7 +245,7 @@
     move-result-object v0
 
     .line 39
-    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0A:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0B:Ljava/lang/String;
 
     .line 40
     .line 41
@@ -231,7 +257,7 @@
     move-result-object v0
 
     .line 45
-    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0C:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0E:Ljava/lang/String;
 
     .line 46
     .line 47
@@ -247,7 +273,7 @@
 
     .line 52
     .line 53
-    invoke-static {p1}, LX/0Yc;->A1a(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1Y(Landroid/os/Parcel;)Z
 
     .line 54
     .line 55
@@ -255,7 +281,7 @@
     move-result v0
 
     .line 57
-    iput-boolean v0, p0, Lcom/facebook/push/constants/PushProperty;->A0D:Z
+    iput-boolean v0, p0, Lcom/facebook/push/constants/PushProperty;->A0G:Z
 
     .line 58
     .line 59
@@ -279,7 +305,7 @@
     move-result-object v0
 
     .line 69
-    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0B:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0C:Ljava/lang/String;
 
     .line 70
     .line 71
@@ -291,35 +317,35 @@
     move-result-object v0
 
     .line 75
-    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A08:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A09:Ljava/lang/String;
 
     .line 76
     .line 77
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 78
     .line 79
     .line 80
-    move-result v0
+    move-result-object v0
 
     .line 81
-    iput v0, p0, Lcom/facebook/push/constants/PushProperty;->A00:I
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A07:Ljava/lang/String;
 
     .line 82
     .line 83
-    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 84
     .line 85
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
     .line 86
-    .line 87
-    .line 88
     move-result-object v0
 
+    .line 87
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0F:Ljava/lang/String;
+
+    .line 88
     .line 89
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 90
     .line 91
@@ -327,26 +353,54 @@
     move-result-object v0
 
     .line 93
-    check-cast v0, Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0D:Ljava/lang/String;
 
     .line 94
     .line 95
-    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A05:Ljava/lang/Integer;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 96
     .line 97
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
     .line 98
-    .line 99
-    .line 100
-    move-result-wide v0
+    move-result v0
 
+    .line 99
+    iput v0, p0, Lcom/facebook/push/constants/PushProperty;->A00:I
+
+    .line 100
     .line 101
-    iput-wide v0, p0, Lcom/facebook/push/constants/PushProperty;->A01:J
+    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     .line 102
     .line 103
+    invoke-static {p1, v0}, LX/0X4;->A0e(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/lang/Object;
+
+    .line 104
+    .line 105
+    .line 106
+    move-result-object v0
+
+    .line 107
+    check-cast v0, Ljava/lang/Integer;
+
+    .line 108
+    .line 109
+    iput-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A05:Ljava/lang/Integer;
+
+    .line 110
+    .line 111
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-wide v0
+
+    .line 115
+    iput-wide v0, p0, Lcom/facebook/push/constants/PushProperty;->A01:J
+
+    .line 116
+    .line 117
     return-void
 .end method
 
@@ -364,7 +418,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -381,7 +435,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A04:LX/2en;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A04:LX/27n;
 
     .line 10
     .line 11
@@ -399,7 +453,7 @@
     .line 17
     .line 18
     .line 19
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A09:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0A:Ljava/lang/String;
 
     .line 20
     .line 21
@@ -453,7 +507,7 @@
     .line 47
     .line 48
     .line 49
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A07:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A08:Ljava/lang/String;
 
     .line 50
     .line 51
@@ -471,7 +525,7 @@
     .line 57
     .line 58
     .line 59
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0A:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0B:Ljava/lang/String;
 
     .line 60
     .line 61
@@ -489,7 +543,7 @@
     .line 67
     .line 68
     .line 69
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0C:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0E:Ljava/lang/String;
 
     .line 70
     .line 71
@@ -525,7 +579,7 @@
     .line 87
     .line 88
     .line 89
-    iget-boolean v0, p0, Lcom/facebook/push/constants/PushProperty;->A0D:Z
+    iget-boolean v0, p0, Lcom/facebook/push/constants/PushProperty;->A0G:Z
 
     .line 90
     .line 91
@@ -543,7 +597,7 @@
     .line 97
     .line 98
     .line 99
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0B:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0C:Ljava/lang/String;
 
     .line 100
     .line 101
@@ -574,7 +628,7 @@
 
     .line 115
     .line 116
-    invoke-static {v0, v2}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 117
     .line 118
@@ -592,12 +646,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A04:LX/2en;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A04:LX/27n;
 
     .line 5
     .line 6
@@ -606,7 +660,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A09:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0A:Ljava/lang/String;
 
     .line 10
     .line 11
@@ -624,7 +678,7 @@
     .line 17
     .line 18
     .line 19
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A07:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A08:Ljava/lang/String;
 
     .line 20
     .line 21
@@ -633,7 +687,7 @@
     .line 22
     .line 23
     .line 24
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0A:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0B:Ljava/lang/String;
 
     .line 25
     .line 26
@@ -642,7 +696,7 @@
     .line 27
     .line 28
     .line 29
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0C:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0E:Ljava/lang/String;
 
     .line 30
     .line 31
@@ -660,7 +714,7 @@
     .line 37
     .line 38
     .line 39
-    iget-boolean v0, p0, Lcom/facebook/push/constants/PushProperty;->A0D:Z
+    iget-boolean v0, p0, Lcom/facebook/push/constants/PushProperty;->A0G:Z
 
     .line 40
     .line 41
@@ -681,7 +735,7 @@
     .line 48
     .line 49
     .line 50
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0B:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0C:Ljava/lang/String;
 
     .line 51
     .line 52
@@ -690,7 +744,7 @@
     .line 53
     .line 54
     .line 55
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A08:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A09:Ljava/lang/String;
 
     .line 56
     .line 57
@@ -699,32 +753,59 @@
     .line 58
     .line 59
     .line 60
-    iget v0, p0, Lcom/facebook/push/constants/PushProperty;->A00:I
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A07:Ljava/lang/String;
 
     .line 61
     .line 62
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 63
     .line 64
     .line 65
-    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A05:Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0F:Ljava/lang/String;
 
     .line 66
     .line 67
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 68
     .line 69
     .line 70
-    iget-wide v0, p0, Lcom/facebook/push/constants/PushProperty;->A01:J
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A0D:Ljava/lang/String;
 
     .line 71
     .line 72
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 73
     .line 74
     .line 75
+    iget v0, p0, Lcom/facebook/push/constants/PushProperty;->A00:I
+
+    .line 76
+    .line 77
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 78
+    .line 79
+    .line 80
+    iget-object v0, p0, Lcom/facebook/push/constants/PushProperty;->A05:Ljava/lang/Integer;
+
+    .line 81
+    .line 82
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
+
+    .line 83
+    .line 84
+    .line 85
+    iget-wide v0, p0, Lcom/facebook/push/constants/PushProperty;->A01:J
+
+    .line 86
+    .line 87
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 88
+    .line 89
+    .line 90
     return-void
 .end method

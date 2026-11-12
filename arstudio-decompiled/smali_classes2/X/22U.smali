@@ -1,89 +1,87 @@
 .class public final LX/22U;
-.super LX/238;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/nio/charset/Charset;
-
-.field public final A01:[B
+.field public final A00:Ljava/lang/reflect/Field;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/nio/charset/Charset;)V
+.method public constructor <init>(Ljava/lang/reflect/Field;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "field"
+        }
+    .end annotation
 
     .line 0
-    const-string/jumbo v0, "text/plain"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-direct {p0, v0}, LX/238;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, LX/22U;->A00:Ljava/lang/reflect/Field;
 
     .line 4
     .line 5
+    const/4 v0, 0x1
+
     .line 6
-    if-eqz p1, :cond_1
+    invoke-virtual {p1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 7
     .line 8
-    if-nez p2, :cond_0
+    .line 9
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "instance",
+            "value"
+        }
+    .end annotation
+
+    .line 0
+    :try_start_0
+    iget-object v0, p0, LX/22U;->A00:Ljava/lang/reflect/Field;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 6
+    :catch_0
+    move-exception v0
+
+    .line 7
+    invoke-static {v0}, LX/0X7;->A0R(Ljava/lang/Object;)Ljava/lang/AssertionError;
+
+    .line 8
     .line 9
     .line 10
-    const-string v0, "US-ASCII"
+    move-result-object v0
 
     .line 11
-    .line 12
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object p2
-
-    .line 16
-    :cond_0
-    invoke-virtual {p2}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    iput-object v0, p0, LX/22U;->A01:[B
-
-    .line 25
-    .line 26
-    iput-object p2, p0, LX/22U;->A00:Ljava/nio/charset/Charset;
-
-    .line 27
-    .line 28
-    return-void
-
-    .line 29
-    :cond_1
-    const-string v0, "Text may not be null"
-
-    .line 30
-    .line 31
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v0
-
-    .line 35
     throw v0
 .end method

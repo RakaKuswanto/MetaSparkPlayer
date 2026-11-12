@@ -1,63 +1,11 @@
-.class public abstract Lcom/google/ar/core/dependencies/h;
-.super Lcom/google/ar/core/dependencies/e;
+.class public interface abstract Lcom/google/ar/core/dependencies/h;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Lcom/google/ar/core/dependencies/i;
+.implements Landroid/os/IInterface;
 
 
-# direct methods
-.method public static b(Landroid/os/IBinder;)Lcom/google/ar/core/dependencies/i;
-    .locals 2
-
-    .line 0
-    if-nez p0, :cond_0
-
-    .line 1
-    .line 2
-    const/4 v1, 0x0
-
-    .line 3
-    return-object v1
-
-    .line 4
-    :cond_0
-    const-string v0, "com.google.android.play.core.install.protocol.IInstallService"
-
-    .line 5
-    .line 6
-    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
-    .line 10
-    instance-of v0, v1, Lcom/google/ar/core/dependencies/i;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    check-cast v1, Lcom/google/ar/core/dependencies/i;
-
-    .line 15
-    .line 16
-    return-object v1
-
-    .line 17
-    :cond_1
-    new-instance v1, Lcom/google/ar/core/dependencies/g;
-
-    .line 18
-    .line 19
-    invoke-direct {v1, p0}, Lcom/google/ar/core/dependencies/g;-><init>(Landroid/os/IBinder;)V
-
-    .line 20
-    .line 21
-    .line 22
-    return-object v1
+# virtual methods
+.method public abstract d(Ljava/lang/String;Landroid/os/Bundle;Lcom/google/ar/core/dependencies/j;)V
 .end method

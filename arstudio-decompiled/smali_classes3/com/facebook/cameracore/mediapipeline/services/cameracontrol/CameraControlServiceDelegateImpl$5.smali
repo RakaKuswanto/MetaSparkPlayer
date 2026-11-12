@@ -1,4 +1,4 @@
-.class public synthetic Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl$5;
+.class public abstract synthetic Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl$5;
 .super Ljava/lang/Object;
 .source ""
 
@@ -41,7 +41,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0, v1, v3}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v1, v3}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -57,7 +57,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, v1, v2}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v1, v2}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -89,7 +89,7 @@
 
     .line 31
     .line 32
-    invoke-static {v0, v1, v3}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v1, v3}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -102,7 +102,7 @@
 
     .line 36
     .line 37
-    invoke-static {v0, v1, v2}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v1, v2}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
@@ -115,7 +115,7 @@
 
     .line 41
     .line 42
-    invoke-static {v0, v1}, LX/4BD;->A1F(Ljava/lang/Enum;[I)V
+    invoke-static {v0, v1}, LX/431;->A1C(Ljava/lang/Enum;[I)V
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 

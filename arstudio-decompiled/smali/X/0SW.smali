@@ -1,59 +1,86 @@
-.class public final LX/0SW;
-.super LX/06a;
+.class public abstract LX/0SW;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final isVisibleToUser:Z
-
-
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/Fragment;Z)V
-    .locals 2
+.method public static final A00(Ljava/lang/Object;Ljava/lang/Object;LX/5bD;LX/3Tc;LX/0GL;)Ljava/lang/Object;
+    .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {p1, p3}, LX/5fD;->A00(Ljava/lang/Object;LX/3Tc;)Ljava/lang/Object;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v1
+    move-result-object v2
 
     .line 4
-    const-string v0, "Attempting to set user visible hint to "
+    :try_start_0
+    new-instance v1, LX/0RQ;
 
     .line 5
     .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p2, p3}, LX/0RQ;-><init>(LX/5bD;LX/3Tc;)V
 
     .line 7
     .line 8
     .line 9
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    instance-of v0, p4, LX/5b1;
 
     .line 10
     .line 11
+    if-nez v0, :cond_0
+
     .line 12
-    const-string v0, " for fragment "
-
     .line 13
-    .line 14
-    invoke-static {p1, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v1, p4}, LX/5bn;->A01(Ljava/lang/Object;LX/5bD;LX/0GL;)Ljava/lang/Object;
 
+    .line 14
     .line 15
     .line 16
-    .line 17
     move-result-object v0
 
+    .line 17
+    goto :goto_0
+
     .line 18
-    invoke-direct {p0, p1, v0}, LX/06a;-><init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    :cond_0
+    const/4 v0, 0x2
 
     .line 19
+    invoke-static {p4, v0}, LX/6do;->A02(Ljava/lang/Object;I)V
+
     .line 20
     .line 21
-    iput-boolean p2, p0, LX/0SW;->isVisibleToUser:Z
-
     .line 22
+    invoke-interface {p4, p0, v1}, LX/0GL;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 23
-    return-void
+    .line 24
+    .line 25
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 26
+    :goto_0
+    invoke-static {v2, p3}, LX/5fD;->A02(Ljava/lang/Object;LX/3Tc;)V
+
+    .line 27
+    .line 28
+    .line 29
+    return-object v0
+
+    .line 30
+    :catchall_0
+    move-exception v0
+
+    .line 31
+    invoke-static {v2, p3}, LX/5fD;->A02(Ljava/lang/Object;LX/3Tc;)V
+
+    .line 32
+    .line 33
+    .line 34
+    throw v0
 .end method

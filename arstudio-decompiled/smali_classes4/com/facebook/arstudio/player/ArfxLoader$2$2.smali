@@ -40,30 +40,30 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 3
 
     .line 144
     iget-object v0, p0, Lcom/facebook/arstudio/player/ArfxLoader$2$2;->this$0:Lcom/facebook/arstudio/player/ArfxLoader$2;
 
     iget-object v0, v0, Lcom/facebook/arstudio/player/ArfxLoader$2;->val$activity:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/facebook/arstudio/player/ArfxLoader$2$2;->val$e:Ljava/lang/Throwable;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Gagal: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lcom/facebook/arstudio/player/ArfxLoader$2$2;->val$e:Ljava/lang/Throwable;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Gagal: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 

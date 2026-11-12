@@ -1,291 +1,158 @@
-.class public final enum LX/17J;
-.super Ljava/lang/Enum;
+.class public final LX/17J;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/17J;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "VideoPerformanceTracking$logAbrDecisionEvent$1"
 
-.field public static final enum ADDRESS_BOOK:LX/17J;
 
-.field public static final enum EMAIL:LX/17J;
+# instance fields
+.field public final synthetic A00:LX/3k8;
 
-.field public static final enum FACEBOOK:LX/17J;
-
-.field public static final enum FACEBOOK_CONTACT:LX/17J;
-
-.field public static final enum FACEBOOK_OBJECT:LX/17J;
-
-.field public static final enum MSYS_CARRIER_MESSAGING_CONTACT:LX/17J;
-
-.field public static final enum PHONE_NUMBER:LX/17J;
-
-.field public static final enum WHATSAPP:LX/17J;
+.field public final synthetic A01:LX/3kA;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 15
+.method public constructor <init>(LX/3k8;LX/3kA;)V
+    .locals 0
+
+    iput-object p1, p0, LX/17J;->A00:LX/3k8;
+
+    iput-object p2, p0, LX/17J;->A01:LX/3kA;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
 
     .line 0
-    const-string v0, "FACEBOOK"
+    iget-object v1, p0, LX/17J;->A00:LX/3k8;
 
     .line 1
     .line 2
-    const/4 v14, 0x0
+    iget-object v0, v1, LX/3k8;->A09:Ljava/util/Map;
 
     .line 3
-    new-instance v13, LX/17J;
-
     .line 4
-    .line 5
-    invoke-direct {v13, v0, v14}, LX/17J;-><init>(Ljava/lang/String;I)V
+    if-eqz v0, :cond_1
 
+    .line 5
     .line 6
+    invoke-interface {v0}, Ljava/util/Map;->size()I
+
     .line 7
     .line 8
-    sput-object v13, LX/17J;->FACEBOOK:LX/17J;
-
     .line 9
+    move-result v0
+
     .line 10
-    const-string v0, "ADDRESS_BOOK"
+    if-lez v0, :cond_1
 
     .line 11
     .line 12
-    const/4 v12, 0x1
+    iget-object v2, p0, LX/17J;->A01:LX/3kA;
 
     .line 13
-    new-instance v11, LX/17J;
-
     .line 14
-    .line 15
-    invoke-direct {v11, v0, v12}, LX/17J;-><init>(Ljava/lang/String;I)V
+    iget-object v0, v2, LX/3kA;->videoId:Ljava/lang/String;
 
+    .line 15
     .line 16
+    if-eqz v0, :cond_1
+
     .line 17
     .line 18
-    sput-object v11, LX/17J;->ADDRESS_BOOK:LX/17J;
+    iget-object v1, v1, LX/3k8;->A09:Ljava/util/Map;
 
     .line 19
     .line 20
-    const-string v0, "PHONE_NUMBER"
+    if-eqz v1, :cond_1
 
     .line 21
     .line 22
-    const/4 v10, 0x2
+    invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     .line 23
-    new-instance v9, LX/17J;
-
     .line 24
     .line 25
-    invoke-direct {v9, v0, v10}, LX/17J;-><init>(Ljava/lang/String;I)V
+    move-result v0
 
     .line 26
+    if-eqz v0, :cond_1
+
     .line 27
     .line 28
-    sput-object v9, LX/17J;->PHONE_NUMBER:LX/17J;
+    iget-object v0, v2, LX/3kA;->videoId:Ljava/lang/String;
 
     .line 29
     .line 30
-    const-string v0, "FACEBOOK_OBJECT"
+    invoke-static {v0, v1}, LX/0X6;->A14(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
 
     .line 31
     .line 32
-    const/4 v8, 0x3
-
     .line 33
-    new-instance v7, LX/17J;
+    move-result-object v0
 
     .line 34
-    .line 35
-    invoke-direct {v7, v0, v8}, LX/17J;-><init>(Ljava/lang/String;I)V
+    if-eqz v0, :cond_1
 
+    .line 35
     .line 36
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
     .line 37
     .line 38
-    sput-object v7, LX/17J;->FACEBOOK_OBJECT:LX/17J;
-
     .line 39
+    move-result-object v1
+
     .line 40
-    const-string v0, "EMAIL"
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 41
     .line 42
-    const/4 v6, 0x4
-
     .line 43
-    new-instance v5, LX/17J;
+    move-result v0
 
     .line 44
-    .line 45
-    invoke-direct {v5, v0, v6}, LX/17J;-><init>(Ljava/lang/String;I)V
+    if-eqz v0, :cond_1
 
+    .line 45
     .line 46
+    invoke-static {v1}, LX/0X2;->A0b(Ljava/util/Iterator;)Ljava/lang/Object;
+
     .line 47
     .line 48
-    sput-object v5, LX/17J;->EMAIL:LX/17J;
-
     .line 49
+    move-result-object v0
+
     .line 50
-    const-string v1, "FACEBOOK_CONTACT"
+    check-cast v0, LX/17K;
 
     .line 51
     .line 52
-    const/4 v0, 0x5
+    if-eqz v0, :cond_0
 
     .line 53
-    new-instance v4, LX/17J;
-
     .line 54
-    .line 55
-    invoke-direct {v4, v1, v0}, LX/17J;-><init>(Ljava/lang/String;I)V
+    invoke-interface {v0, v2}, LX/17K;->Af2(LX/3kA;)V
 
+    .line 55
     .line 56
     .line 57
+    goto :goto_0
+
     .line 58
-    sput-object v4, LX/17J;->FACEBOOK_CONTACT:LX/17J;
-
-    .line 59
-    .line 60
-    const-string v1, "MSYS_CARRIER_MESSAGING_CONTACT"
-
-    .line 61
-    .line 62
-    const/4 v0, 0x6
-
-    .line 63
-    new-instance v3, LX/17J;
-
-    .line 64
-    .line 65
-    invoke-direct {v3, v1, v0}, LX/17J;-><init>(Ljava/lang/String;I)V
-
-    .line 66
-    .line 67
-    .line 68
-    sput-object v3, LX/17J;->MSYS_CARRIER_MESSAGING_CONTACT:LX/17J;
-
-    .line 69
-    .line 70
-    const-string v0, "WHATSAPP"
-
-    .line 71
-    .line 72
-    const/4 v2, 0x7
-
-    .line 73
-    new-instance v1, LX/17J;
-
-    .line 74
-    .line 75
-    invoke-direct {v1, v0, v2}, LX/17J;-><init>(Ljava/lang/String;I)V
-
-    .line 76
-    .line 77
-    .line 78
-    sput-object v1, LX/17J;->WHATSAPP:LX/17J;
-
-    .line 79
-    .line 80
-    const/16 v0, 0x8
-
-    .line 81
-    .line 82
-    new-array v0, v0, [LX/17J;
-
-    .line 83
-    .line 84
-    aput-object v13, v0, v14
-
-    .line 85
-    .line 86
-    aput-object v11, v0, v12
-
-    .line 87
-    .line 88
-    aput-object v9, v0, v10
-
-    .line 89
-    .line 90
-    aput-object v7, v0, v8
-
-    .line 91
-    .line 92
-    aput-object v5, v0, v6
-
-    .line 93
-    .line 94
-    invoke-static {v0, v4, v3}, LX/0Ye;->A1U([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 95
-    .line 96
-    .line 97
-    aput-object v1, v0, v2
-
-    .line 98
-    .line 99
-    sput-object v0, LX/17J;->$VALUES:[LX/17J;
-
-    .line 100
-    .line 101
+    :cond_1
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/17J;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/17J;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/17J;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/17J;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/17J;->$VALUES:[LX/17J;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/17J;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method

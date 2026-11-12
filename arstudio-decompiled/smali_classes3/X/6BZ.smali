@@ -1,220 +1,191 @@
-.class public final LX/6BZ;
+.class public final LX/6Bz;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AudioEncoderImpl$2"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/os/Handler;
+
+.field public final synthetic A01:LX/6Bl;
+
+.field public final synthetic A02:LX/5zq;
+
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/os/Handler;LX/6Bl;LX/5zq;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/6Bz;->A01:LX/6Bl;
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static final A00(Ljava/lang/String;)LX/6Ba;
-    .locals 2
-
-    .line 0
-    if-eqz p0, :cond_0
-
-    .line 1
-    .line 2
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    iput-object p3, p0, LX/6Bz;->A02:LX/5zq;
 
     .line 3
     .line 4
-    .line 5
-    move-result v1
+    iput-object p1, p0, LX/6Bz;->A00:Landroid/os/Handler;
 
+    .line 5
     .line 6
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
-    if-nez v1, :cond_1
-
     .line 8
     .line 9
-    :cond_0
-    const/4 v0, 0x1
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 6
+
+    .line 0
+    iget-object v5, p0, LX/6Bz;->A01:LX/6Bl;
+
+    .line 1
+    .line 2
+    iget-object v4, p0, LX/6Bz;->A02:LX/5zq;
+
+    .line 3
+    .line 4
+    iget-object v3, p0, LX/6Bz;->A00:Landroid/os/Handler;
+
+    .line 5
+    .line 6
+    iget-object v1, v5, LX/6Bl;->A0A:LX/6CQ;
+
+    .line 7
+    .line 8
+    sget-object v0, LX/6CQ;->PREPARED:LX/6CQ;
+
+    .line 9
     .line 10
-    :cond_1
-    const/4 v1, 0x0
+    if-eq v1, v0, :cond_0
 
     .line 11
-    if-nez v0, :cond_2
-
     .line 12
+    iget-object v1, v5, LX/6Bl;->A04:LX/5Im;
+
     .line 13
-    const-string v0, "DDMM"
-
     .line 14
+    const-string v0, "stAEe"
+
     .line 15
-    if-eqz p0, :cond_3
-
     .line 16
-    .line 17
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, LX/5Im;->A02(Ljava/lang/String;)V
 
+    .line 17
     .line 18
     .line 19
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
     .line 20
-    move-result v0
-
     .line 21
-    if-eqz v0, :cond_3
-
     .line 22
+    move-result-object v1
+
     .line 23
-    sget-object v1, LX/6Ba;->DDMM:LX/6Ba;
+    const-string v0, "prepare() must be called before starting audio encoding. Current state is: "
 
     .line 24
     .line 25
-    :cond_2
-    return-object v1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 26
-    :cond_3
-    const-string v0, "MMDD"
-
     .line 27
     .line 28
-    if-eqz p0, :cond_4
+    iget-object v0, v5, LX/6Bl;->A0A:LX/6CQ;
 
     .line 29
     .line 30
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-static {v0, v1}, LX/001;->A0E(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
 
     .line 31
     .line 32
     .line 33
-    move-result v0
+    move-result-object v0
 
     .line 34
-    if-eqz v0, :cond_4
+    invoke-static {v3, v4, v0}, LX/6CT;->A01(Landroid/os/Handler;LX/5zq;Ljava/lang/Throwable;)V
 
     .line 35
     .line 36
-    sget-object v1, LX/6Ba;->MMDD:LX/6Ba;
-
     .line 37
+    return-void
+
     .line 38
-    return-object v1
+    :cond_0
+    :try_start_0
+    iget-object v0, v5, LX/6Bl;->A01:Landroid/media/MediaCodec;
 
     .line 39
-    :cond_4
-    const-string v0, "DDMMYYYY"
-
     .line 40
-    .line 41
-    if-eqz p0, :cond_5
+    invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 41
     .line 42
     .line 43
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    sget-object v0, LX/6CQ;->STARTED:LX/6CQ;
 
     .line 44
     .line 45
-    .line 46
-    move-result v0
+    iput-object v0, v5, LX/6Bl;->A0A:LX/6CQ;
 
+    .line 46
     .line 47
-    if-eqz v0, :cond_5
+    iget-object v1, v5, LX/6Bl;->A04:LX/5Im;
 
     .line 48
     .line 49
-    sget-object v1, LX/6Ba;->DDMMYYYY:LX/6Ba;
+    const-string v0, "stAEs"
 
     .line 50
     .line 51
-    return-object v1
+    invoke-virtual {v1, v0}, LX/5Im;->A02(Ljava/lang/String;)V
 
     .line 52
-    :cond_5
-    const-string v0, "MMYYYY"
-
     .line 53
     .line 54
-    if-eqz p0, :cond_6
+    invoke-static {v3, v4}, LX/6CT;->A00(Landroid/os/Handler;LX/5zq;)V
 
     .line 55
     .line 56
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
     .line 57
+    return-void
+
     .line 58
+    :catch_0
+    move-exception v2
+
     .line 59
-    move-result v0
+    iget-object v1, v5, LX/6Bl;->A04:LX/5Im;
 
     .line 60
-    if-eqz v0, :cond_6
-
     .line 61
+    const-string v0, "stAEe1"
+
     .line 62
-    sget-object v1, LX/6Ba;->MMYYYY:LX/6Ba;
-
     .line 63
+    invoke-virtual {v1, v0}, LX/5Im;->A02(Ljava/lang/String;)V
+
     .line 64
-    return-object v1
-
     .line 65
-    :cond_6
-    const-string v0, "MMDDYYYY"
-
     .line 66
-    .line 67
-    if-eqz p0, :cond_7
+    invoke-static {v3, v4, v2}, LX/6CT;->A01(Landroid/os/Handler;LX/5zq;Ljava/lang/Throwable;)V
 
+    .line 67
     .line 68
     .line 69
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    .line 70
-    .line 71
-    .line 72
-    move-result v0
-
-    .line 73
-    if-eqz v0, :cond_7
-
-    .line 74
-    .line 75
-    sget-object v1, LX/6Ba;->MMDDYYYY:LX/6Ba;
-
-    .line 76
-    .line 77
-    return-object v1
-
-    .line 78
-    :cond_7
-    const-string v0, "MMYY"
-
-    .line 79
-    .line 80
-    if-eqz p0, :cond_2
-
-    .line 81
-    .line 82
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    .line 83
-    .line 84
-    .line 85
-    move-result v0
-
-    .line 86
-    if-eqz v0, :cond_2
-
-    .line 87
-    .line 88
-    sget-object v1, LX/6Ba;->MMYY:LX/6Ba;
-
-    .line 89
-    .line 90
-    return-object v1
+    return-void
 .end method

@@ -26,7 +26,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 3
     .line 4
@@ -45,7 +45,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 3
     .line 4
@@ -64,7 +64,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 3
     .line 4
@@ -103,7 +103,7 @@
 
     .line 11
     .line 12
-    invoke-static {v1}, LX/07X;->A00(Landroid/content/Context;)LX/07X;
+    invoke-static {v1}, LX/07y;->A00(Landroid/content/Context;)LX/07y;
 
     .line 13
     .line 14
@@ -116,12 +116,12 @@
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/07f;->A01(Ljava/lang/String;)V
+    invoke-static {v0}, LX/086;->A01(Ljava/lang/String;)V
 
     .line 19
     .line 20
     .line 21
-    iget-object v3, v4, LX/07X;->A00:Landroid/content/Context;
+    iget-object v3, v4, LX/07y;->A00:Landroid/content/Context;
 
     .line 22
     .line 23
@@ -174,11 +174,11 @@
     move-result-object v0
 
     .line 48
-    iget-object v0, v0, Landroid/content/pm/ProviderInfo;->metaData:Landroid/os/Bundle;
+    iget-object v0, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     .line 49
     .line 50
-    invoke-virtual {v4, v0}, LX/07X;->discoverAndInitialize(Landroid/os/Bundle;)V
+    invoke-virtual {v4, v0}, LX/07y;->discoverAndInitialize(Landroid/os/Bundle;)V
 
     .line 51
     .line 52
@@ -194,11 +194,11 @@
 
     .line 55
     :try_start_1
-    new-instance v0, LX/07c;
+    new-instance v0, LX/083;
 
     .line 56
     .line 57
-    invoke-direct {v0, v1}, LX/07c;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, v1}, LX/083;-><init>(Ljava/lang/Throwable;)V
 
     .line 58
     .line 59
@@ -212,7 +212,7 @@
     move-exception v0
 
     .line 62
-    invoke-static {}, LX/07f;->A00()V
+    invoke-static {}, LX/086;->A00()V
 
     .line 63
     .line 64
@@ -221,7 +221,7 @@
 
     .line 66
     :goto_0
-    invoke-static {}, LX/07f;->A00()V
+    invoke-static {}, LX/086;->A00()V
 
     .line 67
     .line 68
@@ -234,11 +234,11 @@
 
     .line 71
     :cond_1
-    new-instance v0, LX/07c;
+    new-instance v0, LX/083;
 
     .line 72
     .line 73
-    invoke-direct {v0}, LX/07c;-><init>()V
+    invoke-direct {v0}, LX/083;-><init>()V
 
     .line 74
     .line 75
@@ -254,7 +254,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 3
     .line 4
@@ -273,7 +273,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 3
     .line 4

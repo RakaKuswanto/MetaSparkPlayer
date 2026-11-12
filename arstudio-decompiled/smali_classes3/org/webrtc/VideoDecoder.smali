@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract createNativeVideoDecoder()J
+.method public abstract createNative(J)J
 .end method
 
 .method public abstract decode(Lorg/webrtc/EncodedImage;Lorg/webrtc/VideoDecoder$DecodeInfo;)Lorg/webrtc/VideoCodecStatus;

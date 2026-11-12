@@ -1,298 +1,215 @@
-.class public final LX/3sV;
-.super LX/3uj;
+.class public final LX/3sv;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final synthetic A00:LX/4lB;
+.field public A00:LX/3wY;
 
-.field public final synthetic A01:LX/3vI;
+.field public A01:Z
 
-.field public final synthetic A02:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+.field public A02:Z
 
-.field public final synthetic A03:LX/3Wi;
+.field public final A03:I
 
-.field public final synthetic A04:Ljava/lang/String;
+.field public final A04:J
 
-.field public final synthetic A05:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final A05:J
 
-.field public final synthetic A06:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final A06:LX/3uK;
 
-.field public final synthetic A07:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final A07:Ljava/lang/String;
 
-.field public final synthetic A08:Z
+.field public final A08:Ljava/lang/String;
+
+.field public final A09:Ljava/lang/String;
+
+.field public final A0A:Ljava/lang/String;
+
+.field public final A0B:Ljava/lang/String;
+
+.field public final A0C:Z
+
+.field public final A0D:Z
 
 
 # direct methods
-.method public constructor <init>(LX/4lB;LX/3vI;Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3Wi;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicReference;Z)V
+.method public constructor <init>(LX/3uK;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJZZZ)V
     .locals 0
 
     .line 0
-    iput-object p5, p0, LX/3sV;->A04:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p8, p0, LX/3sV;->A07:Ljava/util/concurrent/atomic/AtomicReference;
-
     .line 3
+    iput-wide p8, p0, LX/3sv;->A04:J
+
     .line 4
-    iput-object p2, p0, LX/3sV;->A01:LX/3vI;
-
     .line 5
+    iput-object p1, p0, LX/3sv;->A06:LX/3uK;
+
     .line 6
-    iput-object p6, p0, LX/3sV;->A05:Ljava/util/concurrent/atomic/AtomicBoolean;
-
     .line 7
+    iput-object p2, p0, LX/3sv;->A07:Ljava/lang/String;
+
     .line 8
-    iput-object p1, p0, LX/3sV;->A00:LX/4lB;
-
     .line 9
+    iput-object p3, p0, LX/3sv;->A0B:Ljava/lang/String;
+
     .line 10
-    iput-object p7, p0, LX/3sV;->A06:Ljava/util/concurrent/atomic/AtomicBoolean;
-
     .line 11
+    iput-object p4, p0, LX/3sv;->A08:Ljava/lang/String;
+
     .line 12
-    iput-object p4, p0, LX/3sV;->A03:LX/3Wi;
-
     .line 13
+    iput-object p5, p0, LX/3sv;->A09:Ljava/lang/String;
+
     .line 14
-    iput-object p3, p0, LX/3sV;->A02:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
     .line 15
+    iput-object p6, p0, LX/3sv;->A0A:Ljava/lang/String;
+
     .line 16
-    iput-boolean p9, p0, LX/3sV;->A08:Z
-
     .line 17
-    .line 18
-    invoke-direct {p0}, LX/3uj;-><init>()V
+    iput-boolean p12, p0, LX/3sv;->A0C:Z
 
+    .line 18
     .line 19
+    iput-boolean p13, p0, LX/3sv;->A0D:Z
+
     .line 20
     .line 21
+    iput-boolean p14, p0, LX/3sv;->A02:Z
+
+    .line 22
+    .line 23
+    iput p7, p0, LX/3sv;->A03:I
+
+    .line 24
+    .line 25
+    iput-wide p10, p0, LX/3sv;->A05:J
+
+    .line 26
+    .line 27
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A0H(LX/0tw;)V
-    .locals 6
+.method public final A00()Landroid/view/Surface;
+    .locals 2
 
     .line 0
-    check-cast p1, LX/3sv;
+    iget-object v0, p0, LX/3sv;->A00:LX/3wY;
 
     .line 1
     .line 2
-    iget-object v5, p1, LX/3sv;->A01:LX/3qu;
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    if-eqz v5, :cond_0
+    iget-object v0, v0, LX/3wY;->A01:Landroid/view/Surface;
 
     .line 5
     .line 6
-    iget-object v0, p1, LX/3sv;->A02:Ljava/lang/String;
+    return-object v0
+
+    .line 7
+    :cond_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 8
+    .line 9
+    const/16 v0, 0x1d
+
+    .line 10
+    .line 11
+    if-lt v1, v0, :cond_1
+
+    .line 12
+    .line 13
+    iget-object v0, p0, LX/3sv;->A06:LX/3uK;
+
+    .line 14
+    .line 15
+    if-eqz v0, :cond_1
+
+    .line 16
+    .line 17
+    invoke-virtual {v0}, LX/3uK;->A00()Landroid/view/Surface;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    return-object v0
+
+    .line 22
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 23
+    return-object v0
+.end method
+
+.method public final A01()V
+    .locals 3
+
+    .line 0
+    iget-object v1, p0, LX/3sv;->A00:LX/3wY;
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v0, v1, LX/3wY;->A01:Landroid/view/Surface;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
     .line 7
     .line 8
-    if-eqz v0, :cond_0
-
     .line 9
+    iget-object v0, v1, LX/3wY;->A00:Landroid/graphics/SurfaceTexture;
+
     .line 10
-    iget-object v3, p0, LX/3sV;->A04:Ljava/lang/String;
-
     .line 11
-    .line 12
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
+    .line 12
     .line 13
     .line 14
-    .line 15
-    move-result v0
+    :cond_0
+    iget-object v2, p0, LX/3sv;->A06:LX/3uK;
 
+    .line 15
     .line 16
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_1
 
     .line 17
     .line 18
-    iget-object v0, p0, LX/3sV;->A07:Ljava/util/concurrent/atomic/AtomicReference;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 19
     .line 20
-    invoke-virtual {v0, v5}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    const/16 v0, 0x1d
 
     .line 21
     .line 22
+    if-lt v1, v0, :cond_1
+
     .line 23
-    iget-object v0, p0, LX/3sV;->A01:LX/3vI;
-
     .line 24
-    .line 25
-    invoke-virtual {v0}, LX/3vI;->A05()Z
+    invoke-virtual {v2}, LX/3uK;->A02()V
 
+    .line 25
     .line 26
     .line 27
-    .line 28
-    move-result v1
-
-    .line 29
-    const/4 v2, 0x0
-
-    .line 30
-    const/4 v4, 0x1
-
-    .line 31
-    sget-object v0, LX/3qu;->PLAYING:LX/3qu;
-
-    .line 32
-    .line 33
-    if-eqz v1, :cond_1
-
-    .line 34
-    .line 35
-    if-ne v0, v5, :cond_2
-
-    .line 36
-    .line 37
-    iget-object v0, p0, LX/3sV;->A05:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 38
-    .line 39
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    .line 40
-    .line 41
-    .line 42
-    move-result v0
-
-    .line 43
-    if-eqz v0, :cond_2
-
-    .line 44
-    .line 45
-    :goto_0
-    iget-object v1, p0, LX/3sV;->A00:LX/4lB;
-
-    .line 46
-    .line 47
-    const/4 v0, 0x0
-
-    .line 48
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 49
-    .line 50
-    .line 51
-    move-result-object v0
-
-    .line 52
-    invoke-virtual {v1, v0}, LX/4lB;->A00(Ljava/lang/Object;)V
-
-    .line 53
-    .line 54
-    .line 55
-    iget-object v0, p0, LX/3sV;->A06:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 56
-    .line 57
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 58
-    .line 59
-    .line 60
-    iget-object v1, p0, LX/3sV;->A03:LX/3Wi;
-
-    .line 61
-    .line 62
-    iget-object v0, p0, LX/3sV;->A02:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 63
-    .line 64
-    invoke-static {v0, v1, v3, v2}, LX/3rT;->A00(Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3Wi;Ljava/lang/String;Z)V
-
-    .line 65
-    .line 66
-    .line 67
-    :cond_0
-    return-void
-
-    .line 68
     :cond_1
-    if-ne v0, v5, :cond_2
-
-    .line 69
-    .line 70
-    goto :goto_0
-
-    .line 71
-    :cond_2
-    sget-object v0, LX/3qu;->PLAYBACK_COMPLETE:LX/3qu;
-
-    .line 72
-    .line 73
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    .line 74
-    .line 75
-    if-eq v0, v5, :cond_3
-
-    .line 76
-    .line 77
-    sget-object v0, LX/3qu;->PAUSED:LX/3qu;
-
-    .line 78
-    .line 79
-    if-ne v0, v5, :cond_0
-
-    .line 80
-    .line 81
-    iget-boolean v0, p0, LX/3sV;->A08:Z
-
-    .line 82
-    .line 83
-    if-nez v0, :cond_4
-
-    .line 84
-    .line 85
-    :cond_3
-    iget-object v1, p0, LX/3sV;->A00:LX/4lB;
-
-    .line 86
-    .line 87
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 88
-    .line 89
-    .line 90
-    move-result-object v0
-
-    .line 91
-    invoke-virtual {v1, v0}, LX/4lB;->A00(Ljava/lang/Object;)V
-
-    .line 92
-    .line 93
-    .line 94
-    iget-object v0, p0, LX/3sV;->A06:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 95
-    .line 96
-    invoke-virtual {v0, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 97
-    .line 98
-    .line 99
-    :cond_4
-    iget-object v1, p0, LX/3sV;->A03:LX/3Wi;
-
-    .line 100
-    .line 101
-    iget-object v0, p0, LX/3sV;->A02:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 102
-    .line 103
-    invoke-static {v0, v1, v3, v4}, LX/3rT;->A00(Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3Wi;Ljava/lang/String;Z)V
-
-    .line 104
-    .line 105
-    .line 106
     return-void
 .end method

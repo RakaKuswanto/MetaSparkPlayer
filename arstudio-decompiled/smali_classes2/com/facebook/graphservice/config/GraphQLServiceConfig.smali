@@ -4,9 +4,7 @@
 
 
 # instance fields
-.field public collectForTargetedLoadingUpdate:Z
-
-.field public createTransientKeys:Z
+.field public customTimestampSerializerUpdateDiskWriteTimesInterval:I
 
 .field public enableBlackBoxService:Z
 
@@ -16,6 +14,8 @@
 
 .field public enableIg4aCache:Z
 
+.field public enableLockForTimestampCustomSerializer:Z
+
 .field public enablePublishIncrementalPayloads:Z
 
 .field public enableSessionScopeTesting:Z
@@ -24,11 +24,17 @@
 
 .field public enableUsageAnalytics:Z
 
+.field public freshCacheTtlMultiplier:D
+
+.field public getCacheWriteTimesFromMemory:Z
+
 .field public inMemoryBufferMaxEntries:I
 
 .field public optimizerConfigJson:Ljava/lang/String;
 
-.field public shouldThrowExceptionOnTypeLookupFailure:Z
+.field public shouldWarmTreeShapeCache:Z
+
+.field public shouldWarmTreeShapeCacheAlwaysTraverse:Z
 
 .field public skipQueryParamSerialization:Z
 
@@ -46,7 +52,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(LX/3ia;)V
+.method public synthetic constructor <init>(LX/1vM;)V
     .locals 0
 
     .line 0
@@ -58,15 +64,15 @@
     return-void
 .end method
 
-.method public static Builder()LX/3XW;
+.method public static Builder()LX/1vK;
     .locals 1
 
     .line 0
-    new-instance v0, LX/3XW;
+    new-instance v0, LX/1vK;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/3XW;-><init>()V
+    invoke-direct {v0}, LX/1vK;-><init>()V
 
     .line 3
     .line 4
@@ -78,7 +84,7 @@
     .locals 0
 
     .line 0
-    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->createTransientKeys:Z
+    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->enableUsageAnalytics:Z
 
     .line 1
     .line 2
@@ -100,7 +106,7 @@
     .locals 0
 
     .line 0
-    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->collectForTargetedLoadingUpdate:Z
+    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->skipQueryParamSerialization:Z
 
     .line 1
     .line 2
@@ -111,7 +117,7 @@
     .locals 0
 
     .line 0
-    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->enableUsageAnalytics:Z
+    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->getCacheWriteTimesFromMemory:Z
 
     .line 1
     .line 2
@@ -122,22 +128,55 @@
     .locals 0
 
     .line 0
-    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->skipQueryParamSerialization:Z
+    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->enableLockForTimestampCustomSerializer:Z
 
     .line 1
     .line 2
     return p1
 .end method
 
-.method public static synthetic access$1402(Lcom/facebook/graphservice/config/GraphQLServiceConfig;Z)Z
+.method public static synthetic access$1402(Lcom/facebook/graphservice/config/GraphQLServiceConfig;I)I
     .locals 0
 
     .line 0
-    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->shouldThrowExceptionOnTypeLookupFailure:Z
+    iput p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->customTimestampSerializerUpdateDiskWriteTimesInterval:I
 
     .line 1
     .line 2
     return p1
+.end method
+
+.method public static synthetic access$1502(Lcom/facebook/graphservice/config/GraphQLServiceConfig;Z)Z
+    .locals 0
+
+    .line 0
+    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->shouldWarmTreeShapeCache:Z
+
+    .line 1
+    .line 2
+    return p1
+.end method
+
+.method public static synthetic access$1602(Lcom/facebook/graphservice/config/GraphQLServiceConfig;Z)Z
+    .locals 0
+
+    .line 0
+    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->shouldWarmTreeShapeCacheAlwaysTraverse:Z
+
+    .line 1
+    .line 2
+    return p1
+.end method
+
+.method public static synthetic access$1702(Lcom/facebook/graphservice/config/GraphQLServiceConfig;D)D
+    .locals 0
+
+    .line 0
+    iput-wide p1, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->freshCacheTtlMultiplier:D
+
+    .line 1
+    .line 2
+    return-wide p1
 .end method
 
 .method public static synthetic access$202(Lcom/facebook/graphservice/config/GraphQLServiceConfig;Ljava/lang/String;)Ljava/lang/String;
@@ -230,28 +269,6 @@
 
 
 # virtual methods
-.method public collectForTargetedLoadingUpdate()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->collectForTargetedLoadingUpdate:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public createTransientKeys()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->createTransientKeys:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
 .method public enableGlobalFullConsistency()Z
     .locals 1
 
@@ -272,6 +289,50 @@
     .line 1
     .line 2
     return v0
+.end method
+
+.method public getCacheWriteTimesFromMemory()Z
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->getCacheWriteTimesFromMemory:Z
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public getCustomTimestampSerializerUpdateDiskWriteTimesInterval()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->customTimestampSerializerUpdateDiskWriteTimesInterval:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public getEnableLockForTimestampCustomSerializer()Z
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->enableLockForTimestampCustomSerializer:Z
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public getFreshCacheTtlMultiplier()D
+    .locals 2
+
+    .line 0
+    iget-wide v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->freshCacheTtlMultiplier:D
+
+    .line 1
+    .line 2
+    return-wide v0
 .end method
 
 .method public getInMemoryBufferMaxEntries()I
@@ -329,17 +390,6 @@
     return v0
 .end method
 
-.method public isEnableSessionScopeTesting()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->enableSessionScopeTesting:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
 .method public isEnableSonarClient()Z
     .locals 1
 
@@ -362,11 +412,22 @@
     return v0
 .end method
 
-.method public shouldThrowExceptionOnTypeLookupFailure()Z
+.method public shouldWarmTreeShapeCache()Z
     .locals 1
 
     .line 0
-    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->shouldThrowExceptionOnTypeLookupFailure:Z
+    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->shouldWarmTreeShapeCache:Z
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public shouldWarmTreeShapeCacheAlwaysTraverse()Z
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLServiceConfig;->shouldWarmTreeShapeCacheAlwaysTraverse:Z
 
     .line 1
     .line 2

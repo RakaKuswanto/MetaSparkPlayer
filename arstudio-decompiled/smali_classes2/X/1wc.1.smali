@@ -1,172 +1,28 @@
 .class public final LX/1wc;
-.super Ljava/lang/Object;
+.super LX/1wn;
 .source ""
 
 # interfaces
-.implements LX/1vT;
+.implements LX/6bc;
+
+
+# instance fields
+.field public final A00:Landroid/database/sqlite/SQLiteStatement;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/database/sqlite/SQLiteStatement;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/1wn;-><init>(Landroid/database/sqlite/SQLiteProgram;)V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/1wc;->A00:Landroid/database/sqlite/SQLiteStatement;
+
+    .line 4
+    .line 5
     return-void
-.end method
-
-
-# virtual methods
-.method public final AUZ()Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AUa(Z)Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AVE(Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;LX/1Zv;)Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AVF(Ljava/lang/Throwable;)Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AVM()Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AVN(LX/1Zv;Z)Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AW2()Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AW3(LX/1Zv;Z)Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AZc(Z)Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final AeS(Ljava/lang/String;Z)Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
 .end method

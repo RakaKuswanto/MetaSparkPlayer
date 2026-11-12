@@ -168,64 +168,69 @@
     move-result-object v2
 
     .line 10
-    invoke-virtual {p0}, Lcom/facebook/superpack/SuperpackArchive;->hasNext()Z
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 11
     .line 12
     .line 13
-    move-result v0
+    invoke-virtual {p0}, Lcom/facebook/superpack/SuperpackArchive;->hasNext()Z
 
     .line 14
-    if-nez v0, :cond_0
-
     .line 15
     .line 16
-    const/4 v0, 0x1
+    move-result v0
 
     .line 17
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-nez v0, :cond_0
 
     .line 18
     .line 19
+    const/4 v0, 0x1
+
     .line 20
-    move-result-object v1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 21
-    new-instance v0, Lcom/facebook/superpack/SuperpackFileInputStream;
-
     .line 22
     .line 23
-    invoke-direct {v0, v2, v1}, Lcom/facebook/superpack/SuperpackFileInputStream;-><init>(Lcom/facebook/superpack/SuperpackFile;Ljava/lang/Boolean;)V
+    move-result-object v1
 
     .line 24
+    new-instance v0, Lcom/facebook/superpack/SuperpackFileInputStream;
+
     .line 25
     .line 26
-    return-object v0
+    invoke-direct {v0, v2, v1}, Lcom/facebook/superpack/SuperpackFileInputStream;-><init>(Lcom/facebook/superpack/SuperpackFile;Ljava/lang/Boolean;)V
 
     .line 27
+    .line 28
+    .line 29
+    return-object v0
+
+    .line 30
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 28
-    .line 29
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    .line 30
     .line 31
     .line 32
-    throw v0
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     .line 33
+    .line 34
+    .line 35
+    throw v0
+
+    .line 36
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 34
-    .line 35
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    .line 36
     .line 37
     .line 38
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    .line 39
+    .line 40
+    .line 41
     throw v0
 .end method
 
@@ -340,21 +345,21 @@
 
     .line 37
     .line 38
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 39
     .line 40
     .line 41
-    invoke-static {p0}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
+    invoke-static {p0}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
 
     .line 42
     .line 43
     .line 44
-    move-result-object v1
+    move-result-object v0
 
     .line 45
     :try_start_1
-    invoke-static {v1, p1}, LX/001;->A06(Ljava/io/InputStream;Ljava/lang/String;)Lcom/facebook/superpack/SuperpackArchive;
+    invoke-static {v0, p1}, LX/001;->A06(Ljava/io/InputStream;Ljava/lang/String;)Lcom/facebook/superpack/SuperpackArchive;
 
     .line 46
     .line 47
@@ -364,7 +369,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 49
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     .line 50
     .line 51
@@ -390,7 +395,7 @@
 
     .line 60
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 61
     :try_start_3
@@ -401,23 +406,34 @@
     .line 62
     .line 63
     .line 64
-    throw v0
+    throw v1
 
     .line 65
     :catchall_1
-    move-exception v0
+    move-exception v1
 
     .line 66
     :try_start_4
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
     .line 67
     .line 68
     .line 69
+    throw v1
+
+    .line 70
     :catchall_2
-    throw v0
+    move-exception v0
+
+    .line 71
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 72
+    .line 73
+    .line 74
+    throw v1
 .end method
 
 .method public static createFromSingletonArchiveInputStream(Ljava/io/InputStream;Ljava/lang/String;)Lcom/facebook/superpack/SuperpackFileInputStream;
@@ -478,17 +494,17 @@
     .line 14
     .line 15
     .line 16
-    move-result-wide p0
+    move-result-wide p1
 
     .line 17
     const/4 v0, 0x0
 
     .line 18
-    new-instance v1, Lcom/facebook/superpack/SuperpackArchive;
+    new-instance p0, Lcom/facebook/superpack/SuperpackArchive;
 
     .line 19
     .line 20
-    invoke-direct {v1, p0, p1, v0}, Lcom/facebook/superpack/SuperpackArchive;-><init>(J[Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/facebook/superpack/SuperpackArchive;-><init>(J[Ljava/lang/String;)V
 
     .line 21
     .line 22
@@ -510,7 +526,7 @@
     .line 29
     :goto_1
     :try_start_0
-    invoke-static {v1}, Lcom/facebook/superpack/SuperpackFileInputStream;->A00(Lcom/facebook/superpack/SuperpackArchive;)Lcom/facebook/superpack/SuperpackFileInputStream;
+    invoke-static {p0}, Lcom/facebook/superpack/SuperpackFileInputStream;->A00(Lcom/facebook/superpack/SuperpackArchive;)Lcom/facebook/superpack/SuperpackFileInputStream;
 
     .line 30
     .line 31
@@ -520,7 +536,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 33
-    invoke-virtual {v1}, Lcom/facebook/superpack/SuperpackArchive;->close()V
+    invoke-virtual {p0}, Lcom/facebook/superpack/SuperpackArchive;->close()V
 
     .line 34
     .line 35
@@ -529,19 +545,30 @@
 
     .line 37
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 38
     :try_start_1
-    invoke-virtual {v1}, Lcom/facebook/superpack/SuperpackArchive;->close()V
+    invoke-virtual {p0}, Lcom/facebook/superpack/SuperpackArchive;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 39
     .line 40
     .line 41
+    throw v1
+
+    .line 42
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 43
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 44
+    .line 45
+    .line 46
+    throw v1
 .end method
 
 .method public static getDefaultThreadNum(Ljava/lang/String;)I
@@ -678,7 +705,7 @@
 
     monitor-enter p0
 
-    .line 536930608
+    .line 536885613
     :try_start_0
     iget-object v0, p0, Lcom/facebook/superpack/SuperpackFileInputStream;->A04:[B
 
@@ -688,10 +715,10 @@
 
     new-array v0, v2, [B
 
-    .line 536930609
+    .line 536885614
     iput-object v0, p0, Lcom/facebook/superpack/SuperpackFileInputStream;->A04:[B
 
-    .line 536930610
+    .line 536885615
     :cond_0
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
@@ -701,10 +728,10 @@
 
     if-eq v1, v0, :cond_2
 
-    .line 536930611
+    .line 536885616
     if-ne v1, v2, :cond_1
 
-    .line 536930612
+    .line 536885617
     iget-object v1, p0, Lcom/facebook/superpack/SuperpackFileInputStream;->A04:[B
 
     const/4 v0, 0x0
@@ -715,31 +742,31 @@
 
     goto :goto_0
 
-    .line 536930613
+    .line 536885618
     :cond_1
     const-string v0, "Unexpected number of bytes read"
 
-    .line 536930614
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    .line 536885619
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     move-result-object v0
 
-    .line 536930615
+    .line 536885620
     throw v0
 
-    .line 536930616
+    .line 536885621
     :goto_0
     add-int/lit16 v0, v0, 0x100
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 536930617
+    .line 536885622
     :cond_2
     monitor-exit p0
 
     return v0
 
-    .line 536930618
+    .line 536885623
     :catchall_0
     move-exception v0
 
@@ -885,7 +912,7 @@
 
     .line 268435502
     .line 268435503
-    if-gt v0, v4, :cond_5
+    if-gt v0, v4, :cond_2
 
     .line 268435504
     .line 268435505
@@ -897,7 +924,7 @@
 
     .line 268435508
     .line 268435509
-    if-gt v1, v0, :cond_2
+    if-gt v1, v0, :cond_5
 
     .line 268435510
     .line 268435511

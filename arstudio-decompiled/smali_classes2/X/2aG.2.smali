@@ -1,54 +1,32 @@
-.class public final LX/2aG;
+.class public final LX/2ag;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static A00(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOpNoThrow(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result p0
-
-    .line 4
-    return p0
+    return-void
 .end method
 
-.method public static A01(Landroid/content/Context;)Ljava/lang/Object;
+.method private final initHybrid(Lcom/facebook/proxygen/NetworkStatusMonitor;ZLjava/lang/String;Ljava/util/Set;)Lcom/facebook/jni/HybridData;
     .locals 1
 
     .line 0
-    const-class v0, Landroid/app/AppOpsManager;
+    invoke-static {p1, p2, p3, p4}, Lcom/facebook/tigon/nativeservice/common/NativePlatformContextHolder;->initHybrid(Lcom/facebook/proxygen/NetworkStatusMonitor;ZLjava/lang/String;Ljava/util/Set;)Lcom/facebook/jni/HybridData;
 
     .line 1
     .line 2
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
     .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
-    return-object v0
-.end method
-
-.method public static A02(Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    invoke-static {p0}, Landroid/app/AppOpsManager;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
     .line 4
-    return-object p0
+    return-object v0
 .end method

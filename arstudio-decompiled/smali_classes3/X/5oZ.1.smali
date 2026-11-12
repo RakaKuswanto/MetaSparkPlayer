@@ -1,88 +1,84 @@
-.class public final LX/5oZ;
+.class public final LX/5Oz;
 .super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public A00:Landroid/os/Handler;
+
+.field public A01:Landroid/util/Pair;
+
+.field public A02:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+.field public A03:Z
+
+.field public A04:LX/5KS;
+
+.field public final A05:LX/5Ok;
+
+.field public final A06:LX/5At;
+
+.field public final A07:Ljava/util/ArrayDeque;
+
+.field public final A08:Ljava/util/ArrayDeque;
+
+
 # direct methods
-.method public static A00(Ljava/lang/Integer;)Ljava/lang/String;
-    .locals 0
+.method public constructor <init>(LX/5Ok;LX/5At;)V
+    .locals 1
 
     .line 0
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result p0
+    iput-object p2, p0, LX/5Oz;->A06:LX/5At;
 
     .line 4
-    packed-switch p0, :pswitch_data_0
-
     .line 5
+    iput-object p1, p0, LX/5Oz;->A05:LX/5Ok;
+
     .line 6
     .line 7
-    const-string p0, "STOPPED"
+    invoke-static {}, LX/434;->A1H()Ljava/util/ArrayDeque;
 
     .line 8
     .line 9
-    return-object p0
-
     .line 10
-    :pswitch_0
-    const-string p0, "PREPARE_STARTED"
+    move-result-object v0
 
     .line 11
-    .line 12
-    return-object p0
+    iput-object v0, p0, LX/5Oz;->A08:Ljava/util/ArrayDeque;
 
+    .line 12
     .line 13
-    :pswitch_1
-    const-string p0, "STOP_STARTED"
+    invoke-static {}, LX/434;->A1H()Ljava/util/ArrayDeque;
 
     .line 14
     .line 15
-    return-object p0
-
     .line 16
-    :pswitch_2
-    const-string p0, "RECORDING"
+    move-result-object v0
 
     .line 17
-    .line 18
-    return-object p0
+    iput-object v0, p0, LX/5Oz;->A07:Ljava/util/ArrayDeque;
 
+    .line 18
     .line 19
-    :pswitch_3
-    const-string p0, "RECORDING_STARTED"
+    const/4 v0, 0x1
 
     .line 20
-    .line 21
-    return-object p0
+    iput-boolean v0, p0, LX/5Oz;->A03:Z
 
+    .line 21
     .line 22
-    :pswitch_4
-    const-string p0, "RECORDING_STARTING"
+    sget-object v0, LX/5KS;->A04:LX/5KS;
 
     .line 23
     .line 24
-    return-object p0
+    iput-object v0, p0, LX/5Oz;->A04:LX/5KS;
 
     .line 25
-    :pswitch_5
-    const-string p0, "PREPARED"
-
     .line 26
-    .line 27
-    return-object p0
-
-    .line 28
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
+    return-void
 .end method

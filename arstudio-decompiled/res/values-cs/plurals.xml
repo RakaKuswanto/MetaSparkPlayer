@@ -3,12 +3,98 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s To se mi líbí stránky</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s To se mi líbí</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">Před %1$d dny</item>
+        <item quantity="one">Před 1 dnem</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d dny/dnů</item>
+        <item quantity="one">1 den</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d dní</item>
+        <item quantity="one">%1$d den</item>
+        <item quantity="few">%1$d dny</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d hod.</item>
+        <item quantity="one">1 hod.</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minut</item>
+        <item quantity="one">%1$d minuta</item>
+        <item quantity="few">%1$d minuty</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">Měsíce (%1$d )</item>
+        <item quantity="one">1 měsíc</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">Sekundy (%1$d)</item>
+        <item quantity="one">1 s</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">Týdny (%1$d)</item>
+        <item quantity="one">1 týden</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">%1$d dalších dnů</item>
+        <item quantity="one">%1$d další den</item>
+        <item quantity="few">%1$d další dny</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">%1$d dalších hodin</item>
+        <item quantity="one">%1$d další hodinu</item>
+        <item quantity="few">%1$d další hodiny</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">%1$d dalších minut</item>
+        <item quantity="one">%1$d další minutu</item>
+        <item quantity="few">%1$d další minuty</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">%1$d dalších měsíců</item>
+        <item quantity="one">%1$d další měsíc</item>
+        <item quantity="few">%1$d další měsíce</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">%1$d dalších sekund</item>
+        <item quantity="one">%1$d další sekundu</item>
+        <item quantity="few">%1$d další sekundy</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">%1$d dalších týdnů</item>
+        <item quantity="one">%1$d další týden</item>
+        <item quantity="few">%1$d další týdny</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">%1$d dalších let</item>
+        <item quantity="one">%1$d další rok</item>
+        <item quantity="few">%1$d další roky</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">Roky (%1$d)</item>
+        <item quantity="one">1 rok</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">před %1$d h</item>
         <item quantity="one">před hodinou</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d h</item>
+        <item quantity="one">1 h</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d h</item>
+        <item quantity="one">1 hod</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d h</item>
+        <item quantity="one">1 h</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">Před %1$d hod</item>
+        <item quantity="one">Před 1 hod</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">%1$d h od této chvíle</item>
@@ -18,8 +104,68 @@
         <item quantity="other">%1$d min od této chvíle</item>
         <item quantity="one">během 1 min od této chvíle</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">Před %1$d min</item>
+        <item quantity="one">Před 1 min</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">před %1$d min</item>
         <item quantity="one">před 1 min</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">Před %1$d měsíci</item>
+        <item quantity="one">Před 1 měsícem</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">před %1$d s</item>
+        <item quantity="one">1 s</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">Před %1$d týdny</item>
+        <item quantity="one">Před 1 týdnem</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">Zbývá %1$d hod</item>
+        <item quantity="one">Zbývá 1 hodina</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">Zbývá %1$d min</item>
+        <item quantity="one">Zbývá 1 min</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">Před %1$d lety</item>
+        <item quantity="one">Před 1 rokem</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Navštíveno před %1$d dny</item>
+        <item quantity="one">Navštíveno včera</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Navštíveno před %1$d hodinami</item>
+        <item quantity="one">Navštíveno před hodinou</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Navštíveno před %1$d minutami</item>
+        <item quantity="one">Navštíveno před minutou</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Navštíveno před %1$d měsíci</item>
+        <item quantity="one">Navštíveno před měsícem</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Navštíveno před %1$d týdny</item>
+        <item quantity="one">Navštíveno před týdnem</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Navštíveno před %1$d lety</item>
+        <item quantity="one">Navštíveno před rokem</item>
     </plurals>
 </resources>

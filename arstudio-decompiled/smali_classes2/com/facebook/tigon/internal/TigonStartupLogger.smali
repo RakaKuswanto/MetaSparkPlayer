@@ -6,13 +6,11 @@
 # instance fields
 .field public A00:Z
 
-.field public final A01:LX/0N6;
-
-.field public final A02:LX/1Nw;
+.field public final A01:LX/0PU;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -21,23 +19,19 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/tigon/internal/TigonStartupLogger;->A02:LX/1Nw;
+    new-instance v0, LX/0PU;
 
     .line 4
     .line 5
-    new-instance v0, LX/0N6;
+    invoke-direct {v0}, LX/0PU;-><init>()V
 
     .line 6
     .line 7
-    invoke-direct {v0}, LX/0N6;-><init>()V
-
     .line 8
+    iput-object v0, p0, Lcom/facebook/tigon/internal/TigonStartupLogger;->A01:LX/0PU;
+
     .line 9
     .line 10
-    iput-object v0, p0, Lcom/facebook/tigon/internal/TigonStartupLogger;->A01:LX/0N6;
-
-    .line 11
-    .line 12
     return-void
 .end method
 
@@ -59,7 +53,7 @@
 
     .line 4
     .line 5
-    iget-object v1, p0, Lcom/facebook/tigon/internal/TigonStartupLogger;->A01:LX/0N6;
+    iget-object v1, p0, Lcom/facebook/tigon/internal/TigonStartupLogger;->A01:LX/0PU;
 
     .line 6
     .line 7
@@ -68,7 +62,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-virtual {v1, v0}, LX/0N6;->markerStart(I)V
+    invoke-virtual {v1, v0}, LX/0PU;->markerStart(I)V
 
     .line 11
     .line 12
@@ -103,27 +97,19 @@
     .locals 2
 
     .line 0
-    const/4 v0, 0x0
+    iget-object v1, p0, Lcom/facebook/tigon/internal/TigonStartupLogger;->A01:LX/0PU;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
-    .line 3
-    .line 4
-    iget-object v1, p0, Lcom/facebook/tigon/internal/TigonStartupLogger;->A01:LX/0N6;
-
-    .line 5
-    .line 6
     const v0, 0x1123760
 
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v1, v0, p1}, LX/0PU;->markerPoint(ILjava/lang/String;)V
+
+    .line 6
     .line 7
     .line 8
-    .line 9
-    invoke-virtual {v1, v0, p1}, LX/0N6;->markerPoint(ILjava/lang/String;)V
-
-    .line 10
-    .line 11
-    .line 12
     return-void
 .end method

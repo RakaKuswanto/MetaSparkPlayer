@@ -1,11 +1,37 @@
-.class public interface abstract LX/5vf;
+.class public final LX/5vF;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AAF(LX/6LE;Ljava/util/UUID;)[B
-.end method
+# instance fields
+.field public final A00:LX/5sC;
 
-.method public abstract AAG(LX/2tv;Ljava/util/UUID;)[B
+.field public final A01:LX/5sC;
+
+.field public final A02:LX/5sC;
+
+
+# direct methods
+.method public constructor <init>(LX/5sC;LX/5sC;LX/5sC;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/5vF;->A01:LX/5sC;
+
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/5vF;->A00:LX/5sC;
+
+    .line 6
+    .line 7
+    iput-object p3, p0, LX/5vF;->A02:LX/5sC;
+
+    .line 8
+    .line 9
+    return-void
 .end method

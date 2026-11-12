@@ -2,12 +2,9 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/27q;
-
 
 # static fields
-.field public static final VERSION:LX/13o;
+.field public static final VERSION:LX/1RP;
 
 
 # direct methods
@@ -20,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/276;->A01(Ljava/lang/String;)LX/13o;
+    invoke-static {v0}, LX/1nk;->A01(Ljava/lang/String;)LX/1RP;
 
     .line 4
     .line 5
@@ -28,7 +25,7 @@
     move-result-object v0
 
     .line 7
-    sput-object v0, Lcom/fasterxml/jackson/databind/cfg/PackageVersion;->VERSION:LX/13o;
+    sput-object v0, Lcom/fasterxml/jackson/databind/cfg/PackageVersion;->VERSION:LX/1RP;
 
     .line 8
     .line 9
@@ -49,11 +46,11 @@
 
 
 # virtual methods
-.method public version()LX/13o;
+.method public version()LX/1RP;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/fasterxml/jackson/databind/cfg/PackageVersion;->VERSION:LX/13o;
+    sget-object v0, Lcom/fasterxml/jackson/databind/cfg/PackageVersion;->VERSION:LX/1RP;
 
     .line 1
     .line 2

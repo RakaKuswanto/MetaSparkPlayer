@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <X.4OA android:id="@id/autofill_active_button" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/autofillPaymentButtonPrimary" />
-    <X.4OA android:id="@id/autofill_negative_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/abc_button_padding_horizontal_material" style="@style/autofillPaymentButtonSecondary" />
+    <X.4Ic android:id="@id/autofill_active_button" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/autofillPaymentButtonPrimary" />
+    <X.4Ic android:id="@id/autofill_negative_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/abc_button_padding_horizontal_material" style="@style/autofillPaymentButtonSecondary" />
 </merge>

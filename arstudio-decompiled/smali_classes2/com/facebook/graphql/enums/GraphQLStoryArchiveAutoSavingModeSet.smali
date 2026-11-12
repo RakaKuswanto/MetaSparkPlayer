@@ -1,55 +1,42 @@
-.class public Lcom/facebook/graphql/enums/GraphQLStoryArchiveAutoSavingModeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLStoryArchiveAutoSavingModeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0u()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A0y()[Ljava/lang/String;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v2
+    move-result-object v0
 
     .line 4
-    const/4 v1, 0x0
+    invoke-static {v0}, LX/0X2;->A1L([Ljava/lang/Object;)V
 
     .line 5
-    const-string v0, "DISABLED"
-
     .line 6
     .line 7
-    aput-object v0, v2, v1
+    invoke-static {v0}, LX/1fN;->A04([Ljava/lang/Object;)Ljava/util/HashSet;
 
     .line 8
     .line 9
-    const/4 v1, 0x1
-
     .line 10
-    const-string v0, "ENABLED"
-
-    .line 11
-    .line 12
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
-    .line 13
-    .line 14
-    .line 15
     move-result-object v0
 
-    .line 16
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLStoryArchiveAutoSavingModeSet;->A00:Ljava/util/Set;
+    .line 11
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLStoryArchiveAutoSavingModeSet;->A00:Ljava/util/HashSet;
 
-    .line 17
-    .line 18
+    .line 12
+    .line 13
     return-void
 .end method
 
@@ -65,11 +52,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLStoryArchiveAutoSavingModeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLStoryArchiveAutoSavingModeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

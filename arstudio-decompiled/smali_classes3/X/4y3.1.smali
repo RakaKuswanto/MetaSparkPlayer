@@ -1,35 +1,24 @@
-.class public final LX/4y3;
-.super Ljava/lang/Object;
+.class public final enum LX/4y3;
+.super Lcom/google/ar/core/ArCoreApk$Availability;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultChoreographerWrapper_API16$3"
-
-
-# instance fields
-.field public final synthetic A00:Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;
-
-.field public final synthetic A01:LX/6J4;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;LX/6J4;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/4y3;->A00:Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;
+    const-string v2, "UNKNOWN_TIMED_OUT"
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/4y3;->A01:LX/6J4;
+    const/4 v1, 0x2
 
     .line 3
+    const/4 v0, 0x0
+
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v2, v1, v1, v0}, Lcom/google/ar/core/ArCoreApk$Availability;-><init>(Ljava/lang/String;IILcom/google/ar/core/ArCoreApk$Availability-IA;)V
 
     .line 5
     .line 6
@@ -39,68 +28,10 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final isUnknown()Z
+    .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/4y3;->A00:Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;
+    const/4 v0, 0x1
 
-    .line 1
-    .line 2
-    iget-object v3, v0, Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;->A00:Landroid/view/Choreographer;
-
-    .line 3
-    .line 4
-    if-nez v3, :cond_0
-
-    .line 5
-    .line 6
-    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v3
-
-    .line 10
-    iput-object v3, v0, Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;->A00:Landroid/view/Choreographer;
-
-    .line 11
-    .line 12
-    :cond_0
-    iget-object v2, p0, LX/4y3;->A01:LX/6J4;
-
-    .line 13
-    .line 14
-    iget-object v1, v2, LX/6J4;->A00:Landroid/view/Choreographer$FrameCallback;
-
-    .line 15
-    .line 16
-    if-nez v1, :cond_1
-
-    .line 17
-    .line 18
-    const/4 v0, 0x4
-
-    .line 19
-    new-instance v1, LX/6Pw;
-
-    .line 20
-    .line 21
-    invoke-direct {v1, v2, v0}, LX/6Pw;-><init>(Ljava/lang/Object;I)V
-
-    .line 22
-    .line 23
-    .line 24
-    iput-object v1, v2, LX/6J4;->A00:Landroid/view/Choreographer$FrameCallback;
-
-    .line 25
-    .line 26
-    :cond_1
-    invoke-virtual {v3, v1}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
-
-    .line 27
-    .line 28
-    .line 29
-    return-void
+    return v0
 .end method

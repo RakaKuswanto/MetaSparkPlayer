@@ -1,17 +1,31 @@
 .class public final LX/3a0;
-.super Ljava/lang/Object;
+.super LX/3a2;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:Landroid/os/Bundle;
+
+.field public final synthetic A01:Lcom/facebook/arstudio/player/BaseEffectActivity;
+
+
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/os/Bundle;Lcom/facebook/arstudio/player/BaseEffectActivity;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/3a0;->A01:Lcom/facebook/arstudio/player/BaseEffectActivity;
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/3a0;->A00:Landroid/os/Bundle;
+
     .line 3
+    .line 4
+    invoke-direct {p0}, LX/3a2;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method

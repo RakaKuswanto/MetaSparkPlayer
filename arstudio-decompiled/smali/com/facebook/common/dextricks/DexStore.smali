@@ -28,6 +28,8 @@
 
 .field public static final DS_FORCE_SYNC:I = 0x8
 
+.field public static final DS_ISOLATED_SPLIT:I = 0x40
+
 .field public static final DS_LOAD_SECONDARY:I = 0x10
 
 .field public static final DS_NO_RETRY:I = 0x2
@@ -71,8 +73,6 @@
 .field public static final PGO_COMPILER_FILTER_VERIFY_PROFILE:B = 0x3t
 
 .field public static final REGEN_STAMP_FILENAME:Ljava/lang/String; = "regen_stamp"
-
-.field public static final RET_MAY_REGEN:I = 0x1
 
 .field public static final STATE_ART_TURBO:B = 0x7t
 
@@ -120,7 +120,7 @@
 
 .field public static sLoadedCompressedOreo:Z
 
-.field public static sMergedDexConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+.field public static sMergedDexConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
 
 # instance fields
@@ -213,7 +213,7 @@
 
     .line 10
     .line 11
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 12
     .line 13
@@ -225,7 +225,7 @@
 
     .line 16
     .line 17
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 18
     .line 19
@@ -266,7 +266,7 @@
 
     .line 37
     .line 38
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 39
     .line 40
@@ -741,7 +741,7 @@
     move-exception v0
 
     .line 57
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 58
     .line 59
@@ -775,7 +775,7 @@
     const/4 v0, 0x0
 
     .line 9
-    invoke-static {v2, v1}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 10
     .line 11
@@ -800,41 +800,52 @@
 .end method
 
 .method public static canLoadCanaryClass(Lcom/facebook/common/dextricks/DexManifest;)Z
-    .locals 2
+    .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
+    iget-object p0, p0, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
 
     .line 1
     .line 2
-    const/4 p0, 0x0
+    array-length v0, p0
 
     .line 3
-    const/4 v1, 0x1
+    const/4 v2, 0x0
 
     .line 4
-    :try_start_0
-    aget-object v0, v0, p0
+    if-nez v0, :cond_0
 
     .line 5
     .line 6
-    iget-object v0, v0, Lcom/facebook/common/dextricks/DexManifest$Dex;->canaryClass:Ljava/lang/String;
+    return v2
 
     .line 7
+    :cond_0
+    const/4 v1, 0x1
+
     .line 8
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    :try_start_0
+    aget-object v0, p0, v2
 
     .line 9
     .line 10
+    iget-object v0, v0, Lcom/facebook/common/dextricks/DexManifest$Dex;->canaryClass:Ljava/lang/String;
+
     .line 11
+    .line 12
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    .line 13
+    .line 14
+    .line 15
     return v1
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 12
+    .line 16
     :catch_0
-    return p0
+    return v2
 .end method
 
 .method public static checkAndClearGk(Landroid/content/Context;Ljava/lang/String;)Z
@@ -845,7 +856,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-static {p0, p1, v2}, LX/0QY;->A00(Landroid/content/Context;Ljava/lang/String;I)I
+    invoke-static {p0, p1, v2}, LX/0Mp;->A00(Landroid/content/Context;Ljava/lang/String;I)I
 
     .line 2
     .line 3
@@ -870,7 +881,7 @@
 
     .line 10
     .line 11
-    invoke-static {p0, p1, v2}, LX/0QY;->A01(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p0, p1, v2}, LX/0Mp;->A01(Landroid/content/Context;Ljava/lang/String;I)V
 
     .line 12
     .line 13
@@ -887,7 +898,7 @@
 
     .line 17
     .line 18
-    invoke-static {p0, p1, v2}, LX/0QY;->A01(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p0, p1, v2}, LX/0Mp;->A01(Landroid/content/Context;Ljava/lang/String;I)V
 
     .line 19
     .line 20
@@ -897,7 +908,7 @@
 .end method
 
 .method private checkAnyOptimizerRunningCurrently()Z
-    .locals 3
+    .locals 4
 
     .line 0
     iget-object v1, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
@@ -908,7 +919,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 5
     .line 6
@@ -916,7 +927,7 @@
     move-result-object v1
 
     .line 8
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 9
     :try_start_0
@@ -937,13 +948,13 @@
     .line 16
     .line 17
     .line 18
-    move-result-object v1
+    move-result-object v2
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 19
     :try_start_1
-    invoke-virtual {v1, v2}, Lcom/facebook/common/dextricks/ReentrantLockFile;->tryAcquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
+    invoke-virtual {v2, v3}, Lcom/facebook/common/dextricks/ReentrantLockFile;->tryAcquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
 
     .line 20
     .line 21
@@ -955,7 +966,7 @@
 
     .line 24
     .line 25
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     .line 26
     goto :goto_0
@@ -971,38 +982,50 @@
     .line 30
     :goto_0
     :try_start_2
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
 
     .line 31
     .line 32
     .line 33
-    return v2
+    return v3
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 34
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 35
     :try_start_3
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
 
     .line 36
     .line 37
     .line 38
+    goto :goto_1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 39
     :catchall_1
+    move-exception v0
+
+    .line 40
     :try_start_4
-    throw v0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 41
+    .line 42
+    .line 43
+    :goto_1
+    throw v1
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 39
+    .line 44
     :catch_0
     :cond_1
-    return v2
+    return v3
 .end method
 
 .method private checkDeps()Z
@@ -1056,7 +1079,7 @@
     .locals 3
 
     .line 268435456
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 268435457
     .line 268435458
@@ -1149,36 +1172,36 @@
     .line 11
     .line 12
     .line 13
-    move-result-object v4
+    move-result-object v6
 
     .line 14
-    check-cast v4, [Ljava/lang/String;
+    check-cast v6, [Ljava/lang/String;
 
     .line 15
     .line 16
-    invoke-direct {p0, v4, v2}, Lcom/facebook/common/dextricks/DexStore;->setDifference([Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0, v6, v2}, Lcom/facebook/common/dextricks/DexStore;->setDifference([Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 17
     .line 18
     .line 19
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 20
-    const/4 v6, 0x0
+    const/4 v3, 0x0
 
     .line 21
     :goto_0
-    array-length v0, v4
+    array-length v0, v6
 
     .line 22
     const/4 v1, 0x1
 
     .line 23
-    if-ge v3, v0, :cond_2
+    if-ge v4, v0, :cond_2
 
     .line 24
     .line 25
-    aget-object v0, v4, v3
+    aget-object v0, v6, v4
 
     .line 26
     .line 27
@@ -1186,175 +1209,171 @@
 
     .line 28
     .line 29
-    aget-object v0, v4, v3
+    invoke-static {v0}, Lcom/facebook/common/dextricks/DexStoreUtils;->isIgnoreDirtyFileName(Ljava/lang/String;)Z
 
     .line 30
     .line 31
-    invoke-static {v0}, Lcom/facebook/common/dextricks/DexStoreUtils;->isIgnoreDirtyFileName(Ljava/lang/String;)Z
-
     .line 32
-    .line 33
-    .line 34
     move-result v0
 
-    .line 35
+    .line 33
     if-nez v0, :cond_1
+
+    .line 34
+    .line 35
+    iget-object v1, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
     .line 36
     .line 37
-    iget-object v1, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    aget-object v0, v6, v4
 
     .line 38
     .line 39
-    aget-object v0, v4, v3
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 40
     .line 41
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
     .line 42
-    .line 43
-    .line 44
     move-result-object v0
 
-    .line 45
+    .line 43
     invoke-interface {p3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 44
+    .line 45
     .line 46
+    const/4 v3, 0x1
+
     .line 47
-    .line 48
-    const/4 v6, 0x1
-
-    .line 49
     :cond_1
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    .line 50
-    .line 51
+    .line 48
+    .line 49
     goto :goto_0
 
-    .line 52
+    .line 50
     :cond_2
-    if-eqz v6, :cond_3
+    if-eqz v3, :cond_3
+
+    .line 51
+    .line 52
+    iget v0, p1, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
 
     .line 53
     .line 54
-    iget v0, p1, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
+    and-int/lit8 v0, v0, 0x1
 
     .line 55
     .line 56
-    and-int/lit8 v0, v0, 0x1
+    if-eqz v0, :cond_3
 
     .line 57
     .line 58
-    if-eqz v0, :cond_3
-
-    .line 59
-    .line 60
     const/4 v5, 0x2
 
-    .line 61
+    .line 59
     :cond_3
     invoke-direct {p0}, Lcom/facebook/common/dextricks/DexStore;->checkDeps()Z
 
+    .line 60
+    .line 61
     .line 62
-    .line 63
-    .line 64
     move-result v0
 
-    .line 65
+    .line 63
     if-nez v0, :cond_5
 
-    .line 66
-    .line 67
+    .line 64
+    .line 65
     const/4 v5, 0x2
 
-    .line 68
+    .line 66
     :cond_4
     return v5
 
-    .line 69
+    .line 67
     :cond_5
     if-ge v5, v1, :cond_4
 
+    .line 68
+    .line 69
+    iget-object v4, p1, Lcom/facebook/common/dextricks/OdexScheme;->expectedFileInfos:[Lcom/facebook/common/dextricks/ExpectedFileInfo;
+
     .line 70
     .line 71
-    iget-object v4, p1, Lcom/facebook/common/dextricks/OdexScheme;->expectedFileInfos:[Lcom/facebook/common/dextricks/ExpectedFileInfo;
+    invoke-virtual {v2}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     .line 72
     .line 73
-    invoke-virtual {v2}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
     .line 74
-    .line 75
-    .line 76
     move-result-object v3
 
-    .line 77
+    .line 75
     check-cast v3, [Ljava/lang/String;
+
+    .line 76
+    .line 77
+    invoke-direct {p0, v3, p2}, Lcom/facebook/common/dextricks/DexStore;->setDifference([Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 78
     .line 79
-    invoke-direct {p0, v3, p2}, Lcom/facebook/common/dextricks/DexStore;->setDifference([Ljava/lang/String;[Ljava/lang/String;)V
-
     .line 80
-    .line 81
-    .line 82
     const/4 v2, 0x0
 
-    .line 83
+    .line 81
     :goto_1
     array-length v0, v3
 
-    .line 84
+    .line 82
     if-ge v2, v0, :cond_4
+
+    .line 83
+    .line 84
+    aget-object v0, v4, v2
 
     .line 85
     .line 86
-    aget-object v0, v4, v2
+    if-eqz v0, :cond_6
 
     .line 87
     .line 88
-    if-eqz v0, :cond_6
+    iget-boolean v0, v0, Lcom/facebook/common/dextricks/ExpectedFileInfo;->mIsOptional:Z
 
     .line 89
     .line 90
-    iget-boolean v0, v0, Lcom/facebook/common/dextricks/ExpectedFileInfo;->mIsOptional:Z
-
-    .line 91
-    .line 92
     const/4 v1, 0x1
 
-    .line 93
+    .line 91
     if-nez v0, :cond_7
 
-    .line 94
-    .line 95
+    .line 92
+    .line 93
     :cond_6
     const/4 v1, 0x0
 
-    .line 96
+    .line 94
     :cond_7
     aget-object v0, v3, v2
 
+    .line 95
+    .line 96
+    if-eqz v0, :cond_8
+
     .line 97
     .line 98
-    if-eqz v0, :cond_8
+    if-nez v1, :cond_8
 
     .line 99
     .line 100
-    if-nez v1, :cond_8
-
-    .line 101
-    .line 102
     const/4 v5, 0x1
 
-    .line 103
+    .line 101
     :cond_8
     add-int/lit8 v2, v2, 0x1
 
-    .line 104
-    .line 105
+    .line 102
+    .line 103
     goto :goto_1
 .end method
 
@@ -1389,7 +1408,7 @@
 
     .line 11
     .line 12
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 13
     .line 14
@@ -1463,7 +1482,7 @@
 
     .line 20
     .line 21
-    sget-boolean v0, LX/0Hl;->A00:Z
+    sget-boolean v0, LX/0H5;->A00:Z
 
     .line 22
     .line 23
@@ -1476,7 +1495,7 @@
 
     .line 26
     :cond_1
-    sget-boolean v0, LX/0Hl;->A00:Z
+    sget-boolean v0, LX/0H5;->A00:Z
 
     .line 27
     .line 28
@@ -1538,7 +1557,7 @@
     .locals 3
 
     .line 0
-    sget-boolean v0, LX/0Hl;->A00:Z
+    sget-boolean v0, LX/0H5;->A00:Z
 
     .line 1
     .line 2
@@ -1597,57 +1616,73 @@
     .line 26
     .line 27
     .line 28
-    move-result-object v1
+    move-result-object v0
 
     .line 29
-    const-string v0, ".odex"
+    const-string v1, ".odex"
 
     .line 30
     .line 31
-    invoke-static {v1, v0}, LX/00I;->A00(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 32
     .line 33
     .line 34
-    move-result-object v1
+    move-result-object v0
 
     .line 35
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 36
     .line 37
     .line 38
-    move-result v0
+    move-result-object v0
 
     .line 39
-    if-eqz v0, :cond_1
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 40
     .line 41
+    .line 42
+    move-result-object v1
+
+    .line 43
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    .line 44
+    .line 45
+    .line 46
+    move-result v0
+
+    .line 47
+    if-eqz v0, :cond_1
+
+    .line 48
+    .line 49
     return-object v1
 
-    .line 42
+    .line 50
     :cond_1
     invoke-static {}, Lcom/facebook/common/dextricks/Fs;->findSystemDalvikCache()Ljava/io/File;
 
-    .line 43
-    .line 44
-    .line 45
+    .line 51
+    .line 52
+    .line 53
     move-result-object v1
 
-    .line 46
+    .line 54
     const-string v0, "classes.dex"
 
-    .line 47
-    .line 48
+    .line 55
+    .line 56
     invoke-static {v1, p0, v0}, Lcom/facebook/common/dextricks/Fs;->dexOptGenerateCacheFileName(Ljava/io/File;Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
-    .line 49
-    .line 50
-    .line 51
+    .line 57
+    .line 58
+    .line 59
     move-result-object v0
 
-    .line 52
+    .line 60
     return-object v0
 .end method
 
@@ -1831,7 +1866,7 @@
 
     .line 7
     :goto_0
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     .line 8
     .line 9
@@ -1843,64 +1878,57 @@
 
     .line 12
     .line 13
-    goto :goto_1
+    if-nez p0, :cond_1
 
     .line 14
+    .line 15
+    goto :goto_1
+
+    .line 16
     :cond_0
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 15
-    .line 16
     .line 17
+    .line 18
+    .line 19
     move-result v0
 
-    .line 18
-    if-eqz v0, :cond_2
-
-    .line 19
     .line 20
-    goto :goto_2
+    if-eqz v0, :cond_1
 
     .line 21
-    :cond_1
-    const/4 v1, 0x0
-
     .line 22
-    goto :goto_2
+    goto :goto_1
 
     .line 23
-    :goto_1
-    if-nez p0, :cond_2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_1
+    iget-object v1, v1, Lcom/facebook/common/dextricks/DexStore;->next:Lcom/facebook/common/dextricks/DexStore;
 
     .line 24
     .line 25
-    :goto_2
-    monitor-exit v2
+    goto :goto_0
 
     .line 26
-    return-object v1
+    :cond_2
+    const/4 v1, 0x0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 27
-    :cond_2
-    :try_start_1
-    iget-object v1, v1, Lcom/facebook/common/dextricks/DexStore;->next:Lcom/facebook/common/dextricks/DexStore;
+    :goto_1
+    monitor-exit v2
 
     .line 28
-    .line 29
-    goto :goto_0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    return-object v1
 
-    .line 30
+    .line 29
     :catchall_0
     move-exception v0
 
-    .line 31
+    .line 30
     monitor-exit v2
 
-    .line 32
+    .line 31
     throw v0
 .end method
 
@@ -1978,7 +2006,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0E5;->A01()I
+    invoke-static {}, LX/0DC;->A01()I
 
     .line 1
     .line 2
@@ -2172,6 +2200,109 @@
     return-object v0
 .end method
 
+.method public static getIdForTracing(Ljava/io/File;)Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v2
+
+    .line 8
+    const/16 v0, 0x40
+
+    .line 9
+    .line 10
+    if-le v2, v0, :cond_0
+
+    .line 11
+    .line 12
+    const/4 v1, 0x0
+
+    .line 13
+    const-string v0, "/data/data/"
+
+    .line 14
+    .line 15
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    if-eqz v0, :cond_1
+
+    .line 20
+    .line 21
+    const/16 v1, 0x2f
+
+    .line 22
+    .line 23
+    const/16 v0, 0xb
+
+    .line 24
+    .line 25
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->indexOf(II)I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
+
+    .line 29
+    add-int/lit8 v1, v0, 0x1
+
+    .line 30
+    .line 31
+    add-int/lit8 v0, v1, 0x40
+
+    .line 32
+    .line 33
+    if-gt v2, v0, :cond_1
+
+    .line 34
+    .line 35
+    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object p0
+
+    .line 39
+    :cond_0
+    return-object p0
+
+    .line 40
+    :cond_1
+    add-int/lit8 v0, v1, 0x40
+
+    .line 41
+    .line 42
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object p0
+
+    .line 46
+    return-object p0
+.end method
+
 .method private getMegaZipName(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;)Ljava/lang/String;
     .locals 2
 
@@ -2207,7 +2338,7 @@
 
     .line 16
     .line 17
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 18
     .line 19
@@ -2241,7 +2372,7 @@
 
     .line 7
     .line 8
-    invoke-static {v1, p1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 9
     .line 10
@@ -2249,7 +2380,7 @@
     move-result-object v0
 
     .line 12
-    invoke-static {p0, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 13
     .line 14
@@ -2471,7 +2602,7 @@
     long-to-int v2, p0
 
     .line 4
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 5
     .line 6
@@ -2488,7 +2619,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0, v2}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 14
     .line 15
@@ -2497,7 +2628,7 @@
 
     .line 17
     :goto_0
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 18
     .line 19
@@ -2509,7 +2640,7 @@
 
     .line 22
     :pswitch_0
-    const-string v0, "STATE_NOOP"
+    const-string v0, "STATE_INVALID"
 
     .line 23
     .line 24
@@ -2517,7 +2648,7 @@
 
     .line 25
     :pswitch_1
-    const-string v0, "STATE_ART_XDEX"
+    const-string v0, "STATE_TX_FAILED"
 
     .line 26
     .line 27
@@ -2525,7 +2656,7 @@
 
     .line 28
     :pswitch_2
-    const-string v0, "STATE_ART_TURBO"
+    const-string v0, "STATE_FALLBACK"
 
     .line 29
     .line 30
@@ -2533,7 +2664,7 @@
 
     .line 31
     :pswitch_3
-    const-string v0, "STATE_REGEN_FORCED"
+    const-string v0, "STATE_XDEX"
 
     .line 32
     .line 33
@@ -2541,7 +2672,7 @@
 
     .line 34
     :pswitch_4
-    const-string v0, "STATE_BAD_GEN"
+    const-string v0, "STATE_TURBO"
 
     .line 35
     .line 36
@@ -2549,7 +2680,7 @@
 
     .line 37
     :pswitch_5
-    const-string v0, "STATE_TURBO"
+    const-string v0, "STATE_BAD_GEN"
 
     .line 38
     .line 39
@@ -2557,7 +2688,7 @@
 
     .line 40
     :pswitch_6
-    const-string v0, "STATE_XDEX"
+    const-string v0, "STATE_REGEN_FORCED"
 
     .line 41
     .line 42
@@ -2565,7 +2696,7 @@
 
     .line 43
     :pswitch_7
-    const-string v0, "STATE_FALLBACK"
+    const-string v0, "STATE_ART_TURBO"
 
     .line 44
     .line 45
@@ -2573,7 +2704,7 @@
 
     .line 46
     :pswitch_8
-    const-string v0, "STATE_TX_FAILED"
+    const-string v0, "STATE_ART_XDEX"
 
     .line 47
     .line 48
@@ -2581,24 +2712,25 @@
 
     .line 49
     :pswitch_9
-    const-string v0, "STATE_INVALID"
+    const-string v0, "STATE_NOOP"
 
     .line 50
     .line 51
     goto :goto_0
 
+    .line 52
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_9
     .end packed-switch
 .end method
 
@@ -2720,7 +2852,7 @@
     const/4 v0, 0x0
 
     .line 54
-    invoke-static {p1, v1, v0}, LX/0QY;->A00(Landroid/content/Context;Ljava/lang/String;I)I
+    invoke-static {p1, v1, v0}, LX/0Mp;->A00(Landroid/content/Context;Ljava/lang/String;I)I
 
     .line 55
     .line 56
@@ -2983,7 +3115,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 1
     .line 2
@@ -3069,7 +3201,7 @@
 
     .line 10
     .line 11
-    invoke-static {p1}, LX/0I1;->A00(Landroid/content/Context;)LX/0I1;
+    invoke-static {p1}, LX/0HL;->A00(Landroid/content/Context;)LX/0HL;
 
     .line 12
     .line 13
@@ -3276,122 +3408,122 @@
 
     .line 111
     :goto_1
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 112
     .line 113
-    const-string v0, "ditto"
-
-    .line 114
-    .line 115
-    invoke-virtual {v2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    .line 116
-    .line 117
-    .line 118
-    move-result v0
-
-    .line 119
-    if-eqz v0, :cond_2
-
-    .line 120
-    .line 121
     :cond_1
     aput-object v8, v5, v1
 
-    .line 122
-    .line 123
+    .line 114
+    .line 115
     :cond_2
     const-string v0, "config.tmp"
 
-    .line 124
-    .line 125
+    .line 116
+    .line 117
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 126
-    .line 127
-    .line 128
+    .line 118
+    .line 119
+    .line 120
     move-result v0
 
-    .line 129
+    .line 121
     if-eqz v0, :cond_3
 
-    .line 130
-    .line 131
-    invoke-static {p0, v2}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    .line 122
+    .line 123
+    invoke-static {p0, v2}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
-    .line 132
-    .line 133
-    .line 134
+    .line 124
+    .line 125
+    .line 126
     move-result-object v0
 
-    .line 135
+    .line 127
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 136
-    .line 137
-    .line 138
+    .line 128
+    .line 129
+    .line 130
     aput-object v8, v5, v1
 
-    .line 139
-    .line 140
+    .line 131
+    .line 132
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
-    .line 141
-    .line 142
+    .line 133
+    .line 134
     goto :goto_0
 
-    .line 143
+    .line 135
     :cond_4
     const/4 v0, 0x0
 
-    .line 144
+    .line 136
     goto :goto_1
 
-    .line 145
+    .line 137
     :cond_5
     const/4 v2, 0x0
 
-    .line 146
+    .line 138
     :goto_2
     if-ge v2, v3, :cond_e
 
-    .line 147
-    .line 148
+    .line 139
+    .line 140
     aget-object v6, v5, v2
 
-    .line 149
-    .line 150
+    .line 141
+    .line 142
     if-eqz v6, :cond_d
+
+    .line 143
+    .line 144
+    const-string v7, ".tmpdir_lock"
+
+    .line 145
+    .line 146
+    invoke-virtual {v6, v7}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    .line 147
+    .line 148
+    .line 149
+    move-result v0
+
+    .line 150
+    const-string v1, ".tmpdir"
 
     .line 151
     .line 152
-    const-string v7, ".tmpdir_lock"
+    if-eqz v0, :cond_9
 
     .line 153
     .line 154
-    invoke-virtual {v6, v7}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    aput-object v8, v5, v2
 
     .line 155
     .line 156
+    invoke-static {v6}, Lcom/facebook/common/dextricks/Fs;->stripLastExtension(Ljava/lang/String;)Ljava/lang/String;
+
     .line 157
-    move-result v0
-
     .line 158
-    const-string v1, ".tmpdir"
-
     .line 159
+    move-result-object v0
+
     .line 160
-    if-eqz v0, :cond_9
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 161
     .line 162
-    aput-object v8, v5, v2
-
     .line 163
+    move-result-object v0
+
     .line 164
-    invoke-static {v6}, Lcom/facebook/common/dextricks/Fs;->stripLastExtension(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 165
     .line 166
@@ -3399,181 +3531,181 @@
     move-result-object v0
 
     .line 168
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0, v5, v0}, Lcom/facebook/common/dextricks/DexStore;->findInArray([Ljava/lang/String;Ljava/lang/String;)I
 
     .line 169
     .line 170
     .line 171
-    move-result-object v0
+    move-result v0
 
     .line 172
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    if-ltz v0, :cond_8
 
     .line 173
     .line 174
-    .line 175
-    move-result-object v0
+    aget-object v7, v5, v0
 
+    .line 175
     .line 176
-    invoke-direct {p0, v5, v0}, Lcom/facebook/common/dextricks/DexStore;->findInArray([Ljava/lang/String;Ljava/lang/String;)I
+    aput-object v8, v5, v0
 
     .line 177
     .line 178
-    .line 179
-    move-result v0
-
-    .line 180
-    if-ltz v0, :cond_8
-
-    .line 181
-    .line 182
-    aget-object v7, v5, v0
-
-    .line 183
-    .line 184
-    aput-object v8, v5, v0
-
-    .line 185
-    .line 186
     :goto_3
     if-eqz v6, :cond_6
 
-    .line 187
-    .line 188
+    .line 179
+    .line 180
     if-eqz v7, :cond_6
 
+    .line 181
+    .line 182
+    invoke-static {p0, v6}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+
+    .line 183
+    .line 184
+    .line 185
+    move-result-object v0
+
+    .line 186
+    invoke-static {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile;->open(Ljava/io/File;)Lcom/facebook/common/dextricks/ReentrantLockFile;
+
+    .line 187
+    .line 188
     .line 189
+    move-result-object v6
+
     .line 190
-    invoke-static {p0, v6}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    :try_start_0
+    invoke-virtual {v6, v4}, Lcom/facebook/common/dextricks/ReentrantLockFile;->tryAcquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
 
     .line 191
     .line 192
     .line 193
-    move-result-object v0
-
-    .line 194
-    invoke-static {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile;->open(Ljava/io/File;)Lcom/facebook/common/dextricks/ReentrantLockFile;
-
-    .line 195
-    .line 196
-    .line 197
-    move-result-object v6
-
-    .line 198
-    :try_start_0
-    invoke-virtual {v6, v4}, Lcom/facebook/common/dextricks/ReentrantLockFile;->tryAcquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
-
-    .line 199
-    .line 200
-    .line 201
     move-result-object v1
 
-    .line 202
+    .line 194
     if-eqz v1, :cond_c
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 203
-    .line 204
+    .line 195
+    .line 196
     :try_start_1
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 205
-    .line 206
-    .line 207
-    invoke-static {p0, v7}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    .line 197
+    .line 198
+    .line 199
+    invoke-static {p0, v7}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
-    .line 208
-    .line 209
-    .line 210
+    .line 200
+    .line 201
+    .line 202
     move-result-object v0
 
-    .line 211
+    .line 203
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 212
-    .line 213
-    .line 214
+    .line 204
+    .line 205
+    .line 206
     :try_start_2
     invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
-    .line 215
-    .line 216
-    .line 217
+    .line 207
+    .line 208
+    .line 209
     goto :goto_4
 
-    .line 218
+    .line 210
     :cond_6
     if-eqz v6, :cond_7
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 219
-    .line 220
-    invoke-static {p0, v6}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    .line 211
+    .line 212
+    invoke-static {p0, v6}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
-    .line 221
-    .line 222
-    .line 223
+    .line 213
+    .line 214
+    .line 215
     move-result-object v0
 
-    .line 224
+    .line 216
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 225
-    .line 226
-    .line 227
+    .line 217
+    .line 218
+    .line 219
     goto :goto_5
 
-    .line 228
+    .line 220
     :cond_7
     if-eqz v7, :cond_d
 
-    .line 229
-    .line 230
-    invoke-static {p0, v7}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    .line 221
+    .line 222
+    invoke-static {p0, v7}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
-    .line 231
-    .line 232
-    .line 233
+    .line 223
+    .line 224
+    .line 225
     move-result-object v0
 
-    .line 234
+    .line 226
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 235
-    .line 236
-    .line 237
+    .line 227
+    .line 228
+    .line 229
     goto :goto_5
 
-    .line 238
+    .line 230
     :cond_8
     move-object v7, v8
 
-    .line 239
+    .line 231
     goto :goto_3
 
-    .line 240
+    .line 232
     :cond_9
     invoke-virtual {v6, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    .line 233
+    .line 234
+    .line 235
+    move-result v0
+
+    .line 236
+    if-eqz v0, :cond_b
+
+    .line 237
+    .line 238
+    aput-object v8, v5, v2
+
+    .line 239
+    .line 240
+    invoke-static {v6}, Lcom/facebook/common/dextricks/Fs;->stripLastExtension(Ljava/lang/String;)Ljava/lang/String;
 
     .line 241
     .line 242
     .line 243
-    move-result v0
+    move-result-object v0
 
     .line 244
-    if-eqz v0, :cond_b
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 245
     .line 246
-    aput-object v8, v5, v2
-
     .line 247
+    move-result-object v0
+
     .line 248
-    invoke-static {v6}, Lcom/facebook/common/dextricks/Fs;->stripLastExtension(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 249
     .line 250
@@ -3581,162 +3713,157 @@
     move-result-object v0
 
     .line 252
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0, v5, v0}, Lcom/facebook/common/dextricks/DexStore;->findInArray([Ljava/lang/String;Ljava/lang/String;)I
 
     .line 253
     .line 254
     .line 255
-    move-result-object v0
+    move-result v1
 
     .line 256
-    invoke-static {v7, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    if-ltz v1, :cond_a
 
     .line 257
     .line 258
-    .line 259
-    move-result-object v0
+    aget-object v0, v5, v1
 
+    .line 259
     .line 260
-    invoke-direct {p0, v5, v0}, Lcom/facebook/common/dextricks/DexStore;->findInArray([Ljava/lang/String;Ljava/lang/String;)I
+    aput-object v8, v5, v1
 
     .line 261
     .line 262
-    .line 263
-    move-result v1
-
-    .line 264
-    if-ltz v1, :cond_a
-
-    .line 265
-    .line 266
-    aget-object v0, v5, v1
-
-    .line 267
-    .line 268
-    aput-object v8, v5, v1
-
-    .line 269
-    .line 270
     move-object v7, v6
 
-    .line 271
+    .line 263
     move-object v6, v0
 
-    .line 272
+    .line 264
     goto :goto_3
 
-    .line 273
+    .line 265
     :cond_a
     move-object v7, v6
 
-    .line 274
+    .line 266
     move-object v6, v8
 
-    .line 275
+    .line 267
     goto :goto_3
 
-    .line 276
+    .line 268
     :cond_b
     move-object v6, v8
 
-    .line 277
+    .line 269
     move-object v7, v8
 
-    .line 278
+    .line 270
     goto :goto_3
 
-    .line 279
+    .line 271
     :cond_c
     :goto_4
     invoke-virtual {v6}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
 
-    .line 280
-    .line 281
-    .line 282
+    .line 272
+    .line 273
+    .line 274
     :cond_d
     :goto_5
     add-int/lit8 v2, v2, 0x1
 
-    .line 283
-    .line 284
+    .line 275
+    .line 276
     goto/16 :goto_2
 
-    .line 285
-    .line 286
+    .line 277
+    .line 278
     :catchall_0
     :try_start_3
     move-exception v0
 
-    .line 287
+    .line 279
     invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
-    .line 288
-    .line 289
-    .line 290
+    .line 280
+    .line 281
+    .line 282
     throw v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 291
+    .line 283
     :catchall_1
-    move-exception v0
+    move-exception v1
 
-    .line 292
+    .line 284
     :try_start_4
     invoke-virtual {v6}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 293
-    .line 294
-    .line 295
-    :catchall_2
-    throw v0
+    .line 285
+    .line 286
+    .line 287
+    throw v1
 
-    .line 296
+    .line 288
+    :catchall_2
+    move-exception v0
+
+    .line 289
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 290
+    .line 291
+    .line 292
+    throw v1
+
+    .line 293
     :cond_e
     return-object v5
 
-    .line 297
+    .line 294
     :cond_f
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-    .line 298
-    .line 299
-    .line 300
+    .line 295
+    .line 296
+    .line 297
     move-result-object v1
 
-    .line 301
+    .line 298
     const-string v0, "unable to list directory "
 
+    .line 299
+    .line 300
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 301
     .line 302
     .line 303
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
     .line 304
     .line 305
-    .line 306
-    iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 306
     .line 307
     .line 308
-    invoke-static {v0, v1}, LX/001;->A0J(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    move-result-object v0
 
     .line 309
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
+
     .line 310
     .line 311
-    move-result-object v0
-
     .line 312
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    move-result-object v1
 
     .line 313
-    .line 314
-    .line 315
-    move-result-object v0
-
-    .line 316
-    throw v0
+    throw v1
 .end method
 
 .method private loadAllCompressedOreoImpl(Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;Lcom/facebook/common/dextricks/DexManifest;ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
@@ -3746,12 +3873,12 @@
 
     const-string v0, "DexStore.loadAllOreo"
 
-    .line 49958
+    .line 32328
     invoke-static {v1, v2, v0}, Lcom/facebook/systrace/Systrace;->A02(JLjava/lang/String;)V
 
     and-int/lit8 v14, p3, -0x2
 
-    .line 49959
+    .line 32329
     :try_start_0
     move-object/from16 v4, p0
 
@@ -3759,25 +3886,25 @@
 
     move-object/from16 v10, p2
 
-    move-object/from16 v7, p5
+    move-object/from16 v6, p5
 
-    invoke-direct {v4, v7, v10}, Lcom/facebook/common/dextricks/DexStore;->getMegaZipName(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;)Ljava/lang/String;
+    invoke-direct {v4, v6, v10}, Lcom/facebook/common/dextricks/DexStore;->getMegaZipName(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 49960
-    invoke-static {v3, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    .line 32330
+    invoke-static {v3, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v5
 
-    .line 49961
+    .line 32331
     invoke-virtual {v5}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, v4, Lcom/facebook/common/dextricks/DexStore;->mMegaZipPath:Ljava/lang/String;
 
-    .line 49962
+    .line 32332
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x18
@@ -3790,24 +3917,24 @@
 
     if-eq v3, v0, :cond_0
 
-    .line 49963
+    .line 32333
     iget-object v0, v10, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
 
-    new-instance v6, Lcom/facebook/common/dextricks/OdexSchemeOreo;
+    new-instance v7, Lcom/facebook/common/dextricks/OdexSchemeOreo;
 
-    invoke-direct {v6, v0, v5, v7, v9}, Lcom/facebook/common/dextricks/OdexSchemeOreo;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;Ljava/io/File;Landroid/content/Context;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
+    invoke-direct {v7, v0, v5, v6, v9}, Lcom/facebook/common/dextricks/OdexSchemeOreo;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;Ljava/io/File;Landroid/content/Context;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
 
     goto :goto_0
 
-    .line 49964
+    .line 32334
     :cond_0
     iget-object v0, v10, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
 
-    new-instance v6, Lcom/facebook/common/dextricks/OdexSchemeNougat;
+    new-instance v7, Lcom/facebook/common/dextricks/OdexSchemeNougat;
 
-    invoke-direct {v6, v0, v5, v7, v9}, Lcom/facebook/common/dextricks/OdexSchemeNougat;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;Ljava/io/File;Landroid/content/Context;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
+    invoke-direct {v7, v0, v5, v6, v9}, Lcom/facebook/common/dextricks/OdexSchemeNougat;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;Ljava/io/File;Landroid/content/Context;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
 
-    .line 49965
+    .line 32335
     :goto_0
     const/16 v8, 0x1d
 
@@ -3817,15 +3944,15 @@
 
     if-ne v3, v8, :cond_1
 
-    .line 49966
+    .line 32336
     invoke-static {}, Lcom/facebook/common/dextricks/DexStore$PreviewSdkHelper;->isPreviewSdk()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 49967
-    invoke-virtual {v7}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    .line 32337
+    invoke-virtual {v6}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
@@ -3833,10 +3960,10 @@
 
     if-ge v0, v8, :cond_2
 
-    .line 49968
-    invoke-static {}, LX/0E5;->A01()I
+    .line 32338
+    invoke-static {}, LX/0DC;->A01()I
 
-    .line 49969
+    .line 32339
     :cond_1
     const/4 v0, 0x0
 
@@ -3848,14 +3975,14 @@
     :goto_1
     iput-boolean v0, v4, Lcom/facebook/common/dextricks/DexStore;->mUseBgDexOpt:Z
 
-    .line 49970
+    .line 32340
     if-eq v3, v8, :cond_3
 
     const/16 v0, 0x1e
 
     if-eq v3, v0, :cond_3
 
-    .line 49971
+    .line 32341
     invoke-static {}, Lcom/facebook/common/dextricks/DexStore$PreviewSdkHelper;->isPreviewSdk()Z
 
     move-result v0
@@ -3877,14 +4004,14 @@
     :goto_2
     iput-boolean v0, v4, Lcom/facebook/common/dextricks/DexStore;->mUseEagerDexOpt:Z
 
-    .line 49972
-    invoke-static {}, LX/0I1;->A02()Z
+    .line 32342
+    invoke-static {}, LX/0HL;->A02()Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    invoke-direct {v4, v7, v6}, Lcom/facebook/common/dextricks/DexStore;->shouldUnpackForCloudPgo(Landroid/content/Context;Lcom/facebook/common/dextricks/OdexSchemeOreo;)Z
+    invoke-direct {v4, v6, v7}, Lcom/facebook/common/dextricks/DexStore;->shouldUnpackForCloudPgo(Landroid/content/Context;Lcom/facebook/common/dextricks/OdexSchemeOreo;)Z
 
     move-result v0
 
@@ -3892,23 +4019,23 @@
 
     if-eqz v0, :cond_5
 
-    .line 49973
-    invoke-virtual {v6}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->requestDexUnpack()V
+    .line 32343
+    invoke-virtual {v7}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->requestDexUnpack()V
 
     const-string v0, "inCloudPgoQE: dex unpack requested for cloud pgo qe"
 
-    .line 49974
-    invoke-static {v0}, LX/002;->A0P(Ljava/lang/String;)V
+    .line 32344
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
 
-    .line 49975
+    .line 32345
     :goto_3
-    invoke-virtual {v6}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->needsUnpack()Z
+    invoke-virtual {v7}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->needsUnpack()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 49976
+    .line 32346
     iget-object v0, v4, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->list()[Ljava/lang/String;
@@ -3917,20 +4044,20 @@
 
     if-eqz v11, :cond_16
 
-    .line 49977
+    .line 32347
     array-length v8, v11
 
     const/4 v3, 0x0
 
     goto :goto_4
 
-    .line 49978
+    .line 32348
     :cond_5
     const/4 v13, 0x0
 
     goto :goto_3
 
-    .line 49979
+    .line 32349
     :goto_4
     if-ge v3, v8, :cond_9
 
@@ -3938,7 +4065,7 @@
 
     const-string v0, ".dex"
 
-    .line 49980
+    .line 32350
     invoke-virtual {v12, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -3947,7 +4074,7 @@
 
     const-string v0, ".zlock"
 
-    .line 49981
+    .line 32351
     invoke-virtual {v12, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -3956,7 +4083,7 @@
 
     const-string v0, ".prof"
 
-    .line 49982
+    .line 32352
     invoke-virtual {v12, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -3965,7 +4092,7 @@
 
     const-string v0, ".zip"
 
-    .line 49983
+    .line 32353
     invoke-virtual {v12, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -3974,7 +4101,7 @@
 
     const-string v0, "z-"
 
-    .line 49984
+    .line 32354
     invoke-virtual {v12, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -3992,7 +4119,7 @@
     :cond_6
     const-string v0, "oat"
 
-    .line 49985
+    .line 32355
     invoke-virtual {v12, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -4001,7 +4128,7 @@
 
     const-string v0, "foreign-dex"
 
-    .line 49986
+    .line 32356
     invoke-virtual {v12, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -4010,20 +4137,20 @@
 
     const-string v0, "regen_stamp"
 
-    .line 49987
+    .line 32357
     invoke-virtual {v0, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 49988
+    .line 32358
     :cond_7
-    invoke-static {v4, v12}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v4, v12}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 49989
+    .line 32359
     invoke-static {v0}, Lcom/facebook/common/dextricks/Fs;->deleteRecursiveNoThrow(Ljava/io/File;)V
 
     :cond_8
@@ -4034,12 +4161,12 @@
     :cond_9
     const/4 v11, 0x1
 
-    .line 49990
+    .line 32360
     move-object/from16 v19, v9
 
-    move-object/from16 v20, v7
+    move-object/from16 v20, v6
 
-    move-object/from16 v17, v6
+    move-object/from16 v17, v7
 
     move-object/from16 v16, v10
 
@@ -4047,109 +4174,104 @@
 
     invoke-direct/range {v15 .. v20}, Lcom/facebook/common/dextricks/DexStore;->runCompiler(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/common/dextricks/OdexScheme;ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)V
 
-    .line 49991
+    .line 32361
     iget-boolean v0, v4, Lcom/facebook/common/dextricks/DexStore;->mUseEagerDexOpt:Z
 
     if-eqz v0, :cond_a
 
     iget-object v3, v4, Lcom/facebook/common/dextricks/DexStore;->id:Ljava/lang/String;
 
-    .line 49992
+    .line 32362
     const-string v0, "dex"
 
-    .line 49993
+    .line 32363
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 49994
+    .line 32364
     if-eqz v0, :cond_a
 
-    .line 49995
-    invoke-virtual {v6, v7}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->addEmptyDex(Landroid/content/Context;)V
+    .line 32365
+    invoke-virtual {v7, v6}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->addEmptyDex(Landroid/content/Context;)V
 
-    .line 49996
+    .line 32366
     :cond_a
-    invoke-virtual {v6}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->finalizeZip()V
+    invoke-virtual {v7}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->finalizeZip()V
 
-    .line 49997
+    .line 32367
     invoke-direct {v4}, Lcom/facebook/common/dextricks/DexStore;->touchRegenStamp()V
+
+    const/4 v8, 0x1
 
     goto :goto_5
 
-    .line 49998
+    .line 32368
     :cond_b
     const/4 v11, 0x1
 
     const/4 v8, 0x0
 
-    goto :goto_6
-
-    .line 49999
     :goto_5
-    const/4 v8, 0x1
-
-    .line 50000
-    :goto_6
     if-eqz v13, :cond_c
 
-    .line 50001
+    .line 32369
     invoke-static {v5}, Lcom/facebook/common/dextricks/OreoFileUtils;->markUnpackedForCloudPgo(Ljava/io/File;)V
 
     const-string v0, "inCloudPgoQE: markUnpackedForCloudPgo in DexStore"
 
-    .line 50002
-    invoke-static {v0}, LX/002;->A0P(Ljava/lang/String;)V
+    .line 32370
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
 
-    .line 50003
+    .line 32371
     :cond_c
     move-object/from16 v9, p1
 
-    invoke-direct {v4, v7, v9}, Lcom/facebook/common/dextricks/DexStore;->installArtHacks(Landroid/content/Context;Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;)V
+    invoke-direct {v4, v6, v9}, Lcom/facebook/common/dextricks/DexStore;->installArtHacks(Landroid/content/Context;Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 50004
+    .line 32372
     :try_start_1
-    invoke-virtual {v6}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->initializeClassLoader()V
+    invoke-virtual {v7}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->initializeClassLoader()V
 
     if-eqz v8, :cond_e
 
-    .line 50005
+    .line 32373
     invoke-direct {v4, v10}, Lcom/facebook/common/dextricks/DexStore;->verifyCanaryClasses(Lcom/facebook/common/dextricks/DexManifest;)V
 
-    goto :goto_7
+    goto :goto_6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 50006
+    .line 32374
     :catchall_0
     move-exception v10
 
     and-int/lit8 v0, v14, 0x2
 
-    .line 50007
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    .line 32375
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     move-result v9
 
-    .line 50008
+    .line 32376
     :try_start_2
-    const-string v7, "Failed to teach app classloader about secondary dex files (%s); fatal: %b, regenerated: %b"
+    const-string v6, "Failed to teach app classloader about secondary dex files (%s); fatal: %b, regenerated: %b"
 
     const/4 v0, 0x3
 
     new-array v5, v0, [Ljava/lang/Object;
 
-    .line 50009
+    .line 32377
     iget-object v0, v4, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
     aput-object v0, v5, v18
 
-    .line 50010
+    .line 32378
     invoke-static {v5, v11, v9}, LX/001;->A1C([Ljava/lang/Object;IZ)V
 
-    .line 50011
+    .line 32379
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
@@ -4158,51 +4280,51 @@
 
     aput-object v3, v5, v0
 
-    .line 50012
-    invoke-static {v10, v7, v5}, Lcom/facebook/common/dextricks/Mlog;->e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 32380
+    invoke-static {v10, v6, v5}, Lcom/facebook/common/dextricks/Mlog;->e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-eqz v9, :cond_d
 
-    .line 50013
+    .line 32381
     new-instance v0, Lcom/facebook/common/dextricks/FatalDexError;
 
     invoke-direct {v0, v10}, Lcom/facebook/common/dextricks/FatalDexError;-><init>(Ljava/lang/Throwable;)V
 
-    goto/16 :goto_d
+    goto/16 :goto_b
 
-    .line 50014
+    .line 32382
     :cond_d
-    invoke-virtual {v6}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->requestDexUnpack()V
+    invoke-virtual {v7}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->requestDexUnpack()V
 
-    .line 50015
+    .line 32383
     new-instance v0, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;
 
     invoke-direct {v0, v10}, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;-><init>(Ljava/lang/Throwable;)V
 
-    goto/16 :goto_d
+    goto/16 :goto_b
 
-    .line 50016
+    .line 32384
     :cond_e
-    :goto_7
-    invoke-direct {v4, v7, v5}, Lcom/facebook/common/dextricks/DexStore;->setUsingAppImageForMainDexStore(Landroid/content/Context;Ljava/io/File;)V
+    :goto_6
+    invoke-direct {v4, v6, v5}, Lcom/facebook/common/dextricks/DexStore;->setUsingAppImageForMainDexStore(Landroid/content/Context;Ljava/io/File;)V
 
-    .line 50017
-    iget-object v12, v6, Lcom/facebook/common/dextricks/OdexSchemeOreo;->mSuppressedExceptions:[Ljava/io/IOException;
+    .line 32385
+    iget-object v12, v7, Lcom/facebook/common/dextricks/OdexSchemeOreo;->mSuppressedExceptions:[Ljava/io/IOException;
 
-    .line 50018
+    .line 32386
     if-eqz v12, :cond_12
 
-    .line 50019
+    .line 32387
     const-string v0, "ClassLoader suppressed exceptions"
 
-    .line 50020
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    .line 32388
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
-    move-result-object v7
+    move-result-object v6
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 50021
+    .line 32389
     :try_start_3
     const-class v5, Ljava/lang/Throwable;
 
@@ -4212,7 +4334,7 @@
 
     aput-object v5, v0, v18
 
-    .line 50022
+    .line 32390
     invoke-virtual {v5, v3, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v5
@@ -4221,23 +4343,23 @@
 
     const/16 v16, 0x0
 
-    .line 50023
-    :goto_8
+    .line 32391
+    :goto_7
     array-length v0, v12
 
     if-ge v3, v0, :cond_11
 
-    .line 50024
+    .line 32392
     aget-object v15, v12, v3
 
-    .line 50025
+    .line 32393
     invoke-virtual {v15}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v14
 
     const-string v0, "No original dex files found for dex location"
 
-    .line 50026
+    .line 32394
     invoke-virtual {v14, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
@@ -4248,7 +4370,7 @@
 
     const-string v0, "/split_"
 
-    .line 50027
+    .line 32395
     invoke-virtual {v14, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
@@ -4260,15 +4382,15 @@
 
     aput-object v15, v0, v18
 
-    .line 50028
-    invoke-virtual {v5, v7, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 32396
+    invoke-virtual {v5, v6, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     const/16 v16, 0x1
 
     :cond_10
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_8
+    goto :goto_7
     :try_end_3
     .catch Ljava/lang/NoSuchMethodException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_3 .. :try_end_3} :catch_0
@@ -4278,19 +4400,19 @@
     :catch_0
     move-exception v5
 
-    goto :goto_9
+    goto :goto_8
 
-    .line 50029
+    .line 32397
     :cond_11
     if-nez v16, :cond_13
 
     :cond_12
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    goto :goto_a
+    goto :goto_9
 
-    .line 50030
-    :goto_9
+    .line 32398
+    :goto_8
     :try_start_4
     const-string v3, "Unable to add suppressed exceptions: %s"
 
@@ -4298,1235 +4420,1960 @@
 
     aput-object v5, v0, v18
 
-    .line 50031
+    .line 32399
     invoke-static {v3, v0}, Lcom/facebook/common/dextricks/Mlog;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 50032
+    .line 32400
     :cond_13
-    :goto_a
+    :goto_9
     invoke-static {v10}, Lcom/facebook/common/dextricks/DexStore;->canLoadCanaryClass(Lcom/facebook/common/dextricks/DexManifest;)Z
 
     move-result v0
 
     if-nez v0, :cond_17
 
-    if-nez v7, :cond_14
+    if-nez v6, :cond_14
 
-    .line 50033
+    .line 32401
     const-string v0, "Failed to load canary class after classloader init"
 
-    .line 50034
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    .line 32402
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
-    move-result-object v7
+    move-result-object v6
 
-    .line 50035
+    .line 32403
     :cond_14
     if-eqz v8, :cond_15
 
-    goto :goto_b
+    const-string v3, "OdexSchemeOreo reunpack after unpack"
+
+    goto :goto_a
 
     :cond_15
     const-string v3, "OdexSchemeOreo reunpack"
 
-    goto :goto_c
-
-    :goto_b
-    const-string v3, "OdexSchemeOreo reunpack after unpack"
-
-    :goto_c
+    :goto_a
     const-string v0, "Failed to load canary class, reunpacking"
 
-    .line 50036
-    invoke-static {v3, v0, v7}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 32404
+    invoke-static {v3, v0, v6}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 50037
-    invoke-virtual {v6}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->requestDexUnpack()V
+    .line 32405
+    invoke-virtual {v7}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->requestDexUnpack()V
 
     const/4 v0, 0x0
 
-    .line 50038
+    .line 32406
     iput-object v0, v4, Lcom/facebook/common/dextricks/DexStore;->mLoadedManifest:Lcom/facebook/common/dextricks/DexManifest;
 
-    .line 50039
+    .line 32407
     new-instance v0, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;
 
-    invoke-direct {v0, v7}, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, v6}, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;-><init>(Ljava/lang/Throwable;)V
 
-    goto :goto_d
+    goto :goto_b
 
-    .line 50040
+    .line 32408
     :cond_16
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 50041
+    .line 32409
     const-string v0, "unable to list directory "
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v0, v4, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    .line 50042
-    invoke-static {v0, v3}, LX/001;->A0J(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 32410
+    invoke-static {v0, v3}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 50043
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    .line 32411
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     move-result-object v0
 
-    .line 50044
-    :goto_d
+    .line 32412
+    :goto_b
     throw v0
 
-    .line 50045
+    .line 32413
     :cond_17
-    if-eqz v7, :cond_18
+    if-eqz v6, :cond_18
 
     const-string v3, "OdexSchemeOreo suppressed"
 
     const-string v0, "OdexSchemeOreo found suppressed exceptions when initializing classloader"
 
-    .line 50046
-    invoke-static {v3, v0, v7}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 32414
+    invoke-static {v3, v0, v6}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 50047
+    .line 32415
     :cond_18
     iput-object v10, v4, Lcom/facebook/common/dextricks/DexStore;->mLoadedManifest:Lcom/facebook/common/dextricks/DexManifest;
 
-    .line 50048
+    .line 32416
     iget-boolean v0, v4, Lcom/facebook/common/dextricks/DexStore;->mUseBgDexOpt:Z
 
-    invoke-virtual {v6, v0, v8}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->registerCodeAndProfile(ZZ)V
+    invoke-virtual {v7, v0, v8}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->registerCodeAndProfile(ZZ)V
 
-    .line 50049
-    invoke-direct {v4, v9, v6, v8}, Lcom/facebook/common/dextricks/DexStore;->setCompressedOreoDexErrorRecoveryInfo(Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;Lcom/facebook/common/dextricks/OdexSchemeOreo;I)V
+    .line 32417
+    invoke-direct {v4, v9, v7, v8}, Lcom/facebook/common/dextricks/DexStore;->setCompressedOreoDexErrorRecoveryInfo(Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;Lcom/facebook/common/dextricks/OdexSchemeOreo;I)V
 
-    .line 50050
+    .line 32418
     iput-object v9, v4, Lcom/facebook/common/dextricks/DexStore;->mLastDeri:Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 50051
+    .line 32419
     invoke-static {v1, v2}, Lcom/facebook/systrace/Systrace;->A01(J)V
 
     return-object p1
 
-    .line 50052
+    .line 32420
     :catchall_1
     move-exception v0
 
-    .line 50053
+    .line 32421
     invoke-static {v1, v2}, Lcom/facebook/systrace/Systrace;->A01(J)V
 
-    .line 50054
+    .line 32422
     throw v0
 .end method
 
 .method private loadAllImpl(ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
     .locals 32
 
-    .line 50055
+    .line 0
     move/from16 v10, p1
 
+    .line 1
+    .line 2
     new-instance v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
 
+    .line 3
+    .line 4
     invoke-direct {v8}, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;-><init>()V
 
-    .line 50056
+    .line 5
+    .line 6
+    .line 7
     move-object/from16 v11, p0
 
+    .line 8
+    .line 9
     invoke-virtual {v11}, Lcom/facebook/common/dextricks/DexStore;->isLoaded()Z
 
+    .line 10
+    .line 11
+    .line 12
     move-result v0
 
-    const/4 v13, 0x1
+    .line 13
+    const/4 v7, 0x1
 
-    const/4 v7, 0x0
+    .line 14
+    const/4 v6, 0x0
 
+    .line 15
     if-eqz v0, :cond_1
 
-    .line 50057
+    .line 16
+    .line 17
     iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->mLastDeri:Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
 
+    .line 18
+    .line 19
     if-nez v0, :cond_0
 
-    new-array v1, v13, [Ljava/lang/Object;
+    .line 20
+    .line 21
+    new-array v1, v7, [Ljava/lang/Object;
 
-    .line 50058
+    .line 22
+    .line 23
     iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    aput-object v0, v1, v7
+    .line 24
+    .line 25
+    aput-object v0, v1, v6
 
+    .line 26
+    .line 27
     const-string v0, "dex store %s has already been loaded, but did not save recovery info"
 
+    .line 28
+    .line 29
     invoke-static {v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 50059
+    .line 30
+    .line 31
+    .line 32
     iput-object v8, v11, Lcom/facebook/common/dextricks/DexStore;->mLastDeri:Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
 
+    .line 33
+    .line 34
     return-object v8
 
-    .line 50060
+    .line 35
     :cond_0
     return-object v0
 
-    .line 50061
+    .line 36
     :cond_1
     invoke-virtual {v11}, Lcom/facebook/common/dextricks/DexStore;->loadManifest()Lcom/facebook/common/dextricks/DexManifest;
 
-    move-result-object v6
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v19
 
-    .line 50062
+    .line 40
     invoke-direct {v11}, Lcom/facebook/common/dextricks/DexStore;->getParents()[Lcom/facebook/common/dextricks/DexStore;
 
+    .line 41
+    .line 42
+    .line 43
     move-result-object v4
 
+    .line 44
     array-length v3, v4
 
+    .line 45
     const/4 v2, 0x0
 
+    .line 46
     :goto_0
-    const/4 v12, 0x2
+    const/4 v5, 0x2
 
-    move-object/from16 v20, p2
+    .line 47
+    move-object/from16 v30, p2
 
+    .line 48
+    .line 49
     move-object/from16 v9, p3
 
+    .line 50
+    .line 51
     if-ge v2, v3, :cond_3
 
+    .line 52
+    .line 53
     aget-object v1, v4, v2
 
-    .line 50063
+    .line 54
+    .line 55
     invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexStore;->isLoaded()Z
 
+    .line 56
+    .line 57
+    .line 58
     move-result v0
 
+    .line 59
     if-nez v0, :cond_2
 
-    .line 50064
-    move-object/from16 v0, v20
+    .line 60
+    .line 61
+    move-object/from16 v0, v30
 
+    .line 62
+    .line 63
     invoke-virtual {v1, v10, v0, v9}, Lcom/facebook/common/dextricks/DexStore;->loadAll(ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
 
-    .line 50065
+    .line 64
+    .line 65
+    .line 66
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
+    .line 67
+    .line 68
     goto :goto_0
 
-    .line 50066
+    .line 69
     :cond_3
     iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->mLockFile:Lcom/facebook/common/dextricks/ReentrantLockFile;
 
-    invoke-virtual {v0, v7}, Lcom/facebook/common/dextricks/ReentrantLockFile;->acquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
+    .line 70
+    .line 71
+    invoke-virtual {v0, v6}, Lcom/facebook/common/dextricks/ReentrantLockFile;->acquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
 
+    .line 72
+    .line 73
+    .line 74
     move-result-object v29
 
+    .line 75
     and-int/lit8 v0, p1, 0x20
 
-    const/16 v19, 0x0
+    .line 76
+    .line 77
+    const/16 v18, 0x0
 
+    .line 78
+    .line 79
     if-eqz v0, :cond_4
 
-    const/16 v19, 0x1
+    .line 80
+    .line 81
+    const/16 v18, 0x1
 
+    .line 82
+    .line 83
     goto :goto_1
 
-    .line 50067
+    .line 84
     :cond_4
     :try_start_0
-    invoke-direct {v11, v9, v6}, Lcom/facebook/common/dextricks/DexStore;->shouldLoadCompressedOreoImpl(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;)Z
+    move-object/from16 v0, v19
 
+    .line 85
+    .line 86
+    invoke-direct {v11, v9, v0}, Lcom/facebook/common/dextricks/DexStore;->shouldLoadCompressedOreoImpl(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;)Z
+
+    .line 87
+    .line 88
+    .line 89
     move-result v0
 
+    .line 90
     if-eqz v0, :cond_5
 
+    .line 91
+    .line 92
     const-string v2, "Loading %s with compressed oreo startup logic"
 
-    new-array v1, v13, [Ljava/lang/Object;
+    .line 93
+    .line 94
+    new-array v1, v7, [Ljava/lang/Object;
 
-    .line 50068
+    .line 95
+    .line 96
     iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    aput-object v0, v1, v7
+    .line 97
+    .line 98
+    aput-object v0, v1, v6
 
+    .line 99
+    .line 100
     invoke-static {v2, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 50069
+    .line 101
+    .line 102
+    .line 103
     move-object v0, v11
 
+    .line 104
     move-object v1, v8
 
-    move-object v2, v6
+    .line 105
+    move-object/from16 v2, v19
 
+    .line 106
+    .line 107
     move v3, v10
 
-    move-object/from16 v4, v20
+    .line 108
+    move-object/from16 v4, v30
 
+    .line 109
+    .line 110
     move-object v5, v9
 
+    .line 111
     invoke-direct/range {v0 .. v5}, Lcom/facebook/common/dextricks/DexStore;->loadAllCompressedOreoImpl(Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;Lcom/facebook/common/dextricks/DexManifest;ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
 
-    goto/16 :goto_10
+    .line 112
+    .line 113
+    .line 114
+    goto/16 :goto_13
 
-    .line 50070
+    .line 115
+    .line 116
     :cond_5
     :goto_1
     invoke-direct {v11}, Lcom/facebook/common/dextricks/DexStore;->readStatusLocked()J
 
+    .line 117
+    .line 118
+    .line 119
     move-result-wide v2
 
-    const-wide/16 v17, 0xf
+    .line 120
+    const-wide/16 v16, 0xf
 
-    and-long v0, v2, v17
+    .line 121
+    .line 122
+    and-long v0, v2, v16
 
+    .line 123
+    .line 124
     long-to-int v4, v0
 
-    int-to-byte v0, v4
+    .line 125
+    int-to-byte v12, v4
 
-    const/16 v1, 0xa
+    .line 126
+    const/16 v0, 0xa
 
-    if-lt v0, v1, :cond_6
+    .line 127
+    .line 128
+    if-lt v12, v0, :cond_6
 
-    const-string v5, "found invalid state %s: nuking dex store %s"
+    .line 129
+    .line 130
+    const-string v4, "found invalid state %s: nuking dex store %s"
 
-    .line 50071
-    invoke-static {v0, v12}, LX/001;->A1Z(BI)[Ljava/lang/Object;
+    .line 131
+    .line 132
+    invoke-static {v12, v5}, LX/001;->A1Z(BI)[Ljava/lang/Object;
 
-    move-result-object v4
+    .line 133
+    .line 134
+    .line 135
+    move-result-object v1
 
-    .line 50072
-    iget-object v1, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    .line 136
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    aput-object v1, v4, v13
+    .line 137
+    .line 138
+    aput-object v0, v1, v7
 
-    invoke-static {v5, v4}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 139
+    .line 140
+    invoke-static {v4, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 141
+    .line 142
+    .line 143
     goto :goto_2
 
+    .line 144
     :cond_6
     const/4 v1, 0x3
 
-    const/4 v4, 0x4
+    .line 145
+    const/4 v0, 0x4
 
-    if-ne v0, v13, :cond_7
+    .line 146
+    if-ne v12, v7, :cond_7
 
-    const-string v16, "found abandoned transaction (prev stateno %s status %x) on dex store %s: nuking store"
+    .line 147
+    .line 148
+    const-string v15, "found abandoned transaction (prev stateno %s status %x) on dex store %s: nuking store"
 
-    new-array v1, v1, [Ljava/lang/Object;
+    .line 149
+    .line 150
+    new-array v4, v1, [Ljava/lang/Object;
 
-    shr-long v4, v2, v4
+    .line 151
+    .line 152
+    shr-long v0, v2, v0
 
-    and-long v14, v4, v17
+    .line 153
+    .line 154
+    and-long v13, v0, v16
 
-    .line 50073
-    invoke-static {v1, v7, v14, v15}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+    .line 155
+    .line 156
+    invoke-static {v4, v6, v13, v14}, LX/001;->A1B([Ljava/lang/Object;IJ)V
 
-    .line 50074
-    invoke-static {v1, v13, v4, v5}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+    .line 157
+    .line 158
+    .line 159
+    invoke-static {v4, v7, v0, v1}, LX/001;->A1B([Ljava/lang/Object;IJ)V
 
-    .line 50075
-    iget-object v4, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    .line 160
+    .line 161
+    .line 162
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    aput-object v4, v1, v12
+    .line 163
+    .line 164
+    aput-object v0, v4, v5
 
-    .line 50076
-    move-object/from16 v4, v16
+    .line 165
+    .line 166
+    invoke-static {v15, v4}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v4, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 167
+    .line 168
+    .line 169
+    const/16 v13, 0x10
 
-    const/16 v5, 0x10
-
+    .line 170
+    .line 171
     goto :goto_3
 
+    .line 172
     :cond_7
     :goto_2
-    const/4 v5, 0x0
+    const/4 v13, 0x0
 
-    const/4 v1, 0x5
+    .line 173
+    const/4 v0, 0x5
 
-    if-ne v0, v1, :cond_8
+    .line 174
+    if-ne v12, v0, :cond_8
 
-    const-string v1, "crashed last time while loading generated files; trying fallback"
+    .line 175
+    .line 176
+    const-string v0, "crashed last time while loading generated files; trying fallback"
 
-    .line 50077
-    invoke-static {v1}, LX/002;->A0P(Ljava/lang/String;)V
+    .line 177
+    .line 178
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
 
-    .line 50078
-    const/16 v5, 0x40
+    .line 179
+    .line 180
+    .line 181
+    const/16 v13, 0x40
 
+    .line 182
+    .line 183
     goto :goto_3
 
+    .line 184
     :cond_8
-    const/4 v1, 0x6
+    const/4 v0, 0x6
 
-    if-ne v0, v1, :cond_9
+    .line 185
+    if-ne v12, v0, :cond_9
 
-    const-string v1, "force dex regeneration requested"
+    .line 186
+    .line 187
+    const-string v0, "force dex regeneration requested"
 
-    .line 50079
-    invoke-static {v1}, LX/002;->A0P(Ljava/lang/String;)V
+    .line 188
+    .line 189
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
 
-    .line 50080
-    const/16 v5, 0x20
+    .line 190
+    .line 191
+    .line 192
+    const/16 v13, 0x20
 
-    .line 50081
+    .line 193
+    .line 194
     :cond_9
     :goto_3
-    invoke-direct {v11, v9, v6, v2, v3}, Lcom/facebook/common/dextricks/DexStore;->schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;J)Lcom/facebook/common/dextricks/OdexScheme;
+    move-object/from16 v20, v11
 
-    move-result-object v18
+    .line 195
+    .line 196
+    move-object/from16 v21, v9
 
-    .line 50082
+    .line 197
+    .line 198
+    move-object/from16 v22, v19
+
+    .line 199
+    .line 200
+    move-wide/from16 v23, v2
+
+    .line 201
+    .line 202
+    move/from16 v25, v10
+
+    .line 203
+    .line 204
+    invoke-direct/range {v20 .. v25}, Lcom/facebook/common/dextricks/DexStore;->schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;JI)Lcom/facebook/common/dextricks/OdexScheme;
+
+    .line 205
+    .line 206
+    .line 207
+    move-result-object v4
+
+    .line 208
     invoke-direct {v11, v9}, Lcom/facebook/common/dextricks/DexStore;->listAndPruneRootFiles(Landroid/content/Context;)[Ljava/lang/String;
 
+    .line 209
+    .line 210
+    .line 211
     move-result-object v17
 
-    .line 50083
-    move-object/from16 v4, v17
+    .line 212
+    move-object/from16 v0, v17
 
-    move-object/from16 v1, v18
+    .line 213
+    .line 214
+    invoke-direct {v11, v4, v0}, Lcom/facebook/common/dextricks/DexStore;->checkDirty(Lcom/facebook/common/dextricks/OdexScheme;[Ljava/lang/String;)I
 
-    invoke-direct {v11, v1, v4}, Lcom/facebook/common/dextricks/DexStore;->checkDirty(Lcom/facebook/common/dextricks/OdexScheme;[Ljava/lang/String;)I
+    .line 215
+    .line 216
+    .line 217
+    move-result v1
 
-    move-result v4
+    .line 218
+    if-nez v1, :cond_b
 
-    if-nez v4, :cond_b
+    .line 219
+    .line 220
+    const/4 v0, 0x3
 
-    .line 50084
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_a
+    .line 221
+    if-ne v12, v0, :cond_a
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_6
 
-    .line 50085
+    .line 222
+    .line 223
     :try_start_1
     invoke-static {}, Lcom/facebook/common/dextricks/DexStore;->installCrossDexHooks()V
 
+    .line 224
+    .line 225
+    .line 226
     goto :goto_4
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_6
 
+    .line 227
     :catch_0
     move-exception v15
 
+    .line 228
     :try_start_2
     const-string v14, "dex store %s needs xdex hooks, but we can\'t do it: regenerating"
 
-    new-array v4, v13, [Ljava/lang/Object;
+    .line 229
+    .line 230
+    new-array v1, v7, [Ljava/lang/Object;
 
-    .line 50086
-    iget-object v1, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    .line 231
+    .line 232
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    aput-object v1, v4, v7
+    .line 233
+    .line 234
+    aput-object v0, v1, v6
 
-    invoke-static {v15, v14, v4}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 235
+    .line 236
+    invoke-static {v15, v14, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 237
+    .line 238
+    .line 239
     goto :goto_5
 
-    .line 50087
+    .line 240
     :cond_a
     :goto_4
     const/16 v22, 0x0
 
-    .line 50088
+    .line 241
+    .line 242
     invoke-direct {v11}, Lcom/facebook/common/dextricks/DexStore;->checkAnyOptimizerRunningCurrently()Z
 
-    move-result v1
+    .line 243
+    .line 244
+    .line 245
+    move-result v0
 
-    if-eqz v1, :cond_f
+    .line 246
+    if-eqz v0, :cond_f
 
-    .line 50089
-    iput-boolean v13, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->dexoptDuringColdStart:Z
+    .line 247
+    .line 248
+    iput-boolean v7, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->dexoptDuringColdStart:Z
 
-    goto :goto_7
+    .line 249
+    .line 250
+    goto/16 :goto_7
 
-    .line 50090
+    .line 251
+    .line 252
     :cond_b
-    if-ne v4, v13, :cond_c
+    if-ne v1, v7, :cond_c
 
-    .line 50091
-    iget v1, v1, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
+    .line 253
+    .line 254
+    iget v0, v4, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
 
-    and-int/lit8 v1, v1, 0x1
+    .line 255
+    .line 256
+    and-int/lit8 v0, v0, 0x1
 
-    if-eqz v1, :cond_c
+    .line 257
+    .line 258
+    if-eqz v0, :cond_c
 
-    .line 50092
+    .line 259
+    .line 260
     :goto_5
-    const/4 v4, 0x2
+    const/4 v1, 0x2
 
-    .line 50093
+    .line 261
     :cond_c
-    const/16 v16, 0x3a
+    const/16 v15, 0x3a
 
-    .line 50094
-    iget-object v1, v6, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
+    .line 262
+    .line 263
+    move-object/from16 v0, v19
 
-    array-length v1, v1
+    .line 264
+    .line 265
+    iget-object v0, v0, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
 
-    move/from16 v14, v16
+    .line 266
+    .line 267
+    array-length v14, v0
 
-    if-le v1, v14, :cond_d
+    .line 268
+    if-le v14, v15, :cond_d
 
-    const-string v15, "too many dexes, forcing turbo mode: have %s but maximum per dex store is %s"
+    .line 269
+    .line 270
+    const-string v16, "too many dexes, forcing turbo mode: have %s but maximum per dex store is %s"
 
-    new-array v14, v12, [Ljava/lang/Object;
+    .line 271
+    .line 272
+    new-array v0, v5, [Ljava/lang/Object;
 
-    .line 50095
-    invoke-static {v14, v1, v7}, LX/001;->A1A([Ljava/lang/Object;II)V
+    .line 273
+    .line 274
+    invoke-static {v0, v14, v6}, LX/001;->A1A([Ljava/lang/Object;II)V
 
-    .line 50096
-    move/from16 v1, v16
+    .line 275
+    .line 276
+    .line 277
+    invoke-static {v0, v15, v7}, LX/001;->A1A([Ljava/lang/Object;II)V
 
-    invoke-static {v14, v1, v13}, LX/001;->A1A([Ljava/lang/Object;II)V
+    .line 278
+    .line 279
+    .line 280
+    move-object/from16 v14, v16
 
-    .line 50097
-    invoke-static {v15, v14}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 281
+    .line 282
+    invoke-static {v14, v0}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 283
+    .line 284
+    .line 285
     or-int/lit8 v10, p1, 0x1
 
-    .line 50098
+    .line 286
+    .line 287
     :cond_d
     invoke-direct {v11, v2, v3}, Lcom/facebook/common/dextricks/DexStore;->writeTxFailedStatusLocked(J)V
 
-    .line 50099
+    .line 288
+    .line 289
+    .line 290
     invoke-virtual {v11}, Lcom/facebook/common/dextricks/DexStore;->getRegenFile()Ljava/io/File;
 
+    .line 291
+    .line 292
+    .line 293
     move-result-object v14
 
-    .line 50100
+    .line 294
     invoke-static {v14}, Lcom/facebook/common/dextricks/Fs;->deleteRecursive(Ljava/io/File;)V
 
-    .line 50101
-    new-instance v1, Ljava/io/FileOutputStream;
+    .line 295
+    .line 296
+    .line 297
+    new-instance v0, Ljava/io/FileOutputStream;
 
-    invoke-direct {v1, v14}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    .line 298
+    .line 299
+    invoke-direct {v0, v14}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    .line 300
+    .line 301
+    .line 302
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    .line 50102
+    .line 303
+    .line 304
+    .line 305
     iget-object v14, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    const-string v1, "odex_lock"
+    .line 306
+    .line 307
+    const-string v0, "odex_lock"
 
-    .line 50103
-    invoke-static {v14, v1}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    .line 308
+    .line 309
+    invoke-static {v14, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
+    .line 310
+    .line 311
+    .line 312
     move-result-object v14
 
-    .line 50104
+    .line 313
     invoke-virtual {v14}, Ljava/io/File;->exists()Z
 
-    move-result v1
+    .line 314
+    .line 315
+    .line 316
+    move-result v0
 
-    if-eqz v1, :cond_e
+    .line 317
+    if-eqz v0, :cond_e
 
-    .line 50105
+    .line 318
+    .line 319
     invoke-static {v14}, Lcom/facebook/common/dextricks/ReentrantLockFile;->open(Ljava/io/File;)Lcom/facebook/common/dextricks/ReentrantLockFile;
 
-    move-result-object v1
+    .line 320
+    .line 321
+    .line 322
+    move-result-object v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_6
 
-    .line 50106
+    .line 323
     :try_start_3
-    invoke-virtual {v1, v7}, Lcom/facebook/common/dextricks/ReentrantLockFile;->acquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
+    invoke-virtual {v0, v6}, Lcom/facebook/common/dextricks/ReentrantLockFile;->acquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
 
+    .line 324
+    .line 325
+    .line 326
     move-result-object v14
 
+    .line 327
     invoke-virtual {v14}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 50107
+    .line 328
+    .line 329
+    .line 330
     :try_start_4
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
 
+    .line 331
+    .line 332
+    .line 333
     goto :goto_6
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_6
 
+    .line 334
     :catchall_0
-    move-exception v0
+    move-exception v2
 
-    .line 50108
+    .line 335
     :try_start_5
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile;->close()V
+
+    .line 336
+    .line 337
+    .line 338
+    goto/16 :goto_e
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 339
+    .line 340
     :catchall_1
-    :try_start_6
-    throw v0
+    move-exception v0
 
+    .line 341
+    :try_start_6
+    invoke-static {v2, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 342
+    .line 343
+    .line 344
+    goto/16 :goto_e
+
+    .line 345
+    .line 346
     :cond_e
     :goto_6
     const/16 v22, 0x1
 
-    .line 50109
-    if-ne v4, v13, :cond_f
+    .line 347
+    .line 348
+    if-ne v1, v7, :cond_f
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_6
 
-    .line 50110
+    .line 349
+    .line 350
     :try_start_7
     move-object/from16 v23, v11
 
-    move-object/from16 v24, v6
+    .line 351
+    .line 352
+    move-object/from16 v24, v19
 
-    move-object/from16 v25, v18
+    .line 353
+    .line 354
+    move-object/from16 v25, v4
 
-    move/from16 v26, v13
+    .line 355
+    .line 356
+    move/from16 v26, v7
 
-    move-object/from16 v27, v20
+    .line 357
+    .line 358
+    move-object/from16 v27, v30
 
+    .line 359
+    .line 360
     move-object/from16 v28, v9
 
+    .line 361
+    .line 362
     invoke-direct/range {v23 .. v28}, Lcom/facebook/common/dextricks/DexStore;->runCompiler(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/common/dextricks/OdexScheme;ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)V
 
-    const/4 v4, 0x0
+    .line 363
+    .line 364
+    .line 365
+    const/4 v1, 0x0
 
+    .line 366
     goto :goto_7
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_6
 
+    .line 367
     :catch_1
     move-exception v15
 
+    .line 368
     :try_start_8
     const-string v14, "incremental regeneration error in dex store %s: regenerating"
 
-    new-array v4, v13, [Ljava/lang/Object;
+    .line 369
+    .line 370
+    new-array v1, v7, [Ljava/lang/Object;
 
-    .line 50111
-    iget-object v1, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    .line 371
+    .line 372
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    aput-object v1, v4, v7
+    .line 373
+    .line 374
+    aput-object v0, v1, v6
 
-    invoke-static {v15, v14, v4}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 375
+    .line 376
+    invoke-static {v15, v14, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const/4 v4, 0x2
+    .line 377
+    .line 378
+    .line 379
+    const/4 v1, 0x2
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_6
 
-    .line 50112
+    .line 380
     :cond_f
     :goto_7
     :try_start_9
-    iget-object v1, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    invoke-static {v1}, Lcom/facebook/common/dextricks/DexStore$Config;->readFromRoot(Ljava/io/File;)Lcom/facebook/common/dextricks/DexStore$Config;
+    .line 381
+    .line 382
+    invoke-static {v0}, Lcom/facebook/common/dextricks/DexStore$Config;->readFromRoot(Ljava/io/File;)Lcom/facebook/common/dextricks/DexStore$Config;
 
-    move-result-object v15
+    .line 383
+    .line 384
+    .line 385
+    move-result-object v14
 
+    .line 386
     goto :goto_8
     :try_end_9
     .catch Ljava/io/FileNotFoundException; {:try_start_9 .. :try_end_9} :catch_2
     .catchall {:try_start_9 .. :try_end_9} :catchall_6
 
-    .line 50113
+    .line 387
     :catch_2
     :try_start_a
-    new-instance v1, Lcom/facebook/common/dextricks/DexStore$Config$Builder;
+    new-instance v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;
 
-    invoke-direct {v1}, Lcom/facebook/common/dextricks/DexStore$Config$Builder;-><init>()V
+    .line 388
+    .line 389
+    invoke-direct {v0}, Lcom/facebook/common/dextricks/DexStore$Config$Builder;-><init>()V
 
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->build()Lcom/facebook/common/dextricks/DexStore$Config;
+    .line 390
+    .line 391
+    .line 392
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->build()Lcom/facebook/common/dextricks/DexStore$Config;
 
-    move-result-object v15
+    .line 393
+    .line 394
+    .line 395
+    move-result-object v14
 
+    .line 396
     :goto_8
-    const/16 v14, 0x8
+    const/16 v0, 0x8
 
-    if-eqz v4, :cond_17
+    .line 397
+    .line 398
+    if-eqz v1, :cond_17
 
-    .line 50114
+    .line 399
+    .line 400
     invoke-direct {v11}, Lcom/facebook/common/dextricks/DexStore;->saveDeps()V
 
-    .line 50115
-    move/from16 v1, v19
+    .line 401
+    .line 402
+    .line 403
+    move-object/from16 v3, v19
 
-    invoke-direct {v11, v0, v6, v1}, Lcom/facebook/common/dextricks/DexStore;->determineDesiredState(BLcom/facebook/common/dextricks/DexManifest;Z)B
+    .line 404
+    .line 405
+    move/from16 v2, v18
 
-    move-result v2
+    .line 406
+    .line 407
+    invoke-direct {v11, v12, v3, v2}, Lcom/facebook/common/dextricks/DexStore;->determineDesiredState(BLcom/facebook/common/dextricks/DexManifest;Z)B
 
-    and-int/lit8 v0, v10, 0x1
+    .line 408
+    .line 409
+    .line 410
+    move-result v3
 
-    const/4 v1, 0x3
+    .line 411
+    and-int/lit8 v2, v10, 0x1
 
-    if-eqz v0, :cond_11
+    .line 412
+    .line 413
+    if-eqz v2, :cond_11
 
-    if-eq v2, v1, :cond_10
+    .line 414
+    .line 415
+    const/4 v2, 0x3
 
-    if-ne v2, v14, :cond_11
+    .line 416
+    if-eq v3, v2, :cond_10
 
-    .line 50116
-    const/4 v2, 0x7
+    .line 417
+    .line 418
+    if-ne v3, v0, :cond_11
 
+    .line 419
+    .line 420
+    const/4 v3, 0x7
+
+    .line 421
     goto :goto_9
 
-    .line 50117
+    .line 422
     :cond_10
-    const/4 v2, 0x4
+    const/4 v3, 0x4
 
-    .line 50118
+    .line 423
     :cond_11
     :goto_9
-    iget-byte v0, v15, Lcom/facebook/common/dextricks/DexStore$Config;->sync:B
+    iget-byte v0, v14, Lcom/facebook/common/dextricks/DexStore$Config;->sync:B
 
+    .line 424
+    .line 425
     if-eqz v0, :cond_14
 
-    if-eq v0, v13, :cond_13
+    .line 426
+    .line 427
+    if-eq v0, v7, :cond_13
 
-    if-eq v0, v12, :cond_12
+    .line 428
+    .line 429
+    if-eq v0, v5, :cond_12
 
+    .line 430
+    .line 431
     goto :goto_a
 
-    .line 50119
+    .line 432
     :cond_12
     and-int/lit8 v0, v10, -0x5
 
+    .line 433
+    .line 434
     or-int/lit8 v10, v0, 0x8
 
+    .line 435
+    .line 436
     goto :goto_b
 
+    .line 437
     :cond_13
     const-string v0, "forcing async optimization mode from config file: dangerous!"
 
-    .line 50120
-    invoke-static {v0}, LX/002;->A0P(Ljava/lang/String;)V
+    .line 438
+    .line 439
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
 
-    .line 50121
+    .line 440
+    .line 441
+    .line 442
     or-int/lit8 v10, v10, 0x4
 
+    .line 443
+    .line 444
     goto :goto_b
 
-    .line 50122
+    .line 445
     :goto_a
-    const-string v3, "config file has unknown sync control mode %s: ignoring"
+    const-string v2, "config file has unknown sync control mode %s: ignoring"
 
-    .line 50123
-    invoke-static {v0, v13}, LX/001;->A1Z(BI)[Ljava/lang/Object;
+    .line 446
+    .line 447
+    invoke-static {v0, v7}, LX/001;->A1Z(BI)[Ljava/lang/Object;
 
+    .line 448
+    .line 449
+    .line 450
     move-result-object v0
 
-    .line 50124
-    invoke-static {v3, v0}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 451
+    invoke-static {v2, v0}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 50125
+    .line 452
+    .line 453
+    .line 454
     :cond_14
     :goto_b
-    invoke-direct {v11, v2, v15}, Lcom/facebook/common/dextricks/DexStore;->adjustDesiredStateForConfig(BLcom/facebook/common/dextricks/DexStore$Config;)B
+    invoke-direct {v11, v3, v14}, Lcom/facebook/common/dextricks/DexStore;->adjustDesiredStateForConfig(BLcom/facebook/common/dextricks/DexStore$Config;)B
 
-    move-result v14
+    .line 455
+    .line 456
+    .line 457
+    move-result v12
 
-    if-ne v14, v1, :cond_15
+    .line 458
+    const/4 v0, 0x3
+
+    .line 459
+    if-ne v12, v0, :cond_15
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_6
 
-    .line 50126
+    .line 460
+    .line 461
     :try_start_b
     invoke-static {}, Lcom/facebook/common/dextricks/DexStore;->installCrossDexHooks()V
 
+    .line 462
+    .line 463
+    .line 464
     goto :goto_c
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_3
     .catchall {:try_start_b .. :try_end_b} :catchall_6
 
+    .line 465
     :catch_3
-    move-exception v2
+    move-exception v3
 
+    .line 466
     :try_start_c
-    const-string v1, "disabling cross-dex optimization: cannot install hooks"
+    const-string v2, "disabling cross-dex optimization: cannot install hooks"
 
-    new-array v0, v7, [Ljava/lang/Object;
+    .line 467
+    .line 468
+    new-array v0, v6, [Ljava/lang/Object;
 
-    .line 50127
-    invoke-static {v2, v1, v0}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 469
+    .line 470
+    invoke-static {v3, v2, v0}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 50128
-    iput-object v2, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->xdexFailureCause:Ljava/lang/Throwable;
+    .line 471
+    .line 472
+    .line 473
+    iput-object v3, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->xdexFailureCause:Ljava/lang/Throwable;
 
-    const/4 v14, 0x4
+    .line 474
+    .line 475
+    const/4 v12, 0x4
 
-    .line 50129
+    .line 476
     :cond_15
     :goto_c
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
-    if-lt v4, v12, :cond_16
+    .line 477
+    if-lt v1, v5, :cond_16
 
-    const/4 v1, 0x1
+    .line 478
+    .line 479
+    const/4 v3, 0x1
 
+    .line 480
     :cond_16
     const-string v2, "incremental regen already handled"
 
-    new-array v0, v7, [Ljava/lang/Object;
+    .line 481
+    .line 482
+    new-array v0, v6, [Ljava/lang/Object;
 
-    .line 50130
-    invoke-static {v1, v2, v0}, Lcom/facebook/common/dextricks/Mlog;->assertThat(ZLjava/lang/String;[Ljava/lang/Object;)V
+    .line 483
+    .line 484
+    invoke-static {v3, v2, v0}, Lcom/facebook/common/dextricks/Mlog;->assertThat(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    int-to-long v2, v14
+    .line 485
+    .line 486
+    .line 487
+    int-to-long v2, v12
 
-    .line 50131
-    invoke-direct {v11, v9, v6, v2, v3}, Lcom/facebook/common/dextricks/DexStore;->schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;J)Lcom/facebook/common/dextricks/OdexScheme;
+    .line 488
+    move-object/from16 v23, v11
 
-    move-result-object v18
+    .line 489
+    .line 490
+    move-object/from16 v24, v9
+
+    .line 491
+    .line 492
+    move-object/from16 v25, v19
+
+    .line 493
+    .line 494
+    move-wide/from16 v26, v2
+
+    .line 495
+    .line 496
+    move/from16 v28, v10
+
+    .line 497
+    .line 498
+    invoke-direct/range {v23 .. v28}, Lcom/facebook/common/dextricks/DexStore;->schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;JI)Lcom/facebook/common/dextricks/OdexScheme;
+
+    .line 499
+    .line 500
+    .line 501
+    move-result-object v4
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_6
 
-    .line 50132
+    .line 502
     :try_start_d
     move-object/from16 v0, v17
 
+    .line 503
+    .line 504
     invoke-direct {v11, v0}, Lcom/facebook/common/dextricks/DexStore;->deleteFiles([Ljava/lang/String;)V
 
-    .line 50133
-    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    .line 505
+    .line 506
+    .line 507
+    iget-object v15, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    move-object v1, v0
-
+    .line 508
+    .line 509
     const-string v0, "optimization_log"
 
-    .line 50134
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    .line 510
+    .line 511
+    invoke-static {v15, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
+    .line 512
+    .line 513
+    .line 514
     move-result-object v0
 
-    .line 50135
+    .line 515
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 50136
-    move-object/from16 v0, v18
+    .line 516
+    .line 517
+    .line 518
+    iget v0, v4, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
 
-    iget v0, v0, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
-
+    .line 519
+    .line 520
     and-int/lit8 v0, v0, 0x10
 
+    .line 521
+    .line 522
     if-nez v0, :cond_17
 
-    .line 50137
-    move-object/from16 v23, v11
+    .line 523
+    .line 524
+    move-object/from16 v24, v19
 
-    move-object/from16 v24, v6
+    .line 525
+    .line 526
+    move-object/from16 v25, v4
 
-    move-object/from16 v25, v18
+    .line 527
+    .line 528
+    move/from16 v26, v6
 
-    move/from16 v26, v7
+    .line 529
+    .line 530
+    move-object/from16 v27, v30
 
-    move-object/from16 v27, v20
-
+    .line 531
+    .line 532
     move-object/from16 v28, v9
 
+    .line 533
+    .line 534
     invoke-direct/range {v23 .. v28}, Lcom/facebook/common/dextricks/DexStore;->runCompiler(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/common/dextricks/OdexScheme;ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)V
 
+    .line 535
+    .line 536
+    .line 537
     goto :goto_d
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_4
     .catchall {:try_start_d .. :try_end_d} :catchall_6
 
+    .line 538
     :catch_4
-    move-exception v0
+    move-exception v2
 
-    if-eq v14, v12, :cond_19
+    .line 539
+    if-eq v12, v5, :cond_19
 
+    .line 540
+    .line 541
     :try_start_e
-    const-string v3, "dex store %s: failed turbodex: using fallback"
+    const-string v4, "dex store %s: failed turbodex: using fallback"
 
-    new-array v2, v13, [Ljava/lang/Object;
+    .line 542
+    .line 543
+    new-array v3, v7, [Ljava/lang/Object;
 
-    .line 50138
-    iget-object v1, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    .line 544
+    .line 545
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    aput-object v1, v2, v7
+    .line 546
+    .line 547
+    aput-object v0, v3, v6
 
-    invoke-static {v0, v3, v2}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 548
+    .line 549
+    invoke-static {v2, v4, v3}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 50139
-    iput-object v0, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->fallbackCause:Ljava/lang/Throwable;
+    .line 550
+    .line 551
+    .line 552
+    iput-object v2, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->fallbackCause:Ljava/lang/Throwable;
 
-    .line 50140
+    .line 553
+    .line 554
     invoke-direct {v11, v9}, Lcom/facebook/common/dextricks/DexStore;->listAndPruneRootFiles(Landroid/content/Context;)[Ljava/lang/String;
 
+    .line 555
+    .line 556
+    .line 557
     move-result-object v17
 
-    const/4 v14, 0x2
+    .line 558
+    const/4 v12, 0x2
 
+    .line 559
     goto :goto_c
 
-    .line 50141
+    .line 560
     :cond_17
     :goto_d
-    move-wide v0, v2
+    move-object v1, v4
 
-    move-object/from16 v12, v18
+    .line 561
+    and-int/lit8 v0, v10, 0x4
 
-    .line 50142
-    and-int/lit8 v4, v10, 0x4
+    .line 562
+    .line 563
+    const/4 v7, 0x0
 
-    const/4 v14, 0x0
+    .line 564
+    if-eqz v0, :cond_18
 
-    if-eqz v4, :cond_18
+    .line 565
+    .line 566
+    const/4 v7, 0x1
 
-    const/4 v14, 0x1
+    .line 567
+    if-nez v18, :cond_18
 
-    if-nez v19, :cond_18
+    .line 568
+    .line 569
+    move-object/from16 v24, v19
 
-    .line 50143
-    move-object/from16 v24, v6
-
+    .line 570
+    .line 571
     move-object/from16 v25, v9
 
+    .line 572
+    .line 573
     move/from16 v26, v10
 
-    move-object/from16 v20, v11
-
+    .line 574
+    .line 575
     move-object/from16 v21, v8
 
-    move-object/from16 v23, v12
+    .line 576
+    .line 577
+    move-object/from16 v23, v4
 
+    .line 578
+    .line 579
     invoke-direct/range {v20 .. v26}, Lcom/facebook/common/dextricks/DexStore;->loadDexFiles(Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;ZLcom/facebook/common/dextricks/OdexScheme;Lcom/facebook/common/dextricks/DexManifest;Landroid/content/Context;I)V
 
+    .line 580
+    .line 581
+    .line 582
     :cond_18
     if-eqz v22, :cond_1c
 
-    if-eqz v14, :cond_1a
+    .line 583
+    .line 584
+    if-eqz v7, :cond_1a
 
-    .line 50144
-    new-instance v4, Lcom/facebook/common/dextricks/DexStore$FinishRegenerationThread;
+    .line 585
+    .line 586
+    new-instance v5, Lcom/facebook/common/dextricks/DexStore$FinishRegenerationThread;
 
-    move-object/from16 v26, v4
+    .line 587
+    .line 588
+    move-object/from16 v26, v5
 
+    .line 589
+    .line 590
     move-object/from16 v27, v11
 
-    move-object/from16 v28, v12
+    .line 591
+    .line 592
+    move-object/from16 v28, v4
 
+    .line 593
+    .line 594
     move-wide/from16 v30, v2
 
+    .line 595
+    .line 596
     invoke-direct/range {v26 .. v31}, Lcom/facebook/common/dextricks/DexStore$FinishRegenerationThread;-><init>(Lcom/facebook/common/dextricks/DexStore;Lcom/facebook/common/dextricks/OdexScheme;Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;J)V
 
-    .line 50145
-    iget-object v2, v11, Lcom/facebook/common/dextricks/DexStore;->mLockFile:Lcom/facebook/common/dextricks/ReentrantLockFile;
+    .line 597
+    .line 598
+    .line 599
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->mLockFile:Lcom/facebook/common/dextricks/ReentrantLockFile;
 
-    invoke-virtual {v2, v4}, Lcom/facebook/common/dextricks/ReentrantLockFile;->donateLock(Ljava/lang/Thread;)V
+    .line 600
+    .line 601
+    invoke-virtual {v0, v5}, Lcom/facebook/common/dextricks/ReentrantLockFile;->donateLock(Ljava/lang/Thread;)V
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_6
 
-    .line 50146
+    .line 602
+    .line 603
+    .line 604
     :try_start_f
-    invoke-virtual {v4}, Ljava/lang/Thread;->start()V
+    invoke-virtual {v5}, Ljava/lang/Thread;->start()V
 
-    .line 50147
-    const/4 v2, 0x0
-
-    const/16 v29, 0x0
-
-    goto :goto_e
+    .line 605
+    .line 606
+    .line 607
+    goto :goto_f
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_2
 
+    .line 608
     :catchall_2
-    move-exception v0
+    move-exception v2
 
+    .line 609
     :try_start_10
-    const-string v1, "failed to start syncer thread"
+    const-string v0, "failed to start syncer thread"
 
-    .line 50148
-    invoke-static {v1}, LX/002;->A0P(Ljava/lang/String;)V
+    .line 610
+    .line 611
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
 
-    .line 50149
-    iget-object v1, v11, Lcom/facebook/common/dextricks/DexStore;->mLockFile:Lcom/facebook/common/dextricks/ReentrantLockFile;
+    .line 612
+    .line 613
+    .line 614
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->mLockFile:Lcom/facebook/common/dextricks/ReentrantLockFile;
 
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile;->stealLock()V
+    .line 615
+    .line 616
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile;->stealLock()V
 
-    .line 50150
+    .line 617
+    .line 618
+    .line 619
     :cond_19
-    throw v0
+    :goto_e
+    throw v2
 
-    .line 50151
+    .line 620
+    :goto_f
+    const/4 v0, 0x0
+
+    .line 621
+    const/16 v29, 0x0
+
+    .line 622
+    .line 623
+    goto :goto_10
+
+    .line 624
     :cond_1a
-    iget-object v13, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    iget-object v5, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    .line 50152
+    .line 625
+    .line 626
     invoke-static {}, Lcom/facebook/common/dextricks/Prio;->unchanged()Lcom/facebook/common/dextricks/Prio;
 
-    move-result-object v4
+    .line 627
+    .line 628
+    .line 629
+    move-result-object v0
 
-    invoke-static {v13, v4}, Lcom/facebook/common/dextricks/Fs;->fsyncRecursive(Ljava/io/File;Lcom/facebook/common/dextricks/Prio;)V
+    .line 630
+    invoke-static {v5, v0}, Lcom/facebook/common/dextricks/Fs;->fsyncRecursive(Ljava/io/File;Lcom/facebook/common/dextricks/Prio;)V
 
-    .line 50153
+    .line 631
+    .line 632
+    .line 633
     invoke-virtual {v11, v2, v3}, Lcom/facebook/common/dextricks/DexStore;->writeStatusLocked(J)V
 
-    .line 50154
-    iget v4, v12, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
+    .line 634
+    .line 635
+    .line 636
+    iget v0, v4, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
 
-    and-int/lit8 v4, v4, 0x4
+    .line 637
+    .line 638
+    and-int/lit8 v0, v0, 0x4
 
-    if-eqz v4, :cond_1b
+    .line 639
+    .line 640
+    if-eqz v0, :cond_1b
 
-    .line 50155
-    and-int/lit8 v4, v10, 0x8
+    .line 641
+    .line 642
+    and-int/lit8 v0, v10, 0x8
 
-    if-eqz v4, :cond_1c
+    .line 643
+    .line 644
+    if-eqz v0, :cond_1c
 
-    .line 50156
+    .line 645
+    .line 646
     :cond_1b
-    invoke-direct {v11, v9, v6, v2, v3}, Lcom/facebook/common/dextricks/DexStore;->optimizeInForegroundLocked(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;J)V
+    move-object/from16 v0, v19
 
-    .line 50157
+    .line 647
+    .line 648
+    invoke-direct {v11, v9, v0, v2, v3}, Lcom/facebook/common/dextricks/DexStore;->optimizeInForegroundLocked(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;J)V
+
+    .line 649
+    .line 650
+    .line 651
     invoke-direct {v11}, Lcom/facebook/common/dextricks/DexStore;->readStatusLocked()J
 
-    move-result-wide v0
+    .line 652
+    .line 653
+    .line 654
+    move-result-wide v2
 
-    .line 50158
-    invoke-direct {v11, v9, v6, v0, v1}, Lcom/facebook/common/dextricks/DexStore;->schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;J)Lcom/facebook/common/dextricks/OdexScheme;
+    .line 655
+    move-object/from16 v23, v11
 
-    move-result-object v12
+    .line 656
+    .line 657
+    move-object/from16 v24, v9
 
-    .line 50159
+    .line 658
+    .line 659
+    move-object/from16 v25, v0
+
+    .line 660
+    .line 661
+    move-wide/from16 v26, v2
+
+    .line 662
+    .line 663
+    move/from16 v28, v10
+
+    .line 664
+    .line 665
+    invoke-direct/range {v23 .. v28}, Lcom/facebook/common/dextricks/DexStore;->schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;JI)Lcom/facebook/common/dextricks/OdexScheme;
+
+    .line 666
+    .line 667
+    .line 668
+    move-result-object v1
+
+    .line 669
     :cond_1c
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    .line 50160
-    :goto_e
-    invoke-direct {v11, v9, v2}, Lcom/facebook/common/dextricks/DexStore;->setUsingAppImageForMainDexStore(Landroid/content/Context;Ljava/io/File;)V
+    .line 670
+    :goto_10
+    invoke-direct {v11, v9, v0}, Lcom/facebook/common/dextricks/DexStore;->setUsingAppImageForMainDexStore(Landroid/content/Context;Ljava/io/File;)V
 
-    if-nez v14, :cond_1d
+    .line 671
+    .line 672
+    .line 673
+    if-nez v7, :cond_1d
 
-    if-nez v19, :cond_1d
+    .line 674
+    .line 675
+    if-nez v18, :cond_1d
 
-    .line 50161
-    move-object/from16 v20, v11
+    .line 676
+    .line 677
+    move-object v15, v11
 
-    move-object/from16 v21, v8
+    .line 678
+    move-object/from16 v16, v8
 
-    move-object/from16 v23, v12
+    .line 679
+    .line 680
+    move/from16 v17, v22
 
-    move-object/from16 v24, v6
+    .line 681
+    .line 682
+    move-object/from16 v18, v1
 
-    move-object/from16 v25, v9
+    .line 683
+    .line 684
+    move-object/from16 v20, v9
 
-    move/from16 v26, v10
+    .line 685
+    .line 686
+    move/from16 v21, v10
 
-    invoke-direct/range {v20 .. v26}, Lcom/facebook/common/dextricks/DexStore;->loadDexFiles(Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;ZLcom/facebook/common/dextricks/OdexScheme;Lcom/facebook/common/dextricks/DexManifest;Landroid/content/Context;I)V
+    .line 687
+    .line 688
+    invoke-direct/range {v15 .. v21}, Lcom/facebook/common/dextricks/DexStore;->loadDexFiles(Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;ZLcom/facebook/common/dextricks/OdexScheme;Lcom/facebook/common/dextricks/DexManifest;Landroid/content/Context;I)V
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_6
 
+    .line 689
+    .line 690
+    .line 691
     :cond_1d
     :try_start_11
-    const-string v2, "dexopt"
+    const-string v0, "dexopt"
 
-    .line 50162
-    invoke-virtual {v11, v2}, Lcom/facebook/common/dextricks/DexStore;->makeTemporaryDirectory(Ljava/lang/String;)Lcom/facebook/common/dextricks/DexStore$TmpDir;
+    .line 692
+    .line 693
+    invoke-virtual {v11, v0}, Lcom/facebook/common/dextricks/DexStore;->makeTemporaryDirectory(Ljava/lang/String;)Lcom/facebook/common/dextricks/DexStore$TmpDir;
 
-    move-result-object v3
+    .line 694
+    .line 695
+    .line 696
+    move-result-object v5
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_5
 
-    .line 50163
+    .line 697
     :try_start_12
-    iget-object v2, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
-    invoke-virtual {v12, v2, v0, v1}, Lcom/facebook/common/dextricks/OdexScheme;->loadInformationalStatus(Ljava/io/File;J)I
+    .line 698
+    .line 699
+    invoke-virtual {v1, v0, v2, v3}, Lcom/facebook/common/dextricks/OdexScheme;->loadInformationalStatus(Ljava/io/File;J)I
 
-    move-result v2
+    .line 700
+    .line 701
+    .line 702
+    move-result v0
 
-    or-int/2addr v5, v2
+    .line 703
+    or-int/2addr v13, v0
 
-    if-eqz v3, :cond_1f
+    .line 704
+    if-eqz v5, :cond_1f
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_3
 
-    .line 50164
+    .line 705
+    .line 706
     :try_start_13
-    invoke-virtual {v3}, Lcom/facebook/common/dextricks/DexStore$TmpDir;->close()V
+    invoke-virtual {v5}, Lcom/facebook/common/dextricks/DexStore$TmpDir;->close()V
 
-    goto :goto_f
+    .line 707
+    .line 708
+    .line 709
+    goto :goto_12
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_5
 
+    .line 710
     :catchall_3
-    move-exception v2
+    move-exception v4
 
-    if-eqz v3, :cond_1e
+    .line 711
+    if-eqz v5, :cond_1e
 
-    .line 50165
+    .line 712
+    .line 713
     :try_start_14
-    invoke-virtual {v3}, Lcom/facebook/common/dextricks/DexStore$TmpDir;->close()V
+    invoke-virtual {v5}, Lcom/facebook/common/dextricks/DexStore$TmpDir;->close()V
+
+    .line 714
+    .line 715
+    .line 716
+    goto :goto_11
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_4
 
+    .line 717
     :catchall_4
-    :cond_1e
+    move-exception v0
+
+    .line 718
     :try_start_15
-    throw v2
+    invoke-static {v4, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 719
+    .line 720
+    .line 721
+    :cond_1e
+    :goto_11
+    throw v4
     :try_end_15
     .catchall {:try_start_15 .. :try_end_15} :catchall_5
 
+    .line 722
     :catchall_5
-    move-exception v4
+    move-exception v5
 
+    .line 723
     :try_start_16
-    const-string v3, "Failure while checking oat file provenance."
+    const-string v4, "Failure while checking oat file provenance."
 
-    new-array v2, v7, [Ljava/lang/Object;
+    .line 724
+    .line 725
+    new-array v0, v6, [Ljava/lang/Object;
 
-    .line 50166
-    invoke-static {v4, v3, v2}, Lcom/facebook/common/dextricks/Mlog;->e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 726
+    .line 727
+    invoke-static {v5, v4, v0}, Lcom/facebook/common/dextricks/Mlog;->e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 50167
+    .line 728
+    .line 729
+    .line 730
     :cond_1f
-    :goto_f
-    invoke-virtual {v12}, Lcom/facebook/common/dextricks/OdexScheme;->getSchemeName()Ljava/lang/String;
+    :goto_12
+    invoke-virtual {v1}, Lcom/facebook/common/dextricks/OdexScheme;->getSchemeName()Ljava/lang/String;
 
-    move-result-object v2
-
-    iput-object v2, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->odexSchemeName:Ljava/lang/String;
-
-    if-eqz v22, :cond_20
-
-    or-int/lit8 v5, v5, 0x1
-
-    .line 50168
-    :cond_20
-    iget v2, v12, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
-
-    and-int/lit8 v2, v2, 0x8
-
-    if-eqz v2, :cond_21
-
-    or-int/lit8 v5, v5, 0x8
-
-    .line 50169
-    :cond_21
-    iget-object v2, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
-
-    .line 50170
-    invoke-direct {v11, v9, v2}, Lcom/facebook/common/dextricks/DexStore;->getCurrentOptHistoryLogFromRoot(Landroid/content/Context;Ljava/io/File;)Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;
-
-    move-result-object v2
-
-    .line 50171
-    invoke-virtual {v12, v0, v1, v15, v2}, Lcom/facebook/common/dextricks/OdexScheme;->needOptimization(JLcom/facebook/common/dextricks/DexStore$Config;Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;)Lcom/facebook/common/dextricks/OdexScheme$NeedOptimizationState;
-
-    move-result-object v3
-
-    .line 50172
-    invoke-virtual {v3}, Lcom/facebook/common/dextricks/OdexScheme$NeedOptimizationState;->needsOptimization()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_24
-
-    or-int/lit8 v5, v5, 0x2
-
-    .line 50173
-    sget-object v2, Lcom/facebook/common/dextricks/OdexScheme$NeedOptimizationState;->NEED_REOPTIMIZATION:Lcom/facebook/common/dextricks/OdexScheme$NeedOptimizationState;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_22
-
-    .line 50174
-    const/high16 v2, 0x100000
-
-    or-int/2addr v5, v2
-
-    .line 50175
-    :cond_22
-    invoke-virtual {v12, v0, v1}, Lcom/facebook/common/dextricks/OdexScheme;->loadNotOptimized(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_23
-
-    or-int/lit8 v5, v5, 0x8
-
-    .line 50176
-    :cond_23
-    iget v0, v12, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
-
-    and-int/lit8 v0, v0, 0x4
-
-    if-eqz v0, :cond_24
-
-    .line 50177
-    or-int/lit8 v5, v5, 0x4
-
-    .line 50178
-    :cond_24
-    iput v5, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->loadResult:I
-
-    .line 50179
-    const-string v0, "dex2oat-cmdline"
-
-    .line 50180
-    invoke-static {v9, v0}, Lcom/facebook/common/dextricks/OreoFileUtils;->getBaseOdexKeyValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
+    .line 731
+    .line 732
+    .line 733
     move-result-object v0
 
-    .line 50181
+    .line 734
+    iput-object v0, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->odexSchemeName:Ljava/lang/String;
+
+    .line 735
+    .line 736
+    if-eqz v22, :cond_20
+
+    .line 737
+    .line 738
+    or-int/lit8 v13, v13, 0x1
+
+    .line 739
+    .line 740
+    :cond_20
+    iget v0, v1, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
+
+    .line 741
+    .line 742
+    and-int/lit8 v0, v0, 0x8
+
+    .line 743
+    .line 744
+    if-eqz v0, :cond_21
+
+    .line 745
+    .line 746
+    or-int/lit8 v13, v13, 0x8
+
+    .line 747
+    .line 748
+    :cond_21
+    iget-object v0, v11, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+
+    .line 749
+    .line 750
+    invoke-direct {v11, v9, v0}, Lcom/facebook/common/dextricks/DexStore;->getCurrentOptHistoryLogFromRoot(Landroid/content/Context;Ljava/io/File;)Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;
+
+    .line 751
+    .line 752
+    .line 753
+    move-result-object v0
+
+    .line 754
+    invoke-virtual {v1, v2, v3, v14, v0}, Lcom/facebook/common/dextricks/OdexScheme;->needOptimization(JLcom/facebook/common/dextricks/DexStore$Config;Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;)Lcom/facebook/common/dextricks/OdexScheme$NeedOptimizationState;
+
+    .line 755
+    .line 756
+    .line 757
+    move-result-object v4
+
+    .line 758
+    invoke-virtual {v4}, Lcom/facebook/common/dextricks/OdexScheme$NeedOptimizationState;->needsOptimization()Z
+
+    .line 759
+    .line 760
+    .line 761
+    move-result v0
+
+    .line 762
+    if-eqz v0, :cond_24
+
+    .line 763
+    .line 764
+    or-int/lit8 v13, v13, 0x2
+
+    .line 765
+    .line 766
+    sget-object v0, Lcom/facebook/common/dextricks/OdexScheme$NeedOptimizationState;->NEED_REOPTIMIZATION:Lcom/facebook/common/dextricks/OdexScheme$NeedOptimizationState;
+
+    .line 767
+    .line 768
+    invoke-virtual {v0, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 769
+    .line 770
+    .line 771
+    move-result v0
+
+    .line 772
+    if-eqz v0, :cond_22
+
+    .line 773
+    .line 774
+    const/high16 v0, 0x100000
+
+    .line 775
+    .line 776
+    or-int/2addr v13, v0
+
+    .line 777
+    :cond_22
+    invoke-virtual {v1, v2, v3}, Lcom/facebook/common/dextricks/OdexScheme;->loadNotOptimized(J)Z
+
+    .line 778
+    .line 779
+    .line 780
+    move-result v0
+
+    .line 781
+    if-eqz v0, :cond_23
+
+    .line 782
+    .line 783
+    or-int/lit8 v13, v13, 0x8
+
+    .line 784
+    .line 785
+    :cond_23
+    iget v0, v1, Lcom/facebook/common/dextricks/OdexScheme;->flags:I
+
+    .line 786
+    .line 787
+    and-int/lit8 v0, v0, 0x4
+
+    .line 788
+    .line 789
+    if-eqz v0, :cond_24
+
+    .line 790
+    .line 791
+    or-int/lit8 v13, v13, 0x4
+
+    .line 792
+    .line 793
+    :cond_24
+    iput v13, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->loadResult:I
+
+    .line 794
+    .line 795
+    const-string v0, "dex2oat-cmdline"
+
+    .line 796
+    .line 797
+    invoke-static {v9, v0}, Lcom/facebook/common/dextricks/OreoFileUtils;->getBaseOdexKeyValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 798
+    .line 799
+    .line 800
+    move-result-object v0
+
+    .line 801
     iput-object v0, v8, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->dex2oatCmdLine:Ljava/lang/String;
 
-    .line 50182
+    .line 802
+    .line 803
     iput-object v8, v11, Lcom/facebook/common/dextricks/DexStore;->mLastDeri:Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
 
-    .line 50183
-    :goto_10
+    .line 804
+    .line 805
+    :goto_13
     if-eqz v29, :cond_25
     :try_end_16
     .catchall {:try_start_16 .. :try_end_16} :catchall_6
 
-    .line 50184
+    .line 806
+    .line 807
     invoke-virtual/range {v29 .. v29}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
+    .line 808
+    .line 809
+    .line 810
     :cond_25
     return-object v8
 
+    .line 811
     :catchall_6
     move-exception v0
 
+    .line 812
     if-eqz v29, :cond_26
 
+    .line 813
+    .line 814
     invoke-virtual/range {v29 .. v29}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
-    .line 50185
+    .line 815
+    .line 816
+    .line 817
     :cond_26
     throw v0
 .end method
 
 .method private loadDexFiles(Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;ZLcom/facebook/common/dextricks/OdexScheme;Lcom/facebook/common/dextricks/DexManifest;Landroid/content/Context;I)V
-    .locals 7
+    .locals 8
 
     .line 0
     iget-boolean v0, p4, Lcom/facebook/common/dextricks/DexManifest;->locators:Z
 
     .line 1
     .line 2
-    const/4 v6, 0x2
+    const/4 v7, 0x2
 
     .line 3
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 4
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 5
     if-eqz v0, :cond_0
 
     .line 6
     .line 7
-    const/4 v3, 0x2
+    const/4 v2, 0x2
 
     .line 8
     :cond_0
@@ -5538,7 +6385,7 @@
 
     .line 11
     .line 12
-    or-int/lit8 v3, v3, 0x4
+    or-int/lit8 v2, v2, 0x4
 
     .line 13
     .line 14
@@ -5568,7 +6415,7 @@
 
     .line 26
     .line 27
-    invoke-static {}, LX/0Bn;->A00()LX/0Bm;
+    invoke-static {}, LX/0C6;->A00()LX/0C5;
 
     .line 28
     .line 29
@@ -5576,7 +6423,7 @@
     move-result-object v4
 
     .line 31
-    iget-wide v0, v4, LX/0Bm;->A03:J
+    iget-wide v0, v4, LX/0C5;->A03:J
 
     .line 32
     .line 33
@@ -5584,7 +6431,7 @@
 
     .line 34
     .line 35
-    iget-wide v0, v4, LX/0Bm;->A02:J
+    iget-wide v0, v4, LX/0C5;->A02:J
 
     .line 36
     .line 37
@@ -5601,16 +6448,16 @@
 
     .line 42
     .line 43
-    new-instance v5, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    new-instance v4, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 44
     .line 45
-    invoke-direct {v5, v3, v1, v0}, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;-><init>(IIZ)V
+    invoke-direct {v4, v2, v1, v0}, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;-><init>(IIZ)V
 
     .line 46
     .line 47
     .line 48
-    iget-object v0, v5, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->mDexFiles:Ljava/util/ArrayList;
+    iget-object v0, v4, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->mDexFiles:Ljava/util/ArrayList;
 
     .line 49
     .line 50
@@ -5626,16 +6473,16 @@
 
     .line 55
     .line 56
-    invoke-virtual {p3, v0, v5}, Lcom/facebook/common/dextricks/OdexScheme;->configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+    invoke-virtual {p3, v0, v4}, Lcom/facebook/common/dextricks/OdexScheme;->configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
 
     .line 57
     .line 58
     .line 59
-    iget-object v0, v5, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->mDexFiles:Ljava/util/ArrayList;
+    iget-object v0, v4, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->mDexFiles:Ljava/util/ArrayList;
 
     .line 60
     .line 61
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 62
     .line 63
@@ -5647,7 +6494,7 @@
 
     .line 66
     .line 67
-    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 68
     .line 69
@@ -5655,369 +6502,488 @@
 
     .line 70
     .line 71
-    sget v4, Lcom/facebook/common/dextricks/DalvikConstants;->FB_REDEX_COLD_START_SET_DEX_COUNT:I
+    sget v5, Lcom/facebook/common/dextricks/DalvikConstants;->FB_REDEX_COLD_START_SET_DEX_COUNT:I
 
     .line 72
     .line 73
-    iget-boolean v3, p0, Lcom/facebook/common/dextricks/DexStore;->mDisableVerifier:Z
+    iget-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore;->mDisableVerifier:Z
 
     .line 74
     .line 75
-    new-instance v0, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    new-instance v0, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 76
     .line 77
-    invoke-direct {v0, v2, v4, v3}, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;-><init>(IIZ)V
+    invoke-direct {v0, v3, v5, v2}, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;-><init>(IIZ)V
 
     .line 78
     .line 79
     .line 80
-    sput-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    sput-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 81
     .line 82
     :cond_3
-    invoke-static {v5}, Lcom/facebook/common/dextricks/DexStore;->mergeConfiguration(Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+    const-string v0, "MDCL.install"
 
     .line 83
     .line 84
-    .line 85
-    :try_start_0
-    iget-object v3, p0, Lcom/facebook/common/dextricks/DexStore;->primaryDexes:Ljava/util/ArrayList;
+    invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
+    .line 85
     .line 86
     .line 87
-    iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->auxiliaryDexes:Ljava/util/ArrayList;
+    :try_start_0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 88
     .line 89
-    invoke-static {p5, v3, v0}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->install(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/lang/ClassLoader;
+    const/16 v0, 0x21
 
     .line 90
     .line 91
-    .line 92
-    move-result-object v4
+    if-lt v2, v0, :cond_5
 
+    .line 92
     .line 93
-    instance-of v0, v4, Lcom/facebook/common/dextricks/MultiDexClassLoader;
+    const-string v0, "use_reflection_classloader"
 
     .line 94
     .line 95
-    if-eqz v0, :cond_4
+    invoke-static {p5, v0, v3}, LX/0Mp;->A00(Landroid/content/Context;Ljava/lang/String;I)I
 
     .line 96
     .line 97
-    move-object v3, v4
-
     .line 98
-    check-cast v3, Lcom/facebook/common/dextricks/MultiDexClassLoader;
+    move-result v2
 
     .line 99
+    const/4 v0, 0x1
+
     .line 100
-    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    if-ne v2, v0, :cond_5
 
     .line 101
     .line 102
-    invoke-virtual {v3, v0}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->configure(Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+    invoke-static {p5}, Lcom/facebook/common/dextricks/ReflectionClassLoader;->install(Landroid/content/Context;)Ljava/lang/ClassLoader;
 
     .line 103
     .line 104
     .line 105
-    :cond_4
-    instance-of v0, v4, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;
+    move-result-object v2
 
     .line 106
+    if-eqz v2, :cond_4
+
     .line 107
-    if-eqz v0, :cond_6
-
     .line 108
+    instance-of v0, v2, Lcom/facebook/common/dextricks/ReflectionClassLoaderJava;
+
     .line 109
-    check-cast v4, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;
-
     .line 110
+    if-eqz v0, :cond_4
+
     .line 111
-    const-string v0, "mdclj_use_dummy_exception"
-
     .line 112
-    .line 113
-    invoke-static {p5, v0, v2}, LX/0QY;->A00(Landroid/content/Context;Ljava/lang/String;I)I
+    const-string v0, "Dexstore is  using reflection class loader"
 
+    .line 113
     .line 114
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
+
     .line 115
     .line 116
-    move-result v3
-
     .line 117
-    const/4 v0, 0x1
+    check-cast v2, Lcom/facebook/common/dextricks/ReflectionClassLoader;
 
     .line 118
-    if-eq v3, v0, :cond_5
-
     .line 119
+    invoke-virtual {v2, v4}, Lcom/facebook/common/dextricks/ReflectionClassLoader;->addDexPathFromConfig(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
+
     .line 120
-    const/4 v0, 0x0
-
     .line 121
-    :cond_5
-    iput-boolean v0, v4, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;->useDummyException:Z
-
     .line 122
-    .line 123
-    :cond_6
-    if-eqz p2, :cond_7
+    :cond_4
+    invoke-static {v4}, Lcom/facebook/common/dextricks/DexStore;->mergeConfiguration(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
 
+    .line 123
     .line 124
     .line 125
-    invoke-direct {p0, p4}, Lcom/facebook/common/dextricks/DexStore;->verifyCanaryClasses(Lcom/facebook/common/dextricks/DexManifest;)V
+    goto :goto_0
 
     .line 126
+    :cond_5
+    invoke-static {v4}, Lcom/facebook/common/dextricks/DexStore;->mergeConfiguration(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
+
     .line 127
     .line 128
+    .line 129
+    iget-object v2, p0, Lcom/facebook/common/dextricks/DexStore;->primaryDexes:Ljava/util/ArrayList;
+
+    .line 130
+    .line 131
+    iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->auxiliaryDexes:Ljava/util/ArrayList;
+
+    .line 132
+    .line 133
+    invoke-static {p5, v2, v0}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->install(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/lang/ClassLoader;
+
+    .line 134
+    .line 135
+    .line 136
+    move-result-object v4
+
+    .line 137
+    instance-of v0, v4, Lcom/facebook/common/dextricks/MultiDexClassLoader;
+
+    .line 138
+    .line 139
+    if-eqz v0, :cond_6
+
+    .line 140
+    .line 141
+    move-object v2, v4
+
+    .line 142
+    check-cast v2, Lcom/facebook/common/dextricks/MultiDexClassLoader;
+
+    .line 143
+    .line 144
+    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
+
+    .line 145
+    .line 146
+    invoke-virtual {v2, v0}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->configure(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
+
+    .line 147
+    .line 148
+    .line 149
+    :cond_6
+    instance-of v0, v4, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;
+
+    .line 150
+    .line 151
+    if-eqz v0, :cond_8
+
+    .line 152
+    .line 153
+    check-cast v4, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;
+
+    .line 154
+    .line 155
+    const-string v0, "mdclj_use_dummy_exception"
+
+    .line 156
+    .line 157
+    invoke-static {p5, v0, v3}, LX/0Mp;->A00(Landroid/content/Context;Ljava/lang/String;I)I
+
+    .line 158
+    .line 159
+    .line 160
+    move-result v2
+
+    .line 161
+    const/4 v0, 0x1
+
+    .line 162
+    if-eq v2, v0, :cond_7
+
+    .line 163
+    .line 164
+    const/4 v0, 0x0
+
+    .line 165
     :cond_7
+    iput-boolean v0, v4, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;->useDummyException:Z
+
+    .line 166
+    .line 167
+    const-string v0, "Dexstore is  using MultiDexClassLoaderJava"
+
+    .line 168
+    .line 169
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
+
+    .line 170
+    .line 171
+    .line 172
+    :cond_8
+    :goto_0
+    if-eqz p2, :cond_9
+
+    .line 173
+    .line 174
+    invoke-direct {p0, p4}, Lcom/facebook/common/dextricks/DexStore;->verifyCanaryClasses(Lcom/facebook/common/dextricks/DexManifest;)V
+
+    .line 175
+    .line 176
+    .line 177
+    :cond_9
     iput-object p4, p0, Lcom/facebook/common/dextricks/DexStore;->mLoadedManifest:Lcom/facebook/common/dextricks/DexManifest;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 129
-    .line 130
-    sget-boolean v0, Lcom/facebook/common/dextricks/DexStore;->logDexAddPageFaults:Z
-
-    .line 131
-    .line 132
-    if-eqz v0, :cond_8
-
-    .line 133
-    .line 134
-    invoke-static {}, LX/0Bn;->A00()LX/0Bm;
-
-    .line 135
-    .line 136
-    .line 137
-    move-result-object v4
-
-    .line 138
-    iget-wide v2, v4, LX/0Bm;->A03:J
-
-    .line 139
-    .line 140
-    sget-wide v0, Lcom/facebook/common/dextricks/DexStore;->majPageFaultsDelta:J
-
-    .line 141
-    .line 142
-    sub-long/2addr v2, v0
-
-    .line 143
-    sput-wide v2, Lcom/facebook/common/dextricks/DexStore;->majPageFaultsDelta:J
-
-    .line 144
-    .line 145
-    iget-wide v2, v4, LX/0Bm;->A02:J
-
-    .line 146
-    .line 147
-    sget-wide v0, Lcom/facebook/common/dextricks/DexStore;->pageInBytesDelta:J
-
-    .line 148
-    .line 149
-    sub-long/2addr v2, v0
-
-    .line 150
-    sput-wide v2, Lcom/facebook/common/dextricks/DexStore;->pageInBytesDelta:J
-
-    .line 151
-    .line 152
-    :cond_8
-    return-void
-
-    .line 153
-    :catchall_0
-    move-exception v3
-
-    .line 154
-    and-int/lit8 v0, p6, 0x2
-
-    .line 155
-    .line 156
-    const/4 v5, 0x1
-
-    .line 157
-    if-nez v0, :cond_9
-
-    .line 158
-    .line 159
-    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
-
-    .line 160
-    .line 161
-    iget-object v0, v0, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->mDexFiles:Ljava/util/ArrayList;
-
-    .line 162
-    .line 163
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
-
-    .line 164
-    .line 165
-    .line 166
-    move-result v0
-
-    .line 167
-    const/4 v4, 0x0
-
-    .line 168
-    if-eq v0, v1, :cond_a
-
-    .line 169
-    .line 170
-    :cond_9
-    const/4 v4, 0x1
-
-    .line 171
-    :cond_a
-    const/4 v0, 0x4
-
-    .line 172
-    new-array v1, v0, [Ljava/lang/Object;
-
-    .line 173
-    .line 174
-    if-eqz v4, :cond_c
-
-    .line 175
-    .line 176
-    const-string v0, "fatal"
-
-    .line 177
     .line 178
-    :goto_0
-    aput-object v0, v1, v2
-
     .line 179
-    .line 180
-    iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+    invoke-static {}, Landroid/os/Trace;->endSection()V
 
+    .line 180
     .line 181
     .line 182
-    aput-object v0, v1, v5
+    sget-boolean v0, Lcom/facebook/common/dextricks/DexStore;->logDexAddPageFaults:Z
 
     .line 183
     .line 184
-    aput-object p3, v1, v6
+    if-eqz v0, :cond_a
 
     .line 185
     .line 186
-    const/4 v0, 0x3
+    invoke-static {}, LX/0C6;->A00()LX/0C5;
 
     .line 187
-    invoke-static {v1, v0, p2}, LX/001;->A1C([Ljava/lang/Object;IZ)V
-
     .line 188
     .line 189
+    move-result-object v4
+
     .line 190
-    const-string v0, "%s error in store %s scheme %s regen %s"
+    iget-wide v2, v4, LX/0C5;->A03:J
 
     .line 191
     .line 192
-    invoke-static {v3, v0, v1}, Lcom/facebook/common/dextricks/Mlog;->e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    sget-wide v0, Lcom/facebook/common/dextricks/DexStore;->majPageFaultsDelta:J
 
     .line 193
     .line 194
+    sub-long/2addr v2, v0
+
     .line 195
-    if-eqz p2, :cond_b
+    sput-wide v2, Lcom/facebook/common/dextricks/DexStore;->majPageFaultsDelta:J
 
     .line 196
     .line 197
-    const-wide/16 v0, 0x5
+    iget-wide v2, v4, LX/0C5;->A02:J
 
     .line 198
     .line 199
-    :goto_1
-    invoke-virtual {p0, v0, v1}, Lcom/facebook/common/dextricks/DexStore;->writeStatusLocked(J)V
+    sget-wide v0, Lcom/facebook/common/dextricks/DexStore;->pageInBytesDelta:J
 
     .line 200
     .line 201
+    sub-long/2addr v2, v0
+
     .line 202
-    if-eqz v4, :cond_d
+    sput-wide v2, Lcom/facebook/common/dextricks/DexStore;->pageInBytesDelta:J
 
     .line 203
     .line 204
-    new-instance v0, Lcom/facebook/common/dextricks/FatalDexError;
+    :cond_a
+    return-void
 
     .line 205
+    :catchall_0
+    move-exception v4
+
     .line 206
-    invoke-direct {v0, v3}, Lcom/facebook/common/dextricks/FatalDexError;-><init>(Ljava/lang/Throwable;)V
+    and-int/lit8 v0, p6, 0x2
 
     .line 207
     .line 208
+    const/4 v6, 0x1
+
     .line 209
-    throw v0
+    if-nez v0, :cond_b
 
     .line 210
-    :cond_b
-    const-wide/16 v0, 0x0
-
     .line 211
-    .line 212
-    goto :goto_1
+    :try_start_1
+    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
+    .line 212
     .line 213
-    :cond_c
-    const-string v0, "recoverable"
+    iget-object v0, v0, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->mDexFiles:Ljava/util/ArrayList;
 
     .line 214
     .line 215
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
     .line 216
-    :cond_d
-    new-array v1, v2, [Ljava/lang/Object;
-
     .line 217
     .line 218
-    const-string v0, "retrying dex store load after reset"
+    move-result v0
 
     .line 219
+    const/4 v5, 0x0
+
     .line 220
-    invoke-static {v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
+    if-eq v0, v1, :cond_c
 
     .line 221
     .line 222
+    :cond_b
+    const/4 v5, 0x1
+
     .line 223
-    new-instance v0, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;
+    :cond_c
+    const-string v2, "%s error in store %s scheme %s regen %s"
 
     .line 224
     .line 225
-    invoke-direct {v0, v3}, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;-><init>(Ljava/lang/Throwable;)V
+    const/4 v0, 0x4
 
     .line 226
+    new-array v1, v0, [Ljava/lang/Object;
+
     .line 227
     .line 228
+    if-eqz v5, :cond_d
+
+    .line 229
+    .line 230
+    const-string v0, "fatal"
+
+    .line 231
+    .line 232
+    :goto_1
+    aput-object v0, v1, v3
+
+    .line 233
+    .line 234
+    iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+
+    .line 235
+    .line 236
+    aput-object v0, v1, v6
+
+    .line 237
+    .line 238
+    aput-object p3, v1, v7
+
+    .line 239
+    .line 240
+    const/4 v0, 0x3
+
+    .line 241
+    invoke-static {v1, v0, p2}, LX/001;->A1C([Ljava/lang/Object;IZ)V
+
+    .line 242
+    .line 243
+    .line 244
+    invoke-static {v4, v2, v1}, Lcom/facebook/common/dextricks/Mlog;->e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 245
+    .line 246
+    .line 247
+    goto :goto_2
+
+    .line 248
+    :cond_d
+    const-string v0, "recoverable"
+
+    .line 249
+    .line 250
+    goto :goto_1
+
+    .line 251
+    :goto_2
+    if-eqz p2, :cond_e
+
+    .line 252
+    .line 253
+    const-wide/16 v0, 0x5
+
+    .line 254
+    .line 255
+    goto :goto_3
+
+    .line 256
+    :cond_e
+    const-wide/16 v0, 0x0
+
+    .line 257
+    .line 258
+    :goto_3
+    invoke-virtual {p0, v0, v1}, Lcom/facebook/common/dextricks/DexStore;->writeStatusLocked(J)V
+
+    .line 259
+    .line 260
+    .line 261
+    if-eqz v5, :cond_f
+
+    .line 262
+    .line 263
+    new-instance v0, Lcom/facebook/common/dextricks/FatalDexError;
+
+    .line 264
+    .line 265
+    invoke-direct {v0, v4}, Lcom/facebook/common/dextricks/FatalDexError;-><init>(Ljava/lang/Throwable;)V
+
+    .line 266
+    .line 267
+    .line 268
+    goto :goto_4
+
+    .line 269
+    :cond_f
+    const-string v0, "retrying dex store load after reset"
+
+    .line 270
+    .line 271
+    invoke-static {v0}, LX/001;->A0z(Ljava/lang/String;)V
+
+    .line 272
+    .line 273
+    .line 274
+    new-instance v0, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;
+
+    .line 275
+    .line 276
+    invoke-direct {v0, v4}, Lcom/facebook/common/dextricks/DexStore$RecoverableDexException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 277
+    .line 278
+    .line 279
+    :goto_4
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 280
+    :catchall_1
+    move-exception v0
+
+    .line 281
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 282
+    .line 283
+    .line 284
     throw v0
 .end method
 
-.method public static mergeConfiguration(Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+.method public static mergeConfiguration(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
     .locals 3
 
     .line 0
-    sget-object v2, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    sget-object v2, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 1
     .line 2
-    iget v1, v2, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->configFlags:I
+    iget v1, v2, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->configFlags:I
 
     .line 3
     .line 4
-    iget v0, p0, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->configFlags:I
+    iget v0, p0, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->configFlags:I
 
     .line 5
     .line 6
     or-int/2addr v1, v0
 
     .line 7
-    iput v1, v2, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->configFlags:I
+    iput v1, v2, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->configFlags:I
 
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->mDexFiles:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->mDexFiles:Ljava/util/ArrayList;
 
     .line 10
     .line 11
@@ -6054,11 +7020,11 @@
 
     .line 26
     .line 27
-    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sMergedDexConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 28
     .line 29
-    invoke-virtual {v0, v1}, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->addDex(Ldalvik/system/DexFile;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->addDex(Ldalvik/system/DexFile;)V
 
     .line 30
     .line 31
@@ -6067,7 +7033,7 @@
 
     .line 33
     :cond_0
-    iget-object v0, p0, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->mDexFiles:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->mDexFiles:Ljava/util/ArrayList;
 
     .line 34
     .line 35
@@ -6102,7 +7068,7 @@
     .locals 2
 
     .line 268435456
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 268435457
     .line 268435458
@@ -6110,7 +7076,7 @@
     move-result-object v1
 
     .line 268435460
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 268435461
     .line 268435462
@@ -6130,91 +7096,146 @@
 .end method
 
 .method public static declared-synchronized open(Ljava/io/File;Ljava/io/File;Lcom/facebook/common/dextricks/ResProvider;Ljava/util/ArrayList;Ljava/util/ArrayList;)Lcom/facebook/common/dextricks/DexStore;
-    .locals 3
+    .locals 5
 
     .line 0
-    const-class v1, Lcom/facebook/common/dextricks/DexStore;
+    const-class v3, Lcom/facebook/common/dextricks/DexStore;
 
     .line 1
     .line 2
-    monitor-enter v1
+    monitor-enter v3
 
     .line 3
     :try_start_0
-    invoke-virtual {p0}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
+    const-string v2, "DexStore.open["
 
     .line 4
     .line 5
+    invoke-static {p0}, Lcom/facebook/common/dextricks/DexStore;->getIdForTracing(Ljava/io/File;)Ljava/lang/String;
+
     .line 6
-    move-result-object p0
-
     .line 7
-    invoke-static {}, Lcom/facebook/common/dextricks/DexStore;->dexStoreListHead()Lcom/facebook/common/dextricks/DexStore;
-
     .line 8
-    .line 9
-    .line 10
-    move-result-object v2
+    move-result-object v1
 
+    .line 9
+    const-string v0, "]"
+
+    .line 10
     .line 11
-    :goto_0
-    if-eqz v2, :cond_0
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 12
     .line 13
-    iget-object v0, v2, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
-
     .line 14
+    move-result-object v0
+
     .line 15
-    invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 16
     .line 17
     .line 18
-    move-result v0
+    :try_start_1
+    invoke-virtual {p0}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
     .line 19
-    if-nez v0, :cond_1
-
     .line 20
     .line 21
-    iget-object v2, v2, Lcom/facebook/common/dextricks/DexStore;->next:Lcom/facebook/common/dextricks/DexStore;
+    move-result-object p0
 
     .line 22
+    invoke-static {}, Lcom/facebook/common/dextricks/DexStore;->dexStoreListHead()Lcom/facebook/common/dextricks/DexStore;
+
     .line 23
-    goto :goto_0
-
     .line 24
-    :cond_0
-    new-instance v2, Lcom/facebook/common/dextricks/DexStore;
-
     .line 25
+    move-result-object v4
+
     .line 26
-    invoke-direct/range {v2 .. v7}, Lcom/facebook/common/dextricks/DexStore;-><init>(Ljava/io/File;Ljava/io/File;Lcom/facebook/common/dextricks/ResProvider;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    :goto_0
+    if-eqz v4, :cond_0
 
     .line 27
     .line 28
+    iget-object v0, v4, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
+
     .line 29
-    sput-object v2, Lcom/facebook/common/dextricks/DexStore;->sListHead:Lcom/facebook/common/dextricks/DexStore;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 30
+    invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
     .line 31
-    :cond_1
-    monitor-exit v1
-
     .line 32
-    return-object v2
-
     .line 33
+    move-result v0
+
+    .line 34
+    if-nez v0, :cond_1
+
+    .line 35
+    .line 36
+    iget-object v4, v4, Lcom/facebook/common/dextricks/DexStore;->next:Lcom/facebook/common/dextricks/DexStore;
+
+    .line 37
+    .line 38
+    goto :goto_0
+
+    .line 39
+    :cond_0
+    new-instance v4, Lcom/facebook/common/dextricks/DexStore;
+
+    .line 40
+    .line 41
+    invoke-direct/range {v4 .. v9}, Lcom/facebook/common/dextricks/DexStore;-><init>(Ljava/io/File;Ljava/io/File;Lcom/facebook/common/dextricks/ResProvider;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+
+    .line 42
+    .line 43
+    .line 44
+    sput-object v4, Lcom/facebook/common/dextricks/DexStore;->sListHead:Lcom/facebook/common/dextricks/DexStore;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 45
+    .line 46
+    :cond_1
+    :try_start_2
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 47
+    .line 48
+    .line 49
+    monitor-exit v3
+
+    .line 50
+    return-object v4
+
+    .line 51
     :catchall_0
     move-exception v0
 
-    .line 34
-    monitor-exit v1
+    .line 52
+    :try_start_3
+    invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 35
+    .line 53
+    .line 54
+    .line 55
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 56
+    :catchall_1
+    move-exception v0
+
+    .line 57
+    monitor-exit v3
+
+    .line 58
     throw v0
 .end method
 
@@ -6296,11 +7317,11 @@
     const/4 v0, 0x1
 
     .line 37
-    new-instance v1, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;
+    new-instance v2, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;
 
     .line 38
     .line 39
-    invoke-direct {v1, p0, p1, v6, v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;-><init>(Lcom/facebook/common/dextricks/DexStore;Landroid/content/Context;Lcom/facebook/common/dextricks/OptimizationConfiguration$Provider;Z)V
+    invoke-direct {v2, p0, p1, v6, v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;-><init>(Lcom/facebook/common/dextricks/DexStore;Landroid/content/Context;Lcom/facebook/common/dextricks/OptimizationConfiguration$Provider;Z)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
@@ -6309,7 +7330,7 @@
     .line 41
     .line 42
     :try_start_1
-    invoke-virtual {v7, p1, p0, v1}, Lcom/facebook/common/dextricks/OdexScheme;->optimize(Landroid/content/Context;Lcom/facebook/common/dextricks/DexStore;Lcom/facebook/common/dextricks/DexStore$OptimizationSession;)V
+    invoke-virtual {v7, p1, p0, v2}, Lcom/facebook/common/dextricks/OdexScheme;->optimize(Landroid/content/Context;Lcom/facebook/common/dextricks/DexStore;Lcom/facebook/common/dextricks/DexStore$OptimizationSession;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -6317,7 +7338,7 @@
     .line 44
     .line 45
     :try_start_2
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->noteOptimizationSuccess()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->noteOptimizationSuccess()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -6325,7 +7346,7 @@
     .line 47
     .line 48
     :try_start_3
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->close()V
 
     .line 49
     .line 50
@@ -6341,7 +7362,7 @@
 
     .line 53
     :try_start_4
-    invoke-virtual {v1, v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->copeWithOptimizationFailure(Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->copeWithOptimizationFailure(Ljava/lang/Throwable;)V
 
     .line 54
     .line 55
@@ -6352,61 +7373,73 @@
 
     .line 57
     :catchall_1
-    move-exception v0
+    move-exception v1
 
     .line 58
     :try_start_5
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->close()V
 
     .line 59
     .line 60
     .line 61
+    goto :goto_0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    .line 62
     :catchall_2
+    move-exception v0
+
+    .line 63
     :try_start_6
-    throw v0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 64
+    .line 65
+    .line 66
+    :goto_0
+    throw v1
     :try_end_6
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 62
+    .line 67
     :catchall_3
     move-exception v2
 
-    .line 63
+    .line 68
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 64
-    .line 65
-    const-string v0, "foreground optimization failed; proceeding"
-
-    .line 66
-    .line 67
-    invoke-static {v2, v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 68
     .line 69
     .line 70
-    return-void
+    const-string v0, "foreground optimization failed; proceeding"
 
     .line 71
-    :catch_0
-    move-exception v1
-
     .line 72
-    new-instance v0, Ljava/lang/AssertionError;
+    invoke-static {v2, v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 73
     .line 74
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
     .line 75
+    return-void
+
     .line 76
+    :catch_0
+    move-exception v1
+
     .line 77
-    throw v0
+    new-instance v0, Ljava/lang/AssertionError;
 
     .line 78
+    .line 79
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    .line 80
+    .line 81
+    .line 82
+    throw v0
+
+    .line 83
     :cond_0
     return-void
 .end method
@@ -6415,7 +7448,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -6711,17 +7744,15 @@
     .line 105
     .line 106
     :cond_3
-    const-class v0, LX/0VK;
+    invoke-virtual {p0}, Lcom/facebook/common/dextricks/DexStore;->readConfig()Lcom/facebook/common/dextricks/DexStore$Config;
 
     .line 107
     .line 108
-    monitor-enter v0
-
     .line 109
-    monitor-exit v0
+    move-result-object v0
 
     .line 110
-    invoke-virtual {p0}, Lcom/facebook/common/dextricks/DexStore;->readConfig()Lcom/facebook/common/dextricks/DexStore$Config;
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/DexStore$Config;->readDepBlock()[B
 
     .line 111
     .line 112
@@ -6729,61 +7760,61 @@
     move-result-object v0
 
     .line 114
-    invoke-virtual {v0}, Lcom/facebook/common/dextricks/DexStore$Config;->readDepBlock()[B
+    invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     .line 115
     .line 116
     .line 117
-    move-result-object v0
-
-    .line 118
-    invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeByteArray([B)V
-
-    .line 119
-    .line 120
-    .line 121
     invoke-virtual {v2}, Landroid/os/Parcel;->marshall()[B
 
-    .line 122
-    .line 123
-    .line 124
+    .line 118
+    .line 119
+    .line 120
     move-result-object v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 125
+    .line 121
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 122
+    .line 123
+    .line 124
+    return-object v0
+
+    .line 125
+    :cond_4
+    :try_start_4
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 126
     .line 127
     .line 128
-    return-object v0
+    move-result-object v1
 
     .line 129
-    :cond_4
-    :try_start_4
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    const-string v0, "unable to get identifier of "
 
     .line 130
     .line 131
-    .line 132
-    move-result-object v1
-
-    .line 133
-    const-string v0, "unable to get identifier of "
-
-    .line 134
-    .line 135
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 136
-    .line 137
-    .line 138
+    .line 132
+    .line 133
+    .line 134
     iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->mApk:Ljava/io/File;
 
+    .line 135
+    .line 136
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 137
+    .line 138
     .line 139
+    move-result-object v0
+
     .line 140
-    invoke-static {v0, v1}, LX/001;->A0J(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 141
     .line 142
@@ -6791,28 +7822,20 @@
     move-result-object v0
 
     .line 144
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
-
-    .line 145
-    .line 146
-    .line 147
-    move-result-object v0
-
-    .line 148
     throw v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 149
+    .line 145
     :catchall_0
     move-exception v0
 
-    .line 150
+    .line 146
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 151
-    .line 152
-    .line 153
+    .line 147
+    .line 148
+    .line 149
     throw v0
 .end method
 
@@ -6828,7 +7851,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 5
     .line 6
@@ -7001,7 +8024,7 @@
 
     .line 8
     .line 9
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 10
     .line 11
@@ -7020,7 +8043,7 @@
 
     .line 17
     :try_start_0
-    invoke-static/range {v17 .. v17}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
+    invoke-static/range {v17 .. v17}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
 
     .line 18
     .line 19
@@ -7233,25 +8256,25 @@
     .line 19
     .line 20
     .line 21
-    move-result-object v1
+    move-result-object v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     .line 22
     :try_start_2
-    invoke-virtual {v3, v1}, Lcom/facebook/common/dextricks/OdexScheme$Compiler;->compile(Lcom/facebook/common/dextricks/InputDex;)V
+    invoke-virtual {v3, v0}, Lcom/facebook/common/dextricks/OdexScheme$Compiler;->compile(Lcom/facebook/common/dextricks/InputDex;)V
 
     .line 23
     .line 24
     .line 25
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 26
     .line 27
     :try_start_3
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/InputDex;->close()V
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/InputDex;->close()V
 
     .line 28
     .line 29
@@ -7262,94 +8285,129 @@
 
     .line 31
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 32
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     .line 33
     .line 34
     :try_start_4
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/InputDex;->close()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/InputDex;->close()V
 
     .line 35
     .line 36
     .line 37
-    :catchall_1
-    :cond_1
-    :try_start_5
-    throw v0
+    goto :goto_1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 38
+    :catchall_1
+    move-exception v0
+
+    .line 39
+    :try_start_5
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 40
+    .line 41
+    .line 42
+    :cond_1
+    :goto_1
+    throw v1
+
+    .line 43
     :cond_2
     invoke-virtual {v3}, Lcom/facebook/common/dextricks/OdexScheme$Compiler;->performFinishActions()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 39
-    .line 40
-    .line 41
+    .line 44
+    .line 45
+    .line 46
     :try_start_6
     invoke-virtual {v2}, Lcom/facebook/common/dextricks/InputDexIterator;->close()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 42
-    .line 43
-    .line 44
-    invoke-virtual {v3}, Lcom/facebook/common/dextricks/OdexScheme$Compiler;->close()V
-
-    .line 45
-    .line 46
     .line 47
-    return-void
-
     .line 48
-    :catchall_2
-    move-exception v0
-
     .line 49
-    if-eqz v2, :cond_3
+    invoke-virtual {v3}, Lcom/facebook/common/dextricks/OdexScheme$Compiler;->close()V
 
     .line 50
     .line 51
-    :try_start_7
-    invoke-virtual {v2}, Lcom/facebook/common/dextricks/InputDexIterator;->close()V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
-
     .line 52
+    return-void
+
     .line 53
+    :catchall_2
+    move-exception v1
+
     .line 54
-    :catchall_3
-    :cond_3
-    :try_start_8
-    throw v0
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+    if-eqz v2, :cond_3
 
     .line 55
-    :catchall_4
-    move-exception v0
-
     .line 56
-    if-eqz v3, :cond_4
+    :try_start_7
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/InputDexIterator;->close()V
 
     .line 57
     .line 58
+    .line 59
+    goto :goto_2
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+
+    .line 60
+    :catchall_3
+    move-exception v0
+
+    .line 61
+    :try_start_8
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 62
+    .line 63
+    .line 64
+    :cond_3
+    :goto_2
+    throw v1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+
+    .line 65
+    :catchall_4
+    move-exception v1
+
+    .line 66
+    if-eqz v3, :cond_4
+
+    .line 67
+    .line 68
     :try_start_9
     invoke-virtual {v3}, Lcom/facebook/common/dextricks/OdexScheme$Compiler;->close()V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_5
 
-    .line 59
-    .line 60
-    .line 61
+    .line 69
+    .line 70
+    .line 71
+    throw v1
+
+    .line 72
     :catchall_5
+    move-exception v0
+
+    .line 73
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 74
+    .line 75
+    .line 76
     :cond_4
-    throw v0
+    throw v1
 .end method
 
 .method public static sanityCheckTimestamp(J)J
@@ -7404,7 +8462,7 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 9
     .line 10
@@ -7450,7 +8508,7 @@
 
     .line 30
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 31
     :try_start_1
@@ -7461,173 +8519,224 @@
     .line 32
     .line 33
     .line 34
+    throw v1
+
+    .line 35
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 36
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 37
+    .line 38
+    .line 39
+    throw v1
 .end method
 
 .method private schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;J)Lcom/facebook/common/dextricks/OdexScheme;
     .locals 7
 
-    .line 0
+    .line 268435456
     iget-object v3, p2, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
 
-    .line 1
-    .line 2
+    .line 268435457
+    .line 268435458
     const-wide/16 v1, 0xf
 
-    .line 3
-    .line 4
+    .line 268435459
+    .line 268435460
     move-wide v5, p3
 
-    .line 5
+    .line 268435461
     and-long/2addr v1, p3
 
-    .line 6
+    .line 268435462
     long-to-int v0, v1
 
-    .line 7
+    .line 268435463
     int-to-byte v1, v0
 
-    .line 8
+    .line 268435464
     const/4 v0, 0x2
 
-    .line 9
+    .line 268435465
     if-eq v1, v0, :cond_5
 
-    .line 10
-    .line 11
+    .line 268435466
+    .line 268435467
     const/4 v0, 0x3
 
-    .line 12
+    .line 268435468
     if-eq v1, v0, :cond_4
 
-    .line 13
-    .line 14
+    .line 268435469
+    .line 268435470
     const/4 v0, 0x4
 
-    .line 15
+    .line 268435471
     if-eq v1, v0, :cond_3
 
-    .line 16
-    .line 17
+    .line 268435472
+    .line 268435473
     const/4 v0, 0x7
 
-    .line 18
+    .line 268435474
     if-eq v1, v0, :cond_2
 
-    .line 19
-    .line 20
+    .line 268435475
+    .line 268435476
     const/16 v0, 0x8
 
-    .line 21
-    .line 22
+    .line 268435477
+    .line 268435478
     if-eq v1, v0, :cond_1
 
-    .line 23
-    .line 24
+    .line 268435479
+    .line 268435480
     const/16 v0, 0x9
 
-    .line 25
-    .line 26
+    .line 268435481
+    .line 268435482
     if-eq v1, v0, :cond_0
 
-    .line 27
-    .line 28
+    .line 268435483
+    .line 268435484
     new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeInvalid;
 
-    .line 29
-    .line 30
+    .line 268435485
+    .line 268435486
     invoke-direct {v1, p3, p4}, Lcom/facebook/common/dextricks/OdexSchemeInvalid;-><init>(J)V
 
-    .line 31
-    .line 32
-    .line 33
+    .line 268435487
+    .line 268435488
+    .line 268435489
     return-object v1
 
-    .line 34
+    .line 268435490
     :cond_0
     new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeNoop;
 
-    .line 35
-    .line 36
+    .line 268435491
+    .line 268435492
     invoke-direct {v1}, Lcom/facebook/common/dextricks/OdexSchemeNoop;-><init>()V
 
-    .line 37
-    .line 38
-    .line 39
+    .line 268435493
+    .line 268435494
+    .line 268435495
     return-object v1
 
-    .line 40
+    .line 268435496
     :cond_1
     iget-object v4, p0, Lcom/facebook/common/dextricks/DexStore;->mResProvider:Lcom/facebook/common/dextricks/ResProvider;
 
-    .line 41
-    .line 42
+    .line 268435497
+    .line 268435498
     new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeArtXdex;
 
-    .line 43
-    .line 44
+    .line 268435499
+    .line 268435500
     move-object v2, p1
 
-    .line 45
+    .line 268435501
     invoke-direct/range {v1 .. v6}, Lcom/facebook/common/dextricks/OdexSchemeArtXdex;-><init>(Landroid/content/Context;[Lcom/facebook/common/dextricks/DexManifest$Dex;Lcom/facebook/common/dextricks/ResProvider;J)V
 
-    .line 46
-    .line 47
-    .line 48
+    .line 268435502
+    .line 268435503
+    .line 268435504
     return-object v1
 
-    .line 49
+    .line 268435505
     :cond_2
     new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeArtTurbo;
 
-    .line 50
-    .line 51
+    .line 268435506
+    .line 268435507
     invoke-direct {v1, v3}, Lcom/facebook/common/dextricks/OdexSchemeArtTurbo;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;)V
 
-    .line 52
-    .line 53
-    .line 54
+    .line 268435508
+    .line 268435509
+    .line 268435510
     return-object v1
 
-    .line 55
+    .line 268435511
     :cond_3
     new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeTurbo;
 
-    .line 56
-    .line 57
+    .line 268435512
+    .line 268435513
     invoke-direct {v1, v3}, Lcom/facebook/common/dextricks/OdexSchemeTurbo;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;)V
 
-    .line 58
-    .line 59
-    .line 60
+    .line 268435514
+    .line 268435515
+    .line 268435516
     return-object v1
 
-    .line 61
+    .line 268435517
     :cond_4
     new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeXdex;
 
-    .line 62
-    .line 63
+    .line 268435518
+    .line 268435519
     invoke-direct {v1, v3}, Lcom/facebook/common/dextricks/OdexSchemeXdex;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;)V
 
-    .line 64
-    .line 65
-    .line 66
+    .line 268435520
+    .line 268435521
+    .line 268435522
     return-object v1
 
-    .line 67
+    .line 268435523
     :cond_5
     new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeBoring;
 
-    .line 68
-    .line 69
+    .line 268435524
+    .line 268435525
     invoke-direct {v1, v3}, Lcom/facebook/common/dextricks/OdexSchemeBoring;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;)V
 
-    .line 70
-    .line 71
-    .line 72
+    .line 268435526
+    .line 268435527
+    .line 268435528
     return-object v1
+.end method
+
+.method private schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;JI)Lcom/facebook/common/dextricks/OdexScheme;
+    .locals 2
+
+    .line 0
+    and-int/lit8 v0, p5, 0x40
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v1, p0, Lcom/facebook/common/dextricks/DexStore;->mApk:Ljava/io/File;
+
+    .line 5
+    .line 6
+    new-instance v0, Lcom/facebook/common/dextricks/OdexSchemeIsolatedSplit;
+
+    .line 7
+    .line 8
+    invoke-direct {v0, v1, p1}, Lcom/facebook/common/dextricks/OdexSchemeIsolatedSplit;-><init>(Ljava/io/File;Landroid/content/Context;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-object v0
+
+    .line 12
+    :cond_0
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/facebook/common/dextricks/DexStore;->schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;J)Lcom/facebook/common/dextricks/OdexScheme;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    return-object v0
 .end method
 
 .method public static setClock(Lcom/facebook/common/dextricks/DexStore$DexStoreClock;)V
@@ -7995,11 +9104,6 @@
     const/4 v0, 0x0
 
     .line 9
-    invoke-static {p2}, Lcom/facebook/common/dextricks/DexStore;->canLoadCanaryClass(Lcom/facebook/common/dextricks/DexManifest;)Z
-
-    .line 10
-    .line 11
-    .line 12
     :cond_0
     return v0
 .end method
@@ -8008,7 +9112,7 @@
     .locals 3
 
     .line 0
-    sget-boolean v0, LX/0I1;->A08:Z
+    sget-boolean v0, LX/0HL;->A08:Z
 
     .line 1
     .line 2
@@ -8059,7 +9163,7 @@
 
     .line 24
     .line 25
-    invoke-static {p1, v0, v2}, LX/0QY;->A00(Landroid/content/Context;Ljava/lang/String;I)I
+    invoke-static {p1, v0, v2}, LX/0Mp;->A00(Landroid/content/Context;Ljava/lang/String;I)I
 
     .line 26
     .line 27
@@ -8130,7 +9234,7 @@
 
     .line 20
     :cond_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 21
     .line 22
@@ -8142,7 +9246,7 @@
 
     .line 25
     .line 26
-    invoke-static {v2, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 27
     .line 28
@@ -8150,7 +9254,7 @@
     move-result-object v0
 
     .line 30
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 31
     .line 32
@@ -8302,7 +9406,7 @@
 
     .line 15
     .line 16
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 17
     .line 18
@@ -8431,7 +9535,7 @@
 
     .line 73
     .line 74
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 75
     .line 76
@@ -8549,7 +9653,7 @@
 
     .line 125
     :catchall_1
-    move-exception v0
+    move-exception v1
 
     .line 126
     if-eqz v5, :cond_8
@@ -8564,9 +9668,20 @@
     .line 129
     .line 130
     .line 131
+    throw v1
+
+    .line 132
     :catchall_2
+    move-exception v0
+
+    .line 133
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 134
+    .line 135
+    .line 136
     :cond_8
-    throw v0
+    throw v1
 .end method
 
 .method public attemptedOptimizationSinceRegeneration()Z
@@ -8581,7 +9696,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/001;->A1R(Ljava/io/File;Ljava/lang/String;)Z
+    invoke-static {v1, v0}, LX/001;->A1P(Ljava/io/File;Ljava/lang/String;)Z
 
     .line 5
     .line 6
@@ -8710,44 +9825,51 @@
     .line 10
     .line 11
     .line 12
-    goto :goto_0
+    if-eqz v2, :cond_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 13
-    :catchall_0
-    move-exception v0
-
     .line 14
-    if-eqz v2, :cond_0
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
     .line 15
     .line 16
+    .line 17
+    :cond_0
+    return-void
+
+    .line 18
+    :catchall_0
+    move-exception v1
+
+    .line 19
+    if-eqz v2, :cond_1
+
+    .line 20
+    .line 21
     :try_start_1
     invoke-virtual {v2}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 17
-    .line 18
-    .line 19
-    :catchall_1
-    :cond_0
-    throw v0
-
-    .line 20
-    :goto_0
-    if-eqz v2, :cond_1
-
-    .line 21
     .line 22
-    invoke-virtual {v2}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
-
     .line 23
     .line 24
+    throw v1
+
     .line 25
+    :catchall_1
+    move-exception v0
+
+    .line 26
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 27
+    .line 28
+    .line 29
     :cond_1
-    return-void
+    throw v1
 .end method
 
 .method public getAllOatFiles(Ljava/io/File;)Ljava/util/List;
@@ -8765,7 +9887,7 @@
     array-length v4, v5
 
     .line 5
-    invoke-static {v4}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v4}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 6
     .line 7
@@ -8842,7 +9964,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 5
     .line 6
@@ -8938,7 +10060,7 @@
 
     .line 47
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 48
     if-eqz v2, :cond_2
@@ -8953,11 +10075,22 @@
     .line 51
     .line 52
     .line 53
-    :catchall_1
-    :cond_2
-    throw v0
+    throw v1
 
     .line 54
+    :catchall_1
+    move-exception v0
+
+    .line 55
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 56
+    .line 57
+    .line 58
+    :cond_2
+    throw v1
+
+    .line 59
     :cond_3
     return-object v3
 .end method
@@ -8985,7 +10118,7 @@
     .locals 8
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 1
     .line 2
@@ -9179,7 +10312,7 @@
 
     .line 36
     .line 37
-    invoke-virtual {v5, v2, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 38
     .line 39
@@ -9204,7 +10337,7 @@
 
     .line 49
     .line 50
-    invoke-virtual {v5, v2, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 51
     .line 52
@@ -9221,7 +10354,7 @@
 
     .line 58
     .line 59
-    invoke-virtual {v5, v2, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 60
     .line 61
@@ -9238,7 +10371,7 @@
 
     .line 67
     .line 68
-    invoke-virtual {v5, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 69
     .line 70
@@ -9307,7 +10440,7 @@
     move-result-object v0
 
     .line 102
-    invoke-virtual {v5, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 103
     .line 104
@@ -9328,7 +10461,7 @@
     move-result-object v0
 
     .line 113
-    invoke-virtual {v5, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 114
     .line 115
@@ -9349,7 +10482,7 @@
     move-result-object v0
 
     .line 124
-    invoke-virtual {v5, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 125
     .line 126
@@ -9362,7 +10495,7 @@
 
     .line 130
     .line 131
-    invoke-virtual {v5, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 132
     .line 133
@@ -9388,7 +10521,7 @@
     move-result-object v0
 
     .line 144
-    invoke-virtual {v5, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 145
     .line 146
@@ -9409,185 +10542,188 @@
 
     .line 154
     .line 155
-    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v2, v5, v0, v1}, LX/001;->A0y(Ljava/lang/Object;Ljava/util/Map;J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 156
     .line 157
     .line 158
-    move-result-object v0
-
-    .line 159
-    invoke-virtual {v5, v2, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 160
-    .line 161
-    .line 162
     const-string v2, "config.timeleft"
 
-    .line 163
-    .line 164
+    .line 159
+    .line 160
     if-eqz v8, :cond_1
 
-    .line 165
-    .line 166
+    .line 161
+    .line 162
     goto :goto_0
 
-    .line 167
+    .line 163
     :cond_1
     :try_start_1
     const-string v0, "<no info>"
 
-    .line 168
-    .line 169
+    .line 164
+    .line 165
     goto :goto_1
 
-    .line 170
+    .line 166
     :goto_0
     iget-object v0, v8, Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;->file:Ljava/io/File;
 
+    .line 167
+    .line 168
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
+
+    .line 169
+    .line 170
     .line 171
+    move-result v0
+
     .line 172
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 173
     .line 174
-    .line 175
-    move-result v0
+    iget-wide v6, v8, Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;->lastSuccessfulOptimizationTimestampMs:J
 
+    .line 175
     .line 176
-    if-eqz v0, :cond_1
+    iget-wide v0, v9, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
 
     .line 177
     .line 178
-    iget-wide v6, v8, Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;->lastSuccessfulOptimizationTimestampMs:J
-
-    .line 179
-    .line 180
-    iget-wide v0, v9, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
-
-    .line 181
-    .line 182
     add-long/2addr v6, v0
 
-    .line 183
+    .line 179
     invoke-static {v3, v4, v6, v7}, Lcom/facebook/common/dextricks/DexStore;->printRelativeTime(JJ)Ljava/lang/String;
+
+    .line 180
+    .line 181
+    .line 182
+    move-result-object v0
+
+    .line 183
+    :goto_1
+    invoke-interface {v5, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 184
     .line 185
     .line 186
-    move-result-object v0
-
-    .line 187
-    :goto_1
-    invoke-virtual {v5, v2, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 188
-    .line 189
-    .line 190
     :cond_2
     if-eqz v8, :cond_3
 
-    .line 191
-    .line 192
+    .line 187
+    .line 188
     iget-object v0, v8, Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;->file:Ljava/io/File;
 
+    .line 189
+    .line 190
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
+
+    .line 191
+    .line 192
     .line 193
+    move-result v0
+
     .line 194
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_3
 
     .line 195
     .line 196
-    .line 197
-    move-result v0
+    const-string v1, "opthistlog.lastSuccess"
 
+    .line 197
     .line 198
-    if-eqz v0, :cond_3
+    invoke-virtual {v8}, Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;->lastCompilationSessionWasASuccess()Z
 
     .line 199
     .line 200
-    const-string v1, "opthistlog.lastSuccess"
-
     .line 201
+    move-result v0
+
     .line 202
-    invoke-virtual {v8}, Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;->lastCompilationSessionWasASuccess()Z
+    invoke-static {v0}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     .line 203
     .line 204
     .line 205
-    move-result v0
+    move-result-object v0
 
     .line 206
-    invoke-static {v0}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
+    invoke-interface {v5, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 207
     .line 208
     .line 209
-    move-result-object v0
+    const-string v2, "opthistlog.lastCompilationTimestamp"
 
     .line 210
-    invoke-virtual {v5, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 211
+    iget-wide v0, v8, Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;->lastSuccessfulOptimizationTimestampMs:J
+
     .line 212
     .line 213
-    const-string v2, "opthistlog.lastCompilationTimestamp"
+    invoke-static {v3, v4, v0, v1}, Lcom/facebook/common/dextricks/DexStore;->printRelativeTime(JJ)Ljava/lang/String;
 
     .line 214
     .line 215
-    iget-wide v0, v8, Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;->lastSuccessfulOptimizationTimestampMs:J
-
     .line 216
+    move-result-object v0
+
     .line 217
-    invoke-static {v3, v4, v0, v1}, Lcom/facebook/common/dextricks/DexStore;->printRelativeTime(JJ)Ljava/lang/String;
+    invoke-interface {v5, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 218
     .line 219
     .line 220
-    move-result-object v0
-
-    .line 221
-    invoke-virtual {v5, v2, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 222
-    .line 223
-    .line 224
     :cond_3
     if-eqz v10, :cond_4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 225
-    .line 226
+    .line 221
+    .line 222
     invoke-virtual {v10}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
-    .line 227
-    .line 228
-    .line 229
+    .line 223
+    .line 224
+    .line 225
     :cond_4
     return-object v5
 
-    .line 230
+    .line 226
     :catchall_0
-    move-exception v0
+    move-exception v1
 
-    .line 231
+    .line 227
     if-eqz v10, :cond_5
 
-    .line 232
-    .line 233
+    .line 228
+    .line 229
     :try_start_2
     invoke-virtual {v10}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 230
+    .line 231
+    .line 232
+    throw v1
+
+    .line 233
+    :catchall_1
+    move-exception v0
+
     .line 234
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
     .line 235
     .line 236
-    :catchall_1
+    .line 237
     :cond_5
-    throw v0
+    throw v1
 .end method
 
 .method public getLoadedDexFiles()Ljava/util/List;
@@ -9635,7 +10771,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 5
     .line 6
@@ -9798,7 +10934,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 5
     .line 6
@@ -9853,7 +10989,7 @@
 
     .line 2
     .line 3
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 4
     .line 5
@@ -9962,96 +11098,152 @@
 
     .line 1
     :try_start_0
-    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/common/dextricks/DexStore;->loadAllImpl(ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
+    const-string v2, "DexStore.loadAll["
 
     .line 2
     .line 3
-    .line 4
-    move-result-object v2
+    iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
+    .line 4
     .line 5
-    goto :goto_0
-    :try_end_0
-    .catch Lcom/facebook/common/dextricks/DexStore$RecoverableDexException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v0}, Lcom/facebook/common/dextricks/DexStore;->getIdForTracing(Ljava/io/File;)Ljava/lang/String;
 
     .line 6
-    :catch_0
-    move-exception v1
-
     .line 7
-    or-int/lit8 v0, p1, 0x2
-
     .line 8
+    move-result-object v1
+
     .line 9
-    :try_start_1
-    invoke-direct {p0, v0, p2, p3}, Lcom/facebook/common/dextricks/DexStore;->loadAllImpl(ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
+    const-string v0, "]"
 
     .line 10
     .line 11
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     .line 12
-    move-result-object v2
-
     .line 13
-    iput-object v1, v2, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->regenRetryCause:Ljava/lang/Throwable;
-    :try_end_1
-    .catch Lcom/facebook/common/dextricks/DexStore$RecoverableDexException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
     .line 14
+    move-result-object v0
+
     .line 15
-    :goto_0
-    :try_start_2
-    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sDexStoreClock:Lcom/facebook/common/dextricks/DexStore$DexStoreClock;
+    invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 16
     .line 17
-    invoke-interface {v0}, Lcom/facebook/common/dextricks/DexStore$DexStoreClock;->now()J
-
     .line 18
+    :try_start_1
+    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/common/dextricks/DexStore;->loadAllImpl(ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
+
     .line 19
     .line 20
-    move-result-wide v0
-
     .line 21
-    iput-wide v0, v2, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->loadAllTime:J
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-result-object v2
 
     .line 22
+    goto :goto_0
+    :try_end_1
+    .catch Lcom/facebook/common/dextricks/DexStore$RecoverableDexException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     .line 23
-    monitor-exit p0
-
-    .line 24
-    return-object v2
-
-    .line 25
-    :catch_1
+    :catch_0
     move-exception v1
 
+    .line 24
+    or-int/lit8 v0, p1, 0x2
+
+    .line 25
     .line 26
-    :try_start_3
-    new-instance v0, Ljava/lang/AssertionError;
+    :try_start_2
+    invoke-direct {p0, v0, p2, p3}, Lcom/facebook/common/dextricks/DexStore;->loadAllImpl(ILcom/facebook/quicklog/LightweightQuickPerformanceLogger;Landroid/content/Context;)Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;
 
     .line 27
     .line 28
+    .line 29
+    move-result-object v2
+
+    .line 30
+    iput-object v1, v2, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->regenRetryCause:Ljava/lang/Throwable;
+    :try_end_2
+    .catch Lcom/facebook/common/dextricks/DexStore$RecoverableDexException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 31
+    .line 32
+    :goto_0
+    :try_start_3
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 33
+    .line 34
+    .line 35
+    sget-object v0, Lcom/facebook/common/dextricks/DexStore;->sDexStoreClock:Lcom/facebook/common/dextricks/DexStore$DexStoreClock;
+
+    .line 36
+    .line 37
+    invoke-interface {v0}, Lcom/facebook/common/dextricks/DexStore$DexStoreClock;->now()J
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-wide v0
+
+    .line 41
+    iput-wide v0, v2, Lcom/facebook/common/dextricks/DexErrorRecoveryInfo;->loadAllTime:J
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 42
+    .line 43
+    monitor-exit p0
+
+    .line 44
+    return-object v2
+
+    .line 45
+    :catch_1
+    move-exception v1
+
+    .line 46
+    :try_start_4
+    new-instance v0, Ljava/lang/AssertionError;
+
+    .line 47
+    .line 48
     invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    .line 29
-    .line 30
-    .line 31
+    .line 49
+    .line 50
+    .line 51
     throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 32
+    .line 52
     :catchall_0
     move-exception v0
 
-    .line 33
+    .line 53
+    :try_start_5
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 54
+    .line 55
+    .line 56
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    .line 57
+    :catchall_1
+    move-exception v0
+
+    .line 58
     monitor-exit p0
 
-    .line 34
+    .line 59
     throw v0
 .end method
 
@@ -10176,7 +11368,7 @@
     .line 15
     move-result-object v4
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
     .line 16
     :try_start_1
@@ -10204,7 +11396,7 @@
 
     .line 27
     .line 28
-    invoke-static {v2, v0, v3}, LX/00I;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
+    invoke-static {v2, v0, v3}, LX/004;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     .line 29
     .line 30
@@ -10214,7 +11406,7 @@
     .line 32
     invoke-static {v3}, Lcom/facebook/common/dextricks/Fs;->mkdirOrThrow(Ljava/io/File;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_3
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     .line 33
     .line 34
@@ -10276,7 +11468,7 @@
 
     .line 58
     .line 59
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 60
     .line 61
@@ -10310,17 +11502,17 @@
     move-exception v0
 
     .line 70
-    move-object v4, v1
-
-    .line 71
     move-object v3, v1
 
-    .line 72
+    .line 71
     goto :goto_0
 
-    .line 73
+    .line 72
     :catchall_3
     move-exception v0
+
+    .line 73
+    move-object v4, v1
 
     .line 74
     move-object v3, v1
@@ -10358,7 +11550,7 @@
 
     .line 89
     :catchall_4
-    move-exception v0
+    move-exception v1
 
     .line 90
     if-eqz v5, :cond_2
@@ -10373,9 +11565,20 @@
     .line 93
     .line 94
     .line 95
+    throw v1
+
+    .line 96
     :catchall_5
+    move-exception v0
+
+    .line 97
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 98
+    .line 99
+    .line 100
     :cond_2
-    throw v0
+    throw v1
 .end method
 
 .method public optimize(Landroid/content/Context;Lcom/facebook/common/dextricks/OptimizationConfiguration$Provider;)V
@@ -10428,7 +11631,7 @@
     .line 20
     .line 21
     .line 22
-    move-result-object v2
+    move-result-object v1
 
     .line 23
     invoke-direct {p0}, Lcom/facebook/common/dextricks/DexStore;->checkDeps()Z
@@ -10443,11 +11646,11 @@
 
     .line 28
     .line 29
-    new-instance v1, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;
+    new-instance v2, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;
 
     .line 30
     .line 31
-    invoke-direct {v1, p0, p1, p2, v4}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;-><init>(Lcom/facebook/common/dextricks/DexStore;Landroid/content/Context;Lcom/facebook/common/dextricks/OptimizationConfiguration$Provider;Z)V
+    invoke-direct {v2, p0, p1, p2, v4}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;-><init>(Lcom/facebook/common/dextricks/DexStore;Landroid/content/Context;Lcom/facebook/common/dextricks/OptimizationConfiguration$Provider;Z)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
@@ -10467,7 +11670,7 @@
 
     .line 38
     :try_start_2
-    invoke-virtual {v2, p1, p0, v1}, Lcom/facebook/common/dextricks/OdexScheme;->optimize(Landroid/content/Context;Lcom/facebook/common/dextricks/DexStore;Lcom/facebook/common/dextricks/DexStore$OptimizationSession;)V
+    invoke-virtual {v1, p1, p0, v2}, Lcom/facebook/common/dextricks/OdexScheme;->optimize(Landroid/content/Context;Lcom/facebook/common/dextricks/DexStore;Lcom/facebook/common/dextricks/DexStore$OptimizationSession;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -10475,7 +11678,7 @@
     .line 40
     .line 41
     :try_start_3
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->noteOptimizationSuccess()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->noteOptimizationSuccess()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -10483,7 +11686,7 @@
     .line 43
     .line 44
     :try_start_4
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->close()V
 
     .line 45
     .line 46
@@ -10499,7 +11702,7 @@
 
     .line 49
     :try_start_5
-    invoke-virtual {v1, v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->copeWithOptimizationFailure(Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->copeWithOptimizationFailure(Ljava/lang/Throwable;)V
 
     .line 50
     .line 51
@@ -10510,364 +11713,98 @@
 
     .line 53
     :catchall_1
-    move-exception v0
+    move-exception v1
 
     .line 54
     :try_start_6
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->close()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->close()V
 
     .line 55
     .line 56
     .line 57
-    :catchall_2
-    :try_start_7
-    throw v0
+    goto :goto_1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
     .line 58
-    :cond_1
-    const-string v1, "attempt to optimize stale repository"
+    :catchall_2
+    move-exception v0
 
     .line 59
+    goto :goto_0
+
     .line 60
-    new-instance v0, Lcom/facebook/common/dextricks/DexStore$OptimizationCanceledException;
+    :cond_1
+    :try_start_7
+    const-string v0, "attempt to optimize stale repository"
 
     .line 61
     .line 62
-    invoke-direct {v0, v1}, Lcom/facebook/common/dextricks/DexStore$OptimizationCanceledException;-><init>(Ljava/lang/String;)V
+    new-instance v1, Lcom/facebook/common/dextricks/DexStore$OptimizationCanceledException;
 
     .line 63
     .line 64
+    invoke-direct {v1, v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationCanceledException;-><init>(Ljava/lang/String;)V
+
     .line 65
-    throw v0
+    .line 66
+    .line 67
+    goto :goto_1
+
+    .line 68
+    :goto_0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 69
+    .line 70
+    .line 71
+    :goto_1
+    throw v1
     :try_end_7
     .catch Ljava/lang/InterruptedException; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 66
+    .line 72
     :catchall_3
     move-exception v1
 
-    .line 67
+    .line 73
     :try_start_8
     const-string v0, "[opt] optimization failed!"
 
-    .line 68
-    .line 69
+    .line 74
+    .line 75
     invoke-static {v1, v0}, LX/001;->A0w(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 70
-    .line 71
-    .line 72
+    .line 76
+    .line 77
+    .line 78
     throw v1
 
-    .line 73
+    .line 79
     :catch_0
     move-exception v0
 
-    .line 74
+    .line 80
     throw v0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_4
 
-    .line 75
+    .line 81
     :catchall_4
     move-exception v0
 
-    .line 76
+    .line 82
     if-eqz v3, :cond_2
 
-    .line 77
-    .line 78
+    .line 83
+    .line 84
     invoke-virtual {v3}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
-    .line 79
-    .line 80
-    .line 81
-    :cond_2
-    throw v0
-.end method
-
-.method public declared-synchronized peekMainStoreRegenStatus(Landroid/content/Context;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)I
-    .locals 6
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    invoke-virtual {p0}, Lcom/facebook/common/dextricks/DexStore;->loadManifest()Lcom/facebook/common/dextricks/DexManifest;
-
-    .line 2
-    .line 3
-    .line 4
-    move-result-object v5
-
-    .line 5
-    invoke-direct {p0}, Lcom/facebook/common/dextricks/DexStore;->getParents()[Lcom/facebook/common/dextricks/DexStore;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    array-length v0, v0
-
-    .line 10
-    if-gtz v0, :cond_4
-
-    .line 11
-    .line 12
-    invoke-static {v5}, Lcom/facebook/common/dextricks/DexStore;->canLoadCanaryClass(Lcom/facebook/common/dextricks/DexManifest;)Z
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
-    const/4 v3, 0x0
-
-    .line 17
-    if-nez v0, :cond_3
-
-    .line 18
-    .line 19
-    iget-object v0, p0, Lcom/facebook/common/dextricks/DexStore;->mLockFile:Lcom/facebook/common/dextricks/ReentrantLockFile;
-
-    .line 20
-    .line 21
-    invoke-virtual {v0, v3}, Lcom/facebook/common/dextricks/ReentrantLockFile;->acquire(I)Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 25
-    :try_start_1
-    invoke-direct {p0, p1, v5}, Lcom/facebook/common/dextricks/DexStore;->shouldLoadCompressedOreoImpl(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;)Z
-
-    .line 26
-    .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    if-eqz v0, :cond_1
-
-    .line 30
-    .line 31
-    iget-object v1, p0, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
-
-    .line 32
-    .line 33
-    invoke-direct {p0, p1, v5}, Lcom/facebook/common/dextricks/DexStore;->getMegaZipName(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;)Ljava/lang/String;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v0
-
-    .line 37
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v2
-
-    .line 41
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 42
-    .line 43
-    const/16 v0, 0x18
-
-    .line 44
-    .line 45
-    if-eq v1, v0, :cond_0
-
-    .line 46
-    .line 47
-    const/16 v0, 0x19
-
-    .line 48
-    .line 49
-    if-eq v1, v0, :cond_0
-
-    .line 50
-    .line 51
-    iget-object v0, v5, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
-
-    .line 52
-    .line 53
-    new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeOreo;
-
-    .line 54
-    .line 55
-    invoke-direct {v1, v0, v2, p1, p2}, Lcom/facebook/common/dextricks/OdexSchemeOreo;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;Ljava/io/File;Landroid/content/Context;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
-
-    .line 56
-    .line 57
-    .line 58
-    goto :goto_0
-
-    .line 59
-    :cond_0
-    iget-object v0, v5, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
-
-    .line 60
-    .line 61
-    new-instance v1, Lcom/facebook/common/dextricks/OdexSchemeNougat;
-
-    .line 62
-    .line 63
-    invoke-direct {v1, v0, v2, p1, p2}, Lcom/facebook/common/dextricks/OdexSchemeNougat;-><init>([Lcom/facebook/common/dextricks/DexManifest$Dex;Ljava/io/File;Landroid/content/Context;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
-
-    .line 64
-    .line 65
-    .line 66
-    :goto_0
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/OdexSchemeOreo;->needsUnpack()Z
-
-    .line 67
-    .line 68
-    .line 69
-    move-result v3
-
-    .line 70
-    goto :goto_1
-
-    .line 71
-    :cond_1
-    invoke-direct {p0}, Lcom/facebook/common/dextricks/DexStore;->readStatusLocked()J
-
-    .line 72
-    .line 73
-    .line 74
-    move-result-wide v0
-
-    .line 75
-    invoke-direct {p0, p1, v5, v0, v1}, Lcom/facebook/common/dextricks/DexStore;->schemeForState(Landroid/content/Context;Lcom/facebook/common/dextricks/DexManifest;J)Lcom/facebook/common/dextricks/OdexScheme;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v2
-
-    .line 79
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 80
-    .line 81
-    .line 82
-    move-result-object v1
-
-    .line 83
-    invoke-direct {p0, p1, v1}, Lcom/facebook/common/dextricks/DexStore;->listRootFilesForPruningLocked(Landroid/content/Context;Ljava/util/List;)[Ljava/lang/String;
-
-    .line 84
     .line 85
     .line 86
-    move-result-object v0
-
     .line 87
-    invoke-direct {p0, v2, v0, v1}, Lcom/facebook/common/dextricks/DexStore;->checkDirty(Lcom/facebook/common/dextricks/OdexScheme;[Ljava/lang/String;Ljava/util/List;)I
-
-    .line 88
-    .line 89
-    .line 90
-    move-result v0
-
-    .line 91
-    if-lez v0, :cond_2
-
-    .line 92
-    .line 93
-    const/4 v3, 0x1
-
-    .line 94
     :cond_2
-    :goto_1
-    if-eqz v4, :cond_3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 95
-    .line 96
-    :try_start_2
-    invoke-virtual {v4}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
-
-    .line 97
-    .line 98
-    .line 99
-    goto :goto_2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 100
-    :catchall_0
-    move-exception v1
-
-    .line 101
-    if-eqz v4, :cond_5
-
-    .line 102
-    .line 103
-    goto :goto_3
-
-    .line 104
-    :cond_3
-    :goto_2
-    monitor-exit p0
-
-    .line 105
-    return v3
-
-    .line 106
-    :cond_4
-    :try_start_3
-    const-string v0, "Not supported for this store"
-
-    .line 107
-    .line 108
-    new-instance v1, Ljava/lang/AssertionError;
-
-    .line 109
-    .line 110
-    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    .line 111
-    .line 112
-    .line 113
-    goto :goto_4
-
-    .line 114
-    :goto_3
-    invoke-virtual {v4}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
-
-    .line 115
-    .line 116
-    .line 117
-    :cond_5
-    :goto_4
-    throw v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 118
-    :catchall_1
-    move-exception v0
-
-    .line 119
-    monitor-exit p0
-
-    .line 120
     throw v0
 .end method
 
@@ -10899,7 +11836,7 @@
 
     .line 10
     .line 11
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 12
     .line 13
@@ -11030,7 +11967,7 @@
 
     .line 69
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 70
     if-eqz v4, :cond_1
@@ -11045,9 +11982,20 @@
     .line 73
     .line 74
     .line 75
+    throw v1
+
+    .line 76
     :catchall_1
+    move-exception v0
+
+    .line 77
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 78
+    .line 79
+    .line 80
     :cond_1
-    throw v0
+    throw v1
 .end method
 
 .method public reportStatus()J
@@ -11071,7 +12019,7 @@
     .line 6
     .line 7
     .line 8
-    move-result-object v1
+    move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
@@ -11085,14 +12033,14 @@
     move-result-wide v2
 
     .line 13
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 14
     .line 15
     :try_start_2
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
     .line 16
     .line 17
@@ -11103,29 +12051,41 @@
 
     .line 19
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 20
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 21
     .line 22
     :try_start_3
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
     .line 23
     .line 24
     .line 25
+    goto :goto_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 26
     :catchall_1
-    :cond_0
+    move-exception v0
+
+    .line 27
     :try_start_4
-    throw v0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 28
+    .line 29
+    .line 30
+    :cond_0
+    :goto_0
+    throw v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 26
+    .line 31
     :catchall_2
     :cond_1
     return-wide v2
@@ -11178,7 +12138,7 @@
 .end method
 
 .method public writeStatusLocked(J)V
-    .locals 8
+    .locals 7
 
     .line 0
     invoke-direct {p0}, Lcom/facebook/common/dextricks/DexStore;->assertLockHeld()V
@@ -11235,36 +12195,36 @@
 
     .line 24
     .line 25
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 26
     .line 27
     .line 28
-    move-result-object v7
+    move-result-object v6
 
     .line 29
-    const-wide v3, -0x5314ff805314ff9L
+    const-wide v2, -0x5314ff805314ff9L
 
     .line 30
     .line 31
     .line 32
     .line 33
     .line 34
-    xor-long/2addr v3, p1
+    xor-long/2addr v2, p1
 
     .line 35
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     .line 36
-    const/16 v5, 0x10
+    const/16 v4, 0x10
 
     .line 37
     .line 38
-    new-array v2, v5, [B
+    new-array v1, v4, [B
 
     .line 39
     .line 40
-    invoke-static {v2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     .line 41
     .line 42
@@ -11277,27 +12237,27 @@
     .line 45
     .line 46
     .line 47
-    invoke-virtual {v0, v3, v4}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
     .line 48
     .line 49
     .line 50
-    new-instance v1, Ljava/io/FileOutputStream;
+    new-instance v2, Ljava/io/FileOutputStream;
 
     .line 51
     .line 52
-    invoke-direct {v1, v7}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v2, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 53
     .line 54
     .line 55
     :try_start_0
-    invoke-virtual {v1, v2, v6, v5}, Ljava/io/OutputStream;->write([BII)V
+    invoke-virtual {v2, v1, v5, v4}, Ljava/io/OutputStream;->write([BII)V
 
     .line 56
     .line 57
     .line 58
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     .line 59
     .line 60
@@ -11312,7 +12272,7 @@
     .line 63
     .line 64
     .line 65
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
 
     .line 66
     .line 67
@@ -11321,17 +12281,28 @@
 
     .line 69
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 70
     :try_start_1
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 71
     .line 72
     .line 73
+    throw v1
+
+    .line 74
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 75
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 76
+    .line 77
+    .line 78
+    throw v1
 .end method

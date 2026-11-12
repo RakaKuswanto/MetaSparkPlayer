@@ -85,8 +85,10 @@
         value = {
             "Ljava/util/Map<",
             "Lcom/facebookpay/offsite/models/message/PaymentContainerType;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
             "Ljava/lang/Object;",
-            ">;"
+            ">;>;"
         }
     .end annotation
 .end field
@@ -110,174 +112,183 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/facebookpay/offsite/models/message/PaymentMode;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Lcom/facebookpay/offsite/models/message/SessionUsageType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 268435456
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 0
+    invoke-static {p1, p2, p3}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
+    .line 1
+    .line 2
+    .line 3
     const/4 v0, 0x4
 
-    .line 268435460
-    invoke-static {p4, v0, p9}, LX/0Yf;->A16(Ljava/lang/Object;ILjava/lang/Object;)V
+    .line 4
+    invoke-static {p4, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    .line 268435461
-    .line 268435462
-    .line 268435463
+    .line 5
+    .line 6
+    .line 7
+    const/16 v0, 0x9
+
+    .line 8
+    .line 9
+    invoke-static {p9, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 10
+    .line 11
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268435464
-    .line 268435465
-    .line 268435466
+    .line 13
+    .line 14
+    .line 15
     iput-object p1, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->requestId:Ljava/lang/String;
 
-    .line 268435467
-    .line 268435468
+    .line 16
+    .line 17
     iput-object p2, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->partnerId:Ljava/lang/String;
 
-    .line 268435469
-    .line 268435470
+    .line 18
+    .line 19
     iput-object p3, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->partnerMerchantId:Ljava/lang/String;
 
-    .line 268435471
-    .line 268435472
+    .line 20
+    .line 21
     iput-object p4, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->supportedContainers:Ljava/util/Map;
 
-    .line 268435473
-    .line 268435474
+    .line 22
+    .line 23
     iput-object p5, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->mode:Lcom/facebookpay/offsite/models/message/PaymentMode;
 
-    .line 268435475
-    .line 268435476
+    .line 24
+    .line 25
     iput-object p6, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->shopName:Ljava/lang/String;
 
-    .line 268435477
-    .line 268435478
+    .line 26
+    .line 27
     iput-object p7, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->acquirerCountryCode:Ljava/lang/String;
 
-    .line 268435479
-    .line 268435480
+    .line 28
+    .line 29
     iput-object p8, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->merchantName:Ljava/lang/String;
 
-    .line 268435481
-    .line 268435482
+    .line 30
+    .line 31
     iput-object p9, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->containerContext:Ljava/lang/String;
 
-    .line 268435483
-    .line 268435484
+    .line 32
+    .line 33
     iput-object p10, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->uxFlags:Ljava/util/Set;
 
-    .line 268435485
-    .line 268435486
+    .line 34
+    .line 35
     iput-object p11, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->sessionUsage:Lcom/facebookpay/offsite/models/message/SessionUsageType;
 
-    .line 268435487
-    .line 268435488
+    .line 36
+    .line 37
     iput-object p12, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->eventId:Ljava/lang/String;
 
-    .line 268435489
-    .line 268435490
+    .line 38
+    .line 39
     iput-object p13, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->pixelId:Ljava/lang/String;
 
-    .line 268435491
-    .line 268435492
+    .line 40
+    .line 41
     iput-object p14, p0, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;->externalId:Ljava/lang/String;
 
-    .line 268435493
-    .line 268435494
+    .line 42
+    .line 43
     return-void
 .end method
 
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/facebookpay/offsite/models/message/PaymentMode;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Lcom/facebookpay/offsite/models/message/SessionUsageType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 3
 
-    .line 0
+    .line 268435456
     move/from16 v2, p15
 
-    .line 1
-    .line 2
+    .line 268435457
+    .line 268435458
     and-int/lit16 v0, v2, 0x80
 
-    .line 3
-    .line 4
+    .line 268435459
+    .line 268435460
     const/4 v1, 0x0
 
-    .line 5
+    .line 268435461
     if-eqz v0, :cond_0
 
-    .line 6
-    .line 7
+    .line 268435462
+    .line 268435463
     move-object p8, v1
 
-    .line 8
+    .line 268435464
     :cond_0
     and-int/lit16 v0, v2, 0x200
 
-    .line 9
-    .line 10
+    .line 268435465
+    .line 268435466
     if-eqz v0, :cond_1
 
-    .line 11
-    .line 12
+    .line 268435467
+    .line 268435468
     move-object p10, v1
 
-    .line 13
+    .line 268435469
     :cond_1
     and-int/lit16 v0, v2, 0x400
 
-    .line 14
-    .line 15
+    .line 268435470
+    .line 268435471
     if-eqz v0, :cond_2
 
-    .line 16
-    .line 17
+    .line 268435472
+    .line 268435473
     move-object p11, v1
 
-    .line 18
+    .line 268435474
     :cond_2
     and-int/lit16 v0, v2, 0x800
 
-    .line 19
-    .line 20
+    .line 268435475
+    .line 268435476
     if-eqz v0, :cond_3
 
-    .line 21
-    .line 22
+    .line 268435477
+    .line 268435478
     move-object p12, v1
 
-    .line 23
+    .line 268435479
     :cond_3
     and-int/lit16 v0, v2, 0x1000
 
-    .line 24
-    .line 25
+    .line 268435480
+    .line 268435481
     if-eqz v0, :cond_4
 
-    .line 26
-    .line 27
+    .line 268435482
+    .line 268435483
     move-object/from16 p13, v1
 
-    .line 28
-    .line 29
+    .line 268435484
+    .line 268435485
     :cond_4
     and-int/lit16 v0, v2, 0x2000
 
-    .line 30
-    .line 31
+    .line 268435486
+    .line 268435487
     if-eqz v0, :cond_5
 
-    .line 32
-    .line 33
+    .line 268435488
+    .line 268435489
     move-object/from16 p14, v1
 
-    .line 34
-    .line 35
+    .line 268435490
+    .line 268435491
     :cond_5
     invoke-direct/range {p0 .. p14}, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/facebookpay/offsite/models/message/PaymentMode;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;Lcom/facebookpay/offsite/models/message/SessionUsageType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 36
-    .line 37
-    .line 38
+    .line 268435492
+    .line 268435493
+    .line 268435494
     return-void
 .end method
 
@@ -611,7 +622,7 @@
 
     .line 2
     .line 3
-    invoke-static {v1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 4
     .line 5
@@ -628,7 +639,7 @@
 
     .line 11
     .line 12
-    invoke-static {v2, v3, v4}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 13
     .line 14
@@ -641,7 +652,7 @@
 
     .line 18
     .line 19
-    invoke-static {v9, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v9, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 20
     .line 21

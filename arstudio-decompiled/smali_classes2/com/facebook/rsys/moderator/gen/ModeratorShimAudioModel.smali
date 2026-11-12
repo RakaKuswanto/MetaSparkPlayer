@@ -24,7 +24,7 @@
     .line 4
     .line 5
     .line 6
-    invoke-static {p2}, LX/0Yf;->A1H(Z)V
+    invoke-static {p2}, LX/0X4;->A1H(Z)V
 
     .line 7
     .line 8
@@ -129,21 +129,29 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yf;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget-boolean v0, p0, Lcom/facebook/rsys/moderator/gen/ModeratorShimAudioModel;->audioOn:Z
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 7
     .line 8
+    .line 9
+    move-result v1
+
+    .line 10
+    iget-boolean v0, p0, Lcom/facebook/rsys/moderator/gen/ModeratorShimAudioModel;->audioOn:Z
+
+    .line 11
+    .line 12
     add-int/2addr v1, v0
 
-    .line 9
+    .line 13
     return v1
 .end method
 
@@ -151,7 +159,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -190,18 +198,13 @@
 
     .line 20
     .line 21
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, LX/0X2;->A0m(Ljava/lang/StringBuilder;Z)Ljava/lang/String;
 
     .line 22
     .line 23
     .line 24
-    invoke-static {v1}, LX/0Ye;->A0X(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 25
-    .line 26
-    .line 27
     move-result-object v0
 
-    .line 28
+    .line 25
     return-object v0
 .end method

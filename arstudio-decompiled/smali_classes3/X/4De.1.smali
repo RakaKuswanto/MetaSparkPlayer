@@ -1,74 +1,90 @@
-.class public final LX/4De;
+.class public abstract LX/4dE;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "WebViewCookieSetter$2"
-
-
-# instance fields
-.field public final synthetic A00:I
-
-.field public final synthetic A01:Landroid/webkit/ValueCallback;
-
-.field public final synthetic A02:Ljava/util/concurrent/ScheduledExecutorService;
-
 
 # direct methods
-.method public constructor <init>(Landroid/webkit/ValueCallback;Ljava/util/concurrent/ScheduledExecutorService;I)V
-    .locals 0
+.method public static A00(Landroid/app/Notification$Builder;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/4De;->A01:Landroid/webkit/ValueCallback;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    iput-object p2, p0, LX/4De;->A02:Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-virtual {p0, v0}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
+    .line 2
     .line 3
     .line 4
-    iput p3, p0, LX/4De;->A00:I
-
-    .line 5
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 3
+.method public static A01(Landroid/app/Notification$Builder;)V
+    .locals 1
 
     .line 0
-    iget-object v2, p0, LX/4De;->A01:Landroid/webkit/ValueCallback;
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Notification$Builder;->setPublicVersion(Landroid/app/Notification;)Landroid/app/Notification$Builder;
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static A02(Landroid/app/Notification$Builder;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Notification$Builder;->setVisibility(I)Landroid/app/Notification$Builder;
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static A03(Landroid/app/Notification$Builder;I)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setColor(I)Landroid/app/Notification$Builder;
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/4De;->A02:Ljava/util/concurrent/ScheduledExecutorService;
+    .line 3
+    return-void
+.end method
+
+.method public static A04(Landroid/app/Notification$Builder;Landroid/net/Uri;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    check-cast p2, Landroid/media/AudioAttributes;
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$Builder;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)Landroid/app/Notification$Builder;
 
     .line 3
     .line 4
-    iget v0, p0, LX/4De;->A00:I
-
     .line 5
-    .line 6
-    add-int/lit8 v0, v0, 0x1
+    return-void
+.end method
 
-    .line 7
-    .line 8
-    invoke-static {v2, v1, v0}, LX/4Df;->A00(Landroid/webkit/ValueCallback;Ljava/util/concurrent/ScheduledExecutorService;I)V
+.method public static A05(Landroid/app/Notification$Builder;Ljava/lang/String;)V
+    .locals 0
 
-    .line 9
-    .line 10
-    .line 11
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Ljava/lang/String;)Landroid/app/Notification$Builder;
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

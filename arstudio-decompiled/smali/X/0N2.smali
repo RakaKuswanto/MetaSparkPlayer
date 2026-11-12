@@ -3,74 +3,49 @@
 .source ""
 
 
-# static fields
-.field public static A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+# instance fields
+.field public final A00:LX/0N1;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
-    const/4 v1, 0x0
-
-    .line 1
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 2
-    .line 3
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    .line 4
-    .line 5
-    .line 6
-    sput-object v0, LX/0N2;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public static A00()V
-    .locals 3
-
-    .line 0
-    invoke-static {}, Landroid/os/Trace;->isEnabled()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result v2
+    new-instance v1, LX/0R6;
 
     .line 4
-    sget-object v1, LX/0N2;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
-
     .line 5
-    .line 6
-    xor-int/lit8 v0, v2, 0x1
+    invoke-direct {v1}, LX/0R6;-><init>()V
 
+    .line 6
     .line 7
     .line 8
-    invoke-virtual {v1, v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    iput-object v1, p0, LX/0N2;->A00:LX/0N1;
 
     .line 9
     .line 10
-    .line 11
-    move-result v0
+    new-instance v0, LX/0R6;
 
+    .line 11
     .line 12
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, LX/0R6;-><init>()V
 
     .line 13
     .line 14
-    const/4 v0, 0x4
-
     .line 15
-    invoke-static {v0}, LX/0YE;->A00(I)V
+    iput-object v0, v1, LX/0N1;->next:LX/0N1;
 
     .line 16
     .line 17
+    iput-object v1, v0, LX/0N1;->previous:LX/0N1;
+
     .line 18
-    :cond_0
+    .line 19
     return-void
 .end method

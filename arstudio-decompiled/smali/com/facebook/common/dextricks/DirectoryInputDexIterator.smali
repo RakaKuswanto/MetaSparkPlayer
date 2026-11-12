@@ -8,19 +8,22 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/common/dextricks/DexManifest;LX/0QT;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;Ljava/io/File;)V
-    .locals 0
+.method public constructor <init>(Lcom/facebook/common/dextricks/DexManifest;Ljava/io/File;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/common/dextricks/InputDexIterator;-><init>(Lcom/facebook/common/dextricks/DexManifest;LX/0QT;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
+    const/4 v0, 0x0
 
     .line 1
+    invoke-direct {p0, p1, v0}, Lcom/facebook/common/dextricks/InputDexIterator;-><init>(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
+
     .line 2
     .line 3
-    iput-object p4, p0, Lcom/facebook/common/dextricks/DirectoryInputDexIterator;->mDir:Ljava/io/File;
-
     .line 4
+    iput-object p2, p0, Lcom/facebook/common/dextricks/DirectoryInputDexIterator;->mDir:Ljava/io/File;
+
     .line 5
+    .line 6
     return-void
 .end method
 
@@ -38,7 +41,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 5
     .line 6
@@ -46,7 +49,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v0}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
+    invoke-static {v0}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
 
     .line 9
     .line 10

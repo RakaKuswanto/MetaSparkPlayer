@@ -244,31 +244,23 @@
 
     .line 37
     :cond_2
-    if-lt p0, v1, :cond_0
-
-    .line 38
-    .line 39
-    if-gt p0, v0, :cond_0
-
-    .line 40
-    .line 41
     return v2
 
-    .line 42
+    .line 38
     :cond_3
     const-string v1, "VoltronModuleMetadataHelper"
 
-    .line 43
-    .line 44
+    .line 39
+    .line 40
     const-string v0, "Invalid range in module range index"
 
-    .line 45
-    .line 46
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    .line 41
+    .line 42
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
-    .line 48
-    .line 49
+    .line 43
+    .line 44
+    .line 45
     return v3
 .end method
 
@@ -465,7 +457,7 @@
 
     .line 70
     .line 71
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 72
     .line 73

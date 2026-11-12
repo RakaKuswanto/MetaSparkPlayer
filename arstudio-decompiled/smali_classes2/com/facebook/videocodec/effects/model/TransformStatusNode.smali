@@ -35,11 +35,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x61
+    const/16 v0, 0x47
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -79,59 +79,54 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0s(Ljava/lang/Object;)V
+    invoke-static {p1, p0}, LX/0X2;->A00(Landroid/os/Parcel;Ljava/lang/Object;)F
 
     .line 4
     .line 5
     .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
     iput v0, p0, Lcom/facebook/videocodec/effects/model/TransformStatusNode;->A00:F
 
+    .line 8
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    .line 10
     .line 11
     .line 12
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
     iput v0, p0, Lcom/facebook/videocodec/effects/model/TransformStatusNode;->A01:F
 
+    .line 14
+    .line 15
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    .line 16
     .line 17
     .line 18
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 19
-    .line 20
-    .line 21
-    move-result v0
-
-    .line 22
     iput v0, p0, Lcom/facebook/videocodec/effects/model/TransformStatusNode;->A02:F
 
-    .line 23
-    .line 24
+    .line 20
+    .line 21
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
-    .line 25
-    .line 26
-    .line 27
+    .line 22
+    .line 23
+    .line 24
     move-result v0
 
-    .line 28
+    .line 25
     iput v0, p0, Lcom/facebook/videocodec/effects/model/TransformStatusNode;->A03:F
 
-    .line 29
-    .line 30
+    .line 26
+    .line 27
     return-void
 .end method
 
@@ -267,7 +262,7 @@
 
     .line 9
     .line 10
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 11
     .line 12
@@ -279,7 +274,7 @@
 
     .line 15
     .line 16
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 17
     .line 18
@@ -291,7 +286,7 @@
 
     .line 21
     .line 22
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 23
     .line 24

@@ -85,7 +85,7 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     .line 10
@@ -108,7 +108,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 21
     .line 22
@@ -134,11 +134,11 @@
 
     .line 33
     .line 34
-    sget-object v0, LX/0X3;->DURING_ANR:LX/0X3;
+    sget-object v0, LX/0U2;->DURING_ANR:LX/0U2;
 
     .line 35
     .line 36
-    invoke-virtual {v1, v0}, Lcom/facebook/acra/anr/base/AbstractANRDetector;->notifyStateListeners(LX/0X3;)V
+    invoke-virtual {v1, v0}, Lcom/facebook/acra/anr/base/AbstractANRDetector;->notifyStateListeners(LX/0U2;)V
 
     .line 37
     .line 38
@@ -147,11 +147,11 @@
 
     .line 40
     .line 41
-    iget-object v0, v0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, v0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 42
     .line 43
-    iget-object v1, v0, LX/0M1;->A06:Landroid/os/Handler;
+    iget-object v1, v0, LX/0Kf;->A06:Landroid/os/Handler;
 
     .line 44
     .line 45
@@ -177,11 +177,11 @@
 
     .line 56
     .line 57
-    iget-object v0, v0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, v0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 58
     .line 59
-    invoke-virtual {v0}, LX/0M1;->A01()Ljava/lang/String;
+    invoke-virtual {v0}, LX/0Kf;->A01()Ljava/lang/String;
 
     .line 60
     .line 61

@@ -69,11 +69,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5e
+    const/16 v0, 0x1f
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -97,7 +97,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -148,7 +148,7 @@
     const/4 v0, 0x1
 
     .line 26
-    invoke-static {v3, v0}, LX/001;->A1O(II)Z
+    invoke-static {v3, v0}, LX/001;->A1N(II)Z
 
     .line 27
     .line 28
@@ -160,7 +160,7 @@
 
     .line 31
     .line 32
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 33
     .line 34
@@ -184,7 +184,7 @@
 
     .line 43
     .line 44
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 45
     .line 46
@@ -196,7 +196,7 @@
 
     .line 49
     .line 50
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 51
     .line 52
@@ -308,7 +308,7 @@
 
     .line 102
     .line 103
-    invoke-static {p1, v3, v0}, LX/0Yf;->A05(Landroid/os/Parcel;[Ljava/lang/Object;I)I
+    invoke-static {p1, v3, v0}, LX/0X2;->A06(Landroid/os/Parcel;[Ljava/lang/Object;I)I
 
     .line 104
     .line 105
@@ -470,7 +470,7 @@
 
     .line 176
     .line 177
-    invoke-static {p1, v3, v0}, LX/0Yf;->A05(Landroid/os/Parcel;[Ljava/lang/Object;I)I
+    invoke-static {p1, v3, v0}, LX/0X2;->A06(Landroid/os/Parcel;[Ljava/lang/Object;I)I
 
     .line 178
     .line 179
@@ -528,7 +528,7 @@
     .line 203
     .line 204
     :goto_9
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 205
     .line 206
@@ -540,7 +540,7 @@
 
     .line 209
     .line 210
-    invoke-static {p1}, LX/0Yh;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1R(Landroid/os/Parcel;)Z
 
     .line 211
     .line 212
@@ -585,7 +585,7 @@
 
     .line 231
     .line 232
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 233
     .line 234
@@ -606,62 +606,63 @@
 
     .line 241
     .line 242
-    invoke-static {p1, v1, v2}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v1}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 243
     .line 244
     .line 245
-    move-result v2
+    add-int/lit8 v2, v2, 0x1
 
     .line 246
+    .line 247
     goto :goto_a
 
-    .line 247
+    .line 248
     :cond_9
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 248
     .line 249
     .line 250
+    .line 251
     move-result-object v0
 
-    .line 251
+    .line 252
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0B:Ljava/lang/String;
 
-    .line 252
     .line 253
+    .line 254
     goto :goto_9
 
-    .line 254
+    .line 255
     :cond_a
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 255
     .line 256
     .line 257
+    .line 258
     move-result-object v0
 
-    .line 258
+    .line 259
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0A:Ljava/lang/String;
 
-    .line 259
     .line 260
+    .line 261
     goto :goto_8
 
-    .line 261
+    .line 262
     :cond_b
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 262
     .line 263
     .line 264
+    .line 265
     move-result-object v0
 
-    .line 265
+    .line 266
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0J:Ljava/util/Set;
 
-    .line 266
     .line 267
+    .line 268
     return-void
 .end method
 
@@ -684,7 +685,7 @@
 
     const-string/jumbo v0, "iconId"
 
-    invoke-static {v0, p7}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p7, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p7, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A05:Ljava/lang/String;
 
@@ -702,7 +703,7 @@
 
     const-string/jumbo v0, "lifeEventTitle"
 
-    invoke-static {v0, p10}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p10, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p10, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A08:Ljava/lang/String;
 
@@ -712,13 +713,13 @@
 
     const-string/jumbo v0, "relationshipTaggedUserIds"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A02:Lcom/google/common/collect/ImmutableList;
 
     const-string/jumbo v0, "remoteFbMediaIds"
 
-    invoke-static {v0, p5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p5, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p5, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A03:Lcom/google/common/collect/ImmutableList;
 
@@ -878,7 +879,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -898,7 +899,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -942,7 +943,7 @@
 
     .line 45
     .line 46
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 47
     .line 48
@@ -986,7 +987,7 @@
 
     .line 67
     .line 68
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 69
     .line 70
@@ -1006,7 +1007,7 @@
 
     .line 77
     .line 78
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 79
     .line 80
@@ -1026,7 +1027,7 @@
 
     .line 87
     .line 88
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 89
     .line 90
@@ -1066,7 +1067,7 @@
 
     .line 107
     .line 108
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 109
     .line 110
@@ -1086,7 +1087,7 @@
 
     .line 117
     .line 118
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 119
     .line 120
@@ -1106,7 +1107,7 @@
 
     .line 127
     .line 128
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 129
     .line 130
@@ -1126,7 +1127,7 @@
 
     .line 137
     .line 138
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 139
     .line 140
@@ -1146,7 +1147,7 @@
 
     .line 147
     .line 148
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 149
     .line 150
@@ -1190,7 +1191,7 @@
 
     .line 169
     .line 170
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 171
     .line 172
@@ -1218,7 +1219,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -1234,7 +1235,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -1249,269 +1250,273 @@
 
     .line 16
     .line 17
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 18
     .line 19
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 20
-    move-result v1
-
     .line 21
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0D:Z
-
     .line 22
-    .line 23
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
-
-    .line 24
-    .line 25
-    .line 26
-    move-result v1
-
-    .line 27
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A05:Ljava/lang/String;
-
-    .line 28
-    .line 29
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 30
-    .line 31
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 32
-    .line 33
-    .line 34
     move-result v0
 
-    .line 35
+    .line 23
     add-int/2addr v1, v0
 
+    .line 24
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0D:Z
+
+    .line 25
+    .line 26
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 27
+    .line 28
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v0
+
+    .line 32
+    add-int/2addr v1, v0
+
+    .line 33
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A05:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 36
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0E:Z
-
     .line 37
-    .line 38
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
+    .line 38
     .line 39
     .line 40
+    move-result v0
+
     .line 41
-    move-result v1
+    add-int/2addr v1, v0
 
     .line 42
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0F:Z
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0E:Z
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 45
     .line 46
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 47
-    move-result v1
-
     .line 48
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A06:Ljava/lang/String;
-
     .line 49
+    move-result v0
+
     .line 50
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 51
-    .line 52
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0F:Z
 
+    .line 52
     .line 53
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 54
     .line 55
-    move-result v0
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 56
-    add-int/2addr v1, v0
-
     .line 57
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A07:Ljava/lang/String;
-
     .line 58
+    move-result v0
+
     .line 59
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 60
-    .line 61
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A06:Ljava/lang/String;
 
+    .line 61
     .line 62
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 63
     .line 64
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 65
-    add-int/2addr v1, v0
-
     .line 66
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A08:Ljava/lang/String;
-
     .line 67
+    move-result v0
+
     .line 68
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 69
-    .line 70
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A07:Ljava/lang/String;
 
+    .line 70
     .line 71
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 72
     .line 73
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 74
+    .line 75
+    .line 76
+    move-result v0
+
+    .line 77
     add-int/2addr v1, v0
 
-    .line 75
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A00()Lcom/facebook/graphql/enums/GraphQLLifeEventAPIIdentifier;
-
-    .line 76
-    .line 77
     .line 78
-    move-result-object v0
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A08:Ljava/lang/String;
 
     .line 79
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
-
     .line 80
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 81
     .line 82
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 83
-    mul-int/lit8 v1, v1, 0x1f
-
     .line 84
     .line 85
-    add-int/2addr v1, v0
-
-    .line 86
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A09:Ljava/lang/String;
-
-    .line 87
-    .line 88
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 89
-    .line 90
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 91
-    .line 92
-    .line 93
     move-result v0
 
-    .line 94
+    .line 86
     add-int/2addr v1, v0
 
+    .line 87
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A00()Lcom/facebook/graphql/enums/GraphQLLifeEventAPIIdentifier;
+
+    .line 88
+    .line 89
+    .line 90
+    move-result-object v0
+
+    .line 91
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
+
+    .line 92
+    .line 93
+    .line 94
+    move-result v0
+
     .line 95
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A02:Lcom/google/common/collect/ImmutableList;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 96
     .line 97
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 98
-    .line 99
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A09:Ljava/lang/String;
 
+    .line 99
     .line 100
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 101
     .line 102
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 103
-    add-int/2addr v1, v0
-
     .line 104
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A03:Lcom/google/common/collect/ImmutableList;
-
     .line 105
+    move-result v0
+
     .line 106
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 107
-    .line 108
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A02:Lcom/google/common/collect/ImmutableList;
 
+    .line 108
     .line 109
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 110
     .line 111
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 112
-    add-int/2addr v1, v0
-
     .line 113
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0A:Ljava/lang/String;
-
     .line 114
+    move-result v0
+
     .line 115
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 116
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A03:Lcom/google/common/collect/ImmutableList;
+
     .line 117
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 118
-    .line 119
-    .line 120
-    move-result v0
-
-    .line 121
-    add-int/2addr v1, v0
-
-    .line 122
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0B:Ljava/lang/String;
-
-    .line 123
-    .line 124
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 125
-    .line 126
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    .line 119
+    .line 120
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
-    .line 127
-    .line 128
-    .line 129
+    .line 121
+    .line 122
+    .line 123
     move-result v0
 
-    .line 130
+    .line 124
     add-int/2addr v1, v0
 
-    .line 131
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0G:Z
+    .line 125
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0A:Ljava/lang/String;
 
+    .line 126
+    .line 127
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 128
+    .line 129
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 130
+    .line 131
     .line 132
+    move-result v0
+
     .line 133
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    add-int/2addr v1, v0
 
     .line 134
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0B:Ljava/lang/String;
+
     .line 135
     .line 136
-    move-result v1
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 137
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0H:Z
-
     .line 138
-    .line 139
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
+    .line 139
     .line 140
     .line 141
+    move-result v0
+
     .line 142
-    move-result v1
+    add-int/2addr v1, v0
 
     .line 143
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A01:Lcom/facebook/uicontrib/datepicker/Date;
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0G:Z
 
     .line 144
     .line 145
@@ -1519,7 +1524,7 @@
 
     .line 146
     .line 147
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 148
     .line 149
@@ -1530,6 +1535,44 @@
     add-int/2addr v1, v0
 
     .line 152
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A0H:Z
+
+    .line 153
+    .line 154
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 155
+    .line 156
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 157
+    .line 158
+    .line 159
+    move-result v0
+
+    .line 160
+    add-int/2addr v1, v0
+
+    .line 161
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/LifeEventAttachmentData;->A01:Lcom/facebook/uicontrib/datepicker/Date;
+
+    .line 162
+    .line 163
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 164
+    .line 165
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 166
+    .line 167
+    .line 168
+    move-result v0
+
+    .line 169
+    add-int/2addr v1, v0
+
+    .line 170
     return v1
 .end method
 
@@ -1547,7 +1590,7 @@
     const/4 v2, 0x1
 
     .line 4
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 5
     .line 6
@@ -1615,7 +1658,7 @@
 
     .line 40
     .line 41
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 42
     .line 43
@@ -1624,7 +1667,7 @@
 
     .line 45
     .line 46
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 47
     .line 48
@@ -1642,7 +1685,7 @@
 
     .line 55
     .line 56
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 57
     .line 58
@@ -1651,7 +1694,7 @@
 
     .line 60
     .line 61
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 62
     .line 63
@@ -1660,7 +1703,7 @@
 
     .line 65
     .line 66
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 67
     .line 68
@@ -1681,7 +1724,7 @@
 
     .line 75
     .line 76
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 77
     .line 78
@@ -1708,7 +1751,7 @@
 
     .line 88
     .line 89
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 90
     .line 91
@@ -1729,7 +1772,7 @@
 
     .line 98
     .line 99
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 100
     .line 101
@@ -1742,7 +1785,7 @@
 
     .line 104
     .line 105
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 106
     .line 107
@@ -1751,7 +1794,7 @@
 
     .line 109
     .line 110
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 111
     .line 112
@@ -1792,7 +1835,7 @@
 
     .line 131
     .line 132
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
     .line 133
     .line 134
@@ -1813,7 +1856,7 @@
 
     .line 141
     .line 142
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 143
     .line 144

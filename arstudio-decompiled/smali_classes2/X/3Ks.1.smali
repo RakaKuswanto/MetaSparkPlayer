@@ -1,25 +1,27 @@
-.class public final LX/3Ks;
-.super LX/3aP;
+.class public interface abstract LX/3Ks;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2MP;
+.implements LX/3Lb;
 
-# instance fields
-.field public final A00:LX/1Nw;
 
+# virtual methods
+.method public abstract A4U(LX/3Nf;Ljava/lang/Object;)LX/3Nf;
+.end method
 
-# direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 0
+.method public abstract A9e(Ljava/lang/Object;)LX/3Nf;
+.end method
 
-    .line 0
-    invoke-direct {p0}, LX/3aP;-><init>()V
+.method public abstract AhQ(LX/2HF;)I
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/3Ks;->A00:LX/1Nw;
+.method public abstract contains(Ljava/lang/Object;)Z
+.end method
 
-    .line 4
-    .line 5
-    return-void
+.method public abstract getCount()I
+.end method
+
+.method public abstract getSizeInBytes()I
 .end method

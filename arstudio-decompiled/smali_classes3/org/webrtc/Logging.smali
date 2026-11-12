@@ -149,7 +149,7 @@
     .line 12
     .line 13
     .line 14
-    invoke-static {p2}, LX/4BD;->A0j(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {p2}, LX/432;->A0q(Ljava/lang/Throwable;)Ljava/lang/String;
 
     .line 15
     .line 16
@@ -243,7 +243,7 @@
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 22
     .line 23
@@ -288,7 +288,7 @@
 
     .line 5
     :cond_0
-    invoke-static {p0}, LX/4BD;->A0j(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {p0}, LX/432;->A0q(Ljava/lang/Throwable;)Ljava/lang/String;
 
     .line 6
     .line 7
@@ -406,100 +406,93 @@
     move-result v1
 
     .line 40
-    const/4 v0, 0x4
+    const/4 v0, 0x3
 
     .line 41
     if-eq v1, v0, :cond_5
 
     .line 42
     .line 43
-    const/4 v0, 0x3
+    const/4 v0, 0x2
 
     .line 44
-    if-eq v1, v0, :cond_5
+    if-eq v1, v0, :cond_4
 
     .line 45
     .line 46
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
     .line 47
-    if-eq v1, v0, :cond_4
+    if-eq v1, v0, :cond_3
 
     .line 48
     .line 49
-    const/4 v0, 0x1
-
-    .line 50
-    if-eq v1, v0, :cond_3
-
-    .line 51
-    .line 52
     sget-object v2, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    .line 53
-    .line 54
+    .line 50
+    .line 51
     :goto_0
     sget-object v1, Lorg/webrtc/Logging;->fallbackLogger:Ljava/util/logging/Logger;
 
-    .line 55
-    .line 56
+    .line 52
+    .line 53
     const-string v0, ": "
 
+    .line 54
+    .line 55
+    invoke-static {p1, v0, p2}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 56
     .line 57
     .line 58
-    invoke-static {p1, v0, p2}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 59
-    .line 60
-    .line 61
     move-result-object v0
 
-    .line 62
+    .line 59
     invoke-virtual {v1, v2, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 63
-    .line 64
-    .line 65
+    .line 60
+    .line 61
+    .line 62
     return-void
 
-    .line 66
+    .line 63
     :cond_3
     sget-object v2, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
+
+    .line 64
+    .line 65
+    goto :goto_0
+
+    .line 66
+    :cond_4
+    sget-object v2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
     .line 67
     .line 68
     goto :goto_0
 
     .line 69
-    :cond_4
-    sget-object v2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+    :cond_5
+    sget-object v2, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
 
     .line 70
     .line 71
     goto :goto_0
 
     .line 72
-    :cond_5
-    sget-object v2, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
-
-    .line 73
-    .line 74
-    goto :goto_0
-
-    .line 75
     :cond_6
     const-string v0, "Logging tag or message may not be null."
 
+    .line 73
+    .line 74
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 75
     .line 76
     .line 77
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 78
-    .line 79
-    .line 80
     move-result-object v0
 
-    .line 81
+    .line 78
     throw v0
 .end method
 
@@ -577,7 +570,7 @@
     .line 12
     .line 13
     .line 14
-    invoke-static {p2}, LX/4BD;->A0j(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {p2}, LX/432;->A0q(Ljava/lang/Throwable;)Ljava/lang/String;
 
     .line 15
     .line 16

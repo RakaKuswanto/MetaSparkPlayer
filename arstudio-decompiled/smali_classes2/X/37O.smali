@@ -1,61 +1,76 @@
-.class public abstract LX/37O;
-.super Ljava/lang/Object;
+.class public final LX/37O;
+.super Ljava/util/LinkedHashMap;
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/util/List;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/LinkedHashMap<",
+        "Ljava/lang/String;",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
 
-.field public static final A01:Ljava/util/List;
+
+# instance fields
+.field public final synthetic this$0:LX/36T;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(LX/36T;)V
+    .locals 3
 
     .line 0
-    const/4 v1, 0x2
+    const/16 v2, 0x10
 
     .line 1
-    invoke-static {v1}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
     .line 2
+    const/high16 v1, 0x3f400000    # 0.75f
+
     .line 3
     .line 4
-    move-result-object v0
+    const/4 v0, 0x1
 
     .line 5
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
+    iput-object p1, p0, LX/37O;->this$0:LX/36T;
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v0
+    invoke-direct {p0, v2, v1, v0}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
+    .line 8
     .line 9
-    sput-object v0, LX/37O;->A01:Ljava/util/List;
+    .line 10
+    return-void
+.end method
+
+
+# virtual methods
+.method public final removeEldestEntry(Ljava/util/Map$Entry;)Z
+    .locals 2
+
+    .line 0
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
+
+    .line 4
+    const/16 v0, 0xa
+
+    .line 5
+    .line 6
+    invoke-static {v1, v0}, LX/0X4;->A1R(II)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
 
     .line 10
-    .line 11
-    invoke-static {v1}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    sput-object v0, LX/37O;->A00:Ljava/util/List;
-
-    .line 20
-    .line 21
-    return-void
+    return v0
 .end method

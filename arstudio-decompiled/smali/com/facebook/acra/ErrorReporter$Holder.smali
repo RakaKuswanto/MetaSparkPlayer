@@ -42,3 +42,14 @@
     .line 3
     return-void
 .end method
+
+.method public static synthetic access$1300()Lcom/facebook/acra/ErrorReporter;
+    .locals 1
+
+    .line 0
+    sget-object v0, Lcom/facebook/acra/ErrorReporter$Holder;->ERROR_REPORTER:Lcom/facebook/acra/ErrorReporter;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method

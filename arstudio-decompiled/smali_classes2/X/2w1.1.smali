@@ -1,18 +1,22 @@
 .class public final LX/2w1;
-.super LX/2lX;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:Lcom/facebook/auth/login/ui/OxygenTosAcceptanceFragment;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcom/facebook/auth/login/ui/OxygenTosAcceptanceFragment;)V
+    .locals 0
 
     .line 0
-    const-string v0, "Gatekeeper Init Lock Held"
+    iput-object p1, p0, LX/2w1;->A00:Lcom/facebook/auth/login/ui/OxygenTosAcceptanceFragment;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/2lX;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4

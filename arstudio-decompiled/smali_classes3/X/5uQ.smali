@@ -1,63 +1,223 @@
-.class public LX/5uQ;
-.super LX/5uS;
+.class public final enum LX/5Uq;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public final A00:J
+# static fields
+.field public static final synthetic $VALUES:[LX/5Uq;
 
-.field public final A01:J
+.field public static final enum MPEG_4:LX/5Uq;
+
+.field public static final enum OUTPUT_FORMAT_DEFAULT:LX/5Uq;
+
+.field public static final enum WEBM:LX/5Uq;
+
+
+# instance fields
+.field public final val:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 10
+.method public static synthetic $values()[LX/5Uq;
+    .locals 3
 
-    .line 268435456
+    .line 0
+    const/4 v0, 0x3
+
+    .line 1
+    new-array v2, v0, [LX/5Uq;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/5Uq;->MPEG_4:LX/5Uq;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/5Uq;->WEBM:LX/5Uq;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/5Uq;->OUTPUT_FORMAT_DEFAULT:LX/5Uq;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v2, "MPEG_4"
+
+    .line 1
+    .line 2
     const/4 v1, 0x0
 
-    .line 268435457
-    const-wide/16 v2, 0x1
+    .line 3
+    new-instance v0, LX/5Uq;
 
-    .line 268435458
-    .line 268435459
-    const-wide/16 v4, 0x0
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1, v1}, LX/5Uq;-><init>(Ljava/lang/String;II)V
 
-    .line 268435460
-    .line 268435461
-    move-object v0, p0
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/5Uq;->MPEG_4:LX/5Uq;
 
-    .line 268435462
-    move-wide v6, v4
+    .line 9
+    .line 10
+    const-string v2, "WEBM"
 
-    .line 268435463
-    move-wide v8, v4
+    .line 11
+    .line 12
+    const/4 v1, 0x1
 
-    .line 268435464
-    invoke-direct/range {v0 .. v9}, LX/5uQ;-><init>(LX/6OS;JJJJ)V
+    .line 13
+    new-instance v0, LX/5Uq;
 
-    .line 268435465
-    .line 268435466
-    .line 268435467
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1, v1}, LX/5Uq;-><init>(Ljava/lang/String;II)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/5Uq;->WEBM:LX/5Uq;
+
+    .line 19
+    .line 20
+    const-string v3, "OUTPUT_FORMAT_DEFAULT"
+
+    .line 21
+    .line 22
+    const/4 v2, 0x2
+
+    .line 23
+    const/4 v1, -0x1
+
+    .line 24
+    new-instance v0, LX/5Uq;
+
+    .line 25
+    .line 26
+    invoke-direct {v0, v3, v2, v1}, LX/5Uq;-><init>(Ljava/lang/String;II)V
+
+    .line 27
+    .line 28
+    .line 29
+    sput-object v0, LX/5Uq;->OUTPUT_FORMAT_DEFAULT:LX/5Uq;
+
+    .line 30
+    .line 31
+    invoke-static {}, LX/5Uq;->$values()[LX/5Uq;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
+
+    .line 35
+    sput-object v0, LX/5Uq;->$VALUES:[LX/5Uq;
+
+    .line 36
+    .line 37
     return-void
 .end method
 
-.method public constructor <init>(LX/6OS;JJJJ)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
     .line 0
-    invoke-direct/range {p0 .. p5}, LX/5uS;-><init>(LX/6OS;JJ)V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
-    iput-wide p6, p0, LX/5uQ;->A01:J
+    iput p3, p0, LX/5Uq;->val:I
 
     .line 4
     .line 5
-    iput-wide p8, p0, LX/5uQ;->A00:J
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/5Uq;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/5Uq;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
     .line 6
+    check-cast v0, LX/5Uq;
+
     .line 7
-    return-void
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/5Uq;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/5Uq;->$VALUES:[LX/5Uq;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/5Uq;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getVal()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/5Uq;->val:I
+
+    .line 1
+    .line 2
+    return v0
 .end method

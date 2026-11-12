@@ -4,28 +4,28 @@
 
 
 # instance fields
-.field public A00:LX/2Xa;
+.field public A00:LX/2ZS;
 
-.field public final A01:LX/0Na;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/0Na;
+.field public final A02:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/5Sw;)V
-    .locals 2
+.method public constructor <init>(LX/5mn;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1}, Lcom/facebook/secure/content/SecureContentDelegateDI;-><init>(LX/5Sw;)V
+    invoke-direct {p0, p1}, Lcom/facebook/secure/content/SecureContentDelegateDI;-><init>(LX/5mn;)V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AHU:I
+    sget v0, LX/2I6;->AC0:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -33,27 +33,26 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A02:LX/0RP;
 
     .line 10
     .line 11
-    sget v1, LX/2eq;->AHT:I
+    sget v0, LX/2I6;->ABz:I
 
     .line 12
     .line 13
-    new-instance v0, LX/1zT;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 14
     .line 15
-    invoke-direct {v0, p0, v1}, LX/1zT;-><init>(LX/0Qd;I)V
-
     .line 16
-    .line 17
-    .line 18
-    iput-object v0, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A01:LX/0Na;
+    move-result-object v0
 
+    .line 17
+    iput-object v0, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A01:LX/0RP;
+
+    .line 18
     .line 19
-    .line 20
     return-void
 .end method
 
@@ -63,7 +62,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -78,7 +77,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -103,11 +102,11 @@
     .line 4
     .line 5
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A00:LX/2Xa;
+    iget-object v2, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A00:LX/2ZS;
 
     .line 6
     .line 7
-    iget-object v0, v2, LX/2Xa;->A01:Landroid/content/UriMatcher;
+    iget-object v0, v2, LX/2ZS;->A01:Landroid/content/UriMatcher;
 
     .line 8
     .line 9
@@ -122,15 +121,15 @@
     const/4 v0, -0x1
 
     .line 14
-    if-eq v1, v0, :cond_1
+    if-eq v1, v0, :cond_0
 
     .line 15
     .line 16
-    iget-object v0, v2, LX/2Xa;->A02:Ljava/util/Map;
+    iget-object v0, v2, LX/2ZS;->A02:Ljava/util/Map;
 
     .line 17
     .line 18
-    invoke-static {v0, v1}, LX/0Yg;->A0e(Ljava/util/Map;I)Ljava/lang/Object;
+    invoke-static {v0, v1}, LX/0X4;->A0h(Ljava/util/Map;I)Ljava/lang/Object;
 
     .line 19
     .line 20
@@ -138,26 +137,26 @@
     move-result-object v0
 
     .line 22
-    check-cast v0, LX/2Xc;
+    check-cast v0, LX/2mw;
 
     .line 23
     .line 24
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 25
     .line 26
     const/4 v5, 0x0
 
     .line 27
-    check-cast v0, LX/2XZ;
+    check-cast v0, LX/2ZU;
 
     .line 28
     .line 29
-    iget-object v0, v0, LX/2XZ;->A01:LX/2Pn;
+    iget-object v0, v0, LX/2ZU;->A00:LX/2Vo;
 
     .line 30
     .line 31
-    invoke-virtual {v0}, LX/2Qz;->AB6()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, LX/3II;->A9a()Landroid/database/sqlite/SQLiteDatabase;
 
     .line 32
     .line 33
@@ -212,35 +211,35 @@
     .line 54
     :cond_0
     :try_start_1
-    const-string v0, "Table is null?"
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 55
     .line 56
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
     .line 57
-    .line 58
-    .line 59
-    move-result-object v0
-
-    .line 60
-    goto :goto_0
-
-    .line 61
-    :cond_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 62
-    .line 63
-    .line 64
     move-result-object v1
 
-    .line 65
+    .line 58
     const-string v0, "Unknown URI "
+
+    .line 59
+    .line 60
+    invoke-static {p1, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v0
+
+    .line 64
+    goto :goto_0
+
+    .line 65
+    :cond_1
+    const-string v0, "Table is null?"
 
     .line 66
     .line 67
-    invoke-static {p1, v0, v1}, LX/0Yc;->A03(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 68
     .line 69
@@ -274,7 +273,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -289,7 +288,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -304,24 +303,24 @@
     .locals 6
 
     .line 0
-    new-instance v5, LX/2Xa;
+    new-instance v5, LX/2ZS;
 
     .line 1
     .line 2
-    invoke-direct {v5}, LX/2Xa;-><init>()V
+    invoke-direct {v5}, LX/2ZS;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    iput-object v5, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A00:LX/2Xa;
+    iput-object v5, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A00:LX/2ZS;
 
     .line 6
     .line 7
-    iget-object v0, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A02:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A02:LX/0RP;
 
     .line 8
     .line 9
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 10
     .line 11
@@ -329,19 +328,19 @@
     move-result-object v0
 
     .line 13
-    check-cast v0, LX/2XX;
+    check-cast v0, LX/2ZM;
 
     .line 14
     .line 15
-    iget-object v4, v0, LX/2XX;->A02:Ljava/lang/String;
+    iget-object v4, v0, LX/2ZM;->A02:Ljava/lang/String;
 
     .line 16
     .line 17
-    iget-object v0, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A01:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/abtest/qe/db/QuickExperimentContentProvider$Impl;->A01:LX/0RP;
 
     .line 18
     .line 19
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 20
     .line 21
@@ -354,7 +353,7 @@
     .line 24
     .line 25
     .line 26
-    iget v1, v5, LX/2Xa;->A00:I
+    iget v1, v5, LX/2ZS;->A00:I
 
     .line 27
     .line 28
@@ -362,11 +361,11 @@
 
     .line 29
     .line 30
-    iput v0, v5, LX/2Xa;->A00:I
+    iput v0, v5, LX/2ZS;->A00:I
 
     .line 31
     .line 32
-    iget-object v0, v5, LX/2Xa;->A01:Landroid/content/UriMatcher;
+    iget-object v0, v5, LX/2ZS;->A01:Landroid/content/UriMatcher;
 
     .line 33
     .line 34
@@ -375,11 +374,11 @@
     .line 35
     .line 36
     .line 37
-    iget-object v0, v5, LX/2Xa;->A02:Ljava/util/Map;
+    iget-object v0, v5, LX/2ZS;->A02:Ljava/util/Map;
 
     .line 38
     .line 39
-    invoke-static {v3, v0, v1}, LX/0Yf;->A1A(Ljava/lang/Object;Ljava/util/Map;I)V
+    invoke-static {v3, v0, v1}, LX/0X3;->A1P(Ljava/lang/Object;Ljava/util/Map;I)V
 
     .line 40
     .line 41

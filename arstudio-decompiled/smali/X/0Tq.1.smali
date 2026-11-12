@@ -1,45 +1,27 @@
-.class public final LX/0Tq;
-.super Ljava/io/IOException;
+.class public final synthetic LX/0Tq;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public mDNSResolveStatus:LX/0Tr;
+.field public final synthetic A00:LX/0K4;
+
+.field public final synthetic A01:LX/0Kc;
+
+.field public final synthetic A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/0Tr;)V
-    .locals 2
+.method public synthetic constructor <init>(LX/0K4;LX/0Kc;Ljava/lang/String;)V
+    .locals 0
 
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
+    iput-object p1, p0, LX/0Tq;->A00:LX/0K4;
 
-    .line 4
-    const-string v0, "Status: "
+    iput-object p3, p0, LX/0Tq;->A02:Ljava/lang/String;
 
-    .line 5
-    .line 6
-    invoke-static {p1, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    iput-object p2, p0, LX/0Tq;->A01:LX/0Kc;
 
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    .line 11
-    .line 12
-    .line 13
-    iput-object p1, p0, LX/0Tq;->mDNSResolveStatus:LX/0Tr;
-
-    .line 14
-    .line 15
     return-void
 .end method

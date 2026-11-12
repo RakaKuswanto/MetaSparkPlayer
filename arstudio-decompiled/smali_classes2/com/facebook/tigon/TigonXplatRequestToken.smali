@@ -34,3 +34,6 @@
 
 .method public native changeHttpPriority(IZ)V
 .end method
+
+.method public native updateHttpPriorityContext(Lcom/facebook/tigon/iface/HttpPriorityContext;)V
+.end method

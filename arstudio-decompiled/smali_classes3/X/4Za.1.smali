@@ -1,308 +1,487 @@
-.class public final LX/4Za;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.class public abstract LX/4Za;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
+# static fields
+.field public static final A00:LX/4ZZ;
 
-.field public A01:I
-
-.field public A02:Landroid/content/res/ColorStateList;
-
-.field public A03:Landroid/content/res/ColorStateList;
-
-.field public A04:Landroid/graphics/Bitmap;
-
-.field public A05:Landroid/graphics/Paint;
-
-.field public A06:Landroid/graphics/PorterDuff$Mode;
-
-.field public A07:Landroid/graphics/PorterDuff$Mode;
-
-.field public A08:LX/4ZV;
-
-.field public A09:Z
-
-.field public A0A:Z
-
-.field public A0B:Z
+.field public static final A01:LX/4Za;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    const/4 v0, 0x0
-
-    .line 268435460
-    iput-object v0, p0, LX/4Za;->A03:Landroid/content/res/ColorStateList;
-
-    .line 268435461
-    .line 268435462
-    sget-object v0, LX/4ZU;->A09:Landroid/graphics/PorterDuff$Mode;
-
-    .line 268435463
-    .line 268435464
-    iput-object v0, p0, LX/4Za;->A07:Landroid/graphics/PorterDuff$Mode;
-
-    .line 268435465
-    .line 268435466
-    new-instance v0, LX/4ZV;
-
-    .line 268435467
-    .line 268435468
-    invoke-direct {v0}, LX/4ZV;-><init>()V
-
-    .line 268435469
-    .line 268435470
-    .line 268435471
-    iput-object v0, p0, LX/4Za;->A08:LX/4ZV;
-
-    .line 268435472
-    .line 268435473
-    return-void
-.end method
-
-.method public constructor <init>(LX/4Za;)V
-    .locals 3
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+    new-instance v0, LX/4ZZ;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/4ZZ;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/4Za;->A00:LX/4ZZ;
+
+    .line 6
+    .line 7
+    const/16 v1, 0x22
+
+    .line 8
+    .line 9
+    sget-object v0, LX/3pO;->A00:Ljava/lang/Integer;
+
+    .line 10
+    .line 11
+    if-eqz v0, :cond_0
+
+    .line 12
+    .line 13
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    if-ge v0, v1, :cond_0
+
+    .line 18
+    .line 19
+    new-instance v0, LX/4Zg;
+
+    .line 20
+    .line 21
+    invoke-direct {v0}, LX/4Zg;-><init>()V
+
+    .line 22
+    .line 23
+    .line 24
+    :goto_0
+    sput-object v0, LX/4Za;->A01:LX/4Za;
+
+    .line 25
+    .line 26
+    return-void
+
+    .line 27
+    :cond_0
+    new-instance v0, LX/4Zh;
+
+    .line 28
+    .line 29
+    invoke-direct {v0}, LX/4Zh;-><init>()V
+
+    .line 30
+    .line 31
+    .line 32
+    goto :goto_0
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    return-void
+.end method
 
+.method private final A01(I)I
+    .locals 2
+
+    .line 0
+    instance-of v0, p0, LX/4ZZ;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
     .line 4
-    iput-object v0, p0, LX/4Za;->A03:Landroid/content/res/ColorStateList;
+    sget-object v0, LX/4Za;->A01:LX/4Za;
 
     .line 5
     .line 6
-    sget-object v0, LX/4ZU;->A09:Landroid/graphics/PorterDuff$Mode;
+    invoke-direct {v0, p1}, LX/4Za;->A01(I)I
 
     .line 7
     .line 8
-    iput-object v0, p0, LX/4Za;->A07:Landroid/graphics/PorterDuff$Mode;
-
     .line 9
+    move-result v1
+
     .line 10
-    if-eqz p1, :cond_2
+    return v1
 
     .line 11
+    :cond_0
+    move-object v0, p0
+
     .line 12
-    iget v0, p1, LX/4Za;->A01:I
+    check-cast v0, LX/4Zd;
 
     .line 13
     .line 14
-    iput v0, p0, LX/4Za;->A01:I
+    invoke-virtual {v0}, LX/4Zd;->A04()Ljava/util/Random;
 
     .line 15
     .line 16
-    iget-object v0, p1, LX/4Za;->A08:LX/4ZV;
-
     .line 17
+    move-result-object v0
+
     .line 18
-    new-instance v2, LX/4ZV;
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
 
     .line 19
     .line 20
-    invoke-direct {v2, v0}, LX/4ZV;-><init>(LX/4ZV;)V
-
     .line 21
-    .line 22
-    .line 23
-    iput-object v2, p0, LX/4Za;->A08:LX/4ZV;
+    move-result v1
 
+    .line 22
+    rsub-int/lit8 v0, p1, 0x20
+
+    .line 23
     .line 24
+    ushr-int/2addr v1, v0
+
     .line 25
-    iget-object v0, p1, LX/4Za;->A08:LX/4ZV;
+    neg-int v0, p1
 
     .line 26
+    shr-int/lit8 v0, v0, 0x1f
+
     .line 27
-    iget-object v1, v0, LX/4ZV;->A05:Landroid/graphics/Paint;
-
     .line 28
+    and-int/2addr v1, v0
+
     .line 29
-    if-eqz v1, :cond_0
-
-    .line 30
-    .line 31
-    new-instance v0, Landroid/graphics/Paint;
-
-    .line 32
-    .line 33
-    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
-
-    .line 34
-    .line 35
-    .line 36
-    iput-object v0, v2, LX/4ZV;->A05:Landroid/graphics/Paint;
-
-    .line 37
-    .line 38
-    :cond_0
-    iget-object v0, p1, LX/4Za;->A08:LX/4ZV;
-
-    .line 39
-    .line 40
-    iget-object v2, v0, LX/4ZV;->A06:Landroid/graphics/Paint;
-
-    .line 41
-    .line 42
-    if-eqz v2, :cond_1
-
-    .line 43
-    .line 44
-    iget-object v1, p0, LX/4Za;->A08:LX/4ZV;
-
-    .line 45
-    .line 46
-    new-instance v0, Landroid/graphics/Paint;
-
-    .line 47
-    .line 48
-    invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
-
-    .line 49
-    .line 50
-    .line 51
-    iput-object v0, v1, LX/4ZV;->A06:Landroid/graphics/Paint;
-
-    .line 52
-    .line 53
-    :cond_1
-    iget-object v0, p1, LX/4Za;->A03:Landroid/content/res/ColorStateList;
-
-    .line 54
-    .line 55
-    iput-object v0, p0, LX/4Za;->A03:Landroid/content/res/ColorStateList;
-
-    .line 56
-    .line 57
-    iget-object v0, p1, LX/4Za;->A07:Landroid/graphics/PorterDuff$Mode;
-
-    .line 58
-    .line 59
-    iput-object v0, p0, LX/4Za;->A07:Landroid/graphics/PorterDuff$Mode;
-
-    .line 60
-    .line 61
-    iget-boolean v0, p1, LX/4Za;->A09:Z
-
-    .line 62
-    .line 63
-    iput-boolean v0, p0, LX/4Za;->A09:Z
-
-    .line 64
-    .line 65
-    :cond_2
-    return-void
+    return v1
 .end method
 
 
 # virtual methods
-.method public final A00(II)V
-    .locals 7
+.method public final A00()I
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/4Za;->A04:Landroid/graphics/Bitmap;
+    instance-of v0, p0, LX/4ZZ;
 
     .line 1
     .line 2
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v1, v0}, Landroid/graphics/Bitmap;->eraseColor(I)V
-
     .line 4
+    sget-object v0, LX/4Za;->A01:LX/4Za;
+
     .line 5
     .line 6
-    iget-object v0, p0, LX/4Za;->A04:Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, LX/4Za;->A00()I
 
     .line 7
     .line 8
-    new-instance v1, Landroid/graphics/Canvas;
-
     .line 9
+    move-result v0
+
     .line 10
-    invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+    return v0
 
     .line 11
+    :cond_0
+    move-object v0, p0
+
     .line 12
+    check-cast v0, LX/4Zd;
+
     .line 13
-    iget-object v4, p0, LX/4Za;->A08:LX/4ZV;
-
     .line 14
-    .line 15
-    iget-object v3, v4, LX/4ZV;->A0F:LX/4ZZ;
+    invoke-virtual {v0}, LX/4Zd;->A04()Ljava/util/Random;
 
+    .line 15
     .line 16
     .line 17
-    sget-object v2, LX/4ZV;->A0G:Landroid/graphics/Matrix;
+    move-result-object v0
 
     .line 18
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
+
     .line 19
-    move v5, p1
-
     .line 20
-    move v6, p2
-
     .line 21
-    invoke-static/range {v1 .. v6}, LX/4ZV;->A00(Landroid/graphics/Canvas;Landroid/graphics/Matrix;LX/4ZZ;LX/4ZV;II)V
+    move-result v0
 
     .line 22
-    .line 23
-    .line 24
-    return-void
-.end method
-
-.method public getChangingConfigurations()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/4Za;->A01:I
-
-    .line 1
-    .line 2
     return v0
 .end method
 
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .line 268435456
-    new-instance v0, LX/4ZU;
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {v0, p0}, LX/4ZU;-><init>(LX/4Za;)V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    return-object v0
-.end method
-
-.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+.method public final A02(I)I
     .locals 1
 
     .line 0
-    new-instance v0, LX/4ZU;
+    instance-of v0, p0, LX/4ZZ;
 
     .line 1
     .line 2
-    invoke-direct {v0, p0}, LX/4ZU;-><init>(LX/4Za;)V
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
+    sget-object v0, LX/4Za;->A01:LX/4Za;
+
     .line 5
-    return-object v0
+    .line 6
+    invoke-virtual {v0, p1}, LX/4Za;->A02(I)I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    return v0
+
+    .line 11
+    :cond_0
+    move-object v0, p0
+
+    .line 12
+    check-cast v0, LX/4Zd;
+
+    .line 13
+    .line 14
+    invoke-virtual {v0}, LX/4Zd;->A04()Ljava/util/Random;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    invoke-virtual {v0, p1}, Ljava/util/Random;->nextInt(I)I
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    return v0
+.end method
+
+.method public A03(II)I
+    .locals 5
+
+    .line 0
+    instance-of v0, p0, LX/4ZZ;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    sget-object v0, LX/4Za;->A01:LX/4Za;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1, p2}, LX/4Za;->A03(II)I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    return v0
+
+    .line 11
+    :cond_0
+    if-le p2, p1, :cond_4
+
+    .line 12
+    .line 13
+    sub-int v4, p2, p1
+
+    .line 14
+    .line 15
+    const/4 v3, 0x1
+
+    .line 16
+    if-gtz v4, :cond_1
+
+    .line 17
+    .line 18
+    const/high16 v0, -0x80000000
+
+    .line 19
+    .line 20
+    if-ne v4, v0, :cond_3
+
+    .line 21
+    .line 22
+    :cond_1
+    neg-int v0, v4
+
+    .line 23
+    and-int/2addr v0, v4
+
+    .line 24
+    if-ne v0, v4, :cond_2
+
+    .line 25
+    .line 26
+    invoke-static {v4}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    rsub-int/lit8 v0, v0, 0x1f
+
+    .line 31
+    .line 32
+    invoke-direct {p0, v0}, LX/4Za;->A01(I)I
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v1
+
+    .line 36
+    :goto_0
+    add-int v0, p1, v1
+
+    .line 37
+    .line 38
+    return v0
+
+    .line 39
+    :cond_2
+    invoke-virtual {p0}, LX/4Za;->A00()I
+
+    .line 40
+    .line 41
+    .line 42
+    move-result v2
+
+    .line 43
+    ushr-int/2addr v2, v3
+
+    .line 44
+    rem-int v1, v2, v4
+
+    .line 45
+    .line 46
+    sub-int/2addr v2, v1
+
+    .line 47
+    add-int/lit8 v0, v4, -0x1
+
+    .line 48
+    .line 49
+    add-int/2addr v2, v0
+
+    .line 50
+    if-ltz v2, :cond_2
+
+    .line 51
+    .line 52
+    goto :goto_0
+
+    .line 53
+    :cond_3
+    invoke-virtual {p0}, LX/4Za;->A00()I
+
+    .line 54
+    .line 55
+    .line 56
+    move-result v0
+
+    .line 57
+    if-gt p1, v0, :cond_3
+
+    .line 58
+    .line 59
+    if-ge v0, p2, :cond_3
+
+    .line 60
+    .line 61
+    return v0
+
+    .line 62
+    :cond_4
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 63
+    .line 64
+    .line 65
+    move-result-object v3
+
+    .line 66
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v2
+
+    .line 70
+    invoke-static {v3, v2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 71
+    .line 72
+    .line 73
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v1
+
+    .line 77
+    const-string v0, "Random range is empty: ["
+
+    .line 78
+    .line 79
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 80
+    .line 81
+    .line 82
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 83
+    .line 84
+    .line 85
+    invoke-static {v1}, LX/0X5;->A1O(Ljava/lang/StringBuilder;)V
+
+    .line 86
+    .line 87
+    .line 88
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 89
+    .line 90
+    .line 91
+    const-string v0, ")."
+
+    .line 92
+    .line 93
+    invoke-static {v0, v1}, LX/001;->A0C(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+
+    .line 94
+    .line 95
+    .line 96
+    move-result-object v0
+
+    .line 97
+    throw v0
 .end method

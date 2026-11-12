@@ -12,69 +12,98 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method public static synthetic $values()[Lcom/facebook/infer/annotation/Nullsafe$Mode;
+    .locals 3
 
     .line 0
-    const-string v0, "LOCAL"
+    const/4 v0, 0x2
 
     .line 1
-    .line 2
-    const/4 v4, 0x0
+    new-array v2, v0, [Lcom/facebook/infer/annotation/Nullsafe$Mode;
 
+    .line 2
     .line 3
-    new-instance v3, Lcom/facebook/infer/annotation/Nullsafe$Mode;
+    sget-object v1, Lcom/facebook/infer/annotation/Nullsafe$Mode;->LOCAL:Lcom/facebook/infer/annotation/Nullsafe$Mode;
 
     .line 4
     .line 5
-    invoke-direct {v3, v0, v4}, Lcom/facebook/infer/annotation/Nullsafe$Mode;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/infer/annotation/Nullsafe$Mode;->STRICT:Lcom/facebook/infer/annotation/Nullsafe$Mode;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "LOCAL"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/infer/annotation/Nullsafe$Mode;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, Lcom/facebook/infer/annotation/Nullsafe$Mode;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v3, Lcom/facebook/infer/annotation/Nullsafe$Mode;->LOCAL:Lcom/facebook/infer/annotation/Nullsafe$Mode;
+    sput-object v0, Lcom/facebook/infer/annotation/Nullsafe$Mode;->LOCAL:Lcom/facebook/infer/annotation/Nullsafe$Mode;
 
     .line 9
     .line 10
-    const-string v0, "STRICT"
+    const-string v2, "STRICT"
 
     .line 11
     .line 12
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     .line 13
-    new-instance v1, Lcom/facebook/infer/annotation/Nullsafe$Mode;
+    new-instance v0, Lcom/facebook/infer/annotation/Nullsafe$Mode;
 
     .line 14
     .line 15
-    invoke-direct {v1, v0, v2}, Lcom/facebook/infer/annotation/Nullsafe$Mode;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/infer/annotation/Nullsafe$Mode;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v1, Lcom/facebook/infer/annotation/Nullsafe$Mode;->STRICT:Lcom/facebook/infer/annotation/Nullsafe$Mode;
+    sput-object v0, Lcom/facebook/infer/annotation/Nullsafe$Mode;->STRICT:Lcom/facebook/infer/annotation/Nullsafe$Mode;
 
     .line 19
     .line 20
-    const/4 v0, 0x2
+    invoke-static {}, Lcom/facebook/infer/annotation/Nullsafe$Mode;->$values()[Lcom/facebook/infer/annotation/Nullsafe$Mode;
 
     .line 21
-    new-array v0, v0, [Lcom/facebook/infer/annotation/Nullsafe$Mode;
-
     .line 22
     .line 23
-    aput-object v3, v0, v4
+    move-result-object v0
 
     .line 24
-    .line 25
-    aput-object v1, v0, v2
-
-    .line 26
-    .line 27
     sput-object v0, Lcom/facebook/infer/annotation/Nullsafe$Mode;->$VALUES:[Lcom/facebook/infer/annotation/Nullsafe$Mode;
 
-    .line 28
-    .line 29
+    .line 25
+    .line 26
     return-void
 .end method
 

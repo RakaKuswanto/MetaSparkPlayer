@@ -12,7 +12,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/5M2;->A01(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, LX/5kg;->A01(Ljava/lang/String;)Ljava/lang/String;
 
     .line 3
     .line 4
@@ -76,12 +76,12 @@
 
     .line 13
     .line 14
-    invoke-static {}, LX/5M2;->A00()LX/5M2;
+    invoke-static {}, LX/5kg;->A00()LX/5kg;
 
     .line 15
     .line 16
     .line 17
-    invoke-static {p1}, LX/5Ko;->A00(Landroid/content/Context;)V
+    invoke-static {p1}, LX/5jj;->A00(Landroid/content/Context;)V
 
     .line 18
     .line 19

@@ -16,6 +16,16 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "splitter",
+            "toSplit"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/base/AbstractIterator;-><init>()V
@@ -56,7 +66,23 @@
 
 # virtual methods
 .method public abstract separatorEnd(I)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "separatorPosition"
+        }
+    .end annotation
 .end method
 
 .method public abstract separatorStart(I)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "start"
+        }
+    .end annotation
 .end method

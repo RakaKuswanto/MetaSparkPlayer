@@ -1,57 +1,45 @@
 .class public final LX/67E;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "LigerStreamEventBaseThread$1"
+# interfaces
+.implements LX/698;
 
 
 # instance fields
-.field public final synthetic A00:J
-
-.field public final synthetic A01:Lcom/facebook/mqtttransport/LigerStreamEventBaseThread;
+.field public A00:LX/69W;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/mqtttransport/LigerStreamEventBaseThread;J)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string v0, "XplatMqttLigerEventBased"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/67E;->A01:Lcom/facebook/mqtttransport/LigerStreamEventBaseThread;
-
     .line 3
-    .line 4
-    iput-wide p2, p0, LX/67E;->A00:J
-
-    .line 5
-    .line 6
-    invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
-
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final deliverOnRenderThread()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getType()LX/61j;
+    .locals 1
 
     .line 0
-    iget-wide v0, p0, LX/67E;->A00:J
+    sget-object v0, LX/61j;->PLATFORM_ALGORITHM_DATA_EVENT:LX/61j;
 
     .line 1
     .line 2
-    invoke-static {v0, v1}, Lcom/facebook/mqtttransport/LigerStreamEventBaseThread;->nativeLigerStreamEventBaseThreadRun(J)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    return-object v0
 .end method

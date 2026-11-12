@@ -45,11 +45,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0xb
+    const/16 v0, 0x30
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -132,7 +132,7 @@
 
     .line 18
     :cond_0
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
 
     .line 19
     .line 20
@@ -150,6 +150,118 @@
 
     const/4 v0, 0x0
 
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_0
+
+    .line 2
+    .line 3
+    instance-of v0, p1, Lcom/facebook/ipc/composer/model/SerializedComposerPluginConfig;
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_1
+
+    .line 6
+    .line 7
+    iget-object v1, p0, Lcom/facebook/ipc/composer/model/SerializedComposerPluginConfig;->persistenceKey:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    check-cast p1, Lcom/facebook/ipc/composer/model/SerializedComposerPluginConfig;
+
+    .line 10
+    .line 11
+    iget-object v0, p1, Lcom/facebook/ipc/composer/model/SerializedComposerPluginConfig;->persistenceKey:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    if-eqz v0, :cond_1
+
+    .line 18
+    .line 19
+    iget-object v1, p0, Lcom/facebook/ipc/composer/model/SerializedComposerPluginConfig;->data:Ljava/lang/String;
+
+    .line 20
+    .line 21
+    iget-object v0, p1, Lcom/facebook/ipc/composer/model/SerializedComposerPluginConfig;->data:Ljava/lang/String;
+
+    .line 22
+    .line 23
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    if-eqz v0, :cond_1
+
+    .line 28
+    .line 29
+    :cond_0
+    return v2
+
+    .line 30
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 31
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    .line 0
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
+
+    .line 4
+    iget-object v1, p0, Lcom/facebook/ipc/composer/model/SerializedComposerPluginConfig;->persistenceKey:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/SerializedComposerPluginConfig;->data:Ljava/lang/String;
+
+    .line 10
+    .line 11
+    invoke-static {v2, v0}, LX/0X2;->A0D([Ljava/lang/Object;Ljava/lang/Object;)I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
     return v0
 .end method
 
@@ -171,7 +283,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

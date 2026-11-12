@@ -1,217 +1,214 @@
-.class public abstract LX/2ft;
+.class public final LX/2ft;
 .super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public A00:Landroid/content/Context;
+
+.field public A01:LX/20d;
+
+.field public A02:Z
+
+.field public final A03:LX/0RP;
+    .annotation runtime Lcom/facebook/mobileconfig/factory/module/AdminIdMC;
+    .end annotation
+.end field
+
+.field public final A04:LX/0RP;
+
+.field public final A05:LX/0RP;
+
+.field public final A06:LX/0RP;
+
+.field public final A07:LX/0RP;
+
+.field public final A08:LX/0RP;
+
+
 # direct methods
-.method public static A00(LX/0ZF;JJJ)J
-    .locals 12
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    move-wide v0, p3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    invoke-interface {p0, v0, v1}, LX/35B;->ACd(J)Z
-
     .line 2
     .line 3
-    .line 4
-    move-result v0
+    sget v0, LX/2I6;->A9Y:I
 
+    .line 4
     .line 5
-    if-eqz v0, :cond_3
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
-    const-wide v0, 0x82018b000505c3L
-
     .line 8
+    move-result-object v0
+
     .line 9
+    iput-object v0, p0, LX/2ft;->A06:LX/0RP;
+
     .line 10
     .line 11
-    .line 12
-    invoke-interface {p0, v0, v1}, LX/35B;->AIM(J)J
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
+    .line 12
     .line 13
     .line 14
+    move-result-object v1
+
     .line 15
-    move-result-wide v5
+    iput-object v1, p0, LX/2ft;->A00:Landroid/content/Context;
 
     .line 16
-    const-wide/16 v0, 0x400
-
     .line 17
-    .line 18
-    mul-long/2addr v5, v0
+    sget v0, LX/2I6;->A9k:I
 
+    .line 18
     .line 19
-    mul-long/2addr v5, v0
+    invoke-static {v1, v0}, LX/3FW;->A00(Landroid/content/Context;I)LX/3FW;
 
     .line 20
-    const-wide/32 v1, 0x3c00000
-
     .line 21
     .line 22
+    move-result-object v0
+
     .line 23
-    cmp-long v0, v5, v1
+    iput-object v0, p0, LX/2ft;->A04:LX/0RP;
 
     .line 24
     .line 25
-    if-gez v0, :cond_0
+    sget v0, LX/2I6;->A7s:I
 
     .line 26
     .line 27
-    const-wide/32 v5, 0x3c00000
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 28
     .line 29
     .line 30
-    :cond_0
-    move-wide/from16 v0, p5
-
-    .line 31
-    .line 32
-    invoke-interface {p0, v0, v1}, LX/35B;->AEe(J)D
-
-    .line 33
-    .line 34
-    .line 35
-    move-result-wide v11
-
-    .line 36
-    const-wide/high16 v9, 0x4034000000000000L    # 20.0
-
-    .line 37
-    .line 38
-    const-wide/high16 v7, 0x3ff0000000000000L    # 1.0
-
-    .line 39
-    .line 40
-    cmpg-double v0, v11, v7
-
-    .line 41
-    .line 42
-    if-ltz v0, :cond_1
-
-    .line 43
-    .line 44
-    cmpl-double v0, v11, v9
-
-    .line 45
-    .line 46
-    if-lez v0, :cond_2
-
-    .line 47
-    .line 48
-    :cond_1
-    const-string v3, "ImagePipelineFactory"
-
-    .line 49
-    .line 50
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
-
-    .line 51
-    .line 52
-    .line 53
-    move-result-object v2
-
-    .line 54
-    const/4 v0, 0x0
-
-    .line 55
-    invoke-static {v7, v8}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    .line 56
-    .line 57
-    .line 58
-    move-result-object v1
-
-    .line 59
-    aput-object v1, v2, v0
-
-    .line 60
-    .line 61
-    invoke-static {v9, v10}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    .line 62
-    .line 63
-    .line 64
     move-result-object v0
 
-    .line 65
-    invoke-static {v2, v0, v1}, LX/0Yf;->A1P([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 31
+    iput-object v0, p0, LX/2ft;->A08:LX/0RP;
 
-    .line 66
-    .line 67
-    .line 68
-    const-string v0, "fb4a_android_image_disk_cache cache multipler out of range ( %f <= x <= %f). Defaulting to %f"
+    .line 32
+    .line 33
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
-    .line 69
-    .line 70
-    invoke-static {v3, v0, v2}, LX/0I5;->A0A(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
 
-    .line 71
-    .line 72
-    .line 73
-    const-wide/high16 v11, 0x3ff0000000000000L    # 1.0
+    .line 37
+    iput-object v0, p0, LX/2ft;->A05:LX/0RP;
 
-    .line 74
-    .line 75
-    :cond_2
-    invoke-static {}, LX/0Yh;->A08()J
+    .line 38
+    .line 39
+    sget v0, LX/2I6;->A6F:I
 
-    .line 76
-    .line 77
-    .line 78
-    move-result-wide v0
+    .line 40
+    .line 41
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
-    .line 79
-    long-to-double v3, v0
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v0
 
-    .line 80
-    const-wide/high16 v0, 0x4190000000000000L    # 6.7108864E7
+    .line 45
+    iput-object v0, p0, LX/2ft;->A03:LX/0RP;
 
-    .line 81
-    .line 82
-    mul-double/2addr v0, v11
+    .line 46
+    .line 47
+    sget v0, LX/2I6;->A8q:I
 
-    .line 83
-    sub-double/2addr v3, v0
+    .line 48
+    .line 49
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
-    .line 84
-    invoke-static {}, LX/0J7;->A01()LX/0J7;
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v0
 
-    .line 85
-    .line 86
-    .line 87
-    const-wide/32 v0, 0x3e800000
+    .line 53
+    iput-object v0, p0, LX/2ft;->A07:LX/0RP;
 
-    .line 88
-    .line 89
-    .line 90
-    add-long/2addr v5, v0
+    .line 54
+    .line 55
+    const/4 v0, 0x0
 
-    .line 91
-    long-to-double v1, v5
+    .line 56
+    iput-boolean v0, p0, LX/2ft;->A02:Z
 
-    .line 92
-    cmpl-double v0, v3, v1
+    .line 57
+    .line 58
+    return-void
+.end method
 
-    .line 93
-    .line 94
-    if-lez v0, :cond_3
+.method public static A00(LX/2ft;)V
+    .locals 2
 
-    .line 95
-    .line 96
-    long-to-double v0, p1
+    .line 0
+    iget-object v1, p0, LX/2ft;->A01:LX/20d;
 
-    .line 97
-    mul-double/2addr v0, v11
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
 
-    .line 98
-    double-to-long p1, v0
+    .line 3
+    .line 4
+    monitor-enter v1
 
-    .line 99
-    :cond_3
-    return-wide p1
+    .line 5
+    :try_start_0
+    iget-boolean v0, v1, LX/20d;->A00:Z
+
+    .line 6
+    .line 7
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 8
+    :catchall_0
+    move-exception v0
+
+    .line 9
+    monitor-exit v1
+
+    .line 10
+    throw v0
+
+    .line 11
+    :goto_0
+    monitor-exit v1
+
+    .line 12
+    if-eqz v0, :cond_0
+
+    .line 13
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    iput-boolean v0, p0, LX/2ft;->A02:Z
+
+    .line 16
+    .line 17
+    iget-object v0, p0, LX/2ft;->A01:LX/20d;
+
+    .line 18
+    .line 19
+    invoke-virtual {v0}, LX/20d;->A01()V
+
+    .line 20
+    .line 21
+    .line 22
+    :cond_0
+    return-void
 .end method

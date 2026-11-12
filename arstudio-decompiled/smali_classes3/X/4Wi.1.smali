@@ -1,20 +1,28 @@
 .class public final LX/4Wi;
-.super LX/00y;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/4Wz;
+
+
+# instance fields
+.field public final synthetic A00:LX/4VO;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/4VO;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x6
+    iput-object p1, p0, LX/4Wi;->A00:LX/4VO;
 
     .line 1
-    invoke-direct {p0, v0}, LX/00y;-><init>(I)V
-
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
     .line 4
+    .line 5
     return-void
 .end method

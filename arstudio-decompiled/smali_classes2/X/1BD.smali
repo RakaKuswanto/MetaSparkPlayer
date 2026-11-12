@@ -1,21 +1,92 @@
 .class public final LX/1BD;
-.super LX/1Bn;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/0yO;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "OnCompletedListenerSender$1"
+
+
+# instance fields
+.field public final synthetic A00:LX/1BB;
+
+.field public final synthetic A01:LX/1BC;
 
 
 # direct methods
-.method public constructor <init>(I[I)V
+.method public constructor <init>(LX/1BB;LX/1BC;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    iput-object p1, p0, LX/1BD;->A00:LX/1BB;
 
     .line 1
     .line 2
+    iput-object p2, p0, LX/1BD;->A01:LX/1BC;
+
     .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/1BD;->A00:LX/1BB;
+
+    .line 1
+    .line 2
+    iget-object v2, v0, LX/1BB;->A01:Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    monitor-enter v2
+
+    .line 5
+    :try_start_0
+    iget-object v1, v0, LX/1BB;->A00:LX/1BF;
+
+    .line 6
+    .line 7
+    if-eqz v1, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/1BD;->A01:LX/1BC;
+
+    .line 10
+    .line 11
+    invoke-interface {v1, v0}, LX/1BF;->AUa(LX/1BC;)V
+
+    .line 12
+    .line 13
+    .line 14
+    :cond_0
+    monitor-exit v2
+
+    .line 15
+    return-void
+
+    .line 16
+    :catchall_0
+    move-exception v0
+
+    .line 17
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 18
+    throw v0
 .end method

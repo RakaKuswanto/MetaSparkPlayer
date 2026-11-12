@@ -1,34 +1,109 @@
-.class public interface abstract LX/4DT;
-.super Ljava/lang/Object;
+.class public final LX/4DT;
+.super LX/4EB;
 .source ""
 
-# interfaces
-.implements LX/4BX;
-.implements LX/4Be;
-.implements Landroid/view/View$OnTouchListener;
+
+# instance fields
+.field public final synthetic A00:Landroid/app/Dialog;
+
+.field public final synthetic A01:LX/4DV;
+
+.field public final synthetic A02:LX/4Cn;
+
+
+# direct methods
+.method public constructor <init>(Landroid/app/Dialog;LX/4DV;LX/4Cn;)V
+    .locals 0
+
+    .line 0
+    iput-object p2, p0, LX/4DT;->A01:LX/4DV;
+
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/4DT;->A00:Landroid/app/Dialog;
+
+    .line 3
+    .line 4
+    iput-object p3, p0, LX/4DT;->A02:LX/4Cn;
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, LX/4EB;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract AOz()V
-.end method
+.method public final AZU(Landroid/view/View;LX/4c8;)V
+    .locals 4
 
-.method public abstract AZ1(J)Z
-.end method
+    .line 0
+    sget-object v0, LX/4DV;->A02:LX/4c8;
 
-.method public abstract Aab(Ljava/lang/String;)V
-.end method
+    .line 1
+    .line 2
+    if-ne p2, v0, :cond_1
 
-.method public abstract AeX(Ljava/lang/String;)V
-.end method
+    .line 3
+    .line 4
+    iget-object v3, p0, LX/4DT;->A00:Landroid/app/Dialog;
 
-.method public abstract Ai9()V
-.end method
+    .line 5
+    .line 6
+    if-eqz v3, :cond_1
 
-.method public abstract Al4(Z)V
-.end method
+    .line 7
+    .line 8
+    iget-object v0, p0, LX/4DT;->A01:LX/4DV;
 
-.method public abstract AoP()V
-.end method
+    .line 9
+    .line 10
+    iget-object v2, v0, LX/4DV;->A01:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.method public abstract setProgress(I)V
+    .line 11
+    .line 12
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    if-nez v0, :cond_0
+
+    .line 17
+    .line 18
+    iget-object v1, p0, LX/4DT;->A02:LX/4Cn;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x2
+
+    .line 21
+    invoke-virtual {v1, v0}, LX/4Cn;->A0N(I)V
+
+    .line 22
+    .line 23
+    .line 24
+    const/4 v0, 0x1
+
+    .line 25
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 26
+    .line 27
+    .line 28
+    :cond_0
+    invoke-virtual {v3}, Landroid/app/Dialog;->cancel()V
+
+    .line 29
+    .line 30
+    .line 31
+    :cond_1
+    return-void
 .end method

@@ -20,7 +20,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0e()Ljava/util/Random;
+    invoke-static {}, LX/0X7;->A0i()Ljava/util/Random;
 
     .line 1
     .line 2

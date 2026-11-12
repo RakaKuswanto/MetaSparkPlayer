@@ -1,0 +1,345 @@
+.class public final Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# annotations
+.annotation runtime Lcom/fasterxml/jackson/databind/annotation/JsonDeserialize;
+    using = Lcom/facebook/inspiration/model/InspirationVideoPlaybackState$Deserializer;
+.end annotation
+
+.annotation runtime Lcom/fasterxml/jackson/databind/annotation/JsonSerialize;
+    using = Lcom/facebook/inspiration/model/InspirationVideoPlaybackState$Serializer;
+.end annotation
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+
+
+# instance fields
+.field public final A00:I
+
+.field public final A01:Z
+
+.field public final A02:Z
+
+.field public final A03:Z
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    const/16 v0, 0x23
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/1Wh;->A00(I)LX/1Wh;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    sput-object v0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v1
+
+    .line 7
+    const/4 v0, 0x1
+
+    .line 8
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    iput-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A01:Z
+
+    .line 13
+    .line 14
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    iput v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A00:I
+
+    .line 19
+    .line 20
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v0
+
+    .line 24
+    iput-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A02:Z
+
+    .line 25
+    .line 26
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    iput-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A03:Z
+
+    .line 31
+    .line 32
+    return-void
+.end method
+
+.method public constructor <init>(ZIZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A01:Z
+
+    iput p2, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A00:I
+
+    iput-boolean p3, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A02:Z
+
+    iput-boolean p4, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A03:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 0
+    const/4 v3, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_1
+
+    .line 2
+    .line 3
+    instance-of v0, p1, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;
+
+    .line 4
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    check-cast p1, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;
+
+    .line 9
+    .line 10
+    iget-boolean v1, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A01:Z
+
+    .line 11
+    .line 12
+    iget-boolean v0, p1, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A01:Z
+
+    .line 13
+    .line 14
+    if-ne v1, v0, :cond_0
+
+    .line 15
+    .line 16
+    iget v1, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A00:I
+
+    .line 17
+    .line 18
+    iget v0, p1, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A00:I
+
+    .line 19
+    .line 20
+    if-ne v1, v0, :cond_0
+
+    .line 21
+    .line 22
+    iget-boolean v1, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A02:Z
+
+    .line 23
+    .line 24
+    iget-boolean v0, p1, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A02:Z
+
+    .line 25
+    .line 26
+    if-ne v1, v0, :cond_0
+
+    .line 27
+    .line 28
+    iget-boolean v1, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A03:Z
+
+    .line 29
+    .line 30
+    iget-boolean v0, p1, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A03:Z
+
+    .line 31
+    .line 32
+    if-eq v1, v0, :cond_1
+
+    .line 33
+    .line 34
+    :cond_0
+    return v2
+
+    .line 35
+    :cond_1
+    return v3
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    .line 0
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A01:Z
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/1O4;->A03(Z)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v1
+
+    .line 6
+    iget v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A00:I
+
+    .line 7
+    .line 8
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 9
+    .line 10
+    add-int/2addr v1, v0
+
+    .line 11
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A02:Z
+
+    .line 12
+    .line 13
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 14
+    .line 15
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    add-int/2addr v1, v0
+
+    .line 20
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A03:Z
+
+    .line 21
+    .line 22
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 23
+    .line 24
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v0
+
+    .line 28
+    add-int/2addr v1, v0
+
+    .line 29
+    return v1
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A01:Z
+
+    .line 1
+    .line 2
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 3
+    .line 4
+    .line 5
+    iget v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A00:I
+
+    .line 6
+    .line 7
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 8
+    .line 9
+    .line 10
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A02:Z
+
+    .line 11
+    .line 12
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 13
+    .line 14
+    .line 15
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/InspirationVideoPlaybackState;->A03:Z
+
+    .line 16
+    .line 17
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 18
+    .line 19
+    .line 20
+    return-void
+.end method

@@ -1,59 +1,178 @@
 .class public final LX/0SZ;
-.super LX/06a;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Lcom/facebook/acra/util/HttpConnectionProvider;
 
 
 # instance fields
-.field public final parentContainer:Landroid/view/ViewGroup;
+.field public A00:LX/0Ny;
+
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Landroidx/fragment/app/Fragment;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    const/16 v0, 0x7530
+
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    iput v0, p0, LX/0SZ;->A01:I
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getConnection(Ljava/net/URL;)Ljava/net/HttpURLConnection;
+    .locals 6
+
+    .line 0
+    invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v1
+    move-result-object v5
 
     .line 4
-    const-string v0, "Attempting to use <fragment> tag to add fragment "
+    check-cast v5, Ljava/net/HttpURLConnection;
 
     .line 5
     .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    instance-of v0, v5, Ljavax/net/ssl/HttpsURLConnection;
 
     .line 7
     .line 8
+    if-eqz v0, :cond_1
+
     .line 9
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 10
+    move-object v4, v5
+
     .line 11
+    check-cast v4, Ljavax/net/ssl/HttpsURLConnection;
+
     .line 12
-    const-string v0, " to container "
-
     .line 13
-    .line 14
-    invoke-static {p1, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    iget-object v3, p0, LX/0SZ;->A00:LX/0Ny;
 
+    .line 14
     .line 15
+    if-nez v3, :cond_0
+
     .line 16
     .line 17
-    move-result-object v0
+    const-wide/16 v0, 0x0
 
     .line 18
-    invoke-direct {p0, p2, v0}, LX/06a;-><init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
-
     .line 19
+    new-instance v3, LX/0Ny;
+
     .line 20
     .line 21
-    iput-object p1, p0, LX/0SZ;->parentContainer:Landroid/view/ViewGroup;
+    invoke-direct {v3, v0, v1}, LX/0Ny;-><init>(J)V
 
     .line 22
     .line 23
-    return-void
+    .line 24
+    iput-object v3, p0, LX/0SZ;->A00:LX/0Ny;
+
+    .line 25
+    .line 26
+    :cond_0
+    :try_start_0
+    const-string v0, "TLS"
+
+    .line 27
+    .line 28
+    invoke-static {v0}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v2
+
+    .line 32
+    iget-object v1, v3, LX/0Ny;->A00:[Ljavax/net/ssl/X509TrustManager;
+
+    .line 33
+    .line 34
+    const/4 v0, 0x0
+
+    .line 35
+    invoke-virtual {v2, v0, v1, v0}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {v2}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    invoke-virtual {v4, v0}, Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
+
+    .line 43
+    .line 44
+    .line 45
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/security/KeyManagementException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 46
+    :catch_0
+    move-exception v2
+
+    .line 47
+    const-string v1, "lacrima"
+
+    .line 48
+    .line 49
+    const-string v0, "Pinning failed"
+
+    .line 50
+    .line 51
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 52
+    .line 53
+    .line 54
+    invoke-static {}, LX/0Lm;->A00()LX/0TD;
+
+    .line 55
+    .line 56
+    .line 57
+    :cond_1
+    :goto_0
+    iget v0, p0, LX/0SZ;->A01:I
+
+    .line 58
+    .line 59
+    invoke-virtual {v5, v0}, Ljava/net/URLConnection;->setConnectTimeout(I)V
+
+    .line 60
+    .line 61
+    .line 62
+    invoke-virtual {v5, v0}, Ljava/net/URLConnection;->setReadTimeout(I)V
+
+    .line 63
+    .line 64
+    .line 65
+    return-object v5
 .end method

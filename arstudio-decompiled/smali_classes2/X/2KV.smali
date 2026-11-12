@@ -2,10 +2,10 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/2LY;
-
 
 # virtual methods
-.method public abstract A6m()[LX/2LY;
+.method public abstract AE8(LX/2OL;Ljava/lang/String;)Lcom/facebook/abtest/qe/bootstrap/data/QuickExperimentInfo;
+.end method
+
+.method public abstract AFd()Lcom/google/common/util/concurrent/ListenableFuture;
 .end method

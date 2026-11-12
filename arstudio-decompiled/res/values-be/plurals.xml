@@ -3,10 +3,54 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">Адзнакі \"Падабаецца\" Старонкі: %1$s</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s упадабалі</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d дзён таму</item>
+        <item quantity="one">%1$d дзень таму</item>
+        <item quantity="few">%1$d дні таму</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d дзён</item>
+        <item quantity="one">%1$d дзень</item>
+        <item quantity="few">%1$d дні</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d дзён</item>
+        <item quantity="one">%1$d дзень</item>
+        <item quantity="few">%1$d дні</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d гадзін</item>
+        <item quantity="one">%1$d гадзіна</item>
+        <item quantity="few">%1$d гадзіны</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d хвілін</item>
+        <item quantity="one">%1$d хвіліна</item>
+        <item quantity="few">%1$d хвіліны</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d тыдняў</item>
+        <item quantity="one">%1$d тыдзень</item>
+        <item quantity="few">%1$d тыдні</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d гадоў</item>
+        <item quantity="one">%1$d год</item>
+        <item quantity="few">%1$d гады</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d гадз таму</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d гадз</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d гадз</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d гадз</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d гадз таму</item>
     </plurals>
     <plurals name="time_in_x_hours">
@@ -19,9 +63,64 @@
         <item quantity="one">Праз %1$d хвіліну</item>
         <item quantity="few">Праз %1$d хвіліны</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d хв таму</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d хвілін таму</item>
         <item quantity="one">%1$d хвіліну таму</item>
         <item quantity="few">%1$d хвіліны таму</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d хв</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d хв</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d мес. таму</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d секунд таму</item>
+        <item quantity="one">%1$d секунду таму</item>
+        <item quantity="few">%1$d секунды таму</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d тыдняў таму</item>
+        <item quantity="one">%1$d тыдзень таму</item>
+        <item quantity="few">%1$d тыдні аму</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d г. таму</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Вы наведалі %1$d дзён таму</item>
+        <item quantity="one">Вы наведалі %1$d дзень таму</item>
+        <item quantity="few">Вы наведалі %1$d дні таму</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Вы наведалі %1$d гадзін таму</item>
+        <item quantity="one">Вы наведалі %1$d гадзіну таму</item>
+        <item quantity="few">Вы наведалі %1$d гадзіны таму</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Вы наведалі %1$d хвілін таму</item>
+        <item quantity="one">Вы наведалі %1$d хвіліну таму</item>
+        <item quantity="few">Вы наведалі %1$d хвіліны таму</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Наведвалі %1$d месяцаў таму</item>
+        <item quantity="one">Наведвалі %1$d месяц таму</item>
+        <item quantity="few">Наведвалі %1$d месяцы таму</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Наведвалі %1$d тыдняў таму</item>
+        <item quantity="one">Наведвалі %1$d тыдзень таму</item>
+        <item quantity="few">Наведвалі %1$d тыдні таму</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Вы наведалі %1$d гадоў таму</item>
+        <item quantity="one">Вы наведалі %1$d год таму</item>
+        <item quantity="few">Вы наведалі %1$d гады таму</item>
     </plurals>
 </resources>

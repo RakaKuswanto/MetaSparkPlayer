@@ -1,50 +1,217 @@
-.class public final LX/18w;
-.super Ljava/lang/Object;
+.class public final enum LX/18W;
+.super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static volatile A0C:LX/18x;
+.field public static final synthetic $VALUES:[LX/18W;
 
-.field public static volatile A0D:LX/18x;
+.field public static final enum ADDRESS:LX/18W;
 
-.field public static volatile A0E:LX/18x;
+.field public static final enum CSC:LX/18W;
 
-.field public static volatile A0F:LX/18x;
+.field public static final enum EXP:LX/18W;
 
+.field public static final enum UNKNOWN:LX/18W;
 
-# instance fields
-.field public A00:F
-
-.field public A01:F
-
-.field public A02:F
-
-.field public A03:F
-
-.field public A04:F
-
-.field public A05:Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
-
-.field public A06:Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;
-
-.field public A07:Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;
-
-.field public A08:Ljava/lang/String;
-
-.field public A09:Ljava/lang/String;
-
-.field public A0A:Ljava/lang/String;
-
-.field public A0B:Z
+.field public static final enum ZIP:LX/18W;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static synthetic $values()[LX/18W;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x5
+
+    .line 1
+    new-array v2, v0, [LX/18W;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/18W;->ADDRESS:LX/18W;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/18W;->ZIP:LX/18W;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/18W;->EXP:LX/18W;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, LX/18W;->CSC:LX/18W;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    sget-object v1, LX/18W;->UNKNOWN:LX/18W;
+
+    .line 24
+    .line 25
+    const/4 v0, 0x4
+
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
+    .line 28
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "ADDRESS"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/18W;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/18W;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/18W;->ADDRESS:LX/18W;
+
+    .line 9
+    .line 10
+    const-string/jumbo v2, "ZIP"
+
+    .line 11
+    .line 12
+    .line 13
+    const/4 v1, 0x1
+
+    .line 14
+    new-instance v0, LX/18W;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v2, v1}, LX/18W;-><init>(Ljava/lang/String;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    sput-object v0, LX/18W;->ZIP:LX/18W;
+
+    .line 20
+    .line 21
+    const-string v2, "EXP"
+
+    .line 22
+    .line 23
+    const/4 v1, 0x2
+
+    .line 24
+    new-instance v0, LX/18W;
+
+    .line 25
+    .line 26
+    invoke-direct {v0, v2, v1}, LX/18W;-><init>(Ljava/lang/String;I)V
+
+    .line 27
+    .line 28
+    .line 29
+    sput-object v0, LX/18W;->EXP:LX/18W;
+
+    .line 30
+    .line 31
+    const-string v2, "CSC"
+
+    .line 32
+    .line 33
+    const/4 v1, 0x3
+
+    .line 34
+    new-instance v0, LX/18W;
+
+    .line 35
+    .line 36
+    invoke-direct {v0, v2, v1}, LX/18W;-><init>(Ljava/lang/String;I)V
+
+    .line 37
+    .line 38
+    .line 39
+    sput-object v0, LX/18W;->CSC:LX/18W;
+
+    .line 40
+    .line 41
+    const-string v2, "UNKNOWN"
+
+    .line 42
+    .line 43
+    const/4 v1, 0x4
+
+    .line 44
+    new-instance v0, LX/18W;
+
+    .line 45
+    .line 46
+    invoke-direct {v0, v2, v1}, LX/18W;-><init>(Ljava/lang/String;I)V
+
+    .line 47
+    .line 48
+    .line 49
+    sput-object v0, LX/18W;->UNKNOWN:LX/18W;
+
+    .line 50
+    .line 51
+    invoke-static {}, LX/18W;->$values()[LX/18W;
+
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v0
+
+    .line 55
+    sput-object v0, LX/18W;->$VALUES:[LX/18W;
+
+    .line 56
+    .line 57
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
@@ -52,485 +219,111 @@
     return-void
 .end method
 
-.method public static A00(LX/18w;)V
-    .locals 1
+.method public static forValue(Ljava/lang/String;)LX/18W;
+    .locals 5
 
     .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    iput-object v0, p0, LX/18w;->A09:Ljava/lang/String;
-
-    .line 2
-    .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    invoke-virtual {p0, v0}, LX/18w;->A02(F)V
-
-    .line 5
-    .line 6
-    .line 7
-    invoke-virtual {p0, v0}, LX/18w;->A03(F)V
-
-    .line 8
-    .line 9
-    .line 10
-    invoke-virtual {p0, v0}, LX/18w;->A04(F)V
-
-    .line 11
-    .line 12
-    .line 13
-    invoke-virtual {p0, v0}, LX/18w;->A01(F)V
-
-    .line 14
-    .line 15
-    .line 16
-    iput v0, p0, LX/18w;->A02:F
-
-    .line 17
-    .line 18
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A01(F)V
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/18w;->A0C:LX/18x;
+    invoke-static {}, LX/18W;->values()[LX/18W;
 
     .line 1
     .line 2
-    if-nez v0, :cond_1
-
     .line 3
+    move-result-object v4
+
     .line 4
-    monitor-enter p0
+    array-length v3, v4
 
     .line 5
-    :try_start_0
-    sget-object v0, LX/18w;->A0C:LX/18x;
+    const/4 v2, 0x0
 
     .line 6
-    .line 7
-    if-nez v0, :cond_0
-
-    .line 8
-    .line 9
-    new-instance v0, LX/18x;
-
-    .line 10
-    .line 11
-    invoke-direct {v0}, LX/18x;-><init>()V
-
-    .line 12
-    .line 13
-    .line 14
-    sput-object v0, LX/18w;->A0C:LX/18x;
-
-    .line 15
-    .line 16
-    :cond_0
-    monitor-exit p0
-
-    .line 17
-    goto :goto_0
-
-    .line 18
-    :catchall_0
-    move-exception v0
-
-    .line 19
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 20
-    throw v0
-
-    .line 21
-    :cond_1
     :goto_0
-    invoke-static {p1}, Ljava/lang/Float;->isInfinite(F)Z
+    if-ge v2, v3, :cond_0
 
-    .line 22
-    .line 23
-    .line 24
-    move-result v0
+    .line 7
+    .line 8
+    aget-object v1, v4, v2
 
-    .line 25
-    if-nez v0, :cond_2
+    .line 9
+    .line 10
+    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    .line 26
-    .line 27
-    invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
-
-    .line 28
-    .line 29
-    .line 30
-    move-result v0
-
-    .line 31
-    if-eqz v0, :cond_3
-
-    .line 32
-    .line 33
-    :cond_2
-    const/4 p1, 0x0
-
-    .line 34
-    :cond_3
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 35
-    .line 36
-    .line 37
+    .line 11
+    .line 12
+    .line 13
     move-result-object v0
 
-    .line 38
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    .line 39
-    .line 40
-    .line 41
-    move-result v0
-
-    .line 42
-    iput v0, p0, LX/18w;->A00:F
-
-    .line 43
-    .line 44
-    return-void
-.end method
-
-.method public final A02(F)V
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/18w;->A0D:LX/18x;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_1
-
-    .line 3
-    .line 4
-    monitor-enter p0
-
-    .line 5
-    :try_start_0
-    sget-object v0, LX/18w;->A0D:LX/18x;
-
-    .line 6
-    .line 7
-    if-nez v0, :cond_0
-
-    .line 8
-    .line 9
-    new-instance v0, LX/18x;
-
-    .line 10
-    .line 11
-    invoke-direct {v0}, LX/18x;-><init>()V
-
-    .line 12
-    .line 13
     .line 14
-    sput-object v0, LX/18w;->A0D:LX/18x;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     .line 15
     .line 16
-    :cond_0
-    monitor-exit p0
-
     .line 17
-    goto :goto_0
+    move-result v0
 
     .line 18
-    :catchall_0
-    move-exception v0
+    if-nez v0, :cond_1
 
     .line 19
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 20
-    throw v0
+    add-int/lit8 v2, v2, 0x1
 
     .line 21
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Float;->isInfinite(F)Z
-
     .line 22
+    goto :goto_0
+
     .line 23
+    :cond_0
+    sget-object v1, LX/18W;->UNKNOWN:LX/18W;
+
     .line 24
-    move-result v0
-
     .line 25
-    if-nez v0, :cond_2
-
-    .line 26
-    .line 27
-    invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
-
-    .line 28
-    .line 29
-    .line 30
-    move-result v0
-
-    .line 31
-    if-eqz v0, :cond_3
-
-    .line 32
-    .line 33
-    :cond_2
-    const/4 p1, 0x0
-
-    .line 34
-    :cond_3
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 35
-    .line 36
-    .line 37
-    move-result-object v0
-
-    .line 38
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    .line 39
-    .line 40
-    .line 41
-    move-result v0
-
-    .line 42
-    iput v0, p0, LX/18w;->A01:F
-
-    .line 43
-    .line 44
-    return-void
+    :cond_1
+    return-object v1
 .end method
 
-.method public final A03(F)V
+.method public static valueOf(Ljava/lang/String;)LX/18W;
     .locals 1
 
     .line 0
-    sget-object v0, LX/18w;->A0E:LX/18x;
+    const-class v0, LX/18W;
 
     .line 1
     .line 2
-    if-nez v0, :cond_1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4
-    monitor-enter p0
-
     .line 5
-    :try_start_0
-    sget-object v0, LX/18w;->A0E:LX/18x;
-
-    .line 6
-    .line 7
-    if-nez v0, :cond_0
-
-    .line 8
-    .line 9
-    new-instance v0, LX/18x;
-
-    .line 10
-    .line 11
-    invoke-direct {v0}, LX/18x;-><init>()V
-
-    .line 12
-    .line 13
-    .line 14
-    sput-object v0, LX/18w;->A0E:LX/18x;
-
-    .line 15
-    .line 16
-    :cond_0
-    monitor-exit p0
-
-    .line 17
-    goto :goto_0
-
-    .line 18
-    :catchall_0
-    move-exception v0
-
-    .line 19
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 20
-    throw v0
-
-    .line 21
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Float;->isInfinite(F)Z
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v0
-
-    .line 25
-    if-nez v0, :cond_2
-
-    .line 26
-    .line 27
-    invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
-
-    .line 28
-    .line 29
-    .line 30
-    move-result v0
-
-    .line 31
-    if-eqz v0, :cond_3
-
-    .line 32
-    .line 33
-    :cond_2
-    const/4 p1, 0x0
-
-    .line 34
-    :cond_3
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 35
-    .line 36
-    .line 37
     move-result-object v0
 
-    .line 38
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+    .line 6
+    check-cast v0, LX/18W;
 
-    .line 39
-    .line 40
-    .line 41
-    move-result v0
-
-    .line 42
-    iput v0, p0, LX/18w;->A03:F
-
-    .line 43
-    .line 44
-    return-void
+    .line 7
+    .line 8
+    return-object v0
 .end method
 
-.method public final A04(F)V
+.method public static values()[LX/18W;
     .locals 1
 
     .line 0
-    sget-object v0, LX/18w;->A0F:LX/18x;
+    sget-object v0, LX/18W;->$VALUES:[LX/18W;
 
     .line 1
     .line 2
-    if-nez v0, :cond_1
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     .line 3
     .line 4
-    monitor-enter p0
-
     .line 5
-    :try_start_0
-    sget-object v0, LX/18w;->A0F:LX/18x;
-
-    .line 6
-    .line 7
-    if-nez v0, :cond_0
-
-    .line 8
-    .line 9
-    new-instance v0, LX/18x;
-
-    .line 10
-    .line 11
-    invoke-direct {v0}, LX/18x;-><init>()V
-
-    .line 12
-    .line 13
-    .line 14
-    sput-object v0, LX/18w;->A0F:LX/18x;
-
-    .line 15
-    .line 16
-    :cond_0
-    monitor-exit p0
-
-    .line 17
-    goto :goto_0
-
-    .line 18
-    :catchall_0
-    move-exception v0
-
-    .line 19
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 20
-    throw v0
-
-    .line 21
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Float;->isInfinite(F)Z
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v0
-
-    .line 25
-    if-nez v0, :cond_2
-
-    .line 26
-    .line 27
-    invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
-
-    .line 28
-    .line 29
-    .line 30
-    move-result v0
-
-    .line 31
-    if-eqz v0, :cond_3
-
-    .line 32
-    .line 33
-    :cond_2
-    const/4 p1, 0x0
-
-    .line 34
-    :cond_3
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 35
-    .line 36
-    .line 37
     move-result-object v0
 
-    .line 38
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+    .line 6
+    check-cast v0, [LX/18W;
 
-    .line 39
-    .line 40
-    .line 41
-    move-result v0
-
-    .line 42
-    iput v0, p0, LX/18w;->A04:F
-
-    .line 43
-    .line 44
-    return-void
+    .line 7
+    .line 8
+    return-object v0
 .end method

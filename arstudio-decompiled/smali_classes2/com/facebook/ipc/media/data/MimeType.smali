@@ -134,39 +134,40 @@
 
     .line 46
     .line 47
-    const-string v1, "custom"
+    const-string/jumbo v1, "custom"
 
     .line 48
     .line 49
+    .line 50
     new-instance v0, Lcom/facebook/ipc/media/data/MimeType;
 
-    .line 50
     .line 51
+    .line 52
     invoke-direct {v0, v1}, Lcom/facebook/ipc/media/data/MimeType;-><init>(Ljava/lang/String;)V
 
-    .line 52
     .line 53
     .line 54
+    .line 55
     sput-object v0, Lcom/facebook/ipc/media/data/MimeType;->A00:Lcom/facebook/ipc/media/data/MimeType;
 
-    .line 55
     .line 56
-    const/16 v0, 0x18
-
     .line 57
-    .line 58
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    const/16 v0, 0x44
 
+    .line 58
     .line 59
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
+
     .line 60
     .line 61
+    .line 62
     move-result-object v0
 
-    .line 62
+    .line 63
     sput-object v0, Lcom/facebook/ipc/media/data/MimeType;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 63
     .line 64
+    .line 65
     return-void
 .end method
 
@@ -199,15 +200,10 @@
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lcom/facebook/ipc/media/data/MimeType;->mRawType:Ljava/lang/String;
 
     .line 4
     .line 5
-    .line 6
-    iput-object p1, p0, Lcom/facebook/ipc/media/data/MimeType;->mRawType:Ljava/lang/String;
-
-    .line 7
-    .line 8
     return-void
 .end method
 
@@ -434,7 +430,7 @@
 
     .line 36
     .line 37
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 38
     .line 39

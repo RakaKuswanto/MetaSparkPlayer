@@ -43,7 +43,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, Lcom/facebook/acra/ErrorReporter;->access$1900(Lcom/facebook/acra/ErrorReporter;)Lcom/facebook/acra/BatchUploader;
+    invoke-static {v0}, Lcom/facebook/acra/ErrorReporter;->access$2300(Lcom/facebook/acra/ErrorReporter;)Lcom/facebook/acra/BatchUploader;
 
     .line 3
     .line 4

@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field public errorCode:LX/1x7;
+.field public errorCode:LX/26P;
 
 .field public errorDescription:Ljava/lang/String;
 
@@ -47,11 +47,11 @@
 
     .line 6
     .line 7
-    const/16 v0, 0x3c
+    const/16 v0, 0x35
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 10
     .line 11
@@ -93,11 +93,11 @@
 
     .line 1073741834
     .line 1073741835
-    sget-object v0, LX/1x7;->NO_ERROR:LX/1x7;
+    sget-object v0, LX/26P;->NO_ERROR:LX/26P;
 
     .line 1073741836
     .line 1073741837
-    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
+    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
     .line 1073741838
     .line 1073741839
@@ -112,34 +112,45 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Bundle;LX/1x7;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public constructor <init>(Landroid/os/Bundle;LX/26P;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 805803098
+    .line 805306368
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 805306369
+    .line 805306370
+    .line 805306371
     const/4 v0, 0x0
 
-    .line 805803099
+    .line 805306372
     iput-boolean v0, p0, Lcom/facebook/fbservice/service/OperationResult;->success:Z
 
+    .line 805306373
+    .line 805306374
     const/4 v0, 0x0
 
-    .line 805803100
+    .line 805306375
     iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->resultDataString:Ljava/lang/String;
 
-    .line 805803101
+    .line 805306376
+    .line 805306377
     iput-object p1, p0, Lcom/facebook/fbservice/service/OperationResult;->resultDataBundle:Landroid/os/Bundle;
 
-    .line 805803102
-    iput-object p2, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
+    .line 805306378
+    .line 805306379
+    iput-object p2, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
-    .line 805803103
+    .line 805306380
+    .line 805306381
     iput-object p3, p0, Lcom/facebook/fbservice/service/OperationResult;->errorDescription:Ljava/lang/String;
 
-    .line 805803104
+    .line 805306382
+    .line 805306383
     iput-object p4, p0, Lcom/facebook/fbservice/service/OperationResult;->errorThrowable:Ljava/lang/Throwable;
 
+    .line 805306384
+    .line 805306385
     return-void
 .end method
 
@@ -152,7 +163,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 4
     .line 5
@@ -176,7 +187,7 @@
 
     .line 14
     .line 15
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 16
     .line 17
@@ -204,7 +215,7 @@
     move-result-object v0
 
     .line 29
-    invoke-static {v0}, LX/1x7;->valueOf(Ljava/lang/String;)LX/1x7;
+    invoke-static {v0}, LX/26P;->valueOf(Ljava/lang/String;)LX/26P;
 
     .line 30
     .line 31
@@ -212,7 +223,7 @@
     move-result-object v0
 
     .line 33
-    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
+    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
     .line 34
     .line 35
@@ -271,11 +282,11 @@
 
     .line 536870921
     .line 536870922
-    sget-object v0, LX/1x7;->NO_ERROR:LX/1x7;
+    sget-object v0, LX/26P;->NO_ERROR:LX/26P;
 
     .line 536870923
     .line 536870924
-    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
+    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
     .line 536870925
     .line 536870926
@@ -316,7 +327,7 @@
 
     .line 268435464
     .line 268435465
-    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
+    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
     .line 268435466
     .line 268435467
@@ -328,7 +339,7 @@
 
     .line 268435470
     .line 268435471
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 268435472
     .line 268435473
@@ -340,7 +351,7 @@
 
     .line 268435476
     .line 268435477
-    sget-object v0, LX/1lg;->PARCELABLE:LX/1lg;
+    sget-object v0, LX/26E;->PARCELABLE:LX/26E;
 
     .line 268435478
     .line 268435479
@@ -365,11 +376,11 @@
     return-void
 .end method
 
-.method public static A00(Landroid/os/Bundle;LX/1x7;Ljava/lang/Throwable;)Lcom/facebook/fbservice/service/OperationResult;
+.method public static A00(Landroid/os/Bundle;LX/26P;Ljava/lang/Throwable;)Lcom/facebook/fbservice/service/OperationResult;
     .locals 2
 
     .line 0
-    sget-object v0, LX/1lg;->PARCELABLE:LX/1lg;
+    sget-object v0, LX/26E;->PARCELABLE:LX/26E;
 
     .line 1
     .line 2
@@ -403,7 +414,7 @@
 
     .line 17
     .line 18
-    invoke-direct {v0, p0, p1, v1, p2}, Lcom/facebook/fbservice/service/OperationResult;-><init>(Landroid/os/Bundle;LX/1x7;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, p0, p1, v1, p2}, Lcom/facebook/fbservice/service/OperationResult;-><init>(Landroid/os/Bundle;LX/26P;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 19
     .line 20
@@ -411,11 +422,11 @@
     return-object v0
 .end method
 
-.method public static A01(LX/1x7;)Lcom/facebook/fbservice/service/OperationResult;
+.method public static A01(LX/26P;)Lcom/facebook/fbservice/service/OperationResult;
     .locals 4
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -423,7 +434,7 @@
     move-result-object v3
 
     .line 4
-    sget-object v0, LX/1lg;->PARCELABLE:LX/1lg;
+    sget-object v0, LX/26E;->PARCELABLE:LX/26E;
 
     .line 5
     .line 6
@@ -460,7 +471,7 @@
 
     .line 22
     .line 23
-    invoke-direct {v0, v3, p0, v2, v1}, Lcom/facebook/fbservice/service/OperationResult;-><init>(Landroid/os/Bundle;LX/1x7;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, v3, p0, v2, v1}, Lcom/facebook/fbservice/service/OperationResult;-><init>(Landroid/os/Bundle;LX/26P;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 24
     .line 25
@@ -468,11 +479,11 @@
     return-object v0
 .end method
 
-.method public static A02(LX/1x7;Ljava/lang/String;)Lcom/facebook/fbservice/service/OperationResult;
+.method public static A02(LX/26P;Ljava/lang/String;)Lcom/facebook/fbservice/service/OperationResult;
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -480,7 +491,7 @@
     move-result-object v2
 
     .line 4
-    sget-object v0, LX/1lg;->PARCELABLE:LX/1lg;
+    sget-object v0, LX/26E;->PARCELABLE:LX/26E;
 
     .line 5
     .line 6
@@ -509,7 +520,7 @@
 
     .line 18
     .line 19
-    invoke-direct {v0, v2, p0, p1, v1}, Lcom/facebook/fbservice/service/OperationResult;-><init>(Landroid/os/Bundle;LX/1x7;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, v2, p0, p1, v1}, Lcom/facebook/fbservice/service/OperationResult;-><init>(Landroid/os/Bundle;LX/26P;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 20
     .line 21
@@ -517,11 +528,11 @@
     return-object v0
 .end method
 
-.method public static A03(LX/1x7;Ljava/lang/Throwable;)Lcom/facebook/fbservice/service/OperationResult;
+.method public static A03(LX/26P;Ljava/lang/Throwable;)Lcom/facebook/fbservice/service/OperationResult;
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -529,7 +540,7 @@
     move-result-object v2
 
     .line 4
-    sget-object v0, LX/1lg;->PARCELABLE:LX/1lg;
+    sget-object v0, LX/26E;->PARCELABLE:LX/26E;
 
     .line 5
     .line 6
@@ -563,7 +574,7 @@
 
     .line 21
     .line 22
-    invoke-direct {v0, v2, p0, v1, p1}, Lcom/facebook/fbservice/service/OperationResult;-><init>(Landroid/os/Bundle;LX/1x7;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, v2, p0, v1, p1}, Lcom/facebook/fbservice/service/OperationResult;-><init>(Landroid/os/Bundle;LX/26P;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 23
     .line 24
@@ -603,7 +614,7 @@
 
     .line 13
     :cond_0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 14
     .line 15
@@ -611,7 +622,7 @@
     move-result-object v2
 
     .line 17
-    invoke-static {p0}, LX/1lg;->fromObject(Ljava/lang/Object;)LX/1lg;
+    invoke-static {p0}, LX/26E;->fromObject(Ljava/lang/Object;)LX/26E;
 
     .line 18
     .line 19
@@ -677,7 +688,7 @@
 
     .line 50
     :cond_2
-    instance-of v0, p0, LX/0yO;
+    instance-of v0, p0, LX/1H2;
 
     .line 51
     .line 52
@@ -685,11 +696,11 @@
 
     .line 53
     .line 54
-    check-cast p0, LX/0yO;
+    check-cast p0, LX/1H2;
 
     .line 55
     .line 56
-    invoke-static {v2, p0, v1}, LX/1KF;->A03(Landroid/os/Bundle;LX/0yO;Ljava/lang/String;)V
+    invoke-static {v2, p0, v1}, LX/1cw;->A04(Landroid/os/Bundle;LX/1H2;Ljava/lang/String;)V
 
     .line 57
     .line 58
@@ -702,7 +713,7 @@
 
     .line 61
     .line 62
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 63
     .line 64
@@ -714,7 +725,7 @@
 
     .line 67
     .line 68
-    invoke-static {p0, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 69
     .line 70
@@ -722,7 +733,7 @@
     move-result-object v0
 
     .line 72
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 73
     .line 74
@@ -737,7 +748,7 @@
     .locals 6
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -748,7 +759,7 @@
     const/4 v5, 0x0
 
     .line 5
-    invoke-static {p0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {p0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 6
     .line 7
@@ -830,7 +841,7 @@
     .line 46
     .line 47
     .line 48
-    invoke-static {v0, v5}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v5}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 49
     .line 50
@@ -838,7 +849,7 @@
     move-result-object v1
 
     .line 52
-    invoke-static {v2}, LX/1lg;->fromObject(Ljava/lang/Object;)LX/1lg;
+    invoke-static {v2}, LX/26E;->fromObject(Ljava/lang/Object;)LX/26E;
 
     .line 53
     .line 54
@@ -872,7 +883,7 @@
 
     .line 69
     .line 70
-    invoke-static {v1, v5}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v5}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 71
     .line 72
@@ -898,7 +909,7 @@
 
     .line 82
     :cond_0
-    instance-of v0, v2, LX/0yO;
+    instance-of v0, v2, LX/1H2;
 
     .line 83
     .line 84
@@ -906,7 +917,7 @@
 
     .line 85
     .line 86
-    invoke-static {v1, v5}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v5}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 87
     .line 88
@@ -914,11 +925,11 @@
     move-result-object v0
 
     .line 90
-    check-cast v2, LX/0yO;
+    check-cast v2, LX/1H2;
 
     .line 91
     .line 92
-    invoke-static {v4, v2, v0}, LX/1KF;->A03(Landroid/os/Bundle;LX/0yO;Ljava/lang/String;)V
+    invoke-static {v4, v2, v0}, LX/1cw;->A04(Landroid/os/Bundle;LX/1H2;Ljava/lang/String;)V
 
     .line 93
     .line 94
@@ -927,7 +938,7 @@
 
     .line 96
     :cond_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 97
     .line 98
@@ -939,7 +950,7 @@
 
     .line 101
     .line 102
-    invoke-static {v2, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 103
     .line 104
@@ -947,7 +958,7 @@
     move-result-object v0
 
     .line 106
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 107
     .line 108
@@ -1006,7 +1017,7 @@
 
     .line 13
     .line 14
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 15
     .line 16
@@ -1048,11 +1059,11 @@
     move-result-object v0
 
     .line 36
-    check-cast v0, LX/1x7;
+    check-cast v0, LX/26P;
 
     .line 37
     .line 38
-    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
+    iput-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
     .line 39
     .line 40
@@ -1140,7 +1151,7 @@
     .line 22
     .line 23
     .line 24
-    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
+    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
     .line 25
     .line 26
@@ -1194,7 +1205,7 @@
 
     .line 4
     .line 5
-    invoke-static {}, LX/1lg;->values()[LX/1lg;
+    invoke-static {}, LX/26E;->values()[LX/26E;
 
     .line 6
     .line 7
@@ -1223,7 +1234,7 @@
 
     .line 19
     .line 20
-    sget-object v0, LX/1lg;->NULL:LX/1lg;
+    sget-object v0, LX/26E;->NULL:LX/26E;
 
     .line 21
     .line 22
@@ -1239,7 +1250,7 @@
 
     .line 27
     .line 28
-    sget-object v0, LX/1lg;->GRAPHQL:LX/1lg;
+    sget-object v0, LX/26E;->GRAPHQL:LX/26E;
 
     .line 29
     .line 30
@@ -1264,7 +1275,7 @@
 
     .line 40
     .line 41
-    invoke-static {v1, v2}, LX/1KF;->A01(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v1, v2}, LX/1cw;->A02(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 42
     .line 43
@@ -1277,7 +1288,7 @@
 
     .line 46
     :cond_1
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 47
     .line 48
@@ -1328,151 +1339,161 @@
 
     .line 4
     .line 5
-    invoke-static {v3, v0}, LX/0Yg;->A1K([Ljava/lang/Object;Z)V
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 6
     .line 7
     .line 8
-    iget-object v1, p0, Lcom/facebook/fbservice/service/OperationResult;->resultDataString:Ljava/lang/String;
+    move-result-object v1
 
     .line 9
+    const/4 v0, 0x0
+
     .line 10
-    const-string v2, ""
+    aput-object v1, v3, v0
 
     .line 11
     .line 12
-    if-nez v1, :cond_0
+    iget-object v1, p0, Lcom/facebook/fbservice/service/OperationResult;->resultDataString:Ljava/lang/String;
 
     .line 13
     .line 14
-    move-object v1, v2
+    const-string v2, ""
 
     .line 15
-    :cond_0
-    const/4 v0, 0x1
-
     .line 16
-    aput-object v1, v3, v0
+    if-nez v1, :cond_0
 
     .line 17
     .line 18
-    const/4 v1, 0x2
+    move-object v1, v2
 
     .line 19
-    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->resultDataBundle:Landroid/os/Bundle;
+    :cond_0
+    const/4 v0, 0x1
 
     .line 20
-    .line 21
-    if-nez v0, :cond_4
+    aput-object v1, v3, v0
 
+    .line 21
     .line 22
+    const/4 v1, 0x2
+
     .line 23
-    move-object v0, v2
+    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->resultDataBundle:Landroid/os/Bundle;
 
     .line 24
+    .line 25
+    if-nez v0, :cond_4
+
+    .line 26
+    .line 27
+    move-object v0, v2
+
+    .line 28
     :goto_0
     aput-object v0, v3, v1
 
-    .line 25
-    .line 26
+    .line 29
+    .line 30
     const/4 v1, 0x3
 
-    .line 27
-    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
-
-    .line 28
-    .line 29
-    if-nez v0, :cond_3
-
-    .line 30
     .line 31
-    move-object v0, v2
+    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
     .line 32
+    .line 33
+    if-nez v0, :cond_3
+
+    .line 34
+    .line 35
+    move-object v0, v2
+
+    .line 36
     :goto_1
     aput-object v0, v3, v1
 
-    .line 33
-    .line 34
+    .line 37
+    .line 38
     const/4 v1, 0x4
 
-    .line 35
+    .line 39
     iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorDescription:Ljava/lang/String;
 
-    .line 36
-    .line 37
+    .line 40
+    .line 41
     if-nez v0, :cond_1
 
-    .line 38
-    .line 39
+    .line 42
+    .line 43
     move-object v0, v2
 
-    .line 40
+    .line 44
     :cond_1
     aput-object v0, v3, v1
 
-    .line 41
-    .line 42
+    .line 45
+    .line 46
     const/4 v1, 0x5
 
-    .line 43
-    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorThrowable:Ljava/lang/Throwable;
-
-    .line 44
-    .line 45
-    if-eqz v0, :cond_2
-
-    .line 46
     .line 47
-    invoke-static {v0}, LX/0JM;->A00(Ljava/lang/Throwable;)Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorThrowable:Ljava/lang/Throwable;
 
     .line 48
     .line 49
-    .line 50
-    move-result-object v2
+    if-eqz v0, :cond_2
 
+    .line 50
     .line 51
-    :cond_2
-    aput-object v2, v3, v1
+    invoke-static {v0}, LX/0IE;->A00(Ljava/lang/Throwable;)Ljava/lang/String;
 
     .line 52
     .line 53
-    const-string v0, "OperationResult success=%s, resultDataString=%s, resultDataBundle=%s, errorCode=%s, errorDescription=%s, exception=%s"
-
     .line 54
+    move-result-object v2
+
     .line 55
-    invoke-static {v0, v3}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :cond_2
+    aput-object v2, v3, v1
 
     .line 56
     .line 57
-    .line 58
-    move-result-object v0
+    const-string v0, "OperationResult success=%s, resultDataString=%s, resultDataBundle=%s, errorCode=%s, errorDescription=%s, exception=%s"
 
+    .line 58
     .line 59
-    return-object v0
+    invoke-static {v0, v3}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 60
+    .line 61
+    .line 62
+    move-result-object v0
+
+    .line 63
+    return-object v0
+
+    .line 64
     :cond_3
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    .line 61
-    .line 62
-    .line 63
+    .line 65
+    .line 66
+    .line 67
     move-result-object v0
 
-    .line 64
+    .line 68
     goto :goto_1
 
-    .line 65
+    .line 69
     :cond_4
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 66
-    .line 67
-    .line 68
+    .line 70
+    .line 71
+    .line 72
     move-result-object v0
 
-    .line 69
+    .line 73
     goto :goto_0
 .end method
 
@@ -1507,7 +1528,7 @@
     .line 13
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/1x7;
+    iget-object v0, p0, Lcom/facebook/fbservice/service/OperationResult;->errorCode:LX/26P;
 
     .line 16
     .line 17

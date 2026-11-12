@@ -1,4 +1,4 @@
-.class public final synthetic LX/07F;
+.class public final synthetic LX/07f;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ProfileInstallerInitializer$$ExternalSyntheticLambda2"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ProfileInstallerInitializer$$ExternalSyntheticLambda1"
 
 
 # instance fields
@@ -22,9 +22,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, LX/07F;->A01:Landroidx/profileinstaller/ProfileInstallerInitializer;
+    iput-object p2, p0, LX/07f;->A01:Landroidx/profileinstaller/ProfileInstallerInitializer;
 
-    iput-object p1, p0, LX/07F;->A00:Landroid/content/Context;
+    iput-object p1, p0, LX/07f;->A00:Landroid/content/Context;
 
     return-void
 .end method
@@ -34,9 +34,9 @@
 .method public final run()V
     .locals 2
 
-    iget-object v1, p0, LX/07F;->A01:Landroidx/profileinstaller/ProfileInstallerInitializer;
+    iget-object v1, p0, LX/07f;->A01:Landroidx/profileinstaller/ProfileInstallerInitializer;
 
-    iget-object v0, p0, LX/07F;->A00:Landroid/content/Context;
+    iget-object v0, p0, LX/07f;->A00:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroidx/profileinstaller/ProfileInstallerInitializer;->A00(Landroid/content/Context;)V
 

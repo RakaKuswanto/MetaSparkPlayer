@@ -1,183 +1,210 @@
 .class public final LX/5n1;
-.super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+.super LX/6Jp;
 .source ""
 
 
+# static fields
+.field public static final serialVersionUID:J = 0x7d74bce994c9ddf5L
+
+
 # instance fields
-.field public final A00:LX/5nf;
+.field public final _componentType:LX/5n9;
 
-.field public final A01:LX/5nW;
-
-.field public final A02:LX/5nK;
-
-.field public final synthetic A03:LX/5mh;
+.field public final _emptyArray:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/5mh;LX/5nK;)V
-    .locals 1
+.method public constructor <init>(LX/5n9;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+    .locals 6
 
     .line 0
-    iput-object p1, p0, LX/5n1;->A03:LX/5mh;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    new-instance v0, LX/5nW;
+    move-result-object v1
 
+    .line 4
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    .line 5
     .line 6
     .line 7
-    invoke-direct {v0}, LX/5nW;-><init>()V
+    move-result v4
 
     .line 8
+    move-object v0, p0
+
     .line 9
+    move-object v2, p3
+
     .line 10
-    iput-object v0, p0, LX/5n1;->A01:LX/5nW;
+    move-object v3, p4
 
     .line 11
+    move v5, p5
+
     .line 12
-    new-instance v0, LX/5nf;
+    invoke-direct/range {v0 .. v5}, LX/6Jp;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Object;IZ)V
 
     .line 13
     .line 14
-    invoke-direct {v0}, LX/5nf;-><init>()V
-
     .line 15
+    iput-object p1, p0, LX/5n1;->_componentType:LX/5n9;
+
     .line 16
     .line 17
-    iput-object v0, p0, LX/5n1;->A00:LX/5nf;
+    iput-object p2, p0, LX/5n1;->_emptyArray:Ljava/lang/Object;
 
     .line 18
     .line 19
-    iput-object p2, p0, LX/5n1;->A02:LX/5nK;
-
-    .line 20
-    .line 21
     return-void
+.end method
+
+.method public static A00(LX/5n9;)LX/5n1;
+    .locals 5
+
+    .line 0
+    move-object v1, p0
+
+    .line 1
+    iget-object v0, p0, LX/5n9;->_class:Ljava/lang/Class;
+
+    .line 2
+    .line 3
+    const/4 p0, 0x0
+
+    .line 4
+    invoke-static {v0, p0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v2
+
+    .line 8
+    const/4 v3, 0x0
+
+    .line 9
+    new-instance v0, LX/5n1;
+
+    .line 10
+    .line 11
+    move-object v4, v3
+
+    .line 12
+    invoke-direct/range {v0 .. v5}, LX/5n1;-><init>(LX/5n9;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
     .line 0
-    invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
+    if-ne p1, p0, :cond_0
 
     .line 1
     .line 2
+    const/4 v0, 0x1
+
     .line 3
-    iget-object v2, p0, LX/5n1;->A01:LX/5nW;
+    return v0
 
     .line 4
+    :cond_0
+    const/4 v2, 0x0
+
     .line 5
-    invoke-virtual {v2, p3}, LX/5nW;->A00(Landroid/hardware/camera2/TotalCaptureResult;)V
+    if-eqz p1, :cond_1
 
     .line 6
     .line 7
-    .line 8
-    iget-object v1, p0, LX/5n1;->A02:LX/5nK;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 8
     .line 9
     .line 10
-    iget-object v0, p0, LX/5n1;->A03:LX/5mh;
+    move-result-object v1
 
     .line 11
-    .line 12
-    invoke-interface {v1, v2, v0}, LX/5nK;->AVn(LX/5nw;LX/5nH;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public final onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
-    .locals 3
-
-    .line 0
-    invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
-
-    .line 1
-    .line 2
-    .line 3
-    iget-object v2, p0, LX/5n1;->A00:LX/5nf;
-
-    .line 4
-    .line 5
-    invoke-virtual {v2, p3}, LX/5nf;->A00(Landroid/hardware/camera2/CaptureFailure;)V
-
-    .line 6
-    .line 7
-    .line 8
-    iget-object v1, p0, LX/5n1;->A02:LX/5nK;
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/5n1;->A03:LX/5mh;
-
-    .line 11
-    .line 12
-    invoke-interface {v1, v2, v0}, LX/5nK;->AVr(LX/5o7;LX/5nH;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public final onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
-    .locals 14
-
-    .line 0
-    move-object v0, p0
-
-    .line 1
-    move-object v1, p1
-
-    .line 2
-    move-object/from16 v2, p2
-
-    .line 3
-    .line 4
-    move-wide/from16 v3, p3
-
-    .line 5
-    .line 6
-    move-wide/from16 v5, p5
-
-    .line 7
-    .line 8
-    invoke-super/range {v0 .. v6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
-
-    .line 9
-    .line 10
-    .line 11
-    iget-object v7, p0, LX/5n1;->A02:LX/5nK;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 12
     .line 13
-    iget-object v9, p0, LX/5n1;->A03:LX/5mh;
-
     .line 14
+    move-result-object v0
+
     .line 15
-    move-object v8, v2
+    if-ne v1, v0, :cond_1
 
     .line 16
-    move-wide v10, v3
-
     .line 17
-    move-wide v12, v5
+    check-cast p1, LX/5n1;
 
     .line 18
-    invoke-interface/range {v7 .. v13}, LX/5nK;->AVw(Landroid/hardware/camera2/CaptureRequest;LX/5nH;JJ)V
-
     .line 19
+    iget-object v1, p0, LX/5n1;->_componentType:LX/5n9;
+
     .line 20
     .line 21
-    return-void
+    iget-object v0, p1, LX/5n1;->_componentType:LX/5n9;
+
+    .line 22
+    .line 23
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    return v0
+
+    .line 28
+    :cond_1
+    return v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    const-string v0, "[array type, component type: "
+
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/5n1;->_componentType:LX/5n9;
+
+    .line 10
+    .line 11
+    invoke-static {v0, v1}, LX/431;->A0g(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    return-object v0
 .end method

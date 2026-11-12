@@ -1,179 +1,384 @@
-.class public LX/50W;
-.super Ljava/lang/Object;
+.class public final LX/50W;
+.super LX/50V;
 .source ""
 
-# interfaces
-.implements LX/50o;
 
-
-# instance fields
-.field public A00:I
-
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:I
+# static fields
+.field public static A00:I = 0x1
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;)V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v3, LX/52Y;->A04:LX/51N;
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00(LX/50W;LX/50W;F)V
-    .locals 2
-
-    .line 0
-    iget v1, p1, LX/50W;->A03:I
-
-    .line 1
-    .line 2
-    iget v0, p0, LX/50W;->A03:I
+    new-instance v2, LX/517;
 
     .line 3
     .line 4
-    sub-int/2addr v1, v0
+    invoke-direct {v2}, LX/517;-><init>()V
 
     .line 5
-    int-to-float v1, v1
-
     .line 6
-    mul-float/2addr v1, p3
-
     .line 7
-    int-to-float v0, v0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     .line 8
-    add-float/2addr v1, v0
-
     .line 9
-    float-to-int v0, v1
-
     .line 10
-    iput v0, p2, LX/50W;->A03:I
+    move-result-object v1
 
     .line 11
+    new-instance v0, LX/50r;
+
     .line 12
-    iget v1, p1, LX/50W;->A02:I
-
     .line 13
-    .line 14
-    iget v0, p0, LX/50W;->A02:I
+    invoke-direct {v0, v1, v2}, LX/50r;-><init>(Landroid/os/Looper;LX/51G;)V
 
+    .line 14
     .line 15
     .line 16
-    sub-int/2addr v1, v0
+    invoke-direct {p0, p1, p2, v3, v0}, LX/50V;-><init>(Landroid/content/Context;LX/4dd;LX/51N;LX/50r;)V
 
     .line 17
-    int-to-float v1, v1
-
     .line 18
-    mul-float/2addr v1, p3
-
     .line 19
-    int-to-float v0, v0
+    return-void
+.end method
+
+.method public static final declared-synchronized A00(LX/50W;)I
+    .locals 8
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    sget v1, LX/50W;->A00:I
+
+    .line 2
+    .line 3
+    const/4 v0, 0x1
+
+    .line 4
+    const/4 v7, 0x3
+
+    .line 5
+    const/4 v6, 0x2
+
+    .line 6
+    const/4 v3, 0x4
+
+    .line 7
+    if-ne v1, v0, :cond_3
+
+    .line 8
+    .line 9
+    iget-object v2, p0, LX/50V;->A01:Landroid/content/Context;
+
+    .line 10
+    .line 11
+    sget-object v1, Lcom/google/android/gms/common/GoogleApiAvailability;->A00:Lcom/google/android/gms/common/GoogleApiAvailability;
+
+    .line 12
+    .line 13
+    const v0, 0xbdfcb8
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-virtual {v1, v2, v0}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->A01(Landroid/content/Context;I)I
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v0
 
     .line 20
-    add-float/2addr v1, v0
+    if-nez v0, :cond_0
 
     .line 21
-    float-to-int v0, v1
-
     .line 22
-    iput v0, p2, LX/50W;->A02:I
+    sput v3, LX/50W;->A00:I
 
     .line 23
     .line 24
-    iget v1, p1, LX/50W;->A01:I
+    goto :goto_1
 
     .line 25
+    :cond_0
+    const/4 v3, 0x0
+
     .line 26
-    iget v0, p0, LX/50W;->A01:I
+    invoke-virtual {v1, v2, v3, v0}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->A02(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 27
     .line 28
-    sub-int/2addr v1, v0
-
     .line 29
-    int-to-float v1, v1
+    move-result-object v0
 
     .line 30
-    mul-float/2addr v1, p3
+    if-nez v0, :cond_2
 
     .line 31
-    int-to-float v0, v0
-
     .line 32
-    add-float/2addr v1, v0
+    const-string v5, "com.google.android.gms.auth.api.fallback"
 
     .line 33
-    float-to-int v0, v1
-
     .line 34
-    iput v0, p2, LX/50W;->A01:I
+    const-string v4, "DynamiteModule"
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 35
     .line 36
-    iget v1, p1, LX/50W;->A00:I
+    :try_start_1
+    invoke-virtual {v2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     .line 37
     .line 38
-    iget v0, p0, LX/50W;->A00:I
-
     .line 39
+    move-result-object v0
+
     .line 40
-    sub-int/2addr v1, v0
+    invoke-virtual {v0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     .line 41
-    int-to-float v1, v1
-
     .line 42
-    mul-float/2addr v1, p3
-
     .line 43
-    int-to-float v0, v0
+    move-result-object v2
 
     .line 44
-    add-float/2addr v1, v0
+    const-string v1, "com.google.android.gms.dynamite.descriptors."
 
     .line 45
-    float-to-int v0, v1
-
     .line 46
-    iput v0, p2, LX/50W;->A00:I
+    const-string v0, ".ModuleDescriptor"
 
     .line 47
     .line 48
-    return-void
-.end method
+    invoke-static {v1, v5, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-.method public final bridge synthetic APe(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
 
-    .line 0
-    check-cast p2, LX/50W;
+    .line 52
+    invoke-virtual {v2, v0}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 1
-    .line 2
-    check-cast p3, LX/50W;
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v1
 
-    .line 3
-    .line 4
-    invoke-virtual {p0, p2, p3, p1}, LX/50W;->A00(LX/50W;LX/50W;F)V
+    .line 56
+    const-string v0, "MODULE_ID"
 
-    .line 5
-    .line 6
-    .line 7
-    return-object p3
+    .line 57
+    .line 58
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    .line 59
+    .line 60
+    .line 61
+    move-result-object v2
+
+    .line 62
+    const-string v0, "MODULE_VERSION"
+
+    .line 63
+    .line 64
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    .line 65
+    .line 66
+    .line 67
+    move-result-object v1
+
+    .line 68
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v0
+
+    .line 72
+    invoke-static {v0, v5}, LX/4Iw;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 73
+    .line 74
+    .line 75
+    move-result v0
+
+    .line 76
+    if-nez v0, :cond_1
+
+    .line 77
+    .line 78
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v0
+
+    .line 82
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 83
+    .line 84
+    .line 85
+    move-result-object v3
+
+    .line 86
+    const-string v2, "Module descriptor id \'"
+
+    .line 87
+    .line 88
+    const-string v1, "\' didn\'t match expected id \'"
+
+    .line 89
+    .line 90
+    const-string v0, "\'"
+
+    .line 91
+    .line 92
+    invoke-static {v2, v3, v1, v5, v0}, LX/004;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 93
+    .line 94
+    .line 95
+    move-result-object v0
+
+    .line 96
+    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 97
+    .line 98
+    .line 99
+    goto :goto_0
+
+    .line 100
+    :cond_1
+    invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
+
+    .line 101
+    .line 102
+    .line 103
+    move-result v0
+
+    .line 104
+    if-eqz v0, :cond_2
+    :try_end_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 105
+    .line 106
+    :try_start_2
+    sput v7, LX/50W;->A00:I
+
+    .line 107
+    .line 108
+    const/4 v1, 0x3
+
+    .line 109
+    goto :goto_2
+
+    .line 110
+    :catch_0
+    const-string v1, "Local module descriptor class for "
+
+    .line 111
+    .line 112
+    const-string v0, " not found."
+
+    .line 113
+    .line 114
+    invoke-static {v1, v5, v0, v4}, LX/433;->A1K(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 115
+    .line 116
+    .line 117
+    goto :goto_0
+
+    .line 118
+    :catch_1
+    move-exception v0
+
+    .line 119
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 120
+    .line 121
+    .line 122
+    move-result-object v0
+
+    .line 123
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 124
+    .line 125
+    .line 126
+    move-result-object v1
+
+    .line 127
+    const-string v0, "Failed to load module descriptor class: "
+
+    .line 128
+    .line 129
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 130
+    .line 131
+    .line 132
+    move-result-object v0
+
+    .line 133
+    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 134
+    .line 135
+    .line 136
+    :cond_2
+    :goto_0
+    sput v6, LX/50W;->A00:I
+
+    .line 137
+    .line 138
+    const/4 v1, 0x2
+
+    .line 139
+    goto :goto_2
+
+    .line 140
+    :goto_1
+    const/4 v1, 0x4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 141
+    :cond_3
+    :goto_2
+    monitor-exit p0
+
+    .line 142
+    return v1
+
+    .line 143
+    :catchall_0
+    move-exception v0
+
+    .line 144
+    monitor-exit p0
+
+    .line 145
+    throw v0
 .end method

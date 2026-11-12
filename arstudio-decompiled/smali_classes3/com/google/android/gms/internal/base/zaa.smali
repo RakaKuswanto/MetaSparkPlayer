@@ -1,4 +1,4 @@
-.class public Lcom/google/android/gms/internal/base/zaa;
+.class public abstract Lcom/google/android/gms/internal/base/zaa;
 .super Ljava/lang/Object;
 .source ""
 
@@ -13,14 +13,16 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 1
+
+    const-string v0, "com.google.android.gms.signin.internal.ISignInService"
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/internal/base/zaa;->A00:Landroid/os/IBinder;
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/base/zaa;->A01:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/android/gms/internal/base/zaa;->A01:Ljava/lang/String;
 
     return-void
 .end method
@@ -44,7 +46,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0, p1, v1, p2}, LX/4BD;->A16(Landroid/os/IBinder;Landroid/os/Parcel;Landroid/os/Parcel;I)V
+    invoke-static {v0, p1, v1, p2}, LX/0X2;->A0w(Landroid/os/IBinder;Landroid/os/Parcel;Landroid/os/Parcel;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

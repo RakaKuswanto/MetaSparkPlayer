@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_days_ago">
+        <item quantity="other">Hashize iminsi %1$d</item>
+        <item quantity="one">Hashize umunsi 1</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">iminsi %1$d</item>
+        <item quantity="one">Umunsi 1</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d iminsi</item>
+        <item quantity="one">Umunsi 1</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">Amasaha %1$d</item>
+        <item quantity="one">Isaha 1</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">Iminota %1$d</item>
+        <item quantity="one">Umunota 1</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">Amezi %1$d</item>
+        <item quantity="one">Ukwezi 1</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">Isegonda 1</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Iyindi minsi %1$d</item>
+        <item quantity="one">1 more day</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d years</item>
+        <item quantity="one">Umwaka 1</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">Hashize amasaha %1$d</item>
+        <item quantity="one">Hashize isaha 1</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">Amasaha %1$d</item>
+        <item quantity="one">Isaha 1</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">Amasaha %1$d</item>
+        <item quantity="one">Isaha 1</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">Hashize iminota %1$d</item>
+        <item quantity="one">Hashize umunota 1</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">Iminota %1$d</item>
+        <item quantity="one">Umunota 1</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">Hashize amezi %1$d</item>
+        <item quantity="one">Hashize ukwezi 1</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">Hashize amasegonda %1$d</item>
+        <item quantity="one">Isegonda 1</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">Hashize ibyumweru %1$d</item>
+        <item quantity="one">1 week ago</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">Hashize imyaka %1$d</item>
+        <item quantity="one">Hashize umwaka 1</item>
+    </plurals>
+</resources>

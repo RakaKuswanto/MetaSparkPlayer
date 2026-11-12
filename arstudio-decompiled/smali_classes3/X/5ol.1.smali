@@ -1,58 +1,333 @@
-.class public final LX/5ol;
-.super Ljava/lang/Object;
+.class public final enum LX/5oL;
+.super Ljava/lang/Enum;
 .source ""
 
+# interfaces
+.implements LX/5oa;
 
-# instance fields
-.field public final synthetic A00:LX/5om;
 
-.field public final synthetic A01:Ljava/util/concurrent/atomic/AtomicInteger;
+# static fields
+.field public static final synthetic $VALUES:[LX/5oL;
 
-.field public final synthetic A02:LX/5oe;
+.field public static final enum INSTANCE:LX/5oL;
 
-.field public final synthetic A03:LX/5og;
+.field public static final enum NEVER:LX/5oL;
 
 
 # direct methods
-.method public constructor <init>(LX/5om;LX/5oe;LX/5og;Ljava/util/concurrent/atomic/AtomicInteger;)V
-    .locals 0
+.method public static synthetic $values()[LX/5oL;
+    .locals 3
 
     .line 0
-    iput-object p3, p0, LX/5ol;->A03:LX/5og;
+    const/4 v0, 0x2
 
     .line 1
+    new-array v2, v0, [LX/5oL;
+
     .line 2
-    iput-object p1, p0, LX/5ol;->A00:LX/5om;
-
     .line 3
-    .line 4
-    iput-object p4, p0, LX/5ol;->A01:Ljava/util/concurrent/atomic/AtomicInteger;
+    sget-object v1, LX/5oL;->INSTANCE:LX/5oL;
 
+    .line 4
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    iput-object p2, p0, LX/5ol;->A02:LX/5oe;
+    aput-object v1, v2, v0
 
     .line 7
     .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, LX/5oL;->NEVER:LX/5oL;
 
     .line 9
     .line 10
+    const/4 v0, 0x1
+
     .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "INSTANCE"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/5oL;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/5oL;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/5oL;->INSTANCE:LX/5oL;
+
+    .line 9
+    .line 10
+    const-string v2, "NEVER"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/5oL;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/5oL;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/5oL;->NEVER:LX/5oL;
+
+    .line 19
+    .line 20
+    invoke-static {}, LX/5oL;->$values()[LX/5oL;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    sput-object v0, LX/5oL;->$VALUES:[LX/5oL;
+
+    .line 25
+    .line 26
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static complete(LX/5ny;)V
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/5oL;->INSTANCE:LX/5oL;
+
+    .line 1
+    .line 2
+    invoke-interface {p0, v0}, LX/5ny;->Abg(LX/5nt;)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-interface {p0}, LX/5ny;->AUV()V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public static complete(LX/5oe;)V
+    .locals 0
+
+    .line 268435456
+    const-string p0, "onSubscribe"
+
+    .line 268435457
+    .line 268435458
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    move-result-object p0
+
+    .line 268435462
+    throw p0
+.end method
+
+.method public static complete(LX/5of;)V
+    .locals 0
+
+    .line 536870912
+    const-string p0, "onSubscribe"
+
+    .line 536870913
+    .line 536870914
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 536870915
+    .line 536870916
+    .line 536870917
+    move-result-object p0
+
+    .line 536870918
+    throw p0
+.end method
+
+.method public static error(Ljava/lang/Throwable;LX/5ny;)V
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/5oL;->INSTANCE:LX/5oL;
+
+    .line 1
+    .line 2
+    invoke-interface {p1, v0}, LX/5ny;->Abg(LX/5nt;)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-interface {p1, p0}, LX/5ny;->AVz(Ljava/lang/Throwable;)V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public static error(Ljava/lang/Throwable;LX/5od;)V
+    .locals 0
+
+    .line 805306368
+    const-string p0, "onSubscribe"
+
+    .line 805306369
+    .line 805306370
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 805306371
+    .line 805306372
+    .line 805306373
+    move-result-object p0
+
+    .line 805306374
+    throw p0
+.end method
+
+.method public static error(Ljava/lang/Throwable;LX/5oe;)V
+    .locals 0
+
+    .line 268435456
+    const-string p0, "onSubscribe"
+
+    .line 268435457
+    .line 268435458
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    move-result-object p0
+
+    .line 268435462
+    throw p0
+.end method
+
+.method public static error(Ljava/lang/Throwable;LX/5of;)V
+    .locals 0
+
+    .line 536870912
+    const-string p0, "onSubscribe"
+
+    .line 536870913
+    .line 536870914
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 536870915
+    .line 536870916
+    .line 536870917
+    move-result-object p0
+
+    .line 536870918
+    throw p0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/5oL;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/5oL;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/5oL;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/5oL;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/5oL;->$VALUES:[LX/5oL;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/5oL;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final A00()V
-    .locals 5
+.method public clear()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public dispose()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public isDisposed()Z
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/5ol;->A01:Ljava/util/concurrent/atomic/AtomicInteger;
+    sget-object v0, LX/5oL;->INSTANCE:LX/5oL;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    invoke-static {p0, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 3
     .line 4
@@ -60,141 +335,67 @@
     move-result v0
 
     .line 6
-    if-nez v0, :cond_1
+    return v0
+.end method
 
-    .line 7
-    .line 8
-    iget-object v4, p0, LX/5ol;->A03:LX/5og;
+.method public isEmpty()Z
+    .locals 1
 
-    .line 9
-    .line 10
-    iget-object v1, v4, LX/5og;->A03:LX/5oh;
-
-    .line 11
-    .line 12
     const/4 v0, 0x1
 
-    .line 13
-    iput-boolean v0, v1, LX/5oh;->A0G:Z
+    return v0
+.end method
 
-    .line 14
-    .line 15
-    iget-object v3, v1, LX/5oh;->A08:Landroid/os/Handler;
+.method public offer(Ljava/lang/Object;)Z
+    .locals 1
 
-    .line 16
-    .line 17
-    iget-object v2, v1, LX/5oh;->A0B:Ljava/lang/Runnable;
+    .line 268435456
+    const-string v0, "Should not be called!"
 
-    .line 18
-    .line 19
-    iget-object v1, v1, LX/5oh;->A09:LX/5dv;
+    .line 268435457
+    .line 268435458
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
-    .line 20
-    .line 21
-    const/16 v0, 0x3ef
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    move-result-object v0
 
-    .line 22
-    .line 23
-    invoke-interface {v1, v0}, LX/5dv;->ADp(I)I
+    .line 268435462
+    throw v0
+.end method
 
-    .line 24
-    .line 25
-    .line 26
-    move-result v0
+.method public offer(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
 
-    .line 27
-    int-to-long v0, v0
+    .line 0
+    const-string v0, "Should not be called!"
 
-    .line 28
-    invoke-virtual {v3, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
-    .line 29
-    .line 30
-    .line 31
-    iget-object v2, v4, LX/5og;->A05:Ljava/util/Map;
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 32
-    .line 33
-    invoke-static {v2}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
+    .line 6
+    throw v0
+.end method
 
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v1
+.method public poll()Ljava/lang/Object;
+    .locals 1
 
-    .line 37
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v0, 0x0
 
-    .line 38
-    .line 39
-    .line 40
-    move-result v0
+    return-object v0
+.end method
 
-    .line 41
-    if-eqz v0, :cond_0
+.method public requestFusion(I)I
+    .locals 1
 
-    .line 42
-    .line 43
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    and-int/lit8 v0, p1, 0x2
 
-    .line 44
-    .line 45
-    .line 46
-    goto :goto_0
-
-    .line 47
-    :cond_0
-    invoke-static {v2}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
-
-    .line 48
-    .line 49
-    .line 50
-    move-result-object v2
-
-    .line 51
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 52
-    .line 53
-    .line 54
-    move-result v0
-
-    .line 55
-    if-eqz v0, :cond_1
-
-    .line 56
-    .line 57
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 58
-    .line 59
-    .line 60
-    move-result-object v1
-
-    .line 61
-    check-cast v1, LX/5om;
-
-    .line 62
-    .line 63
-    new-instance v0, LX/5oz;
-
-    .line 64
-    .line 65
-    invoke-direct {v0, v4}, LX/5oz;-><init>(LX/5og;)V
-
-    .line 66
-    .line 67
-    .line 68
-    invoke-interface {v1, v0}, LX/5om;->Aom(LX/5oz;)V
-
-    .line 69
-    .line 70
-    .line 71
-    goto :goto_1
-
-    .line 72
-    :cond_1
-    return-void
+    return v0
 .end method

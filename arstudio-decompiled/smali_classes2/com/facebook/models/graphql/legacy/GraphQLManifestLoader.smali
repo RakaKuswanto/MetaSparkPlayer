@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final queryString:LX/1dH;
+.field public static final queryString:LX/1oe;
 
 
 # direct methods
@@ -15,16 +15,16 @@
     const/4 v1, 0x4
 
     .line 1
-    new-instance v0, LX/1dH;
+    new-instance v0, LX/1oe;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/1dH;-><init>(I)V
+    invoke-direct {v0, v1}, LX/1oe;-><init>(I)V
 
     .line 4
     .line 5
     .line 6
-    sput-object v0, Lcom/facebook/models/graphql/legacy/GraphQLManifestLoader;->queryString:LX/1dH;
+    sput-object v0, Lcom/facebook/models/graphql/legacy/GraphQLManifestLoader;->queryString:LX/1oe;
 
     .line 7
     .line 8
@@ -33,7 +33,7 @@
     .line 9
     .line 10
     .line 11
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 12
     .line 13
@@ -48,11 +48,11 @@
     const/4 v5, 0x0
 
     .line 1
-    sget-object v0, Lcom/facebook/models/graphql/legacy/GraphQLManifestLoader;->queryString:LX/1dH;
+    sget-object v0, Lcom/facebook/models/graphql/legacy/GraphQLManifestLoader;->queryString:LX/1oe;
 
     .line 2
     .line 3
-    iget-wide v3, v0, LX/1j0;->A03:J
+    iget-wide v3, v0, LX/1qB;->A03:J
 
     .line 4
     .line 5

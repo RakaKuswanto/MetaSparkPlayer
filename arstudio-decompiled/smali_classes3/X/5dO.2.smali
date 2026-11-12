@@ -1,257 +1,337 @@
 .class public final LX/5dO;
-.super LX/5ds;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5fB;
-.implements LX/5gI;
+.implements LX/3gO;
 
 
-# instance fields
-.field public A00:I
+# static fields
+.field public static final A00:LX/5dO;
 
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:I
-
-.field public A04:LX/5ec;
-
-.field public A05:LX/5fA;
-
-.field public A06:LX/5eu;
-
-.field public A07:LX/5eH;
-
-.field public A08:Ljava/lang/Integer;
-
-.field public A09:Z
-
-.field public final A0A:Landroid/os/Handler;
-
-.field public final A0B:LX/5p9;
-
-.field public final A0C:LX/5eU;
-
-.field public final A0D:LX/5ge;
-
-.field public final A0E:LX/5dv;
-
-.field public final A0F:LX/5or;
-
-.field public final A0G:LX/5b2;
-
-.field public final A0H:LX/5p9;
+.field public static final synthetic A01:LX/3iV;
 
 
 # direct methods
-.method public constructor <init>(LX/5dm;)V
-    .locals 4
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0, p1}, LX/5ds;-><init>(LX/5dm;)V
+    new-instance v2, LX/5dO;
 
     .line 1
     .line 2
+    invoke-direct {v2}, LX/5dO;-><init>()V
+
     .line 3
-    const/4 v1, 0x1
-
     .line 4
-    new-instance v0, LX/5b2;
-
     .line 5
-    .line 6
-    invoke-direct {v0, v1}, LX/5b2;-><init>(Z)V
+    sput-object v2, LX/5dO;->A00:LX/5dO;
 
+    .line 6
     .line 7
+    const-string v1, "com.shopify.checkout.models.CartLineImage"
+
     .line 8
     .line 9
-    iput-object v0, p0, LX/5dO;->A0G:LX/5b2;
+    const/4 v0, 0x4
 
     .line 10
-    .line 11
-    new-instance v0, LX/5eT;
+    invoke-static {v1, v2, v0}, LX/435;->A0E(Ljava/lang/String;LX/3gO;I)LX/3iV;
 
+    .line 11
     .line 12
     .line 13
-    invoke-direct {v0, p0}, LX/5eT;-><init>(LX/5dO;)V
+    move-result-object v2
 
     .line 14
+    const-string v0, "sm"
+
     .line 15
     .line 16
-    iput-object v0, p0, LX/5dO;->A0D:LX/5ge;
+    const/4 v1, 0x0
 
     .line 17
-    .line 18
-    new-instance v0, LX/5dL;
+    invoke-virtual {v2, v0, v1}, LX/3iV;->A00(Ljava/lang/String;Z)V
 
+    .line 18
     .line 19
     .line 20
-    invoke-direct {v0, p0}, LX/5dL;-><init>(LX/5dO;)V
+    const-string v0, "md"
 
     .line 21
     .line 22
-    .line 23
-    iput-object v0, p0, LX/5dO;->A0B:LX/5p9;
+    invoke-virtual {v2, v0, v1}, LX/3iV;->A00(Ljava/lang/String;Z)V
 
+    .line 23
     .line 24
     .line 25
-    new-instance v0, LX/5ct;
+    const-string v0, "lg"
 
     .line 26
     .line 27
-    invoke-direct {v0, p0}, LX/5ct;-><init>(LX/5dO;)V
+    invoke-virtual {v2, v0, v1}, LX/3iV;->A00(Ljava/lang/String;Z)V
 
     .line 28
     .line 29
     .line 30
-    iput-object v0, p0, LX/5dO;->A0H:LX/5p9;
+    const-string v1, "altText"
 
     .line 31
     .line 32
-    sget-object v1, LX/5dv;->A00:LX/5gV;
+    const/4 v0, 0x1
 
     .line 33
-    .line 34
-    iget-object v3, p0, LX/5ds;->A00:LX/5dm;
+    invoke-virtual {v2, v1, v0}, LX/3iV;->A00(Ljava/lang/String;Z)V
 
+    .line 34
     .line 35
     .line 36
-    invoke-interface {v3, v1}, LX/5dm;->AQ2(LX/5gV;)Z
+    sput-object v2, LX/5dO;->A01:LX/3iV;
 
     .line 37
     .line 38
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A4w()[LX/5cW;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x4
+
+    .line 1
+    new-array v2, v0, [LX/5cW;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/5d4;->A00:LX/5d4;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    const/4 v0, 0x1
+
+    .line 9
+    aput-object v1, v2, v0
+
+    .line 10
+    .line 11
+    const/4 v0, 0x2
+
+    .line 12
+    aput-object v1, v2, v0
+
+    .line 13
+    .line 14
+    invoke-static {v1, v2}, LX/5dB;->A03(LX/5cW;[Ljava/lang/Object;)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v2
+.end method
+
+.method public final bridge synthetic A7J(LX/5dV;)Ljava/lang/Object;
+    .locals 12
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    sget-object v6, LX/5dO;->A01:LX/3iV;
+
+    .line 5
+    .line 6
+    invoke-interface {p1, v6}, LX/5dV;->A4B(LX/6Xn;)LX/5e7;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v5
+
+    .line 10
+    const/4 v4, 0x3
+
+    .line 11
+    const/4 v3, 0x2
+
+    .line 12
+    const/4 v7, 0x0
+
+    .line 13
+    const/4 v2, 0x1
+
+    .line 14
+    move-object v9, v7
+
+    .line 15
+    move-object v10, v7
+
+    .line 16
+    move-object v11, v7
+
+    .line 17
+    const/4 v8, 0x0
+
+    .line 18
+    :goto_0
+    invoke-interface {v5, v6}, LX/5e7;->A6n(LX/6Xn;)I
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v1
+
+    .line 22
+    const/4 v0, -0x1
+
+    .line 23
+    if-eq v1, v0, :cond_4
+
+    .line 24
+    .line 25
+    if-eqz v1, :cond_2
+
+    .line 26
+    .line 27
+    if-eq v1, v2, :cond_1
+
+    .line 28
+    .line 29
+    if-eq v1, v3, :cond_0
+
+    .line 30
+    .line 31
+    if-ne v1, v4, :cond_3
+
+    .line 32
+    .line 33
+    invoke-static {v11, v6, v5, v4}, LX/432;->A0n(Ljava/lang/Object;LX/6Xn;LX/5e7;I)Ljava/lang/String;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v11
+
+    .line 37
+    or-int/lit8 v8, v8, 0x8
+
+    .line 38
     .line 39
-    move-result v0
+    goto :goto_0
 
     .line 40
-    const/4 v2, 0x0
+    :cond_0
+    invoke-static {v5}, LX/5cY;->A03(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 41
-    if-eqz v0, :cond_1
-
     .line 42
     .line 43
-    invoke-interface {v3, v1}, LX/5dm;->ADS(LX/5gV;)LX/5gJ;
+    move-result-object v10
 
     .line 44
+    or-int/lit8 v8, v8, 0x4
+
     .line 45
     .line 46
-    move-result-object v0
+    goto :goto_0
 
     .line 47
-    check-cast v0, LX/5dv;
+    :cond_1
+    invoke-static {v5}, LX/5cY;->A03(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 48
     .line 49
-    :goto_0
-    iput-object v0, p0, LX/5dO;->A0E:LX/5dv;
-
     .line 50
+    move-result-object v9
+
     .line 51
-    sget-object v1, LX/5dF;->A00:LX/5gV;
+    or-int/lit8 v8, v8, 0x2
 
     .line 52
     .line 53
-    invoke-interface {v3, v1}, LX/5dm;->AQ2(LX/5gV;)Z
+    goto :goto_0
 
     .line 54
+    :cond_2
+    invoke-static {v5}, LX/5cY;->A03(Ljava/lang/Object;)Ljava/lang/String;
+
     .line 55
     .line 56
-    move-result v0
-
     .line 57
-    if-eqz v0, :cond_0
+    move-result-object v7
 
     .line 58
+    or-int/lit8 v8, v8, 0x1
+
     .line 59
-    invoke-interface {v3, v1}, LX/5dm;->ADS(LX/5gV;)LX/5gJ;
-
     .line 60
+    goto :goto_0
+
     .line 61
+    :cond_3
+    invoke-static {v1}, LX/5dI;->A00(I)LX/5dI;
+
     .line 62
-    move-result-object v2
-
     .line 63
-    check-cast v2, LX/5dF;
-
     .line 64
+    move-result-object v0
+
     .line 65
-    :cond_0
-    sget-object v0, LX/5eO;->A00:LX/5gV;
+    throw v0
 
     .line 66
-    .line 67
-    invoke-interface {v3, v0}, LX/5dm;->ADS(LX/5gV;)LX/5gJ;
+    :cond_4
+    invoke-interface {v5, v6}, LX/5e7;->A8T(LX/6Xn;)V
 
+    .line 67
     .line 68
     .line 69
-    .line 70
-    move-result-object v1
+    new-instance v6, Lcom/shopify/checkout/models/CartLineImage;
 
+    .line 70
     .line 71
-    check-cast v1, LX/5eO;
+    invoke-direct/range {v6 .. v11}, Lcom/shopify/checkout/models/CartLineImage;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
     .line 73
-    const-string v0, "Lite-Controller-Thread"
-
     .line 74
-    .line 75
-    invoke-interface {v1, v0}, LX/5eO;->AGM(Ljava/lang/String;)Landroid/os/Handler;
+    return-object v6
+.end method
 
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v0
+.method public final AD9()LX/6Xn;
+    .locals 1
 
-    .line 79
-    iput-object v0, p0, LX/5dO;->A0A:Landroid/os/Handler;
+    .line 0
+    sget-object v0, LX/5dO;->A01:LX/3iV;
 
-    .line 80
-    .line 81
-    new-instance v0, LX/5eU;
-
-    .line 82
-    .line 83
-    invoke-direct {v0, p0}, LX/5eU;-><init>(LX/5dO;)V
-
-    .line 84
-    .line 85
-    .line 86
-    iput-object v0, p0, LX/5dO;->A0C:LX/5eU;
-
-    .line 87
-    .line 88
-    sget-object v0, LX/5gI;->A01:LX/5gR;
-
-    .line 89
-    .line 90
-    invoke-interface {v3, v0}, LX/5dm;->ADc(LX/5gR;)Ljava/lang/Object;
-
-    .line 91
-    .line 92
-    .line 93
-    new-instance v0, LX/5bB;
-
-    .line 94
-    .line 95
-    invoke-direct {v0, v2}, LX/5bB;-><init>(LX/5dF;)V
-
-    .line 96
-    .line 97
-    .line 98
-    iput-object v0, p0, LX/5dO;->A0F:LX/5or;
-
-    .line 99
-    .line 100
-    return-void
-
-    .line 101
-    :cond_1
-    move-object v0, v2
-
-    .line 102
-    goto :goto_0
+    .line 1
+    .line 2
+    return-object v0
 .end method

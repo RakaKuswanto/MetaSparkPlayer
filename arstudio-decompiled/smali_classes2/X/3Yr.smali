@@ -1,17 +1,37 @@
-.class public final LX/3Yr;
+.class public final LX/3YR;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# instance fields
+.field public final A00:LX/3YS;
 
-    .line 0
+.field public final A01:LX/3YT;
+
+
+# direct methods
+.method public constructor <init>(LX/3YX;LX/3YQ;Ljava/nio/ByteBuffer;)V
+    .locals 2
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v0
+
+    and-int/lit16 v1, v0, 0xff
+
+    iget-object v0, p1, LX/3YX;->A00:[LX/3YT;
+
+    aget-object v0, v0, v1
+
+    iput-object v0, p0, LX/3YR;->A01:LX/3YT;
+
+    new-instance v0, LX/3YS;
+
+    invoke-direct {v0, p2, p3}, LX/3YS;-><init>(LX/3YQ;Ljava/nio/ByteBuffer;)V
+
+    iput-object v0, p0, LX/3YR;->A00:LX/3YS;
+
     return-void
 .end method

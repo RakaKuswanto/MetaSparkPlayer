@@ -1,30 +1,30 @@
 .class public final LX/0ZD;
-.super Ljava/lang/Object;
+.super LX/2Ei;
 .source ""
 
 
 # instance fields
-.field public A00:I
+.field public A00:Ljava/lang/Object;
 
-.field public A01:J
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, LX/0ZD;->A01:I
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/0ZD;->A00:Ljava/lang/Object;
+
     .line 3
-    const/16 v0, 0x3e8
-
     .line 4
-    .line 5
-    iput v0, p0, LX/0ZD;->A00:I
+    invoke-direct {p0}, LX/2Ei;-><init>()V
 
+    .line 5
     .line 6
     .line 7
     return-void

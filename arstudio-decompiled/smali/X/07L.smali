@@ -2,39 +2,47 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4sb;
+
 
 # direct methods
-.method public static A00(Landroid/content/Context;Landroid/content/pm/PackageManager;)Landroid/content/pm/PackageInfo;
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object p0
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A5x(Ljava/lang/Class;)LX/4C3;
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/07M;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/07M;-><init>()V
+
+    .line 3
     .line 4
-    const-wide/16 v0, 0x0
-
     .line 5
-    .line 6
-    invoke-static {v0, v1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
+    return-object v0
+.end method
 
-    .line 7
-    .line 8
-    .line 9
+.method public final synthetic A64(LX/4sa;Ljava/lang/Class;)LX/4C3;
+    .locals 1
+
+    invoke-static {p0, p2}, LX/5C0;->A00(LX/4sb;Ljava/lang/Class;)LX/4C3;
+
     move-result-object v0
 
-    .line 10
-    invoke-virtual {p1, p0, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
     return-object v0
 .end method

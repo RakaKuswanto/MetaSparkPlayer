@@ -1,75 +1,50 @@
-.class public final LX/3b1;
+.class public abstract LX/3b1;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:I
-
-.field public final A01:I
-
-.field public final A02:I
-
-.field public final A03:Landroid/net/Uri;
-
-.field public final A04:LX/3Uo;
-
-.field public final A05:Lcom/google/android/exoplayer2/Format;
-
-.field public final A06:Ljava/lang/String;
-
-.field public final A07:Z
-
-
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;LX/3Uo;Lcom/google/android/exoplayer2/Format;Ljava/lang/String;IIIZ)V
-    .locals 1
+.method public static A00(Landroid/os/Bundle;Lcom/facebook/prefs/shared/FbSharedPreferences;)V
+    .locals 3
 
     .line 0
-    const/4 v0, 0x1
+    const/4 v2, 0x0
 
     .line 1
-    invoke-static {p1, v0, p2}, LX/0Yd;->A0m(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz p0, :cond_0
 
     .line 2
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string/jumbo v0, "allowDeveloperMenu"
 
+    .line 4
     .line 5
     .line 6
-    .line 7
-    iput-object p1, p0, LX/3b1;->A03:Landroid/net/Uri;
+    invoke-virtual {p0, v0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
+    .line 7
     .line 8
     .line 9
-    iput-object p4, p0, LX/3b1;->A06:Ljava/lang/String;
+    move-result v2
 
     .line 10
-    .line 11
-    iput-object p2, p0, LX/3b1;->A04:LX/3Uo;
+    :cond_0
+    invoke-interface {p1}, Lcom/facebook/prefs/shared/FbSharedPreferences;->edit()LX/1D7;
 
+    .line 11
     .line 12
     .line 13
-    iput-boolean p8, p0, LX/3b1;->A07:Z
+    move-result-object v1
 
     .line 14
+    sget-object v0, LX/3bB;->A00:LX/28F;
+
     .line 15
-    iput p5, p0, LX/3b1;->A02:I
-
     .line 16
-    .line 17
-    iput p6, p0, LX/3b1;->A01:I
+    invoke-static {v1, v0, v2}, LX/0X2;->A18(LX/1D7;LX/28F;Z)V
 
+    .line 17
     .line 18
     .line 19
-    iput-object p3, p0, LX/3b1;->A05:Lcom/google/android/exoplayer2/Format;
-
-    .line 20
-    .line 21
-    iput p7, p0, LX/3b1;->A00:I
-
-    .line 22
-    .line 23
     return-void
 .end method

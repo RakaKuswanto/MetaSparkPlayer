@@ -1,20 +1,67 @@
-.class public interface abstract LX/2Ql;
+.class public final LX/2Ql;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ABc()Ljava/util/Collection;
-.end method
+# instance fields
+.field public final A00:Landroid/location/Location;
 
-.method public abstract ARm(Ljava/lang/String;)Z
-.end method
+.field public final A01:Lcom/facebook/auth/credentials/OpenIDLoginCredentials;
 
-.method public abstract ARt(Ljava/lang/String;)J
-.end method
+.field public final A02:LX/2Pq;
 
-.method public abstract getItemInformation(Ljava/lang/String;)[J
-.end method
+.field public final A03:Ljava/lang/String;
 
-.method public abstract remove(Ljava/lang/String;)Z
+.field public final A04:Ljava/lang/String;
+
+.field public final A05:Ljava/lang/String;
+
+.field public final A06:Ljava/util/List;
+
+.field public final A07:Z
+
+
+# direct methods
+.method public constructor <init>(Landroid/location/Location;Lcom/facebook/auth/credentials/OpenIDLoginCredentials;LX/2Pq;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Z)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p2, p0, LX/2Ql;->A01:Lcom/facebook/auth/credentials/OpenIDLoginCredentials;
+
+    .line 4
+    .line 5
+    iput-object p4, p0, LX/2Ql;->A05:Ljava/lang/String;
+
+    .line 6
+    .line 7
+    iput-object p5, p0, LX/2Ql;->A03:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    iput-object p1, p0, LX/2Ql;->A00:Landroid/location/Location;
+
+    .line 10
+    .line 11
+    iput-boolean p8, p0, LX/2Ql;->A07:Z
+
+    .line 12
+    .line 13
+    iput-object p6, p0, LX/2Ql;->A04:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    iput-object p3, p0, LX/2Ql;->A02:LX/2Pq;
+
+    .line 16
+    .line 17
+    iput-object p7, p0, LX/2Ql;->A06:Ljava/util/List;
+
+    .line 18
+    .line 19
+    return-void
 .end method

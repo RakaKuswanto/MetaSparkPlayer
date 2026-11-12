@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xa749
 
-.field public static final __CONFIG__:I = 0x2db
+.field public static final __CONFIG__:I = 0x2a8
 
-.field public static final enable_hittest_with_depth:J = 0x8102db00002099L
+.field public static final enable_hittest_with_depth:J = 0x8102a800001d67L
 
 
 # direct methods

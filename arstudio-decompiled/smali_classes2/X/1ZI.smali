@@ -1,37 +1,56 @@
-.class public final LX/1ZI;
-.super Ljava/lang/Object;
+.class public final LX/1zI;
+.super LX/1gb;
 .source ""
 
-
-# instance fields
-.field public final A00:Lcom/facebook/auth/credentials/RoomGuestCredentials;
-
-.field public final A01:Ljava/lang/String;
-
-.field public final A02:Ljava/lang/String;
+# interfaces
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1zK;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/auth/credentials/RoomGuestCredentials;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(I[I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/1ZI;->A00:Lcom/facebook/auth/credentials/RoomGuestCredentials;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final AFM()LX/2G2;
+    .locals 3
+
+    .line 0
+    const-class v2, LX/1zH;
+
+    .line 1
+    .line 2
+    const v1, 0x41f72aa
+
+    .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/1ZI;->A02:Ljava/lang/String;
+    const v0, 0x784ecae5
 
     .line 6
     .line 7
-    iput-object p3, p0, LX/1ZI;->A01:Ljava/lang/String;
-
     .line 8
+    invoke-virtual {p0, v1, v2, v0}, LX/1gb;->getCachedNullableTree(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
+
     .line 9
-    return-void
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    check-cast v0, LX/2G2;
+
+    .line 13
+    .line 14
+    return-object v0
 .end method

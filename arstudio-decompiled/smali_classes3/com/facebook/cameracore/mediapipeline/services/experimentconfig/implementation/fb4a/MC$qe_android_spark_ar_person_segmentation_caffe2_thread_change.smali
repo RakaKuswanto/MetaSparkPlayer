@@ -6,11 +6,11 @@
 # static fields
 .field public static final CONFIG_ID:I = 0x4f0f
 
-.field public static final __CONFIG__:I = 0x173
+.field public static final __CONFIG__:I = 0x15a
 
-.field public static final enable:J = 0x81017300011346L
+.field public static final enable:J = 0x81015a000110c9L
 
-.field public static final thread_count:J = 0x820173000205b6L
+.field public static final thread_count:J = 0x82015a000204fcL
 
 
 # direct methods

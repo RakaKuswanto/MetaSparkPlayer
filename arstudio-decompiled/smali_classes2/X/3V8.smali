@@ -1,23 +1,33 @@
-.class public interface abstract LX/3V8;
-.super Ljava/lang/Object;
+.class public abstract LX/3V8;
+.super LX/3V6;
 .source ""
 
-# interfaces
-.implements LX/4An;
+
+# instance fields
+.field public A00:LX/5ZG;
 
 
-# virtual methods
-.method public abstract A6f(BZ)V
+# direct methods
+.method public constructor <init>(LX/3V8;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1}, LX/3V6;-><init>(LX/3V6;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method
 
-.method public abstract ALT()Ljava/util/Map;
-.end method
+.method public constructor <init>(LX/3VC;)V
+    .locals 0
 
-.method public abstract AfU(LX/3Uk;)J
-.end method
+    .line 268435456
+    invoke-direct {p0, p1}, LX/3V6;-><init>(LX/3Um;)V
 
-.method public abstract close()V
-.end method
-
-.method public abstract read([BII)I
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
 .end method

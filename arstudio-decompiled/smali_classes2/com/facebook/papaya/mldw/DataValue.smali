@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public mDataType:LX/2Z0;
+.field public mDataType:LX/2Fp;
 
 .field public mFloatValue:Ljava/lang/Float;
 
@@ -25,7 +25,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -49,11 +49,11 @@
 
     .line 805306373
     .line 805306374
-    sget-object v0, LX/2Z0;->INTEGER:LX/2Z0;
+    sget-object v0, LX/2Fp;->INTEGER:LX/2Fp;
 
     .line 805306375
     .line 805306376
-    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
+    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
 
     .line 805306377
     .line 805306378
@@ -95,11 +95,11 @@
 
     .line 5
     .line 6
-    sget-object v0, LX/2Z0;->INTEGER:LX/2Z0;
+    sget-object v0, LX/2Fp;->INTEGER:LX/2Fp;
 
     .line 7
     .line 8
-    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
+    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
 
     .line 9
     .line 10
@@ -125,11 +125,11 @@
 
     .line 19
     .line 20
-    sget-object v0, LX/2Z0;->FLOAT:LX/2Z0;
+    sget-object v0, LX/2Fp;->FLOAT:LX/2Fp;
 
     .line 21
     .line 22
-    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
+    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
 
     .line 23
     .line 24
@@ -142,63 +142,6 @@
 
 .method public constructor <init>(Ljava/lang/Long;)V
     .locals 2
-
-    .line 536870912
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    const/4 v0, 0x1
-
-    .line 536870916
-    iput-boolean v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mIsNull:Z
-
-    .line 536870917
-    .line 536870918
-    sget-object v1, LX/2Z0;->INTEGER:LX/2Z0;
-
-    .line 536870919
-    .line 536870920
-    iput-object v1, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
-
-    .line 536870921
-    .line 536870922
-    const/4 v0, 0x0
-
-    .line 536870923
-    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mIntValue:Ljava/lang/Long;
-
-    .line 536870924
-    .line 536870925
-    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mFloatValue:Ljava/lang/Float;
-
-    .line 536870926
-    .line 536870927
-    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mStringValue:Ljava/lang/String;
-
-    .line 536870928
-    .line 536870929
-    const/4 v0, 0x0
-
-    .line 536870930
-    iput-boolean v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mIsNull:Z
-
-    .line 536870931
-    .line 536870932
-    iput-object v1, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
-
-    .line 536870933
-    .line 536870934
-    iput-object p1, p0, Lcom/facebook/papaya/mldw/DataValue;->mIntValue:Ljava/lang/Long;
-
-    .line 536870935
-    .line 536870936
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
 
     .line 268435456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -213,11 +156,11 @@
 
     .line 268435461
     .line 268435462
-    sget-object v0, LX/2Z0;->INTEGER:LX/2Z0;
+    sget-object v1, LX/2Fp;->INTEGER:LX/2Fp;
 
     .line 268435463
     .line 268435464
-    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
+    iput-object v1, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
 
     .line 268435465
     .line 268435466
@@ -243,18 +186,75 @@
 
     .line 268435475
     .line 268435476
-    sget-object v0, LX/2Z0;->STRING:LX/2Z0;
+    iput-object v1, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
 
     .line 268435477
     .line 268435478
-    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
+    iput-object p1, p0, Lcom/facebook/papaya/mldw/DataValue;->mIntValue:Ljava/lang/Long;
 
     .line 268435479
     .line 268435480
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    .line 536870912
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    const/4 v0, 0x1
+
+    .line 536870916
+    iput-boolean v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mIsNull:Z
+
+    .line 536870917
+    .line 536870918
+    sget-object v0, LX/2Fp;->INTEGER:LX/2Fp;
+
+    .line 536870919
+    .line 536870920
+    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
+
+    .line 536870921
+    .line 536870922
+    const/4 v0, 0x0
+
+    .line 536870923
+    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mIntValue:Ljava/lang/Long;
+
+    .line 536870924
+    .line 536870925
+    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mFloatValue:Ljava/lang/Float;
+
+    .line 536870926
+    .line 536870927
+    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mStringValue:Ljava/lang/String;
+
+    .line 536870928
+    .line 536870929
+    const/4 v0, 0x0
+
+    .line 536870930
+    iput-boolean v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mIsNull:Z
+
+    .line 536870931
+    .line 536870932
+    sget-object v0, LX/2Fp;->STRING:LX/2Fp;
+
+    .line 536870933
+    .line 536870934
+    iput-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
+
+    .line 536870935
+    .line 536870936
     iput-object p1, p0, Lcom/facebook/papaya/mldw/DataValue;->mStringValue:Ljava/lang/String;
 
-    .line 268435481
-    .line 268435482
+    .line 536870937
+    .line 536870938
     return-void
 .end method
 
@@ -278,7 +278,7 @@
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 8
     .line 9
@@ -289,11 +289,11 @@
     throw v0
 .end method
 
-.method private checkType(LX/2Z0;)V
+.method private checkType(LX/2Fp;)V
     .locals 4
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
+    iget-object v3, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
 
     .line 1
     .line 2
@@ -309,7 +309,7 @@
 
     .line 6
     .line 7
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 8
     .line 9
@@ -320,7 +320,7 @@
     const/4 v0, 0x0
 
     .line 12
-    invoke-static {v3, v1, v0}, LX/0Yf;->A1B(Ljava/lang/Object;[Ljava/lang/Object;I)V
+    invoke-static {v3, v1, v0}, LX/0X3;->A1Q(Ljava/lang/Object;[Ljava/lang/Object;I)V
 
     .line 13
     .line 14
@@ -328,7 +328,7 @@
     const/4 v0, 0x1
 
     .line 16
-    invoke-static {p1, v1, v0}, LX/0Yf;->A1B(Ljava/lang/Object;[Ljava/lang/Object;I)V
+    invoke-static {p1, v1, v0}, LX/0X3;->A1Q(Ljava/lang/Object;[Ljava/lang/Object;I)V
 
     .line 17
     .line 18
@@ -345,7 +345,7 @@
     move-result-object v0
 
     .line 25
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 26
     .line 27
@@ -365,11 +365,11 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
+    iget-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
 
     .line 4
     .line 5
-    invoke-virtual {v0}, LX/2Z0;->getValue()I
+    invoke-virtual {v0}, LX/2Fp;->getValue()I
 
     .line 6
     .line 7
@@ -382,7 +382,7 @@
 
 
 # virtual methods
-.method public getDataType()LX/2Z0;
+.method public getDataType()LX/2Fp;
     .locals 1
 
     .line 0
@@ -391,7 +391,7 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Z0;
+    iget-object v0, p0, Lcom/facebook/papaya/mldw/DataValue;->mDataType:LX/2Fp;
 
     .line 4
     .line 5
@@ -407,11 +407,11 @@
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/2Z0;->FLOAT:LX/2Z0;
+    sget-object v0, LX/2Fp;->FLOAT:LX/2Fp;
 
     .line 4
     .line 5
-    invoke-direct {p0, v0}, Lcom/facebook/papaya/mldw/DataValue;->checkType(LX/2Z0;)V
+    invoke-direct {p0, v0}, Lcom/facebook/papaya/mldw/DataValue;->checkType(LX/2Fp;)V
 
     .line 6
     .line 7
@@ -445,11 +445,11 @@
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/2Z0;->INTEGER:LX/2Z0;
+    sget-object v0, LX/2Fp;->INTEGER:LX/2Fp;
 
     .line 4
     .line 5
-    invoke-direct {p0, v0}, Lcom/facebook/papaya/mldw/DataValue;->checkType(LX/2Z0;)V
+    invoke-direct {p0, v0}, Lcom/facebook/papaya/mldw/DataValue;->checkType(LX/2Fp;)V
 
     .line 6
     .line 7
@@ -494,11 +494,11 @@
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/2Z0;->STRING:LX/2Z0;
+    sget-object v0, LX/2Fp;->STRING:LX/2Fp;
 
     .line 4
     .line 5
-    invoke-direct {p0, v0}, Lcom/facebook/papaya/mldw/DataValue;->checkType(LX/2Z0;)V
+    invoke-direct {p0, v0}, Lcom/facebook/papaya/mldw/DataValue;->checkType(LX/2Fp;)V
 
     .line 6
     .line 7

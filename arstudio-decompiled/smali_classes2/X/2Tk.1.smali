@@ -1,98 +1,177 @@
-.class public final LX/2Tk;
+.class public abstract LX/2Tk;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3JN;
-
-
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/2Td;
-
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public static final A00()LX/2aP;
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, LX/2I6;->A8G:I
 
     .line 1
     .line 2
-    .line 3
-    sget v0, LX/2eq;->AKo:I
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
+    .line 3
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    move-result-object v3
 
     .line 6
+    check-cast v3, Ljava/util/concurrent/Executor;
+
     .line 7
     .line 8
-    move-result-object v0
+    sget v0, LX/2I6;->ACN:I
 
     .line 9
-    check-cast v0, LX/2Td;
-
     .line 10
-    .line 11
-    iput-object v0, p0, LX/2Tk;->A01:LX/2Td;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
+    .line 11
     .line 12
     .line 13
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    move-result-object v2
 
     .line 14
+    check-cast v2, LX/2oq;
+
     .line 15
     .line 16
-    move-result-object v0
+    sget v0, LX/2I6;->ACO:I
 
     .line 17
-    iput-object v0, p0, LX/2Tk;->A00:LX/1zG;
-
     .line 18
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 19
-    return-void
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    check-cast v0, LX/2c0;
+
+    .line 23
+    .line 24
+    iget-object v0, v0, LX/2c0;->A00:LX/0lu;
+
+    .line 25
+    .line 26
+    invoke-static {v0}, LX/0lu;->A08(LX/0lu;)Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    new-instance v1, LX/16b;
+
+    .line 31
+    .line 32
+    invoke-direct {v1, v0}, LX/16b;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;)V
+
+    .line 33
+    .line 34
+    .line 35
+    new-instance v0, LX/2aP;
+
+    .line 36
+    .line 37
+    invoke-direct {v0, v2, v1, v3}, LX/2aP;-><init>(LX/2oq;LX/16b;Ljava/util/concurrent/Executor;)V
+
+    .line 38
+    .line 39
+    .line 40
+    return-object v0
 .end method
 
-
-# virtual methods
-.method public final AkG(LX/2kn;)Z
-    .locals 1
+.method public static final A01()LX/2cu;
+    .locals 4
 
     .line 0
-    invoke-virtual {p1}, LX/2kn;->A00()Z
+    sget v0, LX/2I6;->ACN:I
 
     .line 1
     .line 2
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 3
-    move-result v0
-
     .line 4
-    if-eqz v0, :cond_0
-
     .line 5
+    move-result-object v3
+
     .line 6
-    iget-object v0, p0, LX/2Tk;->A01:LX/2Td;
+    check-cast v3, LX/2oq;
 
     .line 7
     .line 8
-    invoke-virtual {v0}, LX/2Td;->A05()V
+    sget v0, LX/2I6;->A7a:I
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 11
-    const/4 v0, 0x1
-
     .line 12
-    return v0
-
     .line 13
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object v2
 
     .line 14
-    return v0
+    check-cast v2, LX/2Ox;
+
+    .line 15
+    .line 16
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-static {v0}, LX/1kN;->A05(Landroid/content/Context;)LX/1w7;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v1
+
+    .line 27
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {v2}, LX/2Ox;->A04()Ljava/lang/String;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 35
+    .line 36
+    .line 37
+    new-instance v0, LX/2cu;
+
+    .line 38
+    .line 39
+    invoke-direct {v0, v1, v3}, LX/2cu;-><init>(LX/1uj;LX/2oq;)V
+
+    .line 40
+    .line 41
+    .line 42
+    return-object v0
 .end method

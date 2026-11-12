@@ -18,473 +18,466 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
-    .locals 43
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
+    .locals 47
 
     .line 0
     const/4 v3, 0x0
 
     .line 1
-    const/16 v22, 0x0
+    const/4 v6, 0x0
 
     .line 2
+    const/16 v33, 0x0
+
     .line 3
-    const/16 v37, 0x0
-
     .line 4
+    const/16 v25, 0x0
+
     .line 5
-    const/16 v30, 0x0
-
     .line 6
-    .line 7
-    const/4 v5, 0x0
+    const/16 v41, 0x0
 
+    .line 7
     .line 8
-    const/16 v31, 0x0
+    const/16 v34, 0x0
 
     .line 9
     .line 10
-    const/16 v32, 0x0
+    const/16 v23, 0x0
 
     .line 11
     .line 12
-    const/4 v15, 0x0
+    const/16 v35, 0x0
 
     .line 13
-    const/16 v40, 0x0
-
     .line 14
+    const/16 v36, 0x0
+
     .line 15
-    const/16 v41, 0x0
-
     .line 16
-    .line 17
-    const/4 v8, 0x0
+    const/16 v16, 0x0
 
+    .line 17
     .line 18
-    const/16 v34, 0x0
+    const/16 v44, 0x0
 
     .line 19
     .line 20
-    const/16 v35, 0x0
+    const/16 v45, 0x0
 
     .line 21
     .line 22
-    const/16 v26, 0x0
+    const/4 v5, 0x0
 
     .line 23
+    const/16 v38, 0x0
+
     .line 24
+    .line 25
     const/16 v39, 0x0
 
-    .line 25
     .line 26
-    const/16 v42, 0x0
-
     .line 27
-    .line 28
-    const/4 v7, 0x0
+    const/16 v29, 0x0
 
+    .line 28
     .line 29
-    const/4 v6, 0x0
+    const/16 v43, 0x0
 
     .line 30
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
     .line 31
+    const/16 v46, 0x0
+
     .line 32
     .line 33
-    move-result-object v16
+    const/4 v7, 0x0
 
     .line 34
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+    const/4 v8, 0x0
 
     .line 35
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
     .line 36
     .line 37
-    move-result-object v14
-
     .line 38
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+    move-result-object v17
 
     .line 39
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
     .line 40
     .line 41
-    move-result-object v13
-
     .line 42
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+    move-result-object v15
 
     .line 43
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
     .line 44
     .line 45
-    move-result-object v12
-
     .line 46
-    const/high16 v38, 0x3f800000    # 1.0f
+    move-result-object v14
 
     .line 47
-    .line 48
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
+    .line 48
     .line 49
     .line 50
+    move-result-object v13
+
     .line 51
-    move-result-object v11
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     .line 52
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
-
     .line 53
     .line 54
+    move-result-object v12
+
     .line 55
-    move-result-object v10
+    const/high16 v42, 0x3f800000    # 1.0f
 
     .line 56
+    .line 57
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
-    .line 57
     .line 58
     .line 59
+    .line 60
+    move-result-object v11
+
+    .line 61
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v10
+
+    .line 65
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
+    .line 66
+    .line 67
+    .line 68
     move-result-object v9
 
-    .line 60
+    .line 69
     :cond_0
     :try_start_0
     move-object/from16 v2, p1
 
-    .line 61
-    .line 62
-    invoke-virtual {v2}, LX/27m;->A0q()LX/270;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v1
-
-    .line 66
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
-
-    .line 67
-    .line 68
-    if-ne v1, v0, :cond_2
-
-    .line 69
     .line 70
-    invoke-static {v2}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
-
     .line 71
+    invoke-virtual {v2}, LX/3oD;->A0t()LX/3ns;
+
     .line 72
     .line 73
-    move-result-object v0
-
     .line 74
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    move-result-object v1
 
     .line 75
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
+
     .line 76
     .line 77
-    move-result v4
+    if-ne v1, v0, :cond_2
 
     .line 78
-    move-object/from16 v1, p2
-
     .line 79
-    .line 80
-    sparse-switch v4, :sswitch_data_0
+    invoke-static {v2}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
+    .line 80
     .line 81
     .line 82
+    move-result-object v0
+
     .line 83
-    :cond_1
-    invoke-virtual {v2}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 84
     .line 85
     .line 86
-    :cond_2
-    :goto_0
-    invoke-static {v2}, LX/1Oj;->A00(LX/27m;)LX/270;
+    move-result v4
 
     .line 87
+    move-object/from16 v1, p2
+
     .line 88
     .line 89
-    move-result-object v0
+    sparse-switch v4, :sswitch_data_0
 
     .line 90
-    sget-object v1, LX/270;->END_OBJECT:LX/270;
-
     .line 91
     .line 92
-    if-ne v0, v1, :cond_0
+    :cond_1
+    invoke-virtual {v2}, LX/3oD;->A1G()LX/3oD;
 
     .line 93
     .line 94
-    goto/16 :goto_1
-
     .line 95
-    .line 96
-    :sswitch_0
-    const-string v1, "edited_uri"
+    :cond_2
+    :goto_0
+    invoke-static {v2}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
+    .line 96
     .line 97
     .line 98
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
     .line 99
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
+
     .line 100
     .line 101
-    move-result v0
+    if-ne v1, v0, :cond_0
 
     .line 102
-    if-eqz v0, :cond_1
-
     .line 103
-    .line 104
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    goto/16 :goto_1
 
+    .line 104
     .line 105
+    :sswitch_0
+    const-string/jumbo v1, "original_uri"
+
     .line 106
     .line 107
-    move-result-object v32
-
     .line 108
-    goto :goto_0
-
-    .line 109
-    :sswitch_1
-    const-string v1, "camera_capture_mode"
-
-    .line 110
-    .line 111
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 112
-    .line 113
-    .line 114
+    .line 109
+    .line 110
+    .line 111
     move-result v0
 
-    .line 115
+    .line 112
     if-eqz v0, :cond_1
 
+    .line 113
+    .line 114
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 115
     .line 116
     .line 117
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    move-result-object v39
 
     .line 118
-    .line 119
-    .line 120
-    move-result-object v30
-
-    .line 121
     goto :goto_0
 
+    .line 119
+    :sswitch_1
+    const-string/jumbo v4, "crop_box"
+
+    .line 120
+    .line 121
     .line 122
-    :sswitch_2
-    const-string/jumbo v1, "is_camera_front_facing"
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 123
     .line 124
     .line 125
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 126
-    .line 127
-    .line 128
     move-result v0
 
-    .line 129
+    .line 126
     if-eqz v0, :cond_1
 
+    .line 127
+    .line 128
+    invoke-static {v2, v1}, LX/27L;->A04(LX/3oD;LX/6HS;)Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+
+    .line 129
     .line 130
     .line 131
-    invoke-virtual {v2}, LX/27m;->A15()Z
+    move-result-object v23
 
     .line 132
-    .line 133
-    .line 134
-    move-result v40
-
-    .line 135
     goto :goto_0
 
+    .line 133
+    :sswitch_2
+    const-string/jumbo v4, "frame_overlay_items"
+
+    .line 134
+    .line 135
     .line 136
-    :sswitch_3
-    const-string/jumbo v1, "is_rotated"
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 137
     .line 138
     .line 139
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v0
 
     .line 140
+    if-eqz v0, :cond_1
+
     .line 141
     .line 142
-    move-result v0
+    const-class v0, Lcom/facebook/photos/creativeediting/model/StickerParams;
 
     .line 143
-    if-eqz v0, :cond_1
-
     .line 144
-    .line 145
-    invoke-virtual {v2}, LX/27m;->A15()Z
+    invoke-static {v2, v3, v1, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
 
+    .line 145
     .line 146
     .line 147
+    move-result-object v13
+
     .line 148
-    move-result v41
+    const-string/jumbo v0, "frameOverlayItems"
 
     .line 149
-    goto :goto_0
-
     .line 150
-    :sswitch_4
-    const-string/jumbo v4, "magic_mod_image"
-
     .line 151
+    invoke-static {v13, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 152
     .line 153
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 154
-    .line 155
-    .line 156
-    move-result v0
-
-    .line 157
-    if-eqz v0, :cond_1
-
-    .line 158
-    .line 159
-    const-class v0, Lcom/facebook/inspiration/magicmod/model/MagicModImage;
-
-    .line 160
-    .line 161
-    invoke-static {v2, v1, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
-    .line 162
-    .line 163
-    .line 164
-    move-result-object v8
-
-    .line 165
-    check-cast v8, Lcom/facebook/inspiration/magicmod/model/MagicModImage;
-
-    .line 166
-    .line 167
     goto :goto_0
 
-    .line 168
-    :sswitch_5
-    const-string v4, "applied_effect_ids"
+    .line 155
+    :sswitch_3
+    const-string/jumbo v1, "should_flip_horizontally"
 
-    .line 169
-    .line 170
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 156
+    .line 157
+    .line 158
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 171
-    .line 172
-    .line 173
+    .line 159
+    .line 160
+    .line 161
     move-result v0
 
-    .line 174
+    .line 162
     if-eqz v0, :cond_1
 
+    .line 163
+    .line 164
+    invoke-virtual {v2}, LX/3oD;->A19()Z
+
+    .line 165
+    .line 166
+    .line 167
+    move-result v46
+
+    .line 168
+    goto :goto_0
+
+    .line 169
+    :sswitch_4
+    const-string/jumbo v1, "display_uri"
+
+    .line 170
+    .line 171
+    .line 172
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 173
+    .line 174
     .line 175
+    move-result v0
+
     .line 176
-    invoke-static {v2, v1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0D(LX/27m;LX/2DN;)Lcom/google/common/collect/ImmutableList;
+    if-eqz v0, :cond_1
 
     .line 177
     .line 178
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 179
-    move-result-object v22
-
     .line 180
-    goto :goto_0
-
     .line 181
-    :sswitch_6
-    const-string/jumbo v1, "filter_name"
+    move-result-object v35
 
     .line 182
-    .line 183
-    .line 184
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
+    .line 183
+    :sswitch_5
+    const-string/jumbo v1, "ai_expander_image_id"
+
+    .line 184
     .line 185
     .line 186
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 187
+    .line 188
+    .line 189
     move-result v0
 
-    .line 188
-    if-eqz v0, :cond_1
-
-    .line 189
     .line 190
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    if-eqz v0, :cond_1
 
     .line 191
     .line 192
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 193
-    move-result-object v15
-
     .line 194
-    const-string/jumbo v1, "filterName"
-
     .line 195
+    move-result-object v33
+
     .line 196
+    goto :goto_0
+
     .line 197
-    move-object/from16 v0, v16
+    :sswitch_6
+    const-string/jumbo v4, "doodle_params_list"
 
     .line 198
     .line 199
-    invoke-static {v15, v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0L(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
-
     .line 200
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 201
     .line 202
-    move-result-object v16
-
     .line 203
-    goto :goto_0
+    move-result v0
 
     .line 204
-    :sswitch_7
-    const-string/jumbo v4, "post_capture_effect_ids"
+    if-eqz v0, :cond_1
 
     .line 205
     .line 206
-    .line 207
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-class v0, Lcom/facebook/photos/creativeediting/model/DoodleParams;
 
+    .line 207
     .line 208
+    invoke-static {v2, v3, v1, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
     .line 209
     .line 210
-    move-result v0
-
     .line 211
-    if-eqz v0, :cond_1
+    move-result-object v14
 
     .line 212
-    .line 213
-    invoke-static {v2, v1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0D(LX/27m;LX/2DN;)Lcom/google/common/collect/ImmutableList;
+    const-string/jumbo v0, "doodleParamsList"
 
+    .line 213
     .line 214
     .line 215
+    invoke-static {v14, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 216
-    move-result-object v26
-
     .line 217
-    goto/16 :goto_0
-
     .line 218
+    goto :goto_0
+
     .line 219
-    :sswitch_8
-    const-string/jumbo v1, "rotation_degree"
+    :sswitch_7
+    const-string/jumbo v4, "zoom_crop_params"
 
     .line 220
     .line 221
     .line 222
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 223
     .line 224
@@ -496,677 +489,833 @@
 
     .line 227
     .line 228
-    invoke-virtual {v2}, LX/27m;->A0i()I
+    const-class v0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
 
     .line 229
     .line 230
+    invoke-static {v2, v1, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
     .line 231
-    move-result v39
-
     .line 232
-    goto/16 :goto_0
-
     .line 233
+    move-result-object v8
+
     .line 234
-    :sswitch_9
-    const-string/jumbo v4, "text_params_list"
+    check-cast v8, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
 
     .line 235
     .line 236
-    .line 237
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_0
 
+    .line 237
     .line 238
+    :sswitch_8
+    const-string/jumbo v1, "scale_crop_factor"
+
     .line 239
     .line 240
-    move-result v0
-
     .line 241
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 242
     .line 243
-    const-class v0, Lcom/facebook/photos/creativeediting/model/TextParams;
-
     .line 244
+    move-result v0
+
     .line 245
-    invoke-static {v2, v3, v1, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    if-eqz v0, :cond_1
 
     .line 246
     .line 247
+    invoke-virtual {v2}, LX/3oD;->A0g()F
+
     .line 248
-    move-result-object v9
-
     .line 249
-    const-string/jumbo v0, "textParamsList"
-
     .line 250
-    .line 251
-    .line 252
-    invoke-static {v0, v9}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    move-result v42
 
-    .line 253
-    .line 254
-    .line 255
+    .line 251
     goto/16 :goto_0
 
-    .line 256
-    .line 257
-    :sswitch_a
-    const-string/jumbo v4, "sticker_params_list"
+    .line 252
+    .line 253
+    :sswitch_9
+    const-string/jumbo v4, "stories_photo_overlay_items"
 
+    .line 254
+    .line 255
+    .line 256
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 257
     .line 258
     .line 259
+    move-result v0
+
     .line 260
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 261
     .line 262
-    .line 263
-    move-result v0
+    const-class v0, Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
 
+    .line 263
     .line 264
-    if-eqz v0, :cond_1
+    invoke-static {v2, v3, v1, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
 
     .line 265
     .line 266
-    const-class v0, Lcom/facebook/photos/creativeediting/model/StickerParams;
-
     .line 267
+    move-result-object v10
+
     .line 268
-    invoke-static {v2, v3, v1, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    const-string/jumbo v0, "storiesPhotoOverlayItems"
 
     .line 269
     .line 270
     .line 271
-    move-result-object v11
+    invoke-static {v10, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 272
-    const-string/jumbo v0, "stickerParamsList"
-
     .line 273
     .line 274
-    .line 275
-    invoke-static {v0, v11}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    goto/16 :goto_0
 
+    .line 275
     .line 276
+    :sswitch_a
+    const-string/jumbo v4, "story_background_gradient_color"
+
     .line 277
     .line 278
-    goto/16 :goto_0
-
     .line 279
-    .line 280
-    :sswitch_b
-    const-string v1, "aspect_ratio"
-
-    .line 281
-    .line 282
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 283
-    .line 284
-    .line 285
-    move-result v0
-
-    .line 286
-    if-eqz v0, :cond_1
-
-    .line 287
-    .line 288
-    invoke-virtual {v2}, LX/27m;->A0g()F
-
-    .line 289
-    .line 290
-    .line 291
-    move-result v37
-
-    .line 292
-    goto/16 :goto_0
-
-    .line 293
-    .line 294
-    :sswitch_c
-    const-string/jumbo v4, "frame_packs"
-
-    .line 295
-    .line 296
-    .line 297
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 298
-    .line 299
-    .line 300
+    .line 280
+    .line 281
+    .line 282
     move-result v0
 
-    .line 301
+    .line 283
     if-eqz v0, :cond_1
 
-    .line 302
-    .line 303
-    const-class v0, LX/19Z;
+    .line 284
+    .line 285
+    const-class v0, Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
 
-    .line 304
-    .line 305
-    invoke-static {v2, v3, v1, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    .line 286
+    .line 287
+    invoke-static {v2, v1, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
-    .line 306
-    .line 307
-    .line 308
-    move-result-object v12
+    .line 288
+    .line 289
+    .line 290
+    move-result-object v7
 
-    .line 309
-    const-string/jumbo v0, "framePacks"
+    .line 291
+    check-cast v7, Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
 
-    .line 310
-    .line 311
-    .line 312
-    invoke-static {v0, v12}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 313
-    .line 314
-    .line 315
+    .line 292
+    .line 293
     goto/16 :goto_0
 
-    .line 316
-    .line 317
-    :sswitch_d
+    .line 294
+    .line 295
+    :sswitch_b
     const-string/jumbo v1, "ml_media_tracking_id"
+
+    .line 296
+    .line 297
+    .line 298
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 299
+    .line 300
+    .line 301
+    move-result v0
+
+    .line 302
+    if-eqz v0, :cond_1
+
+    .line 303
+    .line 304
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 305
+    .line 306
+    .line 307
+    move-result-object v38
+
+    .line 308
+    goto/16 :goto_0
+
+    .line 309
+    .line 310
+    :sswitch_c
+    const-string/jumbo v4, "add_yours_template_overlay_items"
+
+    .line 311
+    .line 312
+    .line 313
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 314
+    .line 315
+    .line 316
+    move-result v0
+
+    .line 317
+    if-eqz v0, :cond_1
 
     .line 318
     .line 319
-    .line 320
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-class v0, Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
 
+    .line 320
     .line 321
+    invoke-static {v2, v3, v1, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
     .line 322
     .line 323
-    move-result v0
-
     .line 324
-    if-eqz v0, :cond_1
+    move-result-object v15
 
     .line 325
-    .line 326
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    const-string/jumbo v0, "addYoursTemplateOverlayItems"
 
+    .line 326
     .line 327
     .line 328
-    .line 329
-    move-result-object v34
+    invoke-static {v15, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 329
     .line 330
+    .line 331
     goto/16 :goto_0
 
-    .line 331
     .line 332
-    :sswitch_e
-    const-string/jumbo v4, "story_background_gradient_color"
-
     .line 333
+    :sswitch_d
+    const-string/jumbo v4, "frame_packs"
+
     .line 334
     .line 335
+    .line 336
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 336
     .line 337
     .line 338
+    .line 339
     move-result v0
 
-    .line 339
+    .line 340
     if-eqz v0, :cond_1
 
-    .line 340
     .line 341
-    const-class v0, Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
-
     .line 342
-    .line 343
-    invoke-static {v2, v1, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    const-class v0, LX/1TU;
 
+    .line 343
     .line 344
+    invoke-static {v2, v3, v1, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
     .line 345
     .line 346
-    move-result-object v7
-
     .line 347
-    check-cast v7, Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+    move-result-object v12
 
     .line 348
-    .line 349
-    goto/16 :goto_0
+    const-string/jumbo v0, "framePacks"
 
+    .line 349
     .line 350
     .line 351
-    :sswitch_f
-    const-string/jumbo v4, "stories_photo_overlay_items"
+    invoke-static {v12, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 352
     .line 353
     .line 354
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_0
 
     .line 355
     .line 356
+    :sswitch_e
+    const-string/jumbo v1, "aspect_ratio"
+
     .line 357
-    move-result v0
-
     .line 358
-    if-eqz v0, :cond_1
-
     .line 359
-    .line 360
-    const-class v0, Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 360
     .line 361
     .line 362
-    invoke-static {v2, v3, v1, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    move-result v0
 
     .line 363
+    if-eqz v0, :cond_1
+
     .line 364
     .line 365
-    move-result-object v10
+    invoke-virtual {v2}, LX/3oD;->A0g()F
 
     .line 366
-    const-string/jumbo v0, "storiesPhotoOverlayItems"
-
     .line 367
     .line 368
+    move-result v41
+
     .line 369
-    invoke-static {v0, v10}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    goto/16 :goto_0
 
     .line 370
     .line 371
-    .line 372
-    goto/16 :goto_0
+    :sswitch_f
+    const-string/jumbo v4, "sticker_params_list"
 
+    .line 372
     .line 373
     .line 374
-    :sswitch_10
-    const-string/jumbo v1, "scale_crop_factor"
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 375
     .line 376
     .line 377
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 378
-    .line 379
-    .line 380
     move-result v0
 
-    .line 381
+    .line 378
     if-eqz v0, :cond_1
 
-    .line 382
-    .line 383
-    invoke-virtual {v2}, LX/27m;->A0g()F
+    .line 379
+    .line 380
+    const-class v0, Lcom/facebook/photos/creativeediting/model/StickerParams;
 
+    .line 381
+    .line 382
+    invoke-static {v2, v3, v1, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
+    .line 383
     .line 384
     .line 385
+    move-result-object v11
+
     .line 386
-    move-result v38
+    const-string/jumbo v0, "stickerParamsList"
 
     .line 387
-    goto/16 :goto_0
-
     .line 388
     .line 389
-    :sswitch_11
-    const-string/jumbo v4, "zoom_crop_params"
+    invoke-static {v11, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 390
     .line 391
     .line 392
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_0
 
     .line 393
     .line 394
+    :sswitch_10
+    const-string/jumbo v4, "text_params_list"
+
     .line 395
-    move-result v0
-
     .line 396
-    if-eqz v0, :cond_1
-
     .line 397
-    .line 398
-    const-class v0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
-
-    .line 399
-    .line 400
-    invoke-static {v2, v1, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
-    .line 401
-    .line 402
-    .line 403
-    move-result-object v6
-
-    .line 404
-    check-cast v6, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
-
-    .line 405
-    .line 406
-    goto/16 :goto_0
-
-    .line 407
-    .line 408
-    :sswitch_12
-    const-string v4, "doodle_params_list"
-
-    .line 409
-    .line 410
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 411
-    .line 412
-    .line 413
+    .line 398
+    .line 399
+    .line 400
     move-result v0
 
-    .line 414
+    .line 401
     if-eqz v0, :cond_1
 
+    .line 402
+    .line 403
+    const-class v0, Lcom/facebook/photos/creativeediting/model/TextParams;
+
+    .line 404
+    .line 405
+    invoke-static {v2, v3, v1, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
+    .line 406
+    .line 407
+    .line 408
+    move-result-object v9
+
+    .line 409
+    const-string/jumbo v0, "textParamsList"
+
+    .line 410
+    .line 411
+    .line 412
+    invoke-static {v9, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 413
+    .line 414
     .line 415
+    goto/16 :goto_0
+
     .line 416
-    const-class v0, Lcom/facebook/photos/creativeediting/model/DoodleParams;
-
     .line 417
-    .line 418
-    invoke-static {v2, v3, v1, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    :sswitch_11
+    const-string/jumbo v1, "rotation_degree"
 
+    .line 418
     .line 419
     .line 420
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 421
-    move-result-object v14
-
     .line 422
-    const-string v0, "doodleParamsList"
-
     .line 423
+    move-result v0
+
     .line 424
-    invoke-static {v0, v14}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    if-eqz v0, :cond_1
 
     .line 425
     .line 426
-    .line 427
-    goto/16 :goto_0
+    invoke-virtual {v2}, LX/3oD;->A0k()I
 
+    .line 427
     .line 428
     .line 429
-    :sswitch_13
-    const-string v1, "display_uri"
+    move-result v43
 
     .line 430
-    .line 431
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_0
 
+    .line 431
     .line 432
+    :sswitch_12
+    const-string/jumbo v4, "post_capture_effect_ids"
+
     .line 433
     .line 434
-    move-result v0
-
     .line 435
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 436
     .line 437
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 438
-    .line 439
-    .line 440
-    move-result-object v31
+    move-result v0
 
+    .line 439
+    if-eqz v0, :cond_1
+
+    .line 440
     .line 441
-    goto/16 :goto_0
+    invoke-static {v2, v1}, LX/27L;->A06(LX/3oD;LX/6HS;)Lcom/google/common/collect/ImmutableList;
 
     .line 442
     .line 443
-    :sswitch_14
-    const-string/jumbo v1, "should_flip_horizontally"
-
     .line 444
-    .line 445
-    .line 446
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v29
 
+    .line 445
+    goto/16 :goto_0
+
+    .line 446
     .line 447
+    :sswitch_13
+    const-string/jumbo v1, "filter_name"
+
     .line 448
     .line 449
-    move-result v0
-
     .line 450
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 451
     .line 452
-    invoke-virtual {v2}, LX/27m;->A15()Z
-
     .line 453
-    .line 454
-    .line 455
-    move-result v42
+    move-result v0
 
+    .line 454
+    if-eqz v0, :cond_1
+
+    .line 455
     .line 456
-    goto/16 :goto_0
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 457
     .line 458
-    :sswitch_15
-    const-string/jumbo v4, "frame_overlay_items"
-
     .line 459
-    .line 460
-    .line 461
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v16
 
+    .line 460
+    const-string/jumbo v4, "filterName"
+
+    .line 461
     .line 462
     .line 463
-    .line 464
-    move-result v0
+    move-object/from16 v1, v16
 
+    .line 464
     .line 465
-    if-eqz v0, :cond_1
+    move-object/from16 v0, v17
 
     .line 466
     .line 467
-    const-class v0, Lcom/facebook/photos/creativeediting/model/StickerParams;
+    invoke-static {v1, v4, v0}, LX/1O4;->A08(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
 
     .line 468
     .line 469
-    invoke-static {v2, v3, v1, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
-
     .line 470
-    .line 471
-    .line 472
-    move-result-object v13
+    move-result-object v17
 
+    .line 471
+    goto/16 :goto_0
+
+    .line 472
     .line 473
-    const-string/jumbo v0, "frameOverlayItems"
+    :sswitch_14
+    const-string/jumbo v4, "ai_backdrop_params"
 
     .line 474
     .line 475
     .line 476
-    invoke-static {v0, v13}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 477
     .line 478
     .line 479
-    goto/16 :goto_0
-
-    .line 480
-    .line 481
-    :sswitch_16
-    const-string v4, "crop_box"
-
-    .line 482
-    .line 483
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 484
-    .line 485
-    .line 486
     move-result v0
 
-    .line 487
+    .line 480
     if-eqz v0, :cond_1
 
+    .line 481
+    .line 482
+    const-class v0, Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
+
+    .line 483
+    .line 484
+    invoke-static {v2, v1, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
+    .line 485
+    .line 486
+    .line 487
+    move-result-object v6
+
     .line 488
+    check-cast v6, Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
+
     .line 489
-    const-class v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
     .line 490
-    .line 491
-    invoke-static {v2, v1, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    goto/16 :goto_0
 
+    .line 491
     .line 492
+    :sswitch_15
+    const-string/jumbo v4, "applied_effect_ids"
+
     .line 493
     .line 494
-    move-result-object v5
-
     .line 495
-    check-cast v5, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 496
     .line 497
-    goto/16 :goto_0
-
     .line 498
+    move-result v0
+
     .line 499
-    :sswitch_17
-    const-string/jumbo v1, "original_uri"
+    if-eqz v0, :cond_1
 
     .line 500
     .line 501
-    .line 502
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, LX/27L;->A06(LX/3oD;LX/6HS;)Lcom/google/common/collect/ImmutableList;
 
+    .line 502
     .line 503
     .line 504
+    move-result-object v25
+
     .line 505
-    move-result v0
+    goto/16 :goto_0
 
     .line 506
-    if-eqz v0, :cond_1
-
     .line 507
-    .line 508
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    :sswitch_16
+    const-string/jumbo v4, "magic_mod_image"
 
+    .line 508
     .line 509
     .line 510
-    .line 511
-    move-result-object v35
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 511
     .line 512
+    .line 513
+    move-result v0
+
+    .line 514
+    if-eqz v0, :cond_1
+
+    .line 515
+    .line 516
+    const-class v0, Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+
+    .line 517
+    .line 518
+    invoke-static {v2, v1, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
+    .line 519
+    .line 520
+    .line 521
+    move-result-object v5
+
+    .line 522
+    check-cast v5, Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+
+    .line 523
+    .line 524
+    goto/16 :goto_0
+
+    .line 525
+    .line 526
+    :sswitch_17
+    const-string/jumbo v1, "is_rotated"
+
+    .line 527
+    .line 528
+    .line 529
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 530
+    .line 531
+    .line 532
+    move-result v0
+
+    .line 533
+    if-eqz v0, :cond_1
+
+    .line 534
+    .line 535
+    invoke-virtual {v2}, LX/3oD;->A19()Z
+
+    .line 536
+    .line 537
+    .line 538
+    move-result v45
+
+    .line 539
+    goto/16 :goto_0
+
+    .line 540
+    .line 541
+    :sswitch_18
+    const-string/jumbo v1, "is_camera_front_facing"
+
+    .line 542
+    .line 543
+    .line 544
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 545
+    .line 546
+    .line 547
+    move-result v0
+
+    .line 548
+    if-eqz v0, :cond_1
+
+    .line 549
+    .line 550
+    invoke-virtual {v2}, LX/3oD;->A19()Z
+
+    .line 551
+    .line 552
+    .line 553
+    move-result v44
+
+    .line 554
+    goto/16 :goto_0
+
+    .line 555
+    .line 556
+    :sswitch_19
+    const-string/jumbo v1, "camera_capture_mode"
+
+    .line 557
+    .line 558
+    .line 559
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 560
+    .line 561
+    .line 562
+    move-result v0
+
+    .line 563
+    if-eqz v0, :cond_1
+
+    .line 564
+    .line 565
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 566
+    .line 567
+    .line 568
+    move-result-object v34
+
+    .line 569
+    goto/16 :goto_0
+
+    .line 570
+    .line 571
+    :sswitch_1a
+    const-string/jumbo v1, "edited_uri"
+
+    .line 572
+    .line 573
+    .line 574
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 575
+    .line 576
+    .line 577
+    move-result v0
+
+    .line 578
+    if-eqz v0, :cond_1
+
+    .line 579
+    .line 580
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 581
+    .line 582
+    .line 583
+    move-result-object v36
+
+    .line 584
     goto/16 :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 513
-    .line 514
+    .line 585
+    .line 586
     :goto_1
-    new-instance v17, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;
+    new-instance v18, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;
 
-    .line 515
-    .line 516
-    move-object/from16 v33, v15
+    .line 587
+    .line 588
+    move-object/from16 v32, v9
 
-    .line 517
-    .line 518
-    move-object/from16 v36, v16
+    .line 589
+    .line 590
+    move-object/from16 v37, v16
 
-    .line 519
-    .line 520
-    move-object/from16 v27, v11
+    .line 591
+    .line 592
+    move-object/from16 v40, v17
 
-    .line 521
-    .line 522
-    move-object/from16 v28, v10
+    .line 593
+    .line 594
+    move-object/from16 v26, v14
 
-    .line 523
-    .line 524
-    move-object/from16 v29, v9
+    .line 595
+    .line 596
+    move-object/from16 v27, v13
 
-    .line 525
-    .line 526
-    move-object/from16 v23, v14
+    .line 597
+    .line 598
+    move-object/from16 v28, v12
 
-    .line 527
-    .line 528
-    move-object/from16 v24, v13
+    .line 599
+    .line 600
+    move-object/from16 v30, v11
 
-    .line 529
-    .line 530
-    move-object/from16 v25, v12
+    .line 601
+    .line 602
+    move-object/from16 v31, v10
 
-    .line 531
-    .line 532
-    move-object/from16 v20, v7
+    .line 603
+    .line 604
+    move-object/from16 v21, v6
 
-    .line 533
-    .line 534
-    move-object/from16 v21, v5
+    .line 605
+    .line 606
+    move-object/from16 v22, v7
 
-    .line 535
-    .line 536
-    move-object/from16 v18, v8
+    .line 607
+    .line 608
+    move-object/from16 v24, v15
 
-    .line 537
-    .line 538
-    move-object/from16 v19, v6
+    .line 609
+    .line 610
+    move-object/from16 v19, v5
 
-    .line 539
-    .line 540
-    invoke-direct/range {v17 .. v42}, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;-><init>(Lcom/facebook/inspiration/magicmod/model/MagicModImage;Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;FFIZZZ)V
+    .line 611
+    .line 612
+    move-object/from16 v20, v8
 
-    .line 541
-    .line 542
-    .line 543
-    return-object v17
+    .line 613
+    .line 614
+    invoke-direct/range {v18 .. v46}, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;-><init>(Lcom/facebook/inspiration/magicmod/model/MagicModImage;Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;Lcom/facebook/photos/creativeediting/model/AIBackdropParams;Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;FFIZZZ)V
 
-    .line 544
+    .line 615
+    .line 616
+    .line 617
+    return-object v18
+
+    .line 618
     :catch_0
     move-exception v1
 
-    .line 545
+    .line 619
     const-class v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;
 
-    .line 546
-    .line 547
-    invoke-static {v2, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    .line 620
+    .line 621
+    invoke-static {v2, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
-    .line 548
-    .line 549
-    .line 550
-    throw v3
+    .line 622
+    .line 623
+    .line 624
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
-    .line 551
+    .line 625
+    .line 626
+    .line 627
+    move-result-object v0
+
+    .line 628
+    throw v0
+
+    .line 629
     nop
 
+    .line 630
     :sswitch_data_0
     .sparse-switch
-        -0x6e9527aa -> :sswitch_0
-        -0x5be18e2a -> :sswitch_1
-        -0x580d950b -> :sswitch_2
-        -0x541247ac -> :sswitch_3
-        -0x5077e634 -> :sswitch_4
-        -0x3bcfcbf4 -> :sswitch_5
-        -0x350e2d0e -> :sswitch_6
-        -0x2911a05e -> :sswitch_7
-        -0x276f6d53 -> :sswitch_8
-        -0x21b5445b -> :sswitch_9
-        -0x166c184b -> :sswitch_a
-        -0x6dada9c -> :sswitch_b
-        0xbeb6828 -> :sswitch_c
-        0x15094928 -> :sswitch_d
-        0x1a6695fb -> :sswitch_e
-        0x1b23e9d8 -> :sswitch_f
-        0x30630269 -> :sswitch_10
-        0x4cf797a9 -> :sswitch_11
-        0x4f26bd91 -> :sswitch_12
-        0x6633dc6f -> :sswitch_13
-        0x67167bb7 -> :sswitch_14
-        0x6aef0bbf -> :sswitch_15
-        0x7e5b9f9c -> :sswitch_16
-        0x7f742dfe -> :sswitch_17
+        -0x6e9527aa -> :sswitch_1a
+        -0x5be18e2a -> :sswitch_19
+        -0x580d950b -> :sswitch_18
+        -0x541247ac -> :sswitch_17
+        -0x5077e634 -> :sswitch_16
+        -0x3bcfcbf4 -> :sswitch_15
+        -0x36a34c88 -> :sswitch_14
+        -0x350e2d0e -> :sswitch_13
+        -0x2911a05e -> :sswitch_12
+        -0x276f6d53 -> :sswitch_11
+        -0x21b5445b -> :sswitch_10
+        -0x166c184b -> :sswitch_f
+        -0x6dada9c -> :sswitch_e
+        0xbeb6828 -> :sswitch_d
+        0xd34ab69 -> :sswitch_c
+        0x15094928 -> :sswitch_b
+        0x1a6695fb -> :sswitch_a
+        0x1b23e9d8 -> :sswitch_9
+        0x30630269 -> :sswitch_8
+        0x4cf797a9 -> :sswitch_7
+        0x4f26bd91 -> :sswitch_6
+        0x5c8cb6a0 -> :sswitch_5
+        0x6633dc6f -> :sswitch_4
+        0x67167bb7 -> :sswitch_3
+        0x6aef0bbf -> :sswitch_2
+        0x7e5b9f9c -> :sswitch_1
+        0x7f742dfe -> :sswitch_0
     .end sparse-switch
 .end method

@@ -1,100 +1,177 @@
-.class public final LX/4Nj;
-.super Ljava/lang/Object;
+.class public final LX/4nJ;
+.super LX/4nI;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "BaseShopsLiteSDKInjector$runScript$2$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/4Ni;
-
-.field public final synthetic A01:Ljava/lang/String;
+.field public final synthetic A00:LX/4ng;
 
 
 # direct methods
-.method public constructor <init>(LX/4Ni;Ljava/lang/String;)V
+.method public constructor <init>(Landroid/content/Context;LX/4ng;)V
     .locals 0
 
-    iput-object p1, p0, LX/4Nj;->A00:LX/4Ni;
+    .line 0
+    iput-object p2, p0, LX/4nJ;->A00:LX/4ng;
 
-    iput-object p2, p0, LX/4Nj;->A01:Ljava/lang/String;
+    .line 1
+    .line 2
+    invoke-direct {p0, p1}, LX/4nI;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final calculateSpeedPerPixel(Landroid/util/DisplayMetrics;)F
+    .locals 2
 
     .line 0
-    iget-object v4, p0, LX/4Nj;->A00:LX/4Ni;
+    iget v0, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
     .line 1
     .line 2
-    iget-object v0, v4, LX/4Ni;->A00:Ljava/lang/ref/WeakReference;
+    int-to-float v1, v0
 
     .line 3
+    const/high16 v0, 0x42c80000    # 100.0f
+
     .line 4
-    if-nez v0, :cond_0
+    .line 5
+    div-float/2addr v0, v1
+
+    .line 6
+    return v0
+.end method
+
+.method public final calculateTimeForScrolling(I)I
+    .locals 2
+
+    .line 0
+    invoke-super {p0, p1}, LX/4nI;->calculateTimeForScrolling(I)I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
+
+    .line 4
+    const/16 v0, 0x64
 
     .line 5
     .line 6
-    const-string v0, "browserLiteWebView"
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/0PS;->A0D(Ljava/lang/String;)V
-
     .line 9
+    move-result v0
+
     .line 10
-    .line 11
+    return v0
+.end method
+
+.method public final onTargetFound(Landroid/view/View;LX/4nf;LX/4o3;)V
+    .locals 5
+
+    .line 0
+    iget-object v1, p0, LX/4nJ;->A00:LX/4ng;
+
+    .line 1
+    .line 2
+    iget-object v0, v1, LX/4nK;->A00:Landroidx/recyclerview/widget/RecyclerView;
+
+    .line 3
+    .line 4
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->A0E:LX/4nQ;
+
+    .line 5
+    .line 6
+    invoke-virtual {v1, p1, v0}, LX/4nK;->A02(Landroid/view/View;LX/4nQ;)[I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
+    .line 10
     const/4 v0, 0x0
 
-    .line 12
-    throw v0
+    .line 11
+    aget v4, v1, v0
 
+    .line 12
     .line 13
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const/4 v3, 0x1
 
     .line 14
+    aget v2, v1, v3
+
     .line 15
     .line 16
-    move-result-object v3
+    invoke-static {v4}, Ljava/lang/Math;->abs(I)I
 
     .line 17
-    check-cast v3, LX/4CY;
-
     .line 18
     .line 19
-    if-eqz v3, :cond_1
+    move-result v1
 
     .line 20
-    .line 21
-    iget-object v2, p0, LX/4Nj;->A01:Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
+    .line 21
     .line 22
     .line 23
-    const/4 v1, 0x0
+    move-result v0
 
     .line 24
-    iget-object v0, v4, LX/4Ni;->A02:LX/4Cg;
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     .line 25
     .line 26
-    invoke-virtual {v3, v0, v2, v1}, LX/4CY;->A0P(LX/4Cg;Ljava/lang/String;Z)V
-
     .line 27
+    move-result v0
+
     .line 28
+    invoke-virtual {p0, v0}, LX/4nI;->calculateTimeForDeceleration(I)I
+
     .line 29
-    :cond_1
+    .line 30
+    .line 31
+    move-result v1
+
+    .line 32
+    if-lez v1, :cond_0
+
+    .line 33
+    .line 34
+    iget-object v0, p0, LX/4nI;->mDecelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
+
+    .line 35
+    .line 36
+    iput v4, p3, LX/4o3;->A02:I
+
+    .line 37
+    .line 38
+    iput v2, p3, LX/4o3;->A03:I
+
+    .line 39
+    .line 40
+    iput v1, p3, LX/4o3;->A01:I
+
+    .line 41
+    .line 42
+    iput-object v0, p3, LX/4o3;->A05:Landroid/view/animation/Interpolator;
+
+    .line 43
+    .line 44
+    iput-boolean v3, p3, LX/4o3;->A06:Z
+
+    .line 45
+    .line 46
+    :cond_0
     return-void
 .end method

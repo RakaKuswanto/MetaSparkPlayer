@@ -1,28 +1,31 @@
-.class public final LX/2ri;
-.super Ljava/lang/Object;
+.class public abstract LX/2rI;
+.super LX/3AX;
 .source ""
 
 
 # instance fields
-.field public A00:Z
+.field public final A00:J
+
+.field public final A01:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/3AX;-><init>(Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    iput-wide p2, p0, LX/2rI;->A00:J
 
     .line 4
-    iput-boolean v0, p0, LX/2ri;->A00:Z
-
     .line 5
+    iput-object p4, p0, LX/2rI;->A01:Ljava/lang/String;
+
     .line 6
+    .line 7
     return-void
 .end method

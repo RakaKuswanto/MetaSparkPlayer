@@ -1,713 +1,1113 @@
 .class public final LX/34R;
-.super Ljava/lang/Object;
+.super LX/4vQ;
 .source ""
 
 # interfaces
-.implements LX/3G1;
+.implements LX/0Gw;
 
 
 # instance fields
-.field public final A00:LX/380;
-
-.field public final synthetic A01:LX/364;
+.field public final A00:I
 
 
 # direct methods
-.method public constructor <init>(LX/380;LX/364;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
     .line 0
-    iput-object p2, p0, LX/34R;->A01:LX/364;
+    iput p1, p0, LX/34R;->A00:I
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public static A00(I)LX/5ad;
+    .locals 2
+
+    .line 0
+    new-instance v1, LX/34R;
+
+    .line 1
+    .line 2
+    invoke-direct {v1, p0}, LX/34R;-><init>(I)V
 
     .line 3
     .line 4
     .line 5
-    iput-object p1, p0, LX/34R;->A00:LX/380;
+    new-instance v0, LX/5ad;
 
     .line 6
     .line 7
-    return-void
+    invoke-direct {v0, v1}, LX/5ad;-><init>(LX/0Gw;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic AOb(LX/3BE;Ljava/io/InputStream;J)Ljava/lang/Object;
-    .locals 14
+.method public final bridge synthetic invoke()Ljava/lang/Object;
+    .locals 9
 
     .line 0
-    const/4 v5, 0x0
+    iget v0, p0, LX/34R;->A00:I
 
     .line 1
-    move-object/from16 v13, p2
-
     .line 2
-    .line 3
-    invoke-static {v13, v5}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    packed-switch v0, :pswitch_data_0
 
+    .line 3
     .line 4
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    iget-object v8, p0, LX/34R;->A01:LX/364;
+    return-object v0
 
     .line 7
-    .line 8
-    iget-object v6, p0, LX/34R;->A00:LX/380;
+    :pswitch_0
+    sget-object v0, LX/0Gx;->A00:LX/0Gx;
 
+    .line 8
     .line 9
+    return-object v0
+
     .line 10
-    iget-object v10, v8, LX/33x;->A00:LX/368;
+    :pswitch_1
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
 
     .line 11
     .line 12
-    iget-object v4, v6, LX/380;->A00:Ljava/lang/String;
+    return-object v0
 
     .line 13
-    .line 14
-    check-cast v10, LX/37N;
+    :pswitch_2
+    sget-object v0, Lkotlinx/serialization/json/JsonNullSerializer;->A01:Lkotlinx/serialization/json/JsonNullSerializer;
 
+    .line 14
     .line 15
+    return-object v0
+
     .line 16
-    check-cast v10, LX/34X;
+    :pswitch_3
+    sget-object v0, Lkotlinx/serialization/json/JsonArraySerializer;->A00:LX/6Xn;
 
     .line 17
     .line 18
-    iget-object v0, v10, LX/34X;->A05:LX/0Na;
+    return-object v0
 
     .line 19
+    :pswitch_4
+    sget-object v0, Lkotlinx/serialization/json/JsonObjectSerializer;->A00:LX/6Xn;
+
     .line 20
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 21
-    .line 22
-    .line 23
-    move-result-object v7
+    return-object v0
 
+    .line 22
+    :pswitch_5
+    sget-object v0, Lkotlinx/serialization/json/JsonLiteralSerializer;->A00:LX/6Xn;
+
+    .line 23
     .line 24
-    check-cast v7, LX/2TD;
+    return-object v0
 
     .line 25
-    .line 26
-    const/4 v3, 0x0
+    :pswitch_6
+    sget-object v0, Lkotlinx/serialization/json/JsonNullSerializer;->A00:LX/6Xn;
 
+    .line 26
     .line 27
-    if-eqz v7, :cond_7
+    return-object v0
 
     .line 28
-    .line 29
-    iget-object v0, v10, LX/34X;->A01:LX/39M;
+    :pswitch_7
+    sget-object v0, Lkotlinx/serialization/json/JsonPrimitiveSerializer;->A00:LX/6Xn;
 
+    .line 29
     .line 30
+    return-object v0
+
     .line 31
-    invoke-virtual {v0}, LX/39M;->A01()Ljava/lang/String;
+    :pswitch_8
+    sget-object v0, Lcom/shopify/checkout/models/errors/violations/ViolationErrorTypeSerializer;->A00:Lcom/shopify/checkout/models/errors/violations/ViolationErrorTypeSerializer;
 
     .line 32
     .line 33
+    return-object v0
+
     .line 34
-    move-result-object v2
+    :pswitch_9
+    sget-object v0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorCodeSerializer;->A00:Lcom/shopify/checkout/models/errors/violations/InventoryErrorCodeSerializer;
 
     .line 35
-    const-string v1, ".tmp"
-
     .line 36
+    return-object v0
+
     .line 37
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_a
+    sget-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCodeSerializer;->A00:Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCodeSerializer;
 
     .line 38
     .line 39
+    return-object v0
+
     .line 40
-    move-result-object v0
+    :pswitch_b
+    sget-object v0, LX/5jH;->A00:LX/5jH;
 
     .line 41
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 42
-    .line 43
-    .line 44
-    move-result-object v9
+    return-object v0
 
+    .line 43
+    :pswitch_c
+    sget-object v0, Lcom/shopify/checkout/models/errors/UnrecoverableErrorCodeSerializer;->A00:Lcom/shopify/checkout/models/errors/UnrecoverableErrorCodeSerializer;
+
+    .line 44
     .line 45
-    iget-object v7, v7, LX/2TD;->A00:Lcom/facebook/stash/core/FileStash;
+    return-object v0
 
     .line 46
+    :pswitch_d
+    sget-object v0, Lcom/shopify/checkout/models/errors/ErrorGroupSerializer;->A00:Lcom/shopify/checkout/models/errors/ErrorGroupSerializer;
+
     .line 47
-    invoke-interface {v7, v9}, Lcom/facebook/stash/core/FileStash;->insertFile(Ljava/lang/String;)Ljava/io/File;
-
     .line 48
-    .line 49
-    .line 50
-    move-result-object v11
+    return-object v0
 
+    .line 49
+    :pswitch_e
+    sget-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCodeSerializer;->A00:Lcom/shopify/checkout/models/errors/DefaultsErrorCodeSerializer;
+
+    .line 50
     .line 51
-    if-eqz v11, :cond_7
+    return-object v0
 
     .line 52
+    :pswitch_f
+    sget-object v0, Lcom/shopify/checkout/models/errors/CheckoutErrorTypeSerializer;->A00:Lcom/shopify/checkout/models/errors/CheckoutErrorTypeSerializer;
+
     .line 53
-    :try_start_0
-    invoke-static {v11}, LX/0Yj;->A0K(Ljava/io/File;)Ljava/io/FileOutputStream;
-
     .line 54
-    .line 55
-    .line 56
-    move-result-object v12
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+    return-object v0
 
+    .line 55
+    :pswitch_10
+    sget-object v0, Lcom/shopify/checkout/models/ProgressButtonStateSerializer;->A00:Lcom/shopify/checkout/models/ProgressButtonStateSerializer;
+
+    .line 56
     .line 57
-    :try_start_1
-    new-instance v1, Ljava/io/BufferedOutputStream;
+    return-object v0
 
     .line 58
+    :pswitch_11
+    sget-object v0, Lcom/shopify/checkout/models/ProgressButtonStageSerializer;->A00:Lcom/shopify/checkout/models/ProgressButtonStageSerializer;
+
     .line 59
-    invoke-direct {v1, v12}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_4
-
     .line 60
-    .line 61
-    .line 62
-    :try_start_2
-    invoke-static {v13, v1}, LX/2t9;->A00(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    return-object v0
 
+    .line 61
+    :pswitch_12
+    new-instance v0, Lcom/shopify/checkout/models/PayButtonStateSerializer;
+
+    .line 62
     .line 63
+    invoke-direct {v0}, Lcom/shopify/checkout/models/PayButtonStateSerializer;-><init>()V
+
     .line 64
     .line 65
-    invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
-
     .line 66
+    return-object v0
+
     .line 67
+    :pswitch_13
+    sget-object v0, Lcom/shopify/checkout/models/DeliveryMethodSerializer;->A00:Lcom/shopify/checkout/models/DeliveryMethodSerializer;
+
     .line 68
-    invoke-virtual {v12}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
-
     .line 69
-    .line 70
-    .line 71
-    move-result-object v0
+    return-object v0
 
+    .line 70
+    :pswitch_14
+    sget-object v0, Lcom/shopify/checkout/models/AuthenticationVersionSerializer;->A00:Lcom/shopify/checkout/models/AuthenticationVersionSerializer;
+
+    .line 71
     .line 72
-    invoke-virtual {v0}, Ljava/io/FileDescriptor;->sync()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    return-object v0
 
     .line 73
+    :pswitch_15
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
+
     .line 74
     .line 75
-    :try_start_3
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_4
-
     .line 76
+    move-result-object v0
+
     .line 77
+    return-object v0
+
     .line 78
-    :try_start_4
-    invoke-virtual {v12}, Ljava/io/OutputStream;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+    :pswitch_16
+    invoke-static {}, LX/345;->access$getBuildType$cp()LX/345;
 
     .line 79
     .line 80
     .line 81
-    invoke-interface {v7, v2}, Lcom/facebook/stash/core/FileStash;->insertFile(Ljava/lang/String;)Ljava/io/File;
-
-    .line 82
-    .line 83
-    .line 84
-    move-result-object v3
-
-    .line 85
-    if-nez v3, :cond_0
-
-    .line 86
-    .line 87
-    const/4 v3, 0x0
-
-    .line 88
-    goto/16 :goto_2
-
-    .line 89
-    .line 90
-    :cond_0
-    :try_start_5
-    invoke-static {v11}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
-
-    .line 91
-    .line 92
-    .line 93
-    move-result-object v1
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
-
-    .line 94
-    :try_start_6
-    const-string v0, "MD5"
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    .line 95
-    .line 96
-    :try_start_7
-    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
-
-    .line 97
-    .line 98
-    .line 99
-    move-result-object v13
-
-    .line 100
-    const/16 v0, 0x1000
-
-    .line 101
-    .line 102
-    new-array v12, v0, [B
-
-    .line 103
-    .line 104
-    :goto_0
-    invoke-virtual {v1, v12}, Ljava/io/InputStream;->read([B)I
-
-    .line 105
-    .line 106
-    .line 107
-    move-result v0
-
-    .line 108
-    if-lez v0, :cond_1
-
-    .line 109
-    .line 110
-    invoke-virtual {v13, v12, v5, v0}, Ljava/security/MessageDigest;->update([BII)V
-
-    .line 111
-    .line 112
-    .line 113
-    goto :goto_0
-
-    .line 114
-    :cond_1
-    invoke-virtual {v13}, Ljava/security/MessageDigest;->digest()[B
-
-    .line 115
-    .line 116
-    .line 117
     move-result-object v0
 
+    .line 82
+    if-nez v0, :cond_1
+
+    .line 83
+    .line 84
+    sget-object v1, LX/345;->Companion:LX/0eH;
+
+    .line 85
+    .line 86
+    monitor-enter v1
+
+    .line 87
+    :try_start_0
+    invoke-static {}, LX/345;->access$getBuildType$cp()LX/345;
+
+    .line 88
+    .line 89
+    .line 90
+    move-result-object v0
+
+    .line 91
+    if-nez v0, :cond_0
+
+    .line 92
+    .line 93
+    sget-object v0, LX/345;->DEBUG:LX/345;
+
+    .line 94
+    .line 95
+    invoke-static {v0}, LX/345;->access$setBuildType$cp(LX/345;)V
+
+    .line 96
+    .line 97
+    .line 98
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 99
+    :catchall_0
+    move-exception v0
+
+    .line 100
+    monitor-exit v1
+
+    .line 101
+    throw v0
+
+    .line 102
+    :cond_0
+    :goto_0
+    monitor-exit v1
+
+    .line 103
+    :cond_1
+    invoke-static {}, LX/345;->access$getBuildType$cp()LX/345;
+
+    .line 104
+    .line 105
+    .line 106
+    move-result-object v0
+
+    .line 107
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 108
+    .line 109
+    .line 110
+    return-object v0
+
+    .line 111
+    :pswitch_17
+    const-string v0, "AndroidKeyStore"
+
+    .line 112
+    .line 113
+    invoke-static {v0}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object v0
+
+    .line 117
+    const/4 v1, 0x0
+
     .line 118
-    invoke-static {v0}, LX/0JH;->A01([B)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
 
     .line 119
     .line 120
     .line 121
-    move-result-object v0
-    :try_end_7
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_7 .. :try_end_7} :catch_1
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_7 .. :try_end_7} :catch_0
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+    return-object v0
 
     .line 122
-    :try_start_8
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :pswitch_18
+    move-object v8, p0
 
     .line 123
+    monitor-enter v8
+
     .line 124
+    :try_start_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
     .line 125
-    move-result v0
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
-
     .line 126
-    :try_start_9
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-
     .line 127
-    .line 128
-    .line 129
-    if-eqz v0, :cond_3
-    :try_end_9
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
+    move-result-wide v1
 
+    .line 128
+    invoke-static {}, LX/3p2;->A01()Ljava/security/KeyStore;
+
+    .line 129
     .line 130
     .line 131
-    invoke-virtual {v11, v3}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+    move-result-object v0
 
     .line 132
+    invoke-virtual {v0}, Ljava/security/KeyStore;->aliases()Ljava/util/Enumeration;
+
     .line 133
     .line 134
-    move-result v0
-
     .line 135
-    if-eqz v0, :cond_3
+    move-result-object v3
 
     .line 136
-    .line 137
-    iget-object v11, v10, LX/34X;->A02:LX/34g;
+    invoke-static {v3}, LX/0WV;->A04(Ljava/lang/Object;)V
 
+    .line 137
     .line 138
     .line 139
-    iget-object v0, v11, LX/34g;->A03:LX/0Na;
+    new-instance v0, LX/0Gz;
 
     .line 140
     .line 141
-    invoke-static {v0}, LX/0Yd;->A0B(LX/0Na;)LX/1hU;
+    invoke-direct {v0, v3}, LX/0Gz;-><init>(Ljava/util/Enumeration;)V
 
     .line 142
     .line 143
     .line 144
-    move-result-object v10
+    invoke-static {v0}, LX/0yZ;->A00(Ljava/util/Iterator;)LX/340;
 
     .line 145
-    iget-object v0, v11, LX/34g;->A01:LX/1b2;
-
     .line 146
     .line 147
-    if-nez v0, :cond_2
+    move-result-object v5
 
     .line 148
+    const/4 v6, 0x0
+
     .line 149
-    const-string/jumbo v2, "md5"
+    new-instance v0, LX/3ik;
 
     .line 150
     .line 151
-    .line 152
-    sget-object v1, LX/1b0;->A04:LX/1b2;
+    invoke-direct {v0, v6}, LX/3ik;-><init>(I)V
 
+    .line 152
     .line 153
     .line 154
-    iget-object v0, v11, LX/3Ld;->A00:Ljava/lang/String;
+    invoke-static {v5, v6}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 155
     .line 156
-    invoke-static {v1, v0, v2}, LX/1b3;->A08(LX/1b3;Ljava/lang/String;Ljava/lang/String;)LX/1b2;
-
     .line 157
-    .line 158
-    .line 159
-    move-result-object v0
+    const/4 v4, 0x1
 
+    .line 158
+    new-instance v3, LX/1Bs;
+
+    .line 159
     .line 160
-    iput-object v0, v11, LX/34g;->A01:LX/1b2;
+    invoke-direct {v3, v0, v5, v4}, LX/1Bs;-><init>(LX/0GZ;LX/3ii;Z)V
 
     .line 161
     .line 162
-    :cond_2
-    invoke-interface {v10, v0, v4}, LX/1hU;->AhJ(LX/1b2;Ljava/lang/String;)LX/2O0;
-
     .line 163
+    new-instance v0, LX/3ik;
+
     .line 164
     .line 165
-    invoke-interface {v10}, LX/1hU;->commit()V
+    invoke-direct {v0, v4}, LX/3ik;-><init>(I)V
 
     .line 166
     .line 167
     .line 168
-    invoke-virtual {v11, v3}, LX/34g;->A00(Ljava/io/File;)V
+    new-instance v4, LX/3if;
 
     .line 169
     .line 170
+    invoke-direct {v4, v0, v3}, LX/3if;-><init>(LX/0GZ;LX/3ii;)V
+
     .line 171
-    goto :goto_2
-
     .line 172
-    :catch_0
-    :try_start_a
-    move-exception v0
-
     .line 173
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    const/4 v3, 0x3
 
     .line 174
+    new-instance v0, LX/3ik;
+
     .line 175
     .line 176
-    move-result-object v0
+    invoke-direct {v0, v3}, LX/3ik;-><init>(I)V
 
     .line 177
-    goto :goto_1
-
     .line 178
-    :catch_1
-    move-exception v0
-
     .line 179
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    new-instance v5, LX/1Bs;
 
     .line 180
     .line 181
+    invoke-direct {v5, v0, v4, v6}, LX/1Bs;-><init>(LX/0GZ;LX/3ii;Z)V
+
     .line 182
-    move-result-object v0
-
     .line 183
-    :goto_1
-    throw v0
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_0
-
     .line 184
-    :catchall_0
-    move-exception v0
+    const/4 v0, 0x2
 
     .line 185
-    :try_start_b
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_1
+    new-instance v4, LX/3ik;
 
     .line 186
     .line 187
+    invoke-direct {v4, v0}, LX/3ik;-><init>(I)V
+
     .line 188
-    :catchall_1
-    :try_start_c
-    throw v0
-    :try_end_c
-    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_2
-
     .line 189
-    :catch_2
-    :cond_3
-    const-class v1, LX/37N;
-
     .line 190
+    const/4 v3, 0x1
+
     .line 191
-    const-string v0, "Unable to copy temp file to new location"
+    new-instance v0, LX/1Bs;
 
     .line 192
     .line 193
-    invoke-static {v1, v0}, LX/0Jt;->A02(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v4, v5, v3}, LX/1Bs;-><init>(LX/0GZ;LX/3ii;Z)V
 
     .line 194
     .line 195
     .line 196
-    invoke-interface {v7, v2}, Lcom/facebook/stash/core/Stash;->remove(Ljava/lang/String;)Z
+    new-instance v7, LX/343;
 
     .line 197
     .line 198
+    invoke-direct {v7, v0}, LX/343;-><init>(LX/1Bs;)V
+
     .line 199
-    goto :goto_2
-
     .line 200
-    :catchall_2
-    move-exception v0
-
     .line 201
-    :try_start_d
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_d
-    .catchall {:try_start_d .. :try_end_d} :catchall_3
+    :goto_1
+    invoke-virtual {v7}, LX/343;->hasNext()Z
 
     .line 202
     .line 203
     .line 204
-    :catchall_3
-    :try_start_e
-    throw v0
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_4
+    move-result v0
 
     .line 205
-    :catchall_4
-    move-exception v0
+    const-string v6, "W3C_PAYMENT_ENCRYPTION_KEY_"
 
     .line 206
-    :try_start_f
-    invoke-virtual {v12}, Ljava/io/OutputStream;->close()V
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_5
-
     .line 207
+    if-eqz v0, :cond_2
+
     .line 208
     .line 209
-    :catchall_5
-    :try_start_10
-    throw v0
-    :try_end_10
-    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_3
+    invoke-virtual {v7}, LX/343;->next()Ljava/lang/Object;
 
     .line 210
-    :catch_3
-    move-exception v2
-
     .line 211
-    move-object v1, v2
-
     .line 212
-    :cond_4
-    instance-of v0, v1, Lcom/facebook/tigon/TigonErrorException;
+    move-result-object v0
 
     .line 213
-    .line 214
-    if-nez v0, :cond_5
+    invoke-static {v0}, LX/001;->A02(Ljava/lang/Object;)J
 
+    .line 214
     .line 215
     .line 216
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    move-result-wide v4
 
     .line 217
+    invoke-static {}, LX/3p2;->A01()Ljava/security/KeyStore;
+
     .line 218
     .line 219
-    move-result-object v1
-
     .line 220
-    if-nez v1, :cond_4
+    move-result-object v3
 
     .line 221
-    .line 222
-    const-class v1, LX/37N;
+    invoke-static {v6, v4, v5}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
+    .line 222
     .line 223
     .line 224
-    const-string v0, "Unable to copy stream to temp file"
+    move-result-object v0
 
     .line 225
-    .line 226
-    invoke-static {v1, v0, v2}, LX/0Jt;->A05(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v3, v0}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
 
+    .line 226
     .line 227
     .line 228
+    goto :goto_1
+
     .line 229
-    :cond_5
-    :goto_2
-    invoke-interface {v7, v9}, Lcom/facebook/stash/core/Stash;->remove(Ljava/lang/String;)Z
+    :cond_2
+    invoke-static {}, LX/3p2;->A01()Ljava/security/KeyStore;
 
     .line 230
     .line 231
     .line 232
-    if-eqz v3, :cond_7
+    move-result-object v0
 
     .line 233
-    .line 234
-    invoke-virtual {v3}, Ljava/io/File;->isFile()Z
+    invoke-virtual {v0}, Ljava/security/KeyStore;->aliases()Ljava/util/Enumeration;
 
+    .line 234
     .line 235
     .line 236
+    move-result-object v3
+
     .line 237
-    move-result v0
+    invoke-static {v3}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 238
-    if-eqz v0, :cond_7
-
     .line 239
     .line 240
-    iget-object v2, v8, LX/33x;->A01:LX/34S;
+    new-instance v0, LX/0Gz;
 
     .line 241
     .line 242
-    if-eqz v2, :cond_6
+    invoke-direct {v0, v3}, LX/0Gz;-><init>(Ljava/util/Enumeration;)V
 
     .line 243
     .line 244
-    iget-object v0, v2, LX/34S;->A01:LX/37N;
-
     .line 245
-    .line 246
-    check-cast v0, LX/34X;
+    invoke-static {v0}, LX/0yZ;->A00(Ljava/util/Iterator;)LX/340;
 
+    .line 246
     .line 247
     .line 248
-    iget-object v0, v0, LX/34X;->A03:LX/4iB;
-
-    .line 249
-    .line 250
-    invoke-interface {v0, v3}, LX/4iB;->A7U(Ljava/io/File;)Ljava/lang/Object;
-
-    .line 251
-    .line 252
-    .line 253
     move-result-object v0
 
-    .line 254
-    iget-object v1, v2, LX/34S;->A02:Ljava/util/concurrent/atomic/AtomicReference;
+    .line 249
+    invoke-virtual {v0}, LX/340;->iterator()Ljava/util/Iterator;
 
+    .line 250
+    .line 251
+    .line 252
+    move-result-object v4
+
+    .line 253
+    :cond_3
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 254
     .line 255
     .line 256
-    monitor-enter v1
+    move-result v0
 
     .line 257
-    :try_start_11
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    if-eqz v0, :cond_4
 
     .line 258
     .line 259
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 260
-    const/4 v0, 0x2
-
     .line 261
-    iput v0, v2, LX/34S;->A04:I
-
     .line 262
+    move-result-object v3
+
     .line 263
-    monitor-exit v1
+    invoke-static {v6, v1, v2}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
     .line 264
-    goto :goto_3
-    :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_6
-
     .line 265
-    :catchall_6
-    move-exception v0
-
     .line 266
-    :try_start_12
-    monitor-exit v1
-    :try_end_12
-    .catchall {:try_start_12 .. :try_end_12} :catchall_6
-
-    .line 267
-    throw v0
-
-    .line 268
-    :goto_3
-    check-cast v2, LX/34P;
-
-    .line 269
-    .line 270
-    iget-object v0, v2, LX/34P;->A01:LX/0Na;
-
-    .line 271
-    .line 272
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 273
-    .line 274
-    .line 275
     move-result-object v0
 
+    .line 267
+    invoke-static {v3, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 268
+    .line 269
+    .line 270
+    move-result v0
+
+    .line 271
+    if-eqz v0, :cond_3
+
+    .line 272
+    .line 273
+    if-eqz v3, :cond_4
+
+    .line 274
+    .line 275
+    const-string v0, "Please throttle your call, not more than one key per millisecond. Timestamp:"
+
     .line 276
-    check-cast v0, Lcom/facebook/device/DeviceConditionHelper;
-
     .line 277
-    .line 278
-    iget-object v0, v0, Lcom/facebook/device/DeviceConditionHelper;->A02:Ljava/util/concurrent/ConcurrentMap;
+    invoke-static {v0, v1, v2}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
+    .line 278
     .line 279
     .line 280
-    invoke-interface {v0, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
     .line 281
+    new-instance v0, Ljava/lang/SecurityException;
+
     .line 282
     .line 283
-    :cond_6
-    iget-object v0, v6, LX/380;->A01:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     .line 284
     .line 285
-    new-instance v1, LX/36f;
-
     .line 286
+    throw v0
+
     .line 287
-    invoke-direct {v1, v3, v0, v4, v5}, LX/36f;-><init>(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Z)V
+    :cond_4
+    new-instance v0, LX/279;
 
     .line 288
     .line 289
+    invoke-direct {v0, v1, v2}, LX/279;-><init>(J)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
     .line 290
-    return-object v1
-
     .line 291
-    :cond_7
-    const/4 v1, 0x0
-
     .line 292
-    return-object v1
+    monitor-exit v8
+
+    .line 293
+    return-object v0
+
+    .line 294
+    :catchall_1
+    move-exception v0
+
+    .line 295
+    monitor-exit v8
+
+    .line 296
+    throw v0
+
+    .line 297
+    :pswitch_19
+    new-instance v0, LX/3p3;
+
+    .line 298
+    .line 299
+    invoke-direct {v0}, LX/3p3;-><init>()V
+
+    .line 300
+    .line 301
+    .line 302
+    return-object v0
+
+    .line 303
+    :pswitch_1a
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 304
+    .line 305
+    .line 306
+    move-result-object v0
+
+    .line 307
+    const-string v2, "CHECKOUT_ERROR"
+
+    .line 308
+    .line 309
+    const-string v1, "Proactive checkout is not supported for this user."
+
+    .line 310
+    .line 311
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 312
+    .line 313
+    .line 314
+    const-string v2, "SECURITY_ERROR"
+
+    .line 315
+    .line 316
+    const-string v1, "Security domain mismatch. Payment availability and request are from different domains."
+
+    .line 317
+    .line 318
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 319
+    .line 320
+    .line 321
+    const-string v2, "ABORTED"
+
+    .line 322
+    .line 323
+    const-string v1, "User cancelled checkout."
+
+    .line 324
+    .line 325
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 326
+    .line 327
+    .line 328
+    const-string/jumbo v2, "\u201cMULTIPLE_CHECKOUT_REQUEST"
+
+    .line 329
+    .line 330
+    .line 331
+    const-string v1, "Payment checkout request issued when there is an outstanding request."
+
+    .line 332
+    .line 333
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 334
+    .line 335
+    .line 336
+    const-string v2, "INTERNAL_ERROR"
+
+    .line 337
+    .line 338
+    const-string v1, "There was an internal error."
+
+    .line 339
+    .line 340
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 341
+    .line 342
+    .line 343
+    const-string v2, "CHECKOUT_ERROR_RISK"
+
+    .line 344
+    .line 345
+    const-string v1, "Risk assessment blocked payment request."
+
+    .line 346
+    .line 347
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 348
+    .line 349
+    .line 350
+    const-string v2, "PARTNER_MISMATCH"
+
+    .line 351
+    .line 352
+    const-string v1, "Partner id mismatch. Payment availability and requests are using different partner id."
+
+    .line 353
+    .line 354
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 355
+    .line 356
+    .line 357
+    const-string v2, "MERCHANT_MISMATCH"
+
+    .line 358
+    .line 359
+    const-string v1, "Merchant id mismatch. Payment availability and requests are using different merchant id."
+
+    .line 360
+    .line 361
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 362
+    .line 363
+    .line 364
+    const-string v2, "CHECKOUT_UNAVAILABLE"
+
+    .line 365
+    .line 366
+    const-string v1, "Checkout requested when unavailable."
+
+    .line 367
+    .line 368
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 369
+    .line 370
+    .line 371
+    const-string v2, "PAYMENT_MODE_MISMATCH"
+
+    .line 372
+    .line 373
+    const-string v1, "Payment mode mismatch. Payment availability and payment request have different modes."
+
+    .line 374
+    .line 375
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 376
+    .line 377
+    .line 378
+    const-string v2, "ECP_LAUNCH_PARAMS_NULL"
+
+    .line 379
+    .line 380
+    const-string v1, "ECPPaymentRequest was null."
+
+    .line 381
+    .line 382
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 383
+    .line 384
+    .line 385
+    const-string v2, "DISMISSED_FOR_SESSION"
+
+    .line 386
+    .line 387
+    const-string v1, "User has dismissed Meta payment for this browser session."
+
+    .line 388
+    .line 389
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 390
+    .line 391
+    .line 392
+    return-object v0
+
+    .line 393
+    :pswitch_1b
+    sget-object v1, LX/1GN;->A0B:LX/1GO;
+
+    .line 394
+    .line 395
+    const-string/jumbo v0, "zero_sdk/"
+
+    .line 396
+    .line 397
+    .line 398
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 399
+    .line 400
+    .line 401
+    move-result-object v0
+
+    .line 402
+    return-object v0
+
+    .line 403
+    :pswitch_1c
+    sget-object v1, LX/1GN;->A04:LX/28F;
+
+    .line 404
+    .line 405
+    const-string/jumbo v0, "zero_rating2/"
+
+    .line 406
+    .line 407
+    .line 408
+    invoke-static {v1, v0}, LX/28G;->A03(LX/28G;Ljava/lang/String;)LX/28G;
+
+    .line 409
+    .line 410
+    .line 411
+    move-result-object v0
+
+    .line 412
+    return-object v0
+
+    .line 413
+    :pswitch_1d
+    sget-object v1, LX/1GN;->A06:LX/28F;
+
+    .line 414
+    .line 415
+    const-string/jumbo v0, "zero/dogfood_id"
+
+    .line 416
+    .line 417
+    .line 418
+    invoke-static {v1, v0}, LX/28G;->A03(LX/28G;Ljava/lang/String;)LX/28G;
+
+    .line 419
+    .line 420
+    .line 421
+    move-result-object v0
+
+    .line 422
+    return-object v0
+
+    .line 423
+    :pswitch_1e
+    sget-object v1, LX/1GN;->A0B:LX/1GO;
+
+    .line 424
+    .line 425
+    const-string/jumbo v0, "dialtone/"
+
+    .line 426
+    .line 427
+    .line 428
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 429
+    .line 430
+    .line 431
+    move-result-object v0
+
+    .line 432
+    return-object v0
+
+    .line 433
+    :pswitch_1f
+    invoke-static {}, LX/0X6;->A0f()Ljava/lang/Long;
+
+    .line 434
+    .line 435
+    .line 436
+    move-result-object v0
+
+    .line 437
+    return-object v0
+
+    .line 438
+    :pswitch_20
+    sget-object v0, LX/2xf;->A00:LX/2xf;
+
+    .line 439
+    .line 440
+    monitor-enter v0
+
+    .line 441
+    monitor-exit v0
+
+    .line 442
+    const/4 v0, 0x0
+
+    .line 443
+    return-object v0
+
+    .line 444
+    :pswitch_21
+    sget-object v0, LX/1pf;->A0F:LX/3gS;
+
+    .line 445
+    .line 446
+    invoke-static {v0}, LX/0X6;->A0m(LX/3gS;)Ljava/lang/Object;
+
+    .line 447
+    .line 448
+    .line 449
+    move-result-object v1
+
+    .line 450
+    check-cast v1, LX/28G;
+
+    .line 451
+    .line 452
+    const-string/jumbo v0, "switcher_nux_interstitial_seen"
+
+    .line 453
+    .line 454
+    .line 455
+    invoke-static {v1, v0}, LX/28G;->A03(LX/28G;Ljava/lang/String;)LX/28G;
+
+    .line 456
+    .line 457
+    .line 458
+    move-result-object v0
+
+    .line 459
+    return-object v0
+
+    .line 460
+    :pswitch_22
+    const-string/jumbo v0, "internalLogger"
+
+    .line 461
+    .line 462
+    .line 463
+    invoke-static {v0}, LX/0WV;->A0F(Ljava/lang/String;)V
+
+    .line 464
+    .line 465
+    .line 466
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 467
+    .line 468
+    .line 469
+    move-result-object v0
+
+    .line 470
+    throw v0
+
+    .line 471
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1f
+        :pswitch_1e
+        :pswitch_21
+        :pswitch_1d
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_22
+        :pswitch_16
+        :pswitch_0
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_20
+        :pswitch_1
+    .end packed-switch
 .end method

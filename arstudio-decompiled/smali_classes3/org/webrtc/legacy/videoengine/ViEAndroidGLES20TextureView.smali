@@ -94,198 +94,131 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
 
-    .line 536870912
+    .line 537661606
     invoke-direct {p0, p1}, Lorg/webrtc/legacy/videoengine/GLTextureView;-><init>(Landroid/content/Context;)V
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
     const/4 v4, 0x0
 
-    .line 536870916
+    .line 537661607
     iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->surfaceCreated:Z
 
-    .line 536870917
-    .line 536870918
+    .line 537661608
     iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mRendererSetupDone:Z
 
-    .line 536870919
-    .line 536870920
+    .line 537661609
     iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->nativeFunctionsRegisted:Z
 
-    .line 536870921
-    .line 536870922
+    .line 537661610
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 536870923
-    .line 536870924
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    .line 536870925
-    .line 536870926
-    .line 536870927
     iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->nativeFunctionLock:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 536870928
-    .line 536870929
     const-wide/16 v1, 0x0
 
-    .line 536870930
-    .line 536870931
+    .line 537661611
     iput-wide v1, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->nativeObject:J
 
-    .line 536870932
-    .line 536870933
+    .line 537661612
     iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mVideoWidth:I
 
-    .line 536870934
-    .line 536870935
+    .line 537661613
     iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mVideoHeight:I
 
-    .line 536870936
-    .line 536870937
+    .line 537661614
     iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mRawVideoWidth:I
 
-    .line 536870938
-    .line 536870939
+    .line 537661615
     iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mRawVideoHeight:I
 
-    .line 536870940
-    .line 536870941
+    .line 537661616
     iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mCustomVideoSize:Z
 
-    .line 536870942
-    .line 536870943
+    .line 537661617
     sget-object v0, Lcom/facebook/common/time/AwakeTimeSinceBootClock;->INSTANCE:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
 
-    .line 536870944
-    .line 536870945
+    .line 537661618
     iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mClock:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
 
-    .line 536870946
-    .line 536870947
     const/4 v3, 0x0
 
-    .line 536870948
+    .line 537661619
     iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mOneShotDrawListener:Lorg/webrtc/legacy/videoengine/OneShotDrawListener;
 
-    .line 536870949
-    .line 536870950
+    .line 537661620
     iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mOneShotReDrawListener:Lorg/webrtc/legacy/videoengine/OneShotReDrawListener;
 
-    .line 536870951
-    .line 536870952
+    .line 537661621
     iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mVideoSizeChangedListener:Lorg/webrtc/legacy/videoengine/VideoSizeChangedListener;
 
-    .line 536870953
-    .line 536870954
+    .line 537661622
     iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mScaleType:I
 
-    .line 536870955
-    .line 536870956
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    .line 537661623
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
-    .line 536870957
-    .line 536870958
-    .line 536870959
     move-result-object v0
 
-    .line 536870960
+    .line 537661624
     iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mNativeSnapshotHelperLock:Ljava/lang/Object;
 
-    .line 536870961
-    .line 536870962
+    .line 537661625
     new-instance v0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView$ContextFactory;
 
-    .line 536870963
-    .line 536870964
     invoke-direct {v0, v3}, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView$ContextFactory;-><init>(Lorg/webrtc/legacy/EglBase$Context;)V
 
-    .line 536870965
-    .line 536870966
-    .line 536870967
     iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mContextFactory:Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView$ContextFactory;
 
-    .line 536870968
-    .line 536870969
+    .line 537661626
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 536870970
-    .line 536870971
     invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
 
-    .line 536870972
-    .line 536870973
-    .line 536870974
     iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mLastRedrawTime:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 536870975
-    .line 536870976
     const/4 v0, 0x0
 
-    .line 536870977
+    .line 537661627
     iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mGlClearRed:F
 
-    .line 536870978
-    .line 536870979
+    .line 537661628
     iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mGlClearGreen:F
 
-    .line 536870980
-    .line 536870981
+    .line 537661629
     iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mGlClearBlue:F
 
-    .line 536870982
-    .line 536870983
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 536870984
-    .line 536870985
+    .line 537661630
     iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mGlClearAlpha:F
 
-    .line 536870986
-    .line 536870987
-    invoke-static {v4}, LX/0Yj;->A0j(I)Ljava/util/concurrent/atomic/AtomicInteger;
+    .line 537661631
+    invoke-static {v4}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 536870988
-    .line 536870989
-    .line 536870990
     move-result-object v0
 
-    .line 536870991
+    .line 537661632
     iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mFramesDrawn:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 536870992
-    .line 536870993
+    .line 537661633
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 536870994
-    .line 536870995
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    .line 536870996
-    .line 536870997
-    .line 536870998
     iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mFirstFrameTime:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 536870999
-    .line 536871000
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    .line 537661634
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
-    .line 536871001
-    .line 536871002
-    .line 536871003
     move-result-object v0
 
-    .line 536871004
+    .line 537661635
     iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->mUiHandler:Landroid/os/Handler;
 
-    .line 536871005
-    .line 536871006
+    .line 537661636
     invoke-virtual {p0, p1, v3}, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20TextureView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 536871007
-    .line 536871008
-    .line 536871009
     return-void
 .end method
 
@@ -381,7 +314,7 @@
 
     .line 43
     .line 44
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 45
     .line 46
@@ -442,7 +375,7 @@
 
     .line 74
     .line 75
-    invoke-static {v4}, LX/0Yj;->A0j(I)Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {v4}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 76
     .line 77
@@ -467,7 +400,7 @@
 
     .line 87
     .line 88
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 89
     .line 90
@@ -579,7 +512,7 @@
 
     .line 268435499
     .line 268435500
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 268435501
     .line 268435502
@@ -640,7 +573,7 @@
 
     .line 268435530
     .line 268435531
-    invoke-static {v4}, LX/0Yj;->A0j(I)Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {v4}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 268435532
     .line 268435533
@@ -665,7 +598,7 @@
 
     .line 268435543
     .line 268435544
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 268435545
     .line 268435546
@@ -1296,24 +1229,24 @@
 
     .line 9
     .line 10
-    sget-object v1, LX/6O0;->NATIVE_PHOTOSNAPSHOT_SOURCE_ERROR:LX/6O0;
+    sget-object v1, LX/6cZ;->NATIVE_PHOTOSNAPSHOT_SOURCE_ERROR:LX/6cZ;
 
     .line 11
     .line 12
-    new-instance v0, LX/6L3;
+    new-instance v0, LX/6aA;
 
     .line 13
     .line 14
-    invoke-direct {v0, v1, v2}, LX/6L3;-><init>(LX/6O0;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, LX/6aA;-><init>(LX/6cZ;Ljava/lang/String;)V
 
     .line 15
     .line 16
     .line 17
-    new-instance v2, LX/1xE;
+    new-instance v2, LX/26U;
 
     .line 18
     .line 19
-    invoke-direct {v2, v0}, LX/1xE;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v2, v0}, LX/26U;-><init>(Ljava/lang/Throwable;)V
 
     .line 20
     .line 21
@@ -1495,7 +1428,7 @@
 
     .line 1
     .line 2
-    sget-object v0, LX/4OX;->A0v:[I
+    sget-object v0, LX/6ZZ;->A0v:[I
 
     .line 3
     .line 4

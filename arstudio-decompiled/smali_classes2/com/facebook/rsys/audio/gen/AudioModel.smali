@@ -24,9 +24,11 @@
 
 .field public final noiseSuppressionOn:Z
 
+.field public final shouldResetNsAecAlgorithms:Z
+
 
 # direct methods
-.method public constructor <init>(IZZZILjava/util/ArrayList;ZILjava/util/ArrayList;Z)V
+.method public constructor <init>(IZZZZILjava/util/ArrayList;ZILjava/util/ArrayList;Z)V
     .locals 1
 
     .line 0
@@ -43,92 +45,101 @@
     move-result-object v0
 
     .line 7
-    invoke-static {v0, p2, p3}, LX/0Yc;->A1S(Ljava/lang/Object;ZZ)V
+    invoke-static {v0, p2, p3}, LX/0X1;->A1M(Ljava/lang/Object;ZZ)V
 
     .line 8
     .line 9
     .line 10
-    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p4}, LX/0X4;->A1H(Z)V
 
     .line 11
     .line 12
     .line 13
-    move-result-object v0
+    invoke-static {p5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 14
-    invoke-static {v0, p5}, LX/0Yd;->A0l(Ljava/lang/Object;I)V
-
     .line 15
     .line 16
+    move-result-object v0
+
     .line 17
-    invoke-virtual {p6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, p6}, LX/0X2;->A1D(Ljava/lang/Object;I)V
 
     .line 18
     .line 19
     .line 20
-    invoke-static {p7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 21
     .line 22
     .line 23
-    move-result-object v0
+    invoke-static {p8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 24
-    invoke-static {v0, p8}, LX/0Yd;->A0l(Ljava/lang/Object;I)V
-
     .line 25
     .line 26
+    move-result-object v0
+
     .line 27
-    invoke-virtual {p9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, p9}, LX/0X2;->A1D(Ljava/lang/Object;I)V
 
     .line 28
     .line 29
     .line 30
-    invoke-static {p10}, LX/0Yf;->A1H(Z)V
+    invoke-virtual {p10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 31
     .line 32
     .line 33
-    iput p1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->audioActivationState:I
+    invoke-static {p11}, LX/0X4;->A1H(Z)V
 
     .line 34
     .line 35
+    .line 36
+    iput p1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->audioActivationState:I
+
+    .line 37
+    .line 38
     iput-boolean p2, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->micOnDesired:Z
 
-    .line 36
-    .line 37
+    .line 39
+    .line 40
     iput-boolean p3, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->micOn:Z
 
-    .line 38
-    .line 39
+    .line 41
+    .line 42
     iput-boolean p4, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->noiseSuppressionOn:Z
 
-    .line 40
-    .line 41
-    iput p5, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
-
-    .line 42
     .line 43
-    iput-object p6, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
-
     .line 44
+    iput-boolean p5, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->shouldResetNsAecAlgorithms:Z
+
     .line 45
-    iput-boolean p7, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
-
     .line 46
+    iput p6, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
+
     .line 47
-    iput p8, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
-
     .line 48
+    iput-object p7, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
+
     .line 49
-    iput-object p9, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
-
     .line 50
-    .line 51
-    iput-boolean p10, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
+    iput-boolean p8, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
 
+    .line 51
     .line 52
+    iput p9, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
+
     .line 53
+    .line 54
+    iput-object p10, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
+
+    .line 55
+    .line 56
+    iput-boolean p11, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
+
+    .line 57
+    .line 58
     return-void
 .end method
 
@@ -218,11 +229,11 @@
 
     .line 34
     .line 35
-    iget v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
+    iget-boolean v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->shouldResetNsAecAlgorithms:Z
 
     .line 36
     .line 37
-    iget v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
+    iget-boolean v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->shouldResetNsAecAlgorithms:Z
 
     .line 38
     .line 39
@@ -230,43 +241,43 @@
 
     .line 40
     .line 41
-    iget-object v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
+    iget v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
 
     .line 42
     .line 43
-    iget-object v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
+    iget v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
 
     .line 44
     .line 45
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v0, :cond_1
 
     .line 46
     .line 47
-    .line 48
-    move-result v0
+    iget-object v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
 
+    .line 48
     .line 49
-    if-eqz v0, :cond_1
+    iget-object v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
 
     .line 50
     .line 51
-    iget-boolean v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 52
     .line 53
-    iget-boolean v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
-
     .line 54
+    move-result v0
+
     .line 55
-    if-ne v1, v0, :cond_1
+    if-eqz v0, :cond_1
 
     .line 56
     .line 57
-    iget v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
+    iget-boolean v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
 
     .line 58
     .line 59
-    iget v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
+    iget-boolean v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
 
     .line 60
     .line 61
@@ -274,45 +285,57 @@
 
     .line 62
     .line 63
-    iget-object v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
+    iget v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
 
     .line 64
     .line 65
-    iget-object v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
+    iget v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
 
     .line 66
     .line 67
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v0, :cond_1
 
     .line 68
     .line 69
-    .line 70
-    move-result v0
+    iget-object v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
 
+    .line 70
     .line 71
-    if-eqz v0, :cond_1
+    iget-object v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
 
     .line 72
     .line 73
-    iget-boolean v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 74
     .line 75
-    iget-boolean v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
-
     .line 76
+    move-result v0
+
     .line 77
-    if-ne v1, v0, :cond_1
+    if-eqz v0, :cond_1
 
     .line 78
     .line 79
-    return v2
+    iget-boolean v1, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
 
     .line 80
+    .line 81
+    iget-boolean v0, p1, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
+
+    .line 82
+    .line 83
+    if-ne v1, v0, :cond_1
+
+    .line 84
+    .line 85
+    return v2
+
+    .line 86
     :cond_1
     const/4 v2, 0x0
 
-    .line 81
+    .line 87
     :cond_2
     return v2
 .end method
@@ -325,7 +348,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A00(I)I
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 3
     .line 4
@@ -366,7 +389,7 @@
 
     .line 20
     .line 21
-    iget v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
+    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->shouldResetNsAecAlgorithms:Z
 
     .line 22
     .line 23
@@ -377,30 +400,30 @@
 
     .line 25
     .line 26
-    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
+    iget v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
 
     .line 27
     .line 28
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
-
-    .line 29
-    .line 30
-    .line 31
-    move-result v1
-
-    .line 32
-    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
-
-    .line 33
-    .line 34
     add-int/2addr v1, v0
 
-    .line 35
+    .line 29
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 30
+    .line 31
+    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
+
+    .line 32
+    .line 33
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
+
+    .line 34
+    .line 35
     .line 36
+    move-result v1
+
     .line 37
-    iget v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
+    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
 
     .line 38
     .line 39
@@ -411,25 +434,36 @@
 
     .line 41
     .line 42
-    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
+    iget v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
 
     .line 43
     .line 44
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
-
-    .line 45
-    .line 46
-    .line 47
-    move-result v1
-
-    .line 48
-    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
-
-    .line 49
-    .line 50
     add-int/2addr v1, v0
 
+    .line 45
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 46
+    .line 47
+    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
+
+    .line 48
+    .line 49
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
+
+    .line 50
     .line 51
+    .line 52
+    move-result v1
+
+    .line 53
+    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
+
+    .line 54
+    .line 55
+    add-int/2addr v1, v0
+
+    .line 56
     return v1
 .end method
 
@@ -437,7 +471,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -517,7 +551,7 @@
     .line 42
     .line 43
     .line 44
-    const-string v0, ",activeAudioInputRouteIdx="
+    const-string v0, ",shouldResetNsAecAlgorithms="
 
     .line 45
     .line 46
@@ -526,16 +560,16 @@
     .line 47
     .line 48
     .line 49
-    iget v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
+    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->shouldResetNsAecAlgorithms:Z
 
     .line 50
     .line 51
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 52
     .line 53
     .line 54
-    const-string v0, ",availableAudioInputRoutes="
+    const-string v0, ",activeAudioInputRouteIdx="
 
     .line 55
     .line 56
@@ -544,16 +578,16 @@
     .line 57
     .line 58
     .line 59
-    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
+    iget v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioInputRouteIdx:I
 
     .line 60
     .line 61
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 62
     .line 63
     .line 64
-    const-string v0, ",hasUsedBluetoothAudioOutputRoute="
+    const-string v0, ",availableAudioInputRoutes="
 
     .line 65
     .line 66
@@ -562,16 +596,16 @@
     .line 67
     .line 68
     .line 69
-    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
+    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioInputRoutes:Ljava/util/ArrayList;
 
     .line 70
     .line 71
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 72
     .line 73
     .line 74
-    const-string v0, ",activeAudioOutputRouteIdx="
+    const-string v0, ",hasUsedBluetoothAudioOutputRoute="
 
     .line 75
     .line 76
@@ -580,16 +614,16 @@
     .line 77
     .line 78
     .line 79
-    iget v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
+    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->hasUsedBluetoothAudioOutputRoute:Z
 
     .line 80
     .line 81
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 82
     .line 83
     .line 84
-    const-string v0, ",availableAudioOutputRoutes="
+    const-string v0, ",activeAudioOutputRouteIdx="
 
     .line 85
     .line 86
@@ -598,16 +632,16 @@
     .line 87
     .line 88
     .line 89
-    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
+    iget v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->activeAudioOutputRouteIdx:I
 
     .line 90
     .line 91
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 92
     .line 93
     .line 94
-    const-string v0, ",isInitialModel="
+    const-string v0, ",availableAudioOutputRoutes="
 
     .line 95
     .line 96
@@ -616,22 +650,35 @@
     .line 97
     .line 98
     .line 99
-    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
+    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->availableAudioOutputRoutes:Ljava/util/ArrayList;
 
     .line 100
     .line 101
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 102
     .line 103
     .line 104
-    invoke-static {v1}, LX/0Ye;->A0X(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const-string v0, ",isInitialModel="
 
     .line 105
     .line 106
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 107
+    .line 108
+    .line 109
+    iget-boolean v0, p0, Lcom/facebook/rsys/audio/gen/AudioModel;->isInitialModel:Z
+
+    .line 110
+    .line 111
+    invoke-static {v1, v0}, LX/0X2;->A0m(Ljava/lang/StringBuilder;Z)Ljava/lang/String;
+
+    .line 112
+    .line 113
+    .line 114
     move-result-object v0
 
-    .line 108
+    .line 115
     return-object v0
 .end method

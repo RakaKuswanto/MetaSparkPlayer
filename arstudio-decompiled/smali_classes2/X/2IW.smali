@@ -1,149 +1,138 @@
 .class public final LX/2IW;
-.super LX/3X9;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public final A01:LX/1tK;
+.field public final A01:LX/0Gw;
+
+.field public volatile A02:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>(LX/0Gw;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/3X9;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A6E:I
+    iput-object p1, p0, LX/2IW;->A01:LX/0Gw;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 6
     .line 7
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
     .line 8
-    move-result-object v0
-
     .line 9
-    check-cast v0, LX/1tK;
-
     .line 10
+    iput-object v0, p0, LX/2IW;->A00:Ljava/util/concurrent/locks/ReentrantLock;
+
     .line 11
-    iput-object v0, p0, LX/2IW;->A01:LX/1tK;
-
     .line 12
-    .line 13
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, LX/2IW;->A00:LX/1zG;
-
-    .line 18
-    .line 19
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A8q(LX/5SE;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public final A00()Ljava/lang/Object;
     .locals 2
 
     .line 0
-    if-eqz p2, :cond_0
+    iget-object v1, p0, LX/2IW;->A00:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 1
     .line 2
-    invoke-virtual {p1}, LX/5SE;->AIk()LX/0TL;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    :try_start_0
+    iget-object v0, p0, LX/2IW;->A02:Ljava/lang/Object;
 
     .line 6
-    const-string v0, "attribution_id_v2_at_start"
-
     .line 7
-    .line 8
-    invoke-static {v1, p2, v0}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
+    .line 8
     .line 9
+    iget-object v0, p0, LX/2IW;->A01:LX/0Gw;
+
     .line 10
     .line 11
-    :cond_0
-    if-eqz p3, :cond_1
+    invoke-interface {v0}, LX/0Gw;->invoke()Ljava/lang/Object;
 
     .line 12
     .line 13
-    invoke-virtual {p1}, LX/5SE;->AIk()LX/0TL;
-
     .line 14
-    .line 15
-    .line 16
-    move-result-object v1
+    move-result-object v0
 
+    .line 15
+    iput-object v0, p0, LX/2IW;->A02:Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 16
     .line 17
-    const-string v0, "attribution_id_v2_at_stop"
+    :cond_0
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     .line 18
     .line 19
-    invoke-static {v1, p3, v0}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
-
     .line 20
+    return-object v0
+
     .line 21
+    :catchall_0
+    move-exception v0
+
     .line 22
-    :cond_1
-    sget-object v0, LX/4cY;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     .line 23
     .line 24
-    return-object v0
+    .line 25
+    throw v0
 .end method
 
-.method public final AKg()Ljava/lang/String;
-    .locals 1
-
-    const-string/jumbo v0, "navigation_data"
-
-    return-object v0
-.end method
-
-.method public final AKh()I
-    .locals 1
-
-    const/16 v0, 0x32
-
-    return v0
-.end method
-
-.method public final AMG()Ljava/lang/Class;
+.method public final A01()Ljava/lang/Object;
     .locals 1
 
     .line 0
-    const-class v0, Ljava/lang/String;
+    iget-object v0, p0, LX/2IW;->A02:Ljava/lang/Object;
 
     .line 1
     .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    sget v0, LX/2I6;->A2p:I
+
+    .line 5
+    .line 6
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {p0}, LX/2IW;->A00()Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    :cond_0
     return-object v0
-.end method
-
-.method public final AQC(LX/2IY;)Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    return v0
 .end method

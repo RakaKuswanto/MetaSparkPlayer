@@ -80,7 +80,7 @@
         <item name="android:textColorLinkInverse">?colorAccent</item>
         <item name="android:actionModeSelectAllDrawable">?actionModeSelectAllDrawable</item>
         <item name="android:listPreferredItemHeightLarge">@dimen/abc_list_item_height_large_material</item>
-        <item name="android:listPreferredItemHeightSmall">@dimen/abc_action_bar_stacked_max_height</item>
+        <item name="android:listPreferredItemHeightSmall">@dimen/abc_action_button_min_height_material</item>
         <item name="android:textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="android:textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
@@ -137,7 +137,7 @@
         <item name="android:textColorLinkInverse">?colorAccent</item>
         <item name="android:actionModeSelectAllDrawable">?actionModeSelectAllDrawable</item>
         <item name="android:listPreferredItemHeightLarge">@dimen/abc_list_item_height_large_material</item>
-        <item name="android:listPreferredItemHeightSmall">@dimen/abc_action_bar_stacked_max_height</item>
+        <item name="android:listPreferredItemHeightSmall">@dimen/abc_action_button_min_height_material</item>
         <item name="android:textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="android:textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
@@ -234,6 +234,78 @@
         <item name="android:layout_marginStart">16.0dip</item>
         <item name="android:layout_marginEnd">48.0dip</item>
     </style>
+    <style name="demaskCardConfirmButton" parent="@style/Widget.Button.Caspian.Light.Primary.Large">
+        <item name="android:layout_marginLeft">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginRight">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginStart">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginEnd">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="demaskCardDescription">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">?fds_usage_secondary_text</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:layout_marginLeft">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginTop">4.0dip</item>
+        <item name="android:layout_marginRight">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginBottom">12.0dip</item>
+        <item name="android:fontFamily">roboto-regular</item>
+        <item name="android:layout_marginStart">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginEnd">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="demaskCardEditText">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">?fds_usage_primary_text</item>
+        <item name="android:textColorHint">?fds_usage_placeholder_text</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingTop">4.0dip</item>
+        <item name="android:paddingBottom">4.0dip</item>
+        <item name="android:layout_marginLeft">@dimen/action_button_optional_padding_right</item>
+        <item name="android:layout_marginRight">@dimen/action_button_optional_padding_right</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:fontFamily">roboto-regular</item>
+        <item name="android:layout_marginStart">@dimen/action_button_optional_padding_right</item>
+        <item name="android:layout_marginEnd">@dimen/action_button_optional_padding_right</item>
+    </style>
+    <style name="demaskCardErrorText">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">?fds_usage_negative</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_marginLeft">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginRight">@dimen/abc_floating_window_z</item>
+        <item name="android:fontFamily">roboto-regular</item>
+        <item name="android:layout_marginStart">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginEnd">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="demaskCardTextInputLayout" parent="@style/Widget.Design.TextInputLayout">
+        <item name="android:textColor">?fds_usage_primary_text</item>
+        <item name="android:textColorHint">?fds_usage_placeholder_text</item>
+        <item name="android:background">@drawable/autofill_edit_text_box_border</item>
+        <item name="android:paddingTop">4.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:layout_marginLeft">@dimen/action_button_optional_padding_right</item>
+        <item name="android:layout_marginTop">4.0dip</item>
+        <item name="android:layout_marginRight">@dimen/action_button_optional_padding_right</item>
+        <item name="android:layout_marginBottom">4.0dip</item>
+        <item name="android:layout_marginStart">@dimen/action_button_optional_padding_right</item>
+        <item name="android:layout_marginEnd">@dimen/action_button_optional_padding_right</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="errorTextColor">?fds_usage_negative</item>
+        <item name="hintTextAppearance">@style/demaskCardHintStyle</item>
+    </style>
+    <style name="demaskCardTitle">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?fds_usage_primary_text</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_marginLeft">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginTop">16.0dip</item>
+        <item name="android:layout_marginRight">@dimen/abc_floating_window_z</item>
+        <item name="android:fontFamily">roboto-regular</item>
+        <item name="android:layout_marginStart">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginEnd">@dimen/abc_floating_window_z</item>
+    </style>
     <style name="login_input_text">
         <item name="android:textSize">@dimen/autofill_data_migration_disclosure_description</item>
         <item name="android:textColor">@color/player_login_input_text_color</item>
@@ -246,5 +318,11 @@
         <item name="android:maxLines">1</item>
         <item name="android:textCursorDrawable">@null</item>
         <item name="android:layout_marginStart">8.0dip</item>
+    </style>
+    <style name="notNowConfirmButton" parent="@style/autofillPaymentButtonSecondary">
+        <item name="android:layout_marginLeft">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginRight">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginStart">@dimen/abc_floating_window_z</item>
+        <item name="android:layout_marginEnd">@dimen/abc_floating_window_z</item>
     </style>
 </resources>

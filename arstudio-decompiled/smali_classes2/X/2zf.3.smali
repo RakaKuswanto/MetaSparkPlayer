@@ -1,43 +1,25 @@
 .class public final LX/2zf;
-.super LX/3Aj;
+.super LX/3Yt;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/1Nm;
-
-.field public final A01:LX/1Nw;
+.field public final synthetic A00:Lcom/google/common/util/concurrent/SettableFuture;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public constructor <init>(Lcom/google/common/util/concurrent/SettableFuture;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3Aj;-><init>()V
+    iput-object p1, p0, LX/2zf;->A00:Lcom/google/common/util/concurrent/SettableFuture;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/2zf;->A01:LX/1Nw;
+    invoke-direct {p0}, LX/3Yt;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    sget v0, LX/2eq;->AHp:I
-
-    .line 6
-    .line 7
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/2zf;->A00:LX/1Nm;
-
-    .line 12
-    .line 13
     return-void
 .end method

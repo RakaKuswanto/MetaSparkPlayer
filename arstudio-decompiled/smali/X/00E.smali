@@ -1,45 +1,14 @@
-.class public abstract LX/00E;
+.class public interface abstract LX/00E;
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:LX/0Cw;
-
-.field public A01:Z
-
-.field public final A02:Ljava/util/concurrent/CopyOnWriteArrayList;
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+# virtual methods
+.method public abstract A2d()V
+.end method
 
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    .line 3
-    .line 4
-    iput-boolean v0, p0, LX/00E;->A01:Z
-
-    .line 5
-    .line 6
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    .line 7
-    .line 8
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
-    iput-object v0, p0, LX/00E;->A02:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    .line 12
-    .line 13
-    return-void
+.method public abstract Apx(Landroid/view/View;)V
 .end method

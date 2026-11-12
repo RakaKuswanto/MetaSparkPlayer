@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMessengerAssistantGenericMemoryLabelSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMessengerAssistantGenericMemoryLabelSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -172,34 +172,36 @@
 
     .line 75
     .line 76
-    const-string v0, "WEB_LINK"
+    const-string/jumbo v0, "WEB_LINK"
 
     .line 77
     .line 78
+    .line 79
     aput-object v0, v2, v1
 
-    .line 79
     .line 80
+    .line 81
     const/16 v1, 0xe
 
-    .line 81
     .line 82
-    const-string v0, "WORKPLACE_FILE"
-
     .line 83
-    .line 84
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WORKPLACE_FILE"
 
+    .line 84
     .line 85
     .line 86
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 87
+    .line 88
+    .line 89
     move-result-object v0
 
-    .line 88
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAssistantGenericMemoryLabelSet;->A00:Ljava/util/Set;
-
-    .line 89
     .line 90
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAssistantGenericMemoryLabelSet;->A00:Ljava/util/HashSet;
+
+    .line 91
+    .line 92
     return-void
 .end method
 
@@ -215,11 +217,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAssistantGenericMemoryLabelSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAssistantGenericMemoryLabelSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

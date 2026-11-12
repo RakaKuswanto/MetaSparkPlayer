@@ -1,78 +1,4542 @@
 .class public final LX/5MY;
-.super LX/5Mw;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/5MY;
+# instance fields
+.field public A00:D
+
+.field public A01:D
+
+.field public A02:F
+
+.field public A03:F
+
+.field public A04:F
+
+.field public A05:F
+
+.field public A06:F
+
+.field public A07:F
+
+.field public A08:F
+
+.field public A09:F
+
+.field public A0A:F
+
+.field public A0B:F
+
+.field public A0C:F
+
+.field public A0D:F
+
+.field public A0E:I
+
+.field public A0F:I
+
+.field public A0G:I
+
+.field public A0H:I
+
+.field public A0I:I
+
+.field public A0J:I
+
+.field public A0K:I
+
+.field public A0L:I
+
+.field public A0M:I
+
+.field public A0N:I
+
+.field public A0O:I
+
+.field public A0P:I
+
+.field public A0Q:I
+
+.field public A0R:I
+
+.field public A0S:I
+
+.field public A0T:I
+
+.field public A0U:I
+
+.field public A0V:I
+
+.field public A0W:I
+
+.field public A0X:I
+
+.field public A0Y:I
+
+.field public A0Z:I
+
+.field public A0a:I
+
+.field public A0b:I
+
+.field public A0c:I
+
+.field public A0d:I
+
+.field public A0e:I
+
+.field public A0f:I
+
+.field public A0g:I
+
+.field public A0h:I
+
+.field public A0i:I
+
+.field public A0j:I
+
+.field public A0k:I
+
+.field public A0l:I
+
+.field public A0m:I
+
+.field public A0n:I
+
+.field public A0o:I
+
+.field public A0p:I
+
+.field public A0q:I
+
+.field public A0r:I
+
+.field public A0s:I
+
+.field public A0t:I
+
+.field public A0u:I
+
+.field public A0v:I
+
+.field public A0w:I
+
+.field public A0x:I
+
+.field public A0y:I
+
+.field public A0z:I
+
+.field public A10:I
+
+.field public A11:I
+
+.field public A12:I
+
+.field public A13:I
+
+.field public A14:I
+
+.field public A15:I
+
+.field public A16:I
+
+.field public A17:I
+
+.field public A18:I
+
+.field public A19:I
+
+.field public A1A:I
+
+.field public A1B:I
+
+.field public A1C:I
+
+.field public A1D:I
+
+.field public A1E:I
+
+.field public A1F:I
+
+.field public A1G:I
+
+.field public A1H:I
+
+.field public A1I:I
+
+.field public A1J:I
+
+.field public A1K:I
+
+.field public A1L:I
+
+.field public A1M:I
+
+.field public A1N:I
+
+.field public A1O:I
+
+.field public A1P:I
+
+.field public A1Q:I
+
+.field public A1R:I
+
+.field public A1S:I
+
+.field public A1T:I
+
+.field public A1U:I
+
+.field public A1V:I
+
+.field public A1W:I
+
+.field public A1X:I
+
+.field public A1Y:I
+
+.field public A1Z:I
+
+.field public A1a:I
+
+.field public A1b:I
+
+.field public A1c:I
+
+.field public A1d:I
+
+.field public A1e:I
+
+.field public A1f:I
+
+.field public A1g:I
+
+.field public A1h:I
+
+.field public A1i:I
+
+.field public A1j:I
+
+.field public A1k:I
+
+.field public A1l:I
+
+.field public A1m:I
+
+.field public A1n:I
+
+.field public A1o:I
+
+.field public A1p:I
+
+.field public A1q:I
+
+.field public A1r:I
+
+.field public A1s:I
+
+.field public A1t:I
+
+.field public A1u:I
+
+.field public A1v:I
+
+.field public A1w:I
+
+.field public A1x:I
+
+.field public A1y:I
+
+.field public A1z:I
+
+.field public A20:I
+
+.field public A21:I
+
+.field public A22:I
+
+.field public A23:I
+
+.field public A24:I
+
+.field public A25:I
+
+.field public A26:I
+
+.field public A27:I
+
+.field public A28:I
+
+.field public A29:I
+
+.field public A2A:I
+
+.field public A2B:I
+
+.field public A2C:I
+
+.field public A2D:I
+
+.field public A2E:I
+
+.field public A2F:I
+
+.field public A2G:I
+
+.field public A2H:I
+
+.field public A2I:I
+
+.field public A2J:I
+
+.field public A2K:I
+
+.field public A2L:I
+
+.field public A2M:I
+
+.field public A2N:I
+
+.field public A2O:I
+
+.field public A2P:I
+
+.field public A2Q:I
+
+.field public A2R:I
+
+.field public A2S:I
+
+.field public A2T:I
+
+.field public A2U:I
+
+.field public A2V:I
+
+.field public A2W:I
+
+.field public A2X:J
+
+.field public A2Y:J
+
+.field public A2Z:J
+
+.field public A2a:J
+
+.field public A2b:J
+
+.field public A2c:J
+
+.field public A2d:J
+
+.field public A2e:J
+
+.field public A2f:J
+
+.field public A2g:J
+
+.field public A2h:J
+
+.field public A2i:J
+
+.field public A2j:J
+
+.field public A2k:J
+
+.field public A2l:J
+
+.field public A2m:LX/5Kn;
+
+.field public A2n:LX/5Kn;
+
+.field public A2o:LX/5Kn;
+
+.field public A2p:LX/5Kn;
+
+.field public A2q:LX/5Kn;
+
+.field public A2r:LX/5Kn;
+
+.field public A2s:LX/5Kn;
+
+.field public A2t:LX/5Kn;
+
+.field public A2u:LX/5Kn;
+
+.field public A2v:LX/5Kn;
+
+.field public A2w:LX/5Kn;
+
+.field public A2x:LX/5Kn;
+
+.field public A2y:LX/5Kn;
+
+.field public A2z:LX/5Kn;
+
+.field public A30:LX/5Kn;
+
+.field public A31:LX/5Kn;
+
+.field public A32:LX/5Kn;
+
+.field public A33:LX/5Kn;
+
+.field public A34:LX/5Kn;
+
+.field public A35:LX/5Kn;
+
+.field public A36:LX/5Kn;
+
+.field public A37:LX/5Jw;
+
+.field public A38:LX/5NP;
+
+.field public A39:LX/5KU;
+
+.field public A3A:LX/5IL;
+
+.field public A3B:LX/5Nq;
+
+.field public A3C:LX/5BW;
+
+.field public A3D:LX/5Ek;
+
+.field public A3E:LX/5IV;
+
+.field public A3F:Lcom/facebook/video/heroplayer/setting/FbAutogeneratedSettings;
+
+.field public A3G:LX/5J0;
+
+.field public A3H:LX/5N0;
+
+.field public A3I:LX/3tc;
+
+.field public A3J:LX/5FO;
+
+.field public A3K:LX/5J3;
+
+.field public A3L:LX/5J3;
+
+.field public A3M:LX/5HP;
+
+.field public A3N:Ljava/lang/String;
+
+.field public A3O:Ljava/lang/String;
+
+.field public A3P:Ljava/lang/String;
+
+.field public A3Q:Ljava/lang/String;
+
+.field public A3R:Ljava/lang/String;
+
+.field public A3S:Ljava/lang/String;
+
+.field public A3T:Ljava/lang/String;
+
+.field public A3U:Ljava/lang/String;
+
+.field public A3V:Ljava/lang/String;
+
+.field public A3W:Ljava/lang/String;
+
+.field public A3X:Ljava/lang/String;
+
+.field public A3Y:Ljava/lang/String;
+
+.field public A3Z:Ljava/lang/String;
+
+.field public A3a:Ljava/util/HashMap;
+
+.field public A3b:Ljava/util/Map;
+
+.field public A3c:Ljava/util/Set;
+
+.field public A3d:Ljava/util/Set;
+
+.field public A3e:Ljava/util/Set;
+
+.field public A3f:Ljava/util/Set;
+
+.field public A3g:Ljava/util/Set;
+
+.field public A3h:Ljava/util/Set;
+
+.field public A3i:Z
+
+.field public A3j:Z
+
+.field public A3k:Z
+
+.field public A3l:Z
+
+.field public A3m:Z
+
+.field public A3n:Z
+
+.field public A3o:Z
+
+.field public A3p:Z
+
+.field public A3q:Z
+
+.field public A3r:Z
+
+.field public A3s:Z
+
+.field public A3t:Z
+
+.field public A3u:Z
+
+.field public A3v:Z
+
+.field public A3w:Z
+
+.field public A3x:Z
+
+.field public A3y:Z
+
+.field public A3z:Z
+
+.field public A40:Z
+
+.field public A41:Z
+
+.field public A42:Z
+
+.field public A43:Z
+
+.field public A44:Z
+
+.field public A45:Z
+
+.field public A46:Z
+
+.field public A47:Z
+
+.field public A48:Z
+
+.field public A49:Z
+
+.field public A4A:Z
+
+.field public A4B:Z
+
+.field public A4C:Z
+
+.field public A4D:Z
+
+.field public A4E:Z
+
+.field public A4F:Z
+
+.field public A4G:Z
+
+.field public A4H:Z
+
+.field public A4I:Z
+
+.field public A4J:Z
+
+.field public A4K:Z
+
+.field public A4L:Z
+
+.field public A4M:Z
+
+.field public A4N:Z
+
+.field public A4O:Z
+
+.field public A4P:Z
+
+.field public A4Q:Z
+
+.field public A4R:Z
+
+.field public A4S:Z
+
+.field public A4T:Z
+
+.field public A4U:Z
+
+.field public A4V:Z
+
+.field public A4W:Z
+
+.field public A4X:Z
+
+.field public A4Y:Z
+
+.field public A4Z:Z
+
+.field public A4a:Z
+
+.field public A4b:Z
+
+.field public A4c:Z
+
+.field public A4d:Z
+
+.field public A4e:Z
+
+.field public A4f:Z
+
+.field public A4g:Z
+
+.field public A4h:Z
+
+.field public A4i:Z
+
+.field public A4j:Z
+
+.field public A4k:Z
+
+.field public A4l:Z
+
+.field public A4m:Z
+
+.field public A4n:Z
+
+.field public A4o:Z
+
+.field public A4p:Z
+
+.field public A4q:Z
+
+.field public A4r:Z
+
+.field public A4s:Z
+
+.field public A4t:Z
+
+.field public A4u:Z
+
+.field public A4v:Z
+
+.field public A4w:Z
+
+.field public A4x:Z
+
+.field public A4y:Z
+
+.field public A4z:Z
+
+.field public A50:Z
+
+.field public A51:Z
+
+.field public A52:Z
+
+.field public A53:Z
+
+.field public A54:Z
+
+.field public A55:Z
+
+.field public A56:Z
+
+.field public A57:Z
+
+.field public A58:Z
+
+.field public A59:Z
+
+.field public A5A:Z
+
+.field public A5B:Z
+
+.field public A5C:Z
+
+.field public A5D:Z
+
+.field public A5E:Z
+
+.field public A5F:Z
+
+.field public A5G:Z
+
+.field public A5H:Z
+
+.field public A5I:Z
+
+.field public A5J:Z
+
+.field public A5K:Z
+
+.field public A5L:Z
+
+.field public A5M:Z
+
+.field public A5N:Z
+
+.field public A5O:Z
+
+.field public A5P:Z
+
+.field public A5Q:Z
+
+.field public A5R:Z
+
+.field public A5S:Z
+
+.field public A5T:Z
+
+.field public A5U:Z
+
+.field public A5V:Z
+
+.field public A5W:Z
+
+.field public A5X:Z
+
+.field public A5Y:Z
+
+.field public A5Z:Z
+
+.field public A5a:Z
+
+.field public A5b:Z
+
+.field public A5c:Z
+
+.field public A5d:Z
+
+.field public A5e:Z
+
+.field public A5f:Z
+
+.field public A5g:Z
+
+.field public A5h:Z
+
+.field public A5i:Z
+
+.field public A5j:Z
+
+.field public A5k:Z
+
+.field public A5l:Z
+
+.field public A5m:Z
+
+.field public A5n:Z
+
+.field public A5o:Z
+
+.field public A5p:Z
+
+.field public A5q:Z
+
+.field public A5r:Z
+
+.field public A5s:Z
+
+.field public A5t:Z
+
+.field public A5u:Z
+
+.field public A5v:Z
+
+.field public A5w:Z
+
+.field public A5x:Z
+
+.field public A5y:Z
+
+.field public A5z:Z
+
+.field public A60:Z
+
+.field public A61:Z
+
+.field public A62:Z
+
+.field public A63:Z
+
+.field public A64:Z
+
+.field public A65:Z
+
+.field public A66:Z
+
+.field public A67:Z
+
+.field public A68:Z
+
+.field public A69:Z
+
+.field public A6A:Z
+
+.field public A6B:Z
+
+.field public A6C:Z
+
+.field public A6D:Z
+
+.field public A6E:Z
+
+.field public A6F:Z
+
+.field public A6G:Z
+
+.field public A6H:Z
+
+.field public A6I:Z
+
+.field public A6J:Z
+
+.field public A6K:Z
+
+.field public A6L:Z
+
+.field public A6M:Z
+
+.field public A6N:Z
+
+.field public A6O:Z
+
+.field public A6P:Z
+
+.field public A6Q:Z
+
+.field public A6R:Z
+
+.field public A6S:Z
+
+.field public A6T:Z
+
+.field public A6U:Z
+
+.field public A6V:Z
+
+.field public A6W:Z
+
+.field public A6X:Z
+
+.field public A6Y:Z
+
+.field public A6Z:Z
+
+.field public A6a:Z
+
+.field public A6b:Z
+
+.field public A6c:Z
+
+.field public A6d:Z
+
+.field public A6e:Z
+
+.field public A6f:Z
+
+.field public A6g:Z
+
+.field public A6h:Z
+
+.field public A6i:Z
+
+.field public A6j:Z
+
+.field public A6k:Z
+
+.field public A6l:Z
+
+.field public A6m:Z
+
+.field public A6n:Z
+
+.field public A6o:Z
+
+.field public A6p:Z
+
+.field public A6q:Z
+
+.field public A6r:Z
+
+.field public A6s:Z
+
+.field public A6t:Z
+
+.field public A6u:Z
+
+.field public A6v:Z
+
+.field public A6w:Z
+
+.field public A6x:Z
+
+.field public A6y:Z
+
+.field public A6z:Z
+
+.field public A70:Z
+
+.field public A71:Z
+
+.field public A72:Z
+
+.field public A73:Z
+
+.field public A74:Z
+
+.field public A75:Z
+
+.field public A76:Z
+
+.field public A77:Z
+
+.field public A78:Z
+
+.field public A79:Z
+
+.field public A7A:Z
+
+.field public A7B:Z
+
+.field public A7C:Z
+
+.field public A7D:Z
+
+.field public A7E:Z
+
+.field public A7F:Z
+
+.field public A7G:Z
+
+.field public A7H:Z
+
+.field public A7I:Z
+
+.field public A7J:Z
+
+.field public A7K:Z
+
+.field public A7L:Z
+
+.field public A7M:Z
+
+.field public A7N:Z
+
+.field public A7O:Z
+
+.field public A7P:Z
+
+.field public A7Q:Z
+
+.field public A7R:Z
+
+.field public A7S:Z
+
+.field public A7T:Z
+
+.field public A7U:Z
+
+.field public A7V:Z
+
+.field public A7W:Z
+
+.field public A7X:Z
+
+.field public A7Y:Z
+
+.field public A7Z:Z
+
+.field public A7a:Z
+
+.field public A7b:Z
+
+.field public A7c:Z
+
+.field public A7d:Z
+
+.field public A7e:Z
+
+.field public A7f:Z
+
+.field public A7g:Z
+
+.field public A7h:Z
+
+.field public A7i:Z
+
+.field public A7j:Z
+
+.field public A7k:Z
+
+.field public A7l:Z
+
+.field public A7m:Z
+
+.field public A7n:Z
+
+.field public A7o:Z
+
+.field public A7p:Z
+
+.field public A7q:Z
+
+.field public A7r:Z
+
+.field public A7s:Z
+
+.field public A7t:Z
+
+.field public A7u:Z
+
+.field public A7v:Z
+
+.field public A7w:Z
+
+.field public A7x:Z
+
+.field public A7y:Z
+
+.field public A7z:Z
+
+.field public A80:Z
+
+.field public A81:Z
+
+.field public A82:Z
+
+.field public A83:Z
+
+.field public A84:Z
+
+.field public A85:Z
+
+.field public A86:Z
+
+.field public A87:Z
+
+.field public A88:Z
+
+.field public A89:Z
+
+.field public A8A:Z
+
+.field public A8B:Z
+
+.field public A8C:Z
+
+.field public A8D:Z
+
+.field public A8E:Z
+
+.field public A8F:Z
+
+.field public A8G:Z
+
+.field public A8H:Z
+
+.field public A8I:Z
+
+.field public A8J:Z
+
+.field public A8K:Z
+
+.field public A8L:Z
+
+.field public A8M:Z
+
+.field public A8N:Z
+
+.field public A8O:Z
+
+.field public A8P:Z
+
+.field public A8Q:Z
+
+.field public A8R:Z
+
+.field public A8S:Z
+
+.field public A8T:Z
+
+.field public A8U:Z
+
+.field public A8V:Z
+
+.field public A8W:Z
+
+.field public A8X:Z
+
+.field public A8Y:Z
+
+.field public A8Z:Z
+
+.field public A8a:Z
+
+.field public A8b:Z
+
+.field public A8c:Z
+
+.field public A8d:Z
+
+.field public A8e:Z
+
+.field public A8f:Z
+
+.field public A8g:Z
+
+.field public A8h:Z
+
+.field public A8i:Z
+
+.field public A8j:Z
+
+.field public A8k:Z
+
+.field public A8l:Z
+
+.field public A8m:Z
+
+.field public A8n:Z
+
+.field public A8o:Z
+
+.field public A8p:Z
+
+.field public A8q:Z
+
+.field public A8r:Z
+
+.field public A8s:Z
+
+.field public A8t:Z
+
+.field public A8u:Z
+
+.field public A8v:Z
+
+.field public A8w:Z
+
+.field public A8x:Z
+
+.field public A8y:Z
+
+.field public A8z:Z
+
+.field public A90:Z
+
+.field public A91:Z
+
+.field public A92:Z
+
+.field public A93:Z
+
+.field public A94:Z
+
+.field public A95:Z
+
+.field public A96:Z
+
+.field public A97:Z
+
+.field public A98:Z
+
+.field public A99:Z
+
+.field public A9A:Z
+
+.field public A9B:Z
+
+.field public A9C:Z
+
+.field public A9D:Z
+
+.field public A9E:Z
+
+.field public A9F:Z
+
+.field public A9G:Z
+
+.field public A9H:Z
+
+.field public A9I:Z
+
+.field public A9J:Z
+
+.field public A9K:Z
+
+.field public A9L:Z
+
+.field public A9M:Z
+
+.field public A9N:Z
+
+.field public A9O:Z
+
+.field public A9P:Z
+
+.field public A9Q:Z
+
+.field public A9R:Z
+
+.field public A9S:Z
+
+.field public A9T:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, LX/5MY;
-
-    invoke-direct {v0}, LX/5MY;-><init>()V
-
-    sput-object v0, LX/5MY;->A00:LX/5MY;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 2
+    .locals 155
 
     .line 0
-    const/4 v1, 0x3
+    move-object/from16 v0, p0
 
     .line 1
-    const/4 v0, 0x4
-
     .line 2
-    invoke-direct {p0, v1, v0}, LX/5Mw;-><init>(II)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    return-void
-.end method
+    const/4 v1, 0x0
 
-
-# virtual methods
-.method public final A00(LX/5M6;)V
-    .locals 2
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 5
     .line 6
-    const/16 v0, 0x17
+    iput-boolean v1, v0, LX/5MY;->A93:Z
 
     .line 7
     .line 8
-    if-lt v1, v0, :cond_0
+    const/4 v13, 0x4
 
     .line 9
-    .line 10
-    const-string v0, "\n    UPDATE workspec SET schedule_requested_at = 0\n    WHERE state NOT IN (2, 3, 5)\n        AND schedule_requested_at = -1\n        AND interval_duration <> 0\n    "
+    iput v13, v0, LX/5MY;->A0y:I
 
+    .line 10
     .line 11
+    const/4 v2, 0x1
+
     .line 12
-    invoke-interface {p1, v0}, LX/5M6;->AA9(Ljava/lang/String;)V
+    const/4 v7, -0x1
 
     .line 13
+    const-wide/16 v39, -0x1
+
     .line 14
     .line 15
-    :cond_0
+    const/16 v5, 0xa
+
+    .line 16
+    .line 17
+    const/16 v32, 0x64
+
+    .line 18
+    .line 19
+    new-instance v3, LX/5IV;
+
+    .line 20
+    .line 21
+    move-object/from16 v33, v3
+
+    .line 22
+    .line 23
+    move/from16 v34, v7
+
+    .line 24
+    .line 25
+    move/from16 v35, v7
+
+    .line 26
+    .line 27
+    move/from16 v36, v7
+
+    .line 28
+    .line 29
+    move/from16 v37, v1
+
+    .line 30
+    .line 31
+    move/from16 v38, v1
+
+    .line 32
+    .line 33
+    move/from16 v41, v1
+
+    .line 34
+    .line 35
+    move/from16 v42, v1
+
+    .line 36
+    .line 37
+    move/from16 v43, v1
+
+    .line 38
+    .line 39
+    move/from16 v44, v1
+
+    .line 40
+    .line 41
+    move/from16 v45, v1
+
+    .line 42
+    .line 43
+    move/from16 v46, v1
+
+    .line 44
+    .line 45
+    move/from16 v47, v1
+
+    .line 46
+    .line 47
+    move/from16 v48, v1
+
+    .line 48
+    .line 49
+    move/from16 v49, v1
+
+    .line 50
+    .line 51
+    move/from16 v50, v1
+
+    .line 52
+    .line 53
+    move/from16 v51, v1
+
+    .line 54
+    .line 55
+    move/from16 v52, v1
+
+    .line 56
+    .line 57
+    move/from16 v53, v1
+
+    .line 58
+    .line 59
+    move/from16 v54, v1
+
+    .line 60
+    .line 61
+    move/from16 v55, v1
+
+    .line 62
+    .line 63
+    move/from16 v56, v1
+
+    .line 64
+    .line 65
+    move/from16 v57, v1
+
+    .line 66
+    .line 67
+    move/from16 v58, v1
+
+    .line 68
+    .line 69
+    move/from16 v59, v2
+
+    .line 70
+    .line 71
+    move/from16 v60, v1
+
+    .line 72
+    .line 73
+    move/from16 v61, v2
+
+    .line 74
+    .line 75
+    move/from16 v62, v2
+
+    .line 76
+    .line 77
+    move/from16 v63, v1
+
+    .line 78
+    .line 79
+    move/from16 v64, v1
+
+    .line 80
+    .line 81
+    move/from16 v65, v1
+
+    .line 82
+    .line 83
+    move/from16 v66, v1
+
+    .line 84
+    .line 85
+    move/from16 v67, v1
+
+    .line 86
+    .line 87
+    move/from16 v68, v1
+
+    .line 88
+    .line 89
+    move/from16 v69, v1
+
+    .line 90
+    .line 91
+    move/from16 v70, v1
+
+    .line 92
+    .line 93
+    move/from16 v71, v1
+
+    .line 94
+    .line 95
+    move/from16 v72, v1
+
+    .line 96
+    .line 97
+    move/from16 v73, v1
+
+    .line 98
+    .line 99
+    move/from16 v74, v1
+
+    .line 100
+    .line 101
+    move/from16 v75, v1
+
+    .line 102
+    .line 103
+    move/from16 v76, v1
+
+    .line 104
+    .line 105
+    move/from16 v77, v1
+
+    .line 106
+    .line 107
+    move/from16 v78, v1
+
+    .line 108
+    .line 109
+    move/from16 v79, v1
+
+    .line 110
+    .line 111
+    move/from16 v80, v1
+
+    .line 112
+    .line 113
+    move/from16 v81, v1
+
+    .line 114
+    .line 115
+    move/from16 v82, v1
+
+    .line 116
+    .line 117
+    move/from16 v83, v1
+
+    .line 118
+    .line 119
+    move/from16 v84, v1
+
+    .line 120
+    .line 121
+    move/from16 v85, v1
+
+    .line 122
+    .line 123
+    move/from16 v86, v1
+
+    .line 124
+    .line 125
+    move/from16 v87, v1
+
+    .line 126
+    .line 127
+    move/from16 v88, v1
+
+    .line 128
+    .line 129
+    move/from16 v89, v1
+
+    .line 130
+    .line 131
+    move/from16 v90, v1
+
+    .line 132
+    .line 133
+    move/from16 v91, v1
+
+    .line 134
+    .line 135
+    move/from16 v92, v1
+
+    .line 136
+    .line 137
+    move/from16 v93, v1
+
+    .line 138
+    .line 139
+    move/from16 v94, v1
+
+    .line 140
+    .line 141
+    move/from16 v95, v1
+
+    .line 142
+    .line 143
+    move/from16 v96, v1
+
+    .line 144
+    .line 145
+    move/from16 v97, v1
+
+    .line 146
+    .line 147
+    move/from16 v98, v1
+
+    .line 148
+    .line 149
+    invoke-direct/range {v33 .. v98}, LX/5IV;-><init>(IIIIIJZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ)V
+
+    .line 150
+    .line 151
+    .line 152
+    iput-object v3, v0, LX/5MY;->A3E:LX/5IV;
+
+    .line 153
+    .line 154
+    sget-object v3, Lcom/facebook/video/heroplayer/setting/HeroPlayerSetting;->A00:Lcom/facebook/video/heroplayer/setting/FbAutogeneratedSettings;
+
+    .line 155
+    .line 156
+    iput-object v3, v0, LX/5MY;->A3F:Lcom/facebook/video/heroplayer/setting/FbAutogeneratedSettings;
+
+    .line 157
+    .line 158
+    iput-boolean v2, v0, LX/5MY;->A6v:Z
+
+    .line 159
+    .line 160
+    iput-boolean v1, v0, LX/5MY;->A4d:Z
+
+    .line 161
+    .line 162
+    const/4 v3, 0x3
+
+    .line 163
+    iput v3, v0, LX/5MY;->A1s:I
+
+    .line 164
+    .line 165
+    const/16 v31, 0x7d0
+
+    .line 166
+    .line 167
+    move/from16 v4, v31
+
+    .line 168
+    .line 169
+    iput v4, v0, LX/5MY;->A26:I
+
+    .line 170
+    .line 171
+    const-string v4, "ExoService"
+
+    .line 172
+    .line 173
+    iput-object v4, v0, LX/5MY;->A3X:Ljava/lang/String;
+
+    .line 174
+    .line 175
+    const/16 v30, 0x14
+
+    .line 176
+    .line 177
+    move/from16 v4, v30
+
+    .line 178
+    .line 179
+    iput v4, v0, LX/5MY;->A27:I
+
+    .line 180
+    .line 181
+    iput v4, v0, LX/5MY;->A28:I
+
+    .line 182
+    .line 183
+    iput v5, v0, LX/5MY;->A0V:I
+
+    .line 184
+    .line 185
+    const/16 v29, 0xc8
+
+    .line 186
+    .line 187
+    move/from16 v4, v29
+
+    .line 188
+    .line 189
+    iput v4, v0, LX/5MY;->A0U:I
+
+    .line 190
+    .line 191
+    const/4 v14, 0x5
+
+    .line 192
+    iput v14, v0, LX/5MY;->A0T:I
+
+    .line 193
+    .line 194
+    const/16 v150, 0xfa
+
+    .line 195
+    .line 196
+    iput-boolean v2, v0, LX/5MY;->A91:Z
+
+    .line 197
+    .line 198
+    const-string v4, "system_decoder"
+
+    .line 199
+    .line 200
+    iput-object v4, v0, LX/5MY;->A3Z:Ljava/lang/String;
+
+    .line 201
+    .line 202
+    const/16 v28, 0x0
+
+    .line 203
+    .line 204
+    const/high16 v15, 0x100000
+
+    .line 205
+    .line 206
+    const-wide/16 v11, 0x0
+
+    .line 207
+    .line 208
+    const-wide v38, 0x3fb999999999999aL    # 0.1
+
+    .line 209
+    .line 210
+    .line 211
+    .line 212
+    .line 213
+    const-wide v36, 0x3fd3333333333333L    # 0.3
+
+    .line 214
+    .line 215
+    .line 216
+    .line 217
+    .line 218
+    const/high16 v40, 0x6400000
+
+    .line 219
+    .line 220
+    const-wide/32 v48, 0x36ee80
+
+    .line 221
+    .line 222
+    .line 223
+    const-wide/32 v46, 0xea60
+
+    .line 224
+    .line 225
+    .line 226
+    new-instance v4, LX/5BW;
+
+    .line 227
+    .line 228
+    move-object/from16 v33, v4
+
+    .line 229
+    .line 230
+    move-object/from16 v34, v28
+
+    .line 231
+    .line 232
+    move-object/from16 v35, v28
+
+    .line 233
+    .line 234
+    move/from16 v41, v15
+
+    .line 235
+    .line 236
+    move-wide/from16 v44, v11
+
+    .line 237
+    .line 238
+    move-wide/from16 v50, v11
+
+    .line 239
+    .line 240
+    move/from16 v59, v1
+
+    .line 241
+    .line 242
+    move/from16 v61, v1
+
+    .line 243
+    .line 244
+    move/from16 v62, v1
+
+    .line 245
+    .line 246
+    invoke-direct/range {v33 .. v72}, LX/5BW;-><init>(Ljava/lang/String;Ljava/lang/String;DDIIIIJJJJZZZZZZZZZZZZZZZZZZZZZ)V
+
+    .line 247
+    .line 248
+    .line 249
+    iput-object v4, v0, LX/5MY;->A3C:LX/5BW;
+
+    .line 250
+    .line 251
+    iput-boolean v2, v0, LX/5MY;->A8S:Z
+
+    .line 252
+    .line 253
+    const/16 v8, 0x3e8
+
+    .line 254
+    .line 255
+    iput v8, v0, LX/5MY;->A2C:I
+
+    .line 256
+    .line 257
+    const/16 v4, 0x1f4
+
+    .line 258
+    .line 259
+    iput v4, v0, LX/5MY;->A2N:I
+
+    .line 260
+    .line 261
+    new-instance v6, LX/5J3;
+
+    .line 262
+    .line 263
+    move/from16 v5, v31
+
+    .line 264
+    .line 265
+    invoke-direct {v6, v4, v5}, LX/5J3;-><init>(II)V
+
+    .line 266
+    .line 267
+    .line 268
+    iput-object v6, v0, LX/5MY;->A3K:LX/5J3;
+
+    .line 269
+    .line 270
+    new-instance v5, LX/5J3;
+
+    .line 271
+    .line 272
+    invoke-direct {v5, v1, v1}, LX/5J3;-><init>(II)V
+
+    .line 273
+    .line 274
+    .line 275
+    iput-object v5, v0, LX/5MY;->A3L:LX/5J3;
+
+    .line 276
+    .line 277
+    const/16 v34, 0x0
+
+    .line 278
+    .line 279
+    new-instance v5, LX/5N0;
+
+    .line 280
+    .line 281
+    move-object/from16 v16, v5
+
+    .line 282
+    .line 283
+    move/from16 v17, v34
+
+    .line 284
+    .line 285
+    move/from16 v18, v34
+
+    .line 286
+    .line 287
+    move/from16 v19, v34
+
+    .line 288
+    .line 289
+    move/from16 v20, v34
+
+    .line 290
+    .line 291
+    move/from16 v21, v1
+
+    .line 292
+    .line 293
+    move/from16 v22, v1
+
+    .line 294
+    .line 295
+    move/from16 v23, v1
+
+    .line 296
+    .line 297
+    move/from16 v24, v1
+
+    .line 298
+    .line 299
+    move/from16 v25, v1
+
+    .line 300
+    .line 301
+    move/from16 v26, v1
+
+    .line 302
+    .line 303
+    invoke-direct/range {v16 .. v26}, LX/5N0;-><init>(FFFFIIIIII)V
+
+    .line 304
+    .line 305
+    .line 306
+    iput-object v5, v0, LX/5MY;->A3H:LX/5N0;
+
+    .line 307
+    .line 308
+    iput-boolean v1, v0, LX/5MY;->A8O:Z
+
+    .line 309
+    .line 310
+    iput-boolean v1, v0, LX/5MY;->A8I:Z
+
+    .line 311
+    .line 312
+    const/high16 v27, 0x3f800000    # 1.0f
+
+    .line 313
+    .line 314
+    const/16 v67, 0xbb8
+
+    .line 315
+    .line 316
+    const/high16 v39, 0x3e800000    # 0.25f
+
+    .line 317
+    .line 318
+    const/high16 v26, 0x3f000000    # 0.5f
+
+    .line 319
+    .line 320
+    const v41, 0x3c23d70a    # 0.01f
+
+    .line 321
+    .line 322
+    .line 323
+    const v69, 0xc350
+
+    .line 324
+    .line 325
+    .line 326
+    const/16 v25, 0x3c
+
+    .line 327
+    .line 328
+    const v53, 0x3f19999a    # 0.6f
+
+    .line 329
+    .line 330
+    .line 331
+    const/high16 v24, 0x40000000    # 2.0f
+
+    .line 332
+    .line 333
+    const/16 v71, 0x61a8
+
+    .line 334
+    .line 335
+    const/high16 v47, 0x40400000    # 3.0f
+
+    .line 336
+    .line 337
+    const/16 v73, 0x2d0
+
+    .line 338
+    .line 339
+    const/16 v75, 0x18c
+
+    .line 340
+    .line 341
+    const/16 v76, 0x1f8
+
+    .line 342
+    .line 343
+    const v23, 0x3e99999a    # 0.3f
+
+    .line 344
+    .line 345
+    .line 346
+    const/16 v22, 0x1388
+
+    .line 347
+    .line 348
+    const v21, 0x3f99999a    # 1.2f
+
+    .line 349
+    .line 350
+    .line 351
+    const/16 v96, 0x1e0
+
+    .line 352
+    .line 353
+    const/16 v95, 0x280
+
+    .line 354
+    .line 355
+    const/high16 v59, 0x3f400000    # 0.75f
+
+    .line 356
+    .line 357
+    const/16 v20, 0x7530
+
+    .line 358
+    .line 359
+    const/16 v19, 0x2710
+
+    .line 360
+    .line 361
+    new-instance v5, LX/5IL;
+
+    .line 362
+    .line 363
+    move/from16 v35, v34
+
+    .line 364
+    .line 365
+    move/from16 v36, v34
+
+    .line 366
+    .line 367
+    move/from16 v37, v27
+
+    .line 368
+    .line 369
+    move/from16 v38, v27
+
+    .line 370
+    .line 371
+    move/from16 v40, v26
+
+    .line 372
+    .line 373
+    move/from16 v42, v41
+
+    .line 374
+    .line 375
+    move/from16 v43, v41
+
+    .line 376
+    .line 377
+    move/from16 v44, v27
+
+    .line 378
+    .line 379
+    move/from16 v45, v27
+
+    .line 380
+    .line 381
+    move/from16 v46, v24
+
+    .line 382
+    .line 383
+    move/from16 v48, v23
+
+    .line 384
+    .line 385
+    move/from16 v49, v26
+
+    .line 386
+    .line 387
+    move/from16 v50, v34
+
+    .line 388
+    .line 389
+    move/from16 v51, v24
+
+    .line 390
+    .line 391
+    move/from16 v52, v21
+
+    .line 392
+    .line 393
+    move/from16 v54, v47
+
+    .line 394
+    .line 395
+    move/from16 v55, v27
+
+    .line 396
+    .line 397
+    move/from16 v56, v26
+
+    .line 398
+    .line 399
+    move/from16 v57, v34
+
+    .line 400
+    .line 401
+    move/from16 v58, v26
+
+    .line 402
+    .line 403
+    move/from16 v60, v34
+
+    .line 404
+    .line 405
+    move/from16 v61, v21
+
+    .line 406
+    .line 407
+    move/from16 v62, v21
+
+    .line 408
+    .line 409
+    move/from16 v63, v26
+
+    .line 410
+    .line 411
+    move/from16 v64, v24
+
+    .line 412
+    .line 413
+    move/from16 v68, v2
+
+    .line 414
+    .line 415
+    move/from16 v70, v69
+
+    .line 416
+    .line 417
+    move/from16 v72, v71
+
+    .line 418
+    .line 419
+    move/from16 v74, v8
+
+    .line 420
+    .line 421
+    move/from16 v77, v7
+
+    .line 422
+    .line 423
+    move/from16 v86, v7
+
+    .line 424
+    .line 425
+    move/from16 v87, v7
+
+    .line 426
+    .line 427
+    move/from16 v88, v71
+
+    .line 428
+    .line 429
+    move/from16 v89, v7
+
+    .line 430
+    .line 431
+    move/from16 v90, v71
+
+    .line 432
+    .line 433
+    move/from16 v91, v71
+
+    .line 434
+    .line 435
+    move/from16 v92, v69
+
+    .line 436
+    .line 437
+    move/from16 v93, v73
+
+    .line 438
+    .line 439
+    move/from16 v97, v7
+
+    .line 440
+    .line 441
+    move/from16 v99, v1
+
+    .line 442
+    .line 443
+    move/from16 v100, v1
+
+    .line 444
+    .line 445
+    move/from16 v101, v1
+
+    .line 446
+    .line 447
+    move/from16 v102, v7
+
+    .line 448
+    .line 449
+    move/from16 v103, v7
+
+    .line 450
+    .line 451
+    move/from16 v104, v71
+
+    .line 452
+    .line 453
+    move/from16 v105, v7
+
+    .line 454
+    .line 455
+    move/from16 v106, v1
+
+    .line 456
+    .line 457
+    move/from16 v107, v1
+
+    .line 458
+    .line 459
+    move-wide/from16 v108, v11
+
+    .line 460
+    .line 461
+    move-wide/from16 v110, v11
+
+    .line 462
+    .line 463
+    move-wide/from16 v112, v11
+
+    .line 464
+    .line 465
+    move/from16 v114, v1
+
+    .line 466
+    .line 467
+    move/from16 v115, v1
+
+    .line 468
+    .line 469
+    move/from16 v116, v1
+
+    .line 470
+    .line 471
+    move/from16 v117, v1
+
+    .line 472
+    .line 473
+    move/from16 v118, v1
+
+    .line 474
+    .line 475
+    move/from16 v119, v1
+
+    .line 476
+    .line 477
+    move/from16 v120, v1
+
+    .line 478
+    .line 479
+    move/from16 v121, v1
+
+    .line 480
+    .line 481
+    move/from16 v122, v1
+
+    .line 482
+    .line 483
+    move/from16 v123, v1
+
+    .line 484
+    .line 485
+    move/from16 v124, v1
+
+    .line 486
+    .line 487
+    move/from16 v125, v1
+
+    .line 488
+    .line 489
+    move/from16 v126, v1
+
+    .line 490
+    .line 491
+    move/from16 v127, v1
+
+    .line 492
+    .line 493
+    move/from16 v128, v1
+
+    .line 494
+    .line 495
+    move/from16 v129, v1
+
+    .line 496
+    .line 497
+    move/from16 v130, v1
+
+    .line 498
+    .line 499
+    move/from16 v131, v1
+
+    .line 500
+    .line 501
+    move/from16 v132, v1
+
+    .line 502
+    .line 503
+    move/from16 v133, v1
+
+    .line 504
+    .line 505
+    move/from16 v134, v1
+
+    .line 506
+    .line 507
+    move/from16 v135, v1
+
+    .line 508
+    .line 509
+    move/from16 v136, v1
+
+    .line 510
+    .line 511
+    move/from16 v137, v1
+
+    .line 512
+    .line 513
+    move/from16 v138, v1
+
+    .line 514
+    .line 515
+    move/from16 v139, v1
+
+    .line 516
+    .line 517
+    move/from16 v140, v1
+
+    .line 518
+    .line 519
+    move/from16 v141, v1
+
+    .line 520
+    .line 521
+    move/from16 v142, v1
+
+    .line 522
+    .line 523
+    move/from16 v143, v1
+
+    .line 524
+    .line 525
+    move/from16 v144, v1
+
+    .line 526
+    .line 527
+    move/from16 v145, v1
+
+    .line 528
+    .line 529
+    move/from16 v146, v1
+
+    .line 530
+    .line 531
+    move/from16 v147, v1
+
+    .line 532
+    .line 533
+    move/from16 v148, v1
+
+    .line 534
+    .line 535
+    move/from16 v149, v1
+
+    .line 536
+    .line 537
+    move-object/from16 v33, v5
+
+    .line 538
+    .line 539
+    invoke-direct/range {v33 .. v149}, LX/5IL;-><init>(FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIJJJZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ)V
+
+    .line 540
+    .line 541
+    .line 542
+    iput-object v5, v0, LX/5MY;->A3A:LX/5IL;
+
+    .line 543
+    .line 544
+    sget-object v5, LX/5KU;->A00:LX/5KU;
+
+    .line 545
+    .line 546
+    iput-object v5, v0, LX/5MY;->A39:LX/5KU;
+
+    .line 547
+    .line 548
+    new-instance v5, LX/5NP;
+
+    .line 549
+    .line 550
+    invoke-direct {v5}, LX/5NP;-><init>()V
+
+    .line 551
+    .line 552
+    .line 553
+    iput-object v5, v0, LX/5MY;->A38:LX/5NP;
+
+    .line 554
+    .line 555
+    const-string v6, ""
+
+    .line 556
+    .line 557
+    const/16 v18, 0x32
+
+    .line 558
+    .line 559
+    const-wide/high16 v16, 0x3ff0000000000000L    # 1.0
+
+    .line 560
+    .line 561
+    new-instance v5, LX/5Jw;
+
+    .line 562
+    .line 563
+    invoke-direct {v5}, LX/5Jw;-><init>()V
+
+    .line 564
+    .line 565
+    .line 566
+    iput-object v5, v0, LX/5MY;->A37:LX/5Jw;
+
+    .line 567
+    .line 568
+    iput-boolean v1, v0, LX/5MY;->A8l:Z
+
+    .line 569
+    .line 570
+    new-instance v9, LX/5Np;
+
+    .line 571
+    .line 572
+    invoke-direct {v9}, LX/5Np;-><init>()V
+
+    .line 573
+    .line 574
+    .line 575
+    new-instance v5, LX/5Nq;
+
+    .line 576
+    .line 577
+    invoke-direct {v5, v9}, LX/5Nq;-><init>(LX/5Np;)V
+
+    .line 578
+    .line 579
+    .line 580
+    iput-object v5, v0, LX/5MY;->A3B:LX/5Nq;
+
+    .line 581
+    .line 582
+    iput-boolean v1, v0, LX/5MY;->A8M:Z
+
+    .line 583
+    .line 584
+    new-instance v5, LX/5HP;
+
+    .line 585
+    .line 586
+    move-object/from16 v33, v5
+
+    .line 587
+    .line 588
+    move/from16 v34, v1
+
+    .line 589
+    .line 590
+    move/from16 v35, v1
+
+    .line 591
+    .line 592
+    move/from16 v36, v1
+
+    .line 593
+    .line 594
+    move/from16 v37, v1
+
+    .line 595
+    .line 596
+    move/from16 v38, v1
+
+    .line 597
+    .line 598
+    move/from16 v39, v1
+
+    .line 599
+    .line 600
+    move/from16 v40, v1
+
+    .line 601
+    .line 602
+    invoke-direct/range {v33 .. v40}, LX/5HP;-><init>(IIIIIII)V
+
+    .line 603
+    .line 604
+    .line 605
+    iput-object v5, v0, LX/5MY;->A3M:LX/5HP;
+
+    .line 606
+    .line 607
+    const/16 v5, 0x3023
+
+    .line 608
+    .line 609
+    iput v5, v0, LX/5MY;->A0Y:I
+
+    .line 610
+    .line 611
+    const/16 v5, 0x3747
+
+    .line 612
+    .line 613
+    iput v5, v0, LX/5MY;->A0X:I
+
+    .line 614
+    .line 615
+    iput-boolean v1, v0, LX/5MY;->A5n:Z
+
+    .line 616
+    .line 617
+    const-wide/16 v9, 0x7d0
+
+    .line 618
+    .line 619
+    iput-wide v9, v0, LX/5MY;->A2k:J
+
+    .line 620
+    .line 621
+    move/from16 v5, v32
+
+    .line 622
+    .line 623
+    iput v5, v0, LX/5MY;->A0z:I
+
+    .line 624
+    .line 625
+    iput-boolean v1, v0, LX/5MY;->A7y:Z
+
+    .line 626
+    .line 627
+    iput-boolean v1, v0, LX/5MY;->A7V:Z
+
+    .line 628
+    .line 629
+    iput-boolean v1, v0, LX/5MY;->A4o:Z
+
+    .line 630
+    .line 631
+    iput-boolean v1, v0, LX/5MY;->A4H:Z
+
+    .line 632
+    .line 633
+    iput-boolean v1, v0, LX/5MY;->A7G:Z
+
+    .line 634
+    .line 635
+    iput-boolean v1, v0, LX/5MY;->A8Q:Z
+
+    .line 636
+    .line 637
+    iput-boolean v1, v0, LX/5MY;->A3s:Z
+
+    .line 638
+    .line 639
+    iput-boolean v1, v0, LX/5MY;->A5H:Z
+
+    .line 640
+    .line 641
+    iput v1, v0, LX/5MY;->A0W:I
+
+    .line 642
+    .line 643
+    iput-boolean v2, v0, LX/5MY;->A82:Z
+
+    .line 644
+    .line 645
+    iput-boolean v2, v0, LX/5MY;->A49:Z
+
+    .line 646
+    .line 647
+    iput-boolean v2, v0, LX/5MY;->A4B:Z
+
+    .line 648
+    .line 649
+    iput-boolean v2, v0, LX/5MY;->A4A:Z
+
+    .line 650
+    .line 651
+    iput-boolean v1, v0, LX/5MY;->A96:Z
+
+    .line 652
+    .line 653
+    iput v3, v0, LX/5MY;->A1B:I
+
+    .line 654
+    .line 655
+    iput v3, v0, LX/5MY;->A2U:I
+
+    .line 656
+    .line 657
+    iput-boolean v1, v0, LX/5MY;->A5h:Z
+
+    .line 658
+    .line 659
+    iput-boolean v1, v0, LX/5MY;->A8U:Z
+
+    .line 660
+    .line 661
+    iput v7, v0, LX/5MY;->A2B:I
+
+    .line 662
+    .line 663
+    iput v7, v0, LX/5MY;->A2A:I
+
+    .line 664
+    .line 665
+    iput v14, v0, LX/5MY;->A23:I
+
+    .line 666
+    .line 667
+    iput-boolean v1, v0, LX/5MY;->A44:Z
+
+    .line 668
+    .line 669
+    iput v7, v0, LX/5MY;->A1j:I
+
+    .line 670
+    .line 671
+    iput-boolean v1, v0, LX/5MY;->A8A:Z
+
+    .line 672
+    .line 673
+    iput-boolean v1, v0, LX/5MY;->A5R:Z
+
+    .line 674
+    .line 675
+    const v148, 0x186a0
+
+    .line 676
+    .line 677
+    .line 678
+    new-instance v5, LX/5Kn;
+
+    .line 679
+    .line 680
+    move-object/from16 v146, v5
+
+    .line 681
+    .line 682
+    move/from16 v151, v4
+
+    .line 683
+    .line 684
+    move/from16 v152, v8
+
+    .line 685
+    .line 686
+    move/from16 v153, v1
+
+    .line 687
+    .line 688
+    move/from16 v154, v1
+
+    .line 689
+    .line 690
+    invoke-direct/range {v146 .. v154}, LX/5Kn;-><init>(IIIIIIZZ)V
+
+    .line 691
+    .line 692
+    .line 693
+    iput-object v5, v0, LX/5MY;->A2s:LX/5Kn;
+
+    .line 694
+    .line 695
+    const v37, 0x1e8480
+
+    .line 696
+    .line 697
+    .line 698
+    const v38, 0x86470
+
+    .line 699
+    .line 700
+    .line 701
+    const v39, 0x249f0
+
+    .line 702
+    .line 703
+    .line 704
+    new-instance v4, LX/5Kn;
+
+    .line 705
+    .line 706
+    move-object/from16 v33, v4
+
+    .line 707
+    .line 708
+    move/from16 v35, v31
+
+    .line 709
+    .line 710
+    move/from16 v41, v1
+
+    .line 711
+    .line 712
+    invoke-direct/range {v33 .. v41}, LX/5Kn;-><init>(IIIIIIZZ)V
+
+    .line 713
+    .line 714
+    .line 715
+    iput-object v4, v0, LX/5MY;->A35:LX/5Kn;
+
+    .line 716
+    .line 717
+    iput-boolean v1, v0, LX/5MY;->A5S:Z
+
+    .line 718
+    .line 719
+    iput-boolean v1, v0, LX/5MY;->A9Q:Z
+
+    .line 720
+    .line 721
+    iput-boolean v1, v0, LX/5MY;->A90:Z
+
+    .line 722
+    .line 723
+    iput-boolean v1, v0, LX/5MY;->A5m:Z
+
+    .line 724
+    .line 725
+    iput-boolean v1, v0, LX/5MY;->A5l:Z
+
+    .line 726
+    .line 727
+    iput-boolean v1, v0, LX/5MY;->A64:Z
+
+    .line 728
+    .line 729
+    iput-boolean v1, v0, LX/5MY;->A6c:Z
+
+    .line 730
+    .line 731
+    iput-boolean v1, v0, LX/5MY;->A40:Z
+
+    .line 732
+    .line 733
+    iput-boolean v1, v0, LX/5MY;->A41:Z
+
+    .line 734
+    .line 735
+    iput-boolean v1, v0, LX/5MY;->A7M:Z
+
+    .line 736
+    .line 737
+    iput v8, v0, LX/5MY;->A1w:I
+
+    .line 738
+    .line 739
+    iput-boolean v1, v0, LX/5MY;->A7B:Z
+
+    .line 740
+    .line 741
+    const/4 v4, 0x2
+
+    .line 742
+    iput v4, v0, LX/5MY;->A1u:I
+
+    .line 743
+    .line 744
+    iput v1, v0, LX/5MY;->A1t:I
+
+    .line 745
+    .line 746
+    iput v8, v0, LX/5MY;->A1v:I
+
+    .line 747
+    .line 748
+    iput-boolean v1, v0, LX/5MY;->A3q:Z
+
+    .line 749
+    .line 750
+    iput-boolean v1, v0, LX/5MY;->A8h:Z
+
+    .line 751
+    .line 752
+    iput-boolean v1, v0, LX/5MY;->A8g:Z
+
+    .line 753
+    .line 754
+    iput-boolean v1, v0, LX/5MY;->A9G:Z
+
+    .line 755
+    .line 756
+    iput-boolean v1, v0, LX/5MY;->A52:Z
+
+    .line 757
+    .line 758
+    iput-boolean v1, v0, LX/5MY;->A9K:Z
+
+    .line 759
+    .line 760
+    iput-boolean v1, v0, LX/5MY;->A4a:Z
+
+    .line 761
+    .line 762
+    iput-boolean v1, v0, LX/5MY;->A8X:Z
+
+    .line 763
+    .line 764
+    iput-boolean v1, v0, LX/5MY;->A5O:Z
+
+    .line 765
+    .line 766
+    iput-boolean v1, v0, LX/5MY;->A8d:Z
+
+    .line 767
+    .line 768
+    iput-boolean v1, v0, LX/5MY;->A7l:Z
+
+    .line 769
+    .line 770
+    iput-boolean v1, v0, LX/5MY;->A7e:Z
+
+    .line 771
+    .line 772
+    iput-boolean v1, v0, LX/5MY;->A7j:Z
+
+    .line 773
+    .line 774
+    iput-boolean v1, v0, LX/5MY;->A3l:Z
+
+    .line 775
+    .line 776
+    iput v8, v0, LX/5MY;->A1J:I
+
+    .line 777
+    .line 778
+    iput-boolean v1, v0, LX/5MY;->A6H:Z
+
+    .line 779
+    .line 780
+    iput-boolean v1, v0, LX/5MY;->A6G:Z
+
+    .line 781
+    .line 782
+    iput-boolean v1, v0, LX/5MY;->A6D:Z
+
+    .line 783
+    .line 784
+    iput-boolean v1, v0, LX/5MY;->A6C:Z
+
+    .line 785
+    .line 786
+    iput-boolean v1, v0, LX/5MY;->A9D:Z
+
+    .line 787
+    .line 788
+    iput-boolean v1, v0, LX/5MY;->A6F:Z
+
+    .line 789
+    .line 790
+    iput-boolean v1, v0, LX/5MY;->A6E:Z
+
+    .line 791
+    .line 792
+    iput v4, v0, LX/5MY;->A1H:I
+
+    .line 793
+    .line 794
+    iput v13, v0, LX/5MY;->A1I:I
+
+    .line 795
+    .line 796
+    iput-boolean v1, v0, LX/5MY;->A3y:Z
+
+    .line 797
+    .line 798
+    iput-boolean v1, v0, LX/5MY;->A4m:Z
+
+    .line 799
+    .line 800
+    iput-boolean v1, v0, LX/5MY;->A7a:Z
+
+    .line 801
+    .line 802
+    iput-boolean v1, v0, LX/5MY;->A4e:Z
+
+    .line 803
+    .line 804
+    iput-boolean v1, v0, LX/5MY;->A4f:Z
+
+    .line 805
+    .line 806
+    iput-boolean v1, v0, LX/5MY;->A9H:Z
+
+    .line 807
+    .line 808
+    iput-boolean v1, v0, LX/5MY;->A8u:Z
+
+    .line 809
+    .line 810
+    iput-boolean v1, v0, LX/5MY;->A7I:Z
+
+    .line 811
+    .line 812
+    iput-boolean v1, v0, LX/5MY;->A8x:Z
+
+    .line 813
+    .line 814
+    iput-boolean v1, v0, LX/5MY;->A7H:Z
+
+    .line 815
+    .line 816
+    iput-boolean v1, v0, LX/5MY;->A9T:Z
+
+    .line 817
+    .line 818
+    iput-boolean v1, v0, LX/5MY;->A9S:Z
+
+    .line 819
+    .line 820
+    iput-boolean v1, v0, LX/5MY;->A8s:Z
+
+    .line 821
+    .line 822
+    iput-boolean v1, v0, LX/5MY;->A48:Z
+
+    .line 823
+    .line 824
+    iput-boolean v1, v0, LX/5MY;->A7Z:Z
+
+    .line 825
+    .line 826
+    const-string v4, "unset"
+
+    .line 827
+    .line 828
+    iput-object v4, v0, LX/5MY;->A3R:Ljava/lang/String;
+
+    .line 829
+    .line 830
+    iput-object v4, v0, LX/5MY;->A3S:Ljava/lang/String;
+
+    .line 831
+    .line 832
+    iput-boolean v1, v0, LX/5MY;->A7r:Z
+
+    .line 833
+    .line 834
+    iput-boolean v1, v0, LX/5MY;->A5C:Z
+
+    .line 835
+    .line 836
+    iput-boolean v1, v0, LX/5MY;->A79:Z
+
+    .line 837
+    .line 838
+    iput-boolean v1, v0, LX/5MY;->A7i:Z
+
+    .line 839
+    .line 840
+    iput-boolean v1, v0, LX/5MY;->A9P:Z
+
+    .line 841
+    .line 842
+    iput-boolean v1, v0, LX/5MY;->A9B:Z
+
+    .line 843
+    .line 844
+    iput-boolean v1, v0, LX/5MY;->A9O:Z
+
+    .line 845
+    .line 846
+    iput-boolean v1, v0, LX/5MY;->A9N:Z
+
+    .line 847
+    .line 848
+    const-wide/32 v4, 0x5b8d80
+
+    .line 849
+    .line 850
+    .line 851
+    iput-wide v4, v0, LX/5MY;->A2f:J
+
+    .line 852
+    .line 853
+    iput-boolean v1, v0, LX/5MY;->A6y:Z
+
+    .line 854
+    .line 855
+    iput-boolean v1, v0, LX/5MY;->A89:Z
+
+    .line 856
+    .line 857
+    iput-boolean v1, v0, LX/5MY;->A7p:Z
+
+    .line 858
+    .line 859
+    const/16 v13, 0xfa0
+
+    .line 860
+    .line 861
+    iput-boolean v1, v0, LX/5MY;->A7q:Z
+
+    .line 862
+    .line 863
+    iput-boolean v1, v0, LX/5MY;->A4L:Z
+
+    .line 864
+    .line 865
+    iput-boolean v1, v0, LX/5MY;->A6a:Z
+
+    .line 866
+    .line 867
+    iput-boolean v1, v0, LX/5MY;->A4F:Z
+
+    .line 868
+    .line 869
+    const-wide v4, 0x7fffffffffffffffL
+
+    .line 870
+    .line 871
+    .line 872
+    .line 873
+    .line 874
+    iput-wide v4, v0, LX/5MY;->A2i:J
+
+    .line 875
+    .line 876
+    iput-boolean v1, v0, LX/5MY;->A6d:Z
+
+    .line 877
+    .line 878
+    iput-boolean v1, v0, LX/5MY;->A4E:Z
+
+    .line 879
+    .line 880
+    iput-boolean v1, v0, LX/5MY;->A7b:Z
+
+    .line 881
+    .line 882
+    iput-boolean v1, v0, LX/5MY;->A7t:Z
+
+    .line 883
+    .line 884
+    iput-boolean v1, v0, LX/5MY;->A8k:Z
+
+    .line 885
+    .line 886
+    iput-boolean v1, v0, LX/5MY;->A7J:Z
+
+    .line 887
+    .line 888
+    iput-boolean v1, v0, LX/5MY;->A5j:Z
+
+    .line 889
+    .line 890
+    iput-boolean v2, v0, LX/5MY;->A8C:Z
+
+    .line 891
+    .line 892
+    move/from16 v4, v32
+
+    .line 893
+    .line 894
+    iput v4, v0, LX/5MY;->A21:I
+
+    .line 895
+    .line 896
+    iput v2, v0, LX/5MY;->A22:I
+
+    .line 897
+    .line 898
+    iput-boolean v1, v0, LX/5MY;->A9J:Z
+
+    .line 899
+    .line 900
+    iput-boolean v1, v0, LX/5MY;->A9I:Z
+
+    .line 901
+    .line 902
+    iput-boolean v1, v0, LX/5MY;->A7x:Z
+
+    .line 903
+    .line 904
+    iput-boolean v1, v0, LX/5MY;->A5P:Z
+
+    .line 905
+    .line 906
+    iput-boolean v1, v0, LX/5MY;->A7k:Z
+
+    .line 907
+    .line 908
+    iput-boolean v1, v0, LX/5MY;->A6L:Z
+
+    .line 909
+    .line 910
+    iput v1, v0, LX/5MY;->A1e:I
+
+    .line 911
+    .line 912
+    iput-boolean v1, v0, LX/5MY;->A8R:Z
+
+    .line 913
+    .line 914
+    iput-boolean v1, v0, LX/5MY;->A7F:Z
+
+    .line 915
+    .line 916
+    iput v7, v0, LX/5MY;->A1X:I
+
+    .line 917
+    .line 918
+    iput v15, v0, LX/5MY;->A1W:I
+
+    .line 919
+    .line 920
+    iput-boolean v2, v0, LX/5MY;->A85:Z
+
+    .line 921
+    .line 922
+    iput v2, v0, LX/5MY;->A20:I
+
+    .line 923
+    .line 924
+    iput-boolean v1, v0, LX/5MY;->A55:Z
+
+    .line 925
+    .line 926
+    iput-boolean v1, v0, LX/5MY;->A8Y:Z
+
+    .line 927
+    .line 928
+    iput-object v6, v0, LX/5MY;->A3U:Ljava/lang/String;
+
+    .line 929
+    .line 930
+    iput-object v6, v0, LX/5MY;->A3N:Ljava/lang/String;
+
+    .line 931
+    .line 932
+    const/high16 v4, 0x20000
+
+    .line 933
+    .line 934
+    iput v4, v0, LX/5MY;->A1F:I
+
+    .line 935
+    .line 936
+    const/high16 v4, 0x10000
+
+    .line 937
+    .line 938
+    iput v4, v0, LX/5MY;->A1E:I
+
+    .line 939
+    .line 940
+    iput v1, v0, LX/5MY;->A1A:I
+
+    .line 941
+    .line 942
+    const/16 v4, 0x2ee0
+
+    .line 943
+    .line 944
+    iput v4, v0, LX/5MY;->A19:I
+
+    .line 945
+    .line 946
+    iput-boolean v1, v0, LX/5MY;->A72:Z
+
+    .line 947
+    .line 948
+    const v4, 0x18aa0
+
+    .line 949
+    .line 950
+    .line 951
+    iput v4, v0, LX/5MY;->A2T:I
+
+    .line 952
+    .line 953
+    iput-object v6, v0, LX/5MY;->A3W:Ljava/lang/String;
+
+    .line 954
+    .line 955
+    iput-boolean v1, v0, LX/5MY;->A69:Z
+
+    .line 956
+    .line 957
+    iput-boolean v2, v0, LX/5MY;->A8t:Z
+
+    .line 958
+    .line 959
+    iput v1, v0, LX/5MY;->A0E:I
+
+    .line 960
+    .line 961
+    iput-boolean v1, v0, LX/5MY;->A4k:Z
+
+    .line 962
+    .line 963
+    iput v14, v0, LX/5MY;->A1f:I
+
+    .line 964
+    .line 965
+    iput-boolean v1, v0, LX/5MY;->A7f:Z
+
+    .line 966
+    .line 967
+    iput-boolean v1, v0, LX/5MY;->A6T:Z
+
+    .line 968
+    .line 969
+    iput-boolean v1, v0, LX/5MY;->A81:Z
+
+    .line 970
+    .line 971
+    iput-boolean v1, v0, LX/5MY;->A7z:Z
+
+    .line 972
+    .line 973
+    iput-boolean v1, v0, LX/5MY;->A4z:Z
+
+    .line 974
+    .line 975
+    iput-boolean v1, v0, LX/5MY;->A68:Z
+
+    .line 976
+    .line 977
+    iput-boolean v1, v0, LX/5MY;->A8H:Z
+
+    .line 978
+    .line 979
+    iput-boolean v1, v0, LX/5MY;->A8G:Z
+
+    .line 980
+    .line 981
+    iput-boolean v2, v0, LX/5MY;->A45:Z
+
+    .line 982
+    .line 983
+    iput-boolean v1, v0, LX/5MY;->A6m:Z
+
+    .line 984
+    .line 985
+    iput-boolean v1, v0, LX/5MY;->A6n:Z
+
+    .line 986
+    .line 987
+    iput-boolean v1, v0, LX/5MY;->A4S:Z
+
+    .line 988
+    .line 989
+    iput-boolean v1, v0, LX/5MY;->A6l:Z
+
+    .line 990
+    .line 991
+    iput v1, v0, LX/5MY;->A2E:I
+
+    .line 992
+    .line 993
+    iput v1, v0, LX/5MY;->A1k:I
+
+    .line 994
+    .line 995
+    iput v1, v0, LX/5MY;->A1l:I
+
+    .line 996
+    .line 997
+    iput v1, v0, LX/5MY;->A1m:I
+
+    .line 998
+    .line 999
+    iput-boolean v1, v0, LX/5MY;->A99:Z
+
+    .line 1000
+    .line 1001
+    iput v1, v0, LX/5MY;->A0S:I
+
+    .line 1002
+    .line 1003
+    iput v1, v0, LX/5MY;->A0R:I
+
+    .line 1004
+    .line 1005
+    const/high16 v15, -0x40800000    # -1.0f
+
+    .line 1006
+    .line 1007
+    iput v15, v0, LX/5MY;->A0D:F
+
+    .line 1008
+    .line 1009
+    iput-boolean v1, v0, LX/5MY;->A3t:Z
+
+    .line 1010
+    .line 1011
+    iput-boolean v1, v0, LX/5MY;->A4q:Z
+
+    .line 1012
+    .line 1013
+    iput-boolean v1, v0, LX/5MY;->A4r:Z
+
+    .line 1014
+    .line 1015
+    iput-boolean v1, v0, LX/5MY;->A86:Z
+
+    .line 1016
+    .line 1017
+    iput-boolean v1, v0, LX/5MY;->A87:Z
+
+    .line 1018
+    .line 1019
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 1020
+    .line 1021
+    .line 1022
+    move-result-object v4
+
+    .line 1023
+    iput-object v4, v0, LX/5MY;->A3a:Ljava/util/HashMap;
+
+    .line 1024
+    .line 1025
+    iput-boolean v1, v0, LX/5MY;->A3m:Z
+
+    .line 1026
+    .line 1027
+    iput-boolean v1, v0, LX/5MY;->A4N:Z
+
+    .line 1028
+    .line 1029
+    iput v2, v0, LX/5MY;->A0b:I
+
+    .line 1030
+    .line 1031
+    iput v2, v0, LX/5MY;->A0a:I
+
+    .line 1032
+    .line 1033
+    iput-boolean v2, v0, LX/5MY;->A4G:Z
+
+    .line 1034
+    .line 1035
+    iput-boolean v1, v0, LX/5MY;->A7g:Z
+
+    .line 1036
+    .line 1037
+    iput-boolean v1, v0, LX/5MY;->A7h:Z
+
+    .line 1038
+    .line 1039
+    iput-boolean v1, v0, LX/5MY;->A3x:Z
+
+    .line 1040
+    .line 1041
+    iput-boolean v1, v0, LX/5MY;->A8i:Z
+
+    .line 1042
+    .line 1043
+    iput-boolean v1, v0, LX/5MY;->A8j:Z
+
+    .line 1044
+    .line 1045
+    iput-boolean v1, v0, LX/5MY;->A4C:Z
+
+    .line 1046
+    .line 1047
+    iput-wide v11, v0, LX/5MY;->A2d:J
+
+    .line 1048
+    .line 1049
+    iput-wide v11, v0, LX/5MY;->A2c:J
+
+    .line 1050
+    .line 1051
+    iput-boolean v1, v0, LX/5MY;->A3p:Z
+
+    .line 1052
+    .line 1053
+    iput v1, v0, LX/5MY;->A1Z:I
+
+    .line 1054
+    .line 1055
+    iput v7, v0, LX/5MY;->A1S:I
+
+    .line 1056
+    .line 1057
+    const/16 v4, 0x2134
+
+    .line 1058
+    .line 1059
+    iput v4, v0, LX/5MY;->A1z:I
+
+    .line 1060
+    .line 1061
+    iput v1, v0, LX/5MY;->A2F:I
+
+    .line 1062
+    .line 1063
+    const/16 v4, 0x1f40
+
+    .line 1064
+    .line 1065
+    iput v4, v0, LX/5MY;->A1x:I
+
+    .line 1066
+    .line 1067
+    iput-boolean v1, v0, LX/5MY;->A6Q:Z
+
+    .line 1068
+    .line 1069
+    iput-boolean v1, v0, LX/5MY;->A83:Z
+
+    .line 1070
+    .line 1071
+    iput-boolean v1, v0, LX/5MY;->A56:Z
+
+    .line 1072
+    .line 1073
+    iput-boolean v1, v0, LX/5MY;->A4w:Z
+
+    .line 1074
+    .line 1075
+    iput-boolean v1, v0, LX/5MY;->A4v:Z
+
+    .line 1076
+    .line 1077
+    iput-boolean v1, v0, LX/5MY;->A74:Z
+
+    .line 1078
+    .line 1079
+    iput-boolean v1, v0, LX/5MY;->A54:Z
+
+    .line 1080
+    .line 1081
+    iput-boolean v1, v0, LX/5MY;->A53:Z
+
+    .line 1082
+    .line 1083
+    iput-boolean v1, v0, LX/5MY;->A4y:Z
+
+    .line 1084
+    .line 1085
+    iput-boolean v2, v0, LX/5MY;->A88:Z
+
+    .line 1086
+    .line 1087
+    iput-boolean v2, v0, LX/5MY;->A7o:Z
+
+    .line 1088
+    .line 1089
+    iput-boolean v1, v0, LX/5MY;->A4J:Z
+
+    .line 1090
+    .line 1091
+    move-wide/from16 v4, v16
+
+    .line 1092
+    .line 1093
+    iput-wide v4, v0, LX/5MY;->A01:D
+
+    .line 1094
+    .line 1095
+    iput-boolean v1, v0, LX/5MY;->A8v:Z
+
+    .line 1096
+    .line 1097
+    iput-boolean v1, v0, LX/5MY;->A6r:Z
+
+    .line 1098
+    .line 1099
+    iput-boolean v1, v0, LX/5MY;->A8o:Z
+
+    .line 1100
+    .line 1101
+    const v4, 0x7a120
+
+    .line 1102
+    .line 1103
+    .line 1104
+    iput v4, v0, LX/5MY;->A25:I
+
+    .line 1105
+    .line 1106
+    const v4, 0x3e800
+
+    .line 1107
+    .line 1108
+    .line 1109
+    iput v4, v0, LX/5MY;->A24:I
+
+    .line 1110
+    .line 1111
+    iput-boolean v1, v0, LX/5MY;->A8D:Z
+
+    .line 1112
+    .line 1113
+    iput v1, v0, LX/5MY;->A1P:I
+
+    .line 1114
+    .line 1115
+    const v4, 0x3f4ccccd    # 0.8f
+
+    .line 1116
+    .line 1117
+    .line 1118
+    iput v4, v0, LX/5MY;->A05:F
+
+    .line 1119
+    .line 1120
+    move/from16 v4, v27
+
+    .line 1121
+    .line 1122
+    iput v4, v0, LX/5MY;->A09:F
+
+    .line 1123
+    .line 1124
+    iput v3, v0, LX/5MY;->A1Q:I
+
+    .line 1125
+    .line 1126
+    move/from16 v4, v31
+
+    .line 1127
+    .line 1128
+    iput v4, v0, LX/5MY;->A1c:I
+
+    .line 1129
+    .line 1130
+    iput v4, v0, LX/5MY;->A14:I
+
+    .line 1131
+    .line 1132
+    iput v13, v0, LX/5MY;->A2H:I
+
+    .line 1133
+    .line 1134
+    const/16 v5, 0x1770
+
+    .line 1135
+    .line 1136
+    iput v5, v0, LX/5MY;->A15:I
+
+    .line 1137
+    .line 1138
+    iput v5, v0, LX/5MY;->A2I:I
+
+    .line 1139
+    .line 1140
+    move/from16 v4, v25
+
+    .line 1141
+    .line 1142
+    iput v4, v0, LX/5MY;->A1h:I
+
+    .line 1143
+    .line 1144
+    const/16 v4, 0x1e
+
+    .line 1145
+    .line 1146
+    iput v4, v0, LX/5MY;->A1g:I
+
+    .line 1147
+    .line 1148
+    iput v14, v0, LX/5MY;->A1d:I
+
+    .line 1149
+    .line 1150
+    iput-boolean v1, v0, LX/5MY;->A62:Z
+
+    .line 1151
+    .line 1152
+    iput-boolean v1, v0, LX/5MY;->A61:Z
+
+    .line 1153
+    .line 1154
+    iput-boolean v1, v0, LX/5MY;->A5x:Z
+
+    .line 1155
+    .line 1156
+    iput-object v6, v0, LX/5MY;->A3Q:Ljava/lang/String;
+
+    .line 1157
+    .line 1158
+    iput-boolean v1, v0, LX/5MY;->A7w:Z
+
+    .line 1159
+    .line 1160
+    const/16 v14, 0x4b
+
+    .line 1161
+    .line 1162
+    iput v14, v0, LX/5MY;->A2G:I
+
+    .line 1163
+    .line 1164
+    move/from16 v4, v27
+
+    .line 1165
+    .line 1166
+    iput v4, v0, LX/5MY;->A03:F
+
+    .line 1167
+    .line 1168
+    iput v1, v0, LX/5MY;->A1T:I
+
+    .line 1169
+    .line 1170
+    iput-wide v11, v0, LX/5MY;->A2Y:J
+
+    .line 1171
+    .line 1172
+    iput v14, v0, LX/5MY;->A0H:I
+
+    .line 1173
+    .line 1174
+    move/from16 v4, v26
+
+    .line 1175
+    .line 1176
+    iput v4, v0, LX/5MY;->A02:F
+
+    .line 1177
+    .line 1178
+    iput-boolean v1, v0, LX/5MY;->A5y:Z
+
+    .line 1179
+    .line 1180
+    iput-boolean v1, v0, LX/5MY;->A9L:Z
+
+    .line 1181
+    .line 1182
+    const v4, 0x3f866666    # 1.05f
+
+    .line 1183
+    .line 1184
+    .line 1185
+    iput v4, v0, LX/5MY;->A04:F
+
+    .line 1186
+    .line 1187
+    iput v1, v0, LX/5MY;->A0P:I
+
+    .line 1188
+    .line 1189
+    iput v1, v0, LX/5MY;->A2D:I
+
+    .line 1190
+    .line 1191
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 1192
+    .line 1193
+    .line 1194
+    move-result-object v4
+
+    .line 1195
+    iput-object v4, v0, LX/5MY;->A3b:Ljava/util/Map;
+
+    .line 1196
+    .line 1197
+    move/from16 v4, v29
+
+    .line 1198
+    .line 1199
+    iput v4, v0, LX/5MY;->A2R:I
+
+    .line 1200
+    .line 1201
+    move/from16 v4, v26
+
+    .line 1202
+    .line 1203
+    iput v4, v0, LX/5MY;->A06:F
+
+    .line 1204
+    .line 1205
+    move/from16 v4, v21
+
+    .line 1206
+    .line 1207
+    iput v4, v0, LX/5MY;->A08:F
+
+    .line 1208
+    .line 1209
+    const v4, 0x3f733333    # 0.95f
+
+    .line 1210
+    .line 1211
+    .line 1212
+    iput v4, v0, LX/5MY;->A07:F
+
+    .line 1213
+    .line 1214
+    const/16 v4, 0x12c
+
+    .line 1215
+    .line 1216
+    iput v4, v0, LX/5MY;->A0G:I
+
+    .line 1217
+    .line 1218
+    move/from16 v4, v29
+
+    .line 1219
+    .line 1220
+    iput v4, v0, LX/5MY;->A0F:I
+
+    .line 1221
+    .line 1222
+    move/from16 v4, v18
+
+    .line 1223
+    .line 1224
+    iput v4, v0, LX/5MY;->A0g:I
+
+    .line 1225
+    .line 1226
+    iput-boolean v1, v0, LX/5MY;->A4T:Z
+
+    .line 1227
+    .line 1228
+    iput v15, v0, LX/5MY;->A0C:F
+
+    .line 1229
+    .line 1230
+    iput-boolean v1, v0, LX/5MY;->A60:Z
+
+    .line 1231
+    .line 1232
+    iput-boolean v1, v0, LX/5MY;->A5z:Z
+
+    .line 1233
+    .line 1234
+    iput v8, v0, LX/5MY;->A1C:I
+
+    .line 1235
+    .line 1236
+    move/from16 v4, v30
+
+    .line 1237
+    .line 1238
+    iput v4, v0, LX/5MY;->A18:I
+
+    .line 1239
+    .line 1240
+    iput-boolean v1, v0, LX/5MY;->A7n:Z
+
+    .line 1241
+    .line 1242
+    iput-boolean v1, v0, LX/5MY;->A6u:Z
+
+    .line 1243
+    .line 1244
+    move/from16 v4, v22
+
+    .line 1245
+    .line 1246
+    iput v4, v0, LX/5MY;->A10:I
+
+    .line 1247
+    .line 1248
+    iput-boolean v1, v0, LX/5MY;->A6Z:Z
+
+    .line 1249
+    .line 1250
+    iput v13, v0, LX/5MY;->A0l:I
+
+    .line 1251
+    .line 1252
+    iput v13, v0, LX/5MY;->A0K:I
+
+    .line 1253
+    .line 1254
+    move/from16 v4, v20
+
+    .line 1255
+    .line 1256
+    iput v4, v0, LX/5MY;->A0s:I
+
+    .line 1257
+    .line 1258
+    iput v5, v0, LX/5MY;->A0n:I
+
+    .line 1259
+    .line 1260
+    move/from16 v4, v19
+
+    .line 1261
+    .line 1262
+    iput v4, v0, LX/5MY;->A0J:I
+
+    .line 1263
+    .line 1264
+    const v4, 0xea60
+
+    .line 1265
+    .line 1266
+    .line 1267
+    iput v4, v0, LX/5MY;->A0t:I
+
+    .line 1268
+    .line 1269
+    iput v5, v0, LX/5MY;->A0k:I
+
+    .line 1270
+    .line 1271
+    iput v4, v0, LX/5MY;->A0r:I
+
+    .line 1272
+    .line 1273
+    iput-boolean v1, v0, LX/5MY;->A65:Z
+
+    .line 1274
+    .line 1275
+    iput-boolean v1, v0, LX/5MY;->A6B:Z
+
+    .line 1276
+    .line 1277
+    iput v7, v0, LX/5MY;->A1K:I
+
+    .line 1278
+    .line 1279
+    const/16 v4, 0x2c
+
+    .line 1280
+    .line 1281
+    invoke-static {v4}, LX/0X0;->A00(I)Ljava/lang/String;
+
+    .line 1282
+    .line 1283
+    .line 1284
+    move-result-object v4
+
+    .line 1285
+    iput-object v4, v0, LX/5MY;->A3P:Ljava/lang/String;
+
+    .line 1286
+    .line 1287
+    iput-boolean v1, v0, LX/5MY;->A5W:Z
+
+    .line 1288
+    .line 1289
+    iput v2, v0, LX/5MY;->A0q:I
+
+    .line 1290
+    .line 1291
+    iput-boolean v1, v0, LX/5MY;->A8p:Z
+
+    .line 1292
+    .line 1293
+    iput-boolean v1, v0, LX/5MY;->A4s:Z
+
+    .line 1294
+    .line 1295
+    iput v1, v0, LX/5MY;->A1Y:I
+
+    .line 1296
+    .line 1297
+    iput-boolean v1, v0, LX/5MY;->A8r:Z
+
+    .line 1298
+    .line 1299
+    iput-boolean v1, v0, LX/5MY;->A8J:Z
+
+    .line 1300
+    .line 1301
+    iput-boolean v1, v0, LX/5MY;->A7R:Z
+
+    .line 1302
+    .line 1303
+    iput-boolean v1, v0, LX/5MY;->A9C:Z
+
+    .line 1304
+    .line 1305
+    iput-boolean v1, v0, LX/5MY;->A76:Z
+
+    .line 1306
+    .line 1307
+    iput-boolean v1, v0, LX/5MY;->A4j:Z
+
+    .line 1308
+    .line 1309
+    iput v3, v0, LX/5MY;->A0h:I
+
+    .line 1310
+    .line 1311
+    iput-boolean v1, v0, LX/5MY;->A5I:Z
+
+    .line 1312
+    .line 1313
+    iput-boolean v1, v0, LX/5MY;->A6k:Z
+
+    .line 1314
+    .line 1315
+    iput-boolean v1, v0, LX/5MY;->A5G:Z
+
+    .line 1316
+    .line 1317
+    iput-boolean v1, v0, LX/5MY;->A46:Z
+
+    .line 1318
+    .line 1319
+    const/16 v4, 0x12
+
+    .line 1320
+    .line 1321
+    iput v4, v0, LX/5MY;->A16:I
+
+    .line 1322
+    .line 1323
+    const/4 v4, 0x6
+
+    .line 1324
+    iput v4, v0, LX/5MY;->A17:I
+
+    .line 1325
+    .line 1326
+    const/16 v4, 0x40
+
+    .line 1327
+    .line 1328
+    iput v4, v0, LX/5MY;->A2W:I
+
+    .line 1329
+    .line 1330
+    iput v3, v0, LX/5MY;->A2V:I
+
+    .line 1331
+    .line 1332
+    iput-boolean v1, v0, LX/5MY;->A6A:Z
+
+    .line 1333
+    .line 1334
+    iput-boolean v1, v0, LX/5MY;->A6h:Z
+
+    .line 1335
+    .line 1336
+    iput v2, v0, LX/5MY;->A1a:I
+
+    .line 1337
+    .line 1338
+    iput-boolean v1, v0, LX/5MY;->A8e:Z
+
+    .line 1339
+    .line 1340
+    iput v1, v0, LX/5MY;->A0d:I
+
+    .line 1341
+    .line 1342
+    iput v1, v0, LX/5MY;->A0c:I
+
+    .line 1343
+    .line 1344
+    iput v7, v0, LX/5MY;->A2Q:I
+
+    .line 1345
+    .line 1346
+    iput-boolean v1, v0, LX/5MY;->A8E:Z
+
+    .line 1347
+    .line 1348
+    iput-boolean v1, v0, LX/5MY;->A8f:Z
+
+    .line 1349
+    .line 1350
+    iput-boolean v1, v0, LX/5MY;->A8c:Z
+
+    .line 1351
+    .line 1352
+    move/from16 v4, v20
+
+    .line 1353
+    .line 1354
+    iput v4, v0, LX/5MY;->A0u:I
+
+    .line 1355
+    .line 1356
+    iput v7, v0, LX/5MY;->A2M:I
+
+    .line 1357
+    .line 1358
+    iput v13, v0, LX/5MY;->A0m:I
+
+    .line 1359
+    .line 1360
+    iput v13, v0, LX/5MY;->A0I:I
+
+    .line 1361
+    .line 1362
+    iput v7, v0, LX/5MY;->A0v:I
+
+    .line 1363
+    .line 1364
+    iput v7, v0, LX/5MY;->A0w:I
+
+    .line 1365
+    .line 1366
+    iput-wide v9, v0, LX/5MY;->A2a:J
+
+    .line 1367
+    .line 1368
+    const-wide/16 v4, 0x3e8
+
+    .line 1369
+    .line 1370
+    iput-wide v4, v0, LX/5MY;->A2Z:J
+
+    .line 1371
+    .line 1372
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1373
+    .line 1374
+    .line 1375
+    move-result-object v4
+
+    .line 1376
+    iput-object v4, v0, LX/5MY;->A3f:Ljava/util/Set;
+
+    .line 1377
+    .line 1378
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1379
+    .line 1380
+    .line 1381
+    move-result-object v4
+
+    .line 1382
+    iput-object v4, v0, LX/5MY;->A3e:Ljava/util/Set;
+
+    .line 1383
+    .line 1384
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1385
+    .line 1386
+    .line 1387
+    move-result-object v4
+
+    .line 1388
+    iput-object v4, v0, LX/5MY;->A3g:Ljava/util/Set;
+
+    .line 1389
+    .line 1390
+    iput-boolean v1, v0, LX/5MY;->A7s:Z
+
+    .line 1391
+    .line 1392
+    iput-boolean v1, v0, LX/5MY;->A5Z:Z
+
+    .line 1393
+    .line 1394
+    iput v3, v0, LX/5MY;->A1O:I
+
+    .line 1395
+    .line 1396
+    iput v2, v0, LX/5MY;->A1N:I
+
+    .line 1397
+    .line 1398
+    iput-boolean v1, v0, LX/5MY;->A4I:Z
+
+    .line 1399
+    .line 1400
+    iput v3, v0, LX/5MY;->A0O:I
+
+    .line 1401
+    .line 1402
+    const-wide/32 v4, 0x493e0
+
+    .line 1403
+    .line 1404
+    .line 1405
+    iput-wide v4, v0, LX/5MY;->A2e:J
+
+    .line 1406
+    .line 1407
+    iput v3, v0, LX/5MY;->A13:I
+
+    .line 1408
+    .line 1409
+    iput-boolean v1, v0, LX/5MY;->A5u:Z
+
+    .line 1410
+    .line 1411
+    iput-boolean v1, v0, LX/5MY;->A5v:Z
+
+    .line 1412
+    .line 1413
+    iput-boolean v1, v0, LX/5MY;->A9F:Z
+
+    .line 1414
+    .line 1415
+    iput-boolean v1, v0, LX/5MY;->A9M:Z
+
+    .line 1416
+    .line 1417
+    iput-boolean v1, v0, LX/5MY;->A4K:Z
+
+    .line 1418
+    .line 1419
+    iput-boolean v1, v0, LX/5MY;->A3j:Z
+
+    .line 1420
+    .line 1421
+    iput-boolean v1, v0, LX/5MY;->A3i:Z
+
+    .line 1422
+    .line 1423
+    iput-boolean v1, v0, LX/5MY;->A47:Z
+
+    .line 1424
+    .line 1425
+    iput v1, v0, LX/5MY;->A0o:I
+
+    .line 1426
+    .line 1427
+    iput-boolean v1, v0, LX/5MY;->A8W:Z
+
+    .line 1428
+    .line 1429
+    iput v1, v0, LX/5MY;->A1b:I
+
+    .line 1430
+    .line 1431
+    iput v3, v0, LX/5MY;->A2K:I
+
+    .line 1432
+    .line 1433
+    iput v3, v0, LX/5MY;->A2L:I
+
+    .line 1434
+    .line 1435
+    iput v1, v0, LX/5MY;->A0x:I
+
+    .line 1436
+    .line 1437
+    iput v1, v0, LX/5MY;->A1U:I
+
+    .line 1438
+    .line 1439
+    iput v7, v0, LX/5MY;->A1G:I
+
+    .line 1440
+    .line 1441
+    iput v7, v0, LX/5MY;->A1L:I
+
+    .line 1442
+    .line 1443
+    iput-boolean v1, v0, LX/5MY;->A6z:Z
+
+    .line 1444
+    .line 1445
+    iput-boolean v1, v0, LX/5MY;->A8N:Z
+
+    .line 1446
+    .line 1447
+    iput-boolean v1, v0, LX/5MY;->A5s:Z
+
+    .line 1448
+    .line 1449
+    iput-boolean v1, v0, LX/5MY;->A6V:Z
+
+    .line 1450
+    .line 1451
+    iput-boolean v1, v0, LX/5MY;->A4g:Z
+
+    .line 1452
+    .line 1453
+    iput v3, v0, LX/5MY;->A1M:I
+
+    .line 1454
+    .line 1455
+    iput-boolean v1, v0, LX/5MY;->A8n:Z
+
+    .line 1456
+    .line 1457
+    iput v1, v0, LX/5MY;->A2J:I
+
+    .line 1458
+    .line 1459
+    iput-boolean v1, v0, LX/5MY;->A7U:Z
+
+    .line 1460
+    .line 1461
+    iput-boolean v1, v0, LX/5MY;->A3r:Z
+
+    .line 1462
+    .line 1463
+    iput-boolean v1, v0, LX/5MY;->A5F:Z
+
+    .line 1464
+    .line 1465
+    iput-boolean v1, v0, LX/5MY;->A5e:Z
+
+    .line 1466
+    .line 1467
+    iput-boolean v1, v0, LX/5MY;->A5k:Z
+
+    .line 1468
+    .line 1469
+    iput-boolean v1, v0, LX/5MY;->A6o:Z
+
+    .line 1470
+    .line 1471
+    iput-boolean v1, v0, LX/5MY;->A6U:Z
+
+    .line 1472
+    .line 1473
+    iput-boolean v1, v0, LX/5MY;->A5f:Z
+
+    .line 1474
+    .line 1475
+    iput-boolean v1, v0, LX/5MY;->A4x:Z
+
+    .line 1476
+    .line 1477
+    iput-boolean v1, v0, LX/5MY;->A8a:Z
+
+    .line 1478
+    .line 1479
+    iput-boolean v1, v0, LX/5MY;->A8Z:Z
+
+    .line 1480
+    .line 1481
+    iput-boolean v1, v0, LX/5MY;->A5Q:Z
+
+    .line 1482
+    .line 1483
+    iput v8, v0, LX/5MY;->A0e:I
+
+    .line 1484
+    .line 1485
+    iput-boolean v1, v0, LX/5MY;->A6s:Z
+
+    .line 1486
+    .line 1487
+    iput-boolean v1, v0, LX/5MY;->A5g:Z
+
+    .line 1488
+    .line 1489
+    iput-boolean v1, v0, LX/5MY;->A7m:Z
+
+    .line 1490
+    .line 1491
+    iput-boolean v1, v0, LX/5MY;->A6W:Z
+
+    .line 1492
+    .line 1493
+    iput-boolean v1, v0, LX/5MY;->A6X:Z
+
+    .line 1494
+    .line 1495
+    iput-boolean v1, v0, LX/5MY;->A7O:Z
+
+    .line 1496
+    .line 1497
+    new-instance v3, LX/3tc;
+
+    .line 1498
+    .line 1499
+    invoke-direct {v3}, LX/3tc;-><init>()V
+
+    .line 1500
+    .line 1501
+    .line 1502
+    iput-object v3, v0, LX/5MY;->A3I:LX/3tc;
+
+    .line 1503
+    .line 1504
+    iput-boolean v1, v0, LX/5MY;->A6i:Z
+
+    .line 1505
+    .line 1506
+    iput-boolean v1, v0, LX/5MY;->A6j:Z
+
+    .line 1507
+    .line 1508
+    iput-boolean v1, v0, LX/5MY;->A66:Z
+
+    .line 1509
+    .line 1510
+    iput-boolean v1, v0, LX/5MY;->A67:Z
+
+    .line 1511
+    .line 1512
+    iput-boolean v1, v0, LX/5MY;->A5D:Z
+
+    .line 1513
+    .line 1514
+    iput-boolean v1, v0, LX/5MY;->A5E:Z
+
+    .line 1515
+    .line 1516
+    iput-boolean v1, v0, LX/5MY;->A4M:Z
+
+    .line 1517
+    .line 1518
+    iput v2, v0, LX/5MY;->A0i:I
+
+    .line 1519
+    .line 1520
+    iput-boolean v1, v0, LX/5MY;->A4O:Z
+
+    .line 1521
+    .line 1522
+    iput-boolean v1, v0, LX/5MY;->A5o:Z
+
+    .line 1523
+    .line 1524
+    iput-boolean v1, v0, LX/5MY;->A5p:Z
+
+    .line 1525
+    .line 1526
+    iput-boolean v1, v0, LX/5MY;->A95:Z
+
+    .line 1527
+    .line 1528
+    iput-boolean v1, v0, LX/5MY;->A43:Z
+
+    .line 1529
+    .line 1530
+    iput-boolean v1, v0, LX/5MY;->A9A:Z
+
+    .line 1531
+    .line 1532
+    iput v1, v0, LX/5MY;->A11:I
+
+    .line 1533
+    .line 1534
+    iput v1, v0, LX/5MY;->A12:I
+
+    .line 1535
+    .line 1536
+    iput-boolean v1, v0, LX/5MY;->A97:Z
+
+    .line 1537
+    .line 1538
+    iput-boolean v1, v0, LX/5MY;->A98:Z
+
+    .line 1539
+    .line 1540
+    iput-boolean v1, v0, LX/5MY;->A59:Z
+
+    .line 1541
+    .line 1542
+    iput-boolean v1, v0, LX/5MY;->A6Y:Z
+
+    .line 1543
+    .line 1544
+    iput-boolean v1, v0, LX/5MY;->A78:Z
+
+    .line 1545
+    .line 1546
+    const/16 v3, 0x28a
+
+    .line 1547
+    .line 1548
+    iput v3, v0, LX/5MY;->A1o:I
+
+    .line 1549
+    .line 1550
+    const/16 v3, 0x320
+
+    .line 1551
+    .line 1552
+    iput v3, v0, LX/5MY;->A1p:I
+
+    .line 1553
+    .line 1554
+    const-wide v3, 0x3feccccccccccccdL    # 0.9
+
+    .line 1555
+    .line 1556
+    .line 1557
+    .line 1558
+    .line 1559
+    iput-wide v3, v0, LX/5MY;->A00:D
+
+    .line 1560
+    .line 1561
+    iput v8, v0, LX/5MY;->A1r:I
+
+    .line 1562
+    .line 1563
+    iput v2, v0, LX/5MY;->A1q:I
+
+    .line 1564
+    .line 1565
+    const v3, 0x1d4c0
+
+    .line 1566
+    .line 1567
+    .line 1568
+    iput v3, v0, LX/5MY;->A2P:I
+
+    .line 1569
+    .line 1570
+    move/from16 v3, v23
+
+    .line 1571
+    .line 1572
+    iput v3, v0, LX/5MY;->A0A:F
+
+    .line 1573
+    .line 1574
+    move/from16 v3, v24
+
+    .line 1575
+    .line 1576
+    iput v3, v0, LX/5MY;->A0B:F
+
+    .line 1577
+    .line 1578
+    iput-boolean v1, v0, LX/5MY;->A7X:Z
+
+    .line 1579
+    .line 1580
+    iput-boolean v1, v0, LX/5MY;->A5V:Z
+
+    .line 1581
+    .line 1582
+    iput-boolean v1, v0, LX/5MY;->A6b:Z
+
+    .line 1583
+    .line 1584
+    iput-object v6, v0, LX/5MY;->A3O:Ljava/lang/String;
+
+    .line 1585
+    .line 1586
+    iput-boolean v1, v0, LX/5MY;->A6p:Z
+
+    .line 1587
+    .line 1588
+    iput-object v6, v0, LX/5MY;->A3T:Ljava/lang/String;
+
+    .line 1589
+    .line 1590
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1591
+    .line 1592
+    .line 1593
+    move-result-object v3
+
+    .line 1594
+    iput-object v3, v0, LX/5MY;->A3d:Ljava/util/Set;
+
+    .line 1595
+    .line 1596
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1597
+    .line 1598
+    .line 1599
+    move-result-object v3
+
+    .line 1600
+    iput-object v3, v0, LX/5MY;->A3c:Ljava/util/Set;
+
+    .line 1601
+    .line 1602
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1603
+    .line 1604
+    .line 1605
+    move-result-object v3
+
+    .line 1606
+    iput-object v3, v0, LX/5MY;->A3h:Ljava/util/Set;
+
+    .line 1607
+    .line 1608
+    iput-boolean v1, v0, LX/5MY;->A77:Z
+
+    .line 1609
+    .line 1610
+    iput v1, v0, LX/5MY;->A1D:I
+
+    .line 1611
+    .line 1612
+    iput v1, v0, LX/5MY;->A1R:I
+
+    .line 1613
+    .line 1614
+    iput-boolean v1, v0, LX/5MY;->A5b:Z
+
+    .line 1615
+    .line 1616
+    iput v1, v0, LX/5MY;->A0j:I
+
+    .line 1617
+    .line 1618
+    iput-boolean v1, v0, LX/5MY;->A4W:Z
+
+    .line 1619
+    .line 1620
+    iput-boolean v1, v0, LX/5MY;->A4V:Z
+
+    .line 1621
+    .line 1622
+    iput-boolean v1, v0, LX/5MY;->A4Y:Z
+
+    .line 1623
+    .line 1624
+    iput-boolean v1, v0, LX/5MY;->A4X:Z
+
+    .line 1625
+    .line 1626
+    iput-boolean v1, v0, LX/5MY;->A6w:Z
+
+    .line 1627
+    .line 1628
+    iput-boolean v1, v0, LX/5MY;->A4U:Z
+
+    .line 1629
+    .line 1630
+    iput-wide v9, v0, LX/5MY;->A2b:J
+
+    .line 1631
+    .line 1632
+    iput-wide v11, v0, LX/5MY;->A2X:J
+
+    .line 1633
+    .line 1634
+    iput-wide v11, v0, LX/5MY;->A2h:J
+
+    .line 1635
+    .line 1636
+    iput-boolean v1, v0, LX/5MY;->A7A:Z
+
+    .line 1637
+    .line 1638
+    iput v8, v0, LX/5MY;->A1V:I
+
+    .line 1639
+    .line 1640
+    iput-boolean v1, v0, LX/5MY;->A3w:Z
+
+    .line 1641
+    .line 1642
+    iput-boolean v2, v0, LX/5MY;->A5N:Z
+
+    .line 1643
+    .line 1644
+    iput-boolean v1, v0, LX/5MY;->A5T:Z
+
+    .line 1645
+    .line 1646
+    iput-boolean v1, v0, LX/5MY;->A5U:Z
+
+    .line 1647
+    .line 1648
+    iput-wide v11, v0, LX/5MY;->A2j:J
+
+    .line 1649
+    .line 1650
+    iput-boolean v1, v0, LX/5MY;->A5J:Z
+
+    .line 1651
+    .line 1652
+    iput v1, v0, LX/5MY;->A0Z:I
+
+    .line 1653
+    .line 1654
+    iput v1, v0, LX/5MY;->A0N:I
+
+    .line 1655
+    .line 1656
+    iput-boolean v1, v0, LX/5MY;->A4Q:Z
+
+    .line 1657
+    .line 1658
+    iput-boolean v1, v0, LX/5MY;->A8w:Z
+
+    .line 1659
+    .line 1660
+    iput-boolean v1, v0, LX/5MY;->A4D:Z
+
+    .line 1661
+    .line 1662
+    iput-boolean v2, v0, LX/5MY;->A7N:Z
+
+    .line 1663
+    .line 1664
+    iput-boolean v1, v0, LX/5MY;->A4p:Z
+
+    .line 1665
+    .line 1666
+    iput-boolean v1, v0, LX/5MY;->A5B:Z
+
+    .line 1667
+    .line 1668
+    iput-boolean v1, v0, LX/5MY;->A5i:Z
+
+    .line 1669
+    .line 1670
+    iput-boolean v1, v0, LX/5MY;->A5a:Z
+
+    .line 1671
+    .line 1672
+    iput-boolean v2, v0, LX/5MY;->A7T:Z
+
+    .line 1673
+    .line 1674
+    iput-boolean v1, v0, LX/5MY;->A4n:Z
+
+    .line 1675
+    .line 1676
+    iput-boolean v1, v0, LX/5MY;->A5q:Z
+
+    .line 1677
+    .line 1678
+    iput-boolean v1, v0, LX/5MY;->A4c:Z
+
+    .line 1679
+    .line 1680
+    iput v1, v0, LX/5MY;->A0p:I
+
+    .line 1681
+    .line 1682
+    iput-boolean v1, v0, LX/5MY;->A50:Z
+
+    .line 1683
+    .line 1684
+    iput-boolean v1, v0, LX/5MY;->A4P:Z
+
+    .line 1685
+    .line 1686
+    iput-boolean v1, v0, LX/5MY;->A57:Z
+
+    .line 1687
+    .line 1688
+    iput-boolean v1, v0, LX/5MY;->A6t:Z
+
+    .line 1689
+    .line 1690
+    iput-boolean v1, v0, LX/5MY;->A8m:Z
+
+    .line 1691
+    .line 1692
+    move-object/from16 v1, v28
+
+    .line 1693
+    .line 1694
+    iput-object v1, v0, LX/5MY;->A3G:LX/5J0;
+
+    .line 1695
+    .line 1696
     return-void
 .end method

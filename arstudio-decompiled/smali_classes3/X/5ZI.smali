@@ -1,34 +1,21 @@
 .class public final LX/5ZI;
-.super LX/5aj;
+.super LX/5Zr;
 .source ""
+
+# interfaces
+.implements LX/5Ty;
 
 
 # instance fields
-.field public A00:Landroid/graphics/SurfaceTexture;
-
-.field public A01:Landroid/view/Surface;
-
-.field public A02:LX/554;
+.field public A00:F
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 268435456
-    invoke-direct {p0}, LX/5aj;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
-
-.method public constructor <init>(II)V
-    .locals 0
-
     .line 0
-    invoke-direct {p0}, LX/5aj;-><init>()V
+    invoke-direct {p0}, LX/5Zr;-><init>()V
 
     .line 1
     .line 2
@@ -38,239 +25,107 @@
 
 
 # virtual methods
-.method public final A00()Landroid/view/Surface;
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0}, LX/5aj;->release()V
-
-    .line 1
-    .line 2
-    .line 3
-    const-string v0, "OffscreenOutput"
-
-    .line 4
-    .line 5
-    new-instance v1, LX/552;
-
-    .line 6
-    .line 7
-    invoke-direct {v1, v0}, LX/552;-><init>(Ljava/lang/String;)V
-
-    .line 8
-    .line 9
-    .line 10
-    new-instance v0, LX/554;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, v1}, LX/554;-><init>(LX/552;)V
-
-    .line 13
-    .line 14
-    .line 15
-    iput-object v0, p0, LX/5ZI;->A02:LX/554;
-
-    .line 16
-    .line 17
-    const/4 v2, 0x1
-
-    .line 18
-    invoke-virtual {v0, v2, v2}, LX/554;->A01(II)V
-
-    .line 19
-    .line 20
-    .line 21
-    iget-object v0, p0, LX/5ZI;->A02:LX/554;
-
-    .line 22
-    .line 23
-    iget v1, v0, LX/554;->A00:I
-
-    .line 24
-    .line 25
-    new-instance v0, Landroid/graphics/SurfaceTexture;
-
-    .line 26
-    .line 27
-    invoke-direct {v0, v1}, Landroid/graphics/SurfaceTexture;-><init>(I)V
-
-    .line 28
-    .line 29
-    .line 30
-    iput-object v0, p0, LX/5ZI;->A00:Landroid/graphics/SurfaceTexture;
-
-    .line 31
-    .line 32
-    invoke-virtual {v0, v2, v2}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
-
-    .line 33
-    .line 34
-    .line 35
-    iget-object v1, p0, LX/5ZI;->A00:Landroid/graphics/SurfaceTexture;
-
-    .line 36
-    .line 37
-    new-instance v0, Landroid/view/Surface;
-
-    .line 38
-    .line 39
-    invoke-direct {v0, v1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
-
-    .line 40
-    .line 41
-    .line 42
-    iput-object v0, p0, LX/5ZI;->A01:Landroid/view/Surface;
-
-    .line 43
-    .line 44
-    return-object v0
-.end method
-
-.method public final A6S()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final AIJ()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OffscreenOutput"
-
-    return-object v0
-.end method
-
-.method public final ANw()LX/6Gm;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/6Gm;->PREVIEW:LX/6Gm;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final APD(LX/5Zr;LX/5ZJ;)V
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, LX/5ZI;->A00()Landroid/view/Surface;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {p1, v0, p0}, LX/5Zr;->Apc(Landroid/view/Surface;LX/5ar;)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public final destroy()V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, LX/5aj;->release()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public final getHeight()I
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    return v0
-.end method
-
-.method public final getWidth()I
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    return v0
-.end method
-
-.method public final release()V
+.method public final A6h(Ljava/nio/ByteBuffer;I)V
     .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5ZI;->A01:Landroid/view/Surface;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    const/4 v1, 0x0
+    const/high16 v1, -0x40800000    # -1.0f
 
+    .line 2
     .line 3
-    if-eqz v0, :cond_0
+    invoke-static {p1, p2, v0}, LX/5Tw;->A02(Ljava/nio/ByteBuffer;II)I
 
     .line 4
     .line 5
-    invoke-virtual {v0}, Landroid/view/Surface;->release()V
-
     .line 6
+    move-result v0
+
     .line 7
+    if-eqz v0, :cond_0
+
     .line 8
-    iput-object v1, p0, LX/5ZI;->A01:Landroid/view/Surface;
-
     .line 9
-    .line 10
-    :cond_0
-    iget-object v0, p0, LX/5ZI;->A00:Landroid/graphics/SurfaceTexture;
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->getFloat(I)F
 
+    .line 10
     .line 11
     .line 12
-    if-eqz v0, :cond_1
+    move-result v1
 
     .line 13
+    :cond_0
+    iput v1, p0, LX/5ZI;->A00:F
+
     .line 14
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
-
     .line 15
-    .line 16
-    .line 17
-    iput-object v1, p0, LX/5ZI;->A00:Landroid/graphics/SurfaceTexture;
+    const/4 v0, 0x1
 
+    .line 16
+    invoke-static {p1, p2, v0}, LX/5Tw;->A07(Ljava/nio/ByteBuffer;II)[F
+
+    .line 17
     .line 18
     .line 19
-    :cond_1
-    iget-object v0, p0, LX/5ZI;->A02:LX/554;
+    move-result-object v0
 
     .line 20
+    if-eqz v0, :cond_1
+
     .line 21
-    if-eqz v0, :cond_2
-
     .line 22
+    iput-object v0, p0, LX/5Zr;->A00:[F
+
     .line 23
-    invoke-virtual {v0}, LX/554;->A00()V
-
     .line 24
-    .line 25
-    .line 26
-    iput-object v1, p0, LX/5ZI;->A02:LX/554;
+    const/4 v0, 0x2
 
+    .line 25
+    invoke-static {p1, p2, v0}, LX/5Tw;->A07(Ljava/nio/ByteBuffer;II)[F
+
+    .line 26
     .line 27
     .line 28
-    :cond_2
-    invoke-super {p0}, LX/5aj;->release()V
+    move-result-object v0
 
     .line 29
+    if-eqz v0, :cond_1
+
     .line 30
     .line 31
+    iput-object v0, p0, LX/5Zs;->A00:[F
+
+    .line 32
+    .line 33
+    const/4 v1, 0x3
+
+    .line 34
+    const-class v0, LX/5ZU;
+
+    .line 35
+    .line 36
+    invoke-static {v0, p1, p2, v1}, LX/5Tw;->A08(Ljava/lang/Class;Ljava/nio/ByteBuffer;II)[LX/5Ty;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    check-cast v0, [LX/5Zj;
+
+    .line 41
+    .line 42
+    if-eqz v0, :cond_1
+
+    .line 43
+    .line 44
+    iput-object v0, p0, LX/5Zs;->A01:[LX/5Zj;
+
+    .line 45
+    .line 46
+    :cond_1
     return-void
 .end method

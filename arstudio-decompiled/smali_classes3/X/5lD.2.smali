@@ -2,66 +2,65 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A00:Ljava/util/List;
+# interfaces
+.implements LX/5mA;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/5lD;->A00:Ljava/util/List;
-
-    .line 5
-    .line 6
     return-void
 .end method
 
-.method public static A00(Ljava/util/List;)Ljava/util/List;
-    .locals 1
+
+# virtual methods
+.method public final A5y(LX/5lg;)LX/5Bt;
+    .locals 6
 
     .line 0
-    if-eqz p0, :cond_0
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    .line 5
-    move-result v0
+    iget-object v1, p1, LX/5lg;->A00:Landroid/content/Context;
 
+    .line 5
     .line 6
-    if-nez v0, :cond_0
+    iget-object v3, p1, LX/5lg;->A02:Ljava/lang/String;
 
     .line 7
     .line 8
-    invoke-static {p0}, LX/4BD;->A0r(Ljava/util/Collection;)Ljava/util/List;
+    iget-object v2, p1, LX/5lg;->A01:LX/3pS;
 
     .line 9
     .line 10
-    .line 11
-    move-result-object v0
+    iget-boolean v4, p1, LX/5lg;->A04:Z
 
+    .line 11
     .line 12
-    return-object v0
+    iget-boolean v5, p1, LX/5lg;->A03:Z
 
     .line 13
-    :cond_0
-    sget-object v0, LX/5lD;->A00:Ljava/util/List;
-
     .line 14
+    new-instance v0, LX/3gD;
+
     .line 15
+    .line 16
+    invoke-direct/range {v0 .. v5}, LX/3gD;-><init>(Landroid/content/Context;LX/3pS;Ljava/lang/String;ZZ)V
+
+    .line 17
+    .line 18
+    .line 19
     return-object v0
 .end method

@@ -1,55 +1,32 @@
-.class public final LX/4lt;
-.super LX/6MF;
+.class public abstract LX/4lT;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/4nM;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
-
-.field public A01:LX/6Gu;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
-
-.field public A02:LX/4lz;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
-
-.field public A03:LX/4m3;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
-
-.field public A04:LX/4lv;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
-
-.field public A05:LX/4m5;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
+# static fields
+.field public static final A00:Ljava/util/Comparator;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/6MF;-><init>()V
+    const/4 v1, 0x1
 
     .line 1
+    new-instance v0, LX/6gL;
+
     .line 2
     .line 3
+    invoke-direct {v0, v1}, LX/6gL;-><init>(I)V
+
+    .line 4
+    .line 5
+    .line 6
+    sput-object v0, LX/4lT;->A00:Ljava/util/Comparator;
+
+    .line 7
+    .line 8
     return-void
 .end method

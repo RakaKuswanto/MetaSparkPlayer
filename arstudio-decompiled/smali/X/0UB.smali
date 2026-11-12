@@ -2,49 +2,40 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "WakingExecutorService$2"
-
 
 # instance fields
-.field public final synthetic A00:LX/021;
+.field public A00:J
+
+.field public A01:J
+
+.field public A02:J
 
 
 # direct methods
-.method public constructor <init>(LX/021;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/0UB;->A00:LX/021;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/0UB;->A00:LX/021;
-
     .line 1
     .line 2
-    invoke-static {v0}, LX/021;->A01(LX/021;)V
-
     .line 3
+    const-wide/16 v0, 0x1
+
     .line 4
     .line 5
+    iput-wide v0, p0, LX/0UB;->A00:J
+
+    .line 6
+    .line 7
+    iput-wide p1, p0, LX/0UB;->A02:J
+
+    .line 8
+    .line 9
+    iput-wide p1, p0, LX/0UB;->A01:J
+
+    .line 10
+    .line 11
     return-void
 .end method

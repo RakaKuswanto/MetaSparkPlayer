@@ -1,16 +1,13 @@
-.class public final LX/2de;
+.class public final LX/2dE;
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:Landroid/content/ContentResolver;
-
-.field public final A01:Ljava/util/List;
+# interfaces
+.implements LX/18h;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/ContentResolver;Ljava/util/List;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -19,13 +16,34 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2de;->A00:Landroid/content/ContentResolver;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final ACC()I
+    .locals 1
+
+    const v0, 0xd6f8
+
+    return v0
+.end method
+
+.method public final AUc(I)V
+    .locals 2
+
+    .line 0
+    const-class v1, LX/6S6;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-static {v1, v0}, LX/3Fc;->A04(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 4
     .line 5
-    iput-object p2, p0, LX/2de;->A01:Ljava/util/List;
-
     .line 6
-    .line 7
     return-void
 .end method

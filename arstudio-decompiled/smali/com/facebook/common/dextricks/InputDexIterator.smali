@@ -12,13 +12,11 @@
 
 .field public final mDexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
 
-.field public final mPatchingStrategy:LX/0QT;
-
 .field public mQplCollector:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/common/dextricks/DexManifest;LX/0QT;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
+.method public constructor <init>(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
     .locals 1
 
     .line 0
@@ -35,21 +33,17 @@
 
     .line 6
     .line 7
-    iput-object p2, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mPatchingStrategy:LX/0QT;
-
-    .line 8
-    .line 9
     const/4 v0, 0x0
 
-    .line 10
+    .line 8
     iput v0, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mDexPos:I
+
+    .line 9
+    .line 10
+    iput-object p2, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mQplCollector:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
     .line 11
     .line 12
-    iput-object p3, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mQplCollector:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
-
-    .line 13
-    .line 14
     return-void
 .end method
 
@@ -58,7 +52,6 @@
 .method public close()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -88,10 +81,10 @@
 .end method
 
 .method public final hasNext()Z
-    .locals 2
+    .locals 3
 
     .line 0
-    iget v1, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mDexPos:I
+    iget v2, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mDexPos:I
 
     .line 1
     .line 2
@@ -99,17 +92,20 @@
 
     .line 3
     .line 4
-    array-length v0, v0
+    array-length v1, v0
 
     .line 5
-    invoke-static {v1, v0}, LX/001;->A1P(II)Z
+    const/4 v0, 0x0
 
     .line 6
+    if-ge v2, v1, :cond_0
+
     .line 7
     .line 8
-    move-result v0
+    const/4 v0, 0x1
 
     .line 9
+    :cond_0
     return v0
 .end method
 
@@ -155,7 +151,7 @@
     move-exception v0
 
     .line 16
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 17
     .line 18
@@ -188,7 +184,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2

@@ -2,16 +2,22 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/40J;
+.implements LX/3yW;
 
-# virtual methods
-.method public abstract canResize(LX/3yG;LX/1Up;LX/3z6;)Z
-.end method
 
-.method public abstract canTranscode(LX/45P;)Z
-.end method
+# static fields
+.field public static final A00:LX/42t;
 
-.method public abstract getIdentifier()Ljava/lang/String;
-.end method
 
-.method public abstract transcode(LX/3yG;Ljava/io/OutputStream;LX/1Up;LX/3z6;LX/45P;Ljava/lang/Integer;Landroid/graphics/ColorSpace;)LX/40g;
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, LX/42t;->A00:LX/42t;
+
+    sput-object v0, LX/409;->A00:LX/42t;
+
+    return-void
 .end method

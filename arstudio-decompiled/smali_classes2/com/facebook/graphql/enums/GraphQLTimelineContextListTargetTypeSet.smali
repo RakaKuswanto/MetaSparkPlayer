@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLTimelineContextListTargetTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLTimelineContextListTargetTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -400,46 +400,49 @@
 
     .line 189
     .line 190
-    const-string v0, "WIFI"
+    const-string/jumbo v0, "WIFI"
 
     .line 191
     .line 192
+    .line 193
     aput-object v0, v2, v1
 
-    .line 193
     .line 194
+    .line 195
     const/16 v1, 0x21
 
-    .line 195
     .line 196
-    const-string v0, "WORKVERSARIES"
-
     .line 197
-    .line 198
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORKVERSARIES"
 
+    .line 198
     .line 199
     .line 200
-    const/16 v1, 0x22
+    aput-object v0, v2, v1
 
     .line 201
     .line 202
-    const-string v0, "WORK_NULL_STATE"
+    const/16 v1, 0x22
 
     .line 203
     .line 204
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WORK_NULL_STATE"
 
     .line 205
     .line 206
     .line 207
-    move-result-object v0
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 208
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLTimelineContextListTargetTypeSet;->A00:Ljava/util/Set;
-
     .line 209
     .line 210
+    move-result-object v0
+
+    .line 211
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLTimelineContextListTargetTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 212
+    .line 213
     return-void
 .end method
 
@@ -455,11 +458,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLTimelineContextListTargetTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLTimelineContextListTargetTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

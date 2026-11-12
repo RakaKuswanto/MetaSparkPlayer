@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/facebook/payments/paymentmethods/model/PaymentOption;
+.implements Landroid/os/Parcelable;
 
 
 # direct methods

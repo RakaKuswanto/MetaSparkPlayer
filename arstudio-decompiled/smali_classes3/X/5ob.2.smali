@@ -1,4 +1,4 @@
-.class public final LX/5ob;
+.class public final LX/5oB;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,19 +7,21 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RecordingControllerImplNative$stopRecording$1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ObservableSubscribeOn$SubscribeTask"
 
 
 # instance fields
-.field public final synthetic A00:LX/5oN;
+.field public final A00:LX/5o4;
+
+.field public final synthetic A01:LX/5o7;
 
 
 # direct methods
-.method public constructor <init>(LX/5oN;)V
+.method public constructor <init>(LX/5o4;LX/5o7;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5ob;->A00:LX/5oN;
+    iput-object p2, p0, LX/5oB;->A01:LX/5o7;
 
     .line 1
     .line 2
@@ -28,23 +30,35 @@
     .line 3
     .line 4
     .line 5
+    iput-object p1, p0, LX/5oB;->A00:LX/5o4;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5ob;->A00:LX/5oN;
+    iget-object v0, p0, LX/5oB;->A01:LX/5o7;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/5oN;->A02(LX/5oN;)V
+    iget-object v1, v0, LX/5oV;->A00:LX/5oA;
 
     .line 3
     .line 4
+    iget-object v0, p0, LX/5oB;->A00:LX/5o4;
+
     .line 5
+    .line 6
+    invoke-virtual {v1, v0}, LX/5oA;->A00(LX/5ny;)V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method

@@ -1,21 +1,11 @@
-.class public final LX/4ZJ;
-.super Landroid/graphics/Matrix;
+.class public interface abstract LX/4ZJ;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4ZK;
 
-# instance fields
-.field public A00:Z
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract ACI()LX/4fk;
 .end method

@@ -1,152 +1,119 @@
 .class public final LX/5uI;
-.super LX/5uJ;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final A00:LX/5ud;
+.field public final synthetic A00:Landroid/hardware/camera2/CaptureRequest$Builder;
 
-.field public final A01:LX/6H8;
+.field public final synthetic A01:LX/5th;
 
-.field public final A02:LX/6H8;
+.field public final synthetic A02:LX/5tj;
 
-.field public final A03:Z
+.field public final synthetic A03:LX/5uq;
 
 
 # direct methods
-.method public constructor <init>(LX/5ud;LX/6OS;LX/5ue;LX/6H8;LX/6H8;JJJJJJJZZ)V
-    .locals 22
+.method public constructor <init>(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5th;LX/5tj;LX/5uq;)V
+    .locals 0
 
     .line 0
-    move-object/from16 v0, p3
+    iput-object p2, p0, LX/5uI;->A01:LX/5th;
 
     .line 1
     .line 2
-    if-eqz p3, :cond_1
+    iput-object p4, p0, LX/5uI;->A03:LX/5uq;
 
     .line 3
     .line 4
-    iget-object v4, v0, LX/5ue;->A02:Ljava/util/List;
+    iput-object p1, p0, LX/5uI;->A00:Landroid/hardware/camera2/CaptureRequest$Builder;
 
     .line 5
     .line 6
-    iget v5, v0, LX/5ue;->A00:I
+    iput-object p3, p0, LX/5uI;->A02:LX/5tj;
 
     .line 7
     .line 8
-    iget-wide v0, v0, LX/5ue;->A01:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 9
     .line 10
-    :goto_0
-    move-wide/from16 v12, p12
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic call()Ljava/lang/Object;
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/5uI;->A03:LX/5uq;
+
+    .line 1
+    .line 2
+    if-eqz v3, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v2, p0, LX/5uI;->A00:Landroid/hardware/camera2/CaptureRequest$Builder;
+
+    .line 5
+    .line 6
+    if-eqz v2, :cond_0
+
+    .line 7
+    .line 8
+    sget-object v1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_TRIGGER:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
 
     .line 11
-    .line 12
-    move-wide/from16 v8, p8
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    .line 12
     .line 13
     .line 14
-    move-object/from16 v2, p0
+    move-result-object v0
 
     .line 15
-    .line 16
-    move-wide/from16 v14, p14
+    invoke-virtual {v2, v1, v0}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
+    .line 16
     .line 17
     .line 18
-    move-object/from16 v3, p2
+    invoke-virtual {v2}, Landroid/hardware/camera2/CaptureRequest$Builder;->build()Landroid/hardware/camera2/CaptureRequest;
 
     .line 19
     .line 20
-    move-wide/from16 v16, p16
-
     .line 21
+    move-result-object v1
+
     .line 22
-    move-wide/from16 v18, p18
+    iget-object v2, p0, LX/5uI;->A02:LX/5tj;
 
     .line 23
     .line 24
-    move-wide/from16 v6, p6
+    const/4 v0, 0x0
 
     .line 25
-    .line 26
-    move-wide/from16 v10, p10
+    invoke-interface {v3, v1, v0, v2}, LX/5uq;->A4n(Landroid/hardware/camera2/CaptureRequest;Landroid/os/Handler;LX/5ux;)I
 
+    .line 26
     .line 27
     .line 28
-    move-wide/from16 v20, v0
+    return-object v2
 
     .line 29
-    .line 30
-    invoke-direct/range {v2 .. v21}, LX/5uJ;-><init>(LX/6OS;Ljava/util/List;IJJJJJJJJ)V
-
-    .line 31
-    .line 32
-    .line 33
-    move-object/from16 v0, p4
-
-    .line 34
-    .line 35
-    iput-object v0, v2, LX/5uI;->A01:LX/6H8;
-
-    .line 36
-    .line 37
-    move-object/from16 v0, p5
-
-    .line 38
-    .line 39
-    iput-object v0, v2, LX/5uI;->A02:LX/6H8;
-
-    .line 40
-    .line 41
-    move-object/from16 v0, p1
-
-    .line 42
-    .line 43
-    iput-object v0, v2, LX/5uI;->A00:LX/5ud;
-
-    .line 44
-    .line 45
-    if-eqz p1, :cond_0
-
-    .line 46
-    .line 47
-    if-eqz p20, :cond_0
-
-    .line 48
-    .line 49
-    iget-object v0, v2, LX/5uJ;->A06:Ljava/util/List;
-
-    .line 50
-    .line 51
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 52
-    .line 53
-    .line 54
     :cond_0
-    move/from16 v0, p21
+    iget-object v2, p0, LX/5uI;->A02:LX/5tj;
 
-    .line 55
-    .line 56
-    iput-boolean v0, v2, LX/5uI;->A03:Z
-
-    .line 57
-    .line 58
-    return-void
-
-    .line 59
-    :cond_1
-    const/4 v4, 0x0
-
-    .line 60
-    const/4 v5, 0x0
-
-    .line 61
-    const-wide/16 v0, 0x0
-
-    .line 62
-    .line 63
-    goto :goto_0
+    .line 30
+    .line 31
+    return-object v2
 .end method

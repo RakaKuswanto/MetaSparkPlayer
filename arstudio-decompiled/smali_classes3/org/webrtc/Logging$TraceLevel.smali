@@ -42,8 +42,195 @@
 
 
 # direct methods
+.method public static synthetic $values()[Lorg/webrtc/Logging$TraceLevel;
+    .locals 3
+
+    .line 0
+    const/16 v0, 0xf
+
+    .line 1
+    .line 2
+    new-array v2, v0, [Lorg/webrtc/Logging$TraceLevel;
+
+    .line 3
+    .line 4
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_NONE:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_STATEINFO:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    aput-object v1, v2, v0
+
+    .line 13
+    .line 14
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_WARNING:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 15
+    .line 16
+    const/4 v0, 0x2
+
+    .line 17
+    aput-object v1, v2, v0
+
+    .line 18
+    .line 19
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_ERROR:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 20
+    .line 21
+    const/4 v0, 0x3
+
+    .line 22
+    aput-object v1, v2, v0
+
+    .line 23
+    .line 24
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_CRITICAL:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 25
+    .line 26
+    const/4 v0, 0x4
+
+    .line 27
+    aput-object v1, v2, v0
+
+    .line 28
+    .line 29
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_APICALL:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 30
+    .line 31
+    const/4 v0, 0x5
+
+    .line 32
+    aput-object v1, v2, v0
+
+    .line 33
+    .line 34
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_DEFAULT:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 35
+    .line 36
+    const/4 v0, 0x6
+
+    .line 37
+    aput-object v1, v2, v0
+
+    .line 38
+    .line 39
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_MODULECALL:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 40
+    .line 41
+    const/4 v0, 0x7
+
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
+    .line 44
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_MEMORY:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 45
+    .line 46
+    const/16 v0, 0x8
+
+    .line 47
+    .line 48
+    aput-object v1, v2, v0
+
+    .line 49
+    .line 50
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_TIMER:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 51
+    .line 52
+    const/16 v0, 0x9
+
+    .line 53
+    .line 54
+    aput-object v1, v2, v0
+
+    .line 55
+    .line 56
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_STREAM:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 57
+    .line 58
+    const/16 v0, 0xa
+
+    .line 59
+    .line 60
+    aput-object v1, v2, v0
+
+    .line 61
+    .line 62
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_DEBUG:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 63
+    .line 64
+    const/16 v0, 0xb
+
+    .line 65
+    .line 66
+    aput-object v1, v2, v0
+
+    .line 67
+    .line 68
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_INFO:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 69
+    .line 70
+    const/16 v0, 0xc
+
+    .line 71
+    .line 72
+    aput-object v1, v2, v0
+
+    .line 73
+    .line 74
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_TERSEINFO:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 75
+    .line 76
+    const/16 v0, 0xd
+
+    .line 77
+    .line 78
+    aput-object v1, v2, v0
+
+    .line 79
+    .line 80
+    sget-object v1, Lorg/webrtc/Logging$TraceLevel;->TRACE_ALL:Lorg/webrtc/Logging$TraceLevel;
+
+    .line 81
+    .line 82
+    const/16 v0, 0xe
+
+    .line 83
+    .line 84
+    aput-object v1, v2, v0
+
+    .line 85
+    .line 86
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
-    .locals 19
+    .locals 5
 
     .line 0
     const-string v2, "TRACE_NONE"
@@ -53,406 +240,359 @@
     const/4 v1, 0x0
 
     .line 3
-    new-instance v18, Lorg/webrtc/Logging$TraceLevel;
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 4
     .line 5
-    move-object/from16 v0, v18
+    invoke-direct {v0, v2, v1, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 6
     .line 7
-    invoke-direct {v0, v2, v1, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
-
     .line 8
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_NONE:Lorg/webrtc/Logging$TraceLevel;
+
     .line 9
     .line 10
-    sput-object v18, Lorg/webrtc/Logging$TraceLevel;->TRACE_NONE:Lorg/webrtc/Logging$TraceLevel;
+    const-string v2, "TRACE_STATEINFO"
 
     .line 11
     .line 12
-    const-string v2, "TRACE_STATEINFO"
-
-    .line 13
-    .line 14
     const/4 v1, 0x1
 
+    .line 13
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
+
+    .line 14
     .line 15
-    new-instance v17, Lorg/webrtc/Logging$TraceLevel;
+    invoke-direct {v0, v2, v1, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 16
     .line 17
-    move-object/from16 v0, v17
-
     .line 18
-    .line 19
-    invoke-direct {v0, v2, v1, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_STATEINFO:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 19
     .line 20
+    const-string v2, "TRACE_WARNING"
+
     .line 21
     .line 22
-    sput-object v17, Lorg/webrtc/Logging$TraceLevel;->TRACE_STATEINFO:Lorg/webrtc/Logging$TraceLevel;
+    const/4 v1, 0x2
 
     .line 23
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
+
     .line 24
-    const-string v1, "TRACE_WARNING"
-
     .line 25
+    invoke-direct {v0, v2, v1, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+
     .line 26
-    const/4 v0, 0x2
-
     .line 27
-    new-instance v14, Lorg/webrtc/Logging$TraceLevel;
-
     .line 28
-    .line 29
-    invoke-direct {v14, v1, v0, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_WARNING:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 29
     .line 30
+    const-string v3, "TRACE_ERROR"
+
     .line 31
     .line 32
-    sput-object v14, Lorg/webrtc/Logging$TraceLevel;->TRACE_WARNING:Lorg/webrtc/Logging$TraceLevel;
+    const/4 v1, 0x3
 
     .line 33
+    const/4 v2, 0x4
+
     .line 34
-    const-string v2, "TRACE_ERROR"
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 35
     .line 36
-    const/4 v0, 0x3
+    invoke-direct {v0, v3, v1, v2}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 37
-    const/4 v1, 0x4
-
     .line 38
-    new-instance v13, Lorg/webrtc/Logging$TraceLevel;
-
     .line 39
-    .line 40
-    invoke-direct {v13, v2, v0, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_ERROR:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 40
     .line 41
+    const-string v1, "TRACE_CRITICAL"
+
     .line 42
     .line 43
-    sput-object v13, Lorg/webrtc/Logging$TraceLevel;->TRACE_ERROR:Lorg/webrtc/Logging$TraceLevel;
+    const/16 v4, 0x8
 
     .line 44
     .line 45
-    const-string v0, "TRACE_CRITICAL"
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 46
     .line 47
-    const/16 v3, 0x8
+    invoke-direct {v0, v1, v2, v4}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 48
     .line 49
-    new-instance v12, Lorg/webrtc/Logging$TraceLevel;
-
     .line 50
-    .line 51
-    invoke-direct {v12, v0, v1, v3}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_CRITICAL:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 51
     .line 52
+    const-string v3, "TRACE_APICALL"
+
     .line 53
     .line 54
-    sput-object v12, Lorg/webrtc/Logging$TraceLevel;->TRACE_CRITICAL:Lorg/webrtc/Logging$TraceLevel;
+    const/4 v2, 0x5
 
     .line 55
+    const/16 v1, 0x10
+
     .line 56
-    const-string v2, "TRACE_APICALL"
-
     .line 57
-    .line 58
-    const/4 v1, 0x5
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
+    .line 58
     .line 59
-    const/16 v0, 0x10
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 60
     .line 61
-    new-instance v11, Lorg/webrtc/Logging$TraceLevel;
-
     .line 62
-    .line 63
-    invoke-direct {v11, v2, v1, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_APICALL:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 63
     .line 64
+    const-string v3, "TRACE_DEFAULT"
+
     .line 65
     .line 66
-    sput-object v11, Lorg/webrtc/Logging$TraceLevel;->TRACE_APICALL:Lorg/webrtc/Logging$TraceLevel;
+    const/4 v2, 0x6
 
     .line 67
+    const/16 v1, 0xff
+
     .line 68
-    const-string v2, "TRACE_DEFAULT"
-
     .line 69
-    .line 70
-    const/4 v1, 0x6
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
+    .line 70
     .line 71
-    const/16 v0, 0xff
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 72
     .line 73
-    new-instance v10, Lorg/webrtc/Logging$TraceLevel;
-
     .line 74
-    .line 75
-    invoke-direct {v10, v2, v1, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_DEFAULT:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 75
     .line 76
+    const-string v3, "TRACE_MODULECALL"
+
     .line 77
     .line 78
-    sput-object v10, Lorg/webrtc/Logging$TraceLevel;->TRACE_DEFAULT:Lorg/webrtc/Logging$TraceLevel;
+    const/4 v2, 0x7
 
     .line 79
+    const/16 v1, 0x20
+
     .line 80
-    const-string v2, "TRACE_MODULECALL"
-
     .line 81
-    .line 82
-    const/4 v1, 0x7
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
+    .line 82
     .line 83
-    const/16 v0, 0x20
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 84
     .line 85
-    new-instance v9, Lorg/webrtc/Logging$TraceLevel;
-
     .line 86
-    .line 87
-    invoke-direct {v9, v2, v1, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_MODULECALL:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 87
     .line 88
+    const-string v2, "TRACE_MEMORY"
+
     .line 89
     .line 90
-    sput-object v9, Lorg/webrtc/Logging$TraceLevel;->TRACE_MODULECALL:Lorg/webrtc/Logging$TraceLevel;
+    const/16 v1, 0x100
 
     .line 91
     .line 92
-    const-string v1, "TRACE_MEMORY"
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 93
     .line 94
-    const/16 v0, 0x100
+    invoke-direct {v0, v2, v4, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 95
     .line 96
-    new-instance v8, Lorg/webrtc/Logging$TraceLevel;
-
     .line 97
-    .line 98
-    invoke-direct {v8, v1, v3, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_MEMORY:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 98
     .line 99
+    const-string v3, "TRACE_TIMER"
+
     .line 100
     .line 101
-    sput-object v8, Lorg/webrtc/Logging$TraceLevel;->TRACE_MEMORY:Lorg/webrtc/Logging$TraceLevel;
+    const/16 v2, 0x9
 
     .line 102
     .line 103
-    const-string v2, "TRACE_TIMER"
+    const/16 v1, 0x200
 
     .line 104
     .line 105
-    const/16 v1, 0x9
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 106
     .line 107
-    const/16 v0, 0x200
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 108
     .line 109
-    new-instance v7, Lorg/webrtc/Logging$TraceLevel;
-
     .line 110
-    .line 111
-    invoke-direct {v7, v2, v1, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_TIMER:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 111
     .line 112
+    const-string v3, "TRACE_STREAM"
+
     .line 113
     .line 114
-    sput-object v7, Lorg/webrtc/Logging$TraceLevel;->TRACE_TIMER:Lorg/webrtc/Logging$TraceLevel;
+    const/16 v2, 0xa
 
     .line 115
     .line 116
-    const-string v2, "TRACE_STREAM"
+    const/16 v1, 0x400
 
     .line 117
     .line 118
-    const/16 v1, 0xa
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 119
     .line 120
-    const/16 v0, 0x400
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 121
     .line 122
-    new-instance v6, Lorg/webrtc/Logging$TraceLevel;
-
     .line 123
-    .line 124
-    invoke-direct {v6, v2, v1, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_STREAM:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 124
     .line 125
+    const-string v3, "TRACE_DEBUG"
+
     .line 126
     .line 127
-    sput-object v6, Lorg/webrtc/Logging$TraceLevel;->TRACE_STREAM:Lorg/webrtc/Logging$TraceLevel;
+    const/16 v2, 0xb
 
     .line 128
     .line 129
-    const-string v2, "TRACE_DEBUG"
+    const/16 v1, 0x800
 
     .line 130
     .line 131
-    const/16 v1, 0xb
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 132
     .line 133
-    const/16 v0, 0x800
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 134
     .line 135
-    new-instance v5, Lorg/webrtc/Logging$TraceLevel;
-
     .line 136
-    .line 137
-    invoke-direct {v5, v2, v1, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_DEBUG:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 137
     .line 138
+    const-string v3, "TRACE_INFO"
+
     .line 139
     .line 140
-    sput-object v5, Lorg/webrtc/Logging$TraceLevel;->TRACE_DEBUG:Lorg/webrtc/Logging$TraceLevel;
+    const/16 v2, 0xc
 
     .line 141
     .line 142
-    const-string v2, "TRACE_INFO"
+    const/16 v1, 0x1000
 
     .line 143
     .line 144
-    const/16 v1, 0xc
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 145
     .line 146
-    const/16 v0, 0x1000
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 147
     .line 148
-    new-instance v4, Lorg/webrtc/Logging$TraceLevel;
-
     .line 149
-    .line 150
-    invoke-direct {v4, v2, v1, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_INFO:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 150
     .line 151
+    const-string v3, "TRACE_TERSEINFO"
+
     .line 152
     .line 153
-    sput-object v4, Lorg/webrtc/Logging$TraceLevel;->TRACE_INFO:Lorg/webrtc/Logging$TraceLevel;
+    const/16 v2, 0xd
 
     .line 154
     .line 155
-    const-string v0, "TRACE_TERSEINFO"
+    const/16 v1, 0x2000
 
     .line 156
     .line 157
-    const/16 v2, 0xd
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
     .line 158
     .line 159
-    const/16 v1, 0x2000
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
 
     .line 160
     .line 161
-    new-instance v3, Lorg/webrtc/Logging$TraceLevel;
-
     .line 162
-    .line 163
-    invoke-direct {v3, v0, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_TERSEINFO:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 163
     .line 164
+    const-string v3, "TRACE_ALL"
+
     .line 165
     .line 166
-    sput-object v3, Lorg/webrtc/Logging$TraceLevel;->TRACE_TERSEINFO:Lorg/webrtc/Logging$TraceLevel;
+    const/16 v2, 0xe
 
     .line 167
     .line 168
-    const-string v1, "TRACE_ALL"
+    const v1, 0xffff
 
     .line 169
     .line 170
-    const/16 v16, 0xe
-
     .line 171
-    .line 172
-    const v0, 0xffff
+    new-instance v0, Lorg/webrtc/Logging$TraceLevel;
 
+    .line 172
     .line 173
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
+
     .line 174
     .line 175
-    new-instance v2, Lorg/webrtc/Logging$TraceLevel;
-
     .line 176
-    .line 177
-    move-object v15, v1
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->TRACE_ALL:Lorg/webrtc/Logging$TraceLevel;
 
+    .line 177
     .line 178
-    move/from16 v1, v16
+    invoke-static {}, Lorg/webrtc/Logging$TraceLevel;->$values()[Lorg/webrtc/Logging$TraceLevel;
 
     .line 179
     .line 180
-    invoke-direct {v2, v15, v1, v0}, Lorg/webrtc/Logging$TraceLevel;-><init>(Ljava/lang/String;II)V
-
     .line 181
+    move-result-object v0
+
     .line 182
+    sput-object v0, Lorg/webrtc/Logging$TraceLevel;->$VALUES:[Lorg/webrtc/Logging$TraceLevel;
+
     .line 183
-    sput-object v2, Lorg/webrtc/Logging$TraceLevel;->TRACE_ALL:Lorg/webrtc/Logging$TraceLevel;
-
     .line 184
-    .line 185
-    const/16 v0, 0xf
-
-    .line 186
-    .line 187
-    new-array v15, v0, [Lorg/webrtc/Logging$TraceLevel;
-
-    .line 188
-    .line 189
-    move-object/from16 v1, v18
-
-    .line 190
-    .line 191
-    move-object/from16 v0, v17
-
-    .line 192
-    .line 193
-    invoke-static {v15, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 194
-    .line 195
-    .line 196
-    invoke-static {v14, v13, v12, v11, v15}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 197
-    .line 198
-    .line 199
-    invoke-static {v10, v9, v8, v7, v15}, LX/0Yc;->A0R(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 200
-    .line 201
-    .line 202
-    invoke-static {v6, v5, v4, v3, v15}, LX/4BD;->A1J(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 203
-    .line 204
-    .line 205
-    aput-object v2, v15, v16
-
-    .line 206
-    .line 207
-    sput-object v15, Lorg/webrtc/Logging$TraceLevel;->$VALUES:[Lorg/webrtc/Logging$TraceLevel;
-
-    .line 208
-    .line 209
     return-void
 .end method
 

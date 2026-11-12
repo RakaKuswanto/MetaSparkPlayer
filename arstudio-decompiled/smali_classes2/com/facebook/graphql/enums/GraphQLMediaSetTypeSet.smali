@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMediaSetTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMediaSetTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -1024,46 +1024,49 @@
 
     .line 501
     .line 502
-    const-string v0, "WORK_INTERN_BADGE_PHOTOS"
+    const-string/jumbo v0, "WORK_INTERN_BADGE_PHOTOS"
 
     .line 503
     .line 504
+    .line 505
     aput-object v0, v2, v1
 
-    .line 505
     .line 506
+    .line 507
     const/16 v1, 0x55
 
-    .line 507
     .line 508
-    const-string v0, "WORK_SHIFT_PHOTOS"
-
     .line 509
-    .line 510
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORK_SHIFT_PHOTOS"
 
+    .line 510
     .line 511
     .line 512
-    const/16 v1, 0x56
+    aput-object v0, v2, v1
 
     .line 513
     .line 514
-    const-string v0, "YEAR_OVERVIEW_PHOTOS"
+    const/16 v1, 0x56
 
     .line 515
     .line 516
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "YEAR_OVERVIEW_PHOTOS"
 
     .line 517
     .line 518
     .line 519
-    move-result-object v0
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 520
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMediaSetTypeSet;->A00:Ljava/util/Set;
-
     .line 521
     .line 522
+    move-result-object v0
+
+    .line 523
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMediaSetTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 524
+    .line 525
     return-void
 .end method
 
@@ -1079,11 +1082,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMediaSetTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMediaSetTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

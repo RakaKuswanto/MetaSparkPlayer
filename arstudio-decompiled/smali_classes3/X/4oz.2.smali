@@ -1,29 +1,17 @@
-.class public interface abstract LX/4oz;
+.class public abstract LX/4oZ;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ACs()LX/4ne;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AHp()I
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract ALY()I
-.end method
-
-.method public abstract ANJ()I
-.end method
-
-.method public abstract ANK()LX/4mu;
-.end method
-
-.method public abstract APo()Z
-.end method
-
-.method public abstract AQZ()Z
-.end method
-
-.method public abstract Ahw(LX/4nC;Ljava/lang/String;)V
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

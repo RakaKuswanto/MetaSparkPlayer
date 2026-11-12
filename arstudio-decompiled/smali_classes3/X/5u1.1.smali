@@ -1,125 +1,190 @@
-.class public LX/5u1;
-.super LX/54i;
+.class public final LX/5u1;
+.super LX/5rL;
 .source ""
 
 
 # instance fields
-.field public final codecInfo:LX/5uB;
+.field public final synthetic A00:Landroid/hardware/camera2/CaptureRequest$Builder;
 
-.field public final diagnosticInfo:Ljava/lang/String;
+.field public final synthetic A01:LX/5rL;
+
+.field public final synthetic A02:LX/5tZ;
+
+.field public final synthetic A03:LX/5tj;
+
+.field public final synthetic A04:Z
 
 
 # direct methods
-.method public constructor <init>(LX/5uB;Ljava/lang/Throwable;)V
-    .locals 3
+.method public constructor <init>(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5rL;LX/5tZ;LX/5tj;Z)V
+    .locals 0
 
     .line 0
-    const-string v0, "Decoder failed: "
+    iput-object p3, p0, LX/5u1;->A02:LX/5tZ;
 
     .line 1
     .line 2
-    const/4 v2, 0x0
+    iput-object p2, p0, LX/5u1;->A01:LX/5rL;
 
     .line 3
-    if-nez p1, :cond_1
-
     .line 4
-    .line 5
-    move-object v1, v2
+    iput-object p1, p0, LX/5u1;->A00:Landroid/hardware/camera2/CaptureRequest$Builder;
 
+    .line 5
     .line 6
-    :goto_0
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p4, p0, LX/5u1;->A03:LX/5tj;
 
     .line 7
     .line 8
-    .line 9
-    move-result-object v0
+    iput-boolean p5, p0, LX/5u1;->A04:Z
 
+    .line 9
     .line 10
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-direct {p0}, LX/5rL;-><init>()V
 
     .line 11
     .line 12
     .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-direct {p0, v0, p2}, LX/54i;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 15
-    .line 16
-    .line 17
-    iput-object p1, p0, LX/5u1;->codecInfo:LX/5uB;
-
-    .line 18
-    .line 19
-    sget v1, Lcom/google/android/exoplayer2/util/Util;->A00:I
-
-    .line 20
-    .line 21
-    const/16 v0, 0x15
-
-    .line 22
-    .line 23
-    if-lt v1, v0, :cond_0
-
-    .line 24
-    .line 25
-    invoke-static {p2}, LX/5u1;->A00(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v2
-
-    .line 29
-    :cond_0
-    iput-object v2, p0, LX/5u1;->diagnosticInfo:Ljava/lang/String;
-
-    .line 30
-    .line 31
     return-void
-
-    .line 32
-    :cond_1
-    iget-object v1, p1, LX/5uB;->A03:Ljava/lang/String;
-
-    .line 33
-    .line 34
-    goto :goto_0
 .end method
 
-.method public static A00(Ljava/lang/Throwable;)Ljava/lang/String;
-    .locals 1
+
+# virtual methods
+.method public final A01(Ljava/lang/Exception;)V
+    .locals 5
 
     .line 0
-    instance-of v0, p0, Landroid/media/MediaCodec$CodecException;
+    iget-object v0, p0, LX/5u1;->A01:LX/5rL;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1}, LX/5rL;->A01(Ljava/lang/Exception;)V
 
     .line 3
     .line 4
-    check-cast p0, Landroid/media/MediaCodec$CodecException;
-
     .line 5
+    iget-object v0, p0, LX/5u1;->A02:LX/5tZ;
+
     .line 6
-    invoke-virtual {p0}, Landroid/media/MediaCodec$CodecException;->getDiagnosticInfo()Ljava/lang/String;
+    .line 7
+    iget-object v4, v0, LX/5tZ;->A0A:LX/5rb;
+
+    .line 8
+    .line 9
+    iget-object v3, p0, LX/5u1;->A00:Landroid/hardware/camera2/CaptureRequest$Builder;
+
+    .line 10
+    .line 11
+    iget-object v1, p0, LX/5u1;->A03:LX/5tj;
+
+    .line 12
+    .line 13
+    iget-boolean v0, p0, LX/5u1;->A04:Z
+
+    .line 14
+    .line 15
+    new-instance v2, LX/5uy;
+
+    .line 16
+    .line 17
+    invoke-direct {v2, v3, p0, v1, v0}, LX/5uy;-><init>(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5u1;LX/5tj;Z)V
+
+    .line 18
+    .line 19
+    .line 20
+    const-string v1, "restart_preview_video_recording_failed"
+
+    .line 21
+    .line 22
+    const/4 v0, 0x0
+
+    .line 23
+    invoke-virtual {v4, v0, v1, v2}, LX/5rb;->A00(LX/5rL;Ljava/lang/String;Ljava/util/concurrent/Callable;)LX/5rI;
+
+    .line 24
+    .line 25
+    .line 26
+    return-void
+.end method
+
+.method public final bridge synthetic A02(Ljava/lang/Object;)V
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/5u1;->A02:LX/5tZ;
+
+    .line 1
+    .line 2
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-wide v0
+
+    .line 6
+    iput-wide v0, v2, LX/5tZ;->A00:J
 
     .line 7
     .line 8
-    .line 9
-    move-result-object v0
+    iget-object v0, p0, LX/5u1;->A01:LX/5rL;
 
+    .line 9
     .line 10
-    return-object v0
+    invoke-virtual {v0, p1}, LX/5rL;->A02(Ljava/lang/Object;)V
 
     .line 11
+    .line 12
+    .line 13
+    return-void
+.end method
+
+.method public final synthetic A04(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5tj;Z)Ljava/lang/Void;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/5u1;->A02:LX/5tZ;
+
+    .line 1
+    .line 2
+    invoke-virtual {v1}, LX/5tZ;->A02()Ljava/lang/Exception;
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, v1, LX/5tZ;->A01:LX/5th;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, p1, p2}, LX/5th;->A05(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5tj;)V
+
+    .line 10
+    .line 11
+    .line 12
     :cond_0
+    iget-object v1, v1, LX/5tZ;->A02:LX/5tf;
+
+    .line 13
+    .line 14
+    if-eqz v1, :cond_1
+
+    .line 15
+    .line 16
+    const/4 v0, 0x1
+
+    .line 17
+    invoke-virtual {v1, p3, v0}, LX/5tf;->A0M(ZZ)V
+
+    .line 18
+    .line 19
+    .line 20
+    :cond_1
     const/4 v0, 0x0
 
-    .line 12
+    .line 21
     return-object v0
 .end method

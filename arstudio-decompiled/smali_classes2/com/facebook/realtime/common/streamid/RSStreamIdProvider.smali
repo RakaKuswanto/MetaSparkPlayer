@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/3DO;
+.field public static final Companion:LX/0m4;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/3DO;
+    new-instance v0, LX/0m4;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/3DO;-><init>()V
+    invoke-direct {v0}, LX/0m4;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/realtime/common/streamid/RSStreamIdProvider;->Companion:LX/3DO;
+    sput-object v0, Lcom/facebook/realtime/common/streamid/RSStreamIdProvider;->Companion:LX/0m4;
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 11
     .line 12

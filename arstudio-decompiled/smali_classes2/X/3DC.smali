@@ -1,33 +1,11 @@
-.class public final LX/3DC;
+.class public interface abstract LX/3DC;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0ZF;
+# virtual methods
+.method public abstract AOU(Ljava/lang/String;)Z
+.end method
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/1z6;->A0L()LX/0ZF;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/3DC;->A00:LX/0ZF;
-
-    .line 8
-    .line 9
-    return-void
+.method public abstract Aey(Landroid/os/Bundle;)Landroid/os/Bundle;
 .end method

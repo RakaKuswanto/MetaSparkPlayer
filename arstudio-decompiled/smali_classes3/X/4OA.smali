@@ -1,121 +1,190 @@
-.class public LX/4OA;
-.super Landroid/widget/Button;
+.class public final LX/4OA;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/4Nn;
+
+
+# instance fields
+.field public final A00:Landroid/os/LocaleList;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
-
-    .line 536870912
-    invoke-direct {p0, p1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
-
-    .line 805306368
-    invoke-direct {p0, p1, p2}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 805306369
-    .line 805306370
-    .line 805306371
-    invoke-direct {p0, p1, p2}, LX/4OA;->A01(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 805306372
-    .line 805306373
-    .line 805306374
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-direct {p0, p1, p2}, LX/4OA;->A01(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    check-cast p1, Landroid/os/LocaleList;
 
     .line 4
     .line 5
+    iput-object p1, p0, LX/4OA;->A00:Landroid/os/LocaleList;
+
     .line 6
+    .line 7
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 0
 
-    .line 268435456
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+# virtual methods
+.method public final A9p(I)Ljava/util/Locale;
+    .locals 1
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    invoke-direct {p0, p1, p2}, LX/4OA;->A01(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 0
+    iget-object v0, p0, LX/4OA;->A00:Landroid/os/LocaleList;
 
-    .line 268435460
-    .line 268435461
-    .line 268435462
-    return-void
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
 .end method
 
-.method private A01(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public final AGc()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4OA;->A00:Landroid/os/LocaleList;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final AoT()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4OA;->A00:Landroid/os/LocaleList;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/os/LocaleList;->toLanguageTags()Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
     .line 0
-    sget-object v0, LX/4OX;->A0J:[I
+    iget-object v1, p0, LX/4OA;->A00:Landroid/os/LocaleList;
 
     .line 1
     .line 2
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    check-cast p1, LX/4Nn;
+
+    .line 3
+    .line 4
+    invoke-interface {p1}, LX/4Nn;->AGc()Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4OA;->A00:Landroid/os/LocaleList;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    move-result v0
 
     .line 6
-    const/4 v0, 0x3
+    return v0
+.end method
 
-    .line 7
-    invoke-static {p1, v1, p0, v0}, LX/4BD;->A0u(Landroid/content/Context;Landroid/content/res/TypedArray;Landroid/view/View;I)V
+.method public final isEmpty()Z
+    .locals 1
 
-    .line 8
-    .line 9
-    .line 10
-    const/4 v0, 0x1
+    .line 0
+    iget-object v0, p0, LX/4OA;->A00:Landroid/os/LocaleList;
 
-    .line 11
-    invoke-static {p1, v1, p0, v0}, LX/4BD;->A0x(Landroid/content/Context;Landroid/content/res/TypedArray;Landroid/widget/TextView;I)V
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/os/LocaleList;->isEmpty()Z
 
-    .line 12
-    .line 13
-    .line 14
-    const/4 v0, 0x2
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
 
-    .line 15
-    invoke-static {p1, v1, p0, v0}, LX/4BD;->A0w(Landroid/content/Context;Landroid/content/res/TypedArray;Landroid/widget/TextView;I)V
+    .line 6
+    return v0
+.end method
 
-    .line 16
-    .line 17
-    .line 18
-    invoke-static {p1, v1, p0}, LX/4BD;->A0v(Landroid/content/Context;Landroid/content/res/TypedArray;Landroid/widget/TextView;)V
+.method public final size()I
+    .locals 1
 
-    .line 19
-    .line 20
-    .line 21
-    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+    .line 0
+    iget-object v0, p0, LX/4OA;->A00:Landroid/os/LocaleList;
 
-    .line 22
-    .line 23
-    .line 24
-    return-void
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/os/LocaleList;->size()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4OA;->A00:Landroid/os/LocaleList;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
 .end method

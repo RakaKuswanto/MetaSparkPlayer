@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 5
 
     .line 0
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
@@ -30,12 +30,12 @@
     .line 2
     .line 3
     .line 4
-    move-result-object v4
+    move-result-object v3
 
     .line 5
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 6
     .line 7
@@ -43,7 +43,7 @@
     move-result-object v1
 
     .line 9
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 10
     .line 11
@@ -51,7 +51,7 @@
 
     .line 12
     .line 13
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 14
     .line 15
@@ -76,100 +76,110 @@
 
     .line 25
     .line 26
-    const-string v0, "composed_text_blocks"
+    const-string/jumbo v0, "composed_text_blocks"
 
     .line 27
     .line 28
+    .line 29
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 29
     .line 30
     .line 31
+    .line 32
     move-result v0
 
-    .line 32
+    .line 33
     if-eqz v0, :cond_2
 
-    .line 33
     .line 34
+    .line 35
     const-class v0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;
 
-    .line 35
     .line 36
-    invoke-static {p1, v3, p2, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
-
     .line 37
+    invoke-static {p1, v4, p2, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
     .line 38
     .line 39
-    move-result-object v4
-
     .line 40
-    const-string v0, "composedTextBlocks"
+    move-result-object v3
 
     .line 41
-    .line 42
-    invoke-static {v0, v4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string/jumbo v0, "composedTextBlocks"
 
+    .line 42
     .line 43
     .line 44
-    .line 45
-    :cond_1
-    :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {v3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 45
     .line 46
     .line 47
+    :cond_1
+    :goto_0
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
+
     .line 48
+    .line 49
+    .line 50
     move-result-object v1
 
-    .line 49
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
-
-    .line 50
     .line 51
-    if-ne v1, v0, :cond_0
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 52
     .line 53
-    goto :goto_1
+    if-ne v1, v0, :cond_0
 
     .line 54
-    :cond_2
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
-
     .line 55
+    goto :goto_1
+
     .line 56
+    :cond_2
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
+
     .line 57
+    .line 58
+    .line 59
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
+    .line 60
     :goto_1
     new-instance v0, Lcom/facebook/ipc/composer/model/ComposerTextData;
 
-    .line 59
-    .line 60
-    invoke-direct {v0, v4}, Lcom/facebook/ipc/composer/model/ComposerTextData;-><init>(Lcom/google/common/collect/ImmutableList;)V
-
     .line 61
     .line 62
+    invoke-direct {v0, v3}, Lcom/facebook/ipc/composer/model/ComposerTextData;-><init>(Lcom/google/common/collect/ImmutableList;)V
+
     .line 63
+    .line 64
+    .line 65
     return-object v0
 
-    .line 64
+    .line 66
     :catch_0
     move-exception v1
 
-    .line 65
-    const-class v0, Lcom/facebook/ipc/composer/model/ComposerTextData;
-
-    .line 66
     .line 67
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    const-class v0, Lcom/facebook/ipc/composer/model/ComposerTextData;
 
     .line 68
     .line 69
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 70
-    throw v3
+    .line 71
+    .line 72
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v0
+
+    .line 76
+    throw v0
 .end method

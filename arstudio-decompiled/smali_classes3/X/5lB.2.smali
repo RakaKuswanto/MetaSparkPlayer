@@ -2,63 +2,147 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A00:Ljava/util/List;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "SystemForegroundService$1"
+
+
+# instance fields
+.field public final synthetic A00:I
+
+.field public final synthetic A01:I
+
+.field public final synthetic A02:Landroid/app/Notification;
+
+.field public final synthetic A03:Landroidx/work/impl/foreground/SystemForegroundService;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/app/Notification;Landroidx/work/impl/foreground/SystemForegroundService;II)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$notificationId",
+            "val$notification",
+            "val$notificationType"
+        }
+    .end annotation
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    iput-object p2, p0, LX/5lB;->A03:Landroidx/work/impl/foreground/SystemForegroundService;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    iput p3, p0, LX/5lB;->A00:I
 
+    .line 3
     .line 4
-    sput-object v1, LX/5lB;->A00:Ljava/util/List;
+    iput-object p1, p0, LX/5lB;->A02:Landroid/app/Notification;
 
     .line 5
     .line 6
-    sget-object v0, LX/5lF;->CONTINUOUS_VIDEO:LX/5lF;
+    iput p4, p0, LX/5lB;->A01:I
 
     .line 7
     .line 8
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 9
     .line 10
     .line 11
-    sget-object v0, LX/5lF;->CONTINUOUS_PICTURE:LX/5lF;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 5
+
+    .line 0
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 1
+    .line 2
+    const/16 v0, 0x1f
+
+    .line 3
+    .line 4
+    if-lt v4, v0, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v3, p0, LX/5lB;->A03:Landroidx/work/impl/foreground/SystemForegroundService;
+
+    .line 7
+    .line 8
+    iget v2, p0, LX/5lB;->A00:I
+
+    .line 9
+    .line 10
+    iget-object v1, p0, LX/5lB;->A02:Landroid/app/Notification;
+
+    .line 11
     .line 12
-    .line 13
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    iget v0, p0, LX/5lB;->A01:I
 
+    .line 13
     .line 14
+    invoke-static {v1, v3, v2, v0}, LX/5l6;->A00(Landroid/app/Notification;Landroid/app/Service;II)V
+
     .line 15
     .line 16
-    sget-object v0, LX/5lF;->EXTENDED_DOF:LX/5lF;
-
     .line 17
+    return-void
+
     .line 18
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    :cond_0
+    const/16 v0, 0x1d
 
     .line 19
     .line 20
+    iget-object v3, p0, LX/5lB;->A03:Landroidx/work/impl/foreground/SystemForegroundService;
+
     .line 21
-    sget-object v0, LX/5lF;->AUTO:LX/5lF;
-
     .line 22
-    .line 23
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    iget v2, p0, LX/5lB;->A00:I
 
+    .line 23
     .line 24
+    iget-object v1, p0, LX/5lB;->A02:Landroid/app/Notification;
+
     .line 25
     .line 26
+    if-lt v4, v0, :cond_1
+
+    .line 27
+    .line 28
+    iget v0, p0, LX/5lB;->A01:I
+
+    .line 29
+    .line 30
+    invoke-static {v1, v3, v2, v0}, LX/5lM;->A00(Landroid/app/Notification;Landroid/app/Service;II)V
+
+    .line 31
+    .line 32
+    .line 33
+    return-void
+
+    .line 34
+    :cond_1
+    invoke-virtual {v3, v2, v1}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
+
+    .line 35
+    .line 36
+    .line 37
     return-void
 .end method

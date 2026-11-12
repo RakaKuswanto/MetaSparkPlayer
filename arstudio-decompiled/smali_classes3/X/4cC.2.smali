@@ -1,90 +1,81 @@
-.class public final LX/4cC;
+.class public final LX/4cc;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SearchView$SearchAutoComplete$1"
-
 
 # instance fields
-.field public final synthetic A00:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
+.field public final A00:LX/4cZ;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/SearchView$SearchAutoComplete;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/4cC;->A00:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/4cC;->A00:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
-
     .line 1
     .line 2
-    iget-boolean v0, v2, Landroidx/appcompat/widget/SearchView$SearchAutoComplete;->A01:Z
-
     .line 3
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
     .line 4
-    if-eqz v0, :cond_0
-
     .line 5
-    .line 6
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/16 v0, 0x1c
 
+    .line 6
     .line 7
+    if-lt v1, v0, :cond_0
+
     .line 8
     .line 9
-    move-result-object v1
+    new-instance v0, LX/4cg;
 
     .line 10
-    const-string v0, "input_method"
-
     .line 11
-    .line 12
-    invoke-virtual {v1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {v0}, LX/4cg;-><init>()V
 
+    .line 12
     .line 13
     .line 14
-    .line 15
-    move-result-object v1
+    :goto_0
+    iput-object v0, p0, LX/4cc;->A00:LX/4cZ;
 
+    .line 15
     .line 16
-    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
+    return-void
 
     .line 17
-    .line 18
-    const/4 v0, 0x0
+    :cond_0
+    const/16 v0, 0x13
 
+    .line 18
     .line 19
-    invoke-virtual {v1, v2, v0}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+    if-lt v1, v0, :cond_1
 
     .line 20
     .line 21
-    .line 22
-    iput-boolean v0, v2, Landroidx/appcompat/widget/SearchView$SearchAutoComplete;->A01:Z
+    new-instance v0, LX/4cb;
 
+    .line 22
     .line 23
+    invoke-direct {v0}, LX/4cb;-><init>()V
+
     .line 24
-    :cond_0
-    return-void
+    .line 25
+    .line 26
+    goto :goto_0
+
+    .line 27
+    :cond_1
+    new-instance v0, LX/4cZ;
+
+    .line 28
+    .line 29
+    invoke-direct {v0}, LX/4cZ;-><init>()V
+
+    .line 30
+    .line 31
+    .line 32
+    goto :goto_0
 .end method

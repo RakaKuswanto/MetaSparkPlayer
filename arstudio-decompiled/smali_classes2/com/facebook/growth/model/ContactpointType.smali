@@ -23,93 +23,129 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public static synthetic $values()[Lcom/facebook/growth/model/ContactpointType;
+    .locals 3
 
     .line 0
-    const-string v0, "PHONE"
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    const/4 v6, 0x0
+    new-array v2, v0, [Lcom/facebook/growth/model/ContactpointType;
 
+    .line 2
     .line 3
-    new-instance v5, Lcom/facebook/growth/model/ContactpointType;
+    sget-object v1, Lcom/facebook/growth/model/ContactpointType;->PHONE:Lcom/facebook/growth/model/ContactpointType;
 
     .line 4
     .line 5
-    invoke-direct {v5, v0, v6}, Lcom/facebook/growth/model/ContactpointType;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/growth/model/ContactpointType;->EMAIL:Lcom/facebook/growth/model/ContactpointType;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/growth/model/ContactpointType;->UNKNOWN:Lcom/facebook/growth/model/ContactpointType;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "PHONE"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/growth/model/ContactpointType;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, Lcom/facebook/growth/model/ContactpointType;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v5, Lcom/facebook/growth/model/ContactpointType;->PHONE:Lcom/facebook/growth/model/ContactpointType;
+    sput-object v0, Lcom/facebook/growth/model/ContactpointType;->PHONE:Lcom/facebook/growth/model/ContactpointType;
 
     .line 9
     .line 10
-    const-string v0, "EMAIL"
+    const-string v2, "EMAIL"
 
     .line 11
     .line 12
-    const/4 v4, 0x1
+    const/4 v1, 0x1
 
     .line 13
-    new-instance v3, Lcom/facebook/growth/model/ContactpointType;
+    new-instance v0, Lcom/facebook/growth/model/ContactpointType;
 
     .line 14
     .line 15
-    invoke-direct {v3, v0, v4}, Lcom/facebook/growth/model/ContactpointType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/growth/model/ContactpointType;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v3, Lcom/facebook/growth/model/ContactpointType;->EMAIL:Lcom/facebook/growth/model/ContactpointType;
+    sput-object v0, Lcom/facebook/growth/model/ContactpointType;->EMAIL:Lcom/facebook/growth/model/ContactpointType;
 
     .line 19
     .line 20
-    const-string v0, "UNKNOWN"
+    const-string v2, "UNKNOWN"
 
     .line 21
     .line 22
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
     .line 23
-    new-instance v1, Lcom/facebook/growth/model/ContactpointType;
+    new-instance v0, Lcom/facebook/growth/model/ContactpointType;
 
     .line 24
     .line 25
-    invoke-direct {v1, v0, v2}, Lcom/facebook/growth/model/ContactpointType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/growth/model/ContactpointType;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v1, Lcom/facebook/growth/model/ContactpointType;->UNKNOWN:Lcom/facebook/growth/model/ContactpointType;
+    sput-object v0, Lcom/facebook/growth/model/ContactpointType;->UNKNOWN:Lcom/facebook/growth/model/ContactpointType;
 
     .line 29
     .line 30
-    const/4 v0, 0x3
+    invoke-static {}, Lcom/facebook/growth/model/ContactpointType;->$values()[Lcom/facebook/growth/model/ContactpointType;
 
     .line 31
-    new-array v0, v0, [Lcom/facebook/growth/model/ContactpointType;
-
     .line 32
     .line 33
-    aput-object v5, v0, v6
+    move-result-object v0
 
     .line 34
-    .line 35
-    aput-object v3, v0, v4
-
-    .line 36
-    .line 37
-    aput-object v1, v0, v2
-
-    .line 38
-    .line 39
     sput-object v0, Lcom/facebook/growth/model/ContactpointType;->$VALUES:[Lcom/facebook/growth/model/ContactpointType;
 
-    .line 40
-    .line 41
+    .line 35
+    .line 36
     return-void
 .end method
 

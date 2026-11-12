@@ -1,50 +1,67 @@
-.class public final LX/3gh;
+.class public abstract synthetic LX/3gh;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4T0;
 
-
-# instance fields
-.field public final synthetic A00:Lcom/facebook/arstudio/player/BaseEffectFragment;
+# static fields
+.field public static final synthetic A00:[I
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/arstudio/player/BaseEffectFragment;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 0
-    iput-object p1, p0, LX/3gh;->A00:Lcom/facebook/arstudio/player/BaseEffectFragment;
+    invoke-static {}, LX/3gk;->values()[LX/3gk;
 
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v2, v0, [I
 
-# virtual methods
-.method public final Aeg(Lcom/facebook/arstudio/player/model/EffectFile;)V
-    .locals 2
+    :try_start_0
+    sget-object v0, LX/3gk;->BoundCardEnterCvv:LX/3gk;
 
-    .line 0
-    iget-object v1, p0, LX/3gh;->A00:Lcom/facebook/arstudio/player/BaseEffectFragment;
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    .line 1
-    .line 2
-    iget-object v0, p1, Lcom/facebook/arstudio/player/model/EffectFile;->A04:Ljava/lang/String;
+    move-result v1
 
-    .line 3
-    .line 4
-    invoke-virtual {v1, v0}, Lcom/facebook/arstudio/player/BaseEffectFragment;->onNewPath(Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    .line 5
-    .line 6
-    .line 7
+    aput v0, v2, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, LX/3gk;->UnboundCardEnterPan:LX/3gk;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v0, 0x2
+
+    aput v0, v2, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, LX/3gk;->UnboundCardEnterPanAndCvv:LX/3gk;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v0, 0x3
+
+    aput v0, v2, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v2, LX/3gh;->A00:[I
+
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/rtc/views/omnigrid/GridItemSize;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 
@@ -29,7 +29,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 1
     .line 2
@@ -225,7 +225,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -264,13 +264,22 @@
 
     .line 20
     .line 21
-    invoke-static {v1, v0}, LX/0Yd;->A0U(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 22
     .line 23
     .line 24
-    move-result-object v0
+    const/16 v0, 0x29
 
     .line 25
+    .line 26
+    invoke-static {v1, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
     return-object v0
 .end method

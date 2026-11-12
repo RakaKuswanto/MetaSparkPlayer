@@ -1,185 +1,146 @@
 .class public final LX/32z;
-.super LX/33B;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AuthFragmentLogoViewGroup$ModernLayoutDelegate$3"
 
 
 # instance fields
-.field public A00:Lcom/facebook/push/mqtt/ipc/IMqttPushService;
+.field public final synthetic A00:LX/32y;
 
-.field public A01:Z
-
-.field public final A02:Landroid/content/Context;
-
-.field public final A03:LX/2sj;
-
-.field public final A04:LX/0JA;
-
-.field public final A05:LX/2wV;
-
-.field public final A06:LX/330;
-
-.field public final A07:LX/32m;
-
-.field public final A08:Ljava/util/Set;
-
-.field public final A09:Ljava/util/concurrent/ScheduledExecutorService;
-
-.field public final A0A:LX/0J9;
-
-.field public final A0B:LX/0ax;
+.field public final synthetic A01:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/2sj;LX/0J9;LX/0JA;LX/2wV;LX/32m;LX/0ax;Ljava/util/concurrent/ScheduledExecutorService;)V
-    .locals 1
+.method public constructor <init>(LX/32y;Ljava/lang/Runnable;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/33B;-><init>()V
+    iput-object p1, p0, LX/32z;->A00:LX/32y;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    iput-object p2, p0, LX/32z;->A01:Ljava/lang/Runnable;
 
+    .line 3
     .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 5
     .line 6
-    move-result-object v0
-
     .line 7
-    iput-object v0, p0, LX/32z;->A08:Ljava/util/Set;
-
-    .line 8
-    .line 9
-    iput-object p1, p0, LX/32z;->A02:Landroid/content/Context;
-
-    .line 10
-    .line 11
-    iput-object p7, p0, LX/32z;->A0B:LX/0ax;
-
-    .line 12
-    .line 13
-    iput-object p3, p0, LX/32z;->A0A:LX/0J9;
-
-    .line 14
-    .line 15
-    iput-object p6, p0, LX/32z;->A07:LX/32m;
-
-    .line 16
-    .line 17
-    iput-object p2, p0, LX/32z;->A03:LX/2sj;
-
-    .line 18
-    .line 19
-    iput-object p4, p0, LX/32z;->A04:LX/0JA;
-
-    .line 20
-    .line 21
-    iput-object p5, p0, LX/32z;->A05:LX/2wV;
-
-    .line 22
-    .line 23
-    iput-object p8, p0, LX/32z;->A09:Ljava/util/concurrent/ScheduledExecutorService;
-
-    .line 24
-    .line 25
-    new-instance v0, LX/330;
-
-    .line 26
-    .line 27
-    invoke-direct {v0, p0}, LX/330;-><init>(LX/32z;)V
-
-    .line 28
-    .line 29
-    .line 30
-    iput-object v0, p0, LX/32z;->A06:LX/330;
-
-    .line 31
-    .line 32
     return-void
 .end method
 
-.method public static declared-synchronized A00(LX/32z;)Lcom/facebook/push/mqtt/ipc/IMqttPushService;
-    .locals 1
+
+# virtual methods
+.method public final run()V
+    .locals 5
 
     .line 0
-    monitor-enter p0
+    iget-object v0, p0, LX/32z;->A00:LX/32y;
 
     .line 1
-    :try_start_0
-    iget-boolean v0, p0, LX/32z;->A01:Z
-
     .line 2
+    iget-object v4, v0, LX/32y;->A00:Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;
+
     .line 3
-    if-eqz v0, :cond_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 4
+    iget-object v1, v4, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1View:Landroid/widget/ImageView;
+
     .line 5
-    :try_start_1
-    iget-object v0, p0, LX/32z;->A00:Lcom/facebook/push/mqtt/ipc/IMqttPushService;
-
     .line 6
+    iget-object v0, v4, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo1View:Landroid/widget/ImageView;
+
     .line 7
-    if-eqz v0, :cond_1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
     .line 8
+    invoke-static {v1, v0}, LX/32y;->A00(Landroid/view/View;Landroid/view/View;)Landroid/view/animation/AnimationSet;
+
     .line 9
-    monitor-exit p0
-
     .line 10
-    return-object v0
-
     .line 11
-    :cond_0
-    :try_start_2
-    new-instance v0, Landroid/os/RemoteException;
+    move-result-object v3
 
     .line 12
-    .line 13
-    invoke-direct {v0}, Landroid/os/RemoteException;-><init>()V
+    iget-object v1, v4, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo2View:Landroid/widget/ImageView;
 
+    .line 13
     .line 14
+    iget-object v0, v4, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mLogo2View:Landroid/widget/ImageView;
+
     .line 15
     .line 16
-    throw v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-static {v1, v0}, LX/32y;->A00(Landroid/view/View;Landroid/view/View;)Landroid/view/animation/AnimationSet;
 
     .line 17
-    :catchall_0
-    move-exception v0
-
     .line 18
-    goto :goto_0
-
     .line 19
-    :cond_1
-    :try_start_3
-    new-instance v0, Landroid/os/RemoteException;
+    move-result-object v2
 
     .line 20
-    .line 21
-    invoke-direct {v0}, Landroid/os/RemoteException;-><init>()V
+    const-wide/16 v0, 0x1f4
 
+    .line 21
     .line 22
+    invoke-virtual {v3, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
+
     .line 23
     .line 24
-    :goto_0
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
     .line 25
-    :catchall_1
-    move-exception v0
+    invoke-virtual {v2, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
     .line 26
-    monitor-exit p0
-
     .line 27
-    throw v0
+    .line 28
+    new-instance v0, LX/331;
+
+    .line 29
+    .line 30
+    invoke-direct {v0, p0}, LX/331;-><init>(LX/32z;)V
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v3, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    .line 34
+    .line 35
+    .line 36
+    iget-object v0, v4, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo1View:Landroid/widget/ImageView;
+
+    .line 37
+    .line 38
+    invoke-virtual {v0, v3}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 39
+    .line 40
+    .line 41
+    iget-object v0, v4, Lcom/facebook/auth/login/ui/AuthFragmentLogoViewGroup;->mSplashLogo2View:Landroid/widget/ImageView;
+
+    .line 42
+    .line 43
+    invoke-virtual {v0, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 44
+    .line 45
+    .line 46
+    iget-object v2, p0, LX/32z;->A01:Ljava/lang/Runnable;
+
+    .line 47
+    .line 48
+    const-wide/16 v0, 0x177
+
+    .line 49
+    .line 50
+    invoke-virtual {v4, v2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 51
+    .line 52
+    .line 53
+    return-void
 .end method

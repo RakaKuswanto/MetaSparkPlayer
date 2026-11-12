@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/browser/lite/extensions/commercecheckout/models/DisclaimerText;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 # interfaces
@@ -23,11 +23,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0xd
+    const/16 v0, 0xb
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -46,7 +46,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 1
     .line 2
@@ -95,7 +95,7 @@
 
     iget-object v0, p1, Lcom/facebook/browser/lite/extensions/commercecheckout/models/DisclaimerText;->A02:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -128,7 +128,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 3
     .line 4
@@ -165,7 +165,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -222,14 +222,23 @@
 
     .line 30
     .line 31
-    invoke-static {v1, v0}, LX/0Yd;->A0U(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 32
     .line 33
     .line 34
-    move-result-object v0
+    const/16 v0, 0x29
 
     .line 35
+    .line 36
+    invoke-static {v1, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
     return-object v0
 .end method
 
@@ -238,7 +247,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     iget-object v0, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/models/DisclaimerText;->A02:Ljava/lang/String;
 

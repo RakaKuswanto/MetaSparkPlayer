@@ -1,14 +1,14 @@
 .class public Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;
-.super LX/3od;
+.super LX/3pj;
 .source ""
 
 
 # instance fields
-.field public A00:LX/1nC;
+.field public A00:LX/19t;
 
-.field public A01:LX/6Gj;
+.field public A01:LX/4ld;
 
-.field public A02:LX/4Qf;
+.field public A02:LX/6c5;
 
 
 # direct methods
@@ -16,22 +16,22 @@
     .locals 3
 
     .line 0
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
     .line 1
     const/4 v1, 0x0
 
     .line 2
-    invoke-direct {p0, p1, v0, v1}, LX/3od;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, v2, v1}, LX/3pj;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
     .line 4
     .line 5
-    sget v0, LX/2eq;->AdJ:I
+    const-class v0, LX/19t;
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0, v2}, LX/3Fc;->A04(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 8
     .line 9
@@ -39,30 +39,30 @@
     move-result-object v0
 
     .line 11
-    check-cast v0, LX/1nC;
+    check-cast v0, LX/19t;
 
     .line 12
     .line 13
-    iput-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A00:LX/1nC;
+    iput-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A00:LX/19t;
 
     .line 14
     .line 15
-    const v0, 0x7f0d013a
+    const v0, 0x7f0c010f
 
     .line 16
     .line 17
     .line 18
-    invoke-virtual {p0, v0}, LX/4QN;->setContentView(I)V
+    invoke-virtual {p0, v0}, LX/3vV;->setContentView(I)V
 
     .line 19
     .line 20
     .line 21
-    const v0, 0x7f0a057c
+    const v0, 0x7f0904b1
 
     .line 22
     .line 23
     .line 24
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 25
     .line 26
@@ -70,20 +70,20 @@
     move-result-object v0
 
     .line 28
-    check-cast v0, LX/6Gj;
+    check-cast v0, LX/4ld;
 
     .line 29
     .line 30
-    iput-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A01:LX/6Gj;
+    iput-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A01:LX/4ld;
 
     .line 31
     .line 32
-    const v0, 0x7f0a057d
+    const v0, 0x7f0904b2
 
     .line 33
     .line 34
     .line 35
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 36
     .line 37
@@ -91,15 +91,15 @@
     move-result-object v0
 
     .line 39
-    check-cast v0, LX/4Qf;
+    check-cast v0, LX/6c5;
 
     .line 40
     .line 41
-    iput-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A02:LX/4Qf;
+    iput-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A02:LX/6c5;
 
     .line 42
     .line 43
-    iget-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A01:LX/6Gj;
+    iget-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A01:LX/4ld;
 
     .line 44
     .line 45
@@ -111,15 +111,15 @@
     const/4 v0, 0x3
 
     .line 49
-    new-array v2, v0, [LX/3hn;
+    new-array v2, v0, [LX/3Z7;
 
     .line 50
     .line 51
-    const/16 v0, 0x5a
+    const/16 v0, 0x57
 
     .line 52
     .line 53
-    invoke-static {p0, v0}, LX/3oT;->A01(Ljava/lang/Object;I)LX/3oT;
+    invoke-static {p0, v0}, LX/3pu;->A01(Ljava/lang/Object;I)LX/3pu;
 
     .line 54
     .line 55
@@ -131,11 +131,11 @@
 
     .line 58
     .line 59
-    const/16 v0, 0x59
+    const/16 v0, 0x56
 
     .line 60
     .line 61
-    invoke-static {p0, v0}, LX/3oT;->A01(Ljava/lang/Object;I)LX/3oT;
+    invoke-static {p0, v0}, LX/3pu;->A01(Ljava/lang/Object;I)LX/3pu;
 
     .line 62
     .line 63
@@ -150,11 +150,11 @@
 
     .line 67
     .line 68
-    const/16 v0, 0x5b
+    const/16 v0, 0x58
 
     .line 69
     .line 70
-    invoke-static {p0, v0}, LX/3oT;->A01(Ljava/lang/Object;I)LX/3oT;
+    invoke-static {p0, v0}, LX/3pu;->A01(Ljava/lang/Object;I)LX/3pu;
 
     .line 71
     .line 72
@@ -169,7 +169,7 @@
 
     .line 76
     .line 77
-    invoke-virtual {p0, v2}, LX/3od;->A0S([LX/3hn;)V
+    invoke-virtual {p0, v2}, LX/3pj;->A0O([LX/3Z7;)V
 
     .line 78
     .line 79
@@ -179,49 +179,96 @@
 
 
 # virtual methods
-.method public final A0B()V
-    .locals 0
+.method public final A0A()V
+    .locals 2
 
     .line 0
-    invoke-virtual {p0}, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A0C()V
+    iget-object v1, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A01:LX/4ld;
 
     .line 1
     .line 2
-    .line 3
-    invoke-super {p0}, LX/3od;->A0B()V
-
-    .line 4
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public final A0C()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A01:LX/6Gj;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/6Gj;->A02()V
+    iget-object v0, v1, LX/4ld;->A01:Landroid/animation/AnimatorSet;
 
     .line 3
     .line 4
-    .line 5
-    iget-object v0, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A02:LX/4Qf;
+    if-eqz v0, :cond_0
 
+    .line 5
     .line 6
+    invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
+
     .line 7
-    invoke-virtual {v0}, LX/4Qf;->A02()V
-
     .line 8
     .line 9
+    move-result v0
+
     .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    iget-object v0, v1, LX/4ld;->A01:Landroid/animation/AnimatorSet;
+
+    .line 13
+    .line 14
+    invoke-virtual {v0}, Landroid/animation/Animator;->end()V
+
+    .line 15
+    .line 16
+    .line 17
+    :cond_0
+    iget-object v0, v1, LX/4ld;->A00:Landroid/animation/Animator;
+
+    .line 18
+    .line 19
+    if-eqz v0, :cond_1
+
+    .line 20
+    .line 21
+    invoke-virtual {v0}, Landroid/animation/Animator;->end()V
+
+    .line 22
+    .line 23
+    .line 24
+    :cond_1
+    iget-object v1, p0, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A02:LX/6c5;
+
+    .line 25
+    .line 26
+    iget-object v0, v1, LX/6c5;->A03:Landroid/animation/AnimatorSet;
+
+    .line 27
+    .line 28
+    if-eqz v0, :cond_2
+
+    .line 29
+    .line 30
+    invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v0
+
+    .line 34
+    if-eqz v0, :cond_2
+
+    .line 35
+    .line 36
+    iget-object v0, v1, LX/6c5;->A03:Landroid/animation/AnimatorSet;
+
+    .line 37
+    .line 38
+    invoke-virtual {v0}, Landroid/animation/Animator;->end()V
+
+    .line 39
+    .line 40
+    .line 41
+    :cond_2
     return-void
 .end method
 
-.method public final A0Q(LX/3Wj;Z)V
+.method public final A0M(LX/3m2;Z)V
     .locals 17
 
     .line 0
@@ -237,7 +284,7 @@
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/3Wj;->A02:Lcom/facebook/video/engine/api/VideoPlayerParams;
+    iget-object v0, v0, LX/3m2;->A03:Lcom/facebook/video/engine/api/VideoPlayerParams;
 
     .line 7
     .line 8
@@ -245,7 +292,7 @@
 
     .line 9
     .line 10
-    iget-object v0, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A0Q:Lcom/facebook/spherical/video/model/SphericalVideoParams;
+    iget-object v0, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A0U:Lcom/facebook/spherical/video/model/SphericalVideoParams;
 
     .line 11
     .line 12
@@ -256,7 +303,7 @@
     const/4 v11, 0x0
 
     .line 15
-    iput-boolean v11, v1, LX/3od;->A0F:Z
+    iput-boolean v11, v1, LX/3pj;->A0E:Z
 
     .line 16
     .line 17
@@ -264,7 +311,7 @@
 
     .line 18
     .line 19
-    iget-object v4, v1, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A01:LX/6Gj;
+    iget-object v4, v1, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A01:LX/4ld;
 
     .line 20
     .line 21
@@ -272,7 +319,7 @@
 
     .line 22
     .line 23
-    iget-object v9, v1, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A02:LX/4Qf;
+    iget-object v9, v1, Lcom/facebook/video/plugins/Video360NuxAnimationPlugin;->A02:LX/6c5;
 
     .line 24
     .line 25
@@ -300,7 +347,7 @@
     .line 35
     .line 36
     .line 37
-    iget-object v15, v4, LX/6Gj;->A09:Landroid/animation/ObjectAnimator;
+    iget-object v15, v4, LX/4ld;->A09:Landroid/animation/ObjectAnimator;
 
     .line 38
     .line 39
@@ -343,330 +390,331 @@
 
     .line 59
     .line 60
-    const-string v12, "alpha"
+    const-string/jumbo v12, "alpha"
 
     .line 61
     .line 62
+    .line 63
     invoke-static {v4, v12, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
-    .line 63
     .line 64
     .line 65
+    .line 66
     move-result-object v14
 
-    .line 66
-    sget-object v8, LX/6NO;->A00:Landroid/view/animation/Interpolator;
-
     .line 67
+    sget-object v8, LX/4Lc;->A00:Landroid/view/animation/Interpolator;
+
     .line 68
+    .line 69
     invoke-virtual {v14, v8}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 69
     .line 70
     .line 71
+    .line 72
     invoke-virtual {v14, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 72
     .line 73
     .line 74
+    .line 75
     invoke-virtual {v7, v14}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 75
     .line 76
     .line 77
+    .line 78
     invoke-virtual {v7, v15}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 78
     .line 79
     .line 80
+    .line 81
     move-result-object v2
 
-    .line 81
+    .line 82
     invoke-virtual {v2, v14}, Landroid/animation/AnimatorSet$Builder;->after(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 82
     .line 83
     .line 84
-    iput-object v7, v4, LX/6Gj;->A01:Landroid/animation/AnimatorSet;
-
     .line 85
+    iput-object v7, v4, LX/4ld;->A01:Landroid/animation/AnimatorSet;
+
     .line 86
-    new-instance v2, LX/1ph;
-
     .line 87
-    .line 88
-    invoke-direct {v2, v4, v11}, LX/1ph;-><init>(Ljava/lang/Object;I)V
+    new-instance v2, LX/0Z2;
 
+    .line 88
     .line 89
+    invoke-direct {v2, v4, v11}, LX/0Z2;-><init>(Ljava/lang/Object;I)V
+
     .line 90
     .line 91
+    .line 92
     invoke-virtual {v7, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 92
     .line 93
     .line 94
-    new-instance v7, LX/3wX;
-
     .line 95
-    .line 96
-    invoke-direct {v7, v4}, LX/3wX;-><init>(LX/6Gj;)V
+    new-instance v7, LX/402;
 
+    .line 96
     .line 97
+    invoke-direct {v7, v4}, LX/402;-><init>(LX/4ld;)V
+
     .line 98
     .line 99
+    .line 100
     new-array v2, v10, [F
 
-    .line 100
     .line 101
+    .line 102
     aput v13, v2, v11
 
-    .line 102
     .line 103
+    .line 104
     invoke-static {v4, v12, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
-    .line 104
     .line 105
     .line 106
+    .line 107
     move-result-object v3
 
-    .line 107
+    .line 108
     invoke-virtual {v3, v8}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 108
     .line 109
     .line 110
+    .line 111
     invoke-virtual {v3, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 111
     .line 112
     .line 113
-    new-instance v2, LX/1ph;
-
     .line 114
-    .line 115
-    invoke-direct {v2, v7, v10}, LX/1ph;-><init>(Ljava/lang/Object;I)V
+    new-instance v2, LX/0Z2;
 
+    .line 115
     .line 116
+    invoke-direct {v2, v7, v10}, LX/0Z2;-><init>(Ljava/lang/Object;I)V
+
     .line 117
     .line 118
+    .line 119
     invoke-virtual {v3, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 119
     .line 120
     .line 121
-    iput-object v3, v4, LX/6Gj;->A00:Landroid/animation/Animator;
-
     .line 122
+    iput-object v3, v4, LX/4ld;->A00:Landroid/animation/Animator;
+
     .line 123
+    .line 124
     const-wide/16 v2, 0x1518
 
-    .line 124
     .line 125
+    .line 126
     invoke-virtual {v9, v13}, Landroid/view/View;->setAlpha(F)V
 
-    .line 126
     .line 127
     .line 128
-    iput v13, v9, LX/4Qf;->A00:F
-
     .line 129
+    iput v13, v9, LX/6c5;->A00:F
+
     .line 130
+    .line 131
     const/4 v4, 0x2
 
-    .line 131
+    .line 132
     new-array v7, v4, [F
 
-    .line 132
     .line 133
+    .line 134
     aput v13, v7, v11
 
-    .line 134
     .line 135
+    .line 136
     const/high16 v4, 0x42c80000    # 100.0f
 
-    .line 136
     .line 137
+    .line 138
     aput v4, v7, v10
 
-    .line 138
     .line 139
+    .line 140
     const-string/jumbo v4, "offset"
 
-    .line 140
     .line 141
     .line 142
+    .line 143
     invoke-static {v4, v7}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
-    .line 143
     .line 144
     .line 145
-    move-result-object v7
-
     .line 146
-    new-array v4, v10, [Landroid/animation/PropertyValuesHolder;
+    move-result-object v7
 
     .line 147
+    new-array v4, v10, [Landroid/animation/PropertyValuesHolder;
+
     .line 148
+    .line 149
     aput-object v7, v4, v11
 
-    .line 149
     .line 150
+    .line 151
     invoke-static {v9, v4}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
 
-    .line 151
     .line 152
     .line 153
+    .line 154
     move-result-object v7
 
-    .line 154
+    .line 155
     invoke-virtual {v7, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 155
     .line 156
     .line 157
+    .line 158
     invoke-virtual {v7, v10}, Landroid/animation/ValueAnimator;->setRepeatMode(I)V
 
-    .line 158
     .line 159
     .line 160
+    .line 161
     invoke-virtual {v7, v10}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
 
-    .line 161
     .line 162
     .line 163
+    .line 164
     const/4 v14, 0x0
 
-    .line 164
+    .line 165
     new-instance v4, Landroid/animation/AnimatorSet;
 
-    .line 165
     .line 166
+    .line 167
     invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 167
     .line 168
     .line 169
+    .line 170
     new-array v0, v10, [F
 
-    .line 170
     .line 171
+    .line 172
     aput v16, v0, v11
 
-    .line 172
     .line 173
+    .line 174
     invoke-static {v9, v12, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
-    .line 174
     .line 175
     .line 176
+    .line 177
     move-result-object v13
 
-    .line 177
+    .line 178
     invoke-virtual {v13, v8}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 178
     .line 179
     .line 180
+    .line 181
     invoke-virtual {v13, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 181
     .line 182
     .line 183
+    .line 184
     new-array v1, v10, [F
 
-    .line 184
     .line 185
+    .line 186
     const/4 v0, 0x0
 
-    .line 186
+    .line 187
     aput v0, v1, v11
 
-    .line 187
     .line 188
+    .line 189
     invoke-static {v9, v12, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
-    .line 189
     .line 190
     .line 191
+    .line 192
     move-result-object v1
 
-    .line 192
+    .line 193
     invoke-virtual {v1, v8}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 193
     .line 194
     .line 195
+    .line 196
     invoke-virtual {v1, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 196
     .line 197
     .line 198
-    new-instance v0, LX/1ph;
-
     .line 199
-    .line 200
-    invoke-direct {v0, v14, v10}, LX/1ph;-><init>(Ljava/lang/Object;I)V
+    new-instance v0, LX/0Z2;
 
+    .line 200
     .line 201
+    invoke-direct {v0, v14, v10}, LX/0Z2;-><init>(Ljava/lang/Object;I)V
+
     .line 202
     .line 203
+    .line 204
     invoke-virtual {v1, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 204
     .line 205
     .line 206
+    .line 207
     invoke-virtual {v4, v13}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 207
     .line 208
     .line 209
+    .line 210
     invoke-virtual {v4, v7}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 210
     .line 211
     .line 212
-    move-result-object v0
-
     .line 213
-    invoke-virtual {v0, v13}, Landroid/animation/AnimatorSet$Builder;->after(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    move-result-object v0
 
     .line 214
+    invoke-virtual {v0, v13}, Landroid/animation/AnimatorSet$Builder;->after(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
     .line 215
     .line 216
+    .line 217
     invoke-virtual {v4, v1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 217
     .line 218
     .line 219
+    .line 220
     move-result-object v0
 
-    .line 220
+    .line 221
     invoke-virtual {v0, v7}, Landroid/animation/AnimatorSet$Builder;->after(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 221
     .line 222
     .line 223
+    .line 224
     invoke-virtual {v4, v2, v3}, Landroid/animation/Animator;->setStartDelay(J)V
 
-    .line 224
     .line 225
     .line 226
-    iput-object v4, v9, LX/4Qf;->A03:Landroid/animation/AnimatorSet;
-
     .line 227
+    iput-object v4, v9, LX/6c5;->A03:Landroid/animation/AnimatorSet;
+
     .line 228
+    .line 229
     :cond_0
     return-void
 
-    .line 229
+    .line 230
     :cond_1
     const/4 v0, 0x1
 
-    .line 230
-    iput-boolean v0, v1, LX/3od;->A0F:Z
-
     .line 231
+    iput-boolean v0, v1, LX/3pj;->A0E:Z
+
     .line 232
+    .line 233
     return-void
 .end method
 

@@ -73,7 +73,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -136,331 +136,329 @@
 .end method
 
 .method public read(Lcom/google/gson/stream/JsonReader;)Lcom/facebookpay/offsite/models/message/PaymentRequestContent;
-    .locals 17
+    .locals 14
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    move-object/from16 v3, p1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
-    invoke-static {v3, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 4
+    iget-object v2, p0, Lcom/facebookpay/offsite/models/message/OffsitePaymentRequestTypeAdapter;->gson:Lcom/google/gson/Gson;
+
     .line 5
     .line 6
-    move-object/from16 v7, p0
+    const-class v1, LX/6WI;
 
     .line 7
     .line 8
-    iget-object v2, v7, Lcom/facebookpay/offsite/models/message/OffsitePaymentRequestTypeAdapter;->gson:Lcom/google/gson/Gson;
+    new-instance v0, Lcom/google/gson/reflect/TypeToken;
 
     .line 9
     .line 10
-    const-class v1, LX/1Vz;
+    invoke-direct {v0, v1}, Lcom/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V
 
     .line 11
     .line 12
-    new-instance v0, Lcom/google/gson/reflect/TypeToken;
-
     .line 13
-    .line 14
-    invoke-direct {v0, v1}, Lcom/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V
+    invoke-static {v2, v0, p1}, Lcom/google/gson/Gson;->A00(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
+    .line 14
     .line 15
     .line 16
+    move-result-object v1
+
     .line 17
-    invoke-static {v2, v0, v3}, Lcom/google/gson/Gson;->A00(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
+    check-cast v1, LX/6WI;
 
     .line 18
     .line 19
-    .line 20
-    move-result-object v1
-
-    .line 21
-    check-cast v1, LX/1Vz;
-
-    .line 22
-    .line 23
     const-string/jumbo v0, "paymentOptions"
 
+    .line 20
+    .line 21
+    .line 22
+    iget-object v5, v1, LX/6WI;->A00:LX/6F0;
+
+    .line 23
     .line 24
+    invoke-static {v0, v5}, LX/0X7;->A0P(Ljava/lang/Object;Ljava/util/AbstractMap;)Lcom/google/gson/JsonElement;
+
     .line 25
     .line 26
-    iget-object v5, v1, LX/1Vz;->A00:LX/2Jd;
-
     .line 27
-    .line 28
-    invoke-static {v0, v5}, LX/0Yj;->A0J(Ljava/lang/Object;Ljava/util/AbstractMap;)Lcom/google/gson/JsonElement;
-
-    .line 29
-    .line 30
-    .line 31
     move-result-object v2
 
-    .line 32
+    .line 28
     const/4 v3, 0x0
 
+    .line 29
+    if-eqz v2, :cond_2
+
+    .line 30
+    .line 31
+    iget-object v1, p0, Lcom/facebookpay/offsite/models/message/OffsitePaymentRequestTypeAdapter;->paymentOptionsAdapter:Lcom/google/gson/TypeAdapter;
+
+    .line 32
     .line 33
-    if-eqz v2, :cond_1
+    invoke-virtual {v1, v2}, Lcom/google/gson/TypeAdapter;->fromJsonTree(Lcom/google/gson/JsonElement;)Ljava/lang/Object;
 
     .line 34
     .line 35
-    iget-object v1, v7, Lcom/facebookpay/offsite/models/message/OffsitePaymentRequestTypeAdapter;->paymentOptionsAdapter:Lcom/google/gson/TypeAdapter;
-
     .line 36
+    move-result-object v2
+
     .line 37
-    invoke-virtual {v1, v2}, Lcom/google/gson/TypeAdapter;->fromJsonTree(Lcom/google/gson/JsonElement;)Ljava/lang/Object;
+    invoke-static {v2}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 38
     .line 39
     .line 40
-    move-result-object v2
-
-    .line 41
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 42
-    .line 43
-    .line 44
     :goto_0
     const-string/jumbo v4, "paymentConfiguration"
 
+    .line 41
+    .line 42
+    .line 43
+    invoke-static {v4, v5}, LX/0X7;->A0P(Ljava/lang/Object;Ljava/util/AbstractMap;)Lcom/google/gson/JsonElement;
+
+    .line 44
     .line 45
     .line 46
+    move-result-object v6
+
     .line 47
-    invoke-static {v4, v5}, LX/0Yj;->A0J(Ljava/lang/Object;Ljava/util/AbstractMap;)Lcom/google/gson/JsonElement;
+    if-eqz v6, :cond_0
 
     .line 48
     .line 49
-    .line 50
-    move-result-object v6
+    iget-object v1, p0, Lcom/facebookpay/offsite/models/message/OffsitePaymentRequestTypeAdapter;->paymentConfigurationAdapter:Lcom/google/gson/TypeAdapter;
 
+    .line 50
     .line 51
-    if-eqz v6, :cond_0
+    invoke-virtual {v1, v6}, Lcom/google/gson/TypeAdapter;->fromJsonTree(Lcom/google/gson/JsonElement;)Ljava/lang/Object;
 
     .line 52
     .line 53
-    iget-object v1, v7, Lcom/facebookpay/offsite/models/message/OffsitePaymentRequestTypeAdapter;->paymentConfigurationAdapter:Lcom/google/gson/TypeAdapter;
-
     .line 54
+    move-result-object v3
+
     .line 55
-    invoke-virtual {v1, v6}, Lcom/google/gson/TypeAdapter;->fromJsonTree(Lcom/google/gson/JsonElement;)Ljava/lang/Object;
+    invoke-static {v3}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 56
     .line 57
     .line 58
-    move-result-object v3
+    :cond_0
+    sget-object v9, LX/56G;->A02:LX/56G;
 
     .line 59
-    invoke-static {v3}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 60
+    sget-object v6, LX/6MG;->IDENTITY:LX/6MG;
+
     .line 61
     .line 62
-    :cond_0
-    const/4 v8, 0x0
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 63
-    sget-object v12, LX/2Au;->A02:LX/2Au;
-
     .line 64
     .line 65
-    sget-object v9, LX/69h;->IDENTITY:LX/69h;
-
-    .line 66
-    .line 67
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 68
-    .line 69
-    .line 70
-    move-result-object v16
-
-    .line 71
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 72
-    .line 73
-    .line 74
-    move-result-object v14
-
-    .line 75
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v15
-
-    .line 79
-    sget-object v11, Lcom/google/gson/Gson;->A0G:LX/1WS;
-
-    .line 80
-    .line 81
-    sget-object v10, Lcom/google/gson/Gson;->A0F:LX/1WS;
-
-    .line 82
-    .line 83
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
-
-    .line 84
-    .line 85
-    .line 86
     move-result-object v13
 
-    .line 87
-    if-eqz v2, :cond_3
+    .line 66
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
-    .line 88
-    .line 89
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v11
+
+    .line 70
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v12
+
+    .line 74
+    sget-object v8, Lcom/google/gson/Gson;->A0G:LX/571;
+
+    .line 75
+    .line 76
+    sget-object v7, Lcom/google/gson/Gson;->A0F:LX/571;
+
+    .line 77
+    .line 78
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v10
+
+    .line 82
+    if-eqz v2, :cond_1
+
+    .line 83
+    .line 84
     check-cast v2, Lcom/facebookpay/offsite/models/message/PaymentOptions;
 
-    .line 90
-    .line 91
+    .line 85
+    .line 86
     iget-object v1, v2, Lcom/facebookpay/offsite/models/message/PaymentOptions;->fulfillmentType:Ljava/lang/String;
 
+    .line 87
+    .line 88
+    new-instance v0, Lcom/facebookpay/offsite/models/message/OffsitePaymentDetailsTypeAdapterFactory;
+
+    .line 89
+    .line 90
+    invoke-direct {v0, v1}, Lcom/facebookpay/offsite/models/message/OffsitePaymentDetailsTypeAdapterFactory;-><init>(Ljava/lang/String;)V
+
+    .line 91
     .line 92
     .line 93
-    new-instance v0, Lcom/facebookpay/offsite/models/message/OffsitePaymentDetailsTypeAdapterFactory;
+    invoke-virtual {v11, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 94
     .line 95
-    invoke-direct {v0, v1}, Lcom/facebookpay/offsite/models/message/OffsitePaymentDetailsTypeAdapterFactory;-><init>(Ljava/lang/String;)V
-
     .line 96
+    invoke-static/range {v6 .. v13}, LX/297;->A00(LX/56L;LX/571;LX/571;LX/56G;Ljava/util/LinkedList;Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Lcom/google/gson/Gson;
+
     .line 97
     .line 98
-    invoke-virtual {v14, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 99
-    .line 100
-    .line 101
-    invoke-static/range {v9 .. v16}, LX/1VV;->A00(LX/1WE;LX/1WS;LX/1WS;LX/2Au;Ljava/util/LinkedList;Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Lcom/google/gson/Gson;
-
-    .line 102
-    .line 103
-    .line 104
     move-result-object v7
 
-    .line 105
+    .line 100
     const-string/jumbo v0, "paymentDetails"
 
-    .line 106
-    .line 107
-    .line 108
-    invoke-static {v0, v5}, LX/0Yj;->A0J(Ljava/lang/Object;Ljava/util/AbstractMap;)Lcom/google/gson/JsonElement;
+    .line 101
+    .line 102
+    .line 103
+    invoke-static {v0, v5}, LX/0X7;->A0P(Ljava/lang/Object;Ljava/util/AbstractMap;)Lcom/google/gson/JsonElement;
 
-    .line 109
-    .line 110
-    .line 111
+    .line 104
+    .line 105
+    .line 106
     move-result-object v6
 
-    .line 112
-    if-eqz v6, :cond_3
+    .line 107
+    if-eqz v6, :cond_1
 
-    .line 113
-    .line 114
+    .line 108
+    .line 109
     const-class v5, Lcom/facebookpay/offsite/models/message/PaymentDetails;
 
+    .line 110
+    .line 111
+    new-instance v1, Lcom/google/gson/reflect/TypeToken;
+
+    .line 112
+    .line 113
+    invoke-direct {v1, v5}, Lcom/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V
+
+    .line 114
     .line 115
     .line 116
-    new-instance v1, Lcom/google/gson/reflect/TypeToken;
+    new-instance v0, LX/56d;
 
     .line 117
     .line 118
-    invoke-direct {v1, v5}, Lcom/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V
+    invoke-direct {v0, v6}, LX/56d;-><init>(Lcom/google/gson/JsonElement;)V
 
     .line 119
     .line 120
     .line 121
-    new-instance v0, LX/2AI;
+    invoke-static {v7, v1, v0}, Lcom/google/gson/Gson;->A00(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
     .line 122
     .line 123
-    invoke-direct {v0, v6}, LX/2AI;-><init>(Lcom/google/gson/JsonElement;)V
-
     .line 124
-    .line 125
-    .line 126
-    invoke-static {v7, v1, v0}, Lcom/google/gson/Gson;->A00(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
+    move-result-object v1
 
+    .line 125
+    invoke-static {v5}, LX/6ao;->A00(Ljava/lang/Class;)Ljava/lang/Class;
+
+    .line 126
     .line 127
     .line 128
-    .line 129
-    move-result-object v1
-
-    .line 130
-    invoke-static {v5}, LX/2AX;->A00(Ljava/lang/Class;)Ljava/lang/Class;
-
-    .line 131
-    .line 132
-    .line 133
     move-result-object v0
 
-    .line 134
+    .line 129
     invoke-virtual {v0, v1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
-    .line 136
-    .line 137
+    .line 130
+    .line 131
+    .line 132
     move-result-object v1
 
+    .line 133
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 134
+    .line 135
+    .line 136
+    check-cast v1, Lcom/facebookpay/offsite/models/message/PaymentDetails;
+
+    .line 137
     .line 138
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
+    if-nez v3, :cond_3
 
     .line 139
     .line 140
-    .line 141
-    check-cast v1, Lcom/facebookpay/offsite/models/message/PaymentDetails;
+    invoke-static {v4}, LX/0WV;->A0F(Ljava/lang/String;)V
 
+    .line 141
     .line 142
     .line 143
-    if-nez v3, :cond_2
+    :goto_1
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 144
     .line 145
-    invoke-static {v4}, LX/0PS;->A0D(Ljava/lang/String;)V
-
     .line 146
+    move-result-object v0
+
     .line 147
+    throw v0
+
     .line 148
-    throw v8
+    :cond_1
+    invoke-static {v0}, LX/0WV;->A0F(Ljava/lang/String;)V
 
     .line 149
-    :cond_1
-    move-object v2, v3
-
     .line 150
-    goto :goto_0
-
     .line 151
-    :cond_2
-    check-cast v3, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;
+    goto :goto_1
 
     .line 152
+    :cond_2
+    move-object v2, v3
+
     .line 153
-    new-instance v0, Lcom/facebookpay/offsite/models/message/PaymentRequestContent;
+    goto :goto_0
 
     .line 154
-    .line 155
-    invoke-direct {v0, v1, v2, v3}, Lcom/facebookpay/offsite/models/message/PaymentRequestContent;-><init>(Lcom/facebookpay/offsite/models/message/PaymentDetails;Lcom/facebookpay/offsite/models/message/PaymentOptions;Lcom/facebookpay/offsite/models/message/PaymentConfiguration;)V
+    :cond_3
+    check-cast v3, Lcom/facebookpay/offsite/models/message/PaymentConfiguration;
 
+    .line 155
     .line 156
+    new-instance v0, Lcom/facebookpay/offsite/models/message/PaymentRequestContent;
+
     .line 157
     .line 158
-    return-object v0
+    invoke-direct {v0, v1, v2, v3}, Lcom/facebookpay/offsite/models/message/PaymentRequestContent;-><init>(Lcom/facebookpay/offsite/models/message/PaymentDetails;Lcom/facebookpay/offsite/models/message/PaymentOptions;Lcom/facebookpay/offsite/models/message/PaymentConfiguration;)V
 
     .line 159
-    :cond_3
-    invoke-static {v0}, LX/0PS;->A0D(Ljava/lang/String;)V
-
     .line 160
     .line 161
-    .line 162
-    throw v8
+    return-object v0
 .end method
 
 .method public bridge synthetic read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
@@ -486,7 +484,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 3
     .line 4
@@ -505,7 +503,7 @@
 
     .line 268435457
     .line 268435458
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 268435459
     .line 268435460

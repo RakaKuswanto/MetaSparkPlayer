@@ -10,17 +10,15 @@
 
 .field public A02:Z
 
-.field public A03:LX/1zG;
+.field public final A03:LX/2mN;
 
-.field public final A04:LX/3NQ;
+.field public final A04:LX/0RP;
 
-.field public final A05:LX/0Na;
-
-.field public final A06:Ljava/lang/Runnable;
+.field public final A05:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -29,11 +27,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A8l:I
+    sget v0, LX/2I6;->A5n:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -41,48 +39,36 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A05:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A04:LX/0RP;
 
     .line 10
     .line 11
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    new-instance v0, LX/2XW;
 
     .line 12
     .line 13
+    invoke-direct {v0, p0}, LX/2XW;-><init>(Lcom/facebook/device/resourcemonitor/ResourceMonitor;)V
+
     .line 14
-    move-result-object v0
-
     .line 15
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A03:LX/1zG;
-
     .line 16
+    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A05:Ljava/lang/Runnable;
+
     .line 17
-    new-instance v0, LX/2dB;
-
     .line 18
-    .line 19
-    invoke-direct {v0, p0}, LX/2dB;-><init>(Lcom/facebook/device/resourcemonitor/ResourceMonitor;)V
+    new-instance v0, LX/2bE;
 
+    .line 19
     .line 20
+    invoke-direct {v0, p0}, LX/2bE;-><init>(Lcom/facebook/device/resourcemonitor/ResourceMonitor;)V
+
     .line 21
     .line 22
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A06:Ljava/lang/Runnable;
-
     .line 23
+    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A03:LX/2mN;
+
     .line 24
-    new-instance v0, LX/2dC;
-
     .line 25
-    .line 26
-    invoke-direct {v0, p0}, LX/2dC;-><init>(Lcom/facebook/device/resourcemonitor/ResourceMonitor;)V
-
-    .line 27
-    .line 28
-    .line 29
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A04:LX/3NQ;
-
-    .line 30
-    .line 31
     return-void
 .end method
 
@@ -118,11 +104,11 @@
 
     .line 12
     .line 13
-    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A05:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A04:LX/0RP;
 
     .line 14
     .line 15
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 16
     .line 17
@@ -134,7 +120,7 @@
 
     .line 20
     .line 21
-    iget-object v1, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A06:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/facebook/device/resourcemonitor/ResourceMonitor;->A05:Ljava/lang/Runnable;
 
     .line 22
     .line 23

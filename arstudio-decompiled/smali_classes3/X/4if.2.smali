@@ -1,73 +1,56 @@
-.class public final LX/4if;
-.super LX/4me;
+.class public final LX/4iF;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:LX/4nC;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xc
-    .end annotation
+.field public final A00:LX/42v;
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public final A01:LX/4lN;
 
-.field public A01:LX/1bK;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
+.field public final A02:Ljava/lang/String;
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A02:LX/1bH;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public final A03:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/42v;LX/4fz;LX/4lN;Ljava/lang/String;)V
     .locals 1
 
     .line 0
-    const-string v0, "SurveyRatingMatrixSubquestionComponent"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
-
     .line 3
+    iput-object p4, p0, LX/4iF;->A02:Ljava/lang/String;
+
     .line 4
     .line 5
-    return-void
-.end method
+    iput-object p3, p0, LX/4iF;->A01:LX/4lN;
 
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/4iF;->A00:LX/42v;
 
-# virtual methods
-.method public final bridge synthetic A0L()LX/4mg;
-    .locals 1
+    .line 8
+    .line 9
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
-    .line 0
-    invoke-super {p0}, LX/4mg;->A0L()LX/4mg;
-
-    .line 1
-    .line 2
-    .line 3
+    .line 10
+    .line 11
+    .line 12
     move-result-object v0
 
-    .line 4
-    return-object v0
+    .line 13
+    iput-object v0, p0, LX/4iF;->A03:Ljava/util/List;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0, p2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    return-void
 .end method

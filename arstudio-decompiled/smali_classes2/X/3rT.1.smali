@@ -1,96 +1,88 @@
-.class public final LX/3rT;
+.class public final LX/3Rt;
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A00:Lcom/facebook/common/callercontext/CallerContext;
+# interfaces
+.implements LX/2rP;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string v0, "CoverImagePluginVitoComponent"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-static {v0}, Lcom/facebook/common/callercontext/CallerContext;->A02(Ljava/lang/String;)Lcom/facebook/common/callercontext/CallerContext;
-
     .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    sput-object v0, LX/3rT;->A00:Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 7
-    .line 8
     return-void
 .end method
 
-.method public static A00(Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3Wi;Ljava/lang/String;Z)V
-    .locals 1
+
+# virtual methods
+.method public final bridge synthetic A7I(Landroid/os/Bundle;Ljava/lang/Object;)V
+    .locals 2
 
     .line 0
-    if-eqz p2, :cond_0
+    check-cast p2, LX/3YE;
 
     .line 1
     .line 2
-    invoke-virtual {p1, p0, p2}, LX/3Wi;->A03(Lcom/facebook/video/common/playerorigin/PlayerOrigin;Ljava/lang/String;)LX/3o5;
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 3
     .line 4
     .line 5
-    move-result-object p2
+    move-result-object v1
 
     .line 6
-    if-eqz p3, :cond_1
+    const-string/jumbo v0, "drawee_view_info"
 
     .line 7
     .line 8
-    const-string v0, "VISIBLE"
-
     .line 9
-    .line 10
-    :goto_0
-    new-instance p1, LX/1Oh;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 10
     .line 11
     .line 12
-    invoke-direct {p1, v0}, LX/1Oh;-><init>(Ljava/lang/String;)V
+    iget-object v0, p2, LX/3YE;->A01:LX/3Ro;
 
     .line 13
     .line 14
+    iget-object v0, v0, LX/3Ro;->A00:LX/3Rv;
+
     .line 15
-    const-string p0, "CoverImageVisibility"
-
     .line 16
-    .line 17
-    iget-object v0, p2, LX/3o5;->A09:Ljava/util/Map;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 17
     .line 18
     .line 19
-    invoke-static {v0}, LX/0PS;->A02(Ljava/lang/Object;)V
+    move-result-object v1
 
     .line 20
+    const-string/jumbo v0, "drawee_controller"
+
     .line 21
     .line 22
-    invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 23
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 24
     .line 25
-    :cond_0
-    return-void
-
     .line 26
-    :cond_1
-    const-string v0, "INVISIBLE"
+    return-void
+.end method
 
-    .line 27
-    .line 28
-    goto :goto_0
+.method public final AA7()Ljava/lang/Class;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/3YE;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

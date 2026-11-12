@@ -340,80 +340,76 @@
 
     .line 149
     .line 150
-    const-string v0, "ZIPCODE"
+    const-string/jumbo v0, "ZIPCODE"
 
     .line 151
     .line 152
+    .line 153
     const/16 v16, 0xe
 
-    .line 153
     .line 154
+    .line 155
     new-instance v2, Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;
 
-    .line 155
     .line 156
+    .line 157
     move/from16 v15, v16
 
-    .line 157
     .line 158
+    .line 159
     invoke-direct {v2, v0, v15, v0}, Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 159
     .line 160
     .line 161
+    .line 162
     sput-object v2, Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;->ZIPCODE:Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;
 
-    .line 162
     .line 163
+    .line 164
     const/16 v0, 0xf
 
-    .line 164
     .line 165
+    .line 166
     new-array v15, v0, [Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;
 
-    .line 166
     .line 167
+    .line 168
     move-object/from16 v1, v18
 
-    .line 168
     .line 169
+    .line 170
     move-object/from16 v0, v17
 
-    .line 170
     .line 171
-    invoke-static {v15, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 172
+    invoke-static {v1, v0, v14, v13, v15}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 173
     .line 174
-    invoke-static {v14, v13, v12, v11, v15}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
     .line 175
+    invoke-static {v12, v11, v10, v9, v15}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 176
     .line 177
-    invoke-static {v15, v10, v9}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 178
+    invoke-static {v8, v7, v6, v5, v15}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 179
     .line 180
-    invoke-static {v8, v7, v6, v5, v15}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
     .line 181
+    invoke-static {v15, v4, v3}, LX/0X3;->A1U([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
     .line 182
     .line 183
-    invoke-static {v15, v4, v3}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 184
+    aput-object v2, v15, v16
+
     .line 185
     .line 186
-    aput-object v2, v15, v16
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;
 
     .line 187
     .line 188
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLLeadGenInfoFieldInputDomain;
-
-    .line 189
-    .line 190
     return-void
 .end method
 
@@ -441,7 +437,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

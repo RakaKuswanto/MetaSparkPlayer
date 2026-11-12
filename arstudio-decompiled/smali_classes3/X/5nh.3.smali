@@ -1,34 +1,29 @@
-.class public final synthetic LX/5nh;
-.super Ljava/lang/Object;
+.class public final LX/5nh;
+.super LX/5nL;
 .source ""
-
-# interfaces
-.implements LX/5o9;
 
 
 # instance fields
-.field public final synthetic A00:LX/5mG;
+.field public A00:J
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5mG;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct {p0, p1}, LX/5nL;-><init>(Ljava/util/concurrent/ThreadFactory;)V
 
-    iput-object p1, p0, LX/5nh;->A00:LX/5mG;
+    .line 1
+    .line 2
+    .line 3
+    const-wide/16 v0, 0x0
 
-    return-void
-.end method
+    .line 4
+    .line 5
+    iput-wide v0, p0, LX/5nh;->A00:J
 
-
-# virtual methods
-.method public final AbN()V
-    .locals 1
-
-    iget-object v0, p0, LX/5nh;->A00:LX/5mG;
-
-    invoke-virtual {v0}, LX/5mG;->A0C()V
-
+    .line 6
+    .line 7
     return-void
 .end method

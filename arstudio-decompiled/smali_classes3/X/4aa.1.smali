@@ -1,113 +1,106 @@
-.class public final LX/4aa;
-.super Landroid/widget/PopupWindow;
+.class public final LX/4aA;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A01:Z
-
-
 # instance fields
-.field public A00:Z
+.field public A00:LX/4a9;
+
+.field public A01:LX/4bi;
+
+.field public A02:LX/4fk;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(LX/4fk;)V
+    .locals 1
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/16 v0, 0x15
-
     .line 3
-    .line 4
-    invoke-static {v1, v0}, LX/001;->A1P(II)Z
+    sget-object v0, LX/4bi;->A00:LX/4bi;
 
+    .line 4
     .line 5
+    iput-object v0, p0, LX/4aA;->A01:LX/4bi;
+
     .line 6
     .line 7
-    move-result v0
+    iput-object p1, p0, LX/4aA;->A02:LX/4fk;
 
     .line 8
-    sput-boolean v0, LX/4aa;->A01:Z
-
     .line 9
-    .line 10
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 4
+
+# virtual methods
+.method public final A00(Lcom/facebook/common/callercontext/CallerContext;)LX/4IG;
+    .locals 6
 
     .line 0
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    iget-object v5, p0, LX/4aA;->A02:LX/4fk;
 
     .line 1
     .line 2
+    iget-object v0, v5, LX/4fk;->A0C:Landroid/content/Context;
+
     .line 3
-    sget-object v0, LX/4XG;->A0I:[I
-
     .line 4
-    .line 5
-    invoke-static {p1, p2, v0, p3, p4}, LX/4WR;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[III)LX/4WR;
+    new-instance v4, LX/4IH;
 
+    .line 5
     .line 6
+    invoke-direct {v4, v0}, LX/4IH;-><init>(Landroid/content/Context;)V
+
     .line 7
     .line 8
-    move-result-object v3
-
     .line 9
-    const/4 v1, 0x2
+    const/4 v0, 0x0
 
     .line 10
-    iget-object v2, v3, LX/4WR;->A02:Landroid/content/res/TypedArray;
+    invoke-static {v5, v0}, LX/0XE;->A00(LX/4fk;Ljava/lang/String;)LX/2YL;
 
     .line 11
     .line 12
-    invoke-virtual {v2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
     .line 13
-    .line 14
-    .line 15
-    move-result v0
+    move-result-object v3
 
+    .line 14
+    iget-object v1, p0, LX/4aA;->A00:LX/4a9;
+
+    .line 15
     .line 16
-    if-eqz v0, :cond_0
+    new-instance v0, LX/4ay;
 
     .line 17
     .line 18
-    const/4 v0, 0x0
+    invoke-direct {v0, p0, v4}, LX/4ay;-><init>(LX/4aA;LX/4IH;)V
 
     .line 19
-    invoke-virtual {v2, v1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
     .line 20
     .line 21
-    .line 22
-    move-result v1
+    iput-object v0, v1, LX/4a9;->A03:LX/4ay;
 
+    .line 22
     .line 23
-    sget-boolean v0, LX/4aa;->A01:Z
+    new-instance v0, LX/4az;
 
     .line 24
     .line 25
-    if-eqz v0, :cond_1
+    invoke-direct {v0, p0, v4}, LX/4az;-><init>(LX/4aA;LX/4IH;)V
 
     .line 26
     .line 27
-    iput-boolean v1, p0, LX/4aa;->A00:Z
-
     .line 28
-    .line 29
-    :cond_0
-    :goto_0
-    const/4 v0, 0x0
+    iput-object v0, v1, LX/4a9;->A02:LX/4az;
 
+    .line 29
     .line 30
-    invoke-virtual {v3, v0}, LX/4WR;->A02(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, p1}, LX/4Zv;->A06(Lcom/facebook/common/callercontext/CallerContext;)LX/4fg;
 
     .line 31
     .line 32
@@ -115,146 +108,53 @@
     move-result-object v0
 
     .line 34
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v3, v0}, LX/2YL;->A0T(LX/4fg;)V
 
     .line 35
     .line 36
     .line 37
-    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
+    sget-object v1, LX/6dQ;->HORIZONTAL:LX/6dQ;
 
     .line 38
     .line 39
-    .line 40
-    return-void
+    sget-object v0, LX/4aG;->INSTANT_FEEDBACK_SCREEN_INSET_HORIZONTAL:LX/4aG;
 
+    .line 40
     .line 41
-    :cond_1
-    invoke-static {p0, v1}, LX/4ab;->A02(Landroid/widget/PopupWindow;Z)V
+    sget-object v2, LX/4a7;->A04:LX/4af;
 
     .line 42
     .line 43
+    invoke-static {v2, v0, v3, v5, v1}, LX/4af;->A00(LX/4af;LX/4aG;LX/6VK;LX/4fk;LX/6dQ;)V
+
     .line 44
-    goto :goto_0
-.end method
+    .line 45
+    .line 46
+    sget-object v1, LX/6dQ;->VERTICAL:LX/6dQ;
 
+    .line 47
+    .line 48
+    sget-object v0, LX/4aG;->INSTANT_FEEDBACK_SCREEN_INSET_VERTICAL:LX/4aG;
 
-# virtual methods
-.method public final showAsDropDown(Landroid/view/View;II)V
-    .locals 1
+    .line 49
+    .line 50
+    invoke-static {v2, v0, v3, v5, v1}, LX/4af;->A00(LX/4af;LX/4aG;LX/6VK;LX/4fk;LX/6dQ;)V
 
-    .line 0
-    sget-boolean v0, LX/4aa;->A01:Z
+    .line 51
+    .line 52
+    .line 53
+    iget-object v1, v3, LX/2YL;->A00:LX/4fX;
 
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    .line 54
+    .line 55
+    new-instance v0, LX/4IG;
 
-    .line 3
-    .line 4
-    iget-boolean v0, p0, LX/4aa;->A00:Z
+    .line 56
+    .line 57
+    invoke-direct {v0, v4, v1, v5}, LX/4IG;-><init>(LX/4IH;LX/4fg;LX/4fk;)V
 
-    .line 5
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 7
-    .line 8
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    sub-int/2addr p3, v0
-
-    .line 13
-    :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
-
-    .line 14
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public final showAsDropDown(Landroid/view/View;III)V
-    .locals 1
-
-    .line 268435456
-    sget-boolean v0, LX/4aa;->A01:Z
-
-    .line 268435457
-    .line 268435458
-    if-eqz v0, :cond_0
-
-    .line 268435459
-    .line 268435460
-    iget-boolean v0, p0, LX/4aa;->A00:Z
-
-    .line 268435461
-    .line 268435462
-    if-eqz v0, :cond_0
-
-    .line 268435463
-    .line 268435464
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    .line 268435465
-    .line 268435466
-    .line 268435467
-    move-result v0
-
-    .line 268435468
-    sub-int/2addr p3, v0
-
-    .line 268435469
-    :cond_0
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
-
-    .line 268435470
-    .line 268435471
-    .line 268435472
-    return-void
-.end method
-
-.method public final update(Landroid/view/View;IIII)V
-    .locals 1
-
-    .line 0
-    sget-boolean v0, LX/4aa;->A01:Z
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    iget-boolean v0, p0, LX/4aa;->A00:Z
-
-    .line 5
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 7
-    .line 8
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    sub-int/2addr p3, v0
-
-    .line 13
-    :cond_0
-    invoke-super/range {p0 .. p5}, Landroid/widget/PopupWindow;->update(Landroid/view/View;IIII)V
-
-    .line 14
-    .line 15
-    .line 16
-    return-void
+    .line 58
+    .line 59
+    .line 60
+    return-object v0
 .end method

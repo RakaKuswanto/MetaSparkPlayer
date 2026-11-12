@@ -1,52 +1,73 @@
-.class public final LX/3Ao;
+.class public abstract LX/3Ao;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:Z
-
-.field public A01:Z
-
-.field public A02:Z
-
-.field public A03:Z
-
-.field public final A04:LX/0ZF;
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static A00(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string/jumbo v3, "stetho"
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    const-string v2, "\n"
 
     .line 4
-    iput-boolean v0, p0, LX/3Ao;->A03:Z
-
     .line 5
+    new-instance v1, Ljava/io/StringWriter;
+
     .line 6
-    iput-boolean v0, p0, LX/3Ao;->A01:Z
-
     .line 7
-    .line 8
-    invoke-static {}, LX/1z6;->A0L()LX/0ZF;
+    invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
+    .line 8
     .line 9
     .line 10
-    .line 11
-    move-result-object v0
+    new-instance v0, Ljava/io/PrintWriter;
 
+    .line 11
     .line 12
-    iput-object v0, p0, LX/3Ao;->A04:LX/0ZF;
+    invoke-direct {v0, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
     .line 13
     .line 14
+    .line 15
+    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {v0}, Ljava/io/Writer;->flush()V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    invoke-static {p0, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v1
+
+    .line 29
+    const/4 v0, 0x6
+
+    .line 30
+    invoke-static {v0, v3, v1}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    .line 31
+    .line 32
+    .line 33
     return-void
 .end method

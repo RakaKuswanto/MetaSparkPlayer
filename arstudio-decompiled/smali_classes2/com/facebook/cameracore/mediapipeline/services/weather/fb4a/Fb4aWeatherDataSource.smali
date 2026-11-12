@@ -19,13 +19,11 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
-
 .field public mAltitudeData:Lcom/facebook/cameracore/mediapipeline/services/weather/AltitudeData;
 
 .field public mAltitudePromise:Lcom/facebook/native_bridge/NativeDataPromise;
 
-.field public final mGraphQLQueryExecutor:LX/0Na;
+.field public final mGraphQLQueryExecutor:LX/0RP;
 
 .field public mIsDownloadingAltitudeData:Z
 
@@ -33,11 +31,11 @@
 
 .field public mIsStarted:Z
 
-.field public mListener:LX/1oM;
+.field public mListener:LX/1sO;
 
 .field public mPreferredAltitudeUnit:Ljava/lang/String;
 
-.field public final mSameThreadExecutor:LX/0Na;
+.field public final mSameThreadExecutor:LX/0RP;
 
 .field public mSeaLevelPressure:D
 
@@ -45,7 +43,7 @@
 
 .field public final mSensorManager:Landroid/hardware/SensorManager;
 
-.field public final mUiThreadExecutor:LX/0Na;
+.field public final mUiThreadExecutor:LX/0RP;
 
 .field public mWeatherData:Lcom/facebook/cameracore/mediapipeline/services/weather/WeatherData;
 
@@ -53,7 +51,7 @@
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
@@ -62,11 +60,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->Afm:I
+    sget v0, LX/2I6;->AXd:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -74,15 +72,15 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mSameThreadExecutor:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mSameThreadExecutor:LX/0RP;
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->A5n:I
+    sget v0, LX/2I6;->A31:I
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 14
     .line 15
@@ -90,7 +88,7 @@
     move-result-object v0
 
     .line 17
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mUiThreadExecutor:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mUiThreadExecutor:LX/0RP;
 
     .line 18
     .line 19
@@ -134,63 +132,51 @@
 
     .line 38
     .line 39
-    invoke-static {p1, v0}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 40
     .line 41
     .line 42
-    move-result-object v0
+    move-result-object v1
 
     .line 43
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->_UL_mInjectionContext:LX/1zG;
+    invoke-static {v1}, LX/1kN;->A06(Landroid/content/Context;)LX/3FX;
 
     .line 44
     .line 45
-    invoke-static {}, LX/1z6;->A01()Landroid/content/Context;
-
     .line 46
-    .line 47
-    .line 48
-    move-result-object v1
+    move-result-object v0
 
+    .line 47
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mGraphQLQueryExecutor:LX/0RP;
+
+    .line 48
     .line 49
-    invoke-static {v1}, LX/1nv;->A04(Landroid/content/Context;)LX/1zT;
+    const-string/jumbo v0, "sensor"
 
     .line 50
     .line 51
     .line 52
-    move-result-object v0
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     .line 53
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mGraphQLQueryExecutor:LX/0Na;
-
     .line 54
     .line 55
-    const-string/jumbo v0, "sensor"
+    move-result-object v0
 
     .line 56
+    check-cast v0, Landroid/hardware/SensorManager;
+
     .line 57
     .line 58
-    invoke-virtual {v1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mSensorManager:Landroid/hardware/SensorManager;
 
     .line 59
     .line 60
-    .line 61
-    move-result-object v0
-
-    .line 62
-    check-cast v0, Landroid/hardware/SensorManager;
-
-    .line 63
-    .line 64
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mSensorManager:Landroid/hardware/SensorManager;
-
-    .line 65
-    .line 66
     return-void
 .end method
 
-.method public static final _UL__ULSEP_com_facebook_cameracore_mediapipeline_services_weather_fb4a_Fb4aWeatherDataSource_ULSEP_FACTORY_METHOD(ILX/1zC;Ljava/lang/Object;)Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;
+.method public static final _UL__ULSEP_com_facebook_cameracore_mediapipeline_services_weather_fb4a_Fb4aWeatherDataSource_ULSEP_FACTORY_METHOD(ILX/3Ft;Ljava/lang/Object;)Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;
     .locals 0
 
     .line 0
@@ -198,7 +184,7 @@
 
     .line 1
     .line 2
-    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;-><init>(LX/1zC;)V
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;-><init>()V
 
     .line 3
     .line 4
@@ -218,7 +204,7 @@
     return-void
 .end method
 
-.method public static synthetic access$100(Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;)LX/1oM;
+.method public static synthetic access$100(Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;)LX/1sO;
     .locals 0
 
     .line 0
@@ -228,11 +214,11 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;)LX/0Na;
+.method public static synthetic access$200(Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;)LX/0RP;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mUiThreadExecutor:LX/0Na;
+    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mUiThreadExecutor:LX/0RP;
 
     .line 1
     .line 2
@@ -333,11 +319,11 @@
     .line 10
     .line 11
     .line 12
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mSameThreadExecutor:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mSameThreadExecutor:LX/0RP;
 
     .line 13
     .line 14
-    invoke-static {v0, v1, v2}, LX/1xZ;->A00(LX/0Na;LX/1RS;Lcom/google/common/util/concurrent/ListenableFuture;)V
+    invoke-static {v0, v1, v2}, LX/3fC;->A00(LX/0RP;LX/1tL;Lcom/google/common/util/concurrent/ListenableFuture;)V
 
     .line 15
     .line 16
@@ -629,180 +615,116 @@
 .end method
 
 .method public getWeatherDataFuture()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 19
+    .locals 4
 
     .line 0
-    move-object/from16 v3, p0
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mGraphQLQueryExecutor:LX/0RP;
 
     .line 1
     .line 2
-    iget-object v0, v3, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mGraphQLQueryExecutor:LX/0Na;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 5
-    .line 6
-    .line 7
-    move-result-object v4
+    move-result-object v2
 
+    .line 6
+    check-cast v2, LX/1w6;
+
+    .line 7
     .line 8
-    check-cast v4, LX/1pW;
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;
 
     .line 9
     .line 10
-    const/4 v7, 0x0
+    invoke-direct {v0}, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;-><init>()V
 
     .line 11
-    new-instance v0, Lcom/facebook/graphql/query/GraphQlQueryParamSet;
-
     .line 12
     .line 13
-    invoke-direct {v0}, Lcom/facebook/graphql/query/GraphQlQueryParamSet;-><init>()V
+    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->build()LX/1p7;
 
     .line 14
     .line 15
     .line 16
-    const-class v6, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryResponseImpl;
+    move-result-object v3
 
     .line 17
-    .line 18
-    const v11, -0xa56679a
+    const-wide/32 v0, 0x493e0
 
+    .line 18
     .line 19
     .line 20
-    .line 21
-    const-wide/32 v13, 0x2538856a
+    iput-wide v0, v3, LX/1pz;->A03:J
 
+    .line 21
     .line 22
+    iput-wide v0, v3, LX/1pz;->A02:J
+
     .line 23
     .line 24
-    const/4 v12, 0x0
+    const-wide v0, 0x9371c81d6d56cL
 
     .line 25
-    const/16 v18, 0x1
-
     .line 26
     .line 27
-    const-string v8, "FBInspirationWeatherQuery"
-
     .line 28
     .line 29
-    const-string v10, "fbandroid"
+    invoke-static {v3, v0, v1}, LX/1pz;->A03(LX/1pz;J)V
 
     .line 30
     .line 31
-    new-instance v5, LX/1j0;
-
     .line 32
+    const/4 v0, 0x0
+
     .line 33
-    move-object v9, v7
+    invoke-static {v2, v3, v0}, LX/1w6;->A01(LX/1w6;LX/0aC;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/SettableFuture;
 
     .line 34
-    move-wide v15, v13
-
     .line 35
-    move/from16 v17, v12
-
     .line 36
+    move-result-object v0
+
     .line 37
-    invoke-direct/range {v5 .. v18}, LX/1j0;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJZZ)V
+    new-instance v2, LX/1lO;
 
     .line 38
     .line 39
-    .line 40
-    iput-object v0, v5, LX/1j0;->A00:Lcom/facebook/graphql/query/GraphQlQueryParamSet;
+    invoke-direct {v2, v3, v0}, LX/1lO;-><init>(LX/1p7;Lcom/google/common/util/concurrent/ListenableFuture;)V
 
+    .line 40
     .line 41
     .line 42
-    invoke-static {v5}, LX/1iN;->A00(LX/1j0;)LX/1iN;
+    new-instance v1, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource$2;
 
     .line 43
     .line 44
+    invoke-direct {v1, p0}, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource$2;-><init>(Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;)V
+
     .line 45
-    move-result-object v5
-
     .line 46
-    const-wide/32 v0, 0x493e0
-
     .line 47
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mSameThreadExecutor:LX/0RP;
+
     .line 48
     .line 49
-    iput-wide v0, v5, LX/1j2;->A04:J
+    invoke-static {v0}, LX/0X4;->A0w(LX/0RP;)Ljava/util/concurrent/Executor;
 
     .line 50
     .line 51
-    iput-wide v0, v5, LX/1j2;->A03:J
-
     .line 52
+    move-result-object v0
+
     .line 53
-    const-wide v1, 0x9371c81d6d56cL
+    invoke-static {v1, v2, v0}, LX/1u9;->A00(Lcom/google/common/base/Function;Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/Executor;)LX/1oV;
 
     .line 54
     .line 55
     .line 56
+    move-result-object v0
+
     .line 57
-    .line 58
-    new-instance v0, LX/37j;
-
-    .line 59
-    .line 60
-    invoke-direct {v0, v1, v2}, LX/37j;-><init>(J)V
-
-    .line 61
-    .line 62
-    .line 63
-    iput-object v0, v5, LX/1j2;->A06:LX/37j;
-
-    .line 64
-    .line 65
-    invoke-static {v4, v5, v7}, LX/1pW;->A01(LX/1pW;LX/46D;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/SettableFuture;
-
-    .line 66
-    .line 67
-    .line 68
-    move-result-object v0
-
-    .line 69
-    new-instance v2, LX/1po;
-
-    .line 70
-    .line 71
-    invoke-direct {v2, v5, v0}, LX/1po;-><init>(LX/1iN;Lcom/google/common/util/concurrent/ListenableFuture;)V
-
-    .line 72
-    .line 73
-    .line 74
-    new-instance v1, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource$2;
-
-    .line 75
-    .line 76
-    invoke-direct {v1, v3}, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource$2;-><init>(Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;)V
-
-    .line 77
-    .line 78
-    .line 79
-    iget-object v0, v3, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mSameThreadExecutor:LX/0Na;
-
-    .line 80
-    .line 81
-    invoke-static {v0}, LX/0Yg;->A11(LX/0Na;)Ljava/util/concurrent/Executor;
-
-    .line 82
-    .line 83
-    .line 84
-    move-result-object v0
-
-    .line 85
-    invoke-static {v1, v2, v0}, LX/1xb;->A00(Lcom/google/common/base/Function;Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/Executor;)LX/1lT;
-
-    .line 86
-    .line 87
-    .line 88
-    move-result-object v0
-
-    .line 89
     return-object v0
 .end method
 
@@ -821,11 +743,11 @@
     return-void
 .end method
 
-.method public setListener(LX/1oM;)V
+.method public setListener(LX/1sO;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mListener:LX/1oM;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/Fb4aWeatherDataSource;->mListener:LX/1sO;
 
     .line 1
     .line 2

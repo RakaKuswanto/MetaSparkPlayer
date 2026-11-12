@@ -1,98 +1,94 @@
-.class public Lcom/facebook/rendercore/text/RCTextView;
+.class public abstract Lcom/facebook/rendercore/text/RCTextView;
 .super Landroid/view/View;
 .source ""
 
 
 # direct methods
+.method private getOnPrePostDrawableSpans()[LX/6UL;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
 .method private getSelectionPath()Landroid/graphics/Path;
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
-    return-object v0
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
 .method private getTextForAccessibility()Ljava/lang/CharSequence;
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
-    return-object v0
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
 .method private setSelection(Landroid/text/style/ClickableSpan;)V
     .locals 1
 
     .line 0
-    const-string v0, "getSpanStart"
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
     .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
+    .line 4
     throw v0
 .end method
 
 
 # virtual methods
-.method public getLayout()Landroid/text/Layout;
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return-object v0
+.method public abstract getLayout()Landroid/text/Layout;
 .end method
 
-.method public getLayoutTranslationX()F
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
+.method public abstract getLayoutTranslationX()F
 .end method
 
-.method public getLayoutTranslationY()F
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
+.method public abstract getLayoutTranslationY()F
 .end method
 
-.method public getText()Ljava/lang/CharSequence;
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return-object v0
+.method public abstract getText()Ljava/lang/CharSequence;
 .end method
 
 .method public setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-super {p0, p1}, Landroid/view/View;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method

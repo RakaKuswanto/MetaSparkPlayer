@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/3Ic;
+.implements LX/2iy;
 
 
 # static fields
@@ -13,19 +13,19 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public logoutOperation:LX/3Ey;
+.field public logoutOperation:LX/2FE;
 
 .field public mFlowId:J
 
-.field public mToaster:LX/0Na;
+.field public mToaster:LX/0RP;
 
-.field public final mUserFlowLogger:LX/0Na;
+.field public final mUserFlowLogger:LX/0RP;
 
-.field public monitor:LX/2Uk;
+.field public monitor:LX/1ou;
 
-.field public progressIndicator:LX/3JT;
+.field public progressIndicator:LX/2Ek;
 
 
 # direct methods
@@ -38,11 +38,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AHp:I
+    sget v0, LX/2I6;->ADY:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -50,7 +50,7 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0RP;
 
     .line 10
     .line 11
@@ -156,11 +156,11 @@
 
     .line 31
     .line 32
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0RP;
 
     .line 33
     .line 34
-    invoke-static {v0}, LX/0Yi;->A0T(LX/0Na;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 35
     .line 36
@@ -168,61 +168,69 @@
     move-result-object v1
 
     .line 38
-    const v0, 0x94001f
+    check-cast v1, Lcom/facebook/quicklog/reliability/UserFlowLogger;
 
     .line 39
     .line 40
-    .line 41
-    invoke-interface {v1, v0}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->generateNewFlowId(I)J
+    const v0, 0x94001f
 
+    .line 41
     .line 42
     .line 43
+    invoke-interface {v1, v0}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->generateNewFlowId(I)J
+
     .line 44
+    .line 45
+    .line 46
     move-result-wide v0
 
-    .line 45
-    iput-wide v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mFlowId:J
-
-    .line 46
     .line 47
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0Na;
+    iput-wide v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mFlowId:J
 
     .line 48
     .line 49
-    invoke-static {v0}, LX/0Yi;->A0T(LX/0Na;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0RP;
 
     .line 50
     .line 51
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 52
+    .line 53
+    .line 54
     move-result-object v5
 
-    .line 53
-    iget-wide v3, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mFlowId:J
-
-    .line 54
     .line 55
-    const-string/jumbo v2, "logout_initiated_unexpected_trigger"
+    check-cast v5, Lcom/facebook/quicklog/reliability/UserFlowLogger;
 
     .line 56
     .line 57
-    .line 58
-    const/4 v1, 0x0
+    iget-wide v3, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mFlowId:J
 
+    .line 58
     .line 59
-    new-instance v0, Lcom/facebook/quicklog/reliability/UserFlowConfig;
+    const-string/jumbo v2, "logout_initiated_unexpected_trigger"
 
     .line 60
     .line 61
+    .line 62
+    const/4 v1, 0x0
+
+    .line 63
+    new-instance v0, Lcom/facebook/quicklog/reliability/UserFlowConfig;
+
+    .line 64
+    .line 65
     invoke-direct {v0, v2, v1}, Lcom/facebook/quicklog/reliability/UserFlowConfig;-><init>(Ljava/lang/String;Z)V
 
-    .line 62
-    .line 63
-    .line 64
-    invoke-interface {v5, v3, v4, v0}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowStart(JLcom/facebook/quicklog/reliability/UserFlowConfig;)V
-
-    .line 65
     .line 66
     .line 67
+    .line 68
+    invoke-interface {v5, v3, v4, v0}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowStart(JLcom/facebook/quicklog/reliability/UserFlowConfig;)V
+
+    .line 69
+    .line 70
+    .line 71
     :cond_1
     return-void
 .end method
@@ -231,11 +239,11 @@
     .locals 5
 
     .line 0
-    iget-object v0, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/1x7;
+    iget-object v0, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/26P;
 
     .line 1
     .line 2
-    sget-object v3, LX/1x7;->CONNECTION_FAILURE:LX/1x7;
+    sget-object v3, LX/26P;->CONNECTION_FAILURE:LX/26P;
 
     .line 3
     .line 4
@@ -243,7 +251,7 @@
 
     .line 5
     .line 6
-    invoke-static {p0}, LX/0Yh;->A0B(Landroidx/fragment/app/Fragment;)Landroid/content/res/Resources;
+    invoke-static {p0}, LX/0X6;->A0D(Landroidx/fragment/app/Fragment;)Landroid/content/res/Resources;
 
     .line 7
     .line 8
@@ -251,7 +259,7 @@
     move-result-object v1
 
     .line 10
-    const v0, 0x7f1201f5
+    const v0, 0x7f1101c2
 
     .line 11
     .line 12
@@ -264,11 +272,11 @@
     move-result-object v2
 
     .line 17
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mToaster:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mToaster:LX/0RP;
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yg;->A0a(LX/0Na;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X6;->A0h(LX/0RP;)Ljava/lang/Object;
 
     .line 20
     .line 21
@@ -276,20 +284,20 @@
     move-result-object v1
 
     .line 23
-    check-cast v1, LX/2n8;
+    check-cast v1, LX/2bl;
 
     .line 24
     .line 25
     const/4 v0, 0x0
 
     .line 26
-    invoke-static {v1, v2, v0, v0}, LX/2n8;->A00(LX/2n8;Ljava/lang/CharSequence;IZ)V
+    invoke-static {v1, v2, v0, v0}, LX/2bl;->A00(LX/2bl;Ljava/lang/CharSequence;IZ)V
 
     .line 27
     .line 28
     .line 29
     :cond_0
-    iget-object v0, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/1x7;
+    iget-object v0, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/26P;
 
     .line 30
     .line 31
@@ -297,11 +305,11 @@
 
     .line 32
     .line 33
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0RP;
 
     .line 34
     .line 35
-    invoke-static {v0}, LX/0Yi;->A0T(LX/0Na;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 36
     .line 37
@@ -309,41 +317,45 @@
     move-result-object v4
 
     .line 39
-    iget-wide v2, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mFlowId:J
+    check-cast v4, Lcom/facebook/quicklog/reliability/UserFlowLogger;
 
     .line 40
     .line 41
-    iget-object v0, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/1x7;
+    iget-wide v2, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mFlowId:J
 
     .line 42
     .line 43
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/26P;
 
     .line 44
     .line 45
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
     .line 46
+    .line 47
+    .line 48
     move-result-object v1
 
-    .line 47
+    .line 49
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 48
-    .line 49
     .line 50
+    .line 51
+    .line 52
     move-result-object v0
 
-    .line 51
+    .line 53
     invoke-interface {v4, v2, v3, v1, v0}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowEndFail(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 52
-    .line 53
     .line 54
+    .line 55
+    .line 56
     :cond_1
     invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentBase;->redirectToStart()V
 
-    .line 55
-    .line 56
     .line 57
+    .line 58
+    .line 59
     return-void
 .end method
 
@@ -351,7 +363,7 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->monitor:LX/2Uk;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->monitor:LX/1ou;
 
     .line 1
     .line 2
@@ -360,94 +372,110 @@
     .line 3
     .line 4
     .line 5
-    invoke-virtual {v0}, LX/2Uk;->A01()V
+    invoke-virtual {v0}, LX/1ou;->A01()V
 
     .line 6
     .line 7
     .line 8
-    const-string v0, "com.facebook.orca.login.AuthStateMachineMonitor.LOGOUT_COMPLETE"
+    const-string/jumbo v0, "com.facebook.orca.login.AuthStateMachineMonitor.LOGOUT_COMPLETE"
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yj;->A09(Ljava/lang/String;)Landroid/content/Intent;
-
     .line 11
+    invoke-static {v0}, LX/0X7;->A09(Ljava/lang/String;)Landroid/content/Intent;
+
     .line 12
     .line 13
+    .line 14
     move-result-object v3
 
-    .line 14
+    .line 15
     iget-object v1, p0, Landroidx/fragment/app/Fragment;->mArguments:Landroid/os/Bundle;
 
-    .line 15
     .line 16
+    .line 17
     if-eqz v1, :cond_0
 
-    .line 17
     .line 18
+    .line 19
     const-string/jumbo v0, "logout_extras"
 
-    .line 19
     .line 20
     .line 21
+    .line 22
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
-    .line 22
     .line 23
     .line 24
+    .line 25
     move-result-object v1
 
-    .line 25
-    const-string v0, "com.facebook.orca.login.AuthStateMachineMonitor.EXTRAS"
-
     .line 26
-    .line 27
-    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+    const-string/jumbo v0, "com.facebook.orca.login.AuthStateMachineMonitor.EXTRAS"
 
+    .line 27
     .line 28
     .line 29
-    .line 30
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0Na;
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
+    .line 30
     .line 31
     .line 32
-    invoke-static {v0}, LX/0Yi;->A0T(LX/0Na;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mUserFlowLogger:LX/0RP;
 
     .line 33
     .line 34
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 35
+    .line 36
+    .line 37
     move-result-object v2
 
-    .line 36
-    iget-wide v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mFlowId:J
-
-    .line 37
     .line 38
-    invoke-interface {v2, v0, v1}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowEndSuccess(J)V
+    check-cast v2, Lcom/facebook/quicklog/reliability/UserFlowLogger;
 
     .line 39
     .line 40
-    .line 41
-    invoke-virtual {p0, v3}, Lcom/facebook/base/fragment/AbstractNavigableFragment;->finish(Landroid/content/Intent;)V
+    iget-wide v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mFlowId:J
 
+    .line 41
     .line 42
+    invoke-interface {v2, v0, v1}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowEndSuccess(J)V
+
     .line 43
     .line 44
+    .line 45
+    invoke-virtual {p0, v3}, Lcom/facebook/base/fragment/AbstractNavigableFragment;->finish(Landroid/content/Intent;)V
+
+    .line 46
+    .line 47
+    .line 48
     return-void
 .end method
 
 
 # virtual methods
+.method public synthetic analyticsProviderEnabled()Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    return v0
+.end method
+
 .method public doLogout()V
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->logoutOperation:LX/3Ey;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->logoutOperation:LX/2FE;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/3Ey;->A03()Z
+    invoke-virtual {v0}, LX/2FE;->A03()Z
 
     .line 3
     .line 4
@@ -459,7 +487,7 @@
 
     .line 7
     .line 8
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 9
     .line 10
@@ -467,35 +495,36 @@
     move-result-object v3
 
     .line 12
-    iget-object v1, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->logoutOperation:LX/3Ey;
+    iget-object v1, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->logoutOperation:LX/2FE;
 
     .line 13
     .line 14
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->progressIndicator:LX/3JT;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->progressIndicator:LX/2Ek;
 
     .line 15
     .line 16
-    invoke-virtual {v1, v0}, LX/3Ey;->A02(LX/3JT;)V
+    invoke-virtual {v1, v0}, LX/2FE;->A02(LX/2Ek;)V
 
     .line 17
     .line 18
     .line 19
-    iget-object v2, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->logoutOperation:LX/3Ey;
+    iget-object v2, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->logoutOperation:LX/2FE;
 
     .line 20
     .line 21
-    const-string v1, "auth_logout"
+    const-string/jumbo v1, "auth_logout"
 
     .line 22
     .line 23
+    .line 24
     const/4 v0, 0x0
 
-    .line 24
-    invoke-virtual {v2, v3, v0, v1}, LX/3Ey;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
-
     .line 25
+    invoke-virtual {v2, v3, v0, v1}, LX/2FE;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
+
     .line 26
     .line 27
+    .line 28
     :cond_0
     return-void
 .end method
@@ -530,11 +559,11 @@
     return-object v0
 .end method
 
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/37j;->A00()LX/37j;
+    invoke-static {}, LX/2uz;->A00()LX/2uz;
 
     .line 1
     .line 2
@@ -556,7 +585,7 @@
 
     .line 2
     .line 3
-    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentBase;->getAuthStateMachineConfig()LX/3FJ;
+    invoke-virtual {p0}, Lcom/facebook/auth/login/ui/AuthFragmentBase;->getAuthStateMachineConfig()LX/2vk;
 
     .line 4
     .line 5
@@ -564,15 +593,15 @@
     move-result-object v0
 
     .line 7
-    iget-object v0, v0, LX/3FJ;->A00:LX/3Hr;
+    iget-object v0, v0, LX/2vk;->A00:LX/2w0;
 
     .line 8
     .line 9
-    iget-object v0, v0, LX/3Hr;->A00:LX/3JT;
+    iget-object v0, v0, LX/2w0;->A00:LX/2Ek;
 
     .line 10
     .line 11
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->progressIndicator:LX/3JT;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->progressIndicator:LX/2Ek;
 
     .line 12
     .line 13
@@ -593,11 +622,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AJz:I
+    sget v0, LX/2I6;->AJz:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -605,28 +634,28 @@
     move-result-object v0
 
     .line 9
-    check-cast v0, LX/2Uk;
+    check-cast v0, LX/1ou;
 
     .line 10
     .line 11
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->monitor:LX/2Uk;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->monitor:LX/1ou;
 
     .line 12
     .line 13
-    sget v1, LX/2eq;->AQK:I
+    sget v1, LX/2I6;->ALk:I
 
     .line 14
     .line 15
-    new-instance v0, LX/1zU;
+    new-instance v0, LX/3FW;
 
     .line 16
     .line 17
-    invoke-direct {v0, p0, v1}, LX/1zU;-><init>(LX/0Qd;I)V
+    invoke-direct {v0, p0, v1}, LX/3FW;-><init>(LX/0Mt;I)V
 
     .line 18
     .line 19
     .line 20
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mToaster:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->mToaster:LX/0RP;
 
     .line 21
     .line 22
@@ -635,37 +664,38 @@
     .line 23
     .line 24
     .line 25
-    const-string v0, "authLogout"
+    const-string/jumbo v0, "authLogout"
 
     .line 26
     .line 27
-    invoke-static {p0, v0}, LX/3Ey;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/3Ey;
-
     .line 28
+    invoke-static {p0, v0}, LX/2FE;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/2FE;
+
     .line 29
     .line 30
+    .line 31
     move-result-object v2
 
-    .line 31
-    iput-object v2, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->logoutOperation:LX/3Ey;
-
     .line 32
+    iput-object v2, p0, Lcom/facebook/auth/login/ui/LogoutFragment;->logoutOperation:LX/2FE;
+
     .line 33
+    .line 34
     const/4 v1, 0x3
 
-    .line 34
-    new-instance v0, LX/1sy;
-
     .line 35
-    .line 36
-    invoke-direct {v0, p0, v1}, LX/1sy;-><init>(Ljava/lang/Object;I)V
+    new-instance v0, LX/0ZD;
 
+    .line 36
     .line 37
+    invoke-direct {v0, p0, v1}, LX/0ZD;-><init>(Ljava/lang/Object;I)V
+
     .line 38
     .line 39
-    iput-object v0, v2, LX/3Ey;->A02:LX/3FZ;
-
     .line 40
+    iput-object v0, v2, LX/2FE;->A02:LX/2Ei;
+
     .line 41
+    .line 42
     return-void
 .end method

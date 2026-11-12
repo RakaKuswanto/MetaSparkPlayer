@@ -33,7 +33,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0Ao;->A02(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, LX/0BF;->A02(Ljava/lang/String;)Ljava/lang/String;
 
     .line 10
     .line 11
@@ -61,7 +61,7 @@
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/0Ao;->A02(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, LX/0BF;->A02(Ljava/lang/String;)Ljava/lang/String;
 
     .line 24
     .line 25

@@ -1,65 +1,92 @@
 .class public final LX/3sz;
-.super Ljava/lang/Object;
+.super LX/420;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayerLogger$10"
 
 
 # instance fields
-.field public final synthetic A00:LX/3nz;
+.field public A00:Z
+
+.field public A01:Z
+
+.field public A02:Z
+
+.field public A03:Z
+
+.field public A04:Z
+
+.field public A05:Z
+
+.field public A06:Z
+
+.field public A07:Z
+
+.field public A08:Z
+
+.field public A09:Z
+
+.field public A0A:Z
+
+.field public A0B:Z
+
+.field public A0C:Z
+
+.field public A0D:Z
+
+.field public final A0E:LX/302;
 
 
 # direct methods
-.method public constructor <init>(LX/3nz;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/3sz;->A00:LX/3nz;
+    invoke-direct {p0}, LX/420;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    const/4 v0, 0x0
+
     .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/3sz;->A00:LX/3nz;
-
-    .line 1
-    .line 2
-    sget-object v0, LX/014;->A0B:Ljava/lang/Integer;
-
-    .line 3
-    .line 4
-    iput-object v0, v2, LX/3nz;->A0E:Ljava/lang/Integer;
+    iput-boolean v0, p0, LX/3sz;->A07:Z
 
     .line 5
     .line 6
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iput-boolean v0, p0, LX/3sz;->A0B:Z
 
     .line 7
     .line 8
-    .line 9
-    move-result-wide v0
+    iput-boolean v0, p0, LX/3sz;->A09:Z
 
+    .line 9
     .line 10
-    iput-wide v0, v2, LX/3nz;->A05:J
+    iput-boolean v0, p0, LX/3sz;->A05:Z
 
     .line 11
     .line 12
+    iput-boolean v0, p0, LX/3sz;->A0D:Z
+
+    .line 13
+    .line 14
+    iput-boolean v0, p0, LX/3sz;->A03:Z
+
+    .line 15
+    .line 16
+    iput-boolean v0, p0, LX/3sz;->A01:Z
+
+    .line 17
+    .line 18
+    invoke-static {}, LX/0X1;->A0B()LX/302;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    iput-object v0, p0, LX/3sz;->A0E:LX/302;
+
+    .line 23
+    .line 24
     return-void
 .end method

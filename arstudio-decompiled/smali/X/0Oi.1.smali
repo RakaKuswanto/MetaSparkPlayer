@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0Gd;
+.implements LX/0WX;
 
 
 # direct methods
@@ -21,17 +21,30 @@
 
 
 # virtual methods
-.method public final bridge synthetic get()Ljava/lang/Object;
+.method public final AQs(ZLjava/lang/String;Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final ARC(Ljava/lang/String;[B)Ljava/lang/Object;
     .locals 1
 
-    .line 0
-    invoke-static {}, Lcom/facebook/acra/ErrorReporter;->getInstance()Lcom/facebook/acra/ErrorReporter;
+    const/4 v0, 0x0
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
     return-object v0
+.end method
+
+.method public final ARD(Ljava/lang/String;[B)Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final ARK(ZLjava/lang/String;Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
 .end method

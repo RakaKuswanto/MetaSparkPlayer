@@ -1,25 +1,33 @@
 .class public final LX/5g5;
-.super Ljava/lang/Object;
+.super LX/5g6;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/5cY;
-
-
 # direct methods
-.method public constructor <init>(LX/5cY;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/5g5;->A00:LX/5cY;
+    sget-object v2, LX/5g4;->A00:LX/5g3;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x6
 
     .line 3
+    new-instance v0, LX/3ik;
+
     .line 4
     .line 5
+    invoke-direct {v0, v1}, LX/3ik;-><init>(I)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-direct {p0, v2, v0}, LX/5g6;-><init>(LX/6bd;LX/0GZ;)V
+
+    .line 9
+    .line 10
+    .line 11
     return-void
 .end method

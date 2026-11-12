@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/DialogTitle;
-.super LX/4X0;
+.super LX/4SL;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 536870912
-    invoke-direct {p0, p1}, LX/4X0;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, LX/4SL;-><init>(Landroid/content/Context;)V
 
     .line 536870913
     .line 536870914
@@ -25,7 +25,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    invoke-direct {p0, p1, p2, v0}, LX/4X0;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, LX/4SL;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 268435460
     .line 268435461
@@ -37,7 +37,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/4X0;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, LX/4SL;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1
     .line 2
@@ -51,7 +51,7 @@
     .locals 6
 
     .line 0
-    invoke-super {p0, p1, p2}, LX/4X0;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, LX/4SL;->onMeasure(II)V
 
     .line 1
     .line 2
@@ -123,7 +123,7 @@
     const/4 v3, 0x0
 
     .line 36
-    sget-object v2, LX/4XG;->A0N:[I
+    sget-object v2, LX/4M2;->A0N:[I
 
     .line 37
     .line 38
@@ -160,7 +160,7 @@
     int-to-float v0, v0
 
     .line 55
-    invoke-virtual {p0, v5, v0}, LX/4X0;->setTextSize(IF)V
+    invoke-virtual {p0, v5, v0}, LX/4SL;->setTextSize(IF)V
 
     .line 56
     .line 57
@@ -171,7 +171,7 @@
     .line 59
     .line 60
     .line 61
-    invoke-super {p0, p1, p2}, LX/4X0;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, LX/4SL;->onMeasure(II)V
 
     .line 62
     .line 63

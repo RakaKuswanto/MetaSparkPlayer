@@ -1,200 +1,144 @@
-.class public final LX/3qx;
+.class public interface abstract LX/3qx;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3wR;
-
-
-# instance fields
-.field public final synthetic A00:LX/3nu;
-
-
-# direct methods
-.method public constructor <init>(LX/3nu;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/3qx;->A00:LX/3nu;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
+.implements LX/403;
+.implements LX/3nR;
 
 
 # virtual methods
-.method public final AXv(I)V
-    .locals 6
-
-    .line 0
-    iget-object v5, p0, LX/3qx;->A00:LX/3nu;
-
-    .line 1
-    .line 2
-    invoke-virtual {v5}, LX/3nu;->getVideoId()Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v4
-
-    .line 6
-    const/4 v0, 0x2
-
-    .line 7
-    if-ne p1, v0, :cond_0
-
-    .line 8
-    .line 9
-    const-string v0, "Delayed"
-
-    .line 10
-    .line 11
-    :goto_0
-    const-string v1, " to acquire audio focus"
-
-    .line 12
-    .line 13
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v3
-
-    .line 21
-    iget-object v0, v5, LX/3nu;->A1B:LX/3Ol;
-
-    .line 22
-    .line 23
-    sget-object v2, LX/47x;->AUDIO:LX/47x;
-
-    .line 24
-    .line 25
-    sget-object v1, LX/3qQ;->CANT_ACQUIRE_AUDIO_FOCUS:LX/3qQ;
-
-    .line 26
-    .line 27
-    invoke-virtual {v0, v1, v2, v4, v3}, LX/3Ol;->A0m(LX/3qQ;LX/47x;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 28
-    .line 29
-    .line 30
-    iget-object v0, v5, LX/3nu;->A1S:LX/3WN;
-
-    .line 31
-    .line 32
-    invoke-virtual {v0, v1, v2, v4, v3}, LX/3WN;->A04(LX/3qQ;LX/47x;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 33
-    .line 34
-    .line 35
-    return-void
-
-    .line 36
-    :cond_0
-    const-string v0, "Failed"
-
-    .line 37
-    .line 38
-    goto :goto_0
+.method public abstract A4J(Lcom/facebook/video/engine/api/VideoPlayerParams;LX/3zD;)V
 .end method
 
-.method public final AXw(I)V
-    .locals 6
+.method public abstract A9x()I
+.end method
 
-    .line 0
-    const/4 v0, 0x2
+.method public abstract A9y()I
+.end method
 
-    .line 1
-    if-ne p1, v0, :cond_0
+.method public abstract AAP()Ljava/lang/String;
+.end method
 
-    .line 2
-    .line 3
-    const-string v0, "Delayed"
+.method public abstract AAa()I
+.end method
 
-    .line 4
-    .line 5
-    :goto_0
-    const-string v1, " to release audio focus"
+.method public abstract ABL()I
+.end method
 
-    .line 6
-    .line 7
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract ACd()I
+.end method
 
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
+.method public abstract ACq()Lcom/facebook/video/engine/api/VideoPlayerParams;
+.end method
 
-    .line 11
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+.method public abstract AGE()I
+.end method
 
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v5
+.method public abstract AGV()J
+.end method
 
-    .line 15
-    iget-object v4, p0, LX/3qx;->A00:LX/3nu;
+.method public abstract AGX()J
+.end method
 
-    .line 16
-    .line 17
-    invoke-virtual {v4}, LX/3nu;->getVideoId()Ljava/lang/String;
+.method public abstract AHE()LX/3s6;
+.end method
 
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v3
+.method public abstract AIe()I
+.end method
 
-    .line 21
-    iget-object v0, v4, LX/3nu;->A1B:LX/3Ol;
+.method public abstract AMM()I
+.end method
 
-    .line 22
-    .line 23
-    sget-object v2, LX/47x;->AUDIO:LX/47x;
+.method public abstract AMO()I
+.end method
 
-    .line 24
-    .line 25
-    sget-object v1, LX/3qQ;->CANT_RELEASE_AUDIO_FOCUS:LX/3qQ;
+.method public abstract AMU()LX/3ua;
+.end method
 
-    .line 26
-    .line 27
-    invoke-virtual {v0, v1, v2, v3, v5}, LX/3Ol;->A0m(LX/3qQ;LX/47x;Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract AMg()F
+.end method
 
-    .line 28
-    .line 29
-    .line 30
-    iget-object v0, v4, LX/3nu;->A1S:LX/3WN;
+.method public abstract APr()Z
+.end method
 
-    .line 31
-    .line 32
-    invoke-virtual {v0, v1, v2, v3, v5}, LX/3WN;->A04(LX/3qQ;LX/47x;Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract AQE()Z
+.end method
 
-    .line 33
-    .line 34
-    .line 35
-    return-void
+.method public abstract AQG()Z
+.end method
 
-    .line 36
-    :cond_0
-    const-string v0, "Failed"
+.method public abstract AQK()Z
+.end method
 
-    .line 37
-    .line 38
-    goto :goto_0
+.method public abstract AQS()Z
+.end method
+
+.method public abstract AS8(LX/3m5;Z)V
+.end method
+
+.method public abstract Ae5(LX/3m5;)V
+.end method
+
+.method public abstract AeG(LX/3m5;)V
+.end method
+
+.method public abstract AeH(LX/3uY;LX/3m5;)V
+.end method
+
+.method public abstract AeY(I)V
+.end method
+
+.method public abstract Agq()V
+.end method
+
+.method public abstract AiB(LX/3nM;)V
+.end method
+
+.method public abstract AjA(LX/3m5;I)V
+.end method
+
+.method public abstract Ajd(I)V
+.end method
+
+.method public abstract Ajv(LX/3je;)V
+.end method
+
+.method public abstract Akl(Z)V
+.end method
+
+.method public abstract Akv(LX/3sY;)V
+.end method
+
+.method public abstract Al9(LX/3m5;)V
+.end method
+
+.method public abstract AlK(F)V
+.end method
+
+.method public abstract AlO(Lcom/facebook/video/common/playerorigin/PlayerOrigin;)V
+.end method
+
+.method public abstract AlQ(LX/28V;)V
+.end method
+
+.method public abstract All(LX/3m5;I)V
+.end method
+
+.method public abstract Alm(LX/3rf;)V
+.end method
+
+.method public abstract AmP(LX/3m5;LX/3ua;Ljava/lang/String;)V
+.end method
+
+.method public abstract AmT(F)V
+.end method
+
+.method public abstract AoC()Z
+.end method
+
+.method public abstract ApZ(Landroid/graphics/RectF;)V
+.end method
+
+.method public abstract getPlayerOrigin()Lcom/facebook/video/common/playerorigin/PlayerOrigin;
 .end method

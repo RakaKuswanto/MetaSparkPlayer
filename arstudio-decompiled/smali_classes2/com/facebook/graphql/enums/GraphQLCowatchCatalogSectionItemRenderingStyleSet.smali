@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLCowatchCatalogSectionItemRenderingStyleSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLCowatchCatalogSectionItemRenderingStyleSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x13
+    const/16 v0, 0x12
 
     .line 1
     .line 2
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "SCREENSHARE_ICON_BUTTON"
+    const-string v0, "SQUARE_THUMBNAIL"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "SQUARE_THUMBNAIL"
+    const-string v0, "VIDEO_ITEM_AUTOPLAY"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "VIDEO_ITEM_AUTOPLAY"
+    const-string v0, "VIDEO_LIST_CELL"
 
     .line 95
     .line 96
@@ -220,34 +220,22 @@
 
     .line 99
     .line 100
-    const-string v0, "VIDEO_LIST_CELL"
+    const-string v0, "VIDEO_LIST_CELL_WITH_PROGRESS_BAR"
 
     .line 101
     .line 102
-    aput-object v0, v2, v1
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 103
     .line 104
-    const/16 v1, 0x12
-
     .line 105
+    move-result-object v0
+
     .line 106
-    const-string v0, "VIDEO_LIST_CELL_WITH_PROGRESS_BAR"
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCowatchCatalogSectionItemRenderingStyleSet;->A00:Ljava/util/HashSet;
 
     .line 107
     .line 108
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
-    .line 109
-    .line 110
-    .line 111
-    move-result-object v0
-
-    .line 112
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCowatchCatalogSectionItemRenderingStyleSet;->A00:Ljava/util/Set;
-
-    .line 113
-    .line 114
     return-void
 .end method
 
@@ -263,11 +251,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCowatchCatalogSectionItemRenderingStyleSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCowatchCatalogSectionItemRenderingStyleSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

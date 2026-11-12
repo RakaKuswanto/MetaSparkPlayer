@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xa38a
 
-.field public static final __CONFIG__:I = 0x2c7
+.field public static final __CONFIG__:I = 0x295
 
-.field public static final override_optimized_perf_logger_flag:J = 0x8202c70001085eL
+.field public static final override_optimized_perf_logger_flag:J = 0x8202950001077cL
 
 
 # direct methods

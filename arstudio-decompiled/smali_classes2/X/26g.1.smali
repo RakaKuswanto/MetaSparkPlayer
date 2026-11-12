@@ -1,139 +1,161 @@
-.class public final LX/26g;
-.super Ljava/lang/Object;
+.class public abstract LX/26g;
+.super LX/26f;
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/util/Set;
-
-.field public static final A01:Ljava/util/Set;
+# instance fields
+.field public final A00:Landroid/os/Handler;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 8
-
-    .line 0
-    sget-object v7, LX/0E7;->A01:[Ljava/lang/String;
-
-    .line 1
-    .line 2
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v6
-
-    .line 6
-    array-length v5, v7
-
-    .line 7
-    const/4 v4, 0x0
-
-    .line 8
-    const/4 v3, 0x0
-
-    .line 9
-    :goto_0
-    const-string v2, "en"
-
-    .line 10
-    .line 11
-    if-ge v4, v5, :cond_1
-
-    .line 12
-    .line 13
-    aget-object v1, v7, v4
-
-    .line 14
-    .line 15
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 16
-    .line 17
-    .line 18
-    move-result v0
-
-    .line 19
-    if-nez v0, :cond_0
-
-    .line 20
-    .line 21
-    invoke-virtual {v6, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 22
-    .line 23
-    .line 24
-    :goto_1
-    add-int/lit8 v4, v4, 0x1
-
-    .line 25
-    .line 26
-    goto :goto_0
-
-    .line 27
-    :cond_0
-    const/4 v3, 0x1
-
-    .line 28
-    goto :goto_1
-
-    .line 29
-    :cond_1
-    invoke-static {v6}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v0
-
-    .line 33
-    sput-object v0, LX/26g;->A01:Ljava/util/Set;
-
-    .line 34
-    .line 35
-    invoke-static {v6}, LX/0Yj;->A0a(Ljava/util/Collection;)Ljava/util/HashSet;
-
-    .line 36
-    .line 37
-    .line 38
-    move-result-object v0
-
-    .line 39
-    if-eqz v3, :cond_2
-
-    .line 40
-    .line 41
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 42
-    .line 43
-    .line 44
-    :cond_2
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    .line 45
-    .line 46
-    .line 47
-    move-result-object v0
-
-    .line 48
-    sput-object v0, LX/26g;->A00:Ljava/util/Set;
-
-    .line 49
-    .line 50
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/26f;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/26g;->A00:Landroid/os/Handler;
+
+    .line 4
+    .line 5
     return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 2
+
+    .line 268435456
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v1
+
+    .line 268435460
+    iget-object v0, p0, LX/26g;->A00:Landroid/os/Handler;
+
+    .line 268435461
+    .line 268435462
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    .line 268435463
+    .line 268435464
+    .line 268435465
+    move-result-object v0
+
+    .line 268435466
+    if-ne v1, v0, :cond_0
+
+    .line 268435467
+    .line 268435468
+    invoke-virtual {p0}, LX/26f;->isDone()Z
+
+    .line 268435469
+    .line 268435470
+    .line 268435471
+    move-result v0
+
+    .line 268435472
+    if-nez v0, :cond_0
+
+    .line 268435473
+    .line 268435474
+    const-string v0, "Must not call get() function from this Handler thread. Will deadlock!"
+
+    .line 268435475
+    .line 268435476
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 268435477
+    .line 268435478
+    .line 268435479
+    move-result-object v0
+
+    .line 268435480
+    throw v0
+
+    .line 268435481
+    :cond_0
+    invoke-super {p0}, LX/26f;->get()Ljava/lang/Object;
+
+    .line 268435482
+    .line 268435483
+    .line 268435484
+    move-result-object v0
+
+    .line 268435485
+    return-object v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    iget-object v0, p0, LX/26g;->A00:Landroid/os/Handler;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    if-ne v1, v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-virtual {p0}, LX/26f;->isDone()Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    if-nez v0, :cond_0
+
+    .line 17
+    .line 18
+    const-string v0, "Must not call get() function from this Handler thread. Will deadlock!"
+
+    .line 19
+    .line 20
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    throw v0
+
+    .line 25
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, LX/26f;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    return-object v0
 .end method

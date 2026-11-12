@@ -39,21 +39,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x1
+    const/16 v0, 0x4b
 
     .line 1
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
-
     .line 2
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -113,7 +114,7 @@
     const/4 v1, 0x1
 
     .line 26
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 27
     .line 28
@@ -125,7 +126,7 @@
 
     .line 31
     .line 32
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 33
     .line 34
@@ -137,7 +138,7 @@
 
     .line 37
     .line 38
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 39
     .line 40
@@ -149,7 +150,7 @@
 
     .line 43
     .line 44
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 45
     .line 46
@@ -161,7 +162,7 @@
 
     .line 49
     .line 50
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 51
     .line 52
@@ -173,7 +174,7 @@
 
     .line 55
     .line 56
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 57
     .line 58
@@ -185,7 +186,7 @@
 
     .line 61
     .line 62
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 63
     .line 64
@@ -424,7 +425,7 @@
 
     .line 93
     .line 94
-    invoke-static {v1, v0}, LX/0Ye;->A1b(Ljava/lang/Object;Z)Z
+    invoke-static {v1, v0}, LX/0X2;->A1Z(Ljava/lang/Object;Z)Z
 
     .line 95
     .line 96
@@ -452,7 +453,7 @@
 
     .line 107
     .line 108
-    invoke-static {v1, v0}, LX/0Ye;->A1b(Ljava/lang/Object;Z)Z
+    invoke-static {v1, v0}, LX/0X2;->A1Z(Ljava/lang/Object;Z)Z
 
     .line 109
     .line 110
@@ -480,7 +481,7 @@
 
     .line 121
     .line 122
-    invoke-static {v1, v0}, LX/0Ye;->A1b(Ljava/lang/Object;Z)Z
+    invoke-static {v1, v0}, LX/0X2;->A1Z(Ljava/lang/Object;Z)Z
 
     .line 123
     .line 124
@@ -508,7 +509,7 @@
 
     .line 135
     .line 136
-    invoke-static {v1, v0}, LX/0Ye;->A1b(Ljava/lang/Object;Z)Z
+    invoke-static {v1, v0}, LX/0X2;->A1Z(Ljava/lang/Object;Z)Z
 
     .line 137
     .line 138
@@ -536,7 +537,7 @@
 
     .line 149
     .line 150
-    invoke-static {v1, v0}, LX/0Ye;->A1b(Ljava/lang/Object;Z)Z
+    invoke-static {v1, v0}, LX/0X2;->A1Z(Ljava/lang/Object;Z)Z
 
     .line 151
     .line 152
@@ -620,7 +621,7 @@
 
     .line 24
     .line 25
-    invoke-static {v2, v0}, LX/0Yg;->A1M([Ljava/lang/Object;Z)V
+    invoke-static {v2, v0}, LX/0X5;->A1T([Ljava/lang/Object;Z)V
 
     .line 26
     .line 27
@@ -667,78 +668,88 @@
 
     .line 47
     .line 48
-    invoke-static {v2, v0}, LX/0Yi;->A1P([Ljava/lang/Object;Z)V
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 49
     .line 50
     .line 51
-    iget-boolean v0, p0, Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;->A07:Z
+    move-result-object v1
 
     .line 52
+    const/4 v0, 0x6
+
     .line 53
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    aput-object v1, v2, v0
 
     .line 54
     .line 55
-    .line 56
-    move-result-object v1
+    iget-boolean v0, p0, Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;->A07:Z
 
+    .line 56
     .line 57
-    const/4 v0, 0x7
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 58
-    aput-object v1, v2, v0
-
     .line 59
     .line 60
-    iget-boolean v0, p0, Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;->A09:Z
+    move-result-object v1
 
     .line 61
+    const/4 v0, 0x7
+
     .line 62
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    aput-object v1, v2, v0
 
     .line 63
     .line 64
-    .line 65
-    move-result-object v1
+    iget-boolean v0, p0, Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;->A09:Z
 
+    .line 65
     .line 66
-    const/16 v0, 0x8
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 67
     .line 68
-    aput-object v1, v2, v0
-
     .line 69
+    move-result-object v1
+
     .line 70
-    iget-boolean v0, p0, Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;->A0A:Z
+    const/16 v0, 0x8
 
     .line 71
     .line 72
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    aput-object v1, v2, v0
 
     .line 73
     .line 74
-    .line 75
-    move-result-object v1
+    iget-boolean v0, p0, Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;->A0A:Z
 
+    .line 75
     .line 76
-    const/16 v0, 0x9
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 77
     .line 78
-    aput-object v1, v2, v0
-
     .line 79
+    move-result-object v1
+
     .line 80
-    invoke-static {v2}, Ljava/util/Arrays;->deepHashCode([Ljava/lang/Object;)I
+    const/16 v0, 0x9
 
     .line 81
     .line 82
+    aput-object v1, v2, v0
+
     .line 83
+    .line 84
+    invoke-static {v2}, Ljava/util/Arrays;->deepHashCode([Ljava/lang/Object;)I
+
+    .line 85
+    .line 86
+    .line 87
     move-result v0
 
-    .line 84
+    .line 88
     return v0
 .end method
 

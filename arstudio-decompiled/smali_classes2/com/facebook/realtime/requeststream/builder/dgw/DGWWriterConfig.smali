@@ -54,7 +54,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(JZZZZZLX/2Ss;)V
+.method public synthetic constructor <init>(JZZZZZLX/0st;)V
     .locals 0
 
     .line 0

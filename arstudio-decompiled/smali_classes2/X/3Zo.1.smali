@@ -3,47 +3,22 @@
 .source ""
 
 
-# static fields
-.field public static final A00:LX/3Zp;
+# instance fields
+.field public final A00:I
 
-.field public static final A01:LX/3Zo;
+.field public final A01:I
+
+.field public final A02:I
+
+.field public final A03:I
+
+.field public final A04:LX/3Zt;
+
+.field public final A05:LX/3Zs;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/3Zp;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/3Zp;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/3Zo;->A00:LX/3Zp;
-
-    .line 6
-    .line 7
-    new-instance v0, LX/3Zo;
-
-    .line 8
-    .line 9
-    invoke-direct {v0}, LX/3Zo;-><init>()V
-
-    .line 10
-    .line 11
-    .line 12
-    sput-object v0, LX/3Zo;->A01:LX/3Zo;
-
-    .line 13
-    .line 14
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(LX/3Zt;LX/3Zs;IIII)V
     .locals 0
 
     .line 0
@@ -52,68 +27,29 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-.method public static final declared-synchronized A00()LX/3Zo;
-    .locals 3
-
-    .line 0
-    const-class v2, LX/3Zo;
-
-    .line 1
-    .line 2
-    monitor-enter v2
-
-    .line 3
-    :try_start_0
-    sget-object v1, LX/3Zo;->A00:LX/3Zp;
+    iput p3, p0, LX/3Zo;->A02:I
 
     .line 4
     .line 5
-    monitor-enter v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    iput p4, p0, LX/3Zo;->A03:I
 
     .line 6
-    :try_start_1
-    sget-object v0, LX/3Zo;->A01:LX/3Zo;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
     .line 7
-    .line 8
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    iput p5, p0, LX/3Zo;->A01:I
 
+    .line 8
     .line 9
-    monitor-exit v2
+    iput p6, p0, LX/3Zo;->A00:I
 
     .line 10
-    return-object v0
-
     .line 11
-    :catchall_0
-    :try_start_3
-    move-exception v0
+    iput-object p1, p0, LX/3Zo;->A04:LX/3Zt;
 
     .line 12
-    monitor-exit v1
-
     .line 13
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    iput-object p2, p0, LX/3Zo;->A05:LX/3Zs;
 
     .line 14
-    :catchall_1
-    move-exception v0
-
     .line 15
-    monitor-exit v2
-
-    .line 16
-    throw v0
+    return-void
 .end method

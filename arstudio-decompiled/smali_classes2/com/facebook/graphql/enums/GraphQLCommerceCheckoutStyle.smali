@@ -8,6 +8,8 @@
 
 .field public static final enum CONTACT_MERCHANT:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
+.field public static final enum OFFSITE_IAB_CHECKOUT:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+
 .field public static final enum OFFSITE_LINK:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
 .field public static final enum ONSITE_CHECKOUT:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
@@ -21,26 +23,26 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 9
+    .locals 11
 
     .line 0
     const-string v0, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
 
     .line 1
     .line 2
-    const/4 v8, 0x0
+    const/4 v10, 0x0
 
     .line 3
-    new-instance v7, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    new-instance v9, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 4
     .line 5
-    invoke-direct {v7, v0, v8, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v9, v0, v10, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 9
     .line 10
@@ -48,89 +50,113 @@
 
     .line 11
     .line 12
-    const/4 v6, 0x1
+    const/4 v8, 0x1
 
     .line 13
-    new-instance v5, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    new-instance v7, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 14
     .line 15
-    invoke-direct {v5, v0, v6, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v7, v0, v8, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->CONTACT_MERCHANT:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->CONTACT_MERCHANT:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 19
     .line 20
-    const-string v0, "OFFSITE_LINK"
+    const-string v0, "OFFSITE_IAB_CHECKOUT"
 
     .line 21
     .line 22
-    const/4 v4, 0x2
+    const/4 v6, 0x2
 
     .line 23
-    new-instance v3, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    new-instance v5, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 24
     .line 25
-    invoke-direct {v3, v0, v4, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v5, v0, v6, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v3, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->OFFSITE_LINK:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->OFFSITE_IAB_CHECKOUT:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 29
     .line 30
-    const-string v0, "ONSITE_CHECKOUT"
+    const-string v0, "OFFSITE_LINK"
 
     .line 31
     .line 32
-    const/4 v2, 0x3
+    const/4 v4, 0x3
 
     .line 33
-    new-instance v1, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    new-instance v3, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 34
     .line 35
-    invoke-direct {v1, v0, v2, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v3, v0, v4, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 36
     .line 37
     .line 38
-    sput-object v1, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->ONSITE_CHECKOUT:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    sput-object v3, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->OFFSITE_LINK:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 39
     .line 40
-    const/4 v0, 0x4
+    const-string v0, "ONSITE_CHECKOUT"
 
     .line 41
-    new-array v0, v0, [Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
-
     .line 42
+    const/4 v2, 0x4
+
     .line 43
-    aput-object v7, v0, v8
+    new-instance v1, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 44
     .line 45
-    aput-object v5, v0, v6
+    invoke-direct {v1, v0, v2, v0}, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 46
     .line 47
-    aput-object v3, v0, v4
-
     .line 48
-    .line 49
-    aput-object v1, v0, v2
+    sput-object v1, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->ONSITE_CHECKOUT:Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
+    .line 49
     .line 50
+    const/4 v0, 0x5
+
     .line 51
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+    new-array v0, v0, [Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
 
     .line 52
     .line 53
+    aput-object v9, v0, v10
+
+    .line 54
+    .line 55
+    aput-object v7, v0, v8
+
+    .line 56
+    .line 57
+    aput-object v5, v0, v6
+
+    .line 58
+    .line 59
+    aput-object v3, v0, v4
+
+    .line 60
+    .line 61
+    aput-object v1, v0, v2
+
+    .line 62
+    .line 63
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLCommerceCheckoutStyle;
+
+    .line 64
+    .line 65
     return-void
 .end method
 
@@ -158,7 +184,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

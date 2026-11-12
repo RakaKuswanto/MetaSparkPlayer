@@ -2,310 +2,251 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3GG;
-
 
 # instance fields
-.field public final A00:LX/3GG;
+.field public A00:Z
 
-.field public final A01:LX/2vN;
+.field public final A01:Landroid/hardware/SensorManager;
+
+.field public final A02:LX/2vP;
+
+.field public final A03:Ljava/util/List;
+
+.field public final A04:I
+
+.field public final A05:I
+
+.field public final A06:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(LX/3GG;LX/2vN;)V
-    .locals 0
+.method public constructor <init>(Landroid/hardware/SensorManager;Landroid/os/Handler;II)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
     .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 2
     .line 3
-    iput-object p2, p0, LX/2vO;->A01:LX/2vN;
-
     .line 4
-    .line 5
-    iput-object p1, p0, LX/2vO;->A00:LX/3GG;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     .line 6
     .line 7
+    iput-object p1, p0, LX/2vO;->A01:Landroid/hardware/SensorManager;
+
+    .line 8
+    .line 9
+    iput-object p2, p0, LX/2vO;->A06:Landroid/os/Handler;
+
+    .line 10
+    .line 11
+    iput p3, p0, LX/2vO;->A05:I
+
+    .line 12
+    .line 13
+    iput p4, p0, LX/2vO;->A04:I
+
+    .line 14
+    .line 15
+    new-instance v0, LX/2vP;
+
+    .line 16
+    .line 17
+    invoke-direct {v0, p0}, LX/2vP;-><init>(LX/2vO;)V
+
+    .line 18
+    .line 19
+    .line 20
+    iput-object v0, p0, LX/2vO;->A02:LX/2vP;
+
+    .line 21
+    .line 22
+    invoke-static {}, LX/0X6;->A13()Ljava/util/List;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 27
+    .line 28
+    .line 29
+    iput-object v0, p0, LX/2vO;->A03:Ljava/util/List;
+
+    .line 30
+    .line 31
     return-void
 .end method
 
 
 # virtual methods
-.method public final A4h(LX/2h6;)V
-    .locals 2
+.method public final declared-synchronized A00()V
+    .locals 10
 
     .line 0
-    iget-object v0, p0, LX/2vO;->A01:LX/2vN;
+    monitor-enter p0
 
     .line 1
-    .line 2
-    invoke-virtual {v0}, LX/2vN;->A00()Lcom/facebook/common/util/TriState;
+    :try_start_0
+    iget-boolean v0, p0, LX/2vO;->A00:Z
 
+    .line 2
     .line 3
+    if-nez v0, :cond_3
+
     .line 4
     .line 5
-    move-result-object v1
+    iget-object v4, p0, LX/2vO;->A01:Landroid/hardware/SensorManager;
 
     .line 6
-    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
-
     .line 7
+    const/4 v3, 0x1
+
     .line 8
-    if-ne v1, v0, :cond_0
+    invoke-virtual {v4, v3}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     .line 9
     .line 10
-    iget-object v0, p0, LX/2vO;->A00:LX/3GG;
-
     .line 11
+    move-result-object v6
+
     .line 12
-    invoke-interface {v0, p1}, LX/3GG;->A4h(LX/2h6;)V
+    if-eqz v6, :cond_3
 
     .line 13
     .line 14
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
     .line 15
+    .line 16
+    const/16 v0, 0x13
+
+    .line 17
+    .line 18
+    if-ge v1, v0, :cond_1
+
+    .line 19
+    .line 20
+    iget-object v2, p0, LX/2vO;->A06:Landroid/os/Handler;
+
+    .line 21
+    .line 22
+    if-eqz v2, :cond_0
+
+    .line 23
+    .line 24
+    iget-object v1, p0, LX/2vO;->A02:LX/2vP;
+
+    .line 25
+    .line 26
+    iget v0, p0, LX/2vO;->A05:I
+
+    .line 27
+    .line 28
+    invoke-virtual {v4, v1, v6, v0, v2}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Handler;)Z
+
+    .line 29
+    .line 30
+    .line 31
+    :goto_0
+    iput-boolean v3, p0, LX/2vO;->A00:Z
+
+    .line 32
+    .line 33
+    goto :goto_1
+
+    .line 34
     :cond_0
+    iget-object v1, p0, LX/2vO;->A02:LX/2vP;
+
+    .line 35
+    .line 36
+    iget v0, p0, LX/2vO;->A05:I
+
+    .line 37
+    .line 38
+    invoke-virtual {v4, v1, v6, v0}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
+
+    .line 39
+    .line 40
+    .line 41
+    goto :goto_0
+
+    .line 42
+    :cond_1
+    iget-object v9, p0, LX/2vO;->A06:Landroid/os/Handler;
+
+    .line 43
+    .line 44
+    if-eqz v9, :cond_2
+
+    .line 45
+    .line 46
+    iget-object v5, p0, LX/2vO;->A02:LX/2vP;
+
+    .line 47
+    .line 48
+    iget v7, p0, LX/2vO;->A05:I
+
+    .line 49
+    .line 50
+    iget v8, p0, LX/2vO;->A04:I
+
+    .line 51
+    .line 52
+    invoke-virtual/range {v4 .. v9}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;IILandroid/os/Handler;)Z
+
+    .line 53
+    .line 54
+    .line 55
+    goto :goto_0
+
+    .line 56
+    :cond_2
+    iget-object v2, p0, LX/2vO;->A02:LX/2vP;
+
+    .line 57
+    .line 58
+    iget v1, p0, LX/2vO;->A05:I
+
+    .line 59
+    .line 60
+    iget v0, p0, LX/2vO;->A04:I
+
+    .line 61
+    .line 62
+    invoke-virtual {v4, v2, v6, v1, v0}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;II)Z
+
+    .line 63
+    .line 64
+    .line 65
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 66
+    :cond_3
+    :goto_1
+    monitor-exit p0
+
+    .line 67
     return-void
-.end method
 
-.method public final AUi(I)V
-    .locals 2
+    .line 68
+    :catchall_0
+    move-exception v0
 
-    .line 0
-    iget-object v0, p0, LX/2vO;->A01:LX/2vN;
+    .line 69
+    monitor-exit p0
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/2vN;->A00()Lcom/facebook/common/util/TriState;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
-
-    .line 7
-    .line 8
-    if-ne v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/2vO;->A00:LX/3GG;
-
-    .line 11
-    .line 12
-    invoke-interface {v0, p1}, LX/2xo;->AUi(I)V
-
-    .line 13
-    .line 14
-    .line 15
-    :cond_0
-    return-void
-.end method
-
-.method public final AYX(I)V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2vO;->A01:LX/2vN;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/2vN;->A00()Lcom/facebook/common/util/TriState;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
-
-    .line 7
-    .line 8
-    if-ne v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/2vO;->A00:LX/3GG;
-
-    .line 11
-    .line 12
-    invoke-interface {v0, p1}, LX/2xo;->AYX(I)V
-
-    .line 13
-    .line 14
-    .line 15
-    :cond_0
-    return-void
-.end method
-
-.method public final AYd()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2vO;->A01:LX/2vN;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/2vN;->A00()Lcom/facebook/common/util/TriState;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
-
-    .line 7
-    .line 8
-    if-ne v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/2vO;->A00:LX/3GG;
-
-    .line 11
-    .line 12
-    invoke-interface {v0}, LX/2xo;->AYd()V
-
-    .line 13
-    .line 14
-    .line 15
-    :cond_0
-    return-void
-.end method
-
-.method public final Acg()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2vO;->A01:LX/2vN;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/2vN;->A00()Lcom/facebook/common/util/TriState;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
-
-    .line 7
-    .line 8
-    if-ne v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/2vO;->A00:LX/3GG;
-
-    .line 11
-    .line 12
-    invoke-interface {v0}, LX/2xo;->Acg()V
-
-    .line 13
-    .line 14
-    .line 15
-    :cond_0
-    return-void
-.end method
-
-.method public final Aee(I)V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2vO;->A01:LX/2vN;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/2vN;->A00()Lcom/facebook/common/util/TriState;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
-
-    .line 7
-    .line 8
-    if-ne v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/2vO;->A00:LX/3GG;
-
-    .line 11
-    .line 12
-    invoke-interface {v0, p1}, LX/2xo;->Aee(I)V
-
-    .line 13
-    .line 14
-    .line 15
-    :cond_0
-    return-void
-.end method
-
-.method public final Aef(I)V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2vO;->A01:LX/2vN;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/2vN;->A00()Lcom/facebook/common/util/TriState;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
-
-    .line 7
-    .line 8
-    if-ne v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/2vO;->A00:LX/3GG;
-
-    .line 11
-    .line 12
-    invoke-interface {v0, p1}, LX/2xo;->Aee(I)V
-
-    .line 13
-    .line 14
-    .line 15
-    :cond_0
-    return-void
-.end method
-
-.method public final AlF(LX/37l;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2vO;->A00:LX/3GG;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/2xo;->AlF(LX/37l;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    .line 70
+    throw v0
 .end method

@@ -1,17 +1,8 @@
-.class public final LX/4VH;
-.super LX/4Vk;
+.class public interface abstract LX/4VH;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/4Vk;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract A4s(Ljava/lang/CharSequence;II)I
 .end method

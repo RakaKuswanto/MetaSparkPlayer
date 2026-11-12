@@ -1,53 +1,175 @@
-.class public abstract LX/40l;
-.super Ljava/io/OutputStream;
+.class public final LX/40l;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public A00:LX/40o;
+
+.field public A01:[B
+
+.field public A02:[B
+
+.field public A03:[C
+
+.field public A04:[C
+
+.field public A05:[C
+
+.field public final A06:LX/41c;
+
+.field public final A07:Ljava/lang/Object;
+
+.field public final A08:Z
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public close()V
+.method public constructor <init>(LX/41c;Ljava/lang/Object;Z)V
     .locals 1
 
     .line 0
-    :try_start_0
-    invoke-super {p0}, Ljava/io/OutputStream;->close()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v0, 0x0
 
     .line 4
-    :catch_0
-    move-exception v0
+    iput-object v0, p0, LX/40l;->A01:[B
 
     .line 5
-    invoke-static {v0}, LX/37v;->A00(Ljava/lang/Throwable;)V
+    .line 6
+    iput-object v0, p0, LX/40l;->A02:[B
+
+    .line 7
+    .line 8
+    iput-object v0, p0, LX/40l;->A05:[C
+
+    .line 9
+    .line 10
+    iput-object v0, p0, LX/40l;->A03:[C
+
+    .line 11
+    .line 12
+    iput-object v0, p0, LX/40l;->A04:[C
+
+    .line 13
+    .line 14
+    iput-object p1, p0, LX/40l;->A06:LX/41c;
+
+    .line 15
+    .line 16
+    iput-object p2, p0, LX/40l;->A07:Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    iput-boolean p3, p0, LX/40l;->A08:Z
+
+    .line 19
+    .line 20
+    return-void
+.end method
+
+.method public static final A00(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    if-nez p0, :cond_0
+
+    .line 1
+    .line 2
+    return-void
+
+    .line 3
+    :cond_0
+    const-string p0, "Trying to call same allocXxx() method second time"
+
+    .line 4
+    .line 5
+    invoke-static {p0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 6
     .line 7
     .line 8
-    const/4 v0, 0x0
+    move-result-object p0
 
     .line 9
-    throw v0
+    throw p0
+.end method
 
+.method public static final A01(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    if-ne p0, p1, :cond_0
+
+    .line 1
+    .line 2
+    return-void
+
+    .line 3
+    :cond_0
+    const-string p0, "Trying to release buffer not owned by the context"
+
+    .line 4
+    .line 5
+    invoke-static {p0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    throw p0
+.end method
+
+
+# virtual methods
+.method public final A02([B)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/40l;->A01:[B
+
+    .line 1
+    .line 2
+    invoke-static {p1, v0}, LX/40l;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 3
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    iput-object v0, p0, LX/40l;->A01:[B
+
+    .line 7
+    .line 8
+    iget-object v1, p0, LX/40l;->A06:LX/41c;
+
+    .line 9
     .line 10
-    :goto_0
+    sget-object v0, LX/41H;->READ_IO_BUFFER:LX/41H;
+
+    .line 11
+    .line 12
+    iget-object v1, v1, LX/41c;->A00:[[B
+
+    .line 13
+    .line 14
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    aput-object p1, v1, v0
+
+    .line 19
+    .line 20
     return-void
 .end method

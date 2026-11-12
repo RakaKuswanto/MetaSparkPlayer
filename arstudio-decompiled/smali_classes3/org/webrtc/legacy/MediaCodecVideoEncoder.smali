@@ -98,7 +98,7 @@
 
 .field public outputBuffers:[Ljava/nio/ByteBuffer;
 
-.field public type:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+.field public type:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
 .field public width:I
 
@@ -108,7 +108,7 @@
     .locals 13
 
     .line 0
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 1
     .line 2
@@ -738,7 +738,7 @@
 
     .line 37
     .line 38
-    invoke-static {v1, v2, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 39
     .line 40
@@ -853,7 +853,7 @@
 
     .line 89
     .line 90
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 91
     .line 92
@@ -861,7 +861,7 @@
     move-result-object v0
 
     .line 94
-    invoke-static {v9, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v9, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 95
     .line 96
@@ -940,7 +940,7 @@
 
     .line 131
     .line 132
-    invoke-static {v1, v9, v0, v2}, LX/00I;->A0K(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v9, v0, v2}, LX/004;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 133
     .line 134
@@ -982,7 +982,7 @@
 
     .line 150
     .line 151
-    invoke-static {v1, v9, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v9, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 152
     .line 153
@@ -1037,7 +1037,7 @@
 
     .line 174
     .line 175
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 176
     .line 177
@@ -1151,7 +1151,7 @@
 
     .line 232
     .line 233
-    invoke-static {v1, v0}, LX/4BE;->A0p(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/434;->A14(ILjava/lang/String;)Ljava/lang/String;
 
     .line 234
     .line 235
@@ -1269,7 +1269,7 @@
     move-object v3, v11
 
     .line 286
-    invoke-static/range {v2 .. v7}, LX/00I;->A0P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v2 .. v7}, LX/004;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 287
     .line 288
@@ -1397,7 +1397,7 @@
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 5
     .line 6
@@ -1405,7 +1405,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v2, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 9
     .line 10
@@ -1957,7 +1957,7 @@
     div-int/2addr v2, p2
 
     .line 17
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 18
     .line 19
@@ -2020,7 +2020,7 @@
 
     .line 50
     :cond_0
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 51
     .line 52
@@ -2038,7 +2038,7 @@
     .line 58
     :goto_1
     :try_start_0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 59
     .line 60
@@ -2218,7 +2218,7 @@
 
     .line 34
     .line 35
-    invoke-static {v6}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v6}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 36
     .line 37
@@ -2231,7 +2231,7 @@
     .line 40
     .line 41
     .line 42
-    invoke-static {v8, v6, v7}, LX/001;->A0L(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-static {v8, v6, v7}, LX/001;->A0P(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
     .line 43
     .line 44
@@ -2406,11 +2406,11 @@
     .line 130
     .line 131
     .line 132
-    iget-object v1, v3, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->type:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+    iget-object v1, v3, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->type:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
     .line 133
     .line 134
-    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;->VIDEO_CODEC_H264:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;->VIDEO_CODEC_H264:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
     .line 135
     .line 136
@@ -2418,7 +2418,7 @@
 
     .line 137
     .line 138
-    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;->VIDEO_CODEC_H265:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;->VIDEO_CODEC_H265:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
     .line 139
     .line 140
@@ -2459,7 +2459,7 @@
 
     .line 157
     .line 158
-    invoke-static {v11}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v11}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 159
     .line 160
@@ -2482,7 +2482,7 @@
     .line 169
     .line 170
     .line 171
-    invoke-static {v7, v0, v1}, LX/001;->A0L(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-static {v7, v0, v1}, LX/001;->A0P(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
     .line 172
     .line 173
@@ -2668,7 +2668,7 @@
 
     .line 258
     .line 259
-    invoke-static {v0, v12}, LX/4BD;->A0d(Ljava/lang/String;I)Ljava/lang/RuntimeException;
+    invoke-static {v0, v12}, LX/431;->A0c(Ljava/lang/String;I)Ljava/lang/RuntimeException;
 
     .line 260
     .line 261
@@ -2744,7 +2744,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 11
     .line 12
@@ -2841,7 +2841,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 11
     .line 12
@@ -2985,7 +2985,7 @@
     array-length v0, v2
 
     .line 9
-    invoke-static {v1, v0}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 10
     .line 11
@@ -3005,7 +3005,7 @@
     return-object v2
 .end method
 
-.method public initEncode(Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;IIIIILorg/webrtc/legacy/EglBase14$Context;)Z
+.method public initEncode(Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;IIIIILorg/webrtc/legacy/EglBase14$Context;)Z
     .locals 9
 
     .line 268435456
@@ -3037,7 +3037,7 @@
 
     .line 268435465
     .line 268435466
-    invoke-virtual/range {v0 .. v8}, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->initEncode(Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;IIIIILorg/webrtc/legacy/EglBase14$Context;Lorg/webrtc/legacy/ExtendedSettings;)Z
+    invoke-virtual/range {v0 .. v8}, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->initEncode(Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;IIIIILorg/webrtc/legacy/EglBase14$Context;Lorg/webrtc/legacy/ExtendedSettings;)Z
 
     .line 268435467
     .line 268435468
@@ -3048,7 +3048,7 @@
     return v0
 .end method
 
-.method public initEncode(Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;IIIIILorg/webrtc/legacy/EglBase14$Context;Lorg/webrtc/legacy/ExtendedSettings;)Z
+.method public initEncode(Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;IIIIILorg/webrtc/legacy/EglBase14$Context;Lorg/webrtc/legacy/ExtendedSettings;)Z
     .locals 17
 
     .line 0
@@ -3060,7 +3060,7 @@
 
     .line 3
     .line 4
-    invoke-static/range {v16 .. v16}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static/range {v16 .. v16}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 5
     .line 6
@@ -3072,7 +3072,7 @@
 
     .line 9
     .line 10
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 11
     .line 12
@@ -3178,7 +3178,7 @@
 
     .line 67
     .line 68
-    invoke-static {v0, v1, v6}, LX/4BD;->A0i(Ljava/lang/String;Ljava/lang/StringBuilder;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v6}, LX/432;->A0p(Ljava/lang/String;Ljava/lang/StringBuilder;Z)Ljava/lang/String;
 
     .line 69
     .line 70
@@ -3214,7 +3214,7 @@
     const/4 v11, 0x2
 
     .line 86
-    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;->VIDEO_CODEC_VP8:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;->VIDEO_CODEC_VP8:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
     .line 87
     .line 88
@@ -3285,7 +3285,7 @@
 
     .line 117
     :cond_2
-    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;->VIDEO_CODEC_VP9:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;->VIDEO_CODEC_VP9:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
     .line 118
     .line 119
@@ -3305,7 +3305,7 @@
 
     .line 126
     :cond_3
-    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;->VIDEO_CODEC_H264:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;->VIDEO_CODEC_H264:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
     .line 127
     .line 128
@@ -3355,7 +3355,7 @@
 
     .line 148
     :cond_5
-    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;->VIDEO_CODEC_H265:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+    sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;->VIDEO_CODEC_H265:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
     .line 149
     .line 150
@@ -3410,7 +3410,7 @@
     .line 171
     .line 172
     :cond_6
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 173
     .line 174
@@ -3436,7 +3436,7 @@
 
     .line 185
     .line 186
-    invoke-static {v0, v13, v14}, LX/4BD;->A0i(Ljava/lang/String;Ljava/lang/StringBuilder;Z)Ljava/lang/String;
+    invoke-static {v0, v13, v14}, LX/432;->A0p(Ljava/lang/String;Ljava/lang/StringBuilder;Z)Ljava/lang/String;
 
     .line 187
     .line 188
@@ -3523,7 +3523,7 @@
     .line 230
     .line 231
     .line 232
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 233
     .line 234
@@ -3535,7 +3535,7 @@
 
     .line 237
     .line 238
-    invoke-static {v7, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v7, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 239
     .line 240
@@ -3579,7 +3579,7 @@
 
     .line 254
     .line 255
-    iput-object v5, v3, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->type:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecType;
+    iput-object v5, v3, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->type:Lorg/webrtc/legacy/MediaCodecVideoEncoder$VideoCodecMimeType;
 
     .line 256
     .line 257
@@ -3733,7 +3733,7 @@
     array-length v0, v0
 
     .line 332
-    invoke-static {v1, v0}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 333
     .line 334
@@ -3800,7 +3800,7 @@
 
     .line 358
     .line 359
-    invoke-static {v0, v13}, LX/00I;->A06(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0, v13}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 360
     .line 361
@@ -3816,7 +3816,7 @@
 
     .line 365
     .line 366
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 367
     .line 368
@@ -3870,206 +3870,215 @@
     .line 17
     .line 18
     .line 19
-    new-instance v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder$1;
+    new-instance v1, Lorg/webrtc/legacy/MediaCodecVideoEncoder$1;
 
     .line 20
     .line 21
-    invoke-direct {v0, p0, v3}, Lorg/webrtc/legacy/MediaCodecVideoEncoder$1;-><init>(Lorg/webrtc/legacy/MediaCodecVideoEncoder;Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {v1, p0, v3}, Lorg/webrtc/legacy/MediaCodecVideoEncoder$1;-><init>(Lorg/webrtc/legacy/MediaCodecVideoEncoder;Ljava/util/concurrent/CountDownLatch;)V
 
     .line 22
     .line 23
     .line 24
-    invoke-static {v0}, LX/4BF;->A1K(Ljava/lang/Runnable;)V
+    new-instance v0, Ljava/lang/Thread;
 
     .line 25
     .line 26
-    .line 27
-    const-wide/16 v0, 0x1388
+    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
+    .line 27
     .line 28
     .line 29
-    invoke-static {v3, v0, v1}, Lorg/webrtc/legacy/ThreadUtils;->awaitUninterruptibly(Ljava/util/concurrent/CountDownLatch;J)Z
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 30
     .line 31
     .line 32
-    move-result v0
+    const-wide/16 v0, 0x1388
 
     .line 33
-    if-nez v0, :cond_0
-
     .line 34
-    .line 35
-    const-string v0, "Media encoder release timeout"
+    invoke-static {v3, v0, v1}, Lorg/webrtc/legacy/ThreadUtils;->awaitUninterruptibly(Ljava/util/concurrent/CountDownLatch;J)Z
 
+    .line 35
     .line 36
     .line 37
-    invoke-static {v2, v0}, Lorg/webrtc/legacy/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v0
 
     .line 38
+    if-nez v0, :cond_0
+
     .line 39
     .line 40
-    const/4 v4, 0x1
+    const-string v0, "Media encoder release timeout"
 
     .line 41
+    .line 42
+    invoke-static {v2, v0}, Lorg/webrtc/legacy/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 43
+    .line 44
+    .line 45
+    const/4 v4, 0x1
+
+    .line 46
     :cond_0
     iput-object v5, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->mediaCodec:Landroid/media/MediaCodec;
 
-    .line 42
-    .line 43
+    .line 47
+    .line 48
     :cond_1
     iput-object v5, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->mediaCodecThread:Ljava/lang/Thread;
 
-    .line 44
-    .line 45
+    .line 49
+    .line 50
     iget-object v0, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->drawer:Lorg/webrtc/legacy/opengl/GlRectDrawer;
 
-    .line 46
-    .line 47
-    if-eqz v0, :cond_2
-
-    .line 48
-    .line 49
-    invoke-virtual {v0}, Lorg/webrtc/legacy/opengl/GlRectDrawer;->release()V
-
-    .line 50
     .line 51
     .line 52
-    iput-object v5, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->drawer:Lorg/webrtc/legacy/opengl/GlRectDrawer;
+    if-eqz v0, :cond_2
 
     .line 53
     .line 54
-    :cond_2
-    iget-object v0, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->eglBase:Lorg/webrtc/legacy/EglBase14;
+    invoke-virtual {v0}, Lorg/webrtc/legacy/opengl/GlRectDrawer;->release()V
 
     .line 55
     .line 56
-    if-eqz v0, :cond_3
-
     .line 57
-    .line 58
-    invoke-virtual {v0}, Lorg/webrtc/legacy/EglBase;->release()V
+    iput-object v5, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->drawer:Lorg/webrtc/legacy/opengl/GlRectDrawer;
 
+    .line 58
     .line 59
+    :cond_2
+    iget-object v0, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->eglBase:Lorg/webrtc/legacy/EglBase14;
+
     .line 60
     .line 61
-    iput-object v5, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->eglBase:Lorg/webrtc/legacy/EglBase14;
+    if-eqz v0, :cond_3
 
     .line 62
     .line 63
-    :cond_3
-    iget-object v0, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->inputSurface:Landroid/view/Surface;
+    invoke-virtual {v0}, Lorg/webrtc/legacy/EglBase;->release()V
 
     .line 64
     .line 65
-    if-eqz v0, :cond_4
-
     .line 66
-    .line 67
-    invoke-virtual {v0}, Landroid/view/Surface;->release()V
+    iput-object v5, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->eglBase:Lorg/webrtc/legacy/EglBase14;
 
+    .line 67
     .line 68
+    :cond_3
+    iget-object v0, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->inputSurface:Landroid/view/Surface;
+
     .line 69
     .line 70
-    iput-object v5, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->inputSurface:Landroid/view/Surface;
+    if-eqz v0, :cond_4
 
     .line 71
     .line 72
-    :cond_4
-    const-class v1, Lorg/webrtc/legacy/MediaCodecVideoEncoder;
+    invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
     .line 73
     .line 74
-    monitor-enter v1
-
     .line 75
-    :try_start_0
-    sput-object v5, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->runningInstance:Lorg/webrtc/legacy/MediaCodecVideoEncoder;
+    iput-object v5, p0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->inputSurface:Landroid/view/Surface;
 
     .line 76
     .line 77
-    monitor-exit v1
+    :cond_4
+    const-class v1, Lorg/webrtc/legacy/MediaCodecVideoEncoder;
 
     .line 78
+    .line 79
+    monitor-enter v1
+
+    .line 80
+    :try_start_0
+    sput-object v5, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->runningInstance:Lorg/webrtc/legacy/MediaCodecVideoEncoder;
+
+    .line 81
+    .line 82
+    monitor-exit v1
+
+    .line 83
     if-eqz v4, :cond_5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 79
-    .line 80
+    .line 84
+    .line 85
     sget v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->codecErrors:I
 
-    .line 81
-    .line 82
+    .line 86
+    .line 87
     add-int/lit8 v1, v0, 0x1
 
-    .line 83
-    .line 84
+    .line 88
+    .line 89
     sput v1, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->codecErrors:I
 
-    .line 85
-    .line 86
+    .line 90
+    .line 91
     sget-object v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->errorCallback:Lorg/webrtc/legacy/MediaCodecVideoEncoder$MediaCodecVideoEncoderErrorCallback;
 
-    .line 87
-    .line 88
+    .line 92
+    .line 93
     if-eqz v0, :cond_5
 
-    .line 89
-    .line 90
-    const-string v0, "Invoke codec error callback. Errors: "
-
-    .line 91
-    .line 92
-    invoke-static {v0, v1}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
-
-    .line 93
     .line 94
     .line 95
-    move-result-object v0
+    const-string v0, "Invoke codec error callback. Errors: "
 
     .line 96
-    invoke-static {v2, v0}, Lorg/webrtc/legacy/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 97
+    invoke-static {v0, v1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
     .line 98
     .line 99
-    sget-object v1, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->errorCallback:Lorg/webrtc/legacy/MediaCodecVideoEncoder$MediaCodecVideoEncoderErrorCallback;
-
     .line 100
+    move-result-object v0
+
     .line 101
-    sget v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->codecErrors:I
+    invoke-static {v2, v0}, Lorg/webrtc/legacy/Logging;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 102
     .line 103
-    invoke-interface {v1, v0}, Lorg/webrtc/legacy/MediaCodecVideoEncoder$MediaCodecVideoEncoderErrorCallback;->onMediaCodecVideoEncoderCriticalError(I)V
-
     .line 104
+    sget-object v1, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->errorCallback:Lorg/webrtc/legacy/MediaCodecVideoEncoder$MediaCodecVideoEncoderErrorCallback;
+
     .line 105
     .line 106
-    :cond_5
-    const-string v0, "Java releaseEncoder done"
+    sget v0, Lorg/webrtc/legacy/MediaCodecVideoEncoder;->codecErrors:I
 
     .line 107
     .line 108
-    invoke-static {v2, v0}, Lorg/webrtc/legacy/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lorg/webrtc/legacy/MediaCodecVideoEncoder$MediaCodecVideoEncoderErrorCallback;->onMediaCodecVideoEncoderCriticalError(I)V
 
     .line 109
     .line 110
     .line 111
-    return-void
+    :cond_5
+    const-string v0, "Java releaseEncoder done"
 
     .line 112
+    .line 113
+    invoke-static {v2, v0}, Lorg/webrtc/legacy/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 114
+    .line 115
+    .line 116
+    return-void
+
+    .line 117
     :catchall_0
     move-exception v0
 
-    .line 113
+    .line 118
     :try_start_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 114
+    .line 119
     throw v0
 .end method
 

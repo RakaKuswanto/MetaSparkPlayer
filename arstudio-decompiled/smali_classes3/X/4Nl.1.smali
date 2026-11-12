@@ -2,17 +2,24 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AppCompatDelegateImpl$2"
+
 
 # instance fields
-.field public final synthetic A00:LX/4Ng;
+.field public final synthetic A00:LX/4NG;
 
 
 # direct methods
-.method public constructor <init>(LX/4Ng;)V
+.method public constructor <init>(LX/4NG;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4Nl;->A00:LX/4Ng;
+    iput-object p1, p0, LX/4Nl;->A00:LX/4NG;
 
     .line 1
     .line 2
@@ -26,42 +33,64 @@
 
 
 # virtual methods
-.method public final A00(Ljava/lang/String;)V
-    .locals 1
+.method public final run()V
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/4Nl;->A00:LX/4Ng;
+    iget-object v2, p0, LX/4Nl;->A00:LX/4NG;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/4Ng;->A01:LX/4Ni;
+    iget v0, v2, LX/4NG;->A01:I
 
     .line 3
     .line 4
-    if-eqz v0, :cond_0
+    and-int/lit8 v0, v0, 0x1
 
     .line 5
     .line 6
-    invoke-virtual {v0, p1}, LX/4Ni;->A01(Ljava/lang/String;)V
+    const/4 v1, 0x0
 
     .line 7
+    if-eqz v0, :cond_0
+
     .line 8
     .line 9
-    return-void
+    invoke-virtual {v2, v1}, LX/4NG;->A0S(I)V
 
     .line 10
-    :cond_0
-    const-string v0, "jSInjector"
-
     .line 11
     .line 12
-    invoke-static {v0}, LX/0PS;->A0D(Ljava/lang/String;)V
+    :cond_0
+    iget v0, v2, LX/4NG;->A01:I
 
     .line 13
     .line 14
-    .line 15
-    const/4 v0, 0x0
+    and-int/lit16 v0, v0, 0x1000
 
+    .line 15
     .line 16
-    throw v0
+    if-eqz v0, :cond_1
+
+    .line 17
+    .line 18
+    const/16 v0, 0x6c
+
+    .line 19
+    .line 20
+    invoke-virtual {v2, v0}, LX/4NG;->A0S(I)V
+
+    .line 21
+    .line 22
+    .line 23
+    :cond_1
+    iput-boolean v1, v2, LX/4NG;->A0V:Z
+
+    .line 24
+    .line 25
+    iput v1, v2, LX/4NG;->A01:I
+
+    .line 26
+    .line 27
+    return-void
 .end method

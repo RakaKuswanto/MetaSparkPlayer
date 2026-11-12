@@ -2,365 +2,156 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5b0;
+
+
+# instance fields
+.field public final A00:LX/5rN;
+
+.field public final A01:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 0
+.method public constructor <init>(LX/5rN;)V
+    .locals 1
 
     .line 0
-    packed-switch p0, :pswitch_data_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     .line 4
     .line 5
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
     .line 6
-    move-result-object p0
-
     .line 7
-    return-object p0
-
     .line 8
-    :pswitch_0
-    const-string p0, "FBA_STATUS_COUNT"
+    iput-object v0, p0, LX/5rM;->A01:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     .line 9
     .line 10
-    return-object p0
+    iput-object p1, p0, LX/5rM;->A00:LX/5rN;
 
     .line 11
-    :pswitch_1
-    const-string p0, "fba_timeout"
-
     .line 12
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()LX/5rO;
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, LX/5rM;->A01:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v3
+
+    .line 6
+    check-cast v3, LX/5rO;
+
+    .line 7
+    .line 8
+    if-nez v3, :cond_1
+
+    .line 9
+    .line 10
+    iget-object v0, p0, LX/5rM;->A00:LX/5rN;
+
+    .line 11
+    .line 12
+    invoke-interface {v0}, LX/5rN;->A5z()LX/5ut;
+
     .line 13
-    return-object p0
-
     .line 14
-    :pswitch_2
-    const-string p0, "fba_error"
-
     .line 15
+    move-result-object v0
+
     .line 16
-    return-object p0
+    new-instance v3, LX/5rO;
 
     .line 17
-    :pswitch_3
-    const-string p0, "fba_max_num_sample_rates_exceeded"
-
     .line 18
+    invoke-direct {v3, p0, v0}, LX/5rO;-><init>(LX/5b0;Ljava/lang/Object;)V
+
     .line 19
-    return-object p0
-
     .line 20
-    :pswitch_4
-    const-string p0, "fba_interface_uninitialized"
-
     .line 21
+    :cond_0
+    return-object v3
+
     .line 22
-    return-object p0
+    :cond_1
+    iget-object v2, v3, LX/5rO;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 23
-    :pswitch_5
-    const-string p0, "fba_plugin_dynamic_load_failed"
-
     .line 24
+    const/4 v1, 0x0
+
     .line 25
-    return-object p0
+    const/4 v0, 0x1
 
     .line 26
-    :pswitch_6
-    const-string p0, "fba_busy"
+    invoke-virtual {v2, v1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
 
     .line 27
     .line 28
-    return-object p0
-
     .line 29
-    :pswitch_7
-    const-string p0, "fba_device_not_found"
+    move-result v0
 
     .line 30
-    .line 31
-    return-object p0
+    if-nez v0, :cond_0
 
+    .line 31
     .line 32
-    :pswitch_8
-    const-string p0, "fba_bad_alloc"
+    const-string v0, "Can only reset a previously released reference."
 
     .line 33
     .line 34
-    return-object p0
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 35
-    :pswitch_9
-    const-string p0, "fba_not_found"
-
     .line 36
     .line 37
-    return-object p0
+    move-result-object v0
 
     .line 38
-    :pswitch_a
-    const-string p0, "fba_needs_permission"
+    throw v0
+.end method
 
-    .line 39
-    .line 40
-    return-object p0
+.method public final onRelease(LX/5rO;Ljava/lang/Object;)V
+    .locals 1
 
-    .line 41
-    :pswitch_b
-    const-string p0, "fba_unsupported_format"
+    .line 0
+    iget-object v0, p0, LX/5rM;->A00:LX/5rN;
 
-    .line 42
-    .line 43
-    return-object p0
+    .line 1
+    .line 2
+    invoke-interface {v0, p2}, LX/5rN;->AaM(Ljava/lang/Object;)V
 
-    .line 44
-    :pswitch_c
-    const-string p0, "fba_unsupported_buffer_size"
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/5rM;->A01:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    .line 45
-    .line 46
-    return-object p0
+    .line 6
+    .line 7
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
 
-    .line 47
-    :pswitch_d
-    const-string p0, "fba_unsupported_sample_rate"
-
-    .line 48
-    .line 49
-    return-object p0
-
-    .line 50
-    :pswitch_e
-    const-string p0, "fba_unsupported"
-
-    .line 51
-    .line 52
-    return-object p0
-
-    .line 53
-    :pswitch_f
-    const-string p0, "fba_read_only"
-
-    .line 54
-    .line 55
-    return-object p0
-
-    .line 56
-    :pswitch_10
-    const-string p0, "fba_empty"
-
-    .line 57
-    .line 58
-    return-object p0
-
-    .line 59
-    :pswitch_11
-    const-string p0, "fba_queue_full"
-
-    .line 60
-    .line 61
-    return-object p0
-
-    .line 62
-    :pswitch_12
-    const-string p0, "fba_graph_full"
-
-    .line 63
-    .line 64
-    return-object p0
-
-    .line 65
-    :pswitch_13
-    const-string p0, "fba_file_open_failed"
-
-    .line 66
-    .line 67
-    return-object p0
-
-    .line 68
-    :pswitch_14
-    const-string p0, "fba_device_node_exists"
-
-    .line 69
-    .line 70
-    return-object p0
-
-    .line 71
-    :pswitch_15
-    const-string p0, "fba_java_vm_already_set"
-
-    .line 72
-    .line 73
-    return-object p0
-
-    .line 74
-    :pswitch_16
-    const-string p0, "fba_eos"
-
-    .line 75
-    .line 76
-    return-object p0
-
-    .line 77
-    :pswitch_17
-    const-string p0, "fba_stream_not_started"
-
-    .line 78
-    .line 79
-    return-object p0
-
-    .line 80
-    :pswitch_18
-    const-string p0, "fba_stream_started"
-
-    .line 81
-    .line 82
-    return-object p0
-
-    .line 83
-    :pswitch_19
-    const-string p0, "fba_node_connected"
-
-    .line 84
-    .line 85
-    return-object p0
-
-    .line 86
-    :pswitch_1a
-    const-string p0, "fba_param_not_found"
-
-    .line 87
-    .line 88
-    return-object p0
-
-    .line 89
-    :pswitch_1b
-    const-string p0, "fba_invalid_params"
-
-    .line 90
-    .line 91
-    return-object p0
-
-    .line 92
-    :pswitch_1c
-    const-string p0, "fba_invalid_num_channels"
-
-    .line 93
-    .line 94
-    return-object p0
-
-    .line 95
-    :pswitch_1d
-    const-string p0, "fba_invalid_num_outputs"
-
-    .line 96
-    .line 97
-    return-object p0
-
-    .line 98
-    :pswitch_1e
-    const-string p0, "fba_invalid_num_inputs"
-
-    .line 99
-    .line 100
-    return-object p0
-
-    .line 101
-    :pswitch_1f
-    const-string p0, "fba_uninitialized"
-
-    .line 102
-    .line 103
-    return-object p0
-
-    .line 104
-    :pswitch_20
-    const-string p0, "fba_pending"
-
-    .line 105
-    .line 106
-    return-object p0
-
-    .line 107
-    :pswitch_21
-    const-string p0, "fba_plugin_not_configured"
-
-    .line 108
-    .line 109
-    return-object p0
-
-    .line 110
-    :pswitch_22
-    const-string p0, "fba_plugin_not_found"
-
-    .line 111
-    .line 112
-    return-object p0
-
-    .line 113
-    :pswitch_23
-    const-string p0, "fba_invalid"
-
-    .line 114
-    .line 115
-    return-object p0
-
-    .line 116
-    :pswitch_24
-    const-string p0, "fba_ok"
-
-    .line 117
-    .line 118
-    return-object p0
-
-    .line 119
-    nop
-
-    .line 120
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_24
-        :pswitch_23
-        :pswitch_22
-        :pswitch_21
-        :pswitch_20
-        :pswitch_1f
-        :pswitch_1e
-        :pswitch_1d
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    .line 8
+    .line 9
+    .line 10
+    return-void
 .end method

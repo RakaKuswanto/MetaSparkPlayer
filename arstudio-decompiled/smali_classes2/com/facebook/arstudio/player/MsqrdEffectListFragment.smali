@@ -1,20 +1,20 @@
 .class public Lcom/facebook/arstudio/player/MsqrdEffectListFragment;
-.super LX/3e4;
+.super LX/3FR;
 .source ""
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public mAdapterProvider:LX/2vp;
+.field public mAdapterProvider:LX/3GS;
 
-.field public final mDeleteEffectControllerProvider:LX/0Na;
+.field public final mDeleteEffectControllerProvider:LX/0RP;
 
-.field public final mDirectoryUtil:LX/0Na;
+.field public final mDirectoryUtil:LX/0RP;
 
-.field public mEffectCollection:LX/2XB;
+.field public mEffectCollection:LX/3dS;
 
-.field public final mFileUtil:LX/0Na;
+.field public final mFileUtil:LX/0RP;
 
 
 # direct methods
@@ -22,92 +22,90 @@
     .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/3e4;-><init>()V
+    invoke-direct {p0}, LX/3FR;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    sget v1, LX/2eq;->Ah7:I
+    sget v1, LX/2I6;->AYr:I
 
     .line 4
     .line 5
-    new-instance v0, LX/1zT;
+    new-instance v0, LX/3FX;
 
     .line 6
     .line 7
-    invoke-direct {v0, p0, v1}, LX/1zT;-><init>(LX/0Qd;I)V
+    invoke-direct {v0, p0, v1}, LX/3FX;-><init>(LX/0Mt;I)V
 
     .line 8
     .line 9
     .line 10
-    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mDeleteEffectControllerProvider:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mDeleteEffectControllerProvider:LX/0RP;
 
     .line 11
     .line 12
-    sget v1, LX/2eq;->AgN:I
+    sget v0, LX/2I6;->AY8:I
 
     .line 13
     .line 14
-    new-instance v0, LX/1zT;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 15
     .line 16
-    invoke-direct {v0, p0, v1}, LX/1zT;-><init>(LX/0Qd;I)V
-
     .line 17
+    move-result-object v0
+
     .line 18
+    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mFileUtil:LX/0RP;
+
     .line 19
-    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mFileUtil:LX/0Na;
-
     .line 20
+    sget v0, LX/2I6;->AY7:I
+
     .line 21
-    sget v1, LX/2eq;->AgM:I
-
     .line 22
-    .line 23
-    new-instance v0, LX/1zT;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
+    .line 23
     .line 24
     .line 25
-    invoke-direct {v0, p0, v1}, LX/1zT;-><init>(LX/0Qd;I)V
+    move-result-object v0
 
     .line 26
+    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mDirectoryUtil:LX/0RP;
+
     .line 27
     .line 28
-    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mDirectoryUtil:LX/0Na;
-
-    .line 29
-    .line 30
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;)LX/0Na;
+.method public static synthetic access$000(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;)LX/0RP;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mDirectoryUtil:LX/0Na;
+    iget-object p0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mDirectoryUtil:LX/0RP;
 
     .line 1
     .line 2
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;)LX/0Na;
+.method public static synthetic access$100(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;)LX/0RP;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mFileUtil:LX/0Na;
+    iget-object p0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mFileUtil:LX/0RP;
 
     .line 1
     .line 2
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;)LX/2XB;
+.method public static synthetic access$200(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;)LX/3dS;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mEffectCollection:LX/2XB;
+    iget-object p0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mEffectCollection:LX/3dS;
 
     .line 1
     .line 2
@@ -157,16 +155,16 @@
     const/4 v1, 0x3
 
     .line 1
-    new-instance v0, LX/1t2;
+    new-instance v0, LX/0ZF;
 
     .line 2
     .line 3
-    invoke-direct {v0, p0, v1}, LX/1t2;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/0ZF;-><init>(Ljava/lang/Object;I)V
 
     .line 4
     .line 5
     .line 6
-    invoke-static {v0}, LX/0Yi;->A1C(LX/0iQ;)V
+    invoke-static {v0}, LX/0X6;->A1J(LX/3hA;)V
 
     .line 7
     .line 8
@@ -181,16 +179,16 @@
     const/4 v1, 0x2
 
     .line 1
-    new-instance v0, LX/1t2;
+    new-instance v0, LX/0ZF;
 
     .line 2
     .line 3
-    invoke-direct {v0, p0, v1}, LX/1t2;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/0ZF;-><init>(Ljava/lang/Object;I)V
 
     .line 4
     .line 5
     .line 6
-    invoke-static {v0}, LX/0Yi;->A1C(LX/0iQ;)V
+    invoke-static {v0}, LX/0X6;->A1J(LX/3hA;)V
 
     .line 7
     .line 8
@@ -205,16 +203,16 @@
     const/4 v1, 0x1
 
     .line 1
-    new-instance v0, LX/1t2;
+    new-instance v0, LX/0ZF;
 
     .line 2
     .line 3
-    invoke-direct {v0, p0, v1}, LX/1t2;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/0ZF;-><init>(Ljava/lang/Object;I)V
 
     .line 4
     .line 5
     .line 6
-    invoke-static {v0}, LX/0Yi;->A1C(LX/0iQ;)V
+    invoke-static {v0}, LX/0X6;->A1J(LX/3hA;)V
 
     .line 7
     .line 8
@@ -226,11 +224,11 @@
     .locals 1
 
     .line 0
-    const-class v0, LX/3jL;
+    const-class v0, LX/3b6;
 
     .line 1
     .line 2
-    invoke-virtual {p0, v0}, LX/3e4;->queryInterface(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, LX/3FR;->queryInterface(Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -241,7 +239,7 @@
 
 # virtual methods
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 6
+    .locals 5
 
     .line 0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -252,11 +250,11 @@
     move-result-object v0
 
     .line 4
-    new-instance v5, Landroidx/recyclerview/widget/RecyclerView;
+    new-instance v4, Landroidx/recyclerview/widget/RecyclerView;
 
     .line 5
     .line 6
-    invoke-direct {v5, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;)V
 
     .line 7
     .line 8
@@ -278,7 +276,7 @@
     .line 16
     .line 17
     .line 18
-    invoke-virtual {v5, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(LX/4ta;)V
+    invoke-virtual {v4, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(LX/4nQ;)V
 
     .line 19
     .line 20
@@ -291,12 +289,12 @@
     move-result-object v1
 
     .line 25
-    const v0, 0x7f06023e
+    const v0, 0x7f06019d
 
     .line 26
     .line 27
     .line 28
-    invoke-static {v1, v0}, LX/01W;->A00(Landroid/content/Context;I)I
+    invoke-static {v1, v0}, LX/01f;->A00(Landroid/content/Context;I)I
 
     .line 29
     .line 30
@@ -304,29 +302,29 @@
     move-result v1
 
     .line 32
-    new-instance v0, LX/4Pz;
+    new-instance v0, LX/3fH;
 
     .line 33
     .line 34
-    invoke-direct {v0, v1}, LX/4Pz;-><init>(I)V
+    invoke-direct {v0, v1}, LX/3fH;-><init>(I)V
 
     .line 35
     .line 36
     .line 37
-    invoke-virtual {v5, v0}, Landroidx/recyclerview/widget/RecyclerView;->A0o(LX/4Ps;)V
+    invoke-virtual {v4, v0}, Landroidx/recyclerview/widget/RecyclerView;->A0p(LX/4mX;)V
 
     .line 38
     .line 39
     .line 40
-    iget-object v2, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mAdapterProvider:LX/2vp;
+    iget-object v2, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mAdapterProvider:LX/3GS;
 
     .line 41
     .line 42
-    iget-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mEffectCollection:LX/2XB;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mEffectCollection:LX/3dS;
 
     .line 43
     .line 44
-    invoke-static {v2}, LX/1zB;->A00(LX/1zB;)Landroid/content/Context;
+    invoke-static {}, LX/3Ff;->A01()Landroid/content/Context;
 
     .line 45
     .line 46
@@ -334,154 +332,164 @@
     move-result-object v1
 
     .line 48
-    :try_start_0
-    new-instance v4, LX/3dG;
+    invoke-static {v2}, LX/3Fo;->A00(LX/3Fo;)V
 
     .line 49
     .line 50
-    invoke-direct {v4, v0, v2}, LX/3dG;-><init>(LX/2XB;LX/1zC;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
     .line 51
+    :try_start_0
+    new-instance v3, LX/3dV;
+
     .line 52
     .line 53
-    invoke-static {}, LX/1zE;->A0G()V
+    invoke-direct {v3, v0}, LX/3dV;-><init>(LX/3dS;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 54
     .line 55
     .line 56
-    invoke-static {v1}, LX/1zI;->A04(Landroid/content/Context;)V
+    invoke-static {}, LX/3Fa;->A0A()V
 
     .line 57
     .line 58
     .line 59
-    new-instance v0, LX/3c2;
+    invoke-static {v1}, LX/3Ff;->A03(Landroid/content/Context;)V
 
     .line 60
     .line 61
-    invoke-direct {v0, p0}, LX/3c2;-><init>(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;)V
-
     .line 62
+    new-instance v0, LX/3cg;
+
     .line 63
     .line 64
-    iput-object v0, v4, LX/3cE;->A00:LX/3dn;
+    invoke-direct {v0, p0}, LX/3cg;-><init>(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;)V
 
     .line 65
     .line 66
-    iget-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mDeleteEffectControllerProvider:LX/0Na;
-
     .line 67
-    .line 68
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    iput-object v0, v3, LX/3dT;->A00:LX/3eL;
 
+    .line 68
     .line 69
+    iget-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mDeleteEffectControllerProvider:LX/0RP;
+
     .line 70
     .line 71
-    move-result-object v3
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 72
-    check-cast v3, LX/2vp;
-
     .line 73
     .line 74
-    const/4 v0, 0x1
+    move-result-object v1
 
     .line 75
-    invoke-static {v3}, LX/1zB;->A00(LX/1zB;)Landroid/content/Context;
+    check-cast v1, LX/3GS;
 
     .line 76
     .line 77
+    const/4 v0, 0x1
+
     .line 78
-    move-result-object v2
+    invoke-static {}, LX/3Ff;->A01()Landroid/content/Context;
 
     .line 79
-    :try_start_1
-    new-instance v1, LX/2vo;
-
     .line 80
     .line 81
-    invoke-direct {v1, v3, v0}, LX/2vo;-><init>(LX/1zC;Z)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object v2
 
     .line 82
+    invoke-static {v1}, LX/3Fo;->A00(LX/3Fo;)V
+
     .line 83
     .line 84
-    invoke-static {}, LX/1zE;->A0G()V
-
     .line 85
+    :try_start_1
+    new-instance v1, LX/3ci;
+
     .line 86
     .line 87
-    invoke-static {v2}, LX/1zI;->A04(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, LX/3ci;-><init>(Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 88
     .line 89
     .line 90
-    new-instance v0, LX/2eB;
+    invoke-static {}, LX/3Fa;->A0A()V
 
     .line 91
     .line 92
-    invoke-direct {v0, p0, v1}, LX/2eB;-><init>(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;LX/2vo;)V
-
     .line 93
+    invoke-static {v2}, LX/3Ff;->A03(Landroid/content/Context;)V
+
     .line 94
     .line 95
-    iput-object v0, v4, LX/3cE;->A01:LX/3dg;
-
     .line 96
-    .line 97
-    invoke-virtual {v5, v4}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(LX/4sv;)V
+    new-instance v0, LX/2Wh;
 
+    .line 97
     .line 98
+    invoke-direct {v0, p0, v1}, LX/2Wh;-><init>(Lcom/facebook/arstudio/player/MsqrdEffectListFragment;LX/3ci;)V
+
     .line 99
     .line 100
-    return-object v5
-
     .line 101
+    iput-object v0, v3, LX/3dT;->A01:LX/3du;
+
+    .line 102
+    .line 103
+    invoke-virtual {v4, v3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(LX/4nZ;)V
+
+    .line 104
+    .line 105
+    .line 106
+    return-object v4
+
+    .line 107
     :catchall_0
     move-exception v0
 
-    .line 102
-    invoke-static {}, LX/1zE;->A0G()V
-
-    .line 103
-    .line 104
-    .line 105
-    invoke-static {v2}, LX/1zI;->A04(Landroid/content/Context;)V
-
-    .line 106
-    .line 107
     .line 108
-    throw v0
+    invoke-static {}, LX/3Fa;->A0A()V
 
     .line 109
+    .line 110
+    .line 111
+    invoke-static {v2}, LX/3Ff;->A03(Landroid/content/Context;)V
+
+    .line 112
+    .line 113
+    .line 114
+    throw v0
+
+    .line 115
     :catchall_1
     move-exception v0
 
-    .line 110
-    invoke-static {}, LX/1zE;->A0G()V
-
-    .line 111
-    .line 112
-    .line 113
-    invoke-static {v1}, LX/1zI;->A04(Landroid/content/Context;)V
-
-    .line 114
-    .line 115
     .line 116
+    invoke-static {}, LX/3Fa;->A0A()V
+
+    .line 117
+    .line 118
+    .line 119
+    invoke-static {v1}, LX/3Ff;->A03(Landroid/content/Context;)V
+
+    .line 120
+    .line 121
+    .line 122
     throw v0
 .end method
 
 .method public onFragmentCreate(Landroid/os/Bundle;)V
-    .locals 1
+    .locals 2
 
     .line 0
-    sget v0, LX/2eq;->AhA:I
+    sget v1, LX/2I6;->AYu:I
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/1zE;->A0C(Landroidx/fragment/app/Fragment;I)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     .line 3
     .line 4
@@ -489,27 +497,35 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/2vp;
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 7
     .line 8
-    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mAdapterProvider:LX/2vp;
-
     .line 9
+    move-result-object v0
+
     .line 10
-    new-instance v0, LX/2XB;
+    check-cast v0, LX/3GS;
 
     .line 11
     .line 12
-    invoke-direct {v0}, LX/2XB;-><init>()V
+    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mAdapterProvider:LX/3GS;
 
     .line 13
     .line 14
-    .line 15
-    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mEffectCollection:LX/2XB;
+    new-instance v0, LX/3dS;
 
+    .line 15
     .line 16
+    invoke-direct {v0}, LX/3dS;-><init>()V
+
     .line 17
+    .line 18
+    .line 19
+    iput-object v0, p0, Lcom/facebook/arstudio/player/MsqrdEffectListFragment;->mEffectCollection:LX/3dS;
+
+    .line 20
+    .line 21
     return-void
 .end method
 

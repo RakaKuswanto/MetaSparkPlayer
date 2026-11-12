@@ -1,41 +1,43 @@
 .class public final LX/2rh;
-.super Ljava/lang/Object;
+.super LX/2rl;
 .source ""
 
 
 # instance fields
-.field public final A00:Landroid/content/res/Resources;
+.field public A00:Z
+
+.field public final A01:I
+
+.field public final A02:Ljava/security/MessageDigest;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/security/MessageDigest;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "digest",
+            "bytes"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/2rl;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1z6;->A01()Landroid/content/Context;
+    iput-object p1, p0, LX/2rh;->A02:Ljava/security/MessageDigest;
 
     .line 4
     .line 5
+    iput p2, p0, LX/2rh;->A01:I
+
     .line 6
-    move-result-object v0
-
     .line 7
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/2rh;->A00:Landroid/content/res/Resources;
-
-    .line 12
-    .line 13
     return-void
 .end method

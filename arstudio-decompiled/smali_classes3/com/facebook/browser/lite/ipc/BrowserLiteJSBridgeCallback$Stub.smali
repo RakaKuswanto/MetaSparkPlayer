@@ -73,7 +73,7 @@
 
     .line 16
     .line 17
-    invoke-static {p2, v0}, LX/0Yd;->A0G(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+    invoke-static {p2, v0}, LX/0X2;->A0a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
 
     .line 18
     .line 19
@@ -97,7 +97,7 @@
 
     .line 28
     .line 29
-    invoke-static {p2, v0}, LX/0Yd;->A0G(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+    invoke-static {p2, v0}, LX/0X2;->A0a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
 
     .line 30
     .line 31
@@ -109,7 +109,7 @@
 
     .line 34
     .line 35
-    invoke-interface {p0, v0, v2, v1}, Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCallback;->AVf(Landroid/os/Bundle;Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;I)V
+    invoke-interface {p0, v0, v2, v1}, Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCallback;->AU0(Landroid/os/Bundle;Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;I)V
 
     .line 36
     .line 37

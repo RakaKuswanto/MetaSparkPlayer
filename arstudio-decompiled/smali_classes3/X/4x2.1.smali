@@ -1,90 +1,183 @@
-.class public abstract LX/4x2;
-.super Ljava/lang/Object;
+.class public final enum LX/4x2;
+.super Ljava/lang/Enum;
 .source ""
 
+# interfaces
+.implements LX/4xD;
 
-# instance fields
-.field public A00:Landroid/view/Choreographer$FrameCallback;
 
-.field public A01:Ljava/lang/Runnable;
+# static fields
+.field public static final synthetic $VALUES:[LX/4x2;
 
-.field public final A02:Ljava/util/concurrent/atomic/AtomicReference;
+.field public static final enum OVERRIDE_READ_ONLY:LX/4x2;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v0, "OVERRIDE_READ_ONLY"
+
+    .line 1
+    .line 2
+    const/4 v2, 0x0
+
+    .line 3
+    new-instance v1, LX/4x2;
+
+    .line 4
+    .line 5
+    invoke-direct {v1, v0, v2}, LX/4x2;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v1, LX/4x2;->OVERRIDE_READ_ONLY:LX/4x2;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    new-array v0, v0, [LX/4x2;
+
+    .line 12
+    .line 13
+    aput-object v1, v0, v2
+
+    .line 14
+    .line 15
+    sput-object v0, LX/4x2;->$VALUES:[LX/4x2;
+
+    .line 16
+    .line 17
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static synthetic lambda$overrideReadOnly$0(LX/4xD;)Z
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, LX/4x2;->OVERRIDE_READ_ONLY:LX/4x2;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/0Yj;->A0k()Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v0, p0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 3
     .line 4
     .line 5
+    move-result v0
+
     .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/4x2;->A02:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 8
-    .line 9
-    return-void
+    return v0
 .end method
 
-.method public static A00(LX/4x2;J)V
-    .locals 2
+.method public static overrideReadOnly([LX/4xD;)Z
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/4x2;->A02:Ljava/util/concurrent/atomic/AtomicReference;
+    if-eqz p0, :cond_0
 
     .line 1
     .line 2
-    const/4 v0, 0x0
+    array-length v0, p0
 
     .line 3
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
     .line 4
     .line 5
+    invoke-static {p0}, LX/4xB;->A00([Ljava/lang/Object;)Ljava/util/stream/Stream;
+
     .line 6
-    :try_start_0
-    invoke-virtual {p0, p1, p2}, LX/4x2;->A01(J)V
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    new-instance v0, LX/4x6;
+
+    .line 10
+    .line 11
+    invoke-direct {v0}, LX/4x6;-><init>()V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-interface {p0, v0}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    return v0
+
+    .line 19
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 20
+    return v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/4x2;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/4x2;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/4x2;
 
     .line 7
     .line 8
-    .line 9
-    goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 10
-    :catchall_0
-    move-exception v0
-
-    .line 11
-    :try_start_1
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 12
-    :catchall_1
-    move-exception v0
-
-    .line 13
-    throw v0
-
-    .line 14
-    :goto_0
-    return-void
+    return-object v0
 .end method
 
+.method public static values()[LX/4x2;
+    .locals 1
 
-# virtual methods
-.method public abstract A01(J)V
+    .line 0
+    sget-object v0, LX/4x2;->$VALUES:[LX/4x2;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/4x2;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

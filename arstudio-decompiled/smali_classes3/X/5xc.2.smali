@@ -1,62 +1,81 @@
-.class public final LX/5xc;
+.class public final LX/5xC;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5rU;
+
 
 # instance fields
-.field public A00:J
+.field public final synthetic A00:LX/5y2;
 
-.field public A01:J
-
-.field public A02:LX/5xc;
-
-.field public A03:LX/5xh;
+.field public final synthetic A01:LX/5wL;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method public constructor <init>(LX/5y2;LX/5wL;)V
+    .locals 0
 
     .line 0
-    const/high16 v1, 0x10000
+    iput-object p2, p0, LX/5xC;->A01:LX/5wL;
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/5xC;->A00:LX/5y2;
+
+    .line 3
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A8b(Ljava/lang/Exception;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AWG(Ljava/lang/Exception;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5xC;->A00:LX/5y2;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1}, LX/5y2;->onFailure(Ljava/lang/Throwable;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, LX/5xc;->A03:LX/5xh;
+    return-void
+.end method
 
-    .line 6
-    .line 7
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+.method public final bridge synthetic Abn(Ljava/lang/Object;)V
+    .locals 1
 
-    .line 8
-    .line 9
-    .line 10
-    move-result v0
+    .line 0
+    iget-object v0, p0, LX/5xC;->A00:LX/5y2;
 
-    .line 11
-    invoke-static {v0}, LX/5PE;->A06(Z)V
+    .line 1
+    .line 2
+    invoke-interface {v0, p1}, LX/5y2;->onSuccess(Ljava/lang/Object;)V
 
-    .line 12
-    .line 13
-    .line 14
-    iput-wide p1, p0, LX/5xc;->A01:J
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
 
-    .line 15
-    .line 16
-    int-to-long v0, v1
+.method public final bridge synthetic Ao9(Ljava/lang/Object;)V
+    .locals 0
 
-    .line 17
-    add-long/2addr p1, v0
-
-    .line 18
-    iput-wide p1, p0, LX/5xc;->A00:J
-
-    .line 19
-    .line 20
+    .line 0
     return-void
 .end method

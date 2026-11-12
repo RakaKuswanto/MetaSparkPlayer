@@ -1,17 +1,28 @@
-.class public interface abstract LX/52s;
+.class public final LX/52s;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/552;
 
-# virtual methods
-.method public abstract AE0(J)Ljava/util/List;
-.end method
 
-.method public abstract AFQ(I)J
-.end method
+# instance fields
+.field public final synthetic A00:LX/52r;
 
-.method public abstract AFR()I
-.end method
 
-.method public abstract AJ9(J)I
+# direct methods
+.method public constructor <init>(LX/52r;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/52s;->A00:LX/52r;
+
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method

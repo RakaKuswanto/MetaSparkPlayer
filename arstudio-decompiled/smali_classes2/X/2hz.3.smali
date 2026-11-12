@@ -3,23 +3,18 @@
 .source ""
 
 # interfaces
-.implements Landroid/text/TextWatcher;
-.implements LX/3hI;
+.implements LX/2he;
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/2he;
 
-.field public final A01:LX/0J9;
-
-.field public final A02:Ljava/util/Set;
-
-.field public final A03:Ljava/util/Set;
+.field public final A01:LX/2hx;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(LX/2he;LX/2hx;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,246 +22,108 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A6u:I
+    iput-object p1, p0, LX/2hz;->A00:LX/2he;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0Z(I)Ljava/util/Set;
+    iput-object p2, p0, LX/2hz;->A01:LX/2hx;
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/2hz;->A02:Ljava/util/Set;
-
-    .line 10
-    .line 11
-    sget v0, LX/2eq;->A6v:I
-
-    .line 12
-    .line 13
-    invoke-static {v0}, LX/1z6;->A0Z(I)Ljava/util/Set;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, LX/2hz;->A03:Ljava/util/Set;
-
-    .line 18
-    .line 19
-    invoke-static {}, LX/1z6;->A0A()LX/0J9;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    iput-object v0, p0, LX/2hz;->A01:LX/0J9;
-
-    .line 24
-    .line 25
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    iput-object v0, p0, LX/2hz;->A00:LX/1zG;
-
-    .line 30
-    .line 31
     return-void
 .end method
 
 
 # virtual methods
-.method public final Ads(Landroid/app/Activity;Landroid/view/MotionEvent;)V
-    .locals 2
+.method public final AMF(LX/0QA;)J
+    .locals 5
 
     .line 0
-    iget-object v0, p0, LX/2hz;->A01:LX/0J9;
+    iget-object v0, p0, LX/2hz;->A00:LX/2he;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0J9;->now()J
+    invoke-interface {v0, p1}, LX/2he;->AMF(LX/0QA;)J
 
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, LX/2hz;->A02:Ljava/util/Set;
+    move-result-wide v3
 
     .line 6
-    .line 7
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const-wide/16 v1, 0x2
 
+    .line 7
     .line 8
+    cmp-long v0, v1, v3
+
     .line 9
     .line 10
-    move-result-object v1
+    if-nez v0, :cond_1
 
     .line 11
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 12
+    iget-object v2, p0, LX/2hz;->A01:LX/2hx;
+
     .line 13
     .line 14
-    move-result v0
+    iget-object v0, v2, LX/2h1;->A00:Ljava/lang/String;
 
     .line 15
-    if-eqz v0, :cond_0
-
     .line 16
-    .line 17
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p1, v0}, LX/0QA;->AAN(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 17
     .line 18
     .line 19
+    move-result-object v1
+
     .line 20
-    const-string/jumbo v0, "onTouchEvent"
+    if-nez v1, :cond_0
 
     .line 21
     .line 22
-    .line 23
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    iget-object v1, v2, LX/2hx;->A00:Ljava/lang/String;
 
+    .line 23
     .line 24
+    :cond_0
+    const-string/jumbo v0, "network"
+
     .line 25
     .line 26
-    move-result-object v0
-
     .line 27
-    throw v0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 28
-    :cond_0
-    return-void
-.end method
-
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2hz;->A03:Ljava/util/Set;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 7
-    .line 8
-    .line 9
+    .line 29
+    .line 30
     move-result v0
 
-    .line 10
-    if-eqz v0, :cond_0
+    .line 31
+    if-eqz v0, :cond_1
 
-    .line 11
-    .line 12
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 32
+    .line 33
+    const-wide/16 v0, 0x1
 
-    .line 13
-    .line 14
-    .line 15
-    const-string/jumbo v0, "onBeforeTextChanged"
+    .line 34
+    .line 35
+    return-wide v0
 
-    .line 16
-    .line 17
-    .line 18
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    .line 36
+    :cond_1
+    const-wide/16 v0, 0x0
 
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    throw v0
-
-    .line 23
-    :cond_0
-    return-void
+    .line 37
+    .line 38
+    return-wide v0
 .end method
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 2
+.method public final getName()Ljava/lang/String;
+    .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/2hz;->A01:LX/0J9;
+    const-string/jumbo v0, "is_action_id_success_and_origin_network"
 
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/0J9;->now()J
-
-    .line 3
-    .line 4
-    .line 5
-    iget-object v0, p0, LX/2hz;->A02:Ljava/util/Set;
-
-    .line 6
-    .line 7
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v1
-
-    .line 11
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
-
-    .line 15
-    if-eqz v0, :cond_0
-
-    .line 16
-    .line 17
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 18
-    .line 19
-    .line 20
-    const-string/jumbo v0, "onTextChangedEvent"
-
-    .line 21
-    .line 22
-    .line 23
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 24
-    .line 25
-    .line 26
-    move-result-object v0
-
-    .line 27
-    throw v0
-
-    .line 28
-    :cond_0
-    return-void
+    return-object v0
 .end method

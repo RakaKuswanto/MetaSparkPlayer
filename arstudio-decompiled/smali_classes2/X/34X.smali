@@ -1,177 +1,179 @@
-.class public final LX/34X;
-.super LX/37N;
+.class public final synthetic LX/34x;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CarrierMonitor$$ExternalSyntheticLambda3"
 
 
 # instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/39M;
-
-.field public final A02:LX/34g;
-
-.field public final A03:LX/4iB;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
+.field public final synthetic A00:LX/34u;
 
 
 # direct methods
-.method public constructor <init>(LX/39M;LX/4iB;LX/1zC;)V
+.method public synthetic constructor <init>(LX/34u;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/34x;->A00:LX/34u;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 4
 
     .line 0
-    invoke-direct {p0}, LX/37N;-><init>()V
+    iget-object v3, p0, LX/34x;->A00:LX/34u;
 
     .line 1
     .line 2
+    :try_start_0
+    iget-object v0, v3, LX/34u;->A03:LX/0RP;
+
     .line 3
-    sget v0, LX/2eq;->A5B:I
-
     .line 4
+    invoke-static {v0}, LX/0X4;->A0B(LX/0RP;)Landroid/content/Context;
+
     .line 5
-    const/4 v1, 0x0
-
     .line 6
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
     .line 7
+    move-result-object v1
+
     .line 8
+    const-string/jumbo v0, "android.permission.ACCESS_COARSE_LOCATION"
+
     .line 9
-    move-result-object v0
-
     .line 10
-    iput-object v0, p0, LX/34X;->A04:LX/0Na;
-
     .line 11
-    .line 12
-    sget v0, LX/2eq;->ARC:I
+    invoke-virtual {v1, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
+    .line 12
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    move-result v0
 
     .line 15
+    if-nez v0, :cond_0
+
     .line 16
     .line 17
-    move-result-object v0
+    const/16 v2, 0x11
 
     .line 18
-    iput-object v0, p0, LX/34X;->A05:LX/0Na;
-
     .line 19
-    .line 20
-    invoke-static {p3}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    iget-object v0, v3, LX/34u;->A07:LX/0RP;
 
+    .line 20
     .line 21
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 22
     .line 23
-    move-result-object v0
-
     .line 24
-    iput-object v0, p0, LX/34X;->A00:LX/1zG;
+    move-result-object v1
 
     .line 25
+    check-cast v1, LX/36Z;
+
     .line 26
-    sget v0, LX/2eq;->ARB:I
-
     .line 27
-    .line 28
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    new-instance v0, LX/34y;
 
+    .line 28
     .line 29
+    invoke-direct {v0, v3}, LX/34y;-><init>(LX/34u;)V
+
     .line 30
     .line 31
-    move-result-object v0
-
     .line 32
-    check-cast v0, LX/2tL;
+    :goto_0
+    invoke-virtual {v1, v0, v2}, LX/36Z;->A0M(Landroid/telephony/PhoneStateListener;I)V
 
     .line 33
     .line 34
-    iput-object p1, p0, LX/34X;->A01:LX/39M;
-
     .line 35
+    goto :goto_1
+
     .line 36
-    iput-object p2, p0, LX/34X;->A03:LX/4iB;
+    :cond_0
+    const/4 v2, 0x1
 
     .line 37
-    .line 38
-    invoke-virtual {p1}, LX/39M;->A02()Ljava/lang/String;
+    iget-object v0, v3, LX/34u;->A07:LX/0RP;
 
+    .line 38
     .line 39
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 40
     .line 41
-    move-result-object v3
-
     .line 42
-    iget-object v0, v0, LX/2tL;->A01:LX/0Na;
-
-    .line 43
-    .line 44
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 45
-    .line 46
-    .line 47
-    move-result-object v2
-
-    .line 48
-    check-cast v2, LX/1zB;
-
-    .line 49
-    .line 50
-    invoke-static {v2}, LX/1zB;->A00(LX/1zB;)Landroid/content/Context;
-
-    .line 51
-    .line 52
-    .line 53
     move-result-object v1
 
-    .line 54
-    :try_start_0
-    new-instance v0, LX/34g;
+    .line 43
+    check-cast v1, LX/36Z;
 
-    .line 55
-    .line 56
-    invoke-direct {v0, v2, v3}, LX/34g;-><init>(LX/1zC;Ljava/lang/String;)V
+    .line 44
+    .line 45
+    new-instance v0, LX/34y;
+
+    .line 46
+    .line 47
+    invoke-direct {v0, v3}, LX/34y;-><init>(LX/34u;)V
+
+    .line 48
+    .line 49
+    .line 50
+    goto :goto_0
+
+    .line 51
+    :goto_1
+    return-void
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 52
+    :catch_0
+    const/4 v2, 0x1
+
+    .line 53
+    iget-object v0, v3, LX/34u;->A07:LX/0RP;
+
+    .line 54
+    .line 55
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 56
     .line 57
     .line 58
+    move-result-object v1
+
     .line 59
-    invoke-static {}, LX/1zE;->A0G()V
+    check-cast v1, LX/36Z;
 
     .line 60
     .line 61
-    .line 62
-    invoke-static {v1}, LX/1zI;->A04(Landroid/content/Context;)V
+    new-instance v0, LX/34y;
 
+    .line 62
     .line 63
+    invoke-direct {v0, v3}, LX/34y;-><init>(LX/34u;)V
+
     .line 64
     .line 65
-    iput-object v0, p0, LX/34X;->A02:LX/34g;
-
     .line 66
+    invoke-virtual {v1, v0, v2}, LX/36Z;->A0M(Landroid/telephony/PhoneStateListener;I)V
+
     .line 67
-    return-void
-
     .line 68
-    :catchall_0
-    move-exception v0
-
     .line 69
-    invoke-static {}, LX/1zE;->A0G()V
-
-    .line 70
-    .line 71
-    .line 72
-    invoke-static {v1}, LX/1zI;->A04(Landroid/content/Context;)V
-
-    .line 73
-    .line 74
-    .line 75
-    throw v0
+    return-void
 .end method

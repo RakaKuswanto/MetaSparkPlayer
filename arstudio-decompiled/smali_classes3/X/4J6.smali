@@ -2,83 +2,103 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
+
 
 # instance fields
-.field public A00:LX/4JA;
-
-.field public A01:I
-
-.field public A02:LX/4J9;
-
-.field public A03:LX/4JB;
-
-.field public A04:Ljava/lang/CharSequence;
-
-.field public A05:Ljava/lang/String;
-
-.field public final A06:Landroid/content/Context;
-
-.field public final A07:LX/4hv;
+.field public final A00:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, LX/4J6;->A00:I
 
     .line 1
     .line 2
-    .line 3
-    sget-object v0, LX/4JA;->A00:LX/4JA;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object v0, p0, LX/4J6;->A00:LX/4JA;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
+
+    .line 0
+    iget v0, p0, LX/4J6;->A00:I
+
+    .line 1
+    .line 2
+    packed-switch v0, :pswitch_data_0
+
+    .line 3
+    .line 4
+    .line 5
+    const/4 v1, 0x0
 
     .line 6
+    return-object v1
+
     .line 7
-    iput-object p1, p0, LX/4J6;->A06:Landroid/content/Context;
+    :pswitch_0
+    const-string v0, "BrowserLiteFragment-executor"
 
     .line 8
     .line 9
-    new-instance v0, LX/4hv;
+    goto :goto_0
 
     .line 10
-    .line 11
-    invoke-direct {v0}, LX/4hv;-><init>()V
+    :pswitch_1
+    new-instance v1, Ljava/lang/Thread;
 
+    .line 11
     .line 12
+    invoke-direct {v1, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
     .line 13
     .line 14
-    iput-object v0, p0, LX/4J6;->A07:LX/4hv;
-
     .line 15
+    const/4 v0, 0x1
+
     .line 16
-    sget-object v0, LX/4JB;->DEFAULT:LX/4JB;
+    invoke-virtual {v1, v0}, Ljava/lang/Thread;->setPriority(I)V
 
     .line 17
     .line 18
-    iput-object v0, p0, LX/4J6;->A03:LX/4JB;
-
     .line 19
+    return-object v1
+
     .line 20
-    sget-object v0, LX/37Z;->DEFAULT:LX/37Z;
+    :pswitch_2
+    const-string v0, "ExoPlayer:AudioTrackReleaseThread"
 
     .line 21
     .line 22
-    invoke-static {v0}, LX/37Z;->access$100(LX/37Z;)I
+    :goto_0
+    new-instance v1, Ljava/lang/Thread;
 
     .line 23
     .line 24
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
     .line 25
-    move-result v0
-
     .line 26
-    iput v0, p0, LX/4J6;->A01:I
-
     .line 27
+    return-object v1
+
     .line 28
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
 .end method

@@ -1,83 +1,149 @@
-.class public final LX/1T0;
+.class public final LX/1t0;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2SR;
+
 
 # static fields
-.field public static final A00:Lcom/facebookpay/logging/LoggingPolicy;
-
-.field public static final A01:Ljava/util/Map;
-
-.field public static final A02:Ljava/util/Set;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ReauthMethod"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const/4 v9, 0x5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    new-array v10, v9, [LX/1T6;
-
     .line 2
     .line 3
-    sget-object v0, LX/1T1;->USER_INFO_PAYMENT_METHODS_BASIC_CARDS:LX/1T1;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final bridge synthetic AJo(Ljava/lang/Object;)LX/2SB;
+    .locals 7
+
+    .line 0
+    check-cast p1, Ljava/lang/String;
+
+    .line 1
+    .line 2
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 3
     .line 4
     .line 5
-    const-string v8, "USER_HAS_CARD"
+    move-result-object v6
 
     .line 6
+    const-string/jumbo v0, "password"
+
     .line 7
-    invoke-static {v8, v0}, LX/1T6;->A01(Ljava/lang/Object;Ljava/lang/Object;)LX/1T6;
+    .line 8
+    .line 9
+    invoke-static {v0, p1, v6}, LX/0X1;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
+
+    .line 10
+    .line 11
+    .line 12
+    sget-object v1, Lcom/facebook/http/interfaces/RequestPriority;->INTERACTIVE:Lcom/facebook/http/interfaces/RequestPriority;
+
+    .line 13
+    .line 14
+    sget-object v2, LX/1sv;->JSON:LX/1sv;
+
+    .line 15
+    .line 16
+    const-string/jumbo v3, "reauth"
+
+    .line 17
+    .line 18
+    .line 19
+    const-string v4, "POST"
+
+    .line 20
+    .line 21
+    const-string v5, "/auth/reauth"
+
+    .line 22
+    .line 23
+    new-instance v0, LX/2SB;
+
+    .line 24
+    .line 25
+    invoke-direct/range {v0 .. v6}, LX/2SB;-><init>(Lcom/facebook/http/interfaces/RequestPriority;LX/1sv;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+
+    .line 26
+    .line 27
+    .line 28
+    return-object v0
+.end method
+
+.method public final bridge synthetic AK1(LX/2NB;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    .line 0
+    invoke-static {p1}, LX/2NB;->A00(LX/2NB;)LX/2Rs;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    const-string/jumbo v0, "token"
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {v1, v0}, LX/2Rs;->A0E(Ljava/lang/String;)LX/2Rs;
 
     .line 8
     .line 9
     .line 10
-    move-result-object v1
+    move-result-object v0
 
     .line 11
-    const/4 v0, 0x0
+    invoke-virtual {v0}, LX/2Rs;->A0J()Ljava/lang/String;
 
     .line 12
-    aput-object v1, v10, v0
-
     .line 13
     .line 14
-    sget-object v0, LX/1T1;->USER_INFO_PAYMENT_METHODS_TOKENIZED_CARDS:LX/1T1;
+    move-result-object v2
 
     .line 15
-    .line 16
-    const-string v7, "USER_HAS_TOKENIZED_CARD"
+    const-string/jumbo v0, "creation_time"
 
+    .line 16
     .line 17
     .line 18
-    invoke-static {v7, v0}, LX/1T6;->A01(Ljava/lang/Object;Ljava/lang/Object;)LX/1T6;
+    invoke-virtual {v1, v0}, LX/2Rs;->A0E(Ljava/lang/String;)LX/2Rs;
 
     .line 19
     .line 20
     .line 21
-    move-result-object v1
+    move-result-object v0
 
     .line 22
-    const/4 v0, 0x1
+    invoke-virtual {v0}, LX/2Rs;->A0A()J
 
     .line 23
-    aput-object v1, v10, v0
-
     .line 24
     .line 25
-    sget-object v0, LX/1T1;->USER_INFO_PAYER_ADDRESS:LX/1T1;
+    move-result-wide v3
 
     .line 26
-    .line 27
-    const-string v6, "USER_HAS_SHIPPING_ADDRESS"
+    const-string/jumbo v0, "expiration_time"
 
+    .line 27
     .line 28
     .line 29
-    invoke-static {v6, v0}, LX/1T6;->A01(Ljava/lang/Object;Ljava/lang/Object;)LX/1T6;
+    invoke-virtual {v1, v0}, LX/2Rs;->A0E(Ljava/lang/String;)LX/2Rs;
 
     .line 30
     .line 31
@@ -85,128 +151,22 @@
     move-result-object v0
 
     .line 33
-    const/4 v5, 0x2
+    invoke-virtual {v0}, LX/2Rs;->A0A()J
 
     .line 34
-    aput-object v0, v10, v5
-
     .line 35
     .line 36
-    sget-object v0, LX/1T1;->USER_INFO_PAYER_EMAIL:LX/1T1;
+    move-result-wide v5
 
     .line 37
+    new-instance v1, Lcom/facebook/auth/component/ReauthResult;
+
     .line 38
-    const-string v4, "USER_HAS_EMAIL"
-
     .line 39
-    .line 40
-    invoke-static {v4, v0}, LX/1T6;->A01(Ljava/lang/Object;Ljava/lang/Object;)LX/1T6;
+    invoke-direct/range {v1 .. v6}, Lcom/facebook/auth/component/ReauthResult;-><init>(Ljava/lang/String;JJ)V
 
+    .line 40
     .line 41
     .line 42
-    .line 43
-    move-result-object v0
-
-    .line 44
-    const/4 v3, 0x3
-
-    .line 45
-    aput-object v0, v10, v3
-
-    .line 46
-    .line 47
-    sget-object v0, LX/1T1;->USER_INFO_PAYER_PHONE:LX/1T1;
-
-    .line 48
-    .line 49
-    const-string v2, "USER_HAS_PHONE"
-
-    .line 50
-    .line 51
-    invoke-static {v2, v0}, LX/1T6;->A01(Ljava/lang/Object;Ljava/lang/Object;)LX/1T6;
-
-    .line 52
-    .line 53
-    .line 54
-    move-result-object v0
-
-    .line 55
-    const/4 v1, 0x4
-
-    .line 56
-    aput-object v0, v10, v1
-
-    .line 57
-    .line 58
-    invoke-static {v10}, LX/1Tp;->A04([LX/1T6;)Ljava/util/Map;
-
-    .line 59
-    .line 60
-    .line 61
-    move-result-object v0
-
-    .line 62
-    sput-object v0, LX/1T0;->A01:Ljava/util/Map;
-
-    .line 63
-    .line 64
-    invoke-static {v8, v7, v9}, LX/0Yg;->A1b(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/String;
-
-    .line 65
-    .line 66
-    .line 67
-    move-result-object v0
-
-    .line 68
-    aput-object v4, v0, v5
-
-    .line 69
-    .line 70
-    aput-object v2, v0, v3
-
-    .line 71
-    .line 72
-    aput-object v6, v0, v1
-
-    .line 73
-    .line 74
-    invoke-static {v0}, LX/1T7;->A02([Ljava/lang/Object;)Ljava/util/Set;
-
-    .line 75
-    .line 76
-    .line 77
-    move-result-object v0
-
-    .line 78
-    sput-object v0, LX/1T0;->A02:Ljava/util/Set;
-
-    .line 79
-    .line 80
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v2
-
-    .line 84
-    const-string/jumbo v1, "payments_offsite_partners"
-
-    .line 85
-    .line 86
-    .line 87
-    new-instance v0, Lcom/facebookpay/logging/LoggingPolicy;
-
-    .line 88
-    .line 89
-    invoke-direct {v0, v1, v2}, Lcom/facebookpay/logging/LoggingPolicy;-><init>(Ljava/lang/String;Ljava/util/ArrayList;)V
-
-    .line 90
-    .line 91
-    .line 92
-    sput-object v0, LX/1T0;->A00:Lcom/facebookpay/logging/LoggingPolicy;
-
-    .line 93
-    .line 94
-    return-void
+    return-object v1
 .end method

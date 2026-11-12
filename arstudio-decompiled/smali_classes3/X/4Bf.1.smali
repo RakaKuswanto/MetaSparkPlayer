@@ -1,106 +1,324 @@
 .class public final LX/4Bf;
-.super Ljava/lang/Object;
+.super LX/0NH;
 .source ""
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field public final A00:Ljava/util/Set;
+.field public final A00:J
+
+.field public final A01:Ljava/lang/String;
+
+.field public final A02:Ljava/lang/String;
+
+.field public final A03:Ljava/lang/String;
+
+.field public final A04:Ljava/lang/String;
+
+.field public final A05:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJ)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    new-instance v0, Ljava/util/LinkedHashSet;
+    iput-object p1, p0, LX/4Bf;->A01:Ljava/lang/String;
 
     .line 4
     .line 5
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    iput-object p2, p0, LX/4Bf;->A04:Ljava/lang/String;
 
     .line 6
     .line 7
-    .line 8
-    iput-object v0, p0, LX/4Bf;->A00:Ljava/util/Set;
+    iput-object p3, p0, LX/4Bf;->A02:Ljava/lang/String;
 
+    .line 8
     .line 9
+    iput-object p4, p0, LX/4Bf;->A03:Ljava/lang/String;
+
     .line 10
+    .line 11
+    iput-wide p5, p0, LX/4Bf;->A00:J
+
+    .line 12
+    .line 13
+    iput-wide p7, p0, LX/4Bf;->A05:J
+
+    .line 14
+    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 3
+.method public final A00()Landroid/content/ContentValues;
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/4Bf;->A00:Ljava/util/Set;
+    new-instance v3, Landroid/content/ContentValues;
 
     .line 1
     .line 2
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    move-result-object v2
+    const-string v1, "tab_id"
 
     .line 6
-    const/4 v1, 0x0
-
     .line 7
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, LX/4Bf;->A01:Ljava/lang/String;
 
     .line 8
     .line 9
+    invoke-virtual {v3, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 10
-    move-result v0
-
     .line 11
-    if-eqz v0, :cond_1
-
     .line 12
-    .line 13
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string v1, "tab_url"
 
+    .line 13
     .line 14
+    iget-object v0, p0, LX/4Bf;->A04:Ljava/lang/String;
+
     .line 15
     .line 16
-    move-result-object v0
+    invoke-virtual {v3, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
-    check-cast v0, Landroid/view/View$OnTouchListener;
-
     .line 18
     .line 19
-    invoke-interface {v0, p1, p2}, Landroid/view/View$OnTouchListener;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    const-string v1, "tab_title"
 
     .line 20
     .line 21
-    .line 22
-    move-result v0
+    iget-object v0, p0, LX/4Bf;->A02:Ljava/lang/String;
 
+    .line 22
     .line 23
-    if-eqz v0, :cond_0
+    invoke-virtual {v3, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     .line 25
-    const/4 v1, 0x1
-
     .line 26
-    goto :goto_0
+    const-string v1, "tracking_codes"
 
     .line 27
+    .line 28
+    iget-object v0, p0, LX/4Bf;->A03:Ljava/lang/String;
+
+    .line 29
+    .line 30
+    invoke-virtual {v3, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 31
+    .line 32
+    .line 33
+    const-string v2, "created_timestamp"
+
+    .line 34
+    .line 35
+    iget-wide v0, p0, LX/4Bf;->A00:J
+
+    .line 36
+    .line 37
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
+    invoke-virtual {v3, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 42
+    .line 43
+    .line 44
+    const-string v2, "last_accessed_timestamp"
+
+    .line 45
+    .line 46
+    iget-wide v0, p0, LX/4Bf;->A05:J
+
+    .line 47
+    .line 48
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    invoke-virtual {v3, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 53
+    .line 54
+    .line 55
+    return-object v3
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v6, 0x1
+
+    if-eq p0, p1, :cond_1
+
+    instance-of v0, p1, LX/4Bf;
+
+    const/4 v5, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, LX/4Bf;
+
+    iget-object v1, p0, LX/4Bf;->A01:Ljava/lang/String;
+
+    iget-object v0, p1, LX/4Bf;->A01:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, LX/4Bf;->A04:Ljava/lang/String;
+
+    iget-object v0, p1, LX/4Bf;->A04:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, LX/4Bf;->A02:Ljava/lang/String;
+
+    iget-object v0, p1, LX/4Bf;->A02:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, LX/4Bf;->A03:Ljava/lang/String;
+
+    iget-object v0, p1, LX/4Bf;->A03:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-wide v3, p0, LX/4Bf;->A00:J
+
+    iget-wide v1, p1, LX/4Bf;->A00:J
+
+    cmp-long v0, v3, v1
+
+    if-nez v0, :cond_0
+
+    iget-wide v3, p0, LX/4Bf;->A05:J
+
+    iget-wide v1, p1, LX/4Bf;->A05:J
+
+    cmp-long v0, v3, v1
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    return v5
+
     :cond_1
-    return v1
+    return v6
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/4Bf;->A01:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/433;->A0D(Ljava/lang/String;)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v1
+
+    .line 6
+    iget-object v0, p0, LX/4Bf;->A04:Ljava/lang/String;
+
+    .line 7
+    .line 8
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v1
+
+    .line 12
+    iget-object v0, p0, LX/4Bf;->A02:Ljava/lang/String;
+
+    .line 13
+    .line 14
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v1
+
+    .line 18
+    iget-object v0, p0, LX/4Bf;->A03:Ljava/lang/String;
+
+    .line 19
+    .line 20
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v2
+
+    .line 24
+    iget-wide v0, p0, LX/4Bf;->A00:J
+
+    .line 25
+    .line 26
+    invoke-static {v0, v1, v2}, LX/001;->A00(JI)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v2
+
+    .line 30
+    iget-wide v0, p0, LX/4Bf;->A05:J
+
+    .line 31
+    .line 32
+    invoke-static {v0, v1, v2}, LX/433;->A0A(JI)I
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v0
+
+    .line 36
+    return v0
 .end method

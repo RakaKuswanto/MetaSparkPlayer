@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/3QK;
+.implements LX/37a;
 
 
 # static fields
@@ -11,11 +11,11 @@
 
 
 # instance fields
-.field public final mTigonRequestCounter:LX/3X3;
+.field public final mTigonRequestCounter:LX/39e;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/jni/HybridData;Lcom/facebook/tigon/TigonErrorReporter;LX/3X3;)V
+.method public constructor <init>(Lcom/facebook/jni/HybridData;Lcom/facebook/tigon/TigonErrorReporter;LX/39e;)V
     .locals 2
 
     .line 0
@@ -24,7 +24,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p3, p0, Lcom/facebook/tigon/TigonXplatService;->mTigonRequestCounter:LX/3X3;
+    iput-object p3, p0, Lcom/facebook/tigon/TigonXplatService;->mTigonRequestCounter:LX/39e;
 
     .line 4
     .line 5
@@ -34,7 +34,7 @@
     .line 6
     .line 7
     .line 8
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 9
     .line 10
@@ -65,7 +65,7 @@
     throw v1
 .end method
 
-.method public static A00(LX/3Qt;Lcom/facebook/tigon/iface/TigonRequest;)V
+.method public static A00(LX/381;Lcom/facebook/tigon/iface/TigonRequest;)V
     .locals 9
 
     .line 0
@@ -77,7 +77,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 5
     .line 6
@@ -90,7 +90,7 @@
     move-result-object v0
 
     .line 11
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 12
     .line 13
@@ -103,7 +103,7 @@
     move-result-object v0
 
     .line 18
-    invoke-static {p0, v0}, LX/3PN;->A03(LX/3Qt;Ljava/util/Map;)V
+    invoke-static {p0, v0}, LX/37p;->A03(LX/381;Ljava/util/Map;)V
 
     .line 19
     .line 20
@@ -119,12 +119,12 @@
     int-to-byte v0, v0
 
     .line 26
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 27
     .line 28
     .line 29
-    invoke-interface {p1}, Lcom/facebook/tigon/iface/TigonRequest;->httpPriority()LX/3RG;
+    invoke-interface {p1}, Lcom/facebook/tigon/iface/TigonRequest;->httpPriority()LX/387;
 
     .line 30
     .line 31
@@ -132,20 +132,20 @@
     move-result-object v1
 
     .line 33
-    iget-byte v0, v1, LX/3RG;->A00:B
+    iget-byte v0, v1, LX/387;->A00:B
 
     .line 34
     .line 35
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 36
     .line 37
     .line 38
-    iget-boolean v0, v1, LX/3RG;->A01:Z
+    iget-boolean v0, v1, LX/387;->A01:Z
 
     .line 39
     .line 40
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 41
     .line 42
@@ -158,7 +158,7 @@
     move-result v0
 
     .line 47
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 48
     .line 49
@@ -171,7 +171,7 @@
     move-result v0
 
     .line 54
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 55
     .line 56
@@ -184,7 +184,7 @@
     move-result-wide v0
 
     .line 61
-    invoke-static {p0, v0, v1}, LX/3PN;->A01(LX/3Qt;J)V
+    invoke-static {p0, v0, v1}, LX/37p;->A01(LX/381;J)V
 
     .line 62
     .line 63
@@ -197,7 +197,7 @@
     move-result-wide v0
 
     .line 68
-    invoke-static {p0, v0, v1}, LX/3PN;->A01(LX/3Qt;J)V
+    invoke-static {p0, v0, v1}, LX/37p;->A01(LX/381;J)V
 
     .line 69
     .line 70
@@ -210,7 +210,7 @@
     move-result-wide v0
 
     .line 75
-    invoke-static {p0, v0, v1}, LX/3PN;->A01(LX/3Qt;J)V
+    invoke-static {p0, v0, v1}, LX/37p;->A01(LX/381;J)V
 
     .line 76
     .line 77
@@ -223,7 +223,7 @@
     move-result-wide v0
 
     .line 82
-    invoke-static {p0, v0, v1}, LX/3PN;->A01(LX/3Qt;J)V
+    invoke-static {p0, v0, v1}, LX/37p;->A01(LX/381;J)V
 
     .line 83
     .line 84
@@ -236,7 +236,7 @@
     move-result v0
 
     .line 89
-    invoke-static {p0, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {p0, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 90
     .line 91
@@ -249,7 +249,7 @@
     move-result-object v0
 
     .line 96
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 97
     .line 98
@@ -262,7 +262,7 @@
     move-result v0
 
     .line 103
-    invoke-static {p0, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {p0, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 104
     .line 105
@@ -275,16 +275,16 @@
     move-result-wide v0
 
     .line 110
-    invoke-static {p0, v0, v1}, LX/3PN;->A01(LX/3Qt;J)V
+    invoke-static {p0, v0, v1}, LX/37p;->A01(LX/381;J)V
 
     .line 111
     .line 112
     .line 113
-    sget-object v0, LX/3QR;->A02:LX/3XD;
+    sget-object v0, LX/37d;->A01:LX/39f;
 
     .line 114
     .line 115
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 116
     .line 117
@@ -303,7 +303,7 @@
     const/4 v0, 0x1
 
     .line 124
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 125
     .line 126
@@ -312,7 +312,7 @@
 
     .line 128
     .line 129
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 130
     .line 131
@@ -321,7 +321,7 @@
 
     .line 133
     .line 134
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 135
     .line 136
@@ -330,17 +330,17 @@
 
     .line 138
     .line 139
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 140
     .line 141
     .line 142
     :goto_0
-    sget-object v0, LX/3QR;->A07:LX/3XD;
+    sget-object v0, LX/37d;->A06:LX/39f;
 
     .line 143
     .line 144
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 145
     .line 146
@@ -348,7 +348,7 @@
     move-result-object v1
 
     .line 148
-    check-cast v1, LX/3TK;
+    check-cast v1, LX/38l;
 
     .line 149
     .line 150
@@ -359,53 +359,53 @@
     const/4 v0, 0x1
 
     .line 153
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 154
     .line 155
     .line 156
-    iget v0, v1, LX/3TK;->A03:I
+    iget v0, v1, LX/38l;->A03:I
 
     .line 157
     .line 158
-    invoke-static {p0, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {p0, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 159
     .line 160
     .line 161
-    iget v0, v1, LX/3TK;->A01:I
+    iget v0, v1, LX/38l;->A01:I
 
     .line 162
     .line 163
-    invoke-static {p0, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {p0, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 164
     .line 165
     .line 166
-    iget v0, v1, LX/3TK;->A00:I
+    iget v0, v1, LX/38l;->A00:I
 
     .line 167
     .line 168
-    invoke-static {p0, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {p0, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 169
     .line 170
     .line 171
-    iget v0, v1, LX/3TK;->A02:I
+    iget v0, v1, LX/38l;->A02:I
 
     .line 172
     .line 173
-    invoke-static {p0, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {p0, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 174
     .line 175
     .line 176
     :goto_1
-    sget-object v0, LX/3QR;->A03:LX/3XD;
+    sget-object v0, LX/37d;->A02:LX/39f;
 
     .line 177
     .line 178
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 179
     .line 180
@@ -413,7 +413,7 @@
     move-result-object v2
 
     .line 182
-    check-cast v2, LX/3T8;
+    check-cast v2, LX/38h;
 
     .line 183
     .line 184
@@ -424,48 +424,48 @@
     const/4 v0, 0x1
 
     .line 187
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 188
     .line 189
     .line 190
-    iget-object v1, v2, LX/3T8;->A00:LX/3Tb;
+    iget-object v1, v2, LX/38h;->A00:LX/394;
 
     .line 191
     .line 192
-    iget-object v0, v1, LX/3Tb;->A00:Ljava/lang/String;
+    iget-object v0, v1, LX/394;->A00:Ljava/lang/String;
 
     .line 193
     .line 194
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 195
     .line 196
     .line 197
-    iget-object v0, v1, LX/3Tb;->A01:Ljava/util/Map;
+    iget-object v0, v1, LX/394;->A01:Ljava/util/Map;
 
     .line 198
     .line 199
-    invoke-static {p0, v0}, LX/3PN;->A03(LX/3Qt;Ljava/util/Map;)V
+    invoke-static {p0, v0}, LX/37p;->A03(LX/381;Ljava/util/Map;)V
 
     .line 200
     .line 201
     .line 202
-    iget-object v0, v2, LX/3T8;->A01:Ljava/util/Map;
+    iget-object v0, v2, LX/38h;->A01:Ljava/util/Map;
 
     .line 203
     .line 204
-    invoke-static {p0, v0}, LX/3PN;->A03(LX/3Qt;Ljava/util/Map;)V
+    invoke-static {p0, v0}, LX/37p;->A03(LX/381;Ljava/util/Map;)V
 
     .line 205
     .line 206
     .line 207
     :goto_2
-    sget-object v0, LX/3QR;->A04:LX/3XD;
+    sget-object v0, LX/37d;->A03:LX/39f;
 
     .line 208
     .line 209
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 210
     .line 211
@@ -484,7 +484,7 @@
     const/4 v0, 0x1
 
     .line 218
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 219
     .line 220
@@ -493,7 +493,7 @@
 
     .line 222
     .line 223
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 224
     .line 225
@@ -502,17 +502,17 @@
 
     .line 227
     .line 228
-    invoke-static {p0, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {p0, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 229
     .line 230
     .line 231
     :goto_3
-    sget-object v0, LX/3QR;->A08:LX/3XD;
+    sget-object v0, LX/37d;->A07:LX/39f;
 
     .line 232
     .line 233
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 234
     .line 235
@@ -520,7 +520,7 @@
     move-result-object v4
 
     .line 237
-    check-cast v4, LX/3OV;
+    check-cast v4, LX/37o;
 
     .line 238
     .line 239
@@ -531,12 +531,12 @@
     const/4 v0, 0x1
 
     .line 242
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 243
     .line 244
     .line 245
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 246
     .line 247
@@ -544,11 +544,11 @@
     move-result-object v6
 
     .line 249
-    iget-object v0, v4, LX/3OV;->A01:Ljava/util/Map;
+    iget-object v0, v4, LX/37o;->A01:Ljava/util/Map;
 
     .line 250
     .line 251
-    invoke-static {v0}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v0}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 252
     .line 253
@@ -577,15 +577,15 @@
     move-result-object v7
 
     .line 265
-    check-cast v7, LX/3MV;
+    check-cast v7, LX/38G;
 
     .line 266
     .line 267
-    iget-object v5, v7, LX/3MV;->A05:Ljava/lang/String;
+    iget-object v5, v7, LX/38G;->A05:Ljava/lang/String;
 
     .line 268
     .line 269
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 270
     .line 271
@@ -593,7 +593,7 @@
     move-result-object v3
 
     .line 273
-    iget-boolean v1, v7, LX/3MV;->A00:Z
+    iget-boolean v1, v7, LX/38G;->A00:Z
 
     .line 274
     .line 275
@@ -619,7 +619,7 @@
     .line 284
     .line 285
     .line 286
-    iget-boolean v1, v7, LX/3MV;->A01:Z
+    iget-boolean v1, v7, LX/38G;->A01:Z
 
     .line 287
     .line 288
@@ -641,7 +641,7 @@
     .line 295
     .line 296
     .line 297
-    iget-boolean v0, v7, LX/3MV;->A02:Z
+    iget-boolean v0, v7, LX/38G;->A02:Z
 
     .line 298
     .line 299
@@ -663,430 +663,458 @@
 
     .line 307
     .line 308
-    invoke-static {v5, v3, v1}, LX/0Yf;->A1D(Ljava/lang/String;Ljava/lang/StringBuilder;C)V
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 309
     .line 310
     .line 311
-    iget-object v0, v7, LX/3MV;->A03:Ljava/lang/String;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 312
     .line 313
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 314
-    .line 315
-    .line 316
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 315
+    .line 316
     .line 317
+    iget-object v0, v7, LX/38G;->A03:Ljava/lang/String;
+
     .line 318
     .line 319
-    iget-object v0, v7, LX/3MV;->A04:Ljava/lang/String;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 320
     .line 321
-    invoke-static {v0, v3}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 322
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     .line 323
     .line 324
-    move-result-object v0
-
     .line 325
-    invoke-virtual {v6, v5, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v7, LX/38G;->A04:Ljava/lang/String;
 
     .line 326
     .line 327
+    invoke-static {v0, v3}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 328
+    .line 329
+    .line 330
+    move-result-object v0
+
+    .line 331
+    invoke-virtual {v6, v5, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 332
+    .line 333
+    .line 334
     goto :goto_4
 
-    .line 329
+    .line 335
     :cond_3
     const/4 v0, 0x0
 
-    .line 330
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    .line 336
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
-    .line 331
-    .line 332
-    .line 333
+    .line 337
+    .line 338
+    .line 339
     goto :goto_3
 
-    .line 334
+    .line 340
     :cond_4
     const/4 v0, 0x0
 
-    .line 335
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
-
-    .line 336
-    .line 337
-    .line 338
-    goto/16 :goto_2
-
-    .line 339
-    .line 340
-    :cond_5
-    const/4 v0, 0x0
-
     .line 341
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 342
     .line 343
     .line 344
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     .line 345
     .line 346
-    :cond_6
+    :cond_5
     const/4 v0, 0x0
 
     .line 347
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 348
     .line 349
     .line 350
-    goto/16 :goto_0
+    goto/16 :goto_1
 
     .line 351
     .line 352
-    :cond_7
+    :cond_6
     const/4 v0, 0x0
 
     .line 353
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
     .line 354
     .line 355
     .line 356
-    goto :goto_5
+    goto/16 :goto_0
 
     .line 357
-    :cond_8
-    invoke-static {p0, v6}, LX/3PN;->A03(LX/3Qt;Ljava/util/Map;)V
-
     .line 358
-    .line 359
-    .line 360
-    iget-boolean v0, v4, LX/3OV;->A03:Z
+    :cond_7
+    const/4 v0, 0x0
 
+    .line 359
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
+
+    .line 360
     .line 361
     .line 362
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    goto :goto_5
 
     .line 363
+    :cond_8
+    invoke-static {p0, v6}, LX/37p;->A03(LX/381;Ljava/util/Map;)V
+
     .line 364
     .line 365
-    iget-boolean v0, v4, LX/3OV;->A02:Z
-
     .line 366
-    .line 367
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    iget-boolean v0, v4, LX/37o;->A03:Z
 
+    .line 367
     .line 368
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
+
     .line 369
     .line 370
-    iget-object v0, v4, LX/3OV;->A00:Ljava/lang/String;
-
     .line 371
-    .line 372
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    iget-boolean v0, v4, LX/37o;->A02:Z
 
+    .line 372
     .line 373
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
+
     .line 374
     .line 375
-    :goto_5
-    sget-object v0, LX/3QR;->A01:LX/3XD;
-
     .line 376
-    .line 377
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    iget-object v0, v4, LX/37o;->A00:Ljava/lang/String;
 
+    .line 377
     .line 378
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
     .line 379
     .line 380
-    move-result-object v2
-
     .line 381
-    check-cast v2, LX/3Pq;
+    :goto_5
+    sget-object v0, LX/37d;->A00:LX/39f;
 
     .line 382
     .line 383
-    if-eqz v2, :cond_b
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 384
     .line 385
-    const/4 v0, 0x1
-
     .line 386
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    move-result-object v2
 
     .line 387
+    check-cast v2, LX/37w;
+
     .line 388
     .line 389
-    iget-object v0, v2, LX/3Pq;->A04:Ljava/lang/String;
+    if-eqz v2, :cond_b
 
     .line 390
     .line 391
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    const/4 v0, 0x1
 
     .line 392
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
+
     .line 393
     .line 394
-    iget-object v0, v2, LX/3Pq;->A06:Ljava/lang/String;
-
     .line 395
-    .line 396
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    iget-object v0, v2, LX/37w;->A04:Ljava/lang/String;
 
+    .line 396
     .line 397
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
     .line 398
     .line 399
-    iget-object v0, v2, LX/3Pq;->A03:Ljava/lang/String;
-
     .line 400
-    .line 401
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    iget-object v0, v2, LX/37w;->A06:Ljava/lang/String;
 
+    .line 401
     .line 402
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
     .line 403
     .line 404
-    iget-object v0, v2, LX/3Pq;->A05:Ljava/lang/String;
-
     .line 405
-    .line 406
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    iget-object v0, v2, LX/37w;->A03:Ljava/lang/String;
 
+    .line 406
     .line 407
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
     .line 408
     .line 409
-    iget-wide v0, v2, LX/3Pq;->A02:J
-
     .line 410
-    .line 411
-    invoke-static {p0, v0, v1}, LX/3PN;->A01(LX/3Qt;J)V
+    iget-object v0, v2, LX/37w;->A05:Ljava/lang/String;
 
+    .line 411
     .line 412
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
     .line 413
     .line 414
-    iget-wide v0, v2, LX/3Pq;->A01:J
-
     .line 415
-    .line 416
-    invoke-static {p0, v0, v1}, LX/3PN;->A01(LX/3Qt;J)V
+    iget-wide v0, v2, LX/37w;->A02:J
 
+    .line 416
     .line 417
+    invoke-static {p0, v0, v1}, LX/37p;->A01(LX/381;J)V
+
     .line 418
     .line 419
-    iget-wide v0, v2, LX/3Pq;->A00:J
-
     .line 420
-    .line 421
-    invoke-static {p0, v0, v1}, LX/3PN;->A01(LX/3Qt;J)V
+    iget-wide v0, v2, LX/37w;->A01:J
 
+    .line 421
     .line 422
+    invoke-static {p0, v0, v1}, LX/37p;->A01(LX/381;J)V
+
     .line 423
     .line 424
-    :goto_6
-    sget-object v0, LX/3QR;->A05:LX/3XD;
-
     .line 425
-    .line 426
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    iget-wide v0, v2, LX/37w;->A00:J
 
+    .line 426
     .line 427
+    invoke-static {p0, v0, v1}, LX/37p;->A01(LX/381;J)V
+
     .line 428
     .line 429
-    move-result-object v1
-
     .line 430
-    check-cast v1, LX/3U0;
+    :goto_6
+    sget-object v0, LX/37d;->A04:LX/39f;
 
     .line 431
     .line 432
-    if-eqz v1, :cond_a
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 433
     .line 434
-    const/4 v0, 0x1
-
     .line 435
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    move-result-object v1
 
     .line 436
+    check-cast v1, LX/39I;
+
     .line 437
     .line 438
-    iget-object v0, v1, LX/3U0;->A00:Ljava/util/Map;
+    if-eqz v1, :cond_a
 
     .line 439
     .line 440
-    invoke-static {p0, v0}, LX/3PN;->A03(LX/3Qt;Ljava/util/Map;)V
+    const/4 v0, 0x1
 
     .line 441
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
+
     .line 442
     .line 443
-    :goto_7
-    sget-object v0, LX/3QR;->A06:LX/3XD;
-
     .line 444
-    .line 445
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    iget-object v0, v1, LX/39I;->A00:Ljava/util/Map;
 
+    .line 445
     .line 446
+    invoke-static {p0, v0}, LX/37p;->A03(LX/381;Ljava/util/Map;)V
+
     .line 447
     .line 448
-    move-result-object v1
-
     .line 449
-    check-cast v1, LX/3Rj;
+    :goto_7
+    sget-object v0, LX/37d;->A05:LX/39f;
 
     .line 450
     .line 451
-    if-eqz v1, :cond_9
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 452
     .line 453
-    const/4 v0, 0x1
-
     .line 454
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    move-result-object v1
 
     .line 455
+    check-cast v1, LX/38O;
+
     .line 456
     .line 457
-    iget-object v0, v1, LX/3Rj;->A00:Ljava/util/Map;
+    if-eqz v1, :cond_9
 
     .line 458
     .line 459
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    const/4 v0, 0x1
 
     .line 460
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
+
     .line 461
     .line 462
-    move-result-object v0
-
     .line 463
-    invoke-static {p0, v0}, LX/3PN;->A03(LX/3Qt;Ljava/util/Map;)V
+    iget-object v0, v1, LX/38O;->A00:Ljava/util/Map;
 
     .line 464
     .line 465
-    .line 466
-    :goto_8
-    sget-object v0, LX/3QR;->A09:LX/3XD;
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
+    .line 466
     .line 467
     .line 468
-    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/3XD;)Ljava/lang/Object;
+    move-result-object v0
 
     .line 469
+    invoke-static {p0, v0}, LX/37p;->A03(LX/381;Ljava/util/Map;)V
+
     .line 470
     .line 471
-    move-result-object v1
-
     .line 472
-    check-cast v1, LX/3TJ;
+    :goto_8
+    sget-object v0, LX/37d;->A08:LX/39f;
 
     .line 473
     .line 474
-    if-eqz v1, :cond_c
+    invoke-interface {p1, v0}, Lcom/facebook/tigon/iface/TigonRequest;->getLayerInformation(LX/39f;)Ljava/lang/Object;
 
     .line 475
     .line 476
-    const/4 v0, 0x1
-
     .line 477
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    move-result-object v1
 
     .line 478
+    check-cast v1, LX/38H;
+
     .line 479
     .line 480
-    iget-boolean v0, v1, LX/3TJ;->A03:Z
+    if-eqz v1, :cond_c
 
     .line 481
     .line 482
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    const/4 v0, 0x1
 
     .line 483
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
+
     .line 484
     .line 485
-    iget-object v0, v1, LX/3TJ;->A00:Ljava/lang/String;
-
     .line 486
-    .line 487
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    iget-boolean v0, v1, LX/38H;->A05:Z
 
+    .line 487
     .line 488
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
+
     .line 489
     .line 490
-    iget-object v0, v1, LX/3TJ;->A01:Ljava/lang/String;
-
     .line 491
-    .line 492
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    iget-object v0, v1, LX/38H;->A02:Ljava/lang/String;
 
+    .line 492
     .line 493
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
     .line 494
     .line 495
-    iget-object v0, v1, LX/3TJ;->A02:Ljava/lang/String;
-
     .line 496
-    .line 497
-    invoke-static {p0, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    iget-object v0, v1, LX/38H;->A03:Ljava/lang/String;
 
+    .line 497
     .line 498
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
     .line 499
     .line 500
+    .line 501
+    iget-object v0, v1, LX/38H;->A04:Ljava/lang/String;
+
+    .line 502
+    .line 503
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
+    .line 504
+    .line 505
+    .line 506
+    iget-object v0, v1, LX/38H;->A01:Ljava/lang/String;
+
+    .line 507
+    .line 508
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
+    .line 509
+    .line 510
+    .line 511
+    iget-object v0, v1, LX/38H;->A00:Ljava/lang/String;
+
+    .line 512
+    .line 513
+    invoke-static {p0, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
+
+    .line 514
+    .line 515
+    .line 516
     return-void
 
-    .line 501
+    .line 517
     :cond_9
     const/4 v0, 0x0
 
-    .line 502
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    .line 518
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
-    .line 503
-    .line 504
-    .line 505
+    .line 519
+    .line 520
+    .line 521
     goto :goto_8
 
-    .line 506
+    .line 522
     :cond_a
     const/4 v0, 0x0
 
-    .line 507
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    .line 523
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
-    .line 508
-    .line 509
-    .line 510
+    .line 524
+    .line 525
+    .line 526
     goto :goto_7
 
-    .line 511
+    .line 527
     :cond_b
     const/4 v0, 0x0
 
-    .line 512
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    .line 528
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
-    .line 513
-    .line 514
-    .line 515
+    .line 529
+    .line 530
+    .line 531
     goto :goto_6
 
-    .line 516
+    .line 532
     :cond_c
     const/4 v0, 0x0
 
-    .line 517
-    invoke-virtual {p0, v0}, LX/3Qt;->A00(B)V
+    .line 533
+    invoke-virtual {p0, v0}, LX/381;->A00(B)V
 
-    .line 518
-    .line 519
-    .line 520
+    .line 534
+    .line 535
+    .line 536
     return-void
 .end method
 
@@ -1131,7 +1159,7 @@
 .method public native isObservable()Z
 .end method
 
-.method public onPreRequest()V
+.method public onPreRequest(Lcom/facebook/tigon/iface/TigonRequest;)V
     .locals 0
 
     return-void
@@ -1141,39 +1169,39 @@
 .end method
 
 .method public sendRequest(Lcom/facebook/tigon/iface/TigonRequest;Lcom/facebook/tigon/TigonBodyProvider;Lcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonRequestToken;
-    .locals 13
+    .locals 14
 
     .line 0
-    move-object v4, p0
+    move-object v5, p0
 
     .line 1
-    invoke-virtual {p0}, Lcom/facebook/tigon/TigonXplatService;->onPreRequest()V
+    move-object v6, p1
 
     .line 2
+    invoke-virtual {p0, p1}, Lcom/facebook/tigon/TigonXplatService;->onPreRequest(Lcom/facebook/tigon/iface/TigonRequest;)V
+
     .line 3
     .line 4
+    .line 5
     const/16 v1, 0x400
 
-    .line 5
     .line 6
-    new-instance v3, LX/3Qt;
-
     .line 7
-    .line 8
-    invoke-direct {v3, v1}, LX/3Qt;-><init>(I)V
+    new-instance v4, LX/381;
 
+    .line 8
     .line 9
+    invoke-direct {v4, v1}, LX/381;-><init>(I)V
+
     .line 10
     .line 11
-    move-object v5, p1
-
     .line 12
-    invoke-static {v3, p1}, Lcom/facebook/tigon/TigonXplatService;->A00(LX/3Qt;Lcom/facebook/tigon/iface/TigonRequest;)V
+    invoke-static {v4, p1}, Lcom/facebook/tigon/TigonXplatService;->A00(LX/381;Lcom/facebook/tigon/iface/TigonRequest;)V
 
     .line 13
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/tigon/TigonXplatService;->mTigonRequestCounter:LX/3X3;
+    iget-object v0, p0, Lcom/facebook/tigon/TigonXplatService;->mTigonRequestCounter:LX/39e;
 
     .line 16
     .line 17
@@ -1181,99 +1209,105 @@
 
     .line 18
     .line 19
-    invoke-interface {v0}, LX/3X3;->AP6()V
+    invoke-interface {v0}, LX/39e;->ANg()V
 
     .line 20
     .line 21
     .line 22
     :cond_0
-    new-instance v2, LX/3Qt;
+    new-instance v3, LX/381;
 
     .line 23
     .line 24
-    invoke-direct {v2, v1}, LX/3Qt;-><init>(I)V
+    invoke-direct {v3, v1}, LX/381;-><init>(I)V
 
     .line 25
     .line 26
     .line 27
-    move-object v8, p2
+    move-object/from16 v9, p2
 
     .line 28
-    iget-object v0, p2, Lcom/facebook/tigon/TigonBodyProvider;->mInfo:LX/3T3;
-
     .line 29
+    iget-object v0, v9, Lcom/facebook/tigon/TigonBodyProvider;->mInfo:LX/38f;
+
     .line 30
+    .line 31
     if-nez v0, :cond_1
 
-    .line 31
     .line 32
-    new-instance v0, LX/3T3;
-
     .line 33
-    .line 34
-    invoke-direct {v0}, LX/3T3;-><init>()V
+    new-instance v0, LX/38f;
 
+    .line 34
     .line 35
+    invoke-direct {v0}, LX/38f;-><init>()V
+
     .line 36
     .line 37
-    iput-object v0, p2, Lcom/facebook/tigon/TigonBodyProvider;->mInfo:LX/3T3;
-
     .line 38
+    iput-object v0, v9, Lcom/facebook/tigon/TigonBodyProvider;->mInfo:LX/38f;
+
     .line 39
-    :cond_1
-    sget-object v1, LX/3WE;->A00:LX/3XG;
-
     .line 40
-    .line 41
-    iget-object v0, v0, LX/3T3;->A00:Ljava/util/Map;
+    :cond_1
+    sget-object v2, LX/39Y;->A00:LX/39k;
 
+    .line 41
     .line 42
+    const/4 v1, 0x0
+
     .line 43
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v1}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 44
     .line 45
     .line 46
-    const/4 v0, 0x0
+    iget-object v0, v0, LX/38f;->A00:Ljava/util/Map;
 
     .line 47
-    invoke-virtual {v2, v0}, LX/3Qt;->A00(B)V
-
     .line 48
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 49
     .line 50
-    iget-object v6, v3, LX/3Qt;->A01:[B
-
     .line 51
-    .line 52
-    iget v7, v3, LX/3Qt;->A00:I
+    invoke-virtual {v3, v1}, LX/381;->A00(B)V
 
+    .line 52
     .line 53
     .line 54
-    iget-object v9, v2, LX/3Qt;->A01:[B
+    iget-object v7, v4, LX/381;->A01:[B
 
     .line 55
     .line 56
-    iget v10, v2, LX/3Qt;->A00:I
+    iget v8, v4, LX/381;->A00:I
 
     .line 57
     .line 58
-    move-object/from16 v11, p3
+    iget-object v10, v3, LX/381;->A01:[B
 
     .line 59
     .line 60
-    move-object/from16 v12, p4
+    iget v11, v3, LX/381;->A00:I
 
     .line 61
     .line 62
-    invoke-direct/range {v4 .. v12}, Lcom/facebook/tigon/TigonXplatService;->sendRequestBodyBufferIntegerBuffer(Lcom/facebook/tigon/iface/TigonRequest;[BILcom/facebook/tigon/TigonBodyProvider;[BILcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonXplatRequestToken;
+    move-object/from16 v12, p3
 
     .line 63
     .line 64
+    move-object/from16 v13, p4
+
     .line 65
+    .line 66
+    invoke-direct/range {v5 .. v13}, Lcom/facebook/tigon/TigonXplatService;->sendRequestBodyBufferIntegerBuffer(Lcom/facebook/tigon/iface/TigonRequest;[BILcom/facebook/tigon/TigonBodyProvider;[BILcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonXplatRequestToken;
+
+    .line 67
+    .line 68
+    .line 69
     move-result-object v0
 
-    .line 66
+    .line 70
     return-object v0
 .end method
 
@@ -1284,33 +1318,33 @@
     move-object v2, p0
 
     .line 268435457
-    invoke-virtual {p0}, Lcom/facebook/tigon/TigonXplatService;->onPreRequest()V
-
-    .line 268435458
-    .line 268435459
-    .line 268435460
-    const/16 v0, 0x400
-
-    .line 268435461
-    .line 268435462
-    new-instance v1, LX/3Qt;
-
-    .line 268435463
-    .line 268435464
-    invoke-direct {v1, v0}, LX/3Qt;-><init>(I)V
-
-    .line 268435465
-    .line 268435466
-    .line 268435467
     move-object v3, p1
 
+    .line 268435458
+    invoke-virtual {p0, p1}, Lcom/facebook/tigon/TigonXplatService;->onPreRequest(Lcom/facebook/tigon/iface/TigonRequest;)V
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    const/16 v0, 0x400
+
+    .line 268435462
+    .line 268435463
+    new-instance v1, LX/381;
+
+    .line 268435464
+    .line 268435465
+    invoke-direct {v1, v0}, LX/381;-><init>(I)V
+
+    .line 268435466
+    .line 268435467
     .line 268435468
-    invoke-static {v1, p1}, Lcom/facebook/tigon/TigonXplatService;->A00(LX/3Qt;Lcom/facebook/tigon/iface/TigonRequest;)V
+    invoke-static {v1, p1}, Lcom/facebook/tigon/TigonXplatService;->A00(LX/381;Lcom/facebook/tigon/iface/TigonRequest;)V
 
     .line 268435469
     .line 268435470
     .line 268435471
-    iget-object v0, p0, Lcom/facebook/tigon/TigonXplatService;->mTigonRequestCounter:LX/3X3;
+    iget-object v0, p0, Lcom/facebook/tigon/TigonXplatService;->mTigonRequestCounter:LX/39e;
 
     .line 268435472
     .line 268435473
@@ -1318,17 +1352,17 @@
 
     .line 268435474
     .line 268435475
-    invoke-interface {v0}, LX/3X3;->AP6()V
+    invoke-interface {v0}, LX/39e;->ANg()V
 
     .line 268435476
     .line 268435477
     .line 268435478
     :cond_0
-    iget-object v4, v1, LX/3Qt;->A01:[B
+    iget-object v4, v1, LX/381;->A01:[B
 
     .line 268435479
     .line 268435480
-    iget v5, v1, LX/3Qt;->A00:I
+    iget v5, v1, LX/381;->A00:I
 
     .line 268435481
     .line 268435482

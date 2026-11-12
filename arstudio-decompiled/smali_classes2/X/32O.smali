@@ -3,46 +3,52 @@
 .source ""
 
 # interfaces
-.implements LX/3GB;
+.implements Lcom/facebook/proxygen/RootCACallbacks;
 
 
-# static fields
-.field public static final A00:LX/32O;
+# instance fields
+.field public final synthetic A00:LX/305;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, LX/32O;
-
-    invoke-direct {v0}, LX/32O;-><init>()V
-
-    sput-object v0, LX/32O;->A00:LX/32O;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(LX/305;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/32O;->A00:LX/305;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final ATf(Landroid/net/Uri;LX/69a;LX/3fn;)Landroid/net/Uri;
+.method public final getSystemRootCAs()[[B
     .locals 1
 
-    const/4 v0, 0x0
+    .line 0
+    new-instance v0, LX/3lZ;
 
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/3lZ;-><init>()V
 
-    return-object p1
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, LX/3lZ;->A01()[[B
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    return-object v0
 .end method

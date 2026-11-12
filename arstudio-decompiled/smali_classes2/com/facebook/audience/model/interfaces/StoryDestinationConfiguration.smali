@@ -39,11 +39,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x46
+    const/16 v0, 0x45
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -67,7 +67,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -152,7 +152,7 @@
     const/4 v0, 0x1
 
     .line 43
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 44
     .line 45
@@ -164,7 +164,7 @@
 
     .line 48
     .line 49
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 50
     .line 51
@@ -176,7 +176,7 @@
 
     .line 54
     .line 55
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 56
     .line 57
@@ -295,7 +295,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -315,7 +315,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -335,7 +335,7 @@
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -399,7 +399,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -415,7 +415,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -434,7 +434,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -449,39 +449,60 @@
 
     .line 25
     .line 26
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 27
     .line 28
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 29
-    move-result v1
-
     .line 30
-    iget-boolean v0, p0, Lcom/facebook/audience/model/interfaces/StoryDestinationConfiguration;->A04:Z
-
     .line 31
-    .line 32
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
-
-    .line 33
-    .line 34
-    .line 35
-    move-result v1
-
-    .line 36
-    iget-boolean v0, p0, Lcom/facebook/audience/model/interfaces/StoryDestinationConfiguration;->A05:Z
-
-    .line 37
-    .line 38
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
-
-    .line 39
-    .line 40
-    .line 41
     move-result v0
 
+    .line 32
+    add-int/2addr v1, v0
+
+    .line 33
+    iget-boolean v0, p0, Lcom/facebook/audience/model/interfaces/StoryDestinationConfiguration;->A04:Z
+
+    .line 34
+    .line 35
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 36
+    .line 37
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    add-int/2addr v1, v0
+
     .line 42
-    return v0
+    iget-boolean v0, p0, Lcom/facebook/audience/model/interfaces/StoryDestinationConfiguration;->A05:Z
+
+    .line 43
+    .line 44
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 45
+    .line 46
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 47
+    .line 48
+    .line 49
+    move-result v0
+
+    .line 50
+    add-int/2addr v1, v0
+
+    .line 51
+    return v1
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
@@ -492,7 +513,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0, p2}, LX/0Yc;->A08(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+    invoke-static {p1, v0, p2}, LX/0X1;->A0Y(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 3
     .line 4
@@ -501,7 +522,7 @@
 
     .line 6
     .line 7
-    invoke-static {p1, v0, p2}, LX/0Yc;->A08(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+    invoke-static {p1, v0, p2}, LX/0X1;->A0Y(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 8
     .line 9
@@ -510,7 +531,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1, v0, p2}, LX/0Yc;->A08(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+    invoke-static {p1, v0, p2}, LX/0X1;->A0Y(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 13
     .line 14

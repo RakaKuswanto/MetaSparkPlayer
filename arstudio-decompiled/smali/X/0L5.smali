@@ -1,149 +1,79 @@
-.class public final LX/0L5;
+.class public final synthetic LX/0L5;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0H8;
 
-# static fields
-.field public static A00:Ljava/io/PrintWriter;
 
-.field public static A01:Ljava/io/StringWriter;
+# instance fields
+.field public final synthetic A00:Lcom/facebook/rti/push/service/FbnsServiceDelegate;
+
+.field public final synthetic A01:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lcom/facebook/rti/push/service/FbnsServiceDelegate;Ljava/lang/String;)V
+    .locals 0
 
-    .line 0
-    const/16 v0, 0x3e80
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    new-instance v1, Ljava/io/StringWriter;
+    iput-object p1, p0, LX/0L5;->A00:Lcom/facebook/rti/push/service/FbnsServiceDelegate;
 
-    .line 3
-    .line 4
-    invoke-direct {v1, v0}, Ljava/io/StringWriter;-><init>(I)V
+    iput-object p2, p0, LX/0L5;->A01:Ljava/lang/String;
 
-    .line 5
-    .line 6
-    .line 7
-    sput-object v1, LX/0L5;->A01:Ljava/io/StringWriter;
-
-    .line 8
-    .line 9
-    new-instance v0, Ljava/io/PrintWriter;
-
-    .line 10
-    .line 11
-    invoke-direct {v0, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
-
-    .line 12
-    .line 13
-    .line 14
-    sput-object v0, LX/0L5;->A00:Ljava/io/PrintWriter;
-
-    .line 15
-    .line 16
     return-void
 .end method
 
-.method public static A00(Ljava/lang/String;I)Ljava/lang/String;
-    .locals 5
+
+# virtual methods
+.method public final ATA(Ljava/lang/String;)V
+    .locals 6
 
     .line 0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    iget-object v0, p0, LX/0L5;->A00:Lcom/facebook/rti/push/service/FbnsServiceDelegate;
 
     .line 1
     .line 2
-    .line 3
-    move-result v3
+    iget-object v2, p0, LX/0L5;->A01:Ljava/lang/String;
 
+    .line 3
     .line 4
-    if-le v3, p1, :cond_0
+    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     .line 5
     .line 6
-    mul-int/lit8 v0, p1, 0x3
-
     .line 7
+    move-result-object v5
+
     .line 8
-    div-int/lit8 v2, v0, 0x4
+    const-string v1, "invalid_receiver"
 
     .line 9
     .line 10
-    const-string v1, "\n"
+    const/4 v4, 0x0
 
     .line 11
+    move-object v3, p1
+
     .line 12
-    invoke-virtual {p0, v1, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;I)I
+    invoke-static/range {v0 .. v5}, Lcom/facebook/rti/push/service/FbnsServiceDelegate;->A05(Lcom/facebook/rti/push/service/FbnsServiceDelegate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     .line 13
     .line 14
     .line 15
-    move-result v0
+    const-string v1, "FbnsServiceDelegate"
 
     .line 16
-    if-ltz v0, :cond_0
-
     .line 17
-    .line 18
-    sub-int/2addr p1, v2
+    const-string v0, "service/sendFBNSBroadcast/invalid_receiver"
 
+    .line 18
     .line 19
-    sub-int/2addr v3, p1
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 20
-    invoke-virtual {p0, v1, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
-
     .line 21
     .line 22
-    .line 23
-    move-result v4
-
-    .line 24
-    if-ltz v4, :cond_0
-
-    .line 25
-    .line 26
-    const/4 v1, 0x0
-
-    .line 27
-    add-int/lit8 v0, v0, 0x1
-
-    .line 28
-    .line 29
-    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v3
-
-    .line 33
-    const-string v2, "\t"
-
-    .line 34
-    .line 35
-    const-string v1, "--------- TRIMMED FOR OVERFLOW ---------"
-
-    .line 36
-    .line 37
-    invoke-virtual {p0, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v0
-
-    .line 41
-    invoke-static {v3, v2, v1, v0}, LX/00I;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 42
-    .line 43
-    .line 44
-    move-result-object p0
-
-    .line 45
-    :cond_0
-    return-object p0
+    return-void
 .end method

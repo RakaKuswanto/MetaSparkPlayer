@@ -1,84 +1,77 @@
-.class public final LX/4zf;
-.super LX/4zi;
+.class public final synthetic LX/4zF;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/4zq;
+.implements LX/500;
+
+
+# static fields
+.field public static final A00:LX/4zF;
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/4zF;
+
+    invoke-direct {v0}, LX/4zF;-><init>()V
+
+    sput-object v0, LX/4zF;->A00:LX/4zF;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, LX/4zi;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final A8O(Ljava/nio/ByteBuffer;I)V
-    .locals 2
+.method public final A8j(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
 
     .line 0
-    const-class v1, LX/4xq;
+    check-cast p1, Landroid/content/Context;
 
     .line 1
     .line 2
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     .line 3
-    invoke-static {v1, p1, p2, v0}, LX/4zo;->A09(Ljava/lang/Class;Ljava/nio/ByteBuffer;II)[LX/4zq;
-
     .line 4
     .line 5
-    .line 6
     move-result-object v0
 
-    .line 7
+    .line 6
     if-eqz v0, :cond_0
 
+    .line 7
     .line 8
-    .line 9
-    invoke-static {v0}, LX/4BE;->A11([Ljava/lang/Object;)Ljava/util/ArrayList;
+    iget v0, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
+    .line 9
     .line 10
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
     .line 11
     .line 12
+    .line 13
     move-result-object v0
 
-    .line 13
-    iput-object v0, p0, LX/4zi;->A00:Ljava/util/List;
-
     .line 14
+    return-object v0
+
     .line 15
     :cond_0
-    const-class v1, LX/4zl;
+    const-string v0, ""
 
     .line 16
     .line 17
-    const/4 v0, 0x1
-
-    .line 18
-    invoke-static {v1, p1, p2, v0}, LX/4zo;->A09(Ljava/lang/Class;Ljava/nio/ByteBuffer;II)[LX/4zq;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    check-cast v0, [LX/4zm;
-
-    .line 23
-    .line 24
-    iput-object v0, p0, LX/4zi;->A01:[LX/4zm;
-
-    .line 25
-    .line 26
-    return-void
+    return-object v0
 .end method

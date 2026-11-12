@@ -1,54 +1,58 @@
-.class public final LX/4yI;
-.super LX/4yH;
+.class public abstract LX/4Yi;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final A00:LX/4yI;
+.field public static final A00:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, LX/4yI;
-
-    invoke-direct {v0}, LX/4yI;-><init>()V
-
-    sput-object v0, LX/4yI;->A00:LX/4yI;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 3
-
     .line 0
-    const/16 v2, 0x1ffe
+    const/16 v0, 0x15
 
     .line 1
     .line 2
-    const v0, 0x3fffe
+    new-array v0, v0, [I
 
     .line 3
     .line 4
-    .line 5
-    new-instance v1, LX/1rh;
+    fill-array-data v0, :array_0
 
+    .line 5
     .line 6
     .line 7
-    invoke-direct {v1, v2, v0}, LX/1rh;-><init>(II)V
+    sput-object v0, LX/4Yi;->A00:[I
 
     .line 8
     .line 9
-    .line 10
-    const/4 v0, 0x2
-
-    .line 11
-    invoke-direct {p0, v1, v0}, LX/4yH;-><init>(LX/1rh;I)V
-
-    .line 12
-    .line 13
-    .line 14
     return-void
+
+    :array_0
+    .array-data 4
+        0x7f0407df
+        0x7f0407e0
+        0x7f0407e1
+        0x7f0407e2
+        0x7f0407e3
+        0x7f0407e4
+        0x7f0407e5
+        0x7f0407e6
+        0x7f0407e7
+        0x7f0407e8
+        0x7f0407e9
+        0x7f0407ea
+        0x7f0407eb
+        0x7f0407ec
+        0x7f0407ed
+        0x7f0407ee
+        0x7f0407ef
+        0x7f0407f0
+        0x7f0407f1
+        0x7f0407f2
+        0x7f0407f3
+    .end array-data
 .end method

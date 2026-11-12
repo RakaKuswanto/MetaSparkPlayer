@@ -1,14 +1,6 @@
-.class public final LX/4qD;
+.class public abstract LX/4qD;
 .super Ljava/lang/Object;
 .source ""
-
-
-# instance fields
-.field public A00:Ljava/util/Map;
-
-.field public A01:Ljava/util/Map;
-
-.field public A02:[Ljava/lang/Object;
 
 
 # direct methods

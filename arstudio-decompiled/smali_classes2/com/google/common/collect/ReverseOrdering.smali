@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/ReverseOrdering;
-.super LX/1eq;
+.super LX/23n;
 .source ""
 
 # interfaces
@@ -11,20 +11,28 @@
 
 
 # instance fields
-.field public final forwardOrder:LX/1eq;
+.field public final forwardOrder:LX/23n;
 
 
 # direct methods
-.method public constructor <init>(LX/1eq;)V
+.method public constructor <init>(LX/23n;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "forwardOrder"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1eq;-><init>()V
+    invoke-direct {p0}, LX/23n;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/1eq;
+    iput-object p1, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/23n;
 
     .line 4
     .line 5
@@ -35,6 +43,14 @@
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     if-ne p1, p0, :cond_0
@@ -60,11 +76,11 @@
 
     .line 9
     .line 10
-    iget-object v1, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/1eq;
+    iget-object v1, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/23n;
 
     .line 11
     .line 12
-    iget-object v0, p1, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/1eq;
+    iget-object v0, p1, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/23n;
 
     .line 13
     .line 14
@@ -90,7 +106,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/1eq;
+    iget-object v0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/23n;
 
     .line 1
     .line 2
@@ -112,7 +128,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -120,7 +136,7 @@
     move-result-object v1
 
     .line 4
-    iget-object v0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/1eq;
+    iget-object v0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:LX/23n;
 
     .line 5
     .line 6
@@ -133,7 +149,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 12
     .line 13

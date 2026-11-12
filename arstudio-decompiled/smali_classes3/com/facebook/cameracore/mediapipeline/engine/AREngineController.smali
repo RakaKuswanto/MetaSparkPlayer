@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5Y4;
+.field public static final Companion:LX/6AY;
 
 .field public static volatile isLibraryLoaded:Z
 
@@ -20,16 +20,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5Y4;
+    new-instance v0, LX/6AY;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5Y4;-><init>()V
+    invoke-direct {v0}, LX/6AY;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->Companion:LX/5Y4;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->Companion:LX/6AY;
 
     .line 6
     .line 7
@@ -40,87 +40,95 @@
     .locals 3
 
     .line 0
-    const/4 v2, 0x1
+    invoke-static {p1, p2, p3}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
-    invoke-static {p1, v2}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
+    const/4 v0, 0x4
+
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p4, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 5
     .line 6
     .line 7
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->Companion:LX/5Y4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
     .line 9
-    monitor-enter v1
-
     .line 10
-    :try_start_0
-    sget-boolean v0, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->isLibraryLoaded:Z
+    sget-object v2, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->Companion:LX/6AY;
 
     .line 11
     .line 12
-    if-nez v0, :cond_0
+    monitor-enter v2
 
     .line 13
+    :try_start_0
+    sget-boolean v0, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->isLibraryLoaded:Z
+
     .line 14
-    sput-boolean v2, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->isLibraryStartLoading:Z
-
     .line 15
-    .line 16
-    const-string v0, "filters-native-android"
+    if-nez v0, :cond_0
 
+    .line 16
     .line 17
+    const/4 v1, 0x1
+
     .line 18
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    sput-boolean v1, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->isLibraryStartLoading:Z
 
     .line 19
     .line 20
+    const-string v0, "filters-native-android"
+
     .line 21
-    sput-boolean v2, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->isLibraryLoaded:Z
+    .line 22
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
+    .line 23
+    .line 24
+    .line 25
+    sput-boolean v1, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->isLibraryLoaded:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 22
-    .line 23
-    :cond_0
-    monitor-exit v1
-
-    .line 24
-    invoke-static {p1, p2, p3, p4}, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->initHybrid(Landroid/content/res/AssetManager;Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/PluginConfigProvider;)Lcom/facebook/jni/HybridData;
-
-    .line 25
     .line 26
     .line 27
-    move-result-object v0
+    :cond_0
+    monitor-exit v2
 
     .line 28
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->mHybridData:Lcom/facebook/jni/HybridData;
+    invoke-static {p1, p2, p3, p4}, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->initHybrid(Landroid/content/res/AssetManager;Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/PluginConfigProvider;)Lcom/facebook/jni/HybridData;
 
     .line 29
     .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->mHybridData:Lcom/facebook/jni/HybridData;
+
+    .line 33
+    .line 34
     return-void
 
-    .line 31
+    .line 35
     :catchall_0
     move-exception v0
 
-    .line 32
-    monitor-exit v1
+    .line 36
+    monitor-exit v2
 
-    .line 33
+    .line 37
     throw v0
 .end method
 
 .method public static final native initHybrid(Landroid/content/res/AssetManager;Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/PluginConfigProvider;)Lcom/facebook/jni/HybridData;
 .end method
 
-.method private final native renderSessionInit(ZZILcom/facebook/gputimer/GPUTimerImpl;Lcom/facebook/hybridlogsink/HybridLogSink;Z)Z
+.method private final native renderSessionInit(ZIILcom/facebook/gputimer/GPUTimerImpl;Lcom/facebook/hybridlogsink/HybridLogSink;Z)Z
 .end method
 
 
@@ -128,7 +136,7 @@
 .method public final native cycleDebugOverlaySetup(Z)V
 .end method
 
-.method public final native doFrame(IIIIIII[F[F[FJJIIZI)I
+.method public final native doFrame(IIII[F[F[FJJIIZI)Z
 .end method
 
 .method public final native getFPS()F
@@ -146,51 +154,61 @@
 .method public final native releaseGl()V
 .end method
 
-.method public final renderSessionInit(ZZILX/5Xz;Lcom/facebook/hybridlogsink/HybridLogSink;Z)Z
-    .locals 1
+.method public final renderSessionInit(ZLX/4FT;ILcom/facebook/gputimer/GPUTimerImpl;Lcom/facebook/hybridlogsink/HybridLogSink;Z)Z
+    .locals 7
 
     .line 0
-    const/4 p1, 0x1
+    const/4 v3, 0x0
 
     .line 1
-    const/4 p2, 0x0
+    const/4 v0, 0x1
 
     .line 2
-    instance-of v0, p4, Lcom/facebook/gputimer/GPUTimerImpl;
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 3
     .line 4
-    if-eqz v0, :cond_0
-
     .line 5
+    const/4 v4, 0x0
+
     .line 6
-    check-cast p4, Lcom/facebook/gputimer/GPUTimerImpl;
+    if-eqz p4, :cond_0
 
     .line 7
     .line 8
-    :goto_0
-    move p3, p2
+    move-object v4, p4
 
     .line 9
-    move p6, p2
+    :cond_0
+    invoke-virtual {p2}, LX/4FT;->getValue()I
 
     .line 10
-    invoke-direct/range {p0 .. p6}, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->renderSessionInit(ZZILcom/facebook/gputimer/GPUTimerImpl;Lcom/facebook/hybridlogsink/HybridLogSink;Z)Z
-
     .line 11
     .line 12
+    move-result v2
+
     .line 13
-    move-result v0
+    move-object v0, p0
 
     .line 14
-    return v0
+    move v1, p1
 
     .line 15
-    :cond_0
-    const/4 p4, 0x0
+    move-object v5, p5
 
     .line 16
-    goto :goto_0
+    move v6, v3
+
+    .line 17
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->renderSessionInit(ZIILcom/facebook/gputimer/GPUTimerImpl;Lcom/facebook/hybridlogsink/HybridLogSink;Z)Z
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    return v0
 .end method
 
 .method public final native resetCurrentEffect()V

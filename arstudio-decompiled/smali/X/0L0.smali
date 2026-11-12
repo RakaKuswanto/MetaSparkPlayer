@@ -1,119 +1,66 @@
-.class public final LX/0L0;
+.class public final synthetic LX/0L0;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0H8;
 
-# static fields
-.field public static final A00:Ljava/util/Set;
 
-.field public static final A01:Ljava/util/Set;
+# instance fields
+.field public final synthetic A00:Lcom/facebook/rti/push/service/FbnsServiceDelegate;
 
-.field public static final A02:Ljava/util/concurrent/ExecutorService;
-
-.field public static final A03:Ljava/util/List;
+.field public final synthetic A01:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/0L0;->A02:Ljava/util/concurrent/ExecutorService;
-
-    .line 5
-    .line 6
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    sput-object v0, LX/0L0;->A01:Ljava/util/Set;
-
-    .line 11
-    .line 12
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    sput-object v0, LX/0L0;->A00:Ljava/util/Set;
-
-    .line 17
-    .line 18
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    sput-object v0, LX/0L0;->A03:Ljava/util/List;
-
-    .line 23
-    .line 24
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Lcom/facebook/rti/push/service/FbnsServiceDelegate;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p1, p0, LX/0L0;->A00:Lcom/facebook/rti/push/service/FbnsServiceDelegate;
+
+    iput-object p2, p0, LX/0L0;->A01:Ljava/lang/String;
+
     return-void
 .end method
 
-.method public static A00()Z
-    .locals 2
+
+# virtual methods
+.method public final ATA(Ljava/lang/String;)V
+    .locals 6
 
     .line 0
-    new-instance v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
+    iget-object v0, p0, LX/0L0;->A00:Lcom/facebook/rti/push/service/FbnsServiceDelegate;
 
     .line 1
     .line 2
-    invoke-direct {v0}, Landroid/app/ActivityManager$RunningAppProcessInfo;-><init>()V
+    iget-object v2, p0, LX/0L0;->A01:Ljava/lang/String;
 
     .line 3
     .line 4
-    .line 5
-    invoke-static {v0}, Landroid/app/ActivityManager;->getMyMemoryState(Landroid/app/ActivityManager$RunningAppProcessInfo;)V
+    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
+    .line 5
     .line 6
     .line 7
+    move-result-object v5
+
     .line 8
-    iget v1, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->importance:I
+    const-string v1, "unreg_called"
 
     .line 9
     .line 10
-    const/16 v0, 0x64
+    const/4 v4, 0x0
 
     .line 11
+    move-object v3, p1
+
     .line 12
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static/range {v0 .. v5}, Lcom/facebook/rti/push/service/FbnsServiceDelegate;->A05(Lcom/facebook/rti/push/service/FbnsServiceDelegate;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     .line 13
     .line 14
     .line 15
-    move-result v0
-
-    .line 16
-    return v0
+    return-void
 .end method

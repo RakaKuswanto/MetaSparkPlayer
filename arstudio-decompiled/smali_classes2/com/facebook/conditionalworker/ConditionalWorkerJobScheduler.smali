@@ -8,21 +8,21 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public A00:Landroid/content/Context;
 
 .field public final A01:Landroid/content/Context;
 
-.field public final A02:LX/0Na;
+.field public final A02:LX/0RP;
 
-.field public final A03:LX/0Na;
+.field public final A03:LX/0RP;
 
-.field public final A04:LX/0Na;
+.field public final A04:LX/0RP;
 
-.field public final A05:LX/0Na;
+.field public final A05:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
@@ -31,11 +31,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AU3:I
+    sget v0, LX/2I6;->AOK:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -43,11 +43,11 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A03:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A03:LX/0RP;
 
     .line 10
     .line 11
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
 
     .line 12
     .line 13
@@ -55,85 +55,74 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A04:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A04:LX/0RP;
 
     .line 16
     .line 17
-    sget v0, LX/2eq;->A6K:I
+    invoke-static {}, LX/2I6;->A02()Landroid/content/Context;
 
     .line 18
     .line 19
-    const/4 v1, 0x0
-
     .line 20
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    move-result-object v1
 
     .line 21
+    iput-object v1, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A00:Landroid/content/Context;
+
     .line 22
     .line 23
-    move-result-object v0
+    sget v0, LX/2I6;->A3T:I
 
     .line 24
-    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A02:LX/0Na;
-
     .line 25
-    .line 26
-    sget v0, LX/2eq;->AEx:I
+    invoke-static {v1, v0}, LX/3FW;->A00(Landroid/content/Context;I)LX/3FW;
 
+    .line 26
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    move-result-object v0
 
     .line 29
+    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A02:LX/0RP;
+
     .line 30
     .line 31
-    move-result-object v0
+    sget v0, LX/2I6;->ABN:I
 
     .line 32
-    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A05:LX/0Na;
-
     .line 33
-    .line 34
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
+    .line 34
     .line 35
     .line 36
-    .line 37
     move-result-object v0
+
+    .line 37
+    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A05:LX/0RP;
 
     .line 38
-    iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A00:LX/1zG;
-
     .line 39
-    .line 40
-    sget v0, LX/2eq;->A5B:I
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
+    .line 40
     .line 41
     .line 42
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    move-result-object v0
 
     .line 43
-    .line 44
-    .line 45
-    move-result-object v0
-
-    .line 46
-    check-cast v0, Landroid/content/Context;
-
-    .line 47
-    .line 48
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    .line 49
-    .line 50
-    .line 51
+    .line 44
+    .line 45
+    .line 46
     move-result-object v0
 
-    .line 52
+    .line 47
     iput-object v0, p0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A01:Landroid/content/Context;
 
-    .line 53
-    .line 54
+    .line 48
+    .line 49
     return-void
 .end method
 
@@ -161,7 +150,7 @@
 
     .line 8
     .line 9
-    invoke-static {p0, v0}, LX/0Yj;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-static {p0, v0}, LX/0X7;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 10
     .line 11
@@ -174,152 +163,154 @@
     .line 14
     .line 15
     .line 16
-    const-string v0, "alarm_manager"
+    const-string/jumbo v0, "alarm_manager"
 
     .line 17
     .line 18
+    .line 19
     invoke-virtual {v6, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 19
     .line 20
     .line 21
+    .line 22
     const-string v2, "FOR_CONDITIONAL_WORKER_SERVICE"
 
-    .line 22
     .line 23
-    sget-object v0, LX/2vE;->A01:LX/2vE;
-
     .line 24
+    sget-object v0, LX/2Eb;->A01:LX/2Eb;
+
     .line 25
+    .line 26
     if-nez v0, :cond_0
 
-    .line 26
     .line 27
-    new-instance v0, LX/2vE;
-
     .line 28
-    .line 29
-    invoke-direct {v0}, LX/2vE;-><init>()V
+    new-instance v0, LX/2Eb;
 
+    .line 29
     .line 30
+    invoke-direct {v0}, LX/2Eb;-><init>()V
+
     .line 31
     .line 32
-    sput-object v0, LX/2vE;->A01:LX/2vE;
-
     .line 33
+    sput-object v0, LX/2Eb;->A01:LX/2Eb;
+
     .line 34
-    :cond_0
-    iget-object v0, v0, LX/2vE;->A00:LX/2iF;
-
     .line 35
-    .line 36
-    iget-object v0, v0, LX/2iF;->A00:LX/0E6;
+    :cond_0
+    iget-object v0, v0, LX/2Eb;->A00:LX/2EZ;
 
+    .line 36
     .line 37
+    iget-object v0, v0, LX/2EZ;->A00:LX/0DD;
+
     .line 38
+    .line 39
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    .line 39
     .line 40
     .line 41
-    move-result-object v0
-
     .line 42
-    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    move-result-object v0
 
     .line 43
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
     .line 44
     .line 45
+    .line 46
     move-result-object v1
 
-    .line 46
-    const-string v0, "com.facebook.intent.action.%s.%s"
-
     .line 47
-    .line 48
-    invoke-static {v0, v1, v2}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String;
+    const-string/jumbo v0, "com.facebook.intent.action.%s.%s"
 
+    .line 48
     .line 49
     .line 50
+    invoke-static {v0, v1, v2}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String;
+
     .line 51
+    .line 52
+    .line 53
     move-result-object v0
 
-    .line 52
+    .line 54
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 53
-    .line 54
     .line 55
-    const/high16 v5, 0x20000000
-
     .line 56
     .line 57
-    if-eqz p1, :cond_1
+    const/high16 v5, 0x20000000
 
     .line 58
     .line 59
-    const/high16 v5, 0x8000000
+    if-eqz p1, :cond_1
 
     .line 60
     .line 61
-    :cond_1
-    new-instance v4, LX/0IB;
+    const/high16 v5, 0x8000000
 
     .line 62
     .line 63
-    invoke-direct {v4}, LX/0IB;-><init>()V
+    :cond_1
+    new-instance v4, LX/0Jt;
 
     .line 64
     .line 65
-    .line 66
-    iget-wide v2, v4, LX/05o;->A01:J
+    invoke-direct {v4}, LX/0Jt;-><init>()V
 
+    .line 66
     .line 67
     .line 68
-    const-wide/16 v0, 0x8
+    iget-wide v2, v4, LX/0Jn;->A01:J
 
     .line 69
     .line 70
-    or-long/2addr v2, v0
+    const-wide/16 v0, 0x8
 
     .line 71
-    iput-wide v2, v4, LX/05o;->A01:J
-
     .line 72
+    or-long/2addr v2, v0
+
     .line 73
-    invoke-static {p0, v6, v4}, LX/0Yi;->A19(Landroid/content/Context;Landroid/content/Intent;LX/0IB;)V
+    iput-wide v2, v4, LX/0Jn;->A01:J
 
     .line 74
     .line 75
-    .line 76
-    invoke-virtual {v4, p0, v5}, LX/05o;->A02(Landroid/content/Context;I)Landroid/app/PendingIntent;
+    invoke-static {p0, v6, v4}, LX/0X6;->A1D(Landroid/content/Context;Landroid/content/Intent;LX/0Jt;)V
 
+    .line 76
     .line 77
     .line 78
+    invoke-virtual {v4, p0, v5}, LX/0Jn;->A02(Landroid/content/Context;I)Landroid/app/PendingIntent;
+
     .line 79
+    .line 80
+    .line 81
     move-result-object v0
 
-    .line 80
+    .line 82
     sput-object v0, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A06:Landroid/app/PendingIntent;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 81
-    .line 82
+    .line 83
+    .line 84
     :cond_2
     monitor-exit v7
 
-    .line 83
+    .line 85
     return-object v0
 
-    .line 84
+    .line 86
     :catchall_0
     move-exception v0
 
-    .line 85
+    .line 87
     monitor-exit v7
 
-    .line 86
+    .line 88
     throw v0
 .end method
 
@@ -333,11 +324,11 @@
 
     .line 1
     .line 2
-    iget-object v9, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A03:LX/0Na;
+    iget-object v10, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A03:LX/0RP;
 
     .line 3
     .line 4
-    invoke-interface {v9}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v10}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 5
     .line 6
@@ -358,7 +349,7 @@
     move-result-wide v2
 
     .line 15
-    invoke-interface {v9}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v10}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 16
     .line 17
@@ -379,7 +370,7 @@
     move-result-wide v6
 
     .line 26
-    invoke-interface {v9}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v10}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 27
     .line 28
@@ -387,15 +378,15 @@
     move-result-object v0
 
     .line 30
-    check-cast v0, LX/0uA;
+    check-cast v0, LX/0jN;
 
     .line 31
     .line 32
-    iget-object v0, v0, LX/0uA;->A01:LX/0Na;
+    iget-object v0, v0, LX/0jN;->A00:LX/0RP;
 
     .line 33
     .line 34
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 35
     .line 36
@@ -403,22 +394,22 @@
     move-result-object v4
 
     .line 38
-    const-wide v0, 0x82000d0032006bL
+    const-wide v0, 0x82000d0032006cL
 
     .line 39
     .line 40
     .line 41
     .line 42
     .line 43
-    invoke-interface {v4, v0, v1}, LX/35B;->AIM(J)J
+    check-cast v4, LX/302;
 
     .line 44
     .line 45
-    .line 46
-    move-result-wide v0
+    sget-object v9, LX/30J;->A05:LX/30J;
 
+    .line 46
     .line 47
-    invoke-virtual {v5, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-virtual {v4, v9, v0, v1}, LX/302;->AGt(LX/30J;J)J
 
     .line 48
     .line 49
@@ -426,284 +417,293 @@
     move-result-wide v0
 
     .line 51
-    invoke-static {v6, v7, v0, v1}, Ljava/lang/Math;->min(JJ)J
+    invoke-virtual {v5, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     .line 52
     .line 53
     .line 54
-    move-result-wide v13
+    move-result-wide v0
 
     .line 55
-    iget-object v4, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A05:LX/0Na;
+    invoke-static {v6, v7, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     .line 56
     .line 57
-    invoke-interface {v4}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 58
-    .line 59
-    .line 60
-    move-result-object v4
+    move-result-wide v13
 
+    .line 59
+    iget-object v4, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A05:LX/0RP;
+
+    .line 60
     .line 61
-    check-cast v4, LX/3kG;
+    invoke-interface {v4}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 62
     .line 63
-    const/4 v6, 0x1
-
     .line 64
-    if-eqz v4, :cond_2
+    move-result-object v4
 
     .line 65
-    .line 66
-    const-wide/16 v15, -0x1
+    check-cast v4, LX/2EQ;
 
+    .line 66
     .line 67
+    const/4 v6, 0x1
+
     .line 68
-    const-wide/16 v11, -0x1
+    if-eqz v4, :cond_2
 
     .line 69
     .line 70
-    invoke-interface {v9}, LX/0Na;->get()Ljava/lang/Object;
+    const-wide/16 v15, -0x1
 
     .line 71
     .line 72
-    .line 73
-    move-result-object v6
+    const-wide/16 v11, -0x1
 
+    .line 73
     .line 74
-    check-cast v6, LX/0uA;
+    invoke-interface {v10}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 75
     .line 76
-    iget-object v6, v6, LX/0uA;->A01:LX/0Na;
-
     .line 77
+    move-result-object v6
+
     .line 78
-    invoke-static {v6}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    check-cast v6, LX/0jN;
 
     .line 79
     .line 80
-    .line 81
-    move-result-object v9
+    iget-object v6, v6, LX/0jN;->A00:LX/0RP;
 
+    .line 81
     .line 82
-    const-wide v6, 0x82000d002e0069L
+    invoke-static {v6}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 83
     .line 84
     .line 85
-    .line 86
-    .line 87
-    invoke-interface {v9, v6, v7}, LX/35B;->AIM(J)J
+    move-result-object v10
 
+    .line 86
+    const-wide v6, 0x82000d002e006aL
+
+    .line 87
     .line 88
     .line 89
     .line 90
-    move-result-wide v6
-
     .line 91
-    invoke-virtual {v5, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-static {v9, v10, v6, v7}, LX/302;->A01(LX/30J;Ljava/lang/Object;J)J
 
     .line 92
     .line 93
     .line 94
-    move-result-wide v9
+    move-result-wide v6
 
     .line 95
-    cmp-long v5, v2, v0
+    invoke-virtual {v5, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     .line 96
     .line 97
-    if-lez v5, :cond_1
-
     .line 98
+    move-result-wide v9
+
     .line 99
-    iget-object v5, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A04:LX/0Na;
+    cmp-long v5, v2, v0
 
     .line 100
     .line 101
-    invoke-static {v5}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
+    if-lez v5, :cond_1
 
     .line 102
     .line 103
-    .line 104
-    move-result-object v6
+    iget-object v5, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A04:LX/0RP;
 
+    .line 104
     .line 105
-    const-string v5, "Suggested latency is "
+    invoke-static {v5}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
 
     .line 106
     .line 107
-    invoke-static {v2, v3, v5}, LX/00I;->A0A(JLjava/lang/String;)Ljava/lang/String;
-
     .line 108
-    .line 109
-    .line 110
-    move-result-object v3
+    move-result-object v6
 
+    .line 109
+    const-string v5, "Suggested latency is "
+
+    .line 110
     .line 111
-    const-string v2, "CWJobScheduler-HardMax"
+    invoke-static {v5, v2, v3}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
     .line 112
     .line 113
-    invoke-interface {v6, v2, v3}, LX/0Gk;->AoW(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 114
-    .line 115
-    .line 116
-    add-long/2addr v0, v9
+    move-result-object v3
 
+    .line 115
+    const-string v2, "CWJobScheduler-HardMax"
+
+    .line 116
     .line 117
-    move-wide v11, v0
+    invoke-interface {v6, v2, v3}, LX/0Ft;->AnC(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 118
+    .line 119
+    .line 120
+    add-long/2addr v0, v9
+
+    .line 121
+    move-wide v11, v0
+
+    .line 122
     const/4 v10, 0x0
 
-    .line 119
-    :goto_0
-    invoke-static {}, LX/3kV;->A00()LX/3Mq;
-
-    .line 120
-    .line 121
-    .line 122
-    move-result-object v8
-
     .line 123
-    invoke-static {}, LX/0E5;->A01()I
+    :goto_0
+    invoke-static {}, LX/27I;->A00()LX/27J;
 
     .line 124
     .line 125
     .line 126
-    move-result v1
+    move-result-object v8
 
     .line 127
-    const-string v0, "__VERSION_CODE"
+    invoke-static {}, LX/0DC;->A01()I
 
     .line 128
     .line 129
-    invoke-virtual {v8, v0, v1}, LX/3Mq;->A00(Ljava/lang/String;I)V
-
     .line 130
-    .line 131
-    .line 132
-    const v9, 0x7f0a0347
+    move-result v1
 
+    .line 131
+    const-string/jumbo v0, "__VERSION_CODE"
+
+    .line 132
     .line 133
     .line 134
-    .line 135
-    const/16 v17, 0x0
+    invoke-virtual {v8, v0, v1}, LX/27J;->A00(Ljava/lang/String;I)V
 
+    .line 135
     .line 136
     .line 137
-    new-instance v7, LX/3kP;
+    const v9, 0x7f09030d
 
     .line 138
     .line 139
-    invoke-direct/range {v7 .. v17}, LX/3kP;-><init>(LX/3Mq;IIJJJZ)V
-
     .line 140
+    const/16 v17, 0x0
+
     .line 141
     .line 142
-    invoke-static {v4, v9}, LX/3kG;->A00(LX/3kG;I)Ljava/lang/Class;
+    new-instance v7, LX/27G;
 
     .line 143
     .line 144
+    invoke-direct/range {v7 .. v17}, LX/27G;-><init>(LX/27J;IIJJJZ)V
+
     .line 145
-    move-result-object v0
-
     .line 146
-    if-eqz v0, :cond_0
-
     .line 147
-    .line 148
-    invoke-virtual {v4, v7, v0}, LX/3kG;->A01(LX/3kP;Ljava/lang/Class;)V
+    invoke-static {v4, v9}, LX/2EQ;->A00(LX/2EQ;I)Ljava/lang/Class;
 
+    .line 148
     .line 149
     .line 150
+    move-result-object v0
+
     .line 151
+    if-eqz v0, :cond_0
+
+    .line 152
+    .line 153
+    invoke-virtual {v4, v7, v0}, LX/2EQ;->A01(LX/27G;Ljava/lang/Class;)V
+
+    .line 154
+    .line 155
+    .line 156
     :cond_0
     return-void
 
-    .line 152
+    .line 157
     :cond_1
     add-long v15, v13, v9
 
-    .line 153
-    .line 154
+    .line 158
+    .line 159
     const/4 v10, 0x1
 
-    .line 155
+    .line 160
     goto :goto_0
 
-    .line 156
-    :cond_2
-    iget-object v0, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A02:LX/0Na;
-
-    .line 157
-    .line 158
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 159
-    .line 160
     .line 161
-    move-result-object v15
+    :cond_2
+    iget-object v0, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A02:LX/0RP;
 
     .line 162
-    check-cast v15, Landroid/app/AlarmManager;
-
     .line 163
-    .line 164
-    const/16 v16, 0x3
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
+    .line 164
     .line 165
     .line 166
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    move-result-object v15
 
     .line 167
+    check-cast v15, Landroid/app/AlarmManager;
+
     .line 168
     .line 169
-    move-result-wide v17
+    const/16 v16, 0x3
 
     .line 170
-    add-long v17, v17, v13
-
     .line 171
-    .line 172
-    invoke-interface {v9}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
+    .line 172
     .line 173
     .line 174
+    move-result-wide v17
+
     .line 175
-    const-wide/16 v0, 0xb4
+    add-long v17, v17, v13
 
     .line 176
     .line 177
-    invoke-virtual {v5, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-interface {v10}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 178
     .line 179
     .line 180
-    move-result-wide v19
+    const-wide/16 v0, 0xb4
 
     .line 181
-    iget-object v0, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A01:Landroid/content/Context;
-
     .line 182
-    .line 183
-    invoke-static {v0, v6}, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A00(Landroid/content/Context;Z)Landroid/app/PendingIntent;
+    invoke-virtual {v5, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
+    .line 183
     .line 184
     .line 185
+    move-result-wide v19
+
     .line 186
-    move-result-object v21
+    iget-object v0, v8, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A01:Landroid/content/Context;
 
     .line 187
-    invoke-virtual/range {v15 .. v21}, Landroid/app/AlarmManager;->setInexactRepeating(IJJLandroid/app/PendingIntent;)V
-
     .line 188
+    invoke-static {v0, v6}, Lcom/facebook/conditionalworker/ConditionalWorkerJobScheduler;->A00(Landroid/content/Context;Z)Landroid/app/PendingIntent;
+
     .line 189
     .line 190
+    .line 191
+    move-result-object v21
+
+    .line 192
+    invoke-virtual/range {v15 .. v21}, Landroid/app/AlarmManager;->setInexactRepeating(IJJLandroid/app/PendingIntent;)V
+
+    .line 193
+    .line 194
+    .line 195
     return-void
 .end method

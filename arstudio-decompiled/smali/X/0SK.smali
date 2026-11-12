@@ -3,173 +3,120 @@
 .source ""
 
 # interfaces
-.implements LX/07B;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MqttClient$10"
+
+
+# instance fields
+.field public final synthetic A00:I
+
+.field public final synthetic A01:LX/0S2;
+
+.field public final synthetic A02:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/0S2;Ljava/lang/Object;I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/0SK;->A01:LX/0S2;
 
     .line 1
     .line 2
+    iput p3, p0, LX/0SK;->A00:I
+
     .line 3
+    .line 4
+    iput-object p2, p0, LX/0SK;->A02:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final AcD(ILjava/lang/Object;)V
-    .locals 3
+.method public final run()V
+    .locals 5
 
     .line 0
-    packed-switch p1, :pswitch_data_0
+    :try_start_0
+    iget-object v0, p0, LX/0SK;->A01:LX/0S2;
 
     .line 1
     .line 2
+    iget-object v2, v0, LX/0S2;->A0G:LX/0S0;
+
     .line 3
-    :pswitch_0
-    const-string v2, ""
-
     .line 4
-    .line 5
-    :goto_0
-    const/4 v0, 0x6
+    iget v1, p0, LX/0SK;->A00:I
 
+    .line 5
     .line 6
-    const-string v1, "ProfileInstaller"
+    iget-object v0, p0, LX/0SK;->A02:Ljava/lang/Object;
 
     .line 7
     .line 8
-    if-eq p1, v0, :cond_0
+    invoke-interface {v2, v1, v0}, LX/0S0;->AjN(ILjava/lang/Object;)V
 
     .line 9
     .line 10
-    const/4 v0, 0x7
-
     .line 11
-    if-eq p1, v0, :cond_0
+    return-void
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 12
+    :catchall_0
+    move-exception v4
+
     .line 13
-    const/16 v0, 0x8
+    iget-object v3, p0, LX/0SK;->A01:LX/0S2;
 
     .line 14
     .line 15
-    if-eq p1, v0, :cond_0
+    iget-object v2, v3, LX/0S2;->A0F:LX/0MO;
 
     .line 16
     .line 17
-    return-void
+    const-string v1, "Mqtt Uncaught Exception"
 
     .line 18
-    :pswitch_1
-    const-string v2, "RESULT_INSTALL_SUCCESS"
-
     .line 19
-    .line 20
-    goto :goto_0
+    const-string v0, "sendPubAck"
 
+    .line 20
     .line 21
-    :pswitch_2
-    const-string v2, "RESULT_ALREADY_INSTALLED"
+    invoke-virtual {v2, v1, v0, v4}, LX/0MO;->A06(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 22
     .line 23
-    goto :goto_0
-
     .line 24
-    :pswitch_3
-    const-string v2, "RESULT_UNSUPPORTED_ART_VERSION"
+    invoke-static {v4}, LX/0Rl;->getFromWriteException(Ljava/lang/Throwable;)LX/0Rl;
 
     .line 25
     .line 26
-    goto :goto_0
-
     .line 27
-    :pswitch_4
-    const-string v2, "RESULT_NOT_WRITABLE"
+    move-result-object v1
 
     .line 28
-    .line 29
-    goto :goto_0
+    sget-object v0, LX/0Rr;->PUBACK:LX/0Rr;
 
+    .line 29
     .line 30
-    :pswitch_5
-    const-string v2, "RESULT_DESIRED_FORMAT_UNSUPPORTED"
+    invoke-static {v3, v0, v1, v4}, LX/0S2;->A03(LX/0S2;LX/0Rr;LX/0Rl;Ljava/lang/Throwable;)V
 
     .line 31
     .line 32
-    goto :goto_0
-
     .line 33
-    :pswitch_6
-    const-string v2, "RESULT_BASELINE_PROFILE_NOT_FOUND"
-
-    .line 34
-    .line 35
-    goto :goto_0
-
-    .line 36
-    :pswitch_7
-    const-string v2, "RESULT_IO_EXCEPTION"
-
-    .line 37
-    .line 38
-    goto :goto_0
-
-    .line 39
-    :pswitch_8
-    const-string v2, "RESULT_PARSE_EXCEPTION"
-
-    .line 40
-    .line 41
-    goto :goto_0
-
-    .line 42
-    :pswitch_9
-    const-string v2, "RESULT_INSTALL_SKIP_FILE_SUCCESS"
-
-    .line 43
-    .line 44
-    goto :goto_0
-
-    .line 45
-    :pswitch_a
-    const-string v2, "RESULT_DELETE_SKIP_FILE_SUCCESS"
-
-    .line 46
-    .line 47
-    goto :goto_0
-
-    .line 48
-    :cond_0
-    check-cast p2, Ljava/lang/Throwable;
-
-    .line 49
-    .line 50
-    invoke-static {v1, v2, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 51
-    .line 52
-    .line 53
     return-void
-
-    .line 54
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-        :pswitch_0
-        :pswitch_9
-        :pswitch_a
-    .end packed-switch
 .end method

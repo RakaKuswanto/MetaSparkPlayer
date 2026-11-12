@@ -82,7 +82,7 @@
 
     .line 30
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 31
     :try_start_1
@@ -93,8 +93,19 @@
     .line 32
     .line 33
     .line 34
+    throw v1
+
+    .line 35
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 36
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 37
+    .line 38
+    .line 39
+    throw v1
 .end method
 
 .method public static loadAttachment(Ljava/io/InputStream;I)Ljava/lang/String;
@@ -247,11 +258,11 @@
 .end method
 
 .method public static validateGzip(Ljava/io/File;)Z
-    .locals 3
+    .locals 4
 
     .line 0
     :try_start_0
-    invoke-static {p0}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
+    invoke-static {p0}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
 
     .line 1
     .line 2
@@ -262,11 +273,11 @@
 
     .line 4
     :try_start_1
-    new-instance v2, Ljava/util/zip/GZIPInputStream;
+    new-instance v3, Ljava/util/zip/GZIPInputStream;
 
     .line 5
     .line 6
-    invoke-direct {v2, p0}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {v3, p0}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
@@ -274,131 +285,177 @@
     .line 8
     .line 9
     :try_start_2
-    invoke-static {v2}, LX/001;->A07(Ljava/io/InputStream;)Ljava/io/BufferedReader;
+    new-instance v0, Ljava/io/InputStreamReader;
 
     .line 10
     .line 11
+    invoke-direct {v0, v3}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+
     .line 12
-    move-result-object v1
+    .line 13
+    .line 14
+    new-instance v2, Ljava/io/BufferedReader;
+
+    .line 15
+    .line 16
+    invoke-direct {v2, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 13
-    :goto_0
-    :try_start_3
-    invoke-virtual {v1}, Ljava/io/Reader;->ready()Z
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
     .line 17
-    if-eqz v0, :cond_0
-
     .line 18
     .line 19
-    invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    :goto_0
+    :try_start_3
+    invoke-virtual {v2}, Ljava/io/Reader;->ready()Z
 
     .line 20
     .line 21
     .line 22
+    move-result v0
+
+    .line 23
+    if-eqz v0, :cond_0
+
+    .line 24
+    .line 25
+    invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    .line 26
+    .line 27
+    .line 28
     goto :goto_0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 23
+    .line 29
     :cond_0
     :try_start_4
-    invoke-virtual {v1}, Ljava/io/Reader;->close()V
+    invoke-virtual {v2}, Ljava/io/Reader;->close()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    .line 24
-    .line 25
-    .line 26
-    :try_start_5
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_4
-
-    .line 27
-    .line 28
-    .line 29
-    :try_start_6
-    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
     .line 30
     .line 31
     .line 32
-    const/4 v0, 0x1
+    :try_start_5
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
     .line 33
-    return v0
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
-
     .line 34
-    :catchall_0
-    move-exception v0
-
     .line 35
-    :try_start_7
-    invoke-virtual {v1}, Ljava/io/Reader;->close()V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+    :try_start_6
+    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
     .line 36
     .line 37
     .line 38
+    const/4 v0, 0x1
+
+    .line 39
+    return v0
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
+
+    .line 40
+    :catchall_0
+    move-exception v1
+
+    .line 41
+    :try_start_7
+    invoke-virtual {v2}, Ljava/io/Reader;->close()V
+
+    .line 42
+    .line 43
+    .line 44
+    goto :goto_1
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    .line 45
     :catchall_1
+    move-exception v0
+
+    .line 46
     :try_start_8
-    throw v0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 47
+    .line 48
+    .line 49
+    :goto_1
+    throw v1
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 39
+    .line 50
     :catchall_2
-    move-exception v0
+    move-exception v1
 
-    .line 40
+    .line 51
     :try_start_9
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+
+    .line 52
+    .line 53
+    .line 54
+    goto :goto_2
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 41
-    .line 42
-    .line 43
+    .line 55
     :catchall_3
+    move-exception v0
+
+    .line 56
     :try_start_a
-    throw v0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 57
+    .line 58
+    .line 59
+    :goto_2
+    throw v1
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_4
 
-    .line 44
+    .line 60
     :catchall_4
-    move-exception v0
+    move-exception v1
 
-    .line 45
+    .line 61
     :try_start_b
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
+
+    .line 62
+    .line 63
+    .line 64
+    goto :goto_3
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_5
 
-    .line 46
-    .line 47
-    .line 48
+    .line 65
     :catchall_5
+    move-exception v0
+
+    .line 66
     :try_start_c
-    throw v0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 67
+    .line 68
+    .line 69
+    :goto_3
+    throw v1
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_0
 
-    .line 49
+    .line 70
     :catch_0
     const/4 v0, 0x0
 
-    .line 50
+    .line 71
     return v0
 .end method

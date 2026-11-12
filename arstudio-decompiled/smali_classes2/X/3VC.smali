@@ -1,31 +1,30 @@
-.class public final LX/3VC;
-.super Ljava/lang/Object;
+.class public abstract LX/3VC;
+.super LX/3Um;
 .source ""
 
 
-# instance fields
-.field public final A00:J
+# static fields
+.field public static volatile A02:LX/5Z7;
 
-.field public final A01:LX/3RF;
+
+# instance fields
+.field public A00:I
+
+.field public A01:I
 
 
 # direct methods
-.method public constructor <init>(LX/3RF;J)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Executor;I)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
     .line 1
+    invoke-direct {p0, v0, p1, p2}, LX/3Um;-><init>(Landroid/graphics/Paint;Ljava/util/concurrent/Executor;I)V
+
     .line 2
     .line 3
-    iput-object p1, p0, LX/3VC;->A01:LX/3RF;
-
     .line 4
-    .line 5
-    iput-wide p2, p0, LX/3VC;->A00:J
-
-    .line 6
-    .line 7
     return-void
 .end method

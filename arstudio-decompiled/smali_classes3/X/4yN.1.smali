@@ -1,50 +1,54 @@
 .class public final LX/4yN;
-.super LX/4yH;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final A00:LX/4yN;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "zzag"
+
+
+# instance fields
+.field public final synthetic A00:LX/4yL;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, LX/4yN;
-
-    invoke-direct {v0}, LX/4yN;-><init>()V
-
-    sput-object v0, LX/4yN;->A00:LX/4yN;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(LX/4yL;)V
+    .locals 0
 
     .line 0
-    const v0, 0x3ffffffe    # 1.9999998f
+    iput-object p1, p0, LX/4yN;->A00:LX/4yL;
 
     .line 1
     .line 2
-    .line 3
-    new-instance v1, LX/1rh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    invoke-direct {v1, v0, v0}, LX/1rh;-><init>(II)V
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4yN;->A00:LX/4yL;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/4yL;->A00:LX/4yO;
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, LX/4yO;->A0M()V
+
+    .line 5
     .line 6
     .line 7
-    .line 8
-    const/4 v0, 0x0
-
-    .line 9
-    invoke-direct {p0, v1, v0}, LX/4yH;-><init>(LX/1rh;I)V
-
-    .line 10
-    .line 11
-    .line 12
     return-void
 .end method

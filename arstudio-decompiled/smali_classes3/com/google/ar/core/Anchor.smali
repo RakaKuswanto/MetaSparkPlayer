@@ -70,6 +70,9 @@
 .method private native nativeGetPose(JJ)Lcom/google/ar/core/Pose;
 .end method
 
+.method private native nativeGetTerrainAnchorState(JJ)I
+.end method
+
 .method private native nativeGetTrackingState(JJ)I
 .end method
 
@@ -174,11 +177,6 @@
     .line 12
     .line 13
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 14
-    .line 15
-    .line 16
     return-void
 .end method
 
@@ -268,6 +266,41 @@
     move-result-object v0
 
     .line 10
+    return-object v0
+.end method
+
+.method public getTerrainAnchorState()Lcom/google/ar/core/Anchor$TerrainAnchorState;
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, Lcom/google/ar/core/Anchor;->session:Lcom/google/ar/core/Session;
+
+    .line 1
+    .line 2
+    iget-wide v2, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 3
+    .line 4
+    iget-wide v0, p0, Lcom/google/ar/core/Anchor;->nativeHandle:J
+
+    .line 5
+    .line 6
+    invoke-direct {p0, v2, v3, v0, v1}, Lcom/google/ar/core/Anchor;->nativeGetTerrainAnchorState(JJ)I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    invoke-static {v0}, Lcom/google/ar/core/Anchor$TerrainAnchorState;->forNumber(I)Lcom/google/ar/core/Anchor$TerrainAnchorState;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
     return-object v0
 .end method
 

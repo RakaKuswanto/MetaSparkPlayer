@@ -1,134 +1,65 @@
 .class public final LX/06Y;
-.super Ljava/lang/Object;
+.super Landroid/transition/Transition$EpicenterCallback;
 .source ""
 
 
-# static fields
-.field public static final A02:LX/06Y;
-
-
 # instance fields
-.field public final A00:Ljava/util/Map;
+.field public final synthetic A00:Landroid/graphics/Rect;
 
-.field public final A01:Ljava/util/Set;
+.field public final synthetic A01:LX/0UT;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/graphics/Rect;LX/0UT;)V
+    .locals 0
 
     .line 0
-    invoke-static {}, LX/1T7;->A03()LX/1V7;
+    iput-object p2, p0, LX/06Y;->A01:LX/0UT;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v2
+    iput-object p1, p0, LX/06Y;->A00:Landroid/graphics/Rect;
 
+    .line 3
     .line 4
-    invoke-static {}, LX/1Tp;->A05()LX/1Th;
+    invoke-direct {p0}, Landroid/transition/Transition$EpicenterCallback;-><init>()V
 
     .line 5
     .line 6
     .line 7
-    move-result-object v1
-
-    .line 8
-    new-instance v0, LX/06Y;
-
-    .line 9
-    .line 10
-    invoke-direct {v0, v1, v2}, LX/06Y;-><init>(Ljava/util/Map;Ljava/util/Set;)V
-
-    .line 11
-    .line 12
-    .line 13
-    sput-object v0, LX/06Y;->A02:LX/06Y;
-
-    .line 14
-    .line 15
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/Map;Ljava/util/Set;)V
-    .locals 4
+
+# virtual methods
+.method public final onGetEpicenter(Landroid/transition/Transition;)Landroid/graphics/Rect;
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v1, p0, LX/06Y;->A00:Landroid/graphics/Rect;
 
     .line 1
     .line 2
+    if-eqz v1, :cond_0
+
     .line 3
-    iput-object p2, p0, LX/06Y;->A01:Ljava/util/Set;
-
     .line 4
-    .line 5
-    new-instance v3, Ljava/util/LinkedHashMap;
+    invoke-virtual {v1}, Landroid/graphics/Rect;->isEmpty()Z
 
+    .line 5
     .line 6
     .line 7
-    invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
-
-    .line 8
-    .line 9
-    .line 10
-    invoke-static {p1}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v2
-
-    .line 14
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 15
-    .line 16
-    .line 17
     move-result v0
 
-    .line 18
-    if-eqz v0, :cond_0
+    .line 8
+    if-eqz v0, :cond_1
 
-    .line 19
-    .line 20
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v1
-
-    .line 28
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    invoke-virtual {v3, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 33
-    .line 34
-    .line 35
-    goto :goto_0
-
-    .line 36
+    .line 9
+    .line 10
     :cond_0
-    iput-object v3, p0, LX/06Y;->A00:Ljava/util/Map;
+    const/4 v1, 0x0
 
-    .line 37
-    .line 38
-    return-void
+    .line 11
+    :cond_1
+    return-object v1
 .end method

@@ -168,9 +168,19 @@
 
 .field public static final FirstByteFlushed:Ljava/lang/String; = "first_byte_flushed"
 
+.field public static final FizzECHConfigId:Ljava/lang/String; = "fizz_ech_config_id"
+
+.field public static final FizzECHDisposition:Ljava/lang/String; = "fizz_ech_disposition"
+
+.field public static final FizzECHRetryUsed:Ljava/lang/String; = "fizz_ech_retry_used"
+
+.field public static final FizzECHSNI:Ljava/lang/String; = "fizz_ech_sni"
+
 .field public static final FizzEarlyDataType:Ljava/lang/String; = "fizz_early_data_type"
 
 .field public static final FizzHandshakeSuccess:Ljava/lang/String; = "fizz_handshake_success"
+
+.field public static final FizzNamedGroup:Ljava/lang/String; = "fizz_named_group"
 
 .field public static final FizzProtocolVersion:Ljava/lang/String; = "fizz_protocol_version"
 
@@ -446,7 +456,7 @@
 
 .field public static final RequestID:Ljava/lang/String; = "request_id"
 
-.field public static final RequestSendTime:Ljava/lang/String; = "wire request time in liger epoch"
+.field public static final RequestSendTime:Ljava/lang/String; = "request_send_time"
 
 .field public static final RequestsWaited:Ljava/lang/String; = "requests_waited"
 

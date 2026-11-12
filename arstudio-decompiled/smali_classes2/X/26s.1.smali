@@ -1,127 +1,72 @@
-.class public final LX/26s;
-.super LX/26q;
+.class public abstract LX/26s;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/lang/Object;
+# static fields
+.field public static final A00:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/26q;-><init>()V
+    new-instance v0, Landroid/graphics/Rect;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/26s;->A00:Ljava/lang/Object;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    sput-object v0, LX/26s;->A00:Landroid/graphics/Rect;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public static final A00(Landroid/view/View;LX/2Db;)V
+    .locals 2
 
     .line 0
-    const/4 v2, 0x1
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
-    if-eq p1, p0, :cond_0
-
     .line 2
-    .line 3
-    const/4 v2, 0x0
+    const/16 v0, 0x14
 
+    .line 3
     .line 4
-    if-eqz p1, :cond_0
+    if-lt v1, v0, :cond_0
 
     .line 5
     .line 6
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, LX/284;
 
     .line 7
     .line 8
+    invoke-direct {v0, p0, p1}, LX/284;-><init>(Landroid/view/View;LX/2Db;)V
+
     .line 9
-    move-result-object v1
-
     .line 10
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 11
+    check-cast v0, Landroid/view/View$OnApplyWindowInsetsListener;
+
     .line 12
     .line 13
-    move-result-object v0
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
 
     .line 14
-    if-ne v1, v0, :cond_0
-
     .line 15
     .line 16
-    check-cast p1, LX/26s;
+    invoke-static {p0}, LX/03U;->A0S(Landroid/view/View;)V
 
     .line 17
     .line 18
-    iget-object v1, p0, LX/26s;->A00:Ljava/lang/Object;
-
     .line 19
-    .line 20
-    iget-object v0, p1, LX/26s;->A00:Ljava/lang/Object;
-
-    .line 21
-    .line 22
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 23
-    .line 24
-    .line 25
-    move-result v2
-
-    .line 26
     :cond_0
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/26s;->A00:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/26s;->A00:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
+    return-void
 .end method

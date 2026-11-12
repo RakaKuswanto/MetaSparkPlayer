@@ -1,141 +1,115 @@
-.class public final LX/5qa;
-.super Ljava/lang/Object;
+.class public final LX/5qA;
+.super LX/5q7;
 .source ""
-
-# interfaces
-.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
 
 # instance fields
-.field public final synthetic A00:LX/5pf;
+.field public A00:LX/5qB;
 
 
 # direct methods
-.method public constructor <init>(LX/5pf;)V
-    .locals 0
+.method public constructor <init>(Lcom/google/common/collect/ImmutableCollection;Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "futures",
+            "allMustSucceed",
+            "listenerExecutor",
+            "callable"
+        }
+    .end annotation
 
     .line 0
-    iput-object p1, p0, LX/5qa;->A00:LX/5pf;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, v0, v0}, LX/5q7;-><init>(Lcom/google/common/collect/ImmutableCollection;ZZ)V
 
+    .line 2
     .line 3
     .line 4
+    new-instance v0, LX/5qI;
+
     .line 5
+    .line 6
+    invoke-direct {v0, p0, p2, p3}, LX/5qI;-><init>(LX/5qA;Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/5qA;->A00:LX/5qB;
+
+    .line 10
+    .line 11
+    invoke-virtual {p0}, LX/5q7;->A03()V
+
+    .line 12
+    .line 13
+    .line 14
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAudioFocusChange(I)V
-    .locals 3
+.method public final A04(LX/5ox;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "reason"
+        }
+    .end annotation
 
     .line 0
-    const/4 v0, -0x3
+    invoke-super {p0, p1}, LX/5q7;->A04(LX/5ox;)V
 
     .line 1
-    if-eq p1, v0, :cond_4
-
     .line 2
     .line 3
-    const/4 v0, -0x2
+    sget-object v0, LX/5ox;->OUTPUT_FUTURE_DONE:LX/5ox;
 
     .line 4
-    if-eq p1, v0, :cond_4
+    .line 5
+    if-ne p1, v0, :cond_0
+
+    .line 6
+    .line 7
+    const/4 v0, 0x0
+
+    .line 8
+    iput-object v0, p0, LX/5qA;->A00:LX/5qB;
+
+    .line 9
+    .line 10
+    :cond_0
+    return-void
+.end method
+
+.method public final interruptTask()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5qA;->A00:LX/5qB;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, LX/5iE;->A03()V
 
     .line 5
     .line 6
-    const/4 v0, -0x1
-
     .line 7
-    if-eq p1, v0, :cond_3
-
-    .line 8
-    .line 9
-    const/4 v0, 0x1
-
-    .line 10
-    if-ne p1, v0, :cond_2
-
-    .line 11
-    .line 12
-    iget-object v2, p0, LX/5qa;->A00:LX/5pf;
-
-    .line 13
-    .line 14
-    iget-object v1, v2, LX/5pf;->A08:Landroid/media/AudioManager;
-
-    .line 15
-    .line 16
-    invoke-virtual {v1}, Landroid/media/AudioManager;->isWiredHeadsetOn()Z
-
-    .line 17
-    .line 18
-    .line 19
-    move-result v0
-
-    .line 20
-    if-nez v0, :cond_0
-
-    .line 21
-    .line 22
-    invoke-virtual {v1}, Landroid/media/AudioManager;->isBluetoothA2dpOn()Z
-
-    .line 23
-    .line 24
-    .line 25
-    move-result v0
-
-    .line 26
-    const/4 v1, 0x0
-
-    .line 27
-    if-eqz v0, :cond_1
-
-    .line 28
-    .line 29
     :cond_0
-    const/4 v1, 0x1
-
-    .line 30
-    :cond_1
-    iget-boolean v0, v2, LX/5pf;->A06:Z
-
-    .line 31
-    .line 32
-    invoke-virtual {v2, v1, v0}, LX/5pf;->A03(ZZ)V
-
-    .line 33
-    .line 34
-    .line 35
-    :cond_2
-    return-void
-
-    .line 36
-    :cond_3
-    iget-object v0, p0, LX/5qa;->A00:LX/5pf;
-
-    .line 37
-    .line 38
-    invoke-virtual {v0}, LX/5pf;->A02()V
-
-    .line 39
-    .line 40
-    .line 41
-    return-void
-
-    .line 42
-    :cond_4
-    iget-object v0, p0, LX/5qa;->A00:LX/5pf;
-
-    .line 43
-    .line 44
-    invoke-virtual {v0}, LX/5pf;->A01()V
-
-    .line 45
-    .line 46
-    .line 47
     return-void
 .end method

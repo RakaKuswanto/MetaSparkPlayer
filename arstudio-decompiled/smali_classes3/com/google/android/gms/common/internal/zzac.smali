@@ -1,32 +1,24 @@
-.class public final Lcom/google/android/gms/common/internal/zzac;
-.super Ljava/lang/Object;
+.class public abstract Lcom/google/android/gms/common/internal/zzac;
+.super Lcom/google/android/gms/internal/common/zzb;
 .source ""
 
 # interfaces
-.implements Lcom/google/android/gms/common/internal/IGmsServiceBroker;
-
-
-# instance fields
-.field public final A00:Landroid/os/IBinder;
+.implements Lcom/google/android/gms/common/internal/IGmsCallbacks;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/google/android/gms/common/internal/zzac;->A00:Landroid/os/IBinder;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final asBinder()Landroid/os/IBinder;
+.method public constructor <init>()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzac;->A00:Landroid/os/IBinder;
+    .line 0
+    const-string v0, "com.google.android.gms.common.internal.IGmsCallbacks"
 
-    return-object v0
+    .line 1
+    .line 2
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/common/zzb;-><init>(Ljava/lang/String;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method

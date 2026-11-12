@@ -1,33 +1,59 @@
-.class public final LX/3nI;
-.super LX/3nN;
+.class public abstract LX/3nI;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;)V
-    .locals 1
+.method public static final A00(Landroid/database/sqlite/SQLiteDatabase;LX/3gR;)LX/1wz;
+    .locals 2
 
     .line 0
-    invoke-direct {p0, p1}, LX/3nN;-><init>(Ljava/io/File;)V
+    const/4 v0, 0x0
 
     .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 2
     .line 3
-    sget-object v0, LX/3nF;->A03:Ljava/io/FileFilter;
-
     .line 4
+    iget-object v1, p1, LX/3gR;->A00:LX/1wz;
+
     .line 5
-    iput-object v0, p0, LX/3nH;->A00:Ljava/io/FileFilter;
-
     .line 6
+    if-eqz v1, :cond_0
+
     .line 7
-    sget-object v0, LX/3nF;->A04:Ljava/util/Comparator;
-
     .line 8
-    .line 9
-    iput-object v0, p0, LX/3nH;->A01:Ljava/util/Comparator;
+    iget-object v0, v1, LX/1wz;->A00:Landroid/database/sqlite/SQLiteDatabase;
 
+    .line 9
     .line 10
+    invoke-static {v0, p0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 11
-    return-void
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    if-nez v0, :cond_1
+
+    .line 15
+    .line 16
+    :cond_0
+    new-instance v1, LX/1wz;
+
+    .line 17
+    .line 18
+    invoke-direct {v1, p0}, LX/1wz;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
+
+    .line 19
+    .line 20
+    .line 21
+    iput-object v1, p1, LX/3gR;->A00:LX/1wz;
+
+    .line 22
+    .line 23
+    :cond_1
+    return-object v1
 .end method

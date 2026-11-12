@@ -1,117 +1,74 @@
-.class public LX/4Kx;
-.super Landroid/widget/LinearLayout;
+.class public final LX/4Kx;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AlertController$5"
 
 
 # instance fields
-.field public A00:I
+.field public final synthetic A00:Landroid/view/View;
+
+.field public final synthetic A01:Landroid/view/View;
+
+.field public final synthetic A02:LX/4Ku;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .line 536870912
-    invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    const/4 v0, -0x1
-
-    .line 536870916
-    iput v0, p0, LX/4Kx;->A00:I
-
-    .line 536870917
-    .line 536870918
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    const/4 v0, -0x1
-
-    .line 268435460
-    iput v0, p0, LX/4Kx;->A00:I
-
-    .line 268435461
-    .line 268435462
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 1
+.method public constructor <init>(Landroid/view/View;Landroid/view/View;LX/4Ku;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput-object p3, p0, LX/4Kx;->A02:LX/4Ku;
 
     .line 1
     .line 2
-    .line 3
-    const/4 v0, -0x1
+    iput-object p1, p0, LX/4Kx;->A01:Landroid/view/View;
 
+    .line 3
     .line 4
-    iput v0, p0, LX/4Kx;->A00:I
+    iput-object p2, p0, LX/4Kx;->A00:Landroid/view/View;
 
     .line 5
     .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 2
+.method public final run()V
+    .locals 3
 
     .line 0
-    iget v1, p0, LX/4Kx;->A00:I
+    iget-object v0, p0, LX/4Kx;->A02:LX/4Ku;
 
     .line 1
     .line 2
-    if-ltz v1, :cond_0
+    iget-object v2, v0, LX/4Ku;->A0E:Landroid/widget/ListView;
 
     .line 3
     .line 4
-    const/high16 v0, -0x80000000
+    iget-object v1, p0, LX/4Kx;->A01:Landroid/view/View;
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    iget-object v0, p0, LX/4Kx;->A00:Landroid/view/View;
 
     .line 7
     .line 8
+    invoke-static {v2, v1, v0}, LX/4Ku;->A01(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+
     .line 9
-    move-result p2
-
     .line 10
-    :cond_0
-    invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
-
     .line 11
-    .line 12
-    .line 13
-    return-void
-.end method
-
-.method public setMaxHeight(I)V
-    .locals 0
-
-    .line 0
-    iput p1, p0, LX/4Kx;->A00:I
-
-    .line 1
-    .line 2
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    .line 3
-    .line 4
-    .line 5
     return-void
 .end method

@@ -1,65 +1,20 @@
-.class public final LX/4Ow;
+.class public abstract LX/4Ow;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static final A00(Landroid/view/DisplayCutout;)I
+.method public static A00(Landroid/content/res/Configuration;)Landroid/os/LocaleList;
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
+    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
 
     .line 1
     .line 2
     .line 3
-    move-result p0
+    move-result-object p0
 
     .line 4
-    return p0
-.end method
-
-.method public static final A01(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
-
-    .line 4
-    return p0
-.end method
-
-.method public static final A02(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
-
-    .line 4
-    return p0
-.end method
-
-.method public static final A03(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
-
-    .line 4
-    return p0
+    return-object p0
 .end method

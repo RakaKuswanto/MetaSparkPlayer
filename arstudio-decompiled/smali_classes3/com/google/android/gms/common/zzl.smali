@@ -16,18 +16,21 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/4BF;->A15()Ljava/lang/ref/WeakReference;
+    const/4 v0, 0x0
 
     .line 1
+    invoke-static {v0}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+
     .line 2
     .line 3
+    .line 4
     move-result-object v0
 
-    .line 4
+    .line 5
     sput-object v0, Lcom/google/android/gms/common/zzl;->A01:Ljava/lang/ref/WeakReference;
 
-    .line 5
     .line 6
+    .line 7
     return-void
 .end method
 

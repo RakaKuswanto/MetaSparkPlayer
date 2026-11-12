@@ -1,57 +1,36 @@
-.class public final LX/2Re;
-.super Ljava/lang/Object;
+.class public final LX/2rE;
+.super LX/3AX;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/1Nm;
+.field public final A00:LX/0Ia;
 
-.field public final A01:LX/1Nm;
-
-.field public final A02:LX/1Nw;
+.field public final A01:Ljava/nio/charset/Charset;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>(LX/0Ia;Ljava/nio/charset/Charset;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string/jumbo v0, "text/plain"
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2Re;->A02:LX/1Nw;
+    invoke-direct {p0, v0}, LX/3AX;-><init>(Ljava/lang/String;)V
 
     .line 4
     .line 5
-    sget v0, LX/2eq;->ABX:I
-
     .line 6
-    .line 7
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    iput-object p1, p0, LX/2rE;->A00:LX/0Ia;
 
+    .line 7
     .line 8
+    iput-object p2, p0, LX/2rE;->A01:Ljava/nio/charset/Charset;
+
     .line 9
     .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/2Re;->A01:LX/1Nm;
-
-    .line 12
-    .line 13
-    invoke-static {}, LX/1Nl;->A05()LX/1Nm;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, LX/2Re;->A00:LX/1Nm;
-
-    .line 18
-    .line 19
     return-void
 .end method

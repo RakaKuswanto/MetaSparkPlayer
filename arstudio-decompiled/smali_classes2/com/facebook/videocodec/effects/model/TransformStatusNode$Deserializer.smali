@@ -18,25 +18,25 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 6
 
     .line 0
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 1
-    const/4 v1, 0x0
-
-    .line 2
     const/4 v4, 0x0
 
+    .line 2
+    const/4 v1, 0x0
+
     .line 3
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 4
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 5
     .line 6
@@ -44,7 +44,7 @@
     move-result-object v5
 
     .line 8
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 9
     .line 10
@@ -52,7 +52,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -74,14 +74,14 @@
     .line 22
     .line 23
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 24
     .line 25
     .line 26
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 27
     .line 28
@@ -89,7 +89,7 @@
     move-result-object v5
 
     .line 30
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 31
     .line 32
@@ -101,7 +101,7 @@
 
     .line 35
     :sswitch_0
-    const-string/jumbo v0, "rotation_in_degrees"
+    const-string/jumbo v0, "position_y"
 
     .line 36
     .line 37
@@ -118,7 +118,7 @@
 
     .line 43
     .line 44
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
     .line 45
     .line 46
@@ -130,7 +130,7 @@
 
     .line 49
     :sswitch_1
-    const-string/jumbo v0, "scale"
+    const-string/jumbo v0, "position_x"
 
     .line 50
     .line 51
@@ -147,7 +147,7 @@
 
     .line 57
     .line 58
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
     .line 59
     .line 60
@@ -159,7 +159,7 @@
 
     .line 63
     :sswitch_2
-    const-string/jumbo v0, "position_x"
+    const-string/jumbo v0, "scale"
 
     .line 64
     .line 65
@@ -176,7 +176,7 @@
 
     .line 71
     .line 72
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
     .line 73
     .line 74
@@ -188,7 +188,7 @@
 
     .line 77
     :sswitch_3
-    const-string/jumbo v0, "position_y"
+    const-string/jumbo v0, "rotation_in_degrees"
 
     .line 78
     .line 79
@@ -205,7 +205,7 @@
 
     .line 85
     .line 86
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
     .line 87
     .line 88
@@ -223,7 +223,7 @@
 
     .line 92
     .line 93
-    invoke-direct {v0, v2, v1, v4, v3}, Lcom/facebook/videocodec/effects/model/TransformStatusNode;-><init>(FFFF)V
+    invoke-direct {v0, v3, v4, v1, v2}, Lcom/facebook/videocodec/effects/model/TransformStatusNode;-><init>(FFFF)V
 
     .line 94
     .line 95
@@ -239,24 +239,27 @@
 
     .line 99
     .line 100
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 101
     .line 102
     .line 103
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 104
+    .line 105
+    .line 106
+    move-result-object v0
+
+    .line 107
     throw v0
 
-    .line 105
-    nop
-
+    .line 108
     :sswitch_data_0
     .sparse-switch
-        -0x3fa8a92 -> :sswitch_0
-        0x683094a -> :sswitch_1
-        0x5250fee2 -> :sswitch_2
-        0x5250fee3 -> :sswitch_3
+        -0x3fa8a92 -> :sswitch_3
+        0x683094a -> :sswitch_2
+        0x5250fee2 -> :sswitch_1
+        0x5250fee3 -> :sswitch_0
     .end sparse-switch
 .end method

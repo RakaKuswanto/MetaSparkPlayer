@@ -1,22 +1,27 @@
-.class public final LX/2eh;
+.class public final LX/2eH;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2h8;
+
 
 # instance fields
-.field public final A00:LX/1Nm;
+.field public A00:LX/2cC;
 
-.field public final A01:LX/1Nm;
+.field public A01:LX/0I2;
 
-.field public final A02:LX/1Nm;
+.field public A02:LX/0I5;
 
-.field public final A03:LX/1Nm;
+.field public final A03:LX/2eG;
 
-.field public final A04:LX/1Nw;
+.field public final A04:Ljava/util/List;
+
+.field public final A05:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>(LX/2cC;LX/2eG;LX/0I2;LX/0I5;)V
     .locals 1
 
     .line 0
@@ -25,198 +30,168 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2eh;->A04:LX/1Nw;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
     .line 5
-    invoke-static {}, LX/1Nl;->A01()LX/1Nm;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
+    .line 7
+    iput-object v0, p0, LX/2eH;->A05:Ljava/util/List;
+
+    .line 8
     .line 9
-    iput-object v0, p0, LX/2eh;->A03:LX/1Nm;
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->ADG:I
-
     .line 12
+    move-result-object v0
+
     .line 13
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    iput-object v0, p0, LX/2eH;->A04:Ljava/util/List;
 
     .line 14
     .line 15
-    .line 16
-    move-result-object v0
+    iput-object p3, p0, LX/2eH;->A01:LX/0I2;
 
+    .line 16
     .line 17
-    iput-object v0, p0, LX/2eh;->A02:LX/1Nm;
+    iput-object p4, p0, LX/2eH;->A02:LX/0I5;
 
     .line 18
     .line 19
-    invoke-static {}, LX/1Nl;->A04()LX/1Nm;
+    iput-object p1, p0, LX/2eH;->A00:LX/2cC;
 
     .line 20
     .line 21
+    iput-object p2, p0, LX/2eH;->A03:LX/2eG;
+
     .line 22
-    move-result-object v0
-
     .line 23
-    iput-object v0, p0, LX/2eh;->A00:LX/1Nm;
-
-    .line 24
-    .line 25
-    sget v0, LX/2eq;->AVn:I
-
-    .line 26
-    .line 27
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    iput-object v0, p0, LX/2eh;->A01:LX/1Nm;
-
-    .line 32
-    .line 33
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public final ADc(Landroid/content/Context;)LX/2eJ;
     .locals 3
 
     .line 0
-    iget-object v0, p0, LX/2eh;->A03:LX/1Nm;
+    :try_start_0
+    invoke-static {p1}, LX/2eI;->A00(Landroid/content/Context;)V
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1Nm;->A04(LX/1Nm;)LX/0Af;
-
     .line 3
+    const-class v2, LX/2eH;
+
     .line 4
     .line 5
-    move-result-object v1
+    monitor-enter v2
+    :try_end_0
+    .catch LX/2eK; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 6
-    const-string/jumbo v0, "push_notif_decrypted"
+    :try_start_1
+    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     .line 7
     .line 8
     .line 9
-    invoke-interface {v1, v0}, LX/0Af;->A4R(Ljava/lang/String;)LX/0Ah;
+    move-result-object v0
 
     .line 10
+    if-eqz v0, :cond_0
+
     .line 11
     .line 12
-    move-result-object v2
+    invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
 
     .line 13
-    iget-object v0, p0, LX/2eh;->A02:LX/1Nm;
-
     .line 14
     .line 15
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    move-result v0
 
     .line 16
+    if-eqz v0, :cond_1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     .line 17
     .line 18
-    move-result-object v1
+    :try_start_2
+    monitor-exit v2
+    :try_end_2
+    .catch LX/2eK; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 19
-    check-cast v1, LX/26L;
+    sget-object v0, LX/2eJ;->ENABLED:LX/2eJ;
 
     .line 20
     .line 21
-    const-string/jumbo v0, "push_notification_decrypted_"
+    return-object v0
 
     .line 22
+    :cond_0
+    :try_start_3
+    sget-object v0, LX/2eJ;->BLUETOOTH_NOT_SUPPORTED:LX/2eJ;
+
     .line 23
     .line 24
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, LX/2eK;
 
     .line 25
     .line 26
+    invoke-direct {v1, v0}, LX/2eK;-><init>(LX/2eJ;)V
+
     .line 27
-    move-result-object v0
-
     .line 28
-    invoke-static {p3, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 29
-    .line 30
-    .line 31
-    move-result-object v0
+    goto :goto_0
 
+    .line 30
+    :cond_1
+    sget-object v0, LX/2eJ;->USER_DISABLED:LX/2eJ;
+
+    .line 31
     .line 32
-    invoke-virtual {v1, v0}, LX/26L;->A00(Ljava/lang/String;)V
+    new-instance v1, LX/2eK;
 
     .line 33
     .line 34
-    .line 35
-    invoke-interface {v2}, LX/0Ah;->isSampled()Z
+    invoke-direct {v1, v0}, LX/2eK;-><init>(LX/2eJ;)V
 
+    .line 35
     .line 36
     .line 37
+    :goto_0
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
     .line 38
-    move-result v0
+    :catchall_0
+    :try_start_4
+    move-exception v0
 
     .line 39
-    if-eqz v0, :cond_0
+    monitor-exit v2
 
     .line 40
+    throw v0
+    :try_end_4
+    .catch LX/2eK; {:try_start_4 .. :try_end_4} :catch_0
+
     .line 41
-    const-string v0, "error"
+    :catch_0
+    move-exception v0
 
     .line 42
+    iget-object v0, v0, LX/2eK;->state:LX/2eJ;
+
     .line 43
-    invoke-interface {v2, v0, p1}, LX/0Ah;->A5H(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 44
-    .line 45
-    .line 46
-    const-string/jumbo v0, "pnid"
-
-    .line 47
-    .line 48
-    .line 49
-    invoke-interface {v2, v0, p2}, LX/0Ah;->A5H(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 50
-    .line 51
-    .line 52
-    const-string/jumbo v0, "result"
-
-    .line 53
-    .line 54
-    .line 55
-    invoke-interface {v2, v0, p3}, LX/0Ah;->A5H(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 56
-    .line 57
-    .line 58
-    const-string/jumbo v0, "source"
-
-    .line 59
-    .line 60
-    .line 61
-    invoke-interface {v2, v0, p4}, LX/0Ah;->A5H(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 62
-    .line 63
-    .line 64
-    invoke-interface {v2}, LX/0Ah;->AS9()V
-
-    .line 65
-    .line 66
-    .line 67
-    :cond_0
-    return-void
+    return-object v0
 .end method

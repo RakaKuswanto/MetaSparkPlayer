@@ -1,64 +1,48 @@
-.class public final LX/4E3;
+.class public final synthetic LX/4E3;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DebugOverlayController$1"
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final synthetic A00:LX/4E1;
+.field public final synthetic A00:LX/4Ck;
 
-.field public final synthetic A01:Ljava/lang/String;
+.field public final synthetic A01:Ljava/util/Map;
+
+.field public final synthetic A02:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(LX/4E1;Ljava/lang/String;)V
+.method public synthetic constructor <init>(LX/4Ck;Ljava/util/Map;Ljava/util/Map;)V
     .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/4E3;->A00:LX/4E1;
-
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/4E3;->A01:Ljava/lang/String;
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
+    iput-object p1, p0, LX/4E3;->A00:LX/4Ck;
+
+    iput-object p2, p0, LX/4E3;->A01:Ljava/util/Map;
+
+    iput-object p3, p0, LX/4E3;->A02:Ljava/util/Map;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    .line 0
-    iget-object v0, p0, LX/4E3;->A00:LX/4E1;
+    iget-object v2, p0, LX/4E3;->A00:LX/4Ck;
 
-    .line 1
-    .line 2
-    iget-object v1, v0, LX/4E1;->A00:Landroid/widget/TextView;
+    iget-object v1, p0, LX/4E3;->A01:Ljava/util/Map;
 
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/4E3;->A01:Ljava/lang/String;
+    iget-object v0, p0, LX/4E3;->A02:Ljava/util/Map;
 
-    .line 5
-    .line 6
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    check-cast p1, Ljava/lang/String;
 
-    .line 7
-    .line 8
-    .line 9
+    invoke-virtual {v2, v1, v0, p1}, LX/4Ck;->A13(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
+
     return-void
 .end method

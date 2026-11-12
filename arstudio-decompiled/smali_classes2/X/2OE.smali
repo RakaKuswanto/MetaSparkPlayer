@@ -1,65 +1,71 @@
-.class public final LX/2OE;
+.class public abstract LX/2Oe;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
-
-
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public static final A00(Lcom/facebook/auth/credentials/DBLFacebookCredentials;Ljava/lang/String;)Lcom/facebook/auth/credentials/DBLFacebookCredentials;
+    .locals 11
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v1, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mUserId:Ljava/lang/String;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/0Zq;->A0B()LX/0Zq;
+    iget v9, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mTime:I
 
+    .line 3
     .line 4
+    iget-object v2, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mName:Ljava/lang/String;
+
     .line 5
     .line 6
-    move-result-object v0
+    iget-object v3, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mFullName:Ljava/lang/String;
 
     .line 7
-    iput-object v0, p0, LX/2OE;->A02:LX/0Na;
-
     .line 8
+    iget-object v4, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mUsername:Ljava/lang/String;
+
     .line 9
-    sget v0, LX/2eq;->AHm:I
-
     .line 10
-    .line 11
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iget-object v5, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mPicUrl:Ljava/lang/String;
 
+    .line 11
     .line 12
+    iget-object v0, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mIsPinSet:Ljava/lang/Boolean;
+
     .line 13
     .line 14
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 15
-    iput-object v0, p0, LX/2OE;->A01:LX/0Na;
-
     .line 16
     .line 17
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    move-result v10
 
     .line 18
+    iget-object v7, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mAlternativeAccessToken:Ljava/lang/String;
+
     .line 19
     .line 20
-    move-result-object v0
+    iget-object v8, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mLopNonce:Ljava/lang/String;
 
     .line 21
-    iput-object v0, p0, LX/2OE;->A00:LX/1zG;
-
     .line 22
+    const/4 p0, 0x0
+
     .line 23
-    return-void
+    new-instance v0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;
+
+    .line 24
+    .line 25
+    move-object v6, p1
+
+    .line 26
+    invoke-direct/range {v0 .. v11}, Lcom/facebook/auth/credentials/DBLFacebookCredentials;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZZ)V
+
+    .line 27
+    .line 28
+    .line 29
+    return-object v0
 .end method

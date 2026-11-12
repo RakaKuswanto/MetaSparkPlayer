@@ -1,39 +1,17 @@
-.class public final synthetic LX/63R;
-.super Ljava/lang/Object;
+.class public final LX/63R;
+.super LX/6Bn;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AudioRendererEventListener$EventDispatcher$$ExternalSyntheticLambda8"
-
-
-# instance fields
-.field public final synthetic A00:LX/63E;
-
-.field public final synthetic A01:Ljava/lang/Exception;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/63E;Ljava/lang/Exception;)V
+.method public constructor <init>(Landroid/os/Handler;LX/6D1;LX/5xk;LX/6At;LX/6CK;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/63R;->A00:LX/63E;
-
-    iput-object p2, p0, LX/63R;->A01:Ljava/lang/Exception;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
     .line 0
+    invoke-direct/range {p0 .. p5}, LX/6Bn;-><init>(Landroid/os/Handler;LX/6D1;LX/5xk;LX/6At;LX/6CK;)V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

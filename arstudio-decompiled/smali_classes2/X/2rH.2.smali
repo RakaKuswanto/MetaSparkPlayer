@@ -2,83 +2,82 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0As;
-
 
 # instance fields
-.field public final synthetic A00:LX/2gB;
+.field public final A00:Lcom/google/common/base/Optional;
+
+.field public final A01:Lcom/google/common/base/Optional;
+
+.field public final A02:Lcom/google/common/base/Optional;
 
 
 # direct methods
-.method public constructor <init>(LX/2gB;)V
+.method public constructor <init>(Lcom/google/common/base/Optional;Lcom/google/common/base/Optional;Lcom/google/common/base/Optional;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/2rH;->A00:LX/2gB;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/2rH;->A00:Lcom/google/common/base/Optional;
+
     .line 4
     .line 5
+    iput-object p2, p0, LX/2rH;->A01:Lcom/google/common/base/Optional;
+
+    .line 6
+    .line 7
+    iput-object p3, p0, LX/2rH;->A02:Lcom/google/common/base/Optional;
+
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final AkD(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
-    .locals 2
+.method public final A00()Ljava/lang/String;
+    .locals 1
 
     .line 0
-    const/16 v0, 0x2710
+    iget-object v0, p0, LX/2rH;->A00:Lcom/google/common/base/Optional;
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, Lcom/facebook/common/dextricks/DexOptimizationControl;->pauseOptimization(Landroid/content/Context;I)V
+    invoke-virtual {v0}, Lcom/google/common/base/Optional;->isPresent()Z
 
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, LX/2rH;->A00:LX/2gB;
+    move-result v0
 
     .line 6
+    xor-int/lit8 v0, v0, 0x1
+
     .line 7
-    iget-object v0, v0, LX/2gB;->A05:Ljava/util/Set;
-
     .line 8
-    .line 9
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 9
     .line 10
     .line 11
-    .line 12
-    move-result-object v1
+    iget-object v0, p0, LX/2rH;->A02:Lcom/google/common/base/Optional;
 
+    .line 12
     .line 13
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
 
     .line 14
     .line 15
     .line 16
-    move-result v0
+    move-result-object v0
 
     .line 17
-    if-eqz v0, :cond_0
+    check-cast v0, Ljava/lang/String;
 
     .line 18
     .line 19
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 20
-    .line 21
-    .line 22
-    goto :goto_0
-
-    .line 23
-    :cond_0
-    return-object p2
+    return-object v0
 .end method

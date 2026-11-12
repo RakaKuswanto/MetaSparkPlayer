@@ -1,128 +1,151 @@
-.class public LX/4QT;
-.super LX/4QO;
+.class public final LX/4QT;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/0Mh;
 
 
 # instance fields
-.field public A00:Landroid/widget/ImageView;
+.field public A00:Z
 
-.field public A01:Landroid/widget/LinearLayout;
+.field public final A01:LX/3al;
 
-.field public A02:LX/4Qk;
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .line 536870912
-    const/4 v0, 0x0
-
-    .line 536870913
-    invoke-direct {p0, p1, v0}, LX/4QT;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 536870914
-    .line 536870915
-    .line 536870916
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    .line 268435456
-    const/4 v0, 0x0
-
-    .line 268435457
-    invoke-direct {p0, p1, p2, v0}, LX/4QT;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    .line 268435458
-    .line 268435459
-    .line 268435460
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.method public constructor <init>(LX/3al;Ljava/lang/String;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/4QO;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    const/4 v0, 0x2
 
     .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 2
     .line 3
-    const v0, 0x7f0d012c
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    iput-object p2, p0, LX/4QT;->A02:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    iput-object p1, p0, LX/4QT;->A01:LX/3al;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00(LX/077;LX/07v;)V
+    .locals 2
+
+    .line 0
+    const/4 v1, 0x1
+
+    .line 1
+    iget-boolean v0, p0, LX/4QT;->A00:Z
+
+    .line 2
+    .line 3
+    xor-int/lit8 v0, v0, 0x1
 
     .line 4
     .line 5
-    .line 6
-    invoke-virtual {p0, v0}, LX/4QO;->setContentView(I)V
+    if-eqz v0, :cond_0
 
+    .line 6
     .line 7
+    iput-boolean v1, p0, LX/4QT;->A00:Z
+
     .line 8
     .line 9
-    const v0, 0x7f0a04b7
+    invoke-virtual {p1, p0}, LX/077;->A09(LX/07A;)V
 
     .line 10
     .line 11
     .line 12
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    iget-object v1, p0, LX/4QT;->A02:Ljava/lang/String;
 
     .line 13
     .line 14
-    .line 15
-    move-result-object v0
+    iget-object v0, p0, LX/4QT;->A01:LX/3al;
 
+    .line 15
     .line 16
-    check-cast v0, Landroid/widget/LinearLayout;
+    iget-object v0, v0, LX/3al;->A00:LX/07u;
 
     .line 17
     .line 18
-    iput-object v0, p0, LX/4QT;->A01:Landroid/widget/LinearLayout;
+    invoke-virtual {p2, v0, v1}, LX/07v;->A03(LX/07u;Ljava/lang/String;)V
 
     .line 19
     .line 20
-    const v0, 0x7f0a04b9
-
     .line 21
-    .line 22
-    .line 23
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    return-void
 
+    .line 22
+    :cond_0
+    const-string v0, "Already attached to lifecycleOwner"
+
+    .line 23
     .line 24
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
     .line 25
     .line 26
-    move-result-object v0
-
     .line 27
-    check-cast v0, Landroid/widget/ImageView;
+    move-result-object v0
 
     .line 28
-    .line 29
-    iput-object v0, p0, LX/4QT;->A00:Landroid/widget/ImageView;
+    throw v0
+.end method
 
-    .line 30
-    .line 31
-    const v0, 0x7f0a04b8
+.method public final AbQ(LX/075;LX/07B;)V
+    .locals 2
 
-    .line 32
-    .line 33
-    .line 34
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    .line 0
+    const/4 v1, 0x0
 
-    .line 35
-    .line 36
-    .line 37
+    .line 1
+    invoke-static {p2, p1}, LX/0X3;->A1H(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 2
+    .line 3
+    .line 4
+    sget-object v0, LX/075;->ON_DESTROY:LX/075;
+
+    .line 5
+    .line 6
+    if-ne p1, v0, :cond_0
+
+    .line 7
+    .line 8
+    iput-boolean v1, p0, LX/4QT;->A00:Z
+
+    .line 9
+    .line 10
+    invoke-interface {p2}, LX/07B;->getLifecycle()LX/077;
+
+    .line 11
+    .line 12
+    .line 13
     move-result-object v0
 
-    .line 38
-    check-cast v0, LX/4Qk;
+    .line 14
+    invoke-virtual {v0, p0}, LX/077;->A0A(LX/07A;)V
 
-    .line 39
-    .line 40
-    iput-object v0, p0, LX/4QT;->A02:LX/4Qk;
-
-    .line 41
-    .line 42
+    .line 15
+    .line 16
+    .line 17
+    :cond_0
     return-void
 .end method

@@ -1,138 +1,353 @@
-.class public final LX/2MZ;
-.super LX/2I2;
+.class public final enum LX/2MZ;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/0Cw;
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-# instance fields
-.field public A00:Ljava/lang/Object;
+.field public static final synthetic $VALUES:[LX/2MZ;
 
-.field public A01:Ljava/lang/String;
+.field public static final enum MODAL_DISMISSAL_INCOMING:LX/2MZ;
 
-.field public final A02:I
+.field public static final enum MODAL_DISMISSAL_OUTGOING_DOWN:LX/2MZ;
+
+.field public static final enum MODAL_DISMISSAL_OUTGOING_UP:LX/2MZ;
+
+.field public static final enum MODAL_PRESENTATION_INCOMING:LX/2MZ;
+
+.field public static final enum MODAL_PRESENTATION_OUTGOING:LX/2MZ;
+
+.field public static final enum POP_TRANSITION_INCOMING:LX/2MZ;
+
+.field public static final enum POP_TRANSITION_OUTGOING:LX/2MZ;
+
+.field public static final enum PUSH_TRANSITION_INCOMING:LX/2MZ;
+
+.field public static final enum PUSH_TRANSITION_OUTGOING:LX/2MZ;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/Object;)V
-    .locals 1
+.method public static final synthetic $values()[LX/2MZ;
+    .locals 3
 
-    .line 0
-    iput p1, p0, LX/2MZ;->A02:I
+    const/16 v0, 0x9
 
-    .line 1
-    .line 2
-    iput-object p3, p0, LX/2MZ;->A00:Ljava/lang/Object;
+    new-array v2, v0, [LX/2MZ;
 
-    .line 3
-    .line 4
-    iput-object p2, p0, LX/2MZ;->A01:Ljava/lang/String;
+    sget-object v1, LX/2MZ;->PUSH_TRANSITION_INCOMING:LX/2MZ;
 
-    .line 5
-    .line 6
     const/4 v0, 0x0
 
-    .line 7
-    invoke-direct {p0, v0}, LX/2I2;-><init>(I)V
+    aput-object v1, v2, v0
 
-    .line 8
-    .line 9
-    .line 10
-    return-void
+    sget-object v1, LX/2MZ;->PUSH_TRANSITION_OUTGOING:LX/2MZ;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2MZ;->POP_TRANSITION_INCOMING:LX/2MZ;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2MZ;->POP_TRANSITION_OUTGOING:LX/2MZ;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2MZ;->MODAL_PRESENTATION_INCOMING:LX/2MZ;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2MZ;->MODAL_PRESENTATION_OUTGOING:LX/2MZ;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2MZ;->MODAL_DISMISSAL_INCOMING:LX/2MZ;
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2MZ;->MODAL_DISMISSAL_OUTGOING_DOWN:LX/2MZ;
+
+    const/4 v0, 0x7
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2MZ;->MODAL_DISMISSAL_OUTGOING_UP:LX/2MZ;
+
+    const/16 v0, 0x8
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-
-# virtual methods
-.method public final bridge synthetic APf()Ljava/lang/Object;
-    .locals 6
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iget v0, p0, LX/2MZ;->A02:I
+    const-string v2, "PUSH_TRANSITION_INCOMING"
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/2MZ;
+
     .line 4
-    iget-object v5, p0, LX/2MZ;->A01:Ljava/lang/String;
-
     .line 5
-    .line 6
-    sget-object v4, LX/2Kb;->A00:LX/2Kb;
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     .line 7
     .line 8
-    const/4 v0, 0x0
+    sput-object v0, LX/2MZ;->PUSH_TRANSITION_INCOMING:LX/2MZ;
 
     .line 9
-    new-array v3, v0, [LX/2Kr;
-
     .line 10
-    .line 11
-    iget-object v2, p0, LX/2MZ;->A00:Ljava/lang/Object;
+    const-string v2, "PUSH_TRANSITION_OUTGOING"
 
+    .line 11
     .line 12
+    const/4 v1, 0x1
+
     .line 13
-    const/16 v1, 0x21
+    new-instance v0, LX/2MZ;
 
     .line 14
     .line 15
-    new-instance v0, LX/2NK;
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
-    invoke-direct {v0, v2, v1}, LX/2NK;-><init>(Ljava/lang/Object;I)V
-
     .line 18
+    sput-object v0, LX/2MZ;->PUSH_TRANSITION_OUTGOING:LX/2MZ;
+
     .line 19
     .line 20
-    invoke-static {v5, v0, v4, v3}, LX/2KM;->A00(Ljava/lang/String;LX/0Cl;LX/2Kf;[LX/2Kr;)LX/2KK;
+    const-string v2, "POP_TRANSITION_INCOMING"
 
     .line 21
     .line 22
+    const/4 v1, 0x2
+
     .line 23
-    move-result-object v0
+    new-instance v0, LX/2MZ;
 
     .line 24
-    return-object v0
-
     .line 25
-    :cond_0
-    iget-object v0, p0, LX/2MZ;->A00:Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
-    check-cast v0, LX/3fH;
-
     .line 28
-    .line 29
-    invoke-static {v0}, LX/3fH;->A00(LX/3fH;)LX/3fL;
+    sput-object v0, LX/2MZ;->POP_TRANSITION_INCOMING:LX/2MZ;
 
+    .line 29
     .line 30
+    const-string v2, "POP_TRANSITION_OUTGOING"
+
     .line 31
     .line 32
-    move-result-object v1
+    const/4 v1, 0x3
 
     .line 33
-    if-eqz v1, :cond_1
+    new-instance v0, LX/2MZ;
 
     .line 34
     .line 35
-    iget-object v0, p0, LX/2MZ;->A01:Ljava/lang/String;
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
 
     .line 36
     .line 37
-    invoke-interface {v1, v0}, LX/3fL;->updateRegionPreference(Ljava/lang/String;)V
-
     .line 38
+    sput-object v0, LX/2MZ;->POP_TRANSITION_OUTGOING:LX/2MZ;
+
     .line 39
     .line 40
-    :cond_1
-    sget-object v0, LX/0UG;->A00:LX/0UG;
+    const-string v2, "MODAL_PRESENTATION_INCOMING"
 
     .line 41
     .line 42
+    const/4 v1, 0x4
+
+    .line 43
+    new-instance v0, LX/2MZ;
+
+    .line 44
+    .line 45
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
+
+    .line 46
+    .line 47
+    .line 48
+    sput-object v0, LX/2MZ;->MODAL_PRESENTATION_INCOMING:LX/2MZ;
+
+    .line 49
+    .line 50
+    const-string v2, "MODAL_PRESENTATION_OUTGOING"
+
+    .line 51
+    .line 52
+    const/4 v1, 0x5
+
+    .line 53
+    new-instance v0, LX/2MZ;
+
+    .line 54
+    .line 55
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
+
+    .line 56
+    .line 57
+    .line 58
+    sput-object v0, LX/2MZ;->MODAL_PRESENTATION_OUTGOING:LX/2MZ;
+
+    .line 59
+    .line 60
+    const-string v2, "MODAL_DISMISSAL_INCOMING"
+
+    .line 61
+    .line 62
+    const/4 v1, 0x6
+
+    .line 63
+    new-instance v0, LX/2MZ;
+
+    .line 64
+    .line 65
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
+
+    .line 66
+    .line 67
+    .line 68
+    sput-object v0, LX/2MZ;->MODAL_DISMISSAL_INCOMING:LX/2MZ;
+
+    .line 69
+    .line 70
+    const-string v2, "MODAL_DISMISSAL_OUTGOING_DOWN"
+
+    .line 71
+    .line 72
+    const/4 v1, 0x7
+
+    .line 73
+    new-instance v0, LX/2MZ;
+
+    .line 74
+    .line 75
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
+
+    .line 76
+    .line 77
+    .line 78
+    sput-object v0, LX/2MZ;->MODAL_DISMISSAL_OUTGOING_DOWN:LX/2MZ;
+
+    .line 79
+    .line 80
+    const-string v2, "MODAL_DISMISSAL_OUTGOING_UP"
+
+    .line 81
+    .line 82
+    const/16 v1, 0x8
+
+    .line 83
+    .line 84
+    new-instance v0, LX/2MZ;
+
+    .line 85
+    .line 86
+    invoke-direct {v0, v2, v1}, LX/2MZ;-><init>(Ljava/lang/String;I)V
+
+    .line 87
+    .line 88
+    .line 89
+    sput-object v0, LX/2MZ;->MODAL_DISMISSAL_OUTGOING_UP:LX/2MZ;
+
+    .line 90
+    .line 91
+    invoke-static {}, LX/2MZ;->$values()[LX/2MZ;
+
+    .line 92
+    .line 93
+    .line 94
+    move-result-object v0
+
+    .line 95
+    sput-object v0, LX/2MZ;->$VALUES:[LX/2MZ;
+
+    .line 96
+    .line 97
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 98
+    .line 99
+    .line 100
+    move-result-object v0
+
+    .line 101
+    sput-object v0, LX/2MZ;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 102
+    .line 103
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/2MZ;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/2MZ;
+    .locals 1
+
+    const-class v0, LX/2MZ;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/2MZ;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/2MZ;
+    .locals 1
+
+    sget-object v0, LX/2MZ;->$VALUES:[LX/2MZ;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/2MZ;
+
     return-object v0
 .end method

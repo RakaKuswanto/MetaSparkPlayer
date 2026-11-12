@@ -1,32 +1,29 @@
-.class public final LX/4cn;
+.class public final synthetic LX/4cn;
 .super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final synthetic A00:LX/4cn;
+
+
 # direct methods
-.method public static A00(Landroid/widget/AutoCompleteTextView;)V
-    .locals 0
+.method public static synthetic constructor <clinit>()V
+    .locals 1
 
-    .line 0
-    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->refreshAutoCompleteResults()V
+    new-instance v0, LX/4cn;
 
-    .line 1
-    .line 2
-    .line 3
+    invoke-direct {v0}, LX/4cn;-><init>()V
+
+    sput-object v0, LX/4cn;->A00:LX/4cn;
+
     return-void
 .end method
 
-.method public static A01(Landroidx/appcompat/widget/SearchView$SearchAutoComplete;)V
-    .locals 1
+.method public synthetic constructor <init>()V
+    .locals 0
 
-    .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/SearchView$SearchAutoComplete;->setInputMethodMode(I)V
-
-    .line 2
-    .line 3
-    .line 4
     return-void
 .end method

@@ -1,16 +1,6 @@
 .class public final LX/0C2;
-.super Ljava/util/HashSet;
+.super Ljava/lang/Object;
 .source ""
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/util/HashSet<",
-        "LX/0Hd;",
-        ">;"
-    }
-.end annotation
 
 
 # direct methods
@@ -18,41 +8,61 @@
     .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x1
+    sget-object v2, LX/0C0;->A00:LX/0C1;
 
     .line 4
-    new-array v2, v0, [LX/0Hd;
-
     .line 5
-    .line 6
-    sget-object v1, LX/0Dy;->A0g:LX/0Hd;
+    iget-object v1, v2, LX/0C1;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 6
     .line 7
+    const/4 v0, 0x1
+
     .line 8
-    const/4 v0, 0x0
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
     .line 9
-    aput-object v1, v2, v0
-
     .line 10
     .line 11
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    move-result v0
 
     .line 12
+    if-nez v0, :cond_0
+
     .line 13
     .line 14
-    move-result-object v0
+    iget-object v0, v2, LX/0C1;->A00:Landroid/os/ConditionVariable;
 
     .line 15
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
     .line 16
+    invoke-virtual {v0}, Landroid/os/ConditionVariable;->close()V
+
     .line 17
     .line 18
+    .line 19
+    iget-object v1, v2, LX/0C1;->A01:Ljava/util/concurrent/ExecutorService;
+
+    .line 20
+    .line 21
+    new-instance v0, LX/0Bz;
+
+    .line 22
+    .line 23
+    invoke-direct {v0, v2}, LX/0Bz;-><init>(LX/0C1;)V
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 27
+    .line 28
+    .line 29
+    :cond_0
     return-void
 .end method

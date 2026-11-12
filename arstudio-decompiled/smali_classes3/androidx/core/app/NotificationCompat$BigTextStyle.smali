@@ -1,5 +1,5 @@
 .class public final Landroidx/core/app/NotificationCompat$BigTextStyle;
-.super LX/4fT;
+.super LX/4Qa;
 .source ""
 
 
@@ -12,7 +12,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4fT;-><init>()V
+    invoke-direct {p0}, LX/4Qa;-><init>()V
 
     .line 1
     .line 2
@@ -26,7 +26,7 @@
     .locals 2
 
     .line 0
-    invoke-super {p0, p1}, LX/4fT;->A00(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, LX/4Qa;->A00(Landroid/os/Bundle;)V
 
     .line 1
     .line 2

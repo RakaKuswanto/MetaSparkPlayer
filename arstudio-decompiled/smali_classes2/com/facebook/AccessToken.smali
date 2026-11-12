@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final A08:LX/26J;
+.field public static final A08:LX/0b1;
 
 .field public static final A09:Ljava/util/Date;
 
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field public final A00:LX/26J;
+.field public final A00:LX/0b1;
 
 .field public final A01:Ljava/lang/String;
 
@@ -78,19 +78,19 @@
 
     .line 20
     .line 21
-    sget-object v0, LX/26J;->FACEBOOK_APPLICATION_WEB:LX/26J;
+    sget-object v0, LX/0b1;->FACEBOOK_APPLICATION_WEB:LX/0b1;
 
     .line 22
     .line 23
-    sput-object v0, Lcom/facebook/AccessToken;->A08:LX/26J;
+    sput-object v0, Lcom/facebook/AccessToken;->A08:LX/0b1;
 
     .line 24
     .line 25
-    const/16 v0, 0x12
+    const/16 v0, 0x11
 
     .line 26
     .line 27
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 28
     .line 29
@@ -105,44 +105,44 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/26J;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Date;Ljava/util/Date;)V
+.method public constructor <init>(LX/0b1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Date;Ljava/util/Date;)V
     .locals 1
 
-    .line 268928184
+    .line 268605761
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "accessToken"
+    const-string/jumbo v0, "accessToken"
 
-    .line 268928185
+    .line 268605762
     invoke-static {p2, v0}, Lcom/facebook/internal/Validate;->A02(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "applicationId"
+    const-string/jumbo v0, "applicationId"
 
-    .line 268928186
+    .line 268605763
     invoke-static {p3, v0}, Lcom/facebook/internal/Validate;->A02(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "userId"
 
-    .line 268928187
+    .line 268605764
     invoke-static {p4, v0}, Lcom/facebook/internal/Validate;->A02(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p7, :cond_0
 
-    .line 268928188
+    .line 268605765
     sget-object p7, Lcom/facebook/AccessToken;->A09:Ljava/util/Date;
 
     :cond_0
     iput-object p7, p0, Lcom/facebook/AccessToken;->A04:Ljava/util/Date;
 
-    .line 268928189
+    .line 268605766
     if-eqz p5, :cond_4
 
-    .line 268928190
-    invoke-static {p5}, LX/0Yj;->A0a(Ljava/util/Collection;)Ljava/util/HashSet;
+    .line 268605767
+    invoke-static {p5}, LX/0X7;->A0e(Ljava/util/Collection;)Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 268928191
+    .line 268605768
     :goto_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -150,15 +150,15 @@
 
     iput-object v0, p0, Lcom/facebook/AccessToken;->A07:Ljava/util/Set;
 
-    .line 268928192
+    .line 268605769
     if-eqz p6, :cond_3
 
-    .line 268928193
-    invoke-static {p6}, LX/0Yj;->A0a(Ljava/util/Collection;)Ljava/util/HashSet;
+    .line 268605770
+    invoke-static {p6}, LX/0X7;->A0e(Ljava/util/Collection;)Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 268928194
+    .line 268605771
     :goto_1
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -166,49 +166,49 @@
 
     iput-object v0, p0, Lcom/facebook/AccessToken;->A06:Ljava/util/Set;
 
-    .line 268928195
+    .line 268605772
     iput-object p2, p0, Lcom/facebook/AccessToken;->A02:Ljava/lang/String;
 
     if-nez p1, :cond_1
 
-    .line 268928196
-    sget-object p1, Lcom/facebook/AccessToken;->A08:LX/26J;
+    .line 268605773
+    sget-object p1, Lcom/facebook/AccessToken;->A08:LX/0b1;
 
     :cond_1
-    iput-object p1, p0, Lcom/facebook/AccessToken;->A00:LX/26J;
+    iput-object p1, p0, Lcom/facebook/AccessToken;->A00:LX/0b1;
 
     if-nez p8, :cond_2
 
-    .line 268928197
+    .line 268605774
     sget-object p8, Lcom/facebook/AccessToken;->A0A:Ljava/util/Date;
 
     :cond_2
     iput-object p8, p0, Lcom/facebook/AccessToken;->A05:Ljava/util/Date;
 
-    .line 268928198
+    .line 268605775
     iput-object p3, p0, Lcom/facebook/AccessToken;->A01:Ljava/lang/String;
 
-    .line 268928199
+    .line 268605776
     iput-object p4, p0, Lcom/facebook/AccessToken;->A03:Ljava/lang/String;
 
     return-void
 
-    .line 268928200
+    .line 268605777
     :cond_3
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 268928201
+    .line 268605778
     goto :goto_1
 
-    .line 268928202
+    .line 268605779
     :cond_4
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 268928203
+    .line 268605780
     goto :goto_0
 .end method
 
@@ -242,7 +242,7 @@
 
     .line 13
     .line 14
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 15
     .line 16
@@ -255,7 +255,7 @@
     .line 19
     .line 20
     .line 21
-    invoke-static {v1}, LX/0Yf;->A0p(Ljava/util/Collection;)Ljava/util/Set;
+    invoke-static {v1}, LX/0X3;->A0s(Ljava/util/Collection;)Ljava/util/Set;
 
     .line 22
     .line 23
@@ -277,7 +277,7 @@
     .line 31
     .line 32
     .line 33
-    invoke-static {v1}, LX/0Yf;->A0p(Ljava/util/Collection;)Ljava/util/Set;
+    invoke-static {v1}, LX/0X3;->A0s(Ljava/util/Collection;)Ljava/util/Set;
 
     .line 34
     .line 35
@@ -309,7 +309,7 @@
     move-result-object v0
 
     .line 49
-    invoke-static {v0}, LX/26J;->valueOf(Ljava/lang/String;)LX/26J;
+    invoke-static {v0}, LX/0b1;->valueOf(Ljava/lang/String;)LX/0b1;
 
     .line 50
     .line 51
@@ -317,7 +317,7 @@
     move-result-object v0
 
     .line 53
-    iput-object v0, p0, Lcom/facebook/AccessToken;->A00:LX/26J;
+    iput-object v0, p0, Lcom/facebook/AccessToken;->A00:LX/0b1;
 
     .line 54
     .line 55
@@ -489,11 +489,11 @@
 
     .line 50
     .line 51
-    iget-object v1, p0, Lcom/facebook/AccessToken;->A00:LX/26J;
+    iget-object v1, p0, Lcom/facebook/AccessToken;->A00:LX/0b1;
 
     .line 52
     .line 53
-    iget-object v0, p1, Lcom/facebook/AccessToken;->A00:LX/26J;
+    iget-object v0, p1, Lcom/facebook/AccessToken;->A00:LX/0b1;
 
     .line 54
     .line 55
@@ -601,7 +601,7 @@
     move-result v0
 
     .line 6
-    invoke-static {v0}, LX/0Yg;->A00(I)I
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 7
     .line 8
@@ -651,7 +651,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0, v1}, LX/001;->A02(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
 
     .line 31
     .line 32
@@ -659,11 +659,11 @@
     move-result v1
 
     .line 34
-    iget-object v0, p0, Lcom/facebook/AccessToken;->A00:LX/26J;
+    iget-object v0, p0, Lcom/facebook/AccessToken;->A00:LX/0b1;
 
     .line 35
     .line 36
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 37
     .line 38
@@ -675,7 +675,7 @@
 
     .line 41
     .line 42
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 43
     .line 44
@@ -687,7 +687,7 @@
 
     .line 47
     .line 48
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 49
     .line 50
@@ -706,7 +706,7 @@
 
     .line 56
     .line 57
-    invoke-static {v0, v1}, LX/0Yi;->A07(Ljava/lang/String;I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 58
     .line 59
@@ -714,14 +714,17 @@
     move-result v0
 
     .line 61
-    return v0
+    add-int/2addr v1, v0
+
+    .line 62
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -790,7 +793,7 @@
     .line 36
     .line 37
     :goto_1
-    invoke-static {v0, v2}, LX/0Yd;->A0S(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/0X2;->A0l(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 38
     .line 39
@@ -802,49 +805,51 @@
 
     .line 42
     :cond_0
-    const-string v0, "["
+    const-string/jumbo v0, "["
 
     .line 43
     .line 44
+    .line 45
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 45
     .line 46
     .line 47
+    .line 48
     const-string v0, ", "
 
-    .line 48
     .line 49
+    .line 50
     invoke-static {v0, v1}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
-    .line 50
     .line 51
     .line 52
+    .line 53
     move-result-object v0
 
-    .line 53
+    .line 54
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 54
     .line 55
     .line 56
-    const-string v0, "]"
-
     .line 57
+    const-string/jumbo v0, "]"
+
     .line 58
+    .line 59
+    .line 60
     goto :goto_1
 
-    .line 59
+    .line 61
     :cond_1
     invoke-static {}, Lcom/facebook/FacebookSdk;->A01()V
 
-    .line 60
-    .line 61
     .line 62
-    const-string v0, "ACCESS_TOKEN_REMOVED"
-
     .line 63
     .line 64
+    const-string v0, "ACCESS_TOKEN_REMOVED"
+
+    .line 65
+    .line 66
     goto :goto_0
 .end method
 
@@ -873,7 +878,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 12
     .line 13
@@ -890,7 +895,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 21
     .line 22
@@ -912,11 +917,11 @@
     .line 30
     .line 31
     .line 32
-    iget-object v0, p0, Lcom/facebook/AccessToken;->A00:LX/26J;
+    iget-object v0, p0, Lcom/facebook/AccessToken;->A00:LX/0b1;
 
     .line 33
     .line 34
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 35
     .line 36

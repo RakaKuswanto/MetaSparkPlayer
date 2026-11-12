@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final A00:LX/1Z9;
+.field public final A00:LX/2Qz;
 
 .field public final A01:Ljava/lang/String;
 
@@ -37,11 +37,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x4e
+    const/16 v0, 0x4d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -109,11 +109,11 @@
     move-result-object v0
 
     .line 25
-    check-cast v0, LX/1Z9;
+    check-cast v0, LX/2Qz;
 
     .line 26
     .line 27
-    iput-object v0, p0, Lcom/facebook/auth/credentials/NonceCredentials;->A00:LX/1Z9;
+    iput-object v0, p0, Lcom/facebook/auth/credentials/NonceCredentials;->A00:LX/2Qz;
 
     .line 28
     .line 29
@@ -233,7 +233,7 @@
     .line 13
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/auth/credentials/NonceCredentials;->A00:LX/1Z9;
+    iget-object v0, p0, Lcom/facebook/auth/credentials/NonceCredentials;->A00:LX/2Qz;
 
     .line 16
     .line 17

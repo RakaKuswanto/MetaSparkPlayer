@@ -1,4 +1,4 @@
-.class public final synthetic LX/5xO;
+.class public final LX/5xO;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,21 +7,39 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ProgressiveMediaPeriod$$ExternalSyntheticLambda1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbCameraPhysicalDeviceLifecycleWrapperV2$20"
 
 
 # instance fields
-.field public final synthetic A00:LX/5xt;
+.field public final synthetic A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+
+.field public final synthetic A01:Lcom/facebook/cameracore/camerasdk/common/CameraStateException;
+
+.field public final synthetic A02:LX/5wN;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5xt;)V
+.method public constructor <init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Lcom/facebook/cameracore/camerasdk/common/CameraStateException;LX/5wN;)V
     .locals 0
 
+    .line 0
+    iput-object p1, p0, LX/5xO;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+
+    .line 1
+    .line 2
+    iput-object p3, p0, LX/5xO;->A02:LX/5wN;
+
+    .line 3
+    .line 4
+    iput-object p2, p0, LX/5xO;->A01:Lcom/facebook/cameracore/camerasdk/common/CameraStateException;
+
+    .line 5
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/5xO;->A00:LX/5xt;
-
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
@@ -31,16 +49,18 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/5xO;->A00:LX/5xt;
+    iget-object v1, p0, LX/5xO;->A02:LX/5wN;
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    iget-object v0, p0, LX/5xO;->A01:Lcom/facebook/cameracore/camerasdk/common/CameraStateException;
 
     .line 3
-    iput-boolean v0, v1, LX/5xt;->A09:Z
-
     .line 4
+    invoke-interface {v1, v0}, LX/5wN;->AU1(Lcom/facebook/cameracore/camerasdk/common/CameraStateException;)V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method

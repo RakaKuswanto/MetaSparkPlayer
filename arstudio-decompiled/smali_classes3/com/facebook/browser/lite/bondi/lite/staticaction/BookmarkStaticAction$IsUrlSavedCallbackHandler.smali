@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public final synthetic A00:LX/4IB;
+.field public final synthetic A00:LX/472;
 
 
 # direct methods
-.method public constructor <init>(LX/4IB;)V
+.method public constructor <init>(LX/472;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/browser/lite/bondi/lite/staticaction/BookmarkStaticAction$IsUrlSavedCallbackHandler;->A00:LX/4IB;
+    iput-object p1, p0, Lcom/facebook/browser/lite/bondi/lite/staticaction/BookmarkStaticAction$IsUrlSavedCallbackHandler;->A00:LX/472;
 
     .line 1
     .line 2

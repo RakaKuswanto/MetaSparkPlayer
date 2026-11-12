@@ -1,146 +1,111 @@
-.class public final LX/0Sj;
-.super LX/00a;
+.class public final LX/0SJ;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MqttClient$11"
+
+
+# instance fields
+.field public final synthetic A00:LX/0S2;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/0S2;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/00a;-><init>()V
+    iput-object p1, p0, LX/0SJ;->A00:LX/0S2;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A02(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
-    .locals 5
+.method public final run()V
+    .locals 4
 
     .line 0
-    check-cast p2, Landroidx/activity/result/IntentSenderRequest;
+    :try_start_0
+    iget-object v2, p0, LX/0SJ;->A00:LX/0S2;
 
     .line 1
     .line 2
-    const-string v0, "androidx.activity.result.contract.action.INTENT_SENDER_REQUEST"
+    iget-object v1, v2, LX/0S2;->A03:LX/0Oc;
 
     .line 3
     .line 4
-    new-instance v4, Landroid/content/Intent;
+    iget-object v0, v2, LX/0S2;->A0D:LX/0UZ;
 
     .line 5
     .line 6
-    invoke-direct {v4, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, LX/0UZ;->A04()LX/0WD;
 
     .line 7
     .line 8
     .line 9
-    iget-object v2, p2, Landroidx/activity/result/IntentSenderRequest;->A02:Landroid/content/Intent;
+    iget-boolean v0, v1, LX/0Oc;->A00:Z
 
     .line 10
     .line 11
-    if-eqz v2, :cond_0
+    xor-int/lit8 v0, v0, 0x1
 
     .line 12
     .line 13
-    const-string v1, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
+    if-eqz v0, :cond_0
 
     .line 14
     .line 15
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
+    iget-object v0, v2, LX/0S2;->A0G:LX/0S0;
 
     .line 16
     .line 17
+    invoke-interface {v0}, LX/0S0;->AjM()V
+
     .line 18
-    move-result-object v0
-
     .line 19
-    if-eqz v0, :cond_0
-
     .line 20
+    return-void
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 21
-    invoke-virtual {v4, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+    :catchall_0
+    move-exception v3
 
     .line 22
+    iget-object v2, p0, LX/0SJ;->A00:LX/0S2;
+
     .line 23
     .line 24
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
+    invoke-static {v3}, LX/0Rl;->getFromWriteException(Ljava/lang/Throwable;)LX/0Rl;
 
     .line 25
     .line 26
     .line 27
-    const/4 v1, 0x0
+    move-result-object v1
 
     .line 28
-    const-string v0, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
+    sget-object v0, LX/0Rr;->PINGRESP:LX/0Rr;
 
     .line 29
     .line 30
-    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-static {v2, v0, v1, v3}, LX/0S2;->A03(LX/0S2;LX/0Rr;LX/0Rl;Ljava/lang/Throwable;)V
 
     .line 31
     .line 32
     .line 33
-    move-result v0
-
-    .line 34
-    if-eqz v0, :cond_0
-
-    .line 35
-    .line 36
-    iget-object v3, p2, Landroidx/activity/result/IntentSenderRequest;->A03:Landroid/content/IntentSender;
-
-    .line 37
-    .line 38
-    const/4 v2, 0x0
-
-    .line 39
-    iget v1, p2, Landroidx/activity/result/IntentSenderRequest;->A01:I
-
-    .line 40
-    .line 41
-    iget v0, p2, Landroidx/activity/result/IntentSenderRequest;->A00:I
-
-    .line 42
-    .line 43
-    new-instance p2, Landroidx/activity/result/IntentSenderRequest;
-
-    .line 44
-    .line 45
-    invoke-direct {p2, v2, v3, v0, v1}, Landroidx/activity/result/IntentSenderRequest;-><init>(Landroid/content/Intent;Landroid/content/IntentSender;II)V
-
-    .line 46
-    .line 47
-    .line 48
     :cond_0
-    const-string v0, "androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST"
-
-    .line 49
-    .line 50
-    invoke-virtual {v4, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 51
-    .line 52
-    .line 53
-    return-object v4
-.end method
-
-.method public final bridge synthetic A04(Landroid/content/Intent;I)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    new-instance v0, Landroidx/activity/result/ActivityResult;
-
-    .line 1
-    .line 2
-    invoke-direct {v0, p2, p1}, Landroidx/activity/result/ActivityResult;-><init>(ILandroid/content/Intent;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-object v0
+    return-void
 .end method

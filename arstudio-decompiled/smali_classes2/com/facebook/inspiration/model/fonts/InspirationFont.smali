@@ -21,17 +21,17 @@
 
 
 # instance fields
-.field public final A00:I
+.field public final A00:F
 
 .field public final A01:I
 
 .field public final A02:I
 
-.field public final A03:LX/0qG;
+.field public final A03:I
 
-.field public final A04:Lcom/google/common/collect/ImmutableList;
+.field public final A04:LX/13c;
 
-.field public final A05:Ljava/lang/String;
+.field public final A05:Lcom/google/common/collect/ImmutableList;
 
 .field public final A06:Ljava/lang/String;
 
@@ -47,9 +47,11 @@
 
 .field public final A0C:Ljava/lang/String;
 
-.field public final A0D:Z
+.field public final A0D:Ljava/lang/String;
 
 .field public final A0E:Z
+
+.field public final A0F:Z
 
 
 # direct methods
@@ -57,11 +59,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5f
+    const/16 v0, 0x3b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1Wh;->A00(I)LX/1Wh;
 
     .line 3
     .line 4
@@ -76,75 +78,162 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/0qG;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIZZ)V
+.method public constructor <init>(LX/13c;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FIIIZZ)V
     .locals 1
 
+    .line 268435456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "assetName"
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const-string/jumbo v0, "assetName"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p3, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Ljava/lang/String;
+    .line 268435463
+    .line 268435464
+    .line 268435465
+    iput-object p3, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
 
-    const-string v0, "assetUrl"
+    .line 268435466
+    .line 268435467
+    const-string/jumbo v0, "assetUrl"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 268435468
+    .line 268435469
+    .line 268435470
+    invoke-static {p4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p4, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
+    .line 268435471
+    .line 268435472
+    .line 268435473
+    iput-object p4, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
 
-    const-string v0, "displayName"
+    .line 268435474
+    .line 268435475
+    const-string/jumbo v0, "displayName"
 
-    invoke-static {v0, p5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 268435476
+    .line 268435477
+    .line 268435478
+    invoke-static {p5, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p5, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
+    .line 268435479
+    .line 268435480
+    .line 268435481
+    iput-object p5, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
 
-    const-string v0, "expressiveTextDecorations"
+    .line 268435482
+    .line 268435483
+    const-string/jumbo v0, "expressiveTextDecorations"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 268435484
+    .line 268435485
+    .line 268435486
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p2, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:Lcom/google/common/collect/ImmutableList;
+    .line 268435487
+    .line 268435488
+    .line 268435489
+    iput-object p2, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Lcom/google/common/collect/ImmutableList;
 
-    iput-object p6, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
+    .line 268435490
+    .line 268435491
+    iput-object p6, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
 
+    .line 268435492
+    .line 268435493
     const-string/jumbo v0, "iconUrl"
 
-    invoke-static {v0, p7}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 268435494
+    .line 268435495
+    .line 268435496
+    invoke-static {p7, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p7, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
+    .line 268435497
+    .line 268435498
+    .line 268435499
+    iput-object p7, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
 
-    const-string/jumbo v0, "id"
+    .line 268435500
+    .line 268435501
+    invoke-static {p8}, LX/1O4;->A09(Ljava/lang/Object;)V
 
-    invoke-static {v0, p8}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 268435502
+    .line 268435503
+    .line 268435504
+    iput-object p8, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
 
-    iput-object p8, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
-
-    iput-boolean p14, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Z
-
+    .line 268435505
+    .line 268435506
     move/from16 v0, p15
 
+    .line 268435507
+    .line 268435508
     iput-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
 
-    iput p11, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:I
+    .line 268435509
+    .line 268435510
+    move/from16 v0, p16
 
+    .line 268435511
+    .line 268435512
+    iput-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0F:Z
+
+    .line 268435513
+    .line 268435514
     iput p12, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
 
-    const-string/jumbo v0, "postScriptName"
-
-    invoke-static {v0, p9}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
-    iput-object p9, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
-
-    const-string/jumbo v0, "styleDisplayName"
-
-    invoke-static {v0, p10}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
-    iput-object p10, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0C:Ljava/lang/String;
-
+    .line 268435515
+    .line 268435516
     iput p13, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
 
-    iput-object p1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:LX/0qG;
+    .line 268435517
+    .line 268435518
+    iput p11, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:F
 
+    .line 268435519
+    .line 268435520
+    const-string/jumbo v0, "postScriptName"
+
+    .line 268435521
+    .line 268435522
+    .line 268435523
+    invoke-static {p9, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 268435524
+    .line 268435525
+    .line 268435526
+    iput-object p9, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0C:Ljava/lang/String;
+
+    .line 268435527
+    .line 268435528
+    const-string/jumbo v0, "styleDisplayName"
+
+    .line 268435529
+    .line 268435530
+    .line 268435531
+    invoke-static {p10, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 268435532
+    .line 268435533
+    .line 268435534
+    iput-object p10, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Ljava/lang/String;
+
+    .line 268435535
+    .line 268435536
+    iput p14, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:I
+
+    .line 268435537
+    .line 268435538
+    iput-object p1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:LX/13c;
+
+    .line 268435539
+    .line 268435540
     return-void
 .end method
 
@@ -157,7 +246,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yd;->A0K(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X1;->A0M(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 4
     .line 5
@@ -165,7 +254,7 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
 
     .line 8
     .line 9
@@ -177,7 +266,7 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
 
     .line 14
     .line 15
@@ -189,7 +278,7 @@
     move-result-object v0
 
     .line 19
-    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
 
     .line 20
     .line 21
@@ -213,7 +302,7 @@
 
     .line 29
     .line 30
-    invoke-static {p1, v1, v0}, LX/0Yf;->A05(Landroid/os/Parcel;[Ljava/lang/Object;I)I
+    invoke-static {p1, v1, v0}, LX/0X2;->A06(Landroid/os/Parcel;[Ljava/lang/Object;I)I
 
     .line 31
     .line 32
@@ -233,7 +322,7 @@
     move-result-object v0
 
     .line 39
-    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:Lcom/google/common/collect/ImmutableList;
+    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Lcom/google/common/collect/ImmutableList;
 
     .line 40
     .line 41
@@ -252,7 +341,7 @@
 
     .line 47
     .line 48
-    iput-object v2, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
+    iput-object v2, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
 
     .line 49
     .line 50
@@ -265,7 +354,7 @@
     move-result-object v0
 
     .line 54
-    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
 
     .line 55
     .line 56
@@ -277,7 +366,7 @@
     move-result-object v0
 
     .line 60
-    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
 
     .line 61
     .line 62
@@ -292,7 +381,7 @@
     const/4 v0, 0x1
 
     .line 67
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 68
     .line 69
@@ -300,11 +389,11 @@
     move-result v0
 
     .line 71
-    iput-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Z
+    iput-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
 
     .line 72
     .line 73
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 74
     .line 75
@@ -312,7 +401,7 @@
     move-result v0
 
     .line 77
-    iput-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
+    iput-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0F:Z
 
     .line 78
     .line 79
@@ -324,7 +413,7 @@
     move-result v0
 
     .line 83
-    iput v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:I
+    iput v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
 
     .line 84
     .line 85
@@ -336,19 +425,19 @@
     move-result v0
 
     .line 89
-    iput v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
+    iput v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
 
     .line 90
     .line 91
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     .line 92
     .line 93
     .line 94
-    move-result-object v0
+    move-result v0
 
     .line 95
-    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
+    iput v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:F
 
     .line 96
     .line 97
@@ -364,15 +453,15 @@
 
     .line 102
     .line 103
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 104
     .line 105
     .line 106
-    move-result v0
+    move-result-object v0
 
     .line 107
-    iput v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
+    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Ljava/lang/String;
 
     .line 108
     .line 109
@@ -384,51 +473,63 @@
     move-result v0
 
     .line 113
-    if-eqz v0, :cond_1
+    iput v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:I
 
     .line 114
     .line 115
-    invoke-static {}, LX/0qG;->values()[LX/0qG;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 116
     .line 117
     .line 118
-    move-result-object v1
+    move-result v0
 
     .line 119
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    if-eqz v0, :cond_1
 
     .line 120
     .line 121
+    invoke-static {}, LX/13c;->values()[LX/13c;
+
     .line 122
-    move-result v0
-
     .line 123
-    aget-object v2, v1, v0
-
     .line 124
+    move-result-object v1
+
     .line 125
-    :cond_1
-    iput-object v2, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:LX/0qG;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 126
     .line 127
+    .line 128
+    move-result v0
+
+    .line 129
+    aget-object v2, v1, v0
+
+    .line 130
+    .line 131
+    :cond_1
+    iput-object v2, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:LX/13c;
+
+    .line 132
+    .line 133
     return-void
 
-    .line 128
+    .line 134
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 129
-    .line 130
-    .line 131
+    .line 135
+    .line 136
+    .line 137
     move-result-object v0
 
-    .line 132
-    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
+    .line 138
+    iput-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
 
-    .line 133
-    .line 134
+    .line 139
+    .line 140
     goto :goto_1
 .end method
 
@@ -468,15 +569,15 @@
 
     .line 9
     .line 10
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
 
     .line 11
     .line 12
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -488,15 +589,15 @@
 
     .line 19
     .line 20
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
 
     .line 21
     .line 22
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -508,15 +609,15 @@
 
     .line 29
     .line 30
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
 
     .line 31
     .line 32
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -528,15 +629,15 @@
 
     .line 39
     .line 40
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:Lcom/google/common/collect/ImmutableList;
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Lcom/google/common/collect/ImmutableList;
 
     .line 41
     .line 42
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Lcom/google/common/collect/ImmutableList;
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 45
     .line 46
@@ -548,15 +649,15 @@
 
     .line 49
     .line 50
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
 
     .line 51
     .line 52
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
 
     .line 53
     .line 54
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 55
     .line 56
@@ -568,15 +669,15 @@
 
     .line 59
     .line 60
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
 
     .line 61
     .line 62
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
 
     .line 63
     .line 64
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 65
     .line 66
@@ -588,15 +689,15 @@
 
     .line 69
     .line 70
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
 
     .line 71
     .line 72
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
 
     .line 73
     .line 74
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 75
     .line 76
@@ -608,11 +709,11 @@
 
     .line 79
     .line 80
-    iget-boolean v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Z
+    iget-boolean v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
 
     .line 81
     .line 82
-    iget-boolean v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Z
+    iget-boolean v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
 
     .line 83
     .line 84
@@ -620,11 +721,11 @@
 
     .line 85
     .line 86
-    iget-boolean v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
+    iget-boolean v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0F:Z
 
     .line 87
     .line 88
-    iget-boolean v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
+    iget-boolean v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0F:Z
 
     .line 89
     .line 90
@@ -632,11 +733,11 @@
 
     .line 91
     .line 92
-    iget v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:I
+    iget v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
 
     .line 93
     .line 94
-    iget v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:I
+    iget v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
 
     .line 95
     .line 96
@@ -644,11 +745,11 @@
 
     .line 97
     .line 98
-    iget v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
+    iget v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
 
     .line 99
     .line 100
-    iget v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
+    iget v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
 
     .line 101
     .line 102
@@ -656,74 +757,90 @@
 
     .line 103
     .line 104
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
+    iget v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:F
 
     .line 105
     .line 106
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
+    iget v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:F
 
     .line 107
     .line 108
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmpl-float v0, v1, v0
 
     .line 109
     .line 110
-    .line 111
-    move-result v0
+    if-nez v0, :cond_0
 
+    .line 111
     .line 112
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0C:Ljava/lang/String;
 
     .line 113
     .line 114
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0C:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0C:Ljava/lang/String;
 
     .line 115
     .line 116
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0C:Ljava/lang/String;
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 117
     .line 118
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     .line 119
-    .line 120
-    .line 121
     move-result v0
 
-    .line 122
+    .line 120
     if-eqz v0, :cond_0
+
+    .line 121
+    .line 122
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Ljava/lang/String;
 
     .line 123
     .line 124
-    iget v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Ljava/lang/String;
 
     .line 125
     .line 126
-    iget v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 127
     .line 128
-    if-ne v1, v0, :cond_0
-
     .line 129
+    move-result v0
+
     .line 130
-    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:LX/0qG;
+    if-eqz v0, :cond_0
 
     .line 131
     .line 132
-    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:LX/0qG;
+    iget v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:I
 
     .line 133
     .line 134
-    if-eq v1, v0, :cond_1
+    iget v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:I
 
     .line 135
     .line 136
+    if-ne v1, v0, :cond_0
+
+    .line 137
+    .line 138
+    iget-object v1, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:LX/13c;
+
+    .line 139
+    .line 140
+    iget-object v0, p1, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:LX/13c;
+
+    .line 141
+    .line 142
+    if-eq v1, v0, :cond_1
+
+    .line 143
+    .line 144
     :cond_0
     return v2
 
-    .line 137
+    .line 145
     :cond_1
     return v3
 .end method
@@ -732,11 +849,11 @@
     .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -744,7 +861,7 @@
     move-result v1
 
     .line 6
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
 
     .line 7
     .line 8
@@ -752,7 +869,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -763,7 +880,7 @@
     add-int/2addr v1, v0
 
     .line 15
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
 
     .line 16
     .line 17
@@ -771,7 +888,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -782,7 +899,7 @@
     add-int/2addr v1, v0
 
     .line 24
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Lcom/google/common/collect/ImmutableList;
 
     .line 25
     .line 26
@@ -790,7 +907,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 29
     .line 30
@@ -801,7 +918,7 @@
     add-int/2addr v1, v0
 
     .line 33
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
 
     .line 34
     .line 35
@@ -809,7 +926,7 @@
 
     .line 36
     .line 37
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 38
     .line 39
@@ -820,7 +937,7 @@
     add-int/2addr v1, v0
 
     .line 42
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
 
     .line 43
     .line 44
@@ -828,7 +945,7 @@
 
     .line 45
     .line 46
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 47
     .line 48
@@ -839,7 +956,7 @@
     add-int/2addr v1, v0
 
     .line 51
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
 
     .line 52
     .line 53
@@ -847,7 +964,7 @@
 
     .line 54
     .line 55
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 56
     .line 57
@@ -858,120 +975,146 @@
     add-int/2addr v1, v0
 
     .line 60
-    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Z
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
 
     .line 61
     .line 62
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 63
     .line 64
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 65
-    move-result v1
-
     .line 66
-    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
-
     .line 67
+    move-result v0
+
     .line 68
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    add-int/2addr v1, v0
 
     .line 69
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0F:Z
+
     .line 70
     .line 71
-    move-result v1
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 72
-    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:I
-
     .line 73
-    .line 74
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
+    .line 74
     .line 75
     .line 76
-    add-int/2addr v1, v0
+    move-result v0
 
     .line 77
-    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
+    add-int/2addr v1, v0
 
     .line 78
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
+
     .line 79
+    .line 80
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 80
     .line 81
-    add-int/2addr v1, v0
-
     .line 82
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
+    add-int/2addr v1, v0
 
     .line 83
-    .line 84
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 85
-    .line 86
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 87
-    .line 88
-    .line 89
-    move-result v0
-
-    .line 90
-    add-int/2addr v1, v0
-
-    .line 91
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0C:Ljava/lang/String;
-
-    .line 92
-    .line 93
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 94
-    .line 95
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 96
-    .line 97
-    .line 98
-    move-result v0
-
-    .line 99
-    add-int/2addr v1, v0
-
-    .line 100
     iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
 
+    .line 84
+    .line 85
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 86
+    .line 87
+    add-int/2addr v1, v0
+
+    .line 88
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:F
+
+    .line 89
+    .line 90
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 91
+    .line 92
+    .line 93
+    move-result v1
+
+    .line 94
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0C:Ljava/lang/String;
+
+    .line 95
+    .line 96
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 97
+    .line 98
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 99
+    .line 100
     .line 101
+    move-result v0
+
     .line 102
-    mul-int/lit8 v2, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 103
-    .line 104
-    add-int/2addr v2, v0
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Ljava/lang/String;
 
+    .line 104
     .line 105
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:LX/0qG;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 106
     .line 107
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 108
     .line 109
     .line 110
-    move-result v1
+    move-result v0
 
     .line 111
-    mul-int/lit8 v0, v2, 0x1f
+    add-int/2addr v1, v0
 
     .line 112
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:I
+
     .line 113
+    .line 114
+    mul-int/lit8 v2, v1, 0x1f
+
+    .line 115
+    .line 116
+    add-int/2addr v2, v0
+
+    .line 117
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:LX/13c;
+
+    .line 118
+    .line 119
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
+
+    .line 120
+    .line 121
+    .line 122
+    move-result v1
+
+    .line 123
+    mul-int/lit8 v0, v2, 0x1f
+
+    .line 124
+    .line 125
     add-int/2addr v0, v1
 
-    .line 114
+    .line 126
     return v0
 .end method
 
@@ -979,7 +1122,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -996,7 +1139,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
 
     .line 10
     .line 11
@@ -1014,7 +1157,7 @@
     .line 17
     .line 18
     .line 19
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
 
     .line 20
     .line 21
@@ -1032,7 +1175,7 @@
     .line 27
     .line 28
     .line 29
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
 
     .line 30
     .line 31
@@ -1050,7 +1193,7 @@
     .line 37
     .line 38
     .line 39
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Lcom/google/common/collect/ImmutableList;
 
     .line 40
     .line 41
@@ -1068,7 +1211,7 @@
     .line 47
     .line 48
     .line 49
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
 
     .line 50
     .line 51
@@ -1086,7 +1229,7 @@
     .line 57
     .line 58
     .line 59
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
 
     .line 60
     .line 61
@@ -1104,7 +1247,7 @@
     .line 67
     .line 68
     .line 69
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
 
     .line 70
     .line 71
@@ -1122,7 +1265,7 @@
     .line 77
     .line 78
     .line 79
-    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Z
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
 
     .line 80
     .line 81
@@ -1140,7 +1283,7 @@
     .line 87
     .line 88
     .line 89
-    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0F:Z
 
     .line 90
     .line 91
@@ -1158,7 +1301,7 @@
     .line 97
     .line 98
     .line 99
-    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:I
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
 
     .line 100
     .line 101
@@ -1176,7 +1319,7 @@
     .line 107
     .line 108
     .line 109
-    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
 
     .line 110
     .line 111
@@ -1185,7 +1328,7 @@
     .line 112
     .line 113
     .line 114
-    const-string v0, ", postScriptName="
+    const-string v0, ", outlineRatio="
 
     .line 115
     .line 116
@@ -1194,16 +1337,16 @@
     .line 117
     .line 118
     .line 119
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:F
 
     .line 120
     .line 121
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     .line 122
     .line 123
     .line 124
-    const-string v0, ", styleDisplayName="
+    const-string v0, ", postScriptName="
 
     .line 125
     .line 126
@@ -1221,7 +1364,7 @@
     .line 132
     .line 133
     .line 134
-    const-string v0, ", styleSizeSp="
+    const-string v0, ", styleDisplayName="
 
     .line 135
     .line 136
@@ -1230,16 +1373,16 @@
     .line 137
     .line 138
     .line 139
-    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Ljava/lang/String;
 
     .line 140
     .line 141
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 142
     .line 143
     .line 144
-    const-string v0, ", textFormat="
+    const-string v0, ", styleSizeSp="
 
     .line 145
     .line 146
@@ -1248,18 +1391,36 @@
     .line 147
     .line 148
     .line 149
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:LX/0qG;
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:I
 
     .line 150
     .line 151
-    invoke-static {v0, v1}, LX/0Yd;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 152
     .line 153
     .line 154
-    move-result-object v0
+    const-string v0, ", textFormat="
 
     .line 155
+    .line 156
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 157
+    .line 158
+    .line 159
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:LX/13c;
+
+    .line 160
+    .line 161
+    invoke-static {v0, v1}, LX/0X1;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 162
+    .line 163
+    .line 164
+    move-result-object v0
+
+    .line 165
     return-object v0
 .end method
 
@@ -1267,7 +1428,7 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
 
     .line 1
     .line 2
@@ -1276,7 +1437,7 @@
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A06:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
 
     .line 6
     .line 7
@@ -1285,7 +1446,7 @@
     .line 8
     .line 9
     .line 10
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A07:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
 
     .line 11
     .line 12
@@ -1294,11 +1455,11 @@
     .line 13
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A05:Lcom/google/common/collect/ImmutableList;
 
     .line 16
     .line 17
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 18
     .line 19
@@ -1319,7 +1480,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 28
     .line 29
@@ -1328,16 +1489,16 @@
 
     .line 31
     :cond_0
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A08:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
 
     .line 32
     .line 33
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 34
     .line 35
     .line 36
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A09:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
 
     .line 37
     .line 38
@@ -1346,7 +1507,7 @@
     .line 39
     .line 40
     .line 41
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0A:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
 
     .line 42
     .line 43
@@ -1355,7 +1516,7 @@
     .line 44
     .line 45
     .line 46
-    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Z
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
 
     .line 47
     .line 48
@@ -1364,7 +1525,7 @@
     .line 49
     .line 50
     .line 51
-    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0E:Z
+    iget-boolean v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0F:Z
 
     .line 52
     .line 53
@@ -1373,7 +1534,7 @@
     .line 54
     .line 55
     .line 56
-    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:I
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
 
     .line 57
     .line 58
@@ -1382,7 +1543,7 @@
     .line 59
     .line 60
     .line 61
-    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A01:I
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
 
     .line 62
     .line 63
@@ -1391,11 +1552,11 @@
     .line 64
     .line 65
     .line 66
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0B:Ljava/lang/String;
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A00:F
 
     .line 67
     .line 68
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
     .line 69
     .line 70
@@ -1409,23 +1570,32 @@
     .line 74
     .line 75
     .line 76
-    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A02:I
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A0D:Ljava/lang/String;
 
     .line 77
     .line 78
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 79
     .line 80
     .line 81
-    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:LX/0qG;
+    iget v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A03:I
 
     .line 82
     .line 83
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 84
     .line 85
     .line 86
+    iget-object v0, p0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->A04:LX/13c;
+
+    .line 87
+    .line 88
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
+
+    .line 89
+    .line 90
+    .line 91
     return-void
 .end method

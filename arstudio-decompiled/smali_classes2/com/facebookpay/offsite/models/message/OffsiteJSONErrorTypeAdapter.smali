@@ -54,7 +54,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -91,7 +91,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -131,7 +131,7 @@
     move-result-object v2
 
     .line 22
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v2}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 23
     .line 24
@@ -160,12 +160,12 @@
     move-result-object v0
 
     .line 37
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 38
     .line 39
     .line 40
-    invoke-virtual {v3, v2, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 41
     .line 42
@@ -205,7 +205,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 3
     .line 4
@@ -224,7 +224,7 @@
 
     .line 268435457
     .line 268435458
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 268435459
     .line 268435460

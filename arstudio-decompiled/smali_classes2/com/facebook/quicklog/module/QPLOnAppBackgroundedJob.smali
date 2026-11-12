@@ -4,17 +4,15 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/0Na;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/0Na;
-
-.field public final A03:Ljava/util/Set;
+.field public final A02:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -23,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 4
     .line 5
@@ -31,11 +29,11 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLOnAppBackgroundedJob;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLOnAppBackgroundedJob;->A00:LX/0RP;
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Zq;->A0B()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0A()LX/0lf;
 
     .line 10
     .line 11
@@ -43,15 +41,15 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLOnAppBackgroundedJob;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLOnAppBackgroundedJob;->A01:LX/0RP;
 
     .line 14
     .line 15
-    sget v0, LX/2eq;->A39:I
+    sget v0, LX/2I6;->A1N:I
 
     .line 16
     .line 17
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fa;->A09(I)Ljava/util/Set;
 
     .line 18
     .line 19
@@ -59,25 +57,9 @@
     move-result-object v0
 
     .line 21
-    check-cast v0, Ljava/util/Set;
+    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLOnAppBackgroundedJob;->A02:Ljava/util/Set;
 
     .line 22
     .line 23
-    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLOnAppBackgroundedJob;->A03:Ljava/util/Set;
-
-    .line 24
-    .line 25
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLOnAppBackgroundedJob;->A00:LX/1zG;
-
-    .line 30
-    .line 31
     return-void
 .end method

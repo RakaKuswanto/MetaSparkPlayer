@@ -16,15 +16,6 @@
     return-void
 .end method
 
-.method public static native disableRuntimeVerification_10_0_0()Z
-.end method
-
-.method public static native disableRuntimeVerification_11_0_0()Z
-.end method
-
-.method public static native disableRuntimeVerification_5_1_1()Z
-.end method
-
 .method public static native disableRuntimeVerification_6_0_1()Z
 .end method
 
@@ -40,5 +31,5 @@
 .method public static native disableRuntimeVerification_8_1_0()Z
 .end method
 
-.method public static native disableRuntimeVerification_9_0_0()Z
+.method public static native disableRuntimeVerification_9_plus()Z
 .end method

@@ -41,11 +41,11 @@
 
 
 # virtual methods
-.method public onLayoutChildren(LX/4tb;LX/4tq;)V
+.method public onLayoutChildren(LX/4nR;LX/4nf;)V
     .locals 5
 
     .line 0
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->onLayoutChildren(LX/4tb;LX/4tq;)V
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->onLayoutChildren(LX/4nR;LX/4nf;)V
 
     .line 1
     .line 2
@@ -73,7 +73,7 @@
 
     .line 13
     .line 14
-    invoke-virtual {p2}, LX/4tq;->A00()I
+    invoke-virtual {p2}, LX/4nf;->A00()I
 
     .line 15
     .line 16
@@ -92,7 +92,7 @@
 
     .line 22
     .line 23
-    invoke-virtual {p0, v3, p2, v2}, LX/4ta;->smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;LX/4tq;I)V
+    invoke-virtual {p0, v3, p2, v2}, LX/4nQ;->smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;LX/4nf;I)V
 
     .line 24
     .line 25
@@ -105,11 +105,11 @@
     return-void
 .end method
 
-.method public smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;LX/4tq;I)V
+.method public smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;LX/4nf;I)V
     .locals 3
 
     .line 0
-    invoke-virtual {p0, p3}, LX/4ta;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p3}, LX/4nQ;->getChildAt(I)Landroid/view/View;
 
     .line 1
     .line 2
@@ -141,7 +141,7 @@
 
     .line 15
     .line 16
-    invoke-static {v2, v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->access$300(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;II)LX/4ti;
+    invoke-static {v2, v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->access$300(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;II)LX/4nI;
 
     .line 17
     .line 18
@@ -149,11 +149,11 @@
     move-result-object v0
 
     .line 20
-    iput p3, v0, LX/4th;->mTargetPosition:I
+    iput p3, v0, LX/4nY;->mTargetPosition:I
 
     .line 21
     .line 22
-    invoke-virtual {p0, v0}, LX/4ta;->startSmoothScroll(LX/4th;)V
+    invoke-virtual {p0, v0}, LX/4nQ;->startSmoothScroll(LX/4nY;)V
 
     .line 23
     .line 24

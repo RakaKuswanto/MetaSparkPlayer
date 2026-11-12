@@ -27,7 +27,7 @@
 
 .field public final mCallerStackTrace:[Ljava/lang/StackTraceElement;
 
-.field public final mErrorReporter:LX/0Gk;
+.field public final mErrorReporter:LX/0Ft;
 
 .field public mEventHandler:Lcom/facebook/proxygen/TraceEventHandler;
 
@@ -35,7 +35,7 @@
 
 .field public final mHostname:Ljava/lang/String;
 
-.field public final mHttpFlowStatistics:LX/3Th;
+.field public final mHttpFlowStatistics:LX/357;
 
 .field public mLoomLogId:J
 
@@ -53,7 +53,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lcom/facebook/proxygen/ReadBuffer;Lcom/facebook/proxygen/TraceEventHandler;LX/0Gk;Lcom/facebook/proxygen/RequestStatsObserver;LX/3Th;ILjava/lang/String;Z)V
+.method public constructor <init>(Ljava/lang/String;Lcom/facebook/proxygen/ReadBuffer;Lcom/facebook/proxygen/TraceEventHandler;LX/0Ft;Lcom/facebook/proxygen/RequestStatsObserver;LX/357;ILjava/lang/String;Z)V
     .locals 10
 
     .line 268435456
@@ -83,7 +83,7 @@
 
     .line 268435465
     .line 268435466
-    invoke-direct/range {v2 .. v9}, Lcom/facebook/proxygen/LigerHttpResponseHandler;-><init>(Ljava/lang/String;Lcom/facebook/proxygen/ReadBuffer;Lcom/facebook/proxygen/TraceEventHandler;LX/0Gk;Lcom/facebook/proxygen/RequestStatsObserver;LX/3Th;Z)V
+    invoke-direct/range {v2 .. v9}, Lcom/facebook/proxygen/LigerHttpResponseHandler;-><init>(Ljava/lang/String;Lcom/facebook/proxygen/ReadBuffer;Lcom/facebook/proxygen/TraceEventHandler;LX/0Ft;Lcom/facebook/proxygen/RequestStatsObserver;LX/357;Z)V
 
     .line 268435467
     .line 268435468
@@ -121,7 +121,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lcom/facebook/proxygen/ReadBuffer;Lcom/facebook/proxygen/TraceEventHandler;LX/0Gk;Lcom/facebook/proxygen/RequestStatsObserver;LX/3Th;Z)V
+.method public constructor <init>(Ljava/lang/String;Lcom/facebook/proxygen/ReadBuffer;Lcom/facebook/proxygen/TraceEventHandler;LX/0Ft;Lcom/facebook/proxygen/RequestStatsObserver;LX/357;Z)V
     .locals 1
 
     .line 0
@@ -138,7 +138,7 @@
 
     .line 6
     .line 7
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 8
     .line 9
@@ -172,7 +172,7 @@
 
     .line 24
     .line 25
-    iput-object p4, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mErrorReporter:LX/0Gk;
+    iput-object p4, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mErrorReporter:LX/0Ft;
 
     .line 26
     .line 27
@@ -180,7 +180,7 @@
 
     .line 28
     .line 29
-    iput-object p6, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHttpFlowStatistics:LX/3Th;
+    iput-object p6, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHttpFlowStatistics:LX/357;
 
     .line 30
     .line 31
@@ -330,7 +330,7 @@
     .locals 4
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHttpFlowStatistics:LX/3Th;
+    iget-object v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHttpFlowStatistics:LX/357;
 
     .line 1
     .line 2
@@ -338,115 +338,116 @@
 
     .line 3
     .line 4
-    const-string v0, "done"
+    const-string/jumbo v0, "done"
 
     .line 5
     .line 6
-    check-cast v1, LX/3Ng;
-
     .line 7
-    .line 8
-    iput-object v0, v1, LX/3Ng;->A06:Ljava/lang/String;
+    check-cast v1, LX/356;
 
+    .line 8
     .line 9
+    iput-object v0, v1, LX/356;->A04:Ljava/lang/String;
+
     .line 10
+    .line 11
     :cond_0
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mBufferInputStream:Lcom/facebook/proxygen/ReadBufferInputStream;
 
-    .line 11
     .line 12
+    .line 13
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 13
     .line 14
     .line 15
+    .line 16
     const/4 v0, 0x2
 
-    .line 16
+    .line 17
     new-array v2, v0, [Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 17
     .line 18
+    .line 19
     const/4 v1, 0x0
 
-    .line 19
+    .line 20
     sget-object v0, Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;->HEADERS_ARRIVED:Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 20
     .line 21
+    .line 22
     aput-object v0, v2, v1
 
-    .line 22
     .line 23
+    .line 24
     const/4 v1, 0x1
 
-    .line 24
+    .line 25
     sget-object v0, Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;->BODY_ARRIVED:Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 25
     .line 26
+    .line 27
     aput-object v0, v2, v1
 
-    .line 27
     .line 28
+    .line 29
     invoke-direct {p0, v2}, Lcom/facebook/proxygen/LigerHttpResponseHandler;->verifyState([Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;)V
 
-    .line 29
     .line 30
     .line 31
+    .line 32
     sget-object v0, Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;->RESPONSE_COMPLETED:Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 32
     .line 33
+    .line 34
     iput-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mReadState:Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 34
     .line 35
+    .line 36
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mBufferInputStream:Lcom/facebook/proxygen/ReadBufferInputStream;
 
-    .line 36
     .line 37
+    .line 38
     invoke-virtual {v0}, Lcom/facebook/proxygen/ReadBufferInputStream;->onEOM()V
 
-    .line 38
     .line 39
     .line 40
+    .line 41
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mRequestStatsObserver:Lcom/facebook/proxygen/RequestStatsObserver;
 
-    .line 41
     .line 42
+    .line 43
     invoke-virtual {v0}, Lcom/facebook/proxygen/RequestStatsObserver;->getRequestStats()Lcom/facebook/proxygen/RequestStats;
 
-    .line 43
     .line 44
     .line 45
+    .line 46
     move-result-object v3
 
-    .line 46
-    iget-wide v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mLoomLogId:J
-
     .line 47
-    .line 48
     const/4 v0, -0x1
 
-    .line 49
+    .line 48
     iput v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mLoomMatchId:I
 
+    .line 49
     .line 50
-    .line 51
     if-eqz v3, :cond_1
 
+    .line 51
     .line 52
+    iget-object v2, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mEventHandler:Lcom/facebook/proxygen/TraceEventHandler;
+
     .line 53
-    iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mEventHandler:Lcom/facebook/proxygen/TraceEventHandler;
-
     .line 54
-    .line 55
-    invoke-interface {v0, v3, v1, v2}, Lcom/facebook/proxygen/TraceEventHandler;->decorateStatistics(Lcom/facebook/proxygen/RequestStats;J)V
+    iget-wide v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mLoomLogId:J
 
+    .line 55
     .line 56
+    invoke-interface {v2, v3, v0, v1}, Lcom/facebook/proxygen/TraceEventHandler;->decorateStatistics(Lcom/facebook/proxygen/RequestStats;J)V
+
     .line 57
     .line 58
+    .line 59
     :cond_1
     return-void
 .end method
@@ -481,7 +482,7 @@
     .line 12
     .line 13
     :cond_0
-    iget-object v2, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHttpFlowStatistics:LX/3Th;
+    iget-object v2, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHttpFlowStatistics:LX/357;
 
     .line 14
     .line 15
@@ -501,122 +502,124 @@
 
     .line 22
     .line 23
-    const-string v0, "cancelled"
+    const-string/jumbo v0, "cancelled"
 
     .line 24
     .line 25
-    :goto_0
-    check-cast v2, LX/3Ng;
-
     .line 26
-    .line 27
-    iput-object v0, v2, LX/3Ng;->A06:Ljava/lang/String;
+    :goto_0
+    check-cast v2, LX/356;
 
+    .line 27
     .line 28
+    iput-object v0, v2, LX/356;->A04:Ljava/lang/String;
+
     .line 29
+    .line 30
     :cond_1
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mRequestStatsObserver:Lcom/facebook/proxygen/RequestStatsObserver;
 
-    .line 30
     .line 31
+    .line 32
     invoke-virtual {v0}, Lcom/facebook/proxygen/RequestStatsObserver;->getRequestStats()Lcom/facebook/proxygen/RequestStats;
 
-    .line 32
     .line 33
     .line 34
+    .line 35
     move-result-object v3
 
-    .line 35
-    iget-wide v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mLoomLogId:J
-
     .line 36
-    .line 37
     const/4 v0, -0x1
 
-    .line 38
+    .line 37
     iput v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mLoomMatchId:I
 
+    .line 38
     .line 39
-    .line 40
     if-eqz v3, :cond_2
 
+    .line 40
     .line 41
+    iget-object v2, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mEventHandler:Lcom/facebook/proxygen/TraceEventHandler;
+
     .line 42
-    iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mEventHandler:Lcom/facebook/proxygen/TraceEventHandler;
-
     .line 43
-    .line 44
-    invoke-interface {v0, v3, v1, v2}, Lcom/facebook/proxygen/TraceEventHandler;->decorateStatistics(Lcom/facebook/proxygen/RequestStats;J)V
+    iget-wide v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mLoomLogId:J
 
+    .line 44
     .line 45
+    invoke-interface {v2, v3, v0, v1}, Lcom/facebook/proxygen/TraceEventHandler;->decorateStatistics(Lcom/facebook/proxygen/RequestStats;J)V
+
     .line 46
     .line 47
+    .line 48
     :cond_2
     sget-object v0, Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;->ERROR:Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 48
     .line 49
+    .line 50
     iput-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mReadState:Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 50
     .line 51
+    .line 52
     new-instance v1, Lcom/facebook/proxygen/HttpNetworkException;
 
-    .line 52
     .line 53
+    .line 54
     invoke-direct {v1, p1}, Lcom/facebook/proxygen/HttpNetworkException;-><init>(Lcom/facebook/proxygen/HTTPRequestError;)V
 
-    .line 54
     .line 55
     .line 56
+    .line 57
     iput-object v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mNetworkException:Lcom/facebook/proxygen/HttpNetworkException;
 
-    .line 57
     .line 58
+    .line 59
     iget-boolean v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mShallIncludeCallerInErrorStacktrace:Z
 
-    .line 59
     .line 60
+    .line 61
     if-eqz v0, :cond_3
 
-    .line 61
     .line 62
+    .line 63
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mCallerStackTrace:[Ljava/lang/StackTraceElement;
 
-    .line 63
     .line 64
+    .line 65
     invoke-virtual {v1, v0}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
-    .line 65
     .line 66
     .line 67
+    .line 68
     :cond_3
     iget-object v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mBufferInputStream:Lcom/facebook/proxygen/ReadBufferInputStream;
 
-    .line 68
     .line 69
+    .line 70
     if-eqz v1, :cond_4
 
-    .line 70
     .line 71
+    .line 72
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mNetworkException:Lcom/facebook/proxygen/HttpNetworkException;
 
-    .line 72
     .line 73
+    .line 74
     invoke-virtual {v1, v0}, Lcom/facebook/proxygen/ReadBufferInputStream;->setError(Lcom/facebook/proxygen/HttpNetworkException;)V
 
-    .line 74
     .line 75
     .line 76
+    .line 77
     :cond_4
     return-void
 
-    .line 77
-    :cond_5
-    const-string v0, "error"
-
     .line 78
+    :cond_5
+    const-string/jumbo v0, "error"
+
     .line 79
+    .line 80
+    .line 81
     goto :goto_0
 .end method
 
@@ -658,185 +661,186 @@
 
     .line 15
     .line 16
-    const-string p2, "empty"
+    const-string/jumbo p2, "empty"
 
     .line 17
     .line 18
+    .line 19
     :cond_0
     if-nez p3, :cond_1
 
-    .line 19
     .line 20
+    .line 21
     new-array p3, v2, [Lorg/apache/http/Header;
 
-    .line 21
     .line 22
+    .line 23
     :cond_1
     sget-object v1, Lorg/apache/http/HttpVersion;->HTTP_1_1:Lorg/apache/http/HttpVersion;
 
-    .line 23
     .line 24
+    .line 25
     new-instance v0, Lcom/facebook/proxygen/LigerResponse;
 
-    .line 25
     .line 26
+    .line 27
     invoke-direct {v0, v1, p1, p2}, Lcom/facebook/proxygen/LigerResponse;-><init>(Lorg/apache/http/ProtocolVersion;ILjava/lang/String;)V
 
-    .line 27
     .line 28
     .line 29
+    .line 30
     iput-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mResponse:Lorg/apache/http/HttpResponse;
 
-    .line 30
     .line 31
+    .line 32
     :goto_0
     array-length v0, p3
 
-    .line 32
+    .line 33
     iget-object v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mResponse:Lorg/apache/http/HttpResponse;
 
-    .line 33
     .line 34
+    .line 35
     if-ge v2, v0, :cond_2
 
-    .line 35
     .line 36
+    .line 37
     aget-object v0, p3, v2
 
-    .line 37
     .line 38
+    .line 39
     invoke-interface {v1, v0}, Lorg/apache/http/HttpMessage;->addHeader(Lorg/apache/http/Header;)V
 
-    .line 39
     .line 40
     .line 41
+    .line 42
     add-int/lit8 v2, v2, 0x1
 
-    .line 42
     .line 43
+    .line 44
     goto :goto_0
 
-    .line 44
+    .line 45
     :cond_2
     invoke-direct {p0, v1}, Lcom/facebook/proxygen/LigerHttpResponseHandler;->getContentLength(Lorg/apache/http/HttpResponse;)J
 
-    .line 45
     .line 46
     .line 47
+    .line 48
     move-result-wide v3
 
-    .line 48
+    .line 49
     iget-object v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mBuffer:Lcom/facebook/proxygen/ReadBuffer;
 
-    .line 49
     .line 50
+    .line 51
     new-instance v0, Lcom/facebook/proxygen/ReadBufferInputStream;
 
-    .line 51
     .line 52
+    .line 53
     invoke-direct {v0, v1}, Lcom/facebook/proxygen/ReadBufferInputStream;-><init>(Lcom/facebook/proxygen/ReadBuffer;)V
 
-    .line 53
     .line 54
     .line 55
+    .line 56
     iput-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mBufferInputStream:Lcom/facebook/proxygen/ReadBufferInputStream;
 
-    .line 56
     .line 57
+    .line 58
     new-instance v2, Lorg/apache/http/entity/InputStreamEntity;
 
-    .line 58
     .line 59
+    .line 60
     invoke-direct {v2, v0, v3, v4}, Lorg/apache/http/entity/InputStreamEntity;-><init>(Ljava/io/InputStream;J)V
 
-    .line 60
     .line 61
     .line 62
+    .line 63
     iget-object v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mResponse:Lorg/apache/http/HttpResponse;
 
-    .line 63
     .line 64
+    .line 65
     const-string v0, "Content-Encoding"
 
-    .line 65
     .line 66
+    .line 67
     invoke-interface {v1, v0}, Lorg/apache/http/HttpMessage;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 
-    .line 67
     .line 68
     .line 69
-    move-result-object v0
-
     .line 70
-    if-eqz v0, :cond_3
+    move-result-object v0
 
     .line 71
+    if-eqz v0, :cond_3
+
     .line 72
+    .line 73
     invoke-interface {v0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
-    .line 73
     .line 74
     .line 75
+    .line 76
     move-result-object v0
 
-    .line 76
+    .line 77
     invoke-virtual {v2, v0}, Lorg/apache/http/entity/AbstractHttpEntity;->setContentEncoding(Ljava/lang/String;)V
 
-    .line 77
     .line 78
     .line 79
+    .line 80
     :cond_3
     iget-object v1, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mResponse:Lorg/apache/http/HttpResponse;
 
-    .line 80
     .line 81
+    .line 82
     const-string v0, "Content-Type"
 
-    .line 82
     .line 83
+    .line 84
     invoke-interface {v1, v0}, Lorg/apache/http/HttpMessage;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 
-    .line 84
     .line 85
     .line 86
-    move-result-object v0
-
     .line 87
-    if-eqz v0, :cond_4
+    move-result-object v0
 
     .line 88
+    if-eqz v0, :cond_4
+
     .line 89
+    .line 90
     invoke-interface {v0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
-    .line 90
     .line 91
     .line 92
+    .line 93
     move-result-object v0
 
-    .line 93
+    .line 94
     invoke-virtual {v2, v0}, Lorg/apache/http/entity/AbstractHttpEntity;->setContentType(Ljava/lang/String;)V
 
-    .line 94
     .line 95
     .line 96
+    .line 97
     :cond_4
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mResponse:Lorg/apache/http/HttpResponse;
 
-    .line 97
     .line 98
+    .line 99
     invoke-interface {v0, v2}, Lorg/apache/http/HttpResponse;->setEntity(Lorg/apache/http/HttpEntity;)V
 
-    .line 99
     .line 100
     .line 101
+    .line 102
     sget-object v0, Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;->HEADERS_ARRIVED:Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 102
     .line 103
+    .line 104
     iput-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mReadState:Lcom/facebook/proxygen/LigerHttpResponseHandler$ReadState;
 
-    .line 104
     .line 105
+    .line 106
     return-void
 .end method
 
@@ -844,11 +848,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mErrorReporter:LX/0Gk;
+    iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mErrorReporter:LX/0Ft;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1, p2}, LX/0Gk;->softReport(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, LX/0Ft;->softReport(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 3
     .line 4
@@ -868,7 +872,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/0Yf;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0X4;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 5
     .line 6
@@ -903,7 +907,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0, v1}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22
@@ -1030,7 +1034,7 @@
 
     .line 39
     .line 40
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 41
     .line 42
@@ -1057,7 +1061,7 @@
 
     .line 53
     .line 54
-    invoke-static {v0, v1}, LX/001;->A0J(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 55
     .line 56
@@ -1065,11 +1069,11 @@
     move-result-object v0
 
     .line 58
-    new-instance v1, LX/1xx;
+    new-instance v1, LX/27E;
 
     .line 59
     .line 60
-    invoke-direct {v1, v0}, LX/1xx;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, LX/27E;-><init>(Ljava/lang/String;)V
 
     .line 61
     .line 62
@@ -1149,18 +1153,19 @@
     move-exception v1
 
     .line 5
-    const-string v0, "error_on_body"
+    const-string/jumbo v0, "error_on_body"
 
     .line 6
     .line 7
+    .line 8
     invoke-direct {p0, v0, v1}, Lcom/facebook/proxygen/LigerHttpResponseHandler;->logException(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 8
     .line 9
     .line 10
+    .line 11
     return-void
 
-    .line 11
+    .line 12
     :goto_0
     return-void
 .end method
@@ -1184,18 +1189,19 @@
     move-exception v1
 
     .line 5
-    const-string v0, "error_on_eom"
+    const-string/jumbo v0, "error_on_eom"
 
     .line 6
     .line 7
+    .line 8
     invoke-direct {p0, v0, v1}, Lcom/facebook/proxygen/LigerHttpResponseHandler;->logException(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 8
     .line 9
     .line 10
+    .line 11
     return-void
 
-    .line 11
+    .line 12
     :goto_0
     return-void
 .end method
@@ -1227,70 +1233,71 @@
 
     .line 8
     :try_start_1
-    const-string v0, "error_on_error"
+    const-string/jumbo v0, "error_on_error"
 
     .line 9
     .line 10
+    .line 11
     invoke-direct {p0, v0, v1}, Lcom/facebook/proxygen/LigerHttpResponseHandler;->logException(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 11
     .line 12
     .line 13
+    .line 14
     :try_start_2
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHeadersArrivedCondition:Ljava/lang/Object;
 
-    .line 14
     .line 15
+    .line 16
     goto :goto_1
 
-    .line 16
+    .line 17
     :goto_0
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHeadersArrivedCondition:Ljava/lang/Object;
 
-    .line 17
     .line 18
+    .line 19
     :goto_1
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 19
     .line 20
     .line 21
+    .line 22
     monitor-exit v2
 
-    .line 22
+    .line 23
     return-void
 
-    .line 23
+    .line 24
     :catchall_1
     move-exception v1
 
-    .line 24
+    .line 25
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHeadersArrivedCondition:Ljava/lang/Object;
 
-    .line 25
     .line 26
+    .line 27
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 27
     .line 28
     .line 29
+    .line 30
     throw v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 30
+    .line 31
     :catchall_2
     move-exception v0
 
-    .line 31
+    .line 32
     :try_start_3
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 32
+    .line 33
     throw v0
 .end method
 
@@ -1321,69 +1328,70 @@
 
     .line 8
     :try_start_1
-    const-string v0, "error_on_response"
+    const-string/jumbo v0, "error_on_response"
 
     .line 9
     .line 10
+    .line 11
     invoke-direct {p0, v0, v1}, Lcom/facebook/proxygen/LigerHttpResponseHandler;->logException(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 11
     .line 12
     .line 13
+    .line 14
     :try_start_2
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHeadersArrivedCondition:Ljava/lang/Object;
 
-    .line 14
     .line 15
+    .line 16
     goto :goto_1
 
-    .line 16
+    .line 17
     :goto_0
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHeadersArrivedCondition:Ljava/lang/Object;
 
-    .line 17
     .line 18
+    .line 19
     :goto_1
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 19
     .line 20
     .line 21
+    .line 22
     monitor-exit v2
 
-    .line 22
+    .line 23
     return-void
 
-    .line 23
+    .line 24
     :catchall_1
     move-exception v1
 
-    .line 24
+    .line 25
     iget-object v0, p0, Lcom/facebook/proxygen/LigerHttpResponseHandler;->mHeadersArrivedCondition:Ljava/lang/Object;
 
-    .line 25
     .line 26
+    .line 27
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 27
     .line 28
     .line 29
+    .line 30
     throw v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 30
+    .line 31
     :catchall_2
     move-exception v0
 
-    .line 31
+    .line 32
     :try_start_3
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 32
+    .line 33
     throw v0
 .end method

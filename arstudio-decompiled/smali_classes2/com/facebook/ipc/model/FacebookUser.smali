@@ -65,11 +65,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x20
+    const/16 v0, 0x4c
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -200,7 +200,7 @@
 
     .line 34
     .line 35
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 36
     .line 37
@@ -233,7 +233,7 @@
     .locals 4
 
     .line 0
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 1
     .line 2
@@ -254,37 +254,38 @@
 
     .line 10
     .line 11
-    const-string v0, "display name"
+    const-string/jumbo v0, "display name"
 
     .line 12
     .line 13
+    .line 14
     invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 14
     .line 15
     .line 16
+    .line 17
     iget-wide v1, p0, Lcom/facebook/ipc/model/FacebookUser;->mUserId:J
 
-    .line 17
     .line 18
+    .line 19
     const-string/jumbo v0, "uid"
 
-    .line 19
     .line 20
     .line 21
+    .line 22
     invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 22
     .line 23
     .line 24
+    .line 25
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 25
     .line 26
     .line 27
+    .line 28
     move-result-object v0
 
-    .line 28
+    .line 29
     return-object v0
 .end method
 

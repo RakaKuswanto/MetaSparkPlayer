@@ -16,6 +16,22 @@
     return-void
 .end method
 
+.method public static A00(Ljava/lang/String;)V
+    .locals 1
+
+    .line 0
+    const-string v0, "SysUtil"
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
 .method public static fallocateIfSupported(Ljava/io/FileDescriptor;J)V
     .locals 2
 
@@ -71,36 +87,34 @@
 
     .line 22
     .line 23
-    if-eq v1, v0, :cond_0
+    if-ne v1, v0, :cond_1
 
     .line 24
     .line 25
-    new-instance v1, Ljava/io/IOException;
-
-    .line 26
-    .line 27
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    invoke-direct {v1, v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 32
-    .line 33
-    .line 34
-    throw v1
-
-    .line 35
     :cond_0
-    return-void
-
-    .line 36
     :goto_0
     return-void
+
+    .line 26
+    :cond_1
+    new-instance v1, Ljava/io/IOException;
+
+    .line 27
+    .line 28
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    invoke-direct {v1, v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 33
+    .line 34
+    .line 35
+    throw v1
 .end method
 
 .method public static getSupportedAbis()[Ljava/lang/String;
@@ -319,22 +333,18 @@
     .line 99
     .line 100
     .line 101
-    move-result-object v1
+    move-result-object v0
 
     .line 102
-    const-string v0, "SysUtil"
+    invoke-static {v0}, Lcom/facebook/soloader/SysUtil$LollipopSysdeps;->A00(Ljava/lang/String;)V
 
     .line 103
     .line 104
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 105
-    .line 106
-    .line 107
     sget-object v0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
 
-    .line 108
-    .line 109
+    .line 106
+    .line 107
     return-object v6
 .end method
 

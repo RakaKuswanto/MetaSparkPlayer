@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0x7c13
 
-.field public static final __CONFIG__:I = 0x23c
+.field public static final __CONFIG__:I = 0x212
 
-.field public static final is_enabled:J = 0x81023c000018f6L
+.field public static final is_enabled:J = 0x810212000015f2L
 
 
 # direct methods

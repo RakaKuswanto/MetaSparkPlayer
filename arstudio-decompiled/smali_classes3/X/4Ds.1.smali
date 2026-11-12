@@ -1,11 +1,20 @@
-.class public interface abstract LX/4Ds;
+.class public abstract LX/4dS;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AZv(Landroid/os/Bundle;)V
-.end method
+# direct methods
+.method public static A00(Landroid/app/Notification$Action$Builder;)V
+    .locals 1
 
-.method public abstract AZw(Z)V
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Notification$Action$Builder;->setAuthenticationRequired(Z)Landroid/app/Notification$Action$Builder;
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
 .end method

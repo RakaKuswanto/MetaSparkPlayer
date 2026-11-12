@@ -94,7 +94,7 @@
     .line 12
     .line 13
     .line 14
-    invoke-static {}, LX/4BF;->A0P()Landroid/graphics/Paint;
+    invoke-static {}, LX/435;->A02()Landroid/graphics/Paint;
 
     .line 15
     .line 16
@@ -219,26 +219,26 @@
     mul-int/2addr v1, v3
 
     .line 75
-    add-int/2addr v1, v2
-
-    .line 76
     invoke-virtual {v5, v2, v3}, Landroid/graphics/Bitmap;->getPixel(II)I
 
+    .line 76
     .line 77
     .line 78
-    .line 79
     move-result v0
 
-    .line 80
+    .line 79
     invoke-static {v0}, Landroid/graphics/Color;->red(I)I
 
+    .line 80
     .line 81
     .line 82
-    .line 83
     move-result v0
 
-    .line 84
+    .line 83
     int-to-byte v0, v0
+
+    .line 84
+    add-int/2addr v1, v2
 
     .line 85
     invoke-virtual {v4, v1, v0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
@@ -583,11 +583,6 @@
     .line 12
     .line 13
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 14
-    .line 15
-    .line 16
     return-void
 .end method
 

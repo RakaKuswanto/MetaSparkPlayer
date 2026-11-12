@@ -1,82 +1,43 @@
-.class public final LX/5PY;
+.class public final synthetic LX/5PY;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3aS;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "VideoRendererEventListener$EventDispatcher$$ExternalSyntheticLambda4"
+
+
+# instance fields
+.field public final synthetic A00:I
+
+.field public final synthetic A01:J
+
+.field public final synthetic A02:LX/5Ox;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(LX/5Ox;IJ)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p1, p0, LX/5PY;->A02:LX/5Ox;
+
+    iput-wide p3, p0, LX/5PY;->A01:J
+
+    iput p2, p0, LX/5PY;->A00:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final AJH(I)I
-    .locals 3
+.method public final run()V
+    .locals 4
 
     .line 0
-    const/4 v2, 0x1
-
-    .line 1
-    if-eq p1, v2, :cond_1
-
-    .line 2
-    .line 3
-    if-eqz p1, :cond_2
-
-    .line 4
-    .line 5
-    rem-int/lit8 v1, p1, 0x64
-
-    .line 6
-    .line 7
-    const/4 v0, 0x2
-
-    .line 8
-    if-lt v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    const/16 v0, 0xa
-
-    .line 11
-    .line 12
-    if-le v1, v0, :cond_2
-
-    .line 13
-    .line 14
-    const/16 v0, 0x13
-
-    .line 15
-    .line 16
-    const/4 v2, 0x4
-
-    .line 17
-    if-le v1, v0, :cond_1
-
-    .line 18
-    .line 19
-    :cond_0
-    const/4 v2, 0x5
-
-    .line 20
-    :cond_1
-    return v2
-
-    .line 21
-    :cond_2
-    const/4 v2, 0x3
-
-    .line 22
-    return v2
+    return-void
 .end method

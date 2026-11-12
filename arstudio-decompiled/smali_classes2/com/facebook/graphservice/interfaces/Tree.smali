@@ -4,6 +4,12 @@
 
 
 # virtual methods
+.method public abstract getString(I)Ljava/lang/String;
+.end method
+
+.method public abstract getStringList(I)Lcom/google/common/collect/ImmutableList;
+.end method
+
 .method public abstract getTree(Ljava/lang/String;)Lcom/facebook/graphservice/interfaces/Tree;
 .end method
 

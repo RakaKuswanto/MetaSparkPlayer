@@ -100,6 +100,14 @@
 
 .field public static final enum LV2C_WITH_END_SCENE_3_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
+.field public static final enum MAI_SCREENSHOT_CAROUSEL_ALL_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+
+.field public static final enum MAI_SCREENSHOT_CAROUSEL_FIVE_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+
+.field public static final enum MAI_SCREENSHOT_CAROUSEL_ONE_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+
+.field public static final enum MAI_SCREENSHOT_CAROUSEL_THREE_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+
 .field public static final enum MV2C_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
 .field public static final enum MV2C_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
@@ -159,7 +167,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 77
+    .locals 81
 
     .line 0
     const-string v1, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -174,10 +182,10 @@
     .line 4
     .line 5
     .line 6
-    move-result-object v76
+    move-result-object v15
 
     .line 7
-    sput-object v76, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 8
     .line 9
@@ -193,10 +201,10 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v75
+    move-result-object v14
 
     .line 16
-    sput-object v75, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_1_BADGE_DESIGN:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_1_BADGE_DESIGN:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 17
     .line 18
@@ -212,10 +220,10 @@
     .line 22
     .line 23
     .line 24
-    move-result-object v15
+    move-result-object v80
 
     .line 25
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_3_BADGES_DESIGN:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v80, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_3_BADGES_DESIGN:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 26
     .line 27
@@ -231,10 +239,10 @@
     .line 31
     .line 32
     .line 33
-    move-result-object v14
+    move-result-object v79
 
     .line 34
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_DEFAULT_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v79, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_DEFAULT_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 35
     .line 36
@@ -250,10 +258,10 @@
     .line 40
     .line 41
     .line 42
-    move-result-object v74
+    move-result-object v78
 
     .line 43
-    sput-object v74, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_LEGACY_LEADGEN_CARD_DESIGN:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v78, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_LEGACY_LEADGEN_CARD_DESIGN:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 44
     .line 45
@@ -269,10 +277,10 @@
     .line 49
     .line 50
     .line 51
-    move-result-object v73
+    move-result-object v77
 
     .line 52
-    sput-object v73, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_NARROW_CARD_CTA:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v77, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_NARROW_CARD_CTA:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 53
     .line 54
@@ -288,10 +296,10 @@
     .line 58
     .line 59
     .line 60
-    move-result-object v72
+    move-result-object v76
 
     .line 61
-    sput-object v72, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_NARROW_CARD_NO_CTA:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v76, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_NARROW_CARD_NO_CTA:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 62
     .line 63
@@ -307,10 +315,10 @@
     .line 67
     .line 68
     .line 69
-    move-result-object v71
+    move-result-object v75
 
     .line 70
-    sput-object v71, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_NO_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v75, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_NO_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 71
     .line 72
@@ -327,10 +335,10 @@
     .line 77
     .line 78
     .line 79
-    move-result-object v70
+    move-result-object v74
 
     .line 80
-    sput-object v70, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_WITH_COVER_PHOTO:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v74, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->ADVERTISER_PROFILE_CARD_WITH_COVER_PHOTO:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 81
     .line 82
@@ -347,10 +355,10 @@
     .line 87
     .line 88
     .line 89
-    move-result-object v69
+    move-result-object v73
 
     .line 90
-    sput-object v69, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->C2C_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v73, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->C2C_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 91
     .line 92
@@ -367,10 +375,10 @@
     .line 97
     .line 98
     .line 99
-    move-result-object v68
+    move-result-object v72
 
     .line 100
-    sput-object v68, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->C2C_DARK:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v72, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->C2C_DARK:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 101
     .line 102
@@ -387,10 +395,10 @@
     .line 107
     .line 108
     .line 109
-    move-result-object v67
+    move-result-object v71
 
     .line 110
-    sput-object v67, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->C2C_HIGHLIGHT:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v71, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->C2C_HIGHLIGHT:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 111
     .line 112
@@ -407,10 +415,10 @@
     .line 117
     .line 118
     .line 119
-    move-result-object v66
+    move-result-object v70
 
     .line 120
-    sput-object v66, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v70, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 121
     .line 122
@@ -427,10 +435,10 @@
     .line 127
     .line 128
     .line 129
-    move-result-object v65
+    move-result-object v69
 
     .line 130
-    sput-object v65, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v69, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 131
     .line 132
@@ -447,10 +455,10 @@
     .line 137
     .line 138
     .line 139
-    move-result-object v64
+    move-result-object v68
 
     .line 140
-    sput-object v64, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_3_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v68, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_3_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 141
     .line 142
@@ -467,10 +475,10 @@
     .line 147
     .line 148
     .line 149
-    move-result-object v63
+    move-result-object v67
 
     .line 150
-    sput-object v63, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_4_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v67, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_4_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 151
     .line 152
@@ -487,10 +495,10 @@
     .line 157
     .line 158
     .line 159
-    move-result-object v62
+    move-result-object v66
 
     .line 160
-    sput-object v62, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_5_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v66, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->CAROUSEL_5_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 161
     .line 162
@@ -507,10 +515,10 @@
     .line 167
     .line 168
     .line 169
-    move-result-object v61
+    move-result-object v65
 
     .line 170
-    sput-object v61, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_10_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v65, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_10_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 171
     .line 172
@@ -527,10 +535,10 @@
     .line 177
     .line 178
     .line 179
-    move-result-object v60
+    move-result-object v64
 
     .line 180
-    sput-object v60, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_12_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v64, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_12_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 181
     .line 182
@@ -547,10 +555,10 @@
     .line 187
     .line 188
     .line 189
-    move-result-object v59
+    move-result-object v63
 
     .line 190
-    sput-object v59, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_14_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v63, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_14_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 191
     .line 192
@@ -567,10 +575,10 @@
     .line 197
     .line 198
     .line 199
-    move-result-object v58
+    move-result-object v62
 
     .line 200
-    sput-object v58, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_16_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v62, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_16_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 201
     .line 202
@@ -587,10 +595,10 @@
     .line 207
     .line 208
     .line 209
-    move-result-object v57
+    move-result-object v61
 
     .line 210
-    sput-object v57, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_18_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v61, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_18_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 211
     .line 212
@@ -607,10 +615,10 @@
     .line 217
     .line 218
     .line 219
-    move-result-object v56
+    move-result-object v60
 
     .line 220
-    sput-object v56, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_20_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v60, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_20_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 221
     .line 222
@@ -627,10 +635,10 @@
     .line 227
     .line 228
     .line 229
-    move-result-object v55
+    move-result-object v59
 
     .line 230
-    sput-object v55, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_4_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v59, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_4_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 231
     .line 232
@@ -647,10 +655,10 @@
     .line 237
     .line 238
     .line 239
-    move-result-object v54
+    move-result-object v58
 
     .line 240
-    sput-object v54, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_6_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v58, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_6_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 241
     .line 242
@@ -667,10 +675,10 @@
     .line 247
     .line 248
     .line 249
-    move-result-object v53
+    move-result-object v57
 
     .line 250
-    sput-object v53, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_8_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v57, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_8_SEC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 251
     .line 252
@@ -687,10 +695,10 @@
     .line 257
     .line 258
     .line 259
-    move-result-object v52
+    move-result-object v56
 
     .line 260
-    sput-object v52, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v56, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DTD_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 261
     .line 262
@@ -707,10 +715,10 @@
     .line 267
     .line 268
     .line 269
-    move-result-object v51
+    move-result-object v55
 
     .line 270
-    sput-object v51, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DYNAMIC_CAPTION_1_LINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v55, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DYNAMIC_CAPTION_1_LINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 271
     .line 272
@@ -727,10 +735,10 @@
     .line 277
     .line 278
     .line 279
-    move-result-object v50
+    move-result-object v54
 
     .line 280
-    sput-object v50, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DYNAMIC_CAPTION_2_LINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v54, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DYNAMIC_CAPTION_2_LINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 281
     .line 282
@@ -747,10 +755,10 @@
     .line 287
     .line 288
     .line 289
-    move-result-object v49
+    move-result-object v53
 
     .line 290
-    sput-object v49, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DYNAMIC_CAPTION_3_LINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v53, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DYNAMIC_CAPTION_3_LINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 291
     .line 292
@@ -767,10 +775,10 @@
     .line 297
     .line 298
     .line 299
-    move-result-object v48
+    move-result-object v52
 
     .line 300
-    sput-object v48, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DYNAMIC_CAPTION_FIRST_SENTENCE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v52, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->DYNAMIC_CAPTION_FIRST_SENTENCE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 301
     .line 302
@@ -787,10 +795,10 @@
     .line 307
     .line 308
     .line 309
-    move-result-object v47
+    move-result-object v51
 
     .line 310
-    sput-object v47, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->END_SCENE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v51, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->END_SCENE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 311
     .line 312
@@ -807,10 +815,10 @@
     .line 317
     .line 318
     .line 319
-    move-result-object v46
+    move-result-object v50
 
     .line 320
-    sput-object v46, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->END_SCENE_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v50, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->END_SCENE_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 321
     .line 322
@@ -827,10 +835,10 @@
     .line 327
     .line 328
     .line 329
-    move-result-object v45
+    move-result-object v49
 
     .line 330
-    sput-object v45, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->END_SCENE_OPTIMIZED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v49, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->END_SCENE_OPTIMIZED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 331
     .line 332
@@ -847,10 +855,10 @@
     .line 337
     .line 338
     .line 339
-    move-result-object v44
+    move-result-object v48
 
     .line 340
-    sput-object v44, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->HEADLINE_CAPTION:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v48, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->HEADLINE_CAPTION:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 341
     .line 342
@@ -867,10 +875,10 @@
     .line 347
     .line 348
     .line 349
-    move-result-object v43
+    move-result-object v47
 
     .line 350
-    sput-object v43, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->HEADLINE_CAPTION_DARK:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v47, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->HEADLINE_CAPTION_DARK:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 351
     .line 352
@@ -887,10 +895,10 @@
     .line 357
     .line 358
     .line 359
-    move-result-object v42
+    move-result-object v46
 
     .line 360
-    sput-object v42, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->HEADLINE_CAPTION_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v46, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->HEADLINE_CAPTION_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 361
     .line 362
@@ -907,10 +915,10 @@
     .line 367
     .line 368
     .line 369
-    move-result-object v41
+    move-result-object v45
 
     .line 370
-    sput-object v41, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->HEADLINE_CAPTION_HIGHLIGHT:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v45, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->HEADLINE_CAPTION_HIGHLIGHT:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 371
     .line 372
@@ -927,10 +935,10 @@
     .line 377
     .line 378
     .line 379
-    move-result-object v40
+    move-result-object v44
 
     .line 380
-    sput-object v40, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LIGHTWEIGHT_CLICK_TO_MESSAGE_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v44, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LIGHTWEIGHT_CLICK_TO_MESSAGE_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 381
     .line 382
@@ -947,10 +955,10 @@
     .line 387
     .line 388
     .line 389
-    move-result-object v39
+    move-result-object v43
 
     .line 390
-    sput-object v39, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LIGHTWEIGHT_CLICK_TO_MESSAGE_V1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v43, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LIGHTWEIGHT_CLICK_TO_MESSAGE_V1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 391
     .line 392
@@ -967,10 +975,10 @@
     .line 397
     .line 398
     .line 399
-    move-result-object v38
+    move-result-object v42
 
     .line 400
-    sput-object v38, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LIGHTWEIGHT_LEADGEN_STICKER_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v42, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LIGHTWEIGHT_LEADGEN_STICKER_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 401
     .line 402
@@ -987,10 +995,10 @@
     .line 407
     .line 408
     .line 409
-    move-result-object v37
+    move-result-object v41
 
     .line 410
-    sput-object v37, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LIGHTWEIGHT_LEADGEN_STICKER_V1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v41, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LIGHTWEIGHT_LEADGEN_STICKER_V1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 411
     .line 412
@@ -1007,10 +1015,10 @@
     .line 417
     .line 418
     .line 419
-    move-result-object v36
+    move-result-object v40
 
     .line 420
-    sput-object v36, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v40, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 421
     .line 422
@@ -1027,10 +1035,10 @@
     .line 427
     .line 428
     .line 429
-    move-result-object v35
+    move-result-object v39
 
     .line 430
-    sput-object v35, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v39, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 431
     .line 432
@@ -1047,10 +1055,10 @@
     .line 437
     .line 438
     .line 439
-    move-result-object v34
+    move-result-object v38
 
     .line 440
-    sput-object v34, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_3_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v38, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_3_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 441
     .line 442
@@ -1067,10 +1075,10 @@
     .line 447
     .line 448
     .line 449
-    move-result-object v33
+    move-result-object v37
 
     .line 450
-    sput-object v33, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_WITH_END_SCENE_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v37, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_WITH_END_SCENE_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 451
     .line 452
@@ -1087,10 +1095,10 @@
     .line 457
     .line 458
     .line 459
-    move-result-object v32
+    move-result-object v36
 
     .line 460
-    sput-object v32, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_WITH_END_SCENE_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v36, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_WITH_END_SCENE_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 461
     .line 462
@@ -1107,14 +1115,14 @@
     .line 467
     .line 468
     .line 469
-    move-result-object v31
+    move-result-object v35
 
     .line 470
-    sput-object v31, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_WITH_END_SCENE_3_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v35, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->LV2C_WITH_END_SCENE_3_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 471
     .line 472
-    const-string v1, "MV2C_1_CARD"
+    const-string v1, "MAI_SCREENSHOT_CAROUSEL_ALL_CARDS"
 
     .line 473
     .line 474
@@ -1127,14 +1135,14 @@
     .line 477
     .line 478
     .line 479
-    move-result-object v30
+    move-result-object v34
 
     .line 480
-    sput-object v30, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MV2C_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v34, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MAI_SCREENSHOT_CAROUSEL_ALL_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 481
     .line 482
-    const-string v1, "MV2C_2_CARDS"
+    const-string v1, "MAI_SCREENSHOT_CAROUSEL_FIVE_CARDS"
 
     .line 483
     .line 484
@@ -1147,14 +1155,14 @@
     .line 487
     .line 488
     .line 489
-    move-result-object v29
+    move-result-object v33
 
     .line 490
-    sput-object v29, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MV2C_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v33, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MAI_SCREENSHOT_CAROUSEL_FIVE_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 491
     .line 492
-    const-string v1, "MV2C_WITH_END_SCENE_1_CARD"
+    const-string v1, "MAI_SCREENSHOT_CAROUSEL_ONE_CARD"
 
     .line 493
     .line 494
@@ -1167,14 +1175,14 @@
     .line 497
     .line 498
     .line 499
-    move-result-object v28
+    move-result-object v32
 
     .line 500
-    sput-object v28, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MV2C_WITH_END_SCENE_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v32, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MAI_SCREENSHOT_CAROUSEL_ONE_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 501
     .line 502
-    const-string v1, "MV2C_WITH_END_SCENE_2_CARDS"
+    const-string v1, "MAI_SCREENSHOT_CAROUSEL_THREE_CARDS"
 
     .line 503
     .line 504
@@ -1187,14 +1195,14 @@
     .line 507
     .line 508
     .line 509
-    move-result-object v27
+    move-result-object v31
 
     .line 510
-    sput-object v27, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MV2C_WITH_END_SCENE_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v31, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MAI_SCREENSHOT_CAROUSEL_THREE_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 511
     .line 512
-    const-string v1, "SHOWREEL_DISABLED"
+    const-string v1, "MV2C_1_CARD"
 
     .line 513
     .line 514
@@ -1207,14 +1215,14 @@
     .line 517
     .line 518
     .line 519
-    move-result-object v26
+    move-result-object v30
 
     .line 520
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v30, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MV2C_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 521
     .line 522
-    const-string v1, "SHOWREEL_GLADOS_AVERY_1"
+    const-string v1, "MV2C_2_CARDS"
 
     .line 523
     .line 524
@@ -1227,14 +1235,14 @@
     .line 527
     .line 528
     .line 529
-    move-result-object v25
+    move-result-object v29
 
     .line 530
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_AVERY_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v29, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MV2C_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 531
     .line 532
-    const-string v1, "SHOWREEL_GLADOS_AVERY_2"
+    const-string v1, "MV2C_WITH_END_SCENE_1_CARD"
 
     .line 533
     .line 534
@@ -1247,14 +1255,14 @@
     .line 537
     .line 538
     .line 539
-    move-result-object v24
+    move-result-object v28
 
     .line 540
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_AVERY_2:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v28, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MV2C_WITH_END_SCENE_1_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 541
     .line 542
-    const-string v1, "SHOWREEL_GLADOS_FRIDA_1"
+    const-string v1, "MV2C_WITH_END_SCENE_2_CARDS"
 
     .line 543
     .line 544
@@ -1267,14 +1275,14 @@
     .line 547
     .line 548
     .line 549
-    move-result-object v23
+    move-result-object v27
 
     .line 550
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_FRIDA_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v27, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->MV2C_WITH_END_SCENE_2_CARDS:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 551
     .line 552
-    const-string v1, "SHOWREEL_GLADOS_LUPUS_1"
+    const-string v1, "SHOWREEL_DISABLED"
 
     .line 553
     .line 554
@@ -1287,14 +1295,14 @@
     .line 557
     .line 558
     .line 559
-    move-result-object v22
+    move-result-object v26
 
     .line 560
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_LUPUS_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v26, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_DISABLED:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 561
     .line 562
-    const-string v1, "SHOWREEL_GLADOS_NIKOLA_1"
+    const-string v1, "SHOWREEL_GLADOS_AVERY_1"
 
     .line 563
     .line 564
@@ -1307,14 +1315,14 @@
     .line 567
     .line 568
     .line 569
-    move-result-object v21
+    move-result-object v25
 
     .line 570
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_NIKOLA_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v25, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_AVERY_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 571
     .line 572
-    const-string v1, "SHOWREEL_GLADOS_PICASSO_1"
+    const-string v1, "SHOWREEL_GLADOS_AVERY_2"
 
     .line 573
     .line 574
@@ -1327,14 +1335,14 @@
     .line 577
     .line 578
     .line 579
-    move-result-object v20
+    move-result-object v24
 
     .line 580
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_PICASSO_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v24, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_AVERY_2:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 581
     .line 582
-    const-string v1, "SHOWREEL_GLADOS_PICASSO_3"
+    const-string v1, "SHOWREEL_GLADOS_FRIDA_1"
 
     .line 583
     .line 584
@@ -1347,14 +1355,14 @@
     .line 587
     .line 588
     .line 589
-    move-result-object v13
+    move-result-object v23
 
     .line 590
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_PICASSO_3:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_FRIDA_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 591
     .line 592
-    const-string v1, "SHOWREEL_GLADOS_PICASSO_MOTION_1"
+    const-string v1, "SHOWREEL_GLADOS_LUPUS_1"
 
     .line 593
     .line 594
@@ -1367,14 +1375,14 @@
     .line 597
     .line 598
     .line 599
-    move-result-object v12
+    move-result-object v22
 
     .line 600
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_PICASSO_MOTION_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_LUPUS_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 601
     .line 602
-    const-string v1, "SHOWREEL_GLADOS_TESLA_1"
+    const-string v1, "SHOWREEL_GLADOS_NIKOLA_1"
 
     .line 603
     .line 604
@@ -1387,14 +1395,14 @@
     .line 607
     .line 608
     .line 609
-    move-result-object v11
+    move-result-object v21
 
     .line 610
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_TESLA_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_NIKOLA_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 611
     .line 612
-    const-string v1, "SHOWREEL_GLADOS_WHARHOL_1"
+    const-string v1, "SHOWREEL_GLADOS_PICASSO_1"
 
     .line 613
     .line 614
@@ -1407,14 +1415,14 @@
     .line 617
     .line 618
     .line 619
-    move-result-object v10
+    move-result-object v20
 
     .line 620
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_WHARHOL_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_PICASSO_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 621
     .line 622
-    const-string v1, "SHOWREEL_IG_PORTAL"
+    const-string v1, "SHOWREEL_GLADOS_PICASSO_3"
 
     .line 623
     .line 624
@@ -1427,14 +1435,14 @@
     .line 627
     .line 628
     .line 629
-    move-result-object v9
+    move-result-object v13
 
     .line 630
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_IG_PORTAL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_PICASSO_3:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 631
     .line 632
-    const-string v1, "TEXT_OPTIMIZATION_ALIGNMENT_CENTER"
+    const-string v1, "SHOWREEL_GLADOS_PICASSO_MOTION_1"
 
     .line 633
     .line 634
@@ -1447,14 +1455,14 @@
     .line 637
     .line 638
     .line 639
-    move-result-object v8
+    move-result-object v12
 
     .line 640
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_ALIGNMENT_CENTER:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_PICASSO_MOTION_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 641
     .line 642
-    const-string v1, "TEXT_OPTIMIZATION_ALIGNMENT_DEFAULT"
+    const-string v1, "SHOWREEL_GLADOS_TESLA_1"
 
     .line 643
     .line 644
@@ -1467,14 +1475,14 @@
     .line 647
     .line 648
     .line 649
-    move-result-object v7
+    move-result-object v11
 
     .line 650
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_ALIGNMENT_DEFAULT:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_TESLA_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 651
     .line 652
-    const-string v1, "TEXT_OPTIMIZATION_ALIGNMENT_END"
+    const-string v1, "SHOWREEL_GLADOS_WHARHOL_1"
 
     .line 653
     .line 654
@@ -1487,14 +1495,14 @@
     .line 657
     .line 658
     .line 659
-    move-result-object v6
+    move-result-object v10
 
     .line 660
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_ALIGNMENT_END:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_GLADOS_WHARHOL_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 661
     .line 662
-    const-string v1, "TEXT_OPTIMIZATION_ALIGNMENT_START"
+    const-string v1, "SHOWREEL_IG_PORTAL"
 
     .line 663
     .line 664
@@ -1507,14 +1515,14 @@
     .line 667
     .line 668
     .line 669
-    move-result-object v5
+    move-result-object v9
 
     .line 670
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_ALIGNMENT_START:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->SHOWREEL_IG_PORTAL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 671
     .line 672
-    const-string v1, "TEXT_OPTIMIZATION_FONT_SIZE_DYNAMIC"
+    const-string v1, "TEXT_OPTIMIZATION_ALIGNMENT_CENTER"
 
     .line 673
     .line 674
@@ -1527,14 +1535,14 @@
     .line 677
     .line 678
     .line 679
-    move-result-object v4
+    move-result-object v8
 
     .line 680
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_DYNAMIC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_ALIGNMENT_CENTER:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 681
     .line 682
-    const-string v1, "TEXT_OPTIMIZATION_FONT_SIZE_FIXED_1"
+    const-string v1, "TEXT_OPTIMIZATION_ALIGNMENT_DEFAULT"
 
     .line 683
     .line 684
@@ -1550,11 +1558,11 @@
     move-result-object v19
 
     .line 690
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_FIXED_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_ALIGNMENT_DEFAULT:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 691
     .line 692
-    const-string v1, "TEXT_OPTIMIZATION_FONT_SIZE_FIXED_2"
+    const-string v1, "TEXT_OPTIMIZATION_ALIGNMENT_END"
 
     .line 693
     .line 694
@@ -1570,11 +1578,11 @@
     move-result-object v18
 
     .line 700
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_FIXED_2:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_ALIGNMENT_END:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 701
     .line 702
-    const-string v1, "TEXT_OPTIMIZATION_FONT_SIZE_FIXED_3"
+    const-string v1, "TEXT_OPTIMIZATION_ALIGNMENT_START"
 
     .line 703
     .line 704
@@ -1590,402 +1598,488 @@
     move-result-object v17
 
     .line 710
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_FIXED_3:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_ALIGNMENT_START:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 711
     .line 712
-    const-string v0, "TEXT_OPTIMIZATION_FONT_SIZE_STANDARD"
+    const-string v1, "TEXT_OPTIMIZATION_FONT_SIZE_DYNAMIC"
 
     .line 713
     .line 714
-    const/16 v3, 0x48
+    const/16 v0, 0x48
 
     .line 715
     .line 716
-    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 717
     .line 718
     .line 719
-    move-result-object v16
+    move-result-object v7
 
     .line 720
-    sput-object v16, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_STANDARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_DYNAMIC:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 721
     .line 722
-    const/16 v0, 0x49
+    const-string v1, "TEXT_OPTIMIZATION_FONT_SIZE_FIXED_1"
 
     .line 723
     .line 724
-    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+    const/16 v0, 0x49
 
     .line 725
     .line 726
-    move-object/from16 v1, v76
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 727
     .line 728
-    move-object/from16 v0, v75
-
     .line 729
+    move-result-object v6
+
     .line 730
-    invoke-static {v2, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_FIXED_1:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 731
     .line 732
+    const-string v1, "TEXT_OPTIMIZATION_FONT_SIZE_FIXED_2"
+
     .line 733
-    move-object/from16 v1, v74
-
     .line 734
+    const/16 v0, 0x4a
+
     .line 735
-    move-object/from16 v0, v73
-
     .line 736
-    .line 737
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
+    .line 737
     .line 738
     .line 739
+    move-result-object v5
+
     .line 740
-    move-object/from16 v1, v72
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_FIXED_2:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 741
     .line 742
-    move-object/from16 v0, v71
+    const-string v1, "TEXT_OPTIMIZATION_FONT_SIZE_FIXED_3"
 
     .line 743
     .line 744
-    invoke-static {v2, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/16 v0, 0x4b
 
     .line 745
     .line 746
-    .line 747
-    move-object/from16 v15, v70
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
+    .line 747
     .line 748
     .line 749
-    move-object/from16 v14, v69
+    move-result-object v4
 
     .line 750
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_FIXED_3:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+
     .line 751
-    move-object/from16 v1, v68
-
     .line 752
+    const-string v0, "TEXT_OPTIMIZATION_FONT_SIZE_STANDARD"
+
     .line 753
-    move-object/from16 v0, v67
-
     .line 754
-    .line 755
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    const/16 v3, 0x4c
 
+    .line 755
     .line 756
+    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+
     .line 757
     .line 758
-    move-object/from16 v1, v66
-
     .line 759
+    move-result-object v16
+
     .line 760
-    move-object/from16 v0, v65
+    sput-object v16, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->TEXT_OPTIMIZATION_FONT_SIZE_STANDARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
     .line 761
     .line 762
-    invoke-static {v2, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/16 v0, 0x4d
 
     .line 763
     .line 764
+    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
+
     .line 765
-    move-object/from16 v15, v64
-
     .line 766
+    move-object/from16 v1, v80
+
     .line 767
-    move-object/from16 v14, v63
-
     .line 768
+    move-object/from16 v0, v79
+
     .line 769
-    move-object/from16 v1, v62
-
     .line 770
-    .line 771
-    move-object/from16 v0, v61
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 771
     .line 772
     .line 773
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v15, v78
 
     .line 774
     .line 775
+    move-object/from16 v14, v77
+
     .line 776
-    const/16 v0, 0x12
-
     .line 777
+    move-object/from16 v1, v76
+
     .line 778
-    aput-object v60, v2, v0
-
     .line 779
+    move-object/from16 v0, v75
+
     .line 780
-    move-object/from16 v15, v59
-
     .line 781
-    .line 782
-    move-object/from16 v14, v58
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 782
     .line 783
     .line 784
-    move-object/from16 v1, v57
+    move-object/from16 v15, v74
 
     .line 785
     .line 786
-    move-object/from16 v0, v56
+    move-object/from16 v14, v73
 
     .line 787
     .line 788
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v72
 
     .line 789
     .line 790
+    move-object/from16 v0, v71
+
     .line 791
-    move-object/from16 v15, v55
-
     .line 792
-    .line 793
-    move-object/from16 v14, v54
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 793
     .line 794
     .line 795
-    move-object/from16 v1, v53
+    const/16 v0, 0xc
 
     .line 796
     .line 797
-    move-object/from16 v0, v52
+    aput-object v70, v2, v0
 
     .line 798
     .line 799
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v15, v69
 
     .line 800
     .line 801
+    move-object/from16 v14, v68
+
     .line 802
-    move-object/from16 v1, v51
-
     .line 803
+    move-object/from16 v1, v67
+
     .line 804
-    move-object/from16 v0, v50
-
     .line 805
-    .line 806
-    invoke-static {v2, v1, v0}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v0, v66
 
+    .line 806
     .line 807
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 808
     .line 809
-    move-object/from16 v15, v49
-
     .line 810
+    move-object/from16 v15, v65
+
     .line 811
-    move-object/from16 v14, v48
-
     .line 812
+    move-object/from16 v14, v64
+
     .line 813
-    move-object/from16 v1, v47
-
     .line 814
+    move-object/from16 v1, v63
+
     .line 815
-    move-object/from16 v0, v46
-
     .line 816
-    .line 817
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0s(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v0, v62
 
+    .line 817
     .line 818
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A19(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 819
     .line 820
-    move-object/from16 v15, v45
-
     .line 821
+    move-object/from16 v15, v61
+
     .line 822
-    move-object/from16 v14, v44
-
     .line 823
+    move-object/from16 v14, v60
+
     .line 824
-    move-object/from16 v1, v43
-
     .line 825
+    move-object/from16 v1, v59
+
     .line 826
-    move-object/from16 v0, v42
-
     .line 827
-    .line 828
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0t(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v0, v58
 
+    .line 828
     .line 829
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1A(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 830
     .line 831
-    move-object/from16 v14, v41
-
     .line 832
+    move-object/from16 v15, v57
+
     .line 833
-    move-object/from16 v1, v40
-
     .line 834
+    move-object/from16 v14, v56
+
     .line 835
-    move-object/from16 v0, v39
-
     .line 836
-    .line 837
-    invoke-static {v14, v1, v0, v2}, LX/001;->A0v(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v55
 
+    .line 837
     .line 838
+    move-object/from16 v0, v54
+
     .line 839
     .line 840
-    move-object/from16 v15, v38
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1B(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 841
     .line 842
-    move-object/from16 v14, v37
-
     .line 843
+    move-object/from16 v15, v53
+
     .line 844
-    move-object/from16 v1, v36
-
     .line 845
+    move-object/from16 v14, v52
+
     .line 846
-    move-object/from16 v0, v35
-
     .line 847
-    .line 848
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0u(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v51
 
+    .line 848
     .line 849
+    move-object/from16 v0, v50
+
     .line 850
     .line 851
-    move-object/from16 v14, v34
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1C(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 852
     .line 853
-    move-object/from16 v1, v33
-
     .line 854
+    move-object/from16 v15, v49
+
     .line 855
-    move-object/from16 v0, v32
-
     .line 856
-    .line 857
-    invoke-static {v14, v1, v0, v2}, LX/0Yc;->A1P(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v48
 
+    .line 857
     .line 858
+    move-object/from16 v1, v47
+
     .line 859
     .line 860
-    move-object/from16 v15, v31
+    move-object/from16 v0, v46
 
     .line 861
     .line 862
-    move-object/from16 v14, v30
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1D(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 863
     .line 864
-    move-object/from16 v1, v29
-
     .line 865
+    move-object/from16 v15, v45
+
     .line 866
-    move-object/from16 v0, v28
-
     .line 867
-    .line 868
-    invoke-static {v15, v14, v1, v0, v2}, LX/0Yc;->A0S(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v44
 
+    .line 868
     .line 869
+    move-object/from16 v1, v43
+
     .line 870
     .line 871
-    move-object/from16 v15, v27
+    move-object/from16 v0, v42
 
     .line 872
     .line 873
-    move-object/from16 v14, v26
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1E(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 874
     .line 875
-    move-object/from16 v1, v25
-
     .line 876
+    move-object/from16 v15, v41
+
     .line 877
-    move-object/from16 v0, v24
-
     .line 878
-    .line 879
-    invoke-static {v15, v14, v1, v0, v2}, LX/0Yc;->A0T(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v40
 
+    .line 879
     .line 880
+    move-object/from16 v1, v39
+
     .line 881
     .line 882
-    move-object/from16 v1, v23
+    move-object/from16 v0, v38
 
     .line 883
     .line 884
-    move-object/from16 v0, v22
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1F(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 885
     .line 886
-    invoke-static {v2, v1, v0}, LX/0Yd;->A1V([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 887
+    move-object/from16 v15, v37
+
     .line 888
     .line 889
-    move-object/from16 v1, v21
+    move-object/from16 v14, v36
 
     .line 890
     .line 891
-    move-object/from16 v0, v20
+    move-object/from16 v1, v35
 
     .line 892
     .line 893
-    invoke-static {v1, v0, v13, v12, v2}, LX/0Yc;->A0U(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v0, v34
 
     .line 894
     .line 895
-    .line 896
-    invoke-static {v11, v10, v9, v8, v2}, LX/0Yc;->A0V(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1G(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 896
     .line 897
     .line 898
-    .line 899
-    invoke-static {v7, v6, v5, v4, v2}, LX/0Yc;->A0W(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v15, v33
 
+    .line 899
     .line 900
+    move-object/from16 v14, v32
+
     .line 901
     .line 902
-    const/16 v0, 0x45
+    move-object/from16 v1, v31
 
     .line 903
     .line 904
-    aput-object v19, v2, v0
+    move-object/from16 v0, v30
 
     .line 905
     .line 906
-    const/16 v0, 0x46
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1H(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 907
     .line 908
+    .line 909
+    move-object/from16 v15, v29
+
+    .line 910
+    .line 911
+    move-object/from16 v14, v28
+
+    .line 912
+    .line 913
+    move-object/from16 v1, v27
+
+    .line 914
+    .line 915
+    move-object/from16 v0, v26
+
+    .line 916
+    .line 917
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1I(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 918
+    .line 919
+    .line 920
+    move-object/from16 v15, v25
+
+    .line 921
+    .line 922
+    move-object/from16 v14, v24
+
+    .line 923
+    .line 924
+    move-object/from16 v1, v23
+
+    .line 925
+    .line 926
+    move-object/from16 v0, v22
+
+    .line 927
+    .line 928
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1J(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 929
+    .line 930
+    .line 931
+    move-object/from16 v1, v21
+
+    .line 932
+    .line 933
+    move-object/from16 v0, v20
+
+    .line 934
+    .line 935
+    invoke-static {v1, v0, v13, v12, v2}, LX/0X3;->A1I(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 936
+    .line 937
+    .line 938
+    invoke-static {v11, v10, v9, v8, v2}, LX/0X3;->A1J(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 939
+    .line 940
+    .line 941
+    const/16 v0, 0x45
+
+    .line 942
+    .line 943
+    aput-object v19, v2, v0
+
+    .line 944
+    .line 945
+    const/16 v0, 0x46
+
+    .line 946
+    .line 947
     aput-object v18, v2, v0
 
-    .line 909
-    .line 910
+    .line 948
+    .line 949
     const/16 v0, 0x47
 
-    .line 911
-    .line 912
+    .line 950
+    .line 951
     aput-object v17, v2, v0
 
-    .line 913
-    .line 914
+    .line 952
+    .line 953
+    invoke-static {v7, v6, v5, v4, v2}, LX/0X5;->A1H(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 954
+    .line 955
+    .line 956
     aput-object v16, v2, v3
 
-    .line 915
-    .line 916
+    .line 957
+    .line 958
     sput-object v2, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationOption;
 
-    .line 917
-    .line 918
+    .line 959
+    .line 960
     return-void
 .end method
 
@@ -2029,7 +2123,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

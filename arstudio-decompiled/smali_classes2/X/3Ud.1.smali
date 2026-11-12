@@ -1,41 +1,43 @@
 .class public final LX/3Ud;
-.super Ljava/lang/Object;
+.super Landroid/widget/ArrayAdapter;
 .source ""
-
-# interfaces
-.implements LX/6Ls;
-
-
-# instance fields
-.field public final A00:Lcom/facebook/video/events/VideoCacheStatus;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/video/events/VideoCacheStatus;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v1, 0x7f090260
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3Ud;->A00:Lcom/facebook/video/events/VideoCacheStatus;
+    const/4 v0, 0x0
 
     .line 4
+    invoke-direct {p0, p1, p2, v1, v0}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final AB0()I
+.method public final getItemId(I)J
+    .locals 2
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public final hasStableIds()Z
     .locals 1
 
-    .line 0
-    const/16 v0, 0x1a
+    const/4 v0, 0x1
 
-    .line 1
-    .line 2
     return v0
 .end method

@@ -1,38 +1,42 @@
-.class public final synthetic LX/4Bs;
+.class public final LX/4Bs;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "PreserveBrowserProcessManager$$ExternalSyntheticLambda0"
-
-
-# instance fields
-.field public final synthetic A00:Landroid/webkit/WebView;
+.implements LX/4Bv;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/webkit/WebView;)V
+.method public constructor <init>()V
     .locals 0
 
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/4Bs;->A00:Landroid/webkit/WebView;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final Al2(Landroid/os/Bundle;Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 2
 
-    iget-object v0, p0, LX/4Bs;->A00:Landroid/webkit/WebView;
+    .line 0
+    invoke-static {p2}, LX/0X7;->A00(Ljava/lang/Object;)D
 
-    invoke-virtual {v0}, Landroid/webkit/WebView;->destroy()V
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
 
+    .line 4
+    invoke-virtual {p1, p3, v0, v1}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method

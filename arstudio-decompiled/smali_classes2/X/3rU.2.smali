@@ -1,1021 +1,406 @@
 .class public final LX/3rU;
-.super LX/6Mv;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5dv;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CacheInstrumentationEventHandler$handleEventBatch$1"
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final synthetic A00:LX/2AB;
 
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Na;
-
-.field public final A04:LX/0Na;
+.field public final synthetic A01:LX/3kl;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/6Mv;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/0Zq;->A0D()LX/0Zq;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/3rU;->A03:LX/0Na;
-
-    .line 8
-    .line 9
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/3rU;->A02:LX/0Na;
-
-    .line 14
-    .line 15
-    sget v0, LX/2eq;->ALZ:I
-
-    .line 16
-    .line 17
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    iput-object v0, p0, LX/3rU;->A01:LX/0Na;
-
-    .line 22
-    .line 23
-    sget v0, LX/2eq;->A7e:I
-
-    .line 24
-    .line 25
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    iput-object v0, p0, LX/3rU;->A04:LX/0Na;
-
-    .line 30
-    .line 31
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v0
-
-    .line 35
-    iput-object v0, p0, LX/3rU;->A00:LX/1zG;
-
-    .line 36
-    .line 37
-    return-void
-.end method
-
-.method public static A00(LX/3rU;)LX/35B;
+.method public constructor <init>(LX/2AB;LX/3kl;)V
     .locals 0
 
-    .line 0
-    iget-object p0, p0, LX/3rU;->A02:LX/0Na;
+    iput-object p1, p0, LX/3rU;->A00:LX/2AB;
 
-    .line 1
-    .line 2
-    invoke-interface {p0}, LX/0Na;->get()Ljava/lang/Object;
+    iput-object p2, p0, LX/3rU;->A01:LX/3kl;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    check-cast p0, LX/35B;
-
-    .line 7
-    .line 8
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final ADp(I)I
-    .locals 8
+.method public final run()V
+    .locals 26
 
     .line 0
-    packed-switch p1, :pswitch_data_0
+    move-object/from16 v0, p0
 
     .line 1
     .line 2
-    .line 3
-    :pswitch_0
-    invoke-super {p0, p1}, LX/6Mv;->ADp(I)I
+    iget-object v6, v0, LX/3rU;->A00:LX/2AB;
 
+    .line 3
     .line 4
+    iget-object v0, v0, LX/3rU;->A01:LX/3kl;
+
     .line 5
     .line 6
+    iget-object v0, v0, LX/3kl;->mCacheInstrumentationEvents:Ljava/util/ArrayList;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v10
+
+    .line 12
+    :cond_0
+    :goto_0
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 13
+    .line 14
+    .line 15
     move-result v0
 
-    .line 7
-    return v0
-
-    .line 8
-    :pswitch_1
-    const-wide v5, 0x830063000500b4L
-
-    .line 9
-    .line 10
-    .line 11
-    .line 12
-    .line 13
-    const/16 v0, 0xa
-
-    .line 14
-    .line 15
-    int-to-long v2, v0
-
     .line 16
-    const-string v7, "audioBufferMultiplier"
+    if-eqz v0, :cond_7
 
     .line 17
     .line 18
-    goto :goto_0
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 19
-    :pswitch_2
-    const-wide v5, 0x830063000a00b8L
-
     .line 20
     .line 21
+    move-result-object v8
+
     .line 22
+    check-cast v8, LX/3sG;
+
     .line 23
     .line 24
-    const/16 v0, 0x7d0
+    if-eqz v8, :cond_0
 
     .line 25
     .line 26
-    int-to-long v2, v0
+    const-string v0, "CacheInstrumentationEventHandler.handleEvent"
 
     .line 27
-    const-string/jumbo v7, "surface_video_encoder_operation_timeout_ms"
-
     .line 28
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+
     .line 29
     .line 30
-    goto :goto_0
-
     .line 31
-    :pswitch_3
-    const-wide v5, 0x830063000900b7L    # 3.3823811646107E-306
+    :try_start_0
+    iget-object v2, v8, LX/3sG;->mOperation:LX/5BF;
 
     .line 32
     .line 33
+    if-eqz v2, :cond_1
+
     .line 34
     .line 35
-    .line 36
-    const/16 v0, 0xfa0
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
+    .line 36
     .line 37
     .line 38
-    int-to-long v2, v0
+    move-result v0
 
     .line 39
-    const-string v7, "avmuxer_wait_for_first_samples_timeouot_ms"
+    packed-switch v0, :pswitch_data_0
 
     .line 40
     .line 41
-    goto :goto_0
-
     .line 42
-    :pswitch_4
-    const-wide v5, 0x830063000800b6L
-
-    .line 43
-    .line 44
-    .line 45
-    .line 46
-    .line 47
-    const/16 v0, 0x7d0
-
-    .line 48
-    .line 49
-    int-to-long v2, v0
-
-    .line 50
-    const-string v7, "audio_recording_track_stop_timeout_ms"
-
-    .line 51
-    .line 52
-    goto :goto_0
-
-    .line 53
-    :pswitch_5
-    const-wide v5, 0x830063000600b5L
-
-    .line 54
-    .line 55
-    .line 56
-    .line 57
-    .line 58
-    const/16 v0, 0x800
-
-    .line 59
-    .line 60
-    int-to-long v2, v0
-
-    .line 61
-    const-string v7, "buffer_size_in_samples"
-
-    .line 62
-    .line 63
-    goto :goto_0
-
-    .line 64
-    :pswitch_6
-    const-wide v5, 0x830063000400b3L
-
-    .line 65
-    .line 66
-    .line 67
-    .line 68
-    .line 69
-    const/4 v0, 0x0
-
-    .line 70
-    int-to-long v2, v0
-
-    .line 71
-    const-string/jumbo v7, "width"
-
-    .line 72
-    .line 73
-    .line 74
-    goto :goto_0
-
-    .line 75
-    :pswitch_7
-    const-wide v5, 0x830063000400b3L
-
-    .line 76
-    .line 77
-    .line 78
-    .line 79
-    .line 80
-    const/4 v0, 0x0
-
-    .line 81
-    int-to-long v2, v0
-
-    .line 82
-    const-string/jumbo v7, "height"
-
-    .line 83
-    .line 84
-    .line 85
-    :goto_0
-    iget-object v0, p0, LX/3rU;->A01:LX/0Na;
-
-    .line 86
-    .line 87
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 88
-    .line 89
-    .line 90
-    move-result-object v4
-
-    .line 91
-    check-cast v4, LX/2uS;
-
-    .line 92
-    .line 93
-    iget-object v0, v4, LX/2uS;->A00:LX/2uW;
-
-    .line 94
-    .line 95
-    invoke-virtual {v0, v5, v6}, LX/2uW;->A00(J)LX/2ud;
-
-    .line 96
-    .line 97
-    .line 98
-    move-result-object v1
-
-    .line 99
-    const/4 v0, 0x0
-
-    .line 100
-    invoke-static {v1, v0, v4}, LX/2uS;->A00(LX/2ud;LX/3JO;LX/2uS;)LX/2uc;
-
-    .line 101
-    .line 102
-    .line 103
-    move-result-object v0
-
-    .line 104
-    invoke-virtual {v0, v7, v2, v3}, LX/2uc;->A01(Ljava/lang/String;J)J
-
-    .line 105
-    .line 106
-    .line 107
-    move-result-wide v1
-
-    .line 108
-    long-to-int v0, v1
-
-    .line 109
-    return v0
-
-    .line 110
-    :pswitch_data_0
-    .packed-switch 0x3ec
-        :pswitch_1
-        :pswitch_0
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-    .end packed-switch
-.end method
-
-.method public final ADq(I)Ljava/lang/String;
-    .locals 4
-
-    .line 0
-    const/16 v0, 0x3eb
-
-    .line 1
-    .line 2
-    if-eq p1, v0, :cond_1
-
-    .line 3
-    .line 4
-    invoke-super {p0, p1}, LX/6Mv;->ADq(I)Ljava/lang/String;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v1
-
-    .line 8
-    :cond_0
-    return-object v1
-
-    .line 9
     :cond_1
-    iget-object v0, p0, LX/3rU;->A01:LX/0Na;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-    .line 10
-    .line 11
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v3
-
-    .line 15
-    check-cast v3, LX/2uS;
-
-    .line 16
-    .line 17
-    const-wide v1, 0x830063000200b1L
-
-    .line 18
-    .line 19
-    .line 20
-    .line 21
-    .line 22
-    iget-object v0, v3, LX/2uS;->A00:LX/2uW;
-
-    .line 23
-    .line 24
-    invoke-virtual {v0, v1, v2}, LX/2uW;->A00(J)LX/2ud;
-
-    .line 25
-    .line 26
-    .line 27
+    .line 43
+    .line 44
+    .line 45
     move-result-object v1
 
-    .line 28
-    const/4 v0, 0x0
-
-    .line 29
-    invoke-static {v1, v0, v3}, LX/2uS;->A00(LX/2ud;LX/3JO;LX/2uS;)LX/2uc;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v2
-
-    .line 33
-    const-string v0, "encodingProfile"
-
-    .line 34
-    .line 35
-    const-string/jumbo v1, "high"
-
-    .line 36
-    .line 37
-    .line 38
-    invoke-static {v2, v0}, LX/2uc;->A00(LX/2uc;Ljava/lang/String;)LX/6My;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-
-    .line 42
-    if-eqz v0, :cond_0
-
-    .line 43
-    .line 44
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 45
     .line 46
-    .line 47
-    move-result-object v1
-
-    .line 48
-    return-object v1
-.end method
-
-.method public final AFk(I)J
-    .locals 3
-
-    .line 0
-    const/4 v0, 0x4
-
-    .line 1
-    if-eq p1, v0, :cond_3
-
-    .line 2
-    .line 3
-    const/4 v0, 0x5
-
-    .line 4
-    if-eq p1, v0, :cond_2
-
-    .line 5
-    .line 6
-    const/4 v0, 0x6
-
-    .line 7
-    if-eq p1, v0, :cond_1
-
-    .line 8
-    .line 9
-    const/4 v0, 0x7
-
-    .line 10
-    if-eq p1, v0, :cond_0
-
-    .line 11
-    .line 12
-    const/16 v0, 0x14
-
-    .line 13
-    .line 14
-    if-eq p1, v0, :cond_4
-
-    .line 15
-    .line 16
-    invoke-super {p0, p1}, LX/6Mv;->AFk(I)J
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-wide v0
-
-    .line 20
-    return-wide v0
-
-    .line 21
-    :cond_0
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v2
-
-    .line 25
-    const-wide v0, 0x82008e00030359L
-
-    .line 26
-    .line 27
-    .line 28
-    .line 29
-    .line 30
-    goto :goto_0
-
-    .line 31
-    :cond_1
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v2
-
-    .line 35
-    const-wide v0, 0x82008e00020358L
-
-    .line 36
-    .line 37
-    .line 38
-    .line 39
-    .line 40
-    goto :goto_0
-
-    .line 41
-    :cond_2
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
-    .line 42
-    .line 43
-    .line 44
-    move-result-object v2
-
-    .line 45
-    const-wide v0, 0x8201620006057cL
-
-    .line 46
-    .line 47
-    .line 48
-    .line 49
-    .line 50
-    goto :goto_0
-
-    .line 51
-    :cond_3
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
-    .line 52
-    .line 53
-    .line 54
-    move-result-object v2
-
-    .line 55
-    const-wide v0, 0x8201620005057bL
-
-    .line 56
-    .line 57
-    .line 58
-    .line 59
-    .line 60
-    goto :goto_0
-
-    .line 61
-    :cond_4
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
-    .line 62
-    .line 63
-    .line 64
-    move-result-object v2
-
-    .line 65
-    const-wide v0, 0x8202dc00040889L
-
-    .line 66
-    .line 67
-    .line 68
-    .line 69
-    .line 70
-    :goto_0
-    invoke-interface {v2, v0, v1}, LX/35B;->AIM(J)J
-
-    .line 71
-    .line 72
-    .line 73
-    move-result-wide v0
-
-    .line 74
-    return-wide v0
-.end method
-
-.method public final AFl(I)Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    if-eq p1, v0, :cond_0
-
-    .line 2
-    .line 3
-    const-string v0, ""
-
-    .line 4
-    .line 5
-    return-object v0
-
-    .line 6
-    :cond_0
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v2
-
-    .line 10
-    const-wide v0, 0x8302b10000023aL
-
-    .line 11
-    .line 12
-    .line 13
-    .line 14
-    .line 15
-    invoke-interface {v2, v0, v1}, LX/35B;->AMY(J)Ljava/lang/String;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    return-object v0
-.end method
-
-.method public final AQO(I)Z
-    .locals 5
-
-    .line 0
-    const/16 v0, 0x3d
-
-    .line 1
-    .line 2
-    const/4 v4, 0x0
-
-    .line 3
-    if-eq p1, v0, :cond_b
-
-    .line 4
-    .line 5
-    const/16 v0, 0x60
-
-    .line 6
-    .line 7
-    const/4 v1, 0x1
-
-    .line 8
-    if-eq p1, v0, :cond_a
-
-    .line 9
-    .line 10
-    const/16 v0, 0x66
-
-    .line 11
-    .line 12
-    if-eq p1, v0, :cond_9
-
-    .line 13
-    .line 14
-    const/16 v0, 0x6b
-
-    .line 15
-    .line 16
-    if-eq p1, v0, :cond_8
-
-    .line 17
-    .line 18
-    const/16 v0, 0x72
-
-    .line 19
-    .line 20
-    if-eq p1, v0, :cond_7
-
-    .line 21
-    .line 22
-    const/16 v0, 0x74
-
-    .line 23
-    .line 24
-    if-eq p1, v0, :cond_0
-
-    .line 25
-    .line 26
-    const/16 v0, 0x76
-
-    .line 27
-    .line 28
-    if-eq p1, v0, :cond_6
-
-    .line 29
-    .line 30
-    const/16 v0, 0x92
-
-    .line 31
-    .line 32
-    if-eq p1, v0, :cond_5
-
-    .line 33
-    .line 34
-    const/16 v0, 0x5d
-
-    .line 35
-    .line 36
-    if-eq p1, v0, :cond_4
-
-    .line 37
-    .line 38
-    const/16 v0, 0x5e
-
-    .line 39
-    .line 40
-    if-eq p1, v0, :cond_3
-
-    .line 41
-    .line 42
-    const/16 v0, 0x89
-
-    .line 43
-    .line 44
-    if-eq p1, v0, :cond_2
-
-    .line 45
-    .line 46
-    const/16 v0, 0x8a
+    const-string v0, "Unknown operation: "
 
     .line 47
     .line 48
-    if-eq p1, v0, :cond_1
+    invoke-static {v2, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
     .line 49
     .line 50
-    packed-switch p1, :pswitch_data_0
-
     .line 51
+    move-result-object v0
+
     .line 52
+    throw v0
+
     .line 53
-    packed-switch p1, :pswitch_data_1
-
-    .line 54
-    .line 55
-    .line 56
-    invoke-super {p0, p1}, LX/6Mv;->AQO(I)Z
-
-    .line 57
-    .line 58
-    .line 59
-    move-result v1
-
-    .line 60
-    :cond_0
     :pswitch_0
-    return v1
+    invoke-static {v6, v8}, LX/2AB;->A01(LX/2AB;LX/3sG;)Ljava/lang/String;
 
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v7
+
+    .line 57
+    if-eqz v7, :cond_6
+
+    .line 58
+    .line 59
+    invoke-static {v6, v7}, LX/2AB;->A00(LX/2AB;Ljava/lang/String;)Lcom/facebook/video/analytics/cache/CacheItemTrackingData;
+
+    .line 60
     .line 61
-    :pswitch_1
-    iget-object v0, p0, LX/3rU;->A03:LX/0Na;
-
     .line 62
+    move-result-object v0
+
     .line 63
-    invoke-static {v0}, LX/0Yg;->A06(LX/0Na;)Landroid/content/Context;
+    if-nez v0, :cond_6
 
     .line 64
     .line 65
-    .line 66
-    move-result-object v0
+    sget-object v9, LX/3kK;->UNKNOWN:LX/3kK;
 
+    .line 66
     .line 67
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    iget-object v0, v8, LX/3sG;->mRequestType:Ljava/lang/String;
 
     .line 68
     .line 69
-    .line 70
-    move-result-object v1
+    if-eqz v0, :cond_2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 70
     .line 71
-    const-string/jumbo v0, "org.chromium.arc.device_management"
+    :try_start_1
+    invoke-static {v0}, LX/3kK;->valueOf(Ljava/lang/String;)LX/3kK;
 
     .line 72
     .line 73
     .line 74
-    invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+    move-result-object v9
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 75
+    :catch_0
+    :cond_2
+    :try_start_2
+    iget-wide v4, v8, LX/3sG;->mTimestamp:J
+
     .line 76
     .line 77
-    move-result v1
+    iget-object v12, v8, LX/3sG;->mKey:Ljava/lang/String;
 
     .line 78
-    return v1
-
     .line 79
-    :pswitch_2
-    iget-object v2, p0, LX/3rU;->A04:LX/0Na;
+    iget-object v13, v8, LX/3sG;->mAssetUrl:Ljava/lang/String;
 
     .line 80
     .line 81
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
+    iget-object v14, v8, LX/3sG;->mSourceModule:Ljava/lang/String;
 
     .line 82
     .line 83
+    invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
     .line 84
-    move-result-object v1
-
     .line 85
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
-
     .line 86
+    move-result-object v15
+
     .line 87
-    if-eq v1, v0, :cond_c
+    iget-wide v2, v8, LX/3sG;->mPosition:J
 
     .line 88
     .line 89
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
+    iget-wide v0, v8, LX/3sG;->mLength:J
 
     .line 90
     .line 91
-    .line 92
-    move-result-object v1
+    add-long v22, v2, v0
 
+    .line 92
     .line 93
-    sget-object v0, LX/0JU;->MESSENGER:LX/0JU;
+    sget-object v0, LX/3kK;->PREFETCH:LX/3kK;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 94
     .line 95
-    goto/16 :goto_0
+    invoke-static {v9, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 96
     .line 97
-    :pswitch_3
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
     .line 98
-    .line 99
-    .line 100
-    move-result-object v2
+    move-result v24
 
+    .line 99
+    :try_start_3
+    iget-object v0, v8, LX/3sG;->mPrefetchTag:Ljava/lang/String;
+
+    .line 100
     .line 101
-    const-wide v0, 0x8101ec0001170fL
+    iget-boolean v1, v8, LX/3sG;->mIsSecondPhasePrefetch:Z
 
     .line 102
     .line 103
+    new-instance v11, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;
+
     .line 104
     .line 105
+    move-object/from16 v16, v0
+
     .line 106
-    goto/16 :goto_2
-
     .line 107
-    .line 108
-    :pswitch_4
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    move-object/from16 v17, v14
 
+    .line 108
     .line 109
+    move-wide/from16 v18, v4
+
     .line 110
     .line 111
-    move-result-object v2
+    move-wide/from16 v20, v2
 
     .line 112
-    const-wide v0, 0x81011400020e3aL
-
     .line 113
+    move/from16 v25, v1
+
     .line 114
     .line 115
+    invoke-direct/range {v11 .. v25}, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJJZZ)V
+
     .line 116
     .line 117
-    goto/16 :goto_2
-
     .line 118
-    .line 119
-    :pswitch_5
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    iget-object v0, v6, LX/2AB;->A05:LX/0lu;
 
+    .line 119
     .line 120
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
+
     .line 121
     .line 122
-    move-result-object v2
-
     .line 123
-    const-wide v0, 0x810239000018f1L
+    move-result-object v1
 
     .line 124
+    check-cast v1, Ljava/util/concurrent/ExecutorService;
+
     .line 125
     .line 126
+    new-instance v0, LX/3rS;
+
     .line 127
     .line 128
-    goto/16 :goto_2
+    invoke-direct {v0, v6, v11, v7}, LX/3rS;-><init>(LX/2AB;Lcom/facebook/video/analytics/cache/CacheItemTrackingData;Ljava/lang/String;)V
 
     .line 129
     .line 130
-    :pswitch_6
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
     .line 131
+    goto/16 :goto_1
+
     .line 132
     .line 133
-    move-result-object v2
+    :pswitch_1
+    invoke-static {v6, v8}, LX/2AB;->A01(LX/2AB;LX/3sG;)Ljava/lang/String;
 
     .line 134
-    const-wide v0, 0x8101ec00021710L
-
     .line 135
     .line 136
+    move-result-object v4
+
     .line 137
+    if-eqz v4, :cond_6
+
     .line 138
     .line 139
-    goto/16 :goto_2
+    invoke-static {v6, v4}, LX/2AB;->A00(LX/2AB;Ljava/lang/String;)Lcom/facebook/video/analytics/cache/CacheItemTrackingData;
 
     .line 140
     .line 141
-    :pswitch_7
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
     .line 142
-    .line 143
-    .line 144
-    move-result-object v2
+    move-result-object v7
 
+    .line 143
+    if-eqz v7, :cond_6
+
+    .line 144
     .line 145
-    const-wide v0, 0x2081008a00020904L    # 4.057839921861059E-152
+    iget-wide v1, v8, LX/3sG;->mTimestamp:J
 
     .line 146
     .line 147
+    iget-object v0, v8, LX/3sG;->mEvictionReason:Ljava/lang/String;
+
     .line 148
     .line 149
+    iput-wide v1, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mEvicted:J
+
     .line 150
-    goto/16 :goto_2
-
     .line 151
+    iput-object v0, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mEvictionReason:Ljava/lang/String;
+
     .line 152
-    :cond_1
-    iget-object v0, p0, LX/3rU;->A04:LX/0Na;
-
     .line 153
-    .line 154
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    iget-object v0, v6, LX/2AB;->A03:LX/0lu;
 
+    .line 154
     .line 155
+    invoke-static {v0}, LX/0lu;->A03(LX/0lu;)LX/0B4;
+
     .line 156
     .line 157
+    .line 158
     move-result-object v1
 
-    .line 158
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
-
     .line 159
-    .line 160
-    if-ne v1, v0, :cond_d
+    const-string/jumbo v0, "fb_video_cache_item_evicted"
 
+    .line 160
     .line 161
     .line 162
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    invoke-interface {v1, v0}, LX/0B4;->A2Y(Ljava/lang/String;)LX/0B8;
 
     .line 163
     .line 164
     .line 165
-    move-result-object v2
+    move-result-object v5
 
     .line 166
-    const-wide v0, 0x81040000002a4cL
+    invoke-interface {v5}, LX/0B8;->isSampled()Z
 
     .line 167
     .line 168
     .line 169
+    move-result v0
+
     .line 170
+    if-eqz v0, :cond_4
+
     .line 171
-    goto/16 :goto_1
-
     .line 172
-    .line 173
-    :cond_2
-    iget-object v0, p0, LX/3rU;->A04:LX/0Na;
+    iget-wide v2, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mInserted:J
 
+    .line 173
     .line 174
+    long-to-double v0, v2
+
     .line 175
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     .line 176
     .line 177
@@ -1023,300 +408,281 @@
     move-result-object v1
 
     .line 179
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
+    const-string/jumbo v0, "ts_insertion"
 
     .line 180
     .line 181
-    if-ne v1, v0, :cond_d
-
     .line 182
-    .line 183
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    invoke-interface {v5, v0, v1}, LX/0B8;->A2p(Ljava/lang/String;Ljava/lang/Double;)V
 
+    .line 183
     .line 184
     .line 185
-    .line 186
-    move-result-object v2
+    iget-wide v2, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mEvicted:J
 
+    .line 186
     .line 187
-    const-wide v0, 0x8103da00002965L
+    long-to-double v0, v2
 
     .line 188
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
     .line 189
     .line 190
     .line 191
+    move-result-object v1
+
     .line 192
-    goto/16 :goto_1
+    const-string/jumbo v0, "ts_eviction"
 
     .line 193
     .line 194
-    :cond_3
-    iget-object v0, p0, LX/3rU;->A04:LX/0Na;
-
     .line 195
-    .line 196
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v5, v0, v1}, LX/0B8;->A2p(Ljava/lang/String;Ljava/lang/Double;)V
 
+    .line 196
     .line 197
     .line 198
-    .line 199
-    move-result-object v1
+    iget-object v1, v8, LX/3sG;->mCacheName:Ljava/lang/String;
 
+    .line 199
     .line 200
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
+    const-string/jumbo v0, "cache_name"
 
     .line 201
     .line 202
-    if-ne v1, v0, :cond_d
-
     .line 203
-    .line 204
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    invoke-interface {v5, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 204
     .line 205
     .line 206
-    .line 207
-    move-result-object v2
+    iget-object v1, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mFetchType:Ljava/lang/String;
 
+    .line 207
     .line 208
-    const-wide v0, 0x8101480071110fL
+    invoke-static {v1}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 209
     .line 210
     .line 211
+    const-string/jumbo v0, "insertion_reason"
+
     .line 212
     .line 213
-    goto/16 :goto_1
-
     .line 214
-    .line 215
-    :cond_4
-    iget-object v0, p0, LX/3rU;->A04:LX/0Na;
+    invoke-interface {v5, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 215
     .line 216
     .line 217
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    iget-object v1, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mEvictionReason:Ljava/lang/String;
 
     .line 218
     .line 219
-    .line 220
-    move-result-object v1
+    if-nez v1, :cond_3
 
+    .line 220
     .line 221
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
+    const-string/jumbo v1, "unknown"
 
     .line 222
     .line 223
-    if-ne v1, v0, :cond_d
-
     .line 224
-    .line 225
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    :cond_3
+    const-string/jumbo v0, "eviction_reason"
 
+    .line 225
     .line 226
     .line 227
+    invoke-interface {v5, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 228
-    move-result-object v2
-
     .line 229
-    const-wide v0, 0x810148007e1119L
-
     .line 230
+    iget v0, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mNumHits:I
+
     .line 231
     .line 232
+    invoke-static {v0}, LX/0X7;->A0T(I)Ljava/lang/Long;
+
     .line 233
     .line 234
-    goto/16 :goto_1
-
     .line 235
+    move-result-object v1
+
     .line 236
-    :cond_5
-    iget-object v0, p0, LX/3rU;->A04:LX/0Na;
+    const-string/jumbo v0, "cache_hits"
 
     .line 237
     .line 238
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 239
+    invoke-interface {v5, v0, v1}, LX/0B8;->A34(Ljava/lang/String;Ljava/lang/Long;)V
+
     .line 240
     .line 241
-    move-result-object v1
-
     .line 242
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
+    iget-boolean v0, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mIsSecondPhasePrefetch:Z
 
     .line 243
     .line 244
-    if-ne v1, v0, :cond_d
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 245
     .line 246
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
     .line 247
+    move-result-object v1
+
     .line 248
+    const-string/jumbo v0, "is_second_phase_prefetch"
+
     .line 249
-    move-result-object v2
-
     .line 250
-    const-wide v0, 0x8103db00002966L
-
     .line 251
+    invoke-interface {v5, v0, v1}, LX/0B8;->A2l(Ljava/lang/String;Ljava/lang/Boolean;)V
+
     .line 252
     .line 253
     .line 254
-    .line 255
-    goto :goto_1
+    iget-object v1, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mPrefetchModule:Ljava/lang/String;
 
+    .line 255
     .line 256
-    :cond_6
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    const-string/jumbo v0, "prefetch_module"
 
     .line 257
     .line 258
     .line 259
-    move-result-object v2
+    invoke-interface {v5, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 260
-    const-wide v0, 0x81033600002475L
-
     .line 261
     .line 262
+    iget-object v1, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mPrefetchTag:Ljava/lang/String;
+
     .line 263
     .line 264
-    .line 265
-    goto/16 :goto_2
+    const-string/jumbo v0, "prefetch_tag"
 
+    .line 265
     .line 266
     .line 267
-    :cond_7
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    invoke-interface {v5, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 268
     .line 269
     .line 270
-    move-result-object v2
+    iget-object v1, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mItemId:Ljava/lang/String;
 
     .line 271
-    const-wide v0, 0x8102dc0003209bL
-
     .line 272
+    const-string/jumbo v0, "asset_id"
+
     .line 273
     .line 274
     .line 275
-    .line 276
-    goto/16 :goto_2
+    invoke-interface {v5, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 276
     .line 277
     .line 278
-    :cond_8
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    iget-object v1, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mModule:Ljava/lang/String;
 
     .line 279
     .line 280
+    const-string/jumbo v0, "insertion_module"
+
     .line 281
-    move-result-object v2
-
     .line 282
-    const-wide v0, 0x81043100002c27L
-
     .line 283
+    invoke-interface {v5, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 284
     .line 285
     .line 286
+    iget-wide v0, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mSizeInBytes:J
+
     .line 287
-    goto/16 :goto_2
-
     .line 288
-    .line 289
-    :cond_9
-    iget-object v0, p0, LX/3rU;->A04:LX/0Na;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
+    .line 289
     .line 290
     .line 291
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 292
-    .line 293
-    .line 294
     move-result-object v1
 
+    .line 292
+    const-string/jumbo v0, "item_size"
+
+    .line 293
+    .line 294
     .line 295
-    sget-object v0, LX/0JU;->SAMPLE:LX/0JU;
+    invoke-interface {v5, v0, v1}, LX/0B8;->A34(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 296
     .line 297
-    goto :goto_0
-
     .line 298
-    :pswitch_8
-    iget-object v0, p0, LX/3rU;->A04:LX/0Na;
+    iget-wide v2, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mFirstAccessed:J
 
     .line 299
     .line 300
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    long-to-double v0, v2
 
     .line 301
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
     .line 302
     .line 303
+    .line 304
     move-result-object v1
 
-    .line 304
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
-
     .line 305
-    .line 306
-    :goto_0
-    if-ne v1, v0, :cond_d
+    const-string/jumbo v0, "ts_first_access"
 
+    .line 306
     .line 307
     .line 308
-    goto :goto_3
+    invoke-interface {v5, v0, v1}, LX/0B8;->A2p(Ljava/lang/String;Ljava/lang/Double;)V
 
     .line 309
-    :cond_a
-    iget-object v0, p0, LX/3rU;->A04:LX/0Na;
-
     .line 310
     .line 311
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    iget-wide v2, v7, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mLastAccessed:J
 
     .line 312
     .line 313
+    long-to-double v0, v2
+
     .line 314
-    move-result-object v1
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     .line 315
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
-
     .line 316
     .line 317
-    if-ne v1, v0, :cond_d
+    move-result-object v1
 
     .line 318
-    .line 319
-    :try_start_0
-    iget-object v1, p0, LX/6J2;->A00:LX/5dm;
+    const-string/jumbo v0, "ts_last_access"
 
+    .line 319
     .line 320
     .line 321
-    sget-object v0, LX/5dF;->A00:LX/5gV;
+    invoke-interface {v5, v0, v1}, LX/0B8;->A2p(Ljava/lang/String;Ljava/lang/Double;)V
 
     .line 322
     .line 323
-    invoke-interface {v1, v0}, LX/5dm;->ADS(LX/5gV;)LX/5gJ;
-
     .line 324
+    invoke-interface {v5}, LX/0B8;->AQk()V
+
     .line 325
     .line 326
-    move-result-object v0
-
     .line 327
-    check-cast v0, LX/5dF;
+    :cond_4
+    iget-object v0, v6, LX/2AB;->A05:LX/0lu;
 
     .line 328
     .line 329
-    invoke-interface {v0}, LX/5dF;->getProductName()Ljava/lang/String;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 330
     .line 331
@@ -1324,249 +690,159 @@
     move-result-object v1
 
     .line 333
-    const-string/jumbo v0, "inspiration_media_composition_player"
+    check-cast v1, Ljava/util/concurrent/ExecutorService;
 
     .line 334
     .line 335
-    .line 336
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v0, LX/1x2;
 
+    .line 336
     .line 337
+    invoke-direct {v0, v6, v4}, LX/1x2;-><init>(LX/2AB;Ljava/lang/String;)V
+
     .line 338
     .line 339
-    move-result v0
-
     .line 340
-    if-eqz v0, :cond_d
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    goto :goto_1
 
     .line 341
-    .line 342
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
+    :pswitch_2
+    invoke-static {v6, v8}, LX/2AB;->A01(LX/2AB;LX/3sG;)Ljava/lang/String;
 
+    .line 342
     .line 343
     .line 344
+    move-result-object v5
+
     .line 345
-    move-result-object v2
+    if-eqz v5, :cond_6
 
     .line 346
-    const-wide v0, 0x8101480080111bL
-
     .line 347
+    invoke-static {v6, v5}, LX/2AB;->A00(LX/2AB;Ljava/lang/String;)Lcom/facebook/video/analytics/cache/CacheItemTrackingData;
+
     .line 348
     .line 349
     .line 350
+    move-result-object v4
+
     .line 351
-    goto :goto_1
+    if-eqz v4, :cond_6
 
     .line 352
-    :pswitch_9
-    iget-object v3, p0, LX/3rU;->A02:LX/0Na;
-
     .line 353
-    .line 354
-    invoke-static {v3}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    iget-wide v2, v8, LX/3sG;->mTimestamp:J
 
+    .line 354
     .line 355
+    iget v0, v4, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mNumHits:I
+
     .line 356
     .line 357
-    move-result-object v2
+    const/4 v1, 0x1
 
     .line 358
-    const-wide v0, 0x81016b000112e7L
+    add-int/lit8 v0, v0, 0x1
 
     .line 359
     .line 360
+    iput v0, v4, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mNumHits:I
+
     .line 361
     .line 362
-    .line 363
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    iget-boolean v0, v4, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mAccessed:Z
 
+    .line 363
     .line 364
+    if-nez v0, :cond_5
+
     .line 365
     .line 366
-    move-result v0
+    iput-boolean v1, v4, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mAccessed:Z
 
     .line 367
-    if-nez v0, :cond_c
-
     .line 368
-    .line 369
-    invoke-static {v3}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    iput-wide v2, v4, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mFirstAccessed:J
 
+    .line 369
     .line 370
+    :cond_5
+    iput-wide v2, v4, Lcom/facebook/video/analytics/cache/CacheItemTrackingData;->mLastAccessed:J
+
     .line 371
     .line 372
-    move-result-object v2
+    iget-object v0, v6, LX/2AB;->A05:LX/0lu;
 
     .line 373
-    const-wide v0, 0x81016a000112e6L    # 3.0270836955840004E-306
-
     .line 374
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
+
     .line 375
     .line 376
     .line 377
+    move-result-object v1
+
     .line 378
-    :goto_1
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    check-cast v1, Ljava/util/concurrent/ExecutorService;
 
     .line 379
     .line 380
-    .line 381
-    move-result v0
+    new-instance v0, LX/3rS;
 
+    .line 381
     .line 382
-    if-eqz v0, :cond_d
+    invoke-direct {v0, v6, v4, v5}, LX/3rS;-><init>(LX/2AB;Lcom/facebook/video/analytics/cache/CacheItemTrackingData;Ljava/lang/String;)V
 
     .line 383
     .line 384
-    goto :goto_3
-
     .line 385
-    :cond_b
-    iget-object v2, p0, LX/3rU;->A04:LX/0Na;
+    :goto_1
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 386
     .line 387
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 388
+    :cond_6
+    :pswitch_3
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
     .line 389
     .line 390
-    move-result-object v1
-
     .line 391
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
+    goto/16 :goto_0
 
     .line 392
     .line 393
-    if-eq v1, v0, :cond_d
+    :catchall_0
+    move-exception v0
 
     .line 394
-    .line 395
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
 
+    .line 395
     .line 396
     .line 397
+    throw v0
+
     .line 398
-    move-result-object v1
+    :cond_7
+    return-void
 
     .line 399
-    sget-object v0, LX/0JU;->MESSENGER:LX/0JU;
-
-    .line 400
-    .line 401
-    if-ne v1, v0, :cond_d
-
-    .line 402
-    .line 403
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
-    .line 404
-    .line 405
-    .line 406
-    move-result-object v2
-
-    .line 407
-    const-wide v0, 0x8100ea00150d14L
-
-    .line 408
-    .line 409
-    .line 410
-    .line 411
-    .line 412
-    goto :goto_2
-
-    .line 413
-    :pswitch_a
-    invoke-static {p0}, LX/3rU;->A00(LX/3rU;)LX/35B;
-
-    .line 414
-    .line 415
-    .line 416
-    move-result-object v2
-
-    .line 417
-    const-wide v0, 0x81008e0001090cL
-
-    .line 418
-    .line 419
-    .line 420
-    .line 421
-    .line 422
-    :goto_2
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
-
-    .line 423
-    .line 424
-    .line 425
-    move-result v1
-
-    .line 426
-    return v1
-
-    .line 427
-    :pswitch_b
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 428
-    .line 429
-    const/16 v0, 0x15
-
-    .line 430
-    .line 431
-    if-lt v1, v0, :cond_d
-
-    .line 432
-    .line 433
-    :cond_c
-    :goto_3
-    const/4 v4, 0x1
-
-    .line 434
-    :catch_0
-    :cond_d
-    :pswitch_c
-    return v4
-
-    .line 435
     nop
 
-    .line 436
+    .line 400
     :pswitch_data_0
-    .packed-switch 0x43
+    .packed-switch 0x0
         :pswitch_0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_4
-        :pswitch_9
-        :pswitch_c
-        :pswitch_c
-        :pswitch_c
-        :pswitch_c
-        :pswitch_0
-        :pswitch_5
-        :pswitch_0
-        :pswitch_c
-        :pswitch_8
-        :pswitch_6
-        :pswitch_8
-        :pswitch_8
-        :pswitch_8
-        :pswitch_7
-    .end packed-switch
-
-    .line 437
-    .line 438
-    .line 439
-    .line 440
-    :pswitch_data_1
-    .packed-switch 0x57
-        :pswitch_8
-        :pswitch_8
-        :pswitch_a
         :pswitch_1
-        :pswitch_b
+        :pswitch_2
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
     .end packed-switch
 .end method

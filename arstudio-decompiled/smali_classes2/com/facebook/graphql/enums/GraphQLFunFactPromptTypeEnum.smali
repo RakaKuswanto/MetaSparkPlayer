@@ -38,10 +38,6 @@
 
 .field public static final enum QUESTION:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
-.field public static final enum QUILT_PROMPT_EXAMPLE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
-.field public static final enum QUILT_SUGGESTED_PROMPT_SENTENCE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
 .field public static final enum TOAST:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
 .field public static final enum UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
@@ -57,7 +53,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 27
+    .locals 24
 
     .line 0
     const-string v2, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -67,64 +63,64 @@
     const/4 v1, 0x0
 
     .line 3
-    new-instance v26, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    new-instance v15, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 4
     .line 5
-    move-object/from16 v0, v26
+    invoke-direct {v15, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 6
     .line 7
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
     .line 8
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+
     .line 9
     .line 10
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const-string v2, "CAMPUS_COMMUNITY_PROMPT"
 
     .line 11
     .line 12
-    const-string v2, "CAMPUS_COMMUNITY_PROMPT"
-
-    .line 13
-    .line 14
     const/4 v1, 0x1
 
+    .line 13
+    new-instance v23, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+
+    .line 14
     .line 15
-    new-instance v25, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    move-object/from16 v0, v23
 
     .line 16
     .line 17
-    move-object/from16 v0, v25
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 18
     .line 19
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
     .line 20
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->CAMPUS_COMMUNITY_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+
     .line 21
     .line 22
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->CAMPUS_COMMUNITY_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const-string v2, "CAMPUS_GROUP_PROMPT"
 
     .line 23
     .line 24
-    const-string v2, "CAMPUS_GROUP_PROMPT"
-
-    .line 25
-    .line 26
     const/4 v1, 0x2
 
+    .line 25
+    new-instance v22, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+
+    .line 26
     .line 27
-    new-instance v15, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    move-object/from16 v0, v22
 
     .line 28
     .line 29
-    invoke-direct {v15, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 30
     .line 31
     .line 32
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->CAMPUS_GROUP_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->CAMPUS_GROUP_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 33
     .line 34
@@ -135,11 +131,11 @@
     const/4 v1, 0x3
 
     .line 37
-    new-instance v24, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    new-instance v21, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 38
     .line 39
-    move-object/from16 v0, v24
+    move-object/from16 v0, v21
 
     .line 40
     .line 41
@@ -148,7 +144,7 @@
     .line 42
     .line 43
     .line 44
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->FOX_MODE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->FOX_MODE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 45
     .line 46
@@ -159,11 +155,11 @@
     const/4 v1, 0x4
 
     .line 49
-    new-instance v23, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    new-instance v20, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 50
     .line 51
-    move-object/from16 v0, v23
+    move-object/from16 v0, v20
 
     .line 52
     .line 53
@@ -172,7 +168,7 @@
     .line 54
     .line 55
     .line 56
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->GEMSTONE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->GEMSTONE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 57
     .line 58
@@ -183,11 +179,11 @@
     const/4 v1, 0x5
 
     .line 61
-    new-instance v22, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    new-instance v19, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 62
     .line 63
-    move-object/from16 v0, v22
+    move-object/from16 v0, v19
 
     .line 64
     .line 65
@@ -196,7 +192,7 @@
     .line 66
     .line 67
     .line 68
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->GEMSTONE_ICEBREAKER:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->GEMSTONE_ICEBREAKER:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 69
     .line 70
@@ -207,11 +203,11 @@
     const/4 v1, 0x6
 
     .line 73
-    new-instance v21, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    new-instance v18, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 74
     .line 75
-    move-object/from16 v0, v21
+    move-object/from16 v0, v18
 
     .line 76
     .line 77
@@ -220,7 +216,7 @@
     .line 78
     .line 79
     .line 80
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->GEMSTONE_PHOTO_CAPTIONS:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->GEMSTONE_PHOTO_CAPTIONS:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 81
     .line 82
@@ -231,11 +227,11 @@
     const/4 v1, 0x7
 
     .line 85
-    new-instance v20, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    new-instance v17, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 86
     .line 87
-    move-object/from16 v0, v20
+    move-object/from16 v0, v17
 
     .line 88
     .line 89
@@ -244,7 +240,7 @@
     .line 90
     .line 91
     .line 92
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->JOBS_CAREER_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->JOBS_CAREER_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 93
     .line 94
@@ -256,11 +252,11 @@
 
     .line 97
     .line 98
-    new-instance v19, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    new-instance v16, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 99
     .line 100
-    move-object/from16 v0, v19
+    move-object/from16 v0, v16
 
     .line 101
     .line 102
@@ -269,386 +265,319 @@
     .line 103
     .line 104
     .line 105
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LIST_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    sput-object v16, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LIST_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 106
     .line 107
-    const-string v2, "LIVE_VIDEO"
+    const-string v1, "LIVE_VIDEO"
 
     .line 108
     .line 109
-    const/16 v1, 0x9
+    const/16 v0, 0x9
 
     .line 110
     .line 111
-    new-instance v18, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    new-instance v14, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 112
     .line 113
-    move-object/from16 v0, v18
+    invoke-direct {v14, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 114
     .line 115
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
     .line 116
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LIVE_VIDEO:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+
     .line 117
     .line 118
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LIVE_VIDEO:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const-string v1, "LOCAL_COMMUNITY_GROUP_PROMPT"
 
     .line 119
     .line 120
-    const-string v2, "LOCAL_COMMUNITY_GROUP_PROMPT"
+    const/16 v0, 0xa
 
     .line 121
     .line 122
-    const/16 v1, 0xa
+    new-instance v13, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 123
     .line 124
-    new-instance v17, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    invoke-direct {v13, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 125
     .line 126
-    move-object/from16 v0, v17
-
     .line 127
-    .line 128
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LOCAL_COMMUNITY_GROUP_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 128
     .line 129
+    const-string v1, "LOCAL_COMMUNITY_PROMPT"
+
     .line 130
     .line 131
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LOCAL_COMMUNITY_GROUP_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0xb
 
     .line 132
     .line 133
-    const-string v1, "LOCAL_COMMUNITY_PROMPT"
+    new-instance v12, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 134
     .line 135
-    const/16 v0, 0xb
+    invoke-direct {v12, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 136
     .line 137
-    new-instance v14, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 138
-    .line 139
-    invoke-direct {v14, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LOCAL_COMMUNITY_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 139
     .line 140
+    const-string v1, "LOCAL_COMMUNITY_QUESTION"
+
     .line 141
     .line 142
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LOCAL_COMMUNITY_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0xc
 
     .line 143
     .line 144
-    const-string v1, "LOCAL_COMMUNITY_QUESTION"
+    new-instance v11, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 145
     .line 146
-    const/16 v0, 0xc
+    invoke-direct {v11, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 147
     .line 148
-    new-instance v13, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 149
-    .line 150
-    invoke-direct {v13, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LOCAL_COMMUNITY_QUESTION:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 150
     .line 151
+    const-string v1, "LOCAL_COMMUNITY_ROLE_GROUP"
+
     .line 152
     .line 153
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LOCAL_COMMUNITY_QUESTION:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0xd
 
     .line 154
     .line 155
-    const-string v1, "LOCAL_COMMUNITY_ROLE_GROUP"
+    new-instance v10, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 156
     .line 157
-    const/16 v0, 0xd
+    invoke-direct {v10, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 158
     .line 159
-    new-instance v12, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 160
-    .line 161
-    invoke-direct {v12, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LOCAL_COMMUNITY_ROLE_GROUP:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 161
     .line 162
+    const-string v1, "MENTORSHIP_GROUP"
+
     .line 163
     .line 164
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->LOCAL_COMMUNITY_ROLE_GROUP:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0xe
 
     .line 165
     .line 166
-    const-string v1, "MENTORSHIP_GROUP"
+    new-instance v9, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 167
     .line 168
-    const/16 v0, 0xe
+    invoke-direct {v9, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 169
     .line 170
-    new-instance v11, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 171
-    .line 172
-    invoke-direct {v11, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->MENTORSHIP_GROUP:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 172
     .line 173
+    const-string v1, "PAGE_PROMPT"
+
     .line 174
     .line 175
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->MENTORSHIP_GROUP:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0xf
 
     .line 176
     .line 177
-    const-string v1, "PAGE_PROMPT"
+    new-instance v8, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 178
     .line 179
-    const/16 v0, 0xf
+    invoke-direct {v8, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 180
     .line 181
-    new-instance v10, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 182
-    .line 183
-    invoke-direct {v10, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->PAGE_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 183
     .line 184
+    const-string v1, "QUESTION"
+
     .line 185
     .line 186
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->PAGE_PROMPT:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0x10
 
     .line 187
     .line 188
-    const-string v1, "QUESTION"
+    new-instance v7, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 189
     .line 190
-    const/16 v0, 0x10
+    invoke-direct {v7, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 191
     .line 192
-    new-instance v9, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 193
-    .line 194
-    invoke-direct {v9, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->QUESTION:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 194
     .line 195
+    const-string v1, "TOAST"
+
     .line 196
     .line 197
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->QUESTION:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0x11
 
     .line 198
     .line 199
-    const-string v1, "QUILT_PROMPT_EXAMPLE"
+    new-instance v6, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 200
     .line 201
-    const/16 v0, 0x11
+    invoke-direct {v6, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 202
     .line 203
-    new-instance v8, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 204
-    .line 205
-    invoke-direct {v8, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->TOAST:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 205
     .line 206
+    const-string v1, "VISUAL_POLL"
+
     .line 207
     .line 208
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->QUILT_PROMPT_EXAMPLE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0x12
 
     .line 209
     .line 210
-    const-string v1, "QUILT_SUGGESTED_PROMPT_SENTENCE"
+    new-instance v5, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 211
     .line 212
-    const/16 v0, 0x12
+    invoke-direct {v5, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 213
     .line 214
-    new-instance v7, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 215
-    .line 216
-    invoke-direct {v7, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->VISUAL_POLL:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 216
     .line 217
+    const-string/jumbo v1, "YOUTH_QUESTION"
+
     .line 218
     .line 219
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->QUILT_SUGGESTED_PROMPT_SENTENCE:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 220
-    .line 221
-    const-string v1, "TOAST"
-
-    .line 222
-    .line 223
     const/16 v0, 0x13
 
-    .line 224
-    .line 225
-    new-instance v6, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    .line 221
+    .line 222
+    new-instance v4, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
+    .line 223
+    .line 224
+    invoke-direct {v4, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 225
     .line 226
     .line 227
-    invoke-direct {v6, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->YOUTH_QUESTION:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
     .line 228
     .line 229
-    .line 230
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->TOAST:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
-    .line 231
-    .line 232
-    const-string v1, "VISUAL_POLL"
-
-    .line 233
-    .line 234
     const/16 v0, 0x14
 
+    .line 230
+    .line 231
+    new-array v3, v0, [Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+
+    .line 232
+    .line 233
+    move-object/from16 v2, v23
+
+    .line 234
     .line 235
+    move-object/from16 v1, v22
+
     .line 236
-    new-instance v5, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 237
-    .line 238
-    invoke-direct {v5, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-object/from16 v0, v21
 
+    .line 238
     .line 239
+    invoke-static {v15, v2, v1, v0, v3}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 240
     .line 241
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->VISUAL_POLL:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 242
+    move-object/from16 v15, v20
+
     .line 243
-    const-string v1, "YOUTH_QUESTION"
-
     .line 244
+    move-object/from16 v2, v19
+
     .line 245
-    const/16 v16, 0x15
-
     .line 246
+    move-object/from16 v1, v18
+
     .line 247
-    new-instance v4, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 248
+    move-object/from16 v0, v17
+
     .line 249
-    move/from16 v0, v16
-
     .line 250
-    .line 251
-    invoke-direct {v4, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v15, v2, v1, v0, v3}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 251
     .line 252
     .line 253
+    move-object/from16 v0, v16
+
     .line 254
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->YOUTH_QUESTION:Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
-
     .line 255
-    .line 256
-    const/16 v0, 0x16
+    invoke-static {v0, v14, v13, v12, v3}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 256
     .line 257
     .line 258
-    new-array v3, v0, [Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
+    const/16 v0, 0xc
 
     .line 259
     .line 260
-    move-object/from16 v1, v26
+    aput-object v11, v3, v0
 
     .line 261
     .line 262
-    move-object/from16 v0, v25
+    invoke-static {v10, v9, v8, v7, v3}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 263
     .line 264
-    invoke-static {v3, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 265
+    invoke-static {v6, v5, v4, v3}, LX/0X3;->A1K(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 266
     .line 267
-    move-object/from16 v2, v24
-
     .line 268
-    .line 269
-    move-object/from16 v1, v23
-
-    .line 270
-    .line 271
-    move-object/from16 v0, v22
-
-    .line 272
-    .line 273
-    invoke-static {v15, v2, v1, v0, v3}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 274
-    .line 275
-    .line 276
-    move-object/from16 v1, v21
-
-    .line 277
-    .line 278
-    move-object/from16 v0, v20
-
-    .line 279
-    .line 280
-    invoke-static {v3, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 281
-    .line 282
-    .line 283
-    move-object/from16 v2, v19
-
-    .line 284
-    .line 285
-    move-object/from16 v1, v18
-
-    .line 286
-    .line 287
-    move-object/from16 v0, v17
-
-    .line 288
-    .line 289
-    invoke-static {v2, v1, v0, v14, v3}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 290
-    .line 291
-    .line 292
-    invoke-static {v3, v13, v12}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 293
-    .line 294
-    .line 295
-    invoke-static {v11, v10, v9, v8, v3}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 296
-    .line 297
-    .line 298
-    invoke-static {v7, v6, v5, v3}, LX/0Yd;->A1J(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 299
-    .line 300
-    .line 301
-    aput-object v4, v3, v16
-
-    .line 302
-    .line 303
     sput-object v3, Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLFunFactPromptTypeEnum;
 
-    .line 304
-    .line 305
+    .line 269
+    .line 270
     return-void
 .end method
 
@@ -676,7 +605,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

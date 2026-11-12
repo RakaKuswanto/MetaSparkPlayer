@@ -2,33 +2,51 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5b0;
+
 
 # instance fields
-.field public A00:Z
+.field public final synthetic A00:Lcom/facebook/cameracore/util/Reference;
 
-.field public A01:Z
+.field public final synthetic A01:LX/5rO;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcom/facebook/cameracore/util/Reference;LX/5rO;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/5rQ;->A01:LX/5rO;
 
     .line 1
     .line 2
-    .line 3
-    const/4 v0, 0x0
+    iput-object p1, p0, LX/5rQ;->A00:Lcom/facebook/cameracore/util/Reference;
 
+    .line 3
     .line 4
-    iput-boolean v0, p0, LX/5rQ;->A01:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5
     .line 6
-    iput-boolean v0, p0, LX/5rQ;->A00:Z
-
     .line 7
-    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onRelease(LX/5rO;Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5rQ;->A00:Lcom/facebook/cameracore/util/Reference;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, Lcom/facebook/cameracore/util/Reference;->release()V
+
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

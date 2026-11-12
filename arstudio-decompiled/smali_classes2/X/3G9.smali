@@ -1,28 +1,33 @@
-.class public final LX/3G9;
+.class public abstract LX/3G9;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3it;
 
-
-# instance fields
-.field public final synthetic A00:LX/3is;
+# static fields
+.field public static final A00:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public constructor <init>(LX/3is;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/3G9;->A00:LX/3is;
+    const/16 v1, 0x1f4
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     .line 3
     .line 4
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
+
     .line 5
+    .line 6
+    .line 7
+    sput-object v0, LX/3G9;->A00:Ljava/util/concurrent/ConcurrentHashMap;
+
+    .line 8
+    .line 9
     return-void
 .end method

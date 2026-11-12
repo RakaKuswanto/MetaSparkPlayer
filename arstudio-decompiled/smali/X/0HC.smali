@@ -1,3 +1,3 @@
-.class public final LX/0HC;
-.super Ljava/lang/RuntimeException;
+.class public abstract LX/0HC;
+.super Ljava/lang/Object;
 .source ""

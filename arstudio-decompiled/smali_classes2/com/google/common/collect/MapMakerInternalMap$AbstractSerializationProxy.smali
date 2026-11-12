@@ -1,5 +1,5 @@
 .class public abstract Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
-.super LX/1h2;
+.super LX/24s;
 .source ""
 
 # interfaces
@@ -14,7 +14,7 @@
         "V:",
         "Ljava/lang/Object;",
         ">",
-        "LX/1h2<",
+        "LX/24s<",
         "TK;TV;>;",
         "Ljava/io/Serializable;"
     }
@@ -42,9 +42,27 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Equivalence;Lcom/google/common/base/Equivalence;Lcom/google/common/collect/MapMakerInternalMap$Strength;Lcom/google/common/collect/MapMakerInternalMap$Strength;Ljava/util/concurrent/ConcurrentMap;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "keyStrength",
+            "valueStrength",
+            "keyEquivalence",
+            "valueEquivalence",
+            "concurrencyLevel",
+            "delegate"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1h2;-><init>()V
+    invoke-direct {p0}, LX/24s;-><init>()V
 
     .line 1
     .line 2

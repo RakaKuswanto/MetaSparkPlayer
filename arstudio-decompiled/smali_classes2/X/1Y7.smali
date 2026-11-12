@@ -1,58 +1,56 @@
 .class public final LX/1Y7;
-.super Ljava/lang/Object;
+.super LX/1gb;
 .source ""
 
-
-# instance fields
-.field public final A00:LX/1Nw;
-
-.field public final A01:LX/1Nm;
+# interfaces
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1Y8;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public constructor <init>(I[I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/1Y7;->A00:LX/1Nw;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final AEJ()LX/1YB;
+    .locals 3
+
+    .line 0
+    const-class v2, LX/1Y9;
+
+    .line 1
+    .line 2
+    const v1, 0x4c7da47e    # 6.6490872E7f
+
+    .line 3
     .line 4
     .line 5
-    invoke-static {}, LX/1Nl;->A03()LX/1Nm;
+    const v0, -0x27c5e753
 
     .line 6
     .line 7
     .line 8
-    move-result-object v0
+    invoke-virtual {p0, v1, v2, v0}, LX/1gb;->getCachedNullableTree(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
 
     .line 9
-    iput-object v0, p0, LX/1Y7;->A01:LX/1Nm;
-
     .line 10
     .line 11
-    return-void
-.end method
+    move-result-object v0
 
-.method public static final A00(LX/1Y7;)Lcom/facebook/quicklog/QuickPerformanceLogger;
-    .locals 0
+    .line 12
+    check-cast v0, LX/1YB;
 
-    .line 0
-    iget-object p0, p0, LX/1Y7;->A01:LX/1Nm;
-
-    .line 1
-    .line 2
-    invoke-static {p0}, LX/1Nm;->A0C(LX/1Nm;)Lcom/facebook/quicklog/QuickPerformanceLogger;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object p0
-
-    .line 6
-    return-object p0
+    .line 13
+    .line 14
+    return-object v0
 .end method

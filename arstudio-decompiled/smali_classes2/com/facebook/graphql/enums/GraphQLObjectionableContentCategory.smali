@@ -86,8 +86,6 @@
 
 .field public static final enum USER_APPLIED:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
-.field public static final enum VIOLATING_RESHARE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
-
 .field public static final enum WIDELY_DEBUNKED_HOAX_COVID:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
 .field public static final enum WIDELY_DEBUNKED_HOAX_VACCINE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
@@ -101,7 +99,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 48
+    .locals 47
 
     .line 0
     const-string v1, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -116,10 +114,10 @@
     .line 4
     .line 5
     .line 6
-    move-result-object v47
+    move-result-object v15
 
     .line 7
-    sput-object v47, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 8
     .line 9
@@ -135,10 +133,10 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v46
+    move-result-object v14
 
     .line 16
-    sput-object v46, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->ALTERED_MEDIA:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->ALTERED_MEDIA:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 17
     .line 18
@@ -154,10 +152,10 @@
     .line 22
     .line 23
     .line 24
-    move-result-object v15
+    move-result-object v46
 
     .line 25
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->ANIMAL_VIOLENCE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v46, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->ANIMAL_VIOLENCE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 26
     .line 27
@@ -173,10 +171,10 @@
     .line 31
     .line 32
     .line 33
-    move-result-object v14
+    move-result-object v45
 
     .line 34
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->BLOCKS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v45, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->BLOCKS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 35
     .line 36
@@ -192,10 +190,10 @@
     .line 40
     .line 41
     .line 42
-    move-result-object v45
+    move-result-object v44
 
     .line 43
-    sput-object v45, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CENSUS_BORDERLINE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v44, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CENSUS_BORDERLINE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 44
     .line 45
@@ -211,10 +209,10 @@
     .line 49
     .line 50
     .line 51
-    move-result-object v44
+    move-result-object v43
 
     .line 52
-    sput-object v44, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CENSUS_MISINFO:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v43, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CENSUS_MISINFO:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 53
     .line 54
@@ -230,10 +228,10 @@
     .line 58
     .line 59
     .line 60
-    move-result-object v43
+    move-result-object v42
 
     .line 61
-    sput-object v43, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CHILD_ABUSE_NON_SEXUAL:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v42, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CHILD_ABUSE_NON_SEXUAL:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 62
     .line 63
@@ -249,10 +247,10 @@
     .line 67
     .line 68
     .line 69
-    move-result-object v42
+    move-result-object v41
 
     .line 70
-    sput-object v42, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_FACTS_ABOUT_VOTING_INFORM_TREATMENT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v41, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_FACTS_ABOUT_VOTING_INFORM_TREATMENT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 71
     .line 72
@@ -269,10 +267,10 @@
     .line 77
     .line 78
     .line 79
-    move-result-object v41
+    move-result-object v40
 
     .line 80
-    sput-object v41, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_VOTER_INFORM_TREATMENT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v40, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_VOTER_INFORM_TREATMENT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 81
     .line 82
@@ -289,10 +287,10 @@
     .line 87
     .line 88
     .line 89
-    move-result-object v40
+    move-result-object v39
 
     .line 90
-    sput-object v40, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_VOTER_INFORM_TREATMENT_FOR_BR:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v39, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_VOTER_INFORM_TREATMENT_FOR_BR:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 91
     .line 92
@@ -309,10 +307,10 @@
     .line 97
     .line 98
     .line 99
-    move-result-object v39
+    move-result-object v38
 
     .line 100
-    sput-object v39, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_VOTER_INFORM_TREATMENT_FOR_ID:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v38, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_VOTER_INFORM_TREATMENT_FOR_ID:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 101
     .line 102
@@ -329,10 +327,10 @@
     .line 107
     .line 108
     .line 109
-    move-result-object v38
+    move-result-object v37
 
     .line 110
-    sput-object v38, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_VOTER_INFORM_TREATMENT_FOR_MM:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v37, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CIVIC_VOTER_INFORM_TREATMENT_FOR_MM:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 111
     .line 112
@@ -349,10 +347,10 @@
     .line 117
     .line 118
     .line 119
-    move-result-object v37
+    move-result-object v36
 
     .line 120
-    sput-object v37, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CLIMATE_GENERIC_INFORM_TREATMENT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v36, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CLIMATE_GENERIC_INFORM_TREATMENT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 121
     .line 122
@@ -369,10 +367,10 @@
     .line 127
     .line 128
     .line 129
-    move-result-object v36
+    move-result-object v35
 
     .line 130
-    sput-object v36, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->COMPASS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v35, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->COMPASS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 131
     .line 132
@@ -389,10 +387,10 @@
     .line 137
     .line 138
     .line 139
-    move-result-object v35
+    move-result-object v34
 
     .line 140
-    sput-object v35, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->COVID_ELECTION_BORDERLINE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v34, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->COVID_ELECTION_BORDERLINE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 141
     .line 142
@@ -409,10 +407,10 @@
     .line 147
     .line 148
     .line 149
-    move-result-object v34
+    move-result-object v33
 
     .line 150
-    sput-object v34, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CRUEL:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v33, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->CRUEL:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 151
     .line 152
@@ -429,10 +427,10 @@
     .line 157
     .line 158
     .line 159
-    move-result-object v33
+    move-result-object v32
 
     .line 160
-    sput-object v33, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->DUMMY_GIT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v32, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->DUMMY_GIT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 161
     .line 162
@@ -449,10 +447,10 @@
     .line 167
     .line 168
     .line 169
-    move-result-object v32
+    move-result-object v31
 
     .line 170
-    sput-object v32, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->FALSE_HEADLINE_NEWS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v31, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->FALSE_HEADLINE_NEWS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 171
     .line 172
@@ -469,10 +467,10 @@
     .line 177
     .line 178
     .line 179
-    move-result-object v31
+    move-result-object v30
 
     .line 180
-    sput-object v31, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->FALSE_NEWS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v30, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->FALSE_NEWS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 181
     .line 182
@@ -489,10 +487,10 @@
     .line 187
     .line 188
     .line 189
-    move-result-object v30
+    move-result-object v29
 
     .line 190
-    sput-object v30, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GENERIC_CIVIC:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v29, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GENERIC_CIVIC:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 191
     .line 192
@@ -509,10 +507,10 @@
     .line 197
     .line 198
     .line 199
-    move-result-object v29
+    move-result-object v28
 
     .line 200
-    sput-object v29, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GENERIC_INFORM:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v28, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GENERIC_INFORM:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 201
     .line 202
@@ -529,10 +527,10 @@
     .line 207
     .line 208
     .line 209
-    move-result-object v28
+    move-result-object v27
 
     .line 210
-    sput-object v28, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GENERIC_INFORM_TREATMENT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v27, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GENERIC_INFORM_TREATMENT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 211
     .line 212
@@ -549,10 +547,10 @@
     .line 217
     .line 218
     .line 219
-    move-result-object v27
+    move-result-object v26
 
     .line 220
-    sput-object v27, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GOVERNMENT_CORRECTION:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v26, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GOVERNMENT_CORRECTION:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 221
     .line 222
@@ -569,10 +567,10 @@
     .line 227
     .line 228
     .line 229
-    move-result-object v26
+    move-result-object v25
 
     .line 230
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GRAPHIC:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v25, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GRAPHIC:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 231
     .line 232
@@ -589,10 +587,10 @@
     .line 237
     .line 238
     .line 239
-    move-result-object v25
+    move-result-object v24
 
     .line 240
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GRAPHIC_MISINFO:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v24, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->GRAPHIC_MISINFO:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 241
     .line 242
@@ -609,10 +607,10 @@
     .line 247
     .line 248
     .line 249
-    move-result-object v24
+    move-result-object v23
 
     .line 250
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->HACK_AND_LEAK:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->HACK_AND_LEAK:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 251
     .line 252
@@ -629,10 +627,10 @@
     .line 257
     .line 258
     .line 259
-    move-result-object v23
+    move-result-object v22
 
     .line 260
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->HATE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->HATE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 261
     .line 262
@@ -649,10 +647,10 @@
     .line 267
     .line 268
     .line 269
-    move-result-object v22
+    move-result-object v21
 
     .line 270
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->HEALTH_GENERIC:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->HEALTH_GENERIC:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 271
     .line 272
@@ -669,10 +667,10 @@
     .line 277
     .line 278
     .line 279
-    move-result-object v21
+    move-result-object v20
 
     .line 280
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->MATURE_ONLY_14_AND_OVER:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->MATURE_ONLY_14_AND_OVER:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 281
     .line 282
@@ -689,10 +687,10 @@
     .line 287
     .line 288
     .line 289
-    move-result-object v20
+    move-result-object v19
 
     .line 290
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->MISINFORMATION:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->MISINFORMATION:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 291
     .line 292
@@ -709,10 +707,10 @@
     .line 297
     .line 298
     .line 299
-    move-result-object v13
+    move-result-object v18
 
     .line 300
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->MISLEADING_NEWS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->MISLEADING_NEWS:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 301
     .line 302
@@ -729,10 +727,10 @@
     .line 307
     .line 308
     .line 309
-    move-result-object v12
+    move-result-object v13
 
     .line 310
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->MISSING_CONTEXT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->MISSING_CONTEXT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 311
     .line 312
@@ -749,10 +747,10 @@
     .line 317
     .line 318
     .line 319
-    move-result-object v11
+    move-result-object v12
 
     .line 320
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->NEWSWORTHY:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->NEWSWORTHY:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 321
     .line 322
@@ -769,10 +767,10 @@
     .line 327
     .line 328
     .line 329
-    move-result-object v10
+    move-result-object v11
 
     .line 330
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->OBJECTIONABLE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->OBJECTIONABLE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 331
     .line 332
@@ -789,10 +787,10 @@
     .line 337
     .line 338
     .line 339
-    move-result-object v9
+    move-result-object v10
 
     .line 340
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->POLITICAL:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->POLITICAL:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 341
     .line 342
@@ -809,10 +807,10 @@
     .line 347
     .line 348
     .line 349
-    move-result-object v8
+    move-result-object v9
 
     .line 350
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->PROFANITY:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->PROFANITY:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 351
     .line 352
@@ -829,10 +827,10 @@
     .line 357
     .line 358
     .line 359
-    move-result-object v7
+    move-result-object v8
 
     .line 360
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->SELF_APPLIED_GRAPHIC_VIOLENCE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->SELF_APPLIED_GRAPHIC_VIOLENCE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 361
     .line 362
@@ -849,10 +847,10 @@
     .line 367
     .line 368
     .line 369
-    move-result-object v6
+    move-result-object v7
 
     .line 370
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->SENSITIVE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->SENSITIVE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 371
     .line 372
@@ -869,10 +867,10 @@
     .line 377
     .line 378
     .line 379
-    move-result-object v5
+    move-result-object v6
 
     .line 380
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->SENSITIVE_TEXT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->SENSITIVE_TEXT:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 381
     .line 382
@@ -889,309 +887,270 @@
     .line 387
     .line 388
     .line 389
-    move-result-object v4
+    move-result-object v5
 
     .line 390
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->USER_APPLIED:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->USER_APPLIED:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 391
     .line 392
-    const-string v1, "VIOLATING_RESHARE"
+    const-string/jumbo v1, "WIDELY_DEBUNKED_HOAX_COVID"
 
     .line 393
     .line 394
+    .line 395
     const/16 v0, 0x28
 
-    .line 395
     .line 396
+    .line 397
     invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
-    .line 397
     .line 398
     .line 399
-    move-result-object v19
-
     .line 400
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->VIOLATING_RESHARE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    move-result-object v4
 
     .line 401
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->WIDELY_DEBUNKED_HOAX_COVID:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+
     .line 402
-    const-string v1, "WIDELY_DEBUNKED_HOAX_COVID"
-
     .line 403
-    .line 404
-    const/16 v0, 0x29
+    const-string/jumbo v1, "WIDELY_DEBUNKED_HOAX_VACCINE"
 
+    .line 404
     .line 405
     .line 406
-    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+    const/16 v0, 0x29
 
     .line 407
     .line 408
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
+
     .line 409
-    move-result-object v18
-
     .line 410
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->WIDELY_DEBUNKED_HOAX_COVID:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
-
     .line 411
+    move-result-object v17
+
     .line 412
-    const-string v1, "WIDELY_DEBUNKED_HOAX_VACCINE"
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->WIDELY_DEBUNKED_HOAX_VACCINE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
     .line 413
     .line 414
-    const/16 v0, 0x2a
+    const-string/jumbo v0, "WORK_RECRUITING_GROUP_POST"
 
     .line 415
     .line 416
-    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
-
     .line 417
+    const/16 v3, 0x2a
+
     .line 418
     .line 419
-    move-result-object v17
-
-    .line 420
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->WIDELY_DEBUNKED_HOAX_VACCINE:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
-
-    .line 421
-    .line 422
-    const-string v0, "WORK_RECRUITING_GROUP_POST"
-
-    .line 423
-    .line 424
-    const/16 v3, 0x2b
-
-    .line 425
-    .line 426
     invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
-    .line 427
-    .line 428
-    .line 429
+    .line 420
+    .line 421
+    .line 422
     move-result-object v16
 
-    .line 430
+    .line 423
     sput-object v16, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->WORK_RECRUITING_GROUP_POST:Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
-    .line 431
-    .line 432
-    const/16 v0, 0x2c
+    .line 424
+    .line 425
+    const/16 v0, 0x2b
 
-    .line 433
-    .line 434
+    .line 426
+    .line 427
     new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
+    .line 428
+    .line 429
+    move-object/from16 v1, v46
+
+    .line 430
+    .line 431
+    move-object/from16 v0, v45
+
+    .line 432
+    .line 433
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 434
     .line 435
     .line 436
-    move-object/from16 v1, v47
+    move-object/from16 v15, v44
 
     .line 437
     .line 438
-    move-object/from16 v0, v46
+    move-object/from16 v14, v43
 
     .line 439
     .line 440
-    invoke-static {v2, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v1, v42
 
     .line 441
     .line 442
+    move-object/from16 v0, v41
+
     .line 443
-    move-object/from16 v1, v45
-
     .line 444
-    .line 445
-    move-object/from16 v0, v44
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 445
     .line 446
     .line 447
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v15, v40
 
     .line 448
     .line 449
+    move-object/from16 v14, v39
+
     .line 450
-    move-object/from16 v1, v43
-
     .line 451
+    move-object/from16 v1, v38
+
     .line 452
-    move-object/from16 v0, v42
-
     .line 453
-    .line 454
-    invoke-static {v2, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v0, v37
 
+    .line 454
     .line 455
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 456
     .line 457
-    move-object/from16 v15, v41
-
     .line 458
+    const/16 v0, 0xc
+
     .line 459
-    move-object/from16 v14, v40
-
     .line 460
+    aput-object v36, v2, v0
+
     .line 461
-    move-object/from16 v1, v39
-
     .line 462
+    move-object/from16 v15, v35
+
     .line 463
-    move-object/from16 v0, v38
-
     .line 464
-    .line 465
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v34
 
+    .line 465
     .line 466
+    move-object/from16 v1, v33
+
     .line 467
     .line 468
-    move-object/from16 v1, v37
+    move-object/from16 v0, v32
 
     .line 469
     .line 470
-    move-object/from16 v0, v36
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 471
     .line 472
-    invoke-static {v2, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 473
+    move-object/from16 v15, v31
+
     .line 474
     .line 475
-    move-object/from16 v15, v35
+    move-object/from16 v14, v30
 
     .line 476
     .line 477
-    move-object/from16 v14, v34
+    move-object/from16 v1, v29
 
     .line 478
     .line 479
-    move-object/from16 v1, v33
+    move-object/from16 v0, v28
 
     .line 480
     .line 481
-    move-object/from16 v0, v32
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A19(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 482
     .line 483
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
     .line 484
+    move-object/from16 v15, v27
+
     .line 485
     .line 486
-    const/16 v0, 0x12
+    move-object/from16 v14, v26
 
     .line 487
     .line 488
-    aput-object v31, v2, v0
+    move-object/from16 v1, v25
 
     .line 489
     .line 490
-    move-object/from16 v15, v30
+    move-object/from16 v0, v24
 
     .line 491
     .line 492
-    move-object/from16 v14, v29
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1A(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 493
     .line 494
-    move-object/from16 v1, v28
-
     .line 495
+    move-object/from16 v15, v23
+
     .line 496
-    move-object/from16 v0, v27
-
     .line 497
-    .line 498
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v22
 
+    .line 498
     .line 499
+    move-object/from16 v1, v21
+
     .line 500
     .line 501
-    move-object/from16 v15, v26
+    move-object/from16 v0, v20
 
     .line 502
     .line 503
-    move-object/from16 v14, v25
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1B(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 504
     .line 505
-    move-object/from16 v1, v24
-
     .line 506
+    move-object/from16 v1, v19
+
     .line 507
-    move-object/from16 v0, v23
-
     .line 508
-    .line 509
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v0, v18
 
+    .line 509
     .line 510
+    invoke-static {v1, v0, v13, v12, v2}, LX/0X1;->A1C(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 511
     .line 512
-    move-object/from16 v1, v22
-
     .line 513
-    .line 514
-    move-object/from16 v0, v21
+    invoke-static {v11, v10, v9, v8, v2}, LX/0X1;->A1D(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 514
     .line 515
     .line 516
-    invoke-static {v2, v1, v0}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v7, v6, v5, v4, v2}, LX/0X1;->A1E(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 517
     .line 518
     .line 519
-    move-object/from16 v0, v20
+    const/16 v0, 0x29
 
     .line 520
     .line 521
-    invoke-static {v0, v13, v12, v11, v2}, LX/001;->A0s(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    aput-object v17, v2, v0
 
     .line 522
     .line 523
-    .line 524
-    invoke-static {v10, v9, v8, v7, v2}, LX/001;->A0t(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 525
-    .line 526
-    .line 527
-    invoke-static {v6, v5, v4, v2}, LX/001;->A0v(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 528
-    .line 529
-    .line 530
-    const/16 v0, 0x28
-
-    .line 531
-    .line 532
-    aput-object v19, v2, v0
-
-    .line 533
-    .line 534
-    const/16 v0, 0x29
-
-    .line 535
-    .line 536
-    aput-object v18, v2, v0
-
-    .line 537
-    .line 538
-    const/16 v0, 0x2a
-
-    .line 539
-    .line 540
-    aput-object v17, v2, v0
-
-    .line 541
-    .line 542
     aput-object v16, v2, v3
 
-    .line 543
-    .line 544
+    .line 524
+    .line 525
     sput-object v2, Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLObjectionableContentCategory;
 
-    .line 545
-    .line 546
+    .line 526
+    .line 527
     return-void
 .end method
 
@@ -1235,7 +1194,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

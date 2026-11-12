@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLAvatarCategoryGlyphSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLAvatarCategoryGlyphSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x28
+    const/16 v0, 0x37
 
     .line 1
     .line 2
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "COLOR"
+    const-string v0, "CLOTHING"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "EAR"
+    const-string v0, "COLOR"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "EAR_PIERCINGS"
+    const-string v0, "DRESSES"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "EYE"
+    const-string v0, "EAR"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "EYEBROWS"
+    const-string v0, "EARS"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "EYE_MAKEUP"
+    const-string v0, "EAR_PIERCINGS"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "EYE_SHADOW"
+    const-string v0, "EYE"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "FACE"
+    const-string v0, "EYEBROWS"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "FACE_MARKINGS"
+    const-string v0, "EYES"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "FACE_PAINT"
+    const-string v0, "EYEWEAR"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "FINISH"
+    const-string v0, "EYE_MAKEUP"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "GLASSES"
+    const-string v0, "EYE_SHADOW"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "HAIR"
+    const-string v0, "FACE"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "HEAD"
+    const-string v0, "FACE_MARKINGS"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "HEADWEAR"
+    const-string v0, "FACE_PAINT"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "HEARING_DEVICE"
+    const-string v0, "FACE_SHAPE"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "HEARING_DEVICE_COLOR"
+    const-string v0, "FACIAL_HAIR"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "HOME_FEED"
+    const-string v0, "FINISH"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "JAW_LINE"
+    const-string v0, "GLASSES"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "LASH"
+    const-string v0, "HAIR"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "LIPSTICK"
+    const-string v0, "HAIR_STYLE"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "LIP_COLOR"
+    const-string v0, "HEAD"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "LOWER_LASHES"
+    const-string v0, "HEADWEAR"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "MOUSTACHE"
+    const-string v0, "HEARING_DEVICE"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "MOUTH"
+    const-string v0, "HEARING_DEVICE_COLOR"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "NOSE"
+    const-string v0, "HOME_FEED"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "OUTFIT"
+    const-string v0, "JAW_LINE"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "PIERCINGS"
+    const-string v0, "JEWELLERY"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "SHOES"
+    const-string v0, "LASH"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "SKELETON"
+    const-string v0, "LASHES"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "SKIN"
+    const-string v0, "LIPSTICK"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "TOPS"
+    const-string v0, "LIP_COLOR"
 
     .line 227
     .line 228
@@ -484,22 +484,202 @@
 
     .line 231
     .line 232
-    const-string v0, "UPPER_LASHES"
+    const-string v0, "LOWER_LASHES"
 
     .line 233
     .line 234
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 235
     .line 236
-    .line 237
-    move-result-object v0
+    const/16 v1, 0x28
 
+    .line 237
     .line 238
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAvatarCategoryGlyphSet;->A00:Ljava/util/Set;
+    const-string v0, "MAGIC_WAND"
 
     .line 239
     .line 240
+    aput-object v0, v2, v1
+
+    .line 241
+    .line 242
+    const/16 v1, 0x29
+
+    .line 243
+    .line 244
+    const-string v0, "MAKEUP"
+
+    .line 245
+    .line 246
+    aput-object v0, v2, v1
+
+    .line 247
+    .line 248
+    const/16 v1, 0x2a
+
+    .line 249
+    .line 250
+    const-string v0, "MOUSTACHE"
+
+    .line 251
+    .line 252
+    aput-object v0, v2, v1
+
+    .line 253
+    .line 254
+    const/16 v1, 0x2b
+
+    .line 255
+    .line 256
+    const-string v0, "MOUTH"
+
+    .line 257
+    .line 258
+    aput-object v0, v2, v1
+
+    .line 259
+    .line 260
+    const/16 v1, 0x2c
+
+    .line 261
+    .line 262
+    const-string v0, "NOSE"
+
+    .line 263
+    .line 264
+    aput-object v0, v2, v1
+
+    .line 265
+    .line 266
+    const/16 v1, 0x2d
+
+    .line 267
+    .line 268
+    const-string v0, "NOSE_PIERCINGS"
+
+    .line 269
+    .line 270
+    aput-object v0, v2, v1
+
+    .line 271
+    .line 272
+    const/16 v1, 0x2e
+
+    .line 273
+    .line 274
+    const-string v0, "ONE_PIECE"
+
+    .line 275
+    .line 276
+    aput-object v0, v2, v1
+
+    .line 277
+    .line 278
+    const/16 v1, 0x2f
+
+    .line 279
+    .line 280
+    const-string v0, "OUTFIT"
+
+    .line 281
+    .line 282
+    aput-object v0, v2, v1
+
+    .line 283
+    .line 284
+    const/16 v1, 0x30
+
+    .line 285
+    .line 286
+    const-string v0, "PIERCINGS"
+
+    .line 287
+    .line 288
+    aput-object v0, v2, v1
+
+    .line 289
+    .line 290
+    const/16 v1, 0x31
+
+    .line 291
+    .line 292
+    const-string v0, "SHOES"
+
+    .line 293
+    .line 294
+    aput-object v0, v2, v1
+
+    .line 295
+    .line 296
+    const/16 v1, 0x32
+
+    .line 297
+    .line 298
+    const-string v0, "SKELETON"
+
+    .line 299
+    .line 300
+    aput-object v0, v2, v1
+
+    .line 301
+    .line 302
+    const/16 v1, 0x33
+
+    .line 303
+    .line 304
+    const-string v0, "SKIN"
+
+    .line 305
+    .line 306
+    aput-object v0, v2, v1
+
+    .line 307
+    .line 308
+    const/16 v1, 0x34
+
+    .line 309
+    .line 310
+    const-string v0, "SKIN_TONE"
+
+    .line 311
+    .line 312
+    aput-object v0, v2, v1
+
+    .line 313
+    .line 314
+    const/16 v1, 0x35
+
+    .line 315
+    .line 316
+    const-string v0, "TOPS"
+
+    .line 317
+    .line 318
+    aput-object v0, v2, v1
+
+    .line 319
+    .line 320
+    const/16 v1, 0x36
+
+    .line 321
+    .line 322
+    const-string v0, "UPPER_LASHES"
+
+    .line 323
+    .line 324
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 325
+    .line 326
+    .line 327
+    move-result-object v0
+
+    .line 328
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAvatarCategoryGlyphSet;->A00:Ljava/util/HashSet;
+
+    .line 329
+    .line 330
     return-void
 .end method
 
@@ -515,11 +695,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAvatarCategoryGlyphSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAvatarCategoryGlyphSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

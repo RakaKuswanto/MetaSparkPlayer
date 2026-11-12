@@ -1,34 +1,14 @@
-.class public final LX/1pr;
+.class public interface abstract LX/1pr;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/io/Closeable;
 
-# instance fields
-.field public final A00:Ljava/util/concurrent/locks/Lock;
 
+# virtual methods
+.method public abstract A8c(Ljava/lang/String;)V
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
-
-    .line 4
-    .line 5
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/1pr;->A00:Ljava/util/concurrent/locks/Lock;
-
-    .line 9
-    .line 10
-    return-void
+.method public abstract Afi(LX/1wG;)Landroid/database/Cursor;
 .end method

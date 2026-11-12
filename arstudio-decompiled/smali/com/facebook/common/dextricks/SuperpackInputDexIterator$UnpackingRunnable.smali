@@ -146,67 +146,79 @@
 
     .line 40
     :catchall_1
-    move-exception v0
+    move-exception v1
 
     .line 41
     :try_start_5
     invoke-virtual {v2}, Lcom/facebook/superpack/SuperpackArchive;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     .line 42
     .line 43
     .line 44
+    goto :goto_1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    .line 45
     :catchall_2
+    move-exception v0
+
+    .line 46
     :try_start_6
-    throw v0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 47
+    .line 48
+    .line 49
+    :goto_1
+    throw v1
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 45
+    .line 50
     :catch_0
     move-exception v1
 
-    .line 46
+    .line 51
     iget-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$UnpackingRunnable;->this$0:Lcom/facebook/common/dextricks/SuperpackInputDexIterator;
 
-    .line 47
-    .line 48
+    .line 52
+    .line 53
     iget-boolean v0, v0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mShuttingDownFlag:Z
 
-    .line 49
-    .line 50
-    if-nez v0, :cond_1
-
-    .line 51
-    .line 52
-    invoke-static {v1}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    .line 53
     .line 54
     .line 55
-    move-result-object v0
+    if-nez v0, :cond_1
 
     .line 56
+    .line 57
+    invoke-static {v1}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v0
+
+    .line 61
     throw v0
 
-    .line 57
+    .line 62
     :cond_1
     return-void
 
-    .line 58
+    .line 63
     :catch_1
     move-exception v0
 
-    .line 59
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    .line 64
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
-    .line 60
-    .line 61
-    .line 62
+    .line 65
+    .line 66
+    .line 67
     move-result-object v0
 
-    .line 63
+    .line 68
     throw v0
 .end method

@@ -1,37 +1,41 @@
-.class public final LX/63H;
-.super Ljava/lang/Exception;
+.class public interface abstract LX/63H;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(LX/62i;)V
-    .locals 2
+# virtual methods
+.method public abstract A6R(II)LX/66w;
+.end method
 
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+.method public abstract A6S(Landroid/view/Surface;)LX/66w;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
+.method public abstract A6T(Landroid/view/Surface;I)LX/66w;
+.end method
 
-    .line 4
-    const-string v0, "Unhandled format: "
+.method public abstract AC9()I
+.end method
 
-    .line 5
-    .line 6
-    invoke-static {p1, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+.method public abstract ADT()Ljava/lang/Object;
+.end method
 
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
+.method public abstract AHs()I
+.end method
 
-    .line 10
-    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+.method public abstract ALX()LX/5a9;
+.end method
 
-    .line 11
-    .line 12
-    .line 13
-    return-void
+.method public abstract AOg()Z
+.end method
+
+.method public abstract ART()V
+.end method
+
+.method public abstract AmX(I)LX/63H;
+.end method
+
+.method public abstract AmY(LX/63H;I)LX/63H;
+.end method
+
+.method public abstract release()V
 .end method

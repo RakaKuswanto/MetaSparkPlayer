@@ -1,87 +1,56 @@
 .class public final LX/41n;
-.super Ljava/lang/Object;
+.super LX/41m;
 .source ""
 
-# interfaces
-.implements LX/67S;
+
+# static fields
+.field public static final A01:LX/41n;
 
 
 # instance fields
-.field public final synthetic A00:LX/41D;
+.field public final A00:I
 
 
 # direct methods
-.method public constructor <init>(LX/41D;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/41n;->A00:LX/41D;
+    const-string v2, ""
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
     .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic AXq(Ljava/lang/Object;Z)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/41n;->A00:LX/41D;
-
-    .line 1
-    .line 2
-    monitor-enter v1
-
-    .line 3
-    if-eqz p2, :cond_0
+    new-instance v0, LX/41n;
 
     .line 4
     .line 5
-    :try_start_0
-    iget-object v0, v1, LX/41D;->A03:Ljava/util/LinkedHashSet;
+    invoke-direct {v0, v2, v1, v1}, LX/41n;-><init>(Ljava/lang/String;II)V
 
     .line 6
     .line 7
-    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 8
+    sput-object v0, LX/41n;->A01:LX/41n;
+
     .line 9
     .line 10
-    goto :goto_0
-
-    .line 11
-    :cond_0
-    iget-object v0, v1, LX/41D;->A03:Ljava/util/LinkedHashSet;
-
-    .line 12
-    .line 13
-    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 14
-    .line 15
-    .line 16
-    :goto_0
-    monitor-exit v1
-
-    .line 17
     return-void
+.end method
 
-    .line 18
-    :catchall_0
-    move-exception v0
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    .line 19
-    monitor-exit v1
+    .line 0
+    invoke-direct {p0, p1, p2}, LX/41m;-><init>(Ljava/lang/String;I)V
 
-    .line 20
-    throw v0
+    .line 1
+    .line 2
+    .line 3
+    iput p3, p0, LX/41n;->A00:I
+
+    .line 4
+    .line 5
+    return-void
 .end method

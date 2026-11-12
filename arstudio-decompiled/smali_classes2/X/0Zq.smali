@@ -1,523 +1,142 @@
-.class public final LX/0Zq;
-.super Ljava/lang/Object;
+.class public final LX/0ZQ;
+.super LX/5bK;
 .source ""
-
-# interfaces
-.implements LX/0Zr;
 
 
 # instance fields
-.field public final A00:I
-
-.field public volatile A01:Ljava/lang/Object;
+.field public final A00:Landroid/net/ConnectivityManager;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput p1, p0, LX/0Zq;->A00:I
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static A00()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A6A:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A01()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->AAm:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A02()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A60:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A03()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A74:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A04()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A8I:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A05()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A6h:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A06()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A5C:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A07()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A6O:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A08()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A0M:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A09()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A5M:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0A()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->ABV:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0B()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->ADi:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0C()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A6P:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0D()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A5D:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0E()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A9D:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0F()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A6W:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0G()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A6X:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0H()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A6G:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0I()LX/0Zq;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A73:I
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Zq;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Zq;-><init>(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
-.end method
-
-.method public static A0J(I)LX/0Zq;
+.method public constructor <init>(Landroid/content/Context;LX/5Bp;)V
     .locals 1
 
     .line 0
-    new-instance v0, LX/0Zq;
-
-    .line 1
-    .line 2
-    invoke-direct {v0, p0}, LX/0Zq;-><init>(I)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-object v0
-.end method
-
-.method public static A0K(LX/0Zq;)LX/35B;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, LX/0Zq;->get()Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, LX/5bK;-><init>(Landroid/content/Context;LX/5Bp;)V
 
     .line 1
     .line 2
     .line 3
-    move-result-object p0
+    iget-object v0, p0, LX/5bJ;->A01:Landroid/content/Context;
 
     .line 4
-    check-cast p0, LX/35B;
-
     .line 5
+    invoke-static {v0}, LX/0X4;->A0E(Landroid/content/Context;)Landroid/net/ConnectivityManager;
+
     .line 6
-    return-object p0
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/0ZQ;->A00:Landroid/net/ConnectivityManager;
+
+    .line 10
+    .line 11
+    return-void
 .end method
 
 
 # virtual methods
-.method public final ARM()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final get()Ljava/lang/Object;
+.method public final bridge synthetic A02()Ljava/lang/Object;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/0Zq;->A01:Ljava/lang/Object;
+    iget-object v0, p0, LX/0ZQ;->A00:Landroid/net/ConnectivityManager;
 
     .line 1
     .line 2
-    if-nez v0, :cond_1
+    invoke-static {v0}, LX/0ZS;->A00(Landroid/net/ConnectivityManager;)LX/5hw;
 
     .line 3
     .line 4
-    monitor-enter p0
-
     .line 5
-    :try_start_0
-    iget-object v0, p0, LX/0Zq;->A01:Ljava/lang/Object;
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final A05()Landroid/content/IntentFilter;
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "android.net.conn.CONNECTIVITY_CHANGE"
+
+    .line 1
+    .line 2
+    .line 3
+    new-instance v0, Landroid/content/IntentFilter;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     .line 6
     .line 7
-    if-nez v0, :cond_0
+    .line 8
+    return-object v0
+.end method
+
+.method public final A06(Landroid/content/Intent;)V
+    .locals 2
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v1
 
     .line 8
-    .line 9
-    iget v0, p0, LX/0Zq;->A00:I
+    const-string/jumbo v0, "android.net.conn.CONNECTIVITY_CHANGE"
 
+    .line 9
     .line 10
     .line 11
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 12
     .line 13
     .line 14
-    move-result-object v0
+    move-result v0
 
     .line 15
-    iput-object v0, p0, LX/0Zq;->A01:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
     .line 16
     .line 17
-    :cond_0
-    monitor-exit p0
+    invoke-static {}, LX/5kg;->A00()LX/5kg;
 
     .line 18
-    goto :goto_0
-
     .line 19
-    :catchall_0
-    move-exception v0
-
     .line 20
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, p0, LX/0ZQ;->A00:Landroid/net/ConnectivityManager;
 
     .line 21
-    throw v0
-
     .line 22
-    :cond_1
-    :goto_0
-    iget-object v0, p0, LX/0Zq;->A01:Ljava/lang/Object;
+    invoke-static {v0}, LX/0ZS;->A00(Landroid/net/ConnectivityManager;)LX/5hw;
 
     .line 23
     .line 24
-    return-object v0
+    .line 25
+    move-result-object v0
+
+    .line 26
+    invoke-virtual {p0, v0}, LX/5bJ;->A01(Ljava/lang/Object;)V
+
+    .line 27
+    .line 28
+    .line 29
+    :cond_0
+    return-void
 .end method

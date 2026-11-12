@@ -1,173 +1,354 @@
 .class public final LX/01D;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/AbstractExecutorService;
 .source ""
 
+# interfaces
+.implements LX/02X;
 
-# static fields
-.field public static final A00:[I
 
-.field public static final A01:[I
-
-.field public static final A02:[I
-
-.field public static final A03:[I
-
-.field public static final A04:[I
+# instance fields
+.field public final A00:Landroid/os/Handler;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
 
     .line 0
-    const/4 v1, 0x2
+    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
 
     .line 1
-    const/4 v0, 0x5
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/01D;->A00:Landroid/os/Handler;
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final Aj3(Ljava/lang/Runnable;Ljava/util/concurrent/TimeUnit;J)LX/0Nq;
+    .locals 4
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    iget-object v3, p0, LX/01D;->A00:Landroid/os/Handler;
 
     .line 2
-    new-array v0, v0, [I
-
     .line 3
-    .line 4
-    fill-array-data v0, :array_0
+    new-instance v2, LX/02U;
 
+    .line 4
     .line 5
+    invoke-direct {v2, v3, v0, p1}, LX/02U;-><init>(Landroid/os/Handler;Ljava/lang/Object;Ljava/lang/Runnable;)V
+
     .line 6
     .line 7
-    sput-object v0, LX/01D;->A00:[I
-
     .line 8
+    invoke-virtual {p2, p3, p4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
     .line 9
-    const/4 v0, 0x7
-
     .line 10
-    new-array v0, v0, [I
-
     .line 11
+    move-result-wide v0
+
     .line 12
-    fill-array-data v0, :array_1
+    invoke-virtual {v3, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 13
     .line 14
     .line 15
-    sput-object v0, LX/01D;->A01:[I
+    return-object v2
+.end method
 
-    .line 16
-    .line 17
-    const/16 v0, 0xa
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 1
 
-    .line 18
-    .line 19
-    new-array v0, v0, [I
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
-    .line 20
-    .line 21
-    fill-array-data v0, :array_2
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
 
-    .line 22
-    .line 23
-    .line 24
-    sput-object v0, LX/01D;->A02:[I
+    .line 4
+    throw v0
+.end method
 
-    .line 25
-    .line 26
-    const/16 v0, 0xc
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    .line 27
-    .line 28
-    new-array v0, v0, [I
+    .line 0
+    iget-object v0, p0, LX/01D;->A00:Landroid/os/Handler;
 
-    .line 29
-    .line 30
-    fill-array-data v0, :array_3
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 31
-    .line 32
-    .line 33
-    sput-object v0, LX/01D;->A03:[I
-
-    .line 34
-    .line 35
-    new-array v0, v1, [I
-
-    .line 36
-    .line 37
-    fill-array-data v0, :array_4
-
-    .line 38
-    .line 39
-    .line 40
-    sput-object v0, LX/01D;->A04:[I
-
-    .line 41
-    .line 42
+    .line 3
+    .line 4
+    .line 5
     return-void
+.end method
 
-    .line 43
-    nop
+.method public final isShutdown()Z
+    .locals 1
 
-    .line 44
-    :array_0
-    .array-data 4
-        0x10101a5
-        0x101031f
-        0x1010647
-        0x7f040059
-        0x7f04055c
-    .end array-data
+    const/4 v0, 0x0
 
-    .line 45
-    .line 46
-    .line 47
-    .line 48
-    .line 49
-    .line 50
-    .line 51
-    :array_1
-    .array-data 4
-        0x7f040494
-        0x7f040495
-        0x7f040496
-        0x7f040497
-        0x7f040498
-        0x7f040499
-        0x7f04049a
-    .end array-data
+    return v0
+.end method
 
-    :array_2
-    .array-data 4
-        0x1010532
-        0x1010533
-        0x101053f
-        0x101056f
-        0x1010570
-        0x7f040492
-        0x7f04049b
-        0x7f04049c
-        0x7f04049d
-        0x7f04093e
-    .end array-data
+.method public final isTerminated()Z
+    .locals 1
 
-    :array_3
-    .array-data 4
-        0x101019d
-        0x101019e
-        0x10101a1
-        0x10101a2
-        0x10101a3
-        0x10101a4
-        0x1010201
-        0x101020b
-        0x1010510
-        0x1010511
-        0x1010512
-        0x1010513
-    .end array-data
+    const/4 v0, 0x0
 
-    :array_4
-    .array-data 4
-        0x10101a5
-        0x1010514
-    .end array-data
+    return v0
+.end method
+
+.method public final newTaskFor(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/RunnableFuture;
+    .locals 2
+
+    .line 268435456
+    iget-object v1, p0, LX/01D;->A00:Landroid/os/Handler;
+
+    .line 268435457
+    .line 268435458
+    new-instance v0, LX/01F;
+
+    .line 268435459
+    .line 268435460
+    invoke-direct {v0, v1, p2, p1}, LX/01F;-><init>(Landroid/os/Handler;Ljava/lang/Object;Ljava/lang/Runnable;)V
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    return-object v0
+.end method
+
+.method public final newTaskFor(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/RunnableFuture;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/01D;->A00:Landroid/os/Handler;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/01F;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, v1, p1}, LX/01F;-><init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-object v0
+.end method
+
+.method public final bridge synthetic schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 1
+
+    .line 268435456
+    invoke-virtual {p0, p1, p4, p2, p3}, LX/01D;->Aj3(Ljava/lang/Runnable;Ljava/util/concurrent/TimeUnit;J)LX/0Nq;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
+    return-object v0
+.end method
+
+.method public final bridge synthetic schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/01D;->A00:Landroid/os/Handler;
+
+    .line 1
+    .line 2
+    new-instance v2, LX/02U;
+
+    .line 3
+    .line 4
+    invoke-direct {v2, v3, p1}, LX/02U;-><init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-wide v0
+
+    .line 11
+    invoke-virtual {v3, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 12
+    .line 13
+    .line 14
+    return-object v2
+.end method
+
+.method public final bridge synthetic scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final bridge synthetic scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final shutdown()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final shutdownNow()Ljava/util/List;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final bridge synthetic submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x0
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v1, p0, LX/01D;->A00:Landroid/os/Handler;
+
+    .line 5
+    .line 6
+    new-instance v0, LX/02U;
+
+    .line 7
+    .line 8
+    invoke-direct {v0, v1, v2, p1}, LX/02U;-><init>(Landroid/os/Handler;Ljava/lang/Object;Ljava/lang/Runnable;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {p0, v0}, LX/01D;->execute(Ljava/lang/Runnable;)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-object v0
+.end method
+
+.method public final bridge synthetic submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    .locals 2
+
+    .line 268435456
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iget-object v1, p0, LX/01D;->A00:Landroid/os/Handler;
+
+    .line 268435460
+    .line 268435461
+    new-instance v0, LX/02U;
+
+    .line 268435462
+    .line 268435463
+    invoke-direct {v0, v1, p2, p1}, LX/02U;-><init>(Landroid/os/Handler;Ljava/lang/Object;Ljava/lang/Runnable;)V
+
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    invoke-virtual {p0, v0}, LX/01D;->execute(Ljava/lang/Runnable;)V
+
+    .line 268435467
+    .line 268435468
+    .line 268435469
+    return-object v0
+.end method
+
+.method public final bridge synthetic submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    .locals 2
+
+    .line 536870912
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    iget-object v1, p0, LX/01D;->A00:Landroid/os/Handler;
+
+    .line 536870916
+    .line 536870917
+    new-instance v0, LX/02U;
+
+    .line 536870918
+    .line 536870919
+    invoke-direct {v0, v1, p1}, LX/02U;-><init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;)V
+
+    .line 536870920
+    .line 536870921
+    .line 536870922
+    invoke-virtual {p0, v0}, LX/01D;->execute(Ljava/lang/Runnable;)V
+
+    .line 536870923
+    .line 536870924
+    .line 536870925
+    return-object v0
 .end method

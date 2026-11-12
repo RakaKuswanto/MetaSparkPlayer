@@ -1,31 +1,29 @@
 .class public final LX/2xT;
-.super Ljava/lang/Object;
+.super Ljava/lang/RuntimeException;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/util/List;
-
-.field public final A01:Ljava/util/List;
-
-
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2xT;->A01:Ljava/util/List;
+    return-void
+.end method
 
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/2xT;->A00:Ljava/util/List;
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 0
 
-    .line 6
-    .line 7
+    .line 268435456
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
     return-void
 .end method

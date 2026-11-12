@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public final synthetic A00:LX/57x;
+.field public final synthetic A00:LX/51L;
 
 
 # direct methods
-.method public constructor <init>(LX/57x;)V
+.method public constructor <init>(LX/51L;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/signin/internal/zbh;->A00:LX/57x;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/signin/internal/zbh;->A00:LX/51L;
 
     .line 1
     .line 2

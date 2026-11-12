@@ -1,57 +1,70 @@
-.class public interface abstract LX/1gC;
-.super Ljava/lang/Object;
+.class public final LX/1Gc;
+.super Ljava/util/LinkedHashMap;
 .source ""
-
-# interfaces
-.implements LX/1ef;
-.implements LX/1gM;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<E:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "LX/1gM<",
-        "TE;>;",
-        "LX/1ef<",
-        "TE;>;"
+        "Ljava/util/LinkedHashMap<",
+        "Ljava/lang/String;",
+        "Ljava/util/ArrayList<",
+        "Ljava/lang/String;",
+        ">;>;"
     }
 .end annotation
 
 
+# instance fields
+.field public final synthetic this$0:LX/0kQ;
+
+
+# direct methods
+.method public constructor <init>(LX/0kQ;)V
+    .locals 1
+
+    .line 0
+    const/16 v0, 0x15
+
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/1Gc;->this$0:LX/0kQ;
+
+    .line 3
+    .line 4
+    invoke-direct {p0, v0}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract A96()LX/1gC;
-.end method
+.method public final removeEldestEntry(Ljava/util/Map$Entry;)Z
+    .locals 2
 
-.method public abstract A9f()Ljava/util/NavigableSet;
-.end method
+    .line 0
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
 
-.method public abstract AAa()LX/1g2;
-.end method
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
 
-.method public abstract AOv(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/1gC;
-.end method
+    .line 4
+    const/16 v0, 0x14
 
-.method public abstract ARx()LX/1g2;
-.end method
+    .line 5
+    .line 6
+    invoke-static {v1, v0}, LX/0X4;->A1R(II)Z
 
-.method public abstract Afx()LX/1g2;
-.end method
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
 
-.method public abstract Afy()LX/1g2;
-.end method
-
-.method public abstract ApJ(Lcom/google/common/collect/BoundType;Lcom/google/common/collect/BoundType;Ljava/lang/Object;Ljava/lang/Object;)LX/1gC;
-.end method
-
-.method public abstract Aph(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/1gC;
-.end method
-
-.method public abstract comparator()Ljava/util/Comparator;
-.end method
-
-.method public abstract entrySet()Ljava/util/Set;
+    .line 10
+    return v0
 .end method

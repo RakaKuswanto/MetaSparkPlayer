@@ -1,94 +1,81 @@
 .class public final LX/4vB;
-.super LX/4v9;
+.super LX/4vQ;
 .source ""
+
+# interfaces
+.implements LX/0GZ;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, LX/4v9;-><init>()V
+    const/4 v0, 0x1
 
-    .line 1
-    .line 2
-    .line 3
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Landroid/view/View;)F
-    .locals 1
+.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
     .line 0
-    invoke-virtual {p1}, Landroid/view/View;->getTransitionAlpha()F
+    check-cast p1, Landroidx/window/sidecar/SidecarDisplayFeature;
 
     .line 1
     .line 2
+    const/4 v0, 0x0
+
     .line 3
-    move-result v0
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 4
-    return v0
-.end method
+    .line 5
+    .line 6
+    invoke-virtual {p1}, Landroidx/window/sidecar/SidecarDisplayFeature;->getType()I
 
-.method public final A01(Landroid/graphics/Matrix;Landroid/view/View;)V
-    .locals 0
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
 
-    .line 0
-    invoke-virtual {p2, p1}, Landroid/view/View;->transformMatrixToGlobal(Landroid/graphics/Matrix;)V
+    .line 10
+    const/4 v2, 0x1
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
+    .line 11
+    if-eq v0, v2, :cond_0
 
-.method public final A02(Landroid/graphics/Matrix;Landroid/view/View;)V
-    .locals 0
+    .line 12
+    .line 13
+    invoke-virtual {p1}, Landroidx/window/sidecar/SidecarDisplayFeature;->getType()I
 
-    .line 0
-    invoke-virtual {p2, p1}, Landroid/view/View;->transformMatrixToLocal(Landroid/graphics/Matrix;)V
+    .line 14
+    .line 15
+    .line 16
+    move-result v1
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
+    .line 17
+    const/4 v0, 0x2
 
-.method public final A05(Landroid/view/View;F)V
-    .locals 0
+    .line 18
+    if-eq v1, v0, :cond_0
 
-    .line 0
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionAlpha(F)V
+    .line 19
+    .line 20
+    const/4 v2, 0x0
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
+    .line 21
+    :cond_0
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public final A06(Landroid/view/View;I)V
-    .locals 0
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
 
-    .line 0
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionVisibility(I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public final A07(Landroid/view/View;IIII)V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->setLeftTopRightBottom(IIII)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+    .line 25
+    return-object v0
 .end method

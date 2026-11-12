@@ -1,34 +1,20 @@
-.class public final LX/3Gg;
+.class public interface abstract LX/3Gg;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0EE;
+# virtual methods
+.method public abstract AAB()Ljava/util/Collection;
+.end method
 
+.method public abstract AQO(Ljava/lang/String;)Z
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public abstract AQU(Ljava/lang/String;)J
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract getItemInformation(Ljava/lang/String;)[J
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    new-instance v0, LX/0EE;
-
-    .line 4
-    .line 5
-    invoke-direct {v0}, LX/0EE;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/3Gg;->A00:LX/0EE;
-
-    .line 9
-    .line 10
-    return-void
+.method public abstract remove(Ljava/lang/String;)Z
 .end method

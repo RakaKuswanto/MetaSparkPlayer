@@ -18,22 +18,22 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 3
 
     .line 0
-    new-instance v1, LX/18w;
+    new-instance v1, LX/1Sw;
 
     .line 1
     .line 2
-    invoke-direct {v1}, LX/18w;-><init>()V
+    invoke-direct {v1}, LX/1Sw;-><init>()V
 
     .line 3
     .line 4
     .line 5
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 6
     .line 7
@@ -41,7 +41,7 @@
     move-result-object v2
 
     .line 9
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 10
     .line 11
@@ -49,7 +49,7 @@
 
     .line 12
     .line 13
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 14
     .line 15
@@ -71,14 +71,14 @@
     .line 23
     .line 24
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 25
     .line 26
     .line 27
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 28
     .line 29
@@ -86,7 +86,7 @@
     move-result-object v2
 
     .line 31
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 32
     .line 33
@@ -116,7 +116,7 @@
 
     .line 45
     .line 46
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
     move-result-object v0
 
     .line 50
-    iput-object v0, v1, LX/18w;->A08:Ljava/lang/String;
+    iput-object v0, v1, LX/1Sw;->A08:Ljava/lang/String;
 
     .line 51
     .line 52
@@ -149,7 +149,7 @@
 
     .line 61
     .line 62
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
     .line 63
     .line 64
@@ -157,7 +157,7 @@
     move-result v0
 
     .line 66
-    iput v0, v1, LX/18w;->A04:F
+    iput v0, v1, LX/1Sw;->A04:F
 
     .line 67
     .line 68
@@ -182,7 +182,7 @@
 
     .line 77
     .line 78
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
     .line 79
     .line 80
@@ -190,7 +190,7 @@
     move-result v0
 
     .line 82
-    iput v0, v1, LX/18w;->A03:F
+    iput v0, v1, LX/1Sw;->A03:F
 
     .line 83
     .line 84
@@ -219,7 +219,7 @@
 
     .line 95
     .line 96
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 97
     .line 98
@@ -231,7 +231,7 @@
 
     .line 101
     .line 102
-    iput-object v0, v1, LX/18w;->A06:Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;
+    iput-object v0, v1, LX/1Sw;->A06:Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;
 
     .line 103
     .line 104
@@ -260,7 +260,7 @@
 
     .line 115
     .line 116
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 117
     .line 118
@@ -272,7 +272,7 @@
 
     .line 121
     .line 122
-    iput-object v0, v1, LX/18w;->A07:Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;
+    iput-object v0, v1, LX/1Sw;->A07:Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;
 
     .line 123
     .line 124
@@ -297,7 +297,7 @@
 
     .line 133
     .line 134
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 135
     .line 136
@@ -305,7 +305,7 @@
     move-result-object v0
 
     .line 138
-    iput-object v0, v1, LX/18w;->A0A:Ljava/lang/String;
+    iput-object v0, v1, LX/1Sw;->A0A:Ljava/lang/String;
 
     .line 139
     .line 140
@@ -330,7 +330,7 @@
 
     .line 149
     .line 150
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
     .line 151
     .line 152
@@ -338,7 +338,7 @@
     move-result v0
 
     .line 154
-    iput v0, v1, LX/18w;->A00:F
+    iput v0, v1, LX/1Sw;->A00:F
 
     .line 155
     .line 156
@@ -364,7 +364,7 @@
 
     .line 166
     .line 167
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 168
     .line 169
@@ -372,7 +372,7 @@
     move-result-object v0
 
     .line 171
-    iput-object v0, v1, LX/18w;->A09:Ljava/lang/String;
+    iput-object v0, v1, LX/1Sw;->A09:Ljava/lang/String;
 
     .line 172
     .line 173
@@ -398,7 +398,7 @@
 
     .line 183
     .line 184
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
     .line 185
     .line 186
@@ -406,7 +406,7 @@
     move-result v0
 
     .line 188
-    iput v0, v1, LX/18w;->A02:F
+    iput v0, v1, LX/1Sw;->A02:F
 
     .line 189
     .line 190
@@ -415,150 +415,154 @@
     .line 191
     .line 192
     :sswitch_9
-    const-string v0, "enable_giphy"
+    const-string/jumbo v0, "enable_giphy"
 
     .line 193
     .line 194
+    .line 195
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 195
     .line 196
     .line 197
-    move-result v0
-
     .line 198
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 199
-    .line 200
-    invoke-virtual {p1}, LX/27m;->A15()Z
-
-    .line 201
-    .line 202
-    .line 203
-    move-result v0
-
-    .line 204
-    iput-boolean v0, v1, LX/18w;->A0B:Z
-
-    .line 205
-    .line 206
-    goto/16 :goto_0
-
-    .line 207
-    .line 208
-    :sswitch_a
-    const-string v0, "caption_sticker_info"
-
-    .line 209
-    .line 210
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 211
-    .line 212
-    .line 213
-    move-result v0
-
-    .line 214
     if-eqz v0, :cond_1
 
+    .line 200
+    .line 201
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
+    .line 202
+    .line 203
+    .line 204
+    move-result v0
+
+    .line 205
+    iput-boolean v0, v1, LX/1Sw;->A0B:Z
+
+    .line 206
+    .line 207
+    goto/16 :goto_0
+
+    .line 208
+    .line 209
+    :sswitch_a
+    const-string/jumbo v0, "caption_sticker_info"
+
+    .line 210
+    .line 211
+    .line 212
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 213
+    .line 214
     .line 215
+    move-result v0
+
     .line 216
-    const-class v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
+    if-eqz v0, :cond_1
 
     .line 217
     .line 218
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    const-class v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
 
     .line 219
     .line 220
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
     .line 221
+    .line 222
+    .line 223
     move-result-object v0
 
-    .line 222
-    check-cast v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
-
-    .line 223
     .line 224
-    iput-object v0, v1, LX/18w;->A05:Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
+    check-cast v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
 
     .line 225
     .line 226
-    goto/16 :goto_0
+    iput-object v0, v1, LX/1Sw;->A05:Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
 
     .line 227
     .line 228
-    :sswitch_b
-    const-string/jumbo v0, "left_percentage"
+    goto/16 :goto_0
 
     .line 229
     .line 230
-    .line 231
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_b
+    const-string/jumbo v0, "left_percentage"
 
+    .line 231
     .line 232
     .line 233
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 234
+    .line 235
+    .line 236
     move-result v0
 
-    .line 235
-    if-eqz v0, :cond_1
-
-    .line 236
     .line 237
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    if-eqz v0, :cond_1
 
     .line 238
     .line 239
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
     .line 240
+    .line 241
+    .line 242
     move-result v0
 
-    .line 241
-    iput v0, v1, LX/18w;->A01:F
-
-    .line 242
     .line 243
+    iput v0, v1, LX/1Sw;->A01:F
+
+    .line 244
+    .line 245
     goto/16 :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 244
-    .line 245
+    .line 246
+    .line 247
     :goto_1
     new-instance v0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;
 
-    .line 246
-    .line 247
-    invoke-direct {v0, v1}, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;-><init>(LX/18w;)V
-
     .line 248
     .line 249
+    invoke-direct {v0, v1}, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;-><init>(LX/1Sw;)V
+
     .line 250
+    .line 251
+    .line 252
     return-object v0
 
-    .line 251
+    .line 253
     :catch_0
     move-exception v1
 
-    .line 252
-    const-class v0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;
-
-    .line 253
     .line 254
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    const-class v0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;
 
     .line 255
     .line 256
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 257
-    const/4 v0, 0x0
-
     .line 258
-    throw v0
-
     .line 259
-    nop
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 260
+    .line 261
+    .line 262
+    move-result-object v0
+
+    .line 263
+    throw v0
+
+    .line 264
     :sswitch_data_0
     .sparse-switch
         -0x6c4ed22e -> :sswitch_b

@@ -1,92 +1,26 @@
-.class public final LX/2Xx;
+.class public interface abstract LX/2Xx;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "OnCompletedListenerSender$1"
-
-
-# instance fields
-.field public final synthetic A00:LX/2Xw;
-
-.field public final synthetic A01:LX/2Wm;
-
-
-# direct methods
-.method public constructor <init>(LX/2Xw;LX/2Wm;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/2Xx;->A00:LX/2Xw;
-
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/2Xx;->A01:LX/2Wm;
-
-    .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public abstract A2Z(Ljava/lang/String;Z)LX/2j5;
+.end method
 
-    .line 0
-    iget-object v0, p0, LX/2Xx;->A00:LX/2Xw;
+.method public abstract A2c(Ljava/lang/String;ZZ)LX/35E;
+.end method
 
-    .line 1
-    .line 2
-    iget-object v2, v0, LX/2Xw;->A01:Ljava/lang/Object;
+.method public abstract AQt(LX/2j8;)V
+.end method
 
-    .line 3
-    .line 4
-    monitor-enter v2
+.method public abstract AR1(LX/2j8;)V
+.end method
 
-    .line 5
-    :try_start_0
-    iget-object v1, v0, LX/2Xw;->A00:LX/2Y0;
+.method public abstract AR4(LX/2j8;)V
+.end method
 
-    .line 6
-    .line 7
-    if-eqz v1, :cond_0
+.method public abstract AR5(LX/2j8;)V
+.end method
 
-    .line 8
-    .line 9
-    iget-object v0, p0, LX/2Xx;->A01:LX/2Wm;
-
-    .line 10
-    .line 11
-    invoke-interface {v1, v0}, LX/2Y0;->AWF(LX/2Wm;)V
-
-    .line 12
-    .line 13
-    .line 14
-    :cond_0
-    monitor-exit v2
-
-    .line 15
-    return-void
-
-    .line 16
-    :catchall_0
-    move-exception v0
-
-    .line 17
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 18
-    throw v0
+.method public abstract ARF(LX/2j8;)V
 .end method

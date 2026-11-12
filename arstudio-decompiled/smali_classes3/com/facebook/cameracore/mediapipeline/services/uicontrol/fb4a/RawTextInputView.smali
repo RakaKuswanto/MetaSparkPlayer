@@ -1,12 +1,12 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;
-.super LX/4RT;
+.super LX/4SO;
 .source ""
 
 
 # instance fields
 .field public mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
-.field public mRawTextInputListener:LX/4Ym;
+.field public mRawTextInputListener:LX/4UG;
 
 .field public mTextInputShown:Z
 
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 536870912
-    invoke-direct {p0, p1}, LX/4RT;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, LX/4SO;-><init>(Landroid/content/Context;)V
 
     .line 536870913
     .line 536870914
@@ -33,7 +33,7 @@
     .locals 0
 
     .line 268435456
-    invoke-direct {p0, p1, p2}, LX/4RT;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, LX/4SO;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 268435457
     .line 268435458
@@ -50,7 +50,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/4RT;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, LX/4SO;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1
     .line 2
@@ -63,11 +63,11 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;)LX/4Ym;
+.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;)LX/4UG;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4Ym;
+    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4UG;
 
     .line 1
     .line 2
@@ -205,7 +205,7 @@
     .line 24
     .line 25
     .line 26
-    invoke-virtual {p0, v0}, LX/4RT;->setTextInteractionListener(LX/4RX;)V
+    invoke-virtual {p0, v0}, LX/4SO;->setTextInteractionListener(LX/4Tg;)V
 
     .line 27
     .line 28
@@ -233,7 +233,7 @@
     .line 40
     .line 41
     .line 42
-    iput-object v0, p0, LX/4RT;->mOnDeleteKeyListener:LX/4RY;
+    iput-object v0, p0, LX/4SO;->mOnDeleteKeyListener:LX/4Ti;
 
     .line 43
     .line 44
@@ -313,7 +313,7 @@
     .line 23
     .line 24
     .line 25
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4Ym;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4UG;
 
     .line 26
     .line 27
@@ -329,11 +329,11 @@
     move-result-object v1
 
     .line 33
-    check-cast v0, LX/4gc;
+    check-cast v0, LX/4mg;
 
     .line 34
     .line 35
-    iget-object v0, v0, LX/4gc;->A00:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/RawEditableTextListener;
+    iget-object v0, v0, LX/4mg;->A01:LX/4UF;
 
     .line 36
     .line 37
@@ -341,7 +341,7 @@
 
     .line 38
     .line 39
-    invoke-virtual {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/RawEditableTextListener;->onTextChanged(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, LX/4UF;->onTextChanged(Ljava/lang/String;)V
 
     .line 40
     .line 41
@@ -458,7 +458,7 @@
 
     .line 6
     .line 7
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4Ym;
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4UG;
 
     .line 8
     .line 9
@@ -466,11 +466,11 @@
 
     .line 10
     .line 11
-    check-cast v1, LX/4gc;
+    check-cast v1, LX/4mg;
 
     .line 12
     .line 13
-    iget-object v0, v1, LX/4gc;->A00:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/RawEditableTextListener;
+    iget-object v0, v1, LX/4mg;->A01:LX/4UF;
 
     .line 14
     .line 15
@@ -478,7 +478,7 @@
 
     .line 16
     .line 17
-    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/RawEditableTextListener;->onExit()V
+    invoke-interface {v0}, LX/4UF;->onExit()V
 
     .line 18
     .line 19
@@ -486,7 +486,7 @@
     const/4 v0, 0x0
 
     .line 21
-    iput-object v0, v1, LX/4gc;->A00:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/RawEditableTextListener;
+    iput-object v0, v1, LX/4mg;->A01:LX/4UF;
 
     .line 22
     .line 23
@@ -557,11 +557,11 @@
     return-void
 .end method
 
-.method public setRawTextInputListener(LX/4Ym;)V
+.method public setRawTextInputListener(LX/4UG;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4Ym;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4UG;
 
     .line 1
     .line 2

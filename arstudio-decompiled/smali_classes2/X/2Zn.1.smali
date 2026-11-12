@@ -1,10 +1,10 @@
-.class public abstract LX/2Zn;
-.super LX/2aR;
+.class public final LX/2Zn;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final A00:J
+.field public static final A00:Lcom/google/common/collect/ImmutableList;
 
 
 # direct methods
@@ -12,26 +12,30 @@
     .locals 3
 
     .line 0
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+    const-class v2, Ljava/io/IOException;
 
     .line 1
     .line 2
-    const-wide/16 v0, 0x2
+    const-class v1, Ljava/util/concurrent/CancellationException;
 
     .line 3
     .line 4
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    const-class v0, Ljava/util/concurrent/TimeoutException;
 
     .line 5
     .line 6
+    invoke-static {v2, v1, v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
     .line 7
-    move-result-wide v0
-
     .line 8
-    sput-wide v0, LX/2Zn;->A00:J
-
     .line 9
+    move-result-object v0
+
     .line 10
+    sput-object v0, LX/2Zn;->A00:Lcom/google/common/collect/ImmutableList;
+
+    .line 11
+    .line 12
     return-void
 .end method
 
@@ -39,7 +43,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/2aR;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

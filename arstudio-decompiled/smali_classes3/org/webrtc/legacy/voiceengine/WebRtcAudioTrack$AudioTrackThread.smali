@@ -146,7 +146,7 @@
     const/4 v0, 0x3
 
     .line 33
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 34
     .line 35
@@ -217,7 +217,7 @@
     move-result v0
 
     .line 69
-    invoke-static {v4, v0}, LX/0Yf;->A1S(II)Z
+    invoke-static {v4, v0}, LX/0X4;->A1Q(II)Z
 
     .line 70
     .line 71
@@ -423,8 +423,8 @@
     .line 170
     goto :goto_3
     :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 171
     :catch_0
@@ -439,7 +439,7 @@
 
     .line 175
     .line 176
-    const-string v0, "AudioTrack.stop illegal state"
+    const-string v0, "AudioTrack.stop unknown exception"
 
     .line 177
     .line 178
@@ -458,7 +458,7 @@
 
     .line 183
     .line 184
-    const-string v0, "AudioTrack.stop unknown exception"
+    const-string v0, "AudioTrack.stop illegal state"
 
     .line 185
     .line 186

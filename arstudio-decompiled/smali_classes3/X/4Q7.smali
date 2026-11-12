@@ -1,73 +1,92 @@
-.class public final LX/4Q7;
+.class public abstract LX/4Q7;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4Jz;
-
-
-# instance fields
-.field public final synthetic A00:LX/4Q5;
-
 
 # direct methods
-.method public constructor <init>(LX/4Q5;)V
-    .locals 0
-
-    iput-object p1, p0, LX/4Q7;->A00:LX/4Q5;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final Acn()V
-    .locals 3
+.method public static A00(Landroid/widget/EdgeEffect;)F
+    .locals 2
 
     .line 0
-    iget-object v2, p0, LX/4Q7;->A00:LX/4Q5;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    iget-object v1, v2, LX/4Q5;->A01:Landroid/os/Looper;
+    const/16 v0, 0x1f
 
     .line 3
     .line 4
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    if-lt v1, v0, :cond_0
 
     .line 5
     .line 6
+    invoke-static {p0}, LX/4Q8;->A00(Landroid/widget/EdgeEffect;)F
+
     .line 7
-    move-result-object v0
-
     .line 8
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     .line 9
-    .line 10
-    .line 11
     move-result v0
 
+    .line 10
+    return v0
+
+    .line 11
+    :cond_0
+    const/4 v0, 0x0
+
     .line 12
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
+.method public static A01(Landroid/widget/EdgeEffect;FF)F
+    .locals 2
+
+    .line 0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 1
+    .line 2
+    const/16 v0, 0x1f
+
+    .line 3
+    .line 4
+    if-lt v1, v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-static {p0, p1, p2}, LX/4Q8;->A01(Landroid/widget/EdgeEffect;FF)F
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    return v0
+
+    .line 11
+    :cond_0
+    const/16 v0, 0x15
+
+    .line 12
     .line 13
-    .line 14
-    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
+    if-lt v1, v0, :cond_1
 
+    .line 14
     .line 15
+    invoke-static {p0, p1, p2}, LX/4Q9;->A00(Landroid/widget/EdgeEffect;FF)V
+
     .line 16
     .line 17
-    return-void
-
     .line 18
-    :cond_0
-    invoke-virtual {v2}, Landroid/view/View;->postInvalidate()V
+    return p1
 
     .line 19
+    :cond_1
+    invoke-virtual {p0, p1}, Landroid/widget/EdgeEffect;->onPull(F)V
+
     .line 20
     .line 21
-    return-void
+    .line 22
+    return p1
 .end method

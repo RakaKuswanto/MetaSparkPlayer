@@ -1,50 +1,33 @@
-.class public final LX/4cm;
+.class public abstract LX/4cm;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SearchView$1"
-
-
-# instance fields
-.field public final synthetic A00:Landroidx/appcompat/widget/SearchView;
+.field public static final A00:LX/6WC;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/SearchView;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/4cm;->A00:Landroidx/appcompat/widget/SearchView;
+    const-string v1, "PhoneskyVerificationUtils"
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/6WC;
 
     .line 3
     .line 4
+    invoke-direct {v0, v1}, LX/6WC;-><init>(Ljava/lang/String;)V
+
     .line 5
-    return-void
-.end method
+    .line 6
+    .line 7
+    sput-object v0, LX/4cm;->A00:LX/6WC;
 
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4cm;->A00:Landroidx/appcompat/widget/SearchView;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->updateFocusedState()V
-
-    .line 3
-    .line 4
-    .line 5
+    .line 8
+    .line 9
     return-void
 .end method

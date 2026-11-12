@@ -19,15 +19,15 @@
 
 .field public final flowTimeWeight:I
 
-.field public final httpMeasurementWeight:I
-
 .field public final isCellTowerSampled:Z
 
 .field public final isCertSampled:Z
 
 .field public final isFlowTimeSampled:Z
 
-.field public final isHttpMeasurementSampled:Z
+.field public final isMhrFbcSampled:Z
+
+.field public final mhrFbcWeight:I
 
 .field public final printTraceEvents:Z
 
@@ -155,7 +155,7 @@
 
     .line 43
     .line 44
-    iput p3, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->httpMeasurementWeight:I
+    iput p3, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->mhrFbcWeight:I
 
     .line 45
     .line 46
@@ -193,7 +193,7 @@
 
     .line 60
     :cond_5
-    iput-boolean v0, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->isHttpMeasurementSampled:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->isMhrFbcSampled:Z
 
     .line 61
     .line 62
@@ -259,11 +259,11 @@
     return v0
 .end method
 
-.method public final getHttpMeasurementWeight()I
+.method public final getMhrFbcWeight()I
     .locals 1
 
     .line 0
-    iget v0, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->httpMeasurementWeight:I
+    iget v0, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->mhrFbcWeight:I
 
     .line 1
     .line 2
@@ -303,11 +303,11 @@
     return v0
 .end method
 
-.method public final isHttpMeasurementSampled()Z
+.method public final isMhrFbcSampled()Z
     .locals 1
 
     .line 0
-    iget-boolean v0, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->isHttpMeasurementSampled:Z
+    iget-boolean v0, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->isMhrFbcSampled:Z
 
     .line 1
     .line 2
@@ -342,7 +342,7 @@
 
     .line 11
     .line 12
-    iget-boolean v1, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->isHttpMeasurementSampled:Z
+    iget-boolean v1, p0, Lcom/facebook/proxygen/LigerSamplePolicy;->isMhrFbcSampled:Z
 
     .line 13
     .line 14

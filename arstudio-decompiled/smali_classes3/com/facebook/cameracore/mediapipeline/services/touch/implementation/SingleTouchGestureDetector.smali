@@ -16,7 +16,7 @@
 
 .field public final mInitialLocationForRawTouchGestureId:Ljava/util/Map;
 
-.field public final mListener:LX/5ju;
+.field public final mListener:LX/5pe;
 
 .field public mLongPressCurrentX:F
 
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;LX/5ju;Landroid/os/Handler;)V
+.method public constructor <init>(Landroid/content/Context;LX/5pe;Landroid/os/Handler;)V
     .locals 3
 
     .line 0
@@ -94,7 +94,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 4
     .line 5
@@ -125,7 +125,7 @@
 
     .line 17
     .line 18
-    invoke-static {}, LX/0Yf;->A0P()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0V()Ljava/lang/Boolean;
 
     .line 19
     .line 20
@@ -181,7 +181,7 @@
     .line 46
     .line 47
     .line 48
-    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 49
     .line 50
@@ -208,7 +208,7 @@
 
     .line 60
     .line 61
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 62
     .line 63
@@ -429,11 +429,11 @@
     return-object p1
 .end method
 
-.method public static synthetic access$200(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;)LX/5ju;
+.method public static synthetic access$200(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;)LX/5pe;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 1
     .line 2
@@ -622,7 +622,7 @@
 
     .line 24
     .line 25
-    invoke-static {v2, v0}, LX/0Yf;->A1S(II)Z
+    invoke-static {v2, v0}, LX/0X4;->A1Q(II)Z
 
     .line 26
     .line 27
@@ -723,7 +723,7 @@
     move-result v0
 
     .line 4
-    invoke-static {}, LX/0Yf;->A0O()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
 
     .line 5
     .line 6
@@ -739,11 +739,11 @@
 
     .line 11
     .line 12
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 13
     .line 14
-    invoke-interface {v0, p1, p2}, LX/5ju;->onLongPressEnd(FF)V
+    invoke-interface {v0, p1, p2}, LX/5pe;->onLongPressEnd(FF)V
 
     .line 15
     .line 16
@@ -773,7 +773,7 @@
     .locals 7
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 1
     .line 2
@@ -792,7 +792,7 @@
     move v6, p6
 
     .line 7
-    invoke-interface/range {v0 .. v6}, LX/5ju;->onUp(JFFFF)V
+    invoke-interface/range {v0 .. v6}, LX/5pe;->onUp(JFFFF)V
 
     .line 8
     .line 9
@@ -816,7 +816,7 @@
 
     .line 5
     .line 6
-    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 7
     .line 8
@@ -868,7 +868,7 @@
     move-result v0
 
     .line 32
-    invoke-interface {v4, v3, v2, v1, v0}, LX/5ju;->onScrollEnd(FFFF)V
+    invoke-interface {v4, v3, v2, v1, v0}, LX/5pe;->onScrollEnd(FFFF)V
 
     .line 33
     .line 34
@@ -902,7 +902,7 @@
 
     .line 5
     .line 6
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 7
     .line 8
@@ -914,13 +914,13 @@
 
     .line 11
     .line 12
-    invoke-interface {v2, v1, v0}, LX/5ju;->onLongPressEnd(FF)V
+    invoke-interface {v2, v1, v0}, LX/5pe;->onLongPressEnd(FF)V
 
     .line 13
     .line 14
     .line 15
     :cond_0
-    invoke-static {}, LX/0Yf;->A0O()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
 
     .line 16
     .line 17
@@ -939,7 +939,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yf;->A0O()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
 
     .line 1
     .line 2
@@ -958,7 +958,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yf;->A0P()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0V()Ljava/lang/Boolean;
 
     .line 1
     .line 2
@@ -977,7 +977,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yf;->A0P()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0V()Ljava/lang/Boolean;
 
     .line 1
     .line 2
@@ -996,11 +996,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1, p2, p3, p4}, LX/5ju;->onDown(JFF)V
+    invoke-interface {v0, p1, p2, p3, p4}, LX/5pe;->onDown(JFF)V
 
     .line 3
     .line 4
@@ -1012,7 +1012,7 @@
     .locals 7
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 1
     .line 2
@@ -1031,7 +1031,7 @@
     move v6, p6
 
     .line 7
-    invoke-interface/range {v0 .. v6}, LX/5ju;->onMoved(JFFFF)V
+    invoke-interface/range {v0 .. v6}, LX/5pe;->onMoved(JFFFF)V
 
     .line 8
     .line 9
@@ -1134,7 +1134,7 @@
     .line 43
     .line 44
     :cond_0
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 45
     .line 46
@@ -1158,7 +1158,7 @@
     move-result v0
 
     .line 56
-    invoke-interface {v2, p1, p2, v1, v0}, LX/5ju;->onScroll(FFFF)Z
+    invoke-interface {v2, p1, p2, v1, v0}, LX/5pe;->onScroll(FFFF)Z
 
     .line 57
     .line 58
@@ -1171,11 +1171,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5ju;->onScrollBegin()Z
+    invoke-interface {v0}, LX/5pe;->onScrollBegin()Z
 
     .line 3
     .line 4
@@ -1324,7 +1324,7 @@
     move-result-object v7
 
     .line 58
-    invoke-static {v8, v7}, LX/0Yj;->A0A(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+    invoke-static {v8, v7}, LX/0X7;->A0B(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     .line 59
     .line 60
@@ -1543,284 +1543,284 @@
     int-to-long v14, v3
 
     .line 163
-    iget-object v4, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mInitialLocationForRawTouchGestureId:Ljava/util/Map;
+    iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mInitialLocationForRawTouchGestureId:Ljava/util/Map;
 
     .line 164
     .line 165
-    invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v3, v14, v15}, LX/434;->A12(Ljava/util/Map;J)Ljava/lang/Object;
 
     .line 166
     .line 167
     .line 168
-    move-result-object v3
+    move-result-object v4
 
     .line 169
-    invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v4, Landroid/util/Pair;
 
     .line 170
     .line 171
-    .line 172
-    move-result-object v4
+    if-eqz v4, :cond_4
 
+    .line 172
     .line 173
-    check-cast v4, Landroid/util/Pair;
+    iget-object v3, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     .line 174
     .line 175
-    if-eqz v4, :cond_4
+    invoke-static {v3}, LX/0X6;->A00(Ljava/lang/Object;)F
 
     .line 176
     .line 177
-    iget-object v3, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
-
     .line 178
+    move-result v16
+
     .line 179
-    invoke-static {v3}, LX/0Yi;->A00(Ljava/lang/Object;)F
+    iget-object v3, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     .line 180
     .line 181
+    invoke-static {v3}, LX/0X6;->A00(Ljava/lang/Object;)F
+
     .line 182
-    move-result v16
-
     .line 183
-    iget-object v3, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
-
     .line 184
+    move-result v17
+
     .line 185
-    invoke-static {v3}, LX/0Yi;->A00(Ljava/lang/Object;)F
+    invoke-virtual {v0, v7}, Landroid/view/MotionEvent;->getX(I)F
 
     .line 186
     .line 187
     .line 188
-    move-result v17
+    move-result v18
 
     .line 189
-    invoke-virtual {v0, v7}, Landroid/view/MotionEvent;->getX(I)F
+    invoke-virtual {v0, v7}, Landroid/view/MotionEvent;->getY(I)F
 
     .line 190
     .line 191
     .line 192
-    move-result v18
+    move-result v19
 
     .line 193
-    invoke-virtual {v0, v7}, Landroid/view/MotionEvent;->getY(I)F
+    invoke-virtual/range {v13 .. v19}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->notifyListenerOnRawTouchMoved(JFFFF)V
 
     .line 194
     .line 195
     .line 196
-    move-result v19
-
-    .line 197
-    invoke-virtual/range {v13 .. v19}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->notifyListenerOnRawTouchMoved(JFFFF)V
-
-    .line 198
-    .line 199
-    .line 200
     :cond_4
     add-int/lit8 v7, v7, 0x1
 
-    .line 201
-    .line 202
+    .line 197
+    .line 198
     goto :goto_1
 
-    .line 203
+    .line 199
     :cond_5
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getPointerCount()I
 
-    .line 204
-    .line 205
-    .line 206
+    .line 200
+    .line 201
+    .line 202
     move-result v3
 
-    .line 207
+    .line 203
     if-le v3, v2, :cond_6
 
-    .line 208
-    .line 209
+    .line 204
+    .line 205
     iput-boolean v5, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mSingleTouchMode:Z
 
-    .line 210
-    .line 211
+    .line 206
+    .line 207
     :cond_6
     iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressScheduled:Ljava/lang/Boolean;
 
-    .line 212
-    .line 213
+    .line 208
+    .line 209
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 210
+    .line 211
+    .line 212
+    move-result v3
+
+    .line 213
+    if-eqz v3, :cond_7
 
     .line 214
     .line 215
-    .line 216
-    move-result v3
+    iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
 
+    .line 216
     .line 217
-    if-eqz v3, :cond_7
+    invoke-direct {v13, v0, v3}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->isEventInRadius(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)Z
 
     .line 218
     .line 219
-    iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
-
     .line 220
+    move-result v3
+
     .line 221
-    invoke-direct {v13, v0, v3}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->isEventInRadius(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)Z
+    if-nez v3, :cond_7
 
     .line 222
     .line 223
-    .line 224
-    move-result v3
+    iget-object v4, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mUiHandler:Landroid/os/Handler;
 
+    .line 224
     .line 225
-    if-nez v3, :cond_7
+    iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressMessage:Ljava/lang/Runnable;
 
     .line 226
     .line 227
-    iget-object v4, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mUiHandler:Landroid/os/Handler;
+    invoke-virtual {v4, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 228
     .line 229
-    iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressMessage:Ljava/lang/Runnable;
-
     .line 230
-    .line 231
-    invoke-virtual {v4, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 231
     .line 232
     .line 233
+    move-result-object v3
+
     .line 234
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iput-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressScheduled:Ljava/lang/Boolean;
 
     .line 235
     .line 236
-    .line 237
-    move-result-object v3
-
-    .line 238
-    iput-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressScheduled:Ljava/lang/Boolean;
-
-    .line 239
-    .line 240
     :cond_7
     iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressInProgress:Ljava/lang/Boolean;
 
-    .line 241
-    .line 242
+    .line 237
+    .line 238
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 239
+    .line 240
+    .line 241
+    move-result v3
+
+    .line 242
+    if-eqz v3, :cond_1
 
     .line 243
     .line 244
+    invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getPointerId(I)I
+
     .line 245
+    .line 246
+    .line 247
     move-result v3
 
-    .line 246
-    if-eqz v3, :cond_1
-
-    .line 247
     .line 248
-    invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getPointerId(I)I
+    if-nez v3, :cond_1
 
     .line 249
     .line 250
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getX()F
+
     .line 251
+    .line 252
+    .line 253
     move-result v3
 
-    .line 252
-    if-nez v3, :cond_1
-
-    .line 253
     .line 254
-    invoke-virtual {v0}, Landroid/view/MotionEvent;->getX()F
+    iput v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressCurrentX:F
 
     .line 255
     .line 256
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getY()F
+
     .line 257
+    .line 258
+    .line 259
     move-result v3
 
-    .line 258
-    iput v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressCurrentX:F
-
-    .line 259
     .line 260
-    invoke-virtual {v0}, Landroid/view/MotionEvent;->getY()F
+    iput v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressCurrentY:F
 
     .line 261
     .line 262
-    .line 263
-    move-result v3
-
-    .line 264
-    iput v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressCurrentY:F
-
-    .line 265
-    .line 266
     goto/16 :goto_0
 
-    .line 267
-    .line 268
+    .line 263
+    .line 264
     :cond_8
     iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mRawTouchEnabled:Ljava/lang/Boolean;
 
-    .line 269
-    .line 270
+    .line 265
+    .line 266
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 267
+    .line 268
+    .line 269
+    move-result v3
+
+    .line 270
+    if-eqz v3, :cond_9
 
     .line 271
     .line 272
-    .line 273
-    move-result v3
-
-    .line 274
-    if-eqz v3, :cond_9
-
-    .line 275
-    .line 276
     invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    .line 277
-    .line 278
-    .line 279
+    .line 273
+    .line 274
+    .line 275
     move-result v3
 
-    .line 280
+    .line 276
     int-to-long v3, v3
 
-    .line 281
+    .line 277
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getX()F
+
+    .line 278
+    .line 279
+    .line 280
+    move-result v11
+
+    .line 281
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getY()F
 
     .line 282
     .line 283
     .line 284
-    move-result v11
+    move-result v10
 
     .line 285
-    invoke-virtual {v0}, Landroid/view/MotionEvent;->getY()F
+    iget-object v9, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mInitialLocationForRawTouchGestureId:Ljava/util/Map;
 
     .line 286
     .line 287
-    .line 288
-    move-result v10
-
-    .line 289
-    iget-object v9, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mInitialLocationForRawTouchGestureId:Ljava/util/Map;
-
-    .line 290
-    .line 291
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 288
+    .line 289
+    .line 290
+    move-result-object v8
+
+    .line 291
+    invoke-static {v11}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 292
     .line 293
     .line 294
-    move-result-object v8
+    move-result-object v7
 
     .line 295
-    invoke-static {v11}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 296
     .line 297
     .line 298
-    move-result-object v7
+    move-result-object v5
 
     .line 299
-    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v7, v5}, LX/0X7;->A0B(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     .line 300
     .line 301
@@ -1828,208 +1828,200 @@
     move-result-object v5
 
     .line 303
-    invoke-static {v7, v5}, LX/0Yj;->A0A(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+    invoke-interface {v9, v8, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 304
     .line 305
     .line 306
-    move-result-object v5
-
-    .line 307
-    invoke-interface {v9, v8, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 308
-    .line 309
-    .line 310
     invoke-virtual {v13, v3, v4, v11, v10}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->notifyListenerOnRawTouchDown(JFF)V
 
-    .line 311
-    .line 312
-    .line 313
+    .line 307
+    .line 308
+    .line 309
     :cond_9
     iput-boolean v2, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mSingleTouchMode:Z
 
+    .line 310
+    .line 311
+    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mSubScrollInProgress:Ljava/lang/Boolean;
+
+    .line 312
+    .line 313
+    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollCurrentX:Ljava/lang/Float;
+
     .line 314
     .line 315
-    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mSubScrollInProgress:Ljava/lang/Boolean;
+    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollStartingX:Ljava/lang/Float;
 
     .line 316
     .line 317
-    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollCurrentX:Ljava/lang/Float;
+    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollStartingY:Ljava/lang/Float;
 
     .line 318
     .line 319
-    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollStartingX:Ljava/lang/Float;
+    goto/16 :goto_0
 
     .line 320
     .line 321
-    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollStartingY:Ljava/lang/Float;
-
-    .line 322
-    .line 323
-    goto/16 :goto_0
-
-    .line 324
-    .line 325
     :cond_a
     iget-object v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mRawTouchEnabled:Ljava/lang/Boolean;
 
-    .line 326
-    .line 327
+    .line 322
+    .line 323
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 324
+    .line 325
+    .line 326
+    move-result v3
+
+    .line 327
+    if-eqz v3, :cond_b
 
     .line 328
     .line 329
-    .line 330
-    move-result v3
-
-    .line 331
-    if-eqz v3, :cond_b
-
-    .line 332
-    .line 333
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getActionIndex()I
+
+    .line 330
+    .line 331
+    .line 332
+    move-result v5
+
+    .line 333
+    invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     .line 334
     .line 335
     .line 336
-    move-result v5
-
-    .line 337
-    invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    .line 338
-    .line 339
-    .line 340
     move-result v3
 
-    .line 341
+    .line 337
     int-to-long v14, v3
 
-    .line 342
+    .line 338
     iget-object v4, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mInitialLocationForRawTouchGestureId:Ljava/util/Map;
 
-    .line 343
-    .line 344
+    .line 339
+    .line 340
     invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 341
+    .line 342
+    .line 343
+    move-result-object v3
+
+    .line 344
+    invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 345
     .line 346
     .line 347
-    move-result-object v3
+    move-result-object v4
 
     .line 348
-    invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v4, Landroid/util/Pair;
 
     .line 349
     .line 350
-    .line 351
-    move-result-object v4
+    if-eqz v4, :cond_b
 
+    .line 351
     .line 352
-    check-cast v4, Landroid/util/Pair;
+    iget-object v3, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     .line 353
     .line 354
-    if-eqz v4, :cond_b
+    check-cast v3, Ljava/lang/Number;
 
     .line 355
     .line 356
-    iget-object v3, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
 
     .line 357
     .line 358
-    check-cast v3, Ljava/lang/Number;
-
     .line 359
+    move-result v16
+
     .line 360
-    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
+    iget-object v3, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     .line 361
     .line 362
-    .line 363
-    move-result v16
+    check-cast v3, Ljava/lang/Number;
 
+    .line 363
     .line 364
-    iget-object v3, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
 
     .line 365
     .line 366
-    check-cast v3, Ljava/lang/Number;
-
     .line 367
+    move-result v17
+
     .line 368
-    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
+    invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getX(I)F
 
     .line 369
     .line 370
     .line 371
-    move-result v17
+    move-result v18
 
     .line 372
-    invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getX(I)F
+    invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getY(I)F
 
     .line 373
     .line 374
     .line 375
-    move-result v18
+    move-result v19
 
     .line 376
-    invoke-virtual {v0, v5}, Landroid/view/MotionEvent;->getY(I)F
+    invoke-direct/range {v13 .. v19}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->terminateRawTouch(JFFFF)V
 
     .line 377
     .line 378
     .line 379
-    move-result v19
-
-    .line 380
-    invoke-direct/range {v13 .. v19}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->terminateRawTouch(JFFFF)V
-
-    .line 381
-    .line 382
-    .line 383
     :cond_b
     invoke-direct {v13}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->terminateScroll()V
 
+    .line 380
+    .line 381
+    .line 382
+    iget v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressCurrentX:F
+
+    .line 383
     .line 384
+    iget v0, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressCurrentY:F
+
     .line 385
     .line 386
-    iget v3, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressCurrentX:F
+    invoke-direct {v13, v3, v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->terminateLongPress(FF)V
 
     .line 387
     .line 388
-    iget v0, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mLongPressCurrentY:F
-
     .line 389
-    .line 390
-    invoke-direct {v13, v3, v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->terminateLongPress(FF)V
-
-    .line 391
-    .line 392
-    .line 393
     iput-boolean v2, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mSingleTouchMode:Z
 
-    .line 394
-    .line 395
+    .line 390
+    .line 391
     const/4 v0, 0x0
 
-    .line 396
+    .line 392
     iput v0, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollLamdaX:F
+
+    .line 393
+    .line 394
+    iput v0, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollLamdaY:F
+
+    .line 395
+    .line 396
+    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollStartingX:Ljava/lang/Float;
 
     .line 397
     .line 398
-    iput v0, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollLamdaY:F
+    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollStartingY:Ljava/lang/Float;
 
     .line 399
     .line 400
-    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollStartingX:Ljava/lang/Float;
-
-    .line 401
-    .line 402
-    iput-object v1, v13, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mScrollStartingY:Ljava/lang/Float;
-
-    .line 403
-    .line 404
     return v7
 .end method
 

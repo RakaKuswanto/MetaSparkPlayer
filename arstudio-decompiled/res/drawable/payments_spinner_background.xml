@@ -9,7 +9,7 @@
     <item>
         <rotate android:toDegrees="360.0">
             <shape android:shape="ring" android:innerRadius="@dimen/arplayer_terms_policy_padding_button" android:thickness="@dimen/abc_control_corner_material">
-                <solid android:color="@color/cds_facebook_blue" />
+                <solid android:color="@color/experimental_fds_color_FF0866FF" />
             </shape>
         </rotate>
     </item>

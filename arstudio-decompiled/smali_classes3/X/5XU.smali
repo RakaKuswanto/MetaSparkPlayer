@@ -1,75 +1,166 @@
 .class public final LX/5XU;
-.super Ljava/lang/Object;
+.super LX/5XJ;
 .source ""
 
 
 # instance fields
-.field public final A00:Z
+.field public A00:Z
 
-.field public final A01:Z
-
-.field public final A02:Z
-
-.field public final A03:Z
-
-.field public final A04:Z
-
-.field public final A05:Z
-
-.field public final A06:Z
-
-.field public final A07:Z
+.field public final synthetic A01:LX/5Wo;
 
 
 # direct methods
-.method public constructor <init>(ZZZZZZ)V
-    .locals 1
+.method public constructor <init>(LX/5Wo;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 0
+    iput-object p1, p0, LX/5XU;->A01:LX/5Wo;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    .line 2
+    invoke-direct {p0, p1}, LX/5XJ;-><init>(LX/5Wo;)V
 
-    iput-boolean v0, p0, LX/5XU;->A03:Z
-
-    iput-boolean p3, p0, LX/5XU;->A04:Z
-
-    iput-boolean p4, p0, LX/5XU;->A05:Z
-
-    iput-boolean p6, p0, LX/5XU;->A07:Z
-
-    iput-boolean p5, p0, LX/5XU;->A06:Z
-
-    iput-boolean p2, p0, LX/5XU;->A02:Z
-
-    iput-boolean p1, p0, LX/5XU;->A00:Z
-
-    iput-boolean v0, p0, LX/5XU;->A01:Z
-
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
-.method public constructor <init>(ZZZZZZZ)V
-    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final Afv(LX/5WA;J)J
+    .locals 5
 
+    .line 0
+    const-wide/16 v1, 0x0
+
+    .line 1
+    .line 2
+    cmp-long v0, p2, v1
+
+    .line 3
+    .line 4
+    if-ltz v0, :cond_3
+
+    .line 5
+    .line 6
+    iget-boolean v0, p0, LX/5XJ;->A00:Z
+
+    .line 7
+    .line 8
+    if-nez v0, :cond_2
+
+    .line 9
+    .line 10
+    iget-boolean v0, p0, LX/5XU;->A00:Z
+
+    .line 11
+    .line 12
+    const-wide/16 v3, -0x1
+
+    .line 13
+    .line 14
+    if-nez v0, :cond_0
+
+    .line 15
+    .line 16
+    invoke-super {p0, p1, p2, p3}, LX/5XJ;->Afv(LX/5WA;J)J
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-wide v1
+
+    .line 20
+    cmp-long v0, v1, v3
+
+    .line 21
+    .line 22
+    if-nez v0, :cond_1
+
+    .line 23
+    .line 24
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, LX/5XU;->A03:Z
+    .line 25
+    iput-boolean v0, p0, LX/5XU;->A00:Z
 
-    iput-boolean p4, p0, LX/5XU;->A04:Z
+    .line 26
+    .line 27
+    invoke-virtual {p0}, LX/5XJ;->A00()V
 
-    iput-boolean p5, p0, LX/5XU;->A05:Z
+    .line 28
+    .line 29
+    .line 30
+    :cond_0
+    return-wide v3
 
-    iput-boolean p7, p0, LX/5XU;->A07:Z
+    .line 31
+    :cond_1
+    return-wide v1
 
-    iput-boolean p6, p0, LX/5XU;->A06:Z
+    .line 32
+    :cond_2
+    invoke-static {}, LX/432;->A0i()Ljava/lang/IllegalStateException;
 
-    iput-boolean p3, p0, LX/5XU;->A02:Z
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
 
-    iput-boolean p1, p0, LX/5XU;->A00:Z
+    .line 36
+    throw v0
 
-    iput-boolean p2, p0, LX/5XU;->A01:Z
+    .line 37
+    :cond_3
+    const-string v0, "byteCount < 0: "
 
+    .line 38
+    .line 39
+    invoke-static {v0, p2, p3}, LX/431;->A0T(Ljava/lang/String;J)Ljava/lang/IllegalArgumentException;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v0
+
+    .line 43
+    throw v0
+.end method
+
+.method public final close()V
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, LX/5XJ;->A00:Z
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
+    .line 4
+    iget-boolean v0, p0, LX/5XU;->A00:Z
+
+    .line 5
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-virtual {p0}, LX/5XJ;->A00()V
+
+    .line 9
+    .line 10
+    .line 11
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 12
+    iput-boolean v0, p0, LX/5XJ;->A00:Z
+
+    .line 13
+    .line 14
+    :cond_1
     return-void
 .end method

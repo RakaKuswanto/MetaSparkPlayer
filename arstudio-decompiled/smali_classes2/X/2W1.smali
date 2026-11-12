@@ -1,35 +1,84 @@
 .class public final LX/2W1;
-.super LX/2W0;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string v2, "<falco_acs_placeholder_claim>"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/4 v1, 0x0
+    .line 3
+    return-void
+.end method
+
+.method public static final A00(Lorg/apache/http/HttpResponse;)J
+    .locals 2
+
+    .line 0
+    const-string v0, "Content-Length"
+
+    .line 1
+    .line 2
+    invoke-interface {p0, v0}, Lorg/apache/http/HttpMessage;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 
     .line 3
-    const/4 v0, 0x0
-
     .line 4
-    invoke-direct {p0, v1, v1, v2, v0}, LX/2W0;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-
     .line 5
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/2W1;->A00:Ljava/lang/String;
+    move-result-object v0
 
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
     .line 8
+    invoke-interface {v0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+
     .line 9
-    return-void
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    :try_start_0
+    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-wide v0
+
+    .line 16
+    return-wide v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 17
+    :catch_0
+    move-exception p0
+
+    .line 18
+    const-class v1, LX/2W1;
+
+    .line 19
+    .line 20
+    const-string v0, "Failure parsing Content-Length header"
+
+    .line 21
+    .line 22
+    invoke-static {v1, v0, p0}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 23
+    .line 24
+    .line 25
+    :cond_0
+    const-wide/16 v0, -0x1
+
+    .line 26
+    .line 27
+    return-wide v0
 .end method

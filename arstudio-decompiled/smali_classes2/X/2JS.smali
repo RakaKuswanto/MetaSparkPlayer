@@ -2,15 +2,7 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/2JK;
-.implements LX/2JJ;
-.implements LX/2Hs;
-
 
 # virtual methods
-.method public abstract AMD()Ljava/lang/String;
-.end method
-
-.method public abstract AQg(Ljava/lang/Object;)Z
+.method public abstract Aq8()Lcom/facebook/common/util/TriState;
 .end method

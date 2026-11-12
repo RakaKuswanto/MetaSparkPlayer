@@ -2,274 +2,426 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4rl;
-
 
 # instance fields
-.field public final synthetic A00:I
+.field public A00:Ljava/util/List;
 
-.field public final synthetic A01:I
-
-.field public final synthetic A02:I
-
-.field public final synthetic A03:LX/4nk;
+.field public A01:[I
 
 
 # direct methods
-.method public constructor <init>(LX/4nk;III)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4ns;->A03:LX/4nk;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput p2, p0, LX/4ns;->A01:I
+    .line 3
+    return-void
+.end method
+
+.method public static final A00(LX/4ns;I)V
+    .locals 5
+
+    .line 0
+    iget-object v4, p0, LX/4ns;->A01:[I
+
+    .line 1
+    .line 2
+    const/4 v3, -0x1
 
     .line 3
+    if-nez v4, :cond_1
+
     .line 4
-    iput p3, p0, LX/4ns;->A00:I
-
     .line 5
+    const/16 v0, 0xa
+
     .line 6
-    iput p4, p0, LX/4ns;->A02:I
-
     .line 7
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
+    .line 8
     .line 9
     .line 10
+    move-result v0
+
     .line 11
+    add-int/lit8 v0, v0, 0x1
+
+    .line 12
+    .line 13
+    new-array v0, v0, [I
+
+    .line 14
+    .line 15
+    iput-object v0, p0, LX/4ns;->A01:[I
+
+    .line 16
+    .line 17
+    invoke-static {v0, v3}, Ljava/util/Arrays;->fill([II)V
+
+    .line 18
+    .line 19
+    .line 20
+    :cond_0
+    return-void
+
+    .line 21
+    :cond_1
+    array-length v0, v4
+
+    .line 22
+    if-lt p1, v0, :cond_0
+
+    .line 23
+    .line 24
+    :goto_0
+    if-gt v0, p1, :cond_2
+
+    .line 25
+    .line 26
+    mul-int/lit8 v0, v0, 0x2
+
+    .line 27
+    .line 28
+    goto :goto_0
+
+    .line 29
+    :cond_2
+    new-array v1, v0, [I
+
+    .line 30
+    .line 31
+    iput-object v1, p0, LX/4ns;->A01:[I
+
+    .line 32
+    .line 33
+    array-length v2, v4
+
+    .line 34
+    const/4 v0, 0x0
+
+    .line 35
+    invoke-static {v4, v0, v1, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 36
+    .line 37
+    .line 38
+    iget-object v1, p0, LX/4ns;->A01:[I
+
+    .line 39
+    .line 40
+    array-length v0, v1
+
+    .line 41
+    invoke-static {v1, v2, v0, v3}, Ljava/util/Arrays;->fill([IIII)V
+
+    .line 42
+    .line 43
+    .line 44
     return-void
 .end method
 
 
 # virtual methods
-.method public final Agc(I)Z
-    .locals 9
+.method public final A01()V
+    .locals 2
 
     .line 0
-    iget-object v6, p0, LX/4ns;->A03:LX/4nk;
+    iget-object v1, p0, LX/4ns;->A01:[I
 
     .line 1
     .line 2
-    iget v8, p0, LX/4ns;->A01:I
+    if-eqz v1, :cond_0
 
     .line 3
     .line 4
-    iget v7, p0, LX/4ns;->A00:I
+    const/4 v0, -0x1
 
     .line 5
-    .line 6
-    iget v2, p0, LX/4ns;->A02:I
+    invoke-static {v1, v0}, Ljava/util/Arrays;->fill([II)V
 
+    .line 6
     .line 7
     .line 8
-    monitor-enter v6
+    :cond_0
+    const/4 v0, 0x0
 
     .line 9
-    :try_start_0
-    iget-object v1, v6, LX/4nk;->A0c:Ljava/util/List;
+    iput-object v0, p0, LX/4ns;->A00:Ljava/util/List;
 
     .line 10
     .line 11
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    return-void
+.end method
 
+.method public final A02(II)V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/4ns;->A01:[I
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_1
+
+    .line 3
+    .line 4
+    array-length v0, v0
+
+    .line 5
+    if-ge p1, v0, :cond_1
+
+    .line 6
+    .line 7
+    add-int v2, p1, p2
+
+    .line 8
+    .line 9
+    invoke-static {p0, v2}, LX/4ns;->A00(LX/4ns;I)V
+
+    .line 10
+    .line 11
     .line 12
+    iget-object v1, p0, LX/4ns;->A01:[I
+
     .line 13
     .line 14
-    move-result v0
+    array-length v0, v1
 
     .line 15
-    if-eq v2, v0, :cond_0
+    sub-int/2addr v0, p1
 
     .line 16
+    sub-int/2addr v0, p2
+
     .line 17
-    const/4 v5, 0x0
+    invoke-static {v1, p1, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 18
-    goto :goto_0
-
     .line 19
-    :cond_0
-    invoke-static {v1, p1}, LX/4BF;->A0m(Ljava/util/List;I)LX/4ni;
-
     .line 20
+    iget-object v1, p0, LX/4ns;->A01:[I
+
     .line 21
     .line 22
-    move-result-object v4
+    const/4 v0, -0x1
 
     .line 23
-    invoke-virtual {v4}, LX/4ni;->A02()LX/4o2;
+    invoke-static {v1, p1, v2, v0}, Ljava/util/Arrays;->fill([IIII)V
 
     .line 24
     .line 25
     .line 26
-    move-result-object v0
+    iget-object v0, p0, LX/4ns;->A00:Ljava/util/List;
 
     .line 27
-    invoke-interface {v0}, LX/4o2;->AjU()Z
-
     .line 28
+    if-eqz v0, :cond_1
+
     .line 29
     .line 30
-    move-result v0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     .line 31
-    const/4 v5, 0x1
-
     .line 32
-    if-nez v0, :cond_5
-
     .line 33
+    move-result v2
+
     .line 34
-    invoke-static {v4, v6}, LX/4nk;->A01(LX/4ni;LX/4nk;)I
+    :cond_0
+    :goto_0
+    add-int/lit8 v2, v2, -0x1
 
     .line 35
     .line 36
-    .line 37
-    move-result v3
+    if-ltz v2, :cond_1
 
+    .line 37
     .line 38
-    invoke-static {v4, v6}, LX/4nk;->A00(LX/4ni;LX/4nk;)I
+    iget-object v0, p0, LX/4ns;->A00:Ljava/util/List;
 
     .line 39
     .line 40
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
     .line 41
+    .line 42
+    .line 43
+    move-result-object v1
+
+    .line 44
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;
+
+    .line 45
+    .line 46
+    iget v0, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->A01:I
+
+    .line 47
+    .line 48
+    if-lt v0, p1, :cond_0
+
+    .line 49
+    .line 50
+    add-int/2addr v0, p2
+
+    .line 51
+    iput v0, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->A01:I
+
+    .line 52
+    .line 53
+    goto :goto_0
+
+    .line 54
+    :cond_1
+    return-void
+.end method
+
+.method public final A03(II)V
+    .locals 5
+
+    .line 0
+    iget-object v0, p0, LX/4ns;->A01:[I
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_2
+
+    .line 3
+    .line 4
+    array-length v0, v0
+
+    .line 5
+    if-ge p1, v0, :cond_2
+
+    .line 6
+    .line 7
+    add-int v4, p1, p2
+
+    .line 8
+    .line 9
+    invoke-static {p0, v4}, LX/4ns;->A00(LX/4ns;I)V
+
+    .line 10
+    .line 11
+    .line 12
+    iget-object v1, p0, LX/4ns;->A01:[I
+
+    .line 13
+    .line 14
+    array-length v0, v1
+
+    .line 15
+    sub-int/2addr v0, p1
+
+    .line 16
+    sub-int/2addr v0, p2
+
+    .line 17
+    invoke-static {v1, v4, v1, p1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 18
+    .line 19
+    .line 20
+    iget-object v3, p0, LX/4ns;->A01:[I
+
+    .line 21
+    .line 22
+    array-length v2, v3
+
+    .line 23
+    sub-int v1, v2, p2
+
+    .line 24
+    .line 25
+    const/4 v0, -0x1
+
+    .line 26
+    invoke-static {v3, v1, v2, v0}, Ljava/util/Arrays;->fill([IIII)V
+
+    .line 27
+    .line 28
+    .line 29
+    iget-object v0, p0, LX/4ns;->A00:Ljava/util/List;
+
+    .line 30
+    .line 31
+    if-eqz v0, :cond_2
+
+    .line 32
+    .line 33
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    .line 34
+    .line 35
+    .line 36
     move-result v2
 
-    .line 42
-    monitor-exit v6
+    .line 37
+    :cond_0
+    :goto_0
+    add-int/lit8 v2, v2, -0x1
 
+    .line 38
+    .line 39
+    if-ltz v2, :cond_2
+
+    .line 40
+    .line 41
+    iget-object v0, p0, LX/4ns;->A00:Ljava/util/List;
+
+    .line 42
     .line 43
-    if-ge p1, v8, :cond_1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 44
     .line 45
-    invoke-virtual {v4}, LX/4ni;->A02()LX/4o2;
-
     .line 46
-    .line 47
-    .line 48
-    move-result-object v0
+    move-result-object v1
 
+    .line 47
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;
+
+    .line 48
     .line 49
-    invoke-interface {v0}, LX/4o2;->ARe()Z
+    iget v0, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->A01:I
 
     .line 50
     .line 51
-    .line 52
-    move-result v0
+    if-lt v0, p1, :cond_0
 
+    .line 52
     .line 53
-    if-eqz v0, :cond_3
+    if-ge v0, v4, :cond_1
 
     .line 54
     .line 55
-    :cond_1
-    if-gt p1, v7, :cond_3
+    iget-object v0, p0, LX/4ns;->A00:Ljava/util/List;
 
     .line 56
     .line 57
-    invoke-virtual {v4, v3, v2}, LX/4ni;->A09(II)Z
+    invoke-interface {v0, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     .line 58
     .line 59
     .line 60
-    move-result v0
+    goto :goto_0
 
     .line 61
-    if-nez v0, :cond_2
+    :cond_1
+    sub-int/2addr v0, p2
 
     .line 62
+    iput v0, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->A01:I
+
     .line 63
-    iget-object v1, v6, LX/4nk;->A0K:LX/4mm;
-
     .line 64
+    goto :goto_0
+
     .line 65
-    const/4 v0, 0x0
-
-    .line 66
-    invoke-virtual {v4, v1, v0, v3, v2}, LX/4ni;->A04(LX/4mm;LX/4rj;II)V
-
-    .line 67
-    .line 68
-    .line 69
     :cond_2
-    return v5
-
-    .line 70
-    :cond_3
-    invoke-static {}, LX/4oe;->A01()Z
-
-    .line 71
-    .line 72
-    .line 73
-    move-result v0
-
-    .line 74
-    if-eqz v0, :cond_4
-
-    .line 75
-    .line 76
-    iget-boolean v0, v6, LX/4nk;->A0h:Z
-
-    .line 77
-    .line 78
-    invoke-static {v4, v0}, LX/4nk;->A08(LX/4ni;Z)V
-
-    .line 79
-    .line 80
-    .line 81
-    return v5
-
-    .line 82
-    :cond_4
-    iget-object v1, v6, LX/4nk;->A0G:Landroid/os/Handler;
-
-    .line 83
-    .line 84
-    new-instance v0, LX/4pm;
-
-    .line 85
-    .line 86
-    invoke-direct {v0, v4, v6}, LX/4pm;-><init>(LX/4ni;LX/4nk;)V
-
-    .line 87
-    .line 88
-    .line 89
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 90
-    .line 91
-    .line 92
-    return v5
-
-    .line 93
-    :cond_5
-    :goto_0
-    :try_start_1
-    monitor-exit v6
-
-    .line 94
-    return v5
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 95
-    :catchall_0
-    move-exception v0
-
-    .line 96
-    :try_start_2
-    monitor-exit v6
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 97
-    throw v0
+    return-void
 .end method

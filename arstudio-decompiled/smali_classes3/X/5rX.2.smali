@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract AYV(LX/5vC;JJ)V
+.method public abstract A8b(Ljava/lang/Exception;)V
+.end method
+
+.method public abstract Ao9(Ljava/lang/Object;)V
 .end method

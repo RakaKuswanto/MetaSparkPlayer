@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x45
+    const/16 v0, 0x1a
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -57,13 +57,6 @@
 
     .line 268435462
     .line 268435463
-    const/4 v0, 0x0
-
-    .line 268435464
-    iput v0, p0, Lcom/facebook/mqtt/service/ipc/SubscriptionParcelable;->A00:I
-
-    .line 268435465
-    .line 268435466
     return-void
 .end method
 
@@ -84,45 +77,38 @@
 
     .line 6
     .line 7
-    const/4 v0, 0x0
-
-    .line 8
-    iput v0, p0, Lcom/facebook/mqtt/service/ipc/SubscriptionParcelable;->A00:I
-
-    .line 9
-    .line 10
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 11
-    .line 12
-    .line 13
+    .line 8
+    .line 9
+    .line 10
     move-result-object v0
 
-    .line 14
+    .line 11
     if-nez v0, :cond_0
 
-    .line 15
-    .line 16
+    .line 12
+    .line 13
     move-object v0, v1
 
-    .line 17
+    .line 14
     :cond_0
     iput-object v0, p0, Lcom/facebook/mqtt/service/ipc/SubscriptionParcelable;->A01:Ljava/lang/String;
 
-    .line 18
-    .line 19
+    .line 15
+    .line 16
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 20
-    .line 21
-    .line 22
+    .line 17
+    .line 18
+    .line 19
     move-result v0
 
-    .line 23
+    .line 20
     iput v0, p0, Lcom/facebook/mqtt/service/ipc/SubscriptionParcelable;->A00:I
 
-    .line 24
-    .line 25
+    .line 21
+    .line 22
     return-void
 .end method
 
@@ -140,23 +126,31 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/mqtt/service/ipc/SubscriptionParcelable;->A01:Ljava/lang/String;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
+    iget-object v0, p0, Lcom/facebook/mqtt/service/ipc/SubscriptionParcelable;->A01:Ljava/lang/String;
+
     .line 5
-    iget v0, p0, Lcom/facebook/mqtt/service/ipc/SubscriptionParcelable;->A00:I
-
     .line 6
-    .line 7
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 7
     .line 8
     .line 9
+    iget v0, p0, Lcom/facebook/mqtt/service/ipc/SubscriptionParcelable;->A00:I
+
     .line 10
+    .line 11
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 12
+    .line 13
+    .line 14
     return-void
 .end method

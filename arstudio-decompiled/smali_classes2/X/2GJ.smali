@@ -3,52 +3,57 @@
 .source ""
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x1L
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "NativeXAnalyticsProvider$2"
 
 
 # instance fields
-.field public clazz:Ljava/lang/Class;
-
-.field public name:Ljava/lang/String;
+.field public final synthetic A00:Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/reflect/Field;)V
-    .locals 1
+.method public constructor <init>(Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/2GJ;->A00:Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;
 
     .line 1
     .line 2
-    .line 3
-    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getDeclaringClass()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2GJ;->A00:Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A03:Lcom/facebook/xanalytics/XAnalyticsNative;
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Lcom/facebook/xanalytics/XAnalyticsHolder;->flush()V
+
+    .line 5
+    .line 6
     .line 7
-    iput-object v0, p0, LX/2GJ;->clazz:Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/facebook/xanalytics/XAnalyticsNative;->kickOffUpload()V
 
     .line 8
     .line 9
-    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
-
     .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/2GJ;->name:Ljava/lang/String;
-
-    .line 14
-    .line 15
     return-void
 .end method

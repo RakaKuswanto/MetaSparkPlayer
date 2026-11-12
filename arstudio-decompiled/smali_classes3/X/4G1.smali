@@ -1,35 +1,49 @@
-.class public interface abstract LX/4G1;
-.super Ljava/lang/Object;
+.class public final LX/4g1;
+.super LX/4hI;
 .source ""
 
 
-# virtual methods
-.method public abstract APN()V
-.end method
+# instance fields
+.field public A00:LX/4fd;
 
-.method public abstract APO()V
-.end method
+.field public final A01:LX/4g8;
 
-.method public abstract AaI(LX/4CY;)V
-.end method
+.field public final A02:Ljava/util/Map;
 
-.method public abstract AcK(Ljava/lang/String;)V
-.end method
 
-.method public abstract AeY(Ljava/lang/String;)V
-.end method
+# direct methods
+.method public constructor <init>(LX/4g8;)V
+    .locals 1
 
-.method public abstract Aqg(LX/4EY;Ljava/lang/String;)V
-.end method
+    .line 0
+    const/4 v0, 0x1
 
-.method public abstract getHeightPx()I
-.end method
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-.method public abstract setControllers(LX/4Ed;LX/4DB;)V
-.end method
+    .line 2
+    .line 3
+    .line 4
+    invoke-direct {p0}, LX/4hI;-><init>()V
 
-.method public abstract setProgress(I)V
-.end method
+    .line 5
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/4g1;->A01:LX/4g8;
 
-.method public abstract setProgressBarVisibility(I)V
+    .line 8
+    .line 9
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/4g1;->A02:Ljava/util/Map;
+
+    .line 14
+    .line 15
+    return-void
 .end method

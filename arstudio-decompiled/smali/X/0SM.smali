@@ -1,125 +1,158 @@
 .class public final LX/0SM;
-.super LX/06s;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/06k;
+.field public A00:Ljava/net/Socket;
 
-.field public final A01:LX/06v;
+.field public final A01:I
+
+.field public final A02:LX/0Nn;
+
+.field public final A03:Ljava/net/InetAddress;
+
+.field public final A04:Ljava/net/InetAddress;
+
+.field public final A05:Ljava/util/concurrent/ScheduledExecutorService;
+
+.field public final A06:I
+
+.field public final A07:I
 
 
 # direct methods
-.method public constructor <init>(LX/06k;LX/06p;)V
-    .locals 1
+.method public constructor <init>(LX/0Nn;Ljava/net/InetAddress;Ljava/net/InetAddress;Ljava/util/concurrent/ScheduledExecutorService;III)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/06s;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/0SM;->A00:LX/06k;
+    iput-object p1, p0, LX/0SM;->A02:LX/0Nn;
 
     .line 4
     .line 5
-    invoke-static {p2}, LX/06v;->A00(LX/06p;)LX/06v;
+    iput-object p2, p0, LX/0SM;->A04:Ljava/net/InetAddress;
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v0
+    iput-object p3, p0, LX/0SM;->A03:Ljava/net/InetAddress;
 
+    .line 8
     .line 9
-    iput-object v0, p0, LX/0SM;->A01:LX/06v;
+    iput p5, p0, LX/0SM;->A06:I
 
     .line 10
     .line 11
+    iput p6, p0, LX/0SM;->A07:I
+
+    .line 12
+    .line 13
+    iput-object p4, p0, LX/0SM;->A05:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 14
+    .line 15
+    iput p7, p0, LX/0SM;->A01:I
+
+    .line 16
+    .line 17
     return-void
 .end method
 
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static A00(LX/0SM;Ljava/net/InetAddress;Ljava/net/Socket;Ljava/net/Socket;)V
+    .locals 2
 
     .line 0
-    const/16 v0, 0x80
+    const/4 v0, 0x1
 
     .line 1
-    .line 2
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v0}, Ljava/net/Socket;->setTcpNoDelay(Z)V
 
+    .line 2
     .line 3
     .line 4
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    const/4 v0, 0x0
 
     .line 5
+    invoke-virtual {p2, v0}, Ljava/net/Socket;->setSoTimeout(I)V
+
     .line 6
     .line 7
-    const-string v0, "LoaderManager{"
-
     .line 8
-    .line 9
-    invoke-static {p0, v0, v2}, LX/001;->A0x(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-virtual {p2, v0}, Ljava/net/Socket;->setKeepAlive(Z)V
 
+    .line 9
     .line 10
     .line 11
+    iget v0, p0, LX/0SM;->A06:I
+
     .line 12
-    const-string v0, " in "
-
     .line 13
-    .line 14
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/net/InetSocketAddress;
 
+    .line 14
     .line 15
+    invoke-direct {v1, p1, v0}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
+
     .line 16
     .line 17
-    iget-object v0, p0, LX/0SM;->A00:LX/06k;
-
     .line 18
-    .line 19
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, LX/0SM;->A07:I
 
+    .line 19
     .line 20
+    invoke-virtual {p2, v1, v0}, Ljava/net/Socket;->connect(Ljava/net/SocketAddress;I)V
+
     .line 21
     .line 22
-    move-result-object v1
-
     .line 23
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    monitor-enter p0
 
     .line 24
+    :try_start_0
+    iget-object v0, p0, LX/0SM;->A00:Ljava/net/Socket;
+
     .line 25
     .line 26
-    move-result-object v0
+    if-nez v0, :cond_0
 
     .line 27
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 28
+    iput-object p2, p0, LX/0SM;->A00:Ljava/net/Socket;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 29
     .line 30
-    const-string v0, "{"
+    :try_start_1
+    invoke-virtual {p3}, Ljava/net/Socket;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 31
     .line 32
-    invoke-static {v1, v0, v2}, LX/001;->A0x(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
     .line 33
+    :catch_0
+    :cond_0
+    :try_start_2
+    monitor-exit p0
+
     .line 34
+    return-void
+
     .line 35
-    const-string v0, "}}"
+    :catchall_0
+    move-exception v0
 
     .line 36
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
     .line 37
-    invoke-static {v0, v2}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v0
-
-    .line 41
-    return-object v0
+    throw v0
 .end method

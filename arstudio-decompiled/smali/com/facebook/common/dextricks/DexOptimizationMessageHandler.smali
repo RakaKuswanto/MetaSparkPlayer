@@ -572,7 +572,7 @@
 
     .line 42
     .line 43
-    invoke-static {v0}, LX/0JO;->A01(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0IG;->A00(Ljava/lang/String;)V
 
     .line 44
     .line 45

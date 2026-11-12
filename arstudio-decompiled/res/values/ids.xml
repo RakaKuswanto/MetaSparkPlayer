@@ -45,7 +45,6 @@
     <item type="id" name="action_bar_subtitle" />
     <item type="id" name="action_bar_title" />
     <item type="id" name="action_context_bar" />
-    <item type="id" name="action_menu_button" />
     <item type="id" name="action_mode_bar" />
     <item type="id" name="action_mode_bar_stub" />
     <item type="id" name="action_mode_close_button" />
@@ -58,20 +57,11 @@
     <item type="id" name="action_text" />
     <item type="id" name="ad_disclaimer_title" />
     <item type="id" name="ad_disclaimer_webview" />
-    <item type="id" name="ads_ratings_and_reviews_banner_stub" />
     <item type="id" name="alertTitle" />
     <item type="id" name="analytics_tag" />
     <item type="id" name="animated_gif_play_button" />
-    <item type="id" name="ar_try_on_bottomsheet" />
-    <item type="id" name="ar_try_on_button" />
-    <item type="id" name="ar_try_on_content" />
-    <item type="id" name="ar_try_on_dismiss_button" />
-    <item type="id" name="ar_try_on_heading" />
     <item type="id" name="attach_button" />
     <item type="id" name="autofill_active_button" />
-    <item type="id" name="autofill_bar_container" />
-    <item type="id" name="autofill_bar_list_entry" />
-    <item type="id" name="autofill_bar_list_entry_text" />
     <item type="id" name="autofill_bottomsheet_drag_handle" />
     <item type="id" name="autofill_contact_data_entry_primary_line" />
     <item type="id" name="autofill_contact_data_entry_radio_icon" />
@@ -82,6 +72,7 @@
     <item type="id" name="autofill_data_migration_disclosure_description" />
     <item type="id" name="autofill_data_migration_disclosure_layout" />
     <item type="id" name="autofill_data_migration_disclosure_title" />
+    <item type="id" name="autofill_demask_card_layout" />
     <item type="id" name="autofill_do_not_fill_item_radio_icon" />
     <item type="id" name="autofill_do_not_fill_item_text" />
     <item type="id" name="autofill_enter_missing_payment_info_action_buttons" />
@@ -98,16 +89,6 @@
     <item type="id" name="autofill_incomplete_payment_data_entry_card_number" />
     <item type="id" name="autofill_layout" />
     <item type="id" name="autofill_layout_sliding_group" />
-    <item type="id" name="autofill_lightweight_autosave_ads_consent" />
-    <item type="id" name="autofill_lightweight_autosave_ads_consent_icon" />
-    <item type="id" name="autofill_lightweight_autosave_ads_consent_text" />
-    <item type="id" name="autofill_lightweight_autosave_confirm_card" />
-    <item type="id" name="autofill_lightweight_autosave_confirm_card_disclosure_icon" />
-    <item type="id" name="autofill_lightweight_autosave_confirm_card_disclosure_text" />
-    <item type="id" name="autofill_lightweight_autosave_description" />
-    <item type="id" name="autofill_lightweight_autosave_description_metapay_setting" />
-    <item type="id" name="autofill_lightweight_autosave_description_metapay_setting_icon" />
-    <item type="id" name="autofill_lightweight_autosave_description_metapay_setting_text" />
     <item type="id" name="autofill_negative_button" />
     <item type="id" name="autofill_partial_payment_save_payment_info" />
     <item type="id" name="autofill_payment_action_buttons" />
@@ -128,7 +109,6 @@
     <item type="id" name="autofill_payment_payment_title" />
     <item type="id" name="autofill_payment_save_action_button_description" />
     <item type="id" name="autofill_payment_save_action_buttons" />
-    <item type="id" name="autofill_payment_save_ads_language" />
     <item type="id" name="autofill_payment_save_contact_info" />
     <item type="id" name="autofill_payment_save_contact_title" />
     <item type="id" name="autofill_payment_save_description" />
@@ -142,7 +122,6 @@
     <item type="id" name="autofill_payment_save_description_payment_icon" />
     <item type="id" name="autofill_payment_save_description_payment_text" />
     <item type="id" name="autofill_payment_save_description_view_stub" />
-    <item type="id" name="autofill_payment_save_illustration" />
     <item type="id" name="autofill_payment_save_layout" />
     <item type="id" name="autofill_payment_save_payment_info" />
     <item type="id" name="autofill_payment_save_payment_title" />
@@ -157,11 +136,10 @@
     <item type="id" name="autofill_payment_title_settings_icon" />
     <item type="id" name="autofill_radio_group" />
     <item type="id" name="autofill_select_button_group" />
-    <item type="id" name="awareness_footer" />
-    <item type="id" name="back_button" />
     <item type="id" name="barcode" />
     <item type="id" name="battery_bugreport_view_stub" />
     <item type="id" name="bk_context_key_performance_logger" />
+    <item type="id" name="bloks_fb_user_session" />
     <item type="id" name="body" />
     <item type="id" name="body_consent" />
     <item type="id" name="bondi_bottom_toolbar" />
@@ -223,6 +201,10 @@
     <item type="id" name="bondi_moreinfo_page_title_divider" />
     <item type="id" name="bondi_moreinfo_vist_page_section" />
     <item type="id" name="bondi_overflow_layout" />
+    <item type="id" name="bondi_overflow_menu_privacy_policy_link" />
+    <item type="id" name="bondi_overflow_menu_privacy_policy_link_desc_text" />
+    <item type="id" name="bondi_overflow_menu_privacy_policy_link_divider" />
+    <item type="id" name="bondi_overflow_menu_privacy_policy_link_fb_logo" />
     <item type="id" name="bondi_overflow_static_action_recycler_view" />
     <item type="id" name="bondi_page_name_with_star_and_rating_section" />
     <item type="id" name="bondi_personalized_footer_business_image" />
@@ -249,22 +231,16 @@
     <item type="id" name="bondi_secure_connection_layout" />
     <item type="id" name="bondi_secure_connection_static_action_recycler_view" />
     <item type="id" name="bottom_controlls" />
+    <item type="id" name="bottom_sheet_layout" />
+    <item type="id" name="bottom_sheet_scroll_view" />
     <item type="id" name="bottom_toolbar_stub" />
     <item type="id" name="bottom_ui" />
-    <item type="id" name="bottomsheet_row_item_description" />
-    <item type="id" name="bottomsheet_row_item_icon" />
-    <item type="id" name="bottomsheet_row_item_title" />
     <item type="id" name="browser_action_button" />
-    <item type="id" name="browser_ad_image" />
-    <item type="id" name="browser_ad_image_container" />
-    <item type="id" name="browser_ad_subtitle" />
-    <item type="id" name="browser_ad_title" />
     <item type="id" name="browser_background_protection" />
     <item type="id" name="browser_chrome" />
     <item type="id" name="browser_chrome_container" />
     <item type="id" name="browser_chrome_secondary_button" />
     <item type="id" name="browser_container" />
-    <item type="id" name="browser_cta_button_stub" />
     <item type="id" name="browser_error_view_back_button" />
     <item type="id" name="browser_error_view_content_text_view" />
     <item type="id" name="browser_error_view_continue_button" />
@@ -272,31 +248,15 @@
     <item type="id" name="browser_error_view_image_view" />
     <item type="id" name="browser_error_view_title_text_view" />
     <item type="id" name="browser_gesture_delegate_view" />
-    <item type="id" name="browser_history_bondi_header_container_bottom_divider" />
     <item type="id" name="browser_history_bottom_toolbar_stub" />
-    <item type="id" name="browser_history_browser_header_container" />
-    <item type="id" name="browser_history_browser_header_left_button" />
-    <item type="id" name="browser_history_browser_header_progress_bar" />
-    <item type="id" name="browser_history_browser_header_right_button" />
-    <item type="id" name="browser_history_browser_header_url_bar_fb_icon" />
-    <item type="id" name="browser_history_browser_header_url_bar_section" />
-    <item type="id" name="browser_history_browser_header_url_bar_security_icon" />
-    <item type="id" name="browser_history_browser_header_url_bar_title" />
-    <item type="id" name="browser_history_browser_header_url_bar_url" />
-    <item type="id" name="browser_lite_custom_loading_view" />
-    <item type="id" name="browser_lite_custom_loading_view_stub" />
     <item type="id" name="browser_lite_debug_overlay" />
     <item type="id" name="browser_lite_debug_overlay_stub" />
     <item type="id" name="browser_lite_error_screen_stub" />
     <item type="id" name="browser_lite_fragment_layout" />
     <item type="id" name="browser_lite_header_loading_screen" />
     <item type="id" name="browser_lite_header_loading_screen_stub" />
-    <item type="id" name="browser_lite_image_ad_stub" />
-    <item type="id" name="browser_lite_image_ad_view" />
     <item type="id" name="browser_lite_renderer_error_screen_stub" />
     <item type="id" name="browser_lite_root_container" />
-    <item type="id" name="browser_lite_shimmer_loading_view" />
-    <item type="id" name="browser_lite_shimmer_loading_view_stub" />
     <item type="id" name="browser_menu_button" />
     <item type="id" name="browser_profile_icon_stub" />
     <item type="id" name="browser_refresh" />
@@ -325,9 +285,6 @@
     <item type="id" name="bug_report_row_name" />
     <item type="id" name="bug_report_toolbar" />
     <item type="id" name="bugreport_button" />
-    <item type="id" name="business_extension_autofill_save_banner_accept_button" />
-    <item type="id" name="business_extension_save_autofill_banner_detail_info_container" />
-    <item type="id" name="business_extension_save_banner_cross_icon" />
     <item type="id" name="business_info_section" />
     <item type="id" name="button1" />
     <item type="id" name="button2" />
@@ -352,7 +309,6 @@
     <item type="id" name="call_extension_bar_cancel_button_section" />
     <item type="id" name="call_extension_bar_divider" />
     <item type="id" name="call_extension_bar_hint" />
-    <item type="id" name="call_extension_browser_bar_header" />
     <item type="id" name="call_extension_iab_container" />
     <item type="id" name="call_extension_iab_stub" />
     <item type="id" name="camera_fragment" />
@@ -361,6 +317,10 @@
     <item type="id" name="camera_switch" />
     <item type="id" name="cancel_button" />
     <item type="id" name="capture" />
+    <item type="id" name="card_cvv_input" />
+    <item type="id" name="card_cvv_input_layout" />
+    <item type="id" name="card_pan_input" />
+    <item type="id" name="card_pan_input_layout" />
     <item type="id" name="change_body" />
     <item type="id" name="checked" />
     <item type="id" name="chrome_header_container" />
@@ -395,18 +355,18 @@
     <item type="id" name="container" />
     <item type="id" name="content" />
     <item type="id" name="contentPanel" />
-    <item type="id" name="content_container" />
     <item type="id" name="content_frame" />
+    <item type="id" name="coordinator" />
     <item type="id" name="cover_image" />
     <item type="id" name="creator_studio_login_approval_code" />
     <item type="id" name="creator_studio_login_button" />
     <item type="id" name="creatorstudio_login_fragment_host" />
-    <item type="id" name="cta_button_text" />
     <item type="id" name="customPanel" />
-    <item type="id" name="date_picker_actions" />
     <item type="id" name="debug_console" />
     <item type="id" name="decor_content_parent" />
     <item type="id" name="desc" />
+    <item type="id" name="description" />
+    <item type="id" name="design_bottom_sheet" />
     <item type="id" name="dialog_body" />
     <item type="id" name="dialog_continue_button" />
     <item type="id" name="dialog_go_back_button" />
@@ -427,7 +387,6 @@
     <item type="id" name="dummy_section_r_edge" />
     <item type="id" name="dummy_section_refresh_bookmark_space" />
     <item type="id" name="dummy_section_share_refresh_space" />
-    <item type="id" name="dynamic_loading_screen_bottom_sheet_stub" />
     <item type="id" name="edit_query" />
     <item type="id" name="edit_text_view" />
     <item type="id" name="edittext_container" />
@@ -439,6 +398,7 @@
     <item type="id" name="email" />
     <item type="id" name="email_login_button" />
     <item type="id" name="email_reg_button" />
+    <item type="id" name="enter_card_details_layout" />
     <item type="id" name="error_content_wrapper" />
     <item type="id" name="expanded_menu" />
     <item type="id" name="external_subtitle_toast_text" />
@@ -471,26 +431,17 @@
     <item type="id" name="go_to_settings" />
     <item type="id" name="group_divider" />
     <item type="id" name="header" />
-    <item type="id" name="header_container" />
     <item type="id" name="header_cross_button" />
-    <item type="id" name="header_loading_screen" />
-    <item type="id" name="header_loading_screen_bottom_cta_button" />
-    <item type="id" name="header_loading_screen_bottom_cta_button_text" />
-    <item type="id" name="header_loading_screen_layout" />
-    <item type="id" name="header_loading_screen_message" />
-    <item type="id" name="header_loading_screen_title" />
-    <item type="id" name="header_loading_screen_url" />
     <item type="id" name="header_setting_button" />
     <item type="id" name="hidden_edit_text_view" />
     <item type="id" name="iab_autofill_data_entries_bar" />
-    <item type="id" name="iab_fblogin_litho_view" />
-    <item type="id" name="iaw_ar_try_on_persistent_button" />
-    <item type="id" name="iaw_ar_try_on_persistent_button_stub" />
+    <item type="id" name="iab_autofill_soft_keyboard_container" />
     <item type="id" name="ic_face" />
     <item type="id" name="ic_info" />
     <item type="id" name="ic_licensing" />
     <item type="id" name="ic_setting" />
     <item type="id" name="icon" />
+    <item type="id" name="ig_expandable_footer_stub" />
     <item type="id" name="ig_login_button" />
     <item type="id" name="image_button" />
     <item type="id" name="image_container" />
@@ -502,14 +453,8 @@
     <item type="id" name="image_picker_thumbnail_image" />
     <item type="id" name="info_box" />
     <item type="id" name="info_how" />
+    <item type="id" name="inline_error_message" />
     <item type="id" name="instant_experiences_autofill_bar" />
-    <item type="id" name="instant_experiences_iab_autofill_save_banner_accept_button" />
-    <item type="id" name="instant_experiences_iab_autofill_save_banner_decline_button" />
-    <item type="id" name="instant_experiences_iab_save_autofill_banner_detail_clickable" />
-    <item type="id" name="instant_experiences_iab_save_autofill_banner_detail_info_container" />
-    <item type="id" name="instant_experiences_iab_save_autofill_banner_detail_string" />
-    <item type="id" name="instant_experiences_iab_save_autofill_banner_details" />
-    <item type="id" name="instant_experiences_iab_save_banner_fb_icon" />
     <item type="id" name="instant_experiences_save_autofill_banner" />
     <item type="id" name="instruction_image" />
     <item type="id" name="instruction_layout" />
@@ -518,7 +463,6 @@
     <item type="id" name="is_pooling_container_tag" />
     <item type="id" name="jobscheduler_analytics2_high_pri" />
     <item type="id" name="jobscheduler_analytics2_micro_batch" />
-    <item type="id" name="jobscheduler_analytics2_normal_pri" />
     <item type="id" name="jobscheduler_bugreporterretry" />
     <item type="id" name="jobscheduler_conditionalworker" />
     <item type="id" name="jobscheduler_offline_mutations_retry" />
@@ -538,18 +482,6 @@
     <item type="id" name="language_pack_loading_message" />
     <item type="id" name="layout_title_and_subtitle" />
     <item type="id" name="layout_title_container" />
-    <item type="id" name="ldp_business_category" />
-    <item type="id" name="ldp_business_info" />
-    <item type="id" name="ldp_business_name" />
-    <item type="id" name="ldp_business_profile_picture" />
-    <item type="id" name="ldp_chrome" />
-    <item type="id" name="ldp_loading_screen" />
-    <item type="id" name="ldp_loading_screen_stub" />
-    <item type="id" name="ldp_lock_glyph" />
-    <item type="id" name="ldp_main_container" />
-    <item type="id" name="ldp_partner_attribution" />
-    <item type="id" name="ldp_secured_spinner" />
-    <item type="id" name="ldp_splash_screen_progress_bar" />
     <item type="id" name="le_browser_chrome" />
     <item type="id" name="le_progress_bar" />
     <item type="id" name="lead_form_extension_dynamic_footer" />
@@ -560,20 +492,10 @@
     <item type="id" name="lead_form_extension_footer_rating_star_icon" />
     <item type="id" name="lead_form_extension_footer_stub" />
     <item type="id" name="lead_form_extension_page_name_with_star_and_rating_section" />
-    <item type="id" name="loading_progress_bar_stub" />
-    <item type="id" name="loading_screen_metadata" />
-    <item type="id" name="loading_screen_metadata_profile_picture" />
-    <item type="id" name="loading_screen_metadata_subtitle" />
-    <item type="id" name="loading_screen_metadata_title" />
-    <item type="id" name="loading_screen_profile_picture" />
-    <item type="id" name="loading_screen_progress_bar" />
     <item type="id" name="loading_spinner_plugin_view" />
     <item type="id" name="loading_spinner_plugin_view_progress" />
     <item type="id" name="loading_strings_error_view" />
     <item type="id" name="loading_strings_progress_view" />
-    <item type="id" name="loading_text" />
-    <item type="id" name="loading_view_background" />
-    <item type="id" name="loading_view_foreground" />
     <item type="id" name="login" />
     <item type="id" name="login_as_user_selection" />
     <item type="id" name="login_bottom_group" />
@@ -601,7 +523,6 @@
     <item type="id" name="menu_divider" />
     <item type="id" name="message" />
     <item type="id" name="messaging_business_bottom_container" />
-    <item type="id" name="messaging_button" />
     <item type="id" name="meta_email_login_button" />
     <item type="id" name="meta_email_reg_button" />
     <item type="id" name="meta_fb_login_button" />
@@ -611,6 +532,7 @@
     <item type="id" name="meta_pay_rebrand_awareness_footer_stub" />
     <item type="id" name="meta_skip_button" />
     <item type="id" name="meta_spark_player_logo_view" />
+    <item type="id" name="metacheckout_disclosure_footer" />
     <item type="id" name="metapay_disclosure_footer" />
     <item type="id" name="missing_cvv_layout" />
     <item type="id" name="missing_cvv_text" />
@@ -624,17 +546,9 @@
     <item type="id" name="month_title" />
     <item type="id" name="mtrl_calendar_day_selector_frame" />
     <item type="id" name="mtrl_calendar_days_of_week" />
-    <item type="id" name="mtrl_calendar_frame" />
-    <item type="id" name="mtrl_calendar_main_pane" />
     <item type="id" name="mtrl_calendar_months" />
     <item type="id" name="mtrl_calendar_selection_frame" />
     <item type="id" name="mtrl_calendar_year_selector_frame" />
-    <item type="id" name="mtrl_picker_fullscreen" />
-    <item type="id" name="mtrl_picker_header" />
-    <item type="id" name="mtrl_picker_header_selection_text" />
-    <item type="id" name="mtrl_picker_header_title_and_selection" />
-    <item type="id" name="mtrl_picker_header_toggle" />
-    <item type="id" name="mtrl_picker_title_text" />
     <item type="id" name="multiple_autofill_selection_option_stub" />
     <item type="id" name="native_call_extension_iab_stub" />
     <item type="id" name="native_picker_container" />
@@ -642,7 +556,6 @@
     <item type="id" name="native_picker_ring" />
     <item type="id" name="native_ui_picker_container" />
     <item type="id" name="native_ui_picker_view_stub" />
-    <item type="id" name="new_offer_stub_lite_browser" />
     <item type="id" name="not_now_button" />
     <item type="id" name="not_you_link" />
     <item type="id" name="nt_context_key_callsite" />
@@ -653,74 +566,6 @@
     <item type="id" name="nt_context_key_states" />
     <item type="id" name="nt_context_key_template_host" />
     <item type="id" name="off" />
-    <item type="id" name="offer_ads_browser_bar_body" />
-    <item type="id" name="offer_ads_browser_bar_collapsed_copy_code_button_section" />
-    <item type="id" name="offer_ads_browser_bar_container" />
-    <item type="id" name="offer_ads_browser_bar_container_bg_1" />
-    <item type="id" name="offer_ads_browser_bar_container_bg_2" />
-    <item type="id" name="offer_ads_browser_bar_content" />
-    <item type="id" name="offer_ads_browser_bar_copy_code_button_section" />
-    <item type="id" name="offer_ads_browser_bar_copy_code_text_section" />
-    <item type="id" name="offer_ads_browser_bar_down_chevron" />
-    <item type="id" name="offer_ads_browser_bar_header" />
-    <item type="id" name="offer_ads_browser_bar_header_text" />
-    <item type="id" name="offer_ads_browser_bar_loading_spinner" />
-    <item type="id" name="offer_ads_browser_bar_lock_glyph" />
-    <item type="id" name="offer_ads_browser_bar_product_stub" />
-    <item type="id" name="offer_ads_browser_bar_promo_code" />
-    <item type="id" name="offer_ads_browser_bar_promo_code_section" />
-    <item type="id" name="offer_ads_browser_bar_save_button" />
-    <item type="id" name="offer_ads_browser_bar_save_button_section" />
-    <item type="id" name="offer_ads_browser_bar_save_nub" />
-    <item type="id" name="offer_ads_browser_bar_save_nux_containter" />
-    <item type="id" name="offer_ads_browser_bar_save_title" />
-    <item type="id" name="offer_ads_browser_bar_subtitle" />
-    <item type="id" name="offer_ads_browser_bar_tap_to_copy_text" />
-    <item type="id" name="offer_ads_browser_bar_thumbnail" />
-    <item type="id" name="offer_ads_browser_bar_thumbnail_image_holder" />
-    <item type="id" name="offer_ads_browser_bar_title" />
-    <item type="id" name="offer_ads_browser_bar_unstructed_offer_content" />
-    <item type="id" name="offer_ads_browser_bar_unstructed_offer_save_description" />
-    <item type="id" name="offer_ads_browser_bar_unstructed_offer_story_title" />
-    <item type="id" name="offer_ads_browser_bar_up_chevron" />
-    <item type="id" name="offer_ads_browser_bar_v2_action_buttons_section" />
-    <item type="id" name="offer_ads_browser_bar_v2_body" />
-    <item type="id" name="offer_ads_browser_bar_v2_collapsed_content" />
-    <item type="id" name="offer_ads_browser_bar_v2_collapsed_copy_code_icon" />
-    <item type="id" name="offer_ads_browser_bar_v2_collapsed_copy_code_label" />
-    <item type="id" name="offer_ads_browser_bar_v2_collapsed_offer_info" />
-    <item type="id" name="offer_ads_browser_bar_v2_collapsed_promo_code" />
-    <item type="id" name="offer_ads_browser_bar_v2_collapsed_promo_code_bar_label" />
-    <item type="id" name="offer_ads_browser_bar_v2_collapsed_title" />
-    <item type="id" name="offer_ads_browser_bar_v2_container" />
-    <item type="id" name="offer_ads_browser_bar_v2_content" />
-    <item type="id" name="offer_ads_browser_bar_v2_copy_code_icon" />
-    <item type="id" name="offer_ads_browser_bar_v2_copy_code_label" />
-    <item type="id" name="offer_ads_browser_bar_v2_dummy_container" />
-    <item type="id" name="offer_ads_browser_bar_v2_email_button_section" />
-    <item type="id" name="offer_ads_browser_bar_v2_email_icon" />
-    <item type="id" name="offer_ads_browser_bar_v2_expiration_date" />
-    <item type="id" name="offer_ads_browser_bar_v2_offer_info" />
-    <item type="id" name="offer_ads_browser_bar_v2_promo_code" />
-    <item type="id" name="offer_ads_browser_bar_v2_promo_code_bar" />
-    <item type="id" name="offer_ads_browser_bar_v2_promo_code_bar_label" />
-    <item type="id" name="offer_ads_browser_bar_v2_see_details_button" />
-    <item type="id" name="offer_ads_browser_bar_v2_thumbnail" />
-    <item type="id" name="offer_ads_browser_bar_v2_thumbnail_image_holder" />
-    <item type="id" name="offer_ads_browser_bar_v2_title" />
-    <item type="id" name="offer_browser_bar_card" />
-    <item type="id" name="offer_browser_bar_card_save" />
-    <item type="id" name="offer_browser_bar_card_save_icon" />
-    <item type="id" name="offer_browser_bar_card_save_title" />
-    <item type="id" name="offer_browser_bar_card_subtitle" />
-    <item type="id" name="offer_browser_bar_card_text" />
-    <item type="id" name="offer_browser_bar_card_thumbnail" />
-    <item type="id" name="offer_browser_bar_card_title" />
-    <item type="id" name="offer_browser_bar_code" />
-    <item type="id" name="offer_browser_bar_code_button" />
-    <item type="id" name="offer_browser_bar_code_title" />
-    <item type="id" name="offer_browser_bar_nub" />
-    <item type="id" name="offer_browser_bar_root" />
     <item type="id" name="offer_detail_row_exipre_date" />
     <item type="id" name="offer_detail_row_save_count" />
     <item type="id" name="offer_detail_row_shipping_info" />
@@ -734,25 +579,20 @@
     <item type="id" name="offline_game_time_bonus_layout" />
     <item type="id" name="offline_game_top_row_layout" />
     <item type="id" name="on" />
-    <item type="id" name="page_surface_info_stub" />
-    <item type="id" name="pages_surface_info_bar_layout" />
-    <item type="id" name="pages_surface_info_button" />
-    <item type="id" name="pages_surface_info_button_text" />
-    <item type="id" name="pages_surface_info_glyph" />
-    <item type="id" name="pages_surface_info_subtitle" />
-    <item type="id" name="pages_surface_info_thumbnail" />
-    <item type="id" name="pages_surface_info_title" />
     <item type="id" name="parentPanel" />
-    <item type="id" name="partner_attribution_icon" />
-    <item type="id" name="partner_attribution_name" />
-    <item type="id" name="partner_attribution_text" />
     <item type="id" name="password" />
     <item type="id" name="pause_frame" />
+    <item type="id" name="payment_card_preview" />
     <item type="id" name="personalized_footer_browser_header" />
+    <item type="id" name="personalized_footer_browser_header_action_button" />
+    <item type="id" name="personalized_footer_browser_header_action_left_blankspace" />
     <item type="id" name="personalized_footer_browser_header_container" />
     <item type="id" name="personalized_footer_browser_header_left_button" />
     <item type="id" name="personalized_footer_browser_header_progress_bar" />
     <item type="id" name="personalized_footer_browser_header_right_button" />
+    <item type="id" name="personalized_footer_browser_header_search_right_button" />
+    <item type="id" name="personalized_footer_browser_header_search_right_button_divider" />
+    <item type="id" name="personalized_footer_browser_header_search_url_bar_section" />
     <item type="id" name="personalized_footer_browser_header_url_bar_section" />
     <item type="id" name="personalized_footer_browser_header_url_bar_security_icon" />
     <item type="id" name="personalized_footer_browser_header_url_bar_title" />
@@ -771,10 +611,10 @@
     <item type="id" name="primary_icon" />
     <item type="id" name="primary_text" />
     <item type="id" name="problem_tags_fragment_container" />
-    <item type="id" name="profile_image" />
     <item type="id" name="progress" />
     <item type="id" name="progress_bar" />
     <item type="id" name="progress_bar_stub" />
+    <item type="id" name="progress_layout" />
     <item type="id" name="progress_loader_about" />
     <item type="id" name="progress_loader_business_info" />
     <item type="id" name="progress_loader_contact" />
@@ -782,11 +622,6 @@
     <item type="id" name="progress_number" />
     <item type="id" name="progress_percent" />
     <item type="id" name="promotional_ads_footer_stub" />
-    <item type="id" name="quote_bar" />
-    <item type="id" name="quote_bar_fb_logo" />
-    <item type="id" name="quote_bar_share_button" />
-    <item type="id" name="quote_bar_stub" />
-    <item type="id" name="quote_bar_text" />
     <item type="id" name="radio" />
     <item type="id" name="radio_group_linear_layout" />
     <item type="id" name="radio_icon" />
@@ -801,7 +636,6 @@
     <item type="id" name="report_drawn" />
     <item type="id" name="retry_button" />
     <item type="id" name="retry_button_secondary" />
-    <item type="id" name="reward_ads_dynamic_footer" />
     <item type="id" name="reward_ads_footer_stub" />
     <item type="id" name="rex_bugreport_view_stub" />
     <item type="id" name="runtime_permissions_dialog_content" />
@@ -833,6 +667,7 @@
     <item type="id" name="save_non_transition_alpha" />
     <item type="id" name="save_overlay_view" />
     <item type="id" name="screenshot" />
+    <item type="id" name="screenshot_preview_overlay" />
     <item type="id" name="scrollIndicatorDown" />
     <item type="id" name="scrollIndicatorUp" />
     <item type="id" name="scrollView" />
@@ -843,13 +678,16 @@
     <item type="id" name="search_button" />
     <item type="id" name="search_close_btn" />
     <item type="id" name="search_edit_frame" />
+    <item type="id" name="search_fragment_bottom_sheet" />
     <item type="id" name="search_go_btn" />
     <item type="id" name="search_mag_icon" />
     <item type="id" name="search_plate" />
+    <item type="id" name="search_right_button_divider_wrapper" />
     <item type="id" name="search_src_text" />
     <item type="id" name="search_voice_btn" />
     <item type="id" name="secondary_chrome" />
-    <item type="id" name="secured_indicator" />
+    <item type="id" name="secure_web_view" />
+    <item type="id" name="security_icon_wrapper" />
     <item type="id" name="security_info_popup_window_content_text" />
     <item type="id" name="security_info_popup_window_learn_more_button" />
     <item type="id" name="security_info_popup_window_security_icon" />
@@ -857,14 +695,6 @@
     <item type="id" name="select_dialog_listview" />
     <item type="id" name="selected_image_indicator" />
     <item type="id" name="settingsFragment" />
-    <item type="id" name="shimmer_large_creative" />
-    <item type="id" name="shimmer_large_text_content" />
-    <item type="id" name="shimmer_large_text_header" />
-    <item type="id" name="shimmer_small_text_content1" />
-    <item type="id" name="shimmer_small_text_content2" />
-    <item type="id" name="shimmer_small_text_content3" />
-    <item type="id" name="shimmer_small_text_header" />
-    <item type="id" name="shimmer_top_nav_bar" />
     <item type="id" name="shops_lite_disclaimer_divider" />
     <item type="id" name="shops_lite_disclaimer_layout" />
     <item type="id" name="shops_lite_disclaimer_stub" />
@@ -885,6 +715,7 @@
     <item type="id" name="static_action_moreinfo" />
     <item type="id" name="static_action_refresh" />
     <item type="id" name="static_action_share" />
+    <item type="id" name="status_bar_overlay" />
     <item type="id" name="step_description" />
     <item type="id" name="step_number" />
     <item type="id" name="steps_container" />
@@ -894,6 +725,7 @@
     <item type="id" name="submit_area" />
     <item type="id" name="subtitle_view" />
     <item type="id" name="subtitle_view_text" />
+    <item type="id" name="system_nav_bar_overlay" />
     <item type="id" name="tag_accessibility_actions" />
     <item type="id" name="tag_accessibility_clickable_spans" />
     <item type="id" name="tag_accessibility_heading" />
@@ -932,7 +764,6 @@
     <item type="id" name="title_text_view" />
     <item type="id" name="title_textview" />
     <item type="id" name="titlebar" />
-    <item type="id" name="today_in_cta" />
     <item type="id" name="toolbar" />
     <item type="id" name="topImage" />
     <item type="id" name="topPanel" />
@@ -940,6 +771,7 @@
     <item type="id" name="top_controlls" />
     <item type="id" name="tos_view" />
     <item type="id" name="touch_event_forwarding_view" />
+    <item type="id" name="touch_outside" />
     <item type="id" name="touch_view" />
     <item type="id" name="transcription" />
     <item type="id" name="transition_current_scene" />

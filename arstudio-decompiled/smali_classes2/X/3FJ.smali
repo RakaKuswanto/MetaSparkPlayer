@@ -1,46 +1,18 @@
-.class public final LX/3FJ;
+.class public final LX/3Fj;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/3Hr;
+.field public A00:LX/2n1;
 
-.field public final A01:Lcom/google/common/collect/ImmutableMap;
+.field public A01:LX/0I2;
 
-.field public final A02:Ljava/lang/Class;
+.field public A02:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/3Hr;Lcom/google/common/collect/ImmutableMap;)V
-    .locals 1
-
-    .line 268435456
-    const-class v0, Lcom/facebook/auth/login/ui/FirstPartySsoFragment;
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    iput-object p2, p0, LX/3FJ;->A01:Lcom/google/common/collect/ImmutableMap;
-
-    .line 268435462
-    .line 268435463
-    iput-object p1, p0, LX/3FJ;->A00:LX/3Hr;
-
-    .line 268435464
-    .line 268435465
-    iput-object v0, p0, LX/3FJ;->A02:Ljava/lang/Class;
-
-    .line 268435466
-    .line 268435467
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/facebook/auth/login/ui/AuthStateMachineConfig$ParcelableConfigInformation;LX/3Hr;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -49,25 +21,49 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p1, Lcom/facebook/auth/login/ui/AuthStateMachineConfig$ParcelableConfigInformation;->A00:Lcom/google/common/collect/ImmutableMap;
+    invoke-static {}, LX/2I6;->A0B()LX/0I2;
 
     .line 4
     .line 5
-    iput-object v0, p0, LX/3FJ;->A01:Lcom/google/common/collect/ImmutableMap;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    iget-object v0, p1, Lcom/facebook/auth/login/ui/AuthStateMachineConfig$ParcelableConfigInformation;->A01:Ljava/lang/Class;
+    iput-object v0, p0, LX/3Fj;->A01:LX/0I2;
 
     .line 8
     .line 9
-    iput-object v0, p0, LX/3FJ;->A02:Ljava/lang/Class;
+    sget v0, LX/2I6;->A3e:I
 
     .line 10
     .line 11
-    iput-object p2, p0, LX/3FJ;->A00:LX/3Hr;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 12
     .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    check-cast v0, LX/2n1;
+
+    .line 16
+    .line 17
+    iput-object v0, p0, LX/3Fj;->A00:LX/2n1;
+
+    .line 18
+    .line 19
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    iput-object v0, p0, LX/3Fj;->A02:LX/0RP;
+
+    .line 24
+    .line 25
     return-void
 .end method

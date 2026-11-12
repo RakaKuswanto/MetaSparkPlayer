@@ -8,6 +8,7 @@
         <item>Поиск</item>
         <item>Уведомления</item>
         <item>Вкладка \"Актуальное\"</item>
+        <item>Истории</item>
         <item>Другое</item>
     </string-array>
 </resources>

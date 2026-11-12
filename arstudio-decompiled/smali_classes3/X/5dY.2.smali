@@ -3,16 +3,44 @@
 .source ""
 
 # interfaces
-.implements LX/5dn;
+.implements LX/5cW;
 
 
-# instance fields
-.field public final A00:LX/5dn;
+# static fields
+.field public static final A00:LX/6Xn;
 
 
 # direct methods
-.method public constructor <init>(LX/5dn;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    sget-object v2, LX/5dZ;->A00:LX/5dZ;
+
+    .line 1
+    .line 2
+    const-string v1, "kotlin.Char"
+
+    .line 3
+    .line 4
+    new-instance v0, LX/6b8;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v1, v2}, LX/6b8;-><init>(Ljava/lang/String;LX/6bU;)V
+
+    .line 7
+    .line 8
+    .line 9
+    sput-object v0, LX/5dY;->A00:LX/6Xn;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -20,196 +48,49 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5dY;->A00:LX/5dn;
-
-    .line 4
-    .line 5
-    sget-object v1, LX/5dF;->A00:LX/5gV;
-
-    .line 6
-    .line 7
-    invoke-interface {p1, v1}, LX/5dn;->AQ2(LX/5gV;)Z
-
-    .line 8
-    .line 9
-    .line 10
-    move-result v0
-
-    .line 11
-    if-eqz v0, :cond_0
-
-    .line 12
-    .line 13
-    iget-object v0, p0, LX/5dY;->A00:LX/5dn;
-
-    .line 14
-    .line 15
-    invoke-interface {v0, v1}, LX/5dn;->ADS(LX/5gV;)LX/5gJ;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v1
-
-    .line 19
-    check-cast v1, LX/5dF;
-
-    .line 20
-    .line 21
-    const/4 v0, 0x3
-
-    .line 22
-    invoke-interface {v1, v0}, LX/5dF;->AlN(I)V
-
-    .line 23
-    .line 24
-    .line 25
-    :cond_0
     return-void
-.end method
-
-.method public static A00(LX/5dY;LX/5gS;)LX/5et;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, LX/5dY;->A00:LX/5dn;
-
-    .line 1
-    .line 2
-    invoke-interface {p0, p1}, LX/5dn;->ADR(LX/5gS;)LX/5gT;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object p0
-
-    .line 6
-    check-cast p0, LX/5et;
-
-    .line 7
-    .line 8
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final A5j(Ljava/lang/String;)V
+.method public final bridge synthetic A7J(LX/5dV;)Ljava/lang/Object;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/5dY;->A00:LX/5dn;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/5dn;->A5j(Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
+    invoke-interface {p1}, LX/5dV;->A6l()C
+
     .line 5
-    return-void
-.end method
-
-.method public final ADR(LX/5gS;)LX/5gT;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5dY;->A00:LX/5dn;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/5dn;->ADR(LX/5gS;)LX/5gT;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
     .line 6
-    return-object v0
-.end method
-
-.method public final ADS(LX/5gV;)LX/5gJ;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5dY;->A00:LX/5dn;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/5dn;->ADS(LX/5gV;)LX/5gJ;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final AQ2(LX/5gV;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5dY;->A00:LX/5dn;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/5dn;->AQ2(LX/5gV;)Z
-
-    .line 3
-    .line 4
-    .line 5
+    .line 7
     move-result v0
 
-    .line 6
-    return v0
+    .line 8
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
 .end method
 
-.method public final destroy()V
+.method public final AD9()LX/6Xn;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/5dY;->A00:LX/5dn;
+    sget-object v0, LX/5dY;->A00:LX/6Xn;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5dn;->destroy()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final pause()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5dY;->A00:LX/5dn;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/5dn;->pause()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final resume()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5dY;->A00:LX/5dn;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/5dn;->resume()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    return-object v0
 .end method

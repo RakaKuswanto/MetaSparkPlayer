@@ -2,66 +2,112 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "GatewayClientHandler$post$1"
+.field public static final A04:LX/3gs;
+
+.field public static final A05:Ljava/util/concurrent/locks/ReentrantLock;
+
+.field public static volatile A06:LX/3gr;
 
 
 # instance fields
-.field public final synthetic A00:LX/3fb;
+.field public A00:LX/3gN;
 
-.field public final synthetic A01:Ljava/lang/Runnable;
+.field public final A01:LX/3gS;
+
+.field public final A02:LX/3gS;
+
+.field public final A03:LX/3gS;
 
 
 # direct methods
-.method public constructor <init>(LX/3fb;Ljava/lang/Runnable;)V
-    .locals 0
-
-    iput-object p1, p0, LX/3gr;->A00:LX/3fb;
-
-    iput-object p2, p0, LX/3gr;->A01:Ljava/lang/Runnable;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 5
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iget-object v4, p0, LX/3gr;->A00:LX/3fb;
+    new-instance v0, LX/3gs;
 
     .line 1
     .line 2
-    iget-wide v2, v4, LX/3fb;->A00:J
+    invoke-direct {v0}, LX/3gs;-><init>()V
 
     .line 3
     .line 4
-    const-wide/16 v0, 0x1
-
     .line 5
-    .line 6
-    add-long/2addr v2, v0
+    sput-object v0, LX/3gr;->A04:LX/3gs;
 
+    .line 6
     .line 7
-    iput-wide v2, v4, LX/3fb;->A00:J
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 8
     .line 9
-    iget-object v0, p0, LX/3gr;->A01:Ljava/lang/Runnable;
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     .line 10
     .line 11
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    .line 12
+    sput-object v0, LX/3gr;->A05:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    const/4 v0, 0x5
+
+    .line 4
+    invoke-static {p0, v0}, LX/3gF;->A00(Ljava/lang/Object;I)LX/5ad;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    iput-object v0, p0, LX/3gr;->A02:LX/3gS;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x6
+
+    .line 11
+    invoke-static {p0, v0}, LX/3gF;->A00(Ljava/lang/Object;I)LX/5ad;
 
     .line 12
     .line 13
     .line 14
+    move-result-object v0
+
+    .line 15
+    iput-object v0, p0, LX/3gr;->A03:LX/3gS;
+
+    .line 16
+    .line 17
+    const/4 v0, 0x4
+
+    .line 18
+    invoke-static {p0, v0}, LX/3gF;->A00(Ljava/lang/Object;I)LX/5ad;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    iput-object v0, p0, LX/3gr;->A01:LX/3gS;
+
+    .line 23
+    .line 24
     return-void
 .end method

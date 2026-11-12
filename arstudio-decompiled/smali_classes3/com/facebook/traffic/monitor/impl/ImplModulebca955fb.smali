@@ -1,5 +1,5 @@
 .class public Lcom/facebook/traffic/monitor/impl/ImplModulebca955fb;
-.super LX/6Bw;
+.super LX/6Qz;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/6Bw;-><init>()V
+    invoke-direct {p0}, LX/6Qz;-><init>()V
 
     .line 1
     .line 2

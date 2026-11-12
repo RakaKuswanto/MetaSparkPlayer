@@ -1,53 +1,41 @@
-.class public final LX/2xO;
-.super Ljava/lang/Object;
+.class public final LX/2Xo;
+.super LX/3HQ;
 .source ""
 
 
-# instance fields
-.field public A00:J
-
-.field public A01:LX/1xH;
-
-.field public A02:Lcom/google/common/collect/ImmutableList$Builder;
-
-.field public final synthetic A03:Lcom/facebook/analytics/ClientPeriodicEventReporterManager;
-
-
 # direct methods
-.method public constructor <init>(Lcom/facebook/analytics/ClientPeriodicEventReporterManager;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
-    iput-object p1, p0, LX/2xO;->A03:Lcom/facebook/analytics/ClientPeriodicEventReporterManager;
+    sget v0, LX/2I6;->A8N:I
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 3
     .line 4
     .line 5
-    const/4 v0, 0x0
+    move-result-object v1
 
     .line 6
-    iput-object v0, p0, LX/2xO;->A01:LX/1xH;
+    check-cast v1, LX/2ic;
 
     .line 7
     .line 8
-    iput-object v0, p0, LX/2xO;->A02:Lcom/google/common/collect/ImmutableList$Builder;
+    invoke-static {}, LX/2I6;->A0G()LX/2eD;
 
     .line 9
     .line 10
-    const-wide v0, 0x7fffffffffffffffL
-
     .line 11
+    move-result-object v0
+
     .line 12
+    invoke-direct {p0, v0, v1}, LX/3HQ;-><init>(LX/2eD;LX/2ic;)V
+
     .line 13
     .line 14
     .line 15
-    iput-wide v0, p0, LX/2xO;->A00:J
-
-    .line 16
-    .line 17
     return-void
 .end method

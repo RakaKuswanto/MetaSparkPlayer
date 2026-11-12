@@ -1,102 +1,95 @@
-.class public final LX/4Pj;
-.super LX/4Ps;
+.class public LX/4pj;
+.super LX/4ph;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/util/Calendar;
+# static fields
+.field public static A00:Z = true
 
-.field public final A01:Ljava/util/Calendar;
-
-.field public final synthetic A02:LX/4PV;
+.field public static A01:Z = true
 
 
 # direct methods
-.method public constructor <init>(LX/4PV;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4Pj;->A02:LX/4PV;
+    invoke-direct {p0}, LX/4ph;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/4Ps;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    invoke-static {}, LX/4BD;->A0q()Ljava/util/Calendar;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/4Pj;->A01:Ljava/util/Calendar;
-
-    .line 10
-    .line 11
-    invoke-static {}, LX/4BD;->A0q()Ljava/util/Calendar;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/4Pj;->A00:Ljava/util/Calendar;
-
-    .line 16
-    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;LX/4tq;)V
+.method public A01(Landroid/graphics/Matrix;Landroid/view/View;)V
     .locals 1
 
     .line 0
-    iget-object v0, p2, Landroidx/recyclerview/widget/RecyclerView;->A0F:LX/4sv;
+    sget-boolean v0, LX/4pj;->A00:Z
 
     .line 1
     .line 2
-    instance-of v0, v0, LX/4PT;
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    if-eqz v0, :cond_0
+    :try_start_0
+    invoke-virtual {p2, p1}, Landroid/view/View;->transformMatrixToGlobal(Landroid/graphics/Matrix;)V
 
     .line 5
     .line 6
-    iget-object v0, p2, Landroidx/recyclerview/widget/RecyclerView;->A0H:LX/4ta;
-
     .line 7
+    return-void
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 8
-    instance-of v0, v0, Landroidx/recyclerview/widget/GridLayoutManager;
+    :catch_0
+    const/4 v0, 0x0
 
     .line 9
+    sput-boolean v0, LX/4pj;->A00:Z
+
     .line 10
+    .line 11
+    :cond_0
+    return-void
+.end method
+
+.method public A02(Landroid/graphics/Matrix;Landroid/view/View;)V
+    .locals 1
+
+    .line 0
+    sget-boolean v0, LX/4pj;->A01:Z
+
+    .line 1
+    .line 2
     if-eqz v0, :cond_0
 
+    .line 3
+    .line 4
+    :try_start_0
+    invoke-virtual {p2, p1}, Landroid/view/View;->transformMatrixToLocal(Landroid/graphics/Matrix;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 8
+    :catch_0
+    const/4 v0, 0x0
+
+    .line 9
+    sput-boolean v0, LX/4pj;->A01:Z
+
+    .line 10
     .line 11
-    .line 12
-    const-string v0, "getSelectedRanges"
-
-    .line 13
-    .line 14
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    throw v0
-
-    .line 19
     :cond_0
     return-void
 .end method

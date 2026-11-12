@@ -3,89 +3,133 @@
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/lang/String;
+# instance fields
+.field public A00:Landroid/net/Uri;
 
-.field public static final A01:[Ljava/lang/String;
+.field public A01:Ljava/util/List;
+
+.field public A02:Ljava/util/Map;
+
+.field public A03:Ljava/util/UUID;
+
+.field public A04:Z
+
+.field public A05:Z
+
+.field public A06:Z
+
+.field public A07:[B
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    .line 0
-    const/4 v0, 0x0
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    new-array v0, v0, [Ljava/lang/String;
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
-    .line 2
-    .line 3
-    sput-object v0, LX/5R0;->A01:[Ljava/lang/String;
-
-    .line 4
-    .line 5
-    const-string v1, "scenario"
-
-    .line 6
-    .line 7
-    const/4 v0, 0x0
-
-    .line 8
-    invoke-static {v1, v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 9
-    .line 10
-    .line 11
+    .line 268435460
+    .line 268435461
+    .line 268435462
     move-result-object v0
 
-    .line 12
-    sput-object v0, LX/5R0;->A00:Ljava/lang/String;
+    .line 268435463
+    iput-object v0, p0, LX/5R0;->A02:Ljava/util/Map;
 
-    .line 13
-    .line 14
+    .line 268435464
+    .line 268435465
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    .line 268435466
+    .line 268435467
+    .line 268435468
+    move-result-object v0
+
+    .line 268435469
+    iput-object v0, p0, LX/5R0;->A01:Ljava/util/List;
+
+    .line 268435470
+    .line 268435471
     return-void
 .end method
 
-.method public static A00(Ljava/lang/String;)[Ljava/lang/String;
+.method public constructor <init>(LX/5Qz;)V
     .locals 1
 
     .line 0
-    if-eqz p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
-
     .line 3
+    iget-object v0, p1, LX/5Qz;->A05:Ljava/util/UUID;
+
     .line 4
     .line 5
-    move-result v0
+    iput-object v0, p0, LX/5R0;->A03:Ljava/util/UUID;
 
     .line 6
-    if-nez v0, :cond_0
-
     .line 7
+    iget-object v0, p1, LX/5Qz;->A00:Landroid/net/Uri;
+
     .line 8
-    const-string v0, ",,,"
-
     .line 9
-    .line 10
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    iput-object v0, p0, LX/5R0;->A00:Landroid/net/Uri;
 
+    .line 10
     .line 11
+    iget-object v0, p1, LX/5Qz;->A03:Ljava/util/Map;
+
     .line 12
     .line 13
-    move-result-object v0
+    iput-object v0, p0, LX/5R0;->A02:Ljava/util/Map;
 
     .line 14
-    return-object v0
-
     .line 15
-    :cond_0
-    sget-object v0, LX/5R0;->A01:[Ljava/lang/String;
+    iget-boolean v0, p1, LX/5Qz;->A08:Z
 
     .line 16
     .line 17
-    return-object v0
+    iput-boolean v0, p0, LX/5R0;->A05:Z
+
+    .line 18
+    .line 19
+    iget-boolean v0, p1, LX/5Qz;->A09:Z
+
+    .line 20
+    .line 21
+    iput-boolean v0, p0, LX/5R0;->A06:Z
+
+    .line 22
+    .line 23
+    iget-boolean v0, p1, LX/5Qz;->A07:Z
+
+    .line 24
+    .line 25
+    iput-boolean v0, p0, LX/5R0;->A04:Z
+
+    .line 26
+    .line 27
+    iget-object v0, p1, LX/5Qz;->A01:Ljava/util/List;
+
+    .line 28
+    .line 29
+    iput-object v0, p0, LX/5R0;->A01:Ljava/util/List;
+
+    .line 30
+    .line 31
+    iget-object v0, p1, LX/5Qz;->A0A:[B
+
+    .line 32
+    .line 33
+    iput-object v0, p0, LX/5R0;->A07:[B
+
+    .line 34
+    .line 35
+    return-void
 .end method

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<X.4KI android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<X.3vZ android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <X.4Rn android:id="@id/autofill_layout_sliding_group" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    <X.4bx android:id="@id/autofill_layout_sliding_group" android:layout_width="fill_parent" android:layout_height="fill_parent"
       xmlns:android="http://schemas.android.com/apk/res/android">
         <LinearLayout android:gravity="center_horizontal" android:layout_gravity="top" android:orientation="vertical" android:id="@id/autofill_layout" android:background="@drawable/bottom_sheet_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
           xmlns:android="http://schemas.android.com/apk/res/android">
             <ViewStub android:id="@id/autofill_header_stub" android:inflatedId="@id/autofill_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
             <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
-                <X.4NV android:orientation="vertical" android:id="@id/autofill_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                <X.4Ea android:orientation="vertical" android:id="@id/autofill_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
             </androidx.core.widget.NestedScrollView>
             <include layout="@layout/layout_iab_autofill_data_migration_disclosure" />
-            <X.4Ll android:id="@id/autofill_select_button_group" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <X.4D5 android:id="@id/autofill_select_button_group" android:layout_width="fill_parent" android:layout_height="wrap_content" />
         </LinearLayout>
-    </X.4Rn>
-    <X.4Ll android:layout_gravity="bottom" android:id="@id/sticky_autofill_select_button_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</X.4KI>
+    </X.4bx>
+    <X.4D5 android:layout_gravity="bottom" android:id="@id/sticky_autofill_select_button_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</X.3vZ>

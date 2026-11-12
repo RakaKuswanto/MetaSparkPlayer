@@ -1,80 +1,44 @@
 .class public final LX/4VD;
-.super Ljava/lang/Object;
+.super LX/4VE;
 .source ""
 
-# interfaces
-.implements LX/4Vv;
 
-
-# instance fields
-.field public final synthetic A00:LX/4V4;
+# static fields
+.field public static final A00:LX/4VD;
 
 
 # direct methods
-.method public constructor <init>(LX/4V4;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/4VD;->A00:LX/4V4;
+    new-instance v0, LX/4VD;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, LX/4VD;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AXQ(Lcom/google/android/material/textfield/TextInputLayout;I)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p1, Lcom/google/android/material/textfield/TextInputLayout;->A0G:Landroid/widget/EditText;
-
-    .line 1
-    .line 2
-    if-eqz v1, :cond_0
-
-    .line 3
-    .line 4
-    const/4 v0, 0x1
-
-    .line 5
-    if-ne p2, v0, :cond_0
+    sput-object v0, LX/4VD;->A00:LX/4VD;
 
     .line 6
     .line 7
-    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
+    return-void
+.end method
 
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 11
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+    .line 0
+    const/4 v0, 0x0
 
-    .line 12
-    .line 13
-    .line 14
-    new-instance v0, LX/4VS;
+    .line 1
+    invoke-direct {p0, v0}, LX/4VE;-><init>(LX/4VH;)V
 
-    .line 15
-    .line 16
-    invoke-direct {v0, v1, p0}, LX/4VS;-><init>(Landroid/widget/EditText;LX/4VD;)V
-
-    .line 17
-    .line 18
-    .line 19
-    invoke-virtual {v1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    .line 20
-    .line 21
-    .line 22
-    :cond_0
+    .line 2
+    .line 3
+    .line 4
     return-void
 .end method

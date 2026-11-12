@@ -1,314 +1,423 @@
-.class public final enum LX/53A;
-.super Ljava/lang/Enum;
+.class public final LX/53A;
+.super LX/4PI;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/53A;
-
-.field public static final enum BASELINE:LX/53A;
-
-.field public static final enum BOTTOM:LX/53A;
-
-.field public static final enum CENTER:LX/53A;
-
-.field public static final enum CENTER_X:LX/53A;
-
-.field public static final enum CENTER_Y:LX/53A;
-
-.field public static final enum LEFT:LX/53A;
-
-.field public static final enum NONE:LX/53A;
-
-.field public static final enum RIGHT:LX/53A;
-
-.field public static final enum TOP:LX/53A;
+# instance fields
+.field public final synthetic A00:LX/52y;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 16
-
-    .line 0
-    const-string v0, "NONE"
-
-    .line 1
-    .line 2
-    const/4 v15, 0x0
-
-    .line 3
-    new-instance v14, LX/53A;
-
-    .line 4
-    .line 5
-    invoke-direct {v14, v0, v15}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    sput-object v14, LX/53A;->NONE:LX/53A;
-
-    .line 9
-    .line 10
-    const-string v0, "LEFT"
-
-    .line 11
-    .line 12
-    const/4 v13, 0x1
-
-    .line 13
-    new-instance v12, LX/53A;
-
-    .line 14
-    .line 15
-    invoke-direct {v12, v0, v13}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v12, LX/53A;->LEFT:LX/53A;
-
-    .line 19
-    .line 20
-    const-string v0, "TOP"
-
-    .line 21
-    .line 22
-    const/4 v11, 0x2
-
-    .line 23
-    new-instance v10, LX/53A;
-
-    .line 24
-    .line 25
-    invoke-direct {v10, v0, v11}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v10, LX/53A;->TOP:LX/53A;
-
-    .line 29
-    .line 30
-    const-string v0, "RIGHT"
-
-    .line 31
-    .line 32
-    const/4 v9, 0x3
-
-    .line 33
-    new-instance v8, LX/53A;
-
-    .line 34
-    .line 35
-    invoke-direct {v8, v0, v9}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v8, LX/53A;->RIGHT:LX/53A;
-
-    .line 39
-    .line 40
-    const-string v0, "BOTTOM"
-
-    .line 41
-    .line 42
-    const/4 v7, 0x4
-
-    .line 43
-    new-instance v6, LX/53A;
-
-    .line 44
-    .line 45
-    invoke-direct {v6, v0, v7}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 46
-    .line 47
-    .line 48
-    sput-object v6, LX/53A;->BOTTOM:LX/53A;
-
-    .line 49
-    .line 50
-    const-string v1, "BASELINE"
-
-    .line 51
-    .line 52
-    const/4 v0, 0x5
-
-    .line 53
-    new-instance v5, LX/53A;
-
-    .line 54
-    .line 55
-    invoke-direct {v5, v1, v0}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 56
-    .line 57
-    .line 58
-    sput-object v5, LX/53A;->BASELINE:LX/53A;
-
-    .line 59
-    .line 60
-    const-string v1, "CENTER"
-
-    .line 61
-    .line 62
-    const/4 v0, 0x6
-
-    .line 63
-    new-instance v4, LX/53A;
-
-    .line 64
-    .line 65
-    invoke-direct {v4, v1, v0}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 66
-    .line 67
-    .line 68
-    sput-object v4, LX/53A;->CENTER:LX/53A;
-
-    .line 69
-    .line 70
-    const-string v1, "CENTER_X"
-
-    .line 71
-    .line 72
-    const/4 v0, 0x7
-
-    .line 73
-    new-instance v3, LX/53A;
-
-    .line 74
-    .line 75
-    invoke-direct {v3, v1, v0}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 76
-    .line 77
-    .line 78
-    sput-object v3, LX/53A;->CENTER_X:LX/53A;
-
-    .line 79
-    .line 80
-    const-string v0, "CENTER_Y"
-
-    .line 81
-    .line 82
-    const/16 v2, 0x8
-
-    .line 83
-    .line 84
-    new-instance v1, LX/53A;
-
-    .line 85
-    .line 86
-    invoke-direct {v1, v0, v2}, LX/53A;-><init>(Ljava/lang/String;I)V
-
-    .line 87
-    .line 88
-    .line 89
-    sput-object v1, LX/53A;->CENTER_Y:LX/53A;
-
-    .line 90
-    .line 91
-    const/16 v0, 0x9
-
-    .line 92
-    .line 93
-    new-array v0, v0, [LX/53A;
-
-    .line 94
-    .line 95
-    aput-object v14, v0, v15
-
-    .line 96
-    .line 97
-    aput-object v12, v0, v13
-
-    .line 98
-    .line 99
-    aput-object v10, v0, v11
-
-    .line 100
-    .line 101
-    aput-object v8, v0, v9
-
-    .line 102
-    .line 103
-    aput-object v6, v0, v7
-
-    .line 104
-    .line 105
-    invoke-static {v5, v4, v3, v0}, LX/0Yc;->A1O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 106
-    .line 107
-    .line 108
-    aput-object v1, v0, v2
-
-    .line 109
-    .line 110
-    sput-object v0, LX/53A;->$VALUES:[LX/53A;
-
-    .line 111
-    .line 112
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Landroid/os/Looper;LX/52y;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p2, p0, LX/53A;->A00:LX/52y;
 
     .line 1
     .line 2
+    invoke-direct {p0, p1}, LX/4PI;-><init>(Landroid/os/Looper;)V
+
     .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/53A;
-    .locals 1
+
+# virtual methods
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 6
 
     .line 0
-    const-class v0, LX/53A;
+    iget v1, p1, Landroid/os/Message;->what:I
 
     .line 1
     .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v2, 0x1
 
     .line 3
+    if-eq v1, v2, :cond_1
+
     .line 4
     .line 5
-    move-result-object v0
+    const/4 v0, 0x2
 
     .line 6
-    check-cast v0, LX/53A;
+    if-eq v1, v0, :cond_0
 
     .line 7
     .line 8
-    return-object v0
-.end method
+    const-string v0, "Unknown message id: "
 
-.method public static values()[LX/53A;
-    .locals 1
+    .line 9
+    .line 10
+    invoke-static {v0, v1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
-    .line 0
-    sget-object v0, LX/53A;->$VALUES:[LX/53A;
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v1
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 14
+    const-string v0, "GACStateManager"
 
-    .line 3
-    .line 4
-    .line 5
+    .line 15
+    .line 16
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+
+    .line 20
+    :cond_0
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    check-cast v0, Ljava/lang/Throwable;
+
+    .line 23
+    .line 24
+    throw v0
+
+    .line 25
+    :cond_1
+    iget-object v5, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    check-cast v5, LX/54N;
+
+    .line 28
+    .line 29
+    iget-object v0, p0, LX/53A;->A00:LX/52y;
+
+    .line 30
+    .line 31
+    iget-object v3, v0, LX/52y;->A0D:Ljava/util/concurrent/locks/Lock;
+
+    .line 32
+    .line 33
+    invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    .line 34
+    .line 35
+    .line 36
+    :try_start_0
+    iget-object v1, v0, LX/52y;->A0E:LX/53e;
+
+    .line 37
+    .line 38
+    iget-object v0, v5, LX/54N;->A00:LX/53e;
+
+    .line 39
+    .line 40
+    if-ne v1, v0, :cond_8
+
+    .line 41
+    .line 42
+    instance-of v0, v5, LX/536;
+
+    .line 43
+    .line 44
+    if-eqz v0, :cond_3
+
+    .line 45
+    .line 46
+    check-cast v5, LX/536;
+
+    .line 47
+    .line 48
+    iget-object v4, v5, LX/536;->A00:LX/52z;
+
+    .line 49
+    .line 50
+    iget-object v1, v5, LX/536;->A01:Lcom/google/android/gms/signin/internal/zak;
+
+    .line 51
+    .line 52
+    const/4 v0, 0x0
+
+    .line 53
+    invoke-static {v4, v0}, LX/52z;->A07(LX/52z;I)Z
+
+    .line 54
+    .line 55
+    .line 56
+    move-result v0
+
+    .line 57
+    if-eqz v0, :cond_8
+
+    .line 58
+    .line 59
+    iget-object v5, v1, Lcom/google/android/gms/signin/internal/zak;->A01:Lcom/google/android/gms/common/ConnectionResult;
+
+    .line 60
+    .line 61
+    iget v0, v5, Lcom/google/android/gms/common/ConnectionResult;->A01:I
+
+    .line 62
+    .line 63
+    if-nez v0, :cond_2
+
+    .line 64
+    .line 65
+    iget-object v1, v1, Lcom/google/android/gms/signin/internal/zak;->A02:Lcom/google/android/gms/common/internal/zav;
+
+    .line 66
+    .line 67
+    invoke-static {v1}, LX/4va;->A03(Ljava/lang/Object;)V
+
+    .line 68
+    .line 69
+    .line 70
+    iget-object v5, v1, Lcom/google/android/gms/common/internal/zav;->A02:Lcom/google/android/gms/common/ConnectionResult;
+
+    .line 71
+    .line 72
+    iget v0, v5, Lcom/google/android/gms/common/ConnectionResult;->A01:I
+
+    .line 73
+    .line 74
+    if-nez v0, :cond_5
+
+    .line 75
+    .line 76
+    iput-boolean v2, v4, LX/52z;->A04:Z
+
+    .line 77
+    .line 78
+    invoke-virtual {v1}, Lcom/google/android/gms/common/internal/zav;->A00()Lcom/google/android/gms/common/internal/IAccountAccessor;
+
+    .line 79
+    .line 80
+    .line 81
     move-result-object v0
 
-    .line 6
-    check-cast v0, [LX/53A;
+    .line 82
+    invoke-static {v0}, LX/4va;->A03(Ljava/lang/Object;)V
 
-    .line 7
-    .line 8
-    return-object v0
+    .line 83
+    .line 84
+    .line 85
+    iput-object v0, v4, LX/52z;->A00:Lcom/google/android/gms/common/internal/IAccountAccessor;
+
+    .line 86
+    .line 87
+    iget-boolean v0, v1, Lcom/google/android/gms/common/internal/zav;->A03:Z
+
+    .line 88
+    .line 89
+    iput-boolean v0, v4, LX/52z;->A05:Z
+
+    .line 90
+    .line 91
+    iget-boolean v0, v1, Lcom/google/android/gms/common/internal/zav;->A04:Z
+
+    .line 92
+    .line 93
+    iput-boolean v0, v4, LX/52z;->A06:Z
+
+    .line 94
+    .line 95
+    :goto_0
+    invoke-static {v4}, LX/52z;->A04(LX/52z;)V
+
+    .line 96
+    .line 97
+    .line 98
+    goto :goto_2
+
+    .line 99
+    :cond_2
+    iget-boolean v0, v4, LX/52z;->A02:Z
+
+    .line 100
+    .line 101
+    if-eqz v0, :cond_6
+
+    .line 102
+    .line 103
+    iget-object v0, v5, Lcom/google/android/gms/common/ConnectionResult;->A02:Landroid/app/PendingIntent;
+
+    .line 104
+    .line 105
+    if-nez v0, :cond_6
+
+    .line 106
+    .line 107
+    invoke-static {v4}, LX/52z;->A03(LX/52z;)V
+
+    .line 108
+    .line 109
+    .line 110
+    goto :goto_0
+
+    .line 111
+    :cond_3
+    instance-of v0, v5, LX/53l;
+
+    .line 112
+    .line 113
+    if-eqz v0, :cond_4
+
+    .line 114
+    .line 115
+    check-cast v5, LX/53l;
+
+    .line 116
+    .line 117
+    const/16 v2, 0x10
+
+    .line 118
+    .line 119
+    const/4 v0, 0x0
+
+    .line 120
+    new-instance v1, Lcom/google/android/gms/common/ConnectionResult;
+
+    .line 121
+    .line 122
+    invoke-direct {v1, v0, v2}, Lcom/google/android/gms/common/ConnectionResult;-><init>(Landroid/app/PendingIntent;I)V
+
+    .line 123
+    .line 124
+    .line 125
+    iget-object v0, v5, LX/53l;->A00:LX/54t;
+
+    .line 126
+    .line 127
+    invoke-interface {v0, v1}, LX/54t;->AaR(Lcom/google/android/gms/common/ConnectionResult;)V
+
+    .line 128
+    .line 129
+    .line 130
+    goto :goto_2
+
+    .line 131
+    :cond_4
+    instance-of v0, v5, LX/53m;
+
+    .line 132
+    .line 133
+    if-eqz v0, :cond_7
+
+    .line 134
+    .line 135
+    check-cast v5, LX/53m;
+
+    .line 136
+    .line 137
+    iget-object v0, v5, LX/53m;->A01:LX/531;
+
+    .line 138
+    .line 139
+    iget-object v4, v0, LX/531;->A01:LX/52z;
+
+    .line 140
+    .line 141
+    iget-object v5, v5, LX/53m;->A00:Lcom/google/android/gms/common/ConnectionResult;
+
+    .line 142
+    .line 143
+    goto :goto_1
+
+    .line 144
+    :cond_5
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 145
+    .line 146
+    .line 147
+    move-result-object v0
+
+    .line 148
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 149
+    .line 150
+    .line 151
+    move-result-object v1
+
+    .line 152
+    new-instance v2, Ljava/lang/Exception;
+
+    .line 153
+    .line 154
+    invoke-direct {v2}, Ljava/lang/Exception;-><init>()V
+
+    .line 155
+    .line 156
+    .line 157
+    const-string v0, "Sign-in succeeded with resolve account failure: "
+
+    .line 158
+    .line 159
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 160
+    .line 161
+    .line 162
+    move-result-object v1
+
+    .line 163
+    const-string v0, "GACConnecting"
+
+    .line 164
+    .line 165
+    invoke-static {v0, v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 166
+    .line 167
+    .line 168
+    :cond_6
+    :goto_1
+    invoke-static {v5, v4}, LX/52z;->A02(Lcom/google/android/gms/common/ConnectionResult;LX/52z;)V
+
+    .line 169
+    .line 170
+    .line 171
+    goto :goto_2
+
+    .line 172
+    :cond_7
+    check-cast v5, LX/53z;
+
+    .line 173
+    .line 174
+    iget-object v0, v5, LX/53z;->A00:LX/534;
+
+    .line 175
+    .line 176
+    invoke-virtual {v0, v2}, LX/534;->Aqr(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 177
+    .line 178
+    .line 179
+    :cond_8
+    :goto_2
+    invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 180
+    .line 181
+    .line 182
+    return-void
+
+    .line 183
+    :catchall_0
+    move-exception v0
+
+    .line 184
+    invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 185
+    .line 186
+    .line 187
+    throw v0
 .end method

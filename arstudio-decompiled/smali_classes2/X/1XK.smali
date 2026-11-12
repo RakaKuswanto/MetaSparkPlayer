@@ -1,10 +1,6 @@
-.class public final LX/1XK;
+.class public final LX/1xK;
 .super Ljava/lang/Object;
 .source ""
-
-
-# static fields
-.field public static A00:Lcom/facebook/msys/mci/NotificationCenter;
 
 
 # direct methods

@@ -6,31 +6,110 @@
 # static fields
 .field public static final synthetic $VALUES:[LX/384;
 
-.field public static final enum INTERRUPTION_REQUIREMENT_MET:LX/384;
+.field public static final enum CONTENT:LX/384;
 
-.field public static final enum SURFACE_CHANGE:LX/384;
+.field public static final enum FILE:LX/384;
+
+.field public static final enum HTTP:LX/384;
+
+.field public static final enum HTTPS:LX/384;
+
+.field public static final enum MSYS:LX/384;
+
+.field public static final enum MSYS_LEGACY:LX/384;
+
+.field public static final enum UNSUPPORTED:LX/384;
 
 
 # direct methods
-.method public static final synthetic $values()[LX/384;
+.method public static synthetic $values()[LX/384;
     .locals 3
 
-    const/4 v0, 0x2
+    .line 0
+    const/4 v0, 0x7
 
+    .line 1
     new-array v2, v0, [LX/384;
 
-    sget-object v1, LX/384;->SURFACE_CHANGE:LX/384;
+    .line 2
+    .line 3
+    sget-object v1, LX/384;->HTTPS:LX/384;
 
+    .line 4
+    .line 5
     const/4 v0, 0x0
 
+    .line 6
     aput-object v1, v2, v0
 
-    sget-object v1, LX/384;->INTERRUPTION_REQUIREMENT_MET:LX/384;
+    .line 7
+    .line 8
+    sget-object v1, LX/384;->HTTP:LX/384;
 
+    .line 9
+    .line 10
     const/4 v0, 0x1
 
+    .line 11
     aput-object v1, v2, v0
 
+    .line 12
+    .line 13
+    sget-object v1, LX/384;->CONTENT:LX/384;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, LX/384;->MSYS:LX/384;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    sget-object v1, LX/384;->MSYS_LEGACY:LX/384;
+
+    .line 24
+    .line 25
+    const/4 v0, 0x4
+
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
+    .line 28
+    sget-object v1, LX/384;->FILE:LX/384;
+
+    .line 29
+    .line 30
+    const/4 v0, 0x5
+
+    .line 31
+    aput-object v1, v2, v0
+
+    .line 32
+    .line 33
+    sget-object v1, LX/384;->UNSUPPORTED:LX/384;
+
+    .line 34
+    .line 35
+    const/4 v0, 0x6
+
+    .line 36
+    aput-object v1, v2, v0
+
+    .line 37
+    .line 38
     return-object v2
 .end method
 
@@ -38,7 +117,7 @@
     .locals 3
 
     .line 0
-    const-string v2, "SURFACE_CHANGE"
+    const-string v2, "HTTPS"
 
     .line 1
     .line 2
@@ -54,11 +133,11 @@
     .line 6
     .line 7
     .line 8
-    sput-object v0, LX/384;->SURFACE_CHANGE:LX/384;
+    sput-object v0, LX/384;->HTTPS:LX/384;
 
     .line 9
     .line 10
-    const-string v2, "INTERRUPTION_REQUIREMENT_MET"
+    const-string v2, "HTTP"
 
     .line 11
     .line 12
@@ -74,22 +153,122 @@
     .line 16
     .line 17
     .line 18
-    sput-object v0, LX/384;->INTERRUPTION_REQUIREMENT_MET:LX/384;
+    sput-object v0, LX/384;->HTTP:LX/384;
 
     .line 19
     .line 20
-    invoke-static {}, LX/384;->$values()[LX/384;
+    const-string v2, "CONTENT"
 
     .line 21
     .line 22
+    const/4 v1, 0x2
+
     .line 23
-    move-result-object v0
+    new-instance v0, LX/384;
 
     .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/384;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/384;->CONTENT:LX/384;
+
+    .line 29
+    .line 30
+    const-string v2, "MSYS"
+
+    .line 31
+    .line 32
+    const/4 v1, 0x3
+
+    .line 33
+    new-instance v0, LX/384;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1}, LX/384;-><init>(Ljava/lang/String;I)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, LX/384;->MSYS:LX/384;
+
+    .line 39
+    .line 40
+    const-string v2, "MSYS_LEGACY"
+
+    .line 41
+    .line 42
+    const/4 v1, 0x4
+
+    .line 43
+    new-instance v0, LX/384;
+
+    .line 44
+    .line 45
+    invoke-direct {v0, v2, v1}, LX/384;-><init>(Ljava/lang/String;I)V
+
+    .line 46
+    .line 47
+    .line 48
+    sput-object v0, LX/384;->MSYS_LEGACY:LX/384;
+
+    .line 49
+    .line 50
+    const-string v2, "FILE"
+
+    .line 51
+    .line 52
+    const/4 v1, 0x5
+
+    .line 53
+    new-instance v0, LX/384;
+
+    .line 54
+    .line 55
+    invoke-direct {v0, v2, v1}, LX/384;-><init>(Ljava/lang/String;I)V
+
+    .line 56
+    .line 57
+    .line 58
+    sput-object v0, LX/384;->FILE:LX/384;
+
+    .line 59
+    .line 60
+    const-string v2, "UNSUPPORTED"
+
+    .line 61
+    .line 62
+    const/4 v1, 0x6
+
+    .line 63
+    new-instance v0, LX/384;
+
+    .line 64
+    .line 65
+    invoke-direct {v0, v2, v1}, LX/384;-><init>(Ljava/lang/String;I)V
+
+    .line 66
+    .line 67
+    .line 68
+    sput-object v0, LX/384;->UNSUPPORTED:LX/384;
+
+    .line 69
+    .line 70
+    invoke-static {}, LX/384;->$values()[LX/384;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v0
+
+    .line 74
     sput-object v0, LX/384;->$VALUES:[LX/384;
 
-    .line 25
-    .line 26
+    .line 75
+    .line 76
     return-void
 .end method
 
@@ -108,27 +287,45 @@
 .method public static valueOf(Ljava/lang/String;)LX/384;
     .locals 1
 
+    .line 0
     const-class v0, LX/384;
 
+    .line 1
+    .line 2
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
+    .line 6
     check-cast v0, LX/384;
 
+    .line 7
+    .line 8
     return-object v0
 .end method
 
 .method public static values()[LX/384;
     .locals 1
 
+    .line 0
     sget-object v0, LX/384;->$VALUES:[LX/384;
 
+    .line 1
+    .line 2
     invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
+    .line 6
     check-cast v0, [LX/384;
 
+    .line 7
+    .line 8
     return-object v0
 .end method

@@ -17,7 +17,7 @@
 
 
 # static fields
-.field public static volatile A04:LX/10v;
+.field public static volatile A04:LX/1GF;
 
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -27,7 +27,7 @@
 
 .field public final A01:I
 
-.field public final A02:LX/10v;
+.field public final A02:LX/1GF;
 
 .field public final A03:Ljava/util/Set;
 
@@ -37,11 +37,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5d
+    const/16 v0, 0x43
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -56,12 +56,12 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/10v;Ljava/util/Set;FI)V
+.method public constructor <init>(LX/1GF;Ljava/util/Set;FI)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A02:LX/10v;
+    iput-object p1, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A02:LX/1GF;
 
     iput p4, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A01:I
 
@@ -85,7 +85,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -101,7 +101,7 @@
 
     .line 10
     :goto_0
-    iput-object v0, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A02:LX/10v;
+    iput-object v0, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A02:LX/1GF;
 
     .line 11
     .line 12
@@ -129,7 +129,7 @@
 
     .line 23
     .line 24
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 25
     .line 26
@@ -153,60 +153,61 @@
 
     .line 34
     .line 35
-    invoke-static {p1, v2, v0}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v2}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 36
     .line 37
     .line 38
-    move-result v0
+    add-int/lit8 v0, v0, 0x1
 
     .line 39
+    .line 40
     goto :goto_1
 
-    .line 40
-    :cond_0
-    invoke-static {}, LX/10v;->values()[LX/10v;
-
     .line 41
+    :cond_0
+    invoke-static {}, LX/1GF;->values()[LX/1GF;
+
     .line 42
     .line 43
+    .line 44
     move-result-object v1
 
-    .line 44
+    .line 45
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 45
     .line 46
     .line 47
+    .line 48
     move-result v0
 
-    .line 48
+    .line 49
     aget-object v0, v1, v0
 
-    .line 49
     .line 50
+    .line 51
     goto :goto_0
 
-    .line 51
+    .line 52
     :cond_1
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 52
     .line 53
     .line 54
+    .line 55
     move-result-object v0
 
-    .line 55
+    .line 56
     iput-object v0, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A03:Ljava/util/Set;
 
-    .line 56
     .line 57
+    .line 58
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()LX/10v;
+.method public final A00()LX/1GF;
     .locals 2
 
     .line 0
@@ -214,83 +215,84 @@
 
     .line 1
     .line 2
-    const-string v0, "brushType"
+    const-string/jumbo v0, "brushType"
 
     .line 3
     .line 4
+    .line 5
     invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    .line 5
     .line 6
     .line 7
+    .line 8
     move-result v0
 
-    .line 8
+    .line 9
     if-eqz v0, :cond_0
 
-    .line 9
     .line 10
-    iget-object v0, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A02:LX/10v;
-
     .line 11
+    iget-object v0, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A02:LX/1GF;
+
     .line 12
+    .line 13
     return-object v0
 
-    .line 13
-    :cond_0
-    sget-object v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A04:LX/10v;
-
     .line 14
+    :cond_0
+    sget-object v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A04:LX/1GF;
+
     .line 15
+    .line 16
     if-nez v0, :cond_2
 
-    .line 16
     .line 17
+    .line 18
     monitor-enter p0
 
-    .line 18
-    :try_start_0
-    sget-object v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A04:LX/10v;
-
     .line 19
+    :try_start_0
+    sget-object v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A04:LX/1GF;
+
     .line 20
+    .line 21
     if-nez v0, :cond_1
 
-    .line 21
     .line 22
-    sget-object v0, LX/10v;->INVALID:LX/10v;
-
     .line 23
-    .line 24
-    sput-object v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A04:LX/10v;
+    sget-object v0, LX/1GF;->INVALID:LX/1GF;
 
+    .line 24
     .line 25
+    sput-object v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A04:LX/1GF;
+
     .line 26
+    .line 27
     :cond_1
     monitor-exit p0
 
-    .line 27
+    .line 28
     goto :goto_0
 
-    .line 28
+    .line 29
     :catchall_0
     move-exception v0
 
-    .line 29
+    .line 30
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 30
+    .line 31
     throw v0
 
-    .line 31
+    .line 32
     :cond_2
     :goto_0
-    sget-object v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A04:LX/10v;
+    sget-object v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A04:LX/1GF;
 
-    .line 32
     .line 33
+    .line 34
     return-object v0
 .end method
 
@@ -328,7 +330,7 @@
 
     .line 9
     .line 10
-    invoke-virtual {p0}, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A00()LX/10v;
+    invoke-virtual {p0}, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A00()LX/1GF;
 
     .line 11
     .line 12
@@ -336,7 +338,7 @@
     move-result-object v1
 
     .line 14
-    invoke-virtual {p1}, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A00()LX/10v;
+    invoke-virtual {p1}, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A00()LX/1GF;
 
     .line 15
     .line 16
@@ -388,7 +390,7 @@
     .locals 2
 
     .line 0
-    invoke-virtual {p0}, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A00()LX/10v;
+    invoke-virtual {p0}, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A00()LX/1GF;
 
     .line 1
     .line 2
@@ -396,7 +398,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
     .line 5
     .line 6
@@ -423,7 +425,7 @@
 
     .line 16
     .line 17
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 18
     .line 19
@@ -438,11 +440,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A02:LX/10v;
+    iget-object v0, p0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;->A02:LX/1GF;
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yh;->A01(Landroid/os/Parcel;Ljava/lang/Enum;)I
+    invoke-static {p1, v0}, LX/0X1;->A00(Landroid/os/Parcel;Ljava/lang/Enum;)I
 
     .line 3
     .line 4
@@ -477,7 +479,7 @@
 
     .line 20
     .line 21
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
     .line 22
     .line 23
@@ -498,7 +500,7 @@
 
     .line 30
     .line 31
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 32
     .line 33

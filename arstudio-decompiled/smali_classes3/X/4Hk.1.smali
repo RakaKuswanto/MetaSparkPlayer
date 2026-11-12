@@ -3,143 +3,114 @@
 .source ""
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "SwipeDismissBehavior$SettleRunnable"
 
 
 # instance fields
-.field public final synthetic A00:I
+.field public final A00:Landroid/view/View;
 
-.field public final synthetic A01:Landroid/view/View;
+.field public final A01:Z
 
-.field public final synthetic A02:Landroid/view/ViewGroup$MarginLayoutParams;
-
-.field public final synthetic A03:LX/4Hi;
+.field public final synthetic A02:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroid/view/ViewGroup$MarginLayoutParams;LX/4Hi;I)V
+.method public constructor <init>(Landroid/view/View;Lcom/google/android/material/behavior/SwipeDismissBehavior;Z)V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/4Hk;->A02:Landroid/view/ViewGroup$MarginLayoutParams;
+    iput-object p2, p0, LX/4Hk;->A02:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
     .line 1
     .line 2
-    iput p4, p0, LX/4Hk;->A00:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    iput-object p1, p0, LX/4Hk;->A01:Landroid/view/View;
-
     .line 5
+    iput-object p1, p0, LX/4Hk;->A00:Landroid/view/View;
+
     .line 6
-    iput-object p3, p0, LX/4Hk;->A03:LX/4Hi;
-
     .line 7
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p3, p0, LX/4Hk;->A01:Z
 
+    .line 8
     .line 9
-    .line 10
-    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final run()V
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/4Hk;->A03:LX/4Hi;
+    iget-object v1, p0, LX/4Hk;->A02:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
     .line 1
     .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    iput-boolean v0, v1, LX/4Hi;->A01:Z
-
-    .line 4
-    .line 5
-    invoke-static {v1, v0}, LX/4Hi;->A00(LX/4Hi;Z)V
-
-    .line 6
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 4
-
-    .line 0
-    iget-object v1, p0, LX/4Hk;->A02:Landroid/view/ViewGroup$MarginLayoutParams;
-
-    .line 1
-    .line 2
-    iget v0, p0, LX/4Hk;->A00:I
+    iget-object v0, v1, Lcom/google/android/material/behavior/SwipeDismissBehavior;->A03:LX/4Q1;
 
     .line 3
     .line 4
-    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    if-eqz v0, :cond_1
 
     .line 5
     .line 6
-    iget-object v0, p0, LX/4Hk;->A01:Landroid/view/View;
+    invoke-virtual {v0}, LX/4Q1;->A0E()Z
 
     .line 7
     .line 8
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
     .line 9
+    move-result v0
+
     .line 10
+    if-eqz v0, :cond_1
+
     .line 11
-    iget-object v3, p0, LX/4Hk;->A03:LX/4Hi;
-
     .line 12
-    .line 13
-    const/4 v2, 0x1
+    iget-object v0, p0, LX/4Hk;->A00:Landroid/view/View;
 
+    .line 13
     .line 14
-    iput-boolean v2, v3, LX/4Hi;->A01:Z
+    invoke-virtual {v0, p0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
 
     .line 15
     .line 16
-    iget-object v1, v3, LX/4Hi;->A04:LX/4GN;
-
     .line 17
+    :cond_0
+    return-void
+
     .line 18
-    if-eqz v1, :cond_0
+    :cond_1
+    iget-boolean v0, p0, LX/4Hk;->A01:Z
 
     .line 19
     .line 20
-    const-string v0, "BONDI_BOTTOM_TOOLBAR_ENGAGEMENT"
+    if-eqz v0, :cond_0
 
     .line 21
     .line 22
-    invoke-interface {v1, v0}, LX/4GN;->AeK(Ljava/lang/String;)V
+    iget-object v1, v1, Lcom/google/android/material/behavior/SwipeDismissBehavior;->A04:LX/4Hl;
 
     .line 23
     .line 24
-    .line 25
-    :cond_0
-    invoke-static {v3, v2}, LX/4Hi;->A00(LX/4Hi;Z)V
+    if-eqz v1, :cond_0
 
+    .line 25
     .line 26
+    iget-object v0, p0, LX/4Hk;->A00:Landroid/view/View;
+
     .line 27
     .line 28
+    invoke-interface {v1, v0}, LX/4Hl;->AVU(Landroid/view/View;)V
+
+    .line 29
+    .line 30
+    .line 31
     return-void
 .end method

@@ -1,57 +1,152 @@
 .class public final LX/56r;
-.super LX/58n;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/56Y;
 
 
 # instance fields
-.field public final A00:LX/56K;
+.field public final synthetic A00:Lcom/google/gson/TypeAdapter;
+
+.field public final synthetic A01:Ljava/lang/Class;
+
+.field public final synthetic A02:Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;LX/59O;LX/59W;LX/56Y;LX/56K;)V
-    .locals 7
+.method public constructor <init>(Lcom/google/gson/TypeAdapter;Ljava/lang/Class;Ljava/lang/Class;)V
+    .locals 0
 
     .line 0
-    const/16 v6, 0x10e
+    iput-object p2, p0, LX/56r;->A02:Ljava/lang/Class;
 
     .line 1
     .line 2
-    move-object v0, p0
+    iput-object p3, p0, LX/56r;->A01:Ljava/lang/Class;
 
     .line 3
-    move-object v1, p1
-
     .line 4
-    move-object v2, p2
+    iput-object p1, p0, LX/56r;->A00:Lcom/google/gson/TypeAdapter;
 
     .line 5
-    move-object v3, p3
-
     .line 6
-    move-object v4, p4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
-    move-object v5, p5
-
     .line 8
-    invoke-direct/range {v0 .. v6}, LX/58n;-><init>(Landroid/content/Context;Landroid/os/Looper;LX/59O;LX/59W;LX/56Y;I)V
-
     .line 9
-    .line 10
-    .line 11
-    iput-object p6, p0, LX/56r;->A00:LX/56K;
-
-    .line 12
-    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final AIo()I
-    .locals 1
+.method public final create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
+    .locals 2
 
-    const v0, 0xc1fa340
+    .line 0
+    iget-object v1, p2, Lcom/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
 
-    return v0
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/56r;->A02:Ljava/lang/Class;
+
+    .line 3
+    .line 4
+    if-eq v1, v0, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/56r;->A01:Ljava/lang/Class;
+
+    .line 7
+    .line 8
+    if-eq v1, v0, :cond_0
+
+    .line 9
+    .line 10
+    const/4 v0, 0x0
+
+    .line 11
+    return-object v0
+
+    .line 12
+    :cond_0
+    iget-object v0, p0, LX/56r;->A00:Lcom/google/gson/TypeAdapter;
+
+    .line 13
+    .line 14
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    const-string v0, "Factory[type="
+
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/56r;->A01:Ljava/lang/Class;
+
+    .line 10
+    .line 11
+    invoke-static {v0, v1}, LX/431;->A19(Ljava/lang/Class;Ljava/lang/StringBuilder;)V
+
+    .line 12
+    .line 13
+    .line 14
+    const-string v0, "+"
+
+    .line 15
+    .line 16
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 17
+    .line 18
+    .line 19
+    iget-object v0, p0, LX/56r;->A02:Ljava/lang/Class;
+
+    .line 20
+    .line 21
+    invoke-static {v0, v1}, LX/431;->A19(Ljava/lang/Class;Ljava/lang/StringBuilder;)V
+
+    .line 22
+    .line 23
+    .line 24
+    const-string v0, ",adapter="
+
+    .line 25
+    .line 26
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 27
+    .line 28
+    .line 29
+    iget-object v0, p0, LX/56r;->A00:Lcom/google/gson/TypeAdapter;
+
+    .line 30
+    .line 31
+    invoke-static {v0, v1}, LX/431;->A0g(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
+
+    .line 35
+    return-object v0
 .end method

@@ -44,11 +44,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x4c
+    const/16 v0, 0x44
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -269,7 +269,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -299,21 +299,18 @@
 
     .line 13
     .line 14
-    iget-object v1, p0, Lcom/facebook/growth/model/Contactpoint;->isoCountryCode:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/growth/model/Contactpoint;->isoCountryCode:Ljava/lang/String;
 
     .line 15
     .line 16
-    const/4 v0, 0x2
+    invoke-static {v2, v0}, LX/0X4;->A07([Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 17
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
-
     .line 18
     .line 19
-    .line 20
     move-result v0
 
-    .line 21
+    .line 20
     return v0
 .end method
 
@@ -334,7 +331,7 @@
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 8
     .line 9

@@ -1,60 +1,26 @@
-.class public final LX/53E;
+.class public interface abstract LX/53e;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:F
+# virtual methods
+.method public abstract Aqg(LX/51I;)LX/51I;
+.end method
 
-.field public A01:F
+.method public abstract Aqk()V
+.end method
 
-.field public A02:I
+.method public abstract Aqm()V
+.end method
 
-.field public A03:I
+.method public abstract Aqp(Landroid/os/Bundle;)V
+.end method
 
-.field public A04:Z
+.method public abstract Aqq(Lcom/google/android/gms/common/ConnectionResult;LX/51N;Z)V
+.end method
 
+.method public abstract Aqr(I)V
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    iput-boolean v0, p0, LX/53E;->A04:Z
-
-    .line 5
-    .line 6
-    iput v0, p0, LX/53E;->A03:I
-
-    .line 7
-    .line 8
-    iput v0, p0, LX/53E;->A02:I
-
-    .line 9
-    .line 10
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    .line 11
-    .line 12
-    iput v0, p0, LX/53E;->A00:F
-
-    .line 13
-    .line 14
-    const/high16 v0, 0x7fc00000    # Float.NaN
-
-    .line 15
-    .line 16
-    iput v0, p0, LX/53E;->A01:F
-
-    .line 17
-    .line 18
-    return-void
+.method public abstract Aqs()Z
 .end method

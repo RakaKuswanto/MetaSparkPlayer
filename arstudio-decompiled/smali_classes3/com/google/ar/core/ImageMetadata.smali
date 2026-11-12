@@ -278,7 +278,7 @@
 
 .field public final session:Lcom/google/ar/core/Session;
 
-.field public final sketchEntry:LX/5JH;
+.field public final sketchEntry:LX/59c;
 
 
 # direct methods
@@ -297,7 +297,7 @@
 
     iput-wide v0, p0, Lcom/google/ar/core/ImageMetadata;->nativeSymbolTableHandle:J
 
-    iput-object v2, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iput-object v2, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     return-void
 .end method
@@ -327,23 +327,23 @@
 
     .line 10
     .line 11
-    new-instance v0, LX/5JH;
+    new-instance v0, LX/59c;
 
     .line 12
     .line 13
-    invoke-direct {v0}, LX/5JH;-><init>()V
+    invoke-direct {v0}, LX/59c;-><init>()V
 
     .line 14
     .line 15
     .line 16
-    iput-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iput-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 17
     .line 18
     return-void
 .end method
 
-.method private getMetdataEntry(ILX/5JH;)V
+.method private getMetdataEntry(ILX/59c;)V
     .locals 12
 
     .line 0
@@ -373,7 +373,7 @@
     move-result-wide v2
 
     .line 12
-    iput-wide v2, p2, LX/5JH;->A02:J
+    iput-wide v2, p2, LX/59c;->A02:J
 
     .line 13
     .line 14
@@ -405,7 +405,7 @@
     move-result v0
 
     .line 28
-    iput v0, p2, LX/5JH;->A00:I
+    iput v0, p2, LX/59c;->A00:I
 
     .line 29
     .line 30
@@ -417,7 +417,7 @@
 
     .line 33
     .line 34
-    iget-wide v0, p2, LX/5JH;->A02:J
+    iget-wide v0, p2, LX/59c;->A02:J
 
     .line 35
     .line 36
@@ -429,7 +429,7 @@
     move-result v0
 
     .line 40
-    iput v0, p2, LX/5JH;->A01:I
+    iput v0, p2, LX/59c;->A01:I
 
     .line 41
     .line 42
@@ -437,7 +437,7 @@
 
     .line 43
     :cond_0
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 44
     .line 45
@@ -445,31 +445,26 @@
     move-result-object v1
 
     .line 47
-    invoke-static {v1, p1}, LX/0Yd;->A1U([Ljava/lang/Object;I)V
+    const/4 v0, 0x0
 
     .line 48
+    invoke-static {v1, p1, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+
     .line 49
     .line 50
+    .line 51
     const-string v0, "Invalid ImageMetadata key: %1$d"
 
-    .line 51
     .line 52
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
     .line 53
+    invoke-static {v0, v1}, LX/433;->A0h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/IllegalArgumentException;
+
     .line 54
     .line 55
-    move-result-object v0
-
     .line 56
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    move-result-object v0
 
     .line 57
-    .line 58
-    .line 59
-    move-result-object v0
-
-    .line 60
     throw v0
 .end method
 
@@ -562,11 +557,6 @@
     .line 12
     .line 13
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 14
-    .line 15
-    .line 16
     return-void
 .end method
 
@@ -574,20 +564,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v0, v4, LX/5JH;->A00:I
+    iget v0, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -598,7 +588,7 @@
 
     .line 11
     .line 12
-    iget v0, v4, LX/5JH;->A01:I
+    iget v0, v4, LX/59c;->A01:I
 
     .line 13
     .line 14
@@ -614,7 +604,7 @@
 
     .line 19
     .line 20
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 21
     .line 22
@@ -634,11 +624,11 @@
 
     .line 29
     .line 30
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 31
     .line 32
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 33
     .line 34
@@ -651,7 +641,7 @@
 
     .line 38
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 39
     .line 40
@@ -666,20 +656,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v1, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v1, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v0, v1, LX/5JH;->A00:I
+    iget v0, v1, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -695,7 +685,7 @@
 
     .line 14
     .line 15
-    iget-wide v0, v1, LX/5JH;->A02:J
+    iget-wide v0, v1, LX/59c;->A02:J
 
     .line 16
     .line 17
@@ -715,11 +705,11 @@
 
     .line 24
     .line 25
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 26
     .line 27
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 28
     .line 29
@@ -732,7 +722,7 @@
 
     .line 33
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 34
     .line 35
@@ -747,20 +737,20 @@
     .locals 6
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v2, v4, LX/5JH;->A00:I
+    iget v2, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -774,7 +764,7 @@
 
     .line 12
     .line 13
-    iget v0, v4, LX/5JH;->A01:I
+    iget v0, v4, LX/59c;->A01:I
 
     .line 14
     .line 15
@@ -790,7 +780,7 @@
 
     .line 20
     .line 21
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 22
     .line 23
@@ -810,11 +800,11 @@
 
     .line 30
     .line 31
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 32
     .line 33
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 34
     .line 35
@@ -827,7 +817,7 @@
 
     .line 39
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 40
     .line 41
@@ -842,20 +832,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v1, v4, LX/5JH;->A00:I
+    iget v1, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -874,7 +864,7 @@
 
     .line 15
     .line 16
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 17
     .line 18
@@ -894,11 +884,11 @@
 
     .line 25
     .line 26
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 27
     .line 28
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 29
     .line 30
@@ -911,7 +901,7 @@
 
     .line 34
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 35
     .line 36
@@ -926,20 +916,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v2, v4, LX/5JH;->A00:I
+    iget v2, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -953,7 +943,7 @@
 
     .line 12
     .line 13
-    iget v0, v4, LX/5JH;->A01:I
+    iget v0, v4, LX/59c;->A01:I
 
     .line 14
     .line 15
@@ -969,7 +959,7 @@
 
     .line 20
     .line 21
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 22
     .line 23
@@ -989,11 +979,11 @@
 
     .line 30
     .line 31
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 32
     .line 33
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 34
     .line 35
@@ -1006,7 +996,7 @@
 
     .line 39
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 40
     .line 41
@@ -1021,20 +1011,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v1, v4, LX/5JH;->A00:I
+    iget v1, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -1053,7 +1043,7 @@
 
     .line 15
     .line 16
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 17
     .line 18
@@ -1073,11 +1063,11 @@
 
     .line 25
     .line 26
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 27
     .line 28
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 29
     .line 30
@@ -1090,7 +1080,7 @@
 
     .line 34
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 35
     .line 36
@@ -1105,20 +1095,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v0, v4, LX/5JH;->A00:I
+    iget v0, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -1129,7 +1119,7 @@
 
     .line 11
     .line 12
-    iget v0, v4, LX/5JH;->A01:I
+    iget v0, v4, LX/59c;->A01:I
 
     .line 13
     .line 14
@@ -1145,7 +1135,7 @@
 
     .line 19
     .line 20
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 21
     .line 22
@@ -1165,11 +1155,11 @@
 
     .line 29
     .line 30
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 31
     .line 32
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 33
     .line 34
@@ -1182,7 +1172,7 @@
 
     .line 38
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 39
     .line 40
@@ -1197,20 +1187,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v1, v4, LX/5JH;->A00:I
+    iget v1, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -1229,7 +1219,7 @@
 
     .line 15
     .line 16
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 17
     .line 18
@@ -1249,11 +1239,11 @@
 
     .line 25
     .line 26
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 27
     .line 28
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 29
     .line 30
@@ -1266,7 +1256,7 @@
 
     .line 34
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 35
     .line 36
@@ -1329,20 +1319,20 @@
     .locals 6
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v5, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v5, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v4, v5, LX/5JH;->A00:I
+    iget v4, v5, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -1356,7 +1346,7 @@
 
     .line 12
     .line 13
-    iget v0, v5, LX/5JH;->A01:I
+    iget v0, v5, LX/59c;->A01:I
 
     .line 14
     .line 15
@@ -1372,7 +1362,7 @@
 
     .line 20
     .line 21
-    iget-wide v0, v5, LX/5JH;->A02:J
+    iget-wide v0, v5, LX/59c;->A02:J
 
     .line 22
     .line 23
@@ -1392,11 +1382,11 @@
 
     .line 30
     .line 31
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 32
     .line 33
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 34
     .line 35
@@ -1416,7 +1406,7 @@
     const/4 v0, 0x0
 
     .line 42
-    invoke-static {v2, p1, v0, v4, v3}, LX/0Yc;->A1V([Ljava/lang/Object;IIII)V
+    invoke-static {v2, p1, v0, v4, v3}, LX/0X1;->A1T([Ljava/lang/Object;IIII)V
 
     .line 43
     .line 44
@@ -1424,7 +1414,7 @@
     const/4 v1, 0x2
 
     .line 46
-    iget v0, v5, LX/5JH;->A01:I
+    iget v0, v5, LX/59c;->A01:I
 
     .line 47
     .line 48
@@ -1437,7 +1427,7 @@
 
     .line 52
     .line 53
-    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/433;->A0h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/IllegalArgumentException;
 
     .line 54
     .line 55
@@ -1445,14 +1435,6 @@
     move-result-object v0
 
     .line 57
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 58
-    .line 59
-    .line 60
-    move-result-object v0
-
-    .line 61
     throw v0
 .end method
 
@@ -1460,20 +1442,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v1, v4, LX/5JH;->A00:I
+    iget v1, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -1492,7 +1474,7 @@
 
     .line 15
     .line 16
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 17
     .line 18
@@ -1512,11 +1494,11 @@
 
     .line 25
     .line 26
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 27
     .line 28
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 29
     .line 30
@@ -1529,7 +1511,7 @@
 
     .line 34
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 35
     .line 36
@@ -1544,20 +1526,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v2, v4, LX/5JH;->A00:I
+    iget v2, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -1571,7 +1553,7 @@
 
     .line 12
     .line 13
-    iget v0, v4, LX/5JH;->A01:I
+    iget v0, v4, LX/59c;->A01:I
 
     .line 14
     .line 15
@@ -1587,7 +1569,7 @@
 
     .line 20
     .line 21
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 22
     .line 23
@@ -1607,11 +1589,11 @@
 
     .line 30
     .line 31
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 32
     .line 33
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 34
     .line 35
@@ -1624,7 +1606,7 @@
 
     .line 39
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 40
     .line 41
@@ -1639,20 +1621,20 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/5JH;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/ImageMetadata;->getMetdataEntry(ILX/59c;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v4, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 6
     .line 7
-    iget v1, v4, LX/5JH;->A00:I
+    iget v1, v4, LX/59c;->A00:I
 
     .line 8
     .line 9
@@ -1671,7 +1653,7 @@
 
     .line 15
     .line 16
-    iget-wide v0, v4, LX/5JH;->A02:J
+    iget-wide v0, v4, LX/59c;->A02:J
 
     .line 17
     .line 18
@@ -1691,11 +1673,11 @@
 
     .line 25
     .line 26
-    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/5JH;
+    iget-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:LX/59c;
 
     .line 27
     .line 28
-    iget-wide v0, v0, LX/5JH;->A02:J
+    iget-wide v0, v0, LX/59c;->A02:J
 
     .line 29
     .line 30
@@ -1708,7 +1690,7 @@
 
     .line 34
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0W(I)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, LX/431;->A0S(I)Ljava/lang/IllegalArgumentException;
 
     .line 35
     .line 36

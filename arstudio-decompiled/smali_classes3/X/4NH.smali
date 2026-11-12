@@ -1,42 +1,35 @@
-.class public final LX/4NH;
+.class public abstract LX/4Nh;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4NK;
-
 
 # direct methods
-.method public constructor <init>()V
+.method public static A00(Landroid/view/ActionMode$Callback;Landroid/view/Window$Callback;I)Landroid/view/ActionMode;
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p1, p0, p2}, Landroid/view/Window$Callback;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AmM(Landroid/os/Bundle;Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 2
-
-    .line 0
-    invoke-static {p2}, LX/0Yj;->A00(Ljava/lang/Object;)D
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-wide v0
+    move-result-object p0
 
     .line 4
-    invoke-virtual {p1, p3, v0, v1}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+    return-object p0
+.end method
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
+.method public static A01(Landroid/view/SearchEvent;Landroid/view/Window$Callback;)Z
+    .locals 0
+
+    .line 0
+    invoke-interface {p1, p0}, Landroid/view/Window$Callback;->onSearchRequested(Landroid/view/SearchEvent;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
+
+    .line 4
+    return p0
 .end method

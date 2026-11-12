@@ -20,11 +20,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x19
+    const/16 v0, 0x54
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/58O;->A02(I)LX/58O;
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
 
     .line 3
     .line 4
@@ -69,7 +69,7 @@
     .locals 3
 
     .line 0
-    invoke-static {p1}, LX/57v;->A00(Landroid/os/Parcel;)I
+    invoke-static {p1}, LX/51b;->A00(Landroid/os/Parcel;)I
 
     .line 1
     .line 2
@@ -84,7 +84,7 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-static {p1, v0, v1}, LX/57v;->A04(Landroid/os/Parcel;II)V
+    invoke-static {p1, v0, v1}, LX/51b;->A03(Landroid/os/Parcel;II)V
 
     .line 8
     .line 9
@@ -96,7 +96,7 @@
     const/4 v0, 0x2
 
     .line 13
-    invoke-static {p1, v1, v0, p2}, LX/57v;->A07(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
+    invoke-static {p1, v1, v0, p2}, LX/51b;->A05(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
 
     .line 14
     .line 15
@@ -108,12 +108,12 @@
     const/4 v0, 0x3
 
     .line 19
-    invoke-static {p1, v1, v0, p2}, LX/57v;->A07(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
+    invoke-static {p1, v1, v0, p2}, LX/51b;->A05(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
 
     .line 20
     .line 21
     .line 22
-    invoke-static {p1, v2}, LX/57v;->A03(Landroid/os/Parcel;I)V
+    invoke-static {p1, v2}, LX/51b;->A02(Landroid/os/Parcel;I)V
 
     .line 23
     .line 24

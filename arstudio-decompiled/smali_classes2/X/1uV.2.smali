@@ -2,16 +2,19 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
-
 
 # instance fields
-.field public final A00:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final A00:LX/1uj;
+
+.field public final A01:LX/0lu;
+
+.field public final A02:LX/0lu;
+
+.field public final A03:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/1uj;)V
     .locals 1
 
     .line 0
@@ -20,59 +23,53 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yf;->A0q()Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p1, p0, LX/1uV;->A00:LX/1uj;
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    sget v0, LX/2I6;->A3K:I
 
-    .line 7
-    iput-object v0, p0, LX/1uV;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 2
-
-    .line 0
-    const-string v1, "FacebookSdk #"
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/1uV;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 3
-    .line 4
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    .line 5
     .line 6
     .line 7
-    move-result v0
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
     .line 8
-    invoke-static {v1, v0}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
-
     .line 9
     .line 10
+    move-result-object v0
+
     .line 11
-    move-result-object v1
+    iput-object v0, p0, LX/1uV;->A01:LX/0lu;
 
     .line 12
-    new-instance v0, Ljava/lang/Thread;
-
     .line 13
-    .line 14
-    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    invoke-static {}, LX/2I6;->A0R()LX/0lu;
 
+    .line 14
     .line 15
     .line 16
+    move-result-object v0
+
     .line 17
-    return-object v0
+    iput-object v0, p0, LX/1uV;->A02:LX/0lu;
+
+    .line 18
+    .line 19
+    sget v0, LX/2I6;->A4p:I
+
+    .line 20
+    .line 21
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    iput-object v0, p0, LX/1uV;->A03:LX/0lu;
+
+    .line 26
+    .line 27
+    return-void
 .end method

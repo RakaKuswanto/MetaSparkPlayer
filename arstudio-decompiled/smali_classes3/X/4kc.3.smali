@@ -1,29 +1,25 @@
 .class public final LX/4kc;
-.super Ljava/lang/Object;
+.super LX/4mM;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/4kG;
+# instance fields
+.field public final A00:F
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(F)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/4kR;
+    invoke-direct {p0}, LX/4mM;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/4kR;-><init>()V
-
     .line 3
+    iput p1, p0, LX/4kc;->A00:F
+
     .line 4
     .line 5
-    sput-object v0, LX/4kc;->A00:LX/4kG;
-
-    .line 6
-    .line 7
     return-void
 .end method

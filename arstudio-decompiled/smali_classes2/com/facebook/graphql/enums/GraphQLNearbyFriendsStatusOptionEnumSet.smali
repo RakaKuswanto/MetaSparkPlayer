@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0y()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A12()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -78,33 +78,34 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "WORK"
+    const-string/jumbo v0, "WORK"
 
     .line 31
     .line 32
+    .line 33
     aput-object v0, v2, v1
 
-    .line 33
     .line 34
+    .line 35
     const/4 v1, 0x6
 
-    .line 35
+    .line 36
     const-string v0, "GYM"
 
-    .line 36
     .line 37
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 38
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 39
     .line 40
+    .line 41
     move-result-object v0
 
-    .line 41
+    .line 42
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLNearbyFriendsStatusOptionEnumSet;->A00:Ljava/util/Set;
 
-    .line 42
     .line 43
+    .line 44
     return-void
 .end method
 

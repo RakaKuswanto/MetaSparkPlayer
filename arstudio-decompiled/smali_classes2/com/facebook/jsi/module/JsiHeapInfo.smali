@@ -227,7 +227,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 4
     .line 5
@@ -308,86 +308,90 @@
     move-result v0
 
     .line 31
-    invoke-static {v0, p1}, LX/0Yj;->A0P(ILjava/lang/String;)Ljava/lang/String;
+    add-int/lit8 v0, v0, 0x1
 
     .line 32
     .line 33
+    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
     .line 34
+    .line 35
+    .line 36
     move-result-object p1
 
-    .line 35
+    .line 37
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/facebook/jsi/module/JsiHeapInfo;->getStat(Ljava/lang/String;Ljava/lang/String;)J
 
-    .line 36
-    .line 37
     .line 38
+    .line 39
+    .line 40
     move-result-wide v0
 
-    .line 39
-    if-eqz v2, :cond_3
-
-    .line 40
     .line 41
-    invoke-static {v0, v1, p3, p4}, Ljava/lang/Math;->max(JJ)J
+    if-eqz v2, :cond_3
 
     .line 42
     .line 43
+    invoke-static {v0, v1, p3, p4}, Ljava/lang/Math;->max(JJ)J
+
     .line 44
+    .line 45
+    .line 46
     move-result-wide p3
 
-    .line 45
+    .line 47
     :goto_0
     iget-object v0, p0, Lcom/facebook/jsi/module/JsiHeapInfo;->mStats:Ljava/util/Map;
 
-    .line 46
-    .line 47
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 48
     .line 49
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 50
+    .line 51
+    .line 52
     move-result-object v1
 
-    .line 51
-    check-cast v1, Ljava/util/AbstractMap;
-
-    .line 52
     .line 53
-    if-nez v1, :cond_2
+    check-cast v1, Ljava/util/AbstractMap;
 
     .line 54
     .line 55
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    if-nez v1, :cond_2
 
     .line 56
     .line 57
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 58
+    .line 59
+    .line 60
     move-result-object v1
 
-    .line 59
-    iget-object v0, p0, Lcom/facebook/jsi/module/JsiHeapInfo;->mStats:Ljava/util/Map;
-
-    .line 60
     .line 61
-    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lcom/facebook/jsi/module/JsiHeapInfo;->mStats:Ljava/util/Map;
 
     .line 62
     .line 63
-    .line 64
-    :cond_2
-    invoke-static {p2, v1, p3, p4}, LX/0Ye;->A1N(Ljava/lang/Object;Ljava/util/AbstractMap;J)V
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 64
     .line 65
     .line 66
+    :cond_2
+    invoke-static {p2, v1, p3, p4}, LX/0X4;->A1B(Ljava/lang/Object;Ljava/util/AbstractMap;J)V
+
     .line 67
+    .line 68
+    .line 69
     return-void
 
-    .line 68
+    .line 70
     :cond_3
     add-long/2addr p3, v0
 
-    .line 69
+    .line 71
     goto :goto_0
 .end method
 
@@ -435,7 +439,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1}, LX/001;->A0X(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    invoke-static {v1}, LX/001;->A0e(Ljava/util/AbstractMap;)Ljava/util/Iterator;
 
     .line 21
     .line 22
@@ -456,53 +460,45 @@
 
     .line 29
     .line 30
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v2}, LX/0X3;->A0B(Ljava/util/Iterator;)J
 
     .line 31
     .line 32
     .line 33
-    move-result-object v0
-
-    .line 34
-    invoke-static {v0}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 35
-    .line 36
-    .line 37
     move-result-wide v0
 
-    .line 38
+    .line 34
     add-long/2addr v3, v0
 
-    .line 39
+    .line 35
     goto :goto_0
 
-    .line 40
+    .line 36
     :cond_0
     invoke-virtual {v1, p2}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 41
-    .line 42
-    .line 43
+    .line 37
+    .line 38
+    .line 39
     move-result-object v0
 
-    .line 44
+    .line 40
     check-cast v0, Ljava/lang/Number;
+
+    .line 41
+    .line 42
+    if-eqz v0, :cond_1
+
+    .line 43
+    .line 44
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
     .line 45
     .line 46
-    if-eqz v0, :cond_1
-
     .line 47
-    .line 48
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    .line 49
-    .line 50
-    .line 51
     move-result-wide v3
 
-    .line 52
+    .line 48
     :cond_1
     return-wide v3
 .end method

@@ -2,306 +2,517 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/util/List;
+.implements Ljava/io/Serializable;
+.implements Ljava/util/RandomAccess;
+.implements LX/0Wm;
+
+
+# static fields
+.field public static final A00:LX/0Gx;
+
+.field public static final serialVersionUID:J = -0x6690382f581f9fceL
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/0Gx;
+
+    invoke-direct {v0}, LX/0Gx;-><init>()V
+
+    sput-object v0, LX/0Gx;->A00:LX/0Gx;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
-    sparse-switch p0, :sswitch_data_0
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p0, "UNDEFINED_QPL_EVENT"
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
+.method private final readResolve()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/0Gx;->A00:LX/0Gx;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic add(ILjava/lang/Object;)V
+    .locals 1
+
+    .line 268435456
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
+    throw v0
+.end method
+
+.method public final bridge synthetic add(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final addAll(ILjava/util/Collection;)Z
+    .locals 1
+
+    .line 268435456
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
+    throw v0
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    return v0
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    .line 0
+    instance-of v0, p1, Ljava/util/List;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    check-cast p1, Ljava/util/List;
+
+    .line 5
+    .line 6
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v1
+
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    if-nez v1, :cond_1
+
+    .line 12
+    .line 13
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 14
+    :cond_1
+    return v0
+.end method
+
+.method public final bridge synthetic get(I)Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    const-string v0, "Empty list doesn\'t contain element at index "
+
+    .line 1
+    .line 2
+    const/16 v1, 0x2e
+
+    .line 3
+    .line 4
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {v0, v1}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    .line 16
+    .line 17
+    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    .line 18
+    .line 19
+    .line 20
+    throw v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final bridge indexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    .line 0
+    const/4 v0, -0x1
+
+    .line 1
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/0Gy;->A00:LX/0Gy;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final bridge lastIndexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    .line 0
+    const/4 v0, -0x1
+
+    .line 1
+    return v0
+.end method
+
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 1
+
+    .line 268435456
+    sget-object v0, LX/0Gy;->A00:LX/0Gy;
+
+    .line 268435457
+    .line 268435458
+    return-object v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 2
+
+    .line 0
+    if-nez p1, :cond_0
+
+    .line 1
+    .line 2
+    sget-object v0, LX/0Gy;->A00:LX/0Gy;
+
+    .line 3
+    .line 4
+    return-object v0
+
+    .line 5
+    :cond_0
+    const-string v0, "Index: "
+
+    .line 6
+    .line 7
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    .line 12
+    .line 13
+    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    throw v0
+.end method
+
+.method public final bridge synthetic remove(I)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 268435456
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
+    throw v0
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final bridge size()I
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    return v0
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 2
+
+    .line 0
+    if-nez p1, :cond_0
+
+    .line 1
+    .line 2
+    if-nez p2, :cond_0
+
+    .line 3
+    .line 4
     return-object p0
 
-    :sswitch_0
-    const-string p0, "FELIOS_PERCEPTION_PLANE_NORMAL_REACT_AR"
+    .line 5
+    :cond_0
+    const-string v0, "fromIndex: "
 
-    return-object p0
+    .line 6
+    .line 7
+    const-string v1, ", toIndex: "
 
-    :sswitch_1
-    const-string p0, "FELIOS_INSTANTIATE_PERSISTED_AUGMENT"
+    .line 8
+    .line 9
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
 
-    :sswitch_2
-    const-string p0, "FELIOS_ANCHOR_SPARK_STOP_CAPAS"
+    .line 13
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object p0
+    .line 14
+    .line 15
+    .line 16
+    invoke-static {v1, v0, p2}, LX/001;->A0P(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
-    :sswitch_3
-    const-string p0, "FELIOS_ASSET_LOADING"
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v1
 
-    return-object p0
+    .line 20
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    :sswitch_4
-    const-string p0, "FELIOS_REACT_EXTENSION_BLOCKING_INIT"
+    .line 21
+    .line 22
+    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    return-object p0
+    .line 23
+    .line 24
+    .line 25
+    throw v0
+.end method
 
-    :sswitch_5
-    const-string p0, "FELIOS_FRAME_DELTA_TIME"
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
 
-    return-object p0
+    invoke-static {p0}, LX/0WM;->A00(Ljava/util/Collection;)[Ljava/lang/Object;
 
-    :sswitch_6
-    const-string p0, "FELIOS_ANCHOR_SPARK_USERFACE_EVENT"
+    move-result-object v0
 
-    return-object p0
+    return-object v0
+.end method
 
-    :sswitch_7
-    const-string p0, "FELIOS_TIME_TO_FIRST_XR_FRAME"
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 1
 
-    return-object p0
+    const/4 v0, 0x0
 
-    :sswitch_8
-    const-string p0, "FELIOS_REACT_NODE_LOAD"
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    return-object p0
+    invoke-static {p0, p1}, LX/0WM;->A01(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
-    :sswitch_9
-    const-string p0, "FELIOS_ADD_AUGMENT_SEED_TO_GROUP"
+    move-result-object v0
 
-    return-object p0
+    return-object v0
+.end method
 
-    :sswitch_a
-    const-string p0, "FELIOS_ANCHOR_SPARK_START_CAPAS"
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-object p0
+    const-string v0, "[]"
 
-    :sswitch_b
-    const-string p0, "FELIOS_SHELL_FRAME_TIME_COPY"
-
-    return-object p0
-
-    :sswitch_c
-    const-string p0, "FELIOS_ANCHOR_SPARK_USERBODY_EVENT"
-
-    return-object p0
-
-    :sswitch_d
-    const-string p0, "FELIOS_UPDATE_AUGMENT"
-
-    return-object p0
-
-    :sswitch_e
-    const-string p0, "FELIOS_INTERACTION_LATENCY"
-
-    return-object p0
-
-    :sswitch_f
-    const-string p0, "FELIOS_UPDATE_ORCHESTRATED_AUGMENT"
-
-    return-object p0
-
-    :sswitch_10
-    const-string p0, "FELIOS_AUG_APP_TIME_TO_FIRST_EMPTY_FRAME"
-
-    return-object p0
-
-    :sswitch_11
-    const-string p0, "FELIOS_REACT_NODE_CREATE"
-
-    return-object p0
-
-    :sswitch_12
-    const-string p0, "FELIOS_ANCHOR_USERBODY_EVENT_INTVL"
-
-    return-object p0
-
-    :sswitch_13
-    const-string p0, "FELIOS_APP_START"
-
-    return-object p0
-
-    :sswitch_14
-    const-string p0, "FELIOS_PERCEPTION_SCENE_ANCHORS_REACT_AR"
-
-    return-object p0
-
-    :sswitch_15
-    const-string p0, "FELIOS_AUG_APP_TIME_TO_FIRST_CONTENT_FRAME"
-
-    return-object p0
-
-    :sswitch_16
-    const-string p0, "FELIOS_CAG_LATENCY"
-
-    return-object p0
-
-    :sswitch_17
-    const-string p0, "FELIOS_DESTROY_AUGMENT"
-
-    return-object p0
-
-    :sswitch_18
-    const-string p0, "FELIOS_UPADTE_AUGMENT_SEED_GROUP_METADATA"
-
-    return-object p0
-
-    :sswitch_19
-    const-string p0, "FELIOS_GET_AUGMENT_SEED"
-
-    return-object p0
-
-    :sswitch_1a
-    const-string p0, "FELIOS_SHELL_FRAME_TIME"
-
-    return-object p0
-
-    :sswitch_1b
-    const-string p0, "FELIOS_FRAME_PROCESSING"
-
-    return-object p0
-
-    :sswitch_1c
-    const-string p0, "FELIOS_REACT_NODE_UPDATE"
-
-    return-object p0
-
-    :sswitch_1d
-    const-string p0, "FELIOS_INSTANTIATE_AUGMENT"
-
-    return-object p0
-
-    :sswitch_1e
-    const-string p0, "FELIOS_TIME_TO_FIRST_PERSISTED_AUGMENT"
-
-    return-object p0
-
-    :sswitch_1f
-    const-string p0, "FELIOS_INPUT_LATENCY"
-
-    return-object p0
-
-    :sswitch_20
-    const-string p0, "FELIOS_PERCEPTION_SCENE_QUERY_REACT_AR"
-
-    return-object p0
-
-    :sswitch_21
-    const-string p0, "FELIOS_UPADTE_AUGMENT_SEED_GROUP_ITEM"
-
-    return-object p0
-
-    :sswitch_22
-    const-string p0, "FELIOS_GESTURE_HIT_TEST"
-
-    return-object p0
-
-    :sswitch_23
-    const-string p0, "FELIOS_TIME_TO_FIRST_FRAME"
-
-    return-object p0
-
-    :sswitch_24
-    const-string p0, "FELIOS_SIMULATE"
-
-    return-object p0
-
-    :sswitch_25
-    const-string p0, "FELIOS_INPUT_UPDATE"
-
-    return-object p0
-
-    :sswitch_26
-    const-string p0, "FELIOS_MOVE_AUGMENT_SEED_GROUP_ITEM"
-
-    return-object p0
-
-    :sswitch_27
-    const-string p0, "FELIOS_TIME_TO_FIRST_CONTENT_FRAME"
-
-    return-object p0
-
-    :sswitch_28
-    const-string p0, "FELIOS_TIME_TO_FIRST_EMPTY_FRAME"
-
-    return-object p0
-
-    :sswitch_29
-    const-string p0, "FELIOS_RENDER_PER_EYE"
-
-    return-object p0
-
-    :sswitch_2a
-    const-string p0, "FELIOS_APP_START_COPY"
-
-    return-object p0
-
-    :sswitch_2b
-    const-string p0, "FELIOS_INPUT_INIT"
-
-    return-object p0
-
-    :sswitch_2c
-    const-string p0, "FELIOS_FRAME_PROCESSING_LATENCY"
-
-    return-object p0
-
-    :sswitch_2d
-    const-string p0, "FELIOS_CREATE_AUGMENT"
-
-    return-object p0
-
-    :sswitch_2e
-    const-string p0, "FELIOS_TIME_TO_INTERACT"
-
-    return-object p0
-
-    :sswitch_2f
-    const-string p0, "FELIOS_LIST_AUGMENT_SEED_GROUPS"
-
-    return-object p0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x5bf -> :sswitch_2f
-        0x73e -> :sswitch_2e
-        0x76c -> :sswitch_2d
-        0x7f3 -> :sswitch_2c
-        0xa65 -> :sswitch_2b
-        0xa99 -> :sswitch_2a
-        0xafb -> :sswitch_29
-        0xafd -> :sswitch_28
-        0xc7e -> :sswitch_27
-        0xe0f -> :sswitch_26
-        0xe81 -> :sswitch_25
-        0xf00 -> :sswitch_24
-        0xf78 -> :sswitch_23
-        0x1042 -> :sswitch_22
-        0x1098 -> :sswitch_21
-        0x145f -> :sswitch_20
-        0x15ae -> :sswitch_1f
-        0x15d4 -> :sswitch_1e
-        0x16f9 -> :sswitch_1d
-        0x181f -> :sswitch_1c
-        0x19a0 -> :sswitch_1b
-        0x1a98 -> :sswitch_1a
-        0x1dc9 -> :sswitch_19
-        0x1e0c -> :sswitch_18
-        0x208e -> :sswitch_17
-        0x21c9 -> :sswitch_16
-        0x22d6 -> :sswitch_15
-        0x23bb -> :sswitch_14
-        0x26b7 -> :sswitch_13
-        0x26fe -> :sswitch_12
-        0x27ab -> :sswitch_11
-        0x282c -> :sswitch_10
-        0x29d2 -> :sswitch_f
-        0x2a06 -> :sswitch_e
-        0x2d79 -> :sswitch_d
-        0x2eb5 -> :sswitch_c
-        0x3021 -> :sswitch_b
-        0x33f6 -> :sswitch_a
-        0x362f -> :sswitch_9
-        0x3a41 -> :sswitch_8
-        0x3a51 -> :sswitch_7
-        0x3a8a -> :sswitch_6
-        0x3ae2 -> :sswitch_5
-        0x3c56 -> :sswitch_4
-        0x3d5a -> :sswitch_3
-        0x3d8d -> :sswitch_2
-        0x3f06 -> :sswitch_1
-        0x3f62 -> :sswitch_0
-    .end sparse-switch
+    return-object v0
 .end method

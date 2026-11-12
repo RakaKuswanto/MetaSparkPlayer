@@ -105,7 +105,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2

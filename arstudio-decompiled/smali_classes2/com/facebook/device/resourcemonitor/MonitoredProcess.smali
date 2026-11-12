@@ -27,8 +27,33 @@
 
 
 # direct methods
+.method public static synthetic $values()[Lcom/facebook/device/resourcemonitor/MonitoredProcess;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    new-array v2, v0, [Lcom/facebook/device/resourcemonitor/MonitoredProcess;
+
+    .line 2
+    .line 3
+    sget-object v1, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->MY_APP:Lcom/facebook/device/resourcemonitor/MonitoredProcess;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
-    .locals 7
+    .locals 6
 
     .line 0
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -36,46 +61,44 @@
     .line 1
     .line 2
     .line 3
-    move-result v4
+    move-result v3
 
     .line 4
-    const-string v2, "MY_APP"
+    const-string v1, "MY_APP"
 
     .line 5
     .line 6
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 7
-    const-string v5, "data"
+    const-string/jumbo v4, "data"
 
     .line 8
     .line 9
-    new-instance v1, Lcom/facebook/device/resourcemonitor/MonitoredProcess;
-
     .line 10
-    .line 11
-    move v6, v3
+    new-instance v0, Lcom/facebook/device/resourcemonitor/MonitoredProcess;
 
+    .line 11
     .line 12
-    invoke-direct/range {v1 .. v6}, Lcom/facebook/device/resourcemonitor/MonitoredProcess;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
+    move v5, v2
 
     .line 13
+    invoke-direct/range {v0 .. v5}, Lcom/facebook/device/resourcemonitor/MonitoredProcess;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
+
     .line 14
     .line 15
-    sput-object v1, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->MY_APP:Lcom/facebook/device/resourcemonitor/MonitoredProcess;
-
     .line 16
-    .line 17
-    const/4 v0, 0x1
+    sput-object v0, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->MY_APP:Lcom/facebook/device/resourcemonitor/MonitoredProcess;
 
+    .line 17
     .line 18
-    new-array v0, v0, [Lcom/facebook/device/resourcemonitor/MonitoredProcess;
+    invoke-static {}, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->$values()[Lcom/facebook/device/resourcemonitor/MonitoredProcess;
 
     .line 19
     .line 20
-    aput-object v1, v0, v3
-
     .line 21
+    move-result-object v0
+
     .line 22
     sput-object v0, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->$VALUES:[Lcom/facebook/device/resourcemonitor/MonitoredProcess;
 

@@ -1,88 +1,45 @@
 .class public final LX/56T;
-.super Ljava/lang/Object;
+.super LX/56U;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "zabo"
-
-
-# instance fields
-.field public final synthetic A00:LX/570;
+.field public static final serialVersionUID:J = 0x1L
 
 
 # direct methods
-.method public constructor <init>(LX/570;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, LX/56T;->A00:LX/570;
+    .line 268435456
+    invoke-direct {p0, p1}, LX/56U;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
+    .line 268435457
+    .line 268435458
+    .line 268435459
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
     .line 0
-    iget-object v0, p0, LX/56T;->A00:LX/570;
+    invoke-direct {p0, p1, p2}, LX/56U;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/570;->A00:LX/56R;
-
     .line 3
-    .line 4
-    iget-object v2, v0, LX/56R;->A03:LX/56Z;
+    return-void
+.end method
 
-    .line 5
-    .line 6
-    invoke-static {v2}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 0
 
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
+    .line 536870912
+    invoke-direct {p0, p1}, LX/56U;-><init>(Ljava/lang/Throwable;)V
 
-    .line 10
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v1
-
-    .line 14
-    const-string v0, " disconnecting because it was signed out."
-
-    .line 15
-    .line 16
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
-    check-cast v2, LX/58j;
-
-    .line 21
-    .line 22
-    iput-object v0, v2, LX/58j;->A0S:Ljava/lang/String;
-
-    .line 23
-    .line 24
-    invoke-virtual {v2}, LX/58j;->A9L()V
-
-    .line 25
-    .line 26
-    .line 27
+    .line 536870913
+    .line 536870914
+    .line 536870915
     return-void
 .end method

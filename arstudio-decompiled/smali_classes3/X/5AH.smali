@@ -1,122 +1,212 @@
 .class public final LX/5AH;
-.super LX/5AI;
+.super Lcom/google/ar/core/dependencies/a;
 .source ""
 
 
 # instance fields
-.field public A00:LX/5AF;
+.field public final A00:I
 
-.field public A01:Ljava/lang/String;
+.field public final A01:J
 
-.field public final A02:Landroid/location/LocationManager;
-
-.field public final A03:LX/5AN;
-
-.field public final A04:LX/309;
-
-.field public final A05:Ljava/util/concurrent/ExecutorService;
-
-.field public final A06:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic A02:Lcom/google/ar/core/ArImage;
 
 
 # direct methods
-.method public constructor <init>(Landroid/location/LocationManager;LX/0J9;LX/0JA;LX/3Nc;LX/309;LX/30A;LX/5AO;LX/1r3;LX/2ta;LX/5B7;LX/3Nr;Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/ScheduledExecutorService;)V
-    .locals 14
+.method public constructor <init>(Lcom/google/ar/core/ArImage;IJ)V
+    .locals 0
 
     .line 0
-    move-object v1, p0
+    iput-object p1, p0, LX/5AH;->A02:Lcom/google/ar/core/ArImage;
 
     .line 1
-    move-object/from16 v13, p13
-
     .line 2
-    .line 3
-    move-object/from16 v2, p2
+    invoke-direct {p0}, Lcom/google/ar/core/dependencies/a;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    move-object/from16 v3, p3
+    iput-wide p3, p0, LX/5AH;->A01:J
 
     .line 6
     .line 7
-    move-object/from16 v4, p4
+    iput p2, p0, LX/5AH;->A00:I
 
     .line 8
     .line 9
-    move-object/from16 v5, p5
+    return-void
+.end method
 
+
+# virtual methods
+.method public final getBuffer()Ljava/nio/ByteBuffer;
+    .locals 7
+
+    .line 0
+    iget-object v1, p0, LX/5AH;->A02:Lcom/google/ar/core/ArImage;
+
+    .line 1
+    .line 2
+    invoke-static {v1}, Lcom/google/ar/core/ArImage;->A02(Lcom/google/ar/core/ArImage;)Lcom/google/ar/core/Session;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    iget-wide v3, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 7
+    .line 8
+    iget-wide v5, p0, LX/5AH;->A01:J
+
+    .line 9
     .line 10
+    iget v2, p0, LX/5AH;->A00:I
+
     .line 11
-    move-object/from16 v6, p6
-
     .line 12
-    .line 13
-    move-object/from16 v7, p7
+    invoke-static/range {v1 .. v6}, Lcom/google/ar/core/ArImage;->A03(Lcom/google/ar/core/ArImage;IJJ)Ljava/nio/ByteBuffer;
 
+    .line 13
     .line 14
     .line 15
-    move-object/from16 v8, p8
+    move-result-object v0
 
     .line 16
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
+
     .line 17
-    move-object/from16 v9, p9
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    return-object v0
+.end method
+
+.method public final getPixelStride()I
+    .locals 7
+
+    .line 0
+    iget-object v1, p0, LX/5AH;->A02:Lcom/google/ar/core/ArImage;
+
+    .line 1
+    .line 2
+    invoke-static {v1}, Lcom/google/ar/core/ArImage;->A02(Lcom/google/ar/core/ArImage;)Lcom/google/ar/core/Session;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    iget-wide v3, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 7
+    .line 8
+    iget-wide v5, p0, LX/5AH;->A01:J
+
+    .line 9
+    .line 10
+    iget v2, p0, LX/5AH;->A00:I
+
+    .line 11
+    .line 12
+    invoke-static/range {v1 .. v6}, Lcom/google/ar/core/ArImage;->A00(Lcom/google/ar/core/ArImage;IJJ)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v1
+
+    .line 16
+    const/4 v0, -0x1
+
+    .line 17
+    if-eq v1, v0, :cond_0
 
     .line 18
     .line 19
-    move-object/from16 v10, p10
+    return v1
 
     .line 20
+    :cond_0
+    const-string v1, "Unknown error in ArImage.Plane.getPixelStride()."
+
     .line 21
-    move-object/from16 v11, p11
-
     .line 22
+    new-instance v0, Lcom/google/ar/core/exceptions/FatalException;
+
     .line 23
-    move-object/from16 v12, p12
-
     .line 24
-    .line 25
-    invoke-direct/range {v1 .. v13}, LX/5AI;-><init>(LX/0J9;LX/0JA;LX/3Nc;LX/309;LX/30A;LX/5AO;LX/1r3;LX/2ta;LX/5B7;LX/3Nr;Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/ScheduledExecutorService;)V
+    invoke-direct {v0, v1}, Lcom/google/ar/core/exceptions/FatalException;-><init>(Ljava/lang/String;)V
 
+    .line 25
     .line 26
     .line 27
-    .line 28
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    throw v0
+.end method
 
-    .line 29
-    .line 30
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+.method public final getRowStride()I
+    .locals 7
 
-    .line 31
-    .line 32
-    .line 33
-    iput-object v0, p0, LX/5AH;->A06:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 0
+    iget-object v1, p0, LX/5AH;->A02:Lcom/google/ar/core/ArImage;
 
-    .line 34
-    .line 35
-    new-instance v0, LX/5AN;
+    .line 1
+    .line 2
+    invoke-static {v1}, Lcom/google/ar/core/ArImage;->A02(Lcom/google/ar/core/ArImage;)Lcom/google/ar/core/Session;
 
-    .line 36
-    .line 37
-    invoke-direct {v0, p0}, LX/5AN;-><init>(LX/5AH;)V
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 38
-    .line 39
-    .line 40
-    iput-object v0, p0, LX/5AH;->A03:LX/5AN;
+    .line 6
+    iget-wide v3, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
-    .line 41
-    .line 42
-    iput-object v5, p0, LX/5AH;->A04:LX/309;
+    .line 7
+    .line 8
+    iget-wide v5, p0, LX/5AH;->A01:J
 
-    .line 43
-    .line 44
-    iput-object v13, p0, LX/5AH;->A05:Ljava/util/concurrent/ExecutorService;
+    .line 9
+    .line 10
+    iget v2, p0, LX/5AH;->A00:I
 
-    .line 45
-    .line 46
-    iput-object p1, p0, LX/5AH;->A02:Landroid/location/LocationManager;
+    .line 11
+    .line 12
+    invoke-static/range {v1 .. v6}, Lcom/google/ar/core/ArImage;->A01(Lcom/google/ar/core/ArImage;IJJ)I
 
-    .line 47
-    .line 48
-    return-void
+    .line 13
+    .line 14
+    .line 15
+    move-result v1
+
+    .line 16
+    const/4 v0, -0x1
+
+    .line 17
+    if-eq v1, v0, :cond_0
+
+    .line 18
+    .line 19
+    return v1
+
+    .line 20
+    :cond_0
+    const-string v1, "Unknown error in ArImage.Plane.getRowStride()."
+
+    .line 21
+    .line 22
+    new-instance v0, Lcom/google/ar/core/exceptions/FatalException;
+
+    .line 23
+    .line 24
+    invoke-direct {v0, v1}, Lcom/google/ar/core/exceptions/FatalException;-><init>(Ljava/lang/String;)V
+
+    .line 25
+    .line 26
+    .line 27
+    throw v0
 .end method

@@ -1,449 +1,87 @@
-.class public final LX/4Yy;
-.super LX/4Yv;
+.class public abstract synthetic LX/4Yy;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/lang/reflect/Method;
+.field public static final synthetic A00:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;LX/4Z2;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/4Yv;-><init>(Landroid/content/res/Resources;LX/4Z2;)V
+    invoke-static {}, Landroid/widget/ImageView$ScaleType;->values()[Landroid/widget/ImageView$ScaleType;
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/4Yy;->A00()V
+    move-result-object v0
 
     .line 4
+    array-length v0, v0
+
     .line 5
+    new-array v1, v0, [I
+
     .line 6
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0, p1}, LX/4Yv;-><init>(Landroid/graphics/drawable/Drawable;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    invoke-static {}, LX/4Yy;->A00()V
-
-    .line 268435460
-    .line 268435461
-    .line 268435462
-    return-void
-.end method
-
-.method public static A00()V
-    .locals 3
-
-    .line 0
-    sget-object v0, LX/4Yy;->A00:Ljava/lang/reflect/Method;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 3
-    .line 4
+    .line 7
     :try_start_0
-    const-class v1, Landroid/graphics/drawable/Drawable;
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
-    .line 5
-    .line 6
-    const-string v0, "isProjected"
-
-    .line 7
     .line 8
-    invoke-static {v1, v0}, LX/0Yj;->A0W(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
-
     .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    sput-object v0, LX/4Yy;->A00:Ljava/lang/reflect/Method;
-
-    .line 13
-    .line 14
-    return-void
+    invoke-static {v0, v1}, LX/431;->A1A(Ljava/lang/Enum;[I)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 15
-    :catch_0
-    move-exception v2
-
-    .line 16
-    const-string v1, "WrappedDrawableApi21"
-
-    .line 17
-    .line 18
-    const-string v0, "Failed to retrieve Drawable#isProjected() method"
-
-    .line 19
-    .line 20
-    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 21
-    .line 22
-    .line 23
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A01()Z
-    .locals 3
-
-    .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 1
-    .line 2
-    const/4 v2, 0x0
-
-    .line 3
-    const/16 v0, 0x15
-
-    .line 4
-    .line 5
-    if-ne v1, v0, :cond_1
-
-    .line 6
-    .line 7
-    iget-object v1, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 8
-    .line 9
-    instance-of v0, v1, Landroid/graphics/drawable/GradientDrawable;
-
-    .line 10
-    .line 11
-    if-nez v0, :cond_0
-
-    .line 12
-    .line 13
-    instance-of v0, v1, Landroid/graphics/drawable/DrawableContainer;
-
-    .line 14
-    .line 15
-    if-nez v0, :cond_0
-
-    .line 16
-    .line 17
-    instance-of v0, v1, Landroid/graphics/drawable/InsetDrawable;
-
-    .line 18
-    .line 19
-    if-nez v0, :cond_0
-
-    .line 20
-    .line 21
-    instance-of v0, v1, Landroid/graphics/drawable/RippleDrawable;
-
-    .line 22
-    .line 23
-    if-eqz v0, :cond_1
-
-    .line 24
-    .line 25
-    :cond_0
-    const/4 v2, 0x1
-
-    .line 26
-    :cond_1
-    return v2
-.end method
-
-.method public final getDirtyBounds()Landroid/graphics/Rect;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getDirtyBounds()Landroid/graphics/Rect;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final getOutline(Landroid/graphics/Outline;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getOutline(Landroid/graphics/Outline;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final isProjected()Z
-    .locals 4
-
-    .line 0
-    iget-object v1, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 1
-    .line 2
-    const/4 v3, 0x0
-
-    .line 3
-    if-eqz v1, :cond_0
-
-    .line 4
-    .line 5
-    sget-object v0, LX/4Yy;->A00:Ljava/lang/reflect/Method;
-
-    .line 6
-    .line 7
-    if-eqz v0, :cond_0
-
-    .line 8
-    .line 9
-    :try_start_0
-    invoke-static {v1, v0}, LX/0Yi;->A0i(Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 10
     .line 11
     .line 12
-    move-result-object v0
+    :catch_0
+    :try_start_1
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_START:Landroid/widget/ImageView$ScaleType;
 
     .line 13
-    check-cast v0, Ljava/lang/Boolean;
-
     .line 14
-    .line 15
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v0, v1}, LX/431;->A1B(Ljava/lang/Enum;[I)V
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 15
     .line 16
     .line 17
-    .line 18
-    move-result v3
+    :catch_1
+    :try_start_2
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
+    .line 18
     .line 19
-    return v3
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0, v1}, LX/431;->A1C(Ljava/lang/Enum;[I)V
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
     .line 20
-    :catch_0
-    move-exception v2
-
     .line 21
-    const-string v1, "WrappedDrawableApi21"
-
     .line 22
+    :catch_2
+    :try_start_3
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_END:Landroid/widget/ImageView$ScaleType;
+
     .line 23
-    const-string v0, "Error calling Drawable#isProjected() method"
-
     .line 24
-    .line 25
-    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v1}, LX/433;->A1H(Ljava/lang/Enum;[I)V
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
+    .line 25
     .line 26
     .line 27
+    :catch_3
+    sput-object v1, LX/4Yy;->A00:[I
+
     .line 28
-    :cond_0
-    return v3
-.end method
-
-.method public final setHotspot(FF)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final setHotspotBounds(IIII)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final setState([I)Z
-    .locals 1
-
-    .line 0
-    invoke-super {p0, p1}, LX/4Yv;->setState([I)Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    .line 7
-    .line 8
-    .line 9
-    const/4 v0, 0x1
-
-    .line 10
-    return v0
-
-    .line 11
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 12
-    return v0
-.end method
-
-.method public final setTint(I)V
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, LX/4Yy;->A01()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-super {p0, p1}, LX/4Yv;->setTint(I)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    iget-object v0, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 11
-    .line 12
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public final setTintList(Landroid/content/res/ColorStateList;)V
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, LX/4Yy;->A01()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-super {p0, p1}, LX/4Yv;->setTintList(Landroid/content/res/ColorStateList;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    iget-object v0, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 11
-    .line 12
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public final setTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, LX/4Yy;->A01()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-super {p0, p1}, LX/4Yv;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    iget-object v0, p0, LX/4Yv;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 11
-    .line 12
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
-
-    .line 13
-    .line 14
-    .line 15
+    .line 29
     return-void
 .end method

@@ -1,576 +1,660 @@
-.class public final LX/3oK;
-.super Ljava/lang/Object;
+.class public abstract LX/3Ok;
+.super LX/3OL;
 .source ""
-
-# interfaces
-.implements LX/3wQ;
 
 
 # instance fields
-.field public final A00:LX/3ta;
+.field public final A00:Landroid/graphics/Bitmap$Config;
 
-.field public final A01:LX/0Af;
+.field public final A01:Landroid/graphics/PointF;
+
+.field public final A02:LX/6PR;
+
+.field public final A03:LX/3Tu;
+
+.field public final A04:LX/3Tt;
+
+.field public final A05:LX/3NG;
+
+.field public final A06:LX/3OJ;
+
+.field public final A07:LX/1iY;
+
+.field public final A08:LX/3M7;
+
+.field public final A09:Ljava/lang/Boolean;
+
+.field public final A0A:Z
+
+.field public final A0B:Z
 
 
 # direct methods
-.method public constructor <init>(LX/0Af;LX/3ta;)V
-    .locals 0
+.method public constructor <init>(LX/3Ol;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/3OL;-><init>(LX/3Oj;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/3oK;->A00:LX/3ta;
+    iget-object v0, p1, LX/3Ol;->A06:LX/3OJ;
 
     .line 4
     .line 5
-    iput-object p1, p0, LX/3oK;->A01:LX/0Af;
+    iput-object v0, p0, LX/3Ok;->A06:LX/3OJ;
 
     .line 6
     .line 7
+    iget-object v0, p1, LX/3Ol;->A07:LX/1iY;
+
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/3Ok;->A07:LX/1iY;
+
+    .line 10
+    .line 11
+    iget-object v0, p1, LX/3Ol;->A08:LX/3M7;
+
+    .line 12
+    .line 13
+    iput-object v0, p0, LX/3Ok;->A08:LX/3M7;
+
+    .line 14
+    .line 15
+    iget-object v0, p1, LX/3Ol;->A05:LX/3NG;
+
+    .line 16
+    .line 17
+    iput-object v0, p0, LX/3Ok;->A05:LX/3NG;
+
+    .line 18
+    .line 19
+    iget-object v0, p1, LX/3Ol;->A04:LX/3Tt;
+
+    .line 20
+    .line 21
+    iput-object v0, p0, LX/3Ok;->A04:LX/3Tt;
+
+    .line 22
+    .line 23
+    iget-object v0, p1, LX/3Ol;->A03:LX/3Tu;
+
+    .line 24
+    .line 25
+    iput-object v0, p0, LX/3Ok;->A03:LX/3Tu;
+
+    .line 26
+    .line 27
+    iget-object v0, p1, LX/3Ol;->A02:LX/6PR;
+
+    .line 28
+    .line 29
+    iput-object v0, p0, LX/3Ok;->A02:LX/6PR;
+
+    .line 30
+    .line 31
+    iget-object v0, p1, LX/3Ol;->A01:Landroid/graphics/PointF;
+
+    .line 32
+    .line 33
+    iput-object v0, p0, LX/3Ok;->A01:Landroid/graphics/PointF;
+
+    .line 34
+    .line 35
+    iget-boolean v0, p1, LX/3Ol;->A0B:Z
+
+    .line 36
+    .line 37
+    iput-boolean v0, p0, LX/3Ok;->A0B:Z
+
+    .line 38
+    .line 39
+    iget-boolean v0, p1, LX/3Ol;->A0A:Z
+
+    .line 40
+    .line 41
+    iput-boolean v0, p0, LX/3Ok;->A0A:Z
+
+    .line 42
+    .line 43
+    iget-object v0, p1, LX/3Ol;->A00:Landroid/graphics/Bitmap$Config;
+
+    .line 44
+    .line 45
+    iput-object v0, p0, LX/3Ok;->A00:Landroid/graphics/Bitmap$Config;
+
+    .line 46
+    .line 47
+    iget-object v0, p1, LX/3Ol;->A09:Ljava/lang/Boolean;
+
+    .line 48
+    .line 49
+    iput-object v0, p0, LX/3Ok;->A09:Ljava/lang/Boolean;
+
+    .line 50
+    .line 51
     return-void
 .end method
 
 
 # virtual methods
-.method public final Ajo(Ljava/util/List;JJ)V
-    .locals 10
+.method public final A01(LX/3Ok;)Z
+    .locals 2
 
     .line 0
-    const/4 v0, 0x0
+    iget-object v1, p0, LX/3Ok;->A06:LX/3OJ;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    iget-object v0, p1, LX/3Ok;->A06:LX/3OJ;
+
     .line 3
     .line 4
-    iget-object v3, p0, LX/3oK;->A00:LX/3ta;
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 5
     .line 6
-    iget-object v5, p0, LX/3oK;->A01:LX/0Af;
-
     .line 7
+    move-result v0
+
     .line 8
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    if-eqz v0, :cond_0
 
     .line 9
     .line 10
-    .line 11
-    move-result v0
+    iget-object v1, p0, LX/3Ok;->A07:LX/1iY;
 
+    .line 11
     .line 12
-    if-nez v0, :cond_c
+    iget-object v0, p1, LX/3Ok;->A07:LX/1iY;
 
     .line 13
     .line 14
-    iget-object v1, v3, LX/3ta;->A01:LX/3pe;
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
-    iget-object v0, v3, LX/3ta;->A00:LX/3Tw;
-
     .line 17
+    move-result v0
+
     .line 18
-    invoke-virtual {v1, v0, p2, p3}, LX/3pe;->A01(LX/3Tw;J)LX/3ts;
+    if-eqz v0, :cond_0
 
     .line 19
     .line 20
-    .line 21
-    move-result-object v4
+    iget-object v1, p0, LX/3Ok;->A08:LX/3M7;
 
+    .line 21
     .line 22
-    iget-object v2, v3, LX/3ta;->A02:LX/0Yz;
+    iget-object v0, p1, LX/3Ok;->A08:LX/3M7;
 
     .line 23
     .line 24
-    iget-object v1, v3, LX/3ta;->A00:LX/3Tw;
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
-    const-string v0, "client_compound_event_on_send"
-
     .line 27
+    move-result v0
+
     .line 28
-    invoke-static {v5, v4, v1, v2, v0}, LX/3pe;->A00(LX/0Af;LX/3ts;LX/3Tw;LX/0Yz;Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
     .line 29
     .line 30
-    .line 31
-    const-string/jumbo v0, "media_playback_compound"
+    iget-object v1, p0, LX/3Ok;->A05:LX/3NG;
 
+    .line 31
     .line 32
+    iget-object v0, p1, LX/3Ok;->A05:LX/3NG;
+
     .line 33
     .line 34
-    invoke-interface {v5, v0}, LX/0Af;->A4R(Ljava/lang/String;)LX/0Ah;
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
     .line 37
-    move-result-object v4
+    move-result v0
 
     .line 38
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    if-eqz v0, :cond_0
 
     .line 39
     .line 40
-    .line 41
-    move-result-object v2
+    iget-object v1, p0, LX/3Ok;->A04:LX/3Tt;
 
+    .line 41
     .line 42
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iget-object v0, p1, LX/3Ok;->A04:LX/3Tt;
 
     .line 43
     .line 44
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 45
-    move-result-object v9
-
     .line 46
-    :goto_0
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
     .line 47
-    .line 48
-    .line 49
     move-result v0
 
+    .line 48
+    if-eqz v0, :cond_0
+
+    .line 49
     .line 50
-    if-eqz v0, :cond_b
+    iget-object v1, p0, LX/3Ok;->A03:LX/3Tu;
 
     .line 51
     .line 52
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p1, LX/3Ok;->A03:LX/3Tu;
 
     .line 53
     .line 54
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 55
-    move-result-object v7
-
     .line 56
-    check-cast v7, LX/3qq;
-
     .line 57
+    move-result v0
+
     .line 58
-    if-eqz v7, :cond_a
+    if-eqz v0, :cond_0
 
     .line 59
     .line 60
-    iget-object v8, v7, LX/3qq;->A03:LX/3pj;
+    iget-object v1, p0, LX/3Ok;->A02:LX/6PR;
 
     .line 61
     .line 62
-    new-instance v6, LX/3v1;
+    iget-object v0, p1, LX/3Ok;->A02:LX/6PR;
 
     .line 63
     .line 64
-    invoke-direct {v6}, LX/3v1;-><init>()V
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 65
     .line 66
     .line 67
-    iget-wide v0, v7, LX/3qq;->A00:J
+    move-result v0
 
     .line 68
-    .line 69
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-eqz v0, :cond_0
 
+    .line 69
     .line 70
+    iget-object v1, p0, LX/3Ok;->A01:Landroid/graphics/PointF;
+
     .line 71
     .line 72
-    move-result-object v1
+    iget-object v0, p1, LX/3Ok;->A01:Landroid/graphics/PointF;
 
     .line 73
-    const-string v0, "client_time_ms"
-
     .line 74
-    .line 75
-    iget-object v5, v6, LX/0Qc;->A00:Ljava/util/Map;
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 75
     .line 76
     .line 77
-    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
 
     .line 78
+    if-eqz v0, :cond_0
+
     .line 79
     .line 80
-    const-string v0, "event_name"
+    iget-boolean v1, p0, LX/3Ok;->A0B:Z
 
     .line 81
     .line 82
-    invoke-virtual {v6, v8, v0}, LX/0Qc;->A00(LX/0Ad;Ljava/lang/String;)V
+    iget-boolean v0, p1, LX/3Ok;->A0B:Z
 
     .line 83
     .line 84
+    if-ne v1, v0, :cond_0
+
     .line 85
-    iget-wide v0, v7, LX/3qq;->A02:J
-
     .line 86
-    .line 87
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-boolean v1, p0, LX/3Ok;->A0A:Z
 
+    .line 87
     .line 88
+    iget-boolean v0, p1, LX/3Ok;->A0A:Z
+
     .line 89
     .line 90
-    move-result-object v1
+    if-ne v1, v0, :cond_0
 
     .line 91
-    const-string/jumbo v0, "media_time_ms"
-
     .line 92
+    iget-object v1, p0, LX/3Ok;->A09:Ljava/lang/Boolean;
+
     .line 93
     .line 94
-    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p1, LX/3Ok;->A09:Ljava/lang/Boolean;
 
     .line 95
     .line 96
+    if-ne v1, v0, :cond_0
+
     .line 97
-    sget-object v0, LX/3pj;->PAUSED:LX/3pj;
-
     .line 98
+    iget-object v1, p0, LX/3Ok;->A00:Landroid/graphics/Bitmap$Config;
+
     .line 99
-    if-eq v8, v0, :cond_0
-
     .line 100
+    iget-object v0, p1, LX/3Ok;->A00:Landroid/graphics/Bitmap$Config;
+
     .line 101
-    sget-object v0, LX/3pj;->COMPLETED:LX/3pj;
-
     .line 102
-    .line 103
-    if-eq v8, v0, :cond_0
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 103
     .line 104
     .line 105
-    sget-object v0, LX/3pj;->STARTED_PLAYING:LX/3pj;
+    move-result v0
 
     .line 106
+    if-eqz v0, :cond_0
+
     .line 107
-    if-eq v8, v0, :cond_0
-
     .line 108
+    iget-object v1, p0, LX/3OL;->A00:LX/3Pz;
+
     .line 109
-    sget-object v0, LX/3pj;->RESET:LX/3pj;
-
     .line 110
+    iget-object v0, p1, LX/3OL;->A00:LX/3Pz;
+
     .line 111
-    if-ne v8, v0, :cond_1
-
     .line 112
-    .line 113
-    :cond_0
-    iget-wide v0, v7, LX/3qq;->A01:J
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 113
     .line 114
     .line 115
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result v0
 
     .line 116
+    if-eqz v0, :cond_0
+
     .line 117
     .line 118
-    move-result-object v1
+    iget-object v1, p0, LX/3OL;->A01:LX/3Oc;
 
     .line 119
-    const-string/jumbo v0, "video_client_duration"
-
     .line 120
+    iget-object v0, p1, LX/3OL;->A01:LX/3Oc;
+
     .line 121
     .line 122
-    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 123
     .line 124
     .line 125
-    :cond_1
-    sget-object v0, LX/3pj;->COMPLETED:LX/3pj;
-
-    .line 126
-    .line 127
-    if-eq v8, v0, :cond_2
-
-    .line 128
-    .line 129
-    sget-object v0, LX/3pj;->STARTED_PLAYING:LX/3pj;
-
-    .line 130
-    .line 131
-    if-ne v8, v0, :cond_3
-
-    .line 132
-    .line 133
-    :cond_2
-    iget-boolean v0, v7, LX/3qq;->A0A:Z
-
-    .line 134
-    .line 135
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 136
-    .line 137
-    .line 138
-    move-result-object v1
-
-    .line 139
-    const-string/jumbo v0, "is_looping"
-
-    .line 140
-    .line 141
-    .line 142
-    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 143
-    .line 144
-    .line 145
-    :cond_3
-    iget-object v1, v7, LX/3qq;->A07:Ljava/lang/Long;
-
-    .line 146
-    .line 147
-    if-eqz v1, :cond_4
-
-    .line 148
-    .line 149
-    const-string/jumbo v0, "player_instance_id"
-
-    .line 150
-    .line 151
-    .line 152
-    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 153
-    .line 154
-    .line 155
-    :cond_4
-    sget-object v0, LX/3pj;->TAGS_CHANGED:LX/3pj;
-
-    .line 156
-    .line 157
-    if-ne v8, v0, :cond_5
-
-    .line 158
-    .line 159
-    iget-object v0, v7, LX/3qq;->A06:LX/3Tv;
-
-    .line 160
-    .line 161
-    if-eqz v0, :cond_5
-
-    .line 162
-    .line 163
-    const-string/jumbo v1, "tag_metadata"
-
-    .line 164
-    .line 165
-    .line 166
-    iget-object v0, v0, LX/0Qc;->A00:Ljava/util/Map;
-
-    .line 167
-    .line 168
-    invoke-interface {v5, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 169
-    .line 170
-    .line 171
-    :cond_5
-    iget-object v1, v7, LX/3qq;->A09:Ljava/lang/String;
-
-    .line 172
-    .line 173
-    if-eqz v1, :cond_6
-
-    .line 174
-    .line 175
-    const-string/jumbo v0, "session_validation_token"
-
-    .line 176
-    .line 177
-    .line 178
-    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 179
-    .line 180
-    .line 181
-    :cond_6
-    iget-object v1, v7, LX/3qq;->A04:LX/3se;
-
-    .line 182
-    .line 183
-    if-eqz v1, :cond_7
-
-    .line 184
-    .line 185
-    const-string/jumbo v0, "start_state"
-
-    .line 186
-    .line 187
-    .line 188
-    invoke-virtual {v6, v1, v0}, LX/0Qc;->A00(LX/0Ad;Ljava/lang/String;)V
-
-    .line 189
-    .line 190
-    .line 191
-    :cond_7
-    iget-object v1, v7, LX/3qq;->A08:Ljava/lang/String;
-
-    .line 192
-    .line 193
-    if-eqz v1, :cond_8
-
-    .line 194
-    .line 195
-    const-string v0, "callsite_context"
-
-    .line 196
-    .line 197
-    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 198
-    .line 199
-    .line 200
-    :cond_8
-    iget-object v0, v7, LX/3qq;->A05:LX/3v2;
-
-    .line 201
-    .line 202
-    if-eqz v0, :cond_9
-
-    .line 203
-    .line 204
-    const-string v1, "error_metadata"
-
-    .line 205
-    .line 206
-    iget-object v0, v0, LX/0Qc;->A00:Ljava/util/Map;
-
-    .line 207
-    .line 208
-    invoke-interface {v5, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 209
-    .line 210
-    .line 211
-    :cond_9
-    :goto_1
-    invoke-virtual {v2, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 212
-    .line 213
-    .line 214
-    goto/16 :goto_0
-
-    .line 215
-    .line 216
-    :cond_a
-    const/4 v6, 0x0
-
-    .line 217
-    goto :goto_1
-
-    .line 218
-    :cond_b
-    iget-object v1, v3, LX/3ta;->A00:LX/3Tw;
-
-    .line 219
-    .line 220
-    invoke-interface {v4}, LX/0Ah;->isSampled()Z
-
-    .line 221
-    .line 222
-    .line 223
     move-result v0
 
-    .line 224
-    if-eqz v0, :cond_c
+    .line 126
+    if-eqz v0, :cond_0
 
-    .line 225
-    .line 226
-    if-eqz v1, :cond_c
+    .line 127
+    .line 128
+    iget-object v1, p0, LX/3OL;->A02:Ljava/lang/String;
 
-    .line 227
-    .line 228
-    const-string/jumbo v0, "required_metadata"
+    .line 129
+    .line 130
+    iget-object v0, p1, LX/3OL;->A02:Ljava/lang/String;
 
-    .line 229
-    .line 230
-    .line 231
-    invoke-interface {v4, v1, v0}, LX/0Ah;->A5I(LX/0Qc;Ljava/lang/String;)V
+    .line 131
+    .line 132
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 232
-    .line 233
-    .line 234
-    const-string v0, "events"
+    .line 133
+    .line 134
+    .line 135
+    move-result v1
 
-    .line 235
-    .line 236
-    invoke-interface {v4, v0, v2}, LX/0Ah;->A5O(Ljava/lang/String;Ljava/util/List;)V
+    .line 136
+    const/4 v0, 0x1
 
-    .line 237
-    .line 238
-    .line 239
-    new-instance v3, LX/3v0;
+    .line 137
+    if-nez v1, :cond_1
 
-    .line 240
-    .line 241
-    invoke-direct {v3}, LX/3v0;-><init>()V
+    .line 138
+    .line 139
+    :cond_0
+    const/4 v0, 0x0
 
-    .line 242
-    .line 243
-    .line 244
-    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 140
+    :cond_1
+    return v0
+.end method
 
-    .line 245
-    .line 246
-    .line 247
-    move-result-object v2
+.method public hashCode()I
+    .locals 3
 
-    .line 248
-    const-string/jumbo v1, "sequence"
+    .line 0
+    invoke-super {p0}, LX/3OL;->hashCode()I
 
-    .line 249
-    .line 250
-    .line 251
-    iget-object v0, v3, LX/0Qc;->A00:Ljava/util/Map;
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
 
-    .line 252
-    .line 253
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 4
+    mul-int/lit8 v1, v0, 0x1f
 
-    .line 254
-    .line 255
-    .line 256
-    const-string/jumbo v0, "operational_metadata"
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/3Ok;->A06:LX/3OJ;
 
-    .line 257
-    .line 258
-    .line 259
-    invoke-interface {v4, v3, v0}, LX/0Ah;->A5I(LX/0Qc;Ljava/lang/String;)V
+    .line 7
+    .line 8
+    const/4 v2, 0x0
 
-    .line 260
-    .line 261
-    .line 262
-    invoke-static {}, LX/0Yh;->A0Q()Ljava/lang/Long;
+    .line 9
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
-    .line 263
-    .line 264
-    .line 265
-    move-result-object v1
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
 
-    .line 266
-    const-string v0, "client_high_res_packaging_time_ms"
+    .line 13
+    add-int/2addr v1, v0
 
-    .line 267
-    .line 268
-    invoke-interface {v4, v0, v1}, LX/0Ah;->A52(Ljava/lang/String;Ljava/lang/Long;)V
+    .line 14
+    mul-int/lit8 v1, v1, 0x1f
 
-    .line 269
-    .line 270
-    .line 271
-    invoke-interface {v4}, LX/0Ah;->AS9()V
+    .line 15
+    .line 16
+    iget-object v0, p0, LX/3Ok;->A07:LX/1iY;
 
-    .line 272
-    .line 273
-    .line 274
-    :cond_c
-    return-void
+    .line 17
+    .line 18
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    add-int/2addr v1, v0
+
+    .line 23
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 24
+    .line 25
+    iget-object v0, p0, LX/3Ok;->A08:LX/3M7;
+
+    .line 26
+    .line 27
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v0
+
+    .line 31
+    add-int/2addr v1, v0
+
+    .line 32
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 33
+    .line 34
+    iget-object v0, p0, LX/3Ok;->A05:LX/3NG;
+
+    .line 35
+    .line 36
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v0
+
+    .line 40
+    add-int/2addr v1, v0
+
+    .line 41
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 42
+    .line 43
+    iget-object v0, p0, LX/3Ok;->A04:LX/3Tt;
+
+    .line 44
+    .line 45
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 46
+    .line 47
+    .line 48
+    move-result v0
+
+    .line 49
+    add-int/2addr v1, v0
+
+    .line 50
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 51
+    .line 52
+    iget-object v0, p0, LX/3Ok;->A03:LX/3Tu;
+
+    .line 53
+    .line 54
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 55
+    .line 56
+    .line 57
+    move-result v0
+
+    .line 58
+    add-int/2addr v1, v0
+
+    .line 59
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 60
+    .line 61
+    iget-object v0, p0, LX/3Ok;->A02:LX/6PR;
+
+    .line 62
+    .line 63
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
+
+    .line 64
+    .line 65
+    .line 66
+    move-result v1
+
+    .line 67
+    iget-object v0, p0, LX/3Ok;->A01:Landroid/graphics/PointF;
+
+    .line 68
+    .line 69
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 70
+    .line 71
+    .line 72
+    move-result v0
+
+    .line 73
+    add-int/2addr v1, v0
+
+    .line 74
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 75
+    .line 76
+    iget-boolean v0, p0, LX/3Ok;->A0B:Z
+
+    .line 77
+    .line 78
+    add-int/2addr v1, v0
+
+    .line 79
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 80
+    .line 81
+    iget-boolean v0, p0, LX/3Ok;->A0A:Z
+
+    .line 82
+    .line 83
+    add-int/2addr v1, v0
+
+    .line 84
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 85
+    .line 86
+    iget-object v0, p0, LX/3Ok;->A00:Landroid/graphics/Bitmap$Config;
+
+    .line 87
+    .line 88
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 89
+    .line 90
+    .line 91
+    move-result v0
+
+    .line 92
+    add-int/2addr v1, v0
+
+    .line 93
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 94
+    .line 95
+    iget-object v0, p0, LX/3Ok;->A09:Ljava/lang/Boolean;
+
+    .line 96
+    .line 97
+    if-eqz v0, :cond_0
+
+    .line 98
+    .line 99
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    .line 100
+    .line 101
+    .line 102
+    move-result v2
+
+    .line 103
+    :cond_0
+    add-int/2addr v1, v2
+
+    .line 104
+    return v1
 .end method

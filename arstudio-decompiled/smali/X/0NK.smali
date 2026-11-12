@@ -1,80 +1,35 @@
-.class public final LX/0NK;
+.class public abstract LX/0NK;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MqttClient$9"
-
-
-# instance fields
-.field public final synthetic A00:LX/0NA;
-
-.field public final synthetic A01:LX/0Mf;
-
-.field public final synthetic A02:LX/0MM;
-
-.field public final synthetic A03:Ljava/lang/Throwable;
-
 
 # direct methods
-.method public constructor <init>(LX/0NA;LX/0Mf;LX/0MM;Ljava/lang/Throwable;)V
+.method public static A00(Ljava/lang/Class;)Ljava/lang/String;
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/0NK;->A00:LX/0NA;
+    invoke-virtual {p0}, Ljava/lang/Class;->getTypeName()Ljava/lang/String;
 
     .line 1
     .line 2
-    iput-object p3, p0, LX/0NK;->A02:LX/0MM;
-
     .line 3
+    move-result-object p0
+
     .line 4
-    iput-object p2, p0, LX/0NK;->A01:LX/0Mf;
-
-    .line 5
-    .line 6
-    iput-object p4, p0, LX/0NK;->A03:Ljava/lang/Throwable;
-
-    .line 7
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 4
+.method public static synthetic A01(Ljava/lang/Class;)Ljava/lang/String;
+    .locals 0
 
     .line 0
-    iget-object v3, p0, LX/0NK;->A00:LX/0NA;
+    invoke-static {p0}, LX/0NK;->A00(Ljava/lang/Class;)Ljava/lang/String;
 
     .line 1
     .line 2
-    iget-object v2, p0, LX/0NK;->A02:LX/0MM;
-
     .line 3
+    move-result-object p0
+
     .line 4
-    iget-object v1, p0, LX/0NK;->A01:LX/0Mf;
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/0NK;->A03:Ljava/lang/Throwable;
-
-    .line 7
-    .line 8
-    invoke-static {v3, v1, v2, v0}, LX/0NA;->A03(LX/0NA;LX/0Mf;LX/0MM;Ljava/lang/Throwable;)V
-
-    .line 9
-    .line 10
-    .line 11
-    return-void
+    return-object p0
 .end method

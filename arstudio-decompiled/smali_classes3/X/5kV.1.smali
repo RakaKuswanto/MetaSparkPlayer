@@ -1,24 +1,24 @@
-.class public final LX/5kV;
-.super LX/5kO;
+.class public final LX/5Kv;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final synthetic A00:LX/5kF;
+.field public final A00:[B
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;LX/5j9;LX/5kG;LX/5kF;)V
+.method public constructor <init>([B)V
     .locals 0
 
     .line 0
-    iput-object p4, p0, LX/5kV;->A00:LX/5kF;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, p2, p3}, LX/5kO;-><init>(Landroid/os/Handler;LX/5j9;LX/5kG;)V
-
     .line 3
+    iput-object p1, p0, LX/5Kv;->A00:[B
+
     .line 4
     .line 5
     return-void

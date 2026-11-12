@@ -1,69 +1,67 @@
-.class public final LX/2lh;
+.class public final LX/2lH;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "GatewayClientHandler$postAtFront$1"
+
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final synthetic A00:LX/2kr;
 
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Gd;
+.field public final synthetic A01:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(LX/2kr;Ljava/lang/Runnable;)V
+    .locals 0
+
+    iput-object p1, p0, LX/2lH;->A00:LX/2kr;
+
+    iput-object p2, p0, LX/2lH;->A01:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 5
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v4, p0, LX/2lH;->A00:LX/2kr;
 
     .line 1
     .line 2
+    iget-wide v2, v4, LX/2kr;->A00:J
+
     .line 3
-    const/16 v0, 0x1f
-
     .line 4
+    const-wide/16 v0, 0x1
+
     .line 5
-    invoke-static {p0, v0}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
-
     .line 6
-    .line 7
-    .line 8
-    move-result-object v0
+    add-long/2addr v2, v0
 
+    .line 7
+    iput-wide v2, v4, LX/2kr;->A00:J
+
+    .line 8
     .line 9
-    iput-object v0, p0, LX/2lh;->A02:LX/0Gd;
+    iget-object v0, p0, LX/2lH;->A01:Ljava/lang/Runnable;
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->ATT:I
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/1zT;->A00(I)LX/1zT;
-
     .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, LX/2lh;->A01:LX/0Na;
-
-    .line 18
-    .line 19
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    iput-object v0, p0, LX/2lh;->A00:LX/1zG;
-
-    .line 24
-    .line 25
     return-void
 .end method

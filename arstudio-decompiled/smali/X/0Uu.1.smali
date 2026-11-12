@@ -1,178 +1,130 @@
-.class public final LX/0Uu;
+.class public abstract LX/0Uu;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0HQ;
+
+
+# instance fields
+.field public A00:I
+
 
 # direct methods
-.method public static A00(Ljava/lang/Integer;)Ljava/lang/String;
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A7t(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final A7u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final AHN()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/0Uu;->A00:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final APR(I)Z
+    .locals 2
+
+    .line 0
+    iget v1, p0, LX/0Uu;->A00:I
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    if-gt v1, p1, :cond_0
 
     .line 4
-    packed-switch p0, :pswitch_data_0
-
     .line 5
+    const/4 v0, 0x1
+
     .line 6
-    .line 7
-    const-string p0, "SERVICE_START"
+    :cond_0
+    return v0
+.end method
 
-    .line 8
-    .line 9
-    return-object p0
+.method public final AQl(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    .line 10
-    :pswitch_0
-    const-string p0, "SERVICE_RESTART"
+    .line 0
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 11
-    .line 12
-    return-object p0
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    .line 13
-    :pswitch_1
-    const-string p0, "PERSISTENT_KICK"
+.method public final Akx(I)V
+    .locals 0
 
-    .line 14
-    .line 15
-    return-object p0
+    .line 0
+    iput p1, p0, LX/0Uu;->A00:I
 
-    .line 16
-    :pswitch_2
-    const-string p0, "CONNECTIVITY_CHANGED"
+    .line 1
+    .line 2
+    return-void
+.end method
 
-    .line 17
-    .line 18
-    return-object p0
+.method public final Aq2(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    .line 19
-    :pswitch_3
-    const-string p0, "CONFIG_CHANGED"
+    .line 0
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
-    .line 21
-    return-object p0
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    .line 22
-    :pswitch_4
-    const-string p0, "EXPIRE_CONNECTION"
+.method public final Aq3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-    .line 23
-    .line 24
-    return-object p0
+    .line 0
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 25
-    :pswitch_5
-    const-string p0, "CONNECT_NOW"
-
-    .line 26
-    .line 27
-    return-object p0
-
-    .line 28
-    :pswitch_6
-    const-string p0, "CONNECTION_LOST"
-
-    .line 29
-    .line 30
-    return-object p0
-
-    .line 31
-    :pswitch_7
-    const-string p0, "KEEPALIVE"
-
-    .line 32
-    .line 33
-    return-object p0
-
-    .line 34
-    :pswitch_8
-    const-string p0, "APP_FOREGROUND"
-
-    .line 35
-    .line 36
-    return-object p0
-
-    .line 37
-    :pswitch_9
-    const-string p0, "FBNS_REGISTER"
-
-    .line 38
-    .line 39
-    return-object p0
-
-    .line 40
-    :pswitch_a
-    const-string p0, "FBNS_REGISTER_RETRY"
-
-    .line 41
-    .line 42
-    return-object p0
-
-    .line 43
-    :pswitch_b
-    const-string p0, "FBNS_UNREGISTER"
-
-    .line 44
-    .line 45
-    return-object p0
-
-    .line 46
-    :pswitch_c
-    const-string p0, "CREDENTIALS_UPDATED"
-
-    .line 47
-    .line 48
-    return-object p0
-
-    .line 49
-    :pswitch_d
-    const-string p0, "CLIENT_KICK"
-
-    .line 50
-    .line 51
-    return-object p0
-
-    .line 52
-    :pswitch_e
-    const-string p0, "AUTH_CREDENTIALS_CHANGE"
-
-    .line 53
-    .line 54
-    return-object p0
-
-    .line 55
-    :pswitch_f
-    const-string p0, "FORCE_KICK"
-
-    .line 56
-    .line 57
-    return-object p0
-
-    .line 58
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-        :pswitch_9
-        :pswitch_a
-        :pswitch_b
-        :pswitch_c
-        :pswitch_d
-        :pswitch_e
-        :pswitch_f
-    .end packed-switch
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

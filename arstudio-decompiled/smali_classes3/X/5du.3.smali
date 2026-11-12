@@ -1,91 +1,68 @@
 .class public final LX/5du;
-.super Ljava/lang/Object;
+.super LX/5dJ;
 .source ""
-
-# interfaces
-.implements LX/5f3;
 
 
 # instance fields
-.field public final synthetic A00:LX/5cC;
+.field public A00:I
+
+.field public A01:[J
 
 
 # direct methods
-.method public constructor <init>(LX/5cC;)V
-    .locals 0
+.method public constructor <init>([J)V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/5du;->A00:LX/5cC;
+    invoke-direct {p0}, LX/5dJ;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/5du;->A01:[J
+
     .line 4
     .line 5
-    return-void
-.end method
+    array-length v1, p1
 
-
-# virtual methods
-.method public final A9E()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5du;->A00:LX/5cC;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/5cC;->A0G:LX/5cG;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
     .line 6
-    invoke-virtual {v0}, LX/5cG;->A01()V
+    iput v1, p0, LX/5du;->A00:I
 
     .line 7
     .line 8
+    const/16 v0, 0xa
+
     .line 9
+    .line 10
+    if-ge v1, v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-static {v1}, LX/5dJ;->A00(I)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([JI)[J
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 21
+    .line 22
+    .line 23
+    iput-object v0, p0, LX/5du;->A01:[J
+
+    .line 24
+    .line 25
     :cond_0
     return-void
-.end method
-
-.method public final A9h()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5du;->A00:LX/5cC;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/5cC;->A0G:LX/5cG;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-virtual {v0}, LX/5cG;->A02()V
-
-    .line 7
-    .line 8
-    .line 9
-    :cond_0
-    return-void
-.end method
-
-.method public final ALF()LX/5X9;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/5X9;->INPUT_PREVIEW:LX/5X9;
-
-    .line 1
-    .line 2
-    return-object v0
 .end method

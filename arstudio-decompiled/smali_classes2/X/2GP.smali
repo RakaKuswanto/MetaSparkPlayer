@@ -3,48 +3,64 @@
 .source ""
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x1L
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FdidOfflineExperimentUnitProvider$1"
 
 
 # instance fields
-.field public final index:I
-
-.field public final key:Ljava/lang/String;
-
-.field public final next:LX/2GP;
-
-.field public final value:LX/2Dv;
+.field public final synthetic A00:LX/2Fo;
 
 
 # direct methods
-.method public constructor <init>(LX/2Dv;LX/2GP;Ljava/lang/String;I)V
+.method public constructor <init>(LX/2Fo;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/2GP;->A00:LX/2Fo;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p2, p0, LX/2GP;->next:LX/2GP;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p3, p0, LX/2GP;->key:Ljava/lang/String;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2GP;->A00:LX/2Fo;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/2Fo;->A00:LX/0RP;
+
+    .line 3
+    .line 4
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 5
     .line 6
     .line 7
-    iput-object p1, p0, LX/2GP;->value:LX/2Dv;
+    move-result-object v0
 
     .line 8
-    .line 9
-    iput p4, p0, LX/2GP;->index:I
+    check-cast v0, LX/2Hw;
 
+    .line 9
     .line 10
+    invoke-virtual {v0}, LX/2Hw;->A00()V
+
     .line 11
+    .line 12
+    .line 13
     return-void
 .end method

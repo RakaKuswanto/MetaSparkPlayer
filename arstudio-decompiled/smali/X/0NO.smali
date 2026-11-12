@@ -1,371 +1,473 @@
-.class public final enum LX/0NO;
-.super Ljava/lang/Enum;
+.class public final LX/0NO;
+.super Ljava/lang/Thread;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/0NO;
-
-.field public static final enum DEFAULT:LX/0NO;
-
-.field public static final enum G2:LX/0NO;
-
-.field public static final enum G3:LX/0NO;
-
-.field public static final enum G4:LX/0NO;
-
-.field public static final enum G5:LX/0NO;
-
-.field public static final enum LTE:LX/0NO;
-
-.field public static final enum WIFI:LX/0NO;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DeallocationMonitor$ReferenceQueueThread"
 
 
 # instance fields
-.field public final value:I
+.field public A00:Ljava/lang/ref/ReferenceQueue;
+
+.field public volatile A01:Z
+
+.field public final synthetic A02:LX/0QT;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 16
-
-    .line 0
-    const-string v0, "DEFAULT"
-
-    .line 1
-    .line 2
-    const/4 v14, 0x0
-
-    .line 3
-    const/4 v13, 0x1
-
-    .line 4
-    new-instance v12, LX/0NO;
-
-    .line 5
-    .line 6
-    invoke-direct {v12, v0, v14, v13}, LX/0NO;-><init>(Ljava/lang/String;II)V
-
-    .line 7
-    .line 8
-    .line 9
-    sput-object v12, LX/0NO;->DEFAULT:LX/0NO;
-
-    .line 10
-    .line 11
-    const-string v0, "G2"
-
-    .line 12
-    .line 13
-    const/4 v11, 0x2
-
-    .line 14
-    new-instance v10, LX/0NO;
-
-    .line 15
-    .line 16
-    invoke-direct {v10, v0, v13, v11}, LX/0NO;-><init>(Ljava/lang/String;II)V
-
-    .line 17
-    .line 18
-    .line 19
-    sput-object v10, LX/0NO;->G2:LX/0NO;
-
-    .line 20
-    .line 21
-    const-string v0, "G3"
-
-    .line 22
-    .line 23
-    const/4 v9, 0x3
-
-    .line 24
-    new-instance v8, LX/0NO;
-
-    .line 25
-    .line 26
-    invoke-direct {v8, v0, v11, v9}, LX/0NO;-><init>(Ljava/lang/String;II)V
-
-    .line 27
-    .line 28
-    .line 29
-    sput-object v8, LX/0NO;->G3:LX/0NO;
-
-    .line 30
-    .line 31
-    const-string v0, "G4"
-
-    .line 32
-    .line 33
-    const/4 v7, 0x4
-
-    .line 34
-    new-instance v6, LX/0NO;
-
-    .line 35
-    .line 36
-    invoke-direct {v6, v0, v9, v7}, LX/0NO;-><init>(Ljava/lang/String;II)V
-
-    .line 37
-    .line 38
-    .line 39
-    sput-object v6, LX/0NO;->G4:LX/0NO;
-
-    .line 40
-    .line 41
-    const-string v0, "G5"
-
-    .line 42
-    .line 43
-    const/4 v5, 0x5
-
-    .line 44
-    new-instance v4, LX/0NO;
-
-    .line 45
-    .line 46
-    invoke-direct {v4, v0, v7, v5}, LX/0NO;-><init>(Ljava/lang/String;II)V
-
-    .line 47
-    .line 48
-    .line 49
-    sput-object v4, LX/0NO;->G5:LX/0NO;
-
-    .line 50
-    .line 51
-    const-string v0, "LTE"
-
-    .line 52
-    .line 53
-    const/4 v3, 0x6
-
-    .line 54
-    new-instance v2, LX/0NO;
-
-    .line 55
-    .line 56
-    invoke-direct {v2, v0, v5, v3}, LX/0NO;-><init>(Ljava/lang/String;II)V
-
-    .line 57
-    .line 58
-    .line 59
-    sput-object v2, LX/0NO;->LTE:LX/0NO;
-
-    .line 60
-    .line 61
-    const-string v15, "WIFI"
-
-    .line 62
-    .line 63
-    const/4 v0, 0x7
-
-    .line 64
-    new-instance v1, LX/0NO;
-
-    .line 65
-    .line 66
-    invoke-direct {v1, v15, v3, v0}, LX/0NO;-><init>(Ljava/lang/String;II)V
-
-    .line 67
-    .line 68
-    .line 69
-    sput-object v1, LX/0NO;->WIFI:LX/0NO;
-
-    .line 70
-    .line 71
-    new-array v0, v0, [LX/0NO;
-
-    .line 72
-    .line 73
-    aput-object v12, v0, v14
-
-    .line 74
-    .line 75
-    aput-object v10, v0, v13
-
-    .line 76
-    .line 77
-    aput-object v8, v0, v11
-
-    .line 78
-    .line 79
-    aput-object v6, v0, v9
-
-    .line 80
-    .line 81
-    aput-object v4, v0, v7
-
-    .line 82
-    .line 83
-    aput-object v2, v0, v5
-
-    .line 84
-    .line 85
-    aput-object v1, v0, v3
-
-    .line 86
-    .line 87
-    sput-object v0, LX/0NO;->$VALUES:[LX/0NO;
-
-    .line 88
-    .line 89
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    iput p3, p0, LX/0NO;->value:I
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static findByValue(I)LX/0NO;
-    .locals 0
-
-    .line 0
-    packed-switch p0, :pswitch_data_0
-
-    .line 1
-    .line 2
-    .line 3
-    const/4 p0, 0x0
-
-    .line 4
-    return-object p0
-
-    .line 5
-    :pswitch_0
-    sget-object p0, LX/0NO;->WIFI:LX/0NO;
-
-    .line 6
-    .line 7
-    return-object p0
-
-    .line 8
-    :pswitch_1
-    sget-object p0, LX/0NO;->LTE:LX/0NO;
-
-    .line 9
-    .line 10
-    return-object p0
-
-    .line 11
-    :pswitch_2
-    sget-object p0, LX/0NO;->G5:LX/0NO;
-
-    .line 12
-    .line 13
-    return-object p0
-
-    .line 14
-    :pswitch_3
-    sget-object p0, LX/0NO;->G4:LX/0NO;
-
-    .line 15
-    .line 16
-    return-object p0
-
-    .line 17
-    :pswitch_4
-    sget-object p0, LX/0NO;->G3:LX/0NO;
-
-    .line 18
-    .line 19
-    return-object p0
-
-    .line 20
-    :pswitch_5
-    sget-object p0, LX/0NO;->G2:LX/0NO;
-
-    .line 21
-    .line 22
-    return-object p0
-
-    .line 23
-    :pswitch_6
-    sget-object p0, LX/0NO;->DEFAULT:LX/0NO;
-
-    .line 24
-    .line 25
-    return-object p0
-
-    .line 26
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/0NO;
+.method public constructor <init>(LX/0QT;Ljava/lang/ref/ReferenceQueue;I)V
     .locals 1
 
     .line 0
-    const-class v0, LX/0NO;
+    iput-object p1, p0, LX/0NO;->A02:LX/0QT;
 
     .line 1
     .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const-string v0, "RefQThread-"
 
     .line 3
     .line 4
+    invoke-static {v0, p3}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
     .line 5
+    .line 6
+    .line 7
     move-result-object v0
 
-    .line 6
-    check-cast v0, LX/0NO;
-
-    .line 7
     .line 8
-    return-object v0
-.end method
+    invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-.method public static values()[LX/0NO;
-    .locals 1
+    .line 9
+    .line 10
+    .line 11
+    const/4 v0, 0x1
 
-    .line 0
-    sget-object v0, LX/0NO;->$VALUES:[LX/0NO;
+    .line 12
+    iput-boolean v0, p0, LX/0NO;->A01:Z
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 13
+    .line 14
+    iput-object p2, p0, LX/0NO;->A00:Ljava/lang/ref/ReferenceQueue;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/0NO;
-
-    .line 7
-    .line 8
-    return-object v0
+    .line 15
+    .line 16
+    return-void
 .end method
 
 
 # virtual methods
-.method public getValue()I
-    .locals 1
+.method public final run()V
+    .locals 14
 
     .line 0
-    iget v0, p0, LX/0NO;->value:I
+    iget-object v8, p0, LX/0NO;->A02:LX/0QT;
 
     .line 1
     .line 2
-    return v0
+    const/16 v7, 0x20
+
+    .line 3
+    .line 4
+    const/4 v6, 0x0
+
+    .line 5
+    new-array v5, v7, [Ljava/lang/String;
+
+    .line 6
+    .line 7
+    new-array v4, v7, [Ljava/lang/ref/Reference;
+
+    .line 8
+    .line 9
+    :cond_0
+    const/4 v9, 0x0
+
+    .line 10
+    const/4 v3, 0x0
+
+    .line 11
+    :cond_1
+    :try_start_0
+    iget-object v2, p0, LX/0NO;->A00:Ljava/lang/ref/ReferenceQueue;
+
+    .line 12
+    .line 13
+    invoke-virtual {v2}, Ljava/lang/ref/ReferenceQueue;->poll()Ljava/lang/ref/Reference;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    if-eqz v0, :cond_2
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 18
+    .line 19
+    :try_start_1
+    add-int/lit8 v1, v3, 0x1
+
+    .line 20
+    .line 21
+    aput-object v0, v4, v3
+
+    .line 22
+    .line 23
+    goto :goto_0
+
+    .line 24
+    :cond_2
+    if-nez v3, :cond_3
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 25
+    .line 26
+    :try_start_2
+    const-wide/16 v0, 0x7530
+
+    .line 27
+    .line 28
+    invoke-virtual {v2, v0, v1}, Ljava/lang/ref/ReferenceQueue;->remove(J)Ljava/lang/ref/Reference;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    if-eqz v0, :cond_d
+
+    .line 33
+    .line 34
+    const/4 v1, 0x1
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
+
+    .line 35
+    :try_start_3
+    aput-object v0, v4, v3
+    :try_end_3
+    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
+
+    .line 36
+    .line 37
+    :catch_0
+    move v3, v1
+
+    .line 38
+    :catch_1
+    :cond_3
+    if-lez v3, :cond_d
+
+    .line 39
+    .line 40
+    goto :goto_1
+
+    .line 41
+    :goto_0
+    move v3, v1
+
+    .line 42
+    if-lt v1, v7, :cond_1
+
+    .line 43
+    .line 44
+    :goto_1
+    const/4 v11, 0x0
+
+    .line 45
+    :cond_4
+    aget-object v0, v4, v11
+
+    .line 46
+    .line 47
+    check-cast v0, LX/0NM;
+
+    .line 48
+    .line 49
+    invoke-interface {v0}, LX/0NM;->AFO()Ljava/lang/Object;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v12
+
+    .line 53
+    check-cast v12, Ljava/lang/Class;
+
+    .line 54
+    .line 55
+    if-eqz v12, :cond_b
+
+    .line 56
+    .line 57
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 58
+    .line 59
+    const/16 v0, 0x1a
+
+    .line 60
+    .line 61
+    if-lt v1, v0, :cond_6
+
+    .line 62
+    .line 63
+    invoke-static {v12}, LX/0NK;->A01(Ljava/lang/Class;)Ljava/lang/String;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v13
+
+    .line 67
+    :cond_5
+    :goto_2
+    aput-object v13, v5, v11
+
+    .line 68
+    .line 69
+    add-int/lit8 v11, v11, 0x1
+
+    .line 70
+    .line 71
+    if-lt v11, v3, :cond_4
+
+    .line 72
+    .line 73
+    iget-object v0, v8, LX/0QT;->A03:LX/0NL;
+
+    .line 74
+    .line 75
+    invoke-interface {v0, v6, v5, v3}, LX/0NL;->AV7([J[Ljava/lang/String;I)V
+
+    .line 76
+    .line 77
+    .line 78
+    iget-object v2, v8, LX/0QT;->A05:Ljava/util/Set;
+
+    .line 79
+    .line 80
+    monitor-enter v2
+
+    .line 81
+    const/4 v1, 0x0
+
+    .line 82
+    goto :goto_4
+
+    .line 83
+    :cond_6
+    invoke-virtual {v12}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 84
+    .line 85
+    .line 86
+    move-result-object v13
+
+    .line 87
+    invoke-virtual {v12}, Ljava/lang/Class;->isArray()Z
+
+    .line 88
+    .line 89
+    .line 90
+    move-result v0
+
+    .line 91
+    if-eqz v0, :cond_5
+
+    .line 92
+    .line 93
+    const/16 v0, 0x24
+
+    .line 94
+    .line 95
+    invoke-virtual {v13, v0}, Ljava/lang/String;->indexOf(I)I
+
+    .line 96
+    .line 97
+    .line 98
+    move-result v1
+
+    .line 99
+    const/4 v0, -0x1
+
+    .line 100
+    if-eq v1, v0, :cond_a
+
+    .line 101
+    .line 102
+    const/4 v10, 0x0
+
+    .line 103
+    const/4 v2, 0x0
+
+    .line 104
+    :cond_7
+    invoke-virtual {v12}, Ljava/lang/Class;->isArray()Z
+
+    .line 105
+    .line 106
+    .line 107
+    move-result v0
+
+    .line 108
+    if-eqz v0, :cond_8
+
+    .line 109
+    .line 110
+    add-int/lit8 v2, v2, 0x1
+
+    .line 111
+    .line 112
+    invoke-virtual {v12}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
+
+    .line 113
+    .line 114
+    .line 115
+    move-result-object v12
+
+    .line 116
+    if-nez v12, :cond_7
+
+    .line 117
+    .line 118
+    goto :goto_2
+
+    .line 119
+    :cond_8
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 120
+    .line 121
+    .line 122
+    move-result-object v1
+
+    .line 123
+    invoke-virtual {v12}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 124
+    .line 125
+    .line 126
+    move-result-object v0
+
+    .line 127
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 128
+    .line 129
+    .line 130
+    :goto_3
+    if-ge v10, v2, :cond_9
+
+    .line 131
+    .line 132
+    const-string v0, "[]"
+
+    .line 133
+    .line 134
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 135
+    .line 136
+    .line 137
+    add-int/lit8 v10, v10, 0x1
+
+    .line 138
+    .line 139
+    goto :goto_3
+
+    .line 140
+    :cond_9
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 141
+    .line 142
+    .line 143
+    move-result-object v13
+
+    .line 144
+    goto :goto_2
+
+    .line 145
+    :cond_a
+    invoke-virtual {v12}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    .line 146
+    .line 147
+    .line 148
+    move-result-object v13
+
+    .line 149
+    goto :goto_2
+
+    .line 150
+    :cond_b
+    move-object v13, v6
+
+    .line 151
+    goto :goto_2
+
+    .line 152
+    :cond_c
+    :goto_4
+    :try_start_4
+    aget-object v0, v4, v1
+
+    .line 153
+    .line 154
+    invoke-interface {v2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 155
+    .line 156
+    .line 157
+    aput-object v6, v4, v1
+
+    .line 158
+    .line 159
+    add-int/lit8 v1, v1, 0x1
+
+    .line 160
+    .line 161
+    if-lt v1, v3, :cond_c
+
+    .line 162
+    .line 163
+    monitor-exit v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    .line 164
+    invoke-static {v5, v9, v7, v6}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
+
+    .line 165
+    .line 166
+    .line 167
+    :cond_d
+    iget-boolean v0, p0, LX/0NO;->A01:Z
+
+    .line 168
+    .line 169
+    if-nez v0, :cond_0
+
+    .line 170
+    .line 171
+    return-void
+
+    .line 172
+    :catchall_0
+    move-exception v0
+
+    .line 173
+    :try_start_5
+    monitor-exit v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    .line 174
+    throw v0
 .end method

@@ -8,6 +8,7 @@
         <item>Búsqueda</item>
         <item>Notificaciones</item>
         <item>Pestaña Destacados</item>
+        <item>Historias</item>
         <item>Otro</item>
     </string-array>
 </resources>

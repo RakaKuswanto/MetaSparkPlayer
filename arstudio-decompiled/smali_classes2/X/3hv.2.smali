@@ -1,112 +1,70 @@
 .class public final LX/3hv;
-.super Ljava/lang/Object;
+.super LX/4vQ;
 .source ""
 
-
-# static fields
-.field public static final A01:Ljava/util/concurrent/atomic/AtomicReference;
+# interfaces
+.implements LX/0GZ;
 
 
 # instance fields
-.field public A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic $isVideoIssuePresent:Z
+
+.field public final synthetic $issueCode:LX/3tH;
+
+.field public final synthetic $videoError:LX/3tG;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(LX/3tG;LX/3tH;Z)V
     .locals 1
 
-    .line 0
-    const/4 v0, 0x0
+    iput-boolean p3, p0, LX/3hv;->$isVideoIssuePresent:Z
 
-    .line 1
-    invoke-static {v0}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p2, p0, LX/3hv;->$issueCode:LX/3tH;
 
-    .line 2
-    .line 3
-    .line 4
-    move-result-object v0
+    iput-object p1, p0, LX/3hv;->$videoError:LX/3tG;
 
-    .line 5
-    sput-object v0, LX/3hv;->A01:Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v0, 0x1
 
-    .line 6
-    .line 7
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
+
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+
+# virtual methods
+.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1}, LX/0X3;->A0O(Ljava/lang/Object;)LX/3hr;
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Ye;->A0d()Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v3
 
     .line 4
+    iget-boolean v2, p0, LX/3hv;->$isVideoIssuePresent:Z
+
     .line 5
     .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/3hv;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public static A00()LX/3hv;
-    .locals 3
-
-    .line 0
-    sget-object v2, LX/3hv;->A01:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 1
-    .line 2
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    if-nez v0, :cond_0
+    iget-object v1, p0, LX/3hv;->$issueCode:LX/3tH;
 
     .line 7
     .line 8
-    const/4 v1, 0x0
+    iget-object v0, p0, LX/3hv;->$videoError:LX/3tG;
 
     .line 9
-    new-instance v0, LX/3hv;
-
     .line 10
-    .line 11
-    invoke-direct {v0}, LX/3hv;-><init>()V
+    invoke-interface {v3, v0, v1, v2}, LX/3hr;->AYk(LX/3tG;LX/3tH;Z)V
 
+    .line 11
     .line 12
     .line 13
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
+
     .line 14
-    invoke-virtual {v2, v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     .line 15
-    .line 16
-    .line 17
-    :cond_0
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    check-cast v0, LX/3hv;
-
-    .line 22
-    .line 23
     return-object v0
 .end method

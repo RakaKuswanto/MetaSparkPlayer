@@ -1,25 +1,36 @@
-.class public final LX/3LF;
+.class public abstract LX/3LF;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nw;
+# static fields
+.field public static final A00:I
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3LF;->A00:LX/1Nw;
+    move-result-object v0
 
     .line 4
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+
     .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    sput v0, LX/3LF;->A00:I
+
+    .line 9
+    .line 10
     return-void
 .end method

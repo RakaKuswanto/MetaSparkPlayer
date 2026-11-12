@@ -1,148 +1,117 @@
 .class public final LX/52T;
-.super Ljava/lang/Object;
+.super LX/520;
 .source ""
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public A00:I
-
-.field public A01:Ljava/lang/Object;
-
-.field public final A02:I
+.field public final A00:LX/52S;
 
 
 # direct methods
-.method public constructor <init>(LX/4Kg;)V
-    .locals 1
-
-    .line 268435456
-    const/4 v0, 0x1
-
-    .line 268435457
-    iput v0, p0, LX/52T;->A02:I
-
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, LX/52T;->A01:Ljava/lang/Object;
-
-    .line 268435460
-    .line 268435461
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435462
-    .line 268435463
-    .line 268435464
-    const/4 v0, 0x0
-
-    .line 268435465
-    iput v0, p0, LX/52T;->A00:I
-
-    .line 268435466
-    .line 268435467
-    return-void
-.end method
-
-.method public constructor <init>(LX/4Kg;I)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;LX/52S;LX/555;LX/554;LX/50X;)V
+    .locals 10
 
     .line 0
-    const/4 v0, 0x0
+    const/16 v9, 0x44
 
     .line 1
-    iput v0, p0, LX/52T;->A02:I
-
     .line 2
+    move-object v3, p0
+
     .line 3
-    iput-object p1, p0, LX/52T;->A01:Ljava/lang/Object;
+    move-object v4, p1
 
     .line 4
+    move-object v5, p2
+
     .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v6, p4
 
     .line 6
-    .line 7
-    .line 8
-    iput p2, p0, LX/52T;->A00:I
+    move-object v7, p5
 
+    .line 7
+    move-object/from16 v8, p6
+
+    .line 8
     .line 9
+    invoke-direct/range {v3 .. v9}, LX/520;-><init>(Landroid/content/Context;Landroid/os/Looper;LX/54S;LX/54s;LX/50X;I)V
+
     .line 10
+    .line 11
+    .line 12
+    if-nez p3, :cond_0
+
+    .line 13
+    .line 14
+    sget-object p3, LX/52S;->A02:LX/52S;
+
+    .line 15
+    .line 16
+    :cond_0
+    iget-boolean v0, p3, LX/52S;->A01:Z
+
+    .line 17
+    .line 18
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v2
+
+    .line 22
+    const/16 v0, 0x10
+
+    .line 23
+    .line 24
+    new-array v1, v0, [B
+
+    .line 25
+    .line 26
+    sget-object v0, LX/54w;->A00:Ljava/security/SecureRandom;
+
+    .line 27
+    .line 28
+    invoke-virtual {v0, v1}, Ljava/util/Random;->nextBytes([B)V
+
+    .line 29
+    .line 30
+    .line 31
+    const/16 v0, 0xb
+
+    .line 32
+    .line 33
+    invoke-static {v1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v1
+
+    .line 37
+    new-instance v0, LX/52S;
+
+    .line 38
+    .line 39
+    invoke-direct {v0, v1, v2}, LX/52S;-><init>(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 40
+    .line 41
+    .line 42
+    iput-object v0, p0, LX/52T;->A00:LX/52S;
+
+    .line 43
+    .line 44
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final AHG()I
+    .locals 1
 
-    .line 0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    const v0, 0xc35000
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-static {v0}, LX/002;->A00(Ljava/lang/Object;)I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v3
-
-    .line 8
-    sget-boolean v2, LX/4Kg;->A0F:Z
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/52T;->A01:Ljava/lang/Object;
-
-    .line 11
-    .line 12
-    check-cast v0, LX/4Kg;
-
-    .line 13
-    .line 14
-    iget-object v1, v0, LX/4Kg;->A0A:LX/4Kf;
-
-    .line 15
-    .line 16
-    if-eqz v2, :cond_0
-
-    .line 17
-    .line 18
-    iget v0, p0, LX/52T;->A00:I
-
-    .line 19
-    .line 20
-    sub-int v0, v3, v0
-
-    .line 21
-    .line 22
-    invoke-static {v1, v0}, LX/03G;->A0U(Landroid/view/View;I)V
-
-    .line 23
-    .line 24
-    .line 25
-    :goto_0
-    iput v3, p0, LX/52T;->A00:I
-
-    .line 26
-    .line 27
-    return-void
-
-    .line 28
-    :cond_0
-    int-to-float v0, v3
-
-    .line 29
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    .line 30
-    .line 31
-    .line 32
-    goto :goto_0
+    return v0
 .end method

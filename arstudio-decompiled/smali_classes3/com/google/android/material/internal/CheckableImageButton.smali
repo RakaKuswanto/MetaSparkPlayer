@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/internal/CheckableImageButton;
-.super LX/4Wx;
+.super LX/4Pj;
 .source ""
 
 # interfaces
@@ -23,7 +23,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/4BF;->A1Q()[I
+    invoke-static {}, LX/434;->A1Z()[I
 
     .line 1
     .line 2
@@ -69,7 +69,7 @@
     .locals 1
 
     .line 268435456
-    const v0, 0x7f040506
+    const v0, 0x7f040522
 
     .line 268435457
     .line 268435458
@@ -86,7 +86,7 @@
     .locals 2
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/4Wx;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, LX/4Pj;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1
     .line 2
@@ -102,20 +102,20 @@
 
     .line 7
     .line 8
-    const/16 v1, 0x9
+    const/16 v1, 0x8
 
     .line 9
     .line 10
-    new-instance v0, LX/6Oq;
+    new-instance v0, LX/6fS;
 
     .line 11
     .line 12
-    invoke-direct {v0, p0, v1}, LX/6Oq;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/6fS;-><init>(Ljava/lang/Object;I)V
 
     .line 13
     .line 14
     .line 15
-    invoke-static {p0, v0}, LX/03G;->A0b(Landroid/view/View;LX/01q;)V
+    invoke-static {p0, v0}, LX/03U;->A0f(Landroid/view/View;LX/01z;)V
 
     .line 16
     .line 17
@@ -152,13 +152,11 @@
 
     .line 5
     .line 6
-    array-length v0, v1
+    add-int/lit8 v0, p1, 0x1
 
     .line 7
-    add-int/2addr p1, v0
-
     .line 8
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->onCreateDrawableState(I)[I
+    invoke-super {p0, v0}, Landroid/widget/ImageView;->onCreateDrawableState(I)[I
 
     .line 9
     .line 10

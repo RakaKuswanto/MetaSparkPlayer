@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/TreeMultiset;
-.super LX/1g9;
+.super LX/247;
 .source ""
 
 # interfaces
@@ -12,7 +12,7 @@
         "<E:",
         "Ljava/lang/Object;",
         ">",
-        "LX/1g9<",
+        "LX/247<",
         "TE;>;",
         "Ljava/io/Serializable;"
     }
@@ -26,26 +26,38 @@
 # instance fields
 .field public final transient A00:Lcom/google/common/collect/GeneralRange;
 
-.field public final transient A01:LX/1gR;
+.field public final transient A01:LX/24B;
 
-.field public final transient A02:LX/1gW;
+.field public final transient A02:LX/24K;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/collect/GeneralRange;LX/1gR;LX/1gW;)V
+.method public constructor <init>(Lcom/google/common/collect/GeneralRange;LX/24B;LX/24K;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "rootReference",
+            "range",
+            "endLink"
+        }
+    .end annotation
 
     .line 268435456
     iget-object v0, p1, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
 
     .line 268435457
     .line 268435458
-    invoke-direct {p0, v0}, LX/1g9;-><init>(Ljava/util/Comparator;)V
+    invoke-direct {p0, v0}, LX/247;-><init>(Ljava/util/Comparator;)V
 
     .line 268435459
     .line 268435460
     .line 268435461
-    iput-object p3, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iput-object p3, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
     .line 268435462
     .line 268435463
@@ -53,7 +65,7 @@
 
     .line 268435464
     .line 268435465
-    iput-object p2, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/1gR;
+    iput-object p2, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/24B;
 
     .line 268435466
     .line 268435467
@@ -62,12 +74,20 @@
 
 .method public constructor <init>(Ljava/util/Comparator;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "comparator"
+        }
+    .end annotation
 
     .line 0
     move-object v5, p1
 
     .line 1
-    invoke-direct {p0, p1}, LX/1g9;-><init>(Ljava/util/Comparator;)V
+    invoke-direct {p0, p1}, LX/247;-><init>(Ljava/util/Comparator;)V
 
     .line 2
     .line 3
@@ -104,48 +124,55 @@
 
     .line 17
     .line 18
-    const/4 v1, 0x1
+    new-instance v0, LX/24B;
 
     .line 19
-    new-instance v0, LX/1gR;
-
     .line 20
-    .line 21
-    invoke-direct {v0, v3, v1}, LX/1gR;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0}, LX/24B;-><init>()V
 
+    .line 21
     .line 22
     .line 23
+    iput-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/24B;
+
     .line 24
-    iput-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/1gR;
-
     .line 25
+    iput-object v0, v0, LX/24B;->A07:LX/24B;
+
     .line 26
-    iput-object v0, v0, LX/1gR;->A07:LX/1gR;
-
     .line 27
+    iput-object v0, v0, LX/24B;->A05:LX/24B;
+
     .line 28
-    iput-object v0, v0, LX/1gR;->A05:LX/1gR;
-
     .line 29
+    new-instance v0, LX/24K;
+
     .line 30
-    new-instance v0, LX/1gW;
-
     .line 31
-    .line 32
-    invoke-direct {v0}, LX/1gW;-><init>()V
+    invoke-direct {v0}, LX/24K;-><init>()V
 
+    .line 32
     .line 33
     .line 34
-    .line 35
-    iput-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iput-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
+    .line 35
     .line 36
-    .line 37
     return-void
 .end method
 
-.method public static A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+.method public static A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "aggr",
+            "node"
+        }
+    .end annotation
 
     .line 0
     if-nez p1, :cond_0
@@ -160,7 +187,7 @@
 
     .line 5
     :cond_0
-    iget-object v3, p2, LX/1g9;->comparator:Ljava/util/Comparator;
+    iget-object v3, p2, LX/247;->comparator:Ljava/util/Comparator;
 
     .line 6
     .line 7
@@ -172,7 +199,7 @@
 
     .line 10
     .line 11
-    iget-object v0, p1, LX/1gR;->A08:Ljava/lang/Object;
+    iget-object v0, p1, LX/24B;->A08:Ljava/lang/Object;
 
     .line 12
     .line 13
@@ -188,11 +215,11 @@
 
     .line 18
     .line 19
-    iget-object v0, p1, LX/1gR;->A06:LX/1gR;
+    iget-object v0, p1, LX/24B;->A06:LX/24B;
 
     .line 20
     .line 21
-    invoke-static {p0, v0, p2}, Lcom/google/common/collect/TreeMultiset;->A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+    invoke-static {p0, v0, p2}, Lcom/google/common/collect/TreeMultiset;->A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
 
     .line 22
     .line 23
@@ -234,11 +261,11 @@
 
     .line 39
     .line 40
-    iget-object v0, p1, LX/1gR;->A06:LX/1gR;
+    iget-object v0, p1, LX/24B;->A06:LX/24B;
 
     .line 41
     .line 42
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/1gR;)J
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/24B;)J
 
     .line 43
     .line 44
@@ -263,11 +290,11 @@
 
     .line 53
     :cond_3
-    iget-object v0, p1, LX/1gR;->A06:LX/1gR;
+    iget-object v0, p1, LX/24B;->A06:LX/24B;
 
     .line 54
     .line 55
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/1gR;)J
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/24B;)J
 
     .line 56
     .line 57
@@ -275,7 +302,7 @@
     move-result-wide v2
 
     .line 59
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset$Aggregate;->nodeAggregate(LX/1gR;)I
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset$Aggregate;->nodeAggregate(LX/24B;)I
 
     .line 60
     .line 61
@@ -289,11 +316,11 @@
     add-long/2addr v2, v0
 
     .line 65
-    iget-object v0, p1, LX/1gR;->A04:LX/1gR;
+    iget-object v0, p1, LX/24B;->A04:LX/24B;
 
     .line 66
     .line 67
-    invoke-static {p0, v0, p2}, Lcom/google/common/collect/TreeMultiset;->A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+    invoke-static {p0, v0, p2}, Lcom/google/common/collect/TreeMultiset;->A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
 
     .line 68
     .line 69
@@ -305,7 +332,7 @@
 
     .line 72
     :cond_4
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset$Aggregate;->nodeAggregate(LX/1gR;)I
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset$Aggregate;->nodeAggregate(LX/24B;)I
 
     .line 73
     .line 74
@@ -316,11 +343,11 @@
     int-to-long v2, v0
 
     .line 77
-    iget-object v0, p1, LX/1gR;->A06:LX/1gR;
+    iget-object v0, p1, LX/24B;->A06:LX/24B;
 
     .line 78
     .line 79
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/1gR;)J
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/24B;)J
 
     .line 80
     .line 81
@@ -335,8 +362,18 @@
     return-wide v2
 .end method
 
-.method public static A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+.method public static A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "aggr",
+            "node"
+        }
+    .end annotation
 
     .line 0
     if-nez p1, :cond_0
@@ -351,7 +388,7 @@
 
     .line 5
     :cond_0
-    iget-object v3, p2, LX/1g9;->comparator:Ljava/util/Comparator;
+    iget-object v3, p2, LX/247;->comparator:Ljava/util/Comparator;
 
     .line 6
     .line 7
@@ -363,7 +400,7 @@
 
     .line 10
     .line 11
-    iget-object v0, p1, LX/1gR;->A08:Ljava/lang/Object;
+    iget-object v0, p1, LX/24B;->A08:Ljava/lang/Object;
 
     .line 12
     .line 13
@@ -379,11 +416,11 @@
 
     .line 18
     .line 19
-    iget-object v0, p1, LX/1gR;->A04:LX/1gR;
+    iget-object v0, p1, LX/24B;->A04:LX/24B;
 
     .line 20
     .line 21
-    invoke-static {p0, v0, p2}, Lcom/google/common/collect/TreeMultiset;->A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+    invoke-static {p0, v0, p2}, Lcom/google/common/collect/TreeMultiset;->A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
 
     .line 22
     .line 23
@@ -425,11 +462,11 @@
 
     .line 39
     .line 40
-    iget-object v0, p1, LX/1gR;->A04:LX/1gR;
+    iget-object v0, p1, LX/24B;->A04:LX/24B;
 
     .line 41
     .line 42
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/1gR;)J
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/24B;)J
 
     .line 43
     .line 44
@@ -454,11 +491,11 @@
 
     .line 53
     :cond_3
-    iget-object v0, p1, LX/1gR;->A04:LX/1gR;
+    iget-object v0, p1, LX/24B;->A04:LX/24B;
 
     .line 54
     .line 55
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/1gR;)J
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/24B;)J
 
     .line 56
     .line 57
@@ -466,7 +503,7 @@
     move-result-wide v2
 
     .line 59
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset$Aggregate;->nodeAggregate(LX/1gR;)I
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset$Aggregate;->nodeAggregate(LX/24B;)I
 
     .line 60
     .line 61
@@ -480,11 +517,11 @@
     add-long/2addr v2, v0
 
     .line 65
-    iget-object v0, p1, LX/1gR;->A06:LX/1gR;
+    iget-object v0, p1, LX/24B;->A06:LX/24B;
 
     .line 66
     .line 67
-    invoke-static {p0, v0, p2}, Lcom/google/common/collect/TreeMultiset;->A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+    invoke-static {p0, v0, p2}, Lcom/google/common/collect/TreeMultiset;->A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
 
     .line 68
     .line 69
@@ -496,7 +533,7 @@
 
     .line 72
     :cond_4
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset$Aggregate;->nodeAggregate(LX/1gR;)I
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset$Aggregate;->nodeAggregate(LX/24B;)I
 
     .line 73
     .line 74
@@ -507,11 +544,11 @@
     int-to-long v2, v0
 
     .line 77
-    iget-object v0, p1, LX/1gR;->A04:LX/1gR;
+    iget-object v0, p1, LX/24B;->A04:LX/24B;
 
     .line 78
     .line 79
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/1gR;)J
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/24B;)J
 
     .line 80
     .line 81
@@ -528,6 +565,14 @@
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
     .locals 11
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
     const-class v2, Lcom/google/common/collect/TreeMultiset;
@@ -547,192 +592,203 @@
     move-result-object v8
 
     .line 9
-    check-cast v8, Ljava/util/Comparator;
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 10
     .line 11
-    const-class v1, LX/1g9;
-
     .line 12
+    check-cast v8, Ljava/util/Comparator;
+
     .line 13
-    const-string v0, "comparator"
-
     .line 14
-    .line 15
-    invoke-static {v1, v0}, LX/1f3;->A00(Ljava/lang/Class;Ljava/lang/String;)LX/1ez;
+    const-class v1, LX/247;
 
+    .line 15
     .line 16
+    const-string/jumbo v0, "comparator"
+
     .line 17
     .line 18
-    move-result-object v0
-
     .line 19
-    invoke-virtual {v0, p0, v8}, LX/1ez;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/22T;->A00(Ljava/lang/Class;Ljava/lang/String;)LX/22U;
 
     .line 20
     .line 21
     .line 22
-    const-string/jumbo v0, "range"
-
-    .line 23
-    .line 24
-    .line 25
-    invoke-static {v2, v0}, LX/1f3;->A00(Ljava/lang/Class;Ljava/lang/String;)LX/1ez;
-
-    .line 26
-    .line 27
-    .line 28
     move-result-object v0
 
+    .line 23
+    invoke-virtual {v0, p0, v8}, LX/22U;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 24
+    .line 25
+    .line 26
+    const-string/jumbo v0, "range"
+
+    .line 27
+    .line 28
     .line 29
-    sget-object v4, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
+    invoke-static {v2, v0}, LX/22T;->A00(Ljava/lang/Class;Ljava/lang/String;)LX/22U;
 
     .line 30
     .line 31
-    const/4 v9, 0x0
-
     .line 32
-    const/4 v6, 0x0
+    move-result-object v0
 
     .line 33
-    new-instance v3, Lcom/google/common/collect/GeneralRange;
+    sget-object v4, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
 
     .line 34
     .line 35
-    move-object v5, v4
+    const/4 v9, 0x0
 
     .line 36
-    move-object v7, v6
+    const/4 v6, 0x0
 
     .line 37
-    move v10, v9
+    new-instance v3, Lcom/google/common/collect/GeneralRange;
 
     .line 38
-    invoke-direct/range {v3 .. v10}, Lcom/google/common/collect/GeneralRange;-><init>(Lcom/google/common/collect/BoundType;Lcom/google/common/collect/BoundType;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;ZZ)V
-
     .line 39
+    move-object v5, v4
+
     .line 40
+    move-object v7, v6
+
     .line 41
-    invoke-virtual {v0, p0, v3}, LX/1ez;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    move v10, v9
 
     .line 42
+    invoke-direct/range {v3 .. v10}, Lcom/google/common/collect/GeneralRange;-><init>(Lcom/google/common/collect/BoundType;Lcom/google/common/collect/BoundType;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;ZZ)V
+
     .line 43
     .line 44
-    const-string/jumbo v0, "rootReference"
-
     .line 45
+    invoke-virtual {v0, p0, v3}, LX/22U;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+
     .line 46
     .line 47
-    invoke-static {v2, v0}, LX/1f3;->A00(Ljava/lang/Class;Ljava/lang/String;)LX/1ez;
-
     .line 48
+    const-string/jumbo v0, "rootReference"
+
     .line 49
     .line 50
-    move-result-object v1
-
     .line 51
-    new-instance v0, LX/1gW;
+    invoke-static {v2, v0}, LX/22T;->A00(Ljava/lang/Class;Ljava/lang/String;)LX/22U;
 
     .line 52
     .line 53
-    invoke-direct {v0}, LX/1gW;-><init>()V
-
     .line 54
-    .line 55
-    .line 56
-    invoke-virtual {v1, p0, v0}, LX/1ez;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v1
 
+    .line 55
+    new-instance v0, LX/24K;
+
+    .line 56
     .line 57
+    invoke-direct {v0}, LX/24K;-><init>()V
+
     .line 58
     .line 59
-    const/4 v0, 0x1
-
     .line 60
-    new-instance v1, LX/1gR;
+    invoke-virtual {v1, p0, v0}, LX/22U;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 61
     .line 62
-    invoke-direct {v1, v6, v0}, LX/1gR;-><init>(Ljava/lang/Object;I)V
-
     .line 63
+    new-instance v1, LX/24B;
+
     .line 64
     .line 65
-    const-string/jumbo v0, "header"
+    invoke-direct {v1}, LX/24B;-><init>()V
 
     .line 66
     .line 67
     .line 68
-    invoke-static {v2, v0}, LX/1f3;->A00(Ljava/lang/Class;Ljava/lang/String;)LX/1ez;
+    const-string/jumbo v0, "header"
 
     .line 69
     .line 70
     .line 71
-    move-result-object v0
+    invoke-static {v2, v0}, LX/22T;->A00(Ljava/lang/Class;Ljava/lang/String;)LX/22U;
 
     .line 72
-    invoke-virtual {v0, p0, v1}, LX/1ez;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 73
     .line 74
+    move-result-object v0
+
     .line 75
-    iput-object v1, v1, LX/1gR;->A07:LX/1gR;
+    invoke-virtual {v0, p0, v1}, LX/22U;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 76
     .line 77
-    iput-object v1, v1, LX/1gR;->A05:LX/1gR;
-
     .line 78
-    .line 79
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
+    iput-object v1, v1, LX/24B;->A07:LX/24B;
 
+    .line 79
     .line 80
+    iput-object v1, v1, LX/24B;->A05:LX/24B;
+
     .line 81
     .line 82
-    move-result v3
+    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     .line 83
+    .line 84
+    .line 85
+    move-result v3
+
+    .line 86
     const/4 v2, 0x0
 
-    .line 84
+    .line 87
     :goto_0
     if-ge v2, v3, :cond_0
 
-    .line 85
-    .line 86
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
-
-    .line 87
     .line 88
     .line 89
-    move-result-object v1
+    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     .line 90
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
-
     .line 91
     .line 92
+    move-result-object v1
+
     .line 93
-    move-result v0
+    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     .line 94
-    invoke-virtual {p0, v1, v0}, LX/1g6;->A4X(Ljava/lang/Object;I)I
-
     .line 95
     .line 96
+    move-result v0
+
     .line 97
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {p0, v1, v0}, LX/22u;->A02(Ljava/lang/Object;I)V
 
     .line 98
     .line 99
+    .line 100
+    add-int/lit8 v2, v2, 0x1
+
+    .line 101
+    .line 102
     goto :goto_0
 
-    .line 100
+    .line 103
     :cond_0
     return-void
 .end method
 
 .method private writeObject(Ljava/io/ObjectOutputStream;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
@@ -740,7 +796,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0}, LX/1g9;->A9f()Ljava/util/NavigableSet;
+    invoke-virtual {p0}, LX/247;->A7z()Ljava/util/NavigableSet;
 
     .line 4
     .line 5
@@ -761,7 +817,7 @@
     .line 12
     .line 13
     .line 14
-    invoke-static {p0, p1}, LX/1f3;->A02(LX/1f6;Ljava/io/ObjectOutputStream;)V
+    invoke-static {p0, p1}, LX/22T;->A02(LX/22O;Ljava/io/ObjectOutputStream;)V
 
     .line 15
     .line 16
@@ -771,167 +827,31 @@
 
 
 # virtual methods
-.method public final A4X(Ljava/lang/Object;I)I
-    .locals 5
-
-    .line 0
-    const-string/jumbo v0, "occurrences"
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {p2, v0}, LX/1dQ;->A00(ILjava/lang/String;)V
-
-    .line 4
-    .line 5
-    .line 6
-    if-nez p2, :cond_0
-
-    .line 7
-    .line 8
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset;->A7b(Ljava/lang/Object;)I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    return v0
-
-    .line 13
-    :cond_0
-    iget-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A00:Lcom/google/common/collect/GeneralRange;
-
-    .line 14
-    .line 15
-    invoke-virtual {v0, p1}, Lcom/google/common/collect/GeneralRange;->A01(Ljava/lang/Object;)Z
-
-    .line 16
-    .line 17
-    .line 18
-    move-result v0
-
-    .line 19
-    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
-
-    .line 20
-    .line 21
-    .line 22
-    iget-object v4, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
-
-    .line 23
-    .line 24
-    iget-object v3, v4, LX/1gW;->A00:Ljava/lang/Object;
-
-    .line 25
-    .line 26
-    check-cast v3, LX/1gR;
-
-    .line 27
-    .line 28
-    const/4 v2, 0x0
-
-    .line 29
-    if-nez v3, :cond_1
-
-    .line 30
-    .line 31
-    iget-object v0, p0, LX/1g9;->comparator:Ljava/util/Comparator;
-
-    .line 32
-    .line 33
-    invoke-interface {v0, p1, p1}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    .line 34
-    .line 35
-    .line 36
-    new-instance v1, LX/1gR;
-
-    .line 37
-    .line 38
-    invoke-direct {v1, p1, p2}, LX/1gR;-><init>(Ljava/lang/Object;I)V
-
-    .line 39
-    .line 40
-    .line 41
-    iget-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/1gR;
-
-    .line 42
-    .line 43
-    iput-object v1, v0, LX/1gR;->A07:LX/1gR;
-
-    .line 44
-    .line 45
-    iput-object v0, v1, LX/1gR;->A05:LX/1gR;
-
-    .line 46
-    .line 47
-    iput-object v0, v1, LX/1gR;->A07:LX/1gR;
-
-    .line 48
-    .line 49
-    iput-object v1, v0, LX/1gR;->A05:LX/1gR;
-
-    .line 50
-    .line 51
-    invoke-virtual {v4, v3, v1}, LX/1gW;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 52
-    .line 53
-    .line 54
-    return v2
-
-    .line 55
-    :cond_1
-    const/4 v0, 0x1
-
-    .line 56
-    new-array v1, v0, [I
-
-    .line 57
-    .line 58
-    iget-object v0, p0, LX/1g9;->comparator:Ljava/util/Comparator;
-
-    .line 59
-    .line 60
-    invoke-virtual {v3, p1, v0, v1, p2}, LX/1gR;->A0B(Ljava/lang/Object;Ljava/util/Comparator;[II)LX/1gR;
-
-    .line 61
-    .line 62
-    .line 63
-    move-result-object v0
-
-    .line 64
-    invoke-virtual {v4, v3, v0}, LX/1gW;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 65
-    .line 66
-    .line 67
-    aget v0, v1, v2
-
-    .line 68
-    .line 69
-    return v0
-.end method
-
-.method public final A7b(Ljava/lang/Object;)I
+.method public final A5u(Ljava/lang/Object;)I
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "element"
+        }
+    .end annotation
 
     .line 0
     const/4 v2, 0x0
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iget-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
     .line 2
     .line 3
-    iget-object v1, v0, LX/1gW;->A00:Ljava/lang/Object;
+    iget-object v1, v0, LX/24K;->A00:Ljava/lang/Object;
 
     .line 4
     .line 5
-    check-cast v1, LX/1gR;
+    check-cast v1, LX/24B;
 
     .line 6
     .line 7
@@ -955,11 +875,11 @@
 
     .line 16
     .line 17
-    iget-object v0, p0, LX/1g9;->comparator:Ljava/util/Comparator;
+    iget-object v0, p0, LX/247;->comparator:Ljava/util/Comparator;
 
     .line 18
     .line 19
-    invoke-virtual {v1, p1, v0}, LX/1gR;->A0A(Ljava/lang/Object;Ljava/util/Comparator;)I
+    invoke-virtual {v1, p1, v0}, LX/24B;->A0A(Ljava/lang/Object;Ljava/util/Comparator;)I
 
     .line 20
     .line 21
@@ -978,11 +898,21 @@
     return v2
 .end method
 
-.method public final AOv(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/1gC;
+.method public final ANV(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/24D;
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "upperBound",
+            "boundType"
+        }
+    .end annotation
 
     .line 0
-    iget-object v3, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iget-object v3, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
     .line 1
     .line 2
@@ -990,7 +920,7 @@
 
     .line 3
     .line 4
-    iget-object v9, p0, LX/1g9;->comparator:Ljava/util/Comparator;
+    iget-object v9, p0, LX/247;->comparator:Ljava/util/Comparator;
 
     .line 5
     .line 6
@@ -1030,7 +960,7 @@
     move-result-object v2
 
     .line 22
-    iget-object v1, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/1gR;
+    iget-object v1, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/24B;
 
     .line 23
     .line 24
@@ -1038,7 +968,7 @@
 
     .line 25
     .line 26
-    invoke-direct {v0, v2, v1, v3}, Lcom/google/common/collect/TreeMultiset;-><init>(Lcom/google/common/collect/GeneralRange;LX/1gR;LX/1gW;)V
+    invoke-direct {v0, v2, v1, v3}, Lcom/google/common/collect/TreeMultiset;-><init>(Lcom/google/common/collect/GeneralRange;LX/24B;LX/24K;)V
 
     .line 27
     .line 28
@@ -1046,8 +976,18 @@
     return-object v0
 .end method
 
-.method public final Ain(Ljava/lang/Object;I)I
+.method public final AhF(Ljava/lang/Object;I)I
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "element",
+            "occurrences"
+        }
+    .end annotation
 
     .line 0
     const-string/jumbo v0, "occurrences"
@@ -1055,7 +995,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p2, v0}, LX/1dQ;->A00(ILjava/lang/String;)V
+    invoke-static {p2, v0}, LX/1rB;->A00(ILjava/lang/String;)V
 
     .line 4
     .line 5
@@ -1064,7 +1004,7 @@
 
     .line 7
     .line 8
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset;->A7b(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeMultiset;->A5u(Ljava/lang/Object;)I
 
     .line 9
     .line 10
@@ -1076,15 +1016,15 @@
 
     .line 13
     :cond_0
-    iget-object v4, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iget-object v4, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
     .line 14
     .line 15
-    iget-object v3, v4, LX/1gW;->A00:Ljava/lang/Object;
+    iget-object v3, v4, LX/24K;->A00:Ljava/lang/Object;
 
     .line 16
     .line 17
-    check-cast v3, LX/1gR;
+    check-cast v3, LX/24B;
 
     .line 18
     .line 19
@@ -1119,11 +1059,11 @@
 
     .line 32
     .line 33
-    iget-object v0, p0, LX/1g9;->comparator:Ljava/util/Comparator;
+    iget-object v0, p0, LX/247;->comparator:Ljava/util/Comparator;
 
     .line 34
     .line 35
-    invoke-virtual {v3, p1, v0, v2, p2}, LX/1gR;->A0C(Ljava/lang/Object;Ljava/util/Comparator;[II)LX/1gR;
+    invoke-virtual {v3, p1, v0, v2, p2}, LX/24B;->A0D(Ljava/lang/Object;Ljava/util/Comparator;[II)LX/24B;
 
     .line 36
     .line 37
@@ -1134,7 +1074,7 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 39
-    invoke-virtual {v4, v3, v0}, LX/1gW;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v4, v3, v0}, LX/24K;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 40
     .line 41
@@ -1151,8 +1091,20 @@
     return v1
 .end method
 
-.method public final Alb(Ljava/lang/Object;II)Z
+.method public final Ak8(Ljava/lang/Object;II)Z
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "element",
+            "oldCount",
+            "newCount"
+        }
+    .end annotation
 
     .line 0
     const-string/jumbo v0, "newCount"
@@ -1163,7 +1115,7 @@
     move v8, p3
 
     .line 4
-    invoke-static {p3, v0}, LX/1dQ;->A00(ILjava/lang/String;)V
+    invoke-static {p3, v0}, LX/1rB;->A00(ILjava/lang/String;)V
 
     .line 5
     .line 6
@@ -1176,7 +1128,7 @@
     move v7, p2
 
     .line 11
-    invoke-static {p2, v0}, LX/1dQ;->A00(ILjava/lang/String;)V
+    invoke-static {p2, v0}, LX/1rB;->A00(ILjava/lang/String;)V
 
     .line 12
     .line 13
@@ -1201,15 +1153,15 @@
     .line 22
     .line 23
     .line 24
-    iget-object v2, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iget-object v2, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
     .line 25
     .line 26
-    iget-object v3, v2, LX/1gW;->A00:Ljava/lang/Object;
+    iget-object v3, v2, LX/24K;->A00:Ljava/lang/Object;
 
     .line 27
     .line 28
-    check-cast v3, LX/1gR;
+    check-cast v3, LX/24B;
 
     .line 29
     .line 30
@@ -1231,7 +1183,7 @@
 
     .line 37
     .line 38
-    invoke-virtual {p0, p1, p3}, LX/1g6;->A4X(Ljava/lang/Object;I)I
+    invoke-virtual {p0, p1, p3}, LX/22u;->A02(Ljava/lang/Object;I)V
 
     .line 39
     .line 40
@@ -1245,11 +1197,11 @@
 
     .line 43
     .line 44
-    iget-object v5, p0, LX/1g9;->comparator:Ljava/util/Comparator;
+    iget-object v5, p0, LX/247;->comparator:Ljava/util/Comparator;
 
     .line 45
     .line 46
-    invoke-virtual/range {v3 .. v8}, LX/1gR;->A0E(Ljava/lang/Object;Ljava/util/Comparator;[III)LX/1gR;
+    invoke-virtual/range {v3 .. v8}, LX/24B;->A0E(Ljava/lang/Object;Ljava/util/Comparator;[III)LX/24B;
 
     .line 47
     .line 48
@@ -1257,7 +1209,7 @@
     move-result-object v0
 
     .line 50
-    invoke-virtual {v2, v3, v0}, LX/1gW;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v2, v3, v0}, LX/24K;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 51
     .line 52
@@ -1277,11 +1229,21 @@
     return v1
 .end method
 
-.method public final Aph(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/1gC;
+.method public final AoN(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/24D;
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "lowerBound",
+            "boundType"
+        }
+    .end annotation
 
     .line 0
-    iget-object v3, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iget-object v3, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
     .line 1
     .line 2
@@ -1289,7 +1251,7 @@
 
     .line 3
     .line 4
-    iget-object v9, p0, LX/1g9;->comparator:Ljava/util/Comparator;
+    iget-object v9, p0, LX/247;->comparator:Ljava/util/Comparator;
 
     .line 5
     .line 6
@@ -1329,7 +1291,7 @@
     move-result-object v2
 
     .line 22
-    iget-object v1, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/1gR;
+    iget-object v1, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/24B;
 
     .line 23
     .line 24
@@ -1337,7 +1299,7 @@
 
     .line 25
     .line 26
-    invoke-direct {v0, v2, v1, v3}, Lcom/google/common/collect/TreeMultiset;-><init>(Lcom/google/common/collect/GeneralRange;LX/1gR;LX/1gW;)V
+    invoke-direct {v0, v2, v1, v3}, Lcom/google/common/collect/TreeMultiset;-><init>(Lcom/google/common/collect/GeneralRange;LX/24B;LX/24K;)V
 
     .line 27
     .line 28
@@ -1369,96 +1331,106 @@
 
     .line 9
     .line 10
-    iget-object v3, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/1gR;
+    iget-object v3, p0, Lcom/google/common/collect/TreeMultiset;->A01:LX/24B;
 
     .line 11
     .line 12
-    iget-object v2, v3, LX/1gR;->A07:LX/1gR;
+    iget-object v2, v3, LX/24B;->A07:LX/24B;
 
     .line 13
     .line 14
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 15
+    .line 16
+    .line 17
     :goto_0
     move-object v1, v2
 
-    .line 15
+    .line 18
     if-eq v2, v3, :cond_0
 
-    .line 16
-    .line 17
-    iget-object v2, v2, LX/1gR;->A07:LX/1gR;
-
-    .line 18
     .line 19
-    const/4 v0, 0x0
-
     .line 20
-    iput v0, v1, LX/1gR;->A01:I
+    iget-object v2, v2, LX/24B;->A07:LX/24B;
 
     .line 21
     .line 22
-    const/4 v0, 0x0
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 23
-    iput-object v0, v1, LX/1gR;->A04:LX/1gR;
-
     .line 24
     .line 25
-    iput-object v0, v1, LX/1gR;->A06:LX/1gR;
+    const/4 v0, 0x0
 
     .line 26
-    .line 27
-    iput-object v0, v1, LX/1gR;->A05:LX/1gR;
+    iput v0, v1, LX/24B;->A01:I
 
+    .line 27
     .line 28
+    const/4 v0, 0x0
+
     .line 29
-    iput-object v0, v1, LX/1gR;->A07:LX/1gR;
+    iput-object v0, v1, LX/24B;->A04:LX/24B;
 
     .line 30
     .line 31
-    goto :goto_0
+    iput-object v0, v1, LX/24B;->A06:LX/24B;
 
     .line 32
-    :cond_0
-    iput-object v3, v3, LX/1gR;->A07:LX/1gR;
-
     .line 33
+    iput-object v0, v1, LX/24B;->A05:LX/24B;
+
     .line 34
-    iput-object v3, v3, LX/1gR;->A05:LX/1gR;
-
     .line 35
-    .line 36
-    iget-object v1, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iput-object v0, v1, LX/24B;->A07:LX/24B;
 
+    .line 36
     .line 37
+    goto :goto_0
+
     .line 38
-    const/4 v0, 0x0
+    :cond_0
+    iput-object v3, v3, LX/24B;->A07:LX/24B;
 
     .line 39
-    iput-object v0, v1, LX/1gW;->A00:Ljava/lang/Object;
-
     .line 40
-    .line 41
-    return-void
+    iput-object v3, v3, LX/24B;->A05:LX/24B;
 
+    .line 41
     .line 42
-    :cond_1
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
     .line 43
-    new-instance v0, LX/1Um;
-
     .line 44
+    const/4 v0, 0x0
+
     .line 45
-    invoke-direct {v0, p0, v1}, LX/1Um;-><init>(Lcom/google/common/collect/TreeMultiset;I)V
+    iput-object v0, v1, LX/24K;->A00:Ljava/lang/Object;
 
     .line 46
     .line 47
+    return-void
+
     .line 48
-    invoke-static {v0}, LX/1dd;->A02(Ljava/util/Iterator;)V
+    :cond_1
+    const/4 v1, 0x1
 
     .line 49
+    new-instance v0, LX/0Xx;
+
     .line 50
     .line 51
+    invoke-direct {v0, p0, v1}, LX/0Xx;-><init>(Lcom/google/common/collect/TreeMultiset;I)V
+
+    .line 52
+    .line 53
+    .line 54
+    invoke-static {v0}, LX/1uG;->A01(Ljava/util/Iterator;)V
+
+    .line 55
+    .line 56
+    .line 57
     return-void
 .end method
 
@@ -1466,7 +1438,7 @@
     .locals 2
 
     .line 0
-    invoke-virtual {p0}, LX/1g6;->entrySet()Ljava/util/Set;
+    invoke-interface {p0}, LX/22O;->entrySet()Ljava/util/Set;
 
     .line 1
     .line 2
@@ -1482,11 +1454,11 @@
     move-result-object v1
 
     .line 8
-    new-instance v0, LX/1f8;
+    new-instance v0, LX/22R;
 
     .line 9
     .line 10
-    invoke-direct {v0, p0, v1}, LX/1f8;-><init>(LX/1f6;Ljava/util/Iterator;)V
+    invoke-direct {v0, p0, v1}, LX/22R;-><init>(LX/22O;Ljava/util/Iterator;)V
 
     .line 11
     .line 12
@@ -1502,19 +1474,19 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    iget-object v0, p0, Lcom/google/common/collect/TreeMultiset;->A02:LX/24K;
 
     .line 3
     .line 4
-    iget-object v5, v0, LX/1gW;->A00:Ljava/lang/Object;
+    iget-object v5, v0, LX/24K;->A00:Ljava/lang/Object;
 
     .line 5
     .line 6
-    check-cast v5, LX/1gR;
+    check-cast v5, LX/24B;
 
     .line 7
     .line 8
-    invoke-virtual {v6, v5}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/1gR;)J
+    invoke-virtual {v6, v5}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/24B;)J
 
     .line 9
     .line 10
@@ -1534,7 +1506,7 @@
 
     .line 17
     .line 18
-    invoke-static {v6, v5, p0}, Lcom/google/common/collect/TreeMultiset;->A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+    invoke-static {v6, v5, p0}, Lcom/google/common/collect/TreeMultiset;->A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
 
     .line 19
     .line 20
@@ -1554,7 +1526,7 @@
 
     .line 26
     .line 27
-    invoke-static {v6, v5, p0}, Lcom/google/common/collect/TreeMultiset;->A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+    invoke-static {v6, v5, p0}, Lcom/google/common/collect/TreeMultiset;->A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/24B;Lcom/google/common/collect/TreeMultiset;)J
 
     .line 28
     .line 29
@@ -1566,7 +1538,7 @@
 
     .line 32
     :cond_1
-    invoke-static {v3, v4}, LX/1e1;->A00(J)I
+    invoke-static {v3, v4}, LX/212;->A00(J)I
 
     .line 33
     .line 34

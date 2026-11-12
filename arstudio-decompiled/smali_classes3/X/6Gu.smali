@@ -1,189 +1,97 @@
-.class public final enum LX/6Gu;
-.super Ljava/lang/Enum;
+.class public final LX/6Gu;
+.super LX/6Gz;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/6Gu;
+.field public static final serialVersionUID:J = 0x1L
 
-.field public static final enum EMPTY:LX/6Gu;
 
-.field public static final enum ERROR:LX/6Gu;
+# instance fields
+.field public final _index:I
 
-.field public static final enum LOADED:LX/6Gu;
+.field public final _owner:LX/6Gt;
 
-.field public static final enum LOADING:LX/6Gu;
+.field public final _type:Ljava/lang/reflect/Type;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 9
-
-    .line 0
-    const-string v0, "LOADING"
-
-    .line 1
-    .line 2
-    const/4 v8, 0x0
-
-    .line 3
-    new-instance v7, LX/6Gu;
-
-    .line 4
-    .line 5
-    invoke-direct {v7, v0, v8}, LX/6Gu;-><init>(Ljava/lang/String;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    sput-object v7, LX/6Gu;->LOADING:LX/6Gu;
-
-    .line 9
-    .line 10
-    const-string v0, "LOADED"
-
-    .line 11
-    .line 12
-    const/4 v6, 0x1
-
-    .line 13
-    new-instance v5, LX/6Gu;
-
-    .line 14
-    .line 15
-    invoke-direct {v5, v0, v6}, LX/6Gu;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v5, LX/6Gu;->LOADED:LX/6Gu;
-
-    .line 19
-    .line 20
-    const-string v0, "EMPTY"
-
-    .line 21
-    .line 22
-    const/4 v4, 0x2
-
-    .line 23
-    new-instance v3, LX/6Gu;
-
-    .line 24
-    .line 25
-    invoke-direct {v3, v0, v4}, LX/6Gu;-><init>(Ljava/lang/String;I)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v3, LX/6Gu;->EMPTY:LX/6Gu;
-
-    .line 29
-    .line 30
-    const-string v0, "ERROR"
-
-    .line 31
-    .line 32
-    const/4 v2, 0x3
-
-    .line 33
-    new-instance v1, LX/6Gu;
-
-    .line 34
-    .line 35
-    invoke-direct {v1, v0, v2}, LX/6Gu;-><init>(Ljava/lang/String;I)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v1, LX/6Gu;->ERROR:LX/6Gu;
-
-    .line 39
-    .line 40
-    const/4 v0, 0x4
-
-    .line 41
-    new-array v0, v0, [LX/6Gu;
-
-    .line 42
-    .line 43
-    aput-object v7, v0, v8
-
-    .line 44
-    .line 45
-    aput-object v5, v0, v6
-
-    .line 46
-    .line 47
-    aput-object v3, v0, v4
-
-    .line 48
-    .line 49
-    aput-object v1, v0, v2
-
-    .line 50
-    .line 51
-    sput-object v0, LX/6Gu;->$VALUES:[LX/6Gu;
-
-    .line 52
-    .line 53
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(LX/6Gt;LX/6Gx;Ljava/lang/reflect/Type;I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0, p2}, LX/6Gz;-><init>(LX/6Gx;)V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/6Gu;->_owner:LX/6Gt;
+
+    .line 4
+    .line 5
+    iput-object p3, p0, LX/6Gu;->_type:Ljava/lang/reflect/Type;
+
+    .line 6
+    .line 7
+    iput p4, p0, LX/6Gu;->_index:I
+
+    .line 8
+    .line 9
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/6Gu;
-    .locals 1
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     .line 0
-    const-class v0, LX/6Gu;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
     .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    move-result-object v1
 
+    .line 4
+    const-string v0, "[parameter #"
+
+    .line 5
     .line 6
-    check-cast v0, LX/6Gu;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
-    return-object v0
-.end method
+    .line 9
+    iget v0, p0, LX/6Gu;->_index:I
 
-.method public static values()[LX/6Gu;
-    .locals 1
+    .line 10
+    .line 11
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 0
-    sget-object v0, LX/6Gu;->$VALUES:[LX/6Gu;
+    .line 12
+    .line 13
+    .line 14
+    const-string v0, ", annotations: "
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 15
+    .line 16
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
-    .line 4
-    .line 5
+    .line 17
+    .line 18
+    .line 19
+    iget-object v0, p0, LX/6Gz;->A00:LX/6Gx;
+
+    .line 20
+    .line 21
+    invoke-static {v0, v1}, LX/431;->A0g(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 22
+    .line 23
+    .line 24
     move-result-object v0
 
-    .line 6
-    check-cast v0, [LX/6Gu;
-
-    .line 7
-    .line 8
+    .line 25
     return-object v0
 .end method

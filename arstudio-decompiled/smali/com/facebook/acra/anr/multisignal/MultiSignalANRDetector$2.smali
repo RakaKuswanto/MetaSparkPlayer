@@ -42,7 +42,7 @@
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     .line 8
@@ -92,11 +92,11 @@
 
     .line 1
     .line 2
-    iget-object v0, v1, Lcom/facebook/acra/anr/multisignal/MultiSignalANRDetector;->mAnrDetectorConfig:LX/0M1;
+    iget-object v0, v1, Lcom/facebook/acra/anr/multisignal/MultiSignalANRDetector;->mAnrDetectorConfig:LX/0Kf;
 
     .line 3
     .line 4
-    iget v0, v0, LX/0M1;->A02:I
+    iget v0, v0, LX/0Kf;->A02:I
 
     .line 5
     .line 6
@@ -142,7 +142,7 @@
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     .line 8
@@ -240,7 +240,7 @@
 
     .line 5
     .line 6
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 7
     .line 8
@@ -253,7 +253,7 @@
     .line 11
     .line 12
     .line 13
-    invoke-static {v2, v1, v0}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v0}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 14
     .line 15
@@ -368,7 +368,7 @@
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     .line 8

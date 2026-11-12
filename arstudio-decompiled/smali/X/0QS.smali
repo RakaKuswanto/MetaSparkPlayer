@@ -1,32 +1,32 @@
-.class public final LX/0QS;
+.class public interface abstract LX/0QS;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public static final A00(Ljava/lang/Object;)V
-    .locals 1
+# virtual methods
+.method public abstract getResultCode()I
+.end method
 
-    .line 0
-    instance-of v0, p0, LX/0IW;
+.method public abstract getResultData()Ljava/lang/String;
+.end method
 
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
+.method public abstract getResultExtras(Z)Landroid/os/Bundle;
+.end method
 
-    .line 3
-    .line 4
-    return-void
+.method public abstract goAsync()Landroid/content/BroadcastReceiver$PendingResult;
+.end method
 
-    .line 5
-    :cond_0
-    check-cast p0, LX/0IW;
+.method public abstract isInitialStickyBroadcast()Z
+.end method
 
-    .line 6
-    .line 7
-    iget-object v0, p0, LX/0IW;->exception:Ljava/lang/Throwable;
+.method public abstract setResult(ILjava/lang/String;Landroid/os/Bundle;)V
+.end method
 
-    .line 8
-    .line 9
-    throw v0
+.method public abstract setResultCode(I)V
+.end method
+
+.method public abstract setResultData(Ljava/lang/String;)V
+.end method
+
+.method public abstract setResultExtras(Landroid/os/Bundle;)V
 .end method

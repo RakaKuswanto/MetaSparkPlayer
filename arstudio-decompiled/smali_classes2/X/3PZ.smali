@@ -2,22 +2,53 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/39u;
+
+
+# static fields
+.field public static final A03:LX/39u;
+
 
 # instance fields
-.field public A00:Ljava/lang/String;
+.field public A00:I
 
-.field public A01:Ljava/lang/String;
+.field public A01:Z
 
-.field public final A02:LX/3aZ;
-
-.field public final A03:Ljava/util/HashMap;
-
-.field public final A04:Ljava/util/HashSet;
+.field public A02:Z
 
 
 # direct methods
-.method public constructor <init>(LX/3aZ;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const v2, 0x7fffffff
+
+    .line 1
+    .line 2
+    .line 3
+    const/4 v1, 0x1
+
+    .line 4
+    new-instance v0, LX/3PZ;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v2, v1, v1}, LX/3PZ;-><init>(IZZ)V
+
+    .line 7
+    .line 8
+    .line 9
+    sput-object v0, LX/3PZ;->A03:LX/39u;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public constructor <init>(IZZ)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,113 +56,145 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    iput p1, p0, LX/3PZ;->A00:I
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    iput-boolean p2, p0, LX/3PZ;->A02:Z
 
+    .line 6
     .line 7
-    iput-object v0, p0, LX/3PZ;->A04:Ljava/util/HashSet;
+    iput-boolean p3, p0, LX/3PZ;->A01:Z
 
     .line 8
     .line 9
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/3PZ;->A03:Ljava/util/HashMap;
-
-    .line 14
-    .line 15
-    iput-object p1, p0, LX/3PZ;->A02:LX/3aZ;
-
-    .line 16
-    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Ljava/lang/String;)I
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/3PZ;->A01:Ljava/lang/String;
+    const/4 v2, 0x1
 
     .line 1
+    if-eq p1, p0, :cond_2
+
     .line 2
-    if-eqz v0, :cond_0
-
     .line 3
-    .line 4
-    iget-object v0, p0, LX/3PZ;->A04:Ljava/util/HashSet;
+    instance-of v1, p1, LX/3PZ;
 
+    .line 4
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+    if-nez v1, :cond_0
 
     .line 7
     .line 8
+    return v0
+
     .line 9
-    move-result v0
+    :cond_0
+    check-cast p1, LX/3PZ;
 
     .line 10
-    if-eqz v0, :cond_0
-
     .line 11
+    iget v1, p0, LX/3PZ;->A00:I
+
     .line 12
-    iget-object v1, p0, LX/3PZ;->A03:Ljava/util/HashMap;
-
     .line 13
-    .line 14
-    invoke-virtual {v1, p1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p1, LX/3PZ;->A00:I
 
+    .line 14
     .line 15
+    if-ne v1, v0, :cond_1
+
     .line 16
     .line 17
-    move-result-object v0
+    iget-boolean v1, p0, LX/3PZ;->A02:Z
 
     .line 18
-    if-eqz v0, :cond_0
-
     .line 19
-    .line 20
-    invoke-virtual {v1, p1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v0, p1, LX/3PZ;->A02:Z
 
+    .line 20
     .line 21
+    if-ne v1, v0, :cond_1
+
     .line 22
     .line 23
-    move-result-object v0
+    iget-boolean v1, p0, LX/3PZ;->A01:Z
 
     .line 24
-    check-cast v0, Ljava/lang/Number;
-
     .line 25
+    iget-boolean v0, p1, LX/3PZ;->A01:Z
+
     .line 26
-    if-eqz v0, :cond_0
-
     .line 27
+    if-ne v1, v0, :cond_1
+
     .line 28
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
     .line 29
+    return v2
+
     .line 30
+    :cond_1
+    const/4 v2, 0x0
+
     .line 31
-    move-result v0
+    :cond_2
+    return v2
+.end method
 
-    .line 32
-    return v0
+.method public final hashCode()I
+    .locals 4
 
-    .line 33
+    .line 0
+    iget v3, p0, LX/3PZ;->A00:I
+
+    .line 1
+    .line 2
+    iget-boolean v2, p0, LX/3PZ;->A02:Z
+
+    .line 3
+    .line 4
+    const/4 v1, 0x0
+
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    if-eqz v2, :cond_0
+
+    .line 7
+    .line 8
+    const/high16 v0, 0x400000
+
+    .line 9
+    .line 10
     :cond_0
-    const/4 v0, -0x1
+    xor-int/2addr v3, v0
 
-    .line 34
-    return v0
+    .line 11
+    iget-boolean v0, p0, LX/3PZ;->A01:Z
+
+    .line 12
+    .line 13
+    if-eqz v0, :cond_1
+
+    .line 14
+    .line 15
+    const/high16 v1, 0x800000
+
+    .line 16
+    .line 17
+    :cond_1
+    xor-int/2addr v3, v1
+
+    .line 18
+    return v3
 .end method

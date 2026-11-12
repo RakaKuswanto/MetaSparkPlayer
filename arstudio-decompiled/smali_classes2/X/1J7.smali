@@ -1,14 +1,145 @@
-.class public final LX/1J7;
-.super LX/1Bn;
+.class public final enum LX/1J7;
+.super Ljava/lang/Enum;
 .source ""
 
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/1J7;
+
+.field public static final enum FROM_CAMERA_ROLL:LX/1J7;
+
+.field public static final enum FROM_NETWORK_URI:LX/1J7;
+
+.field public static final enum FROM_VIDEO_FRAME:LX/1J7;
+
+
 # direct methods
-.method public constructor <init>(I[I)V
+.method public static final synthetic $values()[LX/1J7;
+    .locals 3
+
+    const/4 v0, 0x3
+
+    new-array v2, v0, [LX/1J7;
+
+    sget-object v1, LX/1J7;->FROM_CAMERA_ROLL:LX/1J7;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1J7;->FROM_VIDEO_FRAME:LX/1J7;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1J7;->FROM_NETWORK_URI:LX/1J7;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "FROM_CAMERA_ROLL"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/1J7;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/1J7;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/1J7;->FROM_CAMERA_ROLL:LX/1J7;
+
+    .line 9
+    .line 10
+    const-string v2, "FROM_VIDEO_FRAME"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/1J7;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/1J7;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/1J7;->FROM_VIDEO_FRAME:LX/1J7;
+
+    .line 19
+    .line 20
+    const-string v2, "FROM_NETWORK_URI"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/1J7;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/1J7;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/1J7;->FROM_NETWORK_URI:LX/1J7;
+
+    .line 29
+    .line 30
+    invoke-static {}, LX/1J7;->$values()[LX/1J7;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    sput-object v0, LX/1J7;->$VALUES:[LX/1J7;
+
+    .line 35
+    .line 36
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    sput-object v0, LX/1J7;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 41
+    .line 42
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
@@ -16,103 +147,38 @@
     return-void
 .end method
 
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
 
-# virtual methods
-.method public final A00()LX/1J7;
-    .locals 3
+    sget-object v0, LX/1J7;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 0
-    const-class v2, LX/1J7;
-
-    .line 1
-    .line 2
-    const v1, -0x4198c178
-
-    .line 3
-    .line 4
-    .line 5
-    const v0, -0x601ce3f2
-
-    .line 6
-    .line 7
-    .line 8
-    invoke-virtual {p0, v1, v2, v0}, LX/1Bn;->getCachedReinterpret(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    check-cast v0, LX/1J7;
-
-    .line 13
-    .line 14
     return-object v0
 .end method
 
-.method public final bridge synthetic A01()LX/1J7;
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)LX/1J7;
+    .locals 1
 
-    .line 0
-    const-class v2, LX/1J7;
+    const-class v0, LX/1J7;
 
-    .line 1
-    .line 2
-    const v1, -0x50c07cbe
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 3
-    .line 4
-    .line 5
-    const v0, 0x63db373c
-
-    .line 6
-    .line 7
-    .line 8
-    invoke-virtual {p0, v1, v2, v0}, LX/1Bn;->getCachedTree(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
-
-    .line 9
-    .line 10
-    .line 11
     move-result-object v0
 
-    .line 12
     check-cast v0, LX/1J7;
 
-    .line 13
-    .line 14
     return-object v0
 .end method
 
-.method public final bridge synthetic A02()LX/1J7;
-    .locals 3
+.method public static values()[LX/1J7;
+    .locals 1
 
-    .line 0
-    const-class v2, LX/1J7;
+    sget-object v0, LX/1J7;->$VALUES:[LX/1J7;
 
-    .line 1
-    .line 2
-    const v1, -0x351c58a6    # -7459757.0f
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 3
-    .line 4
-    .line 5
-    const v0, 0xfb79fa
-
-    .line 6
-    .line 7
-    .line 8
-    invoke-virtual {p0, v1, v2, v0}, LX/1Bn;->getCachedTree(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
-
-    .line 9
-    .line 10
-    .line 11
     move-result-object v0
 
-    .line 12
-    check-cast v0, LX/1J7;
+    check-cast v0, [LX/1J7;
 
-    .line 13
-    .line 14
     return-object v0
 .end method

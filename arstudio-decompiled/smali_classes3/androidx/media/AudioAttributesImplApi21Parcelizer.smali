@@ -16,7 +16,7 @@
     return-void
 .end method
 
-.method public static read(LX/4gJ;)Landroidx/media/AudioAttributesImplApi21;
+.method public static read(LX/4eL;)Landroidx/media/AudioAttributesImplApi21;
     .locals 3
 
     .line 0
@@ -36,7 +36,7 @@
     const/4 v0, 0x1
 
     .line 8
-    invoke-virtual {p0, v1, v0}, LX/4gJ;->A02(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
+    invoke-virtual {p0, v1, v0}, LX/4eL;->A02(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
 
     .line 9
     .line 10
@@ -59,7 +59,7 @@
     const/4 v0, 0x2
 
     .line 19
-    invoke-virtual {p0, v1, v0}, LX/4gJ;->A01(II)I
+    invoke-virtual {p0, v1, v0}, LX/4eL;->A01(II)I
 
     .line 20
     .line 21
@@ -74,7 +74,7 @@
     return-object v2
 .end method
 
-.method public static write(Landroidx/media/AudioAttributesImplApi21;LX/4gJ;)V
+.method public static write(Landroidx/media/AudioAttributesImplApi21;LX/4eL;)V
     .locals 2
 
     .line 0
@@ -85,7 +85,7 @@
     const/4 v0, 0x1
 
     .line 3
-    invoke-virtual {p1, v1, v0}, LX/4gJ;->A07(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, v1, v0}, LX/4eL;->A07(Landroid/os/Parcelable;I)V
 
     .line 4
     .line 5
@@ -97,7 +97,7 @@
     const/4 v0, 0x2
 
     .line 9
-    invoke-virtual {p1, v1, v0}, LX/4gJ;->A06(II)V
+    invoke-virtual {p1, v1, v0}, LX/4eL;->A06(II)V
 
     .line 10
     .line 11

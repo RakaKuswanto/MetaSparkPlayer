@@ -2,72 +2,119 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AutofillDialogController$1"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/content/Context;
+
+.field public final synthetic A01:LX/4Cx;
+
+.field public final synthetic A02:LX/4D9;
+
+.field public final synthetic A03:LX/2r4;
+
+.field public final synthetic A04:LX/4DD;
+
+.field public final synthetic A05:Ljava/lang/Integer;
+
+.field public final synthetic A06:Ljava/lang/String;
+
+.field public final synthetic A07:Ljava/util/List;
+
 
 # direct methods
-.method public static A00(Landroid/webkit/ValueCallback;Ljava/util/concurrent/ScheduledExecutorService;I)V
-    .locals 4
+.method public constructor <init>(Landroid/content/Context;LX/4Cx;LX/4D9;LX/2r4;LX/4DD;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
 
     .line 0
-    :try_start_0
-    invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
+    iput-object p2, p0, LX/4Df;->A01:LX/4Cx;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    iput-object p3, p0, LX/4Df;->A02:LX/4D9;
 
+    .line 3
     .line 4
-    invoke-virtual {v0, p0}, Landroid/webkit/CookieManager;->removeAllCookies(Landroid/webkit/ValueCallback;)V
+    iput-object p7, p0, LX/4Df;->A06:Ljava/lang/String;
 
     .line 5
     .line 6
-    .line 7
-    return-void
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object p5, p0, LX/4Df;->A04:LX/4DD;
 
+    .line 7
     .line 8
-    :catch_0
-    move-exception v1
+    iput-object p8, p0, LX/4Df;->A07:Ljava/util/List;
 
     .line 9
-    const/4 v0, 0x5
-
     .line 10
-    if-ge p2, v0, :cond_0
+    iput-object p1, p0, LX/4Df;->A00:Landroid/content/Context;
 
     .line 11
     .line 12
-    new-instance v3, LX/4De;
+    iput-object p4, p0, LX/4Df;->A03:LX/2r4;
 
     .line 13
     .line 14
-    invoke-direct {v3, p0, p1, p2}, LX/4De;-><init>(Landroid/webkit/ValueCallback;Ljava/util/concurrent/ScheduledExecutorService;I)V
+    iput-object p6, p0, LX/4Df;->A05:Ljava/lang/Integer;
 
     .line 15
     .line 16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 17
-    const/4 v0, 0x3
-
     .line 18
-    shl-int/2addr v0, p2
-
     .line 19
-    int-to-long v1, v0
-
-    .line 20
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    .line 21
-    .line 22
-    invoke-interface {p1, v3, v1, v2, v0}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    .line 23
-    .line 24
-    .line 25
     return-void
+.end method
 
-    .line 26
-    :cond_0
-    throw v1
+
+# virtual methods
+.method public final run()V
+    .locals 8
+
+    .line 0
+    iget-object v0, p0, LX/4Df;->A01:LX/4Cx;
+
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/4Df;->A02:LX/4D9;
+
+    .line 3
+    .line 4
+    iget-object v6, p0, LX/4Df;->A06:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    iget-object v4, p0, LX/4Df;->A04:LX/4DD;
+
+    .line 7
+    .line 8
+    iget-object v7, p0, LX/4Df;->A07:Ljava/util/List;
+
+    .line 9
+    .line 10
+    iget-object v1, p0, LX/4Df;->A00:Landroid/content/Context;
+
+    .line 11
+    .line 12
+    iget-object v3, p0, LX/4Df;->A03:LX/2r4;
+
+    .line 13
+    .line 14
+    iget-object v5, p0, LX/4Df;->A05:Ljava/lang/Integer;
+
+    .line 15
+    .line 16
+    invoke-virtual/range {v0 .. v7}, LX/4Cx;->A01(Landroid/content/Context;LX/4D9;LX/2r4;LX/4DD;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;)V
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
 .end method

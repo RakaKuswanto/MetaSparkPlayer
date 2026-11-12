@@ -8,19 +8,22 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/common/dextricks/DexManifest;LX/0QT;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;Lcom/facebook/common/dextricks/ResProvider;)V
-    .locals 0
+.method public constructor <init>(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/common/dextricks/ResProvider;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/common/dextricks/InputDexIterator;-><init>(Lcom/facebook/common/dextricks/DexManifest;LX/0QT;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
+    const/4 v0, 0x0
 
     .line 1
+    invoke-direct {p0, p1, v0}, Lcom/facebook/common/dextricks/InputDexIterator;-><init>(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
+
     .line 2
     .line 3
-    iput-object p4, p0, Lcom/facebook/common/dextricks/DiscreteFileInputDexIterator;->mResProvider:Lcom/facebook/common/dextricks/ResProvider;
-
     .line 4
+    iput-object p2, p0, Lcom/facebook/common/dextricks/DiscreteFileInputDexIterator;->mResProvider:Lcom/facebook/common/dextricks/ResProvider;
+
     .line 5
+    .line 6
     return-void
 .end method
 

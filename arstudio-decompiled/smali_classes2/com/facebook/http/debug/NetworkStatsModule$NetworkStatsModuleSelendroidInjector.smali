@@ -1,9 +1,6 @@
-.class public Lcom/facebook/http/debug/NetworkStatsModule$NetworkStatsModuleSelendroidInjector;
+.class public final Lcom/facebook/http/debug/NetworkStatsModule$NetworkStatsModuleSelendroidInjector;
 .super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements LX/0Qe;
 
 
 # direct methods
@@ -21,15 +18,15 @@
 
 
 # virtual methods
-.method public getNetworkStats()Lcom/facebook/http/debug/NetworkStats;
+.method public final getNetworkStats()Lcom/facebook/http/debug/NetworkStats;
     .locals 1
 
     .line 0
-    sget v0, LX/2eq;->AVV:I
+    sget v0, LX/2I6;->APL:I
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 3
     .line 4

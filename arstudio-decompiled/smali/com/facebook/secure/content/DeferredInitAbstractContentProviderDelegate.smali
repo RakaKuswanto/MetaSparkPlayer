@@ -1,5 +1,5 @@
 .class public abstract Lcom/facebook/secure/content/DeferredInitAbstractContentProviderDelegate;
-.super LX/5Sx;
+.super LX/5mo;
 .source ""
 
 
@@ -8,11 +8,11 @@
 
 
 # direct methods
-.method public constructor <init>(LX/5Sw;)V
+.method public constructor <init>(LX/5mn;)V
     .locals 2
 
     .line 0
-    invoke-direct {p0, p1}, LX/5Sx;-><init>(LX/5Sw;)V
+    invoke-direct {p0, p1}, LX/5mo;-><init>(LX/5mn;)V
 
     .line 1
     .line 2
@@ -55,7 +55,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0, p1, p2}, LX/5Sx;->A0C(Landroid/net/Uri;[Landroid/content/ContentValues;)I
+    invoke-super {p0, p1, p2}, LX/5mo;->A0C(Landroid/net/Uri;[Landroid/content/ContentValues;)I
 
     .line 1
     .line 2
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0, p1, p2}, LX/5Sx;->A0D(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
+    invoke-super {p0, p1, p2}, LX/5mo;->A0D(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     .line 1
     .line 2
@@ -85,7 +85,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0, p1, p2}, LX/5Sx;->A0J(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+    invoke-super {p0, p1, p2}, LX/5mo;->A0J(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     .line 1
     .line 2
@@ -254,7 +254,7 @@
 
     .line 7
     .line 8
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 9
     .line 10
@@ -266,7 +266,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0, p1}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, p1}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 15
     .line 16
@@ -287,11 +287,11 @@
     .locals 9
 
     .line 0
-    sget-object v3, LX/06d;->A00:LX/0IJ;
+    sget-object v3, LX/038;->A00:LX/0Jz;
 
     .line 1
     .line 2
-    iget-object v0, v3, LX/0IJ;->A00:Ljava/util/List;
+    iget-object v0, v3, LX/0Jz;->A00:Ljava/util/List;
 
     .line 3
     .line 4
@@ -307,7 +307,7 @@
 
     .line 9
     .line 10
-    invoke-virtual {p0}, LX/5Sx;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, LX/5mo;->getContext()Landroid/content/Context;
 
     .line 11
     .line 12
@@ -323,7 +323,7 @@
     move-result-object v2
 
     .line 18
-    invoke-static {p0}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 19
     .line 20
@@ -355,7 +355,7 @@
     move-result v0
 
     .line 33
-    invoke-static {v4, v0}, LX/0He;->A00(Landroid/content/Context;I)LX/0Hh;
+    invoke-static {v4, v0}, LX/0JW;->A00(Landroid/content/Context;I)LX/0Jc;
 
     .line 34
     .line 35
@@ -373,7 +373,7 @@
 
     .line 39
     .line 40
-    invoke-virtual {v1}, LX/0Hh;->A03()Ljava/lang/String;
+    invoke-virtual {v1}, LX/0Jc;->A04()Ljava/lang/String;
 
     .line 41
     .line 42
@@ -398,7 +398,7 @@
     .line 51
     .line 52
     :cond_0
-    invoke-virtual/range {v3 .. v8}, LX/0IJ;->A01(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v3 .. v8}, LX/0Jz;->A01(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 53
     .line 54
@@ -408,7 +408,7 @@
 
     .line 56
     :cond_2
-    invoke-virtual {v3, v4, v5, p1}, LX/0IJ;->A00(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v4, v5, p1}, LX/0Jz;->A00(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 57
     .line 58
@@ -420,7 +420,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0}, LX/5Sx;->A0P()Z
+    invoke-super {p0}, LX/5mo;->A0P()Z
 
     .line 1
     .line 2
@@ -435,7 +435,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0, p1}, LX/5Sx;->A0Q(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;
+    invoke-super {p0, p1}, LX/5mo;->A0Q(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;
 
     .line 1
     .line 2
@@ -477,36 +477,27 @@
     .line 12
     .line 13
     .line 14
-    const-string v0, "Redex: Unreachable code after no-return invoke"
+    const/4 v0, 0x0
 
     .line 15
-    .line 16
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
     throw v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
+    .line 16
     :catchall_0
     move-exception v2
 
-    .line 22
+    .line 17
     const-wide/16 v0, 0x200
 
-    .line 23
-    .line 24
+    .line 18
+    .line 19
     invoke-static {v0, v1}, Lcom/facebook/systrace/Systrace;->A01(J)V
 
-    .line 25
-    .line 26
-    .line 27
+    .line 20
+    .line 21
+    .line 22
     throw v2
 .end method
 
@@ -539,36 +530,27 @@
     .line 12
     .line 13
     .line 14
-    const-string v0, "Redex: Unreachable code after no-return invoke"
+    const/4 v0, 0x0
 
     .line 15
-    .line 16
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
     throw v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
+    .line 16
     :catchall_0
     move-exception v2
 
-    .line 22
+    .line 17
     const-wide/16 v0, 0x200
 
-    .line 23
-    .line 24
+    .line 18
+    .line 19
     invoke-static {v0, v1}, Lcom/facebook/systrace/Systrace;->A01(J)V
 
-    .line 25
-    .line 26
-    .line 27
+    .line 20
+    .line 21
+    .line 22
     throw v2
 .end method
 
@@ -936,36 +918,27 @@
     .line 12
     .line 13
     .line 14
-    const-string v0, "Redex: Unreachable code after no-return invoke"
+    const/4 v0, 0x0
 
     .line 15
-    .line 16
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
     throw v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
+    .line 16
     :catchall_0
     move-exception v2
 
-    .line 22
+    .line 17
     const-wide/16 v0, 0x200
 
-    .line 23
-    .line 24
+    .line 18
+    .line 19
     invoke-static {v0, v1}, Lcom/facebook/systrace/Systrace;->A01(J)V
 
-    .line 25
-    .line 26
-    .line 27
+    .line 20
+    .line 21
+    .line 22
     throw v2
 .end method
 
@@ -1147,36 +1120,27 @@
     .line 12
     .line 13
     .line 14
-    const-string v0, "Redex: Unreachable code after no-return invoke"
+    const/4 v0, 0x0
 
     .line 15
-    .line 16
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
     throw v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
+    .line 16
     :catchall_0
     move-exception v2
 
-    .line 22
+    .line 17
     const-wide/16 v0, 0x200
 
-    .line 23
-    .line 24
+    .line 18
+    .line 19
     invoke-static {v0, v1}, Lcom/facebook/systrace/Systrace;->A01(J)V
 
-    .line 25
-    .line 26
-    .line 27
+    .line 20
+    .line 21
+    .line 22
     throw v2
 .end method
 
@@ -1210,7 +1174,7 @@
 
     .line 12
     .line 13
-    invoke-super {p0}, LX/5Sx;->A0L()V
+    invoke-super {p0}, LX/5mo;->A0L()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1301,7 +1265,7 @@
 
     .line 12
     .line 13
-    invoke-super {p0, p1}, LX/5Sx;->A0N(I)V
+    invoke-super {p0, p1}, LX/5mo;->A0N(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1367,7 +1331,7 @@
 
     .line 12
     .line 13
-    invoke-super {p0, p1}, LX/5Sx;->A0O(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, LX/5mo;->A0O(Landroid/content/res/Configuration;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1594,16 +1558,8 @@
 .method public abstract A0W(Landroid/net/Uri;)Ljava/lang/String;
 .end method
 
-.method public A0X()V
-    .locals 0
-
-    return-void
+.method public abstract A0X()V
 .end method
 
-.method public A0Y()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract A0Y()Z
 .end method

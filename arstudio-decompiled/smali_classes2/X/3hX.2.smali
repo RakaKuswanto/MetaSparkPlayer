@@ -1,9 +1,10 @@
-.class public abstract LX/3hX;
+.class public final LX/3hX;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/6KP;
+
+# static fields
+.field public static A00:Z
 
 
 # direct methods
@@ -19,29 +20,58 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public createHybrid()Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateHybrid;
-    .locals 1
+.method public static declared-synchronized A00()V
+    .locals 2
 
     .line 0
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;
+    const-class v1, LX/3hX;
 
     .line 1
     .line 2
-    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;-><init>(LX/3hX;)V
+    monitor-enter v1
 
     .line 3
+    :try_start_0
+    sget-boolean v0, LX/3hX;->A00:Z
+
     .line 4
     .line 5
-    return-object v0
-.end method
+    if-nez v0, :cond_0
 
-.method public abstract get(Ljava/lang/String;)Ljava/lang/String;
-.end method
+    .line 6
+    .line 7
+    const-string/jumbo v0, "msysjniinfranosqlite"
 
-.method public abstract remove(Ljava/lang/String;)Z
-.end method
+    .line 8
+    .line 9
+    .line 10
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
-.method public abstract set(Ljava/lang/String;Ljava/lang/String;)Z
+    .line 11
+    .line 12
+    .line 13
+    const/4 v0, 0x1
+
+    .line 14
+    sput-boolean v0, LX/3hX;->A00:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 15
+    .line 16
+    :cond_0
+    monitor-exit v1
+
+    .line 17
+    return-void
+
+    .line 18
+    :catchall_0
+    move-exception v0
+
+    .line 19
+    monitor-exit v1
+
+    .line 20
+    throw v0
 .end method

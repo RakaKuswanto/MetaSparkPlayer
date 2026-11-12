@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5WZ;
+.implements LX/5pC;
 
 
 # static fields
@@ -43,7 +43,7 @@
 
 .field public mHasReferenceAngle:Z
 
-.field public mListener:LX/5Wg;
+.field public final mListeners:Ljava/util/ArrayList;
 
 .field public final mRawAccelerometerSensor:Landroid/hardware/Sensor;
 
@@ -165,15 +165,15 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 536870912
+    .line 1073741824
     const/4 v0, 0x0
 
-    .line 536870913
+    .line 1073741825
     invoke-direct {p0, p1, v0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;-><init>(Landroid/content/Context;Z)V
 
-    .line 536870914
-    .line 536870915
-    .line 536870916
+    .line 1073741826
+    .line 1073741827
+    .line 1073741828
     return-void
 .end method
 
@@ -257,230 +257,230 @@
 
     .line 268435485
     .line 268435486
-    const/4 v2, 0x0
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 268435487
-    iput-boolean v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mHasReferenceAngle:Z
-
     .line 268435488
     .line 268435489
-    iput-boolean v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mEnabled:Z
+    move-result-object v0
 
     .line 268435490
-    .line 268435491
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$1;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mListeners:Ljava/util/ArrayList;
 
+    .line 268435491
     .line 268435492
+    const/4 v2, 0x0
+
     .line 268435493
-    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$1;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
+    iput-boolean v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mHasReferenceAngle:Z
 
     .line 268435494
     .line 268435495
+    iput-boolean v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mEnabled:Z
+
     .line 268435496
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationVectorSensorEventListener:Landroid/hardware/SensorEventListener;
-
     .line 268435497
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$1;
+
     .line 268435498
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$2;
-
     .line 268435499
-    .line 268435500
-    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$2;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
+    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$1;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
 
+    .line 268435500
     .line 268435501
     .line 268435502
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationVectorSensorEventListener:Landroid/hardware/SensorEventListener;
+
     .line 268435503
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mAccelerometerSensorEventListener:Landroid/hardware/SensorEventListener;
-
     .line 268435504
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$2;
+
     .line 268435505
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$3;
-
     .line 268435506
-    .line 268435507
-    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$3;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
+    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$2;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
 
+    .line 268435507
     .line 268435508
     .line 268435509
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mAccelerometerSensorEventListener:Landroid/hardware/SensorEventListener;
+
     .line 268435510
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mGravitySensorEventListener:Landroid/hardware/SensorEventListener;
-
     .line 268435511
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$3;
+
     .line 268435512
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$4;
-
     .line 268435513
-    .line 268435514
-    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$4;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
+    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$3;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
 
+    .line 268435514
     .line 268435515
     .line 268435516
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mGravitySensorEventListener:Landroid/hardware/SensorEventListener;
+
     .line 268435517
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationSensorEventListener:Landroid/hardware/SensorEventListener;
-
     .line 268435518
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$4;
+
     .line 268435519
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$5;
-
     .line 268435520
-    .line 268435521
-    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$5;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
+    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$4;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
 
+    .line 268435521
     .line 268435522
     .line 268435523
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationSensorEventListener:Landroid/hardware/SensorEventListener;
+
     .line 268435524
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawAccelerometerSensorEventListener:Landroid/hardware/SensorEventListener;
-
     .line 268435525
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$5;
+
     .line 268435526
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$6;
-
     .line 268435527
-    .line 268435528
-    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$6;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
+    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$5;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
 
+    .line 268435528
     .line 268435529
     .line 268435530
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawAccelerometerSensorEventListener:Landroid/hardware/SensorEventListener;
+
     .line 268435531
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawGyroscopeSensorEventListener:Landroid/hardware/SensorEventListener;
-
     .line 268435532
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$6;
+
     .line 268435533
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$7;
-
     .line 268435534
-    .line 268435535
-    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$7;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
+    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$6;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
 
+    .line 268435535
     .line 268435536
     .line 268435537
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawGyroscopeSensorEventListener:Landroid/hardware/SensorEventListener;
+
     .line 268435538
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawMagnetometerSensorEventListener:Landroid/hardware/SensorEventListener;
-
     .line 268435539
-    .line 268435540
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$7;
 
+    .line 268435540
     .line 268435541
+    invoke-direct {v0, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource$7;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)V
+
     .line 268435542
     .line 268435543
-    move-result-object v0
-
     .line 268435544
-    if-eqz v0, :cond_0
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawMagnetometerSensorEventListener:Landroid/hardware/SensorEventListener;
 
     .line 268435545
     .line 268435546
-    move-object p1, v0
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     .line 268435547
+    .line 268435548
+    .line 268435549
+    move-result-object v0
+
+    .line 268435550
+    if-eqz v0, :cond_0
+
+    .line 268435551
+    .line 268435552
+    move-object p1, v0
+
+    .line 268435553
     :cond_0
     const-string v0, "sensor"
 
-    .line 268435548
-    .line 268435549
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 268435550
-    .line 268435551
-    .line 268435552
-    move-result-object v5
-
-    .line 268435553
-    check-cast v5, Landroid/hardware/SensorManager;
-
     .line 268435554
     .line 268435555
-    iput-object v5, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mSensorManager:Landroid/hardware/SensorManager;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     .line 268435556
     .line 268435557
-    iput-object p4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mExecutionMode:Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataSource$ExecutionMode;
-
     .line 268435558
+    move-result-object v5
+
     .line 268435559
-    const/4 v7, 0x0
+    check-cast v5, Landroid/hardware/SensorManager;
 
     .line 268435560
-    if-eqz v5, :cond_3
-
     .line 268435561
-    .line 268435562
-    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->getSupportedRotaionVectorSensor()Landroid/hardware/Sensor;
+    iput-object v5, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mSensorManager:Landroid/hardware/SensorManager;
 
+    .line 268435562
     .line 268435563
+    iput-object p4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mExecutionMode:Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataSource$ExecutionMode;
+
     .line 268435564
     .line 268435565
-    move-result-object v0
+    const/4 v7, 0x0
 
     .line 268435566
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationVectorSensor:Landroid/hardware/Sensor;
+    if-eqz v5, :cond_3
 
     .line 268435567
     .line 268435568
-    const/4 v0, 0x1
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->getSupportedRotaionVectorSensor()Landroid/hardware/Sensor;
 
     .line 268435569
-    invoke-virtual {v5, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
     .line 268435570
     .line 268435571
+    move-result-object v0
+
     .line 268435572
-    move-result-object v4
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationVectorSensor:Landroid/hardware/Sensor;
 
     .line 268435573
-    iput-object v4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mAccelerometerSensor:Landroid/hardware/Sensor;
-
     .line 268435574
+    const/4 v0, 0x1
+
     .line 268435575
-    const/16 v0, 0x9
+    invoke-virtual {v5, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     .line 268435576
     .line 268435577
-    invoke-virtual {v5, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
     .line 268435578
-    .line 268435579
-    .line 268435580
-    move-result-object v0
+    move-result-object v4
 
+    .line 268435579
+    iput-object v4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mAccelerometerSensor:Landroid/hardware/Sensor;
+
+    .line 268435580
     .line 268435581
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mGravitySensor:Landroid/hardware/Sensor;
+    const/16 v0, 0x9
 
     .line 268435582
     .line 268435583
-    const/4 v1, 0x4
+    invoke-virtual {v5, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     .line 268435584
-    invoke-virtual {v5, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
     .line 268435585
     .line 268435586
-    .line 268435587
     move-result-object v0
 
-    .line 268435588
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationSensor:Landroid/hardware/Sensor;
+    .line 268435587
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mGravitySensor:Landroid/hardware/Sensor;
 
+    .line 268435588
     .line 268435589
+    const/4 v1, 0x4
+
     .line 268435590
-    if-eqz p3, :cond_2
+    invoke-virtual {v5, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     .line 268435591
     .line 268435592
-    invoke-direct {p0, v4}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->getRawAccelerometerSensor(Landroid/hardware/Sensor;)Landroid/hardware/Sensor;
-
     .line 268435593
-    .line 268435594
-    .line 268435595
     move-result-object v0
 
+    .line 268435594
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationSensor:Landroid/hardware/Sensor;
+
+    .line 268435595
     .line 268435596
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawAccelerometerSensor:Landroid/hardware/Sensor;
+    if-eqz p3, :cond_2
 
     .line 268435597
     .line 268435598
-    invoke-virtual {v5, v6}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    invoke-direct {p0, v4}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->getRawAccelerometerSensor(Landroid/hardware/Sensor;)Landroid/hardware/Sensor;
 
     .line 268435599
     .line 268435600
@@ -488,11 +488,11 @@
     move-result-object v0
 
     .line 268435602
-    if-nez v0, :cond_1
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawAccelerometerSensor:Landroid/hardware/Sensor;
 
     .line 268435603
     .line 268435604
-    invoke-virtual {v5, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    invoke-virtual {v5, v6}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     .line 268435605
     .line 268435606
@@ -500,29 +500,28 @@
     move-result-object v0
 
     .line 268435608
-    :cond_1
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawGyroscopeSensor:Landroid/hardware/Sensor;
+    if-nez v0, :cond_1
 
     .line 268435609
     .line 268435610
-    const/16 v0, 0xe
+    invoke-virtual {v5, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     .line 268435611
     .line 268435612
-    invoke-virtual {v5, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
     .line 268435613
-    .line 268435614
-    .line 268435615
     move-result-object v0
 
+    .line 268435614
+    :cond_1
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawGyroscopeSensor:Landroid/hardware/Sensor;
+
+    .line 268435615
     .line 268435616
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawMagnetometerSensor:Landroid/hardware/Sensor;
+    const/16 v0, 0xe
 
     .line 268435617
     .line 268435618
-    :goto_0
-    invoke-static {p1}, LX/4BE;->A0Z(Landroid/content/Context;)Landroid/view/WindowManager;
+    invoke-virtual {v5, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     .line 268435619
     .line 268435620
@@ -530,85 +529,98 @@
     move-result-object v0
 
     .line 268435622
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mWindowManager:Landroid/view/WindowManager;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawMagnetometerSensor:Landroid/hardware/Sensor;
 
     .line 268435623
     .line 268435624
-    iput p2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mSamplingPeriodUs:I
+    :goto_0
+    invoke-static {p1}, LX/433;->A0R(Landroid/content/Context;)Landroid/view/WindowManager;
 
     .line 268435625
     .line 268435626
-    invoke-static {v3, v2}, Landroid/opengl/Matrix;->setIdentityM([FI)V
-
     .line 268435627
-    .line 268435628
-    .line 268435629
-    return-void
+    move-result-object v0
 
+    .line 268435628
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mWindowManager:Landroid/view/WindowManager;
+
+    .line 268435629
     .line 268435630
-    :cond_2
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawAccelerometerSensor:Landroid/hardware/Sensor;
+    iput p2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mSamplingPeriodUs:I
 
     .line 268435631
     .line 268435632
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawGyroscopeSensor:Landroid/hardware/Sensor;
+    invoke-static {v3, v2}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
     .line 268435633
     .line 268435634
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawMagnetometerSensor:Landroid/hardware/Sensor;
-
     .line 268435635
+    return-void
+
     .line 268435636
-    goto :goto_0
+    :cond_2
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawAccelerometerSensor:Landroid/hardware/Sensor;
 
     .line 268435637
+    .line 268435638
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawGyroscopeSensor:Landroid/hardware/Sensor;
+
+    .line 268435639
+    .line 268435640
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawMagnetometerSensor:Landroid/hardware/Sensor;
+
+    .line 268435641
+    .line 268435642
+    goto :goto_0
+
+    .line 268435643
     :cond_3
     iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationVectorSensor:Landroid/hardware/Sensor;
 
-    .line 268435638
-    .line 268435639
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mAccelerometerSensor:Landroid/hardware/Sensor;
-
-    .line 268435640
-    .line 268435641
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mGravitySensor:Landroid/hardware/Sensor;
-
-    .line 268435642
-    .line 268435643
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationSensor:Landroid/hardware/Sensor;
-
     .line 268435644
     .line 268435645
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawAccelerometerSensor:Landroid/hardware/Sensor;
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mAccelerometerSensor:Landroid/hardware/Sensor;
 
     .line 268435646
     .line 268435647
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawGyroscopeSensor:Landroid/hardware/Sensor;
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mGravitySensor:Landroid/hardware/Sensor;
 
     .line 268435648
     .line 268435649
-    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawMagnetometerSensor:Landroid/hardware/Sensor;
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationSensor:Landroid/hardware/Sensor;
 
     .line 268435650
     .line 268435651
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawAccelerometerSensor:Landroid/hardware/Sensor;
+
+    .line 268435652
+    .line 268435653
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawGyroscopeSensor:Landroid/hardware/Sensor;
+
+    .line 268435654
+    .line 268435655
+    iput-object v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRawMagnetometerSensor:Landroid/hardware/Sensor;
+
+    .line 268435656
+    .line 268435657
     goto :goto_0
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataSource$ExecutionMode;)V
     .locals 2
 
-    .line 1073741824
+    .line 536870912
     const/4 v1, 0x1
 
-    .line 1073741825
+    .line 536870913
     const/4 v0, 0x0
 
-    .line 1073741826
+    .line 536870914
     invoke-direct {p0, p1, v1, v0, p2}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;-><init>(Landroid/content/Context;IZLcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataSource$ExecutionMode;)V
 
-    .line 1073741827
-    .line 1073741828
-    .line 1073741829
+    .line 536870915
+    .line 536870916
+    .line 536870917
     return-void
 .end method
 
@@ -679,11 +691,11 @@
     return-void
 .end method
 
-.method public static synthetic access$400(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)LX/5Wg;
+.method public static synthetic access$400(Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;)Ljava/util/ArrayList;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mListener:LX/5Wg;
+    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mListeners:Ljava/util/ArrayList;
 
     .line 1
     .line 2
@@ -1826,7 +1838,7 @@
 .end method
 
 .method private declared-synchronized setAllData()V
-    .locals 7
+    .locals 9
 
     .line 0
     monitor-enter p0
@@ -1849,60 +1861,92 @@
 
     .line 8
     .line 9
-    goto :goto_0
+    goto :goto_1
 
     .line 10
     :cond_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mListener:LX/5Wg;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mListeners:Ljava/util/ArrayList;
 
     .line 11
     .line 12
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
     .line 13
     .line 14
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationMatrix:[F
-
     .line 15
+    move-result-object v1
+
     .line 16
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mAcclerationVector:[F
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 17
     .line 18
-    iget-object v3, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mGravityVector:[F
-
     .line 19
+    move-result v0
+
     .line 20
-    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationVector:[F
+    if-eqz v0, :cond_1
 
     .line 21
     .line 22
-    iget-wide v5, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mTimestampNs:J
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 23
     .line 24
-    invoke-interface/range {v0 .. v6}, LX/5Wg;->onDataChanged([F[F[F[FJ)V
+    .line 25
+    move-result-object v2
+
+    .line 26
+    check-cast v2, LX/5p8;
+
+    .line 27
+    .line 28
+    iget-object v3, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationMatrix:[F
+
+    .line 29
+    .line 30
+    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mAcclerationVector:[F
+
+    .line 31
+    .line 32
+    iget-object v5, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mGravityVector:[F
+
+    .line 33
+    .line 34
+    iget-object v6, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mRotationVector:[F
+
+    .line 35
+    .line 36
+    iget-wide v7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mTimestampNs:J
+
+    .line 37
+    .line 38
+    invoke-interface/range {v2 .. v8}, LX/5p8;->onDataChanged([F[F[F[FJ)V
+
+    .line 39
+    .line 40
+    .line 41
+    goto :goto_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 25
-    .line 26
-    .line 27
+    .line 42
     :cond_1
-    :goto_0
+    :goto_1
     monitor-exit p0
 
-    .line 28
+    .line 43
     return-void
 
-    .line 29
+    .line 44
     :catchall_0
     move-exception v0
 
-    .line 30
+    .line 45
     monitor-exit p0
 
-    .line 31
+    .line 46
     throw v0
 .end method
 
@@ -2097,7 +2141,7 @@
 
     .line 9
     .line 10
-    sget-object v2, LX/54p;->A02:LX/54p;
+    sget-object v2, LX/55o;->A02:LX/55o;
 
     .line 11
     .line 12
@@ -2107,7 +2151,7 @@
     const/4 v0, 0x0
 
     .line 14
-    invoke-static {v0, v2, v3, v1}, LX/54p;->A00(Landroid/os/Handler$Callback;LX/54p;Ljava/lang/String;I)Landroid/os/Handler;
+    invoke-static {v0, v2, v3, v1}, LX/55o;->A00(Landroid/os/Handler$Callback;LX/55o;Ljava/lang/String;I)Landroid/os/Handler;
 
     .line 15
     .line 16
@@ -2526,7 +2570,7 @@
     const/4 v0, 0x0
 
     .line 84
-    invoke-static {v1, v0, v0}, LX/54p;->A01(Landroid/os/Handler;ZZ)V
+    invoke-static {v1, v0, v0}, LX/55o;->A01(Landroid/os/Handler;ZZ)V
 
     .line 85
     .line 86
@@ -2544,6 +2588,27 @@
 
 
 # virtual methods
+.method public addListener(LX/5p8;)V
+    .locals 1
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mListeners:Ljava/util/ArrayList;
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
+    return-void
+.end method
+
 .method public getExecutionMode()Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataSource$ExecutionMode;
     .locals 1
 
@@ -2664,17 +2729,6 @@
     .line 25
     .line 26
     goto :goto_0
-.end method
-
-.method public setListener(LX/5Wg;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mListener:LX/5Wg;
-
-    .line 1
-    .line 2
-    return-void
 .end method
 
 .method public declared-synchronized start()V
@@ -2828,24 +2882,33 @@
     .line 26
     .line 27
     iput-boolean v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mHasReferenceAngle:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 28
     .line 29
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/SensorMotionDataSource;->mListeners:Ljava/util/ArrayList;
+
+    .line 30
+    .line 31
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
     :cond_2
     monitor-exit p0
 
-    .line 30
+    .line 35
     return-void
 
-    .line 31
+    .line 36
     :catchall_0
     move-exception v0
 
-    .line 32
+    .line 37
     monitor-exit p0
 
-    .line 33
+    .line 38
     throw v0
 .end method

@@ -13,9 +13,9 @@
 # instance fields
 .field public A00:I
 
-.field public A01:Z
+.field public A01:I
 
-.field public A02:I
+.field public A02:Z
 
 
 # direct methods
@@ -27,11 +27,11 @@
 
     .line 1
     .line 2
-    new-instance v0, LX/1PM;
+    new-instance v0, LX/2Nf;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/1PM;-><init>(I)V
+    invoke-direct {v0, v1}, LX/2Nf;-><init>(I)V
 
     .line 5
     .line 6
@@ -72,7 +72,7 @@
     move-result v0
 
     .line 7
-    iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A02:I
+    iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A01:I
 
     .line 8
     .line 9
@@ -88,7 +88,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 16
     .line 17
@@ -96,7 +96,7 @@
     move-result v0
 
     .line 19
-    iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A01:Z
+    iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A02:Z
 
     .line 20
     .line 21
@@ -112,11 +112,11 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    iget v0, p1, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A02:I
+    iget v0, p1, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A01:I
 
     .line 268435460
     .line 268435461
-    iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A02:I
+    iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A01:I
 
     .line 268435462
     .line 268435463
@@ -128,11 +128,11 @@
 
     .line 268435466
     .line 268435467
-    iget-boolean v0, p1, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A01:Z
+    iget-boolean v0, p1, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A02:Z
 
     .line 268435468
     .line 268435469
-    iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A01:Z
+    iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A02:Z
 
     .line 268435470
     .line 268435471
@@ -153,7 +153,7 @@
     .locals 1
 
     .line 0
-    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A02:I
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A01:I
 
     .line 1
     .line 2
@@ -171,7 +171,7 @@
     .line 8
     .line 9
     .line 10
-    iget-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A01:Z
+    iget-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->A02:Z
 
     .line 11
     .line 12

@@ -1,64 +1,84 @@
-.class public final LX/5RX;
+.class public final synthetic LX/5RX;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaSourceList$ForwardingEventListener$$ExternalSyntheticLambda8"
 
 
 # instance fields
-.field public final A00:LX/5R8;
+.field public final synthetic A00:Landroid/util/Pair;
 
-.field public final A01:Ljava/util/concurrent/ThreadFactory;
+.field public final synthetic A01:LX/5RQ;
+
+.field public final synthetic A02:Ljava/lang/Exception;
 
 
 # direct methods
-.method public constructor <init>(LX/5R8;Ljava/util/concurrent/ThreadFactory;)V
+.method public synthetic constructor <init>(Landroid/util/Pair;LX/5RQ;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p2, p0, LX/5RX;->A01:Ljava/util/concurrent/ThreadFactory;
+    iput-object p2, p0, LX/5RX;->A01:LX/5RQ;
 
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/5RX;->A00:LX/5R8;
+    iput-object p1, p0, LX/5RX;->A00:Landroid/util/Pair;
 
-    .line 6
-    .line 7
+    iput-object p3, p0, LX/5RX;->A02:Ljava/lang/Exception;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 2
+.method public final run()V
+    .locals 5
 
     .line 0
-    new-instance v1, LX/5RT;
+    iget-object v0, p0, LX/5RX;->A01:LX/5RQ;
 
     .line 1
     .line 2
-    invoke-direct {v1, p0, p1}, LX/5RT;-><init>(LX/5RX;Ljava/lang/Runnable;)V
+    iget-object v4, p0, LX/5RX;->A00:Landroid/util/Pair;
 
     .line 3
     .line 4
+    iget-object v3, p0, LX/5RX;->A02:Ljava/lang/Exception;
+
     .line 5
-    iget-object v0, p0, LX/5RX;->A01:Ljava/util/concurrent/ThreadFactory;
-
     .line 6
-    .line 7
-    invoke-interface {v0, v1}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    iget-object v0, v0, LX/5RQ;->A01:LX/5Q9;
 
+    .line 7
     .line 8
+    iget-object v2, v0, LX/5Q9;->A04:LX/5OE;
+
     .line 9
     .line 10
-    move-result-object v0
+    invoke-static {v4}, LX/432;->A05(Landroid/util/Pair;)I
 
     .line 11
-    return-object v0
+    .line 12
+    .line 13
+    move-result v1
+
+    .line 14
+    iget-object v0, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    check-cast v0, LX/5RP;
+
+    .line 17
+    .line 18
+    invoke-interface {v2, v0, v3, v1}, LX/5M9;->AVh(LX/5RP;Ljava/lang/Exception;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
 .end method

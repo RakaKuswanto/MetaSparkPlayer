@@ -12,7 +12,7 @@
 
     .line 268435457
     .line 268435458
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 268435459
     .line 268435460
@@ -45,7 +45,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -86,7 +86,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -98,23 +98,36 @@
 
     .line 5
     .line 6
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
+    move-result v0
 
     .line 10
-    invoke-virtual {v2, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
     .line 11
     .line 12
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
     .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    invoke-virtual {v2, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_0
     return-object v2
 .end method
 
-.method public static A03(Landroid/os/Bundle;Ljava/lang/String;)LX/20b;
+.method public static A03(Landroid/os/Bundle;Ljava/lang/String;)LX/4Aa;
     .locals 4
 
     .line 0
@@ -156,11 +169,11 @@
     move-result-object v0
 
     .line 17
-    new-instance v2, LX/20b;
+    new-instance v2, LX/4Aa;
 
     .line 18
     .line 19
-    invoke-direct {v2, p1, v3, v0, v1}, LX/20b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct {v2, p1, v3, v0, v1}, LX/4Aa;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 20
     .line 21

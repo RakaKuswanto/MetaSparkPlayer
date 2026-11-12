@@ -14,6 +14,8 @@
 
 .field public static final FLAG_PAYLOAD_UNIT:I = 0x40
 
+.field public static final IS_OS_VERSION_CHAOTIC:Z
+
 .field public static final MAX_SYMBOL_COUNT:I = 0x7f
 
 .field public static final PAYLOAD_MASK:I = 0x3f
@@ -28,6 +30,45 @@
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 1
+    .line 2
+    const/16 v0, 0x1a
+
+    .line 3
+    .line 4
+    if-lt v2, v0, :cond_0
+
+    .line 5
+    .line 6
+    const/16 v1, 0x1e
+
+    .line 7
+    .line 8
+    const/4 v0, 0x1
+
+    .line 9
+    if-le v2, v1, :cond_1
+
+    .line 10
+    .line 11
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 12
+    :cond_1
+    sput-boolean v0, Lcom/facebook/common/dextricks/StringTreeSet;->IS_OS_VERSION_CHAOTIC:Z
+
+    .line 13
+    .line 14
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
@@ -497,7 +538,7 @@
     sub-int/2addr v3, v5
 
     .line 154
-    invoke-static {v0, v3}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v3}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 155
     .line 156
@@ -505,7 +546,7 @@
     move-result-object v0
 
     .line 158
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 159
     .line 160
@@ -521,10 +562,10 @@
 .end method
 
 .method public static searchMapStringify(Ljava/lang/Object;Ljava/lang/String;I)I
-    .locals 2
+    .locals 3
 
     .line 0
-    sget-object v1, Lcom/facebook/common/dextricks/StringTreeSet;->sLogger:Lcom/facebook/common/dextricks/StringTreeSet$Logger;
+    sget-object v2, Lcom/facebook/common/dextricks/StringTreeSet;->sLogger:Lcom/facebook/common/dextricks/StringTreeSet$Logger;
 
     .line 1
     .line 2
@@ -532,14 +573,14 @@
 
     .line 3
     .line 4
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
     .line 5
     .line 6
     const/4 v0, 0x0
 
     .line 7
-    invoke-interface {v1, v0}, Lcom/facebook/common/dextricks/StringTreeSet$Logger;->onStringTreeLookup(Ljava/lang/String;)V
+    invoke-interface {v2, v0}, Lcom/facebook/common/dextricks/StringTreeSet$Logger;->onStringTreeLookup(Ljava/lang/String;)V
 
     .line 8
     .line 9
@@ -549,58 +590,144 @@
 
     .line 11
     :cond_1
-    instance-of v0, p0, Ljava/lang/Class;
+    sget-boolean v0, Lcom/facebook/common/dextricks/StringTreeSet;->IS_OS_VERSION_CHAOTIC:Z
 
     .line 12
     .line 13
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 14
     .line 15
-    check-cast p0, Ljava/lang/Class;
+    const-class v1, Lcom/facebook/common/dextricks/StringTreeSet;
 
     .line 16
     .line 17
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    monitor-enter v1
 
     .line 18
+    :try_start_0
+    instance-of v0, p0, Ljava/lang/Class;
+
     .line 19
     .line 20
-    move-result-object v0
+    if-eqz v0, :cond_2
 
     .line 21
-    :goto_0
-    if-eqz v1, :cond_2
-
     .line 22
-    .line 23
-    invoke-interface {v1, v0}, Lcom/facebook/common/dextricks/StringTreeSet$Logger;->onStringTreeLookup(Ljava/lang/String;)V
+    check-cast p0, Ljava/lang/Class;
 
+    .line 23
     .line 24
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
     .line 25
     .line 26
-    :cond_2
-    invoke-static {v0, p1, p2}, Lcom/facebook/common/dextricks/StringTreeSet;->searchMap(Ljava/lang/String;Ljava/lang/String;I)I
-
     .line 27
-    .line 28
-    .line 29
-    move-result v0
-
-    .line 30
-    return v0
-
-    .line 31
-    :cond_3
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 32
-    .line 33
-    .line 34
     move-result-object v0
 
-    .line 35
+    .line 28
     goto :goto_0
+
+    .line 29
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    :goto_0
+    if-eqz v2, :cond_3
+
+    .line 34
+    .line 35
+    invoke-interface {v2, v0}, Lcom/facebook/common/dextricks/StringTreeSet$Logger;->onStringTreeLookup(Ljava/lang/String;)V
+
+    .line 36
+    .line 37
+    .line 38
+    :cond_3
+    invoke-static {v0, p1, p2}, Lcom/facebook/common/dextricks/StringTreeSet;->searchMap(Ljava/lang/String;Ljava/lang/String;I)I
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v0
+
+    .line 42
+    monitor-exit v1
+
+    .line 43
+    return v0
+
+    .line 44
+    :catchall_0
+    move-exception v0
+
+    .line 45
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 46
+    throw v0
+
+    .line 47
+    :cond_4
+    instance-of v0, p0, Ljava/lang/Class;
+
+    .line 48
+    .line 49
+    if-eqz v0, :cond_6
+
+    .line 50
+    .line 51
+    check-cast p0, Ljava/lang/Class;
+
+    .line 52
+    .line 53
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v0
+
+    .line 57
+    :goto_1
+    if-eqz v2, :cond_5
+
+    .line 58
+    .line 59
+    invoke-interface {v2, v0}, Lcom/facebook/common/dextricks/StringTreeSet$Logger;->onStringTreeLookup(Ljava/lang/String;)V
+
+    .line 60
+    .line 61
+    .line 62
+    :cond_5
+    invoke-static {v0, p1, p2}, Lcom/facebook/common/dextricks/StringTreeSet;->searchMap(Ljava/lang/String;Ljava/lang/String;I)I
+
+    .line 63
+    .line 64
+    .line 65
+    move-result v0
+
+    .line 66
+    return v0
+
+    .line 67
+    :cond_6
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 68
+    .line 69
+    .line 70
+    move-result-object v0
+
+    .line 71
+    goto :goto_1
 .end method
 
 .method public static setLogger(Lcom/facebook/common/dextricks/StringTreeSet$Logger;)V

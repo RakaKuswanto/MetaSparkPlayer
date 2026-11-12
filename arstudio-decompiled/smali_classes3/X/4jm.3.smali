@@ -1,108 +1,44 @@
-.class public final LX/4jm;
-.super LX/4kb;
+.class public final synthetic LX/4jm;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentTree$$ExternalSyntheticLambda13"
 
 
 # instance fields
-.field public final A00:LX/4mg;
+.field public final synthetic A00:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic A01:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(LX/4kZ;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    .locals 0
 
-    .line 0
-    invoke-direct {p0, p1}, LX/4kb;-><init>(LX/4ka;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iget-object v0, p1, LX/4kZ;->A00:LX/4mg;
+    iput-object p2, p0, LX/4jm;->A01:Landroid/view/View;
 
-    .line 4
-    .line 5
-    if-eqz v0, :cond_0
+    iput-object p1, p0, LX/4jm;->A00:Landroid/graphics/drawable/Drawable;
 
-    .line 6
-    .line 7
-    iput-object v0, p0, LX/4jm;->A00:LX/4mg;
-
-    .line 8
-    .line 9
     return-void
-
-    .line 10
-    :cond_0
-    const-string v0, "Component must be provided."
-
-    .line 11
-    .line 12
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    throw v0
-.end method
-
-.method public static A00()LX/4jm;
-    .locals 2
-
-    .line 0
-    new-instance v1, LX/4kZ;
-
-    .line 1
-    .line 2
-    invoke-direct {v1}, LX/4kZ;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    new-instance v0, LX/4mS;
-
-    .line 6
-    .line 7
-    invoke-direct {v0}, LX/4mS;-><init>()V
-
-    .line 8
-    .line 9
-    .line 10
-    iput-object v0, v1, LX/4kZ;->A00:LX/4mg;
-
-    .line 11
-    .line 12
-    new-instance v0, LX/4jm;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, v1}, LX/4jm;-><init>(LX/4kZ;)V
-
-    .line 15
-    .line 16
-    .line 17
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final getName()Ljava/lang/String;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    .line 0
-    iget-object v0, p0, LX/4jm;->A00:LX/4mg;
+    iget-object v1, p0, LX/4jm;->A01:Landroid/view/View;
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/4mg;->A0P()Ljava/lang/String;
+    iget-object v0, p0, LX/4jm;->A00:Landroid/graphics/drawable/Drawable;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/facebook/litho/ComponentTree;->A03(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
-    .line 6
-    return-object v0
+    return-void
 .end method

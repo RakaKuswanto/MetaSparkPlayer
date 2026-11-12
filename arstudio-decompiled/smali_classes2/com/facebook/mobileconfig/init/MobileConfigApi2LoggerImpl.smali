@@ -4,28 +4,24 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/0Na;
+.field public final A01:Ljava/lang/Object;
 
-.field public final A02:LX/0Na;
+.field public final A02:Ljava/util/List;
 
-.field public final A03:Ljava/lang/Object;
+.field public final A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final A04:Ljava/util/List;
+.field public final A04:LX/2pg;
 
-.field public final A05:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final A05:LX/0RP;
 
-.field public final A06:LX/392;
-
-.field public final A07:LX/0Na;
-
-.field public final A08:LX/0Na;
+.field public final A06:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 5
+.method public constructor <init>()V
+    .locals 4
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,11 +29,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A6y:I
+    sget v0, LX/2I6;->A47:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -45,15 +41,15 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A07:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A05:LX/0RP;
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->AP8:I
+    sget v0, LX/2I6;->AJQ:I
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 14
     .line 15
@@ -61,119 +57,88 @@
     move-result-object v0
 
     .line 17
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A08:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A06:LX/0RP;
 
     .line 18
     .line 19
-    sget v0, LX/2eq;->A6n:I
+    sget v0, LX/2I6;->A3m:I
 
     .line 20
     .line 21
-    const/4 v4, 0x0
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 22
-    invoke-static {v4, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
     .line 23
     .line 24
-    .line 25
     move-result-object v0
+
+    .line 25
+    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A00:LX/0RP;
 
     .line 26
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A02:LX/0Na;
-
     .line 27
+    sget-object v3, LX/2jC;->CLIENT_EVENT:LX/2jC;
+
     .line 28
-    sget v0, LX/2eq;->A6e:I
-
     .line 29
-    .line 30
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    const-string/jumbo v2, "mobile_config_api2_consistency"
 
+    .line 30
     .line 31
     .line 32
+    const/4 v1, 0x0
+
     .line 33
-    move-result-object v0
+    new-instance v0, LX/2pg;
 
     .line 34
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A01:LX/0Na;
-
     .line 35
-    .line 36
-    sget-object v3, LX/2ap;->CLIENT_EVENT:LX/2ap;
+    invoke-direct {v0, v3, v2, v1}, LX/2pg;-><init>(LX/2jC;Ljava/lang/String;Z)V
 
+    .line 36
     .line 37
     .line 38
-    const-string/jumbo v2, "mobile_config_api2_consistency"
+    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A04:LX/2pg;
 
     .line 39
     .line 40
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
+
     .line 41
-    const/4 v1, 0x0
-
     .line 42
-    new-instance v0, LX/392;
-
     .line 43
+    move-result-object v0
+
     .line 44
-    invoke-direct {v0, v3, v4, v2, v1}, LX/392;-><init>(LX/2ap;Ljava/lang/String;Ljava/lang/String;Z)V
+    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A01:Ljava/lang/Object;
 
     .line 45
     .line 46
-    .line 47
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A06:LX/392;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
+    .line 47
     .line 48
     .line 49
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    move-result-object v0
 
     .line 50
+    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A02:Ljava/util/List;
+
     .line 51
     .line 52
-    move-result-object v0
-
-    .line 53
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A03:Ljava/lang/Object;
-
-    .line 54
-    .line 55
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 56
-    .line 57
-    .line 58
-    move-result-object v0
-
-    .line 59
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A04:Ljava/util/List;
-
-    .line 60
-    .line 61
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 62
-    .line 63
+    .line 53
+    .line 54
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    .line 64
-    .line 65
-    .line 66
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A05:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 55
+    .line 56
+    .line 57
+    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 67
-    .line 68
-    invoke-static {p1, v1}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
-
-    .line 69
-    .line 70
-    .line 71
-    move-result-object v0
-
-    .line 72
-    iput-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A00:LX/1zG;
-
-    .line 73
-    .line 74
+    .line 58
+    .line 59
     return-void
 .end method
 
@@ -181,11 +146,11 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A07:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A05:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -193,11 +158,11 @@
     move-result-object v4
 
     .line 6
-    check-cast v4, LX/38N;
+    check-cast v4, LX/35D;
 
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A06:LX/392;
+    iget-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A04:LX/2pg;
 
     .line 9
     .line 10
@@ -209,14 +174,14 @@
     .line 12
     .line 13
     .line 14
-    iget-object v1, v0, LX/392;->A00:LX/2ap;
+    iget-object v1, v0, LX/2pg;->A00:LX/2jC;
 
     .line 15
     .line 16
     const/4 v0, 0x0
 
     .line 17
-    invoke-static {v4, v1, v3, v2, v0}, LX/38N;->A00(LX/38N;LX/2ap;Ljava/lang/String;Ljava/lang/String;Z)LX/38O;
+    invoke-static {v1, v4, v3, v2, v0}, LX/35D;->A01(LX/2jC;LX/35D;Ljava/lang/String;Ljava/lang/String;Z)LX/35E;
 
     .line 18
     .line 19
@@ -224,7 +189,7 @@
     move-result-object v2
 
     .line 21
-    invoke-virtual {v2}, LX/38O;->A0A()Z
+    invoke-virtual {v2}, LX/35E;->A09()Z
 
     .line 22
     .line 23
@@ -236,51 +201,53 @@
 
     .line 26
     .line 27
-    const-string v0, "data"
+    const-string/jumbo v0, "data"
 
     .line 28
     .line 29
-    invoke-virtual {v2, v0, p1}, LX/38O;->A08(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 30
+    invoke-virtual {v2, v0, p1}, LX/35E;->A08(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 31
     .line 32
+    .line 33
     const-string/jumbo v0, "flags"
 
-    .line 33
     .line 34
     .line 35
-    invoke-virtual {v2, v0, p2}, LX/38O;->A08(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 36
+    invoke-virtual {v2, v0, p2}, LX/35E;->A08(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 37
     .line 38
-    iget-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A08:LX/0Na;
-
     .line 39
-    .line 40
-    invoke-static {v0}, LX/1xU;->A01(LX/0Na;)Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/mobileconfig/init/MobileConfigApi2LoggerImpl;->A06:LX/0RP;
 
+    .line 40
     .line 41
+    invoke-static {v0}, LX/2Ox;->A01(LX/0RP;)Ljava/lang/String;
+
     .line 42
     .line 43
+    .line 44
     move-result-object v1
 
-    .line 44
-    const-string v0, "device_id"
-
     .line 45
-    .line 46
-    invoke-virtual {v2, v0, v1}, LX/38O;->A08(Ljava/lang/String;Ljava/lang/String;)V
+    const-string/jumbo v0, "device_id"
 
+    .line 46
     .line 47
     .line 48
-    .line 49
-    invoke-virtual {v2}, LX/38O;->A04()V
+    invoke-virtual {v2, v0, v1}, LX/35E;->A08(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 49
     .line 50
     .line 51
+    invoke-virtual {v2}, LX/35E;->A05()V
+
     .line 52
+    .line 53
+    .line 54
     :cond_0
     return-void
 .end method

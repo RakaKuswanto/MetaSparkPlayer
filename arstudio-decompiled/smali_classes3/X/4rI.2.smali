@@ -2,31 +2,15 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A00:Ljava/util/Comparator;
+# interfaces
+.implements LX/4rK;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    .line 0
-    const/4 v1, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    new-instance v0, LX/6Pk;
-
-    .line 2
-    .line 3
-    invoke-direct {v0, v1}, LX/6Pk;-><init>(I)V
-
-    .line 4
-    .line 5
-    .line 6
-    sput-object v0, LX/4rI;->A00:Ljava/util/Comparator;
-
-    .line 7
-    .line 8
     return-void
 .end method

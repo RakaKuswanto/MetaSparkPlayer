@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLReactionCoreTextLineSpacingSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLReactionCoreTextLineSpacingSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0w()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A10()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -20,7 +20,7 @@
     move-result-object v2
 
     .line 4
-    invoke-static {v2}, LX/0Yf;->A1I([Ljava/lang/Object;)V
+    invoke-static {v2}, LX/0X3;->A1R([Ljava/lang/Object;)V
 
     .line 5
     .line 6
@@ -32,7 +32,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 11
     .line 12
@@ -40,7 +40,7 @@
     move-result-object v0
 
     .line 14
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLReactionCoreTextLineSpacingSet;->A00:Ljava/util/Set;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLReactionCoreTextLineSpacingSet;->A00:Ljava/util/HashSet;
 
     .line 15
     .line 16
@@ -59,11 +59,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLReactionCoreTextLineSpacingSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLReactionCoreTextLineSpacingSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

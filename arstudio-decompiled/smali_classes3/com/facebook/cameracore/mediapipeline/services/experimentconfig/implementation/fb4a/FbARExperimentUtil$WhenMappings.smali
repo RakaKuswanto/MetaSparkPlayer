@@ -1,4 +1,4 @@
-.class public final synthetic Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil$WhenMappings;
+.class public abstract synthetic Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil$WhenMappings;
 .super Ljava/lang/Object;
 .source ""
 
@@ -39,7 +39,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0, v8, v3}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v8, v3}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -55,7 +55,7 @@
 
     .line 15
     .line 16
-    invoke-static {v0, v8, v2}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v8, v2}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -67,11 +67,11 @@
 
     .line 20
     :try_start_2
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableEngineUniformBlock:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_Stability_Push_UnprovenPath:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 21
     .line 22
-    invoke-static {v0, v8, v7}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v8, v7}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -83,11 +83,11 @@
 
     .line 26
     :try_start_3
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableXorRendering:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_Stability_Lion_Path:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 27
     .line 28
-    invoke-static {v0, v8, v6}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v8, v6}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
@@ -99,11 +99,11 @@
 
     .line 32
     :try_start_4
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableXorMesh:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_Stability_Leopard_Path:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 33
     .line 34
-    invoke-static {v0, v8, v5}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v8, v5}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
@@ -115,11 +115,11 @@
 
     .line 38
     :try_start_5
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableXorPhase2Mesh:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_Stability_Rhino_Path:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 39
     .line 40
-    invoke-static {v0, v8, v4}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    invoke-static {v0, v8, v4}, LX/432;->A1D(Ljava/lang/Enum;[II)V
     :try_end_5
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
@@ -128,11 +128,11 @@
     .line 43
     :catch_5
     :try_start_6
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableSceneTreeToEntity:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_Stability_Elephant_Path:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 44
     .line 45
-    invoke-static {v0, v8}, LX/4BF;->A1J(Ljava/lang/Enum;[I)V
+    invoke-static {v0, v8}, LX/433;->A1I(Ljava/lang/Enum;[I)V
     :try_end_6
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
@@ -141,7 +141,7 @@
     .line 48
     :catch_6
     :try_start_7
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_ARCoreSupported:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableEngineUniformBlock:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 49
     .line 50
@@ -165,7 +165,7 @@
     .line 58
     :catch_7
     :try_start_8
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_UseWolfSlamForWarfSlam:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableXorRendering:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 59
     .line 60
@@ -189,7 +189,7 @@
     .line 68
     :catch_8
     :try_start_9
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_UseWorldTrackerV2:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableXorMesh:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 69
     .line 70
@@ -213,7 +213,7 @@
     .line 78
     :catch_9
     :try_start_a
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_PlatformSLAMSupported:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableXorPhase2Mesh:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 79
     .line 80
@@ -237,7 +237,7 @@
     .line 88
     :catch_a
     :try_start_b
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_EnableHitTestWithDepth:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableSceneTreeToEntity:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 89
     .line 90
@@ -261,7 +261,7 @@
     .line 98
     :catch_b
     :try_start_c
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Segmentation_Android_Caffe2_Thread_Enabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableSceneTreeToEntity_ProductionRollout:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 99
     .line 100
@@ -285,7 +285,7 @@
     .line 108
     :catch_c
     :try_start_d
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->FaceTracker_UseAsyncModelLoad:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_XOR_EnableSceneTreeToEntity_ProductionRollout_BatchB:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 109
     .line 110
@@ -309,7 +309,7 @@
     .line 118
     :catch_d
     :try_start_e
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->ExpressionFitting_UseEFDataProvider:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_ARCoreSupported:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 119
     .line 120
@@ -333,7 +333,7 @@
     .line 128
     :catch_e
     :try_start_f
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->ExpressionFitting_UseTimestampSync:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_UseWolfSlamForWarfSlam:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 129
     .line 130
@@ -357,7 +357,7 @@
     .line 138
     :catch_f
     :try_start_10
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->ExpressionTracker_OneRunPerRender:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_UseWorldTrackerV2:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 139
     .line 140
@@ -381,7 +381,7 @@
     .line 148
     :catch_10
     :try_start_11
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_AsyncDestructionEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_PlatformSLAMSupported:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 149
     .line 150
@@ -405,7 +405,7 @@
     .line 158
     :catch_11
     :try_start_12
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_JSI_ForceEagerCompilation:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->WorldTracker_EnableHitTestWithDepth:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 159
     .line 160
@@ -429,7 +429,7 @@
     .line 168
     :catch_12
     :try_start_13
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AsyncLoading_UseAsyncAssetLoaderForDynamicExternalAssets:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Segmentation_Android_Caffe2_Thread_Enabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 169
     .line 170
@@ -453,7 +453,7 @@
     .line 178
     :catch_13
     :try_start_14
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_ShaderCodeStorageCache_UseUnifex:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->FaceTracker_UseAsyncModelLoad:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 179
     .line 180
@@ -477,7 +477,7 @@
     .line 188
     :catch_14
     :try_start_15
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_FontTextureProvider_UseUnifex:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->ExpressionFitting_UseEFDataProvider:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 189
     .line 190
@@ -501,7 +501,7 @@
     .line 198
     :catch_15
     :try_start_16
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->FBA_Audio_Reactive_Effect:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->ExpressionFitting_UseTimestampSync:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 199
     .line 200
@@ -525,7 +525,7 @@
     .line 208
     :catch_16
     :try_start_17
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->MetadataLogging_EnableMetadataSaving:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->ExpressionTracker_OneRunPerRender:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 209
     .line 210
@@ -549,7 +549,7 @@
     .line 218
     :catch_17
     :try_start_18
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->MetadataLogging_SaveImages:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_AsyncDestructionEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 219
     .line 220
@@ -573,7 +573,7 @@
     .line 228
     :catch_18
     :try_start_19
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_RecordLog:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_JSI_ForceEagerCompilation:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 229
     .line 230
@@ -597,7 +597,7 @@
     .line 238
     :catch_19
     :try_start_1a
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_RecordPluginMetrics:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AsyncLoading_UseAsyncAssetLoaderForDynamicExternalAssets:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 239
     .line 240
@@ -621,7 +621,7 @@
     .line 248
     :catch_1a
     :try_start_1b
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_DET_MouthOcclusionHandlingEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_ShaderCodeStorageCache_UseUnifex:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 249
     .line 250
@@ -645,7 +645,7 @@
     .line 258
     :catch_1b
     :try_start_1c
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_DET_UserCalibrationEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->FBA_Audio_Reactive_Effect:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 259
     .line 260
@@ -669,7 +669,7 @@
     .line 268
     :catch_1c
     :try_start_1d
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AvatarsPerformanceTierEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->MetadataLogging_EnableMetadataSaving:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 269
     .line 270
@@ -693,7 +693,7 @@
     .line 278
     :catch_1d
     :try_start_1e
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AvatarsNormalDisabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->MetadataLogging_SaveImages:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 279
     .line 280
@@ -717,7 +717,7 @@
     .line 288
     :catch_1e
     :try_start_1f
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AvatarsRimLightDisabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_RecordLog:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 289
     .line 290
@@ -741,7 +741,7 @@
     .line 298
     :catch_1f
     :try_start_20
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AvatarsSSSDisabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_RecordPluginMetrics:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 299
     .line 300
@@ -765,7 +765,7 @@
     .line 308
     :catch_20
     :try_start_21
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AvatarsSSSRimLightNormalDisabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_DET_MouthOcclusionHandlingEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 309
     .line 310
@@ -789,7 +789,7 @@
     .line 318
     :catch_21
     :try_start_22
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AvatarsTieredExperienceEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_DET_UserCalibrationEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 319
     .line 320
@@ -813,7 +813,7 @@
     .line 328
     :catch_22
     :try_start_23
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_RunJestE2E:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AvatarsPerformanceTierEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 329
     .line 330
@@ -909,7 +909,7 @@
     .line 368
     :catch_26
     :try_start_27
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_ReactiveGraph_LazyEvalEnabled:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_ReuseMemoryAvatarEntity:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 369
     .line 370
@@ -933,7 +933,7 @@
     .line 378
     :catch_27
     :try_start_28
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_ReuseMemoryAvatarEntity:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_CacheBehaviors:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 379
     .line 380
@@ -957,7 +957,7 @@
     .line 388
     :catch_28
     :try_start_29
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_CacheBehaviors:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_EnableM6Parametrics:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 389
     .line 390
@@ -981,7 +981,7 @@
     .line 398
     :catch_29
     :try_start_2a
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_DeSparkifyScriptPlugin:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_UseSparseMorphTargets:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 399
     .line 400
@@ -1004,151 +1004,343 @@
     .line 407
     .line 408
     :catch_2a
-    sput-object v8, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil$WhenMappings;->$EnumSwitchMapping$0:[I
+    :try_start_2b
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_UseGpuMorphTargets:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 409
     .line 410
-    invoke-static {}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->values()[Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     .line 411
     .line 412
     .line 413
-    move-result-object v0
+    move-result v1
 
     .line 414
-    array-length v0, v0
+    const/16 v0, 0x2c
 
     .line 415
-    new-array v1, v0, [I
-
     .line 416
-    .line 417
-    :try_start_2b
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->Segmentation_Android_Caffe2_Thread_Count:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
-
-    .line 418
-    .line 419
-    invoke-static {v0, v1, v3}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
+    aput v0, v8, v1
     :try_end_2b
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2b .. :try_end_2b} :catch_2b
 
-    .line 420
-    .line 421
-    .line 422
+    .line 417
+    .line 418
     :catch_2b
     :try_start_2c
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->AREngine_JSI_Hermes_VMExperimentFlags:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_DeSparkifyReactivePlugin:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
+    .line 419
+    .line 420
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 421
+    .line 422
     .line 423
+    move-result v1
+
     .line 424
-    invoke-static {v0, v1, v2}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
-    :try_end_2c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2c .. :try_end_2c} :catch_2c
+    const/16 v0, 0x2d
 
     .line 425
     .line 426
+    aput v0, v8, v1
+    :try_end_2c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2c .. :try_end_2c} :catch_2c
+
     .line 427
+    .line 428
     :catch_2c
     :try_start_2d
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->SparkSL_Shader_Cache_Size:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_DeSparkifyComponentsInfra:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
-    .line 428
     .line 429
-    invoke-static {v0, v1, v7}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
-    :try_end_2d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2d .. :try_end_2d} :catch_2d
-
     .line 430
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
     .line 431
     .line 432
-    :catch_2d
-    :try_start_2e
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->Jest_E2E_override_optimized_perf_logger_flag:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
-
     .line 433
+    move-result v1
+
     .line 434
-    invoke-static {v0, v1, v6}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
-    :try_end_2e
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2e .. :try_end_2e} :catch_2e
+    const/16 v0, 0x2e
 
     .line 435
     .line 436
+    aput v0, v8, v1
+    :try_end_2d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2d .. :try_end_2d} :catch_2d
+
     .line 437
-    :catch_2e
-    :try_start_2f
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->ExpressionFitting_PytorchMaxThreadCount:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
-
     .line 438
-    .line 439
-    invoke-static {v0, v1, v5}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
-    :try_end_2f
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2f .. :try_end_2f} :catch_2f
+    :catch_2d
+    :try_start_2e
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_Use_SandboxedHermesVM:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
+    .line 439
     .line 440
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
     .line 441
     .line 442
-    :catch_2f
-    :try_start_30
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->ExpressionFitting_HotfixIndex:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
-
     .line 443
+    move-result v1
+
     .line 444
-    invoke-static {v0, v1, v4}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
-    :try_end_30
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_30 .. :try_end_30} :catch_30
+    const/16 v0, 0x2f
 
     .line 445
     .line 446
+    aput v0, v8, v1
+    :try_end_2e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2e .. :try_end_2e} :catch_2e
+
     .line 447
-    :catch_30
-    sput-object v1, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil$WhenMappings;->$EnumSwitchMapping$1:[I
-
     .line 448
-    .line 449
-    invoke-static {}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;->values()[Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;
+    :catch_2e
+    :try_start_2f
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_JSI_UseHermesHardenedRuntime:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
+    .line 449
     .line 450
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
     .line 451
     .line 452
-    move-result-object v0
-
     .line 453
-    array-length v0, v0
+    move-result v1
 
     .line 454
-    new-array v1, v0, [I
+    const/16 v0, 0x30
 
     .line 455
     .line 456
-    :try_start_31
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;->WorldTracker_ARCommerceEffectIds:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;
+    aput v0, v8, v1
+    :try_end_2f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2f .. :try_end_2f} :catch_2f
 
     .line 457
     .line 458
-    invoke-static {v0, v1, v3}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
-    :try_end_31
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_31 .. :try_end_31} :catch_31
+    :catch_2f
+    :try_start_30
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_ForcePhase4Audio:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
 
     .line 459
     .line 460
-    .line 461
-    :catch_31
-    :try_start_32
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;->AvatarsPerformanceTier:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
+    .line 461
     .line 462
     .line 463
-    invoke-static {v0, v1, v2}, LX/4BD;->A1G(Ljava/lang/Enum;[II)V
-    :try_end_32
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_32 .. :try_end_32} :catch_32
+    move-result v1
 
     .line 464
+    const/16 v0, 0x31
+
     .line 465
     .line 466
-    :catch_32
-    sput-object v1, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil$WhenMappings;->$EnumSwitchMapping$2:[I
+    aput v0, v8, v1
+    :try_end_30
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_30 .. :try_end_30} :catch_30
 
     .line 467
     .line 468
+    :catch_30
+    :try_start_31
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->Avatars_UseSDKShallowCopy:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+
+    .line 469
+    .line 470
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 471
+    .line 472
+    .line 473
+    move-result v1
+
+    .line 474
+    const/16 v0, 0x32
+
+    .line 475
+    .line 476
+    aput v0, v8, v1
+    :try_end_31
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_31 .. :try_end_31} :catch_31
+
+    .line 477
+    .line 478
+    :catch_31
+    :try_start_32
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;->AREngine_UseStyle2AvatarShaders:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;
+
+    .line 479
+    .line 480
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 481
+    .line 482
+    .line 483
+    move-result v1
+
+    .line 484
+    const/16 v0, 0x33
+
+    .line 485
+    .line 486
+    aput v0, v8, v1
+    :try_end_32
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_32 .. :try_end_32} :catch_32
+
+    .line 487
+    .line 488
+    :catch_32
+    sput-object v8, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil$WhenMappings;->$EnumSwitchMapping$0:[I
+
+    .line 489
+    .line 490
+    invoke-static {}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->values()[Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+
+    .line 491
+    .line 492
+    .line 493
+    move-result-object v0
+
+    .line 494
+    array-length v0, v0
+
+    .line 495
+    new-array v1, v0, [I
+
+    .line 496
+    .line 497
+    :try_start_33
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->Segmentation_Android_Caffe2_Thread_Count:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+
+    .line 498
+    .line 499
+    invoke-static {v0, v1, v3}, LX/432;->A1D(Ljava/lang/Enum;[II)V
+    :try_end_33
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_33 .. :try_end_33} :catch_33
+
+    .line 500
+    .line 501
+    .line 502
+    :catch_33
+    :try_start_34
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->AREngine_JSI_Hermes_VMExperimentFlags:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+
+    .line 503
+    .line 504
+    invoke-static {v0, v1, v2}, LX/432;->A1D(Ljava/lang/Enum;[II)V
+    :try_end_34
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_34 .. :try_end_34} :catch_34
+
+    .line 505
+    .line 506
+    .line 507
+    :catch_34
+    :try_start_35
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->SparkSL_Shader_Cache_Size:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+
+    .line 508
+    .line 509
+    invoke-static {v0, v1, v7}, LX/432;->A1D(Ljava/lang/Enum;[II)V
+    :try_end_35
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_35 .. :try_end_35} :catch_35
+
+    .line 510
+    .line 511
+    .line 512
+    :catch_35
+    :try_start_36
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->Jest_E2E_override_optimized_perf_logger_flag:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+
+    .line 513
+    .line 514
+    invoke-static {v0, v1, v6}, LX/432;->A1D(Ljava/lang/Enum;[II)V
+    :try_end_36
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_36 .. :try_end_36} :catch_36
+
+    .line 515
+    .line 516
+    .line 517
+    :catch_36
+    :try_start_37
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->ExpressionFitting_PytorchMaxThreadCount:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+
+    .line 518
+    .line 519
+    invoke-static {v0, v1, v5}, LX/432;->A1D(Ljava/lang/Enum;[II)V
+    :try_end_37
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_37 .. :try_end_37} :catch_37
+
+    .line 520
+    .line 521
+    .line 522
+    :catch_37
+    :try_start_38
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;->ExpressionFitting_HotfixIndex:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;
+
+    .line 523
+    .line 524
+    invoke-static {v0, v1, v4}, LX/432;->A1D(Ljava/lang/Enum;[II)V
+    :try_end_38
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_38 .. :try_end_38} :catch_38
+
+    .line 525
+    .line 526
+    .line 527
+    :catch_38
+    sput-object v1, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil$WhenMappings;->$EnumSwitchMapping$1:[I
+
+    .line 528
+    .line 529
+    invoke-static {}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;->values()[Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;
+
+    .line 530
+    .line 531
+    .line 532
+    move-result-object v0
+
+    .line 533
+    array-length v0, v0
+
+    .line 534
+    new-array v1, v0, [I
+
+    .line 535
+    .line 536
+    :try_start_39
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;->WorldTracker_ARCommerceEffectIds:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;
+
+    .line 537
+    .line 538
+    invoke-static {v0, v1, v3}, LX/432;->A1D(Ljava/lang/Enum;[II)V
+    :try_end_39
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_39 .. :try_end_39} :catch_39
+
+    .line 539
+    .line 540
+    .line 541
+    :catch_39
+    :try_start_3a
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;->AvatarsPerformanceTier:Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;
+
+    .line 542
+    .line 543
+    invoke-static {v0, v1, v2}, LX/432;->A1D(Ljava/lang/Enum;[II)V
+    :try_end_3a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3a .. :try_end_3a} :catch_3a
+
+    .line 544
+    .line 545
+    .line 546
+    :catch_3a
+    sput-object v1, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil$WhenMappings;->$EnumSwitchMapping$2:[I
+
+    .line 547
+    .line 548
     return-void
 .end method

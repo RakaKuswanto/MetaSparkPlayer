@@ -15,3 +15,63 @@
     .line 3
     return-void
 .end method
+
+
+# virtual methods
+.method public final bridge synthetic A09(LX/40d;LX/6Hz;Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    check-cast p3, Lcom/facebook/ipc/composer/model/ComposerShareableData;
+
+    .line 1
+    .line 2
+    invoke-virtual {p1}, LX/40d;->A0Q()V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p3, Lcom/facebook/ipc/composer/model/ComposerShareableData;->A00:Ljava/lang/String;
+
+    .line 6
+    .line 7
+    invoke-static {p1, v0}, LX/27L;->A0Q(LX/40d;Ljava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    iget-object v1, p3, Lcom/facebook/ipc/composer/model/ComposerShareableData;->A01:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    const-string/jumbo v0, "tracking_codes"
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-static {p1, v0, v1}, LX/27L;->A0S(LX/40d;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 16
+    .line 17
+    .line 18
+    iget-object v1, p3, Lcom/facebook/ipc/composer/model/ComposerShareableData;->A02:Ljava/lang/String;
+
+    .line 19
+    .line 20
+    const-string/jumbo v0, "type_name"
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-static {p1, v0, v1}, LX/27L;->A0S(LX/40d;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-virtual {p1}, LX/40d;->A0N()V
+
+    .line 27
+    .line 28
+    .line 29
+    return-void
+.end method

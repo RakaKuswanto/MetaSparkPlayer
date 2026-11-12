@@ -2,67 +2,156 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/1vr;
+
 
 # instance fields
-.field public final A00:Z
+.field public final A00:Ljava/lang/String;
 
-.field public final A01:LX/1Nw;
+.field public final A01:Ljava/lang/String;
 
-.field public final A02:LX/0ZF;
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string/jumbo v0, "facebook"
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/1qb;->A01:LX/1Nw;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
     .line 5
-    sget v0, LX/2eq;->A6O:I
-
     .line 6
+    iput-object p1, p0, LX/1qb;->A01:Ljava/lang/String;
+
     .line 7
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    .line 8
+    iput-object v0, p0, LX/1qb;->A02:Ljava/lang/String;
+
+    .line 9
+    .line 10
+    iput-object p2, p0, LX/1qb;->A00:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    return-void
+.end method
+
+
+# virtual methods
+.method public final clientDocIdForQuery(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v2, p0, LX/1qb;->A00:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    const/4 v1, 0x0
+
+    .line 7
+    if-eqz v2, :cond_0
 
     .line 8
     .line 9
-    .line 10
-    move-result-object v2
+    iget-object v0, p0, LX/1qb;->A01:Ljava/lang/String;
 
+    .line 10
     .line 11
-    check-cast v2, LX/0ZF;
+    invoke-static {v0, p1}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 12
     .line 13
-    iput-object v2, p0, LX/1qb;->A02:LX/0ZF;
-
     .line 14
+    move-result v0
+
     .line 15
-    const-wide v0, 0x41043500002c30L
+    if-eqz v0, :cond_0
 
     .line 16
     .line 17
-    .line 18
-    .line 19
-    .line 20
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    return-object v2
 
-    .line 21
-    .line 22
-    .line 23
+    .line 18
+    :cond_0
+    return-object v1
+.end method
+
+.method public final persistIdForQuery(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public final schemaForQuery(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v2, p0, LX/1qb;->A02:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    const/4 v1, 0x0
+
+    .line 7
+    if-eqz v2, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/1qb;->A01:Ljava/lang/String;
+
+    .line 10
+    .line 11
+    invoke-static {v0, p1}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 12
+    .line 13
+    .line 14
     move-result v0
 
-    .line 24
-    iput-boolean v0, p0, LX/1qb;->A00:Z
+    .line 15
+    if-eqz v0, :cond_0
 
-    .line 25
-    .line 26
-    return-void
+    .line 16
+    .line 17
+    return-object v2
+
+    .line 18
+    :cond_0
+    return-object v1
 .end method

@@ -1,20 +1,17 @@
-.class public final LX/3Ja;
+.class public interface abstract LX/3JA;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3in;
 
+# virtual methods
+.method public abstract APL(I)Z
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public abstract AWx(Ljava/lang/String;I)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract AXD(Ljava/lang/String;I)V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AaN(Ljava/lang/String;II)V
 .end method

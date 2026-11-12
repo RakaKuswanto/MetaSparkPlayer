@@ -26,7 +26,7 @@
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Yj;->A0X(I)Ljava/util/HashMap;
+    invoke-static {v0}, LX/0X7;->A0b(I)Ljava/util/HashMap;
 
     .line 6
     .line 7
@@ -104,7 +104,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {p1, v0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 3
     .line 4

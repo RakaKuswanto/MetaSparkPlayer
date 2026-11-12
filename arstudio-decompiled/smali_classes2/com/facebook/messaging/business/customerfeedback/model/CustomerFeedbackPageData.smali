@@ -15,7 +15,7 @@
 
 .field public final A01:Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackIndicatorData;
 
-.field public final A02:LX/1Tt;
+.field public final A02:LX/1pt;
 
 .field public final A03:Ljava/lang/String;
 
@@ -27,22 +27,21 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x3b
+    const/4 v0, 0x5
 
     .line 1
-    .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
+    .line 2
     .line 3
     .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
+    .line 5
     sput-object v0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackPageData;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 6
     .line 7
-    .line 8
     return-void
 .end method
 
@@ -75,11 +74,11 @@
     move-result-object v0
 
     .line 13
-    check-cast v0, LX/1Tt;
+    check-cast v0, LX/1pt;
 
     .line 14
     .line 15
-    iput-object v0, p0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackPageData;->A02:LX/1Tt;
+    iput-object v0, p0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackPageData;->A02:LX/1pt;
 
     .line 16
     .line 17
@@ -99,7 +98,7 @@
 
     .line 24
     .line 25
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 26
     .line 27
@@ -119,7 +118,7 @@
 
     .line 34
     .line 35
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 36
     .line 37
@@ -155,7 +154,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -169,7 +168,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackPageData;->A02:LX/1Tt;
+    iget-object v0, p0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackPageData;->A02:LX/1pt;
 
     .line 10
     .line 11

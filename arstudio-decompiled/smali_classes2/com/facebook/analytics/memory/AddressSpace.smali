@@ -64,7 +64,7 @@
 
     .line 18
     :cond_0
-    invoke-static {}, LX/0VB;->A09()Z
+    invoke-static {}, LX/0FZ;->A0B()Z
 
     .line 19
     .line 20
@@ -76,48 +76,49 @@
 
     .line 23
     .line 24
-    const-string v0, "addressspace"
+    const-string/jumbo v0, "addressspace"
 
     .line 25
     .line 26
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 27
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 28
     .line 29
+    .line 30
     const/4 v0, 0x1
 
-    .line 30
+    .line 31
     sput-boolean v0, Lcom/facebook/analytics/memory/AddressSpace;->sInitialized:Z
 
-    .line 31
     .line 32
+    .line 33
     invoke-static {}, Lcom/facebook/analytics/memory/AddressSpace;->nativeGetLargestAddressSpaceChunkKb()I
 
-    .line 33
     .line 34
     .line 35
+    .line 36
     move-result v0
 
-    .line 36
+    .line 37
     return v0
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 37
+    .line 38
     :catch_0
     move-exception v1
 
-    .line 38
+    .line 39
     const-string v0, "Error querying address space"
 
-    .line 39
     .line 40
-    invoke-static {v3, v0, v1}, LX/0Jt;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     .line 41
+    invoke-static {v3, v0, v1}, LX/0Il;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 42
     .line 43
+    .line 44
     :cond_1
     return v2
 .end method

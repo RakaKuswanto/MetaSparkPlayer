@@ -1,72 +1,62 @@
-.class public final LX/5PI;
+.class public final synthetic LX/5PI;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3aS;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AudioRendererEventListener$EventDispatcher$$ExternalSyntheticLambda6"
+
+
+# instance fields
+.field public final synthetic A00:LX/5P5;
+
+.field public final synthetic A01:LX/5Or;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(LX/5P5;LX/5Or;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p1, p0, LX/5PI;->A00:LX/5P5;
+
+    iput-object p2, p0, LX/5PI;->A01:LX/5Or;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final AJH(I)I
+.method public final run()V
     .locals 2
 
     .line 0
-    const/4 v0, 0x1
+    iget-object v0, p0, LX/5PI;->A00:LX/5P5;
 
     .line 1
-    if-eq p1, v0, :cond_1
-
     .line 2
-    .line 3
-    if-eqz p1, :cond_0
+    iget-object v1, p0, LX/5PI;->A01:LX/5Or;
 
+    .line 3
     .line 4
+    monitor-enter v1
+
     .line 5
-    if-eq p1, v0, :cond_2
+    monitor-exit v1
 
     .line 6
+    iget-object v0, v0, LX/5P5;->A01:LX/5PJ;
+
     .line 7
-    rem-int/lit8 v1, p1, 0x64
-
     .line 8
-    .line 9
-    if-lt v1, v0, :cond_2
+    invoke-interface {v0, v1}, LX/5PJ;->ATO(LX/5Or;)V
 
+    .line 9
     .line 10
     .line 11
-    const/16 v0, 0x13
-
-    .line 12
-    .line 13
-    if-gt v1, v0, :cond_2
-
-    .line 14
-    .line 15
-    :cond_0
-    const/4 v0, 0x3
-
-    .line 16
-    :cond_1
-    return v0
-
-    .line 17
-    :cond_2
-    const/4 v0, 0x5
-
-    .line 18
-    return v0
+    return-void
 .end method

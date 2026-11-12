@@ -1,33 +1,20 @@
-.class public final LX/3Lf;
+.class public interface abstract LX/3Lf;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/45P;
+# virtual methods
+.method public abstract A6I()Landroid/graphics/drawable/Drawable;
+.end method
 
+.method public abstract A8o(Landroid/graphics/Rect;Lcom/facebook/common/callercontext/ContextChain;LX/3Qt;LX/3Lh;LX/3TR;LX/3Py;LX/3Rl;LX/2Lx;Ljava/lang/Object;)Z
+.end method
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public abstract Agm(LX/3TR;)V
+.end method
 
-    .line 0
-    const-string v1, "fb_ad_custom_image"
+.method public abstract Agr(LX/3TR;)V
+.end method
 
-    .line 1
-    .line 2
-    new-instance v0, LX/45P;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/45P;-><init>(Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    sput-object v0, LX/3Lf;->A00:LX/45P;
-
-    .line 8
-    .line 9
-    return-void
+.method public abstract Agt(LX/3TR;)V
 .end method

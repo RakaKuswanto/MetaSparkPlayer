@@ -1,150 +1,68 @@
-.class public final LX/4lZ;
+.class public abstract LX/4Lz;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static A00(LX/012;LX/012;)Z
+    .locals 7
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x1
 
     .line 1
+    if-eq p0, p1, :cond_2
+
     .line 2
     .line 3
-    return-void
-.end method
+    invoke-virtual {p0}, LX/012;->size()I
 
-.method public static final A00(Ljava/lang/Object;)LX/4oR;
-    .locals 3
-
-    .line 0
-    if-eqz p0, :cond_1
-
-    .line 1
-    .line 2
-    instance-of v0, p0, LX/4oR;
-
-    .line 3
     .line 4
-    if-eqz v0, :cond_0
-
     .line 5
     .line 6
-    check-cast p0, LX/4oR;
+    move-result v5
 
     .line 7
+    invoke-virtual {p1}, LX/012;->size()I
+
     .line 8
-    return-object p0
-
     .line 9
-    :cond_0
-    const-string v2, "RenderTreeNode layout data for Litho should be LithoLayoutData but was <cls>"
-
     .line 10
+    move-result v0
+
     .line 11
-    invoke-static {p0}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v4, 0x0
 
     .line 12
+    if-ne v5, v0, :cond_1
+
     .line 13
     .line 14
-    move-result-object v1
+    const/4 v3, 0x0
 
     .line 15
-    const-string v0, "</cls>"
+    :goto_0
+    if-ge v3, v5, :cond_2
 
     .line 16
     .line 17
-    invoke-static {v2, v1, v0}, LX/4BD;->A0e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-virtual {p0, v3}, LX/012;->A04(I)Ljava/lang/Object;
 
     .line 18
     .line 19
     .line 20
-    move-result-object v0
+    move-result-object v2
 
     .line 21
-    throw v0
+    invoke-virtual {p0, v3}, LX/012;->A06(I)Ljava/lang/Object;
 
     .line 22
-    :cond_1
-    const-string v0, "layout data must not be null."
-
     .line 23
     .line 24
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    throw v0
-.end method
-
-
-# virtual methods
-.method public final A01(Ljava/lang/Object;)LX/3iC;
-    .locals 3
-
-    .line 0
-    invoke-static {p1}, LX/4lZ;->A00(Ljava/lang/Object;)LX/4oR;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    iget-object v1, v0, LX/4oR;->A05:Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    if-nez v1, :cond_0
-
-    .line 7
-    .line 8
-    const/4 v1, 0x0
-
-    .line 9
-    return-object v1
-
-    .line 10
-    :cond_0
-    instance-of v0, v1, LX/3iC;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    check-cast v1, LX/3iC;
-
-    .line 15
-    .line 16
-    return-object v1
-
-    .line 17
-    :cond_1
-    const-string v2, "Layout data was not InterStagePropsContainer but was <cls>"
-
-    .line 18
-    .line 19
-    invoke-static {v1}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 20
-    .line 21
-    .line 22
     move-result-object v1
 
-    .line 23
-    const-string v0, "</cls>"
-
-    .line 24
     .line 25
-    invoke-static {v2, v1, v0}, LX/4BD;->A0e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-virtual {p1, v2}, LX/012;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 26
     .line 27
@@ -152,5 +70,50 @@
     move-result-object v0
 
     .line 29
-    throw v0
+    if-nez v1, :cond_0
+
+    .line 30
+    .line 31
+    if-nez v0, :cond_1
+
+    .line 32
+    .line 33
+    invoke-virtual {p1, v2}, LX/012;->containsKey(Ljava/lang/Object;)Z
+
+    .line 34
+    .line 35
+    .line 36
+    move-result v0
+
+    .line 37
+    :goto_1
+    if-eqz v0, :cond_1
+
+    .line 38
+    .line 39
+    add-int/lit8 v3, v3, 0x1
+
+    .line 40
+    .line 41
+    goto :goto_0
+
+    .line 42
+    :cond_0
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 43
+    .line 44
+    .line 45
+    move-result v0
+
+    .line 46
+    goto :goto_1
+
+    .line 47
+    :cond_1
+    return v4
+
+    .line 48
+    :cond_2
+    return v6
 .end method

@@ -48,16 +48,16 @@
 
     .line 3
     :try_start_0
-    new-instance v4, LX/55R;
+    new-instance v4, LX/4xa;
 
     .line 4
     .line 5
-    invoke-direct {v4, p1, p2}, LX/55R;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, p1, p2}, LX/4xa;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     .line 7
     .line 8
-    invoke-static {v4}, Lcom/google/vr/dynamite/client/DynamiteClient;->getRemoteLibraryLoaderFromInfo(LX/55R;)LX/55N;
+    invoke-static {v4}, Lcom/google/vr/dynamite/client/DynamiteClient;->getRemoteLibraryLoaderFromInfo(LX/4xa;)LX/4xY;
 
     .line 9
     .line 10
@@ -71,7 +71,7 @@
 
     .line 13
     :try_start_1
-    invoke-virtual {v1, p0}, LX/55N;->A00(Landroid/content/Context;)Landroid/content/Context;
+    invoke-virtual {v1, p0}, LX/4xY;->A00(Landroid/content/Context;)Landroid/content/Context;
 
     .line 14
     .line 15
@@ -79,7 +79,7 @@
     move-result-object v0
 
     .line 17
-    invoke-virtual {v1, p0}, LX/55N;->A01(Landroid/content/Context;)Lcom/google/vr/dynamite/client/ILoadedInstanceCreator;
+    invoke-virtual {v1, p0}, LX/4xY;->A01(Landroid/content/Context;)Lcom/google/vr/dynamite/client/ILoadedInstanceCreator;
 
     .line 18
     .line 19
@@ -129,69 +129,39 @@
     move-result-object v2
 
     .line 43
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    const-string v1, "Failed to load native library "
 
     .line 44
     .line 45
-    .line 46
-    move-result v0
+    const-string v0, " from remote package: no loader available."
 
+    .line 46
     .line 47
-    add-int/lit8 v0, v0, 0x48
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 48
     .line 49
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
     .line 50
+    move-result-object v0
+
     .line 51
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 52
-    move-result-object v1
-
     .line 53
-    const-string v0, "Failed to load native library "
-
     .line 54
+    goto :goto_0
+
     .line 55
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-interface {v0, p3}, Lcom/google/vr/dynamite/client/INativeLibraryLoader;->checkVersion(Ljava/lang/String;)I
 
     .line 56
     .line 57
     .line 58
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 59
-    .line 60
-    .line 61
-    const-string v0, " from remote package: no loader available."
-
-    .line 62
-    .line 63
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 64
-    .line 65
-    .line 66
-    move-result-object v0
-
-    .line 67
-    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 68
-    .line 69
-    .line 70
-    goto :goto_0
-
-    .line 71
-    :cond_0
-    invoke-interface {v0, p3}, Lcom/google/vr/dynamite/client/INativeLibraryLoader;->checkVersion(Ljava/lang/String;)I
-
-    .line 72
-    .line 73
-    .line 74
     move-result v0
     :try_end_1
-    .catch LX/55Q; {:try_start_1 .. :try_end_1} :catch_0
+    .catch LX/4xb; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
@@ -199,71 +169,67 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 75
+    .line 59
     monitor-exit v6
 
-    .line 76
+    .line 60
     return v0
 
-    .line 77
+    .line 61
     :catch_0
     move-exception v3
 
-    .line 78
+    .line 62
     :try_start_2
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 79
-    .line 80
-    .line 81
+    .line 63
+    .line 64
+    .line 65
     move-result-object v2
 
-    .line 82
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    .line 66
+    const-string v1, "Failed to load native library "
 
-    .line 83
-    .line 84
-    .line 85
-    move-result v0
+    .line 67
+    .line 68
+    const-string v0, " from remote package:\n  "
 
-    .line 86
-    add-int/lit8 v0, v0, 0x36
+    .line 69
+    .line 70
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 87
-    .line 88
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
-    .line 89
-    .line 90
-    .line 91
+    .line 71
+    .line 72
+    .line 73
     move-result-object v1
 
-    .line 92
-    const-string v0, "Failed to load native library "
+    .line 74
+    const-string v0, "DynamiteClient"
 
-    .line 93
-    .line 94
-    invoke-static {v0, v2, v1, v3}, LX/4BE;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/lang/Throwable;)V
+    .line 75
+    .line 76
+    invoke-static {v0, v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 95
-    .line 96
-    .line 97
+    .line 77
+    .line 78
+    .line 79
     :goto_0
     monitor-exit v6
 
-    .line 98
+    .line 80
     return v5
 
-    .line 99
+    .line 81
     :catchall_0
     move-exception v0
 
-    .line 100
+    .line 82
     monitor-exit v6
 
-    .line 101
+    .line 83
     throw v0
 .end method
 
@@ -341,16 +307,16 @@
 
     .line 3
     :try_start_0
-    new-instance v1, LX/55R;
+    new-instance v1, LX/4xa;
 
     .line 4
     .line 5
-    invoke-direct {v1, p1, p2}, LX/55R;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p1, p2}, LX/4xa;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     .line 7
     .line 8
-    invoke-static {v1}, Lcom/google/vr/dynamite/client/DynamiteClient;->getRemoteLibraryLoaderFromInfo(LX/55R;)LX/55N;
+    invoke-static {v1}, Lcom/google/vr/dynamite/client/DynamiteClient;->getRemoteLibraryLoaderFromInfo(LX/4xa;)LX/4xY;
 
     .line 9
     .line 10
@@ -361,7 +327,7 @@
 
     .line 12
     :try_start_1
-    invoke-virtual {v0, p0}, LX/55N;->A00(Landroid/content/Context;)Landroid/content/Context;
+    invoke-virtual {v0, p0}, LX/4xY;->A00(Landroid/content/Context;)Landroid/content/Context;
 
     .line 13
     .line 14
@@ -371,7 +337,7 @@
     .line 16
     goto :goto_0
     :try_end_1
-    .catch LX/55Q; {:try_start_1 .. :try_end_1} :catch_0
+    .catch LX/4xb; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 17
@@ -388,54 +354,50 @@
     move-result-object v2
 
     .line 22
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    const-string v1, "Failed to get remote Context"
 
     .line 23
     .line 24
-    .line 25
-    move-result v0
+    const-string v0, " from remote package:\n  "
 
+    .line 25
     .line 26
-    add-int/lit8 v0, v0, 0x34
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
     .line 29
-    .line 30
-    .line 31
     move-result-object v1
 
+    .line 30
+    const-string v0, "DynamiteClient"
+
+    .line 31
     .line 32
-    const-string v0, "Failed to get remote Context"
+    invoke-static {v0, v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 33
     .line 34
-    invoke-static {v0, v2, v1, v3}, LX/4BE;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/lang/Throwable;)V
-
     .line 35
-    .line 36
-    .line 37
     const/4 v0, 0x0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 38
+    .line 36
     :goto_0
     monitor-exit v4
 
-    .line 39
+    .line 37
     return-object v0
 
-    .line 40
+    .line 38
     :catchall_0
     move-exception v0
 
-    .line 41
+    .line 39
     monitor-exit v4
 
-    .line 42
+    .line 40
     throw v0
 .end method
 
@@ -577,7 +539,7 @@
     throw v0
 .end method
 
-.method public static declared-synchronized getRemoteLibraryLoaderFromInfo(LX/55R;)LX/55N;
+.method public static declared-synchronized getRemoteLibraryLoaderFromInfo(LX/4xa;)LX/4xY;
     .locals 3
 
     .line 0
@@ -601,7 +563,7 @@
     move-result-object v0
 
     .line 9
-    check-cast v0, LX/55N;
+    check-cast v0, LX/4xY;
 
     .line 10
     .line 11
@@ -609,11 +571,11 @@
 
     .line 12
     .line 13
-    new-instance v0, LX/55N;
+    new-instance v0, LX/4xY;
 
     .line 14
     .line 15
-    invoke-direct {v0, p0}, LX/55N;-><init>(LX/55R;)V
+    invoke-direct {v0, p0}, LX/4xY;-><init>(LX/4xa;)V
 
     .line 16
     .line 17
@@ -654,16 +616,16 @@
 
     .line 3
     :try_start_0
-    new-instance v4, LX/55R;
+    new-instance v4, LX/4xa;
 
     .line 4
     .line 5
-    invoke-direct {v4, p1, p2}, LX/55R;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, p1, p2}, LX/4xa;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     .line 7
     .line 8
-    invoke-static {v4}, Lcom/google/vr/dynamite/client/DynamiteClient;->getRemoteLibraryLoaderFromInfo(LX/55R;)LX/55N;
+    invoke-static {v4}, Lcom/google/vr/dynamite/client/DynamiteClient;->getRemoteLibraryLoaderFromInfo(LX/4xa;)LX/4xY;
 
     .line 9
     .line 10
@@ -678,7 +640,7 @@
     .line 13
     .line 14
     :try_start_1
-    invoke-virtual {v1, p0}, LX/55N;->A00(Landroid/content/Context;)Landroid/content/Context;
+    invoke-virtual {v1, p0}, LX/4xY;->A00(Landroid/content/Context;)Landroid/content/Context;
 
     .line 15
     .line 16
@@ -686,7 +648,7 @@
     move-result-object v0
 
     .line 18
-    invoke-virtual {v1, p0}, LX/55N;->A01(Landroid/content/Context;)Lcom/google/vr/dynamite/client/ILoadedInstanceCreator;
+    invoke-virtual {v1, p0}, LX/4xY;->A01(Landroid/content/Context;)Lcom/google/vr/dynamite/client/ILoadedInstanceCreator;
 
     .line 19
     .line 20
@@ -736,69 +698,39 @@
     move-result-object v2
 
     .line 44
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    const-string v1, "Failed to load native library "
 
     .line 45
     .line 46
-    .line 47
-    move-result v0
+    const-string v0, " from remote package: no loader available."
 
+    .line 47
     .line 48
-    add-int/lit8 v0, v0, 0x48
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 49
     .line 50
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
     .line 51
+    move-result-object v0
+
     .line 52
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 53
-    move-result-object v1
-
     .line 54
-    const-string v0, "Failed to load native library "
-
     .line 55
+    goto :goto_0
+
     .line 56
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-interface {v0, p2}, Lcom/google/vr/dynamite/client/INativeLibraryLoader;->initializeAndLoadNativeLibrary(Ljava/lang/String;)J
 
     .line 57
     .line 58
     .line 59
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 60
-    .line 61
-    .line 62
-    const-string v0, " from remote package: no loader available."
-
-    .line 63
-    .line 64
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 65
-    .line 66
-    .line 67
-    move-result-object v0
-
-    .line 68
-    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 69
-    .line 70
-    .line 71
-    goto :goto_0
-
-    .line 72
-    :cond_0
-    invoke-interface {v0, p2}, Lcom/google/vr/dynamite/client/INativeLibraryLoader;->initializeAndLoadNativeLibrary(Ljava/lang/String;)J
-
-    .line 73
-    .line 74
-    .line 75
     move-result-wide v0
     :try_end_1
-    .catch LX/55Q; {:try_start_1 .. :try_end_1} :catch_0
+    .catch LX/4xb; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
@@ -806,70 +738,66 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 76
+    .line 60
     monitor-exit v7
 
-    .line 77
+    .line 61
     return-wide v0
 
-    .line 78
+    .line 62
     :catch_0
     move-exception v3
 
-    .line 79
+    .line 63
     :try_start_2
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 80
-    .line 81
-    .line 82
+    .line 64
+    .line 65
+    .line 66
     move-result-object v2
 
-    .line 83
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    .line 67
+    const-string v1, "Failed to load native library "
 
-    .line 84
-    .line 85
-    .line 86
-    move-result v0
+    .line 68
+    .line 69
+    const-string v0, " from remote package:\n  "
 
-    .line 87
-    add-int/lit8 v0, v0, 0x36
+    .line 70
+    .line 71
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 88
-    .line 89
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
-    .line 90
-    .line 91
-    .line 92
+    .line 72
+    .line 73
+    .line 74
     move-result-object v1
 
-    .line 93
-    const-string v0, "Failed to load native library "
+    .line 75
+    const-string v0, "DynamiteClient"
 
-    .line 94
-    .line 95
-    invoke-static {v0, v2, v1, v3}, LX/4BE;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/lang/Throwable;)V
+    .line 76
+    .line 77
+    invoke-static {v0, v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 96
-    .line 97
-    .line 98
+    .line 78
+    .line 79
+    .line 80
     :goto_0
     monitor-exit v7
 
-    .line 99
+    .line 81
     return-wide v5
 
-    .line 100
+    .line 82
     :catchall_0
     move-exception v0
 
-    .line 101
+    .line 83
     monitor-exit v7
 
-    .line 102
+    .line 84
     throw v0
 .end method

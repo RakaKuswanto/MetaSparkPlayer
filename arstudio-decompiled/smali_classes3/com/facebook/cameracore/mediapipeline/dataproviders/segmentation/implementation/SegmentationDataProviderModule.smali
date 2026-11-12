@@ -12,7 +12,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public createConfiguration(LX/5UZ;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
+.method public createConfiguration(LX/61H;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
     .locals 2
 
     .line 0
@@ -57,7 +57,7 @@
 
     .line 1
     .line 2
-    iget-object v1, p1, LX/5UZ;->A00:Ljava/util/Map;
+    iget-object v1, p1, LX/61H;->A00:Ljava/util/Map;
 
     .line 3
     .line 4
@@ -81,7 +81,7 @@
     move-result-object v1
 
     .line 14
-    sget-object v0, LX/5Tk;->PersonSegmentationDataProvider:LX/5Tk;
+    sget-object v0, LX/63t;->PersonSegmentationDataProvider:LX/63t;
 
     .line 15
     .line 16
@@ -98,11 +98,11 @@
     .line 21
     .line 22
     :cond_0
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->PERSON_SEGMENTATION_SERVICE_TYPE_KEY:LX/5TT;
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->PERSON_SEGMENTATION_SERVICE_TYPE_KEY:LX/67w;
 
     .line 23
     .line 24
-    iget-object v0, p1, LX/5UZ;->A08:Ljava/util/HashMap;
+    iget-object v0, p1, LX/61H;->A08:Ljava/util/HashMap;
 
     .line 25
     .line 26
@@ -118,7 +118,7 @@
 
     .line 31
     .line 32
-    invoke-virtual {p1, v1}, LX/5UZ;->A00(LX/5TT;)LX/5Vj;
+    invoke-virtual {p1, v1}, LX/61H;->A00(LX/67w;)LX/68F;
 
     .line 33
     .line 34

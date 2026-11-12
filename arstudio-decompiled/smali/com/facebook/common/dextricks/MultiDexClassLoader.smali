@@ -26,9 +26,9 @@
 
 .field public static final USE_FANCY_LOADER:Z = true
 
-.field public static volatile sFallbackDexLoader:LX/0GP;
+.field public static volatile sFallbackDexLoader:LX/0FX;
 
-.field public static sFancyLoaderFailure:Ljava/lang/Throwable;
+.field public static sHadFancyLoaderFailure:Z
 
 .field public static volatile sInstalledClassLoader:Ljava/lang/ClassLoader;
 
@@ -36,7 +36,7 @@
 # instance fields
 .field public dexFileAccessListener:Lcom/facebook/common/dextricks/DexFileAccessListener;
 
-.field public mConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+.field public mConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
 .field public final mPutativeLoader:Ljava/lang/ClassLoader;
 
@@ -48,7 +48,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -130,7 +130,7 @@
     move-exception v0
 
     .line 38
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 39
     .line 40
@@ -221,22 +221,8 @@
     return v0
 .end method
 
-.method public static clearFancyLoaderFailure()V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    sput-object v0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sFancyLoaderFailure:Ljava/lang/Throwable;
-
-    .line 2
-    .line 3
-    return-void
-.end method
-
 .method public static createMultiDexClassLoader(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/lang/ClassLoader;
-    .locals 6
+    .locals 3
 
     .line 0
     const-string v0, "com.facebook.force_mdclj"
@@ -248,14 +234,14 @@
     .line 3
     .line 4
     .line 5
-    move-result-object v0
+    move-result-object v1
 
     .line 6
-    const-string v2, "true"
+    const-string v0, "true"
 
     .line 7
     .line 8
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 9
     .line 10
@@ -263,179 +249,155 @@
     move-result v0
 
     .line 12
-    move-object v3, p0
+    if-nez v0, :cond_1
 
     .line 13
-    move-object v5, p1
-
     .line 14
-    move-object p0, p2
-
-    .line 15
-    if-nez v0, :cond_1
-
-    .line 16
-    .line 17
     sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    .line 18
-    .line 19
+    .line 15
+    .line 16
     const-string v0, "Amazon"
 
-    .line 20
-    .line 21
+    .line 17
+    .line 18
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 22
-    .line 23
-    .line 24
+    .line 19
+    .line 20
+    .line 21
     move-result v0
 
-    .line 25
+    .line 22
     if-nez v0, :cond_1
 
-    .line 26
-    .line 27
+    .line 23
+    .line 24
     :try_start_0
-    sget-boolean v0, LX/0Hl;->A00:Z
+    sget-boolean v0, LX/0H5;->A00:Z
 
-    .line 28
-    .line 29
+    .line 25
+    .line 26
     if-eqz v0, :cond_0
 
-    .line 30
-    .line 31
+    .line 27
+    .line 28
     invoke-static {}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->isNativeHookUseable()Z
 
-    .line 32
-    .line 33
-    .line 34
+    .line 29
+    .line 30
+    .line 31
     move-result v0
 
-    .line 35
+    .line 32
     if-eqz v0, :cond_0
 
+    .line 33
+    .line 34
+    invoke-static {}, LX/0Hq;->A00()LX/0Hq;
+
+    .line 35
     .line 36
     .line 37
-    invoke-static {}, LX/0Ix;->A00()LX/0Ix;
-
-    .line 38
-    .line 39
-    .line 40
     move-result-object v0
 
-    .line 41
-    invoke-virtual {v0}, LX/0Ix;->A03()Z
+    .line 38
+    invoke-virtual {v0}, LX/0Hq;->A03()Z
 
-    .line 42
-    .line 43
-    .line 44
+    .line 39
+    .line 40
+    .line 41
     move-result v0
 
-    .line 45
+    .line 42
     if-eqz v0, :cond_1
 
-    .line 46
-    .line 47
+    .line 43
+    .line 44
     const-string v0, "com.facebook.force_mdclan"
 
+    .line 45
+    .line 46
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 47
     .line 48
     .line 49
-    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v0, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;
 
     .line 50
     .line 51
+    invoke-direct {v0, p0, p1, p2}, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+
     .line 52
-    move-result-object v0
-
     .line 53
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 54
+    return-object v0
+
     .line 55
-    .line 56
-    move-result p2
-
-    .line 57
-    sget-object v4, Lcom/facebook/common/dextricks/MultiDexClassLoader;->SYSTEM_CLASSLOADER:Ljava/lang/ClassLoader;
-
-    .line 58
-    .line 59
-    const/4 p1, 0x1
-
-    .line 60
-    new-instance v2, Lcom/facebook/common/dextricks/MultiDexClassLoaderArtNative;
-
-    .line 61
-    .line 62
-    invoke-direct/range {v2 .. v8}, Lcom/facebook/common/dextricks/MultiDexClassLoaderArtNative;-><init>(Landroid/content/Context;Ljava/lang/ClassLoader;Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
-
-    .line 63
-    .line 64
-    .line 65
-    return-object v2
-
-    .line 66
     :cond_0
     invoke-static {}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->isNativeHookUseable()Z
 
-    .line 67
-    .line 68
-    .line 69
+    .line 56
+    .line 57
+    .line 58
     move-result v0
 
-    .line 70
+    .line 59
     if-eqz v0, :cond_1
 
-    .line 71
-    .line 72
-    new-instance v2, Lcom/facebook/common/dextricks/MultiDexClassLoaderDalvikNative;
+    .line 60
+    .line 61
+    new-instance v0, Lcom/facebook/common/dextricks/MultiDexClassLoaderDalvikNative;
 
-    .line 73
-    .line 74
-    invoke-direct {v2, v3, p1, p2}, Lcom/facebook/common/dextricks/MultiDexClassLoaderDalvikNative;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .line 62
+    .line 63
+    invoke-direct {v0, p0, p1, p2}, Lcom/facebook/common/dextricks/MultiDexClassLoaderDalvikNative;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 75
-    .line 76
-    .line 77
-    return-object v2
+    .line 64
+    .line 65
+    .line 66
+    return-object v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 78
+    .line 67
     :catch_0
     move-exception v2
 
-    .line 79
+    .line 68
     const-string v1, "MultiDexClassLoader"
 
-    .line 80
-    .line 81
+    .line 69
+    .line 70
     const-string v0, "unable to use native MDCL: falling back to Java impl"
 
-    .line 82
-    .line 83
+    .line 71
+    .line 72
     invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 84
-    .line 85
-    .line 86
-    sput-object v2, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sFancyLoaderFailure:Ljava/lang/Throwable;
+    .line 73
+    .line 74
+    .line 75
+    const/4 v0, 0x1
 
-    .line 87
-    .line 88
+    .line 76
+    sput-boolean v0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sHadFancyLoaderFailure:Z
+
+    .line 77
+    .line 78
     :cond_1
-    new-instance v2, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;
+    new-instance v0, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;
 
-    .line 89
-    .line 90
-    invoke-direct {v2, v3, v5, p0}, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .line 79
+    .line 80
+    invoke-direct {v0, p0, p1, p2}, Lcom/facebook/common/dextricks/MultiDexClassLoaderJava;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 91
-    .line 92
-    .line 93
-    return-object v2
+    .line 81
+    .line 82
+    .line 83
+    return-object v0
 .end method
 
 .method public static forceLoadProfiloIfPresent()V
@@ -469,7 +431,7 @@
     return-object v0
 .end method
 
-.method public static getConfiguration()Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+.method public static getConfiguration()Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
     .locals 2
 
     .line 0
@@ -496,7 +458,7 @@
 
     .line 9
     .line 10
-    iget-object v0, v1, Lcom/facebook/common/dextricks/MultiDexClassLoader;->mConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    iget-object v0, v1, Lcom/facebook/common/dextricks/MultiDexClassLoader;->mConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 11
     .line 12
@@ -545,19 +507,30 @@
     return-object v0
 .end method
 
-.method public static getFancyLoaderFailure()Ljava/lang/Throwable;
+.method public static getSysClassloader()Ljava/lang/ClassLoader;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sFancyLoaderFailure:Ljava/lang/Throwable;
+    sget-object v0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->SYSTEM_CLASSLOADER:Ljava/lang/ClassLoader;
 
     .line 1
     .line 2
     return-object v0
 .end method
 
+.method public static hadFancyLoaderFailure()Z
+    .locals 1
+
+    .line 0
+    sget-boolean v0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sHadFancyLoaderFailure:Z
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
 .method public static install(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/lang/ClassLoader;
-    .locals 6
+    .locals 5
 
     .line 0
     sget-object v2, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sInstalledClassLoader:Ljava/lang/ClassLoader;
@@ -568,11 +541,11 @@
 
     .line 3
     .line 4
-    sget-object v5, Lcom/facebook/common/dextricks/MultiDexClassLoader;->INSTALL_LOCK:Ljava/lang/Object;
+    sget-object v4, Lcom/facebook/common/dextricks/MultiDexClassLoader;->INSTALL_LOCK:Ljava/lang/Object;
 
     .line 5
     .line 6
-    monitor-enter v5
+    monitor-enter v4
 
     .line 7
     :try_start_0
@@ -704,172 +677,167 @@
     .line 72
     .line 73
     .line 74
-    sget-object v4, LX/0Ko;->A00:Lcom/facebook/acra/ErrorReporter$2;
+    sget-object v3, LX/0Jg;->A00:Lcom/facebook/acra/ErrorReporter$2;
 
     .line 75
     .line 76
-    if-eqz v4, :cond_0
+    if-eqz v3, :cond_0
 
     .line 77
     .line 78
-    const-string v3, "recentClassLoadFailures"
+    const-string v2, "recentClassLoadFailures"
 
     .line 79
     .line 80
-    const/4 v2, -0x2
+    const/4 v1, -0x2
 
     .line 81
     const/4 v0, 0x1
 
     .line 82
-    new-instance v1, LX/04m;
+    invoke-static {v2, v1, v0}, LX/001;->A05(Ljava/lang/String;IZ)LX/065;
 
     .line 83
     .line 84
-    invoke-direct {v1, v3, v2, v0}, LX/04m;-><init>(Ljava/lang/String;IZ)V
-
     .line 85
+    move-result-object v1
+
     .line 86
-    .line 87
     new-instance v0, Lcom/facebook/common/dextricks/MultiDexClassLoader$1;
 
+    .line 87
     .line 88
-    .line 89
     invoke-direct {v0}, Lcom/facebook/common/dextricks/MultiDexClassLoader$1;-><init>()V
 
+    .line 89
     .line 90
     .line 91
-    .line 92
-    invoke-virtual {v4, v1, v0}, Lcom/facebook/acra/ErrorReporter$2;->putLazyCustomData(LX/0L8;LX/0Gd;)V
+    invoke-virtual {v3, v1, v0}, Lcom/facebook/acra/ErrorReporter$2;->putLazyCustomData(LX/0K4;LX/0VC;)V
 
+    .line 92
     .line 93
     .line 94
-    .line 95
-    sget-object v1, LX/0LF;->A74:LX/04m;
+    sget-object v1, LX/0KB;->A7P:LX/065;
 
+    .line 95
     .line 96
-    .line 97
     new-instance v0, Lcom/facebook/common/dextricks/MultiDexClassLoader$2;
 
+    .line 97
     .line 98
-    .line 99
     invoke-direct {v0}, Lcom/facebook/common/dextricks/MultiDexClassLoader$2;-><init>()V
 
+    .line 99
     .line 100
     .line 101
-    .line 102
-    invoke-virtual {v4, v1, v0}, Lcom/facebook/acra/ErrorReporter$2;->putLazyCustomData(LX/0L8;LX/0Gd;)V
+    invoke-virtual {v3, v1, v0}, Lcom/facebook/acra/ErrorReporter$2;->putLazyCustomData(LX/0K4;LX/0VC;)V
 
+    .line 102
     .line 103
     .line 104
-    .line 105
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->createMultiDexClassLoader(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/lang/ClassLoader;
 
+    .line 105
     .line 106
     .line 107
-    .line 108
     move-result-object v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 109
+    .line 108
     :try_start_3
     instance-of v0, v2, Lcom/facebook/common/dextricks/MultiDexClassLoader;
 
+    .line 109
     .line 110
-    .line 111
     if-eqz v0, :cond_1
 
+    .line 111
     .line 112
-    .line 113
     sget-object v1, Lcom/facebook/common/dextricks/MultiDexClassLoader;->CLASSLOADER_PARENT_FIELD:Ljava/lang/reflect/Field;
 
+    .line 113
     .line 114
-    .line 115
     move-object v0, v2
 
-    .line 116
+    .line 115
     check-cast v0, Lcom/facebook/common/dextricks/MultiDexClassLoader;
 
+    .line 116
     .line 117
-    .line 118
     iget-object v0, v0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->mPutativeLoader:Ljava/lang/ClassLoader;
 
+    .line 118
     .line 119
-    .line 120
     invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 120
     .line 121
     .line 122
-    .line 123
     :cond_1
     sput-object v2, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sInstalledClassLoader:Ljava/lang/ClassLoader;
 
+    .line 123
     .line 124
-    .line 125
-    goto :goto_2
+    goto :goto_1
     :try_end_3
     .catch Ljava/lang/IllegalAccessException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 126
+    .line 125
     :catch_0
     move-exception v0
 
-    .line 127
-    goto :goto_0
-
-    .line 128
-    :catch_1
+    .line 126
     :try_start_4
-    move-exception v0
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
+    .line 127
+    .line 128
     .line 129
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    move-result-object v0
 
     .line 130
+    goto :goto_0
+
     .line 131
+    :catch_1
+    move-exception v0
+
     .line 132
-    move-result-object v0
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 133
-    goto :goto_1
-
     .line 134
-    :goto_0
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
     .line 135
-    .line 136
-    .line 137
     move-result-object v0
 
-    .line 138
-    :goto_1
+    .line 136
+    :goto_0
     throw v0
 
-    .line 139
+    .line 137
     :cond_2
-    :goto_2
-    monitor-exit v5
+    :goto_1
+    monitor-exit v4
 
-    .line 140
+    .line 138
     return-object v2
 
-    .line 141
+    .line 139
     :catchall_0
     move-exception v0
 
-    .line 142
-    monitor-exit v5
+    .line 140
+    monitor-exit v4
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 143
+    .line 141
     throw v0
 
-    .line 144
+    .line 142
     :cond_3
     return-object v2
 .end method
@@ -936,11 +904,11 @@
     return p0
 .end method
 
-.method public static setFallbackDexLoader(LX/0GP;)V
+.method public static setFallbackDexLoader(LX/0FX;)V
     .locals 0
 
     .line 0
-    sput-object p0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sFallbackDexLoader:LX/0GP;
+    sput-object p0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->sFallbackDexLoader:LX/0FX;
 
     .line 1
     .line 2
@@ -949,18 +917,10 @@
 
 
 # virtual methods
-.method public configure(Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->mConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
-
-    .line 1
-    .line 2
-    return-void
+.method public abstract configure(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
 .end method
 
-.method public configureArtHacks(Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+.method public configureArtHacks(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
     .locals 2
 
     .line 0
@@ -976,7 +936,7 @@
 
     .line 5
     .line 6
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->disableVerifier:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->disableVerifier:Z
 
     .line 7
     .line 8
@@ -1003,11 +963,11 @@
 .method public abstract doGetConfiguredDexFiles()[Ldalvik/system/DexFile;
 .end method
 
-.method public getConfig()Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+.method public getConfig()Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->mConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    iget-object v0, p0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->mConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 1
     .line 2
@@ -1070,7 +1030,7 @@
 
     .line 15
     .line 16
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 17
     .line 18
@@ -1078,7 +1038,7 @@
     move-result-object v0
 
     .line 20
-    invoke-static {p1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 21
     .line 22

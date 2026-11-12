@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public mFbBitmapUtil:LX/3Dm;
+.field public mFbBitmapUtil:LX/2yI;
 
-.field public mPostCaptureHelperProvider:LX/2vp;
+.field public mPostCaptureHelperProvider:LX/3GS;
 
-.field public mPreviewView:LX/6OU;
+.field public mPreviewView:LX/3tp;
 
 
 # direct methods
@@ -26,11 +26,11 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Landroid/graphics/Bitmap;)LX/41z;
+.method public static synthetic access$000(Landroid/graphics/Bitmap;)LX/3Nf;
     .locals 0
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->createClosable(Landroid/graphics/Bitmap;)LX/41z;
+    invoke-static {p0}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->createClosable(Landroid/graphics/Bitmap;)LX/3Nf;
 
     .line 1
     .line 2
@@ -41,27 +41,27 @@
     return-object p0
 .end method
 
-.method public static createClosable(Landroid/graphics/Bitmap;)LX/41z;
+.method public static createClosable(Landroid/graphics/Bitmap;)LX/3Nf;
     .locals 2
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    new-instance v1, LX/1Sr;
+    new-instance v1, LX/0XZ;
 
     .line 2
     .line 3
-    invoke-direct {v1, v0}, LX/1Sr;-><init>(I)V
+    invoke-direct {v1, v0}, LX/0XZ;-><init>(I)V
 
     .line 4
     .line 5
     .line 6
-    sget-object v0, LX/41z;->A05:LX/44U;
+    sget-object v0, LX/3Nf;->A05:LX/3Pj;
 
     .line 7
     .line 8
-    invoke-static {v0, v1, p0}, LX/41z;->A01(LX/44U;LX/2rM;Ljava/lang/Object;)LX/41z;
+    invoke-static {v0, v1, p0}, LX/3Nf;->A00(LX/3Pj;LX/3Qa;Ljava/lang/Object;)LX/3Nf;
 
     .line 9
     .line 10
@@ -74,11 +74,11 @@
 
 
 # virtual methods
-.method public bridge synthetic createLitePostCaptureCoordinatorHelper()LX/3qd;
+.method public bridge synthetic createLitePostCaptureCoordinatorHelper()LX/3rw;
     .locals 1
 
     .line 268435456
-    invoke-virtual {p0}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->createLitePostCaptureCoordinatorHelper()LX/5d4;
+    invoke-virtual {p0}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->createLitePostCaptureCoordinatorHelper()LX/606;
 
     .line 268435457
     .line 268435458
@@ -89,11 +89,11 @@
     return-object v0
 .end method
 
-.method public createLitePostCaptureCoordinatorHelper()LX/5d4;
+.method public createLitePostCaptureCoordinatorHelper()LX/606;
     .locals 3
 
     .line 0
-    sget v2, LX/2eq;->AhB:I
+    sget v2, LX/2I6;->AYv:I
 
     .line 1
     .line 2
@@ -108,7 +108,7 @@
     const/4 v0, 0x0
 
     .line 7
-    invoke-static {v1, v0, v2}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    invoke-static {v1, v0, v2}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
 
     .line 8
     .line 9
@@ -121,11 +121,11 @@
     move-result-object v1
 
     .line 14
-    new-instance v0, LX/5d4;
+    new-instance v0, LX/606;
 
     .line 15
     .line 16
-    invoke-direct {v0, v1}, LX/5d4;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, LX/606;-><init>(Landroid/content/Context;)V
 
     .line 17
     .line 18
@@ -133,11 +133,11 @@
     return-object v0
 .end method
 
-.method public bridge synthetic createPostCaptureCoordinatorHelper(LX/5XU;LX/3em;)LX/3qd;
+.method public bridge synthetic createPostCaptureCoordinatorHelper(LX/648;LX/3Uk;)LX/3rw;
     .locals 1
 
     .line 268435456
-    invoke-virtual {p0, p1, p2}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->createPostCaptureCoordinatorHelper(LX/5XU;LX/3em;)LX/4du;
+    invoke-virtual {p0, p1, p2}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->createPostCaptureCoordinatorHelper(LX/648;LX/3Uk;)LX/6f9;
 
     .line 268435457
     .line 268435458
@@ -148,15 +148,15 @@
     return-object v0
 .end method
 
-.method public createPostCaptureCoordinatorHelper(LX/5XU;LX/3em;)LX/4du;
-    .locals 4
+.method public createPostCaptureCoordinatorHelper(LX/648;LX/3Uk;)LX/6f9;
+    .locals 5
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPostCaptureHelperProvider:LX/2vp;
+    iget-object v4, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPostCaptureHelperProvider:LX/3GS;
 
     .line 1
     .line 2
-    invoke-virtual {p0}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->getOutputView()LX/6OU;
+    invoke-virtual {p0}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->getOutputView()LX/3tp;
 
     .line 3
     .line 4
@@ -172,16 +172,16 @@
     move-result-object v0
 
     .line 10
-    new-instance v2, LX/3em;
+    new-instance v2, LX/3Uk;
 
     .line 11
     .line 12
-    invoke-direct {v2, v0}, LX/3em;-><init>(Landroidx/fragment/app/FragmentActivity;)V
+    invoke-direct {v2, v0}, LX/3Uk;-><init>(Landroidx/fragment/app/FragmentActivity;)V
 
     .line 13
     .line 14
     .line 15
-    invoke-static {v1}, LX/1zB;->A00(LX/1zB;)Landroid/content/Context;
+    invoke-static {}, LX/3Ff;->A01()Landroid/content/Context;
 
     .line 16
     .line 17
@@ -189,53 +189,58 @@
     move-result-object v1
 
     .line 19
-    :try_start_0
-    new-instance v0, LX/4du;
+    invoke-static {v4}, LX/3Fo;->A00(LX/3Fo;)V
 
     .line 20
     .line 21
-    invoke-direct {v0, v3, v2, p1}, LX/4du;-><init>(LX/6OU;LX/4OF;LX/5XU;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 22
+    :try_start_0
+    new-instance v0, LX/6f9;
+
     .line 23
     .line 24
-    invoke-static {}, LX/1zE;->A0G()V
+    invoke-direct {v0, v3, v2, p1}, LX/6f9;-><init>(LX/3tp;LX/4FD;LX/648;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 25
     .line 26
     .line 27
-    invoke-static {v1}, LX/1zI;->A04(Landroid/content/Context;)V
+    invoke-static {}, LX/3Fa;->A0A()V
 
     .line 28
     .line 29
     .line 30
-    return-object v0
+    invoke-static {v1}, LX/3Ff;->A03(Landroid/content/Context;)V
 
     .line 31
+    .line 32
+    .line 33
+    return-object v0
+
+    .line 34
     :catchall_0
     move-exception v0
 
-    .line 32
-    invoke-static {}, LX/1zE;->A0G()V
-
-    .line 33
-    .line 34
     .line 35
-    invoke-static {v1}, LX/1zI;->A04(Landroid/content/Context;)V
+    invoke-static {}, LX/3Fa;->A0A()V
 
     .line 36
     .line 37
     .line 38
+    invoke-static {v1}, LX/3Ff;->A03(Landroid/content/Context;)V
+
+    .line 39
+    .line 40
+    .line 41
     throw v0
 .end method
 
-.method public getOutputView()LX/6OU;
+.method public getOutputView()LX/3tp;
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPreviewView:LX/6OU;
+    iget-object v1, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPreviewView:LX/3tp;
 
     .line 1
     .line 2
@@ -251,16 +256,16 @@
     move-result-object v0
 
     .line 8
-    new-instance v1, LX/6OU;
+    new-instance v1, LX/3tp;
 
     .line 9
     .line 10
-    invoke-direct {v1, v0}, LX/6OU;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, LX/3tp;-><init>(Landroid/content/Context;)V
 
     .line 11
     .line 12
     .line 13
-    iput-object v1, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPreviewView:LX/6OU;
+    iput-object v1, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPreviewView:LX/3tp;
 
     .line 14
     .line 15
@@ -272,7 +277,7 @@
     .locals 1
 
     .line 268435456
-    invoke-virtual {p0}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->getOutputView()LX/6OU;
+    invoke-virtual {p0}, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->getOutputView()LX/3tp;
 
     .line 268435457
     .line 268435458
@@ -284,14 +289,14 @@
 .end method
 
 .method public loadMedia()V
-    .locals 6
+    .locals 12
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3qd;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3rw;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/3qd;->A0A()LX/4Bp;
+    invoke-virtual {v0}, LX/3rw;->A09()LX/6fF;
 
     .line 3
     .line 4
@@ -303,11 +308,11 @@
 
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3qd;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3rw;
 
     .line 9
     .line 10
-    invoke-virtual {v0}, LX/3qd;->A0A()LX/4Bp;
+    invoke-virtual {v0}, LX/3rw;->A09()LX/6fF;
 
     .line 11
     .line 12
@@ -315,7 +320,7 @@
     move-result-object v0
 
     .line 14
-    iget-object v5, v0, LX/4Bp;->A00:Landroid/net/Uri;
+    iget-object v5, v0, LX/6fF;->A00:Landroid/net/Uri;
 
     .line 15
     .line 16
@@ -324,45 +329,45 @@
     .line 17
     .line 18
     .line 19
-    iget-object v0, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mFbBitmapUtil:LX/3Dm;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mFbBitmapUtil:LX/2yI;
 
     .line 20
     .line 21
-    new-instance v4, LX/3rN;
+    new-instance v4, LX/3Zv;
 
     .line 22
     .line 23
-    invoke-direct {v4, v5, p0}, LX/3rN;-><init>(Landroid/net/Uri;Lcom/facebook/arstudio/player/PostCapturePhotoFragment;)V
+    invoke-direct {v4, v5, p0}, LX/3Zv;-><init>(Landroid/net/Uri;Lcom/facebook/arstudio/player/PostCapturePhotoFragment;)V
 
     .line 24
     .line 25
     .line 26
-    iget-object v3, v0, LX/3Dm;->A01:LX/3q5;
+    iget-object v3, v0, LX/2yI;->A00:LX/3MV;
 
     .line 27
     .line 28
-    new-instance v0, LX/3xx;
+    new-instance v0, LX/3N3;
 
     .line 29
     .line 30
-    invoke-direct {v0}, LX/3xx;-><init>()V
+    invoke-direct {v0}, LX/3N3;-><init>()V
 
     .line 31
     .line 32
     .line 33
-    iput-object v5, v0, LX/3xx;->A02:Landroid/net/Uri;
+    iput-object v5, v0, LX/3N3;->A02:Landroid/net/Uri;
 
     .line 34
     .line 35
-    invoke-virtual {v0}, LX/3xx;->A02()LX/3xw;
+    invoke-virtual {v0}, LX/3N3;->A02()LX/3N2;
 
     .line 36
     .line 37
     .line 38
-    move-result-object v2
+    move-result-object v9
 
     .line 39
-    sget-object v1, LX/3wp;->A0I:LX/3wp;
+    sget-object v1, LX/3Kb;->A0K:LX/3Kb;
 
     .line 40
     .line 41
@@ -370,49 +375,58 @@
 
     .line 42
     .line 43
-    invoke-static {v1, v0}, LX/3ap;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/0H2;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 44
     .line 45
     .line 46
-    invoke-virtual {v1}, LX/3wp;->A09()LX/3xa;
+    invoke-virtual {v1}, LX/3Kb;->A0A()LX/3N5;
 
     .line 47
     .line 48
     .line 49
-    move-result-object v1
+    move-result-object v6
 
     .line 50
-    sget-object v0, LX/3q5;->A03:Lcom/facebook/common/callercontext/CallerContext;
+    sget-object v10, LX/3MV;->A03:Lcom/facebook/common/callercontext/CallerContext;
 
     .line 51
     .line 52
-    invoke-virtual {v1, v2, v0}, LX/3xa;->A04(LX/3xw;Ljava/lang/Object;)LX/3xk;
+    const/4 v7, 0x0
 
     .line 53
+    move-object v8, v7
+
     .line 54
+    move-object v11, v7
+
     .line 55
-    move-result-object v2
+    invoke-virtual/range {v6 .. v11}, LX/3N5;->A03(LX/3PN;LX/3Ob;LX/3N2;Ljava/lang/Object;Ljava/lang/String;)LX/3QB;
 
     .line 56
-    new-instance v1, LX/3rz;
-
     .line 57
     .line 58
-    invoke-direct {v1, v5, v4, v3}, LX/3rz;-><init>(Landroid/net/Uri;LX/3rN;LX/3q5;)V
+    move-result-object v2
 
     .line 59
+    new-instance v1, LX/3Uu;
+
     .line 60
     .line 61
-    iget-object v0, v3, LX/3q5;->A01:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {v1, v5, v4, v3}, LX/3Uu;-><init>(Landroid/net/Uri;LX/3Zv;LX/3MV;)V
 
     .line 62
     .line 63
-    invoke-virtual {v2, v1, v0}, LX/3xk;->A09(LX/44Y;Ljava/util/concurrent/Executor;)V
-
     .line 64
+    iget-object v0, v3, LX/3MV;->A01:Ljava/util/concurrent/ExecutorService;
+
     .line 65
     .line 66
+    invoke-virtual {v2, v1, v0}, LX/3QB;->A09(LX/3QH;Ljava/util/concurrent/Executor;)V
+
+    .line 67
+    .line 68
+    .line 69
     :cond_0
     return-void
 .end method
@@ -424,7 +438,7 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPreviewView:LX/6OU;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPreviewView:LX/3tp;
 
     .line 2
     .line 3
@@ -437,10 +451,10 @@
 .end method
 
 .method public onFragmentCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 2
 
     .line 0
-    sget v2, LX/2eq;->AhC:I
+    sget v1, LX/2I6;->AYw:I
 
     .line 1
     .line 2
@@ -449,53 +463,58 @@
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    move-result-object v0
 
     .line 6
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 7
-    invoke-static {v1, v0, v2}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
     .line 8
     .line 9
-    .line 10
     move-result-object v0
+
+    .line 10
+    check-cast v0, LX/3GS;
 
     .line 11
-    check-cast v0, LX/2vp;
-
     .line 12
+    iput-object v0, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPostCaptureHelperProvider:LX/3GS;
+
     .line 13
-    iput-object v0, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mPostCaptureHelperProvider:LX/2vp;
-
     .line 14
+    sget v1, LX/2I6;->AOG:I
+
     .line 15
-    sget v0, LX/2eq;->ATo:I
-
     .line 16
-    .line 17
-    invoke-static {p0, v0}, LX/1zE;->A0D(Landroidx/fragment/app/Fragment;I)Ljava/lang/Object;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
+    .line 17
     .line 18
     .line 19
-    .line 20
     move-result-object v0
 
-    .line 21
-    check-cast v0, LX/3Dm;
+    .line 20
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
+    .line 21
     .line 22
     .line 23
-    iput-object v0, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mFbBitmapUtil:LX/3Dm;
+    move-result-object v0
 
     .line 24
-    .line 25
-    invoke-super {p0, p1}, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->onFragmentCreate(Landroid/os/Bundle;)V
+    check-cast v0, LX/2yI;
 
+    .line 25
     .line 26
+    iput-object v0, p0, Lcom/facebook/arstudio/player/PostCapturePhotoFragment;->mFbBitmapUtil:LX/2yI;
+
     .line 27
     .line 28
+    invoke-super {p0, p1}, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->onFragmentCreate(Landroid/os/Bundle;)V
+
+    .line 29
+    .line 30
+    .line 31
     return-void
 .end method
 
@@ -529,11 +548,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3qd;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3rw;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/3qd;->A0A()LX/4Bp;
+    invoke-virtual {v0}, LX/3rw;->A09()LX/6fF;
 
     .line 3
     .line 4
@@ -545,11 +564,11 @@
 
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3qd;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3rw;
 
     .line 9
     .line 10
-    invoke-virtual {v0}, LX/3qd;->A0A()LX/4Bp;
+    invoke-virtual {v0}, LX/3rw;->A09()LX/6fF;
 
     .line 11
     .line 12
@@ -557,7 +576,7 @@
     move-result-object v0
 
     .line 14
-    iput-object p1, v0, LX/4Bp;->A00:Landroid/net/Uri;
+    iput-object p1, v0, LX/6fF;->A00:Landroid/net/Uri;
 
     .line 15
     .line 16

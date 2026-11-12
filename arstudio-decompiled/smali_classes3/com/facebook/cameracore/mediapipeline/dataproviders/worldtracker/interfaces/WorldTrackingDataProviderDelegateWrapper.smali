@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final mDelegate:LX/5WC;
+.field public final mDelegate:LX/5Hc;
 
 
 # direct methods
-.method public constructor <init>(LX/5WC;)V
+.method public constructor <init>(LX/5Hc;)V
     .locals 0
 
     .line 0
@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackingDataProviderDelegateWrapper;->mDelegate:LX/5WC;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackingDataProviderDelegateWrapper;->mDelegate:LX/5Hc;
 
     .line 4
     .line 5

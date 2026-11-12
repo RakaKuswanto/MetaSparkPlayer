@@ -1,6 +1,6 @@
 # Meta Spark Player - Offline Storage Filter Loader & Auto-Patcher
 
-Modifikasi aplikasi resmi **Meta Spark Player (v175)** untuk platform Android yang memungkinkan Anda memuat, menjalankan, dan menyimpan efek filter AR langsung dari memori internal / file manager HP secara offline tanpa membutuhkan koneksi USB ke Meta Spark Studio Desktop.
+Modifikasi aplikasi resmi **Meta Spark Player (basis `v187` / `187.0.0.8.277`, `arm64-v8a`, dimigrasi dari `v175`)** untuk platform Android yang memungkinkan Anda memuat, mencari, memilih, menghapus, dan menjalankan efek filter AR langsung dari memori internal / file manager HP secara offline tanpa membutuhkan koneksi USB ke Meta Spark Studio Desktop.
 
 ---
 
@@ -11,9 +11,13 @@ Modifikasi aplikasi resmi **Meta Spark Player (v175)** untuk platform Android ya
   - **`.arexport`**: Bundle export Meta Spark Studio (otomatis mengekstrak varian Android `@etc.arfx` atau `@uncompressed.arfx`).
   - **`.arfx` Standar**: ZIP container yang berisi aset dan skrip efek Spark AR.
   - **`.arfx` CDN Instagram (`.tar.br` / `.bin`)**: Filter hasil download langsung dari server Instagram CDN (otomatis dekompresi Brotli dan konversi TAR ke ZIP).
-- **Auto-Fix *"Can't Load Project"***: Otomatis mendeteksi dan menimpa batasan versi SDK (`manifest.json` `requiredSdkVersion: "175.0"`) secara in-memory untuk mencegah exception engine native C++.
+- **Auto-Fix *"Can't Load Project"***: `ArfxLoader` otomatis mendeteksi dan menimpa batasan versi SDK (`manifest.json` `requiredSdkVersion: "187.0"` untuk APK `v187`) secara in-memory untuk mencegah exception engine native C++.
+- **Pencarian Real-Time, Multi-Select (`Pilih`) & Batch Delete**:
+  - Bar pencarian `"Cari filter..."` + tombol clear `"✕"` untuk menyaring filter berdasarkan judul/nama file.
+  - Tombol `"Pilih"` memunculkan `CheckBox` *on-demand* (mode normal tetap mempertahankan menu *hold* `"Effect Properties"` / `"Delete"`), lengkap dengan pembatasan aman *Opsi A* (`Pilih Semua` hanya item terlihat & perubahan pencarian memangkas pilihan tersembunyi).
+  - Hapus massal untuk file di `mirror/` maupun `/Download/ARFX/` (beserta direktori `.mirror*`), dilengkapi dialog panduan ke Pengaturan Android 14 **Akses Semua File** (`MANAGE_EXTERNAL_STORAGE`) dan *auto-retry* saat kembali ke aplikasi.
 - **Persistent History List**: Setiap filter yang dimuat otomatis dicatat ke riwayat efek (`mirror/`), lengkap dengan thumbnail Meta Spark dan timestamp, sehingga dapat dibuka kembali kapan saja hanya dengan satu sentuhan.
-- **Android 14 (One UI 6) Ready**: Kompatibel penuh dengan Scoped Storage Android modern melalui `content://` URI streaming.
+- **Android 14 (One UI 6) & 64-bit `arm64-v8a` Ready**: Kompatibel dengan Scoped Storage melalui `content://` URI streaming dan native `arm64-v8a` tanpa dialog kompatibilitas debug.
 
 ---
 
@@ -224,24 +228,26 @@ Setiap kali filter diunduh via `fetch`, `fetch-list`, `explore`, atau `search`:
 
 ```text
 MetaSparkStudio/
-├── build_loader/                         # Source code modul loader Java
-│   ├── src/com/facebook/arstudio/player/ # ArfxLoader.java (Core logic & manifest patcher)
-│   └── compile_loader.bat                # Script kompilasi Java -> DEX -> Smali
-├── arstudio-decompiled/                  # Source decompiled APK siap build
-│   ├── AndroidManifest.xml               # Manifest modifikasi (debuggable, permissions)
-│   ├── smali_classes2/                   # Hook EffectListActivity & MainActivity
-│   └── smali_classes4/                   # Injeksi ArfxLoader & Brotli runtime
-├── spark_filter_manager.py               # CLI Sync & Downloader tool (PC -> HP ADB)
+├── build_loader/                         # Source code modul Java Player & unit test
+│   ├── src/com/facebook/arstudio/player/ # ArfxLoader.java, ArfxListState.java, ArfxListController.java
+│   ├── test/com/facebook/arstudio/player/# ArfxListStateTest.java (Pure JDK unit tests)
+│   └── compile_loader.bat                # Script kompilasi legacy (ArfxLoader.java)
+├── arstudio-decompiled/                  # Source decompiled APK v187 (arm64-v8a) siap build
+│   ├── AndroidManifest.xml               # Manifest modifikasi (debuggable=false, permissions)
+│   ├── smali_classes2/                   # Hook EffectListActivity, MainActivity & adapter list v187
+│   └── smali_classes4/                   # Injeksi ArfxLoader, ArfxList*, dan Brotli runtime
+├── spark_filter_manager.py               # CLI Sync & Downloader tool (default SDK target 175.0)
 ├── brotli-dec.jar                        # Pure-Java library dekompresi Brotli stream
 ├── my-debug.keystore                     # Keystore penandatangan APK (alias: mykey)
 ├── build.bat                             # Script 1-klik build & sign APK
-├── docs/                                 # Dokumentasi komprehensif terstruktur
+├── docs/                                 # Dokumentasi komprehensif & rencana/spesifikasi fitur
 │   ├── README.md                         # Indeks & arsitektur sistem end-to-end
 │   ├── 01_arsitektur_dan_format_filter.md# Spesifikasi format .arexport, .arfx, Brotli TAR
-│   ├── 02_reverse_engineering_android_player.md # Decompilasi APK, C++ Engine & ArfxLoader
+│   ├── 02_reverse_engineering_android_player.md # Decompilasi APK v187, Smali Hook, & Search/Multi-Select
 │   ├── 03_reverse_engineering_instagram_graphql.md # GraphQL Query hashes & CDN API
 │   ├── 04_panduan_spark_filter_manager.md # Panduan CLI, Unicode normalizer & katalog JSON
-│   └── 05_rebuild_sign_and_deployment.md  # Rebuild APK, signing & deployment ADB
+│   ├── 05_rebuild_sign_and_deployment.md  # Rebuild APK, unit test, signing & deployment ADB
+│   └── superpowers/                      # Desain & rencana implementasi fitur
 ├── DOKUMENTASI_REVERSE_ENGINEERING.md   # Ringkasan teknis analisis & reversing lengkap
 └── README.md
 ```

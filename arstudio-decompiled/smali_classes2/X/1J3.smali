@@ -1,33 +1,37 @@
-.class public final LX/1J3;
+.class public abstract LX/1J3;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
+# static fields
+.field public static final A00:LX/28F;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, LX/1GN;->A02:LX/28F;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    const-string/jumbo v0, "waterfall_id"
 
+    .line 3
     .line 4
     .line 5
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 6
+    .line 7
+    .line 8
     move-result-object v0
 
-    .line 7
-    iput-object v0, p0, LX/1J3;->A00:LX/1zG;
-
-    .line 8
     .line 9
+    sput-object v0, LX/1J3;->A00:LX/28F;
+
+    .line 10
+    .line 11
     return-void
 .end method

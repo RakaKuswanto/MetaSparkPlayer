@@ -11,8 +11,6 @@
 
 .field public final mCrashReportUrl:Ljava/lang/String;
 
-.field public final mDefaultCrashReportUrl:Ljava/lang/String;
-
 .field public final mExceptionHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
 .field public final mIsInternalBuild:Z
@@ -91,65 +89,62 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;ZZZLjava/lang/String;)V
     .locals 1
 
-    .line 536930435
+    .line 536920075
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 536930436
+    .line 536920076
     iput-object p1, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mApplicationContext:Landroid/content/Context;
 
-    .line 536930437
+    .line 536920077
     iput-object p2, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mCrashReportUrl:Ljava/lang/String;
 
-    .line 536930438
-    iput-object p2, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mDefaultCrashReportUrl:Ljava/lang/String;
-
-    .line 536930439
+    .line 536920078
     iput-boolean p3, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mIsInternalBuild:Z
 
-    .line 536930440
+    .line 536920079
     invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mExceptionHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    .line 536930441
+    .line 536920080
     iput-boolean p4, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mShouldStartANRDetector:Z
 
-    .line 536930442
+    .line 536920081
     iput-boolean p5, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mIsZeroCrashlogBlocked:Z
 
-    .line 536930443
+    .line 536920082
     iput-object p6, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mSessionId:Ljava/lang/String;
 
     return-void
 
-    .line 536930444
+    .line 536920083
     :cond_0
     const-string v0, "Crash report url cannot be null."
 
-    .line 536930445
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    .line 536920084
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     move-result-object v0
 
-    .line 536930446
+    .line 536920085
     throw v0
 
-    .line 536930447
+    .line 536920086
     :cond_1
     const-string v0, "Application context cannot be null."
 
-    .line 536930448
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    .line 536920087
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     move-result-object v0
 
-    .line 536930449
+    .line 536920088
     throw v0
 .end method
 
@@ -190,7 +185,7 @@
     return-object v0
 .end method
 
-.method public createANRDetector(ILX/0M1;I)Lcom/facebook/acra/anr/IANRDetector;
+.method public createANRDetector(ILX/0Kf;I)Lcom/facebook/acra/anr/IANRDetector;
     .locals 1
 
     .line 0
@@ -201,7 +196,7 @@
 
     .line 2
     .line 3
-    invoke-static {p2, p3}, Lcom/facebook/acra/anr/processmonitor/detector/ProcessErrorMonitorANRDetector;->getInstance(LX/0M1;I)Lcom/facebook/acra/anr/processmonitor/detector/ProcessErrorMonitorANRDetector;
+    invoke-static {p2, p3}, Lcom/facebook/acra/anr/processmonitor/detector/ProcessErrorMonitorANRDetector;->getInstance(LX/0Kf;I)Lcom/facebook/acra/anr/processmonitor/detector/ProcessErrorMonitorANRDetector;
 
     .line 4
     .line 5
@@ -220,7 +215,7 @@
 
     .line 10
     .line 11
-    invoke-static {p2}, Lcom/facebook/acra/anr/sigquit/detector/SigquitBasedANRDetector;->getInstance(LX/0M1;)Lcom/facebook/acra/anr/sigquit/detector/SigquitBasedANRDetector;
+    invoke-static {p2}, Lcom/facebook/acra/anr/sigquit/detector/SigquitBasedANRDetector;->getInstance(LX/0Kf;)Lcom/facebook/acra/anr/sigquit/detector/SigquitBasedANRDetector;
 
     .line 12
     .line 13
@@ -239,7 +234,7 @@
 
     .line 18
     .line 19
-    invoke-static {p2, p3}, Lcom/facebook/acra/anr/hybrid/HybridANRDetector;->getInstance(LX/0M1;I)Lcom/facebook/acra/anr/hybrid/HybridANRDetector;
+    invoke-static {p2, p3}, Lcom/facebook/acra/anr/hybrid/HybridANRDetector;->getInstance(LX/0Kf;I)Lcom/facebook/acra/anr/hybrid/HybridANRDetector;
 
     .line 20
     .line 21
@@ -260,14 +255,6 @@
 .method public abstract createReportSender()Lcom/facebook/acra/sender/FlexibleReportSender;
 .end method
 
-.method public enableLeanCrashReporting()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public getAppBuildTimestamp()J
     .locals 2
 
@@ -281,17 +268,6 @@
 
     .line 0
     iget-object v0, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mApplicationContext:Landroid/content/Context;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public getDefaultCrashLogUrl()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/acra/config/BaseDefaultAcraConfig;->mDefaultCrashReportUrl:Ljava/lang/String;
 
     .line 1
     .line 2
@@ -315,30 +291,6 @@
     const-string v0, "200"
 
     return-object v0
-.end method
-
-.method public getMaxPendingAnrReports(I)I
-    .locals 1
-
-    const v0, 0x7fffffff
-
-    return v0
-.end method
-
-.method public getMaxPendingJavaCrashReports(I)I
-    .locals 1
-
-    const v0, 0x7fffffff
-
-    return v0
-.end method
-
-.method public getMaxPendingMiniDumpReports(I)I
-    .locals 1
-
-    const v0, 0x7fffffff
-
-    return v0
 .end method
 
 .method public getOomReservationOverride()I
@@ -430,7 +382,7 @@
 
     .line 8
     .line 9
-    invoke-static {v2, v0, v1}, LX/001;->A1G([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 10
     .line 11

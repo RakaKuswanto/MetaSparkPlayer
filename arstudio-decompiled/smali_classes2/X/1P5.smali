@@ -1,148 +1,189 @@
-.class public abstract LX/1P5;
+.class public final LX/1p5;
 .super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/1w3;
+
+
+# instance fields
+.field public A00:Lcom/google/common/collect/ImmutableMap;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static A00(Landroid/os/Bundle;)LX/1P4;
-    .locals 12
-
     .line 0
-    const-string/jumbo v0, "session_id"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    return-void
+.end method
 
+.method private A00()Lcom/google/common/collect/ImmutableMap;
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/1p5;->A00:Lcom/google/common/collect/ImmutableMap;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
     .line 4
+    invoke-static {}, LX/0X2;->A0X()Lcom/google/common/collect/ImmutableMap$Builder;
+
     .line 5
     .line 6
-    move-result v5
-
     .line 7
-    const-string/jumbo v0, "status"
+    move-result-object v2
 
     .line 8
+    invoke-static {}, LX/1p8;->A00()I
+
     .line 9
     .line 10
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
     .line 11
-    .line 12
-    .line 13
-    move-result v6
+    move-result v0
 
+    .line 12
+    mul-int/lit8 v0, v0, 0x28
+
+    .line 13
     .line 14
-    const-string v0, "error_code"
+    div-int/lit16 v0, v0, 0xa0
 
     .line 15
     .line 16
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 17
     .line 18
     .line 19
-    move-result v7
+    move-result-object v1
 
     .line 20
-    const-string v0, "bytes_downloaded"
+    const-string/jumbo v0, "profile_image_small_size"
 
     .line 21
     .line 22
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
-
     .line 23
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
+
     .line 24
     .line 25
-    move-result-wide v8
-
     .line 26
-    const-string/jumbo v0, "total_bytes_to_download"
+    invoke-static {}, LX/1p8;->A00()I
 
     .line 27
     .line 28
     .line 29
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
+    move-result v0
 
     .line 30
+    mul-int/lit8 v0, v0, 0x5e
+
     .line 31
     .line 32
-    move-result-wide v10
+    div-int/lit16 v0, v0, 0xa0
 
     .line 33
-    const-string/jumbo v0, "module_names"
-
     .line 34
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
     .line 35
     .line 36
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
     .line 37
-    .line 38
-    .line 39
-    move-result-object v2
-
-    .line 40
-    const-string/jumbo v0, "languages"
-
-    .line 41
-    .line 42
-    .line 43
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    .line 44
-    .line 45
-    .line 46
-    move-result-object v3
-
-    .line 47
-    const-string/jumbo v0, "user_confirmation_intent"
-
-    .line 48
-    .line 49
-    .line 50
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    .line 51
-    .line 52
-    .line 53
     move-result-object v1
 
+    .line 38
+    const-string/jumbo v0, "profile_image_big_size"
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-static {}, LX/1p8;->A01()Lcom/facebook/graphql/querybuilder/common/ScaleInputPixelRatio;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v1
+
+    .line 48
+    const-string/jumbo v0, "scale"
+
+    .line 49
+    .line 50
+    .line 51
+    invoke-static {v2, v0, v1}, LX/0X5;->A0P(Lcom/google/common/collect/ImmutableMap$Builder;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
+
+    .line 52
+    .line 53
     .line 54
-    check-cast v1, Landroid/app/PendingIntent;
+    move-result-object v0
 
     .line 55
+    iput-object v0, p0, LX/1p5;->A00:Lcom/google/common/collect/ImmutableMap;
+
     .line 56
-    const-string/jumbo v0, "split_file_intents"
-
     .line 57
-    .line 58
-    .line 59
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+    :cond_0
+    return-object v0
+.end method
 
-    .line 60
-    .line 61
-    .line 62
-    move-result-object v4
 
-    .line 63
-    new-instance v0, LX/1P4;
+# virtual methods
+.method public final AIA()Lcom/google/common/collect/ImmutableSet;
+    .locals 1
 
-    .line 64
-    .line 65
-    invoke-direct/range {v0 .. v11}, LX/1P4;-><init>(Landroid/app/PendingIntent;Ljava/util/List;Ljava/util/List;Ljava/util/List;IIIJJ)V
+    .line 0
+    invoke-direct {p0}, LX/1p5;->A00()Lcom/google/common/collect/ImmutableMap;
 
-    .line 66
-    .line 67
-    .line 68
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->keySet()Lcom/google/common/collect/ImmutableSet;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final AIB(LX/1p4;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/1p5;->A00()Lcom/google/common/collect/ImmutableMap;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {v0, p2}, Lcom/google/common/collect/ImmutableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
     return-object v0
 .end method

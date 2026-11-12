@@ -77,77 +77,80 @@
     move-result-object v3
 
     .line 19
-    move-object v0, p0
+    move-object v1, p0
 
     .line 20
-    check-cast v0, Lcom/fbpay/w3c/client/W3CClient$AutofillKeyFetchServiceCallbackImpl;
+    check-cast v1, Lcom/fbpay/w3c/client/W3CClient$AutofillKeyFetchServiceCallbackImpl;
 
     .line 21
     .line 22
-    iget-object v0, v0, Lcom/fbpay/w3c/client/W3CClient$AutofillKeyFetchServiceCallbackImpl;->A00:LX/4MR;
+    const/4 v0, 0x0
 
     .line 23
-    .line 24
-    iget-object v2, v0, LX/4MR;->A05:LX/6IW;
+    invoke-static {v3, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 24
     .line 25
     .line 26
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, v1, Lcom/fbpay/w3c/client/W3CClient$AutofillKeyFetchServiceCallbackImpl;->A00:LX/4Eh;
 
     .line 27
     .line 28
+    iget-object v2, v0, LX/4Eh;->A05:LX/6Yz;
+
     .line 29
+    .line 30
     const/4 v1, 0x0
 
-    .line 30
-    new-instance v0, LX/4Mv;
-
     .line 31
-    .line 32
-    invoke-direct {v0, v3, v1}, LX/4Mv;-><init>(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    new-instance v0, LX/4E9;
 
+    .line 32
     .line 33
+    invoke-direct {v0, v3, v1}, LX/4E9;-><init>(Ljava/lang/Object;Ljava/lang/Throwable;)V
+
     .line 34
     .line 35
-    invoke-virtual {v2, v0}, LX/4wE;->A09(Ljava/lang/Object;)V
-
     .line 36
+    invoke-virtual {v2, v0}, LX/4sm;->A09(Ljava/lang/Object;)V
+
     .line 37
     .line 38
+    .line 39
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 39
     .line 40
     .line 41
+    .line 42
     return v4
 
-    .line 42
+    .line 43
     :cond_0
     const v0, 0x5f4e5446
 
-    .line 43
     .line 44
     .line 45
+    .line 46
     if-ne p1, v0, :cond_1
 
-    .line 46
     .line 47
+    .line 48
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 48
     .line 49
     .line 50
+    .line 51
     return v4
 
-    .line 51
+    .line 52
     :cond_1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 52
     .line 53
     .line 54
+    .line 55
     move-result v0
 
-    .line 55
+    .line 56
     return v0
 .end method

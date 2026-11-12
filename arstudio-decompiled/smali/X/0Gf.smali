@@ -1,118 +1,682 @@
-.class public final LX/0Gf;
+.class public final LX/0GF;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
+
+
+# static fields
+.field public static A03:LX/0GF;
+
+
+# instance fields
+.field public final A00:Ljava/lang/Object;
+
+.field public final A01:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+.field public volatile A02:Ljava/util/List;
+
+.field public mOomReservation:[B
+
 
 # direct methods
-.method public static A00(Ljava/lang/Integer;)Ljava/lang/String;
-    .locals 0
+.method public constructor <init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+    .locals 1
 
     .line 0
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result p0
+    const/4 v0, 0x0
 
     .line 4
-    packed-switch p0, :pswitch_data_0
+    iput-object v0, p0, LX/0GF;->mOomReservation:[B
+
+    .line 5
+    .line 6
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    iput-object v0, p0, LX/0GF;->A00:Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    iput-object v0, p0, LX/0GF;->A02:Ljava/util/List;
+
+    .line 21
+    .line 22
+    iput-object p1, p0, LX/0GF;->A01:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    .line 23
+    .line 24
+    const/16 v0, 0x1000
+
+    .line 25
+    .line 26
+    new-array v0, v0, [B
+
+    .line 27
+    .line 28
+    iput-object v0, p0, LX/0GF;->mOomReservation:[B
+
+    .line 29
+    .line 30
+    return-void
+.end method
+
+.method public static declared-synchronized A00()LX/0GF;
+    .locals 3
+
+    .line 0
+    const-class v2, LX/0GF;
+
+    .line 1
+    .line 2
+    monitor-enter v2
+
+    .line 3
+    :try_start_0
+    sget-object v0, LX/0GF;->A03:LX/0GF;
+
+    .line 4
+    .line 5
+    if-nez v0, :cond_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 6
+    .line 7
+    :try_start_1
+    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    new-instance v0, LX/0GF;
+
+    .line 12
+    .line 13
+    invoke-direct {v0, v1}, LX/0GF;-><init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+
+    .line 14
+    .line 15
+    .line 16
+    sput-object v0, LX/0GF;->A03:LX/0GF;
+
+    .line 17
+    .line 18
+    invoke-static {v0}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+
+    .line 19
+    .line 20
+    .line 21
+    sget-object v0, LX/0GF;->A03:LX/0GF;
+
+    .line 22
+    .line 23
+    goto :goto_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 24
+    :catchall_0
+    move-exception v0
+
+    .line 25
+    :try_start_2
+    throw v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 26
+    :cond_0
+    :goto_0
+    monitor-exit v2
+
+    .line 27
+    return-object v0
+
+    .line 28
+    :catchall_1
+    move-exception v0
+
+    .line 29
+    monitor-exit v2
+
+    .line 30
+    throw v0
+.end method
+
+.method public static A01()V
+    .locals 3
+
+    .line 0
+    :try_start_0
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
     .line 5
     .line 6
     .line 7
-    const-string p0, "LOGGING"
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 8
+    :catchall_0
+    move-exception v2
+
     .line 9
-    return-object p0
+    const-string v1, "ExceptionHandlerManager"
 
     .line 10
-    :pswitch_0
-    const-string p0, "MEDIUM_SEVERITY"
-
     .line 11
-    .line 12
-    return-object p0
+    const-string v0, "Error during exception handling"
 
+    .line 12
     .line 13
-    :pswitch_1
-    const-string p0, "HIGH_SEVERITY"
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 14
     .line 15
-    return-object p0
-
     .line 16
-    :pswitch_2
-    const-string p0, "EXTREME_SEVERITY"
+    :goto_0
+    const/16 v0, 0xa
 
     .line 17
     .line 18
-    return-object p0
+    :try_start_1
+    invoke-static {v0}, Ljava/lang/System;->exit(I)V
 
     .line 19
-    :pswitch_3
-    const-string p0, "CRASH_LIKE"
-
     .line 20
     .line 21
-    return-object p0
+    goto :goto_1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 22
-    :pswitch_4
-    const-string p0, "FAIL_FUNCTIONAL"
+    :catchall_1
+    move-exception v2
 
     .line 23
-    .line 24
-    return-object p0
+    const-string v1, "ExceptionHandlerManager"
 
+    .line 24
     .line 25
-    :pswitch_5
-    const-string p0, "FAIL_CONTENT_CREATION"
+    const-string v0, "Error during exception handling"
 
     .line 26
     .line 27
-    return-object p0
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 28
-    :pswitch_6
-    const-string p0, "PRIVACY"
-
     .line 29
     .line 30
-    return-object p0
+    :goto_1
+    nop
 
     .line 31
-    :pswitch_7
-    const-string p0, "LEGACY"
+    goto :goto_1
+.end method
+
+.method public static declared-synchronized A02(LX/0GK;I)V
+    .locals 4
+
+    .line 0
+    const-class v3, LX/0GF;
+
+    .line 1
+    .line 2
+    monitor-enter v3
+
+    .line 3
+    :try_start_0
+    invoke-static {}, LX/0GF;->A00()LX/0GF;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v2
+
+    .line 7
+    monitor-enter v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 8
+    :try_start_1
+    iget-object v0, v2, LX/0GF;->A02:Ljava/util/List;
+
+    .line 9
+    .line 10
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v1
+
+    .line 14
+    new-instance v0, LX/0GE;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, p0, p1}, LX/0GE;-><init>(LX/0GK;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-static {v1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
+
+    .line 23
+    .line 24
+    .line 25
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    iput-object v0, v2, LX/0GF;->A02:Ljava/util/List;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 30
+    .line 31
+    :try_start_2
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 32
+    monitor-exit v3
+
+    .line 33
+    return-void
+
+    .line 34
+    :catchall_0
+    :try_start_3
+    move-exception v0
+
+    .line 35
+    monitor-exit v2
+
+    .line 36
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 37
+    :catchall_1
+    move-exception v0
+
+    .line 38
+    monitor-exit v3
+
+    .line 39
+    throw v0
+.end method
+
+.method public static A03(Ljava/lang/Throwable;)V
+    .locals 7
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v3
+
+    .line 4
+    array-length v2, v3
+
+    .line 5
+    add-int/lit8 v1, v2, 0x1
+
+    .line 6
+    .line 7
+    new-array v6, v1, [Ljava/lang/StackTraceElement;
+
+    .line 8
+    .line 9
+    const/4 v0, 0x0
+
+    .line 10
+    invoke-static {v3, v0, v6, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 11
+    .line 12
+    .line 13
+    add-int/lit8 v5, v1, -0x1
+
+    .line 14
+    .line 15
+    const-string v4, "unknown"
+
+    .line 16
+    .line 17
+    const-string v3, "Z"
+
+    .line 18
+    .line 19
+    const-string v2, "init"
+
+    .line 20
+    .line 21
+    const/4 v1, -0x1
+
+    .line 22
+    new-instance v0, Ljava/lang/StackTraceElement;
+
+    .line 23
+    .line 24
+    invoke-direct {v0, v3, v2, v4, v1}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 25
+    .line 26
+    .line 27
+    aput-object v0, v6, v5
+
+    .line 28
+    .line 29
+    invoke-virtual {p0, v6}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+
+    .line 30
+    .line 31
+    .line 32
+    return-void
+.end method
+
+
+# virtual methods
+.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 8
+
+    .line 0
+    iget-object v3, p0, LX/0GF;->A00:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v3
+
+    .line 3
+    const/16 v0, -0xa
+
+    .line 4
+    .line 5
+    :try_start_0
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_4
+
+    .line 6
+    .line 7
+    .line 8
+    :catch_0
+    :try_start_1
+    instance-of v7, p2, Ljava/lang/OutOfMemoryError;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    const/4 v6, 0x0
+
+    .line 12
+    iput-object v6, p0, LX/0GF;->mOomReservation:[B
+
+    .line 13
+    .line 14
+    iget-object v5, p0, LX/0GF;->A02:Ljava/util/List;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
+
+    .line 15
+    .line 16
+    :try_start_2
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v4
+
+    .line 20
+    sub-int/2addr v4, v0
+
+    .line 21
+    :goto_0
+    if-ltz v4, :cond_1
+
+    .line 22
+    .line 23
+    invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    check-cast v0, LX/0GE;
+
+    .line 28
+    .line 29
+    iget-object v0, v0, LX/0GE;->A01:LX/0GK;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 30
+    .line 31
+    :try_start_3
+    invoke-interface {v0, p1, p2, v6}, LX/0GK;->handleUncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;LX/0G9;)I
 
     .line 32
     .line 33
-    return-object p0
-
     .line 34
-    :pswitch_8
-    const-string p0, "LEGACY_FAIL_HARDER"
+    goto :goto_1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 35
+    :catchall_0
+    move-exception v2
+
     .line 36
-    return-object p0
+    if-eqz v7, :cond_0
 
     .line 37
-    nop
-
     .line 38
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-    .end packed-switch
+    :try_start_4
+    const-string v1, "ExceptionHandlerManager"
+
+    .line 39
+    .line 40
+    const-string v0, "OOM while handling OOM"
+
+    .line 41
+    .line 42
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 43
+    .line 44
+    .line 45
+    goto :goto_1
+
+    .line 46
+    :cond_0
+    const-string v1, "ExceptionHandlerManager"
+
+    .line 47
+    .line 48
+    const-string v0, "Error during exception handling"
+
+    .line 49
+    .line 50
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 51
+    .line 52
+    .line 53
+    :goto_1
+    add-int/lit8 v4, v4, -0x1
+
+    .line 54
+    .line 55
+    goto :goto_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    .line 56
+    :cond_1
+    :try_start_5
+    invoke-static {p2}, LX/0GF;->A03(Ljava/lang/Throwable;)V
+
+    .line 57
+    .line 58
+    .line 59
+    iget-object v0, p0, LX/0GF;->A01:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    .line 60
+    .line 61
+    if-eqz v0, :cond_2
+
+    .line 62
+    .line 63
+    goto :goto_2
+
+    .line 64
+    :catchall_1
+    invoke-static {p2}, LX/0GF;->A03(Ljava/lang/Throwable;)V
+
+    .line 65
+    .line 66
+    .line 67
+    iget-object v0, p0, LX/0GF;->A01:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    .line 68
+    .line 69
+    if-eqz v0, :cond_2
+
+    .line 70
+    .line 71
+    :goto_2
+    invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+
+    .line 72
+    .line 73
+    .line 74
+    goto :goto_3
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    .line 75
+    :catchall_2
+    move-exception v2
+
+    .line 76
+    :try_start_6
+    const-string v1, "ExceptionHandlerManager"
+
+    .line 77
+    .line 78
+    const-string v0, "Error during exception handling"
+
+    .line 79
+    .line 80
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    .line 81
+    .line 82
+    .line 83
+    :cond_2
+    :goto_3
+    :try_start_7
+    invoke-static {}, LX/0GF;->A01()V
+
+    .line 84
+    .line 85
+    .line 86
+    goto :goto_4
+
+    .line 87
+    :catchall_3
+    invoke-static {}, LX/0GF;->A01()V
+
+    .line 88
+    .line 89
+    .line 90
+    :goto_4
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v0
+
+    .line 94
+    throw v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
+
+    .line 95
+    :catchall_4
+    move-exception v0
+
+    .line 96
+    :try_start_8
+    monitor-exit v3
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+
+    .line 97
+    throw v0
 .end method

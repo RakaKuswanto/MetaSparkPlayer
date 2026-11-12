@@ -1,5 +1,5 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl$1;
-.super LX/5FR;
+.super LX/5DL;
 .source ""
 
 
@@ -16,7 +16,7 @@
 
     .line 1
     .line 2
-    invoke-direct {p0, p2}, LX/5FR;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p2}, LX/5DL;-><init>(Ljava/lang/String;)V
 
     .line 3
     .line 4

@@ -29,11 +29,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x23
+    const/16 v0, 0x11
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -81,7 +81,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 16
     .line 17
@@ -117,7 +117,7 @@
 
     .line 32
     .line 33
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 34
     .line 35
@@ -129,31 +129,23 @@
 
     .line 38
     .line 39
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {p1, v0, v1}, LX/0X5;->A13(Landroid/os/Parcel;Ljava/lang/Class;Ljava/util/Map;)V
 
     .line 40
     .line 41
     .line 42
-    move-result-object v0
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
 
     .line 43
-    invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->readMap(Ljava/util/Map;Ljava/lang/ClassLoader;)V
-
     .line 44
     .line 45
+    move-result-object v0
+
     .line 46
-    invoke-static {v1}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
+    iput-object v0, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyResponsePostingParam;->A00:Lcom/google/common/collect/ImmutableMap;
 
     .line 47
     .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    iput-object v0, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyResponsePostingParam;->A00:Lcom/google/common/collect/ImmutableMap;
-
-    .line 51
-    .line 52
     return-void
 .end method
 

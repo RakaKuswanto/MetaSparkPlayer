@@ -1,5 +1,5 @@
-.class public final LX/5g0;
-.super LX/0Qc;
+.class public LX/5g0;
+.super Ljava/lang/Object;
 .source ""
 
 
@@ -8,10 +8,20 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/0Qc;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
     return-void
+.end method
+
+
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Failed"
+
+    return-object v0
 .end method

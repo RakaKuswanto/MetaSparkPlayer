@@ -2,16 +2,37 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final serialVersionUID:J
+
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final algorithmName:Ljava/lang/String;
 
-.field public final A01:LX/0Gd;
+.field public final bytes:I
+
+.field public final toString:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "algorithmName",
+            "bytes",
+            "toString"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,33 +40,45 @@
     .line 1
     .line 2
     .line 3
-    const/16 v0, 0x20
+    iput-object p1, p0, LX/2rf;->algorithmName:Ljava/lang/String;
 
     .line 4
     .line 5
-    invoke-static {p0, v0}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
+    iput p2, p0, LX/2rf;->bytes:I
 
     .line 6
     .line 7
+    iput-object p3, p0, LX/2rf;->toString:Ljava/lang/String;
+
     .line 8
-    move-result-object v0
+    .line 9
+    return-void
+.end method
+
+.method private readResolve()Ljava/lang/Object;
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/2rf;->algorithmName:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    iget v2, p0, LX/2rf;->bytes:I
+
+    .line 3
+    .line 4
+    iget-object v1, p0, LX/2rf;->toString:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    new-instance v0, LX/2rd;
+
+    .line 7
+    .line 8
+    invoke-direct {v0, v3, v2, v1}, LX/2rd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 9
-    iput-object v0, p0, LX/2rf;->A01:LX/0Gd;
-
     .line 10
     .line 11
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/2rf;->A00:LX/1zG;
-
-    .line 16
-    .line 17
-    return-void
+    return-object v0
 .end method

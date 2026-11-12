@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public mGestureProcessor:LX/5a9;
-
 .field public mPreviewView:Ljava/lang/ref/WeakReference;
+
+.field public mTouchService:LX/64O;
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 11
     .line 12
@@ -56,7 +56,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/4BF;->A0a(Ljava/lang/ref/Reference;)Landroid/view/View;
+    invoke-static {v0}, LX/434;->A0W(Ljava/lang/ref/Reference;)Landroid/view/View;
 
     .line 3
     .line 4
@@ -93,7 +93,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mGestureProcessor:LX/5a9;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mTouchService:LX/64O;
 
     .line 2
     .line 3
@@ -105,7 +105,7 @@
 
     .line 6
     :cond_0
-    invoke-interface {v0, p1, p2}, LX/5a9;->onTouchEvent(Landroid/view/MotionEvent;I)Z
+    invoke-virtual {v0, p1, p2}, LX/64O;->onTouchEvent(Landroid/view/MotionEvent;I)Z
 
     .line 7
     .line 8
@@ -139,7 +139,7 @@
     throw v0
 .end method
 
-.method public declared-synchronized setGestureProcessor(LX/5a9;)V
+.method public declared-synchronized setTouchService(LX/64O;)V
     .locals 1
 
     .line 0
@@ -147,58 +147,44 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mGestureProcessor:LX/5a9;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mTouchService:LX/64O;
 
     .line 2
     .line 3
-    if-eq v0, p1, :cond_0
+    if-eqz p1, :cond_0
 
     .line 4
     .line 5
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mPreviewView:Ljava/lang/ref/WeakReference;
 
     .line 6
     .line 7
-    invoke-interface {v0}, LX/5a9;->destroy()V
+    invoke-virtual {p1, v0}, LX/64O;->setView(Ljava/lang/ref/WeakReference;)V
 
     .line 8
     .line 9
     .line 10
-    :cond_0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mGestureProcessor:LX/5a9;
-
-    .line 11
-    .line 12
-    if-eqz p1, :cond_1
-
-    .line 13
-    .line 14
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mPreviewView:Ljava/lang/ref/WeakReference;
-
-    .line 15
-    .line 16
-    invoke-interface {p1, v0}, LX/5a9;->init(Ljava/lang/ref/WeakReference;)V
+    goto :goto_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 17
-    .line 18
-    .line 19
-    :cond_1
-    monitor-exit p0
-
-    .line 20
-    return-void
-
-    .line 21
+    .line 11
     :catchall_0
     move-exception v0
 
-    .line 22
+    .line 12
     monitor-exit p0
 
-    .line 23
+    .line 13
     throw v0
+
+    .line 14
+    :cond_0
+    :goto_0
+    monitor-exit p0
+
+    .line 15
+    return-void
 .end method
 
 .method public update(Ljava/lang/ref/WeakReference;)V
@@ -236,7 +222,7 @@
     .line 12
     .line 13
     :try_start_0
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mGestureProcessor:LX/5a9;
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->mTouchService:LX/64O;
 
     .line 14
     .line 15
@@ -248,7 +234,7 @@
 
     .line 18
     .line 19
-    invoke-interface {v1, v0}, LX/5a9;->init(Ljava/lang/ref/WeakReference;)V
+    invoke-virtual {v1, v0}, LX/64O;->setView(Ljava/lang/ref/WeakReference;)V
 
     .line 20
     .line 21
@@ -277,7 +263,7 @@
 
     .line 28
     .line 29
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 30
     .line 31

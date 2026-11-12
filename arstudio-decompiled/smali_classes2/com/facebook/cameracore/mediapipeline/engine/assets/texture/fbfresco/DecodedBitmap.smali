@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public A00:LX/41z;
+.field public A00:LX/3Nf;
 
 
 # direct methods
-.method public constructor <init>(LX/41z;)V
+.method public constructor <init>(LX/3Nf;)V
     .locals 1
 
     .line 0
@@ -21,7 +21,7 @@
 
     .line 4
     .line 5
-    invoke-virtual {p1}, LX/41z;->A08()LX/41z;
+    invoke-virtual {p1}, LX/3Nf;->A06()LX/3Nf;
 
     .line 6
     .line 7
@@ -29,7 +29,7 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/assets/texture/fbfresco/DecodedBitmap;->A00:LX/41z;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/assets/texture/fbfresco/DecodedBitmap;->A00:LX/3Nf;
 
     .line 10
     .line 11
@@ -43,7 +43,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/assets/texture/fbfresco/DecodedBitmap;->A00:LX/41z;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/assets/texture/fbfresco/DecodedBitmap;->A00:LX/3Nf;
 
     .line 1
     .line 2
@@ -51,7 +51,7 @@
 
     .line 3
     .line 4
-    invoke-virtual {v0}, LX/41z;->close()V
+    invoke-virtual {v0}, LX/3Nf;->close()V
 
     .line 5
     .line 6
@@ -59,7 +59,7 @@
     const/4 v0, 0x0
 
     .line 8
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/assets/texture/fbfresco/DecodedBitmap;->A00:LX/41z;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/assets/texture/fbfresco/DecodedBitmap;->A00:LX/3Nf;
 
     .line 9
     .line 10
@@ -71,7 +71,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/assets/texture/fbfresco/DecodedBitmap;->A00:LX/41z;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/engine/assets/texture/fbfresco/DecodedBitmap;->A00:LX/3Nf;
 
     .line 1
     .line 2
@@ -79,7 +79,7 @@
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/41z;->A00(LX/41z;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, LX/0X7;->A0A(LX/3Nf;)Landroid/graphics/Bitmap;
 
     .line 5
     .line 6

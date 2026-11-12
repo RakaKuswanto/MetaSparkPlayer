@@ -1,20 +1,21 @@
-.class public final LX/4eA;
-.super Ljava/lang/Object;
+.class public final LX/4ea;
+.super Ljava/lang/RuntimeException;
 .source ""
 
 
 # direct methods
-.method public static A00()Ljava/util/Set;
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    invoke-static {}, LX/4e9;->A00()Ljava/util/Set;
+    const-string v0, "Should not modify component host outside of the Litho View Attributes Extensions. Let us know if your use case is valid"
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
+    .line 3
     .line 4
-    return-object v0
+    .line 5
+    return-void
 .end method

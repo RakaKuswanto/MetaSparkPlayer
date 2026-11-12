@@ -1,1479 +1,644 @@
-.class public LX/2z6;
-.super Ljava/io/InputStream;
+.class public final enum LX/2z6;
+.super Ljava/lang/Enum;
 .source ""
-
-# interfaces
-.implements Ljava/io/DataInput;
 
 
 # static fields
-.field public static final A04:Ljava/nio/ByteOrder;
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-.field public static final A05:Ljava/nio/ByteOrder;
+.field public static final synthetic $VALUES:[LX/2z6;
+
+.field public static final enum BUFFERED_VIDEO_PLAYBACK:LX/2z6;
+
+.field public static final enum BUFFERING_OPTION_SHOWN:LX/2z6;
+
+.field public static final enum DOWNLOAD_ABORTED:LX/2z6;
+
+.field public static final enum DOWNLOAD_CANCELLED:LX/2z6;
+
+.field public static final enum DOWNLOAD_CLICKED:LX/2z6;
+
+.field public static final enum DOWNLOAD_COMPLETED:LX/2z6;
+
+.field public static final enum DOWNLOAD_DELETED:LX/2z6;
+
+.field public static final enum DOWNLOAD_FAILED:LX/2z6;
+
+.field public static final enum DOWNLOAD_FAILED_NO_SPACE:LX/2z6;
+
+.field public static final enum DOWNLOAD_PAUSED:LX/2z6;
+
+.field public static final enum DOWNLOAD_PLUGIN_LOAD:LX/2z6;
+
+.field public static final enum DOWNLOAD_QUEUED:LX/2z6;
+
+.field public static final enum DOWNLOAD_REQUESTED:LX/2z6;
+
+.field public static final enum DOWNLOAD_STARTED:LX/2z6;
+
+.field public static final enum DOWNLOAD_STOPPED:LX/2z6;
+
+.field public static final enum PLAYBACK_BLOCKED:LX/2z6;
 
 
 # instance fields
-.field public A00:I
-
-.field public A01:Ljava/nio/ByteOrder;
-
-.field public A02:[B
-
-.field public final A03:Ljava/io/DataInputStream;
+.field public final value:Ljava/lang/String;
 
 
 # direct methods
+.method public static final synthetic $values()[LX/2z6;
+    .locals 3
+
+    const/16 v0, 0x10
+
+    new-array v2, v0, [LX/2z6;
+
+    sget-object v1, LX/2z6;->DOWNLOAD_CLICKED:LX/2z6;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_REQUESTED:LX/2z6;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_QUEUED:LX/2z6;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_STARTED:LX/2z6;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_STOPPED:LX/2z6;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_PAUSED:LX/2z6;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_COMPLETED:LX/2z6;
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_ABORTED:LX/2z6;
+
+    const/4 v0, 0x7
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_CANCELLED:LX/2z6;
+
+    const/16 v0, 0x8
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_DELETED:LX/2z6;
+
+    const/16 v0, 0x9
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_FAILED:LX/2z6;
+
+    const/16 v0, 0xa
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->PLAYBACK_BLOCKED:LX/2z6;
+
+    const/16 v0, 0xb
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_PLUGIN_LOAD:LX/2z6;
+
+    const/16 v0, 0xc
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->DOWNLOAD_FAILED_NO_SPACE:LX/2z6;
+
+    const/16 v0, 0xd
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->BUFFERING_OPTION_SHOWN:LX/2z6;
+
+    const/16 v0, 0xe
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2z6;->BUFFERED_VIDEO_PLAYBACK:LX/2z6;
+
+    const/16 v0, 0xf
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     .line 0
-    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    const-string v3, "DOWNLOAD_CLICKED"
 
     .line 1
     .line 2
-    sput-object v0, LX/2z6;->A05:Ljava/nio/ByteOrder;
+    const/4 v2, 0x0
 
     .line 3
-    .line 4
-    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    const-string/jumbo v1, "offline_video_download_clicked"
 
+    .line 4
     .line 5
     .line 6
-    sput-object v0, LX/2z6;->A04:Ljava/nio/ByteOrder;
+    new-instance v0, LX/2z6;
 
     .line 7
     .line 8
-    return-void
-.end method
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-.method public constructor <init>(Ljava/io/InputStream;)V
-    .locals 3
-
-    .line 268435456
-    sget-object v2, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    iput-object v2, p0, LX/2z6;->A01:Ljava/nio/ByteOrder;
-
-    .line 268435462
-    .line 268435463
-    new-instance v1, Ljava/io/DataInputStream;
-
-    .line 268435464
-    .line 268435465
-    invoke-direct {v1, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
-
-    .line 268435466
-    .line 268435467
-    .line 268435468
-    iput-object v1, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 268435469
-    .line 268435470
-    const/4 v0, 0x0
-
-    .line 268435471
-    invoke-virtual {v1, v0}, Ljava/io/InputStream;->mark(I)V
-
-    .line 268435472
-    .line 268435473
-    .line 268435474
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 268435475
-    .line 268435476
-    iput-object v2, p0, LX/2z6;->A01:Ljava/nio/ByteOrder;
-
-    .line 268435477
-    .line 268435478
-    return-void
-.end method
-
-.method public constructor <init>([B)V
-    .locals 3
-
-    .line 0
-    new-instance v0, Ljava/io/ByteArrayInputStream;
-
-    .line 1
-    .line 2
-    invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
-
-    .line 3
-    .line 4
-    .line 5
-    sget-object v2, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    .line 6
-    .line 7
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
-
-    .line 8
     .line 9
     .line 10
-    iput-object v2, p0, LX/2z6;->A01:Ljava/nio/ByteOrder;
-
     .line 11
+    sput-object v0, LX/2z6;->DOWNLOAD_CLICKED:LX/2z6;
+
     .line 12
-    new-instance v1, Ljava/io/DataInputStream;
-
     .line 13
-    .line 14
-    invoke-direct {v1, v0}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
-
-    .line 15
-    .line 16
-    .line 17
-    iput-object v1, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 18
-    .line 19
-    const/4 v0, 0x0
-
-    .line 20
-    invoke-virtual {v1, v0}, Ljava/io/InputStream;->mark(I)V
-
-    .line 21
-    .line 22
-    .line 23
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 24
-    .line 25
-    iput-object v2, p0, LX/2z6;->A01:Ljava/nio/ByteOrder;
-
-    .line 26
-    .line 27
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00(I)V
-    .locals 8
-
-    .line 0
-    const/4 v7, 0x0
-
-    .line 1
-    const/4 v6, 0x0
-
-    .line 2
-    :goto_0
-    if-ge v6, p1, :cond_2
-
-    .line 3
-    .line 4
-    iget-object v5, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 5
-    .line 6
-    sub-int v4, p1, v6
-
-    .line 7
-    .line 8
-    int-to-long v0, v4
-
-    .line 9
-    invoke-virtual {v5, v0, v1}, Ljava/io/InputStream;->skip(J)J
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-wide v2
-
-    .line 13
-    long-to-int v1, v2
+    const-string v3, "DOWNLOAD_REQUESTED"
 
     .line 14
-    if-gtz v1, :cond_1
-
     .line 15
+    const/4 v2, 0x1
+
     .line 16
-    iget-object v1, p0, LX/2z6;->A02:[B
+    const-string/jumbo v1, "offline_video_download_requested"
 
     .line 17
     .line 18
-    const/16 v0, 0x2000
-
     .line 19
+    new-instance v0, LX/2z6;
+
     .line 20
-    if-nez v1, :cond_0
-
     .line 21
-    .line 22
-    new-array v1, v0, [B
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 22
     .line 23
     .line 24
-    iput-object v1, p0, LX/2z6;->A02:[B
+    sput-object v0, LX/2z6;->DOWNLOAD_REQUESTED:LX/2z6;
 
     .line 25
     .line 26
-    :cond_0
-    invoke-static {v0, v4}, Ljava/lang/Math;->min(II)I
+    const-string v3, "DOWNLOAD_QUEUED"
 
     .line 27
     .line 28
+    const/4 v2, 0x2
+
     .line 29
-    move-result v0
+    const-string/jumbo v1, "offline_video_download_queued"
 
     .line 30
-    invoke-virtual {v5, v1, v7, v0}, Ljava/io/InputStream;->read([BII)I
-
     .line 31
     .line 32
-    .line 33
-    move-result v1
+    new-instance v0, LX/2z6;
 
+    .line 33
     .line 34
-    const/4 v0, -0x1
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 35
-    if-ne v1, v0, :cond_1
-
     .line 36
     .line 37
-    const-string v1, "Reached EOF while skipping "
+    sput-object v0, LX/2z6;->DOWNLOAD_QUEUED:LX/2z6;
 
     .line 38
     .line 39
-    const-string v0, " bytes."
+    const-string v3, "DOWNLOAD_STARTED"
 
     .line 40
     .line 41
-    invoke-static {v1, v0, p1}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    const/4 v2, 0x3
 
     .line 42
+    const-string/jumbo v1, "offline_video_download_started"
+
     .line 43
     .line 44
-    move-result-object v1
-
     .line 45
-    new-instance v0, Ljava/io/EOFException;
+    new-instance v0, LX/2z6;
 
     .line 46
     .line 47
-    invoke-direct {v0, v1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 48
     .line 49
     .line 50
-    throw v0
-
-    .line 51
-    :cond_1
-    add-int/2addr v6, v1
-
-    .line 52
-    goto :goto_0
-
-    .line 53
-    :cond_2
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 54
-    .line 55
-    add-int/2addr v0, v6
-
-    .line 56
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 57
-    .line 58
-    return-void
-.end method
-
-.method public final available()I
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final mark(I)V
-    .locals 1
-
-    .line 0
-    const-string v0, "Mark is currently unsupported"
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    throw v0
-.end method
-
-.method public final read()I
-    .locals 1
-
-    .line 268435456
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 268435457
-    .line 268435458
-    add-int/lit8 v0, v0, 0x1
-
-    .line 268435459
-    .line 268435460
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 268435461
-    .line 268435462
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 268435463
-    .line 268435464
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 268435465
-    .line 268435466
-    .line 268435467
-    move-result v0
-
-    .line 268435468
-    return v0
-.end method
-
-.method public final read([BII)I
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v1
-
-    .line 6
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 7
-    .line 8
-    add-int/2addr v0, v1
-
-    .line 9
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 10
-    .line 11
-    return v1
-.end method
-
-.method public final readBoolean()Z
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, 0x1
-
-    .line 3
-    .line 4
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/io/DataInputStream;->readBoolean()Z
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    return v0
-.end method
-
-.method public final readByte()B
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, 0x1
-
-    .line 3
-    .line 4
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    if-ltz v0, :cond_0
-
-    .line 13
-    .line 14
-    int-to-byte v0, v0
-
-    .line 15
-    return v0
-
-    .line 16
-    :cond_0
-    new-instance v0, Ljava/io/EOFException;
-
-    .line 17
-    .line 18
-    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
-
-    .line 19
-    .line 20
-    .line 21
-    throw v0
-.end method
-
-.method public final readChar()C
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, 0x2
-
-    .line 3
-    .line 4
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/io/DataInputStream;->readChar()C
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    return v0
-.end method
-
-.method public final readDouble()D
-    .locals 2
-
-    .line 0
-    invoke-virtual {p0}, LX/2z6;->readLong()J
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-wide v0
-
-    .line 4
-    invoke-static {v0, v1}, Ljava/lang/Double;->longBitsToDouble(J)D
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-wide v0
-
-    .line 8
-    return-wide v0
-.end method
-
-.method public final readFloat()F
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, LX/2z6;->readInt()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-.end method
-
-.method public final readFully([B)V
-    .locals 2
-
-    .line 0
-    iget v1, p0, LX/2z6;->A00:I
-
-    .line 1
-    .line 2
-    array-length v0, p1
-
-    .line 3
-    add-int/2addr v1, v0
-
-    .line 4
-    iput v1, p0, LX/2z6;->A00:I
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0, p1}, Ljava/io/DataInputStream;->readFully([B)V
-
-    .line 9
-    .line 10
-    .line 11
-    return-void
-.end method
-
-.method public final readFully([BII)V
-    .locals 1
-
-    .line 268435456
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 268435457
-    .line 268435458
-    add-int/2addr v0, p3
-
-    .line 268435459
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 268435460
-    .line 268435461
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 268435462
-    .line 268435463
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/DataInputStream;->readFully([BII)V
-
-    .line 268435464
-    .line 268435465
-    .line 268435466
-    return-void
-.end method
-
-.method public final readInt()I
-    .locals 7
-
-    .line 0
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, 0x4
-
-    .line 3
-    .line 4
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v6
-
-    .line 12
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v5
-
-    .line 16
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 17
-    .line 18
-    .line 19
-    move-result v4
-
-    .line 20
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 21
-    .line 22
-    .line 23
-    move-result v3
-
-    .line 24
-    or-int v0, v6, v5
-
-    .line 25
-    .line 26
-    or-int/2addr v0, v4
-
-    .line 27
-    or-int/2addr v0, v3
-
-    .line 28
-    if-ltz v0, :cond_2
-
-    .line 29
-    .line 30
-    iget-object v2, p0, LX/2z6;->A01:Ljava/nio/ByteOrder;
-
-    .line 31
-    .line 32
-    sget-object v0, LX/2z6;->A05:Ljava/nio/ByteOrder;
-
-    .line 33
-    .line 34
-    if-ne v2, v0, :cond_0
-
-    .line 35
-    .line 36
-    shl-int/lit8 v1, v3, 0x18
-
-    .line 37
-    .line 38
-    shl-int/lit8 v0, v4, 0x10
-
-    .line 39
-    .line 40
-    add-int/2addr v1, v0
-
-    .line 41
-    shl-int/lit8 v0, v5, 0x8
-
-    .line 42
-    .line 43
-    add-int/2addr v1, v0
-
-    .line 44
-    add-int/2addr v1, v6
-
-    .line 45
-    return v1
-
-    .line 46
-    :cond_0
-    sget-object v0, LX/2z6;->A04:Ljava/nio/ByteOrder;
-
-    .line 47
-    .line 48
-    if-ne v2, v0, :cond_1
-
-    .line 49
-    .line 50
-    shl-int/lit8 v1, v6, 0x18
+    sput-object v0, LX/2z6;->DOWNLOAD_STARTED:LX/2z6;
 
     .line 51
     .line 52
-    shl-int/lit8 v0, v5, 0x10
+    const-string v3, "DOWNLOAD_STOPPED"
 
     .line 53
     .line 54
-    add-int/2addr v1, v0
+    const/4 v2, 0x4
 
     .line 55
-    shl-int/lit8 v0, v4, 0x8
+    const-string/jumbo v1, "offline_video_download_stopped"
 
     .line 56
     .line 57
-    add-int/2addr v1, v0
-
     .line 58
-    add-int/2addr v1, v3
+    new-instance v0, LX/2z6;
 
     .line 59
-    return v1
-
     .line 60
-    :cond_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 61
     .line 62
     .line 63
-    move-result-object v1
+    sput-object v0, LX/2z6;->DOWNLOAD_STOPPED:LX/2z6;
 
     .line 64
-    const-string v0, "Invalid byte order: "
-
     .line 65
+    const-string v3, "DOWNLOAD_PAUSED"
+
     .line 66
-    invoke-static {v2, v0, v1}, LX/0Yc;->A02(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/io/IOException;
-
     .line 67
+    const/4 v2, 0x5
+
     .line 68
+    const-string/jumbo v1, "offline_video_download_paused"
+
     .line 69
-    move-result-object v0
-
     .line 70
-    throw v0
-
     .line 71
-    :cond_2
-    new-instance v0, Ljava/io/EOFException;
+    new-instance v0, LX/2z6;
 
     .line 72
     .line 73
-    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 74
     .line 75
     .line 76
-    throw v0
-.end method
-
-.method public final readLine()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return-object v0
-.end method
-
-.method public final readLong()J
-    .locals 17
-
-    .line 0
-    move-object/from16 v1, p0
-
-    .line 1
-    .line 2
-    iget v0, v1, LX/2z6;->A00:I
-
-    .line 3
-    .line 4
-    add-int/lit8 v0, v0, 0x8
-
-    .line 5
-    .line 6
-    iput v0, v1, LX/2z6;->A00:I
-
-    .line 7
-    .line 8
-    iget-object v0, v1, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 9
-    .line 10
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v9
-
-    .line 14
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v11
-
-    .line 18
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 19
-    .line 20
-    .line 21
-    move-result v10
-
-    .line 22
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 23
-    .line 24
-    .line 25
-    move-result v8
-
-    .line 26
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 27
-    .line 28
-    .line 29
-    move-result v7
-
-    .line 30
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 31
-    .line 32
-    .line 33
-    move-result v6
-
-    .line 34
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 35
-    .line 36
-    .line 37
-    move-result v2
-
-    .line 38
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 39
-    .line 40
-    .line 41
-    move-result v5
-
-    .line 42
-    or-int v0, v9, v11
-
-    .line 43
-    .line 44
-    or-int/2addr v0, v10
-
-    .line 45
-    or-int/2addr v0, v8
-
-    .line 46
-    or-int/2addr v0, v7
-
-    .line 47
-    or-int/2addr v0, v6
-
-    .line 48
-    or-int/2addr v0, v2
-
-    .line 49
-    or-int/2addr v0, v5
-
-    .line 50
-    if-ltz v0, :cond_2
-
-    .line 51
-    .line 52
-    iget-object v3, v1, LX/2z6;->A01:Ljava/nio/ByteOrder;
-
-    .line 53
-    .line 54
-    sget-object v0, LX/2z6;->A05:Ljava/nio/ByteOrder;
-
-    .line 55
-    .line 56
-    const/16 v16, 0x10
-
-    .line 57
-    .line 58
-    const/16 v15, 0x18
-
-    .line 59
-    .line 60
-    const/16 v14, 0x20
-
-    .line 61
-    .line 62
-    const/16 v13, 0x28
-
-    .line 63
-    .line 64
-    const/16 v12, 0x30
-
-    .line 65
-    .line 66
-    const/16 v1, 0x38
-
-    .line 67
-    .line 68
-    if-ne v3, v0, :cond_0
-
-    .line 69
-    .line 70
-    int-to-long v3, v5
-
-    .line 71
-    shl-long/2addr v3, v1
-
-    .line 72
-    int-to-long v0, v2
-
-    .line 73
-    shl-long/2addr v0, v12
-
-    .line 74
-    add-long/2addr v3, v0
-
-    .line 75
-    int-to-long v0, v6
-
-    .line 76
-    shl-long/2addr v0, v13
+    sput-object v0, LX/2z6;->DOWNLOAD_PAUSED:LX/2z6;
 
     .line 77
-    add-long/2addr v3, v0
-
     .line 78
-    int-to-long v0, v7
+    const-string v3, "DOWNLOAD_COMPLETED"
 
     .line 79
-    shl-long/2addr v0, v14
-
     .line 80
-    add-long/2addr v3, v0
+    const/4 v2, 0x6
 
     .line 81
-    int-to-long v0, v8
+    const-string/jumbo v1, "offline_video_download_completed"
 
     .line 82
-    shl-long/2addr v0, v15
-
     .line 83
-    add-long/2addr v3, v0
-
     .line 84
-    int-to-long v0, v10
+    new-instance v0, LX/2z6;
 
     .line 85
-    shl-long v0, v0, v16
-
     .line 86
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 87
-    add-long/2addr v3, v0
-
     .line 88
-    int-to-long v1, v11
-
     .line 89
-    const/16 v0, 0x8
+    sput-object v0, LX/2z6;->DOWNLOAD_COMPLETED:LX/2z6;
 
     .line 90
     .line 91
-    shl-long/2addr v1, v0
+    const-string v3, "DOWNLOAD_ABORTED"
 
     .line 92
-    add-long/2addr v3, v1
-
     .line 93
-    int-to-long v0, v9
+    const/4 v2, 0x7
 
     .line 94
-    :goto_0
-    add-long/2addr v3, v0
+    const-string/jumbo v1, "offline_video_download_aborted"
 
     .line 95
-    return-wide v3
-
     .line 96
-    :cond_0
-    sget-object v0, LX/2z6;->A04:Ljava/nio/ByteOrder;
-
     .line 97
+    new-instance v0, LX/2z6;
+
     .line 98
-    if-ne v3, v0, :cond_1
-
     .line 99
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 100
-    int-to-long v3, v9
-
     .line 101
-    shl-long/2addr v3, v1
-
     .line 102
-    int-to-long v0, v11
+    sput-object v0, LX/2z6;->DOWNLOAD_ABORTED:LX/2z6;
 
     .line 103
-    shl-long/2addr v0, v12
-
     .line 104
-    add-long/2addr v3, v0
+    const-string v3, "DOWNLOAD_CANCELLED"
 
     .line 105
-    int-to-long v0, v10
-
     .line 106
-    shl-long/2addr v0, v13
+    const/16 v2, 0x8
 
     .line 107
-    add-long/2addr v3, v0
-
     .line 108
-    int-to-long v0, v8
+    const-string/jumbo v1, "offline_video_download_cancelled"
 
     .line 109
-    shl-long/2addr v0, v14
-
     .line 110
-    add-long/2addr v3, v0
-
     .line 111
-    int-to-long v0, v7
+    new-instance v0, LX/2z6;
 
     .line 112
-    shl-long/2addr v0, v15
-
     .line 113
-    add-long/2addr v3, v0
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 114
-    int-to-long v0, v6
-
     .line 115
-    shl-long v0, v0, v16
-
     .line 116
-    .line 117
-    add-long/2addr v3, v0
+    sput-object v0, LX/2z6;->DOWNLOAD_CANCELLED:LX/2z6;
 
+    .line 117
     .line 118
-    int-to-long v1, v2
+    const-string v3, "DOWNLOAD_DELETED"
 
     .line 119
-    const/16 v0, 0x8
-
     .line 120
-    .line 121
-    shl-long/2addr v1, v0
+    const/16 v2, 0x9
 
+    .line 121
     .line 122
-    add-long/2addr v3, v1
+    const-string/jumbo v1, "offline_video_download_deleted"
 
     .line 123
-    int-to-long v0, v5
-
     .line 124
-    goto :goto_0
-
     .line 125
-    :cond_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    new-instance v0, LX/2z6;
 
     .line 126
     .line 127
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 128
-    move-result-object v1
-
     .line 129
-    const-string v0, "Invalid byte order: "
-
     .line 130
-    .line 131
-    invoke-static {v3, v0, v1}, LX/0Yc;->A02(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/io/IOException;
+    sput-object v0, LX/2z6;->DOWNLOAD_DELETED:LX/2z6;
 
+    .line 131
     .line 132
+    const-string v3, "DOWNLOAD_FAILED"
+
     .line 133
     .line 134
-    move-result-object v0
+    const/16 v2, 0xa
 
     .line 135
-    throw v0
-
     .line 136
-    :cond_2
-    new-instance v0, Ljava/io/EOFException;
+    const-string/jumbo v1, "offline_video_download_failed"
 
     .line 137
     .line 138
-    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
-
     .line 139
+    new-instance v0, LX/2z6;
+
     .line 140
     .line 141
-    throw v0
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 142
+    .line 143
+    .line 144
+    sput-object v0, LX/2z6;->DOWNLOAD_FAILED:LX/2z6;
+
+    .line 145
+    .line 146
+    const-string v3, "PLAYBACK_BLOCKED"
+
+    .line 147
+    .line 148
+    const/16 v2, 0xb
+
+    .line 149
+    .line 150
+    const-string/jumbo v1, "offline_video_playback_blocked"
+
+    .line 151
+    .line 152
+    .line 153
+    new-instance v0, LX/2z6;
+
+    .line 154
+    .line 155
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 156
+    .line 157
+    .line 158
+    sput-object v0, LX/2z6;->PLAYBACK_BLOCKED:LX/2z6;
+
+    .line 159
+    .line 160
+    const-string v3, "DOWNLOAD_PLUGIN_LOAD"
+
+    .line 161
+    .line 162
+    const/16 v2, 0xc
+
+    .line 163
+    .line 164
+    const-string/jumbo v1, "offline_video_download_plugin_load"
+
+    .line 165
+    .line 166
+    .line 167
+    new-instance v0, LX/2z6;
+
+    .line 168
+    .line 169
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 170
+    .line 171
+    .line 172
+    sput-object v0, LX/2z6;->DOWNLOAD_PLUGIN_LOAD:LX/2z6;
+
+    .line 173
+    .line 174
+    const-string v3, "DOWNLOAD_FAILED_NO_SPACE"
+
+    .line 175
+    .line 176
+    const/16 v2, 0xd
+
+    .line 177
+    .line 178
+    const-string/jumbo v1, "offline_video_download_failed_nospace"
+
+    .line 179
+    .line 180
+    .line 181
+    new-instance v0, LX/2z6;
+
+    .line 182
+    .line 183
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 184
+    .line 185
+    .line 186
+    sput-object v0, LX/2z6;->DOWNLOAD_FAILED_NO_SPACE:LX/2z6;
+
+    .line 187
+    .line 188
+    const-string v3, "BUFFERING_OPTION_SHOWN"
+
+    .line 189
+    .line 190
+    const/16 v2, 0xe
+
+    .line 191
+    .line 192
+    const-string/jumbo v1, "offline_video_buffering_option_shown"
+
+    .line 193
+    .line 194
+    .line 195
+    new-instance v0, LX/2z6;
+
+    .line 196
+    .line 197
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 198
+    .line 199
+    .line 200
+    sput-object v0, LX/2z6;->BUFFERING_OPTION_SHOWN:LX/2z6;
+
+    .line 201
+    .line 202
+    const-string v3, "BUFFERED_VIDEO_PLAYBACK"
+
+    .line 203
+    .line 204
+    const/16 v2, 0xf
+
+    .line 205
+    .line 206
+    const-string/jumbo v1, "offline_video_buffered_video_playback"
+
+    .line 207
+    .line 208
+    .line 209
+    new-instance v0, LX/2z6;
+
+    .line 210
+    .line 211
+    invoke-direct {v0, v3, v2, v1}, LX/2z6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 212
+    .line 213
+    .line 214
+    sput-object v0, LX/2z6;->BUFFERED_VIDEO_PLAYBACK:LX/2z6;
+
+    .line 215
+    .line 216
+    invoke-static {}, LX/2z6;->$values()[LX/2z6;
+
+    .line 217
+    .line 218
+    .line 219
+    move-result-object v0
+
+    .line 220
+    sput-object v0, LX/2z6;->$VALUES:[LX/2z6;
+
+    .line 221
+    .line 222
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 223
+    .line 224
+    .line 225
+    move-result-object v0
+
+    .line 226
+    sput-object v0, LX/2z6;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 227
+    .line 228
+    return-void
 .end method
 
-.method public final readShort()S
-    .locals 4
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
     .line 0
-    iget v0, p0, LX/2z6;->A00:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    add-int/lit8 v0, v0, 0x2
-
     .line 3
+    iput-object p3, p0, LX/2z6;->value:Ljava/lang/String;
+
     .line 4
-    iput v0, p0, LX/2z6;->A00:I
-
     .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v3
-
-    .line 12
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v1
-
-    .line 16
-    or-int v0, v3, v1
-
-    .line 17
-    .line 18
-    if-ltz v0, :cond_2
-
-    .line 19
-    .line 20
-    iget-object v2, p0, LX/2z6;->A01:Ljava/nio/ByteOrder;
-
-    .line 21
-    .line 22
-    sget-object v0, LX/2z6;->A05:Ljava/nio/ByteOrder;
-
-    .line 23
-    .line 24
-    if-ne v2, v0, :cond_0
-
-    .line 25
-    .line 26
-    shl-int/lit8 v0, v1, 0x8
-
-    .line 27
-    .line 28
-    add-int/2addr v0, v3
-
-    .line 29
-    :goto_0
-    int-to-short v0, v0
-
-    .line 30
-    return v0
-
-    .line 31
-    :cond_0
-    sget-object v0, LX/2z6;->A04:Ljava/nio/ByteOrder;
-
-    .line 32
-    .line 33
-    if-ne v2, v0, :cond_1
-
-    .line 34
-    .line 35
-    shl-int/lit8 v0, v3, 0x8
-
-    .line 36
-    .line 37
-    add-int/2addr v0, v1
-
-    .line 38
-    goto :goto_0
-
-    .line 39
-    :cond_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v1
-
-    .line 43
-    const-string v0, "Invalid byte order: "
-
-    .line 44
-    .line 45
-    invoke-static {v2, v0, v1}, LX/0Yc;->A02(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/io/IOException;
-
-    .line 46
-    .line 47
-    .line 48
-    move-result-object v0
-
-    .line 49
-    throw v0
-
-    .line 50
-    :cond_2
-    new-instance v0, Ljava/io/EOFException;
-
-    .line 51
-    .line 52
-    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
-
-    .line 53
-    .line 54
-    .line 55
-    throw v0
+    return-void
 .end method
 
-.method public final readUTF()Ljava/lang/String;
+.method public static getEntries()Lkotlin/enums/EnumEntries;
     .locals 1
 
-    .line 0
-    iget v0, p0, LX/2z6;->A00:I
+    sget-object v0, LX/2z6;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, 0x2
-
-    .line 3
-    .line 4
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
     return-object v0
 .end method
 
-.method public final readUnsignedByte()I
+.method public static valueOf(Ljava/lang/String;)LX/2z6;
     .locals 1
 
-    .line 0
-    iget v0, p0, LX/2z6;->A00:I
+    const-class v0, LX/2z6;
 
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 3
-    .line 4
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedByte()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    return v0
-.end method
-
-.method public final readUnsignedShort()I
-    .locals 4
-
-    .line 0
-    iget v0, p0, LX/2z6;->A00:I
-
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, 0x2
-
-    .line 3
-    .line 4
-    iput v0, p0, LX/2z6;->A00:I
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/2z6;->A03:Ljava/io/DataInputStream;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v3
-
-    .line 12
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v1
-
-    .line 16
-    or-int v0, v3, v1
-
-    .line 17
-    .line 18
-    if-ltz v0, :cond_2
-
-    .line 19
-    .line 20
-    iget-object v2, p0, LX/2z6;->A01:Ljava/nio/ByteOrder;
-
-    .line 21
-    .line 22
-    sget-object v0, LX/2z6;->A05:Ljava/nio/ByteOrder;
-
-    .line 23
-    .line 24
-    if-ne v2, v0, :cond_0
-
-    .line 25
-    .line 26
-    shl-int/lit8 v0, v1, 0x8
-
-    .line 27
-    .line 28
-    add-int/2addr v0, v3
-
-    .line 29
-    return v0
-
-    .line 30
-    :cond_0
-    sget-object v0, LX/2z6;->A04:Ljava/nio/ByteOrder;
-
-    .line 31
-    .line 32
-    if-ne v2, v0, :cond_1
-
-    .line 33
-    .line 34
-    shl-int/lit8 v0, v3, 0x8
-
-    .line 35
-    .line 36
-    add-int/2addr v0, v1
-
-    .line 37
-    return v0
-
-    .line 38
-    :cond_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v1
-
-    .line 42
-    const-string v0, "Invalid byte order: "
-
-    .line 43
-    .line 44
-    invoke-static {v2, v0, v1}, LX/0Yc;->A02(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/io/IOException;
-
-    .line 45
-    .line 46
-    .line 47
     move-result-object v0
 
-    .line 48
-    throw v0
+    check-cast v0, LX/2z6;
 
-    .line 49
-    :cond_2
-    new-instance v0, Ljava/io/EOFException;
-
-    .line 50
-    .line 51
-    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
-
-    .line 52
-    .line 53
-    .line 54
-    throw v0
+    return-object v0
 .end method
 
-.method public final reset()V
+.method public static values()[LX/2z6;
     .locals 1
 
-    .line 0
-    const-string v0, "Reset is currently unsupported"
+    sget-object v0, LX/2z6;->$VALUES:[LX/2z6;
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
-    throw v0
-.end method
+    check-cast v0, [LX/2z6;
 
-.method public final skipBytes(I)I
-    .locals 1
-
-    .line 0
-    const-string/jumbo v0, "skipBytes is currently unsupported"
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    throw v0
+    return-object v0
 .end method

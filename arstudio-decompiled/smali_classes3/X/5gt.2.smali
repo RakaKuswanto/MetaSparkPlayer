@@ -1,632 +1,325 @@
-.class public final LX/5gt;
-.super Ljava/lang/Object;
+.class public abstract LX/5gT;
+.super LX/5gn;
 .source ""
+
+# interfaces
+.implements LX/5gz;
+.implements LX/5h8;
 
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:I
-
-.field public final A02:I
-
-.field public final A03:I
-
-.field public final A04:Ljava/lang/String;
+.field public A00:LX/5gS;
 
 
 # direct methods
-.method public constructor <init>(LX/5gu;)V
-    .locals 6
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/5gn;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iget v3, p1, LX/5gu;->A02:I
-
-    .line 4
-    .line 5
-    iput v3, p0, LX/5gt;->A03:I
-
-    .line 6
-    .line 7
-    iget v2, p1, LX/5gu;->A01:I
-
-    .line 8
-    .line 9
-    iput v2, p0, LX/5gt;->A02:I
-
-    .line 10
-    .line 11
-    iget v1, p1, LX/5gu;->A00:I
-
-    .line 12
-    .line 13
-    iput v1, p0, LX/5gt;->A01:I
-
-    .line 14
-    .line 15
-    iget-object v0, p1, LX/5gu;->A03:Ljava/lang/String;
-
-    .line 16
-    .line 17
-    iput-object v0, p0, LX/5gt;->A04:Ljava/lang/String;
-
-    .line 18
-    .line 19
-    int-to-float v5, v1
-
-    .line 20
-    const v4, 0x989680
-
-    .line 21
-    .line 22
-    .line 23
-    mul-int/2addr v3, v2
-
-    .line 24
-    int-to-double v2, v3
-
-    .line 25
-    const-wide v0, 0x3fb1eb851eb851ecL    # 0.07
-
-    .line 26
-    .line 27
-    .line 28
-    .line 29
-    .line 30
-    mul-double/2addr v2, v0
-
-    .line 31
-    float-to-double v0, v5
-
-    .line 32
-    mul-double/2addr v2, v0
-
-    .line 33
-    const/4 v0, 0x2
-
-    .line 34
-    int-to-double v0, v0
-
-    .line 35
-    mul-double/2addr v2, v0
-
-    .line 36
-    double-to-int v0, v2
-
-    .line 37
-    invoke-static {v0, v4}, Ljava/lang/Math;->min(II)I
-
-    .line 38
-    .line 39
-    .line 40
-    move-result v0
-
-    .line 41
-    iput v0, p0, LX/5gt;->A00:I
-
-    .line 42
-    .line 43
     return-void
-.end method
-
-.method public static A00(Landroid/media/MediaFormat;LX/5gt;)Z
-    .locals 3
-
-    .line 0
-    const-string v1, "color-format"
-
-    .line 1
-    .line 2
-    const v0, 0x7f000789
-
-    .line 3
-    .line 4
-    .line 5
-    invoke-virtual {p0, v1, v0}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    iget v1, p1, LX/5gt;->A00:I
-
-    .line 9
-    .line 10
-    const-string v0, "bitrate"
-
-    .line 11
-    .line 12
-    invoke-virtual {p0, v0, v1}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 13
-    .line 14
-    .line 15
-    iget v1, p1, LX/5gt;->A01:I
-
-    .line 16
-    .line 17
-    const-string v0, "frame-rate"
-
-    .line 18
-    .line 19
-    invoke-virtual {p0, v0, v1}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 20
-    .line 21
-    .line 22
-    const/4 v1, 0x5
-
-    .line 23
-    const-string v0, "i-frame-interval"
-
-    .line 24
-    .line 25
-    invoke-virtual {p0, v0, v1}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 26
-    .line 27
-    .line 28
-    const-string v0, "channel-count"
-
-    .line 29
-    .line 30
-    const/4 v2, 0x1
-
-    .line 31
-    invoke-virtual {p0, v0, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 32
-    .line 33
-    .line 34
-    const-string v1, "max-input-size"
-
-    .line 35
-    .line 36
-    const/4 v0, 0x0
-
-    .line 37
-    invoke-virtual {p0, v1, v0}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 38
-    .line 39
-    .line 40
-    return v2
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final AGO()LX/5gu;
+    .locals 1
 
-    .line 0
-    const/4 v2, 0x1
-
-    .line 1
-    if-eq p0, p1, :cond_2
-
-    .line 2
-    .line 3
-    instance-of v1, p1, LX/5gt;
-
-    .line 4
-    .line 5
     const/4 v0, 0x0
 
-    .line 6
-    if-nez v1, :cond_0
-
-    .line 7
-    .line 8
-    return v0
-
-    .line 9
-    :cond_0
-    check-cast p1, LX/5gt;
-
-    .line 10
-    .line 11
-    iget v1, p0, LX/5gt;->A03:I
-
-    .line 12
-    .line 13
-    iget v0, p1, LX/5gt;->A03:I
-
-    .line 14
-    .line 15
-    if-ne v1, v0, :cond_1
-
-    .line 16
-    .line 17
-    iget v1, p0, LX/5gt;->A02:I
-
-    .line 18
-    .line 19
-    iget v0, p1, LX/5gt;->A02:I
-
-    .line 20
-    .line 21
-    if-ne v1, v0, :cond_1
-
-    .line 22
-    .line 23
-    iget v1, p0, LX/5gt;->A00:I
-
-    .line 24
-    .line 25
-    iget v0, p1, LX/5gt;->A00:I
-
-    .line 26
-    .line 27
-    if-ne v1, v0, :cond_1
-
-    .line 28
-    .line 29
-    iget v1, p0, LX/5gt;->A01:I
-
-    .line 30
-    .line 31
-    iget v0, p1, LX/5gt;->A01:I
-
-    .line 32
-    .line 33
-    if-ne v1, v0, :cond_1
-
-    .line 34
-    .line 35
-    iget-object v1, p0, LX/5gt;->A04:Ljava/lang/String;
-
-    .line 36
-    .line 37
-    iget-object v0, p1, LX/5gt;->A04:Ljava/lang/String;
-
-    .line 38
-    .line 39
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 40
-    .line 41
-    .line 42
-    move-result v0
-
-    .line 43
-    if-eqz v0, :cond_1
-
-    .line 44
-    .line 45
-    return v2
-
-    .line 46
-    :cond_1
-    const/4 v2, 0x0
-
-    .line 47
-    :cond_2
-    return v2
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final AOP()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final dispose()V
+    .locals 4
 
     .line 0
-    iget v0, p0, LX/5gt;->A03:I
+    iget-object v3, p0, LX/5gT;->A00:LX/5gS;
 
     .line 1
     .line 2
-    mul-int/lit8 v1, v0, 0x1f
+    if-nez v3, :cond_0
 
     .line 3
     .line 4
-    iget v0, p0, LX/5gt;->A02:I
+    const-string v0, "job"
 
     .line 5
     .line 6
-    add-int/2addr v1, v0
+    invoke-static {v0}, LX/0WV;->A0F(Ljava/lang/String;)V
 
     .line 7
-    mul-int/lit8 v1, v1, 0x1f
-
     .line 8
     .line 9
-    iget v0, p0, LX/5gt;->A00:I
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 10
     .line 11
-    add-int/2addr v1, v0
-
     .line 12
-    mul-int/lit8 v1, v1, 0x1f
+    move-result-object v0
 
     .line 13
+    throw v0
+
     .line 14
-    iget v0, p0, LX/5gt;->A01:I
+    :cond_0
+    invoke-virtual {v3}, LX/5gS;->A0A()Ljava/lang/Object;
 
     .line 15
     .line 16
-    add-int/2addr v1, v0
-
     .line 17
-    mul-int/lit8 v0, v1, 0x1f
-
-    .line 18
-    .line 19
-    add-int/lit8 v0, v0, 0x5
-
-    .line 20
-    .line 21
-    mul-int/lit8 v1, v0, 0x1f
-
-    .line 22
-    .line 23
-    iget-object v0, p0, LX/5gt;->A04:Ljava/lang/String;
-
-    .line 24
-    .line 25
-    invoke-static {v0, v1}, LX/001;->A02(Ljava/lang/String;I)I
-
-    .line 26
-    .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    add-int/lit8 v0, v0, 0x2
-
-    .line 30
-    .line 31
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 32
-    .line 33
-    add-int/lit8 v0, v0, 0x1
-
-    .line 34
-    .line 35
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 36
-    .line 37
-    add-int/lit8 v0, v0, 0x3
-
-    .line 38
-    .line 39
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 1
-    .line 2
-    .line 3
     move-result-object v2
 
-    .line 4
-    const-string v0, "VideoEncoderConfig{width="
-
-    .line 5
-    .line 6
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 7
-    .line 8
-    .line 9
-    iget v0, p0, LX/5gt;->A03:I
-
-    .line 10
-    .line 11
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 12
-    .line 13
-    .line 14
-    const-string v0, ", height="
-
-    .line 15
-    .line 16
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 17
     .line 18
+    instance-of v0, v2, LX/5gT;
+
     .line 19
-    iget v0, p0, LX/5gt;->A02:I
-
     .line 20
-    .line 21
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_2
 
+    .line 21
     .line 22
+    if-ne v2, p0, :cond_1
+
     .line 23
     .line 24
-    const-string v0, ", bitRate="
+    sget-object v1, LX/5gS;->A01:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     .line 25
     .line 26
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, LX/5gk;->A00:LX/5gl;
 
     .line 27
     .line 28
-    .line 29
-    iget v0, p0, LX/5gt;->A00:I
+    invoke-static {v3, v2, v0, v1}, LX/5by;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)Z
 
+    .line 29
     .line 30
     .line 31
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v0
 
     .line 32
+    if-eqz v0, :cond_0
+
     .line 33
     .line 34
-    const-string v0, ", frameRate="
+    :cond_1
+    return-void
 
     .line 35
-    .line 36
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    instance-of v0, v2, LX/5gz;
 
+    .line 36
     .line 37
+    if-eqz v0, :cond_1
+
     .line 38
     .line 39
-    iget v0, p0, LX/5gt;->A01:I
+    check-cast v2, LX/5gz;
 
     .line 40
     .line 41
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-interface {v2}, LX/5gz;->AGO()LX/5gu;
 
     .line 42
     .line 43
     .line 44
-    const-string v0, ", iFrameIntervalS="
+    move-result-object v0
 
     .line 45
-    .line 46
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
+    .line 46
     .line 47
+    :cond_3
+    invoke-virtual {p0}, LX/5gV;->A01()Ljava/lang/Object;
+
     .line 48
     .line 49
-    const/4 v0, 0x5
-
     .line 50
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v3
 
     .line 51
+    instance-of v0, v3, LX/5gj;
+
     .line 52
     .line 53
-    const-string v0, ", colorRange="
+    if-nez v0, :cond_1
 
     .line 54
     .line 55
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v3, p0, :cond_1
 
     .line 56
     .line 57
-    .line 58
-    const/4 v0, 0x2
+    const-string v0, "null cannot be cast to non-null type kotlinx.coroutines.internal.LockFreeLinkedListNode{ kotlinx.coroutines.internal.LockFreeLinkedListKt.Node }"
 
+    .line 58
     .line 59
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v3, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 60
     .line 61
     .line 62
-    const-string v0, ", colorStandard="
+    move-object v2, v3
 
     .line 63
-    .line 64
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v2, LX/5gV;
 
+    .line 64
     .line 65
+    sget-object v0, LX/5gV;->A02:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
     .line 66
     .line 67
-    const/4 v0, 0x1
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 68
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
     .line 69
     .line 70
+    move-result-object v1
+
     .line 71
-    const-string v0, ", colorTransfer="
+    if-nez v1, :cond_4
 
     .line 72
     .line 73
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, LX/5gj;
 
     .line 74
     .line 75
+    invoke-direct {v1, v2}, LX/5gj;-><init>(LX/5gV;)V
+
     .line 76
-    const/4 v0, 0x3
-
     .line 77
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
     .line 78
+    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
     .line 79
     .line 80
-    const-string v0, ", profile=\'"
-
     .line 81
-    .line 82
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_4
+    sget-object v0, LX/5gV;->A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
+    .line 82
     .line 83
+    invoke-static {p0, v3, v1, v0}, LX/5by;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)Z
+
     .line 84
     .line 85
-    iget-object v0, p0, LX/5gt;->A04:Ljava/lang/String;
-
     .line 86
+    move-result v0
+
     .line 87
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_3
 
     .line 88
     .line 89
-    .line 90
-    const/16 v0, 0x27
+    invoke-static {v2}, LX/5gV;->A00(LX/5gV;)LX/5gV;
 
+    .line 90
     .line 91
     .line 92
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    .line 93
-    .line 94
-    .line 95
-    const-string v0, ", configureBFrames="
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    .line 96
-    .line 97
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-    .line 98
-    .line 99
-    .line 100
-    const/4 v1, 0x0
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
 
-    .line 101
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 4
+    invoke-static {v1, p0}, LX/431;->A1N(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
 
-    .line 102
-    .line 103
-    .line 104
-    const-string v0, ", explicitlySetBaseline="
+    .line 5
+    .line 6
+    .line 7
+    const/16 v0, 0x40
 
-    .line 105
-    .line 106
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 8
+    .line 9
+    invoke-static {p0, v1, v0}, LX/431;->A1I(Ljava/lang/Object;Ljava/lang/StringBuilder;C)V
 
-    .line 107
-    .line 108
-    .line 109
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 10
+    .line 11
+    .line 12
+    const-string v0, "[job@"
 
-    .line 110
-    .line 111
-    .line 112
-    const-string v0, ", explicitlySetColorEncoding="
+    .line 13
+    .line 14
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 113
-    .line 114
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 15
+    .line 16
+    .line 17
+    iget-object v0, p0, LX/5gT;->A00:LX/5gS;
 
-    .line 115
-    .line 116
-    .line 117
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 18
+    .line 19
+    if-eqz v0, :cond_0
 
-    .line 118
-    .line 119
-    .line 120
-    invoke-static {v2}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 20
+    .line 21
+    invoke-static {v0}, LX/434;->A18(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 121
-    .line 122
-    .line 123
+    .line 22
+    .line 23
+    .line 24
     move-result-object v0
 
-    .line 124
+    .line 25
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 26
+    .line 27
+    .line 28
+    invoke-static {v1}, LX/431;->A0i(Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
     return-object v0
+
+    .line 33
+    :cond_0
+    const-string v0, "job"
+
+    .line 34
+    .line 35
+    invoke-static {v0}, LX/0WV;->A0F(Ljava/lang/String;)V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    throw v0
 .end method

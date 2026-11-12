@@ -1,4 +1,4 @@
-.class public Lcom/facebook/video/heroplayer/service/HeroKeepAliveService;
+.class public final Lcom/facebook/video/heroplayer/service/HeroKeepAliveService;
 .super Landroid/app/Service;
 .source ""
 
@@ -17,11 +17,11 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/3i1;
+    new-instance v0, LX/3zf;
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/3i1;-><init>()V
+    invoke-direct {v0}, LX/3zf;-><init>()V
 
     .line 6
     .line 7

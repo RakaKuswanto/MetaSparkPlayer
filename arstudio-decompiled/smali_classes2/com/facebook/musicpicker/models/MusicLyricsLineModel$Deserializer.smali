@@ -18,17 +18,17 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 7
 
     .line 0
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     .line 1
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
     .line 2
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
     .line 3
     const/4 v2, 0x0
@@ -39,12 +39,12 @@
     .line 5
     .line 6
     .line 7
-    move-result-object v5
+    move-result-object v4
 
     .line 8
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 9
     .line 10
@@ -52,7 +52,7 @@
     move-result-object v6
 
     .line 12
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 13
     .line 14
@@ -60,7 +60,7 @@
 
     .line 15
     .line 16
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 17
     .line 18
@@ -82,14 +82,14 @@
     .line 26
     .line 27
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 28
     .line 29
     .line 30
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 31
     .line 32
@@ -97,7 +97,7 @@
     move-result-object v6
 
     .line 34
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 35
     .line 36
@@ -109,7 +109,7 @@
 
     .line 39
     :sswitch_0
-    const-string/jumbo v0, "start_time_in_ms"
+    const-string/jumbo v0, "end_time_in_ms"
 
     .line 40
     .line 41
@@ -126,7 +126,7 @@
 
     .line 47
     .line 48
-    invoke-virtual {p1}, LX/27m;->A0i()I
+    invoke-virtual {p1}, LX/3oD;->A0k()I
 
     .line 49
     .line 50
@@ -138,7 +138,7 @@
 
     .line 53
     :sswitch_1
-    const-string/jumbo v0, "text"
+    const-string/jumbo v0, "word_offsets"
 
     .line 54
     .line 55
@@ -155,127 +155,133 @@
 
     .line 61
     .line 62
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    const-class v0, Lcom/facebook/musicpicker/models/MusicLyricsLineWordOffsetsModel;
 
     .line 63
     .line 64
+    invoke-static {p1, v5, p2, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
     .line 65
-    move-result-object v2
-
     .line 66
-    goto :goto_0
-
     .line 67
-    :sswitch_2
-    const-string/jumbo v0, "word_offsets"
+    move-result-object v4
 
     .line 68
+    const-string/jumbo v0, "wordOffsets"
+
     .line 69
     .line 70
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 71
+    invoke-static {v4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 72
     .line 73
-    move-result v0
-
     .line 74
-    if-eqz v0, :cond_1
+    goto :goto_0
 
     .line 75
-    .line 76
-    const-class v0, Lcom/facebook/musicpicker/models/MusicLyricsLineWordOffsetsModel;
+    :sswitch_2
+    const-string/jumbo v0, "text"
 
+    .line 76
     .line 77
     .line 78
-    invoke-static {p1, v4, p2, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 79
     .line 80
     .line 81
-    move-result-object v5
+    move-result v0
 
     .line 82
-    const-string/jumbo v0, "wordOffsets"
+    if-eqz v0, :cond_1
 
     .line 83
     .line 84
-    .line 85
-    invoke-static {v0, v5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
+    .line 85
     .line 86
     .line 87
+    move-result-object v2
+
     .line 88
     goto :goto_0
 
     .line 89
     :sswitch_3
-    const-string v0, "end_time_in_ms"
+    const-string/jumbo v0, "start_time_in_ms"
 
     .line 90
     .line 91
+    .line 92
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 92
     .line 93
     .line 94
+    .line 95
     move-result v0
 
-    .line 95
+    .line 96
     if-eqz v0, :cond_1
 
-    .line 96
     .line 97
-    invoke-virtual {p1}, LX/27m;->A0i()I
-
     .line 98
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 99
     .line 100
+    .line 101
     move-result v1
 
-    .line 101
+    .line 102
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 102
+    .line 103
     :goto_1
     new-instance v0, Lcom/facebook/musicpicker/models/MusicLyricsLineModel;
 
-    .line 103
     .line 104
-    invoke-direct {v0, v5, v2, v1, v3}, Lcom/facebook/musicpicker/models/MusicLyricsLineModel;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;II)V
-
     .line 105
+    invoke-direct {v0, v4, v2, v3, v1}, Lcom/facebook/musicpicker/models/MusicLyricsLineModel;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;II)V
+
     .line 106
     .line 107
+    .line 108
     return-object v0
 
-    .line 108
+    .line 109
     :catch_0
     move-exception v1
 
-    .line 109
+    .line 110
     const-class v0, Lcom/facebook/musicpicker/models/MusicLyricsLineModel;
 
-    .line 110
     .line 111
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 112
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 113
     .line 114
-    throw v4
-
     .line 115
-    nop
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 116
+    .line 117
+    .line 118
+    move-result-object v0
+
+    .line 119
+    throw v0
+
+    .line 120
     :sswitch_data_0
     .sparse-switch
-        -0x2827e0f5 -> :sswitch_0
-        0x36452d -> :sswitch_1
-        0x671f20b -> :sswitch_2
-        0x1e3604f2 -> :sswitch_3
+        -0x2827e0f5 -> :sswitch_3
+        0x36452d -> :sswitch_2
+        0x671f20b -> :sswitch_1
+        0x1e3604f2 -> :sswitch_0
     .end sparse-switch
 .end method

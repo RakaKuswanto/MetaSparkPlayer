@@ -6,13 +6,15 @@
 # instance fields
 .field public final mConfiguration:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceConfiguration;
 
+.field public final mWrapper:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceDelegateWrapper;
+
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceConfiguration;)V
     .locals 3
 
     .line 0
-    iget-object v2, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceConfiguration;->mDelegateWrapper:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceDelegateWrapper;
+    iget-object v2, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceConfiguration;->mWrapper:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceDelegateWrapper;
 
     .line 1
     .line 2
@@ -54,13 +56,21 @@
 
     .line 20
     .line 21
-    return-void
+    iget-object v0, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceConfiguration;->mWrapper:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceDelegateWrapper;
 
     .line 22
+    .line 23
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceConfigurationHybrid;->mWrapper:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceDelegateWrapper;
+
+    .line 24
+    .line 25
+    return-void
+
+    .line 26
     :cond_0
     const/4 v0, -0x1
 
-    .line 23
+    .line 27
     goto :goto_0
 .end method
 

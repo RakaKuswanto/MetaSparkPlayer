@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5W7;
+.field public static final Companion:LX/6A8;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5W7;
+    new-instance v0, LX/6A8;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5W7;-><init>()V
+    invoke-direct {v0}, LX/6A8;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/systemfonts/SystemFontsServiceConfigurationHybrid;->Companion:LX/5W7;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/systemfonts/SystemFontsServiceConfigurationHybrid;->Companion:LX/6A8;
 
     .line 6
     .line 7
@@ -39,7 +39,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -52,20 +52,15 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v0}, LX/0PS;->A07(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;-><init>(Lcom/facebook/jni/HybridData;)V
 
     .line 9
     .line 10
     .line 11
-    invoke-direct {p0, v0}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;-><init>(Lcom/facebook/jni/HybridData;)V
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/systemfonts/SystemFontsServiceConfigurationHybrid;->configuration:Lcom/facebook/cameracore/mediapipeline/services/systemfonts/SystemFontsServiceConfiguration;
 
     .line 12
     .line 13
-    .line 14
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/systemfonts/SystemFontsServiceConfigurationHybrid;->configuration:Lcom/facebook/cameracore/mediapipeline/services/systemfonts/SystemFontsServiceConfiguration;
-
-    .line 15
-    .line 16
     return-void
 .end method
 

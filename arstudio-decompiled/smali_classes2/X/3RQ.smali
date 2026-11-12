@@ -1,46 +1,33 @@
 .class public final LX/3RQ;
-.super LX/47G;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/lang/Runnable;
+.field public A00:J
+
+.field public A01:LX/3RP;
+
+.field public A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/49M;Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;Ljava/lang/Runnable;Ljava/lang/String;)V
-    .locals 7
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    const/4 v3, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    const/4 v6, 0x1
-
     .line 2
-    move-object v0, p0
-
     .line 3
-    move-object v1, p1
+    sget-object v0, LX/3RP;->UNKNOWN:LX/3RP;
 
     .line 4
-    move-object v2, p2
-
     .line 5
-    move-object v4, p4
+    iput-object v0, p0, LX/3RQ;->A01:LX/3RP;
 
     .line 6
-    move-object v5, v3
-
     .line 7
-    invoke-direct/range {v0 .. v6}, LX/47G;-><init>(LX/49M;Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;LX/48x;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    .line 8
-    .line 9
-    .line 10
-    iput-object p3, p0, LX/3RQ;->A00:Ljava/lang/Runnable;
-
-    .line 11
-    .line 12
     return-void
 .end method

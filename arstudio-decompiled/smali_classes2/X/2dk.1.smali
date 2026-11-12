@@ -1,236 +1,376 @@
-.class public final LX/2dk;
-.super Ljava/lang/Object;
+.class public final LX/2Dk;
+.super LX/2Dg;
 .source ""
-
-# interfaces
-.implements Lcom/facebook/common/callercontext/CallerContextable;
 
 
 # static fields
-.field public static final A06:Lcom/facebook/common/callercontext/CallerContext;
-
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ThreadTileDrawableController"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultBlueServiceOperation$5"
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final synthetic A00:LX/2Dm;
 
-.field public final A01:LX/2xa;
-
-.field public final A02:LX/0OV;
-
-.field public final A03:LX/3xa;
-
-.field public final A04:LX/2qY;
-
-.field public final A05:LX/3Cl;
+.field public final synthetic A01:Lcom/facebook/fbservice/service/OperationResult;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(LX/2Dm;Lcom/facebook/fbservice/service/OperationResult;Ljava/lang/String;)V
+    .locals 1
 
     .line 0
-    const-class v3, LX/2dk;
+    const-string v0, "DefaultBlueServiceOperation-Completed"
 
     .line 1
     .line 2
-    const-string/jumbo v2, "thread_tile_view"
+    iput-object p1, p0, LX/2Dk;->A00:LX/2Dm;
 
     .line 3
     .line 4
-    .line 5
-    const-string/jumbo v1, "thread_tile"
+    iput-object p2, p0, LX/2Dk;->A01:Lcom/facebook/fbservice/service/OperationResult;
 
+    .line 5
     .line 6
+    invoke-direct {p0, v0, p3}, LX/2Dg;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 7
     .line 8
-    new-instance v0, Lcom/facebook/common/callercontext/CallerContext;
-
     .line 9
-    .line 10
-    invoke-direct {v0, v3, v2, v1, v2}, Lcom/facebook/common/callercontext/CallerContext;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 11
-    .line 12
-    .line 13
-    sput-object v0, LX/2dk;->A06:Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 14
-    .line 15
     return-void
 .end method
 
-.method public constructor <init>(LX/1zC;)V
-    .locals 3
+
+# virtual methods
+.method public final run()V
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v5, p0, LX/2Dk;->A00:LX/2Dm;
 
     .line 1
     .line 2
+    iget-object v4, v5, LX/2Dm;->A01:LX/2Dn;
+
     .line 3
-    sget v0, LX/2eq;->ALE:I
-
     .line 4
-    .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iget-boolean v0, v4, LX/2Dn;->A02:Z
 
+    .line 5
     .line 6
+    if-nez v0, :cond_1
+
     .line 7
     .line 8
-    move-result-object v0
+    iget-object v2, p0, LX/2Dk;->A01:Lcom/facebook/fbservice/service/OperationResult;
 
     .line 9
-    check-cast v0, LX/3xa;
-
     .line 10
+    iget-boolean v0, v2, Lcom/facebook/fbservice/service/OperationResult;->success:Z
+
     .line 11
-    iput-object v0, p0, LX/2dk;->A03:LX/3xa;
-
     .line 12
+    if-eqz v0, :cond_2
+
     .line 13
-    sget v0, LX/2eq;->AZB:I
-
     .line 14
-    .line 15
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iget-object v0, v5, LX/2Dm;->A0G:LX/1td;
 
+    .line 15
     .line 16
+    invoke-virtual {v0, v2}, LX/1td;->A01(Lcom/facebook/fbservice/service/OperationResult;)V
+
     .line 17
     .line 18
-    move-result-object v0
-
     .line 19
-    check-cast v0, LX/2qY;
+    :cond_0
+    :goto_0
+    invoke-virtual {v4}, LX/2Dn;->A00()V
 
     .line 20
     .line 21
-    iput-object v0, p0, LX/2dk;->A04:LX/2qY;
-
     .line 22
+    :cond_1
+    return-void
+
     .line 23
-    invoke-static {}, LX/1z6;->A0C()LX/0OV;
+    :cond_2
+    iget v1, v5, LX/2Dm;->A07:I
 
     .line 24
     .line 25
+    const/4 v0, 0x1
+
     .line 26
-    move-result-object v0
+    if-ne v1, v0, :cond_7
 
     .line 27
-    iput-object v0, p0, LX/2dk;->A02:LX/0OV;
-
     .line 28
+    iget-object v3, v2, Lcom/facebook/fbservice/service/OperationResult;->errorThrowable:Ljava/lang/Throwable;
+
     .line 29
-    sget v0, LX/2eq;->AZD:I
-
     .line 30
-    .line 31
-    const/4 v2, 0x0
+    if-eqz v3, :cond_7
 
+    .line 31
     .line 32
-    invoke-static {v2, v2, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    :goto_1
+    iget-object v1, v5, LX/2Dm;->A08:Landroid/content/Context;
 
     .line 33
     .line 34
-    .line 35
-    move-result-object v0
+    const-class v0, LX/2Dl;
 
+    .line 35
     .line 36
-    check-cast v0, LX/3Cl;
+    invoke-static {v1, v0}, LX/2cL;->A01(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Context;
 
     .line 37
     .line 38
-    iput-object v0, p0, LX/2dk;->A05:LX/3Cl;
-
     .line 39
+    move-result-object v0
+
     .line 40
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    check-cast v0, LX/2Dl;
 
     .line 41
     .line 42
-    .line 43
-    move-result-object v0
+    if-eqz v0, :cond_4
 
+    .line 43
     .line 44
-    iput-object v0, p0, LX/2dk;->A00:LX/1zG;
+    invoke-interface {v0, v3}, LX/2Dl;->ANB(Ljava/lang/Throwable;)Z
 
     .line 45
     .line 46
-    sget v1, LX/2eq;->A8C:I
-
     .line 47
+    move-result v0
+
     .line 48
-    sget v0, LX/2eq;->A5B:I
+    if-nez v0, :cond_0
 
     .line 49
     .line 50
-    invoke-static {v2, v2, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    :cond_3
+    :goto_2
+    iget-object v0, v5, LX/2Dm;->A0G:LX/1td;
 
     .line 51
     .line 52
+    invoke-virtual {v0, v3}, LX/5q5;->setException(Ljava/lang/Throwable;)Z
+
     .line 53
-    move-result-object v0
-
     .line 54
-    invoke-static {v0, v1}, LX/1zD;->A02(Ljava/lang/Object;I)Ljava/lang/Object;
-
     .line 55
-    .line 56
-    .line 57
-    move-result-object v0
+    goto :goto_0
 
+    .line 56
+    :cond_4
+    iget-object v0, v5, LX/2Dm;->A0H:LX/0RP;
+
+    .line 57
     .line 58
-    check-cast v0, LX/1mT;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 59
     .line 60
-    check-cast v0, LX/2xZ;
-
     .line 61
+    instance-of v0, v3, Lcom/facebook/fbservice/service/ServiceException;
+
     .line 62
-    new-instance v2, LX/24c;
-
     .line 63
-    .line 64
-    invoke-direct {v2, v0}, LX/24c;-><init>(LX/2xZ;)V
+    if-nez v0, :cond_6
 
+    .line 64
     .line 65
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
     .line 66
     .line 67
-    const/16 v0, 0x19
-
     .line 68
+    move-result-object v0
+
     .line 69
-    new-instance v1, LX/1nq;
+    if-eqz v0, :cond_3
 
     .line 70
     .line 71
-    invoke-direct {v1, p0, v0}, LX/1nq;-><init>(Ljava/lang/Object;I)V
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     .line 72
     .line 73
     .line 74
-    const-string v0, "com.facebook.orca.users.ACTION_USERS_UPDATED"
+    move-result-object v0
 
     .line 75
-    .line 76
-    invoke-virtual {v2, v1, v0}, LX/24c;->A04(LX/05i;Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
+    .line 76
     .line 77
     .line 78
+    move-result-object v0
+
     .line 79
-    invoke-virtual {v2}, LX/24c;->A02()LX/2xa;
+    if-eqz v0, :cond_3
 
     .line 80
     .line 81
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
     .line 82
+    .line 83
+    .line 84
     move-result-object v0
 
-    .line 83
-    iput-object v0, p0, LX/2dk;->A01:LX/2xa;
-
-    .line 84
     .line 85
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v0
+
+    .line 89
+    instance-of v0, v0, Lcom/facebook/tigon/TigonErrorException;
+
+    .line 90
+    .line 91
+    if-eqz v0, :cond_3
+
+    .line 92
+    .line 93
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 94
+    .line 95
+    .line 96
+    move-result-object v0
+
+    .line 97
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 98
+    .line 99
+    .line 100
+    move-result-object v0
+
+    .line 101
+    check-cast v0, Lcom/facebook/tigon/TigonErrorException;
+
+    .line 102
+    .line 103
+    iget-object v0, v0, Lcom/facebook/tigon/TigonErrorException;->tigonError:Lcom/facebook/tigon/TigonError;
+
+    .line 104
+    .line 105
+    iget v1, v0, Lcom/facebook/tigon/TigonError;->_domainErrorCode:I
+
+    .line 106
+    .line 107
+    const/16 v0, 0x191
+
+    .line 108
+    .line 109
+    :goto_3
+    if-ne v1, v0, :cond_3
+
+    .line 110
+    .line 111
+    :cond_5
+    const-string v0, "BLUESERVICE_NO_AUTH"
+
+    .line 112
+    .line 113
+    invoke-static {v0}, LX/0X7;->A09(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object v1
+
+    .line 117
+    iget-object v0, v5, LX/2Dm;->A0B:LX/1pp;
+
+    .line 118
+    .line 119
+    invoke-interface {v0, v1}, LX/1pp;->AjH(Landroid/content/Intent;)V
+
+    .line 120
+    .line 121
+    .line 122
+    goto :goto_2
+
+    .line 123
+    :cond_6
+    move-object v2, v3
+
+    .line 124
+    check-cast v2, Lcom/facebook/fbservice/service/ServiceException;
+
+    .line 125
+    .line 126
+    iget-object v1, v2, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/26P;
+
+    .line 127
+    .line 128
+    sget-object v0, LX/26P;->API_ERROR:LX/26P;
+
+    .line 129
+    .line 130
+    if-ne v1, v0, :cond_3
+
+    .line 131
+    .line 132
+    iget-object v0, v2, Lcom/facebook/fbservice/service/ServiceException;->result:Lcom/facebook/fbservice/service/OperationResult;
+
+    .line 133
+    .line 134
+    invoke-virtual {v0}, Lcom/facebook/fbservice/service/OperationResult;->A06()Ljava/lang/Object;
+
+    .line 135
+    .line 136
+    .line 137
+    move-result-object v0
+
+    .line 138
+    check-cast v0, Lcom/facebook/http/protocol/ApiErrorResult;
+
+    .line 139
+    .line 140
+    if-eqz v0, :cond_3
+
+    .line 141
+    .line 142
+    invoke-virtual {v0}, Lcom/facebook/http/protocol/ApiErrorResult;->A00()I
+
+    .line 143
+    .line 144
+    .line 145
+    move-result v1
+
+    .line 146
+    const/16 v0, 0xbe
+
+    .line 147
+    .line 148
+    if-eq v1, v0, :cond_5
+
+    .line 149
+    .line 150
+    const/16 v0, 0x66
+
+    .line 151
+    .line 152
+    goto :goto_3
+
+    .line 153
+    :cond_7
+    new-instance v3, Lcom/facebook/fbservice/service/ServiceException;
+
+    .line 154
+    .line 155
+    invoke-direct {v3, v2}, Lcom/facebook/fbservice/service/ServiceException;-><init>(Lcom/facebook/fbservice/service/OperationResult;)V
+
+    .line 156
+    .line 157
+    .line 158
+    goto :goto_1
 .end method

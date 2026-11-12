@@ -10,6 +10,8 @@
 
 .field public final immersiveModeDoorId:Ljava/lang/String;
 
+.field public final isMetaAiCall:Z
+
 .field public final linkUrl:Ljava/lang/String;
 
 .field public final liveBroadcastId:Ljava/lang/String;
@@ -26,7 +28,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/util/HashSet;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/util/HashSet;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
     .line 0
@@ -35,51 +37,60 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p2}, LX/0Yg;->A12(I)V
+    invoke-static {p2}, LX/0X4;->A0z(I)V
 
     .line 4
     .line 5
     .line 6
-    iput-object p1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadID:Ljava/lang/String;
+    invoke-static {p11}, LX/0X4;->A1H(Z)V
 
     .line 7
     .line 8
+    .line 9
+    iput-object p1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadID:Ljava/lang/String;
+
+    .line 10
+    .line 11
     iput p2, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadType:I
 
-    .line 9
-    .line 10
+    .line 12
+    .line 13
     iput-object p3, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callingTags:Ljava/util/HashSet;
 
-    .line 11
-    .line 12
+    .line 14
+    .line 15
     iput-object p4, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->serverInfoData:Ljava/lang/String;
 
-    .line 13
-    .line 14
+    .line 16
+    .line 17
     iput-object p5, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->linkUrl:Ljava/lang/String;
 
-    .line 15
-    .line 16
+    .line 18
+    .line 19
     iput-object p6, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->liveBroadcastId:Ljava/lang/String;
 
-    .line 17
-    .line 18
+    .line 20
+    .line 21
     iput-object p7, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callablePostId:Ljava/lang/String;
 
-    .line 19
-    .line 20
+    .line 22
+    .line 23
     iput-object p8, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->immersiveModeDoorId:Ljava/lang/String;
 
-    .line 21
-    .line 22
+    .line 24
+    .line 25
     iput-object p9, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->rtcDoorId:Ljava/lang/String;
 
-    .line 23
-    .line 24
+    .line 26
+    .line 27
     iput-object p10, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->phoneNumber:Ljava/lang/String;
 
-    .line 25
-    .line 26
+    .line 28
+    .line 29
+    iput-boolean p11, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->isMetaAiCall:Z
+
+    .line 30
+    .line 31
     return-void
 .end method
 
@@ -98,7 +109,7 @@
     const/4 v2, 0x1
 
     .line 1
-    if-eq p0, p1, :cond_1
+    if-eq p0, p1, :cond_2
 
     .line 2
     .line 3
@@ -109,7 +120,7 @@
     const/4 v0, 0x0
 
     .line 6
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     .line 7
     .line 8
@@ -125,316 +136,329 @@
     move-result v0
 
     .line 13
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 14
     .line 15
     :cond_1
-    return v2
+    iget-boolean v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->isMetaAiCall:Z
 
     .line 16
-    :cond_2
-    check-cast p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;
-
     .line 17
+    iget-boolean v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->isMetaAiCall:Z
+
     .line 18
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadID:Ljava/lang/String;
-
     .line 19
-    .line 20
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadID:Ljava/lang/String;
+    if-ne v1, v0, :cond_4
 
+    .line 20
     .line 21
+    :cond_2
+    return v2
+
     .line 22
-    if-nez v1, :cond_4
+    :cond_3
+    check-cast p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;
 
     .line 23
     .line 24
-    if-eqz v0, :cond_5
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadID:Ljava/lang/String;
 
     .line 25
     .line 26
-    :cond_3
-    :goto_0
-    const/4 v2, 0x0
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadID:Ljava/lang/String;
 
     .line 27
-    return v2
-
     .line 28
-    :cond_4
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-nez v1, :cond_5
 
     .line 29
     .line 30
-    .line 31
-    move-result v0
+    if-eqz v0, :cond_6
 
+    .line 31
     .line 32
-    if-eqz v0, :cond_3
+    :cond_4
+    :goto_0
+    const/4 v2, 0x0
 
     .line 33
+    return v2
+
     .line 34
     :cond_5
-    iget v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadType:I
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 35
     .line 36
-    iget v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadType:I
-
     .line 37
+    move-result v0
+
     .line 38
-    if-ne v1, v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 39
     .line 40
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callingTags:Ljava/util/HashSet;
+    :cond_6
+    iget v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadType:I
 
     .line 41
     .line 42
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callingTags:Ljava/util/HashSet;
+    iget v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->threadType:I
 
     .line 43
     .line 44
-    if-nez v1, :cond_6
+    if-ne v1, v0, :cond_4
 
     .line 45
     .line 46
-    if-eqz v0, :cond_7
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callingTags:Ljava/util/HashSet;
 
     .line 47
     .line 48
-    goto :goto_0
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callingTags:Ljava/util/HashSet;
 
     .line 49
-    :cond_6
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
     .line 50
+    if-nez v1, :cond_7
+
     .line 51
     .line 52
-    move-result v0
+    if-eqz v0, :cond_8
 
     .line 53
-    if-eqz v0, :cond_3
-
     .line 54
+    goto :goto_0
+
     .line 55
     :cond_7
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->serverInfoData:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 56
     .line 57
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->serverInfoData:Ljava/lang/String;
-
     .line 58
+    move-result v0
+
     .line 59
-    if-nez v1, :cond_8
+    if-eqz v0, :cond_4
 
     .line 60
     .line 61
-    if-eqz v0, :cond_9
+    :cond_8
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->serverInfoData:Ljava/lang/String;
 
     .line 62
     .line 63
-    goto :goto_0
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->serverInfoData:Ljava/lang/String;
 
     .line 64
-    :cond_8
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 65
+    if-nez v1, :cond_9
+
     .line 66
     .line 67
-    move-result v0
+    if-eqz v0, :cond_a
 
     .line 68
-    if-eqz v0, :cond_3
-
     .line 69
+    goto :goto_0
+
     .line 70
     :cond_9
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->linkUrl:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 71
     .line 72
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->linkUrl:Ljava/lang/String;
-
     .line 73
+    move-result v0
+
     .line 74
-    if-nez v1, :cond_a
+    if-eqz v0, :cond_4
 
     .line 75
     .line 76
-    if-eqz v0, :cond_b
+    :cond_a
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->linkUrl:Ljava/lang/String;
 
     .line 77
     .line 78
-    goto :goto_0
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->linkUrl:Ljava/lang/String;
 
     .line 79
-    :cond_a
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 80
+    if-nez v1, :cond_b
+
     .line 81
     .line 82
-    move-result v0
+    if-eqz v0, :cond_c
 
     .line 83
-    if-eqz v0, :cond_3
-
     .line 84
+    goto :goto_0
+
     .line 85
     :cond_b
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->liveBroadcastId:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 86
     .line 87
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->liveBroadcastId:Ljava/lang/String;
-
     .line 88
+    move-result v0
+
     .line 89
-    if-nez v1, :cond_c
+    if-eqz v0, :cond_4
 
     .line 90
     .line 91
-    if-eqz v0, :cond_d
+    :cond_c
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->liveBroadcastId:Ljava/lang/String;
 
     .line 92
     .line 93
-    goto :goto_0
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->liveBroadcastId:Ljava/lang/String;
 
     .line 94
-    :cond_c
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 95
+    if-nez v1, :cond_d
+
     .line 96
     .line 97
-    move-result v0
+    if-eqz v0, :cond_e
 
     .line 98
-    if-eqz v0, :cond_3
-
     .line 99
+    goto :goto_0
+
     .line 100
     :cond_d
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callablePostId:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 101
     .line 102
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callablePostId:Ljava/lang/String;
-
     .line 103
+    move-result v0
+
     .line 104
-    if-nez v1, :cond_e
+    if-eqz v0, :cond_4
 
     .line 105
     .line 106
-    if-eqz v0, :cond_f
+    :cond_e
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callablePostId:Ljava/lang/String;
 
     .line 107
     .line 108
-    goto :goto_0
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->callablePostId:Ljava/lang/String;
 
     .line 109
-    :cond_e
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 110
+    if-nez v1, :cond_f
+
     .line 111
     .line 112
-    move-result v0
+    if-eqz v0, :cond_10
 
     .line 113
-    if-eqz v0, :cond_3
-
     .line 114
+    goto :goto_0
+
     .line 115
     :cond_f
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->immersiveModeDoorId:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 116
     .line 117
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->immersiveModeDoorId:Ljava/lang/String;
-
     .line 118
+    move-result v0
+
     .line 119
-    if-nez v1, :cond_10
+    if-eqz v0, :cond_4
 
     .line 120
     .line 121
-    if-eqz v0, :cond_11
+    :cond_10
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->immersiveModeDoorId:Ljava/lang/String;
 
     .line 122
     .line 123
-    goto :goto_0
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->immersiveModeDoorId:Ljava/lang/String;
 
     .line 124
-    :cond_10
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 125
+    if-nez v1, :cond_11
+
     .line 126
     .line 127
-    move-result v0
+    if-eqz v0, :cond_12
 
     .line 128
-    if-eqz v0, :cond_3
-
     .line 129
+    goto :goto_0
+
     .line 130
     :cond_11
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->rtcDoorId:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 131
     .line 132
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->rtcDoorId:Ljava/lang/String;
-
     .line 133
+    move-result v0
+
     .line 134
-    if-nez v1, :cond_12
+    if-eqz v0, :cond_4
 
     .line 135
     .line 136
-    if-eqz v0, :cond_13
+    :cond_12
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->rtcDoorId:Ljava/lang/String;
 
     .line 137
     .line 138
-    goto :goto_0
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->rtcDoorId:Ljava/lang/String;
 
     .line 139
-    :cond_12
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 140
+    if-nez v1, :cond_13
+
     .line 141
     .line 142
-    move-result v0
+    if-eqz v0, :cond_14
 
     .line 143
-    if-eqz v0, :cond_3
-
     .line 144
+    goto :goto_0
+
     .line 145
     :cond_13
-    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->phoneNumber:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 146
     .line 147
-    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->phoneNumber:Ljava/lang/String;
-
     .line 148
+    move-result v0
+
     .line 149
-    if-nez v1, :cond_0
+    if-eqz v0, :cond_4
 
     .line 150
     .line 151
-    if-eqz v0, :cond_1
+    :cond_14
+    iget-object v1, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->phoneNumber:Ljava/lang/String;
 
     .line 152
     .line 153
+    iget-object v0, p1, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->phoneNumber:Ljava/lang/String;
+
+    .line 154
+    .line 155
+    if-nez v1, :cond_0
+
+    .line 156
+    .line 157
+    if-eqz v0, :cond_1
+
+    .line 158
+    .line 159
     goto :goto_0
 .end method
 
@@ -449,7 +473,7 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 4
     .line 5
@@ -457,7 +481,7 @@
     move-result v0
 
     .line 7
-    invoke-static {v0}, LX/0Yg;->A00(I)I
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 8
     .line 9
@@ -480,7 +504,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/0Yd;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A08(Ljava/lang/Object;)I
 
     .line 19
     .line 20
@@ -499,7 +523,7 @@
 
     .line 26
     .line 27
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 28
     .line 29
@@ -518,7 +542,7 @@
 
     .line 35
     .line 36
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 37
     .line 38
@@ -537,7 +561,7 @@
 
     .line 44
     .line 45
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 46
     .line 47
@@ -556,7 +580,7 @@
 
     .line 53
     .line 54
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 55
     .line 56
@@ -575,7 +599,7 @@
 
     .line 62
     .line 63
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 64
     .line 65
@@ -594,7 +618,7 @@
 
     .line 71
     .line 72
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 73
     .line 74
@@ -629,6 +653,17 @@
     add-int/2addr v1, v2
 
     .line 88
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 89
+    .line 90
+    iget-boolean v0, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->isMetaAiCall:Z
+
+    .line 91
+    .line 92
+    add-int/2addr v1, v0
+
+    .line 93
     return v1
 .end method
 
@@ -636,7 +671,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -819,13 +854,31 @@
 
     .line 100
     .line 101
-    invoke-static {v0, v1}, LX/0Yd;->A0S(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 102
     .line 103
     .line 104
-    move-result-object v0
+    const-string v0, ",isMetaAiCall="
 
     .line 105
+    .line 106
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 107
+    .line 108
+    .line 109
+    iget-boolean v0, p0, Lcom/facebook/rsys/roomtypecalling/gen/CallingAppContext;->isMetaAiCall:Z
+
+    .line 110
+    .line 111
+    invoke-static {v1, v0}, LX/0X2;->A0m(Ljava/lang/StringBuilder;Z)Ljava/lang/String;
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-object v0
+
+    .line 115
     return-object v0
 .end method

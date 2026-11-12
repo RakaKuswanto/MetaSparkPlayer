@@ -1,31 +1,37 @@
 .class public final LX/3WF;
-.super Ljava/lang/Object;
+.super LX/3VF;
 .source ""
 
-
-# instance fields
-.field public final A00:J
-
-.field public final A01:J
+# interfaces
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    const v0, -0x5db4babd
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-direct {p0, v0}, LX/3VF;-><init>(I)V
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/3VF;-><init>(I)V
 
     .line 1
     .line 2
     .line 3
-    iput-wide p3, p0, LX/3WF;->A00:J
-
-    .line 4
-    .line 5
-    iput-wide p1, p0, LX/3WF;->A01:J
-
-    .line 6
-    .line 7
     return-void
 .end method

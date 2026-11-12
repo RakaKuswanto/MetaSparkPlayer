@@ -2,23 +2,16 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5ow;
-
 
 # instance fields
-.field public final A00:Landroid/os/Handler;
+.field public A00:I
 
-.field public final A01:LX/5e7;
-
-.field public final A02:LX/5ow;
-
-.field public final A03:Ljava/lang/Runnable;
+.field public final A01:Ljava/util/PriorityQueue;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;LX/5e7;LX/5ow;I)V
-    .locals 3
+.method public constructor <init>(I)V
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,135 +19,163 @@
     .line 1
     .line 2
     .line 3
-    new-instance v2, LX/5qz;
+    const v0, 0x7fffffff
 
     .line 4
     .line 5
-    invoke-direct {v2, p0}, LX/5qz;-><init>(LX/5qy;)V
-
     .line 6
+    if-ge p1, v0, :cond_0
+
     .line 7
     .line 8
-    iput-object v2, p0, LX/5qy;->A03:Ljava/lang/Runnable;
+    sget-object v1, LX/5r2;->A01:Ljava/util/Comparator;
 
     .line 9
     .line 10
-    iput-object p3, p0, LX/5qy;->A02:LX/5ow;
+    new-instance v0, Ljava/util/PriorityQueue;
 
     .line 11
     .line 12
-    iput-object p1, p0, LX/5qy;->A00:Landroid/os/Handler;
+    invoke-direct {v0, p1, v1}, Ljava/util/PriorityQueue;-><init>(ILjava/util/Comparator;)V
 
     .line 13
     .line 14
-    iput-object p2, p0, LX/5qy;->A01:LX/5e7;
-
     .line 15
+    iput-object v0, p0, LX/5qy;->A01:Ljava/util/PriorityQueue;
+
     .line 16
-    int-to-long v0, p4
-
     .line 17
-    invoke-virtual {p1, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 18
-    .line 19
-    .line 20
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()Landroid/os/Handler;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5qy;->A00:Landroid/os/Handler;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final AXT(LX/5e7;)V
+.method public final A00(LX/5r5;)V
     .locals 3
 
     .line 0
-    iget-object v2, p0, LX/5qy;->A00:Landroid/os/Handler;
+    iget v0, p0, LX/5qy;->A00:I
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/5qy;->A03:Ljava/lang/Runnable;
+    const/4 v2, 0x1
 
     .line 3
-    .line 4
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->hasCallbacks(Ljava/lang/Runnable;)Z
+    add-int/lit8 v0, v0, 0x1
 
+    .line 4
     .line 5
+    iput v0, p0, LX/5qy;->A00:I
+
     .line 6
     .line 7
-    move-result v0
+    iget-object v0, p0, LX/5qy;->A01:Ljava/util/PriorityQueue;
 
     .line 8
-    if-eqz v0, :cond_0
-
     .line 9
-    .line 10
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    if-eqz v0, :cond_1
 
+    .line 10
     .line 11
+    invoke-virtual {v0, p1}, Ljava/util/PriorityQueue;->offer(Ljava/lang/Object;)Z
+
     .line 12
     .line 13
-    iget-object v0, p0, LX/5qy;->A02:LX/5ow;
-
     .line 14
-    .line 15
-    invoke-static {v2, p1, v0}, LX/5pH;->A00(Landroid/os/Handler;LX/5e7;LX/5ow;)V
+    iget v1, p0, LX/5qy;->A00:I
 
+    .line 15
     .line 16
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
+
     .line 17
     .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    if-eq v1, v0, :cond_0
+
+    .line 21
+    .line 22
+    const/4 v2, 0x0
+
+    .line 23
     :cond_0
+    invoke-static {v2}, Lcom/google/common/base/Preconditions;->checkState(Z)V
+
+    .line 24
+    .line 25
+    .line 26
+    :cond_1
     return-void
 .end method
 
-.method public final AdJ()V
-    .locals 3
+.method public final A01(LX/5r5;)V
+    .locals 4
 
     .line 0
-    iget-object v2, p0, LX/5qy;->A00:Landroid/os/Handler;
+    iget v0, p0, LX/5qy;->A00:I
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/5qy;->A03:Ljava/lang/Runnable;
+    const/4 v3, 0x1
 
     .line 3
+    sub-int/2addr v0, v3
+
     .line 4
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->hasCallbacks(Ljava/lang/Runnable;)Z
+    iput v0, p0, LX/5qy;->A00:I
 
     .line 5
     .line 6
-    .line 7
-    move-result v0
+    iget-object v2, p0, LX/5qy;->A01:Ljava/util/PriorityQueue;
 
+    .line 7
     .line 8
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_1
 
     .line 9
     .line 10
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
     .line 11
     .line 12
     .line 13
-    iget-object v0, p0, LX/5qy;->A02:LX/5ow;
+    move-result v0
 
     .line 14
-    .line 15
-    invoke-static {v0, v2}, LX/5pH;->A01(LX/5ow;Landroid/os/Handler;)V
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 15
     .line 16
     .line 17
+    iget v1, p0, LX/5qy;->A00:I
+
     .line 18
+    .line 19
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    if-eq v1, v0, :cond_0
+
+    .line 24
+    .line 25
+    const/4 v3, 0x0
+
+    .line 26
     :cond_0
+    invoke-static {v3}, Lcom/google/common/base/Preconditions;->checkState(Z)V
+
+    .line 27
+    .line 28
+    .line 29
+    :cond_1
     return-void
 .end method

@@ -1,191 +1,133 @@
 .class public final LX/2ku;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "Publisher$addTask$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/2ko;
+.field public final synthetic A00:LX/2kv;
+
+.field public final synthetic A01:LX/2kh;
 
 
 # direct methods
-.method public constructor <init>(LX/2ko;)V
+.method public constructor <init>(LX/2kv;LX/2kh;)V
     .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/2ku;->A00:LX/2ko;
+    iput-object p1, p0, LX/2ku;->A00:LX/2kv;
 
-    .line 1
-    .line 2
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    iput-object p2, p0, LX/2ku;->A01:LX/2kh;
 
-    .line 3
-    .line 4
-    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+.method public final run()V
+    .locals 5
 
     .line 0
-    iget-object v1, p0, LX/2ku;->A00:LX/2ko;
+    iget-object v4, p0, LX/2ku;->A00:LX/2kv;
 
     .line 1
     .line 2
-    monitor-enter v1
+    iget-object v1, v4, LX/2kv;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 3
-    :try_start_0
-    iput-object p2, v1, LX/2ko;->A00:Landroid/content/Intent;
-
     .line 4
+    const/4 v0, 0x1
+
     .line 5
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    const/4 v3, 0x0
 
     .line 6
-    iget-object v1, v1, LX/2ko;->A02:LX/2mE;
+    invoke-virtual {v1, v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
     .line 7
     .line 8
-    monitor-enter v1
-
     .line 9
-    :try_start_1
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    move-result v0
 
     .line 10
+    if-eqz v0, :cond_0
+
     .line 11
     .line 12
-    move-result-object v0
+    iget-object v2, p0, LX/2ku;->A01:LX/2kh;
 
     .line 13
-    if-nez v0, :cond_0
-
     .line 14
-    .line 15
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    :try_start_0
+    iget-object v1, v2, LX/2kh;->A05:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
+    .line 15
     .line 16
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
+
     .line 17
     .line 18
+    .line 19
     move-result-object v0
 
-    .line 19
-    goto :goto_0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
     .line 20
-    :cond_0
-    :try_start_2
-    invoke-static {v0, v1}, LX/2mE;->A00(Landroid/os/Looper;LX/2mE;)LX/2rT;
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->lock()V
 
     .line 21
     .line 22
     .line 23
-    move-result-object v0
+    iget-object v0, v2, LX/2kh;->A04:Ljava/util/LinkedList;
 
     .line 24
-    if-nez v0, :cond_1
-
     .line 25
-    .line 26
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    invoke-virtual {v0, v4}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
+    .line 26
     .line 27
     .line 28
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 29
-    move-result-object v0
+    :catchall_0
+    move-exception v1
 
     .line 30
-    goto :goto_0
+    iget-object v0, v2, LX/2kh;->A05:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     .line 31
-    :cond_1
-    iget-object v0, v0, LX/2rT;->A02:Ljava/util/List;
-
     .line 32
-    .line 33
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/001;->A15(Ljava/util/concurrent/locks/ReentrantReadWriteLock;)V
 
+    .line 33
     .line 34
     .line 35
+    throw v1
+
     .line 36
-    move-result-object v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :goto_0
+    invoke-static {v1}, LX/001;->A15(Ljava/util/concurrent/locks/ReentrantReadWriteLock;)V
 
     .line 37
-    :goto_0
-    monitor-exit v1
-
     .line 38
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
     .line 39
+    iget v0, v4, LX/2kv;->A01:I
+
     .line 40
     .line 41
-    move-result-object v1
+    invoke-virtual {v4, v0, v3}, LX/2kv;->onTimeout(IZ)V
 
     .line 42
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 43
     .line 44
-    .line 45
-    move-result v0
-
-    .line 46
-    if-eqz v0, :cond_2
-
-    .line 47
-    .line 48
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 49
-    .line 50
-    .line 51
-    goto :goto_1
-
-    .line 52
-    :cond_2
+    :cond_0
     return-void
-
-    .line 53
-    :catchall_0
-    move-exception v0
-
-    .line 54
-    :try_start_3
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 55
-    :catchall_1
-    move-exception v0
-
-    .line 56
-    monitor-exit v1
-
-    .line 57
-    throw v0
-
-    .line 58
-    :catchall_2
-    move-exception v0
-
-    .line 59
-    :try_start_4
-    monitor-exit v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    .line 60
-    throw v0
 .end method

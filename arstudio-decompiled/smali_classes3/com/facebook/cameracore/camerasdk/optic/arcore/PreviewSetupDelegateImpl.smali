@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5mb;
+.implements LX/5u4;
 
 
 # instance fields
@@ -13,7 +13,7 @@
 
 .field public final A02:Z
 
-.field public volatile A03:LX/5mb;
+.field public volatile A03:LX/5u4;
 
 .field public volatile A04:Ljava/util/HashMap;
 
@@ -68,11 +68,11 @@
     return-void
 .end method
 
-.method private A00()LX/5mb;
+.method private A00()LX/5u4;
     .locals 3
 
     .line 0
-    iget-object v2, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5mb;
+    iget-object v2, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5u4;
 
     .line 1
     .line 2
@@ -84,7 +84,7 @@
 
     .line 5
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5mb;
+    iget-object v2, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5u4;
 
     .line 6
     .line 7
@@ -112,11 +112,11 @@
 
     .line 18
     .line 19
-    new-instance v2, LX/5J0;
+    new-instance v2, LX/5A8;
 
     .line 20
     .line 21
-    invoke-direct {v2, v1, v0}, LX/5J0;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {v2, v1, v0}, LX/5A8;-><init>(Landroid/content/Context;Z)V
 
     .line 22
     .line 23
@@ -130,13 +130,13 @@
 
     .line 27
     .line 28
-    invoke-interface {v2, v0}, LX/5mb;->Al5(Ljava/util/HashMap;)V
+    invoke-interface {v2, v0}, LX/5u4;->Aja(Ljava/util/HashMap;)V
 
     .line 29
     .line 30
     .line 31
     :cond_0
-    iput-object v2, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5mb;
+    iput-object v2, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5u4;
 
     .line 32
     .line 33
@@ -148,7 +148,7 @@
 
     .line 35
     :cond_2
-    sget-object v2, LX/5mb;->A00:LX/5mb;
+    sget-object v2, LX/5u4;->A00:LX/5u4;
 
     .line 36
     .line 37
@@ -177,7 +177,7 @@
 
 
 # virtual methods
-.method public final declared-synchronized APn()Z
+.method public final declared-synchronized AOM()Z
     .locals 1
 
     .line 0
@@ -191,7 +191,7 @@
 
     .line 2
     .line 3
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 4
     .line 5
@@ -215,31 +215,11 @@
     throw v0
 .end method
 
-.method public final Al5(Ljava/util/HashMap;)V
+.method public final Aja(Ljava/util/HashMap;)V
     .locals 1
 
     .line 0
-    new-instance v0, Ljava/util/HashMap;
-
-    .line 1
-    .line 2
-    invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
-
-    .line 3
-    .line 4
-    .line 5
-    iput-object v0, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A04:Ljava/util/HashMap;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public addArSurfaces(Ljava/util/List;)Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-static {p1}, LX/0X7;->A0c(Ljava/util/Map;)Ljava/util/HashMap;
 
     .line 1
     .line 2
@@ -247,7 +227,26 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0, p1}, LX/5mb;->addArSurfaces(Ljava/util/List;)Ljava/util/List;
+    iput-object v0, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A04:Ljava/util/HashMap;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public addArSurfaces(Ljava/util/List;)Ljava/util/List;
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0, p1}, LX/5u4;->addArSurfaces(Ljava/util/List;)Ljava/util/List;
 
     .line 5
     .line 6
@@ -266,7 +265,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5mb;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5u4;
 
     .line 2
     .line 3
@@ -274,7 +273,7 @@
 
     .line 4
     .line 5
-    invoke-interface {v0}, LX/5mb;->closeSession()V
+    invoke-interface {v0}, LX/5u4;->closeSession()V
 
     .line 6
     .line 7
@@ -282,7 +281,7 @@
     const/4 v0, 0x0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5mb;
+    iput-object v0, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5u4;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -317,7 +316,7 @@
 
     .line 2
     .line 3
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 4
     .line 5
@@ -325,7 +324,7 @@
     move-result-object v0
 
     .line 7
-    invoke-interface {v0, p1, p2}, LX/5mb;->createSession(Landroid/hardware/camera2/CameraDevice;I)V
+    invoke-interface {v0, p1, p2}, LX/5u4;->createSession(Landroid/hardware/camera2/CameraDevice;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -348,11 +347,11 @@
     throw v0
 .end method
 
-.method public getArSurfaceTexture(ILX/5Ja;)Landroid/graphics/SurfaceTexture;
+.method public getArSurfaceTexture(ILX/5Aq;)Landroid/graphics/SurfaceTexture;
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -360,7 +359,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0, p1, p2}, LX/5mb;->getArSurfaceTexture(ILX/5Ja;)Landroid/graphics/SurfaceTexture;
+    invoke-interface {v0, p1, p2}, LX/5u4;->getArSurfaceTexture(ILX/5Aq;)Landroid/graphics/SurfaceTexture;
 
     .line 5
     .line 6
@@ -375,7 +374,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -383,7 +382,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0}, LX/5mb;->getArSurfaces()Ljava/util/List;
+    invoke-interface {v0}, LX/5u4;->getArSurfaces()Ljava/util/List;
 
     .line 5
     .line 6
@@ -398,7 +397,7 @@
     .locals 2
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -406,7 +405,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0}, LX/5mb;->getFrameTimestamp()J
+    invoke-interface {v0}, LX/5u4;->getFrameTimestamp()J
 
     .line 5
     .line 6
@@ -421,7 +420,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -429,7 +428,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0, p1}, LX/5mb;->getPreviewSurface(Landroid/graphics/SurfaceTexture;)Landroid/view/Surface;
+    invoke-interface {v0, p1}, LX/5u4;->getPreviewSurface(Landroid/graphics/SurfaceTexture;)Landroid/view/Surface;
 
     .line 5
     .line 6
@@ -444,7 +443,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -452,7 +451,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0}, LX/5mb;->getPreviewTemplate()I
+    invoke-interface {v0}, LX/5u4;->getPreviewTemplate()I
 
     .line 5
     .line 6
@@ -490,7 +489,7 @@
 
     .line 4
     .line 5
-    invoke-virtual {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->APn()Z
+    invoke-virtual {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->AOM()Z
 
     .line 6
     .line 7
@@ -540,7 +539,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -548,7 +547,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0}, LX/5mb;->isCameraSessionActivated()Z
+    invoke-interface {v0}, LX/5u4;->isCameraSessionActivated()Z
 
     .line 5
     .line 6
@@ -563,7 +562,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5mb;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A03:LX/5u4;
 
     .line 1
     .line 2
@@ -571,7 +570,7 @@
 
     .line 3
     .line 4
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 5
     .line 6
@@ -579,7 +578,7 @@
     move-result-object v0
 
     .line 8
-    invoke-interface {v0, p1}, LX/5mb;->onCameraClosed(Landroid/hardware/camera2/CameraDevice;)V
+    invoke-interface {v0, p1}, LX/5u4;->onCameraClosed(Landroid/hardware/camera2/CameraDevice;)V
 
     .line 9
     .line 10
@@ -592,7 +591,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -600,7 +599,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0, p1}, LX/5mb;->onCameraDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+    invoke-interface {v0, p1}, LX/5u4;->onCameraDisconnected(Landroid/hardware/camera2/CameraDevice;)V
 
     .line 5
     .line 6
@@ -612,7 +611,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -620,7 +619,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0, p1, p2}, LX/5mb;->onCameraError(Landroid/hardware/camera2/CameraDevice;I)V
+    invoke-interface {v0, p1, p2}, LX/5u4;->onCameraError(Landroid/hardware/camera2/CameraDevice;I)V
 
     .line 5
     .line 6
@@ -628,11 +627,11 @@
     return-void
 .end method
 
-.method public setCameraSessionActivated(LX/5nH;LX/5mO;)V
+.method public setCameraSessionActivated(LX/5uq;LX/5tj;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -640,7 +639,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0, p1, p2}, LX/5mb;->setCameraSessionActivated(LX/5nH;LX/5mO;)V
+    invoke-interface {v0, p1, p2}, LX/5u4;->setCameraSessionActivated(LX/5uq;LX/5tj;)V
 
     .line 5
     .line 6
@@ -682,7 +681,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -690,7 +689,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0}, LX/5mb;->update()V
+    invoke-interface {v0}, LX/5u4;->update()V
 
     .line 5
     .line 6
@@ -702,7 +701,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5mb;
+    invoke-direct {p0}, Lcom/facebook/cameracore/camerasdk/optic/arcore/PreviewSetupDelegateImpl;->A00()LX/5u4;
 
     .line 1
     .line 2
@@ -710,7 +709,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0, p1}, LX/5mb;->wrapSessionConfigurationCallback(Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+    invoke-interface {v0, p1}, LX/5u4;->wrapSessionConfigurationCallback(Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
     .line 5
     .line 6

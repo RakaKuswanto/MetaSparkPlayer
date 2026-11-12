@@ -33,10 +33,10 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     .line 1
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 2
     .line 3
@@ -52,7 +52,7 @@
 .end method
 
 .method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    .locals 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -99,84 +99,95 @@
     .line 22
     .line 23
     .line 24
-    move-result v1
+    move-result v0
 
     .line 25
-    const/4 v0, 0x1
+    const/4 v2, 0x0
 
     .line 26
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    const/4 v1, 0x1
 
     .line 27
+    invoke-static {v0, v1}, LX/001;->A1N(II)Z
+
     .line 28
     .line 29
-    move-result v0
-
     .line 30
-    iput-boolean v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A07:Z
+    move-result v0
 
     .line 31
-    .line 32
-    invoke-static {p1}, LX/0Yi;->A1S(Landroid/os/Parcel;)Z
+    iput-boolean v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A07:Z
 
+    .line 32
     .line 33
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
     .line 34
     .line 35
+    .line 36
     move-result v0
 
-    .line 36
-    iput-boolean v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A06:Z
-
     .line 37
+    if-ne v0, v1, :cond_0
+
     .line 38
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
     .line 39
-    .line 40
-    .line 41
-    move-result-object v0
+    const/4 v2, 0x1
 
+    .line 40
+    :cond_0
+    iput-boolean v2, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A06:Z
+
+    .line 41
     .line 42
-    iput-object v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A05:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 43
     .line 44
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
     .line 45
-    .line 46
-    .line 47
-    move-result v0
+    move-result-object v0
 
+    .line 46
+    iput-object v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A05:Ljava/lang/String;
+
+    .line 47
     .line 48
-    iput v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A00:I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 49
     .line 50
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
     .line 51
-    .line 52
-    .line 53
-    move-result-object v0
+    move-result v0
 
+    .line 52
+    iput v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A00:I
+
+    .line 53
     .line 54
-    iput-object v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A01:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 55
     .line 56
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
     .line 57
-    .line 58
-    .line 59
     move-result-object v0
 
+    .line 58
+    iput-object v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A01:Ljava/lang/String;
+
+    .line 59
     .line 60
-    iput-object v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A04:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 61
     .line 62
+    .line 63
+    move-result-object v0
+
+    .line 64
+    iput-object v0, p0, Lcom/facebook/auth/protocol/LinkedFbUserFromIgSessionInfo;->A04:Ljava/lang/String;
+
+    .line 65
+    .line 66
     return-void
 .end method
 

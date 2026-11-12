@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0y()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A12()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -67,44 +67,47 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "WPA2_PSK"
+    const-string/jumbo v0, "WPA2_PSK"
 
     .line 26
     .line 27
+    .line 28
     aput-object v0, v2, v1
 
-    .line 28
     .line 29
+    .line 30
     const/4 v1, 0x5
 
-    .line 30
-    const-string v0, "WPA_EAP"
-
     .line 31
-    .line 32
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WPA_EAP"
 
+    .line 32
     .line 33
     .line 34
-    const/4 v1, 0x6
+    aput-object v0, v2, v1
 
     .line 35
-    const-string v0, "WPA_PSK"
-
     .line 36
+    const/4 v1, 0x6
+
     .line 37
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WPA_PSK"
 
     .line 38
     .line 39
     .line 40
-    move-result-object v0
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 41
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMCWifiProfileKeyMgmtTypeSet;->A00:Ljava/util/Set;
-
     .line 42
     .line 43
+    move-result-object v0
+
+    .line 44
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMCWifiProfileKeyMgmtTypeSet;->A00:Ljava/util/Set;
+
+    .line 45
+    .line 46
     return-void
 .end method
 

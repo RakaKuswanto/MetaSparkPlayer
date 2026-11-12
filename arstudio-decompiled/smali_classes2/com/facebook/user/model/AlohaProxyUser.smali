@@ -45,11 +45,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x29
+    const/16 v0, 0x19
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -263,7 +263,7 @@
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/0Yd;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A08(Ljava/lang/Object;)I
 
     .line 5
     .line 6
@@ -271,7 +271,7 @@
     move-result v0
 
     .line 8
-    invoke-static {v1}, LX/0Yi;->A05(Ljava/lang/Object;)I
+    invoke-static {v1}, LX/0X7;->A02(Ljava/lang/Object;)I
 
     .line 9
     .line 10
@@ -309,31 +309,33 @@
 
     .line 5
     .line 6
-    const-string v0, "fbId"
+    const-string/jumbo v0, "fbId"
 
     .line 7
     .line 8
+    .line 9
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 9
     .line 10
     .line 11
+    .line 12
     iget-object v1, p0, Lcom/facebook/user/model/AlohaProxyUser;->alohaUserName:Ljava/lang/String;
 
-    .line 12
     .line 13
-    const-string v0, "alohaUserName"
-
     .line 14
-    .line 15
-    invoke-static {v2, v1, v0}, LX/0Yg;->A0j(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v0, "alohaUserName"
 
+    .line 15
     .line 16
     .line 17
+    invoke-static {v2, v1, v0}, LX/0X5;->A0c(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+
     .line 18
+    .line 19
+    .line 20
     move-result-object v0
 
-    .line 19
+    .line 21
     return-object v0
 .end method
 

@@ -10,7 +10,7 @@
 .method public abstract doNotIgnoreNextSiguit()V
 .end method
 
-.method public abstract init(LX/0M1;Z)V
+.method public abstract init(LX/0Kf;Z)V
 .end method
 
 .method public abstract installSignalHandler(Landroid/os/Handler;Z)V

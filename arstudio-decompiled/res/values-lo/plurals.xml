@@ -3,11 +3,41 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s ການຖືກໃຈເພຈ</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">ຖືກໃຈ %1$s ຄົນ</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d ມື້ກ່ອນ</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d ມື້</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d ວັນ</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d ຊົ່ວໂມງ</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d ນາທີ</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d ອາທິດ</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d ປີ</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">%1$d ຊົ່ວໂມງທີ່ແລ້ວ</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d ຊົ່ວໂມງ</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$dຊມ</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d ຊມ</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">%1$d ຊມ ກ່ອນ</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">%1$d ຊົ່ວໂມງນັບຈາກຕອນນີ້</item>
@@ -15,7 +45,46 @@
     <plurals name="time_in_x_minutes">
         <item quantity="other">%1$d ນາທີຈາກຕອນນີ້</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d ນາທີທີ່ຜ່ານມາ</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d ນາທີກ່ອນ</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d ນທ</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$dນທ</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d ເດືອນກ່ອນ</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d ວິນາທີກ່ອນ</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d ອາທິດຜ່ານມາ</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d ປີທີ່ຜ່ານມາ</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">ທ່ານໄດ້ເຂົ້າຊົມ %1$d ວັນກ່ອນ</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">ທ່ານໄດ້ເຂົ້າຊົມ %1$d ຊົ່ວໂມງກ່ອນ</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">ທ່ານໄດ້ເຂົ້າຊົມ %1$d ນາທີກ່ອນ</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">ທ່ານໄດ້ເຂົ້າຊົມ %1$d ເດືອນກ່ອນ</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">ທ່ານໄດ້ເຂົ້າຊົມ %1$d ອາທິດກ່ອນ</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">ທ່ານໄດ້ເຂົ້າຊົມ %1$d ປີກ່ອນ</item>
     </plurals>
 </resources>

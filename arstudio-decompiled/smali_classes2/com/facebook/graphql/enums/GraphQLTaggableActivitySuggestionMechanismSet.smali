@@ -676,22 +676,23 @@
 
     .line 327
     .line 328
-    const-string v0, "WHITELISTED_SUGGESTION"
+    const-string/jumbo v0, "WHITELISTED_SUGGESTION"
 
     .line 329
     .line 330
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 331
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 332
     .line 333
+    .line 334
     move-result-object v0
 
-    .line 334
+    .line 335
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLTaggableActivitySuggestionMechanismSet;->A00:Ljava/util/Set;
 
-    .line 335
     .line 336
+    .line 337
     return-void
 .end method
 

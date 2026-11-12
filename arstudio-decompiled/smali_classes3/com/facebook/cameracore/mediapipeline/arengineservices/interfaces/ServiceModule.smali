@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public abstract createConfiguration(LX/5UZ;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
+.method public abstract createConfiguration(LX/61H;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
 .end method
 
 .method public destroy()V

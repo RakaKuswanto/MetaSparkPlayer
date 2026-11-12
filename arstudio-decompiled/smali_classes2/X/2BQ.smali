@@ -1,386 +1,177 @@
-.class public final enum LX/2BQ;
-.super Ljava/lang/Enum;
+.class public final LX/2BQ;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/2BQ;
+.field public static final A04:Ljava/util/Map;
 
-.field public static final enum ANY:LX/2BQ;
 
-.field public static final enum ARRAY:LX/2BQ;
+# instance fields
+.field public final A00:B
 
-.field public static final enum BOOLEAN:LX/2BQ;
+.field public final A01:Ljava/lang/String;
 
-.field public static final enum NUMBER:LX/2BQ;
+.field public final A02:Ljava/util/Map;
 
-.field public static final enum NUMBER_FLOAT:LX/2BQ;
-
-.field public static final enum NUMBER_INT:LX/2BQ;
-
-.field public static final enum OBJECT:LX/2BQ;
-
-.field public static final enum SCALAR:LX/2BQ;
-
-.field public static final enum STRING:LX/2BQ;
+.field public final A03:S
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 16
+    .locals 1
 
     .line 0
-    const-string v0, "ANY"
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
-    const/4 v15, 0x0
-
     .line 3
-    new-instance v14, LX/2BQ;
+    move-result-object v0
 
     .line 4
+    sput-object v0, LX/2BQ;->A04:Ljava/util/Map;
+
     .line 5
-    invoke-direct {v14, v0, v15}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
     .line 6
-    .line 7
-    .line 8
-    sput-object v14, LX/2BQ;->ANY:LX/2BQ;
-
-    .line 9
-    .line 10
-    const-string v0, "SCALAR"
-
-    .line 11
-    .line 12
-    const/4 v13, 0x1
-
-    .line 13
-    new-instance v12, LX/2BQ;
-
-    .line 14
-    .line 15
-    invoke-direct {v12, v0, v13}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v12, LX/2BQ;->SCALAR:LX/2BQ;
-
-    .line 19
-    .line 20
-    const-string v0, "ARRAY"
-
-    .line 21
-    .line 22
-    const/4 v11, 0x2
-
-    .line 23
-    new-instance v10, LX/2BQ;
-
-    .line 24
-    .line 25
-    invoke-direct {v10, v0, v11}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v10, LX/2BQ;->ARRAY:LX/2BQ;
-
-    .line 29
-    .line 30
-    const-string v0, "OBJECT"
-
-    .line 31
-    .line 32
-    const/4 v9, 0x3
-
-    .line 33
-    new-instance v8, LX/2BQ;
-
-    .line 34
-    .line 35
-    invoke-direct {v8, v0, v9}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v8, LX/2BQ;->OBJECT:LX/2BQ;
-
-    .line 39
-    .line 40
-    const-string v0, "NUMBER"
-
-    .line 41
-    .line 42
-    const/4 v7, 0x4
-
-    .line 43
-    new-instance v6, LX/2BQ;
-
-    .line 44
-    .line 45
-    invoke-direct {v6, v0, v7}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
-    .line 46
-    .line 47
-    .line 48
-    sput-object v6, LX/2BQ;->NUMBER:LX/2BQ;
-
-    .line 49
-    .line 50
-    const-string v1, "NUMBER_FLOAT"
-
-    .line 51
-    .line 52
-    const/4 v0, 0x5
-
-    .line 53
-    new-instance v5, LX/2BQ;
-
-    .line 54
-    .line 55
-    invoke-direct {v5, v1, v0}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
-    .line 56
-    .line 57
-    .line 58
-    sput-object v5, LX/2BQ;->NUMBER_FLOAT:LX/2BQ;
-
-    .line 59
-    .line 60
-    const-string v1, "NUMBER_INT"
-
-    .line 61
-    .line 62
-    const/4 v0, 0x6
-
-    .line 63
-    new-instance v4, LX/2BQ;
-
-    .line 64
-    .line 65
-    invoke-direct {v4, v1, v0}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
-    .line 66
-    .line 67
-    .line 68
-    sput-object v4, LX/2BQ;->NUMBER_INT:LX/2BQ;
-
-    .line 69
-    .line 70
-    const-string v1, "STRING"
-
-    .line 71
-    .line 72
-    const/4 v0, 0x7
-
-    .line 73
-    new-instance v3, LX/2BQ;
-
-    .line 74
-    .line 75
-    invoke-direct {v3, v1, v0}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
-    .line 76
-    .line 77
-    .line 78
-    sput-object v3, LX/2BQ;->STRING:LX/2BQ;
-
-    .line 79
-    .line 80
-    const-string v0, "BOOLEAN"
-
-    .line 81
-    .line 82
-    const/16 v2, 0x8
-
-    .line 83
-    .line 84
-    new-instance v1, LX/2BQ;
-
-    .line 85
-    .line 86
-    invoke-direct {v1, v0, v2}, LX/2BQ;-><init>(Ljava/lang/String;I)V
-
-    .line 87
-    .line 88
-    .line 89
-    sput-object v1, LX/2BQ;->BOOLEAN:LX/2BQ;
-
-    .line 90
-    .line 91
-    const/16 v0, 0x9
-
-    .line 92
-    .line 93
-    new-array v0, v0, [LX/2BQ;
-
-    .line 94
-    .line 95
-    aput-object v14, v0, v15
-
-    .line 96
-    .line 97
-    aput-object v12, v0, v13
-
-    .line 98
-    .line 99
-    aput-object v10, v0, v11
-
-    .line 100
-    .line 101
-    aput-object v8, v0, v9
-
-    .line 102
-    .line 103
-    aput-object v6, v0, v7
-
-    .line 104
-    .line 105
-    invoke-static {v5, v4, v3, v0}, LX/0Yc;->A1O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 106
-    .line 107
-    .line 108
-    aput-object v1, v0, v2
-
-    .line 109
-    .line 110
-    sput-object v0, LX/2BQ;->$VALUES:[LX/2BQ;
-
-    .line 111
-    .line 112
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>()V
+    .locals 3
+
+    .line 268435456
+    const-string v2, ""
+
+    .line 268435457
+    .line 268435458
+    const/4 v1, 0x0
+
+    .line 268435459
+    sget-object v0, LX/2BQ;->A04:Ljava/util/Map;
+
+    .line 268435460
+    .line 268435461
+    invoke-direct {p0, v2, v0, v1, v1}, LX/2BQ;-><init>(Ljava/lang/String;Ljava/util/Map;BS)V
+
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/util/Map;BS)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/2BQ;->A01:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    iput-byte p3, p0, LX/2BQ;->A00:B
+
+    .line 6
+    .line 7
+    iput-short p4, p0, LX/2BQ;->A03:S
+
+    .line 8
+    .line 9
+    iput-object p2, p0, LX/2BQ;->A02:Ljava/util/Map;
+
+    .line 10
+    .line 11
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/2BQ;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/2BQ;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/2BQ;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/2BQ;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/2BQ;->$VALUES:[LX/2BQ;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/2BQ;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public isNumeric()Z
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
     .line 0
-    sget-object v0, LX/2BQ;->NUMBER:LX/2BQ;
+    const/4 v0, 0x4
 
     .line 1
+    new-array v2, v0, [Ljava/lang/Object;
+
     .line 2
-    if-eq p0, v0, :cond_0
-
     .line 3
-    .line 4
-    sget-object v0, LX/2BQ;->NUMBER_INT:LX/2BQ;
+    iget-object v1, p0, LX/2BQ;->A01:Ljava/lang/String;
 
+    .line 4
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    if-eq p0, v0, :cond_0
+    aput-object v1, v2, v0
 
     .line 7
     .line 8
-    sget-object v1, LX/2BQ;->NUMBER_FLOAT:LX/2BQ;
+    iget-byte v0, p0, LX/2BQ;->A00:B
 
     .line 9
     .line 10
-    const/4 v0, 0x0
+    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     .line 11
-    if-ne p0, v1, :cond_1
-
     .line 12
     .line 13
-    :cond_0
-    const/4 v0, 0x1
+    move-result-object v1
 
     .line 14
-    :cond_1
-    return v0
-.end method
-
-.method public isStructured()Z
-    .locals 2
-
-    .line 0
-    sget-object v0, LX/2BQ;->OBJECT:LX/2BQ;
-
-    .line 1
-    .line 2
-    if-eq p0, v0, :cond_0
-
-    .line 3
-    .line 4
-    sget-object v1, LX/2BQ;->ARRAY:LX/2BQ;
-
-    .line 5
-    .line 6
-    const/4 v0, 0x0
-
-    .line 7
-    if-ne p0, v1, :cond_1
-
-    .line 8
-    .line 9
-    :cond_0
     const/4 v0, 0x1
 
-    .line 10
-    :cond_1
-    return v0
+    .line 15
+    aput-object v1, v2, v0
+
+    .line 16
+    .line 17
+    iget-short v0, p0, LX/2BQ;->A03:S
+
+    .line 18
+    .line 19
+    invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    const/4 v0, 0x2
+
+    .line 24
+    aput-object v1, v2, v0
+
+    .line 25
+    .line 26
+    iget-object v1, p0, LX/2BQ;->A02:Ljava/util/Map;
+
+    .line 27
+    .line 28
+    const/4 v0, 0x3
+
+    .line 29
+    aput-object v1, v2, v0
+
+    .line 30
+    .line 31
+    const-string v0, "<TField name:\'%s\' type:%d field-id:%d metadata=\'%s\'>"
+
+    .line 32
+    .line 33
+    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    return-object v0
 .end method

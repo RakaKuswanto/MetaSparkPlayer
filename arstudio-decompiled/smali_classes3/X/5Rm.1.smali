@@ -2,59 +2,49 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ThreadUtil$3"
-
 
 # instance fields
-.field public final synthetic A00:LX/5Rn;
+.field public A00:Z
 
-.field public final synthetic A01:Ljava/lang/Object;
+.field public final A01:Landroid/content/Context;
+
+.field public final A02:LX/5RA;
 
 
 # direct methods
-.method public constructor <init>(LX/5Rn;Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;LX/5Sx;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/5Rm;->A00:LX/5Rn;
-
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/5Rm;->A01:Ljava/lang/Object;
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/5Rm;->A00:LX/5Rn;
-
     .line 1
     .line 2
-    iget-object v0, p0, LX/5Rm;->A01:Ljava/lang/Object;
-
     .line 3
-    .line 4
-    invoke-interface {v1, v0}, LX/5Rn;->ApS(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
+    .line 4
     .line 5
     .line 6
+    move-result-object v0
+
     .line 7
+    iput-object v0, p0, LX/5Rm;->A01:Landroid/content/Context;
+
+    .line 8
+    .line 9
+    new-instance v0, LX/5RA;
+
+    .line 10
+    .line 11
+    invoke-direct {v0, p2, p3, p0}, LX/5RA;-><init>(Landroid/os/Handler;LX/5Sx;LX/5Rm;)V
+
+    .line 12
+    .line 13
+    .line 14
+    iput-object v0, p0, LX/5Rm;->A02:LX/5RA;
+
+    .line 15
+    .line 16
     return-void
 .end method

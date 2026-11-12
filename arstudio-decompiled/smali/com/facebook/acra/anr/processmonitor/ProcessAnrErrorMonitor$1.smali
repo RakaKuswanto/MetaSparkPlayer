@@ -1,4 +1,4 @@
-.class public synthetic Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$1;
+.class public abstract synthetic Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$1;
 .super Ljava/lang/Object;
 .source ""
 

@@ -1,21 +1,17 @@
-.class public abstract LX/2oD;
-.super LX/2oH;
+.class public final LX/2od;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>([I)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const/16 v0, 0x26
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, LX/2oH;-><init>([II)V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method

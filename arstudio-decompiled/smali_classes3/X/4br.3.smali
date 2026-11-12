@@ -2,103 +2,128 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ActionBarOverlayLayout$3"
-
 
 # instance fields
-.field public final synthetic A00:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+.field public final A00:Landroid/graphics/drawable/Drawable;
+
+.field public final A01:LX/4fu;
+
+.field public final A02:Z
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ActionBarOverlayLayout;)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;LX/4fu;Z)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4br;->A00:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p2, p0, LX/4br;->A01:LX/4fu;
+
     .line 4
     .line 5
+    iput-boolean p3, p0, LX/4br;->A02:Z
+
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/4br;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final A00()I
+    .locals 2
 
     .line 0
-    iget-object v2, p0, LX/4br;->A00:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+    iget-object v0, p0, LX/4br;->A01:LX/4fu;
 
     .line 1
     .line 2
-    invoke-virtual {v2}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->A02()V
+    iget-object v0, v0, LX/4fu;->A0K:LX/4jL;
 
     .line 3
     .line 4
+    check-cast v0, Lcom/facebook/yoga/YogaNodeJNIBase;
+
     .line 5
-    iget-object v0, v2, Landroidx/appcompat/widget/ActionBarOverlayLayout;->A02:Landroidx/appcompat/widget/ActionBarContainer;
-
     .line 6
-    .line 7
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    iget-object v1, v0, Lcom/facebook/yoga/YogaNodeJNIBase;->arr:[F
 
+    .line 7
     .line 8
+    if-eqz v1, :cond_0
+
     .line 9
     .line 10
-    move-result-object v1
+    const/4 v0, 0x2
 
     .line 11
-    iget-object v0, v2, Landroidx/appcompat/widget/ActionBarOverlayLayout;->A02:Landroidx/appcompat/widget/ActionBarContainer;
+    aget v0, v1, v0
 
     .line 12
     .line 13
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    :goto_0
+    float-to-int v0, v0
 
     .line 14
+    return v0
+
     .line 15
+    :cond_0
+    const/4 v0, 0x0
+
     .line 16
-    move-result v0
+    goto :goto_0
+.end method
 
-    .line 17
-    neg-int v0, v0
+.method public final A01()I
+    .locals 2
 
-    .line 18
-    int-to-float v0, v0
+    .line 0
+    iget-object v0, p0, LX/4br;->A01:LX/4fu;
 
-    .line 19
-    invoke-virtual {v1, v0}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/4fu;->A0K:LX/4jL;
 
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v1
+    .line 3
+    .line 4
+    check-cast v0, Lcom/facebook/yoga/YogaNodeJNIBase;
 
-    .line 23
-    iget-object v0, v2, Landroidx/appcompat/widget/ActionBarOverlayLayout;->A0K:Landroid/animation/AnimatorListenerAdapter;
+    .line 5
+    .line 6
+    iget-object v1, v0, Lcom/facebook/yoga/YogaNodeJNIBase;->arr:[F
 
-    .line 24
-    .line 25
-    invoke-virtual {v1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    .line 7
+    .line 8
+    if-eqz v1, :cond_0
 
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
+    .line 9
+    .line 10
+    const/4 v0, 0x1
 
-    .line 29
-    iput-object v0, v2, Landroidx/appcompat/widget/ActionBarOverlayLayout;->A00:Landroid/view/ViewPropertyAnimator;
+    .line 11
+    aget v0, v1, v0
 
-    .line 30
-    .line 31
-    return-void
+    .line 12
+    .line 13
+    :goto_0
+    float-to-int v0, v0
+
+    .line 14
+    return v0
+
+    .line 15
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 16
+    goto :goto_0
 .end method

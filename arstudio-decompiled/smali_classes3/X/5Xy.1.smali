@@ -1,11 +1,17 @@
-.class public interface abstract LX/5Xy;
+.class public abstract LX/5Xy;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract onEvent(ILjava/lang/String;Z)V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract onFailureEvent(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

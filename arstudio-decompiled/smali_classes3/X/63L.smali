@@ -2,17 +2,22 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/645;
-
 
 # instance fields
-.field public final A00:Landroid/view/WindowManager;
+.field public A00:I
+
+.field public final A01:I
+
+.field public final A02:LX/5nD;
+
+.field public final A03:Ljava/util/List;
+
+.field public final A04:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/WindowManager;)V
-    .locals 0
+.method public constructor <init>(LX/63K;)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -20,41 +25,53 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/63L;->A00:Landroid/view/WindowManager;
+    iget-object v0, p1, LX/63K;->A04:Ljava/util/Map;
 
     .line 4
     .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AiA(LX/64A;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/63L;->A00:Landroid/view/WindowManager;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     .line 6
-    invoke-interface {p1, v0}, LX/64A;->AWn(Landroid/view/Display;)V
-
     .line 7
     .line 8
+    move-result-object v0
+
     .line 9
-    return-void
-.end method
+    iput-object v0, p0, LX/63L;->A04:Ljava/util/Map;
 
-.method public final AqF()V
-    .locals 0
+    .line 10
+    .line 11
+    iget-object v0, p1, LX/63K;->A03:Ljava/util/List;
 
+    .line 12
+    .line 13
+    iput-object v0, p0, LX/63L;->A03:Ljava/util/List;
+
+    .line 14
+    .line 15
+    iget-object v0, p1, LX/63K;->A01:LX/5nD;
+
+    .line 16
+    .line 17
+    iput-object v0, p0, LX/63L;->A02:LX/5nD;
+
+    .line 18
+    .line 19
+    iget v0, p1, LX/63K;->A00:I
+
+    .line 20
+    .line 21
+    iput v0, p0, LX/63L;->A01:I
+
+    .line 22
+    .line 23
+    iget v0, p1, LX/63K;->A02:I
+
+    .line 24
+    .line 25
+    iput v0, p0, LX/63L;->A00:I
+
+    .line 26
+    .line 27
     return-void
 .end method

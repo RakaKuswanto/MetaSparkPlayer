@@ -19,7 +19,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0, p3}, LX/0Yd;->A0m(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {p1, v0, p3}, LX/0X1;->A0y(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 2
     .line 3

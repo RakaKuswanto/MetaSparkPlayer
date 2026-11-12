@@ -28,6 +28,29 @@
     return-void
 .end method
 
+.method private readObject(Ljava/io/ObjectInputStream;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {}, LX/0X6;->A0d()Ljava/io/InvalidObjectException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
 
 # virtual methods
 .method public final A0B()Z
@@ -58,6 +81,14 @@
 
 .method public final contains(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "target"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableAsList;->A0C()Lcom/google/common/collect/ImmutableCollection;

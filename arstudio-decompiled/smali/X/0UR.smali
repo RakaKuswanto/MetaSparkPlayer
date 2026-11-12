@@ -1,10 +1,26 @@
-.class public abstract LX/0UR;
+.class public final LX/0UR;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/util/List;
+.field public A00:I
+
+.field public A01:J
+
+.field public A02:LX/0VV;
+
+.field public A03:Ljava/lang/String;
+
+.field public A04:Ljava/lang/String;
+
+.field public A05:Ljava/lang/String;
+
+.field public A06:Ljava/lang/String;
+
+.field public A07:Ljava/util/List;
+
+.field public A08:Ljava/util/UUID;
 
 
 # direct methods
@@ -17,306 +33,285 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, Ljava/util/LinkedList;
+    const/16 v0, 0x32
 
     .line 4
     .line 5
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 6
     .line 7
     .line 8
-    iput-object v0, p0, LX/0UR;->A00:Ljava/util/List;
+    move-result-object v0
 
     .line 9
+    iput-object v0, p0, LX/0UR;->A07:Ljava/util/List;
+
     .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    iput v0, p0, LX/0UR;->A00:I
+
+    .line 13
+    .line 14
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized A01(LX/0UQ;)V
-    .locals 1
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/0UR;->A00:Ljava/util/List;
-
-    .line 2
-    .line 3
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    .line 5
-    .line 6
-    monitor-exit p0
-
-    .line 7
-    return-void
-
-    .line 8
-    :catchall_0
-    move-exception v0
-
-    .line 9
-    monitor-exit p0
-
-    .line 10
-    throw v0
-.end method
-
-.method public final declared-synchronized A02(Lorg/json/JSONObject;)V
+.method public final toString()Ljava/lang/String;
     .locals 4
 
     .line 0
-    monitor-enter p0
+    invoke-static {}, LX/002;->A0D()Lorg/json/JSONObject;
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, LX/0UR;->A00:Ljava/util/List;
-
     .line 2
     .line 3
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 4
-    .line 5
-    .line 6
     move-result-object v3
 
-    .line 7
-    :catch_0
-    :cond_0
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    .line 4
+    :try_start_0
+    const-string v1, "seq"
 
+    .line 5
+    .line 6
+    iget v0, p0, LX/0UR;->A00:I
+
+    .line 7
     .line 8
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
     .line 9
     .line 10
-    move-result v0
-
     .line 11
-    if-eqz v0, :cond_7
+    const-string v2, "time"
 
     .line 12
     .line 13
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-wide v0, p0, LX/0UR;->A01:J
 
     .line 14
     .line 15
+    invoke-static {v0, v1}, LX/0U9;->A00(J)Ljava/lang/String;
+
     .line 16
-    move-result-object v2
-
     .line 17
-    check-cast v2, LX/0UQ;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 18
+    move-result-object v0
+
     .line 19
-    :try_start_1
-    invoke-interface {v2}, LX/0UQ;->AJ2()Ljava/lang/String;
+    invoke-virtual {v3, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 20
     .line 21
     .line 22
-    move-result-object v1
+    const-string v1, "app_id"
 
     .line 23
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
     .line 24
+    iget-object v0, p0, LX/0UR;->A03:Ljava/lang/String;
+
     .line 25
     .line 26
-    move-result v0
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 27
-    if-nez v0, :cond_1
-
     .line 28
     .line 29
-    const-string v0, "host_name_v6"
+    const-string v1, "app_ver"
 
     .line 30
     .line 31
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    iget-object v0, p0, LX/0UR;->A04:Ljava/lang/String;
 
     .line 32
     .line 33
-    .line 34
-    :cond_1
-    invoke-interface {v2}, LX/0UQ;->ABg()Ljava/lang/String;
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
+    .line 34
     .line 35
     .line 36
-    .line 37
-    move-result-object v1
+    const-string v1, "build_num"
 
+    .line 37
     .line 38
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    iget-object v0, p0, LX/0UR;->A05:Ljava/lang/String;
 
     .line 39
     .line 40
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
     .line 41
-    move-result v0
-
     .line 42
-    if-nez v0, :cond_2
-
     .line 43
+    const-string v1, "device_id"
+
     .line 44
-    const-string v0, "analytics_endpoint"
-
     .line 45
-    .line 46
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    iget-object v0, p0, LX/0UR;->A02:LX/0VV;
 
+    .line 46
     .line 47
+    invoke-interface {v0}, LX/0VV;->get()Ljava/lang/Object;
+
     .line 48
     .line 49
-    :cond_2
-    invoke-interface {v2}, LX/0UQ;->AIW()Ljava/lang/Integer;
-
     .line 50
+    move-result-object v0
+
     .line 51
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
     .line 52
-    move-result-object v1
-
     .line 53
-    if-eqz v1, :cond_3
-
     .line 54
+    const-string v1, "session_id"
+
     .line 55
-    const-string v0, "background_keepalive_interval_persistent_sec"
-
     .line 56
-    .line 57
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    iget-object v0, p0, LX/0UR;->A08:Ljava/util/UUID;
 
+    .line 57
     .line 58
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
     .line 59
     .line 60
-    :cond_3
-    invoke-interface {v2}, LX/0UQ;->AIZ()Ljava/lang/Integer;
-
     .line 61
+    const-string v1, "uid"
+
     .line 62
     .line 63
-    move-result-object v1
+    iget-object v0, p0, LX/0UR;->A06:Ljava/lang/String;
 
     .line 64
-    if-eqz v1, :cond_4
-
     .line 65
-    .line 66
-    const-string v0, "mqtt_connect_timeout_sec"
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
+    .line 66
     .line 67
     .line 68
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    iget-object v0, p0, LX/0UR;->A07:Ljava/util/List;
 
     .line 69
     .line 70
-    .line 71
-    :cond_4
-    invoke-interface {v2}, LX/0UQ;->AIY()Ljava/lang/Integer;
+    new-instance v2, Lorg/json/JSONArray;
 
+    .line 71
     .line 72
+    invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
+
     .line 73
     .line 74
-    move-result-object v1
-
     .line 75
-    if-eqz v1, :cond_5
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 76
     .line 77
-    const-string v0, "response_timeout_sec"
-
     .line 78
+    move-result-object v1
+
     .line 79
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 80
     .line 81
     .line 82
-    :cond_5
-    invoke-interface {v2}, LX/0UQ;->AJz()Ljava/lang/Integer;
+    move-result v0
 
     .line 83
+    if-eqz v0, :cond_0
+
     .line 84
     .line 85
-    move-result-object v1
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 86
-    if-eqz v1, :cond_6
-
     .line 87
     .line 88
-    const-string v0, "ping_delay_s"
+    move-result-object v0
 
     .line 89
-    .line 90
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    check-cast v0, LX/0U4;
 
+    .line 90
     .line 91
+    invoke-virtual {v0}, LX/0U4;->A03()Lorg/json/JSONObject;
+
     .line 92
     .line 93
-    :cond_6
-    invoke-interface {v2}, LX/0UQ;->AIX()Ljava/lang/Integer;
-
     .line 94
+    move-result-object v0
+
     .line 95
+    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
     .line 96
-    move-result-object v1
-
     .line 97
-    if-eqz v1, :cond_0
-
     .line 98
+    goto :goto_0
+
     .line 99
-    const-string v0, "foreground_keepalive_interval_sec"
+    :cond_0
+    const-string v0, "data"
 
     .line 100
     .line 101
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v3, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 102
     .line 103
     .line 104
-    goto :goto_0
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-string v1, "log_type"
 
     .line 105
-    :cond_7
-    monitor-exit p0
-
     .line 106
-    return-void
+    const-string v0, "client_event"
 
     .line 107
-    :catchall_0
-    move-exception v0
-
     .line 108
-    monitor-exit p0
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 109
-    throw v0
-.end method
+    .line 110
+    .line 111
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-.method public abstract A03()LX/0UP;
-.end method
+    .line 112
+    .line 113
+    .line 114
+    move-result-object v0
 
-.method public abstract A04()V
-.end method
+    .line 115
+    return-object v0
 
-.method public abstract A05()V
+    .line 116
+    :catch_0
+    move-exception v2
+
+    .line 117
+    const-string v1, "AnalyticsSession"
+
+    .line 118
+    .line 119
+    const-string v0, "Failed to serialize"
+
+    .line 120
+    .line 121
+    invoke-static {v1, v0, v2}, LX/0Il;->A0I(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 122
+    .line 123
+    .line 124
+    const-string v0, ""
+
+    .line 125
+    .line 126
+    return-object v0
 .end method

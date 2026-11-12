@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;
 
 .field public static final enum BOTTOM_RIGHT:Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;
@@ -150,6 +152,18 @@
 
     .line 45
     .line 46
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
+    .line 50
+    sput-object v0, Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 51
+    .line 52
     return-void
 .end method
 
@@ -167,6 +181,14 @@
     .line 4
     .line 5
     return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;

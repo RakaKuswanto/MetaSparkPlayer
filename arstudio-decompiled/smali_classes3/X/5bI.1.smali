@@ -4,20 +4,5 @@
 
 
 # virtual methods
-.method public abstract ANu()LX/5aP;
-.end method
-
-.method public abstract AYR()V
-.end method
-
-.method public abstract AYT()V
-.end method
-
-.method public abstract AnY(LX/5aP;)V
-.end method
-
-.method public abstract Aoh(LX/5aV;)V
-.end method
-
-.method public abstract stop()V
+.method public abstract ACS()LX/3Tc;
 .end method

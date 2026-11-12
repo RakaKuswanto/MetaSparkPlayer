@@ -1,188 +1,315 @@
-.class public final LX/4Ci;
-.super Ljava/lang/Object;
+.class public abstract LX/4Ci;
+.super LX/4D9;
 .source ""
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AutofillBottomSheetDialogFragment"
 
 
 # instance fields
-.field public final A00:LX/4Ed;
-
-.field public final A01:LX/4DB;
-
-.field public final A02:LX/4CY;
-
-.field public final A03:LX/4C5;
-
-.field public final A04:Landroid/net/http/SslError;
-
-.field public final synthetic A05:LX/4Cj;
+.field public A00:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/http/SslError;LX/4Ed;LX/4DB;LX/4Cj;LX/4CY;LX/4C5;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p4, p0, LX/4Ci;->A05:LX/4Cj;
+    invoke-direct {p0}, LX/4D9;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    const/4 v0, 0x0
+
     .line 4
+    iput-boolean v0, p0, LX/4Ci;->A00:Z
+
     .line 5
-    iput-object p6, p0, LX/4Ci;->A03:LX/4C5;
-
     .line 6
-    .line 7
-    iput-object p5, p0, LX/4Ci;->A02:LX/4CY;
-
-    .line 8
-    .line 9
-    iput-object p1, p0, LX/4Ci;->A04:Landroid/net/http/SslError;
-
-    .line 10
-    .line 11
-    iput-object p3, p0, LX/4Ci;->A01:LX/4DB;
-
-    .line 12
-    .line 13
-    iput-object p2, p0, LX/4Ci;->A00:LX/4Ed;
-
-    .line 14
-    .line 15
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public static A07(Landroid/view/View;I)Landroid/view/View;
+    .locals 0
 
     .line 0
-    iget-object v0, p0, LX/4Ci;->A03:LX/4C5;
+    invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/4C5;->A00:Landroid/webkit/SslErrorHandler;
-
     .line 3
+    move-result-object p0
+
     .line 4
-    invoke-virtual {v0}, Landroid/webkit/SslErrorHandler;->cancel()V
+    invoke-static {p0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 5
     .line 6
     .line 7
-    iget-object v2, p0, LX/4Ci;->A05:LX/4Cj;
+    return-object p0
+.end method
+
+.method public static A08(Landroid/view/View;Landroidx/fragment/app/Fragment;I)Landroidx/fragment/app/FragmentActivity;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    return-object p0
+.end method
+
+.method public static A09(Landroidx/fragment/app/Fragment;)LX/2Wk;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    invoke-static {p0}, LX/49d;->A01(Landroid/content/Context;)LX/2Wk;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object p0
+
+    .line 8
+    return-object p0
+.end method
+
+.method public static final A0A(Landroid/view/View;)V
+    .locals 1
+
+    .line 0
+    const v0, 0x7f090073
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    if-eqz p0, :cond_0
 
     .line 8
     .line 9
-    const-string v0, "back"
+    const/16 v0, 0x8
 
     .line 10
     .line 11
-    iput-object v0, v2, LX/4Cj;->A02:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 12
     .line 13
-    iget-object v0, p0, LX/4Ci;->A02:LX/4CY;
-
     .line 14
-    .line 15
-    invoke-virtual {v0}, LX/4Cd;->A03()LX/4Cc;
+    :cond_0
+    return-void
+.end method
 
-    .line 16
-    .line 17
-    .line 18
+.method public static A0B(Landroid/view/View;II)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0, p1}, LX/03U;->A0C(Landroid/view/View;I)Landroid/view/View;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    invoke-virtual {p0, p2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public static A0C(Landroid/widget/TextView;Landroidx/fragment/app/Fragment;I)V
+    .locals 1
+
+    .line 0
+    invoke-virtual {p1, p2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
     move-result-object v0
 
+    .line 4
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public static A0D(LX/4Cy;LX/4D4;Z)V
+    .locals 2
+
+    .line 0
+    iput-boolean p2, p1, LX/4D4;->A0N:Z
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/4Cy;->A04:Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCall;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCall;->A05()Ljava/lang/String;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    iput-object v0, p1, LX/4D4;->A0G:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    iget-object v1, p0, LX/4Cy;->A04:Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCall;
+
+    .line 13
+    .line 14
+    const-string v0, "requestAutofillData"
+
+    .line 15
+    .line 16
+    invoke-virtual {v1, v0}, Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;->A04(Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 17
+    .line 18
     .line 19
-    invoke-virtual {v0}, LX/4Cc;->A00()LX/4Cf;
+    move-result-object v0
 
     .line 20
+    check-cast v0, Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCallData;
+
     .line 21
     .line 22
-    move-result-object v1
+    if-nez v0, :cond_1
 
     .line 23
-    if-eqz v1, :cond_0
-
     .line 24
+    const/4 v0, 0x0
+
     .line 25
-    iget-object v0, p0, LX/4Ci;->A01:LX/4DB;
+    :goto_0
+    invoke-static {v0}, LX/4Ct;->A01(Ljava/util/Set;)Ljava/lang/String;
 
     .line 26
     .line 27
-    iget-object v1, v1, LX/4Cf;->A03:Ljava/lang/String;
-
     .line 28
+    move-result-object v0
+
     .line 29
-    check-cast v0, LX/4BG;
+    iput-object v0, p1, LX/4D4;->A06:Ljava/lang/String;
 
     .line 30
     .line 31
-    iget-object v0, v0, LX/4BG;->A1J:Ljava/util/Set;
+    iget-object v0, p0, LX/4Cy;->A04:Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCall;
 
     .line 32
     .line 33
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCall;->A06()Ljava/util/LinkedHashSet;
 
     .line 34
     .line 35
     .line 36
-    move-result v0
+    move-result-object v0
 
     .line 37
-    if-nez v0, :cond_1
+    invoke-static {v0}, LX/4Ct;->A01(Ljava/util/Set;)Ljava/lang/String;
 
     .line 38
     .line 39
-    :cond_0
-    iget-object v1, p0, LX/4Ci;->A01:LX/4DB;
-
     .line 40
+    move-result-object v0
+
     .line 41
-    const/4 v0, 0x1
+    iput-object v0, p1, LX/4D4;->A0F:Ljava/lang/String;
 
     .line 42
-    invoke-interface {v1, v0}, LX/4DB;->AVH(I)Z
-
     .line 43
-    .line 44
-    .line 45
-    move-result v0
-
-    .line 46
-    if-nez v0, :cond_1
-
-    .line 47
-    .line 48
-    iget-object v2, p0, LX/4Ci;->A00:LX/4Ed;
-
-    .line 49
-    .line 50
-    const/4 v1, 0x2
-
-    .line 51
-    const/4 v0, 0x0
-
-    .line 52
-    invoke-interface {v2, v1, v0}, LX/4Ed;->A72(ILjava/lang/String;)V
-
-    .line 53
-    .line 54
-    .line 55
+    :cond_0
     return-void
 
-    .line 56
+    .line 44
     :cond_1
-    invoke-virtual {v2}, LX/4Cj;->A00()V
+    iget-object v0, v0, Lcom/facebook/businessextension/jscalls/RequestAutofillJSBridgeCallData;->A01:Ljava/util/LinkedHashSet;
 
-    .line 57
-    .line 58
-    .line 59
+    .line 45
+    .line 46
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 3
+
+    .line 0
+    invoke-super {p0, p1}, LX/02j;->onCreate(Landroid/os/Bundle;)V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v2, p0, Landroidx/fragment/app/Fragment;->mArguments:Landroid/os/Bundle;
+
+    .line 4
+    .line 5
+    if-eqz v2, :cond_0
+
+    .line 6
+    .line 7
+    const/4 v1, 0x0
+
+    .line 8
+    const-string v0, "disable_drag_and_bg_tap_to_dismiss"
+
+    .line 9
+    .line 10
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    iput-boolean v0, p0, LX/4Ci;->A00:Z
+
+    .line 15
+    .line 16
+    :cond_0
     return-void
 .end method

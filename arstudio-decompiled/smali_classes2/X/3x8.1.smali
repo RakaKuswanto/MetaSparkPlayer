@@ -2,105 +2,92 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$17"
+
 
 # instance fields
-.field public final A00:LX/3i2;
+.field public final synthetic A00:LX/3wv;
+
+.field public final synthetic A01:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(LX/3i2;)V
+.method public constructor <init>(LX/3wv;Ljava/util/List;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/3x8;->A00:LX/3wv;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/3x8;->A00:LX/3i2;
+    iput-object p2, p0, LX/3x8;->A01:Ljava/util/List;
 
+    .line 3
     .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Ljava/io/InputStream;Ljava/io/OutputStream;)V
-    .locals 6
+.method public final run()V
+    .locals 3
 
     .line 0
-    iget-object v5, p0, LX/3x8;->A00:LX/3i2;
+    iget-object v0, p0, LX/3x8;->A00:LX/3wv;
 
     .line 1
     .line 2
-    const/16 v4, 0x4000
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
 
     .line 3
     .line 4
-    invoke-virtual {v5, v4}, LX/37l;->get(I)Ljava/lang/Object;
-
     .line 5
+    move-result-object v2
+
     .line 6
-    .line 7
-    move-result-object v3
-
-    .line 8
-    check-cast v3, [B
-
-    .line 9
-    .line 10
     :goto_0
-    :try_start_0
-    const/4 v2, 0x0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-eqz v0, :cond_0
 
     .line 11
-    invoke-virtual {p1, v3, v2, v4}, Ljava/io/InputStream;->read([BII)I
-
     .line 12
+    invoke-static {v2}, LX/0X6;->A0X(Ljava/util/Iterator;)LX/3xA;
+
     .line 13
     .line 14
-    move-result v1
-
     .line 15
-    const/4 v0, -0x1
+    move-result-object v1
 
     .line 16
-    if-ne v1, v0, :cond_0
+    iget-object v0, p0, LX/3x8;->A01:Ljava/util/List;
 
     .line 17
     .line 18
-    goto :goto_1
+    invoke-interface {v1, v0}, LX/3xA;->AV1(Ljava/util/List;)V
 
     .line 19
-    :cond_0
-    invoke-virtual {p2, v3, v2, v1}, Ljava/io/OutputStream;->write([BII)V
-
     .line 20
     .line 21
-    .line 22
     goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23
-    :goto_1
-    invoke-virtual {v5, v3}, LX/37l;->AiR(Ljava/lang/Object;)V
-
-    .line 24
-    .line 25
-    .line 26
+    .line 22
+    :cond_0
     return-void
-
-    .line 27
-    :catchall_0
-    move-exception v0
-
-    .line 28
-    invoke-virtual {v5, v3}, LX/37l;->AiR(Ljava/lang/Object;)V
-
-    .line 29
-    .line 30
-    .line 31
-    throw v0
 .end method

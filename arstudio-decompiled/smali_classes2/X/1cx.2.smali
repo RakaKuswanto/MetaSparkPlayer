@@ -1,146 +1,257 @@
-.class public abstract LX/1cx;
-.super LX/1bj;
+.class public final LX/1cx;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/Map;
 
+# instance fields
+.field public final A00:Landroid/content/Context;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<K:",
-        "Ljava/lang/Object;",
-        "V:",
-        "Ljava/lang/Object;",
-        ">",
-        "LX/1bj;",
-        "Ljava/util/Map<",
-        "TK;TV;>;"
-    }
-.end annotation
+.field public final A01:Landroid/content/SharedPreferences;
+
+.field public final A02:LX/3p1;
+
+.field public final A03:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, LX/1bj;-><init>()V
+    new-instance v3, LX/3p1;
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
-
-.method private final A01()Ljava/util/Map;
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    invoke-direct {v3}, LX/3p1;-><init>()V
 
     .line 3
     .line 4
-    move-object v0, p0
-
     .line 5
-    check-cast v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
+    const-string v2, "FirebaseInstanceId"
 
     .line 6
     .line 7
-    iget-object v0, v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->A00:Ljava/util/concurrent/ConcurrentMap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
     .line 9
-    return-object v0
-
     .line 10
-    :cond_0
-    move-object v0, p0
+    new-instance v0, LX/0Of;
 
     .line 11
-    check-cast v0, LX/1cy;
-
     .line 12
-    .line 13
-    iget-object v0, v0, LX/1cy;->A00:Ljava/util/Map;
+    invoke-direct {v0}, LX/0Of;-><init>()V
 
+    .line 13
     .line 14
     .line 15
-    return-object v0
-.end method
+    iput-object v0, p0, LX/1cx;->A03:Ljava/util/Map;
 
+    .line 16
+    .line 17
+    iput-object p1, p0, LX/1cx;->A00:Landroid/content/Context;
 
-# virtual methods
-.method public final clear()V
-    .locals 1
+    .line 18
+    .line 19
+    const-string/jumbo v1, "com.google.android.gms.appid"
 
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
+    .line 20
+    .line 21
+    .line 22
+    const/4 v0, 0x0
 
-    .line 1
-    .line 2
-    .line 3
+    .line 23
+    invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    .line 24
+    .line 25
+    .line 26
     move-result-object v0
 
-    .line 4
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
+    .line 27
+    iput-object v0, p0, LX/1cx;->A01:Landroid/content/SharedPreferences;
 
-    .line 5
-    .line 6
-    .line 7
+    .line 28
+    .line 29
+    iput-object v3, p0, LX/1cx;->A02:LX/3p1;
+
+    .line 30
+    .line 31
+    invoke-static {p1}, LX/01f;->A05(Landroid/content/Context;)Ljava/io/File;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v1
+
+    .line 35
+    const-string/jumbo v0, "com.google.android.gms.appid-no-backup"
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v1
+
+    .line 42
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    .line 43
+    .line 44
+    .line 45
+    move-result v0
+
+    .line 46
+    if-nez v0, :cond_0
+
+    .line 47
+    .line 48
+    :try_start_0
+    invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
+
+    .line 49
+    .line 50
+    .line 51
+    move-result v0
+
+    .line 52
+    if-eqz v0, :cond_0
+
+    .line 53
+    .line 54
+    move-object v1, p0
+
+    .line 55
+    monitor-enter v1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 56
+    :try_start_1
+    iget-object v0, p0, LX/1cx;->A01:Landroid/content/SharedPreferences;
+
+    .line 57
+    .line 58
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
+
+    .line 59
+    .line 60
+    .line 61
+    move-result-object v0
+
+    .line 62
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
+
+    .line 63
+    .line 64
+    .line 65
+    move-result v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 66
+    :try_start_2
+    monitor-exit v1
+
+    .line 67
+    if-nez v0, :cond_0
+
+    .line 68
+    .line 69
+    invoke-virtual {p0}, LX/1cx;->A01()V
+
+    .line 70
+    .line 71
+    .line 72
+    invoke-static {}, LX/4zH;->A00()LX/4zH;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v0
+
+    .line 76
+    invoke-static {v0}, Lcom/google/firebase/iid/FirebaseInstanceId;->getInstance(LX/4zH;)Lcom/google/firebase/iid/FirebaseInstanceId;
+
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
+
+    .line 80
+    invoke-virtual {v0}, Lcom/google/firebase/iid/FirebaseInstanceId;->A05()V
+
+    .line 81
+    .line 82
+    .line 83
+    return-void
+
+    .line 84
+    :catchall_0
+    move-exception v0
+
+    .line 85
+    monitor-exit v1
+
+    .line 86
+    throw v0
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    .line 87
+    :catch_0
+    move-exception v1
+
+    .line 88
+    const/4 v0, 0x3
+
+    .line 89
+    invoke-static {v2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    .line 90
+    .line 91
+    .line 92
+    move-result v0
+
+    .line 93
+    if-eqz v0, :cond_0
+
+    .line 94
+    .line 95
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 96
+    .line 97
+    .line 98
+    :cond_0
     return-void
 .end method
 
-.method public containsKey(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-.end method
-
-.method public final containsValue(Ljava/lang/Object;)Z
+.method public static A00(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .line 0
-    instance-of v0, p0, LX/1cy;
+    const-string v2, ""
 
     .line 1
     .line 2
-    if-eqz v0, :cond_3
+    invoke-static {v2}, LX/0X3;->A03(Ljava/lang/Object;)I
 
     .line 3
     .line 4
-    invoke-virtual {p0}, LX/1cx;->entrySet()Ljava/util/Set;
-
     .line 5
-    .line 6
-    .line 7
-    move-result-object v0
+    move-result v0
 
+    .line 6
+    add-int/lit8 v0, v0, 0x3
+
+    .line 7
     .line 8
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-static {p0, v0}, LX/0X2;->A0n(Ljava/lang/Object;I)Ljava/lang/StringBuilder;
 
     .line 9
     .line 10
@@ -148,378 +259,205 @@
     move-result-object v1
 
     .line 12
-    const/4 v0, 0x1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 13
-    new-instance v2, LX/1qd;
-
     .line 14
     .line 15
-    invoke-direct {v2, v1, v0}, LX/1qd;-><init>(Ljava/util/Iterator;I)V
+    const-string/jumbo v0, "|S|"
 
     .line 16
     .line 17
     .line 18
-    const/4 v1, 0x1
+    invoke-static {v0, p0, v1}, LX/0X1;->A0R(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 19
-    if-nez p1, :cond_1
-
     .line 20
     .line 21
-    :cond_0
-    invoke-virtual {v2}, LX/1cz;->hasNext()Z
+    move-result-object v0
 
     .line 22
-    .line 23
-    .line 24
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized A01()V
+    .locals 6
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, LX/1cx;->A03:Ljava/util/Map;
+
+    .line 2
+    .line 3
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v2, p0, LX/1cx;->A00:Landroid/content/Context;
+
+    .line 7
+    .line 8
+    invoke-static {v2}, LX/01f;->A05(Landroid/content/Context;)Ljava/io/File;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    if-eqz v1, :cond_0
+
+    .line 13
+    .line 14
+    invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
+
+    .line 15
+    .line 16
+    .line 17
     move-result v0
 
+    .line 18
+    if-eqz v0, :cond_0
+
+    .line 19
+    .line 20
+    :goto_0
+    invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v5
+
+    .line 24
+    array-length v4, v5
+
     .line 25
-    if-eqz v0, :cond_2
+    const/4 v3, 0x0
 
     .line 26
+    goto :goto_1
+
     .line 27
-    invoke-virtual {v2}, LX/1cz;->next()Ljava/lang/Object;
+    :cond_0
+    const-string v1, "FirebaseInstanceId"
 
     .line 28
     .line 29
+    const-string/jumbo v0, "noBackupFilesDir doesn\'t exist, using regular files directory instead"
+
     .line 30
-    move-result-object v0
-
     .line 31
-    if-nez v0, :cond_0
-
     .line 32
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 33
-    return v1
-
     .line 34
-    :cond_1
-    invoke-virtual {v2}, LX/1cz;->hasNext()Z
-
     .line 35
+    invoke-virtual {v2}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+
     .line 36
     .line 37
-    move-result v0
-
     .line 38
-    if-eqz v0, :cond_2
+    move-result-object v1
 
     .line 39
+    goto :goto_0
+
     .line 40
-    invoke-virtual {v2}, LX/1cz;->next()Ljava/lang/Object;
+    :goto_1
+    if-ge v3, v4, :cond_2
 
     .line 41
     .line 42
-    .line 43
-    move-result-object v0
+    aget-object v2, v5, v3
 
+    .line 43
     .line 44
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     .line 45
     .line 46
     .line 47
-    move-result v0
+    move-result-object v1
 
     .line 48
-    if-eqz v0, :cond_1
+    const-string/jumbo v0, "com.google.InstanceId"
 
     .line 49
     .line 50
-    return v1
-
     .line 51
-    :cond_2
-    const/4 v1, 0x0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     .line 52
-    return v1
-
     .line 53
-    :cond_3
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
     .line 54
-    .line 55
-    .line 56
-    move-result-object v0
+    move-result v0
 
+    .line 55
+    if-eqz v0, :cond_1
+
+    .line 56
     .line 57
-    invoke-interface {v0, p1}, Ljava/util/Map;->containsValue(Ljava/lang/Object;)Z
+    invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     .line 58
     .line 59
     .line 60
-    move-result v1
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
 
     .line 61
-    return v1
-.end method
+    .line 62
+    goto :goto_1
 
-.method public entrySet()Ljava/util/Set;
-    .locals 1
+    .line 63
+    :cond_2
+    iget-object v0, p0, LX/1cx;->A01:Landroid/content/SharedPreferences;
 
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
+    .line 64
+    .line 65
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    .line 1
-    .line 2
-    .line 3
+    .line 66
+    .line 67
+    .line 68
     move-result-object v0
 
-    .line 4
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    .line 69
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
-    .line 5
-    .line 6
-    .line 7
+    .line 70
+    .line 71
+    .line 72
     move-result-object v0
 
-    .line 8
-    return-object v0
-.end method
+    .line 73
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public equals(Ljava/lang/Object;)Z
-    .locals 2
+    .line 74
+    .line 75
+    .line 76
+    monitor-exit p0
 
-    .line 0
-    if-eq p1, p0, :cond_0
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    .line 7
-    .line 8
-    .line 9
-    move-result v1
-
-    .line 10
-    const/4 v0, 0x0
-
-    .line 11
-    if-eqz v1, :cond_1
-
-    .line 12
-    .line 13
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 14
-    :cond_1
-    return v0
-.end method
-
-.method public get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    return-object v0
-.end method
-
-.method public hashCode()I
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Map;->hashCode()I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-.end method
-
-.method public isEmpty()Z
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-.end method
-
-.method public keySet()Ljava/util/Set;
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    return-object v0
-.end method
-
-.method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    return-object v0
-.end method
-
-.method public final putAll(Ljava/util/Map;)V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
-
-    .line 5
-    .line 6
-    .line 7
+    .line 77
     return-void
-.end method
 
-.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .line 78
+    :catchall_0
+    move-exception v0
 
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
+    .line 79
+    monitor-exit p0
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    return-object v0
-.end method
-
-.method public size()I
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Map;->size()I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-.end method
-
-.method public final values()Ljava/util/Collection;
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/1cx;->A01()Ljava/util/Map;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    return-object v0
+    .line 80
+    throw v0
 .end method

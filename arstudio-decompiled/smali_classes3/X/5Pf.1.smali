@@ -1,76 +1,42 @@
-.class public final LX/5Pf;
+.class public abstract LX/5Pf;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3aS;
-
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static A00(Landroid/media/AudioTrack;LX/5Q4;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, LX/5Q4;->A00()Landroid/media/metrics/LogSessionId;
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    move-result-object v1
 
+    .line 4
+    sget-object v0, Landroid/media/metrics/LogSessionId;->LOG_SESSION_ID_NONE:Landroid/media/metrics/LogSessionId;
 
-# virtual methods
-.method public final AJH(I)I
-    .locals 3
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const/4 v2, 0x3
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
 
-    const/4 v1, 0x2
+    .line 10
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x1
+    .line 11
+    .line 12
+    invoke-virtual {p0, v1}, Landroid/media/AudioTrack;->setLogSessionId(Landroid/media/metrics/LogSessionId;)V
 
-    if-eq p1, v0, :cond_3
-
-    const/16 v0, 0xb
-
-    if-eq p1, v0, :cond_3
-
-    if-eq p1, v1, :cond_2
-
-    const/16 v0, 0xc
-
-    if-eq p1, v0, :cond_2
-
-    if-lt p1, v2, :cond_1
-
-    const/16 v0, 0xa
-
-    if-le p1, v0, :cond_0
-
-    const/16 v0, 0xd
-
-    if-lt p1, v0, :cond_1
-
-    const/16 v0, 0x13
-
-    if-gt p1, v0, :cond_1
-
+    .line 13
+    .line 14
+    .line 15
     :cond_0
-    return v2
-
-    :cond_1
-    const/4 v2, 0x5
-
-    return v2
-
-    :cond_2
-    const/4 v2, 0x2
-
-    return v2
-
-    :cond_3
-    const/4 v2, 0x1
-
-    return v2
+    return-void
 .end method

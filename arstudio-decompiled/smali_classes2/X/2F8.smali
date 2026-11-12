@@ -1,8 +1,31 @@
-.class public interface abstract LX/2F8;
+.class public final LX/2F8;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AAV(LX/2Fa;LX/2EI;LX/2C1;)Lcom/fasterxml/jackson/databind/JsonSerializer;
+# instance fields
+.field public final A00:Landroid/content/Context;
+
+.field public final A01:Landroid/content/pm/PackageManager;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Landroid/content/pm/PackageManager;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p2, p0, LX/2F8;->A01:Landroid/content/pm/PackageManager;
+
+    .line 4
+    .line 5
+    iput-object p1, p0, LX/2F8;->A00:Landroid/content/Context;
+
+    .line 6
+    .line 7
+    return-void
 .end method

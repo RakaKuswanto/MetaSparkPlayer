@@ -1,38 +1,39 @@
-.class public interface abstract LX/2ud;
+.class public abstract LX/2uD;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ABi()I
-.end method
+# static fields
+.field public static final A00:[Ljava/lang/String;
 
-.method public abstract ADn()[LX/3Bq;
-.end method
 
-.method public abstract AIx()[LX/3Bq;
-.end method
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 3
 
-.method public abstract AJd(Ljava/lang/String;)I
-.end method
+    .line 0
+    invoke-static {}, LX/0X7;->A0x()[Ljava/lang/String;
 
-.method public abstract AKF()Ljava/lang/String;
-.end method
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
 
-.method public abstract AKr()LX/2uV;
-.end method
+    .line 4
+    const/4 v1, 0x0
 
-.method public abstract AML()J
-.end method
+    .line 5
+    const-string v0, "Threads:"
 
-.method public abstract ANn()Ljava/lang/String;
-.end method
+    .line 6
+    .line 7
+    aput-object v0, v2, v1
 
-.method public abstract Ajn(Ljava/lang/String;Ljava/lang/String;)V
-.end method
+    .line 8
+    .line 9
+    sput-object v2, LX/2uD;->A00:[Ljava/lang/String;
 
-.method public abstract Ak2(LX/3JO;)LX/2uc;
-.end method
-
-.method public abstract getName()Ljava/lang/String;
+    .line 10
+    .line 11
+    return-void
 .end method

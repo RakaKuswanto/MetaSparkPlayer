@@ -30,12 +30,12 @@
     return-void
 .end method
 
-.method public static native nativeCreateEncoder(Lorg/webrtc/VideoEncoder;Lorg/webrtc/VideoEncoder;)J
+.method public static native nativeCreate(JLorg/webrtc/VideoEncoder;Lorg/webrtc/VideoEncoder;)J
 .end method
 
 
 # virtual methods
-.method public createNativeVideoEncoder()J
+.method public createNative(J)J
     .locals 2
 
     .line 0
@@ -47,7 +47,7 @@
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, Lorg/webrtc/VideoEncoderFallback;->nativeCreateEncoder(Lorg/webrtc/VideoEncoder;Lorg/webrtc/VideoEncoder;)J
+    invoke-static {p1, p2, v1, v0}, Lorg/webrtc/VideoEncoderFallback;->nativeCreate(JLorg/webrtc/VideoEncoder;Lorg/webrtc/VideoEncoder;)J
 
     .line 5
     .line 6

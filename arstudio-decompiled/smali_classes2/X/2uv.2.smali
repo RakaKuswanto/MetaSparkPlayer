@@ -3,71 +3,19 @@
 .source ""
 
 # interfaces
-.implements LX/2mI;
+.implements LX/2uu;
 
 
 # static fields
-.field public static final A03:LX/3DW;
-
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "TempFileCleanupConditionalWorkerInfo"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "GraphQLFileCleanerConditionalWorkerInfo"
 
 
 # instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Gd;
+.field public final A00:LX/0VC;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 0
-    new-instance v1, LX/2uu;
-
-    .line 1
-    .line 2
-    invoke-direct {v1}, LX/2uu;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sget-object v0, LX/2vR;->BACKGROUND:LX/2vR;
-
-    .line 6
-    .line 7
-    invoke-static {v1, v0}, LX/2uu;->A00(LX/2uu;Ljava/lang/Enum;)V
-
-    .line 8
-    .line 9
-    .line 10
-    sget-object v0, LX/3BG;->NOT_LOW:LX/3BG;
-
-    .line 11
-    .line 12
-    invoke-static {v1, v0}, LX/2uu;->A00(LX/2uu;Ljava/lang/Enum;)V
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-virtual {v1}, LX/2uu;->A01()LX/3DW;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    sput-object v0, LX/2uv;->A03:LX/3DW;
-
-    .line 20
-    .line 21
-    return-void
-.end method
-
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -76,11 +24,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->ABU:I
+    const/16 v0, 0x1d
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1zT;->A00(I)LX/1zT;
+    invoke-static {p0, v0}, LX/0Xg;->A00(Ljava/lang/Object;I)LX/0Xg;
 
     .line 6
     .line 7
@@ -88,55 +36,27 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, LX/2uv;->A01:LX/0Na;
+    iput-object v0, p0, LX/2uv;->A00:LX/0VC;
 
     .line 10
     .line 11
-    const/16 v0, 0x24
-
-    .line 12
-    .line 13
-    invoke-static {p0, v0}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, LX/2uv;->A02:LX/0Gd;
-
-    .line 18
-    .line 19
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    iput-object v0, p0, LX/2uv;->A00:LX/1zG;
-
-    .line 24
-    .line 25
     return-void
 .end method
 
 
 # virtual methods
-.method public final ADV()LX/0Gd;
+.method public final AC7()LX/0VC;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/2uv;->A02:LX/0Gd;
+    iget-object v0, p0, LX/2uv;->A00:LX/0VC;
 
     .line 1
     .line 2
     return-object v0
 .end method
 
-.method public final AHL()J
+.method public final AFt()J
     .locals 2
 
     const-wide/32 v0, 0x5265c00
@@ -144,105 +64,61 @@
     return-wide v0
 .end method
 
-.method public final AKa()LX/37j;
-    .locals 3
+.method public final AJ4()LX/2uz;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AJt()LX/2vA;
+    .locals 1
 
     .line 0
-    const-wide v1, 0x32156c09a093fL
+    new-instance v0, LX/2ug;
 
     .line 1
     .line 2
+    invoke-direct {v0}, LX/2ug;-><init>()V
+
     .line 3
     .line 4
     .line 5
-    new-instance v0, LX/37j;
+    invoke-virtual {v0}, LX/2ug;->A01()LX/2vA;
 
     .line 6
     .line 7
-    invoke-direct {v0, v1, v2}, LX/37j;-><init>(J)V
-
     .line 8
-    .line 9
-    .line 10
-    return-object v0
-.end method
-
-.method public final ALN()LX/3DW;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/2uv;->A03:LX/3DW;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final ANL()LX/2vF;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/2vF;->INTERVAL:LX/2vF;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final Ao3()Z
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/2uv;->A01:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
-    check-cast v0, LX/1yB;
-
-    .line 7
-    .line 8
-    iget-object v0, v0, LX/1yB;->A00:LX/1Nm;
-
     .line 9
-    .line 10
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
+    return-object v0
+.end method
 
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v2
+.method public final ALx()LX/2ux;
+    .locals 1
 
-    .line 14
-    const-wide v0, 0x8100cc00350b94L
+    .line 0
+    sget-object v0, LX/2ux;->INTERVAL:LX/2ux;
 
-    .line 15
-    .line 16
-    .line 17
-    .line 18
-    .line 19
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    .line 1
+    .line 2
+    return-object v0
+.end method
 
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
+.method public final Ami()Z
+    .locals 1
 
-    .line 23
+    const/4 v0, 0x1
+
     return v0
 .end method
 
 .method public final getFriendlyName()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "TempFileCleanup"
+    const-string v0, "GraphQLFileCleanerConditionalWorkerInfo"
 
     return-object v0
 .end method

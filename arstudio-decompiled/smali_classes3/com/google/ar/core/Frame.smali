@@ -26,7 +26,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 1
     .line 2
@@ -38,7 +38,7 @@
 
     .line 5
     .line 6
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 7
     .line 8
@@ -130,7 +130,7 @@
     array-length v6, p1
 
     .line 1
-    invoke-static {v6}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v6}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 2
     .line 3
@@ -206,6 +206,9 @@
 .method private native nativeAcquireDepthImage(JJ)J
 .end method
 
+.method private native nativeAcquireDepthImage16Bits(JJ)J
+.end method
+
 .method private native nativeAcquireDepthImagePrivate(JJ)J
 .end method
 
@@ -216,6 +219,9 @@
 .end method
 
 .method private native nativeAcquireRawDepthImage(JJ)J
+.end method
+
+.method private native nativeAcquireRawDepthImage16Bits(JJ)J
 .end method
 
 .method private native nativeAcquireTrackData(JJ[B)[J
@@ -316,6 +322,46 @@
     .line 5
     .line 6
     invoke-direct {p0, v2, v3, v0, v1}, Lcom/google/ar/core/Frame;->nativeAcquireDepthImage(JJ)J
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-wide v2
+
+    .line 10
+    iget-object v1, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
+
+    .line 11
+    .line 12
+    new-instance v0, Lcom/google/ar/core/ArImage;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/ar/core/ArImage;-><init>(Lcom/google/ar/core/Session;J)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
+.end method
+
+.method public acquireDepthImage16Bits()Landroid/media/Image;
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
+
+    .line 1
+    .line 2
+    iget-wide v2, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 3
+    .line 4
+    iget-wide v0, p0, Lcom/google/ar/core/Frame;->nativeHandle:J
+
+    .line 5
+    .line 6
+    invoke-direct {p0, v2, v3, v0, v1}, Lcom/google/ar/core/Frame;->nativeAcquireDepthImage16Bits(JJ)J
 
     .line 7
     .line 8
@@ -499,6 +545,46 @@
     return-object v0
 .end method
 
+.method public acquireRawDepthImage16Bits()Landroid/media/Image;
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
+
+    .line 1
+    .line 2
+    iget-wide v2, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 3
+    .line 4
+    iget-wide v0, p0, Lcom/google/ar/core/Frame;->nativeHandle:J
+
+    .line 5
+    .line 6
+    invoke-direct {p0, v2, v3, v0, v1}, Lcom/google/ar/core/Frame;->nativeAcquireRawDepthImage16Bits(JJ)J
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-wide v2
+
+    .line 10
+    iget-object v1, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
+
+    .line 11
+    .line 12
+    new-instance v0, Lcom/google/ar/core/ArImage;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/ar/core/ArImage;-><init>(Lcom/google/ar/core/Session;J)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
+.end method
+
 .method public finalize()V
     .locals 6
 
@@ -533,11 +619,6 @@
     .line 14
     .line 15
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 16
-    .line 17
-    .line 18
     return-void
 .end method
 
@@ -867,7 +948,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {p1, v0}, LX/4BD;->A1U(Ljava/util/UUID;Ljava/nio/ByteBuffer;)V
+    invoke-static {p1, v0}, LX/432;->A1S(Ljava/util/UUID;Ljava/nio/ByteBuffer;)V
 
     .line 9
     .line 10
@@ -918,7 +999,7 @@
     .locals 8
 
     .line 0
-    invoke-static {p1}, LX/5Ix;->a(Ljava/lang/Class;)LX/5Ix;
+    invoke-static {p1}, LX/59f;->a(Ljava/lang/Class;)LX/59f;
 
     .line 1
     .line 2
@@ -926,7 +1007,7 @@
     move-result-object v1
 
     .line 4
-    sget-object v0, LX/5Ix;->b:LX/5Ix;
+    sget-object v0, LX/59f;->b:LX/59f;
 
     .line 5
     .line 6
@@ -961,7 +1042,7 @@
 
     .line 19
     .line 20
-    iget v7, v1, LX/5Ix;->i:I
+    iget v7, v1, LX/59f;->j:I
 
     .line 21
     .line 22
@@ -1018,44 +1099,44 @@
 .method public hitTest(FF)Ljava/util/List;
     .locals 8
 
-    .line 805306368
+    .line 536870912
     move-object v1, p0
 
-    .line 805306369
+    .line 536870913
     iget-object v0, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
 
-    .line 805306370
-    .line 805306371
+    .line 536870914
+    .line 536870915
     iget-wide v2, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
-    .line 805306372
-    .line 805306373
+    .line 536870916
+    .line 536870917
     iget-wide v4, p0, Lcom/google/ar/core/Frame;->nativeHandle:J
 
-    .line 805306374
-    .line 805306375
+    .line 536870918
+    .line 536870919
     move v6, p1
 
-    .line 805306376
+    .line 536870920
     move v7, p2
 
-    .line 805306377
+    .line 536870921
     invoke-virtual/range {v1 .. v7}, Lcom/google/ar/core/Frame;->nativeHitTest(JJFF)[J
 
-    .line 805306378
-    .line 805306379
-    .line 805306380
+    .line 536870922
+    .line 536870923
+    .line 536870924
     move-result-object v0
 
-    .line 805306381
+    .line 536870925
     invoke-direct {p0, v0}, Lcom/google/ar/core/Frame;->convertNativeHitResultsToList([J)Ljava/util/List;
 
-    .line 805306382
-    .line 805306383
-    .line 805306384
+    .line 536870926
+    .line 536870927
+    .line 536870928
     move-result-object v0
 
-    .line 805306385
+    .line 536870929
     return-object v0
 .end method
 
@@ -1109,31 +1190,31 @@
 .method public hitTest(Landroid/view/MotionEvent;)Ljava/util/List;
     .locals 2
 
-    .line 536870912
+    .line 805306368
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
+    .line 805306369
+    .line 805306370
+    .line 805306371
     move-result v1
 
-    .line 536870916
+    .line 805306372
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    .line 536870917
-    .line 536870918
-    .line 536870919
+    .line 805306373
+    .line 805306374
+    .line 805306375
     move-result v0
 
-    .line 536870920
+    .line 805306376
     invoke-virtual {p0, v1, v0}, Lcom/google/ar/core/Frame;->hitTest(FF)Ljava/util/List;
 
-    .line 536870921
-    .line 536870922
-    .line 536870923
+    .line 805306377
+    .line 805306378
+    .line 805306379
     move-result-object v0
 
-    .line 536870924
+    .line 805306380
     return-object v0
 .end method
 
@@ -1275,7 +1356,7 @@
     move-result-object v1
 
     .line 8
-    invoke-static {p1, v1}, LX/4BD;->A1U(Ljava/util/UUID;Ljava/nio/ByteBuffer;)V
+    invoke-static {p1, v1}, LX/432;->A1S(Ljava/util/UUID;Ljava/nio/ByteBuffer;)V
 
     .line 9
     .line 10
@@ -1529,7 +1610,7 @@
 
     .line 26
     .line 27
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 28
     .line 29

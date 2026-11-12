@@ -1,36 +1,11 @@
-.class public final LX/01U;
-.super LX/03K;
+.class public interface abstract LX/01U;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(LX/07b;LX/06O;LX/06M;LX/0He;)V
-    .locals 6
+# virtual methods
+.method public abstract Ai6(Ljava/lang/String;)V
+.end method
 
-    .line 0
-    const-string v5, "TrustedAppIntentScope"
-
-    .line 1
-    .line 2
-    move-object v0, p0
-
-    .line 3
-    move-object v1, p1
-
-    .line 4
-    move-object v2, p2
-
-    .line 5
-    move-object v3, p3
-
-    .line 6
-    move-object v4, p4
-
-    .line 7
-    invoke-direct/range {v0 .. v5}, LX/03K;-><init>(LX/07b;LX/06O;LX/06M;LX/0He;Ljava/lang/String;)V
-
-    .line 8
-    .line 9
-    .line 10
-    return-void
+.method public abstract Ai7(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 .end method

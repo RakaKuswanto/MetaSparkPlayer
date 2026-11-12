@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x62
+    const/16 v0, 0x3f
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
 
     .line 3
     .line 4
@@ -53,7 +53,7 @@
 
     .line 4
     .line 5
-    invoke-static {p2, v0}, LX/51D;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/4va;->A07(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 6
     .line 7
@@ -155,42 +155,34 @@
     .locals 3
 
     .line 0
-    invoke-static {p1}, LX/57v;->A00(Landroid/os/Parcel;)I
+    iget v0, p0, Lcom/google/android/gms/common/api/Scope;->A00:I
 
     .line 1
     .line 2
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;->A01(Landroid/os/Parcel;I)I
+
     .line 3
+    .line 4
+    .line 5
     move-result v2
 
-    .line 4
-    iget v1, p0, Lcom/google/android/gms/common/api/Scope;->A00:I
-
-    .line 5
     .line 6
-    const/4 v0, 0x1
-
-    .line 7
-    invoke-static {p1, v0, v1}, LX/57v;->A04(Landroid/os/Parcel;II)V
-
-    .line 8
-    .line 9
-    .line 10
     iget-object v1, p0, Lcom/google/android/gms/common/api/Scope;->A01:Ljava/lang/String;
 
-    .line 11
-    .line 12
+    .line 7
+    .line 8
     const/4 v0, 0x2
 
-    .line 13
-    invoke-static {p1, v1, v0}, LX/57v;->A08(Landroid/os/Parcel;Ljava/lang/String;I)V
+    .line 9
+    invoke-static {p1, v1, v0}, LX/51b;->A06(Landroid/os/Parcel;Ljava/lang/String;I)V
 
+    .line 10
+    .line 11
+    .line 12
+    invoke-static {p1, v2}, LX/51b;->A02(Landroid/os/Parcel;I)V
+
+    .line 13
     .line 14
     .line 15
-    .line 16
-    invoke-static {p1, v2}, LX/57v;->A03(Landroid/os/Parcel;I)V
-
-    .line 17
-    .line 18
-    .line 19
     return-void
 .end method

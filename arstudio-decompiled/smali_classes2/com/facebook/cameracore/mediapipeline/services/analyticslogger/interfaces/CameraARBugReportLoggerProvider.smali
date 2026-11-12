@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static sInstance:LX/0tE;
+.field public static sInstance:LX/3FN;
 
 
 # direct methods
@@ -24,7 +24,7 @@
     .locals 0
 
     .line 0
-    sget-object p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARBugReportLoggerProvider;->sInstance:LX/0tE;
+    sget-object p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARBugReportLoggerProvider;->sInstance:LX/3FN;
 
     .line 1
     .line 2
@@ -32,7 +32,7 @@
 
     .line 3
     .line 4
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
 
     .line 5
     .line 6
@@ -50,22 +50,22 @@
     return-object p0
 .end method
 
-.method public static getInstance()LX/0tE;
+.method public static getInstance()LX/3FN;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARBugReportLoggerProvider;->sInstance:LX/0tE;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARBugReportLoggerProvider;->sInstance:LX/3FN;
 
     .line 1
     .line 2
     return-object v0
 .end method
 
-.method public static setInstance(LX/0tE;)V
+.method public static setInstance(LX/3FN;)V
     .locals 0
 
     .line 0
-    sput-object p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARBugReportLoggerProvider;->sInstance:LX/0tE;
+    sput-object p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARBugReportLoggerProvider;->sInstance:LX/3FN;
 
     .line 1
     .line 2

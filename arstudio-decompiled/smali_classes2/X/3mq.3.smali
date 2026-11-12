@@ -7,64 +7,126 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "UploadJobHandlerManager$1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "XplatNativeClientWrapper$start$3$onMessageDropped$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/3mw;
+.field public final synthetic A00:J
 
-.field public final synthetic A01:LX/3nX;
+.field public final synthetic A01:Lcom/facebook/mqtt/service/XplatNativeClientWrapper;
 
-.field public final synthetic A02:LX/3la;
+.field public final synthetic A02:Ljava/lang/String;
+
+.field public final synthetic A03:[B
 
 
 # direct methods
-.method public constructor <init>(LX/3mw;LX/3nX;LX/3la;)V
+.method public constructor <init>(Lcom/facebook/mqtt/service/XplatNativeClientWrapper;Ljava/lang/String;[BJ)V
     .locals 0
 
-    .line 0
-    iput-object p3, p0, LX/3mq;->A02:LX/3la;
+    iput-object p1, p0, LX/3mq;->A01:Lcom/facebook/mqtt/service/XplatNativeClientWrapper;
 
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/3mq;->A00:LX/3mw;
+    iput-object p2, p0, LX/3mq;->A02:Ljava/lang/String;
 
-    .line 3
-    .line 4
-    iput-object p2, p0, LX/3mq;->A01:LX/3nX;
+    iput-object p3, p0, LX/3mq;->A03:[B
 
-    .line 5
-    .line 6
+    iput-wide p4, p0, LX/3mq;->A00:J
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 5
 
     .line 0
-    iget-object v2, p0, LX/3mq;->A02:LX/3la;
+    iget-object v2, p0, LX/3mq;->A01:Lcom/facebook/mqtt/service/XplatNativeClientWrapper;
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/3mq;->A00:LX/3mw;
+    iget-object v0, v2, Lcom/facebook/mqtt/service/XplatNativeClientWrapper;->observers:Ljava/util/HashSet;
 
     .line 3
     .line 4
-    iget-object v0, p0, LX/3mq;->A01:LX/3nX;
+    iget-object v4, p0, LX/3mq;->A02:Ljava/lang/String;
 
     .line 5
     .line 6
-    invoke-static {v1, v0, v2}, LX/3la;->A00(LX/3mw;LX/3nX;LX/3la;)V
+    iget-object v3, p0, LX/3mq;->A03:[B
 
     .line 7
     .line 8
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
     .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    if-eqz v0, :cond_0
+
+    .line 17
+    .line 18
+    invoke-static {v1, v3}, LX/0X4;->A1G(Ljava/util/Iterator;[B)V
+
+    .line 19
+    .line 20
+    .line 21
+    goto :goto_0
+
+    .line 22
+    :cond_0
+    iget-object v2, v2, Lcom/facebook/mqtt/service/XplatNativeClientWrapper;->stateCallback:LX/2lB;
+
+    .line 23
+    .line 24
+    if-nez v2, :cond_1
+
+    .line 25
+    .line 26
+    const-string/jumbo v0, "stateCallback"
+
+    .line 27
+    .line 28
+    .line 29
+    invoke-static {v0}, LX/0WV;->A0F(Ljava/lang/String;)V
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
+
+    .line 36
+    throw v0
+
+    .line 37
+    :cond_1
+    iget-wide v0, p0, LX/3mq;->A00:J
+
+    .line 38
+    .line 39
+    invoke-interface {v2, v4, v3, v0, v1}, LX/2lB;->onMessageDropped(Ljava/lang/String;[BJ)V
+
+    .line 40
+    .line 41
+    .line 42
     return-void
 .end method

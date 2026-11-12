@@ -1,134 +1,102 @@
-.class public final enum LX/3V1;
-.super Ljava/lang/Enum;
+.class public final LX/3V1;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/3V1;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "BitmapUtilImpl$1$5"
 
-.field public static final enum PREALLOCATE:LX/3V1;
 
-.field public static final enum RENDERER:LX/3V1;
+# instance fields
+.field public final synthetic A00:LX/3Uu;
+
+.field public final synthetic A01:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public static final synthetic $values()[LX/3V1;
-    .locals 3
-
-    const/4 v0, 0x2
-
-    new-array v2, v0, [LX/3V1;
-
-    sget-object v1, LX/3V1;->PREALLOCATE:LX/3V1;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/3V1;->RENDERER:LX/3V1;
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(LX/3Uu;Ljava/lang/Throwable;)V
+    .locals 0
 
     .line 0
-    const-string v2, "PREALLOCATE"
+    iput-object p1, p0, LX/3V1;->A00:LX/3Uu;
 
     .line 1
     .line 2
-    const/4 v1, 0x0
+    iput-object p2, p0, LX/3V1;->A01:Ljava/lang/Throwable;
 
     .line 3
-    new-instance v0, LX/3V1;
-
     .line 4
-    .line 5
-    invoke-direct {v0, v2, v1}, LX/3V1;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     .line 6
     .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 4
+
+    .line 0
+    iget-object v2, p0, LX/3V1;->A00:LX/3Uu;
+
+    .line 1
+    .line 2
+    iget-object v3, v2, LX/3Uu;->A01:LX/3Zv;
+
+    .line 3
+    .line 4
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v1
+
     .line 8
-    sput-object v0, LX/3V1;->PREALLOCATE:LX/3V1;
+    const-string v0, "Unable to load image reference from URI: "
 
     .line 9
     .line 10
-    const-string v2, "RENDERER"
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 11
     .line 12
-    const/4 v1, 0x1
-
     .line 13
-    new-instance v0, LX/3V1;
+    iget-object v0, v2, LX/3Uu;->A00:Landroid/net/Uri;
 
     .line 14
     .line 15
-    invoke-direct {v0, v2, v1}, LX/3V1;-><init>(Ljava/lang/String;I)V
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 16
     .line 17
     .line 18
-    sput-object v0, LX/3V1;->RENDERER:LX/3V1;
+    move-result-object v2
 
     .line 19
-    .line 20
-    invoke-static {}, LX/3V1;->$values()[LX/3V1;
+    iget-object v1, p0, LX/3V1;->A01:Ljava/lang/Throwable;
 
+    .line 20
     .line 21
+    new-instance v0, Ljava/lang/Throwable;
+
     .line 22
     .line 23
-    move-result-object v0
+    invoke-direct {v0, v2, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 24
-    sput-object v0, LX/3V1;->$VALUES:[LX/3V1;
-
     .line 25
     .line 26
+    invoke-virtual {v3, v0}, LX/3Zv;->A00(Ljava/lang/Throwable;)V
+
+    .line 27
+    .line 28
+    .line 29
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/3V1;
-    .locals 1
-
-    const-class v0, LX/3V1;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, LX/3V1;
-
-    return-object v0
-.end method
-
-.method public static values()[LX/3V1;
-    .locals 1
-
-    sget-object v0, LX/3V1;->$VALUES:[LX/3V1;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [LX/3V1;
-
-    return-object v0
 .end method

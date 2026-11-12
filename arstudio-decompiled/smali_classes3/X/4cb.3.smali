@@ -1,37 +1,45 @@
-.class public final LX/4cb;
-.super Ljava/lang/Object;
+.class public LX/4cb;
+.super LX/4cZ;
 .source ""
 
 
-# instance fields
-.field public final A00:I
-
-.field public final A01:LX/4ay;
-
-.field public final A02:LX/4bA;
-
-
 # direct methods
-.method public constructor <init>(LX/4ay;LX/4bA;I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/4cZ;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/4cb;->A02:LX/4bA;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00(Landroid/content/pm/ResolveInfo;)Landroid/content/pm/ProviderInfo;
+    .locals 1
+
+    .line 0
+    iget-object v0, p1, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final A01(Landroid/content/Intent;Landroid/content/pm/PackageManager;I)Ljava/util/List;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p2, p1, p3}, Landroid/content/pm/PackageManager;->queryIntentContentProviders(Landroid/content/Intent;I)Ljava/util/List;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
 
     .line 4
-    .line 5
-    iput-object p1, p0, LX/4cb;->A01:LX/4ay;
-
-    .line 6
-    .line 7
-    iput p3, p0, LX/4cb;->A00:I
-
-    .line 8
-    .line 9
-    return-void
+    return-object v0
 .end method

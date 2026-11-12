@@ -19,11 +19,11 @@
     .line 1
     .line 2
     .line 3
-    new-instance v1, LX/0Om;
+    new-instance v1, LX/0Wd;
 
     .line 4
     .line 5
-    invoke-direct {v1}, LX/0Om;-><init>()V
+    invoke-direct {v1}, LX/0Wd;-><init>()V
 
     .line 6
     .line 7
@@ -46,15 +46,15 @@
 
 
 # virtual methods
-.method public configure(Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+.method public configure(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
     .locals 1
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->mConfig:Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;
+    iput-object p1, p0, Lcom/facebook/common/dextricks/MultiDexClassLoader;->mConfig:Lcom/facebook/common/dextricks/ClassLoaderConfiguration;
 
     .line 1
     .line 2
-    iget-object v0, p1, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->mDexFiles:Ljava/util/ArrayList;
+    iget-object v0, p1, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->mDexFiles:Ljava/util/ArrayList;
 
     .line 3
     .line 4
@@ -70,7 +70,7 @@
 
     .line 9
     .line 10
-    invoke-virtual {p0, p1}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->configureArtHacks(Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/common/dextricks/MultiDexClassLoader;->configureArtHacks(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
 
     .line 11
     .line 12

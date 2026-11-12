@@ -1,6 +1,6 @@
-.class public interface abstract LX/1Iz;
+.class public interface abstract LX/1iz;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/0yO;
+.implements LX/1iw;

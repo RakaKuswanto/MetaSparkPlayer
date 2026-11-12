@@ -10,8 +10,6 @@
 
 .field public mExpressionFittingModelPath:Ljava/lang/String;
 
-.field public mFaceTrackerType:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;
-
 .field public mFilePaths:[Ljava/lang/String;
 
 .field public mMaxDetectionDim:Ljava/lang/Integer;
@@ -24,44 +22,41 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;)V
-    .locals 7
+.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;)V
+    .locals 6
 
-    .line 0
-    const/4 v6, 0x1
+    .line 268435456
+    const/4 v5, 0x1
 
-    .line 1
+    .line 268435457
     move-object v0, p0
 
-    .line 2
+    .line 268435458
     move-object v1, p1
 
-    .line 3
+    .line 268435459
     move-object v2, p2
 
-    .line 4
+    .line 268435460
     move-object v3, p3
 
-    .line 5
+    .line 268435461
     move-object v4, p4
 
-    .line 6
-    move-object v5, p5
+    .line 268435462
+    invoke-direct/range {v0 .. v5}, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;Z)V
 
-    .line 7
-    invoke-direct/range {v0 .. v6}, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;Z)V
-
-    .line 8
-    .line 9
-    .line 10
+    .line 268435463
+    .line 268435464
+    .line 268435465
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;Z)V
-    .locals 10
+.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;Z)V
+    .locals 9
 
     .line 536870912
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
     .line 536870913
     move-object v0, p0
@@ -79,72 +74,64 @@
     move-object v4, p4
 
     .line 536870918
-    move-object v5, p5
+    move v5, p5
 
     .line 536870919
-    move/from16 v6, p6
+    move-object v7, v6
 
     .line 536870920
+    move-object v8, v6
+
     .line 536870921
-    move-object v8, v7
+    invoke-direct/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;ZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
 
     .line 536870922
-    move-object v9, v7
-
     .line 536870923
-    invoke-direct/range {v0 .. v9}, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;ZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
-
     .line 536870924
-    .line 536870925
-    .line 536870926
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;ZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;[Ljava/lang/String;[Ljava/lang/String;Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;ZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
     .locals 0
 
-    .line 268435456
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mFaceTrackerType:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mExecutionMode:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;
 
-    .line 268435460
-    .line 268435461
-    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mExecutionMode:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$ExecutionMode;
+    .line 4
+    .line 5
+    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mModelFiles:[Ljava/lang/String;
 
-    .line 268435462
-    .line 268435463
-    iput-object p3, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mModelFiles:[Ljava/lang/String;
+    .line 6
+    .line 7
+    iput-object p3, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mFilePaths:[Ljava/lang/String;
 
-    .line 268435464
-    .line 268435465
-    iput-object p4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mFilePaths:[Ljava/lang/String;
+    .line 8
+    .line 9
+    iput-object p4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mErrorHandler:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;
 
-    .line 268435466
-    .line 268435467
-    iput-object p5, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mErrorHandler:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerErrorHandler;
+    .line 10
+    .line 11
+    iput-boolean p5, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mUseRandomSampling:Z
 
-    .line 268435468
-    .line 268435469
-    iput-boolean p6, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mUseRandomSampling:Z
+    .line 12
+    .line 13
+    iput-object p6, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mMaxDetectionDim:Ljava/lang/Integer;
 
-    .line 268435470
-    .line 268435471
-    iput-object p7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mMaxDetectionDim:Ljava/lang/Integer;
+    .line 14
+    .line 15
+    iput-object p7, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mMaxDetectionScales:Ljava/lang/Integer;
 
-    .line 268435472
-    .line 268435473
-    iput-object p8, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mMaxDetectionScales:Ljava/lang/Integer;
+    .line 16
+    .line 17
+    iput-object p8, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mExpressionFittingModelPath:Ljava/lang/String;
 
-    .line 268435474
-    .line 268435475
-    iput-object p9, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mExpressionFittingModelPath:Ljava/lang/String;
-
-    .line 268435476
-    .line 268435477
+    .line 18
+    .line 19
     return-void
 .end method
 
@@ -177,17 +164,6 @@
 
     .line 0
     iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mExpressionFittingModelPath:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public getFaceTrackerType()Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;->mFaceTrackerType:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration$FaceTrackerType;
 
     .line 1
     .line 2

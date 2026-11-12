@@ -1,22 +1,18 @@
-.class public final LX/2hn;
+.class public final LX/2hN;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3Bz;
+.implements LX/2h2;
 
 
 # instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
+.field public final A00:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,179 +20,227 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A6r:I
+    invoke-static {}, LX/2I6;->A0U()LX/30K;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 6
+    move-result-object v2
+
     .line 7
+    const-wide v0, 0x81028c00021bbdL
+
     .line 8
-    move-result-object v0
-
     .line 9
-    iput-object v0, p0, LX/2hn;->A02:LX/0Na;
-
     .line 10
     .line 11
-    sget v0, LX/2eq;->ACl:I
-
     .line 12
-    .line 13
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v2, v0, v1}, LX/302;->A0L(Ljava/lang/Object;J)Z
 
+    .line 13
     .line 14
     .line 15
+    move-result v0
+
     .line 16
-    move-result-object v0
+    iput-boolean v0, p0, LX/2hN;->A00:Z
 
     .line 17
-    iput-object v0, p0, LX/2hn;->A01:LX/0Na;
-
     .line 18
-    .line 19
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    iput-object v0, p0, LX/2hn;->A00:LX/1zG;
-
-    .line 24
-    .line 25
     return-void
 .end method
 
 
 # virtual methods
-.method public final AFV()Ljava/lang/Integer;
-    .locals 1
+.method public final A6b()LX/2ht;
+    .locals 9
 
     .line 0
-    const/4 v0, 0x1
+    const/4 v2, 0x4
 
     .line 1
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v5, v2, [LX/2hd;
 
     .line 2
     .line 3
-    .line 4
-    move-result-object v0
+    new-instance v0, LX/2hA;
 
-    .line 5
-    return-object v0
-.end method
-
-.method public final Aa3(LX/2p8;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/2hn;->A02:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-interface {v1}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 3
     .line 4
     .line 5
-    move-result-object v0
+    invoke-direct {v0}, LX/2hA;-><init>()V
 
     .line 6
-    check-cast v0, LX/2pP;
-
     .line 7
     .line 8
-    iget-boolean v0, v0, LX/2pP;->A05:Z
+    const/4 v8, 0x0
 
     .line 9
+    aput-object v0, v5, v8
+
     .line 10
-    if-eqz v0, :cond_1
-
     .line 11
+    new-instance v0, LX/2hc;
+
     .line 12
-    iget-object v0, p0, LX/2hn;->A01:LX/0Na;
-
     .line 13
-    .line 14
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-direct {v0}, LX/2hc;-><init>()V
 
+    .line 14
     .line 15
     .line 16
+    const/4 v7, 0x1
+
     .line 17
-    move-result-object v0
+    aput-object v0, v5, v7
 
     .line 18
-    monitor-enter v0
-
     .line 19
-    monitor-exit v0
+    const-string/jumbo v1, "navigation_module"
 
     .line 20
-    invoke-static {}, LX/0Yf;->A0O()Ljava/lang/Boolean;
-
     .line 21
     .line 22
-    .line 23
-    move-result-object v1
+    new-instance v0, LX/2hx;
 
+    .line 23
     .line 24
-    const-string/jumbo v0, "hasAdsData"
+    invoke-direct {v0, v1}, LX/2hx;-><init>(Ljava/lang/String;)V
 
     .line 25
     .line 26
     .line 27
-    invoke-virtual {p1, v1, v0}, LX/2p8;->A03(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v3, 0x2
 
     .line 28
+    aput-object v0, v5, v3
+
     .line 29
     .line 30
-    :cond_0
-    return-void
+    const-string/jumbo v1, "navigation_endpoint"
 
     .line 31
-    :cond_1
-    invoke-interface {v1}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 32
     .line 33
-    .line 34
-    move-result-object v0
+    new-instance v0, LX/2hx;
 
+    .line 34
     .line 35
-    check-cast v0, LX/2pP;
+    invoke-direct {v0, v1}, LX/2hx;-><init>(Ljava/lang/String;)V
 
     .line 36
     .line 37
-    iget-boolean v0, v0, LX/2pP;->A01:Z
-
     .line 38
+    const/4 v6, 0x3
+
     .line 39
-    if-eqz v0, :cond_0
+    aput-object v0, v5, v6
 
     .line 40
     .line 41
-    iget-object v0, p0, LX/2hn;->A01:LX/0Na;
+    new-array v4, v2, [LX/2h4;
 
     .line 42
     .line 43
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    new-instance v2, LX/2h9;
 
     .line 44
     .line 45
+    invoke-direct {v2}, LX/2h9;-><init>()V
+
     .line 46
-    move-result-object v0
-
     .line 47
-    monitor-enter v0
-
     .line 48
-    monitor-exit v0
+    const-wide/16 v0, 0xc9
 
     .line 49
-    return-void
+    .line 50
+    invoke-static {v2, v4, v8, v0, v1}, LX/2h4;->A00(LX/2he;[Ljava/lang/Object;IJ)LX/2h9;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v2
+
+    .line 54
+    const-wide/16 v0, 0x1f5
+
+    .line 55
+    .line 56
+    invoke-static {v2, v4, v7, v0, v1}, LX/2h4;->A00(LX/2he;[Ljava/lang/Object;IJ)LX/2h9;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v2
+
+    .line 60
+    const-wide/16 v0, 0x3e9
+
+    .line 61
+    .line 62
+    invoke-static {v2, v4, v3, v0, v1}, LX/2h4;->A00(LX/2he;[Ljava/lang/Object;IJ)LX/2h9;
+
+    .line 63
+    .line 64
+    .line 65
+    move-result-object v0
+
+    .line 66
+    const-wide/16 v2, 0xbb9
+
+    .line 67
+    .line 68
+    new-instance v1, LX/2hI;
+
+    .line 69
+    .line 70
+    invoke-direct {v1, v0, v2, v3}, LX/2hI;-><init>(LX/2he;J)V
+
+    .line 71
+    .line 72
+    .line 73
+    new-instance v0, LX/2hC;
+
+    .line 74
+    .line 75
+    invoke-direct {v0, v1}, LX/2hC;-><init>(LX/2he;)V
+
+    .line 76
+    .line 77
+    .line 78
+    aput-object v0, v4, v6
+
+    .line 79
+    .line 80
+    const-string/jumbo v2, "video_playback_android"
+
+    .line 81
+    .line 82
+    .line 83
+    const v1, 0x1d111e
+
+    .line 84
+    .line 85
+    .line 86
+    new-instance v0, LX/2ht;
+
+    .line 87
+    .line 88
+    invoke-direct {v0, v2, v4, v5, v1}, LX/2ht;-><init>(Ljava/lang/String;[LX/2h4;[LX/2hd;I)V
+
+    .line 89
+    .line 90
+    .line 91
+    return-object v0
+.end method
+
+.method public final isEnabled()Z
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, LX/2hN;->A00:Z
+
+    .line 1
+    .line 2
+    return v0
 .end method

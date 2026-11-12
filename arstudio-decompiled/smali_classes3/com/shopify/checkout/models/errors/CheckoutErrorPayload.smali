@@ -3,21 +3,18 @@
 .source ""
 
 
-# annotations
-.annotation runtime Lkotlinx/serialization/Serializable;
-.end annotation
-
-
 # static fields
 .field public static final Companion:Lcom/shopify/checkout/models/errors/CheckoutErrorPayload$Companion;
 
 
 # instance fields
-.field public final A00:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
+.field public final A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
 
-.field public final A01:Lcom/shopify/checkout/models/errors/ErrorGroup;
+.field public final A01:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
 
 .field public final A02:Ljava/lang/String;
+
+.field public final A03:Ljava/lang/String;
 
 
 # direct methods
@@ -41,54 +38,64 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/shopify/checkout/models/errors/CheckoutErrorType;Lcom/shopify/checkout/models/errors/ErrorGroup;Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Lcom/shopify/checkout/models/errors/CheckoutErrorType;Lcom/shopify/checkout/models/errors/ErrorGroup;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 2
 
     .line 0
-    and-int/lit8 v0, p4, 0x7
+    and-int/lit8 v0, p5, 0xf
 
     .line 1
     .line 2
-    const/4 v1, 0x7
+    const/16 v1, 0xf
 
     .line 3
+    .line 4
     if-eq v1, v0, :cond_0
 
-    .line 4
     .line 5
-    sget-object v0, LX/6CV;->A01:LX/2KY;
-
     .line 6
-    .line 7
-    invoke-static {v0, p4, v1}, LX/2KP;->A00(LX/2Kr;II)V
+    sget-object v0, LX/5iw;->A01:LX/3iV;
 
+    .line 7
     .line 8
+    invoke-static {v0, p5, v1}, LX/5cB;->A00(LX/6Xn;II)V
+
     .line 9
     .line 10
-    const/4 v0, 0x0
-
     .line 11
-    throw v0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    throw v0
+
+    .line 16
     :cond_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
-    .line 14
-    .line 15
-    iput-object p3, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A02:Ljava/lang/String;
-
-    .line 16
     .line 17
-    iput-object p1, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
-
     .line 18
     .line 19
-    iput-object p2, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/ErrorGroup;
+    iput-object p3, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A02:Ljava/lang/String;
 
     .line 20
     .line 21
+    iput-object p1, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
+
+    .line 22
+    .line 23
+    iput-object p4, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A03:Ljava/lang/String;
+
+    .line 24
+    .line 25
+    iput-object p2, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
+
+    .line 26
+    .line 27
     return-void
 .end method
 
@@ -113,21 +120,31 @@
 
     iget-object v0, p1, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A02:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
+    iget-object v1, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
 
-    iget-object v0, p1, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
+    iget-object v0, p1, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
 
     if-ne v1, v0, :cond_0
 
-    iget-object v1, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/ErrorGroup;
+    iget-object v1, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A03:Ljava/lang/String;
 
-    iget-object v0, p1, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/ErrorGroup;
+    iget-object v0, p1, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A03:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
+
+    iget-object v0, p1, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
 
     if-eq v1, v0, :cond_1
 
@@ -146,7 +163,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A06(Ljava/lang/String;)I
+    invoke-static {v0}, LX/433;->A0D(Ljava/lang/String;)I
 
     .line 3
     .line 4
@@ -154,11 +171,11 @@
     move-result v1
 
     .line 6
-    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
 
     .line 7
     .line 8
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 9
     .line 10
@@ -166,11 +183,11 @@
     move-result v1
 
     .line 12
-    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/ErrorGroup;
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A03:Ljava/lang/String;
 
     .line 13
     .line 14
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 15
     .line 16
@@ -178,6 +195,25 @@
     move-result v0
 
     .line 18
+    add-int/2addr v1, v0
+
+    .line 19
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 20
+    .line 21
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
+
+    .line 22
+    .line 23
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
     return v0
 .end method
 
@@ -185,7 +221,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/4BE;->A0u()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -193,44 +229,71 @@
     move-result-object v1
 
     .line 4
-    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/ErrorGroup;
+    const-string v0, "\n            Group: "
 
     .line 5
     .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
     .line 9
-    const-string v0, "\n            Type: "
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
 
     .line 10
     .line 11
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 12
     .line 13
     .line 14
-    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A00:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
+    const-string v0, "\n            Type: "
 
     .line 15
     .line 16
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 17
     .line 18
     .line 19
-    const-string v0, "\n        "
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A01:Lcom/shopify/checkout/models/errors/CheckoutErrorType;
 
     .line 20
     .line 21
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 22
     .line 23
     .line 24
-    move-result-object v0
+    const-string v0, "\n            Reason: "
 
     .line 25
+    .line 26
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 27
+    .line 28
+    .line 29
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/CheckoutErrorPayload;->A03:Ljava/lang/String;
+
+    .line 30
+    .line 31
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 32
+    .line 33
+    .line 34
+    const-string v0, "\n        "
+
+    .line 35
+    .line 36
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
     return-object v0
 .end method

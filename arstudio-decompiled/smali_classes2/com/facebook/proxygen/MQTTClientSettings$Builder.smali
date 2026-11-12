@@ -89,22 +89,23 @@
 
     .line 26
     .line 27
-    const-string v0, "WhistleClient"
+    const-string/jumbo v0, "WhistleClient"
 
     .line 28
     .line 29
+    .line 30
     iput-object v0, p0, Lcom/facebook/proxygen/MQTTClientSettings$Builder;->proxyUserAgent:Ljava/lang/String;
 
-    .line 30
     .line 31
+    .line 32
     iput-boolean v1, p0, Lcom/facebook/proxygen/MQTTClientSettings$Builder;->proxyFallbackEnabled:Z
 
-    .line 32
     .line 33
+    .line 34
     iput-boolean v2, p0, Lcom/facebook/proxygen/MQTTClientSettings$Builder;->xplatMqttEnabled:Z
 
-    .line 34
     .line 35
+    .line 36
     return-void
 .end method
 

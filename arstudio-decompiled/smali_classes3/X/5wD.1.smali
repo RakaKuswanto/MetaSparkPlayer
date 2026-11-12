@@ -1,8 +1,17 @@
-.class public interface abstract LX/5wD;
-.super Ljava/lang/Object;
+.class public final LX/5wD;
+.super LX/0DI;
 .source ""
 
 
-# virtual methods
-.method public abstract APG(LX/5v1;JJ)V
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, LX/0DI;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

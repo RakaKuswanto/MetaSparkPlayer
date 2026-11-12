@@ -1,4 +1,4 @@
-.class public final synthetic Lorg/webrtc/Predicate$-CC;
+.class public abstract synthetic Lorg/webrtc/Predicate$-CC;
 .super Ljava/lang/Object;
 .source ""
 

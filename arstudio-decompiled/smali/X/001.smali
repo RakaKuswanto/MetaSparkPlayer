@@ -1,4 +1,4 @@
-.class public final LX/001;
+.class public abstract LX/001;
 .super Ljava/lang/Object;
 .source ""
 
@@ -78,26 +78,23 @@
     return v0
 .end method
 
-.method public static A02(Ljava/lang/String;I)I
-    .locals 0
+.method public static A02(Ljava/lang/Object;)J
+    .locals 1
 
     .line 0
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    check-cast p0, Ljava/lang/Number;
 
     .line 1
     .line 2
+    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
+
     .line 3
-    move-result p0
-
     .line 4
-    add-int/2addr p1, p0
-
     .line 5
-    mul-int/lit8 p0, p1, 0x1f
+    move-result-wide v0
 
     .line 6
-    .line 7
-    return p0
+    return-wide v0
 .end method
 
 .method public static A03(Landroid/content/Context;)Landroid/content/SharedPreferences;
@@ -145,86 +142,59 @@
     return-object p0
 .end method
 
-.method public static A05(LX/0VU;LX/0VT;)LX/0VX;
-    .locals 0
+.method public static A05(Ljava/lang/String;IZ)LX/065;
+    .locals 1
 
     .line 0
-    invoke-interface {p0, p1}, LX/0VU;->ABA(LX/0VT;)LX/0VV;
+    new-instance v0, LX/065;
 
     .line 1
     .line 2
+    invoke-direct {v0, p0, p1, p2}, LX/065;-><init>(Ljava/lang/String;IZ)V
+
     .line 3
-    move-result-object p0
-
     .line 4
-    invoke-interface {p0}, LX/0VV;->A9c()LX/0VX;
-
     .line 5
-    .line 6
-    .line 7
-    move-result-object p0
-
-    .line 8
-    return-object p0
+    return-object v0
 .end method
 
 .method public static A06(Ljava/io/InputStream;Ljava/lang/String;)Lcom/facebook/superpack/SuperpackArchive;
     .locals 2
 
     .line 0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1
+    .line 2
+    .line 3
     const-wide/16 v0, 0x0
 
-    .line 1
-    .line 2
+    .line 4
+    .line 5
     invoke-static {p0, p1, v0, v1}, Lcom/facebook/superpack/SuperpackArchive;->readNative(Ljava/io/InputStream;Ljava/lang/String;J)J
 
-    .line 3
-    .line 4
-    .line 5
+    .line 6
+    .line 7
+    .line 8
     move-result-wide p0
 
-    .line 6
+    .line 9
     const/4 v1, 0x0
 
-    .line 7
+    .line 10
     new-instance v0, Lcom/facebook/superpack/SuperpackArchive;
 
-    .line 8
-    .line 9
-    invoke-direct {v0, p0, p1, v1}, Lcom/facebook/superpack/SuperpackArchive;-><init>(J[Ljava/lang/String;)V
-
-    .line 10
     .line 11
     .line 12
+    invoke-direct {v0, p0, p1, v1}, Lcom/facebook/superpack/SuperpackArchive;-><init>(J[Ljava/lang/String;)V
+
+    .line 13
+    .line 14
+    .line 15
     return-object v0
 .end method
 
-.method public static A07(Ljava/io/InputStream;)Ljava/io/BufferedReader;
-    .locals 2
-
-    .line 0
-    new-instance v1, Ljava/io/InputStreamReader;
-
-    .line 1
-    .line 2
-    invoke-direct {v1, p0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
-
-    .line 3
-    .line 4
-    .line 5
-    new-instance v0, Ljava/io/BufferedReader;
-
-    .line 6
-    .line 7
-    invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
-
-    .line 8
-    .line 9
-    .line 10
-    return-object v0
-.end method
-
-.method public static A08(Landroid/content/Context;)Ljava/io/File;
+.method public static A07(Landroid/content/Context;)Ljava/io/File;
     .locals 1
 
     .line 0
@@ -252,7 +222,7 @@
     return-object v0
 .end method
 
-.method public static A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+.method public static A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
     .line 0
@@ -269,6 +239,22 @@
     .line 5
     .line 6
     .line 7
+    return-object v0
+.end method
+
+.method public static A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    .locals 1
+
+    .line 0
+    new-instance v0, Ljava/io/File;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    .line 3
+    .line 4
+    .line 5
     return-object v0
 .end method
 
@@ -292,7 +278,23 @@
     return-object v0
 .end method
 
-.method public static A0B(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+.method public static A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    .locals 1
+
+    .line 0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
+.end method
+
+.method public static A0C(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
     .locals 0
 
     .line 0
@@ -321,7 +323,27 @@
     return-object p0
 .end method
 
-.method public static A0C(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
+.method public static A0D()Ljava/lang/IllegalStateException;
+    .locals 2
+
+    .line 0
+    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    .line 1
+    .line 2
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-object v0
+.end method
+
+.method public static A0E(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
     .locals 0
 
     .line 0
@@ -350,7 +372,23 @@
     return-object p0
 .end method
 
-.method public static A0D(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
+.method public static A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    .locals 1
+
+    .line 0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
+.end method
+
+.method public static A0G(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
     .locals 0
 
     .line 0
@@ -379,37 +417,53 @@
     return-object p0
 .end method
 
-.method public static A0E(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 1
+.method public static A0H()Ljava/lang/Long;
+    .locals 2
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     .line 1
-    invoke-virtual {p0, p2, p3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
     .line 2
     .line 3
+    move-result-wide v0
+
     .line 4
-    move-result-object p0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 5
-    new-array v0, v0, [Ljava/lang/Object;
-
     .line 6
     .line 7
-    invoke-virtual {p0, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 8
-    .line 9
-    .line 10
     move-result-object v0
 
-    .line 11
+    .line 8
     return-object v0
 .end method
 
-.method public static A0F()Ljava/lang/String;
+.method public static A0I(Ljava/io/File;)Ljava/lang/Long;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Ljava/io/File;->lastModified()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    invoke-static {v0, p0}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public static A0J()Ljava/lang/String;
     .locals 1
 
     .line 0
@@ -432,7 +486,7 @@
     return-object v0
 .end method
 
-.method public static A0G(Ljava/lang/Object;)Ljava/lang/String;
+.method public static A0K(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -455,7 +509,7 @@
     return-object p0
 .end method
 
-.method public static A0H(Ljava/lang/Object;)Ljava/lang/String;
+.method public static A0L(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -478,7 +532,7 @@
     return-object p0
 .end method
 
-.method public static A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+.method public static A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -503,7 +557,7 @@
     return-object p0
 .end method
 
-.method public static A0J(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+.method public static A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -523,7 +577,7 @@
     return-object p0
 .end method
 
-.method public static A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+.method public static A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -543,7 +597,7 @@
     return-object p0
 .end method
 
-.method public static A0L(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
+.method public static A0P(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -568,7 +622,7 @@
     return-object p0
 .end method
 
-.method public static A0M(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+.method public static A0Q(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
     .line 0
@@ -586,31 +640,7 @@
     return-object v0
 .end method
 
-.method public static A0N(Ljava/lang/StringBuilder;)Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x5d
-
-    .line 1
-    .line 2
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 3
-    .line 4
-    .line 5
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    return-object v0
-.end method
-
-.method public static A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
+.method public static A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
     .locals 1
 
     .line 0
@@ -634,7 +664,46 @@
     return-object v0
 .end method
 
-.method public static A0P(Ljava/util/Iterator;)Ljava/lang/String;
+.method public static A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    return-object p0
+.end method
+
+.method public static A0T(Ljava/util/AbstractList;I)Ljava/lang/String;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    check-cast p0, Ljava/lang/String;
+
+    .line 5
+    .line 6
+    return-object p0
+.end method
+
+.method public static A0U(Ljava/util/Iterator;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -653,7 +722,7 @@
     return-object p0
 .end method
 
-.method public static A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+.method public static A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -672,7 +741,7 @@
     return-object p0
 .end method
 
-.method public static A0R()Ljava/lang/StringBuilder;
+.method public static A0W()Ljava/lang/StringBuilder;
     .locals 1
 
     .line 0
@@ -688,7 +757,7 @@
     return-object v0
 .end method
 
-.method public static A0S(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public static A0X(Ljava/lang/Object;)Ljava/lang/StringBuilder;
     .locals 2
 
     .line 0
@@ -718,7 +787,7 @@
     return-object v1
 .end method
 
-.method public static A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public static A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
     .locals 1
 
     .line 0
@@ -739,7 +808,7 @@
     return-object v0
 .end method
 
-.method public static A0U()Ljava/lang/UnsupportedOperationException;
+.method public static A0Z()Ljava/lang/UnsupportedOperationException;
     .locals 2
 
     .line 0
@@ -759,7 +828,23 @@
     return-object v0
 .end method
 
-.method public static A0V(Ljava/util/List;)Ljava/util/ArrayList;
+.method public static A0a()Ljava/util/ArrayList;
+    .locals 1
+
+    .line 0
+    new-instance v0, Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
+.end method
+
+.method public static A0b(Ljava/util/List;)Ljava/util/ArrayList;
     .locals 1
 
     .line 0
@@ -783,7 +868,23 @@
     return-object v0
 .end method
 
-.method public static A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+.method public static A0c()Ljava/util/HashMap;
+    .locals 1
+
+    .line 0
+    new-instance v0, Ljava/util/HashMap;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
+.end method
+
+.method public static A0d(Ljava/util/AbstractMap;)Ljava/util/Iterator;
     .locals 0
 
     .line 0
@@ -806,7 +907,7 @@
     return-object p0
 .end method
 
-.method public static A0X(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+.method public static A0e(Ljava/util/AbstractMap;)Ljava/util/Iterator;
     .locals 0
 
     .line 0
@@ -829,7 +930,7 @@
     return-object p0
 .end method
 
-.method public static A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+.method public static A0f(Ljava/util/Map;)Ljava/util/Iterator;
     .locals 0
 
     .line 0
@@ -852,7 +953,7 @@
     return-object p0
 .end method
 
-.method public static A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+.method public static A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
     .locals 0
 
     .line 0
@@ -871,39 +972,7 @@
     return-object p0
 .end method
 
-.method public static A0a(Ljava/lang/Object;)Ljava/util/Set;
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    new-instance v0, Ljava/util/HashSet;
-
-    .line 5
-    .line 6
-    invoke-direct {v0, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    .line 7
-    .line 8
-    .line 9
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    return-object v0
-.end method
-
-.method public static A0b(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/Set;
+.method public static A0h(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/Set;
     .locals 0
 
     .line 0
@@ -939,7 +1008,7 @@
     return-object p0
 .end method
 
-.method public static A0c(III)V
+.method public static A0i(III)V
     .locals 2
 
     .line 0
@@ -981,7 +1050,7 @@
     return-void
 .end method
 
-.method public static A0d(III)V
+.method public static A0j(III)V
     .locals 1
 
     .line 0
@@ -1019,7 +1088,7 @@
     return-void
 .end method
 
-.method public static A0e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+.method public static A0k(Landroid/content/Context;Ljava/lang/String;Ljava/lang/StringBuilder;)V
     .locals 0
 
     .line 0
@@ -1066,7 +1135,7 @@
     return-void
 .end method
 
-.method public static A0f(Landroid/util/SparseArray;Ljava/lang/Object;Ljava/lang/reflect/Field;)V
+.method public static A0l(Landroid/util/SparseArray;Ljava/lang/Object;Ljava/lang/reflect/Field;)V
     .locals 1
 
     .line 0
@@ -1089,7 +1158,7 @@
     return-void
 .end method
 
-.method public static A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+.method public static A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
     .locals 0
 
     .line 0
@@ -1117,7 +1186,7 @@
     return-void
 .end method
 
-.method public static A0h(LX/0Ah;J)V
+.method public static A0n(LX/0B8;J)V
     .locals 2
 
     .line 0
@@ -1133,7 +1202,7 @@
 
     .line 5
     .line 6
-    invoke-interface {p0, v0, v1}, LX/0Ah;->A52(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-interface {p0, v0, v1}, LX/0B8;->A34(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 7
     .line 8
@@ -1141,7 +1210,7 @@
     return-void
 .end method
 
-.method public static A0i(Lcom/facebook/common/dextricks/DexStore$Config$Builder;)V
+.method public static A0o(Lcom/facebook/common/dextricks/DexStore$Config$Builder;)V
     .locals 3
 
     .line 0
@@ -1199,74 +1268,58 @@
 
     .line 25
     .line 26
-    invoke-static {}, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealByDefault()Z
+    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableDex2OatQuickening:Z
 
     .line 27
     .line 28
-    .line 29
-    move-result v0
+    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableQuickening:Z
 
+    .line 29
     .line 30
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableOatmeal:Z
+    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedMode:Z
 
     .line 31
     .line 32
-    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableDex2OatQuickening:Z
+    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModeClassPath:Z
 
     .line 33
     .line 34
-    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableOatmealQuickening:Z
+    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModePgo:Z
 
     .line 35
     .line 36
-    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableQuickening:Z
+    iput-byte v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mPgoCompilerFilter:B
 
     .line 37
     .line 38
-    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedMode:Z
+    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mDoPeriodicPgoCompilation:Z
 
     .line 39
     .line 40
-    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModeClassPath:Z
+    const-wide/16 v0, 0x0
 
     .line 41
     .line 42
-    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModePgo:Z
+    iput-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMinTimeBetweenPgoCompilationMs:J
 
     .line 43
     .line 44
-    iput-byte v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mPgoCompilerFilter:B
+    iput-byte v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMultidexCompilationStrategy:B
 
     .line 45
     .line 46
-    iput-boolean v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mDoPeriodicPgoCompilation:Z
+    iput v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mLegacyFlags:I
 
     .line 47
     .line 48
-    const-wide/16 v0, 0x0
+    iput v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mHenosisFlags:I
 
     .line 49
     .line 50
-    iput-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMinTimeBetweenPgoCompilationMs:J
-
-    .line 51
-    .line 52
-    iput-byte v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMultidexCompilationStrategy:B
-
-    .line 53
-    .line 54
-    iput v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mLegacyFlags:I
-
-    .line 55
-    .line 56
-    iput v2, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mHenosisFlags:I
-
-    .line 57
-    .line 58
     return-void
 .end method
 
-.method public static A0j(LX/0XR;IJ)V
+.method public static A0p(LX/0LC;IJ)V
     .locals 1
 
     .line 0
@@ -1278,7 +1331,7 @@
 
     .line 3
     .line 4
-    invoke-virtual {p0, v0}, LX/0XR;->A02(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, LX/0LC;->A02(Ljava/lang/String;)V
 
     .line 5
     .line 6
@@ -1291,7 +1344,7 @@
     move-result-object v0
 
     .line 11
-    invoke-virtual {p0, v0}, LX/0XR;->A02(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, LX/0LC;->A02(Ljava/lang/String;)V
 
     .line 12
     .line 13
@@ -1300,7 +1353,7 @@
 
     .line 15
     .line 16
-    invoke-virtual {p0, v0}, LX/0XR;->A02(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, LX/0LC;->A02(Ljava/lang/String;)V
 
     .line 17
     .line 18
@@ -1309,7 +1362,26 @@
     return-void
 .end method
 
-.method public static A0k(Ljava/io/PrintWriter;I)V
+.method public static A0q(Ljava/io/File;[Ljava/lang/Object;I)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    aput-object p0, p1, p2
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public static A0r(Ljava/io/PrintWriter;I)V
     .locals 1
 
     .line 0
@@ -1329,7 +1401,7 @@
     return-void
 .end method
 
-.method public static A0l(Ljava/io/PrintWriter;Ljava/lang/String;I)V
+.method public static A0s(Ljava/io/PrintWriter;Ljava/lang/String;I)V
     .locals 1
 
     .line 0
@@ -1364,7 +1436,32 @@
     return-void
 .end method
 
-.method public static A0m(Ljava/lang/Object;)V
+.method public static A0t(Ljava/lang/CharSequence;Ljava/lang/Object;Ljava/util/AbstractMap;)V
+    .locals 1
+
+    .line 0
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {p2, p1, p0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    :cond_0
+    return-void
+.end method
+
+.method public static A0u(Ljava/lang/Object;)V
     .locals 0
 
     .line 0
@@ -1376,319 +1473,11 @@
     move-result-object p0
 
     .line 4
-    invoke-static {p0}, LX/0XH;->A00(Ljava/lang/String;)V
+    invoke-static {p0}, LX/0LE;->A00(Ljava/lang/String;)V
 
     .line 5
     .line 6
     .line 7
-    return-void
-.end method
-
-.method public static A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x2
-
-    .line 1
-    aput-object p0, p4, v0
-
-    .line 2
-    .line 3
-    const/4 v0, 0x3
-
-    .line 4
-    aput-object p1, p4, v0
-
-    .line 5
-    .line 6
-    const/4 v0, 0x4
-
-    .line 7
-    aput-object p2, p4, v0
-
-    .line 8
-    .line 9
-    const/4 v0, 0x5
-
-    .line 10
-    aput-object p3, p4, v0
-
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public static A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x8
-
-    .line 1
-    .line 2
-    aput-object p0, p4, v0
-
-    .line 3
-    .line 4
-    const/16 v0, 0x9
-
-    .line 5
-    .line 6
-    aput-object p1, p4, v0
-
-    .line 7
-    .line 8
-    const/16 v0, 0xa
-
-    .line 9
-    .line 10
-    aput-object p2, p4, v0
-
-    .line 11
-    .line 12
-    const/16 v0, 0xb
-
-    .line 13
-    .line 14
-    aput-object p3, p4, v0
-
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public static A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0xe
-
-    .line 1
-    .line 2
-    aput-object p0, p4, v0
-
-    .line 3
-    .line 4
-    const/16 v0, 0xf
-
-    .line 5
-    .line 6
-    aput-object p1, p4, v0
-
-    .line 7
-    .line 8
-    const/16 v0, 0x10
-
-    .line 9
-    .line 10
-    aput-object p2, p4, v0
-
-    .line 11
-    .line 12
-    const/16 v0, 0x11
-
-    .line 13
-    .line 14
-    aput-object p3, p4, v0
-
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public static A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x13
-
-    .line 1
-    .line 2
-    aput-object p0, p4, v0
-
-    .line 3
-    .line 4
-    const/16 v0, 0x14
-
-    .line 5
-    .line 6
-    aput-object p1, p4, v0
-
-    .line 7
-    .line 8
-    const/16 v0, 0x15
-
-    .line 9
-    .line 10
-    aput-object p2, p4, v0
-
-    .line 11
-    .line 12
-    const/16 v0, 0x16
-
-    .line 13
-    .line 14
-    aput-object p3, p4, v0
-
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public static A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x17
-
-    .line 1
-    .line 2
-    aput-object p0, p4, v0
-
-    .line 3
-    .line 4
-    const/16 v0, 0x18
-
-    .line 5
-    .line 6
-    aput-object p1, p4, v0
-
-    .line 7
-    .line 8
-    const/16 v0, 0x19
-
-    .line 9
-    .line 10
-    aput-object p2, p4, v0
-
-    .line 11
-    .line 12
-    const/16 v0, 0x1a
-
-    .line 13
-    .line 14
-    aput-object p3, p4, v0
-
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public static A0s(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x1d
-
-    .line 1
-    .line 2
-    aput-object p0, p4, v0
-
-    .line 3
-    .line 4
-    const/16 v0, 0x1e
-
-    .line 5
-    .line 6
-    aput-object p1, p4, v0
-
-    .line 7
-    .line 8
-    const/16 v0, 0x1f
-
-    .line 9
-    .line 10
-    aput-object p2, p4, v0
-
-    .line 11
-    .line 12
-    const/16 v0, 0x20
-
-    .line 13
-    .line 14
-    aput-object p3, p4, v0
-
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public static A0t(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x21
-
-    .line 1
-    .line 2
-    aput-object p0, p4, v0
-
-    .line 3
-    .line 4
-    const/16 v0, 0x22
-
-    .line 5
-    .line 6
-    aput-object p1, p4, v0
-
-    .line 7
-    .line 8
-    const/16 v0, 0x23
-
-    .line 9
-    .line 10
-    aput-object p2, p4, v0
-
-    .line 11
-    .line 12
-    const/16 v0, 0x24
-
-    .line 13
-    .line 14
-    aput-object p3, p4, v0
-
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public static A0u(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x28
-
-    .line 1
-    .line 2
-    aput-object p0, p4, v0
-
-    .line 3
-    .line 4
-    const/16 v0, 0x29
-
-    .line 5
-    .line 6
-    aput-object p1, p4, v0
-
-    .line 7
-    .line 8
-    const/16 v0, 0x2a
-
-    .line 9
-    .line 10
-    aput-object p2, p4, v0
-
-    .line 11
-    .line 12
-    const/16 v0, 0x2b
-
-    .line 13
-    .line 14
-    aput-object p3, p4, v0
-
-    .line 15
-    .line 16
     return-void
 .end method
 
@@ -1696,7 +1485,7 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x25
+    const/16 v0, 0x12
 
     .line 1
     .line 2
@@ -1704,7 +1493,7 @@
 
     .line 3
     .line 4
-    const/16 v0, 0x26
+    const/16 v0, 0x13
 
     .line 5
     .line 6
@@ -1712,7 +1501,7 @@
 
     .line 7
     .line 8
-    const/16 v0, 0x27
+    const/16 v0, 0x14
 
     .line 9
     .line 10
@@ -1782,7 +1571,46 @@
     return-void
 .end method
 
-.method public static A0y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+.method public static A0y(Ljava/lang/Object;Ljava/util/Map;J)V
+    .locals 1
+
+    .line 0
+    invoke-static {p2, p3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {p1, p0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public static A0z(Ljava/lang/String;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    new-array v0, v0, [Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    invoke-static {p0, v0}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public static A10(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
     .locals 0
 
     .line 0
@@ -1804,27 +1632,7 @@
     return-void
 .end method
 
-.method public static A0z(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public static A10(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+.method public static A11(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
     .locals 1
 
     .line 0
@@ -1844,7 +1652,7 @@
     return-void
 .end method
 
-.method public static A11(Ljava/net/URLConnection;Ljava/util/Iterator;)V
+.method public static A12(Ljava/net/URLConnection;Ljava/util/Iterator;)V
     .locals 3
 
     .line 0
@@ -1900,7 +1708,7 @@
     return-void
 .end method
 
-.method public static A12(Ljava/util/AbstractCollection;I)V
+.method public static A13(Ljava/util/AbstractCollection;I)V
     .locals 1
 
     .line 0
@@ -1920,7 +1728,7 @@
     return-void
 .end method
 
-.method public static A13(Ljava/util/AbstractList;)V
+.method public static A14(Ljava/util/AbstractList;)V
     .locals 1
 
     .line 0
@@ -1941,104 +1749,6 @@
     .line 7
     .line 8
     .line 9
-    return-void
-.end method
-
-.method public static A14(Ljava/util/AbstractMap;)V
-    .locals 2
-
-    .line 0
-    sget-object v1, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
-
-    .line 1
-    .line 2
-    const-string v0, "B"
-
-    .line 3
-    .line 4
-    invoke-virtual {p0, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    .line 7
-    sget-object v1, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
-
-    .line 8
-    .line 9
-    const-string v0, "C"
-
-    .line 10
-    .line 11
-    invoke-virtual {p0, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    .line 14
-    sget-object v1, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
-
-    .line 15
-    .line 16
-    const-string v0, "S"
-
-    .line 17
-    .line 18
-    invoke-virtual {p0, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 19
-    .line 20
-    .line 21
-    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    .line 22
-    .line 23
-    const-string v0, "I"
-
-    .line 24
-    .line 25
-    invoke-virtual {p0, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 26
-    .line 27
-    .line 28
-    sget-object v1, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    .line 29
-    .line 30
-    const-string v0, "J"
-
-    .line 31
-    .line 32
-    invoke-virtual {p0, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 33
-    .line 34
-    .line 35
-    sget-object v1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
-
-    .line 36
-    .line 37
-    const-string v0, "F"
-
-    .line 38
-    .line 39
-    invoke-virtual {p0, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 40
-    .line 41
-    .line 42
-    sget-object v1, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
-
-    .line 43
-    .line 44
-    const-string v0, "D"
-
-    .line 45
-    .line 46
-    invoke-virtual {p0, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 47
-    .line 48
-    .line 49
     return-void
 .end method
 
@@ -2228,14 +1938,14 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x6
+    const/4 v0, 0x2
 
     .line 1
     aput-object p1, p0, v0
 
     .line 2
     .line 3
-    const/4 v0, 0x7
+    const/4 v0, 0x3
 
     .line 4
     aput-object p2, p0, v0
@@ -2246,29 +1956,6 @@
 .end method
 
 .method public static A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0xc
-
-    .line 1
-    .line 2
-    aput-object p1, p0, v0
-
-    .line 3
-    .line 4
-    const/16 v0, 0xd
-
-    .line 5
-    .line 6
-    aput-object p2, p0, v0
-
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public static A1G([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
     .line 0
@@ -2289,7 +1976,7 @@
     return-void
 .end method
 
-.method public static A1H([SI)V
+.method public static A1G([SI)V
     .locals 1
 
     .line 0
@@ -2311,7 +1998,7 @@
     return-void
 .end method
 
-.method public static A1I([SII)V
+.method public static A1H([SII)V
     .locals 1
 
     .line 0
@@ -2332,7 +2019,7 @@
     return-void
 .end method
 
-.method public static A1J([SIII)V
+.method public static A1I([SIII)V
     .locals 2
 
     .line 0
@@ -2375,7 +2062,7 @@
     return-void
 .end method
 
-.method public static A1K([SIIII)V
+.method public static A1J([SIIII)V
     .locals 2
 
     .line 0
@@ -2436,7 +2123,7 @@
     return-void
 .end method
 
-.method public static A1L(I)Z
+.method public static A1K(I)Z
     .locals 1
 
     .line 0
@@ -2454,7 +2141,7 @@
     return v0
 .end method
 
-.method public static A1M(I)Z
+.method public static A1L(I)Z
     .locals 1
 
     .line 0
@@ -2472,7 +2159,7 @@
     return v0
 .end method
 
-.method public static A1N(I)Z
+.method public static A1M(I)Z
     .locals 1
 
     .line 0
@@ -2490,7 +2177,7 @@
     return v0
 .end method
 
-.method public static A1O(II)Z
+.method public static A1N(II)Z
     .locals 1
 
     .line 0
@@ -2508,29 +2195,11 @@
     return v0
 .end method
 
-.method public static A1P(II)Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    if-ge p0, p1, :cond_0
-
-    .line 2
-    .line 3
-    const/4 v0, 0x1
-
-    .line 4
-    :cond_0
-    return v0
-.end method
-
-.method public static A1Q(LX/0V7;)Z
+.method public static A1O(LX/0VV;)Z
     .locals 0
 
     .line 0
-    invoke-interface {p0}, LX/0V7;->get()Ljava/lang/Object;
+    invoke-interface {p0}, LX/0VV;->get()Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -2553,7 +2222,7 @@
     return p0
 .end method
 
-.method public static A1R(Ljava/io/File;Ljava/lang/String;)Z
+.method public static A1P(Ljava/io/File;Ljava/lang/String;)Z
     .locals 1
 
     .line 0
@@ -2577,7 +2246,7 @@
     return v0
 .end method
 
-.method public static A1S(Ljava/lang/Object;)Z
+.method public static A1Q(Ljava/lang/Object;)Z
     .locals 1
 
     .line 0
@@ -2595,7 +2264,7 @@
     return v0
 .end method
 
-.method public static A1T(Ljava/lang/Object;)Z
+.method public static A1R(Ljava/lang/Object;)Z
     .locals 1
 
     .line 0
@@ -2613,7 +2282,26 @@
     return v0
 .end method
 
-.method public static A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public static A1S(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 0
+    check-cast p0, Ljava/lang/Boolean;
+
+    .line 1
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result p0
+
+    .line 6
+    return p0
+.end method
+
+.method public static A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
     .line 0
@@ -2631,7 +2319,7 @@
     return v0
 .end method
 
-.method public static A1V(Ljava/lang/String;)Z
+.method public static A1U(Ljava/lang/String;)Z
     .locals 1
 
     .line 0
@@ -2653,6 +2341,25 @@
 
     .line 9
     return v0
+.end method
+
+.method public static A1V(Ljava/lang/Throwable;)Z
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    instance-of p0, p0, Landroid/os/DeadObjectException;
+
+    .line 5
+    .line 6
+    return p0
 .end method
 
 .method public static A1W(Ljava/util/AbstractList;I)Z
@@ -2801,33 +2508,90 @@
     return-object v1
 .end method
 
-.method public static A1b(Ljava/util/AbstractCollection;)[Ljava/lang/String;
-    .locals 1
+.method public static A1b(Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 4
 
     .line 0
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    const/4 v3, 0x1
 
     .line 1
+    const-string v0, "dalvik.system.BaseDexClassLoader"
+
     .line 2
     .line 3
-    move-result v0
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     .line 4
-    new-array v0, v0, [Ljava/lang/String;
-
     .line 5
     .line 6
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    move-result-object v1
 
     .line 7
+    const-string v0, "pathList"
+
     .line 8
     .line 9
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     .line 10
-    check-cast v0, [Ljava/lang/String;
-
     .line 11
     .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-virtual {v0, v3}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v2
+
+    .line 20
+    const-string v0, "dalvik.system.DexPathList"
+
+    .line 21
+    .line 22
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v1
+
+    .line 26
+    const-string v0, "dexElements"
+
+    .line 27
+    .line 28
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    invoke-virtual {v0, v3}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 33
+    .line 34
+    .line 35
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v0
+
+    .line 39
+    check-cast v0, [Ljava/lang/Object;
+
+    .line 40
+    .line 41
     return-object v0
 .end method

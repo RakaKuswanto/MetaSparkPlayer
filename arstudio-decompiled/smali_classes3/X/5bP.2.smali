@@ -1,44 +1,46 @@
 .class public final LX/5bP;
-.super Ljava/lang/Object;
+.super LX/5br;
 .source ""
 
 
+# annotations
+.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
+    c = "kotlinx.coroutines.channels.ProduceKt"
+    f = "Produce.kt"
+    i = {
+        0x0,
+        0x0
+    }
+    l = {
+        0x96
+    }
+    m = "awaitClose"
+    n = {
+        "$this$awaitClose",
+        "block"
+    }
+    s = {
+        "L$0",
+        "L$1"
+    }
+.end annotation
+
+
+# instance fields
+.field public L$0:Ljava/lang/Object;
+
+.field public L$1:Ljava/lang/Object;
+
+.field public label:I
+
+.field public synthetic result:Ljava/lang/Object;
+
+
 # direct methods
-.method public static A00()J
-    .locals 2
+.method public constructor <init>(LX/5bD;)V
+    .locals 0
 
-    .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0, p1}, LX/5br;-><init>(LX/5bD;)V
 
-    .line 1
-    .line 2
-    const/16 v0, 0x11
-
-    .line 3
-    .line 4
-    if-lt v1, v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-wide v0
-
-    .line 10
-    return-wide v0
-
-    .line 11
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-wide v0
-
-    .line 15
-    return-wide v0
+    return-void
 .end method

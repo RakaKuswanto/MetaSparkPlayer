@@ -2,21 +2,16 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/text/method/TransformationMethod;
+
 
 # instance fields
-.field public A00:Ljava/lang/Long;
-
-.field public final A01:Landroid/content/Intent;
-
-.field public final A02:LX/4CY;
-
-.field public final A03:Ljava/lang/String;
-
-.field public final A04:Ljava/util/HashMap;
+.field public final A00:Ljava/util/Locale;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;LX/4CY;Ljava/lang/String;)V
+.method public constructor <init>(Landroid/content/res/Resources;)V
     .locals 1
 
     .line 0
@@ -25,7 +20,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     .line 4
     .line 5
@@ -33,28 +28,59 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, LX/4Bc;->A04:Ljava/util/HashMap;
+    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     .line 8
     .line 9
-    const/4 v0, 0x0
+    iput-object v0, p0, LX/4Bc;->A00:Ljava/util/Locale;
 
     .line 10
-    iput-object v0, p0, LX/4Bc;->A00:Ljava/lang/Long;
-
     .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    .locals 2
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    iget-object v0, p0, LX/4Bc;->A00:Ljava/util/Locale;
+
+    .line 7
+    .line 8
+    invoke-virtual {v1, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
     .line 12
-    iput-object p1, p0, LX/4Bc;->A01:Landroid/content/Intent;
+    return-object v0
 
     .line 13
+    :cond_0
+    const/4 v0, 0x0
+
     .line 14
-    iput-object p2, p0, LX/4Bc;->A02:LX/4CY;
+    return-object v0
+.end method
 
-    .line 15
-    .line 16
-    iput-object p3, p0, LX/4Bc;->A03:Ljava/lang/String;
+.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
+    .locals 0
 
-    .line 17
-    .line 18
     return-void
 .end method

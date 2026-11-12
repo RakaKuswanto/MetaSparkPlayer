@@ -1,24 +1,30 @@
-.class public final synthetic LX/5o1;
+.class public final LX/5o1;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Landroid/hardware/Camera$ShutterCallback;
+.implements LX/5o3;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final onShutter()V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-void
+    const-string v0, "EmptyAction"
+
+    return-object v0
 .end method

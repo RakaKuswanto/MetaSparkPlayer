@@ -1,161 +1,56 @@
-.class public final LX/4ZN;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.class public abstract LX/4ZN;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Landroid/graphics/drawable/Drawable$ConstantState;
-
-
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable$ConstantState;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/4ZN;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final canApplyTheme()Z
+.method public static final A00(LX/4ZK;I)Ljava/lang/String;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4ZN;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
+    invoke-interface {p0}, LX/4ZK;->AJz()LX/6br;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->canApplyTheme()Z
-
     .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public getChangingConfigurations()I
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4ZN;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    .line 536870912
-    new-instance v1, LX/4ZU;
-
-    .line 536870913
-    .line 536870914
-    invoke-direct {v1}, LX/4ZU;-><init>()V
-
-    .line 536870915
-    .line 536870916
-    .line 536870917
-    iget-object v0, p0, LX/4ZN;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    .line 536870918
-    .line 536870919
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
-
-    .line 536870920
-    .line 536870921
-    .line 536870922
     move-result-object v0
 
-    .line 536870923
-    iput-object v0, v1, LX/4Yu;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 536870924
-    .line 536870925
-    return-object v1
-.end method
-
-.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    .line 268435456
-    new-instance v1, LX/4ZU;
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {v1}, LX/4ZU;-><init>()V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    iget-object v0, p0, LX/4ZN;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    .line 268435462
-    .line 268435463
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-
-    .line 268435464
-    .line 268435465
-    .line 268435466
-    move-result-object v0
-
-    .line 268435467
-    iput-object v0, v1, LX/4Yu;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 268435468
-    .line 268435469
-    return-object v1
-.end method
-
-.method public final newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    .line 0
-    new-instance v1, LX/4ZU;
-
-    .line 1
-    .line 2
-    invoke-direct {v1}, LX/4ZU;-><init>()V
-
-    .line 3
     .line 4
-    .line 5
-    iget-object v0, p0, LX/4ZN;->A00:Landroid/graphics/drawable/Drawable$ConstantState;
+    invoke-virtual {v0, p1}, LX/6br;->A03(I)Ljava/lang/String;
 
+    .line 5
     .line 6
     .line 7
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-
-    .line 8
-    .line 9
-    .line 10
     move-result-object v0
 
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    .line 10
+    return-object v0
+
     .line 11
-    iput-object v0, v1, LX/4Yu;->A00:Landroid/graphics/drawable/Drawable;
+    :cond_0
+    const-string p0, "String resource not found for ID #0x"
 
     .line 12
     .line 13
-    return-object v1
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-static {p0, v0}, LX/004;->A03(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    throw v0
 .end method

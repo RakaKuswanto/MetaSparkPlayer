@@ -1,11 +1,17 @@
-.class public interface abstract LX/1xq;
+.class public final LX/1xQ;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A8t(Lcom/facebook/auth/credentials/DBLFacebookCredentials;)Lcom/facebook/auth/credentials/DBLFacebookCredentials;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract A9s(Lcom/facebook/auth/credentials/DBLFacebookCredentials;)Lcom/facebook/auth/credentials/DBLFacebookCredentials;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

@@ -1,184 +1,703 @@
-.class public final LX/03z;
-.super Ljava/lang/Object;
+.class public abstract LX/03z;
+.super LX/0KC;
 .source ""
-
-# interfaces
-.implements LX/0N1;
-
-
-# instance fields
-.field public final A00:LX/0Gd;
-
-.field public final A01:LX/0TJ;
-
-.field public final A02:LX/0TJ;
-
-.field public final A03:LX/0Gd;
 
 
 # direct methods
-.method public constructor <init>(LX/0Gd;LX/0Gd;Z)V
+.method public constructor <init>(LX/06I;LX/01U;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, LX/072;->OTHER_APP_FIRST:LX/072;
+
+    .line 1
+    .line 2
+    invoke-direct {p0, v0, p1, p2}, LX/0KC;-><init>(LX/072;LX/06I;LX/01U;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method private A00(Landroid/content/Context;Landroid/content/Intent;Ljava/util/List;)Landroid/content/Intent;
+    .locals 8
+
+    .line 0
+    invoke-static {p3}, LX/001;->A0b(Ljava/util/List;)Ljava/util/ArrayList;
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/03z;->A00:LX/0Gd;
+    move-result-object v3
 
     .line 4
-    .line 5
-    iput-object p2, p0, LX/03z;->A03:LX/0Gd;
+    invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
+    .line 5
     .line 6
     .line 7
-    if-eqz p3, :cond_0
+    move-result-object v7
 
     .line 8
-    .line 9
-    new-instance v0, LX/0TJ;
+    :goto_0
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 9
     .line 10
     .line 11
-    invoke-direct {v0}, LX/0TJ;-><init>()V
+    move-result v0
 
     .line 12
+    const-string v5, "DifferentKeyIntentScope"
+
     .line 13
     .line 14
-    iput-object v0, p0, LX/03z;->A02:LX/0TJ;
+    const/4 v4, 0x0
 
     .line 15
+    if-eqz v0, :cond_6
+
     .line 16
-    new-instance v0, LX/0TJ;
-
     .line 17
-    .line 18
-    invoke-direct {v0}, LX/0TJ;-><init>()V
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 18
     .line 19
     .line 20
+    move-result-object v6
+
     .line 21
-    :goto_0
-    iput-object v0, p0, LX/03z;->A01:LX/0TJ;
+    check-cast v6, Landroid/content/pm/ComponentInfo;
 
     .line 22
     .line 23
-    return-void
+    invoke-virtual {p0, p1, v6}, LX/03z;->A0J(Landroid/content/Context;Landroid/content/pm/ComponentInfo;)Z
 
     .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    if-nez v0, :cond_1
+
+    .line 28
+    .line 29
+    invoke-virtual {p0}, LX/0KC;->A0G()Z
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v0
+
+    .line 33
+    if-eqz v0, :cond_0
+
+    .line 34
+    .line 35
+    invoke-virtual {v3, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v1
+
+    .line 42
+    const-string v0, "Non-external/third-party component detected, but allowing because of fail-open: "
+
+    .line 43
+    .line 44
+    :goto_1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-static {p2}, LX/0KC;->A03(Landroid/content/Intent;)Ljava/lang/String;
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-object v0
+
+    .line 51
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v1
+
+    .line 55
+    iget-object v0, p0, LX/0KC;->A01:LX/01U;
+
+    .line 56
+    .line 57
+    invoke-interface {v0, v5, v1, v4}, LX/01U;->Ai7(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 58
+    .line 59
+    .line 60
+    goto :goto_0
+
+    .line 61
     :cond_0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v1
+
+    .line 65
+    const-string v0, "Removed non-external/third-party component: "
+
+    .line 66
+    .line 67
+    goto :goto_1
+
+    .line 68
+    :cond_1
+    iget-object v0, v6, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    .line 69
+    .line 70
+    if-eqz v0, :cond_5
+
+    .line 71
+    .line 72
+    iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->className:Ljava/lang/String;
+
+    .line 73
+    .line 74
+    const-string v0, "com.android.internal.app.ResolverActivity"
+
+    .line 75
+    .line 76
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 77
+    .line 78
+    .line 79
+    move-result v0
+
+    .line 80
+    if-eqz v0, :cond_5
+
+    .line 81
+    .line 82
+    invoke-virtual {p0}, LX/0KC;->A0G()Z
+
+    .line 83
+    .line 84
+    .line 85
+    move-result v0
+
+    .line 86
+    if-nez v0, :cond_2
+
+    .line 87
+    .line 88
+    iget-object v1, p0, LX/0KC;->A00:LX/06I;
+
+    .line 89
+    .line 90
+    monitor-enter v1
+
+    .line 91
+    :try_start_0
+    iget-object v2, v1, LX/06I;->A00:LX/06b;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 92
+    .line 93
+    monitor-exit v1
+
+    .line 94
+    sget-object v1, LX/06b;->OPEN_NONFB_AND_EXCEPTION_ONLY:LX/06b;
+
+    .line 95
+    .line 96
     const/4 v0, 0x0
 
-    .line 25
+    .line 97
+    if-ne v2, v1, :cond_3
+
+    .line 98
+    .line 99
+    :cond_2
+    const/4 v0, 0x1
+
+    .line 100
+    :cond_3
+    if-eqz v0, :cond_4
+
+    .line 101
+    .line 102
+    invoke-virtual {v3, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 103
+    .line 104
+    .line 105
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 106
+    .line 107
+    .line 108
+    move-result-object v1
+
+    .line 109
+    const-string v0, "Found potentially dangerous resolver but not removing: "
+
+    .line 110
+    .line 111
+    goto :goto_1
+
+    .line 112
+    :cond_4
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 113
+    .line 114
+    .line 115
+    move-result-object v1
+
+    .line 116
+    const-string v0, "Removed potentially dangerous resolver: "
+
+    .line 117
+    .line 118
+    goto :goto_1
+
+    .line 119
+    :cond_5
+    invoke-virtual {v3, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 120
+    .line 121
+    .line 122
     goto :goto_0
+
+    .line 123
+    :catchall_0
+    move-exception v0
+
+    .line 124
+    monitor-exit v1
+
+    .line 125
+    throw v0
+
+    .line 126
+    :cond_6
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    .line 127
+    .line 128
+    .line 129
+    move-result v0
+
+    .line 130
+    if-eqz v0, :cond_7
+
+    .line 131
+    .line 132
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    .line 133
+    .line 134
+    .line 135
+    move-result-object v0
+
+    .line 136
+    iget v1, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
+
+    .line 137
+    .line 138
+    const/16 v0, 0x1e
+
+    .line 139
+    .line 140
+    const-string v3, "No matching different-signature components for: "
+
+    .line 141
+    .line 142
+    if-lt v1, v0, :cond_a
+
+    .line 143
+    .line 144
+    invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
+
+    .line 145
+    .line 146
+    .line 147
+    move-result v0
+
+    .line 148
+    if-eqz v0, :cond_a
+
+    .line 149
+    .line 150
+    iget-object v2, p0, LX/0KC;->A01:LX/01U;
+
+    .line 151
+    .line 152
+    invoke-static {p2}, LX/0KC;->A03(Landroid/content/Intent;)Ljava/lang/String;
+
+    .line 153
+    .line 154
+    .line 155
+    move-result-object v1
+
+    .line 156
+    const-string v0, " on API 30+ device. Intent target is not in any PackageFinder aware app, so it\'s probably a non-FB app. Attempting to proceed."
+
+    .line 157
+    .line 158
+    invoke-static {v3, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 159
+    .line 160
+    .line 161
+    move-result-object v0
+
+    .line 162
+    invoke-interface {v2, v5, v0, v4}, LX/01U;->Ai7(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 163
+    .line 164
+    .line 165
+    :goto_2
+    invoke-virtual {p0}, LX/0KC;->A0G()Z
+
+    .line 166
+    .line 167
+    .line 168
+    move-result v0
+
+    .line 169
+    invoke-static {p2, v2, v0}, LX/06n;->A00(Landroid/content/Intent;LX/01U;Z)V
+
+    .line 170
+    .line 171
+    .line 172
+    return-object p2
+
+    .line 173
+    :cond_7
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->size()I
+
+    .line 174
+    .line 175
+    .line 176
+    move-result v1
+
+    .line 177
+    invoke-interface {p3}, Ljava/util/List;->size()I
+
+    .line 178
+    .line 179
+    .line 180
+    move-result v0
+
+    .line 181
+    if-eq v1, v0, :cond_8
+
+    .line 182
+    .line 183
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->size()I
+
+    .line 184
+    .line 185
+    .line 186
+    move-result v1
+
+    .line 187
+    const/4 v0, 0x1
+
+    .line 188
+    if-le v1, v0, :cond_9
+
+    .line 189
+    .line 190
+    invoke-static {p2, v3}, LX/0KC;->A04(Landroid/content/Intent;Ljava/util/List;)Ljava/util/ArrayList;
+
+    .line 191
+    .line 192
+    .line 193
+    move-result-object v0
+
+    .line 194
+    invoke-static {v0}, LX/0KC;->A02(Ljava/util/List;)Landroid/content/Intent;
+
+    .line 195
+    .line 196
+    .line 197
+    move-result-object p2
+
+    .line 198
+    :cond_8
+    :goto_3
+    iget-object v2, p0, LX/0KC;->A01:LX/01U;
+
+    .line 199
+    .line 200
+    goto :goto_2
+
+    .line 201
+    :cond_9
+    const/4 v0, 0x0
+
+    .line 202
+    invoke-virtual {v3, v0}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 203
+    .line 204
+    .line 205
+    move-result-object v0
+
+    .line 206
+    check-cast v0, Landroid/content/pm/PackageItemInfo;
+
+    .line 207
+    .line 208
+    invoke-static {p2, v0}, LX/0KC;->A07(Landroid/content/Intent;Landroid/content/pm/PackageItemInfo;)V
+
+    .line 209
+    .line 210
+    .line 211
+    goto :goto_3
+
+    .line 212
+    :cond_a
+    iget-object v2, p0, LX/0KC;->A01:LX/01U;
+
+    .line 213
+    .line 214
+    invoke-static {p2}, LX/0KC;->A03(Landroid/content/Intent;)Ljava/lang/String;
+
+    .line 215
+    .line 216
+    .line 217
+    move-result-object v1
+
+    .line 218
+    invoke-static {v3}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 219
+    .line 220
+    .line 221
+    move-result-object v0
+
+    .line 222
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 223
+    .line 224
+    .line 225
+    move-result-object v0
+
+    .line 226
+    invoke-interface {v2, v5, v0, v4}, LX/01U;->Ai7(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 227
+    .line 228
+    .line 229
+    return-object v4
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized Aie(IILjava/lang/String;I)V
-    .locals 0
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
-
-    .line 2
-    return-void
-.end method
-
-.method public final declared-synchronized Aif(IILjava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
-
-    .line 2
-    return-void
-.end method
-
-.method public final Aig(II)V
+.method public final A09(Landroid/content/BroadcastReceiver;Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
     .locals 1
 
     .line 0
-    move-object v0, p0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
-    monitor-enter v0
-
     .line 2
-    monitor-exit v0
-
     .line 3
-    return-void
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
-.method public final declared-synchronized Aih(II)V
-    .locals 0
+.method public final A0A(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
+    .locals 2
 
     .line 0
-    monitor-enter p0
+    invoke-static {p1, p2}, LX/0KC;->A08(Landroid/content/Context;Landroid/content/Intent;)Z
 
     .line 1
-    monitor-exit p0
-
     .line 2
-    return-void
+    .line 3
+    move-result v0
+
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return-object v0
+
+    .line 8
+    :cond_0
+    const v0, 0x10040
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {p1, p2, v0}, LX/0KC;->A05(Landroid/content/Context;Landroid/content/Intent;I)Ljava/util/List;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    if-eqz v0, :cond_1
+
+    .line 20
+    .line 21
+    const/4 v0, 0x0
+
+    .line 22
+    invoke-static {p1, p2, v0}, LX/0KC;->A05(Landroid/content/Context;Landroid/content/Intent;I)Ljava/util/List;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v1
+
+    .line 26
+    :cond_1
+    invoke-direct {p0, p1, p2, v1}, LX/03z;->A00(Landroid/content/Context;Landroid/content/Intent;Ljava/util/List;)Landroid/content/Intent;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    return-object v0
 .end method
 
-.method public final Aii(IILjava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final declared-synchronized Aij(IIZ)V
-    .locals 0
+.method public final A0B(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
+    .locals 2
 
     .line 0
-    monitor-enter p0
+    invoke-static {p1, p2}, LX/0KC;->A08(Landroid/content/Context;Landroid/content/Intent;)Z
 
     .line 1
-    monitor-exit p0
-
     .line 2
-    return-void
+    .line 3
+    move-result v0
+
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return-object v0
+
+    .line 8
+    :cond_0
+    const v0, 0x10040
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {p1, p2, v0}, LX/0KC;->A06(Landroid/content/Context;Landroid/content/Intent;I)Ljava/util/List;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    if-eqz v0, :cond_1
+
+    .line 20
+    .line 21
+    invoke-virtual {p0, p1, p2}, LX/0KC;->A0D(Landroid/content/Context;Landroid/content/Intent;)Ljava/util/List;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v1
+
+    .line 25
+    :cond_1
+    invoke-direct {p0, p1, p2, v1}, LX/03z;->A00(Landroid/content/Context;Landroid/content/Intent;Ljava/util/List;)Landroid/content/Intent;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    return-object v0
 .end method
 
-.method public final declared-synchronized Aik()V
-    .locals 0
+.method public final A0E(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Ljava/util/List;
+    .locals 1
 
     .line 0
-    monitor-enter p0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
-    monitor-exit p0
-
     .line 2
-    return-void
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
-.method public final declared-synchronized Ail(IIZ)V
-    .locals 0
+.method public final A0I(Landroid/content/Context;LX/01M;)Z
+    .locals 1
 
     .line 0
-    monitor-enter p0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
-    monitor-exit p0
-
     .line 2
-    return-void
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
-.method public final Amu(Lcom/facebook/quicklog/QuickPerformanceLogger;)V
-    .locals 0
-
-    return-void
+.method public abstract A0J(Landroid/content/Context;Landroid/content/pm/ComponentInfo;)Z
 .end method

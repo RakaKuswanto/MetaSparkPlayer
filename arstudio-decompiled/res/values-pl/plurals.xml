@@ -5,12 +5,95 @@
         <item quantity="one">%1$s polubienie strony</item>
         <item quantity="few">%1$s polubienia strony</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s polubień</item>
-        <item quantity="one">%1$s polubienie</item>
-        <item quantity="few">%1$s polubienia</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d dni temu</item>
+        <item quantity="one">1 dzień temu</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d dni</item>
+        <item quantity="one">1 dzień</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d dni</item>
+        <item quantity="one">1 dzień</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d godz.</item>
+        <item quantity="one">1 godzina</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 minuta</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d mies.</item>
+        <item quantity="one">1 miesiąc</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d s</item>
+        <item quantity="one">1 s</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d tygodni</item>
+        <item quantity="one">%1$d tydzień</item>
+        <item quantity="few">%1$d tygodnie</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">jeszcze %1$d dni</item>
+        <item quantity="one">jeszcze 1 dzień</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">jeszcze %1$d godzin</item>
+        <item quantity="one">jeszcze %1$d godzinę</item>
+        <item quantity="few">jeszcze %1$d godziny</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">jeszcze %1$d minut</item>
+        <item quantity="one">jeszcze %1$d minutę</item>
+        <item quantity="few">jeszcze %1$d minuty</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">jeszcze %1$d miesięcy</item>
+        <item quantity="one">jeszcze %1$d miesiąc</item>
+        <item quantity="few">jeszcze %1$d miesiące</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">jeszcze %1$d sekund</item>
+        <item quantity="one">jeszcze %1$d sekundę</item>
+        <item quantity="few">jeszcze %1$d sekundy</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">jeszcze %1$d tygodni</item>
+        <item quantity="one">jeszcze %1$d tydzień</item>
+        <item quantity="few">jeszcze %1$d tygodnie</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">jeszcze %1$d lat</item>
+        <item quantity="one">jeszcze %1$d rok</item>
+        <item quantity="few">jeszcze %1$d lata</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d lat</item>
+        <item quantity="one">%1$d rok</item>
+        <item quantity="few">%1$d lata</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d godz. temu</item>
+        <item quantity="one">1 godz. temu</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d godz.</item>
+        <item quantity="one">1 godz.</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d godz.</item>
+        <item quantity="one">1 godz.</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d godz.</item>
+        <item quantity="one">1 godz.</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d godz. temu</item>
         <item quantity="one">1 godz. temu</item>
     </plurals>
@@ -22,8 +105,70 @@
         <item quantity="other">%1$d min temu</item>
         <item quantity="one">1 minutę temu</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d min temu</item>
+        <item quantity="one">1 min temu</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d min temu</item>
         <item quantity="one">1 minutę temu</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d mies. temu</item>
+        <item quantity="one">1 miesiąc temu</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d s temu</item>
+        <item quantity="one">1 sekunda</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d tyg. temu</item>
+        <item quantity="one">1 tydzień temu</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">Pozostało %1$d godz.</item>
+        <item quantity="one">Pozostała 1 godz.</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">Pozostało %1$d min</item>
+        <item quantity="one">Pozostała 1 min</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d lat temu</item>
+        <item quantity="one">%1$d rok temu</item>
+        <item quantity="few">%1$d lata temu</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Ostatnia wizyta %1$d dni temu</item>
+        <item quantity="one">Odwiedziłeś(aś) dzień temu</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Odwiedziłeś(aś) %1$d godz. temu</item>
+        <item quantity="one">Odwiedziłeś(aś) godzinę temu</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Odwiedziłeś(aś) %1$d min temu</item>
+        <item quantity="one">Ostatnia wizyta 1 min temu</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Odwiedziłeś(aś) %1$d mies. temu</item>
+        <item quantity="one">Odwiedziłeś(aś) miesiąc temu</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Ostatnia wizyta %1$d tygodni temu</item>
+        <item quantity="one">Ostatnia wizyta %1$d tydzień temu</item>
+        <item quantity="few">Ostatnia wizyta %1$d tygodnie temu</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Odwiedziłeś(aś) %1$d lat(a) temu</item>
+        <item quantity="one">Odwiedziłeś(aś) rok temu</item>
     </plurals>
 </resources>

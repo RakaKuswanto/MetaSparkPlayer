@@ -3,378 +3,284 @@
 .source ""
 
 # interfaces
-.implements LX/5x8;
+.implements LX/5xp;
 
 
 # instance fields
-.field public final A00:J
+.field public final synthetic A00:I
 
-.field public final A01:[J
+.field public final synthetic A01:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
 
-.field public final A02:[J
+.field public final synthetic A02:LX/5xp;
+
+.field public final synthetic A03:LX/60J;
 
 
 # direct methods
-.method public constructor <init>([J[JJ)V
-    .locals 3
+.method public constructor <init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;LX/60J;I)V
+    .locals 0
 
     .line 0
+    iput-object p1, p0, LX/5wa;->A01:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+
+    .line 1
+    .line 2
+    iput-object p3, p0, LX/5wa;->A03:LX/60J;
+
+    .line 3
+    .line 4
+    iput p4, p0, LX/5wa;->A00:I
+
+    .line 5
+    .line 6
+    iput-object p2, p0, LX/5wa;->A02:LX/5xp;
+
+    .line 7
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/5wa;->A01:[J
-
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/5wa;->A02:[J
-
-    .line 6
-    .line 7
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    .line 8
     .line 9
     .line 10
     .line 11
-    .line 12
-    cmp-long v0, p3, v1
-
-    .line 13
-    .line 14
-    if-nez v0, :cond_0
-
-    .line 15
-    .line 16
-    array-length v0, p2
-
-    .line 17
-    add-int/lit8 v0, v0, -0x1
-
-    .line 18
-    .line 19
-    aget-wide v0, p2, v0
-
-    .line 20
-    .line 21
-    invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->A0A(J)J
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-wide p3
-
-    .line 25
-    :cond_0
-    iput-wide p3, p0, LX/5wa;->A00:J
-
-    .line 26
-    .line 27
     return-void
-.end method
-
-.method public static A00([J[JJ)Landroid/util/Pair;
-    .locals 12
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p0, p2, p3, v0}, Lcom/google/android/exoplayer2/util/Util;->A06([JJZ)I
-
-    .line 2
-    .line 3
-    .line 4
-    move-result v2
-
-    .line 5
-    aget-wide v0, p0, v2
-
-    .line 6
-    .line 7
-    aget-wide v10, p1, v2
-
-    .line 8
-    .line 9
-    add-int/lit8 v3, v2, 0x1
-
-    .line 10
-    .line 11
-    array-length v2, p0
-
-    .line 12
-    if-ne v3, v2, :cond_0
-
-    .line 13
-    .line 14
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v2
-
-    .line 18
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    :goto_0
-    invoke-static {v2, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    return-object v0
-
-    .line 27
-    :cond_0
-    aget-wide v4, p0, v3
-
-    .line 28
-    .line 29
-    aget-wide v6, p1, v3
-
-    .line 30
-    .line 31
-    cmp-long v2, v4, v0
-
-    .line 32
-    .line 33
-    if-nez v2, :cond_1
-
-    .line 34
-    .line 35
-    const-wide/16 v2, 0x0
-
-    .line 36
-    .line 37
-    :goto_1
-    sub-long/2addr v6, v10
-
-    .line 38
-    long-to-double v0, v6
-
-    .line 39
-    mul-double/2addr v2, v0
-
-    .line 40
-    double-to-long v0, v2
-
-    .line 41
-    add-long/2addr v0, v10
-
-    .line 42
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v2
-
-    .line 46
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    goto :goto_0
-
-    .line 51
-    :cond_1
-    long-to-double v2, p2
-
-    .line 52
-    long-to-double v8, v0
-
-    .line 53
-    sub-double/2addr v2, v8
-
-    .line 54
-    sub-long/2addr v4, v0
-
-    .line 55
-    long-to-double v0, v4
-
-    .line 56
-    div-double/2addr v2, v0
-
-    .line 57
-    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public final AEN()J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public final AEp()J
-    .locals 2
+.method public final AVz(Ljava/lang/Throwable;)V
+    .locals 1
 
     .line 0
-    iget-wide v0, p0, LX/5wa;->A00:J
+    iget-object v0, p0, LX/5wa;->A02:LX/5xp;
 
     .line 1
     .line 2
-    return-wide v0
-.end method
-
-.method public final ALt(J)LX/5wg;
-    .locals 6
-
-    .line 0
-    iget-wide v0, p0, LX/5wa;->A00:J
-
-    .line 1
-    .line 2
-    const-wide/16 v2, 0x0
+    invoke-interface {v0, p1}, LX/5xp;->AVz(Ljava/lang/Throwable;)V
 
     .line 3
     .line 4
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
+    .line 5
+    return-void
+.end method
+
+.method public final AXK()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5wa;->A02:LX/5xp;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/5xp;->AXK()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final Abi()V
+    .locals 21
+
+    .line 0
+    move-object/from16 v0, p0
+
+    .line 1
+    .line 2
+    iget-object v2, v0, LX/5wa;->A01:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+
+    .line 3
+    .line 4
+    iget-object v1, v2, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A02:LX/5x1;
 
     .line 5
     .line 6
-    .line 7
-    move-result-wide v0
+    if-nez v1, :cond_0
 
+    .line 7
     .line 8
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
+    const-string v2, "Camera settings is null"
 
     .line 9
     .line 10
-    .line 11
-    move-result-wide v0
+    new-instance v1, LX/5x3;
 
+    .line 11
     .line 12
-    invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->A0B(J)J
+    invoke-direct {v1, v2}, LX/5x3;-><init>(Ljava/lang/String;)V
 
     .line 13
     .line 14
     .line 15
-    move-result-wide v2
+    invoke-virtual {v0, v1}, LX/5wa;->AVz(Ljava/lang/Throwable;)V
 
     .line 16
-    iget-object v1, p0, LX/5wa;->A02:[J
-
     .line 17
     .line 18
-    iget-object v0, p0, LX/5wa;->A01:[J
+    return-void
 
     .line 19
-    .line 20
-    invoke-static {v1, v0, v2, v3}, LX/5wa;->A00([J[JJ)Landroid/util/Pair;
+    :cond_0
+    iget-object v3, v2, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
+    .line 20
     .line 21
+    iget-object v1, v3, LX/5x7;->A02:LX/5Yi;
+
     .line 22
     .line 23
-    move-result-object v2
+    invoke-virtual {v1}, LX/5Yi;->flip()LX/5Yi;
 
     .line 24
-    invoke-static {v2}, LX/4BE;->A0O(Landroid/util/Pair;)J
-
     .line 25
     .line 26
+    move-result-object v6
+
     .line 27
-    move-result-wide v0
+    iget-object v5, v3, LX/5x7;->A03:Ljava/lang/String;
 
     .line 28
-    invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->A0A(J)J
-
     .line 29
-    .line 30
-    .line 31
-    move-result-wide v4
+    const/4 v4, 0x0
 
+    .line 30
+    iget-object v1, v3, LX/5x7;->A01:LX/5ww;
+
+    .line 31
     .line 32
-    invoke-static {v2}, LX/4BD;->A0J(Landroid/util/Pair;)J
+    if-eqz v1, :cond_1
 
     .line 33
     .line 34
+    move-object v4, v1
+
     .line 35
-    move-result-wide v2
+    :cond_1
+    iget-object v3, v0, LX/5wa;->A03:LX/60J;
 
     .line 36
-    new-instance v1, LX/6Iv;
-
     .line 37
-    .line 38
-    invoke-direct {v1, v4, v5, v2, v3}, LX/6Iv;-><init>(JJ)V
+    new-instance v1, LX/5x7;
 
+    .line 38
     .line 39
+    invoke-direct {v1, v4, v6, v3, v5}, LX/5x7;-><init>(LX/5ww;LX/5Yi;LX/60J;Ljava/lang/String;)V
+
     .line 40
     .line 41
-    new-instance v0, LX/5wg;
-
     .line 42
+    iput-object v1, v2, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
+
     .line 43
-    invoke-direct {v0, v1, v1}, LX/5wg;-><init>(LX/6Iv;LX/6Iv;)V
-
     .line 44
+    const/4 v14, 0x0
+
     .line 45
+    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
+
     .line 46
-    return-object v0
-.end method
+    .line 47
+    .line 48
+    move-result-object v20
 
-.method public final AN0(J)J
-    .locals 2
+    .line 49
+    new-instance v13, LX/5wr;
 
-    .line 0
-    iget-object v1, p0, LX/5wa;->A01:[J
+    .line 50
+    .line 51
+    move-object v15, v14
 
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/5wa;->A02:[J
+    .line 52
+    move-object/from16 v16, v14
 
-    .line 3
-    .line 4
-    invoke-static {v1, v0, p1, p2}, LX/5wa;->A00([J[JJ)Landroid/util/Pair;
+    .line 53
+    .line 54
+    move-object/from16 v17, v14
 
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
+    .line 55
+    .line 56
+    move-object/from16 v18, v14
 
-    .line 8
-    invoke-static {v0}, LX/4BD;->A0J(Landroid/util/Pair;)J
+    .line 57
+    .line 58
+    move-object/from16 v19, v14
 
-    .line 9
-    .line 10
-    .line 11
-    move-result-wide v0
+    .line 59
+    .line 60
+    invoke-direct/range {v13 .. v20}, LX/5wr;-><init>(LX/4KB;LX/5uN;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/util/HashMap;Ljava/util/Map;)V
 
-    .line 12
-    invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->A0A(J)J
+    .line 61
+    .line 62
+    .line 63
+    iget-object v1, v2, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A02:LX/5x1;
 
-    .line 13
-    .line 14
-    .line 15
-    move-result-wide v0
+    .line 64
+    .line 65
+    iget v5, v1, LX/5x1;->A05:I
 
-    .line 16
-    return-wide v0
-.end method
+    .line 66
+    .line 67
+    iget v6, v1, LX/5x1;->A04:I
 
-.method public final ARV()Z
-    .locals 1
+    .line 68
+    .line 69
+    iget v7, v1, LX/5x1;->A02:I
 
+    .line 70
+    .line 71
+    iget v8, v1, LX/5x1;->A01:I
+
+    .line 72
+    .line 73
+    iget v9, v1, LX/5x1;->A08:I
+
+    .line 74
+    .line 75
+    iget v10, v1, LX/5x1;->A07:I
+
+    .line 76
+    .line 77
+    iget v11, v1, LX/5x1;->A03:I
+
+    .line 78
+    .line 79
+    iget v12, v0, LX/5wa;->A00:I
+
+    .line 80
+    .line 81
+    iget-object v4, v1, LX/5x1;->A00:LX/5xo;
+
+    .line 82
+    .line 83
+    new-instance v3, LX/5x1;
+
+    .line 84
+    .line 85
+    invoke-direct/range {v3 .. v12}, LX/5x1;-><init>(LX/5xo;IIIIIIII)V
+
+    .line 86
+    .line 87
+    .line 88
+    iput-object v3, v2, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A02:LX/5x1;
+
+    .line 89
+    .line 90
+    new-instance v1, LX/5wb;
+
+    .line 91
+    .line 92
+    invoke-direct {v1, v0}, LX/5wb;-><init>(LX/5wa;)V
+
+    .line 93
+    .line 94
+    .line 95
     const/4 v0, 0x1
 
-    return v0
+    .line 96
+    invoke-static {v2, v13, v1, v3, v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A02(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5wr;LX/5xp;LX/5x1;Z)V
+
+    .line 97
+    .line 98
+    .line 99
+    return-void
 .end method

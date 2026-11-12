@@ -1,25 +1,14 @@
-.class public final LX/688;
-.super LX/68G;
+.class public interface abstract LX/688;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/62t;
 
-# instance fields
-.field public final A00:LX/681;
 
+# virtual methods
+.method public abstract AJi()LX/698;
+.end method
 
-# direct methods
-.method public constructor <init>(LX/681;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/68G;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/688;->A00:LX/681;
-
-    .line 4
-    .line 5
-    return-void
+.method public abstract AJj()LX/698;
 .end method

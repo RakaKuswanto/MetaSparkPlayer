@@ -6,11 +6,11 @@
 # static fields
 .field public static final CONFIG_ID:I = 0x7db0
 
-.field public static final __CONFIG__:I = 0x23f
+.field public static final __CONFIG__:I = 0x216
 
-.field public static final enabled:J = 0x81023f0000192cL
+.field public static final enabled:J = 0x81021600001629L
 
-.field public static final fb_ads_effect_ids:J = 0x83023f000101f9L
+.field public static final fb_ads_effect_ids:J = 0x830216000101edL
 
 
 # direct methods

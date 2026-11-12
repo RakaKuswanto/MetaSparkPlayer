@@ -30,7 +30,7 @@
     .line 6
     .line 7
     .line 8
-    invoke-static {v0}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v0}, LX/0X7;->A0p(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 9
     .line 10
@@ -45,44 +45,20 @@
     return-void
 .end method
 
-.method public static final _UL__ULSEP_com_facebook_traffic_ttrc_TrafficTtrcMobileConfigParser_ULSEP_FACTORY_METHOD(ILX/1zC;Ljava/lang/Object;)Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;
-    .locals 1
+.method public static final _UL__ULSEP_com_facebook_traffic_ttrc_TrafficTtrcMobileConfigParser_ULSEP_FACTORY_METHOD(ILX/3Ft;Ljava/lang/Object;)Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;
+    .locals 0
 
     .line 0
-    sget v0, LX/2eq;->AaM:I
+    new-instance p0, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;
 
     .line 1
     .line 2
-    if-eq p0, v0, :cond_0
+    invoke-direct {p0}, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;-><init>()V
 
     .line 3
     .line 4
-    invoke-static {p1, p2, v0}, LX/1z6;->A0V(LX/1zC;Ljava/lang/Object;I)Ljava/lang/Object;
-
     .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    check-cast v0, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;
-
-    .line 9
-    .line 10
-    return-object v0
-
-    .line 11
-    :cond_0
-    new-instance v0, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;
-
-    .line 12
-    .line 13
-    invoke-direct {v0}, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;-><init>()V
-
-    .line 14
-    .line 15
-    .line 16
-    return-object v0
+    return-object p0
 .end method
 
 .method public static synthetic access$200()Ljava/lang/String;

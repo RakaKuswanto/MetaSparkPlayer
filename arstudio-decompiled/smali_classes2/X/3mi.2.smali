@@ -1,95 +1,51 @@
-.class public final LX/3mi;
+.class public final LX/3mI;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbSubtitleView$hideDelayRunnable$1"
+
+
+# instance fields
+.field public final synthetic A00:LX/3m9;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/3m9;)V
     .locals 0
 
-    .line 0
+    iput-object p1, p0, LX/3mI;->A00:LX/3m9;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
     return-void
-.end method
-
-.method public static final A00(LX/3mJ;LX/3mJ;)I
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/3mJ;->A02:LX/3Qv;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v1
-
-    .line 6
-    iget-object v0, p1, LX/3mJ;->A02:LX/3Qv;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    sub-int/2addr v1, v0
-
-    .line 13
-    if-nez v1, :cond_0
-
-    .line 14
-    .line 15
-    iget v1, p0, LX/3mJ;->A00:I
-
-    .line 16
-    .line 17
-    iget v0, p1, LX/3mJ;->A00:I
-
-    .line 18
-    .line 19
-    sub-int/2addr v1, v0
-
-    .line 20
-    :cond_0
-    return v1
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+.method public final run()V
+    .locals 2
 
     .line 0
-    check-cast p1, LX/3mJ;
+    iget-object v0, p0, LX/3mI;->A00:LX/3m9;
 
     .line 1
     .line 2
-    check-cast p2, LX/3mJ;
+    iget-object v1, v0, LX/3m9;->A0G:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 3
     .line 4
-    invoke-static {p1, p2}, LX/3mi;->A00(LX/3mJ;LX/3mJ;)I
+    const/4 v0, 0x0
 
     .line 5
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
     .line 6
     .line 7
-    move-result v0
-
     .line 8
-    return v0
+    return-void
 .end method

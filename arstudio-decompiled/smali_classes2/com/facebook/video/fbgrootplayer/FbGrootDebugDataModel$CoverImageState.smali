@@ -17,7 +17,7 @@
 
 
 # direct methods
-.method public constructor <init>(LX/1Oh;)V
+.method public constructor <init>(LX/3m0;)V
     .locals 1
 
     .line 0
@@ -30,7 +30,7 @@
 
     .line 4
     .line 5
-    iget-object v0, p1, LX/1Oh;->A00:Ljava/lang/String;
+    iget-object v0, p1, LX/3m0;->A00:Ljava/lang/String;
 
     .line 6
     .line 7

@@ -1,53 +1,58 @@
-.class public final LX/56x;
-.super Ljava/lang/Object;
+.class public final enum LX/56x;
+.super LX/56y;
 .source ""
 
 
-# static fields
-.field public static final A00:Lcom/google/android/gms/common/Feature;
-
-.field public static final A01:[Lcom/google/android/gms/common/Feature;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
     .line 0
-    const-string v0, "CLIENT_TELEMETRY"
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, p1, p2, v0}, LX/56y;-><init>(Ljava/lang/String;ILX/56z;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public serialize(Ljava/lang/Long;)Lcom/google/gson/JsonElement;
+    .locals 2
+
+    .line 0
+    if-nez p1, :cond_0
 
     .line 1
     .line 2
-    new-instance v2, Lcom/google/android/gms/common/Feature;
+    sget-object v1, LX/570;->A00:LX/570;
 
     .line 3
     .line 4
-    invoke-direct {v2, v0}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;)V
+    return-object v1
 
     .line 5
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
     .line 6
     .line 7
-    sput-object v2, LX/56x;->A00:Lcom/google/android/gms/common/Feature;
-
     .line 8
+    move-result-object v0
+
     .line 9
-    const/4 v0, 0x1
+    new-instance v1, LX/56h;
 
     .line 10
-    new-array v1, v0, [Lcom/google/android/gms/common/Feature;
-
     .line 11
+    invoke-direct {v1, v0}, LX/56h;-><init>(Ljava/lang/String;)V
+
     .line 12
-    const/4 v0, 0x0
-
     .line 13
-    aput-object v2, v1, v0
-
     .line 14
-    .line 15
-    sput-object v1, LX/56x;->A01:[Lcom/google/android/gms/common/Feature;
-
-    .line 16
-    .line 17
-    return-void
+    return-object v1
 .end method

@@ -1,89 +1,57 @@
-.class public final LX/4Uc;
-.super Ljava/lang/Object;
+.class public final LX/4uC;
+.super LX/6af;
 .source ""
 
 # interfaces
-.implements LX/4Uf;
-
-
-# instance fields
-.field public A00:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic A01:Landroidx/cardview/widget/CardView;
+.implements LX/5Tx;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/cardview/widget/CardView;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4Uc;->A01:Landroidx/cardview/widget/CardView;
+    invoke-direct {p0}, LX/6af;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AnB(IIII)V
-    .locals 3
+.method public final A6h(Ljava/nio/ByteBuffer;I)V
+    .locals 1
 
     .line 0
-    iget-object v2, p0, LX/4Uc;->A01:Landroidx/cardview/widget/CardView;
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->getFloat(I)F
 
     .line 1
     .line 2
-    iget-object v0, v2, Landroidx/cardview/widget/CardView;->A05:Landroid/graphics/Rect;
-
     .line 3
+    move-result v0
+
     .line 4
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
+    iput v0, p0, LX/6af;->A01:F
 
     .line 5
     .line 6
+    add-int/lit8 v0, p2, 0x4
+
     .line 7
-    iget-object v1, v2, Landroidx/cardview/widget/CardView;->A04:Landroid/graphics/Rect;
-
     .line 8
-    .line 9
-    iget v0, v1, Landroid/graphics/Rect;->left:I
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->getFloat(I)F
 
+    .line 9
     .line 10
     .line 11
-    add-int/2addr p1, v0
+    move-result v0
 
     .line 12
-    iget v0, v1, Landroid/graphics/Rect;->top:I
+    iput v0, p0, LX/6af;->A00:F
 
     .line 13
     .line 14
-    add-int/2addr p2, v0
-
-    .line 15
-    iget v0, v1, Landroid/graphics/Rect;->right:I
-
-    .line 16
-    .line 17
-    add-int/2addr p3, v0
-
-    .line 18
-    iget v0, v1, Landroid/graphics/Rect;->bottom:I
-
-    .line 19
-    .line 20
-    add-int/2addr p4, v0
-
-    .line 21
-    invoke-static {v2, p1, p2, p3, p4}, Landroidx/cardview/widget/CardView;->A02(Landroidx/cardview/widget/CardView;IIII)V
-
-    .line 22
-    .line 23
-    .line 24
     return-void
 .end method

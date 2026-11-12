@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static final DEFAULT_LOCATION_PARAMS:LX/5AF;
+.field public static final DEFAULT_LOCATION_PARAMS:LX/53Z;
 
-.field public static final HIGH_FREQ_LOCATION_PARAMS:LX/5AF;
+.field public static final HIGH_FREQ_LOCATION_PARAMS:LX/53Z;
 
 .field public static final LOCATION_CALLER_CONTEXT:Ljava/lang/String; = "LocationDataSource"
 
 
 # instance fields
-.field public mCityNameListener:LX/5BV;
+.field public mCityNameListener:LX/55B;
 
 .field public final mContext:Landroid/content/Context;
 
@@ -20,9 +20,9 @@
 
 .field public mCurrentCityPromise:Lcom/facebook/native_bridge/NativeDataPromise;
 
-.field public final mFbLocationCache:LX/3Nc;
+.field public final mFbLocationCache:LX/54P;
 
-.field public final mFbLocationManager:LX/5BO;
+.field public final mFbLocationManager:LX/54y;
 
 .field public final mGeocoder:Landroid/location/Geocoder;
 
@@ -30,11 +30,11 @@
 
 .field public mIsCityPromiseSatisfied:Z
 
-.field public mLocationDataUpdateListener:LX/5BI;
+.field public mLocationDataUpdateListener:LX/54o;
 
-.field public mLocationListener:LX/5B6;
+.field public mLocationListener:LX/54H;
 
-.field public mLocationManagerParams:LX/5AF;
+.field public mLocationManagerParams:LX/53Z;
 
 .field public mOrientationDeg:F
 
@@ -52,7 +52,7 @@
     .locals 13
 
     .line 0
-    sget-object v2, LX/6KL;->BALANCED_POWER_AND_ACCURACY:LX/6KL;
+    sget-object v2, LX/6Z7;->BALANCED_POWER_AND_ACCURACY:LX/6Z7;
 
     .line 1
     .line 2
@@ -82,20 +82,20 @@
 
     .line 13
     .line 14
-    new-instance v1, LX/5AF;
+    new-instance v1, LX/53Z;
 
     .line 15
     .line 16
-    invoke-direct/range {v1 .. v7}, LX/5AF;-><init>(LX/6KL;Ljava/lang/Long;FJZ)V
+    invoke-direct/range {v1 .. v7}, LX/53Z;-><init>(LX/6Z7;Ljava/lang/Long;FJZ)V
 
     .line 17
     .line 18
     .line 19
-    sput-object v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->DEFAULT_LOCATION_PARAMS:LX/5AF;
+    sput-object v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->DEFAULT_LOCATION_PARAMS:LX/53Z;
 
     .line 20
     .line 21
-    sget-object v7, LX/6KL;->HIGH_ACCURACY:LX/6KL;
+    sget-object v7, LX/6Z7;->HIGH_ACCURACY:LX/6Z7;
 
     .line 22
     .line 23
@@ -109,30 +109,30 @@
 
     .line 26
     .line 27
-    new-instance v6, LX/5AF;
+    new-instance v6, LX/53Z;
 
     .line 28
     .line 29
-    invoke-direct/range {v6 .. v12}, LX/5AF;-><init>(LX/6KL;Ljava/lang/Long;FJZ)V
+    invoke-direct/range {v6 .. v12}, LX/53Z;-><init>(LX/6Z7;Ljava/lang/Long;FJZ)V
 
     .line 30
     .line 31
     .line 32
-    sput-object v6, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->HIGH_FREQ_LOCATION_PARAMS:LX/5AF;
+    sput-object v6, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->HIGH_FREQ_LOCATION_PARAMS:LX/53Z;
 
     .line 33
     .line 34
     return-void
 .end method
 
-.method public constructor <init>(LX/5BO;LX/3Nc;Landroid/content/Context;)V
+.method public constructor <init>(LX/54y;LX/54P;Landroid/content/Context;)V
     .locals 1
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;-><init>(LX/5BO;LX/3Nc;Landroid/content/Context;Z)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;-><init>(LX/54y;LX/54P;Landroid/content/Context;Z)V
 
     .line 2
     .line 3
@@ -140,7 +140,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/5BO;LX/3Nc;Landroid/content/Context;Z)V
+.method public constructor <init>(LX/54y;LX/54P;Landroid/content/Context;Z)V
     .locals 1
 
     .line 268435456
@@ -156,11 +156,11 @@
 
     .line 268435461
     .line 268435462
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationManager:LX/5BO;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationManager:LX/54y;
 
     .line 268435463
     .line 268435464
-    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationCache:LX/3Nc;
+    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationCache:LX/54P;
 
     .line 268435465
     .line 268435466
@@ -193,11 +193,11 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;LX/4r5;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
+.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;LX/5ER;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->convertImmutableLocationToLocationData(LX/4r5;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
+    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->convertImmutableLocationToLocationData(LX/5ER;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
 
     .line 1
     .line 2
@@ -208,7 +208,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;)LX/5BV;
+.method public static synthetic access$100(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;)LX/55B;
     .locals 0
 
     .line 0
@@ -230,7 +230,7 @@
     return-void
 .end method
 
-.method private convertImmutableLocationToLocationData(LX/4r5;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
+.method private convertImmutableLocationToLocationData(LX/5ER;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
     .locals 42
 
     .line 0
@@ -238,7 +238,7 @@
 
     .line 1
     .line 2
-    invoke-virtual {v5}, LX/4r5;->A03()Ljava/lang/Float;
+    invoke-virtual {v5}, LX/5ER;->A03()Ljava/lang/Float;
 
     .line 3
     .line 4
@@ -254,7 +254,7 @@
 
     .line 9
     .line 10
-    invoke-virtual {v5}, LX/4r5;->A03()Ljava/lang/Float;
+    invoke-virtual {v5}, LX/5ER;->A03()Ljava/lang/Float;
 
     .line 11
     .line 12
@@ -274,7 +274,7 @@
 
     .line 19
     :goto_0
-    invoke-virtual {v5}, LX/4r5;->A02()Ljava/lang/Double;
+    invoke-virtual {v5}, LX/5ER;->A02()Ljava/lang/Double;
 
     .line 20
     .line 21
@@ -286,7 +286,7 @@
 
     .line 24
     .line 25
-    invoke-virtual {v5}, LX/4r5;->A02()Ljava/lang/Double;
+    invoke-virtual {v5}, LX/5ER;->A02()Ljava/lang/Double;
 
     .line 26
     .line 27
@@ -303,7 +303,7 @@
 
     .line 33
     :goto_1
-    invoke-virtual {v5}, LX/4r5;->A05()Ljava/lang/Float;
+    invoke-virtual {v5}, LX/5ER;->A05()Ljava/lang/Float;
 
     .line 34
     .line 35
@@ -315,7 +315,7 @@
 
     .line 38
     .line 39
-    invoke-virtual {v5}, LX/4r5;->A05()Ljava/lang/Float;
+    invoke-virtual {v5}, LX/5ER;->A05()Ljava/lang/Float;
 
     .line 40
     .line 41
@@ -335,7 +335,7 @@
 
     .line 48
     :goto_2
-    iget-object v4, v5, LX/4r5;->A00:Landroid/location/Location;
+    iget-object v4, v5, LX/5ER;->A00:Landroid/location/Location;
 
     .line 49
     .line 50
@@ -416,7 +416,7 @@
 
     .line 87
     :goto_4
-    invoke-virtual {v5}, LX/4r5;->A04()Ljava/lang/Float;
+    invoke-virtual {v5}, LX/5ER;->A04()Ljava/lang/Float;
 
     .line 88
     .line 89
@@ -428,7 +428,7 @@
 
     .line 92
     .line 93
-    invoke-virtual {v5}, LX/4r5;->A04()Ljava/lang/Float;
+    invoke-virtual {v5}, LX/5ER;->A04()Ljava/lang/Float;
 
     .line 94
     .line 95
@@ -448,7 +448,7 @@
 
     .line 102
     :goto_5
-    invoke-virtual {v5}, LX/4r5;->A07()Ljava/lang/Long;
+    invoke-virtual {v5}, LX/5ER;->A07()Ljava/lang/Long;
 
     .line 103
     .line 104
@@ -645,7 +645,7 @@
 
     .line 197
     :cond_2
-    invoke-virtual {v5}, LX/4r5;->A07()Ljava/lang/Long;
+    invoke-virtual {v5}, LX/5ER;->A07()Ljava/lang/Long;
 
     .line 198
     .line 199
@@ -725,12 +725,12 @@
 
     .line 3
     .line 4
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->HIGH_FREQ_LOCATION_PARAMS:LX/5AF;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->HIGH_FREQ_LOCATION_PARAMS:LX/53Z;
 
     .line 5
     .line 6
     :goto_0
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationManagerParams:LX/5AF;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationManagerParams:LX/53Z;
 
     .line 7
     .line 8
@@ -766,7 +766,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0}, LX/4BE;->A0Z(Landroid/content/Context;)Landroid/view/WindowManager;
+    invoke-static {v0}, LX/433;->A0R(Landroid/content/Context;)Landroid/view/WindowManager;
 
     .line 25
     .line 26
@@ -783,7 +783,7 @@
 
     .line 31
     :cond_1
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->DEFAULT_LOCATION_PARAMS:LX/5AF;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->DEFAULT_LOCATION_PARAMS:LX/53Z;
 
     .line 32
     .line 33
@@ -1011,7 +1011,7 @@
 
     .line 5
     .line 6
-    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationCache:LX/3Nc;
+    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationCache:LX/54P;
 
     .line 7
     .line 8
@@ -1019,74 +1019,78 @@
 
     .line 9
     .line 10
-    const-wide v1, 0x7fffffffffffffffL
+    check-cast v4, LX/2sh;
 
     .line 11
     .line 12
+    const-wide v1, 0x7fffffffffffffffL
+
     .line 13
     .line 14
     .line 15
+    .line 16
+    .line 17
     const/4 v0, 0x0
 
-    .line 16
-    invoke-static {v4, v3, v1, v2, v0}, LX/3Nc;->A00(LX/3Nc;Ljava/lang/String;JZ)LX/4r5;
-
-    .line 17
     .line 18
+    invoke-static {v4, v3, v1, v2, v0}, LX/2sh;->A00(LX/2sh;Ljava/lang/String;JZ)LX/5ER;
+
     .line 19
+    .line 20
+    .line 21
     move-result-object v1
 
-    .line 20
-    if-eqz v1, :cond_0
-
-    .line 21
     .line 22
-    invoke-virtual {v1}, LX/4r5;->A07()Ljava/lang/Long;
+    if-eqz v1, :cond_0
 
     .line 23
     .line 24
+    invoke-virtual {v1}, LX/5ER;->A07()Ljava/lang/Long;
+
     .line 25
+    .line 26
+    .line 27
     move-result-object v0
 
-    .line 26
-    if-eqz v0, :cond_0
-
-    .line 27
     .line 28
-    invoke-direct {p0, v1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->convertImmutableLocationToLocationData(LX/4r5;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
+    if-eqz v0, :cond_0
 
     .line 29
     .line 30
+    invoke-direct {p0, v1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->convertImmutableLocationToLocationData(LX/5ER;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
+
     .line 31
+    .line 32
+    .line 33
     move-result-object v0
 
-    .line 32
+    .line 34
     return-object v0
 
-    .line 33
+    .line 35
     :cond_0
     const/4 v1, 0x0
 
-    .line 34
-    const-wide/16 v2, 0x0
-
-    .line 35
     .line 36
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
+    const-wide/16 v2, 0x0
 
     .line 37
     .line 38
-    move-wide v4, v2
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;
 
     .line 39
-    move-wide v6, v2
-
     .line 40
-    invoke-direct/range {v0 .. v7}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;-><init>(ZDDD)V
+    move-wide v4, v2
 
     .line 41
+    move-wide v6, v2
+
     .line 42
+    invoke-direct/range {v0 .. v7}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationData;-><init>(ZDDD)V
+
     .line 43
+    .line 44
+    .line 45
     return-object v0
 .end method
 
@@ -1105,11 +1109,11 @@
     return-void
 .end method
 
-.method public setCityNameListener(LX/5BV;)V
+.method public setCityNameListener(LX/55B;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mCityNameListener:LX/5BV;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mCityNameListener:LX/55B;
 
     .line 1
     .line 2
@@ -1137,7 +1141,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/5B6;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/54H;
 
     .line 10
     .line 11
@@ -1159,11 +1163,11 @@
     return-void
 .end method
 
-.method public setLocationDataUpdateListener(LX/5BI;)V
+.method public setLocationDataUpdateListener(LX/54o;)V
     .locals 1
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/5BI;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/54o;
 
     .line 1
     .line 2
@@ -1171,7 +1175,7 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/5B6;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/54H;
 
     .line 5
     .line 6
@@ -1196,11 +1200,11 @@
 
     .line 1
     .line 2
-    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/5B6;
+    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/54H;
 
     .line 3
     .line 4
-    if-nez v0, :cond_c
+    if-nez v0, :cond_12
 
     .line 5
     .line 6
@@ -1212,7 +1216,7 @@
     move-result v0
 
     .line 10
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_12
 
     .line 11
     .line 12
@@ -1225,16 +1229,16 @@
     .line 15
     .line 16
     .line 17
-    iput-object v7, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/5B6;
+    iput-object v7, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/54H;
 
     .line 18
     .line 19
     :try_start_0
-    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationManager:LX/5BO;
+    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationManager:LX/54y;
 
     .line 20
     .line 21
-    iget-object v6, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationManagerParams:LX/5AF;
+    iget-object v5, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationManagerParams:LX/53Z;
 
     .line 22
     .line 23
@@ -1247,163 +1251,154 @@
     .line 26
     .line 27
     .line 28
-    move-result-object v9
+    move-result-object v14
 
     .line 29
-    check-cast v0, LX/5AI;
+    check-cast v0, LX/53M;
 
     .line 30
     .line 31
     monitor-enter v0
-
-    .line 32
-    const/4 v3, 0x0
-
-    .line 33
-    const/16 v17, 0x0
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 34
-    .line 35
+    .line 32
     :try_start_1
-    iget-object v5, v0, LX/5AI;->A0C:LX/5AO;
+    iget-object v4, v0, LX/53M;->A0E:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
+    .line 33
+    .line 34
+    if-eqz v4, :cond_0
+
+    .line 35
     .line 36
-    .line 37
-    if-eqz v5, :cond_0
+    const v2, 0x2f5a26ce
 
+    .line 37
     .line 38
     .line 39
-    invoke-static {}, LX/0L0;->A00()Z
+    invoke-interface {v4, v2}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerStart(I)V
 
     .line 40
     .line 41
     .line 42
-    move-result v2
+    :cond_0
+    const/4 v6, 0x0
 
     .line 43
-    if-nez v2, :cond_0
+    const/16 v2, 0x4c
 
     .line 44
     .line 45
-    const-string v7, "FbLocationManager"
+    invoke-static {v2}, LX/0X0;->A00(I)Ljava/lang/String;
 
     .line 46
     .line 47
-    const-string v8, "requestLocations"
-
     .line 48
+    move-result-object v2
+
     .line 49
-    const/4 v10, 0x0
+    invoke-virtual {v0, v2, v14}, LX/53M;->A07(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 50
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
     .line 51
     .line 52
-    .line 53
-    move-result-object v6
+    iget-object v2, v5, LX/53Z;->A03:LX/6Z7;
 
+    .line 53
     .line 54
-    const/4 v12, 0x1
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     .line 55
-    iget-object v5, v0, LX/5AI;->A0D:LX/1r3;
-
     .line 56
     .line 57
-    if-eqz v5, :cond_b
+    move-result-object v3
 
     .line 58
-    .line 59
-    move-object v11, v10
+    const-string v2, "priority"
 
+    .line 59
     .line 60
-    invoke-virtual/range {v5 .. v12}, LX/1r3;->A01(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {v0, v2, v3}, LX/53M;->A07(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 61
     .line 62
     .line 63
-    goto/16 :goto_5
+    iget-object v2, v5, LX/53Z;->A04:Ljava/lang/Long;
 
     .line 64
     .line 65
-    :cond_0
-    iget-object v2, v0, LX/5AI;->A0H:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v9, "timeou_ms"
 
     .line 66
     .line 67
-    const/4 v4, 0x1
+    if-eqz v2, :cond_1
 
     .line 68
-    invoke-virtual {v2, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
-
     .line 69
+    if-eqz v4, :cond_1
+
     .line 70
     .line 71
-    move-result v2
+    const v8, 0x2f5a26ce
 
     .line 72
-    if-nez v2, :cond_1
-
     .line 73
     .line 74
-    const/4 v3, 0x1
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
 
     .line 75
-    :cond_1
-    invoke-static {v3}, Lcom/google/common/base/Preconditions;->checkState(Z)V
-
     .line 76
     .line 77
+    move-result-wide v2
+
     .line 78
-    iput-object v6, v0, LX/5AI;->A02:LX/5AF;
+    invoke-interface {v4, v8, v9, v2, v3}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;J)V
 
     .line 79
     .line 80
-    iput-object v7, v0, LX/5AI;->A01:LX/5B6;
-
     .line 81
-    .line 82
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_1
+    iget-wide v2, v5, LX/53Z;->A02:J
 
+    .line 82
     .line 83
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
     .line 84
     .line 85
-    iput-object v9, v0, LX/5AI;->A04:Ljava/lang/String;
-
     .line 86
+    move-result-object v8
+
     .line 87
-    iget-object v2, v0, LX/5AI;->A08:LX/0JA;
+    const-string v9, "time_between_updates_ms"
 
     .line 88
     .line 89
-    invoke-interface {v2}, LX/0JA;->now()J
+    if-eqz v8, :cond_2
 
     .line 90
     .line 91
-    .line 92
-    move-result-wide v2
+    if-eqz v4, :cond_2
 
+    .line 92
     .line 93
-    iput-wide v2, v0, LX/5AI;->A00:J
+    const v8, 0x2f5a26ce
 
     .line 94
     .line 95
-    iget-object v3, v0, LX/5AI;->A0A:LX/309;
-
     .line 96
-    .line 97
-    iget-object v2, v0, LX/5AI;->A02:LX/5AF;
+    invoke-interface {v4, v8, v9, v2, v3}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;J)V
 
+    .line 97
     .line 98
     .line 99
-    iget-object v2, v2, LX/5AF;->A03:LX/6KL;
+    :cond_2
+    iget v3, v5, LX/53Z;->A00:F
 
     .line 100
     .line 101
-    invoke-virtual {v3, v2, v4}, LX/309;->A01(LX/6KL;Z)LX/2ZF;
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 102
     .line 103
@@ -1411,550 +1406,841 @@
     move-result-object v2
 
     .line 105
-    const-string v12, "FbLocationManager"
+    const-string v9, "distance_between_updates_meters"
 
     .line 106
     .line 107
-    const-string v13, "requestLocations"
+    if-eqz v2, :cond_3
 
     .line 108
     .line 109
-    const/4 v15, 0x0
+    if-eqz v4, :cond_3
 
     .line 110
-    iget-object v3, v2, LX/2ZF;->A01:Ljava/lang/Integer;
-
     .line 111
-    .line 112
-    iget-object v2, v2, LX/2ZF;->A00:Ljava/lang/Integer;
+    const v8, 0x2f5a26ce
 
+    .line 112
     .line 113
     .line 114
-    invoke-static/range {v17 .. v17}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    float-to-double v2, v3
 
     .line 115
+    invoke-interface {v4, v8, v9, v2, v3}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;D)V
+
     .line 116
     .line 117
-    move-result-object v11
-
     .line 118
-    iget-object v10, v0, LX/5AI;->A0D:LX/1r3;
+    :cond_3
+    const-wide/32 v2, 0x1d4c0
 
     .line 119
     .line 120
-    if-eqz v10, :cond_3
-
     .line 121
+    const-string v9, "significant_time_improvement_ms"
+
     .line 122
-    if-eqz v3, :cond_2
-
     .line 123
-    .line 124
-    invoke-static {v3}, LX/2Zr;->A00(Ljava/lang/Integer;)Ljava/lang/String;
+    if-eqz v4, :cond_4
 
+    .line 124
     .line 125
+    const v8, 0x2f5a26ce
+
     .line 126
     .line 127
-    move-result-object v15
-
     .line 128
-    :cond_2
-    invoke-static {v2}, LX/0qA;->A00(Ljava/lang/Integer;)Ljava/lang/String;
+    invoke-interface {v4, v8, v9, v2, v3}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;J)V
 
     .line 129
     .line 130
     .line 131
-    move-result-object v16
+    :cond_4
+    const v2, 0x3f2aaaab
 
     .line 132
-    move-object v14, v9
-
     .line 133
-    invoke-virtual/range {v10 .. v17}, LX/1r3;->A01(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-
     .line 134
+    const-string v9, "significant_accuracy_improvement_ratio"
+
     .line 135
     .line 136
-    :cond_3
-    sget-object v2, LX/014;->A0M:Ljava/lang/Integer;
+    if-eqz v4, :cond_5
 
     .line 137
     .line 138
-    if-eq v3, v2, :cond_4
+    const v8, 0x2f5a26ce
 
     .line 139
     .line 140
-    sget-object v3, LX/5AS;->LOCATION_UNAVAILABLE:LX/5AS;
-
     .line 141
+    float-to-double v2, v2
+
     .line 142
-    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-interface {v4, v8, v9, v2, v3}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;D)V
 
     .line 143
     .line 144
     .line 145
-    move-result-object v2
+    :cond_5
+    const/16 v17, 0x0
 
     .line 146
-    invoke-static {v0, v2}, LX/5AI;->A01(LX/5AI;Ljava/lang/String;)V
-
     .line 147
+    const/16 v2, 0x3f
+
     .line 148
     .line 149
-    new-instance v4, LX/5AE;
+    invoke-static {v2}, LX/0X0;->A00(I)Ljava/lang/String;
 
     .line 150
     .line 151
-    invoke-direct {v4, v3}, LX/5AE;-><init>(LX/5AS;)V
-
     .line 152
-    .line 153
-    .line 154
-    iget-object v3, v0, LX/5AI;->A05:Ljava/util/concurrent/ExecutorService;
+    move-result-object v2
 
+    .line 153
+    invoke-static {v0, v2, v6}, LX/53M;->A02(LX/53M;Ljava/lang/String;Z)V
+
+    .line 154
     .line 155
     .line 156
-    new-instance v2, LX/5AT;
+    iget-boolean v3, v5, LX/53Z;->A05:Z
 
     .line 157
     .line 158
-    invoke-direct {v2, v0, v4}, LX/5AT;-><init>(LX/5AI;LX/5AE;)V
+    const-string v2, "allow_subscriptions"
 
     .line 159
     .line 160
-    .line 161
-    invoke-interface {v3, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-static {v0, v2, v3}, LX/53M;->A02(LX/53M;Ljava/lang/String;Z)V
 
+    .line 161
     .line 162
     .line 163
+    const-string v2, "force_fresh_location"
+
     .line 164
-    goto/16 :goto_5
-
     .line 165
-    .line 166
-    :cond_4
-    iget-object v8, v0, LX/5AI;->A0F:LX/3Nr;
+    invoke-static {v0, v2, v6}, LX/53M;->A02(LX/53M;Ljava/lang/String;Z)V
 
+    .line 166
     .line 167
     .line 168
-    if-eqz v8, :cond_5
+    const-string v3, "num_updates"
 
     .line 169
     .line 170
-    monitor-enter v8
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+    if-eqz v4, :cond_6
 
     .line 171
-    :try_start_2
-    iget-object v7, v8, LX/3Nr;->A00:LX/0ZF;
-
     .line 172
-    .line 173
-    const-wide v2, 0x81003a00210326L
+    const v2, 0x2f5a26ce
 
+    .line 173
     .line 174
     .line 175
+    invoke-interface {v4, v2, v3, v6}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
+
     .line 176
     .line 177
     .line 178
-    invoke-interface {v7, v2, v3}, LX/35B;->ACd(J)Z
+    :cond_6
+    iget-object v4, v0, LX/53M;->A0A:LX/36b;
 
     .line 179
     .line 180
-    .line 181
-    move-result v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    if-eqz v4, :cond_7
 
+    .line 181
     .line 182
-    :try_start_3
-    monitor-exit v8
+    invoke-virtual {v4}, LX/36b;->A00()Z
 
     .line 183
-    if-nez v2, :cond_b
-
     .line 184
     .line 185
-    :cond_5
-    if-eqz v5, :cond_6
+    move-result v3
 
     .line 186
-    .line 187
-    invoke-static {}, LX/0L0;->A00()Z
+    const-string v2, "has_any_location_permission"
 
+    .line 187
     .line 188
+    invoke-static {v0, v2, v3}, LX/53M;->A02(LX/53M;Ljava/lang/String;Z)V
+
     .line 189
     .line 190
-    move-result v2
-
     .line 191
-    if-nez v2, :cond_6
+    invoke-virtual {v4}, LX/36b;->A01()Z
 
     .line 192
     .line 193
-    if-eqz v8, :cond_6
-
     .line 194
+    move-result v3
+
     .line 195
-    invoke-virtual {v8, v9}, LX/3Nr;->A00(Ljava/lang/String;)Z
+    const-string v2, "has_fine_location_permission"
 
     .line 196
     .line 197
+    invoke-static {v0, v2, v3}, LX/53M;->A02(LX/53M;Ljava/lang/String;Z)V
+
     .line 198
-    move-result v2
-
     .line 199
-    if-eqz v2, :cond_6
-
     .line 200
+    :cond_7
+    const/4 v9, 0x3
+
     .line 201
-    goto :goto_5
+    iget-object v4, v0, LX/53M;->A0B:LX/53T;
 
     .line 202
-    :cond_6
-    iget-object v8, v0, LX/5AI;->A0E:LX/5B7;
-
     .line 203
-    .line 204
-    invoke-virtual {v8}, LX/5B7;->A01()Z
+    if-eqz v4, :cond_9
 
+    .line 204
     .line 205
+    invoke-static {}, LX/0Jv;->A00()Z
+
     .line 206
     .line 207
-    move-result v7
-
     .line 208
-    if-nez v7, :cond_7
+    move-result v2
 
     .line 209
+    if-nez v2, :cond_9
+
     .line 210
-    iget-object v2, v0, LX/5AI;->A02:LX/5AF;
-
     .line 211
+    const-string v12, "FbLocationManager"
+
     .line 212
-    iget-object v2, v2, LX/5AF;->A04:Ljava/lang/Long;
-
     .line 213
-    .line 214
-    if-nez v2, :cond_7
+    const-string v13, "requestLocations"
 
+    .line 214
     .line 215
+    const/4 v15, 0x0
+
     .line 216
-    :goto_0
-    invoke-virtual {v0, v6}, LX/5AI;->A05(LX/5AF;)V
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 217
     .line 218
     .line 219
-    goto :goto_3
+    move-result-object v11
 
     .line 220
-    :cond_7
-    iget-object v2, v0, LX/5AI;->A02:LX/5AF;
+    const/16 v17, 0x1
 
     .line 221
     .line 222
-    iget-object v3, v2, LX/5AF;->A04:Ljava/lang/Long;
+    iget-object v10, v0, LX/53M;->A0C:LX/2UV;
 
     .line 223
     .line 224
-    invoke-virtual {v8}, LX/5B7;->A00()J
+    if-eqz v10, :cond_8
 
     .line 225
     .line 226
-    .line 227
-    move-result-wide v9
+    move-object/from16 v16, v15
 
+    .line 227
     .line 228
-    if-eqz v7, :cond_8
+    invoke-virtual/range {v10 .. v17}, LX/2UV;->A00(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 229
     .line 230
-    if-eqz v3, :cond_9
-
     .line 231
-    .line 232
-    goto :goto_1
-
-    .line 233
     :cond_8
-    const/4 v2, 0x0
+    const-string v3, "end_reason"
+
+    .line 232
+    .line 233
+    const-string v2, "request in background"
 
     .line 234
-    goto :goto_2
-
     .line 235
-    :goto_1
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {v0, v3, v2}, LX/53M;->A07(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 236
     .line 237
     .line 238
-    move-result-wide v7
+    :goto_0
+    invoke-virtual {v0, v9}, LX/53M;->A08(S)V
 
     .line 239
-    cmp-long v2, v7, v9
-
     .line 240
     .line 241
-    if-lez v2, :cond_8
+    goto/16 :goto_2
 
     .line 242
     .line 243
     :cond_9
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v2, v0, LX/53M;->A0G:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 244
     .line 245
+    const/4 v8, 0x1
+
     .line 246
-    move-result-object v3
+    invoke-virtual {v2, v8}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
     .line 247
-    const/4 v2, 0x1
-
     .line 248
-    :goto_2
-    iput-boolean v2, v0, LX/5AI;->A07:Z
-
     .line 249
+    move-result v2
+
     .line 250
-    iget-object v9, v0, LX/5AI;->A0G:Ljava/util/concurrent/ScheduledExecutorService;
+    if-nez v2, :cond_a
 
     .line 251
     .line 252
-    new-instance v8, LX/5AP;
+    const/4 v6, 0x1
 
     .line 253
-    .line 254
-    invoke-direct {v8, v0}, LX/5AP;-><init>(LX/5AI;)V
+    :cond_a
+    invoke-static {v6}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 254
     .line 255
     .line 256
-    .line 257
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+    iput-object v5, v0, LX/53M;->A02:LX/53Z;
 
+    .line 257
     .line 258
+    iput-object v7, v0, LX/53M;->A01:LX/54H;
+
     .line 259
     .line 260
-    move-result-wide v2
+    invoke-virtual {v14}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 261
-    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
     .line 262
     .line 263
-    invoke-interface {v9, v8, v2, v3, v7}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    iput-object v14, v0, LX/53M;->A04:Ljava/lang/String;
 
     .line 264
     .line 265
-    .line 266
-    move-result-object v2
+    iget-object v2, v0, LX/53M;->A07:LX/0I5;
 
+    .line 266
     .line 267
-    iput-object v2, v0, LX/5AI;->A06:Ljava/util/concurrent/ScheduledFuture;
+    invoke-interface {v2}, LX/0I5;->now()J
 
     .line 268
     .line 269
-    goto :goto_0
-
     .line 270
-    :goto_3
-    if-eqz v5, :cond_b
+    move-result-wide v2
 
     .line 271
+    iput-wide v2, v0, LX/53M;->A00:J
+
     .line 272
-    iget-object v6, v0, LX/5AI;->A0G:Ljava/util/concurrent/ScheduledExecutorService;
-
     .line 273
+    iget-object v3, v0, LX/53M;->A09:LX/2TV;
+
     .line 274
-    iget-object v3, v5, LX/5AO;->A03:Ljava/util/concurrent/CopyOnWriteArrayList;
-
     .line 275
-    .line 276
-    invoke-static {v0}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    iget-object v2, v0, LX/53M;->A02:LX/53Z;
 
+    .line 276
     .line 277
+    iget-object v2, v2, LX/53Z;->A03:LX/6Z7;
+
     .line 278
     .line 279
-    move-result-object v2
+    invoke-virtual {v3, v2, v8}, LX/2TV;->A01(LX/6Z7;Z)LX/2HI;
 
     .line 280
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
     .line 281
     .line 282
+    move-result-object v2
+
     .line 283
-    monitor-enter v5
+    const-string v12, "FbLocationManager"
+
+    .line 284
+    .line 285
+    const-string v13, "requestLocations"
+
+    .line 286
+    .line 287
+    iget-object v3, v2, LX/2HI;->A01:LX/2Xw;
+
+    .line 288
+    .line 289
+    iget-object v2, v2, LX/2HI;->A00:LX/2GH;
+
+    .line 290
+    .line 291
+    invoke-static/range {v17 .. v17}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 292
+    .line 293
+    .line 294
+    move-result-object v11
+
+    .line 295
+    iget-object v10, v0, LX/53M;->A0C:LX/2UV;
+
+    .line 296
+    .line 297
+    if-eqz v10, :cond_b
+
+    .line 298
+    .line 299
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    .line 300
+    .line 301
+    .line 302
+    move-result-object v15
+
+    .line 303
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    .line 304
+    .line 305
+    .line 306
+    move-result-object v16
+
+    .line 307
+    invoke-virtual/range {v10 .. v17}, LX/2UV;->A00(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    .line 308
+    .line 309
+    .line 310
+    :cond_b
+    sget-object v2, LX/2Xw;->OKAY:LX/2Xw;
+
+    .line 311
+    .line 312
+    if-eq v3, v2, :cond_c
+
+    .line 313
+    .line 314
+    sget-object v3, LX/53h;->LOCATION_UNAVAILABLE:LX/53h;
+
+    .line 315
+    .line 316
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    .line 317
+    .line 318
+    .line 319
+    move-result-object v2
+
+    .line 320
+    invoke-static {v0, v2}, LX/53M;->A01(LX/53M;Ljava/lang/String;)V
+
+    .line 321
+    .line 322
+    .line 323
+    new-instance v4, LX/53i;
+
+    .line 324
+    .line 325
+    invoke-direct {v4, v3}, LX/53i;-><init>(LX/53h;)V
+
+    .line 326
+    .line 327
+    .line 328
+    iget-object v3, v0, LX/53M;->A05:Ljava/util/concurrent/ExecutorService;
+
+    .line 329
+    .line 330
+    new-instance v2, LX/53f;
+
+    .line 331
+    .line 332
+    invoke-direct {v2, v4, v0}, LX/53f;-><init>(LX/53i;LX/53M;)V
+
+    .line 333
+    .line 334
+    .line 335
+    invoke-interface {v3, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 336
+    .line 337
+    .line 338
+    const-string v3, "end_reason"
+
+    .line 339
+    .line 340
+    const-string v2, "location unavailable"
+
+    .line 341
+    .line 342
+    invoke-virtual {v0, v3, v2}, LX/53M;->A07(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 343
+    .line 344
+    .line 345
+    goto :goto_0
+
+    .line 346
+    :cond_c
+    iget-object v7, v0, LX/53M;->A0D:LX/2sj;
+
+    .line 347
+    .line 348
+    if-eqz v7, :cond_d
+
+    .line 349
+    .line 350
+    monitor-enter v7
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    .line 351
+    :try_start_2
+    iget-object v6, v7, LX/2sj;->A00:LX/302;
+
+    .line 352
+    .line 353
+    const-wide v2, 0x81003700210322L
+
+    .line 354
+    .line 355
+    .line 356
+    .line 357
+    .line 358
+    invoke-virtual {v6, v2, v3}, LX/302;->AB9(J)Z
+
+    .line 359
+    .line 360
+    .line 361
+    move-result v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 362
+    :try_start_3
+    monitor-exit v7
+
+    .line 363
+    if-eqz v2, :cond_d
+
+    .line 364
+    .line 365
+    const-string v3, "end_reason"
+
+    .line 366
+    .line 367
+    const-string v2, "user or caller in ls holdout"
+
+    .line 368
+    .line 369
+    invoke-virtual {v0, v3, v2}, LX/53M;->A07(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 370
+    .line 371
+    .line 372
+    goto/16 :goto_0
+
+    .line 373
+    .line 374
+    :cond_d
+    if-eqz v4, :cond_e
+
+    .line 375
+    .line 376
+    invoke-static {}, LX/0Jv;->A00()Z
+
+    .line 377
+    .line 378
+    .line 379
+    move-result v2
+
+    .line 380
+    if-nez v2, :cond_e
+
+    .line 381
+    .line 382
+    if-eqz v7, :cond_e
+
+    .line 383
+    .line 384
+    invoke-virtual {v7, v14}, LX/2sj;->A00(Ljava/lang/String;)Z
+
+    .line 385
+    .line 386
+    .line 387
+    move-result v2
+
+    .line 388
+    if-eqz v2, :cond_e
+
+    .line 389
+    .line 390
+    const-string v3, "end_reason"
+
+    .line 391
+    .line 392
+    const-string v2, "app in  background and caller in background holdout"
+
+    .line 393
+    .line 394
+    invoke-virtual {v0, v3, v2}, LX/53M;->A07(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 395
+    .line 396
+    .line 397
+    goto/16 :goto_0
+
+    .line 398
+    .line 399
+    :cond_e
+    iget-object v2, v0, LX/53M;->A02:LX/53Z;
+
+    .line 400
+    .line 401
+    iget-object v2, v2, LX/53Z;->A04:Ljava/lang/Long;
+
+    .line 402
+    .line 403
+    if-eqz v2, :cond_f
+
+    .line 404
+    .line 405
+    iget-object v9, v0, LX/53M;->A0F:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 406
+    .line 407
+    new-instance v7, LX/53V;
+
+    .line 408
+    .line 409
+    invoke-direct {v7, v0}, LX/53V;-><init>(LX/53M;)V
+
+    .line 410
+    .line 411
+    .line 412
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    .line 413
+    .line 414
+    .line 415
+    move-result-wide v2
+
+    .line 416
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 417
+    .line 418
+    invoke-interface {v9, v7, v2, v3, v6}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    .line 419
+    .line 420
+    .line 421
+    move-result-object v2
+
+    .line 422
+    iput-object v2, v0, LX/53M;->A06:Ljava/util/concurrent/ScheduledFuture;
+
+    .line 423
+    .line 424
+    :cond_f
+    invoke-virtual {v0, v5}, LX/53M;->A06(LX/53Z;)V
+
+    .line 425
+    .line 426
+    .line 427
+    if-eqz v4, :cond_11
+
+    .line 428
+    .line 429
+    iget-object v5, v0, LX/53M;->A0F:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 430
+    .line 431
+    iget-object v3, v4, LX/53T;->A03:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 432
+    .line 433
+    invoke-static {v0}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+
+    .line 434
+    .line 435
+    .line 436
+    move-result-object v2
+
+    .line 437
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 438
+    .line 439
+    .line 440
+    monitor-enter v4
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 284
+    .line 441
     :try_start_4
-    iput-object v6, v5, LX/5AO;->A00:Ljava/util/concurrent/ScheduledExecutorService;
+    iput-object v5, v4, LX/53T;->A00:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 285
-    .line 286
+    .line 442
+    .line 443
     invoke-virtual {v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
 
-    .line 287
-    .line 288
-    .line 289
+    .line 444
+    .line 445
+    .line 446
     move-result v2
 
-    .line 290
-    if-ne v2, v4, :cond_a
+    .line 447
+    if-ne v2, v8, :cond_10
 
-    .line 291
-    .line 292
-    iget-object v3, v5, LX/5AO;->A01:Landroid/app/Application;
+    .line 448
+    .line 449
+    iget-object v3, v4, LX/53T;->A01:Landroid/app/Application;
 
-    .line 293
-    .line 294
-    iget-object v2, v5, LX/5AO;->A02:Lcom/facebook/location/appstate/GeoApiLocationAppStateListener$LifecycleCallback;
+    .line 450
+    .line 451
+    iget-object v2, v4, LX/53T;->A02:Lcom/facebook/location/appstate/GeoApiLocationAppStateListener$LifecycleCallback;
 
-    .line 295
-    .line 296
+    .line 452
+    .line 453
     invoke-virtual {v3, v2}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    .line 297
-    .line 298
-    .line 299
-    :cond_a
-    monitor-exit v5
+    .line 454
+    .line 455
+    .line 456
+    :cond_10
+    monitor-exit v4
 
-    .line 300
-    goto :goto_5
+    .line 457
+    goto :goto_2
 
-    .line 301
+    .line 458
     :catchall_0
     move-exception v2
 
-    .line 302
-    monitor-exit v5
+    .line 459
+    monitor-exit v4
 
-    .line 303
-    goto :goto_4
+    .line 460
+    goto :goto_1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 304
+    .line 461
     :catchall_1
     :try_start_5
     move-exception v2
 
-    .line 305
-    monitor-exit v8
+    .line 462
+    monitor-exit v7
 
-    .line 306
-    :goto_4
+    .line 463
+    :goto_1
     throw v2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 307
-    :cond_b
-    :goto_5
+    .line 464
+    :cond_11
+    :goto_2
     :try_start_6
     monitor-exit v0
 
-    .line 308
-    goto :goto_6
+    .line 465
+    goto :goto_3
     :try_end_6
     .catch Ljava/lang/IllegalStateException; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 309
+    .line 466
     :catchall_2
     move-exception v2
 
-    .line 310
+    .line 467
     :try_start_7
     throw v2
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 311
+    .line 468
     :catchall_3
     :try_start_8
     move-exception v2
 
-    .line 312
+    .line 469
     monitor-exit v0
 
-    .line 313
+    .line 470
     throw v2
     :try_end_8
     .catch Ljava/lang/IllegalStateException; {:try_start_8 .. :try_end_8} :catch_0
 
-    .line 314
+    .line 471
     :catch_0
     move-exception v3
 
-    .line 315
+    .line 472
     sget-object v2, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/implementation/msqrdplayer/MsqrdPlayerLocationServiceDataSource;->TAG:Ljava/lang/Class;
 
-    .line 316
-    .line 317
+    .line 473
+    .line 474
     const-string v0, "Failed to request location updates"
 
-    .line 318
-    .line 319
-    invoke-static {v2, v0, v3}, LX/0Jt;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 475
+    .line 476
+    invoke-static {v2, v0, v3}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 320
-    .line 321
-    .line 322
-    :goto_6
+    .line 477
+    .line 478
+    .line 479
+    :goto_3
     iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mSensorEventListener:Landroid/hardware/SensorEventListener;
 
-    .line 323
-    .line 324
-    if-nez v0, :cond_c
+    .line 480
+    .line 481
+    if-nez v0, :cond_12
 
-    .line 325
-    .line 326
+    .line 482
+    .line 483
     iget-object v3, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 327
-    .line 328
-    if-eqz v3, :cond_c
+    .line 484
+    .line 485
+    if-eqz v3, :cond_12
 
-    .line 329
-    .line 330
+    .line 486
+    .line 487
     new-instance v2, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource$2;
 
-    .line 331
-    .line 332
+    .line 488
+    .line 489
     invoke-direct {v2, v1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource$2;-><init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;)V
 
-    .line 333
-    .line 334
-    .line 335
+    .line 490
+    .line 491
+    .line 492
     iput-object v2, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mSensorEventListener:Landroid/hardware/SensorEventListener;
 
-    .line 336
-    .line 337
+    .line 493
+    .line 494
     const/16 v0, 0xb
 
-    .line 338
-    .line 339
+    .line 495
+    .line 496
     invoke-virtual {v3, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
-    .line 340
-    .line 341
-    .line 342
+    .line 497
+    .line 498
+    .line 499
     move-result-object v1
 
-    .line 343
+    .line 500
     const/4 v0, 0x3
 
-    .line 344
+    .line 501
     invoke-virtual {v3, v2, v1, v0}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 345
-    .line 346
-    .line 347
-    :cond_c
+    .line 502
+    .line 503
+    .line 504
+    :cond_12
     return-void
 .end method
 
@@ -1962,7 +2248,7 @@
     .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/5B6;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/54H;
 
     .line 1
     .line 2
@@ -1973,16 +2259,16 @@
 
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationManager:LX/5BO;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mFbLocationManager:LX/54y;
 
     .line 6
     .line 7
-    invoke-interface {v0}, LX/5BO;->Ap9()V
+    invoke-interface {v0}, LX/54y;->Ans()V
 
     .line 8
     .line 9
     .line 10
-    iput-object v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/5B6;
+    iput-object v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationListener:LX/54H;
 
     .line 11
     .line 12

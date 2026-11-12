@@ -1,21 +1,59 @@
 .class public final LX/3xz;
-.super LX/3yc;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayerLogger$3"
+
+
+# instance fields
+.field public final synthetic A00:LX/28V;
+
+.field public final synthetic A01:LX/3qM;
 
 
 # direct methods
-.method public constructor <init>(LX/3yt;)V
-    .locals 1
+.method public constructor <init>(LX/28V;LX/3qM;)V
+    .locals 0
 
     .line 0
-    sget-object v0, LX/3Qq;->A00:LX/3Qq;
+    iput-object p2, p0, LX/3xz;->A01:LX/3qM;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, LX/3yc;-><init>(LX/3yt;Ljava/util/concurrent/Executor;)V
+    iput-object p1, p0, LX/3xz;->A00:LX/28V;
 
     .line 3
     .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3xz;->A01:LX/3qM;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/3xz;->A00:LX/28V;
+
+    .line 3
+    .line 4
+    iput-object v0, v1, LX/3qM;->A0F:LX/28V;
+
+    .line 5
+    .line 6
     return-void
 .end method

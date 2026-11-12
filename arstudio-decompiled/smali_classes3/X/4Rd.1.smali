@@ -1,281 +1,266 @@
-.class public final LX/4Rd;
+.class public abstract LX/4Rd;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/02m;
+
+# static fields
+.field public static final A00:Ljava/lang/ThreadLocal;
+
+.field public static final A01:[I
+
+.field public static final A02:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/435;->A0B()Ljava/lang/ThreadLocal;
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    move-result-object v0
 
-
-# virtual methods
-.method public final Abk(Landroid/view/View;LX/01z;)LX/01z;
-    .locals 11
-
-    .line 0
-    iget-object v2, p2, LX/01z;->A00:LX/01y;
-
-    .line 1
-    .line 2
-    invoke-interface {v2}, LX/01y;->AMK()I
-
-    .line 3
     .line 4
-    .line 5
-    move-result v1
+    sput-object v0, LX/4Rd;->A00:Ljava/lang/ThreadLocal;
 
+    .line 5
     .line 6
-    const/4 v0, 0x2
+    const/4 v3, 0x1
 
     .line 7
-    if-eq v1, v0, :cond_5
+    new-array v2, v3, [I
 
     .line 8
     .line 9
-    invoke-interface {v2}, LX/01y;->ADJ()Landroid/content/ClipData;
+    const/4 v1, 0x0
 
     .line 10
+    const v0, -0x101009e
+
     .line 11
     .line 12
-    move-result-object v8
-
     .line 13
-    invoke-interface {v2}, LX/01y;->AFr()I
+    aput v0, v2, v1
 
     .line 14
     .line 15
-    .line 16
-    move-result v10
+    sput-object v2, LX/4Rd;->A02:[I
 
+    .line 16
     .line 17
-    check-cast p1, Landroid/widget/TextView;
+    new-array v0, v3, [I
 
     .line 18
     .line 19
-    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    sput-object v0, LX/4Rd;->A01:[I
+
+    .line 20
+    .line 21
+    return-void
+.end method
+
+.method public static A00(Landroid/content/Context;I)I
+    .locals 4
+
+    .line 0
+    sget-object v2, LX/4Rd;->A01:[I
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    aput p1, v2, v1
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    invoke-virtual {p0, v0, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v2
+
+    .line 10
+    :try_start_0
+    invoke-static {p0, v2, v1}, LX/4RK;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 14
+    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 15
+    .line 16
+    .line 17
+    if-eqz v1, :cond_0
+
+    .line 18
+    .line 19
+    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->isStateful()Z
 
     .line 20
     .line 21
     .line 22
-    move-result-object v7
+    move-result v0
 
     .line 23
-    check-cast v7, Landroid/text/Editable;
+    if-eqz v0, :cond_0
 
     .line 24
     .line 25
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    sget-object v0, LX/4Rd;->A02:[I
 
     .line 26
     .line 27
+    invoke-static {v1, v0}, LX/433;->A0B(Landroid/content/res/ColorStateList;[I)I
+
     .line 28
-    move-result-object v9
-
     .line 29
-    const/4 v6, 0x0
-
     .line 30
-    const/4 v2, 0x0
-
-    .line 31
-    :goto_0
-    invoke-virtual {v8}, Landroid/content/ClipData;->getItemCount()I
-
-    .line 32
-    .line 33
-    .line 34
     move-result v0
 
-    .line 35
-    if-ge v6, v0, :cond_4
+    .line 31
+    return v0
 
+    .line 32
+    :cond_0
+    sget-object v0, LX/4Rd;->A00:Ljava/lang/ThreadLocal;
+
+    .line 33
+    .line 34
+    invoke-static {v0}, LX/433;->A0P(Ljava/lang/ThreadLocal;)Landroid/util/TypedValue;
+
+    .line 35
     .line 36
     .line 37
-    invoke-virtual {v8, v6}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+    move-result-object v3
 
     .line 38
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
     .line 39
     .line 40
-    move-result-object v1
-
     .line 41
-    and-int/lit8 v0, v10, 0x1
+    move-result-object v2
 
     .line 42
-    .line 43
-    if-eqz v0, :cond_3
+    const v1, 0x1010033
 
+    .line 43
     .line 44
     .line 45
-    invoke-virtual {v1, v9}, Landroid/content/ClipData$Item;->coerceToText(Landroid/content/Context;)Ljava/lang/CharSequence;
+    const/4 v0, 0x1
 
     .line 46
+    invoke-virtual {v2, v1, v3, v0}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
     .line 47
     .line 48
-    move-result-object v5
-
     .line 49
-    instance-of v0, v5, Landroid/text/Spanned;
+    invoke-virtual {v3}, Landroid/util/TypedValue;->getFloat()F
 
     .line 50
     .line 51
-    if-eqz v0, :cond_0
-
     .line 52
+    move-result v1
+
     .line 53
-    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-static {p0, p1}, LX/4Rd;->A01(Landroid/content/Context;I)I
 
     .line 54
     .line 55
     .line 56
-    move-result-object v5
+    move-result v0
 
     .line 57
-    :cond_0
-    :goto_1
-    if-eqz v5, :cond_1
+    invoke-static {v0, v1}, LX/431;->A03(IF)I
 
     .line 58
     .line 59
-    if-nez v2, :cond_2
-
     .line 60
+    move-result v0
+
     .line 61
-    invoke-static {v7}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
+    return v0
 
     .line 62
+    :catchall_0
+    move-exception v0
+
     .line 63
+    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
+
     .line 64
-    move-result v4
-
     .line 65
-    invoke-static {v7}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
-
     .line 66
-    .line 67
-    .line 68
-    move-result v3
+    throw v0
+.end method
 
-    .line 69
-    invoke-static {v4, v3}, Ljava/lang/Math;->min(II)I
+.method public static A01(Landroid/content/Context;I)I
+    .locals 3
 
-    .line 70
-    .line 71
-    .line 72
-    move-result v0
+    .line 0
+    sget-object v1, LX/4Rd;->A01:[I
 
-    .line 73
+    .line 1
+    .line 2
     const/4 v2, 0x0
 
-    .line 74
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+    .line 3
+    aput p1, v1, v2
 
-    .line 75
-    .line 76
-    .line 77
-    move-result v1
+    .line 4
+    .line 5
+    const/4 v0, 0x0
 
-    .line 78
-    invoke-static {v4, v3}, Ljava/lang/Math;->max(II)I
+    .line 6
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    .line 79
-    .line 80
-    .line 81
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
+    .line 10
+    :try_start_0
+    invoke-virtual {v1, v2, v2}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    .line 11
+    .line 12
+    .line 13
     move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 82
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+    .line 14
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 83
-    .line 84
-    .line 85
-    move-result v0
+    .line 15
+    .line 16
+    .line 17
+    return v0
 
-    .line 86
-    invoke-static {v7, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+    .line 18
+    :catchall_0
+    move-exception v0
 
-    .line 87
-    .line 88
-    .line 89
-    invoke-interface {v7, v1, v0, v5}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+    .line 19
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 90
-    .line 91
-    .line 92
-    const/4 v2, 0x1
-
-    .line 93
-    :cond_1
-    :goto_2
-    add-int/lit8 v6, v6, 0x1
-
-    .line 94
-    .line 95
-    goto :goto_0
-
-    .line 96
-    :cond_2
-    invoke-static {v7}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
-
-    .line 97
-    .line 98
-    .line 99
-    move-result v1
-
-    .line 100
-    const-string v0, "\n"
-
-    .line 101
-    .line 102
-    invoke-interface {v7, v1, v0}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
-
-    .line 103
-    .line 104
-    .line 105
-    invoke-static {v7}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
-
-    .line 106
-    .line 107
-    .line 108
-    move-result v0
-
-    .line 109
-    invoke-interface {v7, v0, v5}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
-
-    .line 110
-    .line 111
-    .line 112
-    goto :goto_2
-
-    .line 113
-    :cond_3
-    invoke-virtual {v1, v9}, Landroid/content/ClipData$Item;->coerceToStyledText(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    .line 114
-    .line 115
-    .line 116
-    move-result-object v5
-
-    .line 117
-    goto :goto_1
-
-    .line 118
-    :cond_4
-    const/4 p2, 0x0
-
-    .line 119
-    :cond_5
-    return-object p2
+    .line 20
+    .line 21
+    .line 22
+    throw v0
 .end method

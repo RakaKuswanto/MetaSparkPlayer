@@ -4,15 +4,13 @@
 
 
 # instance fields
-.field public final mArchiveExtension:LX/0Xu;
+.field public final mArchiveExtension:LX/07O;
 
 .field public final mDexToArchiveMap:[I
 
 .field public final mFileQueues:[Ljava/util/concurrent/SynchronousQueue;
 
 .field public mNextDexIndex:I
-
-.field public final mPatchingStrategy:LX/0QT;
 
 .field public mShuttingDownFlag:Z
 
@@ -28,7 +26,7 @@
     .locals 9
 
     .line 0
-    iget-object v2, p1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->manifest:Lcom/facebook/common/dextricks/DexManifest;
+    iget-object v1, p1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->manifest:Lcom/facebook/common/dextricks/DexManifest;
 
     .line 1
     .line 2
@@ -36,249 +34,242 @@
 
     .line 3
     .line 4
-    const/4 v1, 0x0
+    invoke-direct {p0, v1, v0}, Lcom/facebook/common/dextricks/InputDexIterator;-><init>(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
 
     .line 5
-    invoke-direct {p0, v2, v1, v0}, Lcom/facebook/common/dextricks/InputDexIterator;-><init>(Lcom/facebook/common/dextricks/DexManifest;LX/0QT;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
-
     .line 6
     .line 7
-    .line 8
     iget-object v0, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mQplCollector:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
+    .line 8
     .line 9
-    .line 10
     const v3, 0x2100009
 
+    .line 10
     .line 11
     .line 12
-    .line 13
     if-eqz v0, :cond_0
 
+    .line 13
     .line 14
-    .line 15
     invoke-interface {v0, v3}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerStart(I)V
 
+    .line 15
     .line 16
     .line 17
-    .line 18
     :cond_0
-    iput-object v1, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mPatchingStrategy:LX/0QT;
+    iget-object v0, p1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->archiveExtension:LX/07O;
 
+    .line 18
     .line 19
+    iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mArchiveExtension:LX/07O;
+
     .line 20
-    iget-object v0, p1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->archiveExtension:LX/0Xu;
-
     .line 21
-    .line 22
-    iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mArchiveExtension:LX/0Xu;
-
-    .line 23
-    .line 24
     const/4 v6, 0x0
 
-    .line 25
+    .line 22
     :try_start_0
     iput-boolean v6, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mShuttingDownFlag:Z
 
-    .line 26
-    .line 27
+    .line 23
+    .line 24
     iput v6, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mNextDexIndex:I
 
-    .line 28
-    .line 29
+    .line 25
+    .line 26
     iget-object v0, p1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->dexToArchive:[I
 
-    .line 30
-    .line 31
+    .line 27
+    .line 28
     iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mDexToArchiveMap:[I
 
-    .line 32
-    .line 33
+    .line 29
+    .line 30
     iget-object v0, p1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->rawArchives:Ljava/util/ArrayList;
 
-    .line 34
-    .line 35
+    .line 31
+    .line 32
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
-    .line 36
-    .line 37
-    .line 38
+    .line 33
+    .line 34
+    .line 35
     move-result v0
 
-    .line 39
+    .line 36
     add-int/lit8 v7, v0, -0x1
 
-    .line 40
-    .line 41
+    .line 37
+    .line 38
     new-array v0, v7, [Ljava/lang/Thread;
 
-    .line 42
-    .line 43
+    .line 39
+    .line 40
     iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mThreads:[Ljava/lang/Thread;
 
-    .line 44
-    .line 45
+    .line 41
+    .line 42
     new-array v0, v7, [Ljava/util/concurrent/SynchronousQueue;
 
-    .line 46
-    .line 47
+    .line 43
+    .line 44
     iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mFileQueues:[Ljava/util/concurrent/SynchronousQueue;
 
-    .line 48
-    .line 49
+    .line 45
+    .line 46
     const/4 v8, 0x0
 
-    .line 50
+    .line 47
     :goto_0
     if-ge v8, v7, :cond_1
 
-    .line 51
-    .line 52
+    .line 48
+    .line 49
     iget-object v1, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mFileQueues:[Ljava/util/concurrent/SynchronousQueue;
 
-    .line 53
-    .line 54
+    .line 50
+    .line 51
     new-instance v0, Ljava/util/concurrent/SynchronousQueue;
 
+    .line 52
+    .line 53
+    invoke-direct {v0}, Ljava/util/concurrent/SynchronousQueue;-><init>()V
+
+    .line 54
     .line 55
     .line 56
-    invoke-direct {v0}, Ljava/util/concurrent/SynchronousQueue;-><init>()V
+    aput-object v0, v1, v8
 
     .line 57
     .line 58
-    .line 59
-    aput-object v0, v1, v8
-
-    .line 60
-    .line 61
     iget-object v5, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mThreads:[Ljava/lang/Thread;
 
-    .line 62
-    .line 63
+    .line 59
+    .line 60
     iget-object v0, p1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->rawArchives:Ljava/util/ArrayList;
 
-    .line 64
-    .line 65
+    .line 61
+    .line 62
     add-int/lit8 v4, v8, 0x1
 
-    .line 66
-    .line 67
+    .line 63
+    .line 64
     invoke-virtual {v0, v4}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
-    .line 68
-    .line 69
-    .line 70
+    .line 65
+    .line 66
+    .line 67
     move-result-object v2
 
-    .line 71
+    .line 68
     check-cast v2, Ljava/io/InputStream;
 
-    .line 72
-    .line 73
+    .line 69
+    .line 70
     iget-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mFileQueues:[Ljava/util/concurrent/SynchronousQueue;
 
-    .line 74
-    .line 75
+    .line 71
+    .line 72
     aget-object v0, v0, v8
 
-    .line 76
-    .line 77
+    .line 73
+    .line 74
     new-instance v1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$UnpackingRunnable;
 
+    .line 75
+    .line 76
+    invoke-direct {v1, p0, v2, v0}, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$UnpackingRunnable;-><init>(Lcom/facebook/common/dextricks/SuperpackInputDexIterator;Ljava/io/InputStream;Ljava/util/concurrent/SynchronousQueue;)V
+
+    .line 77
     .line 78
     .line 79
-    invoke-direct {v1, p0, v2, v0}, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$UnpackingRunnable;-><init>(Lcom/facebook/common/dextricks/SuperpackInputDexIterator;Ljava/io/InputStream;Ljava/util/concurrent/SynchronousQueue;)V
+    new-instance v0, Ljava/lang/Thread;
 
     .line 80
     .line 81
-    .line 82
-    new-instance v0, Ljava/lang/Thread;
+    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
+    .line 82
     .line 83
     .line 84
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    aput-object v0, v5, v8
 
     .line 85
     .line 86
-    .line 87
-    aput-object v0, v5, v8
-
-    .line 88
-    .line 89
     iget-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mThreads:[Ljava/lang/Thread;
 
-    .line 90
-    .line 91
+    .line 87
+    .line 88
     aget-object v0, v0, v8
 
-    .line 92
-    .line 93
+    .line 89
+    .line 90
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 94
-    .line 95
-    .line 96
+    .line 91
+    .line 92
+    .line 93
     move v8, v4
 
-    .line 97
+    .line 94
     goto :goto_0
 
-    .line 98
+    .line 95
     :cond_1
     iget-object v0, p1, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->rawArchives:Ljava/util/ArrayList;
 
-    .line 99
-    .line 100
+    .line 96
+    .line 97
     invoke-virtual {v0, v6}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
-    .line 101
-    .line 102
-    .line 103
+    .line 98
+    .line 99
+    .line 100
     move-result-object v0
 
-    .line 104
+    .line 101
     check-cast v0, Ljava/io/InputStream;
 
-    .line 105
-    .line 106
+    .line 102
+    .line 103
     invoke-direct {p0, v0}, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->getSuperpackArchive(Ljava/io/InputStream;)Lcom/facebook/superpack/SuperpackArchive;
 
-    .line 107
-    .line 108
-    .line 109
+    .line 104
+    .line 105
+    .line 106
     move-result-object v0
 
-    .line 110
+    .line 107
     iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mSuperpackArchive:Lcom/facebook/superpack/SuperpackArchive;
 
-    .line 111
-    .line 112
+    .line 108
+    .line 109
     return-void
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 113
+    .line 110
     :catchall_0
     move-exception v2
 
-    .line 114
+    .line 111
     iget-object v1, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mQplCollector:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
-    .line 115
-    .line 116
+    .line 112
+    .line 113
     if-eqz v1, :cond_2
+
+    .line 114
+    .line 115
+    const/4 v0, 0x2
+
+    .line 116
+    invoke-interface {v1, v3, v0}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
 
     .line 117
     .line 118
-    const/4 v0, 0x2
-
     .line 119
-    invoke-interface {v1, v3, v0}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
-
-    .line 120
-    .line 121
-    .line 122
     :cond_2
     throw v2
 .end method
@@ -336,13 +327,6 @@
     return p0
 .end method
 
-.method private applyPatch(Lcom/facebook/superpack/SuperpackFile;)Lcom/facebook/superpack/SuperpackFile;
-    .locals 0
-
-    .line 0
-    return-object p1
-.end method
-
 .method public static builder(Lcom/facebook/common/dextricks/DexManifest;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;
     .locals 1
 
@@ -367,11 +351,11 @@
 
     .line 1
     .line 2
-    iget-object p0, v0, Lcom/facebook/common/dextricks/DexManifest;->superpackExtension:LX/0Xu;
+    iget-object p0, v0, Lcom/facebook/common/dextricks/DexManifest;->superpackExtension:LX/07O;
 
     .line 3
     .line 4
-    sget-object v0, LX/0Xu;->NONE:LX/0Xu;
+    sget-object v0, LX/07O;->NONE:LX/07O;
 
     .line 5
     .line 6
@@ -383,7 +367,7 @@
 
     .line 9
     .line 10
-    sget-object v0, LX/0Xu;->OB:LX/0Xu;
+    sget-object v0, LX/07O;->OB:LX/07O;
 
     .line 11
     .line 12
@@ -400,7 +384,7 @@
 
     .line 17
     :cond_1
-    sget-object v0, LX/0Xu;->XZ:LX/0Xu;
+    sget-object v0, LX/07O;->XZ:LX/07O;
 
     .line 18
     .line 19
@@ -408,7 +392,7 @@
 
     .line 20
     .line 21
-    sget-object v0, LX/0Xu;->ZST:LX/0Xu;
+    sget-object v0, LX/07O;->ZST:LX/07O;
 
     .line 22
     .line 23
@@ -424,7 +408,7 @@
 
     .line 28
     :cond_2
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 29
     .line 30
@@ -436,7 +420,7 @@
 
     .line 33
     .line 34
-    invoke-static {p0, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 35
     .line 36
@@ -444,7 +428,7 @@
     move-result-object v0
 
     .line 38
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 39
     .line 40
@@ -557,11 +541,11 @@
 
     .line 11
     :try_start_0
-    iget-object v4, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mArchiveExtension:LX/0Xu;
+    iget-object v4, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator;->mArchiveExtension:LX/07O;
 
     .line 12
     .line 13
-    sget-object v0, LX/0Xu;->NONE:LX/0Xu;
+    sget-object v0, LX/07O;->NONE:LX/07O;
 
     .line 14
     .line 15
@@ -607,178 +591,175 @@
 
     .line 32
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 33
     :try_start_3
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 34
     .line 35
     .line 36
-    :catchall_1
-    :try_start_4
-    throw v0
+    goto :goto_1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 37
-    :cond_1
-    sget-object v0, LX/0Xu;->OB:LX/0Xu;
+    :catchall_1
+    move-exception v0
 
     .line 38
-    .line 39
-    if-ne v4, v0, :cond_2
+    :try_start_4
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
+    .line 39
     .line 40
     .line 41
-    const-string v0, "spo"
+    goto :goto_1
 
     .line 42
-    .line 43
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_1
+    sget-object v0, LX/07O;->OB:LX/07O;
 
+    .line 43
     .line 44
+    if-ne v4, v0, :cond_2
+
     .line 45
     .line 46
-    invoke-static {p1, v0}, LX/001;->A06(Ljava/io/InputStream;Ljava/lang/String;)Lcom/facebook/superpack/SuperpackArchive;
+    const-string v0, "spo"
 
     .line 47
     .line 48
+    invoke-static {p1, v0}, LX/001;->A06(Ljava/io/InputStream;Ljava/lang/String;)Lcom/facebook/superpack/SuperpackArchive;
+
     .line 49
+    .line 50
+    .line 51
     move-result-object v1
 
-    .line 50
+    .line 52
     goto :goto_0
 
-    .line 51
-    :cond_2
-    sget-object v0, LX/0Xu;->XZ:LX/0Xu;
-
-    .line 52
     .line 53
-    if-ne v4, v0, :cond_3
+    :cond_2
+    sget-object v0, LX/07O;->XZ:LX/07O;
 
     .line 54
     .line 55
-    const-string v0, "xz"
+    if-ne v4, v0, :cond_3
 
     .line 56
     .line 57
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v0, "xz"
 
     .line 58
     .line 59
-    .line 60
     invoke-static {p1, v0}, LX/001;->A06(Ljava/io/InputStream;Ljava/lang/String;)Lcom/facebook/superpack/SuperpackArchive;
 
+    .line 60
     .line 61
     .line 62
-    .line 63
     move-result-object v1
 
-    .line 64
+    .line 63
     goto :goto_0
 
-    .line 65
+    .line 64
     :cond_3
-    sget-object v0, LX/0Xu;->ZST:LX/0Xu;
+    sget-object v0, LX/07O;->ZST:LX/07O;
 
+    .line 65
     .line 66
-    .line 67
     if-ne v4, v0, :cond_5
 
+    .line 67
     .line 68
-    .line 69
     const-string v0, "zst"
 
+    .line 69
     .line 70
-    .line 71
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 72
-    .line 73
-    .line 74
     invoke-static {p1, v0}, LX/001;->A06(Ljava/io/InputStream;Ljava/lang/String;)Lcom/facebook/superpack/SuperpackArchive;
 
-    .line 75
-    .line 76
-    .line 77
+    .line 71
+    .line 72
+    .line 73
     move-result-object v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 78
+    .line 74
     :goto_0
     iget-object v0, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mQplCollector:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
-    .line 79
-    .line 80
+    .line 75
+    .line 76
     if-eqz v0, :cond_4
 
-    .line 81
-    .line 82
+    .line 77
+    .line 78
     invoke-interface {v0, v3, v2}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
+
+    .line 79
+    .line 80
+    .line 81
+    :cond_4
+    return-object v1
+
+    .line 82
+    :cond_5
+    :try_start_5
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 83
     .line 84
     .line 85
-    :cond_4
-    return-object v1
+    move-result-object v1
 
     .line 86
-    :cond_5
-    :try_start_5
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    const-string v0, "Unknown Superpack Archive Extension "
 
     .line 87
     .line 88
+    invoke-static {v4, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 89
-    move-result-object v1
-
     .line 90
-    const-string v0, "Unknown Superpack Archive Extension "
-
     .line 91
+    move-result-object v0
+
     .line 92
-    invoke-static {v4, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 93
     .line 94
     .line 95
-    move-result-object v0
+    move-result-object v1
 
     .line 96
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 97
-    .line 98
-    .line 99
-    move-result-object v0
-
-    .line 100
-    throw v0
+    :goto_1
+    throw v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 101
+    .line 97
     :catchall_2
     move-exception v1
 
-    .line 102
+    .line 98
     iget-object v0, p0, Lcom/facebook/common/dextricks/InputDexIterator;->mQplCollector:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
+
+    .line 99
+    .line 100
+    if-eqz v0, :cond_6
+
+    .line 101
+    .line 102
+    invoke-interface {v0, v3, v2}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
 
     .line 103
     .line 104
-    if-eqz v0, :cond_6
-
     .line 105
-    .line 106
-    invoke-interface {v0, v3, v2}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
-
-    .line 107
-    .line 108
-    .line 109
     :cond_6
     throw v1
 .end method
@@ -889,7 +870,7 @@
     move-exception v0
 
     .line 33
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 34
     .line 35
@@ -1038,7 +1019,7 @@
 
     .line 45
     :try_start_1
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 46
     .line 47
@@ -1077,7 +1058,7 @@
 
     .line 60
     .line 61
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 62
     .line 63
@@ -1243,7 +1224,7 @@
     monitor-exit v6
 
     .line 69
-    invoke-static {v5, v4, v3, v0}, LX/00I;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v4, v3, v0}, LX/004;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 70
     .line 71
@@ -1251,7 +1232,7 @@
     move-result-object v0
 
     .line 73
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 74
     .line 75

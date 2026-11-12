@@ -3,37 +3,29 @@
 .source ""
 
 
-# static fields
-.field public static final A00:[I
+# instance fields
+.field public A00:LX/4hi;
+
+.field public A01:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(LX/4hi;Z)V
+    .locals 0
 
     .line 0
-    invoke-static {}, LX/4BF;->A1Q()[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v2
+    iput-object p1, p0, LX/4kt;->A00:LX/4hi;
 
     .line 4
-    const/4 v1, 0x0
-
     .line 5
-    const/high16 v0, -0x1000000
+    iput-boolean p2, p0, LX/4kt;->A01:Z
 
     .line 6
     .line 7
-    aput v0, v2, v1
-
-    .line 8
-    .line 9
-    sput-object v2, LX/4kt;->A00:[I
-
-    .line 10
-    .line 11
     return-void
 .end method

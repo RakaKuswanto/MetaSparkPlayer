@@ -21,7 +21,7 @@
 
 
 # virtual methods
-.method public final A7o(Ljava/lang/String;I)Landroid/os/HandlerThread;
+.method public final A67(Ljava/lang/String;I)Landroid/os/HandlerThread;
     .locals 1
 
     .line 0

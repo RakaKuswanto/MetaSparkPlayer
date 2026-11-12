@@ -1,203 +1,93 @@
-.class public final LX/1gH;
-.super LX/1f7;
+.class public abstract LX/1gH;
+.super Ljava/lang/Object;
 .source ""
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "LX/1f7<",
-        "TE;>;"
-    }
-.end annotation
-
-
-# instance fields
-.field public final synthetic A00:LX/1g6;
+# static fields
+.field public static final A00:Ljava/util/Comparator;
 
 
 # direct methods
-.method public constructor <init>(LX/1g6;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/1gH;->A00:LX/1g6;
+    const/4 v1, 0x6
 
     .line 1
-    .line 2
-    invoke-direct {p0}, LX/1f7;-><init>()V
+    new-instance v0, LX/0YO;
 
+    .line 2
     .line 3
+    invoke-direct {v0, v1}, LX/0YO;-><init>(I)V
+
     .line 4
     .line 5
+    .line 6
+    sput-object v0, LX/1gH;->A00:Ljava/util/Comparator;
+
+    .line 7
+    .line 8
     return-void
 .end method
 
-
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public static A00()Lcom/facebook/graphql/model/GraphQLTextWithEntities;
+    .locals 5
 
     .line 0
-    iget-object v2, p0, LX/1gH;->A00:LX/1g6;
+    const-string v4, ""
 
     .line 1
     .line 2
-    instance-of v0, v2, Lcom/google/common/collect/TreeMultiset;
+    const/4 v0, 0x0
 
     .line 3
-    .line 4
-    if-eqz v0, :cond_0
+    const v3, -0x24e276fc
 
+    .line 4
     .line 5
     .line 6
-    check-cast v2, Lcom/google/common/collect/TreeMultiset;
+    invoke-static {v0, v3}, LX/1fe;->A0O(Lcom/facebook/graphservice/tree/TreeJNI;I)LX/1fe;
 
     .line 7
     .line 8
-    const/4 v1, 0x1
-
     .line 9
-    new-instance v0, LX/1Um;
+    move-result-object v2
 
     .line 10
-    .line 11
-    invoke-direct {v0, v2, v1}, LX/1Um;-><init>(Lcom/google/common/collect/TreeMultiset;I)V
-
-    .line 12
-    .line 13
-    .line 14
-    return-object v0
-
-    .line 15
-    :cond_0
-    check-cast v2, Lcom/google/common/collect/AbstractMapBasedMultiset;
-
-    .line 16
-    .line 17
-    new-instance v0, LX/1g3;
-
-    .line 18
-    .line 19
-    invoke-direct {v0, v2}, LX/1g3;-><init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
-
-    .line 20
-    .line 21
-    .line 22
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 8
-
-    .line 0
-    iget-object v7, p0, LX/1gH;->A00:LX/1g6;
-
-    .line 1
-    .line 2
-    instance-of v0, v7, Lcom/google/common/collect/TreeMultiset;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_2
-
-    .line 5
-    .line 6
-    check-cast v7, Lcom/google/common/collect/TreeMultiset;
-
-    .line 7
-    .line 8
-    sget-object v6, Lcom/google/common/collect/TreeMultiset$Aggregate;->DISTINCT:Lcom/google/common/collect/TreeMultiset$Aggregate;
-
-    .line 9
-    .line 10
-    iget-object v0, v7, Lcom/google/common/collect/TreeMultiset;->A02:LX/1gW;
+    const v1, 0x36452d
 
     .line 11
     .line 12
-    iget-object v5, v0, LX/1gW;->A00:Ljava/lang/Object;
-
     .line 13
+    iget-object v0, v2, LX/1g1;->A00:Landroid/util/SparseArray;
+
     .line 14
-    check-cast v5, LX/1gR;
-
     .line 15
-    .line 16
-    invoke-virtual {v6, v5}, Lcom/google/common/collect/TreeMultiset$Aggregate;->treeAggregate(LX/1gR;)J
+    invoke-virtual {v0, v1, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 16
     .line 17
     .line 18
-    .line 19
-    move-result-wide v3
+    const-class v1, Lcom/facebook/graphql/model/GraphQLTextWithEntities;
 
+    .line 19
     .line 20
-    iget-object v2, v7, Lcom/google/common/collect/TreeMultiset;->A00:Lcom/google/common/collect/GeneralRange;
+    const-string v0, "TextWithEntities"
 
     .line 21
     .line 22
-    iget-boolean v0, v2, Lcom/google/common/collect/GeneralRange;->hasLowerBound:Z
+    invoke-virtual {v2, v1, v0, v3}, LX/1g1;->A29(Ljava/lang/Class;Ljava/lang/String;I)Lcom/facebook/graphservice/interfaces/Tree;
 
     .line 23
     .line 24
-    if-eqz v0, :cond_0
-
     .line 25
+    move-result-object v0
+
     .line 26
-    invoke-static {v6, v5, v7}, Lcom/google/common/collect/TreeMultiset;->A01(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
+    check-cast v0, Lcom/facebook/graphql/model/GraphQLTextWithEntities;
 
     .line 27
     .line 28
-    .line 29
-    move-result-wide v0
-
-    .line 30
-    sub-long/2addr v3, v0
-
-    .line 31
-    :cond_0
-    iget-boolean v0, v2, Lcom/google/common/collect/GeneralRange;->hasUpperBound:Z
-
-    .line 32
-    .line 33
-    if-eqz v0, :cond_1
-
-    .line 34
-    .line 35
-    invoke-static {v6, v5, v7}, Lcom/google/common/collect/TreeMultiset;->A00(Lcom/google/common/collect/TreeMultiset$Aggregate;LX/1gR;Lcom/google/common/collect/TreeMultiset;)J
-
-    .line 36
-    .line 37
-    .line 38
-    move-result-wide v0
-
-    .line 39
-    sub-long/2addr v3, v0
-
-    .line 40
-    :cond_1
-    invoke-static {v3, v4}, LX/1e1;->A00(J)I
-
-    .line 41
-    .line 42
-    .line 43
-    move-result v0
-
-    .line 44
-    return v0
-
-    .line 45
-    :cond_2
-    check-cast v7, Lcom/google/common/collect/AbstractMapBasedMultiset;
-
-    .line 46
-    .line 47
-    iget-object v0, v7, Lcom/google/common/collect/AbstractMapBasedMultiset;->A01:LX/1g5;
-
-    .line 48
-    .line 49
-    iget v0, v0, LX/1g5;->A02:I
-
-    .line 50
-    .line 51
-    return v0
+    return-object v0
 .end method

@@ -1,182 +1,86 @@
 .class public final LX/4ix;
-.super Ljava/lang/Object;
+.super LX/4vQ;
 .source ""
 
+# interfaces
+.implements LX/0GZ;
 
-# static fields
-.field public static final A00:Landroid/graphics/Typeface;
 
-.field public static final A01:Landroid/graphics/Typeface;
+# instance fields
+.field public final synthetic $cachedValue:Ljava/lang/Object;
 
-.field public static final A02:Landroid/text/Layout$Alignment;
+.field public final synthetic $cachedValueInputs:Ljava/lang/Object;
 
-.field public static final A03:Landroid/text/Layout$Alignment;
+.field public final synthetic $globalKey:Ljava/lang/String;
+
+.field public final synthetic $index:I
+
+.field public final synthetic $isLayoutState:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;IZ)V
     .locals 1
 
-    .line 0
-    sget-object v0, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
+    iput-object p3, p0, LX/4ix;->$globalKey:Ljava/lang/String;
 
-    .line 1
-    .line 2
-    sput-object v0, LX/4ix;->A01:Landroid/graphics/Typeface;
+    iput p4, p0, LX/4ix;->$index:I
 
-    .line 3
-    .line 4
-    sput-object v0, LX/4ix;->A00:Landroid/graphics/Typeface;
+    iput-object p1, p0, LX/4ix;->$cachedValueInputs:Ljava/lang/Object;
 
-    .line 5
-    .line 6
-    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+    iput-object p2, p0, LX/4ix;->$cachedValue:Ljava/lang/Object;
 
-    .line 7
-    .line 8
-    sput-object v0, LX/4ix;->A03:Landroid/text/Layout$Alignment;
+    iput-boolean p5, p0, LX/4ix;->$isLayoutState:Z
 
-    .line 9
-    .line 10
-    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
+    const/4 v0, 0x1
 
-    .line 11
-    .line 12
-    sput-object v0, LX/4ix;->A02:Landroid/text/Layout$Alignment;
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
 
-    .line 13
-    .line 14
     return-void
 .end method
 
-.method public static A00(Landroid/content/res/ColorStateList;Landroid/graphics/Typeface;Landroid/text/Layout$Alignment;LX/4mm;Ljava/lang/CharSequence;II)LX/4mg;
-    .locals 9
+
+# virtual methods
+.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
     .line 0
-    const/4 v2, 0x1
+    invoke-static {p1}, LX/4vQ;->A04(Ljava/lang/Object;)LX/4iL;
 
     .line 1
-    const-class v5, LX/4iT;
-
     .line 2
     .line 3
-    sget-object v4, LX/4iI;->REBIND:LX/4iI;
+    move-result-object v0
 
     .line 4
+    iget-object v3, p0, LX/4ix;->$globalKey:Ljava/lang/String;
+
     .line 5
-    const-string v6, "Button"
-
     .line 6
-    .line 7
-    const v8, 0x519c7c49
+    iget v4, p0, LX/4ix;->$index:I
 
+    .line 7
     .line 8
+    iget-object v1, p0, LX/4ix;->$cachedValueInputs:Ljava/lang/Object;
+
     .line 9
     .line 10
-    const/4 v7, 0x0
+    iget-object v2, p0, LX/4ix;->$cachedValue:Ljava/lang/Object;
 
     .line 11
-    move-object v3, p3
-
     .line 12
-    invoke-static/range {v3 .. v8}, LX/4mg;->A0D(LX/4mm;LX/4iI;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;I)LX/4nC;
+    iget-boolean v5, p0, LX/4ix;->$isLayoutState:Z
 
     .line 13
     .line 14
+    invoke-interface/range {v0 .. v5}, LX/4iL;->AfS(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;IZ)V
+
     .line 15
-    move-result-object v1
-
     .line 16
-    if-nez p4, :cond_0
-
     .line 17
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
+
     .line 18
-    const-string p4, ""
-
     .line 19
-    .line 20
-    :cond_0
-    new-instance v0, LX/4k0;
-
-    .line 21
-    .line 22
-    invoke-direct {v0}, LX/4k0;-><init>()V
-
-    .line 23
-    .line 24
-    .line 25
-    iput-object p4, v0, LX/4k0;->A06:Ljava/lang/CharSequence;
-
-    .line 26
-    .line 27
-    iput p5, v0, LX/4k0;->A02:I
-
-    .line 28
-    .line 29
-    iput v2, v0, LX/4k0;->A01:I
-
-    .line 30
-    .line 31
-    iput-object p1, v0, LX/4k0;->A04:Landroid/graphics/Typeface;
-
-    .line 32
-    .line 33
-    iput-object p2, v0, LX/4k0;->A05:Landroid/text/Layout$Alignment;
-
-    .line 34
-    .line 35
-    iput-object p0, v0, LX/4k0;->A03:Landroid/content/res/ColorStateList;
-
-    .line 36
-    .line 37
-    iput p6, v0, LX/4k0;->A00:I
-
-    .line 38
-    .line 39
-    invoke-virtual {v1, v0}, LX/4nC;->A00(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v1
-
-    .line 43
-    check-cast v1, LX/4id;
-
-    .line 44
-    .line 45
-    if-nez v1, :cond_1
-
-    .line 46
-    .line 47
-    const/4 v0, 0x0
-
-    .line 48
-    return-object v0
-
-    .line 49
-    :cond_1
-    invoke-virtual {v1}, LX/4id;->A05()V
-
-    .line 50
-    .line 51
-    .line 52
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    .line 53
-    .line 54
-    invoke-virtual {v1, v0}, LX/4id;->A0A(F)V
-
-    .line 55
-    .line 56
-    .line 57
-    invoke-virtual {v1}, LX/4id;->A04()LX/4mg;
-
-    .line 58
-    .line 59
-    .line 60
-    move-result-object v0
-
-    .line 61
     return-object v0
 .end method

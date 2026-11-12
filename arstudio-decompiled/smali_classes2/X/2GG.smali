@@ -1,37 +1,17 @@
-.class public final LX/2GG;
-.super LX/2F0;
+.class public final LX/2Gg;
+.super LX/2Gv;
 .source ""
 
 
-# static fields
-.field public static final serialVersionUID:J = 0x1L
-
-
-# instance fields
-.field public final _ctor:Ljava/lang/reflect/Constructor;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/reflect/Constructor;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-virtual {p1}, Ljava/lang/reflect/Constructor;->getDeclaringClass()Ljava/lang/Class;
+    invoke-direct {p0}, LX/2Gv;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-direct {p0, v0}, LX/2F0;-><init>(Ljava/lang/Class;)V
-
-    .line 5
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/2GG;->_ctor:Ljava/lang/reflect/Constructor;
-
-    .line 8
-    .line 9
     return-void
 .end method

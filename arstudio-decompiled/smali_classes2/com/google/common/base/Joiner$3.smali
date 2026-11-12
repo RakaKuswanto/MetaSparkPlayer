@@ -24,6 +24,18 @@
 # direct methods
 .method public constructor <init>([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "val$rest",
+            "val$first",
+            "val$second"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/base/Joiner$3;->val$rest:[Ljava/lang/Object;
@@ -50,6 +62,14 @@
 # virtual methods
 .method public get(I)Ljava/lang/Object;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
     if-eqz p1, :cond_1

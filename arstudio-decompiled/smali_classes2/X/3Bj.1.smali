@@ -1,112 +1,173 @@
-.class public final enum LX/3Bj;
-.super Ljava/lang/Enum;
+.class public final LX/3Bj;
+.super LX/3BL;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/3Bj;
-
-.field public static final enum APP_UPGRADE:LX/3Bj;
-
-.field public static final enum STABLE_SPECIFIER:LX/3Bj;
-
-
 # instance fields
-.field public mIntValue:I
+.field public final A00:I
+
+.field public final A01:LX/3Bu;
+
+.field public final A02:Ljava/io/File;
+
+.field public final A03:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(LX/3BS;LX/3Bu;LX/2qz;LX/0Ib;Ljava/io/File;IIII)V
+    .locals 8
 
     .line 0
-    const-string v0, "APP_UPGRADE"
+    move-object v1, p0
 
     .line 1
+    move-object v2, p1
+
     .line 2
-    const/4 v5, 0x0
+    move-object v3, p3
 
     .line 3
-    const/4 v4, 0x1
+    move-object v4, p4
 
     .line 4
-    new-instance v3, LX/3Bj;
+    move v5, p6
 
     .line 5
+    move v6, p7
+
     .line 6
-    invoke-direct {v3, v0, v5, v4}, LX/3Bj;-><init>(Ljava/lang/String;II)V
+    move/from16 v7, p8
 
     .line 7
     .line 8
-    .line 9
-    sput-object v3, LX/3Bj;->APP_UPGRADE:LX/3Bj;
+    invoke-direct/range {v1 .. v7}, LX/3BL;-><init>(LX/3BS;LX/2qz;LX/0Ib;III)V
 
+    .line 9
     .line 10
     .line 11
-    const-string v2, "STABLE_SPECIFIER"
+    iput-object p5, p0, LX/3Bj;->A02:Ljava/io/File;
 
     .line 12
     .line 13
-    const/4 v0, 0x2
+    iput-object p2, p0, LX/3Bj;->A01:LX/3Bu;
 
     .line 14
-    new-instance v1, LX/3Bj;
-
     .line 15
-    .line 16
-    invoke-direct {v1, v2, v4, v0}, LX/3Bj;-><init>(Ljava/lang/String;II)V
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
+    .line 16
     .line 17
     .line 18
+    move-result-object v0
+
     .line 19
-    sput-object v1, LX/3Bj;->STABLE_SPECIFIER:LX/3Bj;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 20
     .line 21
-    new-array v0, v0, [LX/3Bj;
-
     .line 22
+    move-result-object v0
+
     .line 23
-    aput-object v3, v0, v5
+    iput-object v0, p0, LX/3Bj;->A03:Ljava/lang/String;
 
     .line 24
     .line 25
-    aput-object v1, v0, v4
+    move/from16 v0, p9
 
     .line 26
     .line 27
-    sput-object v0, LX/3Bj;->$VALUES:[LX/3Bj;
+    iput v0, p0, LX/3Bj;->A00:I
 
     .line 28
     .line 29
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method public static A00(LX/3BO;LX/3Bj;Ljava/io/File;)LX/3By;
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {p2}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     .line 1
     .line 2
     .line 3
-    iput p3, p0, LX/3Bj;->mIntValue:I
+    move-result-object v0
 
     .line 4
+    invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
+
     .line 5
-    return-void
-.end method
+    .line 6
+    .line 7
+    move-result v0
 
+    .line 8
+    if-nez v0, :cond_0
 
-# virtual methods
-.method public getIntValue()I
-    .locals 1
+    .line 9
+    .line 10
+    invoke-virtual {p2}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
-    .line 0
-    iget v0, p0, LX/3Bj;->mIntValue:I
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
 
-    .line 1
-    .line 2
-    return v0
+    .line 14
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    if-nez v0, :cond_0
+
+    .line 19
+    .line 20
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object p0
+
+    .line 24
+    const-string v0, "Unable to create parent directories for: "
+
+    .line 25
+    .line 26
+    invoke-static {p2, v0, p0}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    throw v0
+
+    .line 35
+    :cond_0
+    new-instance v0, LX/3By;
+
+    .line 36
+    .line 37
+    invoke-direct {v0, p0, p1, p2}, LX/3By;-><init>(LX/3BO;LX/3Bj;Ljava/io/File;)V
+
+    .line 38
+    .line 39
+    .line 40
+    return-object v0
 .end method

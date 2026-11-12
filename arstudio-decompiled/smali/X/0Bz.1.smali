@@ -1,113 +1,102 @@
 .class public final LX/0Bz;
-.super Ljava/util/HashSet;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/util/HashSet<",
-        "LX/0Hd;",
-        ">;"
-    }
-.end annotation
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FsStats$FsStatsReporter$1"
+
+
+# instance fields
+.field public final synthetic A00:LX/0C1;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(LX/0C1;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
+    iput-object p1, p0, LX/0Bz;->A00:LX/0C1;
 
     .line 1
     .line 2
-    .line 3
-    const/4 v0, 0x6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
-    new-array v2, v0, [LX/0Hd;
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 5
+
+    .line 0
+    iget-object v4, p0, LX/0Bz;->A00:LX/0C1;
+
+    .line 1
+    .line 2
+    iget-object v3, v4, LX/0C1;->A03:Ljava/util/concurrent/atomic/AtomicLong;
+
+    .line 3
+    .line 4
+    invoke-static {}, LX/0I0;->A01()LX/0I0;
 
     .line 5
     .line 6
-    sget-object v1, LX/0Dy;->A00:LX/0Hd;
-
     .line 7
+    move-result-object v1
+
     .line 8
-    const/4 v0, 0x0
+    sget-object v0, LX/0Hz;->INTERNAL:LX/0Hz;
 
     .line 9
-    aput-object v1, v2, v0
-
     .line 10
-    .line 11
-    sget-object v1, LX/0Dy;->A01:LX/0Hd;
+    invoke-virtual {v1, v0}, LX/0I0;->A06(LX/0Hz;)J
 
+    .line 11
     .line 12
     .line 13
-    const/4 v0, 0x1
+    move-result-wide v1
 
     .line 14
-    aput-object v1, v2, v0
+    const/16 v0, 0xa
 
     .line 15
     .line 16
-    sget-object v1, LX/0Dy;->A02:LX/0Hd;
+    shr-long/2addr v1, v0
 
     .line 17
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
     .line 18
-    const/4 v0, 0x2
-
     .line 19
-    aput-object v1, v2, v0
-
     .line 20
+    iget-object v0, v4, LX/0C1;->A00:Landroid/os/ConditionVariable;
+
     .line 21
-    sget-object v1, LX/0Dy;->A03:LX/0Hd;
-
     .line 22
+    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+
     .line 23
-    const/4 v0, 0x3
-
     .line 24
-    aput-object v1, v2, v0
-
     .line 25
-    .line 26
-    sget-object v1, LX/0Dy;->A04:LX/0Hd;
+    iget-object v1, v4, LX/0C1;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 26
     .line 27
+    const/4 v0, 0x0
+
     .line 28
-    const/4 v0, 0x4
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     .line 29
-    aput-object v1, v2, v0
-
     .line 30
     .line 31
-    sget-object v1, LX/0Dy;->A0N:LX/0Hd;
-
-    .line 32
-    .line 33
-    const/4 v0, 0x5
-
-    .line 34
-    aput-object v1, v2, v0
-
-    .line 35
-    .line 36
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
-    .line 41
-    .line 42
-    .line 43
     return-void
 .end method

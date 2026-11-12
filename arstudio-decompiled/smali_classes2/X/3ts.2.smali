@@ -1,184 +1,179 @@
-.class public final enum LX/3ts;
-.super Ljava/lang/Enum;
+.class public final LX/3tS;
+.super LX/3tR;
 .source ""
 
 # interfaces
-.implements LX/0Ad;
-
-
-# static fields
-.field public static final synthetic $VALUES:[LX/3ts;
-
-.field public static final enum CLIENT_MEDIA_ID_MISMATCH:LX/3ts;
-
-.field public static final enum CLIENT_METADATA_PROVIDER_MISSING:LX/3ts;
+.implements Landroid/os/Handler$Callback;
+.implements LX/408;
 
 
 # instance fields
-.field public final mValue:Ljava/lang/String;
+.field public final A00:Landroid/os/Handler;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Landroid/os/Looper;LX/3uh;)V
+    .locals 1
 
     .line 0
-    const-string v1, "CLIENT_MEDIA_ID_MISMATCH"
+    invoke-direct {p0, p1, p2}, LX/3tR;-><init>(Landroid/os/Looper;LX/3uh;)V
 
     .line 1
     .line 2
-    const/4 v5, 0x0
-
     .line 3
-    const-string v0, "client_media_id_mismatch"
+    invoke-static {p0, p1}, LX/0X5;->A09(Landroid/os/Handler$Callback;Landroid/os/Looper;)Landroid/os/Handler;
 
     .line 4
     .line 5
-    new-instance v4, LX/3ts;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    invoke-direct {v4, v1, v5, v0}, LX/3ts;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    iput-object v0, p0, LX/3tS;->A00:Landroid/os/Handler;
 
     .line 8
     .line 9
-    .line 10
-    sput-object v4, LX/3ts;->CLIENT_MEDIA_ID_MISMATCH:LX/3ts;
-
-    .line 11
-    .line 12
-    const-string v3, "CLIENT_METADATA_PROVIDER_MISSING"
-
-    .line 13
-    .line 14
-    const/4 v2, 0x1
-
-    .line 15
-    const-string v0, "client_metadata_provider_missing"
-
-    .line 16
-    .line 17
-    new-instance v1, LX/3ts;
-
-    .line 18
-    .line 19
-    invoke-direct {v1, v3, v2, v0}, LX/3ts;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 20
-    .line 21
-    .line 22
-    sput-object v1, LX/3ts;->CLIENT_METADATA_PROVIDER_MISSING:LX/3ts;
-
-    .line 23
-    .line 24
-    const/4 v0, 0x2
-
-    .line 25
-    new-array v0, v0, [LX/3ts;
-
-    .line 26
-    .line 27
-    aput-object v4, v0, v5
-
-    .line 28
-    .line 29
-    aput-object v1, v0, v2
-
-    .line 30
-    .line 31
-    sput-object v0, LX/3ts;->$VALUES:[LX/3ts;
-
-    .line 32
-    .line 33
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p3, p0, LX/3ts;->mValue:Ljava/lang/String;
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/3ts;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/3ts;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/3ts;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/3ts;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/3ts;->$VALUES:[LX/3ts;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/3ts;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public bridge synthetic getValue()Ljava/lang/Object;
-    .locals 1
+.method public final AdX()V
+    .locals 2
 
     .line 0
-    invoke-virtual {p0}, LX/3ts;->getValue()Ljava/lang/String;
+    iget-object v1, p0, LX/3tS;->A00:Landroid/os/Handler;
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x1
+
+    .line 5
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+
+    .line 13
+    :cond_0
+    iget-object v0, p0, LX/3tQ;->A00:LX/3tN;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, LX/3tN;->AdX()V
+
+    .line 16
+    .line 17
+    .line 18
+    return-void
+.end method
+
+.method public final Ada()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3tS;->A00:Landroid/os/Handler;
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x2
+
+    .line 5
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+
+    .line 13
+    :cond_0
+    iget-object v0, p0, LX/3tQ;->A00:LX/3tN;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, LX/3tN;->Ada()V
+
+    .line 16
+    .line 17
+    .line 18
+    return-void
+.end method
+
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 3
+
+    .line 0
+    invoke-static {p1}, LX/0X6;->A04(Landroid/os/Message;)I
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    move-result v2
 
     .line 4
-    return-object v0
-.end method
+    const/4 v1, 0x1
 
-.method public getValue()Ljava/lang/String;
-    .locals 1
+    .line 5
+    if-eq v2, v1, :cond_1
 
-    .line 268435456
-    iget-object v0, p0, LX/3ts;->mValue:Ljava/lang/String;
+    .line 6
+    .line 7
+    const/4 v0, 0x2
 
-    .line 268435457
-    .line 268435458
-    return-object v0
+    .line 8
+    if-ne v2, v0, :cond_0
+
+    .line 9
+    .line 10
+    iget-object v0, p0, LX/3tQ;->A00:LX/3tN;
+
+    .line 11
+    .line 12
+    invoke-virtual {v0}, LX/3tN;->Ada()V
+
+    .line 13
+    .line 14
+    .line 15
+    :cond_0
+    return v1
+
+    .line 16
+    :cond_1
+    iget-object v0, p0, LX/3tQ;->A00:LX/3tN;
+
+    .line 17
+    .line 18
+    invoke-virtual {v0}, LX/3tN;->AdX()V
+
+    .line 19
+    .line 20
+    .line 21
+    return v1
 .end method

@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/facebookpay/offsite/models/message/PaymentUXFlags;
 
 .field public static final enum DISABLE_PROACTIVE_CHECKOUT:Lcom/facebookpay/offsite/models/message/PaymentUXFlags;
@@ -118,6 +120,18 @@
 
     .line 35
     .line 36
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    sput-object v0, Lcom/facebookpay/offsite/models/message/PaymentUXFlags;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 41
+    .line 42
     return-void
 .end method
 
@@ -131,6 +145,14 @@
     .line 2
     .line 3
     return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/facebookpay/offsite/models/message/PaymentUXFlags;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebookpay/offsite/models/message/PaymentUXFlags;

@@ -30,7 +30,7 @@
 
 
 # virtual methods
-.method public final A0a(Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
+.method public final A0S(Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
     .locals 3
 
     .line 0
@@ -50,7 +50,7 @@
 
     .line 6
     .line 7
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 8
     .line 9
@@ -113,7 +113,7 @@
     .line 33
     .line 34
     :sswitch_0
-    const-string v0, "shared_story_title"
+    const-string v0, "is_reshare"
 
     .line 35
     .line 36
@@ -133,11 +133,11 @@
 
     .line 43
     .line 44
-    const-string v0, "sharedStoryTitle"
+    const-string v0, "isReshare"
 
     .line 45
     .line 46
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 47
     .line 48
@@ -150,11 +150,11 @@
     .line 51
     .line 52
     :sswitch_1
-    const-string v0, "accessibility_label"
+    const-string v1, "shareable"
 
     .line 53
     .line 54
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 55
     .line 56
@@ -166,597 +166,597 @@
 
     .line 59
     .line 60
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-class v0, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 61
     .line 62
-    const-string v0, "accessibilityLabel"
+    invoke-static {v0, v1}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 63
     .line 64
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 65
-    .line 66
-    .line 67
     move-result-object v1
 
-    .line 68
+    .line 66
     goto/16 :goto_2
+
+    .line 67
+    .line 68
+    :sswitch_2
+    const-string v0, "link_for_share"
 
     .line 69
     .line 70
-    :sswitch_2
-    const-string v0, "shared_from_post_id"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 71
     .line 72
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 73
-    .line 74
-    .line 75
     move-result v0
 
-    .line 76
+    .line 74
     if-eqz v0, :cond_2
+
+    .line 75
+    .line 76
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 77
     .line 78
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "linkForShare"
 
     .line 79
     .line 80
-    const-string v0, "sharedFromPostId"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 81
     .line 82
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 83
-    .line 84
-    .line 85
     move-result-object v1
 
-    .line 86
+    .line 84
     goto/16 :goto_2
+
+    .line 85
+    .line 86
+    :sswitch_3
+    const-string v0, "gif_id"
 
     .line 87
     .line 88
-    :sswitch_3
-    const-string v0, "quote_text"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 89
     .line 90
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 91
-    .line 92
-    .line 93
     move-result v0
 
-    .line 94
+    .line 92
     if-eqz v0, :cond_2
+
+    .line 93
+    .line 94
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 95
     .line 96
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "gifId"
 
     .line 97
     .line 98
-    const-string v0, "quoteText"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 99
     .line 100
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 101
-    .line 102
-    .line 103
     move-result-object v1
 
-    .line 104
+    .line 102
     goto/16 :goto_2
+
+    .line 103
+    .line 104
+    :sswitch_4
+    const-string v0, "background_color_gradient"
 
     .line 105
     .line 106
-    :sswitch_4
-    const-string v0, "share_tracking"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 107
     .line 108
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 109
-    .line 110
-    .line 111
     move-result v0
 
-    .line 112
+    .line 110
     if-eqz v0, :cond_2
+
+    .line 111
+    .line 112
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 113
     .line 114
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "backgroundGradientColor"
 
     .line 115
     .line 116
-    const-string v0, "shareTracking"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 117
     .line 118
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 119
-    .line 120
-    .line 121
     move-result-object v1
 
-    .line 122
+    .line 120
     goto/16 :goto_2
+
+    .line 121
+    .line 122
+    :sswitch_5
+    const-string v0, "is_gif_picker_share"
 
     .line 123
     .line 124
-    :sswitch_5
-    const-string v0, "internal_linkable_id"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 125
     .line 126
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 127
-    .line 128
-    .line 129
     move-result v0
 
-    .line 130
+    .line 128
     if-eqz v0, :cond_2
+
+    .line 129
+    .line 130
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 131
     .line 132
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "isGifPickerShare"
 
     .line 133
     .line 134
-    const-string v0, "internalLinkableId"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 135
     .line 136
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 137
-    .line 138
-    .line 139
     move-result-object v1
 
-    .line 140
+    .line 138
     goto/16 :goto_2
+
+    .line 139
+    .line 140
+    :sswitch_6
+    const-string v0, "confirmation_dialog_config"
 
     .line 141
     .line 142
-    :sswitch_6
-    const-string v0, "is_ticketing_share"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 143
     .line 144
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 145
-    .line 146
-    .line 147
     move-result v0
 
-    .line 148
+    .line 146
     if-eqz v0, :cond_2
+
+    .line 147
+    .line 148
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 149
     .line 150
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "confirmationDialogConfig"
 
     .line 151
     .line 152
-    const-string v0, "isTicketingShare"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 153
     .line 154
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 155
-    .line 156
-    .line 157
     move-result-object v1
 
-    .line 158
+    .line 156
     goto/16 :goto_2
+
+    .line 157
+    .line 158
+    :sswitch_7
+    const-string v0, "share_attachment_preview"
 
     .line 159
     .line 160
-    :sswitch_7
-    const-string v0, "share_scrape_data"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 161
     .line 162
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 163
-    .line 164
-    .line 165
     move-result v0
 
-    .line 166
+    .line 164
     if-eqz v0, :cond_2
+
+    .line 165
+    .line 166
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 167
     .line 168
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "attachmentPreview"
 
     .line 169
     .line 170
-    const-string v0, "shareScrapeData"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 171
     .line 172
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 173
-    .line 174
-    .line 175
     move-result-object v1
 
-    .line 176
+    .line 174
     goto/16 :goto_2
+
+    .line 175
+    .line 176
+    :sswitch_8
+    const-string v0, "reshare_context"
 
     .line 177
     .line 178
-    :sswitch_8
-    const-string v0, "gif_source"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 179
     .line 180
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 181
-    .line 182
-    .line 183
     move-result v0
 
-    .line 184
+    .line 182
     if-eqz v0, :cond_2
+
+    .line 183
+    .line 184
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 185
     .line 186
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "reshareContext"
 
     .line 187
     .line 188
-    const-string v0, "gifSource"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 189
     .line 190
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 191
-    .line 192
-    .line 193
     move-result-object v1
 
-    .line 194
+    .line 192
     goto/16 :goto_2
 
-    .line 195
-    .line 196
+    .line 193
+    .line 194
     :sswitch_9
     const-string v0, "nt_attachment_preview"
 
-    .line 197
-    .line 198
+    .line 195
+    .line 196
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 197
+    .line 198
     .line 199
-    .line 200
-    .line 201
     move-result v0
 
-    .line 202
+    .line 200
     if-eqz v0, :cond_2
+
+    .line 201
+    .line 202
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 203
     .line 204
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "nativeTemplatePreview"
 
     .line 205
     .line 206
-    const-string v0, "nativeTemplatePreview"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 207
     .line 208
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 209
-    .line 210
-    .line 211
     move-result-object v1
 
-    .line 212
+    .line 210
     goto/16 :goto_2
+
+    .line 211
+    .line 212
+    :sswitch_a
+    const-string v0, "gif_source"
 
     .line 213
     .line 214
-    :sswitch_a
-    const-string v0, "reshare_context"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 215
     .line 216
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 217
-    .line 218
-    .line 219
     move-result v0
 
-    .line 220
+    .line 218
     if-eqz v0, :cond_2
+
+    .line 219
+    .line 220
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 221
     .line 222
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "gifSource"
 
     .line 223
     .line 224
-    const-string v0, "reshareContext"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 225
     .line 226
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 227
-    .line 228
-    .line 229
     move-result-object v1
 
-    .line 230
+    .line 228
     goto/16 :goto_2
+
+    .line 229
+    .line 230
+    :sswitch_b
+    const-string v0, "share_scrape_data"
 
     .line 231
     .line 232
-    :sswitch_b
-    const-string v0, "share_attachment_preview"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 233
     .line 234
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 235
-    .line 236
-    .line 237
     move-result v0
 
-    .line 238
+    .line 236
     if-eqz v0, :cond_2
+
+    .line 237
+    .line 238
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 239
     .line 240
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "shareScrapeData"
 
     .line 241
     .line 242
-    const-string v0, "attachmentPreview"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 243
     .line 244
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 245
-    .line 246
-    .line 247
     move-result-object v1
 
-    .line 248
+    .line 246
     goto :goto_2
 
-    .line 249
+    .line 247
     :sswitch_c
-    const-string v0, "confirmation_dialog_config"
+    const-string v0, "is_ticketing_share"
+
+    .line 248
+    .line 249
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 250
     .line 251
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 252
-    .line 253
-    .line 254
     move-result v0
 
-    .line 255
+    .line 253
     if-eqz v0, :cond_2
+
+    .line 254
+    .line 255
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 256
     .line 257
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "isTicketingShare"
 
     .line 258
     .line 259
-    const-string v0, "confirmationDialogConfig"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 260
     .line 261
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 262
-    .line 263
-    .line 264
     move-result-object v1
 
-    .line 265
+    .line 263
     goto :goto_2
 
-    .line 266
+    .line 264
     :sswitch_d
-    const-string v0, "is_gif_picker_share"
+    const-string v0, "internal_linkable_id"
+
+    .line 265
+    .line 266
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 267
     .line 268
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 269
-    .line 270
-    .line 271
     move-result v0
 
-    .line 272
+    .line 270
     if-eqz v0, :cond_2
+
+    .line 271
+    .line 272
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 273
     .line 274
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "internalLinkableId"
 
     .line 275
     .line 276
-    const-string v0, "isGifPickerShare"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 277
     .line 278
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 279
-    .line 280
-    .line 281
     move-result-object v1
 
-    .line 282
+    .line 280
     goto :goto_2
 
-    .line 283
+    .line 281
     :sswitch_e
-    const-string v0, "background_color_gradient"
+    const-string v0, "share_tracking"
+
+    .line 282
+    .line 283
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 284
     .line 285
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 286
-    .line 287
-    .line 288
     move-result v0
 
-    .line 289
+    .line 287
     if-eqz v0, :cond_2
+
+    .line 288
+    .line 289
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 290
     .line 291
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "shareTracking"
 
     .line 292
     .line 293
-    const-string v0, "backgroundGradientColor"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 294
     .line 295
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 296
-    .line 297
-    .line 298
     move-result-object v1
 
-    .line 299
+    .line 297
     goto :goto_2
 
-    .line 300
+    .line 298
     :sswitch_f
-    const-string v0, "gif_id"
+    const-string v0, "quote_text"
+
+    .line 299
+    .line 300
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 301
     .line 302
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 303
-    .line 304
-    .line 305
     move-result v0
 
-    .line 306
+    .line 304
     if-eqz v0, :cond_2
+
+    .line 305
+    .line 306
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 307
     .line 308
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "quoteText"
 
     .line 309
     .line 310
-    const-string v0, "gifId"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 311
     .line 312
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 313
-    .line 314
-    .line 315
     move-result-object v1
 
-    .line 316
+    .line 314
     goto :goto_2
 
-    .line 317
+    .line 315
     :sswitch_10
-    const-string v0, "link_for_share"
+    const-string v0, "shared_from_post_id"
+
+    .line 316
+    .line 317
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 318
     .line 319
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 320
-    .line 321
-    .line 322
     move-result v0
 
-    .line 323
+    .line 321
     if-eqz v0, :cond_2
+
+    .line 322
+    .line 323
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 324
     .line 325
-    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "sharedFromPostId"
 
     .line 326
     .line 327
-    const-string v0, "linkForShare"
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 328
     .line 329
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
-
     .line 330
-    .line 331
-    .line 332
     move-result-object v1
 
-    .line 333
+    .line 331
     goto :goto_2
 
-    .line 334
+    .line 332
     :sswitch_11
-    const-string v1, "shareable"
+    const-string v0, "accessibility_label"
+
+    .line 333
+    .line 334
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 335
     .line 336
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 337
-    .line 338
-    .line 339
     move-result v0
 
-    .line 340
+    .line 338
     if-eqz v0, :cond_2
+
+    .line 339
+    .line 340
+    const-class v1, Lcom/facebook/ipc/composer/model/ComposerShareParams;
 
     .line 341
     .line 342
-    const-class v0, Lcom/facebook/ipc/composer/model/ComposerShareParams;
+    const-string v0, "accessibilityLabel"
 
     .line 343
     .line 344
-    invoke-static {v0, v1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 345
     .line 346
@@ -768,7 +768,7 @@
 
     .line 349
     :sswitch_12
-    const-string v0, "is_reshare"
+    const-string v0, "shared_story_title"
 
     .line 350
     .line 351
@@ -788,11 +788,11 @@
 
     .line 358
     .line 359
-    const-string v0, "isReshare"
+    const-string v0, "sharedStoryTitle"
 
     .line 360
     .line 361
-    invoke-static {v1, v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A04(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
+    invoke-static {v1, v0}, LX/0X1;->A06(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/json/FbJsonField;
 
     .line 362
     .line 363
@@ -842,47 +842,49 @@
     .line 378
     .line 379
     .line 380
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 381
-    throw v0
-
     .line 382
-    :catchall_0
-    move-exception v0
-
     .line 383
-    monitor-exit v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-result-object v0
 
     .line 384
     throw v0
 
     .line 385
-    nop
+    :catchall_0
+    move-exception v0
 
     .line 386
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 387
+    throw v0
+
+    .line 388
     :sswitch_data_0
     .sparse-switch
-        -0x652dec89 -> :sswitch_12
-        -0x5e462247 -> :sswitch_11
-        -0x5c75c11c -> :sswitch_10
-        -0x4a45648a -> :sswitch_f
-        -0x3f291043 -> :sswitch_e
-        -0x3759c002 -> :sswitch_d
-        -0x32e82071 -> :sswitch_c
-        -0x2fc79af4 -> :sswitch_b
-        -0x23204604 -> :sswitch_a
+        -0x652dec89 -> :sswitch_0
+        -0x5e462247 -> :sswitch_1
+        -0x5c75c11c -> :sswitch_2
+        -0x4a45648a -> :sswitch_3
+        -0x3f291043 -> :sswitch_4
+        -0x3759c002 -> :sswitch_5
+        -0x32e82071 -> :sswitch_6
+        -0x2fc79af4 -> :sswitch_7
+        -0x23204604 -> :sswitch_8
         -0x2135083b -> :sswitch_9
-        -0x16a9af0a -> :sswitch_8
-        0x9815df5 -> :sswitch_7
-        0x342d6aa1 -> :sswitch_6
-        0x3fe7da64 -> :sswitch_5
-        0x461c6b17 -> :sswitch_4
-        0x4c716d10 -> :sswitch_3
-        0x53cbd31f -> :sswitch_2
-        0x6818f0c3 -> :sswitch_1
-        0x7a98cdb4 -> :sswitch_0
+        -0x16a9af0a -> :sswitch_a
+        0x9815df5 -> :sswitch_b
+        0x342d6aa1 -> :sswitch_c
+        0x3fe7da64 -> :sswitch_d
+        0x461c6b17 -> :sswitch_e
+        0x4c716d10 -> :sswitch_f
+        0x53cbd31f -> :sswitch_10
+        0x6818f0c3 -> :sswitch_11
+        0x7a98cdb4 -> :sswitch_12
     .end sparse-switch
 .end method

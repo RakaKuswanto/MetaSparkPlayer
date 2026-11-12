@@ -1,185 +1,54 @@
-.class public final LX/4Bj;
+.class public abstract LX/4Bj;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A02:LX/4Bj;
+.field public static final A00:LX/3gS;
 
-
-# instance fields
-.field public A00:Ljava/util/ArrayList;
-
-.field public final A01:LX/4CF;
+.field public static final A01:LX/3gS;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, LX/2G8;->NONE:LX/2G8;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/4CF;->A00()LX/4CF;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/4Bj;->A01:LX/4CF;
-
-    .line 8
-    .line 9
-    const/16 v0, 0x8
-
-    .line 10
-    .line 11
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/4Bj;->A00:Ljava/util/ArrayList;
-
-    .line 16
-    .line 17
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00(Landroid/os/Bundle;)V
-    .locals 6
-
-    .line 0
-    iget-object v5, p0, LX/4Bj;->A01:LX/4CF;
-
-    .line 1
-    .line 2
-    iget-object v0, v5, LX/4CF;->A01:Landroid/content/ServiceConnection;
+    const/16 v0, 0xd
 
     .line 3
     .line 4
-    if-eqz v0, :cond_1
+    invoke-static {v1, v0}, LX/4Kh;->A01(LX/2G8;I)LX/3gS;
 
     .line 5
     .line 6
-    iget-object v4, p0, LX/4Bj;->A00:Ljava/util/ArrayList;
-
     .line 7
+    move-result-object v0
+
     .line 8
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    sput-object v0, LX/4Bj;->A01:LX/3gS;
 
     .line 9
     .line 10
-    .line 11
-    move-result-wide v0
+    const/16 v0, 0xc
 
+    .line 11
     .line 12
-    invoke-static {v4, v0, v1}, LX/0Yf;->A1F(Ljava/util/AbstractCollection;J)V
+    invoke-static {v1, v0}, LX/4Kh;->A01(LX/2G8;I)LX/3gS;
 
     .line 13
     .line 14
     .line 15
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
+    move-result-object v0
 
     .line 16
+    sput-object v0, LX/4Bj;->A00:LX/3gS;
+
     .line 17
     .line 18
-    move-result v1
-
-    .line 19
-    const/16 v0, 0x8
-
-    .line 20
-    .line 21
-    if-lt v1, v0, :cond_1
-
-    .line 22
-    .line 23
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
-
-    .line 24
-    .line 25
-    .line 26
-    move-result v0
-
-    .line 27
-    new-array v3, v0, [J
-
-    .line 28
-    .line 29
-    const/4 v2, 0x0
-
-    .line 30
-    :goto_0
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
-
-    .line 31
-    .line 32
-    .line 33
-    move-result v0
-
-    .line 34
-    if-ge v2, v0, :cond_0
-
-    .line 35
-    .line 36
-    invoke-virtual {v4, v2}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    invoke-static {v0}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-wide v0
-
-    .line 44
-    aput-wide v0, v3, v2
-
-    .line 45
-    .line 46
-    add-int/lit8 v2, v2, 0x1
-
-    .line 47
-    .line 48
-    goto :goto_0
-
-    .line 49
-    :cond_0
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->clear()V
-
-    .line 50
-    .line 51
-    .line 52
-    new-instance v0, LX/6P1;
-
-    .line 53
-    .line 54
-    invoke-direct {v0, p1, v5, v3}, LX/6P1;-><init>(Landroid/os/Bundle;LX/4CF;[J)V
-
-    .line 55
-    .line 56
-    .line 57
-    invoke-static {v0, v5}, LX/4CF;->A02(LX/4CJ;LX/4CF;)V
-
-    .line 58
-    .line 59
-    .line 60
-    :cond_1
     return-void
 .end method

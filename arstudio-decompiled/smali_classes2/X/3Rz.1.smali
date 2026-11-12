@@ -1,8 +1,25 @@
-.class public interface abstract LX/3Rz;
+.class public final LX/3Rz;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ABN(LX/3Th;Lcom/facebook/proxygen/SamplePolicy;Ljava/lang/String;Lorg/apache/http/protocol/HttpContext;)Lcom/facebook/proxygen/TraceEventHandler;
+# instance fields
+.field public A00:LX/3Rz;
+
+.field public A01:Ljava/lang/Object;
+
+.field public A02:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

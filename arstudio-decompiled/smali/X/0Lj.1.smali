@@ -1,31 +1,8 @@
-.class public final LX/0Lj;
+.class public interface abstract LX/0Lj;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0K5;
-
-.field public final A01:Ljava/util/concurrent/Executor;
-
-
-# direct methods
-.method public constructor <init>(LX/0K5;Ljava/util/concurrent/Executor;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p2, p0, LX/0Lj;->A01:Ljava/util/concurrent/Executor;
-
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/0Lj;->A00:LX/0K5;
-
-    .line 6
-    .line 7
-    return-void
+# virtual methods
+.method public abstract AaC(Landroid/content/Context;Landroid/content/Intent;LX/0QS;)V
 .end method

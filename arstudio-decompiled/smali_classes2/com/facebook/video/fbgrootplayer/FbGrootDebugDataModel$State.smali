@@ -128,7 +128,7 @@
     move-result-object v1
 
     .line 15
-    check-cast v1, LX/1Oh;
+    check-cast v1, LX/3m0;
 
     .line 16
     .line 17
@@ -136,7 +136,7 @@
 
     .line 18
     .line 19
-    invoke-direct {v0, v1}, Lcom/facebook/video/fbgrootplayer/FbGrootDebugDataModel$CoverImageState;-><init>(LX/1Oh;)V
+    invoke-direct {v0, v1}, Lcom/facebook/video/fbgrootplayer/FbGrootDebugDataModel$CoverImageState;-><init>(LX/3m0;)V
 
     .line 20
     .line 21

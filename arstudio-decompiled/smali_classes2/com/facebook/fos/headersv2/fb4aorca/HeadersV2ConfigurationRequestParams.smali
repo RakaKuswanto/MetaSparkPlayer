@@ -27,9 +27,11 @@
 
 .field public final A07:Ljava/lang/String;
 
-.field public final A08:Z
+.field public final A08:Ljava/lang/String;
 
 .field public final A09:Z
+
+.field public final A0A:Z
 
 
 # direct methods
@@ -37,11 +39,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x44
+    const/16 v0, 0x3c
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -97,7 +99,7 @@
     move-result-object v0
 
     .line 19
-    iput-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
 
     .line 20
     .line 21
@@ -121,7 +123,7 @@
     move-result-object v0
 
     .line 31
-    iput-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Ljava/lang/String;
 
     .line 32
     .line 33
@@ -149,7 +151,7 @@
 
     .line 44
     .line 45
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 46
     .line 47
@@ -157,11 +159,11 @@
     move-result v0
 
     .line 49
-    iput-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Z
+    iput-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
 
     .line 50
     .line 51
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 52
     .line 53
@@ -169,7 +171,7 @@
     move-result v0
 
     .line 55
-    iput-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
+    iput-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A0A:Z
 
     .line 56
     .line 57
@@ -185,10 +187,22 @@
 
     .line 62
     .line 63
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v0
+
+    .line 67
+    iput-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+
+    .line 68
+    .line 69
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
     .locals 1
 
     .line 268435456
@@ -208,7 +222,7 @@
 
     .line 268435463
     .line 268435464
-    iput-object p3, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+    iput-object p3, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
 
     .line 268435465
     .line 268435466
@@ -216,7 +230,7 @@
 
     .line 268435467
     .line 268435468
-    iput-object p5, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
+    iput-object p5, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Ljava/lang/String;
 
     .line 268435469
     .line 268435470
@@ -228,11 +242,11 @@
 
     .line 268435473
     .line 268435474
-    iput-boolean p8, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Z
+    iput-boolean p9, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
 
     .line 268435475
     .line 268435476
-    iput-boolean p9, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
+    iput-boolean p10, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A0A:Z
 
     .line 268435477
     .line 268435478
@@ -240,6 +254,10 @@
 
     .line 268435479
     .line 268435480
+    iput-object p8, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+
+    .line 268435481
+    .line 268435482
     return-void
 .end method
 
@@ -307,7 +325,7 @@
 
     .line 20
     .line 21
-    invoke-static {v1, v0}, LX/6M2;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/1ce;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 22
     .line 23
@@ -319,11 +337,11 @@
 
     .line 26
     .line 27
-    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
 
     .line 28
     .line 29
-    iget-object v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
 
     .line 30
     .line 31
@@ -359,11 +377,11 @@
 
     .line 46
     .line 47
-    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Ljava/lang/String;
 
     .line 48
     .line 49
-    iget-object v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Ljava/lang/String;
 
     .line 50
     .line 51
@@ -399,7 +417,7 @@
 
     .line 66
     .line 67
-    invoke-static {v1, v0}, LX/6M2;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/1ce;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 68
     .line 69
@@ -411,11 +429,11 @@
 
     .line 72
     .line 73
-    iget-boolean v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Z
+    iget-boolean v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
 
     .line 74
     .line 75
-    iget-boolean v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Z
+    iget-boolean v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
 
     .line 76
     .line 77
@@ -423,11 +441,11 @@
 
     .line 78
     .line 79
-    iget-boolean v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
+    iget-boolean v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A0A:Z
 
     .line 80
     .line 81
-    iget-boolean v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
+    iget-boolean v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A0A:Z
 
     .line 82
     .line 83
@@ -443,7 +461,7 @@
 
     .line 88
     .line 89
-    invoke-static {v1, v0}, LX/6M2;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/1ce;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 90
     .line 91
@@ -455,9 +473,21 @@
 
     .line 94
     .line 95
-    const/4 v2, 0x1
+    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
 
     .line 96
+    .line 97
+    iget-object v0, p1, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+
+    .line 98
+    .line 99
+    if-ne v1, v0, :cond_0
+
+    .line 100
+    .line 101
+    const/4 v2, 0x1
+
+    .line 102
     :cond_0
     return v2
 .end method
@@ -466,7 +496,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0xa
+    const/16 v0, 0xb
 
     .line 1
     .line 2
@@ -496,7 +526,7 @@
 
     .line 13
     .line 14
-    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
 
     .line 15
     .line 16
@@ -518,7 +548,7 @@
 
     .line 23
     .line 24
-    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Ljava/lang/String;
 
     .line 25
     .line 26
@@ -533,7 +563,7 @@
 
     .line 30
     .line 31
-    invoke-static {v2, v0}, LX/0Ye;->A1P([Ljava/lang/Object;I)V
+    invoke-static {v2, v0}, LX/0X2;->A1N([Ljava/lang/Object;I)V
 
     .line 32
     .line 33
@@ -549,7 +579,7 @@
 
     .line 38
     .line 39
-    iget-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Z
+    iget-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
 
     .line 40
     .line 41
@@ -568,7 +598,7 @@
 
     .line 47
     .line 48
-    iget-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
+    iget-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A0A:Z
 
     .line 49
     .line 50
@@ -596,14 +626,26 @@
 
     .line 61
     .line 62
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
+    aput-object v1, v2, v0
 
     .line 63
     .line 64
+    iget-object v1, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+
     .line 65
+    .line 66
+    const/16 v0, 0xa
+
+    .line 67
+    .line 68
+    invoke-static {v1, v2, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
+
+    .line 69
+    .line 70
+    .line 71
     move-result v0
 
-    .line 66
+    .line 72
     return v0
 .end method
 
@@ -629,7 +671,7 @@
     .line 8
     .line 9
     .line 10
-    iget-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
 
     .line 11
     .line 12
@@ -647,7 +689,7 @@
     .line 18
     .line 19
     .line 20
-    iget-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A07:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Ljava/lang/String;
 
     .line 21
     .line 22
@@ -674,7 +716,7 @@
     .line 33
     .line 34
     .line 35
-    iget-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A08:Z
+    iget-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
 
     .line 36
     .line 37
@@ -683,7 +725,7 @@
     .line 38
     .line 39
     .line 40
-    iget-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A09:Z
+    iget-boolean v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A0A:Z
 
     .line 41
     .line 42
@@ -701,5 +743,14 @@
     .line 48
     .line 49
     .line 50
+    iget-object v0, p0, Lcom/facebook/fos/headersv2/fb4aorca/HeadersV2ConfigurationRequestParams;->A06:Ljava/lang/String;
+
+    .line 51
+    .line 52
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 53
+    .line 54
+    .line 55
     return-void
 .end method

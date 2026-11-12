@@ -1,116 +1,61 @@
 .class public final LX/3rI;
-.super LX/482;
+.super LX/3tq;
 .source ""
-
-# interfaces
-.implements Landroid/os/Handler$Callback;
-.implements LX/2sH;
-
-
-# instance fields
-.field public final A00:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Looper;LX/4Ay;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/482;-><init>(Landroid/os/Looper;LX/4Ay;)V
+    invoke-direct {p0}, LX/3tq;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {p0, p1}, LX/0Yf;->A0D(Landroid/os/Handler$Callback;Landroid/os/Looper;)Landroid/os/Handler;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/3rI;->A00:Landroid/os/Handler;
-
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final AfA()V
+.method public final AAH()LX/3vL;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/3rI;->A00:Landroid/os/Handler;
+    sget-object v0, LX/3vL;->CENTER:LX/3vL;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-static {v0}, LX/0Yf;->A0u(Landroid/os/Handler;)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
-
-    .line 8
-    :cond_0
-    iget-object v0, p0, LX/482;->A00:LX/48I;
-
-    .line 9
-    .line 10
-    invoke-virtual {v0}, LX/48I;->AfA()V
-
-    .line 11
-    .line 12
-    .line 13
-    return-void
+    return-object v0
 .end method
 
-.method public final AfD()V
-    .locals 2
+.method public final AGe()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "AnimatedGifPlayButtonDescriptor"
+
+    return-object v0
+.end method
+
+.method public final APc(LX/28V;Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3q1;LX/3m2;)Z
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/3rI;->A00:Landroid/os/Handler;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    if-eqz v1, :cond_0
+    invoke-static {p4, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    const/4 v0, 0x2
+    iget-object v0, p4, LX/3m2;->A03:Lcom/facebook/video/engine/api/VideoPlayerParams;
 
     .line 5
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
     .line 6
+    iget-boolean v0, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A0s:Z
+
     .line 7
     .line 8
-    move-result-object v0
-
-    .line 9
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
-
-    .line 13
-    :cond_0
-    iget-object v0, p0, LX/482;->A00:LX/48I;
-
-    .line 14
-    .line 15
-    invoke-virtual {v0}, LX/48I;->AfD()V
-
-    .line 16
-    .line 17
-    .line 18
-    return-void
+    return v0
 .end method

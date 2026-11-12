@@ -18,6 +18,14 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "instance"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,6 +44,14 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "obj"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Lcom/google/common/base/Suppliers$SupplierOfInstance;
@@ -91,7 +107,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -106,7 +122,7 @@
     const/4 v0, 0x0
 
     .line 7
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
+    invoke-static {v1, v2, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
 
     .line 8
     .line 9
@@ -121,7 +137,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -142,7 +158,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0, v1}, LX/0Yd;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X2;->A0i(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 12
     .line 13

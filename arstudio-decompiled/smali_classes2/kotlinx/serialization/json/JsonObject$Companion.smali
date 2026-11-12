@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final serializer()LX/2LY;
+.method public final serializer()LX/5cW;
     .locals 1
 
     .line 0

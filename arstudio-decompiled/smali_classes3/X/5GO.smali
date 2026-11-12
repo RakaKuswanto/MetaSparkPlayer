@@ -2,16 +2,7 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/io/Closeable;
-
 
 # virtual methods
-.method public abstract AhZ(LX/5GA;J)J
-.end method
-
-.method public abstract Apk()LX/5Gd;
-.end method
-
-.method public abstract close()V
+.method public abstract ANq(LX/5FM;JJ)V
 .end method

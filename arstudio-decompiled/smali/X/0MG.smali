@@ -1,103 +1,115 @@
-.class public final LX/0MG;
-.super LX/0Vl;
+.class public final LX/0Mg;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/07u;
 
-# static fields
-.field public static final A00:LX/0MG;
 
-.field public static final serialVersionUID:J
+# instance fields
+.field public A00:Ljava/lang/Object;
+
+.field public final A01:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;I)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/0MG;
+    iput p2, p0, LX/0Mg;->A01:I
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/0MG;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, LX/0MG;->A00:LX/0MG;
+    iput-object p1, p0, LX/0Mg;->A00:Ljava/lang/Object;
 
     .line 6
     .line 7
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/0Vl;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
 
 # virtual methods
-.method public final A02()Ljava/lang/Object;
+.method public final Aj1()Landroid/os/Bundle;
     .locals 1
 
     .line 0
-    const-string v0, "Optional.get() cannot be called on an absent value"
+    iget v0, p0, LX/0Mg;->A01:I
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    packed-switch v0, :pswitch_data_0
 
     .line 3
     .line 4
     .line 5
-    move-result-object v0
+    iget-object v0, p0, LX/0Mg;->A00:Ljava/lang/Object;
 
     .line 6
-    throw v0
-.end method
+    .line 7
+    check-cast v0, LX/0VG;
 
-.method public final A03()Z
-    .locals 1
+    .line 8
+    .line 9
+    invoke-virtual {v0}, LX/0VG;->A0P()Landroid/os/Bundle;
 
-    const/4 v0, 0x0
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
 
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 0
-    invoke-static {p1, p0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x598df91c
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Optional.absent()"
-
+    .line 13
     return-object v0
+
+    .line 14
+    :pswitch_0
+    iget-object v0, p0, LX/0Mg;->A00:Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    check-cast v0, Landroidx/activity/ComponentActivity;
+
+    .line 17
+    .line 18
+    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->A04()Landroid/os/Bundle;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    return-object v0
+
+    .line 23
+    :pswitch_1
+    iget-object v0, p0, LX/0Mg;->A00:Ljava/lang/Object;
+
+    .line 24
+    .line 25
+    check-cast v0, Landroidx/fragment/app/FragmentActivity;
+
+    .line 26
+    .line 27
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->A15()Landroid/os/Bundle;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    return-object v0
+
+    .line 32
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

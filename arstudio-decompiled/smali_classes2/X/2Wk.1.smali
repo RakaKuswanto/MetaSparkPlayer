@@ -1,89 +1,168 @@
 .class public final LX/2Wk;
-.super LX/1na;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static A02:LX/2WB;
+
+
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:Landroid/content/Context;
 
-.field public A01:LX/1dg;
-
-.field public A02:Ljava/util/Collection;
-
-.field public A03:Ljava/util/Collection;
-
-.field public A04:Z
-
-.field public final A05:LX/0YO;
-
-.field public final A06:LX/0Na;
+.field public final A01:Landroid/util/SparseIntArray;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/1na;-><init>()V
+    new-instance v0, LX/2WB;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/2WB;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/2Wk;->A02:LX/2WB;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/SparseIntArray;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/0YO;
+    iput-object p1, p0, LX/2Wk;->A00:Landroid/content/Context;
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/0YO;-><init>()V
+    iput-object p2, p0, LX/2Wk;->A01:Landroid/util/SparseIntArray;
 
     .line 6
     .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00(LX/4D6;)I
+    .locals 2
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v1, p0, LX/2Wk;->A01:Landroid/util/SparseIntArray;
+
+    .line 5
+    .line 6
+    if-eqz v1, :cond_0
+
+    .line 7
     .line 8
-    iput-object v0, p0, LX/2Wk;->A05:LX/0YO;
+    iget v0, p1, LX/4D6;->attr:I
 
     .line 9
     .line 10
-    const/4 v1, 0x0
+    invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
     .line 11
-    iput-object v1, p0, LX/2Wk;->A02:Ljava/util/Collection;
-
     .line 12
     .line 13
-    iput-object v1, p0, LX/2Wk;->A03:Ljava/util/Collection;
+    move-result v0
 
     .line 14
+    if-ltz v0, :cond_0
+
     .line 15
-    iput-object v1, p0, LX/2Wk;->A01:LX/1dg;
-
     .line 16
-    .line 17
-    sget v0, LX/2eq;->Ajs:I
+    invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->valueAt(I)I
 
+    .line 17
     .line 18
     .line 19
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    move-result v0
 
     .line 20
-    .line 21
-    .line 22
-    move-result-object v0
+    return v0
 
+    .line 21
+    :cond_0
+    sget-object v1, LX/2Wk;->A02:LX/2WB;
+
+    .line 22
     .line 23
-    iput-object v0, p0, LX/2Wk;->A06:LX/0Na;
+    iget-object v0, p0, LX/2Wk;->A00:Landroid/content/Context;
 
     .line 24
     .line 25
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-virtual {v1, v0, p1}, LX/2WB;->A00(Landroid/content/Context;LX/4D6;)I
 
     .line 26
     .line 27
     .line 28
-    move-result-object v0
+    move-result v0
 
     .line 29
-    iput-object v0, p0, LX/2Wk;->A00:LX/1zG;
+    return v0
+.end method
 
-    .line 30
-    .line 31
-    return-void
+.method public final A01()LX/2Wk;
+    .locals 3
+
+    .line 0
+    iget-object v1, p0, LX/2Wk;->A00:Landroid/content/Context;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x1
+
+    .line 3
+    invoke-static {v0}, LX/2KX;->A00(Z)I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    new-instance v2, Landroid/view/ContextThemeWrapper;
+
+    .line 8
+    .line 9
+    invoke-direct {v2, v1, v0}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    .line 10
+    .line 11
+    .line 12
+    iget-object v1, p0, LX/2Wk;->A01:Landroid/util/SparseIntArray;
+
+    .line 13
+    .line 14
+    new-instance v0, LX/2Wk;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v2, v1}, LX/2Wk;-><init>(Landroid/content/Context;Landroid/util/SparseIntArray;)V
+
+    .line 17
+    .line 18
+    .line 19
+    return-object v0
 .end method

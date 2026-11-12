@@ -1,67 +1,29 @@
 .class public final LX/4io;
-.super LX/4me;
+.super LX/4h7;
 .source ""
 
 
-# instance fields
-.field public A00:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A01:LX/4nC;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xc
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A02:Ljava/util/List;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x5
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A03:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
     .line 0
-    const-string v0, "SurveyIconScaleResponseOptionComponent"
+    invoke-direct {p0, p1}, LX/4h7;-><init>(Ljava/util/List;)V
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
-
     .line 3
-    .line 4
-    .line 5
+    return-void
+.end method
+
+.method public varargs constructor <init>([LX/4iS;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p1}, LX/4h7;-><init>([LX/4iS;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
     return-void
 .end method

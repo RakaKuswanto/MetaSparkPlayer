@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0Gd;
+.implements LX/0VC;
 
 
 # direct methods

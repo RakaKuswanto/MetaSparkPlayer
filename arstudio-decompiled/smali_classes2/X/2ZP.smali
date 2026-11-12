@@ -1,106 +1,59 @@
-.class public final synthetic LX/2ZP;
+.class public abstract LX/2ZP;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MessagingStateChangePerformanceLogger$$ExternalSyntheticLambda3"
-
 
 # instance fields
-.field public final synthetic A00:I
+.field public A00:J
 
-.field public final synthetic A01:Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;
+.field public A01:LX/2ZH;
 
-.field public final synthetic A02:S
+.field public final A02:J
+
+.field public final A03:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;IS)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/2ZP;->A01:Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;
-
-    iput p2, p0, LX/2ZP;->A00:I
-
-    iput-short p3, p0, LX/2ZP;->A02:S
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 4
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
 
     .line 0
-    iget-object v3, p0, LX/2ZP;->A01:Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget v2, p0, LX/2ZP;->A00:I
-
     .line 3
+    const-wide/16 v0, -0x1
+
     .line 4
-    iget-short v1, p0, LX/2ZP;->A02:S
-
     .line 5
+    iput-wide v0, p0, LX/2ZP;->A00:J
+
     .line 6
-    iget-object v0, v3, Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;->A0E:LX/0Na;
-
     .line 7
-    .line 8
-    invoke-static {v0}, LX/0Yg;->A0M(LX/0Na;)Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
+    iput-object p1, p0, LX/2ZP;->A03:Ljava/lang/String;
 
+    .line 8
     .line 9
+    sget-object v0, LX/2ZH;->NO_RESPONSE:LX/2ZH;
+
     .line 10
     .line 11
-    move-result-object v0
+    iput-object v0, p0, LX/2ZP;->A01:LX/2ZH;
 
     .line 12
-    invoke-interface {v0, v2, v1}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
-
     .line 13
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
     .line 14
     .line 15
-    const/4 v1, 0x0
-
     .line 16
-    const v0, 0x54115d
+    move-result-wide v0
 
     .line 17
+    iput-wide v0, p0, LX/2ZP;->A02:J
+
     .line 18
     .line 19
-    if-ne v2, v0, :cond_1
-
-    .line 20
-    .line 21
-    iput-object v1, v3, Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;->A0Q:Ljava/util/concurrent/ScheduledFuture;
-
-    .line 22
-    .line 23
-    :cond_0
-    return-void
-
-    .line 24
-    :cond_1
-    const v0, 0x541de2
-
-    .line 25
-    .line 26
-    .line 27
-    if-ne v2, v0, :cond_0
-
-    .line 28
-    .line 29
-    iput-object v1, v3, Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;->A0P:Ljava/util/concurrent/ScheduledFuture;
-
-    .line 30
-    .line 31
     return-void
 .end method

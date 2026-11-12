@@ -234,7 +234,7 @@
 
     .line 92
     .line 93
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 94
     .line 95
@@ -277,7 +277,7 @@
 
     .line 113
     .line 114
-    invoke-static {v7, v0}, LX/4BF;->A0G(Ljava/lang/Enum;[I)I
+    invoke-static {v7, v0}, LX/434;->A0J(Ljava/lang/Enum;[I)I
 
     .line 115
     .line 116
@@ -311,7 +311,7 @@
 
     .line 130
     :pswitch_0
-    const-string v0, "ns"
+    const-string v0, "d"
 
     .line 131
     .line 132
@@ -319,7 +319,7 @@
 
     .line 133
     :pswitch_1
-    const-string v0, "\u03bcs"
+    const-string v0, "h"
 
     .line 134
     .line 135
@@ -327,7 +327,7 @@
 
     .line 136
     :pswitch_2
-    const-string v0, "ms"
+    const-string v0, "min"
 
     .line 137
     .line 138
@@ -343,7 +343,7 @@
 
     .line 142
     :pswitch_4
-    const-string v0, "min"
+    const-string v0, "ms"
 
     .line 143
     .line 144
@@ -351,7 +351,7 @@
 
     .line 145
     :pswitch_5
-    const-string v0, "h"
+    const-string v0, "\u03bcs"
 
     .line 146
     .line 147
@@ -359,12 +359,12 @@
 
     .line 148
     :pswitch_6
-    const-string v0, "d"
+    const-string v0, "ns"
 
     .line 149
     .line 150
     :goto_1
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 151
     .line 152
@@ -380,12 +380,12 @@
     .line 156
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
         :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
     .end packed-switch
 .end method

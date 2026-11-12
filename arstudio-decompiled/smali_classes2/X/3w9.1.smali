@@ -1,36 +1,33 @@
 .class public final LX/3w9;
-.super Ljava/lang/Object;
+.super LX/3nV;
 .source ""
 
 
+# instance fields
+.field public final A00:Ljava/util/List;
+
+
 # direct methods
-.method public static final A00(II)LX/3z6;
+.method public constructor <init>(Ljava/util/List;)V
     .locals 1
 
     .line 0
-    if-lez p0, :cond_0
+    const/4 v0, 0x1
 
     .line 1
-    .line 2
-    if-lez p1, :cond_0
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    new-instance v0, LX/3z6;
+    invoke-direct {p0}, LX/3nV;-><init>()V
 
     .line 5
     .line 6
-    invoke-direct {v0, p0, p1}, LX/3z6;-><init>(II)V
-
     .line 7
+    iput-object p1, p0, LX/3w9;->A00:Ljava/util/List;
+
     .line 8
     .line 9
-    return-object v0
-
-    .line 10
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 11
-    return-object v0
+    return-void
 .end method

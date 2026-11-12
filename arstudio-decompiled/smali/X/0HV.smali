@@ -2,21 +2,14 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0Mn;
-
 
 # instance fields
-.field public A00:Ljava/io/File;
-
-.field public A01:Ljava/io/FileInputStream;
-
-.field public A02:Ljava/nio/channels/FileChannel;
+.field public final A00:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,127 +17,154 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/0HV;->A00:Ljava/io/File;
+    iput-object p1, p0, LX/0HV;->A00:Landroid/content/Context;
 
     .line 4
     .line 5
-    invoke-static {p1}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/0HV;->A01:Ljava/io/FileInputStream;
-
-    .line 10
-    .line 11
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/0HV;->A02:Ljava/nio/channels/FileChannel;
-
-    .line 16
-    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final AhY(Ljava/nio/ByteBuffer;J)I
-    .locals 1
+.method public final A00(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/0HV;->A02:Ljava/nio/channels/FileChannel;
+    const/4 v3, 0x0
 
     .line 1
-    .line 2
-    invoke-virtual {v0, p1, p2, p3}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;J)I
+    :try_start_0
+    iget-object v0, p0, LX/0HV;->A00:Landroid/content/Context;
 
+    .line 2
     .line 3
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
     .line 4
     .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    const/16 v0, 0x80
+
+    .line 8
+    .line 9
+    invoke-virtual {v1, p2, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    if-eqz v0, :cond_0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 14
+    .line 15
+    iget-object v0, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
+
+    .line 16
+    .line 17
+    if-eqz v0, :cond_0
+
+    .line 18
+    .line 19
+    invoke-virtual {v0, p1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    if-eqz v0, :cond_0
+
+    .line 24
+    .line 25
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v3
+
+    .line 29
+    :cond_0
+    return-object v3
+
+    .line 30
+    :catch_0
+    move-exception v2
+
+    .line 31
+    invoke-static {v2}, LX/001;->A1V(Ljava/lang/Throwable;)Z
+
+    .line 32
+    .line 33
+    .line 34
     move-result v0
 
-    .line 6
-    return v0
-.end method
+    .line 35
+    if-eqz v0, :cond_1
 
-.method public final close()V
-    .locals 1
+    .line 36
+    .line 37
+    const-class v0, LX/0HV;
 
-    .line 0
-    iget-object v0, p0, LX/0HV;->A01:Ljava/io/FileInputStream;
+    .line 38
+    .line 39
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v1
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
+    .line 43
+    const-string v0, "Error reading <meta-data> from AndroidManifest.xml."
 
-.method public final isOpen()Z
-    .locals 1
+    .line 44
+    .line 45
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 0
-    iget-object v0, p0, LX/0HV;->A02:Ljava/nio/channels/FileChannel;
+    .line 46
+    .line 47
+    .line 48
+    return-object v3
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->isOpen()Z
+    .line 49
+    :cond_1
+    throw v2
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    .line 50
+    :catch_1
+    move-exception v2
 
-    .line 6
-    return v0
-.end method
+    .line 51
+    const-class v0, LX/0HV;
 
-.method public final read(Ljava/nio/ByteBuffer;)I
-    .locals 1
+    .line 52
+    .line 53
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 0
-    iget-object v0, p0, LX/0HV;->A02:Ljava/nio/channels/FileChannel;
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v1
 
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
+    .line 57
+    const-string v0, "Error reading <meta-data> from AndroidManifest.xml."
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    .line 58
+    .line 59
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 6
-    return v0
-.end method
-
-.method public final write(Ljava/nio/ByteBuffer;)I
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/0HV;->A02:Ljava/nio/channels/FileChannel;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
+    .line 60
+    .line 61
+    .line 62
+    return-object v3
 .end method

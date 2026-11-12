@@ -27,6 +27,9 @@
 .method public abstract enableNoiseSuppression(Z)V
 .end method
 
+.method public abstract getAudioFrame(Ljava/lang/String;III)Lcom/facebook/rsys/audio/gen/AudioFrame;
+.end method
+
 .method public abstract handleEncodedPacket(Lcom/facebook/rsys/audio/gen/AudioEncodedPacket;)V
 .end method
 
@@ -34,6 +37,9 @@
 .end method
 
 .method public abstract removeSink(Ljava/lang/String;ILcom/facebook/rsys/audio/gen/AudioSourceSink;)V
+.end method
+
+.method public abstract resetNsAecAlgorithms()V
 .end method
 
 .method public abstract setAudioActivationState(I)V

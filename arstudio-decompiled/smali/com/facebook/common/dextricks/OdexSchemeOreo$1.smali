@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0Gd;
+.implements LX/0VC;
 
 
 # direct methods
@@ -40,7 +40,7 @@
     .locals 3
 
     .line 0
-    sget-object v2, LX/0JK;->A07:LX/0JK;
+    sget-object v2, LX/0IC;->A07:LX/0IC;
 
     .line 1
     .line 2
@@ -55,7 +55,7 @@
 
     .line 6
     :try_start_0
-    iget-boolean v0, v2, LX/0JK;->A03:Z
+    iget-boolean v0, v2, LX/0IC;->A03:Z
 
     .line 7
     .line 8

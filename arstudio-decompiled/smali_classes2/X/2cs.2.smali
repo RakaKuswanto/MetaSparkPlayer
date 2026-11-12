@@ -1,17 +1,14 @@
-.class public final LX/2cs;
+.class public final LX/2cS;
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public final A01:LX/1Nw;
+# interfaces
+.implements LX/18h;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,22 +16,27 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2cs;->A01:LX/1Nw;
+    return-void
+.end method
 
-    .line 4
-    .line 5
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    .line 6
-    .line 7
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+# virtual methods
+.method public final ACC()I
+    .locals 1
 
-    .line 8
-    .line 9
-    .line 10
-    iput-object v0, p0, LX/2cs;->A00:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const/16 v0, 0x861
 
-    .line 11
-    .line 12
+    return v0
+.end method
+
+.method public final AUc(I)V
+    .locals 0
+
+    .line 0
+    invoke-static {}, LX/0X4;->A0x()V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

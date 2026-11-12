@@ -1,407 +1,293 @@
 .class public final LX/2nQ;
-.super Ljava/lang/Object;
+.super LX/2nP;
 .source ""
 
 
 # static fields
-.field public static A00:LX/2mV;
+.field public static final A03:LX/47M;
+
+.field public static final A04:LX/47M;
+
+
+# instance fields
+.field public A00:LX/2nR;
+
+.field public final A01:LX/2bO;
+
+.field public final A02:LX/1DZ;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v5, 0x4
 
     .line 1
+    invoke-static {v5}, LX/002;->A0A(I)Ljava/util/ArrayList;
+
     .line 2
     .line 3
-    return-void
-.end method
-
-.method public static final declared-synchronized A00()LX/44F;
-    .locals 2
-
-    .line 0
-    const-class v1, LX/2nQ;
-
-    .line 1
-    .line 2
-    monitor-enter v1
-
-    .line 3
-    :try_start_0
-    invoke-static {}, LX/2nQ;->A05()LX/2mV;
-
     .line 4
+    move-result-object v2
+
     .line 5
+    const/4 v4, 0x1
+
     .line 6
-    move-result-object v0
+    new-array v1, v4, [Ljava/lang/String;
 
     .line 7
-    invoke-interface {v0}, LX/2mV;->ADW()LX/44F;
-
     .line 8
+    const-string/jumbo v0, "sms"
+
     .line 9
     .line 10
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 11
-    monitor-exit v1
+    const/4 v3, 0x0
 
     .line 12
-    return-object v0
+    invoke-static {v0, v1, v3}, LX/0X5;->A0r(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
 
     .line 13
-    :catchall_0
-    move-exception v0
-
     .line 14
-    monitor-exit v1
-
     .line 15
-    throw v0
-.end method
-
-.method public static final declared-synchronized A01()LX/3II;
-    .locals 2
-
-    .line 0
-    const-class v1, LX/2nQ;
-
-    .line 1
-    .line 2
-    monitor-enter v1
-
-    .line 3
-    :try_start_0
-    invoke-static {}, LX/2nQ;->A05()LX/2mV;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    invoke-interface {v0}, LX/2mV;->ADr()LX/3II;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 11
-    monitor-exit v1
-
-    .line 12
-    return-object v0
-
-    .line 13
-    :catchall_0
-    move-exception v0
-
-    .line 14
-    monitor-exit v1
-
-    .line 15
-    throw v0
-.end method
-
-.method public static final declared-synchronized A02()LX/2yp;
-    .locals 2
-
-    .line 0
-    const-class v1, LX/2nQ;
-
-    .line 1
-    .line 2
-    monitor-enter v1
-
-    .line 3
-    :try_start_0
-    invoke-static {}, LX/2nQ;->A05()LX/2mV;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    invoke-interface {v0}, LX/2mV;->AKL()LX/2yp;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 11
-    monitor-exit v1
-
-    .line 12
-    return-object v0
-
-    .line 13
-    :catchall_0
-    move-exception v0
-
-    .line 14
-    monitor-exit v1
-
-    .line 15
-    throw v0
-.end method
-
-.method public static A03()LX/2mg;
-    .locals 2
-
-    .line 0
-    invoke-static {}, LX/2nQ;->A00()LX/44F;
-
-    .line 1
-    .line 2
-    .line 3
     move-result-object v1
 
-    .line 4
-    instance-of v0, v1, LX/44G;
-
-    .line 5
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 7
-    .line 8
-    check-cast v1, LX/44G;
-
-    .line 9
-    .line 10
-    iget-object v0, v1, LX/44G;->A00:LX/2mg;
-
-    .line 11
-    .line 12
-    return-object v0
-
-    .line 13
-    :cond_0
-    iget-object v0, v1, LX/44F;->A00:LX/2mg;
-
-    .line 14
-    .line 15
-    return-object v0
-.end method
-
-.method public static final declared-synchronized A04()LX/3wm;
-    .locals 2
-
-    .line 0
-    const-class v1, LX/2nQ;
-
-    .line 1
-    .line 2
-    monitor-enter v1
-
-    .line 3
-    :try_start_0
-    invoke-static {}, LX/2nQ;->A05()LX/2mV;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    invoke-interface {v0}, LX/2mV;->AGx()LX/3wm;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 11
-    monitor-exit v1
-
-    .line 12
-    return-object v0
-
-    .line 13
-    :catchall_0
-    move-exception v0
-
-    .line 14
-    monitor-exit v1
-
-    .line 15
-    throw v0
-.end method
-
-.method public static final declared-synchronized A05()LX/2mV;
-    .locals 2
-
-    .line 0
-    const-class v1, LX/2nQ;
-
-    .line 1
-    .line 2
-    monitor-enter v1
-
-    .line 3
-    :try_start_0
-    sget-object v0, LX/2nQ;->A00:LX/2mV;
-
-    .line 4
-    .line 5
-    if-eqz v0, :cond_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 6
-    .line 7
-    monitor-exit v1
-
-    .line 8
-    return-object v0
-
-    .line 9
-    :cond_0
-    :try_start_1
-    const-string v0, "Fresco context provider must be set"
-
-    .line 10
-    .line 11
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
     .line 16
-    :catchall_0
-    move-exception v0
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     .line 17
-    monitor-exit v1
-
     .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    if-nez v0, :cond_1
+
+    .line 21
+    .line 22
+    new-instance v0, LX/6Zq;
+
+    .line 23
+    .line 24
+    invoke-direct {v0, v1}, LX/6Zq;-><init>(Ljava/util/Collection;)V
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-static {v2, v3}, LX/47K;->A00(Ljava/util/List;Z)LX/0OC;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v2
+
+    .line 34
+    const-string/jumbo v1, "android.intent.action.VIEW"
+
+    .line 35
+    .line 36
+    .line 37
+    new-instance v0, LX/47T;
+
+    .line 38
+    .line 39
+    invoke-direct {v0, v2, v1}, LX/47T;-><init>(LX/0OC;Ljava/lang/String;)V
+
+    .line 40
+    .line 41
+    .line 42
+    sput-object v0, LX/2nQ;->A03:LX/47M;
+
+    .line 43
+    .line 44
+    invoke-static {v5}, LX/002;->A0A(I)Ljava/util/ArrayList;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v2
+
+    .line 48
+    new-array v1, v4, [Ljava/lang/String;
+
+    .line 49
+    .line 50
+    const-string/jumbo v0, "tel"
+
+    .line 51
+    .line 52
+    .line 53
+    invoke-static {v0, v1, v3}, LX/0X5;->A0r(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v1
+
+    .line 57
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    .line 58
+    .line 59
+    .line 60
+    move-result v0
+
+    .line 61
+    if-nez v0, :cond_0
+
+    .line 62
+    .line 63
+    new-instance v0, LX/6Zq;
+
+    .line 64
+    .line 65
+    invoke-direct {v0, v1}, LX/6Zq;-><init>(Ljava/util/Collection;)V
+
+    .line 66
+    .line 67
+    .line 68
+    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 69
+    .line 70
+    .line 71
+    invoke-static {v2, v3}, LX/47K;->A00(Ljava/util/List;Z)LX/0OC;
+
+    .line 72
+    .line 73
+    .line 74
+    move-result-object v2
+
+    .line 75
+    const-string/jumbo v1, "android.intent.action.DIAL"
+
+    .line 76
+    .line 77
+    .line 78
+    new-instance v0, LX/47T;
+
+    .line 79
+    .line 80
+    invoke-direct {v0, v2, v1}, LX/47T;-><init>(LX/0OC;Ljava/lang/String;)V
+
+    .line 81
+    .line 82
+    .line 83
+    sput-object v0, LX/2nQ;->A04:LX/47M;
+
+    .line 84
+    .line 85
+    return-void
+
+    .line 86
+    :cond_0
+    const-string v0, "Cannot set 0 schemes"
+
+    .line 87
+    .line 88
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 89
+    .line 90
+    .line 91
+    move-result-object v0
+
+    .line 92
+    throw v0
+
+    .line 93
+    :cond_1
+    const-string v0, "Cannot set 0 schemes"
+
+    .line 94
+    .line 95
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 96
+    .line 97
+    .line 98
+    move-result-object v0
+
+    .line 99
     throw v0
 .end method
 
-.method public static final declared-synchronized A06(LX/2mV;)V
+.method public constructor <init>()V
     .locals 3
 
     .line 0
-    const-class v2, LX/2nQ;
+    invoke-direct {p0}, LX/2nP;-><init>()V
 
     .line 1
     .line 2
-    monitor-enter v2
-
     .line 3
-    :try_start_0
-    const/4 v0, 0x0
+    sget v1, LX/2I6;->ACb:I
 
     .line 4
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 5
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
     .line 6
     .line 7
-    sget-object v0, LX/2nQ;->A00:LX/2mV;
-
     .line 8
+    move-result-object v0
+
     .line 9
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 10
     .line 11
-    const-string v1, "FrescoVitoProvider"
-
     .line 12
+    move-result-object v2
+
     .line 13
-    const-string v0, "Fresco Vito already initialized! Vito must be initialized only once."
+    check-cast v2, LX/2nR;
 
     .line 14
     .line 15
-    invoke-static {v1, v0}, LX/0I5;->A07(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {}, LX/2nP;->A00()LX/2bO;
 
     .line 16
     .line 17
     .line 18
-    :cond_0
-    sput-object p0, LX/2nQ;->A00:LX/2mV;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v1
 
     .line 19
-    .line 20
-    monitor-exit v2
+    sget v0, LX/2I6;->ACV:I
 
+    .line 20
     .line 21
-    return-void
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 22
-    :catchall_0
-    move-exception v0
-
     .line 23
-    monitor-exit v2
-
     .line 24
-    throw v0
-.end method
+    move-result-object v0
 
-.method public static final declared-synchronized A07()Z
-    .locals 2
+    .line 25
+    check-cast v0, LX/1DZ;
 
-    .line 0
-    const-class v1, LX/2nQ;
+    .line 26
+    .line 27
+    iput-object v2, p0, LX/2nQ;->A00:LX/2nR;
 
-    .line 1
-    .line 2
-    monitor-enter v1
+    .line 28
+    .line 29
+    iput-object v1, p0, LX/2nQ;->A01:LX/2bO;
 
-    .line 3
-    :try_start_0
-    sget-object v0, LX/2nQ;->A00:LX/2mV;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 30
+    .line 31
+    iput-object v0, p0, LX/2nQ;->A02:LX/1DZ;
 
-    .line 4
-    .line 5
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
-
-    .line 6
-    .line 7
-    .line 8
-    move-result v0
-
-    .line 9
-    monitor-exit v1
-
-    .line 10
-    return v0
-
-    .line 11
-    :catchall_0
-    move-exception v0
-
-    .line 12
-    monitor-exit v1
-
-    .line 13
-    throw v0
+    .line 32
+    .line 33
+    return-void
 .end method

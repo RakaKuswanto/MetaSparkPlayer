@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLInstantGamesGenericDialogTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLInstantGamesGenericDialogTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x33
+    const/16 v0, 0x35
 
     .line 1
     .line 2
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "COMMUNITY_HUD"
+    const-string v0, "CLOUD_GAME_DEPRECATION_USER_NOTICE"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "CONTEXT_CHOOSE"
+    const-string v0, "COMMUNITY_HUD"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "CONTEXT_CREATE"
+    const-string v0, "CONTEXT_CHOOSE"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "CONTEXT_SOLO_SWITCH"
+    const-string v0, "CONTEXT_CREATE"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "CONTEXT_SWITCH"
+    const-string v0, "CONTEXT_SOLO_SWITCH"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "CONTEXT_SWITCHER"
+    const-string v0, "CONTEXT_SWITCH"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "CONTEXT_SWITCH_AFTER_SHARE"
+    const-string v0, "CONTEXT_SWITCHER"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "CREATE_GAMING_SQUAD"
+    const-string v0, "CONTEXT_SWITCH_AFTER_SHARE"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "CROSS_PLAY_MIGRATION_DIALOG"
+    const-string v0, "CREATE_GAMING_SQUAD"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "CUSTOM_INVITE"
+    const-string v0, "CROSS_PLAY_MIGRATION_DIALOG"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "CUSTOM_LINK_SHARE"
+    const-string v0, "CUSTOM_INVITE"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "CUSTOM_SHARE"
+    const-string v0, "CUSTOM_LINK_SHARE"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "CUSTOM_UPDATE_MESSAGING_CONSENT"
+    const-string v0, "CUSTOM_SHARE"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "CUSTOM_UPDATE_SHARE_AS_MESSAGE"
+    const-string v0, "CUSTOM_UPDATE_MESSAGING_CONSENT"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "ERROR"
+    const-string v0, "CUSTOM_UPDATE_SHARE_AS_MESSAGE"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "FOLLOW_PAGE"
+    const-string v0, "ERROR"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "FRIEND_FINDER"
+    const-string v0, "FOLLOW_PAGE"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "GAME_GENERAL_STATUS"
+    const-string v0, "FRIEND_FINDER"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "GAME_REQUESTS"
+    const-string v0, "GAME_GENERAL_STATUS"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "GAME_SHARE"
+    const-string v0, "GAME_REQUESTS"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "GAME_SWITCH"
+    const-string v0, "GAME_SHARE"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "GAME_SWITCH_NATIVE"
+    const-string v0, "GAME_SWITCH"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "GENERAL_GAME_SHARE"
+    const-string v0, "GAME_SWITCH_NATIVE"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "INTERNAL_E2E_TEST_GENERIC_DIALOG"
+    const-string v0, "GENERAL_GAME_SHARE"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "IN_APP_PURCHASE"
+    const-string v0, "INTERNAL_E2E_TEST_GENERIC_DIALOG"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "IN_APP_PURCHASE_SUBSCRIPTION"
+    const-string v0, "IN_APP_PURCHASE"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "JOIN_GAMING_SQUAD"
+    const-string v0, "IN_APP_PURCHASE_SUBSCRIPTION"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "JOIN_GROUP"
+    const-string v0, "JOIN_GAMING_SQUAD"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "LEAVE_GAMING_SQUAD"
+    const-string v0, "JOIN_GROUP"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "LIKE"
+    const-string v0, "LEAVE_GAMING_SQUAD"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "LIVE_STREAMS"
+    const-string v0, "LIKE"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "MATCH_MAKING"
+    const-string v0, "LIVE_STREAMS"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "MATCH_PLAYER"
+    const-string v0, "MATCH_MAKING"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "MEDIA_ASSET"
+    const-string v0, "MATCH_PLAYER"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "MULTI_TOUCH_OVERLAY_TUTORIAL"
+    const-string v0, "MEDIA_ASSET"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "NAV_BAR"
+    const-string v0, "MULTI_TOUCH_OVERLAY_TUTORIAL"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "OBA_TOAST"
+    const-string v0, "NAV_BAR"
 
     .line 227
     .line 228
@@ -484,7 +484,7 @@
 
     .line 231
     .line 232
-    const-string v0, "OPEN_EXTERNAL_LINK"
+    const-string v0, "OBA_TOAST"
 
     .line 233
     .line 234
@@ -496,7 +496,7 @@
 
     .line 237
     .line 238
-    const-string v0, "PLAY_IN_CALLS_CUSTOM_UPDATE_CONSENT"
+    const-string v0, "OPEN_EXTERNAL_LINK"
 
     .line 239
     .line 240
@@ -508,7 +508,7 @@
 
     .line 243
     .line 244
-    const-string v0, "POST_LIVE"
+    const-string v0, "PLAY_IN_CALLS_CUSTOM_UPDATE_CONSENT"
 
     .line 245
     .line 246
@@ -520,7 +520,7 @@
 
     .line 249
     .line 250
-    const-string v0, "POST_USER_ACHIEVEMENT"
+    const-string v0, "POST_LIVE"
 
     .line 251
     .line 252
@@ -532,7 +532,7 @@
 
     .line 255
     .line 256
-    const-string v0, "REGISTER_ARENA"
+    const-string v0, "POST_USER_ACHIEVEMENT"
 
     .line 257
     .line 258
@@ -544,7 +544,7 @@
 
     .line 261
     .line 262
-    const-string v0, "SHARE_TOURNAMENT"
+    const-string v0, "REGISTER_ARENA"
 
     .line 263
     .line 264
@@ -556,7 +556,7 @@
 
     .line 267
     .line 268
-    const-string v0, "SHORTCUT"
+    const-string v0, "SBX_GENERAL_ONBOARDING"
 
     .line 269
     .line 270
@@ -568,7 +568,7 @@
 
     .line 273
     .line 274
-    const-string v0, "SUBSCRIBE_BOT"
+    const-string v0, "SHARE_TOURNAMENT"
 
     .line 275
     .line 276
@@ -580,7 +580,7 @@
 
     .line 279
     .line 280
-    const-string v0, "TOS_SCREEN"
+    const-string v0, "SHORTCUT"
 
     .line 281
     .line 282
@@ -592,7 +592,7 @@
 
     .line 285
     .line 286
-    const-string v0, "TOURNAMENT_CREATE"
+    const-string v0, "SUBSCRIBE_BOT"
 
     .line 287
     .line 288
@@ -604,7 +604,7 @@
 
     .line 291
     .line 292
-    const-string v0, "TOURNAMENT_STATUS"
+    const-string v0, "TOS_SCREEN"
 
     .line 293
     .line 294
@@ -616,22 +616,46 @@
 
     .line 297
     .line 298
-    const-string v0, "VIDEO_PLAYER"
+    const-string v0, "TOURNAMENT_CREATE"
 
     .line 299
     .line 300
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 301
     .line 302
-    .line 303
-    move-result-object v0
+    const/16 v1, 0x33
 
+    .line 303
     .line 304
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGamesGenericDialogTypeSet;->A00:Ljava/util/Set;
+    const-string v0, "TOURNAMENT_STATUS"
 
     .line 305
     .line 306
+    aput-object v0, v2, v1
+
+    .line 307
+    .line 308
+    const/16 v1, 0x34
+
+    .line 309
+    .line 310
+    const-string v0, "VIDEO_PLAYER"
+
+    .line 311
+    .line 312
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 313
+    .line 314
+    .line 315
+    move-result-object v0
+
+    .line 316
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGamesGenericDialogTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 317
+    .line 318
     return-void
 .end method
 
@@ -647,11 +671,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGamesGenericDialogTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGamesGenericDialogTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

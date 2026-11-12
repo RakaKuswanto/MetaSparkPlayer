@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5JA;
+.implements LX/5AJ;
 
 
 # instance fields
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public final ABe()Lcom/facebook/onecamera/components/arcore/alwayson/recording/interfaces/PlatformAlgorithmAlwaysOnDataSource;
+.method public final AAC()Lcom/facebook/onecamera/components/arcore/alwayson/recording/interfaces/PlatformAlgorithmAlwaysOnDataSource;
     .locals 1
 
     .line 0
@@ -42,7 +42,7 @@
     return-object v0
 .end method
 
-.method public run(Lcom/google/ar/core/Session;Lcom/google/ar/core/Frame;LX/5JD;LX/5JE;)V
+.method public run(Lcom/google/ar/core/Session;Lcom/google/ar/core/Frame;LX/5AM;LX/5AN;)V
     .locals 10
 
     .line 0
@@ -79,11 +79,11 @@
     .line 15
     .line 16
     .line 17
-    sget-object v4, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataKeys;->ARCORE_NATIVE_FRAME_KEY:LX/5Je;
+    sget-object v4, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataKeys;->ARCORE_NATIVE_FRAME_KEY:LX/5Am;
 
     .line 18
     .line 19
-    iget-object v7, p3, LX/5JD;->A00:Ljava/util/HashMap;
+    iget-object v7, p3, LX/5AM;->A00:Ljava/util/HashMap;
 
     .line 20
     .line 21
@@ -111,15 +111,15 @@
     const/4 v8, 0x1
 
     .line 33
-    iget-boolean v6, p4, LX/5JE;->A02:Z
+    iget-boolean v6, p4, LX/5AN;->A02:Z
 
     .line 34
     .line 35
-    iget-boolean v5, p4, LX/5JE;->A01:Z
+    iget-boolean v5, p4, LX/5AN;->A01:Z
 
     .line 36
     .line 37
-    iget-boolean v4, p4, LX/5JE;->A00:Z
+    iget-boolean v4, p4, LX/5AN;->A00:Z
 
     .line 38
     .line 39
@@ -142,7 +142,7 @@
     .line 47
     .line 48
     .line 49
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataKeys;->ARCORE_ALWAYS_ON_DATA_SOURCE:LX/5Je;
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataKeys;->ARCORE_ALWAYS_ON_DATA_SOURCE:LX/5Am;
 
     .line 50
     .line 51
@@ -155,7 +155,7 @@
     .line 54
     .line 55
     .line 56
-    sget-object v2, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataKeys;->ARCORE_FRAME_TIMESTAMP:LX/5Je;
+    sget-object v2, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataKeys;->ARCORE_FRAME_TIMESTAMP:LX/5Am;
 
     .line 57
     .line 58
@@ -167,7 +167,7 @@
     move-result-wide v0
 
     .line 62
-    invoke-static {v2, v7, v0, v1}, LX/0Ye;->A1N(Ljava/lang/Object;Ljava/util/AbstractMap;J)V
+    invoke-static {v2, v7, v0, v1}, LX/0X4;->A1B(Ljava/lang/Object;Ljava/util/AbstractMap;J)V
 
     .line 63
     .line 64

@@ -1,17 +1,8 @@
-.class public abstract LX/0B7;
-.super Landroid/content/BroadcastReceiver;
+.class public interface abstract LX/0B7;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract AQk()V
 .end method

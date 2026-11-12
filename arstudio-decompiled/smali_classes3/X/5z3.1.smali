@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract ATU()V
+.method public abstract AYw(IIIIZ)V
 .end method

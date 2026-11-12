@@ -3,138 +3,95 @@
 .source ""
 
 
-# instance fields
-.field public A00:F
-
-.field public A01:J
-
-.field public A02:Ljava/util/ArrayList;
-
-.field public A03:Ljava/util/Map;
+# static fields
+.field public static A00:F = -1.0f
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static final A00()F
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v1, LX/4sH;->A00:F
 
     .line 1
     .line 2
-    .line 3
     const/4 v0, 0x0
 
-    .line 4
-    iput-object v0, p0, LX/4sH;->A03:Ljava/util/Map;
-
-    .line 5
-    .line 6
-    iput-object v0, p0, LX/4sH;->A02:Ljava/util/ArrayList;
-
-    .line 7
-    .line 8
-    const-wide/16 v0, 0x0
-
-    .line 9
-    .line 10
-    iput-wide v0, p0, LX/4sH;->A01:J
-
-    .line 11
-    .line 12
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A02(Ljava/lang/String;)LX/4sH;
-    .locals 6
-
-    .line 0
-    iget-object v0, p0, LX/4sH;->A03:Ljava/util/Map;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
     .line 3
-    .line 4
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    cmpg-float v0, v1, v0
 
+    .line 4
     .line 5
+    if-gez v0, :cond_0
+
     .line 6
     .line 7
-    move-result-object v0
+    const/16 v0, 0x1f02
 
     .line 8
-    check-cast v0, LX/4sH;
-
     .line 9
-    .line 10
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetString(I)Ljava/lang/String;
 
+    .line 10
     .line 11
     .line 12
-    return-object v0
+    move-result-object v2
 
     .line 13
-    :cond_0
-    const-string v5, "Tried to get non-existent input \'"
+    invoke-static {v2}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 14
     .line 15
-    const-string v4, "\'. Node only has these inputs: "
-
     .line 16
+    const-string v1, " "
+
     .line 17
-    iget-object v0, p0, LX/4sH;->A03:Ljava/util/Map;
-
     .line 18
+    new-instance v0, LX/3Gx;
+
     .line 19
-    if-nez v0, :cond_1
-
     .line 20
-    .line 21
-    const-string v0, "[]"
+    invoke-direct {v0, v1}, LX/3Gx;-><init>(Ljava/lang/String;)V
 
+    .line 21
     .line 22
     .line 23
-    :goto_0
-    invoke-static {v5, p1, v4, v0}, LX/00I;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v1, 0x0
 
     .line 24
+    invoke-virtual {v0, v2}, LX/3Gx;->A02(Ljava/lang/CharSequence;)Ljava/util/List;
+
     .line 25
     .line 26
-    move-result-object v0
-
     .line 27
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    move-result-object v0
 
     .line 28
+    invoke-static {v0, v1}, LX/0X4;->A1b(Ljava/util/List;I)[Ljava/lang/String;
+
     .line 29
     .line 30
-    move-result-object v0
-
     .line 31
-    throw v0
+    move-result-object v2
 
     .line 32
-    :cond_1
-    invoke-static {v0}, LX/0Ye;->A0a(Ljava/util/Map;)Ljava/util/Iterator;
+    array-length v1, v2
 
     .line 33
-    .line 34
-    .line 35
-    move-result-object v3
+    const/4 v0, 0x2
 
+    .line 34
+    if-le v1, v0, :cond_0
+
+    .line 35
     .line 36
-    const-string v2, ""
+    :try_start_0
+    aget-object v0, v2, v0
 
     .line 37
     .line 38
-    :cond_2
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     .line 39
     .line 40
@@ -142,81 +99,17 @@
     move-result v0
 
     .line 42
-    if-eqz v0, :cond_3
+    sput v0, LX/4sH;->A00:F
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 43
     .line 44
-    const-string v1, "\'"
+    :catch_0
+    :cond_0
+    sget v0, LX/4sH;->A00:F
 
     .line 45
     .line 46
-    invoke-static {v3}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    invoke-static {v2, v1, v0, v1}, LX/00I;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 51
-    .line 52
-    .line 53
-    move-result-object v2
-
-    .line 54
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 55
-    .line 56
-    .line 57
-    move-result v0
-
-    .line 58
-    if-nez v0, :cond_2
-
-    .line 59
-    .line 60
-    const-string v1, ", "
-
-    .line 61
-    .line 62
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 67
-    .line 68
-    .line 69
-    move-result-object v2
-
-    .line 70
-    goto :goto_1
-
-    .line 71
-    :cond_3
-    const-string v1, "["
-
-    .line 72
-    .line 73
-    const-string v0, "]"
-
-    .line 74
-    .line 75
-    invoke-static {v1, v2, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v0
-
-    .line 79
-    goto :goto_0
+    return v0
 .end method

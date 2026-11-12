@@ -19,21 +19,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    const/16 v0, 0x63
 
     .line 1
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
-
     .line 2
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/auth/protocol/InstagramUserInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -50,7 +51,7 @@
 
     .line 4
     .line 5
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 6
     .line 7

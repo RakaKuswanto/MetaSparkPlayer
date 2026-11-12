@@ -17,7 +17,7 @@
 
 .field public final A01:J
 
-.field public final A02:LX/1QX;
+.field public final A02:LX/1bd;
 
 .field public final A03:Ljava/lang/String;
 
@@ -40,11 +40,11 @@
 
     .line 6
     .line 7
-    const/16 v0, 0x5a
+    const/16 v0, 0x57
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 10
     .line 11
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1QX;Ljava/lang/String;JJ)V
+.method public constructor <init>(LX/1bd;Ljava/lang/String;JJ)V
     .locals 0
 
     .line 0
@@ -68,7 +68,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1QX;
+    iput-object p1, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1bd;
 
     .line 4
     .line 5
@@ -87,7 +87,7 @@
     return-void
 .end method
 
-.method public static A01(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+.method public static A00(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/String;Ljava/lang/StringBuilder;)V
     .locals 1
 
     .line 0
@@ -96,7 +96,7 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1QX;
+    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1bd;
 
     .line 4
     .line 5
@@ -144,7 +144,7 @@
     return-void
 .end method
 
-.method public static A02(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/StringBuilder;)V
+.method public static A01(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/StringBuilder;)V
     .locals 2
 
     .line 0
@@ -161,7 +161,7 @@
     .line 5
     .line 6
     .line 7
-    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1QX;
+    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1bd;
 
     .line 8
     .line 9
@@ -232,28 +232,85 @@
     return-void
 .end method
 
-.method public static A03(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/StringBuilder;)V
-    .locals 1
+.method public static A02(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/StringBuilder;)V
+    .locals 2
 
     .line 0
-    iget-wide v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A01:J
+    const/16 v1, 0x27
 
     .line 1
     .line 2
-    invoke-virtual {p1, v0, p0}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v0, ", type="
 
     .line 3
     .line 4
-    .line 5
-    const-string v0, ", createdAtTs="
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     .line 6
     .line 7
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1bd;
 
     .line 8
     .line 9
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     .line 10
+    .line 11
+    .line 12
+    const-string v0, ", iabSessionId=\'"
+
+    .line 13
+    .line 14
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 15
+    .line 16
+    .line 17
+    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A03:Ljava/lang/String;
+
+    .line 18
+    .line 19
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 23
+    .line 24
+    .line 25
+    const-string v0, ", eventTs="
+
+    .line 26
+    .line 27
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 28
+    .line 29
+    .line 30
+    return-void
+.end method
+
+.method public static A03(Ljava/lang/StringBuilder;J)V
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, ", createdAtTs="
+
+    .line 4
+    .line 5
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 6
+    .line 7
+    .line 8
     return-void
 .end method
 
@@ -271,11 +328,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1QX;
+    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1bd;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/1QX;->value:Ljava/lang/String;
+    iget-object v0, v0, LX/1bd;->value:Ljava/lang/String;
 
     .line 3
     .line 4

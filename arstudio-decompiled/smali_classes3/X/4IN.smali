@@ -1,123 +1,156 @@
 .class public final LX/4IN;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source ""
-
-# interfaces
-.implements LX/4HA;
 
 
 # instance fields
-.field public A00:LX/4GN;
+.field public final synthetic A00:I
 
-.field public A01:LX/4DB;
+.field public final synthetic A01:I
+
+.field public final synthetic A02:Landroid/view/View;
+
+.field public final synthetic A03:Landroid/view/ViewPropertyAnimator;
+
+.field public final synthetic A04:LX/4IR;
+
+.field public final synthetic A05:LX/4nS;
 
 
 # direct methods
-.method public constructor <init>(LX/4GN;LX/4DB;)V
+.method public constructor <init>(Landroid/view/View;Landroid/view/ViewPropertyAnimator;LX/4IR;LX/4nS;II)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, LX/4IN;->A04:LX/4IR;
 
     .line 1
     .line 2
+    iput-object p4, p0, LX/4IN;->A05:LX/4nS;
+
     .line 3
-    iput-object p1, p0, LX/4IN;->A00:LX/4GN;
-
     .line 4
-    .line 5
-    iput-object p2, p0, LX/4IN;->A01:LX/4DB;
+    iput p5, p0, LX/4IN;->A00:I
 
+    .line 5
     .line 6
+    iput-object p1, p0, LX/4IN;->A02:Landroid/view/View;
+
     .line 7
+    .line 8
+    iput p6, p0, LX/4IN;->A01:I
+
+    .line 9
+    .line 10
+    iput-object p2, p0, LX/4IN;->A03:Landroid/view/ViewPropertyAnimator;
+
+    .line 11
+    .line 12
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    .line 13
+    .line 14
+    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final AGm(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
     .line 0
-    const v0, 0x7f080c66
+    iget v0, p0, LX/4IN;->A00:I
 
     .line 1
     .line 2
+    const/4 v1, 0x0
+
     .line 3
-    invoke-static {p1, v0}, LX/4F2;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    if-eqz v0, :cond_0
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    iget-object v0, p0, LX/4IN;->A02:Landroid/view/View;
 
+    .line 6
     .line 7
-    return-object v0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    .line 8
+    .line 9
+    .line 10
+    :cond_0
+    iget v0, p0, LX/4IN;->A01:I
+
+    .line 11
+    .line 12
+    if-eqz v0, :cond_1
+
+    .line 13
+    .line 14
+    iget-object v0, p0, LX/4IN;->A02:Landroid/view/View;
+
+    .line 15
+    .line 16
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_1
+    return-void
 .end method
 
-.method public final AJL()Landroid/view/View$OnClickListener;
-    .locals 1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
 
     .line 0
-    const/16 v0, 0x1c
+    iget-object v1, p0, LX/4IN;->A03:Landroid/view/ViewPropertyAnimator;
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/6PP;->A00(Ljava/lang/Object;I)LX/6PP;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final AJa(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .line 0
-    const v0, 0x7f080c63
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {p1, v0}, LX/4F2;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    return-object v0
-.end method
-
-.method public final AMd()I
-    .locals 1
-
-    .line 0
-    const v0, 0x7f120026
-
-    .line 1
-    .line 2
-    .line 3
-    return v0
-.end method
-
-.method public final synthetic AQ9()Z
-    .locals 1
-
-    .line 0
     const/4 v0, 0x0
 
-    .line 1
-    return v0
+    .line 3
+    invoke-virtual {v1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v2, p0, LX/4IN;->A04:LX/4IR;
+
+    .line 7
+    .line 8
+    iget-object v1, p0, LX/4IN;->A05:LX/4nS;
+
+    .line 9
+    .line 10
+    invoke-virtual {v2, v1}, LX/4nX;->A07(LX/4nS;)V
+
+    .line 11
+    .line 12
+    .line 13
+    iget-object v0, v2, LX/4IR;->A04:Ljava/util/ArrayList;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {v2}, LX/4IR;->A0C()V
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
 .end method
 
-.method public final AaL(Ljava/lang/String;)V
+.method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
+    .line 0
     return-void
 .end method

@@ -1,50 +1,29 @@
-.class public final synthetic LX/5r5;
+.class public interface abstract LX/5r5;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
 .implements Ljava/lang/Runnable;
+.implements LX/5rB;
+.implements LX/0MT;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SurfaceVideoEncoderImpl$$ExternalSyntheticLambda1"
-
-
-# instance fields
-.field public final synthetic A00:Landroid/os/Handler;
-
-.field public final synthetic A01:LX/5ow;
-
-.field public final synthetic A02:LX/5qv;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroid/os/Handler;LX/5ow;LX/5qv;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p3, p0, LX/5r5;->A02:LX/5qv;
-
-    iput-object p2, p0, LX/5r5;->A01:LX/5ow;
-
-    iput-object p1, p0, LX/5r5;->A00:Landroid/os/Handler;
-
-    return-void
-.end method
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CombinedTask"
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public abstract A5J()LX/5r1;
+.end method
 
-    iget-object v2, p0, LX/5r5;->A02:LX/5qv;
+.method public abstract A8f()LX/5ql;
+.end method
 
-    iget-object v1, p0, LX/5r5;->A01:LX/5ow;
+.method public abstract AKD()J
+.end method
 
-    iget-object v0, p0, LX/5r5;->A00:Landroid/os/Handler;
+.method public abstract Aio()Ljava/lang/Object;
+.end method
 
-    invoke-virtual {v2, v1, v0}, LX/5qv;->A06(LX/5ow;Landroid/os/Handler;)V
-
-    return-void
+.method public abstract Ajy(LX/5r1;)V
 .end method

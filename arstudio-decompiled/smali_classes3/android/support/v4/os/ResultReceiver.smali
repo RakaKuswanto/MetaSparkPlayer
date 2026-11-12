@@ -23,11 +23,11 @@
 
     .line 1
     .line 2
-    new-instance v0, LX/1PM;
+    new-instance v0, LX/2Nf;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/1PM;-><init>(I)V
+    invoke-direct {v0, v1}, LX/2Nf;-><init>(I)V
 
     .line 5
     .line 6

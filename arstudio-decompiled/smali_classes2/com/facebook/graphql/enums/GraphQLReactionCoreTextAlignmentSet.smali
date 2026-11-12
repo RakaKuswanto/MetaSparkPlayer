@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLReactionCoreTextAlignmentSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLReactionCoreTextAlignmentSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yc;->A06()Ljava/util/HashSet;
+    invoke-static {}, LX/1fN;->A00()Ljava/util/HashSet;
 
     .line 1
     .line 2
@@ -20,7 +20,7 @@
     move-result-object v0
 
     .line 4
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLReactionCoreTextAlignmentSet;->A00:Ljava/util/Set;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLReactionCoreTextAlignmentSet;->A00:Ljava/util/HashSet;
 
     .line 5
     .line 6
@@ -39,11 +39,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLReactionCoreTextAlignmentSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLReactionCoreTextAlignmentSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

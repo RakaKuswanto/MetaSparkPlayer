@@ -7,7 +7,7 @@
 .method public abstract closeSession()V
 .end method
 
-.method public abstract registerListener(LX/5Ve;)V
+.method public abstract registerListener(LX/689;)V
 .end method
 
 .method public abstract updateFrame(JJLcom/facebook/onecamera/components/arcore/alwayson/recording/interfaces/PlatformAlgorithmAlwaysOnDataSource;)V

@@ -1,56 +1,33 @@
-.class public final synthetic LX/63f;
+.class public final LX/63F;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "VideoRendererEventListener$EventDispatcher$$ExternalSyntheticLambda4"
-
 
 # instance fields
-.field public final synthetic A00:LX/62Y;
+.field public A00:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/WorldTrackerDataProviderConfigWithSlam;
 
-.field public final synthetic A01:LX/62r;
+.field public A01:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfig;
+
+.field public A02:Lcom/facebook/cameracore/mediapipeline/dataproviders/framebrightness/interfaces/FrameBrightnessDataProviderConfig;
+
+.field public A03:Lcom/facebook/cameracore/mediapipeline/dataproviders/handtracking/interfaces/HandTrackingDataProviderConfig;
+
+.field public A04:Lcom/facebook/cameracore/mediapipeline/dataproviders/slam/interfaces/SlamLibraryProvider;
+
+.field public A05:Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;
+
+.field public A06:Lcom/facebook/cameracore/mediapipeline/sessionreplay/interfaces/SessionReplayConfig;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/62Y;LX/62r;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, LX/63f;->A01:LX/62r;
-
-    iput-object p1, p0, LX/63f;->A00:LX/62Y;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
     .line 0
-    iget-object v0, p0, LX/63f;->A01:LX/62r;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/63f;->A00:LX/62Y;
-
     .line 3
-    .line 4
-    iget-object v0, v0, LX/62r;->A01:LX/63g;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, v1}, LX/63g;->Aeq(LX/62Y;)V
-
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method

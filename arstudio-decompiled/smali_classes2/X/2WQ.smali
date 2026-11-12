@@ -1,59 +1,69 @@
-.class public LX/2WQ;
-.super Ljava/lang/Object;
+.class public final LX/2WQ;
+.super LX/4ei;
 .source ""
 
 
+# static fields
+.field public static final A00:LX/2WQ;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/2WQ;
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
+    invoke-direct {v0}, LX/2WQ;-><init>()V
 
-
-# virtual methods
-.method public A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-    .locals 3
-
-    .line 0
-    const/4 v2, 0x0
-
-    .line 1
-    invoke-static {p1, p2}, LX/0Yd;->A1Z(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 2
     .line 3
     .line 4
-    move-result v0
-
     .line 5
-    sget-object v1, LX/2Hp;->A00:Ljava/lang/reflect/Method;
+    sput-object v0, LX/2WQ;->A00:LX/2WQ;
 
     .line 6
     .line 7
-    if-eqz v1, :cond_0
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 4
+
+    .line 0
+    sget-object v3, LX/6de;->NONE:LX/6de;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/2W9;
+
+    .line 3
+    .line 4
+    invoke-direct {v0}, LX/2W9;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    const/4 v2, 0x0
 
     .line 8
+    new-instance v1, LX/4c9;
+
     .line 9
-    new-array v0, v0, [Ljava/lang/Object;
-
     .line 10
-    .line 11
-    aput-object p2, v0, v2
+    invoke-direct {v1, v2, v0}, LX/4c9;-><init>(LX/4fk;LX/4b8;)V
 
+    .line 11
     .line 12
     .line 13
-    invoke-virtual {v1, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, -0x1
 
     .line 14
+    invoke-direct {p0, v1, v3, v2, v0}, LX/4ei;-><init>(LX/4c9;LX/6de;[Ljava/lang/Object;I)V
+
     .line 15
     .line 16
-    :cond_0
+    .line 17
     return-void
 .end method

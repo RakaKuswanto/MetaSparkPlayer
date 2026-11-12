@@ -18,12 +18,12 @@
 
 
 # virtual methods
-.method public deserialize(Ljava/lang/Object;LX/27m;LX/2DN;)V
+.method public deserialize(Ljava/lang/Object;LX/3oD;LX/6HS;)V
     .locals 1
 
     .line 0
     :try_start_0
-    invoke-static {p2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 1
     .line 2
@@ -31,7 +31,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {p0, v0, p1}, LX/0Yf;->A0y(Lcom/facebook/common/json/FbJsonField;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p0, v0, p1}, LX/0X3;->A17(Lcom/facebook/common/json/FbJsonField;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 5
     .line 6
@@ -45,13 +45,18 @@
     move-exception v0
 
     .line 9
-    invoke-static {v0}, LX/0Yg;->A1F(Ljava/lang/Throwable;)V
+    invoke-static {v0}, LX/0X4;->A1E(Ljava/lang/Throwable;)V
 
     .line 10
     .line 11
     .line 12
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
     throw v0
 .end method

@@ -1,264 +1,561 @@
-.class public final LX/1Zq;
+.class public final LX/1zq;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/1Zg;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AuthOperations$OpenIDAuthOperation"
-
 
 # instance fields
-.field public final A00:Lcom/facebook/auth/credentials/OpenIDLoginCredentials;
+.field public final A00:LX/0RP;
 
-.field public final A01:Ljava/lang/Integer;
+.field public final A01:LX/0RP;
 
-.field public final A02:Ljava/lang/String;
+.field public final A02:LX/0RP;
 
-.field public final A03:Ljava/util/List;
+.field public final A03:LX/0RP;
 
-.field public final synthetic A04:LX/1v6;
+.field public final A04:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/auth/credentials/OpenIDLoginCredentials;LX/1v6;Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p2, p0, LX/1Zq;->A04:LX/1v6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 3
+    sget v0, LX/2I6;->ABW:I
+
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/1zq;->A00:LX/0RP;
+
+    .line 10
+    .line 11
+    invoke-static {}, LX/0lf;->A0B()LX/0lf;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    iput-object v0, p0, LX/1zq;->A01:LX/0RP;
+
+    .line 16
+    .line 17
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    iput-object v0, p0, LX/1zq;->A02:LX/0RP;
+
+    .line 22
+    .line 23
+    invoke-static {}, LX/0lf;->A01()LX/0lf;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    iput-object v0, p0, LX/1zq;->A03:LX/0RP;
+
+    .line 28
+    .line 29
+    sget-object v0, LX/3Ff;->A00:LX/0li;
+
+    .line 30
+    .line 31
+    iput-object v0, p0, LX/1zq;->A04:LX/0RP;
+
+    .line 32
+    .line 33
+    return-void
+.end method
+
+.method public static A00(LX/1zq;LX/1zs;Ljava/lang/String;)V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/1zq;->A02:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 3
     .line 4
     .line 5
-    iput-object p1, p0, LX/1Zq;->A00:Lcom/facebook/auth/credentials/OpenIDLoginCredentials;
+    move-result-object v2
 
     .line 6
-    .line 7
-    iput-object p3, p0, LX/1Zq;->A01:Ljava/lang/Integer;
+    const-wide v0, 0x81042400012969L
 
+    .line 7
     .line 8
     .line 9
-    iput-object p5, p0, LX/1Zq;->A03:Ljava/util/List;
-
     .line 10
     .line 11
-    iput-object p4, p0, LX/1Zq;->A02:Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/302;->A0L(Ljava/lang/Object;J)Z
 
     .line 12
     .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 16
+    .line 17
+    sget v0, LX/2I6;->A5M:I
+
+    .line 18
+    .line 19
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 20
+    .line 21
+    .line 22
+    iget-object v0, p0, LX/1zq;->A01:LX/0RP;
+
+    .line 23
+    .line 24
+    invoke-static {v0}, LX/0X5;->A0B(LX/0RP;)LX/0B4;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v1
+
+    .line 28
+    const-string/jumbo v0, "family_device_id_client_library_usage_event"
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-interface {v1, v0}, LX/0B4;->A2Y(Ljava/lang/String;)LX/0B8;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v2
+
+    .line 35
+    invoke-interface {v2}, LX/0B8;->isSampled()Z
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v0
+
+    .line 39
+    if-eqz v0, :cond_0
+
+    .line 40
+    .line 41
+    invoke-virtual {p1}, LX/1zs;->getUsecasename()Ljava/lang/String;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v1
+
+    .line 45
+    const-string/jumbo v0, "use_case_name"
+
+    .line 46
+    .line 47
+    .line 48
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    invoke-virtual {p1}, LX/1zs;->getShouldholdout()Z
+
+    .line 52
+    .line 53
+    .line 54
+    move-result v0
+
+    .line 55
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 56
+    .line 57
+    .line 58
+    move-result-object v1
+
+    .line 59
+    const-string/jumbo v0, "should_holdout"
+
+    .line 60
+    .line 61
+    .line 62
+    invoke-interface {v2, v0, v1}, LX/0B8;->A2l(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 63
+    .line 64
+    .line 65
+    invoke-virtual {p1}, LX/1zs;->getHoldouttype()LX/1zp;
+
+    .line 66
+    .line 67
+    .line 68
+    move-result-object v0
+
+    .line 69
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 70
+    .line 71
+    .line 72
+    move-result-object v1
+
+    .line 73
+    const-string/jumbo v0, "holdout_type"
+
+    .line 74
+    .line 75
+    .line 76
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 77
+    .line 78
+    .line 79
+    const-string/jumbo v0, "function_name"
+
+    .line 80
+    .line 81
+    .line 82
+    invoke-interface {v2, v0, p2}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 83
+    .line 84
+    .line 85
+    invoke-interface {v2}, LX/0B8;->AQk()V
+
+    .line 86
+    .line 87
+    .line 88
+    :cond_0
+    return-void
+.end method
+
+.method public static A01(LX/1zq;LX/1zs;Ljava/util/AbstractCollection;)V
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0, p1}, LX/1zq;->A03(LX/1zs;)Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p1
+
+    .line 4
+    if-eqz p1, :cond_0
+
+    .line 5
+    .line 6
+    const-string/jumbo p0, "family_device_id"
+
+    .line 7
+    .line 8
+    .line 9
+    new-instance v0, Lorg/apache/http/message/BasicNameValuePair;
+
+    .line 10
+    .line 11
+    invoke-direct {v0, p0, p1}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-virtual {p2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 15
+    .line 16
+    .line 17
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;
-    .locals 15
+.method public final A02(LX/1zs;)LX/2Mc;
+    .locals 5
 
     .line 0
-    iget-object v3, p0, LX/1Zq;->A04:LX/1v6;
+    const-string/jumbo v0, "getPhoneIdApi"
 
     .line 1
     .line 2
-    iget-object v2, v3, LX/1v6;->A0Z:LX/0Na;
-
     .line 3
-    .line 4
-    invoke-static {v2}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {p0, p1, v0}, LX/1zq;->A00(LX/1zq;LX/1zs;Ljava/lang/String;)V
 
+    .line 4
     .line 5
     .line 6
+    invoke-virtual {p1}, LX/1zs;->getShouldholdout()Z
+
     .line 7
-    move-result-object v1
-
     .line 8
-    sget-object v0, LX/1vN;->A08:LX/1b2;
-
     .line 9
+    move-result v0
+
     .line 10
-    const/4 v7, 0x0
+    if-eqz v0, :cond_2
 
     .line 11
-    invoke-interface {v1, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AMf(LX/1b2;)Ljava/lang/String;
-
     .line 12
+    iget-object v0, p0, LX/1zq;->A02:LX/0RP;
+
     .line 13
     .line 14
-    move-result-object v10
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 15
-    invoke-static {v2}, LX/0Ye;->A0T(LX/0Na;)Ljava/lang/String;
-
     .line 16
     .line 17
+    move-result-object v2
+
     .line 18
-    move-result-object v11
+    const-wide v0, 0x81042400002968L
 
     .line 19
-    iget-object v0, v3, LX/1v6;->A0d:LX/0Na;
-
     .line 20
     .line 21
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 22
     .line 23
+    invoke-static {v2, v0, v1}, LX/302;->A0L(Ljava/lang/Object;J)Z
+
     .line 24
-    move-result-object v5
-
     .line 25
-    check-cast v5, LX/3Nc;
-
     .line 26
+    move-result v0
+
     .line 27
-    const-string v2, "AuthOperations"
+    if-eqz v0, :cond_2
 
     .line 28
     .line 29
-    const-wide v0, 0x7fffffffffffffffL
+    invoke-virtual {p1}, LX/1zs;->getHoldouttype()LX/1zp;
 
     .line 30
     .line 31
     .line 32
-    .line 33
-    .line 34
-    const/4 v4, 0x0
+    move-result-object v1
 
+    .line 33
+    sget-object v0, LX/1zp;->NULL:LX/1zp;
+
+    .line 34
     .line 35
-    invoke-static {v5, v2, v0, v1, v4}, LX/3Nc;->A00(LX/3Nc;Ljava/lang/String;JZ)LX/4r5;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 36
     .line 37
     .line 38
-    move-result-object v0
+    move-result v0
 
     .line 39
-    iget-object v8, p0, LX/1Zq;->A00:Lcom/facebook/auth/credentials/OpenIDLoginCredentials;
+    if-eqz v0, :cond_0
 
     .line 40
     .line 41
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
     .line 42
+    return-object v0
+
     .line 43
-    iget-object v0, v0, LX/4r5;->A00:Landroid/location/Location;
+    :cond_0
+    sget-object v0, LX/1zp;->DEVICEIDFALLBACK:LX/1zp;
 
     .line 44
     .line 45
-    new-instance v7, Landroid/location/Location;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 46
     .line 47
-    invoke-direct {v7, v0}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
-
     .line 48
+    move-result v0
+
     .line 49
+    if-eqz v0, :cond_2
+
     .line 50
-    :cond_0
-    iget-object v0, v3, LX/1v6;->A0p:LX/0Gd;
-
     .line 51
-    .line 52
-    invoke-static {v0}, LX/0Yd;->A1a(LX/0Gd;)Z
+    iget-object v0, p0, LX/1zq;->A03:LX/0RP;
 
+    .line 52
     .line 53
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 54
     .line 55
-    move-result v14
-
     .line 56
-    iget-object v12, p0, LX/1Zq;->A02:Ljava/lang/String;
+    move-result-object v0
 
     .line 57
+    check-cast v0, LX/2Ox;
+
     .line 58
-    iget-object v9, p0, LX/1Zq;->A01:Ljava/lang/Integer;
-
     .line 59
-    .line 60
-    iget-object v13, p0, LX/1Zq;->A03:Ljava/util/List;
+    invoke-static {v0}, LX/2Ox;->A00(LX/2Ox;)LX/1zr;
 
+    .line 60
     .line 61
     .line 62
-    new-instance v6, LX/1Z0;
+    move-result-object v0
 
     .line 63
-    .line 64
-    invoke-direct/range {v6 .. v14}, LX/1Z0;-><init>(Landroid/location/Location;Lcom/facebook/auth/credentials/OpenIDLoginCredentials;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Z)V
+    iget-object v4, v0, LX/1zr;->A01:Ljava/lang/String;
 
+    .line 64
     .line 65
+    iget-wide v1, v0, LX/1zr;->A00:J
+
     .line 66
     .line 67
-    invoke-static {v3}, LX/1v6;->A06(LX/1v6;)LX/1vp;
+    iget-object v0, p0, LX/1zq;->A04:LX/0RP;
 
     .line 68
     .line 69
+    invoke-static {v0}, LX/0X2;->A0f(LX/0RP;)Ljava/lang/String;
+
     .line 70
-    move-result-object v5
-
     .line 71
-    iget-object v0, v3, LX/1v6;->A0T:LX/0Na;
-
     .line 72
+    move-result-object v3
+
     .line 73
-    invoke-static {v0}, LX/0Yi;->A0R(LX/0Na;)LX/21i;
+    invoke-static {}, LX/2xh;->A00()Ljava/util/Map;
 
     .line 74
     .line 75
     .line 76
-    move-result-object v4
+    move-result-object v0
 
     .line 77
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v0, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     .line 78
     .line 79
     .line 80
-    move-result-object v3
+    move-result v0
 
     .line 81
-    const/4 v1, 0x0
+    if-eqz v0, :cond_1
 
     .line 82
-    new-instance v0, Lcom/facebook/common/callercontext/CallerContext;
-
     .line 83
-    .line 84
-    invoke-direct {v0, v3, v1, v2, v1}, Lcom/facebook/common/callercontext/CallerContext;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {}, LX/2xh;->A00()Ljava/util/Map;
 
+    .line 84
     .line 85
     .line 86
+    move-result-object v0
+
     .line 87
-    invoke-virtual {v5, v0, v4, v1, v6}, LX/1vp;->A0A(Lcom/facebook/common/callercontext/CallerContext;LX/21i;LX/1vX;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 88
     .line 89
     .line 90
-    move-result-object v0
+    move-result-object v3
 
     .line 91
-    check-cast v0, Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;
+    :cond_1
+    new-instance v0, LX/2Mc;
 
     .line 92
     .line 93
+    invoke-direct {v0, v4, v1, v2, v3}, LX/2Mc;-><init>(Ljava/lang/String;JLjava/lang/String;)V
+
+    .line 94
+    .line 95
+    .line 96
+    return-object v0
+
+    .line 97
+    :cond_2
+    iget-object v0, p0, LX/1zq;->A00:LX/0RP;
+
+    .line 98
+    .line 99
+    invoke-static {v0}, LX/0X7;->A0G(LX/0RP;)LX/2MX;
+
+    .line 100
+    .line 101
+    .line 102
+    move-result-object v0
+
+    .line 103
+    invoke-virtual {v0}, LX/2MX;->A00()LX/2Mc;
+
+    .line 104
+    .line 105
+    .line 106
+    move-result-object v0
+
+    .line 107
     return-object v0
 .end method
 
-.method public final bridge synthetic call()Ljava/lang/Object;
+.method public final A03(LX/1zs;)Ljava/lang/String;
     .locals 1
 
     .line 0
-    invoke-virtual {p0}, LX/1Zq;->A00()Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;
+    const-string/jumbo v0, "getUniquePhoneIdApi"
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    invoke-static {p0, p1, v0}, LX/1zq;->A00(LX/1zq;LX/1zs;Ljava/lang/String;)V
 
     .line 4
+    .line 5
+    .line 6
+    invoke-virtual {p0, p1}, LX/1zq;->A02(LX/1zs;)LX/2Mc;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    iget-object v0, v0, LX/2Mc;->A01:Ljava/lang/String;
+
+    .line 13
+    .line 14
+    return-object v0
+
+    .line 15
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 16
     return-object v0
 .end method

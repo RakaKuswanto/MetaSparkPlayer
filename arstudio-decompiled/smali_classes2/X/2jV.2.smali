@@ -1,46 +1,46 @@
-.class public final LX/2jV;
+.class public abstract LX/2jV;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Landroid/util/SparseIntArray;
+# static fields
+.field public static final A00:I
 
-.field public final A01:Ljava/util/Map;
+.field public static final A01:I
 
-.field public final A02:Ljava/util/Set;
-
-.field public final A03:Ljava/util/Set;
+.field public static final A02:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, LX/4D6;->PRIMARY_TEXT:LX/4D6;
 
     .line 1
     .line 2
+    iget v0, v0, LX/4D6;->attr:I
+
     .line 3
-    new-instance v0, Landroid/util/SparseIntArray;
-
     .line 4
-    .line 5
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    sput v0, LX/2jV;->A01:I
 
+    .line 5
     .line 6
+    sget-object v0, LX/4D6;->SECONDARY_TEXT:LX/4D6;
+
     .line 7
     .line 8
-    iput-object v0, p0, LX/2jV;->A00:Landroid/util/SparseIntArray;
+    iget v0, v0, LX/4D6;->attr:I
 
     .line 9
     .line 10
-    const/16 v1, 0xf
+    sput v0, LX/2jV;->A00:I
 
     .line 11
     .line 12
-    invoke-static {v1}, LX/0Yj;->A0Z(I)Ljava/util/HashSet;
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 13
     .line 14
@@ -48,41 +48,9 @@
     move-result-object v0
 
     .line 16
-    iput-object v0, p0, LX/2jV;->A03:Ljava/util/Set;
+    sput-object v0, LX/2jV;->A02:LX/0RP;
 
     .line 17
     .line 18
-    invoke-static {v1}, LX/0Yj;->A0X(I)Ljava/util/HashMap;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    iput-object v0, p0, LX/2jV;->A01:Ljava/util/Map;
-
-    .line 23
-    .line 24
-    invoke-static {v1}, LX/0Yj;->A0Z(I)Ljava/util/HashSet;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    iput-object v0, p0, LX/2jV;->A02:Ljava/util/Set;
-
-    .line 33
-    .line 34
     return-void
 .end method

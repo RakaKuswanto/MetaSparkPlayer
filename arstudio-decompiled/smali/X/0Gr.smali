@@ -1,321 +1,661 @@
-.class public final enum LX/0Gr;
-.super Ljava/lang/Enum;
+.class public abstract LX/0GR;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/0Gr;
+.field public static A00:Z = true
 
-.field public static final enum GET_ANALYTICS_CONFIG:LX/0Gr;
-
-.field public static final enum GET_APPS_STATISTICS:LX/0Gr;
-
-.field public static final enum GET_FLYTRAP_REPORT:LX/0Gr;
-
-.field public static final enum GET_PREF_BASED_CONFIG:LX/0Gr;
-
-.field public static final enum GET_PREF_IDS:LX/0Gr;
-
-.field public static final enum NOT_EXIST:LX/0Gr;
-
-.field public static final enum SET_ANALYTICS_CONFIG:LX/0Gr;
-
-.field public static final enum SET_PREF_BASED_CONFIG:LX/0Gr;
-
-.field public static final enum SET_PREF_IDS:LX/0Gr;
-
-.field public static final mLookup:Ljava/util/Map;
-
-
-# instance fields
-.field public final mHasReturn:Z
-
-.field public final mOperationType:I
+.field public static final A01:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 16
+    .locals 8
 
     .line 0
-    const-string v0, "GET_PREF_BASED_CONFIG"
+    const/4 v7, 0x0
 
     .line 1
-    .line 2
-    const/4 v6, 0x0
+    :try_start_0
+    const-string v0, "os.version"
 
+    .line 2
     .line 3
-    const/4 v15, 0x1
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     .line 4
-    new-instance v14, LX/0Gr;
-
     .line 5
     .line 6
-    invoke-direct {v14, v0, v6, v6, v15}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
+    move-result-object v1
 
     .line 7
+    if-eqz v1, :cond_2
+
     .line 8
     .line 9
-    sput-object v14, LX/0Gr;->GET_PREF_BASED_CONFIG:LX/0Gr;
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
     .line 10
     .line 11
-    const-string v0, "SET_PREF_BASED_CONFIG"
-
     .line 12
+    move-result v0
+
     .line 13
-    new-instance v13, LX/0Gr;
+    if-nez v0, :cond_2
 
     .line 14
     .line 15
-    invoke-direct {v13, v0, v15, v15, v6}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
+    const-string v0, "\\."
 
     .line 16
     .line 17
-    .line 18
-    sput-object v13, LX/0Gr;->SET_PREF_BASED_CONFIG:LX/0Gr;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
+    .line 18
     .line 19
     .line 20
-    const-string v0, "GET_APPS_STATISTICS"
+    move-result-object v6
 
     .line 21
+    const/4 v5, 0x3
+
     .line 22
-    const/4 v12, 0x2
+    new-array v4, v5, [I
 
     .line 23
-    new-instance v11, LX/0Gr;
-
     .line 24
+    const/4 v2, 0x2
+
     .line 25
-    invoke-direct {v11, v0, v12, v12, v15}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
+    aput v2, v4, v7
 
     .line 26
     .line 27
+    const/4 v1, 0x6
+
     .line 28
-    sput-object v11, LX/0Gr;->GET_APPS_STATISTICS:LX/0Gr;
+    const/4 v0, 0x1
 
     .line 29
+    aput v1, v4, v0
+
     .line 30
-    const-string v0, "GET_ANALYTICS_CONFIG"
-
     .line 31
-    .line 32
-    const/4 v10, 0x3
+    const/16 v0, 0x21
 
+    .line 32
     .line 33
-    new-instance v9, LX/0Gr;
+    aput v0, v4, v2
 
     .line 34
     .line 35
-    invoke-direct {v9, v0, v10, v10, v15}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
+    array-length v0, v6
 
     .line 36
+    invoke-static {v0, v5}, Ljava/lang/Math;->min(II)I
+
     .line 37
     .line 38
-    sput-object v9, LX/0Gr;->GET_ANALYTICS_CONFIG:LX/0Gr;
-
     .line 39
+    move-result v3
+
     .line 40
-    const-string v1, "SET_ANALYTICS_CONFIG"
+    const/4 v2, 0x0
 
     .line 41
+    goto :goto_1
+
     .line 42
-    const/4 v0, 0x4
+    :goto_0
+    if-gt v1, v0, :cond_1
 
     .line 43
-    new-instance v8, LX/0Gr;
-
     .line 44
-    .line 45
-    invoke-direct {v8, v1, v0, v0, v6}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
+    add-int/lit8 v2, v2, 0x1
 
+    .line 45
     .line 46
+    :goto_1
+    if-ge v2, v3, :cond_0
+
     .line 47
     .line 48
-    sput-object v8, LX/0Gr;->SET_ANALYTICS_CONFIG:LX/0Gr;
+    aget-object v0, v6, v2
 
     .line 49
     .line 50
-    const-string v1, "GET_FLYTRAP_REPORT"
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     .line 51
     .line 52
-    const/4 v0, 0x5
-
     .line 53
-    new-instance v7, LX/0Gr;
+    move-result v1
 
     .line 54
-    .line 55
-    invoke-direct {v7, v1, v0, v0, v15}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
+    aget v0, v4, v2
 
+    .line 55
     .line 56
+    if-lt v1, v0, :cond_2
+
     .line 57
     .line 58
-    sput-object v7, LX/0Gr;->GET_FLYTRAP_REPORT:LX/0Gr;
+    goto :goto_0
 
     .line 59
+    :cond_0
+    if-ne v3, v5, :cond_2
+
     .line 60
-    const-string v1, "GET_PREF_IDS"
+    .line 61
+    :cond_1
+    const/4 v7, 0x1
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 62
+    :catch_0
+    :cond_2
+    sput-boolean v7, LX/0GR;->A01:Z
+
+    .line 63
+    .line 64
+    return-void
+.end method
+
+.method public static synthetic A00(Landroid/system/StructStat;)I
+    .locals 2
+
+    .line 0
+    if-nez p0, :cond_0
+
+    .line 1
+    .line 2
+    const/4 p0, -0x1
+
+    .line 3
+    return p0
+
+    .line 4
+    :cond_0
+    iget-wide v0, p0, Landroid/system/StructStat;->st_size:J
+
+    .line 5
+    .line 6
+    long-to-int p0, v0
+
+    .line 7
+    return p0
+.end method
+
+.method public static A01(LX/0GQ;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;I)I
+    .locals 7
+
+    .line 0
+    :try_start_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 1
+    .line 2
+    const/16 v0, 0x1c
+
+    .line 3
+    .line 4
+    move-object v2, p1
+
+    .line 5
+    move-object v3, p2
+
+    .line 6
+    if-lt v1, v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-static {p0, p1, p2, p3}, LX/0GP;->A01(LX/0GQ;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;I)I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    return v0
+
+    .line 13
+    :cond_0
+    const/16 v0, 0x15
+
+    .line 14
+    .line 15
+    if-lt v1, v0, :cond_1
+
+    .line 16
+    .line 17
+    invoke-static {p0, p1, p2, p3}, LX/0GO;->A01(LX/0GQ;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;I)I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    return v0
+
+    .line 22
+    :cond_1
+    iget-wide v0, p0, LX/0GQ;->A00:J
+
+    .line 23
+    .line 24
+    new-instance v4, Llibcore/util/MutableLong;
+
+    .line 25
+    .line 26
+    invoke-direct {v4, v0, v1}, Llibcore/util/MutableLong;-><init>(J)V
+
+    .line 27
+    .line 28
+    .line 29
+    sget-object v1, Llibcore/io/Libcore;->os:Llibcore/io/Os;
+
+    .line 30
+    .line 31
+    int-to-long v5, p3
+
+    .line 32
+    invoke-interface/range {v1 .. v6}, Llibcore/io/Os;->sendfile(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Llibcore/util/MutableLong;J)J
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-wide v0
+
+    .line 36
+    long-to-int v2, v0
+
+    .line 37
+    if-ltz v2, :cond_2
+
+    .line 38
+    .line 39
+    iget-wide v0, v4, Llibcore/util/MutableLong;->value:J
+
+    .line 40
+    .line 41
+    iput-wide v0, p0, LX/0GQ;->A00:J
+
+    .line 42
+    .line 43
+    :cond_2
+    return v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 44
+    :catch_0
+    move-exception v1
+
+    .line 45
+    new-instance v0, Ljava/io/IOException;
+
+    .line 46
+    .line 47
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 48
+    .line 49
+    .line 50
+    throw v0
+
+    .line 51
+    :catch_1
+    move-exception v2
+
+    .line 52
+    const-string v1, "CopyUtils"
+
+    .line 53
+    .line 54
+    const-string v0, "Failed to call send file for copy utils"
+
+    .line 55
+    .line 56
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 57
+    .line 58
+    .line 59
+    const/4 v0, 0x0
+
+    .line 60
+    sput-boolean v0, LX/0GR;->A00:Z
 
     .line 61
     .line 62
-    const/4 v0, 0x6
+    const/4 v0, -0x1
 
     .line 63
-    new-instance v5, LX/0Gr;
+    return v0
+.end method
 
+.method public static A02(Ljava/io/FileInputStream;Ljava/io/FileOutputStream;I)I
+    .locals 11
+
+    .line 0
+    sget-boolean v0, LX/0GR;->A01:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_7
+
+    .line 3
+    .line 4
+    sget-boolean v0, LX/0GR;->A00:Z
+
+    .line 5
+    .line 6
+    if-eqz v0, :cond_7
+
+    .line 7
+    .line 8
+    invoke-virtual {p1}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v10
+
+    .line 12
+    invoke-virtual {p0}, Ljava/io/FileInputStream;->getFD()Ljava/io/FileDescriptor;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v9
+
+    .line 16
+    :try_start_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 17
+    .line 18
+    const/16 v0, 0x1c
+
+    .line 19
+    .line 20
+    if-lt v1, v0, :cond_0
+
+    .line 21
+    .line 22
+    invoke-static {v9}, LX/0GP;->A03(Ljava/io/FileDescriptor;)I
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v2
+
+    .line 26
+    goto :goto_0
+
+    .line 27
+    :cond_0
+    const/16 v0, 0x15
+
+    .line 28
+    .line 29
+    if-lt v1, v0, :cond_1
+
+    .line 30
+    .line 31
+    invoke-static {v9}, LX/0GO;->A03(Ljava/io/FileDescriptor;)I
+
+    .line 32
+    .line 33
+    .line 34
+    move-result v2
+
+    .line 35
+    goto :goto_0
+
+    .line 36
+    :cond_1
+    sget-object v0, Llibcore/io/Libcore;->os:Llibcore/io/Os;
+
+    .line 37
+    .line 38
+    invoke-interface {v0, v9}, Llibcore/io/Os;->fstat(Ljava/io/FileDescriptor;)Landroid/system/StructStat;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    if-nez v0, :cond_2
+
+    .line 43
+    .line 44
+    const/4 v2, -0x1
+
+    .line 45
+    goto :goto_0
+
+    .line 46
+    :cond_2
+    iget-wide v0, v0, Landroid/system/StructStat;->st_size:J
+
+    .line 47
+    .line 48
+    long-to-int v2, v0
+
+    .line 49
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 50
+    :catch_0
+    move-exception v1
+
+    .line 51
+    new-instance v0, Ljava/io/IOException;
+
+    .line 52
+    .line 53
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 54
+    .line 55
+    .line 56
+    throw v0
+
+    .line 57
+    :catch_1
+    move-exception v2
+
+    .line 58
+    const-string v1, "CopyUtils"
+
+    .line 59
+    .line 60
+    const-string v0, "Failed to call fstat st.size for copy utils"
+
+    .line 61
+    .line 62
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 63
     .line 64
     .line 65
-    invoke-direct {v5, v1, v0, v0, v15}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
+    const/4 v0, 0x0
 
     .line 66
+    sput-boolean v0, LX/0GR;->A00:Z
+
     .line 67
     .line 68
-    sput-object v5, LX/0Gr;->GET_PREF_IDS:LX/0Gr;
+    const/4 v2, -0x1
 
     .line 69
+    :goto_0
+    const/4 v8, 0x1
+
     .line 70
-    const-string v1, "SET_PREF_IDS"
+    const/4 v7, 0x0
 
     .line 71
-    .line 72
-    const/4 v0, 0x7
+    if-ltz v2, :cond_6
 
+    .line 72
     .line 73
-    new-instance v4, LX/0Gr;
+    invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
 
     .line 74
     .line 75
-    invoke-direct {v4, v1, v0, v0, v6}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
-
     .line 76
+    move-result v6
+
     .line 77
+    new-instance v5, LX/0GQ;
+
     .line 78
-    sput-object v4, LX/0Gr;->SET_PREF_IDS:LX/0Gr;
-
     .line 79
-    .line 80
-    const-string v1, "NOT_EXIST"
+    invoke-direct {v5}, LX/0GQ;-><init>()V
 
+    .line 80
     .line 81
     .line 82
-    const/16 v3, 0x8
+    const/4 v4, 0x0
 
     .line 83
+    const/4 v1, 0x0
+
     .line 84
-    const v0, 0x7fffffff
+    :goto_1
+    if-ge v4, v6, :cond_5
 
     .line 85
     .line 86
+    sub-int v0, v6, v4
+
     .line 87
-    new-instance v2, LX/0Gr;
-
     .line 88
-    .line 89
-    invoke-direct {v2, v1, v3, v0, v6}, LX/0Gr;-><init>(Ljava/lang/String;IIZ)V
+    invoke-static {v5, v10, v9, v0}, LX/0GR;->A01(LX/0GQ;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;I)I
 
+    .line 89
     .line 90
     .line 91
+    move-result v3
+
     .line 92
-    sput-object v2, LX/0Gr;->NOT_EXIST:LX/0Gr;
+    if-ltz v3, :cond_4
 
     .line 93
     .line 94
-    const/16 v0, 0x9
+    add-int/2addr v4, v3
 
     .line 95
+    add-int/lit8 v2, v1, 0x1
+
     .line 96
-    new-array v1, v0, [LX/0Gr;
-
     .line 97
+    const/16 v0, 0x32
+
     .line 98
-    aput-object v14, v1, v6
-
     .line 99
-    .line 100
-    aput-object v13, v1, v15
+    if-gt v1, v0, :cond_3
 
+    .line 100
     .line 101
+    move v1, v2
+
     .line 102
-    aput-object v11, v1, v12
+    goto :goto_1
 
     .line 103
+    :cond_3
+    const/4 v0, 0x4
+
     .line 104
-    aput-object v9, v1, v10
+    new-array v1, v0, [Ljava/lang/Object;
 
     .line 105
     .line 106
-    const/4 v0, 0x4
+    invoke-static {v1, v2, v7}, LX/001;->A1A([Ljava/lang/Object;II)V
 
     .line 107
-    aput-object v8, v1, v0
-
     .line 108
     .line 109
-    const/4 v0, 0x5
+    invoke-static {v1, v4, v8}, LX/001;->A1A([Ljava/lang/Object;II)V
 
     .line 110
-    aput-object v7, v1, v0
-
     .line 111
     .line 112
-    invoke-static {v1, v5, v4}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v0, 0x2
 
     .line 113
+    invoke-static {v1, v6, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+
     .line 114
     .line 115
-    aput-object v2, v1, v3
-
     .line 116
+    const/4 v0, 0x3
+
     .line 117
-    sput-object v1, LX/0Gr;->$VALUES:[LX/0Gr;
+    invoke-static {v1, v3, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
 
     .line 118
     .line 119
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
     .line 120
+    const-string v0, "Tried %d times to send file. Progress %d / %d sent: %d"
+
     .line 121
     .line 122
-    move-result-object v0
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 123
-    sput-object v0, LX/0Gr;->mLookup:Ljava/util/Map;
-
     .line 124
     .line 125
-    invoke-static {}, LX/0Gr;->values()[LX/0Gr;
+    move-result-object v0
 
     .line 126
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
+
     .line 127
     .line 128
-    move-result-object v4
-
     .line 129
-    array-length v3, v4
+    move-result-object v0
 
     .line 130
-    :goto_0
-    if-ge v6, v3, :cond_0
+    throw v0
 
     .line 131
+    :cond_4
+    new-array v1, v8, [Ljava/lang/Object;
+
     .line 132
-    aget-object v2, v4, v6
-
     .line 133
-    .line 134
-    sget-object v1, LX/0Gr;->mLookup:Ljava/util/Map;
+    invoke-static {v1, v3, v7}, LX/001;->A1A([Ljava/lang/Object;II)V
 
+    .line 134
     .line 135
     .line 136
-    iget v0, v2, LX/0Gr;->mOperationType:I
+    const-string v0, "Failed to send file. Ret: %d"
 
     .line 137
     .line 138
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 139
     .line 140
@@ -323,148 +663,188 @@
     move-result-object v0
 
     .line 142
-    invoke-interface {v1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 143
     .line 144
     .line 145
-    add-int/lit8 v6, v6, 0x1
-
-    .line 146
-    .line 147
-    goto :goto_0
-
-    .line 148
-    :cond_0
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IIZ)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    iput p3, p0, LX/0Gr;->mOperationType:I
-
-    .line 4
-    .line 5
-    iput-boolean p4, p0, LX/0Gr;->mHasReturn:Z
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public static fromOperationType(I)LX/0Gr;
-    .locals 2
-
-    .line 0
-    sget-object v1, LX/0Gr;->mLookup:Ljava/util/Map;
-
-    .line 1
-    .line 2
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
+    .line 146
+    throw v0
+
+    .line 147
+    :cond_5
+    if-lez v4, :cond_7
+
+    .line 148
+    .line 149
+    return v4
+
+    .line 150
+    :cond_6
+    new-array v1, v8, [Ljava/lang/Object;
+
+    .line 151
+    .line 152
+    invoke-static {v1, v2, v7}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 153
+    .line 154
+    .line 155
+    const-string v0, "fstat st_size failed with value %d"
+
+    .line 156
+    .line 157
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 158
+    .line 159
+    .line 160
+    move-result-object v0
+
+    .line 161
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
+
+    .line 162
+    .line 163
+    .line 164
+    move-result-object v0
+
+    .line 165
+    throw v0
+
+    .line 166
+    :cond_7
+    invoke-static {p0, p1, p2}, LX/0GR;->A03(Ljava/io/InputStream;Ljava/io/OutputStream;I)I
+
+    .line 167
+    .line 168
+    .line 169
+    move-result v4
+
+    .line 170
+    return v4
+.end method
+
+.method public static A03(Ljava/io/InputStream;Ljava/io/OutputStream;I)I
+    .locals 5
+
+    .line 0
+    const v0, 0x8000
+
+    .line 1
+    .line 2
+    .line 3
+    new-array v4, v0, [B
+
+    .line 4
+    .line 5
+    const/4 v3, 0x0
+
     .line 6
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x0
+
+    .line 7
+    :goto_0
+    if-ge v2, p2, :cond_0
+
+    .line 8
+    .line 9
+    sub-int v0, p2, v2
+
+    .line 10
+    .line 11
+    invoke-static {p0, v4, v0}, LX/0GR;->A04(Ljava/io/InputStream;[BI)I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    const/4 v0, -0x1
+
+    .line 16
+    if-eq v1, v0, :cond_0
+
+    .line 17
+    .line 18
+    invoke-virtual {p1, v4, v3, v1}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 19
+    .line 20
+    .line 21
+    add-int/2addr v2, v1
+
+    .line 22
+    goto :goto_0
+
+    .line 23
+    :cond_0
+    return v2
+.end method
+
+.method public static A04(Ljava/io/InputStream;[BI)I
+    .locals 4
+
+    .line 0
+    array-length v0, p1
+
+    .line 1
+    invoke-static {v0, p2}, Ljava/lang/Math;->min(II)I
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v3
+
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    :goto_0
+    if-ge v2, v3, :cond_0
 
     .line 7
     .line 8
-    .line 9
-    move-result-object v0
+    sub-int v0, v3, v2
 
+    .line 9
     .line 10
-    check-cast v0, LX/0Gr;
+    invoke-virtual {p0, p1, v2, v0}, Ljava/io/InputStream;->read([BII)I
 
     .line 11
     .line 12
-    if-nez v0, :cond_0
-
     .line 13
+    move-result v1
+
     .line 14
-    sget-object v0, LX/0Gr;->NOT_EXIST:LX/0Gr;
+    if-gez v1, :cond_1
 
     .line 15
     .line 16
+    const/4 v0, -0x1
+
+    .line 17
+    if-ne v1, v0, :cond_0
+
+    .line 18
+    .line 19
+    if-nez v2, :cond_0
+
+    .line 20
+    .line 21
+    const/4 v2, -0x1
+
+    .line 22
     :cond_0
-    return-object v0
-.end method
+    return v2
 
-.method public static valueOf(Ljava/lang/String;)LX/0Gr;
-    .locals 1
+    .line 23
+    :cond_1
+    add-int/2addr v2, v1
 
-    .line 0
-    const-class v0, LX/0Gr;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/0Gr;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/0Gr;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/0Gr;->$VALUES:[LX/0Gr;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/0Gr;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public hasReturn()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/0Gr;->mHasReturn:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public toOperationType()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/0Gr;->mOperationType:I
-
-    .line 1
-    .line 2
-    return v0
+    .line 24
+    goto :goto_0
 .end method

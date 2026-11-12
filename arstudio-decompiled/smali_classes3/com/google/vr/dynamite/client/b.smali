@@ -1,5 +1,5 @@
 .class public final Lcom/google/vr/dynamite/client/b;
-.super Lcom/google/ar/core/dependencies/d;
+.super Lcom/google/ar/core/dependencies/c;
 .source ""
 
 # interfaces
@@ -15,7 +15,7 @@
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/dependencies/d;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/ar/core/dependencies/c;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -29,7 +29,7 @@
     .locals 2
 
     .line 0
-    invoke-virtual {p0}, Lcom/google/ar/core/dependencies/d;->a()Landroid/os/Parcel;
+    invoke-virtual {p0}, Lcom/google/ar/core/dependencies/c;->a()Landroid/os/Parcel;
 
     .line 1
     .line 2
@@ -45,7 +45,7 @@
     const/4 v0, 0x2
 
     .line 8
-    invoke-virtual {p0, v0, v1}, Lcom/google/ar/core/dependencies/d;->b(ILandroid/os/Parcel;)Landroid/os/Parcel;
+    invoke-virtual {p0, v0, v1}, Lcom/google/ar/core/dependencies/c;->b(ILandroid/os/Parcel;)Landroid/os/Parcel;
 
     .line 9
     .line 10
@@ -73,7 +73,7 @@
     .locals 3
 
     .line 0
-    invoke-virtual {p0}, Lcom/google/ar/core/dependencies/d;->a()Landroid/os/Parcel;
+    invoke-virtual {p0}, Lcom/google/ar/core/dependencies/c;->a()Landroid/os/Parcel;
 
     .line 1
     .line 2
@@ -89,7 +89,7 @@
     const/4 v0, 0x1
 
     .line 8
-    invoke-virtual {p0, v0, v1}, Lcom/google/ar/core/dependencies/d;->b(ILandroid/os/Parcel;)Landroid/os/Parcel;
+    invoke-virtual {p0, v0, v1}, Lcom/google/ar/core/dependencies/c;->b(ILandroid/os/Parcel;)Landroid/os/Parcel;
 
     .line 9
     .line 10

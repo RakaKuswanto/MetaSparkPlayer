@@ -2,83 +2,146 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DozeAwareClientWrapper$isOnline$1$1"
+
 
 # instance fields
-.field public A00:Z
+.field public final synthetic A00:LX/2kc;
 
-.field public A01:LX/1zG;
-
-.field public final A02:Landroid/view/WindowManager;
+.field public final synthetic A01:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 3
+.method public constructor <init>(LX/2kc;Z)V
+    .locals 0
+
+    iput-boolean p2, p0, LX/2l2;->A01:Z
+
+    iput-object p1, p0, LX/2l2;->A00:LX/2kc;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-boolean v1, p0, LX/2l2;->A01:Z
 
     .line 1
     .line 2
-    .line 3
-    sget v0, LX/2eq;->ALV:I
+    const-string/jumbo v0, "config"
 
+    .line 3
     .line 4
     .line 5
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
+    iget-object v3, p0, LX/2l2;->A00:LX/2kc;
 
     .line 6
     .line 7
+    invoke-static {v3}, LX/2kc;->A01(LX/2kc;)Lcom/facebook/mqtt/service/ConnectionConfig;
+
     .line 8
-    move-result-object v0
-
     .line 9
-    check-cast v0, Landroid/view/WindowManager;
-
     .line 10
+    move-result-object v2
+
     .line 11
-    iput-object v0, p0, LX/2l2;->A02:Landroid/view/WindowManager;
+    if-eqz v1, :cond_1
 
     .line 12
     .line 13
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    if-eqz v2, :cond_2
 
     .line 14
     .line 15
-    .line 16
-    move-result-object v0
+    iget v1, v2, Lcom/facebook/mqtt/service/ConnectionConfig;->initialNetworkState:I
 
+    .line 16
     .line 17
-    iput-object v0, p0, LX/2l2;->A01:LX/1zG;
+    const/4 v0, 0x1
 
     .line 18
-    .line 19
-    invoke-static {}, LX/1z6;->A0N()LX/35B;
+    if-eq v1, v0, :cond_0
 
+    .line 19
     .line 20
+    iput v0, v2, Lcom/facebook/mqtt/service/ConnectionConfig;->initialNetworkState:I
+
     .line 21
     .line 22
-    move-result-object v2
+    const/16 v1, 0x30
 
     .line 23
-    const-wide v0, 0x81022900021869L
-
     .line 24
+    :goto_0
+    new-instance v0, LX/3Jc;
+
     .line 25
     .line 26
+    invoke-direct {v0, v3, v1}, LX/3Jc;-><init>(Ljava/lang/Object;I)V
+
     .line 27
     .line 28
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
-
     .line 29
+    invoke-static {v3, v0}, LX/2kc;->A0A(LX/2kc;LX/0Gw;)V
+
     .line 30
     .line 31
-    move-result v0
-
     .line 32
-    iput-boolean v0, p0, LX/2l2;->A00:Z
+    :cond_0
+    return-void
 
     .line 33
+    :cond_1
+    if-eqz v2, :cond_2
+
     .line 34
-    return-void
+    .line 35
+    iget v1, v2, Lcom/facebook/mqtt/service/ConnectionConfig;->initialNetworkState:I
+
+    .line 36
+    .line 37
+    const/4 v0, 0x2
+
+    .line 38
+    if-eq v1, v0, :cond_0
+
+    .line 39
+    .line 40
+    iput v0, v2, Lcom/facebook/mqtt/service/ConnectionConfig;->initialNetworkState:I
+
+    .line 41
+    .line 42
+    const/16 v1, 0x31
+
+    .line 43
+    .line 44
+    goto :goto_0
+
+    .line 45
+    :cond_2
+    invoke-static {v0}, LX/0WV;->A0F(Ljava/lang/String;)V
+
+    .line 46
+    .line 47
+    .line 48
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    throw v0
 .end method

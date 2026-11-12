@@ -1,185 +1,483 @@
-.class public final enum LX/3Qy;
-.super Ljava/lang/Enum;
+.class public final LX/3Qy;
+.super LX/3Rp;
 .source ""
 
 # interfaces
-.implements LX/0Ad;
+.implements Ljava/io/Closeable;
+.implements LX/3UM;
+.implements LX/3R5;
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/3Qy;
-
-.field public static final enum DASH:LX/3Qy;
-
-.field public static final enum PROGRESSIVE:LX/3Qy;
+.field public static A05:LX/3R0;
 
 
 # instance fields
-.field public final mValue:Ljava/lang/String;
+.field public A00:LX/3R2;
+
+.field public final A01:LX/2MU;
+
+.field public final A02:LX/0I5;
+
+.field public final A03:LX/3R2;
+
+.field public final A04:LX/3Qx;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(LX/2MU;LX/0I5;LX/3R2;LX/3Qx;)V
+    .locals 1
 
     .line 0
-    const-string v1, "DASH"
+    invoke-direct {p0}, LX/3Rp;-><init>()V
 
     .line 1
     .line 2
-    const/4 v5, 0x0
-
     .line 3
-    const-string v0, "dash"
+    const/4 v0, 0x0
 
     .line 4
+    iput-object v0, p0, LX/3Qy;->A00:LX/3R2;
+
     .line 5
-    new-instance v4, LX/3Qy;
-
     .line 6
-    .line 7
-    invoke-direct {v4, v1, v5, v0}, LX/3Qy;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    iput-object p2, p0, LX/3Qy;->A02:LX/0I5;
 
+    .line 7
     .line 8
+    iput-object p4, p0, LX/3Qy;->A04:LX/3Qx;
+
     .line 9
     .line 10
-    sput-object v4, LX/3Qy;->DASH:LX/3Qy;
+    iput-object p3, p0, LX/3Qy;->A03:LX/3R2;
 
     .line 11
     .line 12
-    const-string v3, "PROGRESSIVE"
+    iput-object p1, p0, LX/3Qy;->A01:LX/2MU;
 
     .line 13
     .line 14
-    const/4 v2, 0x1
+    return-void
+.end method
 
+.method public static A00(LX/3Qy;LX/3Qz;LX/3Qx;)V
+    .locals 1
+
+    .line 0
+    iput-object p1, p2, LX/3Qx;->A0D:LX/3Qz;
+
+    .line 1
+    .line 2
+    invoke-direct {p0}, LX/3Qy;->A02()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-eqz v0, :cond_1
+
+    .line 7
+    .line 8
+    sget-object v0, LX/3Qy;->A05:LX/3R0;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+
+    .line 14
     .line 15
-    const-string/jumbo v0, "progressive"
-
     .line 16
+    move-result-object p0
+
     .line 17
+    const/4 v0, 0x1
+
     .line 18
-    new-instance v1, LX/3Qy;
+    iput v0, p0, Landroid/os/Message;->what:I
 
     .line 19
     .line 20
-    invoke-direct {v1, v3, v2, v0}, LX/3Qy;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p1}, LX/3Qz;->getValue()I
 
     .line 21
     .line 22
     .line 23
-    sput-object v1, LX/3Qy;->PROGRESSIVE:LX/3Qy;
+    move-result v0
 
     .line 24
-    .line 25
-    const/4 v0, 0x2
+    iput v0, p0, Landroid/os/Message;->arg1:I
 
+    .line 25
     .line 26
-    new-array v0, v0, [LX/3Qy;
+    iput-object p2, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 27
     .line 28
-    aput-object v4, v0, v5
+    sget-object v0, LX/3Qy;->A05:LX/3R0;
 
     .line 29
     .line 30
-    aput-object v1, v0, v2
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 31
     .line 32
-    sput-object v0, LX/3Qy;->$VALUES:[LX/3Qy;
+    .line 33
+    :cond_0
+    return-void
+
+    .line 34
+    :cond_1
+    iget-object v0, p0, LX/3Qy;->A03:LX/3R2;
+
+    .line 35
+    .line 36
+    invoke-interface {v0, p1, p2}, LX/3R2;->ASY(LX/3Qz;LX/3Qx;)V
+
+    .line 37
+    .line 38
+    .line 39
+    iget-object v0, p0, LX/3Qy;->A00:LX/3R2;
+
+    .line 40
+    .line 41
+    if-eqz v0, :cond_0
+
+    .line 42
+    .line 43
+    invoke-interface {v0, p1, p2}, LX/3R2;->ASY(LX/3Qz;LX/3Qx;)V
+
+    .line 44
+    .line 45
+    .line 46
+    return-void
+.end method
+
+.method public static A01(LX/3Qy;LX/3Qx;LX/3R1;)V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/3Qy;->A02()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-eqz v0, :cond_1
+
+    .line 5
+    .line 6
+    sget-object v0, LX/3Qy;->A05:LX/3R0;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p0
+
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    iput v0, p0, Landroid/os/Message;->what:I
+
+    .line 17
+    .line 18
+    invoke-virtual {p2}, LX/3R1;->getValue()I
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    iput v0, p0, Landroid/os/Message;->arg1:I
+
+    .line 23
+    .line 24
+    iput-object p1, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    .line 25
+    .line 26
+    sget-object v0, LX/3Qy;->A05:LX/3R0;
+
+    .line 27
+    .line 28
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    .line 29
+    .line 30
+    .line 31
+    :cond_0
+    return-void
+
+    .line 32
+    :cond_1
+    iget-object v0, p0, LX/3Qy;->A03:LX/3R2;
 
     .line 33
     .line 34
+    invoke-interface {v0, p1, p2}, LX/3R2;->ASU(LX/3Qx;LX/3R1;)V
+
+    .line 35
+    .line 36
+    .line 37
+    iget-object v0, p0, LX/3Qy;->A00:LX/3R2;
+
+    .line 38
+    .line 39
+    if-eqz v0, :cond_0
+
+    .line 40
+    .line 41
+    invoke-interface {v0, p1, p2}, LX/3R2;->ASU(LX/3Qx;LX/3R1;)V
+
+    .line 42
+    .line 43
+    .line 44
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method private A02()Z
+    .locals 6
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v0, p0, LX/3Qy;->A01:LX/2MU;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p3, p0, LX/3Qy;->mValue:Ljava/lang/String;
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/3Qy;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/3Qy;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-static {v0}, LX/0X2;->A1U(LX/2MU;)Z
 
     .line 3
     .line 4
     .line 5
-    move-result-object v0
+    move-result v5
 
     .line 6
-    check-cast v0, LX/3Qy;
+    if-eqz v5, :cond_1
 
     .line 7
     .line 8
-    return-object v0
-.end method
+    sget-object v0, LX/3Qy;->A05:LX/3R0;
 
-.method public static values()[LX/3Qy;
-    .locals 1
+    .line 9
+    .line 10
+    if-nez v0, :cond_1
 
-    .line 0
-    sget-object v0, LX/3Qy;->$VALUES:[LX/3Qy;
+    .line 11
+    .line 12
+    move-object v4, p0
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 13
+    monitor-enter v4
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    .line 14
+    :try_start_0
+    sget-object v0, LX/3Qy;->A05:LX/3R0;
 
-    .line 6
-    check-cast v0, [LX/3Qy;
+    .line 15
+    .line 16
+    if-nez v0, :cond_0
 
-    .line 7
-    .line 8
-    return-object v0
+    .line 17
+    .line 18
+    const-string v1, "ImagePerfControllerListener2Thread"
+
+    .line 19
+    .line 20
+    new-instance v0, Landroid/os/HandlerThread;
+
+    .line 21
+    .line 22
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    .line 23
+    .line 24
+    .line 25
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    .line 26
+    .line 27
+    .line 28
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v3
+
+    .line 32
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 33
+    .line 34
+    .line 35
+    iget-object v2, p0, LX/3Qy;->A03:LX/3R2;
+
+    .line 36
+    .line 37
+    iget-object v1, p0, LX/3Qy;->A00:LX/3R2;
+
+    .line 38
+    .line 39
+    new-instance v0, LX/3R0;
+
+    .line 40
+    .line 41
+    invoke-direct {v0, v3, v2, v1}, LX/3R0;-><init>(Landroid/os/Looper;LX/3R2;LX/3R2;)V
+
+    .line 42
+    .line 43
+    .line 44
+    sput-object v0, LX/3Qy;->A05:LX/3R0;
+
+    .line 45
+    .line 46
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 47
+    :catchall_0
+    move-exception v0
+
+    .line 48
+    monitor-exit v4
+
+    .line 49
+    throw v0
+
+    .line 50
+    :cond_0
+    :goto_0
+    monitor-exit v4
+
+    .line 51
+    :cond_1
+    return v5
 .end method
 
 
 # virtual methods
-.method public bridge synthetic getValue()Ljava/lang/Object;
-    .locals 1
+.method public final Adc(Z)V
+    .locals 4
 
     .line 0
-    invoke-virtual {p0}, LX/3Qy;->getValue()Ljava/lang/String;
+    iget-object v3, p0, LX/3Qy;->A04:LX/3Qx;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    iget-object v0, p0, LX/3Qy;->A02:LX/0I5;
 
+    .line 3
     .line 4
-    return-object v0
+    invoke-interface {v0}, LX/0I5;->now()J
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-wide v1
+
+    .line 8
+    if-eqz p1, :cond_0
+
+    .line 9
+    .line 10
+    sget-object v0, LX/3R1;->VISIBLE:LX/3R1;
+
+    .line 11
+    .line 12
+    iput-object v0, v3, LX/3Qx;->A0E:LX/3R1;
+
+    .line 13
+    .line 14
+    iput-wide v1, v3, LX/3Qx;->A0B:J
+
+    .line 15
+    .line 16
+    :goto_0
+    invoke-static {p0, v3, v0}, LX/3Qy;->A01(LX/3Qy;LX/3Qx;LX/3R1;)V
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+
+    .line 20
+    :cond_0
+    sget-object v0, LX/3R1;->INVISIBLE:LX/3R1;
+
+    .line 21
+    .line 22
+    iput-object v0, v3, LX/3Qx;->A0E:LX/3R1;
+
+    .line 23
+    .line 24
+    iput-wide v1, v3, LX/3Qx;->A0A:J
+
+    .line 25
+    .line 26
+    goto :goto_0
 .end method
 
-.method public getValue()Ljava/lang/String;
+.method public final Akg(LX/3R2;)V
     .locals 1
 
-    .line 268435456
-    iget-object v0, p0, LX/3Qy;->mValue:Ljava/lang/String;
+    .line 0
+    iput-object p1, p0, LX/3Qy;->A00:LX/3R2;
 
-    .line 268435457
-    .line 268435458
-    return-object v0
+    .line 1
+    .line 2
+    sget-object v0, LX/3Qy;->A05:LX/3R0;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    iput-object p1, v0, LX/3R0;->A00:LX/3R2;
+
+    .line 7
+    .line 8
+    :cond_0
+    return-void
+.end method
+
+.method public final close()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/3Qy;->A04:LX/3Qx;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, LX/3Qx;->A01()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final onDraw()V
+    .locals 0
+
+    return-void
 .end method

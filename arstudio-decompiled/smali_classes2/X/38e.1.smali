@@ -1,47 +1,33 @@
-.class public interface abstract LX/38e;
+.class public final LX/38e;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3Mf;
+
+# instance fields
+.field public final A00:Ljava/util/Map;
 
 
-# virtual methods
-.method public abstract A8J()Z
-.end method
+# direct methods
+.method public constructor <init>(Ljava/util/Map;)V
+    .locals 1
 
-.method public abstract A9G()Z
-.end method
+    .line 0
+    const/4 v0, 0x1
 
-.method public abstract AGb()J
-.end method
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-.method public abstract AHn()J
-.end method
+    .line 2
+    .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract AJF()J
-.end method
+    .line 5
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/38e;->A00:Ljava/util/Map;
 
-.method public abstract AP0()J
-.end method
-
-.method public abstract APp()Z
-.end method
-
-.method public abstract ARc()Z
-.end method
-
-.method public abstract ATQ()I
-.end method
-
-.method public abstract ATw()Z
-.end method
-
-.method public abstract Aqj()Z
-.end method
-
-.method public abstract Aqm()Z
-.end method
-
-.method public abstract Aqn()Z
+    .line 8
+    .line 9
+    return-void
 .end method

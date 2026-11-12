@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final sPool:LX/0Ir;
+.field public static final sPool:LX/0Hl;
 
 
 # direct methods
@@ -20,11 +20,11 @@
 
     .line 3
     .line 4
-    new-instance v1, LX/41w;
+    new-instance v1, LX/3a5;
 
     .line 5
     .line 6
-    invoke-direct {v1}, LX/41w;-><init>()V
+    invoke-direct {v1}, LX/3a5;-><init>()V
 
     .line 7
     .line 8
@@ -33,16 +33,16 @@
 
     .line 10
     .line 11
-    new-instance v0, LX/0Ir;
+    new-instance v0, LX/0Hl;
 
     .line 12
     .line 13
-    invoke-direct {v0, v1, v2, v3}, LX/0Ir;-><init>(LX/0Od;LX/0JA;Ljava/lang/Class;)V
+    invoke-direct {v0, v1, v2, v3}, LX/0Hl;-><init>(LX/0W0;LX/0I5;Ljava/lang/Class;)V
 
     .line 14
     .line 15
     .line 16
-    sput-object v0, Lcom/facebook/common/jniexecutors/PooledNativeRunnable;->sPool:LX/0Ir;
+    sput-object v0, Lcom/facebook/common/jniexecutors/PooledNativeRunnable;->sPool:LX/0Hl;
 
     .line 17
     .line 18
@@ -54,7 +54,7 @@
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 22
     .line 23
@@ -84,11 +84,11 @@
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/common/jniexecutors/PooledNativeRunnable;->sPool:LX/0Ir;
+    sget-object v0, Lcom/facebook/common/jniexecutors/PooledNativeRunnable;->sPool:LX/0Hl;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/0Ir;->A01()Ljava/lang/Object;
+    invoke-virtual {v0}, LX/0Hl;->A01()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -143,11 +143,11 @@
     .line 12
     .line 13
     :goto_0
-    sget-object v0, Lcom/facebook/common/jniexecutors/PooledNativeRunnable;->sPool:LX/0Ir;
+    sget-object v0, Lcom/facebook/common/jniexecutors/PooledNativeRunnable;->sPool:LX/0Hl;
 
     .line 14
     .line 15
-    invoke-virtual {v0, p0}, LX/0Ir;->A02(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, LX/0Hl;->A02(Ljava/lang/Object;)V
 
     .line 16
     .line 17

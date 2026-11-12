@@ -1,132 +1,132 @@
-.class public final LX/4tW;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public final LX/4Tw;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/4Wk;
 
 
 # instance fields
-.field public A00:Z
-
-.field public final synthetic A01:LX/4tT;
+.field public final A00:F
 
 
 # direct methods
-.method public constructor <init>(LX/4tT;)V
-    .locals 1
+.method public constructor <init>(F)V
+    .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4tW;->A01:LX/4tT;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
     .line 3
+    iput p1, p0, LX/4Tw;->A00:F
+
     .line 4
     .line 5
-    const/4 v0, 0x0
-
-    .line 6
-    iput-boolean v0, p0, LX/4tW;->A00:Z
-
-    .line 7
-    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
+.method public final ACR(Landroid/graphics/RectF;)F
     .locals 1
 
     .line 0
-    const/4 v0, 0x1
+    iget v0, p0, LX/4Tw;->A00:F
 
     .line 1
-    iput-boolean v0, p0, LX/4tW;->A00:Z
-
     .line 2
-    .line 3
-    return-void
+    return v0
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     .line 0
-    iget-boolean v0, p0, LX/4tW;->A00:Z
+    const/4 v2, 0x1
 
     .line 1
-    .line 2
-    const/4 v3, 0x0
+    if-eq p0, p1, :cond_1
 
+    .line 2
     .line 3
-    if-eqz v0, :cond_0
+    instance-of v1, p1, LX/4Tw;
 
     .line 4
     .line 5
-    iput-boolean v3, p0, LX/4tW;->A00:Z
-
-    .line 6
-    .line 7
-    return-void
-
-    .line 8
-    :cond_0
-    iget-object v2, p0, LX/4tW;->A01:LX/4tT;
-
-    .line 9
-    .line 10
-    iget-object v0, v2, LX/4tT;->A0K:Landroid/animation/ValueAnimator;
-
-    .line 11
-    .line 12
-    invoke-static {v0}, LX/4BD;->A00(Landroid/animation/ValueAnimator;)F
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v1
-
-    .line 16
     const/4 v0, 0x0
 
-    .line 17
+    .line 6
+    if-nez v1, :cond_0
+
+    .line 7
+    .line 8
+    return v0
+
+    .line 9
+    :cond_0
+    check-cast p1, LX/4Tw;
+
+    .line 10
+    .line 11
+    iget v1, p0, LX/4Tw;->A00:F
+
+    .line 12
+    .line 13
+    iget v0, p1, LX/4Tw;->A00:F
+
+    .line 14
+    .line 15
     cmpl-float v0, v1, v0
+
+    .line 16
+    .line 17
+    if-eqz v0, :cond_1
 
     .line 18
     .line 19
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
     .line 20
-    .line 21
-    iput v3, v2, LX/4tT;->A02:I
-
-    .line 22
-    .line 23
-    invoke-virtual {v2, v3}, LX/4tT;->A02(I)V
-
-    .line 24
-    .line 25
-    .line 26
-    return-void
-
-    .line 27
     :cond_1
-    const/4 v0, 0x2
+    return v2
+.end method
 
-    .line 28
-    iput v0, v2, LX/4tT;->A02:I
+.method public final hashCode()I
+    .locals 3
 
-    .line 29
-    .line 30
-    iget-object v0, v2, LX/4tT;->A0B:Landroidx/recyclerview/widget/RecyclerView;
+    .line 0
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
-    .line 31
-    .line 32
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
 
-    .line 33
-    .line 34
-    .line 35
-    return-void
+    .line 4
+    iget v0, p0, LX/4Tw;->A00:F
+
+    .line 5
+    .line 6
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
+    .line 10
+    const/4 v0, 0x0
+
+    .line 11
+    invoke-static {v1, v2, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    return v0
 .end method

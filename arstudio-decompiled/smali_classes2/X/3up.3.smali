@@ -3,57 +3,78 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayerLogger$1"
-
-
-# instance fields
-.field public final synthetic A00:LX/3nz;
-
-.field public final synthetic A01:Ljava/lang/String;
+.implements LX/18h;
 
 
 # direct methods
-.method public constructor <init>(LX/3nz;Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3up;->A00:LX/3nz;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/3up;->A01:Ljava/lang/String;
-
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final ACC()I
+    .locals 1
+
+    const/16 v0, 0x3d79
+
+    return v0
+.end method
+
+.method public final AUc(I)V
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/3up;->A00:LX/3nz;
+    const-class v0, LX/420;
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/3up;->A01:Ljava/lang/String;
+    invoke-static {v0}, LX/0X3;->A0g(Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 3
     .line 4
-    iput-object v0, v1, LX/3nz;->A0F:Ljava/lang/String;
-
     .line 5
+    move-result-object v1
+
     .line 6
+    check-cast v1, LX/3sz;
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    iput-boolean v0, v1, LX/3sz;->A07:Z
+
+    .line 10
+    .line 11
+    iput-boolean v0, v1, LX/3sz;->A0B:Z
+
+    .line 12
+    .line 13
+    iput-boolean v0, v1, LX/3sz;->A09:Z
+
+    .line 14
+    .line 15
+    iput-boolean v0, v1, LX/3sz;->A05:Z
+
+    .line 16
+    .line 17
+    iput-boolean v0, v1, LX/3sz;->A0D:Z
+
+    .line 18
+    .line 19
+    iput-boolean v0, v1, LX/3sz;->A03:Z
+
+    .line 20
+    .line 21
     return-void
 .end method

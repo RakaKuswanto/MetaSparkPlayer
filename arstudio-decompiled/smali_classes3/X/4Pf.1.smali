@@ -1,18 +1,14 @@
-.class public final LX/4Pf;
-.super Landroid/widget/BaseAdapter;
+.class public abstract LX/4pf;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final A03:I
+.field public static final A00:Landroid/util/Property;
 
+.field public static final A01:Landroid/util/Property;
 
-# instance fields
-.field public A00:LX/4Pk;
-
-.field public final A01:Lcom/google/android/material/datepicker/CalendarConstraints;
-
-.field public final A02:Lcom/google/android/material/datepicker/Month;
+.field public static final A02:LX/4Z4;
 
 
 # direct methods
@@ -20,686 +16,209 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/4BD;->A0q()Ljava/util/Calendar;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    const/16 v0, 0x1d
 
+    .line 3
     .line 4
-    const/4 v0, 0x4
+    if-lt v1, v0, :cond_0
 
     .line 5
-    invoke-virtual {v1, v0}, Ljava/util/Calendar;->getMaximum(I)I
-
     .line 6
+    new-instance v0, LX/4pi;
+
     .line 7
     .line 8
-    move-result v0
+    invoke-direct {v0}, LX/4pi;-><init>()V
 
     .line 9
-    sput v0, LX/4Pf;->A03:I
-
     .line 10
     .line 11
+    :goto_0
+    sput-object v0, LX/4pf;->A02:LX/4Z4;
+
+    .line 12
+    .line 13
+    const/4 v1, 0x6
+
+    .line 14
+    new-instance v0, LX/6fQ;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v1}, LX/6fQ;-><init>(I)V
+
+    .line 17
+    .line 18
+    .line 19
+    sput-object v0, LX/4pf;->A01:Landroid/util/Property;
+
+    .line 20
+    .line 21
+    const/4 v1, 0x7
+
+    .line 22
+    new-instance v0, LX/6fQ;
+
+    .line 23
+    .line 24
+    invoke-direct {v0, v1}, LX/6fQ;-><init>(I)V
+
+    .line 25
+    .line 26
+    .line 27
+    sput-object v0, LX/4pf;->A00:Landroid/util/Property;
+
+    .line 28
+    .line 29
     return-void
-.end method
 
-.method public constructor <init>(Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/Month;)V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p2, p0, LX/4Pf;->A02:Lcom/google/android/material/datepicker/Month;
-
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/4Pf;->A01:Lcom/google/android/material/datepicker/CalendarConstraints;
-
-    .line 6
-    .line 7
-    const-string v0, "getSelectedDays"
-
-    .line 8
-    .line 9
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    throw v0
-.end method
-
-
-# virtual methods
-.method public final A00(I)Ljava/lang/Long;
-    .locals 4
-
-    .line 0
-    iget-object v3, p0, LX/4Pf;->A02:Lcom/google/android/material/datepicker/Month;
-
-    .line 1
-    .line 2
-    invoke-virtual {v3}, Lcom/google/android/material/datepicker/Month;->A00()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    if-lt p1, v0, :cond_0
-
-    .line 7
-    .line 8
-    invoke-virtual {v3}, Lcom/google/android/material/datepicker/Month;->A00()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v1
-
-    .line 12
-    iget v0, v3, Lcom/google/android/material/datepicker/Month;->A01:I
-
-    .line 13
-    .line 14
-    add-int/2addr v1, v0
-
-    .line 15
-    add-int/lit8 v0, v1, -0x1
-
-    .line 16
-    .line 17
-    if-gt p1, v0, :cond_0
-
-    .line 18
-    .line 19
-    invoke-virtual {v3}, Lcom/google/android/material/datepicker/Month;->A00()I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    sub-int/2addr p1, v0
-
-    .line 24
-    add-int/lit8 v2, p1, 0x1
-
-    .line 25
-    .line 26
-    iget-object v0, v3, Lcom/google/android/material/datepicker/Month;->A06:Ljava/util/Calendar;
-
-    .line 27
-    .line 28
-    invoke-static {v0}, LX/4Pl;->A03(Ljava/util/Calendar;)Ljava/util/Calendar;
-
-    .line 29
     .line 30
-    .line 31
-    move-result-object v1
+    :cond_0
+    const/16 v0, 0x17
 
+    .line 31
     .line 32
-    const/4 v0, 0x5
+    if-lt v1, v0, :cond_1
 
     .line 33
-    invoke-virtual {v1, v0, v2}, Ljava/util/Calendar;->set(II)V
-
     .line 34
+    new-instance v0, LX/4pg;
+
     .line 35
     .line 36
-    invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
+    invoke-direct {v0}, LX/4pg;-><init>()V
 
     .line 37
     .line 38
     .line 39
-    move-result-wide v0
+    goto :goto_0
 
     .line 40
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v0
-
-    .line 44
-    return-object v0
-
-    .line 45
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 46
-    return-object v0
-.end method
-
-.method public final getCount()I
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/4Pf;->A02:Lcom/google/android/material/datepicker/Month;
-
-    .line 1
-    .line 2
-    iget v1, v0, Lcom/google/android/material/datepicker/Month;->A01:I
-
-    .line 3
-    .line 4
-    invoke-virtual {v0}, Lcom/google/android/material/datepicker/Month;->A00()I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    add-int/2addr v1, v0
-
-    .line 9
-    return v1
-.end method
-
-.method public final bridge synthetic getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0, p1}, LX/4Pf;->A00(I)Ljava/lang/Long;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final getItemId(I)J
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/4Pf;->A02:Lcom/google/android/material/datepicker/Month;
-
-    .line 1
-    .line 2
-    iget v0, v0, Lcom/google/android/material/datepicker/Month;->A02:I
-
-    .line 3
-    .line 4
-    div-int/2addr p1, v0
-
-    .line 5
-    int-to-long v0, p1
-
-    .line 6
-    return-wide v0
-.end method
-
-.method public final bridge synthetic getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 10
-
-    .line 0
-    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    iget-object v0, p0, LX/4Pf;->A00:LX/4Pk;
-
-    .line 5
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    .line 8
-    new-instance v0, LX/4Pk;
-
-    .line 9
-    .line 10
-    invoke-direct {v0, v1}, LX/4Pk;-><init>(Landroid/content/Context;)V
-
-    .line 11
-    .line 12
-    .line 13
-    iput-object v0, p0, LX/4Pf;->A00:LX/4Pk;
-
-    .line 14
-    .line 15
-    :cond_0
-    move-object v4, p2
-
-    .line 16
-    check-cast v4, Landroid/widget/TextView;
-
-    .line 17
-    .line 18
-    const/4 v5, 0x0
-
-    .line 19
-    if-nez p2, :cond_1
-
-    .line 20
-    .line 21
-    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v1
-
-    .line 25
-    const v0, 0x7f0d00ec
-
-    .line 26
-    .line 27
-    .line 28
-    invoke-virtual {v1, v0, p3, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v4
-
-    .line 32
-    check-cast v4, Landroid/widget/TextView;
-
-    .line 33
-    .line 34
     :cond_1
-    iget-object v3, p0, LX/4Pf;->A02:Lcom/google/android/material/datepicker/Month;
-
-    .line 35
-    .line 36
-    invoke-virtual {v3}, Lcom/google/android/material/datepicker/Month;->A00()I
-
-    .line 37
-    .line 38
-    .line 39
-    move-result v0
-
-    .line 40
-    sub-int v1, p1, v0
+    const/16 v0, 0x16
 
     .line 41
     .line 42
-    if-ltz v1, :cond_4
+    if-lt v1, v0, :cond_2
 
     .line 43
     .line 44
-    iget v0, v3, Lcom/google/android/material/datepicker/Month;->A01:I
+    new-instance v0, LX/4pk;
 
     .line 45
     .line 46
-    if-ge v1, v0, :cond_4
+    invoke-direct {v0}, LX/4pk;-><init>()V
 
     .line 47
     .line 48
-    const/4 v6, 0x1
-
     .line 49
-    add-int/lit8 v7, v1, 0x1
+    goto :goto_0
 
     .line 50
-    .line 51
-    invoke-virtual {v4, v3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    :cond_2
+    const/16 v0, 0x15
 
+    .line 51
     .line 52
+    if-lt v1, v0, :cond_3
+
     .line 53
     .line 54
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    new-instance v0, LX/4pj;
 
     .line 55
     .line 56
+    invoke-direct {v0}, LX/4pj;-><init>()V
+
     .line 57
-    move-result-object v0
-
     .line 58
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
     .line 59
-    .line 60
-    .line 61
-    move-result-object v0
+    goto :goto_0
 
+    .line 60
+    :cond_3
+    const/16 v0, 0x13
+
+    .line 61
     .line 62
-    iget-object v2, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    if-lt v1, v0, :cond_4
 
     .line 63
     .line 64
-    new-array v1, v6, [Ljava/lang/Object;
+    new-instance v0, LX/4ph;
 
     .line 65
     .line 66
-    invoke-static {v1, v7, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+    invoke-direct {v0}, LX/4ph;-><init>()V
 
     .line 67
     .line 68
     .line 69
-    const-string v0, "%d"
-
-    .line 70
-    .line 71
-    invoke-static {v2, v0, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 72
-    .line 73
-    .line 74
-    move-result-object v0
-
-    .line 75
-    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 76
-    .line 77
-    .line 78
-    iget-object v0, v3, Lcom/google/android/material/datepicker/Month;->A06:Ljava/util/Calendar;
-
-    .line 79
-    .line 80
-    invoke-static {v0}, LX/4Pl;->A03(Ljava/util/Calendar;)Ljava/util/Calendar;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v1
-
-    .line 84
-    const/4 v0, 0x5
-
-    .line 85
-    invoke-virtual {v1, v0, v7}, Ljava/util/Calendar;->set(II)V
-
-    .line 86
-    .line 87
-    .line 88
-    invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    .line 89
-    .line 90
-    .line 91
-    move-result-wide v1
-
-    .line 92
-    iget v9, v3, Lcom/google/android/material/datepicker/Month;->A04:I
-
-    .line 93
-    .line 94
-    invoke-static {}, LX/4Pl;->A02()Ljava/util/Calendar;
-
-    .line 95
-    .line 96
-    .line 97
-    move-result-object v3
-
-    .line 98
-    new-instance v0, Lcom/google/android/material/datepicker/Month;
-
-    .line 99
-    .line 100
-    invoke-direct {v0, v3}, Lcom/google/android/material/datepicker/Month;-><init>(Ljava/util/Calendar;)V
-
-    .line 101
-    .line 102
-    .line 103
-    iget v8, v0, Lcom/google/android/material/datepicker/Month;->A04:I
-
-    .line 104
-    .line 105
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    .line 106
-    .line 107
-    .line 108
-    move-result-object v7
-
-    .line 109
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 110
-    .line 111
-    const/16 v0, 0x18
-
-    .line 112
-    .line 113
-    if-ne v9, v8, :cond_2
-
-    .line 114
-    .line 115
-    if-lt v3, v0, :cond_3
-
-    .line 116
-    .line 117
-    invoke-static {v7}, LX/4Pl;->A00(Ljava/util/Locale;)Landroid/icu/text/DateFormat;
-
-    .line 118
-    .line 119
-    .line 120
-    move-result-object v3
-
-    .line 121
-    :goto_0
-    new-instance v0, Ljava/util/Date;
-
-    .line 122
-    .line 123
-    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
-
-    .line 124
-    .line 125
-    .line 126
-    invoke-virtual {v3, v0}, Landroid/icu/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    .line 127
-    .line 128
-    .line 129
-    move-result-object v0
-
-    .line 130
-    :goto_1
-    invoke-virtual {v4, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    .line 131
-    .line 132
-    .line 133
-    invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
-
-    .line 134
-    .line 135
-    .line 136
-    invoke-virtual {v4, v6}, Landroid/view/View;->setEnabled(Z)V
-
-    .line 137
-    .line 138
-    .line 139
-    :goto_2
-    invoke-virtual {p0, p1}, LX/4Pf;->A00(I)Ljava/lang/Long;
-
-    .line 140
-    .line 141
-    .line 142
-    move-result-object v0
-
-    .line 143
-    if-eqz v0, :cond_6
-
-    .line 144
-    .line 145
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    .line 146
-    .line 147
-    .line 148
-    move-result-wide v6
-
-    .line 149
-    iget-object v0, p0, LX/4Pf;->A01:Lcom/google/android/material/datepicker/CalendarConstraints;
-
-    .line 150
-    .line 151
-    iget-object v0, v0, Lcom/google/android/material/datepicker/CalendarConstraints;->A03:Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
-
-    .line 152
-    .line 153
-    check-cast v0, Lcom/google/android/material/datepicker/DateValidatorPointForward;
-
-    .line 154
-    .line 155
-    iget-wide v1, v0, Lcom/google/android/material/datepicker/DateValidatorPointForward;->A00:J
-
-    .line 156
-    .line 157
-    cmp-long v0, v6, v1
-
-    .line 158
-    .line 159
-    if-ltz v0, :cond_5
-
-    .line 160
-    .line 161
-    const/4 v0, 0x1
-
-    .line 162
-    invoke-virtual {v4, v0}, Landroid/view/View;->setEnabled(Z)V
-
-    .line 163
-    .line 164
-    .line 165
-    const-string v0, "getSelectedDays"
-
-    .line 166
-    .line 167
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 168
-    .line 169
-    .line 170
-    move-result-object v0
-
-    .line 171
-    throw v0
-
-    .line 172
-    :cond_2
-    if-lt v3, v0, :cond_3
-
-    .line 173
-    .line 174
-    invoke-static {v7}, LX/4Pl;->A01(Ljava/util/Locale;)Landroid/icu/text/DateFormat;
-
-    .line 175
-    .line 176
-    .line 177
-    move-result-object v3
-
-    .line 178
     goto :goto_0
 
-    .line 179
-    :cond_3
-    invoke-static {v5, v7}, Ljava/text/DateFormat;->getDateInstance(ILjava/util/Locale;)Ljava/text/DateFormat;
-
-    .line 180
-    .line 181
-    .line 182
-    move-result-object v3
-
-    .line 183
-    const-string v0, "UTC"
-
-    .line 184
-    .line 185
-    invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    .line 186
-    .line 187
-    .line 188
-    move-result-object v0
-
-    .line 189
-    invoke-virtual {v3, v0}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
-
-    .line 190
-    .line 191
-    .line 192
-    new-instance v0, Ljava/util/Date;
-
-    .line 193
-    .line 194
-    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
-
-    .line 195
-    .line 196
-    .line 197
-    invoke-virtual {v3, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    .line 198
-    .line 199
-    .line 200
-    move-result-object v0
-
-    .line 201
-    goto :goto_1
-
-    .line 202
+    .line 70
     :cond_4
-    const/16 v0, 0x8
+    new-instance v0, LX/4Z4;
 
-    .line 203
-    .line 204
-    invoke-virtual {v4, v0}, Landroid/view/View;->setVisibility(I)V
+    .line 71
+    .line 72
+    invoke-direct {v0}, LX/4Z4;-><init>()V
 
-    .line 205
-    .line 206
-    .line 207
-    invoke-virtual {v4, v5}, Landroid/view/View;->setEnabled(Z)V
-
-    .line 208
-    .line 209
-    .line 210
-    goto :goto_2
-
-    .line 211
-    :cond_5
-    invoke-virtual {v4, v5}, Landroid/view/View;->setEnabled(Z)V
-
-    .line 212
-    .line 213
-    .line 214
-    iget-object v0, p0, LX/4Pf;->A00:LX/4Pk;
-
-    .line 215
-    .line 216
-    iget-object v0, v0, LX/4Pk;->A07:LX/4Ti;
-
-    .line 217
-    .line 218
-    invoke-virtual {v0, v4}, LX/4Ti;->A01(Landroid/widget/TextView;)V
-
-    .line 219
-    .line 220
-    .line 221
-    :cond_6
-    return-object v4
+    .line 73
+    .line 74
+    .line 75
+    goto :goto_0
 .end method
 
-.method public final hasStableIds()Z
-    .locals 1
+.method public static A00(Landroid/view/View;)LX/4qC;
+    .locals 2
 
-    const/4 v0, 0x1
+    .line 0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return v0
+    .line 1
+    .line 2
+    const/16 v0, 0x12
+
+    .line 3
+    .line 4
+    if-lt v1, v0, :cond_0
+
+    .line 5
+    .line 6
+    new-instance v1, LX/4pl;
+
+    .line 7
+    .line 8
+    invoke-direct {v1, p0}, LX/4pl;-><init>(Landroid/view/View;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-object v1
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    new-instance v1, LX/4pm;
+
+    .line 17
+    .line 18
+    invoke-direct {v1, v0}, LX/4pm;-><init>(Landroid/os/IBinder;)V
+
+    .line 19
+    .line 20
+    .line 21
+    return-object v1
 .end method

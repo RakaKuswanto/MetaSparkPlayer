@@ -28,52 +28,6 @@
     return-void
 .end method
 
-.method public static getTag(Landroid/view/View;)Ljava/lang/Object;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    check-cast p0, LX/4SB;
-
-    .line 5
-    .line 6
-    iget-object p0, p0, LX/4SB;->A02:Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    return-object p0
-.end method
-
-.method public static setTag(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    check-cast p0, LX/4SB;
-
-    .line 5
-    .line 6
-    iput-object p1, p0, LX/4SB;->A02:Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    return-void
-.end method
-
 
 # virtual methods
 .method public blocksInteractionBelow(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;)Z
@@ -118,13 +72,13 @@
     return v0
 .end method
 
-.method public onApplyWindowInsets(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;LX/046;)LX/046;
+.method public onApplyWindowInsets(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;LX/04J;)LX/04J;
     .locals 0
 
     return-object p3
 .end method
 
-.method public onAttachedToLayoutParams(LX/4SB;)V
+.method public onAttachedToLayoutParams(LX/4PO;)V
     .locals 0
 
     return-void
@@ -212,37 +166,25 @@
 .end method
 
 .method public onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
-    .locals 2
+    .locals 1
 
     .line 268435456
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 268435457
-    aget v0, p9, v1
+    invoke-static {p9, v0, p6}, LX/434;->A1T([III)V
 
     .line 268435458
     .line 268435459
-    add-int/2addr v0, p6
-
     .line 268435460
-    aput v0, p9, v1
+    const/4 v0, 0x1
 
     .line 268435461
+    invoke-static {p9, v0, p7}, LX/434;->A1T([III)V
+
     .line 268435462
-    const/4 v1, 0x1
-
     .line 268435463
-    aget v0, p9, v1
-
     .line 268435464
-    .line 268435465
-    add-int/2addr v0, p7
-
-    .line 268435466
-    aput v0, p9, v1
-
-    .line 268435467
-    .line 268435468
     return-void
 .end method
 
@@ -277,7 +219,7 @@
     .locals 1
 
     .line 0
-    sget-object v0, Landroid/view/View$BaseSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
+    sget-object v0, Landroid/view/AbsSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
 
     .line 1
     .line 2

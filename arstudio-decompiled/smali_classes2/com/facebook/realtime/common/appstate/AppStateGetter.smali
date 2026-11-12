@@ -3,18 +3,18 @@
 .source ""
 
 # interfaces
-.implements LX/3LC;
-.implements LX/3aE;
+.implements LX/0ye;
+.implements LX/0yf;
 
 
 # instance fields
-.field public final mAppForegroundStateGetter:LX/3LC;
+.field public final mAppForegroundStateGetter:LX/0ye;
 
-.field public final mAppNetworkStateGetter:LX/3aE;
+.field public final mAppNetworkStateGetter:LX/0yf;
 
 
 # direct methods
-.method public constructor <init>(LX/3LC;LX/3aE;)V
+.method public constructor <init>(LX/0ye;LX/0yf;)V
     .locals 0
 
     .line 0
@@ -23,11 +23,11 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppForegroundStateGetter:LX/3LC;
+    iput-object p1, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppForegroundStateGetter:LX/0ye;
 
     .line 4
     .line 5
-    iput-object p2, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppNetworkStateGetter:LX/3aE;
+    iput-object p2, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppNetworkStateGetter:LX/0yf;
 
     .line 6
     .line 7
@@ -40,11 +40,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppForegroundStateGetter:LX/3LC;
+    iget-object v0, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppForegroundStateGetter:LX/0ye;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/3LC;->isAppForegrounded()Z
+    invoke-interface {v0}, LX/0ye;->isAppForegrounded()Z
 
     .line 3
     .line 4
@@ -59,11 +59,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppForegroundStateGetter:LX/3LC;
+    iget-object v0, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppForegroundStateGetter:LX/0ye;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/3LC;->isAppSuspended()Z
+    invoke-interface {v0}, LX/0ye;->isAppSuspended()Z
 
     .line 3
     .line 4
@@ -78,11 +78,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppNetworkStateGetter:LX/3aE;
+    iget-object v0, p0, Lcom/facebook/realtime/common/appstate/AppStateGetter;->mAppNetworkStateGetter:LX/0yf;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/3aE;->isNetworkConnected()Z
+    invoke-interface {v0}, LX/0yf;->isNetworkConnected()Z
 
     .line 3
     .line 4

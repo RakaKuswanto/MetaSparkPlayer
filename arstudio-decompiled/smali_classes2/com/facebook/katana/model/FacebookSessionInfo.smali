@@ -189,7 +189,7 @@
     return-object v0
 .end method
 
-.method public setSessionCookies(LX/286;)V
+.method public setSessionCookies(LX/40a;)V
     .locals 4
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
         value = "session_cookies"
@@ -212,33 +212,33 @@
     .line 6
     :cond_0
     :try_start_0
-    iget-object v2, p1, LX/286;->A00:LX/1j1;
+    iget-object v2, p1, LX/40a;->A00:LX/1qE;
 
     .line 7
     .line 8
-    iget-object v0, p1, LX/286;->A02:LX/285;
+    iget-object v0, p1, LX/40a;->A02:LX/3v1;
 
     .line 9
     .line 10
-    new-instance v1, LX/283;
+    new-instance v1, LX/3rT;
 
     .line 11
     .line 12
-    invoke-direct {v1, v2, v0}, LX/283;-><init>(LX/1j1;LX/285;)V
+    invoke-direct {v1, v2, v0}, LX/3rT;-><init>(LX/1qE;LX/3v1;)V
 
     .line 13
     .line 14
     .line 15
-    new-instance v0, LX/1Zt;
+    new-instance v0, LX/29a;
 
     .line 16
     .line 17
-    invoke-direct {v0, p0}, LX/1Zt;-><init>(Lcom/facebook/katana/model/FacebookSessionInfo;)V
+    invoke-direct {v0, p0}, LX/29a;-><init>(Lcom/facebook/katana/model/FacebookSessionInfo;)V
 
     .line 18
     .line 19
     .line 20
-    invoke-virtual {v1, v0}, LX/27m;->A0y(LX/1Te;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, LX/3oD;->A10(LX/27M;)Ljava/lang/Object;
 
     .line 21
     .line 22

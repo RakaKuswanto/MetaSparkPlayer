@@ -1,108 +1,127 @@
-.class public final synthetic LX/5n7;
-.super Ljava/lang/Object;
+.class public final LX/5n7;
+.super Ljava/util/StringTokenizer;
 .source ""
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic A00:I
+.field public A00:I
 
-.field public final synthetic A01:I
+.field public A01:Ljava/lang/String;
 
-.field public final synthetic A02:I
-
-.field public final synthetic A03:J
-
-.field public final synthetic A04:Landroid/hardware/camera2/CaptureRequest$Builder;
-
-.field public final synthetic A05:LX/5la;
-
-.field public final synthetic A06:LX/5mB;
-
-.field public final synthetic A07:LX/5mI;
-
-.field public final synthetic A08:LX/5mO;
-
-.field public final synthetic A09:LX/5c9;
-
-.field public final synthetic A0A:Ljava/lang/String;
-
-.field public final synthetic A0B:Ljava/lang/String;
-
-.field public final synthetic A0C:Z
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5la;LX/5mB;LX/5mI;LX/5mO;LX/5c9;Ljava/lang/String;Ljava/lang/String;IIIJZ)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    const-string v1, "<,>"
 
-    iput-object p4, p0, LX/5n7;->A07:LX/5mI;
+    .line 1
+    .line 2
+    const/4 v0, 0x1
 
-    iput-object p7, p0, LX/5n7;->A0A:Ljava/lang/String;
+    .line 3
+    invoke-direct {p0, p1, v1, v0}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    iput-object p8, p0, LX/5n7;->A0B:Ljava/lang/String;
+    .line 4
+    .line 5
+    .line 6
+    iput-object p1, p0, LX/5n7;->A02:Ljava/lang/String;
 
-    iput-object p6, p0, LX/5n7;->A09:LX/5c9;
-
-    iput p9, p0, LX/5n7;->A00:I
-
-    iput p10, p0, LX/5n7;->A01:I
-
-    iput p11, p0, LX/5n7;->A02:I
-
-    iput-boolean p14, p0, LX/5n7;->A0C:Z
-
-    iput-object p3, p0, LX/5n7;->A06:LX/5mB;
-
-    iput-object p2, p0, LX/5n7;->A05:LX/5la;
-
-    iput-object p1, p0, LX/5n7;->A04:Landroid/hardware/camera2/CaptureRequest$Builder;
-
-    iput-object p5, p0, LX/5n7;->A08:LX/5mO;
-
-    iput-wide p12, p0, LX/5n7;->A03:J
-
+    .line 7
+    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 14
+.method public final hasMoreTokens()Z
+    .locals 2
 
-    iget-object v0, p0, LX/5n7;->A07:LX/5mI;
+    .line 0
+    iget-object v0, p0, LX/5n7;->A01:Ljava/lang/String;
 
-    iget-object v6, p0, LX/5n7;->A0A:Ljava/lang/String;
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
 
-    iget-object v7, p0, LX/5n7;->A0B:Ljava/lang/String;
+    .line 3
+    .line 4
+    invoke-super {p0}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
-    iget-object v5, p0, LX/5n7;->A09:LX/5c9;
+    .line 5
+    .line 6
+    .line 7
+    move-result v1
 
-    iget v8, p0, LX/5n7;->A00:I
+    .line 8
+    const/4 v0, 0x0
 
-    iget v9, p0, LX/5n7;->A01:I
+    .line 9
+    if-eqz v1, :cond_1
 
-    iget v10, p0, LX/5n7;->A02:I
+    .line 10
+    .line 11
+    :cond_0
+    const/4 v0, 0x1
 
-    iget-boolean v13, p0, LX/5n7;->A0C:Z
+    .line 12
+    :cond_1
+    return v0
+.end method
 
-    iget-object v3, p0, LX/5n7;->A06:LX/5mB;
+.method public final nextToken()Ljava/lang/String;
+    .locals 3
 
-    iget-object v2, p0, LX/5n7;->A05:LX/5la;
+    .line 0
+    iget-object v2, p0, LX/5n7;->A01:Ljava/lang/String;
 
-    iget-object v1, p0, LX/5n7;->A04:Landroid/hardware/camera2/CaptureRequest$Builder;
+    .line 1
+    .line 2
+    if-eqz v2, :cond_0
 
-    iget-object v4, p0, LX/5n7;->A08:LX/5mO;
+    .line 3
+    .line 4
+    const/4 v0, 0x0
 
-    iget-wide v11, p0, LX/5n7;->A03:J
+    .line 5
+    iput-object v0, p0, LX/5n7;->A01:Ljava/lang/String;
 
-    invoke-virtual/range {v0 .. v13}, LX/5mI;->A01(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5la;LX/5mB;LX/5mO;LX/5c9;Ljava/lang/String;Ljava/lang/String;IIIJZ)LX/5gl;
+    .line 6
+    .line 7
+    :goto_0
+    iget v1, p0, LX/5n7;->A00:I
 
-    move-result-object v0
+    .line 8
+    .line 9
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    return-object v0
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    add-int/2addr v1, v0
+
+    .line 14
+    iput v1, p0, LX/5n7;->A00:I
+
+    .line 15
+    .line 16
+    return-object v2
+
+    .line 17
+    :cond_0
+    invoke-super {p0}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v2
+
+    .line 21
+    goto :goto_0
 .end method

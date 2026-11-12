@@ -33,26 +33,26 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 15
+    .locals 16
 
     .line 0
     const-string v0, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
 
     .line 1
     .line 2
-    const/4 v13, 0x0
+    const/4 v15, 0x0
 
     .line 3
-    new-instance v12, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v14, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 4
     .line 5
-    invoke-direct {v12, v0, v13, v0}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v14, v0, v15, v0}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 9
     .line 10
@@ -60,19 +60,19 @@
 
     .line 11
     .line 12
-    const/4 v11, 0x1
+    const/4 v13, 0x1
 
     .line 13
-    new-instance v10, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v12, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 14
     .line 15
-    invoke-direct {v10, v0, v11, v0}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v12, v0, v13, v0}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->ANNIVERSARY:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->ANNIVERSARY:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 19
     .line 20
@@ -80,39 +80,39 @@
 
     .line 21
     .line 22
-    const/4 v9, 0x2
+    const/4 v11, 0x2
 
     .line 23
-    new-instance v8, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v10, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 24
     .line 25
-    invoke-direct {v8, v0, v9, v0}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v10, v0, v11, v0}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->BROWSER:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->BROWSER:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 29
     .line 30
-    const-string v1, "CALENDAR"
+    const-string v0, "CALENDAR"
 
     .line 31
     .line 32
-    const/4 v0, 0x3
+    const/4 v9, 0x3
 
     .line 33
-    new-instance v7, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v8, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 34
     .line 35
-    invoke-direct {v7, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v8, v0, v9, v0}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 36
     .line 37
     .line 38
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->CALENDAR:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->CALENDAR:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 39
     .line 40
@@ -123,16 +123,16 @@
     const/4 v0, 0x4
 
     .line 43
-    new-instance v6, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v7, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 44
     .line 45
-    invoke-direct {v6, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v7, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 46
     .line 47
     .line 48
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->FIREWORKS:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->FIREWORKS:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 49
     .line 50
@@ -143,16 +143,16 @@
     const/4 v0, 0x5
 
     .line 53
-    new-instance v5, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v6, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 54
     .line 55
-    invoke-direct {v5, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v6, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 56
     .line 57
     .line 58
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->JUMP:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->JUMP:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 59
     .line 60
@@ -163,120 +163,127 @@
     const/4 v0, 0x6
 
     .line 63
-    new-instance v4, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v5, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 64
     .line 65
-    invoke-direct {v4, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v5, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 66
     .line 67
     .line 68
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->MEDAL:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->MEDAL:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 69
     .line 70
-    const-string v1, "OFFICE_PARTY"
+    const-string v2, "OFFICE_PARTY"
 
     .line 71
     .line 72
-    const/4 v0, 0x7
+    const/4 v1, 0x7
 
     .line 73
-    new-instance v3, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v0, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 74
     .line 75
-    invoke-direct {v3, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 76
     .line 77
     .line 78
-    sput-object v3, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->OFFICE_PARTY:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->OFFICE_PARTY:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 79
     .line 80
-    const-string v1, "TARGET"
+    const-string v2, "TARGET"
 
     .line 81
     .line 82
-    const/16 v0, 0x8
+    const/16 v1, 0x8
 
     .line 83
     .line 84
-    new-instance v2, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    new-instance v4, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 85
     .line 86
-    invoke-direct {v2, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v4, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 87
     .line 88
     .line 89
-    sput-object v2, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->TARGET:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->TARGET:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
     .line 90
     .line 91
-    const-string v14, "WORK_ANNIVERSARY"
+    const-string/jumbo v1, "WORK_ANNIVERSARY"
 
     .line 92
     .line 93
-    const/16 v0, 0x9
-
     .line 94
+    const/16 v3, 0x9
+
     .line 95
-    new-instance v1, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
-
     .line 96
-    .line 97
-    invoke-direct {v1, v14, v0, v14}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v2, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
 
+    .line 97
     .line 98
+    invoke-direct {v2, v1, v3, v1}, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 99
     .line 100
-    sput-object v1, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->WORK_ANNIVERSARY:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
-
     .line 101
+    sput-object v2, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->WORK_ANNIVERSARY:Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+
     .line 102
-    const/16 v0, 0xa
-
     .line 103
+    const/16 v1, 0xa
+
     .line 104
-    new-array v0, v0, [Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
-
     .line 105
+    new-array v1, v1, [Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+
     .line 106
-    aput-object v12, v0, v13
-
     .line 107
+    aput-object v14, v1, v15
+
     .line 108
-    aput-object v10, v0, v11
-
     .line 109
+    aput-object v12, v1, v13
+
     .line 110
-    aput-object v8, v0, v9
-
     .line 111
-    .line 112
-    invoke-static {v0, v7, v6}, LX/0Ye;->A1T([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    aput-object v10, v1, v11
 
+    .line 112
     .line 113
+    aput-object v8, v1, v9
+
     .line 114
     .line 115
-    invoke-static {v5, v4, v3, v0}, LX/0Yc;->A1O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v7, v6, v5, v0, v1}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 116
     .line 117
     .line 118
-    invoke-static {v0, v2, v1}, LX/0Yh;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/16 v0, 0x8
 
     .line 119
     .line 120
-    .line 121
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+    aput-object v4, v1, v0
 
+    .line 121
     .line 122
+    aput-object v2, v1, v3
+
     .line 123
+    .line 124
+    sput-object v1, Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLWorkMajorEventMediaType;
+
+    .line 125
+    .line 126
     return-void
 .end method
 
@@ -304,7 +311,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

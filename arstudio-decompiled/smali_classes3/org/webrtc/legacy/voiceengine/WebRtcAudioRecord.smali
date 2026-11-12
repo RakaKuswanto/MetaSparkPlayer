@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0Qd;
+.implements LX/0Mt;
 .implements Lorg/webrtc/legacy/voiceengine/WebRtcEngineLoggerDelegate;
 
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
 .field public mAec:Landroid/media/audiofx/AcousticEchoCanceler;
 
@@ -26,7 +26,7 @@
 
 .field public mAudioRecord:Landroid/media/AudioRecord;
 
-.field public final mAudioRecordMultiplexer:LX/0Na;
+.field public final mAudioRecordMultiplexer:LX/0RP;
 
 .field public mAudioThread:Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord$AudioRecordThread;
 
@@ -57,11 +57,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->Ad6:I
+    sget v0, LX/2I6;->AVn:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -69,7 +69,7 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecordMultiplexer:LX/0Na;
+    iput-object v0, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecordMultiplexer:LX/0RP;
 
     .line 10
     .line 11
@@ -172,11 +172,11 @@
     return-object p0
 .end method
 
-.method public static synthetic access$300(Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;)LX/0Na;
+.method public static synthetic access$300(Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;)LX/0RP;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecordMultiplexer:LX/0Na;
+    iget-object p0, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecordMultiplexer:LX/0RP;
 
     .line 1
     .line 2
@@ -238,7 +238,7 @@
 
     .line 7
     .line 8
-    invoke-static {}, LX/0Yj;->A0q()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0v()[Ljava/lang/Object;
 
     .line 9
     .line 10
@@ -580,7 +580,7 @@
 
     .line 55
     .line 56
-    invoke-static {v2, v0, v1}, LX/4BE;->A1A(Landroid/media/audiofx/AudioEffect$Descriptor;Ljava/lang/String;Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;)V
+    invoke-static {v2, v0, v1}, LX/432;->A17(Landroid/media/audiofx/AudioEffect$Descriptor;Ljava/lang/String;Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;)V
 
     .line 57
     .line 58
@@ -836,7 +836,7 @@
 
     .line 55
     .line 56
-    invoke-static {v2, v0, v1}, LX/4BE;->A1A(Landroid/media/audiofx/AudioEffect$Descriptor;Ljava/lang/String;Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;)V
+    invoke-static {v2, v0, v1}, LX/432;->A17(Landroid/media/audiofx/AudioEffect$Descriptor;Ljava/lang/String;Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;)V
 
     .line 57
     .line 58
@@ -1092,7 +1092,7 @@
 
     .line 55
     .line 56
-    invoke-static {v2, v0, v1}, LX/4BE;->A1A(Landroid/media/audiofx/AudioEffect$Descriptor;Ljava/lang/String;Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;)V
+    invoke-static {v2, v0, v1}, LX/432;->A17(Landroid/media/audiofx/AudioEffect$Descriptor;Ljava/lang/String;Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;)V
 
     .line 57
     .line 58
@@ -1245,7 +1245,7 @@
 
     .line 4
     .line 5
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -1301,92 +1301,112 @@
 .end method
 
 .method public enableBuiltInAGC(Z)Z
-    .locals 3
+    .locals 4
 
     .line 0
-    iget-object v2, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
+    iget-object v3, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
     .line 1
     .line 2
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    move-result-object v2
 
     .line 6
-    invoke-static {v1, p1}, LX/0Yg;->A1K([Ljava/lang/Object;Z)V
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 7
     .line 8
     .line 9
-    const-string v0, "enableBuiltInAGC(%b)"
+    move-result-object v1
 
     .line 10
+    const/4 v0, 0x0
+
     .line 11
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    aput-object v1, v2, v0
 
     .line 12
     .line 13
+    const-string v0, "enableBuiltInAGC(%b)"
+
     .line 14
-    iput-boolean p1, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mUseBuiltInAGC:Z
-
     .line 15
-    .line 16
-    invoke-direct {p0}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInAGC()Z
+    invoke-virtual {v3, v0, v2}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 16
     .line 17
     .line 18
+    iput-boolean p1, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mUseBuiltInAGC:Z
+
     .line 19
+    .line 20
+    invoke-direct {p0}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInAGC()Z
+
+    .line 21
+    .line 22
+    .line 23
     move-result v0
 
-    .line 20
+    .line 24
     return v0
 .end method
 
 .method public enableBuiltInNS(Z)Z
-    .locals 3
+    .locals 4
 
     .line 0
-    iget-object v2, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
+    iget-object v3, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
     .line 1
     .line 2
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    move-result-object v2
 
     .line 6
-    invoke-static {v1, p1}, LX/0Yg;->A1K([Ljava/lang/Object;Z)V
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 7
     .line 8
     .line 9
-    const-string v0, "enableBuiltInNS(%b)"
+    move-result-object v1
 
     .line 10
+    const/4 v0, 0x0
+
     .line 11
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    aput-object v1, v2, v0
 
     .line 12
     .line 13
+    const-string v0, "enableBuiltInNS(%b)"
+
     .line 14
-    iput-boolean p1, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mUseBuiltInNS:Z
-
     .line 15
-    .line 16
-    invoke-direct {p0}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInNS()Z
+    invoke-virtual {v3, v0, v2}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 16
     .line 17
     .line 18
+    iput-boolean p1, p0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mUseBuiltInNS:Z
+
     .line 19
+    .line 20
+    invoke-direct {p0}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInNS()Z
+
+    .line 21
+    .line 22
+    .line 23
     move-result v0
 
-    .line 20
+    .line 24
     return v0
 .end method
 
@@ -1436,715 +1456,708 @@
 
     .line 8
     .line 9
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1, v8}, LX/433;->A1a([Ljava/lang/Object;I)Z
 
     .line 10
     .line 11
     .line 12
-    move-result-object v0
+    move-result v4
 
     .line 13
-    const/4 v4, 0x0
-
-    .line 14
-    aput-object v0, v1, v4
-
-    .line 15
-    .line 16
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 17
-    .line 18
-    .line 19
+    .line 14
+    .line 15
+    .line 16
     move-result-object v0
 
-    .line 20
+    .line 17
     const/4 v3, 0x1
 
-    .line 21
+    .line 18
     aput-object v0, v1, v3
 
-    .line 22
-    .line 23
+    .line 19
+    .line 20
     const-string v0, "initRecording(sampleRate=%d, channels=%d)"
 
+    .line 21
+    .line 22
+    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 23
     .line 24
     .line 25
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v1, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mContext:Landroid/content/Context;
 
     .line 26
     .line 27
+    const/16 v0, 0xe
+
     .line 28
-    iget-object v1, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mContext:Landroid/content/Context;
-
     .line 29
-    .line 30
-    const/16 v0, 0xd
-
-    .line 31
-    .line 32
     invoke-static {v0}, LX/000;->A00(I)Ljava/lang/String;
 
-    .line 33
-    .line 34
-    .line 35
+    .line 30
+    .line 31
+    .line 32
     move-result-object v0
 
-    .line 36
+    .line 33
     invoke-static {v1, v0}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioUtils;->hasPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
-    .line 37
-    .line 38
-    .line 39
+    .line 34
+    .line 35
+    .line 36
     move-result v0
 
-    .line 40
+    .line 37
     const/4 v5, -0x1
 
-    .line 41
+    .line 38
     if-nez v0, :cond_0
 
-    .line 42
-    .line 43
+    .line 39
+    .line 40
     iget-object v2, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 44
-    .line 45
+    .line 41
+    .line 42
     new-array v1, v4, [Ljava/lang/Object;
 
-    .line 46
-    .line 47
+    .line 43
+    .line 44
     const-string v0, "RECORD_AUDIO permission is missing"
 
-    .line 48
-    .line 49
+    .line 45
+    .line 46
     :goto_0
     invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 50
-    .line 51
-    .line 52
+    .line 47
+    .line 48
+    .line 49
     return v5
 
-    .line 53
+    .line 50
     :cond_0
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
-    .line 54
-    .line 55
+    .line 51
+    .line 52
     if-eqz v0, :cond_1
 
-    .line 56
-    .line 57
+    .line 53
+    .line 54
     iget-object v2, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 58
-    .line 59
+    .line 55
+    .line 56
     new-array v1, v4, [Ljava/lang/Object;
 
-    .line 60
-    .line 61
+    .line 57
+    .line 58
     const-string v0, "initRecording() called twice without stopRecording()"
 
+    .line 59
+    .line 60
+    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->warning(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 61
     .line 62
     .line 63
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->warning(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->releaseAudioResources()V
 
     .line 64
     .line 65
     .line 66
-    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->releaseAudioResources()V
-
-    .line 67
-    .line 68
-    .line 69
     :cond_1
     mul-int/lit8 v0, p2, 0x2
 
-    .line 70
-    .line 71
+    .line 67
+    .line 68
     div-int/lit8 v2, p1, 0x64
+
+    .line 69
+    .line 70
+    mul-int/2addr v0, v2
+
+    .line 71
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     .line 72
     .line 73
-    mul-int/2addr v0, v2
-
     .line 74
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
-
-    .line 75
-    .line 76
-    .line 77
     move-result-object v0
 
-    .line 78
+    .line 75
     iput-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mByteBuffer:Ljava/nio/ByteBuffer;
 
-    .line 79
-    .line 80
+    .line 76
+    .line 77
     iget-object v6, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 81
-    .line 82
+    .line 78
+    .line 79
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 83
-    .line 84
+    .line 80
+    .line 81
     invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    .line 85
-    .line 86
-    .line 87
+    .line 82
+    .line 83
+    .line 84
     move-result v0
 
-    .line 88
+    .line 85
     invoke-static {v1, v0, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 86
+    .line 87
+    .line 88
+    const-string v0, "mByteBuffer.capacity: %d"
 
     .line 89
     .line 90
-    .line 91
-    const-string v0, "mByteBuffer.capacity: %d"
+    invoke-virtual {v6, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 91
     .line 92
     .line 93
-    invoke-virtual {v6, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v6, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     .line 94
     .line 95
-    .line 96
-    iget-object v6, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mByteBuffer:Ljava/nio/ByteBuffer;
-
-    .line 97
-    .line 98
     iget-wide v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mNativeAudioDevice:J
 
+    .line 96
+    .line 97
+    invoke-direct {v12, v6, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->nativeCacheDirectRecordBufferAddress(Ljava/nio/ByteBuffer;J)V
+
+    .line 98
     .line 99
     .line 100
-    invoke-direct {v12, v6, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->nativeCacheDirectRecordBufferAddress(Ljava/nio/ByteBuffer;J)V
+    const/16 v9, 0x10
 
     .line 101
     .line 102
-    .line 103
-    const/16 v9, 0x10
-
-    .line 104
-    .line 105
     invoke-static {v8, v9, v10}, Landroid/media/AudioRecord;->getMinBufferSize(III)I
 
-    .line 106
-    .line 107
-    .line 108
+    .line 103
+    .line 104
+    .line 105
     move-result v7
 
-    .line 109
+    .line 106
     if-eq v7, v5, :cond_2
+
+    .line 107
+    .line 108
+    const/4 v0, -0x2
+
+    .line 109
+    if-eq v7, v0, :cond_2
 
     .line 110
     .line 111
-    const/4 v0, -0x2
-
-    .line 112
-    if-eq v7, v0, :cond_2
-
-    .line 113
-    .line 114
     iget-object v6, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 115
-    .line 116
+    .line 112
+    .line 113
     new-array v1, v3, [Ljava/lang/Object;
 
+    .line 114
+    .line 115
+    invoke-static {v1, v7, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 116
     .line 117
     .line 118
-    invoke-static {v1, v7, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+    const-string v0, "AudioRecord.getMinBufferSize: %d"
 
     .line 119
     .line 120
-    .line 121
-    const-string v0, "AudioRecord.getMinBufferSize: %d"
+    invoke-virtual {v6, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 121
     .line 122
     .line 123
-    invoke-virtual {v6, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    mul-int/lit8 v1, v7, 0x2
 
     .line 124
     .line 125
-    .line 126
-    mul-int/lit8 v1, v7, 0x2
-
-    .line 127
-    .line 128
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mByteBuffer:Ljava/nio/ByteBuffer;
 
-    .line 129
-    .line 130
+    .line 126
+    .line 127
     invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    .line 131
-    .line 132
-    .line 133
+    .line 128
+    .line 129
+    .line 130
     move-result v0
 
-    .line 134
+    .line 131
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
-    .line 135
-    .line 136
-    .line 137
+    .line 132
+    .line 133
+    .line 134
     move-result v11
 
-    .line 138
+    .line 135
     iget-object v6, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 139
-    .line 140
+    .line 136
+    .line 137
     new-array v1, v3, [Ljava/lang/Object;
 
+    .line 138
+    .line 139
+    invoke-static {v1, v11, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 140
     .line 141
     .line 142
-    invoke-static {v1, v11, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+    const-string v0, "bufferSizeInBytes: %d"
 
     .line 143
     .line 144
-    .line 145
-    const-string v0, "bufferSizeInBytes: %d"
-
-    .line 146
-    .line 147
     invoke-virtual {v6, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 148
-    .line 149
-    .line 150
+    .line 145
+    .line 146
+    .line 147
     const/4 v7, 0x7
 
-    .line 151
+    .line 148
     :try_start_0
     new-instance v6, Landroid/media/AudioRecord;
 
+    .line 149
+    .line 150
+    invoke-direct/range {v6 .. v11}, Landroid/media/AudioRecord;-><init>(IIIII)V
+
+    .line 151
     .line 152
     .line 153
-    invoke-direct/range {v6 .. v11}, Landroid/media/AudioRecord;-><init>(IIIII)V
+    iput-object v6, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
     .line 154
     .line 155
+    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecordMultiplexer:LX/0RP;
+
     .line 156
-    iput-object v6, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
-
     .line 157
-    .line 158
-    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecordMultiplexer:LX/0Na;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
+    .line 158
     .line 159
     .line 160
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 161
-    .line 162
-    .line 163
     move-result-object v1
 
-    .line 164
+    .line 161
     check-cast v1, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecordMultiplexer;
 
-    .line 165
-    .line 166
+    .line 162
+    .line 163
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
-    .line 167
-    .line 168
+    .line 164
+    .line 165
     invoke-virtual {v1, v0}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecordMultiplexer;->setRtcAudioRecord(Landroid/media/AudioRecord;)V
 
-    .line 169
-    .line 170
-    .line 171
+    .line 166
+    .line 167
+    .line 168
     goto :goto_2
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 172
+    .line 169
     :catch_0
     move-exception v6
 
-    .line 173
+    .line 170
     iget-object v1, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 174
-    .line 175
+    .line 171
+    .line 172
     const-string v0, "new AudioRecord illegal argument"
 
-    .line 176
-    .line 177
+    .line 173
+    .line 174
     goto :goto_1
 
-    .line 178
+    .line 175
     :catch_1
     move-exception v6
 
-    .line 179
+    .line 176
     iget-object v1, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 180
-    .line 181
+    .line 177
+    .line 178
     const-string v0, "new AudioRecord unknown exception"
 
-    .line 182
-    .line 183
+    .line 179
+    .line 180
     :goto_1
     invoke-virtual {v1, v0, v6}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 184
-    .line 185
-    .line 186
+    .line 181
+    .line 182
+    .line 183
     :goto_2
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
-    .line 187
-    .line 188
+    .line 184
+    .line 185
     if-nez v0, :cond_3
 
-    .line 189
-    .line 190
+    .line 186
+    .line 187
     iget-object v2, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 191
-    .line 192
+    .line 188
+    .line 189
     new-array v1, v4, [Ljava/lang/Object;
 
-    .line 193
-    .line 194
+    .line 190
+    .line 191
     const-string v0, "Failed to create a new AudioRecord instance"
 
-    .line 195
-    .line 196
+    .line 192
+    .line 193
     goto/16 :goto_0
 
-    .line 197
-    .line 198
+    .line 194
+    .line 195
     :cond_2
     iget-object v2, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 199
-    .line 200
+    .line 196
+    .line 197
     new-array v1, v3, [Ljava/lang/Object;
 
+    .line 198
+    .line 199
+    invoke-static {v1, v7, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 200
     .line 201
     .line 202
-    invoke-static {v1, v7, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+    const-string v0, "AudioRecord.getMinBufferSize failed: %d"
 
     .line 203
     .line 204
-    .line 205
-    const-string v0, "AudioRecord.getMinBufferSize failed: %d"
-
-    .line 206
-    .line 207
     goto/16 :goto_0
 
-    .line 208
-    .line 209
+    .line 205
+    .line 206
     :cond_3
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getState()I
 
-    .line 210
-    .line 211
-    .line 212
+    .line 207
+    .line 208
+    .line 209
     move-result v0
 
-    .line 213
+    .line 210
     if-eq v0, v3, :cond_4
 
-    .line 214
-    .line 215
+    .line 211
+    .line 212
     iget-object v2, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 216
-    .line 217
+    .line 213
+    .line 214
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 218
-    .line 219
+    .line 215
+    .line 216
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
-    .line 220
-    .line 221
+    .line 217
+    .line 218
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getState()I
 
-    .line 222
-    .line 223
-    .line 224
+    .line 219
+    .line 220
+    .line 221
     move-result v0
 
-    .line 225
+    .line 222
     invoke-static {v1, v0, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 223
+    .line 224
+    .line 225
+    const-string v0, "AudioRecord is not intialized (%d)"
 
     .line 226
     .line 227
-    .line 228
-    const-string v0, "AudioRecord is not intialized (%d)"
+    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 228
     .line 229
     .line 230
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->releaseAudioResources()V
 
     .line 231
     .line 232
     .line 233
-    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->releaseAudioResources()V
-
-    .line 234
-    .line 235
-    .line 236
     return v5
 
-    .line 237
+    .line 234
     :cond_4
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
+    .line 235
+    .line 236
+    invoke-virtual {v0}, Landroid/media/AudioRecord;->getRecordingState()I
+
+    .line 237
     .line 238
     .line 239
-    invoke-virtual {v0}, Landroid/media/AudioRecord;->getRecordingState()I
+    move-result v0
 
     .line 240
+    invoke-static {v0, v3}, LX/001;->A1N(II)Z
+
     .line 241
     .line 242
-    move-result v0
-
     .line 243
-    invoke-static {v0, v3}, LX/001;->A1O(II)Z
-
-    .line 244
-    .line 245
-    .line 246
     move-result v5
 
-    .line 247
+    .line 244
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 248
-    .line 249
+    .line 245
+    .line 246
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
-    .line 250
-    .line 251
+    .line 247
+    .line 248
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getRecordingState()I
 
-    .line 252
-    .line 253
-    .line 254
+    .line 249
+    .line 250
+    .line 251
     move-result v0
 
-    .line 255
+    .line 252
     invoke-static {v1, v0, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 253
+    .line 254
+    .line 255
+    const-string v0, "Incorrect recording state %d"
 
     .line 256
     .line 257
-    .line 258
-    const-string v0, "Incorrect recording state %d"
+    invoke-direct {v12, v5, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
 
+    .line 258
     .line 259
     .line 260
-    invoke-direct {v12, v5, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
     .line 261
     .line 262
-    .line 263
-    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
-
-    .line 264
-    .line 265
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getAudioSource()I
 
-    .line 266
-    .line 267
-    .line 268
+    .line 263
+    .line 264
+    .line 265
     move-result v0
 
-    .line 269
-    invoke-static {v0, v7}, LX/001;->A1O(II)Z
+    .line 266
+    invoke-static {v0, v7}, LX/001;->A1N(II)Z
 
-    .line 270
-    .line 271
-    .line 272
+    .line 267
+    .line 268
+    .line 269
     move-result v5
 
-    .line 273
+    .line 270
     new-array v1, v10, [Ljava/lang/Object;
 
+    .line 271
+    .line 272
+    invoke-static {v1, v7, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 273
     .line 274
     .line 275
-    invoke-static {v1, v7, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
     .line 276
     .line 277
-    .line 278
-    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
-
-    .line 279
-    .line 280
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getAudioSource()I
 
-    .line 281
-    .line 282
-    .line 283
+    .line 278
+    .line 279
+    .line 280
     move-result v0
 
-    .line 284
+    .line 281
     invoke-static {v1, v0, v3}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 282
+    .line 283
+    .line 284
+    const-string v0, "Incorrect audio source %d != %d"
 
     .line 285
     .line 286
-    .line 287
-    const-string v0, "Incorrect audio source %d != %d"
+    invoke-direct {v12, v5, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
 
+    .line 287
     .line 288
     .line 289
-    invoke-direct {v12, v5, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
+    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInAEC()Z
 
     .line 290
     .line 291
     .line 292
-    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInAEC()Z
+    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInAGC()Z
 
     .line 293
     .line 294
     .line 295
-    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInAGC()Z
+    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInNS()Z
 
     .line 296
     .line 297
     .line 298
-    invoke-direct {v12}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->updateBuiltInNS()Z
+    iget-object v5, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
     .line 299
     .line 300
-    .line 301
-    iget-object v5, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
 
+    .line 301
     .line 302
     .line 303
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
-
-    .line 304
-    .line 305
-    .line 306
     move-result-object v1
 
-    .line 307
+    .line 304
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
-    .line 308
-    .line 309
+    .line 305
+    .line 306
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getAudioFormat()I
 
-    .line 310
-    .line 311
-    .line 312
+    .line 307
+    .line 308
+    .line 309
     move-result v0
 
-    .line 313
+    .line 310
     invoke-static {v1, v0, v4}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 311
+    .line 312
+    .line 313
+    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
     .line 314
     .line 315
-    .line 316
-    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
-
-    .line 317
-    .line 318
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getChannelCount()I
 
-    .line 319
-    .line 320
-    .line 321
+    .line 316
+    .line 317
+    .line 318
     move-result v0
 
-    .line 322
+    .line 319
     invoke-static {v1, v0, v3}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 320
+    .line 321
+    .line 322
+    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
     .line 323
     .line 324
-    .line 325
-    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
-
-    .line 326
-    .line 327
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getSampleRate()I
 
-    .line 328
-    .line 329
-    .line 330
+    .line 325
+    .line 326
+    .line 327
     move-result v0
 
-    .line 331
+    .line 328
     invoke-static {v1, v0, v10}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 329
+    .line 330
+    .line 331
+    const-string v0, "AudioRecord audio format: %d channels: %d sample rate: %d"
 
     .line 332
     .line 333
-    .line 334
-    const-string v0, "AudioRecord audio format: %d channels: %d sample rate: %d"
+    invoke-virtual {v5, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 334
     .line 335
     .line 336
-    invoke-virtual {v5, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
     .line 337
     .line 338
-    .line 339
-    iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
-
-    .line 340
-    .line 341
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getSampleRate()I
 
-    .line 342
-    .line 343
-    .line 344
+    .line 339
+    .line 340
+    .line 341
     move-result v13
 
-    .line 345
+    .line 342
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecord:Landroid/media/AudioRecord;
 
-    .line 346
-    .line 347
+    .line 343
+    .line 344
     invoke-virtual {v0}, Landroid/media/AudioRecord;->getChannelCount()I
 
-    .line 348
-    .line 349
-    .line 350
+    .line 345
+    .line 346
+    .line 347
     move-result v14
 
-    .line 351
+    .line 348
     iget-object v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mContext:Landroid/content/Context;
 
-    .line 352
-    .line 353
+    .line 349
+    .line 350
     invoke-static {v0}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioUtils;->isLowLatencyOutputSupported(Landroid/content/Context;)Z
 
-    .line 354
-    .line 355
-    .line 356
+    .line 351
+    .line 352
+    .line 353
     move-result v15
 
-    .line 357
+    .line 354
     iget-wide v0, v12, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mNativeAudioDevice:J
 
-    .line 358
-    .line 359
+    .line 355
+    .line 356
     move/from16 v16, v11
 
-    .line 360
-    .line 361
+    .line 357
+    .line 358
     move-wide/from16 v17, v0
 
-    .line 362
-    .line 363
+    .line 359
+    .line 360
     invoke-direct/range {v12 .. v18}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->nativeCacheRecordAudioParameters(IIZIJ)V
 
-    .line 364
-    .line 365
-    .line 366
+    .line 361
+    .line 362
+    .line 363
     return v2
 .end method
 
@@ -2314,7 +2327,7 @@
     const/4 v3, 0x1
 
     .line 48
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 49
     .line 50
@@ -2404,7 +2417,7 @@
 
     .line 1
     .line 2
-    invoke-static {}, LX/0Yj;->A0q()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0v()[Ljava/lang/Object;
 
     .line 3
     .line 4

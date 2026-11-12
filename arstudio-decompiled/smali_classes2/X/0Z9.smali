@@ -1,72 +1,223 @@
 .class public final LX/0Z9;
-.super Ljava/lang/Object;
+.super LX/3Tj;
 .source ""
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = 0x2010aea5a21ffcL
 
 
 # instance fields
-.field public final enableRegressionDebuggingCode:Z
+.field public A00:Ljava/lang/Object;
 
-.field public final manifestRefreshOverrideMs:I
-
-.field public final useHeadersForDinfoPoller:Z
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, LX/0Z9;->manifestRefreshOverrideMs:I
-
-    iput-boolean v0, p0, LX/0Z9;->useHeadersForDinfoPoller:Z
-
-    iput-boolean v0, p0, LX/0Z9;->enableRegressionDebuggingCode:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(LX/0ZC;)V
-    .locals 1
+.method public constructor <init>(LX/3aS;I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, LX/0Z9;->A01:I
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/0Z9;->A00:Ljava/lang/Object;
+
     .line 3
-    iget v0, p1, LX/0ZC;->A00:I
-
     .line 4
-    .line 5
-    iput v0, p0, LX/0Z9;->manifestRefreshOverrideMs:I
+    invoke-direct {p0}, LX/3Tj;-><init>()V
 
+    .line 5
     .line 6
     .line 7
-    iget-boolean v0, p1, LX/0ZC;->A02:Z
+    return-void
+.end method
 
+
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 3
+
+    .line 0
+    iget v0, p0, LX/0Z9;->A01:I
+
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/0Z9;->A00:Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    check-cast v2, LX/3aS;
+
+    .line 7
     .line 8
-    .line 9
-    iput-boolean v0, p0, LX/0Z9;->useHeadersForDinfoPoller:Z
+    invoke-static {v2}, LX/0X6;->A0U(LX/3aS;)LX/6aE;
 
+    .line 9
     .line 10
     .line 11
-    iget-boolean v0, p1, LX/0ZC;->A01:Z
+    move-result-object v1
 
     .line 12
-    .line 13
-    iput-boolean v0, p0, LX/0Z9;->enableRegressionDebuggingCode:Z
+    iget-object v0, v2, LX/3aS;->A03:Landroid/widget/ImageView;
 
+    .line 13
     .line 14
+    invoke-virtual {v1, v0}, LX/6aE;->A01(Landroid/view/View;)V
+
     .line 15
+    .line 16
+    .line 17
+    invoke-static {v2}, LX/0X6;->A0U(LX/3aS;)LX/6aE;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v1
+
+    .line 21
+    iget-object v0, v2, LX/3aS;->A04:Landroid/widget/ImageView;
+
+    .line 22
+    .line 23
+    invoke-virtual {v1, v0}, LX/6aE;->A01(Landroid/view/View;)V
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-static {v2}, LX/0X6;->A0U(LX/3aS;)LX/6aE;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v1
+
+    .line 30
+    iget-object v0, v2, LX/3aS;->A02:Landroid/widget/ImageView;
+
+    .line 31
+    .line 32
+    :goto_0
+    invoke-virtual {v1, v0}, LX/6aE;->A01(Landroid/view/View;)V
+
+    .line 33
+    .line 34
+    .line 35
     return-void
+
+    .line 36
+    :cond_0
+    check-cast v2, LX/3aS;
+
+    .line 37
+    .line 38
+    invoke-static {v2}, LX/0X6;->A0U(LX/3aS;)LX/6aE;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v1
+
+    .line 42
+    iget-object v0, v2, LX/3aS;->A03:Landroid/widget/ImageView;
+
+    .line 43
+    .line 44
+    goto :goto_0
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 3
+
+    .line 0
+    iget v0, p0, LX/0Z9;->A01:I
+
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/0Z9;->A00:Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    check-cast v2, LX/3aS;
+
+    .line 7
+    .line 8
+    invoke-static {v2}, LX/0X6;->A0U(LX/3aS;)LX/6aE;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    iget-object v0, v2, LX/3aS;->A03:Landroid/widget/ImageView;
+
+    .line 13
+    .line 14
+    invoke-virtual {v1, v0}, LX/6aE;->A02(Landroid/view/View;)V
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-static {v2}, LX/0X6;->A0U(LX/3aS;)LX/6aE;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v1
+
+    .line 21
+    iget-object v0, v2, LX/3aS;->A04:Landroid/widget/ImageView;
+
+    .line 22
+    .line 23
+    invoke-virtual {v1, v0}, LX/6aE;->A02(Landroid/view/View;)V
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-static {v2}, LX/0X6;->A0U(LX/3aS;)LX/6aE;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v1
+
+    .line 30
+    iget-object v0, v2, LX/3aS;->A02:Landroid/widget/ImageView;
+
+    .line 31
+    .line 32
+    :goto_0
+    invoke-virtual {v1, v0}, LX/6aE;->A02(Landroid/view/View;)V
+
+    .line 33
+    .line 34
+    .line 35
+    return-void
+
+    .line 36
+    :cond_0
+    check-cast v2, LX/3aS;
+
+    .line 37
+    .line 38
+    invoke-static {v2}, LX/0X6;->A0U(LX/3aS;)LX/6aE;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v1
+
+    .line 42
+    iget-object v0, v2, LX/3aS;->A03:Landroid/widget/ImageView;
+
+    .line 43
+    .line 44
+    goto :goto_0
 .end method

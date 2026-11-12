@@ -2,30 +2,27 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2HG;
+
 
 # instance fields
-.field public final A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
-.field public final A01:LX/2Fp;
+.field public final synthetic A00:Lcom/facebook/http/networkstatelogger/NetworkStateLogger;
 
 
 # direct methods
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/JsonSerializer;LX/2Fp;)V
+.method public constructor <init>(Lcom/facebook/http/networkstatelogger/NetworkStateLogger;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/2Go;->A00:Lcom/facebook/http/networkstatelogger/NetworkStateLogger;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/2Go;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/2Go;->A01:LX/2Fp;
-
-    .line 6
-    .line 7
     return-void
 .end method

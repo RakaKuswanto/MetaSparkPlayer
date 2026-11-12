@@ -1,4 +1,4 @@
-.class public final Lcom/google/common/base/Throwables;
+.class public abstract Lcom/google/common/base/Throwables;
 .super Ljava/lang/Object;
 .source ""
 
@@ -64,7 +64,7 @@
     .line 23
     move-result-object v6
     :try_end_0
-    .catch Ljava/lang/ThreadDeath; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/ThreadDeath; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 24
@@ -161,21 +161,21 @@
     .line 64
     goto :goto_0
     :try_end_1
-    .catch Ljava/lang/ThreadDeath; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/lang/ThreadDeath; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 65
     :goto_1
     :try_start_2
-    const-string/jumbo v2, "getStackTraceDepth"
+    const-string/jumbo v7, "getStackTraceDepth"
 
     .line 66
     .line 67
     .line 68
-    const/4 v7, 0x1
+    const/4 v4, 0x1
 
     .line 69
-    new-array v1, v7, [Ljava/lang/Class;
+    new-array v1, v4, [Ljava/lang/Class;
 
     .line 70
     .line 71
@@ -183,175 +183,117 @@
 
     .line 72
     .line 73
-    const/4 v6, 0x0
+    const/4 v3, 0x0
 
     .line 74
-    aput-object v0, v1, v6
-    :try_end_2
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_2 .. :try_end_2} :catch_2
+    aput-object v0, v1, v3
 
     .line 75
     .line 76
+    const/4 v2, 0x0
+    :try_end_2
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_2 .. :try_end_2} :catch_1
+
+    .line 77
     :try_start_3
     const-string/jumbo v0, "sun.misc.JavaLangAccess"
 
-    .line 77
     .line 78
     .line 79
-    invoke-static {v0, v6, v5}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
-
     .line 80
+    invoke-static {v0, v3, v5}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+
     .line 81
     .line 82
+    .line 83
     move-result-object v0
 
-    .line 83
-    invoke-virtual {v0, v2, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
     .line 84
+    invoke-virtual {v0, v7, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
     .line 85
     .line 86
-    move-result-object v4
-
     .line 87
-    if-eqz v4, :cond_1
+    move-result-object v2
+    :try_end_3
+    .catch Ljava/lang/ThreadDeath; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     .line 88
-    .line 89
-    const/4 v3, 0x0
-    :try_end_3
-    .catch Ljava/lang/ThreadDeath; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+    :catchall_2
+    if-eqz v2, :cond_1
 
+    .line 89
     .line 90
     :try_start_4
-    const-string/jumbo v0, "sun.misc.SharedSecrets"
+    new-array v1, v4, [Ljava/lang/Object;
 
     .line 91
     .line 92
-    .line 93
-    invoke-static {v0, v6, v5}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    new-instance v0, Ljava/lang/Throwable;
 
+    .line 93
     .line 94
+    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
+
     .line 95
     .line 96
-    move-result-object v2
-
     .line 97
-    const-string/jumbo v1, "getJavaLangAccess"
+    aput-object v0, v1, v3
 
     .line 98
     .line 99
-    .line 100
-    new-array v0, v6, [Ljava/lang/Class;
+    invoke-virtual {v2, v6, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 100
     .line 101
     .line 102
-    invoke-virtual {v2, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    .line 103
-    .line 104
-    .line 105
-    move-result-object v1
-
-    .line 106
-    new-array v0, v6, [Ljava/lang/Object;
-
-    .line 107
-    .line 108
-    invoke-virtual {v1, v5, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 109
-    .line 110
-    .line 111
-    move-result-object v3
-    :try_end_4
-    .catch Ljava/lang/ThreadDeath; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    .line 112
-    :catchall_2
-    :try_start_5
-    new-array v1, v7, [Ljava/lang/Object;
-
-    .line 113
-    .line 114
-    new-instance v0, Ljava/lang/Throwable;
-
-    .line 115
-    .line 116
-    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
-
-    .line 117
-    .line 118
-    .line 119
-    aput-object v0, v1, v6
-
-    .line 120
-    .line 121
-    invoke-virtual {v4, v3, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 122
-    .line 123
-    .line 124
     goto :goto_2
 
-    .line 125
+    .line 103
     :catch_0
     move-exception v0
 
-    .line 126
+    .line 104
     throw v0
 
-    .line 127
-    :catch_1
-    move-exception v0
-
-    .line 128
-    throw v0
-
-    .line 129
+    .line 105
     :goto_2
-    move-object v5, v4
-    :try_end_5
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_5 .. :try_end_5} :catch_2
+    move-object v5, v2
+    :try_end_4
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_4 .. :try_end_4} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_4 .. :try_end_4} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 130
-    :catch_2
-    :catchall_3
+    .line 106
+    :catch_1
     :cond_1
     sput-object v5, Lcom/google/common/base/Throwables;->getStackTraceDepthMethod:Ljava/lang/reflect/Method;
 
-    .line 131
-    .line 132
+    .line 107
+    .line 108
     return-void
 
-    .line 133
-    :catch_3
+    .line 109
+    :catch_2
     move-exception v0
 
-    .line 134
+    .line 110
     throw v0
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
 .end method
 
 .method public static propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "throwable"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -375,7 +317,7 @@
 
     .line 10
     .line 11
-    invoke-static {p0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {p0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 12
     .line 13
@@ -390,8 +332,64 @@
     throw p0
 .end method
 
-.method public static propagateIfInstanceOf(Ljava/lang/Throwable;Ljava/lang/Class;)V
+.method public static propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "throwable",
+            "declaredType"
+        }
+    .end annotation
+
+    .line 0
+    const-class v0, Ljava/io/IOException;
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, Lcom/google/common/base/Throwables;->throwIfInstanceOf(Ljava/lang/Throwable;Ljava/lang/Class;)V
+
+    .line 3
+    .line 4
+    .line 5
+    instance-of v0, p0, Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    if-nez v0, :cond_0
+
+    .line 8
+    .line 9
+    instance-of v0, p0, Ljava/lang/Error;
+
+    .line 10
+    .line 11
+    if-nez v0, :cond_0
+
+    .line 12
+    .line 13
+    return-void
+
+    .line 14
+    :cond_0
+    throw p0
+.end method
+
+.method public static throwIfInstanceOf(Ljava/lang/Throwable;Ljava/lang/Class;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "throwable",
+            "declaredType"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -423,40 +421,4 @@
     .line 12
     .line 13
     throw v0
-.end method
-
-.method public static propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;)V
-    .locals 1
-
-    .line 0
-    const-class v0, Ljava/io/IOException;
-
-    .line 1
-    .line 2
-    invoke-static {p0, v0}, Lcom/google/common/base/Throwables;->propagateIfInstanceOf(Ljava/lang/Throwable;Ljava/lang/Class;)V
-
-    .line 3
-    .line 4
-    .line 5
-    instance-of v0, p0, Ljava/lang/RuntimeException;
-
-    .line 6
-    .line 7
-    if-nez v0, :cond_0
-
-    .line 8
-    .line 9
-    instance-of v0, p0, Ljava/lang/Error;
-
-    .line 10
-    .line 11
-    if-nez v0, :cond_0
-
-    .line 12
-    .line 13
-    return-void
-
-    .line 14
-    :cond_0
-    throw p0
 .end method

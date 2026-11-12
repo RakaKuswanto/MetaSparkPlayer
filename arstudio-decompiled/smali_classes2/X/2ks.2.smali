@@ -1,300 +1,301 @@
 .class public final LX/2ks;
-.super Ljava/lang/Object;
+.super Landroid/net/ConnectivityManager$NetworkCallback;
 .source ""
 
 
-# static fields
-.field public static final A07:Ljava/lang/String;
-
-.field public static final A08:Ljava/lang/String;
-
-
 # instance fields
-.field public A00:Landroid/content/Context;
-
-.field public A01:LX/1zG;
-
-.field public final A02:LX/1mT;
-
-.field public final A03:LX/2kr;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
-
-.field public volatile A06:J
+.field public final synthetic A00:LX/2kt;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(LX/2kt;)V
+    .locals 0
 
     .line 0
-    const-class v2, LX/2ks;
+    iput-object p1, p0, LX/2ks;->A00:LX/2kt;
 
     .line 1
     .line 2
-    invoke-virtual {v2}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    move-result-object v0
-
-    .line 6
-    const-string v1, ".USER_ENTERED_DEVICE"
-
-    .line 7
-    .line 8
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    sput-object v0, LX/2ks;->A07:Ljava/lang/String;
-
-    .line 17
-    .line 18
-    invoke-virtual {v2}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    const-string v1, ".USER_LEFT_DEVICE"
-
-    .line 23
-    .line 24
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    sput-object v0, LX/2ks;->A08:Ljava/lang/String;
-
-    .line 33
-    .line 34
     return-void
 .end method
 
-.method public constructor <init>(LX/1zC;)V
-    .locals 5
+
+# virtual methods
+.method public final onAvailable(Landroid/net/Network;)V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
     .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 2
     .line 3
-    sget v1, LX/2eq;->A5B:I
-
     .line 4
+    invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onAvailable(Landroid/net/Network;)V
+
     .line 5
-    iget-object v0, p0, LX/2ks;->A01:LX/1zG;
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/2ks;->A00:LX/2kt;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, LX/2kt;->A02()LX/2lR;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iget-object v2, v0, LX/2lR;->A00:LX/2ke;
+
+    .line 14
+    .line 15
+    iget-object v1, v2, LX/2ke;->A03:LX/2kr;
+
+    .line 16
+    .line 17
+    new-instance v0, LX/2lD;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, v2}, LX/2lD;-><init>(LX/2ke;)V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {v1, v0}, LX/2kr;->A01(Ljava/lang/Runnable;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    return-void
+.end method
+
+.method public final onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+    .locals 4
+
+    .line 0
+    const/4 v1, 0x0
+
+    .line 1
+    invoke-static {p1, p2}, LX/0X2;->A1Y(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    :try_start_0
+    invoke-super {p0, p1, p2}, Landroid/net/ConnectivityManager$NetworkCallback;->onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
 
     .line 6
     .line 7
-    const/4 v4, 0x0
-
     .line 8
-    invoke-static {v0, v1}, LX/1zE;->A02(LX/1zG;I)Landroid/content/Context;
+    const/4 v2, 0x1
 
     .line 9
+    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
     .line 10
     .line 11
-    move-result-object v0
-
     .line 12
-    iput-object v0, p0, LX/2ks;->A00:Landroid/content/Context;
+    move-result v3
 
     .line 13
-    .line 14
-    invoke-static {v0}, LX/1zD;->A00(Landroid/content/Context;)LX/1mT;
+    invoke-virtual {p2, v1}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
 
+    .line 14
     .line 15
     .line 16
+    move-result v1
+
     .line 17
-    move-result-object v0
+    const/4 v0, 0x3
 
     .line 18
-    iput-object v0, p0, LX/2ks;->A02:LX/1mT;
+    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
 
     .line 19
     .line 20
-    invoke-static {}, LX/0Zq;->A0F()LX/0Zq;
-
     .line 21
-    .line 22
-    .line 23
-    move-result-object v0
+    move-result v0
 
+    .line 22
+    if-nez v0, :cond_0
+
+    .line 23
     .line 24
-    iput-object v0, p0, LX/2ks;->A04:LX/0Na;
+    const/4 v0, 0x2
 
     .line 25
-    .line 26
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
 
+    .line 26
     .line 27
     .line 28
+    move-result v0
+
     .line 29
-    move-result-object v1
+    if-nez v0, :cond_0
 
     .line 30
-    iput-object v1, p0, LX/2ks;->A05:LX/0Na;
-
     .line 31
+    const/4 v0, 0x4
+
     .line 32
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
 
     .line 33
     .line 34
     .line 35
-    move-result-object v0
+    move-result v0
 
     .line 36
-    iput-object v0, p0, LX/2ks;->A01:LX/1zG;
+    if-nez v0, :cond_0
 
     .line 37
     .line 38
-    sget v0, LX/2eq;->AAZ:I
+    const/4 v2, 0x0
 
     .line 39
-    .line 40
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    :cond_0
+    iget-object v0, p0, LX/2ks;->A00:LX/2kt;
 
+    .line 40
     .line 41
+    if-eqz v1, :cond_1
+
     .line 42
     .line 43
-    move-result-object v3
+    or-int/lit8 v3, v3, 0x2
 
     .line 44
-    check-cast v3, LX/2kr;
-
     .line 45
+    :cond_1
+    if-eqz v2, :cond_2
+
     .line 46
-    iput-object v3, p0, LX/2ks;->A03:LX/2kr;
-
     .line 47
-    .line 48
-    invoke-static {v1}, LX/0Zq;->A0K(LX/0Zq;)LX/35B;
+    or-int/lit8 v3, v3, 0x4
 
+    .line 48
     .line 49
+    :cond_2
+    invoke-virtual {v0}, LX/2kt;->A02()LX/2lR;
+
     .line 50
     .line 51
-    move-result-object v2
-
     .line 52
-    const-wide v0, 0x81040100022a4eL
+    move-result-object v0
 
     .line 53
+    iget-object v2, v0, LX/2lR;->A00:LX/2ke;
+
     .line 54
     .line 55
+    iget-object v1, v2, LX/2ke;->A03:LX/2kr;
+
     .line 56
     .line 57
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    new-instance v0, LX/2l7;
 
     .line 58
     .line 59
+    invoke-direct {v0, v2, v3}, LX/2l7;-><init>(LX/2ke;I)V
+
     .line 60
-    move-result v0
-
     .line 61
-    if-eqz v0, :cond_0
-
     .line 62
-    .line 63
-    sget v0, LX/2eq;->A5w:I
+    invoke-virtual {v1, v0}, LX/2kr;->A01(Ljava/lang/Runnable;)Z
 
+    .line 63
     .line 64
     .line 65
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    return-void
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 66
-    .line 67
-    .line 68
-    move-result-object v2
+    :catch_0
+    move-exception v2
 
+    .line 67
+    const-string v1, "NetworkMonitor"
+
+    .line 68
     .line 69
-    check-cast v2, LX/2hE;
+    const-string v0, "Error getting network information."
 
     .line 70
     .line 71
-    sget-object v1, LX/2hJ;->NORMAL:LX/2hJ;
+    invoke-static {v1, v0, v2}, LX/0Il;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 72
     .line 73
-    const-string v0, "DeviceUserInteractionBR"
-
     .line 74
-    .line 75
-    invoke-virtual {v2, v1, v0}, LX/2hE;->A00(LX/2hJ;Ljava/lang/String;)Landroid/os/Handler;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v2
-
-    .line 79
-    iget-object v1, p0, LX/2ks;->A03:LX/2kr;
-
-    .line 80
-    .line 81
-    new-instance v0, LX/2lJ;
-
-    .line 82
-    .line 83
-    invoke-direct {v0, p0}, LX/2lJ;-><init>(LX/2ks;)V
-
-    .line 84
-    .line 85
-    .line 86
-    invoke-virtual {v1, v2, v0}, LX/2kr;->A00(Landroid/os/Handler;LX/3NQ;)V
-
-    .line 87
-    .line 88
-    .line 89
     return-void
+.end method
 
-    .line 90
-    :cond_0
-    new-instance v0, LX/2lJ;
+.method public final onLost(Landroid/net/Network;)V
+    .locals 3
 
-    .line 91
-    .line 92
-    invoke-direct {v0, p0}, LX/2lJ;-><init>(LX/2ks;)V
+    .line 0
+    const/4 v0, 0x0
 
-    .line 93
-    .line 94
-    .line 95
-    invoke-virtual {v3, v4, v0}, LX/2kr;->A00(Landroid/os/Handler;LX/3NQ;)V
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    .line 96
-    .line 97
-    .line 98
+    .line 2
+    .line 3
+    .line 4
+    invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onLost(Landroid/net/Network;)V
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/2ks;->A00:LX/2kt;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, LX/2kt;->A02()LX/2lR;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iget-object v2, v0, LX/2lR;->A00:LX/2ke;
+
+    .line 14
+    .line 15
+    iget-object v1, v2, LX/2ke;->A03:LX/2kr;
+
+    .line 16
+    .line 17
+    new-instance v0, LX/2l0;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, v2}, LX/2l0;-><init>(LX/2ke;)V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {v1, v0}, LX/2kr;->A01(Ljava/lang/Runnable;)Z
+
+    .line 23
+    .line 24
+    .line 25
     return-void
 .end method

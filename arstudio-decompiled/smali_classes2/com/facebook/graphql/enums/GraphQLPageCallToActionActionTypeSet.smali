@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLPageCallToActionActionTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLPageCallToActionActionTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -160,34 +160,36 @@
 
     .line 69
     .line 70
-    const-string v0, "WEBSITE"
+    const-string/jumbo v0, "WEBSITE"
 
     .line 71
     .line 72
+    .line 73
     aput-object v0, v2, v1
 
-    .line 73
     .line 74
+    .line 75
     const/16 v1, 0xd
 
-    .line 75
     .line 76
-    const-string v0, "WHATSAPP_MESSAGE"
-
     .line 77
-    .line 78
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WHATSAPP_MESSAGE"
 
+    .line 78
     .line 79
     .line 80
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 81
+    .line 82
+    .line 83
     move-result-object v0
 
-    .line 82
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPageCallToActionActionTypeSet;->A00:Ljava/util/Set;
-
-    .line 83
     .line 84
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPageCallToActionActionTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 85
+    .line 86
     return-void
 .end method
 
@@ -203,11 +205,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPageCallToActionActionTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPageCallToActionActionTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

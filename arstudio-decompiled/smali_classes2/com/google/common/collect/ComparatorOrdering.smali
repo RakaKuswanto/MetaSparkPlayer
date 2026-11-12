@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/ComparatorOrdering;
-.super LX/1eq;
+.super LX/23n;
 .source ""
 
 # interfaces
@@ -17,9 +17,17 @@
 # direct methods
 .method public constructor <init>(Ljava/util/Comparator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "comparator"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1eq;-><init>()V
+    invoke-direct {p0}, LX/23n;-><init>()V
 
     .line 1
     .line 2
@@ -40,6 +48,14 @@
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     if-ne p1, p0, :cond_0

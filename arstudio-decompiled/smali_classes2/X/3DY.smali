@@ -1,74 +1,29 @@
 .class public final LX/3DY;
-.super Ljava/lang/Object;
+.super LX/2c9;
 .source ""
 
-# interfaces
-.implements LX/40k;
 
-
-# static fields
-.field public static A00:LX/3DY;
+# instance fields
+.field public final synthetic A00:LX/3DU;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(LX/3DU;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "DefaultAppChoreographer"
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/3DY;->A00:LX/3DU;
+
     .line 3
-    return-void
-.end method
+    .line 4
+    invoke-direct {p0, v0}, LX/2c9;-><init>(Ljava/lang/String;)V
 
-
-# virtual methods
-.method public final AW4()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AXn(LX/41C;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AYe(LX/41C;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AZu(LX/41C;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Abh(LX/41C;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AfR(LX/41C;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AfS(LX/41C;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AfT(LX/41C;)V
-    .locals 0
-
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method

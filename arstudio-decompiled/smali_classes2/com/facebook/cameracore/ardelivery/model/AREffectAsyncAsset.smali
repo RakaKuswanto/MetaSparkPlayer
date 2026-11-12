@@ -29,11 +29,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1d
+    const/16 v0, 0x17
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -91,7 +91,7 @@
 
     .line 20
     .line 21
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 22
     .line 23
@@ -146,7 +146,7 @@
 
     .line 49
     .line 50
-    invoke-static {p1}, LX/0Yc;->A1a(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1Y(Landroid/os/Parcel;)Z
 
     .line 51
     .line 52
@@ -170,48 +170,50 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    const-string v0, "async asset id cannot be null"
+    const-string/jumbo v0, "async asset id cannot be null"
 
     .line 268435460
     .line 268435461
-    invoke-static {p1, v0}, LX/3ap;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 268435462
+    invoke-static {p1, v0}, LX/0H2;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+
     .line 268435463
     .line 268435464
+    .line 268435465
     iput-object p1, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mId:Ljava/lang/String;
 
-    .line 268435465
     .line 268435466
-    const-string v0, "async asset cache key cannot be null"
-
     .line 268435467
-    .line 268435468
-    invoke-static {p2, v0}, LX/3ap;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+    const-string/jumbo v0, "async asset cache key cannot be null"
 
+    .line 268435468
     .line 268435469
     .line 268435470
-    .line 268435471
-    iput-object p2, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mCacheKey:Ljava/lang/String;
+    invoke-static {p2, v0}, LX/0H2;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 268435471
     .line 268435472
     .line 268435473
-    iput-object p3, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mStringIdentifiers:Ljava/util/List;
+    iput-object p2, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mCacheKey:Ljava/lang/String;
 
     .line 268435474
     .line 268435475
-    iput-object p4, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mUri:Ljava/lang/String;
+    iput-object p3, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mStringIdentifiers:Ljava/util/List;
 
     .line 268435476
     .line 268435477
-    iput-object p5, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mCompressionMethod:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
+    iput-object p4, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mUri:Ljava/lang/String;
 
     .line 268435478
     .line 268435479
-    iput-boolean p6, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mIsLoggingDisabled:Z
+    iput-object p5, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mCompressionMethod:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
 
     .line 268435480
     .line 268435481
+    iput-boolean p6, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mIsLoggingDisabled:Z
+
+    .line 268435482
+    .line 268435483
     return-void
 .end method
 
@@ -400,7 +402,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;->toXplatCompressionType(Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;)LX/1R5;
+    invoke-static {v0}, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;->toXplatCompressionType(Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;)LX/1Ri;
 
     .line 3
     .line 4
@@ -408,7 +410,7 @@
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0}, LX/1R5;->getValue()I
+    invoke-virtual {v0}, LX/1Ri;->getValue()I
 
     .line 7
     .line 8
@@ -430,22 +432,14 @@
     const/4 v0, 0x0
 
     .line 3
-    new-array v0, v0, [Ljava/lang/String;
+    invoke-static {v1, v0}, LX/0X4;->A1b(Ljava/util/List;I)[Ljava/lang/String;
 
     .line 4
     .line 5
-    invoke-interface {v1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
-    .line 9
-    check-cast v0, [Ljava/lang/String;
-
-    .line 10
-    .line 11
+    .line 7
     return-object v0
 .end method
 
@@ -498,76 +492,80 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mCacheKey:Ljava/lang/String;
+    mul-int/lit8 v1, v0, 0x1f
 
     .line 7
     .line 8
-    invoke-static {v0, v1}, LX/001;->A02(Ljava/lang/String;I)I
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mCacheKey:Ljava/lang/String;
 
     .line 9
     .line 10
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
+
     .line 11
+    .line 12
+    .line 13
     move-result v1
 
-    .line 12
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mStringIdentifiers:Ljava/util/List;
-
-    .line 13
     .line 14
-    invoke-interface {v0}, Ljava/util/List;->hashCode()I
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mStringIdentifiers:Ljava/util/List;
 
     .line 15
     .line 16
+    invoke-interface {v0}, Ljava/util/List;->hashCode()I
+
     .line 17
+    .line 18
+    .line 19
     move-result v0
 
-    .line 18
+    .line 20
     add-int/2addr v1, v0
 
-    .line 19
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 20
     .line 21
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mUri:Ljava/lang/String;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 22
     .line 23
-    invoke-static {v0, v1}, LX/001;->A02(Ljava/lang/String;I)I
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mUri:Ljava/lang/String;
 
     .line 24
     .line 25
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
+
     .line 26
+    .line 27
+    .line 28
     move-result v1
 
-    .line 27
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mCompressionMethod:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
-
-    .line 28
     .line 29
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mCompressionMethod:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
 
     .line 30
     .line 31
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
+
     .line 32
+    .line 33
+    .line 34
     move-result v1
 
-    .line 33
+    .line 35
     iget-boolean v0, p0, Lcom/facebook/cameracore/ardelivery/model/AREffectAsyncAsset;->mIsLoggingDisabled:Z
 
-    .line 34
-    .line 35
+    .line 36
+    .line 37
     add-int/2addr v1, v0
 
-    .line 36
+    .line 38
     return v1
 .end method
 

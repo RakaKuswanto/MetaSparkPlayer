@@ -1,318 +1,285 @@
-.class public final LX/34b;
-.super Ljava/lang/Object;
+.class public abstract LX/34b;
+.super LX/339;
 .source ""
 
 
-# instance fields
-.field public A00:Ljava/util/Map;
-
-.field public A01:Ljava/util/Map;
-
-.field public A02:Ljava/util/Map;
-
-.field public final A03:Ljava/util/List;
-
-
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/339;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    iput-object v0, p0, LX/34b;->A02:Ljava/util/Map;
-
-    .line 5
-    .line 6
-    iput-object v0, p0, LX/34b;->A01:Ljava/util/Map;
-
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/34b;->A00:Ljava/util/Map;
-
-    .line 9
-    .line 10
-    invoke-static {p1}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    iput-object v0, p0, LX/34b;->A03:Ljava/util/List;
-
-    .line 19
-    .line 20
     return-void
 .end method
 
-
-# virtual methods
-.method public final A00(I)Ljava/util/List;
-    .locals 9
+.method public static final A00(Ljava/lang/String;)Ljava/nio/MappedByteBuffer;
+    .locals 15
 
     .line 0
-    move-object v8, p0
+    invoke-static {p0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 1
-    monitor-enter v8
-
     .line 2
-    :try_start_0
-    iget-object v0, p0, LX/34b;->A00:Ljava/util/Map;
-
     .line 3
+    move-result-object v1
+
     .line 4
-    if-nez v0, :cond_3
+    const/4 v8, 0x0
 
     .line 5
+    const/4 v7, 0x0
+
     .line 6
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    const/4 v4, 0x1
 
     .line 7
+    :try_start_0
+    invoke-static {v1}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
+
     .line 8
     .line 9
-    move-result-object v0
-
     .line 10
-    iput-object v0, p0, LX/34b;->A00:Ljava/util/Map;
+    move-result-object v6
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 11
-    .line 12
-    iget-object v7, p0, LX/34b;->A03:Ljava/util/List;
+    :try_start_1
+    invoke-virtual {v6}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
+    .line 12
     .line 13
     .line 14
-    invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result-object v9
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     .line 15
+    :try_start_2
+    sget-object v10, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
+
     .line 16
     .line 17
-    move-result-object v6
+    const-wide/16 v11, 0x0
 
     .line 18
-    const/4 v1, -0x1
-
     .line 19
-    const/4 v5, -0x1
+    invoke-virtual {v9}, Ljava/nio/channels/FileChannel;->size()J
 
     .line 20
-    const/4 v4, -0x1
-
     .line 21
-    :cond_0
-    :goto_0
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
     .line 22
+    move-result-wide v13
+
     .line 23
+    invoke-virtual/range {v9 .. v14}, Ljava/nio/channels/FileChannel;->map(Ljava/nio/channels/FileChannel$MapMode;JJ)Ljava/nio/MappedByteBuffer;
+
     .line 24
-    move-result v0
-
     .line 25
-    if-eqz v0, :cond_2
-
     .line 26
+    move-result-object v5
+
     .line 27
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     .line 28
     .line 29
+    invoke-virtual {v5, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
     .line 30
-    move-result-object v0
-
     .line 31
-    check-cast v0, LX/35z;
-
     .line 32
-    .line 33
-    add-int/lit8 v5, v5, 0x1
+    invoke-virtual {v1}, Ljava/io/File;->length()J
 
+    .line 33
     .line 34
     .line 35
-    iget v3, v0, LX/35z;->A02:I
+    move-result-wide v1
 
     .line 36
+    long-to-int v0, v1
+
     .line 37
-    if-eq v3, v1, :cond_0
+    invoke-static {v5, v0}, LX/34c;->A00(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
 
     .line 38
     .line 39
-    if-ltz v1, :cond_1
-
     .line 40
+    move-result-object v3
+
     .line 41
-    iget-object v2, p0, LX/34b;->A00:Ljava/util/Map;
+    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
 
     .line 42
     .line 43
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     .line 44
-    .line 45
-    .line 46
-    move-result-object v1
+    move-result v0
 
+    .line 45
+    if-nez v0, :cond_0
+
+    .line 46
     .line 47
-    new-instance v0, LX/3Hy;
+    const-string v2, "MobileConfigMmapHandle"
 
     .line 48
     .line 49
-    invoke-direct {v0, v4, v5}, LX/3Hy;-><init>(II)V
+    const-string v1, "Cannot validate \"%s\", err:%s"
 
     .line 50
     .line 51
+    const/4 v0, 0x2
+
     .line 52
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, v3, v0}, LX/002;->A0H(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 53
     .line 54
     .line 55
-    :cond_1
-    move v1, v3
+    move-result-object v0
 
     .line 56
-    move v4, v5
+    invoke-static {v2, v1, v0}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 57
-    goto :goto_0
-
     .line 58
-    :cond_2
-    if-ltz v1, :cond_3
-
     .line 59
-    .line 60
-    iget-object v3, p0, LX/34b;->A00:Ljava/util/Map;
+    :try_start_3
+    invoke-virtual {v9}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 60
     .line 61
     .line 62
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :try_start_4
+    invoke-virtual {v6}, Ljava/io/InputStream;->close()V
 
     .line 63
     .line 64
     .line 65
-    move-result-object v2
+    return-object v8
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
     .line 66
-    invoke-interface {v7}, Ljava/util/List;->size()I
+    :cond_0
+    :try_start_5
+    invoke-virtual {v9}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     .line 67
     .line 68
     .line 69
-    move-result v1
+    :try_start_6
+    invoke-virtual {v6}, Ljava/io/InputStream;->close()V
 
     .line 70
-    new-instance v0, LX/3Hy;
-
     .line 71
     .line 72
-    invoke-direct {v0, v4, v1}, LX/3Hy;-><init>(II)V
+    return-object v5
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
 
     .line 73
-    .line 74
-    .line 75
-    invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :catchall_0
+    move-exception v1
 
+    .line 74
+    if-eqz v9, :cond_1
+
+    .line 75
     .line 76
+    :try_start_7
+    invoke-virtual {v9}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+
     .line 77
     .line 78
-    :cond_3
-    iget-object v2, p0, LX/34b;->A03:Ljava/util/List;
-
     .line 79
+    goto :goto_0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
     .line 80
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    :catchall_1
+    move-exception v0
 
     .line 81
+    :try_start_8
+    invoke-static {v1, v0}, LX/6dW;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
     .line 82
     .line 83
-    iget-object v0, p0, LX/34b;->A00:Ljava/util/Map;
-
     .line 84
+    :cond_1
+    :goto_0
+    throw v1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+
     .line 85
-    invoke-interface {v0}, Ljava/util/Map;->size()I
+    :catchall_2
+    move-exception v1
 
     .line 86
+    :try_start_9
+    invoke-virtual {v6}, Ljava/io/InputStream;->close()V
+
     .line 87
     .line 88
-    iget-object v0, p0, LX/34b;->A00:Ljava/util/Map;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 89
+    goto :goto_1
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
     .line 90
-    monitor-exit v8
+    :catchall_3
+    move-exception v0
 
     .line 91
-    invoke-static {v0, p1}, LX/0Yg;->A0e(Ljava/util/Map;I)Ljava/lang/Object;
+    :try_start_a
+    invoke-static {v1, v0}, LX/6dW;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 92
     .line 93
     .line 94
-    move-result-object v0
+    :goto_1
+    throw v1
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_0
 
     .line 95
-    check-cast v0, LX/3Hy;
+    :catch_0
+    move-exception v3
 
     .line 96
+    const-string v2, "MobileConfigMmapHandle"
+
     .line 97
-    if-eqz v0, :cond_4
-
     .line 98
+    new-array v1, v4, [Ljava/lang/Object;
+
     .line 99
-    iget v1, v0, LX/3Hy;->A00:I
-
     .line 100
+    aput-object p0, v1, v7
+
     .line 101
-    iget v0, v0, LX/3Hy;->A01:I
-
     .line 102
-    .line 103
-    invoke-interface {v2, v1, v0}, Ljava/util/List;->subList(II)Ljava/util/List;
+    const-string v0, "Cannot open \"%s\""
 
+    .line 103
     .line 104
+    invoke-static {v2, v0, v3, v1}, LX/0Il;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+
     .line 105
     .line 106
-    move-result-object v0
-
     .line 107
-    return-object v0
-
-    .line 108
-    :cond_4
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 109
-    .line 110
-    .line 111
-    move-result-object v0
-
-    .line 112
-    return-object v0
-
-    .line 113
-    :catchall_0
-    move-exception v0
-
-    .line 114
-    monitor-exit v8
-
-    .line 115
-    throw v0
+    return-object v8
 .end method

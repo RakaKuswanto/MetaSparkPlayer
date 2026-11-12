@@ -1,93 +1,57 @@
-.class public abstract LX/4OW;
-.super LX/4OV;
+.class public final LX/4OW;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DropDownListView$ResolveHoverRunnable"
 
 
 # instance fields
-.field public A00:F
+.field public final synthetic A00:LX/4OS;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.method public constructor <init>(LX/4OS;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/4OV;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput-object p1, p0, LX/4OW;->A00:LX/4OS;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
-    return-void
-.end method
-
-.method public static A00(Landroid/graphics/Rect;Landroid/graphics/RectF;FF)V
-    .locals 1
-
-    .line 0
-    sub-float/2addr p2, p3
-
-    .line 1
-    iput p2, p1, Landroid/graphics/RectF;->left:F
-
-    .line 2
-    .line 3
-    invoke-virtual {p0}, Landroid/graphics/Rect;->exactCenterY()F
-
     .line 4
     .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    sub-float/2addr v0, p3
-
-    .line 8
-    iput v0, p1, Landroid/graphics/RectF;->top:F
-
-    .line 9
-    .line 10
-    invoke-virtual {p0}, Landroid/graphics/Rect;->exactCenterX()F
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    add-float/2addr v0, p3
-
-    .line 15
-    iput v0, p1, Landroid/graphics/RectF;->right:F
-
-    .line 16
-    .line 17
-    invoke-virtual {p0}, Landroid/graphics/Rect;->exactCenterY()F
-
-    .line 18
-    .line 19
-    .line 20
-    move-result v0
-
-    .line 21
-    add-float/2addr v0, p3
-
-    .line 22
-    iput v0, p1, Landroid/graphics/RectF;->bottom:F
-
-    .line 23
-    .line 24
     return-void
 .end method
 
 
 # virtual methods
-.method public setInitialYaw(F)V
-    .locals 0
+.method public final run()V
+    .locals 2
 
     .line 0
-    iput p1, p0, LX/4OW;->A00:F
+    iget-object v1, p0, LX/4OW;->A00:LX/4OS;
 
     .line 1
     .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    iput-object v0, v1, LX/4OS;->A05:LX/4OW;
+
+    .line 4
+    .line 5
+    invoke-virtual {v1}, LX/4OS;->drawableStateChanged()V
+
+    .line 6
+    .line 7
+    .line 8
     return-void
 .end method

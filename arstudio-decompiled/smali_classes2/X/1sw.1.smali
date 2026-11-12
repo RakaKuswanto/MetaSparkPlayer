@@ -1,28 +1,8 @@
-.class public final LX/1sw;
-.super Lcom/facebook/graphservice/fb/BaseGraphQLConsistencyDecorator;
+.class public interface abstract LX/1sW;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/graphservice/interfaces/GraphQLConsistency;
 
-
-# instance fields
-.field public final A00:Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;
-
-
-# direct methods
-.method public constructor <init>(Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Lcom/facebook/graphservice/fb/BaseGraphQLConsistencyDecorator;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/1sw;->A00:Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;
-
-    .line 4
-    .line 5
-    return-void
+# virtual methods
+.method public abstract A3i(LX/4bl;LX/4fk;)V
 .end method

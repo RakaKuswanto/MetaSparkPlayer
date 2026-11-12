@@ -4,36 +4,142 @@
 
 
 # instance fields
-.field public final A00:Ljava/lang/String;
+.field public final A00:I
 
-.field public final A01:Ljava/lang/String;
+.field public final A01:I
+
+.field public final A02:J
+
+.field public final A03:J
+
+.field public final A04:J
+
+.field public final A05:J
+
+.field public final A06:J
+
+.field public final A07:LX/3lK;
+
+.field public final A08:LX/5EO;
+
+.field public final A09:LX/5Li;
+
+.field public final A0A:Ljava/lang/String;
+
+.field public final A0B:Ljava/lang/String;
+
+.field public final A0C:Ljava/lang/String;
+
+.field public final A0D:Z
+
+.field public final A0E:Z
+
+.field public final A0F:Z
+
+.field public final A0G:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(LX/3lK;LX/5EO;LX/5Li;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJJJJZZZZ)V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/5My;->A09:LX/5Li;
+
+    .line 4
     .line 5
+    iput-object p1, p0, LX/5My;->A07:LX/3lK;
+
     .line 6
     .line 7
-    iput-object p1, p0, LX/5My;->A00:Ljava/lang/String;
+    iput p7, p0, LX/5My;->A01:I
 
     .line 8
     .line 9
-    iput-object p2, p0, LX/5My;->A01:Ljava/lang/String;
+    iput p8, p0, LX/5My;->A00:I
 
     .line 10
     .line 11
+    iput-wide p9, p0, LX/5My;->A06:J
+
+    .line 12
+    .line 13
+    iput-wide p11, p0, LX/5My;->A03:J
+
+    .line 14
+    .line 15
+    iput-wide p13, p0, LX/5My;->A05:J
+
+    .line 16
+    .line 17
+    move-wide/from16 v0, p15
+
+    .line 18
+    .line 19
+    iput-wide v0, p0, LX/5My;->A04:J
+
+    .line 20
+    .line 21
+    move-wide/from16 v0, p17
+
+    .line 22
+    .line 23
+    iput-wide v0, p0, LX/5My;->A02:J
+
+    .line 24
+    .line 25
+    move/from16 v0, p19
+
+    .line 26
+    .line 27
+    iput-boolean v0, p0, LX/5My;->A0F:Z
+
+    .line 28
+    .line 29
+    move/from16 v0, p20
+
+    .line 30
+    .line 31
+    iput-boolean v0, p0, LX/5My;->A0D:Z
+
+    .line 32
+    .line 33
+    iput-object p4, p0, LX/5My;->A0A:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    iput-object p2, p0, LX/5My;->A08:LX/5EO;
+
+    .line 36
+    .line 37
+    iput-object p5, p0, LX/5My;->A0B:Ljava/lang/String;
+
+    .line 38
+    .line 39
+    move/from16 v0, p21
+
+    .line 40
+    .line 41
+    iput-boolean v0, p0, LX/5My;->A0E:Z
+
+    .line 42
+    .line 43
+    move/from16 v0, p22
+
+    .line 44
+    .line 45
+    iput-boolean v0, p0, LX/5My;->A0G:Z
+
+    .line 46
+    .line 47
+    iput-object p6, p0, LX/5My;->A0C:Ljava/lang/String;
+
+    .line 48
+    .line 49
     return-void
 .end method

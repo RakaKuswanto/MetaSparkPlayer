@@ -1,77 +1,87 @@
 .class public final LX/25G;
-.super LX/24p;
+.super Ljava/lang/ref/WeakReference;
 .source ""
 
+# interfaces
+.implements LX/252;
 
-# static fields
-.field public static final A00:Lcom/google/common/collect/ImmutableList;
+
+# instance fields
+.field public final A00:LX/1zb;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(LX/1zb;Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "queue",
+            "referent",
+            "entry"
+        }
+    .end annotation
 
     .line 0
-    sget-object v0, LX/25H;->A06:LX/24w;
+    invoke-direct {p0, p2, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
     .line 1
     .line 2
-    sget-object v1, LX/25H;->A00:LX/24w;
-
     .line 3
+    iput-object p1, p0, LX/25G;->A00:LX/1zb;
+
     .line 4
-    sget-object v2, LX/25H;->A01:LX/24w;
-
     .line 5
-    .line 6
-    sget-object v3, LX/25H;->A02:LX/24w;
-
-    .line 7
-    .line 8
-    sget-object v4, LX/25H;->A03:LX/24w;
-
-    .line 9
-    .line 10
-    sget-object v5, LX/25H;->A05:LX/24w;
-
-    .line 11
-    .line 12
-    sget-object v6, LX/25H;->A04:LX/24w;
-
-    .line 13
-    .line 14
-    invoke-static/range {v0 .. v6}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    sput-object v0, LX/25G;->A00:Lcom/google/common/collect/ImmutableList;
-
-    .line 19
-    .line 20
     return-void
 .end method
 
-.method public constructor <init>()V
+
+# virtual methods
+.method public final A5s(LX/1zb;Ljava/lang/ref/ReferenceQueue;)LX/252;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "queue",
+            "entry"
+        }
+    .end annotation
 
     .line 0
-    sget-object v1, LX/25G;->A00:Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     .line 1
     .line 2
-    const-string/jumbo v0, "models"
-
     .line 3
-    .line 4
-    .line 5
-    invoke-direct {p0, v0, v1}, LX/24p;-><init>(Ljava/lang/String;Lcom/google/common/collect/ImmutableList;)V
+    move-result-object v1
 
+    .line 4
+    new-instance v0, LX/25G;
+
+    .line 5
     .line 6
+    invoke-direct {v0, p1, v1, p2}, LX/25G;-><init>(LX/1zb;Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
+
     .line 7
     .line 8
-    return-void
+    .line 9
+    return-object v0
+.end method
+
+.method public final ADu()LX/1zb;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/25G;->A00:LX/1zb;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

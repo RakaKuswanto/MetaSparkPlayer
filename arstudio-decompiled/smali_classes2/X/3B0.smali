@@ -1,42 +1,25 @@
-.class public final LX/3B0;
-.super Ljava/lang/Object;
+.class public final LX/3b0;
+.super LX/3a2;
 .source ""
 
-# interfaces
-.implements LX/1ij;
+
+# instance fields
+.field public final synthetic A00:Lcom/facebook/arstudio/player/EffectListActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/facebook/arstudio/player/EffectListActivity;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/3b0;->A00:Lcom/facebook/arstudio/player/EffectListActivity;
 
     .line 1
     .line 2
+    invoke-direct {p0}, LX/3a2;-><init>()V
+
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ADa()I
-    .locals 1
-
-    const/16 v0, 0x4fbb
-
-    return v0
-.end method
-
-.method public final AWH(I)V
-    .locals 0
-
-    .line 0
-    invoke-static {}, LX/1z6;->A0a()V
-
-    .line 1
-    .line 2
-    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

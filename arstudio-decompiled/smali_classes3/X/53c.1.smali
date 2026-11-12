@@ -1,17 +1,26 @@
-.class public final LX/53c;
-.super LX/53V;
+.class public interface abstract LX/53c;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(LX/53P;)V
-    .locals 0
+# virtual methods
+.method public abstract Aqo(LX/51I;)LX/51I;
+.end method
 
-    .line 0
-    invoke-direct {p0, p1}, LX/53V;-><init>(LX/53P;)V
+.method public abstract Aqt()V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract Aqu()V
+.end method
+
+.method public abstract Aqv(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+.end method
+
+.method public abstract Aqw()V
+.end method
+
+.method public abstract Aqx()Z
+.end method
+
+.method public abstract Aqy(LX/51R;)Z
 .end method

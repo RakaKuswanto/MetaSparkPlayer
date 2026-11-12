@@ -35,11 +35,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x32
+    const/16 v0, 0x50
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
 
     .line 3
     .line 4
@@ -63,7 +63,7 @@
 
     const-string/jumbo v0, "gameId"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/ipc/composer/model/ComposerLookingForPlayersModel;->A01:Ljava/lang/String;
 
@@ -71,7 +71,7 @@
 
     const-string/jumbo v0, "gameTitle"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/facebook/ipc/composer/model/ComposerLookingForPlayersModel;->A03:Ljava/lang/String;
 
@@ -87,7 +87,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -111,7 +111,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/0Yd;->A0H(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X1;->A0J(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 16
     .line 17
@@ -194,7 +194,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22
@@ -214,7 +214,7 @@
 
     .line 29
     .line 30
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 31
     .line 32
@@ -234,7 +234,7 @@
 
     .line 39
     .line 40
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 41
     .line 42
@@ -274,7 +274,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 9
     .line 10
@@ -293,7 +293,7 @@
 
     .line 16
     .line 17
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 18
     .line 19
@@ -312,7 +312,7 @@
 
     .line 25
     .line 26
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 27
     .line 28
@@ -352,7 +352,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1, v0}, LX/0Yc;->A0D(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0k(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 13
     .line 14

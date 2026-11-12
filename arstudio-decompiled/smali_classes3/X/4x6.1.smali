@@ -1,82 +1,30 @@
-.class public final LX/4x6;
+.class public final synthetic LX/4x6;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/4x4;
-
-
-# instance fields
-.field public final synthetic A00:LX/4wu;
+.implements Ljava/util/function/Predicate;
 
 
 # direct methods
-.method public constructor <init>(LX/4wu;)V
+.method public synthetic constructor <init>()V
     .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/4x6;->A00:LX/4wu;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AVj(LX/4wz;)V
+.method public final test(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/4x6;->A00:LX/4wu;
+    check-cast p1, LX/4xD;
 
-    .line 1
-    .line 2
-    invoke-static {p1, v0}, LX/4wu;->A00(LX/4wz;LX/4wu;)V
+    invoke-static {p1}, LX/4x2;->lambda$overrideReadOnly$0(LX/4xD;)Z
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final AYA(LX/4wz;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4x6;->A00:LX/4wu;
-
-    .line 1
-    .line 2
-    invoke-static {p1, v0}, LX/4wu;->A00(LX/4wz;LX/4wu;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final AcQ(LX/4wz;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AfP(LX/4wz;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AoJ(LX/4wz;)Z
-    .locals 1
-
-    const/4 v0, 0x1
+    move-result v0
 
     return v0
 .end method

@@ -1,673 +1,525 @@
-.class public final synthetic LX/3OC;
+.class public final LX/3OC;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3Yv;
+.implements LX/3OM;
 
 
 # instance fields
-.field public final synthetic A00:LX/5SE;
+.field public final A00:I
 
-.field public final synthetic A01:LX/36J;
+.field public final A01:LX/3QO;
+
+.field public final A02:LX/2MU;
+
+.field public final A03:Ljava/lang/String;
+
+.field public volatile A04:LX/3Ph;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5SE;LX/36J;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, LX/3OC;->A01:LX/36J;
-
-    iput-object p1, p0, LX/3OC;->A00:LX/5SE;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A8r(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 6
+.method public constructor <init>(LX/3QO;LX/2MU;Ljava/lang/String;I)V
+    .locals 2
 
     .line 0
-    iget-object v4, p0, LX/3OC;->A01:LX/36J;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget-object v3, p0, LX/3OC;->A00:LX/5SE;
-
     .line 3
+    iput p4, p0, LX/3OC;->A00:I
+
     .line 4
-    check-cast p2, LX/3OQ;
-
     .line 5
+    iput-object p1, p0, LX/3OC;->A01:LX/3QO;
+
     .line 6
-    if-eqz p2, :cond_7
-
     .line 7
-    .line 8
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
+    iput-object p2, p0, LX/3OC;->A02:LX/2MU;
 
+    .line 8
     .line 9
+    iput-object p3, p0, LX/3OC;->A03:Ljava/lang/String;
+
     .line 10
     .line 11
-    move-result-object v2
+    const/4 v1, 0x0
 
     .line 12
-    iget-object v1, p2, LX/3OQ;->A0I:Ljava/lang/Long;
+    new-instance v0, LX/3Ph;
 
     .line 13
     .line 14
-    const-string/jumbo v0, "network_info_rtt_avg"
+    invoke-direct {v0, v1, v1}, LX/3Ph;-><init>(LX/3OM;Ljava/io/File;)V
 
     .line 15
     .line 16
     .line 17
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A04(Ljava/lang/String;Ljava/lang/Long;)V
+    iput-object v0, p0, LX/3OC;->A04:LX/3Ph;
 
     .line 18
     .line 19
-    .line 20
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
+    return-void
+.end method
 
+.method private final declared-synchronized A00()LX/3OM;
+    .locals 5
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v1, p0, LX/3OC;->A04:LX/3Ph;
+
+    .line 2
+    .line 3
+    iget-object v0, v1, LX/3Ph;->A00:LX/3OM;
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 6
+    .line 7
+    iget-object v0, v1, LX/3Ph;->A01:Ljava/io/File;
+
+    .line 8
+    .line 9
+    if-eqz v0, :cond_0
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    if-nez v0, :cond_2
+
+    .line 16
+    .line 17
+    :cond_0
+    iget-object v0, p0, LX/3OC;->A04:LX/3Ph;
+
+    .line 18
+    .line 19
+    iget-object v0, v0, LX/3Ph;->A00:LX/3OM;
+
+    .line 20
     .line 21
+    if-eqz v0, :cond_1
+
     .line 22
     .line 23
-    move-result-object v2
+    iget-object v0, p0, LX/3OC;->A04:LX/3Ph;
 
     .line 24
-    iget-object v1, p2, LX/3OQ;->A07:Ljava/lang/Double;
-
     .line 25
-    .line 26
-    const-string/jumbo v0, "network_info_rtt_stddev"
+    iget-object v0, v0, LX/3Ph;->A01:Ljava/io/File;
 
+    .line 26
     .line 27
+    if-eqz v0, :cond_1
+
     .line 28
     .line 29
-    if-eqz v1, :cond_0
+    iget-object v0, p0, LX/3OC;->A04:LX/3Ph;
 
     .line 30
     .line 31
-    invoke-static {v2, v1, v0}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v0, v0, LX/3Ph;->A01:Ljava/io/File;
 
     .line 32
     .line 33
-    .line 34
-    :cond_0
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
+    invoke-static {v0}, LX/0GM;->A01(Ljava/io/File;)Z
 
+    .line 34
     .line 35
     .line 36
-    .line 37
-    move-result-object v2
+    :cond_1
+    iget-object v0, p0, LX/3OC;->A02:LX/2MU;
 
+    .line 37
     .line 38
-    iget-object v1, p2, LX/3OQ;->A03:Ljava/lang/Boolean;
+    invoke-interface {v0}, LX/2MU;->get()Ljava/lang/Object;
 
     .line 39
     .line 40
-    const-string/jumbo v0, "network_info_network_changed"
-
     .line 41
-    .line 42
-    .line 43
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A03(Ljava/lang/String;Ljava/lang/Boolean;)V
+    move-result-object v1
 
+    .line 42
+    check-cast v1, Ljava/io/File;
+
+    .line 43
     .line 44
+    iget-object v0, p0, LX/3OC;->A03:Ljava/lang/String;
+
     .line 45
     .line 46
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 47
     .line 48
     .line 49
-    move-result-object v2
+    move-result-object v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 50
-    iget-object v1, p2, LX/3OQ;->A02:Ljava/lang/Boolean;
+    :try_start_1
+    invoke-static {v3}, LX/3PD;->A00(Ljava/io/File;)V
 
     .line 51
     .line 52
-    const-string/jumbo v0, "network_info_celltower_changed"
-
     .line 53
+    goto :goto_0
+    :try_end_1
+    .catch LX/3PR; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     .line 54
+    :catch_0
+    :try_start_2
+    move-exception v4
+
     .line 55
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A03(Ljava/lang/String;Ljava/lang/Boolean;)V
+    iget-object v3, p0, LX/3OC;->A01:LX/3QO;
 
     .line 56
     .line 57
-    .line 58
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
+    sget-object v2, LX/3P4;->WRITE_CREATE_DIR:LX/3P4;
 
+    .line 58
     .line 59
+    const-class v1, LX/3OC;
+
     .line 60
     .line 61
-    move-result-object v2
+    const-string/jumbo v0, "createRootDirectoryIfNecessary"
 
     .line 62
-    iget-object v1, p2, LX/3OQ;->A0F:Ljava/lang/Long;
-
     .line 63
     .line 64
-    const-string/jumbo v0, "network_info_opened_conn"
+    invoke-interface {v3, v2, v1, v0, v4}, LX/3QO;->AR3(LX/3P4;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 65
     .line 66
     .line 67
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A04(Ljava/lang/String;Ljava/lang/Long;)V
+    throw v4
 
     .line 68
+    :goto_0
+    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
     .line 69
     .line 70
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
     .line 71
+    iget v2, p0, LX/3OC;->A00:I
+
     .line 72
     .line 73
-    move-result-object v2
+    iget-object v0, p0, LX/3OC;->A01:LX/3QO;
 
     .line 74
-    iget-object v0, p2, LX/3OQ;->A0C:Ljava/lang/Integer;
-
     .line 75
-    .line 76
-    const-string/jumbo v1, "network_info_signal_level"
+    new-instance v1, LX/3P5;
 
+    .line 76
     .line 77
+    invoke-direct {v1, v0, v3, v2}, LX/3P5;-><init>(LX/3QO;Ljava/io/File;I)V
+
     .line 78
     .line 79
-    if-eqz v0, :cond_1
-
     .line 80
-    .line 81
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    new-instance v0, LX/3Ph;
 
+    .line 81
     .line 82
+    invoke-direct {v0, v1, v3}, LX/3Ph;-><init>(LX/3OM;Ljava/io/File;)V
+
     .line 83
     .line 84
-    move-result v0
-
     .line 85
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object v0, p0, LX/3OC;->A04:LX/3Ph;
 
     .line 86
     .line 87
-    .line 88
-    move-result-object v0
+    :cond_2
+    iget-object v0, p0, LX/3OC;->A04:LX/3Ph;
 
+    .line 88
     .line 89
-    invoke-static {v2, v0, v1}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v0, v0, LX/3Ph;->A00:LX/3OM;
 
     .line 90
     .line 91
-    .line 92
-    :cond_1
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 92
     .line 93
     .line 94
+    monitor-exit p0
+
     .line 95
-    move-result-object v2
+    return-object v0
 
     .line 96
-    iget-object v0, p2, LX/3OQ;->A0B:Ljava/lang/Integer;
+    :catchall_0
+    move-exception v0
 
     .line 97
+    monitor-exit p0
+
     .line 98
-    const-string/jumbo v1, "network_info_signal_dbm"
+    throw v0
+.end method
 
-    .line 99
-    .line 100
-    .line 101
-    if-eqz v0, :cond_2
 
-    .line 102
-    .line 103
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+# virtual methods
+.method public final A51()V
+    .locals 1
 
-    .line 104
-    .line 105
-    .line 106
-    move-result v0
+    .line 0
+    invoke-direct {p0}, LX/3OC;->A00()LX/3OM;
 
-    .line 107
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 108
-    .line 109
-    .line 110
+    .line 1
+    .line 2
+    .line 3
     move-result-object v0
 
-    .line 111
-    invoke-static {v2, v0, v1}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 112
-    .line 113
-    .line 114
-    :cond_2
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 115
-    .line 116
-    .line 117
-    move-result-object v2
-
-    .line 118
-    iget-object v0, p2, LX/3OQ;->A08:Ljava/lang/Integer;
-
-    .line 119
-    .line 120
-    const-string/jumbo v1, "network_info_frequency_mhz"
-
-    .line 121
-    .line 122
-    .line 123
-    if-eqz v0, :cond_3
-
-    .line 124
-    .line 125
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    .line 126
-    .line 127
-    .line 128
-    move-result v0
-
-    .line 129
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 130
-    .line 131
-    .line 132
-    move-result-object v0
-
-    .line 133
-    invoke-static {v2, v0, v1}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 134
-    .line 135
-    .line 136
-    :cond_3
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 137
-    .line 138
-    .line 139
-    move-result-object v2
-
-    .line 140
-    iget-object v0, p2, LX/3OQ;->A09:Ljava/lang/Integer;
-
-    .line 141
-    .line 142
-    const-string/jumbo v1, "network_info_link_speed_mbps"
-
-    .line 143
-    .line 144
-    .line 145
-    if-eqz v0, :cond_4
-
-    .line 146
-    .line 147
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    .line 148
-    .line 149
-    .line 150
-    move-result v0
-
-    .line 151
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 152
-    .line 153
-    .line 154
-    move-result-object v0
-
-    .line 155
-    invoke-static {v2, v0, v1}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 156
-    .line 157
-    .line 158
-    :cond_4
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 159
-    .line 160
-    .line 161
-    move-result-object v2
-
-    .line 162
-    iget-object v1, p2, LX/3OQ;->A01:Ljava/lang/Boolean;
-
-    .line 163
-    .line 164
-    const-string/jumbo v0, "network_info_app_backgrounded"
-
-    .line 165
-    .line 166
-    .line 167
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A03(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    .line 168
-    .line 169
-    .line 170
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 171
-    .line 172
-    .line 173
-    move-result-object v2
-
-    .line 174
-    iget-object v0, v4, LX/36J;->A01:LX/0Na;
-
-    .line 175
-    .line 176
-    invoke-static {v0}, LX/0Yi;->A0N(LX/0Na;)LX/2sb;
-
-    .line 177
-    .line 178
-    .line 179
-    move-result-object v0
-
-    .line 180
-    iget-object v0, v0, LX/2sb;->A0J:LX/0Na;
-
-    .line 181
-    .line 182
-    invoke-static {v0}, LX/0Yd;->A07(LX/0Na;)J
-
-    .line 183
-    .line 184
-    .line 185
-    move-result-wide v4
-
-    .line 186
-    const-wide/16 v0, 0x0
-
-    .line 187
-    .line 188
-    sub-long/2addr v4, v0
-
-    .line 189
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 190
-    .line 191
-    .line 192
-    move-result-object v1
-
-    .line 193
-    const-string/jumbo v0, "network_info_ms_since_init"
-
-    .line 194
-    .line 195
-    .line 196
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A04(Ljava/lang/String;Ljava/lang/Long;)V
-
-    .line 197
-    .line 198
-    .line 199
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 200
-    .line 201
-    .line 202
-    move-result-object v2
-
-    .line 203
-    iget-object v1, p2, LX/3OQ;->A04:Ljava/lang/Boolean;
-
-    .line 204
-    .line 205
-    const-string/jumbo v0, "network_info_may_have_network"
-
-    .line 206
-    .line 207
-    .line 208
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A03(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    .line 209
-    .line 210
-    .line 211
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 212
-    .line 213
-    .line 214
-    move-result-object v2
-
-    .line 215
-    iget-object v1, p2, LX/3OQ;->A0H:Ljava/lang/Long;
-
-    .line 216
-    .line 217
-    const-string/jumbo v0, "network_info_req_bw_ingress_avg"
-
-    .line 218
-    .line 219
-    .line 220
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A04(Ljava/lang/String;Ljava/lang/Long;)V
-
-    .line 221
-    .line 222
-    .line 223
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 224
-    .line 225
-    .line 226
-    move-result-object v2
-
-    .line 227
-    iget-object v1, p2, LX/3OQ;->A06:Ljava/lang/Double;
-
-    .line 228
-    .line 229
-    const-string/jumbo v0, "network_info_req_bw_ingress_std_dev"
-
-    .line 230
-    .line 231
-    .line 232
-    if-eqz v1, :cond_5
-
-    .line 233
-    .line 234
-    invoke-static {v2, v1, v0}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 235
-    .line 236
-    .line 237
-    :cond_5
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 238
-    .line 239
-    .line 240
-    move-result-object v2
-
-    .line 241
-    iget-object v1, p2, LX/3OQ;->A0G:Ljava/lang/Long;
-
-    .line 242
-    .line 243
-    const-string/jumbo v0, "network_info_req_bw_egress_avg"
-
-    .line 244
-    .line 245
-    .line 246
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A04(Ljava/lang/String;Ljava/lang/Long;)V
-
-    .line 247
-    .line 248
-    .line 249
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 250
-    .line 251
-    .line 252
-    move-result-object v2
-
-    .line 253
-    iget-object v1, p2, LX/3OQ;->A05:Ljava/lang/Double;
-
-    .line 254
-    .line 255
-    const-string/jumbo v0, "network_info_req_bw_egress_std_dev"
-
-    .line 256
-    .line 257
-    .line 258
-    if-eqz v1, :cond_6
-
-    .line 259
-    .line 260
-    invoke-static {v2, v1, v0}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 261
-    .line 262
-    .line 263
-    :cond_6
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 264
-    .line 265
-    .line 266
-    move-result-object v2
-
-    .line 267
-    iget-object v1, p2, LX/3OQ;->A0K:Ljava/lang/String;
-
-    .line 268
-    .line 269
-    const-string/jumbo v0, "network_info_latency_quality"
-
-    .line 270
-    .line 271
-    .line 272
-    invoke-static {v2, v3, v1, v0}, LX/0Yi;->A0S(LX/0TL;LX/5SE;Ljava/lang/Object;Ljava/lang/String;)LX/0TL;
-
-    .line 273
-    .line 274
-    .line 275
-    move-result-object v2
-
-    .line 276
-    iget-object v1, p2, LX/3OQ;->A0L:Ljava/lang/String;
-
-    .line 277
-    .line 278
-    const-string/jumbo v0, "network_info_upload_bw_quality"
-
-    .line 279
-    .line 280
-    .line 281
-    invoke-static {v2, v3, v1, v0}, LX/0Yi;->A0S(LX/0TL;LX/5SE;Ljava/lang/Object;Ljava/lang/String;)LX/0TL;
-
-    .line 282
-    .line 283
-    .line 284
-    move-result-object v2
-
-    .line 285
-    iget-object v1, p2, LX/3OQ;->A0J:Ljava/lang/String;
-
-    .line 286
-    .line 287
-    const-string/jumbo v0, "network_info_download_bw_quality"
-
-    .line 288
-    .line 289
-    .line 290
-    invoke-static {v2, v3, v1, v0}, LX/0Yi;->A0S(LX/0TL;LX/5SE;Ljava/lang/Object;Ljava/lang/String;)LX/0TL;
-
-    .line 291
-    .line 292
-    .line 293
-    move-result-object v2
-
-    .line 294
-    iget-object v1, p2, LX/3OQ;->A0E:Ljava/lang/Long;
-
-    .line 295
-    .line 296
-    const-string v0, "estimated_ttfb_ms"
-
-    .line 297
-    .line 298
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A04(Ljava/lang/String;Ljava/lang/Long;)V
-
-    .line 299
-    .line 300
-    .line 301
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 302
-    .line 303
-    .line 304
-    move-result-object v2
-
-    .line 305
-    iget-object v1, p2, LX/3OQ;->A0D:Ljava/lang/Long;
-
-    .line 306
-    .line 307
-    const-string v0, "estimated_bandwidth_bps"
-
-    .line 308
-    .line 309
-    invoke-virtual {v2, v0, v1}, LX/0TL;->A04(Ljava/lang/String;Ljava/lang/Long;)V
-
-    .line 310
-    .line 311
-    .line 312
-    iget-object v0, p2, LX/3OQ;->A0A:Ljava/lang/Integer;
-
-    .line 313
-    .line 314
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    .line 315
-    .line 316
-    .line 317
-    move-result v0
-
-    .line 318
-    if-gtz v0, :cond_7
-
-    .line 319
-    .line 320
-    invoke-virtual {v3}, LX/5SE;->AIk()LX/0TL;
-
-    .line 321
-    .line 322
-    .line 323
-    move-result-object v2
-
-    .line 324
-    const-string/jumbo v1, "reference_received_signal_quality_db"
-
-    .line 325
-    .line 326
-    .line 327
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 328
-    .line 329
-    .line 330
-    move-result-object v0
-
-    .line 331
-    invoke-static {v2, v0, v1}, LX/0TL;->A00(LX/0TL;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 332
-    .line 333
-    .line 334
-    :cond_7
+    .line 4
+    invoke-interface {v0}, LX/3OM;->A51()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
+.end method
+
+.method public final ADq()Ljava/util/Collection;
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/3OC;->A00()LX/3OM;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, LX/3OM;->ADq()Ljava/util/Collection;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final AJy(Ljava/lang/Object;Ljava/lang/String;)LX/3QP;
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/3OC;->A00()LX/3OM;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0, p1, p2}, LX/3OM;->AJy(Ljava/lang/Object;Ljava/lang/String;)LX/3QP;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final AO7(Ljava/lang/Object;Ljava/lang/String;)LX/3Pb;
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/3OC;->A00()LX/3OM;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0, p1, p2}, LX/3OM;->AO7(Ljava/lang/Object;Ljava/lang/String;)LX/3Pb;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final AOz()Z
+    .locals 1
+
+    .line 0
+    :try_start_0
+    invoke-direct {p0}, LX/3OC;->A00()LX/3OM;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, LX/3OM;->AOz()Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 9
+    :catch_0
+    const/4 v0, 0x0
+
+    .line 10
+    return v0
+.end method
+
+.method public final AfK()V
+    .locals 5
+
+    .line 0
+    :try_start_0
+    invoke-direct {p0}, LX/3OC;->A00()LX/3OM;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, LX/3OM;->AfK()V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 8
+    :catch_0
+    move-exception v4
+
+    .line 9
+    const-class v3, LX/3OC;
+
+    .line 10
+    .line 11
+    const-string/jumbo v2, "purgeUnexpectedResources"
+
+    .line 12
+    .line 13
+    .line 14
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 15
+    .line 16
+    const/4 v0, 0x6
+
+    .line 17
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    if-eqz v0, :cond_0
+
+    .line 22
+    .line 23
+    invoke-virtual {v3}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    invoke-interface {v1, v0, v2, v4}, LX/0HQ;->A7u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 28
+    .line 29
+    .line 30
+    :cond_0
+    return-void
+.end method
+
+.method public final AhG(LX/3Pc;)J
+    .locals 2
+
+    .line 0
+    invoke-direct {p0}, LX/3OC;->A00()LX/3OM;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0, p1}, LX/3OM;->AhG(LX/3Pc;)J
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-wide v0
+
+    .line 8
+    return-wide v0
+.end method
+
+.method public final AhH(Ljava/lang/String;)J
+    .locals 2
+
+    .line 0
+    invoke-direct {p0}, LX/3OC;->A00()LX/3OM;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0, p1}, LX/3OM;->AhH(Ljava/lang/String;)J
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-wide v0
+
+    .line 8
+    return-wide v0
 .end method

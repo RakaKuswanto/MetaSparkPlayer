@@ -1,4 +1,4 @@
-.class public Lcom/google/common/collect/HashMultiset;
+.class public final Lcom/google/common/collect/HashMultiset;
 .super Lcom/google/common/collect/AbstractMapBasedMultiset;
 .source ""
 
@@ -22,6 +22,14 @@
 # direct methods
 .method public constructor <init>()V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "distinctElements"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMapBasedMultiset;-><init>()V

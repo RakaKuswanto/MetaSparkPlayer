@@ -20,11 +20,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x53
+    const/16 v0, 0x52
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -39,11 +39,11 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1ZJ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(LX/2PV;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .line 268435456
-    invoke-direct {p0, p1, p2, p4}, Lcom/facebook/auth/credentials/PasswordCredentials;-><init>(LX/1ZJ;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, p4}, Lcom/facebook/auth/credentials/PasswordCredentials;-><init>(LX/2PV;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 268435457
     .line 268435458

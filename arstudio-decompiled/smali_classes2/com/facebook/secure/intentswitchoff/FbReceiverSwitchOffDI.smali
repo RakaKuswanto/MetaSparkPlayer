@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/secure/intentswitchoff/FbReceiverSwitchOffDI;
-.super LX/037;
+.super LX/0Vz;
 .source ""
 
 
@@ -8,11 +8,11 @@
     .locals 1
 
     .line 0
-    sget v0, LX/2eq;->A0d:I
+    sget v0, LX/2I6;->A0I:I
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -20,11 +20,11 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/03X;
+    check-cast v0, LX/03b;
 
     .line 7
     .line 8
-    invoke-direct {p0, v0}, LX/037;-><init>(LX/03X;)V
+    invoke-direct {p0, v0}, LX/0Vz;-><init>(LX/03b;)V
 
     .line 9
     .line 10

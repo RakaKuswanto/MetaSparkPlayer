@@ -4,15 +4,13 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
+.field public final A01:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -21,11 +19,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->ABi:I
+    sget v0, LX/2I6;->A8T:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -33,11 +31,11 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A00:LX/0RP;
 
     .line 10
     .line 11
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 12
     .line 13
@@ -45,22 +43,10 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A01:LX/0RP;
 
     .line 16
     .line 17
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    iput-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A00:LX/1zG;
-
-    .line 22
-    .line 23
     return-void
 .end method
 
@@ -70,148 +56,156 @@
     .locals 7
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A02:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A01:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 3
     .line 4
     .line 5
-    move-result-object v2
+    move-result-object v3
 
     .line 6
-    const-wide v0, 0x82016d0019059fL
+    const-wide v0, 0x820154001904e6L
 
     .line 7
     .line 8
     .line 9
     .line 10
     .line 11
-    invoke-interface {v2, v0, v1}, LX/35B;->AIM(J)J
+    check-cast v3, LX/302;
 
     .line 12
     .line 13
-    .line 14
-    move-result-wide v5
+    sget-object v2, LX/30J;->A05:LX/30J;
 
+    .line 14
     .line 15
-    const-wide v0, 0x82016d0018059eL
+    invoke-virtual {v3, v2, v0, v1}, LX/302;->AGt(LX/30J;J)J
 
     .line 16
     .line 17
     .line 18
-    .line 19
-    .line 20
-    invoke-interface {v2, v0, v1}, LX/35B;->AIM(J)J
+    move-result-wide v5
 
+    .line 19
+    const-wide v0, 0x820154001804e5L
+
+    .line 20
     .line 21
     .line 22
     .line 23
-    move-result-wide v2
-
     .line 24
-    const/4 v4, 0x0
+    invoke-virtual {v3, v2, v0, v1}, LX/302;->AGt(LX/30J;J)J
 
     .line 25
-    new-instance v1, LX/2Ra;
-
     .line 26
     .line 27
-    invoke-direct {v1}, LX/2Ra;-><init>()V
+    move-result-wide v2
 
     .line 28
+    const/4 v4, 0x0
+
     .line 29
+    new-instance v1, LX/34W;
+
     .line 30
+    .line 31
+    invoke-direct {v1}, LX/34W;-><init>()V
+
+    .line 32
+    .line 33
+    .line 34
     const/16 v0, 0x14
 
-    .line 31
-    .line 32
+    .line 35
+    .line 36
     shl-long/2addr v5, v0
 
-    .line 33
-    iput-wide v5, v1, LX/2Ra;->A00:J
+    .line 37
+    iput-wide v5, v1, LX/34W;->A00:J
 
-    .line 34
-    .line 35
+    .line 38
+    .line 39
     shl-long/2addr v2, v0
 
-    .line 36
-    iput-wide v2, v1, LX/2Ra;->A01:J
+    .line 40
+    iput-wide v2, v1, LX/34W;->A01:J
 
-    .line 37
-    .line 38
+    .line 41
+    .line 42
     const/4 v0, 0x1
 
-    .line 39
-    iput-boolean v0, v1, LX/2Ra;->A04:Z
-
-    .line 40
-    .line 41
-    invoke-virtual {v1}, LX/2Ra;->A00()LX/2RM;
-
-    .line 42
     .line 43
-    .line 44
-    move-result-object v1
+    iput-boolean v0, v1, LX/34W;->A04:Z
 
+    .line 44
     .line 45
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-virtual {v1}, LX/34W;->A00()LX/3Em;
 
     .line 46
     .line 47
     .line 48
-    move-result-object v3
+    move-result-object v1
 
     .line 49
-    invoke-virtual {v1}, LX/2QU;->A01()Ljava/lang/String;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 50
     .line 51
     .line 52
-    move-result-object v0
+    move-result-object v3
 
     .line 53
-    invoke-interface {v3, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, LX/3F1;->A01()Ljava/lang/String;
 
     .line 54
     .line 55
     .line 56
-    iget-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A01:LX/0Na;
+    move-result-object v0
 
     .line 57
-    .line 58
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 58
     .line 59
     .line 60
-    .line 61
-    move-result-object v2
+    iget-object v0, p0, Lcom/facebook/storage/cask/fbapps/adhoc/FBAppAdHocCaskRegisters;->A00:LX/0RP;
 
+    .line 61
     .line 62
-    check-cast v2, LX/2P2;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 63
     .line 64
-    new-instance v1, LX/2Qq;
-
     .line 65
+    move-result-object v2
+
     .line 66
-    invoke-direct {v1, v4, v4, v4, v3}, LX/2Qq;-><init>(LX/2QA;Ljava/io/File;Ljava/util/Map;Ljava/util/Map;)V
+    check-cast v2, LX/3HS;
 
     .line 67
     .line 68
-    .line 69
-    const v0, 0x2d09b335
+    new-instance v1, LX/3Ih;
 
+    .line 69
     .line 70
+    invoke-direct {v1, v4, v4, v4, v3}, LX/3Ih;-><init>(LX/2Ce;Ljava/io/File;Ljava/util/Map;Ljava/util/Map;)V
+
     .line 71
     .line 72
-    invoke-virtual {v2, v1, v0}, LX/2P2;->ABO(LX/2Qq;I)Ljava/io/File;
-
     .line 73
+    const v0, 0x2d09b335
+
     .line 74
     .line 75
+    .line 76
+    invoke-virtual {v2, v1, v0}, LX/3HS;->A9u(LX/3Ih;I)Ljava/io/File;
+
+    .line 77
+    .line 78
+    .line 79
     return-void
 .end method

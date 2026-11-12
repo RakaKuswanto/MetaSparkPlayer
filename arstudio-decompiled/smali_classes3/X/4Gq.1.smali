@@ -1,1242 +1,1949 @@
-.class public final LX/4Gq;
-.super LX/4DM;
+.class public final LX/4gQ;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements LX/4BX;
-.implements LX/4Be;
-
-
-# instance fields
-.field public A00:Landroid/animation/ValueAnimator;
-
-.field public A01:Landroid/widget/LinearLayout;
-
-.field public A02:LX/4OH;
-
-.field public A03:LX/4OH;
-
-.field public A04:Z
-
-.field public A05:Z
-
-.field public A06:Landroid/view/View;
-
-.field public A07:Landroid/widget/ImageView;
-
-.field public A08:Landroid/widget/TextView;
-
-.field public A09:LX/4OH;
-
-.field public A0A:Ljava/lang/String;
-
-.field public final A0B:Ljava/util/Map;
-
-.field public final A0C:Landroid/content/Context;
-
-.field public final A0D:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Bundle;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4DM;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    iput-boolean v0, p0, LX/4Gq;->A05:Z
-
-    .line 5
-    .line 6
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    iput-object v0, p0, LX/4Gq;->A0B:Ljava/util/Map;
-
-    .line 11
-    .line 12
-    iput-object p1, p0, LX/4Gq;->A0C:Landroid/content/Context;
-
-    .line 13
-    .line 14
-    iput-object p2, p0, LX/4Gq;->A0D:Landroid/os/Bundle;
-
-    .line 15
-    .line 16
     return-void
 .end method
 
-.method private A00()V
+.method public static final A00(LX/4fk;Ljava/lang/Exception;)LX/4gP;
     .locals 2
 
     .line 0
-    iget-boolean v0, p0, LX/4Gq;->A05:Z
+    const/4 v0, 0x1
 
     .line 1
-    .line 2
-    iget-object v1, p0, LX/4Gq;->A09:LX/4OH;
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
+    instance-of v0, p1, LX/4gP;
+
+    .line 5
+    .line 6
     if-eqz v0, :cond_0
 
-    .line 5
-    .line 6
-    const v0, 0x7f08064a
-
     .line 7
     .line 8
-    .line 9
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+    check-cast p1, LX/4gP;
 
+    .line 9
     .line 10
+    return-object p1
+
     .line 11
+    :cond_0
+    const/4 v1, 0x0
+
     .line 12
-    iget-object v1, p0, LX/4Gq;->A08:Landroid/widget/TextView;
+    new-instance v0, LX/4gP;
 
     .line 13
     .line 14
-    const v0, 0x7f1200ad
+    invoke-direct {v0, p0, v1, v1, p1}, LX/4gP;-><init>(LX/4fk;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 15
     .line 16
     .line 17
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
-
-    .line 18
-    .line 19
-    .line 20
-    return-void
-
-    .line 21
-    :cond_0
-    const v0, 0x7f080461
-
-    .line 22
-    .line 23
-    .line 24
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 25
-    .line 26
-    .line 27
-    iget-object v1, p0, LX/4Gq;->A08:Landroid/widget/TextView;
-
-    .line 28
-    .line 29
-    const v0, 0x7f1200ab
-
-    .line 30
-    .line 31
-    .line 32
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public static A01(LX/4Gq;)V
-    .locals 5
+.method public static final A01(LX/4fg;LX/4fk;Ljava/lang/Exception;)V
+    .locals 6
 
     .line 0
-    invoke-static {}, LX/4CF;->A00()LX/4CF;
+    invoke-virtual {p1}, LX/4fk;->A02()LX/4ei;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v4
+    move-result-object v5
 
     .line 4
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {v5}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 5
     .line 6
     .line 7
+    instance-of v1, p2, LX/6Xp;
+
+    .line 8
+    .line 9
+    const/4 v0, 0x0
+
+    .line 10
+    if-eqz v1, :cond_1
+
+    .line 11
+    .line 12
+    check-cast p2, LX/6Xp;
+
+    .line 13
+    .line 14
+    iget-object v4, p2, LX/6Xp;->original:Ljava/lang/Exception;
+
+    .line 15
+    .line 16
+    iget-object v0, p2, LX/6Xp;->lastHandler:LX/4ei;
+
+    .line 17
+    .line 18
+    :cond_0
+    :goto_0
+    invoke-static {p1, v4}, LX/4gQ;->A00(LX/4fk;Ljava/lang/Exception;)LX/4gP;
+
+    .line 19
+    .line 20
+    .line 21
     move-result-object v3
 
-    .line 8
-    iget-object v1, p0, LX/4Gq;->A0A:Ljava/lang/String;
-
-    .line 9
-    .line 10
-    const-string v0, "story_id"
-
-    .line 11
-    .line 12
-    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 13
-    .line 14
-    .line 15
-    iget-boolean v0, p0, LX/4Gq;->A05:Z
-
-    .line 16
-    .line 17
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v1
-
-    .line 21
-    const-string v0, "is_saved"
-
     .line 22
-    .line 23
-    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, LX/4fg;->A0H()Ljava/lang/String;
 
+    .line 23
     .line 24
     .line 25
+    move-result-object v1
+
     .line 26
-    iget-object v0, p0, LX/4Gq;->A0D:Landroid/os/Bundle;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 27
     .line 28
-    const-string v1, "site_uri"
-
     .line 29
+    move-result-object v2
+
     .line 30
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v1, 0x0
 
     .line 31
+    invoke-static {v2, v1}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 32
     .line 33
-    move-result-object v0
-
     .line 34
-    invoke-virtual {v3, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, v3, LX/4gP;->componentNameLayoutStack:Ljava/util/ArrayList;
 
     .line 35
     .line 36
-    .line 37
-    iget-object v2, p0, LX/4DM;->A03:LX/4Ed;
+    invoke-virtual {v1, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
+    .line 37
     .line 38
     .line 39
-    const/4 v0, 0x0
+    if-eq v0, v5, :cond_3
 
     .line 40
-    if-nez v2, :cond_0
-
     .line 41
-    .line 42
-    move-object v1, v0
+    instance-of v0, v5, LX/4h4;
 
+    .line 42
     .line 43
-    :goto_0
-    const-string v2, "OFFER_LIKE_ADS_CLICK_SAVE_ACTION"
+    if-eqz v0, :cond_2
 
     .line 44
     .line 45
-    invoke-virtual {v4, v1, v0, v2, v3}, LX/4CF;->A0A(Landroid/os/Bundle;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;Ljava/util/Map;)V
+    check-cast v5, LX/4h4;
 
     .line 46
     .line 47
-    .line 48
-    iget-boolean v0, p0, LX/4Gq;->A05:Z
+    invoke-virtual {v5, p1, v3}, LX/4h4;->A02(LX/4fk;Ljava/lang/Exception;)V
 
+    .line 48
     .line 49
     .line 50
-    xor-int/lit8 v0, v0, 0x1
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 51
     .line 52
-    iput-boolean v0, p0, LX/4Gq;->A05:Z
-
     .line 53
+    move-result-object v0
+
     .line 54
-    invoke-direct {p0}, LX/4Gq;->A00()V
+    throw v0
 
     .line 55
+    :cond_1
+    instance-of v1, p2, LX/4gP;
+
     .line 56
     .line 57
-    return-void
+    move-object v4, p2
 
     .line 58
-    :cond_0
-    check-cast v2, LX/4BG;
+    if-eqz v1, :cond_0
 
     .line 59
     .line 60
-    iget-object v1, v2, LX/4BG;->A08:Landroid/os/Bundle;
+    move-object v0, v4
 
     .line 61
-    .line 62
-    iget-object v0, v2, LX/4BG;->A0X:Lcom/facebook/privacy/zone/policy/ZonePolicy;
+    check-cast v0, LX/4gP;
 
+    .line 62
     .line 63
+    iget-object v0, v0, LX/4gP;->lastHandler:LX/4ei;
+
     .line 64
+    .line 65
     goto :goto_0
+
+    .line 66
+    :cond_2
+    :try_start_0
+    const/4 v0, 0x1
+
+    .line 67
+    invoke-static {v4, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 68
+    .line 69
+    .line 70
+    new-instance v0, LX/4kQ;
+
+    .line 71
+    .line 72
+    invoke-direct {v0}, LX/4kQ;-><init>()V
+
+    .line 73
+    .line 74
+    .line 75
+    iput-object v4, v0, LX/4kQ;->A01:Ljava/lang/Exception;
+
+    .line 76
+    .line 77
+    iput-object p1, v0, LX/4kQ;->A00:LX/4fk;
+
+    .line 78
+    .line 79
+    invoke-static {p1, v0}, LX/4gQ;->A02(LX/4fk;LX/4kQ;)V
+
+    .line 80
+    .line 81
+    .line 82
+    return-void
+    :try_end_0
+    .catch LX/6Xp; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 83
+    :catch_0
+    iput-object v5, v3, LX/4gP;->lastHandler:LX/4ei;
+
+    .line 84
+    .line 85
+    throw v3
+
+    .line 86
+    :cond_3
+    iput-object v0, v3, LX/4gP;->lastHandler:LX/4ei;
+
+    .line 87
+    .line 88
+    throw v3
 .end method
 
-.method public static A09(LX/4Gq;Lcom/facebook/browser/lite/extensions/offers/OfferLikeAdsBrowserBarData;)V
-    .locals 8
+.method public static final A02(LX/4fk;LX/4kQ;)V
+    .locals 0
 
     .line 0
-    iget-object v1, p0, LX/4DM;->A02:Landroid/view/View;
+    invoke-static {p0, p1}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
-    const v0, 0x7f0a0427
-
     .line 3
+    invoke-virtual {p0}, LX/4fk;->A02()LX/4ei;
+
     .line 4
     .line 5
-    invoke-static {v1, v0}, LX/4BF;->A0c(Landroid/view/View;I)Landroid/view/ViewStub;
+    .line 6
+    move-result-object p0
+
+    .line 7
+    invoke-static {p0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {p0, p1}, LX/4ei;->A00(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    .line 13
+    return-void
+.end method
+
+.method public static final A03(LX/4fk;Ljava/lang/Exception;)V
+    .locals 13
+
+    .line 0
+    const/4 v4, 0x0
+
+    .line 1
+    invoke-static {}, LX/433;->A1U()Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v12
+
+    .line 5
+    if-eqz v12, :cond_0
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v1
+    :try_start_0
+    const-string v0, "handleError"
 
+    .line 8
     .line 9
-    const v0, 0x7f0d0102
+    invoke-static {v0}, Lcom/facebook/litho/ComponentsSystrace;->A01(Ljava/lang/String;)V
 
     .line 10
     .line 11
     .line 12
-    invoke-static {v1, v0}, LX/4BE;->A0X(Landroid/view/ViewStub;I)Landroid/view/View;
+    :cond_0
+    iget-object v0, p0, LX/4fk;->A01:LX/4fg;
 
     .line 13
     .line 14
-    .line 15
-    move-result-object v1
+    if-eqz v0, :cond_6
 
+    .line 15
     .line 16
-    check-cast v1, Landroid/widget/LinearLayout;
+    invoke-static {p0, p1}, LX/4gQ;->A00(LX/4fk;Ljava/lang/Exception;)LX/4gP;
 
     .line 17
     .line 18
-    iput-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
-
     .line 19
+    move-result-object v3
+
     .line 20
-    const v0, 0x7f0a0429
+    invoke-virtual {p0}, LX/4fk;->A06()Ljava/lang/String;
 
     .line 21
     .line 22
     .line 23
-    invoke-static {v1, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
+    move-result-object v1
 
     .line 24
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
+
     .line 25
     .line 26
-    move-result-object v0
-
     .line 27
-    const/16 v2, 0x8
+    move-result-object v8
 
     .line 28
-    .line 29
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    const-string v0, ","
 
+    .line 29
     .line 30
+    invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
     .line 31
     .line 32
-    iget-object v1, p0, LX/4Gq;->A0D:Landroid/os/Bundle;
-
     .line 33
+    move-result-object v7
+
     .line 34
-    const-string v0, "is_footer_collapsed"
+    sget-object v11, LX/4fg;->A06:Ljava/util/Map;
 
     .line 35
     .line 36
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+    monitor-enter v11
+    :try_end_0
+    .catch LX/6Xp; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 37
+    :try_start_1
+    array-length v6, v7
+
     .line 38
+    const/4 v5, 0x0
+
     .line 39
-    move-result v0
+    :goto_0
+    if-ge v5, v6, :cond_5
 
     .line 40
-    iput-boolean v0, p0, LX/4Gq;->A04:Z
-
     .line 41
+    aget-object v2, v7, v5
+
     .line 42
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
-
     .line 43
-    .line 44
-    const v0, 0x7f0a041a
+    invoke-static {v2, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 44
     .line 45
     .line 46
-    .line 47
-    invoke-static {v1, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
+    const-string v0, "$"
 
+    .line 47
     .line 48
+    invoke-virtual {v2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
     .line 49
     .line 50
-    move-result-object v4
-
     .line 51
-    iput-object v4, p0, LX/4Gq;->A06:Landroid/view/View;
+    move-result v0
 
     .line 52
+    if-nez v0, :cond_2
+
     .line 53
-    iget-boolean v1, p0, LX/4Gq;->A04:Z
-
     .line 54
-    .line 55
-    const/4 v3, 0x0
+    const-string v1, "id("
 
+    .line 55
     .line 56
-    const/4 v0, 0x0
+    const/16 v0, 0x29
 
     .line 57
-    if-eqz v1, :cond_0
-
     .line 58
-    .line 59
-    const/16 v0, 0x8
+    invoke-static {v1, v2, v0}, LX/004;->A0C(Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
 
+    .line 59
     .line 60
     .line 61
-    :cond_0
-    invoke-virtual {v4, v0}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v10
 
     .line 62
+    sget-object v0, LX/4l4;->A00:LX/3Gx;
+
     .line 63
     .line 64
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
+    iget-object v0, v0, LX/3Gx;->nativePattern:Ljava/util/regex/Pattern;
 
     .line 65
     .line 66
-    const v0, 0x7f0a0431
+    invoke-virtual {v0, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     .line 67
     .line 68
     .line 69
-    invoke-static {v1, v0}, LX/4BF;->A0f(Landroid/view/View;I)Landroid/widget/ImageView;
+    move-result-object v1
 
     .line 70
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
+
     .line 71
     .line 72
-    move-result-object v0
-
     .line 73
-    iput-object v0, p0, LX/4Gq;->A07:Landroid/widget/ImageView;
+    invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->find(I)Z
 
     .line 74
     .line 75
-    iget-object v0, p0, LX/4Gq;->A06:Landroid/view/View;
-
     .line 76
+    move-result v0
+
     .line 77
-    invoke-static {v0}, LX/4Gp;->A05(Landroid/view/View;)V
+    if-eqz v0, :cond_4
 
     .line 78
     .line 79
+    new-instance v0, LX/3Rd;
+
     .line 80
-    iget-object v0, p0, LX/4Gq;->A07:Landroid/widget/ImageView;
-
     .line 81
-    .line 82
-    invoke-static {v0}, LX/4Gp;->A05(Landroid/view/View;)V
+    invoke-direct {v0, v2, v1}, LX/3Rd;-><init>(Ljava/lang/CharSequence;Ljava/util/regex/Matcher;)V
 
+    .line 82
     .line 83
     .line 84
+    iget-object v0, v0, LX/3Rd;->A00:Ljava/util/regex/Matcher;
+
     .line 85
-    iget-object v0, p0, LX/4Gq;->A0C:Landroid/content/Context;
-
     .line 86
-    .line 87
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
+    .line 87
     .line 88
     .line 89
+    move-result-object v0
+
     .line 90
-    move-result-object v1
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 91
-    const v0, 0x7f070070
-
     .line 92
     .line 93
-    .line 94
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-static {v0}, LX/6Yj;->A0R(Ljava/lang/String;)Ljava/lang/Integer;
 
+    .line 94
     .line 95
     .line 96
+    move-result-object v0
+
     .line 97
-    move-result v5
+    if-eqz v0, :cond_4
 
     .line 98
-    const/4 v1, 0x0
-
     .line 99
-    add-float/2addr v5, v1
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
     .line 100
-    const/4 v0, 0x2
-
     .line 101
-    new-array v0, v0, [F
-
     .line 102
+    move-result v9
+
     .line 103
-    aput v1, v0, v3
+    invoke-static {v11}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 104
     .line 105
-    const/4 v4, 0x1
-
     .line 106
-    aput v5, v0, v4
+    move-result-object v2
 
     .line 107
-    .line 108
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    :cond_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 108
     .line 109
     .line 110
+    move-result v0
+
     .line 111
-    move-result-object v5
+    if-eqz v0, :cond_4
 
     .line 112
-    iput-object v5, p0, LX/4Gq;->A00:Landroid/animation/ValueAnimator;
-
     .line 113
-    .line 114
-    const-wide/16 v0, 0x12c
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
+    .line 114
     .line 115
     .line 116
-    invoke-virtual {v5, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    move-result-object v0
 
     .line 117
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
     .line 118
     .line 119
-    iget-object v0, p0, LX/4Gq;->A00:Landroid/animation/ValueAnimator;
-
     .line 120
+    move-result-object v1
+
     .line 121
-    invoke-static {v0}, LX/4BE;->A17(Landroid/animation/Animator;)V
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     .line 122
     .line 123
     .line 124
-    iget-object v1, p0, LX/4Gq;->A00:Landroid/animation/ValueAnimator;
+    move-result-object v0
 
     .line 125
-    .line 126
-    new-instance v0, LX/5tN;
+    invoke-static {v0}, LX/002;->A00(Ljava/lang/Object;)I
 
+    .line 126
     .line 127
     .line 128
-    invoke-direct {v0, p0}, LX/5tN;-><init>(LX/4Gq;)V
+    move-result v0
 
     .line 129
+    if-ne v0, v9, :cond_1
+
     .line 130
     .line 131
-    invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    instance-of v0, v1, Ljava/lang/Class;
 
     .line 132
     .line 133
+    if-eqz v0, :cond_3
+
     .line 134
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
-
     .line 135
-    .line 136
-    const v0, 0x7f0a0423
+    const-string v2, "<cls>"
 
+    .line 136
     .line 137
+    check-cast v1, Ljava/lang/Class;
+
     .line 138
     .line 139
-    invoke-static {v1, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     .line 140
     .line 141
     .line 142
-    move-result-object v7
+    move-result-object v1
 
     .line 143
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
+    const-string v0, "</cls>"
 
     .line 144
     .line 145
-    const v0, 0x7f0a0424
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 146
     .line 147
     .line 148
-    invoke-static {v1, v0}, LX/4BE;->A0b(Landroid/view/View;I)Landroid/widget/TextView;
+    move-result-object v2
 
     .line 149
+    :cond_2
+    :goto_1
+    invoke-virtual {v8, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
     .line 150
     .line 151
-    move-result-object v1
-
     .line 152
-    const v0, 0x7f1200aa
+    goto :goto_2
 
     .line 153
+    :cond_3
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
     .line 154
     .line 155
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
+    .line 156
+    move-result-object v2
+
+    .line 157
+    goto :goto_1
+
+    .line 158
+    :cond_4
+    move-object v2, v10
+
+    .line 159
+    goto :goto_1
+
+    .line 160
+    :goto_2
+    add-int/lit8 v5, v5, 0x1
+
+    .line 161
+    .line 162
+    goto :goto_0
+
+    .line 163
+    :cond_5
+    monitor-exit v11
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 164
+    :try_start_2
+    invoke-virtual {v8}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    .line 165
+    .line 166
+    .line 167
+    move-result-object v2
+
+    .line 168
+    :goto_3
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 169
+    .line 170
+    .line 171
+    move-result v0
+
+    .line 172
+    if-eqz v0, :cond_7
+
+    .line 173
+    .line 174
+    invoke-static {v2}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
+
+    .line 175
+    .line 176
+    .line 177
+    move-result-object v1
+
+    .line 178
+    invoke-static {v1}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 179
+    .line 180
+    .line 181
+    invoke-static {v1, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 182
+    .line 183
+    .line 184
+    iget-object v0, v3, LX/4gP;->componentNameLayoutStack:Ljava/util/ArrayList;
+
+    .line 185
+    .line 186
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 187
+    .line 188
+    .line 189
+    goto :goto_3
+    :try_end_2
+    .catch LX/6Xp; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 190
+    :catchall_0
+    :try_start_3
+    move-exception v0
+
+    .line 191
+    monitor-exit v11
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 192
+    :try_start_4
+    throw v0
+
+    .line 193
+    :cond_6
+    new-instance v0, LX/4kQ;
+
+    .line 194
+    .line 195
+    invoke-direct {v0}, LX/4kQ;-><init>()V
+
+    .line 196
+    .line 197
+    .line 198
+    iput-object p1, v0, LX/4kQ;->A01:Ljava/lang/Exception;
+
+    .line 199
+    .line 200
+    goto :goto_4
+
+    .line 201
+    :cond_7
+    const/4 v0, 0x1
+
+    .line 202
+    invoke-static {v3, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 203
+    .line 204
+    .line 205
+    new-instance v0, LX/4kQ;
+
+    .line 206
+    .line 207
+    invoke-direct {v0}, LX/4kQ;-><init>()V
+
+    .line 208
+    .line 209
+    .line 210
+    iput-object v3, v0, LX/4kQ;->A01:Ljava/lang/Exception;
+
+    .line 211
+    .line 212
+    :goto_4
+    iput-object p0, v0, LX/4kQ;->A00:LX/4fk;
+
+    .line 213
+    .line 214
+    invoke-static {p0, v0}, LX/4gQ;->A02(LX/4fk;LX/4kQ;)V
+
+    .line 215
+    .line 216
+    .line 217
+    if-eqz v12, :cond_8
+    :try_end_4
+    .catch LX/6Xp; {:try_start_4 .. :try_end_4} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    .line 218
+    .line 219
+    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A00()V
+
+    .line 220
+    .line 221
+    .line 222
+    :cond_8
+    return-void
+
+    .line 223
+    :catch_0
+    move-exception v0
+
+    .line 224
+    :try_start_5
+    invoke-static {p0, v0}, LX/4gQ;->A00(LX/4fk;Ljava/lang/Exception;)LX/4gP;
+
+    .line 225
+    .line 226
+    .line 227
+    move-result-object v0
+
+    .line 228
+    throw v0
+
+    .line 229
+    :catch_1
+    invoke-static {p0, p1}, LX/4gQ;->A00(LX/4fk;Ljava/lang/Exception;)LX/4gP;
+
+    .line 230
+    .line 231
+    .line 232
+    move-result-object v0
+
+    .line 233
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    .line 234
+    :catchall_1
+    move-exception v0
+
+    .line 235
+    if-eqz v12, :cond_9
+
+    .line 236
+    .line 237
+    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A00()V
+
+    .line 238
+    .line 239
+    .line 240
+    :cond_9
+    throw v0
+.end method
+
+.method public static final A04(Ljava/lang/Exception;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    instance-of v0, p0, LX/6Xp;
+
+    .line 5
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    check-cast p0, LX/6Xp;
+
+    .line 9
+    .line 10
+    iget-object v0, p0, LX/6Xp;->original:Ljava/lang/Exception;
+
+    .line 11
+    .line 12
+    invoke-static {v0}, LX/4gQ;->A04(Ljava/lang/Exception;)V
+
+    .line 13
+    .line 14
+    .line 15
+    const/4 v0, 0x0
+
+    .line 16
+    throw v0
+
+    .line 17
+    :cond_0
+    instance-of v0, p0, Ljava/lang/RuntimeException;
+
+    .line 18
+    .line 19
+    if-eqz v0, :cond_1
+
+    .line 20
+    .line 21
+    throw p0
+
+    .line 22
+    :cond_1
+    invoke-static {p0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    throw v0
+.end method
+
+.method public static final A05(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 12
+
+    .line 0
+    const/4 v8, 0x0
+
+    .line 1
+    const/4 v7, 0x1
+
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    if-eqz v0, :cond_d
+
+    .line 15
+    .line 16
+    invoke-virtual {v1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v6
+
+    .line 20
+    invoke-static {v6}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 21
+    .line 22
+    .line 23
+    array-length v5, v6
+
+    .line 24
+    const/4 v4, 0x0
+
+    .line 25
+    :goto_0
+    if-ge v4, v5, :cond_c
+
+    .line 26
+    .line 27
+    aget-object v11, v6, v4
+
+    .line 28
+    .line 29
+    const-class v10, Lcom/facebook/litho/annotations/Comparable;
+
+    .line 30
+    .line 31
+    invoke-virtual {v11, v10}, Ljava/lang/reflect/AccessibleObject;->isAnnotationPresent(Ljava/lang/Class;)Z
+
+    .line 32
+    .line 33
+    .line 34
+    move-result v0
+
+    .line 35
+    if-eqz v0, :cond_a
+
+    .line 36
+    .line 37
+    invoke-virtual {v11}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v3
+
+    .line 41
+    :try_start_0
+    invoke-virtual {v11, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-virtual {v11, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v1
+
+    .line 48
+    invoke-virtual {v11, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v9
+
+    .line 52
+    invoke-virtual {v11, v8}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 53
+    .line 54
+    .line 55
+    new-instance v2, LX/4gQ;
+
+    .line 56
+    .line 57
+    invoke-direct {v2}, LX/4gQ;-><init>()V
+
+    .line 58
+    .line 59
+    .line 60
+    invoke-static {v3}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 61
+    .line 62
+    .line 63
+    :try_start_1
+    invoke-virtual {v11, v10}, Ljava/lang/reflect/AccessibleObject;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v0
+
+    .line 67
+    check-cast v0, Lcom/facebook/litho/annotations/Comparable;
+
+    .line 68
+    .line 69
+    if-eqz v0, :cond_9
+
+    .line 70
+    .line 71
+    invoke-interface {v0}, Lcom/facebook/litho/annotations/Comparable;->type()I
+
+    .line 72
+    .line 73
+    .line 74
+    move-result v0
+
+    .line 75
+    packed-switch v0, :pswitch_data_0
+
+    .line 76
+    .line 77
+    .line 78
+    :pswitch_0
+    goto/16 :goto_3
+    :try_end_1
+    .catch Ljava/lang/IncompatibleClassChangeError; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 79
+    .line 80
+    :pswitch_1
+    invoke-static {v3, v8}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 81
+    .line 82
+    .line 83
+    invoke-virtual {v3}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
+
+    .line 84
+    .line 85
+    .line 86
+    move-result-object v2
+
+    .line 87
+    if-eqz v2, :cond_b
+
+    .line 88
+    .line 89
+    sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
+
+    .line 90
+    .line 91
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    .line 92
+    .line 93
+    .line 94
+    move-result v0
+
+    .line 95
+    if-eqz v0, :cond_0
+
+    .line 96
+    .line 97
+    check-cast v1, [B
+
+    .line 98
+    .line 99
+    check-cast v9, [B
+
+    .line 100
+    .line 101
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([B[B)Z
+
+    .line 102
+    .line 103
+    .line 104
+    move-result v0
+
+    .line 105
+    goto/16 :goto_2
+
+    .line 106
+    .line 107
+    :cond_0
+    sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
+
+    .line 108
+    .line 109
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    .line 110
+    .line 111
+    .line 112
+    move-result v0
+
+    .line 113
+    if-eqz v0, :cond_1
+
+    .line 114
+    .line 115
+    check-cast v1, [S
+
+    .line 116
+    .line 117
+    check-cast v9, [S
+
+    .line 118
+    .line 119
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([S[S)Z
+
+    .line 120
+    .line 121
+    .line 122
+    move-result v0
+
+    .line 123
+    goto/16 :goto_2
+
+    .line 124
+    .line 125
+    :cond_1
+    sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
+
+    .line 126
+    .line 127
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    .line 128
+    .line 129
+    .line 130
+    move-result v0
+
+    .line 131
+    if-eqz v0, :cond_2
+
+    .line 132
+    .line 133
+    check-cast v1, [C
+
+    .line 134
+    .line 135
+    check-cast v9, [C
+
+    .line 136
+    .line 137
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([C[C)Z
+
+    .line 138
+    .line 139
+    .line 140
+    move-result v0
+
+    .line 141
+    goto/16 :goto_2
+
+    .line 142
+    .line 143
+    :cond_2
+    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    .line 144
+    .line 145
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    .line 146
+    .line 147
+    .line 148
+    move-result v0
+
+    .line 149
+    if-eqz v0, :cond_3
+
+    .line 150
+    .line 151
+    check-cast v1, [I
+
+    .line 152
+    .line 153
+    check-cast v9, [I
+
+    .line 154
+    .line 155
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([I[I)Z
 
     .line 156
     .line 157
     .line 158
-    const v0, 0x7f0a0437
+    move-result v0
 
     .line 159
+    goto/16 :goto_2
+
     .line 160
     .line 161
-    invoke-static {v7, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
+    :cond_3
+    sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     .line 162
     .line 163
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
     .line 164
-    move-result-object v0
-
     .line 165
-    check-cast v0, LX/4OH;
-
     .line 166
+    move-result v0
+
     .line 167
-    iput-object v0, p0, LX/4Gq;->A03:LX/4OH;
+    if-eqz v0, :cond_4
 
     .line 168
     .line 169
-    const v0, 0x7f0a0422
+    check-cast v1, [J
 
     .line 170
     .line 171
-    .line 172
-    invoke-static {v7, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
+    check-cast v9, [J
 
+    .line 172
     .line 173
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([J[J)Z
+
     .line 174
     .line 175
-    move-result-object v0
-
     .line 176
-    check-cast v0, LX/4OH;
+    move-result v0
 
     .line 177
+    goto/16 :goto_2
+
     .line 178
-    iput-object v0, p0, LX/4Gq;->A02:LX/4OH;
-
     .line 179
+    :cond_4
+    sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+
     .line 180
-    iget-object v6, p0, LX/4Gq;->A03:LX/4OH;
-
     .line 181
-    .line 182
-    iget-boolean v1, p0, LX/4Gq;->A04:Z
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
+    .line 182
     .line 183
     .line 184
-    const/4 v5, 0x0
+    move-result v0
 
     .line 185
-    const/4 v0, 0x4
+    if-eqz v0, :cond_5
 
     .line 186
-    if-eqz v1, :cond_1
-
     .line 187
-    .line 188
-    const/4 v0, 0x0
+    check-cast v1, [F
 
+    .line 188
     .line 189
-    :cond_1
-    invoke-virtual {v6, v0}, Landroid/view/View;->setVisibility(I)V
+    check-cast v9, [F
 
     .line 190
     .line 191
-    .line 192
-    iget-object v1, p0, LX/4Gq;->A02:LX/4OH;
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([F[F)Z
 
+    .line 192
     .line 193
     .line 194
-    iget-boolean v0, p0, LX/4Gq;->A04:Z
+    move-result v0
 
     .line 195
+    goto/16 :goto_2
+
     .line 196
-    if-eqz v0, :cond_2
-
     .line 197
-    .line 198
-    const/4 v5, 0x4
+    :cond_5
+    sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
+    .line 198
     .line 199
-    :cond_2
-    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     .line 200
     .line 201
     .line 202
-    const/16 v0, 0x53
+    move-result v0
 
     .line 203
-    .line 204
-    invoke-static {v7, p0, v0}, LX/6PP;->A01(Landroid/view/View;Ljava/lang/Object;I)V
+    if-eqz v0, :cond_6
 
+    .line 204
     .line 205
+    check-cast v1, [D
+
     .line 206
     .line 207
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
+    check-cast v9, [D
 
     .line 208
     .line 209
-    const v0, 0x7f0a042a
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([D[D)Z
 
     .line 210
     .line 211
     .line 212
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result v0
 
     .line 213
+    goto/16 :goto_2
+
     .line 214
     .line 215
-    move-result-object v0
+    :cond_6
+    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     .line 216
-    check-cast v0, LX/4OH;
-
     .line 217
-    .line 218
-    iput-object v0, p0, LX/4Gq;->A09:LX/4OH;
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
+    .line 218
     .line 219
     .line 220
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
+    move-result v0
 
     .line 221
-    .line 222
-    const v0, 0x7f0a042e
+    if-eqz v0, :cond_7
 
+    .line 222
     .line 223
+    check-cast v1, [Z
+
     .line 224
     .line 225
-    invoke-static {v1, v0}, LX/4BE;->A0c(Landroid/view/View;I)Landroid/widget/TextView;
+    check-cast v9, [Z
 
     .line 226
     .line 227
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([Z[Z)Z
+
     .line 228
-    move-result-object v0
-
     .line 229
-    iput-object v0, p0, LX/4Gq;->A08:Landroid/widget/TextView;
-
     .line 230
+    move-result v0
+
     .line 231
-    iget-object v1, p1, Lcom/facebook/browser/lite/extensions/offers/OfferLikeAdsBrowserBarData;->A01:Ljava/lang/String;
+    goto/16 :goto_2
 
     .line 232
     .line 233
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLSavedState;->SAVED:Lcom/facebook/graphql/enums/GraphQLSavedState;
+    :cond_7
+    check-cast v1, [Ljava/lang/Object;
 
     .line 234
     .line 235
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    check-cast v9, [Ljava/lang/Object;
 
     .line 236
     .line 237
+    invoke-static {v1, v9}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
     .line 238
-    move-result-object v0
-
     .line 239
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 240
-    .line 241
-    .line 242
     move-result v0
 
+    .line 241
+    goto :goto_2
+
+    .line 242
+    :pswitch_2
+    const/16 v0, 0x6d
+
     .line 243
-    iput-boolean v0, p0, LX/4Gq;->A05:Z
-
     .line 244
-    .line 245
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
+    invoke-static {v0}, LX/0X0;->A00(I)Ljava/lang/String;
 
+    .line 245
     .line 246
     .line 247
-    const v0, 0x7f0a041f
+    move-result-object v0
 
     .line 248
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 249
     .line 250
-    invoke-static {v1, v0, v2}, LX/4BD;->A1B(Landroid/view/View;II)V
-
     .line 251
+    invoke-static {v1}, LX/0X7;->A00(Ljava/lang/Object;)D
+
     .line 252
     .line 253
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
-
     .line 254
+    move-result-wide v2
+
     .line 255
-    const v0, 0x7f0a0434
+    invoke-static {v9, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 256
     .line 257
     .line 258
-    invoke-static {v1, v0, v3}, LX/4BD;->A1B(Landroid/view/View;II)V
+    invoke-static {v9}, LX/0X7;->A00(Ljava/lang/Object;)D
 
     .line 259
     .line 260
     .line 261
-    iget-object v0, p1, Lcom/facebook/browser/lite/extensions/offers/OfferLikeAdsBrowserBarData;->A00:Ljava/lang/String;
+    move-result-wide v0
 
     .line 262
-    .line 263
-    iput-object v0, p0, LX/4Gq;->A0A:Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Ljava/lang/Double;->compare(DD)I
 
+    .line 263
     .line 264
     .line 265
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
+    move-result v0
 
     .line 266
+    goto :goto_1
+
     .line 267
-    const v0, 0x7f0a0436
+    :pswitch_3
+    const-string v0, "null cannot be cast to non-null type kotlin.Float"
 
     .line 268
     .line 269
-    .line 270
-    invoke-static {v1, v0}, LX/4BE;->A0b(Landroid/view/View;I)Landroid/widget/TextView;
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 270
     .line 271
     .line 272
+    invoke-static {v1}, LX/0X6;->A00(Ljava/lang/Object;)F
+
     .line 273
-    move-result-object v1
-
     .line 274
-    iget-object v0, p1, Lcom/facebook/browser/lite/extensions/offers/OfferLikeAdsBrowserBarData;->A02:Ljava/lang/String;
-
     .line 275
+    move-result v1
+
     .line 276
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {v9, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 277
     .line 278
     .line 279
-    invoke-static {v1}, LX/4Gp;->A05(Landroid/view/View;)V
+    invoke-static {v9}, LX/0X6;->A00(Ljava/lang/Object;)F
 
     .line 280
     .line 281
     .line 282
-    :try_start_0
-    iget-object v0, p0, LX/4Gq;->A07:Landroid/widget/ImageView;
+    move-result v0
 
     .line 283
-    .line 284
-    new-instance v2, LX/6Jc;
+    invoke-static {v1, v0}, Ljava/lang/Float;->compare(FF)I
 
+    .line 284
     .line 285
     .line 286
-    invoke-direct {v2, v0}, LX/6Jc;-><init>(Landroid/widget/ImageView;)V
+    move-result v0
 
     .line 287
+    :goto_1
+    if-eqz v0, :cond_a
+
     .line 288
     .line 289
-    new-array v1, v4, [Ljava/lang/String;
+    return v8
 
     .line 290
+    :pswitch_4
+    if-eqz v1, :cond_8
+
     .line 291
-    iget-object v0, p1, Lcom/facebook/browser/lite/extensions/offers/OfferLikeAdsBrowserBarData;->A03:Ljava/lang/String;
-
     .line 292
-    .line 293
-    aput-object v0, v1, v3
+    :pswitch_5
+    invoke-static {v1, v9}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 293
     .line 294
     .line 295
-    invoke-virtual {v2, v1}, LX/0iQ;->A02([Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
 
     .line 296
+    goto :goto_2
+
     .line 297
+    :pswitch_6
+    const-string v0, "null cannot be cast to non-null type com.facebook.litho.drawable.ComparableDrawable"
+
     .line 298
-    :catch_0
-    iget-object v1, p0, LX/4Gq;->A01:Landroid/widget/LinearLayout;
-
     .line 299
-    .line 300
-    const v0, 0x7f0a042b
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 300
     .line 301
     .line 302
-    .line 303
-    invoke-static {v1, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
+    check-cast v1, LX/4Z6;
 
+    .line 303
     .line 304
+    invoke-static {v9, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 305
     .line 306
-    move-result-object v1
-
     .line 307
-    const/16 v0, 0x52
+    check-cast v9, LX/4Z6;
 
     .line 308
     .line 309
-    invoke-static {v1, p0, v0}, LX/6PP;->A01(Landroid/view/View;Ljava/lang/Object;I)V
+    invoke-interface {v1, v9}, LX/4Z6;->AOs(LX/4Z6;)Z
 
     .line 310
     .line 311
     .line 312
-    invoke-direct {p0}, LX/4Gq;->A00()V
+    move-result v0
 
     .line 313
+    goto :goto_2
+
     .line 314
+    :pswitch_7
+    add-int/lit8 v0, v0, -0x5
+
     .line 315
-    iget-object v4, p0, LX/4Gq;->A0B:Ljava/util/Map;
-
     .line 316
+    check-cast v1, Ljava/util/Collection;
+
     .line 317
-    iget-object v2, p0, LX/4DM;->A03:LX/4Ed;
-
     .line 318
-    .line 319
-    const/4 v0, 0x0
+    check-cast v9, Ljava/util/Collection;
 
+    .line 319
     .line 320
-    if-nez v2, :cond_3
+    invoke-direct {v2, v1, v9, v0}, LX/4gQ;->A06(Ljava/util/Collection;Ljava/util/Collection;I)Z
 
     .line 321
     .line 322
-    move-object v1, v0
-
     .line 323
-    :goto_0
-    invoke-static {}, LX/4CF;->A00()LX/4CF;
+    move-result v0
 
     .line 324
-    .line 325
-    .line 326
-    move-result-object v3
+    goto :goto_2
 
+    .line 325
+    :pswitch_8
+    if-eqz v1, :cond_8
+
+    .line 326
     .line 327
-    const-string v2, "offer_ads_splitview_fully_rendered"
+    check-cast v1, LX/4fg;
 
     .line 328
     .line 329
-    invoke-virtual {v3, v1, v0, v2, v4}, LX/4CF;->A0B(Landroid/os/Bundle;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;Ljava/util/Map;)V
+    check-cast v9, LX/4fg;
 
     .line 330
     .line 331
-    .line 332
-    return-void
+    sget-boolean v0, LX/4gE;->shouldCompareCommonPropsInIsEquivalentTo:Z
 
+    .line 332
     .line 333
-    :cond_3
-    check-cast v2, LX/4BG;
+    invoke-virtual {v1, v9, v0}, LX/4fg;->A0R(LX/4fg;Z)Z
 
     .line 334
     .line 335
-    iget-object v1, v2, LX/4BG;->A08:Landroid/os/Bundle;
-
     .line 336
-    .line 337
-    iget-object v0, v2, LX/4BG;->A0X:Lcom/facebook/privacy/zone/policy/ZonePolicy;
-
-    .line 338
-    .line 339
-    goto :goto_0
-.end method
-
-.method public static A0A(LX/4Gq;Z)V
-    .locals 4
-
-    .line 0
-    iget-boolean v0, p0, LX/4Gq;->A04:Z
-
-    .line 1
-    .line 2
-    if-eq p1, v0, :cond_2
-
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/4Gq;->A00:Landroid/animation/ValueAnimator;
-
-    .line 5
-    .line 6
-    if-eqz v0, :cond_2
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Landroid/animation/Animator;->isRunning()Z
-
-    .line 9
-    .line 10
-    .line 11
     move-result v0
 
-    .line 12
-    if-nez v0, :cond_2
+    .line 337
+    goto :goto_2
 
-    .line 13
-    .line 14
-    iget-object v0, p0, LX/4Gq;->A06:Landroid/view/View;
+    .line 338
+    :pswitch_9
+    if-eqz v1, :cond_8
 
-    .line 15
-    .line 16
-    const/4 v3, 0x0
+    .line 339
+    .line 340
+    check-cast v1, LX/4ei;
 
-    .line 17
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    .line 341
+    .line 342
+    check-cast v9, LX/4ei;
 
-    .line 18
-    .line 19
-    .line 20
-    iget-boolean v1, p0, LX/4Gq;->A04:Z
+    .line 343
+    .line 344
+    invoke-virtual {v1, v9}, LX/4ei;->A01(LX/4ei;)Z
 
-    .line 21
-    .line 22
-    iget-object v0, p0, LX/4Gq;->A00:Landroid/animation/ValueAnimator;
+    .line 345
+    .line 346
+    .line 347
+    move-result v0
 
-    .line 23
-    .line 24
-    if-eqz v1, :cond_3
+    .line 348
+    goto :goto_2
 
-    .line 25
-    .line 26
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->reverse()V
+    .line 349
+    :cond_8
+    if-eqz v9, :cond_a
 
-    .line 27
-    .line 28
-    .line 29
-    :goto_0
-    iget-object v2, p0, LX/4Gq;->A03:LX/4OH;
+    .line 350
+    .line 351
+    return v8
 
-    .line 30
-    .line 31
-    iget-boolean v1, p0, LX/4Gq;->A04:Z
+    .line 352
+    :pswitch_a
+    check-cast v1, LX/4lu;
 
-    .line 32
-    .line 33
-    const/4 v0, 0x0
+    .line 353
+    .line 354
+    check-cast v9, LX/4lu;
 
-    .line 34
-    if-eqz v1, :cond_0
+    .line 355
+    .line 356
+    invoke-static {v1, v9}, LX/4gR;->A01(LX/4lu;LX/4lu;)Z
 
-    .line 35
-    .line 36
-    const/4 v0, 0x4
+    .line 357
+    .line 358
+    .line 359
+    move-result v0
 
-    .line 37
-    :cond_0
-    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
+    .line 360
+    :goto_2
+    if-nez v0, :cond_a
 
-    .line 38
-    .line 39
-    .line 40
-    iget-object v1, p0, LX/4Gq;->A02:LX/4OH;
+    .line 361
+    .line 362
+    :catch_0
+    :cond_9
+    return v8
 
-    .line 41
-    .line 42
-    iget-boolean v0, p0, LX/4Gq;->A04:Z
+    .line 363
+    :cond_a
+    :goto_3
+    add-int/lit8 v4, v4, 0x1
 
-    .line 43
-    .line 44
-    if-nez v0, :cond_1
+    .line 364
+    .line 365
+    goto/16 :goto_0
 
-    .line 45
-    .line 46
-    const/4 v3, 0x4
+    .line 366
+    .line 367
+    :cond_b
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-    .line 47
-    :cond_1
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+    .line 368
+    .line 369
+    .line 370
+    move-result-object v1
 
-    .line 48
-    .line 49
-    .line 50
-    iget-boolean v0, p0, LX/4Gq;->A04:Z
+    .line 371
+    const-string v0, "Expected \'classType\' to be a class of an array type. Found "
 
-    .line 51
-    .line 52
-    xor-int/lit8 v0, v0, 0x1
+    .line 372
+    .line 373
+    invoke-static {v3, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
-    .line 53
-    .line 54
-    iput-boolean v0, p0, LX/4Gq;->A04:Z
+    .line 374
+    .line 375
+    .line 376
+    move-result-object v0
 
-    .line 55
-    .line 56
-    :cond_2
-    return-void
+    .line 377
+    throw v0
 
-    .line 57
-    :cond_3
-    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
+    .line 378
+    :catch_1
+    move-exception v2
 
-    .line 58
-    .line 59
-    .line 60
-    goto :goto_0
+    .line 379
+    const-string v1, "Unable to get fields by reflection."
+
+    .line 380
+    .line 381
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    .line 382
+    .line 383
+    invoke-direct {v0, v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 384
+    .line 385
+    .line 386
+    throw v0
+
+    .line 387
+    :cond_c
+    return v7
+
+    .line 388
+    :cond_d
+    const-string v0, "The input is invalid."
+
+    .line 389
+    .line 390
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 391
+    .line 392
+    .line 393
+    move-result-object v0
+
+    .line 394
+    throw v0
+
+    .line 395
+    nop
+
+    .line 396
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_5
+        :pswitch_6
+        :pswitch_4
+        :pswitch_7
+        :pswitch_7
+        :pswitch_7
+        :pswitch_7
+        :pswitch_8
+        :pswitch_9
+        :pswitch_9
+        :pswitch_4
+        :pswitch_0
+        :pswitch_a
+    .end packed-switch
 .end method
 
-
-# virtual methods
-.method public final AUT(Landroid/os/Bundle;)V
-    .locals 11
+.method private final A06(Ljava/util/Collection;Ljava/util/Collection;I)Z
+    .locals 7
 
     .line 0
-    iget-object v0, p0, LX/4DM;->A02:Landroid/view/View;
+    const/4 v6, 0x0
 
     .line 1
+    const/4 v4, 0x1
+
     .line 2
-    if-eqz v0, :cond_0
+    if-lt p3, v4, :cond_4
 
     .line 3
     .line 4
-    iget-object v3, p0, LX/4Gq;->A0D:Landroid/os/Bundle;
+    if-eq p1, p2, :cond_3
 
     .line 5
     .line 6
-    const-string v0, "story_id"
+    if-eqz p1, :cond_1
 
     .line 7
     .line 8
-    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz p2, :cond_1
 
     .line 9
     .line 10
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
     .line 11
-    move-result-object v8
-
     .line 12
-    const-string v0, "ad_id"
-
     .line 13
+    move-result v1
+
     .line 14
-    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p2}, Ljava/util/Collection;->size()I
 
     .line 15
     .line 16
     .line 17
-    move-result-object v9
+    move-result v0
 
     .line 18
-    const-string v1, "session_id"
+    if-ne v1, v0, :cond_1
 
     .line 19
     .line 20
-    invoke-virtual {v3, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     .line 21
     .line 22
     .line 23
-    move-result-object v10
+    move-result-object v5
 
     .line 24
-    const/4 v6, 0x0
+    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     .line 25
-    iget-object v0, p0, LX/4DM;->A03:LX/4Ed;
-
     .line 26
     .line 27
-    if-nez v0, :cond_1
+    move-result-object v3
 
     .line 28
+    :cond_0
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
     .line 29
-    move-object v4, v6
-
     .line 30
-    move-object v5, v6
-
     .line 31
-    :goto_0
-    move-object v7, v6
+    move-result v0
 
     .line 32
-    invoke-static/range {v4 .. v10}, LX/4Gp;->A04(Landroid/os/Bundle;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v0, :cond_3
 
     .line 33
     .line 34
-    .line 35
-    iget-object v2, p0, LX/4Gq;->A0B:Ljava/util/Map;
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 35
     .line 36
     .line 37
-    const-string v0, "share_fbid"
+    move-result v0
 
     .line 38
-    .line 39
-    invoke-interface {v2, v0, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_3
 
+    .line 39
     .line 40
+    if-ne p3, v4, :cond_2
+
     .line 41
     .line 42
-    const-string v0, "ad_fbid"
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 43
     .line 44
-    invoke-interface {v2, v0, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 45
-    .line 46
-    .line 47
-    invoke-interface {v2, v1, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v2
 
+    .line 46
+    const-string v0, "null cannot be cast to non-null type com.facebook.litho.Component"
+
+    .line 47
     .line 48
+    invoke-static {v2, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 49
     .line 50
-    const-string v1, "offer_location"
-
     .line 51
+    check-cast v2, LX/4fg;
+
     .line 52
-    const-string v0, "splitview"
-
     .line 53
-    .line 54
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 54
     .line 55
     .line 56
+    move-result-object v1
+
     .line 57
-    const-string v0, "offer_like_ads_browser_bar_extra_data"
+    check-cast v1, LX/4fg;
 
     .line 58
     .line 59
-    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    sget-boolean v0, LX/4gE;->shouldCompareCommonPropsInIsEquivalentTo:Z
 
     .line 60
     .line 61
+    invoke-virtual {v2, v1, v0}, LX/4fg;->A0R(LX/4fg;Z)Z
+
     .line 62
-    move-result-object v0
-
     .line 63
-    check-cast v0, Lcom/facebook/browser/lite/extensions/offers/OfferLikeAdsBrowserBarData;
-
     .line 64
+    move-result v0
+
     .line 65
-    invoke-static {p0, v0}, LX/4Gq;->A09(LX/4Gq;Lcom/facebook/browser/lite/extensions/offers/OfferLikeAdsBrowserBarData;)V
+    :goto_0
+    if-nez v0, :cond_0
 
     .line 66
     .line 67
+    :cond_1
+    return v6
+
     .line 68
-    :cond_0
-    return-void
+    :cond_2
+    add-int/lit8 v2, p3, -0x1
 
     .line 69
-    :cond_1
-    check-cast v0, LX/4BG;
-
     .line 70
-    .line 71
-    iget-object v4, v0, LX/4BG;->A08:Landroid/os/Bundle;
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 71
     .line 72
     .line 73
-    iget-object v5, v0, LX/4BG;->A0X:Lcom/facebook/privacy/zone/policy/ZonePolicy;
+    move-result-object v1
 
     .line 74
+    check-cast v1, Ljava/util/Collection;
+
     .line 75
+    .line 76
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
+
+    .line 80
+    check-cast v0, Ljava/util/Collection;
+
+    .line 81
+    .line 82
+    invoke-direct {p0, v1, v0, v2}, LX/4gQ;->A06(Ljava/util/Collection;Ljava/util/Collection;I)Z
+
+    .line 83
+    .line 84
+    .line 85
+    move-result v0
+
+    .line 86
     goto :goto_0
+
+    .line 87
+    :cond_3
+    return v4
+
+    .line 88
+    :cond_4
+    const-string v0, "Level cannot be < 1"
+
+    .line 89
+    .line 90
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v0
+
+    .line 94
+    throw v0
 .end method

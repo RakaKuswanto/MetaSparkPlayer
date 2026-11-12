@@ -3,169 +3,111 @@
 .source ""
 
 
+# instance fields
+.field public final A00:I
+
+
 # direct methods
-.method public static A00(LX/4dv;LX/4dv;)LX/4dv;
-    .locals 5
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
     .line 0
-    iget-object p0, p0, LX/4dv;->A00:LX/4cf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-interface {p0}, LX/4cf;->isEmpty()Z
+    .line 3
+    iput p1, p0, LX/4bt;->A00:I
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    iget v2, p0, LX/4bt;->A00:I
+
+    .line 1
+    .line 2
+    instance-of v0, p1, LX/4bt;
 
     .line 3
     .line 4
-    .line 5
-    move-result v0
+    const/4 v1, 0x0
 
-    .line 6
+    .line 5
     if-eqz v0, :cond_0
 
+    .line 6
     .line 7
+    check-cast p1, LX/4bt;
+
     .line 8
-    sget-object v0, LX/4dv;->A01:LX/4dv;
-
     .line 9
-    .line 10
-    return-object v0
+    iget v0, p1, LX/4bt;->A00:I
 
+    .line 10
     .line 11
-    :cond_0
-    new-instance v4, Ljava/util/LinkedHashSet;
+    if-ne v2, v0, :cond_0
 
     .line 12
     .line 13
-    invoke-direct {v4}, Ljava/util/LinkedHashSet;-><init>()V
+    const/4 v1, 0x1
+
+    .line 14
+    :cond_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, LX/4bt;->A00:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    iget v2, p0, LX/4bt;->A00:I
+
+    .line 1
+    .line 2
+    const-string v0, "LayoutDirection(value="
+
+    .line 3
+    .line 4
+    const/16 v1, 0x29
+
+    .line 5
+    .line 6
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-static {v0, v1}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
 
     .line 14
     .line 15
     .line 16
-    const/4 v3, 0x0
+    move-result-object v0
 
     .line 17
-    :goto_0
-    invoke-interface {p0}, LX/4cf;->size()I
-
-    .line 18
-    .line 19
-    .line 20
-    move-result v2
-
-    .line 21
-    iget-object v1, p1, LX/4dv;->A00:LX/4cf;
-
-    .line 22
-    .line 23
-    invoke-interface {v1}, LX/4cf;->size()I
-
-    .line 24
-    .line 25
-    .line 26
-    move-result v0
-
-    .line 27
-    add-int/2addr v2, v0
-
-    .line 28
-    if-ge v3, v2, :cond_3
-
-    .line 29
-    .line 30
-    invoke-interface {p0}, LX/4cf;->size()I
-
-    .line 31
-    .line 32
-    .line 33
-    move-result v0
-
-    .line 34
-    if-ge v3, v0, :cond_2
-
-    .line 35
-    .line 36
-    invoke-interface {p0, v3}, LX/4cf;->ABJ(I)Ljava/util/Locale;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    :goto_1
-    if-eqz v0, :cond_1
-
-    .line 41
-    .line 42
-    invoke-virtual {v4, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 43
-    .line 44
-    .line 45
-    :cond_1
-    add-int/lit8 v3, v3, 0x1
-
-    .line 46
-    .line 47
-    goto :goto_0
-
-    .line 48
-    :cond_2
-    invoke-interface {p0}, LX/4cf;->size()I
-
-    .line 49
-    .line 50
-    .line 51
-    move-result v0
-
-    .line 52
-    sub-int v0, v3, v0
-
-    .line 53
-    .line 54
-    invoke-interface {v1, v0}, LX/4cf;->ABJ(I)Ljava/util/Locale;
-
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v0
-
-    .line 58
-    goto :goto_1
-
-    .line 59
-    :cond_3
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
-
-    .line 60
-    .line 61
-    .line 62
-    move-result v0
-
-    .line 63
-    new-array v0, v0, [Ljava/util/Locale;
-
-    .line 64
-    .line 65
-    invoke-virtual {v4, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 66
-    .line 67
-    .line 68
-    move-result-object v0
-
-    .line 69
-    check-cast v0, [Ljava/util/Locale;
-
-    .line 70
-    .line 71
-    invoke-static {v0}, LX/4dv;->A02([Ljava/util/Locale;)LX/4dv;
-
-    .line 72
-    .line 73
-    .line 74
-    move-result-object v0
-
-    .line 75
     return-object v0
 .end method

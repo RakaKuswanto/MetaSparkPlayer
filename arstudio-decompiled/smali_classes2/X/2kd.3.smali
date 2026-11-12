@@ -1,115 +1,56 @@
-.class public final LX/2kd;
+.class public interface abstract LX/2kd;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nm;
+# virtual methods
+.method public abstract getConnectionState()LX/3mi;
+.end method
 
-.field public final A01:LX/1Nm;
+.method public abstract getMqttHealthStats()Ljava/lang/String;
+.end method
 
-.field public final A02:LX/1Nm;
+.method public abstract isConnected()Z
+.end method
 
-.field public final A03:LX/1Nw;
+.method public abstract isConnectedOrConnecting()Z
+.end method
 
-.field public final A04:LX/1Nm;
+.method public abstract kickOffConnection()V
+.end method
 
-.field public final A05:LX/1Nm;
+.method public abstract onNetworkAvailable()V
+.end method
 
+.method public abstract onNetworkInterfaceChanged(I)V
+.end method
 
-# direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 2
+.method public abstract onNetworkUnavailable()V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract publish(Ljava/lang/String;[BLX/2BA;Lcom/facebook/mqtt/service/MqttPublishListener;)I
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/2kd;->A03:LX/1Nw;
+.method public abstract publishExt(Ljava/lang/String;[BLX/2BA;Lcom/facebook/mqtt/service/MqttPublishExtListener;)I
+.end method
 
-    .line 4
-    .line 5
-    sget v0, LX/2eq;->A74:I
+.method public abstract setForeground(Z[BLcom/facebook/mqtt/service/MqttPublishListener;)V
+.end method
 
-    .line 6
-    .line 7
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+.method public abstract start(Landroid/content/Context;Lcom/facebook/mqtt/service/ConnectionConfig;LX/2lB;Lcom/facebook/mqtt/service/MqttSubscribeListener;)Z
+.end method
 
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
+.method public abstract stop()V
+.end method
 
-    .line 11
-    iput-object v0, p0, LX/2kd;->A05:LX/1Nm;
+.method public abstract subscribe(Ljava/lang/String;LX/2BA;Lcom/facebook/mqtt/service/MqttSubscribeListener;)Z
+.end method
 
-    .line 12
-    .line 13
-    sget v0, LX/2eq;->AZt:I
+.method public abstract unsubscribe(Ljava/util/List;)Z
+.end method
 
-    .line 14
-    .line 15
-    iget-object v1, p1, LX/1Nw;->A00:LX/1zG;
+.method public abstract updateRegionPreference(Ljava/lang/String;)V
+.end method
 
-    .line 16
-    .line 17
-    invoke-static {v1, v0}, LX/1PK;->A01(LX/1zG;I)LX/1Nm;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    iput-object v0, p0, LX/2kd;->A00:LX/1Nm;
-
-    .line 22
-    .line 23
-    sget v0, LX/2eq;->AZv:I
-
-    .line 24
-    .line 25
-    invoke-static {v1, v0}, LX/1PK;->A01(LX/1zG;I)LX/1Nm;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    iput-object v0, p0, LX/2kd;->A02:LX/1Nm;
-
-    .line 30
-    .line 31
-    sget v0, LX/2eq;->AZu:I
-
-    .line 32
-    .line 33
-    invoke-static {v1, v0}, LX/1PK;->A01(LX/1zG;I)LX/1Nm;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v0
-
-    .line 37
-    iput-object v0, p0, LX/2kd;->A01:LX/1Nm;
-
-    .line 38
-    .line 39
-    invoke-static {}, LX/1Nl;->A01()LX/1Nm;
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v0
-
-    .line 43
-    iput-object v0, p0, LX/2kd;->A04:LX/1Nm;
-
-    .line 44
-    .line 45
-    return-void
+.method public abstract verifyAuthToken(Ljava/lang/String;)Z
 .end method

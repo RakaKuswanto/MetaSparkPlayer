@@ -4,16 +4,20 @@
 
 
 # instance fields
-.field public A00:J
+.field public final A00:LX/0lu;
 
-.field public A01:LX/1zG;
+.field public final A01:LX/0lu;
 
-.field public final A02:LX/0Na;
+.field public final A02:LX/0lu;
+
+.field public final A03:LX/0lu;
+
+.field public final A04:LX/0li;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -21,321 +25,308 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AHp:I
+    sget-object v0, LX/3Ff;->A00:LX/0li;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object v0, p0, LX/34T;->A04:LX/0li;
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v1
+    sget v0, LX/2I6;->AG0:I
 
+    .line 8
     .line 9
-    iput-object v1, p0, LX/34T;->A02:LX/0Na;
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
     .line 10
     .line 11
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
     .line 12
-    .line 13
-    .line 14
     move-result-object v0
 
-    .line 15
-    iput-object v0, p0, LX/34T;->A01:LX/1zG;
-
-    .line 16
-    .line 17
-    invoke-virtual {v1}, LX/0Zq;->get()Ljava/lang/Object;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v1
-
-    .line 21
-    check-cast v1, Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
-    .line 22
-    .line 23
-    const v0, 0x1d238f4
-
-    .line 24
-    .line 25
-    .line 26
-    invoke-interface {v1, v0}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->generateNewFlowId(I)J
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-wide v0
-
-    .line 30
-    iput-wide v0, p0, LX/34T;->A00:J
-
-    .line 31
-    .line 32
-    return-void
-.end method
-
-.method public static A00(LX/34T;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, LX/34T;->A02:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-interface {p0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object p0
-
-    .line 6
-    check-cast p0, Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
-    .line 7
-    .line 8
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final A01(LX/0pU;Ljava/lang/Long;Ljava/lang/String;)V
-    .locals 7
-
-    .line 0
-    if-eqz p2, :cond_0
-
-    .line 1
-    .line 2
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-wide v0
-
-    .line 6
-    iput-wide v0, p0, LX/34T;->A00:J
-
-    .line 7
-    .line 8
-    :cond_0
-    iget-object v5, p0, LX/34T;->A02:LX/0Na;
-
-    .line 9
-    .line 10
-    invoke-static {v5}, LX/0Yi;->A0T(LX/0Na;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
-    .line 11
-    .line 12
     .line 13
-    move-result-object v6
+    iput-object v0, p0, LX/34T;->A00:LX/0lu;
 
     .line 14
-    iget-wide v2, p0, LX/34T;->A00:J
-
     .line 15
+    sget v0, LX/2I6;->AA1:I
+
     .line 16
-    const-string v4, "bug_report_flow"
-
     .line 17
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
     .line 18
-    const/4 v1, 0x0
-
     .line 19
-    new-instance v0, Lcom/facebook/quicklog/reliability/UserFlowConfig;
-
     .line 20
+    move-result-object v0
+
     .line 21
-    invoke-direct {v0, v4, v1}, Lcom/facebook/quicklog/reliability/UserFlowConfig;-><init>(Ljava/lang/String;Z)V
+    iput-object v0, p0, LX/34T;->A01:LX/0lu;
 
     .line 22
     .line 23
-    .line 24
-    invoke-interface {v6, v2, v3, v0}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowStartIfNotOngoing(JLcom/facebook/quicklog/reliability/UserFlowConfig;)Z
+    sget v0, LX/2I6;->AG6:I
 
+    .line 24
     .line 25
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
     .line 26
     .line 27
-    invoke-static {v5}, LX/0Yi;->A0T(LX/0Na;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
     .line 28
-    .line 29
-    .line 30
-    move-result-object v4
+    move-result-object v0
 
+    .line 29
+    iput-object v0, p0, LX/34T;->A03:LX/0lu;
+
+    .line 30
     .line 31
-    iget-wide v2, p0, LX/34T;->A00:J
+    sget v0, LX/2I6;->AGA:I
 
     .line 32
     .line 33
-    invoke-virtual {p1}, LX/0pU;->getName()Ljava/lang/String;
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
     .line 34
     .line 35
     .line 36
-    move-result-object v1
+    move-result-object v0
 
     .line 37
-    const-string/jumbo v0, "source"
+    iput-object v0, p0, LX/34T;->A02:LX/0lu;
 
     .line 38
     .line 39
-    .line 40
-    invoke-interface {v4, v2, v3, v0, v1}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowAnnotate(JLjava/lang/String;Ljava/lang/String;)V
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A00()LX/3OB;
+    .locals 14
+
+    .line 0
+    const-string/jumbo v4, "custom_fonts"
+
+    .line 1
+    .line 2
+    .line 3
+    const-wide/16 v0, 0x1
+
+    .line 4
+    .line 5
+    new-instance v5, LX/34W;
+
+    .line 6
+    .line 7
+    invoke-direct {v5}, LX/34W;-><init>()V
+
+    .line 8
+    .line 9
+    .line 10
+    const-wide/32 v2, 0xa00000
+
+    .line 11
+    .line 12
+    .line 13
+    iput-wide v2, v5, LX/34W;->A00:J
+
+    .line 14
+    .line 15
+    const-wide/32 v2, 0x500000
+
+    .line 16
+    .line 17
+    .line 18
+    iput-wide v2, v5, LX/34W;->A01:J
+
+    .line 19
+    .line 20
+    const-wide/32 v2, 0x40000
+
+    .line 21
+    .line 22
+    .line 23
+    iput-wide v2, v5, LX/34W;->A02:J
+
+    .line 24
+    .line 25
+    const/4 v2, 0x1
+
+    .line 26
+    iput-boolean v2, v5, LX/34W;->A04:Z
+
+    .line 27
+    .line 28
+    invoke-virtual {v5}, LX/34W;->A00()LX/3Em;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v2
+
+    .line 32
+    iget-wide v8, v2, LX/3Em;->A02:J
+
+    .line 33
+    .line 34
+    iget-wide v12, v2, LX/3Em;->A01:J
+
+    .line 35
+    .line 36
+    iget-wide v10, v2, LX/3Em;->A00:J
+
+    .line 37
+    .line 38
+    long-to-int v2, v0
+
+    .line 39
+    new-instance v1, LX/34V;
+
+    .line 40
     .line 41
+    invoke-direct {v1, p0}, LX/34V;-><init>(LX/34T;)V
+
     .line 42
     .line 43
-    invoke-static {v5}, LX/0Yi;->A0T(LX/0Na;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
     .line 44
+    iget-object v0, p0, LX/34T;->A00:LX/0lu;
+
     .line 45
     .line 46
-    move-result-object v3
+    iget-object v3, v0, LX/0lu;->A00:LX/0RP;
 
     .line 47
-    iget-wide v1, p0, LX/34T;->A00:J
-
     .line 48
-    .line 49
-    const-string v0, "endpoint"
+    invoke-interface {v3}, LX/0RP;->get()Ljava/lang/Object;
 
+    .line 49
     .line 50
     .line 51
-    invoke-interface {v3, v1, v2, v0, p3}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowAnnotate(JLjava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
     .line 52
+    check-cast v0, LX/3QO;
+
     .line 53
     .line 54
-    invoke-interface {v5}, LX/0Na;->get()Ljava/lang/Object;
+    new-instance v6, LX/3OC;
 
     .line 55
     .line 56
+    invoke-direct {v6, v0, v1, v4, v2}, LX/3OC;-><init>(LX/3QO;LX/2MU;Ljava/lang/String;I)V
+
     .line 57
-    move-result-object v0
-
     .line 58
-    check-cast v0, Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
     .line 59
+    new-instance v5, LX/2m7;
+
     .line 60
-    iget-wide v1, p0, LX/34T;->A00:J
-
     .line 61
-    .line 62
-    const-string/jumbo v3, "instance_id"
+    invoke-direct {v5}, LX/2m7;-><init>()V
 
+    .line 62
     .line 63
     .line 64
-    .line 65
-    move-wide v4, v1
+    iget-object v0, p0, LX/34T;->A01:LX/0lu;
 
+    .line 65
     .line 66
-    invoke-interface/range {v0 .. v5}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowAnnotate(JLjava/lang/String;J)V
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 67
     .line 68
     .line 69
-    return-void
-.end method
-
-.method public final A02(Ljava/lang/String;)V
-    .locals 3
-
-    .line 0
-    invoke-static {p0}, LX/34T;->A00(LX/34T;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
-    .line 1
-    .line 2
-    .line 3
     move-result-object v2
 
-    .line 4
-    iget-wide v0, p0, LX/34T;->A00:J
+    .line 70
+    check-cast v2, LX/2Vs;
 
-    .line 5
-    .line 6
-    invoke-interface {v2, v0, v1, p1}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowMarkPoint(JLjava/lang/String;)V
+    .line 71
+    .line 72
+    const-string/jumbo v1, "_file"
 
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
+    .line 73
+    .line 74
+    .line 75
+    invoke-static {v4}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final A03(Ljava/lang/String;)V
-    .locals 4
+    .line 76
+    .line 77
+    .line 78
+    move-result-object v0
 
-    .line 0
-    invoke-static {p0}, LX/34T;->A00(LX/34T;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
+    .line 79
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-    .line 1
-    .line 2
-    .line 3
+    .line 80
+    .line 81
+    .line 82
+    move-result-object v0
+
+    .line 83
+    invoke-virtual {v2, v0}, LX/2Vs;->A00(Ljava/lang/String;)LX/2Wv;
+
+    .line 84
+    .line 85
+    .line 86
+    move-result-object v0
+
+    .line 87
+    new-instance v4, LX/3OE;
+
+    .line 88
+    .line 89
+    invoke-direct {v4, v0}, LX/3OE;-><init>(LX/2Wv;)V
+
+    .line 90
+    .line 91
+    .line 92
+    invoke-interface {v3}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 93
+    .line 94
+    .line 95
     move-result-object v3
 
-    .line 4
-    iget-wide v1, p0, LX/34T;->A00:J
+    .line 96
+    check-cast v3, LX/3QO;
 
-    .line 5
-    .line 6
-    const-string/jumbo v0, "navigate_to_"
+    .line 97
+    .line 98
+    iget-object v0, p0, LX/34T;->A03:LX/0lu;
 
-    .line 7
-    .line 8
-    .line 9
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 99
+    .line 100
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
+    .line 101
+    .line 102
+    .line 103
+    move-result-object v7
 
-    .line 13
-    invoke-static {p1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 104
+    check-cast v7, LX/205;
 
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
+    .line 105
+    .line 106
+    iget-object v0, p0, LX/34T;->A02:LX/0lu;
 
-    .line 17
-    invoke-interface {v3, v1, v2, v0}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowMarkPoint(JLjava/lang/String;)V
+    .line 107
+    .line 108
+    invoke-static {v0}, LX/0lu;->A0D(LX/0lu;)V
 
-    .line 18
-    .line 19
-    .line 20
-    return-void
-.end method
+    .line 109
+    .line 110
+    .line 111
+    new-instance v2, LX/3OB;
 
-.method public final A04(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
+    .line 112
+    .line 113
+    invoke-direct/range {v2 .. v13}, LX/3OB;-><init>(LX/3QO;LX/3Of;LX/2m7;LX/3OM;LX/3F2;JJJ)V
 
-    .line 0
-    invoke-static {p0}, LX/34T;->A00(LX/34T;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    iget-wide v0, p0, LX/34T;->A00:J
-
-    .line 5
-    .line 6
-    invoke-interface {v2, v0, v1, p1, p2}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowAnnotate(JLjava/lang/String;Ljava/lang/String;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
+    .line 114
+    .line 115
+    .line 116
+    return-object v2
 .end method

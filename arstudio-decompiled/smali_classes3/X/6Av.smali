@@ -1,17 +1,17 @@
-.class public interface abstract LX/6Av;
+.class public final LX/6AV;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A7a(LX/1ga;Ljava/lang/ref/ReferenceQueue;)LX/6Av;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AFG()LX/1ga;
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract clear()V
-.end method
-
-.method public abstract get()Ljava/lang/Object;
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

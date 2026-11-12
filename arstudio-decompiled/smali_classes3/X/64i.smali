@@ -1,106 +1,83 @@
-.class public abstract LX/64i;
+.class public final LX/64i;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A00:LX/64i;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "LitePostCapturePhotoController$1"
 
-.field public static final A01:LX/64i;
 
-.field public static final A02:LX/64i;
+# instance fields
+.field public final synthetic A00:Landroid/view/View;
+
+.field public final synthetic A01:LX/609;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 0
-    new-instance v0, LX/64j;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/64j;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/64i;->A00:LX/64i;
-
-    .line 6
-    .line 7
-    const/4 v1, -0x1
-
-    .line 8
-    new-instance v0, LX/64l;
-
-    .line 9
-    .line 10
-    invoke-direct {v0, v1}, LX/64l;-><init>(I)V
-
-    .line 11
-    .line 12
-    .line 13
-    sput-object v0, LX/64i;->A02:LX/64i;
-
-    .line 14
-    .line 15
-    const/4 v1, 0x1
-
-    .line 16
-    new-instance v0, LX/64l;
-
-    .line 17
-    .line 18
-    invoke-direct {v0, v1}, LX/64l;-><init>(I)V
-
-    .line 19
-    .line 20
-    .line 21
-    sput-object v0, LX/64i;->A01:LX/64i;
-
-    .line 22
-    .line 23
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/view/View;LX/609;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/64i;->A01:LX/609;
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/64i;->A00:Landroid/view/View;
+
     .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract A01()I
-.end method
+.method public final run()V
+    .locals 3
 
-.method public abstract A02(DD)LX/64i;
-.end method
+    .line 0
+    iget-object v2, p0, LX/64i;->A01:LX/609;
 
-.method public abstract A03(FF)LX/64i;
-.end method
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/64i;->A00:Landroid/view/View;
 
-.method public abstract A04(II)LX/64i;
-.end method
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-.method public abstract A05(JJ)LX/64i;
-.end method
+    .line 5
+    .line 6
+    .line 7
+    move-result v1
 
-.method public abstract A06(Ljava/lang/Comparable;Ljava/lang/Comparable;)LX/64i;
-.end method
+    .line 8
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-.method public abstract A07(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)LX/64i;
-.end method
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
 
-.method public abstract A08(ZZ)LX/64i;
-.end method
+    .line 12
+    invoke-static {v1, v0}, LX/5sC;->A00(II)LX/5sC;
 
-.method public abstract A09(ZZ)LX/64i;
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    iput-object v0, v2, LX/609;->A02:LX/5sC;
+
+    .line 17
+    .line 18
+    return-void
 .end method

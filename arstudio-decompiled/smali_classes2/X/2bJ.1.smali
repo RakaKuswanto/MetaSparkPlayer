@@ -1,422 +1,910 @@
-.class public final enum LX/2bJ;
-.super Ljava/lang/Enum;
+.class public final LX/2Bj;
+.super LX/2Bk;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/2bJ;
+.field public static final A07:LX/2BQ;
 
-.field public static final enum FACEBOOK:LX/2bJ;
+.field public static final A08:LX/2BN;
 
-.field public static final enum FACEBOOK_DEBUG:LX/2bJ;
-
-.field public static final enum FACEBOOK_LITE:LX/2bJ;
-
-.field public static final enum INSTAGRAM:LX/2bJ;
-
-.field public static final enum MESSENGER:LX/2bJ;
-
-.field public static final enum MLITE:LX/2bJ;
-
-.field public static final enum MWA:LX/2bJ;
-
-.field public static final enum MWA_DEBUG:LX/2bJ;
-
-.field public static final enum NO_SOURCE:LX/2bJ;
-
-.field public static final enum OCULUS:LX/2bJ;
+.field public static final A09:[B
 
 
 # instance fields
-.field public final accountManagerType:Ljava/lang/String;
+.field public A00:LX/2Bs;
 
-.field public final packageName:Ljava/lang/String;
+.field public A01:LX/2BQ;
+
+.field public A02:Ljava/lang/Boolean;
+
+.field public A03:S
+
+.field public final A04:[B
+
+.field public final A05:J
+
+.field public final A06:J
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 15
+    .locals 6
 
     .line 0
-    const-string v1, "FACEBOOK"
+    const-string v3, ""
 
     .line 1
     .line 2
-    const/4 v13, 0x0
+    new-instance v0, LX/2BN;
 
     .line 3
-    const-string v2, "com.facebook.auth.login"
-
     .line 4
-    .line 5
-    const-string v0, "com.facebook.katana"
+    invoke-direct {v0, v3}, LX/2BN;-><init>(Ljava/lang/String;)V
 
+    .line 5
     .line 6
     .line 7
-    new-instance v12, LX/2bJ;
+    sput-object v0, LX/2Bj;->A08:LX/2BN;
 
     .line 8
     .line 9
-    invoke-direct {v12, v1, v13, v2, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    const/4 v2, 0x0
 
     .line 10
+    sget-object v1, LX/2BQ;->A04:Ljava/util/Map;
+
     .line 11
     .line 12
-    sput-object v12, LX/2bJ;->FACEBOOK:LX/2bJ;
+    new-instance v0, LX/2BQ;
 
     .line 13
     .line 14
-    const-string v1, "FACEBOOK_DEBUG"
+    invoke-direct {v0, v3, v1, v2, v2}, LX/2BQ;-><init>(Ljava/lang/String;Ljava/util/Map;BS)V
 
     .line 15
     .line 16
-    const/4 v11, 0x1
-
     .line 17
-    const-string v0, "com.facebook.wakizashi"
+    sput-object v0, LX/2Bj;->A07:LX/2BQ;
 
     .line 18
     .line 19
-    new-instance v10, LX/2bJ;
+    const/16 v0, 0x14
 
     .line 20
     .line 21
-    invoke-direct {v10, v1, v11, v2, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    new-array v5, v0, [B
 
     .line 22
     .line 23
+    sput-object v5, LX/2Bj;->A09:[B
+
     .line 24
-    sput-object v10, LX/2bJ;->FACEBOOK_DEBUG:LX/2bJ;
-
     .line 25
-    .line 26
-    const-string v2, "FACEBOOK_LITE"
+    aput-byte v2, v5, v2
 
+    .line 26
     .line 27
-    .line 28
     const/4 v1, 0x2
 
+    .line 28
+    const/4 v0, 0x1
+
     .line 29
-    const-string v0, "com.facebook.lite"
+    aput-byte v0, v5, v1
 
     .line 30
     .line 31
-    new-instance v9, LX/2bJ;
+    const/4 v0, 0x3
 
     .line 32
-    .line 33
-    invoke-direct {v9, v2, v1, v0, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    aput-byte v0, v5, v0
 
+    .line 33
     .line 34
+    const/4 v4, 0x6
+
     .line 35
+    const/4 v2, 0x4
+
     .line 36
-    sput-object v9, LX/2bJ;->FACEBOOK_LITE:LX/2bJ;
+    aput-byte v2, v5, v4
 
     .line 37
     .line 38
-    const-string v3, "INSTAGRAM"
+    const/4 v0, 0x5
 
     .line 39
-    .line 40
-    const/4 v2, 0x3
+    const/16 v1, 0x8
 
+    .line 40
     .line 41
-    const-string/jumbo v1, "www.instagram.com"
+    aput-byte v0, v5, v1
 
     .line 42
     .line 43
-    .line 44
-    const-string v0, "com.instagram.android"
+    const/16 v3, 0xa
 
+    .line 44
     .line 45
+    aput-byte v4, v5, v3
+
     .line 46
-    new-instance v8, LX/2bJ;
+    .line 47
+    const/4 v0, 0x7
+
+    .line 48
+    aput-byte v0, v5, v2
+
+    .line 49
+    .line 50
+    const/16 v2, 0xb
+
+    .line 51
+    .line 52
+    aput-byte v1, v5, v2
+
+    .line 53
+    .line 54
+    const/16 v1, 0xf
+
+    .line 55
+    .line 56
+    const/16 v0, 0x9
+
+    .line 57
+    .line 58
+    aput-byte v0, v5, v1
+
+    .line 59
+    .line 60
+    const/16 v0, 0xe
+
+    .line 61
+    .line 62
+    aput-byte v3, v5, v0
+
+    .line 63
+    .line 64
+    const/16 v1, 0xd
+
+    .line 65
+    .line 66
+    aput-byte v2, v5, v1
+
+    .line 67
+    .line 68
+    const/16 v0, 0xc
+
+    .line 69
+    .line 70
+    aput-byte v0, v5, v0
+
+    .line 71
+    .line 72
+    const/16 v0, 0x13
+
+    .line 73
+    .line 74
+    aput-byte v1, v5, v0
+
+    .line 75
+    .line 76
+    return-void
+.end method
+
+.method public constructor <init>(LX/2CG;JJ)V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0, p1}, LX/2Bk;-><init>(LX/2CG;)V
+
+    .line 1
+    .line 2
+    .line 3
+    new-instance v0, LX/2Bs;
+
+    .line 4
+    .line 5
+    invoke-direct {v0}, LX/2Bs;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    iput-object v0, p0, LX/2Bj;->A00:LX/2Bs;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x0
+
+    .line 11
+    iput-short v0, p0, LX/2Bj;->A03:S
+
+    .line 12
+    .line 13
+    const/4 v0, 0x0
+
+    .line 14
+    iput-object v0, p0, LX/2Bj;->A01:LX/2BQ;
+
+    .line 15
+    .line 16
+    iput-object v0, p0, LX/2Bj;->A02:Ljava/lang/Boolean;
+
+    .line 17
+    .line 18
+    const/16 v0, 0xa
+
+    .line 19
+    .line 20
+    new-array v0, v0, [B
+
+    .line 21
+    .line 22
+    iput-object v0, p0, LX/2Bj;->A04:[B
+
+    .line 23
+    .line 24
+    iput-wide p2, p0, LX/2Bj;->A06:J
+
+    .line 25
+    .line 26
+    iput-wide p4, p0, LX/2Bj;->A05:J
+
+    .line 27
+    .line 28
+    return-void
+.end method
+
+.method public static A00(B)B
+    .locals 3
+
+    .line 0
+    const/16 v2, 0xf
+
+    .line 1
+    .line 2
+    and-int/lit8 v0, p0, 0xf
+
+    .line 3
+    .line 4
+    int-to-byte v1, v0
+
+    .line 5
+    packed-switch v1, :pswitch_data_0
+
+    .line 6
+    .line 7
+    .line 8
+    const-string/jumbo v0, "don\'t know what type: "
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {v0, v1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    new-instance v0, LX/2CD;
+
+    .line 16
+    .line 17
+    invoke-direct {v0, v1}, LX/2CD;-><init>(Ljava/lang/String;)V
+
+    .line 18
+    .line 19
+    .line 20
+    throw v0
+
+    .line 21
+    :pswitch_0
+    const/4 v2, 0x0
+
+    .line 22
+    :pswitch_1
+    return v2
+
+    .line 23
+    :pswitch_2
+    const/4 v2, 0x2
+
+    .line 24
+    return v2
+
+    .line 25
+    :pswitch_3
+    const/4 v2, 0x3
+
+    .line 26
+    return v2
+
+    .line 27
+    :pswitch_4
+    const/4 v2, 0x6
+
+    .line 28
+    return v2
+
+    .line 29
+    :pswitch_5
+    const/16 v2, 0x8
+
+    .line 30
+    .line 31
+    return v2
+
+    .line 32
+    :pswitch_6
+    const/16 v2, 0xa
+
+    .line 33
+    .line 34
+    return v2
+
+    .line 35
+    :pswitch_7
+    const/4 v2, 0x4
+
+    .line 36
+    return v2
+
+    .line 37
+    :pswitch_8
+    const/16 v2, 0xb
+
+    .line 38
+    .line 39
+    return v2
+
+    .line 40
+    :pswitch_9
+    const/16 v2, 0xe
+
+    .line 41
+    .line 42
+    return v2
+
+    .line 43
+    :pswitch_a
+    const/16 v2, 0xd
+
+    .line 44
+    .line 45
+    return v2
+
+    .line 46
+    :pswitch_b
+    const/16 v2, 0xc
 
     .line 47
     .line 48
-    invoke-direct {v8, v3, v2, v1, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    return v2
+
+    .line 49
+    :pswitch_c
+    const/16 v2, 0x13
+
+    .line 50
+    .line 51
+    return v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_2
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_1
+        :pswitch_9
+        :pswitch_a
+        :pswitch_b
+        :pswitch_c
+    .end packed-switch
+.end method
+
+.method public static A01(LX/2Bj;)I
+    .locals 7
+
+    .line 0
+    const/4 v6, 0x0
+
+    .line 1
+    const/16 v5, 0x80
+
+    .line 2
+    .line 3
+    const/4 v4, 0x0
+
+    .line 4
+    :goto_0
+    const/4 v3, 0x1
+
+    .line 5
+    iget-object v2, p0, LX/2Bk;->A00:LX/2CG;
+
+    .line 6
+    .line 7
+    iget-object v1, p0, LX/2Bj;->A04:[B
+
+    .line 8
+    .line 9
+    const/4 v0, 0x0
+
+    .line 10
+    invoke-virtual {v2, v1, v3}, LX/2CG;->A01([BI)V
+
+    .line 11
+    .line 12
+    .line 13
+    aget-byte v1, v1, v0
+
+    .line 14
+    .line 15
+    and-int/lit8 v0, v1, 0x7f
+
+    .line 16
+    .line 17
+    shl-int/2addr v0, v4
+
+    .line 18
+    or-int/2addr v6, v0
+
+    .line 19
+    and-int/2addr v1, v5
+
+    .line 20
+    if-eq v1, v5, :cond_0
+
+    .line 21
+    .line 22
+    return v6
+
+    .line 23
+    :cond_0
+    add-int/lit8 v4, v4, 0x7
+
+    .line 24
+    .line 25
+    goto :goto_0
+.end method
+
+.method public static A02(LX/2Bj;B)V
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/2Bj;->A04:[B
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    aput-byte p1, v2, v0
+
+    .line 4
+    .line 5
+    iget-object v1, p0, LX/2Bk;->A00:LX/2CG;
+
+    .line 6
+    .line 7
+    const/4 v0, 0x1
+
+    .line 8
+    invoke-virtual {v1, v2, v0}, LX/2CG;->A00([BI)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public static A03(LX/2Bj;I)V
+    .locals 7
+
+    .line 0
+    const/4 v6, 0x2
+
+    .line 1
+    if-ltz p1, :cond_1
+
+    .line 2
+    .line 3
+    iget-wide v2, p0, LX/2Bj;->A05:J
+
+    .line 4
+    .line 5
+    const-wide/16 v4, 0x0
+
+    .line 6
+    .line 7
+    cmp-long v0, v2, v4
+
+    .line 8
+    .line 9
+    if-lez v0, :cond_0
+
+    .line 10
+    .line 11
+    int-to-long v4, p1
+
+    .line 12
+    cmp-long v0, v4, v2
+
+    .line 13
+    .line 14
+    if-lez v0, :cond_0
+
+    .line 15
+    .line 16
+    const/4 v4, 0x3
+
+    .line 17
+    new-array v1, v6, [Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    const/4 v0, 0x0
+
+    .line 20
+    invoke-static {v1, p1, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 21
+    .line 22
+    .line 23
+    const/4 v0, 0x1
+
+    .line 24
+    invoke-static {v1, v0, v2, v3}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+
+    .line 25
+    .line 26
+    .line 27
+    const-string v0, "Container length %s exceeded max allowed %s"
+
+    .line 28
+    .line 29
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    new-instance v1, LX/2CD;
+
+    .line 34
+    .line 35
+    invoke-direct {v1, v4, v0}, LX/2CD;-><init>(ILjava/lang/String;)V
+
+    .line 36
+    .line 37
+    .line 38
+    throw v1
+
+    .line 39
+    :cond_0
+    return-void
+
+    .line 40
+    :cond_1
+    const-string v0, "Negative length: "
+
+    .line 41
+    .line 42
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v0
+
+    .line 46
+    new-instance v1, LX/2CD;
+
+    .line 47
+    .line 48
+    invoke-direct {v1, v6, v0}, LX/2CD;-><init>(ILjava/lang/String;)V
 
     .line 49
     .line 50
     .line 51
-    sput-object v8, LX/2bJ;->INSTAGRAM:LX/2bJ;
-
-    .line 52
-    .line 53
-    const-string v2, "MLITE"
-
-    .line 54
-    .line 55
-    const/4 v1, 0x4
-
-    .line 56
-    const-string v0, "com.facebook.mlite"
-
-    .line 57
-    .line 58
-    new-instance v7, LX/2bJ;
-
-    .line 59
-    .line 60
-    invoke-direct {v7, v2, v1, v0, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 61
-    .line 62
-    .line 63
-    sput-object v7, LX/2bJ;->MLITE:LX/2bJ;
-
-    .line 64
-    .line 65
-    const-string v3, "MESSENGER"
-
-    .line 66
-    .line 67
-    const/4 v2, 0x5
-
-    .line 68
-    const-string v1, "com.facebook.messenger"
-
-    .line 69
-    .line 70
-    const-string v0, "com.facebook.orca"
-
-    .line 71
-    .line 72
-    new-instance v6, LX/2bJ;
-
-    .line 73
-    .line 74
-    invoke-direct {v6, v3, v2, v1, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 75
-    .line 76
-    .line 77
-    sput-object v6, LX/2bJ;->MESSENGER:LX/2bJ;
-
-    .line 78
-    .line 79
-    const-string v2, "OCULUS"
-
-    .line 80
-    .line 81
-    const/4 v1, 0x6
-
-    .line 82
-    const-string v0, "com.oculus.twilight"
-
-    .line 83
-    .line 84
-    new-instance v5, LX/2bJ;
-
-    .line 85
-    .line 86
-    invoke-direct {v5, v2, v1, v0, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 87
-    .line 88
-    .line 89
-    sput-object v5, LX/2bJ;->OCULUS:LX/2bJ;
-
-    .line 90
-    .line 91
-    const-string v2, "NO_SOURCE"
-
-    .line 92
-    .line 93
-    const/4 v1, 0x7
-
-    .line 94
-    const-string v0, ""
-
-    .line 95
-    .line 96
-    new-instance v4, LX/2bJ;
-
-    .line 97
-    .line 98
-    invoke-direct {v4, v2, v1, v0, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 99
-    .line 100
-    .line 101
-    sput-object v4, LX/2bJ;->NO_SOURCE:LX/2bJ;
-
-    .line 102
-    .line 103
-    const-string v2, "MWA"
-
-    .line 104
-    .line 105
-    const/16 v1, 0x8
-
-    .line 106
-    .line 107
-    const-string v0, "com.facebook.stella"
-
-    .line 108
-    .line 109
-    new-instance v3, LX/2bJ;
-
-    .line 110
-    .line 111
-    invoke-direct {v3, v2, v1, v0, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 112
-    .line 113
-    .line 114
-    sput-object v3, LX/2bJ;->MWA:LX/2bJ;
-
-    .line 115
-    .line 116
-    const-string v14, "MWA_DEBUG"
-
-    .line 117
-    .line 118
-    const/16 v2, 0x9
-
-    .line 119
-    .line 120
-    const-string v0, "com.facebook.stella_debug"
-
-    .line 121
-    .line 122
-    new-instance v1, LX/2bJ;
-
-    .line 123
-    .line 124
-    invoke-direct {v1, v14, v2, v0, v0}, LX/2bJ;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 125
-    .line 126
-    .line 127
-    sput-object v1, LX/2bJ;->MWA_DEBUG:LX/2bJ;
-
-    .line 128
-    .line 129
-    const/16 v0, 0xa
-
-    .line 130
-    .line 131
-    new-array v0, v0, [LX/2bJ;
-
-    .line 132
-    .line 133
-    aput-object v12, v0, v13
-
-    .line 134
-    .line 135
-    aput-object v10, v0, v11
-
-    .line 136
-    .line 137
-    invoke-static {v9, v8, v7, v0}, LX/0Yc;->A1R(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 138
-    .line 139
-    .line 140
-    invoke-static {v6, v5, v4, v0}, LX/0Yc;->A1O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 141
-    .line 142
-    .line 143
-    invoke-static {v0, v3, v1}, LX/0Yh;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 144
-    .line 145
-    .line 146
-    sput-object v0, LX/2bJ;->$VALUES:[LX/2bJ;
-
-    .line 147
-    .line 148
-    return-void
+    throw v1
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public static A04(LX/2Bj;I)V
+    .locals 7
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v6, 0x2
 
     .line 1
+    if-ltz p1, :cond_1
+
     .line 2
     .line 3
-    iput-object p3, p0, LX/2bJ;->accountManagerType:Ljava/lang/String;
+    iget-wide v2, p0, LX/2Bj;->A06:J
 
     .line 4
     .line 5
-    iput-object p4, p0, LX/2bJ;->packageName:Ljava/lang/String;
+    const-wide/16 v4, 0x0
 
     .line 6
     .line 7
-    return-void
-.end method
+    cmp-long v0, v2, v4
 
-.method public static valueOf(Ljava/lang/String;)LX/2bJ;
-    .locals 1
+    .line 8
+    .line 9
+    if-lez v0, :cond_0
 
-    .line 0
-    const-class v0, LX/2bJ;
+    .line 10
+    .line 11
+    int-to-long v4, p1
 
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 12
+    cmp-long v0, v4, v2
 
-    .line 3
-    .line 4
-    .line 5
+    .line 13
+    .line 14
+    if-lez v0, :cond_0
+
+    .line 15
+    .line 16
+    const/4 v4, 0x3
+
+    .line 17
+    new-array v1, v6, [Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    const/4 v0, 0x0
+
+    .line 20
+    invoke-static {v1, p1, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 21
+    .line 22
+    .line 23
+    const/4 v0, 0x1
+
+    .line 24
+    invoke-static {v1, v0, v2, v3}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+
+    .line 25
+    .line 26
+    .line 27
+    const-string v0, "String/binary length %s exceeded max allowed %s"
+
+    .line 28
+    .line 29
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
     move-result-object v0
 
-    .line 6
-    check-cast v0, LX/2bJ;
+    .line 33
+    new-instance v1, LX/2CD;
 
-    .line 7
-    .line 8
-    return-object v0
-.end method
+    .line 34
+    .line 35
+    invoke-direct {v1, v4, v0}, LX/2CD;-><init>(ILjava/lang/String;)V
 
-.method public static values()[LX/2bJ;
-    .locals 1
+    .line 36
+    .line 37
+    .line 38
+    throw v1
 
-    .line 0
-    sget-object v0, LX/2bJ;->$VALUES:[LX/2bJ;
+    .line 39
+    :cond_0
+    return-void
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 40
+    :cond_1
+    const-string v0, "Negative length: "
 
-    .line 3
-    .line 4
-    .line 5
+    .line 41
+    .line 42
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 43
+    .line 44
+    .line 45
     move-result-object v0
 
-    .line 6
-    check-cast v0, [LX/2bJ;
+    .line 46
+    new-instance v1, LX/2CD;
 
+    .line 47
+    .line 48
+    invoke-direct {v1, v6, v0}, LX/2CD;-><init>(ILjava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    throw v1
+.end method
+
+.method public static A05(LX/2Bj;I)V
+    .locals 4
+
+    .line 0
+    const/4 v3, 0x0
+
+    .line 1
+    :goto_0
+    and-int/lit8 v0, p1, -0x80
+
+    .line 2
+    .line 3
+    iget-object v2, p0, LX/2Bj;->A04:[B
+
+    .line 4
+    .line 5
+    add-int/lit8 v1, v3, 0x1
+
+    .line 6
     .line 7
+    if-nez v0, :cond_0
+
     .line 8
-    return-object v0
+    .line 9
+    int-to-byte v0, p1
+
+    .line 10
+    aput-byte v0, v2, v3
+
+    .line 11
+    .line 12
+    iget-object v0, p0, LX/2Bk;->A00:LX/2CG;
+
+    .line 13
+    .line 14
+    invoke-virtual {v0, v2, v1}, LX/2CG;->A00([BI)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-void
+
+    .line 18
+    :cond_0
+    and-int/lit8 v0, p1, 0x7f
+
+    .line 19
+    .line 20
+    or-int/lit16 v0, v0, 0x80
+
+    .line 21
+    .line 22
+    int-to-byte v0, v0
+
+    .line 23
+    aput-byte v0, v2, v3
+
+    .line 24
+    .line 25
+    ushr-int/lit8 p1, p1, 0x7
+
+    .line 26
+    .line 27
+    move v3, v1
+
+    .line 28
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public accountManagerType()Ljava/lang/String;
-    .locals 1
+.method public final A0L(B)V
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/2bJ;->accountManagerType:Ljava/lang/String;
+    and-int/lit8 v3, p1, 0xf
 
     .line 1
     .line 2
-    return-object v0
-.end method
+    const/4 v0, 0x2
 
-.method public packageName()Ljava/lang/String;
-    .locals 1
+    .line 3
+    const/4 v2, 0x1
 
-    .line 0
-    iget-object v0, p0, LX/2bJ;->packageName:Ljava/lang/String;
+    .line 4
+    if-eq v3, v0, :cond_0
 
-    .line 1
-    .line 2
-    return-object v0
+    .line 5
+    .line 6
+    const/4 v0, 0x3
+
+    .line 7
+    if-eq v3, v0, :cond_0
+
+    .line 8
+    .line 9
+    const/4 v0, 0x4
+
+    .line 10
+    if-eq v3, v0, :cond_0
+
+    .line 11
+    .line 12
+    const/4 v0, 0x6
+
+    .line 13
+    if-eq v3, v0, :cond_0
+
+    .line 14
+    .line 15
+    const/16 v0, 0x8
+
+    .line 16
+    .line 17
+    if-eq v3, v0, :cond_0
+
+    .line 18
+    .line 19
+    const/16 v0, 0x13
+
+    .line 20
+    .line 21
+    if-eq v3, v0, :cond_0
+
+    .line 22
+    .line 23
+    packed-switch v3, :pswitch_data_0
+
+    .line 24
+    .line 25
+    .line 26
+    const-string v1, "Unexpected data type "
+
+    .line 27
+    .line 28
+    int-to-byte v0, v3
+
+    .line 29
+    invoke-static {v1, v0}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v1
+
+    .line 33
+    new-instance v0, LX/2CD;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1}, LX/2CD;-><init>(ILjava/lang/String;)V
+
+    .line 36
+    .line 37
+    .line 38
+    throw v0
+
+    .line 39
+    :cond_0
+    :pswitch_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0xa
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

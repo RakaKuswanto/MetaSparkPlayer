@@ -4,13 +4,93 @@
         <item quantity="other">%1$s aprecieri pentru Pagină</item>
         <item quantity="one">%1$s apreciere pentru Pagină</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s aprecieri</item>
-        <item quantity="one">%1$s apreciere</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">Acum %1$d de zile</item>
+        <item quantity="one">Acum %1$d zile</item>
+        <item quantity="few">Acum %1$d zile</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d zile</item>
+        <item quantity="one">1 zi</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d zile</item>
+        <item quantity="one">1 zi</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d ore</item>
+        <item quantity="one">1 oră</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minute</item>
+        <item quantity="one">1 minut</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d luni</item>
+        <item quantity="one">1 lună</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d secunde</item>
+        <item quantity="one">1 secundă</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d săptămâni</item>
+        <item quantity="one">1 săptămână</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Încă %1$d de zile</item>
+        <item quantity="one">Încă %1$d zile</item>
+        <item quantity="few">Încă %1$d zile</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">Încă %1$d de ore</item>
+        <item quantity="one">Încă %1$d ore</item>
+        <item quantity="few">Încă %1$d ore</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">Încă %1$d de minute</item>
+        <item quantity="one">Încă %1$d minute</item>
+        <item quantity="few">Încă %1$d minute</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">Încă %1$d de luni</item>
+        <item quantity="one">Încă %1$d luni</item>
+        <item quantity="few">Încă %1$d luni</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">Încă %1$d de secunde</item>
+        <item quantity="one">Încă %1$d secunde</item>
+        <item quantity="few">Încă %1$d secunde</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">Încă %1$d săptămâni</item>
+        <item quantity="one">Încă 1 săptămână</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">Încă %1$d de ani</item>
+        <item quantity="one">Încă %1$d ani</item>
+        <item quantity="few">Încă %1$d ani</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d ani</item>
+        <item quantity="one">1 an</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">Acum %1$d ore</item>
         <item quantity="one">Acum 1 oră</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d ore</item>
+        <item quantity="one">1 oră</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d ore</item>
+        <item quantity="one">1 oră</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">Acum %1$d de ore</item>
+        <item quantity="one">Acum %1$d ore</item>
+        <item quantity="few">Acum %1$d ore</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">Peste %1$d ore</item>
@@ -20,8 +100,67 @@
         <item quantity="other">Peste %1$d minute</item>
         <item quantity="one">Peste 1 minut</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">Acum %1$d minute</item>
+        <item quantity="one">acum 1 minut</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">Acum %1$d minute</item>
         <item quantity="one">Acum 1 minut</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$dmin</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">Acum %1$d luni</item>
+        <item quantity="one">Acum 1 lună</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">Acum %1$d secunde</item>
+        <item quantity="one">1 secundă</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">Acum %1$d săptămâni</item>
+        <item quantity="one">Acum 1 săptămână</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d ore rămase</item>
+        <item quantity="one">1 oră rămasă</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d min rămase</item>
+        <item quantity="one">1 min rămas</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">Acum %1$d ani</item>
+        <item quantity="one">Acum 1 an</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Ultima ta vizită a fost în urmă cu %1$d de zile</item>
+        <item quantity="one">Ultima ta vizită a fost în urmă cu %1$d zile</item>
+        <item quantity="few">Ultima ta vizită a fost în urmă cu %1$d zile</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Ai vizitat acum %1$d ore</item>
+        <item quantity="one">Ultima ta vizită a fost acum 1 oră</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Ai vizitat acum %1$d minute</item>
+        <item quantity="one">Ultima ta vizită a fost acum 1 minut</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Ultima ta vizită a fost în urmă cu %1$d de luni</item>
+        <item quantity="one">Ultima ta vizită a fost în urmă cu %1$d luni</item>
+        <item quantity="few">Ultima ta vizită a fost în urmă cu %1$d luni</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Ultima ta vizită a fost în urmă cu %1$d de săptămâni</item>
+        <item quantity="one">Ultima ta vizită a fost în urmă cu %1$d săptămâni</item>
+        <item quantity="few">Ultima ta vizită a fost în urmă cu %1$d săptămâni</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Ai vizitat acum %1$d ani</item>
+        <item quantity="one">Ultima ta vizită a fost acum 1 an</item>
     </plurals>
 </resources>

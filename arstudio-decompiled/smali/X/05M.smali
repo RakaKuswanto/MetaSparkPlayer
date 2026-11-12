@@ -1,17 +1,22 @@
-.class public final LX/05M;
-.super Ljava/lang/RuntimeException;
+.class public abstract LX/05m;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Exception;Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract A00()V
 .end method

@@ -1,38 +1,21 @@
-.class public final LX/69U;
-.super LX/69W;
+.class public abstract LX/69U;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/63Q;
 
-# static fields
-.field public static final A00:LX/69a;
+
+# instance fields
+.field public A00:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/69U;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/69U;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/69U;->A00:LX/69a;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/69W;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
@@ -42,10 +25,13 @@
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final APf()Z
     .locals 1
 
-    const-string v0, "center"
+    .line 0
+    iget-boolean v0, p0, LX/69U;->A00:Z
 
-    return-object v0
+    .line 1
+    .line 2
+    return v0
 .end method

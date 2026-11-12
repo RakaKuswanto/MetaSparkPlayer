@@ -1,33 +1,24 @@
-.class public final LX/5LG;
+.class public final synthetic LX/5LG;
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:Landroidx/work/impl/WorkDatabase;
+# interfaces
+.implements LX/5LF;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/work/impl/WorkDatabase;)V
-    .locals 1
+.method public synthetic constructor <init>()V
+    .locals 0
 
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/5LG;->A00:Landroidx/work/impl/WorkDatabase;
+    return-void
+.end method
 
-    .line 8
-    .line 9
+
+# virtual methods
+.method public final release()V
+    .locals 0
+
     return-void
 .end method

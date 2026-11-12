@@ -1,62 +1,75 @@
 .class public final LX/25X;
-.super Ljava/lang/Object;
+.super LX/20c;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/00v;
+.field public final A00:LX/25W;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 268435456
-    new-instance v0, LX/00v;
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {v0}, LX/00v;-><init>()V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435462
-    .line 268435463
-    .line 268435464
-    iput-object v0, p0, LX/25X;->A00:LX/00v;
-
-    .line 268435465
-    .line 268435466
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
     .line 0
-    const/4 v1, 0x1
+    sget v0, LX/2I6;->A52:I
 
     .line 1
-    new-instance v0, LX/00v;
-
     .line 2
-    .line 3
-    invoke-direct {v0, v1}, LX/00v;-><init>(I)V
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
+    .line 3
     .line 4
     .line 5
+    move-result-object v0
+
     .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast v0, Landroid/os/Handler;
 
     .line 7
     .line 8
-    .line 9
-    iput-object v0, p0, LX/25X;->A00:LX/00v;
+    invoke-direct {p0, v0}, LX/20c;-><init>(Landroid/os/Handler;)V
 
+    .line 9
     .line 10
     .line 11
+    sget v0, LX/2I6;->A59:I
+
+    .line 12
+    .line 13
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    check-cast v0, LX/25W;
+
+    .line 18
+    .line 19
+    iput-object v0, p0, LX/25X;->A00:LX/25W;
+
+    .line 20
+    .line 21
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AjH(Landroid/content/Intent;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/25X;->A00:LX/25W;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/25W;->A01(Landroid/content/Intent;)V
+
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

@@ -12,7 +12,7 @@
 
 .field public flowTimeWeight:I
 
-.field public httpMeasurementWeight:I
+.field public mhrFbcWeight:I
 
 .field public printTraceEvents:Z
 

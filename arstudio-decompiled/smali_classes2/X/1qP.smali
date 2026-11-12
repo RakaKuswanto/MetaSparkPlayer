@@ -1,25 +1,30 @@
 .class public final LX/1qP;
-.super Ljava/lang/Object;
+.super Ljava/util/AbstractSet;
 .source ""
-
-# interfaces
-.implements LX/1WO;
 
 
 # instance fields
-.field public final A00:I
+.field public final synthetic A00:LX/1qQ;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(LX/1qQ;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
-    iput p1, p0, LX/1qP;->A00:I
+    iput-object p1, p0, LX/1qP;->A00:LX/1qQ;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
     .line 3
     .line 4
@@ -29,326 +34,396 @@
 
 
 # virtual methods
-.method public final create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
-    .locals 4
+.method public final clear()V
+    .locals 2
 
     .line 0
-    iget v0, p0, LX/1qP;->A00:I
+    iget-object v1, p0, LX/1qP;->A00:LX/1qQ;
 
     .line 1
     .line 2
-    packed-switch v0, :pswitch_data_0
+    instance-of v0, v1, Lcom/google/common/collect/StandardTable;
 
     .line 3
     .line 4
-    .line 5
-    :cond_0
-    :goto_0
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
 
+    .line 5
     .line 6
-    :cond_1
-    return-object v2
+    check-cast v1, Lcom/google/common/collect/StandardTable;
 
     .line 7
-    :pswitch_0
-    iget-object v1, p2, Lcom/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
+    .line 8
+    iget-object v0, v1, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
+
+    .line 9
+    .line 10
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    .line 11
+    .line 12
+    .line 13
+    return-void
+
+    .line 14
+    :cond_0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    throw v0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
+
+    .line 0
+    instance-of v0, p1, LX/1oQ;
+
+    .line 1
+    .line 2
+    const/4 v4, 0x0
+
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    check-cast p1, LX/1oQ;
+
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/1qP;->A00:LX/1qQ;
 
     .line 8
     .line 9
-    instance-of v0, v1, Ljava/lang/reflect/GenericArrayType;
+    invoke-virtual {v0}, LX/1qQ;->A04()Ljava/util/Map;
 
     .line 10
     .line 11
-    if-nez v0, :cond_3
-
     .line 12
+    move-result-object v1
+
     .line 13
-    instance-of v0, v1, Ljava/lang/Class;
+    invoke-virtual {p1}, LX/1oQ;->A01()Ljava/lang/Object;
 
     .line 14
     .line 15
-    if-eqz v0, :cond_0
-
     .line 16
+    move-result-object v0
+
     .line 17
-    move-object v0, v1
+    :try_start_0
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 18
-    check-cast v0, Ljava/lang/Class;
-
     .line 19
     .line 20
-    invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
+    move-result-object v0
 
     .line 21
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 22
+    :catch_0
+    const/4 v0, 0x0
+
     .line 23
-    move-result v0
+    :goto_0
+    check-cast v0, Ljava/util/Map;
 
     .line 24
-    if-nez v0, :cond_3
-
     .line 25
-    .line 26
-    goto :goto_0
+    if-eqz v0, :cond_0
 
+    .line 26
     .line 27
-    :pswitch_1
-    iget-object v1, p2, Lcom/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     .line 28
     .line 29
-    const-class v0, Ljava/util/Date;
-
     .line 30
+    move-result-object v3
+
     .line 31
-    if-ne v1, v0, :cond_0
+    invoke-virtual {p1}, LX/1oQ;->A00()Ljava/lang/Object;
 
     .line 32
     .line 33
-    new-instance v2, LX/2B7;
-
     .line 34
+    move-result-object v2
+
     .line 35
-    invoke-direct {v2}, LX/2B7;-><init>()V
+    invoke-virtual {p1}, LX/1oQ;->A02()Ljava/lang/Object;
 
     .line 36
     .line 37
     .line 38
-    return-object v2
+    move-result-object v1
 
     .line 39
-    :pswitch_2
-    iget-object v3, p2, Lcom/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
+    new-instance v0, Lcom/google/common/collect/ImmutableEntry;
 
     .line 40
     .line 41
-    const-class v1, Ljava/lang/Enum;
+    invoke-direct {v0, v2, v1}, Lcom/google/common/collect/ImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 42
     .line 43
-    invoke-virtual {v1, v3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
     .line 44
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     .line 45
     .line 46
-    move-result v0
-
     .line 47
-    if-eqz v0, :cond_0
+    :try_start_1
+    invoke-interface {v3, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     .line 48
     .line 49
-    if-eq v3, v1, :cond_0
-
     .line 50
+    move-result v0
+
     .line 51
-    invoke-virtual {v3}, Ljava/lang/Class;->isEnum()Z
+    if-eqz v0, :cond_0
 
     .line 52
     .line 53
+    const/4 v4, 0x1
+    :try_end_1
+    .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_1
+
     .line 54
+    :catch_1
+    :cond_0
+    return v4
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/1qP;->A00:LX/1qQ;
+
+    .line 1
+    .line 2
+    instance-of v0, v2, Lcom/google/common/collect/StandardTable;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    check-cast v2, Lcom/google/common/collect/StandardTable;
+
+    .line 7
+    .line 8
+    new-instance v1, LX/1qs;
+
+    .line 9
+    .line 10
+    invoke-direct {v1, v2}, LX/1qs;-><init>(Lcom/google/common/collect/StandardTable;)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-object v1
+
+    .line 14
+    :cond_0
+    check-cast v2, Lcom/google/common/collect/ArrayTable;
+
+    .line 15
+    .line 16
+    invoke-virtual {v2}, LX/1qQ;->A01()I
+
+    .line 17
+    .line 18
+    .line 19
     move-result v0
 
-    .line 55
-    if-nez v0, :cond_2
+    .line 20
+    new-instance v1, LX/1qf;
 
-    .line 56
-    .line 57
-    invoke-virtual {v3}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+    .line 21
+    .line 22
+    invoke-direct {v1, v2, v0}, LX/1qf;-><init>(Lcom/google/common/collect/ArrayTable;I)V
 
-    .line 58
-    .line 59
-    .line 60
-    move-result-object v3
+    .line 23
+    .line 24
+    .line 25
+    return-object v1
+.end method
 
-    .line 61
-    :cond_2
-    new-instance v2, LX/2At;
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
-    .line 62
-    .line 63
-    invoke-direct {v2, v3}, LX/2At;-><init>(Ljava/lang/Class;)V
+    .line 0
+    instance-of v0, p1, LX/1oQ;
 
-    .line 64
-    .line 65
-    .line 66
-    return-object v2
+    .line 1
+    .line 2
+    const/4 v4, 0x0
 
-    .line 67
-    :pswitch_3
-    iget-object v1, p2, Lcom/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
+    .line 3
+    if-eqz v0, :cond_0
 
-    .line 68
-    .line 69
-    const-class v0, Ljava/sql/Date;
+    .line 4
+    .line 5
+    check-cast p1, LX/1oQ;
 
-    .line 70
-    .line 71
-    const/4 v2, 0x0
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/1qP;->A00:LX/1qQ;
 
-    .line 72
-    if-ne v1, v0, :cond_1
+    .line 8
+    .line 9
+    invoke-virtual {v0}, LX/1qQ;->A04()Ljava/util/Map;
 
-    .line 73
-    .line 74
-    new-instance v2, LX/2B8;
-
-    .line 75
-    .line 76
-    invoke-direct {v2}, LX/2B8;-><init>()V
-
-    .line 77
-    .line 78
-    .line 79
-    return-object v2
-
-    .line 80
-    :pswitch_4
-    iget-object v1, p2, Lcom/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
-
-    .line 81
-    .line 82
-    const-class v0, Ljava/sql/Time;
-
-    .line 83
-    .line 84
-    const/4 v2, 0x0
-
-    .line 85
-    if-ne v1, v0, :cond_1
-
-    .line 86
-    .line 87
-    new-instance v2, LX/2B6;
-
-    .line 88
-    .line 89
-    invoke-direct {v2}, LX/2B6;-><init>()V
-
-    .line 90
-    .line 91
-    .line 92
-    return-object v2
-
-    .line 93
-    :pswitch_5
-    iget-object v1, p2, Lcom/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
-
-    .line 94
-    .line 95
-    const-class v0, Ljava/sql/Timestamp;
-
-    .line 96
-    .line 97
-    const/4 v2, 0x0
-
-    .line 98
-    if-ne v1, v0, :cond_1
-
-    .line 99
-    .line 100
-    const-class v0, Ljava/util/Date;
-
-    .line 101
-    .line 102
-    invoke-static {p1, v0}, LX/0Yi;->A0c(Lcom/google/gson/Gson;Ljava/lang/reflect/Type;)Lcom/google/gson/TypeAdapter;
-
-    .line 103
-    .line 104
-    .line 105
-    move-result-object v0
-
-    .line 106
-    new-instance v2, LX/2B5;
-
-    .line 107
-    .line 108
-    invoke-direct {v2, v0}, LX/2B5;-><init>(Lcom/google/gson/TypeAdapter;)V
-
-    .line 109
-    .line 110
-    .line 111
-    return-object v2
-
-    .line 112
-    :cond_3
-    instance-of v0, v1, Ljava/lang/reflect/GenericArrayType;
-
-    .line 113
-    .line 114
-    if-eqz v0, :cond_4
-
-    .line 115
-    .line 116
-    check-cast v1, Ljava/lang/reflect/GenericArrayType;
-
-    .line 117
-    .line 118
-    invoke-interface {v1}, Ljava/lang/reflect/GenericArrayType;->getGenericComponentType()Ljava/lang/reflect/Type;
-
-    .line 119
-    .line 120
-    .line 121
-    move-result-object v0
-
-    .line 122
-    :goto_1
-    invoke-static {p1, v0}, LX/0Yi;->A0c(Lcom/google/gson/Gson;Ljava/lang/reflect/Type;)Lcom/google/gson/TypeAdapter;
-
-    .line 123
-    .line 124
-    .line 125
+    .line 10
+    .line 11
+    .line 12
     move-result-object v1
 
-    .line 126
-    invoke-static {v0}, LX/2EG;->A00(Ljava/lang/reflect/Type;)Ljava/lang/Class;
+    .line 13
+    invoke-virtual {p1}, LX/1oQ;->A01()Ljava/lang/Object;
 
-    .line 127
-    .line 128
-    .line 129
+    .line 14
+    .line 15
+    .line 16
     move-result-object v0
 
-    .line 130
-    new-instance v2, LX/2AT;
+    .line 17
+    :try_start_0
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
-    .line 132
-    invoke-direct {v2, p1, v1, v0}, LX/2AT;-><init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/Class;)V
-
-    .line 133
-    .line 134
-    .line 135
-    return-object v2
-
-    .line 136
-    :cond_4
-    check-cast v1, Ljava/lang/Class;
-
-    .line 137
-    .line 138
-    invoke-virtual {v1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    .line 139
-    .line 140
-    .line 141
+    .line 18
+    .line 19
+    .line 20
     move-result-object v0
 
-    .line 142
-    goto :goto_1
+    .line 21
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 143
-    nop
+    .line 22
+    :catch_0
+    const/4 v0, 0x0
 
-    .line 144
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-    .end packed-switch
+    .line 23
+    :goto_0
+    check-cast v0, Ljava/util/Map;
+
+    .line 24
+    .line 25
+    if-eqz v0, :cond_0
+
+    .line 26
+    .line 27
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v3
+
+    .line 31
+    invoke-virtual {p1}, LX/1oQ;->A00()Ljava/lang/Object;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v2
+
+    .line 35
+    invoke-virtual {p1}, LX/1oQ;->A02()Ljava/lang/Object;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v1
+
+    .line 39
+    new-instance v0, Lcom/google/common/collect/ImmutableEntry;
+
+    .line 40
+    .line 41
+    invoke-direct {v0, v2, v1}, Lcom/google/common/collect/ImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 45
+    .line 46
+    .line 47
+    :try_start_1
+    invoke-interface {v3, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v0
+
+    .line 51
+    if-eqz v0, :cond_0
+
+    .line 52
+    .line 53
+    const/4 v4, 0x1
+    :try_end_1
+    .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 54
+    :catch_1
+    :cond_0
+    return v4
+.end method
+
+.method public final size()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1qP;->A00:LX/1qQ;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, LX/1qQ;->A01()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
 .end method

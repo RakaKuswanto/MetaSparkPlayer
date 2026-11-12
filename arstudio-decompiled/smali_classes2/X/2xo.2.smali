@@ -1,42 +1,65 @@
-.class public interface abstract LX/2xo;
+.class public final LX/2xO;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/3aY;
+# instance fields
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:LX/2wj;
+
+.field public final A02:LX/2x2;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(LX/2wj;LX/2x2;)V
     .locals 1
 
-    sget-object v0, LX/3aY;->A00:LX/3aY;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, LX/2xo;->A00:LX/3aY;
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/2xO;->A01:LX/2wj;
 
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/2xO;->A02:LX/2x2;
+
+    .line 6
+    .line 7
+    const-string v0, ""
+
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/2xO;->A00:Ljava/lang/String;
+
+    .line 10
+    .line 11
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;LX/2wj;LX/2x2;)V
+    .locals 0
 
-# virtual methods
-.method public abstract AUi(I)V
-.end method
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract AYX(I)V
-.end method
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput-object p2, p0, LX/2xO;->A01:LX/2wj;
 
-.method public abstract AYd()V
-.end method
+    .line 268435460
+    .line 268435461
+    iput-object p3, p0, LX/2xO;->A02:LX/2x2;
 
-.method public abstract Acg()V
-.end method
+    .line 268435462
+    .line 268435463
+    iput-object p1, p0, LX/2xO;->A00:Ljava/lang/String;
 
-.method public abstract Aee(I)V
-.end method
-
-.method public abstract Aef(I)V
-.end method
-
-.method public abstract AlF(LX/37l;)V
+    .line 268435464
+    .line 268435465
+    return-void
 .end method

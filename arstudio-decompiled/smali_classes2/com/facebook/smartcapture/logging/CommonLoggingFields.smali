@@ -13,7 +13,7 @@
 # instance fields
 .field public A00:Landroid/os/Bundle;
 
-.field public A01:LX/1Kc;
+.field public A01:LX/1b0;
 
 .field public A02:Ljava/lang/String;
 
@@ -31,7 +31,7 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/1Kc;->LOW_END:LX/1Kc;
+    sget-object v1, LX/1b0;->LOW_END:LX/1b0;
 
     .line 1
     .line 2
@@ -39,7 +39,7 @@
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, Lcom/facebook/smartcapture/logging/CommonLoggingFields;-><init>(LX/1Kc;)V
+    invoke-direct {v0, v1}, Lcom/facebook/smartcapture/logging/CommonLoggingFields;-><init>(LX/1b0;)V
 
     .line 5
     .line 6
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1Kc;)V
+.method public constructor <init>(LX/1b0;)V
     .locals 2
 
     .line 268435456
@@ -67,7 +67,7 @@
     .line 268435460
     .line 268435461
     .line 268435462
-    iput-object p1, p0, Lcom/facebook/smartcapture/logging/CommonLoggingFields;->A01:LX/1Kc;
+    iput-object p1, p0, Lcom/facebook/smartcapture/logging/CommonLoggingFields;->A01:LX/1b0;
 
     .line 268435463
     .line 268435464
@@ -87,7 +87,7 @@
 
     .line 268435471
     .line 268435472
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 268435473
     .line 268435474
@@ -123,7 +123,7 @@
     move-result-object v0
 
     .line 7
-    check-cast v0, LX/1Kc;
+    check-cast v0, LX/1b0;
 
     .line 8
     .line 9
@@ -135,7 +135,7 @@
 
     .line 12
     .line 13
-    iput-object v0, p0, Lcom/facebook/smartcapture/logging/CommonLoggingFields;->A01:LX/1Kc;
+    iput-object v0, p0, Lcom/facebook/smartcapture/logging/CommonLoggingFields;->A01:LX/1b0;
 
     .line 14
     .line 15
@@ -207,7 +207,7 @@
 
     .line 48
     .line 49
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 50
     .line 51
@@ -248,7 +248,7 @@
 
     .line 68
     .line 69
-    invoke-static {v2}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    invoke-static {v2}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 70
     .line 71
@@ -256,80 +256,75 @@
     move-result-object v1
 
     .line 73
-    invoke-static {v1}, LX/0PS;->A01(Ljava/lang/Object;)V
+    invoke-virtual {v4, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 74
     .line 75
     .line 76
-    invoke-virtual {v4, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 77
-    .line 78
-    .line 79
     move-result-object v0
 
-    .line 80
+    .line 77
     invoke-virtual {v3, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
-    .line 82
-    .line 83
+    .line 78
+    .line 79
+    .line 80
     goto :goto_0
 
-    .line 84
+    .line 81
     :cond_0
     iput-object v3, p0, Lcom/facebook/smartcapture/logging/CommonLoggingFields;->A06:Ljava/util/Map;
 
-    .line 85
-    .line 86
+    .line 82
+    .line 83
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 87
-    .line 88
-    .line 89
+    .line 84
+    .line 85
+    .line 86
     move-result-object v0
 
-    .line 90
+    .line 87
     iput-object v0, p0, Lcom/facebook/smartcapture/logging/CommonLoggingFields;->A05:Ljava/lang/String;
+
+    .line 88
+    .line 89
+    return-void
+
+    .line 90
+    :cond_1
+    invoke-static {v1}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 91
     .line 92
-    return-void
-
     .line 93
-    :cond_1
-    invoke-static {v1}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    move-result-object v0
 
     .line 94
-    .line 95
-    .line 96
-    move-result-object v0
-
-    .line 97
     throw v0
 
-    .line 98
+    .line 95
     :cond_2
-    invoke-static {v1}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v1}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 96
+    .line 97
+    .line 98
+    move-result-object v0
 
     .line 99
-    .line 100
-    .line 101
-    move-result-object v0
-
-    .line 102
     throw v0
 
-    .line 103
+    .line 100
     :cond_3
-    invoke-static {v1}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v1}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
-    .line 104
-    .line 105
-    .line 106
+    .line 101
+    .line 102
+    .line 103
     move-result-object v0
 
-    .line 107
+    .line 104
     throw v0
 .end method
 
@@ -350,12 +345,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/smartcapture/logging/CommonLoggingFields;->A01:LX/1Kc;
+    iget-object v0, p0, Lcom/facebook/smartcapture/logging/CommonLoggingFields;->A01:LX/1b0;
 
     .line 5
     .line 6

@@ -1,5 +1,5 @@
 .class public abstract Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;
-.super LX/0DP;
+.super LX/0Hg;
 .source ""
 
 
@@ -8,20 +8,20 @@
 
 .field public final A01:Ljava/lang/Object;
 
-.field public volatile A02:LX/0Rl;
+.field public volatile A02:LX/0TR;
 
 
 # direct methods
-.method public constructor <init>(LX/0DQ;)V
+.method public constructor <init>(LX/0Hh;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p1}, LX/0DP;-><init>(LX/0DQ;)V
+    invoke-direct {p0, p1}, LX/0Hg;-><init>(LX/0Hh;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -38,15 +38,15 @@
 
 
 # virtual methods
-.method public A0D(Landroid/content/Intent;II)I
+.method public A0C(Landroid/content/Intent;II)I
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A02:LX/0Rl;
+    iget-object v0, p0, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A02:LX/0TR;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p2, p3, p1}, LX/0Rl;->A02(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p2, p3, p1}, LX/0TR;->A02(IILandroid/content/Intent;)V
 
     .line 3
     .line 4
@@ -57,16 +57,16 @@
     return v0
 .end method
 
-.method public A0F()V
+.method public A0E()V
     .locals 3
 
     .line 0
-    invoke-virtual {p0}, LX/0DP;->A0H()V
+    invoke-virtual {p0}, LX/0Hg;->A0G()V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0}, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A0M()Landroid/os/Looper;
+    invoke-virtual {p0}, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A0L()Landroid/os/Looper;
 
     .line 4
     .line 5
@@ -90,25 +90,25 @@
 
     .line 14
     .line 15
-    new-instance v1, LX/0Rl;
+    new-instance v1, LX/0TR;
 
     .line 16
     .line 17
-    invoke-direct {v1, v2, p0}, LX/0Rl;-><init>(Landroid/os/Looper;Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;)V
+    invoke-direct {v1, v2, p0}, LX/0TR;-><init>(Landroid/os/Looper;Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;)V
 
     .line 18
     .line 19
     .line 20
     :goto_0
-    iput-object v1, p0, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A02:LX/0Rl;
+    iput-object v1, p0, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A02:LX/0TR;
 
     .line 21
     .line 22
-    iget-object v0, p0, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A02:LX/0Rl;
+    iget-object v0, p0, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A02:LX/0TR;
 
     .line 23
     .line 24
-    invoke-virtual {v0}, LX/0Rl;->A01()V
+    invoke-virtual {v0}, LX/0TR;->A01()V
 
     .line 25
     .line 26
@@ -125,11 +125,11 @@
     move-result-object v0
 
     .line 32
-    new-instance v1, LX/0LL;
+    new-instance v1, LX/0NI;
 
     .line 33
     .line 34
-    invoke-direct {v1, v0, p0}, LX/0LL;-><init>(Landroid/os/Looper;Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;)V
+    invoke-direct {v1, v0, p0}, LX/0NI;-><init>(Landroid/os/Looper;Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;)V
 
     .line 35
     .line 36
@@ -137,20 +137,20 @@
     goto :goto_0
 .end method
 
-.method public A0G()V
+.method public A0F()V
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A02:LX/0Rl;
+    iget-object v0, p0, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A02:LX/0TR;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/0Rl;->A00()V
+    invoke-virtual {v0}, LX/0TR;->A00()V
 
     .line 3
     .line 4
     .line 5
-    invoke-super {p0}, LX/0DP;->A0G()V
+    invoke-super {p0}, LX/0Hg;->A0F()V
 
     .line 6
     .line 7
@@ -158,14 +158,14 @@
     return-void
 .end method
 
-.method public final A0J(Landroid/content/Intent;I)V
+.method public final A0I(Landroid/content/Intent;I)V
     .locals 1
 
     .line 0
     const/4 v0, -0x1
 
     .line 1
-    invoke-virtual {p0, p1, v0, p2}, LX/0DP;->A0D(Landroid/content/Intent;II)I
+    invoke-virtual {p0, p1, v0, p2}, LX/0Hg;->A0C(Landroid/content/Intent;II)I
 
     .line 2
     .line 3
@@ -173,16 +173,16 @@
     return-void
 .end method
 
-.method public final A0K(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+.method public final A0J(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A0N()V
+    invoke-virtual {p0}, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A0M()V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0, p1, p2, p3}, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A0R(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/facebook/rti/mqtt/manager/MqttBackgroundServiceDelegate;->A0Q(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -190,10 +190,10 @@
     return-void
 .end method
 
-.method public abstract A0M()Landroid/os/Looper;
+.method public abstract A0L()Landroid/os/Looper;
 .end method
 
-.method public final A0N()V
+.method public final A0M()V
     .locals 2
 
     .line 0
@@ -279,23 +279,14 @@
     throw v0
 .end method
 
+.method public abstract A0N()V
+.end method
+
 .method public abstract A0O()V
 .end method
 
-.method public abstract A0P()V
+.method public abstract A0P(IILandroid/content/Intent;)V
 .end method
 
-.method public abstract A0Q(IILandroid/content/Intent;)V
-.end method
-
-.method public A0R(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
-    .locals 0
-
-    .line 0
-    invoke-super {p0, p1, p2, p3}, LX/0DP;->A0K(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract A0Q(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 .end method

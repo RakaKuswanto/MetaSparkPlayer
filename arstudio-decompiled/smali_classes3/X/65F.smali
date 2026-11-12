@@ -1,25 +1,62 @@
 .class public final LX/65F;
-.super LX/64v;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/6Az;
 
 
 # instance fields
-.field public final synthetic A00:LX/64s;
+.field public final synthetic A00:LX/60A;
 
 
 # direct methods
-.method public constructor <init>(LX/64s;)V
+.method public constructor <init>(LX/60A;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/65F;->A00:LX/64s;
+    iput-object p1, p0, LX/65F;->A00:LX/60A;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1}, LX/64v;-><init>(LX/64s;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AWp()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/65F;->A00:LX/60A;
+
+    .line 1
+    .line 2
+    iget-boolean v0, v1, LX/60A;->A0Q:Z
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v1, v1, LX/60A;->A0C:LX/676;
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    invoke-interface {v1, v0}, LX/676;->Ahx(Ljava/lang/Long;)V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
     return-void
 .end method

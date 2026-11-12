@@ -147,7 +147,7 @@
     .line 5
     .line 6
     .line 7
-    invoke-static {p0, v0}, LX/001;->A1O(II)Z
+    invoke-static {p0, v0}, LX/001;->A1N(II)Z
 
     .line 8
     .line 9
@@ -166,7 +166,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0}, LX/001;->A1M(I)Z
+    invoke-static {p0}, LX/001;->A1L(I)Z
 
     .line 3
     .line 4
@@ -185,7 +185,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0}, LX/001;->A1L(I)Z
+    invoke-static {p0}, LX/001;->A1K(I)Z
 
     .line 3
     .line 4
@@ -252,7 +252,7 @@
     .line 23
     .line 24
     :cond_2
-    iget-object v0, p0, Lcom/facebook/acra/util/UrlEncodingWriter;->out:Ljava/io/Writer;
+    iget-object v0, p0, Ljava/io/FilterWriter;->out:Ljava/io/Writer;
 
     .line 25
     .line 26
@@ -313,7 +313,7 @@
 
     .line 52
     .line 53
-    iget-object v1, p0, Lcom/facebook/acra/util/UrlEncodingWriter;->out:Ljava/io/Writer;
+    iget-object v1, p0, Ljava/io/FilterWriter;->out:Ljava/io/Writer;
 
     .line 54
     .line 55
@@ -333,7 +333,7 @@
     .locals 3
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/acra/util/UrlEncodingWriter;->out:Ljava/io/Writer;
+    iget-object v1, p0, Ljava/io/FilterWriter;->out:Ljava/io/Writer;
 
     .line 1
     .line 2
@@ -346,7 +346,7 @@
     .line 5
     .line 6
     .line 7
-    iget-object v1, p0, Lcom/facebook/acra/util/UrlEncodingWriter;->out:Ljava/io/Writer;
+    iget-object v1, p0, Ljava/io/FilterWriter;->out:Ljava/io/Writer;
 
     .line 8
     .line 9
@@ -371,7 +371,7 @@
     .line 18
     .line 19
     .line 20
-    iget-object v1, p0, Lcom/facebook/acra/util/UrlEncodingWriter;->out:Ljava/io/Writer;
+    iget-object v1, p0, Ljava/io/FilterWriter;->out:Ljava/io/Writer;
 
     .line 21
     .line 22
@@ -493,7 +493,7 @@
 
     .line 16
     .line 17
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 18
     .line 19
@@ -705,7 +705,7 @@
 
     .line 115
     .line 116
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 117
     .line 118
@@ -768,7 +768,7 @@
     .locals 3
 
     .line 268435456
-    iget-object v2, p0, Lcom/facebook/acra/util/UrlEncodingWriter;->lock:Ljava/lang/Object;
+    iget-object v2, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
 
     .line 268435457
     .line 268435458
@@ -835,7 +835,7 @@
     .locals 3
 
     .line 536870912
-    iget-object v2, p0, Lcom/facebook/acra/util/UrlEncodingWriter;->lock:Ljava/lang/Object;
+    iget-object v2, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
 
     .line 536870913
     .line 536870914

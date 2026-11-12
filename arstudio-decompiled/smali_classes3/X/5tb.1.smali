@@ -1,25 +1,35 @@
-.class public abstract LX/5tb;
-.super LX/5tK;
+.class public final LX/5Tb;
+.super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:LX/5tK;
+# interfaces
+.implements LX/1kh;
 
 
 # direct methods
-.method public constructor <init>(LX/5tK;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5tK;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5tb;->A00:LX/5tK;
-
-    .line 4
-    .line 5
     return-void
+.end method
+
+
+# virtual methods
+.method public final AHm(I)I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_0
+
+    const/4 v0, 0x5
+
+    :cond_0
+    return v0
 .end method

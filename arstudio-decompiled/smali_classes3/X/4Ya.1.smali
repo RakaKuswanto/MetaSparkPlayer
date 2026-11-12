@@ -2,27 +2,52 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A00:LX/4Yb;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DrawingView$2"
+
+
+# instance fields
+.field public final synthetic A00:LX/4YH;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/4YH;)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/4Yb;
+    iput-object p1, p0, LX/4Ya;->A00:LX/4YH;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/4Yb;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, LX/4Ya;->A00:LX/4Yb;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/4Ya;->A00:LX/4YH;
+
+    .line 1
+    .line 2
+    sget-object v0, LX/4YW;->PEN_DOWN_IDLE:LX/4YW;
+
+    .line 3
+    .line 4
+    invoke-static {v0, v1}, LX/4YH;->A02(LX/4YW;LX/4YH;)V
+
+    .line 5
     .line 6
     .line 7
     return-void

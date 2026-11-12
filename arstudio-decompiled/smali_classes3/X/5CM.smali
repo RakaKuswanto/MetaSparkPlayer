@@ -1,224 +1,213 @@
-.class public final LX/5CM;
+.class public final synthetic LX/5CM;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/50C;
+
 
 # instance fields
-.field public A00:Ljava/util/Queue;
-
-.field public A01:Z
-
-.field public final A02:Ljava/lang/Object;
+.field public final synthetic A00:LX/5CL;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(LX/5CL;)V
+    .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    iput-object p1, p0, LX/5CM;->A00:LX/5CL;
 
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/5CM;->A02:Ljava/lang/Object;
-
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(LX/5CN;)V
-    .locals 2
+.method public final AYb(I)V
+    .locals 12
 
     .line 0
-    iget-object v1, p0, LX/5CM;->A02:Ljava/lang/Object;
+    iget-object v6, p0, LX/5CM;->A00:LX/5CL;
 
     .line 1
     .line 2
-    monitor-enter v1
+    monitor-enter v6
 
     .line 3
     :try_start_0
-    iget-object v0, p0, LX/5CM;->A00:Ljava/util/Queue;
+    iget v1, v6, LX/5CL;->A00:I
 
     .line 4
     .line 5
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_0
 
     .line 6
     .line 7
-    iget-boolean v0, p0, LX/5CM;->A01:Z
+    iget-boolean v0, v6, LX/5CL;->A0A:Z
 
     .line 8
     .line 9
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     .line 10
     .line 11
-    const/4 v0, 0x1
-
-    .line 12
-    iput-boolean v0, p0, LX/5CM;->A01:Z
-
-    .line 13
-    .line 14
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 15
-    :goto_0
-    monitor-enter v1
-
-    .line 16
-    :try_start_1
-    iget-object v0, p0, LX/5CM;->A00:Ljava/util/Queue;
-
-    .line 17
-    .line 18
-    invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    check-cast v0, LX/5CQ;
-
-    .line 23
-    .line 24
-    if-nez v0, :cond_0
-
-    .line 25
-    .line 26
-    const/4 v0, 0x0
-
-    .line 27
-    iput-boolean v0, p0, LX/5CM;->A01:Z
-
-    .line 28
-    .line 29
-    monitor-exit v1
-
-    .line 30
     goto :goto_1
 
-    .line 31
-    :cond_0
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 32
-    invoke-interface {v0, p1}, LX/5CQ;->AsJ(LX/5CN;)V
-
-    .line 33
-    .line 34
-    .line 35
-    goto :goto_0
-
-    .line 36
-    :goto_1
-    return-void
-
-    .line 37
-    :catchall_0
-    move-exception v0
-
-    .line 38
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 39
-    throw v0
-
-    .line 40
-    :cond_1
-    :try_start_3
-    monitor-exit v1
-
-    .line 41
-    return-void
-
-    .line 42
-    :catchall_1
-    move-exception v0
-
-    .line 43
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 44
-    throw v0
-.end method
-
-.method public final A01(LX/5CQ;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/5CM;->A02:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    monitor-enter v1
-
-    .line 3
-    :try_start_0
-    iget-object v0, p0, LX/5CM;->A00:Ljava/util/Queue;
-
-    .line 4
-    .line 5
-    if-nez v0, :cond_0
-
-    .line 6
-    .line 7
-    invoke-static {}, LX/4BF;->A16()Ljava/util/ArrayDeque;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/5CM;->A00:Ljava/util/Queue;
-
     .line 12
-    .line 13
     :cond_0
-    invoke-interface {v0, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+    if-eq v1, p1, :cond_2
 
+    .line 13
     .line 14
+    iput p1, v6, LX/5CL;->A00:I
+
     .line 15
     .line 16
-    monitor-exit v1
+    const/4 v0, 0x1
 
     .line 17
-    return-void
+    if-eq p1, v0, :cond_2
 
     .line 18
-    :catchall_0
-    move-exception v0
-
     .line 19
-    monitor-exit v1
+    if-eqz p1, :cond_2
+
+    .line 20
+    .line 21
+    const/16 v0, 0x8
+
+    .line 22
+    .line 23
+    if-eq p1, v0, :cond_2
+
+    .line 24
+    .line 25
+    invoke-static {v6, p1}, LX/5CL;->A00(LX/5CL;I)J
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-wide v10
+
+    .line 29
+    iput-wide v10, v6, LX/5CL;->A02:J
+
+    .line 30
+    .line 31
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-wide v0
+
+    .line 35
+    iget v2, v6, LX/5CL;->A01:I
+
+    .line 36
+    .line 37
+    if-lez v2, :cond_1
+
+    .line 38
+    .line 39
+    iget-wide v4, v6, LX/5CL;->A04:J
+
+    .line 40
+    .line 41
+    sub-long v2, v0, v4
+
+    .line 42
+    .line 43
+    long-to-int v7, v2
+
+    .line 44
+    :goto_0
+    iget-wide v8, v6, LX/5CL;->A03:J
+
+    .line 45
+    .line 46
+    invoke-static/range {v6 .. v11}, LX/5CL;->A01(LX/5CL;IJJ)V
+
+    .line 47
+    .line 48
+    .line 49
+    iput-wide v0, v6, LX/5CL;->A04:J
+
+    .line 50
+    .line 51
+    const-wide/16 v0, 0x0
+
+    .line 52
+    .line 53
+    iput-wide v0, v6, LX/5CL;->A03:J
+
+    .line 54
+    .line 55
+    iput-wide v0, v6, LX/5CL;->A05:J
+
+    .line 56
+    .line 57
+    iput-wide v0, v6, LX/5CL;->A06:J
+
+    .line 58
+    .line 59
+    iget-object v1, v6, LX/5CL;->A09:LX/5CN;
+
+    .line 60
+    .line 61
+    iget-object v0, v1, LX/5CN;->A04:Ljava/util/ArrayList;
+
+    .line 62
+    .line 63
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->clear()V
+
+    .line 64
+    .line 65
+    .line 66
+    const/4 v0, -0x1
+
+    .line 67
+    iput v0, v1, LX/5CN;->A00:I
+
+    .line 68
+    .line 69
+    const/4 v0, 0x0
+
+    .line 70
+    iput v0, v1, LX/5CN;->A01:I
+
+    .line 71
+    .line 72
+    iput v0, v1, LX/5CN;->A02:I
+
+    .line 73
+    .line 74
+    goto :goto_1
+
+    .line 75
+    :cond_1
+    const/4 v7, 0x0
+
+    .line 76
+    goto :goto_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 20
+    .line 77
+    :cond_2
+    :goto_1
+    monitor-exit v6
+
+    .line 78
+    return-void
+
+    .line 79
+    :catchall_0
+    move-exception v0
+
+    .line 80
+    monitor-exit v6
+
+    .line 81
     throw v0
 .end method

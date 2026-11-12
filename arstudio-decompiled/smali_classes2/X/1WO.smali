@@ -1,8 +1,13 @@
-.class public interface abstract LX/1WO;
+.class public final synthetic LX/1wO;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
+# direct methods
+.method public synthetic constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

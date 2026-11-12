@@ -2,73 +2,54 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SystemForegroundService$3"
-
 
 # instance fields
-.field public final synthetic A00:I
+.field public final A00:LX/5K3;
 
-.field public final synthetic A01:Landroidx/work/impl/foreground/SystemForegroundService;
+.field public final A01:[Z
+
+.field public final A02:[Z
+
+.field public final A03:[Z
 
 
 # direct methods
-.method public constructor <init>(Landroidx/work/impl/foreground/SystemForegroundService;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$notificationId"
-        }
-    .end annotation
-
-    .line 0
-    iput-object p1, p0, LX/5KL;->A01:Landroidx/work/impl/foreground/SystemForegroundService;
-
-    .line 1
-    .line 2
-    iput p2, p0, LX/5KL;->A00:I
-
-    .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method public constructor <init>(LX/5K3;[Z)V
     .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5KL;->A01:Landroidx/work/impl/foreground/SystemForegroundService;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget-object v1, v0, Landroidx/work/impl/foreground/SystemForegroundService;->A00:Landroid/app/NotificationManager;
-
     .line 3
+    iput-object p1, p0, LX/5KL;->A00:LX/5K3;
+
     .line 4
-    iget v0, p0, LX/5KL;->A00:I
-
     .line 5
-    .line 6
-    invoke-virtual {v1, v0}, Landroid/app/NotificationManager;->cancel(I)V
+    iput-object p2, p0, LX/5KL;->A02:[Z
 
+    .line 6
     .line 7
+    iget v1, p1, LX/5K3;->A01:I
+
     .line 8
     .line 9
+    new-array v0, v1, [Z
+
+    .line 10
+    .line 11
+    iput-object v0, p0, LX/5KL;->A01:[Z
+
+    .line 12
+    .line 13
+    new-array v0, v1, [Z
+
+    .line 14
+    .line 15
+    iput-object v0, p0, LX/5KL;->A03:[Z
+
+    .line 16
+    .line 17
     return-void
 .end method

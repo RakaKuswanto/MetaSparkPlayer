@@ -9,13 +9,13 @@
 # instance fields
 .field public final mAuthToken:Ljava/lang/String;
 
-.field public final mFbErrorReporter:LX/0Na;
+.field public final mFbErrorReporter:LX/0RP;
 
 .field public final mHybridData:Lcom/facebook/jni/HybridData;
 
 .field public final mNativeAuthedTigonServiceHolder:Lcom/facebook/tigon/nativeservice/authed/NativeAuthedTigonServiceHolder;
 
-.field public final mSessionlessMC:LX/0Na;
+.field public final mSessionlessMC:LX/0RP;
 
 
 # direct methods
@@ -31,7 +31,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 5
     .line 6
@@ -52,7 +52,7 @@
     .line 3
     .line 4
     .line 5
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
 
     .line 6
     .line 7
@@ -60,11 +60,11 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, v1, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mFbErrorReporter:LX/0Na;
+    iput-object v0, v1, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mFbErrorReporter:LX/0RP;
 
     .line 10
     .line 11
-    invoke-static {}, LX/0Zq;->A07()LX/0Zq;
+    invoke-static {}, LX/0lf;->A06()LX/0lf;
 
     .line 12
     .line 13
@@ -72,7 +72,7 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, v1, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mSessionlessMC:LX/0Na;
+    iput-object v0, v1, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mSessionlessMC:LX/0RP;
 
     .line 16
     .line 17
@@ -235,7 +235,7 @@
 .method public static native initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/ScheduledExecutorService;Ljava/util/concurrent/ScheduledExecutorService;Lcom/facebook/livequery/core/common/LiveQueryServiceFactory;Lcom/facebook/reactivesocket/flipper/common/FlipperLiveDataProviderFactory;Lcom/facebook/stash/core/FileStash;Ljava/util/concurrent/ExecutorService;Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;Lcom/facebook/realtime/config/RealtimeConfigSourceProxy;Lcom/facebook/graphservice/config/GraphQLServiceConfig;Lcom/facebook/xanalytics/XAnalyticsHolder;Lcom/facebook/graphservice/fb/GraphQLObserverExecutor;Ljava/lang/String;ZZZ)Lcom/facebook/jni/HybridData;
 .end method
 
-.method private native loadNextPageForKey(Ljava/lang/String;IIZLcom/facebook/nativeutil/NativeMap;Lcom/facebook/graphservice/interfaces/GraphQLService$OperationCallbacks;Ljava/util/concurrent/Executor;Ljava/lang/String;ZZILjava/lang/String;)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
+.method private native loadNextPageForKey(Ljava/lang/String;IIZLcom/facebook/nativeutil/NativeMap;Lcom/facebook/graphservice/interfaces/GraphQLService$OperationCallbacks;Ljava/util/concurrent/Executor;Ljava/lang/String;Z)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
 .end method
 
 .method private native prependEdgeForKey(Ljava/lang/String;Lcom/facebook/graphservice/tree/TreeJNI;)V
@@ -294,7 +294,7 @@
     .locals 5
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -370,11 +370,11 @@
     .line 37
     .line 38
     :cond_0
-    iget-object v0, p0, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mSessionlessMC:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mSessionlessMC:LX/0RP;
 
     .line 39
     .line 40
-    invoke-static {v0}, LX/0Yg;->A0I(LX/0Na;)LX/0ZF;
+    invoke-static {v0}, LX/0X4;->A0O(LX/0RP;)LX/302;
 
     .line 41
     .line 42
@@ -382,230 +382,234 @@
     move-result-object v2
 
     .line 44
-    const-wide v0, 0x20410367000026bdL
+    const-wide v0, 0x204103260000226eL    # 2.537670389210076E-153
 
     .line 45
     .line 46
     .line 47
     .line 48
     .line 49
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    sget-object v3, LX/30J;->A05:LX/30J;
 
     .line 50
     .line 51
+    invoke-virtual {v2, v3, v0, v1}, LX/302;->ABE(LX/30J;J)Z
+
     .line 52
+    .line 53
+    .line 54
     move-result v0
 
-    .line 53
-    if-eqz v0, :cond_4
-
-    .line 54
     .line 55
-    const-string v0, "Null authToken in GraphQLServiceJNI with userId used to init: "
+    if-eqz v0, :cond_4
 
     .line 56
     .line 57
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "Null authToken in GraphQLServiceJNI with userId used to init: "
 
     .line 58
     .line 59
+    invoke-static {v0}, LX/0X7;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 60
+    .line 61
+    .line 62
     move-result-object v4
 
-    .line 61
-    iget-object v0, p0, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mNativeAuthedTigonServiceHolder:Lcom/facebook/tigon/nativeservice/authed/NativeAuthedTigonServiceHolder;
-
-    .line 62
     .line 63
-    iget-object v1, v0, Lcom/facebook/tigon/nativeservice/authed/NativeAuthedTigonServiceHolder;->mViewerContext:Lcom/facebook/auth/viewercontext/ViewerContext;
+    iget-object v0, p0, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mNativeAuthedTigonServiceHolder:Lcom/facebook/tigon/nativeservice/authed/NativeAuthedTigonServiceHolder;
 
     .line 64
     .line 65
-    if-eqz v1, :cond_1
+    iget-object v1, v0, Lcom/facebook/tigon/nativeservice/authed/NativeAuthedTigonServiceHolder;->mViewerContext:Lcom/facebook/auth/viewercontext/ViewerContext;
 
     .line 66
     .line 67
-    iget-object v0, v1, Lcom/facebook/auth/viewercontext/ViewerContext;->mUserId:Ljava/lang/String;
+    if-eqz v1, :cond_1
 
     .line 68
     .line 69
-    :goto_0
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v1, Lcom/facebook/auth/viewercontext/ViewerContext;->mUserId:Ljava/lang/String;
 
     .line 70
     .line 71
-    .line 72
-    const-string v0, " /n and authToken used to init: "
+    :goto_0
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 72
     .line 73
     .line 74
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, " /n and authToken used to init: "
 
     .line 75
     .line 76
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 77
+    .line 78
+    .line 79
     goto :goto_1
 
-    .line 78
+    .line 80
     :cond_1
     const/4 v0, 0x0
 
-    .line 79
+    .line 81
     goto :goto_0
 
-    .line 80
+    .line 82
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 81
-    .line 82
-    iget-object v0, v1, Lcom/facebook/auth/viewercontext/ViewerContext;->mAuthToken:Ljava/lang/String;
-
     .line 83
     .line 84
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    iget-object v0, v1, Lcom/facebook/auth/viewercontext/ViewerContext;->mAuthToken:Ljava/lang/String;
 
     .line 85
     .line 86
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
     .line 87
+    .line 88
+    .line 89
     move-result v1
 
-    .line 88
+    .line 90
     const/4 v0, 0x0
 
-    .line 89
+    .line 91
     if-eqz v1, :cond_3
 
-    .line 90
-    .line 91
+    .line 92
+    .line 93
     :cond_2
     const/4 v0, 0x1
 
-    .line 92
+    .line 94
     :cond_3
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 93
-    .line 94
     .line 95
-    const-string v0, "."
-
     .line 96
     .line 97
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "."
 
     .line 98
     .line 99
-    .line 100
-    const-string v0, " /n"
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 100
     .line 101
     .line 102
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, " /n"
 
     .line 103
     .line 104
-    .line 105
-    invoke-virtual {v4, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 105
     .line 106
     .line 107
-    .line 108
-    iget-object v0, p0, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mSessionlessMC:LX/0Na;
+    invoke-virtual {v4, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 108
     .line 109
     .line 110
-    invoke-static {v0}, LX/0Yg;->A0I(LX/0Na;)LX/0ZF;
+    iget-object v0, p0, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mSessionlessMC:LX/0RP;
 
     .line 111
     .line 112
+    invoke-static {v0}, LX/0X4;->A0O(LX/0RP;)LX/302;
+
     .line 113
+    .line 114
+    .line 115
     move-result-object v2
 
-    .line 114
-    const-wide v0, 0x42036700010970L
-
-    .line 115
     .line 116
+    const-wide v0, 0x42032600010881L
+
     .line 117
     .line 118
     .line 119
-    invoke-static {v2, v0, v1}, LX/0Yi;->A03(LX/35B;J)I
-
     .line 120
     .line 121
+    invoke-static {v3, v2, v0, v1}, LX/302;->A00(LX/30J;LX/302;J)I
+
     .line 122
+    .line 123
+    .line 124
     move-result v3
 
-    .line 123
-    iget-object v0, p0, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mFbErrorReporter:LX/0Na;
-
-    .line 124
     .line 125
-    invoke-static {v0}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
+    iget-object v0, p0, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->mFbErrorReporter:LX/0RP;
 
     .line 126
     .line 127
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
+
     .line 128
+    .line 129
+    .line 130
     move-result-object v2
 
-    .line 129
-    const-string v1, "GraphQLServiceJNINullTokenException"
-
-    .line 130
     .line 131
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v1, "GraphQLServiceJNINullTokenException"
 
     .line 132
     .line 133
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
     .line 134
+    .line 135
+    .line 136
     move-result-object v0
 
-    .line 135
-    invoke-interface {v2, v1, v0, v3}, LX/0Gk;->AoX(Ljava/lang/String;Ljava/lang/String;I)V
-
-    .line 136
     .line 137
-    .line 138
-    :cond_4
-    new-instance v0, LX/1th;
+    invoke-interface {v2, v1, v0, v3}, LX/0Ft;->AnD(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 138
     .line 139
     .line 140
-    invoke-direct {v0, p1, p2}, LX/1th;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;)V
+    :cond_4
+    new-instance v0, LX/1yS;
 
     .line 141
     .line 142
-    .line 143
-    invoke-direct {p0, p1, v0, p3}, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->handleQueryJNI(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
+    invoke-direct {v0, p1, p2}, LX/1yS;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;)V
 
+    .line 143
     .line 144
     .line 145
+    invoke-direct {p0, p1, v0, p3}, Lcom/facebook/graphservice/fb/GraphQLServiceJNI;->handleQueryJNI(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
+
     .line 146
+    .line 147
+    .line 148
     move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 147
+    .line 149
     invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
 
-    .line 148
-    .line 149
     .line 150
+    .line 151
+    .line 152
     return-object v0
 
-    .line 151
+    .line 153
     :catchall_0
     move-exception v0
 
-    .line 152
+    .line 154
     invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
 
-    .line 153
-    .line 154
     .line 155
+    .line 156
+    .line 157
     throw v0
 .end method
 
-.method public native loadPreviousPageForKey(Ljava/lang/String;ILcom/facebook/nativeutil/NativeMap;Lcom/facebook/graphservice/interfaces/GraphQLService$OperationCallbacks;Ljava/util/concurrent/Executor;Ljava/lang/String;ZZILjava/lang/String;)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
+.method public native loadPreviousPageForKey(Ljava/lang/String;ILcom/facebook/nativeutil/NativeMap;Lcom/facebook/graphservice/interfaces/GraphQLService$OperationCallbacks;Ljava/util/concurrent/Executor;Ljava/lang/String;Z)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
 .end method

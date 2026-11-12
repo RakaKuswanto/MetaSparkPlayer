@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract createNativeVideoEncoder()J
+.method public abstract createNative(J)J
 .end method
 
 .method public abstract encode(Lorg/webrtc/VideoFrame;Lorg/webrtc/VideoEncoder$EncodeInfo;)Lorg/webrtc/VideoCodecStatus;

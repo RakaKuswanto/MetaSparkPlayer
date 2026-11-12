@@ -1,67 +1,65 @@
-.class public final LX/5qg;
-.super Ljava/lang/Object;
+.class public final LX/5qG;
+.super LX/5qJ;
 .source ""
 
 
+# instance fields
+.field public final A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public final A01:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public final A02:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public final A03:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public final A04:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+
 # direct methods
-.method public static A00(Ljava/lang/Integer;)Ljava/lang/String;
+.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "waiterThreadUpdater",
+            "waiterNextUpdater",
+            "waitersUpdater",
+            "listenersUpdater",
+            "valueUpdater"
+        }
+    .end annotation
 
     .line 0
-    if-eqz p0, :cond_0
+    invoke-direct {p0}, LX/5qJ;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
-
     .line 3
+    iput-object p1, p0, LX/5qG;->A03:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
     .line 4
     .line 5
-    move-result p0
+    iput-object p2, p0, LX/5qG;->A02:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     .line 6
-    packed-switch p0, :pswitch_data_0
-
     .line 7
+    iput-object p3, p0, LX/5qG;->A04:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
     .line 8
     .line 9
-    const-string p0, "STOPPED"
+    iput-object p4, p0, LX/5qG;->A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     .line 10
     .line 11
-    return-object p0
+    iput-object p5, p0, LX/5qG;->A01:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     .line 12
-    :pswitch_0
-    const-string p0, "PREPARED"
-
     .line 13
-    .line 14
-    return-object p0
-
-    .line 15
-    :pswitch_1
-    const-string p0, "STARTED"
-
-    .line 16
-    .line 17
-    return-object p0
-
-    .line 18
-    :cond_0
-    const-string p0, "null"
-
-    .line 19
-    .line 20
-    return-object p0
-
-    .line 21
-    nop
-
-    .line 22
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    return-void
 .end method

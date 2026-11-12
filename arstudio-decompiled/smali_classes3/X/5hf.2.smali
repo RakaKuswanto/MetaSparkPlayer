@@ -1,16 +1,14 @@
-.class public final LX/5hf;
+.class public final LX/5hF;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:LX/5ZT;
-
-.field public A01:Lcom/facebook/spherical/util/Quaternion;
+.field public final A00:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(I)V
     .locals 0
 
     .line 0
@@ -19,5 +17,9 @@
     .line 1
     .line 2
     .line 3
+    iput p1, p0, LX/5hF;->A00:I
+
+    .line 4
+    .line 5
     return-void
 .end method

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">Jaallachuuwwan Fuulaa %1$s</item>
+        <item quantity="one">%1$s Page like</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">Guyyoota %1$d</item>
+        <item quantity="one">Guyyaa 1</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">"Sa'aatii %1$d"</item>
+        <item quantity="one">"Sa'aatii 1"</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">Daqiiqaa %1$d</item>
+        <item quantity="one">Daqiiqaa 1</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">Torbeewwan %1$d</item>
+        <item quantity="one">Torbee 1</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">Waggaa %1$d</item>
+        <item quantity="one">Waggaa 1</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">"Sa'aatii %1$d dura"</item>
+        <item quantity="one">"Sa'aatii 1 dura"</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d hrs</item>
+        <item quantity="one">"sa'aatii 1"</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">s%1$d</item>
+        <item quantity="one">s1</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">Daqiiqaa %1$d dura</item>
+        <item quantity="one">Daqiiqaa 1 dura</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">d%1$d</item>
+        <item quantity="one">d1</item>
+    </plurals>
+</resources>

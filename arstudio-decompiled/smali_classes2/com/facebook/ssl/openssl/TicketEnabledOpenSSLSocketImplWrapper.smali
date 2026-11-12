@@ -16,7 +16,7 @@
 # instance fields
 .field public A00:Ljava/net/Socket;
 
-.field public final A01:LX/0Gk;
+.field public final A01:LX/0Ft;
 
 
 # direct methods
@@ -37,18 +37,18 @@
     const/4 v3, 0x1
 
     .line 6
-    new-array v2, v3, [Ljava/lang/Class;
+    new-array v1, v3, [Ljava/lang/Class;
 
     .line 7
     .line 8
-    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     .line 9
     .line 10
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
     .line 11
-    invoke-static {v5, v1, v4, v2, v0}, LX/0Yh;->A0h(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
+    invoke-static {v5, v0, v4, v1, v2}, LX/0X6;->A11(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
 
     .line 12
     .line 13
@@ -69,39 +69,43 @@
 
     .line 21
     .line 22
-    const-string/jumbo v0, "getSoSNDTimeout"
+    const-string/jumbo v1, "getSoSNDTimeout"
 
     .line 23
     .line 24
     .line 25
-    invoke-static {v5, v0}, LX/0Yj;->A0W(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
+    new-array v0, v2, [Ljava/lang/Class;
 
     .line 26
     .line 27
+    invoke-virtual {v5, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
     .line 28
+    .line 29
+    .line 30
     move-result-object v0
 
-    .line 29
-    sput-object v0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A02:Ljava/lang/reflect/Method;
-
-    .line 30
     .line 31
-    invoke-virtual {v0, v3}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    sput-object v0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A02:Ljava/lang/reflect/Method;
 
     .line 32
     .line 33
+    invoke-virtual {v0, v3}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
     .line 34
+    .line 35
+    .line 36
     sput-boolean v3, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A04:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 35
-    .line 36
+    .line 37
+    .line 38
     :catchall_0
     return-void
 .end method
 
-.method public constructor <init>(LX/0Gk;Ljava/lang/String;Ljava/net/Socket;Lorg/apache/harmony/xnet/provider/jsse/SSLParametersImpl;IZ)V
+.method public constructor <init>(LX/0Ft;Ljava/lang/String;Ljava/net/Socket;Lorg/apache/harmony/xnet/provider/jsse/SSLParametersImpl;IZ)V
     .locals 6
 
     .line 0
@@ -132,7 +136,7 @@
 
     .line 10
     .line 11
-    iput-object p1, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A01:LX/0Gk;
+    iput-object p1, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A01:LX/0Ft;
 
     .line 12
     .line 13
@@ -162,7 +166,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0, v1}, LX/0Yf;->A0b(Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
+    invoke-static {v0, v1}, LX/0X6;->A0k(Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
 
     .line 9
     .line 10
@@ -175,7 +179,7 @@
     .line 13
     .line 14
     .line 15
-    invoke-static {v0}, LX/0Yh;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X5;->A01(Ljava/lang/Object;)I
 
     .line 16
     .line 17
@@ -192,32 +196,33 @@
     move-exception v2
 
     .line 21
-    iget-object v1, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A01:LX/0Gk;
+    iget-object v1, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A01:LX/0Ft;
 
     .line 22
     .line 23
-    const-string v0, "error_calling_getSoSNDTimeout"
+    const-string/jumbo v0, "error_calling_getSoSNDTimeout"
 
     .line 24
     .line 25
-    invoke-interface {v1, v0, v2}, LX/0Gk;->softReport(Ljava/lang/String;Ljava/lang/Throwable;)V
-
     .line 26
+    invoke-interface {v1, v0, v2}, LX/0Ft;->softReport(Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 27
     .line 28
+    .line 29
     :cond_0
     iget-object v0, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A00:Ljava/net/Socket;
 
-    .line 29
     .line 30
+    .line 31
     invoke-virtual {v0}, Ljava/net/Socket;->getSoTimeout()I
 
-    .line 31
     .line 32
     .line 33
+    .line 34
     move-result v0
 
-    .line 34
+    .line 35
     return v0
 .end method
 
@@ -230,7 +235,7 @@
 .end method
 
 .method public setSoSndTimeout(I)V
-    .locals 3
+    .locals 4
 
     .line 0
     sget-boolean v0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A05:Z
@@ -242,64 +247,68 @@
     .line 3
     .line 4
     :try_start_0
-    sget-object v2, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A03:Ljava/lang/reflect/Method;
+    sget-object v3, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A03:Ljava/lang/reflect/Method;
 
     .line 5
     .line 6
-    iget-object v1, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A00:Ljava/net/Socket;
+    iget-object v2, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A00:Ljava/net/Socket;
 
     .line 7
     .line 8
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 9
     .line 10
     .line 11
-    move-result-object v0
+    move-result-object v1
 
     .line 12
-    invoke-static {v0, p1}, LX/0Yd;->A1U([Ljava/lang/Object;I)V
+    const/4 v0, 0x0
 
     .line 13
+    invoke-static {v1, p1, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+
     .line 14
     .line 15
-    invoke-virtual {v2, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 16
+    invoke-virtual {v3, v2, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 17
     .line 18
+    .line 19
     return-void
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 19
+    .line 20
     :catchall_0
     move-exception v2
 
-    .line 20
-    iget-object v1, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A01:LX/0Gk;
-
     .line 21
+    iget-object v1, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A01:LX/0Ft;
+
     .line 22
-    const-string v0, "error_calling_setSoSndTimeout"
-
     .line 23
-    .line 24
-    invoke-interface {v1, v0, v2}, LX/0Gk;->softReport(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string/jumbo v0, "error_calling_setSoSndTimeout"
 
+    .line 24
     .line 25
     .line 26
+    invoke-interface {v1, v0, v2}, LX/0Ft;->softReport(Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 27
+    .line 28
+    .line 29
     :cond_0
     iget-object v0, p0, Lcom/facebook/ssl/openssl/TicketEnabledOpenSSLSocketImplWrapper;->A00:Ljava/net/Socket;
 
-    .line 28
-    .line 29
-    invoke-virtual {v0, p1}, Ljava/net/Socket;->setSoTimeout(I)V
-
     .line 30
     .line 31
+    invoke-virtual {v0, p1}, Ljava/net/Socket;->setSoTimeout(I)V
+
     .line 32
+    .line 33
+    .line 34
     return-void
 .end method
 

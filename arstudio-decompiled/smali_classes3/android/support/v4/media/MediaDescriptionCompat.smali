@@ -35,11 +35,11 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/51j;
+    new-instance v0, LX/4uA;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/51j;-><init>()V
+    invoke-direct {v0}, LX/4uA;-><init>()V
 
     .line 3
     .line 4
@@ -168,7 +168,7 @@
 
     .line 34
     .line 35
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 36
     .line 37
@@ -269,7 +269,7 @@
 
     .line 11
     .line 12
-    invoke-static {p0}, LX/51i;->A08(Landroid/media/MediaDescription;)Ljava/lang/String;
+    invoke-static {p0}, LX/4u9;->A08(Landroid/media/MediaDescription;)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -277,7 +277,7 @@
     move-result-object v14
 
     .line 16
-    invoke-static {p0}, LX/51i;->A07(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
+    invoke-static {p0}, LX/4u9;->A07(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
 
     .line 17
     .line 18
@@ -285,7 +285,7 @@
     move-result-object v11
 
     .line 20
-    invoke-static {p0}, LX/51i;->A06(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
+    invoke-static {p0}, LX/4u9;->A06(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
 
     .line 21
     .line 22
@@ -293,7 +293,7 @@
     move-result-object v12
 
     .line 24
-    invoke-static {p0}, LX/51i;->A05(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
+    invoke-static {p0}, LX/4u9;->A05(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
 
     .line 25
     .line 26
@@ -301,7 +301,7 @@
     move-result-object v13
 
     .line 28
-    invoke-static {p0}, LX/51i;->A00(Landroid/media/MediaDescription;)Landroid/graphics/Bitmap;
+    invoke-static {p0}, LX/4u9;->A00(Landroid/media/MediaDescription;)Landroid/graphics/Bitmap;
 
     .line 29
     .line 30
@@ -309,7 +309,7 @@
     move-result-object v7
 
     .line 32
-    invoke-static {p0}, LX/51i;->A03(Landroid/media/MediaDescription;)Landroid/net/Uri;
+    invoke-static {p0}, LX/4u9;->A03(Landroid/media/MediaDescription;)Landroid/net/Uri;
 
     .line 33
     .line 34
@@ -317,7 +317,7 @@
     move-result-object v8
 
     .line 36
-    invoke-static {p0}, LX/51i;->A04(Landroid/media/MediaDescription;)Landroid/os/Bundle;
+    invoke-static {p0}, LX/4u9;->A04(Landroid/media/MediaDescription;)Landroid/os/Bundle;
 
     .line 37
     .line 38
@@ -329,7 +329,7 @@
 
     .line 41
     .line 42
-    const-class v0, LX/1Kf;
+    const-class v0, LX/1cW;
 
     .line 43
     .line 44
@@ -380,7 +380,7 @@
 
     .line 64
     .line 65
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_5
 
     .line 66
     .line 67
@@ -412,7 +412,7 @@
     move-result v0
 
     .line 81
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
     .line 82
     .line 83
@@ -427,7 +427,7 @@
     const/4 v0, 0x2
 
     .line 88
-    if-ne v1, v0, :cond_5
+    if-ne v1, v0, :cond_4
 
     .line 89
     .line 90
@@ -458,22 +458,22 @@
 
     .line 100
     :cond_4
-    move-object v3, v10
-
-    .line 101
-    goto :goto_2
-
-    .line 102
-    :cond_5
     invoke-virtual {v6, v4}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
+    .line 101
+    .line 102
     .line 103
-    .line 104
-    .line 105
     invoke-virtual {v6, v2}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
+    .line 104
+    .line 105
     .line 106
+    goto :goto_2
+
     .line 107
+    :cond_5
+    move-object v3, v10
+
     .line 108
     :cond_6
     :goto_2
@@ -492,7 +492,7 @@
 
     .line 114
     .line 115
-    invoke-static {p0}, LX/51k;->A00(Landroid/media/MediaDescription;)Landroid/net/Uri;
+    invoke-static {p0}, LX/4uB;->A00(Landroid/media/MediaDescription;)Landroid/net/Uri;
 
     .line 116
     .line 117
@@ -517,7 +517,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -561,7 +561,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0, v2}, LX/001;->A0J(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 25
     .line 26
@@ -672,7 +672,7 @@
 
     .line 50
     .line 51
-    invoke-static {}, LX/51i;->A01()Landroid/media/MediaDescription$Builder;
+    invoke-static {}, LX/4u9;->A01()Landroid/media/MediaDescription$Builder;
 
     .line 52
     .line 53
@@ -684,7 +684,7 @@
 
     .line 56
     .line 57
-    invoke-static {v5, v0}, LX/51i;->A0F(Landroid/media/MediaDescription$Builder;Ljava/lang/String;)V
+    invoke-static {v5, v0}, LX/4u9;->A0F(Landroid/media/MediaDescription$Builder;Ljava/lang/String;)V
 
     .line 58
     .line 59
@@ -693,7 +693,7 @@
 
     .line 61
     .line 62
-    invoke-static {v5, v0}, LX/51i;->A0E(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
+    invoke-static {v5, v0}, LX/4u9;->A0E(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
 
     .line 63
     .line 64
@@ -702,7 +702,7 @@
 
     .line 66
     .line 67
-    invoke-static {v5, v0}, LX/51i;->A0D(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
+    invoke-static {v5, v0}, LX/4u9;->A0D(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
 
     .line 68
     .line 69
@@ -711,7 +711,7 @@
 
     .line 71
     .line 72
-    invoke-static {v5, v0}, LX/51i;->A0C(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
+    invoke-static {v5, v0}, LX/4u9;->A0C(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
 
     .line 73
     .line 74
@@ -720,7 +720,7 @@
 
     .line 76
     .line 77
-    invoke-static {v0, v5}, LX/51i;->A09(Landroid/graphics/Bitmap;Landroid/media/MediaDescription$Builder;)V
+    invoke-static {v0, v5}, LX/4u9;->A09(Landroid/graphics/Bitmap;Landroid/media/MediaDescription$Builder;)V
 
     .line 78
     .line 79
@@ -729,7 +729,7 @@
 
     .line 81
     .line 82
-    invoke-static {v5, v0}, LX/51i;->A0A(Landroid/media/MediaDescription$Builder;Landroid/net/Uri;)V
+    invoke-static {v5, v0}, LX/4u9;->A0A(Landroid/media/MediaDescription$Builder;Landroid/net/Uri;)V
 
     .line 83
     .line 84
@@ -758,7 +758,7 @@
 
     .line 96
     .line 97
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 98
     .line 99
@@ -789,7 +789,7 @@
     .line 111
     .line 112
     :goto_1
-    invoke-static {v5, v2}, LX/51i;->A0B(Landroid/media/MediaDescription$Builder;Landroid/os/Bundle;)V
+    invoke-static {v5, v2}, LX/4u9;->A0B(Landroid/media/MediaDescription$Builder;Landroid/os/Bundle;)V
 
     .line 113
     .line 114
@@ -802,13 +802,13 @@
 
     .line 118
     .line 119
-    invoke-static {v5, v0}, LX/51k;->A01(Landroid/media/MediaDescription$Builder;Landroid/net/Uri;)V
+    invoke-static {v5, v0}, LX/4uB;->A01(Landroid/media/MediaDescription$Builder;Landroid/net/Uri;)V
 
     .line 120
     .line 121
     .line 122
     :cond_1
-    invoke-static {v5}, LX/51i;->A02(Landroid/media/MediaDescription$Builder;)Landroid/media/MediaDescription;
+    invoke-static {v5}, LX/4u9;->A02(Landroid/media/MediaDescription$Builder;)Landroid/media/MediaDescription;
 
     .line 123
     .line 124

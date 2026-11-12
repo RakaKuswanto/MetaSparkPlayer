@@ -72,11 +72,11 @@
 
     .line 16
     .line 17
-    sget-object v0, LX/0X3;->ANR_RECOVERED:LX/0X3;
+    sget-object v0, LX/0U2;->ANR_RECOVERED:LX/0U2;
 
     .line 18
     .line 19
-    invoke-virtual {v1, v0}, Lcom/facebook/acra/anr/base/AbstractANRDetector;->notifyStateListeners(LX/0X3;)V
+    invoke-virtual {v1, v0}, Lcom/facebook/acra/anr/base/AbstractANRDetector;->notifyStateListeners(LX/0U2;)V
 
     .line 20
     .line 21

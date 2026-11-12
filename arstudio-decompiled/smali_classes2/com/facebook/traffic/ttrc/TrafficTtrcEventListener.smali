@@ -2,22 +2,17 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3j8;
-
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public final mConfigParser:LX/0RP;
 
-.field public final mConfigParser:LX/0Na;
+.field public final mMobileConfig:LX/0RP;
 
-.field public final mMobileConfig:LX/0Na;
-
-.field public final mTrafficTransportMonitor:LX/0Na;
+.field public final mTrafficTransportMonitor:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -26,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 4
     .line 5
@@ -34,15 +29,15 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mMobileConfig:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mMobileConfig:LX/0RP;
 
     .line 8
     .line 9
-    sget v0, LX/2eq;->AaM:I
+    sget v0, LX/2I6;->AXJ:I
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 12
     .line 13
@@ -50,15 +45,15 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mConfigParser:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mConfigParser:LX/0RP;
 
     .line 16
     .line 17
-    sget v0, LX/2eq;->AQN:I
+    sget v0, LX/2I6;->A0z:I
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 20
     .line 21
@@ -66,63 +61,27 @@
     move-result-object v0
 
     .line 23
-    iput-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mTrafficTransportMonitor:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mTrafficTransportMonitor:LX/0RP;
 
     .line 24
     .line 25
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    iput-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->_UL_mInjectionContext:LX/1zG;
-
-    .line 30
-    .line 31
     return-void
 .end method
 
-.method public static final _UL__ULSEP_com_facebook_traffic_ttrc_TrafficTtrcEventListener_ULSEP_FACTORY_METHOD(ILX/1zC;Ljava/lang/Object;)Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;
-    .locals 1
+.method public static final _UL__ULSEP_com_facebook_traffic_ttrc_TrafficTtrcEventListener_ULSEP_FACTORY_METHOD(ILX/3Ft;Ljava/lang/Object;)Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;
+    .locals 0
 
     .line 0
-    sget v0, LX/2eq;->AaR:I
+    new-instance p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;
 
     .line 1
     .line 2
-    if-eq p0, v0, :cond_0
+    invoke-direct {p0}, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;-><init>()V
 
     .line 3
     .line 4
-    invoke-static {p1, p2, v0}, LX/1z6;->A0V(LX/1zC;Ljava/lang/Object;I)Ljava/lang/Object;
-
     .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    check-cast v0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;
-
-    .line 9
-    .line 10
-    return-object v0
-
-    .line 11
-    :cond_0
-    new-instance v0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;
-
-    .line 12
-    .line 13
-    invoke-direct {v0, p1}, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;-><init>(LX/1zC;)V
-
-    .line 14
-    .line 15
-    .line 16
-    return-object v0
+    return-object p0
 .end method
 
 
@@ -131,11 +90,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mTrafficTransportMonitor:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mTrafficTransportMonitor:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -172,7 +131,7 @@
     .line 18
     .line 19
     .line 20
-    invoke-static {v0, v1}, LX/0Yg;->A0o(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X4;->A0n(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 21
     .line 22
@@ -265,11 +224,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mTrafficTransportMonitor:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mTrafficTransportMonitor:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -290,14 +249,14 @@
 .end method
 
 .method public shouldAttachListener(I)Z
-    .locals 3
+    .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mMobileConfig:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mMobileConfig:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 3
     .line 4
@@ -309,88 +268,100 @@
 
     .line 7
     .line 8
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    check-cast v2, LX/302;
 
     .line 9
     .line 10
-    .line 11
-    move-result v0
+    sget-object v3, LX/30J;->A05:LX/30J;
 
+    .line 11
     .line 12
-    if-nez v0, :cond_0
+    invoke-virtual {v2, v3, v0, v1}, LX/302;->ABE(LX/30J;J)Z
 
     .line 13
     .line 14
-    const/4 v0, 0x0
-
     .line 15
-    return v0
+    move-result v0
 
     .line 16
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mMobileConfig:LX/0Na;
+    if-nez v0, :cond_0
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    const/4 v0, 0x0
 
     .line 19
-    .line 20
-    .line 21
-    move-result-object v2
+    return v0
 
+    .line 20
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mMobileConfig:LX/0RP;
+
+    .line 21
     .line 22
-    sget-wide v0, Lcom/facebook/traffic/ttrc/MC$android_traffic_qoe;->qpl_marker_ids_to_attach_traffic_ttrc_event_listener:J
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 23
     .line 24
-    invoke-interface {v2, v0, v1}, LX/35B;->AMY(J)Ljava/lang/String;
-
     .line 25
-    .line 26
-    .line 27
-    move-result-object v1
+    move-result-object v2
 
+    .line 26
+    sget-wide v0, Lcom/facebook/traffic/ttrc/MC$android_traffic_qoe;->qpl_marker_ids_to_attach_traffic_ttrc_event_listener:J
+
+    .line 27
     .line 28
-    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mConfigParser:LX/0Na;
+    check-cast v2, LX/302;
 
     .line 29
     .line 30
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-virtual {v2, v3, v0, v1}, LX/302;->ALF(LX/30J;J)Ljava/lang/String;
 
     .line 31
     .line 32
     .line 33
-    move-result-object v0
+    move-result-object v1
 
     .line 34
-    check-cast v0, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;
+    iget-object v0, p0, Lcom/facebook/traffic/ttrc/TrafficTtrcEventListener;->mConfigParser:LX/0RP;
 
     .line 35
     .line 36
-    invoke-virtual {v0, v1}, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;->parseMarkerIds(Ljava/lang/String;)Ljava/util/Set;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 37
     .line 38
     .line 39
-    move-result-object v1
+    move-result-object v0
 
     .line 40
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast v0, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;
 
     .line 41
     .line 42
+    invoke-virtual {v0, v1}, Lcom/facebook/traffic/ttrc/TrafficTtrcMobileConfigParser;->parseMarkerIds(Ljava/lang/String;)Ljava/util/Set;
+
     .line 43
+    .line 44
+    .line 45
+    move-result-object v1
+
+    .line 46
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 47
+    .line 48
+    .line 49
     move-result-object v0
 
-    .line 44
+    .line 50
     invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    .line 45
-    .line 46
-    .line 47
+    .line 51
+    .line 52
+    .line 53
     move-result v0
 
-    .line 48
+    .line 54
     return v0
 .end method

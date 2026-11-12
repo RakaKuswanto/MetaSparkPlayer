@@ -1,163 +1,78 @@
-.class public final enum LX/2Zb;
-.super Ljava/lang/Enum;
+.class public final LX/2Zb;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/2Zb;
+# instance fields
+.field public A00:Ljava/lang/String;
 
-.field public static final enum OFF:LX/2Zb;
+.field public final A01:LX/0lu;
 
-.field public static final enum ON:LX/2Zb;
+.field public final A02:Landroid/os/Handler;
 
-.field public static final enum UNKNOWN:LX/2Zb;
+.field public final A03:LX/0lu;
+
+.field public final A04:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    const-string v0, "ON"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/4 v6, 0x0
-
     .line 3
-    new-instance v5, LX/2Zb;
+    invoke-static {}, LX/2I6;->A0Q()LX/0lu;
 
     .line 4
     .line 5
-    invoke-direct {v5, v0, v6}, LX/2Zb;-><init>(Ljava/lang/String;I)V
-
     .line 6
+    move-result-object v0
+
     .line 7
+    iput-object v0, p0, LX/2Zb;->A01:LX/0lu;
+
     .line 8
-    sput-object v5, LX/2Zb;->ON:LX/2Zb;
-
     .line 9
-    .line 10
-    const-string v0, "OFF"
+    invoke-static {}, LX/2I6;->A0R()LX/0lu;
 
+    .line 10
     .line 11
     .line 12
-    const/4 v4, 0x1
+    move-result-object v0
 
     .line 13
-    new-instance v3, LX/2Zb;
+    iput-object v0, p0, LX/2Zb;->A03:LX/0lu;
 
     .line 14
     .line 15
-    invoke-direct {v3, v0, v4}, LX/2Zb;-><init>(Ljava/lang/String;I)V
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 16
     .line 17
     .line 18
-    sput-object v3, LX/2Zb;->OFF:LX/2Zb;
+    move-result-object v0
 
     .line 19
+    iput-object v0, p0, LX/2Zb;->A02:Landroid/os/Handler;
+
     .line 20
-    const-string v0, "UNKNOWN"
-
     .line 21
-    .line 22
-    const/4 v2, 0x2
+    new-instance v0, LX/2hT;
 
+    .line 22
     .line 23
-    new-instance v1, LX/2Zb;
+    invoke-direct {v0, p0}, LX/2hT;-><init>(LX/2Zb;)V
 
     .line 24
     .line 25
-    invoke-direct {v1, v0, v2}, LX/2Zb;-><init>(Ljava/lang/String;I)V
-
     .line 26
+    iput-object v0, p0, LX/2Zb;->A04:Ljava/lang/Runnable;
+
     .line 27
     .line 28
-    sput-object v1, LX/2Zb;->UNKNOWN:LX/2Zb;
-
-    .line 29
-    .line 30
-    const/4 v0, 0x3
-
-    .line 31
-    new-array v0, v0, [LX/2Zb;
-
-    .line 32
-    .line 33
-    aput-object v5, v0, v6
-
-    .line 34
-    .line 35
-    aput-object v3, v0, v4
-
-    .line 36
-    .line 37
-    aput-object v1, v0, v2
-
-    .line 38
-    .line 39
-    sput-object v0, LX/2Zb;->$VALUES:[LX/2Zb;
-
-    .line 40
-    .line 41
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/2Zb;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/2Zb;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/2Zb;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/2Zb;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/2Zb;->$VALUES:[LX/2Zb;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/2Zb;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method

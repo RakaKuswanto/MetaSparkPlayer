@@ -1,92 +1,60 @@
-.class public final LX/4T5;
+.class public LX/4T5;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static A00(Landroid/widget/EdgeEffect;)F
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    :try_start_0
-    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->getDistance()F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result p0
-
-    .line 4
-    return p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 5
-    :catchall_0
-    const/4 p0, 0x0
-
-    .line 6
-    return p0
+    return-void
 .end method
 
-.method public static A01(Landroid/widget/EdgeEffect;FF)F
+
+# virtual methods
+.method public A00(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
     .locals 0
 
-    .line 0
-    :try_start_0
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPullDistance(FF)F
-
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
-
-    .line 4
-    return p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 5
-    :catchall_0
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
-
-    .line 6
-    .line 7
-    .line 8
-    const/4 p0, 0x0
-
-    .line 9
-    return p0
+    return-void
 .end method
 
-.method public static A02(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
-    .locals 1
+.method public A01(Landroid/widget/TextView;)Z
+    .locals 2
 
     .line 0
-    :try_start_0
-    new-instance v0, Landroid/widget/EdgeEffect;
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
 
     .line 1
     .line 2
-    invoke-direct {v0, p0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
     .line 3
-    .line 4
-    .line 5
-    return-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v1
 
+    .line 4
+    const-string v0, "getHorizontallyScrolling"
+
+    .line 5
     .line 6
-    :catchall_0
-    new-instance v0, Landroid/widget/EdgeEffect;
+    invoke-static {p1, v1, v0}, LX/4SJ;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 7
     .line 8
-    invoke-direct {v0, p0}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
-
     .line 9
+    move-result-object v0
+
     .line 10
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+
     .line 11
-    return-object v0
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    return v0
 .end method

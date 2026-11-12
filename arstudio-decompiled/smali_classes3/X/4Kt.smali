@@ -2,95 +2,73 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AlertController$3"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/view/View;
+
+.field public final synthetic A01:Landroid/view/View;
+
+.field public final synthetic A02:LX/4Ku;
+
 
 # direct methods
-.method public static final A00(Landroid/content/Context;)Landroid/graphics/Rect;
-    .locals 1
+.method public constructor <init>(Landroid/view/View;Landroid/view/View;LX/4Ku;)V
+    .locals 0
 
     .line 0
-    const-class v0, Landroid/view/WindowManager;
+    iput-object p3, p0, LX/4Kt;->A02:LX/4Ku;
 
     .line 1
     .line 2
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    iput-object p1, p0, LX/4Kt;->A01:Landroid/view/View;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iput-object p2, p0, LX/4Kt;->A00:Landroid/view/View;
 
+    .line 5
     .line 6
-    check-cast v0, Landroid/view/WindowManager;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
     .line 8
-    invoke-interface {v0}, Landroid/view/WindowManager;->getCurrentWindowMetrics()Landroid/view/WindowMetrics;
-
     .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    invoke-virtual {v0}, Landroid/view/WindowMetrics;->getBounds()Landroid/graphics/Rect;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 17
-    .line 18
-    .line 19
-    return-object v0
+    return-void
 .end method
 
-.method public static final A01(Landroid/content/Context;)LX/046;
-    .locals 1
+
+# virtual methods
+.method public final run()V
+    .locals 3
 
     .line 0
-    const-class v0, Landroid/view/WindowManager;
+    iget-object v0, p0, LX/4Kt;->A02:LX/4Ku;
 
     .line 1
     .line 2
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v2, v0, LX/4Ku;->A0H:Landroidx/core/widget/NestedScrollView;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iget-object v1, p0, LX/4Kt;->A01:Landroid/view/View;
 
+    .line 5
     .line 6
-    check-cast v0, Landroid/view/WindowManager;
+    iget-object v0, p0, LX/4Kt;->A00:Landroid/view/View;
 
     .line 7
     .line 8
-    invoke-interface {v0}, Landroid/view/WindowManager;->getCurrentWindowMetrics()Landroid/view/WindowMetrics;
+    invoke-static {v2, v1, v0}, LX/4Ku;->A01(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
     .line 9
     .line 10
     .line 11
-    move-result-object v0
-
-    .line 12
-    invoke-virtual {v0}, Landroid/view/WindowMetrics;->getWindowInsets()Landroid/view/WindowInsets;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    invoke-static {v0}, LX/046;->A02(Landroid/view/WindowInsets;)LX/046;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
-    return-object v0
+    return-void
 .end method

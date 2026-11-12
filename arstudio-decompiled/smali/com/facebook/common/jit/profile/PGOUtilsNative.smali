@@ -30,7 +30,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 12
     .line 13

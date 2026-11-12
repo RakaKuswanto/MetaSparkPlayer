@@ -1,47 +1,64 @@
-.class public abstract LX/1W9;
-.super Ljava/lang/Object;
+.class public abstract LX/1w9;
+.super LX/1pz;
 .source ""
+
+# interfaces
+.implements LX/0aC;
 
 
 # instance fields
-.field public final A00:LX/4Ed;
+.field public A00:LX/1H2;
 
-.field public final A01:Landroid/content/Context;
+.field public A01:LX/1H2;
+
+.field public A02:LX/1hA;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/4Ed;)V
+.method public constructor <init>(LX/1qc;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p1}, LX/1pz;-><init>(LX/1qB;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(LX/1w9;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/1pz;-><init>(LX/1pz;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/1W9;->A01:Landroid/content/Context;
+    iget-object v0, p1, LX/1w9;->A01:LX/1H2;
 
     .line 4
     .line 5
-    iput-object p2, p0, LX/1W9;->A00:LX/4Ed;
+    iput-object v0, p0, LX/1w9;->A01:LX/1H2;
 
     .line 6
     .line 7
-    if-eqz p1, :cond_0
+    iget-object v0, p1, LX/1w9;->A00:LX/1H2;
 
     .line 8
     .line 9
-    invoke-static {}, LX/2VO;->A00()V
+    iput-object v0, p0, LX/1w9;->A00:LX/1H2;
 
     .line 10
     .line 11
-    .line 12
-    const/4 v0, 0x0
+    iget-object v0, p1, LX/1w9;->A02:LX/1hA;
 
+    .line 12
     .line 13
-    throw v0
+    iput-object v0, p0, LX/1w9;->A02:LX/1hA;
 
     .line 14
-    :cond_0
+    .line 15
     return-void
 .end method

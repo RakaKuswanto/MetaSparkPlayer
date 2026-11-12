@@ -1168,7 +1168,7 @@
 
     .line 581
     .line 582
-    invoke-static {v1, v10, v0}, LX/0Yh;->A0j(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
+    invoke-static {v1, v10, v0}, LX/0X5;->A0q(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
 
     .line 583
     .line 584
@@ -1193,203 +1193,214 @@
 
     .line 594
     .line 595
-    const-string v0, "accept-charset"
+    const-string/jumbo v0, "accept-charset"
 
     .line 596
     .line 597
+    .line 598
     aput-object v0, v2, v23
 
-    .line 598
     .line 599
-    const-string v0, "accept-encoding"
-
     .line 600
-    .line 601
-    aput-object v0, v2, v9
+    const-string/jumbo v0, "accept-encoding"
 
+    .line 601
     .line 602
     .line 603
-    const-string v0, "access-control-request-headers"
+    aput-object v0, v2, v9
 
     .line 604
     .line 605
-    aput-object v0, v2, v22
+    const-string/jumbo v0, "access-control-request-headers"
 
     .line 606
     .line 607
-    const-string v0, "access-control-request-method"
-
     .line 608
+    aput-object v0, v2, v22
+
     .line 609
-    aput-object v0, v2, v21
-
     .line 610
-    .line 611
-    const-string v0, "connection"
+    const-string/jumbo v0, "access-control-request-method"
 
+    .line 611
     .line 612
     .line 613
-    aput-object v0, v2, v20
+    aput-object v0, v2, v21
 
     .line 614
     .line 615
-    const-string v0, "content-length"
+    const-string/jumbo v0, "connection"
 
     .line 616
     .line 617
-    aput-object v0, v2, v19
-
     .line 618
+    aput-object v0, v2, v20
+
     .line 619
-    const-string v0, "cookie"
-
     .line 620
-    .line 621
-    aput-object v0, v2, v18
+    const-string/jumbo v0, "content-length"
 
+    .line 621
     .line 622
     .line 623
-    const-string v1, "cookie2"
+    aput-object v0, v2, v19
 
     .line 624
     .line 625
-    const/4 v0, 0x7
+    const-string/jumbo v0, "cookie"
 
     .line 626
-    aput-object v1, v2, v0
-
     .line 627
     .line 628
-    const-string v0, "date"
+    aput-object v0, v2, v18
 
     .line 629
     .line 630
-    aput-object v0, v2, v17
+    const-string/jumbo v1, "cookie2"
 
     .line 631
     .line 632
-    const-string v0, "dnt"
-
     .line 633
+    const/4 v0, 0x7
+
     .line 634
-    aput-object v0, v2, v8
+    aput-object v1, v2, v0
 
     .line 635
     .line 636
-    const-string v0, "expect"
+    const-string/jumbo v0, "date"
 
     .line 637
     .line 638
-    aput-object v0, v2, v16
-
     .line 639
-    .line 640
-    const-string/jumbo v0, "host"
+    aput-object v0, v2, v17
 
+    .line 640
     .line 641
+    const-string/jumbo v0, "dnt"
+
     .line 642
     .line 643
-    aput-object v0, v2, v7
-
     .line 644
-    .line 645
-    const-string/jumbo v0, "keep-alive"
+    aput-object v0, v2, v8
 
+    .line 645
     .line 646
+    const-string/jumbo v0, "expect"
+
     .line 647
     .line 648
-    aput-object v0, v2, v15
-
     .line 649
-    .line 650
-    const-string/jumbo v0, "origin"
+    aput-object v0, v2, v16
 
+    .line 650
     .line 651
+    const-string/jumbo v0, "host"
+
     .line 652
     .line 653
-    aput-object v0, v2, v6
-
     .line 654
+    aput-object v0, v2, v7
+
     .line 655
-    const/16 v1, 0xe
-
     .line 656
-    .line 657
-    const-string/jumbo v0, "referer"
+    const-string/jumbo v0, "keep-alive"
 
+    .line 657
     .line 658
     .line 659
+    aput-object v0, v2, v15
+
     .line 660
-    aput-object v0, v2, v1
-
     .line 661
-    .line 662
-    const-string/jumbo v0, "te"
+    const-string/jumbo v0, "origin"
 
+    .line 662
     .line 663
     .line 664
+    aput-object v0, v2, v6
+
     .line 665
-    aput-object v0, v2, v5
-
     .line 666
+    const/16 v1, 0xe
+
     .line 667
-    const/16 v1, 0x10
-
     .line 668
-    .line 669
-    const-string/jumbo v0, "trailer"
+    const-string/jumbo v0, "referer"
 
+    .line 669
     .line 670
     .line 671
-    .line 672
     aput-object v0, v2, v1
 
+    .line 672
     .line 673
-    .line 674
-    const-string/jumbo v0, "transfer-encoding"
+    const-string/jumbo v0, "te"
 
+    .line 674
     .line 675
     .line 676
+    aput-object v0, v2, v5
+
     .line 677
-    aput-object v0, v2, v4
-
     .line 678
-    .line 679
-    const-string/jumbo v0, "upgrade"
+    const/16 v1, 0x10
 
+    .line 679
     .line 680
+    const-string/jumbo v0, "trailer"
+
     .line 681
     .line 682
-    aput-object v0, v2, v14
-
     .line 683
-    .line 684
-    const-string/jumbo v0, "via"
+    aput-object v0, v2, v1
 
+    .line 684
     .line 685
+    const-string/jumbo v0, "transfer-encoding"
+
     .line 686
     .line 687
-    invoke-static {v0, v2, v3}, LX/0Yh;->A0j(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
-
     .line 688
+    aput-object v0, v2, v4
+
     .line 689
     .line 690
-    move-result-object v1
+    const-string/jumbo v0, "upgrade"
 
     .line 691
-    new-instance v0, Ljava/util/TreeSet;
-
     .line 692
     .line 693
-    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
+    aput-object v0, v2, v14
 
     .line 694
     .line 695
-    .line 696
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/fb4a/HTTPServiceUtil;->FORBIDDEN_HEADERS:Ljava/util/TreeSet;
+    const-string/jumbo v0, "via"
 
+    .line 696
     .line 697
     .line 698
+    invoke-static {v0, v2, v3}, LX/0X5;->A0q(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
+
+    .line 699
+    .line 700
+    .line 701
+    move-result-object v1
+
+    .line 702
+    new-instance v0, Ljava/util/TreeSet;
+
+    .line 703
+    .line 704
+    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
+
+    .line 705
+    .line 706
+    .line 707
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/fb4a/HTTPServiceUtil;->FORBIDDEN_HEADERS:Ljava/util/TreeSet;
+
+    .line 708
+    .line 709
     return-void
 .end method
 
@@ -1405,24 +1416,24 @@
     return-void
 .end method
 
-.method public static final createRequest(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ZLorg/apache/http/client/ResponseHandler;)LX/2t2;
+.method public static final createRequest(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ZLorg/apache/http/client/ResponseHandler;)LX/36g;
     .locals 4
 
     .line 0
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, p3, p4, v0}, LX/0Yc;->A0Q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-static {p1, p3, p4, v0}, LX/0X1;->A13(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-static {p1}, LX/0Yi;->A0p(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X5;->A0e(Ljava/lang/String;)Ljava/lang/String;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v2
+    move-result-object v3
 
     .line 8
     invoke-static {p0}, Ljava/net/URI;->create(Ljava/lang/String;)Ljava/net/URI;
@@ -1438,7 +1449,7 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v3
+    move-result-object v2
 
     .line 16
     const-string/jumbo v0, "https"
@@ -1446,7 +1457,7 @@
     .line 17
     .line 18
     .line 19
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 20
     .line 21
@@ -1454,11 +1465,11 @@
     move-result v0
 
     .line 23
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     .line 24
     .line 25
-    sget-object v3, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/fb4a/HTTPServiceUtil;->FORBIDDEN_PORTS:Ljava/util/TreeSet;
+    sget-object v2, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/fb4a/HTTPServiceUtil;->FORBIDDEN_PORTS:Ljava/util/TreeSet;
 
     .line 26
     .line 27
@@ -1470,7 +1481,7 @@
     move-result v0
 
     .line 31
-    invoke-static {v3, v0}, LX/0Yg;->A1W(Ljava/util/AbstractCollection;I)Z
+    invoke-static {v2, v0}, LX/0X4;->A1W(Ljava/util/AbstractCollection;I)Z
 
     .line 32
     .line 33
@@ -1482,7 +1493,7 @@
 
     .line 36
     .line 37
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     .line 38
     .line 39
@@ -1490,7 +1501,7 @@
 
     .line 40
     .line 41
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 42
     .line 43
@@ -1501,7 +1512,7 @@
     const/4 p0, 0x0
 
     .line 46
-    const-string v3, "\' is not supported"
+    const-string v2, "\' is not supported"
 
     .line 47
     .line 48
@@ -1509,11 +1520,11 @@
 
     .line 49
     .line 50
-    new-instance v2, Lorg/apache/http/client/methods/HttpGet;
+    new-instance v3, Lorg/apache/http/client/methods/HttpGet;
 
     .line 51
     .line 52
-    invoke-direct {v2, v1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/net/URI;)V
+    invoke-direct {v3, v1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/net/URI;)V
 
     .line 53
     .line 54
@@ -1560,7 +1571,7 @@
 
     .line 73
     .line 74
-    invoke-virtual {v2, v1, v0}, Lorg/apache/http/message/AbstractHttpMessage;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v1, v0}, Lorg/apache/http/message/AbstractHttpMessage;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 75
     .line 76
@@ -1577,7 +1588,7 @@
 
     .line 81
     .line 82
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 83
     .line 84
@@ -1585,15 +1596,15 @@
     move-result v0
 
     .line 86
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     .line 87
     .line 88
-    new-instance v2, Lorg/apache/http/client/methods/HttpPost;
+    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
 
     .line 89
     .line 90
-    invoke-direct {v2, v1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/net/URI;)V
+    invoke-direct {v3, v1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/net/URI;)V
 
     .line 91
     .line 92
@@ -1626,7 +1637,7 @@
     move-result-object v0
 
     .line 107
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 108
     .line 109
@@ -1639,7 +1650,7 @@
     move-result-object v1
 
     .line 114
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 115
     .line 116
@@ -1653,7 +1664,7 @@
     .line 120
     .line 121
     .line 122
-    invoke-virtual {v2, v0}, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;->setEntity(Lorg/apache/http/HttpEntity;)V
+    invoke-virtual {v3, v0}, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;->setEntity(Lorg/apache/http/HttpEntity;)V
 
     .line 123
     .line 124
@@ -1670,7 +1681,7 @@
 
     .line 129
     .line 130
-    invoke-static {v1, v0, v3}, LX/0Ye;->A0N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v1, v0, v2}, LX/0X4;->A0c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 131
     .line 132
@@ -1682,115 +1693,111 @@
 
     .line 135
     :cond_3
-    invoke-virtual {v2}, Lorg/apache/http/message/AbstractHttpMessage;->getParams()Lorg/apache/http/params/HttpParams;
+    new-instance v1, LX/36f;
 
     .line 136
     .line 137
+    invoke-direct {v1}, LX/36f;-><init>()V
+
     .line 138
-    move-result-object v0
-
     .line 139
-    invoke-static {v0, p5}, Lorg/apache/http/client/params/HttpClientParams;->setRedirecting(Lorg/apache/http/params/HttpParams;Z)V
-
     .line 140
+    const-string v0, "EFFECT_REQUEST"
+
     .line 141
     .line 142
-    new-instance v1, LX/2t5;
+    iput-object v0, v1, LX/36f;->A0E:Ljava/lang/String;
 
     .line 143
     .line 144
-    invoke-direct {v1}, LX/2t5;-><init>()V
+    const-class v0, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/fb4a/NetworkClientWorkerImpl;
 
     .line 145
     .line 146
-    .line 147
-    const-string v0, "EFFECT_REQUEST"
-
-    .line 148
-    .line 149
-    iput-object v0, v1, LX/2t5;->A0F:Ljava/lang/String;
-
-    .line 150
-    .line 151
-    const-class v0, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/fb4a/NetworkClientWorkerImpl;
-
-    .line 152
-    .line 153
     invoke-static {v0}, Lcom/facebook/common/callercontext/CallerContext;->A00(Ljava/lang/Class;)Lcom/facebook/common/callercontext/CallerContext;
 
+    .line 147
+    .line 148
+    .line 149
+    move-result-object v0
+
+    .line 150
+    iput-object v0, v1, LX/36f;->A08:Lcom/facebook/common/callercontext/CallerContext;
+
+    .line 151
+    .line 152
+    iput-object v3, v1, LX/36f;->A0J:Lorg/apache/http/client/methods/HttpUriRequest;
+
+    .line 153
     .line 154
+    iput-boolean p5, v1, LX/36f;->A0K:Z
+
     .line 155
     .line 156
-    move-result-object v0
+    if-eqz p6, :cond_4
 
     .line 157
-    iput-object v0, v1, LX/2t5;->A08:Lcom/facebook/common/callercontext/CallerContext;
-
     .line 158
+    iput-object p6, v1, LX/36f;->A0I:Lorg/apache/http/client/ResponseHandler;
+
     .line 159
-    iput-object v2, v1, LX/2t5;->A0K:Lorg/apache/http/client/methods/HttpUriRequest;
-
     .line 160
-    .line 161
-    iput-object p6, v1, LX/2t5;->A0J:Lorg/apache/http/client/ResponseHandler;
+    :cond_4
+    invoke-virtual {v1}, LX/36f;->A01()LX/36g;
 
+    .line 161
     .line 162
     .line 163
-    invoke-virtual {v1}, LX/2t5;->A00()LX/2t2;
+    move-result-object v0
 
     .line 164
-    .line 165
-    .line 166
-    move-result-object v0
-
-    .line 167
     return-object v0
 
-    .line 168
-    :cond_4
+    .line 165
+    :cond_5
     const-string v0, "Method \'"
 
+    .line 166
+    .line 167
+    invoke-static {v0, p1, v2}, LX/0X4;->A0c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 168
     .line 169
     .line 170
-    invoke-static {v0, p1, v3}, LX/0Ye;->A0N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    move-result-object v0
 
     .line 171
-    .line 172
-    .line 173
-    move-result-object v0
-
-    .line 174
     throw v0
 
-    .line 175
-    :cond_5
+    .line 172
+    :cond_6
     const-string v0, "Port not supported"
 
+    .line 173
+    .line 174
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 175
     .line 176
     .line 177
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    move-result-object v0
 
     .line 178
-    .line 179
-    .line 180
-    move-result-object v0
-
-    .line 181
     throw v0
 
-    .line 182
-    :cond_6
+    .line 179
+    :cond_7
     const-string v0, "Protocol not supported"
 
+    .line 180
+    .line 181
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 182
     .line 183
     .line 184
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 185
-    .line 186
-    .line 187
     move-result-object v0
 
-    .line 188
+    .line 185
     throw v0
 .end method

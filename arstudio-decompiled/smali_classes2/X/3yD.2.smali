@@ -1,39 +1,36 @@
 .class public final LX/3yD;
-.super LX/459;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/5zv;
 
 
 # instance fields
-.field public A00:Z
-
-.field public final A01:LX/3yu;
-
-.field public final A02:LX/3u3;
-
-.field public final A03:LX/416;
+.field public final synthetic A00:LX/3rV;
 
 
 # direct methods
-.method public constructor <init>(LX/3yu;LX/3u3;LX/416;)V
+.method public constructor <init>(LX/3rV;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/459;-><init>()V
+    iput-object p1, p0, LX/3yD;->A00:LX/3rV;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/3yD;->A01:LX/3yu;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p3, p0, LX/3yD;->A03:LX/416;
+    return-void
+.end method
 
-    .line 6
-    .line 7
-    iput-object p2, p0, LX/3yD;->A02:LX/3u3;
 
-    .line 8
-    .line 9
+# virtual methods
+.method public final AWF(Ljava/lang/Exception;)V
+    .locals 0
+
     return-void
 .end method

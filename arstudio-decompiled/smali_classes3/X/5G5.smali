@@ -3,15 +3,27 @@
 .source ""
 
 
-# static fields
-.field public static A00:J
+# instance fields
+.field public final A00:I
 
-.field public static A01:LX/5G4;
+.field public final A01:I
+
+.field public final A02:J
+
+.field public final A03:LX/5Gi;
+
+.field public final A04:[I
+
+.field public final A05:[I
+
+.field public final A06:[J
+
+.field public final A07:[J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(LX/5Gi;[I[I[J[JIJ)V
+    .locals 6
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,214 +31,218 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-.method public static A00()LX/5G4;
-    .locals 6
-
-    .line 0
-    const-class v5, LX/5G5;
-
-    .line 1
-    .line 2
-    monitor-enter v5
-
-    .line 3
-    :try_start_0
-    sget-object v4, LX/5G5;->A01:LX/5G4;
+    array-length v0, p2
 
     .line 4
+    array-length v5, p5
+
     .line 5
-    if-eqz v4, :cond_0
+    const/4 v4, 0x0
 
     .line 6
+    const/4 v3, 0x1
+
     .line 7
-    iget-object v0, v4, LX/5G4;->A02:LX/5G4;
+    invoke-static {v0, v5}, LX/001;->A1N(II)Z
 
     .line 8
     .line 9
-    sput-object v0, LX/5G5;->A01:LX/5G4;
-
     .line 10
+    move-result v0
+
     .line 11
-    const/4 v0, 0x0
+    invoke-static {v0}, LX/55g;->A04(Z)V
 
     .line 12
-    iput-object v0, v4, LX/5G4;->A02:LX/5G4;
-
     .line 13
     .line 14
-    sget-wide v2, LX/5G5;->A00:J
+    array-length v1, p4
 
     .line 15
-    .line 16
-    const-wide/16 v0, 0x2000
+    invoke-static {v1, v5}, LX/001;->A1N(II)Z
 
+    .line 16
     .line 17
     .line 18
-    sub-long/2addr v2, v0
+    move-result v0
 
     .line 19
-    sput-wide v2, LX/5G5;->A00:J
+    invoke-static {v0}, LX/55g;->A04(Z)V
 
     .line 20
     .line 21
-    monitor-exit v5
-
     .line 22
-    return-object v4
+    array-length v2, p3
 
     .line 23
+    if-ne v2, v5, :cond_0
+
+    .line 24
+    .line 25
+    const/4 v4, 0x1
+
+    .line 26
     :cond_0
-    monitor-exit v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 24
-    new-instance v4, LX/5G4;
-
-    .line 25
-    .line 26
-    invoke-direct {v4}, LX/5G4;-><init>()V
+    invoke-static {v4}, LX/55g;->A04(Z)V
 
     .line 27
     .line 28
     .line 29
-    return-object v4
-
-    .line 30
-    :catchall_0
-    move-exception v0
-
-    .line 31
-    :try_start_1
-    monitor-exit v5
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 32
-    throw v0
-.end method
-
-.method public static A01(LX/5G4;)V
-    .locals 6
-
-    .line 0
-    iget-object v0, p0, LX/5G4;->A02:LX/5G4;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_2
-
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/5G4;->A03:LX/5G4;
-
-    .line 5
-    .line 6
-    if-nez v0, :cond_2
-
-    .line 7
-    .line 8
-    iget-boolean v0, p0, LX/5G4;->A05:Z
-
-    .line 9
-    .line 10
-    if-nez v0, :cond_1
-
-    .line 11
-    .line 12
-    const-class v5, LX/5G5;
-
-    .line 13
-    .line 14
-    monitor-enter v5
-
-    .line 15
-    :try_start_0
-    sget-wide v3, LX/5G5;->A00:J
-
-    .line 16
-    .line 17
-    const-wide/16 v0, 0x2000
-
-    .line 18
-    .line 19
-    add-long/2addr v3, v0
-
-    .line 20
-    const-wide/32 v1, 0x10000
-
-    .line 21
-    .line 22
-    .line 23
-    cmp-long v0, v3, v1
-
-    .line 24
-    .line 25
-    if-gtz v0, :cond_0
-
-    .line 26
-    .line 27
-    sput-wide v3, LX/5G5;->A00:J
-
-    .line 28
-    .line 29
-    sget-object v0, LX/5G5;->A01:LX/5G4;
+    iput-object p1, p0, LX/5G5;->A03:LX/5Gi;
 
     .line 30
     .line 31
-    iput-object v0, p0, LX/5G4;->A02:LX/5G4;
+    iput-object p4, p0, LX/5G5;->A06:[J
 
     .line 32
     .line 33
-    const/4 v0, 0x0
+    iput-object p2, p0, LX/5G5;->A05:[I
 
     .line 34
-    iput v0, p0, LX/5G4;->A00:I
-
     .line 35
+    iput p6, p0, LX/5G5;->A00:I
+
     .line 36
-    iput v0, p0, LX/5G4;->A01:I
+    .line 37
+    iput-object p5, p0, LX/5G5;->A07:[J
+
+    .line 38
+    .line 39
+    iput-object p3, p0, LX/5G5;->A04:[I
+
+    .line 40
+    .line 41
+    iput-wide p7, p0, LX/5G5;->A02:J
+
+    .line 42
+    .line 43
+    iput v1, p0, LX/5G5;->A01:I
+
+    .line 44
+    .line 45
+    if-lez v2, :cond_1
+
+    .line 46
+    .line 47
+    sub-int/2addr v2, v3
+
+    .line 48
+    aget v1, p3, v2
+
+    .line 49
+    .line 50
+    const/high16 v0, 0x20000000
+
+    .line 51
+    .line 52
+    or-int/2addr v1, v0
+
+    .line 53
+    aput v1, p3, v2
+
+    .line 54
+    .line 55
+    :cond_1
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00(J)I
+    .locals 5
+
+    .line 0
+    iget-object v4, p0, LX/5G5;->A07:[J
+
+    .line 1
+    .line 2
+    invoke-static {v4, p1, p2}, Ljava/util/Arrays;->binarySearch([JJ)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v3
+
+    .line 6
+    if-gez v3, :cond_0
+
+    .line 7
+    .line 8
+    xor-int/lit8 v1, v3, -0x1
+
+    .line 9
+    .line 10
+    :goto_0
+    array-length v0, v4
+
+    .line 11
+    if-ge v1, v0, :cond_2
+
+    .line 12
+    .line 13
+    iget-object v0, p0, LX/5G5;->A04:[I
+
+    .line 14
+    .line 15
+    aget v0, v0, v1
+
+    .line 16
+    .line 17
+    and-int/lit8 v0, v0, 0x1
+
+    .line 18
+    .line 19
+    if-nez v0, :cond_3
+
+    .line 20
+    .line 21
+    add-int/lit8 v1, v1, 0x1
+
+    .line 22
+    .line 23
+    goto :goto_0
+
+    .line 24
+    :cond_0
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
+
+    .line 25
+    .line 26
+    array-length v0, v4
+
+    .line 27
+    if-ge v3, v0, :cond_1
+
+    .line 28
+    .line 29
+    aget-wide v1, v4, v3
+
+    .line 30
+    .line 31
+    cmp-long v0, v1, p1
+
+    .line 32
+    .line 33
+    if-nez v0, :cond_1
+
+    .line 34
+    .line 35
+    goto :goto_1
+
+    .line 36
+    :cond_1
+    add-int/lit8 v1, v3, -0x1
 
     .line 37
     .line 38
-    sput-object p0, LX/5G5;->A01:LX/5G4;
+    goto :goto_0
 
     .line 39
-    .line 40
-    :cond_0
-    monitor-exit v5
-
-    .line 41
-    return-void
-
-    .line 42
-    :catchall_0
-    move-exception v0
-
-    .line 43
-    monitor-exit v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 44
-    throw v0
-
-    .line 45
-    :cond_1
-    return-void
-
-    .line 46
     :cond_2
-    invoke-static {}, LX/4BF;->A0y()Ljava/lang/IllegalArgumentException;
+    const/4 v1, -0x1
 
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    throw v0
+    .line 40
+    :cond_3
+    return v1
 .end method

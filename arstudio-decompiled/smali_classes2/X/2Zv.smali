@@ -1,56 +1,238 @@
-.class public final LX/2Zv;
+.class public final LX/2ZV;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbKeyframesAppStateManager$2"
-
-
-# instance fields
-.field public final synthetic A00:Lcom/facebook/keyframes/fb/FbKeyframesAppStateManager;
-
-.field public final synthetic A01:LX/3k6;
+.implements LX/2za;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/keyframes/fb/FbKeyframesAppStateManager;LX/3k6;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/2Zv;->A00:Lcom/facebook/keyframes/fb/FbKeyframesAppStateManager;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/2Zv;->A01:LX/3k6;
-
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final AA9()Lcom/google/common/collect/ImmutableList;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/2Zv;->A01:LX/3k6;
+    const-string/jumbo v1, "You need to bind a "
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/3k6;->A00()V
-
     .line 3
+    const-string v0, "BugReporterConfig"
+
     .line 4
     .line 5
-    return-void
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final ABo()Lcom/google/common/collect/ImmutableList;
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "You need to bind a "
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, "BugReporterConfig"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final ACA()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "You need to bind a "
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, "BugReporterConfig"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final ACx()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "You need to bind a "
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, "BugReporterConfig"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final AJn()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "You need to bind a "
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, "BugReporterConfig"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final AJs()Z
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "You need to bind a "
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, "BugReporterConfig"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final AKh()Z
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "You need to bind a "
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, "BugReporterConfig"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final AOh()Ljava/lang/Boolean;
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "You need to bind a "
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, "BugReporterConfig"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final APT()Ljava/lang/Boolean;
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "You need to bind a "
+
+    .line 1
+    .line 2
+    .line 3
+    const-string v0, "BugReporterConfig"
+
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    throw v0
 .end method

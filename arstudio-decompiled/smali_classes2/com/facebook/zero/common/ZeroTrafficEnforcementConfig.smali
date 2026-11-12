@@ -133,74 +133,75 @@
     .locals 3
 
     .line 0
-    const-string v0, "ZeroTrafficEnforcementConfig:{"
+    const-string/jumbo v0, "ZeroTrafficEnforcementConfig:{"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 3
+    invoke-static {v0}, LX/0X7;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 4
     .line 5
+    .line 6
     move-result-object v2
 
-    .line 6
+    .line 7
     const-string v0, "TorqueEnabled="
 
-    .line 7
     .line 8
+    .line 9
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 9
     .line 10
     .line 11
+    .line 12
     iget-boolean v0, p0, Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;->mTorqueEnabled:Z
 
-    .line 12
     .line 13
+    .line 14
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 14
     .line 15
     .line 16
+    .line 17
     const-string v0, ", PassRate="
 
-    .line 17
     .line 18
+    .line 19
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 19
     .line 20
     .line 21
+    .line 22
     iget-wide v0, p0, Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;->mPassRate:D
 
-    .line 22
     .line 23
+    .line 24
     invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    .line 24
     .line 25
     .line 26
+    .line 27
     const-string v0, ", SubnetsWhiteList="
 
-    .line 27
     .line 28
+    .line 29
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 29
     .line 30
     .line 31
+    .line 32
     iget-object v0, p0, Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;->mSubnetsWhiteList:Lcom/google/common/collect/ImmutableList;
 
-    .line 32
     .line 33
-    invoke-static {v0, v2}, LX/0Yd;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 34
+    invoke-static {v0, v2}, LX/0X1;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 35
     .line 36
+    .line 37
     move-result-object v0
 
-    .line 37
+    .line 38
     return-object v0
 .end method

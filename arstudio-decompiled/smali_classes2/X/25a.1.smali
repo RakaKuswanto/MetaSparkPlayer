@@ -1,61 +1,31 @@
 .class public final LX/25a;
-.super LX/24p;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:Lcom/google/common/collect/ImmutableList;
+# instance fields
+.field public final A00:Landroid/content/Intent;
+
+.field public final A01:Ljava/util/Collection;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Intent;Ljava/util/Collection;)V
+    .locals 0
 
     .line 0
-    sget-object v2, LX/25Z;->A00:LX/24w;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    sget-object v1, LX/25Z;->A01:LX/24w;
-
     .line 3
-    .line 4
-    sget-object v0, LX/25Z;->A02:LX/24w;
+    iput-object p1, p0, LX/25a;->A00:Landroid/content/Intent;
 
-    .line 5
-    .line 6
-    invoke-static {v2, v1, v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    sput-object v0, LX/25a;->A00:Lcom/google/common/collect/ImmutableList;
-
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    .line 0
-    sget-object v1, LX/25a;->A00:Lcom/google/common/collect/ImmutableList;
-
-    .line 1
-    .line 2
-    const-string/jumbo v0, "preferences"
-
-    .line 3
     .line 4
     .line 5
-    invoke-direct {p0, v0, v1}, LX/24p;-><init>(Ljava/lang/String;Lcom/google/common/collect/ImmutableList;)V
+    iput-object p2, p0, LX/25a;->A01:Ljava/util/Collection;
 
     .line 6
     .line 7
-    .line 8
     return-void
 .end method

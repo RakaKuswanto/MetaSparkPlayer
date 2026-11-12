@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1yF;
+.implements LX/206;
 .implements Lcom/facebook/graphservice/interfaces/GraphQLConsistency;
 
 
@@ -24,7 +24,7 @@
     .locals 1
 
     .line 0
-    instance-of v0, p0, LX/1sw;
+    instance-of v0, p0, LX/1wa;
 
     .line 1
     .line 2
@@ -35,11 +35,11 @@
     move-object v0, p0
 
     .line 5
-    check-cast v0, LX/1sw;
+    check-cast v0, LX/1wa;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/1sw;->A00:Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;
+    iget-object v0, v0, LX/1wa;->A00:Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;
 
     .line 8
     .line 9
@@ -86,7 +86,7 @@
     return-object v0
 .end method
 
-.method public final applyOptimisticBuilder(LX/19O;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public final applyOptimisticBuilder(LX/1gF;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
 
     .line 0
@@ -98,7 +98,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1, p2, p3}, Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;->applyOptimisticBuilder(LX/19O;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {v0, p1, p2, p3}, Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;->applyOptimisticBuilder(LX/1gF;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 5
     .line 6
@@ -155,7 +155,7 @@
     return-object v0
 .end method
 
-.method public final publishBuilder(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public final publishBuilder(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
 
     .line 0
@@ -167,7 +167,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;->publishBuilder(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {v0, p1}, Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;->publishBuilder(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 5
     .line 6
@@ -178,7 +178,7 @@
     return-object v0
 .end method
 
-.method public final publishBuilderWithFullConsistency(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public final publishBuilderWithFullConsistency(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
 
     .line 0
@@ -190,7 +190,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;->publishBuilderWithFullConsistency(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {v0, p1}, Lcom/facebook/graphservice/fb/GraphQLConsistencyJNI;->publishBuilderWithFullConsistency(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 5
     .line 6
@@ -228,11 +228,11 @@
     .locals 2
 
     .line 0
-    new-instance v1, LX/1su;
+    new-instance v1, LX/1yQ;
 
     .line 1
     .line 2
-    invoke-direct {v1, p2}, LX/1su;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;)V
+    invoke-direct {v1, p2}, LX/1yQ;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;)V
 
     .line 3
     .line 4
@@ -260,11 +260,11 @@
     .locals 2
 
     .line 0
-    new-instance v1, LX/1su;
+    new-instance v1, LX/1yQ;
 
     .line 1
     .line 2
-    invoke-direct {v1, p2}, LX/1su;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;)V
+    invoke-direct {v1, p2}, LX/1yQ;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;)V
 
     .line 3
     .line 4

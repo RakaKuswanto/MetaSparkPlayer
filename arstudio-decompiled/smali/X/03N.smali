@@ -1,103 +1,101 @@
-.class public final LX/03N;
+.class public abstract LX/03N;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public static A00(Landroid/view/View;I)Landroid/view/View;
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
 
-    if-eq p0, v0, :cond_9
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
 
-    const/4 v0, 0x2
+    .line 4
+    return-object p0
+.end method
 
-    if-eq p0, v0, :cond_8
+.method public static A01(Landroid/view/View;)Ljava/lang/CharSequence;
+    .locals 0
 
-    const/4 v0, 0x3
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->getAccessibilityPaneTitle()Ljava/lang/CharSequence;
 
-    if-eq p0, v0, :cond_7
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
 
-    const/4 v0, 0x4
+    .line 4
+    return-object p0
+.end method
 
-    if-eq p0, v0, :cond_6
+.method public static A02(Landroid/view/View;Ljava/lang/CharSequence;)V
+    .locals 0
 
-    const/16 v0, 0x15dc
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAccessibilityPaneTitle(Ljava/lang/CharSequence;)V
 
-    if-eq p0, v0, :cond_5
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    const/16 v0, 0x1779
+.method public static A03(Landroid/view/View;Z)V
+    .locals 0
 
-    if-eq p0, v0, :cond_4
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAccessibilityHeading(Z)V
 
-    const/16 v0, 0x2043
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    if-eq p0, v0, :cond_3
+.method public static A04(Landroid/view/View;Z)V
+    .locals 0
 
-    const/16 v0, 0x2ef5
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setScreenReaderFocusable(Z)V
 
-    if-eq p0, v0, :cond_2
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    const/16 v0, 0x32b0
+.method public static A05(Landroid/view/View;)Z
+    .locals 0
 
-    if-eq p0, v0, :cond_1
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->isAccessibilityHeading()Z
 
-    const/16 v0, 0x351c
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
 
-    if-eq p0, v0, :cond_0
+    .line 4
+    return p0
+.end method
 
-    const-string v0, "UNDEFINED_QPL_EVENT"
+.method public static A06(Landroid/view/View;)Z
+    .locals 0
 
-    return-object v0
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->isScreenReaderFocusable()Z
 
-    :cond_0
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_MEDIA_CAROUSEL_THUMBNAILS_TTI"
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
 
-    return-object v0
-
-    :cond_1
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_BRANDED_CONTENT_AD_TTI"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_CLIPS_TTI"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_LIVE_TTI"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_COMPONENT_TTI"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_IGTV_TTI"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_ACCOUNT_TTI"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_PRODUCTS_TTI"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_POSTS_TTI"
-
-    return-object v0
-
-    :cond_9
-    const-string v0, "IG_INSIGHTS_IG_INSIGHTS_STORIES_TTI"
-
-    return-object v0
+    .line 4
+    return p0
 .end method

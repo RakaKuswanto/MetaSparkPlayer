@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract ATf(Landroid/net/Uri;LX/69a;LX/3fn;)Landroid/net/Uri;
+.method public abstract queryInterface(Ljava/lang/Class;)Ljava/lang/Object;
 .end method

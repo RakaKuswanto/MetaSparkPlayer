@@ -1,4 +1,4 @@
-.class public final LX/5RL;
+.class public final synthetic LX/5RL;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,113 +7,77 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FutureList$1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ExoPlayerImplInternal2$$ExternalSyntheticLambda2"
 
 
 # instance fields
-.field public final synthetic A00:LX/5RE;
+.field public final synthetic A00:LX/5QU;
 
-.field public final synthetic A01:LX/5RH;
+.field public final synthetic A01:LX/5R1;
 
 
 # direct methods
-.method public constructor <init>(LX/5RE;LX/5RH;)V
+.method public synthetic constructor <init>(LX/5QU;LX/5R1;)V
     .locals 0
 
-    .line 0
-    iput-object p2, p0, LX/5RL;->A01:LX/5RH;
-
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/5RL;->A00:LX/5RE;
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
+    iput-object p1, p0, LX/5RL;->A00:LX/5QU;
+
+    iput-object p2, p0, LX/5RL;->A01:LX/5R1;
+
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 3
 
     .line 0
-    iget-object v3, p0, LX/5RL;->A01:LX/5RH;
+    iget-object v0, p0, LX/5RL;->A01:LX/5R1;
 
     .line 1
     .line 2
-    iget-object v2, p0, LX/5RL;->A00:LX/5RE;
+    :try_start_0
+    invoke-static {v0}, LX/5QU;->A0N(LX/5R1;)V
 
     .line 3
     .line 4
-    iget-object v1, v3, LX/5RH;->A03:Ljava/util/concurrent/locks/ReentrantLock;
-
     .line 5
+    goto :goto_0
+    :try_end_0
+    .catch LX/5Mm; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 6
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    :catch_0
+    move-exception v2
 
     .line 7
+    const-string v1, "ExoPlayerImplInternal"
+
     .line 8
     .line 9
-    :try_start_0
-    iget-object v0, v3, LX/5RH;->A00:Ljava/util/ArrayList;
+    const-string v0, "Unexpected error delivering message on external thread."
 
     .line 10
     .line 11
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+    invoke-static {v1, v0, v2}, LX/5DZ;->A05(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 12
     .line 13
     .line 14
-    move-result v0
+    invoke-static {v2}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 15
-    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
-
     .line 16
     .line 17
+    move-result-object v0
+
     .line 18
-    iget-object v0, v3, LX/5RH;->A01:Ljava/util/Queue;
+    throw v0
 
     .line 19
-    .line 20
-    invoke-interface {v0, v2}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
-
-    .line 21
-    .line 22
-    .line 23
-    iget-object v0, v3, LX/5RH;->A02:Ljava/util/concurrent/locks/Condition;
-
-    .line 24
-    .line 25
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->signal()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 26
-    .line 27
-    .line 28
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    .line 29
-    .line 30
-    .line 31
+    :goto_0
     return-void
-
-    .line 32
-    :catchall_0
-    move-exception v0
-
-    .line 33
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    .line 34
-    .line 35
-    .line 36
-    throw v0
 .end method

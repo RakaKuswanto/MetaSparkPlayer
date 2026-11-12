@@ -15,3 +15,59 @@
     .line 3
     return-void
 .end method
+
+
+# virtual methods
+.method public final bridge synthetic A09(LX/40d;LX/6Hz;Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    check-cast p3, Lcom/facebook/ipc/composer/model/CrossUniverseSingleInstagramData;
+
+    .line 1
+    .line 2
+    invoke-virtual {p1}, LX/40d;->A0Q()V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-boolean v1, p3, Lcom/facebook/ipc/composer/model/CrossUniverseSingleInstagramData;->A01:Z
+
+    .line 6
+    .line 7
+    const-string/jumbo v0, "requires_additional_auth"
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {p1, v0}, LX/40d;->A0a(Ljava/lang/String;)V
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-virtual {p1, v1}, LX/40d;->A0i(Z)V
+
+    .line 14
+    .line 15
+    .line 16
+    iget-object v1, p3, Lcom/facebook/ipc/composer/model/CrossUniverseSingleInstagramData;->A00:Ljava/lang/String;
+
+    .line 17
+    .line 18
+    const-string/jumbo v0, "username"
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-static {p1, v0, v1}, LX/27L;->A0S(LX/40d;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {p1}, LX/40d;->A0N()V
+
+    .line 25
+    .line 26
+    .line 27
+    return-void
+.end method

@@ -39,7 +39,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 4
     .line 5
@@ -219,7 +219,7 @@
     const/4 v0, 0x0
 
     .line 23
-    invoke-static {p0, v1, v0}, LX/002;->A0O(Ljava/io/File;[Ljava/lang/Object;I)V
+    invoke-static {p0, v1, v0}, LX/001;->A0q(Ljava/io/File;[Ljava/lang/Object;I)V
 
     .line 24
     .line 25
@@ -228,7 +228,7 @@
 
     .line 27
     .line 28
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 29
     .line 30
@@ -252,7 +252,7 @@
 
     .line 4
     .line 5
-    invoke-static {p0, v0}, LX/001;->A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/001;->A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
 
     .line 6
     .line 7
@@ -261,7 +261,7 @@
 
     .line 9
     .line 10
-    invoke-static {p0, v0}, LX/001;->A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/001;->A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -270,7 +270,7 @@
 
     .line 14
     .line 15
-    invoke-static {p0, v0}, LX/001;->A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/001;->A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
 
     .line 16
     .line 17
@@ -279,7 +279,7 @@
 
     .line 19
     .line 20
-    invoke-static {p0, v0}, LX/001;->A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/001;->A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
 
     .line 21
     .line 22
@@ -288,7 +288,7 @@
 
     .line 24
     .line 25
-    invoke-static {p0, v0}, LX/001;->A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/001;->A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
 
     .line 26
     .line 27
@@ -297,7 +297,7 @@
 
     .line 29
     .line 30
-    invoke-static {p0, v0}, LX/001;->A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/001;->A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
 
     .line 31
     .line 32
@@ -306,7 +306,7 @@
 
     .line 34
     .line 35
-    invoke-static {p0, v0}, LX/001;->A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/001;->A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
 
     .line 36
     .line 37
@@ -315,7 +315,7 @@
 
     .line 39
     .line 40
-    invoke-static {p0, v0}, LX/001;->A0g(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/001;->A0m(Lcom/facebook/acra/anrreport/ANRReport;Ljava/lang/String;)V
 
     .line 41
     .line 42
@@ -336,7 +336,7 @@
 
     .line 49
     .line 50
-    invoke-static {v0, v3}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v3}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 51
     .line 52
@@ -348,7 +348,7 @@
 
     .line 55
     .line 56
-    invoke-static {v0, v3}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v3}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 57
     .line 58
@@ -537,32 +537,34 @@
     .line 19
     .line 20
     .line 21
-    iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRDataProvider:Lcom/facebook/acra/anr/ANRDataProvider;
+    iget-object v5, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
     .line 22
     .line 23
-    if-eqz v0, :cond_0
+    const v4, 0x7fffffff
 
     .line 24
     .line 25
-    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mContext:Landroid/content/Context;
-
     .line 26
+    const/4 v3, 0x0
+
     .line 27
-    const v0, 0x61acc3c9
+    new-array v2, v6, [Lcom/facebook/acra/ErrorReporter$CrashReportType;
 
     .line 28
     .line 29
+    const/4 v1, 0x0
+
     .line 30
-    invoke-static {v1, v0}, LX/0YP;->A00(Landroid/content/Context;I)Ljava/io/File;
+    sget-object v0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->CACHED_ANR_REPORT:Lcom/facebook/acra/ErrorReporter$CrashReportType;
 
     .line 31
     .line 32
-    .line 33
-    move-result-object v0
+    aput-object v0, v2, v1
 
+    .line 33
     .line 34
-    invoke-static {v0}, Lcom/facebook/acra/anrreport/ANRReport;->purgeDirectory(Ljava/io/File;)V
+    invoke-virtual {v5, v4, v3, v6, v2}, Lcom/facebook/acra/ErrorReporter;->prepareReports(ILcom/facebook/acra/FileGenerator;Z[Lcom/facebook/acra/ErrorReporter$CrashReportType;)I
 
     .line 35
     .line 36
@@ -570,52 +572,16 @@
     return-void
 
     .line 38
-    :cond_0
-    iget-object v5, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
-
-    .line 39
-    .line 40
-    const v4, 0x7fffffff
-
-    .line 41
-    .line 42
-    .line 43
-    const/4 v3, 0x0
-
-    .line 44
-    new-array v2, v6, [Lcom/facebook/acra/ErrorReporter$CrashReportType;
-
-    .line 45
-    .line 46
-    const/4 v1, 0x0
-
-    .line 47
-    sget-object v0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->CACHED_ANR_REPORT:Lcom/facebook/acra/ErrorReporter$CrashReportType;
-
-    .line 48
-    .line 49
-    aput-object v0, v2, v1
-
-    .line 50
-    .line 51
-    invoke-virtual {v5, v4, v3, v6, v2}, Lcom/facebook/acra/ErrorReporter;->prepareReports(ILcom/facebook/acra/FileGenerator;Z[Lcom/facebook/acra/ErrorReporter$CrashReportType;)I
-
-    .line 52
-    .line 53
-    .line 54
-    return-void
-
-    .line 55
     :catchall_0
     move-exception v0
 
-    .line 56
+    .line 39
     :try_start_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 57
+    .line 40
     throw v0
 .end method
 
@@ -631,114 +597,104 @@
 .end method
 
 .method public logAmExpiration(J)V
-    .locals 4
+    .locals 3
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 1
     .line 2
-    monitor-enter v3
+    monitor-enter v2
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 4
     .line 5
-    const-string v1, "anr_am_expired_uptime"
+    const-string v0, "anr_am_expired_uptime"
 
     .line 6
     .line 7
-    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v0, v1, p1, p2}, LX/001;->A0y(Ljava/lang/Object;Ljava/util/Map;J)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
-
-    .line 11
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    .line 14
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->addProcessErrorPropertiesToErrorReport()V
 
-    .line 15
-    .line 16
-    .line 17
-    monitor-exit v3
+    .line 11
+    .line 12
+    .line 13
+    monitor-exit v2
 
-    .line 18
+    .line 14
     return-void
 
-    .line 19
+    .line 15
     :catchall_0
     move-exception v0
 
-    .line 20
-    monitor-exit v3
+    .line 16
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
+    .line 17
     throw v0
 .end method
 
+.method public synthetic logAnrState(LX/0U2;)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public logExtraSigquit(J)V
-    .locals 4
+    .locals 3
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 1
     .line 2
-    monitor-enter v3
+    monitor-enter v2
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 4
     .line 5
-    const-string v1, "anr_extra_sigquit_uptime"
+    const-string v0, "anr_extra_sigquit_uptime"
 
     .line 6
     .line 7
-    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v0, v1, p1, p2}, LX/001;->A0y(Ljava/lang/Object;Ljava/util/Map;J)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
-
-    .line 11
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    .line 14
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->addProcessErrorPropertiesToErrorReport()V
 
-    .line 15
-    .line 16
-    .line 17
-    monitor-exit v3
+    .line 11
+    .line 12
+    .line 13
+    monitor-exit v2
 
-    .line 18
+    .line 14
     return-void
 
-    .line 19
+    .line 15
     :catchall_0
     move-exception v0
 
-    .line 20
-    monitor-exit v3
+    .line 16
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
+    .line 17
     throw v0
 .end method
 
@@ -820,58 +776,50 @@
 .end method
 
 .method public logMainThreadUnblocked(J)V
-    .locals 4
+    .locals 3
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 1
     .line 2
-    monitor-enter v3
+    monitor-enter v2
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 4
     .line 5
-    const-string v1, "anr_main_thread_unblocked_uptime"
+    const-string v0, "anr_main_thread_unblocked_uptime"
 
     .line 6
     .line 7
-    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v0, v1, p1, p2}, LX/001;->A0y(Ljava/lang/Object;Ljava/util/Map;J)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
-
-    .line 11
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    .line 14
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->addProcessErrorPropertiesToErrorReport()V
 
-    .line 15
-    .line 16
-    .line 17
-    monitor-exit v3
+    .line 11
+    .line 12
+    .line 13
+    monitor-exit v2
 
-    .line 18
+    .line 14
     return-void
 
-    .line 19
+    .line 15
     :catchall_0
     move-exception v0
 
-    .line 20
-    monitor-exit v3
+    .line 16
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
+    .line 17
     throw v0
 .end method
 
@@ -898,7 +846,7 @@
 
     .line 7
     .line 8
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 9
     .line 10
@@ -948,7 +896,7 @@
 
     .line 35
     .line 36
-    invoke-static {v0, v1}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 37
     .line 38
@@ -1030,135 +978,119 @@
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 4
     .line 5
-    const-string v1, "anr_process_error_detection_failure_time"
+    const-string v0, "anr_process_error_detection_failure_time"
 
     .line 6
     .line 7
-    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v0, v1, p1, p2}, LX/001;->A0y(Ljava/lang/Object;Ljava/util/Map;J)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
+    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 11
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 12
+    const-string v1, "anr_process_error_detection_failure_cause"
+
     .line 13
     .line 14
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    invoke-static {p3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     .line 15
     .line 16
-    const-string v1, "anr_process_error_detection_failure_cause"
-
     .line 17
+    move-result-object v0
+
     .line 18
-    invoke-static {p3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 19
     .line 20
     .line 21
-    move-result-object v0
-
-    .line 22
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 23
-    .line 24
-    .line 25
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->addProcessErrorPropertiesToErrorReport()V
 
-    .line 26
-    .line 27
-    .line 28
+    .line 22
+    .line 23
+    .line 24
     monitor-exit v3
 
-    .line 29
+    .line 25
     return-void
 
-    .line 30
+    .line 26
     :catchall_0
     move-exception v0
 
-    .line 31
+    .line 27
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 32
+    .line 28
     throw v0
 .end method
 
 .method public logProcessMonitorStart(J)V
-    .locals 4
+    .locals 3
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 1
     .line 2
-    monitor-enter v3
+    monitor-enter v2
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 4
     .line 5
-    const-string v1, "anr_process_error_started_time"
+    const-string v0, "anr_process_error_started_time"
 
     .line 6
     .line 7
-    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v0, v1, p1, p2}, LX/001;->A0y(Ljava/lang/Object;Ljava/util/Map;J)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
+    const/4 v0, 0x1
 
     .line 11
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mCurrentAnrProcessStateIndex:I
 
     .line 12
     .line 13
-    .line 14
-    const/4 v0, 0x1
-
-    .line 15
-    iput v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mCurrentAnrProcessStateIndex:I
-
-    .line 16
-    .line 17
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->addProcessErrorPropertiesToErrorReport()V
 
-    .line 18
-    .line 19
-    .line 20
-    monitor-exit v3
+    .line 14
+    .line 15
+    .line 16
+    monitor-exit v2
 
-    .line 21
+    .line 17
     return-void
 
-    .line 22
+    .line 18
     :catchall_0
     move-exception v0
 
-    .line 23
-    monitor-exit v3
+    .line 19
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
+    .line 20
     throw v0
 .end method
 
-.method public logSigquitData(Ljava/lang/String;Ljava/lang/String;JJJJLX/0M3;LX/0M3;)V
+.method public logSigquitData(Ljava/lang/String;Ljava/lang/String;JJJJLX/0Kh;LX/0Kh;)V
     .locals 4
 
     .line 0
@@ -1170,193 +1102,177 @@
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 4
     .line 5
-    const-string v1, "anr_java_callback_uptime"
+    const-string v0, "anr_java_callback_uptime"
 
     .line 6
     .line 7
-    invoke-static {p3, p4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v0, v1, p3, p4}, LX/001;->A0y(Ljava/lang/Object;Ljava/util/Map;J)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
-
-    .line 11
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    .line 14
     if-nez p1, :cond_0
 
-    .line 15
-    .line 16
+    .line 11
+    .line 12
     if-eqz p2, :cond_1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 17
-    .line 18
+    .line 13
+    .line 14
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
-    .line 19
-    .line 20
+    .line 15
+    .line 16
     invoke-virtual {v0, p1, p2}, Lcom/facebook/acra/ErrorReporter;->amendANRReportWithSigquitData(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 17
+    .line 18
+    .line 19
+    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+
+    .line 20
     .line 21
+    const-string v1, "anr_with_sigquit_traces"
+
     .line 22
     .line 23
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    const-string v0, "1"
 
     .line 24
     .line 25
-    const-string v1, "anr_with_sigquit_traces"
+    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 26
     .line 27
-    const-string v0, "1"
-
     .line 28
-    .line 29
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 30
-    .line 31
-    .line 32
     goto :goto_0
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 33
+    .line 29
     :catch_0
     move-exception v2
 
-    .line 34
+    .line 30
     :try_start_2
     sget-object v1, Lcom/facebook/acra/anrreport/ANRReport;->LOG_TAG:Ljava/lang/String;
 
-    .line 35
-    .line 36
+    .line 31
+    .line 32
     const-string v0, "Failed to save SIGQUIT"
 
-    .line 37
-    .line 38
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 33
+    .line 34
+    invoke-static {v1, v0, v2}, LX/0Il;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 39
-    .line 40
-    .line 41
+    .line 35
+    .line 36
+    .line 37
     :cond_1
     :goto_0
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->addProcessErrorPropertiesToErrorReport()V
 
-    .line 42
-    .line 43
-    .line 44
+    .line 38
+    .line 39
+    .line 40
     monitor-exit v3
 
-    .line 45
+    .line 41
     return-void
 
-    .line 46
+    .line 42
     :catchall_0
     move-exception v0
 
-    .line 47
+    .line 43
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 48
+    .line 44
     throw v0
 .end method
 
 .method public logSystemInfo(Ljava/lang/String;Ljava/lang/String;J)V
-    .locals 4
+    .locals 3
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 1
     .line 2
-    monitor-enter v3
+    monitor-enter v2
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 4
     .line 5
-    const-string v1, "anr_process_error_detected_time"
+    const-string v0, "anr_process_error_detected_time"
 
     .line 6
     .line 7
-    invoke-static {p3, p4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-static {v0, v1, p3, p4}, LX/001;->A0y(Ljava/lang/Object;Ljava/util/Map;J)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     .line 11
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 12
+    const-string v0, "anr_system_error_msg"
+
     .line 13
     .line 14
-    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    invoke-interface {v1, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 15
     .line 16
-    const-string v0, "anr_system_error_msg"
-
     .line 17
-    .line 18
-    invoke-interface {v1, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
+    .line 18
     .line 19
+    const-string v0, "anr_system_tag"
+
     .line 20
     .line 21
-    iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
+    invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 22
     .line 23
-    const-string v0, "anr_system_tag"
-
     .line 24
-    .line 25
-    invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 26
-    .line 27
-    .line 28
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->addProcessErrorPropertiesToErrorReport()V
 
-    .line 29
-    .line 30
-    .line 31
-    monitor-exit v3
+    .line 25
+    .line 26
+    .line 27
+    monitor-exit v2
 
-    .line 32
+    .line 28
     return-void
 
-    .line 33
+    .line 29
     :catchall_0
     move-exception v0
 
-    .line 34
-    monitor-exit v3
+    .line 30
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 35
+    .line 31
     throw v0
 .end method
 
@@ -1382,10 +1298,10 @@
     return-void
 .end method
 
-.method public startReport(ZLjava/lang/String;Ljava/lang/String;IZZJJJJLjava/lang/String;Ljava/lang/String;ZZLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;LX/0M3;LX/0M3;)V
+.method public startReport(ZLjava/lang/String;Ljava/lang/String;IZZJJJJLjava/lang/String;Ljava/lang/String;ZZLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;LX/0Kh;LX/0Kh;LX/0U2;)V
     .locals 6
 
-    .line 46746
+    .line 49088
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
     invoke-virtual {v0}, Lcom/facebook/acra/ErrorReporter;->getAppStartTickTimeMs()J
@@ -1394,7 +1310,7 @@
 
     sub-long v2, p7, v0
 
-    .line 46747
+    .line 49089
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
     invoke-virtual {v0}, Lcom/facebook/acra/ErrorReporter;->getAppStartTickTimeMs()J
@@ -1403,103 +1319,103 @@
 
     sub-long/2addr p9, v0
 
-    .line 46748
+    .line 49090
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mPerformanceMarker:Lcom/facebook/acra/PerformanceMarker;
 
     if-eqz v0, :cond_0
 
-    .line 46749
+    .line 49091
     invoke-interface {v0}, Lcom/facebook/acra/PerformanceMarker;->markerStart()V
 
-    .line 46750
+    .line 49092
     :cond_0
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->initializeProcessErrorPropertiesOnErrorReport()V
 
     const-string v1, "anr_detected_uptime"
 
-    .line 46751
+    .line 49093
     invoke-static {p7, p8}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46752
+    .line 49094
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_detect_time_tag"
 
-    .line 46753
+    .line 49095
     invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46754
+    .line 49096
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_recovery_delay"
 
     const-string v0, "-1"
 
-    .line 46755
+    .line 49097
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_detected_pre_gkstore"
 
-    .line 46756
+    .line 49098
     invoke-static {p1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46757
+    .line 49099
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_detector_id"
 
-    .line 46758
+    .line 49100
     invoke-static {p4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46759
+    .line 49101
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_detector_start_time"
 
-    .line 46760
+    .line 49102
     invoke-static/range {p9 .. p10}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46761
+    .line 49103
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_started_in_foreground"
 
-    .line 46762
+    .line 49104
     invoke-static {p5}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46763
+    .line 49105
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_started_in_foreground_v2"
 
-    .line 46764
+    .line 49106
     invoke-static {p6}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46765
+    .line 49107
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_java_callback_uptime"
 
-    .line 46766
+    .line 49108
     invoke-static/range {p19 .. p19}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46767
+    .line 49109
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v2, 0x0
@@ -1508,7 +1424,7 @@
 
     if-lez v0, :cond_1
 
-    .line 46768
+    .line 49110
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
     invoke-virtual {v0}, Lcom/facebook/acra/ErrorReporter;->getAppStartTickTimeMs()J
@@ -1519,12 +1435,12 @@
 
     const-string v1, "anr_detector_actual_start_time"
 
-    .line 46769
+    .line 49111
     invoke-static/range {p11 .. p12}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46770
+    .line 49112
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
@@ -1532,7 +1448,7 @@
 
     if-lez v0, :cond_2
 
-    .line 46771
+    .line 49113
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
     invoke-virtual {v0}, Lcom/facebook/acra/ErrorReporter;->getAppStartTickTimeMs()J
@@ -1543,55 +1459,55 @@
 
     const-string v1, "anr_detector_switch_time"
 
-    .line 46772
+    .line 49114
     invoke-static/range {p13 .. p14}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46773
+    .line 49115
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     const-string v0, "black_box_trace"
 
-    .line 46774
+    .line 49116
     invoke-static {v0, p2}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "long_stall_trace"
 
-    .line 46775
+    .line 49117
     invoke-static {v0, p3}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "anr_async_broadcast_receivers"
 
-    .line 46776
+    .line 49118
     invoke-static {}, Lcom/facebook/acra/asyncbroadcastreceiver/AsyncBroadcastReceiverObserver;->blameActiveReceivers()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46777
+    .line 49119
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "first_sigquit"
 
     const/4 v3, 0x0
 
-    .line 46778
+    .line 49120
     invoke-static {v0, v3}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p18, :cond_3
 
     const-string v1, "anr_sigquit_records"
 
-    .line 46779
+    .line 49121
     invoke-static/range {p19 .. p19}, Lcom/facebook/acra/anr/SigquitRecord;->getRecordsJson(Ljava/lang/Long;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46780
+    .line 49122
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46781
+    .line 49123
     :cond_3
     invoke-static {}, Lcom/facebook/acra/ACRA;->getCachedShouldDedupDiskPersistence()Z
 
@@ -1604,38 +1520,38 @@
 
     const-string v0, "1"
 
-    .line 46782
+    .line 49124
     :goto_0
     invoke-static {v1, v0}, Lcom/facebook/acra/ErrorReporter;->putCustomDataInternal(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 46783
+    .line 49125
     :cond_4
     const-string v0, "0"
 
     goto :goto_0
 
-    .line 46784
+    .line 49126
     :goto_1
     if-nez p16, :cond_a
 
     if-eqz v5, :cond_5
 
-    .line 46785
+    .line 49127
     new-instance v4, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v4}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     goto :goto_2
 
-    .line 46786
+    .line 49128
     :cond_5
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mTracesFile:Ljava/io/File;
 
     if-nez v0, :cond_6
 
-    .line 46787
+    .line 49129
     iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mContext:Landroid/content/Context;
 
     const-string v1, ".stacktrace"
@@ -1644,36 +1560,36 @@
 
     invoke-direct {v0, v2, v1}, Lcom/facebook/acra/anrreport/ANRReport$TraceUUIDFileGenerator;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 46788
+    .line 49130
     invoke-virtual {v0}, Lcom/facebook/acra/anrreport/ANRReport$TraceUUIDFileGenerator;->generate()Ljava/io/File;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mTracesFile:Ljava/io/File;
 
-    .line 46789
+    .line 49131
     :cond_6
     new-instance v4, Ljava/io/FileOutputStream;
 
     invoke-direct {v4, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 46790
+    .line 49132
     :goto_2
     move-object v3, v4
 
-    .line 46791
+    .line 49133
     move-object/from16 v2, p15
 
     if-eqz p15, :cond_8
 
-    .line 46792
+    .line 49134
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v4}, Ljava/io/PrintWriter;-><init>(Ljava/io/OutputStream;)V
 
     if-nez v5, :cond_7
 
-    .line 46793
+    .line 49135
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
     invoke-virtual {v0}, Lcom/facebook/acra/ErrorReporter;->getAppVersionCode()Ljava/lang/String;
@@ -1682,7 +1598,7 @@
 
     invoke-virtual {v1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 46794
+    .line 49136
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
     invoke-virtual {v0}, Lcom/facebook/acra/ErrorReporter;->getAppVersionName()Ljava/lang/String;
@@ -1691,11 +1607,11 @@
 
     invoke-virtual {v1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 46795
+    .line 49137
     :cond_7
     invoke-virtual {v1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 46796
+    .line 49138
     invoke-virtual {v1}, Ljava/io/Writer;->flush()V
 
     :cond_8
@@ -1703,19 +1619,19 @@
 
     goto :goto_3
 
-    .line 46797
+    .line 49139
     :cond_9
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mTracesFile:Ljava/io/File;
 
-    .line 46798
+    .line 49140
     invoke-virtual {v0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mTracesFile:Ljava/io/File;
 
-    .line 46799
+    .line 49141
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
-    .line 46800
+    .line 49142
     iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
     iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mTracesFile:Ljava/io/File;
@@ -1726,23 +1642,23 @@
 
     goto :goto_4
 
-    .line 46801
+    .line 49143
     :cond_a
     iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
-    .line 46802
-    invoke-static/range {p16 .. p16}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    .line 49144
+    invoke-static/range {p16 .. p16}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 46803
+    .line 49145
     iget-object v0, p0, Lcom/facebook/acra/anrreport/ANRReport;->mFileGenerator:Lcom/facebook/acra/anrreport/ANRReport$TraceUUIDFileGenerator;
 
     invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/ErrorReporter;->prepareANRReport(Ljava/io/File;Lcom/facebook/acra/FileGenerator;)V
 
     goto :goto_4
 
-    .line 46804
+    .line 49146
     :goto_3
     iget-object v2, p0, Lcom/facebook/acra/anrreport/ANRReport;->mErrorReporter:Lcom/facebook/acra/ErrorReporter;
 
@@ -1754,7 +1670,7 @@
 
     invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/ErrorReporter;->prepareANRReport(Ljava/lang/String;Lcom/facebook/acra/FileGenerator;)I
 
-    .line 46805
+    .line 49147
     :goto_4
     iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mPerformanceMarker:Lcom/facebook/acra/PerformanceMarker;
 
@@ -1762,30 +1678,30 @@
 
     const/4 v0, 0x2
 
-    .line 46806
+    .line 49148
     invoke-interface {v1, v0}, Lcom/facebook/acra/PerformanceMarker;->markerEnd(S)V
 
-    .line 46807
+    .line 49149
     :cond_b
     if-eqz v3, :cond_c
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 46808
+    .line 49150
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
-    .line 46809
+    .line 49151
     :cond_c
     iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mANRProcessErrorProperties:Ljava/util/Map;
 
     monitor-enter v1
 
-    .line 46810
+    .line 49152
     :try_start_1
     invoke-direct {p0}, Lcom/facebook/acra/anrreport/ANRReport;->addProcessErrorPropertiesToErrorReport()V
 
-    .line 46811
+    .line 49153
     monitor-exit v1
 
     return-void
@@ -1802,7 +1718,7 @@
     :catch_0
     move-exception v2
 
-    .line 46812
+    .line 49154
     :try_start_2
     iget-object v1, p0, Lcom/facebook/acra/anrreport/ANRReport;->mPerformanceMarker:Lcom/facebook/acra/PerformanceMarker;
 
@@ -1810,26 +1726,26 @@
 
     const/4 v0, 0x3
 
-    .line 46813
+    .line 49155
     invoke-interface {v1, v0}, Lcom/facebook/acra/PerformanceMarker;->markerEnd(S)V
 
-    .line 46814
+    .line 49156
     :cond_d
     throw v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 46815
+    .line 49157
     :catchall_1
     move-exception v0
 
-    .line 46816
+    .line 49158
     if-eqz v3, :cond_e
 
-    .line 46817
+    .line 49159
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
-    .line 46818
+    .line 49160
     :cond_e
     throw v0
 .end method

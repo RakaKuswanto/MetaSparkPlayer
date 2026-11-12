@@ -9,7 +9,7 @@
 # instance fields
 .field public final synthetic val$category:Ljava/lang/String;
 
-.field public final synthetic val$ex:LX/0Oh;
+.field public final synthetic val$ex:LX/0WE;
 
 .field public final synthetic val$freq:I
 
@@ -17,11 +17,11 @@
 
 
 # direct methods
-.method public constructor <init>(LX/0Oh;Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(LX/0WE;Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/common/dextricks/DexTricksErrorReporter$1;->val$ex:LX/0Oh;
+    iput-object p1, p0, Lcom/facebook/common/dextricks/DexTricksErrorReporter$1;->val$ex:LX/0WE;
 
     .line 1
     .line 2
@@ -61,7 +61,7 @@
     .line 3
     .line 4
     .line 5
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 6
     .line 7
@@ -73,7 +73,7 @@
 
     .line 10
     .line 11
-    iget-object v2, p0, Lcom/facebook/common/dextricks/DexTricksErrorReporter$1;->val$ex:LX/0Oh;
+    iget-object v2, p0, Lcom/facebook/common/dextricks/DexTricksErrorReporter$1;->val$ex:LX/0WE;
 
     .line 12
     .line 13
@@ -141,7 +141,7 @@
 
     .line 46
     .line 47
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 48
     .line 49
@@ -154,17 +154,17 @@
     .line 52
     .line 53
     .line 54
-    invoke-static {v3, v3, v3, v1}, LX/0ML;->A02(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v3, v3, v3, v1}, LX/0Kx;->A02(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     .line 55
     .line 56
     .line 57
-    invoke-static {v1, v2, v0}, LX/0ML;->A03(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, LX/0Kx;->A03(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
     .line 59
     .line 60
-    invoke-static {}, LX/0ML;->A00()LX/0ML;
+    invoke-static {}, LX/0Kx;->A00()LX/0Kx;
 
     .line 61
     .line 62
@@ -172,7 +172,7 @@
     move-result-object v0
 
     .line 64
-    invoke-virtual {v0, v1}, LX/0ML;->A04(Ljava/util/Map;)V
+    invoke-virtual {v0, v1}, LX/0Kx;->A04(Ljava/util/Map;)V
 
     .line 65
     .line 66

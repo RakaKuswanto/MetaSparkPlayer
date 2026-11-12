@@ -1,213 +1,166 @@
-.class public final LX/5qC;
-.super Ljava/lang/Object;
+.class public abstract LX/5qC;
+.super LX/6Zb;
 .source ""
 
 
-# instance fields
-.field public volatile A00:LX/5rP;
+# static fields
+.field public static final A00:LX/5qX;
 
-.field public volatile A01:LX/5dF;
+.field public static final A01:LX/6ar;
+
+
+# instance fields
+.field public volatile remaining:I
+
+.field public volatile seenExceptions:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 5
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v4, LX/5qC;
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00(LX/5pZ;IIIJJ)V
-    .locals 10
-
-    .line 0
-    iget-object v5, p0, LX/5qC;->A00:LX/5rP;
-
-    .line 1
-    .line 2
-    if-eqz v5, :cond_0
+    new-instance v0, LX/6ar;
 
     .line 3
     .line 4
-    long-to-int v9, p5
+    invoke-direct {v0, v4}, LX/6ar;-><init>(Ljava/lang/Class;)V
 
     .line 5
-    iget-object v0, v5, LX/5rP;->A00:LX/5q1;
-
     .line 6
     .line 7
-    move-wide/from16 v1, p7
+    sput-object v0, LX/5qC;->A01:LX/6ar;
 
     .line 8
     .line 9
-    iput-wide v1, v0, LX/5q1;->A01:J
+    const/4 v3, 0x0
 
     .line 10
+    :try_start_0
+    const-class v1, Ljava/util/Set;
+
     .line 11
-    iget-object v2, v0, LX/5q1;->A0D:Landroid/os/Handler;
-
     .line 12
+    const-string v0, "seenExceptions"
+
     .line 13
-    if-eqz v2, :cond_0
-
     .line 14
-    .line 15
-    new-instance v3, LX/5q6;
+    invoke-static {v4, v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
+    .line 15
     .line 16
     .line 17
-    move-object v4, p1
+    move-result-object v2
 
     .line 18
-    move v6, p2
+    const-string v0, "remaining"
 
     .line 19
-    move v7, p3
-
     .line 20
-    move v8, p4
+    invoke-static {v4, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     .line 21
-    invoke-direct/range {v3 .. v9}, LX/5q6;-><init>(LX/5pZ;LX/5rP;IIII)V
-
     .line 22
     .line 23
+    move-result-object v1
+
     .line 24
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    new-instance v0, LX/5qM;
 
     .line 25
     .line 26
+    invoke-direct {v0, v1, v2}, LX/5qM;-><init>(Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
+
     .line 27
-    move-result-object v1
-
     .line 28
-    invoke-virtual {v2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
     .line 29
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 30
+    :catchall_0
+    move-exception v3
+
     .line 31
-    move-result-object v0
+    new-instance v0, LX/5qP;
 
     .line 32
-    if-ne v1, v0, :cond_1
-
     .line 33
-    .line 34
-    invoke-virtual {v3}, LX/5q6;->run()V
+    invoke-direct {v0}, LX/5qP;-><init>()V
 
+    .line 34
     .line 35
     .line 36
-    .line 37
-    :cond_0
-    return-void
+    :goto_0
+    sput-object v0, LX/5qC;->A00:LX/5qX;
 
+    .line 37
     .line 38
-    :cond_1
-    invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-eqz v3, :cond_0
 
     .line 39
     .line 40
+    sget-object v0, LX/5qC;->A01:LX/6ar;
+
     .line 41
+    .line 42
+    invoke-virtual {v0}, LX/6ar;->A00()Ljava/util/logging/Logger;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v2
+
+    .line 46
+    sget-object v1, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
+
+    .line 47
+    .line 48
+    const-string v0, "SafeAtomicHelper is broken!"
+
+    .line 49
+    .line 50
+    invoke-virtual {v2, v1, v0, v3}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 51
+    .line 52
+    .line 53
+    :cond_0
     return-void
 .end method
 
-.method public final A01([BIIIJJ)V
-    .locals 10
+.method public constructor <init>(I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "remainingFutures"
+        }
+    .end annotation
 
     .line 0
-    iget-object v4, p0, LX/5qC;->A00:LX/5rP;
+    invoke-direct {p0}, LX/6Zb;-><init>()V
 
     .line 1
     .line 2
-    if-eqz v4, :cond_0
-
     .line 3
+    const/4 v0, 0x0
+
     .line 4
-    long-to-int v9, p5
+    iput-object v0, p0, LX/5qC;->seenExceptions:Ljava/util/Set;
 
     .line 5
-    iget-object v0, v4, LX/5rP;->A00:LX/5q1;
-
     .line 6
+    iput p1, p0, LX/5qC;->remaining:I
+
     .line 7
-    move-wide/from16 v1, p7
-
     .line 8
-    .line 9
-    iput-wide v1, v0, LX/5q1;->A01:J
-
-    .line 10
-    .line 11
-    iget-object v2, v0, LX/5q1;->A0D:Landroid/os/Handler;
-
-    .line 12
-    .line 13
-    if-eqz v2, :cond_0
-
-    .line 14
-    .line 15
-    new-instance v3, LX/5q7;
-
-    .line 16
-    .line 17
-    move-object v5, p1
-
-    .line 18
-    move v6, p2
-
-    .line 19
-    move v7, p3
-
-    .line 20
-    move v8, p4
-
-    .line 21
-    invoke-direct/range {v3 .. v9}, LX/5q7;-><init>(LX/5rP;[BIIII)V
-
-    .line 22
-    .line 23
-    .line 24
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v1
-
-    .line 28
-    invoke-virtual {v2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    if-ne v1, v0, :cond_1
-
-    .line 33
-    .line 34
-    invoke-virtual {v3}, LX/5q7;->run()V
-
-    .line 35
-    .line 36
-    .line 37
-    :cond_0
-    return-void
-
-    .line 38
-    :cond_1
-    invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 39
-    .line 40
-    .line 41
     return-void
 .end method

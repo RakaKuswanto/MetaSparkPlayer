@@ -1,130 +1,178 @@
 .class public final LX/3SP;
-.super Ljava/lang/Object;
+.super LX/3SM;
 .source ""
-
-# interfaces
-.implements LX/3Vf;
-.implements Ljava/lang/Cloneable;
 
 
 # static fields
-.field public static final A00:LX/3Sd;
+.field public static final A01:LX/3SP;
 
-.field public static final A01:LX/3Sd;
 
-.field public static final A02:LX/3Sd;
-
-.field public static final A03:LX/3WB;
-
-.field public static final A04:LX/3WB;
+# instance fields
+.field public final A00:[B
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .line 0
-    const-string v1, "MqttThriftHeader"
+    const/4 v0, 0x0
+
+    .line 1
+    new-array v1, v0, [B
+
+    .line 2
+    .line 3
+    new-instance v0, LX/3SP;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1}, LX/3SP;-><init>([B)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/3SP;->A01:LX/3SP;
+
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public constructor <init>([B)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, LX/3SM;-><init>()V
 
     .line 1
     .line 2
-    new-instance v0, LX/3WB;
+    .line 3
+    iput-object p1, p0, LX/3SP;->A00:[B
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A3s()LX/3ns;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/3ns;->VALUE_EMBEDDED_OBJECT:LX/3ns;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    if-ne p1, p0, :cond_0
+
+    .line 1
+    .line 2
+    const/4 v0, 0x1
 
     .line 3
+    return v0
+
     .line 4
-    invoke-direct {v0, v1}, LX/3WB;-><init>(Ljava/lang/String;)V
+    :cond_0
+    const/4 v2, 0x0
 
     .line 5
+    if-eqz p1, :cond_1
+
     .line 6
     .line 7
-    sput-object v0, LX/3SP;->A03:LX/3WB;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 8
     .line 9
-    const-string v1, "ForegroundState"
-
     .line 10
+    move-result-object v1
+
     .line 11
-    new-instance v0, LX/3WB;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 12
     .line 13
-    invoke-direct {v0, v1}, LX/3WB;-><init>(Ljava/lang/String;)V
-
     .line 14
+    move-result-object v0
+
     .line 15
+    if-ne v1, v0, :cond_1
+
     .line 16
-    sput-object v0, LX/3SP;->A04:LX/3WB;
-
     .line 17
-    .line 18
-    const-string/jumbo v1, "inForegroundApp"
+    check-cast p1, LX/3SP;
 
+    .line 18
     .line 19
+    iget-object v1, p1, LX/3SP;->A00:[B
+
     .line 20
     .line 21
-    const/4 v0, 0x2
+    iget-object v0, p0, LX/3SP;->A00:[B
 
     .line 22
-    invoke-static {v1, v0}, LX/3Sd;->A00(Ljava/lang/String;B)LX/3Sd;
-
     .line 23
+    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([B[B)Z
+
     .line 24
     .line 25
-    move-result-object v0
-
     .line 26
-    sput-object v0, LX/3SP;->A01:LX/3Sd;
+    move-result v0
 
     .line 27
+    return v0
+
     .line 28
-    const-string v2, "clientRequestId"
+    :cond_1
+    return v2
+.end method
 
-    .line 29
-    .line 30
-    const/16 v1, 0xb
+.method public final hashCode()I
+    .locals 1
 
-    .line 31
-    .line 32
-    const/16 v0, 0x9
+    .line 0
+    iget-object v0, p0, LX/3SP;->A00:[B
 
-    .line 33
-    .line 34
-    invoke-static {v2, v1, v0}, LX/3Sd;->A01(Ljava/lang/String;BS)LX/3Sd;
+    .line 1
+    .line 2
+    array-length v0, v0
 
-    .line 35
-    .line 36
-    .line 37
+    .line 3
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    sget-object v2, LX/41d;->A01:LX/41Q;
+
+    .line 1
+    .line 2
+    iget-object v1, p0, LX/3SP;->A00:[B
+
+    .line 3
+    .line 4
+    const/4 v0, 0x1
+
+    .line 5
+    invoke-virtual {v2, v1, v0}, LX/41Q;->A02([BZ)Ljava/lang/String;
+
+    .line 6
+    .line 7
+    .line 8
     move-result-object v0
 
-    .line 38
-    sput-object v0, LX/3SP;->A00:LX/3Sd;
-
-    .line 39
-    .line 40
-    const-string/jumbo v2, "keepAliveTimeout"
-
-    .line 41
-    .line 42
-    .line 43
-    const/16 v1, 0x8
-
-    .line 44
-    .line 45
-    const/4 v0, 0x3
-
-    .line 46
-    invoke-static {v2, v1, v0}, LX/3Sd;->A01(Ljava/lang/String;BS)LX/3Sd;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    sput-object v0, LX/3SP;->A02:LX/3Sd;
-
-    .line 51
-    .line 52
-    return-void
+    .line 9
+    return-object v0
 .end method

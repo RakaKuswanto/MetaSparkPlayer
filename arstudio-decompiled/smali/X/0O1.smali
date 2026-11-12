@@ -1,158 +1,80 @@
-.class public final LX/0O1;
+.class public abstract LX/0O1;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/04Y;
-
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static A00()Ljavax/net/ssl/X509TrustManager;
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    const-class v2, Landroid/content/res/AssetManager;
 
     .line 1
     .line 2
+    const-string v1, "getSystem"
+
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AHH()Ljava/util/ArrayList;
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
     .line 4
-    const-string v1, "android.intent.action.BOOT_COMPLETED"
+    const/4 v3, 0x0
 
     .line 5
+    new-array v0, v3, [Ljava/lang/Class;
+
     .line 6
-    new-instance v0, Landroid/content/IntentFilter;
-
     .line 7
-    .line 8
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
+    .line 8
     .line 9
     .line 10
+    move-result-object v2
+
     .line 11
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x0
 
     .line 12
+    new-array v0, v3, [Ljava/lang/Object;
+
     .line 13
     .line 14
-    const-string v1, "com.facebook.android.intent.action.BOOT_COMPLETED"
+    invoke-virtual {v2, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 15
     .line 16
-    new-instance v0, Landroid/content/IntentFilter;
-
     .line 17
-    .line 18
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    .line 19
-    .line 20
-    .line 21
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 22
-    .line 23
-    .line 24
-    const-string v1, "com.instagram.android.intent.action.BOOT_COMPLETED"
-
-    .line 25
-    .line 26
-    new-instance v0, Landroid/content/IntentFilter;
-
-    .line 27
-    .line 28
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    .line 29
-    .line 30
-    .line 31
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 32
-    .line 33
-    .line 34
-    return-object v2
-.end method
-
-.method public final Abi(Landroid/content/Context;Landroid/content/Intent;LX/04w;)V
-    .locals 5
-
-    .line 0
-    invoke-static {p1}, LX/0O9;->A00(Landroid/content/Context;)LX/0O9;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v4
-
-    .line 4
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-wide v2
-
-    .line 8
-    const-wide/16 v0, 0x3e8
-
-    .line 9
-    .line 10
-    div-long/2addr v2, v0
-
-    .line 11
-    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v2
-
-    .line 15
-    const-string v1, "last_boot_completed_s"
-
-    .line 16
-    .line 17
-    iget-object v0, v4, LX/0O9;->A00:Landroid/content/SharedPreferences;
+    invoke-static {}, LX/0Pj;->A00()Ljavax/net/ssl/X509TrustManager;
 
     .line 18
     .line 19
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
     .line 20
-    .line 21
-    .line 22
     move-result-object v0
 
+    .line 21
+    return-object v0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 22
+    :catch_0
+    move-exception v2
+
     .line 23
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v1, "Failure reinitializing TrustManager"
 
     .line 24
     .line 25
-    .line 26
-    move-result-object v0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
+    .line 26
     .line 27
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 28
     .line 29
     .line 30
-    return-void
+    throw v0
 .end method

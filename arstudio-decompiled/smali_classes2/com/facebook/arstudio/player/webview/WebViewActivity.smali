@@ -4,14 +4,14 @@
 
 
 # instance fields
-.field public final A00:LX/1Nm;
+.field public final A00:LX/0lu;
 
-.field public final A01:LX/1Nm;
+.field public final A01:LX/0lu;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Lcom/facebook/base/activity/FbFragmentActivity;-><init>()V
@@ -19,164 +19,172 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->Agg:I
+    sget v0, LX/2I6;->AYQ:I
 
     .line 4
     .line 5
-    invoke-static {p0, v0}, LX/1PK;->A00(Landroid/content/Context;I)LX/1Nm;
+    new-instance v1, LX/3FX;
 
     .line 6
     .line 7
+    invoke-direct {v1, p0, v0}, LX/3FX;-><init>(Landroid/content/Context;I)V
+
     .line 8
-    move-result-object v0
-
     .line 9
-    iput-object v0, p0, Lcom/facebook/arstudio/player/webview/WebViewActivity;->A01:LX/1Nm;
-
     .line 10
+    new-instance v0, LX/0lu;
+
     .line 11
-    sget v0, LX/2eq;->Abx:I
-
     .line 12
-    .line 13
-    invoke-static {p0, v0}, LX/1PK;->A00(Landroid/content/Context;I)LX/1Nm;
+    invoke-direct {v0, v1}, LX/0lu;-><init>(LX/0RP;)V
 
+    .line 13
     .line 14
     .line 15
-    .line 16
-    move-result-object v0
+    iput-object v0, p0, Lcom/facebook/arstudio/player/webview/WebViewActivity;->A01:LX/0lu;
 
+    .line 16
     .line 17
-    iput-object v0, p0, Lcom/facebook/arstudio/player/webview/WebViewActivity;->A00:LX/1Nm;
+    sget v0, LX/2I6;->AUM:I
 
     .line 18
     .line 19
+    invoke-static {v0}, LX/0jq;->A00(I)LX/0lu;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    iput-object v0, p0, Lcom/facebook/arstudio/player/webview/WebViewActivity;->A00:LX/0lu;
+
+    .line 24
+    .line 25
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0K(Landroid/os/Bundle;)V
+.method public final A1I(Landroid/os/Bundle;)V
     .locals 10
 
     .line 0
-    const v0, 0x7f0d0027
+    invoke-static {p0}, Lcom/facebook/base/activity/FbFragmentActivity;->A0D(Lcom/facebook/base/activity/FbFragmentActivity;)LX/2Sv;
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/base/activity/FbFragmentActivity;->setContentView(I)V
+    const v0, 0x7f0c0027
 
     .line 4
     .line 5
     .line 6
-    const v0, 0x7f0a05e7
+    invoke-virtual {p0, v0}, Lcom/facebook/base/activity/FbFragmentActivity;->setContentView(I)V
 
     .line 7
     .line 8
     .line 9
-    invoke-static {p0, v0}, LX/3Ff;->A00(Landroid/app/Activity;I)Landroid/view/View;
+    const v0, 0x7f090518
 
     .line 10
     .line 11
     .line 12
-    move-result-object v2
+    invoke-virtual {p0, v0}, Lcom/facebook/base/activity/FbFragmentActivity;->A1B(I)Landroid/view/View;
 
     .line 13
-    check-cast v2, Landroidx/appcompat/widget/Toolbar;
-
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/arstudio/player/webview/WebViewActivity;->A01:LX/1Nm;
+    move-result-object v2
 
     .line 16
-    .line 17
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    check-cast v2, Landroidx/appcompat/widget/Toolbar;
 
+    .line 17
     .line 18
+    iget-object v0, p0, Lcom/facebook/arstudio/player/webview/WebViewActivity;->A01:LX/0lu;
+
     .line 19
     .line 20
-    move-result-object v0
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 21
-    check-cast v0, LX/3I7;
-
     .line 22
     .line 23
-    invoke-virtual {v0, v2}, LX/3I7;->A00(Landroidx/appcompat/widget/Toolbar;)V
+    move-result-object v0
 
     .line 24
+    check-cast v0, LX/3RR;
+
     .line 25
     .line 26
-    const/16 v1, 0x18
+    invoke-virtual {v0, v2}, LX/3RR;->A00(Landroidx/appcompat/widget/Toolbar;)V
 
     .line 27
     .line 28
-    new-instance v0, LX/1n2;
-
     .line 29
-    .line 30
-    invoke-direct {v0, p0, v1}, LX/1n2;-><init>(Ljava/lang/Object;I)V
+    const/16 v1, 0x19
 
+    .line 30
     .line 31
+    new-instance v0, LX/0Yx;
+
     .line 32
     .line 33
-    invoke-virtual {v2, v0}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-direct {v0, p0, v1}, LX/0Yx;-><init>(Ljava/lang/Object;I)V
 
     .line 34
     .line 35
     .line 36
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v2, v0}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 37
     .line 38
     .line 39
-    move-result-object v1
+    invoke-static {p0}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 40
-    const-string v0, "android.intent.extra.TITLE"
-
     .line 41
     .line 42
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v1
 
     .line 43
+    const-string/jumbo v0, "android.intent.extra.TITLE"
+
     .line 44
     .line 45
-    move-result-object v0
-
     .line 46
-    invoke-virtual {v2, v0}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     .line 47
     .line 48
     .line 49
-    const v0, 0x7f0a061f
+    move-result-object v0
 
     .line 50
+    invoke-virtual {v2, v0}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
     .line 51
     .line 52
-    invoke-static {p0, v0}, LX/3Ff;->A00(Landroid/app/Activity;I)Landroid/view/View;
-
     .line 53
+    const v0, 0x7f090551
+
     .line 54
     .line 55
-    move-result-object v4
-
     .line 56
-    check-cast v4, Landroid/webkit/WebView;
+    invoke-virtual {p0, v0}, Lcom/facebook/base/activity/FbFragmentActivity;->A1B(I)Landroid/view/View;
 
     .line 57
     .line 58
-    iget-object v0, p0, Lcom/facebook/arstudio/player/webview/WebViewActivity;->A00:LX/1Nm;
-
     .line 59
+    move-result-object v4
+
     .line 60
-    iget-object v3, v0, LX/1Nm;->A00:LX/0Na;
+    check-cast v4, LX/465;
 
     .line 61
     .line 62
-    invoke-interface {v3}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-virtual {v4}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     .line 63
     .line 64
@@ -184,38 +192,37 @@
     move-result-object v0
 
     .line 66
-    check-cast v0, LX/39h;
+    const/4 v7, 0x1
 
     .line 67
-    .line 68
-    const-string/jumbo v2, "file"
+    invoke-virtual {v0, v7}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
+    .line 68
     .line 69
     .line 70
+    new-instance v0, LX/3RH;
+
     .line 71
-    iget-object v1, v0, LX/39h;->A01:Ljava/util/List;
-
     .line 72
-    .line 73
-    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-direct {v0}, LX/3RH;-><init>()V
 
+    .line 73
     .line 74
     .line 75
+    invoke-virtual {v4, v0}, LX/465;->A02(LX/467;)V
+
     .line 76
-    move-result v0
-
     .line 77
-    if-nez v0, :cond_0
-
     .line 78
-    .line 79
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/facebook/arstudio/player/webview/WebViewActivity;->A00:LX/0lu;
 
+    .line 79
     .line 80
+    iget-object v3, v0, LX/0lu;->A00:LX/0RP;
+
     .line 81
     .line 82
-    :cond_0
-    invoke-interface {v3}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v3}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 83
     .line 84
@@ -223,233 +230,234 @@
     move-result-object v0
 
     .line 86
-    check-cast v0, LX/39h;
+    check-cast v0, LX/3Q4;
 
     .line 87
     .line 88
-    const-string v2, ""
+    const-string/jumbo v2, "file"
 
     .line 89
     .line 90
-    iget-object v1, v0, LX/39h;->A00:Ljava/util/List;
-
     .line 91
+    iget-object v1, v0, LX/3Q4;->A01:Ljava/util/List;
+
     .line 92
+    .line 93
     invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    .line 93
     .line 94
     .line 95
+    .line 96
     move-result v0
 
-    .line 96
-    if-nez v0, :cond_1
-
     .line 97
+    if-nez v0, :cond_0
+
     .line 98
+    .line 99
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 99
     .line 100
     .line 101
-    :cond_1
-    invoke-interface {v3}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 102
+    :cond_0
+    invoke-interface {v3}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 103
     .line 104
-    move-result-object v6
-
     .line 105
-    check-cast v6, LX/39h;
+    move-result-object v0
 
     .line 106
-    .line 107
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    check-cast v0, LX/3Q4;
 
+    .line 107
     .line 108
+    const-string v2, ""
+
     .line 109
     .line 110
-    move-result-object v0
+    iget-object v1, v0, LX/3Q4;->A00:Ljava/util/List;
 
     .line 111
-    invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
     .line 112
+    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
     .line 113
     .line 114
-    move-result-object v0
-
     .line 115
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    move-result v0
 
     .line 116
+    if-nez v0, :cond_1
+
     .line 117
     .line 118
-    move-result-object v2
+    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 119
-    iget-object v0, v6, LX/39h;->A03:LX/6K8;
-
     .line 120
     .line 121
-    const/4 v7, 0x1
+    :cond_1
+    invoke-interface {v3}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 122
-    invoke-static {v0, v2, v7}, LX/0GQ;->A00(LX/06M;Ljava/lang/String;Z)Landroid/net/Uri;
-
     .line 123
     .line 124
+    move-result-object v6
+
     .line 125
-    move-result-object v8
+    check-cast v6, LX/3Q4;
 
     .line 126
-    const/4 v9, 0x0
-
     .line 127
-    if-eqz v8, :cond_2
+    invoke-static {p0}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 128
     .line 129
-    new-instance v1, LX/0Hw;
-
     .line 130
+    move-result-object v0
+
     .line 131
-    invoke-direct {v1}, LX/0Hw;-><init>()V
+    invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     .line 132
     .line 133
     .line 134
-    sget-object v0, LX/0Hx;->A04:LX/04S;
-
-    .line 135
-    .line 136
-    invoke-virtual {v1, v8, v0}, LX/0Hw;->A03(Landroid/net/Uri;LX/04S;)LX/0Hx;
-
-    .line 137
-    .line 138
-    .line 139
     move-result-object v0
 
-    .line 140
-    invoke-static {v0}, LX/0Hx;->A00(LX/0Hx;)Ljava/lang/String;
+    .line 135
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 136
+    .line 137
+    .line 138
+    move-result-object v2
+
+    .line 139
+    iget-object v0, v6, LX/3Q4;->A03:LX/6Ym;
+
+    .line 140
     .line 141
+    invoke-static {v0, v2, v7}, LX/0Lt;->A00(LX/01U;Ljava/lang/String;Z)Landroid/net/Uri;
+
     .line 142
     .line 143
-    move-result-object v5
-
     .line 144
-    iget-object v1, v6, LX/39h;->A01:Ljava/util/List;
+    move-result-object v9
 
     .line 145
+    const/4 v8, 0x0
+
     .line 146
-    invoke-virtual {v8}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    if-eqz v9, :cond_2
 
     .line 147
     .line 148
-    .line 149
-    move-result-object v0
+    sget-object v0, LX/0Jl;->A04:LX/0Rx;
 
+    .line 149
     .line 150
-    invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-static {v9, v0}, LX/0Jk;->A00(Landroid/net/Uri;LX/0Rx;)LX/0Jl;
 
     .line 151
     .line 152
     .line 153
-    move-result v0
+    move-result-object v0
 
     .line 154
-    const-string/jumbo v3, "url: "
+    invoke-static {v0}, LX/0Jl;->A00(LX/0Jl;)Ljava/lang/String;
 
     .line 155
     .line 156
     .line 157
-    if-nez v0, :cond_3
+    move-result-object v5
 
     .line 158
+    iget-object v1, v6, LX/3Q4;->A01:Ljava/util/List;
+
     .line 159
-    const-class v2, LX/39h;
-
     .line 160
-    .line 161
-    new-array v1, v7, [Ljava/lang/Object;
+    invoke-virtual {v9}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
+    .line 161
     .line 162
     .line 163
-    aput-object v5, v1, v9
-
-    .line 164
-    .line 165
-    const-string v0, "Disallowed scheme: %s"
-
-    .line 166
-    .line 167
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0A(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 168
-    .line 169
-    .line 170
-    iget-object v2, v6, LX/39h;->A02:LX/0Gk;
-
-    .line 171
-    .line 172
-    sget-object v1, LX/39h;->A07:Ljava/lang/String;
-
-    .line 173
-    .line 174
-    :goto_0
-    invoke-virtual {v3, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 175
-    .line 176
-    .line 177
     move-result-object v0
 
-    .line 178
-    invoke-interface {v2, v1, v0}, LX/0Gk;->AoW(Ljava/lang/String;Ljava/lang/String;)V
+    .line 164
+    invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
+    .line 165
+    .line 166
+    .line 167
+    move-result v0
+
+    .line 168
+    const-string/jumbo v3, "url: "
+
+    .line 169
+    .line 170
+    .line 171
+    if-nez v0, :cond_3
+
+    .line 172
+    .line 173
+    const-class v2, LX/3Q4;
+
+    .line 174
+    .line 175
+    new-array v1, v7, [Ljava/lang/Object;
+
+    .line 176
+    .line 177
+    aput-object v5, v1, v8
+
+    .line 178
     .line 179
+    const-string v0, "Disallowed scheme: %s"
+
     .line 180
     .line 181
-    :cond_2
-    :goto_1
-    const-string/jumbo v0, "null cannot be cast to non-null type android.webkit.WebView"
+    invoke-static {v2, v0, v1}, LX/0Il;->A0A(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 182
     .line 183
     .line 184
-    invoke-static {v4, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v2, v6, LX/3Q4;->A02:LX/0Ft;
 
     .line 185
     .line 186
-    .line 187
-    invoke-virtual {v4}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
+    sget-object v1, LX/3Q4;->A07:Ljava/lang/String;
 
+    .line 187
     .line 188
+    :goto_0
+    invoke-virtual {v3, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
     .line 189
     .line 190
-    return-void
-
     .line 191
-    :cond_3
-    invoke-static {v8}, LX/2Sg;->A00(Landroid/net/Uri;)LX/2Sg;
+    move-result-object v0
 
     .line 192
+    invoke-interface {v2, v1, v0}, LX/0Ft;->AnC(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 193
     .line 194
-    move-result-object v1
-
     .line 195
-    if-eqz v1, :cond_4
+    :cond_2
+    :goto_1
+    invoke-virtual {v4}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     .line 196
     .line 197
-    const-string v0, "facebook.com"
-
     .line 198
+    return-void
+
     .line 199
-    invoke-static {v1, v0}, LX/2Sf;->A01(LX/2Sg;Ljava/lang/String;)Z
+    :cond_3
+    invoke-static {v9}, LX/3RD;->A00(Landroid/net/Uri;)Z
 
     .line 200
     .line 201
@@ -457,12 +465,11 @@
     move-result v0
 
     .line 203
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
     .line 204
     .line 205
-    :cond_4
-    invoke-virtual {v8}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+    invoke-virtual {v9}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     .line 206
     .line 207
@@ -470,11 +477,11 @@
     move-result-object v1
 
     .line 209
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_5
 
     .line 210
     .line 211
-    iget-object v0, v6, LX/39h;->A00:Ljava/util/List;
+    iget-object v0, v6, LX/3Q4;->A00:Ljava/util/List;
 
     .line 212
     .line 213
@@ -486,11 +493,11 @@
     move-result v0
 
     .line 217
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     .line 218
     .line 219
-    :cond_5
+    :cond_4
     invoke-virtual {v4, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     .line 220
@@ -499,8 +506,8 @@
     goto :goto_1
 
     .line 223
-    :cond_6
-    const-class v2, LX/39h;
+    :cond_5
+    const-class v2, LX/3Q4;
 
     .line 224
     .line 225
@@ -508,7 +515,7 @@
 
     .line 226
     .line 227
-    aput-object v5, v1, v9
+    aput-object v5, v1, v8
 
     .line 228
     .line 229
@@ -516,16 +523,16 @@
 
     .line 230
     .line 231
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0A(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0A(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 232
     .line 233
     .line 234
-    iget-object v2, v6, LX/39h;->A02:LX/0Gk;
+    iget-object v2, v6, LX/3Q4;->A02:LX/0Ft;
 
     .line 235
     .line 236
-    sget-object v1, LX/39h;->A06:Ljava/lang/String;
+    sget-object v1, LX/3Q4;->A06:Ljava/lang/String;
 
     .line 237
     .line 238

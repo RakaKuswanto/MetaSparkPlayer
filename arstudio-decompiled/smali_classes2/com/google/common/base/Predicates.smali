@@ -1,4 +1,4 @@
-.class public final Lcom/google/common/base/Predicates;
+.class public abstract Lcom/google/common/base/Predicates;
 .super Ljava/lang/Object;
 .source ""
 
@@ -6,6 +6,16 @@
 # direct methods
 .method public static and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "first",
+            "second"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

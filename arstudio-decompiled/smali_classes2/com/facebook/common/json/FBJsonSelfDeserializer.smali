@@ -18,57 +18,63 @@
 
 
 # virtual methods
-.method public final A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 2
 
     .line 0
     :try_start_0
-    invoke-virtual {p0}, Lcom/facebook/common/json/FbJsonDeserializer;->A0b()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/facebook/common/json/FbJsonDeserializer;->A0T()Ljava/lang/Object;
 
     .line 1
     .line 2
     .line 3
-    const-string v0, "deserialize"
+    const-string/jumbo v0, "deserialize"
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
     .line 6
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
     .line 7
     .line 8
+    .line 9
     move-result-object v0
 
-    .line 9
+    .line 10
     throw v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10
+    .line 11
     :catch_0
     move-exception v1
 
-    .line 11
+    .line 12
     const-class v0, Ljava/io/IOException;
 
-    .line 12
     .line 13
+    .line 14
     invoke-static {v1, v0}, Lcom/google/common/base/Throwables;->propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
-    .line 14
     .line 15
     .line 16
+    .line 17
     iget-object v0, p0, Lcom/facebook/common/json/FbJsonDeserializer;->A00:Ljava/lang/Class;
 
-    .line 17
     .line 18
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 19
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 20
     .line 21
-    const/4 v0, 0x0
-
     .line 22
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
     throw v0
 .end method

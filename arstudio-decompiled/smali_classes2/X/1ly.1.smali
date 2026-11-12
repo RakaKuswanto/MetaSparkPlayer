@@ -1,99 +1,97 @@
-.class public final LX/1ly;
-.super Ljava/lang/Object;
+.class public final LX/1lY;
+.super LX/1lZ;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/lang/Integer;
+.field public final A00:LX/0lu;
 
-.field public final A01:Ljava/util/List;
+.field public final A01:LX/28w;
 
-.field public final A02:Ljava/util/List;
+.field public final A02:LX/3gS;
 
-.field public final A03:Ljava/util/List;
+.field public final A03:LX/3gS;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
-
-    .line 268435456
-    sget-object v3, LX/014;->A01:Ljava/lang/Integer;
-
-    .line 268435457
-    .line 268435458
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    move-result-object v2
-
-    .line 268435462
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 268435463
-    .line 268435464
-    .line 268435465
-    move-result-object v1
-
-    .line 268435466
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 268435467
-    .line 268435468
-    .line 268435469
-    move-result-object v0
-
-    .line 268435470
-    invoke-direct {p0, v3, v2, v1, v0}, LX/1ly;-><init>(Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
-
-    .line 268435471
-    .line 268435472
-    .line 268435473
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Landroid/content/Context;LX/46e;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/1lZ;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/1ly;->A00:Ljava/lang/Integer;
+    new-instance v0, LX/28v;
 
     .line 4
     .line 5
-    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-direct {v0, p1, p2}, LX/28v;-><init>(Landroid/content/Context;LX/46e;)V
 
     .line 6
     .line 7
     .line 8
-    move-result-object v0
+    iput-object v0, p0, LX/1lY;->A01:LX/28w;
 
     .line 9
-    iput-object v0, p0, LX/1ly;->A03:Ljava/util/List;
-
     .line 10
-    .line 11
-    invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-static {}, LX/2I6;->A0Q()LX/0lu;
 
+    .line 11
     .line 12
     .line 13
-    .line 14
     move-result-object v0
 
+    .line 14
+    iput-object v0, p0, LX/1lY;->A00:LX/0lu;
+
     .line 15
-    iput-object v0, p0, LX/1ly;->A01:Ljava/util/List;
-
     .line 16
-    .line 17
-    iput-object p4, p0, LX/1ly;->A02:Ljava/util/List;
+    const/16 v0, 0x2c
 
+    .line 17
     .line 18
+    invoke-static {p0, v0}, LX/3g8;->A00(Ljava/lang/Object;I)LX/5ad;
+
     .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    iput-object v0, p0, LX/1lY;->A02:LX/3gS;
+
+    .line 23
+    .line 24
+    const/16 v0, 0x2d
+
+    .line 25
+    .line 26
+    invoke-static {p0, v0}, LX/3g8;->A00(Ljava/lang/Object;I)LX/5ad;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    iput-object v0, p0, LX/1lY;->A03:LX/3gS;
+
+    .line 31
+    .line 32
     return-void
+.end method
+
+
+# virtual methods
+.method public final AA6()LX/28w;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1lY;->A01:LX/28w;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

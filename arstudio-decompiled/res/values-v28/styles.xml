@@ -31,6 +31,24 @@
         <item name="android:letterSpacing">@dimen/fbui_popover_window_anim_enter_min_alpha</item>
         <item name="android:lineHeight">@dimen/fbui_text_size_xxxlarge_5</item>
     </style>
+    <style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Material.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowOverscan">true</item>
+        <item name="android:windowContentTransitions">false</item>
+    </style>
+    <style name="WhiteBackgroundTheme" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowOverscan">true</item>
+        <item name="android:windowContentTransitions">false</item>
+    </style>
     <style name="autofillPaymentSaveBottomDescription" parent="@style/bondi_regularText">
         <item name="android:textSize">@dimen/autofill_data_migration_disclosure_description</item>
         <item name="android:textColor">?fds_usage_secondary_text</item>

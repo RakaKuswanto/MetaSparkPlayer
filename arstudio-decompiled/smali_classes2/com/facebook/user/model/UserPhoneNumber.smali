@@ -27,11 +27,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x36
+    const/16 v0, 0x26
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -155,52 +155,6 @@
 
     .line 268435468
     .line 268435469
-    return-void
-.end method
-
-.method public static A00(Lcom/facebook/common/util/TriState;Lcom/google/common/collect/ImmutableList$Builder;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)V
-    .locals 6
-
-    .line 0
-    const-string/jumbo v0, "phone_android_type"
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p4, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v5
-
-    .line 7
-    new-instance v0, Lcom/facebook/user/model/UserPhoneNumber;
-
-    .line 8
-    .line 9
-    move-object v1, p0
-
-    .line 10
-    move-object v2, p2
-
-    .line 11
-    move-object v3, p3
-
-    .line 12
-    move-object v4, p3
-
-    .line 13
-    invoke-direct/range {v0 .. v5}, Lcom/facebook/user/model/UserPhoneNumber;-><init>(Lcom/facebook/common/util/TriState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-
-    .line 14
-    .line 15
-    .line 16
-    invoke-virtual {p1, v0}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
-
-    .line 17
-    .line 18
-    .line 19
     return-void
 .end method
 
@@ -403,7 +357,7 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 4
     .line 5
@@ -419,7 +373,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 12
     .line 13
@@ -438,7 +392,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 21
     .line 22
@@ -531,7 +485,7 @@
 
     .line 21
     .line 22
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 23
     .line 24

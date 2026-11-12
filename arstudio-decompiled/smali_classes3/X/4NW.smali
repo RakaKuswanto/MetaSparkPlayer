@@ -1,25 +1,37 @@
-.class public final LX/4NW;
+.class public abstract LX/4Nw;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4NY;
-
-
-# instance fields
-.field public final synthetic A00:LX/4NV;
-
 
 # direct methods
-.method public constructor <init>(LX/4NV;)V
+.method public static A00(Ljava/lang/Object;)Landroid/os/LocaleList;
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4NW;->A00:LX/4NV;
+    check-cast p0, Landroid/app/LocaleManager;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/app/LocaleManager;->getApplicationLocales()Landroid/os/LocaleList;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object p0
+
+    .line 6
+    return-object p0
+.end method
+
+.method public static A01(Landroid/os/LocaleList;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    check-cast p1, Landroid/app/LocaleManager;
+
+    .line 1
+    .line 2
+    invoke-virtual {p1, p0}, Landroid/app/LocaleManager;->setApplicationLocales(Landroid/os/LocaleList;)V
 
     .line 3
     .line 4

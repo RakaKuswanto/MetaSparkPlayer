@@ -1,150 +1,74 @@
-.class public final LX/064;
+.class public abstract LX/064;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/transition/Transition$TransitionListener;
-
-
-# instance fields
-.field public final synthetic A00:Landroid/view/View;
-
-.field public final synthetic A01:LX/0Se;
-
-.field public final synthetic A02:Ljava/util/ArrayList;
-
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;LX/0Se;Ljava/util/ArrayList;)V
-    .locals 0
-
-    .line 0
-    iput-object p2, p0, LX/064;->A01:LX/0Se;
-
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/064;->A00:Landroid/view/View;
-
-    .line 3
-    .line 4
-    iput-object p3, p0, LX/064;->A02:Ljava/util/ArrayList;
-
-    .line 5
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
+.method public static A00()Z
     .locals 5
 
     .line 0
-    invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+    sget-wide v3, LX/0BH;->A00:J
 
     .line 1
     .line 2
-    .line 3
-    iget-object v1, p0, LX/064;->A00:Landroid/view/View;
+    sget-boolean v0, LX/0BH;->A03:Z
 
+    .line 3
     .line 4
+    const/4 v2, 0x0
+
     .line 5
-    const/16 v0, 0x8
+    if-eqz v0, :cond_0
 
     .line 6
     .line 7
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    sget-object v1, LX/0BH;->A01:Ljava/lang/reflect/Method;
 
     .line 8
     .line 9
-    .line 10
-    iget-object v4, p0, LX/064;->A02:Ljava/util/ArrayList;
+    invoke-static {v1}, LX/0Ms;->A00(Ljava/lang/Object;)V
 
+    .line 10
     .line 11
     .line 12
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 13
     .line 14
     .line 15
-    move-result v3
-
-    .line 16
-    const/4 v2, 0x0
-
-    .line 17
-    const/4 v1, 0x0
-
-    .line 18
-    :goto_0
-    if-ge v1, v3, :cond_0
-
-    .line 19
-    .line 20
-    invoke-virtual {v4, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    .line 21
-    .line 22
-    .line 23
     move-result-object v0
 
+    .line 16
+    invoke-static {v0, v2, v3, v4}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-static {v1, v0}, LX/0BH;->A00(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    check-cast v0, Ljava/lang/Boolean;
+
     .line 24
-    check-cast v0, Landroid/view/View;
-
     .line 25
-    .line 26
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    if-eqz v0, :cond_0
 
+    .line 26
     .line 27
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
     .line 28
     .line 29
-    add-int/lit8 v1, v1, 0x1
-
     .line 30
+    move-result v2
+
     .line 31
-    goto :goto_0
-
-    .line 32
     :cond_0
-    return-void
-.end method
-
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p1, p0}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
-
-    .line 4
-    .line 5
-    .line 6
-    return-void
+    return v2
 .end method

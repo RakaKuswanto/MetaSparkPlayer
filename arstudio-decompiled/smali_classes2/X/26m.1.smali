@@ -1,220 +1,299 @@
-.class public abstract LX/26m;
-.super LX/26l;
+.class public final LX/26m;
+.super LX/26y;
 .source ""
 
 # interfaces
-.implements LX/26p;
+.implements LX/1tj;
 
 
 # instance fields
-.field public final A00:LX/26o;
+.field public final A00:Ljava/util/concurrent/ScheduledExecutorService;
 
 
 # direct methods
-.method public constructor <init>(LX/26o;)V
+.method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "delegate"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/26l;-><init>()V
+    invoke-direct {p0, p1}, LX/26y;-><init>(Ljava/util/concurrent/ExecutorService;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/26m;->A00:LX/26o;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 4
     .line 5
+    .line 6
+    iput-object p1, p0, LX/26m;->A00:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 7
+    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final A08()I
-    .locals 1
+.method public final Aj4(Ljava/lang/Runnable;Ljava/util/concurrent/TimeUnit;J)LX/1tk;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "command",
+            "delay",
+            "unit"
+        }
+    .end annotation
 
     .line 0
-    instance-of v0, p0, LX/26j;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/26j;
-
-    .line 6
-    .line 7
-    iget-object v0, v0, LX/26j;->A00:Ljava/util/Map;
-
-    .line 8
-    .line 9
-    invoke-interface {v0}, Ljava/util/Map;->size()I
-
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
-
-    .line 13
-    return v0
-
-    .line 14
-    :cond_0
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/26k;
-
-    .line 16
-    .line 17
-    iget-object v0, v0, LX/26k;->A00:Ljava/util/List;
-
-    .line 18
-    .line 19
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    return v0
-.end method
-
-.method public final A0C(I)LX/1we;
-    .locals 2
-
-    .line 0
-    instance-of v0, p0, LX/26j;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/26k;
-
-    .line 6
-    .line 7
-    if-ltz p1, :cond_0
-
-    .line 8
-    .line 9
-    iget-object v1, v0, LX/26k;->A00:Ljava/util/List;
-
-    .line 10
-    .line 11
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
-
-    .line 15
-    if-ge p1, v0, :cond_0
-
-    .line 16
-    .line 17
-    invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    check-cast v0, LX/1we;
-
-    .line 22
-    .line 23
-    return-object v0
-
-    .line 24
-    :cond_0
     const/4 v0, 0x0
 
-    .line 25
-    return-object v0
-.end method
-
-.method public final A0E(Ljava/lang/String;)LX/1we;
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/26j;
-
     .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    invoke-static {p1, v0}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Callable;
 
+    .line 2
     .line 3
     .line 4
-    move-object v0, p0
+    move-result-object v0
 
     .line 5
-    check-cast v0, LX/26j;
+    new-instance v2, LX/26o;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/26j;->A00:Ljava/util/Map;
+    invoke-direct {v2, v0}, LX/26o;-><init>(Ljava/util/concurrent/Callable;)V
 
     .line 8
     .line 9
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 10
+    iget-object v0, p0, LX/26m;->A00:Ljava/util/concurrent/ScheduledExecutorService;
+
     .line 11
     .line 12
-    move-result-object v0
+    invoke-interface {v0, v2, p3, p4, p2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     .line 13
-    check-cast v0, LX/1we;
+    .line 14
+    .line 15
+    move-result-object v1
+
+    .line 16
+    new-instance v0, LX/26j;
+
+    .line 17
+    .line 18
+    invoke-direct {v0, v2, v1}, LX/26j;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/ScheduledFuture;)V
+
+    .line 19
+    .line 20
+    .line 21
+    return-object v0
+.end method
+
+.method public final bridge synthetic schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "command",
+            "delay",
+            "unit"
+        }
+    .end annotation
+
+    .line 268435456
+    invoke-virtual {p0, p1, p4, p2, p3}, LX/26m;->Aj4(Ljava/lang/Runnable;Ljava/util/concurrent/TimeUnit;J)LX/1tk;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
+    return-object v0
+.end method
+
+.method public final bridge synthetic schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "callable",
+            "delay",
+            "unit"
+        }
+    .end annotation
+
+    .line 0
+    new-instance v2, LX/26o;
+
+    .line 1
+    .line 2
+    invoke-direct {v2, p1}, LX/26o;-><init>(Ljava/util/concurrent/Callable;)V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/26m;->A00:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 6
+    .line 7
+    invoke-interface {v0, v2, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    new-instance v0, LX/26j;
+
+    .line 12
+    .line 13
+    invoke-direct {v0, v2, v1}, LX/26j;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/ScheduledFuture;)V
 
     .line 14
     .line 15
-    return-object v0
-
     .line 16
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 17
     return-object v0
 .end method
 
-.method public final A5h()LX/270;
-    .locals 1
+.method public final bridge synthetic scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "command",
+            "initialDelay",
+            "period",
+            "unit"
+        }
+    .end annotation
 
     .line 0
-    instance-of v0, p0, LX/26j;
+    new-instance v2, LX/26Y;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    invoke-direct {v2, p1}, LX/26Y;-><init>(Ljava/lang/Runnable;)V
 
     .line 3
     .line 4
-    sget-object v0, LX/270;->START_OBJECT:LX/270;
-
     .line 5
-    .line 6
-    return-object v0
+    iget-object v1, p0, LX/26m;->A00:Ljava/util/concurrent/ScheduledExecutorService;
 
+    .line 6
     .line 7
-    :cond_0
-    sget-object v0, LX/270;->START_ARRAY:LX/270;
+    move-wide v3, p2
 
     .line 8
+    move-wide v5, p4
+
     .line 9
+    move-object v7, p6
+
+    .line 10
+    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v1
+
+    .line 14
+    new-instance v0, LX/26j;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v2, v1}, LX/26j;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/ScheduledFuture;)V
+
+    .line 17
+    .line 18
+    .line 19
+    return-object v0
+.end method
+
+.method public final bridge synthetic scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "command",
+            "initialDelay",
+            "delay",
+            "unit"
+        }
+    .end annotation
+
+    .line 0
+    new-instance v2, LX/26Y;
+
+    .line 1
+    .line 2
+    invoke-direct {v2, p1}, LX/26Y;-><init>(Ljava/lang/Runnable;)V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v1, p0, LX/26m;->A00:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 6
+    .line 7
+    move-wide v3, p2
+
+    .line 8
+    move-wide v5, p4
+
+    .line 9
+    move-object v7, p6
+
+    .line 10
+    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v1
+
+    .line 14
+    new-instance v0, LX/26j;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v2, v1}, LX/26j;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/ScheduledFuture;)V
+
+    .line 17
+    .line 18
+    .line 19
     return-object v0
 .end method

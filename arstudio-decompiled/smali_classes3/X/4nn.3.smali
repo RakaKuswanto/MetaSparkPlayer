@@ -1,215 +1,752 @@
-.class public final LX/4nn;
+.class public abstract LX/4nn;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentTree$1"
-
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/litho/ComponentTree;
+.field public A00:I
+
+.field public final A01:Landroid/graphics/Rect;
+
+.field public final A02:LX/4nQ;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/litho/ComponentTree;)V
-    .locals 0
+.method public constructor <init>(LX/4nQ;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/4nn;->A00:Lcom/facebook/litho/ComponentTree;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    const/high16 v0, -0x80000000
+
     .line 4
     .line 5
+    iput v0, p0, LX/4nn;->A00:I
+
+    .line 6
+    .line 7
+    invoke-static {}, LX/434;->A0R()Landroid/graphics/Rect;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    iput-object v0, p0, LX/4nn;->A01:Landroid/graphics/Rect;
+
+    .line 12
+    .line 13
+    iput-object p1, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 14
+    .line 15
     return-void
+.end method
+
+.method public static A00(Landroid/view/View;LX/4nn;)I
+    .locals 3
+
+    .line 0
+    invoke-virtual {p1, p0}, LX/4nn;->A08(Landroid/view/View;)I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v2
+
+    .line 4
+    invoke-virtual {p1, p0}, LX/4nn;->A06(Landroid/view/View;)I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    div-int/lit8 v0, v0, 0x2
+
+    .line 9
+    .line 10
+    add-int/2addr v2, v0
+
+    .line 11
+    invoke-virtual {p1}, LX/4nn;->A03()I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    invoke-virtual {p1}, LX/4nn;->A04()I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    div-int/lit8 v0, v0, 0x2
+
+    .line 20
+    .line 21
+    add-int/2addr v1, v0
+
+    .line 22
+    sub-int/2addr v2, v1
+
+    .line 23
+    return v2
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final A01()I
+    .locals 2
 
     .line 0
-    iget-object v7, p0, LX/4nn;->A00:Lcom/facebook/litho/ComponentTree;
+    instance-of v0, p0, LX/4no;
 
     .line 1
     .line 2
-    monitor-enter v7
+    if-eqz v0, :cond_0
 
     .line 3
-    :try_start_0
-    iget-object v0, v7, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
-
     .line 4
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
     .line 5
-    if-nez v0, :cond_0
-
     .line 6
+    iget v1, v0, LX/4nQ;->mHeight:I
+
     .line 7
-    iget-object v0, v7, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
-
     .line 8
-    .line 9
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, LX/4nQ;->getPaddingBottom()I
 
+    .line 9
     .line 10
     .line 11
-    monitor-exit v7
+    move-result v0
 
     .line 12
-    return-void
+    :goto_0
+    sub-int/2addr v1, v0
 
     .line 13
-    :cond_0
-    monitor-exit v7
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return v1
 
     .line 14
-    iget-object v3, v7, Lcom/facebook/litho/ComponentTree;->A0U:LX/4mm;
+    :cond_0
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
 
     .line 15
     .line 16
-    iget-object v1, v3, LX/4mm;->A02:LX/4oC;
+    iget v1, v0, LX/4nQ;->mWidth:I
 
     .line 17
     .line 18
-    iget-object v6, v1, LX/4oC;->A01:LX/4qm;
+    invoke-virtual {v0}, LX/4nQ;->getPaddingRight()I
 
     .line 19
     .line 20
-    if-eqz v6, :cond_3
-
     .line 21
+    move-result v0
+
     .line 22
-    const/16 v0, 0x8
+    goto :goto_0
+.end method
+
+.method public final A02()I
+    .locals 1
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 5
+    .line 6
+    iget v0, v0, LX/4nQ;->mHeightMode:I
+
+    .line 7
+    .line 8
+    return v0
+
+    .line 9
+    :cond_0
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 10
+    .line 11
+    iget v0, v0, LX/4nQ;->mWidthMode:I
+
+    .line 12
+    .line 13
+    return v0
+.end method
+
+.method public final A03()I
+    .locals 1
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, LX/4nQ;->getPaddingTop()I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    return v0
+
+    .line 11
+    :cond_0
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 12
+    .line 13
+    invoke-virtual {v0}, LX/4nQ;->getPaddingLeft()I
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    return v0
+.end method
+
+.method public final A04()I
+    .locals 3
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    iget-object v1, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    iget v2, v1, LX/4nQ;->mHeight:I
+
+    .line 7
+    .line 8
+    invoke-virtual {v1}, LX/4nQ;->getPaddingTop()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    sub-int/2addr v2, v0
+
+    .line 13
+    invoke-virtual {v1}, LX/4nQ;->getPaddingBottom()I
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    :goto_0
+    sub-int/2addr v2, v0
+
+    .line 18
+    return v2
+
+    .line 19
+    :cond_0
+    iget v2, v1, LX/4nQ;->mWidth:I
+
+    .line 20
+    .line 21
+    invoke-virtual {v1}, LX/4nQ;->getPaddingLeft()I
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v0
+
+    .line 25
+    sub-int/2addr v2, v0
+
+    .line 26
+    invoke-virtual {v1}, LX/4nQ;->getPaddingRight()I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    goto :goto_0
+.end method
+
+.method public final A05(Landroid/view/View;)I
+    .locals 3
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v1
+
+    .line 8
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0, p1}, LX/4nQ;->getDecoratedBottom(Landroid/view/View;)I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v2
+
+    .line 14
+    iget v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    .line 15
+    .line 16
+    :goto_0
+    add-int/2addr v2, v0
+
+    .line 17
+    return v2
+
+    .line 18
+    :cond_0
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v1
+
+    .line 22
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
 
     .line 23
     .line 24
-    invoke-interface {v6, v0}, LX/4qm;->ATq(I)LX/3tt;
+    invoke-virtual {v0, p1}, LX/4nQ;->getDecoratedRight(Landroid/view/View;)I
 
     .line 25
     .line 26
     .line 27
-    move-result-object v2
+    move-result v2
 
     .line 28
-    iget-object v1, v1, LX/4oC;->A05:Ljava/lang/String;
+    iget v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     .line 29
     .line 30
-    iget-object v0, v3, LX/4mm;->A07:LX/2fW;
+    goto :goto_0
+.end method
 
-    .line 31
-    .line 32
-    invoke-static {v6, v0, v2, v1}, LX/3qp;->A00(LX/4qm;LX/2fW;LX/3tt;Ljava/lang/String;)LX/3tt;
+.method public final A06(Landroid/view/View;)I
+    .locals 2
 
-    .line 33
-    .line 34
-    .line 35
-    move-result-object v5
+    .line 0
+    instance-of v0, p0, LX/4no;
 
-    .line 36
-    :goto_0
-    const-string v4, "Litho.ComponentTree.MountContent.Preallocated"
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
 
-    .line 37
-    .line 38
-    invoke-static {v4}, LX/6NN;->A00(Ljava/lang/String;)Ljava/lang/Integer;
+    .line 3
+    .line 4
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v3
-
-    .line 42
-    if-eqz v3, :cond_1
-
-    .line 43
-    .line 44
-    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
-
-    .line 45
-    .line 46
-    .line 47
-    move-result v2
-
-    .line 48
-    iget v0, v7, Lcom/facebook/litho/ComponentTree;->A0S:I
-
-    .line 49
-    .line 50
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    .line 51
-    .line 52
-    .line 53
+    .line 5
+    .line 6
+    .line 7
     move-result-object v1
 
-    .line 54
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    .line 8
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
 
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v0
+    .line 9
+    .line 10
+    invoke-virtual {v0, p1}, LX/4nQ;->getDecoratedMeasuredHeight(Landroid/view/View;)I
 
-    .line 58
-    invoke-static {v4, v1, v0, v2}, LX/6NN;->A03(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;I)V
-
-    .line 59
-    .line 60
-    .line 61
-    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
-
-    .line 62
-    .line 63
-    .line 64
+    .line 11
+    .line 12
+    .line 13
     move-result v0
 
-    .line 65
-    invoke-static {v0}, LX/6NN;->A02(I)V
+    .line 14
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
-    .line 66
-    .line 67
-    .line 68
-    :cond_1
-    if-eqz v5, :cond_2
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
 
-    .line 69
-    .line 70
-    invoke-interface {v6, v5}, LX/4qm;->ASf(LX/3tt;)V
+    .line 18
+    return v0
 
-    .line 71
-    .line 72
-    .line 73
-    :cond_2
+    .line 19
+    :cond_0
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 24
+    .line 25
+    invoke-virtual {v0, p1}, LX/4nQ;->getDecoratedMeasuredWidth(Landroid/view/View;)I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
+
+    .line 29
+    invoke-static {v1, v0}, LX/432;->A0B(Landroid/view/ViewGroup$MarginLayoutParams;I)I
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v0
+
+    .line 33
+    return v0
+.end method
+
+.method public final A07(Landroid/view/View;)I
+    .locals 2
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v1
+
+    .line 8
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0, p1}, LX/4nQ;->getDecoratedMeasuredWidth(Landroid/view/View;)I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    invoke-static {v1, v0}, LX/432;->A0B(Landroid/view/ViewGroup$MarginLayoutParams;I)I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    return v0
+
+    .line 19
+    :cond_0
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 24
+    .line 25
+    invoke-virtual {v0, p1}, LX/4nQ;->getDecoratedMeasuredHeight(Landroid/view/View;)I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
+
+    .line 29
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v0
+
+    .line 33
+    return v0
+.end method
+
+.method public final A08(Landroid/view/View;)I
+    .locals 3
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v1
+
+    .line 8
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0, p1}, LX/4nQ;->getDecoratedTop(Landroid/view/View;)I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v2
+
+    .line 14
+    iget v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    .line 15
+    .line 16
+    :goto_0
+    sub-int/2addr v2, v0
+
+    .line 17
+    return v2
+
+    .line 18
+    :cond_0
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v1
+
+    .line 22
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 23
+    .line 24
+    invoke-virtual {v0, p1}, LX/4nQ;->getDecoratedLeft(Landroid/view/View;)I
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v2
+
+    .line 28
+    iget v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    .line 29
+    .line 30
+    goto :goto_0
+.end method
+
+.method public final A09(Landroid/view/View;)I
+    .locals 3
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v1, p0, LX/4nn;->A01:Landroid/graphics/Rect;
+
+    .line 7
+    .line 8
+    const/4 v0, 0x1
+
+    .line 9
+    invoke-virtual {v2, p1, v0, v1}, LX/4nQ;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
+
+    .line 10
+    .line 11
+    .line 12
+    iget v0, v1, Landroid/graphics/Rect;->bottom:I
+
+    .line 13
+    .line 14
+    return v0
+
+    .line 15
+    :cond_0
+    iget-object v1, p0, LX/4nn;->A01:Landroid/graphics/Rect;
+
+    .line 16
+    .line 17
+    const/4 v0, 0x1
+
+    .line 18
+    invoke-virtual {v2, p1, v0, v1}, LX/4nQ;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
+
+    .line 19
+    .line 20
+    .line 21
+    iget v0, v1, Landroid/graphics/Rect;->right:I
+
+    .line 22
+    .line 23
+    return v0
+.end method
+
+.method public final A0A(Landroid/view/View;)I
+    .locals 3
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v1, p0, LX/4nn;->A01:Landroid/graphics/Rect;
+
+    .line 7
+    .line 8
+    const/4 v0, 0x1
+
+    .line 9
+    invoke-virtual {v2, p1, v0, v1}, LX/4nQ;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
+
+    .line 10
+    .line 11
+    .line 12
+    iget v0, v1, Landroid/graphics/Rect;->top:I
+
+    .line 13
+    .line 14
+    return v0
+
+    .line 15
+    :cond_0
+    iget-object v1, p0, LX/4nn;->A01:Landroid/graphics/Rect;
+
+    .line 16
+    .line 17
+    const/4 v0, 0x1
+
+    .line 18
+    invoke-virtual {v2, p1, v0, v1}, LX/4nQ;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
+
+    .line 19
+    .line 20
+    .line 21
+    iget v0, v1, Landroid/graphics/Rect;->left:I
+
+    .line 22
+    .line 23
+    return v0
+.end method
+
+.method public final A0B(I)V
+    .locals 1
+
+    .line 0
+    instance-of v0, p0, LX/4no;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1}, LX/4nQ;->offsetChildrenVertical(I)V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 
-    .line 74
-    :cond_3
-    const/4 v5, 0x0
+    .line 10
+    :cond_0
+    iget-object v0, p0, LX/4nn;->A02:LX/4nQ;
 
-    .line 75
-    goto :goto_0
+    .line 11
+    .line 12
+    invoke-virtual {v0, p1}, LX/4nQ;->offsetChildrenHorizontal(I)V
 
-    .line 76
-    :catchall_0
-    :try_start_1
-    move-exception v0
-
-    .line 77
-    monitor-exit v7
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 78
-    throw v0
+    .line 13
+    .line 14
+    .line 15
+    return-void
 .end method

@@ -21,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 4
     .line 5

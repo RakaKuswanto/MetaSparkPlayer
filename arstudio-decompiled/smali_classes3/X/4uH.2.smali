@@ -1,57 +1,92 @@
-.class public final LX/4uH;
-.super LX/4uB;
+.class public final LX/4uh;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:LX/4u1;
+.field public A00:I
+
+.field public A01:[J
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/4uB;-><init>(II)V
+    const/16 v0, 0x20
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
+    new-array v0, v0, [J
+
+    .line 6
+    .line 7
+    iput-object v0, p0, LX/4uh;->A01:[J
+
+    .line 8
+    .line 9
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
 
-    .line 268435456
-    invoke-direct {p0, p1, p2}, LX/4uB;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+# virtual methods
+.method public final A00(J)V
+    .locals 3
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
+    .line 0
+    iget v1, p0, LX/4uh;->A00:I
 
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 0
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/4uh;->A01:[J
 
-    .line 536870912
-    invoke-direct {p0, p1}, LX/4uB;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 3
+    .line 4
+    array-length v0, v2
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    return-void
-.end method
+    .line 5
+    if-ne v1, v0, :cond_0
 
-.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-    .locals 0
+    .line 6
+    .line 7
+    mul-int/lit8 v0, v1, 0x2
 
-    .line 805306368
-    invoke-direct {p0, p1}, LX/4uB;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .line 8
+    .line 9
+    invoke-static {v2, v0}, Ljava/util/Arrays;->copyOf([JI)[J
 
-    .line 805306369
-    .line 805306370
-    .line 805306371
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v2
+
+    .line 13
+    iput-object v2, p0, LX/4uh;->A01:[J
+
+    .line 14
+    .line 15
+    :cond_0
+    iget v1, p0, LX/4uh;->A00:I
+
+    .line 16
+    .line 17
+    add-int/lit8 v0, v1, 0x1
+
+    .line 18
+    .line 19
+    iput v0, p0, LX/4uh;->A00:I
+
+    .line 20
+    .line 21
+    aput-wide p1, v2, v1
+
+    .line 22
+    .line 23
     return-void
 .end method

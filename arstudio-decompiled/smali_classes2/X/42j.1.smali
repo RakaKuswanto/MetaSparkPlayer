@@ -1,11 +1,17 @@
-.class public interface abstract LX/42j;
-.super Ljava/lang/Object;
+.class public final LX/42j;
+.super LX/42k;
 .source ""
 
 
-# virtual methods
-.method public abstract AYk(LX/41S;LX/44p;)V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AYp(LX/44p;LX/41X;)V
+    .line 0
+    invoke-direct {p0}, LX/42k;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

@@ -1,99 +1,108 @@
-.class public abstract LX/1Te;
-.super Ljava/lang/Object;
+.class public final LX/1tE;
+.super LX/1tB;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Comparable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "LX/1tB<",
+        "TK;TV;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field public final A00:Ljava/lang/reflect/Type;
+.field public final A00:Lcom/google/common/base/Predicate;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;Ljava/util/Map;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "unfiltered",
+            "keyPredicate",
+            "entryPredicate"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, LX/1tB;-><init>(Lcom/google/common/base/Predicate;Ljava/util/Map;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, LX/1tE;->A00:Lcom/google/common/base/Predicate;
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    invoke-virtual {v0}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v1
-
-    .line 11
-    instance-of v0, v1, Ljava/lang/Class;
-
-    .line 12
-    .line 13
-    if-nez v0, :cond_0
-
-    .line 14
-    .line 15
-    check-cast v1, Ljava/lang/reflect/ParameterizedType;
-
-    .line 16
-    .line 17
-    invoke-interface {v1}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v1
-
-    .line 21
-    const/4 v0, 0x0
-
-    .line 22
-    aget-object v0, v1, v0
-
-    .line 23
-    .line 24
-    iput-object v0, p0, LX/1Te;->A00:Ljava/lang/reflect/Type;
-
-    .line 25
-    .line 26
     return-void
-
-    .line 27
-    :cond_0
-    const-string v0, "Internal error: TypeReference constructed without actual type information"
-
-    .line 28
-    .line 29
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v0
-
-    .line 33
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 1
+.method public final containsKey(Ljava/lang/Object;)Z
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
 
     .line 0
-    const/4 v0, 0x0
+    iget-object v0, p0, LX/1tB;->A01:Ljava/util/Map;
 
     .line 1
+    .line 2
+    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    iget-object v0, p0, LX/1tE;->A00:Lcom/google/common/base/Predicate;
+
+    .line 9
+    .line 10
+    invoke-interface {v0, p1}, Lcom/google/common/base/Predicate;->apply(Ljava/lang/Object;)Z
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v1
+
+    .line 14
+    const/4 v0, 0x1
+
+    .line 15
+    if-nez v1, :cond_1
+
+    .line 16
+    .line 17
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 18
+    :cond_1
     return v0
 .end method

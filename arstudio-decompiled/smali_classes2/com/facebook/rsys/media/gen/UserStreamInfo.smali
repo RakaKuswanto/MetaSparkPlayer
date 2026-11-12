@@ -137,26 +137,34 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yf;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget-object v0, p0, Lcom/facebook/rsys/media/gen/UserStreamInfo;->streamInfo:Lcom/facebook/rsys/media/gen/StreamInfo;
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 7
     .line 8
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
-
     .line 9
+    move-result v1
+
     .line 10
+    iget-object v0, p0, Lcom/facebook/rsys/media/gen/UserStreamInfo;->streamInfo:Lcom/facebook/rsys/media/gen/StreamInfo;
+
     .line 11
+    .line 12
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
+
+    .line 13
+    .line 14
+    .line 15
     move-result v0
 
-    .line 12
+    .line 16
     return v0
 .end method
 
@@ -164,7 +172,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -203,7 +211,7 @@
 
     .line 20
     .line 21
-    invoke-static {v0, v1}, LX/0Yd;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X1;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 22
     .line 23

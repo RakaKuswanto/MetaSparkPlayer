@@ -1,416 +1,369 @@
-.class public final LX/3cV;
-.super Ljava/lang/Object;
+.class public final LX/3cv;
+.super Ljava/io/InputStream;
 .source ""
 
 
 # instance fields
-.field public A00:LX/5rm;
+.field public A00:I
 
-.field public A01:LX/3cW;
-
-.field public A02:Z
-
-.field public A03:LX/1zG;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
-
-.field public final A06:LX/0Na;
+.field public final A01:[Ljava/io/InputStream;
 
 
 # direct methods
-.method public constructor <init>(LX/3KZ;LX/1zC;)V
-    .locals 21
+.method public constructor <init>([Ljava/io/InputStream;)V
+    .locals 1
 
     .line 0
-    move-object/from16 v8, p0
+    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v8}, Ljava/lang/Object;-><init>()V
+    .line 3
+    iput-object p1, p0, LX/3cv;->A01:[Ljava/io/InputStream;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    iput v0, p0, LX/3cv;->A00:I
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final available()I
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3cv;->A01:[Ljava/io/InputStream;
+
+    .line 1
+    .line 2
+    iget v0, p0, LX/3cv;->A00:I
+
+    .line 3
+    .line 4
+    aget-object v0, v1, v0
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    return v0
+.end method
+
+.method public final close()V
+    .locals 5
+
+    .line 0
+    iget v4, p0, LX/3cv;->A00:I
+
+    .line 1
+    .line 2
+    const/4 v3, 0x0
+
+    .line 3
+    const/4 v2, 0x0
+
+    .line 4
+    :goto_0
+    iget-object v1, p0, LX/3cv;->A01:[Ljava/io/InputStream;
+
+    .line 5
+    .line 6
+    array-length v0, v1
+
+    .line 7
+    if-ge v2, v0, :cond_2
+
+    .line 8
+    .line 9
+    :try_start_0
+    aget-object v0, v1, v2
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+
+    .line 12
+    .line 13
+    .line 14
+    goto :goto_2
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 15
+    :catch_0
+    move-exception v1
+
+    .line 16
+    if-eq v2, v4, :cond_1
+
+    .line 17
+    .line 18
+    if-eqz v3, :cond_0
+
+    .line 19
+    .line 20
+    move-object v1, v3
+
+    .line 21
+    :goto_1
+    if-eq v3, v1, :cond_0
+
+    .line 22
+    .line 23
+    const-string v0, "Suppressing exception"
+
+    .line 24
+    .line 25
+    invoke-static {v0, v3}, LX/3ck;->A00(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 26
+    .line 27
+    .line 28
+    :cond_0
+    move-object v3, v1
+
+    .line 29
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
+
+    .line 30
+    .line 31
+    goto :goto_0
+
+    .line 32
+    :cond_1
+    if-eqz v3, :cond_0
+
+    .line 33
+    .line 34
+    goto :goto_1
+
+    .line 35
+    :cond_2
+    return-void
+.end method
+
+.method public final mark(I)V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final markSupported()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final read()I
+    .locals 4
+
+    .line 536870912
+    :goto_0
+    iget-object v3, p0, LX/3cv;->A01:[Ljava/io/InputStream;
+
+    .line 536870913
+    .line 536870914
+    iget v0, p0, LX/3cv;->A00:I
+
+    .line 536870915
+    .line 536870916
+    aget-object v0, v3, v0
+
+    .line 536870917
+    .line 536870918
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 536870919
+    .line 536870920
+    .line 536870921
+    move-result v2
+
+    .line 536870922
+    const/4 v0, -0x1
+
+    .line 536870923
+    if-ne v2, v0, :cond_0
+
+    .line 536870924
+    .line 536870925
+    iget v0, p0, LX/3cv;->A00:I
+
+    .line 536870926
+    .line 536870927
+    add-int/lit8 v1, v0, 0x1
+
+    .line 536870928
+    .line 536870929
+    array-length v0, v3
+
+    .line 536870930
+    if-ge v1, v0, :cond_0
+
+    .line 536870931
+    .line 536870932
+    iput v1, p0, LX/3cv;->A00:I
+
+    .line 536870933
+    .line 536870934
+    goto :goto_0
+
+    .line 536870935
+    :cond_0
+    return v2
+.end method
+
+.method public final read([B)I
+    .locals 2
+
+    .line 0
+    array-length v1, p1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0, v1}, Ljava/io/InputStream;->read([BII)I
 
     .line 3
     .line 4
     .line 5
-    sget v0, LX/2eq;->AIR:I
+    move-result v0
 
     .line 6
-    .line 7
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    .line 8
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+.method public final read([BII)I
+    .locals 4
 
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v13
+    .line 268435456
+    :goto_0
+    iget-object v3, p0, LX/3cv;->A01:[Ljava/io/InputStream;
 
-    .line 12
-    iput-object v13, v8, LX/3cV;->A06:LX/0Na;
+    .line 268435457
+    .line 268435458
+    iget v0, p0, LX/3cv;->A00:I
 
-    .line 13
-    .line 14
-    sget v0, LX/2eq;->A6I:I
+    .line 268435459
+    .line 268435460
+    aget-object v0, v3, v0
 
-    .line 15
-    .line 16
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    .line 268435461
+    .line 268435462
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
 
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v11
+    .line 268435463
+    .line 268435464
+    .line 268435465
+    move-result v2
 
-    .line 20
-    iput-object v11, v8, LX/3cV;->A05:LX/0Na;
+    .line 268435466
+    const/4 v0, -0x1
 
-    .line 21
-    .line 22
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    .line 268435467
+    if-ne v2, v0, :cond_0
 
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v1
+    .line 268435468
+    .line 268435469
+    iget v0, p0, LX/3cv;->A00:I
 
-    .line 26
-    iput-object v1, v8, LX/3cV;->A04:LX/0Na;
+    .line 268435470
+    .line 268435471
+    add-int/lit8 v1, v0, 0x1
 
-    .line 27
-    .line 28
-    const/4 v7, 0x0
+    .line 268435472
+    .line 268435473
+    array-length v0, v3
 
-    .line 29
-    move-object/from16 v0, p2
+    .line 268435474
+    if-ge v1, v0, :cond_0
 
-    .line 30
-    .line 31
-    invoke-static {v0, v7}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
+    .line 268435475
+    .line 268435476
+    iput v1, p0, LX/3cv;->A00:I
 
-    .line 32
-    .line 33
-    .line 34
+    .line 268435477
+    .line 268435478
+    goto :goto_0
+
+    .line 268435479
+    :cond_0
+    return v2
+.end method
+
+.method public final reset()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
     move-result-object v0
 
-    .line 35
-    iput-object v0, v8, LX/3cV;->A03:LX/1zG;
+    .line 4
+    throw v0
+.end method
 
-    .line 36
-    .line 37
-    invoke-static {v1}, LX/0Zq;->A0K(LX/0Zq;)LX/35B;
+.method public final skip(J)J
+    .locals 2
 
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v9
+    .line 0
+    long-to-int v0, p1
 
-    .line 41
-    const-wide v0, 0x82002c003500f0L
+    .line 1
+    new-array v0, v0, [B
 
-    .line 42
-    .line 43
-    .line 44
-    .line 45
-    .line 46
-    invoke-static {v9, v0, v1}, LX/0Yi;->A03(LX/35B;J)I
+    .line 2
+    .line 3
+    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
-    .line 47
-    .line 48
-    .line 49
-    move-result v6
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
 
-    .line 50
-    const-wide v0, 0x82002c003400efL
+    .line 7
+    if-ltz v0, :cond_0
 
-    .line 51
-    .line 52
-    .line 53
-    .line 54
-    .line 55
-    invoke-static {v9, v0, v1}, LX/0Yi;->A03(LX/35B;J)I
+    .line 8
+    .line 9
+    int-to-long v0, v0
 
-    .line 56
-    .line 57
-    .line 58
-    move-result v5
+    .line 10
+    return-wide v0
 
-    .line 59
-    const-wide v0, 0x82002c003f00f1L
-
-    .line 60
-    .line 61
-    .line 62
-    .line 63
-    .line 64
-    invoke-static {v9, v0, v1}, LX/0Yi;->A03(LX/35B;J)I
-
-    .line 65
-    .line 66
-    .line 67
-    move-result v4
-
-    .line 68
-    const/4 v3, 0x1
-
-    .line 69
-    const-string v2, "FbRageShakeManager"
-
-    .line 70
-    .line 71
-    if-gtz v4, :cond_0
-
-    .line 72
-    .line 73
-    new-array v1, v3, [Ljava/lang/Object;
-
-    .line 74
-    .line 75
-    invoke-static {v1, v4, v7}, LX/001;->A1A([Ljava/lang/Object;II)V
-
-    .line 76
-    .line 77
-    .line 78
-    const-string/jumbo v0, "shakeDetectionDurationMs set to %d"
-
-    .line 79
-    .line 80
-    .line 81
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 82
-    .line 83
-    .line 84
-    const/16 v4, 0x5dc
-
-    .line 85
-    .line 86
+    .line 11
     :cond_0
-    const-wide v0, 0x84002c002b001bL
+    const-wide/16 v0, -0x1
 
-    .line 87
-    .line 88
-    .line 89
-    .line 90
-    .line 91
-    invoke-static {v9, v0, v1}, LX/0Yj;->A01(LX/35B;J)F
-
-    .line 92
-    .line 93
-    .line 94
-    move-result v10
-
-    .line 95
-    const/4 v0, 0x0
-
-    .line 96
-    cmpg-float v0, v10, v0
-
-    .line 97
-    .line 98
-    if-gtz v0, :cond_1
-
-    .line 99
-    .line 100
-    new-array v1, v3, [Ljava/lang/Object;
-
-    .line 101
-    .line 102
-    invoke-static {v1, v10, v7}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
-
-    .line 103
-    .line 104
-    .line 105
-    const-string/jumbo v0, "rageShakeForceThreshold set to %f"
-
-    .line 106
-    .line 107
-    .line 108
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 109
-    .line 110
-    .line 111
-    const/high16 v10, 0x420c0000    # 35.0f
-
-    .line 112
-    .line 113
-    :cond_1
-    const-wide v0, 0x82002c002c00eeL
-
-    .line 114
-    .line 115
-    .line 116
-    .line 117
-    .line 118
-    invoke-static {v9, v0, v1}, LX/0Yi;->A03(LX/35B;J)I
-
-    .line 119
-    .line 120
-    .line 121
-    move-result v12
-
-    .line 122
-    if-gtz v12, :cond_2
-
-    .line 123
-    .line 124
-    new-array v1, v3, [Ljava/lang/Object;
-
-    .line 125
-    .line 126
-    invoke-static {v1, v12, v7}, LX/001;->A1A([Ljava/lang/Object;II)V
-
-    .line 127
-    .line 128
-    .line 129
-    const-string/jumbo v0, "numRequiredOutliers set to %d"
-
-    .line 130
-    .line 131
-    .line 132
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 133
-    .line 134
-    .line 135
-    const/4 v12, 0x7
-
-    .line 136
-    :cond_2
-    const-wide v0, 0x82002c004200f3L
-
-    .line 137
-    .line 138
-    .line 139
-    .line 140
-    .line 141
-    invoke-interface {v9, v0, v1}, LX/35B;->AIM(J)J
-
-    .line 142
-    .line 143
-    .line 144
-    move-result-wide v0
-
-    .line 145
-    const-wide/16 v16, 0x0
-
-    .line 146
-    .line 147
-    const-wide/16 v14, 0x1
-
-    .line 148
-    .line 149
-    cmp-long v9, v0, v16
-
-    .line 150
-    .line 151
-    if-eqz v9, :cond_3
-
-    .line 152
-    .line 153
-    cmp-long v9, v0, v14
-
-    .line 154
-    .line 155
-    if-eqz v9, :cond_3
-
-    .line 156
-    .line 157
-    new-array v3, v3, [Ljava/lang/Object;
-
-    .line 158
-    .line 159
-    invoke-static {v3, v7, v0, v1}, LX/001;->A1B([Ljava/lang/Object;IJ)V
-
-    .line 160
-    .line 161
-    .line 162
-    const-string/jumbo v0, "rageShakeCountingStrategy set to %d"
-
-    .line 163
-    .line 164
-    .line 165
-    invoke-static {v2, v0, v3}, LX/0Jt;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 166
-    .line 167
-    .line 168
-    const-wide/16 v0, 0x1
-
-    .line 169
-    .line 170
-    :cond_3
-    new-instance v14, LX/5rm;
-
-    .line 171
-    .line 172
-    move-object/from16 v15, p1
-
-    .line 173
-    .line 174
-    move/from16 v17, v4
-
-    .line 175
-    .line 176
-    move/from16 v18, v12
-
-    .line 177
-    .line 178
-    move-wide/from16 v19, v0
-
-    .line 179
-    .line 180
-    move/from16 v16, v10
-
-    .line 181
-    .line 182
-    invoke-direct/range {v14 .. v20}, LX/5rm;-><init>(LX/3KZ;FIIJ)V
-
-    .line 183
-    .line 184
-    .line 185
-    iput-object v14, v8, LX/3cV;->A00:LX/5rm;
-
-    .line 186
-    .line 187
-    invoke-virtual {v13}, LX/1zT;->get()Ljava/lang/Object;
-
-    .line 188
-    .line 189
-    .line 190
-    move-result-object v2
-
-    .line 191
-    check-cast v2, Landroid/hardware/SensorManager;
-
-    .line 192
-    .line 193
-    invoke-virtual {v11}, LX/1zT;->get()Ljava/lang/Object;
-
-    .line 194
-    .line 195
-    .line 196
-    move-result-object v1
-
-    .line 197
-    check-cast v1, Landroid/os/Handler;
-
-    .line 198
-    .line 199
-    new-instance v0, LX/3cW;
-
-    .line 200
-    .line 201
-    invoke-direct {v0, v2, v1, v6, v5}, LX/3cW;-><init>(Landroid/hardware/SensorManager;Landroid/os/Handler;II)V
-
-    .line 202
-    .line 203
-    .line 204
-    iput-object v0, v8, LX/3cV;->A01:LX/3cW;
-
-    .line 205
-    .line 206
-    return-void
+    .line 12
+    .line 13
+    return-wide v0
 .end method

@@ -1,64 +1,67 @@
 .class public final LX/56B;
-.super Ljava/lang/Object;
+.super LX/56C;
 .source ""
 
 
-# static fields
-.field public static final A02:LX/56B;
-
-
 # instance fields
-.field public final A00:Landroid/os/Looper;
+.field public final synthetic A00:Lcom/google/gson/Gson;
 
-.field public final A01:LX/56D;
+.field public final synthetic A01:Lcom/google/gson/TypeAdapter;
+
+.field public final synthetic A02:LX/56F;
+
+.field public final synthetic A03:Lcom/google/gson/reflect/TypeToken;
+
+.field public final synthetic A04:Ljava/lang/reflect/Method;
+
+.field public final synthetic A05:Z
+
+.field public final synthetic A06:Z
+
+.field public final synthetic A07:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;LX/56F;Lcom/google/gson/reflect/TypeToken;Ljava/lang/String;Ljava/lang/reflect/Field;Ljava/lang/reflect/Method;ZZZZZ)V
+    .locals 0
 
     .line 0
-    new-instance v2, LX/56C;
+    iput-object p3, p0, LX/56B;->A02:LX/56F;
 
     .line 1
     .line 2
-    invoke-direct {v2}, LX/56C;-><init>()V
+    iput-object p7, p0, LX/56B;->A04:Ljava/lang/reflect/Method;
 
     .line 3
     .line 4
-    .line 5
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iput-boolean p10, p0, LX/56B;->A07:Z
 
+    .line 5
     .line 6
+    iput-object p2, p0, LX/56B;->A01:Lcom/google/gson/TypeAdapter;
+
     .line 7
     .line 8
-    move-result-object v1
+    iput-object p1, p0, LX/56B;->A00:Lcom/google/gson/Gson;
 
     .line 9
-    new-instance v0, LX/56B;
-
     .line 10
-    .line 11
-    invoke-direct {v0, v1, v2}, LX/56B;-><init>(Landroid/os/Looper;LX/56D;)V
+    iput-object p4, p0, LX/56B;->A03:Lcom/google/gson/reflect/TypeToken;
 
+    .line 11
     .line 12
+    iput-boolean p11, p0, LX/56B;->A05:Z
+
     .line 13
     .line 14
-    sput-object v0, LX/56B;->A02:LX/56B;
+    iput-boolean p12, p0, LX/56B;->A06:Z
 
     .line 15
     .line 16
-    return-void
-.end method
+    invoke-direct {p0, p5, p6, p8, p9}, LX/56C;-><init>(Ljava/lang/String;Ljava/lang/reflect/Field;ZZ)V
 
-.method public constructor <init>(Landroid/os/Looper;LX/56D;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, LX/56B;->A01:LX/56D;
-
-    iput-object p1, p0, LX/56B;->A00:Landroid/os/Looper;
-
+    .line 17
+    .line 18
+    .line 19
     return-void
 .end method

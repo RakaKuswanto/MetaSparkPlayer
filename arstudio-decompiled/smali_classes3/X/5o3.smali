@@ -1,24 +1,20 @@
-.class public final LX/5o3;
-.super Ljava/lang/Object;
+.class public final LX/5O3;
+.super Ljava/lang/Error;
 .source ""
 
 
-# instance fields
-.field public final A00:I
-
-
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "Kotlin reflection implementation is not found at runtime. Make sure you have kotlin-reflect.jar in the classpath"
 
     .line 1
     .line 2
-    .line 3
-    iput p1, p0, LX/5o3;->A00:I
+    invoke-direct {p0, v0}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
 
+    .line 3
     .line 4
     .line 5
     return-void

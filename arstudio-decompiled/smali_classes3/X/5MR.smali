@@ -1,246 +1,161 @@
-.class public final enum LX/5MR;
-.super Ljava/lang/Enum;
+.class public final LX/5MR;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/5MR;
+# instance fields
+.field public final synthetic A00:LX/5Ip;
 
-.field public static final enum CONNECTED:LX/5MR;
-
-.field public static final enum METERED:LX/5MR;
-
-.field public static final enum NOT_REQUIRED:LX/5MR;
-
-.field public static final enum NOT_ROAMING:LX/5MR;
-
-.field public static final enum TEMPORARILY_UNMETERED:LX/5MR;
-
-.field public static final enum UNMETERED:LX/5MR;
+.field public final synthetic A01:LX/5MU;
 
 
 # direct methods
-.method public static final synthetic $values()[LX/5MR;
-    .locals 3
-
-    const/4 v0, 0x6
-
-    new-array v2, v0, [LX/5MR;
-
-    sget-object v1, LX/5MR;->NOT_REQUIRED:LX/5MR;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/5MR;->CONNECTED:LX/5MR;
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/5MR;->UNMETERED:LX/5MR;
-
-    const/4 v0, 0x2
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/5MR;->NOT_ROAMING:LX/5MR;
-
-    const/4 v0, 0x3
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/5MR;->METERED:LX/5MR;
-
-    const/4 v0, 0x4
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/5MR;->TEMPORARILY_UNMETERED:LX/5MR;
-
-    const/4 v0, 0x5
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(LX/5Ip;LX/5MU;)V
+    .locals 0
 
     .line 0
-    const-string v2, "NOT_REQUIRED"
+    iput-object p2, p0, LX/5MR;->A01:LX/5MU;
 
     .line 1
     .line 2
-    const/4 v1, 0x0
+    iput-object p1, p0, LX/5MR;->A00:LX/5Ip;
 
     .line 3
-    new-instance v0, LX/5MR;
-
     .line 4
-    .line 5
-    invoke-direct {v0, v2, v1}, LX/5MR;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     .line 6
     .line 7
-    .line 8
-    sput-object v0, LX/5MR;->NOT_REQUIRED:LX/5MR;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A00(Ljava/lang/Exception;)V
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/5MR;->A01:LX/5MU;
+
+    .line 1
+    .line 2
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 7
+    .line 8
     .line 9
+    move-result-object v1
+
     .line 10
-    const-string v2, "CONNECTED"
+    const/4 v0, 0x0
 
     .line 11
-    .line 12
-    const/4 v1, 0x1
+    aput-object v1, v2, v0
 
+    .line 12
     .line 13
-    new-instance v0, LX/5MR;
+    const-string v0, "prepareMediaSource onError: %s"
 
     .line 14
     .line 15
-    invoke-direct {v0, v2, v1}, LX/5MR;-><init>(Ljava/lang/String;I)V
+    invoke-static {v3, v0, v2}, LX/5MU;->A0G(LX/5MU;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v0, LX/5MR;->CONNECTED:LX/5MR;
+    instance-of v0, p1, LX/5Mm;
 
     .line 19
     .line 20
-    const-string v2, "UNMETERED"
+    if-eqz v0, :cond_0
 
     .line 21
     .line 22
-    const/4 v1, 0x2
+    check-cast p1, LX/5NU;
 
     .line 23
-    new-instance v0, LX/5MR;
-
     .line 24
-    .line 25
-    invoke-direct {v0, v2, v1}, LX/5MR;-><init>(Ljava/lang/String;I)V
+    :goto_0
+    sget-object v0, LX/6VM;->RENDERER:LX/6VM;
 
+    .line 25
     .line 26
+    invoke-virtual {v3, v0, p1}, LX/5MU;->A0Q(LX/6VM;LX/5NU;)V
+
     .line 27
     .line 28
-    sput-object v0, LX/5MR;->UNMETERED:LX/5MR;
-
     .line 29
+    return-void
+
     .line 30
-    const-string v2, "NOT_ROAMING"
+    :cond_0
+    instance-of v0, p1, Ljava/io/IOException;
 
     .line 31
     .line 32
-    const/4 v1, 0x3
+    if-eqz v0, :cond_1
 
     .line 33
-    new-instance v0, LX/5MR;
-
     .line 34
-    .line 35
-    invoke-direct {v0, v2, v1}, LX/5MR;-><init>(Ljava/lang/String;I)V
+    check-cast p1, Ljava/io/IOException;
 
+    .line 35
     .line 36
+    const/16 v0, 0x7d0
+
     .line 37
     .line 38
-    sput-object v0, LX/5MR;->NOT_ROAMING:LX/5MR;
+    invoke-static {p1, v0}, LX/5Mm;->A00(Ljava/io/IOException;I)LX/5Mm;
 
     .line 39
     .line 40
-    const-string v2, "METERED"
-
     .line 41
+    move-result-object p1
+
     .line 42
-    const/4 v1, 0x4
+    goto :goto_0
 
     .line 43
-    new-instance v0, LX/5MR;
+    :cond_1
+    instance-of v0, p1, Ljava/lang/RuntimeException;
 
     .line 44
     .line 45
-    invoke-direct {v0, v2, v1}, LX/5MR;-><init>(Ljava/lang/String;I)V
+    if-eqz v0, :cond_2
 
     .line 46
     .line 47
+    check-cast p1, Ljava/lang/RuntimeException;
+
     .line 48
-    sput-object v0, LX/5MR;->METERED:LX/5MR;
-
     .line 49
+    const/16 v0, 0x3e8
+
     .line 50
-    const-string v2, "TEMPORARILY_UNMETERED"
-
     .line 51
+    invoke-static {p1, v0}, LX/5Mm;->A01(Ljava/lang/RuntimeException;I)LX/5Mm;
+
     .line 52
-    const/4 v1, 0x5
-
     .line 53
-    new-instance v0, LX/5MR;
-
     .line 54
+    move-result-object p1
+
     .line 55
-    invoke-direct {v0, v2, v1}, LX/5MR;-><init>(Ljava/lang/String;I)V
+    goto :goto_0
 
     .line 56
+    :cond_2
+    const/4 p1, 0x0
+
     .line 57
-    .line 58
-    sput-object v0, LX/5MR;->TEMPORARILY_UNMETERED:LX/5MR;
-
-    .line 59
-    .line 60
-    invoke-static {}, LX/5MR;->$values()[LX/5MR;
-
-    .line 61
-    .line 62
-    .line 63
-    move-result-object v0
-
-    .line 64
-    sput-object v0, LX/5MR;->$VALUES:[LX/5MR;
-
-    .line 65
-    .line 66
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/5MR;
-    .locals 1
-
-    const-class v0, LX/5MR;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, LX/5MR;
-
-    return-object v0
-.end method
-
-.method public static values()[LX/5MR;
-    .locals 1
-
-    sget-object v0, LX/5MR;->$VALUES:[LX/5MR;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [LX/5MR;
-
-    return-object v0
+    goto :goto_0
 .end method

@@ -1,14 +1,105 @@
-.class public interface abstract LX/5ZF;
+.class public final LX/5ZF;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AVp(LX/5e7;)V
-.end method
+# instance fields
+.field public A00:Landroid/graphics/Path;
 
-.method public abstract AVs()V
-.end method
+.field public A01:Landroid/graphics/PathMeasure;
 
-.method public abstract AVu()V
+.field public A02:[F
+
+.field public final A03:LX/5Z3;
+
+.field public final A04:LX/5Z0;
+
+
+# direct methods
+.method public constructor <init>(LX/5Z3;LX/5Z0;)V
+    .locals 3
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/5ZF;->A03:LX/5Z3;
+
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/5ZF;->A04:LX/5Z0;
+
+    .line 6
+    .line 7
+    iget-object v0, p1, LX/5Z3;->A0a:LX/5Zt;
+
+    .line 8
+    .line 9
+    if-eqz v0, :cond_0
+
+    .line 10
+    .line 11
+    invoke-static {}, LX/435;->A03()Landroid/graphics/Path;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v2
+
+    .line 15
+    iput-object v2, p0, LX/5ZF;->A00:Landroid/graphics/Path;
+
+    .line 16
+    .line 17
+    const/4 v1, 0x0
+
+    .line 18
+    new-instance v0, Landroid/graphics/PathMeasure;
+
+    .line 19
+    .line 20
+    invoke-direct {v0, v2, v1}, Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;Z)V
+
+    .line 21
+    .line 22
+    .line 23
+    iput-object v0, p0, LX/5ZF;->A01:Landroid/graphics/PathMeasure;
+
+    .line 24
+    .line 25
+    iget-object v0, p1, LX/5Z3;->A0a:LX/5Zt;
+
+    .line 26
+    .line 27
+    iget-object v0, v0, LX/5Zt;->A00:[Ljava/lang/Object;
+
+    .line 28
+    .line 29
+    check-cast v0, [LX/5ZX;
+
+    .line 30
+    .line 31
+    aget-object v0, v0, v1
+
+    .line 32
+    .line 33
+    iget-object v0, v0, LX/5ZX;->A02:[B
+
+    .line 34
+    .line 35
+    array-length v0, v0
+
+    .line 36
+    new-array v0, v0, [F
+
+    .line 37
+    .line 38
+    iput-object v0, p0, LX/5ZF;->A02:[F
+
+    .line 39
+    .line 40
+    :cond_0
+    return-void
 .end method

@@ -1,485 +1,481 @@
-.class public final LX/5X5;
+.class public final synthetic LX/5X5;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "RealConnectionPool$$ExternalSyntheticLambda0"
+
 
 # instance fields
-.field public A00:I
-
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:I
-
-.field public A04:I
-
-.field public A05:I
-
-.field public A06:I
-
-.field public A07:I
-
-.field public A08:Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;
-
-.field public A09:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;
-
-.field public A0A:LX/5Xz;
-
-.field public A0B:Lcom/facebook/hybridlogsink/HybridLogSink;
-
-.field public A0C:LX/5XA;
-
-.field public final A0D:LX/5XU;
-
-.field public final A0E:Landroid/content/Context;
-
-.field public final A0F:Landroid/content/res/AssetManager;
-
-.field public final A0G:Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;
-
-.field public final A0H:Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;
-
-.field public volatile A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
+.field public final synthetic A00:LX/5Wu;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/5XA;LX/5XU;Ljava/util/concurrent/ScheduledExecutorService;Ljava/util/concurrent/ScheduledExecutorService;)V
-    .locals 1
+.method public synthetic constructor <init>(LX/5Wu;)V
+    .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p3, p0, LX/5X5;->A0D:LX/5XU;
+    iput-object p1, p0, LX/5X5;->A00:LX/5Wu;
 
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/5X5;->A0E:Landroid/content/Context;
-
-    .line 6
-    .line 7
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/5X5;->A0F:Landroid/content/res/AssetManager;
-
-    .line 16
-    .line 17
-    new-instance v0, Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;
-
-    .line 18
-    .line 19
-    invoke-direct {v0, p4}, Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
-
-    .line 20
-    .line 21
-    .line 22
-    iput-object v0, p0, LX/5X5;->A0G:Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;
-
-    .line 23
-    .line 24
-    new-instance v0, Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;
-
-    .line 25
-    .line 26
-    invoke-direct {v0, p5}, Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
-
-    .line 27
-    .line 28
-    .line 29
-    iput-object v0, p0, LX/5X5;->A0H:Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;
-
-    .line 30
-    .line 31
-    iput-object p2, p0, LX/5X5;->A0C:LX/5XA;
-
-    .line 32
-    .line 33
-    const/4 v0, 0x0
-
-    .line 34
-    iput-object v0, p0, LX/5X5;->A0A:LX/5Xz;
-
-    .line 35
-    .line 36
-    const/4 v0, -0x1
-
-    .line 37
-    iput v0, p0, LX/5X5;->A07:I
-
-    .line 38
-    .line 39
     return-void
-.end method
-
-.method public static declared-synchronized A00(LX/5X5;)Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;
-    .locals 5
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v1, p0, LX/5X5;->A08:Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;
-
-    .line 2
-    .line 3
-    if-nez v1, :cond_0
-
-    .line 4
-    .line 5
-    iget-object v4, p0, LX/5X5;->A0F:Landroid/content/res/AssetManager;
-
-    .line 6
-    .line 7
-    iget-object v3, p0, LX/5X5;->A0G:Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;
-
-    .line 8
-    .line 9
-    iget-object v2, p0, LX/5X5;->A0H:Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;
-
-    .line 10
-    .line 11
-    invoke-virtual {p0}, LX/5X5;->A02()Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iget-object v1, v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;->mContext:Landroid/content/Context;
-
-    .line 16
-    .line 17
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/fullpluginconfigprovider/FullPluginConfigProvider;
-
-    .line 18
-    .line 19
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/arengineservices/fullpluginconfigprovider/FullPluginConfigProvider;-><init>(Landroid/content/Context;)V
-
-    .line 20
-    .line 21
-    .line 22
-    new-instance v1, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;
-
-    .line 23
-    .line 24
-    invoke-direct {v1, v4, v3, v2, v0}, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;-><init>(Landroid/content/res/AssetManager;Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/PluginConfigProvider;)V
-
-    .line 25
-    .line 26
-    .line 27
-    iput-object v1, p0, LX/5X5;->A08:Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 28
-    .line 29
-    :cond_0
-    monitor-exit p0
-
-    .line 30
-    return-object v1
-
-    .line 31
-    :catchall_0
-    move-exception v0
-
-    .line 32
-    monitor-exit p0
-
-    .line 33
-    throw v0
-.end method
-
-.method public static declared-synchronized A01(LX/5X5;)V
-    .locals 1
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5X5;->A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
-
-    .line 2
-    .line 3
-    if-eqz v0, :cond_0
-
-    .line 4
-    .line 5
-    iget-object v0, p0, LX/5X5;->A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
-
-    .line 6
-    .line 7
-    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;->destroy()V
-
-    .line 8
-    .line 9
-    .line 10
-    const/4 v0, 0x0
-
-    .line 11
-    iput-object v0, p0, LX/5X5;->A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 12
-    .line 13
-    :cond_0
-    monitor-exit p0
-
-    .line 14
-    return-void
-
-    .line 15
-    :catchall_0
-    move-exception v0
-
-    .line 16
-    monitor-exit p0
-
-    .line 17
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final A02()Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
-    .locals 15
+.method public final run()V
+    .locals 18
 
     .line 0
-    iget-object v0, p0, LX/5X5;->A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
+    move-object/from16 v0, p0
 
     .line 1
     .line 2
-    if-nez v0, :cond_1
+    iget-object v7, v0, LX/5X5;->A00:LX/5Wu;
 
     .line 3
     .line 4
-    monitor-enter p0
+    :cond_0
+    :goto_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     .line 5
-    :try_start_0
-    iget-object v0, p0, LX/5X5;->A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
-
     .line 6
     .line 7
-    if-nez v0, :cond_0
+    move-result-wide v16
 
     .line 8
+    monitor-enter v7
+
     .line 9
-    iget-object v4, p0, LX/5X5;->A0C:LX/5XA;
+    :try_start_0
+    iget-object v10, v7, LX/5Wu;->A04:Ljava/util/Deque;
 
     .line 10
     .line 11
-    iget-object v0, p0, LX/5X5;->A0E:Landroid/content/Context;
+    invoke-interface {v10}, Ljava/util/Deque;->iterator()Ljava/util/Iterator;
 
     .line 12
     .line 13
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
     .line 14
+    move-result-object v15
+
     .line 15
+    const/4 v9, 0x0
+
     .line 16
-    move-result-object v5
+    const/4 v8, 0x0
 
     .line 17
-    iget-object v3, v4, LX/5XA;->A02:LX/5XC;
+    const-wide/high16 v13, -0x8000000000000000L
 
     .line 18
     .line 19
-    iget-object v0, v4, LX/5XA;->A00:Lcom/facebook/cameracore/mediapipeline/dataproviders/slam/interfaces/SlamLibraryProvider;
+    const/4 v4, 0x0
 
     .line 20
+    const/4 v12, 0x0
+
     .line 21
-    iput-object v0, v3, LX/5XC;->A04:Lcom/facebook/cameracore/mediapipeline/dataproviders/slam/interfaces/SlamLibraryProvider;
+    :cond_1
+    :goto_1
+    invoke-interface {v15}, Ljava/util/Iterator;->hasNext()Z
 
     .line 22
     .line 23
-    const/4 v10, 0x0
-
     .line 24
-    iget-object v2, v4, LX/5XA;->A03:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfig;
+    move-result v0
 
     .line 25
-    .line 26
-    const/4 v14, 0x0
+    if-eqz v0, :cond_6
 
+    .line 26
     .line 27
-    new-instance v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/implementation/WorldTrackerSlamFactoryProviderModule;
+    invoke-interface {v15}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 28
     .line 29
-    invoke-direct {v1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/implementation/WorldTrackerSlamFactoryProviderModule;-><init>()V
-
     .line 30
+    move-result-object v5
+
     .line 31
+    check-cast v5, LX/5Wr;
+
     .line 32
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/WorldTrackerDataProviderConfigWithSlam;
-
     .line 33
+    iget-object v6, v5, LX/5Wr;->A0D:Ljava/util/List;
+
     .line 34
-    invoke-direct {v0, v1, v2}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/WorldTrackerDataProviderConfigWithSlam;-><init>(Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/WorldTrackerSlamFactoryProvider;Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfig;)V
-
     .line 35
-    .line 36
-    .line 37
-    iput-object v0, v3, LX/5XC;->A00:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/WorldTrackerDataProviderConfigWithSlam;
+    const/4 v3, 0x0
 
+    .line 36
+    :cond_2
+    :goto_2
+    invoke-interface {v6}, Ljava/util/List;->size()I
+
+    .line 37
     .line 38
     .line 39
-    new-instance v9, Lcom/facebook/cameracore/mediapipeline/arsessioncompression/VideoEncoderAndroid;
+    move-result v0
 
     .line 40
-    .line 41
-    invoke-direct {v9, v14, v14}, Lcom/facebook/cameracore/mediapipeline/arsessioncompression/VideoEncoderAndroid;-><init>(II)V
+    if-ge v3, v0, :cond_3
 
+    .line 41
     .line 42
+    invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
     .line 43
     .line 44
-    new-instance v6, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHostConfig;
-
     .line 45
+    move-result-object v11
+
     .line 46
-    invoke-direct {v6, v3}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHostConfig;-><init>(LX/5XC;)V
+    check-cast v11, Ljava/lang/ref/Reference;
 
     .line 47
     .line 48
-    .line 49
-    iget-object v7, v4, LX/5XA;->A04:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;
+    invoke-virtual {v11}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
+    .line 49
     .line 50
     .line 51
-    iget-object v8, v4, LX/5XA;->A05:LX/5Yj;
+    move-result-object v0
 
     .line 52
+    if-eqz v0, :cond_4
+
     .line 53
-    iget-object v11, v4, LX/5XA;->A01:Lcom/facebook/cameracore/mediapipeline/arclass/common/ARClass;
-
     .line 54
-    .line 55
-    iget-object v12, v4, LX/5XA;->A07:LX/0Gk;
+    add-int/lit8 v3, v3, 0x1
 
+    .line 55
     .line 56
+    goto :goto_2
+
     .line 57
-    new-instance v13, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/implementation/WorldTrackerV2DataProviderModule;
+    :cond_3
+    invoke-interface {v6}, Ljava/util/List;->size()I
 
     .line 58
     .line 59
-    invoke-direct {v13}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/implementation/WorldTrackerV2DataProviderModule;-><init>()V
-
     .line 60
+    move-result v0
+
     .line 61
+    if-lez v0, :cond_5
+
     .line 62
-    new-instance v4, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;
-
     .line 63
+    add-int/lit8 v12, v12, 0x1
+
     .line 64
-    invoke-direct/range {v4 .. v14}, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;-><init>(Landroid/content/Context;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHostConfig;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/5Yj;Lcom/facebook/cameracore/mediapipeline/arsessioncompression/VideoEncoderAndroid;Lcom/facebook/cameracore/mediapipeline/arsessionplayer/interfaces/SessionPlayer;Lcom/facebook/cameracore/mediapipeline/arclass/common/ARClass;LX/0Gk;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceModule;Z)V
-
     .line 65
+    goto :goto_1
+
     .line 66
+    :cond_4
+    check-cast v11, LX/5Xt;
+
     .line 67
-    iput-object v4, p0, LX/5X5;->A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
-
     .line 68
-    .line 69
-    iget-object v0, p0, LX/5X5;->A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
+    .line 69
     .line 70
     .line 71
-    iget-object v1, p0, LX/5X5;->A09:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;
+    move-result-object v1
 
     .line 72
+    const-string v0, "A connection to "
+
     .line 73
-    check-cast v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;
-
     .line 74
-    .line 75
-    iput-object v1, v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;->mTouchInput:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 75
     .line 76
     .line 77
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/alleffectservicehost/AllEffectServiceHost;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchService;
+    iget-object v0, v5, LX/5Wr;->A0E:LX/5XT;
 
     .line 78
     .line 79
-    if-eqz v0, :cond_0
+    iget-object v0, v0, LX/5XT;->A02:LX/5W9;
 
     .line 80
     .line 81
-    check-cast v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
+    iget-object v0, v0, LX/5W9;->A09:LX/5W6;
 
     .line 82
     .line 83
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->mGestureProcessor:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 84
     .line 85
-    invoke-virtual {v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchInput;->setGestureProcessor(LX/5a9;)V
-
     .line 86
+    const-string v0, " was leaked. Did you forget to close a response body?"
+
     .line 87
     .line 88
-    :cond_0
-    monitor-exit p0
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 89
-    goto :goto_0
-
     .line 90
+    .line 91
+    move-result-object v2
+
+    .line 92
+    sget-object v1, LX/3pY;->A00:LX/3pY;
+
+    .line 93
+    .line 94
+    iget-object v0, v11, LX/5Xt;->A00:Ljava/lang/Object;
+
+    .line 95
+    .line 96
+    invoke-virtual {v1, v2, v0}, LX/3pY;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 97
+    .line 98
+    .line 99
+    invoke-interface {v6, v3}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    .line 100
+    .line 101
+    .line 102
+    const/4 v0, 0x1
+
+    .line 103
+    iput-boolean v0, v5, LX/5Wr;->A0C:Z
+
+    .line 104
+    .line 105
+    invoke-interface {v6}, Ljava/util/List;->isEmpty()Z
+
+    .line 106
+    .line 107
+    .line 108
+    move-result v0
+
+    .line 109
+    if-eqz v0, :cond_2
+
+    .line 110
+    .line 111
+    iget-wide v2, v7, LX/5Wu;->A02:J
+
+    .line 112
+    .line 113
+    sub-long v0, v16, v2
+
+    .line 114
+    .line 115
+    iput-wide v0, v5, LX/5Wr;->A04:J
+
+    .line 116
+    .line 117
+    :cond_5
+    add-int/lit8 v4, v4, 0x1
+
+    .line 118
+    .line 119
+    iget-wide v0, v5, LX/5Wr;->A04:J
+
+    .line 120
+    .line 121
+    sub-long v2, v16, v0
+
+    .line 122
+    .line 123
+    cmp-long v0, v2, v13
+
+    .line 124
+    .line 125
+    if-lez v0, :cond_1
+
+    .line 126
+    .line 127
+    move-object v8, v5
+
+    .line 128
+    move-wide v13, v2
+
+    .line 129
+    goto :goto_1
+
+    .line 130
+    :cond_6
+    iget-wide v5, v7, LX/5Wu;->A02:J
+
+    .line 131
+    .line 132
+    cmp-long v0, v13, v5
+
+    .line 133
+    .line 134
+    if-gez v0, :cond_a
+
+    .line 135
+    .line 136
+    iget v0, v7, LX/5Wu;->A01:I
+
+    .line 137
+    .line 138
+    if-gt v4, v0, :cond_a
+
+    .line 139
+    .line 140
+    if-lez v4, :cond_7
+
+    .line 141
+    .line 142
+    sub-long/2addr v5, v13
+
+    .line 143
+    goto :goto_3
+
+    .line 144
+    :cond_7
+    if-gtz v12, :cond_8
+
+    .line 145
+    .line 146
+    iput-boolean v9, v7, LX/5Wu;->A00:Z
+
+    .line 147
+    .line 148
+    const-wide/16 v5, -0x1
+
+    .line 149
+    .line 150
+    :cond_8
+    :goto_3
+    monitor-exit v7
+
+    .line 151
+    const-wide/16 v1, -0x1
+
+    .line 152
+    .line 153
+    cmp-long v0, v5, v1
+
+    .line 154
+    .line 155
+    if-nez v0, :cond_9
+
+    .line 156
+    .line 157
+    return-void
+
+    .line 158
+    :cond_9
+    const-wide/16 v1, 0x0
+
+    .line 159
+    .line 160
+    cmp-long v0, v5, v1
+
+    .line 161
+    .line 162
+    if-lez v0, :cond_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 163
+    .line 164
+    const-wide/32 v3, 0xf4240
+
+    .line 165
+    .line 166
+    .line 167
+    div-long v1, v5, v3
+
+    .line 168
+    .line 169
+    mul-long/2addr v3, v1
+
+    .line 170
+    sub-long/2addr v5, v3
+
+    .line 171
+    monitor-enter v7
+
+    .line 172
+    long-to-int v0, v5
+
+    .line 173
+    :try_start_1
+    invoke-virtual {v7, v1, v2, v0}, Ljava/lang/Object;->wait(JI)V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 174
+    .line 175
+    .line 176
+    :catch_0
+    :try_start_2
+    monitor-exit v7
+
+    .line 177
+    goto/16 :goto_0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 178
+    .line 179
+    :cond_a
+    :try_start_3
+    invoke-interface {v10, v8}, Ljava/util/Deque;->remove(Ljava/lang/Object;)Z
+
+    .line 180
+    .line 181
+    .line 182
+    monitor-exit v7
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 183
+    iget-object v0, v8, LX/5Wr;->A06:Ljava/net/Socket;
+
+    .line 184
+    .line 185
+    invoke-static {v0}, LX/5Vw;->A09(Ljava/net/Socket;)V
+
+    .line 186
+    .line 187
+    .line 188
+    goto/16 :goto_0
+
+    .line 189
+    .line 190
     :catchall_0
     move-exception v0
 
-    .line 91
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 191
+    :try_start_4
+    monitor-exit v7
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 92
+    .line 192
     throw v0
 
-    .line 93
-    :cond_1
-    :goto_0
-    iget-object v0, p0, LX/5X5;->A0I:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
+    .line 193
+    :catchall_1
+    move-exception v0
 
-    .line 94
-    .line 95
-    return-object v0
-.end method
+    .line 194
+    :try_start_5
+    monitor-exit v7
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-.method public final finalize()V
-    .locals 0
-
-    .line 0
-    invoke-static {p0}, LX/5X5;->A01(LX/5X5;)V
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 4
-    .line 5
-    .line 6
-    return-void
+    .line 195
+    throw v0
 .end method

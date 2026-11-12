@@ -1,190 +1,168 @@
-.class public final enum LX/1jq;
-.super Ljava/lang/Enum;
+.class public abstract LX/1jQ;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/1jq;
-
-.field public static final enum Done:LX/1jq;
-
-.field public static final enum Failed:LX/1jq;
-
-.field public static final enum NotReady:LX/1jq;
-
-.field public static final enum Ready:LX/1jq;
+.field public static final A00:LX/3Gx;
 
 
 # direct methods
-.method public static final synthetic $values()[LX/1jq;
-    .locals 3
-
-    const/4 v0, 0x4
-
-    new-array v2, v0, [LX/1jq;
-
-    sget-object v1, LX/1jq;->Ready:LX/1jq;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/1jq;->NotReady:LX/1jq;
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/1jq;->Done:LX/1jq;
-
-    const/4 v0, 0x2
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/1jq;->Failed:LX/1jq;
-
-    const/4 v0, 0x3
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     .line 0
-    const-string v2, "Ready"
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
-    const/4 v1, 0x0
-
     .line 3
-    new-instance v0, LX/1jq;
+    move-result-object v3
 
     .line 4
-    .line 5
-    invoke-direct {v0, v2, v1}, LX/1jq;-><init>(Ljava/lang/String;I)V
+    const/16 v0, 0x28
 
+    .line 5
     .line 6
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     .line 7
     .line 8
-    sput-object v0, LX/1jq;->Ready:LX/1jq;
-
     .line 9
+    const-string v2, "(\\p{Digit}+)"
+
     .line 10
-    const-string v2, "NotReady"
-
     .line 11
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 12
-    const/4 v1, 0x1
-
     .line 13
-    new-instance v0, LX/1jq;
-
     .line 14
-    .line 15
-    invoke-direct {v0, v2, v1}, LX/1jq;-><init>(Ljava/lang/String;I)V
+    const-string v0, "(\\.)?("
 
+    .line 15
     .line 16
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 17
     .line 18
-    sput-object v0, LX/1jq;->NotReady:LX/1jq;
-
     .line 19
-    .line 20
-    const-string v2, "Done"
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 20
     .line 21
     .line 22
-    const/4 v1, 0x2
+    const-string v0, "?)("
 
     .line 23
-    new-instance v0, LX/1jq;
-
     .line 24
-    .line 25
-    invoke-direct {v0, v2, v1}, LX/1jq;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 25
     .line 26
     .line 27
-    .line 28
-    sput-object v0, LX/1jq;->Done:LX/1jq;
+    const-string/jumbo v1, "[eE][+-]?(\\p{Digit}+)"
 
+    .line 28
     .line 29
     .line 30
-    const-string v2, "Failed"
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 31
     .line 32
-    const/4 v1, 0x3
-
     .line 33
-    new-instance v0, LX/1jq;
+    const-string v0, ")?)|(\\.("
 
     .line 34
     .line 35
-    invoke-direct {v0, v2, v1}, LX/1jq;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 36
     .line 37
     .line 38
-    sput-object v0, LX/1jq;->Failed:LX/1jq;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 39
     .line 40
-    invoke-static {}, LX/1jq;->$values()[LX/1jq;
-
     .line 41
+    const-string v0, ")("
+
     .line 42
     .line 43
-    move-result-object v0
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 44
-    sput-object v0, LX/1jq;->$VALUES:[LX/1jq;
-
     .line 45
     .line 46
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 47
+    .line 48
+    .line 49
+    const-string v0, ")?)|(("
+
+    .line 50
+    .line 51
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 52
+    .line 53
+    .line 54
+    const-string v0, "(0[xX](\\p{XDigit}+)(\\.)?)|(0[xX](\\p{XDigit}+)?(\\.)(\\p{XDigit}+))"
+
+    .line 55
+    .line 56
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 57
+    .line 58
+    .line 59
+    const-string v0, ")[pP][+-]?"
+
+    .line 60
+    .line 61
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 62
+    .line 63
+    .line 64
+    invoke-static {v2, v3}, LX/0X2;->A0k(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 65
+    .line 66
+    .line 67
+    move-result-object v2
+
+    .line 68
+    const-string/jumbo v1, "[\\x00-\\x20]*[+-]?(NaN|Infinity|(("
+
+    .line 69
+    .line 70
+    .line 71
+    const-string v0, ")[fFdD]?))[\\x00-\\x20]*"
+
+    .line 72
+    .line 73
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v1
+
+    .line 77
+    new-instance v0, LX/3Gx;
+
+    .line 78
+    .line 79
+    invoke-direct {v0, v1}, LX/3Gx;-><init>(Ljava/lang/String;)V
+
+    .line 80
+    .line 81
+    .line 82
+    sput-object v0, LX/1jQ;->A00:LX/3Gx;
+
+    .line 83
+    .line 84
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/1jq;
-    .locals 1
-
-    const-class v0, LX/1jq;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, LX/1jq;
-
-    return-object v0
-.end method
-
-.method public static values()[LX/1jq;
-    .locals 1
-
-    sget-object v0, LX/1jq;->$VALUES:[LX/1jq;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [LX/1jq;
-
-    return-object v0
 .end method

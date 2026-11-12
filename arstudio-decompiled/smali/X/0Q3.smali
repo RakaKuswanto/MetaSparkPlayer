@@ -2,216 +2,112 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0LF;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AcL()V
+    .locals 4
+
+    .line 0
+    const-wide v2, 0x800000000L
+
+    .line 1
+    .line 2
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {v2, v3}, Lcom/facebook/systrace/Systrace;->A0C(J)Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    if-eqz v0, :cond_0
+
+    .line 10
+    .line 11
+    const/4 v1, 0x0
+
+    .line 12
+    const-string v0, "CLASS_LOAD_TRACE"
+
+    .line 13
+    .line 14
+    invoke-static {v2, v3, v0, v1}, Lcom/facebook/systrace/Systrace;->A03(JLjava/lang/String;I)V
+
+    .line 15
+    .line 16
+    .line 17
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_5
+    .line 18
+    invoke-static {v0}, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A01(Z)V
 
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x6
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x7
-
-    if-eq p0, v0, :cond_0
-
-    sparse-switch p0, :sswitch_data_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
-    :sswitch_0
-    const-string v0, "OCULUS_PANELAPPS_STORE_ACCEPT_ORDER"
-
-    return-object v0
-
-    :sswitch_1
-    const-string v0, "OCULUS_PANELAPPS_STORE_DOWNLOAD_ENVIRONMENT_FILE"
-
-    return-object v0
-
-    :sswitch_2
-    const-string v0, "OCULUS_PANELAPPS_TV_SEARCH_BAR_QUERY"
-
-    return-object v0
-
-    :sswitch_3
-    const-string v0, "OCULUS_PANELAPPS_STORE_HOME_ITEM_TILE_TO_PDP_BUY_BUTTON"
-
-    return-object v0
-
-    :sswitch_4
-    const-string v0, "OCULUS_PANELAPPS_STORE_PDP_CHANGE_TAB"
-
-    return-object v0
-
-    :sswitch_5
-    const-string v0, "OCULUS_PANELAPPS_SALSA_STATUS_FETCH"
-
-    return-object v0
-
-    :sswitch_6
-    const-string v0, "OCULUS_PANELAPPS_STORE_WISHLIST_PAGE"
-
-    return-object v0
-
-    :sswitch_7
-    const-string v0, "OCULUS_PANELAPPS_TV_START_MEDIA_PLAYBACK"
-
-    return-object v0
-
-    :sswitch_8
-    const-string v0, "OCULUS_PANELAPPS_TV_PAGE_RENDER"
-
-    return-object v0
-
-    :sswitch_9
-    const-string v0, "OCULUS_PANELAPPS_TV_SEARCH_BAR_TYPEAHEAD"
-
-    return-object v0
-
-    :sswitch_a
-    const-string v0, "OCULUS_PANELAPPS_STORE_RELATED_ITEMS"
-
-    return-object v0
-
-    :sswitch_b
-    const-string v0, "OCULUS_PANELAPPS_STORE_GET_FREE_ITEM"
-
-    return-object v0
-
-    :sswitch_c
-    const-string v0, "OCULUS_PANELAPPS_STORE_CREATE_ORDER"
-
-    return-object v0
-
-    :sswitch_d
-    const-string v0, "OCULUS_PANELAPPS_STORE_CONFIRM_ORDER"
-
-    return-object v0
-
-    :sswitch_e
-    const-string v0, "OCULUS_PANELAPPS_STORE_BROWSE_ITEMS"
-
-    return-object v0
-
-    :sswitch_f
-    const-string v0, "OCULUS_PANELAPPS_STORE_3D_IMAGE_LAYERS"
-
-    return-object v0
-
-    :sswitch_10
-    const-string v0, "OCULUS_PANELAPPS_RN_PERF_POINTER"
-
-    return-object v0
-
-    :sswitch_11
-    const-string v0, "OCULUS_PANELAPPS_RN_PERF_SCROLL"
-
-    return-object v0
-
-    :sswitch_12
-    const-string v0, "OCULUS_PANELAPPS_STORE_HOME_ITEM_TILE_TO_PDP"
-
-    return-object v0
-
-    :sswitch_13
-    const-string v0, "OCULUS_PANELAPPS_RN_PERF_TOUCH"
-
-    return-object v0
-
-    :sswitch_14
-    const-string v0, "OCULUS_PANELAPPS_STORE_CUBEMAP_ENVIRONMENT_DOWNLOAD"
-
-    return-object v0
-
-    :sswitch_15
-    const-string v0, "OCULUS_PANELAPPS_STORE_CUBEMAP_CACHE_SIZE"
-
-    return-object v0
-
-    :sswitch_16
-    const-string v0, "OCULUS_PANELAPPS_PERF_SCROLL"
-
-    return-object v0
-
-    :sswitch_17
-    const-string v0, "OCULUS_PANELAPPS_EXPLORE_PREFERENCES_INITIAL_LOAD"
-
-    return-object v0
-
+    .line 19
+    .line 20
+    .line 21
     :cond_0
-    const-string v0, "OCULUS_PANELAPPS_SEARCH_INITIAL_LOAD"
+    return-void
+.end method
 
-    return-object v0
+.method public final AcM()V
+    .locals 4
 
-    :cond_1
-    const-string v0, "OCULUS_PANELAPPS_SEARCH_BAR_QUERY"
+    .line 0
+    const-wide v2, 0x800000000L
 
-    return-object v0
+    .line 1
+    .line 2
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {v2, v3}, Lcom/facebook/systrace/Systrace;->A0C(J)Z
 
-    :cond_2
-    const-string v0, "OCULUS_PANELAPPS_LOAD_MORE_IN_SHELF"
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
 
-    return-object v0
+    .line 9
+    if-eqz v0, :cond_0
 
-    :cond_3
-    const-string v0, "OCULUS_PANELAPPS_LOAD_MORE_SHELVES"
+    .line 10
+    .line 11
+    const/4 v1, 0x0
 
-    return-object v0
+    .line 12
+    invoke-static {v1}, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A01(Z)V
 
-    :cond_4
-    const-string v0, "OCULUS_PANELAPPS_SWITCH_TAB"
+    .line 13
+    .line 14
+    .line 15
+    const-string v0, "CLASS_LOAD_TRACE"
 
-    return-object v0
+    .line 16
+    .line 17
+    invoke-static {v2, v3, v0, v1}, Lcom/facebook/systrace/Systrace;->A04(JLjava/lang/String;I)V
 
-    :cond_5
-    const-string v0, "OCULUS_PANELAPPS_INIT"
-
-    return-object v0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x10b2 -> :sswitch_17
-        0x14a7 -> :sswitch_16
-        0x17b8 -> :sswitch_15
-        0x180c -> :sswitch_14
-        0x1b30 -> :sswitch_13
-        0x1b3d -> :sswitch_12
-        0x1ff9 -> :sswitch_11
-        0x203c -> :sswitch_10
-        0x20c8 -> :sswitch_f
-        0x2250 -> :sswitch_e
-        0x22a6 -> :sswitch_d
-        0x2470 -> :sswitch_c
-        0x258f -> :sswitch_b
-        0x2600 -> :sswitch_a
-        0x2919 -> :sswitch_9
-        0x29c8 -> :sswitch_8
-        0x3250 -> :sswitch_7
-        0x3316 -> :sswitch_6
-        0x33ef -> :sswitch_5
-        0x34a4 -> :sswitch_4
-        0x34b8 -> :sswitch_3
-        0x3e6e -> :sswitch_2
-        0x3f8d -> :sswitch_1
-        0x3ff9 -> :sswitch_0
-    .end sparse-switch
+    .line 18
+    .line 19
+    .line 20
+    :cond_0
+    return-void
 .end method

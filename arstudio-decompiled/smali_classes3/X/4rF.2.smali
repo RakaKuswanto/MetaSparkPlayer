@@ -1,8 +1,25 @@
-.class public interface abstract LX/4rF;
+.class public final LX/4rF;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A9O(LX/4nC;Ljava/lang/Object;)Ljava/lang/Object;
+# instance fields
+.field public final A00:I
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput p1, p0, LX/4rF;->A00:I
+
+    .line 4
+    .line 5
+    return-void
 .end method

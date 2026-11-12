@@ -167,7 +167,7 @@
 
     .line 32
     .line 33
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 34
     .line 35
@@ -190,7 +190,7 @@
 
     .line 43
     .line 44
-    invoke-static {v1, v5}, LX/4BE;->A01(FF)F
+    invoke-static {v1, v5}, LX/433;->A01(FF)F
 
     .line 45
     .line 46
@@ -247,7 +247,7 @@
 
     .line 71
     .line 72
-    sget-object v3, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v3, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 73
     .line 74
@@ -267,7 +267,7 @@
 
     .line 81
     .line 82
-    invoke-static {v1, v3}, LX/4BD;->A0K(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Ljava/lang/Object;)J
+    invoke-static {v1, v3}, LX/431;->A0G(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Ljava/lang/Object;)J
 
     .line 83
     .line 84
@@ -295,7 +295,7 @@
 
     .line 95
     :cond_2
-    invoke-static {v1, v3}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->access$1000(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)J
+    invoke-static {v1, v3}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->access$1000(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;)J
 
     .line 96
     .line 97
@@ -303,7 +303,7 @@
     move-result-wide v3
 
     .line 99
-    sget-object v8, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;->BEGAN:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;
+    sget-object v8, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;->BEGAN:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;
 
     .line 100
     .line 101
@@ -323,7 +323,7 @@
 
     .line 108
     .line 109
-    invoke-direct/range {v2 .. v11}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/PinchGesture;-><init>(JFFFLcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;ZFF)V
+    invoke-direct/range {v2 .. v11}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/PinchGesture;-><init>(JFFFLcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;ZFF)V
 
     .line 110
     .line 111
@@ -332,13 +332,13 @@
 
     .line 113
     .line 114
-    invoke-static {v1, v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->access$1100(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)V
+    invoke-static {v1, v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->access$1100(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)V
 
     .line 115
     .line 116
     .line 117
     :cond_3
-    sget-object v8, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;->CHANGED:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;
+    sget-object v8, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;->CHANGED:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;
 
     .line 118
     .line 119
@@ -358,7 +358,7 @@
 
     .line 126
     .line 127
-    invoke-direct/range {v2 .. v11}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/PinchGesture;-><init>(JFFFLcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;ZFF)V
+    invoke-direct/range {v2 .. v11}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/PinchGesture;-><init>(JFFFLcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;ZFF)V
 
     .line 128
     .line 129
@@ -367,7 +367,7 @@
 
     .line 131
     .line 132
-    invoke-static {v1, v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->access$1100(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)V
+    invoke-static {v1, v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->access$1100(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)V
 
     .line 133
     .line 134
@@ -453,7 +453,7 @@
 
     .line 35
     .line 36
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 37
     .line 38
@@ -510,7 +510,7 @@
 
     .line 10
     .line 11
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 12
     .line 13
@@ -530,7 +530,7 @@
 
     .line 20
     .line 21
-    invoke-static {v0, v1}, LX/4BD;->A0K(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Ljava/lang/Object;)J
+    invoke-static {v0, v1}, LX/431;->A0G(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Ljava/lang/Object;)J
 
     .line 22
     .line 23
@@ -604,7 +604,7 @@
     move-result v6
 
     .line 57
-    sget-object v7, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;->ENDED:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;
+    sget-object v7, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;->ENDED:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;
 
     .line 58
     .line 59
@@ -624,7 +624,7 @@
 
     .line 66
     .line 67
-    invoke-direct/range {v1 .. v10}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/PinchGesture;-><init>(JFFFLcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;ZFF)V
+    invoke-direct/range {v1 .. v10}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/PinchGesture;-><init>(JFFFLcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;ZFF)V
 
     .line 68
     .line 69
@@ -633,7 +633,7 @@
 
     .line 71
     .line 72
-    invoke-static {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->access$1100(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)V
+    invoke-static {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->access$1100(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)V
 
     .line 73
     .line 74

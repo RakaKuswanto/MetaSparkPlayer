@@ -1,47 +1,37 @@
-.class public final LX/0Zk;
+.class public abstract LX/0ZK;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:Landroid/content/Context;
+# static fields
+.field public static final A00:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "BatteryChrgTracker"
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/1zE;->A00()Landroid/content/Context;
+    invoke-static {v0}, LX/5kg;->A01(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 3
     .line 4
     .line 5
-    .line 6
     move-result-object v0
 
-    .line 7
-    iput-object v0, p0, LX/0Zk;->A01:Landroid/content/Context;
+    .line 6
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
+    .line 7
     .line 8
     .line 9
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    sput-object v0, LX/0ZK;->A00:Ljava/lang/String;
 
     .line 10
     .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/0Zk;->A00:LX/1zG;
-
-    .line 14
-    .line 15
     return-void
 .end method

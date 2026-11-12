@@ -2,102 +2,83 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0Fz;
+
+
+# instance fields
+.field public A00:Ljava/lang/Object;
+
+.field public A01:Z
+
+.field public final A02:LX/0Fz;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public constructor <init>(LX/0Fz;)V
     .locals 1
 
-    const/16 v0, 0x7bd
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p0, v0, :cond_9
+    .line 1
+    .line 2
+    .line 3
+    const/4 v0, 0x0
 
-    const/16 v0, 0x7f0
+    .line 4
+    iput-boolean v0, p0, LX/0WJ;->A01:Z
 
-    if-eq p0, v0, :cond_8
+    .line 5
+    .line 6
+    iput-object p1, p0, LX/0WJ;->A02:LX/0Fz;
 
-    const/16 v0, 0x9ba
+    .line 7
+    .line 8
+    return-void
+.end method
 
-    if-eq p0, v0, :cond_7
 
-    const/16 v0, 0x9f7
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    if-eq p0, v0, :cond_6
+    .line 0
+    iget-boolean v0, p0, LX/0WJ;->A01:Z
 
-    const/16 v0, 0xb9a
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
 
-    if-eq p0, v0, :cond_5
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/0WJ;->A02:LX/0Fz;
 
-    const/16 v0, 0x130f
+    .line 5
+    .line 6
+    invoke-interface {v0}, LX/0Fz;->get()Ljava/lang/Object;
 
-    if-eq p0, v0, :cond_4
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
 
-    const/16 v0, 0x1380
+    .line 10
+    iput-object v0, p0, LX/0WJ;->A00:Ljava/lang/Object;
 
-    if-eq p0, v0, :cond_3
+    .line 11
+    .line 12
+    const/4 v0, 0x1
 
-    const/16 v0, 0x1c88
+    .line 13
+    iput-boolean v0, p0, LX/0WJ;->A01:Z
 
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x2687
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x26eb
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
+    .line 14
+    .line 15
     :cond_0
-    const-string v0, "FBLITE_CLIENT_HTTP_MSG_HTTP_REQUEST"
+    iget-object v0, p0, LX/0WJ;->A00:Ljava/lang/Object;
 
-    return-object v0
-
-    :cond_1
-    const-string v0, "FBLITE_CLIENT_HTTP_VIDEO_HTTP_REQUEST"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "FBLITE_CLIENT_HTTP_IMAGE_HTTP_REQUEST"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "FBLITE_CLIENT_HTTP_FBLITE_HTTP_REQUEST_AGGREGATED"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "FBLITE_CLIENT_HTTP_HTTP_REQUEST2"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "FBLITE_CLIENT_HTTP_MSYS_NON_SYNC_GROUP_HTTP_REQUEST"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "FBLITE_CLIENT_HTTP_HTTP_REQUEST"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "FBLITE_CLIENT_HTTP_ATTACHMENT_UPLOAD_HTTP_REQUEST"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "FBLITE_CLIENT_HTTP_MSYS_MAILBOX_SYNC_GROUP_HTTP_REQUEST"
-
-    return-object v0
-
-    :cond_9
-    const-string v0, "FBLITE_CLIENT_HTTP_MSYS_NON_MAILBOX_SYNC_GROUP_HTTP_REQUEST"
-
+    .line 16
+    .line 17
     return-object v0
 .end method

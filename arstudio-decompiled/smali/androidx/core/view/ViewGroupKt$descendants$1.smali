@@ -1,9 +1,9 @@
 .class public final Landroidx/core/view/ViewGroupKt$descendants$1;
-.super LX/2I0;
+.super LX/5b5;
 .source ""
 
 # interfaces
-.implements LX/0Ch;
+.implements LX/0GL;
 
 
 # annotations
@@ -62,30 +62,30 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;LX/1sH;)V
+.method public constructor <init>(Landroid/view/ViewGroup;LX/5bD;)V
     .locals 1
 
     iput-object p1, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->$this_descendants:Landroid/view/ViewGroup;
 
     const/4 v0, 0x2
 
-    invoke-direct {p0, p2, v0}, LX/2I0;-><init>(LX/1sH;I)V
+    invoke-direct {p0, p2, v0}, LX/5b5;-><init>(LX/5bD;I)V
 
     return-void
 .end method
 
-.method private final A00(LX/1sH;LX/1sB;)Ljava/lang/Object;
+.method private final A00(LX/5bD;LX/5b7;)Ljava/lang/Object;
     .locals 2
 
-    invoke-virtual {p0, p2, p1}, LX/2IG;->A02(Ljava/lang/Object;LX/1sH;)LX/1sH;
+    invoke-virtual {p0, p2, p1}, LX/5b1;->A04(Ljava/lang/Object;LX/5bD;)LX/5bD;
 
     move-result-object v1
 
     check-cast v1, Landroidx/core/view/ViewGroupKt$descendants$1;
 
-    sget-object v0, LX/0UG;->A00:LX/0UG;
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
 
-    invoke-virtual {v1, v0}, Landroidx/core/view/ViewGroupKt$descendants$1;->A01(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/core/view/ViewGroupKt$descendants$1;->A03(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -94,11 +94,11 @@
 
 
 # virtual methods
-.method public final A01(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final A03(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 9
 
     .line 0
-    invoke-static {}, LX/1sE;->A00()LX/1sI;
+    invoke-static {}, LX/5bT;->A00()LX/6aL;
 
     .line 1
     .line 2
@@ -148,11 +148,11 @@
 
     .line 23
     .line 24
-    check-cast v2, LX/1sB;
+    check-cast v2, LX/5b7;
 
     .line 25
     .line 26
-    invoke-static {p1}, LX/0QS;->A00(Ljava/lang/Object;)V
+    invoke-static {p1}, LX/0Vm;->A00(Ljava/lang/Object;)V
 
     .line 27
     .line 28
@@ -175,221 +175,212 @@
     move-result-object v0
 
     .line 37
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    iput-object v2, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$0:Ljava/lang/Object;
 
     .line 38
     .line 39
-    .line 40
-    iput-object v2, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$0:Ljava/lang/Object;
-
-    .line 41
-    .line 42
     iput-object v3, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$1:Ljava/lang/Object;
 
-    .line 43
-    .line 44
+    .line 40
+    .line 41
     iput-object v0, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$2:Ljava/lang/Object;
 
-    .line 45
-    .line 46
+    .line 42
+    .line 43
     iput v1, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->I$0:I
 
-    .line 47
-    .line 48
+    .line 44
+    .line 45
     iput v5, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->I$1:I
 
-    .line 49
-    .line 50
+    .line 46
+    .line 47
     iput v6, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->label:I
 
+    .line 48
+    .line 49
+    invoke-virtual {v2, v0, p0}, LX/5b7;->A01(Ljava/lang/Object;LX/5bD;)LX/6aL;
+
+    .line 50
     .line 51
     .line 52
-    invoke-virtual {v2, v0, p0}, LX/1sB;->A01(Ljava/lang/Object;LX/1sH;)LX/1sI;
-
-    .line 53
-    .line 54
-    .line 55
     return-object v8
 
-    .line 56
+    .line 53
     :cond_1
     iget v5, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->I$1:I
 
-    .line 57
-    .line 58
+    .line 54
+    .line 55
     iget v4, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->I$0:I
 
-    .line 59
-    .line 60
+    .line 56
+    .line 57
     iget-object v1, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$2:Ljava/lang/Object;
 
-    .line 61
-    .line 62
+    .line 58
+    .line 59
     check-cast v1, Landroid/view/View;
 
-    .line 63
-    .line 64
+    .line 60
+    .line 61
     iget-object v3, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$1:Ljava/lang/Object;
 
-    .line 65
-    .line 66
+    .line 62
+    .line 63
     check-cast v3, Landroid/view/ViewGroup;
 
-    .line 67
-    .line 68
+    .line 64
+    .line 65
     iget-object v2, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$0:Ljava/lang/Object;
 
-    .line 69
-    .line 70
-    check-cast v2, LX/1sB;
+    .line 66
+    .line 67
+    check-cast v2, LX/5b7;
 
+    .line 68
+    .line 69
+    invoke-static {p1}, LX/0Vm;->A00(Ljava/lang/Object;)V
+
+    .line 70
     .line 71
     .line 72
-    invoke-static {p1}, LX/0QS;->A00(Ljava/lang/Object;)V
+    instance-of v0, v1, Landroid/view/ViewGroup;
 
     .line 73
     .line 74
-    .line 75
-    instance-of v0, v1, Landroid/view/ViewGroup;
-
-    .line 76
-    .line 77
     if-eqz v0, :cond_0
 
-    .line 78
-    .line 79
+    .line 75
+    .line 76
     check-cast v1, Landroid/view/ViewGroup;
 
+    .line 77
+    .line 78
+    invoke-static {v1}, LX/03c;->A00(Landroid/view/ViewGroup;)LX/3ii;
+
+    .line 79
     .line 80
     .line 81
-    invoke-static {v1}, LX/03P;->A00(Landroid/view/ViewGroup;)LX/1rt;
-
-    .line 82
-    .line 83
-    .line 84
     move-result-object v1
 
-    .line 85
+    .line 82
     iput-object v2, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$0:Ljava/lang/Object;
 
-    .line 86
-    .line 87
+    .line 83
+    .line 84
     iput-object v3, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$1:Ljava/lang/Object;
+
+    .line 85
+    .line 86
+    const/4 v0, 0x0
+
+    .line 87
+    iput-object v0, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$2:Ljava/lang/Object;
 
     .line 88
     .line 89
-    const/4 v0, 0x0
-
-    .line 90
-    iput-object v0, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$2:Ljava/lang/Object;
-
-    .line 91
-    .line 92
     iput v4, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->I$0:I
 
-    .line 93
-    .line 94
+    .line 90
+    .line 91
     iput v5, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->I$1:I
 
-    .line 95
-    .line 96
+    .line 92
+    .line 93
     iput v7, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->label:I
 
+    .line 94
+    .line 95
+    invoke-virtual {v2, p0, v1}, LX/5b7;->A00(LX/5bD;LX/3ii;)Ljava/lang/Object;
+
+    .line 96
     .line 97
     .line 98
-    invoke-virtual {v2, p0, v1}, LX/1sB;->A00(LX/1sH;LX/1rt;)Ljava/lang/Object;
-
-    .line 99
-    .line 100
-    .line 101
     move-result-object v0
 
-    .line 102
+    .line 99
     if-ne v0, v8, :cond_0
+
+    .line 100
+    .line 101
+    return-object v8
+
+    .line 102
+    :cond_2
+    invoke-static {p1}, LX/0Vm;->A00(Ljava/lang/Object;)V
 
     .line 103
     .line 104
-    return-object v8
-
     .line 105
-    :cond_2
-    invoke-static {p1}, LX/0QS;->A00(Ljava/lang/Object;)V
+    iget-object v2, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$0:Ljava/lang/Object;
 
     .line 106
     .line 107
+    check-cast v2, LX/5b7;
+
     .line 108
-    iget-object v2, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$0:Ljava/lang/Object;
-
     .line 109
-    .line 110
-    check-cast v2, LX/1sB;
-
-    .line 111
-    .line 112
     iget-object v3, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->$this_descendants:Landroid/view/ViewGroup;
+
+    .line 110
+    .line 111
+    const/4 v1, 0x0
+
+    .line 112
+    invoke-virtual {v3}, Landroid/view/ViewGroup;->getChildCount()I
 
     .line 113
     .line 114
-    const/4 v1, 0x0
-
     .line 115
-    invoke-virtual {v3}, Landroid/view/ViewGroup;->getChildCount()I
-
-    .line 116
-    .line 117
-    .line 118
     move-result v5
 
-    .line 119
+    .line 116
     goto :goto_0
 
-    .line 120
+    .line 117
     :cond_3
-    sget-object v8, LX/0UG;->A00:LX/0UG;
+    sget-object v8, LX/0Vw;->A00:LX/0Vw;
+
+    .line 118
+    .line 119
+    return-object v8
+
+    .line 120
+    :cond_4
+    invoke-static {}, LX/001;->A0D()Ljava/lang/IllegalStateException;
 
     .line 121
     .line 122
-    return-object v8
-
     .line 123
-    :cond_4
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    .line 124
-    .line 125
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 126
-    .line 127
-    .line 128
     move-result-object v0
 
-    .line 129
+    .line 124
     throw v0
 .end method
 
-.method public final A02(Ljava/lang/Object;LX/1sH;)LX/1sH;
+.method public final A04(Ljava/lang/Object;LX/5bD;)LX/5bD;
     .locals 2
 
     iget-object v1, p0, Landroidx/core/view/ViewGroupKt$descendants$1;->$this_descendants:Landroid/view/ViewGroup;
 
     new-instance v0, Landroidx/core/view/ViewGroupKt$descendants$1;
 
-    invoke-direct {v0, v1, p2}, Landroidx/core/view/ViewGroupKt$descendants$1;-><init>(Landroid/view/ViewGroup;LX/1sH;)V
+    invoke-direct {v0, v1, p2}, Landroidx/core/view/ViewGroupKt$descendants$1;-><init>(Landroid/view/ViewGroup;LX/5bD;)V
 
     iput-object p1, v0, Landroidx/core/view/ViewGroupKt$descendants$1;->L$0:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final bridge synthetic APh(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, LX/1sB;
+    check-cast p1, LX/5b7;
 
-    check-cast p2, LX/1sH;
+    check-cast p2, LX/5bD;
 
-    invoke-direct {p0, p2, p1}, Landroidx/core/view/ViewGroupKt$descendants$1;->A00(LX/1sH;LX/1sB;)Ljava/lang/Object;
+    invoke-direct {p0, p2, p1}, Landroidx/core/view/ViewGroupKt$descendants$1;->A00(LX/5bD;LX/5b7;)Ljava/lang/Object;
 
     move-result-object v0
 

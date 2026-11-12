@@ -2,31 +2,65 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5yT;
+.implements LX/4pH;
+.implements LX/4nG;
+.implements LX/4pN;
+.implements Lcom/facebook/common/callercontext/CallerContextable;
+
+
+# static fields
+.field public static final A09:Lcom/facebook/common/callercontext/CallerContext;
+
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "InstructionsController"
+
 
 # instance fields
-.field public A00:LX/4s6;
+.field public A00:Landroid/view/ViewGroup;
 
-.field public A01:LX/4nB;
+.field public A01:Landroid/view/ViewPropertyAnimator;
 
-.field public A02:Z
+.field public A02:LX/3TB;
 
 .field public A03:Z
 
-.field public A04:I
+.field public A04:Landroid/widget/TextView;
 
-.field public final A05:LX/00v;
+.field public final A05:LX/0RP;
 
-.field public final A06:LX/4my;
+.field public final A06:Ljava/lang/Runnable;
 
-.field public final A07:LX/4pW;
+.field public final A07:Ljava/util/Map;
 
-.field public final A08:Ljava/util/List;
-
-.field public final A09:Ljava/util/Set;
+.field public final A08:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/4my;LX/4pW;)V
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    const-class v0, LX/4n7;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, Lcom/facebook/common/callercontext/CallerContext;->A00(Ljava/lang/Class;)Lcom/facebook/common/callercontext/CallerContext;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    sput-object v0, LX/4n7;->A09:Lcom/facebook/common/callercontext/CallerContext;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -35,74 +69,86 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/00v;
+    sget-object v0, LX/3Ff;->A00:LX/0li;
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/00v;-><init>()V
+    iput-object v0, p0, LX/4n7;->A05:LX/0RP;
 
     .line 6
     .line 7
+    sget v0, LX/2I6;->A31:I
+
     .line 8
-    iput-object v0, p0, LX/4n7;->A05:LX/00v;
-
     .line 9
-    .line 10
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
+    .line 10
     .line 11
     .line 12
-    .line 13
     move-result-object v0
 
+    .line 13
+    iput-object v0, p0, LX/4n7;->A08:LX/0RP;
+
     .line 14
-    iput-object v0, p0, LX/4n7;->A08:Ljava/util/List;
-
     .line 15
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 16
-    const/4 v0, 0x0
-
     .line 17
-    iput-boolean v0, p0, LX/4n7;->A03:Z
-
     .line 18
+    move-result-object v0
+
     .line 19
-    iput-boolean v0, p0, LX/4n7;->A02:Z
+    iput-object v0, p0, LX/4n7;->A07:Ljava/util/Map;
 
     .line 20
     .line 21
-    iput v0, p0, LX/4n7;->A04:I
+    const/4 v0, 0x0
 
     .line 22
-    .line 23
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    iput-boolean v0, p0, LX/4n7;->A03:Z
 
+    .line 23
     .line 24
+    new-instance v0, LX/4n9;
+
     .line 25
     .line 26
-    move-result-object v0
+    invoke-direct {v0, p0}, LX/4n9;-><init>(LX/4n7;)V
 
     .line 27
-    iput-object v0, p0, LX/4n7;->A09:Ljava/util/Set;
-
     .line 28
     .line 29
-    iput-object p1, p0, LX/4n7;->A06:LX/4my;
+    iput-object v0, p0, LX/4n7;->A06:Ljava/lang/Runnable;
 
     .line 30
     .line 31
-    iput-object p2, p0, LX/4n7;->A07:LX/4pW;
-
-    .line 32
-    .line 33
     return-void
 .end method
 
-.method public static A00(LX/4n7;J)V
+.method public static final A00()LX/4n7;
     .locals 1
 
     .line 0
-    iget-boolean v0, p0, LX/4n7;->A03:Z
+    new-instance v0, LX/4n7;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/4n7;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
+.end method
+
+.method public static A01(LX/4n7;)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/4n7;->A01:Landroid/view/ViewPropertyAnimator;
 
     .line 1
     .line 2
@@ -110,264 +156,286 @@
 
     .line 3
     .line 4
-    iget-object p0, p0, LX/4n7;->A05:LX/00v;
+    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
     .line 5
     .line 6
-    const/4 v0, 0x0
-
     .line 7
-    invoke-virtual {p0, p1, p2, v0}, LX/00v;->A03(JLjava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    iget-object v1, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
 
     .line 8
     .line 9
-    .line 10
-    move-result-object v0
+    if-eqz v1, :cond_1
 
+    .line 10
     .line 11
-    check-cast v0, Ljava/lang/Number;
+    iget-object v0, p0, LX/4n7;->A06:Ljava/lang/Runnable;
 
     .line 12
     .line 13
-    if-eqz v0, :cond_1
+    invoke-virtual {v1, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 14
     .line 15
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
     .line 16
+    iget-object v0, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
+
     .line 17
     .line 18
-    move-result v0
+    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
     .line 19
-    if-eqz v0, :cond_1
-
     .line 20
     .line 21
-    add-int/lit8 v0, v0, -0x1
-
-    .line 22
-    .line 23
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 24
-    .line 25
-    .line 26
-    move-result-object v0
-
-    .line 27
-    invoke-virtual {p0, p1, p2, v0}, LX/00v;->A07(JLjava/lang/Object;)V
-
-    .line 28
-    .line 29
-    .line 30
-    :cond_0
-    return-void
-
-    .line 31
     :cond_1
-    const-string v0, "Trying to decrement reference count for an item you don\'t own."
-
-    .line 32
-    .line 33
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v0
-
-    .line 37
-    throw v0
+    return-void
 .end method
 
-.method public static A01(LX/4n7;J)V
-    .locals 1
+.method public static A02(LX/4n7;)V
+    .locals 3
 
     .line 0
-    iget-boolean v0, p0, LX/4n7;->A03:Z
+    iget-object v0, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    iget-object p0, p0, LX/4n7;->A05:LX/00v;
+    invoke-static {p0}, LX/4n7;->A01(LX/4n7;)V
 
     .line 5
     .line 6
-    const/4 v0, 0x0
-
     .line 7
-    invoke-virtual {p0, p1, p2, v0}, LX/00v;->A03(JLjava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
 
     .line 8
     .line 9
+    const/4 v0, 0x0
+
     .line 10
-    move-result-object v0
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 11
-    check-cast v0, Ljava/lang/Number;
-
     .line 12
     .line 13
-    if-nez v0, :cond_0
+    iget-object v0, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
 
     .line 14
     .line 15
-    invoke-static {}, LX/0Yi;->A0d()Ljava/lang/Integer;
+    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     .line 16
     .line 17
     .line 18
-    move-result-object v0
+    move-result-object v1
 
     .line 19
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    const/high16 v0, 0x3f800000    # 1.0f
 
     .line 20
     .line 21
+    invoke-virtual {v1, v0}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+
     .line 22
-    move-result v0
-
     .line 23
-    add-int/lit8 v0, v0, 0x1
-
     .line 24
+    move-result-object v2
+
     .line 25
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-wide/16 v0, 0x12c
 
     .line 26
     .line 27
+    invoke-virtual {v2, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
     .line 28
+    .line 29
+    .line 30
+    move-result-object v2
+
+    .line 31
+    const/4 v1, 0x1
+
+    .line 32
+    new-instance v0, LX/6fk;
+
+    .line 33
+    .line 34
+    invoke-direct {v0, p0, v1}, LX/6fk;-><init>(Ljava/lang/Object;I)V
+
+    .line 35
+    .line 36
+    .line 37
+    invoke-virtual {v2, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    .line 38
+    .line 39
+    .line 40
     move-result-object v0
 
-    .line 29
-    invoke-virtual {p0, p1, p2, v0}, LX/00v;->A07(JLjava/lang/Object;)V
+    .line 41
+    iput-object v0, p0, LX/4n7;->A01:Landroid/view/ViewPropertyAnimator;
 
+    .line 42
+    .line 43
+    :cond_0
+    return-void
+.end method
+
+.method public static A03(LX/4n7;Ljava/lang/String;)V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/4n7;->A02:LX/3TB;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    if-eqz v0, :cond_1
+
+    .line 9
+    .line 10
+    iget-object v1, p0, LX/4n7;->A02:LX/3TB;
+
+    .line 11
+    .line 12
+    if-eqz v1, :cond_0
+
+    .line 13
+    .line 14
+    const/16 v0, 0x8
+
+    .line 15
+    .line 16
+    :goto_0
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_0
+    return-void
+
+    .line 20
+    :cond_1
+    iget-object v2, p0, LX/4n7;->A02:LX/3TB;
+
+    .line 21
+    .line 22
+    invoke-static {p1}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v1
+
+    .line 26
+    sget-object v0, LX/4n7;->A09:Lcom/facebook/common/callercontext/CallerContext;
+
+    .line 27
+    .line 28
+    invoke-virtual {v2, v1, v0}, LX/3TB;->setImageURI(Landroid/net/Uri;Lcom/facebook/common/callercontext/CallerContext;)V
+
+    .line 29
     .line 30
     .line 31
+    iget-object v1, p0, LX/4n7;->A02:LX/3TB;
+
     .line 32
-    :cond_1
+    .line 33
+    const/4 v0, 0x0
+
+    .line 34
+    goto :goto_0
+.end method
+
+.method public static A04(LX/4n7;Ljava/lang/String;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4n7;->A04:Landroid/widget/TextView;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    if-eqz v0, :cond_1
+
+    .line 9
+    .line 10
+    iget-object p0, p0, LX/4n7;->A04:Landroid/widget/TextView;
+
+    .line 11
+    .line 12
+    if-eqz p0, :cond_0
+
+    .line 13
+    .line 14
+    const/16 v0, 0x8
+
+    .line 15
+    .line 16
+    :goto_0
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_0
     return-void
+
+    .line 20
+    :cond_1
+    iget-object v0, p0, LX/4n7;->A04:Landroid/widget/TextView;
+
+    .line 21
+    .line 22
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 23
+    .line 24
+    .line 25
+    iget-object p0, p0, LX/4n7;->A04:Landroid/widget/TextView;
+
+    .line 26
+    .line 27
+    const/4 v0, 0x0
+
+    .line 28
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final A02()V
-    .locals 4
+.method public final ANZ()V
+    .locals 2
 
     .line 0
-    iget-boolean v0, p0, LX/4n7;->A02:Z
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_2
-
-    .line 3
-    .line 4
-    iget v0, p0, LX/4n7;->A04:I
-
-    .line 5
-    .line 6
-    add-int/lit8 v0, v0, -0x1
-
-    .line 7
-    .line 8
-    iput v0, p0, LX/4n7;->A04:I
-
-    .line 9
-    .line 10
-    if-ltz v0, :cond_1
-
-    .line 11
-    .line 12
-    if-nez v0, :cond_2
-
-    .line 13
-    .line 14
-    iget-object v3, p0, LX/4n7;->A09:Ljava/util/Set;
-
-    .line 15
-    .line 16
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v2
-
-    .line 20
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 21
-    .line 22
-    .line 23
-    move-result v0
-
-    .line 24
-    if-eqz v0, :cond_0
-
-    .line 25
-    .line 26
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v1
-
-    .line 30
-    iget-object v0, p0, LX/4n7;->A07:LX/4pW;
-
-    .line 31
-    .line 32
-    invoke-static {v0, v1}, LX/4oT;->A00(LX/4pW;Ljava/lang/Object;)V
-
-    .line 33
-    .line 34
-    .line 35
-    goto :goto_0
-
-    .line 36
-    :cond_0
-    invoke-interface {v3}, Ljava/util/Set;->clear()V
-
-    .line 37
-    .line 38
-    .line 39
-    return-void
-
-    .line 40
-    :cond_1
-    const-string v0, "mNotifyVisibleBoundsChangedNestCount should not be decremented below zero!"
-
-    .line 41
-    .line 42
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v0
-
-    .line 46
-    throw v0
-
-    .line 47
-    :cond_2
-    return-void
-.end method
-
-.method public final A03()V
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/4n7;->A02:Z
+    iget-object v0, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
 
     .line 1
     .line 2
@@ -375,337 +443,291 @@
 
     .line 3
     .line 4
-    iget v0, p0, LX/4n7;->A04:I
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     .line 5
     .line 6
-    add-int/lit8 v0, v0, 0x1
-
     .line 7
-    .line 8
-    iput v0, p0, LX/4n7;->A04:I
-
-    .line 9
-    .line 10
-    :cond_0
-    return-void
-.end method
-
-.method public final A04(Lcom/facebook/rendercore/RenderTreeNode;LX/4pW;Ljava/lang/Object;)V
-    .locals 8
-
-    .line 0
-    invoke-virtual {p0}, LX/4n7;->A03()V
-
-    .line 1
-    .line 2
-    .line 3
-    iget-object v7, p0, LX/4n7;->A08:Ljava/util/List;
-
-    .line 4
-    .line 5
-    invoke-interface {v7}, Ljava/util/List;->size()I
-
-    .line 6
-    .line 7
-    .line 8
-    move-result v6
-
-    .line 9
-    const/4 v5, 0x0
-
-    .line 10
-    :goto_0
-    if-ge v5, v6, :cond_2
-
-    .line 11
-    .line 12
-    invoke-interface {v7, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v4
-
-    .line 16
-    check-cast v4, LX/4nB;
-
-    .line 17
-    .line 18
-    iget-object v3, v4, LX/4nB;->A01:LX/4oO;
-
-    .line 19
-    .line 20
-    instance-of v0, v3, LX/4p8;
-
-    .line 21
-    .line 22
-    if-eqz v0, :cond_1
-
-    .line 23
-    .line 24
-    invoke-interface {p2}, LX/4pW;->ARl()Z
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v2
-
-    .line 28
-    if-eqz v2, :cond_0
-
-    .line 29
-    .line 30
-    const-string v0, "Extension:onBoundsAppliedToItem "
-
-    .line 31
-    .line 32
-    invoke-static {p2, v3, v0}, LX/4oO;->A0B(LX/4pW;LX/4oO;Ljava/lang/String;)V
-
-    .line 33
-    .line 34
-    .line 35
-    :cond_0
-    check-cast v3, LX/4p8;
-
-    .line 36
-    .line 37
-    iget-object v1, p1, Lcom/facebook/rendercore/RenderTreeNode;->A06:LX/4n2;
-
-    .line 38
-    .line 39
-    iget-object v0, p1, Lcom/facebook/rendercore/RenderTreeNode;->A07:Ljava/lang/Object;
-
-    .line 40
-    .line 41
-    invoke-interface {v3, v1, v4, p3, v0}, LX/4p8;->AVU(LX/4n2;LX/4nB;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 42
-    .line 43
-    .line 44
-    if-eqz v2, :cond_1
-
-    .line 45
-    .line 46
-    invoke-interface {p2}, LX/4pW;->A9x()V
-
-    .line 47
-    .line 48
-    .line 49
-    :cond_1
-    add-int/lit8 v5, v5, 0x1
-
-    .line 50
-    .line 51
-    goto :goto_0
-
-    .line 52
-    :cond_2
-    invoke-virtual {p0}, LX/4n7;->A02()V
-
-    .line 53
-    .line 54
-    .line 55
-    return-void
-.end method
-
-.method public final A05(LX/4oO;)V
-    .locals 5
-
-    .line 0
-    iget-object v3, p0, LX/4n7;->A08:Ljava/util/List;
-
-    .line 1
-    .line 2
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
-    const/4 v4, 0x0
-
-    .line 11
-    if-eqz v0, :cond_3
-
-    .line 12
-    .line 13
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    check-cast v0, LX/4nB;
-
-    .line 18
-    .line 19
-    iget-object v2, v0, LX/4nB;->A01:LX/4oO;
-
-    .line 20
-    .line 21
-    if-ne v2, p1, :cond_0
-
-    .line 22
-    .line 23
-    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
-
-    .line 24
-    .line 25
-    .line 26
-    :goto_0
-    instance-of v0, v2, LX/4mz;
-
-    .line 27
-    .line 28
-    if-eqz v0, :cond_1
-
-    .line 29
-    .line 30
-    iget-object v1, p0, LX/4n7;->A06:LX/4my;
-
-    .line 31
-    .line 32
-    const/4 v0, 0x0
-
-    .line 33
-    iput-object v0, v1, LX/4my;->A00:LX/4mz;
-
-    .line 34
-    .line 35
-    iput-object v4, p0, LX/4n7;->A01:LX/4nB;
-
-    .line 36
-    .line 37
-    :cond_1
-    if-eqz v2, :cond_5
-
-    .line 38
-    .line 39
-    instance-of v0, v2, LX/4n3;
-
-    .line 40
-    .line 41
-    if-eqz v0, :cond_4
-
-    .line 42
-    .line 43
-    const/4 v2, 0x0
-
-    .line 44
-    iput-boolean v2, p0, LX/4n7;->A03:Z
-
-    .line 45
-    .line 46
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    .line 47
-    .line 48
-    .line 49
     move-result v1
 
+    .line 8
+    const/16 v0, 0x8
+
+    .line 9
+    .line 10
+    if-eq v1, v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-static {p0}, LX/4n7;->A01(LX/4n7;)V
+
+    .line 13
+    .line 14
+    .line 15
+    iget-object v1, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
+
+    .line 16
+    .line 17
+    iget-object v0, p0, LX/4n7;->A06:Ljava/lang/Runnable;
+
+    .line 18
+    .line 19
+    invoke-virtual {v1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    .line 20
+    .line 21
+    .line 22
+    :cond_0
+    return-void
+.end method
+
+.method public final AOe()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final AVl(Lcom/facebook/arstudio/player/model/EffectFile;LX/61O;)V
+    .locals 3
+
+    .line 0
+    sget-object v2, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceConfiguration;->INSTRUCTION_SERVICE_TYPE_KEY:LX/67w;
+
+    .line 1
+    .line 2
+    new-instance v1, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceConfiguration;
+
+    .line 3
+    .line 4
+    invoke-direct {v1, p0}, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceConfiguration;-><init>(LX/4nG;)V
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v0, p2, LX/61O;->A08:Ljava/util/HashMap;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public final AVn(Lcom/facebook/arstudio/player/model/EffectFile;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectManifest;)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/4n7;->A08:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    check-cast v1, Ljava/util/concurrent/Executor;
+
+    .line 7
+    .line 8
+    new-instance v0, LX/4nA;
+
+    .line 9
+    .line 10
+    invoke-direct {v0, p0, p1}, LX/4nA;-><init>(LX/4n7;Lcom/facebook/arstudio/player/model/EffectFile;)V
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 14
+    .line 15
+    .line 16
+    return-void
+.end method
+
+.method public final AVo()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AdY(Landroid/view/View;)V
+    .locals 6
+
+    .line 0
+    const v0, 0x7f090300
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    check-cast v0, Landroid/view/ViewGroup;
+
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
+
+    .line 10
+    .line 11
+    const v0, 0x7f0902ff
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-static {p1, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    check-cast v0, LX/3TB;
+
+    .line 19
+    .line 20
+    iput-object v0, p0, LX/4n7;->A02:LX/3TB;
+
+    .line 21
+    .line 22
+    const v0, 0x7f090301
+
+    .line 23
+    .line 24
+    .line 25
+    invoke-static {p1, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v5
+
+    .line 29
+    check-cast v5, Landroid/widget/TextView;
+
+    .line 30
+    .line 31
+    iput-object v5, p0, LX/4n7;->A04:Landroid/widget/TextView;
+
+    .line 32
+    .line 33
+    invoke-virtual {v5}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v1
+
+    .line 37
+    const v0, 0x7f06002c
+
+    .line 38
+    .line 39
+    .line 40
+    invoke-static {v1, v0}, LX/01f;->A00(Landroid/content/Context;I)I
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v4
+
+    .line 44
+    iget-object v3, p0, LX/4n7;->A05:LX/0RP;
+
+    .line 45
+    .line 46
+    invoke-static {v3}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
     .line 50
-    :goto_1
-    if-ge v2, v1, :cond_4
+    const v2, 0x7f070036
 
     .line 51
     .line 52
-    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
     .line 53
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
     .line 54
     .line 55
-    move-result-object v0
-
     .line 56
-    check-cast v0, LX/4nB;
+    move-result v1
 
     .line 57
-    .line 58
-    iget-object v0, v0, LX/4nB;->A01:LX/4oO;
+    invoke-static {v3}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
 
+    .line 58
     .line 59
     .line 60
-    instance-of v0, v0, LX/4n3;
+    move-result-object v0
 
     .line 61
-    .line 62
-    if-eqz v0, :cond_2
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
+    .line 62
     .line 63
     .line 64
-    const/4 v0, 0x1
+    move-result v3
 
     .line 65
-    iput-boolean v0, p0, LX/4n7;->A03:Z
+    int-to-float v2, v1
 
     .line 66
+    const/4 v0, 0x0
+
     .line 67
-    :cond_2
-    iget-boolean v0, p0, LX/4n7;->A03:Z
+    int-to-float v1, v0
 
     .line 68
+    int-to-float v0, v3
+
     .line 69
-    if-nez v0, :cond_4
+    invoke-virtual {v5, v2, v1, v0, v4}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
 
     .line 70
     .line 71
-    add-int/lit8 v2, v2, 0x1
-
     .line 72
-    .line 73
-    goto :goto_1
-
-    .line 74
-    :cond_3
-    move-object v2, v4
-
-    .line 75
-    goto :goto_0
-
-    .line 76
-    :cond_4
     return-void
+.end method
 
-    .line 77
-    :cond_5
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+.method public final AdZ()V
+    .locals 1
 
-    .line 78
-    .line 79
-    .line 80
-    move-result-object v1
+    .line 0
+    const/4 v0, 0x0
 
-    .line 81
-    const-string v0, "Could not find the extension "
+    .line 1
+    iput-object v0, p0, LX/4n7;->A00:Landroid/view/ViewGroup;
 
-    .line 82
-    .line 83
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 2
+    .line 3
+    iput-object v0, p0, LX/4n7;->A02:LX/3TB;
 
-    .line 84
-    .line 85
-    .line 86
-    invoke-static {p1, v1}, LX/001;->A0C(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
+    .line 4
+    .line 5
+    iput-object v0, p0, LX/4n7;->A04:Landroid/widget/TextView;
 
-    .line 87
-    .line 88
-    .line 89
-    move-result-object v0
-
-    .line 90
-    throw v0
+    .line 6
+    .line 7
+    return-void
 .end method

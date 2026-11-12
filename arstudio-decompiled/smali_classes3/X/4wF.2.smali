@@ -1,188 +1,180 @@
-.class public abstract LX/4wF;
-.super Ljava/lang/Object;
+.class public final LX/4wF;
+.super LX/4wB;
 .source ""
 
 
 # instance fields
-.field public A00:I
+.field public A00:LX/4wK;
 
-.field public A01:Z
-
-.field public final A02:LX/4wH;
-
-.field public final synthetic A03:LX/4wE;
+.field public A01:LX/4wT;
 
 
 # direct methods
-.method public constructor <init>(LX/4wE;LX/4wH;)V
-    .locals 1
+.method public constructor <init>(LX/4wD;)V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/4wF;->A03:LX/4wE;
+    invoke-direct {p0, p1}, LX/4wB;-><init>(LX/4wD;)V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    new-instance v2, LX/4wK;
+
     .line 4
     .line 5
-    const/4 v0, -0x1
+    invoke-direct {v2, p0}, LX/4wK;-><init>(LX/4wB;)V
 
     .line 6
-    iput v0, p0, LX/4wF;->A00:I
-
     .line 7
     .line 8
-    iput-object p2, p0, LX/4wF;->A02:LX/4wH;
+    iput-object v2, p0, LX/4wF;->A00:LX/4wK;
 
     .line 9
     .line 10
+    const/4 v0, 0x0
+
+    .line 11
+    iput-object v0, p0, LX/4wF;->A01:LX/4wT;
+
+    .line 12
+    .line 13
+    iget-object v1, p0, LX/4wB;->A04:LX/4wK;
+
+    .line 14
+    .line 15
+    sget-object v0, LX/00b;->A05:Ljava/lang/Integer;
+
+    .line 16
+    .line 17
+    iput-object v0, v1, LX/4wK;->A06:Ljava/lang/Integer;
+
+    .line 18
+    .line 19
+    iget-object v1, p0, LX/4wB;->A03:LX/4wK;
+
+    .line 20
+    .line 21
+    sget-object v0, LX/00b;->A06:Ljava/lang/Integer;
+
+    .line 22
+    .line 23
+    iput-object v0, v1, LX/4wK;->A06:Ljava/lang/Integer;
+
+    .line 24
+    .line 25
+    sget-object v0, LX/00b;->A07:Ljava/lang/Integer;
+
+    .line 26
+    .line 27
+    iput-object v0, v2, LX/4wK;->A06:Ljava/lang/Integer;
+
+    .line 28
+    .line 29
+    const/4 v0, 0x1
+
+    .line 30
+    iput v0, p0, LX/4wB;->A01:I
+
+    .line 31
+    .line 32
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Z)V
-    .locals 4
+.method public final A0H()V
+    .locals 2
 
     .line 0
-    iget-boolean v0, p0, LX/4wF;->A01:Z
+    const/4 v1, 0x0
 
     .line 1
+    iput-boolean v1, p0, LX/4wB;->A09:Z
+
     .line 2
-    if-eq p1, v0, :cond_5
-
     .line 3
+    iget-object v0, p0, LX/4wB;->A04:LX/4wK;
+
     .line 4
-    iput-boolean p1, p0, LX/4wF;->A01:Z
-
     .line 5
-    .line 6
-    iget-object v3, p0, LX/4wF;->A03:LX/4wE;
+    invoke-virtual {v0}, LX/4wK;->A01()V
 
+    .line 6
     .line 7
     .line 8
-    const/4 v0, -0x1
+    iput-boolean v1, v0, LX/4wK;->A0B:Z
 
     .line 9
-    if-eqz p1, :cond_0
-
     .line 10
-    .line 11
-    const/4 v0, 0x1
+    iget-object v0, p0, LX/4wB;->A03:LX/4wK;
 
+    .line 11
     .line 12
-    :cond_0
-    iget v2, v3, LX/4wE;->A00:I
+    invoke-virtual {v0}, LX/4wK;->A01()V
 
     .line 13
     .line 14
-    add-int/2addr v0, v2
-
     .line 15
-    iput v0, v3, LX/4wE;->A00:I
+    iput-boolean v1, v0, LX/4wK;->A0B:Z
 
     .line 16
     .line 17
-    iget-boolean v0, v3, LX/4wE;->A01:Z
+    iget-object v0, p0, LX/4wF;->A00:LX/4wK;
 
     .line 18
     .line 19
-    if-nez v0, :cond_4
+    invoke-virtual {v0}, LX/4wK;->A01()V
 
     .line 20
     .line 21
-    const/4 v0, 0x1
-
     .line 22
-    iput-boolean v0, v3, LX/4wE;->A01:Z
+    iput-boolean v1, v0, LX/4wK;->A0B:Z
 
     .line 23
     .line 24
-    :goto_0
-    const/4 v1, 0x0
+    iget-object v0, p0, LX/4wB;->A05:LX/4wT;
 
     .line 25
-    :try_start_0
-    iget v0, v3, LX/4wE;->A00:I
-
     .line 26
+    iput-boolean v1, v0, LX/4wK;->A0B:Z
+
     .line 27
-    if-eq v2, v0, :cond_3
-
     .line 28
-    .line 29
-    if-nez v2, :cond_1
-
-    .line 30
-    .line 31
-    if-lez v0, :cond_2
-
-    .line 32
-    .line 33
-    invoke-virtual {v3}, LX/4wE;->A03()V
-
-    .line 34
-    .line 35
-    .line 36
-    goto :goto_1
-
-    .line 37
-    :cond_1
-    if-lez v2, :cond_2
-
-    .line 38
-    .line 39
-    if-nez v0, :cond_2
-
-    .line 40
-    .line 41
-    invoke-virtual {v3}, LX/4wE;->A04()V
-
-    .line 42
-    .line 43
-    .line 44
-    :cond_2
-    :goto_1
-    move v2, v0
-
-    .line 45
-    goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 46
-    :catchall_0
-    move-exception v0
-
-    .line 47
-    iput-boolean v1, v3, LX/4wE;->A01:Z
-
-    .line 48
-    .line 49
-    throw v0
-
-    .line 50
-    :cond_3
-    iput-boolean v1, v3, LX/4wE;->A01:Z
-
-    .line 51
-    .line 52
-    :cond_4
-    iget-boolean v0, p0, LX/4wF;->A01:Z
-
-    .line 53
-    .line 54
-    if-eqz v0, :cond_5
-
-    .line 55
-    .line 56
-    invoke-virtual {v3, p0}, LX/4wE;->A06(LX/4wF;)V
-
-    .line 57
-    .line 58
-    .line 59
-    :cond_5
     return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    const-string v2, "VerticalRun "
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/4wB;->A02:LX/4wD;
+
+    .line 3
+    .line 4
+    iget-object v1, v0, LX/4wD;->A0n:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    invoke-static {v2}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
 .end method

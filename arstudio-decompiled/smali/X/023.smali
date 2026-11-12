@@ -1,153 +1,80 @@
-.class public LX/023;
-.super LX/03p;
+.class public final LX/023;
+.super LX/03q;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-.implements LX/0Le;
+.implements LX/0QS;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenableScheduledFutureImpl"
+.field public static final A00:LX/06I;
 
-
-# instance fields
-.field public final A00:LX/0Lf;
+.field public static final A01:LX/0Ju;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;Ljava/lang/Object;Ljava/lang/Runnable;)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p1}, LX/03p;-><init>(Landroid/os/Handler;)V
+    new-instance v0, LX/0Ju;
 
     .line 1
     .line 2
-    .line 3
-    new-instance v0, LX/0Lf;
+    invoke-direct {v0}, LX/0Ju;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    invoke-direct {v0, p3, p2}, LX/0Lf;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+    sput-object v0, LX/023;->A01:LX/0Ju;
 
     .line 6
     .line 7
+    new-instance v0, LX/06I;
+
     .line 8
-    iput-object v0, p0, LX/023;->A00:LX/0Lf;
-
     .line 9
+    invoke-direct {v0}, LX/06I;-><init>()V
+
     .line 10
+    .line 11
+    .line 12
+    sput-object v0, LX/023;->A00:LX/06I;
+
+    .line 13
+    .line 14
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;)V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0, p1}, LX/03p;-><init>(Landroid/os/Handler;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    new-instance v0, LX/0Lf;
-
-    .line 268435460
-    .line 268435461
-    invoke-direct {v0, p2}, LX/0Lf;-><init>(Ljava/util/concurrent/Callable;)V
-
-    .line 268435462
-    .line 268435463
-    .line 268435464
-    iput-object v0, p0, LX/023;->A00:LX/0Lf;
-
-    .line 268435465
-    .line 268435466
-    return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic A00()Ljava/lang/Object;
-    .locals 1
+.method public varargs constructor <init>([LX/0Qv;)V
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/023;->A00:LX/0Lf;
+    invoke-direct {p0, p1}, LX/03q;-><init>([LX/0Qv;)V
 
     .line 1
     .line 2
-    return-object v0
-.end method
-
-.method public final bridge synthetic A01()LX/0Lf;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/023;->A00:LX/0Lf;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/023;->A00:LX/0Lf;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1, p2}, LX/0Lf;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
     .line 3
+    sget-object v2, LX/023;->A00:LX/06I;
+
     .line 4
     .line 5
-    return-void
-.end method
+    sget-object v1, LX/023;->A01:LX/0Ju;
 
-.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 1
+    .line 6
+    .line 7
+    new-instance v0, LX/03y;
 
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    .line 8
+    .line 9
+    invoke-direct {v0, v2, v1}, LX/03y;-><init>(LX/06I;LX/01U;)V
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
+    .line 10
+    .line 11
+    .line 12
+    iput-object v0, p0, LX/0Jm;->A00:LX/0KC;
 
-    .line 4
-    throw v0
-.end method
-
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final run()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/023;->A00:LX/0Lf;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->run()V
-
-    .line 3
-    .line 4
-    .line 5
+    .line 13
+    .line 14
     return-void
 .end method

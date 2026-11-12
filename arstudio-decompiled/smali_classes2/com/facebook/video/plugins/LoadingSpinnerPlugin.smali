@@ -1,24 +1,26 @@
 .class public Lcom/facebook/video/plugins/LoadingSpinnerPlugin;
-.super LX/3od;
+.super LX/3pj;
 .source ""
 
 
 # instance fields
-.field public A00:LX/0Na;
+.field public A00:Landroid/view/ViewGroup;
 
-.field public A01:LX/0Na;
+.field public A01:LX/0RP;
 
-.field public A02:LX/3Wj;
+.field public A02:LX/0RP;
 
-.field public A03:LX/0pH;
+.field public A03:LX/0RP;
 
-.field public A04:LX/3py;
+.field public A04:LX/3m2;
 
-.field public A05:Landroid/view/ViewGroup;
+.field public A05:LX/12r;
 
-.field public A06:LX/3oT;
+.field public A06:LX/3sW;
 
-.field public A07:LX/3oT;
+.field public A07:LX/3pu;
+
+.field public A08:LX/3pu;
 
 
 # direct methods
@@ -32,24 +34,24 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-direct {p0, p1, v1, v0}, LX/3od;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, v1, v0}, LX/3pj;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
     .line 4
     .line 5
-    sget-object v0, LX/0pH;->DEFAULT:LX/0pH;
+    sget-object v0, LX/12r;->DEFAULT:LX/12r;
 
     .line 6
     .line 7
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0pH;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:LX/12r;
 
     .line 8
     .line 9
-    sget v0, LX/2eq;->AZN:I
+    const-class v0, LX/2Ue;
 
     .line 10
     .line 11
-    invoke-static {p1, v0}, LX/1zU;->A00(Landroid/content/Context;I)LX/1zU;
+    invoke-static {v0, v1}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
 
     .line 12
     .line 13
@@ -57,15 +59,15 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A01:LX/0RP;
 
     .line 16
     .line 17
-    sget v0, LX/2eq;->Acw:I
+    const-class v0, LX/0yU;
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {p1, v0}, LX/3Fb;->A00(Landroid/content/Context;Ljava/lang/Class;)LX/3FW;
 
     .line 20
     .line 21
@@ -73,61 +75,77 @@
     move-result-object v0
 
     .line 23
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02:LX/0RP;
 
     .line 24
     .line 25
-    const v0, 0x7f0d00dc
+    const-class v0, LX/3q0;
 
     .line 26
     .line 27
-    .line 28
-    invoke-virtual {p0, v0}, LX/4QN;->setContentView(I)V
+    invoke-static {v0, v1}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
 
+    .line 28
     .line 29
     .line 30
+    move-result-object v0
+
     .line 31
-    invoke-direct {p0}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00()V
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0RP;
 
     .line 32
     .line 33
+    const v0, 0x7f0c00c1
+
     .line 34
+    .line 35
+    .line 36
+    invoke-virtual {p0, v0}, LX/3vV;->setContentView(I)V
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-direct {p0}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00()V
+
+    .line 40
+    .line 41
+    .line 42
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 6
+    .locals 3
 
     .line 268435456
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
     .line 268435457
     const/4 v0, 0x0
 
     .line 268435458
-    const v3, 0x7f0d00da
+    const v1, 0x7f0c00bf
 
     .line 268435459
     .line 268435460
     .line 268435461
-    invoke-direct {p0, p1, v5, v0}, LX/3od;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, v2, v0}, LX/3pj;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 268435462
     .line 268435463
     .line 268435464
-    sget-object v0, LX/0pH;->DEFAULT:LX/0pH;
+    sget-object v0, LX/12r;->DEFAULT:LX/12r;
 
     .line 268435465
     .line 268435466
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0pH;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:LX/12r;
 
     .line 268435467
     .line 268435468
-    sget v0, LX/2eq;->AZN:I
+    const-class v0, LX/2Ue;
 
     .line 268435469
     .line 268435470
-    invoke-static {p1, v0}, LX/1zU;->A00(Landroid/content/Context;I)LX/1zU;
+    invoke-static {v0, v2}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
 
     .line 268435471
     .line 268435472
@@ -135,15 +153,15 @@
     move-result-object v0
 
     .line 268435474
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A01:LX/0RP;
 
     .line 268435475
     .line 268435476
-    sget v0, LX/2eq;->Acw:I
+    const-class v0, LX/0yU;
 
     .line 268435477
     .line 268435478
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {p1, v0}, LX/3Fb;->A00(Landroid/content/Context;Ljava/lang/Class;)LX/3FW;
 
     .line 268435479
     .line 268435480
@@ -151,195 +169,49 @@
     move-result-object v0
 
     .line 268435482
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02:LX/0RP;
 
     .line 268435483
     .line 268435484
-    invoke-static {}, LX/1z6;->A0N()LX/35B;
+    const-class v0, LX/3q0;
 
     .line 268435485
     .line 268435486
+    invoke-static {v0, v2}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
+
     .line 268435487
-    move-result-object v2
-
     .line 268435488
-    const-wide v0, 0x810357015a264aL
-
     .line 268435489
+    move-result-object v0
+
     .line 268435490
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0RP;
+
     .line 268435491
     .line 268435492
-    .line 268435493
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    invoke-virtual {p0, v1}, LX/3vV;->setContentView(I)V
 
+    .line 268435493
     .line 268435494
     .line 268435495
-    .line 268435496
-    move-result v0
-
-    .line 268435497
-    if-nez v0, :cond_0
-
-    .line 268435498
-    .line 268435499
-    invoke-virtual {p0, v3}, LX/4QN;->setContentView(I)V
-
-    .line 268435500
-    .line 268435501
-    .line 268435502
-    :goto_0
     invoke-direct {p0}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00()V
 
-    .line 268435503
-    .line 268435504
-    .line 268435505
+    .line 268435496
+    .line 268435497
+    .line 268435498
     return-void
-
-    .line 268435506
-    :cond_0
-    new-instance v4, LX/4mm;
-
-    .line 268435507
-    .line 268435508
-    invoke-direct {v4, p1}, LX/4mm;-><init>(Landroid/content/Context;)V
-
-    .line 268435509
-    .line 268435510
-    .line 268435511
-    invoke-static {v4, v5}, LX/4kH;->A00(LX/4mm;Ljava/lang/String;)LX/4ja;
-
-    .line 268435512
-    .line 268435513
-    .line 268435514
-    move-result-object v3
-
-    .line 268435515
-    invoke-virtual {v3}, LX/4id;->A06()V
-
-    .line 268435516
-    .line 268435517
-    .line 268435518
-    invoke-virtual {v3}, LX/4id;->A07()V
-
-    .line 268435519
-    .line 268435520
-    .line 268435521
-    sget-object v0, LX/4jf;->CENTER:LX/4jf;
-
-    .line 268435522
-    .line 268435523
-    invoke-virtual {v3, v0}, LX/4ja;->A0S(LX/4jf;)V
-
-    .line 268435524
-    .line 268435525
-    .line 268435526
-    sget-object v0, LX/4je;->CENTER:LX/4je;
-
-    .line 268435527
-    .line 268435528
-    iget-object v2, v3, LX/4ja;->A00:LX/4mP;
-
-    .line 268435529
-    .line 268435530
-    iput-object v0, v2, LX/4mP;->A01:LX/4je;
-
-    .line 268435531
-    .line 268435532
-    new-instance v1, LX/4hk;
-
-    .line 268435533
-    .line 268435534
-    invoke-direct {v1, v4}, LX/4hk;-><init>(LX/4mm;)V
-
-    .line 268435535
-    .line 268435536
-    .line 268435537
-    sget-object v0, LX/014;->A0M:Ljava/lang/Integer;
-
-    .line 268435538
-    .line 268435539
-    iput-object v0, v1, LX/4hk;->A01:Ljava/lang/Integer;
-
-    .line 268435540
-    .line 268435541
-    sget-object v0, LX/4Np;->ON_MEDIA:LX/4Np;
-
-    .line 268435542
-    .line 268435543
-    iput-object v0, v1, LX/4hk;->A00:LX/4Np;
-
-    .line 268435544
-    .line 268435545
-    const-string v0, "VIDEO_LOADING_SPINNER"
-
-    .line 268435546
-    .line 268435547
-    invoke-static {v0}, Lcom/facebook/common/callercontext/CallerContext;->A02(Ljava/lang/String;)Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 268435548
-    .line 268435549
-    .line 268435550
-    move-result-object v0
-
-    .line 268435551
-    invoke-virtual {v1, v0}, LX/4ia;->A06(Lcom/facebook/common/callercontext/CallerContext;)LX/4mg;
-
-    .line 268435552
-    .line 268435553
-    .line 268435554
-    move-result-object v0
-
-    .line 268435555
-    invoke-virtual {v3, v0}, LX/4ja;->A0R(LX/4mg;)V
-
-    .line 268435556
-    .line 268435557
-    .line 268435558
-    invoke-static {p1, v2}, Lcom/facebook/litho/LithoView;->A04(Landroid/content/Context;LX/4mg;)Lcom/facebook/litho/LithoView;
-
-    .line 268435559
-    .line 268435560
-    .line 268435561
-    move-result-object v1
-
-    .line 268435562
-    const/16 v0, 0x8
-
-    .line 268435563
-    .line 268435564
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 268435565
-    .line 268435566
-    .line 268435567
-    const v0, 0x7f0a0394
-
-    .line 268435568
-    .line 268435569
-    .line 268435570
-    invoke-virtual {v1, v0}, Landroid/view/View;->setId(I)V
-
-    .line 268435571
-    .line 268435572
-    .line 268435573
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    .line 268435574
-    .line 268435575
-    .line 268435576
-    goto :goto_0
 .end method
 
 .method private A00()V
     .locals 3
 
     .line 0
-    const v0, 0x7f0a0394
+    const v0, 0x7f090340
 
     .line 1
     .line 2
     .line 3
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 4
     .line 5
@@ -351,35 +223,35 @@
 
     .line 8
     .line 9
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:Landroid/view/ViewGroup;
 
     .line 10
     .line 11
-    new-instance v0, LX/3py;
+    new-instance v0, LX/3sW;
 
     .line 12
     .line 13
-    invoke-direct {v0, p0}, LX/3py;-><init>(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;)V
+    invoke-direct {v0, p0}, LX/3sW;-><init>(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;)V
 
     .line 14
     .line 15
     .line 16
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3py;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3sW;
 
     .line 17
     .line 18
     const/4 v0, 0x3
 
     .line 19
-    new-array v2, v0, [LX/3hn;
+    new-array v2, v0, [LX/3Z7;
 
     .line 20
     .line 21
-    const/16 v0, 0x3a
+    const/16 v0, 0x38
 
     .line 22
     .line 23
-    invoke-static {p0, v0}, LX/3oT;->A01(Ljava/lang/Object;I)LX/3oT;
+    invoke-static {p0, v0}, LX/3pu;->A01(Ljava/lang/Object;I)LX/3pu;
 
     .line 24
     .line 25
@@ -394,11 +266,11 @@
 
     .line 29
     .line 30
-    const/16 v0, 0x39
+    const/16 v0, 0x37
 
     .line 31
     .line 32
-    invoke-static {p0, v0}, LX/3oT;->A01(Ljava/lang/Object;I)LX/3oT;
+    invoke-static {p0, v0}, LX/3pu;->A01(Ljava/lang/Object;I)LX/3pu;
 
     .line 33
     .line 34
@@ -413,11 +285,11 @@
 
     .line 38
     .line 39
-    new-instance v1, LX/3sC;
+    new-instance v1, LX/3vS;
 
     .line 40
     .line 41
-    invoke-direct {v1, p0, p0}, LX/3sC;-><init>(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;LX/3od;)V
+    invoke-direct {v1, p0, p0}, LX/3vS;-><init>(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;LX/3pj;)V
 
     .line 42
     .line 43
@@ -429,7 +301,7 @@
 
     .line 46
     .line 47
-    invoke-virtual {p0, v2}, LX/3od;->A0S([LX/3hn;)V
+    invoke-virtual {p0, v2}, LX/3pj;->A0O([LX/3Z7;)V
 
     .line 48
     .line 49
@@ -441,34 +313,34 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02:LX/3Wj;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3m2;
 
     .line 1
     .line 2
     const/4 v3, 0x1
 
     .line 3
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 4
     .line 5
-    iget-object v0, v0, LX/3Wj;->A02:Lcom/facebook/video/engine/api/VideoPlayerParams;
+    iget-object v0, v0, LX/3m2;->A03:Lcom/facebook/video/engine/api/VideoPlayerParams;
 
     .line 6
     .line 7
-    iget-boolean v0, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A1O:Z
+    iget-boolean v0, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A1b:Z
 
     .line 8
     .line 9
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A01:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0RP;
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Yi;->A0U(LX/0Na;)LX/3Wi;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 14
     .line 15
@@ -476,101 +348,102 @@
     move-result-object v2
 
     .line 17
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02:LX/3Wj;
+    check-cast v2, LX/3q0;
 
     .line 18
     .line 19
-    invoke-virtual {v0}, LX/3Wj;->A03()Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3m2;
 
     .line 20
     .line 21
+    invoke-virtual {v0}, LX/3m2;->A03()Ljava/lang/String;
+
     .line 22
+    .line 23
+    .line 24
     move-result-object v1
 
-    .line 23
-    iget-object v0, p0, LX/3od;->A04:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 24
     .line 25
-    invoke-virtual {v2, v0, v1}, LX/3Wi;->A03(Lcom/facebook/video/common/playerorigin/PlayerOrigin;Ljava/lang/String;)LX/3o5;
+    iget-object v0, p0, LX/3pj;->A03:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
 
     .line 26
     .line 27
-    .line 28
-    move-result-object v0
+    if-nez v0, :cond_0
 
+    .line 28
     .line 29
-    invoke-static {v0}, LX/3o5;->A00(LX/3o5;)LX/3nu;
+    sget-object v0, Lcom/facebook/video/common/playerorigin/PlayerOrigin;->A0M:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
 
     .line 30
     .line 31
+    :cond_0
+    invoke-virtual {v2, v0, v1}, LX/3q0;->A04(Lcom/facebook/video/common/playerorigin/PlayerOrigin;Ljava/lang/String;)LX/3q1;
+
     .line 32
+    .line 33
+    .line 34
     move-result-object v0
 
-    .line 33
-    if-eqz v0, :cond_2
-
-    .line 34
     .line 35
-    invoke-virtual {v0}, LX/3nu;->getPlayerState()LX/3qu;
+    invoke-static {v0}, LX/3q1;->A00(LX/3q1;)LX/3q3;
 
     .line 36
     .line 37
     .line 38
-    move-result-object v1
+    move-result-object v0
 
     .line 39
-    :goto_0
-    sget-object v0, LX/3qu;->ATTEMPT_TO_PLAY:LX/3qu;
+    if-eqz v0, :cond_3
 
     .line 40
     .line 41
-    if-eq v1, v0, :cond_0
+    invoke-virtual {v0}, LX/3q3;->getPlayerState()LX/3sb;
 
     .line 42
     .line 43
-    const/4 v3, 0x0
-
     .line 44
-    :cond_0
-    invoke-static {p0, v3}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;Z)V
+    move-result-object v1
 
     .line 45
+    :goto_0
+    sget-object v0, LX/3sb;->ATTEMPT_TO_PLAY:LX/3sb;
+
     .line 46
     .line 47
-    :cond_1
-    return-void
+    if-eq v1, v0, :cond_1
 
     .line 48
-    :cond_2
-    const/4 v1, 0x0
-
     .line 49
-    goto :goto_0
+    const/4 v3, 0x0
 
     .line 50
-    :cond_3
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
+    :cond_1
+    invoke-static {p0, v3}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;Z)V
 
     .line 51
     .line 52
-    invoke-static {v0}, LX/3od;->A09(LX/3sJ;)Z
-
     .line 53
+    :cond_2
+    return-void
+
     .line 54
+    :cond_3
+    const/4 v1, 0x0
+
     .line 55
-    move-result v0
+    goto :goto_0
 
     .line 56
-    if-nez v0, :cond_4
+    :cond_4
+    iget-object v0, p0, LX/3pj;->A08:LX/3v9;
 
     .line 57
     .line 58
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
+    if-eqz v0, :cond_5
 
     .line 59
     .line 60
-    invoke-interface {v0}, LX/3te;->getPlayerState()LX/3qu;
+    invoke-interface {v0}, LX/3lk;->getPlayerState()LX/3sb;
 
     .line 61
     .line 62
@@ -581,8 +454,8 @@
     goto :goto_0
 
     .line 65
-    :cond_4
-    if-eqz p1, :cond_1
+    :cond_5
+    if-eqz p1, :cond_2
 
     .line 66
     .line 67
@@ -594,7 +467,7 @@
 
     .line 70
     .line 71
-    invoke-virtual {p0, v1, v0}, LX/3od;->A0R(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v0}, LX/3pj;->A0N(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
     .line 73
@@ -606,7 +479,7 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3py;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3sW;
 
     .line 1
     .line 2
@@ -622,7 +495,7 @@
 
     .line 7
     .line 8
-    iget-object v2, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3py;
+    iget-object v2, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3sW;
 
     .line 9
     .line 10
@@ -639,20 +512,11 @@
 
     .line 16
     :cond_0
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:LX/0Na;
+    invoke-static {p0, v3}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;Z)V
 
     .line 17
     .line 18
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 19
-    .line 20
-    .line 21
-    invoke-static {p0, v3}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;Z)V
-
-    .line 22
-    .line 23
-    .line 24
     return-void
 .end method
 
@@ -660,282 +524,299 @@
     .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0pH;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02:LX/0RP;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
     .line 5
-    move-result v2
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:LX/12r;
 
     .line 6
-    const/4 v0, 0x0
-
     .line 7
-    const/4 v1, 0x4
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     .line 8
-    if-eq v2, v0, :cond_2
-
     .line 9
     .line 10
-    const/4 v0, 0x1
+    move-result v2
 
     .line 11
-    if-ne v2, v0, :cond_1
+    const/4 v0, 0x0
 
     .line 12
+    const/4 v1, 0x4
+
     .line 13
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:Landroid/view/ViewGroup;
+    if-eq v2, v0, :cond_2
 
     .line 14
     .line 15
+    const/4 v0, 0x1
+
+    .line 16
+    if-ne v2, v0, :cond_1
+
+    .line 17
+    .line 18
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:Landroid/view/ViewGroup;
+
+    .line 19
+    .line 20
     :cond_0
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 16
-    .line 17
-    .line 18
+    .line 21
+    .line 22
+    .line 23
     :cond_1
     return-void
 
-    .line 19
+    .line 24
     :cond_2
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:Landroid/view/ViewGroup;
 
-    .line 20
-    .line 21
+    .line 25
+    .line 26
     if-eqz p1, :cond_0
 
-    .line 22
-    .line 23
+    .line 27
+    .line 28
     const/4 v1, 0x0
 
-    .line 24
+    .line 29
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final A0C()V
+.method public final A0A()V
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3py;
+    iget-object v1, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3sW;
 
     .line 1
     .line 2
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 4
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:LX/0Na;
+    invoke-static {p0, v0}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;Z)V
 
     .line 7
     .line 8
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 9
-    .line 10
-    .line 11
-    invoke-static {p0, v1}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;Z)V
-
-    .line 12
-    .line 13
-    .line 14
     return-void
 .end method
 
-.method public final A0D()V
-    .locals 3
+.method public final A0B()V
+    .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3py;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3sW;
 
     .line 1
     .line 2
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
     .line 3
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+    invoke-virtual {v0, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 4
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:LX/0Na;
+    invoke-static {p0, v4}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;Z)V
 
     .line 7
     .line 8
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 9
-    .line 10
-    .line 11
-    invoke-static {p0, v1}, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03(Lcom/facebook/video/plugins/LoadingSpinnerPlugin;Z)V
-
-    .line 12
-    .line 13
-    .line 14
     const/4 v0, 0x0
 
+    .line 10
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3m2;
+
+    .line 11
+    .line 12
+    const/4 v3, 0x2
+
+    .line 13
+    new-array v2, v3, [LX/3Z7;
+
+    .line 14
     .line 15
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02:LX/3Wj;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A07:LX/3pu;
 
     .line 16
     .line 17
-    const/4 v0, 0x2
+    aput-object v0, v2, v4
 
     .line 18
-    new-array v2, v0, [LX/3hn;
-
     .line 19
+    iget-object v1, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A08:LX/3pu;
+
     .line 20
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3oT;
-
     .line 21
-    .line 22
-    aput-object v0, v2, v1
-
-    .line 23
-    .line 24
-    iget-object v1, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A07:LX/3oT;
-
-    .line 25
-    .line 26
     const/4 v0, 0x1
 
-    .line 27
+    .line 22
     aput-object v1, v2, v0
 
-    .line 28
-    .line 29
-    invoke-virtual {p0, v2}, LX/3od;->A0T([LX/3hn;)V
-
-    .line 30
-    .line 31
-    .line 32
-    return-void
-.end method
-
-.method public final A0J(LX/3Wj;)V
-    .locals 3
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    iput-boolean v0, p0, LX/3od;->A0F:Z
-
-    .line 2
-    .line 3
-    sget-object v0, LX/0pH;->DEFAULT:LX/0pH;
-
-    .line 4
-    .line 5
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0pH;
-
-    .line 6
-    .line 7
-    iput-object p1, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A02:LX/3Wj;
-
-    .line 8
-    .line 9
-    iget-object v0, p1, LX/3Wj;->A02:Lcom/facebook/video/engine/api/VideoPlayerParams;
-
-    .line 10
-    .line 11
-    iget-boolean v0, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A1O:Z
-
-    .line 12
-    .line 13
-    if-eqz v0, :cond_2
-
-    .line 14
-    .line 15
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3oT;
-
-    .line 16
-    .line 17
-    if-nez v0, :cond_0
-
-    .line 18
-    .line 19
-    const/16 v0, 0x37
-
-    .line 20
-    .line 21
-    invoke-static {p0, v0}, LX/3oT;->A01(Ljava/lang/Object;I)LX/3oT;
-
-    .line 22
     .line 23
     .line 24
-    move-result-object v0
+    :cond_0
+    aget-object v1, v2, v4
 
     .line 25
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3oT;
-
     .line 26
+    if-eqz v1, :cond_1
+
     .line 27
-    :cond_0
-    iget-object v2, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A07:LX/3oT;
-
     .line 28
+    iget-object v0, p0, LX/3pj;->A0J:Ljava/util/List;
+
     .line 29
-    if-nez v2, :cond_1
-
     .line 30
-    .line 31
-    const/16 v0, 0x38
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 31
     .line 32
     .line 33
-    invoke-static {p0, v0}, LX/3oT;->A01(Ljava/lang/Object;I)LX/3oT;
+    :cond_1
+    add-int/lit8 v4, v4, 0x1
 
     .line 34
     .line 35
+    if-lt v4, v3, :cond_0
+
     .line 36
+    .line 37
+    return-void
+.end method
+
+.method public final A0J(LX/3m2;)V
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    iput-boolean v0, p0, LX/3pj;->A0E:Z
+
+    .line 2
+    .line 3
+    sget-object v0, LX/12r;->DEFAULT:LX/12r;
+
+    .line 4
+    .line 5
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:LX/12r;
+
+    .line 6
+    .line 7
+    iput-object p1, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A04:LX/3m2;
+
+    .line 8
+    .line 9
+    if-eqz p1, :cond_2
+
+    .line 10
+    .line 11
+    iget-object v0, p1, LX/3m2;->A03:Lcom/facebook/video/engine/api/VideoPlayerParams;
+
+    .line 12
+    .line 13
+    iget-boolean v0, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A1b:Z
+
+    .line 14
+    .line 15
+    if-eqz v0, :cond_2
+
+    .line 16
+    .line 17
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A07:LX/3pu;
+
+    .line 18
+    .line 19
+    if-nez v0, :cond_0
+
+    .line 20
+    .line 21
+    const/16 v0, 0x35
+
+    .line 22
+    .line 23
+    invoke-static {p0, v0}, LX/3pu;->A01(Ljava/lang/Object;I)LX/3pu;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A07:LX/3pu;
+
+    .line 28
+    .line 29
+    :cond_0
+    iget-object v2, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A08:LX/3pu;
+
+    .line 30
+    .line 31
+    if-nez v2, :cond_1
+
+    .line 32
+    .line 33
+    const/16 v0, 0x36
+
+    .line 34
+    .line 35
+    invoke-static {p0, v0}, LX/3pu;->A01(Ljava/lang/Object;I)LX/3pu;
+
+    .line 36
+    .line 37
+    .line 38
     move-result-object v2
 
-    .line 37
-    iput-object v2, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A07:LX/3oT;
-
-    .line 38
     .line 39
+    iput-object v2, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A08:LX/3pu;
+
+    .line 40
+    .line 41
     :cond_1
     const/4 v0, 0x2
 
-    .line 40
-    new-array v1, v0, [LX/3hn;
-
-    .line 41
     .line 42
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A06:LX/3oT;
+    new-array v1, v0, [LX/3Z7;
 
     .line 43
     .line 44
-    invoke-static {v1, v0, v2}, LX/001;->A1G([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A07:LX/3pu;
 
     .line 45
     .line 46
-    .line 47
-    invoke-virtual {p0, v1}, LX/3od;->A0S([LX/3hn;)V
+    invoke-static {v1, v0, v2}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 47
     .line 48
     .line 49
+    invoke-virtual {p0, v1}, LX/3pj;->A0O([LX/3Z7;)V
+
     .line 50
+    .line 51
+    .line 52
     :cond_2
     return-void
 .end method
 
-.method public final A0Q(LX/3Wj;Z)V
+.method public final A0M(LX/3m2;Z)V
     .locals 1
 
     .line 0
@@ -943,11 +824,11 @@
 
     .line 1
     .line 2
-    sget-object v0, LX/0pH;->DEFAULT:LX/0pH;
+    sget-object v0, LX/12r;->DEFAULT:LX/12r;
 
     .line 3
     .line 4
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0pH;
+    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:LX/12r;
 
     .line 5
     .line 6
@@ -963,16 +844,16 @@
     return-void
 .end method
 
-.method public final Ajf(LX/3Wf;)V
+.method public final AiB(LX/3nM;)V
     .locals 2
 
     .line 0
-    invoke-super {p0, p1}, LX/3od;->Ajf(LX/3Wf;)V
+    invoke-super {p0, p1}, LX/3pj;->AiB(LX/3nM;)V
 
     .line 1
     .line 2
     .line 3
-    iget-object v1, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:Landroid/view/ViewGroup;
+    iget-object v1, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:Landroid/view/ViewGroup;
 
     .line 4
     .line 5
@@ -980,7 +861,7 @@
 
     .line 6
     .line 7
-    invoke-static {v1, p1, v0}, LX/3qf;->A00(Landroid/view/View;LX/3Wf;Ljava/lang/String;)V
+    invoke-static {v1, p1, v0}, LX/3tE;->A00(Landroid/view/View;LX/3nM;Ljava/lang/String;)V
 
     .line 8
     .line 9
@@ -992,7 +873,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A05:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A00:Landroid/view/ViewGroup;
 
     .line 1
     .line 2
@@ -1005,19 +886,4 @@
     const-string v0, "LoadingSpinnerPlugin"
 
     return-object v0
-.end method
-
-.method public setupIcon(LX/3Wj;)V
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/0pH;->DEFAULT:LX/0pH;
-
-    .line 1
-    .line 2
-    iput-object v0, p0, Lcom/facebook/video/plugins/LoadingSpinnerPlugin;->A03:LX/0pH;
-
-    .line 3
-    .line 4
-    return-void
 .end method

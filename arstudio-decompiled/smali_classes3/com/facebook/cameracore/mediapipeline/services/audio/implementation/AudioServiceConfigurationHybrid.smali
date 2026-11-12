@@ -6,7 +6,7 @@
 # instance fields
 .field public final mConfiguration:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;
 
-.field public final mPlatformReleaser:LX/5Wl;
+.field public final mPlatformReleaser:LX/5b0;
 
 
 # direct methods
@@ -28,7 +28,7 @@
     .line 6
     .line 7
     .line 8
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioServiceConfigurationHybrid;->mPlatformReleaser:LX/5Wl;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioServiceConfigurationHybrid;->mPlatformReleaser:LX/5b0;
 
     .line 9
     .line 10
@@ -83,7 +83,7 @@
 
     .line 3
     .line 4
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioSamplesReader:LX/5Zn;
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioSamplesReader:LX/5Um;
 
     .line 5
     .line 6
@@ -91,7 +91,7 @@
 
     .line 7
     .line 8
-    invoke-direct {v2, v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl;-><init>(Landroid/content/Context;LX/5Zn;)V
+    invoke-direct {v2, v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl;-><init>(Landroid/content/Context;LX/5Um;)V
 
     .line 9
     .line 10
@@ -105,15 +105,15 @@
     .line 14
     .line 15
     .line 16
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioServiceConfigurationHybrid;->mPlatformReleaser:LX/5Wl;
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioServiceConfigurationHybrid;->mPlatformReleaser:LX/5b0;
 
     .line 17
     .line 18
-    new-instance v0, LX/5Wi;
+    new-instance v0, LX/5rO;
 
     .line 19
     .line 20
-    invoke-direct {v0, v1, v2}, LX/5Wi;-><init>(LX/5Wl;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, LX/5rO;-><init>(LX/5b0;Ljava/lang/Object;)V
 
     .line 21
     .line 22
@@ -130,21 +130,6 @@
     .line 1
     .line 2
     iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioGraphClientProvider:Lcom/facebook/cameracore/audiograph/AudioGraphClientProvider;
-
-    .line 3
-    .line 4
-    return-object v0
-.end method
-
-.method public getAudioPlatformEffectHooks()Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformEffectHooks;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioServiceConfigurationHybrid;->mConfiguration:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mPlatformEffectHooks:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformEffectHooks;
 
     .line 3
     .line 4

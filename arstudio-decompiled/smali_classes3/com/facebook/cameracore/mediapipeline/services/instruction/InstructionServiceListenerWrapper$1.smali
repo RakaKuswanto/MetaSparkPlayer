@@ -61,7 +61,7 @@
 
     .line 1
     .line 2
-    iget-object v2, v0, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceListenerWrapper;->mListener:LX/4su;
+    iget-object v2, v0, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceListenerWrapper;->mListener:LX/4nG;
 
     .line 3
     .line 4
@@ -85,11 +85,11 @@
 
     .line 13
     .line 14
-    check-cast v2, LX/4sW;
+    check-cast v2, LX/4n7;
 
     .line 15
     .line 16
-    iget-boolean v0, v2, LX/4sW;->A03:Z
+    iget-boolean v0, v2, LX/4n7;->A03:Z
 
     .line 17
     .line 18
@@ -111,7 +111,7 @@
     .line 26
     .line 27
     :pswitch_0
-    invoke-virtual {v2}, LX/4sW;->AOy()V
+    invoke-virtual {v2}, LX/4n7;->ANZ()V
 
     .line 28
     .line 29
@@ -121,11 +121,11 @@
 
     .line 31
     :pswitch_1
-    iget-object v0, v2, LX/4sW;->A06:LX/0Na;
+    iget-object v0, v2, LX/4n7;->A05:LX/0RP;
 
     .line 32
     .line 33
-    invoke-static {v0}, LX/0Yd;->A08(LX/0Na;)Landroid/content/res/Resources;
+    invoke-static {v0}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
 
     .line 34
     .line 35
@@ -133,235 +133,235 @@
     move-result-object v1
 
     .line 37
-    const v0, 0x7f120239
+    const v0, 0x7f110201
 
     .line 38
     .line 39
     .line 40
-    goto :goto_0
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 41
-    :pswitch_2
-    if-eqz v1, :cond_1
-
     .line 42
     .line 43
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    move-result-object v0
 
     .line 44
+    invoke-static {v2, v0}, LX/4n7;->A04(LX/4n7;Ljava/lang/String;)V
+
     .line 45
     .line 46
-    move-result v1
-
     .line 47
-    const/4 v0, 0x1
+    const v1, 0x7f08176f
 
     .line 48
-    if-le v1, v0, :cond_1
-
     .line 49
     .line 50
-    iget-object v0, v2, LX/4sW;->A06:LX/0Na;
-
-    .line 51
-    .line 52
-    invoke-static {v0}, LX/0Yd;->A08(LX/0Na;)Landroid/content/res/Resources;
-
-    .line 53
-    .line 54
-    .line 55
-    move-result-object v1
-
-    .line 56
-    const v0, 0x7f120238
-
-    .line 57
-    .line 58
-    .line 59
     goto :goto_0
 
+    .line 51
+    :pswitch_2
+    iget-object v0, v2, LX/4n7;->A05:LX/0RP;
+
+    .line 52
+    .line 53
+    invoke-static {v0}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v1
+
+    .line 57
+    const v0, 0x7f110203
+
+    .line 58
+    .line 59
     .line 60
-    :cond_1
-    iget-object v0, v2, LX/4sW;->A06:LX/0Na;
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 61
     .line 62
-    invoke-static {v0}, LX/0Yd;->A08(LX/0Na;)Landroid/content/res/Resources;
-
     .line 63
+    move-result-object v0
+
     .line 64
+    invoke-static {v2, v0}, LX/4n7;->A04(LX/4n7;Ljava/lang/String;)V
+
     .line 65
-    move-result-object v1
-
     .line 66
-    const v0, 0x7f120237
-
     .line 67
+    const v1, 0x7f081770
+
     .line 68
     .line 69
-    goto :goto_0
-
     .line 70
-    :pswitch_3
-    iget-object v0, v2, LX/4sW;->A06:LX/0Na;
+    :goto_0
+    iget-object v0, v2, LX/4n7;->A02:LX/3TB;
 
     .line 71
     .line 72
-    invoke-static {v0}, LX/0Yd;->A08(LX/0Na;)Landroid/content/res/Resources;
+    if-eqz v0, :cond_2
 
     .line 73
     .line 74
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
     .line 75
-    move-result-object v1
-
     .line 76
-    const v0, 0x7f120235
-
     .line 77
+    iget-object v1, v2, LX/4n7;->A02:LX/3TB;
+
     .line 78
     .line 79
-    goto :goto_0
+    const/4 v0, 0x0
 
     .line 80
-    :pswitch_4
-    iget-object v0, v2, LX/4sW;->A06:LX/0Na;
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 81
     .line 82
-    invoke-static {v0}, LX/0Yd;->A08(LX/0Na;)Landroid/content/res/Resources;
-
     .line 83
-    .line 84
-    .line 85
-    move-result-object v1
+    goto :goto_2
 
+    .line 84
+    :pswitch_3
+    iget-object v0, v2, LX/4n7;->A05:LX/0RP;
+
+    .line 85
     .line 86
-    const v0, 0x7f12026a
+    invoke-static {v0}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
 
     .line 87
     .line 88
     .line 89
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 90
-    .line 91
-    .line 92
-    move-result-object v0
-
-    .line 93
-    invoke-static {v2, v0}, LX/4sW;->A04(LX/4sW;Ljava/lang/String;)V
-
-    .line 94
-    .line 95
-    .line 96
-    goto :goto_2
-
-    .line 97
-    :pswitch_5
-    iget-object v0, v2, LX/4sW;->A06:LX/0Na;
-
-    .line 98
-    .line 99
-    invoke-static {v0}, LX/0Yd;->A08(LX/0Na;)Landroid/content/res/Resources;
-
-    .line 100
-    .line 101
-    .line 102
     move-result-object v1
 
+    .line 90
+    const v0, 0x7f110237
+
+    .line 91
+    .line 92
+    .line 93
+    goto :goto_1
+
+    .line 94
+    :pswitch_4
+    iget-object v0, v2, LX/4n7;->A05:LX/0RP;
+
+    .line 95
+    .line 96
+    invoke-static {v0}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
+
+    .line 97
+    .line 98
+    .line 99
+    move-result-object v1
+
+    .line 100
+    const v0, 0x7f110202
+
+    .line 101
+    .line 102
     .line 103
-    const v0, 0x7f120236
+    goto :goto_1
 
     .line 104
+    :pswitch_5
+    if-eqz v1, :cond_1
+
     .line 105
     .line 106
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
     .line 107
     .line 108
     .line 109
-    move-result-object v0
+    move-result v1
 
     .line 110
-    invoke-static {v2, v0}, LX/4sW;->A04(LX/4sW;Ljava/lang/String;)V
+    const/4 v0, 0x1
 
     .line 111
+    if-le v1, v0, :cond_1
+
     .line 112
     .line 113
-    const v1, 0x7f081688
+    iget-object v0, v2, LX/4n7;->A05:LX/0RP;
 
     .line 114
     .line 115
+    invoke-static {v0}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
+
     .line 116
-    goto :goto_1
-
     .line 117
-    :pswitch_6
-    iget-object v0, v2, LX/4sW;->A06:LX/0Na;
-
     .line 118
+    move-result-object v1
+
     .line 119
-    invoke-static {v0}, LX/0Yd;->A08(LX/0Na;)Landroid/content/res/Resources;
+    const v0, 0x7f110205
 
     .line 120
     .line 121
     .line 122
-    move-result-object v1
+    goto :goto_1
 
     .line 123
-    const v0, 0x7f120234
+    :cond_1
+    iget-object v0, v2, LX/4n7;->A05:LX/0RP;
 
     .line 124
     .line 125
-    .line 126
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-static {v0}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
 
+    .line 126
     .line 127
     .line 128
+    move-result-object v1
+
     .line 129
-    move-result-object v0
+    const v0, 0x7f110204
 
     .line 130
-    invoke-static {v2, v0}, LX/4sW;->A04(LX/4sW;Ljava/lang/String;)V
-
     .line 131
     .line 132
+    goto :goto_1
+
     .line 133
-    const v1, 0x7f081687
+    :pswitch_6
+    iget-object v0, v2, LX/4n7;->A05:LX/0RP;
 
     .line 134
     .line 135
-    .line 136
-    :goto_1
-    iget-object v0, v2, LX/4sW;->A02:LX/41M;
+    invoke-static {v0}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
 
+    .line 136
     .line 137
     .line 138
-    if-eqz v0, :cond_2
+    move-result-object v1
 
     .line 139
-    .line 140
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    const v0, 0x7f110206
 
+    .line 140
     .line 141
     .line 142
-    .line 143
-    iget-object v1, v2, LX/4sW;->A02:LX/41M;
+    :goto_1
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
+    .line 143
     .line 144
     .line 145
-    const/4 v0, 0x0
+    move-result-object v0
 
     .line 146
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v2, v0}, LX/4n7;->A04(LX/4n7;Ljava/lang/String;)V
 
     .line 147
     .line 148
     .line 149
     :cond_2
     :goto_2
-    invoke-static {v2}, LX/4sW;->A02(LX/4sW;)V
+    invoke-static {v2}, LX/4n7;->A02(LX/4n7;)V
 
     .line 150
     .line 151
@@ -374,12 +374,12 @@
     .line 154
     :pswitch_data_0
     .packed-switch 0x2
-        :pswitch_6
-        :pswitch_5
-        :pswitch_0
-        :pswitch_3
-        :pswitch_4
-        :pswitch_2
         :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_5
+        :pswitch_6
     .end packed-switch
 .end method

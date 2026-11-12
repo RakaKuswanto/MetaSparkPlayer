@@ -2,78 +2,92 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$34"
+
 
 # instance fields
-.field public final A00:LX/1T6;
+.field public final synthetic A00:LX/3wv;
 
-.field public final A01:Landroid/graphics/ColorSpace;
+.field public final synthetic A01:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/ColorSpace;II)V
-    .locals 1
+.method public constructor <init>(LX/3wv;Ljava/lang/Object;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/3xU;->A00:LX/3wv;
 
     .line 1
     .line 2
+    iput-object p2, p0, LX/3xU;->A01:Ljava/lang/Object;
+
     .line 3
-    iput-object p1, p0, LX/3xU;->A01:Landroid/graphics/ColorSpace;
-
     .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 5
-    const/4 v0, -0x1
-
     .line 6
-    if-eq p2, v0, :cond_0
-
     .line 7
-    .line 8
-    if-eq p3, v0, :cond_0
-
-    .line 9
-    .line 10
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-static {v0, p3}, LX/1T6;->A00(Ljava/lang/Object;I)LX/1T6;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    :goto_0
-    iput-object v0, p0, LX/3xU;->A00:LX/1T6;
-
-    .line 19
-    .line 20
     return-void
-
-    .line 21
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 22
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final A00()Landroid/graphics/ColorSpace;
-    .locals 1
+.method public final run()V
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/3xU;->A01:Landroid/graphics/ColorSpace;
+    iget-object v0, p0, LX/3xU;->A00:LX/3wv;
 
     .line 1
     .line 2
-    return-object v0
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-static {v2}, LX/0X6;->A0X(Ljava/util/Iterator;)LX/3xA;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v1
+
+    .line 16
+    iget-object v0, p0, LX/3xU;->A01:Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    invoke-interface {v1, v0}, LX/3xA;->AYF(Ljava/lang/Object;)V
+
+    .line 19
+    .line 20
+    .line 21
+    goto :goto_0
+
+    .line 22
+    :cond_0
+    return-void
 .end method

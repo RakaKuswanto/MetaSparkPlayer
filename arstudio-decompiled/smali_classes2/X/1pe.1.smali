@@ -1,18 +1,23 @@
-.class public LX/1pe;
+.class public final LX/1pe;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/google/common/util/concurrent/ListenableFuture;
-
 
 # instance fields
-.field public final A00:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public A00:Ljava/util/concurrent/ScheduledFuture;
+
+.field public final A01:LX/0RP;
+
+.field public final A02:LX/0RP;
+
+.field public final A03:LX/1pS;
+
+.field public final A04:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/util/concurrent/ListenableFuture;)V
-    .locals 0
+.method public constructor <init>(LX/1pS;)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -20,122 +25,57 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/1pe;->A00:Lcom/google/common/util/concurrent/ListenableFuture;
+    sget v0, LX/2I6;->A5d:I
 
     .line 4
     .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1pe;->A00:Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public cancel(Z)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1pe;->A00:Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
-    return v0
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    .line 268435456
-    iget-object v0, p0, LX/1pe;->A00:Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 268435457
-    .line 268435458
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
+    .line 7
+    .line 8
     move-result-object v0
 
-    .line 268435462
-    return-object v0
-.end method
+    .line 9
+    iput-object v0, p0, LX/1pe;->A02:LX/0RP;
 
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
+    .line 10
+    .line 11
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
-    .line 0
-    iget-object v0, p0, LX/1pe;->A00:Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
+    .line 12
+    .line 13
+    .line 14
     move-result-object v0
 
-    .line 6
-    return-object v0
-.end method
+    .line 15
+    iput-object v0, p0, LX/1pe;->A01:LX/0RP;
 
-.method public final isCancelled()Z
-    .locals 1
+    .line 16
+    .line 17
+    const/4 v0, 0x0
 
-    .line 0
-    iget-object v0, p0, LX/1pe;->A00:Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 18
+    iput-object v0, p0, LX/1pe;->A00:Ljava/util/concurrent/ScheduledFuture;
 
-    .line 1
-    .line 2
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->isCancelled()Z
+    .line 19
+    .line 20
+    new-instance v0, LX/1pd;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    .line 21
+    .line 22
+    invoke-direct {v0, p0}, LX/1pd;-><init>(LX/1pe;)V
 
-    .line 6
-    return v0
-.end method
+    .line 23
+    .line 24
+    .line 25
+    iput-object v0, p0, LX/1pe;->A04:Ljava/lang/Runnable;
 
-.method public final isDone()Z
-    .locals 1
+    .line 26
+    .line 27
+    iput-object p1, p0, LX/1pe;->A03:LX/1pS;
 
-    .line 0
-    iget-object v0, p0, LX/1pe;->A00:Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
+    .line 28
+    .line 29
+    return-void
 .end method

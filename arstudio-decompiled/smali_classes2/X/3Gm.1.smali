@@ -1,31 +1,25 @@
-.class public final LX/3Gm;
-.super LX/3YQ;
+.class public abstract LX/3gM;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0OV;
-
-.field public final A01:LX/0ZF;
-
-
 # direct methods
-.method public constructor <init>(LX/0OV;LX/0ZF;)V
+.method public static final A00(Landroid/content/Context;)Ljava/io/File;
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3YQ;-><init>()V
+    invoke-virtual {p0}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
 
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/3Gm;->A01:LX/0ZF;
+    move-result-object p0
 
     .line 4
-    .line 5
-    iput-object p1, p0, LX/3Gm;->A00:LX/0OV;
+    invoke-static {p0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
+    .line 5
     .line 6
     .line 7
-    return-void
+    return-object p0
 .end method

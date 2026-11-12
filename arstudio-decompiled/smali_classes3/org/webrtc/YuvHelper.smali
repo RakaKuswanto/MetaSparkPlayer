@@ -184,7 +184,7 @@
     move-result v0
 
     .line 73
-    invoke-static {v2, v1, v3, v0}, LX/4BE;->A0i(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/IllegalArgumentException;
+    invoke-static {v2, v1, v3, v0}, LX/432;->A0g(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/IllegalArgumentException;
 
     .line 74
     .line 75
@@ -394,7 +394,7 @@
     move-result v0
 
     .line 89
-    invoke-static {v2, v1, v3, v0}, LX/4BE;->A0i(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/IllegalArgumentException;
+    invoke-static {v2, v1, v3, v0}, LX/432;->A0g(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/IllegalArgumentException;
 
     .line 90
     .line 91
@@ -420,162 +420,105 @@
 .method public static I420ToNV12(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)V
     .locals 12
 
-    .line 0
     move/from16 v7, p7
 
-    .line 1
-    .line 2
     add-int/lit8 v0, p7, 0x1
 
-    .line 3
-    .line 4
+    .line 269164306
     div-int/lit8 v2, v0, 0x2
 
-    .line 5
-    .line 6
     move/from16 v11, p8
 
-    .line 7
-    .line 8
     add-int/lit8 v0, p8, 0x1
 
-    .line 9
-    .line 10
+    .line 269164307
     div-int/lit8 v0, v0, 0x2
 
-    .line 11
-    .line 12
     mul-int v1, p7, p8
 
-    .line 13
-    .line 14
     mul-int/2addr v0, v2
 
-    .line 15
     mul-int/lit8 v3, v0, 0x2
 
-    .line 16
-    .line 17
     add-int/2addr v3, v1
 
-    .line 18
+    .line 269164308
     move-object/from16 v4, p6
 
-    .line 19
-    .line 20
     invoke-virtual {v4}, Ljava/nio/Buffer;->capacity()I
 
-    .line 21
-    .line 22
-    .line 23
     move-result v0
 
-    .line 24
     if-lt v0, v3, :cond_0
 
-    .line 25
-    .line 26
     const/4 v0, 0x0
 
-    .line 27
+    .line 269164309
     invoke-virtual {v4, v0}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
-    .line 28
-    .line 29
-    .line 30
+    .line 269164310
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    .line 31
-    .line 32
-    .line 33
     move-result-object v6
 
-    .line 34
+    .line 269164311
     invoke-virtual {v4, v1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
-    .line 35
-    .line 36
-    .line 37
+    .line 269164312
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    .line 38
-    .line 39
-    .line 40
     move-result-object v8
 
-    .line 41
     mul-int/lit8 v9, v2, 0x2
 
-    .line 42
-    .line 43
+    .line 269164313
     move-object v0, p0
 
-    .line 44
     move v1, p1
 
-    .line 45
     move-object v2, p2
 
-    .line 46
     move v3, p3
 
-    .line 47
     move-object/from16 v4, p4
 
-    .line 48
-    .line 49
     move/from16 v5, p5
 
-    .line 50
-    .line 51
     move v10, v7
 
-    .line 52
     invoke-static/range {v0 .. v11}, Lorg/webrtc/YuvHelper;->nativeI420ToNV12(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;III)V
 
-    .line 53
-    .line 54
-    .line 55
     return-void
 
-    .line 56
+    .line 269164314
     :cond_0
     const-string v2, "Expected destination buffer capacity to be at least "
 
-    .line 57
-    .line 58
     const-string v1, " was "
 
-    .line 59
-    .line 60
+    .line 269164315
     invoke-virtual {v4}, Ljava/nio/Buffer;->capacity()I
 
-    .line 61
-    .line 62
-    .line 63
     move-result v0
 
-    .line 64
-    invoke-static {v2, v1, v3, v0}, LX/4BE;->A0i(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/IllegalArgumentException;
+    .line 269164316
+    invoke-static {v2, v1, v3, v0}, LX/432;->A0g(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/IllegalArgumentException;
 
-    .line 65
-    .line 66
-    .line 67
     move-result-object v0
 
-    .line 68
+    .line 269164317
     throw v0
 .end method
 
 .method public static I420ToNV12(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;III)V
     .locals 0
 
-    .line 268435456
+    .line 0
     invoke-static/range {p0 .. p11}, Lorg/webrtc/YuvHelper;->nativeI420ToNV12(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;III)V
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final A01:LX/35a;
+.field public static final A01:LX/2ND;
 
 
 # instance fields
@@ -16,7 +16,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
@@ -292,16 +292,16 @@
     .line 150
     .line 151
     .line 152
-    new-instance v0, LX/35a;
+    new-instance v0, LX/2ND;
 
     .line 153
     .line 154
-    invoke-direct {v0, v2}, LX/35a;-><init>(Ljava/util/Map;)V
+    invoke-direct {v0, v2}, LX/2ND;-><init>(Ljava/util/Map;)V
 
     .line 155
     .line 156
     .line 157
-    sput-object v0, Lcom/facebook/ffmpeg/FFMpegMediaFormat;->A01:LX/35a;
+    sput-object v0, Lcom/facebook/ffmpeg/FFMpegMediaFormat;->A01:LX/2ND;
 
     .line 158
     .line 159
@@ -317,7 +317,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 4
     .line 5
@@ -392,7 +392,7 @@
     move-result-object v0
 
     .line 6
-    invoke-static {v0}, LX/0Yi;->A00(Ljava/lang/Object;)F
+    invoke-static {v0}, LX/0X6;->A00(Ljava/lang/Object;)F
 
     .line 7
     .line 8
@@ -411,14 +411,22 @@
 
     .line 268435457
     .line 268435458
-    invoke-static {p1, v0}, LX/4BD;->A0E(Ljava/lang/Object;Ljava/util/Map;)I
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 268435459
     .line 268435460
     .line 268435461
-    move-result v0
+    move-result-object v0
 
     .line 268435462
+    invoke-static {v0}, LX/002;->A00(Ljava/lang/Object;)I
+
+    .line 268435463
+    .line 268435464
+    .line 268435465
+    move-result v0
+
+    .line 268435466
     return v0
 .end method
 
@@ -427,24 +435,20 @@
 
     .line 0
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/ffmpeg/FFMpegMediaFormat;->A00:Ljava/util/Map;
+    invoke-virtual {p0, p1}, Lcom/facebook/ffmpeg/FFMpegMediaFormat;->getInteger(Ljava/lang/String;)I
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/4BD;->A0E(Ljava/lang/Object;Ljava/util/Map;)I
-
     .line 3
-    .line 4
-    .line 5
     move-result v0
 
-    .line 6
+    .line 4
     return v0
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
+    .line 5
     :catch_0
     return p2
 .end method
@@ -465,7 +469,7 @@
     move-result-object v0
 
     .line 268435462
-    invoke-static {v0}, LX/002;->A01(Ljava/lang/Object;)J
+    invoke-static {v0}, LX/001;->A02(Ljava/lang/Object;)J
 
     .line 268435463
     .line 268435464
@@ -507,7 +511,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {p1, v0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 3
     .line 4

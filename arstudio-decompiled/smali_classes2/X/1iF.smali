@@ -1,17 +1,21 @@
-.class public abstract LX/1iF;
-.super Lcom/facebook/graphql/calls/GraphQlCallInput;
+.class public final LX/1iF;
+.super Ljava/lang/Exception;
 .source ""
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/graphql/calls/GraphQlCallInput;-><init>()V
+    const-string v0, "The UXMode should not be null, please reconfigure SurveySessionDefinition"
 
     .line 1
     .line 2
+    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
     .line 3
+    .line 4
+    .line 5
     return-void
 .end method

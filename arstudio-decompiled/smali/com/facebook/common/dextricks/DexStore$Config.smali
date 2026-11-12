@@ -60,7 +60,7 @@
 
 .field public static final SYNC_CONTROL_SYNC:B = 0x2t
 
-.field public static final VERSION:B = 0x8t
+.field public static final VERSION:B = 0x9t
 
 
 # instance fields
@@ -92,10 +92,6 @@
 
 .field public final enableMixedModePgo:Z
 
-.field public final enableOatmeal:Z
-
-.field public final enableOatmealQuickening:Z
-
 .field public final enableQuickening:Z
 
 .field public final henosisFlags:I
@@ -116,185 +112,160 @@
 
 
 # direct methods
-.method public constructor <init>(BBBBBBIIIIIZZZZZZZZBZJBII)V
+.method public constructor <init>(BBBBBBIIIIIZZZZZZBZJBII)V
     .locals 2
 
-    .line 49054
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49055
+    .line 1
+    .line 2
+    .line 3
     iput-byte p1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->mode:B
 
-    .line 49056
+    .line 4
+    .line 5
     iput-byte p2, p0, Lcom/facebook/common/dextricks/DexStore$Config;->sync:B
 
-    .line 49057
+    .line 6
+    .line 7
     iput-byte p3, p0, Lcom/facebook/common/dextricks/DexStore$Config;->dalvikVerify:B
 
-    .line 49058
+    .line 8
+    .line 9
     iput-byte p4, p0, Lcom/facebook/common/dextricks/DexStore$Config;->dalvikOptimize:B
 
-    .line 49059
+    .line 10
+    .line 11
     iput-byte p5, p0, Lcom/facebook/common/dextricks/DexStore$Config;->dalvikRegisterMaps:B
 
-    .line 49060
+    .line 12
+    .line 13
     iput-byte p6, p0, Lcom/facebook/common/dextricks/DexStore$Config;->artFilter:B
 
-    .line 49061
+    .line 14
+    .line 15
     iput p7, p0, Lcom/facebook/common/dextricks/DexStore$Config;->artHugeMethodMax:I
 
-    .line 49062
+    .line 16
+    .line 17
     iput p8, p0, Lcom/facebook/common/dextricks/DexStore$Config;->artLargeMethodMax:I
 
-    .line 49063
+    .line 18
+    .line 19
     iput p9, p0, Lcom/facebook/common/dextricks/DexStore$Config;->artSmallMethodMax:I
 
-    .line 49064
+    .line 20
+    .line 21
     iput p10, p0, Lcom/facebook/common/dextricks/DexStore$Config;->artTinyMethodMax:I
 
-    .line 49065
+    .line 22
+    .line 23
     iput p11, p0, Lcom/facebook/common/dextricks/DexStore$Config;->artTruncatedDexSize:I
 
-    .line 49066
+    .line 24
+    .line 25
     iput-boolean p12, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableArtVerifyNone:Z
 
-    .line 49067
-    iput-boolean p13, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    .line 26
+    .line 27
+    iput-boolean p13, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
-    .line 49068
+    .line 28
+    .line 29
     move/from16 v0, p14
 
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
-
-    .line 49069
-    move/from16 v0, p15
-
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
-
-    .line 49070
-    move/from16 v0, p16
-
+    .line 30
+    .line 31
     iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
 
-    .line 49071
-    move/from16 v0, p17
+    .line 32
+    .line 33
+    move/from16 v0, p15
 
+    .line 34
+    .line 35
     iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
-    .line 49072
-    move/from16 v0, p18
+    .line 36
+    .line 37
+    move/from16 v0, p16
 
+    .line 38
+    .line 39
     iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
-    .line 49073
-    move/from16 v0, p19
+    .line 40
+    .line 41
+    move/from16 v0, p17
 
+    .line 42
+    .line 43
     iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
-    .line 49074
-    move/from16 v0, p20
+    .line 44
+    .line 45
+    move/from16 v0, p18
 
+    .line 46
+    .line 47
     iput-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
-    .line 49075
-    move/from16 v0, p21
+    .line 48
+    .line 49
+    move/from16 v0, p19
 
+    .line 50
+    .line 51
     iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
-    .line 49076
-    move-wide/from16 v0, p22
+    .line 52
+    .line 53
+    move-wide/from16 v0, p20
 
+    .line 54
+    .line 55
     iput-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
 
-    .line 49077
-    move/from16 v0, p24
+    .line 56
+    .line 57
+    move/from16 v0, p22
 
+    .line 58
+    .line 59
     iput-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
-    .line 49078
-    move/from16 v0, p25
+    .line 60
+    .line 61
+    move/from16 v0, p23
 
+    .line 62
+    .line 63
     iput v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
-    .line 49079
-    move/from16 v0, p26
+    .line 64
+    .line 65
+    move/from16 v0, p24
 
+    .line 66
+    .line 67
     iput v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
+    .line 68
+    .line 69
     return-void
 .end method
 
-.method public synthetic constructor <init>(BBBBBBIIIIIZZZZZZZZBZJBIILcom/facebook/common/dextricks/DexStore$1;)V
+.method public synthetic constructor <init>(BBBBBBIIIIIZZZZZZBZJBIILcom/facebook/common/dextricks/DexStore$1;)V
     .locals 0
 
     .line 268435456
-    invoke-direct/range {p0 .. p26}, Lcom/facebook/common/dextricks/DexStore$Config;-><init>(BBBBBBIIIIIZZZZZZZZBZJBII)V
+    invoke-direct/range {p0 .. p24}, Lcom/facebook/common/dextricks/DexStore$Config;-><init>(BBBBBBIIIIIZZZZZZBZJBII)V
 
     .line 268435457
     .line 268435458
     .line 268435459
     return-void
-.end method
-
-.method public static enableOatmealByDefault()Z
-    .locals 2
-
-    .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 1
-    .line 2
-    invoke-static {}, LX/0E5;->A01()I
-
-    .line 3
-    .line 4
-    .line 5
-    invoke-static {}, Lcom/facebook/endtoend/EndToEnd;->A02()Z
-
-    .line 6
-    .line 7
-    .line 8
-    move-result v0
-
-    .line 9
-    if-eqz v0, :cond_0
-
-    .line 10
-    .line 11
-    const/16 v0, 0x15
-
-    .line 12
-    .line 13
-    if-lt v1, v0, :cond_0
-
-    .line 14
-    .line 15
-    const/16 v0, 0x1a
-
-    .line 16
-    .line 17
-    if-lt v1, v0, :cond_1
-
-    .line 18
-    .line 19
-    :cond_0
-    sget-boolean v1, Lcom/facebook/common/dextricks/DalvikConstants;->FB_REDEX_VERIFY_NONE_ENABLED:Z
-
-    .line 20
-    .line 21
-    const/4 v0, 0x0
-
-    .line 22
-    if-eqz v1, :cond_2
-
-    .line 23
-    .line 24
-    :cond_1
-    const/4 v0, 0x1
-
-    .line 25
-    :cond_2
-    return v0
 .end method
 
 .method public static getConfigFileName(Ljava/io/File;)Ljava/io/File;
@@ -305,7 +276,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -317,7 +288,7 @@
 .end method
 
 .method public static read(Ljava/io/File;)Lcom/facebook/common/dextricks/DexStore$Config;
-    .locals 27
+    .locals 25
 
     .line 0
     const-string v1, "r"
@@ -346,7 +317,7 @@
     move-result v2
 
     .line 13
-    const/16 v1, 0x8
+    const/16 v1, 0x9
 
     .line 14
     .line 15
@@ -490,7 +461,7 @@
     move-result v18
 
     .line 85
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readBoolean()Z
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readByte()B
 
     .line 86
     .line 87
@@ -506,106 +477,101 @@
     move-result v20
 
     .line 93
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readByte()B
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readLong()J
 
     .line 94
     .line 95
     .line 96
-    move-result v21
+    move-result-wide v21
 
     .line 97
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readBoolean()Z
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readByte()B
 
     .line 98
     .line 99
     .line 100
-    move-result v22
+    move-result v23
 
     .line 101
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readLong()J
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readInt()I
 
     .line 102
     .line 103
     .line 104
-    move-result-wide v23
+    move-result v24
 
     .line 105
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readByte()B
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readInt()I
 
     .line 106
     .line 107
     .line 108
-    move-result v25
+    move-result p0
 
     .line 109
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readInt()I
+    new-instance v1, Lcom/facebook/common/dextricks/DexStore$Config;
 
     .line 110
     .line 111
-    .line 112
-    move-result v26
-
-    .line 113
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readInt()I
-
-    .line 114
-    .line 115
-    .line 116
-    move-result p0
-
-    .line 117
-    new-instance v1, Lcom/facebook/common/dextricks/DexStore$Config;
-
-    .line 118
-    .line 119
-    invoke-direct/range {v1 .. v27}, Lcom/facebook/common/dextricks/DexStore$Config;-><init>(BBBBBBIIIIIZZZZZZZZBZJBII)V
+    invoke-direct/range {v1 .. v25}, Lcom/facebook/common/dextricks/DexStore$Config;-><init>(BBBBBBIIIIIZZZZZZBZJBII)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 120
-    .line 121
-    .line 122
+    .line 112
+    .line 113
+    .line 114
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
-    .line 123
-    .line 124
-    .line 125
+    .line 115
+    .line 116
+    .line 117
     return-object v1
 
-    .line 126
+    .line 118
     :cond_0
     :try_start_1
     const-string v2, "unexpected version"
 
-    .line 127
-    .line 128
+    .line 119
+    .line 120
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
-    .line 129
-    .line 130
+    .line 121
+    .line 122
     invoke-direct {v1, v2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    .line 131
-    .line 132
-    .line 133
+    .line 123
+    .line 124
+    .line 125
     throw v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 134
+    .line 126
     :catchall_0
     move-exception v1
 
-    .line 135
+    .line 127
     :try_start_2
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 136
-    .line 137
-    .line 138
+    .line 128
+    .line 129
+    .line 130
+    throw v1
+
+    .line 131
     :catchall_1
+    move-exception v0
+
+    .line 132
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 133
+    .line 134
+    .line 135
     throw v1
 .end method
 
@@ -617,7 +583,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -824,11 +790,11 @@
 
     .line 89
     .line 90
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
     .line 91
     .line 92
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
     .line 93
     .line 94
@@ -836,11 +802,11 @@
 
     .line 95
     .line 96
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
+    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
 
     .line 97
     .line 98
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
 
     .line 99
     .line 100
@@ -848,11 +814,11 @@
 
     .line 101
     .line 102
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
+    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
     .line 103
     .line 104
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
     .line 105
     .line 106
@@ -860,11 +826,11 @@
 
     .line 107
     .line 108
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
+    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
     .line 109
     .line 110
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
     .line 111
     .line 112
@@ -872,11 +838,11 @@
 
     .line 113
     .line 114
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
+    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
     .line 115
     .line 116
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
     .line 117
     .line 118
@@ -884,11 +850,11 @@
 
     .line 119
     .line 120
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
+    iget-byte v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
     .line 121
     .line 122
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
+    iget-byte v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
     .line 123
     .line 124
@@ -896,11 +862,11 @@
 
     .line 125
     .line 126
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
+    iget-byte v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
     .line 127
     .line 128
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
+    iget-byte v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
     .line 129
     .line 130
@@ -908,11 +874,11 @@
 
     .line 131
     .line 132
-    iget-byte v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
+    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
     .line 133
     .line 134
-    iget-byte v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
     .line 135
     .line 136
@@ -920,74 +886,50 @@
 
     .line 137
     .line 138
-    iget-byte v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
+    iget-wide v3, p0, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
 
     .line 139
     .line 140
-    iget-byte v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
+    iget-wide v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
 
     .line 141
     .line 142
-    if-ne v1, v0, :cond_0
+    cmp-long v0, v3, v1
 
     .line 143
     .line 144
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
+    if-nez v0, :cond_0
 
     .line 145
     .line 146
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
+    iget v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
     .line 147
     .line 148
-    if-ne v1, v0, :cond_0
+    iget v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
     .line 149
     .line 150
-    iget-wide v3, p0, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
+    if-ne v1, v0, :cond_0
 
     .line 151
     .line 152
-    iget-wide v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
+    iget v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
     .line 153
     .line 154
-    cmp-long v0, v3, v1
+    iget v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
     .line 155
     .line 156
-    if-nez v0, :cond_0
+    if-eq v1, v0, :cond_1
 
     .line 157
     .line 158
-    iget v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
-
-    .line 159
-    .line 160
-    iget v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
-
-    .line 161
-    .line 162
-    if-ne v1, v0, :cond_0
-
-    .line 163
-    .line 164
-    iget v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
-
-    .line 165
-    .line 166
-    iget v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
-
-    .line 167
-    .line 168
-    if-eq v1, v0, :cond_1
-
-    .line 169
-    .line 170
     :cond_0
     return v5
 
-    .line 171
+    .line 159
     :cond_1
     return v6
 .end method
@@ -1048,11 +990,11 @@
 
     .line 25
     .line 26
-    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
     .line 27
     .line 28
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
     .line 29
     .line 30
@@ -1060,11 +1002,11 @@
 
     .line 31
     .line 32
-    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
+    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
     .line 33
     .line 34
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
     .line 35
     .line 36
@@ -1072,11 +1014,11 @@
 
     .line 37
     .line 38
-    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
+    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
     .line 39
     .line 40
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
     .line 41
     .line 42
@@ -1084,11 +1026,11 @@
 
     .line 43
     .line 44
-    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
+    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
     .line 45
     .line 46
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
     .line 47
     .line 48
@@ -1096,11 +1038,11 @@
 
     .line 49
     .line 50
-    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
+    iget-byte v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
     .line 51
     .line 52
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
+    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
     .line 53
     .line 54
@@ -1108,11 +1050,11 @@
 
     .line 55
     .line 56
-    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
+    iget-byte v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
     .line 57
     .line 58
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
+    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
     .line 59
     .line 60
@@ -1120,11 +1062,11 @@
 
     .line 61
     .line 62
-    iget-byte v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
+    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
     .line 63
     .line 64
-    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
     .line 65
     .line 66
@@ -1132,11 +1074,11 @@
 
     .line 67
     .line 68
-    iget-byte v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
+    iget v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
     .line 69
     .line 70
-    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
+    iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
     .line 71
     .line 72
@@ -1144,49 +1086,25 @@
 
     .line 73
     .line 74
-    iget-boolean v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
+    iget v2, p1, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
     .line 75
     .line 76
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
+    iget v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
     .line 77
     .line 78
-    if-ne v1, v0, :cond_0
-
-    .line 79
-    .line 80
-    iget v1, p1, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
-
-    .line 81
-    .line 82
-    iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
-
-    .line 83
-    .line 84
-    if-ne v1, v0, :cond_0
-
-    .line 85
-    .line 86
-    iget v2, p1, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
-
-    .line 87
-    .line 88
-    iget v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
-
-    .line 89
-    .line 90
     const/4 v0, 0x1
 
-    .line 91
+    .line 79
     if-eq v2, v1, :cond_1
 
-    .line 92
-    .line 93
+    .line 80
+    .line 81
     :cond_0
     const/4 v0, 0x0
 
-    .line 94
+    .line 82
     :cond_1
     return v0
 .end method
@@ -1331,7 +1249,7 @@
 
     .line 61
     .line 62
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
     .line 63
     .line 64
@@ -1342,7 +1260,7 @@
 
     .line 66
     .line 67
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
 
     .line 68
     .line 69
@@ -1353,7 +1271,7 @@
 
     .line 71
     .line 72
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
     .line 73
     .line 74
@@ -1364,7 +1282,7 @@
 
     .line 76
     .line 77
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
     .line 78
     .line 79
@@ -1375,7 +1293,7 @@
 
     .line 81
     .line 82
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
     .line 83
     .line 84
@@ -1386,7 +1304,7 @@
 
     .line 86
     .line 87
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
+    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
     .line 88
     .line 89
@@ -1397,7 +1315,7 @@
 
     .line 91
     .line 92
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
+    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
     .line 93
     .line 94
@@ -1408,71 +1326,49 @@
 
     .line 96
     .line 97
-    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
     .line 98
     .line 99
     add-int/2addr v1, v0
 
     .line 100
-    mul-int/lit8 v1, v1, 0x1f
+    mul-int/lit8 v3, v1, 0x1f
 
     .line 101
     .line 102
-    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
+    iget-wide v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
 
     .line 103
     .line 104
-    add-int/2addr v1, v0
-
-    .line 105
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 106
-    .line 107
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
-
-    .line 108
-    .line 109
-    add-int/2addr v1, v0
-
-    .line 110
-    mul-int/lit8 v3, v1, 0x1f
-
-    .line 111
-    .line 112
-    iget-wide v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
-
-    .line 113
-    .line 114
     long-to-int v0, v1
 
-    .line 115
+    .line 105
     add-int/2addr v3, v0
 
-    .line 116
+    .line 106
     mul-int/lit8 v1, v3, 0x1f
 
-    .line 117
-    .line 118
+    .line 107
+    .line 108
     iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
-    .line 119
-    .line 120
+    .line 109
+    .line 110
     add-int/2addr v1, v0
 
-    .line 121
+    .line 111
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 122
-    .line 123
+    .line 112
+    .line 113
     iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
-    .line 124
-    .line 125
+    .line 114
+    .line 115
     add-int/2addr v1, v0
 
-    .line 126
+    .line 116
     return v1
 .end method
 
@@ -1611,199 +1507,176 @@
     .line 52
     .line 53
     .line 54
-    const/16 v0, 0x8
+    const/4 v0, 0x6
 
     .line 55
-    .line 56
     new-array v4, v0, [Z
 
+    .line 56
     .line 57
-    .line 58
     iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableArtVerifyNone:Z
 
+    .line 58
     .line 59
-    .line 60
     const/4 v3, 0x0
 
-    .line 61
+    .line 60
     aput-boolean v0, v4, v3
 
+    .line 61
     .line 62
-    .line 63
-    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    iget-boolean v1, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
+    .line 63
     .line 64
-    .line 65
     const/4 v0, 0x1
 
-    .line 66
+    .line 65
     aput-boolean v1, v4, v0
 
+    .line 66
     .line 67
-    .line 68
     const/4 v1, 0x2
 
-    .line 69
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
-
-    .line 70
-    .line 71
-    aput-boolean v0, v4, v1
-
-    .line 72
-    .line 73
-    const/4 v1, 0x3
-
-    .line 74
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
-
-    .line 75
-    .line 76
-    aput-boolean v0, v4, v1
-
-    .line 77
-    .line 78
-    const/4 v1, 0x4
-
-    .line 79
+    .line 68
     iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
 
-    .line 80
-    .line 81
+    .line 69
+    .line 70
     aput-boolean v0, v4, v1
 
-    .line 82
-    .line 83
-    const/4 v1, 0x5
+    .line 71
+    .line 72
+    const/4 v1, 0x3
 
-    .line 84
+    .line 73
     iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
-    .line 85
-    .line 86
+    .line 74
+    .line 75
     aput-boolean v0, v4, v1
 
-    .line 87
-    .line 88
-    const/4 v1, 0x6
+    .line 76
+    .line 77
+    const/4 v1, 0x4
 
-    .line 89
+    .line 78
     iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
-    .line 90
-    .line 91
+    .line 79
+    .line 80
     aput-boolean v0, v4, v1
 
-    .line 92
-    .line 93
-    const/4 v1, 0x7
+    .line 81
+    .line 82
+    const/4 v1, 0x5
 
-    .line 94
+    .line 83
     iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
-    .line 95
-    .line 96
+    .line 84
+    .line 85
     aput-boolean v0, v4, v1
 
-    .line 97
-    .line 98
+    .line 86
+    .line 87
     invoke-virtual {v2, v4}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
-    .line 99
-    .line 100
-    .line 101
+    .line 88
+    .line 89
+    .line 90
     iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
-    .line 102
-    .line 103
+    .line 91
+    .line 92
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 104
-    .line 105
-    .line 106
+    .line 93
+    .line 94
+    .line 95
     iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
-    .line 107
-    .line 108
+    .line 96
+    .line 97
     if-eqz v0, :cond_0
 
-    .line 109
-    .line 110
+    .line 98
+    .line 99
     const/4 v3, 0x1
 
-    .line 111
+    .line 100
     :cond_0
     int-to-byte v0, v3
 
-    .line 112
+    .line 101
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 113
-    .line 114
-    .line 115
+    .line 102
+    .line 103
+    .line 104
     iget-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
 
-    .line 116
-    .line 117
+    .line 105
+    .line 106
     invoke-virtual {v2, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 118
-    .line 119
-    .line 120
+    .line 107
+    .line 108
+    .line 109
     iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
-    .line 121
-    .line 122
+    .line 110
+    .line 111
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 123
-    .line 124
-    .line 125
+    .line 112
+    .line 113
+    .line 114
     iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
-    .line 126
-    .line 127
+    .line 115
+    .line 116
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 128
-    .line 129
-    .line 130
+    .line 117
+    .line 118
+    .line 119
     iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
-    .line 131
-    .line 132
+    .line 120
+    .line 121
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 133
-    .line 134
-    .line 135
+    .line 122
+    .line 123
+    .line 124
     invoke-virtual {v2}, Landroid/os/Parcel;->marshall()[B
 
-    .line 136
-    .line 137
-    .line 138
+    .line 125
+    .line 126
+    .line 127
     move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 139
+    .line 128
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 140
-    .line 141
-    .line 142
+    .line 129
+    .line 130
+    .line 131
     return-object v0
 
-    .line 143
+    .line 132
     :catchall_0
     move-exception v0
 
-    .line 144
+    .line 133
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 145
-    .line 146
-    .line 147
+    .line 134
+    .line 135
+    .line 136
     throw v0
 .end method
 
@@ -1819,7 +1692,7 @@
     move-result-object v2
 
     .line 4
-    const/16 v0, 0x8
+    const/16 v0, 0x9
 
     .line 5
     .line 6
@@ -1937,7 +1810,7 @@
     .line 67
     .line 68
     .line 69
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
     .line 70
     .line 71
@@ -1946,7 +1819,7 @@
     .line 72
     .line 73
     .line 74
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
 
     .line 75
     .line 76
@@ -1955,7 +1828,7 @@
     .line 77
     .line 78
     .line 79
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
     .line 80
     .line 81
@@ -1964,7 +1837,7 @@
     .line 82
     .line 83
     .line 84
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
     .line 85
     .line 86
@@ -1973,7 +1846,7 @@
     .line 87
     .line 88
     .line 89
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
     .line 90
     .line 91
@@ -1982,16 +1855,16 @@
     .line 92
     .line 93
     .line 94
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
+    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
     .line 95
     .line 96
-    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeBoolean(Z)V
+    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeByte(I)V
 
     .line 97
     .line 98
     .line 99
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
+    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
     .line 100
     .line 101
@@ -2000,108 +1873,101 @@
     .line 102
     .line 103
     .line 104
-    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
+    iget-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
 
     .line 105
     .line 106
-    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeByte(I)V
+    invoke-virtual {v2, v0, v1}, Ljava/io/RandomAccessFile;->writeLong(J)V
 
     .line 107
     .line 108
     .line 109
-    iget-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
+    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
     .line 110
     .line 111
-    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeBoolean(Z)V
+    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeByte(I)V
 
     .line 112
     .line 113
     .line 114
-    iget-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
+    iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
     .line 115
     .line 116
-    invoke-virtual {v2, v0, v1}, Ljava/io/RandomAccessFile;->writeLong(J)V
+    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeInt(I)V
 
     .line 117
     .line 118
     .line 119
-    iget-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
+    iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
     .line 120
     .line 121
-    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeByte(I)V
+    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeInt(I)V
 
     .line 122
     .line 123
     .line 124
-    iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
+    invoke-virtual {v2}, Ljava/io/RandomAccessFile;->getFilePointer()J
 
     .line 125
     .line 126
-    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeInt(I)V
-
     .line 127
-    .line 128
-    .line 129
-    iget v0, p0, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
+    move-result-wide v0
 
+    .line 128
+    invoke-virtual {v2, v0, v1}, Ljava/io/RandomAccessFile;->setLength(J)V
+
+    .line 129
     .line 130
     .line 131
-    invoke-virtual {v2, v0}, Ljava/io/RandomAccessFile;->writeInt(I)V
+    invoke-virtual {v2}, Ljava/io/RandomAccessFile;->getFD()Ljava/io/FileDescriptor;
 
     .line 132
     .line 133
     .line 134
-    invoke-virtual {v2}, Ljava/io/RandomAccessFile;->getFilePointer()J
-
-    .line 135
-    .line 136
-    .line 137
-    move-result-wide v0
-
-    .line 138
-    invoke-virtual {v2, v0, v1}, Ljava/io/RandomAccessFile;->setLength(J)V
-
-    .line 139
-    .line 140
-    .line 141
-    invoke-virtual {v2}, Ljava/io/RandomAccessFile;->getFD()Ljava/io/FileDescriptor;
-
-    .line 142
-    .line 143
-    .line 144
     move-result-object v0
 
-    .line 145
+    .line 135
     invoke-virtual {v0}, Ljava/io/FileDescriptor;->sync()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 146
-    .line 147
-    .line 148
+    .line 136
+    .line 137
+    .line 138
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
 
-    .line 149
-    .line 150
-    .line 151
+    .line 139
+    .line 140
+    .line 141
     return-void
 
-    .line 152
+    .line 142
     :catchall_0
-    move-exception v0
+    move-exception v1
 
-    .line 153
+    .line 143
     :try_start_1
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 154
-    .line 155
-    .line 156
+    .line 144
+    .line 145
+    .line 146
+    throw v1
+
+    .line 147
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 148
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 149
+    .line 150
+    .line 151
+    throw v1
 .end method

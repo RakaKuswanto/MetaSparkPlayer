@@ -1,308 +1,345 @@
-.class public final LX/4ab;
-.super Ljava/lang/Object;
+.class public final LX/4Ab;
+.super Landroid/app/Dialog;
 .source ""
 
 
-# static fields
-.field public static A00:Ljava/lang/reflect/Field;
-
-.field public static A01:Ljava/lang/reflect/Method;
-
-.field public static A02:Z
-
-.field public static A03:Z
+# instance fields
+.field public A00:Landroid/view/View;
 
 
 # direct methods
-.method public static A00(Landroid/view/View;Landroid/widget/PopupWindow;III)V
-    .locals 2
-
-    .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 1
-    .line 2
-    const/16 v0, 0x13
-
-    .line 3
-    .line 4
-    if-lt v1, v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-static {p0, p1, p2, p3, p4}, LX/4ai;->A00(Landroid/view/View;Landroid/widget/PopupWindow;III)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    invoke-static {p0, p4}, LX/4BF;->A0B(Landroid/view/View;I)I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    and-int/lit8 v1, v0, 0x7
-
-    .line 15
-    .line 16
-    const/4 v0, 0x5
-
-    .line 17
-    if-ne v1, v0, :cond_1
-
-    .line 18
-    .line 19
-    invoke-virtual {p1}, Landroid/widget/PopupWindow;->getWidth()I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v1
-
-    .line 23
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    .line 24
-    .line 25
-    .line 26
-    move-result v0
-
-    .line 27
-    sub-int/2addr v1, v0
-
-    .line 28
-    sub-int/2addr p2, v1
-
-    .line 29
-    :cond_1
-    invoke-virtual {p1, p0, p2, p3}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
-
-    .line 30
-    .line 31
-    .line 32
-    return-void
-.end method
-
-.method public static A01(Landroid/widget/PopupWindow;I)V
-    .locals 6
-
-    .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 1
-    .line 2
-    const/16 v0, 0x17
-
-    .line 3
-    .line 4
-    if-lt v1, v0, :cond_1
-
-    .line 5
-    .line 6
-    invoke-static {p0, p1}, LX/4ak;->A00(Landroid/widget/PopupWindow;I)V
-
-    .line 7
-    .line 8
-    .line 9
-    :catch_0
-    :cond_0
-    return-void
-
-    .line 10
-    :cond_1
-    sget-boolean v0, LX/4ab;->A03:Z
-
-    .line 11
-    .line 12
-    const/4 v5, 0x0
-
-    .line 13
-    const/4 v4, 0x1
-
-    .line 14
-    if-nez v0, :cond_2
-
-    .line 15
-    .line 16
-    :try_start_0
-    const-class v3, Landroid/widget/PopupWindow;
-
-    .line 17
-    .line 18
-    const-string v2, "setWindowLayoutType"
-
-    .line 19
-    .line 20
-    new-array v1, v4, [Ljava/lang/Class;
-
-    .line 21
-    .line 22
-    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    .line 23
-    .line 24
-    invoke-static {v3, v0, v2, v1, v5}, LX/0Yh;->A0h(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    sput-object v0, LX/4ab;->A01:Ljava/lang/reflect/Method;
-
-    .line 29
-    .line 30
-    invoke-virtual {v0, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-
-    .line 31
-    .line 32
-    .line 33
-    :catch_1
-    sput-boolean v4, LX/4ab;->A03:Z
-
-    .line 34
-    .line 35
-    :cond_2
-    sget-object v1, LX/4ab;->A01:Ljava/lang/reflect/Method;
-
-    .line 36
-    .line 37
-    if-eqz v1, :cond_0
-
-    .line 38
-    .line 39
-    :try_start_1
-    new-array v0, v4, [Ljava/lang/Object;
-
-    .line 40
-    .line 41
-    invoke-static {v0, p1, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
-
-    .line 42
-    .line 43
-    .line 44
-    invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 45
-    .line 46
-    .line 47
-    return-void
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-.end method
-
-.method public static A02(Landroid/widget/PopupWindow;Z)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    const/16 v0, 0x17
+    const/16 v1, 0x15
 
     .line 3
     .line 4
-    if-lt v1, v0, :cond_1
+    const v0, 0x103000b
 
     .line 5
     .line 6
-    invoke-static {p0, p1}, LX/4ak;->A01(Landroid/widget/PopupWindow;Z)V
+    .line 7
+    if-le v2, v1, :cond_0
+
+    .line 8
+    .line 9
+    const v0, 0x10302d2
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    invoke-direct {p0, p1, v0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-void
+.end method
+
+.method private A00()V
+    .locals 5
+
+    .line 0
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v4
+
+    .line 4
+    new-instance v2, LX/4Ac;
+
+    .line 5
+    .line 6
+    invoke-direct {v2, p0}, LX/4Ac;-><init>(LX/4Ab;)V
 
     .line 7
     .line 8
     .line 9
-    :catch_0
-    :cond_0
-    return-void
+    sget-object v3, LX/4AL;->SHORT_OUT:LX/4AL;
 
     .line 10
-    :cond_1
-    const/16 v0, 0x15
-
     .line 11
+    iget v0, v3, LX/4AL;->value:I
+
     .line 12
-    if-lt v1, v0, :cond_0
-
     .line 13
-    .line 14
-    sget-boolean v0, LX/4ab;->A02:Z
+    add-int/lit8 v0, v0, 0x32
 
+    .line 14
     .line 15
+    int-to-long v0, v0
+
     .line 16
-    if-nez v0, :cond_2
+    invoke-virtual {v4, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 17
     .line 18
-    const/4 v2, 0x1
-
     .line 19
-    :try_start_0
-    const-class v1, Landroid/widget/PopupWindow;
+    iget-object v0, p0, LX/4Ab;->A00:Landroid/view/View;
 
     .line 20
     .line 21
-    const-string v0, "mOverlapAnchor"
+    if-eqz v0, :cond_0
 
     .line 22
     .line 23
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     .line 24
     .line 25
     .line 26
-    move-result-object v0
+    move-result-object v1
 
     .line 27
-    sput-object v0, LX/4ab;->A00:Ljava/lang/reflect/Field;
+    sget-object v0, LX/4Ad;->ENTER_EXIT_OUT:LX/4Ad;
 
     .line 28
     .line 29
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
+    iget-object v0, v0, LX/4Ad;->value:Landroid/view/animation/Interpolator;
 
     .line 30
     .line 31
-    .line 32
-    :catch_1
-    sput-boolean v2, LX/4ab;->A02:Z
+    invoke-virtual {v1, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
+    .line 32
     .line 33
     .line 34
-    :cond_2
-    sget-object v1, LX/4ab;->A00:Ljava/lang/reflect/Field;
+    move-result-object v1
 
     .line 35
+    iget-object v0, p0, LX/4Ab;->A00:Landroid/view/View;
+
     .line 36
-    if-eqz v1, :cond_0
-
     .line 37
-    .line 38
-    :try_start_1
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
+    .line 38
     .line 39
     .line 40
+    move-result v0
+
     .line 41
-    move-result-object v0
+    int-to-float v0, v0
 
     .line 42
-    invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
     .line 43
     .line 44
     .line 45
+    move-result-object v2
+
+    .line 46
+    iget v0, v3, LX/4AL;->value:I
+
+    .line 47
+    .line 48
+    int-to-long v0, v0
+
+    .line 49
+    invoke-virtual {v2, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    .line 50
+    .line 51
+    .line 52
+    :cond_0
     return-void
-    :try_end_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_0
+.end method
+
+
+# virtual methods
+.method public final synthetic A01()V
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Landroid/app/Dialog;->isShowing()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-super {p0}, Landroid/app/Dialog;->dismiss()V
+
+    .line 7
+    .line 8
+    .line 9
+    :cond_0
+    return-void
+.end method
+
+.method public final cancel()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, LX/4Ab;->A00()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final dismiss()V
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Landroid/app/Dialog;->isShowing()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-super {p0}, Landroid/app/Dialog;->dismiss()V
+
+    .line 7
+    .line 8
+    .line 9
+    :cond_0
+    return-void
+.end method
+
+.method public final onBackPressed()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, LX/4Ab;->A00()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final setContentView(I)V
+    .locals 1
+
+    .line 0
+    invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(I)V
+
+    .line 1
+    .line 2
+    .line 3
+    const v0, 0x7f09004e
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-virtual {p0, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    iput-object v0, p0, LX/4Ab;->A00:Landroid/view/View;
+
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public final show()V
+    .locals 3
+
+    .line 0
+    invoke-super {p0}, Landroid/app/Dialog;->show()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    if-eqz v1, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/4Ab;->A00:Landroid/view/View;
+
+    .line 10
+    .line 11
+    if-eqz v0, :cond_0
+
+    .line 12
+    .line 13
+    const v0, 0x7f010037
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-static {v1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v2
+
+    .line 20
+    sget-object v0, LX/4Ad;->ENTER_EXIT_IN:LX/4Ad;
+
+    .line 21
+    .line 22
+    iget-object v0, v0, LX/4Ad;->value:Landroid/view/animation/Interpolator;
+
+    .line 23
+    .line 24
+    invoke-virtual {v2, v0}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+
+    .line 25
+    .line 26
+    .line 27
+    sget-object v0, LX/4AL;->SHORT_IN:LX/4AL;
+
+    .line 28
+    .line 29
+    iget v0, v0, LX/4AL;->value:I
+
+    .line 30
+    .line 31
+    int-to-long v0, v0
+
+    .line 32
+    invoke-virtual {v2, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    .line 33
+    .line 34
+    .line 35
+    iget-object v0, p0, LX/4Ab;->A00:Landroid/view/View;
+
+    .line 36
+    .line 37
+    invoke-virtual {v0, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 38
+    .line 39
+    .line 40
+    :cond_0
+    return-void
 .end method

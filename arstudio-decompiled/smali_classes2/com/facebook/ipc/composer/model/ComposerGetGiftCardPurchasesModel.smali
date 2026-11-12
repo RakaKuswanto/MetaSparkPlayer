@@ -35,11 +35,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x23
+    const/16 v0, 0x40
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
 
     .line 3
     .line 4
@@ -63,7 +63,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yd;->A0K(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X1;->A0M(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 4
     .line 5
@@ -121,25 +121,25 @@
 
     const-string/jumbo v0, "photoFbid"
 
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/facebook/ipc/composer/model/ComposerGetGiftCardPurchasesModel;->A00:Ljava/lang/String;
 
     const-string/jumbo v0, "photoUri"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/ipc/composer/model/ComposerGetGiftCardPurchasesModel;->A01:Ljava/lang/String;
 
     const-string/jumbo v0, "ref"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/facebook/ipc/composer/model/ComposerGetGiftCardPurchasesModel;->A02:Ljava/lang/String;
 
     const-string/jumbo v0, "website"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/facebook/ipc/composer/model/ComposerGetGiftCardPurchasesModel;->A03:Ljava/lang/String;
 
@@ -190,7 +190,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -210,7 +210,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -230,7 +230,7 @@
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -250,7 +250,7 @@
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 45
     .line 46
@@ -278,7 +278,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -294,7 +294,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -313,7 +313,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -332,7 +332,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 29
     .line 30

@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="@color/fds_blue_60" />
+            <solid android:color="@color/experimental_fds_color_FF3E93F8" />
             <corners android:radius="@dimen/abc_action_bar_elevation_material" />
         </shape>
     </item>
@@ -15,7 +15,7 @@
     </item>
     <item>
         <shape>
-            <solid android:color="@color/fds_blue_45" />
+            <solid android:color="@color/experimental_fds_color_FF0866FF" />
             <corners android:radius="@dimen/abc_action_bar_elevation_material" />
         </shape>
     </item>

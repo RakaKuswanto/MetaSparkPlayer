@@ -1,29 +1,17 @@
-.class public final LX/2Vc;
-.super Ljava/lang/Object;
+.class public final LX/2vC;
+.super LX/0DI;
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/lang/ThreadLocal;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    new-instance v0, Ljava/lang/ThreadLocal;
+    invoke-direct {p0}, LX/0DI;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/2Vc;->A00:Ljava/lang/ThreadLocal;
-
-    .line 6
-    .line 7
     return-void
 .end method

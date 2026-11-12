@@ -1,25 +1,29 @@
-.class public final LX/3U0;
+.class public interface abstract LX/3U0;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/util/Map;
+# virtual methods
+.method public abstract Ajl(IF)V
+.end method
 
+.method public abstract Ajw(Z)V
+.end method
 
-# direct methods
-.method public constructor <init>(Ljava/util/Map;)V
-    .locals 0
+.method public abstract AlF(F)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract AlG(Z)V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/3U0;->A00:Ljava/util/Map;
+.method public abstract Ald([F)V
+.end method
 
-    .line 4
-    .line 5
-    return-void
+.method public abstract Ale(F)V
+.end method
+
+.method public abstract Alo(Z)V
+.end method
+
+.method public abstract Als(Z)V
 .end method

@@ -1,14 +1,30 @@
 .class public final LX/3h0;
-.super LX/4tc;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final synthetic A00:LX/3h0;
+
+
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/3h0;
+
+    invoke-direct {v0}, LX/3h0;-><init>()V
+
+    sput-object v0, LX/3h0;->A00:LX/3h0;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/4tc;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

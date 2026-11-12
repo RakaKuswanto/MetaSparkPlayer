@@ -1,17 +1,3 @@
-.class public final LX/5E4;
-.super LX/5ED;
+.class public abstract LX/5E4;
+.super Ljava/io/IOException;
 .source ""
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Float;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1}, LX/5ED;-><init>(Ljava/lang/Object;)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method

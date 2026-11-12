@@ -1,86 +1,73 @@
-.class public final LX/2OP;
-.super LX/1wb;
+.class public final LX/2Op;
+.super LX/2DY;
 .source ""
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$40"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$15"
 
 
 # instance fields
-.field public final synthetic A00:LX/2OB;
+.field public final synthetic A00:LX/2D1;
 
-.field public final synthetic A01:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final synthetic A02:Z
+.field public final synthetic A01:LX/2Py;
 
 
 # direct methods
-.method public constructor <init>(LX/2OB;Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/util/concurrent/atomic/AtomicInteger;Ljava/util/concurrent/atomic/AtomicInteger;Z)V
-    .locals 11
+.method public constructor <init>(LX/2D1;LX/2Py;Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/util/concurrent/atomic/AtomicInteger;)V
+    .locals 10
 
     .line 0
-    const-string v4, "ClearUserData"
+    const-string v3, "BeforeLogout"
 
     .line 1
     .line 2
-    const-string v5, "FbLightSharedPreferencesUserScopeController"
+    const-string v4, "AccountSwitcherAuthComponent"
 
     .line 3
     .line 4
-    const-string v6, "clearUserData"
+    const-string/jumbo v5, "beforeLogout"
 
     .line 5
     .line 6
-    const v9, 0x94000f
-
     .line 7
+    const v8, 0x940003
+
     .line 8
     .line 9
-    const-string/jumbo v7, "type"
-
     .line 10
+    const-string/jumbo v6, "type"
+
     .line 11
     .line 12
-    const/4 v10, 0x0
-
     .line 13
-    move-object v1, p0
+    const/4 v9, 0x1
 
     .line 14
-    iput-object p1, p0, LX/2OP;->A00:LX/2OB;
+    move-object v0, p0
 
     .line 15
+    iput-object p1, p0, LX/2Op;->A00:LX/2D1;
+
     .line 16
-    move-object/from16 v0, p5
-
     .line 17
-    .line 18
-    iput-object v0, p0, LX/2OP;->A01:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p2, p0, LX/2Op;->A01:LX/2Py;
 
+    .line 18
     .line 19
+    move-object v1, p3
+
     .line 20
-    move/from16 v0, p6
+    move-object v2, p4
 
     .line 21
+    move-object v7, p5
+
     .line 22
-    iput-boolean v0, p0, LX/2OP;->A02:Z
+    invoke-direct/range {v0 .. v9}, LX/2DY;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;IZ)V
 
     .line 23
     .line 24
-    move-object v2, p2
-
     .line 25
-    move-object v3, p3
-
-    .line 26
-    move-object v8, p4
-
-    .line 27
-    invoke-direct/range {v1 .. v10}, LX/1wb;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;IZ)V
-
-    .line 28
-    .line 29
-    .line 30
     return-void
 .end method

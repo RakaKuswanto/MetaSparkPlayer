@@ -1,37 +1,121 @@
-.class public final LX/4pH;
-.super Ljava/lang/Object;
+.class public LX/4ph;
+.super LX/4Z4;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0tD;
+# static fields
+.field public static A00:Z = true
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/4Z4;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/16 v0, 0x1d
+    return-void
+.end method
 
+
+# virtual methods
+.method public A00(Landroid/view/View;)F
+    .locals 1
+
+    .line 0
+    sget-boolean v0, LX/4ph;->A00:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
     .line 4
-    .line 5
-    invoke-static {v0}, LX/2I2;->A02(I)LX/51F;
+    :try_start_0
+    invoke-virtual {p1}, Landroid/view/View;->getTransitionAlpha()F
 
+    .line 5
     .line 6
     .line 7
+    move-result v0
+
     .line 8
-    move-result-object v0
+    return v0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 9
-    iput-object v0, p0, LX/4pH;->A00:LX/0tD;
+    :catch_0
+    const/4 v0, 0x0
+
+    .line 10
+    sput-boolean v0, LX/4ph;->A00:Z
+
+    .line 11
+    .line 12
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    return v0
+.end method
+
+.method public final A03(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final A04(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public A05(Landroid/view/View;F)V
+    .locals 1
+
+    .line 0
+    sget-boolean v0, LX/4ph;->A00:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    :try_start_0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionAlpha(F)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 8
+    :catch_0
+    const/4 v0, 0x0
+
+    .line 9
+    sput-boolean v0, LX/4ph;->A00:Z
 
     .line 10
     .line 11
+    :cond_0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
+
+    .line 12
+    .line 13
+    .line 14
     return-void
 .end method

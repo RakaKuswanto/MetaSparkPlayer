@@ -3,23 +3,19 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RadialViewGroup$1"
+.implements LX/05D;
 
 
 # instance fields
-.field public final synthetic A00:LX/4Tr;
+.field public final synthetic A00:LX/4SO;
 
 
 # direct methods
-.method public constructor <init>(LX/4Tr;)V
+.method public constructor <init>(LX/4SO;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4Tb;->A00:LX/4Tr;
+    iput-object p1, p0, LX/4Tb;->A00:LX/4SO;
 
     .line 1
     .line 2
@@ -33,18 +29,12 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final AUT(Landroid/os/Bundle;LX/05G;I)Z
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4Tb;->A00:LX/4Tr;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-virtual {v0}, LX/4Tr;->A03()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    return v0
 .end method

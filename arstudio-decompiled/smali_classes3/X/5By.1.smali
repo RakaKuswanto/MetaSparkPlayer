@@ -1,206 +1,104 @@
-.class public final synthetic LX/5By;
+.class public final LX/5By;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
-
 
 # instance fields
-.field public final synthetic A00:LX/5Bv;
+.field public final A00:Landroid/content/Context;
+
+.field public final A01:LX/58t;
+
+.field public final A02:LX/5Bz;
+
+.field public final A03:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5Bv;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/5By;->A00:LX/5Bv;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final binderDied()V
-    .locals 7
+.method public constructor <init>(Landroid/content/Context;LX/6XX;LX/5E2;LX/5IL;Lcom/facebook/video/heroplayer/setting/HeroPlayerSetting;LX/5DI;)V
+    .locals 8
 
     .line 0
-    iget-object v6, p0, LX/5By;->A00:LX/5Bv;
+    const/16 v1, 0xa
 
     .line 1
     .line 2
-    iget-object v3, v6, LX/5Bv;->A06:LX/6H1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    const-string v1, "reportBinderDeath"
-
     .line 5
-    .line 6
-    const/4 v2, 0x0
+    new-instance v0, Landroid/util/LruCache;
 
+    .line 6
     .line 7
-    new-array v0, v2, [Ljava/lang/Object;
+    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
 
     .line 8
     .line 9
-    invoke-virtual {v3, v1, v0}, LX/6H1;->A01(Ljava/lang/String;[Ljava/lang/Object;)V
-
     .line 10
+    invoke-static {v0}, LX/0X7;->A0p(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
+
     .line 11
     .line 12
-    iget-object v0, v6, LX/5Bv;->A08:Ljava/lang/ref/WeakReference;
-
     .line 13
+    move-result-object v0
+
     .line 14
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iput-object v0, p0, LX/5By;->A03:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 15
     .line 16
+    move-object v1, p1
+
     .line 17
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    iput-object p1, p0, LX/5By;->A00:Landroid/content/Context;
 
     .line 18
     .line 19
+    move-object v6, p5
+
     .line 20
-    move-result-object v1
+    iget v0, p5, Lcom/facebook/video/heroplayer/setting/HeroPlayerSetting;->numDashChunkMemoryCacheSampleStreams:I
 
     .line 21
-    const-string v5, "SplitInstallService"
-
     .line 22
+    new-instance v2, LX/58t;
+
     .line 23
-    aput-object v5, v1, v2
-
     .line 24
-    .line 25
-    const-string v0, "%s : Binder has died."
+    invoke-direct {v2, v0}, LX/58t;-><init>(I)V
 
+    .line 25
     .line 26
     .line 27
-    invoke-virtual {v3, v0, v1}, LX/6H1;->A01(Ljava/lang/String;[Ljava/lang/Object;)V
+    iput-object v2, p0, LX/5By;->A01:LX/58t;
 
     .line 28
     .line 29
-    .line 30
-    iget-object v4, v6, LX/5Bv;->A09:Ljava/util/List;
+    new-instance v0, LX/5Bz;
 
+    .line 30
     .line 31
+    move-object v3, p2
+
     .line 32
-    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-object v4, p3
 
     .line 33
+    move-object v5, p4
+
     .line 34
+    move-object v7, p6
+
     .line 35
-    move-result-object v3
+    invoke-direct/range {v0 .. v7}, LX/5Bz;-><init>(Landroid/content/Context;LX/58t;LX/6XX;LX/5E2;LX/5IL;Lcom/facebook/video/heroplayer/setting/HeroPlayerSetting;LX/5DI;)V
 
     .line 36
-    :cond_0
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
     .line 37
     .line 38
+    iput-object v0, p0, LX/5By;->A02:LX/5Bz;
+
     .line 39
-    move-result v0
-
     .line 40
-    if-eqz v0, :cond_1
-
-    .line 41
-    .line 42
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v2
-
-    .line 46
-    check-cast v2, LX/5Bu;
-
-    .line 47
-    .line 48
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 49
-    .line 50
-    .line 51
-    move-result-object v1
-
-    .line 52
-    const-string v0, " : Binder has died."
-
-    .line 53
-    .line 54
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v0
-
-    .line 58
-    new-instance v1, Landroid/os/RemoteException;
-
-    .line 59
-    .line 60
-    invoke-direct {v1, v0}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
-
-    .line 61
-    .line 62
-    .line 63
-    iget-object v0, v2, LX/5Bu;->A00:LX/5C4;
-
-    .line 64
-    .line 65
-    if-eqz v0, :cond_0
-
-    .line 66
-    .line 67
-    invoke-virtual {v0, v1}, LX/5C4;->A00(Ljava/lang/Exception;)V
-
-    .line 68
-    .line 69
-    .line 70
-    goto :goto_0
-
-    .line 71
-    :cond_1
-    invoke-interface {v4}, Ljava/util/List;->clear()V
-
-    .line 72
-    .line 73
-    .line 74
-    iget-object v1, v6, LX/5Bv;->A07:Ljava/lang/Object;
-
-    .line 75
-    .line 76
-    monitor-enter v1
-
-    .line 77
-    :try_start_0
-    invoke-static {v6}, LX/5Bv;->A00(LX/5Bv;)V
-
-    .line 78
-    .line 79
-    .line 80
-    monitor-exit v1
-
-    .line 81
     return-void
-
-    .line 82
-    :catchall_0
-    move-exception v0
-
-    .line 83
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 84
-    throw v0
 .end method

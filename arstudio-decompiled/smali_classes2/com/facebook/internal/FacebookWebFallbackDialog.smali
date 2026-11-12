@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/internal/FacebookWebFallbackDialog;
-.super LX/2Op;
+.super LX/0bK;
 .source ""
 
 
@@ -12,12 +12,12 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/2Op;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, LX/0bK;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p3, p0, LX/2Op;->A05:Ljava/lang/String;
+    iput-object p3, p0, LX/0bK;->A05:Ljava/lang/String;
 
     .line 4
     .line 5
@@ -28,7 +28,7 @@
     .locals 0
 
     .line 0
-    invoke-super {p0}, LX/2Op;->cancel()V
+    invoke-super {p0}, LX/0bK;->cancel()V
 
     .line 1
     .line 2
@@ -58,7 +58,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v0}, LX/2Sz;->A02(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-static {v0}, LX/0bS;->A02(Ljava/lang/String;)Landroid/os/Bundle;
 
     .line 9
     .line 10
@@ -66,159 +66,163 @@
     move-result-object v2
 
     .line 12
-    const-string v0, "bridge_args"
+    const-string/jumbo v0, "bridge_args"
 
     .line 13
     .line 14
+    .line 15
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 15
     .line 16
     .line 17
-    move-result-object v1
-
     .line 18
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+    move-result-object v1
 
     .line 19
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+
     .line 20
     .line 21
-    invoke-static {v1}, LX/2Sz;->A0B(Ljava/lang/String;)Z
-
     .line 22
+    invoke-static {v1}, LX/0bS;->A0A(Ljava/lang/String;)Z
+
     .line 23
     .line 24
+    .line 25
     move-result v0
 
-    .line 25
+    .line 26
     if-nez v0, :cond_0
 
-    .line 26
     .line 27
-    :try_start_0
-    invoke-static {v1}, LX/002;->A0N(Ljava/lang/String;)Lorg/json/JSONObject;
-
     .line 28
+    :try_start_0
+    invoke-static {v1}, LX/0X7;->A0r(Ljava/lang/String;)Lorg/json/JSONObject;
+
     .line 29
     .line 30
+    .line 31
     move-result-object v0
 
-    .line 31
-    invoke-static {v0}, LX/4NF;->A00(Lorg/json/JSONObject;)Landroid/os/Bundle;
-
     .line 32
+    invoke-static {v0}, LX/4Bq;->A00(Lorg/json/JSONObject;)Landroid/os/Bundle;
+
     .line 33
     .line 34
+    .line 35
     move-result-object v1
 
-    .line 35
-    const-string v0, "com.facebook.platform.protocol.BRIDGE_ARGS"
-
     .line 36
+    const-string/jumbo v0, "com.facebook.platform.protocol.BRIDGE_ARGS"
+
     .line 37
+    .line 38
+    .line 39
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
-    .line 39
     .line 40
+    .line 41
+    .line 42
     :catch_0
     :cond_0
     const-string/jumbo v0, "method_results"
 
-    .line 41
-    .line 42
     .line 43
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
     .line 44
     .line 45
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
     .line 46
+    .line 47
+    .line 48
     move-result-object v1
 
-    .line 47
+    .line 49
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 48
-    .line 49
     .line 50
-    invoke-static {v1}, LX/2Sz;->A0B(Ljava/lang/String;)Z
-
     .line 51
     .line 52
+    invoke-static {v1}, LX/0bS;->A0A(Ljava/lang/String;)Z
+
     .line 53
+    .line 54
+    .line 55
     move-result v0
 
-    .line 54
-    if-nez v0, :cond_1
-
-    .line 55
     .line 56
-    :try_start_1
-    invoke-static {v1}, LX/002;->A0N(Ljava/lang/String;)Lorg/json/JSONObject;
+    if-nez v0, :cond_1
 
     .line 57
     .line 58
+    :try_start_1
+    invoke-static {v1}, LX/0X7;->A0r(Ljava/lang/String;)Lorg/json/JSONObject;
+
     .line 59
+    .line 60
+    .line 61
     move-result-object v0
 
-    .line 60
-    invoke-static {v0}, LX/4NF;->A00(Lorg/json/JSONObject;)Landroid/os/Bundle;
-
-    .line 61
     .line 62
+    invoke-static {v0}, LX/4Bq;->A00(Lorg/json/JSONObject;)Landroid/os/Bundle;
+
     .line 63
+    .line 64
+    .line 65
     move-result-object v1
 
-    .line 64
-    const-string v0, "com.facebook.platform.protocol.RESULT_ARGS"
-
-    .line 65
     .line 66
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
+    const-string/jumbo v0, "com.facebook.platform.protocol.RESULT_ARGS"
 
     .line 67
     .line 68
     .line 69
-    :catch_1
-    :cond_1
-    const-string/jumbo v0, "version"
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 70
     .line 71
     .line 72
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+    :catch_1
+    :cond_1
+    const-string/jumbo v0, "version"
 
     .line 73
     .line 74
     .line 75
-    sget-object v1, LX/2WD;->A04:Ljava/util/List;
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
     .line 76
     .line 77
-    const/4 v0, 0x0
-
     .line 78
-    invoke-static {v1, v0}, LX/0Yf;->A09(Ljava/util/List;I)I
+    sget-object v1, LX/3nd;->A04:Ljava/util/List;
 
     .line 79
     .line 80
+    const/4 v0, 0x0
+
     .line 81
-    move-result v1
+    invoke-static {v1, v0}, LX/0X3;->A07(Ljava/util/List;I)I
 
     .line 82
-    const-string v0, "com.facebook.platform.protocol.PROTOCOL_VERSION"
-
     .line 83
     .line 84
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    move-result v1
 
     .line 85
+    const-string/jumbo v0, "com.facebook.platform.protocol.PROTOCOL_VERSION"
+
     .line 86
     .line 87
+    .line 88
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 89
+    .line 90
+    .line 91
     return-object v2
 .end method
 
@@ -226,11 +230,11 @@
     .locals 4
 
     .line 0
-    iget-object v2, p0, LX/2Op;->A01:Landroid/webkit/WebView;
+    iget-object v2, p0, LX/0bK;->A01:Landroid/webkit/WebView;
 
     .line 1
     .line 2
-    iget-boolean v0, p0, LX/2Op;->A08:Z
+    iget-boolean v0, p0, LX/0bK;->A08:Z
 
     .line 3
     .line 4
@@ -238,7 +242,7 @@
 
     .line 5
     .line 6
-    iget-boolean v0, p0, LX/2Op;->A09:Z
+    iget-boolean v0, p0, LX/0bK;->A09:Z
 
     .line 7
     .line 8
@@ -286,7 +290,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 31
     .line 32
@@ -294,7 +298,7 @@
     move-result-object v0
 
     .line 34
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 35
     .line 36
@@ -307,7 +311,7 @@
     .line 39
     .line 40
     .line 41
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 42
     .line 43
@@ -315,11 +319,11 @@
     move-result-object v3
 
     .line 45
-    new-instance v2, LX/1zF;
+    new-instance v2, LX/0aQ;
 
     .line 46
     .line 47
-    invoke-direct {v2, p0}, LX/1zF;-><init>(Lcom/facebook/internal/FacebookWebFallbackDialog;)V
+    invoke-direct {v2, p0}, LX/0aQ;-><init>(Lcom/facebook/internal/FacebookWebFallbackDialog;)V
 
     .line 48
     .line 49
@@ -338,7 +342,7 @@
 
     .line 56
     :cond_1
-    invoke-super {p0}, LX/2Op;->cancel()V
+    invoke-super {p0}, LX/0bK;->cancel()V
 
     .line 57
     .line 58

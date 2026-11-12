@@ -3,307 +3,229 @@
 .source ""
 
 
+# instance fields
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:Ljava/util/List;
+
+
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
     .locals 1
 
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/0KW;->A00:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/0KW;->A01:Ljava/util/List;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public static A00(Ljava/io/InputStream;)LX/0KW;
+    .locals 9
+
+    .line 0
+    new-instance v8, Ljava/io/DataInputStream;
+
+    .line 1
+    .line 2
+    invoke-direct {v8, p0}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v8}, Ljava/io/DataInputStream;->readByte()B
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v1
+
+    .line 9
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_5
+    .line 10
+    if-eq v1, v0, :cond_2
 
+    .line 11
+    .line 12
     const/4 v0, 0x2
 
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x6
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x7
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x13
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x14
-
-    if-eq p0, v0, :cond_0
-
-    sparse-switch p0, :sswitch_data_0
-
-    packed-switch p0, :pswitch_data_0
-
-    packed-switch p0, :pswitch_data_1
-
-    packed-switch p0, :pswitch_data_2
-
-    packed-switch p0, :pswitch_data_3
-
-    packed-switch p0, :pswitch_data_4
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "RTC_PERF_RTC_INCOMING_CONNECT_FUNNEL"
-
-    return-object v0
-
-    :pswitch_1
-    const-string v0, "RTC_PERF_PLATFORM_MWPP_PRECONNECT_FLOW"
-
-    return-object v0
-
-    :pswitch_2
-    const-string v0, "RTC_PERF_PLATFORM_SDP_RENEGOTIATION"
-
-    return-object v0
-
-    :pswitch_3
-    const-string v0, "RTC_PERF_RTC_COEX_SERVER_MSG"
-
-    return-object v0
-
-    :pswitch_4
-    const-string v0, "RTC_PERF_RTC_CALL_ENDED"
-
-    return-object v0
-
-    :pswitch_5
-    const-string v0, "RTC_PERF_PLATFORM_SERVER_TRANSACTION"
-
-    return-object v0
-
-    :pswitch_6
-    const-string v0, "RTC_PERF_PLATFORM_MW_SET_REMOTE_DESCRIPTION"
-
-    return-object v0
-
-    :pswitch_7
-    const-string v0, "RTC_PERF_PLATFORM_CLIENT_TRANSACTION"
-
-    return-object v0
-
-    :pswitch_8
-    const-string v0, "RTC_PERF_RTC_SCRIM_CONTACTS_PICKER"
-
-    return-object v0
-
-    :pswitch_9
-    const-string v0, "RTC_PERF_PLATFORM_MW_INVITE_PARTICIPANT_INVITER_FLOW"
-
-    return-object v0
-
-    :pswitch_a
-    const-string v0, "RTC_PERF_PLATFORM_MW_INVITE_PARTICIPANT_INVITEE_FLOW"
-
-    return-object v0
-
-    :pswitch_b
-    const-string v0, "RTC_PERF_PLATFORM_MW_CONNECT_TO_PARTICIPANT_FLOW"
-
-    return-object v0
-
-    :pswitch_c
-    const-string v0, "RTC_PERF_PLATFORM_MW_JOIN_CALL_FLOW"
-
-    return-object v0
-
-    :pswitch_d
-    const-string v0, "RTC_PERF_RTC_OPEN_SCRIM"
-
-    return-object v0
-
-    :pswitch_e
-    const-string v0, "RTC_PERF_PLATFORM_P2P_ACCEPT_CALL_CALLEE_FLOW"
-
-    return-object v0
-
-    :pswitch_f
-    const-string v0, "RTC_PERF_PLATFORM_P2P_ACCEPT_CALL_CALLER_FLOW"
-
-    return-object v0
-
-    :pswitch_10
-    const-string v0, "RTC_PERF_PLATFORM_P2P_SET_LOCAL_DESCRIPTION"
-
-    return-object v0
-
-    :pswitch_11
-    const-string v0, "RTC_PERF_PLATFORM_P2P_VIDEO_PERF"
-
-    return-object v0
-
-    :pswitch_12
-    const-string v0, "RTC_PERF_PLATFORM_P2P_AUDIO_PERF"
-
-    return-object v0
-
-    :pswitch_13
-    const-string v0, "RTC_PERF_PLATFORM_P2P_SET_REMOTE_DESCRIPTION"
-
-    return-object v0
-
-    :sswitch_0
-    const-string v0, "RTC_PERF_RTC_SESSION_DURATION"
-
-    return-object v0
-
-    :sswitch_1
-    const-string v0, "RTC_PERF_RTC_CALL_SESSION"
-
-    return-object v0
-
-    :sswitch_2
-    const-string v0, "RTC_PERF_RTC_THERMAL_TRACE"
-
-    return-object v0
-
-    :sswitch_3
-    const-string v0, "RTC_PERF_RTC_CALL_EFFICIENCY"
-
-    return-object v0
-
-    :sswitch_4
-    const-string v0, "RTC_PERF_RTC_CALL_EFFICIENCY_CRITICAL_EVENT"
-
-    return-object v0
-
-    :sswitch_5
-    const-string v0, "RTC_PERF_PLATFORM_FIRST_MEDIA_RECEIVED"
-
-    return-object v0
-
-    :sswitch_6
-    const-string v0, "RTC_PERF_RTC_SESSION_DURATION_RESPONSIVENESS_TRACE_COLLECTION"
-
-    return-object v0
-
-    :sswitch_7
-    const-string v0, "RTC_PERF_TOUCH_RESPONSIVENESS"
-
-    return-object v0
-
-    :sswitch_8
-    const-string v0, "RTC_PERF_BG_TRAFFIC_LOG_FUNNEL"
-
-    return-object v0
-
-    :sswitch_9
-    const-string v0, "RTC_PERF_PEER_VIDEO_SUBSCRIPTION_TO_FIRST_FRAME"
-
-    return-object v0
-
-    :sswitch_a
-    const-string v0, "RTC_PERF_RTC_CPU_SPIN"
-
-    return-object v0
-
-    :sswitch_b
-    const-string v0, "RTC_PERF_RTC_CALL_TRACE"
-
-    return-object v0
-
-    :sswitch_c
-    const-string v0, "RTC_PERF_FB_APP_TIME_TO_REDIRECT"
-
-    return-object v0
-
-    :sswitch_d
-    const-string v0, "RTC_PERF_RTC_FULLSCREEN_CREATE_TO_VISIBLE"
-
-    return-object v0
-
+    .line 13
+    if-eq v1, v0, :cond_1
+
+    .line 14
+    .line 15
+    const/4 v0, 0x3
+
+    .line 16
+    if-eq v1, v0, :cond_0
+
+    .line 17
+    .line 18
+    const/4 v0, 0x4
+
+    .line 19
+    if-ne v1, v0, :cond_4
+
+    .line 20
+    .line 21
+    const-string v7, "x86"
+
+    .line 22
+    .line 23
+    :goto_0
+    invoke-virtual {v8}, Ljava/io/DataInputStream;->readShort()S
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v6
+
+    .line 27
+    const v5, 0xffff
+
+    .line 28
+    .line 29
+    .line 30
+    and-int/2addr v6, v5
+
+    .line 31
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v4
+
+    .line 35
+    const/4 v3, 0x0
+
+    .line 36
+    :goto_1
+    if-ge v3, v6, :cond_3
+
+    .line 37
+    .line 38
+    invoke-virtual {v8}, Ljava/io/DataInputStream;->readShort()S
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v0
+
+    .line 42
+    and-int/2addr v0, v5
+
+    .line 43
+    new-array v2, v0, [B
+
+    .line 44
+    .line 45
+    invoke-virtual {v8, v2}, Ljava/io/DataInputStream;->readFully([B)V
+
+    .line 46
+    .line 47
+    .line 48
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    .line 49
+    .line 50
+    new-instance v0, Ljava/lang/String;
+
+    .line 51
+    .line 52
+    invoke-direct {v0, v2, v1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    .line 53
+    .line 54
+    .line 55
+    invoke-virtual {v4, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 56
+    .line 57
+    .line 58
+    add-int/lit8 v3, v3, 0x1
+
+    .line 59
+    .line 60
+    goto :goto_1
+
+    .line 61
     :cond_0
-    const-string v0, "RTC_PERF_PLATFORM_P2P_START_CALL_CALLEE_FLOW"
+    const-string v7, "x86_64"
 
-    return-object v0
+    .line 62
+    .line 63
+    goto :goto_0
 
+    .line 64
     :cond_1
-    const-string v0, "RTC_PERF_PLATFORM_P2P_START_CALL_CALLER_FLOW"
+    const-string v7, "armeabi-v7a"
 
-    return-object v0
+    .line 65
+    .line 66
+    goto :goto_0
 
+    .line 67
     :cond_2
-    const-string v0, "RTC_PERF_RTC_CREATE_CALL_ENT"
+    const-string v7, "arm64-v8a"
 
-    return-object v0
+    .line 68
+    .line 69
+    goto :goto_0
 
+    .line 70
     :cond_3
-    const-string v0, "RTC_PERF_LAB_METRIC"
+    new-instance v0, LX/0KW;
 
+    .line 71
+    .line 72
+    invoke-direct {v0, v7, v4}, LX/0KW;-><init>(Ljava/lang/String;Ljava/util/List;)V
+
+    .line 73
+    .line 74
+    .line 75
     return-object v0
 
+    .line 76
     :cond_4
-    const-string v0, "RTC_PERF_RTC_INCOMING_CALL_START"
+    const-string v0, "Unrecognized arch id: "
 
-    return-object v0
+    .line 77
+    .line 78
+    invoke-static {v0, v1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
-    :cond_5
-    const-string v0, "RTC_PERF_RTC_OUTGOING_CALL_START"
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v0
 
-    return-object v0
+    .line 82
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
-    nop
+    .line 83
+    .line 84
+    .line 85
+    move-result-object v0
 
-    :sswitch_data_0
-    .sparse-switch
-        0x4 -> :sswitch_d
-        0x2f -> :sswitch_c
-        0x8df -> :sswitch_b
-        0x11d2 -> :sswitch_a
-        0x1d28 -> :sswitch_9
-        0x2163 -> :sswitch_8
-        0x21bf -> :sswitch_7
-        0x2553 -> :sswitch_6
-        0x2895 -> :sswitch_5
-        0x2dcd -> :sswitch_4
-        0x31c8 -> :sswitch_3
-        0x3379 -> :sswitch_2
-        0x3521 -> :sswitch_1
-        0x6433 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0xc
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0x16
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-    .end packed-switch
-
-    :pswitch_data_2
-    .packed-switch 0x1a
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-    .end packed-switch
-
-    :pswitch_data_3
-    .packed-switch 0x22
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-    .end packed-switch
-
-    :pswitch_data_4
-    .packed-switch 0x28
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    .line 86
+    throw v0
 .end method

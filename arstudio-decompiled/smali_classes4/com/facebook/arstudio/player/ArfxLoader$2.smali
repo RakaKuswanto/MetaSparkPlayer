@@ -86,33 +86,29 @@
 
     iget-object v5, p0, Lcom/facebook/arstudio/player/ArfxLoader$2;->val$uri:Landroid/net/Uri;
 
-    invoke-static {v2, v5}, Lcom/facebook/arstudio/player/ArfxLoader;->-$$Nest$smresolveDisplayName(Landroid/app/Activity;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v2, v5}, Lcom/facebook/arstudio/player/ArfxLoader;->access$000(Landroid/app/Activity;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 58
-    invoke-static {v2}, Lcom/facebook/arstudio/player/ArfxLoader;->-$$Nest$smsanitizeEffectName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/facebook/arstudio/player/ArfxLoader;->access$100(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 59
-    iget-object v5, p0, Lcom/facebook/arstudio/player/ArfxLoader$2;->val$uri:Landroid/net/Uri;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Input URI: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    iget-object v6, p0, Lcom/facebook/arstudio/player/ArfxLoader$2;->val$uri:Landroid/net/Uri;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "Input URI: "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
@@ -154,7 +150,7 @@
     invoke-direct {v6, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 67
-    invoke-static {v5, v6}, Lcom/facebook/arstudio/player/ArfxLoader;->-$$Nest$smcopyStream(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    invoke-static {v5, v6}, Lcom/facebook/arstudio/player/ArfxLoader;->access$200(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
     .line 68
     invoke-virtual {v5}, Ljava/io/InputStream;->close()V
@@ -313,13 +309,13 @@
     if-eqz v6, :cond_5
 
     .line 102
-    invoke-static {v4, v5, v3}, Lcom/facebook/arstudio/player/ArfxLoader;->-$$Nest$smprocessZipFile(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
+    invoke-static {v4, v5, v3}, Lcom/facebook/arstudio/player/ArfxLoader;->access$300(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
 
     goto :goto_0
 
     .line 104
     :cond_5
-    invoke-static {v4, v5}, Lcom/facebook/arstudio/player/ArfxLoader;->-$$Nest$smprocessBrotliOrTar(Ljava/io/File;Ljava/io/File;)V
+    invoke-static {v4, v5}, Lcom/facebook/arstudio/player/ArfxLoader;->access$400(Ljava/io/File;Ljava/io/File;)V
 
     .line 107
     :goto_0
@@ -349,39 +345,39 @@
 
     .line 115
     :cond_6
-    invoke-static {v5, v0}, Lcom/facebook/arstudio/player/ArfxLoader;->-$$Nest$smcopyFile(Ljava/io/File;Ljava/io/File;)V
+    invoke-static {v5, v0}, Lcom/facebook/arstudio/player/ArfxLoader;->access$500(Ljava/io/File;Ljava/io/File;)V
 
     .line 116
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
     .line 118
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Filter berhasil disimpan ke mirror: "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v5, " ("
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v5
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "Filter berhasil disimpan ke mirror: "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v7, " ("
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
 
     invoke-virtual {v3, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 

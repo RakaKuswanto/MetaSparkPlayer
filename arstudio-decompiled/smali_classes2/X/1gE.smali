@@ -1,106 +1,268 @@
-.class public final LX/1gE;
-.super LX/1f7;
+.class public final enum LX/1GE;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "LX/1f7<",
-        "TE;>;"
-    }
-.end annotation
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
+.field public static final synthetic $VALUES:[LX/1GE;
 
-# instance fields
-.field public final synthetic A00:LX/1g8;
+.field public static final enum ACTIVE_DRAWING:LX/1GE;
+
+.field public static final enum ACTIVE_EMPTY:LX/1GE;
+
+.field public static final enum ACTIVE_HAS_DRAWING:LX/1GE;
+
+.field public static final enum AVAILABLE:LX/1GE;
+
+.field public static final enum HIDDEN:LX/1GE;
+
+.field public static final enum RESET:LX/1GE;
 
 
 # direct methods
-.method public constructor <init>(LX/1g8;)V
-    .locals 0
+.method public static final synthetic $values()[LX/1GE;
+    .locals 3
 
-    .line 0
-    iput-object p1, p0, LX/1gE;->A00:LX/1g8;
+    const/4 v0, 0x6
 
-    .line 1
-    .line 2
-    invoke-direct {p0}, LX/1f7;-><init>()V
+    new-array v2, v0, [LX/1GE;
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    sget-object v1, LX/1GE;->HIDDEN:LX/1GE;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1GE;->AVAILABLE:LX/1GE;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1GE;->ACTIVE_EMPTY:LX/1GE;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1GE;->ACTIVE_HAS_DRAWING:LX/1GE;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1GE;->ACTIVE_DRAWING:LX/1GE;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1GE;->RESET:LX/1GE;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
+.method public static constructor <clinit>()V
     .locals 3
 
     .line 0
-    iget-object v0, p0, LX/1gE;->A00:LX/1g8;
+    const-string v2, "HIDDEN"
 
     .line 1
     .line 2
-    check-cast v0, LX/1gF;
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/1GE;
+
     .line 4
-    iget-object v2, v0, LX/1gF;->A00:LX/1g9;
-
     .line 5
-    .line 6
-    check-cast v2, Lcom/google/common/collect/TreeMultiset;
+    invoke-direct {v0, v2, v1}, LX/1GE;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     .line 7
     .line 8
-    const/4 v1, 0x2
+    sput-object v0, LX/1GE;->HIDDEN:LX/1GE;
 
     .line 9
-    new-instance v0, LX/1Um;
-
     .line 10
-    .line 11
-    invoke-direct {v0, v2, v1}, LX/1Um;-><init>(Lcom/google/common/collect/TreeMultiset;I)V
+    const-string v2, "AVAILABLE"
 
+    .line 11
     .line 12
+    const/4 v1, 0x1
+
     .line 13
+    new-instance v0, LX/1GE;
+
     .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/1GE;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/1GE;->AVAILABLE:LX/1GE;
+
+    .line 19
+    .line 20
+    const-string v2, "ACTIVE_EMPTY"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/1GE;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/1GE;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/1GE;->ACTIVE_EMPTY:LX/1GE;
+
+    .line 29
+    .line 30
+    const-string v2, "ACTIVE_HAS_DRAWING"
+
+    .line 31
+    .line 32
+    const/4 v1, 0x3
+
+    .line 33
+    new-instance v0, LX/1GE;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1}, LX/1GE;-><init>(Ljava/lang/String;I)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, LX/1GE;->ACTIVE_HAS_DRAWING:LX/1GE;
+
+    .line 39
+    .line 40
+    const-string v2, "ACTIVE_DRAWING"
+
+    .line 41
+    .line 42
+    const/4 v1, 0x4
+
+    .line 43
+    new-instance v0, LX/1GE;
+
+    .line 44
+    .line 45
+    invoke-direct {v0, v2, v1}, LX/1GE;-><init>(Ljava/lang/String;I)V
+
+    .line 46
+    .line 47
+    .line 48
+    sput-object v0, LX/1GE;->ACTIVE_DRAWING:LX/1GE;
+
+    .line 49
+    .line 50
+    const-string v2, "RESET"
+
+    .line 51
+    .line 52
+    const/4 v1, 0x5
+
+    .line 53
+    new-instance v0, LX/1GE;
+
+    .line 54
+    .line 55
+    invoke-direct {v0, v2, v1}, LX/1GE;-><init>(Ljava/lang/String;I)V
+
+    .line 56
+    .line 57
+    .line 58
+    sput-object v0, LX/1GE;->RESET:LX/1GE;
+
+    .line 59
+    .line 60
+    invoke-static {}, LX/1GE;->$values()[LX/1GE;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v0
+
+    .line 64
+    sput-object v0, LX/1GE;->$VALUES:[LX/1GE;
+
+    .line 65
+    .line 66
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v0
+
+    .line 70
+    sput-object v0, LX/1GE;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 71
+    .line 72
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/1GE;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
     return-object v0
 .end method
 
-.method public final size()I
+.method public static valueOf(Ljava/lang/String;)LX/1GE;
     .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/1gE;->A00:LX/1g8;
+    const-class v0, LX/1GE;
 
-    .line 1
-    .line 2
-    check-cast v0, LX/1gF;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 3
-    .line 4
-    iget-object v0, v0, LX/1gF;->A00:LX/1g9;
-
-    .line 5
-    .line 6
-    invoke-virtual {v0}, LX/1g6;->entrySet()Ljava/util/Set;
-
-    .line 7
-    .line 8
-    .line 9
     move-result-object v0
 
-    .line 10
-    invoke-interface {v0}, Ljava/util/Set;->size()I
+    check-cast v0, LX/1GE;
 
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
+    return-object v0
+.end method
 
-    .line 14
-    return v0
+.method public static values()[LX/1GE;
+    .locals 1
+
+    sget-object v0, LX/1GE;->$VALUES:[LX/1GE;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/1GE;
+
+    return-object v0
 .end method

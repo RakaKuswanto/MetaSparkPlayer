@@ -1,297 +1,138 @@
 .class public final LX/0Z6;
-.super Ljava/lang/Object;
+.super LX/1tv;
 .source ""
 
 
 # instance fields
-.field public A00:I
+.field public A00:Ljava/lang/Object;
 
-.field public final A01:LX/0Z5;
+.field public A01:Ljava/lang/Object;
+
+.field public final A02:I
 
 
 # direct methods
-.method public constructor <init>(LX/0Z5;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x1010
+        }
+        names = {
+            "val$fromIterable",
+            "val$function"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, LX/0Z6;->A02:I
 
     .line 1
     .line 2
+    iput-object p3, p0, LX/0Z6;->A00:Ljava/lang/Object;
+
     .line 3
-    iput-object p1, p0, LX/0Z6;->A01:LX/0Z5;
-
     .line 4
+    iput-object p1, p0, LX/0Z6;->A01:Ljava/lang/Object;
+
     .line 5
-    iget v0, p1, LX/0Z5;->defaultValue:I
-
     .line 6
-    .line 7
-    iput v0, p0, LX/0Z6;->A00:I
+    invoke-direct {p0}, LX/1tv;-><init>()V
 
+    .line 7
     .line 8
     .line 9
     return-void
-.end method
-
-.method private final A00(LX/0ZU;)V
-    .locals 4
-
-    .line 0
-    const/4 v3, 0x0
-
-    .line 1
-    if-eqz p1, :cond_0
-
-    .line 2
-    .line 3
-    iget-object v2, p0, LX/0Z6;->A01:LX/0Z5;
-
-    .line 4
-    .line 5
-    iget-boolean v0, v2, LX/0Z5;->useNetworkQuality:Z
-
-    .line 6
-    .line 7
-    if-eqz v0, :cond_0
-
-    .line 8
-    .line 9
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    .line 10
-    .line 11
-    .line 12
-    move-result v1
-
-    .line 13
-    const/4 v0, 0x4
-
-    .line 14
-    if-eq v1, v0, :cond_5
-
-    .line 15
-    .line 16
-    const/4 v0, 0x3
-
-    .line 17
-    if-eq v1, v0, :cond_4
-
-    .line 18
-    .line 19
-    const/4 v0, 0x2
-
-    .line 20
-    if-eq v1, v0, :cond_3
-
-    .line 21
-    .line 22
-    const/4 v0, 0x1
-
-    .line 23
-    if-eq v1, v0, :cond_2
-
-    .line 24
-    .line 25
-    if-eq v1, v3, :cond_1
-
-    .line 26
-    .line 27
-    iget v0, v2, LX/0Z5;->defaultValue:I
-
-    .line 28
-    .line 29
-    :goto_0
-    iput v0, p0, LX/0Z6;->A00:I
-
-    .line 30
-    .line 31
-    :cond_0
-    return-void
-
-    .line 32
-    :cond_1
-    iget v0, v2, LX/0Z5;->degradedValue:I
-
-    .line 33
-    .line 34
-    goto :goto_0
-
-    .line 35
-    :cond_2
-    iget v0, v2, LX/0Z5;->poorValue:I
-
-    .line 36
-    .line 37
-    goto :goto_0
-
-    .line 38
-    :cond_3
-    iget v0, v2, LX/0Z5;->moderateValue:I
-
-    .line 39
-    .line 40
-    goto :goto_0
-
-    .line 41
-    :cond_4
-    iget v0, v2, LX/0Z5;->goodValue:I
-
-    .line 42
-    .line 43
-    goto :goto_0
-
-    .line 44
-    :cond_5
-    iget v0, v2, LX/0Z5;->excellentValue:I
-
-    .line 45
-    .line 46
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final A01(LX/0ZU;LX/0tB;)V
-    .locals 3
+.method public final iterator()Ljava/util/Iterator;
+    .locals 4
 
     .line 0
-    iget-object v2, p0, LX/0Z6;->A01:LX/0Z5;
+    iget v0, p0, LX/0Z6;->A02:I
 
     .line 1
     .line 2
-    iget-boolean v0, v2, LX/0Z5;->useNetworkQuality:Z
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    if-eqz v0, :cond_1
+    iget-object v0, p0, LX/0Z6;->A00:Ljava/lang/Object;
 
     .line 5
     .line 6
-    iget-boolean v0, v2, LX/0Z5;->useNetworkType:Z
+    check-cast v0, Ljava/lang/Iterable;
 
     .line 7
     .line 8
-    if-eqz v0, :cond_1
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 9
     .line 10
-    iget-boolean v0, v2, LX/0Z5;->useNetworkQualityWifiOnly:Z
-
     .line 11
+    move-result-object v3
+
     .line 12
-    if-nez v0, :cond_2
+    iget-object v1, p0, LX/0Z6;->A01:Ljava/lang/Object;
 
     .line 13
     .line 14
-    sget-object v0, LX/0ZU;->UNKNOWN:LX/0ZU;
+    const/4 v0, 0x0
 
     .line 15
+    new-instance v2, LX/0Z4;
+
     .line 16
-    if-eq p1, v0, :cond_2
-
     .line 17
-    .line 18
-    invoke-direct {p0, p1}, LX/0Z6;->A00(LX/0ZU;)V
+    invoke-direct {v2, v1, v3, v0}, LX/0Z4;-><init>(Ljava/lang/Object;Ljava/util/Iterator;I)V
 
+    .line 18
     .line 19
     .line 20
+    return-object v2
+
     .line 21
     :cond_0
-    return-void
+    iget-object v0, p0, LX/0Z6;->A01:Ljava/lang/Object;
 
     .line 22
-    :cond_1
-    invoke-direct {p0, p1}, LX/0Z6;->A00(LX/0ZU;)V
-
     .line 23
+    check-cast v0, Ljava/lang/Iterable;
+
     .line 24
     .line 25
-    :cond_2
-    iget-boolean v0, v2, LX/0Z5;->useNetworkType:Z
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 26
     .line 27
-    if-eqz v0, :cond_0
-
     .line 28
+    move-result-object v1
+
     .line 29
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    iget-object v0, p0, LX/0Z6;->A00:Ljava/lang/Object;
 
     .line 30
     .line 31
-    .line 32
-    move-result v1
+    check-cast v0, Lcom/google/common/base/Predicate;
 
+    .line 32
     .line 33
-    const/4 v0, 0x6
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 34
-    if-eq v1, v0, :cond_6
-
     .line 35
     .line 36
-    const/4 v0, 0x5
+    new-instance v2, LX/1tr;
 
     .line 37
-    if-eq v1, v0, :cond_5
-
     .line 38
+    invoke-direct {v2, v0, v1}, LX/1tr;-><init>(Lcom/google/common/base/Predicate;Ljava/util/Iterator;)V
+
     .line 39
-    const/4 v0, 0x4
-
     .line 40
-    if-eq v1, v0, :cond_4
-
     .line 41
-    .line 42
-    const/4 v0, 0x3
-
-    .line 43
-    if-eq v1, v0, :cond_3
-
-    .line 44
-    .line 45
-    iget v0, v2, LX/0Z5;->defaultValue:I
-
-    .line 46
-    .line 47
-    :goto_0
-    iput v0, p0, LX/0Z6;->A00:I
-
-    .line 48
-    .line 49
-    return-void
-
-    .line 50
-    :cond_3
-    iget v0, v2, LX/0Z5;->cell2GValue:I
-
-    .line 51
-    .line 52
-    goto :goto_0
-
-    .line 53
-    :cond_4
-    iget v0, v2, LX/0Z5;->cell3GValue:I
-
-    .line 54
-    .line 55
-    goto :goto_0
-
-    .line 56
-    :cond_5
-    iget v0, v2, LX/0Z5;->cell4GValue:I
-
-    .line 57
-    .line 58
-    goto :goto_0
-
-    .line 59
-    :cond_6
-    iget v0, v2, LX/0Z5;->wifiValue:I
-
-    .line 60
-    .line 61
-    goto :goto_0
+    return-object v2
 .end method

@@ -4,34 +4,22 @@
 
 
 # instance fields
-.field public final A00:LX/5zh;
-
-.field public final A01:LX/608;
-
-.field public final A02:LX/5zk;
+.field public final synthetic A00:LX/601;
 
 
 # direct methods
-.method public constructor <init>(LX/5zh;LX/608;LX/5zk;)V
+.method public constructor <init>(LX/601;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/600;->A00:LX/601;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p3, p0, LX/600;->A02:LX/5zk;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/600;->A01:LX/608;
-
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/600;->A00:LX/5zh;
-
-    .line 8
-    .line 9
     return-void
 .end method

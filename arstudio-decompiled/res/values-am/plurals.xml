@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_days_ago">
+        <item quantity="other">ከ%1$d ቀናች በፊት</item>
+        <item quantity="one">1 day ago</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d ቀናቶች</item>
+        <item quantity="one">1 ቀን</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d ቀናቶች</item>
+        <item quantity="one">1 ቀን</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d ሰዓታት</item>
+        <item quantity="one">1 ሰዓት</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d ደቂቃዎች</item>
+        <item quantity="one">1 ደቂቃ</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d months</item>
+        <item quantity="one">1 ወር</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d ሳምንታት</item>
+        <item quantity="one">1 ሳምንት</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d ዓመታት</item>
+        <item quantity="one">1 አመት</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">ከ%1$d ሰዓታት በፊት</item>
+        <item quantity="one">ከ1 ሰዓት በፊት</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d hrs</item>
+        <item quantity="one">1 ሰዓት</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$dሰ</item>
+        <item quantity="one">1ሰ</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d ሰዓታት</item>
+        <item quantity="one">1 ሰዓት</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d ደቂቃዎች በፊት</item>
+        <item quantity="one">ከ 1 ደቂቃ በፊት</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d mins</item>
+        <item quantity="one">1 ደቂቃ</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$dደ</item>
+        <item quantity="one">1ደ</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d months ago</item>
+        <item quantity="one">ከ 1 አንድ ወር በፊት</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">ከ%1$d ሴኮንዶች በፊት</item>
+        <item quantity="one">1 second</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d ሳምንታት በፊት</item>
+        <item quantity="one">1 week ago</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d mins left</item>
+        <item quantity="one">1 ደቂቃ ጠፍቷል</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">ከ%1$d ዓመታት በፊት</item>
+        <item quantity="one">ከ 1 አመት በፊት</item>
+    </plurals>
+</resources>

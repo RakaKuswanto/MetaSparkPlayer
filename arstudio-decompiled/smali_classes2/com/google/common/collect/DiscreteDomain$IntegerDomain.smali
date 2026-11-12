@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/DiscreteDomain$IntegerDomain;
-.super LX/1fk;
+.super LX/1ox;
 .source ""
 
 # interfaces
@@ -34,17 +34,14 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0}, LX/1ox;-><init>()V
 
     .line 1
-    invoke-direct {p0, v0}, LX/1fk;-><init>(Z)V
-
     .line 2
     .line 3
-    .line 4
     return-void
 .end method
 

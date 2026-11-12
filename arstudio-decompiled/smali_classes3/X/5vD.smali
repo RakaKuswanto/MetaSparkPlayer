@@ -3,44 +3,44 @@
 .source ""
 
 # interfaces
-.implements LX/5vO;
+.implements Landroid/media/ImageReader$OnImageAvailableListener;
 
 
 # instance fields
-.field public final A00:LX/6JL;
-
-.field public final A01:LX/48W;
-
-.field public final A02:Ljava/lang/Object;
-
-.field public final A03:Z
+.field public final synthetic A00:LX/5u0;
 
 
 # direct methods
-.method public constructor <init>(LX/6JL;LX/48W;Ljava/lang/Object;Z)V
+.method public constructor <init>(LX/5u0;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/5vD;->A00:LX/5u0;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p2, p0, LX/5vD;->A01:LX/48W;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p1, p0, LX/5vD;->A00:LX/6JL;
+    return-void
+.end method
 
-    .line 6
-    .line 7
-    iput-object p3, p0, LX/5vD;->A02:Ljava/lang/Object;
 
-    .line 8
-    .line 9
-    iput-boolean p4, p0, LX/5vD;->A03:Z
+# virtual methods
+.method public final onImageAvailable(Landroid/media/ImageReader;)V
+    .locals 1
 
-    .line 10
-    .line 11
+    .line 0
+    iget-object v0, p0, LX/5vD;->A00:LX/5u0;
+
+    .line 1
+    .line 2
+    invoke-static {p1, v0}, LX/5u0;->A00(Landroid/media/ImageReader;LX/5u0;)V
+
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

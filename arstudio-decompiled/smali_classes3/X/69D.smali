@@ -1,21 +1,8 @@
-.class public final LX/69D;
-.super LX/5f7;
+.class public interface abstract LX/69d;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x300d
-
-    .line 1
-    .line 2
-    invoke-direct {p0, v0, p1}, LX/5f7;-><init>(ILjava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+# virtual methods
+.method public abstract A9d()LX/5Us;
 .end method

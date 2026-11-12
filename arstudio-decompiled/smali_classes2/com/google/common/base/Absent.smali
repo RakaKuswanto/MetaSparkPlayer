@@ -57,9 +57,17 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
-    invoke-static {p1, p0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1
     .line 2
@@ -78,7 +86,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 3
     .line 4
@@ -107,6 +115,14 @@
 
 .method public or(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "defaultValue"
+        }
+    .end annotation
 
     .line 0
     const-string/jumbo v0, "use Optional.orNull() instead of Optional.or(null)"

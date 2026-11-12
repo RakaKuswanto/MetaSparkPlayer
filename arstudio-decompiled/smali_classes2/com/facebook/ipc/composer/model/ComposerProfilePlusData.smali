@@ -37,22 +37,21 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x45
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
+    .line 2
     .line 3
     .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
+    .line 5
     sput-object v0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 6
     .line 7
-    .line 8
     return-void
 .end method
 
@@ -65,7 +64,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -105,7 +104,7 @@
 
     .line 21
     .line 22
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 23
     .line 24
@@ -129,7 +128,7 @@
 
     .line 33
     .line 34
-    invoke-static {p1}, LX/0Yd;->A0I(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X1;->A0K(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 35
     .line 36
@@ -144,28 +143,28 @@
     return-void
 .end method
 
-.method public constructor <init>(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A00:Ljava/lang/String;
+    iput-object p1, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A00:Ljava/lang/String;
 
-    const-string v0, "delegatePageId"
+    const-string/jumbo v0, "delegatePageId"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p3, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A01:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A01:Ljava/lang/String;
 
-    iput-boolean p1, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A04:Z
+    iput-boolean p5, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A04:Z
 
     const-string/jumbo v0, "pageName"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p4, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A02:Ljava/lang/String;
+    iput-object p3, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A02:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A03:Ljava/lang/String;
+    iput-object p4, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A03:Ljava/lang/String;
 
     return-void
 .end method
@@ -214,7 +213,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -234,7 +233,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -266,7 +265,7 @@
 
     .line 39
     .line 40
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 41
     .line 42
@@ -286,7 +285,7 @@
 
     .line 49
     .line 50
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 51
     .line 52
@@ -314,7 +313,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -330,7 +329,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -345,52 +344,59 @@
 
     .line 16
     .line 17
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 18
     .line 19
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 20
-    move-result v1
-
     .line 21
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A02:Ljava/lang/String;
-
     .line 22
+    move-result v0
+
     .line 23
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 24
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A02:Ljava/lang/String;
+
     .line 25
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 26
-    .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    add-int/2addr v1, v0
-
-    .line 30
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A03:Ljava/lang/String;
-
-    .line 31
-    .line 32
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 33
-    .line 34
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    .line 27
+    .line 28
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
-    .line 35
-    .line 36
-    .line 37
+    .line 29
+    .line 30
+    .line 31
     move-result v0
 
-    .line 38
+    .line 32
     add-int/2addr v1, v0
 
+    .line 33
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerProfilePlusData;->A03:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 36
+    .line 37
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 38
     .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    add-int/2addr v1, v0
+
+    .line 42
     return v1
 .end method
 
@@ -402,7 +408,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -438,7 +444,7 @@
 
     .line 21
     .line 22
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 23
     .line 24

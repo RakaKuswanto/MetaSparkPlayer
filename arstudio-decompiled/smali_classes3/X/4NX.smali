@@ -1,3 +1,17 @@
-.class public final synthetic LX/4NX;
+.class public abstract LX/4Nx;
 .super Ljava/lang/Object;
 .source ""
+
+
+# direct methods
+.method public static A00(Landroid/content/res/Configuration;Landroid/view/ContextThemeWrapper;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p1, p0}, Landroid/view/ContextThemeWrapper;->applyOverrideConfiguration(Landroid/content/res/Configuration;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method

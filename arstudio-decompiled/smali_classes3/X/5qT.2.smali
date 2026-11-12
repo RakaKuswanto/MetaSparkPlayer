@@ -3,130 +3,96 @@
 .source ""
 
 
+# static fields
+.field public static final A02:LX/5qT;
+
+.field public static final A03:LX/5qT;
+
+
+# instance fields
+.field public final A00:Ljava/lang/Throwable;
+
+.field public final A01:Z
+
+
 # direct methods
-.method public static A00(Landroid/media/MediaCodec$Callback;Landroid/media/MediaFormat;Ljava/lang/String;)Landroid/media/MediaCodec;
-    .locals 6
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    const/4 v5, 0x0
+    sget-boolean v0, LX/5q5;->GENERATE_CANCELLATION_CAUSES:Z
 
     .line 1
-    const/4 v4, 0x0
-
     .line 2
-    move-object v3, v5
+    const/4 v2, 0x0
 
     .line 3
-    :goto_0
-    const/4 v0, 0x3
+    if-nez v0, :cond_0
 
     .line 4
-    if-ge v4, v0, :cond_1
-
     .line 5
+    const/4 v1, 0x0
+
     .line 6
-    :try_start_0
-    invoke-static {p2}, Landroid/media/MediaCodec;->createEncoderByType(Ljava/lang/String;)Landroid/media/MediaCodec;
+    new-instance v0, LX/5qT;
 
     .line 7
     .line 8
+    invoke-direct {v0, v1, v2}, LX/5qT;-><init>(ZLjava/lang/Throwable;)V
+
     .line 9
-    move-result-object v2
-
     .line 10
-    if-eqz p0, :cond_0
-
     .line 11
-    .line 12
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    sput-object v0, LX/5qT;->A02:LX/5qT;
 
+    .line 12
     .line 13
+    const/4 v1, 0x1
+
     .line 14
-    const/16 v0, 0x15
+    new-instance v0, LX/5qT;
 
     .line 15
     .line 16
-    if-lt v1, v0, :cond_0
+    invoke-direct {v0, v1, v2}, LX/5qT;-><init>(ZLjava/lang/Throwable;)V
 
     .line 17
     .line 18
-    invoke-virtual {v2, p0}, Landroid/media/MediaCodec;->setCallback(Landroid/media/MediaCodec$Callback;)V
-
     .line 19
+    sput-object v0, LX/5qT;->A03:LX/5qT;
+
     .line 20
     .line 21
     :cond_0
-    const/4 v0, 0x1
-
-    .line 22
-    invoke-virtual {v2, p1, v5, v5, v0}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
-
-    .line 23
-    .line 24
-    .line 25
-    goto :goto_1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 26
-    :catch_0
-    move-exception v3
-
-    .line 27
-    add-int/lit8 v4, v4, 0x1
-
-    .line 28
-    .line 29
-    goto :goto_0
-
-    .line 30
-    :goto_1
-    move-object v5, v2
-
-    .line 31
-    :cond_1
-    if-nez v5, :cond_3
-
-    .line 32
-    .line 33
-    if-nez v3, :cond_2
-
-    .line 34
-    .line 35
-    const-string v0, "Failed to create media codec encode"
-
-    .line 36
-    .line 37
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v3
-
-    .line 41
-    :cond_2
-    throw v3
-
-    .line 42
-    :cond_3
-    return-object v5
+    return-void
 .end method
 
-.method public static A01(Landroid/media/MediaFormat;Ljava/lang/String;)Landroid/media/MediaCodec;
-    .locals 1
+.method public constructor <init>(ZLjava/lang/Throwable;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "wasInterrupted",
+            "cause"
+        }
+    .end annotation
 
     .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    invoke-static {v0, p0, p1}, LX/5qT;->A00(Landroid/media/MediaCodec$Callback;Landroid/media/MediaFormat;Ljava/lang/String;)Landroid/media/MediaCodec;
-
     .line 2
     .line 3
-    .line 4
-    move-result-object v0
+    iput-boolean p1, p0, LX/5qT;->A01:Z
 
+    .line 4
     .line 5
-    return-object v0
+    iput-object p2, p0, LX/5qT;->A00:Ljava/lang/Throwable;
+
+    .line 6
+    .line 7
+    return-void
 .end method

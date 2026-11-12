@@ -1,25 +1,8 @@
-.class public final LX/2qJ;
-.super LX/2in;
+.class public interface abstract LX/2qJ;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/1z6;->A02()LX/2s3;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-direct {p0, v0}, LX/2in;-><init>(LX/2s3;)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
+# virtual methods
+.method public abstract ABi()Ljava/lang/String;
 .end method

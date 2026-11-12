@@ -1,72 +1,53 @@
 .class public final LX/2VG;
-.super Ljava/lang/Object;
+.super LX/3II;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2VG;->A00:Ljava/lang/String;
+    move-result-object v3
 
     .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    const/16 v0, 0x3c
+    sget v0, LX/2I6;->AHd:I
 
     .line 5
     .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, LX/2VG;->A00:Ljava/lang/String;
-
-    .line 10
-    .line 11
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 12
-    .line 13
-    .line 14
-    const/16 v0, 0x3e
-
-    .line 15
-    .line 16
-    invoke-static {v1, v0}, LX/0Yh;->A0b(Ljava/lang/StringBuilder;C)Ljava/lang/String;
-
-    .line 17
-    .line 18
-    .line 19
     move-result-object v0
 
+    .line 10
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v2
+
+    .line 14
+    const/4 v1, 0x0
+
+    .line 15
+    const-string/jumbo v0, "prefs_db"
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-direct {p0, v3, v1, v2, v0}, LX/3II;-><init>(Landroid/content/Context;LX/2eS;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;)V
+
+    .line 19
     .line 20
-    return-object v0
+    .line 21
+    return-void
 .end method

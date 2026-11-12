@@ -12,6 +12,8 @@
 
 .field public static final enum CLICK_TO_MESSENGER:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
+.field public static final enum CLICK_TO_PROFILE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+
 .field public static final enum COLLABORATIVE_POST_SWIPE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
 .field public static final enum COMMENT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
@@ -25,6 +27,8 @@
 .field public static final enum EVENT_RSVP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
 .field public static final enum FEED_OCCLUSION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+
+.field public static final enum HIDE_AD:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
 .field public static final enum IAW_CLOSE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
@@ -89,7 +93,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 42
+    .locals 44
 
     .line 0
     const-string v1, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -104,10 +108,10 @@
     .line 4
     .line 5
     .line 6
-    move-result-object v41
+    move-result-object v15
 
     .line 7
-    sput-object v41, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 8
     .line 9
@@ -123,10 +127,10 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v40
+    move-result-object v14
 
     .line 16
-    sput-object v40, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->AD_DWELL_TIME:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->AD_DWELL_TIME:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 17
     .line 18
@@ -142,10 +146,10 @@
     .line 22
     .line 23
     .line 24
-    move-result-object v3
+    move-result-object v43
 
     .line 25
-    sput-object v3, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->ATTACHMENT_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v43, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->ATTACHMENT_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 26
     .line 27
@@ -161,14 +165,14 @@
     .line 31
     .line 32
     .line 33
-    move-result-object v2
+    move-result-object v42
 
     .line 34
-    sput-object v2, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->CLICK_TO_MESSENGER:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v42, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->CLICK_TO_MESSENGER:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 35
     .line 36
-    const-string v1, "COLLABORATIVE_POST_SWIPE"
+    const-string v1, "CLICK_TO_PROFILE"
 
     .line 37
     .line 38
@@ -180,14 +184,14 @@
     .line 40
     .line 41
     .line 42
-    move-result-object v39
+    move-result-object v41
 
     .line 43
-    sput-object v39, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->COLLABORATIVE_POST_SWIPE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v41, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->CLICK_TO_PROFILE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 44
     .line 45
-    const-string v1, "COMMENT"
+    const-string v1, "COLLABORATIVE_POST_SWIPE"
 
     .line 46
     .line 47
@@ -199,14 +203,14 @@
     .line 49
     .line 50
     .line 51
-    move-result-object v38
+    move-result-object v40
 
     .line 52
-    sput-object v38, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->COMMENT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v40, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->COLLABORATIVE_POST_SWIPE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 53
     .line 54
-    const-string v1, "COMMENT_BUTTON_TAP"
+    const-string v1, "COMMENT"
 
     .line 55
     .line 56
@@ -218,14 +222,14 @@
     .line 58
     .line 59
     .line 60
-    move-result-object v37
+    move-result-object v39
 
     .line 61
-    sput-object v37, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->COMMENT_BUTTON_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v39, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->COMMENT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 62
     .line 63
-    const-string v1, "CTM_BOTTOM_SHEET_CLOSE"
+    const-string v1, "COMMENT_BUTTON_TAP"
 
     .line 64
     .line 65
@@ -237,14 +241,14 @@
     .line 67
     .line 68
     .line 69
-    move-result-object v36
+    move-result-object v38
 
     .line 70
-    sput-object v36, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->CTM_BOTTOM_SHEET_CLOSE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v38, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->COMMENT_BUTTON_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 71
     .line 72
-    const-string v1, "DWELL_TIME"
+    const-string v1, "CTM_BOTTOM_SHEET_CLOSE"
 
     .line 73
     .line 74
@@ -257,14 +261,14 @@
     .line 77
     .line 78
     .line 79
-    move-result-object v35
+    move-result-object v37
 
     .line 80
-    sput-object v35, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->DWELL_TIME:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v37, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->CTM_BOTTOM_SHEET_CLOSE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 81
     .line 82
-    const-string v1, "EVENT_RSVP"
+    const-string v1, "DWELL_TIME"
 
     .line 83
     .line 84
@@ -277,14 +281,14 @@
     .line 87
     .line 88
     .line 89
-    move-result-object v34
+    move-result-object v36
 
     .line 90
-    sput-object v34, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->EVENT_RSVP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v36, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->DWELL_TIME:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 91
     .line 92
-    const-string v1, "FEED_OCCLUSION"
+    const-string v1, "EVENT_RSVP"
 
     .line 93
     .line 94
@@ -297,14 +301,14 @@
     .line 97
     .line 98
     .line 99
-    move-result-object v33
+    move-result-object v35
 
     .line 100
-    sput-object v33, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->FEED_OCCLUSION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v35, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->EVENT_RSVP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 101
     .line 102
-    const-string v1, "IAW_CLOSE"
+    const-string v1, "FEED_OCCLUSION"
 
     .line 103
     .line 104
@@ -317,14 +321,14 @@
     .line 107
     .line 108
     .line 109
-    move-result-object v32
+    move-result-object v34
 
     .line 110
-    sput-object v32, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->IAW_CLOSE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v34, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->FEED_OCCLUSION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 111
     .line 112
-    const-string v1, "LEAD_GEN_FORM_MULTI_SUBMIT_RENDER"
+    const-string v1, "HIDE_AD"
 
     .line 113
     .line 114
@@ -337,14 +341,14 @@
     .line 117
     .line 118
     .line 119
-    move-result-object v31
+    move-result-object v33
 
     .line 120
-    sput-object v31, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LEAD_GEN_FORM_MULTI_SUBMIT_RENDER:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v33, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->HIDE_AD:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 121
     .line 122
-    const-string v1, "LEAD_GEN_FORM_OPEN"
+    const-string v1, "IAW_CLOSE"
 
     .line 123
     .line 124
@@ -357,14 +361,14 @@
     .line 127
     .line 128
     .line 129
-    move-result-object v30
+    move-result-object v32
 
     .line 130
-    sput-object v30, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LEAD_GEN_FORM_OPEN:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v32, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->IAW_CLOSE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 131
     .line 132
-    const-string v1, "LEAD_GEN_FORM_SUBMIT"
+    const-string v1, "LEAD_GEN_FORM_MULTI_SUBMIT_RENDER"
 
     .line 133
     .line 134
@@ -377,14 +381,14 @@
     .line 137
     .line 138
     .line 139
-    move-result-object v29
+    move-result-object v31
 
     .line 140
-    sput-object v29, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LEAD_GEN_FORM_SUBMIT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v31, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LEAD_GEN_FORM_MULTI_SUBMIT_RENDER:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 141
     .line 142
-    const-string v1, "LEAD_GEN_FORM_XOUT"
+    const-string v1, "LEAD_GEN_FORM_OPEN"
 
     .line 143
     .line 144
@@ -397,14 +401,14 @@
     .line 147
     .line 148
     .line 149
-    move-result-object v28
+    move-result-object v30
 
     .line 150
-    sput-object v28, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LEAD_GEN_FORM_XOUT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v30, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LEAD_GEN_FORM_OPEN:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 151
     .line 152
-    const-string v1, "LIKE"
+    const-string v1, "LEAD_GEN_FORM_SUBMIT"
 
     .line 153
     .line 154
@@ -417,14 +421,14 @@
     .line 157
     .line 158
     .line 159
-    move-result-object v27
+    move-result-object v29
 
     .line 160
-    sput-object v27, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LIKE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v29, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LEAD_GEN_FORM_SUBMIT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 161
     .line 162
-    const-string v1, "LOVE"
+    const-string v1, "LEAD_GEN_FORM_XOUT"
 
     .line 163
     .line 164
@@ -437,14 +441,14 @@
     .line 167
     .line 168
     .line 169
-    move-result-object v26
+    move-result-object v28
 
     .line 170
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LOVE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v28, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LEAD_GEN_FORM_XOUT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 171
     .line 172
-    const-string v1, "OUTBOUND_TAP"
+    const-string v1, "LIKE"
 
     .line 173
     .line 174
@@ -457,14 +461,14 @@
     .line 177
     .line 178
     .line 179
-    move-result-object v25
+    move-result-object v27
 
     .line 180
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->OUTBOUND_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v27, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LIKE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 181
     .line 182
-    const-string v1, "PERMALINK"
+    const-string v1, "LOVE"
 
     .line 183
     .line 184
@@ -477,14 +481,14 @@
     .line 187
     .line 188
     .line 189
-    move-result-object v24
+    move-result-object v26
 
     .line 190
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PERMALINK:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v26, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->LOVE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 191
     .line 192
-    const-string v1, "PERMALINK_AD_DWELL_TIME"
+    const-string v1, "OUTBOUND_TAP"
 
     .line 193
     .line 194
@@ -497,14 +501,14 @@
     .line 197
     .line 198
     .line 199
-    move-result-object v23
+    move-result-object v25
 
     .line 200
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PERMALINK_AD_DWELL_TIME:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v25, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->OUTBOUND_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 201
     .line 202
-    const-string v1, "PHOTO_TAP"
+    const-string v1, "PERMALINK"
 
     .line 203
     .line 204
@@ -517,14 +521,14 @@
     .line 207
     .line 208
     .line 209
-    move-result-object v22
+    move-result-object v24
 
     .line 210
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PHOTO_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v24, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PERMALINK:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 211
     .line 212
-    const-string v1, "PREFERENCE_SIGNAL_IMPRESSION"
+    const-string v1, "PERMALINK_AD_DWELL_TIME"
 
     .line 213
     .line 214
@@ -537,14 +541,14 @@
     .line 217
     .line 218
     .line 219
-    move-result-object v21
+    move-result-object v23
 
     .line 220
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PREFERENCE_SIGNAL_IMPRESSION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PERMALINK_AD_DWELL_TIME:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 221
     .line 222
-    const-string v1, "PREFERENCE_SIGNAL_LESS_TAP"
+    const-string v1, "PHOTO_TAP"
 
     .line 223
     .line 224
@@ -557,14 +561,14 @@
     .line 227
     .line 228
     .line 229
-    move-result-object v20
+    move-result-object v22
 
     .line 230
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PREFERENCE_SIGNAL_LESS_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PHOTO_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 231
     .line 232
-    const-string v1, "PREFERENCE_SIGNAL_MORE_TAP"
+    const-string v1, "PREFERENCE_SIGNAL_IMPRESSION"
 
     .line 233
     .line 234
@@ -577,14 +581,14 @@
     .line 237
     .line 238
     .line 239
-    move-result-object v19
+    move-result-object v21
 
     .line 240
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PREFERENCE_SIGNAL_MORE_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PREFERENCE_SIGNAL_IMPRESSION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 241
     .line 242
-    const-string v1, "REACT"
+    const-string v1, "PREFERENCE_SIGNAL_LESS_TAP"
 
     .line 243
     .line 244
@@ -597,14 +601,14 @@
     .line 247
     .line 248
     .line 249
-    move-result-object v18
+    move-result-object v20
 
     .line 250
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->REACT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PREFERENCE_SIGNAL_LESS_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 251
     .line 252
-    const-string v1, "RESHARE_WITH_REACTION"
+    const-string v1, "PREFERENCE_SIGNAL_MORE_TAP"
 
     .line 253
     .line 254
@@ -617,14 +621,14 @@
     .line 257
     .line 258
     .line 259
-    move-result-object v17
+    move-result-object v19
 
     .line 260
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->RESHARE_WITH_REACTION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->PREFERENCE_SIGNAL_MORE_TAP:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 261
     .line 262
-    const-string v1, "SAVE"
+    const-string v1, "REACT"
 
     .line 263
     .line 264
@@ -637,14 +641,14 @@
     .line 267
     .line 268
     .line 269
-    move-result-object v15
+    move-result-object v13
 
     .line 270
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SAVE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->REACT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 271
     .line 272
-    const-string v1, "SCREENSHOT"
+    const-string v1, "RESHARE_WITH_REACTION"
 
     .line 273
     .line 274
@@ -657,14 +661,14 @@
     .line 277
     .line 278
     .line 279
-    move-result-object v14
+    move-result-object v12
 
     .line 280
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SCREENSHOT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->RESHARE_WITH_REACTION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 281
     .line 282
-    const-string v1, "SEND_FEED_MESSAGE"
+    const-string v1, "SAVE"
 
     .line 283
     .line 284
@@ -677,14 +681,14 @@
     .line 287
     .line 288
     .line 289
-    move-result-object v13
+    move-result-object v11
 
     .line 290
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SEND_FEED_MESSAGE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SAVE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 291
     .line 292
-    const-string v1, "SEND_MESSENGER_MESSAGE"
+    const-string v1, "SCREENSHOT"
 
     .line 293
     .line 294
@@ -697,14 +701,14 @@
     .line 297
     .line 298
     .line 299
-    move-result-object v12
+    move-result-object v10
 
     .line 300
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SEND_MESSENGER_MESSAGE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SCREENSHOT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 301
     .line 302
-    const-string v1, "SHARE"
+    const-string v1, "SEND_FEED_MESSAGE"
 
     .line 303
     .line 304
@@ -717,14 +721,14 @@
     .line 307
     .line 308
     .line 309
-    move-result-object v11
+    move-result-object v9
 
     .line 310
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SHARE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SEND_FEED_MESSAGE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 311
     .line 312
-    const-string v1, "SHOW_QUILT_STORY_LEVEL_CTA"
+    const-string v1, "SEND_MESSENGER_MESSAGE"
 
     .line 313
     .line 314
@@ -737,14 +741,14 @@
     .line 317
     .line 318
     .line 319
-    move-result-object v10
+    move-result-object v8
 
     .line 320
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SHOW_QUILT_STORY_LEVEL_CTA:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SEND_MESSENGER_MESSAGE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 321
     .line 322
-    const-string v1, "STORY_INDEX_IMPRESSION"
+    const-string v1, "SHARE"
 
     .line 323
     .line 324
@@ -757,14 +761,14 @@
     .line 327
     .line 328
     .line 329
-    move-result-object v9
+    move-result-object v7
 
     .line 330
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->STORY_INDEX_IMPRESSION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SHARE:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 331
     .line 332
-    const-string v1, "UNCONNECTED_GROUP_CONTENT_HEADER_JOIN"
+    const-string v1, "SHOW_QUILT_STORY_LEVEL_CTA"
 
     .line 333
     .line 334
@@ -777,14 +781,14 @@
     .line 337
     .line 338
     .line 339
-    move-result-object v8
+    move-result-object v6
 
     .line 340
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->UNCONNECTED_GROUP_CONTENT_HEADER_JOIN:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->SHOW_QUILT_STORY_LEVEL_CTA:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 341
     .line 342
-    const-string v1, "VIDEO_PLAY"
+    const-string v1, "STORY_INDEX_IMPRESSION"
 
     .line 343
     .line 344
@@ -797,14 +801,14 @@
     .line 347
     .line 348
     .line 349
-    move-result-object v7
+    move-result-object v5
 
     .line 350
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->VIDEO_PLAY:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->STORY_INDEX_IMPRESSION:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 351
     .line 352
-    const-string v1, "VIDEO_WATCH_TIME_ELAPSED"
+    const-string v1, "UNCONNECTED_GROUP_CONTENT_HEADER_JOIN"
 
     .line 353
     .line 354
@@ -817,208 +821,255 @@
     .line 357
     .line 358
     .line 359
-    move-result-object v6
+    move-result-object v4
 
     .line 360
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->VIDEO_WATCH_TIME_ELAPSED:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->UNCONNECTED_GROUP_CONTENT_HEADER_JOIN:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 361
     .line 362
-    const-string v0, "X_OUT"
+    const-string v1, "VIDEO_PLAY"
 
     .line 363
     .line 364
-    const/16 v5, 0x25
+    const/16 v0, 0x25
 
     .line 365
     .line 366
-    invoke-static {v0, v5}, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 367
     .line 368
     .line 369
-    move-result-object v16
+    move-result-object v18
 
     .line 370
-    sput-object v16, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->X_OUT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->VIDEO_PLAY:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 371
     .line 372
-    const/16 v0, 0x26
+    const-string v1, "VIDEO_WATCH_TIME_ELAPSED"
 
     .line 373
     .line 374
-    new-array v4, v0, [Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    const/16 v0, 0x26
 
     .line 375
     .line 376
-    move-object/from16 v1, v41
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 377
     .line 378
-    move-object/from16 v0, v40
-
     .line 379
+    move-result-object v17
+
     .line 380
-    invoke-static {v4, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->VIDEO_WATCH_TIME_ELAPSED:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 381
     .line 382
-    .line 383
-    move-object/from16 v1, v39
+    const-string/jumbo v0, "X_OUT"
 
+    .line 383
     .line 384
     .line 385
-    move-object/from16 v0, v38
+    const/16 v3, 0x27
 
     .line 386
     .line 387
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
 
     .line 388
     .line 389
     .line 390
-    move-object/from16 v1, v37
+    move-result-object v16
 
     .line 391
+    sput-object v16, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->X_OUT:Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+
     .line 392
-    move-object/from16 v0, v36
-
     .line 393
-    .line 394
-    invoke-static {v4, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/16 v0, 0x28
 
+    .line 394
     .line 395
+    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+
     .line 396
     .line 397
-    move-object/from16 v3, v35
+    move-object/from16 v1, v43
 
     .line 398
     .line 399
-    move-object/from16 v2, v34
+    move-object/from16 v0, v42
 
     .line 400
     .line 401
-    move-object/from16 v1, v33
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 402
     .line 403
-    move-object/from16 v0, v32
-
     .line 404
-    .line 405
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v15, v41
 
+    .line 405
     .line 406
+    move-object/from16 v14, v40
+
     .line 407
     .line 408
-    move-object/from16 v1, v31
+    move-object/from16 v1, v39
 
     .line 409
     .line 410
-    move-object/from16 v0, v30
+    move-object/from16 v0, v38
 
     .line 411
     .line 412
-    invoke-static {v4, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 413
     .line 414
     .line 415
-    move-object/from16 v3, v29
+    move-object/from16 v15, v37
 
     .line 416
     .line 417
-    move-object/from16 v2, v28
+    move-object/from16 v14, v36
 
     .line 418
     .line 419
-    move-object/from16 v1, v27
+    move-object/from16 v1, v35
 
     .line 420
     .line 421
-    move-object/from16 v0, v26
+    move-object/from16 v0, v34
 
     .line 422
     .line 423
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 424
     .line 425
     .line 426
-    const/16 v0, 0x12
+    const/16 v0, 0xc
 
     .line 427
     .line 428
-    aput-object v25, v4, v0
+    aput-object v33, v2, v0
 
     .line 429
     .line 430
-    move-object/from16 v3, v24
+    move-object/from16 v15, v32
 
     .line 431
     .line 432
-    move-object/from16 v2, v23
+    move-object/from16 v14, v31
 
     .line 433
     .line 434
-    move-object/from16 v1, v22
+    move-object/from16 v1, v30
 
     .line 435
     .line 436
-    move-object/from16 v0, v21
+    move-object/from16 v0, v29
 
     .line 437
     .line 438
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 439
     .line 440
     .line 441
-    move-object/from16 v3, v20
+    move-object/from16 v15, v28
 
     .line 442
     .line 443
-    move-object/from16 v2, v19
+    move-object/from16 v14, v27
 
     .line 444
     .line 445
-    move-object/from16 v1, v18
+    move-object/from16 v1, v26
 
     .line 446
     .line 447
-    move-object/from16 v0, v17
+    move-object/from16 v0, v25
 
     .line 448
     .line 449
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A19(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 450
     .line 451
     .line 452
-    invoke-static {v4, v15, v14}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v15, v24
 
     .line 453
     .line 454
-    .line 455
-    invoke-static {v13, v12, v11, v10, v4}, LX/001;->A0s(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v23
 
+    .line 455
     .line 456
+    move-object/from16 v1, v22
+
     .line 457
     .line 458
-    invoke-static {v9, v8, v7, v6, v4}, LX/001;->A0t(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v0, v21
 
     .line 459
     .line 460
-    .line 461
-    aput-object v16, v4, v5
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1A(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 461
     .line 462
     .line 463
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+    move-object/from16 v1, v20
 
     .line 464
     .line 465
+    move-object/from16 v0, v19
+
+    .line 466
+    .line 467
+    invoke-static {v1, v0, v13, v12, v2}, LX/0X1;->A1B(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 468
+    .line 469
+    .line 470
+    invoke-static {v11, v10, v9, v8, v2}, LX/0X1;->A1C(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 471
+    .line 472
+    .line 473
+    invoke-static {v7, v6, v5, v4, v2}, LX/0X1;->A1D(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 474
+    .line 475
+    .line 476
+    const/16 v0, 0x25
+
+    .line 477
+    .line 478
+    aput-object v18, v2, v0
+
+    .line 479
+    .line 480
+    const/16 v0, 0x26
+
+    .line 481
+    .line 482
+    aput-object v17, v2, v0
+
+    .line 483
+    .line 484
+    aput-object v16, v2, v3
+
+    .line 485
+    .line 486
+    sput-object v2, Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLStoryLevelCallToActionTriggerEvent;
+
+    .line 487
+    .line 488
     return-void
 .end method
 
@@ -1062,7 +1113,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

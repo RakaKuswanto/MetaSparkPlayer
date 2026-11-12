@@ -1,17 +1,3 @@
-.class public final LX/2CQ;
-.super LX/2CR;
+.class public interface abstract LX/2CQ;
+.super Ljava/lang/Object;
 .source ""
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/2CR;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method

@@ -121,7 +121,13 @@
 .method public abstract markerGenerate(ISJLjava/util/concurrent/TimeUnit;)V
 .end method
 
-.method public abstract markerPoint(IIILjava/lang/String;LX/0TO;JLjava/util/concurrent/TimeUnit;I)V
+.method public abstract markerGenerateWithAnnotations(ISJLjava/util/concurrent/TimeUnit;Ljava/util/Map;)V
+.end method
+
+.method public abstract markerLinkPivot(IILjava/lang/String;)V
+.end method
+
+.method public abstract markerPoint(IIILjava/lang/String;LX/0Q8;JLjava/util/concurrent/TimeUnit;I)V
 .end method
 
 .method public abstract markerPoint(IILjava/lang/String;)V
@@ -179,9 +185,6 @@
 .end method
 
 .method public abstract markerStart(IZ)V
-.end method
-
-.method public abstract markerStartForE2E(IILjava/lang/String;)V
 .end method
 
 .method public abstract markerStartForE2E(IILjava/lang/String;ZJLjava/util/concurrent/TimeUnit;)V

@@ -1,29 +1,28 @@
-.class public final synthetic LX/4mD;
+.class public final LX/4Md;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/0Cw;
+.implements LX/021;
+
+
+# instance fields
+.field public final synthetic A00:LX/4MW;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method public constructor <init>(LX/4MW;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final APf()Ljava/lang/Object;
-    .locals 1
-
     .line 0
-    const-string v0, "-1"
+    iput-object p1, p0, LX/4Md;->A00:LX/4MW;
 
     .line 1
     .line 2
-    return-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method

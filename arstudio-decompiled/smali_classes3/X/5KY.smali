@@ -3,26 +3,18 @@
 .source ""
 
 
+# instance fields
+.field public A00:LX/5Fy;
+
+.field public A01:LX/5KG;
+
+
 # direct methods
-.method public static A00(Landroid/app/Notification;Landroid/app/Service;II)V
+.method public constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "service",
-            "id",
-            "notification",
-            "foregroundServiceType"
-        }
-    .end annotation
 
     .line 0
-    invoke-virtual {p1, p2, p0, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

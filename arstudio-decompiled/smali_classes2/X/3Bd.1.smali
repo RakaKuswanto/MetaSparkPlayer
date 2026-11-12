@@ -1,55 +1,50 @@
-.class public final LX/3Bd;
+.class public final LX/3bd;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4e2;
 
-# static fields
-.field public static final A00:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public static final A01:Ljava/util/logging/Handler;
+# instance fields
+.field public final synthetic A00:Lcom/facebook/arstudio/player/BaseEffectFragment;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/0Ye;->A0d()Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/3Bd;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 5
-    .line 6
-    new-instance v0, LX/3Be;
-
-    .line 7
-    .line 8
-    invoke-direct {v0}, LX/3Be;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
-    sput-object v0, LX/3Bd;->A01:Ljava/util/logging/Handler;
-
-    .line 12
-    .line 13
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/facebook/arstudio/player/BaseEffectFragment;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/3bd;->A00:Lcom/facebook/arstudio/player/BaseEffectFragment;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final Ad8(Lcom/facebook/arstudio/player/model/EffectFile;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3bd;->A00:Lcom/facebook/arstudio/player/BaseEffectFragment;
+
+    .line 1
+    .line 2
+    iget-object v0, p1, Lcom/facebook/arstudio/player/model/EffectFile;->A04:Ljava/lang/String;
+
+    .line 3
+    .line 4
+    invoke-virtual {v1, v0}, Lcom/facebook/arstudio/player/BaseEffectFragment;->onNewPath(Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method

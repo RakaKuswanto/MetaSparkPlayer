@@ -3,12 +3,12 @@
 .source ""
 
 # interfaces
-.implements LX/6Lj;
+.implements LX/6bB;
 
 
 # virtual methods
-.method public abstract AC1()Ljava/lang/Object;
+.method public abstract AAZ()Ljava/lang/Object;
 .end method
 
-.method public abstract AHr()I
+.method public abstract AGM()I
 .end method

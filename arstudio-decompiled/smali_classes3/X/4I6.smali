@@ -1,19 +1,26 @@
-.class public final LX/4I6;
+.class public final LX/4i6;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4HA;
 
-
-# instance fields
-.field public A00:LX/4GN;
-
-.field public A01:LX/4Ed;
+# static fields
+.field public static final synthetic A00:LX/4i6;
 
 
 # direct methods
-.method public constructor <init>(LX/4GN;LX/4Ed;)V
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/4i6;
+
+    invoke-direct {v0}, LX/4i6;-><init>()V
+
+    sput-object v0, LX/4i6;->A00:LX/4i6;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -22,102 +29,100 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4I6;->A00:LX/4GN;
-
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/4I6;->A01:LX/4Ed;
-
-    .line 6
-    .line 7
     return-void
 .end method
 
-
-# virtual methods
-.method public final AGm(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method public static final A00(LX/4i7;LX/4i7;)V
+    .locals 2
 
     .line 0
-    const v0, 0x7f08108f
+    if-eqz p1, :cond_0
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {p1, v0}, LX/4F2;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    if-eqz p0, :cond_0
 
+    .line 3
     .line 4
+    invoke-interface {p0}, LX/4i7;->ADy()Ljava/util/List;
+
     .line 5
     .line 6
-    move-result-object v0
-
     .line 7
-    return-object v0
-.end method
-
-.method public final AJL()Landroid/view/View$OnClickListener;
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x1d
-
-    .line 1
-    .line 2
-    invoke-static {p0, v0}, LX/6PP;->A00(Ljava/lang/Object;I)LX/6PP;
-
-    .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
-    return-object v0
-.end method
+    .line 8
+    if-eqz v0, :cond_0
 
-.method public final AJa(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+    .line 9
+    .line 10
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 0
-    const v0, 0x7f08108a
+    .line 11
+    .line 12
+    .line 13
+    move-result-object p0
 
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {p1, v0}, LX/4F2;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .line 14
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 4
-    .line 5
-    .line 6
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    if-eqz v0, :cond_0
+
+    .line 19
+    .line 20
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
     move-result-object v0
 
-    .line 7
-    return-object v0
-.end method
+    .line 24
+    check-cast v0, Landroid/util/Pair;
 
-.method public final AMd()I
-    .locals 1
+    .line 25
+    .line 26
+    iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    .line 0
-    const v0, 0x7f120043
+    .line 27
+    .line 28
+    invoke-static {v1}, LX/0WV;->A03(Ljava/lang/Object;)V
 
-    .line 1
-    .line 2
-    .line 3
-    return v0
-.end method
+    .line 29
+    .line 30
+    .line 31
+    check-cast v1, Ljava/lang/String;
 
-.method public final synthetic AQ9()Z
-    .locals 1
+    .line 32
+    .line 33
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    .line 0
-    const/4 v0, 0x0
+    .line 34
+    .line 35
+    invoke-static {v0}, LX/0WV;->A03(Ljava/lang/Object;)V
 
-    .line 1
-    return v0
-.end method
+    .line 36
+    .line 37
+    .line 38
+    check-cast v0, LX/4ei;
 
-.method public final AaL(Ljava/lang/String;)V
-    .locals 0
+    .line 39
+    .line 40
+    invoke-interface {p1, v0, v1}, LX/4i7;->AgH(LX/4ei;Ljava/lang/String;)V
 
+    .line 41
+    .line 42
+    .line 43
+    goto :goto_0
+
+    .line 44
+    :cond_0
     return-void
 .end method

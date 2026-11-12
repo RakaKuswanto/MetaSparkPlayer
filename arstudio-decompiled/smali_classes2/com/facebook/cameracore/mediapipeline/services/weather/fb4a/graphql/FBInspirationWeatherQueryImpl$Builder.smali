@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1lG;
+.implements LX/1s9;
 
 
 # static fields
@@ -17,7 +17,7 @@
 # instance fields
 .field public mParams:Lcom/facebook/graphql/query/GraphQlQueryParamSet;
 
-.field public mRequest:LX/1iN;
+.field public mRequest:LX/1p7;
 
 
 # direct methods
@@ -30,23 +30,22 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    new-instance v0, Lcom/facebook/graphql/query/GraphQlQueryParamSet;
+    invoke-static {}, Lcom/facebook/graphql/query/GraphQlQueryParamSet;->A00()Lcom/facebook/graphql/query/GraphQlQueryParamSet;
 
     .line 268435460
     .line 268435461
-    invoke-direct {v0}, Lcom/facebook/graphql/query/GraphQlQueryParamSet;-><init>()V
-
     .line 268435462
+    move-result-object v0
+
     .line 268435463
-    .line 268435464
     iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->mParams:Lcom/facebook/graphql/query/GraphQlQueryParamSet;
 
+    .line 268435464
     .line 268435465
-    .line 268435466
     return-void
 .end method
 
-.method public synthetic constructor <init>(LX/1lF;)V
+.method public synthetic constructor <init>(LX/1s8;)V
     .locals 0
 
     .line 0
@@ -60,11 +59,26 @@
 
 
 # virtual methods
-.method public build()LX/1iN;
+.method public bridge synthetic build()LX/0aC;
+    .locals 1
+
+    .line 268435456
+    invoke-virtual {p0}, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->build()LX/1p7;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
+    return-object v0
+.end method
+
+.method public build()LX/1p7;
     .locals 15
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->mRequest:LX/1iN;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->mRequest:LX/1p7;
 
     .line 1
     .line 2
@@ -80,12 +94,12 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/0Jt;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->mRequest:LX/1iN;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->mRequest:LX/1p7;
 
     .line 12
     .line 13
@@ -120,51 +134,51 @@
 
     .line 26
     .line 27
-    const-string v6, "fbandroid"
+    const-string/jumbo v6, "fbandroid"
 
     .line 28
     .line 29
-    new-instance v1, LX/1j0;
-
     .line 30
+    new-instance v1, LX/1qB;
+
     .line 31
+    .line 32
     move-object v5, v3
 
-    .line 32
+    .line 33
     move-wide v11, v9
 
-    .line 33
+    .line 34
     move v13, v8
 
-    .line 34
-    invoke-direct/range {v1 .. v14}, LX/1j0;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJZZ)V
-
     .line 35
+    invoke-direct/range {v1 .. v14}, LX/1qB;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJZZ)V
+
     .line 36
     .line 37
+    .line 38
     iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->mParams:Lcom/facebook/graphql/query/GraphQlQueryParamSet;
 
-    .line 38
     .line 39
+    .line 40
     if-nez v0, :cond_1
 
-    .line 40
     .line 41
-    new-instance v0, Lcom/facebook/graphql/query/GraphQlQueryParamSet;
-
     .line 42
-    .line 43
-    invoke-direct {v0}, Lcom/facebook/graphql/query/GraphQlQueryParamSet;-><init>()V
+    invoke-static {}, Lcom/facebook/graphql/query/GraphQlQueryParamSet;->A00()Lcom/facebook/graphql/query/GraphQlQueryParamSet;
 
+    .line 43
     .line 44
     .line 45
+    move-result-object v0
+
     .line 46
     :cond_1
-    iput-object v0, v1, LX/1j0;->A00:Lcom/facebook/graphql/query/GraphQlQueryParamSet;
+    iput-object v0, v1, LX/1qB;->A00:Lcom/facebook/graphql/query/GraphQlQueryParamSet;
 
     .line 47
     .line 48
-    invoke-static {v1}, LX/1iN;->A00(LX/1j0;)LX/1iN;
+    invoke-static {v1}, LX/1p7;->A00(LX/1qB;)LX/1p7;
 
     .line 49
     .line 50
@@ -172,29 +186,14 @@
     move-result-object v0
 
     .line 52
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->mRequest:LX/1iN;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->mRequest:LX/1p7;
 
     .line 53
     .line 54
     return-object v0
 .end method
 
-.method public bridge synthetic build()LX/46D;
-    .locals 1
-
-    .line 268435456
-    invoke-virtual {p0}, Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryImpl$Builder;->build()LX/1iN;
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    move-result-object v0
-
-    .line 268435460
-    return-object v0
-.end method
-
-.method public bridge synthetic setLatitude(Ljava/lang/Double;)LX/1lG;
+.method public bridge synthetic setLatitude(Ljava/lang/Double;)LX/1s9;
     .locals 0
 
     .line 268435456
@@ -223,11 +222,11 @@
 
     .line 6
     .line 7
-    iget-object v0, v0, Lcom/facebook/graphql/query/GraphQlQueryParamSet;->A00:LX/1i5;
+    iget-object v0, v0, Lcom/facebook/graphql/query/GraphQlQueryParamSet;->A00:LX/1ol;
 
     .line 8
     .line 9
-    invoke-static {v0, p1, v1}, Lcom/facebook/graphql/calls/GraphQlCallInput;->A03(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1, v1}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -236,7 +235,7 @@
     return-object p0
 .end method
 
-.method public bridge synthetic setLongitude(Ljava/lang/Double;)LX/1lG;
+.method public bridge synthetic setLongitude(Ljava/lang/Double;)LX/1s9;
     .locals 0
 
     .line 268435456
@@ -265,11 +264,11 @@
 
     .line 6
     .line 7
-    iget-object v0, v0, Lcom/facebook/graphql/query/GraphQlQueryParamSet;->A00:LX/1i5;
+    iget-object v0, v0, Lcom/facebook/graphql/query/GraphQlQueryParamSet;->A00:LX/1ol;
 
     .line 8
     .line 9
-    invoke-static {v0, p1, v1}, Lcom/facebook/graphql/calls/GraphQlCallInput;->A03(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1, v1}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     .line 11

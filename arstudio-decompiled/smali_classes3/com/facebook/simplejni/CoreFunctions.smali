@@ -12,7 +12,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -36,7 +36,7 @@
     .locals 0
 
     .line 0
-    invoke-static {p0}, LX/4BD;->A0j(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {p0}, LX/432;->A0q(Ljava/lang/Throwable;)Ljava/lang/String;
 
     .line 1
     .line 2

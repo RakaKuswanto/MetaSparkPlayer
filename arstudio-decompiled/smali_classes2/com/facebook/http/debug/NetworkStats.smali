@@ -1,12 +1,12 @@
-.class public Lcom/facebook/http/debug/NetworkStats;
+.class public final Lcom/facebook/http/debug/NetworkStats;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/0J9;
+.field public final A00:LX/0I2;
 
-.field public final A01:LX/0JA;
+.field public final A01:LX/0I5;
 
 .field public final A02:Ljava/util/Map;
 
@@ -21,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 4
     .line 5
@@ -33,7 +33,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/1z6;->A0B()LX/0JA;
+    invoke-static {}, LX/2I6;->A0C()LX/0I5;
 
     .line 10
     .line 11
@@ -41,7 +41,7 @@
     move-result-object v1
 
     .line 13
-    invoke-static {}, LX/1z6;->A0A()LX/0J9;
+    invoke-static {}, LX/2I6;->A0A()LX/0I2;
 
     .line 14
     .line 15
@@ -49,20 +49,20 @@
     move-result-object v0
 
     .line 17
-    iput-object v1, p0, Lcom/facebook/http/debug/NetworkStats;->A01:LX/0JA;
+    iput-object v1, p0, Lcom/facebook/http/debug/NetworkStats;->A01:LX/0I5;
 
     .line 18
     .line 19
-    iput-object v0, p0, Lcom/facebook/http/debug/NetworkStats;->A00:LX/0J9;
+    iput-object v0, p0, Lcom/facebook/http/debug/NetworkStats;->A00:LX/0I2;
 
     .line 20
     .line 21
-    invoke-interface {v1}, LX/0JA;->now()J
+    invoke-interface {v1}, LX/0I5;->now()J
 
     .line 22
     .line 23
     .line 24
-    invoke-interface {v0}, LX/0J9;->now()J
+    invoke-interface {v0}, LX/0I2;->now()J
 
     .line 25
     .line 26

@@ -1,3 +1,3 @@
-.class public interface abstract LX/57h;
-.super Ljava/lang/Object;
+.class public abstract LX/57h;
+.super LX/57i;
 .source ""

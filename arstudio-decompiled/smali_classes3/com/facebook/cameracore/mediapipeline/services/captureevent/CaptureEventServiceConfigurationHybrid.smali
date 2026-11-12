@@ -23,7 +23,7 @@
 
     .line 4
     .line 5
-    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->mCaptureEventInput:LX/5XD;
+    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->mCaptureEventInput:LX/4sx;
 
     .line 6
     .line 7
@@ -31,7 +31,7 @@
 
     .line 8
     .line 9
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputWrapper;-><init>(LX/5XD;)V
+    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputWrapper;-><init>(LX/4sx;)V
 
     .line 10
     .line 11

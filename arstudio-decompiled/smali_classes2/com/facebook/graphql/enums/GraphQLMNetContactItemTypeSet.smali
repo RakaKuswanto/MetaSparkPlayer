@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMNetContactItemTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMNetContactItemTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x13
+    const/16 v0, 0x14
 
     .line 1
     .line 2
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "NON_CONTACT"
+    const-string v0, "NETEGO_IG_PUBLIC_CHANNELS"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "PAGE"
+    const-string v0, "NON_CONTACT"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "SIDE_CONVERSATIONS_COMMUNITY_MESSAGING_THREAD"
+    const-string v0, "PAGE"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "STICKER"
+    const-string v0, "SIDE_CONVERSATIONS_COMMUNITY_MESSAGING_THREAD"
 
     .line 101
     .line 102
@@ -232,22 +232,34 @@
 
     .line 105
     .line 106
-    const-string v0, "TEXT_SUGGESTION"
+    const-string v0, "STICKER"
 
     .line 107
     .line 108
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 109
     .line 110
-    .line 111
-    move-result-object v0
+    const/16 v1, 0x13
 
+    .line 111
     .line 112
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMNetContactItemTypeSet;->A00:Ljava/util/Set;
+    const-string v0, "TEXT_SUGGESTION"
 
     .line 113
     .line 114
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 115
+    .line 116
+    .line 117
+    move-result-object v0
+
+    .line 118
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMNetContactItemTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 119
+    .line 120
     return-void
 .end method
 
@@ -263,11 +275,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMNetContactItemTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMNetContactItemTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

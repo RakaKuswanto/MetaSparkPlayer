@@ -9,11 +9,11 @@
 # instance fields
 .field public final synthetic this$0:Lcom/facebook/acra/ErrorReporter$2;
 
-.field public final synthetic val$value:LX/0Gd;
+.field public final synthetic val$value:LX/0VC;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/acra/ErrorReporter$2;LX/0Gd;)V
+.method public constructor <init>(Lcom/facebook/acra/ErrorReporter$2;LX/0VC;)V
     .locals 0
 
     .line 0
@@ -21,7 +21,7 @@
 
     .line 1
     .line 2
-    iput-object p2, p0, Lcom/facebook/acra/ErrorReporter$2$1;->val$value:LX/0Gd;
+    iput-object p2, p0, Lcom/facebook/acra/ErrorReporter$2$1;->val$value:LX/0VC;
 
     .line 3
     .line 4
@@ -39,11 +39,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/acra/ErrorReporter$2$1;->val$value:LX/0Gd;
+    iget-object v0, p0, Lcom/facebook/acra/ErrorReporter$2$1;->val$value:LX/0VC;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Gd;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0VC;->get()Ljava/lang/Object;
 
     .line 3
     .line 4

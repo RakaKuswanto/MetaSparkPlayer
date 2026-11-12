@@ -1,9 +1,14 @@
-.class public final LX/4Fg;
-.super LX/4DM;
+.class public final LX/4fG;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4DU;
+
+# instance fields
+.field public A00:Landroid/view/View;
+
+.field public A01:Landroid/view/accessibility/AccessibilityEvent;
+
+.field public A02:LX/01z;
 
 
 # direct methods
@@ -11,7 +16,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4DM;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

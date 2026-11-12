@@ -1,61 +1,77 @@
 .class public final LX/5uc;
-.super LX/5uQ;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Landroid/media/ImageReader$OnImageAvailableListener;
 
 
 # instance fields
-.field public final A00:J
-
-.field public final A01:J
-
-.field public final A02:J
-
-.field public final A03:J
-
-.field public final A04:J
+.field public final synthetic A00:LX/5ty;
 
 
 # direct methods
-.method public constructor <init>(LX/6OS;JJJJJJJJJ)V
-    .locals 2
+.method public constructor <init>(LX/5ty;)V
+    .locals 0
 
     .line 0
-    invoke-direct/range {p0 .. p9}, LX/5uQ;-><init>(LX/6OS;JJJJ)V
+    iput-object p1, p0, LX/5uc;->A00:LX/5ty;
 
     .line 1
     .line 2
-    .line 3
-    iput-wide p10, p0, LX/5uc;->A00:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-wide p12, p0, LX/5uc;->A03:J
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onImageAvailable(Landroid/media/ImageReader;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/5uc;->A00:LX/5ty;
+
+    .line 1
+    .line 2
+    invoke-static {v1}, LX/5ty;->A00(LX/5ty;)Landroid/media/Image;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
     .line 6
+    if-eqz v0, :cond_0
+
     .line 7
-    move-wide/from16 v0, p14
-
     .line 8
-    .line 9
-    iput-wide v0, p0, LX/5uc;->A04:J
+    invoke-virtual {v0}, Landroid/media/Image;->close()V
 
+    .line 9
     .line 10
     .line 11
-    move-wide/from16 v0, p16
+    :cond_0
+    invoke-virtual {p1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
     .line 12
     .line 13
-    iput-wide v0, p0, LX/5uc;->A01:J
-
     .line 14
+    move-result-object v0
+
     .line 15
-    move-wide/from16 v0, p18
+    invoke-static {v0, v1}, LX/5ty;->A01(Landroid/media/Image;LX/5ty;)V
 
     .line 16
     .line 17
-    iput-wide v0, p0, LX/5uc;->A02:J
-
     .line 18
+    invoke-static {v1}, LX/5ty;->A02(LX/5ty;)V
+
     .line 19
+    .line 20
+    .line 21
     return-void
 .end method

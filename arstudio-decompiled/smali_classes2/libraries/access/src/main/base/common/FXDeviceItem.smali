@@ -11,9 +11,9 @@
 
 
 # instance fields
-.field public A00:LX/2bE;
+.field public A00:LX/2wj;
 
-.field public final A01:LX/1a2;
+.field public final A01:LX/2Ph;
 
 .field public final A02:Ljava/lang/Long;
 
@@ -25,15 +25,15 @@
     .locals 2
 
     .line 0
-    const/16 v1, 0x20
+    const/16 v1, 0x5c
 
     .line 1
     .line 2
-    new-instance v0, LX/58O;
+    new-instance v0, LX/51p;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/58O;-><init>(I)V
+    invoke-direct {v0, v1}, LX/51p;-><init>(I)V
 
     .line 5
     .line 6
@@ -81,7 +81,7 @@
 
     .line 15
     :goto_0
-    iput-object v0, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2bE;
+    iput-object v0, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2wj;
 
     .line 16
     .line 17
@@ -89,7 +89,7 @@
 
     .line 18
     .line 19
-    invoke-static {v2}, LX/1a2;->valueOf(Ljava/lang/String;)LX/1a2;
+    invoke-static {v2}, LX/2Ph;->valueOf(Ljava/lang/String;)LX/2Ph;
 
     .line 20
     .line 21
@@ -98,7 +98,7 @@
 
     .line 23
     :cond_0
-    iput-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/1a2;
+    iput-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/2Ph;
 
     .line 24
     .line 25
@@ -114,7 +114,7 @@
 
     .line 30
     .line 31
-    invoke-static {p1}, LX/0Yi;->A0e(Landroid/os/Parcel;)Ljava/lang/Long;
+    invoke-static {p1}, LX/0X5;->A0W(Landroid/os/Parcel;)Ljava/lang/Long;
 
     .line 32
     .line 33
@@ -130,7 +130,7 @@
 
     .line 38
     :cond_1
-    invoke-static {v0}, LX/2bE;->valueOf(Ljava/lang/String;)LX/2bE;
+    invoke-static {v0}, LX/2wj;->valueOf(Ljava/lang/String;)LX/2wj;
 
     .line 39
     .line 40
@@ -141,7 +141,7 @@
     goto :goto_0
 .end method
 
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;LX/2bE;LX/1a2;)V
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;LX/2wj;LX/2Ph;)V
     .locals 0
 
     .line 268435456
@@ -150,11 +150,11 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    iput-object p3, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2bE;
+    iput-object p3, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2wj;
 
     .line 268435460
     .line 268435461
-    iput-object p4, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/1a2;
+    iput-object p4, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/2Ph;
 
     .line 268435462
     .line 268435463
@@ -221,11 +221,11 @@
 
     .line 17
     .line 18
-    iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2bE;
+    iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2wj;
 
     .line 19
     .line 20
-    iget-object v0, p1, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2bE;
+    iget-object v0, p1, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2wj;
 
     .line 21
     .line 22
@@ -250,11 +250,11 @@
     .line 31
     .line 32
     :goto_0
-    iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/1a2;
+    iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/2Ph;
 
     .line 33
     .line 34
-    iget-object v0, p1, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/1a2;
+    iget-object v0, p1, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/2Ph;
 
     .line 35
     .line 36
@@ -329,62 +329,61 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0s()[Ljava/lang/Object;
+    const/4 v0, 0x4
 
     .line 1
+    new-array v2, v0, [Ljava/lang/Object;
+
     .line 2
     .line 3
-    move-result-object v2
+    iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2wj;
 
     .line 4
-    iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2bE;
-
     .line 5
-    .line 6
     const/4 v0, 0x0
 
-    .line 7
+    .line 6
     aput-object v1, v2, v0
 
+    .line 7
     .line 8
-    .line 9
     iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A03:Ljava/lang/String;
 
+    .line 9
     .line 10
-    .line 11
     const/4 v0, 0x1
 
-    .line 12
+    .line 11
     aput-object v1, v2, v0
 
+    .line 12
     .line 13
-    .line 14
-    iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/1a2;
+    iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/2Ph;
 
+    .line 14
     .line 15
-    .line 16
     const/4 v0, 0x2
 
-    .line 17
+    .line 16
     aput-object v1, v2, v0
 
+    .line 17
     .line 18
-    .line 19
     iget-object v1, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A02:Ljava/lang/Long;
 
+    .line 19
     .line 20
-    .line 21
     const/4 v0, 0x3
 
-    .line 22
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
+    .line 21
+    invoke-static {v1, v2, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
 
+    .line 22
     .line 23
     .line 24
-    .line 25
     move-result v0
 
-    .line 26
+    .line 25
     return v0
 .end method
 
@@ -392,7 +391,7 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2bE;
+    iget-object v0, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A00:LX/2wj;
 
     .line 1
     .line 2
@@ -412,7 +411,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/1a2;
+    iget-object v0, p0, Llibraries/access/src/main/base/common/FXDeviceItem;->A01:LX/2Ph;
 
     .line 10
     .line 11

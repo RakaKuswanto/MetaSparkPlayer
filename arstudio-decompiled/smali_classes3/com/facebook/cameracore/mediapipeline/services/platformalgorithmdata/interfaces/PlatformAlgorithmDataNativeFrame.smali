@@ -1,12 +1,12 @@
-.class public Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;
+.class public final Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final mNativeFrameHandle:J
+.field public final nativeFrameHandle:J
 
-.field public final mNativeSessionHandle:J
+.field public final nativeSessionHandle:J
 
 
 # direct methods
@@ -19,11 +19,11 @@
     .line 1
     .line 2
     .line 3
-    iput-wide p1, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;->mNativeSessionHandle:J
+    iput-wide p1, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;->nativeSessionHandle:J
 
     .line 4
     .line 5
-    iput-wide p3, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;->mNativeFrameHandle:J
+    iput-wide p3, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;->nativeFrameHandle:J
 
     .line 6
     .line 7
@@ -32,22 +32,22 @@
 
 
 # virtual methods
-.method public getNativeFrameHandle()J
+.method public final getNativeFrameHandle()J
     .locals 2
 
     .line 0
-    iget-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;->mNativeFrameHandle:J
+    iget-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;->nativeFrameHandle:J
 
     .line 1
     .line 2
     return-wide v0
 .end method
 
-.method public getNativeSessionHandle()J
+.method public final getNativeSessionHandle()J
     .locals 2
 
     .line 0
-    iget-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;->mNativeSessionHandle:J
+    iget-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataNativeFrame;->nativeSessionHandle:J
 
     .line 1
     .line 2

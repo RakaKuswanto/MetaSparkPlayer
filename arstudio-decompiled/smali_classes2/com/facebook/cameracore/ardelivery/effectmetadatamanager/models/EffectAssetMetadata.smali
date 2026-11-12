@@ -121,60 +121,61 @@
 
     .line 18
     .line 19
-    const-string v0, "capabilityMinVersionList is null. effect id: %s"
+    const-string/jumbo v0, "capabilityMinVersionList is null. effect id: %s"
 
     .line 20
     .line 21
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
     .line 22
+    invoke-static {v1, v0, v2}, LX/0Il;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
     .line 23
     .line 24
+    .line 25
     :cond_0
     iput-object p5, p0, Lcom/facebook/cameracore/ardelivery/effectmetadatamanager/models/EffectAssetMetadata;->mCapabilityMinVersionList:Ljava/util/List;
 
-    .line 25
     .line 26
+    .line 27
     iput-object p6, p0, Lcom/facebook/cameracore/ardelivery/effectmetadatamanager/models/EffectAssetMetadata;->mFileName:Ljava/lang/String;
 
-    .line 27
     .line 28
+    .line 29
     iput-wide p7, p0, Lcom/facebook/cameracore/ardelivery/effectmetadatamanager/models/EffectAssetMetadata;->mFileSizeBytes:J
 
-    .line 29
     .line 30
+    .line 31
     iput-object p9, p0, Lcom/facebook/cameracore/ardelivery/effectmetadatamanager/models/EffectAssetMetadata;->mMd5Hash:Ljava/lang/String;
 
-    .line 31
     .line 32
+    .line 33
     invoke-static {p10}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->ofCppValue(I)Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
-    .line 33
     .line 34
     .line 35
-    move-result-object v0
-
     .line 36
-    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/effectmetadatamanager/models/EffectAssetMetadata;->mAssetType:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    move-result-object v0
 
     .line 37
+    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/effectmetadatamanager/models/EffectAssetMetadata;->mAssetType:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 38
+    .line 39
     invoke-static {p11}, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;->fromCompressionTypeCppValue(I)Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
 
-    .line 39
     .line 40
     .line 41
+    .line 42
     move-result-object v0
 
-    .line 42
+    .line 43
     iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/effectmetadatamanager/models/EffectAssetMetadata;->mCompressionMethod:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
 
-    .line 43
     .line 44
+    .line 45
     iput-object p12, p0, Lcom/facebook/cameracore/ardelivery/effectmetadatamanager/models/EffectAssetMetadata;->mManifestCapabilities:Ljava/lang/String;
 
-    .line 45
     .line 46
+    .line 47
     return-void
 .end method
 

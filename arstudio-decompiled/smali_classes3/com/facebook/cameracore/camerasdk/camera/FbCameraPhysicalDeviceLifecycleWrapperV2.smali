@@ -3,31 +3,31 @@
 .source ""
 
 # interfaces
-.implements LX/5aZ;
+.implements LX/5zJ;
 
 
 # instance fields
-.field public A00:LX/5eF;
+.field public A00:LX/5x7;
 
-.field public A01:LX/5j9;
+.field public A01:LX/5wN;
 
-.field public A02:LX/5eA;
+.field public A02:LX/5x1;
 
-.field public A03:LX/5a3;
+.field public A03:LX/5zR;
 
-.field public A04:LX/6Q3;
+.field public A04:LX/6gh;
 
-.field public final A05:LX/5kx;
+.field public final A05:LX/5wY;
 
 .field public final A06:Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;
 
-.field public final A07:LX/5YV;
+.field public final A07:LX/5wv;
 
 .field public volatile A08:Z
 
 
 # direct methods
-.method public constructor <init>(LX/5kx;LX/5eF;Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;LX/5YV;)V
+.method public constructor <init>(LX/5wY;LX/5x7;Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;LX/5wv;)V
     .locals 0
 
     .line 0
@@ -36,7 +36,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5kx;
+    iput-object p1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5wY;
 
     .line 4
     .line 5
@@ -44,25 +44,147 @@
 
     .line 6
     .line 7
-    iput-object p2, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iput-object p2, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 8
     .line 9
-    iput-object p4, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A07:LX/5YV;
+    iput-object p4, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A07:LX/5wv;
 
     .line 10
     .line 11
     return-void
 .end method
 
-.method public static A00(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5kS;LX/5bf;LX/5eA;Z)V
+.method public static A00(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;LX/1tL;Z)Lcom/google/common/util/concurrent/SettableFuture;
+    .locals 5
+
+    .line 0
+    new-instance v4, Lcom/google/common/util/concurrent/SettableFuture;
+
+    .line 1
+    .line 2
+    invoke-direct {v4}, Lcom/google/common/util/concurrent/SettableFuture;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    if-eqz p2, :cond_0
+
+    .line 6
+    .line 7
+    sget-object v0, LX/0XB;->INSTANCE:LX/0XB;
+
+    .line 8
+    .line 9
+    invoke-static {p2, v4, v0}, LX/3fC;->A01(LX/1tL;Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/Executor;)V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 13
+    iput-boolean v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A08:Z
+
+    .line 14
+    .line 15
+    new-instance v3, LX/6gh;
+
+    .line 16
+    .line 17
+    invoke-direct {v3, p0, p1, v4, p3}, LX/6gh;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;Lcom/google/common/util/concurrent/SettableFuture;Z)V
+
+    .line 18
+    .line 19
+    .line 20
+    sget-object v2, LX/5wt;->CLOSE_IN_PROGRESS:LX/5wt;
+
+    .line 21
+    .line 22
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
+
+    .line 23
+    .line 24
+    iget-object v0, v0, LX/5x7;->A03:Ljava/lang/String;
+
+    .line 25
+    .line 26
+    new-instance v1, LX/5xI;
+
+    .line 27
+    .line 28
+    invoke-direct {v1, v2, v3, v0}, LX/5xI;-><init>(LX/5wt;LX/5xp;Ljava/lang/String;)V
+
+    .line 29
+    .line 30
+    .line 31
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5wY;
+
+    .line 32
+    .line 33
+    invoke-virtual {v0, v1}, LX/5wY;->A04(LX/5xI;)V
+
+    .line 34
+    .line 35
+    .line 36
+    sget-object v0, LX/5xm;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+
+    .line 37
+    .line 38
+    if-ne p0, v0, :cond_1
+
+    .line 39
+    .line 40
+    const/4 v0, 0x0
+
+    .line 41
+    invoke-static {v0}, LX/5xm;->A00(Z)V
+
+    .line 42
+    .line 43
+    .line 44
+    :cond_1
+    return-object v4
+.end method
+
+.method public static A01(LX/5wt;LX/5wY;Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p2, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
+
+    .line 1
+    .line 2
+    iget-object v1, v0, LX/5x7;->A03:Ljava/lang/String;
+
+    .line 3
+    .line 4
+    new-instance v0, LX/5xI;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0, v1}, LX/5xI;-><init>(LX/5wt;Ljava/lang/String;)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {p1, v0}, LX/5wY;->A04(LX/5xI;)V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public static A02(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5wr;LX/5xp;LX/5x1;Z)V
     .locals 8
 
     .line 0
     move-object v0, p1
 
     .line 1
-    iput-object p3, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A02:LX/5eA;
+    iput-object p3, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A02:LX/5x1;
 
     .line 2
     .line 3
@@ -81,7 +203,7 @@
     move-result-object v7
 
     .line 10
-    new-instance v0, LX/5kS;
+    new-instance v0, LX/5wr;
 
     .line 11
     .line 12
@@ -100,7 +222,7 @@
     move-object v6, v1
 
     .line 17
-    invoke-direct/range {v0 .. v7}, LX/5kS;-><init>(LX/569;LX/5lF;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/util/HashMap;Ljava/util/Map;)V
+    invoke-direct/range {v0 .. v7}, LX/5wr;-><init>(LX/4KB;LX/5uN;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/util/HashMap;Ljava/util/Map;)V
 
     .line 18
     .line 19
@@ -109,19 +231,19 @@
     const/4 p3, 0x0
 
     .line 21
-    new-instance v7, LX/6Q3;
+    new-instance v7, LX/6gh;
 
     .line 22
     .line 23
     move-object p1, v0
 
     .line 24
-    invoke-direct/range {v7 .. v12}, LX/6Q3;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5kS;LX/5bf;IZ)V
+    invoke-direct/range {v7 .. v12}, LX/6gh;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5wr;LX/5xp;IZ)V
 
     .line 25
     .line 26
     .line 27
-    sget-object v0, LX/5bm;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+    sget-object v0, LX/5xm;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
 
     .line 28
     .line 29
@@ -129,7 +251,7 @@
 
     .line 30
     .line 31
-    const-class v1, LX/5bm;
+    const-class v1, LX/5xm;
 
     .line 32
     .line 33
@@ -143,7 +265,7 @@
 
     .line 36
     :try_start_0
-    sget-object v0, LX/5bm;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+    sget-object v0, LX/5xm;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
 
     .line 37
     .line 38
@@ -151,7 +273,7 @@
 
     .line 39
     .line 40
-    sput-object p0, LX/5bm;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+    sput-object p0, LX/5xm;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
 
     .line 41
     .line 42
@@ -176,11 +298,11 @@
 
     .line 47
     :cond_2
-    iget-object v1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 48
     .line 49
-    invoke-virtual {v1}, LX/5eF;->A01()LX/5dF;
+    invoke-virtual {v1}, LX/5x7;->A00()LX/60J;
 
     .line 50
     .line 51
@@ -189,37 +311,37 @@
     const/4 v0, 0x2
 
     .line 53
-    new-instance v3, LX/6Q4;
+    new-instance v3, LX/6gf;
 
     .line 54
     .line 55
-    invoke-direct {v3, p0, v7, v0}, LX/6Q4;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;I)V
+    invoke-direct {v3, p0, v7, v0}, LX/6gf;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;I)V
 
     .line 56
     .line 57
     .line 58
-    sget-object v2, LX/5l7;->OPEN_IN_PROGRESS:LX/5l7;
+    sget-object v2, LX/5wt;->OPEN_IN_PROGRESS:LX/5wt;
 
     .line 59
     .line 60
-    iget-object v0, v1, LX/5eF;->A03:Ljava/lang/String;
+    iget-object v0, v1, LX/5x7;->A03:Ljava/lang/String;
 
     .line 61
     .line 62
-    new-instance v1, LX/5lI;
+    new-instance v1, LX/5xI;
 
     .line 63
     .line 64
-    invoke-direct {v1, v2, v3, v0}, LX/5lI;-><init>(LX/5l7;LX/5bf;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v0}, LX/5xI;-><init>(LX/5wt;LX/5xp;Ljava/lang/String;)V
 
     .line 65
     .line 66
     .line 67
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5kx;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5wY;
 
     .line 68
     .line 69
-    invoke-virtual {v0, v1}, LX/5kx;->A04(LX/5lI;)V
+    invoke-virtual {v0, v1}, LX/5wY;->A04(LX/5xI;)V
 
     .line 70
     .line 71
@@ -240,133 +362,36 @@
 
     .line 76
     .line 77
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 78
     .line 79
     .line 80
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 81
+    .line 82
+    .line 83
+    move-result-object v0
+
+    .line 84
     throw v0
 .end method
 
-.method public static A01(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;LX/1RS;Z)V
-    .locals 4
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/5eF;->A01()LX/5dF;
-
-    .line 3
-    .line 4
-    .line 5
-    new-instance v1, Lcom/google/common/util/concurrent/SettableFuture;
-
-    .line 6
-    .line 7
-    invoke-direct {v1}, Lcom/google/common/util/concurrent/SettableFuture;-><init>()V
-
-    .line 8
-    .line 9
-    .line 10
-    if-eqz p2, :cond_0
-
-    .line 11
-    .line 12
-    sget-object v0, LX/0Yk;->INSTANCE:LX/0Yk;
-
-    .line 13
-    .line 14
-    invoke-static {p2, v1, v0}, LX/1xZ;->A01(LX/1RS;Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/Executor;)V
-
-    .line 15
-    .line 16
-    .line 17
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 18
-    iput-boolean v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A08:Z
-
-    .line 19
-    .line 20
-    new-instance v3, LX/6Q3;
-
-    .line 21
-    .line 22
-    invoke-direct {v3, p0, p1, v1, p3}, LX/6Q3;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;Lcom/google/common/util/concurrent/SettableFuture;Z)V
-
-    .line 23
-    .line 24
-    .line 25
-    sget-object v2, LX/5l7;->CLOSE_IN_PROGRESS:LX/5l7;
-
-    .line 26
-    .line 27
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
-
-    .line 28
-    .line 29
-    iget-object v0, v0, LX/5eF;->A03:Ljava/lang/String;
-
-    .line 30
-    .line 31
-    new-instance v1, LX/5lI;
-
-    .line 32
-    .line 33
-    invoke-direct {v1, v2, v3, v0}, LX/5lI;-><init>(LX/5l7;LX/5bf;Ljava/lang/String;)V
-
-    .line 34
-    .line 35
-    .line 36
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5kx;
-
-    .line 37
-    .line 38
-    invoke-virtual {v0, v1}, LX/5kx;->A04(LX/5lI;)V
-
-    .line 39
-    .line 40
-    .line 41
-    sget-object v0, LX/5bm;->A00:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
-
-    .line 42
-    .line 43
-    if-ne p0, v0, :cond_1
-
-    .line 44
-    .line 45
-    const/4 v0, 0x0
-
-    .line 46
-    invoke-static {v0}, LX/5bm;->A00(Z)V
-
-    .line 47
-    .line 48
-    .line 49
-    :cond_1
-    return-void
-.end method
-
-.method public static A02(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;Ljava/lang/Throwable;)V
+.method public static A03(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;Ljava/lang/Throwable;)V
     .locals 1
 
     .line 0
-    new-instance v0, LX/5lQ;
+    new-instance v0, LX/5xN;
 
     .line 1
     .line 2
-    invoke-direct {v0, p0, p1, p2}, LX/5lQ;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;Ljava/lang/Throwable;)V
+    invoke-direct {v0, p0, p1, p2}, LX/5xN;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;Ljava/lang/Throwable;)V
 
     .line 3
     .line 4
     .line 5
-    invoke-static {v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A07(Ljava/lang/Runnable;)V
 
     .line 6
     .line 7
@@ -374,7 +399,7 @@
     return-void
 .end method
 
-.method public static A03(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;Ljava/lang/Throwable;)V
+.method public static A04(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;Ljava/lang/Throwable;)V
     .locals 9
 
     .line 0
@@ -382,11 +407,11 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 3
     .line 4
-    invoke-virtual {v0}, LX/5eF;->A01()LX/5dF;
+    invoke-virtual {v0}, LX/5x7;->A00()LX/60J;
 
     .line 5
     .line 6
@@ -398,7 +423,7 @@
 
     .line 9
     .line 10
-    invoke-static {p0}, LX/4BF;->A0N(Ljava/lang/Object;)J
+    invoke-static {p0}, LX/434;->A0P(Ljava/lang/Object;)J
 
     .line 11
     .line 12
@@ -406,11 +431,11 @@
     move-result-wide v7
 
     .line 14
-    new-instance v1, LX/5eC;
+    new-instance v1, LX/5x3;
 
     .line 15
     .line 16
-    invoke-direct {v1, p2}, LX/5eC;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, p2}, LX/5x3;-><init>(Ljava/lang/Throwable;)V
 
     .line 17
     .line 18
@@ -426,7 +451,7 @@
     const/4 v6, 0x0
 
     .line 24
-    invoke-interface/range {v0 .. v8}, LX/5dF;->ASK(LX/5e7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+    invoke-interface/range {v0 .. v8}, LX/60J;->AQx(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
 
     .line 25
     .line 26
@@ -435,19 +460,19 @@
 
     .line 28
     .line 29
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 30
     .line 31
-    iget-object v1, v0, LX/5eF;->A02:LX/5Jw;
+    iget-object v1, v0, LX/5x7;->A02:LX/5Yi;
 
     .line 32
     .line 33
-    iget-object v0, v2, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v0, v2, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 34
     .line 35
-    invoke-virtual {v0, v1}, LX/5kp;->A03(LX/5Jw;)Z
+    invoke-virtual {v0, v1}, LX/5wL;->A03(LX/5Yi;)Z
 
     .line 36
     .line 37
@@ -459,21 +484,21 @@
 
     .line 40
     .line 41
-    sget-object v1, LX/5l7;->OPENED:LX/5l7;
+    sget-object v1, LX/5wt;->OPENED:LX/5wt;
 
     .line 42
     .line 43
     :goto_0
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5kx;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5wY;
 
     .line 44
     .line 45
-    invoke-static {v1, v0, p0}, LX/5eF;->A00(LX/5l7;LX/5kx;Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;)V
+    invoke-static {v1, v0, p0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A01(LX/5wt;LX/5wY;Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;)V
 
     .line 46
     .line 47
     .line 48
-    invoke-static {p0, p1, p2}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A02(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1, p2}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A03(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;Ljava/lang/Throwable;)V
 
     .line 49
     .line 50
@@ -482,21 +507,21 @@
 
     .line 52
     :cond_0
-    sget-object v1, LX/5l7;->CLOSED:LX/5l7;
+    sget-object v1, LX/5wt;->CLOSED:LX/5wt;
 
     .line 53
     .line 54
     goto :goto_0
 .end method
 
-.method public static A04(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;Z)V
+.method public static A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;Z)V
     .locals 3
 
     .line 0
     const/4 v1, 0x0
 
     .line 1
-    instance-of v0, p1, LX/6Q3;
+    instance-of v0, p1, LX/6gh;
 
     .line 2
     .line 3
@@ -507,11 +532,11 @@
     move-object v0, p1
 
     .line 6
-    check-cast v0, LX/6Q3;
+    check-cast v0, LX/6gh;
 
     .line 7
     .line 8
-    iget v0, v0, LX/6Q3;->A04:I
+    iget v0, v0, LX/6gh;->A04:I
 
     .line 9
     .line 10
@@ -519,20 +544,20 @@
 
     .line 11
     .line 12
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5kx;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5wY;
 
     .line 13
     .line 14
-    new-instance v2, LX/5l4;
+    new-instance v2, LX/5wj;
 
     .line 15
     .line 16
-    invoke-direct {v2, p0, p1, p2}, LX/5l4;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;Z)V
+    invoke-direct {v2, p0, p1, p2}, LX/5wj;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;Z)V
 
     .line 17
     .line 18
     .line 19
-    iget-object v1, v0, LX/5kx;->A02:Lcom/facebook/cameracore/camerasdk/common/ThreadingWrapper;
+    iget-object v1, v0, LX/5wY;->A02:Lcom/facebook/cameracore/camerasdk/common/ThreadingWrapper;
 
     .line 20
     .line 21
@@ -566,16 +591,16 @@
 
     .line 35
     :cond_1
-    new-instance v0, LX/5l5;
+    new-instance v0, LX/5wk;
 
     .line 36
     .line 37
-    invoke-direct {v0, p0, p1, p2}, LX/5l5;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;Z)V
+    invoke-direct {v0, p0, p1, p2}, LX/5wk;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;Z)V
 
     .line 38
     .line 39
     .line 40
-    invoke-static {v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A07(Ljava/lang/Runnable;)V
 
     .line 41
     .line 42
@@ -583,15 +608,15 @@
     return-void
 .end method
 
-.method public static A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+.method public static A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
     .locals 8
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/5eF;->A01()LX/5dF;
+    invoke-virtual {v0}, LX/5x7;->A00()LX/60J;
 
     .line 3
     .line 4
@@ -603,7 +628,7 @@
 
     .line 7
     .line 8
-    invoke-static {p0}, LX/4BF;->A0N(Ljava/lang/Object;)J
+    invoke-static {p0}, LX/434;->A0P(Ljava/lang/Object;)J
 
     .line 9
     .line 10
@@ -611,11 +636,11 @@
     move-result-wide v7
 
     .line 12
-    new-instance v1, LX/5eC;
+    new-instance v1, LX/5x3;
 
     .line 13
     .line 14
-    invoke-direct {v1, p1, p2}, LX/5eC;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, p1, p2}, LX/5x3;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 15
     .line 16
@@ -635,7 +660,7 @@
     const/4 v6, 0x0
 
     .line 24
-    invoke-interface/range {v0 .. v8}, LX/5dF;->ASK(LX/5e7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+    invoke-interface/range {v0 .. v8}, LX/60J;->AQx(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
 
     .line 25
     .line 26
@@ -653,14 +678,22 @@
     .line 31
     .line 32
     .line 33
-    throw v6
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    throw v0
 .end method
 
-.method public static A06(Ljava/lang/Runnable;)V
+.method public static A07(Ljava/lang/Runnable;)V
     .locals 2
 
     .line 0
-    invoke-static {}, LX/0Yh;->A0f()Ljava/lang/Thread;
+    invoke-static {}, LX/0X5;->A0m()Ljava/lang/Thread;
 
     .line 1
     .line 2
@@ -689,7 +722,7 @@
 
     .line 14
     :cond_0
-    sget-object v0, LX/5lX;->A00:Landroid/os/Handler;
+    sget-object v0, LX/5xn;->A00:Landroid/os/Handler;
 
     .line 15
     .line 16
@@ -703,7 +736,7 @@
 
 
 # virtual methods
-.method public final A4q(LX/5Wr;)V
+.method public final A2v(LX/5vV;)V
     .locals 3
 
     .line 0
@@ -712,15 +745,15 @@
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A09:LX/5b5;
+    iget-object v0, v0, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A09:LX/5x4;
 
     .line 3
     .line 4
-    iget-object v1, v0, LX/5b5;->A00:LX/5a4;
+    iget-object v1, v0, LX/5x4;->A00:LX/5sh;
 
     .line 5
     .line 6
-    iget-object v0, v1, LX/5a4;->A00:Ljava/util/List;
+    iget-object v0, v1, LX/5sh;->A00:Ljava/util/List;
 
     .line 7
     .line 8
@@ -736,7 +769,7 @@
 
     .line 13
     .line 14
-    invoke-virtual {v1, p1}, LX/5a4;->A01(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, LX/5sh;->A01(Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -758,18 +791,23 @@
 
     .line 21
     .line 22
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 23
     .line 24
     .line 25
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
     throw v0
 .end method
 
-.method public final A70(LX/5bf;LX/1RS;Z)V
+.method public final A5B(LX/5xp;LX/1tL;Z)Lcom/google/common/util/concurrent/SettableFuture;
     .locals 7
 
     .line 0
@@ -777,11 +815,11 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 3
     .line 4
-    invoke-virtual {v0}, LX/5eF;->A01()LX/5dF;
+    invoke-virtual {v0}, LX/5x7;->A00()LX/60J;
 
     .line 5
     .line 6
@@ -793,7 +831,7 @@
 
     .line 9
     .line 10
-    invoke-static {p0}, LX/4BF;->A0N(Ljava/lang/Object;)J
+    invoke-static {p0}, LX/434;->A0P(Ljava/lang/Object;)J
 
     .line 11
     .line 12
@@ -812,26 +850,29 @@
 
     .line 18
     .line 19
-    invoke-interface/range {v0 .. v6}, LX/5dF;->ASN(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+    invoke-interface/range {v0 .. v6}, LX/60J;->AR0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
 
     .line 20
     .line 21
     .line 22
     :cond_0
-    invoke-static {p0, p1, p2, p3}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A01(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;LX/1RS;Z)V
+    invoke-static {p0, p1, p2, p3}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;LX/1tL;Z)Lcom/google/common/util/concurrent/SettableFuture;
 
     .line 23
     .line 24
     .line 25
-    return-void
+    move-result-object v0
+
+    .line 26
+    return-object v0
 .end method
 
-.method public final AD1()Ljava/lang/Integer;
+.method public final ABZ()LX/5s8;
     .locals 3
 
     .line 0
     :try_start_0
-    sget-object v0, LX/014;->A00:Ljava/lang/Integer;
+    sget-object v0, LX/5s8;->CAMERA1:LX/5s8;
 
     .line 1
     .line 2
@@ -851,18 +892,23 @@
 
     .line 6
     .line 7
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 8
     .line 9
     .line 10
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
     throw v0
 .end method
 
-.method public final AD2()LX/5bH;
+.method public final ABa()LX/5xP;
     .locals 3
 
     .line 0
@@ -871,11 +917,11 @@
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v0, v0, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/5kp;->A03:LX/5bH;
+    iget-object v0, v0, LX/5wL;->A03:LX/5xP;
 
     .line 5
     .line 6
@@ -895,33 +941,38 @@
 
     .line 10
     .line 11
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 12
     .line 13
     .line 14
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
     throw v0
 .end method
 
-.method public final AD5()LX/5Jw;
+.method public final ABd()LX/5Yi;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/5eF;->A02:LX/5Jw;
+    iget-object v0, v0, LX/5x7;->A02:LX/5Yi;
 
     .line 3
     .line 4
     return-object v0
 .end method
 
-.method public final AE8()LX/5bE;
+.method public final ACi()LX/5xF;
     .locals 5
 
     .line 0
@@ -930,11 +981,11 @@
 
     .line 1
     .line 2
-    iget-object v4, v0, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v4, v0, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 3
     .line 4
-    iget-object v1, v4, LX/5kp;->A00:LX/5bE;
+    iget-object v1, v4, LX/5wL;->A00:LX/5xF;
 
     .line 5
     .line 6
@@ -942,25 +993,25 @@
 
     .line 7
     .line 8
-    new-instance v1, LX/5bE;
+    new-instance v1, LX/5xF;
 
     .line 9
     .line 10
-    invoke-direct {v1}, LX/5bE;-><init>()V
+    invoke-direct {v1}, LX/5xF;-><init>()V
 
     .line 11
     .line 12
     .line 13
-    iput-object v1, v4, LX/5kp;->A00:LX/5bE;
+    iput-object v1, v4, LX/5wL;->A00:LX/5xF;
 
     .line 14
     .line 15
     :cond_0
-    sget-object v0, LX/5kr;->A0Q:LX/5kr;
+    sget-object v0, LX/5tM;->A0Q:LX/5tM;
 
     .line 16
     .line 17
-    iget-object v3, v0, LX/5kr;->A08:LX/5ks;
+    iget-object v3, v0, LX/5tM;->A08:LX/5s0;
 
     .line 18
     .line 19
@@ -974,7 +1025,7 @@
 
     .line 22
     :try_start_1
-    iget-object v1, v3, LX/5ks;->A01:Ljava/lang/String;
+    iget-object v1, v3, LX/5s0;->A01:Ljava/lang/String;
 
     .line 23
     .line 24
@@ -985,7 +1036,7 @@
 
     .line 26
     .line 27
-    iget-object v0, v3, LX/5ks;->A00:Landroid/hardware/Camera$Parameters;
+    iget-object v0, v3, LX/5s0;->A00:Landroid/hardware/Camera$Parameters;
 
     .line 28
     .line 29
@@ -1024,11 +1075,11 @@
     monitor-exit v3
 
     .line 44
-    iget-object v1, v4, LX/5kp;->A00:LX/5bE;
+    iget-object v1, v4, LX/5wL;->A00:LX/5xF;
 
     .line 45
     .line 46
-    iget v0, v1, LX/5bE;->A00:I
+    iget v0, v1, LX/5xF;->A00:I
 
     .line 47
     .line 48
@@ -1036,7 +1087,7 @@
 
     .line 49
     .line 50
-    iput v2, v1, LX/5bE;->A00:I
+    iput v2, v1, LX/5xF;->A00:I
 
     .line 51
     .line 52
@@ -1070,18 +1121,23 @@
 
     .line 60
     .line 61
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 62
     .line 63
     .line 64
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 65
+    .line 66
+    .line 67
+    move-result-object v0
+
+    .line 68
     throw v0
 .end method
 
-.method public final ALC()I
+.method public final AJg()I
     .locals 1
 
     .line 0
@@ -1091,20 +1147,20 @@
     return v0
 .end method
 
-.method public final AM2()I
+.method public final AKY()I
     .locals 3
 
     .line 0
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 1
     .line 2
-    iget-object v1, v0, LX/5eF;->A02:LX/5Jw;
+    iget-object v1, v0, LX/5x7;->A02:LX/5Yi;
 
     .line 3
     .line 4
-    sget-object v0, LX/5Jw;->FRONT:LX/5Jw;
+    sget-object v0, LX/5Yi;->FRONT:LX/5Yi;
 
     .line 5
     .line 6
@@ -1112,12 +1168,12 @@
 
     .line 7
     .line 8
-    sget-object v0, LX/5Ok;->FRONT:LX/5Ok;
+    sget-object v0, LX/5Yj;->FRONT:LX/5Yj;
 
     .line 9
     .line 10
     :goto_0
-    invoke-virtual {v0}, LX/5Ok;->getCameraInfo()Landroid/hardware/Camera$CameraInfo;
+    invoke-virtual {v0}, LX/5Yj;->getCameraInfo()Landroid/hardware/Camera$CameraInfo;
 
     .line 11
     .line 12
@@ -1133,7 +1189,7 @@
 
     .line 17
     :cond_0
-    sget-object v0, LX/5Ok;->BACK:LX/5Ok;
+    sget-object v0, LX/5Yj;->BACK:LX/5Yj;
 
     .line 18
     .line 19
@@ -1153,27 +1209,32 @@
 
     .line 23
     .line 24
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 25
     .line 26
     .line 27
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
     throw v0
 .end method
 
-.method public final AQ0()Z
+.method public final AOZ()Z
     .locals 3
 
     .line 0
     :try_start_0
-    sget-object v1, LX/5kr;->A0Q:LX/5kr;
+    sget-object v1, LX/5tM;->A0Q:LX/5tM;
 
     .line 1
     .line 2
-    iget-boolean v0, v1, LX/5kr;->A0D:Z
+    iget-boolean v0, v1, LX/5tM;->A0D:Z
 
     .line 3
     .line 4
@@ -1181,7 +1242,7 @@
 
     .line 5
     .line 6
-    iget-object v2, v1, LX/5kr;->A08:LX/5ks;
+    iget-object v2, v1, LX/5tM;->A08:LX/5s0;
 
     .line 7
     .line 8
@@ -1191,7 +1252,7 @@
 
     .line 9
     :try_start_1
-    iget-boolean v1, v2, LX/5ks;->A03:Z
+    iget-boolean v1, v2, LX/5s0;->A03:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1243,18 +1304,23 @@
 
     .line 24
     .line 25
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 26
     .line 27
     .line 28
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
     throw v0
 .end method
 
-.method public final ARI()Z
+.method public final APs()Z
     .locals 4
 
     .line 0
@@ -1277,11 +1343,11 @@
 
     .line 7
     .line 8
-    sget-object v1, LX/5kr;->A0Q:LX/5kr;
+    sget-object v1, LX/5tM;->A0Q:LX/5tM;
 
     .line 9
     .line 10
-    iget-object v0, v1, LX/5kr;->A0M:Landroid/hardware/Camera;
+    iget-object v0, v1, LX/5tM;->A0M:Landroid/hardware/Camera;
 
     .line 11
     .line 12
@@ -1289,7 +1355,7 @@
 
     .line 13
     .line 14
-    iget-boolean v0, v1, LX/5kr;->A0N:Z
+    iget-boolean v0, v1, LX/5tM;->A0N:Z
 
     .line 15
     .line 16
@@ -1314,18 +1380,23 @@
 
     .line 22
     .line 23
-    invoke-static {p0, v0, v1, v2}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v1, v2}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 24
     .line 25
     .line 26
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
     throw v0
 .end method
 
-.method public final ARP()Z
+.method public final APz()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -1333,7 +1404,7 @@
     return v0
 .end method
 
-.method public final AS7(LX/5lc;LX/5bE;)V
+.method public final AQi(LX/5y2;LX/5xF;)V
     .locals 10
 
     .line 0
@@ -1342,19 +1413,19 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/5eF;->A02:LX/5Jw;
+    iget-object v0, v0, LX/5x7;->A02:LX/5Yi;
 
     .line 5
     .line 6
-    iget-object v5, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v5, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 7
     .line 8
-    invoke-virtual {v5, v0}, LX/5kp;->A03(LX/5Jw;)Z
+    invoke-virtual {v5, v0}, LX/5wL;->A03(LX/5Yi;)Z
 
     .line 9
     .line 10
@@ -1369,20 +1440,20 @@
     const/4 v0, 0x2
 
     .line 15
-    new-instance v4, LX/6Ph;
+    new-instance v4, LX/6gK;
 
     .line 16
     .line 17
-    invoke-direct {v4, p1, v0, v1}, LX/6Ph;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v4, p1, v0, v1}, LX/6gK;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 18
     .line 19
     .line 20
-    sget-object v3, LX/5kr;->A0Q:LX/5kr;
+    sget-object v3, LX/5tM;->A0Q:LX/5tM;
 
     .line 21
     .line 22
-    iget-object v6, v3, LX/5kr;->A08:LX/5ks;
+    iget-object v6, v3, LX/5tM;->A08:LX/5s0;
 
     .line 23
     .line 24
@@ -1394,7 +1465,7 @@
 
     .line 27
     .line 28
-    iget v9, p2, LX/5bE;->A00:I
+    iget v9, p2, LX/5xF;->A00:I
 
     .line 29
     .line 30
@@ -1408,12 +1479,12 @@
 
     .line 33
     :try_start_1
-    invoke-static {v6}, LX/5ks;->A01(LX/5ks;)Ljava/lang/String;
+    invoke-static {v6}, LX/5s0;->A01(LX/5s0;)Ljava/lang/String;
 
     .line 34
     .line 35
     .line 36
-    iget-object v0, v6, LX/5ks;->A01:Ljava/lang/String;
+    iget-object v0, v6, LX/5s0;->A01:Ljava/lang/String;
 
     .line 37
     .line 38
@@ -1421,7 +1492,7 @@
 
     .line 39
     .line 40
-    invoke-virtual {v6}, LX/5ks;->A06()Ljava/util/ArrayList;
+    invoke-virtual {v6}, LX/5s0;->A06()Ljava/util/ArrayList;
 
     .line 41
     .line 42
@@ -1483,7 +1554,7 @@
     move-result-object v0
 
     .line 70
-    invoke-static {v0}, LX/0Yh;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X5;->A01(Ljava/lang/Object;)I
 
     .line 71
     .line 72
@@ -1491,7 +1562,7 @@
     move-result v1
 
     .line 74
-    invoke-static {v1, v9}, LX/4BF;->A05(II)I
+    invoke-static {v1, v9}, LX/433;->A08(II)I
 
     .line 75
     .line 76
@@ -1516,19 +1587,19 @@
     .line 83
     :cond_1
     :try_start_2
-    iget-object v2, v6, LX/5ks;->A00:Landroid/hardware/Camera$Parameters;
+    iget-object v2, v6, LX/5s0;->A00:Landroid/hardware/Camera$Parameters;
 
     .line 84
     .line 85
-    iget-object v1, v6, LX/5ks;->A01:Ljava/lang/String;
+    iget-object v1, v6, LX/5s0;->A01:Ljava/lang/String;
 
     .line 86
     .line 87
-    iget-object v0, v6, LX/5ks;->A02:Ljava/util/Map;
+    iget-object v0, v6, LX/5s0;->A02:Ljava/util/Map;
 
     .line 88
     .line 89
-    invoke-static {v0, v7}, LX/0Yg;->A0e(Ljava/util/Map;I)Ljava/lang/Object;
+    invoke-static {v0, v7}, LX/0X4;->A0h(Ljava/util/Map;I)Ljava/lang/Object;
 
     .line 90
     .line 91
@@ -1545,7 +1616,7 @@
     .line 96
     .line 97
     .line 98
-    invoke-static {v6}, LX/5ks;->A03(LX/5ks;)V
+    invoke-static {v6}, LX/5s0;->A03(LX/5s0;)V
 
     .line 99
     .line 100
@@ -1599,23 +1670,23 @@
     const/4 v0, 0x3
 
     .line 116
-    new-instance v2, LX/6PJ;
+    new-instance v2, LX/6fw;
 
     .line 117
     .line 118
-    invoke-direct {v2, v4, v0, v5}, LX/6PJ;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v4, v0, v5}, LX/6fw;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 119
     .line 120
     .line 121
-    const/4 v0, 0x4
+    const/4 v0, 0x5
 
     .line 122
-    new-instance v1, LX/6Pg;
+    new-instance v1, LX/6gC;
 
     .line 123
     .line 124
-    invoke-direct {v1, v3, v0}, LX/6Pg;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v1, v3, v0}, LX/6gC;-><init>(Ljava/lang/Object;I)V
 
     .line 125
     .line 126
@@ -1629,7 +1700,7 @@
     .line 130
     .line 131
     .line 132
-    invoke-static {v2, v0}, LX/5Ri;->A02(LX/5Rn;Ljava/util/concurrent/FutureTask;)V
+    invoke-static {v2, v0}, LX/5rS;->A02(LX/5rX;Ljava/util/concurrent/FutureTask;)V
 
     .line 133
     .line 134
@@ -1651,18 +1722,23 @@
 
     .line 139
     .line 140
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 141
     .line 142
     .line 143
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 144
+    .line 145
+    .line 146
+    move-result-object v0
+
+    .line 147
     throw v0
 .end method
 
-.method public final AS8(LX/5lc;)V
+.method public final AQj(LX/5y2;)V
     .locals 5
 
     .line 0
@@ -1671,19 +1747,19 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/5eF;->A02:LX/5Jw;
+    iget-object v0, v0, LX/5x7;->A02:LX/5Yi;
 
     .line 5
     .line 6
-    iget-object v4, v2, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v4, v2, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 7
     .line 8
-    invoke-virtual {v4, v0}, LX/5kp;->A03(LX/5Jw;)Z
+    invoke-virtual {v4, v0}, LX/5wL;->A03(LX/5Yi;)Z
 
     .line 9
     .line 10
@@ -1691,36 +1767,36 @@
     move-result v0
 
     .line 12
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 13
     .line 14
     const/4 v1, 0x1
 
     .line 15
-    new-instance v0, LX/6Ph;
+    new-instance v0, LX/6gK;
 
     .line 16
     .line 17
-    invoke-direct {v0, p1, v1, v2}, LX/6Ph;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v1, v2}, LX/6gK;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 18
     .line 19
     .line 20
-    sget-object v3, LX/5kr;->A0Q:LX/5kr;
+    sget-object v3, LX/5tM;->A0Q:LX/5tM;
 
     .line 21
     .line 22
-    new-instance v2, LX/5lC;
+    new-instance v2, LX/5x5;
 
     .line 23
     .line 24
-    invoke-direct {v2, v0, v4}, LX/5lC;-><init>(LX/5lc;LX/5kp;)V
+    invoke-direct {v2, v0, v4}, LX/5x5;-><init>(LX/5y2;LX/5wL;)V
 
     .line 25
     .line 26
     .line 27
-    invoke-virtual {v3}, LX/5kr;->A06()Z
+    invoke-virtual {v3}, LX/5tM;->A06()Z
 
     .line 28
     .line 29
@@ -1728,19 +1804,19 @@
     move-result v0
 
     .line 31
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 32
     .line 33
-    iget-object v1, v3, LX/5kr;->A0M:Landroid/hardware/Camera;
+    iget-object v1, v3, LX/5tM;->A0M:Landroid/hardware/Camera;
 
     .line 34
     .line 35
-    new-instance v0, LX/5lY;
+    new-instance v0, LX/5tV;
 
     .line 36
     .line 37
-    invoke-direct {v0, v2, v3}, LX/5lY;-><init>(Landroid/hardware/Camera$AutoFocusCallback;LX/5kr;)V
+    invoke-direct {v0, v2, v3}, LX/5tV;-><init>(Landroid/hardware/Camera$AutoFocusCallback;LX/5tM;)V
 
     .line 38
     .line 39
@@ -1754,37 +1830,37 @@
 
     .line 44
     :cond_0
-    const-string v0, "Unable to lock camera focus when camera is not open."
+    const-string v1, "Failed to lock auto focus."
 
     .line 45
     .line 46
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    new-instance v0, LX/5tR;
 
     .line 47
     .line 48
-    .line 49
-    move-result-object v1
+    invoke-direct {v0, v3, v1}, LX/5tR;-><init>(LX/5tM;Ljava/lang/String;)V
 
+    .line 49
     .line 50
+    .line 51
     goto :goto_0
 
-    .line 51
-    :cond_1
-    const-string v0, "Failed to lock auto focus."
-
     .line 52
+    :cond_1
+    const-string v0, "Unable to lock camera focus when camera is not open."
+
     .line 53
-    new-instance v1, LX/5lR;
-
     .line 54
-    .line 55
-    invoke-direct {v1, v3, v0}, LX/5lR;-><init>(LX/5kr;Ljava/lang/String;)V
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
+    .line 55
     .line 56
     .line 57
+    move-result-object v0
+
     .line 58
     :goto_0
-    throw v1
+    throw v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1800,30 +1876,35 @@
 
     .line 62
     .line 63
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 64
     .line 65
     .line 66
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 67
+    .line 68
+    .line 69
+    move-result-object v0
+
+    .line 70
     throw v0
 .end method
 
-.method public final ATd(LX/5kS;)V
+.method public final ARy(LX/5wr;)V
     .locals 13
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5kx;
+    iget-object v1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5wY;
 
     .line 1
     .line 2
-    iget-object v0, v1, LX/5kx;->A01:Ljava/lang/String;
+    iget-object v0, v1, LX/5wY;->A01:Ljava/lang/String;
 
     .line 3
     .line 4
-    invoke-virtual {v1, v0}, LX/5kx;->A05(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, LX/5wY;->A05(Ljava/lang/String;)Z
 
     .line 5
     .line 6
@@ -1840,19 +1921,19 @@
 
     .line 11
     .line 12
-    iget-object v4, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v4, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 13
     .line 14
-    iget-object v0, v4, LX/5eF;->A02:LX/5Jw;
+    iget-object v0, v4, LX/5x7;->A02:LX/5Yi;
 
     .line 15
     .line 16
-    iget-object v3, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v3, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 17
     .line 18
-    invoke-virtual {v3, v0}, LX/5kp;->A03(LX/5Jw;)Z
+    invoke-virtual {v3, v0}, LX/5wL;->A03(LX/5Yi;)Z
 
     .line 19
     .line 20
@@ -1881,11 +1962,11 @@
 
     .line 32
     :cond_0
-    sget-object v0, LX/5kr;->A0Q:LX/5kr;
+    sget-object v0, LX/5tM;->A0Q:LX/5tM;
 
     .line 33
     .line 34
-    iget-object v2, v0, LX/5kr;->A08:LX/5ks;
+    iget-object v2, v0, LX/5tM;->A08:LX/5s0;
 
     .line 35
     .line 36
@@ -1893,7 +1974,7 @@
 
     .line 37
     .line 38
-    iget-object v0, p1, LX/5kS;->A01:LX/5lF;
+    iget-object v0, p1, LX/5wr;->A01:LX/5uN;
 
     .line 39
     .line 40
@@ -1901,13 +1982,13 @@
 
     .line 41
     .line 42
-    invoke-static {v3, v0, v2}, LX/5kp;->A00(LX/5kp;LX/5lF;LX/5ks;)V
+    invoke-static {v3, v0, v2}, LX/5wL;->A00(LX/5wL;LX/5uN;LX/5s0;)V
 
     .line 43
     .line 44
     .line 45
     :cond_1
-    iget-object v1, p1, LX/5kS;->A00:LX/569;
+    iget-object v1, p1, LX/5wr;->A00:LX/4KB;
 
     .line 46
     .line 47
@@ -1915,11 +1996,11 @@
 
     .line 48
     .line 49
-    sget-object v0, LX/5l0;->A00:Ljava/util/Map;
+    sget-object v0, LX/5tv;->A00:Ljava/util/Map;
 
     .line 50
     .line 51
-    invoke-static {v1, v0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 52
     .line 53
@@ -1931,7 +2012,7 @@
 
     .line 56
     .line 57
-    invoke-virtual {v2}, LX/5ks;->A05()Ljava/lang/String;
+    invoke-virtual {v2}, LX/5s0;->A05()Ljava/lang/String;
 
     .line 58
     .line 59
@@ -1951,7 +2032,7 @@
 
     .line 66
     .line 67
-    invoke-virtual {v2, v1}, LX/5ks;->A09(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, LX/5s0;->A09(Ljava/lang/String;)V
 
     .line 68
     .line 69
@@ -1963,7 +2044,7 @@
 
     .line 71
     :try_start_1
-    invoke-virtual {v2, v0}, LX/5ks;->A0A(Z)V
+    invoke-virtual {v2, v0}, LX/5s0;->A0A(Z)V
 
     .line 72
     .line 73
@@ -2005,7 +2086,7 @@
     .line 88
     .line 89
     .line 90
-    invoke-virtual {v4}, LX/5eF;->A01()LX/5dF;
+    invoke-virtual {v4}, LX/5x7;->A00()LX/60J;
 
     .line 91
     .line 92
@@ -2013,7 +2094,7 @@
     move-result-object v4
 
     .line 94
-    invoke-static {v3}, LX/4BF;->A0N(Ljava/lang/Object;)J
+    invoke-static {v3}, LX/434;->A0P(Ljava/lang/Object;)J
 
     .line 95
     .line 96
@@ -2042,11 +2123,11 @@
 
     .line 108
     :goto_0
-    new-instance v5, LX/5eC;
+    new-instance v5, LX/5x3;
 
     .line 109
     .line 110
-    invoke-direct {v5, v0, v2}, LX/5eC;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v5, v0, v2}, LX/5x3;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 111
     .line 112
@@ -2074,7 +2155,7 @@
 
     .line 123
     .line 124
-    invoke-interface/range {v4 .. v12}, LX/5dF;->ASK(LX/5e7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+    invoke-interface/range {v4 .. v12}, LX/60J;->AQx(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
 
     .line 125
     .line 126
@@ -2111,29 +2192,34 @@
 
     .line 136
     .line 137
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 138
     .line 139
     .line 140
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 141
+    .line 142
+    .line 143
+    move-result-object v0
+
+    .line 144
     throw v0
 
-    .line 142
+    .line 145
     :cond_4
     return-void
 .end method
 
-.method public final AfY(LX/5kS;LX/5bf;LX/5eA;)V
+.method public final Adv(LX/5wr;LX/5xp;LX/5x1;)V
     .locals 1
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, p1, p2, p3, v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5kS;LX/5bf;LX/5eA;Z)V
+    invoke-static {p0, p1, p2, p3, v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A02(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5wr;LX/5xp;LX/5x1;Z)V
 
     .line 2
     .line 3
@@ -2141,7 +2227,7 @@
     return-void
 .end method
 
-.method public final Aj5(LX/5Wr;)V
+.method public final Aha(LX/5vV;)V
     .locals 3
 
     .line 0
@@ -2150,15 +2236,15 @@
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A09:LX/5b5;
+    iget-object v0, v0, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A09:LX/5x4;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/5b5;->A00:LX/5a4;
+    iget-object v0, v0, LX/5x4;->A00:LX/5sh;
 
     .line 5
     .line 6
-    invoke-virtual {v0, p1}, LX/5a4;->A02(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, LX/5sh;->A02(Ljava/lang/Object;)Z
 
     .line 7
     .line 8
@@ -2179,29 +2265,34 @@
 
     .line 13
     .line 14
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 15
     .line 16
     .line 17
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
     throw v0
 .end method
 
-.method public final AlC(LX/6Q3;)V
+.method public final Ajh(LX/6gh;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A04:LX/6Q3;
+    iput-object p1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A04:LX/6gh;
 
     .line 1
     .line 2
     return-void
 .end method
 
-.method public final AlM(LX/5eA;)V
+.method public final Ajs(LX/5x1;)V
     .locals 3
 
     .line 0
@@ -2210,19 +2301,19 @@
 
     .line 1
     .line 2
-    iput-object p1, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A04:LX/5eA;
+    iput-object p1, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A04:LX/5x1;
 
     .line 3
     .line 4
-    iget-object v0, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v0, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 5
     .line 6
-    iput-object p1, v0, LX/5kp;->A01:LX/5eA;
+    iput-object p1, v0, LX/5wL;->A01:LX/5x1;
 
     .line 7
     .line 8
-    iget v0, p1, LX/5eA;->A06:I
+    iget v0, p1, LX/5x1;->A06:I
 
     .line 9
     .line 10
@@ -2246,40 +2337,45 @@
 
     .line 16
     .line 17
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 18
     .line 19
     .line 20
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
     throw v0
 .end method
 
-.method public final Aln(LX/5j9;)V
+.method public final AkL(LX/5wN;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A01:LX/5j9;
+    iput-object p1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A01:LX/5wN;
 
     .line 1
     .line 2
     return-void
 .end method
 
-.method public final Amm(LX/5a3;)V
+.method public final AlU(LX/5zR;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A03:LX/5a3;
+    iput-object p1, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A03:LX/5zR;
 
     .line 1
     .line 2
     return-void
 .end method
 
-.method public final Aoz(LX/5ZF;Ljava/io/File;)V
+.method public final Anh(LX/5xt;Ljava/io/File;)V
     .locals 6
 
     .line 0
@@ -2288,16 +2384,16 @@
 
     .line 1
     .line 2
-    new-instance v1, LX/5lj;
+    new-instance v1, LX/6Cd;
 
     .line 3
     .line 4
-    invoke-direct {v1, p0, p1}, LX/5lj;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5ZF;)V
+    invoke-direct {v1, p0, p1}, LX/6Cd;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xt;)V
 
     .line 5
     .line 6
     .line 7
-    iget-object v5, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v5, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 8
     .line 9
@@ -2305,11 +2401,11 @@
 
     .line 10
     .line 11
-    sget-object v4, LX/5kr;->A0Q:LX/5kr;
+    sget-object v4, LX/5tM;->A0Q:LX/5tM;
 
     .line 12
     .line 13
-    iget-boolean v0, v4, LX/5kr;->A0F:Z
+    iget-boolean v0, v4, LX/5tM;->A0F:Z
 
     .line 14
     .line 15
@@ -2317,7 +2413,7 @@
 
     .line 16
     .line 17
-    iput-object v1, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A01:LX/5ZF;
+    iput-object v1, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A01:LX/5xt;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -2332,7 +2428,7 @@
     move-result-object v0
 
     .line 23
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 24
     .line 25
@@ -2376,7 +2472,7 @@
     move-result-object v1
 
     .line 45
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 46
     .line 47
@@ -2384,7 +2480,7 @@
     move-result-object v0
 
     .line 49
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 50
     .line 51
@@ -2392,7 +2488,7 @@
     move-result-object v0
 
     .line 53
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 54
     .line 55
@@ -2411,20 +2507,20 @@
 
     .line 59
     :try_start_2
-    iget-object v1, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A02:LX/5kS;
+    iget-object v1, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A02:LX/5wr;
 
     .line 60
     .line 61
-    iget-object v0, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v0, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 62
     .line 63
-    invoke-virtual {v0, v5, v1}, LX/5kp;->A02(LX/5eF;LX/5kS;)V
+    invoke-virtual {v0, v5, v1}, LX/5wL;->A02(LX/5x7;LX/5wr;)V
 
     .line 64
     .line 65
     .line 66
-    iget-object v1, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A01:LX/5ZF;
+    iget-object v1, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A01:LX/5xt;
 
     .line 67
     .line 68
@@ -2436,7 +2532,7 @@
 
     .line 71
     .line 72
-    invoke-static {v1, v0, v2}, LX/5e7;->A01(LX/5ZF;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/5VZ;->A01(LX/5xt;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 73
     .line 74
@@ -2444,32 +2540,32 @@
     const/4 v0, 0x0
 
     .line 76
-    iput-object v0, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A01:LX/5ZF;
+    iput-object v0, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A01:LX/5xt;
 
     .line 77
     .line 78
     :cond_0
-    iget-object v2, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v1, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 79
     .line 80
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     .line 81
-    new-instance v0, LX/6Ph;
+    new-instance v0, LX/6gK;
 
     .line 82
     .line 83
-    invoke-direct {v0, v5, v1, v3}, LX/6Ph;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, v5, v2, v3}, LX/6gK;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 84
     .line 85
     .line 86
-    new-instance v3, LX/6PJ;
+    new-instance v3, LX/6fw;
 
     .line 87
     .line 88
-    invoke-direct {v3, v0, v1, v2}, LX/6PJ;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v3, v0, v2, v1}, LX/6fw;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 89
     .line 90
@@ -2482,7 +2578,7 @@
     move-result-object v1
 
     .line 95
-    invoke-virtual {v4}, LX/5kr;->A06()Z
+    invoke-virtual {v4}, LX/5tM;->A06()Z
 
     .line 96
     .line 97
@@ -2498,7 +2594,7 @@
 
     .line 102
     .line 103
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 104
     .line 105
@@ -2506,7 +2602,7 @@
     move-result-object v0
 
     .line 107
-    invoke-virtual {v3, v0}, LX/6PJ;->AA8(Ljava/lang/Exception;)V
+    invoke-virtual {v3, v0}, LX/6fw;->A8b(Ljava/lang/Exception;)V
 
     .line 108
     .line 109
@@ -2518,15 +2614,15 @@
     const/4 v0, 0x1
 
     .line 112
-    iput-boolean v0, v4, LX/5kr;->A0F:Z
+    iput-boolean v0, v4, LX/5tM;->A0F:Z
 
     .line 113
     .line 114
-    new-instance v0, LX/5kt;
+    new-instance v0, LX/6gH;
 
     .line 115
     .line 116
-    invoke-direct {v0, v4, v1}, LX/5kt;-><init>(LX/5kr;Ljava/lang/String;)V
+    invoke-direct {v0, v4, v1, v2}, LX/6gH;-><init>(Ljava/lang/Object;Ljava/lang/String;I)V
 
     .line 117
     .line 118
@@ -2543,16 +2639,16 @@
     const/4 v1, 0x4
 
     .line 125
-    new-instance v0, LX/6PJ;
+    new-instance v0, LX/6fw;
 
     .line 126
     .line 127
-    invoke-direct {v0, v3, v1, v4}, LX/6PJ;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, v3, v1, v4}, LX/6fw;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 128
     .line 129
     .line 130
-    invoke-static {v0, v2}, LX/5Ri;->A02(LX/5Rn;Ljava/util/concurrent/FutureTask;)V
+    invoke-static {v0, v2}, LX/5rS;->A02(LX/5rX;Ljava/util/concurrent/FutureTask;)V
 
     .line 131
     .line 132
@@ -2565,7 +2661,7 @@
 
     .line 135
     .line 136
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 137
     .line 138
@@ -2581,7 +2677,7 @@
 
     .line 142
     .line 143
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 144
     .line 145
@@ -2606,18 +2702,23 @@
 
     .line 151
     .line 152
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 153
     .line 154
     .line 155
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 156
+    .line 157
+    .line 158
+    move-result-object v0
+
+    .line 159
     throw v0
 .end method
 
-.method public final ApD()V
+.method public final Anw()V
     .locals 12
 
     .line 0
@@ -2626,15 +2727,15 @@
 
     .line 1
     .line 2
-    iget-object v11, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v11, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 3
     .line 4
-    sget-object v7, LX/5kr;->A0Q:LX/5kr;
+    sget-object v7, LX/5tM;->A0Q:LX/5tM;
 
     .line 5
     .line 6
-    iget-boolean v0, v7, LX/5kr;->A0F:Z
+    iget-boolean v0, v7, LX/5tM;->A0F:Z
 
     .line 7
     .line 8
@@ -2642,26 +2743,26 @@
 
     .line 9
     .line 10
-    iget-object v10, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v10, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 11
     .line 12
-    iget-object v9, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0A:LX/5lh;
+    iget-object v9, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0A:LX/5wO;
 
     .line 13
     .line 14
-    iget-object v8, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A02:LX/5kS;
+    iget-object v8, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A02:LX/5wr;
 
     .line 15
     .line 16
     const/4 v6, 0x5
 
     .line 17
-    new-instance v2, LX/6Ph;
+    new-instance v2, LX/6gK;
 
     .line 18
     .line 19
-    invoke-direct {v2, v11, v6, v3}, LX/6Ph;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v11, v6, v3}, LX/6gK;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 20
     .line 21
@@ -2669,11 +2770,11 @@
     const/4 v0, 0x6
 
     .line 23
-    new-instance v1, LX/6Ph;
+    new-instance v1, LX/6gK;
 
     .line 24
     .line 25
-    invoke-direct {v1, v11, v0, v3}, LX/6Ph;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, v11, v0, v3}, LX/6gK;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 26
     .line 27
@@ -2681,11 +2782,11 @@
     const/4 v0, 0x1
 
     .line 29
-    new-instance v5, LX/6PJ;
+    new-instance v5, LX/6fw;
 
     .line 30
     .line 31
-    invoke-direct {v5, v2, v0, v10}, LX/6PJ;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v5, v2, v0, v10}, LX/6fw;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 32
     .line 33
@@ -2693,32 +2794,32 @@
     const/4 v0, 0x2
 
     .line 35
-    new-instance v4, LX/6PJ;
+    new-instance v4, LX/6fw;
 
     .line 36
     .line 37
-    invoke-direct {v4, v1, v0, v10}, LX/6PJ;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v4, v1, v0, v10}, LX/6fw;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 38
     .line 39
     .line 40
-    new-instance v3, LX/5lG;
+    new-instance v3, LX/5vk;
 
     .line 41
     .line 42
-    invoke-direct {v3, v11, v8, v9, v10}, LX/5lG;-><init>(LX/5eF;LX/5kS;LX/5lh;LX/5kp;)V
+    invoke-direct {v3, v11, v8, v9, v10}, LX/5vk;-><init>(LX/5x7;LX/5wr;LX/5wO;LX/5wL;)V
 
     .line 43
     .line 44
     .line 45
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     .line 46
-    new-instance v0, LX/6Pg;
+    new-instance v0, LX/6gC;
 
     .line 47
     .line 48
-    invoke-direct {v0, v7, v1}, LX/6Pg;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, v7, v1}, LX/6gC;-><init>(Ljava/lang/Object;I)V
 
     .line 49
     .line 50
@@ -2732,25 +2833,25 @@
     .line 54
     .line 55
     .line 56
-    new-instance v1, LX/6PJ;
+    new-instance v1, LX/6fw;
 
     .line 57
     .line 58
-    invoke-direct {v1, v4, v6, v7}, LX/6PJ;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, v4, v6, v7}, LX/6fw;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 59
     .line 60
     .line 61
-    new-instance v0, LX/5gn;
+    new-instance v0, LX/5tO;
 
     .line 62
     .line 63
-    invoke-direct {v0, v5, v1, v7, v3}, LX/5gn;-><init>(LX/5Rn;LX/5Rn;LX/5kr;LX/5lS;)V
+    invoke-direct {v0, v3, v5, v1, v7}, LX/5tO;-><init>(LX/5vk;LX/5rX;LX/5rX;LX/5tM;)V
 
     .line 64
     .line 65
     .line 66
-    invoke-static {v0, v2}, LX/5Ri;->A02(LX/5Rn;Ljava/util/concurrent/FutureTask;)V
+    invoke-static {v0, v2}, LX/5rS;->A02(LX/5rX;Ljava/util/concurrent/FutureTask;)V
 
     .line 67
     .line 68
@@ -2763,7 +2864,7 @@
 
     .line 71
     .line 72
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 73
     .line 74
@@ -2787,26 +2888,31 @@
 
     .line 80
     .line 81
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 82
     .line 83
     .line 84
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 85
+    .line 86
+    .line 87
+    move-result-object v0
+
+    .line 88
     throw v0
 .end method
 
-.method public final Ape(LX/5bf;)V
+.method public final AoK(LX/5xp;)V
     .locals 9
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/5eF;->A01()LX/5dF;
+    invoke-virtual {v0}, LX/5x7;->A00()LX/60J;
 
     .line 3
     .line 4
@@ -2818,7 +2924,7 @@
 
     .line 7
     .line 8
-    invoke-static {p0}, LX/4BF;->A0N(Ljava/lang/Object;)J
+    invoke-static {p0}, LX/434;->A0P(Ljava/lang/Object;)J
 
     .line 9
     .line 10
@@ -2837,7 +2943,7 @@
     const/4 v6, 0x0
 
     .line 17
-    invoke-interface/range {v2 .. v8}, LX/5dF;->ASN(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+    invoke-interface/range {v2 .. v8}, LX/60J;->AR0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
 
     .line 18
     .line 19
@@ -2850,11 +2956,11 @@
 
     .line 23
     .line 24
-    new-instance v1, LX/5e5;
+    new-instance v1, LX/5wa;
 
     .line 25
     .line 26
-    invoke-direct {v1, p0, p1, v2, v0}, LX/5e5;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;LX/5dF;I)V
+    invoke-direct {v1, p0, p1, v2, v0}, LX/5wa;-><init>(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;LX/60J;I)V
 
     .line 27
     .line 28
@@ -2862,7 +2968,7 @@
     const/4 v0, 0x1
 
     .line 30
-    invoke-static {p0, v1, v6, v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A01(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;LX/1RS;Z)V
+    invoke-static {p0, v1, v6, v0}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;LX/1tL;Z)Lcom/google/common/util/concurrent/SettableFuture;
 
     .line 31
     .line 32
@@ -2870,7 +2976,7 @@
     return-void
 .end method
 
-.method public final AqC(LX/5lc;)V
+.method public final Aoz(LX/5y2;)V
     .locals 6
 
     .line 0
@@ -2879,19 +2985,19 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/5eF;->A02:LX/5Jw;
+    iget-object v0, v0, LX/5x7;->A02:LX/5Yi;
 
     .line 5
     .line 6
-    iget-object v5, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v5, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 7
     .line 8
-    invoke-virtual {v5, v0}, LX/5kp;->A03(LX/5Jw;)Z
+    invoke-virtual {v5, v0}, LX/5wL;->A03(LX/5Yi;)Z
 
     .line 9
     .line 10
@@ -2906,20 +3012,20 @@
     const/4 v0, 0x3
 
     .line 15
-    new-instance v4, LX/6Ph;
+    new-instance v4, LX/6gK;
 
     .line 16
     .line 17
-    invoke-direct {v4, p1, v0, v1}, LX/6Ph;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v4, p1, v0, v1}, LX/6gK;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 18
     .line 19
     .line 20
-    sget-object v3, LX/5kr;->A0Q:LX/5kr;
+    sget-object v3, LX/5tM;->A0Q:LX/5tM;
 
     .line 21
     .line 22
-    iget-object v1, v3, LX/5kr;->A08:LX/5ks;
+    iget-object v1, v3, LX/5tM;->A08:LX/5s0;
 
     .line 23
     .line 24
@@ -2927,7 +3033,7 @@
 
     .line 25
     .line 26
-    invoke-virtual {v1}, LX/5ks;->A08()V
+    invoke-virtual {v1}, LX/5s0;->A08()V
 
     .line 27
     .line 28
@@ -2935,23 +3041,23 @@
     const/4 v0, 0x0
 
     .line 30
-    new-instance v2, LX/6PI;
+    new-instance v2, LX/6fx;
 
     .line 31
     .line 32
-    invoke-direct {v2, v4, v5, v1, v0}, LX/6PI;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, v4, v5, v1, v0}, LX/6fx;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     .line 33
     .line 34
     .line 35
-    const/4 v0, 0x5
+    const/4 v0, 0x6
 
     .line 36
-    new-instance v1, LX/6Pg;
+    new-instance v1, LX/6gC;
 
     .line 37
     .line 38
-    invoke-direct {v1, v3, v0}, LX/6Pg;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v1, v3, v0}, LX/6gC;-><init>(Ljava/lang/Object;I)V
 
     .line 39
     .line 40
@@ -2965,7 +3071,7 @@
     .line 44
     .line 45
     .line 46
-    invoke-static {v2, v0}, LX/5Ri;->A02(LX/5Rn;Ljava/util/concurrent/FutureTask;)V
+    invoke-static {v2, v0}, LX/5rS;->A02(LX/5rX;Ljava/util/concurrent/FutureTask;)V
 
     .line 47
     .line 48
@@ -2979,7 +3085,7 @@
 
     .line 51
     .line 52
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 53
     .line 54
@@ -3003,18 +3109,23 @@
 
     .line 60
     .line 61
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 62
     .line 63
     .line 64
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 65
+    .line 66
+    .line 67
+    move-result-object v0
+
+    .line 68
     throw v0
 .end method
 
-.method public final AqD(LX/5lc;)V
+.method public final Ap0(LX/5y2;)V
     .locals 4
 
     .line 0
@@ -3023,19 +3134,19 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 3
     .line 4
-    iget-object v1, v0, LX/5eF;->A02:LX/5Jw;
+    iget-object v1, v0, LX/5x7;->A02:LX/5Yi;
 
     .line 5
     .line 6
-    iget-object v0, v2, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v0, v2, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 7
     .line 8
-    invoke-virtual {v0, v1}, LX/5kp;->A03(LX/5Jw;)Z
+    invoke-virtual {v0, v1}, LX/5wL;->A03(LX/5Yi;)Z
 
     .line 9
     .line 10
@@ -3047,11 +3158,11 @@
 
     .line 13
     .line 14
-    sget-object v3, LX/5kr;->A0Q:LX/5kr;
+    sget-object v3, LX/5tM;->A0Q:LX/5tM;
 
     .line 15
     .line 16
-    invoke-virtual {v3}, LX/5kr;->A06()Z
+    invoke-virtual {v3}, LX/5tM;->A06()Z
 
     .line 17
     .line 18
@@ -3063,7 +3174,7 @@
 
     .line 21
     .line 22
-    iget-object v2, v3, LX/5kr;->A0I:Ljava/lang/Object;
+    iget-object v2, v3, LX/5tM;->A0I:Ljava/lang/Object;
 
     .line 23
     .line 24
@@ -3073,7 +3184,7 @@
 
     .line 25
     :try_start_1
-    iget-object v0, v3, LX/5kr;->A0M:Landroid/hardware/Camera;
+    iget-object v0, v3, LX/5tM;->A0M:Landroid/hardware/Camera;
 
     .line 26
     .line 27
@@ -3081,7 +3192,7 @@
 
     .line 28
     .line 29
-    invoke-virtual {v3}, LX/5kr;->A06()Z
+    invoke-virtual {v3}, LX/5tM;->A06()Z
 
     .line 30
     .line 31
@@ -3093,11 +3204,11 @@
 
     .line 34
     .line 35
-    iget-object v0, v3, LX/5kr;->A08:LX/5ks;
+    iget-object v0, v3, LX/5tM;->A08:LX/5s0;
 
     .line 36
     .line 37
-    invoke-virtual {v0}, LX/5ks;->A0C()Z
+    invoke-virtual {v0}, LX/5s0;->A0C()Z
 
     .line 38
     .line 39
@@ -3109,7 +3220,7 @@
 
     .line 42
     .line 43
-    iget-object v0, v3, LX/5kr;->A0M:Landroid/hardware/Camera;
+    iget-object v0, v3, LX/5tM;->A0M:Landroid/hardware/Camera;
 
     .line 44
     .line 45
@@ -3125,11 +3236,11 @@
 
     .line 49
     :try_start_2
-    iget-object v0, v3, LX/5kr;->A08:LX/5ks;
+    iget-object v0, v3, LX/5tM;->A08:LX/5s0;
 
     .line 50
     .line 51
-    invoke-virtual {v0}, LX/5ks;->A07()V
+    invoke-virtual {v0}, LX/5s0;->A07()V
 
     .line 52
     .line 53
@@ -3137,14 +3248,14 @@
     const/4 v0, 0x0
 
     .line 55
-    iput-boolean v0, v3, LX/5kr;->A0D:Z
+    iput-boolean v0, v3, LX/5tM;->A0D:Z
 
     .line 56
     .line 57
     const/4 v0, 0x0
 
     .line 58
-    invoke-interface {p1, v0}, LX/5lc;->onSuccess(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, LX/5y2;->onSuccess(Ljava/lang/Object;)V
 
     .line 59
     .line 60
@@ -3160,11 +3271,11 @@
 
     .line 63
     .line 64
-    new-instance v0, LX/5lR;
+    new-instance v0, LX/5tR;
 
     .line 65
     .line 66
-    invoke-direct {v0, v3, v1}, LX/5lR;-><init>(LX/5kr;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v1}, LX/5tR;-><init>(LX/5tM;Ljava/lang/String;)V
 
     .line 67
     .line 68
@@ -3190,11 +3301,11 @@
 
     .line 74
     .line 75
-    new-instance v1, LX/5lR;
+    new-instance v1, LX/5tR;
 
     .line 76
     .line 77
-    invoke-direct {v1, v3, v0}, LX/5lR;-><init>(LX/5kr;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v0}, LX/5tR;-><init>(LX/5tM;Ljava/lang/String;)V
 
     .line 78
     .line 79
@@ -3207,7 +3318,7 @@
 
     .line 82
     .line 83
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 84
     .line 85
@@ -3232,14 +3343,19 @@
 
     .line 91
     .line 92
-    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v2, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 93
     .line 94
     .line 95
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 96
+    .line 97
+    .line 98
+    move-result-object v0
+
+    .line 99
     throw v0
 .end method
 
@@ -3247,7 +3363,7 @@
     .locals 3
 
     .line 0
-    sget-object v2, LX/5be;->A00:LX/5be;
+    sget-object v2, LX/5yf;->A00:LX/5yf;
 
     .line 1
     .line 2
@@ -3257,7 +3373,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {p0, v2, v0, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A01(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5bf;LX/1RS;Z)V
+    invoke-static {p0, v2, v0, v1}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;LX/5xp;LX/1tL;Z)Lcom/google/common/util/concurrent/SettableFuture;
 
     .line 5
     .line 6
@@ -3284,23 +3400,23 @@
 
     .line 2
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5kx;
+    iget-object v2, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05:LX/5wY;
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 5
     .line 6
-    iget-object v1, v0, LX/5eF;->A03:Ljava/lang/String;
+    iget-object v1, v0, LX/5x7;->A03:Ljava/lang/String;
 
     .line 7
     .line 8
-    iget-object v0, v2, LX/5kx;->A00:LX/5l7;
+    iget-object v0, v2, LX/5wY;->A00:LX/5wt;
 
     .line 9
     .line 10
-    invoke-virtual {v0}, LX/5l7;->isOpened()Z
+    invoke-virtual {v0}, LX/5wt;->isOpened()Z
 
     .line 11
     .line 12
@@ -3312,7 +3428,7 @@
 
     .line 15
     .line 16
-    iget-object v0, v2, LX/5kx;->A01:Ljava/lang/String;
+    iget-object v0, v2, LX/5wY;->A01:Ljava/lang/String;
 
     .line 17
     .line 18
@@ -3332,11 +3448,11 @@
 
     .line 25
     .line 26
-    sget-object v0, LX/5l7;->CLOSE_IN_PROGRESS:LX/5l7;
+    sget-object v0, LX/5wt;->CLOSE_IN_PROGRESS:LX/5wt;
 
     .line 27
     .line 28
-    invoke-static {v0, v2, v1}, LX/5kx;->A02(LX/5l7;LX/5kx;Ljava/lang/String;)Z
+    invoke-static {v0, v2, v1}, LX/5wY;->A02(LX/5wt;LX/5wY;Ljava/lang/String;)Z
 
     .line 29
     .line 30
@@ -3352,19 +3468,19 @@
 
     .line 35
     .line 36
-    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5eF;
+    iget-object v0, p0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
 
     .line 37
     .line 38
-    iget-object v0, v0, LX/5eF;->A02:LX/5Jw;
+    iget-object v0, v0, LX/5x7;->A02:LX/5Yi;
 
     .line 39
     .line 40
-    iget-object v2, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5kp;
+    iget-object v2, v1, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0B:LX/5wL;
 
     .line 41
     .line 42
-    invoke-virtual {v2, v0}, LX/5kp;->A03(LX/5Jw;)Z
+    invoke-virtual {v2, v0}, LX/5wL;->A03(LX/5Yi;)Z
 
     .line 43
     .line 44
@@ -3379,7 +3495,7 @@
     const/4 v1, 0x1
 
     .line 49
-    iget-object v0, v2, LX/5kp;->A03:LX/5bH;
+    iget-object v0, v2, LX/5wL;->A03:LX/5xP;
 
     .line 50
     .line 51
@@ -3395,7 +3511,7 @@
 
     .line 56
     .line 57
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 58
     .line 59
@@ -3403,7 +3519,7 @@
     move-result-object v0
 
     .line 61
-    invoke-static {p0, v1, v0, v4}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v1, v0, v4}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 62
     .line 63
@@ -3429,13 +3545,18 @@
 
     .line 69
     .line 70
-    invoke-static {p0, v0, v1, v3}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A05(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    invoke-static {p0, v0, v1, v3}, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A06(Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;Ljava/lang/String;Ljava/lang/Throwable;Z)V
 
     .line 71
     .line 72
     .line 73
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 74
+    .line 75
+    .line 76
+    move-result-object v0
+
+    .line 77
     throw v0
 .end method

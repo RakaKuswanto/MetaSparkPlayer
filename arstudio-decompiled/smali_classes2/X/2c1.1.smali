@@ -3,25 +3,27 @@
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/util/Map;
+# instance fields
+.field public final A00:LX/0lu;
+
+.field public final A01:LX/0lu;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    new-instance v0, LX/2bS;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/2bS;-><init>()V
-
     .line 3
+    sget v0, LX/2I6;->AGJ:I
+
     .line 4
     .line 5
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
     .line 6
     .line 7
@@ -29,9 +31,25 @@
     move-result-object v0
 
     .line 9
-    sput-object v0, LX/2c1;->A00:Ljava/util/Map;
+    iput-object v0, p0, LX/2c1;->A01:LX/0lu;
 
     .line 10
     .line 11
+    sget v0, LX/2I6;->AFr:I
+
+    .line 12
+    .line 13
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    iput-object v0, p0, LX/2c1;->A00:LX/0lu;
+
+    .line 18
+    .line 19
     return-void
 .end method

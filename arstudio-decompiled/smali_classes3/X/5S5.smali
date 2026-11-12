@@ -1,49 +1,52 @@
-.class public abstract LX/5S5;
-.super LX/5S8;
+.class public final synthetic LX/5S5;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaPeriodQueue2$$ExternalSyntheticLambda0"
 
 
 # instance fields
-.field public final A00:Ljava/nio/ByteBuffer;
+.field public final synthetic A00:LX/5QY;
+
+.field public final synthetic A01:LX/5RP;
+
+.field public final synthetic A02:Lcom/google/common/collect/ImmutableList$Builder;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(LX/5QY;LX/5RP;Lcom/google/common/collect/ImmutableList$Builder;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/5S5;->A00:LX/5QY;
+
+    iput-object p3, p0, LX/5S5;->A02:Lcom/google/common/collect/ImmutableList$Builder;
+
+    iput-object p2, p0, LX/5S5;->A01:LX/5RP;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/5S8;-><init>()V
+    iget-object v0, p0, LX/5S5;->A02:Lcom/google/common/collect/ImmutableList$Builder;
 
     .line 1
     .line 2
-    .line 3
-    const/16 v0, 0x8
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
+    .line 3
     .line 4
     .line 5
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v1
-
-    .line 9
-    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    .line 10
-    .line 11
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/5S5;->A00:Ljava/nio/ByteBuffer;
-
-    .line 16
-    .line 17
     return-void
 .end method

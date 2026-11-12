@@ -21,21 +21,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x5
+    const/16 v0, 0x20
 
     .line 1
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
-
     .line 2
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -52,7 +53,7 @@
 
     .line 268435460
     .line 268435461
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 268435462
     .line 268435463
@@ -108,7 +109,7 @@
     .line 15
     .line 16
     .line 17
-    invoke-static {v1, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
     .line 19
@@ -121,7 +122,7 @@
     move-result-object v0
 
     .line 24
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 25
     .line 26
@@ -182,49 +183,45 @@
 
     .line 5
     .line 6
-    if-eqz v1, :cond_0
+    check-cast p1, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;
 
     .line 7
     .line 8
-    check-cast p1, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;
+    iget-object v0, p1, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;->A00:Lcom/google/common/collect/ImmutableMap;
 
     .line 9
     .line 10
-    iget-object v0, p1, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;->A00:Lcom/google/common/collect/ImmutableMap;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 11
     .line 12
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
     .line 13
-    .line 14
-    .line 15
     move-result v0
 
-    .line 16
+    .line 14
     if-eqz v0, :cond_0
+
+    .line 15
+    .line 16
+    iget-boolean v2, p0, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;->A01:Z
 
     .line 17
     .line 18
-    iget-boolean v2, p0, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;->A01:Z
+    iget-boolean v1, p1, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;->A01:Z
 
     .line 19
     .line 20
-    iget-boolean v1, p1, Lcom/facebook/interstitial/triggers/InterstitialTriggerContext;->A01:Z
-
-    .line 21
-    .line 22
     const/4 v0, 0x1
 
-    .line 23
+    .line 21
     if-eq v2, v1, :cond_1
 
-    .line 24
-    .line 25
+    .line 22
+    .line 23
     :cond_0
     const/4 v0, 0x0
 
-    .line 26
+    .line 24
     :cond_1
     return v0
 .end method
@@ -249,7 +246,7 @@
     move-result-object v1
 
     .line 8
-    invoke-static {v2}, LX/0Yd;->A02(Ljava/lang/Object;)I
+    invoke-static {v2}, LX/0X2;->A08(Ljava/lang/Object;)I
 
     .line 9
     .line 10
@@ -257,7 +254,7 @@
     move-result v0
 
     .line 12
-    invoke-static {v1}, LX/0Yi;->A05(Ljava/lang/Object;)I
+    invoke-static {v1}, LX/0X7;->A02(Ljava/lang/Object;)I
 
     .line 13
     .line 14
@@ -287,7 +284,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yf;->A0h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, LX/0X3;->A0k(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 3
     .line 4
@@ -305,7 +302,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

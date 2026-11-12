@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/iabadscontext/IgPromoAdsPromoCode;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 # interfaces
@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x58
+    const/16 v0, 0x52
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -47,12 +47,12 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 5
     .line 6
@@ -97,7 +97,7 @@
 
     iget-object v0, p1, Lcom/facebook/iabadscontext/IgPromoAdsPromoCode;->A01:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -107,7 +107,7 @@
 
     iget-object v0, p1, Lcom/facebook/iabadscontext/IgPromoAdsPromoCode;->A00:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -128,29 +128,33 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget-object v0, p0, Lcom/facebook/iabadscontext/IgPromoAdsPromoCode;->A00:Ljava/lang/String;
+    mul-int/lit8 v1, v0, 0x1f
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IgPromoAdsPromoCode;->A00:Ljava/lang/String;
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
     .line 11
+    .line 12
+    .line 13
     move-result v0
 
-    .line 12
+    .line 14
     add-int/2addr v1, v0
 
-    .line 13
+    .line 15
     return v1
 .end method
 
@@ -167,7 +171,7 @@
 
     const/16 v0, 0x29
 
-    invoke-static {v4, v3, v2, v1, v0}, LX/00I;->A0N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
+    invoke-static {v4, v3, v2, v1, v0}, LX/004;->A0K(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
 
     move-result-object v0
 
@@ -179,7 +183,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     iget-object v0, p0, Lcom/facebook/iabadscontext/IgPromoAdsPromoCode;->A01:Ljava/lang/String;
 

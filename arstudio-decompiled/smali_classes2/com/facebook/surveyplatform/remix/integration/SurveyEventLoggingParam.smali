@@ -33,11 +33,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x22
+    const/16 v0, 0x10
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -52,102 +52,155 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1Zx;LX/1Yc;Lcom/google/common/collect/ImmutableMap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(LX/1lu;LX/1iE;Lcom/google/common/collect/ImmutableMap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 268929372
+    .line 268435456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268929373
+    .line 268435457
+    .line 268435458
+    .line 268435459
     iput-object p4, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A05:Ljava/lang/String;
 
-    .line 268929374
+    .line 268435460
+    .line 268435461
     iput-object p5, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A04:Ljava/lang/String;
 
-    .line 268929375
-    iget-object v0, p2, LX/1Yc;->A00:LX/0pM;
+    .line 268435462
+    .line 268435463
+    iget-object v0, p2, LX/1iE;->A00:LX/14j;
 
-    .line 268929376
-    invoke-virtual {v0}, LX/0pM;->getString()Ljava/lang/String;
+    .line 268435464
+    .line 268435465
+    invoke-virtual {v0}, LX/14j;->getString()Ljava/lang/String;
 
+    .line 268435466
+    .line 268435467
+    .line 268435468
     move-result-object v0
 
+    .line 268435469
     iput-object v0, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A03:Ljava/lang/String;
 
-    .line 268929377
-    invoke-virtual {p1}, LX/1Zx;->getString()Ljava/lang/String;
+    .line 268435470
+    .line 268435471
+    invoke-virtual {p1}, LX/1lu;->getString()Ljava/lang/String;
 
+    .line 268435472
+    .line 268435473
+    .line 268435474
     move-result-object v0
 
+    .line 268435475
     iput-object v0, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A02:Ljava/lang/String;
 
-    .line 268929378
+    .line 268435476
+    .line 268435477
     iput-object p6, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A01:Ljava/lang/String;
 
-    .line 268929379
+    .line 268435478
+    .line 268435479
     iput-object p7, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A06:Ljava/lang/String;
 
-    .line 268929380
+    .line 268435480
+    .line 268435481
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
+    .line 268435482
+    .line 268435483
+    .line 268435484
     move-result v1
 
+    .line 268435485
     const/4 v0, 0x0
 
+    .line 268435486
     if-eq v1, v0, :cond_2
 
+    .line 268435487
+    .line 268435488
     const/4 v0, 0x1
 
+    .line 268435489
     if-eq v1, v0, :cond_1
 
+    .line 268435490
+    .line 268435491
     const/4 v0, 0x2
 
+    .line 268435492
     if-ne v1, v0, :cond_0
 
-    .line 268929381
-    iget-object v0, p2, LX/1Yc;->A03:LX/1Yb;
+    .line 268435493
+    .line 268435494
+    iget-object v0, p2, LX/1iE;->A03:LX/1iD;
 
-    .line 268929382
+    .line 268435495
+    .line 268435496
     :goto_0
-    invoke-virtual {v0}, LX/1Yb;->getString()Ljava/lang/String;
+    invoke-virtual {v0}, LX/1iD;->getString()Ljava/lang/String;
 
+    .line 268435497
+    .line 268435498
+    .line 268435499
     move-result-object v0
 
+    .line 268435500
     iput-object v0, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A07:Ljava/lang/String;
 
-    .line 268929383
+    .line 268435501
+    .line 268435502
     :cond_0
     iput-object p3, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A00:Lcom/google/common/collect/ImmutableMap;
 
-    .line 268929384
+    .line 268435503
+    .line 268435504
     iget-object v0, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A07:Ljava/lang/String;
 
-    invoke-static {v0}, LX/1sR;->A02(Ljava/lang/CharSequence;)Z
+    .line 268435505
+    .line 268435506
+    invoke-static {v0}, LX/3ED;->A02(Ljava/lang/CharSequence;)Z
 
+    .line 268435507
+    .line 268435508
+    .line 268435509
     move-result v0
 
+    .line 268435510
     if-nez v0, :cond_3
 
+    .line 268435511
+    .line 268435512
     return-void
 
-    .line 268929385
+    .line 268435513
     :cond_1
-    iget-object v0, p2, LX/1Yc;->A01:LX/1Yb;
+    iget-object v0, p2, LX/1iE;->A01:LX/1iD;
 
+    .line 268435514
+    .line 268435515
     goto :goto_0
 
-    .line 268929386
+    .line 268435516
     :cond_2
-    iget-object v0, p2, LX/1Yc;->A02:LX/1Yb;
+    iget-object v0, p2, LX/1iE;->A02:LX/1iD;
 
+    .line 268435517
+    .line 268435518
     goto :goto_0
 
-    .line 268929387
+    .line 268435519
     :cond_3
-    new-instance v0, LX/1Yd;
+    new-instance v0, LX/1iF;
 
-    invoke-direct {v0}, LX/1Yd;-><init>()V
+    .line 268435520
+    .line 268435521
+    invoke-direct {v0}, LX/1iF;-><init>()V
 
+    .line 268435522
+    .line 268435523
+    .line 268435524
     throw v0
 .end method
 
@@ -244,7 +297,7 @@
 
     .line 44
     .line 45
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 46
     .line 47
@@ -256,31 +309,23 @@
 
     .line 50
     .line 51
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {p1, v0, v1}, LX/0X5;->A13(Landroid/os/Parcel;Ljava/lang/Class;Ljava/util/Map;)V
 
     .line 52
     .line 53
     .line 54
-    move-result-object v0
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
 
     .line 55
-    invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->readMap(Ljava/util/Map;Ljava/lang/ClassLoader;)V
-
     .line 56
     .line 57
+    move-result-object v0
+
     .line 58
-    invoke-static {v1}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
+    iput-object v0, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A00:Lcom/google/common/collect/ImmutableMap;
 
     .line 59
     .line 60
-    .line 61
-    move-result-object v0
-
-    .line 62
-    iput-object v0, p0, Lcom/facebook/surveyplatform/remix/integration/SurveyEventLoggingParam;->A00:Lcom/google/common/collect/ImmutableMap;
-
-    .line 63
-    .line 64
     return-void
 .end method
 

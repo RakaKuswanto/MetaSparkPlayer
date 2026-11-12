@@ -1,47 +1,34 @@
-.class public final LX/033;
+.class public final synthetic LX/033;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/view/WindowInsetsController$OnControllableInsetsChangedListener;
+
+
+# instance fields
+.field public final synthetic A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+
 
 # direct methods
-.method public static A00(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
     .locals 0
 
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
+    iput-object p1, p0, LX/033;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 4
-    return-object p0
+    return-void
 .end method
 
-.method public static A01(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 0
 
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+# virtual methods
+.method public final onControllableInsetsChanged(Landroid/view/WindowInsetsController;I)V
+    .locals 1
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
+    iget-object v0, p0, LX/033;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 4
-    return-object p0
-.end method
+    invoke-static {v0, p2}, LX/0Bo;->A00(Ljava/util/concurrent/atomic/AtomicBoolean;I)V
 
-.method public static A02(Landroid/view/View;)V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->requestApplyInsets()V
-
-    .line 1
-    .line 2
-    .line 3
     return-void
 .end method

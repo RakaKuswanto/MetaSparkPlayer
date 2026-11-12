@@ -1,4 +1,4 @@
-.class public Lcom/google/android/gms/auth/api/signin/internal/zba;
+.class public abstract Lcom/google/android/gms/auth/api/signin/internal/zba;
 .super Lcom/google/android/gms/auth/api/signin/internal/zbq;
 .source ""
 

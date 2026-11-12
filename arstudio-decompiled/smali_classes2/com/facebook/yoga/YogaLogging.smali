@@ -20,19 +20,19 @@
     .locals 4
 
     .line 0
-    sput p5, LX/2IL;->A04:I
+    sput p5, LX/3g6;->A04:I
 
     .line 1
     .line 2
-    sput p6, LX/2IL;->A02:I
+    sput p6, LX/3g6;->A02:I
 
     .line 3
     .line 4
-    sput p7, LX/2IL;->A03:I
+    sput p7, LX/3g6;->A03:I
 
     .line 5
     .line 6
-    sget-object v2, LX/2IL;->A00:Ljava/util/concurrent/atomic/AtomicLong;
+    sget-object v2, LX/3g6;->A00:Ljava/util/concurrent/atomic/AtomicLong;
 
     .line 7
     .line 8
@@ -55,7 +55,7 @@
 
     .line 15
     .line 16
-    sget-object v2, LX/2IL;->A01:Ljava/util/concurrent/atomic/AtomicLongArray;
+    sget-object v2, LX/3g6;->A01:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     .line 17
     .line 18
@@ -79,95 +79,101 @@
 
     .line 27
     :cond_0
-    sget-object v2, Lcom/facebook/quicklog/QuickPerformanceLoggerProvider;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
+    invoke-static {}, Lcom/facebook/quicklog/QuickPerformanceLoggerProvider;->getQPLInstance()Lcom/facebook/quicklog/QuickPerformanceLogger;
 
     .line 28
     .line 29
-    if-eqz v2, :cond_1
-
     .line 30
+    move-result-object v2
+
     .line 31
-    const v1, 0x21b0001
+    if-eqz v2, :cond_1
 
     .line 32
     .line 33
-    .line 34
-    const-string/jumbo v0, "nodesLaidOut"
+    const v1, 0x21b0001
 
+    .line 34
     .line 35
     .line 36
-    .line 37
-    invoke-interface {v2, v1, v0, p0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
+    const-string/jumbo v0, "nodesLaidOut"
 
+    .line 37
     .line 38
     .line 39
-    .line 40
-    const-string/jumbo v0, "nodesMeasured"
+    invoke-interface {v2, v1, v0, p0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
 
+    .line 40
     .line 41
     .line 42
-    .line 43
-    invoke-interface {v2, v1, v0, p1}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
+    const-string/jumbo v0, "nodesMeasured"
 
+    .line 43
     .line 44
     .line 45
-    .line 46
-    const-string/jumbo v0, "maxMeasureCacheSize"
+    invoke-interface {v2, v1, v0, p1}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
 
+    .line 46
     .line 47
     .line 48
-    .line 49
-    invoke-interface {v2, v1, v0, p2}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
+    const-string/jumbo v0, "maxMeasureCacheSize"
 
+    .line 49
     .line 50
     .line 51
-    .line 52
-    const-string v0, "cachedLayouts"
+    invoke-interface {v2, v1, v0, p2}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
 
+    .line 52
     .line 53
     .line 54
-    invoke-interface {v2, v1, v0, p3}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
+    const-string/jumbo v0, "cachedLayouts"
 
     .line 55
     .line 56
     .line 57
-    const-string v0, "cachedMeasures"
+    invoke-interface {v2, v1, v0, p3}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
 
     .line 58
     .line 59
-    invoke-interface {v2, v1, v0, p4}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
-
     .line 60
+    const-string/jumbo v0, "cachedMeasures"
+
     .line 61
     .line 62
-    const-string/jumbo v0, "measureCallbacks"
-
     .line 63
+    invoke-interface {v2, v1, v0, p4}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
+
     .line 64
     .line 65
-    invoke-interface {v2, v1, v0, p8}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
-
     .line 66
+    const-string/jumbo v0, "measureCallbacks"
+
     .line 67
     .line 68
-    const-string/jumbo v0, "measureCallbackReasonsCount"
-
     .line 69
+    invoke-interface {v2, v1, v0, p8}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;I)V
+
     .line 70
     .line 71
-    invoke-interface {v2, v1, v0, p9}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;[I)V
-
     .line 72
+    const-string/jumbo v0, "measureCallbackReasonsCount"
+
     .line 73
     .line 74
-    const/4 v0, 0x2
-
     .line 75
-    invoke-interface {v2, v1, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerEnd(IS)V
+    invoke-interface {v2, v1, v0, p9}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;[I)V
 
     .line 76
     .line 77
     .line 78
+    const/4 v0, 0x2
+
+    .line 79
+    invoke-interface {v2, v1, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerEnd(IS)V
+
+    .line 80
+    .line 81
+    .line 82
     :cond_1
     return-void
 .end method
@@ -211,24 +217,28 @@
     .locals 2
 
     .line 0
-    sget-object v1, Lcom/facebook/quicklog/QuickPerformanceLoggerProvider;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
+    invoke-static {}, Lcom/facebook/quicklog/QuickPerformanceLoggerProvider;->getQPLInstance()Lcom/facebook/quicklog/QuickPerformanceLogger;
 
     .line 1
     .line 2
-    if-eqz v1, :cond_0
-
     .line 3
+    move-result-object v1
+
     .line 4
-    const v0, 0x21b0001
+    if-eqz v1, :cond_0
 
     .line 5
     .line 6
-    .line 7
-    invoke-interface {v1, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerStart(I)V
+    const v0, 0x21b0001
 
+    .line 7
     .line 8
     .line 9
+    invoke-interface {v1, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerStart(I)V
+
     .line 10
+    .line 11
+    .line 12
     :cond_0
     return-void
 .end method

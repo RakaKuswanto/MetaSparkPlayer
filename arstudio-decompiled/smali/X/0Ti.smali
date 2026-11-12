@@ -1,26 +1,64 @@
-.class public interface abstract LX/0Ti;
-.super Ljava/lang/Object;
+.class public final LX/0TI;
+.super LX/071;
 .source ""
 
 
-# virtual methods
-.method public abstract A6r()V
-.end method
+# instance fields
+.field public final previousFragmentId:Ljava/lang/String;
 
-.method public abstract ADI()Ljava/lang/String;
-.end method
 
-.method public abstract ADe()Ljava/lang/String;
-.end method
+# direct methods
+.method public constructor <init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    .locals 2
 
-.method public abstract AHa()LX/0Tj;
-.end method
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-.method public abstract AlU(Ljava/lang/String;)V
-.end method
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
 
-.method public abstract AqN(LX/0Tj;)Z
-.end method
+    .line 4
+    const-string v0, "Attempting to reuse fragment "
 
-.method public abstract clear()V
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 10
+    .line 11
+    .line 12
+    const-string v0, " with previous ID "
+
+    .line 13
+    .line 14
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-static {p2, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    invoke-direct {p0, p1, v0}, LX/071;-><init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
+
+    .line 22
+    .line 23
+    .line 24
+    iput-object p2, p0, LX/0TI;->previousFragmentId:Ljava/lang/String;
+
+    .line 25
+    .line 26
+    return-void
 .end method

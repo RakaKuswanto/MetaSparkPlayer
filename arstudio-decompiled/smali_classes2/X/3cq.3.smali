@@ -1,11 +1,25 @@
-.class public interface abstract LX/3cq;
+.class public final LX/3cq;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AOP(Landroid/app/Activity;Landroid/os/Bundle;)V
-.end method
+# instance fields
+.field public final A00:LX/3dN;
 
-.method public abstract AOQ(Landroid/content/Context;Landroid/os/Bundle;)V
+
+# direct methods
+.method public constructor <init>(LX/3dN;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/3cq;->A00:LX/3dN;
+
+    .line 4
+    .line 5
+    return-void
 .end method

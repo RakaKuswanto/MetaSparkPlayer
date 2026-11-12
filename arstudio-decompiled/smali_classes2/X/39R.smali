@@ -1,33 +1,19 @@
-.class public final LX/39R;
-.super LX/3Y8;
+.class public interface abstract LX/39r;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0ZF;
+# static fields
+.field public static final A00:LX/39s;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 0
-    invoke-direct {p0}, LX/3Y8;-><init>()V
+    sget-object v0, LX/39s;->A00:LX/39s;
 
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/1z6;->A0L()LX/0ZF;
+    sput-object v0, LX/39r;->A00:LX/39s;
 
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/39R;->A00:LX/0ZF;
-
-    .line 8
-    .line 9
     return-void
 .end method

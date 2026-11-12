@@ -1,60 +1,219 @@
-.class public final synthetic LX/4Hy;
+.class public abstract LX/4Hy;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SecureConnectionAdapter$$ExternalSyntheticLambda1"
+.field public static final A00:[I
 
-
-# instance fields
-.field public final synthetic A00:Landroid/view/View;
-
-.field public final synthetic A01:LX/4HA;
+.field public static final A01:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;LX/4HA;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, LX/4Hy;->A01:LX/4HA;
-
-    iput-object p1, p0, LX/4Hy;->A00:Landroid/view/View;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/4Hy;->A01:LX/4HA;
+    invoke-static {}, LX/434;->A1a()[I
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/4Hy;->A00:Landroid/view/View;
-
     .line 3
+    move-result-object v3
+
     .line 4
-    invoke-interface {v0}, LX/4HA;->AJL()Landroid/view/View$OnClickListener;
+    const/high16 v0, 0x1010000
 
     .line 5
     .line 6
+    const/4 v2, 0x0
+
     .line 7
-    move-result-object v0
+    aput v0, v3, v2
 
     .line 8
-    invoke-interface {v0, v1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
-
     .line 9
+    const v1, 0x7f0408eb
+
     .line 10
     .line 11
+    .line 12
+    const/4 v0, 0x1
+
+    .line 13
+    aput v1, v3, v0
+
+    .line 14
+    .line 15
+    sput-object v3, LX/4Hy;->A00:[I
+
+    .line 16
+    .line 17
+    new-array v1, v0, [I
+
+    .line 18
+    .line 19
+    const v0, 0x7f040663
+
+    .line 20
+    .line 21
+    .line 22
+    aput v0, v1, v2
+
+    .line 23
+    .line 24
+    sput-object v1, LX/4Hy;->A01:[I
+
+    .line 25
+    .line 26
     return-void
+.end method
+
+.method public static A00(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    .locals 6
+
+    .line 0
+    sget-object v0, LX/4Hy;->A01:[I
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    const/4 v5, 0x0
+
+    .line 7
+    invoke-virtual {v0, v5, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    .line 8
+    .line 9
+    .line 10
+    move-result v2
+
+    .line 11
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 12
+    .line 13
+    .line 14
+    instance-of v0, p0, LX/4Jx;
+
+    .line 15
+    .line 16
+    const/4 v4, 0x1
+
+    .line 17
+    if-eqz v0, :cond_0
+
+    .line 18
+    .line 19
+    move-object v0, p0
+
+    .line 20
+    check-cast v0, LX/4Jx;
+
+    .line 21
+    .line 22
+    iget v1, v0, LX/4Jx;->A00:I
+
+    .line 23
+    .line 24
+    const/4 v0, 0x1
+
+    .line 25
+    if-eq v1, v2, :cond_1
+
+    .line 26
+    .line 27
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 28
+    :cond_1
+    if-eqz v2, :cond_4
+
+    .line 29
+    .line 30
+    if-nez v0, :cond_4
+
+    .line 31
+    .line 32
+    new-instance v3, LX/4Jx;
+
+    .line 33
+    .line 34
+    invoke-direct {v3, p0, v2}, LX/4Jx;-><init>(Landroid/content/Context;I)V
+
+    .line 35
+    .line 36
+    .line 37
+    sget-object v0, LX/4Hy;->A00:[I
+
+    .line 38
+    .line 39
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v2
+
+    .line 43
+    invoke-virtual {v2, v5, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    .line 44
+    .line 45
+    .line 46
+    move-result v1
+
+    .line 47
+    invoke-virtual {v2, v4, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v0
+
+    .line 51
+    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 52
+    .line 53
+    .line 54
+    if-nez v1, :cond_2
+
+    .line 55
+    .line 56
+    move v1, v0
+
+    .line 57
+    if-eqz v0, :cond_3
+
+    .line 58
+    .line 59
+    :cond_2
+    invoke-virtual {v3}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v0
+
+    .line 63
+    invoke-virtual {v0, v1, v4}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    .line 64
+    .line 65
+    .line 66
+    :cond_3
+    return-object v3
+
+    .line 67
+    :cond_4
+    return-object p0
 .end method

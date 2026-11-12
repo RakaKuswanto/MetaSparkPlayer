@@ -1,67 +1,50 @@
-.class public final LX/1ZC;
-.super Ljava/lang/Object;
+.class public final LX/1zc;
+.super LX/2DY;
 .source ""
 
 
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$9"
+
+
 # instance fields
-.field public final A00:Ljava/lang/String;
+.field public final synthetic A00:Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;
 
-.field public final A01:Ljava/lang/String;
+.field public final synthetic A01:LX/2D1;
 
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Ljava/lang/String;
-
-.field public final A04:Ljava/lang/String;
-
-.field public final A05:Ljava/lang/String;
-
-.field public final A06:Ljava/lang/String;
-
-.field public final A07:Z
+.field public final synthetic A02:LX/2Py;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;LX/2D1;LX/2Py;Ljava/lang/Class;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "ClientSubscriptionAutoSubscriber"
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/1ZC;->A04:Ljava/lang/String;
+    const-string/jumbo v0, "authComplete"
 
+    .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/1ZC;->A03:Ljava/lang/String;
+    iput-object p2, p0, LX/1zc;->A01:LX/2D1;
 
     .line 6
     .line 7
-    iput-boolean p7, p0, LX/1ZC;->A07:Z
+    iput-object p1, p0, LX/1zc;->A00:Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;
 
     .line 8
     .line 9
-    iput-object p3, p0, LX/1ZC;->A06:Ljava/lang/String;
+    iput-object p3, p0, LX/1zc;->A02:LX/2Py;
 
     .line 10
     .line 11
-    iput-object p4, p0, LX/1ZC;->A05:Ljava/lang/String;
+    invoke-direct {p0, p4, v1, v0}, LX/2DY;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
     .line 13
-    iput-object p5, p0, LX/1ZC;->A02:Ljava/lang/String;
-
     .line 14
-    .line 15
-    iput-object p6, p0, LX/1ZC;->A00:Ljava/lang/String;
-
-    .line 16
-    .line 17
-    iput-object p8, p0, LX/1ZC;->A01:Ljava/lang/String;
-
-    .line 18
-    .line 19
     return-void
 .end method

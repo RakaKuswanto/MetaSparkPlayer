@@ -3,29 +3,27 @@
 .source ""
 
 # interfaces
-.implements LX/1tx;
+.implements LX/0na;
 
 
 # instance fields
 .field public A00:Ljava/util/concurrent/ScheduledFuture;
 
-.field public A01:LX/1zG;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/0Na;
+.field public final A02:LX/0RP;
 
-.field public final A03:LX/0Na;
+.field public final A03:Lcom/facebook/xanalytics/XAnalyticsNative;
 
-.field public final A04:Lcom/facebook/xanalytics/XAnalyticsNative;
+.field public final A04:Ljava/lang/String;
 
-.field public final A05:Ljava/lang/String;
+.field public final A05:Ljava/util/concurrent/ScheduledExecutorService;
 
-.field public final A06:Ljava/util/concurrent/ScheduledExecutorService;
-
-.field public final A07:LX/0JT;
+.field public final A06:LX/0IL;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 14
 
     .line 0
@@ -34,7 +32,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A01()LX/0Zq;
+    invoke-static {}, LX/0lf;->A01()LX/0lf;
 
     .line 4
     .line 5
@@ -42,15 +40,15 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A03:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A02:LX/0RP;
 
     .line 8
     .line 9
-    sget v0, LX/2eq;->A92:I
+    sget v0, LX/2I6;->A62:I
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 12
     .line 13
@@ -58,7 +56,7 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A01:LX/0RP;
 
     .line 16
     .line 17
@@ -69,288 +67,272 @@
 
     .line 19
     .line 20
-    const/4 v0, 0x0
+    sget v0, LX/2I6;->A5n:I
 
     .line 21
-    invoke-static {p1, v0}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
-
     .line 22
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 23
     .line 24
-    move-result-object v0
-
     .line 25
-    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A01:LX/1zG;
-
-    .line 26
-    .line 27
-    sget v0, LX/2eq;->A8l:I
-
-    .line 28
-    .line 29
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 30
-    .line 31
-    .line 32
     move-result-object v10
 
-    .line 33
+    .line 26
     check-cast v10, Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 34
-    .line 35
-    sget v0, LX/2eq;->AAK:I
+    .line 27
+    .line 28
+    sget v1, LX/2I6;->A79:I
 
-    .line 36
-    .line 37
-    invoke-static {v9, v9, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    .line 29
+    .line 30
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v5
-
-    .line 41
-    check-cast v5, LX/0JT;
-
-    .line 42
-    .line 43
-    invoke-static {}, LX/1z6;->A01()Landroid/content/Context;
-
-    .line 44
-    .line 45
-    .line 46
+    .line 31
+    .line 32
+    .line 33
     move-result-object v0
 
-    .line 47
-    iput-object v5, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A07:LX/0JT;
+    .line 34
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
-    .line 48
-    .line 49
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v5
+
+    .line 38
+    check-cast v5, LX/0IL;
+
+    .line 39
+    .line 40
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    iput-object v5, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A06:LX/0IL;
+
+    .line 45
+    .line 46
     new-instance v6, Lcom/facebook/xanalytics/XAnalyticsNative;
 
+    .line 47
+    .line 48
+    invoke-direct {v6}, Lcom/facebook/xanalytics/XAnalyticsNative;-><init>()V
+
+    .line 49
     .line 50
     .line 51
-    invoke-direct {v6}, Lcom/facebook/xanalytics/XAnalyticsNative;-><init>()V
+    iput-object v6, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A03:Lcom/facebook/xanalytics/XAnalyticsNative;
 
     .line 52
     .line 53
-    .line 54
-    iput-object v6, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A04:Lcom/facebook/xanalytics/XAnalyticsNative;
+    invoke-static {v0}, LX/3IE;->A00(Landroid/content/Context;)LX/3IE;
 
+    .line 54
     .line 55
     .line 56
-    invoke-static {v0}, LX/2P3;->A00(Landroid/content/Context;)LX/2P3;
-
-    .line 57
-    .line 58
-    .line 59
     move-result-object v1
 
-    .line 60
+    .line 57
     const v0, 0x626edef7
+
+    .line 58
+    .line 59
+    .line 60
+    invoke-virtual {v1, v9, v0}, LX/3HS;->A9u(LX/3Ih;I)Ljava/io/File;
 
     .line 61
     .line 62
     .line 63
-    invoke-virtual {v1, v9, v0}, LX/2P2;->ABO(LX/2Qq;I)Ljava/io/File;
-
-    .line 64
-    .line 65
-    .line 66
     move-result-object v0
 
-    .line 67
+    .line 64
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    .line 68
-    .line 69
-    .line 70
-    move-result-object v3
-
-    .line 71
-    iput-object v3, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A05:Ljava/lang/String;
-
-    .line 72
-    .line 73
-    invoke-interface {v5}, LX/0JT;->ABv()Ljava/lang/String;
-
-    .line 74
-    .line 75
-    .line 76
+    .line 65
+    .line 66
+    .line 67
     move-result-object v4
 
-    .line 77
-    invoke-interface {v5}, LX/0JT;->ABv()Ljava/lang/String;
+    .line 68
+    iput-object v4, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A04:Ljava/lang/String;
 
-    .line 78
-    .line 79
-    .line 80
+    .line 69
+    .line 70
+    invoke-interface {v5}, LX/0IL;->AAT()Ljava/lang/String;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v3
+
+    .line 74
+    invoke-interface {v5}, LX/0IL;->AAT()Ljava/lang/String;
+
+    .line 75
+    .line 76
+    .line 77
     move-result-object v2
 
-    .line 81
+    .line 78
     const-string/jumbo v1, "|"
+
+    .line 79
+    .line 80
+    .line 81
+    invoke-interface {v5}, LX/0IL;->AAV()Ljava/lang/String;
 
     .line 82
     .line 83
     .line 84
-    invoke-interface {v5}, LX/0JT;->ABx()Ljava/lang/String;
+    move-result-object v0
 
     .line 85
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     .line 86
     .line 87
-    move-result-object v0
-
     .line 88
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
     .line 89
+    const-string/jumbo v2, "graph.facebook.com"
+
     .line 90
     .line 91
-    move-result-object v0
-
     .line 92
-    const-string/jumbo v2, "graph.facebook.com"
+    new-instance v8, LX/2Fn;
 
     .line 93
     .line 94
-    .line 95
-    const/16 v11, 0x61
+    invoke-direct {v8, p0}, LX/2Fn;-><init>(Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;)V
 
+    .line 95
     .line 96
     .line 97
-    const/16 v12, 0xb
+    invoke-static {}, LX/0X7;->A0z()[Ljava/lang/String;
 
     .line 98
     .line 99
-    const v13, 0xc800
-
     .line 100
-    .line 101
-    .line 102
-    new-instance v8, LX/2Yn;
-
-    .line 103
-    .line 104
-    invoke-direct {v8, p0}, LX/2Yn;-><init>(Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;)V
-
-    .line 105
-    .line 106
-    .line 107
-    invoke-static {}, LX/0Yj;->A0v()[Ljava/lang/String;
-
-    .line 108
-    .line 109
-    .line 110
     move-result-object v7
 
-    .line 111
-    invoke-static {v7, v4, v0}, LX/001;->A1G([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 101
+    invoke-static {v7, v3, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 112
-    .line 113
-    .line 114
+    .line 102
+    .line 103
+    .line 104
     const/4 v0, 0x2
 
-    .line 115
-    aput-object v3, v7, v0
+    .line 105
+    aput-object v4, v7, v0
 
-    .line 116
-    .line 117
+    .line 106
+    .line 107
     const/4 v1, 0x3
 
-    .line 118
+    .line 108
     aput-object v2, v7, v1
+
+    .line 109
+    .line 110
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    .line 111
+    .line 112
+    .line 113
+    move-result v0
+
+    .line 114
+    if-nez v0, :cond_0
+
+    .line 115
+    .line 116
+    aput-object v2, v7, v1
+
+    .line 117
+    .line 118
+    :cond_0
+    if-eqz v10, :cond_1
 
     .line 119
     .line 120
-    aget-object v0, v7, v1
+    const/16 v11, 0x61
 
     .line 121
     .line 122
-    if-eqz v0, :cond_0
+    const/16 v12, 0xb
 
     .line 123
     .line 124
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const v13, 0xc800
 
     .line 125
     .line 126
     .line 127
-    move-result v0
+    invoke-virtual/range {v6 .. v13}, Lcom/facebook/xanalytics/XAnalyticsNative;->init([Ljava/lang/String;Lcom/facebook/xanalytics/XAnalyticsNative$XAnalyticsPropertiesProvider;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/Executor;III)J
 
     .line 128
-    if-nez v0, :cond_1
-
     .line 129
     .line 130
-    :cond_0
-    aput-object v2, v7, v1
+    iput-object v10, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A05:Ljava/util/concurrent/ScheduledExecutorService;
 
     .line 131
     .line 132
-    :cond_1
-    if-eqz v10, :cond_2
+    const-class v0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;
 
     .line 133
     .line 134
-    invoke-virtual/range {v6 .. v13}, Lcom/facebook/xanalytics/XAnalyticsNative;->init([Ljava/lang/String;Lcom/facebook/xanalytics/XAnalyticsNative$XAnalyticsPropertiesProvider;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/Executor;III)J
+    sget-object v1, LX/1rk;->A00:Ljava/util/Set;
 
     .line 135
     .line 136
-    .line 137
-    iput-object v10, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A06:Ljava/util/concurrent/ScheduledExecutorService;
-
-    .line 138
-    .line 139
-    const-class v0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;
-
-    .line 140
-    .line 141
-    sget-object v1, LX/2Zj;->A00:Ljava/util/Set;
-
-    .line 142
-    .line 143
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 144
-    .line 145
-    .line 146
+    .line 137
+    .line 138
+    .line 139
     move-result-object v0
 
-    .line 147
+    .line 140
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 148
-    .line 149
-    .line 150
+    .line 141
+    .line 142
+    .line 143
     return-void
 
-    .line 151
-    :cond_2
+    .line 144
+    :cond_1
     const-string v0, "Executor Required for xAnalytics"
 
-    .line 152
-    .line 153
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    .line 145
+    .line 146
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
-    .line 154
-    .line 155
-    .line 156
+    .line 147
+    .line 148
+    .line 149
     move-result-object v0
 
-    .line 157
+    .line 150
     throw v0
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic AON()Lcom/facebook/xanalytics/XAnalyticsHolder;
+.method public final bridge synthetic AMu()Lcom/facebook/xanalytics/XAnalyticsHolder;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A04:Lcom/facebook/xanalytics/XAnalyticsNative;
+    iget-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A03:Lcom/facebook/xanalytics/XAnalyticsNative;
 
     .line 1
     .line 2

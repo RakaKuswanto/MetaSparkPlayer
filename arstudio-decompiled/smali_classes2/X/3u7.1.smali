@@ -7,25 +7,27 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "GrootPlayerObserversManager$postUpdate$1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayer$FbHeroPlayerListener$4"
 
 
 # instance fields
-.field public final synthetic A00:LX/3o9;
-
-.field public final synthetic A01:LX/0Cl;
+.field public final synthetic A00:LX/3q9;
 
 
 # direct methods
-.method public constructor <init>(LX/3o9;LX/0Cl;)V
+.method public constructor <init>(LX/3q9;)V
     .locals 0
 
-    iput-object p1, p0, LX/3u7;->A00:LX/3o9;
+    .line 0
+    iput-object p1, p0, LX/3u7;->A00:LX/3q9;
 
-    iput-object p2, p0, LX/3u7;->A01:LX/0Cl;
-
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
@@ -35,18 +37,59 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/3u7;->A00:LX/3o9;
+    const-string v0, "FbHeroPlayer.mVideoPlayerListener.onStreamComplete"
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/3u7;->A01:LX/0Cl;
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/3o9;->A01(LX/3o9;LX/0Cl;)V
-
     .line 5
+    :try_start_0
+    iget-object v0, p0, LX/3u7;->A00:LX/3q9;
+
     .line 6
     .line 7
+    iget-object v0, v0, LX/3q9;->A02:LX/3q7;
+
+    .line 8
+    .line 9
+    iget-object v1, v0, LX/3q7;->A0R:LX/3sj;
+
+    .line 10
+    .line 11
+    iget-object v0, v0, LX/3q7;->A04:Lcom/facebook/video/engine/api/VideoPlayerParams;
+
+    .line 12
+    .line 13
+    iget v0, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A0M:I
+
+    .line 14
+    .line 15
+    invoke-interface {v1, v0}, LX/3sj;->AbZ(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 19
+    .line 20
+    .line 21
     return-void
+
+    .line 22
+    :catchall_0
+    move-exception v0
+
+    .line 23
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 24
+    .line 25
+    .line 26
+    throw v0
 .end method

@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/22Z;
+.implements LX/2sF;
 
 
 # static fields
@@ -11,9 +11,9 @@
 
 
 # instance fields
-.field public A00:LX/22c;
+.field public A00:LX/2tO;
 
-.field public A01:LX/22Z;
+.field public A01:LX/2sF;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 3
     .line 4
@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/22c;LX/22Z;)V
+.method public constructor <init>(LX/2tO;LX/2sF;)V
     .locals 0
 
     .line 0
@@ -49,11 +49,11 @@
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, Lcom/facebook/analytics2/logger/PrivacyControlledUploader;->A01:LX/22Z;
+    iput-object p2, p0, Lcom/facebook/analytics2/logger/PrivacyControlledUploader;->A01:LX/2sF;
 
     .line 4
     .line 5
-    iput-object p1, p0, Lcom/facebook/analytics2/logger/PrivacyControlledUploader;->A00:LX/22c;
+    iput-object p1, p0, Lcom/facebook/analytics2/logger/PrivacyControlledUploader;->A00:LX/2tO;
 
     .line 6
     .line 7
@@ -62,15 +62,15 @@
 
 
 # virtual methods
-.method public final Aqi(LX/22P;LX/22V;)V
+.method public final Apc(LX/2rm;LX/2Ss;)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/analytics2/logger/PrivacyControlledUploader;->A01:LX/22Z;
+    iget-object v0, p0, Lcom/facebook/analytics2/logger/PrivacyControlledUploader;->A01:LX/2sF;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1, p2}, LX/22Z;->Aqi(LX/22P;LX/22V;)V
+    invoke-interface {v0, p1, p2}, LX/2sF;->Apc(LX/2rm;LX/2Ss;)V
 
     .line 3
     .line 4

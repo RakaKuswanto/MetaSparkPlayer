@@ -1,50 +1,34 @@
-.class public interface abstract LX/3PR;
-.super Ljava/lang/Object;
+.class public final LX/3PR;
+.super Ljava/io/IOException;
 .source ""
 
 
-# virtual methods
-.method public abstract AJJ()Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method
 
-.method public abstract AJQ()LX/3oO;
-.end method
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-.method public abstract AK1()LX/3oO;
-.end method
+    .line 268435456
+    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-.method public abstract AK6()F
-.end method
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-virtual {p0, p2}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-.method public abstract ANI()LX/3RJ;
-.end method
-
-.method public abstract ANZ()Ljava/lang/Float;
-.end method
-
-.method public abstract ANt()Ljava/lang/Integer;
-.end method
-
-.method public abstract ANx()Lcom/facebook/video/engine/api/VideoPlayerParams;
-.end method
-
-.method public abstract AO2()LX/3Uv;
-.end method
-
-.method public abstract AO3()Ljava/lang/Integer;
-.end method
-
-.method public abstract ARB()Z
-.end method
-
-.method public abstract getContext()Landroid/content/Context;
-.end method
-
-.method public abstract getPlayerOrigin()Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-.end method
-
-.method public abstract getPlayerType()LX/0po;
-.end method
-
-.method public abstract getVideoId()Ljava/lang/String;
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    return-void
 .end method

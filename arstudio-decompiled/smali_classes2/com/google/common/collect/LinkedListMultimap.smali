@@ -1,9 +1,9 @@
 .class public Lcom/google/common/collect/LinkedListMultimap;
-.super LX/1dn;
+.super LX/21N;
 .source ""
 
 # interfaces
-.implements LX/1dz;
+.implements LX/21K;
 .implements Ljava/io/Serializable;
 
 
@@ -16,9 +16,9 @@
 
 .field public transient A01:I
 
-.field public transient A02:LX/1fI;
+.field public transient A02:LX/21D;
 
-.field public transient A03:LX/1fI;
+.field public transient A03:LX/21D;
 
 .field public transient A04:Ljava/util/Map;
 
@@ -32,7 +32,7 @@
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/1dn;-><init>()V
+    invoke-direct {p0}, LX/21N;-><init>()V
 
     .line 3
     .line 4
@@ -53,20 +53,32 @@
     return-void
 .end method
 
-.method public static A00(LX/1fI;Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;Ljava/lang/Object;)LX/1fI;
+.method public static A00(LX/21D;Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;Ljava/lang/Object;)LX/21D;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value",
+            "nextSibling"
+        }
+    .end annotation
 
     .line 0
-    new-instance v2, LX/1fI;
+    new-instance v2, LX/21D;
 
     .line 1
     .line 2
-    invoke-direct {v2, p2, p3}, LX/1fI;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v2, p2, p3}, LX/21D;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/1fI;
+    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/21D;
 
     .line 6
     .line 7
@@ -74,11 +86,11 @@
 
     .line 8
     .line 9
-    iput-object v2, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/1fI;
+    iput-object v2, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/21D;
 
     .line 10
     .line 11
-    iput-object v2, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/1fI;
+    iput-object v2, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/21D;
 
     .line 12
     .line 13
@@ -87,11 +99,11 @@
 
     .line 14
     .line 15
-    new-instance v0, LX/1fJ;
+    new-instance v0, LX/21I;
 
     .line 16
     .line 17
-    invoke-direct {v0, v2}, LX/1fJ;-><init>(LX/1fI;)V
+    invoke-direct {v0, v2}, LX/21I;-><init>(LX/21D;)V
 
     .line 18
     .line 19
@@ -134,156 +146,154 @@
 
     .line 37
     .line 38
-    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/1fI;
+    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/21D;
 
     .line 39
     .line 40
-    iput-object v2, v0, LX/1fI;->A02:LX/1fI;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 41
     .line 42
-    iput-object v0, v2, LX/1fI;->A03:LX/1fI;
-
     .line 43
+    iput-object v2, v0, LX/21D;->A00:LX/21D;
+
     .line 44
-    iput-object v2, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/1fI;
-
     .line 45
+    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/21D;
+
     .line 46
-    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
-
     .line 47
-    .line 48
-    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v0, v2, LX/21D;->A02:LX/21D;
 
+    .line 48
     .line 49
+    iput-object v2, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/21D;
+
     .line 50
     .line 51
-    move-result-object v1
+    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
 
     .line 52
-    check-cast v1, LX/1fJ;
-
     .line 53
-    .line 54
-    if-eqz v1, :cond_0
+    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 54
     .line 55
     .line 56
-    iget v0, v1, LX/1fJ;->A00:I
+    move-result-object v1
 
     .line 57
+    check-cast v1, LX/21I;
+
     .line 58
+    .line 59
+    if-eqz v1, :cond_0
+
+    .line 60
+    .line 61
+    iget v0, v1, LX/21I;->A00:I
+
+    .line 62
+    .line 63
     add-int/lit8 v0, v0, 0x1
 
-    .line 59
-    .line 60
-    iput v0, v1, LX/1fJ;->A00:I
-
-    .line 61
-    .line 62
-    iget-object v0, v1, LX/1fJ;->A02:LX/1fI;
-
-    .line 63
     .line 64
-    iput-object v2, v0, LX/1fI;->A00:LX/1fI;
-
     .line 65
+    iput v0, v1, LX/21I;->A00:I
+
     .line 66
-    iput-object v0, v2, LX/1fI;->A01:LX/1fI;
-
     .line 67
+    iget-object v0, v1, LX/21I;->A02:LX/21D;
+
     .line 68
-    iput-object v2, v1, LX/1fJ;->A02:LX/1fI;
-
     .line 69
-    .line 70
-    goto :goto_0
+    iput-object v2, v0, LX/21D;->A01:LX/21D;
 
+    .line 70
     .line 71
-    :cond_2
-    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
+    iput-object v0, v2, LX/21D;->A03:LX/21D;
 
     .line 72
     .line 73
-    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v2, v1, LX/21I;->A02:LX/21D;
 
     .line 74
     .line 75
+    goto :goto_0
+
     .line 76
-    move-result-object v1
+    :cond_2
+    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
 
     .line 77
-    check-cast v1, LX/1fJ;
-
     .line 78
-    .line 79
-    iget v0, v1, LX/1fJ;->A00:I
+    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 79
     .line 80
     .line 81
-    add-int/lit8 v0, v0, 0x1
+    move-result-object v1
 
     .line 82
+    check-cast v1, LX/21I;
+
     .line 83
-    iput v0, v1, LX/1fJ;->A00:I
-
     .line 84
-    .line 85
-    iget-object v0, p0, LX/1fI;->A03:LX/1fI;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 85
     .line 86
     .line 87
-    iput-object v0, v2, LX/1fI;->A03:LX/1fI;
+    iget v0, v1, LX/21I;->A00:I
 
     .line 88
     .line 89
-    iget-object v0, p0, LX/1fI;->A01:LX/1fI;
+    add-int/lit8 v0, v0, 0x1
 
     .line 90
     .line 91
-    iput-object v0, v2, LX/1fI;->A01:LX/1fI;
+    iput v0, v1, LX/21I;->A00:I
 
     .line 92
     .line 93
-    iput-object p0, v2, LX/1fI;->A02:LX/1fI;
+    iget-object v0, p0, LX/21D;->A02:LX/21D;
 
     .line 94
     .line 95
-    iput-object p0, v2, LX/1fI;->A00:LX/1fI;
+    iput-object v0, v2, LX/21D;->A02:LX/21D;
 
     .line 96
     .line 97
-    iget-object v0, p0, LX/1fI;->A01:LX/1fI;
+    iget-object v0, p0, LX/21D;->A03:LX/21D;
 
     .line 98
     .line 99
-    if-nez v0, :cond_4
+    iput-object v0, v2, LX/21D;->A03:LX/21D;
 
     .line 100
     .line 101
-    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
+    iput-object p0, v2, LX/21D;->A00:LX/21D;
 
     .line 102
     .line 103
-    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p0, v2, LX/21D;->A01:LX/21D;
 
     .line 104
     .line 105
-    .line 106
-    move-result-object v0
+    iget-object v0, p0, LX/21D;->A03:LX/21D;
 
+    .line 106
     .line 107
-    check-cast v0, LX/1fJ;
+    if-nez v0, :cond_4
 
     .line 108
     .line 109
-    iput-object v2, v0, LX/1fJ;->A01:LX/1fI;
+    iput-object v2, v1, LX/21I;->A01:LX/21D;
 
     .line 110
     .line 111
     :goto_1
-    iget-object v0, p0, LX/1fI;->A03:LX/1fI;
+    iget-object v0, p0, LX/21D;->A02:LX/21D;
 
     .line 112
     .line 113
@@ -291,16 +301,16 @@
 
     .line 114
     .line 115
-    iput-object v2, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/1fI;
+    iput-object v2, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/21D;
 
     .line 116
     .line 117
     :goto_2
-    iput-object v2, p0, LX/1fI;->A03:LX/1fI;
+    iput-object v2, p0, LX/21D;->A02:LX/21D;
 
     .line 118
     .line 119
-    iput-object v2, p0, LX/1fI;->A01:LX/1fI;
+    iput-object v2, p0, LX/21D;->A03:LX/21D;
 
     .line 120
     .line 121
@@ -308,7 +318,7 @@
 
     .line 122
     :cond_3
-    iput-object v2, v0, LX/1fI;->A02:LX/1fI;
+    iput-object v2, v0, LX/21D;->A00:LX/21D;
 
     .line 123
     .line 124
@@ -316,22 +326,30 @@
 
     .line 125
     :cond_4
-    iput-object v2, v0, LX/1fI;->A00:LX/1fI;
+    iput-object v2, v0, LX/21D;->A01:LX/21D;
 
     .line 126
     .line 127
     goto :goto_1
 .end method
 
-.method public static A01(LX/1fI;Lcom/google/common/collect/LinkedListMultimap;)V
+.method public static A01(LX/21D;Lcom/google/common/collect/LinkedListMultimap;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "node"
+        }
+    .end annotation
 
     .line 0
-    iget-object v1, p0, LX/1fI;->A03:LX/1fI;
+    iget-object v1, p0, LX/21D;->A02:LX/21D;
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/1fI;->A02:LX/1fI;
+    iget-object v0, p0, LX/21D;->A00:LX/21D;
 
     .line 3
     .line 4
@@ -339,12 +357,12 @@
 
     .line 5
     .line 6
-    iput-object v0, v1, LX/1fI;->A02:LX/1fI;
+    iput-object v0, v1, LX/21D;->A00:LX/21D;
 
     .line 7
     .line 8
     :goto_0
-    iget-object v0, p0, LX/1fI;->A02:LX/1fI;
+    iget-object v0, p0, LX/21D;->A00:LX/21D;
 
     .line 9
     .line 10
@@ -352,12 +370,12 @@
 
     .line 11
     .line 12
-    iput-object v1, v0, LX/1fI;->A03:LX/1fI;
+    iput-object v1, v0, LX/21D;->A02:LX/21D;
 
     .line 13
     .line 14
     :goto_1
-    iget-object v0, p0, LX/1fI;->A01:LX/1fI;
+    iget-object v0, p0, LX/21D;->A03:LX/21D;
 
     .line 15
     .line 16
@@ -365,7 +383,7 @@
 
     .line 17
     .line 18
-    iget-object v0, p0, LX/1fI;->A00:LX/1fI;
+    iget-object v0, p0, LX/21D;->A01:LX/21D;
 
     .line 19
     .line 20
@@ -377,7 +395,7 @@
 
     .line 23
     .line 24
-    iget-object v0, p0, LX/1fI;->A05:Ljava/lang/Object;
+    iget-object v0, p0, LX/21D;->A05:Ljava/lang/Object;
 
     .line 25
     .line 26
@@ -389,144 +407,176 @@
     move-result-object v1
 
     .line 30
-    check-cast v1, LX/1fJ;
+    check-cast v1, LX/21I;
 
     .line 31
     .line 32
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    iput v0, v1, LX/1fJ;->A00:I
-
     .line 34
     .line 35
-    iget v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A00:I
+    const/4 v0, 0x0
 
     .line 36
+    iput v0, v1, LX/21I;->A00:I
+
     .line 37
+    .line 38
+    iget v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A00:I
+
+    .line 39
+    .line 40
     add-int/lit8 v0, v0, 0x1
 
-    .line 38
-    .line 39
+    .line 41
+    .line 42
     iput v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A00:I
 
-    .line 40
-    .line 41
+    .line 43
+    .line 44
     :goto_2
     iget v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A01:I
 
-    .line 42
-    .line 43
+    .line 45
+    .line 46
     add-int/lit8 v0, v0, -0x1
 
-    .line 44
-    .line 45
-    iput v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A01:I
-
-    .line 46
     .line 47
-    return-void
-
     .line 48
-    :cond_0
-    iget-object v1, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
+    iput v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A01:I
 
     .line 49
     .line 50
-    iget-object v0, p0, LX/1fI;->A05:Ljava/lang/Object;
+    return-void
 
     .line 51
-    .line 52
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    iget-object v1, p1, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
 
+    .line 52
     .line 53
+    iget-object v0, p0, LX/21D;->A05:Ljava/lang/Object;
+
     .line 54
     .line 55
-    move-result-object v2
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 56
-    check-cast v2, LX/1fJ;
-
     .line 57
     .line 58
-    iget v0, v2, LX/1fJ;->A00:I
+    move-result-object v2
 
     .line 59
+    check-cast v2, LX/21I;
+
     .line 60
-    add-int/lit8 v0, v0, -0x1
-
     .line 61
-    .line 62
-    iput v0, v2, LX/1fJ;->A00:I
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 62
     .line 63
     .line 64
-    iget-object v1, p0, LX/1fI;->A01:LX/1fI;
+    iget v0, v2, LX/21I;->A00:I
 
     .line 65
     .line 66
-    iget-object v0, p0, LX/1fI;->A00:LX/1fI;
+    add-int/lit8 v0, v0, -0x1
 
     .line 67
     .line 68
-    if-nez v1, :cond_1
+    iput v0, v2, LX/21I;->A00:I
 
     .line 69
     .line 70
-    iput-object v0, v2, LX/1fJ;->A01:LX/1fI;
+    iget-object v1, p0, LX/21D;->A03:LX/21D;
 
     .line 71
     .line 72
-    :goto_3
-    iget-object v0, p0, LX/1fI;->A00:LX/1fI;
+    iget-object v0, p0, LX/21D;->A01:LX/21D;
 
     .line 73
     .line 74
-    if-nez v0, :cond_2
+    if-nez v1, :cond_1
 
     .line 75
     .line 76
-    iput-object v1, v2, LX/1fJ;->A02:LX/1fI;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 77
     .line 78
-    goto :goto_2
-
     .line 79
-    :cond_1
-    iput-object v0, v1, LX/1fI;->A00:LX/1fI;
+    iput-object v0, v2, LX/21I;->A01:LX/21D;
 
     .line 80
     .line 81
-    goto :goto_3
+    :goto_3
+    iget-object v1, p0, LX/21D;->A01:LX/21D;
 
     .line 82
-    :cond_2
-    iput-object v1, v0, LX/1fI;->A01:LX/1fI;
-
     .line 83
-    .line 84
-    goto :goto_2
+    iget-object v0, p0, LX/21D;->A03:LX/21D;
 
+    .line 84
     .line 85
-    :cond_3
-    iput-object v1, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/1fI;
+    if-nez v1, :cond_2
 
     .line 86
     .line 87
-    goto :goto_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 88
-    :cond_4
-    iput-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/1fI;
-
     .line 89
     .line 90
+    iput-object v0, v2, LX/21I;->A02:LX/21D;
+
+    .line 91
+    .line 92
+    goto :goto_2
+
+    .line 93
+    :cond_1
+    iput-object v0, v1, LX/21D;->A01:LX/21D;
+
+    .line 94
+    .line 95
+    goto :goto_3
+
+    .line 96
+    :cond_2
+    iput-object v0, v1, LX/21D;->A03:LX/21D;
+
+    .line 97
+    .line 98
+    goto :goto_2
+
+    .line 99
+    :cond_3
+    iput-object v1, p1, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/21D;
+
+    .line 100
+    .line 101
+    goto :goto_1
+
+    .line 102
+    :cond_4
+    iput-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/21D;
+
+    .line 103
+    .line 104
     goto :goto_0
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
@@ -579,7 +629,7 @@
     move-result-object v0
 
     .line 25
-    invoke-virtual {p0, v1, v0}, LX/1dn;->Ah6(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1, v0}, Lcom/google/common/collect/LinkedListMultimap;->AfO(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 26
     .line 27
@@ -597,6 +647,14 @@
 
 .method private writeObject(Ljava/io/ObjectOutputStream;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
@@ -613,7 +671,7 @@
     .line 6
     .line 7
     .line 8
-    invoke-super {p0}, LX/1dn;->A02()Ljava/util/Collection;
+    invoke-super {p0}, LX/21N;->A02()Ljava/util/Collection;
 
     .line 9
     .line 10
@@ -646,7 +704,7 @@
 
     .line 23
     .line 24
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 25
     .line 26
@@ -693,7 +751,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0}, LX/1dn;->A02()Ljava/util/Collection;
+    invoke-super {p0}, LX/21N;->A02()Ljava/util/Collection;
 
     .line 1
     .line 2
@@ -704,26 +762,19 @@
     return-object v0
 .end method
 
-.method public final bridge synthetic A03()Ljava/util/Collection;
+.method public final A03(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
     .line 0
-    invoke-super {p0}, LX/1dn;->A03()Ljava/util/Collection;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final A04(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 0
-    invoke-super {p0}, LX/1dn;->A03()Ljava/util/Collection;
+    invoke-super {p0}, LX/21N;->values()Ljava/util/Collection;
 
     .line 1
     .line 2
@@ -746,15 +797,23 @@
     return v0
 .end method
 
-.method public final bridge synthetic ABI(Ljava/lang/Object;)Ljava/util/Collection;
+.method public final bridge synthetic A9o(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "key"
+        }
+    .end annotation
 
     .line 0
-    new-instance v0, LX/1fE;
+    new-instance v0, LX/21B;
 
     .line 1
     .line 2
-    invoke-direct {v0, p0, p1}, LX/1fE;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
+    invoke-direct {v0, p0, p1}, LX/21B;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
 
     .line 3
     .line 4
@@ -762,20 +821,56 @@
     return-object v0
 .end method
 
-.method public final bridge synthetic Aix(Ljava/lang/Object;)Ljava/util/Collection;
-    .locals 2
+.method public final AfO(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
 
     .line 0
-    new-instance v1, LX/1fC;
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {v0, p0, p1, p2}, Lcom/google/common/collect/LinkedListMultimap;->A00(LX/21D;Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;Ljava/lang/Object;)LX/21D;
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x1
+
+    .line 5
+    return v0
+.end method
+
+.method public final bridge synthetic AhR(Ljava/lang/Object;)Ljava/util/Collection;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    new-instance v1, LX/21C;
 
     .line 1
     .line 2
-    invoke-direct {v1, p0, p1}, LX/1fC;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
+    invoke-direct {v1, p0, p1}, LX/21C;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
 
     .line 3
     .line 4
     .line 5
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 6
     .line 7
@@ -783,7 +878,7 @@
     move-result-object v0
 
     .line 9
-    invoke-static {v0, v1}, LX/1dd;->A03(Ljava/util/Collection;Ljava/util/Iterator;)Z
+    invoke-static {v0, v1}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
 
     .line 10
     .line 11
@@ -796,16 +891,16 @@
     move-result-object v1
 
     .line 16
-    new-instance v0, LX/1fC;
+    new-instance v0, LX/21C;
 
     .line 17
     .line 18
-    invoke-direct {v0, p0, p1}, LX/1fC;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
+    invoke-direct {v0, p0, p1}, LX/21C;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
 
     .line 19
     .line 20
     .line 21
-    invoke-static {v0}, LX/1dd;->A02(Ljava/util/Iterator;)V
+    invoke-static {v0}, LX/1uG;->A01(Ljava/util/Iterator;)V
 
     .line 22
     .line 23
@@ -820,11 +915,11 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/1fI;
+    iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/21D;
 
     .line 2
     .line 3
-    iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/1fI;
+    iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->A03:LX/21D;
 
     .line 4
     .line 5
@@ -861,6 +956,14 @@
 
 .method public final containsKey(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
@@ -887,4 +990,19 @@
     .line 1
     .line 2
     return v0
+.end method
+
+.method public final bridge synthetic values()Ljava/util/Collection;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, LX/21N;->values()Ljava/util/Collection;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

@@ -1,76 +1,103 @@
 .class public final LX/4d7;
-.super Ljava/lang/Object;
+.super LX/4nS;
 .source ""
 
 
+# instance fields
+.field public final A00:Landroid/widget/TextView;
+
+.field public final A01:Lcom/google/android/material/datepicker/MaterialCalendarGridView;
+
+
 # direct methods
-.method public static A00(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
-    .locals 3
+.method public constructor <init>(Landroid/widget/LinearLayout;Z)V
+    .locals 4
 
     .line 0
-    iget v0, p0, Landroid/content/res/Configuration;->colorMode:I
+    invoke-direct {p0, p1}, LX/4nS;-><init>(Landroid/view/View;)V
 
     .line 1
     .line 2
-    and-int/lit8 v2, v0, 0x3
-
     .line 3
-    .line 4
-    iget v0, p1, Landroid/content/res/Configuration;->colorMode:I
+    const v0, 0x7f090388
 
+    .line 4
     .line 5
     .line 6
-    and-int/lit8 v1, v0, 0x3
+    invoke-static {p1, v0}, LX/434;->A0Y(Landroid/view/View;I)Landroid/widget/TextView;
 
     .line 7
     .line 8
-    if-eq v2, v1, :cond_0
-
     .line 9
+    move-result-object v3
+
     .line 10
-    iget v0, p2, Landroid/content/res/Configuration;->colorMode:I
+    iput-object v3, p0, LX/4d7;->A00:Landroid/widget/TextView;
 
     .line 11
     .line 12
-    or-int/2addr v0, v1
+    const/4 v2, 0x1
 
     .line 13
-    iput v0, p2, Landroid/content/res/Configuration;->colorMode:I
+    const/4 v0, 0x3
 
     .line 14
+    new-instance v1, LX/0Wr;
+
     .line 15
-    :cond_0
-    iget v0, p0, Landroid/content/res/Configuration;->colorMode:I
-
     .line 16
-    .line 17
-    and-int/lit8 v2, v0, 0xc
+    invoke-direct {v1, v0}, LX/0Wr;-><init>(I)V
 
+    .line 17
     .line 18
     .line 19
-    iget v0, p1, Landroid/content/res/Configuration;->colorMode:I
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 20
     .line 21
-    and-int/lit8 v1, v0, 0xc
-
     .line 22
+    move-result-object v0
+
     .line 23
-    if-eq v2, v1, :cond_1
+    invoke-virtual {v1, v3, v0}, LX/03A;->A02(Landroid/view/View;Ljava/lang/Object;)V
 
     .line 24
     .line 25
-    iget v0, p2, Landroid/content/res/Configuration;->colorMode:I
-
     .line 26
+    const v0, 0x7f090383
+
     .line 27
-    or-int/2addr v0, v1
-
     .line 28
-    iput v0, p2, Landroid/content/res/Configuration;->colorMode:I
-
     .line 29
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
     .line 30
-    :cond_1
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    check-cast v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;
+
+    .line 34
+    .line 35
+    iput-object v0, p0, LX/4d7;->A01:Lcom/google/android/material/datepicker/MaterialCalendarGridView;
+
+    .line 36
+    .line 37
+    if-nez p2, :cond_0
+
+    .line 38
+    .line 39
+    const/16 v0, 0x8
+
+    .line 40
+    .line 41
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 42
+    .line 43
+    .line 44
+    :cond_0
     return-void
 .end method

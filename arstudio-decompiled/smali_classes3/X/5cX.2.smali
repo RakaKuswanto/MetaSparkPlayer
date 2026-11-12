@@ -1,26 +1,30 @@
-.class public final LX/5cX;
+.class public final LX/5cx;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/util/Iterator;
+.implements LX/0Wm;
+
 
 # instance fields
-.field public A00:Z
+.field public A00:I
 
-.field public final synthetic A01:LX/5cY;
+.field public final A01:[B
 
 
 # direct methods
-.method public constructor <init>(LX/5cY;)V
+.method public constructor <init>([B)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5cX;->A01:LX/5cY;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/5cx;->A01:[B
+
     .line 4
     .line 5
     return-void
@@ -28,60 +32,107 @@
 
 
 # virtual methods
-.method public final A00(Ljava/lang/Exception;)V
-    .locals 3
+.method public final hasNext()Z
+    .locals 2
 
     .line 0
-    iget-object v1, p0, LX/5cX;->A01:LX/5cY;
+    iget v1, p0, LX/5cx;->A00:I
 
     .line 1
     .line 2
-    iget-object v2, v1, LX/5cY;->A04:LX/5dF;
+    iget-object v0, p0, LX/5cx;->A01:[B
 
     .line 3
     .line 4
-    if-eqz v2, :cond_0
+    array-length v0, v0
 
     .line 5
-    .line 6
-    new-instance v0, LX/5f2;
+    invoke-static {v1, v0}, LX/0X3;->A1Y(II)Z
 
+    .line 6
     .line 7
     .line 8
-    invoke-direct {v0, p1}, LX/5f2;-><init>(Ljava/lang/Throwable;)V
+    move-result v0
 
     .line 9
+    return v0
+.end method
+
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 3
+
+    .line 0
+    iget v2, p0, LX/5cx;->A00:I
+
+    .line 1
+    .line 2
+    iget-object v1, p0, LX/5cx;->A01:[B
+
+    .line 3
+    .line 4
+    array-length v0, v1
+
+    .line 5
+    if-ge v2, v0, :cond_0
+
+    .line 6
+    .line 7
+    add-int/lit8 v0, v2, 0x1
+
+    .line 8
+    .line 9
+    iput v0, p0, LX/5cx;->A00:I
+
     .line 10
     .line 11
-    invoke-static {v1, v0}, LX/5cY;->A00(LX/5cY;LX/5f2;)V
+    aget-byte v1, v1, v2
 
     .line 12
     .line 13
+    new-instance v0, LX/5cz;
+
     .line 14
-    iget-boolean v0, p0, LX/5cX;->A00:Z
-
     .line 15
-    .line 16
-    if-nez v0, :cond_0
+    invoke-direct {v0, v1}, LX/5cz;-><init>(B)V
 
+    .line 16
     .line 17
     .line 18
-    const/4 v1, 0x1
+    return-object v0
 
     .line 19
-    iput-boolean v1, p0, LX/5cX;->A00:Z
+    :cond_0
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     .line 20
     .line 21
-    const-string v0, "MediaGraphControllerImpl:onMediaGraphRenderError"
-
     .line 22
+    move-result-object v1
+
     .line 23
-    invoke-interface {v2, v0, p1, v1}, LX/5dF;->Aoa(Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    new-instance v0, Ljava/util/NoSuchElementException;
 
     .line 24
     .line 25
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
     .line 26
-    :cond_0
-    return-void
+    .line 27
+    .line 28
+    throw v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method

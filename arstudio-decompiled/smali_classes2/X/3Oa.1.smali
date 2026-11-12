@@ -2,22 +2,14 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3ij;
-.implements LX/3ik;
-
 
 # instance fields
-.field public A00:LX/3Ne;
-
-.field public A01:Lcom/facebook/tigon/tigonliger/TigonLigerConfig;
-
-.field public final A02:Ljava/util/Map;
+.field public final A00:I
 
 
 # direct methods
-.method public constructor <init>(LX/3Ne;Lcom/facebook/tigon/tigonliger/TigonLigerConfig;)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,99 +17,57 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Ye;->A0b()Ljava/util/Map;
+    iput p1, p0, LX/3Oa;->A00:I
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/3Oa;->A02:Ljava/util/Map;
-
-    .line 8
-    .line 9
-    iput-object p1, p0, LX/3Oa;->A00:LX/3Ne;
-
-    .line 10
-    .line 11
-    iput-object p2, p0, LX/3Oa;->A01:Lcom/facebook/tigon/tigonliger/TigonLigerConfig;
-
-    .line 12
-    .line 13
     return-void
 .end method
 
-.method public static A00(LX/3Oa;JZ)LX/3Ti;
-    .locals 1
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
     .line 0
-    iget-object p0, p0, LX/3Oa;->A02:Ljava/util/Map;
+    const/4 v2, 0x1
 
     .line 1
-    .line 2
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-array v1, v2, [Ljava/lang/Object;
 
+    .line 2
     .line 3
+    iget v0, p0, LX/3Oa;->A00:I
+
     .line 4
     .line 5
-    move-result-object v0
+    invoke-static {v1, v0}, LX/001;->A18([Ljava/lang/Object;I)V
 
     .line 6
-    if-eqz p3, :cond_1
-
     .line 7
     .line 8
-    invoke-interface {p0, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 9
     .line 10
     .line 11
-    move-result-object p2
+    move-result-object v2
 
     .line 12
-    :goto_0
-    check-cast p2, LX/3Ti;
+    const/4 v1, 0x0
 
     .line 13
+    const-string v0, "Status: %d"
+
     .line 14
-    if-nez p2, :cond_0
-
     .line 15
-    .line 16
-    const-string p1, "TigonNativeObserverAdapter"
+    invoke-static {v1, v0, v2}, LX/0X5;->A0j(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 16
     .line 17
     .line 18
-    invoke-static {v0}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
+    move-result-object v0
 
     .line 19
-    .line 20
-    .line 21
-    move-result-object p0
-
-    .line 22
-    const-string v0, "Request was not found for id %d"
-
-    .line 23
-    .line 24
-    invoke-static {p1, v0, p0}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 25
-    .line 26
-    .line 27
-    :cond_0
-    return-object p2
-
-    .line 28
-    :cond_1
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object p2
-
-    .line 32
-    goto :goto_0
+    return-object v0
 .end method

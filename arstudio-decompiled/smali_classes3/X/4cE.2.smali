@@ -4,20 +4,14 @@
 
 
 # instance fields
-.field public final A00:Landroid/widget/ImageView;
+.field public final A00:Landroid/content/res/Resources$Theme;
 
-.field public final A01:Landroid/widget/ImageView;
-
-.field public final A02:Landroid/widget/ImageView;
-
-.field public final A03:Landroid/widget/TextView;
-
-.field public final A04:Landroid/widget/TextView;
+.field public final A01:Landroid/content/res/Resources;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/res/Resources$Theme;Landroid/content/res/Resources;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,90 +19,157 @@
     .line 1
     .line 2
     .line 3
-    const v0, 0x1020014
+    iput-object p2, p0, LX/4cE;->A01:Landroid/content/res/Resources;
 
     .line 4
     .line 5
+    iput-object p1, p0, LX/4cE;->A00:Landroid/content/res/Resources$Theme;
+
     .line 6
-    invoke-static {p1, v0}, LX/4BE;->A0c(Landroid/view/View;I)Landroid/widget/TextView;
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 0
+    const/4 v3, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_0
+
+    .line 2
+    .line 3
+    const/4 v2, 0x0
+
+    .line 4
+    if-eqz p1, :cond_2
+
+    .line 5
+    .line 6
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
+    move-result-object v1
 
     .line 10
-    iput-object v0, p0, LX/4cE;->A03:Landroid/widget/TextView;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 11
     .line 12
-    const v0, 0x1020015
-
     .line 13
-    .line 14
-    .line 15
-    invoke-static {p1, v0}, LX/4BE;->A0c(Landroid/view/View;I)Landroid/widget/TextView;
+    move-result-object v0
 
+    .line 14
+    if-ne v1, v0, :cond_2
+
+    .line 15
     .line 16
+    check-cast p1, LX/4cE;
+
     .line 17
     .line 18
-    move-result-object v0
+    iget-object v1, p0, LX/4cE;->A01:Landroid/content/res/Resources;
 
     .line 19
-    iput-object v0, p0, LX/4cE;->A04:Landroid/widget/TextView;
-
     .line 20
-    .line 21
-    const v0, 0x1020007
+    iget-object v0, p1, LX/4cE;->A01:Landroid/content/res/Resources;
 
+    .line 21
     .line 22
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
     .line 23
     .line 24
-    invoke-static {p1, v0}, LX/4BF;->A0f(Landroid/view/View;I)Landroid/widget/ImageView;
-
     .line 25
-    .line 26
-    .line 27
-    move-result-object v0
+    move-result v0
 
+    .line 26
+    if-eqz v0, :cond_1
+
+    .line 27
     .line 28
-    iput-object v0, p0, LX/4cE;->A00:Landroid/widget/ImageView;
+    iget-object v1, p0, LX/4cE;->A00:Landroid/content/res/Resources$Theme;
 
     .line 29
     .line 30
-    const v0, 0x1020008
+    iget-object v0, p1, LX/4cE;->A00:Landroid/content/res/Resources$Theme;
 
     .line 31
     .line 32
-    .line 33
-    invoke-static {p1, v0}, LX/4BF;->A0f(Landroid/view/View;I)Landroid/widget/ImageView;
+    invoke-static {v1, v0}, LX/01q;->A01(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 33
     .line 34
     .line 35
+    move-result v0
+
     .line 36
-    move-result-object v0
+    if-eqz v0, :cond_1
 
     .line 37
-    iput-object v0, p0, LX/4cE;->A01:Landroid/widget/ImageView;
-
     .line 38
+    :cond_0
+    return v3
+
     .line 39
-    const v0, 0x7f0a0266
+    :cond_1
+    const/4 v3, 0x0
 
     .line 40
+    return v3
+
     .line 41
-    .line 42
-    invoke-static {p1, v0}, LX/4BF;->A0f(Landroid/view/View;I)Landroid/widget/ImageView;
+    :cond_2
+    return v2
+.end method
 
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v0
+.method public final hashCode()I
+    .locals 3
 
-    .line 46
-    iput-object v0, p0, LX/4cE;->A02:Landroid/widget/ImageView;
+    .line 0
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
-    .line 47
-    .line 48
-    return-void
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
+
+    .line 4
+    iget-object v1, p0, LX/4cE;->A01:Landroid/content/res/Resources;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    iget-object v1, p0, LX/4cE;->A00:Landroid/content/res/Resources$Theme;
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    aput-object v1, v2, v0
+
+    .line 13
+    .line 14
+    invoke-static {v2}, LX/01q;->A00([Ljava/lang/Object;)I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    return v0
 .end method

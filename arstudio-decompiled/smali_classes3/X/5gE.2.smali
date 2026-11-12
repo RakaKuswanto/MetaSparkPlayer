@@ -1,25 +1,43 @@
 .class public final LX/5gE;
-.super Ljava/lang/Object;
+.super LX/5g4;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/5eG;
+# static fields
+.field public static final A00:LX/5gE;
 
 
 # direct methods
-.method public constructor <init>(LX/5eG;)V
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/5gE;
+
+    invoke-direct {v0}, LX/5gE;-><init>()V
+
+    sput-object v0, LX/5gE;->A00:LX/5gE;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5gE;->A00:LX/5eG;
+    invoke-direct {p0}, LX/5g4;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Dispatchers.Unconfined"
+
+    return-object v0
 .end method

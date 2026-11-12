@@ -1,67 +1,62 @@
-.class public final LX/2dE;
+.class public final synthetic LX/2De;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3Y6;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AuthLogoutCommonHelper$$ExternalSyntheticLambda1"
 
 
 # instance fields
-.field public A00:LX/0An;
+.field public final synthetic A00:LX/2Py;
+
+.field public final synthetic A01:LX/2DZ;
+
+.field public final synthetic A02:Z
 
 
 # direct methods
-.method public constructor <init>(LX/0An;)V
-    .locals 0
+.method public synthetic constructor <init>(LX/2Py;LX/2DZ;)V
+    .locals 1
 
-    .line 0
+    const/4 v0, 0x1
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/2dE;->A00:LX/0An;
+    iput-object p2, p0, LX/2De;->A01:LX/2DZ;
 
-    .line 4
-    .line 5
+    iput-object p1, p0, LX/2De;->A00:LX/2Py;
+
+    iput-boolean v0, p0, LX/2De;->A02:Z
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final AS3(Ljava/lang/Iterable;)V
-    .locals 2
+.method public final run()V
+    .locals 3
 
     .line 0
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-object v2, p0, LX/2De;->A01:LX/2DZ;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    iget-object v1, p0, LX/2De;->A00:LX/2Py;
 
+    .line 3
     .line 4
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-boolean v0, p0, LX/2De;->A02:Z
 
     .line 5
     .line 6
+    invoke-virtual {v2, v1, v0}, LX/2DZ;->A01(LX/2Py;Z)V
+
     .line 7
-    move-result v0
-
     .line 8
-    if-eqz v0, :cond_0
-
     .line 9
-    .line 10
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 11
-    .line 12
-    .line 13
-    goto :goto_0
-
-    .line 14
-    :cond_0
     return-void
 .end method

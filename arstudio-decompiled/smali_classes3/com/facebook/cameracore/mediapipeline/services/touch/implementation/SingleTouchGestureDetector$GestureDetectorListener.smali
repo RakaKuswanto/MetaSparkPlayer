@@ -73,11 +73,11 @@
 
     .line 8
     .line 9
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 10
     .line 11
-    invoke-interface {v0, p1}, LX/5ju;->onDoubleTap(Landroid/view/MotionEvent;)V
+    invoke-interface {v0, p1}, LX/5pe;->onDoubleTap(Landroid/view/MotionEvent;)V
 
     .line 12
     .line 13
@@ -198,7 +198,7 @@
 
     .line 50
     .line 51
-    invoke-static {}, LX/0Yf;->A0P()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0V()Ljava/lang/Boolean;
 
     .line 52
     .line 53
@@ -372,11 +372,11 @@
 
     .line 67
     .line 68
-    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 69
     .line 70
-    invoke-interface {v0}, LX/5ju;->onScrollBegin()Z
+    invoke-interface {v0}, LX/5pe;->onScrollBegin()Z
 
     .line 71
     .line 72
@@ -607,11 +607,11 @@
 
     .line 13
     .line 14
-    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 15
     .line 16
-    invoke-interface {v0, p1}, LX/5ju;->onSingleTapUp(Landroid/view/MotionEvent;)Z
+    invoke-interface {v0, p1}, LX/5pe;->onSingleTapUp(Landroid/view/MotionEvent;)Z
 
     .line 17
     .line 18

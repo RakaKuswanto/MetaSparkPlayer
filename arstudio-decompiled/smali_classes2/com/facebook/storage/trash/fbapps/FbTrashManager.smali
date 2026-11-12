@@ -1,27 +1,25 @@
 .class public final Lcom/facebook/storage/trash/fbapps/FbTrashManager;
-.super LX/2Qn;
+.super LX/2ib;
 .source ""
 
 # interfaces
-.implements LX/1yF;
+.implements LX/206;
 
 
 # instance fields
-.field public final A00:LX/1Nm;
+.field public final A00:LX/0lu;
 
-.field public final A01:LX/1Nm;
+.field public final A01:LX/0lu;
 
-.field public final A02:LX/1Nm;
-
-.field public final A03:LX/1Nw;
+.field public final A02:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>()V
     .locals 3
 
     .line 0
-    invoke-static {}, LX/1z6;->A00()Landroid/content/Context;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 1
     .line 2
@@ -29,7 +27,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, LX/2P3;->A00(Landroid/content/Context;)LX/2P3;
+    invoke-static {v0}, LX/3IE;->A00(Landroid/content/Context;)LX/3IE;
 
     .line 5
     .line 6
@@ -45,7 +43,7 @@
     const/4 v0, 0x0
 
     .line 12
-    invoke-virtual {v2, v0, v1}, LX/2P2;->ABO(LX/2Qq;I)Ljava/io/File;
+    invoke-virtual {v2, v0, v1}, LX/3HS;->A9u(LX/3Ih;I)Ljava/io/File;
 
     .line 13
     .line 14
@@ -53,63 +51,59 @@
     move-result-object v0
 
     .line 16
-    invoke-direct {p0, v0}, LX/2Qn;-><init>(Ljava/io/File;)V
+    invoke-direct {p0, v0}, LX/2ib;-><init>(Ljava/io/File;)V
 
     .line 17
     .line 18
     .line 19
-    iput-object p1, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A03:LX/1Nw;
+    sget v0, LX/2I6;->A5L:I
 
     .line 20
     .line 21
-    sget v0, LX/2eq;->A8I:I
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
     .line 24
-    .line 25
-    .line 26
     move-result-object v0
 
+    .line 25
+    iput-object v0, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A00:LX/0lu;
+
+    .line 26
     .line 27
-    iput-object v0, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A00:LX/1Nm;
+    sget v0, LX/2I6;->A3q:I
 
     .line 28
     .line 29
-    sget v0, LX/2eq;->A6h:I
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
     .line 30
     .line 31
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
     .line 32
-    .line 33
-    .line 34
     move-result-object v0
 
+    .line 33
+    iput-object v0, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A01:LX/0lu;
+
+    .line 34
     .line 35
-    iput-object v0, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A01:LX/1Nm;
+    sget v0, LX/2I6;->A8F:I
 
     .line 36
     .line 37
-    sget v0, LX/2eq;->ABX:I
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
     .line 38
     .line 39
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
     .line 40
-    .line 41
-    .line 42
     move-result-object v0
 
-    .line 43
-    iput-object v0, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A02:LX/1Nm;
+    .line 41
+    iput-object v0, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A02:LX/0lu;
 
-    .line 44
-    .line 45
+    .line 42
+    .line 43
     return-void
 .end method
 
@@ -119,11 +113,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A01:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/storage/trash/fbapps/FbTrashManager;->A01:LX/0lu;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1Nm;->A0F(LX/1Nm;)Ljava/util/concurrent/Executor;
+    invoke-static {v0}, LX/0lu;->A0B(LX/0lu;)Ljava/util/concurrent/Executor;
 
     .line 3
     .line 4
@@ -131,11 +125,11 @@
     move-result-object v1
 
     .line 6
-    new-instance v0, LX/2Qk;
+    new-instance v0, LX/2bp;
 
     .line 7
     .line 8
-    invoke-direct {v0, p0}, LX/2Qk;-><init>(Lcom/facebook/storage/trash/fbapps/FbTrashManager;)V
+    invoke-direct {v0, p0}, LX/2bp;-><init>(Lcom/facebook/storage/trash/fbapps/FbTrashManager;)V
 
     .line 9
     .line 10

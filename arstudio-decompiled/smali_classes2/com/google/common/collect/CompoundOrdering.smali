@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/CompoundOrdering;
-.super LX/1eq;
+.super LX/23n;
 .source ""
 
 # interfaces
@@ -17,9 +17,19 @@
 # direct methods
 .method public constructor <init>(Ljava/util/Comparator;Ljava/util/Comparator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "primary",
+            "secondary"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1eq;-><init>()V
+    invoke-direct {p0}, LX/23n;-><init>()V
 
     .line 1
     .line 2
@@ -47,6 +57,14 @@
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     if-ne p1, p0, :cond_0
@@ -141,7 +159,7 @@
 
     .line 9
     .line 10
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 11
     .line 12

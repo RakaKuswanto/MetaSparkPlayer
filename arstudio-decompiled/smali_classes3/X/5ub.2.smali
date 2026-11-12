@@ -1,184 +1,108 @@
-.class public final LX/5ub;
+.class public final synthetic LX/5ub;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
 
 # instance fields
-.field public final A00:J
+.field public final synthetic A00:I
 
-.field public final A01:LX/5uP;
+.field public final synthetic A01:I
 
-.field public final A02:Ljava/lang/String;
+.field public final synthetic A02:I
 
-.field public final A03:Ljava/util/List;
+.field public final synthetic A03:J
 
-.field public final A04:Ljava/util/List;
+.field public final synthetic A04:Landroid/hardware/camera2/CaptureRequest$Builder;
+
+.field public final synthetic A05:LX/5tU;
+
+.field public final synthetic A06:LX/5sw;
+
+.field public final synthetic A07:LX/5tZ;
+
+.field public final synthetic A08:LX/5tj;
+
+.field public final synthetic A09:LX/5aI;
+
+.field public final synthetic A0A:Ljava/lang/String;
+
+.field public final synthetic A0B:Ljava/lang/String;
+
+.field public final synthetic A0C:Z
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;)V
-    .locals 7
-
-    .line 0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v4
-
-    .line 4
-    const/4 v1, 0x0
-
-    .line 5
-    move-object v0, p0
-
-    .line 6
-    move-wide v5, p1
-
-    .line 7
-    move-object v2, p3
-
-    .line 8
-    move-object v3, p4
-
-    .line 9
-    invoke-direct/range {v0 .. v6}, LX/5ub;-><init>(LX/5uP;Ljava/lang/String;Ljava/util/List;Ljava/util/List;J)V
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public constructor <init>(LX/5uP;Ljava/lang/String;Ljava/util/List;Ljava/util/List;J)V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p2, p0, LX/5ub;->A02:Ljava/lang/String;
-
-    .line 268435460
-    .line 268435461
-    iput-wide p5, p0, LX/5ub;->A00:J
-
-    .line 268435462
-    .line 268435463
-    invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    .line 268435464
-    .line 268435465
-    .line 268435466
-    move-result-object v0
-
-    .line 268435467
-    iput-object v0, p0, LX/5ub;->A03:Ljava/util/List;
-
-    .line 268435468
-    .line 268435469
-    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    .line 268435470
-    .line 268435471
-    .line 268435472
-    move-result-object v0
-
-    .line 268435473
-    iput-object v0, p0, LX/5ub;->A04:Ljava/util/List;
-
-    .line 268435474
-    .line 268435475
-    iput-object p1, p0, LX/5ub;->A01:LX/5uP;
-
-    .line 268435476
-    .line 268435477
-    return-void
-.end method
-
-.method public static A00(LX/6OB;I)J
+.method public synthetic constructor <init>(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5tU;LX/5sw;LX/5tZ;LX/5tj;LX/5aI;Ljava/lang/String;Ljava/lang/String;IIIJZ)V
     .locals 0
 
-    .line 0
-    iget-object p0, p0, LX/6OB;->A0Q:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput-object p4, p0, LX/5ub;->A07:LX/5tZ;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object p0
+    iput-object p7, p0, LX/5ub;->A0A:Ljava/lang/String;
 
-    .line 6
-    check-cast p0, LX/5ub;
+    iput-object p8, p0, LX/5ub;->A0B:Ljava/lang/String;
 
-    .line 7
-    .line 8
-    iget-wide p0, p0, LX/5ub;->A00:J
+    iput-object p6, p0, LX/5ub;->A09:LX/5aI;
 
-    .line 9
-    .line 10
-    return-wide p0
+    iput p9, p0, LX/5ub;->A00:I
+
+    iput p10, p0, LX/5ub;->A01:I
+
+    iput p11, p0, LX/5ub;->A02:I
+
+    iput-boolean p14, p0, LX/5ub;->A0C:Z
+
+    iput-object p3, p0, LX/5ub;->A06:LX/5sw;
+
+    iput-object p2, p0, LX/5ub;->A05:LX/5tU;
+
+    iput-object p1, p0, LX/5ub;->A04:Landroid/hardware/camera2/CaptureRequest$Builder;
+
+    iput-object p5, p0, LX/5ub;->A08:LX/5tj;
+
+    iput-wide p12, p0, LX/5ub;->A03:J
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final A01(I)I
-    .locals 4
+.method public final call()Ljava/lang/Object;
+    .locals 14
 
-    .line 0
-    iget-object v3, p0, LX/5ub;->A03:Ljava/util/List;
+    iget-object v0, p0, LX/5ub;->A07:LX/5tZ;
 
-    .line 1
-    .line 2
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    iget-object v6, p0, LX/5ub;->A0A:Ljava/lang/String;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v2
+    iget-object v7, p0, LX/5ub;->A0B:Ljava/lang/String;
 
-    .line 6
-    const/4 v1, 0x0
+    iget-object v5, p0, LX/5ub;->A09:LX/5aI;
 
-    .line 7
-    :goto_0
-    if-ge v1, v2, :cond_0
+    iget v8, p0, LX/5ub;->A00:I
 
-    .line 8
-    .line 9
-    invoke-static {v3, v1}, LX/4BF;->A0u(Ljava/util/List;I)LX/5ua;
+    iget v9, p0, LX/5ub;->A01:I
 
-    .line 10
-    .line 11
-    .line 12
+    iget v10, p0, LX/5ub;->A02:I
+
+    iget-boolean v13, p0, LX/5ub;->A0C:Z
+
+    iget-object v3, p0, LX/5ub;->A06:LX/5sw;
+
+    iget-object v2, p0, LX/5ub;->A05:LX/5tU;
+
+    iget-object v1, p0, LX/5ub;->A04:Landroid/hardware/camera2/CaptureRequest$Builder;
+
+    iget-object v4, p0, LX/5ub;->A08:LX/5tj;
+
+    iget-wide v11, p0, LX/5ub;->A03:J
+
+    invoke-virtual/range {v0 .. v13}, LX/5tZ;->A01(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5tU;LX/5sw;LX/5tj;LX/5aI;Ljava/lang/String;Ljava/lang/String;IIIJZ)LX/5yB;
+
     move-result-object v0
 
-    .line 13
-    iget v0, v0, LX/5ua;->A01:I
-
-    .line 14
-    .line 15
-    if-eq v0, p1, :cond_1
-
-    .line 16
-    .line 17
-    add-int/lit8 v1, v1, 0x1
-
-    .line 18
-    .line 19
-    goto :goto_0
-
-    .line 20
-    :cond_0
-    const/4 v1, -0x1
-
-    .line 21
-    :cond_1
-    return v1
+    return-object v0
 .end method

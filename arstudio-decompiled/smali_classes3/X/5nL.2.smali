@@ -1,54 +1,72 @@
-.class public final synthetic LX/5nL;
-.super Ljava/lang/Object;
+.class public LX/5nL;
+.super LX/5ng;
 .source ""
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements LX/5nt;
 
 
 # instance fields
-.field public final synthetic A00:Landroid/hardware/camera2/CaptureRequest$Builder;
+.field public final A00:Ljava/util/concurrent/ScheduledExecutorService;
 
-.field public final synthetic A01:LX/5md;
-
-.field public final synthetic A02:LX/5mO;
-
-.field public final synthetic A03:Z
+.field public volatile A01:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5md;LX/5mO;Z)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct {p0}, LX/5ng;-><init>()V
 
-    iput-object p2, p0, LX/5nL;->A01:LX/5md;
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {p1}, LX/57n;->A00(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    iput-object p1, p0, LX/5nL;->A00:Landroid/hardware/camera2/CaptureRequest$Builder;
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
 
-    iput-object p3, p0, LX/5nL;->A02:LX/5mO;
+    .line 7
+    iput-object v0, p0, LX/5nL;->A00:Ljava/util/concurrent/ScheduledExecutorService;
 
-    iput-boolean p4, p0, LX/5nL;->A03:Z
-
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 4
+.method public final dispose()V
+    .locals 1
 
-    iget-object v3, p0, LX/5nL;->A01:LX/5md;
+    .line 0
+    iget-boolean v0, p0, LX/5nL;->A01:Z
 
-    iget-object v2, p0, LX/5nL;->A00:Landroid/hardware/camera2/CaptureRequest$Builder;
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, LX/5nL;->A02:LX/5mO;
+    .line 3
+    .line 4
+    const/4 v0, 0x1
 
-    iget-boolean v0, p0, LX/5nL;->A03:Z
+    .line 5
+    iput-boolean v0, p0, LX/5nL;->A01:Z
 
-    invoke-virtual {v3, v2, v1, v0}, LX/5md;->A07(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5mO;Z)Ljava/lang/Void;
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/5nL;->A00:Ljava/util/concurrent/ScheduledExecutorService;
 
-    move-result-object v0
+    .line 8
+    .line 9
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
-    return-object v0
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    return-void
 .end method

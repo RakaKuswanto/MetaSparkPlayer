@@ -89,7 +89,7 @@
 
     .line 23
     .line 24
-    invoke-static {p0}, LX/56I;->A01(Landroid/content/Context;)LX/56I;
+    invoke-static {p0}, LX/50O;->A01(Landroid/content/Context;)LX/50O;
 
     .line 25
     .line 26
@@ -144,7 +144,7 @@
     move-result v1
 
     .line 51
-    invoke-virtual {v5, v2, v1}, LX/56I;->A03(Lcom/google/android/gms/common/ConnectionResult;I)Z
+    invoke-virtual {v5, v2, v1}, LX/50O;->A03(Lcom/google/android/gms/common/ConnectionResult;I)Z
 
     .line 52
     .line 53
@@ -156,7 +156,7 @@
 
     .line 56
     .line 57
-    iget-object v3, v5, LX/56I;->A04:Landroid/os/Handler;
+    iget-object v3, v5, LX/50O;->A02:Landroid/os/Handler;
 
     .line 58
     .line 59
@@ -188,7 +188,7 @@
 
     .line 71
     :cond_1
-    iget-object v3, v5, LX/56I;->A04:Landroid/os/Handler;
+    iget-object v3, v5, LX/50O;->A02:Landroid/os/Handler;
 
     .line 72
     .line 73
@@ -391,7 +391,7 @@
 
     .line 65
     .line 66
-    invoke-virtual {v1, p0, v0, v4}, LX/4fK;->A02(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v1, p0, v0, v4}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->A02(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 67
     .line 68
@@ -399,11 +399,11 @@
     move-result-object v0
 
     .line 70
-    new-instance v5, LX/4eq;
+    new-instance v5, LX/4L7;
 
     .line 71
     .line 72
-    invoke-direct {v5, p0, v0}, LX/4eq;-><init>(Landroid/app/Activity;Landroid/content/Intent;)V
+    invoke-direct {v5, p0, v0}, LX/4L7;-><init>(Landroid/app/Activity;Landroid/content/Intent;)V
 
     .line 73
     .line 74
@@ -412,7 +412,7 @@
 
     .line 76
     .line 77
-    invoke-static {}, LX/4BF;->A0W()Landroid/util/TypedValue;
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
 
     .line 78
     .line 79
@@ -487,7 +487,7 @@
     .line 114
     .line 115
     :goto_2
-    invoke-static {p0, v4}, LX/4f4;->A01(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p0, v4}, LX/4Ou;->A01(Landroid/content/Context;I)Ljava/lang/String;
 
     .line 116
     .line 117
@@ -527,7 +527,7 @@
     const/4 v1, 0x3
 
     .line 135
-    const v0, 0x7f12016e
+    const v0, 0x7f110151
 
     .line 136
     .line 137
@@ -561,7 +561,7 @@
     .line 151
     .line 152
     :cond_4
-    invoke-static {p0, v4}, LX/4f4;->A02(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p0, v4}, LX/4Ou;->A02(Landroid/content/Context;I)Ljava/lang/String;
 
     .line 153
     .line 154
@@ -583,414 +583,387 @@
 
     .line 162
     .line 163
-    invoke-static {v1, v4}, LX/0Yd;->A1U([Ljava/lang/Object;I)V
-
-    .line 164
-    .line 165
-    .line 166
-    const-string v0, "Creating dialog for Google Play services availability issue. ConnectionResult=%s"
-
-    .line 167
-    .line 168
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 169
-    .line 170
-    .line 171
-    move-result-object v2
-
-    .line 172
-    invoke-static {}, LX/4BF;->A0y()Ljava/lang/IllegalArgumentException;
-
-    .line 173
-    .line 174
-    .line 175
-    move-result-object v1
-
-    .line 176
-    const-string v0, "GoogleApiAvailability"
-
-    .line 177
-    .line 178
-    invoke-static {v0, v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 179
-    .line 180
-    .line 181
-    invoke-virtual {v3}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    .line 182
-    .line 183
-    .line 184
-    move-result-object v4
-
-    .line 185
-    if-eqz v4, :cond_6
-
-    .line 186
-    .line 187
-    const-string v3, "GooglePlayServicesErrorDialog"
-
-    .line 188
-    .line 189
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    .line 190
-    .line 191
-    .line 192
-    move-result-object v2
-
-    .line 193
-    new-instance v1, LX/4PS;
-
-    .line 194
-    .line 195
-    invoke-direct {v1}, LX/4PS;-><init>()V
-
-    .line 196
-    .line 197
-    .line 198
     const/4 v0, 0x0
 
+    .line 164
+    invoke-static {v1, v4, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 165
+    .line 166
+    .line 167
+    const-string v0, "Creating dialog for Google Play services availability issue. ConnectionResult=%s"
+
+    .line 168
+    .line 169
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 170
+    .line 171
+    .line 172
+    move-result-object v2
+
+    .line 173
+    invoke-static {}, LX/434;->A0q()Ljava/lang/IllegalArgumentException;
+
+    .line 174
+    .line 175
+    .line 176
+    move-result-object v1
+
+    .line 177
+    const-string v0, "GoogleApiAvailability"
+
+    .line 178
+    .line 179
+    invoke-static {v0, v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 180
+    .line 181
+    .line 182
+    invoke-virtual {v3}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    .line 183
+    .line 184
+    .line 185
+    move-result-object v4
+
+    .line 186
+    if-eqz v4, :cond_6
+
+    .line 187
+    .line 188
+    const-string v3, "GooglePlayServicesErrorDialog"
+
+    .line 189
+    .line 190
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    .line 191
+    .line 192
+    .line 193
+    move-result-object v2
+
+    .line 194
+    new-instance v1, LX/4Fa;
+
+    .line 195
+    .line 196
+    invoke-direct {v1}, LX/4Fa;-><init>()V
+
+    .line 197
+    .line 198
     .line 199
-    invoke-virtual {v4, v0}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    const/4 v0, 0x0
 
     .line 200
+    invoke-virtual {v4, v0}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+
     .line 201
     .line 202
+    .line 203
     invoke-virtual {v4, v0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 203
     .line 204
     .line 205
-    iput-object v4, v1, LX/4PS;->A00:Landroid/app/Dialog;
-
     .line 206
-    .line 207
-    iput-object p0, v1, LX/4PS;->A01:Landroid/content/DialogInterface$OnCancelListener;
+    iput-object v4, v1, LX/4Fa;->A00:Landroid/app/Dialog;
 
+    .line 207
     .line 208
+    iput-object p0, v1, LX/4Fa;->A01:Landroid/content/DialogInterface$OnCancelListener;
+
     .line 209
+    .line 210
     invoke-virtual {v1, v2, v3}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
-    .line 210
     .line 211
     .line 212
+    .line 213
     :cond_6
     iput v8, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->A00:I
 
-    .line 213
     .line 214
+    .line 215
     return-void
 
-    .line 215
-    :cond_7
-    const v0, 0x7f120178
-
     .line 216
+    :cond_7
+    const v0, 0x7f11015b
+
     .line 217
     .line 218
-    goto :goto_3
-
     .line 219
-    :cond_8
-    const v0, 0x7f120171
+    goto :goto_3
 
     .line 220
+    :cond_8
+    const v0, 0x7f110154
+
     .line 221
     .line 222
+    .line 223
     goto :goto_3
 
-    .line 223
+    .line 224
     :cond_9
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    .line 224
     .line 225
+    .line 226
     invoke-direct {v3, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 226
     .line 227
     .line 228
+    .line 229
     goto :goto_2
 
-    .line 229
+    .line 230
     :cond_a
     const-string v0, "Activity started without resolution"
 
-    .line 230
     .line 231
+    .line 232
     goto/16 :goto_0
 
-    .line 232
     .line 233
+    .line 234
     :cond_b
     :try_start_0
     invoke-virtual {v1}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
 
-    .line 234
     .line 235
     .line 236
+    .line 237
     move-result-object v7
 
-    .line 237
+    .line 238
     const/4 v9, 0x0
 
-    .line 238
+    .line 239
     const/4 v10, 0x0
 
-    .line 239
+    .line 240
     move v11, v10
 
-    .line 240
+    .line 241
     move v12, v10
 
-    .line 241
+    .line 242
     invoke-virtual/range {v6 .. v12}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;III)V
 
-    .line 242
     .line 243
     .line 244
+    .line 245
     iput v8, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->A00:I
 
-    .line 245
     .line 246
+    .line 247
     goto :goto_5
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 247
+    .line 248
     :catch_0
     move-exception v4
 
-    .line 248
+    .line 249
     const-string v0, "notify_manager"
 
-    .line 249
     .line 250
+    .line 251
     invoke-virtual {v2, v0, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 251
     .line 252
     .line 253
-    move-result v0
-
     .line 254
-    if-eqz v0, :cond_d
+    move-result v0
 
     .line 255
-    .line 256
-    invoke-static {p0}, LX/56I;->A01(Landroid/content/Context;)LX/56I;
+    if-eqz v0, :cond_d
 
+    .line 256
     .line 257
+    invoke-static {p0}, LX/50O;->A01(Landroid/content/Context;)LX/50O;
+
     .line 258
     .line 259
+    .line 260
     move-result-object v5
 
-    .line 260
+    .line 261
     const/16 v1, 0x16
 
-    .line 261
     .line 262
-    const/4 v0, 0x0
-
     .line 263
-    new-instance v4, Lcom/google/android/gms/common/ConnectionResult;
+    const/4 v0, 0x0
 
     .line 264
+    new-instance v4, Lcom/google/android/gms/common/ConnectionResult;
+
     .line 265
+    .line 266
     invoke-direct {v4, v0, v1}, Lcom/google/android/gms/common/ConnectionResult;-><init>(Landroid/app/PendingIntent;I)V
 
-    .line 266
     .line 267
     .line 268
+    .line 269
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    .line 269
     .line 270
     .line 271
+    .line 272
     move-result-object v2
 
-    .line 272
+    .line 273
     const/4 v1, -0x1
 
-    .line 273
+    .line 274
     const-string v0, "failing_client_id"
 
-    .line 274
     .line 275
+    .line 276
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    .line 276
     .line 277
     .line 278
+    .line 279
     move-result v3
 
-    .line 279
-    invoke-virtual {v5, v4, v3}, LX/56I;->A03(Lcom/google/android/gms/common/ConnectionResult;I)Z
-
     .line 280
+    invoke-virtual {v5, v4, v3}, LX/50O;->A03(Lcom/google/android/gms/common/ConnectionResult;I)Z
+
     .line 281
     .line 282
+    .line 283
     move-result v0
 
-    .line 283
+    .line 284
     if-nez v0, :cond_c
 
-    .line 284
     .line 285
-    iget-object v2, v5, LX/56I;->A04:Landroid/os/Handler;
-
     .line 286
+    iget-object v2, v5, LX/50O;->A02:Landroid/os/Handler;
+
     .line 287
+    .line 288
     const/4 v1, 0x5
 
-    .line 288
+    .line 289
     const/4 v0, 0x0
 
-    .line 289
+    .line 290
     invoke-virtual {v2, v1, v3, v0, v4}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
-    .line 290
     .line 291
     .line 292
+    .line 293
     move-result-object v0
 
-    .line 293
+    .line 294
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 294
     .line 295
     .line 296
+    .line 297
     :cond_c
     :goto_4
     iput v8, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->A00:I
 
-    .line 297
     .line 298
+    .line 299
     goto/16 :goto_1
 
-    .line 299
     .line 300
+    .line 301
     :cond_d
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 301
     .line 302
     .line 303
-    move-result-object v2
-
     .line 304
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    move-result-object v2
 
     .line 305
+    const-string v1, "Activity not found while launching "
+
     .line 306
     .line 307
-    move-result v0
-
-    .line 308
-    add-int/lit8 v0, v0, 0x24
-
-    .line 309
-    .line 310
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
-    .line 311
-    .line 312
-    .line 313
-    move-result-object v1
-
-    .line 314
-    const-string v0, "Activity not found while launching "
-
-    .line 315
-    .line 316
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 317
-    .line 318
-    .line 319
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 320
-    .line 321
-    .line 322
     const-string v0, "."
 
-    .line 323
-    .line 324
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 308
+    .line 309
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 325
-    .line 326
-    .line 327
+    .line 310
+    .line 311
+    .line 312
     move-result-object v2
 
-    .line 328
+    .line 313
     sget-object v1, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
-    .line 329
-    .line 330
+    .line 314
+    .line 315
     const-string v0, "generic"
 
-    .line 331
-    .line 332
+    .line 316
+    .line 317
     invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 333
-    .line 334
-    .line 335
+    .line 318
+    .line 319
+    .line 320
     move-result v0
 
-    .line 336
+    .line 321
     if-eqz v0, :cond_e
 
-    .line 337
-    .line 338
+    .line 322
+    .line 323
     const-string v0, " This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store."
 
+    .line 324
+    .line 325
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 326
+    .line 327
+    .line 328
+    move-result-object v2
+
+    .line 329
+    :cond_e
+    invoke-static {v3, v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 330
+    .line 331
+    .line 332
+    goto :goto_4
+
+    .line 333
+    :goto_5
+    return-void
+
+    .line 334
+    :catch_1
+    move-exception v1
+
+    .line 335
+    const-string v0, "Failed to launch pendingIntent"
+
+    .line 336
+    .line 337
+    invoke-static {v3, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 338
     .line 339
     .line 340
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 341
     .line 342
     .line 343
-    move-result-object v2
-
-    .line 344
-    :cond_e
-    invoke-static {v3, v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 345
-    .line 346
-    .line 347
-    goto :goto_4
-
-    .line 348
-    :goto_5
-    return-void
-
-    .line 349
-    :catch_1
-    move-exception v1
-
-    .line 350
-    const-string v0, "Failed to launch pendingIntent"
-
-    .line 351
-    .line 352
-    invoke-static {v3, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 353
-    .line 354
-    .line 355
-    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
-
-    .line 356
-    .line 357
-    .line 358
     return-void
 .end method
 

@@ -13,10 +13,10 @@
 .method public abstract onBodyExperimental([B)V
 .end method
 
-.method public abstract onEOM(LX/3Vh;)V
+.method public abstract onEOM(LX/39T;)V
 .end method
 
-.method public abstract onError(Lcom/facebook/tigon/TigonError;LX/3Vh;)V
+.method public abstract onError(Lcom/facebook/tigon/TigonError;LX/39T;)V
 .end method
 
 .method public abstract onFirstByteFlushed(J)V
@@ -28,7 +28,7 @@
 .method public abstract onLastByteAcked(JJ)V
 .end method
 
-.method public abstract onResponse(LX/3Ro;)V
+.method public abstract onResponse(LX/388;)V
 .end method
 
 .method public abstract onStarted(Lcom/facebook/tigon/iface/TigonRequest;)V
@@ -37,5 +37,5 @@
 .method public abstract onUploadProgress(JJ)V
 .end method
 
-.method public abstract onWillRetry(Lcom/facebook/tigon/TigonError;LX/3Vh;)V
+.method public abstract onWillRetry(Lcom/facebook/tigon/TigonError;LX/39T;)V
 .end method

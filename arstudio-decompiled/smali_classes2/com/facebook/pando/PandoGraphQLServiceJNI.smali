@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final Companion:LX/1of;
+.field public static final Companion:LX/1vz;
 
 
 # instance fields
@@ -19,16 +19,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/1of;
+    new-instance v0, LX/1vz;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1of;-><init>()V
+    invoke-direct {v0}, LX/1vz;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/pando/PandoGraphQLServiceJNI;->Companion:LX/1of;
+    sput-object v0, Lcom/facebook/pando/PandoGraphQLServiceJNI;->Companion:LX/1vz;
 
     .line 6
     .line 7
@@ -37,7 +37,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -158,14 +158,14 @@
     return v0
 .end method
 
-.method public initiate(Ljava/lang/String;Lcom/facebook/pando/PandoGraphQLRequest;LX/1oc;Ljava/util/concurrent/Executor;)Lcom/facebook/pando/IPandoGraphQLService$Result;
+.method public initiate(Ljava/lang/String;Lcom/facebook/pando/PandoGraphQLRequest;LX/1vk;Ljava/util/concurrent/Executor;)Lcom/facebook/pando/IPandoGraphQLService$Result;
     .locals 1
 
     .line 0
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p2, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -181,7 +181,7 @@
 
     .line 8
     .line 9
-    invoke-direct {v0, p3}, Lcom/facebook/pando/PandoGraphQLServiceJNI$NativeCallbacks;-><init>(LX/1oc;)V
+    invoke-direct {v0, p3}, Lcom/facebook/pando/PandoGraphQLServiceJNI$NativeCallbacks;-><init>(LX/1vk;)V
 
     .line 10
     .line 11
@@ -208,7 +208,7 @@
     const/4 v1, 0x0
 
     .line 1
-    invoke-static {p1, v1}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v1}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -229,11 +229,11 @@
     return-void
 .end method
 
-.method public subscribe(Ljava/lang/Object;Ljava/lang/Class;LX/1oc;Ljava/util/concurrent/Executor;)Lcom/facebook/pando/IPandoGraphQLService$Result;
+.method public subscribe(Ljava/lang/Object;Ljava/lang/Class;LX/1vk;Ljava/util/concurrent/Executor;)Lcom/facebook/pando/IPandoGraphQLService$Result;
     .locals 1
 
     .line 0
-    invoke-static {p2, p3, p4}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p2, p3, p4}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
@@ -243,7 +243,7 @@
     .line 4
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     .line 8
@@ -256,7 +256,7 @@
 
     .line 12
     .line 13
-    invoke-direct {v0, p3}, Lcom/facebook/pando/PandoGraphQLServiceJNI$NativeCallbacks;-><init>(LX/1oc;)V
+    invoke-direct {v0, p3}, Lcom/facebook/pando/PandoGraphQLServiceJNI$NativeCallbacks;-><init>(LX/1vk;)V
 
     .line 14
     .line 15

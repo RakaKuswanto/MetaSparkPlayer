@@ -1,32 +1,27 @@
 .class public final LX/2G9;
-.super Ljava/lang/Object;
+.super LX/2GX;
 .source ""
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = 0x1L
 
 
 # instance fields
-.field public args:[Ljava/lang/Class;
+.field public A00:LX/2Ui;
 
-.field public clazz:Ljava/lang/Class;
+.field public final A01:LX/0RP;
+
+.field public final A02:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/reflect/Constructor;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/2GX;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p1}, Ljava/lang/reflect/Constructor;->getDeclaringClass()Ljava/lang/Class;
+    invoke-static {}, LX/0lf;->A0B()LX/0lf;
 
     .line 4
     .line 5
@@ -34,21 +29,17 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, LX/2G9;->clazz:Ljava/lang/Class;
+    iput-object v0, p0, LX/2G9;->A02:LX/0RP;
 
     .line 8
     .line 9
-    invoke-virtual {p1}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
+    sget-object v0, LX/3Ff;->A00:LX/0li;
 
     .line 10
     .line 11
+    iput-object v0, p0, LX/2G9;->A01:LX/0RP;
+
     .line 12
-    move-result-object v0
-
     .line 13
-    iput-object v0, p0, LX/2G9;->args:[Ljava/lang/Class;
-
-    .line 14
-    .line 15
     return-void
 .end method

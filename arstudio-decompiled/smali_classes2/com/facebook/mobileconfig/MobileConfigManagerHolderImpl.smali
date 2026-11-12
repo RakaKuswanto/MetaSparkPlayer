@@ -1,5 +1,5 @@
 .class public Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;
-.super LX/3In;
+.super LX/2LX;
 .source ""
 
 
@@ -8,7 +8,7 @@
 
 .field public mDataDirPath:Ljava/lang/String;
 
-.field public mFamilyDeviceIdProvider:LX/3i6;
+.field public mFamilyDeviceIdProvider:LX/2Li;
 
 .field public mHasSessionId:Z
 
@@ -24,7 +24,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/0Yh;->A0l()V
+    invoke-static {}, LX/0X4;->A0y()V
 
     .line 1
     .line 2
@@ -36,7 +36,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/3In;-><init>()V
+    invoke-direct {p0}, LX/2LX;-><init>()V
 
     .line 1
     .line 2
@@ -60,11 +60,11 @@
 
     .line 11
     .line 12
-    iput-object v0, p0, Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;->mFamilyDeviceIdProvider:LX/3i6;
+    iput-object v0, p0, Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;->mFamilyDeviceIdProvider:LX/2Li;
 
     .line 13
     .line 14
-    invoke-static {}, LX/0Yh;->A0k()Ljava/util/concurrent/CountDownLatch;
+    invoke-static {}, LX/0X5;->A0v()Ljava/util/concurrent/CountDownLatch;
 
     .line 15
     .line 16
@@ -100,10 +100,19 @@
 .method public native clearOverrides()V
 .end method
 
+.method public native containsParamsHashForPackage(Ljava/lang/String;Ljava/lang/String;I)Z
+.end method
+
 .method public native deleteOldUserData(I)V
 .end method
 
+.method public native deleteTableFromStorage(Ljava/lang/String;)V
+.end method
+
 .method public native fetchNames(ZLcom/facebook/mobileconfig/factory/MobileConfigUpdateConfigsCallback;)V
+.end method
+
+.method public native getAllPackageParamsMapHashInfo()Ljava/lang/String;
 .end method
 
 .method public native getConsistencyLoggingFlagsJSON()Ljava/lang/String;
@@ -120,6 +129,9 @@
     return-object v0
 .end method
 
+.method public native getDirectoryPathForSession()Ljava/lang/String;
+.end method
+
 .method public native getFamilyDeviceId()Ljava/lang/String;
 .end method
 
@@ -132,7 +144,7 @@
 .method public native getLastNormalUpdateTimestamp()J
 .end method
 
-.method public getLatestHandle()LX/3Ig;
+.method public getLatestHandle()LX/339;
     .locals 1
 
     .line 0
@@ -144,6 +156,14 @@
     move-result-object v0
 
     .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    :cond_0
     return-object v0
 .end method
 
@@ -153,7 +173,7 @@
 .method public native getLatestTotalParamsCount()J
 .end method
 
-.method public getOrCreateOverridesTable()LX/0RW;
+.method public getOrCreateOverridesTable()LX/0Nw;
     .locals 2
 
     .line 0
@@ -201,11 +221,11 @@
 .method public native isConsistencyLoggingNeeded(I)Z
 .end method
 
-.method public isConsistencyLoggingNeeded(LX/0rp;)Z
+.method public isConsistencyLoggingNeeded(LX/1gz;)Z
     .locals 1
 
     .line 0
-    invoke-virtual {p1}, LX/0rp;->getValue()I
+    invoke-virtual {p1}, LX/1gz;->getValue()I
 
     .line 1
     .line 2
@@ -239,11 +259,11 @@
 .method public native logConfigs(Ljava/lang/String;ILjava/util/Map;)V
 .end method
 
-.method public logConfigs(Ljava/lang/String;LX/0rp;Ljava/util/Map;)V
+.method public logConfigs(Ljava/lang/String;LX/1gz;Ljava/util/Map;)V
     .locals 1
 
     .line 0
-    invoke-virtual {p2}, LX/0rp;->getValue()I
+    invoke-virtual {p2}, LX/1gz;->getValue()I
 
     .line 1
     .line 2
@@ -259,7 +279,7 @@
     return-void
 .end method
 
-.method public native logExposure(Ljava/lang/String;Ljava/lang/String;)V
+.method public native logExposure(Ljava/lang/String;JLjava/lang/String;)V
 .end method
 
 .method public native logStorageConsistency()V
@@ -290,16 +310,16 @@
     .locals 2
 
     .line 0
-    new-instance v1, LX/2xB;
+    new-instance v1, LX/2LT;
 
     .line 1
     .line 2
-    invoke-direct {v1}, LX/2xB;-><init>()V
+    invoke-direct {v1}, LX/2LT;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    iput p1, v1, LX/2xB;->A00:I
+    iput p1, v1, LX/2LT;->A00:I
 
     .line 6
     .line 7
@@ -315,27 +335,27 @@
 
     .line 12
     .line 13
-    sget-object v0, LX/2xA;->SYNC_PART_AND_FULL:LX/2xA;
+    sget-object v0, LX/2LS;->SYNC_PART_AND_FULL:LX/2LS;
 
     .line 14
     .line 15
     :goto_0
-    iput-object v0, v1, LX/2xB;->A01:LX/2xA;
+    iput-object v0, v1, LX/2LT;->A01:LX/2LS;
 
     .line 16
     .line 17
     const/4 v0, 0x1
 
     .line 18
-    iput-boolean v0, v1, LX/2xB;->A05:Z
+    iput-boolean v0, v1, LX/2LT;->A04:Z
 
     .line 19
     .line 20
-    iput-boolean v0, v1, LX/2xB;->A03:Z
+    iput-boolean v0, v1, LX/2LT;->A03:Z
 
     .line 21
     .line 22
-    invoke-virtual {p0, v1}, Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;->updateConfigs(LX/2xB;)Z
+    invoke-virtual {p0, v1}, Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;->updateConfigs(LX/2LT;)Z
 
     .line 23
     .line 24
@@ -347,25 +367,25 @@
 
     .line 27
     :cond_0
-    sget-object v0, LX/2xA;->SYNC_FULL:LX/2xA;
+    sget-object v0, LX/2LS;->SYNC_FULL:LX/2LS;
 
     .line 28
     .line 29
     goto :goto_0
 .end method
 
-.method public updateConfigs(LX/2xB;)Z
+.method public updateConfigs(LX/2LT;)Z
     .locals 9
 
     .line 0
     const/4 v8, 0x0
 
     .line 1
-    iget-object v0, p1, LX/2xB;->A01:LX/2xA;
+    iget-object v0, p1, LX/2LT;->A01:LX/2LS;
 
     .line 2
     .line 3
-    invoke-virtual {v0}, LX/2xA;->getValue()I
+    invoke-virtual {v0}, LX/2LS;->getValue()I
 
     .line 4
     .line 5
@@ -373,46 +393,45 @@
     move-result v1
 
     .line 7
-    iget v2, p1, LX/2xB;->A00:I
+    iget v2, p1, LX/2LT;->A00:I
 
     .line 8
     .line 9
-    iget-boolean v3, p1, LX/2xB;->A02:Z
+    iget-boolean v3, p1, LX/2LT;->A02:Z
 
     .line 10
     .line 11
-    iget-boolean v4, p1, LX/2xB;->A04:Z
+    const/4 v4, 0x0
 
     .line 12
+    iget-boolean v5, p1, LX/2LT;->A04:Z
+
     .line 13
-    iget-boolean v5, p1, LX/2xB;->A05:Z
-
     .line 14
+    iget-boolean v6, p1, LX/2LT;->A03:Z
+
     .line 15
-    iget-boolean v6, p1, LX/2xB;->A03:Z
-
     .line 16
-    .line 17
-    new-instance v7, LX/2ub;
+    new-instance v7, LX/2LP;
 
+    .line 17
     .line 18
-    .line 19
     move-object v0, p0
 
-    .line 20
-    invoke-direct {v7, p0, p1}, LX/2ub;-><init>(Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;LX/2xB;)V
+    .line 19
+    invoke-direct {v7, p0, p1}, LX/2LP;-><init>(Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;LX/2LT;)V
 
+    .line 20
     .line 21
     .line 22
-    .line 23
     invoke-direct/range {v0 .. v8}, Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;->updateConfigsInternal(IIZZZZLcom/facebook/mobileconfig/factory/MobileConfigUpdateConfigsCallback;[I)Z
 
+    .line 23
     .line 24
     .line 25
-    .line 26
     move-result v0
 
-    .line 27
+    .line 26
     return v0
 .end method
 

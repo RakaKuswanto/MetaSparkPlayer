@@ -1,43 +1,23 @@
-.class public final LX/5wx;
+.class public interface abstract LX/5wx;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:J
+# virtual methods
+.method public abstract AC3(LX/6Aw;)LX/5yq;
+.end method
 
-.field public final A01:J
+.method public abstract AC4(LX/5ys;)LX/5yn;
+.end method
 
-.field public final A02:Ljava/lang/String;
+.method public abstract ACD(LX/5yr;)Ljava/lang/Object;
+.end method
 
-.field public final A03:[B
+.method public abstract AOb(LX/6Aw;)Z
+.end method
 
+.method public abstract AOc(LX/5ys;)Z
+.end method
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;[BJJ)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/5wx;->A02:Ljava/lang/String;
-
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/5wx;->A03:[B
-
-    .line 6
-    .line 7
-    iput-wide p3, p0, LX/5wx;->A00:J
-
-    .line 8
-    .line 9
-    iput-wide p5, p0, LX/5wx;->A01:J
-
-    .line 10
-    .line 11
-    return-void
+.method public abstract getContext()Landroid/content/Context;
 .end method

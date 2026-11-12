@@ -3,26 +3,112 @@
 .source ""
 
 # interfaces
-.implements LX/4Vl;
-
-
-# instance fields
-.field public final synthetic A00:LX/4Uv;
+.implements LX/4VH;
 
 
 # direct methods
-.method public constructor <init>(LX/4Uv;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4VB;->A00:LX/4Uv;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A4s(Ljava/lang/CharSequence;II)I
+    .locals 3
+
+    .line 0
+    add-int/2addr p3, p2
+
+    .line 1
+    const/4 v2, 0x2
+
+    .line 2
+    const/4 v0, 0x2
 
     .line 3
+    :goto_0
+    if-ge p2, p3, :cond_2
+
     .line 4
     .line 5
-    return-void
+    if-ne v0, v2, :cond_2
+
+    .line 6
+    .line 7
+    invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
+
+    .line 8
+    .line 9
+    .line 10
+    move-result v0
+
+    .line 11
+    invoke-static {v0}, Ljava/lang/Character;->getDirectionality(C)B
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    const/4 v0, 0x1
+
+    .line 16
+    if-eqz v1, :cond_0
+
+    .line 17
+    .line 18
+    if-eq v1, v0, :cond_1
+
+    .line 19
+    .line 20
+    if-eq v1, v2, :cond_1
+
+    .line 21
+    .line 22
+    packed-switch v1, :pswitch_data_0
+
+    .line 23
+    .line 24
+    .line 25
+    const/4 v0, 0x2
+
+    .line 26
+    :cond_0
+    :goto_1
+    :pswitch_0
+    add-int/lit8 p2, p2, 0x1
+
+    .line 27
+    .line 28
+    goto :goto_0
+
+    .line 29
+    :cond_1
+    :pswitch_1
+    const/4 v0, 0x0
+
+    .line 30
+    goto :goto_1
+
+    .line 31
+    :cond_2
+    return v0
+
+    .line 32
+    :pswitch_data_0
+    .packed-switch 0xe
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
 .end method

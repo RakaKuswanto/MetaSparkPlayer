@@ -20,7 +20,7 @@
 
 .field public final rootRelative:Z
 
-.field public final superpackExtension:LX/0Xu;
+.field public final superpackExtension:LX/07O;
 
 .field public final superpackFiles:I
 
@@ -35,15 +35,15 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
     .line 5
     .line 6
-    move-result-object v7
+    move-result-object v5
 
     .line 7
-    sget-object v10, LX/0Xu;->NONE:LX/0Xu;
+    sget-object v10, LX/07O;->NONE:LX/07O;
 
     .line 8
     .line 9
@@ -51,7 +51,7 @@
 
     .line 10
     .line 11
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 12
     .line 13
@@ -72,11 +72,11 @@
     .line 20
     .line 21
     .line 22
-    new-instance v6, Ljava/io/BufferedReader;
+    new-instance v7, Ljava/io/BufferedReader;
 
     .line 23
     .line 24
-    invoke-direct {v6, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v7, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
     .line 25
     .line 26
@@ -90,7 +90,7 @@
     const/4 v11, 0x0
 
     .line 30
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     .line 31
     const/4 v4, 0x0
@@ -99,7 +99,7 @@
     :cond_0
     :goto_0
     :try_start_0
-    invoke-virtual {v6}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     .line 33
     .line 34
@@ -162,7 +162,7 @@
 
     .line 61
     .line 62
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
     .line 63
     goto :goto_0
@@ -244,7 +244,7 @@
 
     .line 98
     .line 99
-    invoke-static {v0}, LX/0Xu;->parseExtension(Ljava/lang/String;)LX/0Xu;
+    invoke-static {v0}, LX/07O;->parseExtension(Ljava/lang/String;)LX/07O;
 
     .line 100
     .line 101
@@ -386,7 +386,7 @@
     .line 165
     .line 166
     .line 167
-    invoke-virtual {v7, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 168
     .line 169
@@ -398,7 +398,7 @@
     .line 171
     .line 172
     :cond_8
-    invoke-virtual {v6}, Ljava/io/Reader;->close()V
+    invoke-virtual {v7}, Ljava/io/Reader;->close()V
 
     .line 173
     .line 174
@@ -407,7 +407,7 @@
 
     .line 176
     .line 177
-    iput-boolean v5, p0, Lcom/facebook/common/dextricks/DexManifest;->locators:Z
+    iput-boolean v6, p0, Lcom/facebook/common/dextricks/DexManifest;->locators:Z
 
     .line 178
     .line 179
@@ -415,7 +415,7 @@
 
     .line 180
     .line 181
-    iput-object v10, p0, Lcom/facebook/common/dextricks/DexManifest;->superpackExtension:LX/0Xu;
+    iput-object v10, p0, Lcom/facebook/common/dextricks/DexManifest;->superpackExtension:LX/07O;
 
     .line 182
     .line 183
@@ -423,67 +423,94 @@
 
     .line 184
     .line 185
-    invoke-static {v8}, LX/001;->A1b(Ljava/util/AbstractCollection;)[Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/util/AbstractCollection;->size()I
 
     .line 186
     .line 187
     .line 188
-    move-result-object v0
+    move-result v0
 
     .line 189
-    iput-object v0, p0, Lcom/facebook/common/dextricks/DexManifest;->requires:[Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/String;
 
     .line 190
     .line 191
-    invoke-virtual {v7}, Ljava/util/AbstractCollection;->size()I
+    invoke-virtual {v8, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 192
     .line 193
     .line 194
-    move-result v0
+    move-result-object v0
 
     .line 195
-    new-array v0, v0, [Lcom/facebook/common/dextricks/DexManifest$Dex;
+    check-cast v0, [Ljava/lang/String;
 
     .line 196
     .line 197
-    invoke-virtual {v7, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/common/dextricks/DexManifest;->requires:[Ljava/lang/String;
 
     .line 198
     .line 199
+    invoke-virtual {v5}, Ljava/util/AbstractCollection;->size()I
+
     .line 200
-    move-result-object v0
-
     .line 201
-    check-cast v0, [Lcom/facebook/common/dextricks/DexManifest$Dex;
-
     .line 202
+    move-result v0
+
     .line 203
-    iput-object v0, p0, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
+    new-array v0, v0, [Lcom/facebook/common/dextricks/DexManifest$Dex;
 
     .line 204
     .line 205
-    return-void
+    invoke-virtual {v5, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 206
-    :catchall_0
-    move-exception v0
-
     .line 207
+    .line 208
+    move-result-object v0
+
+    .line 209
+    check-cast v0, [Lcom/facebook/common/dextricks/DexManifest$Dex;
+
+    .line 210
+    .line 211
+    iput-object v0, p0, Lcom/facebook/common/dextricks/DexManifest;->dexes:[Lcom/facebook/common/dextricks/DexManifest$Dex;
+
+    .line 212
+    .line 213
+    return-void
+
+    .line 214
+    :catchall_0
+    move-exception v1
+
+    .line 215
     :try_start_2
-    invoke-virtual {v6}, Ljava/io/Reader;->close()V
+    invoke-virtual {v7}, Ljava/io/Reader;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 208
-    .line 209
-    .line 210
+    .line 216
+    .line 217
+    .line 218
+    throw v1
+
+    .line 219
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 220
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 221
+    .line 222
+    .line 223
+    throw v1
 .end method
 
 .method public static loadManifestFrom(Lcom/facebook/common/dextricks/ResProvider;Ljava/lang/String;Z)Lcom/facebook/common/dextricks/DexManifest;
-    .locals 3
+    .locals 2
 
     .line 0
     invoke-virtual {p0, p1}, Lcom/facebook/common/dextricks/ResProvider;->open(Ljava/lang/String;)Ljava/io/InputStream;
@@ -491,7 +518,7 @@
     .line 1
     .line 2
     .line 3
-    move-result-object v2
+    move-result-object v0
 
     .line 4
     :try_start_0
@@ -499,18 +526,18 @@
 
     .line 5
     .line 6
-    invoke-direct {v1, v2}, Lcom/facebook/common/dextricks/DexManifest;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {v1, v0}, Lcom/facebook/common/dextricks/DexManifest;-><init>(Ljava/io/InputStream;)V
 
     .line 7
     .line 8
     .line 9
-    if-eqz v2, :cond_0
+    if-eqz v0, :cond_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 10
     .line 11
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     .line 12
     .line 13
@@ -538,24 +565,35 @@
 
     .line 24
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 25
-    if-eqz v2, :cond_2
+    if-eqz v0, :cond_2
 
     .line 26
     .line 27
     :try_start_1
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 28
     .line 29
     .line 30
+    throw v1
+
+    .line 31
     :catchall_1
+    move-exception v0
+
+    .line 32
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 33
+    .line 34
+    .line 35
     :cond_2
-    throw v0
+    throw v1
 .end method
 
 .method public static makeCompileUnitNameFromHashAndExtension(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -578,7 +616,7 @@
 
     .line 7
     .line 8
-    invoke-static {v1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 9
     .line 10
@@ -586,7 +624,7 @@
     move-result-object v0
 
     .line 12
-    invoke-static {p1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -599,7 +637,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, p0, p1}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, p1}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 19
     .line 20

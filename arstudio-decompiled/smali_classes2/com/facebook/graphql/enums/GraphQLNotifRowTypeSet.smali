@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLNotifRowTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLNotifRowTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x16
+    const/16 v0, 0x19
 
     .line 1
     .line 2
@@ -23,7 +23,7 @@
     const/4 v1, 0x0
 
     .line 5
-    const-string v0, "AYMT_PAGES_IG_NOTIFICATION"
+    const-string v0, "AD"
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "BLOKS"
+    const-string v0, "AYMT_PAGES_IG_NOTIFICATION"
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "BUCKET_HEADER"
+    const-string v0, "BLOKS"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "CACHED"
+    const-string v0, "BUCKET_HEADER"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "CUSTOMIZED_WIDGET"
+    const-string v0, "CACHED"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "DEBUG_INVALIDATION"
+    const-string v0, "CUSTOMIZED_WIDGET"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "EMPTY_STATE_WIDGET"
+    const-string v0, "DEBUG_INVALIDATION"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "FOLDER"
+    const-string v0, "EMPTY_STATE_WIDGET"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "HORIZON_INBOX"
+    const-string v0, "FOLDER"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "IG_NOTIFICATION"
+    const-string v0, "HORIZON_INBOX"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "JEWEL_TRAY"
+    const-string v0, "IG_NOTIFICATION"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "MESSSAGES"
+    const-string v0, "JEWEL_TRAY"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "NOTIFICATION"
+    const-string v0, "MESSSAGES"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "NT_VIEW"
+    const-string v0, "NOTIFICATION"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "PUSH"
+    const-string v0, "NT_VIEW"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "PYMK"
+    const-string v0, "PUSH"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "TIMELINE"
+    const-string v0, "PYMK"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "WIDGET"
+    const-string v0, "SEE_PREVIOUS_BUTTON"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "WIDGET_FEED_CONTENT"
+    const-string v0, "TIMELINE"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "WORK_MORE_NULL_STATE"
+    const-string v0, "WATCH_WIDGET_CONTENT"
 
     .line 113
     .line 114
@@ -256,34 +256,75 @@
 
     .line 117
     .line 118
-    const-string v0, "WORK_PRIORITY_NULL_STATE"
+    const-string/jumbo v0, "WIDGET"
 
     .line 119
     .line 120
+    .line 121
     aput-object v0, v2, v1
 
-    .line 121
     .line 122
+    .line 123
     const/16 v1, 0x15
 
-    .line 123
     .line 124
-    const-string v0, "XFAM_NOTIFICATION"
-
     .line 125
-    .line 126
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WIDGET_FEED_CONTENT"
 
+    .line 126
     .line 127
     .line 128
-    .line 129
-    move-result-object v0
+    aput-object v0, v2, v1
 
+    .line 129
     .line 130
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLNotifRowTypeSet;->A00:Ljava/util/Set;
+    const/16 v1, 0x16
 
     .line 131
     .line 132
+    const-string/jumbo v0, "WORK_MORE_NULL_STATE"
+
+    .line 133
+    .line 134
+    .line 135
+    aput-object v0, v2, v1
+
+    .line 136
+    .line 137
+    const/16 v1, 0x17
+
+    .line 138
+    .line 139
+    const-string/jumbo v0, "WORK_PRIORITY_NULL_STATE"
+
+    .line 140
+    .line 141
+    .line 142
+    aput-object v0, v2, v1
+
+    .line 143
+    .line 144
+    const/16 v1, 0x18
+
+    .line 145
+    .line 146
+    const-string/jumbo v0, "XFAM_NOTIFICATION"
+
+    .line 147
+    .line 148
+    .line 149
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 150
+    .line 151
+    .line 152
+    move-result-object v0
+
+    .line 153
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLNotifRowTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 154
+    .line 155
     return-void
 .end method
 
@@ -299,11 +340,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLNotifRowTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLNotifRowTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

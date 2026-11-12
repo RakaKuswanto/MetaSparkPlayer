@@ -1,11 +1,6 @@
 .class public final Lcom/facebook/neko/directinstall/digitalturbine/DTAuthResponse;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
-
-
-# annotations
-.annotation runtime Lkotlinx/serialization/Serializable;
-.end annotation
 
 
 # static fields
@@ -52,31 +47,36 @@
 
     .line 4
     .line 5
-    sget-object v0, LX/6CR;->A01:LX/2KY;
+    sget-object v0, LX/5ho;->A01:LX/3iV;
 
     .line 6
     .line 7
-    invoke-static {v0, p2, v1}, LX/2KP;->A00(LX/2Kr;II)V
+    invoke-static {v0, p2, v1}, LX/5cB;->A00(LX/6Xn;II)V
 
     .line 8
     .line 9
     .line 10
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
     throw v0
 
-    .line 12
-    :cond_0
-    invoke-direct {p0}, LX/0ru;-><init>()V
-
-    .line 13
-    .line 14
     .line 15
-    iput-object p1, p0, Lcom/facebook/neko/directinstall/digitalturbine/DTAuthResponse;->A00:Lcom/facebook/neko/directinstall/digitalturbine/DTSession;
+    :cond_0
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 16
     .line 17
+    .line 18
+    iput-object p1, p0, Lcom/facebook/neko/directinstall/digitalturbine/DTAuthResponse;->A00:Lcom/facebook/neko/directinstall/digitalturbine/DTSession;
+
+    .line 19
+    .line 20
     return-void
 .end method
 
@@ -101,7 +101,7 @@
 
     iget-object v0, p1, Lcom/facebook/neko/directinstall/digitalturbine/DTAuthResponse;->A00:Lcom/facebook/neko/directinstall/digitalturbine/DTSession;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -130,7 +130,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -151,7 +151,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0, v1}, LX/0Yc;->A05(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X1;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 12
     .line 13

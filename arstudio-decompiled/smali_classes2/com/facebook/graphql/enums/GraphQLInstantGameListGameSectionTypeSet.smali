@@ -78,284 +78,286 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "YOUR_GAMES"
+    const-string/jumbo v0, "YOUR_GAMES"
 
     .line 31
     .line 32
+    .line 33
     aput-object v0, v2, v1
 
-    .line 33
     .line 34
+    .line 35
     const/4 v1, 0x6
 
-    .line 35
+    .line 36
     const-string v0, "GAME_SHARE_INVITES"
 
-    .line 36
     .line 37
+    .line 38
     aput-object v0, v2, v1
 
-    .line 38
     .line 39
+    .line 40
     const/4 v1, 0x7
 
-    .line 40
+    .line 41
     const-string v0, "IN_DEVELOPMENT"
 
-    .line 41
     .line 42
+    .line 43
     aput-object v0, v2, v1
 
-    .line 43
     .line 44
+    .line 45
     const/16 v1, 0x8
 
-    .line 45
     .line 46
+    .line 47
     const-string v0, "INVITE_YOUR_FRIENDS"
 
-    .line 47
     .line 48
+    .line 49
     aput-object v0, v2, v1
 
-    .line 49
     .line 50
+    .line 51
     const/16 v1, 0x9
 
-    .line 51
     .line 52
+    .line 53
     const-string v0, "PUZZLE_AND_STRATEGY_GAMES"
 
-    .line 53
     .line 54
+    .line 55
     aput-object v0, v2, v1
 
-    .line 55
     .line 56
+    .line 57
     const/16 v1, 0xa
 
-    .line 57
     .line 58
+    .line 59
     const-string v0, "SPORTS_GAMES"
 
-    .line 59
     .line 60
+    .line 61
     aput-object v0, v2, v1
 
-    .line 61
     .line 62
+    .line 63
     const/16 v1, 0xb
 
-    .line 63
     .line 64
+    .line 65
     const-string v0, "TRIVIA_AND_WORD_GAMES"
 
-    .line 65
     .line 66
+    .line 67
     aput-object v0, v2, v1
 
-    .line 67
     .line 68
+    .line 69
     const/16 v1, 0xc
 
-    .line 69
     .line 70
+    .line 71
     const-string v0, "ACTION_GAMES"
 
-    .line 71
     .line 72
+    .line 73
     aput-object v0, v2, v1
 
-    .line 73
     .line 74
+    .line 75
     const/16 v1, 0xd
 
-    .line 75
     .line 76
+    .line 77
     const-string v0, "CARD_AND_BOARD_GAMES"
 
-    .line 77
     .line 78
+    .line 79
     aput-object v0, v2, v1
 
-    .line 79
     .line 80
+    .line 81
     const/16 v1, 0xe
 
-    .line 81
     .line 82
+    .line 83
     const-string v0, "TOP_GAMES"
 
-    .line 83
     .line 84
+    .line 85
     aput-object v0, v2, v1
 
-    .line 85
     .line 86
+    .line 87
     const/16 v1, 0xf
 
-    .line 87
     .line 88
+    .line 89
     const-string v0, "MORE_GAMES"
 
-    .line 89
     .line 90
+    .line 91
     aput-object v0, v2, v1
 
-    .line 91
     .line 92
+    .line 93
     const/16 v1, 0x10
 
-    .line 93
     .line 94
+    .line 95
     const-string v0, "FAVORITES"
 
-    .line 95
     .line 96
+    .line 97
     aput-object v0, v2, v1
 
-    .line 97
     .line 98
+    .line 99
     const/16 v1, 0x11
 
-    .line 99
     .line 100
-    const-string v0, "WHAT_FRIENDS_ARE_PLAYING"
-
     .line 101
-    .line 102
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WHAT_FRIENDS_ARE_PLAYING"
 
+    .line 102
     .line 103
     .line 104
-    const/16 v1, 0x12
+    aput-object v0, v2, v1
 
     .line 105
     .line 106
-    const-string v0, "PLAY_OFFLINE"
+    const/16 v1, 0x12
 
     .line 107
     .line 108
-    aput-object v0, v2, v1
+    const-string v0, "PLAY_OFFLINE"
 
     .line 109
     .line 110
-    const/16 v1, 0x13
+    aput-object v0, v2, v1
 
     .line 111
     .line 112
-    const-string v0, "MY_GAMES"
+    const/16 v1, 0x13
 
     .line 113
     .line 114
-    aput-object v0, v2, v1
+    const-string v0, "MY_GAMES"
 
     .line 115
     .line 116
-    const/16 v1, 0x14
+    aput-object v0, v2, v1
 
     .line 117
     .line 118
-    const-string v0, "CATEGORIES"
+    const/16 v1, 0x14
 
     .line 119
     .line 120
-    aput-object v0, v2, v1
+    const-string v0, "CATEGORIES"
 
     .line 121
     .line 122
-    const/16 v1, 0x15
+    aput-object v0, v2, v1
 
     .line 123
     .line 124
-    const-string v0, "ON_THE_RISE"
+    const/16 v1, 0x15
 
     .line 125
     .line 126
-    aput-object v0, v2, v1
+    const-string v0, "ON_THE_RISE"
 
     .line 127
     .line 128
-    const/16 v1, 0x16
+    aput-object v0, v2, v1
 
     .line 129
     .line 130
-    const-string v0, "TRENDING"
+    const/16 v1, 0x16
 
     .line 131
     .line 132
-    aput-object v0, v2, v1
+    const-string v0, "TRENDING"
 
     .line 133
     .line 134
-    const/16 v1, 0x17
+    aput-object v0, v2, v1
 
     .line 135
     .line 136
-    const-string v0, "TODAYS_GAMES"
+    const/16 v1, 0x17
 
     .line 137
     .line 138
-    aput-object v0, v2, v1
+    const-string v0, "TODAYS_GAMES"
 
     .line 139
     .line 140
-    const/16 v1, 0x18
+    aput-object v0, v2, v1
 
     .line 141
     .line 142
-    const-string v0, "BETTER_TOGETHER"
+    const/16 v1, 0x18
 
     .line 143
     .line 144
-    aput-object v0, v2, v1
+    const-string v0, "BETTER_TOGETHER"
 
     .line 145
     .line 146
-    const/16 v1, 0x19
+    aput-object v0, v2, v1
 
     .line 147
     .line 148
-    const-string v0, "GAMES_WITH_FRIENDS"
+    const/16 v1, 0x19
 
     .line 149
     .line 150
-    aput-object v0, v2, v1
+    const-string v0, "GAMES_WITH_FRIENDS"
 
     .line 151
     .line 152
-    const/16 v1, 0x1a
+    aput-object v0, v2, v1
 
     .line 153
     .line 154
-    const-string v0, "LEADERBOARDS"
+    const/16 v1, 0x1a
 
     .line 155
     .line 156
-    aput-object v0, v2, v1
+    const-string v0, "LEADERBOARDS"
 
     .line 157
     .line 158
-    const/16 v1, 0x1b
+    aput-object v0, v2, v1
 
     .line 159
     .line 160
-    const-string v0, "HOLIDAY"
+    const/16 v1, 0x1b
 
     .line 161
     .line 162
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string v0, "HOLIDAY"
 
     .line 163
     .line 164
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 165
+    .line 166
+    .line 167
     move-result-object v0
 
-    .line 166
+    .line 168
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGameListGameSectionTypeSet;->A00:Ljava/util/Set;
 
-    .line 167
-    .line 168
+    .line 169
+    .line 170
     return-void
 .end method
 

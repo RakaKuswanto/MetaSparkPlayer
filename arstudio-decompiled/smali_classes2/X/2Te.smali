@@ -4,240 +4,204 @@
 
 
 # instance fields
-.field public final A00:LX/06M;
+.field public final A00:I
 
-.field public final A01:Ljava/io/File;
+.field public final A01:I
+
+.field public final A02:LX/0Ft;
+
+.field public final A03:LX/2f1;
+
+.field public final A04:Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;
+
+.field public final A05:LX/2Zy;
+
+.field public final A06:LX/2Zx;
+
+.field public final A07:LX/2XA;
+
+.field public final A08:LX/2f5;
+
+.field public final A09:Ljava/util/Set;
+
+.field public final A0A:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 11
 
     .line 0
-    invoke-virtual {p1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    new-instance v1, LX/0IC;
-
-    .line 5
-    .line 6
-    invoke-direct {v1}, LX/0IC;-><init>()V
-
-    .line 7
-    .line 8
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
-    .line 11
-    .line 12
-    invoke-virtual {v0}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    iput-object v0, p0, LX/2Te;->A01:Ljava/io/File;
-
-    .line 17
-    .line 18
-    iput-object v1, p0, LX/2Te;->A00:LX/06M;
-
-    .line 19
-    .line 20
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00()Ljava/io/File;
-    .locals 5
-
-    .line 0
-    iget-object v4, p0, LX/2Te;->A01:Ljava/io/File;
-
     .line 1
     .line 2
-    invoke-virtual {v4}, Ljava/io/File;->exists()Z
-
     .line 3
+    sget v1, LX/2I6;->A6X:I
+
     .line 4
     .line 5
-    move-result v0
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 6
-    if-eqz v0, :cond_2
-
     .line 7
     .line 8
-    invoke-virtual {v4}, Ljava/io/File;->isDirectory()Z
+    move-result-object v0
 
     .line 9
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
+
     .line 10
     .line 11
-    move-result v0
-
     .line 12
-    if-eqz v0, :cond_1
+    move-result-object v10
 
     .line 13
-    .line 14
-    invoke-virtual {v4}, Ljava/io/File;->canRead()Z
+    check-cast v10, Ljava/lang/Number;
 
+    .line 14
     .line 15
+    sget v1, LX/2I6;->A6Y:I
+
     .line 16
     .line 17
-    move-result v0
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 18
-    const-string v2, "."
-
     .line 19
     .line 20
-    if-eqz v0, :cond_0
+    move-result-object v0
 
     .line 21
-    .line 22
-    invoke-virtual {v4}, Ljava/io/File;->canWrite()Z
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
+    .line 22
     .line 23
     .line 24
+    move-result-object v9
+
     .line 25
-    move-result v0
+    check-cast v9, Ljava/lang/Number;
 
     .line 26
-    if-nez v0, :cond_3
-
     .line 27
+    sget v0, LX/2I6;->A6T:I
+
     .line 28
-    const-string v1, "No write permissions for temporary directory "
-
     .line 29
-    .line 30
-    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
+    .line 30
     .line 31
     .line 32
+    move-result-object v8
+
     .line 33
-    move-result-object v0
+    check-cast v8, LX/2Zy;
 
     .line 34
-    invoke-static {v1, v0, v2}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 35
+    sget v0, LX/2I6;->A6U:I
+
     .line 36
     .line 37
-    move-result-object v0
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 38
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
-
     .line 39
     .line 40
+    move-result-object v7
+
     .line 41
-    move-result-object v0
+    check-cast v7, LX/2Zx;
 
     .line 42
-    throw v0
-
     .line 43
-    :cond_0
-    const-string v1, "No read permissions for temporary directory "
+    sget v0, LX/2I6;->A6V:I
 
     .line 44
     .line 45
-    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 46
     .line 47
     .line 48
-    move-result-object v0
+    move-result-object v6
 
     .line 49
-    invoke-static {v1, v0, v2}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    check-cast v6, LX/2XA;
 
     .line 50
     .line 51
-    .line 52
-    move-result-object v0
+    sget v0, LX/2I6;->A6R:I
 
+    .line 52
     .line 53
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 54
     .line 55
     .line 56
-    move-result-object v0
+    move-result-object v5
 
     .line 57
-    throw v0
+    check-cast v5, LX/2f1;
 
     .line 58
-    :cond_1
-    const-string v2, "Temporary folder "
-
     .line 59
-    .line 60
-    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    sget v0, LX/2I6;->A6W:I
 
+    .line 60
     .line 61
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 62
     .line 63
-    move-result-object v1
-
     .line 64
-    const-string v0, " is not a directory."
+    move-result-object v4
 
     .line 65
-    .line 66
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    check-cast v4, LX/2f5;
 
+    .line 66
     .line 67
+    invoke-static {}, LX/2I6;->A07()LX/0Ft;
+
     .line 68
     .line 69
-    move-result-object v0
-
     .line 70
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    move-result-object v3
 
     .line 71
+    sget v1, LX/2I6;->A6S:I
+
     .line 72
     .line 73
-    move-result-object v0
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 74
-    throw v0
-
     .line 75
-    :cond_2
-    invoke-virtual {v4}, Ljava/io/File;->mkdirs()Z
-
     .line 76
+    move-result-object v0
+
     .line 77
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
+
     .line 78
-    move-result v0
-
     .line 79
-    if-nez v0, :cond_3
-
     .line 80
+    move-result-object v2
+
     .line 81
-    iget-object v3, p0, LX/2Te;->A00:LX/06M;
+    check-cast v2, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;
 
     .line 82
     .line 83
-    const-string v2, "Could not create temporary directory. "
+    sget v0, LX/2I6;->A6Z:I
 
     .line 84
     .line 85
-    invoke-virtual {v4}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 86
     .line 87
@@ -245,30 +209,81 @@
     move-result-object v1
 
     .line 89
-    const-string v0, ""
+    check-cast v1, Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
     .line 90
     .line 91
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sget v0, LX/2I6;->A1V:I
 
     .line 92
     .line 93
+    invoke-static {v0}, LX/3Fc;->A05(I)Ljava/util/Set;
+
     .line 94
-    move-result-object v2
-
     .line 95
-    const/4 v1, 0x0
-
     .line 96
-    const-string v0, "TempFileDirectoryManager"
+    move-result-object v0
 
     .line 97
-    .line 98
-    invoke-interface {v3, v0, v2, v1}, LX/06M;->AjZ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-object v0, p0, LX/2Te;->A09:Ljava/util/Set;
 
+    .line 98
     .line 99
+    invoke-virtual {v10}, Ljava/lang/Number;->intValue()I
+
     .line 100
     .line 101
-    :cond_3
-    return-object v4
+    .line 102
+    move-result v0
+
+    .line 103
+    iput v0, p0, LX/2Te;->A00:I
+
+    .line 104
+    .line 105
+    invoke-virtual {v9}, Ljava/lang/Number;->intValue()I
+
+    .line 106
+    .line 107
+    .line 108
+    move-result v0
+
+    .line 109
+    iput v0, p0, LX/2Te;->A01:I
+
+    .line 110
+    .line 111
+    iput-object v8, p0, LX/2Te;->A05:LX/2Zy;
+
+    .line 112
+    .line 113
+    iput-object v7, p0, LX/2Te;->A06:LX/2Zx;
+
+    .line 114
+    .line 115
+    iput-object v6, p0, LX/2Te;->A07:LX/2XA;
+
+    .line 116
+    .line 117
+    iput-object v5, p0, LX/2Te;->A03:LX/2f1;
+
+    .line 118
+    .line 119
+    iput-object v4, p0, LX/2Te;->A08:LX/2f5;
+
+    .line 120
+    .line 121
+    iput-object v3, p0, LX/2Te;->A02:LX/0Ft;
+
+    .line 122
+    .line 123
+    iput-object v2, p0, LX/2Te;->A04:Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;
+
+    .line 124
+    .line 125
+    iput-object v1, p0, LX/2Te;->A0A:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
+
+    .line 126
+    .line 127
+    return-void
 .end method

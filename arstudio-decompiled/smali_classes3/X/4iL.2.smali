@@ -1,100 +1,38 @@
-.class public final LX/4iL;
-.super LX/4me;
+.class public interface abstract LX/4iL;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
+# virtual methods
+.method public abstract A3j(LX/4iK;Ljava/lang/String;Z)LX/4iK;
+.end method
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.method public abstract A4f(Ljava/lang/String;LX/0GZ;IZ)Z
+.end method
 
-.field public A01:LX/4hW;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
+.method public abstract ABV(Ljava/lang/Object;Ljava/lang/String;IZ)Ljava/lang/Object;
+.end method
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.method public abstract AP6()Z
+.end method
 
-.field public A02:Ljava/lang/String;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
+.method public abstract AfS(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;IZ)V
+.end method
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.method public abstract Aho(Ljava/lang/String;Z)V
+.end method
 
-.field public A03:Ljava/lang/String;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
+.method public abstract AkP(Z)V
+.end method
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.method public abstract ApL(LX/4kR;Ljava/lang/String;Ljava/lang/String;ZZ)V
+.end method
 
-.field public A04:Ljava/lang/String;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
+.method public abstract ApW(LX/3y7;Ljava/lang/String;Ljava/lang/String;ZZ)V
+.end method
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.method public abstract ApX(LX/3y7;Ljava/lang/String;Z)V
+.end method
 
-.field public A05:Ljava/lang/String;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A06:Ljava/lang/String;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 0
-    const-string v0, "OfflineGameOverlayComponent"
-
-    .line 1
-    .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+.method public abstract ApY(LX/3y7;Ljava/lang/String;Ljava/lang/String;ZZ)V
 .end method

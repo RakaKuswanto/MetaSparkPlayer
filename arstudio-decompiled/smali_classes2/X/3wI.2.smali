@@ -1,6 +1,14 @@
 .class public final LX/3wI;
-.super LX/3u5;
+.super Ljava/lang/Object;
 .source ""
+
+
+# instance fields
+.field public A00:LX/4ei;
+
+.field public A01:LX/3Z4;
+
+.field public A02:LX/3pu;
 
 
 # direct methods
@@ -8,7 +16,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3u5;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

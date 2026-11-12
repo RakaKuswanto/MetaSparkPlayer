@@ -1,738 +1,445 @@
-.class public final LX/4sR;
-.super Ljava/lang/Object;
+.class public final LX/4Sr;
+.super Landroid/widget/Filter;
 .source ""
-
-# interfaces
-.implements LX/5WM;
-.implements LX/4ss;
-.implements LX/4st;
-.implements LX/4sn;
-.implements LX/4sq;
 
 
 # instance fields
-.field public A00:LX/3qd;
-
-.field public A01:Landroid/view/View;
-
-.field public A02:Landroid/widget/TextView;
-
-.field public A03:LX/3qI;
-
-.field public A04:LX/1zG;
-
-.field public final A05:Landroid/os/Handler;
-
-.field public final A06:LX/0Na;
-
-.field public final A07:Ljava/lang/Runnable;
+.field public A00:LX/4TZ;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(LX/4TZ;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/4si;
+    iput-object p1, p0, LX/4Sr;->A00:LX/4TZ;
 
     .line 4
     .line 5
-    invoke-direct {v0, p0}, LX/4si;-><init>(LX/4sR;)V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/4sR;->A07:Ljava/lang/Runnable;
-
-    .line 9
-    .line 10
-    sget v0, LX/2eq;->A6X:I
-
-    .line 11
-    .line 12
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    iput-object v0, p0, LX/4sR;->A06:LX/0Na;
-
-    .line 17
-    .line 18
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    iput-object v0, p0, LX/4sR;->A04:LX/1zG;
-
-    .line 23
-    .line 24
-    new-instance v0, Landroid/os/Handler;
-
-    .line 25
-    .line 26
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    .line 27
-    .line 28
-    .line 29
-    iput-object v0, p0, LX/4sR;->A05:Landroid/os/Handler;
-
-    .line 30
-    .line 31
-    return-void
-.end method
-
-.method public static final A00(LX/1zC;)LX/4sR;
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/4sR;
-
-    .line 1
-    .line 2
-    invoke-direct {v0, p0}, LX/4sR;-><init>(LX/1zC;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-object v0
-.end method
-
-.method public static A01(LX/4sR;)V
-    .locals 11
-
-    .line 0
-    iget-object v0, p0, LX/4sR;->A01:Landroid/view/View;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_5
-
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/4sR;->A00:LX/3qd;
-
-    .line 5
-    .line 6
-    if-eqz v0, :cond_5
-
-    .line 7
-    .line 8
-    iget-object v0, v0, LX/3qd;->A01:LX/5X4;
-
-    .line 9
-    .line 10
-    if-nez v0, :cond_2
-
-    .line 11
-    .line 12
-    const/4 v2, 0x0
-
-    .line 13
-    :goto_0
-    iget-object v3, p0, LX/4sR;->A01:Landroid/view/View;
-
-    .line 14
-    .line 15
-    const/4 v8, 0x0
-
-    .line 16
-    const/4 v5, 0x0
-
-    .line 17
-    cmpl-float v1, v2, v8
-
-    .line 18
-    .line 19
-    const/16 v0, 0x8
-
-    .line 20
-    .line 21
-    if-lez v1, :cond_0
-
-    .line 22
-    .line 23
-    const/4 v0, 0x0
-
-    .line 24
-    :cond_0
-    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 25
-    .line 26
-    .line 27
-    iget-object v0, p0, LX/4sR;->A02:Landroid/widget/TextView;
-
-    .line 28
-    .line 29
-    invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v10
-
-    .line 33
-    const/4 v4, 0x1
-
-    .line 34
-    new-array v9, v4, [LX/4sl;
-
-    .line 35
-    .line 36
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    .line 37
-    .line 38
-    .line 39
-    move-result v0
-
-    .line 40
-    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v3
-
-    .line 44
-    new-instance v1, Landroid/text/style/StyleSpan;
-
-    .line 45
-    .line 46
-    invoke-direct {v1, v4}, Landroid/text/style/StyleSpan;-><init>(I)V
-
-    .line 47
-    .line 48
-    .line 49
-    new-instance v0, LX/4sl;
-
-    .line 50
-    .line 51
-    invoke-direct {v0, v3, v1}, LX/4sl;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 52
-    .line 53
-    .line 54
-    aput-object v0, v9, v5
-
-    .line 55
-    .line 56
-    const v7, 0x7f120246
-
-    .line 57
-    .line 58
-    .line 59
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 60
-    .line 61
-    .line 62
-    move-result-object v6
-
-    .line 63
-    new-array v4, v4, [Ljava/lang/Object;
-
-    .line 64
-    .line 65
-    aget-object v3, v9, v5
-
-    .line 66
-    .line 67
-    const-string v1, "[[placeholder_"
-
-    .line 68
-    .line 69
-    const-string v0, "]]"
-
-    .line 70
-    .line 71
-    invoke-static {v1, v0, v5}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
-
-    .line 72
-    .line 73
-    .line 74
-    move-result-object v0
-
-    .line 75
-    aput-object v0, v4, v5
-
-    .line 76
-    .line 77
-    invoke-virtual {v6, v0, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 78
-    .line 79
-    .line 80
-    invoke-virtual {v10, v7, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v0
-
-    .line 84
-    new-instance v9, Landroid/text/SpannableStringBuilder;
-
-    .line 85
-    .line 86
-    invoke-direct {v9}, Landroid/text/SpannableStringBuilder;-><init>()V
-
-    .line 87
-    .line 88
-    .line 89
-    invoke-static {}, LX/4BF;->A16()Ljava/util/ArrayDeque;
-
-    .line 90
-    .line 91
-    .line 92
-    move-result-object v7
-
-    .line 93
-    invoke-virtual {v9, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    .line 94
-    .line 95
-    .line 96
-    invoke-static {v6}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
-
-    .line 97
-    .line 98
-    .line 99
-    move-result-object v6
-
-    .line 100
-    :goto_1
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 101
-    .line 102
-    .line 103
-    move-result v0
-
-    .line 104
-    if-eqz v0, :cond_3
-
-    .line 105
-    .line 106
-    invoke-static {v6}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
-
-    .line 107
-    .line 108
-    .line 109
-    move-result-object v0
-
-    .line 110
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    .line 111
-    .line 112
-    .line 113
-    move-result-object v4
-
-    .line 114
-    check-cast v4, LX/4sl;
-
-    .line 115
-    .line 116
-    invoke-static {v0}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
-
-    .line 117
-    .line 118
-    .line 119
-    move-result-object v3
-
-    .line 120
-    iget-object v0, v4, LX/4sl;->A01:Ljava/lang/Object;
-
-    .line 121
-    .line 122
-    if-nez v0, :cond_1
-
-    .line 123
-    .line 124
-    invoke-virtual {v10, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 125
-    .line 126
-    .line 127
-    move-result-object v0
-
-    .line 128
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 129
-    .line 130
-    .line 131
-    move-result-object v1
-
-    .line 132
-    iget-object v0, v4, LX/4sl;->A00:Ljava/lang/Object;
-
-    .line 133
-    .line 134
-    invoke-static {v9, v0, v3, v1, v7}, LX/6KS;->A00(Landroid/text/SpannableStringBuilder;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayDeque;)V
-
-    .line 135
-    .line 136
-    .line 137
-    goto :goto_1
-
-    .line 138
-    :cond_2
-    iget-object v0, v0, LX/5X4;->A0V:LX/5X5;
-
-    .line 139
-    .line 140
-    invoke-static {v0}, LX/5X5;->A00(LX/5X5;)Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;
-
-    .line 141
-    .line 142
-    .line 143
-    move-result-object v0
-
-    .line 144
-    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/engine/AREngineController;->getFPS()F
-
-    .line 145
-    .line 146
-    .line 147
-    move-result v2
-
-    .line 148
-    goto/16 :goto_0
-
-    .line 149
-    .line 150
-    :cond_3
-    new-instance v1, Landroid/text/SpannableString;
-
-    .line 151
-    .line 152
-    invoke-direct {v1, v9}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    .line 153
-    .line 154
-    .line 155
-    iget-object v0, p0, LX/4sR;->A02:Landroid/widget/TextView;
-
-    .line 156
-    .line 157
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 158
-    .line 159
-    .line 160
-    iget-object v4, p0, LX/4sR;->A03:LX/3qI;
-
-    .line 161
-    .line 162
-    invoke-static {v8, v2}, Ljava/lang/Math;->max(FF)F
-
-    .line 163
-    .line 164
-    .line 165
-    move-result v1
-
-    .line 166
-    const/high16 v0, 0x41f00000    # 30.0f
-
-    .line 167
-    .line 168
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
-
-    .line 169
-    .line 170
-    .line 171
-    move-result v3
-
-    .line 172
-    div-float/2addr v3, v0
-
-    .line 173
-    iget-object v2, v4, LX/3qI;->A05:[F
-
-    .line 174
-    .line 175
-    iget v0, v4, LX/3qI;->A04:I
-
-    .line 176
-    .line 177
-    add-int/lit8 v1, v0, 0x1
-
-    .line 178
-    .line 179
-    iput v1, v4, LX/3qI;->A04:I
-
-    .line 180
-    .line 181
-    aput v3, v2, v0
-
-    .line 182
-    .line 183
-    array-length v0, v2
-
-    .line 184
-    if-ne v1, v0, :cond_4
-
-    .line 185
-    .line 186
-    iput v5, v4, LX/3qI;->A04:I
-
-    .line 187
-    .line 188
-    :cond_4
-    invoke-virtual {v4}, Landroid/view/View;->invalidate()V
-
-    .line 189
-    .line 190
-    .line 191
-    :cond_5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AQ4()Z
+.method public final convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
 
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final AXK(Lcom/facebook/arstudio/player/model/EffectFile;LX/5Ua;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AXM(Lcom/facebook/arstudio/player/model/EffectFile;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;)V
-    .locals 0
-
     .line 0
-    return-void
-.end method
-
-.method public final AXN()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Aad()V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/4sR;->A05:Landroid/os/Handler;
+    iget-object v0, p0, LX/4Sr;->A00:LX/4TZ;
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/4sR;->A07:Ljava/lang/Runnable;
+    check-cast p1, Landroid/database/Cursor;
 
     .line 3
     .line 4
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-interface {v0, p1}, LX/4TZ;->A5o(Landroid/database/Cursor;)Ljava/lang/CharSequence;
 
     .line 5
     .line 6
     .line 7
-    return-void
-.end method
-
-.method public final AcE()V
-    .locals 4
-
-    .line 0
-    invoke-static {p0}, LX/4sR;->A01(LX/4sR;)V
-
-    .line 1
-    .line 2
-    .line 3
-    iget-object v3, p0, LX/4sR;->A05:Landroid/os/Handler;
-
-    .line 4
-    .line 5
-    iget-object v2, p0, LX/4sR;->A07:Ljava/lang/Runnable;
-
-    .line 6
-    .line 7
-    const-wide/16 v0, 0x1f4
-
-    .line 8
-    .line 9
-    invoke-virtual {v3, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public final AfB(Landroid/view/View;)V
-    .locals 3
-
-    .line 0
-    const v0, 0x7f0a02d7
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {p1, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
-
-    .line 4
-    .line 5
-    .line 6
     move-result-object v0
 
-    .line 7
-    iput-object v0, p0, LX/4sR;->A01:Landroid/view/View;
-
     .line 8
-    .line 9
-    const v0, 0x7f0a02d8
+    return-object v0
+.end method
 
+.method public final performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
+    .locals 11
+
+    .line 0
+    iget-object v3, p0, LX/4Sr;->A00:LX/4TZ;
+
+    .line 1
+    .line 2
+    check-cast v3, LX/4Sq;
+
+    .line 3
+    .line 4
+    if-nez p1, :cond_0
+
+    .line 5
+    .line 6
+    const-string v4, ""
+
+    .line 7
+    .line 8
+    :goto_0
+    iget-object v1, v3, LX/4Sq;->A0B:Landroidx/appcompat/widget/SearchView;
+
+    .line 9
     .line 10
+    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+
     .line 11
     .line 12
-    invoke-static {p1, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
-
     .line 13
+    move-result v0
+
     .line 14
+    const/4 v7, 0x0
+
     .line 15
-    move-result-object v0
+    if-nez v0, :cond_4
 
     .line 16
-    check-cast v0, Landroid/widget/TextView;
-
     .line 17
-    .line 18
-    iput-object v0, p0, LX/4sR;->A02:Landroid/widget/TextView;
+    invoke-virtual {v1}, Landroid/view/View;->getWindowVisibility()I
 
+    .line 18
     .line 19
     .line 20
-    const v0, 0x7f0a02d6
+    move-result v0
 
     .line 21
+    if-nez v0, :cond_4
+
     .line 22
     .line 23
-    invoke-static {p1, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    goto :goto_1
 
     .line 24
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
     .line 25
     .line 26
-    move-result-object v0
-
     .line 27
-    check-cast v0, LX/3qI;
+    move-result-object v4
 
     .line 28
+    goto :goto_0
+
     .line 29
-    iput-object v0, p0, LX/4sR;->A03:LX/3qI;
+    :goto_1
+    :try_start_0
+    iget-object v5, v3, LX/4Sq;->A09:Landroid/app/SearchableInfo;
 
     .line 30
     .line 31
-    iget-object v1, p0, LX/4sR;->A01:Landroid/view/View;
+    const/16 v6, 0x32
 
     .line 32
     .line 33
-    const/16 v0, 0x8
+    const/4 v9, 0x0
 
     .line 34
-    .line 35
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    if-eqz v5, :cond_3
 
+    .line 35
     .line 36
+    invoke-virtual {v5}, Landroid/app/SearchableInfo;->getSuggestAuthority()Ljava/lang/String;
+
     .line 37
     .line 38
-    iget-object v0, p0, LX/4sR;->A06:LX/0Na;
-
     .line 39
+    move-result-object v2
+
     .line 40
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    if-eqz v2, :cond_3
 
     .line 41
     .line 42
-    .line 43
-    move-result-object v1
+    new-instance v1, Landroid/net/Uri$Builder;
 
+    .line 43
     .line 44
-    sget-object v0, LX/3eT;->A00:LX/1b2;
+    invoke-direct {v1}, Landroid/net/Uri$Builder;-><init>()V
 
     .line 45
     .line 46
-    const/4 v2, 0x0
-
     .line 47
-    invoke-interface {v1, v0, v2}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ACf(LX/1b2;Z)Z
+    const-string v0, "content"
 
     .line 48
     .line 49
+    invoke-virtual {v1, v0}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
     .line 50
-    move-result v0
-
     .line 51
-    if-eqz v0, :cond_0
-
     .line 52
+    move-result-object v0
+
     .line 53
-    const/4 v2, 0x1
+    invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     .line 54
-    :cond_0
-    iget-object v1, p0, LX/4sR;->A01:Landroid/view/View;
-
     .line 55
     .line 56
-    new-instance v0, LX/4sc;
+    move-result-object v0
 
     .line 57
-    .line 58
-    invoke-direct {v0, p0, v2}, LX/4sc;-><init>(LX/4sR;Z)V
+    const-string v1, ""
 
+    .line 58
     .line 59
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->query(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
     .line 60
     .line 61
-    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
     .line 62
+    move-result-object v0
+
     .line 63
+    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->fragment(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
     .line 64
-    return-void
-.end method
+    .line 65
+    .line 66
+    move-result-object v2
 
-.method public final AfC()V
-    .locals 1
+    .line 67
+    invoke-virtual {v5}, Landroid/app/SearchableInfo;->getSuggestPath()Ljava/lang/String;
 
-    .line 0
+    .line 68
+    .line 69
+    .line 70
+    move-result-object v0
+
+    .line 71
+    if-eqz v0, :cond_1
+
+    .line 72
+    .line 73
+    invoke-virtual {v2, v0}, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 74
+    .line 75
+    .line 76
+    :cond_1
+    const-string v0, "search_suggest_query"
+
+    .line 77
+    .line 78
+    invoke-virtual {v2, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 79
+    .line 80
+    .line 81
+    invoke-virtual {v5}, Landroid/app/SearchableInfo;->getSuggestSelection()Ljava/lang/String;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v8
+
+    .line 85
+    if-eqz v8, :cond_2
+
+    .line 86
+    .line 87
+    const/4 v0, 0x1
+
+    .line 88
+    new-array v9, v0, [Ljava/lang/String;
+
+    .line 89
+    .line 90
     const/4 v0, 0x0
 
-    .line 1
-    iput-object v0, p0, LX/4sR;->A01:Landroid/view/View;
+    .line 91
+    aput-object v4, v9, v0
 
+    .line 92
+    .line 93
+    :goto_2
+    invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    .line 94
+    .line 95
+    .line 96
+    move-result-object v1
+
+    .line 97
+    const-string v0, "limit"
+
+    .line 98
+    .line 99
+    invoke-virtual {v2, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 100
+    .line 101
+    .line 102
+    invoke-virtual {v2}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    .line 103
+    .line 104
+    .line 105
+    move-result-object v6
+
+    .line 106
+    iget-object v0, v3, LX/4Sq;->A0A:Landroid/content/Context;
+
+    .line 107
+    .line 108
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    .line 109
+    .line 110
+    .line 111
+    move-result-object v5
+
+    .line 112
+    move-object v10, v7
+
+    .line 113
+    invoke-virtual/range {v5 .. v10}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object v0
+
+    .line 117
+    goto :goto_3
+
+    .line 118
+    :cond_2
+    invoke-virtual {v2, v4}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 119
+    .line 120
+    .line 121
+    goto :goto_2
+
+    .line 122
+    :cond_3
+    move-object v0, v7
+
+    .line 123
+    :goto_3
+    if-eqz v0, :cond_4
+
+    .line 124
+    .line 125
+    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
+
+    .line 126
+    .line 127
+    .line 128
+    goto :goto_4
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 129
+    :catch_0
+    move-exception v2
+
+    .line 130
+    const-string v1, "SuggestionsAdapter"
+
+    .line 131
+    .line 132
+    const-string v0, "Search suggestions query threw an exception."
+
+    .line 133
+    .line 134
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 135
+    .line 136
+    .line 137
+    goto :goto_5
+
+    .line 138
+    :goto_4
+    move-object v7, v0
+
+    .line 139
+    :cond_4
+    :goto_5
+    new-instance v1, Landroid/widget/Filter$FilterResults;
+
+    .line 140
+    .line 141
+    invoke-direct {v1}, Landroid/widget/Filter$FilterResults;-><init>()V
+
+    .line 142
+    .line 143
+    .line 144
+    if-eqz v7, :cond_5
+
+    .line 145
+    .line 146
+    invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
+
+    .line 147
+    .line 148
+    .line 149
+    move-result v0
+
+    .line 150
+    iput v0, v1, Landroid/widget/Filter$FilterResults;->count:I
+
+    .line 151
+    .line 152
+    :goto_6
+    iput-object v7, v1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+
+    .line 153
+    .line 154
+    return-object v1
+
+    .line 155
+    :cond_5
+    const/4 v0, 0x0
+
+    .line 156
+    iput v0, v1, Landroid/widget/Filter$FilterResults;->count:I
+
+    .line 157
+    .line 158
+    const/4 v7, 0x0
+
+    .line 159
+    goto :goto_6
+.end method
+
+.method public final publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/4Sr;->A00:LX/4TZ;
+
+    .line 1
     .line 2
+    move-object v0, v2
+
     .line 3
-    iput-object v0, p0, LX/4sR;->A02:Landroid/widget/TextView;
+    check-cast v0, LX/4Ss;
 
     .line 4
     .line 5
-    iput-object v0, p0, LX/4sR;->A03:LX/3qI;
+    iget-object v1, v0, LX/4Ss;->A02:Landroid/database/Cursor;
 
     .line 6
     .line 7
+    iget-object v0, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    if-eqz v0, :cond_0
+
+    .line 10
+    .line 11
+    if-eq v0, v1, :cond_0
+
+    .line 12
+    .line 13
+    check-cast v0, Landroid/database/Cursor;
+
+    .line 14
+    .line 15
+    invoke-interface {v2, v0}, LX/4TZ;->A4o(Landroid/database/Cursor;)V
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_0
     return-void
 .end method

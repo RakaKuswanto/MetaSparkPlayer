@@ -1,111 +1,166 @@
-.class public final LX/38W;
+.class public abstract LX/38W;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:LX/20s;
-
-.field public A02:LX/20s;
-
-.field public A03:LX/38h;
-
-.field public A04:LX/3YF;
-
-.field public A05:Z
-
-.field public A06:Z
-
-.field public A07:Z
-
-.field public A08:Z
-
-.field public A09:Z
-
-.field public A0A:Z
-
-.field public A0B:Z
-
-.field public A0C:Z
-
-.field public A0D:Z
-
-.field public A0E:Z
-
-.field public A0F:Z
-
-.field public A0G:Z
-
-.field public final A0H:LX/38w;
-
-
 # direct methods
-.method public constructor <init>(LX/38w;)V
-    .locals 4
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const/4 v3, 0x1
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
     .line 2
     .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()LX/38S;
+    .locals 1
+
+    .line 0
+    instance-of v0, p0, LX/38V;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
     .line 4
-    iput-object p1, p0, LX/38W;->A0H:LX/38w;
+    move-object v0, p0
 
     .line 5
-    .line 6
-    const/4 v2, 0x0
+    check-cast v0, LX/38V;
 
+    .line 6
     .line 7
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v0, v0, LX/38V;->A00:LX/38S;
 
     .line 8
     .line 9
+    return-object v0
+
     .line 10
-    move-result-object v1
+    :cond_0
+    move-object v0, p0
 
     .line 11
-    new-instance v0, LX/1O7;
+    check-cast v0, LX/37S;
 
     .line 12
     .line 13
-    invoke-direct {v0, v1, v3}, LX/1O7;-><init>(Ljava/lang/Object;I)V
+    iget-object v0, v0, LX/37S;->A00:LX/38W;
 
     .line 14
     .line 15
-    .line 16
-    iput-object v0, p0, LX/38W;->A02:LX/20s;
+    invoke-virtual {v0}, LX/38W;->A00()LX/38S;
 
+    .line 16
     .line 17
     .line 18
-    iput-boolean v3, p0, LX/38W;->A07:Z
+    move-result-object v0
 
     .line 19
-    .line 20
-    const/16 v0, 0x1e
+    return-object v0
+.end method
 
-    .line 21
-    .line 22
-    iput v0, p0, LX/38W;->A00:I
+.method public final A01()Ljava/lang/String;
+    .locals 1
 
-    .line 23
-    .line 24
-    new-instance v0, LX/3YF;
+    .line 0
+    instance-of v0, p0, LX/38V;
 
-    .line 25
-    .line 26
-    invoke-direct {v0, v2, v2}, LX/3YF;-><init>(ZZ)V
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
 
-    .line 27
-    .line 28
-    .line 29
-    iput-object v0, p0, LX/38W;->A04:LX/3YF;
+    .line 3
+    .line 4
+    move-object v0, p0
 
-    .line 30
-    .line 31
-    return-void
+    .line 5
+    check-cast v0, LX/38V;
+
+    .line 6
+    .line 7
+    iget-object v0, v0, LX/38V;->A01:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    return-object v0
+
+    .line 10
+    :cond_0
+    move-object v0, p0
+
+    .line 11
+    check-cast v0, LX/37S;
+
+    .line 12
+    .line 13
+    iget-object v0, v0, LX/37S;->A00:LX/38W;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, LX/38W;->A01()Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    return-object v0
+.end method
+
+.method public final A02()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    instance-of v0, p0, LX/38V;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    move-object v0, p0
+
+    .line 5
+    check-cast v0, LX/38V;
+
+    .line 6
+    .line 7
+    iget-object v0, v0, LX/38V;->A02:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    return-object v0
+
+    .line 10
+    :cond_0
+    move-object v0, p0
+
+    .line 11
+    check-cast v0, LX/37S;
+
+    .line 12
+    .line 13
+    iget-object v0, v0, LX/37S;->A00:LX/38W;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, LX/38W;->A02()Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    return-object v0
 .end method

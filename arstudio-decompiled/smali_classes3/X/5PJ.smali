@@ -1,44 +1,47 @@
-.class public final LX/5PJ;
+.class public interface abstract LX/5PJ;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3aS;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
 
 # virtual methods
-.method public final AJH(I)I
-    .locals 2
+.method public abstract ATJ(Ljava/lang/Exception;)V
+.end method
 
-    const/4 v1, 0x2
+.method public abstract ATK(Ljava/lang/String;)V
+.end method
 
-    const/4 v0, 0x1
+.method public abstract ATL(I)V
+.end method
 
-    if-eq p1, v0, :cond_1
+.method public abstract ATM(Ljava/lang/String;JJ)V
+.end method
 
-    if-eq p1, v1, :cond_0
+.method public abstract ATN(Ljava/lang/String;)V
+.end method
 
-    const/4 v1, 0x5
+.method public abstract ATO(LX/5Or;)V
+.end method
 
-    :cond_0
-    return v1
+.method public abstract ATP(LX/5Or;)V
+.end method
 
-    :cond_1
-    const/4 v1, 0x1
+.method public abstract ATS(LX/5Fy;)V
+.end method
 
-    return v1
+.method public abstract ATT(LX/5Fy;LX/5Ow;)V
+.end method
+
+.method public abstract ATU(J)V
+.end method
+
+.method public abstract ATV(Ljava/lang/Exception;)V
+.end method
+
+.method public abstract ATX(JJI)V
+.end method
+
+.method public abstract AYc([BJ)V
+.end method
+
+.method public abstract Ab4(Z)V
 .end method

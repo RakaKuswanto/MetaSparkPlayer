@@ -1,114 +1,77 @@
-.class public final LX/01k;
+.class public interface abstract LX/01k;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/view/MenuItem;
 
-# direct methods
-.method public static A00(I)V
-    .locals 0
 
-    .line 0
-    if-ltz p0, :cond_0
-
-    .line 1
-    .line 2
-    return-void
-
-    .line 3
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    .line 4
-    .line 5
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    throw p0
+# virtual methods
+.method public abstract ALH()LX/022;
 .end method
 
-.method public static A01(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    if-eqz p0, :cond_0
-
-    .line 1
-    .line 2
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object p0
-
-    .line 7
-    invoke-static {p0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object p0
-
-    .line 11
-    throw p0
+.method public abstract Ak0(Ljava/lang/CharSequence;)LX/01k;
 .end method
 
-.method public static A02(ZLjava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    if-eqz p0, :cond_0
-
-    .line 1
-    .line 2
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object p0
-
-    .line 7
-    invoke-static {p0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object p0
-
-    .line 11
-    throw p0
+.method public abstract Am3(LX/022;)LX/01k;
 .end method
 
-.method public static A03(ZLjava/lang/String;)V
-    .locals 0
+.method public abstract AmA(Ljava/lang/CharSequence;)LX/01k;
+.end method
 
-    .line 0
-    if-eqz p0, :cond_0
+.method public abstract collapseActionView()Z
+.end method
 
-    .line 1
-    .line 2
-    return-void
+.method public abstract expandActionView()Z
+.end method
 
-    .line 3
-    :cond_0
-    invoke-static {p1}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+.method public abstract getActionView()Landroid/view/View;
+.end method
 
-    .line 4
-    .line 5
-    .line 6
-    move-result-object p0
+.method public abstract getAlphabeticModifiers()I
+.end method
 
-    .line 7
-    throw p0
+.method public abstract getContentDescription()Ljava/lang/CharSequence;
+.end method
+
+.method public abstract getIconTintList()Landroid/content/res/ColorStateList;
+.end method
+
+.method public abstract getIconTintMode()Landroid/graphics/PorterDuff$Mode;
+.end method
+
+.method public abstract getNumericModifiers()I
+.end method
+
+.method public abstract getTooltipText()Ljava/lang/CharSequence;
+.end method
+
+.method public abstract isActionViewExpanded()Z
+.end method
+
+.method public abstract setActionView(I)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setActionView(Landroid/view/View;)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setAlphabeticShortcut(CI)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setNumericShortcut(CI)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setShortcut(CCII)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setShowAsAction(I)V
+.end method
+
+.method public abstract setShowAsActionFlags(I)Landroid/view/MenuItem;
 .end method

@@ -1,79 +1,96 @@
 .class public final LX/4ju;
-.super LX/4id;
+.super Landroidx/recyclerview/widget/LinearLayoutManager;
 .source ""
 
 
-# static fields
-.field public static final A02:[Ljava/lang/String;
-
-
-# instance fields
-.field public A00:LX/4mR;
-
-.field public final A01:Ljava/util/BitSet;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;ZIZ)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0, p1, p3, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
     .line 1
-    new-array v2, v0, [Ljava/lang/String;
-
     .line 2
     .line 3
-    const/4 v1, 0x0
+    invoke-virtual {p0, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;->setStackFromEnd(Z)V
 
     .line 4
-    const-string v0, "delegate"
-
     .line 5
     .line 6
-    aput-object v0, v2, v1
-
-    .line 7
-    .line 8
-    sput-object v2, LX/4ju;->A02:[Ljava/lang/String;
-
-    .line 9
-    .line 10
     return-void
 .end method
 
-.method public constructor <init>(LX/4mm;LX/4mR;)V
-    .locals 2
+
+# virtual methods
+.method public final generateDefaultLayoutParams()LX/4nw;
+    .locals 5
 
     .line 0
-    const/4 v0, 0x0
+    iget v4, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     .line 1
-    invoke-direct {p0, p2, p1, v0}, LX/4id;-><init>(LX/4mg;LX/4mm;I)V
-
     .line 2
+    const/4 v3, -0x1
+
     .line 3
+    const/4 v2, -0x2
+
     .line 4
     const/4 v1, 0x1
 
     .line 5
-    new-instance v0, Ljava/util/BitSet;
+    new-instance v0, LX/4nw;
 
     .line 6
     .line 7
-    invoke-direct {v0, v1}, Ljava/util/BitSet;-><init>(I)V
+    if-ne v4, v1, :cond_0
 
     .line 8
     .line 9
-    .line 10
-    iput-object v0, p0, LX/4ju;->A01:Ljava/util/BitSet;
+    invoke-direct {v0, v3, v2}, LX/4nw;-><init>(II)V
 
+    .line 10
     .line 11
     .line 12
-    iput-object p2, p0, LX/4ju;->A00:LX/4mR;
+    return-object v0
 
     .line 13
+    :cond_0
+    invoke-direct {v0, v2, v3}, LX/4nw;-><init>(II)V
+
     .line 14
-    return-void
+    .line 15
+    .line 16
+    return-object v0
+.end method
+
+.method public final supportsPredictiveItemAnimations()Z
+    .locals 1
+
+    .line 0
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    return v0
+
+    .line 6
+    :cond_0
+    invoke-super {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->supportsPredictiveItemAnimations()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    return v0
 .end method

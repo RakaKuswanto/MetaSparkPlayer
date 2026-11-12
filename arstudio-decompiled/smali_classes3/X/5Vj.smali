@@ -1,33 +1,34 @@
-.class public abstract LX/5Vj;
+.class public final synthetic LX/5vJ;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5vg;
+
+
+# instance fields
+.field public final synthetic A00:LX/5tf;
+
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(LX/5tf;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p1, p0, LX/5vJ;->A00:LX/5tf;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public createHybrid()Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
+.method public final AZq()V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, LX/5vJ;->A00:LX/5tf;
 
-    return-object v0
-.end method
-
-.method public stop()V
-    .locals 0
+    invoke-static {v0}, LX/5tf;->A03(LX/5tf;)V
 
     return-void
 .end method

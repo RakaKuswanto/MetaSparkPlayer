@@ -1,26 +1,21 @@
 .class public final LX/4GH;
-.super LX/4GB;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static A00:Lcom/facebook/msys/mci/NotificationCenter;
+
+
 # direct methods
-.method public constructor <init>(LX/4GK;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/4GL;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v0, p2}, LX/4GL;-><init>(Ljava/lang/String;)V
-
     .line 3
-    .line 4
-    .line 5
-    invoke-direct {p0, v0, p1}, LX/4GB;-><init>(LX/4GL;LX/4GK;)V
-
-    .line 6
-    .line 7
-    .line 8
     return-void
 .end method

@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper$$ExternalSyntheticLambda2;->f$0:Lorg/webrtc/SurfaceTextureHelper;
 
-    invoke-virtual {v0}, Lorg/webrtc/SurfaceTextureHelper;->lambda$returnTextureFrame$4$org-webrtc-SurfaceTextureHelper()V
+    invoke-virtual {v0}, Lorg/webrtc/SurfaceTextureHelper;->lambda$stopListening$1$org-webrtc-SurfaceTextureHelper()V
 
     return-void
 .end method

@@ -1,8 +1,20 @@
-.class public interface abstract LX/03j;
+.class public abstract LX/03j;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AUn(Landroid/view/View;)V
+# direct methods
+.method public static A00(Landroid/content/Intent;)Landroid/content/ClipData;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/content/Intent;->getClipData()Landroid/content/ClipData;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    return-object p0
 .end method

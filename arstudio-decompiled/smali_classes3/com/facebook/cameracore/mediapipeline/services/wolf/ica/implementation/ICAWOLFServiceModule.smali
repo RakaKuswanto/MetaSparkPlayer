@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5UE;
+.field public static final Companion:LX/6A5;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5UE;
+    new-instance v0, LX/6A5;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5UE;-><init>()V
+    invoke-direct {v0}, LX/6A5;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/wolf/ica/implementation/ICAWOLFServiceModule;->Companion:LX/5UE;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/wolf/ica/implementation/ICAWOLFServiceModule;->Companion:LX/6A5;
 
     .line 6
     .line 7
@@ -29,7 +29,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -90,7 +90,7 @@
 
 
 # virtual methods
-.method public createConfiguration(LX/5UZ;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
+.method public createConfiguration(LX/61H;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
     .locals 1
 
     const/4 v0, 0x0

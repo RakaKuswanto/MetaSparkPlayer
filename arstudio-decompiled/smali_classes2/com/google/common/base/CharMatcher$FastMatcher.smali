@@ -20,6 +20,14 @@
 # virtual methods
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "character"
+        }
+    .end annotation
 
     .line 0
     check-cast p1, Ljava/lang/Character;

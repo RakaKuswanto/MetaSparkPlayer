@@ -3,157 +3,145 @@
 .source ""
 
 # interfaces
-.implements LX/2qk;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$7"
 
 
 # instance fields
-.field public final A00:LX/2qk;
+.field public final synthetic A00:J
 
-.field public final synthetic A01:LX/3x7;
+.field public final synthetic A01:LX/3wv;
+
+.field public final synthetic A02:LX/6Vq;
+
+.field public final synthetic A03:LX/6Za;
+
+.field public final synthetic A04:Ljava/lang/String;
+
+.field public final synthetic A05:Z
+
+.field public final synthetic A06:Z
 
 
 # direct methods
-.method public constructor <init>(LX/2qk;LX/3x7;)V
+.method public constructor <init>(LX/3wv;LX/6Vq;LX/6Za;Ljava/lang/String;JZZ)V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/3x4;->A01:LX/3x7;
+    iput-object p1, p0, LX/3x4;->A01:LX/3wv;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, LX/3x4;->A03:LX/6Za;
 
     .line 3
     .line 4
-    .line 5
-    iput-object p1, p0, LX/3x4;->A00:LX/2qk;
+    iput-object p2, p0, LX/3x4;->A02:LX/6Vq;
 
+    .line 5
     .line 6
+    iput-boolean p7, p0, LX/3x4;->A06:Z
+
     .line 7
+    .line 8
+    iput-boolean p8, p0, LX/3x4;->A05:Z
+
+    .line 9
+    .line 10
+    iput-wide p5, p0, LX/3x4;->A00:J
+
+    .line 11
+    .line 12
+    iput-object p4, p0, LX/3x4;->A04:Ljava/lang/String;
+
+    .line 13
+    .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    .line 16
+    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic AiR(Ljava/lang/Object;)V
-    .locals 1
+.method public final run()V
+    .locals 10
 
     .line 0
-    iget-object v0, p0, LX/3x4;->A00:LX/2qk;
+    iget-object v0, p0, LX/3x4;->A01:LX/3wv;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1}, LX/44V;->AiR(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
 
     .line 3
     .line 4
     .line 5
-    return-void
-.end method
-
-.method public final Aq1(LX/2vL;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3x4;->A00:LX/2qk;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/3JL;->Aq1(LX/2vL;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final bridge synthetic get(I)Ljava/lang/Object;
-    .locals 3
-
-    .line 0
-    :try_start_0
-    iget-object v0, p0, LX/3x4;->A00:LX/2qk;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/44V;->get(I)Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    move-result-object v1
 
     .line 6
-    return-object v0
-    :try_end_0
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 7
-    :catch_0
-    move-exception v1
-
     .line 8
-    iget-object v2, p0, LX/3x4;->A01:LX/3x7;
-
     .line 9
+    move-result v0
+
     .line 10
-    iget-object v0, v2, LX/3x7;->A00:LX/3JL;
+    if-eqz v0, :cond_0
 
     .line 11
     .line 12
-    if-eqz v0, :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 13
     .line 14
-    iget-object v0, v2, LX/3x7;->A01:LX/20s;
-
     .line 15
+    move-result-object v2
+
     .line 16
-    invoke-static {v0}, LX/0Yd;->A1X(LX/20s;)Z
+    check-cast v2, LX/3xA;
 
     .line 17
     .line 18
-    .line 19
-    move-result v0
+    iget-object v4, p0, LX/3x4;->A03:LX/6Za;
 
+    .line 19
     .line 20
-    if-eqz v0, :cond_0
+    iget-object v3, p0, LX/3x4;->A02:LX/6Vq;
 
     .line 21
     .line 22
-    sget-object v1, LX/2vL;->OnSystemMemoryCriticallyLowWhileAppInForeground:LX/2vL;
+    iget-boolean v8, p0, LX/3x4;->A06:Z
 
     .line 23
     .line 24
-    iget-object v0, v2, LX/3x7;->A00:LX/3JL;
+    iget-boolean v9, p0, LX/3x4;->A05:Z
 
     .line 25
     .line 26
-    invoke-interface {v0, v1}, LX/3JL;->Aq1(LX/2vL;)V
+    iget-wide v6, p0, LX/3x4;->A00:J
 
     .line 27
     .line 28
-    .line 29
-    invoke-virtual {p0, v1}, LX/3x4;->Aq1(LX/2vL;)V
+    iget-object v5, p0, LX/3x4;->A04:Ljava/lang/String;
 
+    .line 29
     .line 30
+    invoke-interface/range {v2 .. v9}, LX/3xA;->AbL(LX/6Vq;LX/6Za;Ljava/lang/String;JZZ)V
+
     .line 31
     .line 32
-    iget-object v0, p0, LX/3x4;->A00:LX/2qk;
-
     .line 33
+    goto :goto_0
+
     .line 34
-    invoke-interface {v0, p1}, LX/44V;->get(I)Ljava/lang/Object;
-
-    .line 35
-    .line 36
-    .line 37
-    move-result-object v0
-
-    .line 38
-    return-object v0
-
-    .line 39
     :cond_0
-    throw v1
+    return-void
 .end method

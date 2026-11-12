@@ -1,29 +1,43 @@
-.class public interface abstract LX/2mg;
+.class public final LX/2Mg;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A6a()Z
-.end method
+# instance fields
+.field public final A00:J
 
-.method public abstract A6c()Z
-.end method
+.field public final A01:Ljava/lang/String;
 
-.method public abstract AgG()Z
-.end method
+.field public final A02:Ljava/lang/String;
 
-.method public abstract AgH()LX/44I;
-.end method
+.field public final A03:Ljava/lang/String;
 
-.method public abstract AgI()LX/44I;
-.end method
 
-.method public abstract AgK()Z
-.end method
+# direct methods
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-.method public abstract AgL()I
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract AgX()Z
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/2Mg;->A03:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    iput-wide p1, p0, LX/2Mg;->A00:J
+
+    .line 6
+    .line 7
+    iput-object p4, p0, LX/2Mg;->A02:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    iput-object p5, p0, LX/2Mg;->A01:Ljava/lang/String;
+
+    .line 10
+    .line 11
+    return-void
 .end method

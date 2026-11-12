@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLPagesComposerInterceptionProductTypeEnumSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLPagesComposerInterceptionProductTypeEnumSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -364,34 +364,36 @@
 
     .line 171
     .line 172
-    const-string v0, "WHATSAPP_DEEPLINK_PAGE"
+    const-string/jumbo v0, "WHATSAPP_DEEPLINK_PAGE"
 
     .line 173
     .line 174
+    .line 175
     aput-object v0, v2, v1
 
-    .line 175
     .line 176
+    .line 177
     const/16 v1, 0x1e
 
-    .line 177
     .line 178
-    const-string v0, "WHATSAPP_PAGE"
-
     .line 179
-    .line 180
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WHATSAPP_PAGE"
 
+    .line 180
     .line 181
     .line 182
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 183
+    .line 184
+    .line 185
     move-result-object v0
 
-    .line 184
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPagesComposerInterceptionProductTypeEnumSet;->A00:Ljava/util/Set;
-
-    .line 185
     .line 186
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPagesComposerInterceptionProductTypeEnumSet;->A00:Ljava/util/HashSet;
+
+    .line 187
+    .line 188
     return-void
 .end method
 
@@ -407,11 +409,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPagesComposerInterceptionProductTypeEnumSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPagesComposerInterceptionProductTypeEnumSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

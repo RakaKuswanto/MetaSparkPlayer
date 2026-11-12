@@ -1,103 +1,26 @@
-.class public final LX/0K9;
+.class public abstract LX/0K9;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public static final A00(Ljava/lang/String;)LX/065;
+    .locals 2
 
+    .line 0
+    const/4 v1, -0x1
+
+    .line 1
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_9
+    .line 2
+    invoke-static {p0, v1, v0}, LX/001;->A05(Ljava/lang/String;IZ)LX/065;
 
-    const/4 v0, 0x2
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    if-eq p0, v0, :cond_8
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_7
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_6
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_5
-
-    const/16 v0, 0x80e
-
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x139e
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x1c86
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x2ce7
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x30be
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "MESSENGER_INTEGRITY_TIME_TO_RESTRICT_ON_ANDROID_AND_IOS"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "MESSENGER_INTEGRITY_TIME_TO_UNBLOCK_ON_FACEBOOK_ON_ANDROID_AND_IOS"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "MESSENGER_INTEGRITY_TIME_TO_UNRESTRICT_ON_ANDROID_AND_IOS"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "MESSENGER_INTEGRITY_TIME_TO_BLOCK_ON_FACEBOOK_ON_ANDROID_AND_IOS"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "MESSENGER_INTEGRITY_IMPERSONATION_FETCH_SELECTED_USER_EVENT"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "MESSENGER_INTEGRITY_IMPERSONATION_FETCH_USER_EVENT"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "MESSENGER_INTEGRITY_TIME_TO_UNBLOCK_ON_ANDROID_AND_IOS"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "MESSENGER_INTEGRITY_TIME_TO_BLOCK_ON_ANDROID_AND_IOS"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "MESSENGER_INTEGRITY_TIME_TO_LOAD_PROACTIVE_WARNING_INFO_ANDROID"
-
-    return-object v0
-
-    :cond_9
-    const-string v0, "MESSENGER_INTEGRITY_TIME_TO_LOAD_FEEDBACK_TAGS_ANDROID"
-
+    .line 6
     return-object v0
 .end method

@@ -1,166 +1,153 @@
-.class public final LX/2w5;
+.class public abstract LX/2w5;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0Af;
-
-.field public final A01:LX/38d;
-
-.field public final A02:LX/3Mf;
-
-
 # direct methods
-.method public constructor <init>(LX/38d;LX/3Mf;)V
+.method public static A00(Landroid/content/Context;Ljava/lang/String;)Landroid/accounts/Account;
     .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2w5;->A01:LX/38d;
+    move-result v2
 
     .line 4
-    .line 5
-    iput-object p2, p0, LX/2w5;->A02:LX/3Mf;
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
+    .line 5
     .line 6
     .line 7
-    iget-object v3, p1, LX/38d;->A00:LX/38N;
+    move-result v1
 
     .line 8
-    .line 9
-    if-nez v3, :cond_0
+    const-string/jumbo v0, "android.permission.GET_ACCOUNTS"
 
+    .line 9
     .line 10
     .line 11
-    iget-object v0, p1, LX/38d;->A02:LX/38P;
+    invoke-virtual {p0, v0, v2, v1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     .line 12
     .line 13
-    iget-object v0, v0, LX/38P;->A0D:LX/2vC;
-
     .line 14
+    move-result v2
+
     .line 15
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 16
     .line 17
+    const/16 v0, 0x16
+
     .line 18
-    new-instance v3, LX/38N;
-
     .line 19
-    .line 20
-    invoke-direct {v3, p1, v0}, LX/38N;-><init>(LX/38d;LX/2vC;)V
+    if-gt v1, v0, :cond_3
 
+    .line 20
     .line 21
+    if-eqz v2, :cond_3
+
     .line 22
     .line 23
-    iput-object v3, p1, LX/38d;->A00:LX/38N;
+    :cond_0
+    const/4 v0, 0x0
 
     .line 24
-    .line 25
-    :cond_0
-    monitor-enter p1
+    new-array p0, v0, [Landroid/accounts/Account;
 
+    .line 25
     .line 26
-    :try_start_0
-    invoke-static {}, LX/0Ye;->A0R()Ljava/lang/String;
+    :goto_0
+    array-length v1, p0
 
     .line 27
+    const/4 v3, 0x0
+
     .line 28
+    const/4 v0, 0x1
+
     .line 29
-    move-result-object v0
+    if-le v1, v0, :cond_2
 
     .line 30
-    new-instance v2, LX/2W1;
-
     .line 31
-    .line 32
-    invoke-direct {v2, v0}, LX/2W1;-><init>(Ljava/lang/String;)V
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
+    .line 32
     .line 33
     .line 34
+    move-result-object v2
+
     .line 35
-    iget-object v0, p1, LX/38d;->A01:LX/38P;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    invoke-static {p1, v2, v3, v1, v0}, LX/0X1;->A1N(Ljava/lang/Object;[Ljava/lang/Object;III)V
 
     .line 36
     .line 37
-    :try_start_1
-    iget-object v1, v0, LX/38P;->A0D:LX/2vC;
-
     .line 38
-    .line 39
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "AccountManagerUtils"
 
+    .line 39
     .line 40
+    const-string v0, "Only a single account of type %s is expected, but %d account found"
+
     .line 41
     .line 42
-    new-instance v0, LX/2w3;
+    invoke-static {v1, v0, v2}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 43
     .line 44
-    invoke-direct {v0, v2, v1}, LX/2w3;-><init>(LX/2W0;LX/2vC;)V
-
     .line 45
+    :cond_1
+    aget-object v0, p0, v3
+
     .line 46
     .line 47
-    new-instance v1, LX/38N;
+    return-object v0
 
     .line 48
-    .line 49
-    invoke-direct {v1, p1, v0}, LX/38N;-><init>(LX/38d;LX/2vC;)V
+    :cond_2
+    if-nez v1, :cond_1
 
+    .line 49
     .line 50
+    const/4 v0, 0x0
+
     .line 51
+    return-object v0
+
     .line 52
-    invoke-virtual {v0}, LX/2vC;->A02()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :cond_3
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     .line 53
     .line 54
     .line 55
-    monitor-exit p1
+    move-result-object v0
 
     .line 56
-    new-instance v0, LX/2w6;
+    invoke-static {v0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
     .line 57
     .line 58
-    invoke-direct {v0, v3, v1, p2}, LX/2w6;-><init>(LX/38N;LX/38N;LX/3Mf;)V
-
     .line 59
+    move-result-object v0
+
     .line 60
+    if-eqz v0, :cond_0
+
     .line 61
-    iput-object v0, p0, LX/2w5;->A00:LX/0Af;
-
     .line 62
+    invoke-virtual {v0, p1}, Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;
+
     .line 63
-    return-void
-
     .line 64
-    :catchall_0
-    move-exception v0
-
     .line 65
-    :try_start_2
-    throw v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    move-result-object p0
 
     .line 66
-    :catchall_1
-    move-exception v0
-
-    .line 67
-    monitor-exit p1
-
-    .line 68
-    throw v0
+    goto :goto_0
 .end method

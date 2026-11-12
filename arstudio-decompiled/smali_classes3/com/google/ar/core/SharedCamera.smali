@@ -14,14 +14,14 @@
 
 .field public sharedCameraHandler:Landroid/os/Handler;
 
-.field public final sharedCameraInfo:LX/5JR;
+.field public final sharedCameraInfo:LX/5AZ;
 
 
 # direct methods
-.method public static bridge synthetic -$$Nest$fgetsharedCameraInfo(Lcom/google/ar/core/SharedCamera;)LX/5JR;
+.method public static bridge synthetic -$$Nest$fgetsharedCameraInfo(Lcom/google/ar/core/SharedCamera;)LX/5AZ;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object p0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     return-object p0
 .end method
@@ -138,16 +138,16 @@
     const/4 v1, 0x0
 
     .line 4
-    new-instance v0, LX/5JR;
+    new-instance v0, LX/5AZ;
 
     .line 5
     .line 6
-    invoke-direct {v0, v1}, LX/5JR;-><init>([B)V
+    invoke-direct {v0, v1}, LX/5AZ;-><init>([B)V
 
     .line 7
     .line 8
     .line 9
-    iput-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iput-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 10
     .line 11
@@ -176,7 +176,7 @@
     .line 22
     .line 23
     .line 24
-    invoke-static {v0}, LX/0Yf;->A0E(Landroid/os/HandlerThread;)Landroid/os/Handler;
+    invoke-static {v0}, LX/0X3;->A0D(Landroid/os/HandlerThread;)Landroid/os/Handler;
 
     .line 25
     .line 26
@@ -247,11 +247,11 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 5
     .line 6
-    invoke-virtual {v0}, LX/5JR;->A00()Landroid/hardware/camera2/CameraDevice;
+    invoke-virtual {v0}, LX/5AZ;->A00()Landroid/hardware/camera2/CameraDevice;
 
     .line 7
     .line 8
@@ -282,11 +282,11 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 5
     .line 6
-    invoke-virtual {v0}, LX/5JR;->A00()Landroid/hardware/camera2/CameraDevice;
+    invoke-virtual {v0}, LX/5AZ;->A00()Landroid/hardware/camera2/CameraDevice;
 
     .line 7
     .line 8
@@ -317,11 +317,11 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 5
     .line 6
-    invoke-virtual {v0}, LX/5JR;->A00()Landroid/hardware/camera2/CameraDevice;
+    invoke-virtual {v0}, LX/5AZ;->A00()Landroid/hardware/camera2/CameraDevice;
 
     .line 7
     .line 8
@@ -352,11 +352,11 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 5
     .line 6
-    invoke-virtual {v0}, LX/5JR;->A00()Landroid/hardware/camera2/CameraDevice;
+    invoke-virtual {v0}, LX/5AZ;->A00()Landroid/hardware/camera2/CameraDevice;
 
     .line 7
     .line 8
@@ -593,14 +593,14 @@
 
     .line 9
     .line 10
-    iget-object v1, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v1, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 11
     .line 12
     const/4 v0, 0x0
 
     .line 13
-    invoke-virtual {v1, v0}, LX/5JR;->A01(Landroid/hardware/camera2/CameraDevice;)V
+    invoke-virtual {v1, v0}, LX/5AZ;->A01(Landroid/hardware/camera2/CameraDevice;)V
 
     .line 14
     .line 15
@@ -612,11 +612,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1}, LX/5JR;->A01(Landroid/hardware/camera2/CameraDevice;)V
+    invoke-virtual {v0, p1}, LX/5AZ;->A01(Landroid/hardware/camera2/CameraDevice;)V
 
     .line 3
     .line 4
@@ -708,11 +708,11 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5JO;
+    new-instance v0, LX/5AW;
 
     .line 1
     .line 2
-    invoke-direct {v0, p1, p2, p0}, LX/5JO;-><init>(Landroid/hardware/camera2/CameraDevice$StateCallback;Landroid/os/Handler;Lcom/google/ar/core/SharedCamera;)V
+    invoke-direct {v0, p1, p2, p0}, LX/5AW;-><init>(Landroid/hardware/camera2/CameraDevice$StateCallback;Landroid/os/Handler;Lcom/google/ar/core/SharedCamera;)V
 
     .line 3
     .line 4
@@ -724,11 +724,11 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5JQ;
+    new-instance v0, LX/5AY;
 
     .line 1
     .line 2
-    invoke-direct {v0, p1, p2, p0}, LX/5JQ;-><init>(Landroid/hardware/camera2/CameraCaptureSession$StateCallback;Landroid/os/Handler;Lcom/google/ar/core/SharedCamera;)V
+    invoke-direct {v0, p1, p2, p0}, LX/5AY;-><init>(Landroid/hardware/camera2/CameraCaptureSession$StateCallback;Landroid/os/Handler;Lcom/google/ar/core/SharedCamera;)V
 
     .line 3
     .line 4
@@ -740,7 +740,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 1
     .line 2
@@ -748,11 +748,11 @@
     move-result-object v1
 
     .line 4
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/5JR;->A01:Landroid/view/Surface;
+    iget-object v0, v0, LX/5AZ;->A01:Landroid/view/Surface;
 
     .line 7
     .line 8
@@ -815,11 +815,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/5JR;->A00:Landroid/graphics/SurfaceTexture;
+    iget-object v0, v0, LX/5AZ;->A00:Landroid/graphics/SurfaceTexture;
 
     .line 3
     .line 4
@@ -830,11 +830,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/5JR;->A00()Landroid/hardware/camera2/CameraDevice;
+    invoke-virtual {v0}, LX/5AZ;->A00()Landroid/hardware/camera2/CameraDevice;
 
     .line 3
     .line 4
@@ -859,11 +859,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5JR;
+    iget-object v0, p0, Lcom/google/ar/core/SharedCamera;->sharedCameraInfo:LX/5AZ;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/5JR;->A03:Ljava/util/Map;
+    iget-object v0, v0, LX/5AZ;->A03:Ljava/util/Map;
 
     .line 3
     .line 4

@@ -1,4 +1,4 @@
-.class public Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;
+.class public abstract Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;
 .super Ljava/lang/Object;
 .source ""
 

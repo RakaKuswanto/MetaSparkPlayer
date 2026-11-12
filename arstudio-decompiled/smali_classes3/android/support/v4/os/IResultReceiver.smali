@@ -41,8 +41,3 @@
     .line 12
     return-void
 .end method
-
-
-# virtual methods
-.method public abstract Akk(ILandroid/os/Bundle;)V
-.end method

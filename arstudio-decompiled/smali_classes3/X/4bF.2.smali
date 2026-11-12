@@ -1,145 +1,410 @@
 .class public final LX/4bF;
-.super LX/4b5;
+.super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final synthetic A00:LX/4bJ;
+# interfaces
+.implements LX/4aI;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/View;LX/4az;LX/4bJ;)V
-    .locals 9
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    move-object v2, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    iput-object p4, p0, LX/4bF;->A00:LX/4bJ;
-
     .line 2
     .line 3
-    const/4 v7, 0x0
-
-    .line 4
-    const v6, 0x7f04002c
-
-    .line 5
-    .line 6
-    .line 7
-    move-object v3, p1
-
-    .line 8
-    move-object v4, p2
-
-    .line 9
-    move-object v5, p3
-
-    .line 10
-    move v8, v7
-
-    .line 11
-    invoke-direct/range {v2 .. v8}, LX/4b5;-><init>(Landroid/content/Context;Landroid/view/View;LX/4ay;IIZ)V
-
-    .line 12
-    .line 13
-    .line 14
-    invoke-virtual {p3}, LX/4az;->getItem()Landroid/view/MenuItem;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    check-cast v0, LX/4ax;
-
-    .line 19
-    .line 20
-    iget v0, v0, LX/4ax;->A02:I
-
-    .line 21
-    .line 22
-    const/16 v1, 0x20
-
-    .line 23
-    .line 24
-    and-int/lit8 v0, v0, 0x20
-
-    .line 25
-    .line 26
-    if-eq v0, v1, :cond_1
-
-    .line 27
-    .line 28
-    iget-object v0, p4, LX/4bJ;->A06:LX/4WD;
-
-    .line 29
-    .line 30
-    if-nez v0, :cond_0
-
-    .line 31
-    .line 32
-    iget-object v0, p4, LX/4bV;->A04:LX/4dB;
-
-    .line 33
-    .line 34
-    check-cast v0, Landroid/view/View;
-
-    .line 35
-    .line 36
-    :cond_0
-    iput-object v0, p0, LX/4b5;->A01:Landroid/view/View;
-
-    .line 37
-    .line 38
-    :cond_1
-    iget-object v1, p4, LX/4bJ;->A0D:LX/4by;
-
-    .line 39
-    .line 40
-    iput-object v1, p0, LX/4b5;->A04:LX/4d0;
-
-    .line 41
-    .line 42
-    iget-object v0, p0, LX/4b5;->A03:LX/4b6;
-
-    .line 43
-    .line 44
-    if-eqz v0, :cond_2
-
-    .line 45
-    .line 46
-    invoke-interface {v0, v1}, LX/4c6;->AlI(LX/4d0;)V
-
-    .line 47
-    .line 48
-    .line 49
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01()V
-    .locals 2
+.method public final A5I(LX/4D6;)Lcom/facebook/dsp/core/ColorData;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final A5t(LX/4aT;)Ljava/lang/Integer;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AIH()LX/6Vc;
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/4bF;->A00:LX/4bJ;
+    sget-object v0, LX/6Vc;->BLUEPRINT_ROOT:LX/6Vc;
 
     .line 1
     .line 2
+    return-object v0
+.end method
+
+.method public final Ama(LX/4aV;)LX/4aY;
+    .locals 1
+
     const/4 v0, 0x0
 
+    return-object v0
+.end method
+
+.method public final An3(LX/4aU;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AnK(LX/4aG;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final Aou(LX/4ah;)LX/4ak;
+    .locals 6
+
+    .line 0
+    invoke-static {p1}, LX/431;->A0B(Ljava/lang/Enum;)I
+
+    .line 1
+    .line 2
     .line 3
-    iput-object v0, v1, LX/4bJ;->A03:LX/4bF;
+    move-result v1
 
     .line 4
-    .line 5
-    invoke-super {p0}, LX/4b5;->A01()V
+    const/high16 v5, 0x42100000    # 36.0f
 
+    .line 5
     .line 6
+    const/high16 v0, 0x41c00000    # 24.0f
+
     .line 7
     .line 8
-    return-void
+    const/high16 v4, 0x41a00000    # 20.0f
+
+    .line 9
+    .line 10
+    packed-switch v1, :pswitch_data_0
+
+    .line 11
+    .line 12
+    .line 13
+    :pswitch_0
+    const/4 v4, 0x0
+
+    .line 14
+    return-object v4
+
+    .line 15
+    :pswitch_1
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 16
+    .line 17
+    const/high16 v2, 0x41600000    # 14.0f
+
+    .line 18
+    .line 19
+    sget-object v1, LX/4aS;->MEDIUM:LX/4aS;
+
+    .line 20
+    .line 21
+    const/high16 v0, 0x41900000    # 18.0f
+
+    .line 22
+    .line 23
+    goto :goto_1
+
+    .line 24
+    :pswitch_2
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 25
+    .line 26
+    const/high16 v2, 0x41800000    # 16.0f
+
+    .line 27
+    .line 28
+    sget-object v1, LX/4aS;->MEDIUM:LX/4aS;
+
+    .line 29
+    .line 30
+    const/high16 v0, 0x41a80000    # 21.0f
+
+    .line 31
+    .line 32
+    goto :goto_1
+
+    .line 33
+    :pswitch_3
+    sget-object v2, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 34
+    .line 35
+    sget-object v1, LX/4aS;->BOLD:LX/4aS;
+
+    .line 36
+    .line 37
+    const/high16 v0, 0x41d00000    # 26.0f
+
+    .line 38
+    .line 39
+    invoke-static {v1, v2, v0, v4}, LX/4ak;->A00(LX/4aS;Ljava/lang/Object;FF)LX/4ak;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v4
+
+    .line 43
+    return-object v4
+
+    .line 44
+    :pswitch_4
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 45
+    .line 46
+    const/high16 v2, 0x41e00000    # 28.0f
+
+    .line 47
+    .line 48
+    sget-object v1, LX/4aS;->BOLD:LX/4aS;
+
+    .line 49
+    .line 50
+    invoke-static {v5}, LX/4b1;->A00(F)LX/4b1;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v0
+
+    .line 54
+    goto :goto_2
+
+    .line 55
+    :pswitch_5
+    sget-object v2, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 56
+    .line 57
+    sget-object v1, LX/4aS;->BOLD:LX/4aS;
+
+    .line 58
+    .line 59
+    invoke-static {v5}, LX/4b1;->A00(F)LX/4b1;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v0
+
+    .line 63
+    new-instance v4, LX/4ak;
+
+    .line 64
+    .line 65
+    invoke-direct {v4, v0, v1, v2, v5}, LX/4ak;-><init>(LX/4b1;LX/4aS;Ljava/lang/Object;F)V
+
+    .line 66
+    .line 67
+    .line 68
+    return-object v4
+
+    .line 69
+    :pswitch_6
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 70
+    .line 71
+    const/high16 v2, 0x41700000    # 15.0f
+
+    .line 72
+    .line 73
+    sget-object v1, LX/4aS;->BOLD:LX/4aS;
+
+    .line 74
+    .line 75
+    goto :goto_0
+
+    .line 76
+    :pswitch_7
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 77
+    .line 78
+    sget-object v2, LX/4aS;->BOLD:LX/4aS;
+
+    .line 79
+    .line 80
+    invoke-static {v4}, LX/4b1;->A00(F)LX/4b1;
+
+    .line 81
+    .line 82
+    .line 83
+    move-result-object v1
+
+    .line 84
+    goto :goto_3
+
+    .line 85
+    :pswitch_8
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 86
+    .line 87
+    const/high16 v2, 0x41800000    # 16.0f
+
+    .line 88
+    .line 89
+    sget-object v1, LX/4aS;->MEDIUM:LX/4aS;
+
+    .line 90
+    .line 91
+    :goto_0
+    invoke-static {v4}, LX/4b1;->A00(F)LX/4b1;
+
+    .line 92
+    .line 93
+    .line 94
+    move-result-object v0
+
+    .line 95
+    goto :goto_2
+
+    .line 96
+    :pswitch_9
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 97
+    .line 98
+    sget-object v2, LX/4aS;->NORMAL:LX/4aS;
+
+    .line 99
+    .line 100
+    invoke-static {v4}, LX/4b1;->A00(F)LX/4b1;
+
+    .line 101
+    .line 102
+    .line 103
+    move-result-object v1
+
+    .line 104
+    const/high16 v0, 0x41800000    # 16.0f
+
+    .line 105
+    .line 106
+    goto :goto_4
+
+    .line 107
+    :pswitch_a
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 108
+    .line 109
+    const/high16 v2, 0x41900000    # 18.0f
+
+    .line 110
+    .line 111
+    sget-object v1, LX/4aS;->MEDIUM:LX/4aS;
+
+    .line 112
+    .line 113
+    :goto_1
+    invoke-static {v0}, LX/4b1;->A00(F)LX/4b1;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object v0
+
+    .line 117
+    :goto_2
+    new-instance v4, LX/4ak;
+
+    .line 118
+    .line 119
+    invoke-direct {v4, v0, v1, v3, v2}, LX/4ak;-><init>(LX/4b1;LX/4aS;Ljava/lang/Object;F)V
+
+    .line 120
+    .line 121
+    .line 122
+    return-object v4
+
+    .line 123
+    :pswitch_b
+    sget-object v3, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 124
+    .line 125
+    sget-object v2, LX/4aS;->NORMAL:LX/4aS;
+
+    .line 126
+    .line 127
+    invoke-static {v0}, LX/4b1;->A00(F)LX/4b1;
+
+    .line 128
+    .line 129
+    .line 130
+    move-result-object v1
+
+    .line 131
+    :goto_3
+    const/high16 v0, 0x41880000    # 17.0f
+
+    .line 132
+    .line 133
+    :goto_4
+    new-instance v4, LX/4ak;
+
+    .line 134
+    .line 135
+    invoke-direct {v4, v1, v2, v3, v0}, LX/4ak;-><init>(LX/4b1;LX/4aS;Ljava/lang/Object;F)V
+
+    .line 136
+    .line 137
+    .line 138
+    return-object v4
+
+    .line 139
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
 .end method

@@ -1,25 +1,10 @@
-.class public final LX/4G0;
+.class public final LX/4g0;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4Cq;
-
-
-# instance fields
-.field public A00:LX/4G1;
-
-.field public A01:Landroid/view/ViewStub;
-
-.field public A02:Landroid/view/ViewStub;
-
-.field public A03:LX/4Ed;
-
-.field public A04:LX/4DB;
-
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewStub;Landroid/view/ViewStub;LX/4Ed;LX/4DB;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -28,329 +13,367 @@
     .line 1
     .line 2
     .line 3
-    iput-object p3, p0, LX/4G0;->A03:LX/4Ed;
-
-    .line 4
-    .line 5
-    iput-object p4, p0, LX/4G0;->A04:LX/4DB;
-
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/4G0;->A01:Landroid/view/ViewStub;
-
-    .line 8
-    .line 9
-    iput-object p2, p0, LX/4G0;->A02:Landroid/view/ViewStub;
-
-    .line 10
-    .line 11
     return-void
 .end method
 
-
-# virtual methods
-.method public final APO()V
-    .locals 1
+.method public static final A00(LX/4g0;LX/4fx;Ljava/lang/StringBuilder;I)V
+    .locals 6
 
     .line 0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
+    const/4 v1, 0x0
 
     .line 1
+    const/4 v3, 0x0
+
     .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-interface {v0}, LX/4G1;->APO()V
-
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
-    return-void
-.end method
-
-.method public final AU7(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AaI(LX/4CY;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1}, LX/4G1;->AaI(LX/4CY;)V
-
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
-    return-void
-.end method
-
-.method public final AcK(Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1}, LX/4G1;->AcK(Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    sget-object v0, LX/4EY;->WARN:LX/4EY;
-
-    .line 8
-    .line 9
-    invoke-virtual {p0, v0, p1}, LX/4G0;->Aqg(LX/4EY;Ljava/lang/String;)V
-
-    .line 10
-    .line 11
-    .line 12
-    :cond_0
-    return-void
-.end method
-
-.method public final AeY(Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1}, LX/4G1;->AeY(Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
-    return-void
-.end method
-
-.method public final Ai8()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Amp(Landroid/content/Intent;Ljava/lang/String;I)V
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/4G0;->A01:Landroid/view/ViewStub;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p3}, LX/4BE;->A0X(Landroid/view/ViewStub;I)Landroid/view/View;
+    invoke-virtual {p1}, LX/4fx;->A01()LX/4fg;
 
     .line 3
     .line 4
     .line 5
-    move-result-object v2
+    move-result-object v0
 
     .line 6
-    check-cast v2, LX/4G1;
+    invoke-virtual {v0}, LX/4fg;->A0H()Ljava/lang/String;
 
     .line 7
     .line 8
-    iput-object v2, p0, LX/4G0;->A00:LX/4G1;
-
     .line 9
+    move-result-object v0
+
     .line 10
-    iget-object v1, p0, LX/4G0;->A03:LX/4Ed;
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 11
     .line 12
-    iget-object v0, p0, LX/4G0;->A04:LX/4DB;
-
     .line 13
-    .line 14
-    invoke-interface {v2, v1, v0}, LX/4G1;->setControllers(LX/4Ed;LX/4DB;)V
+    const/16 v0, 0x7b
 
+    .line 14
     .line 15
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     .line 16
     .line 17
-    invoke-interface {v2}, LX/4G1;->APN()V
-
     .line 18
+    iget-object v5, p1, LX/4fx;->A06:LX/4fo;
+
     .line 19
     .line 20
-    iget-object v1, p0, LX/4G0;->A00:LX/4G1;
+    iget-object v0, v5, LX/4fo;->A00:LX/4fk;
 
     .line 21
     .line 22
-    if-eqz v1, :cond_0
+    iget-object v0, v0, LX/4fk;->A03:LX/4il;
 
     .line 23
     .line 24
-    if-eqz p2, :cond_0
+    if-nez v0, :cond_7
 
     .line 25
     .line 26
-    const/16 v0, 0x57
+    const/4 v4, 0x0
 
     .line 27
+    :goto_0
+    iget v0, p1, LX/4fx;->A01:I
+
     .line 28
-    invoke-static {v0}, LX/0Yb;->A00(I)Ljava/lang/String;
-
     .line 29
-    .line 30
-    .line 31
-    move-result-object v0
+    const/4 v2, 0x0
 
+    .line 30
+    if-nez v0, :cond_0
+
+    .line 31
     .line 32
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v2, 0x1
 
     .line 33
+    move-object v3, v5
+
     .line 34
+    invoke-virtual {v5}, LX/4fo;->A01()LX/4fY;
+
     .line 35
-    move-result v0
-
     .line 36
-    if-eqz v0, :cond_0
-
     .line 37
+    move-result-object v1
+
     .line 38
-    check-cast v1, Landroid/view/View;
+    :cond_0
+    if-eqz v4, :cond_6
 
     .line 39
     .line 40
-    const/high16 v0, -0x1000000
+    invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
 
     .line 41
     .line 42
-    invoke-static {v0, v1}, LX/4BD;->A0t(ILandroid/view/View;)V
-
     .line 43
-    .line 44
-    .line 45
-    :cond_0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
-
-    .line 46
-    .line 47
-    check-cast v0, Landroid/view/View;
-
-    .line 48
-    .line 49
-    invoke-virtual {v0}, Landroid/view/View;->bringToFront()V
-
-    .line 50
-    .line 51
-    .line 52
-    return-void
-.end method
-
-.method public final Aqg(LX/4EY;Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1, p2}, LX/4G1;->Aqg(LX/4EY;Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
-    return-void
-.end method
-
-.method public final getHeightPx()I
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 3
-    .line 4
-    const/4 v0, 0x0
-
-    .line 5
-    return v0
-
-    .line 6
-    :cond_0
-    invoke-interface {v0}, LX/4G1;->getHeightPx()I
-
-    .line 7
-    .line 8
-    .line 9
     move-result v0
 
-    .line 10
-    return v0
-.end method
+    .line 44
+    if-nez v0, :cond_6
 
-.method public final setProgress(I)V
-    .locals 1
+    .line 45
+    .line 46
+    const-string v0, "V"
 
-    .line 0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
+    .line 47
+    .line 48
+    :goto_1
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    .line 49
+    .line 50
+    .line 51
+    if-eqz v2, :cond_2
 
-    .line 3
-    .line 4
-    invoke-interface {v0, p1}, LX/4G1;->setProgress(I)V
+    .line 52
+    .line 53
+    iget-object v0, v1, LX/4fY;->A0M:LX/4eu;
 
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
-    return-void
-.end method
+    .line 54
+    .line 55
+    if-eqz v0, :cond_1
 
-.method public final setProgressBarVisibility(I)V
-    .locals 1
+    .line 56
+    .line 57
+    iget-object v0, v0, LX/4eu;->A0I:LX/4ei;
 
-    .line 0
-    iget-object v0, p0, LX/4G0;->A00:LX/4G1;
+    .line 58
+    .line 59
+    if-eqz v0, :cond_1
 
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    .line 60
+    .line 61
+    const-string v0, " [clickable]"
 
-    .line 3
-    .line 4
-    invoke-interface {v0, p1}, LX/4G1;->setProgressBarVisibility(I)V
+    .line 62
+    .line 63
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
+    .line 64
+    .line 65
+    .line 66
+    :cond_1
+    const-string v0, " "
+
+    .line 67
+    .line 68
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 69
+    .line 70
+    .line 71
+    const/4 v0, 0x0
+
+    .line 72
+    invoke-static {v3, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 73
+    .line 74
+    .line 75
+    iget-object v0, v3, LX/4fo;->A02:LX/4fu;
+
+    .line 76
+    .line 77
+    iget-object v2, v0, LX/4fu;->A0K:LX/4jL;
+
+    .line 78
+    .line 79
+    check-cast v2, Lcom/facebook/yoga/YogaNodeJNIBase;
+
+    .line 80
+    .line 81
+    iget-object v1, v2, Lcom/facebook/yoga/YogaNodeJNIBase;->arr:[F
+
+    .line 82
+    .line 83
+    if-eqz v1, :cond_5
+
+    .line 84
+    .line 85
+    const/4 v0, 0x2
+
+    .line 86
+    aget v0, v1, v0
+
+    .line 87
+    .line 88
+    :goto_2
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 89
+    .line 90
+    .line 91
+    const-string v0, "x"
+
+    .line 92
+    .line 93
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 94
+    .line 95
+    .line 96
+    iget-object v1, v2, Lcom/facebook/yoga/YogaNodeJNIBase;->arr:[F
+
+    .line 97
+    .line 98
+    if-eqz v1, :cond_4
+
+    .line 99
+    .line 100
+    const/4 v0, 0x1
+
+    .line 101
+    aget v0, v1, v0
+
+    .line 102
+    .line 103
+    :goto_3
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 104
+    .line 105
+    .line 106
+    :cond_2
+    const/16 v0, 0x7d
+
+    .line 107
+    .line 108
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 109
+    .line 110
+    .line 111
+    invoke-virtual {p1}, LX/4fx;->A02()Ljava/util/List;
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-object v0
+
+    .line 115
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 116
+    .line 117
+    .line 118
+    move-result-object v3
+
+    .line 119
+    :goto_4
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 120
+    .line 121
+    .line 122
+    move-result v0
+
+    .line 123
+    if-eqz v0, :cond_8
+
+    .line 124
+    .line 125
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 126
+    .line 127
+    .line 128
+    move-result-object v2
+
+    .line 129
+    check-cast v2, LX/4fx;
+
+    .line 130
+    .line 131
+    const-string v0, "\n"
+
+    .line 132
+    .line 133
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 134
+    .line 135
+    .line 136
+    const/4 v1, 0x0
+
+    .line 137
+    if-ltz p3, :cond_3
+
+    .line 138
+    .line 139
+    :goto_5
+    const-string v0, "  "
+
+    .line 140
+    .line 141
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 142
+    .line 143
+    .line 144
+    if-eq v1, p3, :cond_3
+
+    .line 145
+    .line 146
+    add-int/lit8 v1, v1, 0x1
+
+    .line 147
+    .line 148
+    goto :goto_5
+
+    .line 149
+    :cond_3
+    add-int/lit8 v0, p3, 0x1
+
+    .line 150
+    .line 151
+    invoke-static {p0, v2, p2, v0}, LX/4g0;->A00(LX/4g0;LX/4fx;Ljava/lang/StringBuilder;I)V
+
+    .line 152
+    .line 153
+    .line 154
+    goto :goto_4
+
+    .line 155
+    :cond_4
+    const/4 v0, 0x0
+
+    .line 156
+    goto :goto_3
+
+    .line 157
+    :cond_5
+    const/4 v0, 0x0
+
+    .line 158
+    goto :goto_2
+
+    .line 159
+    :cond_6
+    const-string v0, "H"
+
+    .line 160
+    .line 161
+    goto :goto_1
+
+    .line 162
+    :cond_7
+    iget-object v0, v0, LX/4il;->A01:Lcom/facebook/litho/ComponentTree;
+
+    .line 163
+    .line 164
+    iget-object v4, v0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
+
+    .line 165
+    .line 166
+    goto/16 :goto_0
+
+    .line 167
+    .line 168
+    :cond_8
     return-void
 .end method

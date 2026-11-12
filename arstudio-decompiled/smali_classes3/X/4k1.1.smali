@@ -1,60 +1,38 @@
-.class public final LX/4k1;
+.class public abstract LX/4k1;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:I
+# instance fields
+.field public A00:LX/4nK;
 
-.field public static final A01:I
+.field public A01:LX/4gD;
 
-.field public static final A02:LX/0Na;
+.field public final A02:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    sget-object v0, LX/4Nn;->PRIMARY_TEXT:LX/4Nn;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget v0, v0, LX/4Nn;->attr:I
-
     .line 3
+    new-instance v0, LX/4k0;
+
     .line 4
-    sput v0, LX/4k1;->A01:I
-
     .line 5
-    .line 6
-    sget-object v0, LX/4Nn;->SECONDARY_TEXT:LX/4Nn;
+    invoke-direct {v0, p0}, LX/4k0;-><init>(LX/4k1;)V
 
+    .line 6
     .line 7
     .line 8
-    iget v0, v0, LX/4Nn;->attr:I
+    iput-object v0, p0, LX/4k1;->A02:Ljava/lang/Runnable;
 
     .line 9
     .line 10
-    sput v0, LX/4k1;->A00:I
-
-    .line 11
-    .line 12
-    sget v0, LX/2eq;->A6G:I
-
-    .line 13
-    .line 14
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    sput-object v0, LX/4k1;->A02:LX/0Na;
-
-    .line 19
-    .line 20
     return-void
 .end method

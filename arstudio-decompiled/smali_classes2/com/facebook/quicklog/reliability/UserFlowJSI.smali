@@ -28,7 +28,7 @@
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, LX/0Yi;->A01(J)I
+    invoke-static {p0, p1}, LX/0X6;->A02(J)I
 
     .line 1
     .line 2
@@ -197,7 +197,7 @@
     move-result-wide v0
 
     .line 6
-    invoke-static {v0, v1}, LX/0Yi;->A01(J)I
+    invoke-static {v0, v1}, LX/0X6;->A02(J)I
 
     .line 7
     .line 8

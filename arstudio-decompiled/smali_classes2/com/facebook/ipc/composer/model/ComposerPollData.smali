@@ -37,11 +37,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x40
+    const/16 v0, 0x5e
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
 
     .line 3
     .line 4
@@ -65,7 +65,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -84,7 +84,7 @@
     const/4 v0, 0x1
 
     .line 12
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 13
     .line 14
@@ -96,7 +96,7 @@
 
     .line 17
     .line 18
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 19
     .line 20
@@ -128,7 +128,7 @@
 
     .line 32
     .line 33
-    invoke-static {p1, v3, v1, v0}, LX/0Yf;->A04(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
+    invoke-static {p1, v3, v1, v0}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
     .line 34
     .line 35
@@ -152,7 +152,7 @@
 
     .line 43
     .line 44
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 45
     .line 46
@@ -164,7 +164,7 @@
 
     .line 49
     .line 50
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 51
     .line 52
@@ -190,7 +190,7 @@
 
     const-string/jumbo v0, "options"
 
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/facebook/ipc/composer/model/ComposerPollData;->A00:Lcom/google/common/collect/ImmutableList;
 
@@ -269,7 +269,7 @@
 
     .line 25
     .line 26
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 27
     .line 28
@@ -321,7 +321,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A04(Z)I
+    invoke-static {v0}, LX/1O4;->A03(Z)I
 
     .line 3
     .line 4
@@ -333,58 +333,79 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 11
-    move-result v1
-
     .line 12
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPollData;->A00:Lcom/google/common/collect/ImmutableList;
-
     .line 13
-    .line 14
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 15
-    .line 16
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 17
-    .line 18
-    .line 19
     move-result v0
 
-    .line 20
+    .line 14
     add-int/2addr v1, v0
 
+    .line 15
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPollData;->A00:Lcom/google/common/collect/ImmutableList;
+
+    .line 16
+    .line 17
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 18
+    .line 19
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 20
     .line 21
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPollData;->A03:Z
-
     .line 22
-    .line 23
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
-
-    .line 24
-    .line 25
-    .line 26
-    move-result v1
-
-    .line 27
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPollData;->A04:Z
-
-    .line 28
-    .line 29
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
-
-    .line 30
-    .line 31
-    .line 32
     move-result v0
 
+    .line 23
+    add-int/2addr v1, v0
+
+    .line 24
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPollData;->A03:Z
+
+    .line 25
+    .line 26
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 27
+    .line 28
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v0
+
+    .line 32
+    add-int/2addr v1, v0
+
     .line 33
-    return v0
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPollData;->A04:Z
+
+    .line 34
+    .line 35
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 36
+    .line 37
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    add-int/2addr v1, v0
+
+    .line 42
+    return v1
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
@@ -413,7 +434,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 13
     .line 14

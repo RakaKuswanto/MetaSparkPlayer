@@ -31,11 +31,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x60
+    const/16 v0, 0x46
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -59,7 +59,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -79,51 +79,50 @@
 
     .line 11
     .line 12
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    invoke-static {p1}, LX/0X4;->A0a(Landroid/os/Parcel;)Ljava/lang/Float;
 
     .line 13
     .line 14
     .line 15
-    move-result v0
+    move-result-object v0
 
     .line 16
-    invoke-static {v2, v0, v1}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
+    aput-object v0, v2, v1
 
     .line 17
     .line 18
-    .line 19
     add-int/lit8 v1, v1, 0x1
 
+    .line 19
     .line 20
-    .line 21
     goto :goto_0
 
-    .line 22
+    .line 21
     :cond_0
     invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
+    .line 22
     .line 23
     .line 24
-    .line 25
     move-result-object v0
 
-    .line 26
+    .line 25
     iput-object v0, p0, Lcom/facebook/videocodec/effects/model/TransformFunction;->A01:Lcom/google/common/collect/ImmutableList;
 
+    .line 26
     .line 27
-    .line 28
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
+    .line 28
     .line 29
     .line 30
-    .line 31
     move-result-wide v0
 
-    .line 32
+    .line 31
     iput-wide v0, p0, Lcom/facebook/videocodec/effects/model/TransformFunction;->A00:J
 
+    .line 32
     .line 33
-    .line 34
     return-void
 .end method
 
@@ -132,9 +131,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "bezierCurve"
+    const-string/jumbo v0, "bezierCurve"
 
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/facebook/videocodec/effects/model/TransformFunction;->A01:Lcom/google/common/collect/ImmutableList;
 
@@ -187,7 +186,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -231,7 +230,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -243,7 +242,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 9
     .line 10
@@ -262,7 +261,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 3
     .line 4
@@ -291,7 +290,7 @@
     move-result-object v0
 
     .line 16
-    invoke-static {v0}, LX/0Yi;->A00(Ljava/lang/Object;)F
+    invoke-static {v0}, LX/0X6;->A00(Ljava/lang/Object;)F
 
     .line 17
     .line 18

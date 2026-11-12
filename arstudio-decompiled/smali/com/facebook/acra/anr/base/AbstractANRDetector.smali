@@ -6,12 +6,8 @@
 .implements Lcom/facebook/acra/anr/IANRDetector;
 
 
-# static fields
-.field public static final LOG_TAG:Ljava/lang/String; = "AbstractANRDetector"
-
-
 # instance fields
-.field public final mANRConfig:LX/0M1;
+.field public final mANRConfig:LX/0Kf;
 
 .field public mANRReportProvider:Lcom/facebook/acra/anr/ANRReportProvider;
 
@@ -31,7 +27,7 @@
 
 
 # direct methods
-.method public constructor <init>(LX/0M1;)V
+.method public constructor <init>(LX/0Kf;)V
     .locals 1
 
     .line 0
@@ -40,7 +36,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -52,7 +48,7 @@
 
     .line 8
     .line 9
-    iput-object p1, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iput-object p1, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 10
     .line 11
@@ -94,11 +90,11 @@
     sub-long/2addr v2, v0
 
     .line 9
-    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 10
     .line 11
-    iget-object v0, v0, LX/0M1;->A07:Lcom/facebook/acra/anrreport/ANRReport;
+    iget-object v0, v0, LX/0Kf;->A07:Lcom/facebook/acra/anrreport/ANRReport;
 
     .line 12
     .line 13
@@ -117,17 +113,6 @@
     return-void
 .end method
 
-.method public getANRConfig()LX/0M1;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
 .method public getANRReceivedTime()J
     .locals 2
 
@@ -142,17 +127,6 @@
     const-wide/16 v0, 0x0
 
     return-wide v0
-.end method
-
-.method public getANRReportProvider()Lcom/facebook/acra/anr/ANRReportProvider;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRReportProvider:Lcom/facebook/acra/anr/ANRReportProvider;
-
-    .line 1
-    .line 2
-    return-object v0
 .end method
 
 .method public getDetectorStartTime()J
@@ -220,11 +194,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 1
     .line 2
-    iget-boolean v0, v0, LX/0M1;->A0E:Z
+    iget-boolean v0, v0, LX/0Kf;->A0E:Z
 
     .line 3
     .line 4
@@ -270,11 +244,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/0M1;->A07:Lcom/facebook/acra/anrreport/ANRReport;
+    iget-object v0, v0, LX/0Kf;->A07:Lcom/facebook/acra/anrreport/ANRReport;
 
     .line 3
     .line 4
@@ -292,7 +266,7 @@
     return-void
 .end method
 
-.method public abstract notifyStateListeners(LX/0X3;)V
+.method public abstract notifyStateListeners(LX/0U2;)V
 .end method
 
 .method public processMonitorStarted()V
@@ -311,11 +285,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 7
     .line 8
-    iget-object v2, v0, LX/0M1;->A07:Lcom/facebook/acra/anrreport/ANRReport;
+    iget-object v2, v0, LX/0Kf;->A07:Lcom/facebook/acra/anrreport/ANRReport;
 
     .line 9
     .line 10
@@ -352,11 +326,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 7
     .line 8
-    iget-object v2, v0, LX/0M1;->A07:Lcom/facebook/acra/anrreport/ANRReport;
+    iget-object v2, v0, LX/0Kf;->A07:Lcom/facebook/acra/anrreport/ANRReport;
 
     .line 9
     .line 10
@@ -449,13 +423,6 @@
     throw v0
 .end method
 
-.method public setInAnrStateOnAppStateUpdater()V
-    .locals 0
-
-    .line 0
-    return-void
-.end method
-
 .method public declared-synchronized setListener(Lcom/facebook/acra/anr/ANRDetectorListener;)V
     .locals 1
 
@@ -510,11 +477,11 @@
 
     .line 9
     :cond_0
-    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, p0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 10
     .line 11
-    iget-boolean v0, v0, LX/0M1;->A0D:Z
+    iget-boolean v0, v0, LX/0Kf;->A0D:Z
 
     .line 12
     .line 13
@@ -587,7 +554,7 @@
 .end method
 
 .method public startReport(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Z)V
-    .locals 29
+    .locals 30
 
     .line 0
     move-object/from16 v0, p0
@@ -653,11 +620,11 @@
 
     .line 28
     .line 29
-    iget-object v3, v0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v3, v0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 30
     .line 31
-    iget-object v4, v3, LX/0M1;->A07:Lcom/facebook/acra/anrreport/ANRReport;
+    iget-object v4, v3, LX/0Kf;->A07:Lcom/facebook/acra/anrreport/ANRReport;
 
     .line 32
     .line 33
@@ -665,7 +632,7 @@
 
     .line 34
     .line 35
-    invoke-static {v2}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v2}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 36
     .line 37
@@ -673,7 +640,7 @@
     move-result v5
 
     .line 39
-    iget v8, v3, LX/0M1;->A01:I
+    iget v8, v3, LX/0Kf;->A01:I
 
     .line 40
     .line 41
@@ -709,11 +676,11 @@
     move-result-wide v17
 
     .line 57
-    iget-object v0, v0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0M1;
+    iget-object v0, v0, Lcom/facebook/acra/anr/base/AbstractANRDetector;->mANRConfig:LX/0Kf;
 
     .line 58
     .line 59
-    iget-boolean v0, v0, LX/0M1;->A0H:Z
+    iget-boolean v0, v0, LX/0Kf;->A0H:Z
 
     .line 60
     .line 61
@@ -757,41 +724,45 @@
 
     .line 80
     .line 81
-    invoke-virtual/range {v4 .. v28}, Lcom/facebook/acra/anrreport/ANRReport;->startReport(ZLjava/lang/String;Ljava/lang/String;IZZJJJJLjava/lang/String;Ljava/lang/String;ZZLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;LX/0M3;LX/0M3;)V
+    move-object/from16 v29, v24
 
     .line 82
     .line 83
-    .line 84
-    if-eqz v1, :cond_0
+    invoke-virtual/range {v4 .. v29}, Lcom/facebook/acra/anrreport/ANRReport;->startReport(ZLjava/lang/String;Ljava/lang/String;IZZJJJJLjava/lang/String;Ljava/lang/String;ZZLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;LX/0Kh;LX/0Kh;LX/0U2;)V
 
+    .line 84
     .line 85
     .line 86
-    invoke-interface {v1}, Lcom/facebook/acra/anr/ANRDetectorListener;->onEndANRDataCapture()V
+    if-eqz v1, :cond_0
 
     .line 87
     .line 88
+    invoke-interface {v1}, Lcom/facebook/acra/anr/ANRDetectorListener;->onEndANRDataCapture()V
+
     .line 89
+    .line 90
+    .line 91
     :cond_0
     return-void
 
-    .line 90
+    .line 92
     :cond_1
     move-object v6, v7
 
-    .line 91
+    .line 93
     goto :goto_0
 
-    .line 92
+    .line 94
     :catchall_0
     move-exception v1
 
-    .line 93
+    .line 95
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 94
+    .line 96
     throw v1
 .end method
 

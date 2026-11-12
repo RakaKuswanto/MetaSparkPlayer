@@ -7,15 +7,15 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 536870912
+    .line 805306368
     const/4 v0, 0x0
 
-    .line 536870913
+    .line 805306369
     invoke-direct {p0, p1, v0}, Lcom/facebook/bitmaps/exceptions/ImageResizingException;-><init>(Ljava/lang/String;Z)V
 
-    .line 536870914
-    .line 536870915
-    .line 536870916
+    .line 805306370
+    .line 805306371
+    .line 805306372
     return-void
 .end method
 
@@ -46,11 +46,11 @@
 .method public constructor <init>(Ljava/lang/Throwable;Z)V
     .locals 0
 
-    .line 805306368
+    .line 536870912
     invoke-direct {p0, p1, p2}, Lcom/facebook/bitmaps/exceptions/ImageResizingException;-><init>(Ljava/lang/Throwable;Z)V
 
-    .line 805306369
-    .line 805306370
-    .line 805306371
+    .line 536870913
+    .line 536870914
+    .line 536870915
     return-void
 .end method

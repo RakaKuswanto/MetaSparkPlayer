@@ -47,11 +47,11 @@
     .locals 14
 
     .line 0
-    new-instance v0, LX/1aN;
+    new-instance v0, LX/1yq;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1aN;-><init>()V
+    invoke-direct {v0}, LX/1yq;-><init>()V
 
     .line 3
     .line 4
@@ -91,10 +91,10 @@
 
     .line 20
     .line 21
-    const/4 v0, 0x6
+    const/4 v0, 0x5
 
     .line 22
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 23
     .line 24
@@ -155,70 +155,70 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 268435456
+    .line 536870912
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
+    .line 536870913
+    .line 536870914
+    .line 536870915
     const/4 v1, 0x0
 
-    .line 268435460
+    .line 536870916
     iput-object v1, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mUserId:Ljava/lang/String;
 
-    .line 268435461
-    .line 268435462
+    .line 536870917
+    .line 536870918
     iput-object v1, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mAuthToken:Ljava/lang/String;
 
-    .line 268435463
-    .line 268435464
+    .line 536870919
+    .line 536870920
     iput-object v1, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mSessionCookiesString:Ljava/lang/String;
 
-    .line 268435465
-    .line 268435466
+    .line 536870921
+    .line 536870922
     const/4 v0, 0x0
 
-    .line 268435467
+    .line 536870923
     iput-boolean v0, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsPageContext:Z
 
-    .line 268435468
-    .line 268435469
+    .line 536870924
+    .line 536870925
     iput-boolean v0, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsTimelineViewAsContext:Z
 
-    .line 268435470
-    .line 268435471
+    .line 536870926
+    .line 536870927
     iput-boolean v0, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsContextualProfileContext:Z
 
-    .line 268435472
-    .line 268435473
+    .line 536870928
+    .line 536870929
     iput-boolean v0, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsPPlusContinuityModeContext:Z
 
-    .line 268435474
-    .line 268435475
+    .line 536870930
+    .line 536870931
     iput-object v1, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mSessionSecret:Ljava/lang/String;
 
-    .line 268435476
-    .line 268435477
+    .line 536870932
+    .line 536870933
     iput-object v1, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mSessionKey:Ljava/lang/String;
 
-    .line 268435478
-    .line 268435479
+    .line 536870934
+    .line 536870935
     iput-object v1, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mUsername:Ljava/lang/String;
 
-    .line 268435480
-    .line 268435481
+    .line 536870936
+    .line 536870937
     iput-object v1, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->A00:Ljava/lang/String;
 
-    .line 268435482
-    .line 268435483
+    .line 536870938
+    .line 536870939
     iput-boolean v0, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsRoomGuestContext:Z
 
-    .line 268435484
-    .line 268435485
+    .line 536870940
+    .line 536870941
     iput-boolean v0, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsGroupsAnonymousVoice:Z
 
-    .line 268435486
-    .line 268435487
+    .line 536870942
+    .line 536870943
     return-void
 .end method
 
@@ -278,7 +278,7 @@
     const/4 v0, 0x1
 
     .line 26
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 27
     .line 28
@@ -290,7 +290,7 @@
 
     .line 31
     .line 32
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 33
     .line 34
@@ -302,7 +302,7 @@
 
     .line 37
     .line 38
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 39
     .line 40
@@ -314,7 +314,7 @@
 
     .line 43
     .line 44
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 45
     .line 46
@@ -374,7 +374,7 @@
 
     .line 73
     .line 74
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 75
     .line 76
@@ -386,7 +386,7 @@
 
     .line 79
     .line 80
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 81
     .line 82
@@ -402,56 +402,96 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZZZZ)V
-    .locals 2
+    .locals 1
 
+    .line 268435456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p6, :cond_0
-
+    .line 268435457
+    .line 268435458
+    .line 268435459
     invoke-virtual {p6}, Ljava/lang/String;->length()I
 
-    move-result v1
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    move-result v0
 
-    const/4 v0, 0x0
+    .line 268435463
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
-    if-nez v1, :cond_1
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    move-result v0
 
-    :cond_0
-    const/4 v0, 0x1
-
-    :cond_1
+    .line 268435467
     xor-int/lit8 v0, v0, 0x1
 
+    .line 268435468
+    .line 268435469
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 268435470
+    .line 268435471
+    .line 268435472
     iput-object p6, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mUserId:Ljava/lang/String;
 
+    .line 268435473
+    .line 268435474
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 268435475
+    .line 268435476
+    .line 268435477
     iput-object p2, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mAuthToken:Ljava/lang/String;
 
+    .line 268435478
+    .line 268435479
     iput-object p3, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mSessionCookiesString:Ljava/lang/String;
 
+    .line 268435480
+    .line 268435481
     iput-boolean p11, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsPageContext:Z
 
+    .line 268435482
+    .line 268435483
     iput-boolean p13, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsTimelineViewAsContext:Z
 
+    .line 268435484
+    .line 268435485
     iput-boolean p8, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsContextualProfileContext:Z
 
+    .line 268435486
+    .line 268435487
     iput-boolean p10, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsPPlusContinuityModeContext:Z
 
+    .line 268435488
+    .line 268435489
     iput-object p5, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mSessionSecret:Ljava/lang/String;
 
+    .line 268435490
+    .line 268435491
     iput-object p4, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mSessionKey:Ljava/lang/String;
 
+    .line 268435492
+    .line 268435493
     iput-object p7, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mUsername:Ljava/lang/String;
 
+    .line 268435494
+    .line 268435495
     iput-object p1, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->A00:Ljava/lang/String;
 
+    .line 268435496
+    .line 268435497
     iput-boolean p12, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsRoomGuestContext:Z
 
+    .line 268435498
+    .line 268435499
     iput-boolean p9, p0, Lcom/facebook/auth/viewercontext/ViewerContext;->mIsGroupsAnonymousVoice:Z
 
+    .line 268435500
+    .line 268435501
     return-void
 .end method
 
@@ -842,7 +882,7 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 4
     .line 5
@@ -858,7 +898,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 12
     .line 13
@@ -877,7 +917,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 21
     .line 22
@@ -962,7 +1002,7 @@
 
     .line 58
     .line 59
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 60
     .line 61
@@ -981,7 +1021,7 @@
 
     .line 67
     .line 68
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 69
     .line 70
@@ -1000,7 +1040,7 @@
 
     .line 76
     .line 77
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 78
     .line 79

@@ -40,6 +40,8 @@
 
 .field public static final enum IG_COLLECTION_CAROUSEL_ADS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
+.field public static final enum IG_FEED_CAROUSEL_DPA_SHOWCASE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+
 .field public static final enum IG_FEED_SINGLE_MEDIA_EXPERIENCE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
 .field public static final enum IG_IMAGE_SMART_CROP:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
@@ -52,6 +54,8 @@
 
 .field public static final enum IG_NON_9X16_VIDEO_BLOKS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
+.field public static final enum IG_REELS_9X16_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+
 .field public static final enum IG_REELS_CAROUSEL_ASSET_IMAGES_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
 .field public static final enum IG_REELS_CAROUSEL_IMAGES_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
@@ -61,6 +65,8 @@
 .field public static final enum IG_REELS_SINGLE_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
 .field public static final enum IG_REELS_SINGLE_IMAGE_ASSET:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+
+.field public static final enum IG_REELS_VIDEO_TEXT_OVERLAY:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
 .field public static final enum IG_STORY_9X16_CAROUSEL_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
@@ -97,7 +103,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 46
+    .locals 49
 
     .line 0
     const-string v1, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -112,10 +118,10 @@
     .line 4
     .line 5
     .line 6
-    move-result-object v45
+    move-result-object v15
 
     .line 7
-    sput-object v45, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 8
     .line 9
@@ -131,10 +137,10 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v44
+    move-result-object v14
 
     .line 16
-    sput-object v44, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->ADS_MANAGER_PREVIEW:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->ADS_MANAGER_PREVIEW:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 17
     .line 18
@@ -150,10 +156,10 @@
     .line 22
     .line 23
     .line 24
-    move-result-object v15
+    move-result-object v48
 
     .line 25
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_ALPHA_COM_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v48, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_ALPHA_COM_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 26
     .line 27
@@ -169,10 +175,10 @@
     .line 31
     .line 32
     .line 33
-    move-result-object v14
+    move-result-object v47
 
     .line 34
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_FA_MULTISCENE_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v47, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_FA_MULTISCENE_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 35
     .line 36
@@ -188,10 +194,10 @@
     .line 40
     .line 41
     .line 42
-    move-result-object v43
+    move-result-object v46
 
     .line 43
-    sput-object v43, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_FA_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v46, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_FA_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 44
     .line 45
@@ -207,10 +213,10 @@
     .line 49
     .line 50
     .line 51
-    move-result-object v42
+    move-result-object v45
 
     .line 52
-    sput-object v42, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_IG_FA_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v45, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_IG_FA_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 53
     .line 54
@@ -226,10 +232,10 @@
     .line 58
     .line 59
     .line 60
-    move-result-object v41
+    move-result-object v44
 
     .line 61
-    sput-object v41, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_IG_SHOWCASE_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v44, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_IG_SHOWCASE_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 62
     .line 63
@@ -245,10 +251,10 @@
     .line 67
     .line 68
     .line 69
-    move-result-object v40
+    move-result-object v43
 
     .line 70
-    sput-object v40, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v43, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->DYNAMIC_ADS_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 71
     .line 72
@@ -265,10 +271,10 @@
     .line 77
     .line 78
     .line 79
-    move-result-object v39
+    move-result-object v42
 
     .line 80
-    sput-object v39, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_FEED_SINGLE_MEDIA_ADS_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v42, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_FEED_SINGLE_MEDIA_ADS_RENDERING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 81
     .line 82
@@ -285,10 +291,10 @@
     .line 87
     .line 88
     .line 89
-    move-result-object v38
+    move-result-object v41
 
     .line 90
-    sput-object v38, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_FEED_SINGLE_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v41, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_FEED_SINGLE_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 91
     .line 92
@@ -305,10 +311,10 @@
     .line 97
     .line 98
     .line 99
-    move-result-object v37
+    move-result-object v40
 
     .line 100
-    sput-object v37, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_FEED_UNIFIED_RENDERING_PLATFORM:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v40, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_FEED_UNIFIED_RENDERING_PLATFORM:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 101
     .line 102
@@ -325,10 +331,10 @@
     .line 107
     .line 108
     .line 109
-    move-result-object v36
+    move-result-object v39
 
     .line 110
-    sput-object v36, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_REELS_CAROUSEL_IMAGES_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v39, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_REELS_CAROUSEL_IMAGES_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 111
     .line 112
@@ -345,10 +351,10 @@
     .line 117
     .line 118
     .line 119
-    move-result-object v35
+    move-result-object v38
 
     .line 120
-    sput-object v35, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_REELS_SINGLE_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v38, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_REELS_SINGLE_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 121
     .line 122
@@ -365,10 +371,10 @@
     .line 127
     .line 128
     .line 129
-    move-result-object v34
+    move-result-object v37
 
     .line 130
-    sput-object v34, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_REELS_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v37, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_REELS_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 131
     .line 132
@@ -385,10 +391,10 @@
     .line 137
     .line 138
     .line 139
-    move-result-object v33
+    move-result-object v36
 
     .line 140
-    sput-object v33, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_STORIES_ADS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v36, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_STORIES_ADS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 141
     .line 142
@@ -405,10 +411,10 @@
     .line 147
     .line 148
     .line 149
-    move-result-object v32
+    move-result-object v35
 
     .line 150
-    sput-object v32, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_VIDEO_COMPOSITION:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v35, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->FB_VIDEO_COMPOSITION:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 151
     .line 152
@@ -425,10 +431,10 @@
     .line 157
     .line 158
     .line 159
-    move-result-object v31
+    move-result-object v34
 
     .line 160
-    sput-object v31, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_CAROUSEL_ADS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v34, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_CAROUSEL_ADS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 161
     .line 162
@@ -445,14 +451,14 @@
     .line 167
     .line 168
     .line 169
-    move-result-object v30
+    move-result-object v33
 
     .line 170
-    sput-object v30, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_COLLECTION_CAROUSEL_ADS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v33, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_COLLECTION_CAROUSEL_ADS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 171
     .line 172
-    const-string v1, "IG_FEED_SINGLE_MEDIA_EXPERIENCE"
+    const-string v1, "IG_FEED_CAROUSEL_DPA_SHOWCASE"
 
     .line 173
     .line 174
@@ -465,14 +471,14 @@
     .line 177
     .line 178
     .line 179
-    move-result-object v29
+    move-result-object v32
 
     .line 180
-    sput-object v29, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_FEED_SINGLE_MEDIA_EXPERIENCE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v32, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_FEED_CAROUSEL_DPA_SHOWCASE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 181
     .line 182
-    const-string v1, "IG_IMAGE_SMART_CROP"
+    const-string v1, "IG_FEED_SINGLE_MEDIA_EXPERIENCE"
 
     .line 183
     .line 184
@@ -485,14 +491,14 @@
     .line 187
     .line 188
     .line 189
-    move-result-object v28
+    move-result-object v31
 
     .line 190
-    sput-object v28, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_IMAGE_SMART_CROP:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v31, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_FEED_SINGLE_MEDIA_EXPERIENCE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 191
     .line 192
-    const-string v1, "IG_KINETIC_TEXT_VIDEO_COMPONENT"
+    const-string v1, "IG_IMAGE_SMART_CROP"
 
     .line 193
     .line 194
@@ -505,14 +511,14 @@
     .line 197
     .line 198
     .line 199
-    move-result-object v27
+    move-result-object v30
 
     .line 200
-    sput-object v27, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_KINETIC_TEXT_VIDEO_COMPONENT:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v30, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_IMAGE_SMART_CROP:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 201
     .line 202
-    const-string v1, "IG_NON_9X16_EXPERIENCE"
+    const-string v1, "IG_KINETIC_TEXT_VIDEO_COMPONENT"
 
     .line 203
     .line 204
@@ -525,14 +531,14 @@
     .line 207
     .line 208
     .line 209
-    move-result-object v26
+    move-result-object v29
 
     .line 210
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_NON_9X16_EXPERIENCE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v29, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_KINETIC_TEXT_VIDEO_COMPONENT:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 211
     .line 212
-    const-string v1, "IG_NON_9X16_EXPERIENCE_D1"
+    const-string v1, "IG_NON_9X16_EXPERIENCE"
 
     .line 213
     .line 214
@@ -545,14 +551,14 @@
     .line 217
     .line 218
     .line 219
-    move-result-object v25
+    move-result-object v28
 
     .line 220
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_NON_9X16_EXPERIENCE_D1:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v28, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_NON_9X16_EXPERIENCE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 221
     .line 222
-    const-string v1, "IG_NON_9X16_VIDEO_BLOKS"
+    const-string v1, "IG_NON_9X16_EXPERIENCE_D1"
 
     .line 223
     .line 224
@@ -565,14 +571,14 @@
     .line 227
     .line 228
     .line 229
-    move-result-object v24
+    move-result-object v27
 
     .line 230
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_NON_9X16_VIDEO_BLOKS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v27, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_NON_9X16_EXPERIENCE_D1:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 231
     .line 232
-    const-string v1, "IG_REELS_CAROUSEL_ASSET_IMAGES_TO_VIDEO"
+    const-string v1, "IG_NON_9X16_VIDEO_BLOKS"
 
     .line 233
     .line 234
@@ -585,14 +591,14 @@
     .line 237
     .line 238
     .line 239
-    move-result-object v23
+    move-result-object v26
 
     .line 240
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_CAROUSEL_ASSET_IMAGES_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v26, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_NON_9X16_VIDEO_BLOKS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 241
     .line 242
-    const-string v1, "IG_REELS_CAROUSEL_IMAGES_TO_VIDEO"
+    const-string v1, "IG_REELS_9X16_VIDEO"
 
     .line 243
     .line 244
@@ -605,14 +611,14 @@
     .line 247
     .line 248
     .line 249
-    move-result-object v22
+    move-result-object v25
 
     .line 250
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_CAROUSEL_IMAGES_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v25, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_9X16_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 251
     .line 252
-    const-string v1, "IG_REELS_GLADOS_VIDEO"
+    const-string v1, "IG_REELS_CAROUSEL_ASSET_IMAGES_TO_VIDEO"
 
     .line 253
     .line 254
@@ -625,14 +631,14 @@
     .line 257
     .line 258
     .line 259
-    move-result-object v21
+    move-result-object v24
 
     .line 260
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_GLADOS_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v24, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_CAROUSEL_ASSET_IMAGES_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 261
     .line 262
-    const-string v1, "IG_REELS_SINGLE_IMAGE"
+    const-string v1, "IG_REELS_CAROUSEL_IMAGES_TO_VIDEO"
 
     .line 263
     .line 264
@@ -645,14 +651,14 @@
     .line 267
     .line 268
     .line 269
-    move-result-object v20
+    move-result-object v23
 
     .line 270
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_SINGLE_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_CAROUSEL_IMAGES_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 271
     .line 272
-    const-string v1, "IG_REELS_SINGLE_IMAGE_ASSET"
+    const-string v1, "IG_REELS_GLADOS_VIDEO"
 
     .line 273
     .line 274
@@ -665,14 +671,14 @@
     .line 277
     .line 278
     .line 279
-    move-result-object v19
+    move-result-object v22
 
     .line 280
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_SINGLE_IMAGE_ASSET:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_GLADOS_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 281
     .line 282
-    const-string v1, "IG_STORY_9X16_CAROUSEL_IMAGE"
+    const-string v1, "IG_REELS_SINGLE_IMAGE"
 
     .line 283
     .line 284
@@ -685,14 +691,14 @@
     .line 287
     .line 288
     .line 289
-    move-result-object v18
+    move-result-object v21
 
     .line 290
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_9X16_CAROUSEL_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_SINGLE_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 291
     .line 292
-    const-string v1, "IG_STORY_9X16_IMAGE"
+    const-string v1, "IG_REELS_SINGLE_IMAGE_ASSET"
 
     .line 293
     .line 294
@@ -705,14 +711,14 @@
     .line 297
     .line 298
     .line 299
-    move-result-object v13
+    move-result-object v20
 
     .line 300
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_9X16_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_SINGLE_IMAGE_ASSET:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 301
     .line 302
-    const-string v1, "IG_STORY_CAROUSEL_MEDIA_SHOWCASE"
+    const-string v1, "IG_REELS_VIDEO_TEXT_OVERLAY"
 
     .line 303
     .line 304
@@ -725,14 +731,14 @@
     .line 307
     .line 308
     .line 309
-    move-result-object v12
+    move-result-object v13
 
     .line 310
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_CAROUSEL_MEDIA_SHOWCASE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_REELS_VIDEO_TEXT_OVERLAY:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 311
     .line 312
-    const-string v1, "IG_STORY_CAROUSEL_TRANSFORMATION"
+    const-string v1, "IG_STORY_9X16_CAROUSEL_IMAGE"
 
     .line 313
     .line 314
@@ -745,14 +751,14 @@
     .line 317
     .line 318
     .line 319
-    move-result-object v11
+    move-result-object v12
 
     .line 320
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_CAROUSEL_TRANSFORMATION:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_9X16_CAROUSEL_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 321
     .line 322
-    const-string v1, "IG_STORY_MAI_CARD"
+    const-string v1, "IG_STORY_9X16_IMAGE"
 
     .line 323
     .line 324
@@ -765,14 +771,14 @@
     .line 327
     .line 328
     .line 329
-    move-result-object v10
+    move-result-object v11
 
     .line 330
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_MAI_CARD:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_9X16_IMAGE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 331
     .line 332
-    const-string v1, "INTERNAL_AUTHORING_TOOL"
+    const-string v1, "IG_STORY_CAROUSEL_MEDIA_SHOWCASE"
 
     .line 333
     .line 334
@@ -785,14 +791,14 @@
     .line 337
     .line 338
     .line 339
-    move-result-object v9
+    move-result-object v10
 
     .line 340
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_AUTHORING_TOOL:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_CAROUSEL_MEDIA_SHOWCASE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 341
     .line 342
-    const-string v1, "INTERNAL_BI_REVIEW"
+    const-string v1, "IG_STORY_CAROUSEL_TRANSFORMATION"
 
     .line 343
     .line 344
@@ -805,14 +811,14 @@
     .line 347
     .line 348
     .line 349
-    move-result-object v8
+    move-result-object v9
 
     .line 350
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_BI_REVIEW:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_CAROUSEL_TRANSFORMATION:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 351
     .line 352
-    const-string v1, "INTERNAL_DEV_TOOLS"
+    const-string v1, "IG_STORY_MAI_CARD"
 
     .line 353
     .line 354
@@ -825,14 +831,14 @@
     .line 357
     .line 358
     .line 359
-    move-result-object v7
+    move-result-object v8
 
     .line 360
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_DEV_TOOLS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->IG_STORY_MAI_CARD:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 361
     .line 362
-    const-string v1, "INTERNAL_SHADOW_TRAFFIC"
+    const-string v1, "INTERNAL_AUTHORING_TOOL"
 
     .line 363
     .line 364
@@ -845,14 +851,14 @@
     .line 367
     .line 368
     .line 369
-    move-result-object v6
+    move-result-object v7
 
     .line 370
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_SHADOW_TRAFFIC:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_AUTHORING_TOOL:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 371
     .line 372
-    const-string v1, "INTERNAL_TESTING"
+    const-string v1, "INTERNAL_BI_REVIEW"
 
     .line 373
     .line 374
@@ -865,14 +871,14 @@
     .line 377
     .line 378
     .line 379
-    move-result-object v5
+    move-result-object v6
 
     .line 380
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_TESTING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_BI_REVIEW:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 381
     .line 382
-    const-string v1, "MMT_STATIC_CAROUSEL_TO_VIDEO"
+    const-string v1, "INTERNAL_DEV_TOOLS"
 
     .line 383
     .line 384
@@ -885,14 +891,14 @@
     .line 387
     .line 388
     .line 389
-    move-result-object v4
+    move-result-object v5
 
     .line 390
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->MMT_STATIC_CAROUSEL_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_DEV_TOOLS:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 391
     .line 392
-    const-string v1, "SHOWREEL_DYNAMIC_VIDEO_ADS_AT_SCALE"
+    const-string v1, "INTERNAL_SHADOW_TRAFFIC"
 
     .line 393
     .line 394
@@ -905,233 +911,303 @@
     .line 397
     .line 398
     .line 399
-    move-result-object v17
+    move-result-object v4
 
     .line 400
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->SHOWREEL_DYNAMIC_VIDEO_ADS_AT_SCALE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_SHADOW_TRAFFIC:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 401
     .line 402
-    const-string v0, "UNIFIED_RENDERING_PLATFORM"
+    const-string v1, "INTERNAL_TESTING"
 
     .line 403
     .line 404
-    const/16 v3, 0x29
+    const/16 v0, 0x29
 
     .line 405
     .line 406
-    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 407
     .line 408
     .line 409
-    move-result-object v16
+    move-result-object v19
 
     .line 410
-    sput-object v16, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->UNIFIED_RENDERING_PLATFORM:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->INTERNAL_TESTING:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 411
     .line 412
-    const/16 v0, 0x2a
+    const-string v1, "MMT_STATIC_CAROUSEL_TO_VIDEO"
 
     .line 413
     .line 414
-    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    const/16 v0, 0x2a
 
     .line 415
     .line 416
-    move-object/from16 v1, v45
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 417
     .line 418
-    move-object/from16 v0, v44
-
     .line 419
+    move-result-object v18
+
     .line 420
-    invoke-static {v2, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->MMT_STATIC_CAROUSEL_TO_VIDEO:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 421
     .line 422
+    const-string v1, "SHOWREEL_DYNAMIC_VIDEO_ADS_AT_SCALE"
+
     .line 423
-    move-object/from16 v1, v43
-
     .line 424
+    const/16 v0, 0x2b
+
     .line 425
-    move-object/from16 v0, v42
-
     .line 426
-    .line 427
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
+    .line 427
     .line 428
     .line 429
+    move-result-object v17
+
     .line 430
-    move-object/from16 v1, v41
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->SHOWREEL_DYNAMIC_VIDEO_ADS_AT_SCALE:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
     .line 431
     .line 432
-    move-object/from16 v0, v40
+    const-string v0, "UNIFIED_RENDERING_PLATFORM"
 
     .line 433
     .line 434
-    invoke-static {v2, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/16 v3, 0x2c
 
     .line 435
     .line 436
-    .line 437
-    move-object/from16 v15, v39
+    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
+    .line 437
     .line 438
     .line 439
-    move-object/from16 v14, v38
+    move-result-object v16
 
     .line 440
+    sput-object v16, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->UNIFIED_RENDERING_PLATFORM:Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+
     .line 441
-    move-object/from16 v1, v37
-
     .line 442
+    const/16 v0, 0x2d
+
     .line 443
-    move-object/from16 v0, v36
-
     .line 444
-    .line 445
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
 
+    .line 445
     .line 446
+    move-object/from16 v1, v48
+
     .line 447
     .line 448
-    move-object/from16 v1, v35
+    move-object/from16 v0, v47
 
     .line 449
     .line 450
-    move-object/from16 v0, v34
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 451
     .line 452
-    invoke-static {v2, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 453
+    move-object/from16 v15, v46
+
     .line 454
     .line 455
-    move-object/from16 v15, v33
+    move-object/from16 v14, v45
 
     .line 456
     .line 457
-    move-object/from16 v14, v32
+    move-object/from16 v1, v44
 
     .line 458
     .line 459
-    move-object/from16 v1, v31
+    move-object/from16 v0, v43
 
     .line 460
     .line 461
-    move-object/from16 v0, v30
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 462
     .line 463
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
     .line 464
+    move-object/from16 v15, v42
+
     .line 465
     .line 466
-    const/16 v0, 0x12
+    move-object/from16 v14, v41
 
     .line 467
     .line 468
-    aput-object v29, v2, v0
+    move-object/from16 v1, v40
 
     .line 469
     .line 470
-    move-object/from16 v15, v28
+    move-object/from16 v0, v39
 
     .line 471
     .line 472
-    move-object/from16 v14, v27
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 473
     .line 474
-    move-object/from16 v1, v26
-
     .line 475
+    const/16 v0, 0xc
+
     .line 476
-    move-object/from16 v0, v25
-
     .line 477
-    .line 478
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    aput-object v38, v2, v0
 
+    .line 478
     .line 479
+    move-object/from16 v15, v37
+
     .line 480
     .line 481
-    move-object/from16 v15, v24
+    move-object/from16 v14, v36
 
     .line 482
     .line 483
-    move-object/from16 v14, v23
+    move-object/from16 v1, v35
 
     .line 484
     .line 485
-    move-object/from16 v1, v22
+    move-object/from16 v0, v34
 
     .line 486
     .line 487
-    move-object/from16 v0, v21
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 488
     .line 489
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
     .line 490
+    move-object/from16 v15, v33
+
     .line 491
     .line 492
-    move-object/from16 v1, v20
+    move-object/from16 v14, v32
 
     .line 493
     .line 494
-    move-object/from16 v0, v19
+    move-object/from16 v1, v31
 
     .line 495
     .line 496
-    invoke-static {v2, v1, v0}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v0, v30
 
     .line 497
     .line 498
-    .line 499
-    move-object/from16 v0, v18
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A19(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 499
     .line 500
     .line 501
-    invoke-static {v0, v13, v12, v11, v2}, LX/001;->A0s(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v15, v29
 
     .line 502
     .line 503
-    .line 504
-    invoke-static {v10, v9, v8, v7, v2}, LX/001;->A0t(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v28
 
+    .line 504
     .line 505
+    move-object/from16 v1, v27
+
     .line 506
     .line 507
-    invoke-static {v6, v5, v4, v2}, LX/001;->A0v(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v0, v26
 
     .line 508
     .line 509
-    .line 510
-    const/16 v0, 0x28
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1A(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 510
     .line 511
     .line 512
-    aput-object v17, v2, v0
+    move-object/from16 v15, v25
 
     .line 513
     .line 514
-    aput-object v16, v2, v3
+    move-object/from16 v14, v24
 
     .line 515
     .line 516
-    sput-object v2, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+    move-object/from16 v1, v23
 
     .line 517
     .line 518
+    move-object/from16 v0, v22
+
+    .line 519
+    .line 520
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1B(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 521
+    .line 522
+    .line 523
+    move-object/from16 v1, v21
+
+    .line 524
+    .line 525
+    move-object/from16 v0, v20
+
+    .line 526
+    .line 527
+    invoke-static {v1, v0, v13, v12, v2}, LX/0X1;->A1C(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 528
+    .line 529
+    .line 530
+    invoke-static {v11, v10, v9, v8, v2}, LX/0X1;->A1D(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 531
+    .line 532
+    .line 533
+    invoke-static {v7, v6, v5, v4, v2}, LX/0X1;->A1E(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 534
+    .line 535
+    .line 536
+    const/16 v0, 0x29
+
+    .line 537
+    .line 538
+    aput-object v19, v2, v0
+
+    .line 539
+    .line 540
+    const/16 v0, 0x2a
+
+    .line 541
+    .line 542
+    aput-object v18, v2, v0
+
+    .line 543
+    .line 544
+    const/16 v0, 0x2b
+
+    .line 545
+    .line 546
+    aput-object v17, v2, v0
+
+    .line 547
+    .line 548
+    aput-object v16, v2, v3
+
+    .line 549
+    .line 550
+    sput-object v2, Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLShowreelNativeClientName;
+
+    .line 551
+    .line 552
     return-void
 .end method
 
@@ -1175,7 +1251,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

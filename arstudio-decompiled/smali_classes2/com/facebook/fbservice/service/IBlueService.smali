@@ -7,20 +7,17 @@
 
 
 # virtual methods
-.method public abstract A6Y(Ljava/lang/String;)Z
+.method public abstract A4i(Ljava/lang/String;)Z
 .end method
 
-.method public abstract A6g(Lcom/facebook/http/interfaces/RequestPriority;Ljava/lang/String;)Z
+.method public abstract A4q(Lcom/facebook/http/interfaces/RequestPriority;Ljava/lang/String;)Z
 .end method
 
-.method public abstract AiE(Lcom/facebook/fbservice/service/ICompletionHandler;Ljava/lang/String;)Z
+.method public abstract Aga(Lcom/facebook/fbservice/service/ICompletionHandler;Ljava/lang/String;)Z
 .end method
 
-.method public abstract Aoq(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;Z)Ljava/lang/String;
+.method public abstract AnY(Landroid/os/Bundle;Lcom/facebook/auth/viewercontext/ViewerContext;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;Z)Ljava/lang/String;
 .end method
 
-.method public abstract Aor(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Lcom/facebook/fbservice/service/ICompletionHandler;Ljava/lang/String;Z)Ljava/lang/String;
-.end method
-
-.method public abstract Aos(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Lcom/facebook/fbservice/service/ICompletionHandler;Ljava/lang/String;ZZ)Ljava/lang/String;
+.method public abstract AnZ(Landroid/os/Bundle;Lcom/facebook/auth/viewercontext/ViewerContext;Lcom/facebook/common/callercontext/CallerContext;Lcom/facebook/fbservice/service/ICompletionHandler;Ljava/lang/String;ZZ)Ljava/lang/String;
 .end method

@@ -1,360 +1,261 @@
-.class public final LX/4aJ;
+.class public final LX/4AJ;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/4cR;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "SaveLinkExtensionController$1"
 
 
 # instance fields
-.field public final A00:Landroid/view/ActionMode$Callback;
+.field public final synthetic A00:Landroid/content/Intent;
 
-.field public final A01:Ljava/util/ArrayList;
-
-.field public final A02:Landroid/content/Context;
-
-.field public final A03:LX/010;
+.field public final synthetic A01:LX/47d;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Intent;LX/47d;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/4AJ;->A01:LX/47d;
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/4AJ;->A00:Landroid/content/Intent;
+
     .line 3
-    iput-object p1, p0, LX/4aJ;->A02:Landroid/content/Context;
-
     .line 4
-    .line 5
-    iput-object p2, p0, LX/4aJ;->A00:Landroid/view/ActionMode$Callback;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     .line 6
     .line 7
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/4aJ;->A01:Ljava/util/ArrayList;
-
-    .line 12
-    .line 13
-    new-instance v0, LX/010;
-
-    .line 14
-    .line 15
-    invoke-direct {v0}, LX/010;-><init>()V
-
-    .line 16
-    .line 17
-    .line 18
-    iput-object v0, p0, LX/4aJ;->A03:LX/010;
-
-    .line 19
-    .line 20
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(LX/4bo;)LX/4bn;
-    .locals 5
+.method public final run()V
+    .locals 9
 
     .line 0
-    iget-object v4, p0, LX/4aJ;->A01:Ljava/util/ArrayList;
+    iget-object v8, p0, LX/4AJ;->A01:LX/47d;
 
     .line 1
     .line 2
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
+    iget-object v2, p0, LX/4AJ;->A00:Landroid/content/Intent;
 
     .line 3
     .line 4
-    .line 5
-    move-result v3
+    iget-object v1, v8, LX/45P;->A00:Landroid/content/Context;
 
+    .line 5
     .line 6
-    const/4 v2, 0x0
+    iget-object v7, v8, LX/45P;->A02:Landroid/view/View;
 
     .line 7
-    :goto_0
-    if-ge v2, v3, :cond_1
-
     .line 8
-    .line 9
-    invoke-virtual {v4, v2}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v1
-
-    .line 13
-    check-cast v1, LX/4bn;
-
-    .line 14
-    .line 15
     if-eqz v1, :cond_0
 
+    .line 9
+    .line 10
+    if-eqz v7, :cond_0
+
+    .line 11
+    .line 12
+    const-string v0, "EXTRA_SAVE_COLLECTION_NAME"
+
+    .line 13
+    .line 14
+    invoke-virtual {v2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 15
     .line 16
     .line 17
-    iget-object v0, v1, LX/4bn;->A01:LX/4bo;
+    move-result-object v4
 
     .line 18
-    .line 19
-    if-ne v0, p1, :cond_0
+    const-string v0, "EXTRA_SAVE_LINK_SUCCEED"
 
+    .line 19
     .line 20
+    const/4 v6, 0x0
+
     .line 21
-    return-object v1
+    invoke-virtual {v2, v0, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     .line 22
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
     .line 23
     .line 24
-    goto :goto_0
+    move-result v3
 
     .line 25
-    :cond_1
-    iget-object v0, p0, LX/4aJ;->A02:Landroid/content/Context;
+    const/16 v0, 0x9
 
     .line 26
     .line 27
-    new-instance v1, LX/4bn;
+    new-instance v5, LX/6g2;
 
     .line 28
     .line 29
-    invoke-direct {v1, v0, p1}, LX/4bn;-><init>(Landroid/content/Context;LX/4bo;)V
+    invoke-direct {v5, v8, v0}, LX/6g2;-><init>(Ljava/lang/Object;I)V
 
     .line 30
     .line 31
     .line 32
-    invoke-virtual {v4, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 33
     .line 34
     .line 35
-    return-object v1
-.end method
-
-.method public final AUN(Landroid/view/MenuItem;LX/4bo;)Z
-    .locals 4
-
-    .line 0
-    iget-object v3, p0, LX/4aJ;->A00:Landroid/view/ActionMode$Callback;
-
-    .line 1
-    .line 2
-    invoke-virtual {p0, p2}, LX/4aJ;->A00(LX/4bo;)LX/4bn;
-
-    .line 3
-    .line 4
-    .line 5
     move-result-object v2
 
-    .line 6
-    iget-object v1, p0, LX/4aJ;->A02:Landroid/content/Context;
+    .line 36
+    if-nez v4, :cond_1
 
-    .line 7
-    .line 8
-    check-cast p1, LX/01b;
+    .line 37
+    .line 38
+    const v0, 0x7f11004e
 
-    .line 9
-    .line 10
-    new-instance v0, LX/4aH;
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 11
-    .line 12
-    invoke-direct {v0, v1, p1}, LX/4aH;-><init>(Landroid/content/Context;LX/01b;)V
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v1
 
-    .line 13
-    .line 14
-    .line 15
-    invoke-interface {v3, v2, v0}, Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
+    .line 45
+    const v0, 0x7f11003d
 
-    .line 16
-    .line 17
-    .line 18
-    move-result v0
+    .line 46
+    .line 47
+    .line 48
+    :goto_0
+    invoke-virtual {v2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 19
-    return v0
-.end method
-
-.method public final AWX(Landroid/view/Menu;LX/4bo;)Z
-    .locals 6
-
-    .line 0
-    iget-object v5, p0, LX/4aJ;->A00:Landroid/view/ActionMode$Callback;
-
-    .line 1
-    .line 2
-    invoke-virtual {p0, p2}, LX/4aJ;->A00(LX/4bo;)LX/4bn;
-
-    .line 3
-    .line 4
-    .line 5
+    .line 49
+    .line 50
+    .line 51
     move-result-object v4
 
-    .line 6
-    iget-object v3, p0, LX/4aJ;->A03:LX/010;
+    .line 52
+    if-eqz v3, :cond_0
 
-    .line 7
-    .line 8
-    invoke-virtual {v3, p1}, LX/010;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 53
+    .line 54
+    invoke-static {v7, v1, v6}, LX/4Bx;->A00(Landroid/view/View;Ljava/lang/CharSequence;I)LX/4Bx;
 
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v2
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v3
 
-    .line 12
-    check-cast v2, Landroid/view/Menu;
+    .line 58
+    const/4 v2, -0x1
 
-    .line 13
-    .line 14
-    if-nez v2, :cond_0
+    .line 59
+    iget-object v1, v3, LX/4HZ;->A0B:LX/4He;
 
-    .line 15
-    .line 16
-    iget-object v1, p0, LX/4aJ;->A02:Landroid/content/Context;
+    .line 60
+    .line 61
+    invoke-virtual {v1, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    .line 17
-    .line 18
-    move-object v0, p1
-
-    .line 19
-    check-cast v0, LX/01Z;
-
-    .line 20
-    .line 21
-    new-instance v2, LX/4aI;
-
-    .line 22
-    .line 23
-    invoke-direct {v2, v1, v0}, LX/4aI;-><init>(Landroid/content/Context;LX/01Z;)V
-
-    .line 24
-    .line 25
-    .line 26
-    invoke-virtual {v3, p1, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 27
-    .line 28
-    .line 29
-    :cond_0
-    invoke-interface {v5, v4, v2}, Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
-
-    .line 30
-    .line 31
-    .line 32
-    move-result v0
-
-    .line 33
-    return v0
-.end method
-
-.method public final AWr(LX/4bo;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/4aJ;->A00:Landroid/view/ActionMode$Callback;
-
-    .line 1
-    .line 2
-    invoke-virtual {p0, p1}, LX/4aJ;->A00(LX/4bo;)LX/4bn;
-
-    .line 3
-    .line 4
-    .line 5
+    .line 62
+    .line 63
+    .line 64
     move-result-object v0
 
-    .line 6
-    invoke-interface {v1, v0}, Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
+    .line 65
+    check-cast v0, Lcom/google/android/material/snackbar/SnackbarContentLayout;
 
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
+    .line 66
+    .line 67
+    iget-object v0, v0, Lcom/google/android/material/snackbar/SnackbarContentLayout;->A00:Landroid/widget/Button;
 
-.method public final Ab7(Landroid/view/Menu;LX/4bo;)Z
-    .locals 6
+    .line 68
+    .line 69
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 0
-    iget-object v5, p0, LX/4aJ;->A00:Landroid/view/ActionMode$Callback;
+    .line 70
+    .line 71
+    .line 72
+    invoke-virtual {v3, v5, v4}, LX/4Bx;->A09(Landroid/view/View$OnClickListener;Ljava/lang/CharSequence;)V
 
-    .line 1
-    .line 2
-    invoke-virtual {p0, p2}, LX/4aJ;->A00(LX/4bo;)LX/4bn;
+    .line 73
+    .line 74
+    .line 75
+    const v0, 0x7f0904a8
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v4
+    .line 76
+    .line 77
+    .line 78
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 6
-    iget-object v3, p0, LX/4aJ;->A03:LX/010;
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v1
 
-    .line 7
-    .line 8
-    invoke-virtual {v3, p1}, LX/010;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 82
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v2
+    .line 83
+    .line 84
+    .line 85
+    check-cast v1, Landroid/widget/TextView;
 
-    .line 12
-    check-cast v2, Landroid/view/Menu;
+    .line 86
+    .line 87
+    const/4 v0, 0x1
 
-    .line 13
-    .line 14
-    if-nez v2, :cond_0
+    .line 88
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 15
-    .line 16
-    iget-object v1, p0, LX/4aJ;->A02:Landroid/content/Context;
+    .line 89
+    .line 90
+    .line 91
+    invoke-virtual {v3}, LX/4HZ;->A05()V
 
-    .line 17
-    .line 18
-    move-object v0, p1
-
-    .line 19
-    check-cast v0, LX/01Z;
-
-    .line 20
-    .line 21
-    new-instance v2, LX/4aI;
-
-    .line 22
-    .line 23
-    invoke-direct {v2, v1, v0}, LX/4aI;-><init>(Landroid/content/Context;LX/01Z;)V
-
-    .line 24
-    .line 25
-    .line 26
-    invoke-virtual {v3, p1, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 27
-    .line 28
-    .line 29
+    .line 92
+    .line 93
+    .line 94
     :cond_0
-    invoke-interface {v5, v4, v2}, Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    return-void
 
-    .line 30
-    .line 31
-    .line 32
-    move-result v0
+    .line 95
+    :cond_1
+    const v1, 0x7f11003c
 
-    .line 33
-    return v0
+    .line 96
+    .line 97
+    .line 98
+    invoke-static {v4}, LX/0X5;->A1Z(Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 99
+    .line 100
+    .line 101
+    move-result-object v0
+
+    .line 102
+    invoke-virtual {v2, v1, v0}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 103
+    .line 104
+    .line 105
+    move-result-object v1
+
+    .line 106
+    const v0, 0x7f11003e
+
+    .line 107
+    .line 108
+    .line 109
+    goto :goto_0
 .end method

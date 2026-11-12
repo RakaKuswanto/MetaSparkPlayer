@@ -25,11 +25,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x20
+    const/16 v0, 0xc
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -53,59 +53,54 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0s(Ljava/lang/Object;)V
+    invoke-static {p1, p0}, LX/0X2;->A00(Landroid/os/Parcel;Ljava/lang/Object;)F
 
     .line 4
     .line 5
     .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
     iput v0, p0, Lcom/facebook/spherical/video/model/KeyframeParams;->A00:F
 
+    .line 8
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 10
     .line 11
     .line 12
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
 
     .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
     iput v0, p0, Lcom/facebook/spherical/video/model/KeyframeParams;->A01:I
 
-    .line 17
-    .line 18
+    .line 14
+    .line 15
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    .line 19
-    .line 20
-    .line 21
+    .line 16
+    .line 17
+    .line 18
     move-result-wide v0
 
-    .line 22
+    .line 19
     iput-wide v0, p0, Lcom/facebook/spherical/video/model/KeyframeParams;->A03:J
 
-    .line 23
-    .line 24
+    .line 20
+    .line 21
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 25
-    .line 26
-    .line 27
+    .line 22
+    .line 23
+    .line 24
     move-result v0
 
-    .line 28
+    .line 25
     iput v0, p0, Lcom/facebook/spherical/video/model/KeyframeParams;->A02:I
 
-    .line 29
-    .line 30
+    .line 26
+    .line 27
     return-void
 .end method
 
@@ -244,7 +239,7 @@
 
     .line 14
     .line 15
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 16
     .line 17

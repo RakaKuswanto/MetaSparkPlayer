@@ -1,17 +1,20 @@
-.class public final LX/32Y;
+.class public interface abstract LX/32Y;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract AVI(Ljava/lang/String;)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract AVJ(Ljava/lang/String;)V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AWL(Ljava/lang/String;)V
+.end method
+
+.method public abstract AXA(Ljava/lang/String;)V
+.end method
+
+.method public abstract Abo(Ljava/lang/String;Ljava/lang/String;)V
 .end method

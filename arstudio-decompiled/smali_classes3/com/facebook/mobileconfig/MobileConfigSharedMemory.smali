@@ -16,40 +16,36 @@
     .locals 1
 
     .line 0
-    const-string v0, "mobileconfig-jni"
+    invoke-static {}, LX/0At;->A00()V
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0WS;->A01(Ljava/lang/String;)V
-
     .line 3
+    new-instance v0, Ljava/lang/ref/ReferenceQueue;
+
     .line 4
     .line 5
-    new-instance v0, Ljava/lang/ref/ReferenceQueue;
+    invoke-direct {v0}, Ljava/lang/ref/ReferenceQueue;-><init>()V
 
     .line 6
     .line 7
-    invoke-direct {v0}, Ljava/lang/ref/ReferenceQueue;-><init>()V
-
     .line 8
+    sput-object v0, Lcom/facebook/mobileconfig/MobileConfigSharedMemory;->mBufferQueue:Ljava/lang/ref/ReferenceQueue;
+
     .line 9
     .line 10
-    sput-object v0, Lcom/facebook/mobileconfig/MobileConfigSharedMemory;->mBufferQueue:Ljava/lang/ref/ReferenceQueue;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 11
     .line 12
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
     .line 13
-    .line 14
-    .line 15
     move-result-object v0
 
-    .line 16
+    .line 14
     sput-object v0, Lcom/facebook/mobileconfig/MobileConfigSharedMemory;->references:Ljava/util/HashSet;
 
-    .line 17
-    .line 18
+    .line 15
+    .line 16
     return-void
 .end method
 
@@ -112,7 +108,7 @@
     move-object v3, v5
 
     .line 12
-    check-cast v3, LX/5Jy;
+    check-cast v3, LX/5ms;
 
     .line 13
     .line 14
@@ -125,19 +121,19 @@
     .line 17
     .line 18
     .line 19
-    iget v4, v3, LX/5Jy;->A00:I
+    iget v4, v3, LX/5ms;->A00:I
 
     .line 20
     .line 21
-    iget-wide v1, v3, LX/5Jy;->A02:J
+    iget-wide v1, v3, LX/5ms;->A02:J
 
     .line 22
     .line 23
-    iget v0, v3, LX/5Jy;->A01:I
+    iget v0, v3, LX/5ms;->A01:I
 
     .line 24
     .line 25
-    iget-object v3, v3, LX/5Jy;->A03:Ljava/lang/String;
+    iget-object v3, v3, LX/5ms;->A03:Ljava/lang/String;
 
     .line 26
     .line 27
@@ -157,7 +153,7 @@
 
     .line 34
     .line 35
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 36
     .line 37
@@ -165,52 +161,53 @@
     move-result-object v1
 
     .line 39
-    invoke-static {v1, v4}, LX/0Yd;->A1U([Ljava/lang/Object;I)V
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 40
     .line 41
     .line 42
-    const/4 v0, 0x1
+    move-result-object v0
 
     .line 43
-    aput-object v3, v1, v0
+    invoke-static {v1, v0, v3}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 44
     .line 45
+    .line 46
     const-string v0, "Failed to close memory resources %d %s"
 
-    .line 46
     .line 47
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
     .line 48
+    invoke-static {v2, v0, v1}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
     .line 49
     .line 50
+    .line 51
     :cond_0
     invoke-virtual {v5}, Ljava/lang/ref/Reference;->clear()V
 
-    .line 51
     .line 52
     .line 53
+    .line 54
     goto :goto_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 54
+    .line 55
     :cond_1
     monitor-exit v6
 
-    .line 55
+    .line 56
     return-void
 
-    .line 56
+    .line 57
     :catchall_0
     move-exception v0
 
-    .line 57
+    .line 58
     monitor-exit v6
 
-    .line 58
+    .line 59
     throw v0
 .end method
 
@@ -261,7 +258,7 @@
     .line 15
     .line 16
     .line 17
-    invoke-static {p4, v1, v4, v0, v5}, LX/0Yd;->A1O(Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p4, v1, v4, v0, v5}, LX/0X1;->A1N(Ljava/lang/Object;[Ljava/lang/Object;III)V
 
     .line 18
     .line 19
@@ -271,7 +268,7 @@
     .line 21
     .line 22
     :goto_0
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 23
     .line 24
@@ -305,7 +302,7 @@
     .line 37
     .line 38
     .line 39
-    invoke-static {p4, v1, v4, v0, v5}, LX/0Yd;->A1O(Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p4, v1, v4, v0, v5}, LX/0X1;->A1N(Ljava/lang/Object;[Ljava/lang/Object;III)V
 
     .line 40
     .line 41
@@ -327,7 +324,7 @@
 .method public static native createNewSharedMemoryRegion(ILjava/lang/String;)I
 .end method
 
-.method public static createSharedMemory(ILjava/lang/String;)LX/5Jz;
+.method public static createSharedMemory(ILjava/lang/String;)LX/5mt;
     .locals 4
 
     .line 0
@@ -347,7 +344,7 @@
 
     .line 7
     .line 8
-    invoke-static {p1}, LX/0Yf;->A1Y(Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p1}, LX/431;->A1b(Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 9
     .line 10
@@ -367,7 +364,7 @@
 
     .line 17
     .line 18
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 19
     .line 20
@@ -379,11 +376,11 @@
 
     .line 23
     :cond_0
-    new-instance v0, LX/5Jz;
+    new-instance v0, LX/5mt;
 
     .line 24
     .line 25
-    invoke-direct {v0, v3, p0, p1}, LX/5Jz;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v3, p0, p1}, LX/5mt;-><init>(IILjava/lang/String;)V
 
     .line 26
     .line 27
@@ -391,7 +388,7 @@
     return-object v0
 .end method
 
-.method public static fromFd(Landroid/os/ParcelFileDescriptor;ILjava/lang/String;)LX/5Jz;
+.method public static fromFd(Landroid/os/ParcelFileDescriptor;ILjava/lang/String;)LX/5mt;
     .locals 1
 
     .line 0
@@ -414,11 +411,11 @@
     move-result v0
 
     .line 8
-    new-instance p0, LX/5Jz;
+    new-instance p0, LX/5mt;
 
     .line 9
     .line 10
-    invoke-direct {p0, v0, p1, p2}, LX/5Jz;-><init>(IILjava/lang/String;)V
+    invoke-direct {p0, v0, p1, p2}, LX/5mt;-><init>(IILjava/lang/String;)V
 
     .line 11
     .line 12
@@ -426,7 +423,7 @@
     return-object p0
 .end method
 
-.method public static declared-synchronized getByteBuffer(LX/5Jz;)Ljava/nio/ByteBuffer;
+.method public static declared-synchronized getByteBuffer(LX/5mt;)Ljava/nio/ByteBuffer;
     .locals 14
 
     .line 0
@@ -453,7 +450,7 @@
 
     .line 9
     .line 10
-    invoke-static {v1, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -462,7 +459,7 @@
 
     .line 14
     :cond_0
-    iget-wide v1, p0, LX/5Jz;->A00:J
+    iget-wide v1, p0, LX/5mt;->A00:J
 
     .line 15
     .line 16
@@ -486,7 +483,7 @@
 
     .line 25
     .line 26
-    invoke-static {v1, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 27
     .line 28
@@ -495,11 +492,11 @@
 
     .line 30
     :cond_1
-    iget v11, p0, LX/5Jz;->A02:I
+    iget v11, p0, LX/5mt;->A02:I
 
     .line 31
     .line 32
-    iget v10, p0, LX/5Jz;->A01:I
+    iget v10, p0, LX/5mt;->A01:I
 
     .line 33
     .line 34
@@ -527,7 +524,7 @@
 
     .line 45
     .line 46
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 47
     .line 48
@@ -535,97 +532,100 @@
     move-result-object v2
 
     .line 50
-    invoke-static {v2, v10}, LX/0Yd;->A1U([Ljava/lang/Object;I)V
+    const/4 v0, 0x0
 
     .line 51
+    invoke-static {v2, v10, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+
     .line 52
     .line 53
+    .line 54
     const/4 v1, 0x1
 
-    .line 54
-    iget-object v0, p0, LX/5Jz;->A03:Ljava/lang/String;
-
     .line 55
+    iget-object v0, p0, LX/5mt;->A03:Ljava/lang/String;
+
     .line 56
+    .line 57
     aput-object v0, v2, v1
 
-    .line 57
     .line 58
-    invoke-static {v4, v3, v2}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
     .line 59
+    invoke-static {v4, v3, v2}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
     .line 60
     .line 61
+    .line 62
     goto :goto_0
 
-    .line 62
-    :cond_2
-    iput-wide v0, p0, LX/5Jz;->A00:J
-
     .line 63
+    :cond_2
+    iput-wide v0, p0, LX/5mt;->A00:J
+
     .line 64
+    .line 65
     invoke-static {v0, v1, v11}, Lcom/facebook/mobileconfig/MobileConfigSharedMemory;->createByteBufferFromMap(JI)Ljava/lang/Object;
 
-    .line 65
     .line 66
     .line 67
+    .line 68
     move-result-object v9
 
-    .line 68
+    .line 69
     check-cast v9, Ljava/nio/ByteBuffer;
 
-    .line 69
     .line 70
+    .line 71
     sget-object v8, Lcom/facebook/mobileconfig/MobileConfigSharedMemory;->mBufferQueue:Ljava/lang/ref/ReferenceQueue;
 
-    .line 71
     .line 72
-    iget-wide v12, p0, LX/5Jz;->A00:J
-
     .line 73
+    iget-wide v12, p0, LX/5mt;->A00:J
+
     .line 74
-    iget-object v7, p0, LX/5Jz;->A03:Ljava/lang/String;
-
     .line 75
+    iget-object v7, p0, LX/5mt;->A03:Ljava/lang/String;
+
     .line 76
-    new-instance v6, LX/5Jy;
-
     .line 77
-    .line 78
-    invoke-direct/range {v6 .. v13}, LX/5Jy;-><init>(Ljava/lang/String;Ljava/lang/ref/ReferenceQueue;Ljava/nio/ByteBuffer;IIJ)V
+    new-instance v6, LX/5ms;
 
+    .line 78
     .line 79
+    invoke-direct/range {v6 .. v13}, LX/5ms;-><init>(Ljava/lang/String;Ljava/lang/ref/ReferenceQueue;Ljava/nio/ByteBuffer;IIJ)V
+
     .line 80
     .line 81
+    .line 82
     sget-object v0, Lcom/facebook/mobileconfig/MobileConfigSharedMemory;->references:Ljava/util/HashSet;
 
-    .line 82
     .line 83
+    .line 84
     invoke-virtual {v0, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 84
     .line 85
     .line 86
+    .line 87
     :goto_0
     monitor-exit v5
 
-    .line 87
+    .line 88
     return-object v9
 
-    .line 88
+    .line 89
     :catchall_0
     move-exception v0
 
-    .line 89
+    .line 90
     monitor-exit v5
 
-    .line 90
+    .line 91
     throw v0
 .end method
 
-.method public static getParcelFileDescriptor(LX/5Jz;)Landroid/os/ParcelFileDescriptor;
+.method public static getParcelFileDescriptor(LX/5mt;)Landroid/os/ParcelFileDescriptor;
     .locals 0
 
     .line 0
@@ -640,7 +640,7 @@
 
     .line 4
     :cond_0
-    iget p0, p0, LX/5Jz;->A01:I
+    iget p0, p0, LX/5mt;->A01:I
 
     .line 5
     .line 6

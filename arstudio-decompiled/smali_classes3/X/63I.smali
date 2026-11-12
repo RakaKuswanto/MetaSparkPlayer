@@ -4,23 +4,29 @@
 
 
 # virtual methods
-.method public abstract AVB(Ljava/lang/Exception;)V
+.method public abstract AEY()LX/5sH;
 .end method
 
-.method public abstract AaM()V
+.method public abstract ANR()Z
 .end method
 
-.method public abstract AaN()V
+.method public abstract ANr(LX/63H;LX/692;)V
 .end method
 
-.method public abstract Ab0(J)V
+.method public abstract Af3(LX/62s;Z)Z
 .end method
 
-.method public abstract Ab2()V
+.method public abstract AjJ()V
 .end method
 
-.method public abstract Acf(Z)V
+.method public abstract Akd(Z)V
 .end method
 
-.method public abstract AeO(JJI)V
+.method public abstract Alg(Ljava/util/List;)V
+.end method
+
+.method public abstract Alv(II)V
+.end method
+
+.method public abstract release()V
 .end method

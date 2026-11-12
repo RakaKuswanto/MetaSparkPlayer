@@ -35,22 +35,21 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x17
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
+    .line 2
     .line 3
     .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
+    .line 5
     sput-object v0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 6
     .line 7
-    .line 8
     return-void
 .end method
 
@@ -63,7 +62,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yd;->A0K(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X1;->A0M(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 4
     .line 5
@@ -114,7 +113,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
 
     .line 268435456
@@ -123,125 +122,118 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    const-string v0, "color"
+    const-string/jumbo v0, "color"
 
     .line 268435460
     .line 268435461
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
     .line 268435462
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 268435463
     .line 268435464
+    .line 268435465
     iput-object p1, p0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->A01:Ljava/lang/String;
 
-    .line 268435465
     .line 268435466
+    .line 268435467
     const-string/jumbo v0, "name"
 
-    .line 268435467
     .line 268435468
     .line 268435469
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
     .line 268435470
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 268435471
     .line 268435472
-    iput-object p3, p0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->A02:Ljava/lang/String;
-
     .line 268435473
-    .line 268435474
-    iput p2, p0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->A00:I
+    iput-object p2, p0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->A02:Ljava/lang/String;
 
+    .line 268435474
     .line 268435475
+    iput p4, p0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->A00:I
+
     .line 268435476
+    .line 268435477
     const-string/jumbo v0, "variant"
 
-    .line 268435477
     .line 268435478
     .line 268435479
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
     .line 268435480
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 268435481
     .line 268435482
-    iput-object p4, p0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->A03:Ljava/lang/String;
-
     .line 268435483
+    iput-object p3, p0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->A03:Ljava/lang/String;
+
     .line 268435484
+    .line 268435485
     const-string/jumbo v0, "filled"
 
-    .line 268435485
     .line 268435486
     .line 268435487
-    if-eqz p4, :cond_0
-
     .line 268435488
-    .line 268435489
-    invoke-virtual {p4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    if-eqz p3, :cond_0
 
+    .line 268435489
     .line 268435490
+    invoke-virtual {p3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
     .line 268435491
     .line 268435492
+    .line 268435493
     move-result v0
 
-    .line 268435493
+    .line 268435494
     if-nez v0, :cond_1
 
-    .line 268435494
     .line 268435495
+    .line 268435496
     :cond_0
     const-string/jumbo v0, "outline"
 
-    .line 268435496
     .line 268435497
     .line 268435498
-    if-eqz p4, :cond_3
-
     .line 268435499
-    .line 268435500
-    invoke-virtual {p4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    if-eqz p3, :cond_3
 
+    .line 268435500
     .line 268435501
+    invoke-virtual {p3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
     .line 268435502
     .line 268435503
+    .line 268435504
     move-result v0
 
-    .line 268435504
+    .line 268435505
     if-eqz v0, :cond_3
 
-    .line 268435505
     .line 268435506
-    :cond_1
-    iget-object v0, p0, Lcom/facebook/search/sts/common/SearchKeywordResultIcon;->A01:Ljava/lang/String;
-
     .line 268435507
+    :cond_1
+    if-eqz p1, :cond_2
+
     .line 268435508
-    if-eqz v0, :cond_2
-
     .line 268435509
-    .line 268435510
-    invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
+    .line 268435510
     .line 268435511
     .line 268435512
-    .line 268435513
     :cond_2
     return-void
 
-    .line 268435514
+    .line 268435513
     :cond_3
-    const-string v0, "Check failed."
+    invoke-static {}, LX/0X5;->A0V()Ljava/lang/IllegalStateException;
 
+    .line 268435514
     .line 268435515
     .line 268435516
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 268435517
-    .line 268435518
-    .line 268435519
     move-result-object v0
 
-    .line 268435520
+    .line 268435517
     throw v0
 .end method
 
@@ -289,7 +281,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -309,7 +301,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -341,7 +333,7 @@
 
     .line 39
     .line 40
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 41
     .line 42
@@ -369,7 +361,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -385,7 +377,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -415,7 +407,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 25
     .line 26

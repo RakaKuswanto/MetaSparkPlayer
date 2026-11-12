@@ -6,13 +6,13 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xa4a2
 
-.field public static final __CONFIG__:I = 0x2ce
+.field public static final __CONFIG__:I = 0x29c
 
-.field public static final font_texture_provider:J = 0x8102ce0002204aL
+.field public static final font_texture_provider:J = 0x81029c00021d2aL
 
-.field public static final prefab_preload:J = 0x8102ce00002048L
+.field public static final prefab_preload:J = 0x81029c00001d28L
 
-.field public static final shadercode_preload:J = 0x8102ce00012049L
+.field public static final shadercode_preload:J = 0x81029c00011d29L
 
 
 # direct methods

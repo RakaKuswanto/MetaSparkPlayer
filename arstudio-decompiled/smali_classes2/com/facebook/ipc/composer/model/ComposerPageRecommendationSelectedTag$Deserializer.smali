@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 5
 
     .line 0
@@ -30,7 +30,7 @@
     .line 2
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 3
     .line 4
@@ -38,7 +38,7 @@
     move-result-object v3
 
     .line 6
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 7
     .line 8
@@ -46,7 +46,7 @@
 
     .line 9
     .line 10
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 11
     .line 12
@@ -84,127 +84,133 @@
 
     .line 29
     :cond_1
-    const-string v0, "entrypoint"
+    const-string/jumbo v0, "entrypoint"
 
     .line 30
     .line 31
+    .line 32
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 32
     .line 33
     .line 34
+    .line 35
     move-result v0
 
-    .line 35
+    .line 36
     if-eqz v0, :cond_3
 
-    .line 36
     .line 37
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 38
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 39
     .line 40
+    .line 41
     move-result-object v1
 
-    .line 41
+    .line 42
     goto :goto_1
 
-    .line 42
+    .line 43
     :goto_0
     const-string/jumbo v0, "tag"
 
-    .line 43
     .line 44
     .line 45
+    .line 46
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 46
     .line 47
     .line 48
+    .line 49
     move-result v0
 
-    .line 49
+    .line 50
     if-eqz v0, :cond_3
 
-    .line 50
     .line 51
+    .line 52
     const-class v0, Lcom/facebook/graphql/model/GraphQLPageRecommendationsTag;
 
-    .line 52
     .line 53
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
     .line 54
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
     .line 55
     .line 56
+    .line 57
     move-result-object v2
 
-    .line 57
+    .line 58
     check-cast v2, Lcom/facebook/graphql/model/GraphQLPageRecommendationsTag;
 
-    .line 58
     .line 59
+    .line 60
     :cond_2
     :goto_1
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
-    .line 60
     .line 61
     .line 62
+    .line 63
     move-result-object v3
 
-    .line 63
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
-
     .line 64
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
+
     .line 65
+    .line 66
     if-ne v3, v0, :cond_0
 
-    .line 66
     .line 67
+    .line 68
     goto :goto_2
 
-    .line 68
-    :cond_3
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
-
     .line 69
+    :cond_3
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
+
     .line 70
     .line 71
+    .line 72
     goto :goto_1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 72
+    .line 73
     :goto_2
     new-instance v0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationSelectedTag;
 
-    .line 73
     .line 74
+    .line 75
     invoke-direct {v0, v2, v1}, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationSelectedTag;-><init>(Lcom/facebook/graphql/model/GraphQLPageRecommendationsTag;Ljava/lang/String;)V
 
-    .line 75
     .line 76
     .line 77
+    .line 78
     return-object v0
 
-    .line 78
+    .line 79
     :catch_0
     move-exception v1
 
-    .line 79
+    .line 80
     const-class v0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationSelectedTag;
 
-    .line 80
     .line 81
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 82
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 83
     .line 84
-    const/4 v0, 0x0
-
     .line 85
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v0
+
+    .line 89
     throw v0
 .end method

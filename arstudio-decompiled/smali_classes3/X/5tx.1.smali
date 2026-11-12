@@ -1,17 +1,8 @@
-.class public final LX/5tx;
-.super Ljava/lang/RuntimeException;
+.class public interface abstract LX/5Tx;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract A6h(Ljava/nio/ByteBuffer;I)V
 .end method

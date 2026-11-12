@@ -45,7 +45,6 @@
     <attr name="actionTextColorAlpha" format="float" />
     <attr name="actionViewClass" format="string" />
     <attr name="activityChooserViewStyle" format="reference" />
-    <attr name="actualImageResource" format="reference" />
     <attr name="actualImageScaleType">
         <enum name="center" value="4" />
         <enum name="centerCrop" value="6" />
@@ -58,7 +57,6 @@
         <enum name="focusCrop" value="7" />
         <enum name="none" value="-1" />
     </attr>
-    <attr name="actualImageUri" format="string" />
     <attr name="adjustLRGravityByTextDirectionCompat" format="boolean" />
     <attr name="alertDialogBackgroundColor" format="reference|color" />
     <attr name="alertDialogButtonBarPreferStrictHorizontalLayout" format="boolean" />
@@ -191,6 +189,7 @@
     <attr name="borderRight" format="dimension" />
     <attr name="borderTop" format="dimension" />
     <attr name="borderlessButtonStyle" format="reference" />
+    <attr name="bottomSheetDialogTheme" format="reference" />
     <attr name="bottomSheetStyle" format="reference" />
     <attr name="bottomsheetBackgroundColor" format="reference|color" />
     <attr name="bottomsheetDescriptionStyle" format="reference" />
@@ -384,7 +383,6 @@
     <attr name="cds_usage_ui_background" format="reference|color" />
     <attr name="cds_usage_warning" format="reference|color" />
     <attr name="centerSelectedTab" format="boolean" />
-    <attr name="centerTitle" format="boolean" />
     <attr name="chainUseRtl" format="boolean" />
     <attr name="chatHeadBubbleViewNubColor" format="color" />
     <attr name="checkMarkCompat" format="reference" />
@@ -494,6 +492,7 @@
     <attr name="contextItemPaddingHorizontal" format="dimension" />
     <attr name="contextItemPaddingVertical" format="dimension" />
     <attr name="controlBackground" format="reference" />
+    <attr name="coordinatorLayoutStyle" format="reference" />
     <attr name="cornerFamily">
         <enum name="cut" value="1" />
         <enum name="rounded" value="0" />
@@ -609,6 +608,7 @@
     <attr name="elevationOverlayColor" format="color" />
     <attr name="elevationOverlayEnabled" format="boolean" />
     <attr name="emojiCompatEnabled" format="boolean" />
+    <attr name="enableEdgeToEdge" format="boolean" />
     <attr name="enableFading" format="boolean" />
     <attr name="enableTranscriptModeWorkaround" format="boolean" />
     <attr name="endIconCheckable" format="boolean" />
@@ -707,8 +707,12 @@
     <attr name="fds_mobile_wash_fix_me" format="reference|color" />
     <attr name="fds_usage_accent" format="reference|color" />
     <attr name="fds_usage_accent_deemphasized" format="reference|color" />
+    <attr name="fds_usage_active_dot" format="reference|color" />
+    <attr name="fds_usage_active_dot_on_color" format="reference|color" />
+    <attr name="fds_usage_active_dot_on_media" format="reference|color" />
     <attr name="fds_usage_active_switch_track" format="reference|color" />
     <attr name="fds_usage_always_black" format="reference|color" />
+    <attr name="fds_usage_always_black_overlay" format="reference|color" />
     <attr name="fds_usage_always_transparent" format="reference|color" />
     <attr name="fds_usage_always_white" format="reference|color" />
     <attr name="fds_usage_attachment_footer_background" format="reference|color" />
@@ -743,9 +747,11 @@
     <attr name="fds_usage_border_persistent_ui" format="reference|color" />
     <attr name="fds_usage_border_responsive_ui" format="reference|color" />
     <attr name="fds_usage_border_ui_emphasis" format="reference|color" />
+    <attr name="fds_usage_border_ui_emphasis_on_media" format="reference|color" />
     <attr name="fds_usage_bottom_sheet_background_deemphasized" format="reference|color" />
     <attr name="fds_usage_bottom_sheet_handle" format="reference|color" />
     <attr name="fds_usage_card_background" format="reference|color" />
+    <attr name="fds_usage_card_background_dark" format="reference|color" />
     <attr name="fds_usage_card_background_flat" format="reference|color" />
     <attr name="fds_usage_card_background_flat_fix_me" format="reference|color" />
     <attr name="fds_usage_card_border" format="reference|color" />
@@ -775,14 +781,24 @@
     <attr name="fds_usage_decorative_icon_yellow" format="reference|color" />
     <attr name="fds_usage_device_background" format="reference|color" />
     <attr name="fds_usage_device_icon" format="reference|color" />
+    <attr name="fds_usage_device_icon_on_color" format="reference|color" />
+    <attr name="fds_usage_device_icon_on_media" format="reference|color" />
     <attr name="fds_usage_device_text" format="reference|color" />
+    <attr name="fds_usage_device_text_on_color" format="reference|color" />
+    <attr name="fds_usage_device_text_on_media" format="reference|color" />
     <attr name="fds_usage_disabled_button_background" format="reference|color" />
     <attr name="fds_usage_disabled_button_background_growth" format="reference|color" />
     <attr name="fds_usage_disabled_button_text" format="reference|color" />
     <attr name="fds_usage_disabled_icon" format="reference|color" />
+    <attr name="fds_usage_disabled_icon_on_color" format="reference|color" />
+    <attr name="fds_usage_disabled_icon_on_media" format="reference|color" />
     <attr name="fds_usage_disabled_text" format="reference|color" />
     <attr name="fds_usage_disabled_text_fix_me" format="reference|color" />
+    <attr name="fds_usage_disabled_text_on_color" format="reference|color" />
+    <attr name="fds_usage_disabled_text_on_media" format="reference|color" />
     <attr name="fds_usage_divider" format="reference|color" />
+    <attr name="fds_usage_divider_on_color" format="reference|color" />
+    <attr name="fds_usage_divider_on_media" format="reference|color" />
     <attr name="fds_usage_event_date" format="reference|color" />
     <attr name="fds_usage_facepile_overflow_overlay" format="reference|color" />
     <attr name="fds_usage_faded_popover_background" format="reference|color" />
@@ -820,6 +836,9 @@
     <attr name="fds_usage_high_contrast_button_pressed" format="reference|color" />
     <attr name="fds_usage_highlight_cell_background" format="reference|color" />
     <attr name="fds_usage_hosted_view_selected_state" format="reference|color" />
+    <attr name="fds_usage_inactive_dot" format="reference|color" />
+    <attr name="fds_usage_inactive_dot_on_color" format="reference|color" />
+    <attr name="fds_usage_inactive_dot_on_media" format="reference|color" />
     <attr name="fds_usage_instant_feedback_border" format="reference|color" />
     <attr name="fds_usage_instant_feedback_shadow" format="reference|color" />
     <attr name="fds_usage_last_active_state_background" format="reference|color" />
@@ -844,6 +863,11 @@
     <attr name="fds_usage_non_media_pressed_fix_me" format="reference|color" />
     <attr name="fds_usage_non_media_pressed_on_dark" format="reference|color" />
     <attr name="fds_usage_notification_badge" format="reference|color" />
+    <attr name="fds_usage_notification_circle_fb_pay" format="reference|color" />
+    <attr name="fds_usage_notification_circle_orange" format="reference|color" />
+    <attr name="fds_usage_notification_circle_pink" format="reference|color" />
+    <attr name="fds_usage_notification_circle_teal" format="reference|color" />
+    <attr name="fds_usage_notification_circle_yellow" format="reference|color" />
     <attr name="fds_usage_optimistic_post_tint" format="reference|color" />
     <attr name="fds_usage_orange_55_fix_me" format="reference|color" />
     <attr name="fds_usage_overlay_on_media" format="reference|color" />
@@ -905,6 +929,7 @@
     <attr name="fds_usage_rooms_app_icon" format="reference|color" />
     <attr name="fds_usage_secondary_button_background" format="reference|color" />
     <attr name="fds_usage_secondary_button_background_fix_me" format="reference|color" />
+    <attr name="fds_usage_secondary_button_background_floating" format="reference|color" />
     <attr name="fds_usage_secondary_button_background_on_color" format="reference|color" />
     <attr name="fds_usage_secondary_button_background_on_color_deprecated" format="reference|color" />
     <attr name="fds_usage_secondary_button_background_on_media" format="reference|color" />
@@ -936,6 +961,14 @@
     <attr name="fds_usage_stepper_inactive" format="reference|color" />
     <attr name="fds_usage_surface_background" format="reference|color" />
     <attr name="fds_usage_surface_background_fix_me" format="reference|color" />
+    <attr name="fds_usage_switch_checked_background_color_android" format="reference|color" />
+    <attr name="fds_usage_switch_checked_background_color_ios" format="reference|color" />
+    <attr name="fds_usage_switch_checked_handle_fill_color_android" format="reference|color" />
+    <attr name="fds_usage_switch_checked_handle_fill_color_ios" format="reference|color" />
+    <attr name="fds_usage_switch_disabled_background_color" format="reference|color" />
+    <attr name="fds_usage_switch_disabled_handle_fill_color" format="reference|color" />
+    <attr name="fds_usage_switch_unchecked_background_color" format="reference|color" />
+    <attr name="fds_usage_switch_unchecked_handle_fill_color" format="reference|color" />
     <attr name="fds_usage_teal_45_fix_me" format="reference|color" />
     <attr name="fds_usage_teal_60_fix_me" format="reference|color" />
     <attr name="fds_usage_teal_70_fix_me" format="reference|color" />
@@ -948,13 +981,16 @@
     <attr name="fds_usage_text_input_active_text" format="reference|color" />
     <attr name="fds_usage_text_input_bar_background" format="reference|color" />
     <attr name="fds_usage_text_input_bar_background_on_color" format="reference|color" />
+    <attr name="fds_usage_text_input_bar_background_on_deemphasized" format="reference|color" />
     <attr name="fds_usage_text_input_bar_background_on_media" format="reference|color" />
     <attr name="fds_usage_text_input_inactive_inner_border" format="reference|color" />
     <attr name="fds_usage_text_input_inactive_outer_border" format="reference|color" />
     <attr name="fds_usage_toggle_active_background" format="reference|color" />
     <attr name="fds_usage_toggle_active_icon" format="reference|color" />
     <attr name="fds_usage_toggle_active_text" format="reference|color" />
+    <attr name="fds_usage_tooltip_background" format="reference|color" />
     <attr name="fds_usage_tooltip_shadow" format="reference|color" />
+    <attr name="fds_usage_tooltip_text" format="reference|color" />
     <attr name="fds_usage_transparent" format="reference|color" />
     <attr name="fds_usage_verified_badge" format="reference|color" />
     <attr name="fds_usage_verified_badge_on_color" format="reference|color" />
@@ -976,51 +1012,6 @@
     <attr name="feedTextBodyColor" format="color" />
     <attr name="fillParentWidth" format="boolean" />
     <attr name="firstBaselineToTopHeight" format="dimension" />
-    <attr name="flex" format="float" />
-    <attr name="flex_alignItems">
-        <enum name="auto" value="0" />
-        <enum name="center" value="2" />
-        <enum name="flexEnd" value="3" />
-        <enum name="flexStart" value="1" />
-        <enum name="stretch" value="4" />
-    </attr>
-    <attr name="flex_alignSelf">
-        <enum name="auto" value="0" />
-        <enum name="center" value="2" />
-        <enum name="flexEnd" value="3" />
-        <enum name="flexStart" value="1" />
-        <enum name="stretch" value="4" />
-    </attr>
-    <attr name="flex_bottom" format="dimension" />
-    <attr name="flex_direction">
-        <enum name="column" value="0" />
-        <enum name="columnReverse" value="1" />
-        <enum name="row" value="2" />
-        <enum name="rowReverse" value="3" />
-    </attr>
-    <attr name="flex_justifyContent">
-        <enum name="center" value="1" />
-        <enum name="flexEnd" value="2" />
-        <enum name="flexStart" value="0" />
-        <enum name="spaceAround" value="4" />
-        <enum name="spaceBetween" value="3" />
-    </attr>
-    <attr name="flex_layoutDirection">
-        <enum name="inherit" value="0" />
-        <enum name="ltr" value="1" />
-        <enum name="rtl" value="2" />
-    </attr>
-    <attr name="flex_left" format="dimension" />
-    <attr name="flex_positionType">
-        <enum name="absolute" value="1" />
-        <enum name="relative" value="0" />
-    </attr>
-    <attr name="flex_right" format="dimension" />
-    <attr name="flex_top" format="dimension" />
-    <attr name="flex_wrap">
-        <enum name="nowrap" value="0" />
-        <enum name="wrap" value="1" />
-    </attr>
     <attr name="flow_firstHorizontalBias" format="float" />
     <attr name="flow_firstHorizontalStyle">
         <enum name="packed" value="2" />
@@ -1108,7 +1099,6 @@
     <attr name="glyphSpacing" format="dimension" />
     <attr name="goIcon" format="reference" />
     <attr name="guidelineUseRtl" format="boolean" />
-    <attr name="hasBackButton" format="boolean" />
     <attr name="headTextColor" format="reference" />
     <attr name="headerBackground" format="reference" />
     <attr name="headerGlyphColor" format="reference" />
@@ -1212,6 +1202,7 @@
     <attr name="itemStrokeColor" format="color" />
     <attr name="itemStrokeWidth" format="dimension" />
     <attr name="itemTextColor" format="color" />
+    <attr name="keylines" format="reference" />
     <attr name="kf_height" format="float" />
     <attr name="kf_width" format="float" />
     <attr name="lStar" format="float" />
@@ -1219,6 +1210,23 @@
     <attr name="layout" format="reference" />
     <attr name="layoutDescription" format="reference" />
     <attr name="layoutManager" format="string" />
+    <attr name="layout_anchor" format="reference" />
+    <attr name="layout_anchorGravity">
+        <flag name="bottom" value="0x00000050" />
+        <flag name="center" value="0x00000011" />
+        <flag name="center_horizontal" value="0x00000001" />
+        <flag name="center_vertical" value="0x00000010" />
+        <flag name="clip_horizontal" value="0x00000008" />
+        <flag name="clip_vertical" value="0x00000080" />
+        <flag name="end" value="0x00800005" />
+        <flag name="fill" value="0x00000077" />
+        <flag name="fill_horizontal" value="0x00000007" />
+        <flag name="fill_vertical" value="0x00000070" />
+        <flag name="left" value="0x00000003" />
+        <flag name="right" value="0x00000005" />
+        <flag name="start" value="0x00800003" />
+        <flag name="top" value="0x00000030" />
+    </attr>
     <attr name="layout_anchorIndex" format="integer" />
     <attr name="layout_anchorPosition">
         <enum name="center" value="2" />
@@ -1238,6 +1246,7 @@
         <enum name="start" value="3" />
         <enum name="top" value="1" />
     </attr>
+    <attr name="layout_behavior" format="string" />
     <attr name="layout_constrainedHeight" format="boolean" />
     <attr name="layout_constrainedWidth" format="boolean" />
     <attr name="layout_constraintBaseline_creator" format="integer" />
@@ -1348,6 +1357,16 @@
         <enum name="wrap" value="-2" />
     </attr>
     <attr name="layout_constraintWidth_percent" format="float" />
+    <attr name="layout_dodgeInsetEdges">
+        <flag name="all" value="0x00000077" />
+        <flag name="bottom" value="0x00000050" />
+        <flag name="end" value="0x00800005" />
+        <flag name="left" value="0x00000003" />
+        <flag name="none" value="0x00000000" />
+        <flag name="right" value="0x00000005" />
+        <flag name="start" value="0x00800003" />
+        <flag name="top" value="0x00000030" />
+    </attr>
     <attr name="layout_editor_absoluteX" format="dimension" />
     <attr name="layout_editor_absoluteY" format="dimension" />
     <attr name="layout_goneMarginBaseline" format="dimension" />
@@ -1358,6 +1377,16 @@
     <attr name="layout_goneMarginStart" format="dimension" />
     <attr name="layout_goneMarginTop" format="dimension" />
     <attr name="layout_ignore" format="boolean" />
+    <attr name="layout_insetEdge">
+        <enum name="bottom" value="80" />
+        <enum name="end" value="8388613" />
+        <enum name="left" value="3" />
+        <enum name="none" value="0" />
+        <enum name="right" value="5" />
+        <enum name="start" value="8388611" />
+        <enum name="top" value="48" />
+    </attr>
+    <attr name="layout_keyline" format="integer" />
     <attr name="layout_marginBaseline" format="dimension" />
     <attr name="layout_optimizationLevel">
         <flag name="barrier" value="0x00000002" />
@@ -1409,13 +1438,6 @@
     <attr name="materialButtonStyle" format="reference" />
     <attr name="materialButtonToggleGroupStyle" format="reference" />
     <attr name="materialCalendarDay" format="reference" />
-    <attr name="materialCalendarHeaderCancelButton" format="reference" />
-    <attr name="materialCalendarHeaderConfirmButton" format="reference" />
-    <attr name="materialCalendarHeaderDivider" format="reference" />
-    <attr name="materialCalendarHeaderLayout" format="reference" />
-    <attr name="materialCalendarHeaderSelection" format="reference" />
-    <attr name="materialCalendarHeaderTitle" format="reference" />
-    <attr name="materialCalendarHeaderToggleButton" format="reference" />
     <attr name="materialCalendarMonth" format="reference" />
     <attr name="materialCalendarMonthNavigationButton" format="reference" />
     <attr name="materialCalendarStyle" format="reference" />
@@ -1468,7 +1490,6 @@
         <enum name="normal" value="0" />
         <enum name="tabMode" value="2" />
     </attr>
-    <attr name="navless" format="boolean" />
     <attr name="nestedScrollViewStyle" format="reference" />
     <attr name="nestedScrollable" format="boolean" />
     <attr name="numericModifiers">
@@ -1699,7 +1720,6 @@
     <attr name="selectorSize" format="dimension" />
     <attr name="set" format="string" />
     <attr name="shapeAppearance" format="reference" />
-    <attr name="shapeAppearanceMediumComponent" format="reference" />
     <attr name="shapeAppearanceOverlay" format="reference" />
     <attr name="shapeAppearanceSmallComponent" format="reference" />
     <attr name="shimmer_auto_start" format="boolean" />
@@ -1782,6 +1802,7 @@
         <enum name="src_over" value="3" />
     </attr>
     <attr name="startText" format="reference|string" />
+    <attr name="statusBarBackground" format="reference|color" />
     <attr name="statusBarColorOpaque" format="reference" />
     <attr name="statusBarColorTransparent" format="reference|color" />
     <attr name="stickerStoreItemDividerStyle" format="reference" />
@@ -2027,6 +2048,7 @@
         <enum name="normal" value="0" />
     </attr>
     <attr name="voiceIcon" format="reference" />
+    <attr name="w3c_bottom_sheet_color" format="reference|color" />
     <attr name="w3c_bottom_sheet_error_text_color" format="reference|color" />
     <attr name="w3c_bottom_sheet_input_text_style" format="reference" />
     <attr name="w3c_text_input_layout_style" format="reference" />

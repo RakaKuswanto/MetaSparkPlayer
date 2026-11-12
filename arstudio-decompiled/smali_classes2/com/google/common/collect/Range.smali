@@ -50,6 +50,16 @@
 
 .method public constructor <init>(Lcom/google/common/collect/Cut;Lcom/google/common/collect/Cut;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "lowerBound",
+            "upperBound"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/collect/RangeGwtSerializationDependencies;-><init>()V
@@ -115,7 +125,7 @@
 
     .line 31
     .line 32
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/0X7;->A0X(I)Ljava/lang/StringBuilder;
 
     .line 33
     .line 34
@@ -150,7 +160,7 @@
     move-result-object v0
 
     .line 51
-    invoke-static {v2, v0}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v2, v0}, LX/004;->A03(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 52
     .line 53
@@ -164,7 +174,15 @@
 
 # virtual methods
 .method public final A00(Lcom/google/common/collect/Range;)Lcom/google/common/collect/Range;
-    .locals 3
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "connectedRange"
+        }
+    .end annotation
 
     .line 0
     iget-object v1, p0, Lcom/google/common/collect/Range;->lowerBound:Lcom/google/common/collect/Cut;
@@ -215,11 +233,11 @@
 
     .line 22
     .line 23
-    iget-object v1, p0, Lcom/google/common/collect/Range;->lowerBound:Lcom/google/common/collect/Cut;
+    iget-object v3, p0, Lcom/google/common/collect/Range;->lowerBound:Lcom/google/common/collect/Cut;
 
     .line 24
     .line 25
-    iget-object v0, p1, Lcom/google/common/collect/Range;->upperBound:Lcom/google/common/collect/Cut;
+    iget-object v2, p1, Lcom/google/common/collect/Range;->upperBound:Lcom/google/common/collect/Cut;
 
     .line 26
     .line 27
@@ -231,30 +249,64 @@
 
     .line 29
     .line 30
-    iget-object v1, p1, Lcom/google/common/collect/Range;->lowerBound:Lcom/google/common/collect/Cut;
+    iget-object v3, p1, Lcom/google/common/collect/Range;->lowerBound:Lcom/google/common/collect/Cut;
 
     .line 31
     .line 32
-    iget-object v0, p0, Lcom/google/common/collect/Range;->upperBound:Lcom/google/common/collect/Cut;
+    iget-object v2, p0, Lcom/google/common/collect/Range;->upperBound:Lcom/google/common/collect/Cut;
 
     .line 33
     .line 34
     :goto_0
-    new-instance p1, Lcom/google/common/collect/Range;
+    invoke-virtual {v3, v2}, Lcom/google/common/collect/Cut;->A00(Lcom/google/common/collect/Cut;)I
 
     .line 35
     .line 36
-    invoke-direct {p1, v1, v0}, Lcom/google/common/collect/Range;-><init>(Lcom/google/common/collect/Cut;Lcom/google/common/collect/Cut;)V
-
     .line 37
+    move-result v0
+
     .line 38
+    invoke-static {v0}, LX/0X4;->A1O(I)Z
+
     .line 39
+    .line 40
+    .line 41
+    move-result v1
+
+    .line 42
+    const-string/jumbo v0, "intersection is undefined for disconnected ranges %s and %s"
+
+    .line 43
+    .line 44
+    .line 45
+    invoke-static {v1, v0, p0, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 46
+    .line 47
+    .line 48
+    new-instance p1, Lcom/google/common/collect/Range;
+
+    .line 49
+    .line 50
+    invoke-direct {p1, v3, v2}, Lcom/google/common/collect/Range;-><init>(Lcom/google/common/collect/Cut;Lcom/google/common/collect/Cut;)V
+
+    .line 51
+    .line 52
+    .line 53
     :cond_2
     return-object p1
 .end method
 
 .method public final bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "input"
+        }
+    .end annotation
 
     .line 0
     check-cast p1, Ljava/lang/Comparable;
@@ -311,6 +363,14 @@
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Lcom/google/common/collect/Range;
@@ -383,7 +443,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A04(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X6;->A06(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -395,7 +455,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
 
     .line 9
     .line 10
@@ -449,7 +509,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/0X7;->A0X(I)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8

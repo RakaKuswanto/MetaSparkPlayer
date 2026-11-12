@@ -1,658 +1,1107 @@
-.class public final LX/26P;
-.super Ljava/lang/Object;
+.class public final enum LX/26P;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nm;
+# static fields
+.field public static final synthetic $VALUES:[LX/26P;
 
-.field public final A01:LX/1Nw;
+.field public static final enum API_EC_USER_CHECKPOINT:LX/26P;
+
+.field public static final enum API_ERROR:LX/26P;
+
+.field public static final enum CACHE_DISK_ERROR:LX/26P;
+
+.field public static final enum CANCELLED:LX/26P;
+
+.field public static final enum CONNECTION_FAILURE:LX/26P;
+
+.field public static final enum DATE_ERROR:LX/26P;
+
+.field public static final enum HTTP_400_AUTHENTICATION:LX/26P;
+
+.field public static final enum HTTP_400_OTHER:LX/26P;
+
+.field public static final enum HTTP_500_CLASS:LX/26P;
+
+.field public static final enum LASSO_LOGIN_UNAVAILABLE_IN_COUNTRY:LX/26P;
+
+.field public static final enum LASSO_SHARE_SHEET__MESSAGE_LIMIT_EXCEEDED:LX/26P;
+
+.field public static final enum MQTT_SEND_FAILURE:LX/26P;
+
+.field public static final enum NO_ERROR:LX/26P;
+
+.field public static final enum ORCA_SERVICE_IPC_FAILURE:LX/26P;
+
+.field public static final enum ORCA_SERVICE_UNKNOWN_OPERATION:LX/26P;
+
+.field public static final enum ORCA_STALE_WEB_DATA:LX/26P;
+
+.field public static final enum OTHER:LX/26P;
+
+.field public static final enum OUT_OF_MEMORY:LX/26P;
+
+.field public static final enum PHASE_ONE_TRANSCODING_ERROR:LX/26P;
+
+.field public static final enum SEGMENTED_TRANSCODE_ERROR:LX/26P;
+
+.field public static final enum STREAMING_UPLOAD_ERROR:LX/26P;
+
+.field public static final enum TAGGING_ERROR:LX/26P;
+
+.field public static final enum UNREACHABLE_STATEMENT_ERROR:LX/26P;
+
+.field public static final enum WORK_AUTH_COMMUNITY_ID_REQUIRED:LX/26P;
+
+.field public static final enum WORK_AUTH_FAILED:LX/26P;
+
+
+# instance fields
+.field public final mAsInt:I
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public static synthetic $values()[LX/26P;
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x19
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/26P;->A01:LX/1Nw;
-
-    .line 4
-    .line 5
-    sget v0, LX/2eq;->ABv:I
-
-    .line 6
-    .line 7
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/26P;->A00:LX/1Nm;
-
-    .line 12
-    .line 13
-    return-void
-.end method
-
-.method public static final A00(LX/26P;)Ljava/io/File;
-    .locals 4
-
-    .line 0
-    iget-object v0, p0, LX/26P;->A00:LX/1Nm;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    new-array v2, v0, [LX/26P;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v1
+    sget-object v1, LX/26P;->NO_ERROR:LX/26P;
 
+    .line 5
     .line 6
-    check-cast v1, LX/2SH;
+    const/4 v0, 0x0
 
     .line 7
-    .line 8
-    const v0, 0x544c594a
+    aput-object v1, v2, v0
 
+    .line 8
     .line 9
+    sget-object v1, LX/26P;->API_ERROR:LX/26P;
+
     .line 10
     .line 11
-    invoke-interface {v1, v0}, LX/2SH;->ABD(I)Ljava/io/File;
+    const/4 v0, 0x1
 
     .line 12
+    aput-object v1, v2, v0
+
     .line 13
     .line 14
-    move-result-object p0
-
-    .line 15
-    invoke-static {p0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 16
-    .line 17
-    .line 18
-    invoke-virtual {p0}, Ljava/io/File;->exists()Z
-
-    .line 19
-    .line 20
-    .line 21
-    move-result v0
-
-    .line 22
-    if-nez v0, :cond_0
-
-    .line 23
-    .line 24
-    invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v0
-
-    .line 28
-    if-nez v0, :cond_0
-
-    .line 29
-    .line 30
-    const-string v3, "Unable to create "
-
-    .line 31
-    .line 32
-    invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    .line 33
-    .line 34
-    .line 35
-    move-result-object v2
-
-    .line 36
-    const-string v1, " directory under "
-
-    .line 37
-    .line 38
-    invoke-virtual {p0}, Ljava/io/File;->getParent()Ljava/lang/String;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-
-    .line 42
-    invoke-static {v3, v2, v1, v0}, LX/00I;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v1
-
-    .line 46
-    new-instance v0, LX/26X;
-
-    .line 47
-    .line 48
-    invoke-direct {v0, v1}, LX/26X;-><init>(Ljava/lang/String;)V
-
-    .line 49
-    .line 50
-    .line 51
-    throw v0
-
-    .line 52
-    :cond_0
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final A01(Ljava/lang/String;Ljava/lang/String;I)LX/26Q;
-    .locals 9
-
-    .line 0
-    const/4 v8, 0x2
-
-    .line 1
-    const/4 v3, 0x3
-
-    .line 2
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v5
-
-    .line 6
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v7
-
-    .line 10
-    invoke-static {p0}, LX/26P;->A00(LX/26P;)Ljava/io/File;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    sget-object v1, LX/26P;->HTTP_400_AUTHENTICATION:LX/26P;
 
     .line 15
     .line 16
+    const/4 v0, 0x2
+
     .line 17
-    move-result-object v6
+    aput-object v1, v2, v0
 
     .line 18
-    if-eqz v6, :cond_1
-
     .line 19
-    .line 20
-    const/4 v4, 0x0
+    sget-object v1, LX/26P;->HTTP_400_OTHER:LX/26P;
 
+    .line 20
     .line 21
-    array-length v2, v6
+    const/4 v0, 0x3
 
     .line 22
-    :goto_0
-    if-ge v4, v2, :cond_1
+    aput-object v1, v2, v0
 
     .line 23
     .line 24
-    aget-object v0, v6, v4
+    sget-object v1, LX/26P;->HTTP_500_CLASS:LX/26P;
 
     .line 25
     .line 26
-    invoke-static {v0}, LX/0PS;->A00(Ljava/lang/Object;)V
+    const/4 v0, 0x4
 
     .line 27
+    aput-object v1, v2, v0
+
     .line 28
     .line 29
-    :try_start_0
-    invoke-static {v0}, LX/26O;->A00(Ljava/io/File;)LX/26Q;
+    sget-object v1, LX/26P;->CONNECTION_FAILURE:LX/26P;
 
     .line 30
     .line 31
+    const/4 v0, 0x5
+
     .line 32
-    move-result-object v0
+    aput-object v1, v2, v0
 
     .line 33
-    invoke-static {v0}, LX/0Yg;->A0S(Ljava/lang/Object;)Lcom/google/common/base/Present;
-
     .line 34
+    sget-object v1, LX/26P;->ORCA_SERVICE_UNKNOWN_OPERATION:LX/26P;
+
     .line 35
     .line 36
-    move-result-object v1
+    const/4 v0, 0x6
 
     .line 37
-    goto :goto_1
-    :try_end_0
-    .catch LX/26Y; {:try_start_0 .. :try_end_0} :catch_0
-    .catch LX/1n3; {:try_start_0 .. :try_end_0} :catch_0
+    aput-object v1, v2, v0
 
     .line 38
-    :catch_0
-    sget-object v1, Lcom/google/common/base/Absent;->INSTANCE:Lcom/google/common/base/Absent;
-
     .line 39
+    sget-object v1, LX/26P;->ORCA_SERVICE_IPC_FAILURE:LX/26P;
+
     .line 40
-    :goto_1
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->isPresent()Z
-
     .line 41
-    .line 42
-    .line 43
-    move-result v0
+    const/4 v0, 0x7
 
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
     .line 44
-    if-eqz v0, :cond_0
+    sget-object v1, LX/26P;->OUT_OF_MEMORY:LX/26P;
 
     .line 45
     .line 46
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
+    const/16 v0, 0x8
 
     .line 47
     .line 48
-    .line 49
-    move-result-object v0
+    aput-object v1, v2, v0
 
+    .line 49
     .line 50
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    sget-object v1, LX/26P;->OTHER:LX/26P;
 
     .line 51
     .line 52
+    const/16 v0, 0x9
+
     .line 53
-    invoke-virtual {v7, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 54
+    aput-object v1, v2, v0
+
     .line 55
     .line 56
-    :cond_0
-    add-int/lit8 v4, v4, 0x1
+    sget-object v1, LX/26P;->CANCELLED:LX/26P;
 
     .line 57
     .line 58
-    goto :goto_0
+    const/16 v0, 0xa
 
     .line 59
-    :cond_1
-    invoke-virtual {v7}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
     .line 60
+    aput-object v1, v2, v0
+
     .line 61
     .line 62
-    move-result-object v2
+    sget-object v1, LX/26P;->CACHE_DISK_ERROR:LX/26P;
 
     .line 63
-    :cond_2
-    :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    .line 64
+    const/16 v0, 0xb
+
+    .line 65
+    .line 66
+    aput-object v1, v2, v0
+
+    .line 67
+    .line 68
+    sget-object v1, LX/26P;->MQTT_SEND_FAILURE:LX/26P;
+
+    .line 69
+    .line 70
+    const/16 v0, 0xc
+
+    .line 71
+    .line 72
+    aput-object v1, v2, v0
+
+    .line 73
+    .line 74
+    sget-object v1, LX/26P;->WORK_AUTH_FAILED:LX/26P;
+
+    .line 75
+    .line 76
+    const/16 v0, 0xd
+
+    .line 77
+    .line 78
+    aput-object v1, v2, v0
+
+    .line 79
+    .line 80
+    sget-object v1, LX/26P;->WORK_AUTH_COMMUNITY_ID_REQUIRED:LX/26P;
+
+    .line 81
+    .line 82
+    const/16 v0, 0xe
+
+    .line 83
+    .line 84
+    aput-object v1, v2, v0
+
+    .line 85
+    .line 86
+    sget-object v1, LX/26P;->DATE_ERROR:LX/26P;
+
+    .line 87
+    .line 88
+    const/16 v0, 0xf
+
+    .line 89
+    .line 90
+    aput-object v1, v2, v0
+
+    .line 91
+    .line 92
+    sget-object v1, LX/26P;->SEGMENTED_TRANSCODE_ERROR:LX/26P;
+
+    .line 93
+    .line 94
+    const/16 v0, 0x10
+
+    .line 95
+    .line 96
+    aput-object v1, v2, v0
+
+    .line 97
+    .line 98
+    sget-object v1, LX/26P;->STREAMING_UPLOAD_ERROR:LX/26P;
+
+    .line 99
+    .line 100
+    const/16 v0, 0x11
+
+    .line 101
+    .line 102
+    aput-object v1, v2, v0
+
+    .line 103
+    .line 104
+    sget-object v1, LX/26P;->PHASE_ONE_TRANSCODING_ERROR:LX/26P;
+
+    .line 105
+    .line 106
+    const/16 v0, 0x12
+
+    .line 107
+    .line 108
+    aput-object v1, v2, v0
+
+    .line 109
+    .line 110
+    sget-object v1, LX/26P;->UNREACHABLE_STATEMENT_ERROR:LX/26P;
+
+    .line 111
+    .line 112
+    const/16 v0, 0x13
+
+    .line 113
+    .line 114
+    aput-object v1, v2, v0
+
+    .line 115
+    .line 116
+    sget-object v1, LX/26P;->TAGGING_ERROR:LX/26P;
+
+    .line 117
+    .line 118
+    const/16 v0, 0x14
+
+    .line 119
+    .line 120
+    aput-object v1, v2, v0
+
+    .line 121
+    .line 122
+    sget-object v1, LX/26P;->ORCA_STALE_WEB_DATA:LX/26P;
+
+    .line 123
+    .line 124
+    const/16 v0, 0x15
+
+    .line 125
+    .line 126
+    aput-object v1, v2, v0
+
+    .line 127
+    .line 128
+    sget-object v1, LX/26P;->LASSO_LOGIN_UNAVAILABLE_IN_COUNTRY:LX/26P;
+
+    .line 129
+    .line 130
+    const/16 v0, 0x16
+
+    .line 131
+    .line 132
+    aput-object v1, v2, v0
+
+    .line 133
+    .line 134
+    sget-object v1, LX/26P;->LASSO_SHARE_SHEET__MESSAGE_LIMIT_EXCEEDED:LX/26P;
+
+    .line 135
+    .line 136
+    const/16 v0, 0x17
+
+    .line 137
+    .line 138
+    aput-object v1, v2, v0
+
+    .line 139
+    .line 140
+    sget-object v1, LX/26P;->API_EC_USER_CHECKPOINT:LX/26P;
+
+    .line 141
+    .line 142
+    const/16 v0, 0x18
+
+    .line 143
+    .line 144
+    aput-object v1, v2, v0
+
+    .line 145
+    .line 146
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v3, "NO_ERROR"
+
+    .line 1
+    .line 2
+    const/4 v2, 0x0
+
+    .line 3
+    const v1, 0x186a1
+
+    .line 4
+    .line 5
+    .line 6
+    new-instance v0, LX/26P;
+
+    .line 7
+    .line 8
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 9
+    .line 10
+    .line 11
+    sput-object v0, LX/26P;->NO_ERROR:LX/26P;
+
+    .line 12
+    .line 13
+    const-string v3, "API_ERROR"
+
+    .line 14
+    .line 15
+    const/4 v2, 0x1
+
+    .line 16
+    const v1, 0x186a2
+
+    .line 17
+    .line 18
+    .line 19
+    new-instance v0, LX/26P;
+
+    .line 20
+    .line 21
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 22
+    .line 23
+    .line 24
+    sput-object v0, LX/26P;->API_ERROR:LX/26P;
+
+    .line 25
+    .line 26
+    const-string v3, "HTTP_400_AUTHENTICATION"
+
+    .line 27
+    .line 28
+    const/4 v2, 0x2
+
+    .line 29
+    const v1, 0x186a3
+
+    .line 30
+    .line 31
+    .line 32
+    new-instance v0, LX/26P;
+
+    .line 33
+    .line 34
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 35
+    .line 36
+    .line 37
+    sput-object v0, LX/26P;->HTTP_400_AUTHENTICATION:LX/26P;
+
+    .line 38
+    .line 39
+    const-string v3, "HTTP_400_OTHER"
+
+    .line 40
+    .line 41
+    const/4 v2, 0x3
+
+    .line 42
+    const v1, 0x186a4
+
+    .line 43
+    .line 44
+    .line 45
+    new-instance v0, LX/26P;
+
+    .line 46
+    .line 47
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 48
+    .line 49
+    .line 50
+    sput-object v0, LX/26P;->HTTP_400_OTHER:LX/26P;
+
+    .line 51
+    .line 52
+    const-string v3, "HTTP_500_CLASS"
+
+    .line 53
+    .line 54
+    const/4 v2, 0x4
+
+    .line 55
+    const v1, 0x186a5
+
+    .line 56
+    .line 57
+    .line 58
+    new-instance v0, LX/26P;
+
+    .line 59
+    .line 60
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 61
+    .line 62
+    .line 63
+    sput-object v0, LX/26P;->HTTP_500_CLASS:LX/26P;
 
     .line 64
     .line 65
-    .line 66
-    move-result v0
+    const-string v3, "CONNECTION_FAILURE"
 
+    .line 66
     .line 67
-    if-eqz v0, :cond_3
+    const/4 v2, 0x5
 
     .line 68
-    .line 69
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const v1, 0x186a6
 
+    .line 69
     .line 70
     .line 71
-    .line 72
-    move-result-object v1
+    new-instance v0, LX/26P;
 
+    .line 72
     .line 73
-    check-cast v1, LX/26Q;
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
     .line 74
     .line 75
-    iget v0, v1, LX/26Q;->A00:I
-
     .line 76
+    sput-object v0, LX/26P;->CONNECTION_FAILURE:LX/26P;
+
     .line 77
-    if-ne p3, v0, :cond_2
-
     .line 78
-    .line 79
-    iget-object v0, v1, LX/26Q;->A04:Ljava/lang/String;
+    const-string v3, "ORCA_SERVICE_UNKNOWN_OPERATION"
 
+    .line 79
     .line 80
+    const/4 v2, 0x6
+
     .line 81
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const v1, 0x186a7
 
     .line 82
     .line 83
     .line 84
-    move-result v0
+    new-instance v0, LX/26P;
 
     .line 85
-    if-eqz v0, :cond_2
-
     .line 86
-    .line 87
-    iget-object v0, v1, LX/26Q;->A05:Ljava/lang/String;
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
+    .line 87
     .line 88
     .line 89
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sput-object v0, LX/26P;->ORCA_SERVICE_UNKNOWN_OPERATION:LX/26P;
 
     .line 90
     .line 91
-    .line 92
-    move-result v0
+    const-string v3, "ORCA_SERVICE_IPC_FAILURE"
 
+    .line 92
     .line 93
-    if-eqz v0, :cond_2
+    const/4 v2, 0x7
 
     .line 94
-    .line 95
-    invoke-virtual {v5, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    const v1, 0x186a8
 
+    .line 95
     .line 96
     .line 97
-    .line 98
-    goto :goto_2
+    new-instance v0, LX/26P;
 
+    .line 98
     .line 99
-    :cond_3
-    invoke-virtual {v5}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
     .line 100
     .line 101
     .line 102
-    move-result v0
+    sput-object v0, LX/26P;->ORCA_SERVICE_IPC_FAILURE:LX/26P;
 
     .line 103
-    if-nez v0, :cond_8
-
     .line 104
-    .line 105
-    invoke-static {v5}, LX/0Yj;->A0p(Ljava/util/AbstractCollection;)Z
+    const-string v3, "OUT_OF_MEMORY"
 
+    .line 105
     .line 106
+    const/16 v2, 0x8
+
     .line 107
     .line 108
-    move-result v0
+    const v1, 0x186a9
 
     .line 109
-    if-eqz v0, :cond_7
-
     .line 110
     .line 111
-    const/16 v1, 0xd
+    new-instance v0, LX/26P;
 
     .line 112
     .line 113
-    new-instance v0, LX/1gs;
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
     .line 114
     .line 115
-    invoke-direct {v0, v1}, LX/1gs;-><init>(I)V
-
     .line 116
+    sput-object v0, LX/26P;->OUT_OF_MEMORY:LX/26P;
+
     .line 117
     .line 118
-    invoke-static {v5, v0}, Ljava/util/Collections;->max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
+    const-string v3, "OTHER"
 
     .line 119
     .line 120
-    .line 121
-    move-result-object v4
+    const/16 v2, 0x9
 
+    .line 121
     .line 122
-    invoke-static {v4}, LX/0PS;->A03(Ljava/lang/Object;)V
+    const v1, 0x186aa
 
     .line 123
     .line 124
     .line 125
-    check-cast v4, LX/26Q;
+    new-instance v0, LX/26P;
 
     .line 126
     .line 127
-    invoke-virtual {v5, v4}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
     .line 128
     .line 129
     .line 130
-    :try_start_1
-    iget-object v3, v4, LX/26Q;->A02:Ljava/io/File;
+    sput-object v0, LX/26P;->OTHER:LX/26P;
 
     .line 131
     .line 132
-    new-instance v0, LX/35u;
+    const-string v3, "CANCELLED"
 
     .line 133
     .line 134
-    invoke-direct {v0, v3}, LX/35u;-><init>(Ljava/io/File;)V
+    const/16 v2, 0xa
 
     .line 135
     .line 136
-    .line 137
-    invoke-virtual {v0}, LX/35s;->A05()[B
+    const v1, 0x186ab
 
+    .line 137
     .line 138
     .line 139
-    .line 140
-    move-result-object v2
+    new-instance v0, LX/26P;
 
+    .line 140
     .line 141
-    if-eqz v2, :cond_6
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
     .line 142
     .line 143
-    iget-object v1, v4, LX/26Q;->A03:Ljava/lang/String;
-
     .line 144
+    sput-object v0, LX/26P;->CANCELLED:LX/26P;
+
     .line 145
-    const-string v0, "MD5"
-
     .line 146
-    .line 147
-    invoke-static {v2, v0}, LX/0JH;->A03([BLjava/lang/String;)Ljava/lang/String;
+    const-string v3, "CACHE_DISK_ERROR"
 
+    .line 147
     .line 148
+    const/16 v2, 0xb
+
     .line 149
     .line 150
-    move-result-object v0
+    const v1, 0x186ac
 
     .line 151
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 152
     .line 153
-    .line 154
-    move-result v0
+    new-instance v0, LX/26P;
 
+    .line 154
     .line 155
-    if-eqz v0, :cond_5
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
     .line 156
     .line 157
-    invoke-virtual {v5}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
     .line 158
+    sput-object v0, LX/26P;->CACHE_DISK_ERROR:LX/26P;
+
     .line 159
     .line 160
-    move-result-object v1
+    const-string v3, "MQTT_SEND_FAILURE"
 
     .line 161
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 162
+    const/16 v2, 0xc
+
     .line 163
     .line 164
-    move-result v0
+    const v1, 0x186ad
 
     .line 165
-    if-eqz v0, :cond_4
-
     .line 166
     .line 167
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance v0, LX/26P;
 
     .line 168
     .line 169
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
     .line 170
-    move-result-object v0
-
     .line 171
-    check-cast v0, LX/26Q;
-
     .line 172
+    sput-object v0, LX/26P;->MQTT_SEND_FAILURE:LX/26P;
+
     .line 173
-    iget-object v0, v0, LX/26Q;->A02:Ljava/io/File;
-
     .line 174
-    .line 175
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+    const-string/jumbo v3, "WORK_AUTH_FAILED"
 
+    .line 175
     .line 176
     .line 177
-    .line 178
-    goto :goto_3
+    const/16 v2, 0xd
 
+    .line 178
     .line 179
-    :cond_4
-    return-object v4
+    const v1, 0x186ae
 
     .line 180
-    :cond_5
-    invoke-virtual {v3}, Ljava/io/File;->delete()Z
-
     .line 181
     .line 182
+    new-instance v0, LX/26P;
+
     .line 183
-    new-instance v1, LX/1MX;
-
     .line 184
-    .line 185
-    invoke-direct {v1, p3, p1, p2}, LX/1MX;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
+    .line 185
     .line 186
     .line 187
-    .line 188
-    throw v1
+    sput-object v0, LX/26P;->WORK_AUTH_FAILED:LX/26P;
 
+    .line 188
     .line 189
-    :cond_6
-    :try_start_2
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
+    const-string/jumbo v3, "WORK_AUTH_COMMUNITY_ID_REQUIRED"
 
     .line 190
     .line 191
     .line 192
-    move-result-object v0
+    const/16 v2, 0xe
 
     .line 193
-    throw v0
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
-
     .line 194
-    :catch_1
-    move-exception v0
+    const v1, 0x186af
 
     .line 195
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
     .line 196
     .line 197
-    .line 198
-    move-result-object v0
+    new-instance v0, LX/26P;
 
+    .line 198
     .line 199
-    throw v0
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
 
     .line 200
-    :cond_7
-    const-string v0, "Expecting at least one QT file"
-
     .line 201
     .line 202
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    sput-object v0, LX/26P;->WORK_AUTH_COMMUNITY_ID_REQUIRED:LX/26P;
 
     .line 203
     .line 204
-    .line 205
-    move-result-object v1
+    const-string v3, "DATE_ERROR"
 
+    .line 205
     .line 206
-    throw v1
+    const/16 v2, 0xf
 
     .line 207
-    :cond_8
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
-
     .line 208
-    .line 209
-    new-array v1, v3, [Ljava/lang/Object;
+    const v1, 0x186b0
 
+    .line 209
     .line 210
     .line 211
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v0, LX/26P;
 
     .line 212
     .line 213
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
     .line 214
-    move-result-object v0
-
     .line 215
-    invoke-static {v1, v0, p1}, LX/001;->A1G([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 216
+    sput-object v0, LX/26P;->DATE_ERROR:LX/26P;
+
     .line 217
     .line 218
-    aput-object p2, v1, v8
+    const-string v3, "SEGMENTED_TRANSCODE_ERROR"
 
     .line 219
     .line 220
-    invoke-static {v1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    const/16 v2, 0x10
 
     .line 221
     .line 222
+    const v1, 0x186b1
+
     .line 223
-    move-result-object v1
-
     .line 224
-    const-string v0, "No QT files found for build %d and locale %s and user %s"
-
     .line 225
-    .line 226
-    invoke-static {v2, v0, v1}, LX/0Yi;->A0s(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, LX/26P;
 
+    .line 226
     .line 227
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
     .line 228
     .line 229
-    move-result-object v0
-
     .line 230
-    new-instance v1, LX/26Y;
+    sput-object v0, LX/26P;->SEGMENTED_TRANSCODE_ERROR:LX/26P;
 
     .line 231
     .line 232
-    invoke-direct {v1, v0}, LX/26Y;-><init>(Ljava/lang/String;)V
+    const-string v3, "STREAMING_UPLOAD_ERROR"
 
     .line 233
     .line 234
+    const/16 v2, 0x11
+
     .line 235
-    throw v1
+    .line 236
+    const v1, 0x186b2
+
+    .line 237
+    .line 238
+    .line 239
+    new-instance v0, LX/26P;
+
+    .line 240
+    .line 241
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 242
+    .line 243
+    .line 244
+    sput-object v0, LX/26P;->STREAMING_UPLOAD_ERROR:LX/26P;
+
+    .line 245
+    .line 246
+    const-string v3, "PHASE_ONE_TRANSCODING_ERROR"
+
+    .line 247
+    .line 248
+    const/16 v2, 0x12
+
+    .line 249
+    .line 250
+    const v1, 0x186b3
+
+    .line 251
+    .line 252
+    .line 253
+    new-instance v0, LX/26P;
+
+    .line 254
+    .line 255
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 256
+    .line 257
+    .line 258
+    sput-object v0, LX/26P;->PHASE_ONE_TRANSCODING_ERROR:LX/26P;
+
+    .line 259
+    .line 260
+    const-string v3, "UNREACHABLE_STATEMENT_ERROR"
+
+    .line 261
+    .line 262
+    const/16 v2, 0x13
+
+    .line 263
+    .line 264
+    const v1, 0x186b4
+
+    .line 265
+    .line 266
+    .line 267
+    new-instance v0, LX/26P;
+
+    .line 268
+    .line 269
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 270
+    .line 271
+    .line 272
+    sput-object v0, LX/26P;->UNREACHABLE_STATEMENT_ERROR:LX/26P;
+
+    .line 273
+    .line 274
+    const-string v3, "TAGGING_ERROR"
+
+    .line 275
+    .line 276
+    const/16 v2, 0x14
+
+    .line 277
+    .line 278
+    const v1, 0x186b5
+
+    .line 279
+    .line 280
+    .line 281
+    new-instance v0, LX/26P;
+
+    .line 282
+    .line 283
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 284
+    .line 285
+    .line 286
+    sput-object v0, LX/26P;->TAGGING_ERROR:LX/26P;
+
+    .line 287
+    .line 288
+    const-string v3, "ORCA_STALE_WEB_DATA"
+
+    .line 289
+    .line 290
+    const/16 v2, 0x15
+
+    .line 291
+    .line 292
+    const v1, 0x186b6
+
+    .line 293
+    .line 294
+    .line 295
+    new-instance v0, LX/26P;
+
+    .line 296
+    .line 297
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 298
+    .line 299
+    .line 300
+    sput-object v0, LX/26P;->ORCA_STALE_WEB_DATA:LX/26P;
+
+    .line 301
+    .line 302
+    const-string v3, "LASSO_LOGIN_UNAVAILABLE_IN_COUNTRY"
+
+    .line 303
+    .line 304
+    const/16 v2, 0x16
+
+    .line 305
+    .line 306
+    const v1, 0x272b5a
+
+    .line 307
+    .line 308
+    .line 309
+    new-instance v0, LX/26P;
+
+    .line 310
+    .line 311
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 312
+    .line 313
+    .line 314
+    sput-object v0, LX/26P;->LASSO_LOGIN_UNAVAILABLE_IN_COUNTRY:LX/26P;
+
+    .line 315
+    .line 316
+    const-string v3, "LASSO_SHARE_SHEET__MESSAGE_LIMIT_EXCEEDED"
+
+    .line 317
+    .line 318
+    const/16 v2, 0x17
+
+    .line 319
+    .line 320
+    const v1, 0x27df09
+
+    .line 321
+    .line 322
+    .line 323
+    new-instance v0, LX/26P;
+
+    .line 324
+    .line 325
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 326
+    .line 327
+    .line 328
+    sput-object v0, LX/26P;->LASSO_SHARE_SHEET__MESSAGE_LIMIT_EXCEEDED:LX/26P;
+
+    .line 329
+    .line 330
+    const-string v3, "API_EC_USER_CHECKPOINT"
+
+    .line 331
+    .line 332
+    const/16 v2, 0x18
+
+    .line 333
+    .line 334
+    const/16 v1, 0x1cb
+
+    .line 335
+    .line 336
+    new-instance v0, LX/26P;
+
+    .line 337
+    .line 338
+    invoke-direct {v0, v3, v2, v1}, LX/26P;-><init>(Ljava/lang/String;II)V
+
+    .line 339
+    .line 340
+    .line 341
+    sput-object v0, LX/26P;->API_EC_USER_CHECKPOINT:LX/26P;
+
+    .line 342
+    .line 343
+    invoke-static {}, LX/26P;->$values()[LX/26P;
+
+    .line 344
+    .line 345
+    .line 346
+    move-result-object v0
+
+    .line 347
+    sput-object v0, LX/26P;->$VALUES:[LX/26P;
+
+    .line 348
+    .line 349
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput p3, p0, LX/26P;->mAsInt:I
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/26P;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/26P;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/26P;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/26P;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/26P;->$VALUES:[LX/26P;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/26P;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getAsInt()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/26P;->mAsInt:I
+
+    .line 1
+    .line 2
+    return v0
 .end method

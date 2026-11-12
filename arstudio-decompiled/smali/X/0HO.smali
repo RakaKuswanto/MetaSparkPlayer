@@ -1,38 +1,25 @@
-.class public LX/0HO;
-.super Landroid/webkit/WebView;
+.class public final LX/0HO;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public A00:LX/0W7;
+
+
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(LX/0W7;)V
+    .locals 0
 
     .line 0
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    const v0, 0x1010085
-
     .line 2
     .line 3
+    iput-object p1, p0, LX/0HO;->A00:LX/0W7;
+
     .line 4
-    invoke-direct {p0, p1, v1, v0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
     .line 5
-    .line 6
-    .line 7
-    invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    invoke-static {v0}, LX/0HF;->A00(Landroid/webkit/WebSettings;)V
-
-    .line 12
-    .line 13
-    .line 14
     return-void
 .end method

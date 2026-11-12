@@ -1,17 +1,17 @@
-.class public abstract LX/4kP;
+.class public final LX/4kP;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:I
+.field public final A00:LX/4bl;
 
-.field public final A01:Ljava/lang/CharSequence;
+.field public final A01:LX/4fY;
 
 
 # direct methods
-.method public constructor <init>(LX/4ko;)V
-    .locals 1
+.method public constructor <init>(LX/4bl;LX/4fY;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,21 +19,13 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p1, LX/4ko;->A01:Ljava/lang/CharSequence;
+    iput-object p2, p0, LX/4kP;->A01:LX/4fY;
 
     .line 4
     .line 5
-    iput-object v0, p0, LX/4kP;->A01:Ljava/lang/CharSequence;
+    iput-object p1, p0, LX/4kP;->A00:LX/4bl;
 
     .line 6
     .line 7
-    iget v0, p1, LX/4ko;->A00:I
-
-    .line 8
-    .line 9
-    iput v0, p0, LX/4kP;->A00:I
-
-    .line 10
-    .line 11
     return-void
 .end method

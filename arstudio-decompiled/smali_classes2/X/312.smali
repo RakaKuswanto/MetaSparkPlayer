@@ -1,43 +1,56 @@
-.class public final LX/312;
+.class public abstract LX/312;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/lang/String;
+# static fields
+.field public static final A00:LX/36S;
 
-.field public final A01:Ljava/lang/String;
-
-.field public final A02:Ljava/util/Map;
-
-.field public final synthetic A03:LX/2p7;
+.field public static final A01:LX/36S;
 
 
 # direct methods
-.method public constructor <init>(LX/2p7;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/312;->A03:LX/2p7;
+    const-string/jumbo v0, "name"
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    const-string v1, "TEXT"
+
     .line 4
     .line 5
-    iput-object p2, p0, LX/312;->A01:Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X7;->A0F(Ljava/lang/String;Ljava/lang/String;)LX/36S;
 
     .line 6
     .line 7
-    iput-object p3, p0, LX/312;->A00:Ljava/lang/String;
-
     .line 8
+    move-result-object v0
+
     .line 9
-    iput-object p4, p0, LX/312;->A02:Ljava/util/Map;
+    sput-object v0, LX/312;->A01:LX/36S;
 
     .line 10
     .line 11
+    const-string/jumbo v0, "meta_info"
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-static {v0, v1}, LX/0X7;->A0F(Ljava/lang/String;Ljava/lang/String;)LX/36S;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    sput-object v0, LX/312;->A00:LX/36S;
+
+    .line 19
+    .line 20
     return-void
 .end method

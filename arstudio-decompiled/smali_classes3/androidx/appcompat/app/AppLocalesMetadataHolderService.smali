@@ -22,7 +22,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2

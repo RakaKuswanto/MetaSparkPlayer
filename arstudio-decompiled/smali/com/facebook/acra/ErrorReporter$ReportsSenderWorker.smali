@@ -33,6 +33,18 @@
     return-void
 .end method
 
+.method public synthetic constructor <init>(Lcom/facebook/acra/ErrorReporter;Lcom/facebook/acra/CrashReportData;Lcom/facebook/acra/Spool$FileBeingProduced;Lcom/facebook/acra/ErrorReporter$1;)V
+    .locals 0
+
+    .line 536870912
+    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/acra/ErrorReporter$ReportsSenderWorker;-><init>(Lcom/facebook/acra/ErrorReporter;Lcom/facebook/acra/CrashReportData;Lcom/facebook/acra/Spool$FileBeingProduced;)V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    return-void
+.end method
+
 .method public constructor <init>(Lcom/facebook/acra/ErrorReporter;Lcom/facebook/acra/CrashReportData;Lcom/facebook/acra/Spool$FileBeingProduced;[Lcom/facebook/acra/ErrorReporter$CrashReportType;)V
     .locals 1
 
@@ -79,19 +91,31 @@
 .method public varargs constructor <init>(Lcom/facebook/acra/ErrorReporter;[Lcom/facebook/acra/ErrorReporter$CrashReportType;)V
     .locals 1
 
-    .line 536870912
+    .line 805306368
     const/4 v0, 0x0
 
-    .line 536870913
+    .line 805306369
     invoke-direct {p0, p1, v0, v0, p2}, Lcom/facebook/acra/ErrorReporter$ReportsSenderWorker;-><init>(Lcom/facebook/acra/ErrorReporter;Lcom/facebook/acra/CrashReportData;Lcom/facebook/acra/Spool$FileBeingProduced;[Lcom/facebook/acra/ErrorReporter$CrashReportType;)V
 
-    .line 536870914
-    .line 536870915
-    .line 536870916
+    .line 805306370
+    .line 805306371
+    .line 805306372
     return-void
 .end method
 
-.method public static synthetic access$1300(Lcom/facebook/acra/ErrorReporter$ReportsSenderWorker;)Lcom/facebook/acra/CrashReportData;
+.method public synthetic constructor <init>(Lcom/facebook/acra/ErrorReporter;[Lcom/facebook/acra/ErrorReporter$CrashReportType;Lcom/facebook/acra/ErrorReporter$1;)V
+    .locals 0
+
+    .line 1073741824
+    invoke-direct {p0, p1, p2}, Lcom/facebook/acra/ErrorReporter$ReportsSenderWorker;-><init>(Lcom/facebook/acra/ErrorReporter;[Lcom/facebook/acra/ErrorReporter$CrashReportType;)V
+
+    .line 1073741825
+    .line 1073741826
+    .line 1073741827
+    return-void
+.end method
+
+.method public static synthetic access$1700(Lcom/facebook/acra/ErrorReporter$ReportsSenderWorker;)Lcom/facebook/acra/CrashReportData;
     .locals 0
 
     .line 0
@@ -390,6 +414,7 @@
     .line 80
     .line 81
     .line 82
+    :cond_3
     throw v1
 
     .line 83
@@ -397,7 +422,6 @@
     move-exception v1
 
     .line 84
-    :cond_3
     throw v1
 .end method
 
@@ -410,17 +434,6 @@
     .line 1
     .line 2
     return-object v0
-.end method
-
-.method public routeReportToFile(Lcom/facebook/acra/FileGenerator;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Lcom/facebook/acra/ErrorReporter$ReportsSenderWorker;->mGenerator:Lcom/facebook/acra/FileGenerator;
-
-    .line 1
-    .line 2
-    return-void
 .end method
 
 .method public run()V

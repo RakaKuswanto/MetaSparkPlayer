@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/ActionBarContextView;
-.super LX/4bU;
+.super LX/4Mt;
 .source ""
 
 
@@ -66,19 +66,19 @@
     .locals 4
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/4bU;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, LX/4Mt;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/4XG;->A03:[I
+    sget-object v0, LX/4M2;->A03:[I
 
     .line 4
     .line 5
     const/4 v3, 0x0
 
     .line 6
-    invoke-static {p1, p2, v0, p3, v3}, LX/4WR;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[III)LX/4WR;
+    invoke-static {p1, p2, v0, p3, v3}, LX/4Pg;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[III)LX/4Pg;
 
     .line 7
     .line 8
@@ -86,7 +86,7 @@
     move-result-object v1
 
     .line 10
-    invoke-virtual {v1, v3}, LX/4WR;->A02(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v3}, LX/4Pg;->A02(I)Landroid/graphics/drawable/Drawable;
 
     .line 11
     .line 12
@@ -102,7 +102,7 @@
     const/4 v0, 0x5
 
     .line 18
-    iget-object v2, v1, LX/4WR;->A02:Landroid/content/res/TypedArray;
+    iget-object v2, v1, LX/4Pg;->A02:Landroid/content/res/TypedArray;
 
     .line 19
     .line 20
@@ -144,14 +144,14 @@
     move-result v0
 
     .line 38
-    iput v0, p0, LX/4bU;->A00:I
+    iput v0, p0, LX/4Mt;->A00:I
 
     .line 39
     .line 40
     const/4 v1, 0x2
 
     .line 41
-    const v0, 0x7f0d0005
+    const v0, 0x7f0c0005
 
     .line 42
     .line 43
@@ -204,7 +204,7 @@
     move-result-object v1
 
     .line 12
-    const v0, 0x7f0d0001
+    const v0, 0x7f0c0001
 
     .line 13
     .line 14
@@ -242,12 +242,12 @@
 
     .line 31
     .line 32
-    const v0, 0x7f0a0042
+    const v0, 0x7f090041
 
     .line 33
     .line 34
     .line 35
-    invoke-static {v1, v0}, LX/4BE;->A0c(Landroid/view/View;I)Landroid/widget/TextView;
+    invoke-static {v1, v0}, LX/434;->A0Y(Landroid/view/View;I)Landroid/widget/TextView;
 
     .line 36
     .line 37
@@ -263,12 +263,12 @@
 
     .line 42
     .line 43
-    const v0, 0x7f0a0041
+    const v0, 0x7f090040
 
     .line 44
     .line 45
     .line 46
-    invoke-static {v1, v0}, LX/4BE;->A0c(Landroid/view/View;I)Landroid/widget/TextView;
+    invoke-static {v1, v0}, LX/434;->A0Y(Landroid/view/View;I)Landroid/widget/TextView;
 
     .line 47
     .line 48
@@ -346,7 +346,7 @@
 
     .line 85
     .line 86
-    invoke-static {v0}, LX/4BF;->A1P(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, LX/434;->A1X(Ljava/lang/CharSequence;)Z
 
     .line 87
     .line 88
@@ -358,7 +358,7 @@
 
     .line 91
     .line 92
-    invoke-static {v0}, LX/4BF;->A1P(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, LX/434;->A1X(Ljava/lang/CharSequence;)Z
 
     .line 93
     .line 94
@@ -373,7 +373,7 @@
     const/4 v1, 0x0
 
     .line 99
-    invoke-static {v3}, LX/4BD;->A04(I)I
+    invoke-static {v3}, LX/432;->A00(I)I
 
     .line 100
     .line 101
@@ -455,11 +455,11 @@
 
     .line 5
     .line 6
-    iput-object v1, p0, LX/4bU;->A05:Landroidx/appcompat/widget/ActionMenuView;
+    iput-object v1, p0, LX/4Mt;->A05:Landroidx/appcompat/widget/ActionMenuView;
 
     .line 7
     .line 8
-    iput-object v1, p0, LX/4bU;->A01:LX/4bJ;
+    iput-object v1, p0, LX/4Mt;->A01:LX/4MG;
 
     .line 9
     .line 10
@@ -480,7 +480,7 @@
     return-void
 .end method
 
-.method public final A02(LX/4bo;)V
+.method public final A02(LX/4N9;)V
     .locals 7
 
     .line 0
@@ -492,7 +492,7 @@
 
     .line 3
     .line 4
-    invoke-static {p0}, LX/4BD;->A0R(Landroid/view/View;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, LX/0X6;->A0G(Landroid/view/View;)Landroid/view/LayoutInflater;
 
     .line 5
     .line 6
@@ -504,7 +504,7 @@
 
     .line 9
     .line 10
-    invoke-static {v1, p0, v0}, LX/4BE;->A0W(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;I)Landroid/view/View;
+    invoke-static {v1, p0, v0}, LX/434;->A0T(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;I)Landroid/view/View;
 
     .line 11
     .line 12
@@ -527,7 +527,7 @@
 
     .line 20
     .line 21
-    const v0, 0x7f0a004a
+    const v0, 0x7f090048
 
     .line 22
     .line 23
@@ -547,12 +547,12 @@
     const/4 v6, 0x0
 
     .line 31
-    invoke-static {v0, p0, p1, v6}, LX/6PM;->A00(Landroid/view/View;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-static {v0, p0, p1, v6}, LX/6g4;->A00(Landroid/view/View;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     .line 32
     .line 33
     .line 34
-    instance-of v0, p1, LX/4ba;
+    instance-of v0, p1, LX/4N6;
 
     .line 35
     .line 36
@@ -560,16 +560,16 @@
 
     .line 37
     .line 38
-    check-cast p1, LX/4ba;
+    check-cast p1, LX/4N6;
 
     .line 39
     .line 40
-    iget-object v2, p1, LX/4ba;->A02:LX/4ay;
+    iget-object v2, p1, LX/4N6;->A02:LX/4MV;
 
     .line 41
     .line 42
     :goto_1
-    iget-object v0, p0, LX/4bU;->A01:LX/4bJ;
+    iget-object v0, p0, LX/4Mt;->A01:LX/4MG;
 
     .line 43
     .line 44
@@ -577,7 +577,7 @@
 
     .line 45
     .line 46
-    invoke-virtual {v0}, LX/4bJ;->A01()V
+    invoke-virtual {v0}, LX/4MG;->A01()V
 
     .line 47
     .line 48
@@ -591,27 +591,27 @@
     move-result-object v1
 
     .line 53
-    new-instance v0, LX/4bJ;
+    new-instance v0, LX/4MG;
 
     .line 54
     .line 55
-    invoke-direct {v0, v1}, LX/4bJ;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, LX/4MG;-><init>(Landroid/content/Context;)V
 
     .line 56
     .line 57
     .line 58
-    iput-object v0, p0, LX/4bU;->A01:LX/4bJ;
+    iput-object v0, p0, LX/4Mt;->A01:LX/4MG;
 
     .line 59
     .line 60
     const/4 v5, 0x1
 
     .line 61
-    iput-boolean v5, v0, LX/4bJ;->A0A:Z
+    iput-boolean v5, v0, LX/4MG;->A09:Z
 
     .line 62
     .line 63
-    iput-boolean v5, v0, LX/4bJ;->A0B:Z
+    iput-boolean v5, v0, LX/4MG;->A0A:Z
 
     .line 64
     .line 65
@@ -630,24 +630,24 @@
     .line 70
     .line 71
     .line 72
-    iget-object v1, p0, LX/4bU;->A01:LX/4bJ;
+    iget-object v1, p0, LX/4Mt;->A01:LX/4MG;
 
     .line 73
     .line 74
-    iget-object v0, p0, LX/4bU;->A07:Landroid/content/Context;
+    iget-object v0, p0, LX/4Mt;->A07:Landroid/content/Context;
 
     .line 75
     .line 76
-    invoke-virtual {v2, v0, v1}, LX/4ay;->A08(Landroid/content/Context;LX/4c6;)V
+    invoke-virtual {v2, v0, v1}, LX/4MV;->A08(Landroid/content/Context;LX/4MY;)V
 
     .line 77
     .line 78
     .line 79
-    iget-object v3, p0, LX/4bU;->A01:LX/4bJ;
+    iget-object v3, p0, LX/4Mt;->A01:LX/4MG;
 
     .line 80
     .line 81
-    iget-object v2, v3, LX/4bV;->A04:LX/4dB;
+    iget-object v2, v3, LX/4MC;->A04:LX/4MR;
 
     .line 82
     .line 83
@@ -655,11 +655,11 @@
 
     .line 84
     .line 85
-    iget-object v1, v3, LX/4bV;->A01:Landroid/view/LayoutInflater;
+    iget-object v1, v3, LX/4MC;->A01:Landroid/view/LayoutInflater;
 
     .line 86
     .line 87
-    const v0, 0x7f0d0003
+    const v0, 0x7f0c0003
 
     .line 88
     .line 89
@@ -672,30 +672,30 @@
     move-result-object v1
 
     .line 94
-    check-cast v1, LX/4dB;
+    check-cast v1, LX/4MR;
 
     .line 95
     .line 96
-    iput-object v1, v3, LX/4bV;->A04:LX/4dB;
+    iput-object v1, v3, LX/4MC;->A04:LX/4MR;
 
     .line 97
     .line 98
-    iget-object v0, v3, LX/4bV;->A02:LX/4ay;
+    iget-object v0, v3, LX/4MC;->A02:LX/4MV;
 
     .line 99
     .line 100
-    invoke-interface {v1, v0}, LX/4dB;->APS(LX/4ay;)V
+    invoke-interface {v1, v0}, LX/4MR;->AO1(LX/4MV;)V
 
     .line 101
     .line 102
     .line 103
-    invoke-virtual {v3, v5}, LX/4bV;->Aqa(Z)V
+    invoke-virtual {v3, v5}, LX/4MC;->ApP(Z)V
 
     .line 104
     .line 105
     .line 106
     :cond_2
-    iget-object v1, v3, LX/4bV;->A04:LX/4dB;
+    iget-object v1, v3, LX/4MC;->A04:LX/4MR;
 
     .line 107
     .line 108
@@ -710,7 +710,7 @@
 
     .line 112
     .line 113
-    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/ActionMenuView;->setPresenter(LX/4bJ;)V
+    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/ActionMenuView;->setPresenter(LX/4MG;)V
 
     .line 114
     .line 115
@@ -720,7 +720,7 @@
 
     .line 117
     .line 118
-    iput-object v1, p0, LX/4bU;->A05:Landroidx/appcompat/widget/ActionMenuView;
+    iput-object v1, p0, LX/4Mt;->A05:Landroidx/appcompat/widget/ActionMenuView;
 
     .line 119
     .line 120
@@ -732,7 +732,7 @@
     .line 122
     .line 123
     .line 124
-    iget-object v0, p0, LX/4bU;->A05:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object v0, p0, LX/4Mt;->A05:Landroidx/appcompat/widget/ActionMenuView;
 
     .line 125
     .line 126
@@ -745,11 +745,11 @@
 
     .line 130
     :cond_4
-    check-cast p1, LX/4bX;
+    check-cast p1, LX/4N7;
 
     .line 131
     .line 132
-    iget-object v2, p1, LX/4bX;->A03:LX/4ay;
+    iget-object v2, p1, LX/4N7;->A03:LX/4MV;
 
     .line 133
     .line 134
@@ -826,7 +826,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0}, LX/4bU;->getAnimatedVisibility()I
+    invoke-super {p0}, LX/4Mt;->getAnimatedVisibility()I
 
     .line 1
     .line 2
@@ -841,7 +841,7 @@
     .locals 1
 
     .line 0
-    iget v0, p0, LX/4bU;->A00:I
+    iget v0, p0, LX/4Mt;->A00:I
 
     .line 1
     .line 2
@@ -874,12 +874,12 @@
     .locals 2
 
     .line 0
-    invoke-super {p0}, LX/4bU;->onDetachedFromWindow()V
+    invoke-super {p0}, LX/4Mt;->onDetachedFromWindow()V
 
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, LX/4bU;->A01:LX/4bJ;
+    iget-object v0, p0, LX/4Mt;->A01:LX/4MG;
 
     .line 4
     .line 5
@@ -887,16 +887,16 @@
 
     .line 6
     .line 7
-    invoke-virtual {v0}, LX/4bJ;->A02()Z
+    invoke-virtual {v0}, LX/4MG;->A02()Z
 
     .line 8
     .line 9
     .line 10
-    iget-object v0, p0, LX/4bU;->A01:LX/4bJ;
+    iget-object v0, p0, LX/4Mt;->A01:LX/4MG;
 
     .line 11
     .line 12
-    iget-object v1, v0, LX/4bJ;->A03:LX/4bF;
+    iget-object v1, v0, LX/4MG;->A02:LX/4MD;
 
     .line 13
     .line 14
@@ -904,7 +904,7 @@
 
     .line 15
     .line 16
-    iget-object v0, v1, LX/4b5;->A03:LX/4b6;
+    iget-object v0, v1, LX/4Lo;->A03:LX/4Lp;
 
     .line 17
     .line 18
@@ -912,7 +912,7 @@
 
     .line 19
     .line 20
-    invoke-interface {v0}, LX/4aU;->ARY()Z
+    invoke-interface {v0}, LX/4Lu;->AQ7()Z
 
     .line 21
     .line 22
@@ -924,11 +924,11 @@
 
     .line 25
     .line 26
-    iget-object v0, v1, LX/4b5;->A03:LX/4b6;
+    iget-object v0, v1, LX/4Lo;->A03:LX/4Lp;
 
     .line 27
     .line 28
-    invoke-interface {v0}, LX/4aU;->dismiss()V
+    invoke-interface {v0}, LX/4Lu;->dismiss()V
 
     .line 29
     .line 30
@@ -941,7 +941,7 @@
     .locals 7
 
     .line 0
-    invoke-static {p0}, LX/4BD;->A1Y(Landroid/view/View;)Z
+    invoke-static {p0}, LX/431;->A1W(Landroid/view/View;)Z
 
     .line 1
     .line 2
@@ -957,7 +957,7 @@
 
     .line 7
     .line 8
-    invoke-static {p0, v0}, LX/4BF;->A0A(Landroid/view/View;I)I
+    invoke-static {p0, v0}, LX/434;->A0A(Landroid/view/View;I)I
 
     .line 9
     .line 10
@@ -977,7 +977,7 @@
     sub-int/2addr p5, p3
 
     .line 17
-    invoke-static {p0, p5}, LX/4BD;->A0B(Landroid/view/View;I)I
+    invoke-static {p0, p5}, LX/431;->A06(Landroid/view/View;I)I
 
     .line 18
     .line 19
@@ -1013,7 +1013,7 @@
 
     .line 34
     .line 35
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-static {v0}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 36
     .line 37
@@ -1021,189 +1021,185 @@
     move-result-object v1
 
     .line 39
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    if-eqz v4, :cond_6
 
     .line 40
     .line 41
-    if-eqz v4, :cond_6
+    iget v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     .line 42
     .line 43
-    iget v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     .line 44
     .line 45
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    .line 46
-    .line 47
     sub-int/2addr v2, v0
 
-    .line 48
+    .line 46
     :goto_1
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A00:Landroid/view/View;
 
+    .line 47
+    .line 48
+    invoke-static {v0, v2, v3, v5, v4}, LX/4Mt;->A01(Landroid/view/View;IIIZ)I
+
     .line 49
     .line 50
-    invoke-static {v0, v2, v3, v5, v4}, LX/4bU;->A01(Landroid/view/View;IIIZ)I
-
     .line 51
-    .line 52
-    .line 53
     move-result v0
 
-    .line 54
+    .line 52
     add-int/2addr v2, v0
 
-    .line 55
+    .line 53
     add-int v0, v2, v1
+
+    .line 54
+    .line 55
+    if-eqz v4, :cond_0
 
     .line 56
     .line 57
-    if-eqz v4, :cond_0
+    sub-int v0, v2, v1
 
     .line 58
     .line 59
-    sub-int v0, v2, v1
-
-    .line 60
-    .line 61
     :cond_0
     move v2, v0
 
-    .line 62
+    .line 60
     :cond_1
     iget-object v1, p0, Landroidx/appcompat/widget/ActionBarContextView;->A09:Landroid/widget/LinearLayout;
 
+    .line 61
+    .line 62
+    if-eqz v1, :cond_2
+
     .line 63
     .line 64
-    if-eqz v1, :cond_2
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A08:Landroid/view/View;
 
     .line 65
     .line 66
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A08:Landroid/view/View;
+    if-nez v0, :cond_2
 
     .line 67
     .line 68
-    if-nez v0, :cond_2
+    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
     .line 69
     .line 70
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
-
     .line 71
-    .line 72
-    .line 73
     move-result v0
 
-    .line 74
+    .line 72
     if-eq v0, v6, :cond_2
+
+    .line 73
+    .line 74
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A09:Landroid/widget/LinearLayout;
 
     .line 75
     .line 76
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A09:Landroid/widget/LinearLayout;
+    invoke-static {v0, v2, v3, v5, v4}, LX/4Mt;->A01(Landroid/view/View;IIIZ)I
 
     .line 77
     .line 78
-    invoke-static {v0, v2, v3, v5, v4}, LX/4bU;->A01(Landroid/view/View;IIIZ)I
-
     .line 79
-    .line 80
-    .line 81
     move-result v0
 
-    .line 82
+    .line 80
     add-int/2addr v2, v0
 
-    .line 83
+    .line 81
     :cond_2
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A08:Landroid/view/View;
 
+    .line 82
+    .line 83
+    if-eqz v0, :cond_3
+
     .line 84
     .line 85
-    if-eqz v0, :cond_3
+    invoke-static {v0, v2, v3, v5, v4}, LX/4Mt;->A01(Landroid/view/View;IIIZ)I
 
     .line 86
     .line 87
-    invoke-static {v0, v2, v3, v5, v4}, LX/4bU;->A01(Landroid/view/View;IIIZ)I
-
     .line 88
-    .line 89
-    .line 90
     :cond_3
     if-eqz v4, :cond_5
 
-    .line 91
-    .line 92
+    .line 89
+    .line 90
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
+    .line 91
+    .line 92
     .line 93
-    .line 94
-    .line 95
     move-result v2
 
-    .line 96
+    .line 94
     :goto_2
-    iget-object v1, p0, LX/4bU;->A05:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object v1, p0, LX/4Mt;->A05:Landroidx/appcompat/widget/ActionMenuView;
+
+    .line 95
+    .line 96
+    if-eqz v1, :cond_4
 
     .line 97
     .line 98
-    if-eqz v1, :cond_4
+    xor-int/lit8 v0, v4, 0x1
 
     .line 99
     .line 100
-    xor-int/lit8 v0, v4, 0x1
+    invoke-static {v1, v2, v3, v5, v0}, LX/4Mt;->A01(Landroid/view/View;IIIZ)I
 
     .line 101
     .line 102
-    invoke-static {v1, v2, v3, v5, v0}, LX/4bU;->A01(Landroid/view/View;IIIZ)I
-
     .line 103
-    .line 104
-    .line 105
     :cond_4
     return-void
 
-    .line 106
+    .line 104
     :cond_5
     sub-int/2addr p4, p2
 
-    .line 107
-    invoke-static {p0, p4}, LX/4BF;->A0A(Landroid/view/View;I)I
+    .line 105
+    invoke-static {p0, p4}, LX/434;->A0A(Landroid/view/View;I)I
 
+    .line 106
+    .line 107
     .line 108
-    .line 109
-    .line 110
     move-result v2
 
-    .line 111
+    .line 109
     goto :goto_2
 
-    .line 112
+    .line 110
     :cond_6
     iget v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 113
-    .line 114
+    .line 111
+    .line 112
     iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 115
-    .line 116
+    .line 113
+    .line 114
     add-int/2addr v2, v0
 
-    .line 117
+    .line 115
     goto :goto_1
 
-    .line 118
+    .line 116
     :cond_7
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
+    .line 117
+    .line 118
     .line 119
-    .line 120
-    .line 121
     move-result v2
 
-    .line 122
+    .line 120
     goto :goto_0
 .end method
 
@@ -1247,7 +1243,7 @@
     move-result v5
 
     .line 18
-    iget v4, p0, LX/4bU;->A00:I
+    iget v4, p0, LX/4Mt;->A00:I
 
     .line 19
     .line 20
@@ -1264,7 +1260,7 @@
 
     .line 26
     :cond_0
-    invoke-static {p0}, LX/4BD;->A0A(Landroid/view/View;)I
+    invoke-static {p0}, LX/431;->A05(Landroid/view/View;)I
 
     .line 27
     .line 28
@@ -1272,7 +1268,7 @@
     move-result v3
 
     .line 30
-    invoke-static {p0, v5}, LX/4BD;->A0C(Landroid/view/View;I)I
+    invoke-static {p0, v5}, LX/431;->A07(Landroid/view/View;I)I
 
     .line 31
     .line 32
@@ -1328,7 +1324,7 @@
     move-result v0
 
     .line 58
-    invoke-static {v7, v0, v2}, LX/4BE;->A0B(III)I
+    invoke-static {v7, v0, v2}, LX/433;->A09(III)I
 
     .line 59
     .line 60
@@ -1340,7 +1336,7 @@
 
     .line 63
     .line 64
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-static {v0}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 65
     .line 66
@@ -1348,403 +1344,399 @@
     move-result-object v0
 
     .line 68
-    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     .line 69
     .line 70
-    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     .line 71
     .line 72
-    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    .line 73
-    .line 74
     add-int/2addr v1, v0
 
-    .line 75
+    .line 73
     sub-int/2addr v7, v1
 
-    .line 76
+    .line 74
     :cond_1
-    iget-object v0, p0, LX/4bU;->A05:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object v0, p0, LX/4Mt;->A05:Landroidx/appcompat/widget/ActionMenuView;
+
+    .line 75
+    .line 76
+    if-eqz v0, :cond_2
 
     .line 77
     .line 78
-    if-eqz v0, :cond_2
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     .line 79
     .line 80
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
     .line 81
-    .line 82
-    .line 83
     move-result-object v0
 
-    .line 84
+    .line 82
     if-ne v0, p0, :cond_2
+
+    .line 83
+    .line 84
+    iget-object v1, p0, LX/4Mt;->A05:Landroidx/appcompat/widget/ActionMenuView;
 
     .line 85
     .line 86
-    iget-object v1, p0, LX/4bU;->A05:Landroidx/appcompat/widget/ActionMenuView;
+    invoke-static {v7, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     .line 87
     .line 88
-    invoke-static {v7, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
     .line 89
-    .line 90
-    .line 91
     move-result v0
 
-    .line 92
+    .line 90
     invoke-virtual {v1, v0, v6}, Landroid/view/View;->measure(II)V
 
+    .line 91
+    .line 92
     .line 93
-    .line 94
-    .line 95
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
 
+    .line 94
+    .line 95
     .line 96
-    .line 97
-    .line 98
     move-result v0
 
-    .line 99
-    invoke-static {v7, v0, v2}, LX/4BE;->A0B(III)I
+    .line 97
+    invoke-static {v7, v0, v2}, LX/433;->A09(III)I
 
+    .line 98
+    .line 99
     .line 100
-    .line 101
-    .line 102
     move-result v7
 
-    .line 103
+    .line 101
     :cond_2
     iget-object v1, p0, Landroidx/appcompat/widget/ActionBarContextView;->A09:Landroid/widget/LinearLayout;
 
+    .line 102
+    .line 103
+    if-eqz v1, :cond_5
+
     .line 104
     .line 105
-    if-eqz v1, :cond_5
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A08:Landroid/view/View;
 
     .line 106
     .line 107
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A08:Landroid/view/View;
+    if-nez v0, :cond_5
 
     .line 108
     .line 109
-    if-nez v0, :cond_5
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A03:Z
 
     .line 110
     .line 111
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A03:Z
+    if-eqz v0, :cond_b
 
     .line 112
     .line 113
-    if-eqz v0, :cond_b
+    invoke-static {v2, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     .line 114
     .line 115
-    invoke-static {v2, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
     .line 116
-    .line 117
-    .line 118
     move-result v1
 
-    .line 119
+    .line 117
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A09:Landroid/widget/LinearLayout;
+
+    .line 118
+    .line 119
+    invoke-virtual {v0, v1, v6}, Landroid/view/View;->measure(II)V
 
     .line 120
     .line 121
-    invoke-virtual {v0, v1, v6}, Landroid/view/View;->measure(II)V
-
     .line 122
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A09:Landroid/widget/LinearLayout;
+
     .line 123
     .line 124
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A09:Landroid/widget/LinearLayout;
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
     .line 125
     .line 126
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
-
     .line 127
-    .line 128
-    .line 129
     move-result v0
 
-    .line 130
+    .line 128
     const/4 v6, 0x0
 
-    .line 131
+    .line 129
     if-gt v0, v7, :cond_3
 
-    .line 132
-    .line 133
+    .line 130
+    .line 131
     const/4 v6, 0x1
 
-    .line 134
+    .line 132
     sub-int/2addr v7, v0
 
-    .line 135
+    .line 133
     :cond_3
     iget-object v1, p0, Landroidx/appcompat/widget/ActionBarContextView;->A09:Landroid/widget/LinearLayout;
 
+    .line 134
+    .line 135
+    const/16 v0, 0x8
+
     .line 136
     .line 137
-    const/16 v0, 0x8
+    if-eqz v6, :cond_4
 
     .line 138
     .line 139
-    if-eqz v6, :cond_4
-
-    .line 140
-    .line 141
     const/4 v0, 0x0
 
-    .line 142
+    .line 140
     :cond_4
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 141
+    .line 142
     .line 143
-    .line 144
-    .line 145
     :cond_5
     :goto_0
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->A08:Landroid/view/View;
 
+    .line 144
+    .line 145
+    if-eqz v0, :cond_8
+
     .line 146
     .line 147
-    if-eqz v0, :cond_8
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     .line 148
     .line 149
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
     .line 150
-    .line 151
-    .line 152
     move-result-object v6
 
-    .line 153
+    .line 151
     iget v0, v6, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 154
-    .line 155
+    .line 152
+    .line 153
     const/4 v1, -0x2
 
-    .line 156
+    .line 154
     if-eq v0, v1, :cond_6
+
+    .line 155
+    .line 156
+    const/high16 v10, 0x40000000    # 2.0f
 
     .line 157
     .line 158
-    const/high16 v10, 0x40000000    # 2.0f
+    if-ltz v0, :cond_6
 
     .line 159
     .line 160
-    if-ltz v0, :cond_6
+    invoke-static {v0, v7}, Ljava/lang/Math;->min(II)I
 
     .line 161
     .line 162
-    invoke-static {v0, v7}, Ljava/lang/Math;->min(II)I
-
     .line 163
-    .line 164
-    .line 165
     move-result v7
 
-    .line 166
+    .line 164
     :cond_6
     iget v0, v6, Landroid/view/ViewGroup$LayoutParams;->height:I
 
+    .line 165
+    .line 166
+    if-eq v0, v1, :cond_a
+
     .line 167
     .line 168
-    if-eq v0, v1, :cond_a
+    if-ltz v0, :cond_7
 
     .line 169
     .line 170
-    if-ltz v0, :cond_7
+    invoke-static {v0, v8}, Ljava/lang/Math;->min(II)I
 
     .line 171
     .line 172
-    invoke-static {v0, v8}, Ljava/lang/Math;->min(II)I
-
     .line 173
-    .line 174
-    .line 175
     move-result v8
 
-    .line 176
+    .line 174
     :cond_7
     :goto_1
     iget-object v1, p0, Landroidx/appcompat/widget/ActionBarContextView;->A08:Landroid/view/View;
 
-    .line 177
-    .line 178
+    .line 175
+    .line 176
     invoke-static {v7, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
+    .line 177
+    .line 178
     .line 179
-    .line 180
-    .line 181
     move-result v0
 
-    .line 182
-    invoke-static {v1, v8, v9, v0}, LX/4BD;->A1C(Landroid/view/View;III)V
+    .line 180
+    invoke-static {v1, v8, v9, v0}, LX/432;->A1A(Landroid/view/View;III)V
 
+    .line 181
+    .line 182
     .line 183
+    :cond_8
+    iget v0, p0, LX/4Mt;->A00:I
+
     .line 184
     .line 185
-    :cond_8
-    iget v0, p0, LX/4bU;->A00:I
+    if-gtz v0, :cond_c
 
     .line 186
     .line 187
-    if-gtz v0, :cond_c
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     .line 188
     .line 189
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
     .line 190
-    .line 191
-    .line 192
     move-result v1
 
-    .line 193
+    .line 191
     const/4 v4, 0x0
 
-    .line 194
+    .line 192
     :goto_2
     if-ge v2, v1, :cond_c
 
-    .line 195
-    .line 196
+    .line 193
+    .line 194
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
+    .line 195
+    .line 196
     .line 197
-    .line 198
-    .line 199
     move-result-object v0
 
-    .line 200
-    invoke-static {v0, v3}, LX/4BF;->A0C(Landroid/view/View;I)I
+    .line 198
+    invoke-static {v0, v3}, LX/434;->A0C(Landroid/view/View;I)I
 
+    .line 199
+    .line 200
     .line 201
-    .line 202
-    .line 203
     move-result v0
 
-    .line 204
+    .line 202
     if-le v0, v4, :cond_9
 
-    .line 205
-    .line 206
+    .line 203
+    .line 204
     move v4, v0
 
-    .line 207
+    .line 205
     :cond_9
     add-int/lit8 v2, v2, 0x1
 
-    .line 208
-    .line 209
+    .line 206
+    .line 207
     goto :goto_2
 
-    .line 210
+    .line 208
     :cond_a
     const/high16 v9, -0x80000000
 
-    .line 211
-    .line 212
+    .line 209
+    .line 210
     goto :goto_1
 
-    .line 213
+    .line 211
     :cond_b
     invoke-static {v7, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
+    .line 212
+    .line 213
     .line 214
-    .line 215
-    .line 216
     move-result v0
 
-    .line 217
+    .line 215
     invoke-virtual {v1, v0, v6}, Landroid/view/View;->measure(II)V
 
+    .line 216
+    .line 217
     .line 218
-    .line 219
-    .line 220
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
 
+    .line 219
+    .line 220
     .line 221
-    .line 222
-    .line 223
     move-result v0
 
-    .line 224
-    invoke-static {v7, v0, v2}, LX/4BE;->A0B(III)I
+    .line 222
+    invoke-static {v7, v0, v2}, LX/433;->A09(III)I
 
+    .line 223
+    .line 224
     .line 225
-    .line 226
-    .line 227
     move-result v7
 
-    .line 228
+    .line 226
     goto :goto_0
 
-    .line 229
+    .line 227
     :cond_c
     invoke-virtual {p0, v5, v4}, Landroid/view/View;->setMeasuredDimension(II)V
 
+    .line 228
+    .line 229
     .line 230
-    .line 231
-    .line 232
     return-void
 
-    .line 233
+    .line 231
     :cond_d
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 232
+    .line 233
     .line 234
-    .line 235
-    .line 236
     move-result-object v1
 
-    .line 237
+    .line 235
     const-string v0, " can only be used with android:layout_height=\"wrap_content\""
+
+    .line 236
+    .line 237
+    invoke-static {v1, v0}, LX/0X3;->A0Y(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 238
     .line 239
-    invoke-static {v1, v0}, LX/0Yf;->A0W(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
     .line 240
-    .line 241
-    .line 242
     move-result-object v0
 
-    .line 243
+    .line 241
     throw v0
 
-    .line 244
+    .line 242
     :cond_e
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 243
+    .line 244
     .line 245
-    .line 246
-    .line 247
     move-result-object v1
 
-    .line 248
+    .line 246
     const-string v0, " can only be used with android:layout_width=\"match_parent\" (or fill_parent)"
+
+    .line 247
+    .line 248
+    invoke-static {v1, v0}, LX/0X3;->A0Y(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 249
     .line 250
-    invoke-static {v1, v0}, LX/0Yf;->A0W(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
     .line 251
-    .line 252
-    .line 253
     move-result-object v0
 
-    .line 254
+    .line 252
     throw v0
 .end method
 
@@ -1752,7 +1744,7 @@
     .locals 0
 
     .line 0
-    iput p1, p0, LX/4bU;->A00:I
+    iput p1, p0, LX/4Mt;->A00:I
 
     .line 1
     .line 2
@@ -1849,7 +1841,7 @@
     .line 3
     .line 4
     .line 5
-    invoke-static {p0, p1}, LX/03G;->A0f(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, LX/03U;->A0j(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 6
     .line 7
@@ -1886,7 +1878,7 @@
     .locals 0
 
     .line 0
-    invoke-super {p0, p1}, LX/4bU;->setVisibility(I)V
+    invoke-super {p0, p1}, LX/4Mt;->setVisibility(I)V
 
     .line 1
     .line 2

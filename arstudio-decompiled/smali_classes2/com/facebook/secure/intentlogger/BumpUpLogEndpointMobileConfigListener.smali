@@ -3,19 +3,17 @@
 .source ""
 
 # interfaces
-.implements LX/1ij;
+.implements LX/18h;
 
 
 # instance fields
 .field public A00:Ljava/util/Set;
 
-.field public A01:LX/1zG;
-
-.field public final A02:LX/0Na;
+.field public final A01:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -31,7 +29,7 @@
 
     .line 5
     .line 6
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 7
     .line 8
@@ -39,28 +37,16 @@
     move-result-object v0
 
     .line 10
-    iput-object v0, p0, Lcom/facebook/secure/intentlogger/BumpUpLogEndpointMobileConfigListener;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/secure/intentlogger/BumpUpLogEndpointMobileConfigListener;->A01:LX/0RP;
 
     .line 11
     .line 12
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    iput-object v0, p0, Lcom/facebook/secure/intentlogger/BumpUpLogEndpointMobileConfigListener;->A01:LX/1zG;
-
-    .line 17
-    .line 18
     return-void
 .end method
 
 
 # virtual methods
-.method public final ADa()I
+.method public final ACC()I
     .locals 1
 
     const/16 v0, 0x3d3f
@@ -68,15 +54,15 @@
     return v0
 .end method
 
-.method public final AWH(I)V
+.method public final AUc(I)V
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/secure/intentlogger/BumpUpLogEndpointMobileConfigListener;->A02:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/secure/intentlogger/BumpUpLogEndpointMobileConfigListener;->A01:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 3
     .line 4
@@ -84,18 +70,18 @@
     move-result-object v3
 
     .line 6
-    const-wide v1, 0x8301040002012fL
+    const-wide v1, 0x8300f200020137L
 
     .line 7
     .line 8
     .line 9
     .line 10
     .line 11
-    sget-object v0, LX/1Us;->A04:LX/1Us;
+    sget-object v0, LX/30J;->A04:LX/30J;
 
     .line 12
     .line 13
-    invoke-interface {v3, v0, v1, v2}, LX/35B;->AMh(LX/1Us;J)Ljava/lang/String;
+    invoke-interface {v3, v0, v1, v2}, LX/30K;->ALF(LX/30J;J)Ljava/lang/String;
 
     .line 14
     .line 15
@@ -114,7 +100,7 @@
 
     .line 20
     .line 21
-    invoke-static {v2, v0}, LX/0Yf;->A0o(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v2, v0}, LX/0X6;->A15(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
     .line 22
     .line 23
@@ -122,7 +108,7 @@
     move-result-object v0
 
     .line 25
-    invoke-static {v0}, LX/0Yj;->A0a(Ljava/util/Collection;)Ljava/util/HashSet;
+    invoke-static {v0}, LX/0X7;->A0e(Ljava/util/Collection;)Ljava/util/HashSet;
 
     .line 26
     .line 27

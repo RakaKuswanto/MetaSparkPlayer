@@ -16,7 +16,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/5M2;->A01(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, LX/5kg;->A01(Ljava/lang/String;)Ljava/lang/String;
 
     .line 3
     .line 4
@@ -59,7 +59,7 @@
     .end annotation
 
     .line 0
-    invoke-static {}, LX/5M2;->A00()LX/5M2;
+    invoke-static {}, LX/5kg;->A00()LX/5kg;
 
     .line 1
     .line 2
@@ -81,7 +81,7 @@
     .line 10
     .line 11
     :try_start_0
-    invoke-static {p1}, LX/5Ld;->A00(Landroid/content/Context;)LX/5Ld;
+    invoke-static {p1}, LX/5jz;->A00(Landroid/content/Context;)LX/5jz;
 
     .line 12
     .line 13
@@ -97,7 +97,7 @@
     move-result-object v2
 
     .line 19
-    sget-object v1, LX/5Ld;->A0D:Ljava/lang/Object;
+    sget-object v1, LX/5jz;->A0C:Ljava/lang/Object;
 
     .line 20
     .line 21
@@ -107,7 +107,7 @@
 
     .line 22
     :try_start_1
-    iget-object v0, v3, LX/5Ld;->A00:Landroid/content/BroadcastReceiver$PendingResult;
+    iget-object v0, v3, LX/5jz;->A00:Landroid/content/BroadcastReceiver$PendingResult;
 
     .line 23
     .line 24
@@ -121,11 +121,11 @@
     .line 28
     .line 29
     :cond_0
-    iput-object v2, v3, LX/5Ld;->A00:Landroid/content/BroadcastReceiver$PendingResult;
+    iput-object v2, v3, LX/5jz;->A00:Landroid/content/BroadcastReceiver$PendingResult;
 
     .line 30
     .line 31
-    iget-boolean v0, v3, LX/5Ld;->A08:Z
+    iget-boolean v0, v3, LX/5jz;->A08:Z
 
     .line 32
     .line 33
@@ -141,7 +141,7 @@
     const/4 v0, 0x0
 
     .line 39
-    iput-object v0, v3, LX/5Ld;->A00:Landroid/content/BroadcastReceiver$PendingResult;
+    iput-object v0, v3, LX/5jz;->A00:Landroid/content/BroadcastReceiver$PendingResult;
 
     .line 40
     .line 41
@@ -171,7 +171,7 @@
     move-exception v1
 
     .line 47
-    invoke-static {}, LX/5M2;->A00()LX/5M2;
+    invoke-static {}, LX/5kg;->A00()LX/5kg;
 
     .line 48
     .line 49
@@ -193,7 +193,7 @@
 
     .line 57
     .line 58
-    invoke-static {p1, v0}, LX/0Yj;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-static {p1, v0}, LX/0X7;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 59
     .line 60

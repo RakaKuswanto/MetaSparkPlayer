@@ -20,14 +20,14 @@
     .locals 2
 
     .line 0
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     .line 1
-    new-instance v0, LX/6Q8;
+    new-instance v0, LX/6gm;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/6Q8;-><init>(I)V
+    invoke-direct {v0, v1}, LX/6gm;-><init>(I)V
 
     .line 4
     .line 5
@@ -72,7 +72,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/0Yc;->A1a(Landroid/os/Parcel;)Z
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     .line 16
     .line 17
@@ -80,10 +80,18 @@
     move-result v0
 
     .line 19
-    iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->A02:Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 20
     .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->A02:Z
+
+    .line 24
+    .line 25
     return-void
 .end method
 

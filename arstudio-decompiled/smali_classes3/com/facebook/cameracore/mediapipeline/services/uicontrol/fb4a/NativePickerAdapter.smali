@@ -1,5 +1,5 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;
-.super LX/4sv;
+.super LX/4nZ;
 .source ""
 
 # interfaces
@@ -23,7 +23,7 @@
 
 .field public final mItems:Ljava/util/List;
 
-.field public final mListener:LX/4Wa;
+.field public final mListener:LX/4Yv;
 
 .field public mNativePickerVisible:Z
 
@@ -54,16 +54,16 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;LX/4Wa;)V
+.method public constructor <init>(Landroid/content/Context;LX/4Yv;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/4sv;-><init>()V
+    invoke-direct {p0}, LX/4nZ;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
     .line 5
@@ -86,18 +86,18 @@
 
     .line 13
     .line 14
-    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;->mListener:LX/4Wa;
+    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;->mListener:LX/4Yv;
 
     .line 15
     .line 16
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;)LX/4Wa;
+.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;)LX/4Yv;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;->mListener:LX/4Wa;
+    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;->mListener:LX/4Yv;
 
     .line 1
     .line 2
@@ -259,7 +259,7 @@
     .locals 1
 
     .line 0
-    invoke-virtual {p0, p1}, LX/4sv;->getItemViewType(I)I
+    invoke-virtual {p0, p1}, LX/4nZ;->getItemViewType(I)I
 
     .line 1
     .line 2
@@ -267,7 +267,7 @@
     move-result v0
 
     .line 4
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 5
     .line 6
@@ -278,11 +278,11 @@
     return v0
 .end method
 
-.method public onBindViewHolder(LX/4tc;I)V
+.method public onBindViewHolder(LX/4nS;I)V
     .locals 6
 
     .line 0
-    invoke-virtual {p0, p2}, LX/4sv;->getItemViewType(I)I
+    invoke-virtual {p0, p2}, LX/4nZ;->getItemViewType(I)I
 
     .line 1
     .line 2
@@ -305,7 +305,7 @@
 
     .line 10
     .line 11
-    iget-object v1, p1, LX/4tc;->itemView:Landroid/view/View;
+    iget-object v1, p1, LX/4nS;->itemView:Landroid/view/View;
 
     .line 12
     .line 13
@@ -323,7 +323,7 @@
     .line 19
     .line 20
     .line 21
-    iget-object v2, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter$GalleryViewHolder;->mTextView:LX/4Qk;
+    iget-object v2, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter$GalleryViewHolder;->mTextView:LX/4RJ;
 
     .line 22
     .line 23
@@ -331,7 +331,7 @@
 
     .line 24
     .line 25
-    const v0, 0x7f120133
+    const v0, 0x7f1100f7
 
     .line 26
     .line 27
@@ -340,7 +340,7 @@
 
     .line 29
     .line 30
-    const v0, 0x7f120163
+    const v0, 0x7f11012a
 
     .line 31
     .line 32
@@ -376,7 +376,7 @@
 
     .line 46
     .line 47
-    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter$ViewHolder;->mFbDraweeView:LX/41M;
+    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter$ViewHolder;->mFbDraweeView:LX/3TB;
 
     .line 48
     .line 49
@@ -402,7 +402,7 @@
 
     .line 60
     .line 61
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 62
     .line 63
@@ -466,29 +466,29 @@
 
     .line 90
     .line 91
-    new-instance v2, LX/4WT;
+    new-instance v2, LX/4YV;
 
     .line 92
     .line 93
-    invoke-direct {v2, v3, v4}, LX/4WT;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {v2, v3, v4}, LX/4YV;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     .line 94
     .line 95
     .line 96
     :goto_1
-    iput-boolean v5, v2, LX/4WS;->A05:Z
+    iput-boolean v5, v2, LX/4YG;->A05:Z
 
     .line 97
     .line 98
-    iput-boolean v5, v2, LX/4WS;->A04:Z
+    iput-boolean v5, v2, LX/4YG;->A04:Z
 
     .line 99
     .line 100
-    iget v1, v2, LX/4WS;->A01:I
+    iget v1, v2, LX/4YG;->A01:I
 
     .line 101
     .line 102
-    iget v0, v2, LX/4WS;->A02:I
+    iget v0, v2, LX/4YG;->A02:I
 
     .line 103
     .line 104
@@ -507,15 +507,15 @@
     int-to-float v0, v0
 
     .line 111
-    iput v0, v2, LX/4WS;->A00:F
+    iput v0, v2, LX/4YG;->A00:F
 
     .line 112
     .line 113
-    iget-object v1, v2, LX/4WS;->A0A:Landroid/graphics/Paint;
+    iget-object v1, v2, LX/4YG;->A09:Landroid/graphics/Paint;
 
     .line 114
     .line 115
-    iget-object v0, v2, LX/4WS;->A09:Landroid/graphics/BitmapShader;
+    iget-object v0, v2, LX/4YG;->A08:Landroid/graphics/BitmapShader;
 
     .line 116
     .line 117
@@ -529,7 +529,7 @@
     .line 121
     .line 122
     .line 123
-    iget-object v0, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter$ViewHolder;->mFbDraweeView:LX/41M;
+    iget-object v0, p1, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter$ViewHolder;->mFbDraweeView:LX/3TB;
 
     .line 124
     .line 125
@@ -542,11 +542,11 @@
 
     .line 129
     :cond_4
-    new-instance v2, LX/4WW;
+    new-instance v2, LX/4YX;
 
     .line 130
     .line 131
-    invoke-direct {v2, v3, v4}, LX/4WW;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {v2, v3, v4}, LX/4YX;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     .line 132
     .line 133
@@ -572,7 +572,7 @@
 
     .line 2
     .line 3
-    invoke-virtual {p0}, LX/4sv;->notifyDataSetChanged()V
+    invoke-virtual {p0}, LX/4nZ;->notifyDataSetChanged()V
 
     .line 4
     .line 5
@@ -580,7 +580,7 @@
     return-void
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)LX/4tc;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)LX/4nS;
     .locals 3
 
     .line 0
@@ -605,7 +605,7 @@
 
     .line 8
     :cond_0
-    invoke-static {p1}, LX/4BD;->A0R(Landroid/view/View;)Landroid/view/LayoutInflater;
+    invoke-static {p1}, LX/0X6;->A0G(Landroid/view/View;)Landroid/view/LayoutInflater;
 
     .line 9
     .line 10
@@ -613,7 +613,7 @@
     move-result-object v1
 
     .line 12
-    const v0, 0x7f0d002b
+    const v0, 0x7f0c0029
 
     .line 13
     .line 14
@@ -639,7 +639,7 @@
 
     .line 25
     :cond_1
-    invoke-static {p1}, LX/4BD;->A0R(Landroid/view/View;)Landroid/view/LayoutInflater;
+    invoke-static {p1}, LX/0X6;->A0G(Landroid/view/View;)Landroid/view/LayoutInflater;
 
     .line 26
     .line 27
@@ -647,7 +647,7 @@
     move-result-object v1
 
     .line 29
-    const v0, 0x7f0d002d
+    const v0, 0x7f0c002b
 
     .line 30
     .line 31
@@ -683,7 +683,7 @@
 
     .line 2
     .line 3
-    invoke-virtual {p0}, LX/4sv;->notifyDataSetChanged()V
+    invoke-virtual {p0}, LX/4nZ;->notifyDataSetChanged()V
 
     .line 4
     .line 5
@@ -715,7 +715,7 @@
 
     .line 9
     .line 10
-    invoke-virtual {p0}, LX/4sv;->notifyDataSetChanged()V
+    invoke-virtual {p0}, LX/4nZ;->notifyDataSetChanged()V
 
     .line 11
     .line 12
@@ -731,7 +731,7 @@
 
     .line 1
     .line 2
-    invoke-virtual {p0}, LX/4sv;->notifyDataSetChanged()V
+    invoke-virtual {p0}, LX/4nZ;->notifyDataSetChanged()V
 
     .line 3
     .line 4
@@ -768,7 +768,7 @@
 
     .line 1
     .line 2
-    invoke-virtual {p0}, LX/4sv;->notifyDataSetChanged()V
+    invoke-virtual {p0}, LX/4nZ;->notifyDataSetChanged()V
 
     .line 3
     .line 4
@@ -806,7 +806,7 @@
     .line 12
     .line 13
     .line 14
-    invoke-virtual {p0}, LX/4sv;->notifyDataSetChanged()V
+    invoke-virtual {p0}, LX/4nZ;->notifyDataSetChanged()V
 
     .line 15
     .line 16

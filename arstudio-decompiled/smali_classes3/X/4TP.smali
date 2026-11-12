@@ -2,12 +2,15 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4TB;
+
+# instance fields
+.field public A00:Landroid/view/textclassifier/TextClassifier;
+
+.field public A01:Landroid/widget/TextView;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/widget/TextView;)V
     .locals 0
 
     .line 0
@@ -16,55 +19,50 @@
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/4TP;->A01:Landroid/widget/TextView;
+
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final Ajd(LX/6Kd;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;I)V
-    .locals 2
+.method public final A00()Landroid/view/textclassifier/TextClassifier;
+    .locals 1
 
     .line 0
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    iget-object v0, p0, LX/4TP;->A00:Landroid/view/textclassifier/TextClassifier;
 
     .line 1
     .line 2
-    .line 3
-    move-result v1
+    if-nez v0, :cond_0
 
+    .line 3
     .line 4
-    const/4 v0, 0x2
+    iget-object v0, p0, LX/4TP;->A01:Landroid/widget/TextView;
 
     .line 5
-    if-eq v1, v0, :cond_0
-
     .line 6
+    invoke-static {v0}, LX/4TQ;->A00(Landroid/widget/TextView;)Landroid/view/textclassifier/TextClassifier;
+
     .line 7
-    const/4 v0, 0x3
-
     .line 8
-    if-eq v1, v0, :cond_0
-
     .line 9
-    .line 10
-    const/4 v0, 0x4
-
-    .line 11
-    if-ne v1, v0, :cond_0
-
-    .line 12
-    .line 13
-    invoke-static {p3}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 14
-    .line 15
-    .line 16
     move-result-object v0
 
-    .line 17
-    throw v0
-
-    .line 18
+    .line 10
     :cond_0
+    return-object v0
+.end method
+
+.method public final A01(Landroid/view/textclassifier/TextClassifier;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/4TP;->A00:Landroid/view/textclassifier/TextClassifier;
+
+    .line 1
+    .line 2
     return-void
 .end method

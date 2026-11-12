@@ -44,12 +44,12 @@
 .method public constructor <init>(Lcom/facebook/common/dextricks/DexStore;Landroid/content/Context;Lcom/facebook/common/dextricks/OptimizationConfiguration$Provider;Z)V
     .locals 4
 
-    .line 268494251
+    .line 268467164
     iput-object p1, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->this$0:Lcom/facebook/common/dextricks/DexStore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268494252
+    .line 268467165
     invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -63,54 +63,54 @@
     :cond_0
     iput-object p2, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->mContext:Landroid/content/Context;
 
-    .line 268494253
+    .line 268467166
     iget-object v0, p1, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
     invoke-static {v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationLog;->readOrMakeDefaultFromRoot(Ljava/io/File;)Lcom/facebook/common/dextricks/DexStore$OptimizationLog;
 
     move-result-object v2
 
-    .line 268494254
+    .line 268467167
     iget v1, v2, Lcom/facebook/common/dextricks/DexStore$OptimizationLog;->nrOptimizationsAttempted:I
 
     const/4 v0, 0x1
 
     if-lt v1, v0, :cond_1
 
-    .line 268494255
+    .line 268467168
     add-int/2addr v0, v1
 
-    .line 268494256
+    .line 268467169
     :cond_1
     iput v0, v2, Lcom/facebook/common/dextricks/DexStore$OptimizationLog;->nrOptimizationsAttempted:I
 
-    .line 268494257
+    .line 268467170
     iput v0, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->optimizationAttemptNumber:I
 
     const/4 v0, 0x0
 
-    .line 268494258
+    .line 268467171
     invoke-direct {p0, v2, v0}, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->writeCurrentStateWithCurrentStatusFromRoot(Lcom/facebook/common/dextricks/DexStore$OptimizationLog;Z)V
 
-    .line 268494259
+    .line 268467172
     invoke-virtual {p1}, Lcom/facebook/common/dextricks/DexStore;->readConfig()Lcom/facebook/common/dextricks/DexStore$Config;
 
     move-result-object v0
 
-    .line 268494260
+    .line 268467173
     iput-object v0, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->dexStoreConfig:Lcom/facebook/common/dextricks/DexStore$Config;
 
-    .line 268494261
+    .line 268467174
     iput-boolean p4, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->inForeground:Z
 
-    .line 268494262
+    .line 268467175
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->startUptimeMs:J
 
-    .line 268494263
+    .line 268467176
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -119,52 +119,52 @@
 
     const/4 v3, 0x0
 
-    .line 268494264
+    .line 268467177
     :try_start_0
     iput-object p3, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->configProvider:Lcom/facebook/common/dextricks/OptimizationConfiguration$Provider;
 
-    .line 268494265
+    .line 268467178
     iget-object v0, p3, Lcom/facebook/common/dextricks/OptimizationConfiguration$Provider;->baseline:Lcom/facebook/common/dextricks/OptimizationConfiguration;
 
     iput-object v0, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->config:Lcom/facebook/common/dextricks/OptimizationConfiguration;
 
-    .line 268494266
+    .line 268467179
     invoke-virtual {p1}, Lcom/facebook/common/dextricks/DexStore;->getRegenFile()Ljava/io/File;
 
     move-result-object v0
 
-    .line 268494267
-    invoke-static {v0}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
+    .line 268467180
+    invoke-static {v0}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
 
     move-result-object v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 268494268
+    .line 268467181
     :try_start_1
     iget-object v1, p1, Lcom/facebook/common/dextricks/DexStore;->root:Ljava/io/File;
 
     const-string v0, "odex_lock"
 
-    .line 268494269
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    .line 268467182
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 268494270
+    .line 268467183
     invoke-static {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile;->open(Ljava/io/File;)Lcom/facebook/common/dextricks/ReentrantLockFile;
 
     move-result-object v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 268494271
+    .line 268467184
     :try_start_2
     iput-object v2, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->mRegenStampFile:Ljava/io/FileInputStream;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 268494272
+    .line 268467185
     :try_start_3
     iput-object v1, p0, Lcom/facebook/common/dextricks/DexStore$OptimizationSession;->mOptLockFile:Lcom/facebook/common/dextricks/ReentrantLockFile;
 
@@ -172,7 +172,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 268494273
+    .line 268467186
     :catchall_0
     move-exception v0
 
@@ -198,14 +198,14 @@
     :catchall_3
     move-exception v0
 
-    .line 268494274
+    .line 268467187
     :goto_1
     invoke-static {v3}, Lcom/facebook/common/dextricks/Fs;->safeClose(Ljava/io/Closeable;)V
 
-    .line 268494275
+    .line 268467188
     invoke-static {v1}, Lcom/facebook/common/dextricks/Fs;->safeClose(Ljava/io/Closeable;)V
 
-    .line 268494276
+    .line 268467189
     throw v0
 .end method
 
@@ -242,7 +242,7 @@
     move-result-object v1
 
     .line 9
-    invoke-static {p1}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 10
     .line 11
@@ -756,7 +756,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 10
     .line 11
@@ -959,7 +959,7 @@
     .line 6
     .line 7
     .line 8
-    move-result-object v1
+    move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
@@ -975,14 +975,14 @@
     .line 13
     .line 14
     .line 15
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 16
     .line 17
     :try_start_2
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
     .line 18
     .line 19
@@ -993,46 +993,58 @@
 
     .line 21
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 22
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 23
     .line 24
     :try_start_3
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v0}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
     .line 25
     .line 26
     .line 27
-    :catchall_1
-    :cond_0
-    :try_start_4
-    throw v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+    goto :goto_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 28
-    :catchall_2
-    move-exception v2
+    :catchall_1
+    move-exception v0
 
     .line 29
-    new-array v1, v3, [Ljava/lang/Object;
+    :try_start_4
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 30
     .line 31
-    const-string v0, "recording optimization failure itself failed"
-
     .line 32
+    :cond_0
+    :goto_0
+    throw v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
     .line 33
-    invoke-static {v2, v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    :catchall_2
+    move-exception v2
 
     .line 34
+    new-array v1, v3, [Ljava/lang/Object;
+
     .line 35
     .line 36
+    const-string v0, "recording optimization failure itself failed"
+
+    .line 37
+    .line 38
+    invoke-static {v2, v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 39
+    .line 40
+    .line 41
     :cond_1
     return-void
 .end method
@@ -1393,7 +1405,7 @@
 
     .line 42
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 43
     if-eqz v2, :cond_2
@@ -1408,9 +1420,20 @@
     .line 46
     .line 47
     .line 48
+    throw v1
+
+    .line 49
     :catchall_1
+    move-exception v0
+
+    .line 50
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 51
+    .line 52
+    .line 53
     :cond_2
-    throw v0
+    throw v1
 .end method
 
 .method public waitForAndManageProcess(Lcom/facebook/forker/Process;Lcom/facebook/common/dextricks/DexStore$ExternalProcessProgressListener;)I

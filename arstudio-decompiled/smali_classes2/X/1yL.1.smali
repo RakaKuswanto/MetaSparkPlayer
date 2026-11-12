@@ -1,45 +1,71 @@
 .class public final LX/1yL;
-.super LX/1yO;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/0VC;
+
+
+# instance fields
+.field public final synthetic A00:Lcom/meta/analytics/dsp/correlation/fb/impl/FbDspCorrelationManagerImpl;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lcom/meta/analytics/dsp/correlation/fb/impl/FbDspCorrelationManagerImpl;)V
+    .locals 0
 
     .line 0
-    sget v0, LX/2eq;->ACt:I
+    iput-object p1, p0, LX/1yL;->A00:Lcom/meta/analytics/dsp/correlation/fb/impl/FbDspCorrelationManagerImpl;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    return-void
+.end method
 
+
+# virtual methods
+.method public final bridge synthetic get()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1yL;->A00:Lcom/meta/analytics/dsp/correlation/fb/impl/FbDspCorrelationManagerImpl;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, Lcom/meta/analytics/dsp/correlation/fb/impl/FbDspCorrelationManagerImpl;->A00:LX/0lu;
+
+    .line 3
+    .line 4
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
+
+    .line 5
     .line 6
-    check-cast v1, LX/037;
-
     .line 7
+    move-result-object v0
+
     .line 8
-    sget v0, LX/2eq;->AIA:I
+    check-cast v0, LX/2UY;
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iget-object v0, v0, LX/2UY;->A00:Ljava/lang/String;
 
     .line 11
     .line 12
-    .line 13
-    move-result-object v0
+    if-nez v0, :cond_0
 
+    .line 13
     .line 14
-    invoke-direct {p0, v0, v1}, LX/1yO;-><init>(LX/0Na;LX/037;)V
+    const-string/jumbo v0, "dummy_session_id"
 
     .line 15
     .line 16
     .line 17
-    return-void
+    :cond_0
+    return-object v0
 .end method

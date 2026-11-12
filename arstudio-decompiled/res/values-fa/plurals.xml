@@ -3,10 +3,87 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s پسندیدن «صفحه»</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s پسند</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d روز پيش</item>
+        <item quantity="one">یک روز پیش</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d روز</item>
+        <item quantity="one">یک روز</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d روز</item>
+        <item quantity="one">یک روز</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d ساعت</item>
+        <item quantity="one">یک ساعت</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d دقیقه</item>
+        <item quantity="one">یک دقیقه</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d ماه</item>
+        <item quantity="one">یک ماه</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d ثانیه</item>
+        <item quantity="one">یک ثانیه</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d هفته</item>
+        <item quantity="one">یک هفته</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">%1$d روز دیگر</item>
+        <item quantity="one">یک روز دیگر</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">%1$d ساعت دیگر</item>
+        <item quantity="one">یک ساعت دیگر</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">%1$d دقیقه دیگر</item>
+        <item quantity="one">یک دقیقه دیگر</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">%1$d ماه دیگر</item>
+        <item quantity="one">یک ماه دیگر</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">%1$d ثانیه دیگر</item>
+        <item quantity="one">۱ دقیقه دیگر</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">%1$d هفته دیگر</item>
+        <item quantity="one">یک هفته دیگر</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">%1$d سال دیگر</item>
+        <item quantity="one">یک سال دیگر</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d سال</item>
+        <item quantity="one">یک سال</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ساعت پیش</item>
+        <item quantity="one">یک ساعت پیش</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d ساعت</item>
+        <item quantity="one">یک ساعت</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d ساعت</item>
+        <item quantity="one">۱ ساعت</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d ساعت</item>
+        <item quantity="one">یک ساعت</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d ساعت پیش</item>
         <item quantity="one">یک ساعت پیش</item>
     </plurals>
@@ -18,8 +95,68 @@
         <item quantity="other">%1$d دقیقه از الان</item>
         <item quantity="one">یک دقیقه از الان</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d دقیقه پیش</item>
+        <item quantity="one">یک دقیقه پیش</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d دقیقهٔ پیش</item>
         <item quantity="one">یک دقیقه پیش</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d دقیقه</item>
+        <item quantity="one">یک دقیقه</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d دقیقه</item>
+        <item quantity="one">یک دقیقه</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d ماه پیش</item>
+        <item quantity="one">یک ماه پیش</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d ثانیه پیش</item>
+        <item quantity="one">یک ثانیه</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d هفته پیش</item>
+        <item quantity="one">یک هفته پیش</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d ساعت باقی مانده است</item>
+        <item quantity="one">یک ساعت باقی مانده است</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d دقیقه باقی مانده است</item>
+        <item quantity="one">یک دقیقه باقی‌ مانده است</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d سال پیش</item>
+        <item quantity="one">یک سال پیش</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">%1$d روز پیش بازدید کردید</item>
+        <item quantity="one">یک روز پیش بازدید کردید</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">%1$d ساعت پیش بازدید کردید</item>
+        <item quantity="one">یک ساعت پیش بازدید کردید</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">%1$d دقیقه پیش بازدید کردید</item>
+        <item quantity="one">یک دقیقه پیش بازدید کردید</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">%1$d ماه پیش بازدید کردید</item>
+        <item quantity="one">یک ماه پیش بازدید کردید</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">%1$d هفته پیش بازدید کردید</item>
+        <item quantity="one">یک هفته پیش بازدید کردید</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">%1$d سال پیش بازدید کردید</item>
+        <item quantity="one">یک سال پیش بازدید کردید</item>
     </plurals>
 </resources>

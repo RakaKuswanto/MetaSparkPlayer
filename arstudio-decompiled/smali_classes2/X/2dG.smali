@@ -1,70 +1,67 @@
-.class public final LX/2dG;
-.super Ljava/lang/Object;
+.class public final LX/2DG;
+.super LX/2DY;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ViewerContextManagerImpl$ActivityViewerContextListener$1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$27"
 
 
 # instance fields
-.field public final synthetic A00:Landroid/app/Activity;
-
-.field public final synthetic A01:Landroid/content/Intent;
-
-.field public final synthetic A02:LX/2dF;
+.field public final synthetic A00:LX/2D1;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Landroid/content/Intent;LX/2dF;)V
-    .locals 0
+.method public constructor <init>(LX/2D1;Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/util/concurrent/atomic/AtomicInteger;)V
+    .locals 10
 
     .line 0
-    iput-object p3, p0, LX/2dG;->A02:LX/2dF;
+    const-string v3, "LogoutComplete"
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/2dG;->A00:Landroid/app/Activity;
+    const-string v4, "AccountSwitchPerfLogger"
 
     .line 3
     .line 4
-    iput-object p2, p0, LX/2dG;->A01:Landroid/content/Intent;
+    const-string/jumbo v5, "onLogoutComplete"
 
     .line 5
     .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 7
+    const v8, 0x94000b
+
     .line 8
     .line 9
-    return-void
-.end method
+    .line 10
+    const-string/jumbo v6, "type"
 
+    .line 11
+    .line 12
+    .line 13
+    const/4 v9, 0x1
 
-# virtual methods
-.method public final run()V
-    .locals 3
+    .line 14
+    move-object v0, p0
 
-    .line 0
-    iget-object v2, p0, LX/2dG;->A02:LX/2dF;
+    .line 15
+    iput-object p1, p0, LX/2DG;->A00:LX/2D1;
 
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/2dG;->A00:Landroid/app/Activity;
+    .line 16
+    .line 17
+    move-object v1, p2
 
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/2dG;->A01:Landroid/content/Intent;
+    .line 18
+    move-object v2, p3
 
-    .line 5
-    .line 6
-    invoke-static {v1, v0, v2}, LX/2dF;->A00(Landroid/app/Activity;Landroid/content/Intent;LX/2dF;)V
+    .line 19
+    move-object v7, p4
 
-    .line 7
-    .line 8
-    .line 9
+    .line 20
+    invoke-direct/range {v0 .. v9}, LX/2DY;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;IZ)V
+
+    .line 21
+    .line 22
+    .line 23
     return-void
 .end method

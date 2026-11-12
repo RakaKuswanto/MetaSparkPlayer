@@ -10,19 +10,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 268435456
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
-    .line 268435457
+    move-result-object v0
+
     throw v0
 .end method
 
-.method public constructor <init>(LX/52i;)V
+.method public constructor <init>(LX/58B;)V
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     throw v0
 .end method

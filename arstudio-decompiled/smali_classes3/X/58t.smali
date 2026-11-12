@@ -1,28 +1,17 @@
-.class public final LX/58t;
-.super LX/58u;
+.class public final LX/58T;
+.super LX/58a;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/58j;
-
-
 # direct methods
-.method public constructor <init>(LX/58j;I)V
-    .locals 1
+.method public constructor <init>(Ljava/io/IOException;I)V
+    .locals 0
 
     .line 0
-    iput-object p1, p0, LX/58t;->A00:LX/58j;
+    invoke-direct {p0, p2, p1}, LX/58a;-><init>(ILjava/lang/Throwable;)V
 
     .line 1
     .line 2
-    const/4 v0, 0x0
-
     .line 3
-    invoke-direct {p0, v0, p1, p2}, LX/58u;-><init>(Landroid/os/Bundle;LX/58j;I)V
-
-    .line 4
-    .line 5
-    .line 6
     return-void
 .end method

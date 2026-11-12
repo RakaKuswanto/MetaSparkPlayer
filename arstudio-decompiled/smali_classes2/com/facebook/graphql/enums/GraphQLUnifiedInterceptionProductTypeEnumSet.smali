@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLUnifiedInterceptionProductTypeEnumSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLUnifiedInterceptionProductTypeEnumSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x1a
+    const/16 v0, 0x1c
 
     .line 1
     .line 2
@@ -23,7 +23,7 @@
     const/4 v1, 0x0
 
     .line 5
-    const-string v0, "BRANDAWARENESS"
+    const-string v0, "ADD_PHOTO"
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "BRANDED_CONTENT"
+    const-string v0, "BRANDAWARENESS"
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "BRANDTAGGING"
+    const-string v0, "BRANDED_CONTENT"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "CALENDAR_HOTSPOTS"
+    const-string v0, "BRANDTAGGING"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "CALL_NOW"
+    const-string v0, "CALENDAR_HOTSPOTS"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "EVENT"
+    const-string v0, "CALL_NOW"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "FUNDRAISER_DONATE_BUTTON"
+    const-string v0, "DEFAULT_MEDIA"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "HASHTAG"
+    const-string v0, "EVENT"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "JOB"
+    const-string v0, "FUNDRAISER_DONATE_BUTTON"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "LDP"
+    const-string v0, "HASHTAG"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "MARKETPLACE_VERTICALS"
+    const-string v0, "JOB"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "MESSAGEPAGE"
+    const-string v0, "LDP"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "MESSAGE_BUTTON"
+    const-string v0, "MARKETPLACE_VERTICALS"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "MOVIE"
+    const-string v0, "MESSAGEPAGE"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "OFFER"
+    const-string v0, "MESSAGE_BUTTON"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "PAGES_INTEGRITY_FAKE_NEWS"
+    const-string v0, "MOVIE"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "PAGES_INTEGRITY_UNPUBLISHED_CONTENT"
+    const-string v0, "OFFER"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "PRODUCT_TAGGING_NUX"
+    const-string v0, "PAGES_INTEGRITY_FAKE_NEWS"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "QPC"
+    const-string v0, "PAGES_INTEGRITY_UNPUBLISHED_CONTENT"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "SCHEDULE_POST_TIME"
+    const-string v0, "PRODUCT_TAGGING_NUX"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "SELL_MESSAGE"
+    const-string v0, "QPC"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "SERVICE"
+    const-string v0, "SCHEDULE_POST_TIME"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "UNKNOWN"
+    const-string v0, "SELL_MESSAGE"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "VOLUNTEERING"
+    const-string v0, "SERVICE"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "WHATSAPP_DEEPLINK_PAGE"
+    const-string v0, "UNKNOWN"
 
     .line 143
     .line 144
@@ -316,22 +316,48 @@
 
     .line 147
     .line 148
-    const-string v0, "WHATSAPP_PAGE"
+    const-string v0, "VOLUNTEERING"
 
     .line 149
     .line 150
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 151
     .line 152
-    .line 153
-    move-result-object v0
+    const/16 v1, 0x1a
 
+    .line 153
     .line 154
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLUnifiedInterceptionProductTypeEnumSet;->A00:Ljava/util/Set;
+    const-string/jumbo v0, "WHATSAPP_DEEPLINK_PAGE"
 
     .line 155
     .line 156
+    .line 157
+    aput-object v0, v2, v1
+
+    .line 158
+    .line 159
+    const/16 v1, 0x1b
+
+    .line 160
+    .line 161
+    const-string/jumbo v0, "WHATSAPP_PAGE"
+
+    .line 162
+    .line 163
+    .line 164
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 165
+    .line 166
+    .line 167
+    move-result-object v0
+
+    .line 168
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLUnifiedInterceptionProductTypeEnumSet;->A00:Ljava/util/HashSet;
+
+    .line 169
+    .line 170
     return-void
 .end method
 
@@ -347,11 +373,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLUnifiedInterceptionProductTypeEnumSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLUnifiedInterceptionProductTypeEnumSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

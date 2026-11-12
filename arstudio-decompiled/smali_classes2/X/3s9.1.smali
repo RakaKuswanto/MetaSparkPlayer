@@ -1,84 +1,174 @@
-.class public final synthetic LX/3s9;
-.super Ljava/lang/Object;
+.class public final LX/3s9;
+.super LX/4iK;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RequestPerfQplLoggingListener$$ExternalSyntheticLambda3"
 
 
 # instance fields
-.field public final synthetic A00:LX/3oy;
+.field public A00:LX/3q3;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
 
-.field public final synthetic A01:LX/41f;
+.field public A01:LX/3tB;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
 
-.field public final synthetic A02:Ljava/lang/String;
+.field public A02:LX/3q1;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
+
+.field public A03:LX/1n2;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
+
+.field public A04:LX/3Z4;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
+
+.field public A05:LX/3pu;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
+
+.field public A06:LX/3lb;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
+
+.field public A07:LX/3qn;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
+
+.field public A08:LX/3qm;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
+
+.field public A09:Ljava/lang/Exception;
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0xd
+    .end annotation
+.end field
+
+.field public A0A:Z
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0x3
+    .end annotation
+.end field
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/3oy;LX/41f;Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct {p0}, LX/4iK;-><init>()V
 
-    iput-object p1, p0, LX/3s9;->A00:LX/3oy;
-
-    iput-object p2, p0, LX/3s9;->A01:LX/41f;
-
-    iput-object p3, p0, LX/3s9;->A02:Ljava/lang/String;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final A01(LX/3y7;)V
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/3s9;->A00:LX/3oy;
+    iget-object v3, p1, LX/3y7;->A01:[Ljava/lang/Object;
 
     .line 1
     .line 2
-    iget-object v4, p0, LX/3s9;->A01:LX/41f;
+    iget v2, p1, LX/3y7;->A00:I
 
     .line 3
     .line 4
-    iget-object v3, p0, LX/3s9;->A02:Ljava/lang/String;
+    const/4 v1, 0x0
 
     .line 5
-    .line 6
-    iget-object v2, v0, LX/3oy;->A01:LX/3of;
+    if-eqz v2, :cond_2
 
+    .line 6
     .line 7
+    const/4 v0, 0x1
+
     .line 8
-    iget-object v0, v0, LX/3oy;->A02:LX/0Na;
+    if-eq v2, v0, :cond_1
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yg;->A0M(LX/0Na;)Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
+    const/4 v0, 0x2
 
     .line 11
+    if-ne v2, v0, :cond_0
+
     .line 12
     .line 13
-    move-result-object v0
+    aget-object v0, v3, v1
 
     .line 14
-    invoke-interface {v0}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->currentMonotonicTimestampNanos()J
-
     .line 15
+    check-cast v0, Ljava/lang/Exception;
+
     .line 16
     .line 17
-    move-result-wide v0
+    iput-object v0, p0, LX/3s9;->A09:Ljava/lang/Exception;
 
     .line 18
-    invoke-virtual {v2, v4, v3, v0, v1}, LX/3of;->A07(LX/41f;Ljava/lang/String;J)V
-
     .line 19
+    :cond_0
+    return-void
+
     .line 20
+    :cond_1
+    aget-object v0, v3, v1
+
     .line 21
+    .line 22
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    iput-boolean v0, p0, LX/3s9;->A0A:Z
+
+    .line 27
+    .line 28
+    return-void
+
+    .line 29
+    :cond_2
+    const-string v0, "GrootComponentSpec.updatePlaybackState"
+
+    .line 30
+    .line 31
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 35
+    .line 36
+    .line 37
     return-void
 .end method

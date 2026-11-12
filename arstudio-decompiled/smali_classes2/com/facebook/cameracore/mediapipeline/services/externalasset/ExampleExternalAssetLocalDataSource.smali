@@ -129,11 +129,11 @@
 
     .line 8
     :cond_0
-    new-instance v5, LX/20W;
+    new-instance v5, LX/3Gh;
 
     .line 9
     .line 10
-    invoke-direct {v5, v0}, LX/20W;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v0}, LX/3Gh;-><init>(Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -154,7 +154,7 @@
     .line 19
     .line 20
     :try_start_0
-    invoke-static {}, LX/20P;->A00()Z
+    invoke-static {}, LX/3Gv;->A00()Z
 
     .line 21
     .line 22
@@ -166,11 +166,11 @@
 
     .line 25
     .line 26
-    new-instance v1, LX/20R;
+    new-instance v1, LX/3Gl;
 
     .line 27
     .line 28
-    invoke-direct {v1, v5}, LX/20R;-><init>(Ljava/io/File;)V
+    invoke-direct {v1, v5}, LX/3Gl;-><init>(Ljava/io/File;)V
 
     .line 29
     .line 30
@@ -198,7 +198,7 @@
 
     .line 42
     :cond_1
-    invoke-static {v5}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
+    invoke-static {v5}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
 
     .line 43
     .line 44
@@ -272,34 +272,46 @@
 
     .line 74
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 75
     :try_start_3
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 76
     .line 77
     .line 78
+    goto :goto_2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 79
     :catchall_1
+    move-exception v0
+
+    .line 80
     :try_start_4
-    throw v0
+    invoke-static {v1, v0}, LX/6dW;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 81
+    .line 82
+    .line 83
+    :goto_2
+    throw v1
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 79
+    .line 84
     :catch_0
     const-string v0, "ExampleExternalAssetLocalDataSource fails to load file."
 
-    .line 80
-    .line 81
+    .line 85
+    .line 86
     invoke-virtual {p1, v0}, Lcom/facebook/native_bridge/NativeDataPromise;->setException(Ljava/lang/String;)V
 
-    .line 82
-    .line 83
-    .line 84
+    .line 87
+    .line 88
+    .line 89
     return v6
 .end method
 
@@ -338,7 +350,7 @@
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 16
     .line 17

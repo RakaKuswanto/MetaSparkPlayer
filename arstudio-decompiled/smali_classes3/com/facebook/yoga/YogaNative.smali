@@ -12,7 +12,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -53,9 +53,6 @@
 .method public static native jni_YGConfigSetPointScaleFactorJNI(JF)V
 .end method
 
-.method public static native jni_YGConfigSetPrintTreeFlagJNI(JZ)V
-.end method
-
 .method public static native jni_YGConfigSetUseWebDefaultsJNI(JZ)V
 .end method
 
@@ -89,9 +86,6 @@
 .method public static native jni_YGNodeNewWithConfigJNI(J)J
 .end method
 
-.method public static native jni_YGNodePrintJNI(J)V
-.end method
-
 .method public static native jni_YGNodeRemoveAllChildrenJNI(J)V
 .end method
 
@@ -99,6 +93,9 @@
 .end method
 
 .method public static native jni_YGNodeResetJNI(J)V
+.end method
+
+.method public static native jni_YGNodeSetAlwaysFormsContainingBlockJNI(JZ)V
 .end method
 
 .method public static native jni_YGNodeSetHasBaselineFuncJNI(JZ)V
@@ -237,6 +234,9 @@
 .end method
 
 .method public static native jni_YGNodeStyleSetGapJNI(JIF)V
+.end method
+
+.method public static native jni_YGNodeStyleSetGapPercentJNI(JIF)V
 .end method
 
 .method public static native jni_YGNodeStyleSetHeightAutoJNI(J)V

@@ -30,49 +30,33 @@
 
 # virtual methods
 .method public compare(Ljava/io/File;Ljava/io/File;)I
-    .locals 3
+    .locals 2
 
     .line 0
-    invoke-virtual {p2}, Ljava/io/File;->lastModified()J
+    invoke-static {p2}, LX/001;->A0I(Ljava/io/File;)Ljava/lang/Long;
 
     .line 1
     .line 2
     .line 3
-    move-result-wide v0
+    move-result-object v1
 
     .line 4
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p1}, LX/001;->A0I(Ljava/io/File;)Ljava/lang/Long;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v2
+    move-result-object v0
 
     .line 8
-    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+    invoke-virtual {v1, v0}, Ljava/lang/Long;->compareTo(Ljava/lang/Long;)I
 
     .line 9
     .line 10
     .line 11
-    move-result-wide v0
-
-    .line 12
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    invoke-virtual {v2, v0}, Ljava/lang/Long;->compareTo(Ljava/lang/Long;)I
-
-    .line 17
-    .line 18
-    .line 19
     move-result v0
 
-    .line 20
+    .line 12
     return v0
 .end method
 

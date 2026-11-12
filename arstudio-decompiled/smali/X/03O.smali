@@ -1,83 +1,62 @@
-.class public final LX/03O;
+.class public abstract LX/03O;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/concurrent/Executor;
-
-
-# instance fields
-.field public final A00:I
-
 
 # direct methods
-.method public constructor <init>(I)V
+.method public static A00(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
     .locals 0
 
     .line 0
-    iput p1, p0, LX/03O;->A00:I
+    invoke-virtual {p0}, Landroid/view/View;->getAccessibilityDelegate()Landroid/view/View$AccessibilityDelegate;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    move-result-object p0
+
     .line 4
-    .line 5
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
+.method public static A01(Landroid/content/Context;Landroid/content/res/TypedArray;Landroid/util/AttributeSet;Landroid/view/View;[III)V
+    .locals 3
 
     .line 0
-    iget v0, p0, LX/03O;->A00:I
+    move-object v1, p0
 
     .line 1
+    move-object p0, p2
+
     .line 2
-    packed-switch v0, :pswitch_data_0
+    move-object v0, p3
 
     .line 3
+    move-object v2, p4
+
     .line 4
+    move p2, p5
+
     .line 5
-    return-void
+    move p3, p6
 
     .line 6
-    :pswitch_0
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    invoke-virtual/range {v0 .. v6}, Landroid/view/View;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
     .line 7
     .line 8
     .line 9
     return-void
+.end method
 
-    .line 10
-    :pswitch_1
-    new-instance v0, Ljava/lang/Thread;
+.method public static A02(Landroid/view/View;Ljava/util/List;)V
+    .locals 0
 
-    .line 11
-    .line 12
-    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setSystemGestureExclusionRects(Ljava/util/List;)V
 
-    .line 13
-    .line 14
-    .line 15
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    .line 16
-    .line 17
-    .line 18
+    .line 1
+    .line 2
+    .line 3
     return-void
-
-    .line 19
-    nop
-
-    .line 20
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

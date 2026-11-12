@@ -1,25 +1,17 @@
 .class public final LX/3Jf;
-.super Ljava/lang/Object;
+.super LX/3Jm;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/3Xx;
-
-
 # direct methods
-.method public constructor <init>(LX/3Xx;)V
+.method public constructor <init>(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/28F;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3Jf;->A00:LX/3Xx;
+    invoke-direct {p0, p1, p2}, LX/3Jm;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method

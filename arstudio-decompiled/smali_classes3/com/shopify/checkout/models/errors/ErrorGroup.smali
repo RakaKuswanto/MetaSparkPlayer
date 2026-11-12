@@ -3,18 +3,12 @@
 .source ""
 
 
-# annotations
-.annotation runtime Lkotlinx/serialization/Serializable;
-    with = Lcom/shopify/checkout/models/errors/ErrorGroupSerializer;
-.end annotation
-
-
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/shopify/checkout/models/errors/ErrorGroup;
 
-.field public static final $cachedSerializer$delegate:LX/0tD;
-
-.field public static final enum Authentication:Lcom/shopify/checkout/models/errors/ErrorGroup;
+.field public static final $cachedSerializer$delegate:LX/3gS;
 
 .field public static final enum Checkout:Lcom/shopify/checkout/models/errors/ErrorGroup;
 
@@ -39,7 +33,7 @@
 .method public static final synthetic $values()[Lcom/shopify/checkout/models/errors/ErrorGroup;
     .locals 3
 
-    const/4 v0, 0x7
+    const/4 v0, 0x6
 
     new-array v2, v0, [Lcom/shopify/checkout/models/errors/ErrorGroup;
 
@@ -73,15 +67,9 @@
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/shopify/checkout/models/errors/ErrorGroup;->Authentication:Lcom/shopify/checkout/models/errors/ErrorGroup;
-
-    const/4 v0, 0x5
-
-    aput-object v1, v2, v0
-
     sget-object v1, Lcom/shopify/checkout/models/errors/ErrorGroup;->Unrecoverable:Lcom/shopify/checkout/models/errors/ErrorGroup;
 
-    const/4 v0, 0x6
+    const/4 v0, 0x5
 
     aput-object v1, v2, v0
 
@@ -212,14 +200,14 @@
 
     .line 59
     .line 60
-    const-string v3, "Authentication"
+    const-string v3, "Unrecoverable"
 
     .line 61
     .line 62
     const/4 v2, 0x5
 
     .line 63
-    const-string v1, "authentication"
+    const-string v1, "unrecoverable"
 
     .line 64
     .line 65
@@ -232,78 +220,67 @@
     .line 68
     .line 69
     .line 70
-    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->Authentication:Lcom/shopify/checkout/models/errors/ErrorGroup;
+    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->Unrecoverable:Lcom/shopify/checkout/models/errors/ErrorGroup;
 
     .line 71
     .line 72
-    const-string v3, "Unrecoverable"
+    invoke-static {}, Lcom/shopify/checkout/models/errors/ErrorGroup;->$values()[Lcom/shopify/checkout/models/errors/ErrorGroup;
 
     .line 73
     .line 74
-    const/4 v2, 0x6
-
     .line 75
-    const-string v1, "unrecoverable"
+    move-result-object v0
 
     .line 76
+    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->$VALUES:[Lcom/shopify/checkout/models/errors/ErrorGroup;
+
     .line 77
-    new-instance v0, Lcom/shopify/checkout/models/errors/ErrorGroup;
-
     .line 78
-    .line 79
-    invoke-direct {v0, v3, v2, v1}, Lcom/shopify/checkout/models/errors/ErrorGroup;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
+    .line 79
     .line 80
     .line 81
+    move-result-object v0
+
     .line 82
-    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->Unrecoverable:Lcom/shopify/checkout/models/errors/ErrorGroup;
+    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
     .line 83
     .line 84
-    invoke-static {}, Lcom/shopify/checkout/models/errors/ErrorGroup;->$values()[Lcom/shopify/checkout/models/errors/ErrorGroup;
+    new-instance v0, Lcom/shopify/checkout/models/errors/ErrorGroup$Companion;
 
     .line 85
     .line 86
-    .line 87
-    move-result-object v0
-
-    .line 88
-    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->$VALUES:[Lcom/shopify/checkout/models/errors/ErrorGroup;
-
-    .line 89
-    .line 90
-    new-instance v0, Lcom/shopify/checkout/models/errors/ErrorGroup$Companion;
-
-    .line 91
-    .line 92
     invoke-direct {v0}, Lcom/shopify/checkout/models/errors/ErrorGroup$Companion;-><init>()V
 
+    .line 87
+    .line 88
+    .line 89
+    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->Companion:Lcom/shopify/checkout/models/errors/ErrorGroup$Companion;
+
+    .line 90
+    .line 91
+    sget-object v1, LX/2G8;->PUBLICATION:LX/2G8;
+
+    .line 92
     .line 93
+    const/16 v0, 0x15
+
     .line 94
     .line 95
-    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->Companion:Lcom/shopify/checkout/models/errors/ErrorGroup$Companion;
+    invoke-static {v1, v0}, LX/4Kh;->A00(LX/2G8;I)LX/3gS;
 
     .line 96
     .line 97
-    sget-object v1, LX/6MG;->PUBLICATION:LX/6MG;
-
     .line 98
-    .line 99
-    const/4 v0, 0x4
-
-    .line 100
-    invoke-static {v1, v0}, LX/4wr;->A00(LX/6MG;I)LX/0tD;
-
-    .line 101
-    .line 102
-    .line 103
     move-result-object v0
 
-    .line 104
-    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->$cachedSerializer$delegate:LX/0tD;
+    .line 99
+    sput-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->$cachedSerializer$delegate:LX/3gS;
 
-    .line 105
-    .line 106
+    .line 100
+    .line 101
     return-void
 .end method
 
@@ -323,14 +300,22 @@
     return-void
 .end method
 
-.method public static final synthetic access$get$cachedSerializer$delegate$cp()LX/0tD;
+.method public static final synthetic access$get$cachedSerializer$delegate$cp()LX/3gS;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->$cachedSerializer$delegate:LX/0tD;
+    sget-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->$cachedSerializer$delegate:LX/3gS;
 
     .line 1
     .line 2
+    return-object v0
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/shopify/checkout/models/errors/ErrorGroup;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
     return-object v0
 .end method
 

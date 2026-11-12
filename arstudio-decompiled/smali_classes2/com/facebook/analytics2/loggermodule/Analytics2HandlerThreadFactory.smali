@@ -4,13 +4,12 @@
 
 # interfaces
 .implements Lcom/facebook/analytics2/logger/HandlerThreadFactory;
-.implements LX/0Qe;
 
 
 # instance fields
-.field public A00:LX/2yz;
+.field public A00:LX/2dX;
 
-.field public A01:LX/2nm;
+.field public A01:LX/2Wa;
 
 
 # direct methods
@@ -23,11 +22,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AAp:I
+    sget v0, LX/2I6;->A7d:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -35,19 +34,19 @@
     move-result-object v0
 
     .line 9
-    check-cast v0, LX/2nm;
+    check-cast v0, LX/2Wa;
 
     .line 10
     .line 11
-    iput-object v0, p0, Lcom/facebook/analytics2/loggermodule/Analytics2HandlerThreadFactory;->A01:LX/2nm;
+    iput-object v0, p0, Lcom/facebook/analytics2/loggermodule/Analytics2HandlerThreadFactory;->A01:LX/2Wa;
 
     .line 12
     .line 13
-    sget v0, LX/2eq;->AAq:I
+    sget v0, LX/2I6;->A7e:I
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 16
     .line 17
@@ -55,11 +54,11 @@
     move-result-object v0
 
     .line 19
-    check-cast v0, LX/2yz;
+    check-cast v0, LX/2dX;
 
     .line 20
     .line 21
-    iput-object v0, p0, Lcom/facebook/analytics2/loggermodule/Analytics2HandlerThreadFactory;->A00:LX/2yz;
+    iput-object v0, p0, Lcom/facebook/analytics2/loggermodule/Analytics2HandlerThreadFactory;->A00:LX/2dX;
 
     .line 22
     .line 23
@@ -68,11 +67,11 @@
 
 
 # virtual methods
-.method public final A7o(Ljava/lang/String;I)Landroid/os/HandlerThread;
+.method public final A67(Ljava/lang/String;I)Landroid/os/HandlerThread;
     .locals 3
 
     .line 0
-    iget-object v2, p0, Lcom/facebook/analytics2/loggermodule/Analytics2HandlerThreadFactory;->A01:LX/2nm;
+    iget-object v2, p0, Lcom/facebook/analytics2/loggermodule/Analytics2HandlerThreadFactory;->A01:LX/2Wa;
 
     .line 1
     .line 2
@@ -80,11 +79,11 @@
 
     .line 3
     :try_start_0
-    iget-object v0, v2, LX/2nm;->A02:LX/0Na;
+    iget-object v0, v2, LX/2Wa;->A01:LX/0RP;
 
     .line 4
     .line 5
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -92,15 +91,15 @@
     move-result-object v1
 
     .line 9
-    check-cast v1, LX/2nl;
+    check-cast v1, LX/2kZ;
 
     .line 10
     .line 11
-    iget-object v0, v2, LX/2nm;->A01:LX/3Ih;
+    iget-object v0, v2, LX/2Wa;->A00:LX/2kb;
 
     .line 12
     .line 13
-    invoke-virtual {v1, v0, p1, p2}, LX/2nl;->A00(LX/3Ih;Ljava/lang/String;I)Landroid/os/HandlerThread;
+    invoke-virtual {v1, v0, p1, p2}, LX/2kZ;->A00(LX/2kb;Ljava/lang/String;I)Landroid/os/HandlerThread;
 
     .line 14
     .line 15
@@ -116,7 +115,7 @@
     const/4 v0, 0x0
 
     .line 19
-    invoke-static {v1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 20
     .line 21

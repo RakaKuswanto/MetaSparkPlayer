@@ -1,20 +1,8 @@
-.class public final LX/3Fn;
-.super LX/3FI;
+.class public interface abstract LX/3FN;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0yO;
 
-
-# direct methods
-.method public constructor <init>(Lorg/json/JSONObject;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1}, LX/3FI;-><init>(Lorg/json/JSONObject;)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract logForBugReport(Ljava/lang/String;Ljava/lang/String;)V
 .end method

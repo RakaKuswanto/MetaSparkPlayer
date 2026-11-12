@@ -29,11 +29,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x10
+    const/16 v0, 0x2d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
 
     .line 3
     .line 4
@@ -57,23 +57,18 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0s(Ljava/lang/Object;)V
+    invoke-static {p1, p0}, LX/0X1;->A1a(Landroid/os/Parcel;Ljava/lang/Object;)Z
 
     .line 4
     .line 5
     .line 6
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
-    .line 7
-    .line 8
-    .line 9
     move-result v0
 
-    .line 10
+    .line 7
     iput-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerBirthdayData;->A00:Z
 
-    .line 11
-    .line 12
+    .line 8
+    .line 9
     return-void
 .end method
 
@@ -151,7 +146,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A04(Z)I
+    invoke-static {v0}, LX/1O4;->A03(Z)I
 
     .line 3
     .line 4

@@ -1,495 +1,345 @@
-.class public abstract LX/4bc;
-.super Ljava/lang/Object;
+.class public final enum LX/4bc;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements Landroid/view/Window$Callback;
+
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/4bc;
+
+.field public static final enum FB_SANS:LX/4bc;
+
+.field public static final enum OPTIMISTIC_DISPLAY_APP:LX/4bc;
+
+.field public static final enum OPTIMISTIC_DISPLAY_APP_MEDIUM:LX/4bc;
+
+.field public static final enum OPTIMISTIC_TEXT_APP_BOLD:LX/4bc;
+
+.field public static final enum OPTIMISTIC_TEXT_APP_MEDIUM:LX/4bc;
+
+.field public static final enum OPTIMISTIC_TEXT_APP_REGULAR:LX/4bc;
+
+.field public static final enum ROBOTO:LX/4bc;
 
 
 # instance fields
-.field public final A00:Landroid/view/Window$Callback;
+.field public final value:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Window$Callback;)V
-    .locals 1
+.method public static final synthetic $values()[LX/4bc;
+    .locals 3
+
+    const/4 v0, 0x7
+
+    new-array v2, v0, [LX/4bc;
+
+    sget-object v1, LX/4bc;->ROBOTO:LX/4bc;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4bc;->FB_SANS:LX/4bc;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4bc;->OPTIMISTIC_DISPLAY_APP:LX/4bc;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4bc;->OPTIMISTIC_DISPLAY_APP_MEDIUM:LX/4bc;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4bc;->OPTIMISTIC_TEXT_APP_REGULAR:LX/4bc;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4bc;->OPTIMISTIC_TEXT_APP_MEDIUM:LX/4bc;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4bc;->OPTIMISTIC_TEXT_APP_BOLD:LX/4bc;
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v3, "ROBOTO"
+
+    .line 1
+    .line 2
+    const/4 v2, 0x0
+
+    .line 3
+    const-string v1, "sans-serif"
+
+    .line 4
+    .line 5
+    new-instance v0, LX/4bc;
+
+    .line 6
+    .line 7
+    invoke-direct {v0, v3, v2, v1}, LX/4bc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    sput-object v0, LX/4bc;->ROBOTO:LX/4bc;
+
+    .line 11
+    .line 12
+    const-string v3, "FB_SANS"
+
+    .line 13
+    .line 14
+    const/4 v2, 0x1
+
+    .line 15
+    const-string v1, "Facebook Sans Variable"
+
+    .line 16
+    .line 17
+    new-instance v0, LX/4bc;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, v3, v2, v1}, LX/4bc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 20
+    .line 21
+    .line 22
+    sput-object v0, LX/4bc;->FB_SANS:LX/4bc;
+
+    .line 23
+    .line 24
+    const-string v3, "OPTIMISTIC_DISPLAY_APP"
+
+    .line 25
+    .line 26
+    const/4 v2, 0x2
+
+    .line 27
+    const-string v1, "Optimistic Display App"
+
+    .line 28
+    .line 29
+    new-instance v0, LX/4bc;
+
+    .line 30
+    .line 31
+    invoke-direct {v0, v3, v2, v1}, LX/4bc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 32
+    .line 33
+    .line 34
+    sput-object v0, LX/4bc;->OPTIMISTIC_DISPLAY_APP:LX/4bc;
+
+    .line 35
+    .line 36
+    const-string v3, "OPTIMISTIC_DISPLAY_APP_MEDIUM"
+
+    .line 37
+    .line 38
+    const/4 v2, 0x3
+
+    .line 39
+    const-string v1, "Optimistic Display App Medium"
+
+    .line 40
+    .line 41
+    new-instance v0, LX/4bc;
+
+    .line 42
+    .line 43
+    invoke-direct {v0, v3, v2, v1}, LX/4bc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 44
+    .line 45
+    .line 46
+    sput-object v0, LX/4bc;->OPTIMISTIC_DISPLAY_APP_MEDIUM:LX/4bc;
+
+    .line 47
+    .line 48
+    const-string v3, "OPTIMISTIC_TEXT_APP_REGULAR"
+
+    .line 49
+    .line 50
+    const/4 v2, 0x4
+
+    .line 51
+    const-string v1, "Optimistic Text App Regular"
+
+    .line 52
+    .line 53
+    new-instance v0, LX/4bc;
+
+    .line 54
+    .line 55
+    invoke-direct {v0, v3, v2, v1}, LX/4bc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 56
+    .line 57
+    .line 58
+    sput-object v0, LX/4bc;->OPTIMISTIC_TEXT_APP_REGULAR:LX/4bc;
+
+    .line 59
+    .line 60
+    const-string v3, "OPTIMISTIC_TEXT_APP_MEDIUM"
+
+    .line 61
+    .line 62
+    const/4 v2, 0x5
+
+    .line 63
+    const-string v1, "Optimistic Text App Medium"
+
+    .line 64
+    .line 65
+    new-instance v0, LX/4bc;
+
+    .line 66
+    .line 67
+    invoke-direct {v0, v3, v2, v1}, LX/4bc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 68
+    .line 69
+    .line 70
+    sput-object v0, LX/4bc;->OPTIMISTIC_TEXT_APP_MEDIUM:LX/4bc;
+
+    .line 71
+    .line 72
+    const-string v3, "OPTIMISTIC_TEXT_APP_BOLD"
+
+    .line 73
+    .line 74
+    const/4 v2, 0x6
+
+    .line 75
+    const-string v1, "Optimistic Text App Bold"
+
+    .line 76
+    .line 77
+    new-instance v0, LX/4bc;
+
+    .line 78
+    .line 79
+    invoke-direct {v0, v3, v2, v1}, LX/4bc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 80
+    .line 81
+    .line 82
+    sput-object v0, LX/4bc;->OPTIMISTIC_TEXT_APP_BOLD:LX/4bc;
+
+    .line 83
+    .line 84
+    invoke-static {}, LX/4bc;->$values()[LX/4bc;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object v0
+
+    .line 88
+    sput-object v0, LX/4bc;->$VALUES:[LX/4bc;
+
+    .line 89
+    .line 90
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v0
+
+    .line 94
+    sput-object v0, LX/4bc;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 95
+    .line 96
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
-    if-eqz p1, :cond_0
+    iput-object p3, p0, LX/4bc;->value:Ljava/lang/String;
 
     .line 4
     .line 5
-    iput-object p1, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 6
-    .line 7
     return-void
+.end method
 
-    .line 8
-    :cond_0
-    const-string v0, "Window callback may not be null"
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
 
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    sget-object v0, LX/4bc;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 11
-    .line 12
-    .line 13
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/4bc;
+    .locals 1
+
+    const-class v0, LX/4bc;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
     move-result-object v0
 
-    .line 14
-    throw v0
+    check-cast v0, LX/4bc;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/4bc;
+    .locals 1
+
+    sget-object v0, LX/4bc;->$VALUES:[LX/4bc;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/4bc;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
+.method public getValue()Ljava/lang/String;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
+    iget-object v0, p0, LX/4bc;->value:Ljava/lang/String;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final dispatchTrackballEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->dispatchTrackballEvent(Landroid/view/MotionEvent;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final onActionModeFinished(Landroid/view/ActionMode;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->onActionModeFinished(Landroid/view/ActionMode;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final onActionModeStarted(Landroid/view/ActionMode;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->onActionModeStarted(Landroid/view/ActionMode;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final onAttachedToWindow()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, Landroid/view/Window$Callback;->onAttachedToWindow()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final onContentChanged()V
-    .locals 2
-
-    .line 0
-    move-object v1, p0
-
-    .line 1
-    check-cast v1, LX/4bQ;
-
-    .line 2
-    .line 3
-    iget-boolean v0, v1, LX/4bQ;->A01:Z
-
-    .line 4
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    .line 7
-    iget-object v0, v1, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 8
-    .line 9
-    invoke-interface {v0}, Landroid/view/Window$Callback;->onContentChanged()V
-
-    .line 10
-    .line 11
-    .line 12
-    :cond_0
-    return-void
-.end method
-
-.method public onCreatePanelMenu(ILandroid/view/Menu;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2}, Landroid/view/Window$Callback;->onCreatePanelMenu(ILandroid/view/Menu;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public onCreatePanelView(I)Landroid/view/View;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->onCreatePanelView(I)Landroid/view/View;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final onDetachedFromWindow()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, Landroid/view/Window$Callback;->onDetachedFromWindow()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final onMenuItemSelected(ILandroid/view/MenuItem;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public onMenuOpened(ILandroid/view/Menu;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public onPanelClosed(ILandroid/view/Menu;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2}, Landroid/view/Window$Callback;->onPanelClosed(ILandroid/view/Menu;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final onPointerCaptureChanged(Z)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p1}, LX/4d9;->A00(Landroid/view/Window$Callback;Z)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2, p3}, Landroid/view/Window$Callback;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-static {p2, v0, p1, p3}, LX/4cj;->A00(Landroid/view/Menu;Landroid/view/Window$Callback;Ljava/util/List;I)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final onSearchRequested()Z
-    .locals 1
-
-    .line 268435456
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 268435457
-    .line 268435458
-    invoke-interface {v0}, Landroid/view/Window$Callback;->onSearchRequested()Z
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    move-result v0
-
-    .line 268435462
-    return v0
-.end method
-
-.method public final onSearchRequested(Landroid/view/SearchEvent;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-static {p1, v0}, LX/4cW;->A01(Landroid/view/SearchEvent;Landroid/view/Window$Callback;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final onWindowFocusChanged(Z)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/view/Window$Callback;->onWindowFocusChanged(Z)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public abstract onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-.end method
-
-.method public onWindowStartingActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4bc;->A00:Landroid/view/Window$Callback;
-
-    .line 1
-    .line 2
-    invoke-static {p1, v0, p2}, LX/4cW;->A00(Landroid/view/ActionMode$Callback;Landroid/view/Window$Callback;I)Landroid/view/ActionMode;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
     return-object v0
 .end method

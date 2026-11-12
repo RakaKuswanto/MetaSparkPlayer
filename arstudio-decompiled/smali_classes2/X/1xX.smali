@@ -1,31 +1,32 @@
-.class public final LX/1xX;
+.class public interface abstract LX/1xX;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/2TF;
+# virtual methods
+.method public abstract AGh()Lcom/facebook/auth/viewercontext/ViewerContext;
+.end method
 
-.field public final synthetic A01:Landroid/view/View;
+.method public abstract AHx()Lcom/facebook/auth/viewercontext/ViewerContext;
+.end method
 
+.method public abstract AI7()Lcom/facebook/auth/viewercontext/ViewerContext;
+.end method
 
-# direct methods
-.method public constructor <init>(Landroid/view/View;LX/2TF;)V
-    .locals 0
+.method public abstract AMc()Lcom/facebook/auth/viewercontext/ViewerContext;
+.end method
 
-    .line 0
-    iput-object p2, p0, LX/1xX;->A00:LX/2TF;
+.method public abstract AMd()Lcom/facebook/auth/viewercontext/ViewerContext;
+.end method
 
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/1xX;->A01:Landroid/view/View;
+.method public abstract AeO()V
+.end method
 
-    .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract AfM(Lcom/facebook/auth/viewercontext/ViewerContext;)LX/2EH;
+.end method
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
+.method public abstract AiP()Lcom/facebook/auth/viewercontext/ViewerContext;
+.end method
+
+.method public abstract AlE(Lcom/facebook/auth/viewercontext/ViewerContext;)V
 .end method

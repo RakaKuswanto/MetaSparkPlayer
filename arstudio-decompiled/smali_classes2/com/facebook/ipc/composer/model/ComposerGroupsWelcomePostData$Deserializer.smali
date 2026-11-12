@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 5
 
     .line 0
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
@@ -30,12 +30,12 @@
     .line 2
     .line 3
     .line 4
-    move-result-object v4
+    move-result-object v3
 
     .line 5
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 6
     .line 7
@@ -43,7 +43,7 @@
     move-result-object v1
 
     .line 9
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 10
     .line 11
@@ -51,7 +51,7 @@
 
     .line 12
     .line 13
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 14
     .line 15
@@ -97,12 +97,12 @@
 
     .line 36
     .line 37
-    invoke-static {p1, v3, p2, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    invoke-static {p1, v4, p2, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
 
     .line 38
     .line 39
     .line 40
-    move-result-object v4
+    move-result-object v3
 
     .line 41
     const-string/jumbo v0, "welcomePostMembers"
@@ -110,14 +110,14 @@
     .line 42
     .line 43
     .line 44
-    invoke-static {v0, v4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 45
     .line 46
     .line 47
     :cond_1
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 48
     .line 49
@@ -125,7 +125,7 @@
     move-result-object v1
 
     .line 51
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 52
     .line 53
@@ -137,7 +137,7 @@
 
     .line 56
     :cond_2
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 57
     .line 58
@@ -152,7 +152,7 @@
 
     .line 61
     .line 62
-    invoke-direct {v0, v4}, Lcom/facebook/ipc/composer/model/ComposerGroupsWelcomePostData;-><init>(Lcom/google/common/collect/ImmutableList;)V
+    invoke-direct {v0, v3}, Lcom/facebook/ipc/composer/model/ComposerGroupsWelcomePostData;-><init>(Lcom/google/common/collect/ImmutableList;)V
 
     .line 63
     .line 64
@@ -168,10 +168,18 @@
 
     .line 68
     .line 69
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 70
     .line 71
     .line 72
-    throw v3
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v0
+
+    .line 76
+    throw v0
 .end method

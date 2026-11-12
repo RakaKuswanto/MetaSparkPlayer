@@ -21,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    sget-boolean v0, LX/3yJ;->A00:Z
+    sget-boolean v0, LX/3NQ;->A00:Z
 
     .line 4
     .line 5
@@ -33,48 +33,57 @@
     .line 7
     .line 8
     :try_start_0
-    const-string v0, "com.facebook.webpsupport.WebpBitmapFactoryImpl"
+    const-string/jumbo v0, "com.facebook.webpsupport.WebpBitmapFactoryImpl"
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yg;->A0c(Ljava/lang/String;)Ljava/lang/Object;
-
     .line 11
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
     .line 12
     .line 13
+    .line 14
     move-result-object v0
 
-    .line 14
+    .line 15
+    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
     check-cast v0, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;
 
-    .line 15
-    .line 16
+    .line 20
+    .line 21
     move-object v1, v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 17
+    .line 22
     :catchall_0
     const/4 v0, 0x1
 
-    .line 18
-    sput-boolean v0, LX/3yJ;->A00:Z
+    .line 23
+    sput-boolean v0, LX/3NQ;->A00:Z
 
-    .line 19
-    .line 20
+    .line 24
+    .line 25
     :cond_0
     iput-object v1, p0, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->A00:Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;
 
-    .line 21
-    .line 22
+    .line 26
+    .line 27
     return-void
 .end method
 
-.method private A00(Landroid/graphics/BitmapFactory$Options;LX/41z;[BI)Landroid/graphics/Bitmap;
+.method private A00(Landroid/graphics/BitmapFactory$Options;LX/3Nf;[BI)Landroid/graphics/Bitmap;
     .locals 7
 
     .line 0
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 1
     const/4 v6, 0x0
@@ -106,7 +115,7 @@
 
     .line 10
     .line 11
-    invoke-direct {v2, v3, v0}, Landroid/os/MemoryFile;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v2, v4, v0}, Landroid/os/MemoryFile;-><init>(Ljava/lang/String;I)V
 
     .line 12
     .line 13
@@ -114,13 +123,13 @@
     invoke-virtual {v2, v6}, Landroid/os/MemoryFile;->allowPurging(Z)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
-    .catchall {:try_start_0 .. :try_end_0} :catchall_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_5
 
     .line 15
     .line 16
     .line 17
     :try_start_1
-    invoke-virtual {p2}, LX/41z;->A09()Ljava/lang/Object;
+    invoke-virtual {p2}, LX/3Nf;->A07()Ljava/lang/Object;
 
     .line 18
     .line 19
@@ -128,29 +137,29 @@
     move-result-object v0
 
     .line 21
-    check-cast v0, LX/41G;
+    check-cast v0, LX/3Mh;
 
     .line 22
     .line 23
-    new-instance v4, LX/3yL;
+    new-instance v3, LX/3MW;
 
     .line 24
     .line 25
-    invoke-direct {v4, v0}, LX/3yL;-><init>(LX/41G;)V
+    invoke-direct {v3, v0}, LX/3MW;-><init>(LX/3Mh;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_3
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
     .line 26
     .line 27
     .line 28
     :try_start_2
-    new-instance v1, LX/3xO;
+    new-instance v1, LX/3cy;
 
     .line 29
     .line 30
-    invoke-direct {v1, v4, p4}, LX/3xO;-><init>(Ljava/io/InputStream;I)V
+    invoke-direct {v1, v3, p4}, LX/3cy;-><init>(Ljava/io/InputStream;I)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
     .line 31
     .line 32
@@ -164,7 +173,7 @@
     move-result-object v5
 
     .line 37
-    invoke-static {v1, v5}, LX/3VT;->A00(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    invoke-static {v1, v5}, LX/3Qn;->A00(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
     .line 38
     .line 39
@@ -185,38 +194,38 @@
     .line 46
     :cond_1
     :try_start_4
-    invoke-virtual {p2}, LX/41z;->close()V
+    invoke-virtual {p2}, LX/3Nf;->close()V
 
     .line 47
     .line 48
     .line 49
-    invoke-static {v4}, LX/3z5;->A01(Ljava/io/InputStream;)V
+    invoke-static {v3}, LX/3Lw;->A01(Ljava/io/InputStream;)V
 
     .line 50
     .line 51
     .line 52
-    invoke-static {v1}, LX/3z5;->A01(Ljava/io/InputStream;)V
+    invoke-static {v1}, LX/3Lw;->A01(Ljava/io/InputStream;)V
 
     .line 53
     .line 54
     .line 55
-    invoke-static {v5}, LX/3z5;->A00(Ljava/io/Closeable;)V
+    invoke-static {v5}, LX/3Lw;->A00(Ljava/io/Closeable;)V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
-    .catchall {:try_start_4 .. :try_end_4} :catchall_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_5
 
     .line 56
     .line 57
     .line 58
     :try_start_5
-    move-object v4, p0
+    move-object v5, p0
 
     .line 59
-    monitor-enter v4
+    monitor-enter v5
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
-    .catchall {:try_start_5 .. :try_end_5} :catchall_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 60
     :try_start_6
@@ -231,292 +240,318 @@
     .line 63
     .line 64
     :try_start_7
-    const-class v1, Landroid/os/MemoryFile;
+    const-class v3, Landroid/os/MemoryFile;
 
     .line 65
     .line 66
-    const-string/jumbo v0, "getFileDescriptor"
+    const-string/jumbo v1, "getFileDescriptor"
 
     .line 67
     .line 68
     .line 69
-    invoke-static {v1, v0}, LX/0Yj;->A0W(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
+    new-array v0, v6, [Ljava/lang/Class;
 
     .line 70
     .line 71
+    invoke-virtual {v3, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
     .line 72
+    .line 73
+    .line 74
     move-result-object v0
 
-    .line 73
+    .line 75
     sput-object v0, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->A01:Ljava/lang/reflect/Method;
 
-    .line 74
-    .line 75
+    .line 76
+    .line 77
     goto :goto_1
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 76
+    .line 78
     :catch_0
     move-exception v0
 
-    .line 77
-    :try_start_8
-    invoke-static {v0}, LX/37v;->A00(Ljava/lang/Throwable;)V
-
-    .line 78
     .line 79
+    :try_start_8
+    invoke-static {v0}, LX/0H3;->A00(Ljava/lang/Throwable;)V
+
     .line 80
-    throw v3
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
-
     .line 81
-    :cond_2
-    :goto_1
-    :try_start_9
-    monitor-exit v4
-
     .line 82
-    invoke-static {v2, v0}, LX/0Yi;->A0i(Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 83
     .line 84
     .line 85
-    move-result-object v1
+    move-result-object v0
 
     .line 86
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    throw v0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
     .line 87
+    :cond_2
+    :goto_1
+    :try_start_9
+    monitor-exit v5
+
     .line 88
+    invoke-static {v2, v0}, LX/0X6;->A0k(Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
+
     .line 89
+    .line 90
+    .line 91
+    move-result-object v1
+
+    .line 92
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 93
+    .line 94
+    .line 95
     check-cast v1, Ljava/io/FileDescriptor;
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_2
-    .catchall {:try_start_9 .. :try_end_9} :catchall_5
-
-    .line 90
-    .line 91
-    :try_start_a
-    iget-object v0, p0, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->A00:Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;
-
-    .line 92
-    .line 93
-    if-eqz v0, :cond_3
-
-    .line 94
-    .line 95
-    invoke-static {v1, v3, p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
     .line 96
     .line 97
-    .line 98
-    move-result-object v1
+    :try_start_a
+    iget-object v0, p0, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->A00:Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;
 
+    .line 98
     .line 99
-    const-string v0, "BitmapFactory returned null"
+    if-eqz v0, :cond_3
 
     .line 100
     .line 101
-    invoke-static {v1, v0}, LX/3ap;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_a
-    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_2
-    .catchall {:try_start_a .. :try_end_a} :catchall_5
+    invoke-static {v1, v4, p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 102
     .line 103
     .line 104
-    invoke-virtual {v2}, Landroid/os/MemoryFile;->close()V
+    move-result-object v1
 
     .line 105
+    const-string v0, "BitmapFactory returned null"
+
     .line 106
     .line 107
-    return-object v1
+    invoke-static {v1, v0}, LX/0H2;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_2
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
 
     .line 108
-    :cond_3
-    :try_start_b
-    const-string v0, "WebpBitmapFactory is null"
-
     .line 109
     .line 110
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-virtual {v2}, Landroid/os/MemoryFile;->close()V
 
     .line 111
     .line 112
     .line 113
-    move-result-object v0
+    return-object v1
 
     .line 114
+    :cond_3
+    :try_start_b
+    const-string/jumbo v0, "WebpBitmapFactory is null"
+
+    .line 115
+    .line 116
+    .line 117
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 118
+    .line 119
+    .line 120
+    move-result-object v0
+
+    .line 121
     throw v0
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_2
-    .catchall {:try_start_b .. :try_end_b} :catchall_5
+    .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 115
+    .line 122
     :catchall_0
     :try_start_c
     move-exception v0
 
-    .line 116
-    monitor-exit v4
+    .line 123
+    monitor-exit v5
 
-    .line 117
+    .line 124
     throw v0
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_1
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_2
-    .catchall {:try_start_c .. :try_end_c} :catchall_5
-
-    .line 118
-    :catch_1
-    :try_start_d
-    move-exception v0
-
-    .line 119
-    invoke-static {v0}, LX/37v;->A00(Ljava/lang/Throwable;)V
-
-    .line 120
-    .line 121
-    .line 122
-    throw v3
-    :try_end_d
-    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_2
-    .catchall {:try_start_d .. :try_end_d} :catchall_5
-
-    .line 123
-    :catch_2
-    move-exception v0
-
-    .line 124
-    move-object v3, v2
+    .catchall {:try_start_c .. :try_end_c} :catchall_1
 
     .line 125
-    goto :goto_4
+    :catch_1
+    move-exception v0
 
     .line 126
+    :try_start_d
+    invoke-static {v0}, LX/0H3;->A00(Ljava/lang/Throwable;)V
+
+    .line 127
+    .line 128
+    .line 129
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    .line 130
+    .line 131
+    .line 132
+    move-result-object v0
+
+    .line 133
+    throw v0
+    :try_end_d
+    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_2
+    .catchall {:try_start_d .. :try_end_d} :catchall_1
+
+    .line 134
     :catchall_1
     move-exception v0
 
-    .line 127
-    move-object v2, v3
+    .line 135
+    move-object v4, v2
 
-    .line 128
-    move-object v1, v3
+    .line 136
+    goto :goto_5
 
-    .line 129
-    goto :goto_2
+    .line 137
+    :catch_2
+    move-exception v0
 
-    .line 130
+    .line 138
+    move-object v4, v2
+
+    .line 139
+    goto :goto_4
+
+    .line 140
     :catchall_2
     move-exception v0
 
-    .line 131
+    .line 141
     move-object v2, v5
 
-    .line 132
-    :goto_2
-    move-object v5, v4
+    .line 142
+    goto :goto_2
 
-    .line 133
-    goto :goto_3
-
-    .line 134
+    .line 143
     :catchall_3
     move-exception v0
 
-    .line 135
-    move-object v2, v3
-
-    .line 136
-    move-object v1, v3
-
-    .line 137
-    :goto_3
-    :try_start_e
-    invoke-virtual {p2}, LX/41z;->close()V
-
-    .line 138
-    .line 139
-    .line 140
-    invoke-static {v5}, LX/3z5;->A01(Ljava/io/InputStream;)V
-
-    .line 141
-    .line 142
-    .line 143
-    invoke-static {v1}, LX/3z5;->A01(Ljava/io/InputStream;)V
-
     .line 144
+    move-object v2, v4
+
     .line 145
+    move-object v1, v4
+
     .line 146
-    invoke-static {v2}, LX/3z5;->A00(Ljava/io/Closeable;)V
+    :goto_2
+    move-object v5, v3
 
     .line 147
-    .line 148
-    .line 149
-    throw v0
-    :try_end_e
-    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_3
-    .catchall {:try_start_e .. :try_end_e} :catchall_4
+    goto :goto_3
 
-    .line 150
-    :catch_3
+    .line 148
+    :catchall_4
     move-exception v0
 
+    .line 149
+    move-object v2, v4
+
+    .line 150
+    move-object v1, v4
+
     .line 151
-    :goto_4
-    :try_start_f
-    invoke-static {v0}, LX/37v;->A00(Ljava/lang/Throwable;)V
+    :goto_3
+    :try_start_e
+    invoke-virtual {p2}, LX/3Nf;->close()V
 
     .line 152
     .line 153
     .line 154
-    const/4 v0, 0x0
+    invoke-static {v5}, LX/3Lw;->A01(Ljava/io/InputStream;)V
 
     .line 155
-    throw v0
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_4
-
     .line 156
-    :catchall_4
-    move-exception v0
-
     .line 157
-    goto :goto_5
+    invoke-static {v1}, LX/3Lw;->A01(Ljava/io/InputStream;)V
 
     .line 158
-    :catchall_5
-    move-exception v0
-
     .line 159
-    move-object v3, v2
-
     .line 160
-    :goto_5
-    if-eqz v3, :cond_4
+    invoke-static {v2}, LX/3Lw;->A00(Ljava/io/Closeable;)V
 
     .line 161
     .line 162
-    invoke-virtual {v3}, Landroid/os/MemoryFile;->close()V
-
     .line 163
+    throw v0
+    :try_end_e
+    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_3
+    .catchall {:try_start_e .. :try_end_e} :catchall_5
+
     .line 164
+    :catch_3
+    move-exception v0
+
     .line 165
+    :goto_4
+    :try_start_f
+    invoke-static {v0}, LX/0H3;->A00(Ljava/lang/Throwable;)V
+
+    .line 166
+    .line 167
+    .line 168
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    .line 169
+    .line 170
+    .line 171
+    move-result-object v0
+
+    .line 172
+    throw v0
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_5
+
+    .line 173
+    :catchall_5
+    move-exception v0
+
+    .line 174
+    :goto_5
+    if-eqz v4, :cond_4
+
+    .line 175
+    .line 176
+    invoke-virtual {v4}, Landroid/os/MemoryFile;->close()V
+
+    .line 177
+    .line 178
+    .line 179
     :cond_4
     throw v0
 .end method
 
 
 # virtual methods
-.method public final decodeByteArrayAsPurgeable(LX/41z;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method public final decodeByteArrayAsPurgeable(LX/3Nf;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
 
     .line 0
-    invoke-virtual {p1}, LX/41z;->A09()Ljava/lang/Object;
+    invoke-virtual {p1}, LX/3Nf;->A07()Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -524,11 +559,11 @@
     move-result-object v0
 
     .line 4
-    check-cast v0, LX/41G;
+    check-cast v0, LX/3Mh;
 
     .line 5
     .line 6
-    invoke-interface {v0}, LX/41G;->size()I
+    invoke-interface {v0}, LX/3Mh;->size()I
 
     .line 7
     .line 8
@@ -539,7 +574,7 @@
     const/4 v0, 0x0
 
     .line 11
-    invoke-direct {p0, p2, p1, v0, v1}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->A00(Landroid/graphics/BitmapFactory$Options;LX/41z;[BI)Landroid/graphics/Bitmap;
+    invoke-direct {p0, p2, p1, v0, v1}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->A00(Landroid/graphics/BitmapFactory$Options;LX/3Nf;[BI)Landroid/graphics/Bitmap;
 
     .line 12
     .line 13
@@ -550,11 +585,11 @@
     return-object v0
 .end method
 
-.method public final decodeJPEGByteArrayAsPurgeable(LX/41z;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method public final decodeJPEGByteArrayAsPurgeable(LX/3Nf;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 4
 
     .line 0
-    invoke-virtual {p1}, LX/41z;->A09()Ljava/lang/Object;
+    invoke-virtual {p1}, LX/3Nf;->A07()Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -562,7 +597,7 @@
     move-result-object v3
 
     .line 4
-    check-cast v3, LX/41G;
+    check-cast v3, LX/3Mh;
 
     .line 5
     .line 6
@@ -580,7 +615,7 @@
 
     .line 11
     .line 12
-    invoke-interface {v3, v0}, LX/41G;->read(I)B
+    invoke-interface {v3, v0}, LX/3Mh;->read(I)B
 
     .line 13
     .line 14
@@ -599,7 +634,7 @@
 
     .line 20
     .line 21
-    invoke-interface {v3, v0}, LX/41G;->read(I)B
+    invoke-interface {v3, v0}, LX/3Mh;->read(I)B
 
     .line 22
     .line 23
@@ -619,7 +654,7 @@
 
     .line 30
     :goto_0
-    invoke-direct {p0, p3, p1, v0, p2}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->A00(Landroid/graphics/BitmapFactory$Options;LX/41z;[BI)Landroid/graphics/Bitmap;
+    invoke-direct {p0, p3, p1, v0, p2}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->A00(Landroid/graphics/BitmapFactory$Options;LX/3Nf;[BI)Landroid/graphics/Bitmap;
 
     .line 31
     .line 32

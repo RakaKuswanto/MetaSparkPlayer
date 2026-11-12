@@ -1,87 +1,120 @@
-.class public final LX/0HZ;
-.super Ljava/lang/Object;
+.class public final enum LX/0Hz;
+.super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static final A00:Ljava/util/Random;
+.field public static final synthetic $VALUES:[LX/0Hz;
+
+.field public static final enum EXTERNAL:LX/0Hz;
+
+.field public static final enum INTERNAL:LX/0Hz;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public static synthetic $values()[LX/0Hz;
+    .locals 3
 
     .line 0
-    new-instance v0, Ljava/util/Random;
+    const/4 v0, 0x2
 
     .line 1
-    .line 2
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+    new-array v2, v0, [LX/0Hz;
 
+    .line 2
     .line 3
+    sget-object v1, LX/0Hz;->INTERNAL:LX/0Hz;
+
     .line 4
     .line 5
-    sput-object v0, LX/0HZ;->A00:Ljava/util/Random;
+    const/4 v0, 0x0
 
     .line 6
-    .line 7
-    return-void
-.end method
-
-.method public static A00()J
-    .locals 4
-
-    .line 0
-    sget-object v0, LX/0HZ;->A00:Ljava/util/Random;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v1
-
-    .line 6
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    aput-object v1, v2, v0
 
     .line 7
     .line 8
-    .line 9
-    move-result-wide v2
+    sget-object v1, LX/0Hz;->EXTERNAL:LX/0Hz;
 
+    .line 9
     .line 10
-    const/16 v0, 0x16
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "INTERNAL"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/0Hz;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/0Hz;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/0Hz;->INTERNAL:LX/0Hz;
+
+    .line 9
+    .line 10
+    const-string v2, "EXTERNAL"
 
     .line 11
     .line 12
-    shl-long/2addr v2, v0
+    const/4 v1, 0x1
 
     .line 13
-    const v0, 0x3fffff
+    new-instance v0, LX/0Hz;
 
     .line 14
     .line 15
+    invoke-direct {v0, v2, v1}, LX/0Hz;-><init>(Ljava/lang/String;I)V
+
     .line 16
-    and-int/2addr v1, v0
-
     .line 17
-    int-to-long v0, v1
-
     .line 18
-    or-long/2addr v2, v0
+    sput-object v0, LX/0Hz;->EXTERNAL:LX/0Hz;
 
     .line 19
-    const-wide v0, 0x7fffffffffffffffL
-
     .line 20
+    invoke-static {}, LX/0Hz;->$values()[LX/0Hz;
+
     .line 21
     .line 22
     .line 23
+    move-result-object v0
+
     .line 24
-    and-long/2addr v2, v0
+    sput-object v0, LX/0Hz;->$VALUES:[LX/0Hz;
 
     .line 25
-    return-wide v2
+    .line 26
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

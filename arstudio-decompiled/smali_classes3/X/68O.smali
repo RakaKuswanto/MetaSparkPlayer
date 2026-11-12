@@ -1,14 +1,13 @@
-.class public final LX/68O;
+.class public final LX/68o;
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:[I
+# interfaces
+.implements LX/694;
 
 
 # direct methods
-.method public constructor <init>([I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -17,9 +16,19 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/68O;->A00:[I
+    return-void
+.end method
 
-    .line 4
-    .line 5
+
+# virtual methods
+.method public final AVu(LX/5VZ;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Abi()V
+    .locals 0
+
     return-void
 .end method

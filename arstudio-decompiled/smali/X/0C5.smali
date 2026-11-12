@@ -3,27 +3,65 @@
 .source ""
 
 
-# static fields
-.field public static final A00:LX/5B5;
+# instance fields
+.field public A00:J
+
+.field public A01:J
+
+.field public A02:J
+
+.field public A03:J
+
+.field public A04:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 2
 
     .line 0
-    new-instance v0, LX/5B5;
+    const/4 v0, -0x1
 
     .line 1
-    .line 2
-    invoke-direct {v0}, LX/5B5;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     .line 3
     .line 4
+    int-to-long v0, v0
+
     .line 5
-    sput-object v0, LX/0C5;->A00:LX/5B5;
+    iput-wide v0, p0, LX/0C5;->A00:J
 
     .line 6
     .line 7
+    iput-wide v0, p0, LX/0C5;->A02:J
+
+    .line 8
+    .line 9
+    iput-wide v0, p0, LX/0C5;->A04:J
+
+    .line 10
+    .line 11
+    iput-wide v0, p0, LX/0C5;->A03:J
+
+    .line 12
+    .line 13
+    iput-wide v0, p0, LX/0C5;->A01:J
+
+    .line 14
+    .line 15
     return-void
 .end method

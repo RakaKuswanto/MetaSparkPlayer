@@ -2,60 +2,119 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayer$FbHeroPlayerListener$1"
+
 
 # instance fields
-.field public final A00:Landroid/net/Uri;
-
-.field public final A01:Lcom/facebook/graphql/enums/GraphQLVideoBroadcastStatus;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Ljava/lang/String;
-
-.field public final A04:Z
-
-.field public final A05:Z
-
-.field public final A06:Z
+.field public final synthetic A00:LX/3q9;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Lcom/facebook/graphql/enums/GraphQLVideoBroadcastStatus;Ljava/lang/String;Ljava/lang/String;ZZZ)V
+.method public constructor <init>(LX/3q9;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/3t2;->A00:LX/3q9;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p3, p0, LX/3t2;->A03:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p1, p0, LX/3t2;->A00:Landroid/net/Uri;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 4
+
+    .line 0
+    iget-object v2, p0, LX/3t2;->A00:LX/3q9;
+
+    .line 1
+    .line 2
+    iget-object v1, v2, LX/3q9;->A02:LX/3q7;
+
+    .line 3
+    .line 4
+    iget-boolean v0, v1, LX/3q7;->A0v:Z
+
+    .line 5
     .line 6
+    if-eqz v0, :cond_1
+
     .line 7
-    iput-object p4, p0, LX/3t2;->A02:Ljava/lang/String;
-
     .line 8
+    const-string v0, "FbHeroPlayer.mVideoPlayerListener.onAfterVideoPlayed"
+
     .line 9
-    iput-boolean p5, p0, LX/3t2;->A05:Z
-
     .line 10
-    .line 11
-    iput-boolean p6, p0, LX/3t2;->A04:Z
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
 
+    .line 11
     .line 12
     .line 13
-    iput-object p2, p0, LX/3t2;->A01:Lcom/facebook/graphql/enums/GraphQLVideoBroadcastStatus;
+    :try_start_0
+    iget-object v0, v2, LX/3q9;->A01:LX/3qM;
 
     .line 14
     .line 15
-    iput-boolean p7, p0, LX/3t2;->A06:Z
+    if-eqz v0, :cond_0
 
     .line 16
     .line 17
+    iget-object v3, v1, LX/3q7;->A0R:LX/3sj;
+
+    .line 18
+    .line 19
+    iget-object v2, v0, LX/3qM;->A0p:LX/3m5;
+
+    .line 20
+    .line 21
+    iget-object v0, v1, LX/3q7;->A07:LX/3ws;
+
+    .line 22
+    .line 23
+    iget-wide v0, v0, LX/3ws;->A0S:J
+
+    .line 24
+    .line 25
+    invoke-interface {v3, v2, v0, v1}, LX/3sj;->ASy(LX/3m5;J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 26
+    .line 27
+    .line 28
+    :cond_0
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 29
+    .line 30
+    .line 31
+    return-void
+
+    .line 32
+    :catchall_0
+    move-exception v0
+
+    .line 33
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 34
+    .line 35
+    .line 36
+    throw v0
+
+    .line 37
+    :cond_1
     return-void
 .end method

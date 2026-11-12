@@ -16,7 +16,7 @@
 
 .field public mInProgress:Ljava/lang/Boolean;
 
-.field public final mListener:LX/4uy;
+.field public final mListener:LX/4on;
 
 .field public mRotation:F
 
@@ -30,7 +30,7 @@
 
 
 # direct methods
-.method public constructor <init>(LX/4uy;)V
+.method public constructor <init>(LX/4on;)V
     .locals 1
 
     .line 0
@@ -46,7 +46,7 @@
 
     .line 5
     .line 6
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;->mListener:LX/4uy;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;->mListener:LX/4on;
 
     .line 7
     .line 8
@@ -76,11 +76,11 @@
 
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;->mListener:LX/4uy;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;->mListener:LX/4on;
 
     .line 6
     .line 7
-    invoke-interface {v0, p0}, LX/4uy;->onRotationEnd(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;)V
+    invoke-interface {v0, p0}, LX/4on;->onRotationEnd(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;)V
 
     .line 8
     .line 9
@@ -241,11 +241,11 @@
 
     .line 66
     .line 67
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;->mListener:LX/4uy;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;->mListener:LX/4on;
 
     .line 68
     .line 69
-    invoke-interface {v0, p0}, LX/4uy;->onRotationBegin(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;)Z
+    invoke-interface {v0, p0}, LX/4on;->onRotationBegin(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;)Z
 
     .line 70
     .line 71
@@ -451,11 +451,11 @@
 
     .line 80
     .line 81
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;->mListener:LX/4uy;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;->mListener:LX/4on;
 
     .line 82
     .line 83
-    invoke-interface {v0, p0}, LX/4uy;->onRotation(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;)Z
+    invoke-interface {v0, p0}, LX/4on;->onRotation(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;)Z
 
     .line 84
     .line 85

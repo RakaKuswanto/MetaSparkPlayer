@@ -4,8 +4,11 @@
 
 
 # virtual methods
-.method public abstract AR5()Z
+.method public abstract AVN(LX/3FS;)V
 .end method
 
-.method public abstract Ag4(Ljava/lang/Runnable;Ljava/lang/String;)Z
+.method public abstract AVO(LX/3FS;)V
+.end method
+
+.method public abstract AcI(Landroid/view/MotionEvent;)V
 .end method

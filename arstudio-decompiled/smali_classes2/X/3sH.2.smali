@@ -1,90 +1,120 @@
-.class public final LX/3sH;
-.super LX/3u5;
+.class public final LX/3sh;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/40M;
 
 
 # instance fields
-.field public final A00:I
+.field public A00:LX/1rU;
+
+.field public final A01:Landroid/content/Context;
+
+.field public final A02:LX/3zj;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(LX/3Ft;LX/3zj;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/3u5;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput p1, p0, LX/3sH;->A00:I
+    invoke-static {}, LX/2I6;->A01()Landroid/content/Context;
 
     .line 4
     .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/3sh;->A01:Landroid/content/Context;
+
+    .line 8
+    .line 9
+    invoke-static {p1}, LX/1rU;->A00(LX/3Ft;)LX/1rU;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/3sh;->A00:LX/1rU;
+
+    .line 14
+    .line 15
+    iput-object p2, p0, LX/3sh;->A02:LX/3zj;
+
+    .line 16
+    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final ASF(Z)Landroid/view/TextureView;
+    .locals 8
 
     .line 0
-    const/4 v3, 0x2
+    iget-object v0, p0, LX/3sh;->A02:LX/3zj;
 
     .line 1
-    new-array v2, v3, [Ljava/lang/Object;
-
     .line 2
-    .line 3
-    invoke-super {p0}, LX/3u5;->toString()Ljava/lang/String;
+    iget-object v2, p0, LX/3sh;->A01:Landroid/content/Context;
 
+    .line 3
     .line 4
+    iget-object v0, v0, LX/3zj;->A00:LX/3rV;
+
     .line 5
     .line 6
-    move-result-object v1
+    iget v3, v0, LX/3rV;->A04:I
 
     .line 7
-    const/4 v0, 0x0
-
     .line 8
-    aput-object v1, v2, v0
+    iget v4, v0, LX/3rV;->A02:I
 
     .line 9
     .line 10
-    iget v0, p0, LX/3sH;->A00:I
+    iget v5, v0, LX/3rV;->A03:I
 
     .line 11
     .line 12
-    invoke-static {v2, v0}, LX/001;->A19([Ljava/lang/Object;I)V
+    iget v6, v0, LX/3rV;->A01:I
 
     .line 13
     .line 14
-    .line 15
-    invoke-static {v2, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    iget-boolean v7, v0, LX/3rV;->A0C:Z
 
+    .line 15
     .line 16
+    new-instance v1, LX/61w;
+
     .line 17
     .line 18
-    move-result-object v1
+    invoke-direct/range {v1 .. v7}, LX/61w;-><init>(Landroid/content/Context;IIIIZ)V
 
     .line 19
-    const-string v0, "%s: %d"
-
     .line 20
     .line 21
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1}, LX/61w;->A00()V
 
     .line 22
     .line 23
     .line 24
-    move-result-object v0
+    iget v0, v0, LX/3rV;->A00:F
 
     .line 25
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 26
+    invoke-virtual {v1, v0}, LX/61w;->A01(F)V
+
     .line 27
     .line 28
-    return-object v0
+    .line 29
+    return-object v1
 .end method

@@ -3388,58 +3388,62 @@
 
     .line 1683
     .line 1684
-    const-string v0, "WEB_URL"
+    const-string/jumbo v0, "WEB_URL"
 
     .line 1685
     .line 1686
+    .line 1687
     aput-object v0, v2, v1
 
-    .line 1687
     .line 1688
+    .line 1689
     const/16 v1, 0x11a
 
-    .line 1689
     .line 1690
-    const-string v0, "WHATSAPP"
-
     .line 1691
-    .line 1692
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WHATSAPP"
 
+    .line 1692
     .line 1693
     .line 1694
-    const/16 v1, 0x11b
+    aput-object v0, v2, v1
 
     .line 1695
     .line 1696
-    const-string v0, "YOUR_JOBS"
+    const/16 v1, 0x11b
 
     .line 1697
     .line 1698
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "YOUR_JOBS"
 
     .line 1699
     .line 1700
+    .line 1701
+    aput-object v0, v2, v1
+
+    .line 1702
+    .line 1703
     const/16 v1, 0x11c
 
-    .line 1701
-    .line 1702
-    const-string v0, "YOU_TAB"
-
-    .line 1703
     .line 1704
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 1705
+    const-string/jumbo v0, "YOU_TAB"
+
     .line 1706
     .line 1707
-    move-result-object v0
-
     .line 1708
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLJobSearchSurfaceEnumSet;->A00:Ljava/util/Set;
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 1709
     .line 1710
+    .line 1711
+    move-result-object v0
+
+    .line 1712
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLJobSearchSurfaceEnumSet;->A00:Ljava/util/Set;
+
+    .line 1713
+    .line 1714
     return-void
 .end method
 

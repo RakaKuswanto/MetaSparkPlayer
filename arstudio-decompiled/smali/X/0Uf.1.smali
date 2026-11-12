@@ -1,34 +1,50 @@
-.class public final synthetic LX/0Uf;
+.class public final LX/0Uf;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/00M;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "WakingExecutorService$2"
 
 
 # instance fields
-.field public final synthetic A00:Landroidx/activity/ComponentActivity;
+.field public final synthetic A00:LX/02N;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/activity/ComponentActivity;)V
+.method public constructor <init>(LX/02N;)V
     .locals 0
 
+    .line 0
+    iput-object p1, p0, LX/0Uf;->A00:LX/02N;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/0Uf;->A00:Landroidx/activity/ComponentActivity;
-
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AWS(Landroid/content/Context;)V
+.method public final run()V
     .locals 1
 
-    iget-object v0, p0, LX/0Uf;->A00:Landroidx/activity/ComponentActivity;
+    .line 0
+    iget-object v0, p0, LX/0Uf;->A00:LX/02N;
 
-    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->A0A()V
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/02N;->A01(LX/02N;)V
 
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

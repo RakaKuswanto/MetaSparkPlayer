@@ -1,88 +1,178 @@
 .class public final LX/34W;
-.super LX/44B;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final synthetic A00:Landroid/net/Uri;
+.field public A00:J
 
-.field public final synthetic A01:LX/373;
+.field public A01:J
 
-.field public final synthetic A02:LX/33w;
+.field public A02:J
 
-.field public final synthetic A03:LX/41f;
+.field public A03:Z
 
-.field public final synthetic A04:Ljava/lang/String;
-
-.field public final synthetic A05:Ljava/lang/String;
+.field public A04:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;LX/373;LX/33w;LX/41f;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    iput-object p3, p0, LX/34W;->A02:LX/33w;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/34W;->A01:LX/373;
-
     .line 3
+    const-wide/16 v0, 0x0
+
     .line 4
-    iput-object p1, p0, LX/34W;->A00:Landroid/net/Uri;
-
     .line 5
+    iput-wide v0, p0, LX/34W;->A00:J
+
     .line 6
-    iput-object p4, p0, LX/34W;->A03:LX/41f;
-
     .line 7
+    iput-wide v0, p0, LX/34W;->A01:J
+
     .line 8
-    iput-object p5, p0, LX/34W;->A04:Ljava/lang/String;
-
     .line 9
-    .line 10
-    iput-object p6, p0, LX/34W;->A05:Ljava/lang/String;
+    iput-wide v0, p0, LX/34W;->A02:J
 
+    .line 10
     .line 11
+    const/4 v0, 0x0
+
     .line 12
-    invoke-direct {p0}, LX/44B;-><init>()V
+    iput-boolean v0, p0, LX/34W;->A03:Z
 
     .line 13
     .line 14
+    iput-boolean v0, p0, LX/34W;->A04:Z
+
     .line 15
+    .line 16
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01()V
-    .locals 3
+.method public final A00()LX/3Em;
+    .locals 13
 
     .line 0
-    iget-object v2, p0, LX/34W;->A01:LX/373;
+    iget-wide v5, p0, LX/34W;->A00:J
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/34W;->A02:LX/33w;
+    const-wide/16 v3, 0x0
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/33w;->A0A:LX/0Na;
+    cmp-long v0, v5, v3
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/0Yd;->A07(LX/0Na;)J
+    if-nez v0, :cond_0
 
     .line 7
     .line 8
-    .line 9
-    move-result-wide v0
+    iget-wide v1, p0, LX/34W;->A01:J
 
+    .line 9
     .line 10
-    iput-wide v0, v2, LX/373;->A01:J
+    cmp-long v0, v1, v3
 
     .line 11
     .line 12
-    return-void
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    iget-wide v1, p0, LX/34W;->A02:J
+
+    .line 15
+    .line 16
+    cmp-long v0, v1, v3
+
+    .line 17
+    .line 18
+    if-nez v0, :cond_0
+
+    .line 19
+    .line 20
+    const-string v0, "Should set at least some max size limit"
+
+    .line 21
+    .line 22
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    throw v0
+
+    .line 27
+    :cond_0
+    iget-wide v7, p0, LX/34W;->A01:J
+
+    .line 28
+    .line 29
+    cmp-long v0, v7, v3
+
+    .line 30
+    .line 31
+    if-nez v0, :cond_1
+
+    .line 32
+    .line 33
+    iput-wide v5, p0, LX/34W;->A01:J
+
+    .line 34
+    .line 35
+    move-wide v7, v5
+
+    .line 36
+    :cond_1
+    iget-wide v9, p0, LX/34W;->A02:J
+
+    .line 37
+    .line 38
+    cmp-long v0, v9, v3
+
+    .line 39
+    .line 40
+    if-nez v0, :cond_2
+
+    .line 41
+    .line 42
+    iput-wide v7, p0, LX/34W;->A02:J
+
+    .line 43
+    .line 44
+    move-wide v9, v7
+
+    .line 45
+    :cond_2
+    iget-boolean v11, p0, LX/34W;->A03:Z
+
+    .line 46
+    .line 47
+    iget-boolean v12, p0, LX/34W;->A04:Z
+
+    .line 48
+    .line 49
+    new-instance v4, LX/3Em;
+
+    .line 50
+    .line 51
+    invoke-direct/range {v4 .. v12}, LX/3Em;-><init>(JJJZZ)V
+
+    .line 52
+    .line 53
+    .line 54
+    return-object v4
 .end method

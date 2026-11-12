@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5YQ;
+.field public static final Companion:LX/6A2;
 
 
 # instance fields
@@ -32,110 +32,83 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5YQ;
+    new-instance v0, LX/6A2;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5YQ;-><init>()V
+    invoke-direct {v0}, LX/6A2;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->Companion:LX/5YQ;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->Companion:LX/6A2;
 
     .line 6
     .line 7
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isRenderingEnabled:Z
-
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isTrackingEnabled:Z
-
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isRecordSnapshotEnabled:Z
-
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isRecordImageDataEnabled:Z
-
-    const-string v1, ""
-
-    iput-object v1, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->storageDirPath:Ljava/lang/String;
-
-    const-string v0, "session"
-
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->sessionName:Ljava/lang/String;
-
-    iput-object v1, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->deviceType:Ljava/lang/String;
-
-    iput-object v1, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->buildNumber:Ljava/lang/String;
-
-    iput-object v1, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->trackerType:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(LX/5YP;)V
+.method public constructor <init>(LX/6A3;)V
     .locals 2
 
     .line 0
     const/4 v0, 0x1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isRenderingEnabled:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5
     .line 6
+    .line 7
+    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isRenderingEnabled:Z
+
+    .line 8
+    .line 9
     iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isTrackingEnabled:Z
 
-    .line 7
-    .line 8
+    .line 10
+    .line 11
     iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isRecordSnapshotEnabled:Z
 
-    .line 9
-    .line 10
+    .line 12
+    .line 13
     iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->isRecordImageDataEnabled:Z
 
-    .line 11
-    .line 12
+    .line 14
+    .line 15
     const-string v1, ""
 
-    .line 13
-    .line 14
+    .line 16
+    .line 17
     iput-object v1, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->storageDirPath:Ljava/lang/String;
 
-    .line 15
-    .line 16
+    .line 18
+    .line 19
     const-string v0, "session"
 
-    .line 17
-    .line 18
+    .line 20
+    .line 21
     iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->sessionName:Ljava/lang/String;
 
-    .line 19
-    .line 20
+    .line 22
+    .line 23
     iput-object v1, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->deviceType:Ljava/lang/String;
 
-    .line 21
-    .line 22
+    .line 24
+    .line 25
     iput-object v1, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->buildNumber:Ljava/lang/String;
 
-    .line 23
-    .line 24
+    .line 26
+    .line 27
     iput-object v1, p0, Lcom/facebook/cameracore/mediapipeline/sessionrecording/interfaces/SessionRecordingConfig;->trackerType:Ljava/lang/String;
 
-    .line 25
-    .line 26
+    .line 28
+    .line 29
     return-void
 .end method
 

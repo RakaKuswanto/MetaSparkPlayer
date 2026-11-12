@@ -1,512 +1,519 @@
-.class public final LX/4GZ;
+.class public final synthetic LX/4gZ;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0GZ;
+
 
 # instance fields
-.field public final A00:LX/4HA;
+.field public final synthetic A00:I
 
-.field public final A01:LX/4HA;
+.field public final synthetic A01:I
 
-.field public final A02:LX/4GN;
+.field public final synthetic A02:I
 
-.field public final A03:LX/4Ed;
+.field public final synthetic A03:LX/4fg;
 
-.field public final A04:Ljava/util/List;
+.field public final synthetic A04:Ljava/lang/String;
 
-.field public final A05:LX/4HA;
+.field public final synthetic A05:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;LX/4CF;LX/4GN;LX/4Ed;LX/4DB;Ljava/lang/String;)V
-    .locals 24
+.method public synthetic constructor <init>(LX/4fg;Ljava/lang/String;IIIZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, LX/4gZ;->A04:Ljava/lang/String;
+
+    iput p3, p0, LX/4gZ;->A00:I
+
+    iput-object p1, p0, LX/4gZ;->A03:LX/4fg;
+
+    iput-boolean p6, p0, LX/4gZ;->A05:Z
+
+    iput p4, p0, LX/4gZ;->A01:I
+
+    iput p5, p0, LX/4gZ;->A02:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
     .line 0
-    move-object/from16 v6, p0
+    iget-object v10, p0, LX/4gZ;->A04:Ljava/lang/String;
 
     .line 1
     .line 2
-    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
+    iget v9, p0, LX/4gZ;->A00:I
 
     .line 3
     .line 4
+    iget-object v8, p0, LX/4gZ;->A03:LX/4fg;
+
     .line 5
-    new-instance v15, LX/4I8;
-
     .line 6
+    iget-boolean v7, p0, LX/4gZ;->A05:Z
+
     .line 7
-    move-object/from16 v16, p1
-
     .line 8
+    iget v6, p0, LX/4gZ;->A01:I
+
     .line 9
-    move-object/from16 v2, p2
-
     .line 10
+    iget v5, p0, LX/4gZ;->A02:I
+
     .line 11
-    move-object/from16 v18, p3
-
     .line 12
+    check-cast p1, Ljava/util/Map;
+
     .line 13
-    move-object/from16 v19, p4
-
     .line 14
+    if-eqz v10, :cond_4
+
     .line 15
-    move-object/from16 v5, p5
-
     .line 16
-    .line 17
-    move-object/from16 v4, p6
+    invoke-virtual {v10}, Ljava/lang/String;->length()I
 
+    .line 17
     .line 18
     .line 19
-    move-object/from16 v22, p7
+    move-result v0
 
     .line 20
+    if-lez v0, :cond_4
+
     .line 21
-    move-object/from16 v23, p8
-
     .line 22
-    .line 23
-    move-object/from16 v20, v5
+    :cond_0
+    :goto_0
+    packed-switch v9, :pswitch_data_0
 
+    .line 23
     .line 24
     .line 25
-    move-object/from16 v21, v4
+    const-string v1, "measure"
 
     .line 26
     .line 27
-    move-object/from16 v17, v2
+    :goto_1
+    const-string v0, "source"
 
     .line 28
     .line 29
-    invoke-direct/range {v15 .. v23}, LX/4I8;-><init>(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;LX/4CF;LX/4GN;LX/4Ed;LX/4DB;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 30
     .line 31
     .line 32
-    sget-object v0, LX/4Ga;->BROWSER_CLOSE:LX/4Ga;
+    packed-switch v9, :pswitch_data_1
 
     .line 33
     .line 34
-    const/4 v12, 0x0
-
     .line 35
-    invoke-static {v15, v0, v12}, LX/4I8;->A00(LX/4I8;LX/4Ga;Z)LX/4HA;
+    :pswitch_0
+    const-string v1, "async"
 
     .line 36
     .line 37
-    .line 38
-    move-result-object v0
+    :goto_2
+    const-string v0, "execution-mode"
 
+    .line 38
     .line 39
-    iput-object v0, v6, LX/4GZ;->A00:LX/4HA;
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 40
     .line 41
-    sget-object v3, LX/4Ga;->BWP_MORE_INFO:LX/4Ga;
-
     .line 42
-    .line 43
-    invoke-static {v15, v3, v12}, LX/4I8;->A00(LX/4I8;LX/4Ga;Z)LX/4HA;
+    const-string v0, "attribution"
 
+    .line 43
     .line 44
+    invoke-interface {p1, v0, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 45
     .line 46
-    move-result-object v0
-
     .line 47
-    iput-object v0, v6, LX/4GZ;->A01:LX/4HA;
+    if-eqz v8, :cond_3
 
     .line 48
     .line 49
-    sget-object v8, LX/4Ga;->MARK_LINK_AS_SUSPICIOUS:LX/4Ga;
+    invoke-virtual {v8}, LX/4fg;->A0H()Ljava/lang/String;
 
     .line 50
     .line 51
-    invoke-static {v15, v8, v12}, LX/4I8;->A00(LX/4I8;LX/4Ga;Z)LX/4HA;
-
     .line 52
-    .line 53
-    .line 54
-    move-result-object v0
+    move-result-object v1
 
+    .line 53
+    :goto_3
+    const-string v0, "root"
+
+    .line 54
     .line 55
-    iput-object v0, v6, LX/4GZ;->A05:LX/4HA;
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 56
     .line 57
-    sget-object v0, LX/1V6;->A0K:LX/1V6;
-
     .line 58
-    .line 59
-    iget-object v1, v0, LX/1V6;->A02:LX/1RN;
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 59
     .line 60
     .line 61
-    sget-object v0, LX/1RN;->CUSTOM_IAB_FOR_DTC:LX/1RN;
-
-    .line 62
-    .line 63
-    if-ne v1, v0, :cond_5
-
-    .line 64
-    .line 65
-    invoke-static {v3}, LX/0Yi;->A0u(Ljava/lang/Object;)Ljava/util/ArrayList;
-
-    .line 66
-    .line 67
-    .line 68
     move-result-object v1
 
-    .line 69
-    const/4 v0, 0x0
+    .line 62
+    const-string v0, "forced"
 
+    .line 63
+    .line 64
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 65
+    .line 66
+    .line 67
+    const/4 v0, -0x1
+
+    .line 68
+    if-ne v6, v0, :cond_1
+
+    .line 69
     .line 70
-    if-eqz p2, :cond_2
+    if-eq v5, v0, :cond_2
 
     .line 71
     .line 72
-    const-string v0, "BrowserLiteIntent.EXTRA_SHOULD_CRASH_RENDERER"
+    :cond_1
+    invoke-static {v6}, LX/4KG;->A00(I)Ljava/lang/String;
 
     .line 73
     .line 74
-    invoke-virtual {v2, v0, v12}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
     .line 75
-    .line 76
-    .line 77
-    move-result v0
+    move-result-object v1
 
+    .line 76
+    const-string v0, "widthSpec"
+
+    .line 77
     .line 78
-    if-eqz v0, :cond_0
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 79
     .line 80
-    sget-object v0, LX/4Ga;->CRASH_RENDERER:LX/4Ga;
-
     .line 81
-    .line 82
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-static {v5}, LX/4KG;->A00(I)Ljava/lang/String;
 
+    .line 82
     .line 83
     .line 84
+    move-result-object v1
+
     .line 85
-    :cond_0
-    const-string v0, "BrowserLiteIntent.EXTRA_IS_TABS_ENABLED"
+    const-string v0, "heightSpec"
 
     .line 86
     .line 87
-    invoke-virtual {v2, v0, v12}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 88
     .line 89
     .line 90
-    move-result v0
+    :cond_2
+    invoke-static {}, LX/3NH;->A00()Ljava/lang/String;
 
     .line 91
-    if-eqz v0, :cond_1
-
     .line 92
     .line 93
-    sget-object v0, LX/4Ga;->TAB_SELECTOR:LX/4Ga;
+    move-result-object v1
 
     .line 94
-    .line 95
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    const-string v0, "stack"
 
+    .line 95
     .line 96
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 97
     .line 98
-    :cond_1
-    const-string v0, "BrowserLiteIntent.IAB_UX_FEATURES_ENABLED"
-
     .line 99
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
+
     .line 100
-    invoke-static {v2, v0}, LX/4BE;->A1Z(Landroid/content/Intent;Ljava/lang/String;)Z
-
     .line 101
-    .line 102
-    .line 103
-    move-result v0
+    return-object v0
 
+    .line 102
+    :cond_3
+    const-string v1, "null"
+
+    .line 103
     .line 104
-    :cond_2
-    const/4 v7, 0x6
+    goto :goto_3
 
     .line 105
-    const/4 v14, 0x5
+    :pswitch_1
+    const-string v1, "sync"
 
     .line 106
-    const/4 v13, 0x4
-
     .line 107
-    const/4 v11, 0x3
+    goto :goto_2
 
     .line 108
-    const/4 v10, 0x2
+    :pswitch_2
+    const-string v1, "set-root"
 
     .line 109
-    const/4 v9, 0x7
-
     .line 110
-    const/4 v3, 0x1
+    goto :goto_1
 
     .line 111
-    if-eqz v0, :cond_4
+    :pswitch_3
+    const-string v1, "set-size"
 
     .line 112
     .line 113
-    const/16 v0, 0x9
+    goto :goto_1
 
     .line 114
-    .line 115
-    new-array v2, v0, [LX/4Ga;
+    :pswitch_4
+    const-string v1, "update-state"
 
+    .line 115
     .line 116
+    goto :goto_1
+
     .line 117
-    sget-object v0, LX/4Ga;->SHARE:LX/4Ga;
+    :cond_4
+    sget-object v0, LX/4fn;->A01:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 118
     .line 119
-    aput-object v0, v2, v12
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     .line 120
     .line 121
-    sget-object v0, LX/4Ga;->BOOKMARK:LX/4Ga;
-
     .line 122
+    move-result-object v1
+
     .line 123
-    aput-object v0, v2, v3
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 124
     .line 125
-    sget-object v0, LX/4Ga;->SAVED_SESSION:LX/4Ga;
-
     .line 126
+    check-cast v1, LX/17c;
+
     .line 127
-    aput-object v0, v2, v10
-
     .line 128
+    sget-object v0, LX/17c;->VERBOSE:LX/17c;
+
     .line 129
-    sget-object v0, LX/4Ga;->HISTORY:LX/4Ga;
-
     .line 130
-    .line 131
-    aput-object v0, v2, v11
+    invoke-virtual {v1, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
+    .line 131
     .line 132
     .line 133
-    sget-object v0, LX/4Ga;->DIVIDER:LX/4Ga;
+    move-result v0
 
     .line 134
+    if-lez v0, :cond_0
+
     .line 135
-    aput-object v0, v2, v13
-
     .line 136
+    new-instance v0, Ljava/lang/RuntimeException;
+
     .line 137
-    sget-object v0, LX/4Ga;->BROWSER_REFRESH:LX/4Ga;
-
     .line 138
-    .line 139
-    aput-object v0, v2, v14
+    invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
+    .line 139
     .line 140
     .line 141
-    sget-object v0, LX/4Ga;->OPEN_EXTERNAL_BROWSER:LX/4Ga;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     .line 142
     .line 143
-    aput-object v0, v2, v7
-
     .line 144
+    move-result-object v4
+
     .line 145
-    aput-object v8, v2, v9
+    invoke-static {v4}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 146
     .line 147
-    const/16 v7, 0x8
-
     .line 148
+    array-length v3, v4
+
     .line 149
-    :goto_0
-    sget-object v0, LX/4Ga;->WEBSITE_SECURITY:LX/4Ga;
+    const/4 v2, 0x0
 
     .line 150
-    .line 151
-    invoke-static {v0, v2, v7}, LX/0Yg;->A0z(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
+    :goto_4
+    if-ge v2, v3, :cond_0
 
+    .line 151
     .line 152
+    aget-object v12, v4, v2
+
     .line 153
     .line 154
-    move-result-object v0
+    invoke-virtual {v12}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     .line 155
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
     .line 156
     .line 157
+    move-result-object v1
+
     .line 158
-    invoke-static/range {v16 .. v16}, LX/4Jb;->A09(Landroid/content/Context;)Z
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 159
     .line 160
     .line 161
-    move-result v0
+    const-string v0, "com.facebook.litho.ComponentTree"
 
     .line 162
-    if-eqz v0, :cond_3
-
     .line 163
+    const/4 v11, 0x0
+
     .line 164
-    sget-object v0, LX/4Ga;->USING_HELIUM:LX/4Ga;
+    invoke-static {v1, v0, v11}, LX/3in;->A0Q(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
     .line 165
     .line 166
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 167
+    move-result v0
+
     .line 168
+    if-nez v0, :cond_5
+
     .line 169
-    :cond_3
-    sget-object v0, LX/4Ga;->BROWSER_SETTINGS:LX/4Ga;
-
     .line 170
-    .line 171
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v12}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
+    .line 171
     .line 172
     .line 173
+    move-result-object v1
+
     .line 174
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 175
     .line 176
     .line 177
-    move-result-object v2
+    const-string v0, "com.facebook.litho.debug."
 
     .line 178
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
     .line 179
+    invoke-static {v1, v0, v11}, LX/3in;->A0Q(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
     .line 180
     .line 181
-    move-result-object v1
-
     .line 182
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 183
-    .line 184
-    .line 185
     move-result v0
 
-    .line 186
-    if-eqz v0, :cond_6
+    .line 183
+    if-nez v0, :cond_5
 
+    .line 184
+    .line 185
+    invoke-virtual {v12}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+
+    .line 186
     .line 187
     .line 188
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v1
 
     .line 189
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
+
     .line 190
     .line 191
-    move-result-object v0
-
     .line 192
-    check-cast v0, LX/4Ga;
+    const-string v0, "com.facebook.rendercore.debug"
 
     .line 193
     .line 194
-    invoke-static {v15, v0, v3}, LX/4I8;->A00(LX/4I8;LX/4Ga;Z)LX/4HA;
+    invoke-static {v1, v0, v11}, LX/3in;->A0Q(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
     .line 195
     .line 196
     .line 197
-    move-result-object v0
+    move-result v0
 
     .line 198
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    if-nez v0, :cond_5
 
     .line 199
     .line 200
+    invoke-virtual {v12}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
     .line 201
-    goto :goto_1
-
     .line 202
-    :cond_4
-    new-array v2, v9, [LX/4Ga;
-
     .line 203
+    move-result-object v0
+
     .line 204
-    sget-object v0, LX/4Ga;->SHARE:LX/4Ga;
+    if-eqz v0, :cond_0
 
     .line 205
     .line 206
-    aput-object v0, v2, v12
+    move-object v10, v0
 
     .line 207
+    goto/16 :goto_0
+
     .line 208
-    sget-object v0, LX/4Ga;->BROWSER_REFRESH:LX/4Ga;
-
     .line 209
-    .line 210
-    aput-object v0, v2, v3
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
 
+    .line 210
     .line 211
+    goto :goto_4
+
     .line 212
-    sget-object v0, LX/4Ga;->BOOKMARK:LX/4Ga;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_2
+        :pswitch_3
+        :pswitch_3
+        :pswitch_4
+        :pswitch_4
+    .end packed-switch
 
     .line 213
     .line 214
-    aput-object v0, v2, v10
-
     .line 215
     .line 216
-    sget-object v0, LX/4Ga;->SAVED_SESSION:LX/4Ga;
-
     .line 217
     .line 218
-    aput-object v0, v2, v11
-
     .line 219
     .line 220
-    sget-object v0, LX/4Ga;->OPEN_EXTERNAL_BROWSER:LX/4Ga;
-
     .line 221
     .line 222
-    aput-object v0, v2, v13
-
     .line 223
     .line 224
-    aput-object v8, v2, v14
-
     .line 225
-    .line 226
-    goto :goto_0
-
-    .line 227
-    :cond_5
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 228
-    .line 229
-    .line 230
-    move-result-object v2
-
-    .line 231
-    :cond_6
-    iput-object v2, v6, LX/4GZ;->A04:Ljava/util/List;
-
-    .line 232
-    .line 233
-    iput-object v5, v6, LX/4GZ;->A02:LX/4GN;
-
-    .line 234
-    .line 235
-    iput-object v4, v6, LX/4GZ;->A03:LX/4Ed;
-
-    .line 236
-    .line 237
-    return-void
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

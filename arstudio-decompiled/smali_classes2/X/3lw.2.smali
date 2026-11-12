@@ -1,162 +1,63 @@
-.class public final LX/3lw;
-.super Ljava/lang/Object;
+.class public final LX/3lW;
+.super LX/3kn;
 .source ""
 
-# interfaces
-.implements LX/3nX;
+
+# static fields
+.field public static final serialVersionUID:J = 0x284a4c9852312267L
 
 
 # instance fields
-.field public final A00:I
+.field public final currentLatencyLevel:LX/5IS;
 
-.field public final A01:LX/3nX;
+.field public final decisionReasons:Ljava/lang/String;
 
-.field public final synthetic A02:LX/3la;
+.field public final targetBuffer:I
+
+.field public final targetLatencyLevel:LX/5IS;
+
+.field public final timeMs:J
+
+.field public final videoId:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/3nX;LX/3la;I)V
-    .locals 0
-
-    .line 0
-    iput-object p2, p0, LX/3lw;->A02:LX/3la;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    iput p3, p0, LX/3lw;->A00:I
-
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/3lw;->A01:LX/3nX;
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AXs()V
-    .locals 3
-
-    .line 0
-    iget v1, p0, LX/3lw;->A00:I
-
-    .line 1
-    .line 2
-    iget-object v2, p0, LX/3lw;->A02:LX/3la;
-
-    .line 3
-    .line 4
-    monitor-enter v2
-
-    .line 5
-    :try_start_0
-    iget-object v0, v2, LX/3la;->A01:Landroid/util/SparseArray;
-
-    .line 6
-    .line 7
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v1
-
-    .line 11
-    check-cast v1, LX/3mv;
-
-    .line 12
-    .line 13
-    if-eqz v1, :cond_0
-
-    .line 14
-    .line 15
-    const/4 v0, 0x0
-
-    .line 16
-    iput-object v0, v1, LX/3mv;->A00:LX/3lS;
-
-    .line 17
-    .line 18
-    iput-object v0, v1, LX/3mv;->A00:LX/3lS;
-
-    .line 19
-    .line 20
-    iget-object v0, v1, LX/3mv;->A01:Ljava/util/ArrayDeque;
-
-    .line 21
-    .line 22
-    if-eqz v0, :cond_0
-
-    .line 23
-    .line 24
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    check-cast v0, Ljava/lang/Runnable;
-
-    .line 29
-    .line 30
-    if-eqz v0, :cond_0
-
-    .line 31
-    .line 32
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    .line 33
-    .line 34
-    .line 35
-    :cond_0
-    iget-object v0, p0, LX/3lw;->A01:LX/3nX;
-
-    .line 36
-    .line 37
-    invoke-interface {v0}, LX/3nX;->AXs()V
-
-    .line 38
-    .line 39
-    .line 40
-    monitor-exit v2
-
-    .line 41
-    return-void
-
-    .line 42
-    :catchall_0
-    move-exception v0
-
-    .line 43
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 44
-    throw v0
-.end method
-
-.method public final AfH(Z)V
+.method public constructor <init>(LX/5IS;LX/5IS;Ljava/lang/String;Ljava/lang/String;IJ)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/3lw;->A01:LX/3nX;
+    sget-object v0, LX/3kk;->LATENCY_DECISION:LX/3kk;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1}, LX/3nX;->AfH(Z)V
+    invoke-direct {p0, v0}, LX/3kn;-><init>(LX/3kk;)V
 
     .line 3
     .line 4
     .line 5
+    iput-wide p6, p0, LX/3lW;->timeMs:J
+
+    .line 6
+    .line 7
+    iput-object p3, p0, LX/3lW;->videoId:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    iput-object p2, p0, LX/3lW;->currentLatencyLevel:LX/5IS;
+
+    .line 10
+    .line 11
+    iput-object p1, p0, LX/3lW;->targetLatencyLevel:LX/5IS;
+
+    .line 12
+    .line 13
+    iput-object p4, p0, LX/3lW;->decisionReasons:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    iput p5, p0, LX/3lW;->targetBuffer:I
+
+    .line 16
+    .line 17
     return-void
 .end method

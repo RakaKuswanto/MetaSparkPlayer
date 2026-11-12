@@ -1,77 +1,95 @@
-.class public interface abstract LX/01b;
-.super Ljava/lang/Object;
+.class public LX/01b;
+.super LX/03h;
 .source ""
 
-# interfaces
-.implements Landroid/view/MenuItem;
+
+# instance fields
+.field public final A00:Ljava/io/File;
+
+.field public final A01:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p3}, LX/03h;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p2, p0, LX/01b;->A00:Ljava/io/File;
+
+    .line 4
+    .line 5
+    iput-object p4, p0, LX/01b;->A01:Ljava/lang/String;
+
+    .line 6
+    .line 7
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract AMl()LX/01t;
+.method public A08()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ExtractFromZipSoSource"
+
+    return-object v0
 .end method
 
-.method public abstract AlV(Ljava/lang/CharSequence;)LX/01b;
+.method public final A0B()LX/0B5;
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/0Ix;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p0, p0}, LX/0Ix;-><init>(LX/01b;LX/03h;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
 .end method
 
-.method public abstract AnH(LX/01t;)LX/01b;
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.method public abstract AnN(Ljava/lang/CharSequence;)LX/01b;
-.end method
+    .line 0
+    :try_start_0
+    iget-object v0, p0, LX/01b;->A00:Ljava/io/File;
 
-.method public abstract collapseActionView()Z
-.end method
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
-.method public abstract expandActionView()Z
-.end method
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-.method public abstract getActionView()Landroid/view/View;
-.end method
+    .line 6
+    return-object v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public abstract getAlphabeticModifiers()I
-.end method
+    .line 7
+    :catch_0
+    iget-object v0, p0, LX/01b;->A00:Ljava/io/File;
 
-.method public abstract getContentDescription()Ljava/lang/CharSequence;
-.end method
+    .line 8
+    .line 9
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
 
-.method public abstract getIconTintList()Landroid/content/res/ColorStateList;
-.end method
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
 
-.method public abstract getIconTintMode()Landroid/graphics/PorterDuff$Mode;
-.end method
-
-.method public abstract getNumericModifiers()I
-.end method
-
-.method public abstract getTooltipText()Ljava/lang/CharSequence;
-.end method
-
-.method public abstract isActionViewExpanded()Z
-.end method
-
-.method public abstract setActionView(I)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setActionView(Landroid/view/View;)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setAlphabeticShortcut(CI)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setNumericShortcut(CI)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setShortcut(CCII)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setShowAsAction(I)V
-.end method
-
-.method public abstract setShowAsActionFlags(I)Landroid/view/MenuItem;
+    .line 13
+    return-object v0
 .end method

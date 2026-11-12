@@ -14,93 +14,129 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public static synthetic $values()[Lcom/facebook/common/util/TriState;
+    .locals 3
 
     .line 0
-    const-string v0, "YES"
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    const/4 v6, 0x0
+    new-array v2, v0, [Lcom/facebook/common/util/TriState;
 
+    .line 2
     .line 3
-    new-instance v5, Lcom/facebook/common/util/TriState;
+    sget-object v1, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
 
     .line 4
     .line 5
-    invoke-direct {v5, v0, v6}, Lcom/facebook/common/util/TriState;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/common/util/TriState;->NO:Lcom/facebook/common/util/TriState;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/common/util/TriState;->UNSET:Lcom/facebook/common/util/TriState;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "YES"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/common/util/TriState;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, Lcom/facebook/common/util/TriState;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v5, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
+    sput-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
 
     .line 9
     .line 10
-    const-string v0, "NO"
+    const-string v2, "NO"
 
     .line 11
     .line 12
-    const/4 v4, 0x1
+    const/4 v1, 0x1
 
     .line 13
-    new-instance v3, Lcom/facebook/common/util/TriState;
+    new-instance v0, Lcom/facebook/common/util/TriState;
 
     .line 14
     .line 15
-    invoke-direct {v3, v0, v4}, Lcom/facebook/common/util/TriState;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/common/util/TriState;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v3, Lcom/facebook/common/util/TriState;->NO:Lcom/facebook/common/util/TriState;
+    sput-object v0, Lcom/facebook/common/util/TriState;->NO:Lcom/facebook/common/util/TriState;
 
     .line 19
     .line 20
-    const-string v0, "UNSET"
+    const-string v2, "UNSET"
 
     .line 21
     .line 22
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
     .line 23
-    new-instance v1, Lcom/facebook/common/util/TriState;
+    new-instance v0, Lcom/facebook/common/util/TriState;
 
     .line 24
     .line 25
-    invoke-direct {v1, v0, v2}, Lcom/facebook/common/util/TriState;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/common/util/TriState;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v1, Lcom/facebook/common/util/TriState;->UNSET:Lcom/facebook/common/util/TriState;
+    sput-object v0, Lcom/facebook/common/util/TriState;->UNSET:Lcom/facebook/common/util/TriState;
 
     .line 29
     .line 30
-    const/4 v0, 0x3
+    invoke-static {}, Lcom/facebook/common/util/TriState;->$values()[Lcom/facebook/common/util/TriState;
 
     .line 31
-    new-array v0, v0, [Lcom/facebook/common/util/TriState;
-
     .line 32
     .line 33
-    aput-object v5, v0, v6
+    move-result-object v0
 
     .line 34
-    .line 35
-    aput-object v3, v0, v4
-
-    .line 36
-    .line 37
-    aput-object v1, v0, v2
-
-    .line 38
-    .line 39
     sput-object v0, Lcom/facebook/common/util/TriState;->$VALUES:[Lcom/facebook/common/util/TriState;
 
-    .line 40
-    .line 41
+    .line 35
+    .line 36
     return-void
 .end method
 
@@ -296,7 +332,7 @@
 
     .line 268435468
     .line 268435469
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 268435470
     .line 268435471
@@ -308,7 +344,7 @@
 
     .line 268435474
     .line 268435475
-    invoke-static {p0, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 268435476
     .line 268435477
@@ -316,7 +352,7 @@
     move-result-object v0
 
     .line 268435479
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 268435480
     .line 268435481
@@ -332,7 +368,7 @@
 
     .line 268435485
     .line 268435486
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 268435487
     .line 268435488
@@ -384,7 +420,7 @@
 
     .line 12
     .line 13
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 14
     .line 15
@@ -396,7 +432,7 @@
 
     .line 18
     .line 19
-    invoke-static {p0, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 20
     .line 21
@@ -404,7 +440,7 @@
     move-result-object v0
 
     .line 23
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 24
     .line 25
@@ -467,7 +503,7 @@
 
     .line 15
     :cond_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 16
     .line 17
@@ -479,7 +515,7 @@
 
     .line 20
     .line 21
-    invoke-static {p0, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 22
     .line 23
@@ -487,7 +523,7 @@
     move-result-object v0
 
     .line 25
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 26
     .line 27

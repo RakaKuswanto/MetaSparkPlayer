@@ -1,183 +1,161 @@
-.class public final LX/5jh;
+.class public final LX/5jH;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Landroid/view/Choreographer$FrameCallback;
+.implements LX/5cW;
 
 
-# instance fields
-.field public final synthetic A00:LX/5jg;
+# static fields
+.field public static final A00:LX/5jH;
+
+.field public static final A01:LX/6Xn;
 
 
 # direct methods
-.method public constructor <init>(LX/5jg;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/5jh;->A00:LX/5jg;
+    new-instance v0, LX/5jH;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, LX/5jH;-><init>()V
 
     .line 3
     .line 4
     .line 5
+    sput-object v0, LX/5jH;->A00:LX/5jH;
+
+    .line 6
+    .line 7
+    sget-object v1, LX/6b6;->A00:LX/6b6;
+
+    .line 8
+    .line 9
+    const-string v0, "VaultedPaymentErrorCode"
+
+    .line 10
+    .line 11
+    invoke-static {v0, v1}, LX/3il;->A01(Ljava/lang/String;LX/6bU;)LX/6b8;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    sput-object v0, LX/5jH;->A01:LX/6Xn;
+
+    .line 16
+    .line 17
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final doFrame(J)V
-    .locals 8
+.method public final bridge synthetic A7J(LX/5dV;)Ljava/lang/Object;
+    .locals 6
 
     .line 0
-    iget-object v7, p0, LX/5jh;->A00:LX/5jg;
+    invoke-static {p1}, LX/432;->A0t(LX/5dV;)Ljava/lang/String;
 
     .line 1
     .line 2
-    iget-boolean v0, v7, LX/5jg;->A07:Z
-
     .line 3
+    move-result-object v5
+
     .line 4
-    if-eqz v0, :cond_2
+    invoke-static {}, LX/5jI;->values()[LX/5jI;
 
     .line 5
     .line 6
-    iget-object v1, v7, LX/5jg;->A04:Landroid/view/Choreographer;
-
     .line 7
+    move-result-object v4
+
     .line 8
-    if-eqz v1, :cond_0
+    array-length v3, v4
 
     .line 9
+    const/4 v2, 0x0
+
     .line 10
-    iget-object v0, v7, LX/5jg;->A01:LX/5jh;
+    :goto_0
+    if-ge v2, v3, :cond_1
 
     .line 11
     .line 12
-    invoke-virtual {v1, v0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+    aget-object v1, v4, v2
 
     .line 13
     .line 14
+    invoke-virtual {v1}, LX/5jI;->getValue()Ljava/lang/String;
+
     .line 15
-    :cond_0
-    const/4 v0, 0x0
-
     .line 16
-    iput-object v0, v7, LX/5jg;->A05:LX/5gO;
-
     .line 17
+    move-result-object v0
+
     .line 18
-    const/4 v0, 0x0
+    invoke-static {v0, v5}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 19
-    iput-boolean v0, v7, LX/5jg;->A07:Z
-
     .line 20
     .line 21
-    :cond_1
-    return-void
+    move-result v0
 
     .line 22
-    :cond_2
-    iget-object v6, v7, LX/5jg;->A05:LX/5gO;
+    if-eqz v0, :cond_0
 
     .line 23
     .line 24
-    iget-object v3, v7, LX/5jg;->A06:Ljava/lang/Long;
+    return-object v1
 
     .line 25
-    .line 26
-    if-eqz v3, :cond_3
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
+    .line 26
     .line 27
+    goto :goto_0
+
     .line 28
-    if-eqz v6, :cond_3
+    :cond_1
+    const-string v0, "Unknown VaultedPaymentErrorCode value: "
 
     .line 29
     .line 30
-    iget-wide v1, v7, LX/5jg;->A00:J
+    invoke-static {v0, v5}, LX/004;->A03(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 31
     .line 32
-    cmp-long v0, v1, p1
-
     .line 33
-    .line 34
-    if-gtz v0, :cond_4
-
-    .line 35
-    .line 36
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-wide v4
-
-    .line 40
-    div-long v2, p1, v4
-
-    .line 41
-    .line 42
-    const-wide/16 v0, 0x1
-
-    .line 43
-    .line 44
-    add-long/2addr v2, v0
-
-    .line 45
-    mul-long/2addr v4, v2
-
-    .line 46
-    iput-wide v4, v7, LX/5jg;->A00:J
-
-    .line 47
-    .line 48
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 49
-    .line 50
-    .line 51
     move-result-object v0
 
-    .line 52
-    invoke-interface {v6, v0}, LX/5gO;->AjQ(Ljava/lang/Long;)V
+    .line 34
+    throw v0
+.end method
 
-    .line 53
-    .line 54
-    .line 55
-    return-void
+.method public final AD9()LX/6Xn;
+    .locals 1
 
-    .line 56
-    :cond_3
-    iget-object v1, v7, LX/5jg;->A04:Landroid/view/Choreographer;
+    .line 0
+    sget-object v0, LX/5jH;->A01:LX/6Xn;
 
-    .line 57
-    .line 58
-    if-eqz v1, :cond_1
-
-    .line 59
-    .line 60
-    iget-object v0, v7, LX/5jg;->A01:LX/5jh;
-
-    .line 61
-    .line 62
-    invoke-virtual {v1, v0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
-
-    .line 63
-    .line 64
-    .line 65
-    return-void
-
-    .line 66
-    :cond_4
-    invoke-static {v7}, LX/5jg;->A00(LX/5jg;)V
-
-    .line 67
-    .line 68
-    .line 69
-    return-void
+    .line 1
+    .line 2
+    return-object v0
 .end method

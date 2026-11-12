@@ -1,14 +1,39 @@
-.class public final LX/2j2;
+.class public LX/2j2;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/util/WeakHashMap;
+.field public A00:LX/2Xx;
 
 
 # direct methods
 .method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    new-instance v0, LX/2j3;
+
+    .line 268435460
+    .line 268435461
+    invoke-direct {v0}, LX/2j3;-><init>()V
+
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    iput-object v0, p0, LX/2j2;->A00:LX/2Xx;
+
+    .line 268435465
+    .line 268435466
+    return-void
+.end method
+
+.method public constructor <init>(LX/2j1;)V
     .locals 2
 
     .line 0
@@ -17,91 +42,198 @@
     .line 1
     .line 2
     .line 3
-    const/4 v1, 0x4
+    new-instance v0, LX/2j3;
 
     .line 4
-    new-instance v0, Ljava/util/WeakHashMap;
-
     .line 5
-    .line 6
-    invoke-direct {v0, v1}, Ljava/util/WeakHashMap;-><init>(I)V
+    invoke-direct {v0}, LX/2j3;-><init>()V
 
+    .line 6
     .line 7
     .line 8
-    .line 9
-    iput-object v0, p0, LX/2j2;->A00:Ljava/util/WeakHashMap;
+    iput-object v0, p0, LX/2j2;->A00:LX/2Xx;
 
+    .line 9
     .line 10
+    iget-object v0, p1, LX/2j1;->A00:LX/2Xx;
+
     .line 11
+    .line 12
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    const-class v1, LX/2j2;
+
+    .line 15
+    .line 16
+    const-string v0, "Null legacy UnifiedInternalLogger injected into UnifiedEventBase#setLogger"
+
+    .line 17
+    .line 18
+    invoke-static {v1, v0}, LX/0Il;->A00(Ljava/lang/Class;Ljava/lang/String;)V
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
+
+    .line 22
+    :cond_0
+    iput-object v0, p0, LX/2j2;->A00:LX/2Xx;
+
+    .line 23
+    .line 24
     return-void
 .end method
 
-
-# virtual methods
-.method public final A00(Landroid/content/Context;)Ljava/lang/String;
-    .locals 3
+.method public static A01(LX/2j2;Ljava/lang/String;)LX/2j5;
+    .locals 2
 
     .line 0
-    iget-object v2, p0, LX/2j2;->A00:Ljava/util/WeakHashMap;
+    const/4 v1, 0x0
 
     .line 1
-    .line 2
-    monitor-enter v2
+    iget-object v0, p0, LX/2j2;->A00:LX/2Xx;
 
+    .line 2
     .line 3
-    :try_start_0
-    invoke-static {p1, v2}, LX/0Yi;->A0o(Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/String;
+    invoke-interface {v0, p1, v1}, LX/2Xx;->A2Z(Ljava/lang/String;Z)LX/2j5;
 
     .line 4
     .line 5
     .line 6
-    move-result-object v1
+    move-result-object v0
 
     .line 7
-    const-string v0, ""
+    return-object v0
+.end method
 
+.method public static A02(LX/2j8;Lcom/facebook/images/encoder/AndroidSystemEncoder;J)V
+    .locals 3
+
+    .line 0
+    const-string/jumbo v0, "transcoder_duration"
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0, v0, p2, p3}, LX/2j8;->A0D(Ljava/lang/String;J)V
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v0, p1, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A01:LX/0RP;
+
+    .line 7
     .line 8
-    .line 9
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
+    .line 9
     .line 10
     .line 11
+    move-result-object v2
+
     .line 12
-    move-result v0
+    check-cast v2, LX/2j1;
 
     .line 13
-    if-eqz v0, :cond_0
-
     .line 14
-    .line 15
-    invoke-static {}, LX/0Ye;->A0R()Ljava/lang/String;
+    sget-object v0, LX/2jE;->A00:LX/2jE;
 
+    .line 15
     .line 16
+    if-nez v0, :cond_1
+
     .line 17
     .line 18
-    move-result-object v1
+    const-class v1, LX/2jE;
 
     .line 19
-    invoke-virtual {v2, p1, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 20
-    .line 21
-    .line 22
-    :cond_0
-    monitor-exit v2
+    monitor-enter v1
 
+    .line 21
+    :try_start_0
+    sget-object v0, LX/2jE;->A00:LX/2jE;
+
+    .line 22
     .line 23
-    return-object v1
+    if-nez v0, :cond_0
 
     .line 24
+    .line 25
+    new-instance v0, LX/2jE;
+
+    .line 26
+    .line 27
+    invoke-direct {v0, v2}, LX/2jE;-><init>(LX/2j1;)V
+
+    .line 28
+    .line 29
+    .line 30
+    sput-object v0, LX/2jE;->A00:LX/2jE;
+
+    .line 31
+    .line 32
+    :cond_0
+    monitor-exit v1
+
+    .line 33
+    goto :goto_0
+
+    .line 34
     :catchall_0
     move-exception v0
 
-    .line 25
-    monitor-exit v2
+    .line 35
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 26
+    .line 36
     throw v0
+
+    .line 37
+    :cond_1
+    :goto_0
+    sget-object v0, LX/2jE;->A00:LX/2jE;
+
+    .line 38
+    .line 39
+    iget-object v0, v0, LX/2j2;->A00:LX/2Xx;
+
+    .line 40
+    .line 41
+    invoke-interface {v0, p0}, LX/2Xx;->AR4(LX/2j8;)V
+
+    .line 42
+    .line 43
+    .line 44
+    const/4 v1, 0x2
+
+    .line 45
+    sget-object v0, LX/0Il;->A01:LX/0HQ;
+
+    .line 46
+    .line 47
+    invoke-interface {v0, v1}, LX/0HQ;->APR(I)Z
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v0
+
+    .line 51
+    if-eqz v0, :cond_2
+
+    .line 52
+    .line 53
+    invoke-static {p0}, LX/2j8;->A03(LX/2j8;)Ljava/lang/String;
+
+    .line 54
+    .line 55
+    .line 56
+    :cond_2
+    return-void
 .end method

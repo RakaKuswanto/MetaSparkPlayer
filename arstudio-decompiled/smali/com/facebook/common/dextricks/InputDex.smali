@@ -210,7 +210,7 @@
 
     .line 85
     .line 86
-    invoke-static {v1, v0}, LX/00I;->A06(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v1, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 87
     .line 88
@@ -229,7 +229,7 @@
 
     .line 92
     :try_start_1
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 93
     .line 94
@@ -491,7 +491,7 @@
     .line 111
     .line 112
     .line 113
-    invoke-static {v6, v4, v0}, LX/0HL;->A03(Ljava/io/InputStream;Ljava/io/OutputStream;I)I
+    invoke-static {v6, v4, v0}, LX/0GR;->A03(Ljava/io/InputStream;Ljava/io/OutputStream;I)I
 
     .line 114
     .line 115
@@ -512,7 +512,7 @@
 
     .line 123
     :catchall_2
-    move-exception v0
+    move-exception v1
 
     .line 124
     :try_start_5
@@ -523,8 +523,19 @@
     .line 125
     .line 126
     .line 127
+    throw v1
+
+    .line 128
     :catchall_3
-    throw v0
+    move-exception v0
+
+    .line 129
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 130
+    .line 131
+    .line 132
+    throw v1
 .end method
 
 
@@ -575,15 +586,15 @@
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 13
     .line 14
     .line 15
-    move-result-object v0
+    move-result-object v1
 
     .line 16
-    throw v0
+    throw v1
 
     .line 17
     :cond_0
@@ -676,7 +687,7 @@
 
     .line 60
     :goto_0
-    invoke-static {v0, v2, v1}, LX/0HL;->A03(Ljava/io/InputStream;Ljava/io/OutputStream;I)I
+    invoke-static {v0, v2, v1}, LX/0GR;->A03(Ljava/io/InputStream;Ljava/io/OutputStream;I)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -698,7 +709,7 @@
 
     .line 68
     .line 69
-    invoke-static {v0, v3}, LX/00I;->A06(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0, v3}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 70
     .line 71
@@ -712,7 +723,7 @@
 
     .line 74
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 75
     :try_start_2
@@ -723,8 +734,19 @@
     .line 76
     .line 77
     .line 78
+    throw v1
+
+    .line 79
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 80
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 81
+    .line 82
+    .line 83
+    throw v1
 .end method
 
 .method public getDexContents()Ljava/io/InputStream;
@@ -858,7 +880,7 @@
 
     .line 59
     .line 60
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 61
     .line 62
@@ -897,7 +919,7 @@
     move-result-object v0
 
     .line 78
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 79
     .line 80
@@ -942,171 +964,44 @@
     return v1
 .end method
 
-.method public patch(LX/0QT;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)V
-    .locals 7
-
-    .line 0
-    const v6, 0x2d43e07
-
-    .line 1
-    .line 2
-    .line 3
-    if-eqz p2, :cond_0
-
-    .line 4
-    .line 5
-    invoke-interface {p2, v6}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerStart(I)V
-
-    .line 6
-    .line 7
-    .line 8
-    :cond_0
-    const/4 v5, 0x2
-
-    .line 9
-    :try_start_0
-    invoke-virtual {p0}, Lcom/facebook/common/dextricks/InputDex;->getDexContents()Ljava/io/InputStream;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    .line 13
-    :try_start_1
-    const-string v0, "dex"
-
-    .line 14
-    .line 15
-    if-eqz v4, :cond_1
-
-    .line 16
-    .line 17
-    invoke-static {v0, v4}, Lcom/facebook/superpack/SuperpackFile;->createSuperpackFileNative(Ljava/lang/String;Ljava/io/InputStream;)J
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-wide v2
-
-    .line 21
-    const/4 v1, -0x1
-
-    .line 22
-    new-instance v0, Lcom/facebook/superpack/SuperpackFile;
-
-    .line 23
-    .line 24
-    invoke-direct {v0, v2, v3, v1}, Lcom/facebook/superpack/SuperpackFile;-><init>(JI)V
-
-    .line 25
-    .line 26
-    .line 27
-    const-string v0, "patchAndCloseInput"
-
-    .line 28
-    .line 29
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v0
-
-    .line 33
-    :goto_0
-    throw v0
-
-    .line 34
-    :cond_1
-    const/4 v0, 0x0
-
-    .line 35
-    goto :goto_0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 36
-    :catchall_0
-    move-exception v0
-
-    .line 37
-    if-eqz v4, :cond_2
-
-    .line 38
-    .line 39
-    :try_start_2
-    invoke-virtual {v4}, Ljava/io/InputStream;->close()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 40
-    .line 41
-    .line 42
-    :catchall_1
-    :cond_2
-    :try_start_3
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    .line 43
-    :catchall_2
-    move-exception v0
-
-    .line 44
-    if-eqz p2, :cond_3
-
-    .line 45
-    .line 46
-    invoke-interface {p2, v6, v5}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
-
-    .line 47
-    .line 48
-    .line 49
-    :cond_3
-    throw v0
-.end method
-
 .method public toString()Ljava/lang/String;
     .locals 3
 
     .line 0
-    const/4 v0, 0x1
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 1
-    new-array v2, v0, [Ljava/lang/Object;
-
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/common/dextricks/InputDex;->dex:Lcom/facebook/common/dextricks/DexManifest$Dex;
+    move-result-object v2
 
     .line 4
+    iget-object v0, p0, Lcom/facebook/common/dextricks/InputDex;->dex:Lcom/facebook/common/dextricks/DexManifest$Dex;
+
     .line 5
+    .line 6
     iget-object v1, v0, Lcom/facebook/common/dextricks/DexManifest$Dex;->assetName:Ljava/lang/String;
 
-    .line 6
     .line 7
+    .line 8
     const/4 v0, 0x0
 
-    .line 8
+    .line 9
     aput-object v1, v2, v0
 
-    .line 9
     .line 10
+    .line 11
     const-string v0, "InputDex:[%s]"
 
-    .line 11
     .line 12
+    .line 13
     invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 13
     .line 14
     .line 15
+    .line 16
     move-result-object v0
 
-    .line 16
+    .line 17
     return-object v0
 .end method

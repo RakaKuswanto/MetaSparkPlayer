@@ -1,80 +1,85 @@
-.class public abstract LX/38q;
+.class public final LX/38q;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:I
+.field public A00:LX/365;
 
-.field public final A01:LX/3lP;
+.field public A01:LX/366;
 
-.field public final A02:LX/38v;
-
-.field public final A03:Ljava/io/Writer;
-
-.field public final synthetic A04:LX/38p;
+.field public A02:LX/0VC;
 
 
 # direct methods
-.method public constructor <init>(LX/3lP;LX/38p;Ljava/io/OutputStream;)V
+.method public constructor <init>()V
     .locals 3
 
     .line 0
-    iput-object p2, p0, LX/38q;->A04:LX/38p;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    new-instance v2, LX/39E;
+
     .line 4
     .line 5
-    iput-object p1, p0, LX/38q;->A01:LX/3lP;
+    invoke-direct {v2, p0}, LX/39E;-><init>(LX/38q;)V
 
     .line 6
     .line 7
-    iget-object v0, p2, LX/38p;->A07:Ljava/nio/ByteBuffer;
-
     .line 8
+    const/4 v1, 0x1
+
     .line 9
-    new-instance v2, LX/38r;
+    new-instance v0, LX/0Xd;
 
     .line 10
     .line 11
-    invoke-direct {v2, p3, v0}, LX/38r;-><init>(Ljava/io/OutputStream;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v0, v2, v1, p0}, LX/0Xd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 12
     .line 13
     .line 14
-    iget-object v0, p2, LX/38p;->A0A:[C
+    iput-object v0, p0, LX/38q;->A02:LX/0VC;
 
     .line 15
     .line 16
-    new-instance v1, LX/2A8;
+    new-instance v1, LX/38t;
 
     .line 17
     .line 18
-    invoke-direct {v1, v2, v0}, LX/2A8;-><init>(Ljava/io/Writer;[C)V
+    invoke-direct {v1, p0}, LX/38t;-><init>(LX/38q;)V
 
     .line 19
     .line 20
     .line 21
-    iput-object v1, p0, LX/38q;->A03:Ljava/io/Writer;
+    new-instance v0, LX/38u;
 
     .line 22
     .line 23
-    new-instance v0, LX/38v;
+    invoke-direct {v0, p0, v1}, LX/38u;-><init>(LX/38q;Lcom/facebook/proxygen/TraceEventHandler;)V
 
     .line 24
     .line 25
-    invoke-direct {v0, v1}, LX/38v;-><init>(Ljava/io/Writer;)V
-
     .line 26
+    iput-object v0, p0, LX/38q;->A01:LX/366;
+
     .line 27
     .line 28
-    iput-object v0, p0, LX/38q;->A02:LX/38v;
+    new-instance v0, LX/39F;
 
     .line 29
     .line 30
+    invoke-direct {v0, p0}, LX/39F;-><init>(LX/38q;)V
+
+    .line 31
+    .line 32
+    .line 33
+    iput-object v0, p0, LX/38q;->A00:LX/365;
+
+    .line 34
+    .line 35
     return-void
 .end method

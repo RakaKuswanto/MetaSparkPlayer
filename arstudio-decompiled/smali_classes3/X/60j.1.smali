@@ -1,443 +1,254 @@
 .class public final LX/60j;
-.super Ljava/lang/Object;
+.super Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioRenderCallback;
 .source ""
-
-# interfaces
-.implements LX/6Ly;
-
-
-# static fields
-.field public static final A04:LX/54Y;
-
-.field public static final A05:Ljava/lang/String;
-
-.field public static final A06:Ljava/lang/String;
-
-.field public static final A07:Ljava/lang/String;
-
-.field public static final A08:Ljava/lang/String;
-
-.field public static final A09:Ljava/lang/String;
-
-.field public static final A0A:Ljava/lang/String;
-
-.field public static final A0B:Ljava/lang/String;
-
-.field public static final A0C:Ljava/lang/String;
 
 
 # instance fields
-.field public final A00:I
+.field public final A00:LX/5iu;
 
-.field public final A01:[I
-
-.field public final A02:[J
-
-.field public final A03:[Landroid/net/Uri;
+.field public final synthetic A01:LX/60i;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(LX/5iu;LX/60i;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x0
+    iput-object p2, p0, LX/60j;->A01:LX/60i;
 
     .line 1
-    const/16 v1, 0x24
-
     .line 2
-    .line 3
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioRenderCallback;-><init>()V
 
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    sput-object v0, LX/60j;->A0B:Ljava/lang/String;
-
-    .line 8
-    .line 9
-    const/4 v0, 0x1
-
-    .line 10
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    sput-object v0, LX/60j;->A06:Ljava/lang/String;
-
-    .line 15
-    .line 16
-    const/4 v0, 0x2
-
-    .line 17
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    sput-object v0, LX/60j;->A0C:Ljava/lang/String;
-
-    .line 22
-    .line 23
-    const/4 v0, 0x3
-
-    .line 24
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    sput-object v0, LX/60j;->A0A:Ljava/lang/String;
-
-    .line 29
-    .line 30
-    const/4 v0, 0x4
-
-    .line 31
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v0
-
-    .line 35
-    sput-object v0, LX/60j;->A07:Ljava/lang/String;
-
-    .line 36
-    .line 37
-    const/4 v0, 0x5
-
-    .line 38
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-
-    .line 42
-    sput-object v0, LX/60j;->A05:Ljava/lang/String;
-
-    .line 43
-    .line 44
-    const/4 v0, 0x6
-
-    .line 45
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 46
-    .line 47
-    .line 48
-    move-result-object v0
-
-    .line 49
-    sput-object v0, LX/60j;->A08:Ljava/lang/String;
-
-    .line 50
-    .line 51
-    const/4 v0, 0x7
-
-    .line 52
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 53
-    .line 54
-    .line 55
-    move-result-object v0
-
-    .line 56
-    sput-object v0, LX/60j;->A09:Ljava/lang/String;
-
-    .line 57
-    .line 58
-    const/16 v1, 0x9
-
-    .line 59
-    .line 60
-    new-instance v0, LX/6Pm;
-
-    .line 61
-    .line 62
-    invoke-direct {v0, v1}, LX/6Pm;-><init>(I)V
-
-    .line 63
-    .line 64
-    .line 65
-    sput-object v0, LX/60j;->A04:LX/54Y;
-
-    .line 66
-    .line 67
-    return-void
-.end method
-
-.method public constructor <init>([I[J[Landroid/net/Uri;)V
-    .locals 3
-
-    .line 0
-    const/4 v2, -0x1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
     .line 3
     .line 4
-    array-length v1, p1
-
     .line 5
-    array-length v0, p3
+    iput-object p1, p0, LX/60j;->A00:LX/5iu;
 
     .line 6
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
-
     .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
-    invoke-static {v0}, LX/5PE;->A05(Z)V
-
-    .line 11
-    .line 12
-    .line 13
-    iput v2, p0, LX/60j;->A00:I
-
-    .line 14
-    .line 15
-    iput-object p1, p0, LX/60j;->A01:[I
-
-    .line 16
-    .line 17
-    iput-object p3, p0, LX/60j;->A03:[Landroid/net/Uri;
-
-    .line 18
-    .line 19
-    iput-object p2, p0, LX/60j;->A02:[J
-
-    .line 20
-    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onSamplesReady([BIIII)V
+    .locals 18
 
     .line 0
-    const/4 v3, 0x1
+    move-object/from16 v2, p0
 
     .line 1
-    if-eq p0, p1, :cond_0
-
     .line 2
-    .line 3
-    const/4 v2, 0x0
+    iget-object v4, v2, LX/60j;->A01:LX/60i;
 
+    .line 3
     .line 4
-    if-eqz p1, :cond_2
+    iget-boolean v0, v4, LX/60i;->A05:Z
 
     .line 5
     .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v0, :cond_3
 
     .line 7
     .line 8
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
     .line 9
+    .line 10
+    .line 11
     move-result-object v1
 
-    .line 10
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 11
     .line 12
-    .line 13
-    move-result-object v0
+    iget-object v0, v4, LX/60i;->A02:Landroid/os/Handler;
 
+    .line 13
     .line 14
-    if-ne v1, v0, :cond_2
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     .line 15
     .line 16
-    check-cast p1, LX/60j;
-
     .line 17
+    move-result-object v0
+
     .line 18
-    iget-object v1, p0, LX/60j;->A03:[Landroid/net/Uri;
+    if-ne v1, v0, :cond_3
 
     .line 19
     .line 20
-    iget-object v0, p1, LX/60j;->A03:[Landroid/net/Uri;
+    iget-object v7, v4, LX/60i;->A06:LX/60h;
 
     .line 21
     .line 22
-    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+    iget-object v1, v7, LX/60h;->A0B:LX/5Us;
 
     .line 23
     .line 24
-    .line 25
-    move-result v0
+    if-eqz v1, :cond_0
 
+    .line 25
     .line 26
-    if-eqz v0, :cond_1
+    const/4 v0, 0x1
 
     .line 27
+    iput-boolean v0, v1, LX/5Us;->A09:Z
+
     .line 28
-    iget-object v1, p0, LX/60j;->A01:[I
-
     .line 29
+    :cond_0
+    iget-object v0, v7, LX/60h;->A0C:LX/60r;
+
     .line 30
-    iget-object v0, p1, LX/60j;->A01:[I
-
     .line 31
-    .line 32
-    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([I[I)Z
+    move-object/from16 v6, p1
 
+    .line 32
     .line 33
+    move/from16 v5, p5
+
     .line 34
     .line 35
-    move-result v0
-
-    .line 36
     if-eqz v0, :cond_1
 
+    .line 36
     .line 37
-    .line 38
-    iget-object v1, p0, LX/60j;->A02:[J
+    invoke-virtual {v0, v6, v5}, LX/60r;->A01([BI)V
 
+    .line 38
     .line 39
     .line 40
-    iget-object v0, p1, LX/60j;->A02:[J
+    :cond_1
+    invoke-virtual {v4}, LX/60i;->A01()V
 
     .line 41
     .line 42
-    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([J[J)Z
-
     .line 43
+    iget-object v3, v2, LX/60j;->A00:LX/5iu;
+
     .line 44
     .line 45
-    move-result v0
+    iget-object v2, v3, LX/5iu;->A02:Ljava/nio/ByteBuffer;
 
     .line 46
-    if-eqz v0, :cond_1
-
     .line 47
+    invoke-virtual {v2}, Ljava/nio/Buffer;->clear()Ljava/nio/Buffer;
+
     .line 48
-    :cond_0
-    return v3
-
     .line 49
-    :cond_1
-    const/4 v3, 0x0
-
     .line 50
-    return v3
+    invoke-virtual {v2}, Ljava/nio/Buffer;->capacity()I
 
     .line 51
+    .line 52
+    .line 53
+    move-result v0
+
+    .line 54
+    invoke-static {v0, v5}, Ljava/lang/Math;->min(II)I
+
+    .line 55
+    .line 56
+    .line 57
+    move-result v1
+
+    .line 58
+    if-le v5, v1, :cond_2
+
+    .line 59
+    .line 60
+    iget-object v9, v7, LX/60h;->A04:LX/6CK;
+
+    .line 61
+    .line 62
+    invoke-static {v7}, LX/434;->A0P(Ljava/lang/Object;)J
+
+    .line 63
+    .line 64
+    .line 65
+    move-result-wide v16
+
+    .line 66
+    const-string v8, "Received too many bytes from AR Engine; dropped "
+
+    .line 67
+    .line 68
+    sub-int v0, p5, v1
+
+    .line 69
+    .line 70
+    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v7
+
+    .line 74
+    const-string v0, "bytes"
+
+    .line 75
+    .line 76
+    invoke-static {v8, v7, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
+
+    .line 80
+    new-instance v10, LX/5Vn;
+
+    .line 81
+    .line 82
+    invoke-direct {v10, v0}, LX/5Vn;-><init>(Ljava/lang/String;)V
+
+    .line 83
+    .line 84
+    .line 85
+    const-string v11, "inprogress_recording_audio_failure"
+
+    .line 86
+    .line 87
+    const-string v12, "LegacyAudioPipeline"
+
+    .line 88
+    .line 89
+    const-string v13, ""
+
+    .line 90
+    .line 91
+    const-string v14, "high"
+
+    .line 92
+    .line 93
+    const-string v15, "onSamplesReady"
+
+    .line 94
+    .line 95
+    invoke-interface/range {v9 .. v17}, LX/6CK;->ARH(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+
+    .line 96
+    .line 97
+    .line 98
     :cond_2
-    return v2
-.end method
+    const/4 v0, 0x0
 
-.method public final hashCode()I
-    .locals 4
+    .line 99
+    invoke-virtual {v2, v6, v0, v1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 0
-    const/16 v0, -0x1f
+    .line 100
+    .line 101
+    .line 102
+    invoke-virtual {v2}, Ljava/nio/Buffer;->flip()Ljava/nio/Buffer;
 
-    .line 1
-    .line 2
-    const-wide/16 v1, 0x0
+    .line 103
+    .line 104
+    .line 105
+    invoke-virtual {v4, v3, v5}, LX/60i;->A02(LX/5iu;I)V
 
-    .line 3
-    .line 4
-    invoke-static {v1, v2, v0}, LX/001;->A00(JI)I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v3
-
-    .line 8
-    iget-object v0, p0, LX/60j;->A03:[Landroid/net/Uri;
-
-    .line 9
-    .line 10
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    add-int/2addr v3, v0
-
-    .line 15
-    mul-int/lit8 v3, v3, 0x1f
-
-    .line 16
-    .line 17
-    iget-object v0, p0, LX/60j;->A01:[I
-
-    .line 18
-    .line 19
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    add-int/2addr v3, v0
-
-    .line 24
-    mul-int/lit8 v3, v3, 0x1f
-
-    .line 25
-    .line 26
-    iget-object v0, p0, LX/60j;->A02:[J
-
-    .line 27
-    .line 28
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([J)I
-
-    .line 29
-    .line 30
-    .line 31
-    move-result v0
-
-    .line 32
-    add-int/2addr v3, v0
-
-    .line 33
-    mul-int/lit8 v0, v3, 0x1f
-
-    .line 34
-    .line 35
-    invoke-static {v1, v2, v0}, LX/001;->A00(JI)I
-
-    .line 36
-    .line 37
-    .line 38
-    move-result v0
-
-    .line 39
-    return v0
+    .line 106
+    .line 107
+    .line 108
+    :cond_3
+    return-void
 .end method

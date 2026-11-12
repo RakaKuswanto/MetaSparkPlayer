@@ -1,47 +1,382 @@
-.class public abstract LX/5uX;
-.super Ljava/lang/Object;
+.class public LX/5Ux;
+.super Ljava/io/InputStream;
 .source ""
 
 # interfaces
-.implements LX/5uh;
+.implements Ljava/io/DataInput;
+
+
+# instance fields
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:Ljava/nio/ByteOrder;
+
+.field public A03:[B
+
+.field public final A04:Ljava/io/DataInputStream;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/io/InputStream;Ljava/nio/ByteOrder;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    new-instance v1, Ljava/io/DataInputStream;
+
+    .line 4
+    .line 5
+    invoke-direct {v1, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+
+    .line 6
+    .line 7
+    .line 8
+    iput-object v1, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x0
+
+    .line 11
+    invoke-virtual {v1, v0}, Ljava/io/InputStream;->mark(I)V
+
+    .line 12
+    .line 13
+    .line 14
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 15
+    .line 16
+    iput-object p2, p0, LX/5Ux;->A02:Ljava/nio/ByteOrder;
+
+    .line 17
+    .line 18
+    instance-of v0, p1, LX/5Ux;
+
+    .line 19
+    .line 20
+    if-eqz v0, :cond_0
+
+    .line 21
+    .line 22
+    check-cast p1, LX/5Ux;
+
+    .line 23
+    .line 24
+    iget v0, p1, LX/5Ux;->A00:I
+
+    .line 25
+    .line 26
+    :goto_0
+    iput v0, p0, LX/5Ux;->A00:I
+
+    .line 27
+    .line 28
+    return-void
+
+    .line 29
+    :cond_0
+    const/4 v0, -0x1
+
+    .line 30
+    goto :goto_0
+.end method
+
+.method public constructor <init>([B)V
+    .locals 2
+
+    .line 268435456
+    new-instance v1, Ljava/io/ByteArrayInputStream;
+
+    .line 268435457
+    .line 268435458
+    invoke-direct {v1, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 268435462
+    .line 268435463
+    invoke-direct {p0, v1, v0}, LX/5Ux;-><init>(Ljava/io/InputStream;Ljava/nio/ByteOrder;)V
+
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    array-length v0, p1
+
+    .line 268435467
+    iput v0, p0, LX/5Ux;->A00:I
+
+    .line 268435468
+    .line 268435469
     return-void
 .end method
 
-.method public static final A00(Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 27
+
+# virtual methods
+.method public final A00(I)V
+    .locals 8
 
     .line 0
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    const/4 v7, 0x0
 
     .line 1
-    .line 2
-    .line 3
-    move-result-object v14
+    const/4 v6, 0x0
 
+    .line 2
+    :goto_0
+    if-ge v6, p1, :cond_2
+
+    .line 3
     .line 4
-    invoke-interface/range {p0 .. p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iget-object v5, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
 
     .line 5
     .line 6
-    .line 7
-    move-result-object v2
+    sub-int v4, p1, v6
 
+    .line 7
     .line 8
+    int-to-long v0, v4
+
+    .line 9
+    invoke-virtual {v5, v0, v1}, Ljava/io/InputStream;->skip(J)J
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-wide v2
+
+    .line 13
+    long-to-int v1, v2
+
+    .line 14
+    if-gtz v1, :cond_1
+
+    .line 15
+    .line 16
+    iget-object v1, p0, LX/5Ux;->A03:[B
+
+    .line 17
+    .line 18
+    const/16 v0, 0x2000
+
+    .line 19
+    .line 20
+    if-nez v1, :cond_0
+
+    .line 21
+    .line 22
+    new-array v1, v0, [B
+
+    .line 23
+    .line 24
+    iput-object v1, p0, LX/5Ux;->A03:[B
+
+    .line 25
+    .line 26
     :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0, v4}, Ljava/lang/Math;->min(II)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    invoke-virtual {v5, v1, v7, v0}, Ljava/io/InputStream;->read([BII)I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v1
+
+    .line 34
+    const/4 v0, -0x1
+
+    .line 35
+    if-ne v1, v0, :cond_1
+
+    .line 36
+    .line 37
+    const-string v1, "Reached EOF while skipping "
+
+    .line 38
+    .line 39
+    const-string v0, " bytes."
+
+    .line 40
+    .line 41
+    invoke-static {v1, v0, p1}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v1
+
+    .line 45
+    new-instance v0, Ljava/io/EOFException;
+
+    .line 46
+    .line 47
+    invoke-direct {v0, v1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+
+    .line 48
+    .line 49
+    .line 50
+    throw v0
+
+    .line 51
+    :cond_1
+    add-int/2addr v6, v1
+
+    .line 52
+    goto :goto_0
+
+    .line 53
+    :cond_2
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 54
+    .line 55
+    add-int/2addr v0, v6
+
+    .line 56
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 57
+    .line 58
+    return-void
+.end method
+
+.method public final available()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final mark(I)V
+    .locals 1
+
+    .line 0
+    const-string v0, "Mark is currently unsupported"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
+.end method
+
+.method public final read()I
+    .locals 1
+
+    .line 268435456
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 268435457
+    .line 268435458
+    add-int/lit8 v0, v0, 0x1
+
+    .line 268435459
+    .line 268435460
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 268435461
+    .line 268435462
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 268435463
+    .line 268435464
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 268435465
+    .line 268435466
+    .line 268435467
+    move-result v0
+
+    .line 268435468
+    return v0
+.end method
+
+.method public final read([BII)I
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v1
+
+    .line 6
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 7
+    .line 8
+    add-int/2addr v0, v1
+
+    .line 9
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 10
+    .line 11
+    return v1
+.end method
+
+.method public final readBoolean()Z
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/lit8 v0, v0, 0x1
+
+    .line 3
+    .line 4
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readBoolean()Z
 
     .line 9
     .line 10
@@ -49,288 +384,1014 @@
     move-result v0
 
     .line 12
-    const/4 v13, 0x2
+    return v0
+.end method
+
+.method public final readByte()B
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/lit8 v0, v0, 0x1
+
+    .line 3
+    .line 4
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    if-ltz v0, :cond_0
 
     .line 13
-    if-eqz v0, :cond_1
-
     .line 14
+    int-to-byte v0, v0
+
     .line 15
-    invoke-static {v2}, LX/4BF;->A0t(Ljava/util/Iterator;)LX/5ua;
+    return v0
 
     .line 16
+    :cond_0
+    new-instance v0, Ljava/io/EOFException;
+
     .line 17
     .line 18
-    move-result-object v1
+    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
 
     .line 19
-    if-eqz v1, :cond_0
-
     .line 20
     .line 21
-    iget v0, v1, LX/5ua;->A01:I
+    throw v0
+.end method
 
+.method public final readChar()C
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/lit8 v0, v0, 0x2
+
+    .line 3
+    .line 4
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readChar()C
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    return v0
+.end method
+
+.method public final readDouble()D
+    .locals 2
+
+    .line 0
+    invoke-virtual {p0}, LX/5Ux;->readLong()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    invoke-static {v0, v1}, Ljava/lang/Double;->longBitsToDouble(J)D
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-wide v0
+
+    .line 8
+    return-wide v0
+.end method
+
+.method public final readFloat()F
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/5Ux;->readInt()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+.end method
+
+.method public final readFully([B)V
+    .locals 2
+
+    .line 268435456
+    iget v1, p0, LX/5Ux;->A01:I
+
+    .line 268435457
+    .line 268435458
+    array-length v0, p1
+
+    .line 268435459
+    add-int/2addr v1, v0
+
+    .line 268435460
+    iput v1, p0, LX/5Ux;->A01:I
+
+    .line 268435461
+    .line 268435462
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 268435463
+    .line 268435464
+    invoke-virtual {v0, p1}, Ljava/io/DataInputStream;->readFully([B)V
+
+    .line 268435465
+    .line 268435466
+    .line 268435467
+    return-void
+.end method
+
+.method public final readFully([BII)V
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/2addr v0, p3
+
+    .line 3
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 6
+    .line 7
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/DataInputStream;->readFully([BII)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final readInt()I
+    .locals 6
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/lit8 v0, v0, 0x4
+
+    .line 3
+    .line 4
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v5
+
+    .line 12
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v4
+
+    .line 16
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v3
+
+    .line 20
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 21
     .line 22
     .line 23
-    if-ne v0, v13, :cond_0
+    move-result v2
 
     .line 24
-    .line 25
-    iget v0, v1, LX/5ua;->A00:I
+    or-int v0, v5, v4
 
+    .line 25
     .line 26
+    or-int/2addr v0, v3
+
     .line 27
-    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    or-int/2addr v0, v2
 
     .line 28
+    if-ltz v0, :cond_2
+
     .line 29
     .line 30
-    move-result-object v0
+    iget-object v1, p0, LX/5Ux;->A02:Ljava/nio/ByteOrder;
 
     .line 31
-    invoke-virtual {v14, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    .line 32
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 33
+    .line 34
+    if-ne v1, v0, :cond_0
+
+    .line 35
+    .line 36
+    shl-int/lit8 v1, v2, 0x18
+
+    .line 37
+    .line 38
+    shl-int/lit8 v0, v3, 0x10
+
+    .line 39
+    .line 40
+    add-int/2addr v1, v0
+
+    .line 41
+    shl-int/lit8 v0, v4, 0x8
+
+    .line 42
+    .line 43
+    add-int/2addr v1, v0
+
+    .line 44
+    add-int/2addr v1, v5
+
+    .line 45
+    return v1
+
+    .line 46
+    :cond_0
+    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 47
+    .line 48
+    if-ne v1, v0, :cond_1
+
+    .line 49
+    .line 50
+    shl-int/lit8 v1, v5, 0x18
+
+    .line 51
+    .line 52
+    shl-int/lit8 v0, v4, 0x10
+
+    .line 53
+    .line 54
+    add-int/2addr v1, v0
+
+    .line 55
+    shl-int/lit8 v0, v3, 0x8
+
+    .line 56
+    .line 57
+    add-int/2addr v1, v0
+
+    .line 58
+    add-int/2addr v1, v2
+
+    .line 59
+    return v1
+
+    .line 60
+    :cond_1
+    invoke-static {v1}, LX/431;->A0Q(Ljava/lang/Object;)Ljava/io/IOException;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v0
+
+    .line 64
+    throw v0
+
+    .line 65
+    :cond_2
+    new-instance v0, Ljava/io/EOFException;
+
+    .line 66
+    .line 67
+    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
+
+    .line 68
+    .line 69
+    .line 70
+    throw v0
+.end method
+
+.method public final readLine()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    return-object v0
+.end method
+
+.method public final readLong()J
+    .locals 17
+
+    .line 0
+    move-object/from16 v1, p0
+
+    .line 1
+    .line 2
+    iget v0, v1, LX/5Ux;->A01:I
+
+    .line 3
+    .line 4
+    add-int/lit8 v0, v0, 0x8
+
+    .line 5
+    .line 6
+    iput v0, v1, LX/5Ux;->A01:I
+
+    .line 7
+    .line 8
+    iget-object v0, v1, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v9
+
+    .line 14
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v11
+
+    .line 18
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v10
+
+    .line 22
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v8
+
+    .line 26
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v7
+
+    .line 30
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v6
+
+    .line 34
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v2
+
+    .line 38
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v5
+
+    .line 42
+    or-int v0, v9, v11
+
+    .line 43
+    .line 44
+    or-int/2addr v0, v10
+
+    .line 45
+    or-int/2addr v0, v8
+
+    .line 46
+    or-int/2addr v0, v7
+
+    .line 47
+    or-int/2addr v0, v6
+
+    .line 48
+    or-int/2addr v0, v2
+
+    .line 49
+    or-int/2addr v0, v5
+
+    .line 50
+    if-ltz v0, :cond_2
+
+    .line 51
+    .line 52
+    iget-object v3, v1, LX/5Ux;->A02:Ljava/nio/ByteOrder;
+
+    .line 53
+    .line 54
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 55
+    .line 56
+    const/16 v16, 0x10
+
+    .line 57
+    .line 58
+    const/16 v15, 0x18
+
+    .line 59
+    .line 60
+    const/16 v14, 0x20
+
+    .line 61
+    .line 62
+    const/16 v13, 0x28
+
+    .line 63
+    .line 64
+    const/16 v12, 0x30
+
+    .line 65
+    .line 66
+    const/16 v1, 0x38
+
+    .line 67
+    .line 68
+    if-ne v3, v0, :cond_0
+
+    .line 69
+    .line 70
+    int-to-long v3, v5
+
+    .line 71
+    shl-long/2addr v3, v1
+
+    .line 72
+    int-to-long v0, v2
+
+    .line 73
+    shl-long/2addr v0, v12
+
+    .line 74
+    add-long/2addr v3, v0
+
+    .line 75
+    int-to-long v0, v6
+
+    .line 76
+    shl-long/2addr v0, v13
+
+    .line 77
+    add-long/2addr v3, v0
+
+    .line 78
+    int-to-long v0, v7
+
+    .line 79
+    shl-long/2addr v0, v14
+
+    .line 80
+    add-long/2addr v3, v0
+
+    .line 81
+    int-to-long v0, v8
+
+    .line 82
+    shl-long/2addr v0, v15
+
+    .line 83
+    add-long/2addr v3, v0
+
+    .line 84
+    int-to-long v0, v10
+
+    .line 85
+    shl-long v0, v0, v16
+
+    .line 86
+    .line 87
+    add-long/2addr v3, v0
+
+    .line 88
+    int-to-long v1, v11
+
+    .line 89
+    const/16 v0, 0x8
+
+    .line 90
+    .line 91
+    shl-long/2addr v1, v0
+
+    .line 92
+    add-long/2addr v3, v1
+
+    .line 93
+    int-to-long v0, v9
+
+    .line 94
+    :goto_0
+    add-long/2addr v3, v0
+
+    .line 95
+    return-wide v3
+
+    .line 96
+    :cond_0
+    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 97
+    .line 98
+    if-ne v3, v0, :cond_1
+
+    .line 99
+    .line 100
+    int-to-long v3, v9
+
+    .line 101
+    shl-long/2addr v3, v1
+
+    .line 102
+    int-to-long v0, v11
+
+    .line 103
+    shl-long/2addr v0, v12
+
+    .line 104
+    add-long/2addr v3, v0
+
+    .line 105
+    int-to-long v0, v10
+
+    .line 106
+    shl-long/2addr v0, v13
+
+    .line 107
+    add-long/2addr v3, v0
+
+    .line 108
+    int-to-long v0, v8
+
+    .line 109
+    shl-long/2addr v0, v14
+
+    .line 110
+    add-long/2addr v3, v0
+
+    .line 111
+    int-to-long v0, v7
+
+    .line 112
+    shl-long/2addr v0, v15
+
+    .line 113
+    add-long/2addr v3, v0
+
+    .line 114
+    int-to-long v0, v6
+
+    .line 115
+    shl-long v0, v0, v16
+
+    .line 116
+    .line 117
+    add-long/2addr v3, v0
+
+    .line 118
+    int-to-long v1, v2
+
+    .line 119
+    const/16 v0, 0x8
+
+    .line 120
+    .line 121
+    shl-long/2addr v1, v0
+
+    .line 122
+    add-long/2addr v3, v1
+
+    .line 123
+    int-to-long v0, v5
+
+    .line 124
+    goto :goto_0
+
+    .line 125
+    :cond_1
+    invoke-static {v3}, LX/431;->A0Q(Ljava/lang/Object;)Ljava/io/IOException;
+
+    .line 126
+    .line 127
+    .line 128
+    move-result-object v0
+
+    .line 129
+    throw v0
+
+    .line 130
+    :cond_2
+    new-instance v0, Ljava/io/EOFException;
+
+    .line 131
+    .line 132
+    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
+
+    .line 133
+    .line 134
+    .line 135
+    throw v0
+.end method
+
+.method public final readShort()S
+    .locals 4
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/lit8 v0, v0, 0x2
+
+    .line 3
+    .line 4
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v3
+
+    .line 12
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v2
+
+    .line 16
+    or-int v0, v3, v2
+
+    .line 17
+    .line 18
+    if-ltz v0, :cond_2
+
+    .line 19
+    .line 20
+    iget-object v1, p0, LX/5Ux;->A02:Ljava/nio/ByteOrder;
+
+    .line 21
+    .line 22
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 23
+    .line 24
+    if-ne v1, v0, :cond_0
+
+    .line 25
+    .line 26
+    shl-int/lit8 v0, v2, 0x8
+
+    .line 27
+    .line 28
+    add-int/2addr v0, v3
+
+    .line 29
+    :goto_0
+    int-to-short v0, v0
+
+    .line 30
+    return v0
+
+    .line 31
+    :cond_0
+    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     .line 32
     .line 33
-    .line 34
-    goto :goto_0
+    if-ne v1, v0, :cond_1
 
+    .line 34
     .line 35
-    :cond_1
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    shl-int/lit8 v0, v3, 0x8
 
     .line 36
     .line 37
+    add-int/2addr v0, v2
+
     .line 38
-    move-result-object v12
+    goto :goto_0
 
     .line 39
-    invoke-interface/range {p0 .. p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    :cond_1
+    invoke-static {v1}, LX/431;->A0Q(Ljava/lang/Object;)Ljava/io/IOException;
 
     .line 40
     .line 41
     .line 42
-    move-result-object v15
+    move-result-object v0
 
     .line 43
-    :goto_1
-    invoke-interface {v15}, Ljava/util/Iterator;->hasNext()Z
+    throw v0
+
+    .line 44
+    :cond_2
+    new-instance v0, Ljava/io/EOFException;
+
+    .line 45
+    .line 46
+    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw v0
+.end method
+
+.method public final readUTF()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/lit8 v0, v0, 0x2
+
+    .line 3
+    .line 4
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
+.end method
+
+.method public final readUnsignedByte()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/lit8 v0, v0, 0x1
+
+    .line 3
+    .line 4
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedByte()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    return v0
+.end method
+
+.method public final readUnsignedShort()I
+    .locals 4
+
+    .line 0
+    iget v0, p0, LX/5Ux;->A01:I
+
+    .line 1
+    .line 2
+    add-int/lit8 v0, v0, 0x2
+
+    .line 3
+    .line 4
+    iput v0, p0, LX/5Ux;->A01:I
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v3
+
+    .line 12
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v2
+
+    .line 16
+    or-int v0, v3, v2
+
+    .line 17
+    .line 18
+    if-ltz v0, :cond_2
+
+    .line 19
+    .line 20
+    iget-object v1, p0, LX/5Ux;->A02:Ljava/nio/ByteOrder;
+
+    .line 21
+    .line 22
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 23
+    .line 24
+    if-ne v1, v0, :cond_0
+
+    .line 25
+    .line 26
+    shl-int/lit8 v0, v2, 0x8
+
+    .line 27
+    .line 28
+    add-int/2addr v0, v3
+
+    .line 29
+    return v0
+
+    .line 30
+    :cond_0
+    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 31
+    .line 32
+    if-ne v1, v0, :cond_1
+
+    .line 33
+    .line 34
+    shl-int/lit8 v0, v3, 0x8
+
+    .line 35
+    .line 36
+    add-int/2addr v0, v2
+
+    .line 37
+    return v0
+
+    .line 38
+    :cond_1
+    invoke-static {v1}, LX/431;->A0Q(Ljava/lang/Object;)Ljava/io/IOException;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    throw v0
+
+    .line 43
+    :cond_2
+    new-instance v0, Ljava/io/EOFException;
 
     .line 44
     .line 45
+    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
+
     .line 46
-    move-result v0
-
     .line 47
-    if-eqz v0, :cond_5
-
     .line 48
-    .line 49
-    invoke-static {v15}, LX/4BF;->A0t(Ljava/util/Iterator;)LX/5ua;
+    throw v0
+.end method
 
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v1
+.method public final reset()V
+    .locals 1
 
-    .line 53
-    if-eqz v1, :cond_4
+    .line 0
+    const-string v0, "Reset is currently unsupported"
 
-    .line 54
-    .line 55
-    iget v11, v1, LX/5ua;->A01:I
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
-    .line 56
-    .line 57
-    if-ne v11, v13, :cond_4
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 58
-    .line 59
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    .line 6
+    throw v0
+.end method
 
-    .line 60
-    .line 61
-    .line 62
-    move-result-object v10
+.method public final skipBytes(I)I
+    .locals 1
 
-    .line 63
-    iget-object v0, v1, LX/5ua;->A08:Ljava/util/List;
+    .line 0
+    const-string v0, "skipBytes is currently unsupported"
 
-    .line 64
-    .line 65
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
-    .line 66
-    .line 67
-    .line 68
-    move-result-object v3
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 69
-    :cond_2
-    :goto_2
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 70
-    .line 71
-    .line 72
-    move-result v0
-
-    .line 73
-    if-eqz v0, :cond_3
-
-    .line 74
-    .line 75
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v2
-
-    .line 79
-    check-cast v2, LX/5uP;
-
-    .line 80
-    .line 81
-    if-eqz v2, :cond_2
-
-    .line 82
-    .line 83
-    iget-object v0, v2, LX/5uP;->A02:Ljava/lang/String;
-
-    .line 84
-    .line 85
-    invoke-virtual {v14, v0}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
-
-    .line 86
-    .line 87
-    .line 88
-    move-result v0
-
-    .line 89
-    if-eqz v0, :cond_2
-
-    .line 90
-    .line 91
-    invoke-virtual {v10, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 92
-    .line 93
-    .line 94
-    goto :goto_2
-
-    .line 95
-    :cond_3
-    iget v9, v1, LX/5ua;->A00:I
-
-    .line 96
-    .line 97
-    iget-object v8, v1, LX/5ua;->A07:Ljava/util/List;
-
-    .line 98
-    .line 99
-    iget-object v7, v1, LX/5ua;->A05:Ljava/util/List;
-
-    .line 100
-    .line 101
-    iget-object v6, v1, LX/5ua;->A06:Ljava/util/List;
-
-    .line 102
-    .line 103
-    iget-object v5, v1, LX/5ua;->A03:Ljava/lang/String;
-
-    .line 104
-    .line 105
-    iget-object v4, v1, LX/5ua;->A04:Ljava/lang/String;
-
-    .line 106
-    .line 107
-    iget-object v3, v1, LX/5ua;->A02:Ljava/lang/String;
-
-    .line 108
-    .line 109
-    iget-boolean v2, v1, LX/5ua;->A09:Z
-
-    .line 110
-    .line 111
-    iget-boolean v1, v1, LX/5ua;->A0A:Z
-
-    .line 112
-    .line 113
-    new-instance v0, LX/5ua;
-
-    .line 114
-    .line 115
-    move/from16 v24, v9
-
-    .line 116
-    .line 117
-    move/from16 v25, v11
-
-    .line 118
-    .line 119
-    move/from16 v26, v2
-
-    .line 120
-    .line 121
-    move/from16 p0, v1
-
-    .line 122
-    .line 123
-    move-object/from16 v23, v10
-
-    .line 124
-    .line 125
-    move-object/from16 v22, v6
-
-    .line 126
-    .line 127
-    move-object/from16 v21, v7
-
-    .line 128
-    .line 129
-    move-object/from16 v20, v8
-
-    .line 130
-    .line 131
-    move-object/from16 v19, v3
-
-    .line 132
-    .line 133
-    move-object/from16 v18, v4
-
-    .line 134
-    .line 135
-    move-object/from16 v17, v5
-
-    .line 136
-    .line 137
-    move-object/from16 v16, v0
-
-    .line 138
-    .line 139
-    invoke-direct/range {v16 .. v27}, LX/5ua;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;IIZZ)V
-
-    .line 140
-    .line 141
-    .line 142
-    invoke-virtual {v12, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 143
-    .line 144
-    .line 145
-    goto :goto_1
-
-    .line 146
-    :cond_4
-    invoke-virtual {v12, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 147
-    .line 148
-    .line 149
-    goto :goto_1
-
-    .line 150
-    :cond_5
-    return-object v12
+    .line 6
+    throw v0
 .end method

@@ -1,65 +1,99 @@
 .class public final LX/4ij;
-.super LX/4me;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A01:Landroid/view/View$OnClickListener;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A02:LX/6KV;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+# static fields
+.field public static final A00:LX/4ly;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 5
 
     .line 0
-    const-string v0, "SurveyIntroComponent"
+    new-instance v4, LX/4jx;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4}, LX/4jx;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    const v0, 0x7f080152
+    const/4 v2, 0x1
 
     .line 6
+    iget-wide v0, v4, LX/4jh;->A00:J
+
     .line 7
     .line 8
-    iput v0, p0, LX/4ij;->A00:I
+    invoke-static {v0, v1, v2}, Lcom/facebook/yoga/YogaNative;->jni_YGConfigSetUseWebDefaultsJNI(JZ)V
 
     .line 9
     .line 10
+    .line 11
+    sget-object v0, LX/6ZP;->CLASSIC:LX/6ZP;
+
+    .line 12
+    .line 13
+    iget-wide v1, v4, LX/4jh;->A00:J
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, LX/6ZP;->intValue()I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    invoke-static {v1, v2, v0}, Lcom/facebook/yoga/YogaNative;->jni_YGConfigSetErrataJNI(JI)V
+
+    .line 20
+    .line 21
+    .line 22
+    sget-object v0, LX/4KH;->WEB_FLEX_BASIS:LX/4KH;
+
+    .line 23
+    .line 24
+    sget-boolean v3, LX/4gE;->isYogaFlexBasisFixEnabled:Z
+
+    .line 25
+    .line 26
+    iget-wide v1, v4, LX/4jh;->A00:J
+
+    .line 27
+    .line 28
+    invoke-virtual {v0}, LX/4KH;->intValue()I
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v0
+
+    .line 32
+    invoke-static {v1, v2, v0, v3}, Lcom/facebook/yoga/YogaNative;->jni_YGConfigSetExperimentalFeatureEnabledJNI(JIZ)V
+
+    .line 33
+    .line 34
+    .line 35
+    sput-object v4, LX/4ij;->A00:LX/4ly;
+
+    .line 36
+    .line 37
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

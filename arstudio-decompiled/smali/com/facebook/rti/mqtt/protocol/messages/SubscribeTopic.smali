@@ -15,23 +15,21 @@
 
 .field public final A01:Ljava/lang/String;
 
-.field public volatile A02:Lcom/facebook/rti/mqtt/protocol/messages/TopicExtraInfo;
-
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 2
 
     .line 0
-    const/16 v1, 0x11
+    const/16 v1, 0xa
 
     .line 1
     .line 2
-    new-instance v0, LX/04O;
+    new-instance v0, LX/0Wv;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/04O;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Wv;-><init>(I)V
 
     .line 5
     .line 6
@@ -202,7 +200,7 @@
 
     .line 21
     .line 22
-    invoke-static {v1, v0}, LX/0Vm;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WP;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 23
     .line 24
@@ -245,7 +243,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2

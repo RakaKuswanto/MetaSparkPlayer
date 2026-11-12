@@ -1,480 +1,119 @@
-.class public LX/3t3;
+.class public abstract LX/3t3;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/41b;
-.implements LX/42D;
+
+# static fields
+.field public static final A00:Ljava/util/Map;
+
+.field public static final A01:Ljava/util/Map;
+
+.field public static final A02:Ljava/util/Map;
+
+.field public static final A03:Ljava/util/Map;
+
+.field public static final A04:Ljava/util/Map;
+
+.field public static final A05:Ljava/util/Map;
+
+.field public static final A06:Ljava/util/Map;
+
+.field public static final A07:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 10
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AXO(Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AY5(LX/44o;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final bridge synthetic AY8(LX/44o;Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 5
-
-    .line 0
-    move-object v4, p0
-
-    .line 1
-    instance-of v0, p0, LX/3og;
-
-    .line 2
-    .line 3
-    if-eqz v0, :cond_0
-
-    .line 4
-    .line 5
-    check-cast v4, LX/3og;
-
-    .line 6
-    .line 7
-    iget-object v1, p1, LX/44o;->A09:Ljava/util/Map;
-
-    .line 8
-    .line 9
-    const-string v2, ""
-
-    .line 10
-    .line 11
-    if-eqz v1, :cond_2
-
-    .line 12
-    .line 13
-    const-string/jumbo v0, "uri_source"
-
-    .line 14
-    .line 15
-    .line 16
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v3
-
-    .line 20
-    :goto_0
-    check-cast v3, Landroid/net/Uri;
-
-    .line 21
-    .line 22
-    iget-object v1, p1, LX/44o;->A05:Ljava/lang/Object;
-
-    .line 23
-    .line 24
-    instance-of v0, v1, Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 25
-    .line 26
-    if-eqz v0, :cond_1
-
-    .line 27
-    .line 28
-    check-cast v1, Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 29
-    .line 30
-    iget-object v2, v1, Lcom/facebook/common/callercontext/CallerContext;->A03:Ljava/lang/String;
-
-    .line 31
-    .line 32
-    iget-object v1, v1, Lcom/facebook/common/callercontext/CallerContext;->A01:Lcom/facebook/common/callercontext/ContextChain;
-
-    .line 33
-    .line 34
-    :goto_1
-    const-string v0, "controller-listener-2"
-
-    .line 35
-    .line 36
-    invoke-static {v3, v4, v1, v2, v0}, LX/3og;->A00(Landroid/net/Uri;LX/3og;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 37
-    .line 38
-    .line 39
-    :cond_0
-    return-void
-
-    .line 40
-    :cond_1
-    const/4 v1, 0x0
-
-    .line 41
-    goto :goto_1
-
-    .line 42
-    :cond_2
-    move-object v3, v2
-
-    .line 43
-    goto :goto_0
-.end method
-
-.method public final AZ2(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final bridge synthetic AZ4(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    return-void
-.end method
-
-.method public final AbR(LX/41f;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AbS(LX/41f;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AbV(LX/41f;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AbW(LX/41f;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AbZ(LX/41f;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Abp(LX/44o;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Ac2(LX/41f;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Ac4(LX/41f;Ljava/lang/Throwable;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Ac7(LX/41f;)V
-    .locals 11
-
-    .line 0
-    instance-of v0, p0, Lcom/facebook/photos/base/debug/DebugImageTracker;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v6, p0
-
-    .line 5
-    check-cast v6, Lcom/facebook/photos/base/debug/DebugImageTracker;
-
-    .line 6
-    .line 7
-    iget-object v0, v6, Lcom/facebook/photos/base/debug/DebugImageTracker;->A04:LX/0Na;
-
-    .line 8
-    .line 9
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
-
-    .line 10
-    .line 11
-    .line 12
     move-result-object v2
 
-    .line 13
-    const-wide v0, 0x81024a000319a8L
-
-    .line 14
-    .line 15
-    .line 16
-    .line 17
-    .line 18
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
-
-    .line 19
-    .line 20
-    .line 21
-    move-result v0
-
-    .line 22
-    if-eqz v0, :cond_1
-
-    .line 23
-    .line 24
-    invoke-static {v6}, Lcom/facebook/photos/base/debug/DebugImageTracker;->A04(Lcom/facebook/photos/base/debug/DebugImageTracker;)Z
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v0
-
-    .line 28
-    if-nez v0, :cond_1
-
-    .line 29
-    .line 30
-    :cond_0
-    return-void
-
-    .line 31
-    :cond_1
-    invoke-static {v6}, Lcom/facebook/photos/base/debug/DebugImageTracker;->A05(Lcom/facebook/photos/base/debug/DebugImageTracker;)Z
-
-    .line 32
-    .line 33
-    .line 34
-    move-result v0
-
-    .line 35
-    if-nez v0, :cond_0
-
-    .line 36
-    .line 37
-    move-object v5, p1
-
-    .line 38
-    move-object v1, v5
-
-    .line 39
-    check-cast v1, LX/3zT;
-
-    .line 40
-    .line 41
-    iget-object v0, v1, LX/3zT;->A07:LX/3xw;
-
-    .line 42
-    .line 43
-    iget-object v3, v0, LX/3xw;->A05:Landroid/net/Uri;
-
-    .line 44
-    .line 45
-    iget-object v2, v1, LX/3zT;->A08:Ljava/lang/Object;
-
-    .line 46
-    .line 47
-    check-cast v2, Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 48
-    .line 49
-    iget-object v0, v2, Lcom/facebook/common/callercontext/CallerContext;->A01:Lcom/facebook/common/callercontext/ContextChain;
-
-    .line 50
-    .line 51
-    iget-object v7, v2, Lcom/facebook/common/callercontext/CallerContext;->A03:Ljava/lang/String;
-
-    .line 52
-    .line 53
-    if-eqz v0, :cond_2
-
-    .line 54
-    .line 55
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 56
-    .line 57
-    .line 58
-    move-result-object v8
-
-    .line 59
-    :goto_0
-    iget-object v0, v6, Lcom/facebook/photos/base/debug/DebugImageTracker;->A02:LX/0Na;
-
-    .line 60
-    .line 61
-    invoke-static {v0}, LX/0Yd;->A07(LX/0Na;)J
-
-    .line 62
-    .line 63
-    .line 64
-    move-result-wide v9
-
-    .line 65
-    new-instance v4, LX/44q;
-
-    .line 66
-    .line 67
-    invoke-direct/range {v4 .. v10}, LX/44q;-><init>(LX/41f;Lcom/facebook/photos/base/debug/DebugImageTracker;Ljava/lang/String;Ljava/lang/String;J)V
-
-    .line 68
-    .line 69
-    .line 70
-    iget-object v0, v6, Lcom/facebook/photos/base/debug/DebugImageTracker;->A03:LX/0Na;
-
-    .line 71
-    .line 72
-    invoke-static {v0}, LX/0Yg;->A11(LX/0Na;)Ljava/util/concurrent/Executor;
-
-    .line 73
-    .line 74
-    .line 75
-    move-result-object v1
-
-    .line 76
-    new-instance v0, LX/44n;
-
-    .line 77
-    .line 78
-    invoke-direct {v0, v3, v2, v4, v6}, LX/44n;-><init>(Landroid/net/Uri;Lcom/facebook/common/callercontext/CallerContext;LX/46h;Lcom/facebook/photos/base/debug/DebugImageTracker;)V
-
-    .line 79
-    .line 80
-    .line 81
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 82
-    .line 83
-    .line 84
-    return-void
-
-    .line 85
-    :cond_2
-    const-string v8, ""
-
-    .line 86
-    .line 87
-    goto :goto_0
-.end method
-
-.method public final Ac9(LX/41f;)V
-    .locals 15
-
-    .line 0
-    instance-of v0, p0, LX/3og;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_2
-
-    .line 3
     .line 4
-    move-object v4, p0
+    sget-object v9, LX/3us;->A03:[Ljava/lang/String;
 
     .line 5
-    check-cast v4, LX/3og;
-
     .line 6
+    const/4 v8, 0x0
+
     .line 7
-    iget-object v7, v4, LX/3og;->A04:LX/0ZF;
+    aget-object v1, v9, v8
 
     .line 8
     .line 9
-    const-wide v0, 0x810128000b0f90L
+    const-string/jumbo v0, "pt_seg_detect_unet.ptl"
 
     .line 10
     .line 11
     .line 12
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 13
     .line 14
-    invoke-interface {v7, v0, v1}, LX/35B;->ACd(J)Z
-
     .line 15
-    .line 16
-    .line 17
-    move-result v0
+    const/4 v7, 0x1
 
+    .line 16
+    aget-object v1, v9, v7
+
+    .line 17
     .line 18
-    if-nez v0, :cond_2
+    const-string/jumbo v0, "pt_seg_track_unet.ptl"
 
     .line 19
     .line 20
-    move-object/from16 v8, p1
-
     .line 21
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 22
-    move-object v0, v8
-
     .line 23
-    check-cast v0, LX/3zT;
-
     .line 24
+    const/4 v6, 0x2
+
     .line 25
-    iget-object v6, v0, LX/3zT;->A07:LX/3xw;
+    aget-object v1, v9, v6
 
     .line 26
     .line 27
-    iget-object v14, v0, LX/3zT;->A08:Ljava/lang/Object;
+    const-string/jumbo v0, "pt_multiclass_seg_detect.ptl"
 
     .line 28
     .line 29
-    check-cast v14, Lcom/facebook/common/callercontext/CallerContext;
-
     .line 30
-    .line 31
-    const-string v1, ""
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 31
     .line 32
     .line 33
-    if-eqz v14, :cond_5
+    const/4 v5, 0x3
 
     .line 34
+    aget-object v1, v9, v5
+
     .line 35
-    iget-object v3, v14, Lcom/facebook/common/callercontext/CallerContext;->A03:Ljava/lang/String;
-
     .line 36
-    .line 37
-    :goto_0
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string/jumbo v0, "pt_multiclass_seg_track.ptl"
 
+    .line 37
     .line 38
     .line 39
+    invoke-static {v1, v0, v2}, LX/0X6;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+
     .line 40
-    move-result v0
-
     .line 41
-    if-nez v0, :cond_4
-
     .line 42
+    move-result-object v0
+
     .line 43
-    iget-object v0, v14, Lcom/facebook/common/callercontext/CallerContext;->A01:Lcom/facebook/common/callercontext/ContextChain;
+    sput-object v0, LX/3t3;->A07:Ljava/util/Map;
 
     .line 44
     .line 45
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 46
     .line 47
@@ -482,305 +121,322 @@
     move-result-object v2
 
     .line 49
-    :goto_1
-    invoke-interface {v8}, LX/41f;->ARF()Z
+    sget-object v4, LX/3us;->A02:[Ljava/lang/String;
 
     .line 50
     .line 51
-    .line 52
-    move-result v5
+    aget-object v1, v4, v8
 
+    .line 52
     .line 53
-    const-string/jumbo v9, "origin"
+    const-string/jumbo v0, "pt_hair_seg_detect.ptl"
 
     .line 54
     .line 55
     .line 56
-    invoke-interface {v8, v1, v9}, LX/42S;->AFb(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 57
     .line 58
     .line 59
-    move-result-object v8
+    aget-object v1, v4, v7
 
     .line 60
-    check-cast v8, Ljava/lang/String;
-
     .line 61
-    .line 62
-    const-wide v0, 0x810128000a0f8fL
+    const-string/jumbo v0, "pt_hair_seg_track.ptl"
 
+    .line 62
     .line 63
     .line 64
+    invoke-static {v1, v0, v2}, LX/0X6;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+
     .line 65
     .line 66
     .line 67
-    invoke-interface {v7, v0, v1}, LX/35B;->ACd(J)Z
+    move-result-object v0
 
     .line 68
+    sput-object v0, LX/3t3;->A06:Ljava/util/Map;
+
     .line 69
     .line 70
-    move-result v0
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 71
-    if-eqz v0, :cond_1
-
     .line 72
     .line 73
-    iget-object v0, v4, LX/3og;->A05:LX/3GQ;
+    move-result-object v2
 
     .line 74
-    .line 75
-    invoke-interface {v0, v14, v6}, LX/3GQ;->Afg(Lcom/facebook/common/callercontext/CallerContext;LX/3xw;)Z
+    aget-object v0, v9, v8
 
+    .line 75
     .line 76
+    const-string/jumbo v3, "seg_init_net.pb"
+
     .line 77
     .line 78
-    move-result v0
-
     .line 79
-    if-eqz v0, :cond_1
+    invoke-virtual {v2, v0, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 80
     .line 81
-    iget-object v10, v4, LX/3og;->A07:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
-
     .line 82
-    .line 83
-    const v1, 0x2c40003
+    aget-object v0, v9, v7
 
+    .line 83
     .line 84
+    const-string/jumbo v1, "seg_predict_net.pb"
+
     .line 85
     .line 86
-    const-string v0, "fetch_efficiency_simple_event"
-
     .line 87
+    invoke-static {v0, v1, v2}, LX/0X6;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+
     .line 88
-    invoke-interface {v10, v1, v0}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markEventBuilder(ILjava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
-
     .line 89
     .line 90
+    move-result-object v0
+
     .line 91
-    move-result-object v12
+    sput-object v0, LX/3t3;->A05:Ljava/util/Map;
 
     .line 92
-    iget-object v0, v6, LX/3xw;->A05:Landroid/net/Uri;
-
     .line 93
-    .line 94
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
+    .line 94
     .line 95
     .line 96
+    move-result-object v2
+
     .line 97
-    move-result-object v13
+    aget-object v0, v9, v8
 
     .line 98
-    const/4 v10, 0x0
-
     .line 99
-    if-eqz v14, :cond_3
+    invoke-virtual {v2, v0, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 100
     .line 101
-    iget-object v11, v14, Lcom/facebook/common/callercontext/CallerContext;->A03:Ljava/lang/String;
-
     .line 102
+    aget-object v0, v9, v7
+
     .line 103
-    iget-object v0, v14, Lcom/facebook/common/callercontext/CallerContext;->A01:Lcom/facebook/common/callercontext/ContextChain;
-
     .line 104
-    .line 105
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 105
     .line 106
     .line 107
-    .line 108
-    move-result-object v10
+    aget-object v1, v9, v6
 
+    .line 108
     .line 109
-    :goto_2
-    const-wide v0, 0x81012800030f8dL
+    const-string/jumbo v0, "multiclass_seg_init_net.pb"
 
     .line 110
     .line 111
     .line 112
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 113
     .line 114
-    invoke-interface {v7, v0, v1}, LX/35B;->ACd(J)Z
-
     .line 115
+    aget-object v1, v9, v5
+
     .line 116
     .line 117
-    move-result v0
+    const-string/jumbo v0, "multiclass_seg_predict_net.pb"
 
     .line 118
-    if-eqz v0, :cond_0
-
     .line 119
     .line 120
-    invoke-virtual {v13}, Ljava/lang/String;->hashCode()I
+    invoke-static {v1, v0, v2}, LX/0X6;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
 
     .line 121
     .line 122
     .line 123
-    move-result v0
+    move-result-object v0
 
     .line 124
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+    sput-object v0, LX/3t3;->A04:Ljava/util/Map;
 
     .line 125
     .line 126
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 127
-    move-result v1
-
     .line 128
-    const-string/jumbo v0, "uri"
-
     .line 129
-    .line 130
-    .line 131
-    invoke-interface {v12, v0, v1}, Lcom/facebook/quicklog/EventBuilder;->annotate(Ljava/lang/String;I)Lcom/facebook/quicklog/EventBuilder;
+    move-result-object v2
 
+    .line 130
+    aget-object v1, v4, v8
+
+    .line 131
     .line 132
+    const-string/jumbo v0, "hair_seg_init_net.pb"
+
     .line 133
     .line 134
-    :cond_0
-    const-string v0, "calling_class"
-
     .line 135
-    .line 136
-    invoke-interface {v12, v0, v11}, Lcom/facebook/quicklog/EventBuilder;->annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 136
     .line 137
     .line 138
-    .line 139
-    move-result-object v1
+    aget-object v1, v4, v7
 
+    .line 139
     .line 140
-    const-string v0, "context_chain"
+    const-string/jumbo v0, "hair_seg_predict_net.pb"
 
     .line 141
     .line 142
-    invoke-interface {v1, v0, v10}, Lcom/facebook/quicklog/EventBuilder;->annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
-
     .line 143
+    invoke-static {v1, v0, v2}, LX/0X6;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+
     .line 144
     .line 145
+    .line 146
     move-result-object v0
 
-    .line 146
-    invoke-interface {v0, v9, v8}, Lcom/facebook/quicklog/EventBuilder;->annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
-
     .line 147
+    sput-object v0, LX/3t3;->A03:Ljava/util/Map;
+
     .line 148
     .line 149
-    move-result-object v1
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 150
-    const-string/jumbo v0, "is_prefetch"
-
     .line 151
     .line 152
+    move-result-object v5
+
     .line 153
-    invoke-interface {v1, v0, v5}, Lcom/facebook/quicklog/EventBuilder;->annotate(Ljava/lang/String;Z)Lcom/facebook/quicklog/EventBuilder;
+    sget-object v4, LX/3us;->A00:[Ljava/lang/String;
 
     .line 154
     .line 155
+    const/4 v3, 0x4
+
     .line 156
-    move-result-object v0
+    const/4 v2, 0x0
 
     .line 157
-    invoke-interface {v0}, Lcom/facebook/quicklog/EventBuilder;->report()V
+    :cond_0
+    aget-object v1, v4, v2
 
     .line 158
     .line 159
-    .line 160
-    :cond_1
-    const-wide v0, 0x81012800010f8cL
+    const-string/jumbo v0, "v14/"
 
+    .line 160
     .line 161
     .line 162
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 163
     .line 164
     .line 165
-    invoke-interface {v7, v0, v1}, LX/35B;->ACd(J)Z
+    move-result-object v0
 
     .line 166
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 167
     .line 168
-    move-result v0
-
     .line 169
-    if-eqz v0, :cond_2
+    move-result-object v0
 
     .line 170
-    .line 171
-    if-nez v5, :cond_2
+    invoke-virtual {v5, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 171
     .line 172
     .line 173
-    invoke-static {v4}, LX/3og;->A01(LX/3og;)V
+    add-int/lit8 v2, v2, 0x1
 
     .line 174
     .line 175
+    if-lt v2, v3, :cond_0
+
     .line 176
-    iget-object v1, v6, LX/3xw;->A05:Landroid/net/Uri;
-
     .line 177
-    .line 178
-    const-string/jumbo v0, "on-request-success"
+    invoke-static {v5}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
+    .line 178
     .line 179
     .line 180
+    move-result-object v0
+
     .line 181
-    invoke-static {v1, v4, v2, v3, v0}, LX/3og;->A00(Landroid/net/Uri;LX/3og;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    sput-object v0, LX/3t3;->A02:Ljava/util/Map;
 
     .line 182
     .line 183
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 184
-    :cond_2
-    return-void
-
     .line 185
-    :cond_3
-    move-object v11, v10
-
     .line 186
-    goto :goto_2
+    move-result-object v2
 
     .line 187
-    :cond_4
-    move-object v2, v1
+    sget-object v3, LX/3us;->A01:[Ljava/lang/String;
 
     .line 188
-    goto/16 :goto_1
-
     .line 189
+    aget-object v1, v3, v8
+
     .line 190
-    :cond_5
-    move-object v3, v1
-
     .line 191
-    goto/16 :goto_0
-.end method
+    const-string/jumbo v0, "expression_fitting_model.bin"
 
-.method public final AdH(LX/44o;Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
+    .line 192
+    .line 193
+    .line 194
+    invoke-static {v1, v0, v2}, LX/0X6;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
 
+    .line 195
+    .line 196
+    .line 197
+    move-result-object v0
+
+    .line 198
+    sput-object v0, LX/3t3;->A01:Ljava/util/Map;
+
+    .line 199
+    .line 200
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 201
+    .line 202
+    .line 203
+    move-result-object v2
+
+    .line 204
+    aget-object v1, v3, v8
+
+    .line 205
+    .line 206
+    const-string/jumbo v0, "deep_expression_tracker_v0_model_pytorch_edge.pt"
+
+    .line 207
+    .line 208
+    .line 209
+    invoke-static {v1, v0, v2}, LX/0X6;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+
+    .line 210
+    .line 211
+    .line 212
+    move-result-object v0
+
+    .line 213
+    sput-object v0, LX/3t3;->A00:Ljava/util/Map;
+
+    .line 214
+    .line 215
     return-void
-.end method
-
-.method public final AeM(LX/41f;Ljava/lang/String;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Ajv(LX/41f;Ljava/lang/String;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

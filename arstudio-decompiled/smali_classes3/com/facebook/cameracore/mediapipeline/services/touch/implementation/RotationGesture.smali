@@ -1,5 +1,5 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGesture;
-.super Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;
+.super Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;
 .source ""
 
 
@@ -8,7 +8,7 @@
 
 
 # direct methods
-.method public constructor <init>(JFFFLcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;ZFF)V
+.method public constructor <init>(JFFFLcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;ZFF)V
     .locals 9
 
     .line 0
@@ -39,7 +39,7 @@
 
     .line 10
     .line 11
-    invoke-direct/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;-><init>(JFFLcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;ZFF)V
+    invoke-direct/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;-><init>(JFFLcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;ZFF)V
 
     .line 12
     .line 13
@@ -53,11 +53,11 @@
 
 
 # virtual methods
-.method public getGestureType()Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+.method public getGestureType()Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->ROTATE:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->ROTATE:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 1
     .line 2

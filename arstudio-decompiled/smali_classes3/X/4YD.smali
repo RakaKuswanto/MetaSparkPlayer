@@ -1,630 +1,1100 @@
-.class public final LX/4YD;
-.super LX/4me;
+.class public LX/4YD;
+.super Landroid/widget/FrameLayout;
 .source ""
 
 
 # instance fields
-.field public A00:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
+.field public A00:Z
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_TEXT:LX/4Y9;
-    .end annotation
-.end field
+.field public A01:Z
 
-.field public A01:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
+.field public final A02:LX/4YE;
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_OFFSET:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A02:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_TEXT:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A03:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_OFFSET:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A04:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_OFFSET:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A05:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_OFFSET:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A06:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->FLOAT:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A07:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A08:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->COLOR:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A09:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0A:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0B:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0C:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0D:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->COLOR:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0E:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->INT:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0F:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->INT:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0G:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_SIZE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0H:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->INT:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0I:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->INT:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0J:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_SIZE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0K:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_SIZE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0L:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->COLOR:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0M:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->COLOR:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0N:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_TEXT:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0O:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0P:Landroid/content/res/ColorStateList;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0Q:Landroid/graphics/Typeface;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0R:Landroid/text/Layout$Alignment;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0S:Landroid/text/TextUtils$TruncateAt;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0T:LX/4Qn;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0U:LX/4YH;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0V:LX/4YL;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0W:Ljava/lang/CharSequence;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->STRING:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0X:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->BOOL:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0Y:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0Z:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->BOOL:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0a:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0b:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->BOOL:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A0c:[LX/4lB;
+.field public final A03:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    .line 805306368
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    .line 805306369
+    .line 805306370
+    .line 805306371
+    invoke-static {}, LX/435;->A02()Landroid/graphics/Paint;
+
+    .line 805306372
+    .line 805306373
+    .line 805306374
+    move-result-object v0
+
+    .line 805306375
+    iput-object v0, p0, LX/4YD;->A03:Landroid/graphics/Paint;
+
+    .line 805306376
+    .line 805306377
+    new-instance v0, LX/4YE;
+
+    .line 805306378
+    .line 805306379
+    invoke-direct {v0}, LX/4YE;-><init>()V
+
+    .line 805306380
+    .line 805306381
+    .line 805306382
+    iput-object v0, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 805306383
+    .line 805306384
+    const/4 v0, 0x1
+
+    .line 805306385
+    iput-boolean v0, p0, LX/4YD;->A01:Z
+
+    .line 805306386
+    .line 805306387
+    const/4 v0, 0x0
+
+    .line 805306388
+    iput-boolean v0, p0, LX/4YD;->A00:Z
+
+    .line 805306389
+    .line 805306390
+    const/4 v0, 0x0
+
+    .line 805306391
+    invoke-direct {p0, p1, v0}, LX/4YD;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 805306392
+    .line 805306393
+    .line 805306394
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    .line 536870912
+    invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    invoke-static {}, LX/435;->A02()Landroid/graphics/Paint;
+
+    .line 536870916
+    .line 536870917
+    .line 536870918
+    move-result-object v0
+
+    .line 536870919
+    iput-object v0, p0, LX/4YD;->A03:Landroid/graphics/Paint;
+
+    .line 536870920
+    .line 536870921
+    new-instance v0, LX/4YE;
+
+    .line 536870922
+    .line 536870923
+    invoke-direct {v0}, LX/4YE;-><init>()V
+
+    .line 536870924
+    .line 536870925
+    .line 536870926
+    iput-object v0, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 536870927
+    .line 536870928
+    const/4 v0, 0x1
+
+    .line 536870929
+    iput-boolean v0, p0, LX/4YD;->A01:Z
+
+    .line 536870930
+    .line 536870931
+    const/4 v0, 0x0
+
+    .line 536870932
+    iput-boolean v0, p0, LX/4YD;->A00:Z
+
+    .line 536870933
+    .line 536870934
+    invoke-direct {p0, p1, p2}, LX/4YD;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 536870935
+    .line 536870936
+    .line 536870937
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
 
     .line 0
-    const-string v0, "Text"
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
-
     .line 3
+    invoke-static {}, LX/435;->A02()Landroid/graphics/Paint;
+
     .line 4
     .line 5
-    const/4 v3, 0x0
-
     .line 6
-    iput v3, p0, LX/4YD;->A07:I
+    move-result-object v0
 
     .line 7
-    .line 8
-    const/4 v2, 0x1
+    iput-object v0, p0, LX/4YD;->A03:Landroid/graphics/Paint;
 
+    .line 8
     .line 9
-    iput-boolean v2, p0, LX/4YD;->A0Y:Z
+    new-instance v0, LX/4YE;
 
     .line 10
     .line 11
-    const/4 v1, -0x1
+    invoke-direct {v0}, LX/4YE;-><init>()V
 
     .line 12
-    iput v1, p0, LX/4YD;->A09:I
-
     .line 13
     .line 14
-    iput v1, p0, LX/4YD;->A0A:I
+    iput-object v0, p0, LX/4YD;->A02:LX/4YE;
 
     .line 15
     .line 16
-    iput v3, p0, LX/4YD;->A0B:I
+    const/4 v0, 0x1
+
+    .line 17
+    iput-boolean v0, p0, LX/4YD;->A01:Z
+
+    .line 18
+    .line 19
+    const/4 v0, 0x0
+
+    .line 20
+    iput-boolean v0, p0, LX/4YD;->A00:Z
+
+    .line 21
+    .line 22
+    invoke-direct {p0, p1, p2}, LX/4YD;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 23
+    .line 24
+    .line 25
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-static {}, LX/435;->A02()Landroid/graphics/Paint;
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    move-result-object v0
+
+    .line 268435463
+    iput-object v0, p0, LX/4YD;->A03:Landroid/graphics/Paint;
+
+    .line 268435464
+    .line 268435465
+    new-instance v0, LX/4YE;
+
+    .line 268435466
+    .line 268435467
+    invoke-direct {v0}, LX/4YE;-><init>()V
+
+    .line 268435468
+    .line 268435469
+    .line 268435470
+    iput-object v0, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 268435471
+    .line 268435472
+    const/4 v0, 0x1
+
+    .line 268435473
+    iput-boolean v0, p0, LX/4YD;->A01:Z
+
+    .line 268435474
+    .line 268435475
+    const/4 v0, 0x0
+
+    .line 268435476
+    iput-boolean v0, p0, LX/4YD;->A00:Z
+
+    .line 268435477
+    .line 268435478
+    invoke-direct {p0, p1, p2}, LX/4YD;->A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 268435479
+    .line 268435480
+    .line 268435481
+    return-void
+.end method
+
+.method private A00(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 4
+
+    .line 0
+    const/4 v3, 0x0
+
+    .line 1
+    invoke-virtual {p0, v3}, Landroid/view/View;->setWillNotDraw(Z)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    .line 7
+    .line 8
+    .line 9
+    if-nez p2, :cond_0
+
+    .line 10
+    .line 11
+    new-instance v0, LX/4Yd;
+
+    .line 12
+    .line 13
+    invoke-direct {v0}, LX/4Yd;-><init>()V
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-virtual {v0}, LX/4YL;->A01()LX/4YP;
 
     .line 17
     .line 18
-    iput v3, p0, LX/4YD;->A0C:I
-
     .line 19
+    move-result-object v0
+
     .line 20
-    const v0, 0x7f7fffff    # Float.MAX_VALUE
+    invoke-direct {p0, v0}, LX/4YD;->A01(LX/4YP;)V
 
     .line 21
     .line 22
     .line 23
-    iput v0, p0, LX/4YD;->A02:F
+    return-void
 
     .line 24
-    .line 25
-    const v0, -0xffff01
+    :cond_0
+    sget-object v0, LX/4Yi;->A00:[I
 
+    .line 25
     .line 26
+    invoke-virtual {p1, p2, v0, v3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
     .line 27
     .line 28
-    iput v0, p0, LX/4YD;->A0D:I
-
     .line 29
+    move-result-object v2
+
     .line 30
-    iput v1, p0, LX/4YD;->A0E:I
+    const/4 v1, 0x4
 
     .line 31
-    .line 32
-    const v0, 0x7fffffff
+    :try_start_0
+    invoke-virtual {v2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
+    .line 32
     .line 33
     .line 34
+    move-result v0
+
     .line 35
-    iput v0, p0, LX/4YD;->A0F:I
+    if-eqz v0, :cond_1
 
     .line 36
     .line 37
-    iput v0, p0, LX/4YD;->A0G:I
+    invoke-virtual {v2, v1, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 38
     .line 39
-    iput v1, p0, LX/4YD;->A0H:I
-
     .line 40
+    move-result v0
+
     .line 41
-    const/high16 v0, -0x80000000
+    if-eqz v0, :cond_1
 
     .line 42
     .line 43
-    iput v0, p0, LX/4YD;->A0I:I
+    new-instance v0, LX/4YU;
 
     .line 44
     .line 45
-    iput v3, p0, LX/4YD;->A0J:I
+    invoke-direct {v0}, LX/4YU;-><init>()V
 
     .line 46
     .line 47
-    const v0, -0x777778
-
     .line 48
+    :goto_0
+    invoke-virtual {v0, v2}, LX/4YL;->A00(Landroid/content/res/TypedArray;)LX/4YL;
+
     .line 49
     .line 50
-    iput v0, p0, LX/4YD;->A0L:I
-
     .line 51
-    .line 52
-    iput-boolean v2, p0, LX/4YD;->A0b:Z
+    invoke-virtual {v0}, LX/4YL;->A01()LX/4YP;
 
+    .line 52
     .line 53
     .line 54
-    const/high16 v0, 0x3f800000    # 1.0f
+    move-result-object v0
 
     .line 55
-    .line 56
-    iput v0, p0, LX/4YD;->A06:F
+    invoke-direct {p0, v0}, LX/4YD;->A01(LX/4YP;)V
 
+    .line 56
     .line 57
     .line 58
-    iput v3, p0, LX/4YD;->A0M:I
+    goto :goto_1
 
     .line 59
+    :cond_1
+    new-instance v0, LX/4Yd;
+
     .line 60
-    sget-object v0, LX/4Y5;->A00:Landroid/content/res/ColorStateList;
-
     .line 61
-    .line 62
-    iput-object v0, p0, LX/4YD;->A0P:Landroid/content/res/ColorStateList;
+    invoke-direct {v0}, LX/4Yd;-><init>()V
 
+    .line 62
     .line 63
     .line 64
-    iput v1, p0, LX/4YD;->A0N:I
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 65
-    .line 66
-    sget v0, LX/4Y5;->A08:I
+    :goto_1
+    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 66
     .line 67
     .line 68
-    iput v0, p0, LX/4YD;->A0O:I
+    return-void
 
     .line 69
+    :catchall_0
+    move-exception v0
+
     .line 70
-    sget-object v0, LX/4Y5;->A09:Landroid/graphics/Typeface;
+    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 71
     .line 72
-    iput-object v0, p0, LX/4YD;->A0Q:Landroid/graphics/Typeface;
-
     .line 73
-    .line 74
-    sget-object v0, LX/4Y5;->A04:LX/4YL;
-
-    .line 75
-    .line 76
-    iput-object v0, p0, LX/4YD;->A0V:LX/4YL;
-
-    .line 77
-    .line 78
-    return-void
+    throw v0
 .end method
 
-.method public static A00(LX/4mm;I)LX/4jF;
-    .locals 2
+.method private final A01(LX/4YP;)V
+    .locals 9
 
     .line 0
-    new-instance v1, LX/4YD;
+    iget-object v5, p0, LX/4YD;->A02:LX/4YE;
 
     .line 1
     .line 2
-    invoke-direct {v1}, LX/4YD;-><init>()V
+    iput-object p1, v5, LX/4YE;->A02:LX/4YP;
 
     .line 3
     .line 4
+    iget-object v1, v5, LX/4YE;->A04:Landroid/graphics/Paint;
+
     .line 5
-    new-instance v0, LX/4jF;
-
     .line 6
-    .line 7
-    invoke-direct {v0, p0, v1, p1}, LX/4jF;-><init>(LX/4mm;LX/4YD;I)V
+    iget-boolean v0, p1, LX/4YP;->A0G:Z
 
+    .line 7
     .line 8
+    if-eqz v0, :cond_3
+
     .line 9
     .line 10
-    return-object v0
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
+
+    .line 11
+    .line 12
+    :goto_0
+    invoke-static {v1, v0}, LX/433;->A12(Landroid/graphics/Paint;Landroid/graphics/PorterDuff$Mode;)V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-static {v5}, LX/4YE;->A00(LX/4YE;)V
+
+    .line 16
+    .line 17
+    .line 18
+    iget-object v0, v5, LX/4YE;->A02:LX/4YP;
+
+    .line 19
+    .line 20
+    if-eqz v0, :cond_0
+
+    .line 21
+    .line 22
+    iget-object v0, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 23
+    .line 24
+    const/4 v1, 0x0
+
+    .line 25
+    if-eqz v0, :cond_2
+
+    .line 26
+    .line 27
+    invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v8
+
+    .line 31
+    iget-object v0, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 32
+    .line 33
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    .line 34
+    .line 35
+    .line 36
+    iget-object v0, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 37
+    .line 38
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
+
+    .line 39
+    .line 40
+    .line 41
+    :goto_1
+    const/4 v0, 0x2
+
+    .line 42
+    new-array v7, v0, [F
+
+    .line 43
+    .line 44
+    const/4 v0, 0x0
+
+    .line 45
+    aput v0, v7, v1
+
+    .line 46
+    .line 47
+    const/4 v6, 0x1
+
+    .line 48
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    .line 49
+    .line 50
+    iget-object v0, v5, LX/4YE;->A02:LX/4YP;
+
+    .line 51
+    .line 52
+    iget-wide v2, v0, LX/4YP;->A0E:J
+
+    .line 53
+    .line 54
+    iget-wide v0, v0, LX/4YP;->A0D:J
+
+    .line 55
+    .line 56
+    div-long/2addr v2, v0
+
+    .line 57
+    long-to-float v0, v2
+
+    .line 58
+    add-float/2addr v0, v4
+
+    .line 59
+    aput v0, v7, v6
+
+    .line 60
+    .line 61
+    invoke-static {v7}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v1
+
+    .line 65
+    iput-object v1, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 66
+    .line 67
+    new-instance v0, Landroid/view/animation/LinearInterpolator;
+
+    .line 68
+    .line 69
+    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
+
+    .line 70
+    .line 71
+    .line 72
+    invoke-virtual {v1, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 73
+    .line 74
+    .line 75
+    iget-object v1, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 76
+    .line 77
+    iget-object v0, v5, LX/4YE;->A02:LX/4YP;
+
+    .line 78
+    .line 79
+    iget v0, v0, LX/4YP;->A0B:I
+
+    .line 80
+    .line 81
+    invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->setRepeatMode(I)V
+
+    .line 82
+    .line 83
+    .line 84
+    iget-object v2, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 85
+    .line 86
+    iget-object v0, v5, LX/4YE;->A02:LX/4YP;
+
+    .line 87
+    .line 88
+    iget-wide v0, v0, LX/4YP;->A0F:J
+
+    .line 89
+    .line 90
+    invoke-virtual {v2, v0, v1}, Landroid/animation/Animator;->setStartDelay(J)V
+
+    .line 91
+    .line 92
+    .line 93
+    iget-object v1, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 94
+    .line 95
+    iget-object v0, v5, LX/4YE;->A02:LX/4YP;
+
+    .line 96
+    .line 97
+    iget v0, v0, LX/4YP;->A0A:I
+
+    .line 98
+    .line 99
+    invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
+
+    .line 100
+    .line 101
+    .line 102
+    iget-object v4, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 103
+    .line 104
+    iget-object v0, v5, LX/4YE;->A02:LX/4YP;
+
+    .line 105
+    .line 106
+    iget-wide v2, v0, LX/4YP;->A0D:J
+
+    .line 107
+    .line 108
+    iget-wide v0, v0, LX/4YP;->A0E:J
+
+    .line 109
+    .line 110
+    add-long/2addr v2, v0
+
+    .line 111
+    invoke-virtual {v4, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    .line 112
+    .line 113
+    .line 114
+    iget-object v1, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 115
+    .line 116
+    iget-object v0, v5, LX/4YE;->A03:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+    .line 117
+    .line 118
+    invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    .line 119
+    .line 120
+    .line 121
+    if-eqz v8, :cond_0
+
+    .line 122
+    .line 123
+    iget-object v0, v5, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 124
+    .line 125
+    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
+
+    .line 126
+    .line 127
+    .line 128
+    :cond_0
+    invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    .line 129
+    .line 130
+    .line 131
+    iget-boolean v0, p1, LX/4YP;->A0I:Z
+
+    .line 132
+    .line 133
+    if-eqz v0, :cond_1
+
+    .line 134
+    .line 135
+    const/4 v1, 0x2
+
+    .line 136
+    iget-object v0, p0, LX/4YD;->A03:Landroid/graphics/Paint;
+
+    .line 137
+    .line 138
+    :goto_2
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    .line 139
+    .line 140
+    .line 141
+    return-void
+
+    .line 142
+    :cond_1
+    const/4 v1, 0x0
+
+    .line 143
+    const/4 v0, 0x0
+
+    .line 144
+    goto :goto_2
+
+    .line 145
+    :cond_2
+    const/4 v8, 0x0
+
+    .line 146
+    goto :goto_1
+
+    .line 147
+    :cond_3
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    .line 148
+    .line 149
+    goto/16 :goto_0
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A0L()LX/4mg;
+.method public final dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 1
 
     .line 0
-    invoke-super {p0}, LX/4mg;->A0L()LX/4mg;
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    iget-boolean v0, p0, LX/4YD;->A01:Z
 
     .line 4
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    return-void
+.end method
+
+.method public getShimmer()LX/4YP;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/4YE;->A02:LX/4YP;
+
+    .line 3
+    .line 4
     return-object v0
+.end method
+
+.method public final onAttachedToWindow()V
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-boolean v0, p0, LX/4YD;->A01:Z
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, LX/4YE;->A01()V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    return-void
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 2
+
+    .line 0
+    invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
+
+    .line 1
+    .line 2
+    .line 3
+    const/4 v0, 0x0
+
+    .line 4
+    iput-boolean v0, p0, LX/4YD;->A00:Z
+
+    .line 5
+    .line 6
+    iget-object v1, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 7
+    .line 8
+    iget-object v0, v1, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 9
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    if-eqz v0, :cond_0
+
+    .line 17
+    .line 18
+    iget-object v0, v1, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    .line 21
+    .line 22
+    .line 23
+    :cond_0
+    return-void
+.end method
+
+.method public final onLayout(ZIIII)V
+    .locals 4
+
+    .line 0
+    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v3
+
+    .line 7
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    .line 8
+    .line 9
+    .line 10
+    move-result v2
+
+    .line 11
+    iget-object v1, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 12
+    .line 13
+    const/4 v0, 0x0
+
+    .line 14
+    invoke-virtual {v1, v0, v0, v3, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-void
+.end method
+
+.method public final onVisibilityChanged(Landroid/view/View;I)V
+    .locals 2
+
+    .line 0
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onVisibilityChanged(Landroid/view/View;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 4
+    .line 5
+    if-eqz v1, :cond_1
+
+    .line 6
+    .line 7
+    if-eqz p2, :cond_2
+
+    .line 8
+    .line 9
+    iget-object v0, v1, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 10
+    .line 11
+    if-eqz v0, :cond_1
+
+    .line 12
+    .line 13
+    invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    if-eqz v0, :cond_1
+
+    .line 18
+    .line 19
+    const/4 v0, 0x0
+
+    .line 20
+    iput-boolean v0, p0, LX/4YD;->A00:Z
+
+    .line 21
+    .line 22
+    iget-object v0, v1, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 23
+    .line 24
+    if-eqz v0, :cond_0
+
+    .line 25
+    .line 26
+    invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    if-eqz v0, :cond_0
+
+    .line 31
+    .line 32
+    iget-object v0, v1, LX/4YE;->A01:Landroid/animation/ValueAnimator;
+
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    .line 35
+    .line 36
+    .line 37
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 38
+    :goto_0
+    iput-boolean v0, p0, LX/4YD;->A00:Z
+
+    .line 39
+    .line 40
+    :cond_1
+    return-void
+
+    .line 41
+    :cond_2
+    iget-boolean v0, p0, LX/4YD;->A00:Z
+
+    .line 42
+    .line 43
+    if-eqz v0, :cond_1
+
+    .line 44
+    .line 45
+    invoke-virtual {v1}, LX/4YE;->A01()V
+
+    .line 46
+    .line 47
+    .line 48
+    const/4 v0, 0x0
+
+    .line 49
+    goto :goto_0
+.end method
+
+.method public setStaticAnimationProgress(F)V
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 1
+    .line 2
+    iget v2, v3, LX/4YE;->A00:F
+
+    .line 3
+    .line 4
+    invoke-static {p1, v2}, Ljava/lang/Float;->compare(FF)I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    .line 10
+    const/4 v1, 0x0
+
+    .line 11
+    cmpg-float v0, p1, v1
+
+    .line 12
+    .line 13
+    if-gez v0, :cond_1
+
+    .line 14
+    .line 15
+    cmpg-float v0, v2, v1
+
+    .line 16
+    .line 17
+    if-gez v0, :cond_1
+
+    .line 18
+    .line 19
+    :cond_0
+    return-void
+
+    .line 20
+    :cond_1
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 21
+    .line 22
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(FF)F
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    iput v0, v3, LX/4YE;->A00:F
+
+    .line 27
+    .line 28
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    .line 29
+    .line 30
+    .line 31
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 2
+
+    .line 0
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v1, p0, LX/4YD;->A02:LX/4YE;
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    if-ne p1, v1, :cond_1
+
+    .line 10
+    .line 11
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 12
+    :cond_1
+    return v0
 .end method

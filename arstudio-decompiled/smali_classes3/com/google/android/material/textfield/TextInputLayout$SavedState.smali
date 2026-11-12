@@ -24,22 +24,23 @@
     .locals 2
 
     .line 0
-    const/4 v1, 0x7
+    const/16 v1, 0x8
 
     .line 1
-    new-instance v0, LX/6Q8;
-
     .line 2
-    .line 3
-    invoke-direct {v0, v1}, LX/6Q8;-><init>(I)V
+    new-instance v0, LX/6gm;
 
+    .line 3
     .line 4
+    invoke-direct {v0, v1}, LX/6gm;-><init>(I)V
+
     .line 5
     .line 6
+    .line 7
     sput-object v0, Lcom/google/android/material/textfield/TextInputLayout$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 7
     .line 8
+    .line 9
     return-void
 .end method
 
@@ -72,7 +73,7 @@
 
     .line 12
     .line 13
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 14
     .line 15
@@ -153,7 +154,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -237,7 +238,7 @@
 
     .line 45
     .line 46
-    invoke-static {v0, v1}, LX/0Yd;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X1;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 47
     .line 48

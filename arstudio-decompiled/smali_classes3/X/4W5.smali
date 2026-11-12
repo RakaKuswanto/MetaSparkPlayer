@@ -2,57 +2,79 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4Wo;
 
-# static fields
-.field public static final A00:[I
+
+# instance fields
+.field public final synthetic A00:LX/4Vk;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/4Vk;)V
+    .locals 0
 
     .line 0
-    const/16 v0, 0x15
+    iput-object p1, p0, LX/4W5;->A00:LX/4Vk;
 
     .line 1
     .line 2
-    new-array v0, v0, [I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    fill-array-data v0, :array_0
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AVr(Lcom/google/android/material/textfield/TextInputLayout;I)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p1, Lcom/google/android/material/textfield/TextInputLayout;->A0G:Landroid/widget/EditText;
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x1
 
     .line 5
+    if-ne p2, v0, :cond_0
+
     .line 6
     .line 7
-    sput-object v0, LX/4W5;->A00:[I
+    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
 
     .line 8
     .line 9
-    return-void
+    .line 10
+    move-result-object v0
 
-    :array_0
-    .array-data 4
-        0x7f0407be
-        0x7f0407bf
-        0x7f0407c0
-        0x7f0407c1
-        0x7f0407c2
-        0x7f0407c3
-        0x7f0407c4
-        0x7f0407c5
-        0x7f0407c6
-        0x7f0407c7
-        0x7f0407c8
-        0x7f0407c9
-        0x7f0407ca
-        0x7f0407cb
-        0x7f0407cc
-        0x7f0407cd
-        0x7f0407ce
-        0x7f0407cf
-        0x7f0407d0
-        0x7f0407d1
-        0x7f0407d2
-    .end array-data
+    .line 11
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+
+    .line 12
+    .line 13
+    .line 14
+    new-instance v0, LX/4WQ;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v1, p0}, LX/4WQ;-><init>(Landroid/widget/EditText;LX/4W5;)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    .line 20
+    .line 21
+    .line 22
+    :cond_0
+    return-void
 .end method

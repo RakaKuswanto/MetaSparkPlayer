@@ -1,4 +1,4 @@
-.class public final Lcom/google/common/base/Ascii;
+.class public abstract Lcom/google/common/base/Ascii;
 .super Ljava/lang/Object;
 .source ""
 
@@ -6,6 +6,16 @@
 # direct methods
 .method public static equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "s1",
+            "s2"
+        }
+    .end annotation
 
     .line 0
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
@@ -118,6 +128,14 @@
 
 .method public static toLowerCase(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "string"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0}, Ljava/lang/String;->length()I

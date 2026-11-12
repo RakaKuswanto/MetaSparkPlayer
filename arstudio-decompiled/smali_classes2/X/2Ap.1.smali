@@ -1,45 +1,42 @@
-.class public LX/2Ap;
-.super Ljava/lang/RuntimeException;
+.class public final LX/2aP;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final serialVersionUID:J = -0x38b6fb4247878edeL
+# instance fields
+.field public final A00:LX/2oq;
+
+.field public final A01:LX/16b;
+
+.field public final A02:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(LX/2oq;LX/16b;Ljava/util/concurrent/Executor;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {p3, p1, p2}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .line 4
+    .line 5
+    .line 6
+    iput-object p3, p0, LX/2aP;->A02:Ljava/util/concurrent/Executor;
 
-    .line 536870912
-    invoke-direct {p0, p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 7
+    .line 8
+    iput-object p1, p0, LX/2aP;->A00:LX/2oq;
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    return-void
-.end method
+    .line 9
+    .line 10
+    iput-object p2, p0, LX/2aP;->A01:LX/16b;
 
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
+    .line 11
+    .line 12
     return-void
 .end method

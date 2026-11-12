@@ -1,39 +1,112 @@
 .class public final LX/5HK;
-.super LX/6Kx;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "Http2Connection$ReaderRunnable$2"
-
-
 # instance fields
-.field public final synthetic A00:LX/5HT;
-
-.field public final synthetic A01:LX/5IE;
+.field public final A00:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public varargs constructor <init>(LX/5HT;LX/5IE;[Ljava/lang/Object;)V
+.method public constructor <init>(I)V
     .locals 1
 
     .line 0
-    const-string v0, "OkHttp %s ACK Settings"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/5HK;->A00:LX/5HT;
-
     .line 3
-    .line 4
-    iput-object p2, p0, LX/5HK;->A01:LX/5IE;
+    invoke-static {p1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 4
     .line 5
     .line 6
-    invoke-direct {p0, v0, p3}, LX/6Kx;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
     .line 7
+    iput-object v0, p0, LX/5HK;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 8
     .line 9
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    instance-of v0, p1, LX/5HK;
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    const-string v0, "equals"
+
+    .line 7
+    .line 8
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    throw v0
+
+    .line 13
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 14
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    .line 0
+    const-string v1, "toString"
+
+    .line 1
+    .line 2
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    throw v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    const-string v0, "toString"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
 .end method

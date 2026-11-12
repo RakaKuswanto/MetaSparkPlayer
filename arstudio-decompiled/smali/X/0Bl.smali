@@ -1,122 +1,93 @@
-.class public final LX/0Bl;
+.class public final LX/0BL;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/io/FilenameFilter;
 
-# static fields
-.field public static final A00:[I
+
+# instance fields
+.field public final synthetic A00:LX/03h;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/03h;)V
+    .locals 0
 
     .line 0
-    const/16 v0, 0x2d
+    iput-object p1, p0, LX/0BL;->A00:LX/03h;
 
     .line 1
     .line 2
-    new-array v0, v0, [I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    fill-array-data v0, :array_0
-
     .line 5
-    .line 6
-    .line 7
-    sput-object v0, LX/0Bl;->A00:[I
-
-    .line 8
-    .line 9
     return-void
-
-    .line 10
-    :array_0
-    .array-data 4
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x2020
-        0x2020
-        0x2020
-        0x2020
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x2020
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x20
-        0x2020
-        0x20
-        0x20
-        0x20
-    .end array-data
 .end method
 
-.method public static final A00(Ljava/lang/String;)[J
+
+# virtual methods
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 2
 
     .line 0
-    const/4 v0, 0x6
+    const-string v0, "dso_state"
 
     .line 1
-    new-array v1, v0, [J
-
     .line 2
-    .line 3
-    fill-array-data v1, :array_0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 3
     .line 4
     .line 5
+    move-result v0
+
     .line 6
-    sget-object v0, LX/0Bl;->A00:[I
+    if-nez v0, :cond_0
 
     .line 7
     .line 8
-    invoke-static {p0, v0, v1}, LX/0J0;->A01(Ljava/lang/String;[I[J)Z
+    const-string v0, "dso_lock"
 
     .line 9
     .line 10
-    .line 11
-    return-object v1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 11
     .line 12
-    :array_0
-    .array-data 8
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-    .end array-data
+    .line 13
+    move-result v0
+
+    .line 14
+    if-nez v0, :cond_0
+
+    .line 15
+    .line 16
+    const-string v0, "dso_deps"
+
+    .line 17
+    .line 18
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v1
+
+    .line 22
+    const/4 v0, 0x1
+
+    .line 23
+    if-eqz v1, :cond_1
+
+    .line 24
+    .line 25
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 26
+    :cond_1
+    return v0
 .end method

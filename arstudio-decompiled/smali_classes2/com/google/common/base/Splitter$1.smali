@@ -13,6 +13,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/CharMatcher;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "val$separatorMatcher"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/base/Splitter$1;->val$separatorMatcher:Lcom/google/common/base/CharMatcher;
@@ -31,6 +39,16 @@
 # virtual methods
 .method public bridge synthetic iterator(Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)Ljava/util/Iterator;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1010
+        }
+        names = {
+            "splitter",
+            "toSplit"
+        }
+    .end annotation
 
     .line 0
     new-instance v0, Lcom/google/common/base/Splitter$1$1;

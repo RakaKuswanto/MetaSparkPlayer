@@ -1,261 +1,181 @@
-.class public final LX/1YC;
-.super Ljava/lang/Object;
+.class public abstract LX/1yC;
+.super Ljava/util/AbstractSet;
 .source ""
 
-# interfaces
-.implements LX/21i;
 
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "QuickExperimentLoggingMethod"
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/util/AbstractSet<",
+        "TT;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field public final A00:LX/1YG;
+.field public final synthetic A00:LX/6El;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/6El;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/1yC;->A00:LX/6El;
 
     .line 1
     .line 2
-    .line 3
-    sget v0, LX/2eq;->AHa:I
+    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    check-cast v0, LX/1YG;
-
-    .line 10
-    .line 11
-    iput-object v0, p0, LX/1YC;->A00:LX/1YG;
-
-    .line 12
-    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic ALJ(Ljava/lang/Object;)LX/222;
-    .locals 4
+.method public final clear()V
+    .locals 1
 
     .line 0
-    check-cast p1, Lcom/facebook/abtest/qe/protocol/sync/QuickExperimentLoggingParams;
+    iget-object v0, p0, LX/1yC;->A00:LX/6El;
 
     .line 1
     .line 2
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
 
     .line 3
     .line 4
     .line 5
-    move-result-object v3
-
-    .line 6
-    iget-object v1, p1, Lcom/facebook/abtest/qe/protocol/sync/QuickExperimentLoggingParams;->A02:Ljava/lang/String;
-
-    .line 7
-    .line 8
-    const-string/jumbo v0, "testexpt:qe:%s"
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-static {v0, v1}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v1
-
-    .line 15
-    const-string v0, "experiment"
-
-    .line 16
-    .line 17
-    if-eqz v1, :cond_0
-
-    .line 18
-    .line 19
-    invoke-static {v0, v1, v3}, LX/0Yc;->A1T(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
-
-    .line 20
-    .line 21
-    .line 22
-    :cond_0
-    iget-object v1, p1, Lcom/facebook/abtest/qe/protocol/sync/QuickExperimentLoggingParams;->A04:Ljava/lang/String;
-
-    .line 23
-    .line 24
-    const-string/jumbo v0, "hash"
-
-    .line 25
-    .line 26
-    .line 27
-    if-eqz v1, :cond_1
-
-    .line 28
-    .line 29
-    invoke-static {v0, v1, v3}, LX/0Yc;->A1T(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
-
-    .line 30
-    .line 31
-    .line 32
-    :cond_1
-    iget-object v1, p1, Lcom/facebook/abtest/qe/protocol/sync/QuickExperimentLoggingParams;->A01:Ljava/lang/String;
-
-    .line 33
-    .line 34
-    const-string/jumbo v0, "log_event"
-
-    .line 35
-    .line 36
-    .line 37
-    if-eqz v1, :cond_2
-
-    .line 38
-    .line 39
-    invoke-static {v0, v1, v3}, LX/0Yc;->A1T(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
-
-    .line 40
-    .line 41
-    .line 42
-    :cond_2
-    iget-object v1, p1, Lcom/facebook/abtest/qe/protocol/sync/QuickExperimentLoggingParams;->A00:Ljava/lang/String;
-
-    .line 43
-    .line 44
-    const-string/jumbo v0, "log_event_name"
-
-    .line 45
-    .line 46
-    .line 47
-    if-eqz v1, :cond_3
-
-    .line 48
-    .line 49
-    invoke-static {v0, v1, v3}, LX/0Yc;->A1T(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
-
-    .line 50
-    .line 51
-    .line 52
-    :cond_3
-    iget-object v1, p1, Lcom/facebook/abtest/qe/protocol/sync/QuickExperimentLoggingParams;->A03:Ljava/lang/String;
-
-    .line 53
-    .line 54
-    const-string/jumbo v0, "log_data"
-
-    .line 55
-    .line 56
-    .line 57
-    if-eqz v1, :cond_4
-
-    .line 58
-    .line 59
-    invoke-static {v0, v1, v3}, LX/0Yc;->A1T(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
-
-    .line 60
-    .line 61
-    .line 62
-    :cond_4
-    const-string v2, "/me/test_experiments"
-
-    .line 63
-    .line 64
-    invoke-static {}, LX/221;->A03()LX/221;
-
-    .line 65
-    .line 66
-    .line 67
-    move-result-object v1
-
-    .line 68
-    const-string/jumbo v0, "log_to_qe"
-
-    .line 69
-    .line 70
-    .line 71
-    iput-object v0, v1, LX/221;->A0D:Ljava/lang/String;
-
-    .line 72
-    .line 73
-    iput-object v2, v1, LX/221;->A0F:Ljava/lang/String;
-
-    .line 74
-    .line 75
-    const-string v0, "POST"
-
-    .line 76
-    .line 77
-    iput-object v0, v1, LX/221;->A0E:Ljava/lang/String;
-
-    .line 78
-    .line 79
-    iput-object v3, v1, LX/221;->A0J:Ljava/util/List;
-
-    .line 80
-    .line 81
-    sget-object v0, Lcom/facebook/http/interfaces/RequestPriority;->CAN_WAIT:Lcom/facebook/http/interfaces/RequestPriority;
-
-    .line 82
-    .line 83
-    invoke-virtual {v1, v0}, LX/221;->A05(Lcom/facebook/http/interfaces/RequestPriority;)V
-
-    .line 84
-    .line 85
-    .line 86
-    sget-object v0, LX/014;->A01:Ljava/lang/Integer;
-
-    .line 87
-    .line 88
-    iput-object v0, v1, LX/221;->A06:Ljava/lang/Integer;
-
-    .line 89
-    .line 90
-    sget-object v0, LX/014;->A00:Ljava/lang/Integer;
-
-    .line 91
-    .line 92
-    iput-object v0, v1, LX/221;->A07:Ljava/lang/Integer;
-
-    .line 93
-    .line 94
-    invoke-static {v1}, LX/221;->A01(LX/221;)LX/222;
-
-    .line 95
-    .line 96
-    .line 97
-    move-result-object v0
-
-    .line 98
-    return-object v0
+    return-void
 .end method
 
-.method public final bridge synthetic ALS(LX/1wn;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final isEmpty()Z
     .locals 1
 
     .line 0
-    invoke-virtual {p1}, LX/1wn;->A04()V
+    iget-object v0, p0, LX/1yC;->A00:LX/6El;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1yC;->A00:LX/6El;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->size()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 2
+
+    .line 268435456
+    invoke-static {p0}, LX/0X3;->A0o(Ljava/util/AbstractCollection;)Ljava/util/ArrayList;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v1
+
+    .line 268435460
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result-object v0
+
+    .line 268435464
+    invoke-static {v1, v0}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
+
+    .line 268435465
+    .line 268435466
+    .line 268435467
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->toArray()[Ljava/lang/Object;
+
+    .line 268435468
+    .line 268435469
+    .line 268435470
+    move-result-object v0
+
+    .line 268435471
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "a"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {p0}, LX/0X3;->A0o(Ljava/util/AbstractCollection;)Ljava/util/ArrayList;
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    move-result-object v1
 
     .line 4
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-static {v1, v0}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {v1, p1}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
     return-object v0
 .end method

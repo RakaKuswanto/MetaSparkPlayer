@@ -26,7 +26,7 @@
     .locals 1
 
     .line 0
-    sget-object v0, LX/3LZ;->A00:Lcom/facebook/common/perftest/base/PerfTestConfigBase;
+    sget-object v0, LX/2wP;->A00:Lcom/facebook/common/perftest/base/PerfTestConfigBase;
 
     .line 1
     .line 2
@@ -53,6 +53,10 @@
     .locals 0
 
     .line 0
+    sput-boolean p1, Lcom/facebook/common/perftest/base/PerfTestConfigBase;->A00:Z
+
+    .line 1
+    .line 2
     return-void
 .end method
 
@@ -74,7 +78,7 @@
     .locals 0
 
     .line 0
-    sput-boolean p1, Lcom/facebook/common/perftest/base/PerfTestConfigBase;->A00:Z
+    sput-boolean p1, Lcom/facebook/common/perftest/base/PerfTestConfigBase;->A01:Z
 
     .line 1
     .line 2
@@ -141,16 +145,5 @@
     .locals 0
 
     .line 0
-    return-void
-.end method
-
-.method public setUseApiRequestCache(Z)V
-    .locals 0
-
-    .line 0
-    sput-boolean p1, Lcom/facebook/common/perftest/base/PerfTestConfigBase;->A01:Z
-
-    .line 1
-    .line 2
     return-void
 .end method

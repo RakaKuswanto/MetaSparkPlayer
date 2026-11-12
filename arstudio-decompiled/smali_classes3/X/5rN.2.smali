@@ -1,25 +1,11 @@
-.class public final LX/5rN;
+.class public interface abstract LX/5rN;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/5pn;
+# virtual methods
+.method public abstract A5z()LX/5ut;
+.end method
 
-
-# direct methods
-.method public constructor <init>(LX/5pn;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/5rN;->A00:LX/5pn;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+.method public abstract AaM(Ljava/lang/Object;)V
 .end method

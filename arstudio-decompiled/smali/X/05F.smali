@@ -1,50 +1,20 @@
-.class public final LX/05F;
+.class public interface abstract LX/05F;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "Fragment$1"
-
-
-# instance fields
-.field public final synthetic A00:Landroidx/fragment/app/Fragment;
-
-
-# direct methods
-.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/05F;->A00:Landroidx/fragment/app/Fragment;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public abstract ACH()Landroid/net/Uri;
+.end method
 
-    .line 0
-    iget-object v0, p0, LX/05F;->A00:Landroidx/fragment/app/Fragment;
+.method public abstract AD7()Landroid/content/ClipDescription;
+.end method
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->startPostponedEnterTransition()V
+.method public abstract AFh()Ljava/lang/Object;
+.end method
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
+.method public abstract AGN()Landroid/net/Uri;
+.end method
+
+.method public abstract AiM()V
 .end method

@@ -1,55 +1,34 @@
-.class public interface abstract LX/5vc;
+.class public final synthetic LX/5vC;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/media/ImageReader$OnImageAvailableListener;
 
-# static fields
-.field public static final A00:LX/5vc;
 
-.field public static final A01:LX/5vc;
+# instance fields
+.field public final synthetic A00:LX/5tx;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(LX/5tx;)V
+    .locals 0
 
-    .line 0
-    new-instance v0, LX/5va;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/5va;-><init>()V
+    iput-object p1, p0, LX/5vC;->A00:LX/5tx;
 
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/5vc;->A00:LX/5vc;
-
-    .line 6
-    .line 7
-    sput-object v0, LX/5vc;->A01:LX/5vc;
-
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract A4U(Lcom/google/android/exoplayer2/Format;LX/5zj;)LX/5vG;
-.end method
+.method public final onImageAvailable(Landroid/media/ImageReader;)V
+    .locals 1
 
-.method public abstract ADz(Lcom/google/android/exoplayer2/Format;)I
-.end method
+    iget-object v0, p0, LX/5vC;->A00:LX/5tx;
 
-.method public abstract AgE(Lcom/google/android/exoplayer2/Format;LX/5zj;)LX/5xj;
-.end method
+    invoke-static {p1, v0}, LX/5tx;->A00(Landroid/media/ImageReader;LX/5tx;)V
 
-.method public abstract AgM()V
-.end method
-
-.method public abstract Ame(Landroid/os/Looper;LX/5zd;)V
-.end method
-
-.method public abstract release()V
+    return-void
 .end method

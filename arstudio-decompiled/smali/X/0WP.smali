@@ -1,56 +1,43 @@
-.class public final LX/0WP;
-.super Ljava/lang/Thread;
+.class public abstract LX/0WP;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RtiThread"
-
-
-# instance fields
-.field public final A00:I
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-    .locals 1
+.method public static A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
 
     .line 0
-    const/16 v0, 0x9
+    if-eq p0, p1, :cond_0
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    if-eqz p0, :cond_1
 
     .line 3
     .line 4
-    .line 5
-    iput v0, p0, LX/0WP;->A00:I
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
+    .line 5
     .line 6
     .line 7
-    return-void
-.end method
+    move-result p0
 
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/0WP;->A00:I
-
-    .line 1
-    .line 2
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    .line 3
-    .line 4
-    .line 5
-    invoke-super {p0}, Ljava/lang/Thread;->run()V
-
-    .line 6
-    .line 7
     .line 8
-    return-void
+    if-eqz p0, :cond_1
+
+    .line 9
+    .line 10
+    :cond_0
+    const/4 p0, 0x1
+
+    .line 11
+    return p0
+
+    .line 12
+    :cond_1
+    const/4 p0, 0x0
+
+    .line 13
+    return p0
 .end method

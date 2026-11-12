@@ -1,155 +1,111 @@
-.class public final LX/2ho;
+.class public final LX/2hO;
 .super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final A00:LX/0lu;
+
+
 # direct methods
-.method public static A00(II)I
-    .locals 2
-
-    const/16 v0, 0xff
-
-    if-eq p1, v0, :cond_0
-
-    const v1, 0xffffff
-
-    if-nez p1, :cond_1
-
-    and-int/2addr p0, v1
-
-    :cond_0
-    return p0
-
-    :cond_1
-    shr-int/lit8 v0, p1, 0x7
-
-    add-int/2addr p1, v0
-
-    ushr-int/lit8 v0, p0, 0x18
-
-    mul-int/2addr v0, p1
-
-    shr-int/lit8 v0, v0, 0x8
-
-    shl-int/lit8 v0, v0, 0x18
-
-    and-int/2addr p0, v1
-
-    or-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public static A01(Landroid/graphics/drawable/Drawable$Callback;Landroid/graphics/drawable/Drawable;LX/2hd;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    if-eqz p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
     .line 3
+    invoke-static {}, LX/2I6;->A0L()LX/0lu;
+
     .line 4
     .line 5
-    instance-of p0, p1, LX/2hc;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    if-eqz p0, :cond_0
+    iput-object v0, p0, LX/2hO;->A00:LX/0lu;
 
     .line 8
     .line 9
-    check-cast p1, LX/2hc;
-
-    .line 10
-    .line 11
-    invoke-interface {p1, p2}, LX/2hc;->AnS(LX/2hd;)V
-
-    .line 12
-    .line 13
-    .line 14
-    :cond_0
     return-void
 .end method
 
-.method public static A02(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-    .locals 2
+
+# virtual methods
+.method public final A00()V
+    .locals 4
 
     .line 0
-    if-eqz p0, :cond_0
+    const-string/jumbo v3, "failed_gating"
 
     .line 1
     .line 2
-    if-eq p0, p1, :cond_0
-
     .line 3
-    .line 4
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget-object v0, p0, LX/2hO;->A00:LX/0lu;
 
+    .line 4
     .line 5
+    invoke-static {v0}, LX/0lu;->A03(LX/0lu;)LX/0B4;
+
     .line 6
     .line 7
-    move-result-object v0
-
     .line 8
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    move-result-object v1
 
     .line 9
+    const-string/jumbo v0, "connectivity_epd_consent_check"
+
     .line 10
     .line 11
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
-
     .line 12
+    invoke-interface {v1, v0}, LX/0B4;->A2Y(Ljava/lang/String;)LX/0B8;
+
     .line 13
     .line 14
-    move-result v0
-
     .line 15
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
+    move-result-object v2
 
     .line 16
+    invoke-interface {v2}, LX/0B8;->isSampled()Z
+
     .line 17
     .line 18
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getLevel()I
-
     .line 19
-    .line 20
-    .line 21
     move-result v0
 
+    .line 20
+    if-eqz v0, :cond_0
+
+    .line 21
     .line 22
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+    const-string/jumbo v1, "facebook_android"
 
     .line 23
     .line 24
     .line 25
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isVisible()Z
+    const-string/jumbo v0, "surface"
 
     .line 26
     .line 27
     .line 28
-    move-result v1
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 29
-    const/4 v0, 0x0
-
     .line 30
-    invoke-virtual {p0, v1, v0}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
-
     .line 31
+    const-string/jumbo v0, "consent_result"
+
     .line 32
     .line 33
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getState()[I
-
     .line 34
+    invoke-interface {v2, v0, v3}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 35
     .line 36
-    move-result-object v0
-
     .line 37
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+    invoke-interface {v2}, LX/0B8;->AQk()V
 
     .line 38
     .line 39

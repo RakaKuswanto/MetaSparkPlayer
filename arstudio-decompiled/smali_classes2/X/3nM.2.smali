@@ -1,49 +1,21 @@
-.class public abstract LX/3nM;
+.class public final LX/3nM;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A01:Ljava/util/Iterator;
-
-
 # instance fields
-.field public final A00:Ljava/io/File;
+.field public final A00:Ljava/util/List;
+
+.field public final A01:Ljava/util/List;
+
+.field public final A02:Ljava/util/List;
+
+.field public final A03:Ljava/util/List;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 2
-    .line 3
-    .line 4
-    move-result-object v0
-
-    .line 5
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    sput-object v0, LX/3nM;->A01:Ljava/util/Iterator;
-
-    .line 10
-    .line 11
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/io/File;)V
-    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,151 +23,301 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3nM;->A00:Ljava/io/File;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
     .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/3nM;->A01:Ljava/util/List;
+
+    .line 8
+    .line 9
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/3nM;->A02:Ljava/util/List;
+
+    .line 14
+    .line 15
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    iput-object v0, p0, LX/3nM;->A03:Ljava/util/List;
+
+    .line 20
+    .line 21
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    iput-object v0, p0, LX/3nM;->A00:Ljava/util/List;
+
+    .line 26
+    .line 27
+    return-void
+.end method
+
+.method public static A00(LX/3qe;LX/3nM;I)V
+    .locals 1
+
+    .line 0
+    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {p1, p0, v0}, LX/3nM;->A05(LX/3qe;Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public static A01(LX/3qe;LX/3nM;Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {p1, p0, v0}, LX/3nM;->A05(LX/3qe;Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public static A02(LX/3qe;LX/3nM;Z)V
+    .locals 1
+
+    .line 0
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {p1, p0, v0}, LX/3nM;->A05(LX/3qe;Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()Ljava/util/Iterator;
-    .locals 4
+.method public final A03()V
+    .locals 1
 
     .line 0
-    instance-of v0, p0, LX/3nH;
+    iget-object v0, p0, LX/3nM;->A01:Ljava/util/List;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_3
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 3
     .line 4
-    move-object v3, p0
-
     .line 5
-    check-cast v3, LX/3nH;
+    iget-object v0, p0, LX/3nM;->A02:Ljava/util/List;
 
     .line 6
     .line 7
-    iget-object v1, v3, LX/3nM;->A00:Ljava/io/File;
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 8
     .line 9
-    iget-object v0, v3, LX/3nH;->A00:Ljava/io/FileFilter;
-
     .line 10
+    iget-object v0, p0, LX/3nM;->A03:Ljava/util/List;
+
     .line 11
-    iget-object v2, v3, LX/3nH;->A01:Ljava/util/Comparator;
-
     .line 12
-    .line 13
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 13
     .line 14
     .line 15
-    invoke-virtual {v1, v0}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
+    iget-object v0, p0, LX/3nM;->A00:Ljava/util/List;
 
     .line 16
     .line 17
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
     .line 18
-    move-result-object v1
+    .line 19
+    .line 20
+    return-void
+.end method
+
+.method public final A04(LX/3nA;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3nM;->A01:Ljava/util/List;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/3nQ;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, p1, p2}, LX/3nQ;-><init>(LX/3nA;Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final A05(LX/3qe;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3nM;->A02:Ljava/util/List;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/3nP;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, p1, p2}, LX/3nP;-><init>(LX/3qe;Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final A06(LX/3nM;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3nM;->A01:Ljava/util/List;
+
+    .line 1
+    .line 2
+    iget-object v0, p1, LX/3nM;->A01:Ljava/util/List;
+
+    .line 3
+    .line 4
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v1, p0, LX/3nM;->A02:Ljava/util/List;
+
+    .line 8
+    .line 9
+    iget-object v0, p1, LX/3nM;->A02:Ljava/util/List;
+
+    .line 10
+    .line 11
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 12
+    .line 13
+    .line 14
+    iget-object v1, p0, LX/3nM;->A03:Ljava/util/List;
+
+    .line 15
+    .line 16
+    iget-object v0, p1, LX/3nM;->A03:Ljava/util/List;
+
+    .line 17
+    .line 18
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 19
-    :goto_0
-    if-eqz v1, :cond_1
-
     .line 20
     .line 21
-    if-eqz v2, :cond_2
+    iget-object v1, p0, LX/3nM;->A00:Ljava/util/List;
 
     .line 22
     .line 23
-    array-length v0, v1
+    iget-object v0, p1, LX/3nM;->A00:Ljava/util/List;
 
     .line 24
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
     .line 25
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
     .line 26
     .line 27
-    move-result-object v0
-
     .line 28
-    goto :goto_1
+    return-void
+.end method
 
-    .line 29
+.method public final A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3nM;->A03:Ljava/util/List;
+
+    .line 1
+    .line 2
+    if-nez p3, :cond_0
+
+    .line 3
+    .line 4
+    const-string p3, ""
+
+    .line 5
+    .line 6
     :cond_0
-    invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    new-instance v0, LX/6an;
 
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v1
+    .line 7
+    .line 8
+    invoke-direct {v0, p1, p2, p3}, LX/6an;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
-    goto :goto_0
+    .line 9
+    .line 10
+    .line 11
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 34
-    :goto_1
-    :try_start_0
-    invoke-static {v0, v2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
-
-    .line 35
-    .line 36
-    .line 37
-    goto :goto_2
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 38
-    :cond_1
-    const/4 v0, 0x0
-
-    .line 39
-    new-array v1, v0, [Ljava/io/File;
-
-    .line 40
-    .line 41
-    goto :goto_3
-
-    .line 42
-    :goto_2
-    move-object v1, v0
-
-    .line 43
-    :catch_0
-    :cond_2
-    :goto_3
-    new-instance v2, LX/3nP;
-
-    .line 44
-    .line 45
-    invoke-direct {v2, v1}, LX/3nP;-><init>([Ljava/lang/Object;)V
-
-    .line 46
-    .line 47
-    .line 48
-    const/4 v1, 0x0
-
-    .line 49
-    new-instance v0, LX/1Uf;
-
-    .line 50
-    .line 51
-    invoke-direct {v0, v3, v1, v2}, LX/1Uf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    .line 52
-    .line 53
-    .line 54
-    return-object v0
-
-    .line 55
-    :cond_3
-    sget-object v0, LX/3nM;->A01:Ljava/util/Iterator;
-
-    .line 56
-    .line 57
-    return-object v0
+    .line 12
+    .line 13
+    .line 14
+    return-void
 .end method

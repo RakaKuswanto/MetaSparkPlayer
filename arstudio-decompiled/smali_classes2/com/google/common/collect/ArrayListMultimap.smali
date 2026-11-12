@@ -35,6 +35,14 @@
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
@@ -59,7 +67,7 @@
     .line 10
     .line 11
     .line 12
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A07(Ljava/util/Map;)V
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A06(Ljava/util/Map;)V
 
     .line 13
     .line 14
@@ -80,7 +88,7 @@
     move-result-object v0
 
     .line 22
-    invoke-interface {p0, v0}, LX/1dg;->ABI(Ljava/lang/Object;)Ljava/util/Collection;
+    invoke-interface {p0, v0}, LX/21e;->A9o(Ljava/lang/Object;)Ljava/util/Collection;
 
     .line 23
     .line 24
@@ -138,6 +146,14 @@
 
 .method private writeObject(Ljava/io/ObjectOutputStream;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
@@ -145,7 +161,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0, p1}, LX/1f3;->A01(LX/1dg;Ljava/io/ObjectOutputStream;)V
+    invoke-static {p0, p1}, LX/22T;->A01(LX/21e;Ljava/io/ObjectOutputStream;)V
 
     .line 4
     .line 5

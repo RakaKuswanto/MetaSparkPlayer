@@ -1,208 +1,203 @@
-.class public final LX/5wq;
+.class public final LX/5wQ;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5x5;
+.implements LX/5tH;
 
 
 # instance fields
-.field public A00:I
+.field public final synthetic A00:LX/5wN;
 
-.field public A01:I
+.field public final synthetic A01:Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;
 
-.field public final A02:I
+.field public final synthetic A02:LX/5Yi;
 
-.field public final A03:I
+.field public final synthetic A03:LX/60J;
 
-.field public final A04:LX/6Gb;
+.field public final synthetic A04:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/5wz;)V
-    .locals 2
+.method public constructor <init>(LX/5wN;Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;LX/5Yi;LX/60J;Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/5wQ;->A01:Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;
 
     .line 1
     .line 2
+    iput-object p5, p0, LX/5wQ;->A04:Ljava/lang/String;
+
     .line 3
-    iget-object v1, p1, LX/5wz;->A00:LX/6Gb;
-
     .line 4
+    iput-object p4, p0, LX/5wQ;->A03:LX/60J;
+
     .line 5
-    iput-object v1, p0, LX/5wq;->A04:LX/6Gb;
-
     .line 6
+    iput-object p3, p0, LX/5wQ;->A02:LX/5Yi;
+
     .line 7
-    const/16 v0, 0xc
-
     .line 8
-    .line 9
-    invoke-static {v1, v0}, LX/6Gb;->A03(LX/6Gb;I)I
+    iput-object p1, p0, LX/5wQ;->A00:LX/5wN;
 
+    .line 9
     .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 11
     .line 12
-    move-result v0
-
     .line 13
-    and-int/lit16 v0, v0, 0xff
-
-    .line 14
-    .line 15
-    iput v0, p0, LX/5wq;->A02:I
-
-    .line 16
-    .line 17
-    invoke-virtual {v1}, LX/6Gb;->A0A()I
-
-    .line 18
-    .line 19
-    .line 20
-    move-result v0
-
-    .line 21
-    iput v0, p0, LX/5wq;->A03:I
-
-    .line 22
-    .line 23
     return-void
 .end method
 
 
 # virtual methods
-.method public final AFq()I
-    .locals 1
-
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final ALb()I
-    .locals 1
+.method public final AVv(LX/5tW;)V
+    .locals 5
 
     .line 0
-    iget v0, p0, LX/5wq;->A03:I
+    iget v4, p1, LX/5tW;->mCameraError:I
 
     .line 1
     .line 2
-    return v0
-.end method
-
-.method public final Ahl()I
-    .locals 2
-
-    .line 0
-    iget v1, p0, LX/5wq;->A02:I
-
-    .line 1
-    .line 2
-    const/16 v0, 0x8
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     .line 3
     .line 4
-    if-ne v1, v0, :cond_0
-
     .line 5
+    move-result-object v3
+
     .line 6
-    iget-object v0, p0, LX/5wq;->A04:LX/6Gb;
+    const/4 v2, 0x1
 
     .line 7
+    const/4 v0, 0x2
+
     .line 8
-    invoke-virtual {v0}, LX/6Gb;->A08()I
+    if-ne v4, v0, :cond_4
 
     .line 9
     .line 10
-    .line 11
-    move-result v0
+    const/16 v1, 0x2717
 
+    .line 11
     .line 12
-    return v0
+    :cond_0
+    :goto_0
+    const/4 v0, 0x0
 
     .line 13
-    :cond_0
-    const/16 v0, 0x10
+    new-instance v4, Lcom/facebook/cameracore/camerasdk/common/CameraStateException;
 
     .line 14
     .line 15
-    if-ne v1, v0, :cond_1
+    invoke-direct {v4, v3, v0, v1, v2}, Lcom/facebook/cameracore/camerasdk/common/CameraStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;IZ)V
 
     .line 16
     .line 17
-    iget-object v0, p0, LX/5wq;->A04:LX/6Gb;
-
     .line 18
-    .line 19
-    invoke-virtual {v0}, LX/6Gb;->A0B()I
+    iget-object v3, p0, LX/5wQ;->A01:Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;
 
+    .line 19
     .line 20
+    sget-object v0, LX/5tM;->A0Q:LX/5tM;
+
     .line 21
     .line 22
-    move-result v0
+    iget-object v0, v0, LX/5tM;->A0L:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     .line 23
-    return v0
-
     .line 24
-    :cond_1
-    iget v1, p0, LX/5wq;->A01:I
+    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
     .line 25
     .line 26
-    add-int/lit8 v0, v1, 0x1
-
     .line 27
+    iget-object v1, v3, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A0C:Ljava/util/Map;
+
     .line 28
-    iput v0, p0, LX/5wq;->A01:I
-
     .line 29
+    iget-object v2, p0, LX/5wQ;->A04:Ljava/lang/String;
+
     .line 30
-    rem-int/lit8 v0, v1, 0x2
-
     .line 31
-    .line 32
-    if-nez v0, :cond_2
+    invoke-interface {v1, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
+    .line 32
     .line 33
     .line 34
-    iget-object v0, p0, LX/5wq;->A04:LX/6Gb;
-
-    .line 35
-    .line 36
-    invoke-virtual {v0}, LX/6Gb;->A08()I
-
-    .line 37
-    .line 38
-    .line 39
     move-result v0
 
+    .line 35
+    if-eqz v0, :cond_1
+
+    .line 36
+    .line 37
+    invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 38
+    .line 39
     .line 40
-    iput v0, p0, LX/5wq;->A00:I
+    :cond_1
+    iget-boolean v0, v4, Lcom/facebook/cameracore/camerasdk/common/CameraStateException;->mIsCameraClosed:Z
 
     .line 41
     .line 42
-    and-int/lit16 v0, v0, 0xf0
+    if-eqz v0, :cond_2
 
     .line 43
     .line 44
-    shr-int/lit8 v0, v0, 0x4
+    iget-object v1, p0, LX/5wQ;->A03:LX/60J;
 
     .line 45
     .line 46
-    return v0
+    iget-object v0, p0, LX/5wQ;->A02:LX/5Yi;
 
     .line 47
-    :cond_2
-    iget v0, p0, LX/5wq;->A00:I
-
     .line 48
-    .line 49
-    and-int/lit8 v0, v0, 0xf
+    invoke-static {v3, v0, v1, v2}, Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;->A02(Lcom/facebook/cameracore/camerasdk/fboptic/Camera1Device;LX/5Yi;LX/60J;Ljava/lang/String;)V
 
+    .line 49
     .line 50
     .line 51
-    return v0
+    :cond_2
+    iget-object v0, p0, LX/5wQ;->A00:LX/5wN;
+
+    .line 52
+    .line 53
+    if-eqz v0, :cond_3
+
+    .line 54
+    .line 55
+    invoke-interface {v0, v4}, LX/5wN;->AU1(Lcom/facebook/cameracore/camerasdk/common/CameraStateException;)V
+
+    .line 56
+    .line 57
+    .line 58
+    :cond_3
+    return-void
+
+    .line 59
+    :cond_4
+    const/16 v0, 0x64
+
+    .line 60
+    .line 61
+    const/16 v1, 0x2718
+
+    .line 62
+    .line 63
+    if-eq v4, v0, :cond_0
+
+    .line 64
+    .line 65
+    const/16 v1, 0x2719
+
+    .line 66
+    .line 67
+    const/4 v2, 0x0
+
+    .line 68
+    goto :goto_0
 .end method

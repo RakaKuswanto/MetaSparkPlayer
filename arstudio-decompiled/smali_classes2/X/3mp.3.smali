@@ -1,23 +1,106 @@
-.class public interface abstract LX/3mp;
+.class public final LX/3mp;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "XplatNativeClientWrapper$start$2"
+
+
+# instance fields
+.field public final synthetic A00:LX/2lB;
+
+.field public final synthetic A01:Lcom/facebook/mqtt/service/XplatNativeClientWrapper;
+
+
+# direct methods
+.method public constructor <init>(LX/2lB;Lcom/facebook/mqtt/service/XplatNativeClientWrapper;)V
+    .locals 0
+
+    iput-object p2, p0, LX/3mp;->A01:Lcom/facebook/mqtt/service/XplatNativeClientWrapper;
+
+    iput-object p1, p0, LX/3mp;->A00:LX/2lB;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract ABf()I
-.end method
+.method public final run()V
+    .locals 3
 
-.method public abstract ACl()I
-.end method
+    .line 0
+    iget-object v0, p0, LX/3mp;->A01:Lcom/facebook/mqtt/service/XplatNativeClientWrapper;
 
-.method public abstract AF3()Z
-.end method
+    .line 1
+    .line 2
+    iget-object v0, v0, Lcom/facebook/mqtt/service/XplatNativeClientWrapper;->observers:Ljava/util/HashSet;
 
-.method public abstract AF4()Z
-.end method
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
-.method public abstract AGO()I
-.end method
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v2
 
-.method public abstract AMJ()I
+    .line 8
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    if-eqz v0, :cond_0
+
+    .line 13
+    .line 14
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v1
+
+    .line 18
+    check-cast v1, LX/3n3;
+
+    .line 19
+    .line 20
+    sget-object v0, LX/2lS;->A00:LX/2kz;
+
+    .line 21
+    .line 22
+    invoke-interface {v1, v0}, LX/3n3;->AYL(LX/2kz;)V
+
+    .line 23
+    .line 24
+    .line 25
+    goto :goto_0
+
+    .line 26
+    :cond_0
+    iget-object v1, p0, LX/3mp;->A00:LX/2lB;
+
+    .line 27
+    .line 28
+    sget-object v0, LX/3mi;->CONNECTING:LX/3mi;
+
+    .line 29
+    .line 30
+    invoke-interface {v1, v0}, LX/2lB;->AUj(LX/3mi;)Z
+
+    .line 31
+    .line 32
+    .line 33
+    return-void
 .end method

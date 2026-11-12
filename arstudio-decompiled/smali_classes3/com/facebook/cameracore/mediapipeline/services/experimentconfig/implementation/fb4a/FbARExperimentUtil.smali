@@ -3,13 +3,13 @@
 .source ""
 
 # interfaces
-.implements LX/5Yj;
+.implements LX/6BX;
 
 
 # static fields
-.field public static final synthetic $$delegatedProperties:[LX/2TZ;
+.field public static final synthetic $$delegatedProperties:[LX/5hU;
 
-.field public static final Companion:LX/5ss;
+.field public static final Companion:LX/6NN;
 
 .field public static final TAG:Ljava/lang/String; = "FbARExperimentUtil"
 
@@ -17,15 +17,13 @@
 # instance fields
 .field public final context:Landroid/content/Context;
 
-.field public final kinjector:LX/1Nw;
-
 .field public mProductName:Ljava/lang/String;
 
-.field public final mobileConfig$delegate:LX/1Nm;
+.field public final mobileConfig$delegate:LX/0lu;
 
 .field public overridenBackgroundProcessorUseCaptureTime:Ljava/lang/Boolean;
 
-.field public final product$delegate:LX/1Nm;
+.field public final product$delegate:LX/0lu;
 
 
 # direct methods
@@ -40,7 +38,7 @@
     const/4 v0, 0x2
 
     .line 3
-    new-array v4, v0, [LX/2TZ;
+    new-array v4, v0, [LX/5hU;
 
     .line 4
     .line 5
@@ -55,11 +53,11 @@
     const/4 v1, 0x0
 
     .line 10
-    new-instance v0, LX/2TS;
+    new-instance v0, LX/5hS;
 
     .line 11
     .line 12
-    invoke-direct {v0, v5, v3, v2}, LX/2TS;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v5, v3, v2}, LX/5hS;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
     .line 14
@@ -76,11 +74,11 @@
 
     .line 20
     .line 21
-    new-instance v1, LX/2TS;
+    new-instance v1, LX/5hS;
 
     .line 22
     .line 23
-    invoke-direct {v1, v5, v2, v0}, LX/2TS;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v5, v2, v0}, LX/5hS;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     .line 25
@@ -92,64 +90,64 @@
 
     .line 28
     .line 29
-    sput-object v4, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->$$delegatedProperties:[LX/2TZ;
+    sput-object v4, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->$$delegatedProperties:[LX/5hU;
 
     .line 30
     .line 31
-    new-instance v0, LX/5ss;
+    new-instance v0, LX/6NN;
 
     .line 32
     .line 33
-    invoke-direct {v0}, LX/5ss;-><init>()V
+    invoke-direct {v0}, LX/6NN;-><init>()V
 
     .line 34
     .line 35
     .line 36
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->Companion:LX/5ss;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->Companion:LX/6NN;
 
     .line 37
     .line 38
     return-void
 .end method
 
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {}, LX/2I6;->A0Q()LX/0lu;
+
+    .line 4
     .line 5
     .line 6
+    move-result-object v0
+
     .line 7
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->kinjector:LX/1Nw;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 8
     .line 9
-    invoke-static {}, LX/1Nl;->A05()LX/1Nm;
+    sget v0, LX/2I6;->A3y:I
 
     .line 10
     .line 11
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
     .line 12
+    .line 13
+    .line 14
     move-result-object v0
 
-    .line 13
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
-    .line 14
     .line 15
-    sget v0, LX/2eq;->A7e:I
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->product$delegate:LX/0lu;
 
     .line 16
     .line 17
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 18
     .line 19
@@ -157,30 +155,15 @@
     move-result-object v0
 
     .line 21
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->product$delegate:LX/1Nm;
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 22
     .line 23
-    sget v0, LX/2eq;->A5D:I
-
     .line 24
-    .line 25
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    check-cast v0, Landroid/content/Context;
-
-    .line 30
-    .line 31
     iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->context:Landroid/content/Context;
 
-    .line 32
-    .line 33
+    .line 25
+    .line 26
     return-void
 .end method
 
@@ -190,15 +173,15 @@
     return-void
 .end method
 
-.method private final getMobileConfig()LX/0ZF;
+.method private final getMobileConfig()LX/302;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 3
     .line 4
@@ -209,15 +192,15 @@
     return-object v0
 .end method
 
-.method private final getProduct()LX/0JU;
+.method private final getProduct()LX/0IM;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->product$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->product$delegate:LX/0lu;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -225,7 +208,7 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/0JU;
+    check-cast v0, LX/0IM;
 
     .line 7
     .line 8
@@ -241,7 +224,7 @@
     const/4 v3, 0x0
 
     .line 1
-    invoke-static {p1, v3}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v3}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -275,658 +258,662 @@
 
     .line 17
     :sswitch_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->overridenBackgroundProcessorUseCaptureTime:Ljava/lang/Boolean;
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0IM;
 
     .line 18
     .line 19
-    if-eqz v0, :cond_1
-
     .line 20
+    move-result-object v1
+
     .line 21
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    sget-object v0, LX/0IM;->FB4A:LX/0IM;
 
     .line 22
     .line 23
-    .line 24
-    move-result v0
+    if-ne v1, v0, :cond_1
 
+    .line 24
     .line 25
-    return v0
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 26
-    :cond_1
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mProductName:Ljava/lang/String;
-
     .line 27
-    .line 28
-    const-string v0, "messenger_rtc"
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
+    .line 28
     .line 29
     .line 30
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 31
-    .line 32
-    .line 33
-    move-result v0
-
-    .line 34
-    if-eqz v0, :cond_2
-
-    .line 35
-    .line 36
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
-    .line 37
-    .line 38
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
-    .line 39
-    .line 40
-    .line 41
     move-result-object v2
 
-    .line 42
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$android_rtc_litecamera;->enabled:J
+    .line 31
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb4a_ar_engine_sandboxed_scripting;->enabled:J
 
-    .line 43
-    .line 44
-    goto/16 :goto_0
+    .line 32
+    .line 33
+    goto/16 :goto_2
 
-    .line 45
-    .line 46
-    :cond_2
-    sget-object v0, LX/5bO;->A00:Ljava/lang/Boolean;
+    .line 34
+    .line 35
+    :cond_1
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0IM;
 
-    .line 47
-    .line 48
-    if-eqz v0, :cond_3
-
-    .line 49
-    .line 50
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 51
-    .line 52
-    .line 53
-    move-result v0
-
-    .line 54
-    if-nez v0, :cond_4
-
-    .line 55
-    .line 56
-    :cond_3
-    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0JU;
-
-    .line 57
-    .line 58
-    .line 59
+    .line 36
+    .line 37
+    .line 38
     move-result-object v1
 
+    .line 39
+    sget-object v0, LX/0IM;->MESSENGER:LX/0IM;
+
+    .line 40
+    .line 41
+    if-ne v1, v0, :cond_0
+
+    .line 42
+    .line 43
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 44
+    .line 45
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 46
+    .line 47
+    .line 48
+    move-result-object v2
+
+    .line 49
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$m4a_ar_engine_sandboxed_scripting;->enabled:J
+
+    .line 50
+    .line 51
+    goto/16 :goto_2
+
+    .line 52
+    .line 53
+    :sswitch_1
+    sget-object v0, LX/5zi;->A00:Ljava/lang/Boolean;
+
+    .line 54
+    .line 55
+    if-eqz v0, :cond_2
+
+    .line 56
+    .line 57
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 58
+    .line 59
     .line 60
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
+    move-result v0
 
     .line 61
+    if-eqz v0, :cond_2
+
     .line 62
-    if-ne v1, v0, :cond_b
-
     .line 63
-    .line 64
-    return v4
+    sget-boolean v0, LX/5zi;->A03:Z
 
+    .line 64
     .line 65
-    :sswitch_1
-    sget-object v0, LX/5bO;->A00:Ljava/lang/Boolean;
+    if-eqz v0, :cond_2
 
     .line 66
     .line 67
-    if-eqz v0, :cond_5
-
-    .line 68
-    .line 69
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 70
-    .line 71
-    .line 72
-    move-result v0
-
-    .line 73
-    if-eqz v0, :cond_5
-
-    .line 74
-    .line 75
-    sget-boolean v0, LX/5bO;->A03:Z
-
-    .line 76
-    .line 77
-    if-eqz v0, :cond_5
-
-    .line 78
-    .line 79
-    :cond_4
-    :sswitch_2
     return v4
 
+    .line 68
+    :cond_2
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0IM;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v1
+
+    .line 72
+    sget-object v0, LX/0IM;->FB4A:LX/0IM;
+
+    .line 73
+    .line 74
+    if-ne v1, v0, :cond_b
+
+    .line 75
+    .line 76
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->context:Landroid/content/Context;
+
+    .line 77
+    .line 78
+    sget-object v0, LX/5zi;->A01:Ljava/lang/Boolean;
+
+    .line 79
     .line 80
-    :cond_5
-    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0JU;
+    if-nez v0, :cond_5
 
     .line 81
     .line 82
-    .line 83
-    move-result-object v1
+    sget-object v0, LX/5zi;->A02:Ljava/lang/Boolean;
 
+    .line 83
     .line 84
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
+    if-nez v0, :cond_3
 
     .line 85
     .line 86
-    if-ne v1, v0, :cond_b
+    invoke-static {v1}, LX/4BI;->A00(Landroid/content/Context;)Z
 
     .line 87
     .line 88
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->context:Landroid/content/Context;
-
     .line 89
+    move-result v0
+
     .line 90
-    sget-object v0, LX/5bO;->A01:Ljava/lang/Boolean;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 91
     .line 92
-    if-nez v0, :cond_8
-
     .line 93
+    move-result-object v0
+
     .line 94
-    sget-object v0, LX/5bO;->A02:Ljava/lang/Boolean;
+    sput-object v0, LX/5zi;->A02:Ljava/lang/Boolean;
 
     .line 95
     .line 96
-    if-nez v0, :cond_6
+    :cond_3
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 97
     .line 98
-    invoke-static {v1}, LX/5Ft;->A00(Landroid/content/Context;)Z
-
     .line 99
+    move-result v0
+
     .line 100
-    .line 101
-    move-result v0
-
-    .line 102
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 103
-    .line 104
-    .line 105
-    move-result-object v0
-
-    .line 106
-    sput-object v0, LX/5bO;->A02:Ljava/lang/Boolean;
-
-    .line 107
-    .line 108
-    :cond_6
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 109
-    .line 110
-    .line 111
-    move-result v0
-
-    .line 112
     const/4 v2, 0x0
 
+    .line 101
+    if-eqz v0, :cond_4
+
+    .line 102
+    .line 103
+    invoke-static {v1}, LX/5VB;->A00(Landroid/content/Context;)LX/5u4;
+
+    .line 104
+    .line 105
+    .line 106
+    move-result-object v0
+
+    .line 107
+    invoke-interface {v0}, LX/5u4;->isARCoreSupported()Z
+
+    .line 108
+    .line 109
+    .line 110
+    move-result v0
+
+    .line 111
+    if-eqz v0, :cond_4
+
+    .line 112
     .line 113
-    if-eqz v0, :cond_7
+    invoke-static {v1, v3}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 114
     .line 115
-    invoke-static {v1}, LX/5Ju;->A00(Landroid/content/Context;)LX/5mb;
-
     .line 116
+    invoke-static {v1}, LX/6Xu;->A00(Landroid/content/Context;)I
+
     .line 117
     .line 118
-    move-result-object v0
-
     .line 119
-    invoke-interface {v0}, LX/5mb;->isARCoreSupported()Z
+    move-result v1
 
     .line 120
+    const v0, 0xd4b5200
+
     .line 121
     .line 122
-    move-result v0
-
     .line 123
-    if-eqz v0, :cond_7
+    if-lt v1, v0, :cond_4
 
     .line 124
     .line 125
-    invoke-static {v1, v3}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    const/4 v2, 0x1
 
     .line 126
+    :cond_4
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
     .line 127
     .line 128
-    invoke-static {v1}, LX/6Hk;->A00(Landroid/content/Context;)I
-
     .line 129
-    .line 130
-    .line 131
-    move-result v1
+    move-result-object v0
 
+    .line 130
+    sput-object v0, LX/5zi;->A01:Ljava/lang/Boolean;
+
+    .line 131
     .line 132
-    const v0, 0xcb55390
+    :cond_5
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 133
     .line 134
     .line 135
-    if-lt v1, v0, :cond_7
+    move-result v0
 
     .line 136
-    .line 137
-    const/4 v2, 0x1
+    goto/16 :goto_0
 
+    .line 137
     .line 138
-    :cond_7
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    :sswitch_2
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0IM;
 
     .line 139
     .line 140
     .line 141
-    move-result-object v0
+    move-result-object v1
 
     .line 142
-    sput-object v0, LX/5bO;->A01:Ljava/lang/Boolean;
+    sget-object v0, LX/0IM;->FB4A:LX/0IM;
 
     .line 143
     .line 144
-    :cond_8
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    if-ne v1, v0, :cond_6
 
     .line 145
     .line 146
-    .line 147
-    move-result v0
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
+    .line 147
     .line 148
-    goto/16 :goto_1
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 149
     .line 150
-    :sswitch_3
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 151
+    move-result-object v2
+
     .line 152
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fbmsgr_android_audio_reactive_preview;->enabled_fb:J
 
     .line 153
     .line 154
-    .line 155
-    move-result-object v2
+    goto/16 :goto_1
 
+    .line 155
     .line 156
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_fb_camera_regiontracking_use_similarity_tracker_for_scaling;->enable:J
+    :cond_6
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0IM;
 
     .line 157
     .line 158
-    goto/16 :goto_0
-
     .line 159
+    move-result-object v1
+
     .line 160
-    :sswitch_4
-    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0JU;
+    sget-object v0, LX/0IM;->MESSENGER:LX/0IM;
 
     .line 161
     .line 162
-    .line 163
-    move-result-object v1
+    if-ne v1, v0, :cond_7
 
+    .line 163
     .line 164
-    sget-object v0, LX/0JU;->FB4A:LX/0JU;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 165
     .line 166
-    if-ne v1, v0, :cond_9
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 167
     .line 168
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 169
+    move-result-object v2
+
     .line 170
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fbmsgr_android_audio_reactive_preview;->enabled_msgr:J
 
     .line 171
     .line 172
+    goto/16 :goto_1
+
     .line 173
-    move-result-object v2
-
     .line 174
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fbmsgr_android_audio_reactive_preview;->enabled_fb:J
-
-    .line 175
-    .line 176
-    goto/16 :goto_2
-
-    .line 177
-    .line 178
-    :cond_9
-    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0JU;
-
-    .line 179
-    .line 180
-    .line 181
-    move-result-object v1
-
-    .line 182
-    sget-object v0, LX/0JU;->MESSENGER:LX/0JU;
-
-    .line 183
-    .line 184
-    if-ne v1, v0, :cond_a
-
-    .line 185
-    .line 186
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
-    .line 187
-    .line 188
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
-    .line 189
-    .line 190
-    .line 191
-    move-result-object v2
-
-    .line 192
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fbmsgr_android_audio_reactive_preview;->enabled_msgr:J
-
-    .line 193
-    .line 194
-    goto/16 :goto_2
-
-    .line 195
-    .line 196
-    :cond_a
-    :sswitch_5
+    :cond_7
+    :sswitch_3
     return v3
 
-    .line 197
+    .line 175
+    :sswitch_4
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 176
+    .line 177
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 178
+    .line 179
+    .line 180
+    move-result-object v2
+
+    .line 181
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb_ard_external_asset_config;->is_enabled:J
+
+    .line 182
+    .line 183
+    goto/16 :goto_1
+
+    .line 184
+    .line 185
+    :sswitch_5
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 186
+    .line 187
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 188
+    .line 189
+    .line 190
+    move-result-object v2
+
+    .line 191
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$android_cameracore_world_tracker_v2;->enabled:J
+
+    .line 192
+    .line 193
+    goto/16 :goto_1
+
+    .line 194
+    .line 195
     :sswitch_6
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 196
+    .line 197
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 198
     .line 199
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
     .line 200
-    .line 201
-    .line 202
     move-result-object v2
 
+    .line 201
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$android_cameracore_world_tracker_hittest;->enable_hittest_with_depth:J
+
+    .line 202
     .line 203
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb_ard_external_asset_config;->is_enabled:J
+    goto/16 :goto_1
 
     .line 204
     .line 205
-    goto/16 :goto_2
+    :sswitch_7
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 206
     .line 207
-    :sswitch_7
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 208
     .line 209
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
     .line 210
-    .line 211
-    .line 212
     move-result-object v2
 
+    .line 211
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_class;->value:J
+
+    .line 212
     .line 213
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$android_cameracore_world_tracker_v2;->enabled:J
+    invoke-virtual {v2, v0, v1, v3}, LX/302;->A0N(JI)I
 
     .line 214
     .line 215
-    goto/16 :goto_2
-
     .line 216
+    move-result v1
+
     .line 217
-    :sswitch_8
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    const/16 v0, 0x37
 
     .line 218
     .line 219
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    if-lt v1, v0, :cond_b
 
     .line 220
     .line 221
-    .line 222
-    move-result-object v2
-
-    .line 223
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$android_cameracore_world_tracker_hittest;->enable_hittest_with_depth:J
-
-    .line 224
-    .line 225
-    goto/16 :goto_2
-
-    .line 226
-    .line 227
-    :sswitch_9
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
-    .line 228
-    .line 229
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
-    .line 230
-    .line 231
-    .line 232
-    move-result-object v2
-
-    .line 233
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_class;->value:J
-
-    .line 234
-    .line 235
-    invoke-interface {v2, v0, v1, v3}, LX/0ZF;->AHD(JI)I
-
-    .line 236
-    .line 237
-    .line 238
-    move-result v1
-
-    .line 239
-    const/16 v0, 0x37
-
-    .line 240
-    .line 241
-    if-lt v1, v0, :cond_b
-
-    .line 242
-    .line 243
     return v4
 
-    .line 244
+    .line 222
+    :sswitch_8
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 223
+    .line 224
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 225
+    .line 226
+    .line 227
+    move-result-object v2
+
+    .line 228
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_arengine_expressionfitting;->use_refactored_module:J
+
+    .line 229
+    .line 230
+    goto/16 :goto_1
+
+    .line 231
+    .line 232
+    :sswitch_9
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 233
+    .line 234
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 235
+    .line 236
+    .line 237
+    move-result-object v2
+
+    .line 238
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$msgr_metadata_logger_service;->gatekeeper:J
+
+    .line 239
+    .line 240
+    goto/16 :goto_1
+
+    .line 241
+    .line 242
     :sswitch_a
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 243
+    .line 244
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 245
     .line 246
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
     .line 247
-    .line 248
-    .line 249
     move-result-object v2
 
+    .line 248
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$metadata_logger_service_save_images;->do_not_save_images:J
+
+    .line 249
     .line 250
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_arengine_expressionfitting;->use_refactored_module:J
+    goto/16 :goto_1
 
     .line 251
     .line 252
-    goto/16 :goto_2
+    :sswitch_b
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 253
     .line 254
-    :sswitch_b
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 255
     .line 256
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
     .line 257
-    .line 258
-    .line 259
     move-result-object v2
 
+    .line 258
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_arengine_expressionfitting;->use_expression_fitting_time_stamp:J
+
+    .line 259
     .line 260
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$msgr_metadata_logger_service;->gatekeeper:J
+    goto :goto_1
 
     .line 261
-    .line 262
-    goto/16 :goto_2
-
-    .line 263
-    .line 264
     :sswitch_c
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
+    .line 262
+    .line 263
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 264
     .line 265
     .line 266
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
-    .line 267
-    .line 268
-    .line 269
     move-result-object v2
 
+    .line 267
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_fb_android_arengine_unifex;->shadercode_preload:J
+
+    .line 268
+    .line 269
+    goto :goto_1
+
     .line 270
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$metadata_logger_service_save_images;->do_not_save_images:J
+    :sswitch_d
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 271
     .line 272
-    goto/16 :goto_2
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 273
     .line 274
-    :sswitch_d
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 275
+    move-result-object v2
+
     .line 276
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_enable_sdk_telemetry;->gatekeeper:J
 
     .line 277
     .line 278
+    goto :goto_1
+
     .line 279
-    move-result-object v2
+    :sswitch_e
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 280
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_arengine_expressionfitting;->use_expression_fitting_time_stamp:J
-
     .line 281
-    .line 282
-    goto/16 :goto_2
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
+    .line 282
     .line 283
     .line 284
-    :sswitch_e
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
-    .line 285
-    .line 286
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
-    .line 287
-    .line 288
-    .line 289
     move-result-object v2
 
+    .line 285
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_enable_record_plugin_metrics;->gk_record_plugin_metrics:J
+
+    .line 286
+    .line 287
+    goto :goto_1
+
+    .line 288
+    :sswitch_f
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 289
     .line 290
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_fb_android_arengine_unifex;->shadercode_preload:J
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 291
     .line 292
-    goto/16 :goto_2
-
     .line 293
+    move-result-object v2
+
     .line 294
-    :sswitch_f
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_det_usercalibration_enabled;->gk_det_usercalibration_enabled:J
 
     .line 295
     .line 296
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    goto :goto_1
 
     .line 297
+    :sswitch_10
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
     .line 298
     .line 299
-    move-result-object v2
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 300
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_fb_android_arengine_unifex;->font_texture_provider:J
-
     .line 301
     .line 302
-    goto/16 :goto_2
+    move-result-object v2
 
     .line 303
-    .line 304
-    :sswitch_10
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_det_mouth_occlusion_handling_enabled;->gk_det_mouth_occlusion_handling_enabled:J
 
+    .line 304
     .line 305
+    goto :goto_1
+
     .line 306
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    :sswitch_11
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 307
     .line 308
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
     .line 309
+    .line 310
+    .line 311
     move-result-object v2
 
-    .line 310
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_xor:J
-
-    .line 311
     .line 312
-    goto/16 :goto_0
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->neck_collapse_enabled:J
 
     .line 313
     .line 314
-    :sswitch_11
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    goto :goto_1
 
     .line 315
-    .line 316
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    :sswitch_12
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
+    .line 316
     .line 317
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
     .line 318
     .line 319
+    .line 320
     move-result-object v2
 
-    .line 320
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_mesh_id:J
-
     .line 321
-    .line 322
-    goto/16 :goto_0
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->performance_tier_enabled:J
 
+    .line 322
     .line 323
+    goto :goto_1
+
     .line 324
-    :sswitch_12
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    :sswitch_13
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 325
     .line 326
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 327
     .line 328
@@ -934,83 +921,84 @@
     move-result-object v2
 
     .line 330
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_phase2_mesh_id:J
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->using_swiftshader:J
 
     .line 331
     .line 332
-    goto/16 :goto_0
+    goto :goto_1
 
     .line 333
+    :sswitch_14
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
     .line 334
-    :sswitch_13
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 335
-    .line 336
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
+    .line 336
     .line 337
     .line 338
+    move-result-object v3
+
     .line 339
-    move-result-object v2
+    sget-wide v1, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$android_rtc_litecamera;->enabled:J
 
     .line 340
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_uniform_block_arengine:J
-
     .line 341
+    sget-object v0, LX/30J;->A06:LX/30J;
+
     .line 342
-    goto/16 :goto_0
-
     .line 343
-    .line 344
-    :sswitch_14
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    invoke-virtual {v3, v0, v1, v2}, LX/302;->ABE(LX/30J;J)Z
 
+    .line 344
     .line 345
     .line 346
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    move-result v0
 
     .line 347
+    if-nez v0, :cond_b
+
     .line 348
     .line 349
-    move-result-object v2
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 350
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_scenetree_to_entity:J
-
     .line 351
-    .line 352
-    goto/16 :goto_0
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
+    .line 352
     .line 353
     .line 354
-    :sswitch_15
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
-    .line 355
-    .line 356
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
-    .line 357
-    .line 358
-    .line 359
     move-result-object v2
 
+    .line 355
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_arengine_expressionfitting;->tracker_one_run_per_render:J
+
+    .line 356
+    .line 357
+    invoke-virtual {v2, v0, v1}, LX/302;->AB9(J)Z
+
+    .line 358
+    .line 359
     .line 360
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$msgr_ar_engine_reactive_graph_enable_lazy_eval;->enable:J
+    move-result v0
 
     .line 361
-    .line 362
-    goto/16 :goto_0
+    :goto_0
+    if-eqz v0, :cond_b
 
+    .line 362
     .line 363
+    return v4
+
     .line 364
-    :sswitch_16
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    :sswitch_15
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 365
     .line 366
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 367
     .line 368
@@ -1018,185 +1006,189 @@
     move-result-object v2
 
     .line 370
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_enable_sdk_telemetry;->gatekeeper:J
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_engine_desparkify3;->is_desparkify_reactive:J
 
     .line 371
     .line 372
-    goto/16 :goto_2
+    goto :goto_1
 
     .line 373
+    :sswitch_16
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
     .line 374
-    :sswitch_17
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 375
-    .line 376
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
+    .line 376
     .line 377
     .line 378
-    .line 379
     move-result-object v2
 
+    .line 379
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_engine_desparkify3;->is_desparkify_components_infra:J
+
     .line 380
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_enable_record_plugin_metrics;->gk_record_plugin_metrics:J
-
     .line 381
-    .line 382
-    goto/16 :goto_2
+    :goto_1
+    invoke-virtual {v2, v0, v1}, LX/302;->AB9(J)Z
 
+    .line 382
     .line 383
     .line 384
-    :sswitch_18
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    move-result v4
 
     .line 385
+    return v4
+
     .line 386
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    :sswitch_17
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->overridenBackgroundProcessorUseCaptureTime:Ljava/lang/Boolean;
 
     .line 387
     .line 388
-    .line 389
-    move-result-object v2
+    if-eqz v0, :cond_8
 
+    .line 389
     .line 390
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_enable_record_plugin_metrics;->gk_run_jest_e2e:J
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 391
     .line 392
-    goto/16 :goto_2
-
     .line 393
+    move-result v4
+
     .line 394
-    :sswitch_19
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    return v4
 
     .line 395
-    .line 396
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    :cond_8
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mProductName:Ljava/lang/String;
 
+    .line 396
     .line 397
+    const-string v0, "messenger_rtc"
+
     .line 398
     .line 399
-    move-result-object v2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 400
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_det_usercalibration_enabled;->gk_det_usercalibration_enabled:J
-
     .line 401
     .line 402
-    goto/16 :goto_2
+    move-result v0
 
     .line 403
+    if-eqz v0, :cond_9
+
     .line 404
-    :sswitch_1a
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 405
-    .line 406
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
+    .line 406
     .line 407
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
     .line 408
     .line 409
-    move-result-object v2
-
     .line 410
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars_det_mouth_occlusion_handling_enabled;->gk_det_mouth_occlusion_handling_enabled:J
+    move-result-object v3
 
     .line 411
+    sget-wide v1, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$android_rtc_litecamera;->enabled:J
+
     .line 412
-    goto/16 :goto_2
-
     .line 413
+    sget-object v0, LX/30J;->A06:LX/30J;
+
     .line 414
-    :sswitch_1b
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 415
-    .line 416
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-virtual {v3, v0, v1, v2, p2}, LX/302;->ABF(LX/30J;JZ)Z
 
+    .line 416
     .line 417
     .line 418
+    move-result v4
+
     .line 419
-    move-result-object v2
+    return v4
 
     .line 420
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->neck_collapse_enabled:J
+    :cond_9
+    sget-object v0, LX/5zi;->A00:Ljava/lang/Boolean;
 
     .line 421
     .line 422
-    goto/16 :goto_2
+    if-eqz v0, :cond_a
 
     .line 423
     .line 424
-    :sswitch_1c
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 425
     .line 426
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
     .line 427
-    .line 428
-    .line 429
-    move-result-object v2
+    move-result v0
 
+    .line 428
+    if-nez v0, :cond_c
+
+    .line 429
     .line 430
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->reuse_memory_entity:J
+    :cond_a
+    invoke-direct {p0}, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->getProduct()LX/0IM;
 
     .line 431
     .line 432
-    goto :goto_0
-
     .line 433
-    :sswitch_1d
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    move-result-object v1
 
     .line 434
-    .line 435
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    sget-object v0, LX/0IM;->FB4A:LX/0IM;
 
+    .line 435
     .line 436
+    if-ne v1, v0, :cond_b
+
     .line 437
     .line 438
-    move-result-object v2
+    return v4
 
     .line 439
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->cache_behaviors:J
+    :cond_b
+    const/4 v4, 0x0
 
     .line 440
+    return v4
+
     .line 441
-    goto :goto_0
+    :sswitch_18
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 442
-    :sswitch_1e
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 443
-    .line 444
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
+    .line 444
     .line 445
     .line 446
-    .line 447
     move-result-object v2
 
+    .line 447
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_fb_camera_regiontracking_use_similarity_tracker_for_scaling;->enable:J
+
     .line 448
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->asl_cache_enabled:J
-
     .line 449
-    .line 450
-    goto :goto_0
+    goto/16 :goto_2
 
+    .line 450
     .line 451
-    :sswitch_1f
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    :sswitch_19
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 452
     .line 453
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 454
     .line 455
@@ -1204,287 +1196,503 @@
     move-result-object v2
 
     .line 457
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->performance_tier_enabled:J
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_engine_force_phase_4_audio;->enabled:J
 
     .line 458
     .line 459
-    goto :goto_2
+    goto/16 :goto_2
 
     .line 460
-    :sswitch_20
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 461
-    .line 462
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    :sswitch_1a
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
+    .line 462
     .line 463
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
     .line 464
     .line 465
+    .line 466
     move-result-object v2
 
-    .line 466
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->normal_disabled:J
-
     .line 467
-    .line 468
-    goto :goto_2
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb4a_ar_engine_hardened_runtime;->enabled:J
 
+    .line 468
     .line 469
-    :sswitch_21
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    goto/16 :goto_2
 
     .line 470
     .line 471
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    :sswitch_1b
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 472
     .line 473
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
     .line 474
+    .line 475
+    .line 476
     move-result-object v2
 
-    .line 475
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->rim_light_disabled:J
-
-    .line 476
     .line 477
-    goto :goto_2
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb_android_arengine_stability;->unproven_path_dec_2023:J
 
     .line 478
-    :sswitch_22
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 479
-    .line 480
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    goto/16 :goto_2
 
+    .line 480
     .line 481
+    :sswitch_1c
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
     .line 482
     .line 483
-    move-result-object v2
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 484
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->sss_disabled:J
-
     .line 485
     .line 486
-    goto :goto_2
+    move-result-object v2
 
     .line 487
-    :sswitch_23
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb_android_arengine_stability;->lion_feature:J
 
     .line 488
     .line 489
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    goto/16 :goto_2
 
     .line 490
     .line 491
-    .line 492
-    move-result-object v2
+    :sswitch_1d
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
+    .line 492
     .line 493
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->sss_rim_light_normal_disabled:J
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 494
     .line 495
-    goto :goto_2
-
     .line 496
-    :sswitch_24
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
-    .line 497
-    .line 498
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
-    .line 499
-    .line 500
-    .line 501
     move-result-object v2
 
+    .line 497
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb_android_arengine_stability;->leopard_feature:J
+
+    .line 498
+    .line 499
+    goto/16 :goto_2
+
+    .line 500
+    .line 501
+    :sswitch_1e
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
     .line 502
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->tiered_experience_enabled:J
-
     .line 503
-    .line 504
-    :goto_0
-    invoke-interface {v2, v0, v1, p2}, LX/35B;->ACe(JZ)Z
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
+    .line 504
     .line 505
     .line 506
+    move-result-object v2
+
     .line 507
-    move-result v0
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb_android_arengine_stability;->rhino_feature:J
 
     .line 508
-    return v0
-
     .line 509
-    :sswitch_25
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    goto/16 :goto_2
 
     .line 510
     .line 511
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    :sswitch_1f
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 512
     .line 513
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
     .line 514
+    .line 515
+    .line 516
     move-result-object v2
 
-    .line 515
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->using_swiftshader:J
-
-    .line 516
     .line 517
-    goto :goto_2
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$fb_android_arengine_stability;->elephant_feature:J
 
     .line 518
-    :sswitch_26
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 519
-    .line 520
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    goto/16 :goto_2
 
+    .line 520
     .line 521
+    :sswitch_20
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
     .line 522
     .line 523
-    move-result-object v3
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 524
-    sget-wide v1, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$android_rtc_litecamera;->enabled:J
-
     .line 525
     .line 526
-    sget-object v0, LX/1Us;->A06:LX/1Us;
+    move-result-object v2
 
     .line 527
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_xor:J
+
     .line 528
-    invoke-interface {v3, v0, v1, v2}, LX/35B;->ACi(LX/1Us;J)Z
-
     .line 529
-    .line 530
-    .line 531
-    move-result v0
+    goto :goto_2
 
+    .line 530
+    :sswitch_21
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 531
     .line 532
-    if-nez v0, :cond_b
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 533
     .line 534
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
     .line 535
+    move-result-object v2
+
     .line 536
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_mesh_id:J
 
     .line 537
     .line 538
+    goto :goto_2
+
     .line 539
-    move-result-object v2
+    :sswitch_22
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 540
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_arengine_expressionfitting;->tracker_one_run_per_render:J
-
     .line 541
-    .line 542
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
+    .line 542
     .line 543
     .line 544
-    .line 545
-    move-result v0
-
-    .line 546
-    :goto_1
-    if-eqz v0, :cond_b
-
-    .line 547
-    .line 548
-    return v4
-
-    .line 549
-    :cond_b
-    const/4 v4, 0x0
-
-    .line 550
-    return v4
-
-    .line 551
-    :sswitch_27
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
-
-    .line 552
-    .line 553
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
-
-    .line 554
-    .line 555
-    .line 556
     move-result-object v2
 
+    .line 545
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_phase2_mesh_id:J
+
+    .line 546
+    .line 547
+    goto :goto_2
+
+    .line 548
+    :sswitch_23
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 549
+    .line 550
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 551
+    .line 552
+    .line 553
+    move-result-object v2
+
+    .line 554
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_uniform_block_arengine:J
+
+    .line 555
+    .line 556
+    goto :goto_2
+
     .line 557
-    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_engine_desparkify;->gk_ar_engine_desparkify_scripting_plugin:J
+    :sswitch_24
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 558
     .line 559
-    :goto_2
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 560
     .line 561
     .line 562
-    move-result v0
+    move-result-object v2
 
     .line 563
-    return v0
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_scenetree_to_entity:J
 
     .line 564
+    .line 565
+    goto :goto_2
+
+    .line 566
+    :sswitch_25
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 567
+    .line 568
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 569
+    .line 570
+    .line 571
+    move-result-object v2
+
+    .line 572
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_scenetree_to_entity_production_rollout:J
+
+    .line 573
+    .line 574
+    goto :goto_2
+
+    .line 575
+    :sswitch_26
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 576
+    .line 577
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 578
+    .line 579
+    .line 580
+    move-result-object v2
+
+    .line 581
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$qe_android_fb_arengine_xor_migration;->enable_scenetree_to_entity_production_rollout_batchb:J
+
+    .line 582
+    .line 583
+    goto :goto_2
+
+    .line 584
+    :sswitch_27
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 585
+    .line 586
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 587
+    .line 588
+    .line 589
+    move-result-object v2
+
+    .line 590
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->use_style2_shaders:J
+
+    .line 591
+    .line 592
+    goto :goto_2
+
+    .line 593
+    :sswitch_28
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 594
+    .line 595
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 596
+    .line 597
+    .line 598
+    move-result-object v2
+
+    .line 599
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->reuse_memory_entity:J
+
+    .line 600
+    .line 601
+    goto :goto_2
+
+    .line 602
+    :sswitch_29
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 603
+    .line 604
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 605
+    .line 606
+    .line 607
+    move-result-object v2
+
+    .line 608
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->cache_behaviors:J
+
+    .line 609
+    .line 610
+    goto :goto_2
+
+    .line 611
+    :sswitch_2a
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 612
+    .line 613
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 614
+    .line 615
+    .line 616
+    move-result-object v2
+
+    .line 617
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->asl_cache_enabled:J
+
+    .line 618
+    .line 619
+    goto :goto_2
+
+    .line 620
+    :sswitch_2b
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 621
+    .line 622
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 623
+    .line 624
+    .line 625
+    move-result-object v2
+
+    .line 626
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->m6_enabled:J
+
+    .line 627
+    .line 628
+    goto :goto_2
+
+    .line 629
+    :sswitch_2c
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 630
+    .line 631
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 632
+    .line 633
+    .line 634
+    move-result-object v2
+
+    .line 635
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->use_sparse_blendshapes:J
+
+    .line 636
+    .line 637
+    goto :goto_2
+
+    .line 638
+    :sswitch_2d
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 639
+    .line 640
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 641
+    .line 642
+    .line 643
+    move-result-object v2
+
+    .line 644
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->use_sdk_shallow_copy:J
+
+    .line 645
+    .line 646
+    goto :goto_2
+
+    .line 647
+    :sswitch_2e
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
+
+    .line 648
+    .line 649
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 650
+    .line 651
+    .line 652
+    move-result-object v2
+
+    .line 653
+    sget-wide v0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/MC$ar_avatars;->use_gpu_blendshapes:J
+
+    .line 654
+    .line 655
+    :goto_2
+    invoke-virtual {v2, v0, v1, p2}, LX/302;->ABA(JZ)Z
+
+    .line 656
+    .line 657
+    .line 658
+    move-result v4
+
+    .line 659
+    :cond_c
+    :sswitch_2f
+    return v4
+
+    .line 660
     :sswitch_data_0
     .sparse-switch
-        0x2 -> :sswitch_0
-        0x3 -> :sswitch_3
-        0x8 -> :sswitch_1
-        0x9 -> :sswitch_6
-        0xd -> :sswitch_2
-        0xf -> :sswitch_5
-        0x10 -> :sswitch_7
-        0x12 -> :sswitch_1
-        0x13 -> :sswitch_8
-        0x14 -> :sswitch_9
-        0x15 -> :sswitch_a
-        0x16 -> :sswitch_b
-        0x17 -> :sswitch_c
-        0x18 -> :sswitch_d
-        0x1d -> :sswitch_5
-        0x23 -> :sswitch_e
-        0x24 -> :sswitch_f
-        0x2a -> :sswitch_10
-        0x2b -> :sswitch_11
-        0x2c -> :sswitch_12
-        0x2d -> :sswitch_13
-        0x2e -> :sswitch_14
-        0x31 -> :sswitch_15
-        0x3e -> :sswitch_4
-        0x77 -> :sswitch_16
-        0x78 -> :sswitch_17
-        0x79 -> :sswitch_18
-        0x7a -> :sswitch_19
-        0x7b -> :sswitch_1a
-        0x7c -> :sswitch_1b
-        0x7d -> :sswitch_1c
-        0x7e -> :sswitch_1d
-        0x82 -> :sswitch_1e
-        0x8c -> :sswitch_1f
-        0x8d -> :sswitch_20
-        0x8e -> :sswitch_21
-        0x8f -> :sswitch_22
-        0x90 -> :sswitch_23
-        0x91 -> :sswitch_24
-        0x93 -> :sswitch_25
-        0x95 -> :sswitch_26
-        0x99 -> :sswitch_27
+        0x2 -> :sswitch_17
+        0x3 -> :sswitch_18
+        0x5 -> :sswitch_19
+        0x6 -> :sswitch_1
+        0x7 -> :sswitch_4
+        0xa -> :sswitch_2f
+        0xc -> :sswitch_3
+        0xd -> :sswitch_5
+        0xf -> :sswitch_1
+        0x10 -> :sswitch_6
+        0x11 -> :sswitch_7
+        0x12 -> :sswitch_8
+        0x13 -> :sswitch_9
+        0x14 -> :sswitch_a
+        0x15 -> :sswitch_b
+        0x1a -> :sswitch_3
+        0x1c -> :sswitch_1a
+        0x21 -> :sswitch_c
+        0x26 -> :sswitch_1b
+        0x27 -> :sswitch_1c
+        0x28 -> :sswitch_1d
+        0x29 -> :sswitch_1e
+        0x2a -> :sswitch_1f
+        0x2b -> :sswitch_20
+        0x2d -> :sswitch_21
+        0x2e -> :sswitch_22
+        0x2f -> :sswitch_23
+        0x30 -> :sswitch_24
+        0x31 -> :sswitch_25
+        0x32 -> :sswitch_26
+        0x39 -> :sswitch_0
+        0x40 -> :sswitch_27
+        0x4c -> :sswitch_2
+        0x8a -> :sswitch_d
+        0x8b -> :sswitch_e
+        0x8c -> :sswitch_f
+        0x8d -> :sswitch_10
+        0x8e -> :sswitch_11
+        0x8f -> :sswitch_28
+        0x90 -> :sswitch_29
+        0x94 -> :sswitch_2a
+        0x96 -> :sswitch_2b
+        0x97 -> :sswitch_2c
+        0x98 -> :sswitch_2d
+        0x9b -> :sswitch_2e
+        0xa6 -> :sswitch_12
+        0xa9 -> :sswitch_13
+        0xab -> :sswitch_14
+        0xae -> :sswitch_15
+        0xaf -> :sswitch_16
     .end sparse-switch
 .end method
 
@@ -1502,7 +1710,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -1515,11 +1723,11 @@
 
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 11
     .line 12
@@ -1531,7 +1739,7 @@
 
     .line 15
     .line 16
-    invoke-interface {v2, v0, v1, p2, p3}, LX/35B;->AEf(JD)D
+    invoke-virtual {v2, v0, v1, p2, p3}, LX/302;->ADF(JD)D
 
     .line 17
     .line 18
@@ -1553,7 +1761,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -1601,11 +1809,11 @@
 
     .line 23
     :sswitch_2
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 24
     .line 25
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 26
     .line 27
@@ -1621,11 +1829,11 @@
 
     .line 32
     :sswitch_3
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 33
     .line 34
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 35
     .line 36
@@ -1641,11 +1849,11 @@
 
     .line 41
     :sswitch_4
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 42
     .line 43
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 44
     .line 45
@@ -1661,11 +1869,11 @@
 
     .line 50
     :sswitch_5
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 51
     .line 52
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 53
     .line 54
@@ -1678,7 +1886,7 @@
     .line 57
     .line 58
     :goto_0
-    invoke-interface {v2, v0, v1, p2, p3}, LX/35B;->AIN(JJ)J
+    invoke-virtual {v2, v0, v1, p2, p3}, LX/302;->AGn(JJ)J
 
     .line 59
     .line 60
@@ -1721,7 +1929,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -1732,7 +1940,7 @@
     const/4 v2, 0x2
 
     .line 6
-    invoke-static {p2, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 7
     .line 8
@@ -1764,11 +1972,11 @@
 
     .line 21
     .line 22
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 23
     .line 24
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 25
     .line 26
@@ -1780,7 +1988,7 @@
 
     .line 29
     .line 30
-    invoke-interface {v2, v0, v1, p2}, LX/35B;->AMZ(JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0, v1, p2}, LX/302;->AL6(JLjava/lang/String;)Ljava/lang/String;
 
     .line 31
     .line 32
@@ -1789,7 +1997,7 @@
 
     .line 34
     :goto_0
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 35
     .line 36
@@ -1798,11 +2006,11 @@
 
     .line 38
     :cond_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/implementation/fb4a/FbARExperimentUtil;->mobileConfig$delegate:LX/0lu;
 
     .line 39
     .line 40
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 41
     .line 42
@@ -1814,7 +2022,7 @@
 
     .line 45
     .line 46
-    invoke-interface {v2, v0, v1}, LX/35B;->AMY(J)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/302;->A0C(LX/302;J)Ljava/lang/String;
 
     .line 47
     .line 48

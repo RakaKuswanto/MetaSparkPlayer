@@ -1,194 +1,164 @@
-.class public final synthetic LX/5Kw;
-.super Ljava/lang/Object;
+.class public abstract LX/5Kw;
+.super LX/5Kg;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DelayMetCommandHandler$$ExternalSyntheticLambda0"
 
 
 # instance fields
-.field public final synthetic A00:LX/5Kp;
+.field public A00:J
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5Kp;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct {p0}, LX/5Kg;-><init>()V
 
-    iput-object p1, p0, LX/5Kw;->A00:LX/5Kp;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final A03()V
+    .locals 6
 
     .line 0
-    iget-object v7, p0, LX/5Kw;->A00:LX/5Kp;
+    instance-of v0, p0, LX/4uX;
 
     .line 1
     .line 2
-    iget v0, v7, LX/5Kp;->A00:I
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    if-nez v0, :cond_1
+    move-object v1, p0
 
     .line 5
-    .line 6
-    const/4 v0, 0x1
+    check-cast v1, LX/4uX;
 
+    .line 6
     .line 7
-    iput v0, v7, LX/5Kp;->A00:I
+    iget-object v0, v1, LX/4uX;->A00:LX/4ua;
 
     .line 8
     .line 9
-    invoke-static {}, LX/5M2;->A00()LX/5M2;
+    check-cast v0, LX/4uZ;
 
     .line 10
     .line 11
+    iget-object v0, v0, LX/4uZ;->A00:LX/4uW;
+
     .line 12
-    iget-object v6, v7, LX/5Kp;->A08:LX/5Kk;
-
     .line 13
-    .line 14
-    iget-object v3, v7, LX/5Kp;->A06:LX/5KH;
+    invoke-virtual {v1}, LX/5Kg;->A01()V
 
+    .line 14
     .line 15
     .line 16
-    iget-object v2, v3, LX/5KH;->A04:LX/5Kq;
+    iget-object v0, v0, LX/4uW;->A04:Ljava/util/ArrayDeque;
 
     .line 17
     .line 18
-    iget-object v1, v7, LX/5Kp;->A05:LX/5Kj;
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 19
     .line 20
-    const/4 v0, 0x0
-
     .line 21
-    invoke-virtual {v2, v0, v1}, LX/5Kq;->A04(LX/5Kc;LX/5Kj;)Z
+    return-void
 
     .line 22
-    .line 23
-    .line 24
-    move-result v0
+    :cond_0
+    move-object v5, p0
 
+    .line 23
+    check-cast v5, LX/5Oc;
+
+    .line 24
     .line 25
-    if-eqz v0, :cond_0
+    iget-object v4, v5, LX/5Oc;->A00:LX/5Od;
 
     .line 26
     .line 27
-    iget-object v5, v3, LX/5KH;->A07:LX/5Kz;
+    iget-object v3, v4, LX/5Ob;->A07:Ljava/lang/Object;
 
     .line 28
     .line 29
-    const-wide/32 v1, 0x927c0
+    monitor-enter v3
 
     .line 30
+    :try_start_0
+    invoke-virtual {v5}, LX/5Kg;->A01()V
+
     .line 31
     .line 32
-    iget-object v4, v5, LX/5Kz;->A01:Ljava/lang/Object;
-
     .line 33
-    .line 34
-    monitor-enter v4
+    iget-object v2, v4, LX/5Ob;->A0B:[LX/5Kw;
 
+    .line 34
     .line 35
-    :try_start_0
-    invoke-static {}, LX/5M2;->A00()LX/5M2;
+    iget v1, v4, LX/5Ob;->A01:I
 
     .line 36
     .line 37
-    .line 38
-    invoke-virtual {v5, v6}, LX/5Kz;->A00(LX/5Kk;)V
+    add-int/lit8 v0, v1, 0x1
 
+    .line 38
     .line 39
+    iput v0, v4, LX/5Ob;->A01:I
+
     .line 40
     .line 41
-    new-instance v3, LX/5Kx;
+    aput-object v5, v2, v1
 
     .line 42
     .line 43
-    invoke-direct {v3, v6, v5}, LX/5Kx;-><init>(LX/5Kk;LX/5Kz;)V
+    iget-object v0, v4, LX/5Ob;->A08:Ljava/util/ArrayDeque;
 
     .line 44
     .line 45
-    .line 46
-    iget-object v0, v5, LX/5Kz;->A03:Ljava/util/Map;
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
+    .line 46
     .line 47
     .line 48
-    invoke-interface {v0, v6, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
 
     .line 49
+    if-nez v0, :cond_1
+
     .line 50
     .line 51
-    iget-object v0, v5, LX/5Kz;->A02:Ljava/util/Map;
+    iget v0, v4, LX/5Ob;->A01:I
 
     .line 52
     .line 53
-    invoke-interface {v0, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-lez v0, :cond_1
 
     .line 54
     .line 55
-    .line 56
-    iget-object v0, v5, LX/5Kz;->A00:LX/4wk;
+    invoke-virtual {v3}, Ljava/lang/Object;->notify()V
 
+    .line 56
     .line 57
     .line 58
-    check-cast v0, LX/4wj;
+    :cond_1
+    monitor-exit v3
 
     .line 59
-    .line 60
-    iget-object v0, v0, LX/4wj;->A00:Landroid/os/Handler;
-
-    .line 61
-    .line 62
-    invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 63
-    .line 64
-    .line 65
-    monitor-exit v4
-
-    .line 66
     return-void
 
-    .line 67
+    .line 60
     :catchall_0
     move-exception v0
 
-    .line 68
-    monitor-exit v4
+    .line 61
+    monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 69
+    .line 62
     throw v0
-
-    .line 70
-    :cond_0
-    invoke-static {v7}, LX/5Kp;->A00(LX/5Kp;)V
-
-    .line 71
-    .line 72
-    .line 73
-    return-void
-
-    .line 74
-    :cond_1
-    invoke-static {}, LX/5M2;->A00()LX/5M2;
-
-    .line 75
-    .line 76
-    .line 77
-    return-void
 .end method

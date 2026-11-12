@@ -1,42 +1,22 @@
-.class public final LX/3pS;
-.super LX/4me;
+.class public final LX/3Ps;
+.super LX/3PG;
 .source ""
 
 
 # instance fields
-.field public A00:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A01:Ljava/lang/String;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public final synthetic A00:LX/3Pt;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/3Pt;)V
+    .locals 0
 
     .line 0
-    const-string v0, "AutoPlayInterceptor"
+    iput-object p1, p0, LX/3Ps;->A00:LX/3Pt;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, LX/3PG;-><init>()V
 
     .line 3
     .line 4
@@ -46,305 +26,177 @@
 
 
 # virtual methods
-.method public final A0M()Ljava/lang/Integer;
-    .locals 1
+.method public final A04(F)V
+    .locals 3
 
     .line 0
-    sget-object v0, LX/014;->A0B:Ljava/lang/Integer;
+    :try_start_0
+    invoke-static {}, LX/3Ze;->A04()Z
 
     .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final A0N(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
+    move-result v0
+
     .line 4
-    new-instance v0, Landroid/widget/Space;
+    if-eqz v0, :cond_0
 
     .line 5
     .line 6
-    invoke-direct {v0, p1}, Landroid/widget/Space;-><init>(Landroid/content/Context;)V
+    const-string v0, "MultiplexProducer#onProgressUpdate"
 
     .line 7
     .line 8
+    invoke-static {v0}, LX/3Ze;->A03(Ljava/lang/String;)V
+
     .line 9
-    return-object v0
-.end method
-
-.method public final A0S()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final A0X(LX/4mg;Z)Z
-    .locals 4
-
-    .line 0
-    const/4 v3, 0x1
-
-    .line 1
-    if-eq p0, p1, :cond_4
-
-    .line 2
-    .line 3
-    const/4 v2, 0x0
-
-    .line 4
-    if-eqz p1, :cond_0
-
-    .line 5
-    .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
     .line 10
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 11
+    :cond_0
+    iget-object v1, p0, LX/3Ps;->A00:LX/3Pt;
+
     .line 12
     .line 13
-    move-result-object v0
+    monitor-enter v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     .line 14
-    if-ne v1, v0, :cond_0
+    :try_start_1
+    iget-object v0, v1, LX/3Pt;->A03:LX/3Ps;
 
     .line 15
     .line 16
-    check-cast p1, LX/3pS;
+    if-eq v0, p0, :cond_1
 
     .line 17
     .line 18
-    iget-object v1, p0, LX/3pS;->A00:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+    monitor-exit v1
 
     .line 19
+    goto :goto_1
+
     .line 20
-    iget-object v0, p1, LX/3pS;->A00:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+    :cond_1
+    iput p1, v1, LX/3Pt;->A00:F
 
     .line 21
     .line 22
-    if-eqz v1, :cond_1
+    iget-object v0, v1, LX/3Pt;->A06:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     .line 23
     .line 24
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
     .line 25
     .line 26
     .line 27
-    move-result v0
+    move-result-object v2
 
     .line 28
-    if-nez v0, :cond_2
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 29
+    :goto_0
+    :try_start_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
     .line 30
-    :cond_0
-    return v2
-
     .line 31
-    :cond_1
-    if-eqz v0, :cond_2
-
     .line 32
-    .line 33
-    return v2
-
-    .line 34
-    :cond_2
-    iget-object v1, p0, LX/3pS;->A01:Ljava/lang/String;
-
-    .line 35
-    .line 36
-    iget-object v0, p1, LX/3pS;->A01:Ljava/lang/String;
-
-    .line 37
-    .line 38
-    if-eqz v1, :cond_3
-
-    .line 39
-    .line 40
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 41
-    .line 42
-    .line 43
     move-result v0
 
+    .line 33
+    if-eqz v0, :cond_2
+
+    .line 34
+    .line 35
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v1
+
+    .line 39
+    check-cast v1, Landroid/util/Pair;
+
+    .line 40
+    .line 41
+    monitor-enter v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 42
+    :try_start_3
+    iget-object v0, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    .line 43
     .line 44
-    if-nez v0, :cond_4
+    check-cast v0, LX/3PT;
 
     .line 45
     .line 46
-    return v2
+    invoke-interface {v0, p1}, LX/3PT;->Aa3(F)V
 
     .line 47
-    :cond_3
-    if-eqz v0, :cond_4
-
     .line 48
     .line 49
-    return v2
+    monitor-exit v1
 
     .line 50
-    :cond_4
-    return v3
-.end method
+    goto :goto_0
 
-.method public final A0q(LX/4mm;LX/3iC;LX/4ml;LX/4qW;II)V
-    .locals 1
+    .line 51
+    :catchall_0
+    move-exception v0
 
-    .line 0
-    const/4 v0, 0x4
+    .line 52
+    monitor-exit v1
 
-    .line 1
-    invoke-static {p4, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    .line 53
+    goto :goto_2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2
-    .line 3
-    .line 4
-    const/4 v0, 0x1
+    .line 54
+    :cond_2
+    :goto_1
+    invoke-static {}, LX/3Ze;->A01()V
 
-    .line 5
-    iput v0, p4, LX/4qW;->A01:I
-
-    .line 6
-    .line 7
-    iput v0, p4, LX/4qW;->A00:I
-
-    .line 8
-    .line 9
+    .line 55
+    .line 56
+    .line 57
     return-void
-.end method
 
-.method public final A0s(LX/4mm;LX/3iC;Ljava/lang/Object;)V
-    .locals 3
+    .line 58
+    :catchall_1
+    move-exception v0
 
-    .line 0
-    iget-object v2, p0, LX/3pS;->A01:Ljava/lang/String;
+    .line 59
+    :try_start_4
+    monitor-exit v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/3pS;->A00:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+    .line 60
+    :goto_2
+    :try_start_5
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 3
-    .line 4
-    invoke-static {p3, v2, v1}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 61
+    :catchall_2
+    move-exception v0
 
-    .line 5
-    .line 6
-    .line 7
-    sget v0, LX/2eq;->Acw:I
+    .line 62
+    invoke-static {}, LX/3Ze;->A01()V
 
-    .line 8
-    .line 9
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    check-cast v0, LX/3Wi;
-
-    .line 14
-    .line 15
-    invoke-virtual {v0, v1, v2}, LX/3Wi;->A03(Lcom/facebook/video/common/playerorigin/PlayerOrigin;Ljava/lang/String;)LX/3o5;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iget-object v0, v0, LX/3o5;->A0X:Ljava/lang/ref/WeakReference;
-
-    .line 20
-    .line 21
-    if-eqz v0, :cond_0
-
-    .line 22
-    .line 23
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    .line 24
-    .line 25
-    .line 26
-    :cond_0
-    return-void
-.end method
-
-.method public final A0u(LX/4mm;LX/3iC;Ljava/lang/Object;)V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/3pS;->A01:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/3pS;->A00:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 3
-    .line 4
-    invoke-static {p3, v2, v1}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 5
-    .line 6
-    .line 7
-    sget v0, LX/2eq;->Acw:I
-
-    .line 8
-    .line 9
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    check-cast v0, LX/3Wi;
-
-    .line 14
-    .line 15
-    invoke-virtual {v0, v1, v2}, LX/3Wi;->A03(Lcom/facebook/video/common/playerorigin/PlayerOrigin;Ljava/lang/String;)LX/3o5;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iget-object v0, v0, LX/3o5;->A0X:Ljava/lang/ref/WeakReference;
-
-    .line 20
-    .line 21
-    if-eqz v0, :cond_0
-
-    .line 22
-    .line 23
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    .line 24
-    .line 25
-    .line 26
-    :cond_0
-    return-void
+    .line 63
+    .line 64
+    .line 65
+    throw v0
 .end method

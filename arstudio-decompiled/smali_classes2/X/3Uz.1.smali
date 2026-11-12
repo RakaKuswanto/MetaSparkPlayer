@@ -1,137 +1,44 @@
-.class public final enum LX/3Uz;
-.super Ljava/lang/Enum;
+.class public interface abstract LX/3Uz;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/3Uz;
-
-.field public static final enum Cell:LX/3Uz;
-
-.field public static final enum WiFi:LX/3Uz;
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 5
-
-    .line 0
-    const-string v0, "WiFi"
-
-    .line 1
-    .line 2
-    const/4 v4, 0x0
-
-    .line 3
-    new-instance v3, LX/3Uz;
-
-    .line 4
-    .line 5
-    invoke-direct {v3, v0, v4}, LX/3Uz;-><init>(Ljava/lang/String;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    sput-object v3, LX/3Uz;->WiFi:LX/3Uz;
-
-    .line 9
-    .line 10
-    const-string v0, "Cell"
-
-    .line 11
-    .line 12
-    const/4 v2, 0x1
-
-    .line 13
-    new-instance v1, LX/3Uz;
-
-    .line 14
-    .line 15
-    invoke-direct {v1, v0, v2}, LX/3Uz;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v1, LX/3Uz;->Cell:LX/3Uz;
-
-    .line 19
-    .line 20
-    const/4 v0, 0x2
-
-    .line 21
-    new-array v0, v0, [LX/3Uz;
-
-    .line 22
-    .line 23
-    aput-object v3, v0, v4
-
-    .line 24
-    .line 25
-    aput-object v1, v0, v2
-
-    .line 26
-    .line 27
-    sput-object v0, LX/3Uz;->$VALUES:[LX/3Uz;
-
-    .line 28
-    .line 29
-    return-void
+# virtual methods
+.method public abstract A2y(Landroid/animation/Animator$AnimatorListener;)LX/3Uz;
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract A3R(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)LX/3Uz;
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/3Uz;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/3Uz;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/3Uz;
-
-    .line 7
-    .line 8
-    return-object v0
+.method public abstract A3W(Z)LX/3Uz;
 .end method
 
-.method public static values()[LX/3Uz;
-    .locals 1
+.method public abstract A3e(F)V
+.end method
 
-    .line 0
-    sget-object v0, LX/3Uz;->$VALUES:[LX/3Uz;
+.method public abstract A7V()V
+.end method
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+.method public abstract A9I(Ljava/lang/String;)LX/3Uz;
+.end method
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+.method public abstract AeF()V
+.end method
 
-    .line 6
-    check-cast v0, [LX/3Uz;
+.method public abstract Ai2(I)LX/3Uz;
+.end method
 
-    .line 7
-    .line 8
-    return-object v0
+.method public abstract AjC(F)LX/3Uz;
+.end method
+
+.method public abstract Akk(Landroid/animation/TimeInterpolator;)LX/3Uz;
+.end method
+
+.method public abstract AqD(FF)LX/3Uz;
+.end method
+
+.method public abstract pause()V
+.end method
+
+.method public abstract stop()V
 .end method

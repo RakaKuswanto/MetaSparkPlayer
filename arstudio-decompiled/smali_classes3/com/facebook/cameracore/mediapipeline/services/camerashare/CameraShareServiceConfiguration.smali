@@ -1,12 +1,12 @@
 .class public final Lcom/facebook/cameracore/mediapipeline/services/camerashare/CameraShareServiceConfiguration;
-.super LX/5Vj;
+.super LX/68F;
 .source ""
 
 
 # static fields
-.field public static final CAMERA_SHARE_SERVICE_TYPE_KEY:LX/5TT;
+.field public static final CAMERA_SHARE_SERVICE_TYPE_KEY:LX/67w;
 
-.field public static final Companion:LX/5WA;
+.field public static final Companion:LX/6AU;
 
 
 # instance fields
@@ -18,33 +18,33 @@
     .locals 2
 
     .line 0
-    new-instance v0, LX/5WA;
+    new-instance v0, LX/6AU;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5WA;-><init>()V
+    invoke-direct {v0}, LX/6AU;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/camerashare/CameraShareServiceConfiguration;->Companion:LX/5WA;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/camerashare/CameraShareServiceConfiguration;->Companion:LX/6AU;
 
     .line 6
     .line 7
-    sget-object v1, LX/5Tk;->CameraShareService:LX/5Tk;
+    sget-object v1, LX/63t;->CameraShareService:LX/63t;
 
     .line 8
     .line 9
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 10
     .line 11
-    invoke-direct {v0, v1}, LX/5TT;-><init>(LX/5Tk;)V
+    invoke-direct {v0, v1}, LX/67w;-><init>(LX/63t;)V
 
     .line 12
     .line 13
     .line 14
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/camerashare/CameraShareServiceConfiguration;->CAMERA_SHARE_SERVICE_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/camerashare/CameraShareServiceConfiguration;->CAMERA_SHARE_SERVICE_TYPE_KEY:LX/67w;
 
     .line 15
     .line 16
@@ -58,12 +58,12 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-direct {p0}, LX/5Vj;-><init>()V
+    invoke-direct {p0}, LX/68F;-><init>()V
 
     .line 5
     .line 6

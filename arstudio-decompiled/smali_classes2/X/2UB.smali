@@ -1,72 +1,55 @@
-.class public final LX/2UB;
-.super LX/1wb;
+.class public final synthetic LX/2UB;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$16"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "QuickPerformanceLoggerImpl$$ExternalSyntheticLambda11"
 
 
 # instance fields
-.field public final synthetic A00:LX/1Zv;
-
-.field public final synthetic A01:LX/2OB;
+.field public final synthetic A00:LX/2Vf;
 
 
 # direct methods
-.method public constructor <init>(LX/2OB;LX/1Zv;Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/util/concurrent/atomic/AtomicInteger;)V
-    .locals 10
+.method public synthetic constructor <init>(LX/2Vf;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/2UB;->A00:LX/2Vf;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
 
     .line 0
-    const-string v3, "BeforeLogout"
+    iget-object v1, p0, LX/2UB;->A00:LX/2Vf;
 
     .line 1
     .line 2
-    const-string v4, "InteractionLogger"
+    sget-object v0, Lcom/facebook/common/util/TriState;->UNSET:Lcom/facebook/common/util/TriState;
 
     .line 3
     .line 4
-    const-string v5, "beforeLogout"
+    iput-object v0, v1, LX/2Vf;->A0a:Lcom/facebook/common/util/TriState;
 
     .line 5
     .line 6
-    const v8, 0x940003
+    iput-object v0, v1, LX/2Vf;->A0b:Lcom/facebook/common/util/TriState;
 
     .line 7
     .line 8
+    iput-object v0, v1, LX/2Vf;->A0c:Lcom/facebook/common/util/TriState;
+
     .line 9
-    const-string/jumbo v6, "type"
-
     .line 10
-    .line 11
-    .line 12
-    const/4 v9, 0x1
-
-    .line 13
-    move-object v0, p0
-
-    .line 14
-    iput-object p1, p0, LX/2UB;->A01:LX/2OB;
-
-    .line 15
-    .line 16
-    iput-object p2, p0, LX/2UB;->A00:LX/1Zv;
-
-    .line 17
-    .line 18
-    move-object v1, p3
-
-    .line 19
-    move-object v2, p4
-
-    .line 20
-    move-object v7, p5
-
-    .line 21
-    invoke-direct/range {v0 .. v9}, LX/1wb;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;IZ)V
-
-    .line 22
-    .line 23
-    .line 24
     return-void
 .end method

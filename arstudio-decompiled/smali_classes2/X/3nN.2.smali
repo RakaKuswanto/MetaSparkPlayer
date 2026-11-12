@@ -1,25 +1,17 @@
-.class public abstract LX/3nN;
-.super LX/3nH;
+.class public interface abstract LX/3nN;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3nR;
 
-# direct methods
-.method public constructor <init>(Ljava/io/File;)V
-    .locals 1
 
-    .line 0
-    invoke-direct {p0, p1}, LX/3nH;-><init>(Ljava/io/File;)V
+# virtual methods
+.method public abstract getVideoFlytrapIssueCollection()LX/3nO;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    sget-object v0, LX/3nF;->A04:Ljava/util/Comparator;
+.method public abstract getVideoId()Ljava/lang/String;
+.end method
 
-    .line 4
-    .line 5
-    iput-object v0, p0, LX/3nH;->A01:Ljava/util/Comparator;
-
-    .line 6
-    .line 7
-    return-void
+.method public abstract getVideoViewSurface()Landroid/view/View;
 .end method

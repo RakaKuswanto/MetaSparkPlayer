@@ -28,13 +28,16 @@
 .method public abstract expectedResponseSizeBytes()J
 .end method
 
-.method public abstract getLayerInformation(LX/3XD;)Ljava/lang/Object;
+.method public abstract getLayerInformation(LX/39f;)Ljava/lang/Object;
 .end method
 
 .method public abstract headers()Ljava/util/Map;
 .end method
 
-.method public abstract httpPriority()LX/3RG;
+.method public abstract httpPriority()LX/387;
+.end method
+
+.method public abstract httpPriorityContext()Lcom/facebook/tigon/iface/HttpPriorityContext;
 .end method
 
 .method public abstract idleTimeoutMS()J

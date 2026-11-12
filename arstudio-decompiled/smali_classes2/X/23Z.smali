@@ -1,143 +1,592 @@
 .class public final LX/23Z;
-.super Ljava/lang/Object;
+.super Lcom/google/common/collect/ImmutableMap$Builder;
 .source ""
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:Ljava/util/Comparator;
 
-.field public final A01:Landroid/content/Context;
+.field public transient A01:[Ljava/lang/Object;
 
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Na;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
-
-.field public final A06:LX/0Na;
-
-.field public final A07:LX/0Na;
+.field public transient A02:[Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(Ljava/util/Comparator;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "comparator"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x4
 
     .line 1
+    invoke-direct {p0, v1}, Lcom/google/common/collect/ImmutableMap$Builder;-><init>(I)V
+
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
-
     .line 4
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     .line 5
     .line 6
-    move-result-object v0
-
     .line 7
-    iput-object v0, p0, LX/23Z;->A04:LX/0Na;
+    iput-object p1, p0, LX/23Z;->A00:Ljava/util/Comparator;
 
     .line 8
     .line 9
-    sget v0, LX/2eq;->AFH:I
+    new-array v0, v1, [Ljava/lang/Object;
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object v0, p0, LX/23Z;->A01:[Ljava/lang/Object;
 
     .line 12
     .line 13
-    .line 14
-    move-result-object v0
+    new-array v0, v1, [Ljava/lang/Object;
 
+    .line 14
     .line 15
-    iput-object v0, p0, LX/23Z;->A06:LX/0Na;
+    iput-object v0, p0, LX/23Z;->A02:[Ljava/lang/Object;
 
     .line 16
     .line 17
-    sget v0, LX/2eq;->AF6:I
+    return-void
+.end method
 
+.method private final A00()Lcom/google/common/collect/ImmutableSortedMap;
+    .locals 7
+
+    .line 0
+    iget v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_3
+
+    .line 3
+    .line 4
+    const/4 v3, 0x0
+
+    .line 5
+    const/4 v0, 0x1
+
+    .line 6
+    if-eq v1, v0, :cond_2
+
+    .line 7
+    .line 8
+    iget-object v0, p0, LX/23Z;->A01:[Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v4
+
+    .line 14
+    iget-object v6, p0, LX/23Z;->A00:Ljava/util/Comparator;
+
+    .line 15
+    .line 16
+    invoke-static {v4, v6}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+
+    .line 17
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iget v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
 
     .line 20
     .line 21
-    .line 22
-    move-result-object v0
+    new-array v5, v0, [Ljava/lang/Object;
 
+    .line 22
     .line 23
-    iput-object v0, p0, LX/23Z;->A07:LX/0Na;
+    :goto_0
+    iget v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
 
     .line 24
     .line 25
-    invoke-static {}, LX/0Zq;->A0I()LX/0Zq;
+    if-ge v3, v0, :cond_1
 
     .line 26
     .line 27
-    .line 28
-    move-result-object v0
+    if-lez v3, :cond_0
 
+    .line 28
     .line 29
-    iput-object v0, p0, LX/23Z;->A02:LX/0Na;
+    add-int/lit8 v2, v3, -0x1
 
     .line 30
     .line 31
-    sget v0, LX/2eq;->A5m:I
+    aget-object v1, v4, v2
 
     .line 32
     .line 33
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    aget-object v0, v4, v3
 
     .line 34
     .line 35
+    invoke-interface {v6, v1, v0}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
+
     .line 36
-    move-result-object v0
-
     .line 37
-    iput-object v0, p0, LX/23Z;->A05:LX/0Na;
-
     .line 38
+    move-result v0
+
     .line 39
-    invoke-static {}, LX/1zE;->A00()Landroid/content/Context;
+    if-nez v0, :cond_0
 
     .line 40
     .line 41
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
     .line 42
-    move-result-object v0
-
     .line 43
-    iput-object v0, p0, LX/23Z;->A01:Landroid/content/Context;
-
     .line 44
+    move-result-object v1
+
     .line 45
-    invoke-static {}, LX/0Zq;->A0F()LX/0Zq;
+    const-string/jumbo v0, "keys required to be distinct but compared as equal: "
 
     .line 46
     .line 47
     .line 48
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 49
-    iput-object v0, p0, LX/23Z;->A03:LX/0Na;
-
     .line 50
     .line 51
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    aget-object v0, v4, v2
 
     .line 52
     .line 53
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     .line 54
+    .line 55
+    .line 56
+    const-string v0, " and "
+
+    .line 57
+    .line 58
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 59
+    .line 60
+    .line 61
+    aget-object v0, v4, v3
+
+    .line 62
+    .line 63
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 64
+    .line 65
+    .line 66
     move-result-object v0
 
-    .line 55
-    iput-object v0, p0, LX/23Z;->A00:LX/1zG;
+    .line 67
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
-    .line 56
-    .line 57
-    return-void
+    .line 68
+    .line 69
+    .line 70
+    move-result-object v0
+
+    .line 71
+    throw v0
+
+    .line 72
+    :cond_0
+    iget-object v0, p0, LX/23Z;->A01:[Ljava/lang/Object;
+
+    .line 73
+    .line 74
+    aget-object v0, v0, v3
+
+    .line 75
+    .line 76
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 77
+    .line 78
+    .line 79
+    invoke-static {v4, v0, v6}, Ljava/util/Arrays;->binarySearch([Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)I
+
+    .line 80
+    .line 81
+    .line 82
+    move-result v1
+
+    .line 83
+    iget-object v0, p0, LX/23Z;->A02:[Ljava/lang/Object;
+
+    .line 84
+    .line 85
+    aget-object v0, v0, v3
+
+    .line 86
+    .line 87
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 88
+    .line 89
+    .line 90
+    aput-object v0, v5, v1
+
+    .line 91
+    .line 92
+    add-int/lit8 v3, v3, 0x1
+
+    .line 93
+    .line 94
+    goto :goto_0
+
+    .line 95
+    :cond_1
+    invoke-static {v4}, Lcom/google/common/collect/ImmutableList;->asImmutableList([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 96
+    .line 97
+    .line 98
+    move-result-object v0
+
+    .line 99
+    new-instance v3, Lcom/google/common/collect/RegularImmutableSortedSet;
+
+    .line 100
+    .line 101
+    invoke-direct {v3, v0, v6}, Lcom/google/common/collect/RegularImmutableSortedSet;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/util/Comparator;)V
+
+    .line 102
+    .line 103
+    .line 104
+    invoke-static {v5}, Lcom/google/common/collect/ImmutableList;->asImmutableList([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 105
+    .line 106
+    .line 107
+    move-result-object v2
+
+    .line 108
+    goto :goto_1
+
+    .line 109
+    :cond_2
+    iget-object v4, p0, LX/23Z;->A00:Ljava/util/Comparator;
+
+    .line 110
+    .line 111
+    iget-object v0, p0, LX/23Z;->A01:[Ljava/lang/Object;
+
+    .line 112
+    .line 113
+    aget-object v2, v0, v3
+
+    .line 114
+    .line 115
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 116
+    .line 117
+    .line 118
+    iget-object v0, p0, LX/23Z;->A02:[Ljava/lang/Object;
+
+    .line 119
+    .line 120
+    aget-object v1, v0, v3
+
+    .line 121
+    .line 122
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 123
+    .line 124
+    .line 125
+    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 126
+    .line 127
+    .line 128
+    move-result-object v0
+
+    .line 129
+    new-instance v3, Lcom/google/common/collect/RegularImmutableSortedSet;
+
+    .line 130
+    .line 131
+    invoke-direct {v3, v0, v4}, Lcom/google/common/collect/RegularImmutableSortedSet;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/util/Comparator;)V
+
+    .line 132
+    .line 133
+    .line 134
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 135
+    .line 136
+    .line 137
+    move-result-object v2
+
+    .line 138
+    :goto_1
+    const/4 v1, 0x0
+
+    .line 139
+    new-instance v0, Lcom/google/common/collect/ImmutableSortedMap;
+
+    .line 140
+    .line 141
+    invoke-direct {v0, v2, v1, v3}, Lcom/google/common/collect/ImmutableSortedMap;-><init>(Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableSortedMap;Lcom/google/common/collect/RegularImmutableSortedSet;)V
+
+    .line 142
+    .line 143
+    .line 144
+    return-object v0
+
+    .line 145
+    :cond_3
+    iget-object v0, p0, LX/23Z;->A00:Ljava/util/Comparator;
+
+    .line 146
+    .line 147
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableSortedMap;->A02(Ljava/util/Comparator;)Lcom/google/common/collect/ImmutableSortedMap;
+
+    .line 148
+    .line 149
+    .line 150
+    move-result-object v0
+
+    .line 151
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic build()Lcom/google/common/collect/ImmutableMap;
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/23Z;->A00()Lcom/google/common/collect/ImmutableSortedMap;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final bridge synthetic buildKeepingLast()Lcom/google/common/collect/ImmutableMap;
+    .locals 1
+
+    .line 0
+    const-string v0, "ImmutableSortedMap.Builder does not yet implement buildKeepingLast()"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
+.end method
+
+.method public final bridge synthetic buildOrThrow()Lcom/google/common/collect/ImmutableMap;
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/23Z;->A00()Lcom/google/common/collect/ImmutableSortedMap;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 268435456
+    iget v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
+
+    .line 268435457
+    .line 268435458
+    add-int/lit8 v1, v0, 0x1
+
+    .line 268435459
+    .line 268435460
+    iget-object v0, p0, LX/23Z;->A01:[Ljava/lang/Object;
+
+    .line 268435461
+    .line 268435462
+    array-length v0, v0
+
+    .line 268435463
+    if-le v1, v0, :cond_0
+
+    .line 268435464
+    .line 268435465
+    invoke-static {v0, v1}, LX/23O;->A00(II)I
+
+    .line 268435466
+    .line 268435467
+    .line 268435468
+    move-result v1
+
+    .line 268435469
+    iget-object v0, p0, LX/23Z;->A01:[Ljava/lang/Object;
+
+    .line 268435470
+    .line 268435471
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    .line 268435472
+    .line 268435473
+    .line 268435474
+    move-result-object v0
+
+    .line 268435475
+    iput-object v0, p0, LX/23Z;->A01:[Ljava/lang/Object;
+
+    .line 268435476
+    .line 268435477
+    iget-object v0, p0, LX/23Z;->A02:[Ljava/lang/Object;
+
+    .line 268435478
+    .line 268435479
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    .line 268435480
+    .line 268435481
+    .line 268435482
+    move-result-object v0
+
+    .line 268435483
+    iput-object v0, p0, LX/23Z;->A02:[Ljava/lang/Object;
+
+    .line 268435484
+    .line 268435485
+    :cond_0
+    invoke-static {p1, p2}, LX/1rB;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 268435486
+    .line 268435487
+    .line 268435488
+    iget-object v0, p0, LX/23Z;->A01:[Ljava/lang/Object;
+
+    .line 268435489
+    .line 268435490
+    iget v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
+
+    .line 268435491
+    .line 268435492
+    aput-object p1, v0, v1
+
+    .line 268435493
+    .line 268435494
+    iget-object v0, p0, LX/23Z;->A02:[Ljava/lang/Object;
+
+    .line 268435495
+    .line 268435496
+    aput-object p2, v0, v1
+
+    .line 268435497
+    .line 268435498
+    add-int/lit8 v0, v1, 0x1
+
+    .line 268435499
+    .line 268435500
+    iput v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
+
+    .line 268435501
+    .line 268435502
+    return-object p0
+.end method
+
+.method public final bridge synthetic put(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableMap$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "entry"
+        }
+    .end annotation
+
+    .line 0
+    invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableMap$Builder;
+
+    .line 1
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public final bridge synthetic putAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableMap$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "entries"
+        }
+    .end annotation
+
+    .line 0
+    invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableMap$Builder;->putAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableMap$Builder;
+
+    .line 1
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public final bridge synthetic putAll(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "map"
+        }
+    .end annotation
+
+    .line 268435456
+    invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableMap$Builder;->putAll(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap$Builder;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-object p0
 .end method

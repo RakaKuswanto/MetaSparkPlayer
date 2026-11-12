@@ -1,14 +1,14 @@
-.class public abstract LX/5Av;
-.super LX/5Au;
+.class public final LX/5aV;
+.super LX/5aW;
 .source ""
 
 
 # direct methods
-.method public constructor <init>(LX/59x;)V
+.method public constructor <init>(LX/5aS;LX/5aS;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/5Au;-><init>(LX/59x;)V
+    invoke-direct {p0, p1, p2}, LX/5aW;-><init>(LX/5aS;LX/5aS;)V
 
     .line 1
     .line 2

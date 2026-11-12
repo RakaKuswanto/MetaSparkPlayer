@@ -1,134 +1,155 @@
-.class public abstract LX/2Ux;
-.super LX/2V0;
+.class public final LX/2uX;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements Ljava/io/Closeable;
 
 
 # static fields
-.field public static final A00:LX/2Uy;
+.field public static final A02:LX/2uX;
+
+
+# instance fields
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     .line 0
-    new-instance v0, LX/2Uy;
+    const/4 v2, 0x0
 
     .line 1
-    .line 2
-    invoke-direct {v0}, LX/2Uy;-><init>()V
+    const-string v1, "UNKNOWN"
 
+    .line 2
     .line 3
+    new-instance v0, LX/2uX;
+
     .line 4
     .line 5
-    sput-object v0, LX/2Ux;->A00:LX/2Uy;
+    invoke-direct {v0, v1, v2}, LX/2uX;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     .line 7
+    .line 8
+    sput-object v0, LX/2uX;->A02:LX/2uX;
+
+    .line 9
+    .line 10
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/2V0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/2uX;->A00:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/2uX;->A01:Ljava/lang/String;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v3, 0x1
+
+    if-eq p0, p1, :cond_1
+
+    instance-of v0, p1, LX/2uX;
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, LX/2uX;
+
+    iget-object v1, p0, LX/2uX;->A00:Ljava/lang/String;
+
+    iget-object v0, p1, LX/2uX;->A00:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, LX/2uX;->A01:Ljava/lang/String;
+
+    iget-object v0, p1, LX/2uX;->A01:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    return v2
+
+    :cond_1
+    return v3
+.end method
+
+.method public final hashCode()I
     .locals 2
 
     .line 0
-    instance-of v0, p0, LX/2Vo;
+    iget-object v0, p0, LX/2uX;->A00:Ljava/lang/String;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
-    const-string v0, "Dispatchers.Default cannot be closed"
-
     .line 5
+    move-result v0
+
     .line 6
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    mul-int/lit8 v1, v0, 0x1f
 
     .line 7
     .line 8
-    .line 9
-    move-result-object v0
+    iget-object v0, p0, LX/2uX;->A01:Ljava/lang/String;
 
+    .line 9
     .line 10
-    throw v0
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 11
-    :cond_0
-    instance-of v0, p0, LX/2V2;
-
     .line 12
     .line 13
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 14
+    add-int/2addr v1, v0
+
     .line 15
-    const-string v0, "Cannot be invoked on Dispatchers.IO"
+    return v1
+.end method
 
-    .line 16
-    .line 17
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
+    .line 0
+    iget-object v0, p0, LX/2uX;->A00:Ljava/lang/String;
 
-    .line 21
-    throw v0
-
-    .line 22
-    :cond_1
-    move-object v0, p0
-
-    .line 23
-    check-cast v0, LX/2Uv;
-
-    .line 24
-    .line 25
-    iget-object v1, v0, LX/2Uv;->A00:Ljava/util/concurrent/Executor;
-
-    .line 26
-    .line 27
-    instance-of v0, v1, Ljava/util/concurrent/ExecutorService;
-
-    .line 28
-    .line 29
-    if-eqz v0, :cond_2
-
-    .line 30
-    .line 31
-    check-cast v1, Ljava/util/concurrent/ExecutorService;
-
-    .line 32
-    .line 33
-    if-eqz v1, :cond_2
-
-    .line 34
-    .line 35
-    invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdown()V
-
-    .line 36
-    .line 37
-    .line 38
-    :cond_2
-    return-void
+    .line 1
+    .line 2
+    return-object v0
 .end method

@@ -86,7 +86,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0, v9}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0, v9}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
     .line 9
     .line 10
@@ -130,7 +130,7 @@
 
     .line 28
     .line 29
-    invoke-static {v0, v9}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0, v9}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 30
     .line 31
@@ -188,7 +188,7 @@
 
     .line 55
     .line 56
-    invoke-static {v7, v5, v0}, LX/0HL;->A04(Ljava/io/InputStream;[BI)I
+    invoke-static {v7, v5, v0}, LX/0GR;->A04(Ljava/io/InputStream;[BI)I
 
     .line 57
     .line 58
@@ -243,7 +243,7 @@
 
     .line 79
     .line 80
-    invoke-static {v0, v9}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0, v9}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
     .line 81
     .line 82
@@ -260,41 +260,64 @@
 
     .line 88
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 89
     :try_start_3
     invoke-virtual {v6}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 90
     .line 91
     .line 92
-    :catchall_1
-    :try_start_4
-    throw v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+    goto :goto_1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 93
-    :catchall_2
+    :catchall_1
     move-exception v0
 
     .line 94
-    if-eqz v7, :cond_3
+    :try_start_4
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 95
     .line 96
+    .line 97
+    :goto_1
+    throw v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    .line 98
+    :catchall_2
+    move-exception v1
+
+    .line 99
+    if-eqz v7, :cond_3
+
+    .line 100
+    .line 101
     :try_start_5
     invoke-virtual {v7}, Ljava/io/InputStream;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 97
-    .line 98
-    .line 99
+    .line 102
+    .line 103
+    .line 104
+    throw v1
+
+    .line 105
     :catchall_3
+    move-exception v0
+
+    .line 106
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 107
+    .line 108
+    .line 109
     :cond_3
-    throw v0
+    throw v1
 .end method

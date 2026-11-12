@@ -50,7 +50,7 @@
 
     .line 8
     :try_start_0
-    invoke-static {v4}, LX/4BF;->A1G(Landroid/os/Parcel;)V
+    invoke-static {v4}, LX/434;->A1P(Landroid/os/Parcel;)V
 
     .line 9
     .line 10
@@ -63,7 +63,7 @@
     const/4 v2, 0x0
 
     .line 15
-    invoke-static {v4, p1}, LX/6M3;->A00(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    invoke-static {v4, p1}, LX/6aQ;->A00(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
     .line 16
     .line 17
@@ -72,7 +72,7 @@
 
     .line 19
     .line 20
-    const/16 v0, 0xc
+    const/16 v0, 0xe
 
     .line 21
     .line 22
@@ -115,6 +115,82 @@
     .line 40
     .line 41
     .line 42
+    throw v0
+.end method
+
+.method public final A01(Lcom/facebook/browser/lite/ipc/AutofillContactDataCallback;)V
+    .locals 4
+
+    .line 0
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v3
+
+    .line 4
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v2
+
+    .line 8
+    :try_start_0
+    invoke-static {v3}, LX/434;->A1P(Landroid/os/Parcel;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {v3, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    .line 12
+    .line 13
+    .line 14
+    iget-object v1, p0, Lcom/facebook/browser/lite/ipc/BrowserLiteCallback$Stub$Proxy;->A00:Landroid/os/IBinder;
+
+    .line 15
+    .line 16
+    const/16 v0, 0x1c
+
+    .line 17
+    .line 18
+    invoke-static {v1, v3, v2, v0}, LX/0X2;->A0w(Landroid/os/IBinder;Landroid/os/Parcel;Landroid/os/Parcel;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
+
+    .line 25
+    .line 26
+    .line 27
+    return-void
+
+    .line 28
+    :catchall_0
+    move-exception v0
+
+    .line 29
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
+
+    .line 33
+    .line 34
+    .line 35
     throw v0
 .end method
 

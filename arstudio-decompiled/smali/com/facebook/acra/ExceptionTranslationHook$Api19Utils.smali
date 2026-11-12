@@ -19,5 +19,11 @@
 .method public static final addSuppressed(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 0
+    invoke-static {p0, p1}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

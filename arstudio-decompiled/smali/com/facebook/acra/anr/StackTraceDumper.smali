@@ -83,7 +83,7 @@
     move-result-object v3
 
     .line 268435481
-    invoke-static {v4}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v4}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 268435482
     .line 268435483
@@ -104,7 +104,7 @@
 
     .line 268435490
     .line 268435491
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 268435492
     .line 268435493

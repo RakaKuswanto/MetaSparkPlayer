@@ -3,13 +3,13 @@
 .source ""
 
 # interfaces
-.implements LX/3EV;
+.implements LX/2fT;
 
 
 # instance fields
-.field public A00:LX/2vp;
+.field public A00:LX/3GS;
 
-.field public A01:LX/0Na;
+.field public A01:LX/0RP;
 
 
 # direct methods
@@ -27,108 +27,113 @@
 
 
 # virtual methods
-.method public A0K(Landroid/os/Bundle;)V
+.method public A1I(Landroid/os/Bundle;)V
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbFragmentActivity;->A0D(Lcom/facebook/base/activity/FbFragmentActivity;)LX/2Sv;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 4
-    iput-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectActivity;->A01:LX/0Na;
-
     .line 5
     .line 6
-    sget v0, LX/2eq;->AQV:I
-
-    .line 7
-    .line 8
-    invoke-static {p0, v0}, LX/1zE;->A09(Landroid/content/Context;I)Ljava/lang/Object;
-
-    .line 9
-    .line 10
-    .line 11
     move-result-object v0
 
-    .line 12
-    check-cast v0, LX/2vp;
+    .line 7
+    iput-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectActivity;->A01:LX/0RP;
 
+    .line 8
+    .line 9
+    sget v0, LX/2I6;->ALn:I
+
+    .line 10
+    .line 11
+    invoke-static {p0, v0}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
+
+    .line 12
     .line 13
     .line 14
-    iput-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectActivity;->A00:LX/2vp;
+    move-result-object v0
 
     .line 15
-    .line 16
-    const/4 v0, 0x1
+    check-cast v0, LX/3GS;
 
+    .line 16
     .line 17
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->requestWindowFeature(I)Z
+    iput-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectActivity;->A00:LX/3GS;
 
     .line 18
     .line 19
+    const/4 v0, 0x1
+
     .line 20
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectActivity;->A01:LX/0Na;
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 21
     .line 22
-    invoke-static {v0}, LX/0Yd;->A0B(LX/0Na;)LX/1hU;
-
     .line 23
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectActivity;->A01:LX/0RP;
+
     .line 24
     .line 25
-    move-result-object v2
+    invoke-static {v0}, LX/0X1;->A0C(LX/0RP;)LX/1D7;
 
     .line 26
-    sget-object v1, LX/3eT;->A0H:LX/1b2;
-
     .line 27
     .line 28
-    const/4 v0, 0x0
+    move-result-object v2
 
     .line 29
-    invoke-static {v2, v1, v0}, LX/0Yd;->A0h(LX/1hU;LX/1b2;Z)V
+    sget-object v1, LX/3bB;->A0H:LX/28F;
 
     .line 30
     .line 31
+    const/4 v0, 0x0
+
     .line 32
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectActivity;->A00:LX/2vp;
+    invoke-static {v2, v1, v0}, LX/0X2;->A18(LX/1D7;LX/28F;Z)V
 
     .line 33
     .line 34
-    invoke-virtual {v0, p0}, LX/2vp;->A02(Landroid/app/Activity;)LX/3e7;
-
     .line 35
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectActivity;->A00:LX/3GS;
+
     .line 36
     .line 37
-    move-result-object v2
+    invoke-virtual {v0, p0}, LX/3GS;->A01(Landroid/app/Activity;)LX/3Ye;
 
     .line 38
-    sget-object v1, LX/3gj;->A01:[Ljava/lang/String;
-
     .line 39
     .line 40
-    new-instance v0, LX/3cA;
+    move-result-object v2
 
     .line 41
-    .line 42
-    invoke-direct {v0, p1, p0}, LX/3cA;-><init>(Landroid/os/Bundle;Lcom/facebook/arstudio/player/BaseEffectActivity;)V
+    sget-object v1, LX/3a1;->A01:[Ljava/lang/String;
 
+    .line 42
     .line 43
+    new-instance v0, LX/3a0;
+
     .line 44
     .line 45
-    invoke-virtual {v2, v0, v1}, LX/3e7;->A06(LX/3gm;[Ljava/lang/String;)V
+    invoke-direct {v0, p1, p0}, LX/3a0;-><init>(Landroid/os/Bundle;Lcom/facebook/arstudio/player/BaseEffectActivity;)V
 
     .line 46
     .line 47
     .line 48
+    invoke-virtual {v2, v0, v1}, LX/3Ye;->A07(LX/3Yt;[Ljava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
     return-void
 .end method
 
-.method public final A0L()V
+.method public final A1L()V
     .locals 6
 
     .line 0
@@ -159,7 +164,7 @@
 
     .line 12
     .line 13
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()LX/0Sf;
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()LX/0VG;
 
     .line 14
     .line 15
@@ -167,16 +172,16 @@
     move-result-object v0
 
     .line 17
-    new-instance v3, LX/0UC;
+    new-instance v3, LX/0CF;
 
     .line 18
     .line 19
-    invoke-direct {v3, v0}, LX/0UC;-><init>(LX/0Sf;)V
+    invoke-direct {v3, v0}, LX/0CF;-><init>(LX/0VG;)V
 
     .line 20
     .line 21
     .line 22
-    const v2, 0x7f0a01cb
+    const v2, 0x7f0901a3
 
     .line 23
     .line 24
@@ -187,12 +192,12 @@
     const/4 v0, 0x1
 
     .line 27
-    invoke-virtual {v3, v4, v1, v2, v0}, LX/060;->A07(Landroidx/fragment/app/Fragment;Ljava/lang/String;II)V
+    invoke-virtual {v3, v4, v1, v2, v0}, LX/06R;->A07(Landroidx/fragment/app/Fragment;Ljava/lang/String;II)V
 
     .line 28
     .line 29
     .line 30
-    invoke-static {v3, v0}, LX/0UC;->A00(LX/0UC;Z)V
+    invoke-static {v3, v0}, LX/0CF;->A00(LX/0CF;Z)V
 
     .line 31
     .line 32
@@ -209,7 +214,7 @@
 
     .line 36
     .line 37
-    invoke-virtual {v5}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-static {v5}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 38
     .line 39
@@ -230,7 +235,7 @@
     move-result-object v3
 
     .line 48
-    invoke-virtual {v5}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-static {v5}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 49
     .line 50
@@ -251,7 +256,7 @@
     move-result-object v2
 
     .line 59
-    invoke-virtual {v5}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-static {v5}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 60
     .line 61
@@ -308,7 +313,7 @@
     move-result-object v4
 
     .line 87
-    invoke-virtual {v5}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()LX/0Sf;
+    invoke-virtual {v5}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()LX/0VG;
 
     .line 88
     .line 89
@@ -316,16 +321,16 @@
     move-result-object v0
 
     .line 91
-    new-instance v3, LX/0UC;
+    new-instance v3, LX/0CF;
 
     .line 92
     .line 93
-    invoke-direct {v3, v0}, LX/0UC;-><init>(LX/0Sf;)V
+    invoke-direct {v3, v0}, LX/0CF;-><init>(LX/0VG;)V
 
     .line 94
     .line 95
     .line 96
-    const v2, 0x7f0a01cb
+    const v2, 0x7f0901a3
 
     .line 97
     .line 98
@@ -336,17 +341,17 @@
     const/4 v0, 0x1
 
     .line 101
-    invoke-virtual {v3, v4, v1, v2, v0}, LX/060;->A07(Landroidx/fragment/app/Fragment;Ljava/lang/String;II)V
+    invoke-virtual {v3, v4, v1, v2, v0}, LX/06R;->A07(Landroidx/fragment/app/Fragment;Ljava/lang/String;II)V
 
     .line 102
     .line 103
     .line 104
-    invoke-static {v3, v0}, LX/0UC;->A00(LX/0UC;Z)V
+    invoke-static {v3, v0}, LX/0CF;->A00(LX/0CF;Z)V
 
     .line 105
     .line 106
     .line 107
-    invoke-static {v5}, Lcom/facebook/arstudio/player/MainActivity;->A01(Lcom/facebook/arstudio/player/MainActivity;)V
+    invoke-static {v5}, Lcom/facebook/arstudio/player/MainActivity;->A02(Lcom/facebook/arstudio/player/MainActivity;)V
 
     .line 108
     .line 109
@@ -354,11 +359,11 @@
     return-void
 .end method
 
-.method public final ABh()Lcom/google/common/collect/ImmutableMap;
+.method public final AAF()Lcom/google/common/collect/ImmutableMap;
     .locals 2
 
     .line 0
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-static {p0}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 1
     .line 2
@@ -366,37 +371,38 @@
     move-result-object v0
 
     .line 4
-    const-string v1, "effect_id"
+    const-string/jumbo v1, "effect_id"
 
     .line 5
     .line 6
+    .line 7
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 7
     .line 8
     .line 9
+    .line 10
     move-result-object v0
 
-    .line 10
+    .line 11
     if-nez v0, :cond_0
 
-    .line 11
     .line 12
+    .line 13
     const/4 v0, 0x0
 
-    .line 13
+    .line 14
     return-object v0
 
-    .line 14
+    .line 15
     :cond_0
     invoke-static {v1, v0}, Lcom/google/common/collect/ImmutableMap;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
 
-    .line 15
     .line 16
     .line 17
+    .line 18
     move-result-object v0
 
-    .line 18
+    .line 19
     return-object v0
 .end method
 
@@ -404,7 +410,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 1
     .line 2
@@ -419,7 +425,7 @@
     .locals 2
 
     .line 0
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()LX/0Sf;
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()LX/0VG;
 
     .line 1
     .line 2
@@ -427,12 +433,12 @@
     move-result-object v1
 
     .line 4
-    const v0, 0x7f0a01cb
+    const v0, 0x7f0901a3
 
     .line 5
     .line 6
     .line 7
-    invoke-virtual {v1, v0}, LX/0Sf;->A0R(I)Landroidx/fragment/app/Fragment;
+    invoke-virtual {v1, v0}, LX/0VG;->A0R(I)Landroidx/fragment/app/Fragment;
 
     .line 8
     .line 9
@@ -440,7 +446,7 @@
     move-result-object v1
 
     .line 11
-    instance-of v0, v1, LX/3e4;
+    instance-of v0, v1, LX/3FR;
 
     .line 12
     .line 13
@@ -448,11 +454,11 @@
 
     .line 14
     .line 15
-    check-cast v1, LX/3e4;
+    check-cast v1, LX/3FR;
 
     .line 16
     .line 17
-    invoke-virtual {v1}, LX/3e4;->dispatchOnBackPressed()Z
+    invoke-virtual {v1}, LX/3FR;->dispatchOnBackPressed()Z
 
     .line 18
     .line 19

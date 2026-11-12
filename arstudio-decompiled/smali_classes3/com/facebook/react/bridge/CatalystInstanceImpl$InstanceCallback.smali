@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {p1}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     .line 4
     .line 5
@@ -36,11 +36,11 @@
     .locals 0
 
     .line 0
-    const-string p0, "onBatchComplete"
+    const-string p0, "mNativeModuleRegistry"
 
     .line 1
     .line 2
-    invoke-static {p0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4
@@ -66,29 +66,6 @@
     .line 3
     .line 4
     .line 5
-    move-result-object v0
-
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 7
-    .line 8
-    const-string v0, "decrementAndGet"
-
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    throw v0
-
-    .line 15
-    :cond_0
     return-void
 .end method
 
@@ -105,29 +82,6 @@
     .line 3
     .line 4
     .line 5
-    move-result-object v0
-
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 7
-    .line 8
-    const-string v0, "getAndIncrement"
-
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    throw v0
-
-    .line 15
-    :cond_0
     return-void
 .end method
 
@@ -144,28 +98,5 @@
     .line 3
     .line 4
     .line 5
-    move-result-object v0
-
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 7
-    .line 8
-    const-string v0, "runOnQueue"
-
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    throw v0
-
-    .line 15
-    :cond_0
     return-void
 .end method

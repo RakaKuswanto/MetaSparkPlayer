@@ -1,344 +1,287 @@
-.class public final LX/1fA;
-.super Ljava/lang/Object;
+.class public final enum LX/1fA;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements Ljava/util/Iterator;
+
+# static fields
+.field public static final synthetic $VALUES:[LX/1fA;
+
+.field public static final enum CHANNEL_CONNECTED:LX/1fA;
+
+.field public static final enum CHANNEL_CONNECTING:LX/1fA;
+
+.field public static final enum CHANNEL_DISCONNECTED:LX/1fA;
+
+.field public static final enum UNKNOWN:LX/1fA;
 
 
 # instance fields
-.field public A00:LX/1fI;
-
-.field public A01:LX/1fI;
-
-.field public A02:I
-
-.field public final A03:Ljava/util/Set;
-
-.field public final synthetic A04:Lcom/google/common/collect/LinkedListMultimap;
+.field public final value:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/collect/LinkedListMultimap;)V
-    .locals 1
+.method public static synthetic $values()[LX/1fA;
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/1fA;->A04:Lcom/google/common/collect/LinkedListMultimap;
+    const/4 v0, 0x4
+
+    .line 1
+    new-array v2, v0, [LX/1fA;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/1fA;->CHANNEL_CONNECTING:LX/1fA;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/1fA;->CHANNEL_CONNECTED:LX/1fA;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/1fA;->CHANNEL_DISCONNECTED:LX/1fA;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, LX/1fA;->UNKNOWN:LX/1fA;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "CHANNEL_CONNECTING"
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/1fA;
+
     .line 4
     .line 5
-    invoke-virtual {p1}, LX/1dn;->keySet()Ljava/util/Set;
+    invoke-direct {v0, v2, v1, v1}, LX/1fA;-><init>(Ljava/lang/String;II)V
 
     .line 6
     .line 7
     .line 8
-    move-result-object v0
+    sput-object v0, LX/1fA;->CHANNEL_CONNECTING:LX/1fA;
 
     .line 9
-    invoke-interface {v0}, Ljava/util/Set;->size()I
-
     .line 10
+    const-string v2, "CHANNEL_CONNECTED"
+
     .line 11
     .line 12
-    move-result v0
+    const/4 v1, 0x1
 
     .line 13
-    invoke-static {v0}, LX/1bx;->A00(I)I
+    new-instance v0, LX/1fA;
 
     .line 14
     .line 15
+    invoke-direct {v0, v2, v1, v1}, LX/1fA;-><init>(Ljava/lang/String;II)V
+
     .line 16
-    move-result v0
-
     .line 17
-    invoke-static {v0}, LX/0Yj;->A0Z(I)Ljava/util/HashSet;
-
     .line 18
+    sput-object v0, LX/1fA;->CHANNEL_CONNECTED:LX/1fA;
+
     .line 19
     .line 20
-    move-result-object v0
+    const-string v2, "CHANNEL_DISCONNECTED"
 
     .line 21
-    iput-object v0, p0, LX/1fA;->A03:Ljava/util/Set;
-
     .line 22
+    const/4 v1, 0x2
+
     .line 23
-    iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A02:LX/1fI;
+    new-instance v0, LX/1fA;
 
     .line 24
     .line 25
-    iput-object v0, p0, LX/1fA;->A01:LX/1fI;
+    invoke-direct {v0, v2, v1, v1}, LX/1fA;-><init>(Ljava/lang/String;II)V
 
     .line 26
     .line 27
-    iget v0, p1, Lcom/google/common/collect/LinkedListMultimap;->A00:I
-
     .line 28
-    .line 29
-    iput v0, p0, LX/1fA;->A02:I
+    sput-object v0, LX/1fA;->CHANNEL_DISCONNECTED:LX/1fA;
 
+    .line 29
     .line 30
+    const-string v2, "UNKNOWN"
+
     .line 31
+    .line 32
+    const/4 v1, 0x3
+
+    .line 33
+    new-instance v0, LX/1fA;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1, v1}, LX/1fA;-><init>(Ljava/lang/String;II)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, LX/1fA;->UNKNOWN:LX/1fA;
+
+    .line 39
+    .line 40
+    invoke-static {}, LX/1fA;->$values()[LX/1fA;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    sput-object v0, LX/1fA;->$VALUES:[LX/1fA;
+
+    .line 45
+    .line 46
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput p3, p0, LX/1fA;->value:I
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static fromValue(I)LX/1fA;
+    .locals 5
+
+    .line 0
+    invoke-static {}, LX/1fA;->values()[LX/1fA;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v4
+
+    .line 4
+    array-length v3, v4
+
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    :goto_0
+    if-ge v2, v3, :cond_0
+
+    .line 7
+    .line 8
+    aget-object v1, v4, v2
+
+    .line 9
+    .line 10
+    iget v0, v1, LX/1fA;->value:I
+
+    .line 11
+    .line 12
+    if-eq v0, p0, :cond_1
+
+    .line 13
+    .line 14
+    add-int/lit8 v2, v2, 0x1
+
+    .line 15
+    .line 16
+    goto :goto_0
+
+    .line 17
+    :cond_0
+    sget-object v1, LX/1fA;->UNKNOWN:LX/1fA;
+
+    .line 18
+    .line 19
+    :cond_1
+    return-object v1
+.end method
+
+.method public static values()[LX/1fA;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/1fA;->$VALUES:[LX/1fA;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/1fA;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 2
+.method public setClockSkewDetected(Z)V
+    .locals 0
 
-    .line 0
-    iget-object v0, p0, LX/1fA;->A04:Lcom/google/common/collect/LinkedListMultimap;
-
-    .line 1
-    .line 2
-    iget v1, v0, Lcom/google/common/collect/LinkedListMultimap;->A00:I
-
-    .line 3
-    .line 4
-    iget v0, p0, LX/1fA;->A02:I
-
-    .line 5
-    .line 6
-    if-ne v1, v0, :cond_0
-
-    .line 7
-    .line 8
-    iget-object v0, p0, LX/1fA;->A01:LX/1fI;
-
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    return v0
-
-    .line 15
-    :cond_0
-    new-instance v0, Ljava/util/ConcurrentModificationException;
-
-    .line 16
-    .line 17
-    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
-
-    .line 18
-    .line 19
-    .line 20
-    throw v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/1fA;->A04:Lcom/google/common/collect/LinkedListMultimap;
-
-    .line 1
-    .line 2
-    iget v1, v0, Lcom/google/common/collect/LinkedListMultimap;->A00:I
-
-    .line 3
-    .line 4
-    iget v0, p0, LX/1fA;->A02:I
-
-    .line 5
-    .line 6
-    if-ne v1, v0, :cond_3
-
-    .line 7
-    .line 8
-    iget-object v0, p0, LX/1fA;->A01:LX/1fI;
-
-    .line 9
-    .line 10
-    if-eqz v0, :cond_2
-
-    .line 11
-    .line 12
-    iput-object v0, p0, LX/1fA;->A00:LX/1fI;
-
-    .line 13
-    .line 14
-    iget-object v1, p0, LX/1fA;->A03:Ljava/util/Set;
-
-    .line 15
-    .line 16
-    iget-object v0, v0, LX/1fI;->A05:Ljava/lang/Object;
-
-    .line 17
-    .line 18
-    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 19
-    .line 20
-    .line 21
-    :cond_0
-    iget-object v0, p0, LX/1fA;->A01:LX/1fI;
-
-    .line 22
-    .line 23
-    iget-object v0, v0, LX/1fI;->A02:LX/1fI;
-
-    .line 24
-    .line 25
-    iput-object v0, p0, LX/1fA;->A01:LX/1fI;
-
-    .line 26
-    .line 27
-    if-eqz v0, :cond_1
-
-    .line 28
-    .line 29
-    iget-object v0, v0, LX/1fI;->A05:Ljava/lang/Object;
-
-    .line 30
-    .line 31
-    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 32
-    .line 33
-    .line 34
-    move-result v0
-
-    .line 35
-    if-eqz v0, :cond_0
-
-    .line 36
-    .line 37
-    :cond_1
-    iget-object v0, p0, LX/1fA;->A00:LX/1fI;
-
-    .line 38
-    .line 39
-    iget-object v0, v0, LX/1fI;->A05:Ljava/lang/Object;
-
-    .line 40
-    .line 41
-    return-object v0
-
-    .line 42
-    :cond_2
-    invoke-static {}, LX/0Yj;->A0d()Ljava/util/NoSuchElementException;
-
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v0
-
-    .line 46
-    throw v0
-
-    .line 47
-    :cond_3
-    new-instance v0, Ljava/util/ConcurrentModificationException;
-
-    .line 48
-    .line 49
-    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
-
-    .line 50
-    .line 51
-    .line 52
-    throw v0
-.end method
-
-.method public final remove()V
-    .locals 4
-
-    .line 0
-    iget-object v3, p0, LX/1fA;->A04:Lcom/google/common/collect/LinkedListMultimap;
-
-    .line 1
-    .line 2
-    iget v1, v3, Lcom/google/common/collect/LinkedListMultimap;->A00:I
-
-    .line 3
-    .line 4
-    iget v0, p0, LX/1fA;->A02:I
-
-    .line 5
-    .line 6
-    if-ne v1, v0, :cond_0
-
-    .line 7
-    .line 8
-    iget-object v2, p0, LX/1fA;->A00:LX/1fI;
-
-    .line 9
-    .line 10
-    invoke-static {v2}, LX/001;->A1S(Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v1
-
-    .line 14
-    const-string/jumbo v0, "no calls to next() since the last call to remove()"
-
-    .line 15
-    .line 16
-    .line 17
-    invoke-static {v1, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
-
-    .line 18
-    .line 19
-    .line 20
-    iget-object v1, v2, LX/1fI;->A05:Ljava/lang/Object;
-
-    .line 21
-    .line 22
-    new-instance v0, LX/1fC;
-
-    .line 23
-    .line 24
-    invoke-direct {v0, v3, v1}, LX/1fC;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
-
-    .line 25
-    .line 26
-    .line 27
-    invoke-static {v0}, LX/1dd;->A02(Ljava/util/Iterator;)V
-
-    .line 28
-    .line 29
-    .line 30
-    const/4 v0, 0x0
-
-    .line 31
-    iput-object v0, p0, LX/1fA;->A00:LX/1fI;
-
-    .line 32
-    .line 33
-    iget v0, v3, Lcom/google/common/collect/LinkedListMultimap;->A00:I
-
-    .line 34
-    .line 35
-    iput v0, p0, LX/1fA;->A02:I
-
-    .line 36
-    .line 37
     return-void
+.end method
 
-    .line 38
-    :cond_0
-    new-instance v0, Ljava/util/ConcurrentModificationException;
+.method public toValue()I
+    .locals 1
 
-    .line 39
-    .line 40
-    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
+    .line 0
+    iget v0, p0, LX/1fA;->value:I
 
-    .line 41
-    .line 42
-    .line 43
-    throw v0
+    .line 1
+    .line 2
+    return v0
 .end method

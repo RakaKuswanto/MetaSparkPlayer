@@ -1,11 +1,20 @@
-.class public interface abstract LX/3nq;
-.super Ljava/lang/Object;
+.class public abstract LX/3nq;
+.super Landroid/text/style/ReplacementSpan;
 .source ""
 
 
-# virtual methods
-.method public abstract onRecordARSession()V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.method public abstract onRecordScreencast()V
+    .line 0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method

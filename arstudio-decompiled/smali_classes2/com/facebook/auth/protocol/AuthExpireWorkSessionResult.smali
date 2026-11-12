@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5a
+    const/16 v0, 0x59
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -57,7 +57,7 @@
     move-result v0
 
     .line 7
-    invoke-static {v0}, LX/0Ye;->A1V(I)Z
+    invoke-static {v0}, LX/0X3;->A1X(I)Z
 
     .line 8
     .line 9

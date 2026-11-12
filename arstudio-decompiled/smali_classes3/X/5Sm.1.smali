@@ -1,32 +1,8 @@
-.class public final LX/5Sm;
-.super Landroid/util/SparseLongArray;
+.class public interface abstract LX/5Sm;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/68E;
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0}, Landroid/util/SparseLongArray;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1}, Landroid/util/SparseLongArray;-><init>(I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract AZJ(LX/5N4;)V
 .end method

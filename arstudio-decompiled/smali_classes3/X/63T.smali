@@ -1,56 +1,78 @@
-.class public final synthetic LX/63T;
+.class public final LX/63T;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AudioRendererEventListener$EventDispatcher$$ExternalSyntheticLambda6"
-
 
 # instance fields
-.field public final synthetic A00:LX/63E;
-
-.field public final synthetic A01:LX/62Y;
+.field public final synthetic A00:LX/62H;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/63E;LX/62Y;)V
+.method public constructor <init>(LX/62H;)V
     .locals 0
 
+    .line 0
+    iput-object p1, p0, LX/63T;->A00:LX/62H;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/63T;->A00:LX/63E;
-
-    iput-object p2, p0, LX/63T;->A01:LX/62Y;
-
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final A00()LX/65v;
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/63T;->A00:LX/63E;
+    iget-object v2, p0, LX/63T;->A00:LX/62H;
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/63T;->A01:LX/62Y;
+    iget-object v0, v2, LX/62H;->A03:LX/62D;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/63E;->A01:LX/63U;
+    iget-object v0, v0, LX/62D;->A0I:LX/5wv;
 
     .line 5
     .line 6
-    invoke-interface {v0, v1}, LX/63U;->AV3(LX/62Y;)V
+    iget-object v1, v0, LX/5wv;->A01:LX/5xk;
 
     .line 7
     .line 8
+    const/16 v0, 0x53
+
     .line 9
-    return-void
+    .line 10
+    invoke-interface {v1, v0}, LX/5xk;->AP0(I)Z
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    if-nez v0, :cond_0
+
+    .line 15
+    .line 16
+    sget-object v0, LX/65v;->NOT_APPLIED_BY_QE:LX/65v;
+
+    .line 17
+    .line 18
+    return-object v0
+
+    .line 19
+    :cond_0
+    iget-object v0, v2, LX/62H;->A01:LX/65v;
+
+    .line 20
+    .line 21
+    return-object v0
 .end method

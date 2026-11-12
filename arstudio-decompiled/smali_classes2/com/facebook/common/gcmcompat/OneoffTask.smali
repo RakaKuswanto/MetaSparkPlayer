@@ -18,11 +18,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x27
+    const/16 v0, 0x21
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -37,16 +37,16 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1ql;)V
+.method public constructor <init>(LX/27C;)V
     .locals 2
 
     .line 268435456
-    invoke-direct {p0, p1}, Lcom/facebook/common/gcmcompat/Task;-><init>(LX/1qk;)V
+    invoke-direct {p0, p1}, Lcom/facebook/common/gcmcompat/Task;-><init>(LX/27D;)V
 
     .line 268435457
     .line 268435458
     .line 268435459
-    iget-wide v0, p1, LX/1ql;->A01:J
+    iget-wide v0, p1, LX/27C;->A01:J
 
     .line 268435460
     .line 268435461
@@ -54,7 +54,7 @@
 
     .line 268435462
     .line 268435463
-    iget-wide v0, p1, LX/1ql;->A00:J
+    iget-wide v0, p1, LX/27C;->A00:J
 
     .line 268435464
     .line 268435465

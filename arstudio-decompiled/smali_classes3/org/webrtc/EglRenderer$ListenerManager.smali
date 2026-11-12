@@ -23,7 +23,7 @@
     .line 268435459
     .line 268435460
     .line 268435461
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 268435462
     .line 268435463
@@ -71,11 +71,11 @@
 
     .line 1
     .line 2
-    new-instance v0, Lorg/webrtc/EglRenderer$ListenerManager$$ExternalSyntheticLambda0;
+    new-instance v0, Lorg/webrtc/EglRenderer$ListenerManager$$ExternalSyntheticLambda1;
 
     .line 3
     .line 4
-    invoke-direct {v0, p0, p1}, Lorg/webrtc/EglRenderer$ListenerManager$$ExternalSyntheticLambda0;-><init>(Lorg/webrtc/EglRenderer$ListenerManager;Ljava/lang/Object;)V
+    invoke-direct {v0, p0, p1}, Lorg/webrtc/EglRenderer$ListenerManager$$ExternalSyntheticLambda1;-><init>(Lorg/webrtc/EglRenderer$ListenerManager;Ljava/lang/Object;)V
 
     .line 5
     .line 6
@@ -183,7 +183,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/0Yh;->A0k()Ljava/util/concurrent/CountDownLatch;
+    invoke-static {}, LX/0X5;->A0v()Ljava/util/concurrent/CountDownLatch;
 
     .line 1
     .line 2
@@ -230,7 +230,7 @@
     move-result-object v1
 
     .line 21
-    invoke-static {v0}, LX/4BE;->A0w(Landroid/os/Handler;)Ljava/lang/Thread;
+    invoke-static {v0}, LX/432;->A0v(Landroid/os/Handler;)Ljava/lang/Thread;
 
     .line 22
     .line 23
@@ -246,11 +246,11 @@
 
     .line 28
     .line 29
-    new-instance v0, Lorg/webrtc/EglRenderer$ListenerManager$$ExternalSyntheticLambda1;
+    new-instance v0, Lorg/webrtc/EglRenderer$ListenerManager$$ExternalSyntheticLambda0;
 
     .line 30
     .line 31
-    invoke-direct {v0, p0, v3, p1}, Lorg/webrtc/EglRenderer$ListenerManager$$ExternalSyntheticLambda1;-><init>(Lorg/webrtc/EglRenderer$ListenerManager;Ljava/util/concurrent/CountDownLatch;Ljava/lang/Object;)V
+    invoke-direct {v0, p0, v3, p1}, Lorg/webrtc/EglRenderer$ListenerManager$$ExternalSyntheticLambda0;-><init>(Lorg/webrtc/EglRenderer$ListenerManager;Ljava/util/concurrent/CountDownLatch;Ljava/lang/Object;)V
 
     .line 32
     .line 33
@@ -279,7 +279,7 @@
 
     .line 43
     .line 44
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 45
     .line 46

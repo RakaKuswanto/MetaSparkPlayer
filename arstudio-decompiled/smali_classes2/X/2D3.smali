@@ -1,46 +1,87 @@
 .class public final LX/2D3;
-.super Ljava/lang/Object;
+.super LX/2DY;
 .source ""
 
 
-# instance fields
-.field public A00:LX/2D5;
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$30"
 
-.field public A01:Ljava/util/HashMap;
+
+# instance fields
+.field public final synthetic A00:LX/2D1;
+
+.field public final synthetic A01:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final synthetic A02:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/2D1;Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/util/concurrent/atomic/AtomicInteger;Ljava/util/concurrent/atomic/AtomicInteger;Z)V
+    .locals 11
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v4, "ClearUserData"
 
     .line 1
     .line 2
+    const-string v5, "FbAppUserDataCleaner"
+
     .line 3
-    const/16 v0, 0x40
-
     .line 4
-    .line 5
-    invoke-static {v0}, LX/0Yj;->A0X(I)Ljava/util/HashMap;
+    const-string/jumbo v6, "clearUserData"
 
+    .line 5
     .line 6
     .line 7
+    const v9, 0x94000f
+
     .line 8
-    move-result-object v0
-
     .line 9
-    iput-object v0, p0, LX/2D3;->A01:Ljava/util/HashMap;
-
     .line 10
+    const-string/jumbo v7, "type"
+
     .line 11
-    const/4 v0, 0x0
-
     .line 12
-    iput-object v0, p0, LX/2D3;->A00:LX/2D5;
-
     .line 13
+    const/4 v10, 0x0
+
     .line 14
+    move-object v1, p0
+
+    .line 15
+    iput-object p1, p0, LX/2D3;->A00:LX/2D1;
+
+    .line 16
+    .line 17
+    move-object/from16 v0, p5
+
+    .line 18
+    .line 19
+    iput-object v0, p0, LX/2D3;->A01:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 20
+    .line 21
+    move/from16 v0, p6
+
+    .line 22
+    .line 23
+    iput-boolean v0, p0, LX/2D3;->A02:Z
+
+    .line 24
+    .line 25
+    move-object v2, p2
+
+    .line 26
+    move-object v3, p3
+
+    .line 27
+    move-object v8, p4
+
+    .line 28
+    invoke-direct/range {v1 .. v10}, LX/2DY;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;IZ)V
+
+    .line 29
+    .line 30
+    .line 31
     return-void
 .end method

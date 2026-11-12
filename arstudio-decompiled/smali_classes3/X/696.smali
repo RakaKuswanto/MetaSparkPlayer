@@ -1,20 +1,27 @@
-.class public final LX/696;
-.super LX/5f7;
+.class public LX/696;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/6BM;
+
+
+# instance fields
+.field public final A00:LX/6BO;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(LX/6BO;)V
+    .locals 0
 
     .line 0
-    const/16 v0, 0x505
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, v0, p1}, LX/5f7;-><init>(ILjava/lang/String;)V
-
     .line 3
+    iput-object p1, p0, LX/696;->A00:LX/6BO;
+
     .line 4
     .line 5
     return-void

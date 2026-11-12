@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final A00:LX/13X;
+.field public final A00:LX/19y;
 
 .field public final A01:Lcom/google/common/collect/ImmutableMap;
 
@@ -23,32 +23,33 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x3
+    const/16 v0, 0x1e
 
     .line 1
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
-
     .line 2
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/interstitial/logging/LogInterstitialParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
-.method public constructor <init>(LX/13X;Lcom/google/common/collect/ImmutableMap;Ljava/lang/String;)V
+.method public constructor <init>(LX/19y;Lcom/google/common/collect/ImmutableMap;Ljava/lang/String;)V
     .locals 1
 
     .line 268435456
     const/4 v0, 0x3
 
     .line 268435457
-    invoke-static {p2, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 268435458
     .line 268435459
@@ -62,7 +63,7 @@
 
     .line 268435464
     .line 268435465
-    iput-object p1, p0, Lcom/facebook/interstitial/logging/LogInterstitialParams;->A00:LX/13X;
+    iput-object p1, p0, Lcom/facebook/interstitial/logging/LogInterstitialParams;->A00:LX/19y;
 
     .line 268435466
     .line 268435467
@@ -114,7 +115,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/13X;->valueOf(Ljava/lang/String;)LX/13X;
+    invoke-static {v0}, LX/19y;->valueOf(Ljava/lang/String;)LX/19y;
 
     .line 20
     .line 21
@@ -122,7 +123,7 @@
     move-result-object v0
 
     .line 23
-    iput-object v0, p0, Lcom/facebook/interstitial/logging/LogInterstitialParams;->A00:LX/13X;
+    iput-object v0, p0, Lcom/facebook/interstitial/logging/LogInterstitialParams;->A00:LX/19y;
 
     .line 24
     .line 25
@@ -151,7 +152,7 @@
     .line 36
     .line 37
     .line 38
-    invoke-static {v1, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 39
     .line 40
@@ -164,7 +165,7 @@
     move-result-object v0
 
     .line 45
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 46
     .line 47
@@ -177,7 +178,7 @@
 
     .line 51
     :cond_0
-    invoke-static {v1}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v1}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 52
     .line 53
@@ -189,7 +190,7 @@
 
     .line 56
     :cond_1
-    invoke-static {v1}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v1}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 57
     .line 58
@@ -217,7 +218,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -231,11 +232,11 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/interstitial/logging/LogInterstitialParams;->A00:LX/13X;
+    iget-object v0, p0, Lcom/facebook/interstitial/logging/LogInterstitialParams;->A00:LX/19y;
 
     .line 10
     .line 11
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 12
     .line 13

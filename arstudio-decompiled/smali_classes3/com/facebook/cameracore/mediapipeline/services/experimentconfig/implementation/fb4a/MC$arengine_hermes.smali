@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0x7b80
 
-.field public static final __CONFIG__:I = 0x238
+.field public static final __CONFIG__:I = 0x20f
 
-.field public static final vm_experiment_flags:J = 0x82023800000726L
+.field public static final vm_experiment_flags:J = 0x82020f00000621L
 
 
 # direct methods

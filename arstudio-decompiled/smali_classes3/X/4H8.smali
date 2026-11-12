@@ -3,166 +3,145 @@
 .source ""
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "Execution$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/4H6;
-
-.field public final synthetic A01:Ljava/lang/String;
-
-.field public final synthetic A02:Ljava/util/ArrayList;
-
-.field public final synthetic A03:Z
+.field public final synthetic A00:I
 
 
 # direct methods
-.method public constructor <init>(LX/4H6;Ljava/lang/String;Ljava/util/ArrayList;Z)V
+.method public constructor <init>(I)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4H8;->A00:LX/4H6;
+    iput p1, p0, LX/4H8;->A00:I
 
     .line 1
     .line 2
-    iput-object p3, p0, LX/4H8;->A02:Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    iput-boolean p4, p0, LX/4H8;->A03:Z
-
     .line 5
-    .line 6
-    iput-object p2, p0, LX/4H8;->A01:Ljava/lang/String;
-
-    .line 7
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
+.method public final run()V
+    .locals 4
 
     .line 0
-    iget-object v5, p0, LX/4H8;->A00:LX/4H6;
+    sget-object v2, Lcom/facebook/msys/mci/Execution;->sThreadPriority:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 1
     .line 2
-    iget-object v0, v5, LX/4H6;->A00:Landroid/view/View;
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     .line 3
     .line 4
-    if-eqz v0, :cond_0
-
     .line 5
+    move-result v1
+
     .line 6
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    const/high16 v0, -0x80000000
 
     .line 7
     .line 8
-    .line 9
-    move-result v0
+    if-eq v1, v0, :cond_0
 
+    .line 9
     .line 10
-    const/16 v1, 0x8
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     .line 11
     .line 12
-    if-eq v0, v1, :cond_0
-
     .line 13
+    move-result v0
+
     .line 14
-    iget-object v0, v5, LX/4H6;->A00:Landroid/view/View;
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
     .line 15
     .line 16
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
     .line 17
+    :cond_0
+    sget-object v1, Lcom/facebook/msys/mci/Execution;->sThreadPriorityMap:Ljava/util/concurrent/ConcurrentHashMap;
+
     .line 18
     .line 19
-    :cond_0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iget v3, p0, LX/4H8;->A00:I
 
     .line 20
     .line 21
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
     .line 22
-    move-result-object v4
-
     .line 23
-    iget-object v1, p0, LX/4H8;->A02:Ljava/util/ArrayList;
-
     .line 24
+    move-result-object v2
+
     .line 25
-    const-string v0, "save_autofill_data"
+    invoke-virtual {v1, v2}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 26
     .line 27
-    invoke-virtual {v4, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 28
+    move-result-object v0
+
     .line 29
+    if-eqz v0, :cond_1
+
     .line 30
-    iget-boolean v0, p0, LX/4H8;->A03:Z
-
     .line 31
-    .line 32
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v1, v2}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 32
     .line 33
     .line 34
+    move-result-object v0
+
     .line 35
-    move-result-object v1
+    invoke-static {v0}, LX/002;->A00(Ljava/lang/Object;)I
 
     .line 36
-    const-string v0, "save_autofill_accepted"
-
     .line 37
     .line 38
-    invoke-virtual {v4, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
 
     .line 39
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
     .line 40
     .line 41
-    iget-object v1, p0, LX/4H8;->A01:Ljava/lang/String;
-
     .line 42
+    :cond_1
+    sget-object v1, Lcom/facebook/msys/mci/Execution;->sThreadIds:Ljava/util/concurrent/ConcurrentHashMap;
+
     .line 43
-    const-string v0, "save_autofill_callback_id"
-
     .line 44
-    .line 45
-    invoke-static {v0, v1, v4}, LX/4CF;->A01(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)LX/4CF;
+    invoke-static {}, Landroid/os/Process;->myTid()I
 
+    .line 45
     .line 46
     .line 47
+    move-result v0
+
     .line 48
-    move-result-object v3
+    invoke-static {v2, v1, v0}, LX/0X2;->A1I(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
 
     .line 49
-    iget-object v2, v5, LX/4H6;->A02:Landroid/os/Bundle;
-
     .line 50
     .line 51
-    iget-object v1, v5, LX/4H6;->A05:Lcom/facebook/privacy/zone/policy/ZonePolicy;
+    invoke-static {v3}, Lcom/facebook/msys/mci/Execution;->nativeStartExecutor(I)V
 
     .line 52
     .line 53
-    const-string v0, "SAVE_AUTOFILL_DIALOG_COMPLETED"
-
     .line 54
-    .line 55
-    invoke-virtual {v3, v2, v1, v0, v4}, LX/4CF;->A0A(Landroid/os/Bundle;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;Ljava/util/Map;)V
-
-    .line 56
-    .line 57
-    .line 58
     return-void
 .end method

@@ -7,11 +7,11 @@
 
 
 # virtual methods
-.method public abstract AOK()[B
+.method public abstract AMs()[B
 .end method
 
-.method public abstract AOL()Lcom/google/android/exoplayer2/Format;
+.method public abstract AMt()LX/5Fy;
 .end method
 
-.method public abstract Ag1(LX/60r;)V
+.method public abstract AeP(LX/5Qb;)V
 .end method

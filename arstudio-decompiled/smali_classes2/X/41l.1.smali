@@ -1,42 +1,54 @@
-.class public final synthetic LX/41l;
-.super Ljava/lang/Object;
+.class public final LX/41l;
+.super LX/41m;
 .source ""
 
 
+# instance fields
+.field public final A00:I
+
+.field public final A01:[I
+
+
 # direct methods
-.method public static A00(LX/41z;LX/3k2;II)LX/3zw;
+.method public constructor <init>(IILjava/lang/String;[I)V
     .locals 1
 
     .line 0
-    sget-boolean v0, LX/3zw;->A05:Z
+    invoke-direct {p0, p3, p1}, LX/41m;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
-
     .line 3
+    const/4 v0, 0x3
+
     .line 4
-    new-instance v0, LX/3zw;
+    if-lt p2, v0, :cond_0
 
     .line 5
     .line 6
-    invoke-direct {v0, p0, p1, p2, p3}, LX/3zw;-><init>(LX/41z;LX/3k2;II)V
+    iput-object p4, p0, LX/41l;->A01:[I
 
     .line 7
     .line 8
-    .line 9
-    return-object v0
+    iput p2, p0, LX/41l;->A00:I
 
+    .line 9
     .line 10
-    :cond_0
-    new-instance v0, LX/401;
+    return-void
 
     .line 11
-    .line 12
-    invoke-direct {v0, p0, p1, p2, p3}, LX/401;-><init>(LX/41z;LX/3k2;II)V
+    :cond_0
+    const-string v0, "Qlen must >= 3"
 
+    .line 12
     .line 13
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 14
     .line 15
-    return-object v0
+    .line 16
+    move-result-object v0
+
+    .line 17
+    throw v0
 .end method

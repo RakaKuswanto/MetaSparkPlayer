@@ -7,33 +7,21 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "BrowserLiteFragment$DnsPrefetchRunnable"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "TabsDbHelper$updateTab$1"
 
 
 # instance fields
-.field public final A00:Ljava/lang/String;
-
-.field public final synthetic A01:LX/4BG;
+.field public final synthetic A00:LX/4Bf;
 
 
 # direct methods
-.method public constructor <init>(LX/4BG;Ljava/lang/String;)V
+.method public constructor <init>(LX/4Bf;)V
     .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/4Bg;->A01:LX/4BG;
+    iput-object p1, p0, LX/4Bg;->A00:LX/4Bf;
 
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/4Bg;->A00:Ljava/lang/String;
-
-    .line 6
-    .line 7
     return-void
 .end method
 
@@ -43,91 +31,105 @@
     .locals 6
 
     .line 0
-    iget-object v0, p0, LX/4Bg;->A01:LX/4BG;
+    sget-object v0, LX/4Bj;->A00:LX/3gS;
 
     .line 1
     .line 2
-    iget-object v5, v0, LX/4BG;->A0Z:Ljava/lang/String;
+    invoke-interface {v0}, LX/3gS;->getValue()Ljava/lang/Object;
 
     .line 3
     .line 4
-    const/4 v4, 0x1
-
     .line 5
-    new-array v1, v4, [Ljava/lang/Object;
+    move-result-object v0
 
     .line 6
+    check-cast v0, LX/3Iy;
+
     .line 7
-    iget-object v3, p0, LX/4Bg;->A00:Ljava/lang/String;
-
     .line 8
+    invoke-interface {v0}, LX/3Iy;->A9a()Landroid/database/sqlite/SQLiteDatabase;
+
     .line 9
-    const/4 v2, 0x0
-
     .line 10
-    aput-object v3, v1, v2
-
     .line 11
+    move-result-object v5
+
     .line 12
-    const-string v0, "Async resolving %s"
+    iget-object v1, p0, LX/4Bg;->A00:LX/4Bf;
 
     .line 13
     .line 14
-    invoke-static {v5, v0, v1}, LX/4E2;->A01(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v1}, LX/4Bf;->A00()Landroid/content/ContentValues;
 
     .line 15
     .line 16
     .line 17
-    :try_start_0
-    invoke-static {v3}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+    move-result-object v4
 
     .line 18
-    .line 19
-    .line 20
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v0, 0x1
 
+    .line 19
+    new-array v3, v0, [Ljava/lang/String;
+
+    .line 20
     .line 21
-    :catch_0
-    move-exception v0
+    iget-object v2, v1, LX/4Bf;->A01:Ljava/lang/String;
 
     .line 22
-    new-array v1, v4, [Ljava/lang/Object;
-
     .line 23
+    const/4 v0, 0x0
+
     .line 24
-    invoke-static {v0, v1, v2}, LX/0Yi;->A1G(Ljava/lang/Throwable;[Ljava/lang/Object;I)V
+    aput-object v2, v3, v0
 
     .line 25
     .line 26
+    const-string v1, "tabs_table"
+
     .line 27
-    const-string v0, "Exception during async DNS: %s"
-
     .line 28
-    .line 29
-    invoke-static {v5, v0, v1}, LX/4E2;->A01(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string v0, "tab_id = ?"
 
+    .line 29
     .line 30
+    invoke-virtual {v5, v1, v4, v0, v3}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+
     .line 31
     .line 32
-    :goto_0
-    new-array v1, v4, [Ljava/lang/Object;
-
     .line 33
+    move-result v0
+
     .line 34
-    aput-object v3, v1, v2
+    if-gtz v0, :cond_0
 
     .line 35
     .line 36
-    const-string v0, "Done resolving %s"
+    const-string v1, "There was an error updating a tab in the Tabs database, tab_id: "
 
     .line 37
     .line 38
-    invoke-static {v5, v0, v1}, LX/4E2;->A01(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/16 v0, 0x2e
 
     .line 39
     .line 40
+    invoke-static {v1, v2, v0}, LX/004;->A0C(Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
+
     .line 41
+    .line 42
+    .line 43
+    move-result-object v1
+
+    .line 44
+    const-string v0, "BROWSER_LITE_TABS_DB_HELPER"
+
+    .line 45
+    .line 46
+    invoke-static {v0, v1}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 47
+    .line 48
+    .line 49
+    :cond_0
     return-void
 .end method

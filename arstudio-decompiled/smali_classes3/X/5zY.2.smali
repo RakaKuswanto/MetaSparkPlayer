@@ -1,473 +1,296 @@
-.class public abstract LX/5zY;
-.super Lcom/google/android/exoplayer2/Timeline;
+.class public final enum LX/5zY;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public final A00:I
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-.field public final A01:LX/5zc;
+.field public static final synthetic $VALUES:[LX/5zY;
+
+.field public static final enum PREPARED:LX/5zY;
+
+.field public static final enum PREPARE_STARTED:LX/5zY;
+
+.field public static final enum RECORDING:LX/5zY;
+
+.field public static final enum RECORDING_STARTED:LX/5zY;
+
+.field public static final enum RECORDING_STARTING:LX/5zY;
+
+.field public static final enum STOPPED:LX/5zY;
+
+.field public static final enum STOP_STARTED:LX/5zY;
 
 
 # direct methods
-.method public constructor <init>(LX/5zc;)V
-    .locals 1
+.method public static final synthetic $values()[LX/5zY;
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/Timeline;-><init>()V
+    const/4 v0, 0x7
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/5zY;->A01:LX/5zc;
+    new-array v2, v0, [LX/5zY;
 
-    .line 4
-    .line 5
-    check-cast p1, LX/5zb;
+    sget-object v1, LX/5zY;->PREPARE_STARTED:LX/5zY;
 
-    .line 6
-    .line 7
-    iget-object v0, p1, LX/5zb;->A02:[I
+    const/4 v0, 0x0
 
-    .line 8
-    .line 9
-    array-length v0, v0
+    aput-object v1, v2, v0
 
-    .line 10
-    iput v0, p0, LX/5zY;->A00:I
+    sget-object v1, LX/5zY;->PREPARED:LX/5zY;
 
-    .line 11
-    .line 12
-    return-void
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5zY;->RECORDING_STARTING:LX/5zY;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5zY;->RECORDING_STARTED:LX/5zY;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5zY;->RECORDING:LX/5zY;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5zY;->STOP_STARTED:LX/5zY;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5zY;->STOPPED:LX/5zY;
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-.method public static A00(LX/5zY;IZ)I
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    if-eqz p2, :cond_1
+    const-string v2, "PREPARE_STARTED"
 
     .line 1
     .line 2
-    iget-object p0, p0, LX/5zY;->A01:LX/5zc;
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/5zY;
+
     .line 4
-    check-cast p0, LX/5zb;
-
     .line 5
-    .line 6
-    iget-object v0, p0, LX/5zb;->A01:[I
+    invoke-direct {v0, v2, v1}, LX/5zY;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     .line 7
     .line 8
-    aget v0, v0, p1
+    sput-object v0, LX/5zY;->PREPARE_STARTED:LX/5zY;
 
     .line 9
     .line 10
-    add-int/lit8 p1, v0, 0x1
+    const-string v2, "PREPARED"
 
     .line 11
     .line 12
-    iget-object p0, p0, LX/5zb;->A02:[I
+    const/4 v1, 0x1
 
     .line 13
-    .line 14
-    array-length v0, p0
+    new-instance v0, LX/5zY;
 
+    .line 14
     .line 15
-    if-ge p1, v0, :cond_2
+    invoke-direct {v0, v2, v1}, LX/5zY;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
-    aget p0, p0, p1
-
     .line 18
-    .line 19
-    :cond_0
-    return p0
+    sput-object v0, LX/5zY;->PREPARED:LX/5zY;
 
+    .line 19
     .line 20
-    :cond_1
-    iget v0, p0, LX/5zY;->A00:I
+    const-string v2, "RECORDING_STARTING"
 
     .line 21
     .line 22
-    add-int/lit8 v0, v0, -0x1
+    const/4 v1, 0x2
 
     .line 23
-    .line 24
-    const/4 p0, -0x1
+    new-instance v0, LX/5zY;
 
+    .line 24
     .line 25
-    if-ge p1, v0, :cond_0
+    invoke-direct {v0, v2, v1}, LX/5zY;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
-    add-int/lit8 p0, p1, 0x1
-
     .line 28
-    .line 29
-    return p0
+    sput-object v0, LX/5zY;->RECORDING_STARTING:LX/5zY;
 
-    .line 30
-    :cond_2
-    const/4 p0, -0x1
-
-    .line 31
-    return p0
-.end method
-
-.method public static A01(LX/5zY;IZ)I
-    .locals 0
-
-    .line 0
-    if-eqz p2, :cond_1
-
-    .line 1
-    .line 2
-    iget-object p2, p0, LX/5zY;->A01:LX/5zc;
-
-    .line 3
-    .line 4
-    check-cast p2, LX/5zb;
-
-    .line 5
-    .line 6
-    iget-object p0, p2, LX/5zb;->A01:[I
-
-    .line 7
-    .line 8
-    aget p1, p0, p1
-
-    .line 9
-    .line 10
-    const/4 p0, -0x1
-
-    .line 11
-    add-int/lit8 p1, p1, -0x1
-
-    .line 12
-    .line 13
-    if-ltz p1, :cond_0
-
-    .line 14
-    .line 15
-    iget-object p0, p2, LX/5zb;->A02:[I
-
-    .line 16
-    .line 17
-    aget p0, p0, p1
-
-    .line 18
-    .line 19
-    :cond_0
-    return p0
-
-    .line 20
-    :cond_1
-    const/4 p0, -0x1
-
-    .line 21
-    if-lez p1, :cond_0
-
-    .line 22
-    .line 23
-    add-int/lit8 p0, p1, -0x1
-
-    .line 24
-    .line 25
-    return p0
-.end method
-
-
-# virtual methods
-.method public final A0F(LX/60i;IZ)LX/60i;
-    .locals 6
-
-    .line 0
-    move-object v5, p0
-
-    .line 1
-    check-cast v5, LX/5zZ;
-
-    .line 2
-    .line 3
-    iget-object v4, v5, LX/5zZ;->A03:[I
-
-    .line 4
-    .line 5
-    add-int/lit8 v1, p2, 0x1
-
-    .line 6
-    .line 7
-    invoke-static {v4, v1}, Ljava/util/Arrays;->binarySearch([II)I
-
-    .line 8
-    .line 9
-    .line 10
-    move-result v3
-
-    .line 11
-    if-gez v3, :cond_2
-
-    .line 12
-    .line 13
-    add-int/lit8 v0, v3, 0x2
-
-    .line 14
-    .line 15
-    neg-int v3, v0
-
-    .line 16
-    :cond_0
-    iget-object v0, v5, LX/5zZ;->A04:[I
-
-    .line 17
-    .line 18
-    aget v2, v0, v3
-
-    .line 19
-    .line 20
-    aget v1, v4, v3
-
-    .line 21
-    .line 22
-    iget-object v0, v5, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
-
-    .line 23
-    .line 24
-    aget-object v0, v0, v3
-
-    .line 25
-    .line 26
-    sub-int/2addr p2, v1
-
-    .line 27
-    invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/60i;IZ)LX/60i;
-
-    .line 28
     .line 29
     .line 30
-    iget v0, p1, LX/60i;->A00:I
+    const-string v2, "RECORDING_STARTED"
 
     .line 31
     .line 32
-    add-int/2addr v0, v2
+    const/4 v1, 0x3
 
     .line 33
-    iput v0, p1, LX/60i;->A00:I
+    new-instance v0, LX/5zY;
 
     .line 34
     .line 35
-    if-eqz p3, :cond_1
+    invoke-direct {v0, v2, v1}, LX/5zY;-><init>(Ljava/lang/String;I)V
 
     .line 36
     .line 37
-    iget-object v0, v5, LX/5zZ;->A06:[Ljava/lang/Object;
-
     .line 38
-    .line 39
-    aget-object v1, v0, v3
-
-    .line 40
-    .line 41
-    iget-object v0, p1, LX/60i;->A05:Ljava/lang/Object;
-
-    .line 42
-    .line 43
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 44
-    .line 45
-    .line 46
-    invoke-static {v1, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    iput-object v0, p1, LX/60i;->A05:Ljava/lang/Object;
-
-    .line 51
-    .line 52
-    :cond_1
-    return-object p1
-
-    .line 53
-    :cond_2
-    :goto_0
-    add-int/lit8 v3, v3, -0x1
-
-    .line 54
-    .line 55
-    if-ltz v3, :cond_0
-
-    .line 56
-    .line 57
-    aget v0, v4, v3
-
-    .line 58
-    .line 59
-    if-ne v0, v1, :cond_0
-
-    .line 60
-    .line 61
-    goto :goto_0
-.end method
-
-.method public final A0G(LX/5zN;IJ)LX/5zN;
-    .locals 5
-
-    .line 0
-    move-object v4, p0
-
-    .line 1
-    check-cast v4, LX/5zZ;
-
-    .line 2
-    .line 3
-    iget-object v3, v4, LX/5zZ;->A04:[I
-
-    .line 4
-    .line 5
-    add-int/lit8 v1, p2, 0x1
-
-    .line 6
-    .line 7
-    invoke-static {v3, v1}, Ljava/util/Arrays;->binarySearch([II)I
-
-    .line 8
-    .line 9
-    .line 10
-    move-result v2
-
-    .line 11
-    if-gez v2, :cond_2
-
-    .line 12
-    .line 13
-    add-int/lit8 v0, v2, 0x2
-
-    .line 14
-    .line 15
-    neg-int v2, v0
-
-    .line 16
-    :cond_0
-    aget v1, v3, v2
-
-    .line 17
-    .line 18
-    iget-object v0, v4, LX/5zZ;->A03:[I
-
-    .line 19
-    .line 20
-    aget v3, v0, v2
-
-    .line 21
-    .line 22
-    iget-object v0, v4, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
-
-    .line 23
-    .line 24
-    aget-object v0, v0, v2
-
-    .line 25
-    .line 26
-    sub-int/2addr p2, v1
-
-    .line 27
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/Timeline;->A0G(LX/5zN;IJ)LX/5zN;
-
-    .line 28
-    .line 29
-    .line 30
-    iget-object v0, v4, LX/5zZ;->A06:[Ljava/lang/Object;
-
-    .line 31
-    .line 32
-    aget-object v2, v0, v2
-
-    .line 33
-    .line 34
-    sget-object v0, LX/5zN;->A0H:Ljava/lang/Object;
-
-    .line 35
-    .line 36
-    iget-object v1, p1, LX/5zN;->A0C:Ljava/lang/Object;
-
-    .line 37
-    .line 38
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sput-object v0, LX/5zY;->RECORDING_STARTED:LX/5zY;
 
     .line 39
     .line 40
-    .line 41
-    move-result v0
+    const-string v2, "RECORDING"
 
+    .line 41
     .line 42
-    if-nez v0, :cond_1
+    const/4 v1, 0x4
 
     .line 43
-    .line 44
-    invoke-static {v2, v1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+    new-instance v0, LX/5zY;
 
+    .line 44
     .line 45
+    invoke-direct {v0, v2, v1}, LX/5zY;-><init>(Ljava/lang/String;I)V
+
     .line 46
     .line 47
-    move-result-object v2
-
     .line 48
-    :cond_1
-    iput-object v2, p1, LX/5zN;->A0C:Ljava/lang/Object;
+    sput-object v0, LX/5zY;->RECORDING:LX/5zY;
 
     .line 49
     .line 50
-    iget v0, p1, LX/5zN;->A00:I
+    const-string v2, "STOP_STARTED"
 
     .line 51
     .line 52
-    add-int/2addr v0, v3
+    const/4 v1, 0x5
 
     .line 53
-    iput v0, p1, LX/5zN;->A00:I
+    new-instance v0, LX/5zY;
 
     .line 54
     .line 55
-    iget v0, p1, LX/5zN;->A01:I
+    invoke-direct {v0, v2, v1}, LX/5zY;-><init>(Ljava/lang/String;I)V
 
     .line 56
     .line 57
-    add-int/2addr v0, v3
-
     .line 58
-    iput v0, p1, LX/5zN;->A01:I
+    sput-object v0, LX/5zY;->STOP_STARTED:LX/5zY;
 
     .line 59
     .line 60
-    return-object p1
+    const-string v2, "STOPPED"
 
     .line 61
-    :cond_2
-    :goto_0
-    add-int/lit8 v2, v2, -0x1
-
     .line 62
+    const/4 v1, 0x6
+
     .line 63
-    if-ltz v2, :cond_0
+    new-instance v0, LX/5zY;
 
     .line 64
     .line 65
-    aget v0, v3, v2
+    invoke-direct {v0, v2, v1}, LX/5zY;-><init>(Ljava/lang/String;I)V
 
     .line 66
     .line 67
-    if-ne v0, v1, :cond_0
-
     .line 68
+    sput-object v0, LX/5zY;->STOPPED:LX/5zY;
+
     .line 69
-    goto :goto_0
+    .line 70
+    invoke-static {}, LX/5zY;->$values()[LX/5zY;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v0
+
+    .line 74
+    sput-object v0, LX/5zY;->$VALUES:[LX/5zY;
+
+    .line 75
+    .line 76
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
+
+    .line 80
+    sput-object v0, LX/5zY;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 81
+    .line 82
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/5zY;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/5zY;
+    .locals 1
+
+    const-class v0, LX/5zY;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/5zY;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/5zY;
+    .locals 1
+
+    sget-object v0, LX/5zY;->$VALUES:[LX/5zY;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/5zY;
+
+    return-object v0
 .end method

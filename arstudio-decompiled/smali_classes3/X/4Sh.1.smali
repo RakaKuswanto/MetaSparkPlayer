@@ -1,53 +1,41 @@
-.class public final LX/4Sh;
+.class public interface abstract LX/4Sh;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
+# virtual methods
+.method public abstract AAg()I
+.end method
 
-.field public A01:Landroid/content/Context;
+.method public abstract AAh()I
+.end method
 
-.field public A02:Ljava/lang/ref/WeakReference;
+.method public abstract AAi()I
+.end method
 
-.field public A03:Z
+.method public abstract AAj()[I
+.end method
 
-.field public final A04:Landroid/view/WindowManager;
+.method public abstract AAk()I
+.end method
 
+.method public abstract ALV()Landroid/view/textclassifier/TextClassifier;
+.end method
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public abstract Aje(IIII)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract Ajf([II)V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    const/16 v0, 0x1388
+.method public abstract Ajg(I)V
+.end method
 
-    .line 4
-    .line 5
-    iput v0, p0, LX/4Sh;->A00:I
+.method public abstract AkO(I)V
+.end method
 
-    .line 6
-    .line 7
-    invoke-static {p1}, LX/4BE;->A0Z(Landroid/content/Context;)Landroid/view/WindowManager;
+.method public abstract Akn(I)V
+.end method
 
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/4Sh;->A04:Landroid/view/WindowManager;
-
-    .line 12
-    .line 13
-    iput-object p1, p0, LX/4Sh;->A01:Landroid/content/Context;
-
-    .line 14
-    .line 15
-    return-void
+.method public abstract Am7(Landroid/view/textclassifier/TextClassifier;)V
 .end method

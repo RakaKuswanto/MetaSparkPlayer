@@ -283,13 +283,17 @@
     .line 97
     .line 98
     :cond_0
-    invoke-static {v2}, LX/001;->A0N(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const/16 v0, 0x5d
 
     .line 99
     .line 100
+    invoke-static {v2, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
     .line 101
+    .line 102
+    .line 103
     move-result-object v0
 
-    .line 102
+    .line 104
     return-object v0
 .end method

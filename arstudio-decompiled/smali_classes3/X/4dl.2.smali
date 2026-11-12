@@ -1,25 +1,47 @@
-.class public final LX/4dl;
-.super LX/4do;
+.class public abstract LX/4dL;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/4dc;
-
-
 # direct methods
-.method public constructor <init>(LX/4dc;)V
+.method public static A00(Landroid/app/Notification$Action$Builder;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Notification$Action$Builder;->setContextual(Z)Landroid/app/Notification$Action$Builder;
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static A01(Landroid/app/Notification$Builder;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Notification$Builder;->setBubbleMetadata(Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static A02(Landroid/app/Notification$Builder;Z)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4do;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setAllowSystemGeneratedContextualActions(Z)Landroid/app/Notification$Builder;
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4dl;->A00:LX/4dc;
-
-    .line 4
-    .line 5
     return-void
 .end method

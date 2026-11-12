@@ -1,54 +1,59 @@
-.class public final LX/4PE;
+.class public abstract LX/4Pe;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "TextInputLayout$3"
-
-
-# instance fields
-.field public final synthetic A00:Lcom/google/android/material/textfield/TextInputLayout;
-
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+.method public static A00(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4PE;->A00:Lcom/google/android/material/textfield/TextInputLayout;
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    move-result-object p0
+
     .line 4
-    .line 5
+    return-object p0
+.end method
+
+.method public static A01(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    return-object p0
+.end method
+
+.method public static A02(Landroid/content/res/ColorStateList;Landroid/widget/ImageView;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 1
+.method public static A03(Landroid/graphics/PorterDuff$Mode;Landroid/widget/ImageView;)V
+    .locals 0
 
     .line 0
-    iget-object v0, p0, LX/4PE;->A00:Lcom/google/android/material/textfield/TextInputLayout;
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/google/android/material/textfield/TextInputLayout;->A0G:Landroid/widget/EditText;
-
     .line 3
-    .line 4
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method

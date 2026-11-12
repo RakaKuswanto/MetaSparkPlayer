@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/timepicker/ClockFaceView;
-.super LX/4Tr;
+.super LX/4VX;
 .source ""
 
 # interfaces
-.implements LX/4TZ;
+.implements LX/4Wy;
 
 
 # instance fields
@@ -19,7 +19,7 @@
 
 .field public final A05:Landroid/util/SparseArray;
 
-.field public final A06:LX/01q;
+.field public final A06:LX/01z;
 
 .field public final A07:Lcom/google/android/material/timepicker/ClockHandView;
 
@@ -56,7 +56,7 @@
     .locals 1
 
     .line 268435456
-    const v0, 0x7f040648
+    const v0, 0x7f040662
 
     .line 268435457
     .line 268435458
@@ -70,15 +70,15 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 9
+    .locals 10
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/4Tr;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, LX/4VX;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/4BF;->A0R()Landroid/graphics/Rect;
+    invoke-static {}, LX/434;->A0R()Landroid/graphics/Rect;
 
     .line 4
     .line 5
@@ -90,7 +90,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/4BF;->A0S()Landroid/graphics/RectF;
+    invoke-static {}, LX/435;->A04()Landroid/graphics/RectF;
 
     .line 10
     .line 11
@@ -102,7 +102,7 @@
 
     .line 14
     .line 15
-    invoke-static {}, LX/4BF;->A0V()Landroid/util/SparseArray;
+    invoke-static {}, LX/434;->A0S()Landroid/util/SparseArray;
 
     .line 16
     .line 17
@@ -130,11 +130,11 @@
 
     .line 28
     .line 29
-    sget-object v1, LX/4SH;->A02:[I
+    sget-object v1, LX/4LY;->A02:[I
 
     .line 30
     .line 31
-    const v0, 0x7f1302f6
+    const v0, 0x7f1202ef
 
     .line 32
     .line 33
@@ -158,15 +158,15 @@
     const/4 v4, 0x1
 
     .line 43
-    invoke-static {p1, v5, v4}, LX/4Px;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, v5, v4}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     .line 44
     .line 45
     .line 46
-    move-result-object v8
+    move-result-object v9
 
     .line 47
-    iput-object v8, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A03:Landroid/content/res/ColorStateList;
+    iput-object v9, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A03:Landroid/content/res/ColorStateList;
 
     .line 48
     .line 49
@@ -178,7 +178,7 @@
     move-result-object v1
 
     .line 53
-    const v0, 0x7f0d00e3
+    const v0, 0x7f0c00c8
 
     .line 54
     .line 55
@@ -188,7 +188,7 @@
     .line 57
     .line 58
     .line 59
-    const v0, 0x7f0a03b4
+    const v0, 0x7f09035c
 
     .line 60
     .line 61
@@ -198,14 +198,14 @@
     .line 63
     .line 64
     .line 65
-    move-result-object v6
+    move-result-object v8
 
     .line 66
-    check-cast v6, Lcom/google/android/material/timepicker/ClockHandView;
+    check-cast v8, Lcom/google/android/material/timepicker/ClockHandView;
 
     .line 67
     .line 68
-    iput-object v6, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A07:Lcom/google/android/material/timepicker/ClockHandView;
+    iput-object v8, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A07:Lcom/google/android/material/timepicker/ClockHandView;
 
     .line 69
     .line 70
@@ -242,7 +242,7 @@
 
     .line 86
     .line 87
-    invoke-static {v8, v1}, LX/4BE;->A0E(Landroid/content/res/ColorStateList;[I)I
+    invoke-static {v9, v1}, LX/433;->A0B(Landroid/content/res/ColorStateList;[I)I
 
     .line 88
     .line 89
@@ -250,38 +250,38 @@
     move-result v0
 
     .line 91
-    new-array v1, v2, [I
+    new-array v6, v2, [I
 
     .line 92
     .line 93
-    aput v0, v1, v7
+    aput v0, v6, v7
 
     .line 94
     .line 95
-    aput v0, v1, v4
+    aput v0, v6, v4
 
     .line 96
     .line 97
-    invoke-virtual {v8}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+    invoke-virtual {v9}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     .line 98
     .line 99
     .line 100
-    move-result v0
+    move-result v1
 
     .line 101
-    const/4 v2, 0x2
+    const/4 v0, 0x2
 
     .line 102
-    aput v0, v1, v2
+    aput v1, v6, v0
 
     .line 103
     .line 104
-    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A09:[I
+    iput-object v6, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A09:[I
 
     .line 105
     .line 106
-    iget-object v0, v6, Lcom/google/android/material/timepicker/ClockHandView;->A09:Ljava/util/List;
+    iget-object v0, v8, Lcom/google/android/material/timepicker/ClockHandView;->A09:Ljava/util/List;
 
     .line 107
     .line 108
@@ -290,12 +290,12 @@
     .line 109
     .line 110
     .line 111
-    const v0, 0x7f06025e
+    const v0, 0x7f0601b7
 
     .line 112
     .line 113
     .line 114
-    invoke-static {p1, v0}, LX/01W;->A02(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, v0}, LX/01f;->A03(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     .line 115
     .line 116
@@ -311,7 +311,7 @@
     move-result v1
 
     .line 122
-    invoke-static {p1, v5, v7}, LX/4Px;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, v5, v7}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     .line 123
     .line 124
@@ -345,11 +345,11 @@
     move-result-object v1
 
     .line 139
-    new-instance v0, LX/6Pp;
+    new-instance v0, LX/6gR;
 
     .line 140
     .line 141
-    invoke-direct {v0, p0, v2}, LX/6Pp;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v2}, LX/6gR;-><init>(Ljava/lang/Object;I)V
 
     .line 142
     .line 143
@@ -369,20 +369,20 @@
     .line 151
     .line 152
     .line 153
-    const/16 v1, 0xb
+    const/16 v1, 0xa
 
     .line 154
     .line 155
-    new-instance v0, LX/6Oq;
+    new-instance v0, LX/6fS;
 
     .line 156
     .line 157
-    invoke-direct {v0, p0, v1}, LX/6Oq;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/6fS;-><init>(Ljava/lang/Object;I)V
 
     .line 158
     .line 159
     .line 160
-    iput-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A06:LX/01q;
+    iput-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A06:LX/01z;
 
     .line 161
     .line 162
@@ -407,7 +407,7 @@
 
     .line 172
     .line 173
-    invoke-static {p0}, LX/4BD;->A0R(Landroid/view/View;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, LX/0X6;->A0G(Landroid/view/View;)Landroid/view/LayoutInflater;
 
     .line 174
     .line 175
@@ -489,7 +489,7 @@
 
     .line 211
     .line 212
-    const v0, 0x7f0d00e2
+    const v0, 0x7f0c00c7
 
     .line 213
     .line 214
@@ -535,7 +535,7 @@
     .line 235
     .line 236
     .line 237
-    const v1, 0x7f0a03bd
+    const v1, 0x7f090365
 
     .line 238
     .line 239
@@ -553,11 +553,11 @@
     .line 245
     .line 246
     .line 247
-    iget-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A06:LX/01q;
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->A06:LX/01z;
 
     .line 248
     .line 249
-    invoke-static {v2, v0}, LX/03G;->A0b(Landroid/view/View;LX/01q;)V
+    invoke-static {v2, v0}, LX/03U;->A0f(Landroid/view/View;LX/01z;)V
 
     .line 250
     .line 251
@@ -575,7 +575,7 @@
 
     .line 258
     :cond_3
-    const v0, 0x7f07009d
+    const v0, 0x7f070097
 
     .line 259
     .line 260
@@ -592,7 +592,7 @@
 
     .line 266
     .line 267
-    const v0, 0x7f07009e
+    const v0, 0x7f070098
 
     .line 268
     .line 269
@@ -609,7 +609,7 @@
 
     .line 275
     .line 276
-    const v0, 0x7f07005c
+    const v0, 0x7f070094
 
     .line 277
     .line 278
@@ -875,7 +875,7 @@
     const/4 v0, 0x1
 
     .line 12
-    invoke-static {v0, v1, v0}, LX/04P;->A00(III)LX/04P;
+    invoke-static {v0, v1, v0}, LX/04h;->A00(III)LX/04h;
 
     .line 13
     .line 14
@@ -912,7 +912,7 @@
     .locals 5
 
     .line 0
-    invoke-static {p0}, LX/4BE;->A0U(Landroid/view/View;)Landroid/util/DisplayMetrics;
+    invoke-static {p0}, LX/433;->A0O(Landroid/view/View;)Landroid/util/DisplayMetrics;
 
     .line 1
     .line 2
@@ -987,7 +987,7 @@
     float-to-int v1, v3
 
     .line 33
-    invoke-static {v1}, LX/4BF;->A04(I)I
+    invoke-static {v1}, LX/433;->A07(I)I
 
     .line 34
     .line 35

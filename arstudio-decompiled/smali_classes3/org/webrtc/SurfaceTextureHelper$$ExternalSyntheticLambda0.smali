@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -23,12 +23,12 @@
 
 
 # virtual methods
-.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
+.method public final run()V
     .locals 1
 
     iget-object v0, p0, Lorg/webrtc/SurfaceTextureHelper$$ExternalSyntheticLambda0;->f$0:Lorg/webrtc/SurfaceTextureHelper;
 
-    invoke-virtual {v0, p1}, Lorg/webrtc/SurfaceTextureHelper;->lambda$new$0$org-webrtc-SurfaceTextureHelper(Landroid/graphics/SurfaceTexture;)V
+    invoke-virtual {v0}, Lorg/webrtc/SurfaceTextureHelper;->lambda$dispose$5$org-webrtc-SurfaceTextureHelper()V
 
     return-void
 .end method

@@ -1,14 +1,20 @@
-.class public interface abstract LX/1oR;
+.class public final LX/1or;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/12w;
 
-# virtual methods
-.method public abstract clientDocIdForQuery(Ljava/lang/String;)Ljava/lang/String;
-.end method
 
-.method public abstract persistIdForQuery(Ljava/lang/String;)Ljava/lang/String;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract schemaForQuery(Ljava/lang/String;)Ljava/lang/String;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

@@ -1,196 +1,225 @@
-.class public final enum LX/1Yb;
-.super Ljava/lang/Enum;
+.class public final LX/1yB;
+.super Ljava/util/AbstractCollection;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/1Yb;
-
-.field public static final enum EMBEDDED:LX/1Yb;
-
-.field public static final enum MODAL_WINDOW:LX/1Yb;
-
-.field public static final enum UNKNOWN:LX/1Yb;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/AbstractCollection<",
+        "TV;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field public final mUXMode:Ljava/lang/String;
+.field public final synthetic A00:LX/6El;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 8
-
-    .line 0
-    const-string v1, "UNKNOWN"
-
-    .line 1
-    .line 2
-    const/4 v7, 0x0
-
-    .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    new-instance v6, LX/1Yb;
-
-    .line 5
-    .line 6
-    invoke-direct {v6, v1, v7, v0}, LX/1Yb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 7
-    .line 8
-    .line 9
-    sput-object v6, LX/1Yb;->UNKNOWN:LX/1Yb;
-
-    .line 10
-    .line 11
-    const-string v1, "MODAL_WINDOW"
-
-    .line 12
-    .line 13
-    const/4 v5, 0x1
-
-    .line 14
-    const-string/jumbo v0, "modal_window"
-
-    .line 15
-    .line 16
-    .line 17
-    new-instance v4, LX/1Yb;
-
-    .line 18
-    .line 19
-    invoke-direct {v4, v1, v5, v0}, LX/1Yb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 20
-    .line 21
-    .line 22
-    sput-object v4, LX/1Yb;->MODAL_WINDOW:LX/1Yb;
-
-    .line 23
-    .line 24
-    const-string v3, "EMBEDDED"
-
-    .line 25
-    .line 26
-    const/4 v2, 0x2
-
-    .line 27
-    const-string v0, "embedded"
-
-    .line 28
-    .line 29
-    new-instance v1, LX/1Yb;
-
-    .line 30
-    .line 31
-    invoke-direct {v1, v3, v2, v0}, LX/1Yb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 32
-    .line 33
-    .line 34
-    sput-object v1, LX/1Yb;->EMBEDDED:LX/1Yb;
-
-    .line 35
-    .line 36
-    const/4 v0, 0x3
-
-    .line 37
-    new-array v0, v0, [LX/1Yb;
-
-    .line 38
-    .line 39
-    aput-object v6, v0, v7
-
-    .line 40
-    .line 41
-    aput-object v4, v0, v5
-
-    .line 42
-    .line 43
-    aput-object v1, v0, v2
-
-    .line 44
-    .line 45
-    sput-object v0, LX/1Yb;->$VALUES:[LX/1Yb;
-
-    .line 46
-    .line 47
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(LX/6El;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, LX/1yB;->A00:LX/6El;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p3, p0, LX/1Yb;->mUXMode:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
+    .line 3
     .line 4
     .line 5
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/1Yb;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/1Yb;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/1Yb;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/1Yb;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/1Yb;->$VALUES:[LX/1Yb;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/1Yb;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public getString()Ljava/lang/String;
+.method public final clear()V
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/1Yb;->mUXMode:Ljava/lang/String;
+    iget-object v0, p0, LX/1yB;->A00:LX/6El;
 
     .line 1
     .line 2
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/1yB;->A00:LX/6El;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Ljava/util/AbstractMap;->containsValue(Ljava/lang/Object;)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1yB;->A00:LX/6El;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/1yB;->A00:LX/6El;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/1zw;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, v1}, LX/1zw;-><init>(LX/6El;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1yB;->A00:LX/6El;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->size()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 2
+
+    .line 268435456
+    invoke-static {p0}, LX/0X3;->A0o(Ljava/util/AbstractCollection;)Ljava/util/ArrayList;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v1
+
+    .line 268435460
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result-object v0
+
+    .line 268435464
+    invoke-static {v1, v0}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
+
+    .line 268435465
+    .line 268435466
+    .line 268435467
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->toArray()[Ljava/lang/Object;
+
+    .line 268435468
+    .line 268435469
+    .line 268435470
+    move-result-object v0
+
+    .line 268435471
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "a"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {p0}, LX/0X3;->A0o(Ljava/util/AbstractCollection;)Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-static {v1, v0}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {v1, p1}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
     return-object v0
 .end method

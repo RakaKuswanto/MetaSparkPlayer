@@ -1,61 +1,74 @@
-.class public final LX/03D;
+.class public abstract LX/03D;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static A00(Landroid/view/View;LX/01z;)LX/01z;
-    .locals 2
+.method public static A00()I
+    .locals 1
 
     .line 0
-    invoke-virtual {p1}, LX/01z;->A01()Landroid/view/ContentInfo;
+    invoke-static {}, Landroid/view/View;->generateViewId()I
 
     .line 1
     .line 2
     .line 3
-    move-result-object v1
+    move-result v0
 
     .line 4
-    invoke-virtual {p0, v1}, Landroid/view/View;->performReceiveContent(Landroid/view/ContentInfo;)Landroid/view/ContentInfo;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    if-nez v0, :cond_1
-
-    .line 9
-    .line 10
-    const/4 p1, 0x0
-
-    .line 11
-    :cond_0
-    return-object p1
-
-    .line 12
-    :cond_1
-    if-eq v0, v1, :cond_0
-
-    .line 13
-    .line 14
-    invoke-static {v0}, LX/01z;->A00(Landroid/view/ContentInfo;)LX/01z;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object p1
-
-    .line 18
-    return-object p1
+    return v0
 .end method
 
-.method public static A01(Landroid/view/View;)[Ljava/lang/String;
+.method public static A01(Landroid/view/View;)I
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/view/View;->getReceiveContentMimeTypes()[Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
+
+    .line 4
+    return p0
+.end method
+
+.method public static A02(Landroid/view/View;)I
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingEnd()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
+
+    .line 4
+    return p0
+.end method
+
+.method public static A03(Landroid/view/View;)I
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
+
+    .line 4
+    return p0
+.end method
+
+.method public static A04(Landroid/view/View;)Landroid/view/Display;
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->getDisplay()Landroid/view/Display;
 
     .line 1
     .line 2
@@ -64,4 +77,31 @@
 
     .line 4
     return-object p0
+.end method
+
+.method public static A05(Landroid/view/View;IIII)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->setPaddingRelative(IIII)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static A06(Landroid/view/View;)Z
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->isPaddingRelative()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
+
+    .line 4
+    return p0
 .end method

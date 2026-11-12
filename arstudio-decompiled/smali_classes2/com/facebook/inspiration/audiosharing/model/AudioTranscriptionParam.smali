@@ -35,11 +35,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5b
+    const/16 v0, 0x58
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -63,7 +63,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -82,7 +82,7 @@
     const/4 v3, 0x0
 
     .line 12
-    invoke-static {v0}, LX/0Ye;->A1V(I)Z
+    invoke-static {v0}, LX/0X3;->A1X(I)Z
 
     .line 13
     .line 14
@@ -114,7 +114,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1, v4, v1, v0}, LX/0Yf;->A04(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
+    invoke-static {p1, v4, v1, v0}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
     .line 28
     .line 29
@@ -155,7 +155,7 @@
 
     .line 45
     .line 46
-    invoke-static {p1, v4, v0, v3}, LX/0Yf;->A04(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
+    invoke-static {p1, v4, v0, v3}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
     .line 47
     .line 48
@@ -201,21 +201,21 @@
 
     iput-boolean p4, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionParam;->A03:Z
 
-    const-string v0, "detailedTranscriptions"
+    const-string/jumbo v0, "detailedTranscriptions"
 
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionParam;->A00:Lcom/google/common/collect/ImmutableList;
 
     const-string/jumbo v0, "originalTranscriptions"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionParam;->A01:Lcom/google/common/collect/ImmutableList;
 
     const-string/jumbo v0, "shortwaveId"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionParam;->A02:Ljava/lang/String;
 
@@ -278,7 +278,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22
@@ -298,7 +298,7 @@
 
     .line 29
     .line 30
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 31
     .line 32
@@ -318,7 +318,7 @@
 
     .line 39
     .line 40
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 41
     .line 42
@@ -346,7 +346,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A04(Z)I
+    invoke-static {v0}, LX/1O4;->A03(Z)I
 
     .line 3
     .line 4
@@ -362,7 +362,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -381,7 +381,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -400,7 +400,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 29
     .line 30
@@ -431,7 +431,7 @@
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 8
     .line 9
@@ -477,7 +477,7 @@
 
     .line 28
     .line 29
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 30
     .line 31

@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field public final A00:LX/0nV;
+.field public final A00:LX/11I;
 
 .field public final A01:Ljava/lang/Integer;
 
@@ -39,11 +39,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5b
+    const/16 v0, 0x1c
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/0nV;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(LX/11I;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -73,7 +73,7 @@
 
     iput-object p4, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A03:Ljava/lang/Integer;
 
-    iput-object p1, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/0nV;
+    iput-object p1, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/11I;
 
     return-void
 .end method
@@ -87,7 +87,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -187,7 +187,7 @@
 
     .line 49
     .line 50
-    invoke-static {}, LX/0nV;->values()[LX/0nV;
+    invoke-static {}, LX/11I;->values()[LX/11I;
 
     .line 51
     .line 52
@@ -208,7 +208,7 @@
     .line 59
     .line 60
     :cond_0
-    iput-object v1, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/0nV;
+    iput-object v1, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/11I;
 
     .line 61
     .line 62
@@ -216,7 +216,7 @@
 
     .line 63
     :cond_1
-    invoke-static {p1}, LX/0Yf;->A0Y(Landroid/os/Parcel;)Ljava/lang/Integer;
+    invoke-static {p1}, LX/0X3;->A0b(Landroid/os/Parcel;)Ljava/lang/Integer;
 
     .line 64
     .line 65
@@ -248,7 +248,7 @@
 
     .line 77
     :cond_3
-    invoke-static {p1}, LX/0Yf;->A0Y(Landroid/os/Parcel;)Ljava/lang/Integer;
+    invoke-static {p1}, LX/0X3;->A0b(Landroid/os/Parcel;)Ljava/lang/Integer;
 
     .line 78
     .line 79
@@ -264,7 +264,7 @@
 
     .line 84
     :cond_4
-    invoke-static {p1}, LX/0Yf;->A0Y(Landroid/os/Parcel;)Ljava/lang/Integer;
+    invoke-static {p1}, LX/0X3;->A0b(Landroid/os/Parcel;)Ljava/lang/Integer;
 
     .line 85
     .line 86
@@ -339,7 +339,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -359,7 +359,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -379,7 +379,7 @@
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -399,7 +399,7 @@
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 45
     .line 46
@@ -419,7 +419,7 @@
 
     .line 53
     .line 54
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 55
     .line 56
@@ -431,11 +431,11 @@
 
     .line 59
     .line 60
-    iget-object v1, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/0nV;
+    iget-object v1, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/11I;
 
     .line 61
     .line 62
-    iget-object v0, p1, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/0nV;
+    iget-object v0, p1, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/11I;
 
     .line 63
     .line 64
@@ -459,7 +459,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -475,7 +475,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -494,7 +494,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -513,7 +513,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 29
     .line 30
@@ -532,7 +532,7 @@
 
     .line 36
     .line 37
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 38
     .line 39
@@ -543,11 +543,11 @@
     add-int/2addr v2, v0
 
     .line 42
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/0nV;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/11I;
 
     .line 43
     .line 44
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
     .line 45
     .line 46
@@ -573,7 +573,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -582,7 +582,7 @@
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/0Yc;->A0C(Landroid/os/Parcel;Ljava/lang/Number;)V
+    invoke-static {p1, v0}, LX/0X1;->A0g(Landroid/os/Parcel;Ljava/lang/Number;)V
 
     .line 8
     .line 9
@@ -591,7 +591,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1, v0}, LX/0Yc;->A0C(Landroid/os/Parcel;Ljava/lang/Number;)V
+    invoke-static {p1, v0}, LX/0X1;->A0g(Landroid/os/Parcel;Ljava/lang/Number;)V
 
     .line 13
     .line 14
@@ -600,7 +600,7 @@
 
     .line 16
     .line 17
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 18
     .line 19
@@ -609,16 +609,16 @@
 
     .line 21
     .line 22
-    invoke-static {p1, v0}, LX/0Yc;->A0C(Landroid/os/Parcel;Ljava/lang/Number;)V
+    invoke-static {p1, v0}, LX/0X1;->A0g(Landroid/os/Parcel;Ljava/lang/Number;)V
 
     .line 23
     .line 24
     .line 25
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/0nV;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/InlineSproutsMetadata;->A00:LX/11I;
 
     .line 26
     .line 27
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 28
     .line 29

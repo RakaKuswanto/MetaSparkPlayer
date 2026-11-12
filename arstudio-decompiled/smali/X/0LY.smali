@@ -1,71 +1,181 @@
 .class public final LX/0LY;
-.super Ljava/lang/Object;
+.super LX/0Lw;
 .source ""
-
-# interfaces
-.implements LX/0U4;
-
-
-# instance fields
-.field public final synthetic A00:LX/0Rq;
 
 
 # direct methods
-.method public constructor <init>(LX/0Rq;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/0LY;->A00:LX/0Rq;
+    invoke-direct {p0}, LX/0Lw;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AaA(Landroid/content/Intent;)V
-    .locals 2
+.method public final A00()Ljava/lang/Class;
+    .locals 1
 
     .line 0
-    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    const-class v0, Ljava/lang/Boolean;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    return-object v0
+.end method
 
+.method public final bridge synthetic A01(Landroid/os/Bundle;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    check-cast p2, Ljava/lang/Boolean;
+
+    .line 1
+    .line 2
+    if-nez p2, :cond_0
+
+    .line 3
     .line 4
-    const-string v0, "com.facebook.orca.ACTION_NETWORK_CONNECTIVITY_CHANGED"
+    const/4 v0, 0x0
 
     .line 5
-    .line 6
-    invoke-static {v1, v0}, LX/0Vm;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :goto_0
+    invoke-virtual {p1, p3, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
+    .line 6
     .line 7
     .line 8
-    .line 9
     move-result v0
 
-    .line 10
-    if-eqz v0, :cond_0
+    .line 9
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 10
     .line 11
     .line 12
-    iget-object v0, p0, LX/0LY;->A00:LX/0Rq;
+    move-result-object v0
 
     .line 13
+    return-object v0
+
     .line 14
-    invoke-static {p1, v0}, LX/0Rq;->A01(Landroid/content/Intent;LX/0Rq;)V
+    :cond_0
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 15
     .line 16
     .line 17
-    :cond_0
+    move-result v0
+
+    .line 18
+    goto :goto_0
+.end method
+
+.method public final bridge synthetic A02(Landroid/os/Bundle;Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 1
+
+    .line 0
+    invoke-static {p2}, LX/001;->A1S(Ljava/lang/Object;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    invoke-virtual {p1, p3, v0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
+.end method
+
+.method public final bridge synthetic A03(LX/0W9;Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    invoke-static {p3}, LX/001;->A1S(Ljava/lang/Object;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    invoke-interface {p1, p2, v0}, LX/0W9;->AfR(Ljava/lang/String;Z)LX/0W9;
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public final bridge synthetic A04(LX/0W8;LX/0W7;Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    check-cast p3, Ljava/lang/Boolean;
+
+    .line 1
+    .line 2
+    if-nez p3, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v1, 0x0
+
+    .line 5
+    :goto_0
+    check-cast p2, LX/0OR;
+
+    .line 6
+    .line 7
+    const/4 v0, 0x0
+
+    .line 8
+    invoke-static {p4, v0, p1}, LX/0WV;->A09(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {p2, p4, v1}, LX/0OR;->getBoolean(Ljava/lang/String;Z)Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-interface {p1, v0}, LX/0W8;->Aae(Ljava/lang/Object;)V
+
+    .line 20
+    .line 21
+    .line 22
+    return-void
+
+    .line 23
+    :cond_0
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v1
+
+    .line 27
+    goto :goto_0
 .end method

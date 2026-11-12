@@ -1,14 +1,14 @@
 .class public Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsDataProviderConfiguration;
-.super LX/5Vj;
+.super LX/68F;
 .source ""
 
 
 # static fields
-.field public static final PLATFORM_EVENTS_DATA_PROVIDER_TYPE_KEY:LX/5TT;
+.field public static final PLATFORM_EVENTS_DATA_PROVIDER_TYPE_KEY:LX/67w;
 
 
 # instance fields
-.field public final mDelegate:LX/5WD;
+.field public final mDelegate:LX/6BH;
 
 .field public final mInput:Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;
 
@@ -18,36 +18,36 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/5Tk;->PlatformEventsDataProvider:LX/5Tk;
+    sget-object v1, LX/63t;->PlatformEventsDataProvider:LX/63t;
 
     .line 1
     .line 2
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/5TT;-><init>(LX/5Tk;)V
+    invoke-direct {v0, v1}, LX/67w;-><init>(LX/63t;)V
 
     .line 5
     .line 6
     .line 7
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsDataProviderConfiguration;->PLATFORM_EVENTS_DATA_PROVIDER_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsDataProviderConfiguration;->PLATFORM_EVENTS_DATA_PROVIDER_TYPE_KEY:LX/67w;
 
     .line 8
     .line 9
     return-void
 .end method
 
-.method public constructor <init>(LX/5WD;Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;)V
+.method public constructor <init>(LX/6BH;Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5Vj;-><init>()V
+    invoke-direct {p0}, LX/68F;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsDataProviderConfiguration;->mDelegate:LX/5WD;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsDataProviderConfiguration;->mDelegate:LX/6BH;
 
     .line 4
     .line 5
@@ -60,7 +60,7 @@
 
 
 # virtual methods
-.method public getDelegate()LX/5WD;
+.method public getDelegate()LX/6BH;
     .locals 1
 
     .line 0

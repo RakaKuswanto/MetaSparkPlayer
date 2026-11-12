@@ -1,39 +1,35 @@
 .class public final LX/3Bw;
-.super Ljava/lang/Object;
+.super LX/3BM;
 .source ""
 
 
 # instance fields
-.field public A00:Ljava/lang/String;
-
-.field public A01:Ljava/lang/String;
+.field public final A00:Ljava/io/ByteArrayOutputStream;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/3BV;Ljava/io/ByteArrayOutputStream;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/3BM;-><init>(LX/3BV;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    const-string v0, "Unknown"
+    iput-object p2, p0, LX/3Bw;->A00:Ljava/io/ByteArrayOutputStream;
 
     .line 4
     .line 5
-    iput-object v0, p0, LX/3Bw;->A00:Ljava/lang/String;
-
-    .line 6
-    .line 7
-    const-string v0, "0"
-
-    .line 8
-    .line 9
-    iput-object v0, p0, LX/3Bw;->A01:Ljava/lang/String;
-
-    .line 10
-    .line 11
     return-void
+.end method
+
+
+# virtual methods
+.method public final AEE()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, ""
+
+    return-object v0
 .end method

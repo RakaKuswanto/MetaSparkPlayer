@@ -30,7 +30,7 @@
 
 
 # direct methods
-.method public constructor <init>(IIZZLcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;Ljava/lang/String;LX/5WC;)V
+.method public constructor <init>(IIZZLcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;Ljava/lang/String;LX/5Hc;)V
     .locals 9
 
     .line 268435456
@@ -63,7 +63,7 @@
 
     .line 268435466
     .line 268435467
-    invoke-direct/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;-><init>(IIZZLcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/gen/WfxConfigurationEnums$ExecutionMode;Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;Ljava/lang/String;LX/5WC;)V
+    invoke-direct/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;-><init>(IIZZLcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/gen/WfxConfigurationEnums$ExecutionMode;Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;Ljava/lang/String;LX/5Hc;)V
 
     .line 268435468
     .line 268435469
@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method public constructor <init>(IIZZLcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/gen/WfxConfigurationEnums$ExecutionMode;Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;Ljava/lang/String;LX/5WC;)V
+.method public constructor <init>(IIZZLcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/gen/WfxConfigurationEnums$ExecutionMode;Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;Ljava/lang/String;LX/5Hc;)V
     .locals 1
 
     .line 536870912
@@ -112,7 +112,7 @@
 
     .line 536870930
     .line 536870931
-    invoke-direct {v0, p8}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackingDataProviderDelegateWrapper;-><init>(LX/5WC;)V
+    invoke-direct {v0, p8}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackingDataProviderDelegateWrapper;-><init>(LX/5Hc;)V
 
     .line 536870932
     .line 536870933
@@ -124,7 +124,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/5WC;)V
+.method public constructor <init>(LX/5Hc;)V
     .locals 9
 
     .line 0
@@ -163,7 +163,7 @@
     move-object v8, p1
 
     .line 15
-    invoke-direct/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;-><init>(IIZZLcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/gen/WfxConfigurationEnums$ExecutionMode;Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;Ljava/lang/String;LX/5WC;)V
+    invoke-direct/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;-><init>(IIZZLcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/gen/WfxConfigurationEnums$ExecutionMode;Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;Ljava/lang/String;LX/5Hc;)V
 
     .line 16
     .line 17

@@ -1,31 +1,39 @@
 .class public final LX/0Kb;
-.super Ljava/lang/Object;
+.super LX/0C7;
 .source ""
 
 
-# static fields
-.field public static A00:Ljava/lang/String;
-
-.field public static final A01:LX/0Ka;
+# instance fields
+.field public final synthetic A00:LX/0C8;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/0C8;)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/0Ka;
+    iput-object p1, p0, LX/0Kb;->A00:LX/0C8;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/0Ka;-><init>()V
+    invoke-direct {p0}, LX/0C7;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, LX/0Kb;->A01:LX/0Ka;
+    return-void
+.end method
 
-    .line 6
-    .line 7
+
+# virtual methods
+.method public final close()V
+    .locals 0
+
+    .line 0
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

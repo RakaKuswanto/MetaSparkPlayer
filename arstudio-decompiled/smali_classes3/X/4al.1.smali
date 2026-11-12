@@ -1,347 +1,635 @@
-.class public final LX/4al;
-.super Ljava/lang/Object;
+.class public final LX/4Al;
+.super Landroid/view/ViewStructure;
 .source ""
 
 
+# instance fields
+.field public A00:Ljava/lang/String;
+
+.field public A01:[Ljava/lang/CharSequence;
+
+.field public A02:I
+
+.field public A03:I
+
+.field public A04:Landroid/view/ViewStructure$HtmlInfo;
+
+.field public A05:Landroid/view/autofill/AutofillValue;
+
+.field public A06:Ljava/lang/CharSequence;
+
+.field public A07:[Ljava/lang/String;
+
+.field public final A08:Ljava/util/List;
+
+
 # direct methods
-.method public static A00(LX/4ao;I)LX/4an;
-    .locals 7
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iget-object v5, p0, LX/4ao;->A0B:Landroid/content/Context;
+    invoke-direct {p0}, Landroid/view/ViewStructure;-><init>()V
 
     .line 1
     .line 2
-    new-instance v3, LX/4an;
-
     .line 3
+    const/4 v0, -0x1
+
     .line 4
-    invoke-direct {v3, v5, p1}, LX/4an;-><init>(Landroid/content/Context;I)V
+    iput v0, p0, LX/4Al;->A02:I
 
     .line 5
     .line 6
-    .line 7
-    iget-object v4, v3, LX/4an;->A00:LX/4am;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
+    .line 7
     .line 8
     .line 9
-    iget-object v0, p0, LX/4ao;->A05:Landroid/view/View;
+    move-result-object v0
 
     .line 10
+    iput-object v0, p0, LX/4Al;->A08:Ljava/util/List;
+
     .line 11
-    if-eqz v0, :cond_a
-
     .line 12
-    .line 13
-    iput-object v0, v4, LX/4am;->A08:Landroid/view/View;
+    return-void
+.end method
 
-    .line 14
-    .line 15
-    :cond_0
+
+# virtual methods
+.method public final A00()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/4Al;->A02:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final A01()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/4Al;->A03:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final A02()Landroid/view/ViewStructure$HtmlInfo;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4Al;->A04:Landroid/view/ViewStructure$HtmlInfo;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final A03()Landroid/view/autofill/AutofillValue;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4Al;->A05:Landroid/view/autofill/AutofillValue;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final A04()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4Al;->A00:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final A05()Ljava/util/List;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4Al;->A08:Ljava/util/List;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final A06()[Ljava/lang/CharSequence;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4Al;->A01:[Ljava/lang/CharSequence;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final A07()[Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4Al;->A07:[Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final addChildCount(I)I
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x0
+
+    .line 1
     :goto_0
-    iget-object v1, p0, LX/4ao;->A07:Ljava/lang/CharSequence;
+    if-ge v2, p1, :cond_0
 
+    .line 2
+    .line 3
+    new-instance v1, LX/4Al;
+
+    .line 4
+    .line 5
+    invoke-direct {v1}, LX/4Al;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    iget-object v0, p0, LX/4Al;->A00:Ljava/lang/String;
+
+    .line 9
+    .line 10
+    iput-object v0, v1, LX/4Al;->A00:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    iget-object v0, p0, LX/4Al;->A08:Ljava/util/List;
+
+    .line 13
+    .line 14
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 15
     .line 16
     .line 17
-    if-eqz v1, :cond_1
+    add-int/lit8 v2, v2, 0x1
 
     .line 18
     .line 19
-    iput-object v1, v4, LX/4am;->A0J:Ljava/lang/CharSequence;
+    goto :goto_0
 
     .line 20
+    :cond_0
+    iget-object v0, p0, LX/4Al;->A08:Ljava/util/List;
+
     .line 21
-    iget-object v0, v4, LX/4am;->A0F:Landroid/widget/TextView;
-
     .line 22
-    .line 23
-    if-eqz v0, :cond_1
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
+    .line 23
     .line 24
     .line 25
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-result v0
 
     .line 26
-    .line 27
-    .line 28
-    :cond_1
-    iget-object v6, p0, LX/4ao;->A08:Ljava/lang/CharSequence;
+    return v0
+.end method
 
-    .line 29
-    .line 30
-    if-eqz v6, :cond_3
+.method public final asyncCommit()V
+    .locals 0
 
-    .line 31
-    .line 32
-    iget-object v2, p0, LX/4ao;->A02:Landroid/content/DialogInterface$OnClickListener;
+    return-void
+.end method
 
-    .line 33
-    .line 34
+.method public final asyncNewChild(I)Landroid/view/ViewStructure;
+    .locals 2
+
+    .line 0
+    new-instance v1, LX/4Al;
+
+    .line 1
+    .line 2
+    invoke-direct {v1}, LX/4Al;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/4Al;->A00:Ljava/lang/String;
+
+    .line 6
+    .line 7
+    iput-object v0, v1, LX/4Al;->A00:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    return-object v1
+.end method
+
+.method public final getAutofillId()Landroid/view/autofill/AutofillId;
+    .locals 1
+
     const/4 v0, 0x0
 
-    .line 35
-    const/4 v1, -0x1
+    return-object v0
+.end method
 
-    .line 36
-    if-eqz v2, :cond_2
+.method public final getChildCount()I
+    .locals 1
 
-    .line 37
-    .line 38
-    iget-object v0, v4, LX/4am;->A06:Landroid/os/Handler;
+    .line 0
+    iget-object v0, p0, LX/4Al;->A08:Ljava/util/List;
 
-    .line 39
-    .line 40
-    invoke-virtual {v0, v1, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    .line 1
+    .line 2
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v0
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
 
-    .line 44
-    :cond_2
-    iput-object v6, v4, LX/4am;->A0I:Ljava/lang/CharSequence;
+    .line 6
+    return v0
+.end method
 
-    .line 45
-    .line 46
-    iput-object v0, v4, LX/4am;->A07:Landroid/os/Message;
+.method public final getExtras()Landroid/os/Bundle;
+    .locals 1
 
-    .line 47
-    .line 48
-    :cond_3
-    iget-object v0, p0, LX/4ao;->A06:Landroid/widget/ListAdapter;
-
-    .line 49
-    .line 50
-    if-eqz v0, :cond_7
-
-    .line 51
-    .line 52
-    iget-object v1, p0, LX/4ao;->A0C:Landroid/view/LayoutInflater;
-
-    .line 53
-    .line 54
-    iget v0, v4, LX/4am;->A03:I
-
-    .line 55
-    .line 56
-    invoke-static {v1, v0}, LX/4BF;->A0X(Landroid/view/LayoutInflater;I)Landroid/view/View;
-
-    .line 57
-    .line 58
-    .line 59
-    move-result-object v6
-
-    .line 60
-    check-cast v6, Landroid/widget/ListView;
-
-    .line 61
-    .line 62
-    const/4 v2, 0x1
-
-    .line 63
-    iget-boolean v0, p0, LX/4ao;->A0A:Z
-
-    .line 64
-    .line 65
-    if-eqz v0, :cond_9
-
-    .line 66
-    .line 67
-    iget v1, v4, LX/4am;->A04:I
-
-    .line 68
-    .line 69
-    :goto_1
-    iget-object v0, p0, LX/4ao;->A06:Landroid/widget/ListAdapter;
-
-    .line 70
-    .line 71
-    if-nez v0, :cond_4
-
-    .line 72
-    .line 73
-    new-instance v0, LX/6K5;
-
-    .line 74
-    .line 75
-    invoke-direct {v0, v5, v1}, LX/6K5;-><init>(Landroid/content/Context;I)V
-
-    .line 76
-    .line 77
-    .line 78
-    :cond_4
-    iput-object v0, v4, LX/4am;->A0D:Landroid/widget/ListAdapter;
-
-    .line 79
-    .line 80
-    iget v0, p0, LX/4ao;->A00:I
-
-    .line 81
-    .line 82
-    iput v0, v4, LX/4am;->A01:I
-
-    .line 83
-    .line 84
-    iget-object v0, p0, LX/4ao;->A01:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 85
-    .line 86
-    if-eqz v0, :cond_5
-
-    .line 87
-    .line 88
-    const/4 v1, 0x0
-
-    .line 89
-    new-instance v0, LX/6PO;
-
-    .line 90
-    .line 91
-    invoke-direct {v0, p0, v1, v4}, LX/6PO;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    .line 92
-    .line 93
-    .line 94
-    invoke-virtual {v6, v0}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    .line 95
-    .line 96
-    .line 97
-    :cond_5
-    iget-boolean v0, p0, LX/4ao;->A0A:Z
-
-    .line 98
-    .line 99
-    if-eqz v0, :cond_6
-
-    .line 100
-    .line 101
-    invoke-virtual {v6, v2}, Landroid/widget/AbsListView;->setChoiceMode(I)V
-
-    .line 102
-    .line 103
-    .line 104
-    :cond_6
-    iput-object v6, v4, LX/4am;->A0E:Landroid/widget/ListView;
-
-    .line 105
-    .line 106
-    :cond_7
-    const/4 v0, 0x1
-
-    .line 107
-    invoke-virtual {v3, v0}, Landroid/app/Dialog;->setCancelable(Z)V
-
-    .line 108
-    .line 109
-    .line 110
-    invoke-virtual {v3, v0}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
-
-    .line 111
-    .line 112
-    .line 113
     const/4 v0, 0x0
 
-    .line 114
-    invoke-virtual {v3, v0}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    return-object v0
+.end method
 
-    .line 115
-    .line 116
-    .line 117
-    invoke-virtual {v3, v0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+.method public final getHint()Ljava/lang/CharSequence;
+    .locals 1
 
-    .line 118
-    .line 119
-    .line 120
-    iget-object v0, p0, LX/4ao;->A03:Landroid/content/DialogInterface$OnKeyListener;
+    .line 0
+    iget-object v0, p0, LX/4Al;->A06:Ljava/lang/CharSequence;
 
-    .line 121
-    .line 122
-    if-eqz v0, :cond_8
+    .line 1
+    .line 2
+    return-object v0
+.end method
 
-    .line 123
-    .line 124
-    invoke-virtual {v3, v0}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
+.method public final getText()Ljava/lang/CharSequence;
+    .locals 1
 
-    .line 125
-    .line 126
-    .line 127
-    :cond_8
-    return-object v3
+    const/4 v0, 0x0
 
-    .line 128
-    :cond_9
-    iget v1, v4, LX/4am;->A02:I
+    return-object v0
+.end method
 
-    .line 129
-    .line 130
-    goto :goto_1
+.method public final getTextSelectionEnd()I
+    .locals 1
 
-    .line 131
-    :cond_a
-    iget-object v1, p0, LX/4ao;->A09:Ljava/lang/CharSequence;
+    const/4 v0, 0x0
 
-    .line 132
-    .line 133
-    if-eqz v1, :cond_b
+    return v0
+.end method
 
-    .line 134
-    .line 135
-    iput-object v1, v4, LX/4am;->A0K:Ljava/lang/CharSequence;
+.method public final getTextSelectionStart()I
+    .locals 1
 
-    .line 136
-    .line 137
-    iget-object v0, v4, LX/4am;->A0G:Landroid/widget/TextView;
+    const/4 v0, 0x0
 
-    .line 138
-    .line 139
-    if-eqz v0, :cond_b
+    return v0
+.end method
 
-    .line 140
-    .line 141
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+.method public final hasExtras()Z
+    .locals 1
 
-    .line 142
-    .line 143
-    .line 144
-    :cond_b
-    iget-object v2, p0, LX/4ao;->A04:Landroid/graphics/drawable/Drawable;
+    const/4 v0, 0x0
 
-    .line 145
-    .line 146
-    if-eqz v2, :cond_0
+    return v0
+.end method
 
-    .line 147
-    .line 148
-    iput-object v2, v4, LX/4am;->A05:Landroid/graphics/drawable/Drawable;
+.method public final newChild(I)Landroid/view/ViewStructure;
+    .locals 2
 
-    .line 149
-    .line 150
-    const/4 v1, 0x0
+    .line 0
+    new-instance v1, LX/4Al;
 
-    .line 151
-    iget-object v0, v4, LX/4am;->A0C:Landroid/widget/ImageView;
+    .line 1
+    .line 2
+    invoke-direct {v1}, LX/4Al;-><init>()V
 
-    .line 152
-    .line 153
-    if-eqz v0, :cond_0
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/4Al;->A00:Ljava/lang/String;
 
-    .line 154
-    .line 155
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    .line 6
+    .line 7
+    iput-object v0, v1, LX/4Al;->A00:Ljava/lang/String;
 
-    .line 156
-    .line 157
-    .line 158
-    iget-object v0, v4, LX/4am;->A0C:Landroid/widget/ImageView;
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/4Al;->A08:Ljava/util/List;
 
-    .line 159
-    .line 160
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    .line 10
+    .line 11
+    invoke-interface {v0, p1, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 161
-    .line 162
-    .line 163
-    goto/16 :goto_0
+    .line 12
+    .line 13
+    .line 14
+    return-object v1
+.end method
+
+.method public final newHtmlInfoBuilder(Ljava/lang/String;)Landroid/view/ViewStructure$HtmlInfo$Builder;
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/4Am;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/4Am;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
+.end method
+
+.method public final setAccessibilityFocused(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setActivated(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setAlpha(F)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setAutofillHints([Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/4Al;->A07:[Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final setAutofillId(Landroid/view/autofill/AutofillId;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setAutofillId(Landroid/view/autofill/AutofillId;I)V
+    .locals 0
+
+    .line 0
+    iput p2, p0, LX/4Al;->A03:I
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final setAutofillOptions([Ljava/lang/CharSequence;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/4Al;->A01:[Ljava/lang/CharSequence;
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final setAutofillType(I)V
+    .locals 0
+
+    .line 0
+    iput p1, p0, LX/4Al;->A02:I
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final setAutofillValue(Landroid/view/autofill/AutofillValue;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/4Al;->A05:Landroid/view/autofill/AutofillValue;
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final setCheckable(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setChecked(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setChildCount(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setClassName(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setClickable(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setContentDescription(Ljava/lang/CharSequence;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setContextClickable(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setDataIsSensitive(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setDimens(IIIIII)V
+    .locals 0
+
+    .line 0
+    return-void
+.end method
+
+.method public final setElevation(F)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setEnabled(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setFocusable(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setFocused(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setHint(Ljava/lang/CharSequence;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/4Al;->A06:Ljava/lang/CharSequence;
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final setHtmlInfo(Landroid/view/ViewStructure$HtmlInfo;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/4Al;->A04:Landroid/view/ViewStructure$HtmlInfo;
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final setId(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setInputType(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setLocaleList(Landroid/os/LocaleList;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setLongClickable(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setOpaque(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setSelected(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setText(Ljava/lang/CharSequence;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setText(Ljava/lang/CharSequence;II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setTextLines([I[I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setTextStyle(FIII)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setTransformation(Landroid/graphics/Matrix;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setVisibility(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setWebDomain(Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/4Al;->A00:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-void
 .end method

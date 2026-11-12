@@ -1,226 +1,274 @@
-.class public LX/5ai;
-.super LX/5aj;
+.class public final LX/5ai;
+.super Ljava/util/concurrent/CancellationException;
 .source ""
-
-# interfaces
-.implements LX/5bk;
 
 
 # instance fields
-.field public A00:I
-
-.field public A01:I
-
-.field public A02:Landroid/view/Surface;
-
-.field public A03:LX/5Zr;
-
-.field public final A04:LX/5b2;
-
-.field public final A05:LX/6Gm;
+.field public final transient A00:LX/5gi;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Surface;LX/6Gm;II)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;LX/5gi;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5aj;-><init>()V
+    invoke-direct {p0, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5ai;->A02:Landroid/view/Surface;
+    iput-object p3, p0, LX/5ai;->A00:LX/5gi;
 
     .line 4
     .line 5
-    iput p3, p0, LX/5ai;->A01:I
+    if-eqz p2, :cond_0
 
     .line 6
     .line 7
-    iput p4, p0, LX/5ai;->A00:I
+    invoke-virtual {p0, p2}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 8
     .line 9
-    iput-object p2, p0, LX/5ai;->A05:LX/6Gm;
-
     .line 10
-    .line 11
-    const/4 v1, 0x0
-
-    .line 12
-    new-instance v0, LX/5b2;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, v1}, LX/5b2;-><init>(Z)V
-
-    .line 15
-    .line 16
-    .line 17
-    iput-object v0, p0, LX/5ai;->A04:LX/5b2;
-
-    .line 18
-    .line 19
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final A6S()Z
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
     .line 0
-    invoke-super {p0}, LX/5aj;->A6S()Z
+    if-eq p1, p0, :cond_0
 
     .line 1
     .line 2
-    .line 3
-    move-result v0
+    instance-of v0, p1, LX/5ai;
 
+    .line 3
     .line 4
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 5
     .line 6
-    iget-object v0, p0, LX/5ai;->A02:Landroid/view/Surface;
+    check-cast p1, LX/5ai;
 
     .line 7
     .line 8
-    if-eqz v0, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     .line 9
     .line 10
-    invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
-
     .line 11
+    move-result-object v1
+
     .line 12
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
     .line 13
-    move-result v1
-
     .line 14
-    const/4 v0, 0x1
-
     .line 15
-    if-nez v1, :cond_1
+    move-result-object v0
 
     .line 16
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 17
-    :cond_0
-    const/4 v0, 0x0
-
     .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    if-eqz v0, :cond_1
+
+    .line 21
+    .line 22
+    iget-object v1, p1, LX/5ai;->A00:LX/5gi;
+
+    .line 23
+    .line 24
+    iget-object v0, p0, LX/5ai;->A00:LX/5gi;
+
+    .line 25
+    .line 26
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    if-eqz v0, :cond_1
+
+    .line 31
+    .line 32
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v1
+
+    .line 36
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v0
+
+    .line 44
+    if-eqz v0, :cond_1
+
+    .line 45
+    .line 46
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 47
+    return v0
+
+    .line 48
     :cond_1
+    const/4 v0, 0x0
+
+    .line 49
     return v0
 .end method
 
-.method public final AG2()Ljava/lang/Integer;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/014;->A00:Ljava/lang/Integer;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final AIJ()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "SurfaceOutput"
-
-    return-object v0
-.end method
-
-.method public final ALe()I
+.method public final fillInStackTrace()Ljava/lang/Throwable;
     .locals 1
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    return v0
-.end method
+    new-array v0, v0, [Ljava/lang/StackTraceElement;
 
-.method public final ANw()LX/6Gm;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5ai;->A05:LX/6Gm;
-
-    .line 1
     .line 2
-    return-object v0
-.end method
-
-.method public final APD(LX/5Zr;LX/5ZJ;)V
-    .locals 1
-
-    .line 0
-    iput-object p1, p0, LX/5ai;->A03:LX/5Zr;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/5ai;->A02:Landroid/view/Surface;
-
     .line 3
+    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+
     .line 4
-    if-eqz v0, :cond_0
+    .line 5
+    .line 6
+    return-object p0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 5
     .line 6
-    invoke-interface {p1, v0, p0}, LX/5Zr;->Apc(Landroid/view/Surface;LX/5ar;)V
-
     .line 7
+    invoke-static {v0}, LX/433;->A0D(Ljava/lang/String;)I
+
     .line 8
     .line 9
-    :cond_0
-    return-void
+    .line 10
+    move-result v1
+
+    .line 11
+    iget-object v0, p0, LX/5ai;->A00:LX/5gi;
+
+    .line 12
+    .line 13
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v1
+
+    .line 17
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v0
+
+    .line 25
+    add-int/2addr v1, v0
+
+    .line 26
+    return v1
 .end method
 
-.method public AdZ()V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     .line 0
-    invoke-super {p0}, LX/5aj;->AdZ()V
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    move-result-object v1
 
-.method public final destroy()V
-    .locals 0
+    .line 4
+    invoke-super {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
-    .line 0
-    invoke-virtual {p0}, LX/5aj;->release()V
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
+    .line 8
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final getHeight()I
-    .locals 1
+    .line 9
+    .line 10
+    .line 11
+    const-string v0, "; job="
 
-    .line 0
-    iget v0, p0, LX/5ai;->A00:I
+    .line 12
+    .line 13
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1
-    .line 2
-    return v0
-.end method
+    .line 14
+    .line 15
+    .line 16
+    iget-object v0, p0, LX/5ai;->A00:LX/5gi;
 
-.method public final getWidth()I
-    .locals 1
+    .line 17
+    .line 18
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-    .line 0
-    iget v0, p0, LX/5ai;->A01:I
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
 
-    .line 1
-    .line 2
-    return v0
+    .line 22
+    return-object v0
 .end method

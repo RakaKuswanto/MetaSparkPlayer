@@ -1,153 +1,173 @@
-.class public final LX/4IU;
-.super Ljava/lang/Object;
+.class public abstract LX/4IU;
+.super LX/4nX;
 .source ""
-
-# interfaces
-.implements LX/4HA;
 
 
 # instance fields
-.field public final A00:Landroid/os/Bundle;
-
-.field public final A01:LX/4CF;
-
-.field public final A02:LX/4GN;
+.field public A00:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;LX/4CF;LX/4GN;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0}, LX/4nX;-><init>()V
 
     .line 1
-    invoke-static {p3, v0, p1}, LX/0Yd;->A0m(Ljava/lang/Object;ILjava/lang/Object;)V
-
     .line 2
     .line 3
+    const/4 v0, 0x1
+
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean v0, p0, LX/4IU;->A00:Z
 
     .line 5
     .line 6
-    .line 7
-    iput-object p3, p0, LX/4IU;->A02:LX/4GN;
-
-    .line 8
-    .line 9
-    iput-object p2, p0, LX/4IU;->A01:LX/4CF;
-
-    .line 10
-    .line 11
-    iput-object p1, p0, LX/4IU;->A00:Landroid/os/Bundle;
-
-    .line 12
-    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final AGm(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method public final A0B(LX/4nS;IIII)Z
+    .locals 9
 
     .line 0
-    const/4 v0, 0x0
+    move-object v3, p0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    check-cast v3, LX/4IR;
 
     .line 2
     .line 3
+    move-object v4, p1
+
     .line 4
-    const v0, 0x7f0811ff
+    iget-object v2, p1, LX/4nS;->itemView:Landroid/view/View;
 
     .line 5
     .line 6
-    .line 7
-    invoke-static {p1, v0}, LX/4F2;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
 
+    .line 7
     .line 8
     .line 9
+    move-result v0
+
     .line 10
-    move-result-object v0
+    float-to-int v0, v0
 
     .line 11
-    return-object v0
-.end method
+    add-int v5, p2, v0
 
-.method public final AJL()Landroid/view/View$OnClickListener;
-    .locals 1
+    .line 12
+    .line 13
+    iget-object v0, p1, LX/4nS;->itemView:Landroid/view/View;
 
-    .line 0
-    const/16 v0, 0xe
+    .line 14
+    .line 15
+    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
 
-    .line 1
-    .line 2
-    invoke-static {p0, v0}, LX/6PP;->A00(Ljava/lang/Object;I)LX/6PP;
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    .line 19
+    float-to-int v0, v0
 
-    .line 6
-    return-object v0
-.end method
+    .line 20
+    add-int v6, p3, v0
 
-.method public final AJa(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+    .line 21
+    .line 22
+    invoke-static {v3, p1}, LX/4IR;->A00(LX/4IR;LX/4nS;)V
 
-    .line 0
+    .line 23
+    .line 24
+    .line 25
+    move v7, p4
+
+    .line 26
+    sub-int v0, p4, v5
+
+    .line 27
+    .line 28
+    move v8, p5
+
+    .line 29
+    sub-int v1, p5, v6
+
+    .line 30
+    .line 31
+    if-nez v0, :cond_0
+
+    .line 32
+    .line 33
+    if-nez v1, :cond_1
+
+    .line 34
+    .line 35
+    invoke-virtual {v3, p1}, LX/4nX;->A07(LX/4nS;)V
+
+    .line 36
+    .line 37
+    .line 38
     const/4 v0, 0x0
 
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
-    const v0, 0x7f0811f1
-
-    .line 5
-    .line 6
-    .line 7
-    invoke-static {p1, v0}, LX/4F2;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    return-object v0
-.end method
-
-.method public final AMd()I
-    .locals 1
-
-    .line 0
-    const v0, 0x7f120039
-
-    .line 1
-    .line 2
-    .line 3
+    .line 39
     return v0
-.end method
 
-.method public final synthetic AQ9()Z
-    .locals 1
+    .line 40
+    :cond_0
+    neg-int v0, v0
 
-    .line 0
-    const/4 v0, 0x0
+    .line 41
+    int-to-float v0, v0
 
-    .line 1
+    .line 42
+    invoke-virtual {v2, v0}, Landroid/view/View;->setTranslationX(F)V
+
+    .line 43
+    .line 44
+    .line 45
+    if-eqz v1, :cond_2
+
+    .line 46
+    .line 47
+    :cond_1
+    neg-int v0, v1
+
+    .line 48
+    int-to-float v0, v0
+
+    .line 49
+    invoke-virtual {v2, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    .line 50
+    .line 51
+    .line 52
+    :cond_2
+    iget-object v0, v3, LX/4IR;->A08:Ljava/util/ArrayList;
+
+    .line 53
+    .line 54
+    new-instance v3, LX/4IP;
+
+    .line 55
+    .line 56
+    invoke-direct/range {v3 .. v8}, LX/4IP;-><init>(LX/4nS;IIII)V
+
+    .line 57
+    .line 58
+    .line 59
+    invoke-virtual {v0, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 60
+    .line 61
+    .line 62
+    const/4 v0, 0x1
+
+    .line 63
     return v0
-.end method
-
-.method public final AaL(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
 .end method

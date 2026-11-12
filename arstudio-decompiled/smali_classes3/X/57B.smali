@@ -1,11 +1,43 @@
-.class public interface abstract LX/57B;
-.super Ljava/lang/Object;
+.class public final LX/57b;
+.super LX/57U;
 .source ""
 
-# interfaces
-.implements LX/574;
+
+# instance fields
+.field public final synthetic A00:LX/57U;
+
+.field public final synthetic A01:Ljava/lang/reflect/TypeVariable;
 
 
-# virtual methods
-.method public abstract Arq(Lcom/google/android/gms/common/ConnectionResult;LX/576;Z)V
+# direct methods
+.method public constructor <init>(LX/57U;Ljava/lang/reflect/TypeVariable;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$var",
+            "val$unguarded"
+        }
+    .end annotation
+
+    .line 0
+    iput-object p2, p0, LX/57b;->A01:Ljava/lang/reflect/TypeVariable;
+
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/57b;->A00:LX/57U;
+
+    .line 3
+    .line 4
+    invoke-direct {p0}, LX/57U;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
 .end method

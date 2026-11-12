@@ -1,24 +1,51 @@
 .class public final LX/1qd;
-.super LX/1cz;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/1wG;
+
+
+# static fields
+.field public static final A01:LX/5Cn;
 
 
 # instance fields
-.field public final A00:I
+.field public final A00:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;I)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput p2, p0, LX/1qd;->A00:I
+    new-instance v0, LX/5Cn;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1}, LX/1cz;-><init>(Ljava/util/Iterator;)V
+    invoke-direct {v0}, LX/5Cn;-><init>()V
 
     .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/1qd;->A01:LX/5Cn;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/1qd;->A00:Ljava/lang/String;
+
     .line 4
     .line 5
     return-void
@@ -26,68 +53,40 @@
 
 
 # virtual methods
-.method public final bridge synthetic A00(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final A4I(LX/5Co;)V
+    .locals 2
 
     .line 0
-    iget v0, p0, LX/1qd;->A00:I
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    .line 5
-    check-cast p1, LX/1g2;
+    sget-object v1, LX/1qd;->A01:LX/5Cn;
 
+    .line 5
     .line 6
+    const/4 v0, 0x0
+
     .line 7
-    invoke-virtual {p1}, LX/1g2;->A01()Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, LX/5Cn;->A00(LX/5Co;[Ljava/lang/Object;)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
+    return-void
+.end method
 
-    .line 11
+.method public final AKu()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1qd;->A00:Ljava/lang/String;
+
+    .line 1
+    .line 2
     return-object v0
-
-    .line 12
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    .line 13
-    .line 14
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    return-object v0
-
-    .line 19
-    :pswitch_1
-    check-cast p1, Ljava/util/Map$Entry;
-
-    .line 20
-    .line 21
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

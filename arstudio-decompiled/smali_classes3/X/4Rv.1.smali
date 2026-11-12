@@ -1,99 +1,140 @@
 .class public final LX/4Rv;
-.super Ljava/lang/Object;
+.super LX/4Y5;
 .source ""
 
 
+# instance fields
+.field public final A00:Landroid/animation/ObjectAnimator;
+
+.field public final A01:Z
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/AnimationDrawable;ZZ)V
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/4Y5;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
 
-.method public static final A00(Landroid/view/View;LX/4Rv;)V
-    .locals 3
-
-    .line 0
-    instance-of v0, p0, Lcom/facebook/litho/LithoView;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_1
-
-    .line 3
     .line 4
-    check-cast p0, Lcom/facebook/litho/LithoView;
-
     .line 5
     .line 6
-    invoke-virtual {p0}, LX/4mx;->A0P()V
+    move-result v5
 
     .line 7
+    const/4 v4, 0x0
+
     .line 8
+    const/4 v2, 0x0
+
     .line 9
-    const/4 v0, 0x0
+    if-eqz p2, :cond_0
 
     .line 10
-    invoke-virtual {p0, v0}, Lcom/facebook/litho/LithoView;->A0V(Lcom/facebook/litho/ComponentTree;)V
-
     .line 11
+    add-int/lit8 v2, v5, -0x1
+
     .line 12
     .line 13
     :cond_0
-    return-void
+    const/4 v0, 0x1
 
     .line 14
-    :cond_1
-    instance-of v0, p0, Landroid/view/ViewGroup;
+    sub-int/2addr v5, v0
 
     .line 15
-    .line 16
-    if-eqz v0, :cond_0
+    if-eqz p2, :cond_1
 
+    .line 16
     .line 17
+    const/4 v5, 0x0
+
     .line 18
-    const/4 v2, 0x0
+    :cond_1
+    new-instance v3, LX/4Ru;
 
     .line 19
-    check-cast p0, Landroid/view/ViewGroup;
-
     .line 20
-    .line 21
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-direct {v3, p1, p2}, LX/4Ru;-><init>(Landroid/graphics/drawable/AnimationDrawable;Z)V
 
+    .line 21
     .line 22
     .line 23
+    invoke-static {}, LX/434;->A1a()[I
+
     .line 24
-    move-result v1
-
     .line 25
-    :goto_0
-    if-ge v2, v1, :cond_0
-
     .line 26
+    move-result-object v1
+
     .line 27
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    aput v2, v1, v4
 
     .line 28
     .line 29
-    .line 30
-    move-result-object v0
+    aput v5, v1, v0
 
+    .line 30
     .line 31
-    invoke-static {v0, p1}, LX/4Rv;->A00(Landroid/view/View;LX/4Rv;)V
+    const-string v0, "currentIndex"
 
     .line 32
     .line 33
-    .line 34
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {p1, v0, v1}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
+    .line 34
     .line 35
     .line 36
-    goto :goto_0
+    move-result-object v2
+
+    .line 37
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 38
+    .line 39
+    const/16 v0, 0x12
+
+    .line 40
+    .line 41
+    if-lt v1, v0, :cond_2
+
+    .line 42
+    .line 43
+    invoke-static {v2}, LX/4Rx;->A00(Landroid/animation/ObjectAnimator;)V
+
+    .line 44
+    .line 45
+    .line 46
+    :cond_2
+    iget v0, v3, LX/4Ru;->A01:I
+
+    .line 47
+    .line 48
+    int-to-long v0, v0
+
+    .line 49
+    invoke-virtual {v2, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    .line 50
+    .line 51
+    .line 52
+    invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 53
+    .line 54
+    .line 55
+    iput-boolean p3, p0, LX/4Rv;->A01:Z
+
+    .line 56
+    .line 57
+    iput-object v2, p0, LX/4Rv;->A00:Landroid/animation/ObjectAnimator;
+
+    .line 58
+    .line 59
+    return-void
 .end method

@@ -123,30 +123,30 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZZZZZZLjava/lang/String;IIIIIIIJJJJJJJJJJJJLjava/lang/String;Lcom/facebook/proxygen/ConnQuality;JJJJJJJJJJJJZJJIIZLjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 463073
+    .line 397124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 463074
+    .line 397125
     iput-object p1, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mHostname:Ljava/lang/String;
 
-    .line 463075
+    .line 397126
     iput-object p2, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mServerAddrStr:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 463076
+    .line 397127
     iput-object v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mServerAddr:Ljava/net/InetAddress;
 
     const-string v0, ""
 
-    .line 463077
+    .line 397128
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 463078
+    .line 397129
     :try_start_0
     invoke-static {p2}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
 
@@ -156,252 +156,252 @@
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 463079
+    .line 397130
     :catch_0
     :cond_0
     iput-object p3, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mServerCluster:Ljava/lang/String;
 
-    .line 463080
+    .line 397131
     iput-object p4, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mServerHostEnc:Ljava/lang/String;
 
-    .line 463081
+    .line 397132
     iput-object p5, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mClientPublicAddr:Ljava/lang/String;
 
-    .line 463082
+    .line 397133
     iput-object p6, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mServerDatetime:Ljava/lang/String;
 
-    .line 463083
+    .line 397134
     iput-object p7, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mCertVerificationImpl:Ljava/lang/String;
 
-    .line 463084
+    .line 397135
     iput p8, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mLocalPort:I
 
-    .line 463085
+    .line 397136
     iput-boolean p9, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mConnEstablished:Z
 
-    .line 463086
+    .line 397137
     iput-boolean p10, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mNewSession:Z
 
-    .line 463087
+    .line 397138
     iput-boolean p11, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mReqSent:Z
 
-    .line 463088
+    .line 397139
     iput-boolean p12, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRspReceived:Z
 
-    .line 463089
+    .line 397140
     iput-boolean p13, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mDnsCacheHit:Z
 
-    .line 463090
+    .line 397141
     move/from16 v0, p14
 
     iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mCertCacheHit:Z
 
-    .line 463091
+    .line 397142
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mProtocol:Ljava/lang/String;
 
-    .line 463092
+    .line 397143
     move/from16 v0, p16
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mReqHeaderBytes:I
 
-    .line 463093
+    .line 397144
     move/from16 v0, p17
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mReqHeaderCompBytes:I
 
-    .line 463094
+    .line 397145
     move/from16 v0, p18
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mReqBodyBytes:I
 
-    .line 463095
+    .line 397146
     move/from16 v0, p19
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRspHeaderBytes:I
 
-    .line 463096
+    .line 397147
     move/from16 v0, p20
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRspHeaderCompBytes:I
 
-    .line 463097
+    .line 397148
     move/from16 v0, p21
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRspBodyBytes:I
 
-    .line 463098
+    .line 397149
     move/from16 v0, p22
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRspBodyCompBytes:I
 
-    .line 463099
+    .line 397150
     move-wide/from16 v0, p23
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mDnsLatency:J
 
-    .line 463100
+    .line 397151
     move-wide/from16 v0, p25
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTcpLatency:J
 
-    .line 463101
+    .line 397152
     move-wide/from16 v0, p27
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTlsLatency:J
 
-    .line 463102
+    .line 397153
     move-wide/from16 v0, p29
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRtt:J
 
-    .line 463103
+    .line 397154
     move-wide/from16 v0, p31
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRttVariance:J
 
-    .line 463104
+    .line 397155
     move-wide/from16 v0, p33
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mStreamLossCount:J
 
-    .line 463105
+    .line 397156
     move-wide/from16 v0, p35
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mStreamBytesSent:J
 
-    .line 463106
+    .line 397157
     move-wide/from16 v0, p37
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mStreamBytesReceived:J
 
-    .line 463107
+    .line 397158
     move-wide/from16 v0, p39
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTimeToFirstByte:J
 
-    .line 463108
+    .line 397159
     move-wide/from16 v0, p41
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTimeToLastByte:J
 
-    .line 463109
+    .line 397160
     move-wide/from16 v0, p43
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTotalConnect:J
 
-    .line 463110
+    .line 397161
     move-wide/from16 v0, p45
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRspBodyBytesTime:J
 
-    .line 463111
+    .line 397162
     move-object/from16 v0, p47
 
     iput-object v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mServerQuality:Ljava/lang/String;
 
-    .line 463112
+    .line 397163
     move-object/from16 v0, p48
 
     iput-object v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mConnQuality:Lcom/facebook/proxygen/ConnQuality;
 
-    .line 463113
+    .line 397164
     move-wide/from16 v0, p49
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTotalPackets:J
 
-    .line 463114
+    .line 397165
     move-wide/from16 v0, p51
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTotalPacketsLost:J
 
-    .line 463115
+    .line 397166
     move-wide/from16 v0, p53
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mDnsResolutionStartMonotonicTime:J
 
-    .line 463116
+    .line 397167
     move-wide/from16 v0, p55
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mDnsResolutionEndMonotonicTime:J
 
-    .line 463117
+    .line 397168
     move-wide/from16 v0, p57
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTcpConnectStartMonotonicTime:J
 
-    .line 463118
+    .line 397169
     move-wide/from16 v0, p59
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mTcpConnectEndMonotonicTime:J
 
-    .line 463119
+    .line 397170
     move-wide/from16 v0, p61
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mQuicConnectStartMonotonicTime:J
 
-    .line 463120
+    .line 397171
     move-wide/from16 v0, p63
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mQuicConnectEndMonotonicTime:J
 
-    .line 463121
+    .line 397172
     move-wide/from16 v0, p65
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mCertificateVerifyStartMonotonicTime:J
 
-    .line 463122
+    .line 397173
     move-wide/from16 v0, p67
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mCertificateVerifyEndMonotonicTime:J
 
-    .line 463123
+    .line 397174
     move-wide/from16 v0, p69
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRequestSendTime:J
 
-    .line 463124
+    .line 397175
     move-wide/from16 v0, p71
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mRequestCreationSystemTime:J
 
-    .line 463125
+    .line 397176
     move/from16 v0, p73
 
     iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mIsPush:Z
 
-    .line 463126
+    .line 397177
     move-wide/from16 v0, p74
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mFirstByteFlushed:J
 
-    .line 463127
+    .line 397178
     move-wide/from16 v0, p76
 
     iput-wide v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mLastByteFlushed:J
 
-    .line 463128
+    .line 397179
     move/from16 v0, p78
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mStatusCode:I
 
-    .line 463129
+    .line 397180
     move/from16 v0, p79
 
     iput v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mStreamId:I
 
-    .line 463130
+    .line 397181
     move/from16 v0, p80
 
     iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mIsConnectionPreconnected:Z
 
-    .line 463131
+    .line 397182
     move-object/from16 v0, p81
 
     iput-object v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mQuicResult:Ljava/lang/String;
 
-    .line 463132
+    .line 397183
     move-object/from16 v0, p82
 
     iput-object v0, p0, Lcom/facebook/proxygen/HTTPFlowStats;->mQuicConnectError:Ljava/lang/String;

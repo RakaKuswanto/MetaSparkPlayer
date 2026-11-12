@@ -1,123 +1,199 @@
-.class public final LX/072;
-.super Ljava/lang/Object;
+.class public final enum LX/072;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public A00:Z
+# static fields
+.field public static final synthetic $VALUES:[LX/072;
 
-.field public A01:Z
+.field public static final enum OTHER_APP_FIRST:LX/072;
 
-.field public final A02:Landroid/content/IntentFilter;
+.field public static final enum SAME_APP_FIRST:LX/072;
 
-.field public final A03:Landroid/content/BroadcastReceiver;
+.field public static final enum SHOW_CHOOSER:LX/072;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
-    .locals 0
+.method public static synthetic $values()[LX/072;
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
     .line 1
+    new-array v2, v0, [LX/072;
+
     .line 2
     .line 3
-    iput-object p2, p0, LX/072;->A02:Landroid/content/IntentFilter;
+    sget-object v1, LX/072;->SAME_APP_FIRST:LX/072;
 
     .line 4
     .line 5
-    iput-object p1, p0, LX/072;->A03:Landroid/content/BroadcastReceiver;
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/072;->OTHER_APP_FIRST:LX/072;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/072;->SHOW_CHOOSER:LX/072;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "SAME_APP_FIRST"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/072;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/072;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
+    .line 8
+    sput-object v0, LX/072;->SAME_APP_FIRST:LX/072;
+
+    .line 9
+    .line 10
+    const-string v2, "OTHER_APP_FIRST"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/072;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/072;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/072;->OTHER_APP_FIRST:LX/072;
+
+    .line 19
+    .line 20
+    const-string v2, "SHOW_CHOOSER"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/072;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/072;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/072;->SHOW_CHOOSER:LX/072;
+
+    .line 29
+    .line 30
+    invoke-static {}, LX/072;->$values()[LX/072;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    sput-object v0, LX/072;->$VALUES:[LX/072;
+
+    .line 35
+    .line 36
     return-void
 .end method
 
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
     .line 0
-    const/16 v0, 0x80
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 3
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/072;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/072;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
     .line 5
-    .line 6
-    .line 7
-    const-string v0, "Receiver{"
-
-    .line 8
-    .line 9
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 10
-    .line 11
-    .line 12
-    iget-object v0, p0, LX/072;->A03:Landroid/content/BroadcastReceiver;
-
-    .line 13
-    .line 14
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 15
-    .line 16
-    .line 17
-    const-string v0, " filter="
-
-    .line 18
-    .line 19
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 20
-    .line 21
-    .line 22
-    iget-object v0, p0, LX/072;->A02:Landroid/content/IntentFilter;
-
-    .line 23
-    .line 24
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 25
-    .line 26
-    .line 27
-    iget-boolean v0, p0, LX/072;->A01:Z
-
-    .line 28
-    .line 29
-    if-eqz v0, :cond_0
-
-    .line 30
-    .line 31
-    const-string v0, " DEAD"
-
-    .line 32
-    .line 33
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 34
-    .line 35
-    .line 36
-    :cond_0
-    const-string v0, "}"
-
-    .line 37
-    .line 38
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 39
-    .line 40
-    .line 41
     move-result-object v0
 
-    .line 42
+    .line 6
+    check-cast v0, LX/072;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/072;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/072;->$VALUES:[LX/072;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/072;
+
+    .line 7
+    .line 8
     return-object v0
 .end method

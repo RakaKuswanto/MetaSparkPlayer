@@ -47,11 +47,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x2d
+    const/16 v0, 0x4b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
 
     .line 3
     .line 4
@@ -67,7 +67,7 @@
 .end method
 
 .method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 7
+    .locals 6
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -75,7 +75,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -144,12 +144,12 @@
 
     .line 34
     .line 35
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 36
     .line 37
     .line 38
-    move-result-object v6
+    move-result-object v4
 
     .line 39
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -157,147 +157,148 @@
     .line 40
     .line 41
     .line 42
-    move-result v5
+    move-result v3
 
     .line 43
-    const/4 v4, 0x0
+    const/4 v0, 0x0
 
     .line 44
     :goto_3
-    if-ge v4, v5, :cond_4
+    if-ge v0, v3, :cond_4
 
     .line 45
     .line 46
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-static {p1, v4}, LX/0X2;->A0y(Landroid/os/Parcel;Ljava/util/AbstractMap;)V
 
     .line 47
     .line 48
     .line 49
-    move-result-object v3
+    add-int/lit8 v0, v0, 0x1
 
     .line 50
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
     .line 51
-    .line 52
-    .line 53
-    move-result-object v0
-
-    .line 54
-    invoke-virtual {v6, v3, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 55
-    .line 56
-    .line 57
-    add-int/lit8 v4, v4, 0x1
-
-    .line 58
-    .line 59
     goto :goto_3
 
-    .line 60
+    .line 52
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 61
-    .line 62
-    .line 63
+    .line 53
+    .line 54
+    .line 55
     move-result v5
 
-    .line 64
+    .line 56
     new-array v4, v5, [Ljava/lang/Integer;
 
-    .line 65
-    .line 66
+    .line 57
+    .line 58
     const/4 v3, 0x0
 
-    .line 67
+    .line 59
     :goto_4
     if-ge v3, v5, :cond_1
 
-    .line 68
-    .line 69
+    .line 60
+    .line 61
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 70
-    .line 71
-    .line 72
+    .line 62
+    .line 63
+    .line 64
     move-result v0
 
-    .line 73
+    .line 65
     invoke-static {v4, v0, v3}, LX/001;->A1A([Ljava/lang/Object;II)V
 
-    .line 74
-    .line 75
-    .line 76
+    .line 66
+    .line 67
+    .line 68
     add-int/lit8 v3, v3, 0x1
 
-    .line 77
-    .line 78
+    .line 69
+    .line 70
     goto :goto_4
 
-    .line 79
+    .line 71
     :cond_1
     invoke-static {v4}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 80
-    .line 81
-    .line 82
+    .line 72
+    .line 73
+    .line 74
     move-result-object v0
 
-    .line 83
+    .line 75
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A01:Lcom/google/common/collect/ImmutableList;
 
-    .line 84
-    .line 85
+    .line 76
+    .line 77
     goto :goto_2
 
-    .line 86
+    .line 78
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 87
-    .line 88
-    .line 89
+    .line 79
+    .line 80
+    .line 81
     move-result-object v0
 
-    .line 90
+    .line 82
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A05:Ljava/lang/String;
 
-    .line 91
-    .line 92
+    .line 83
+    .line 84
     goto :goto_1
 
-    .line 93
+    .line 85
     :cond_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 94
-    .line 95
-    .line 96
+    .line 86
+    .line 87
+    .line 88
     move-result-object v0
 
-    .line 97
+    .line 89
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A04:Ljava/lang/String;
 
-    .line 98
-    .line 99
+    .line 90
+    .line 91
     goto :goto_0
 
-    .line 100
+    .line 92
     :cond_4
-    invoke-static {v6}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
+    invoke-static {v4}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
 
-    .line 101
-    .line 102
-    .line 103
+    .line 93
+    .line 94
+    .line 95
     move-result-object v0
 
-    .line 104
+    .line 96
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A03:Lcom/google/common/collect/ImmutableMap;
+
+    .line 97
+    .line 98
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 99
+    .line 100
+    .line 101
+    move-result v0
+
+    .line 102
+    if-nez v0, :cond_7
+
+    .line 103
+    .line 104
+    iput-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A06:Ljava/lang/String;
 
     .line 105
     .line 106
+    :goto_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 107
@@ -306,15 +307,15 @@
     move-result v0
 
     .line 110
-    if-nez v0, :cond_7
+    if-nez v0, :cond_6
 
     .line 111
     .line 112
-    iput-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A06:Ljava/lang/String;
+    iput-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A07:Ljava/lang/String;
 
     .line 113
     .line 114
-    :goto_5
+    :goto_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 115
@@ -323,16 +324,16 @@
     move-result v0
 
     .line 118
-    if-nez v0, :cond_6
+    if-nez v0, :cond_5
 
     .line 119
     .line 120
-    iput-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A07:Ljava/lang/String;
+    iput-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A08:Ljava/lang/String;
 
     .line 121
     .line 122
-    :goto_6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    :goto_7
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 123
     .line 124
@@ -340,129 +341,112 @@
     move-result v0
 
     .line 126
-    if-nez v0, :cond_5
+    iput-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A09:Z
 
     .line 127
     .line 128
-    iput-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A08:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 129
     .line 130
-    :goto_7
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
     .line 131
-    .line 132
-    .line 133
     move-result v0
 
+    .line 132
+    if-eqz v0, :cond_9
+
+    .line 133
     .line 134
-    iput-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A09:Z
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 135
     .line 136
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
     .line 137
-    .line 138
-    .line 139
-    move-result v0
+    move-result v1
 
+    .line 138
+    new-array v0, v1, [Ljava/lang/String;
+
+    .line 139
     .line 140
-    if-eqz v0, :cond_9
+    :goto_8
+    if-ge v2, v1, :cond_8
 
     .line 141
     .line 142
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {p1, v0, v2}, LX/0X2;->A06(Landroid/os/Parcel;[Ljava/lang/Object;I)I
 
     .line 143
     .line 144
     .line 145
-    move-result v1
-
-    .line 146
-    new-array v0, v1, [Ljava/lang/String;
-
-    .line 147
-    .line 148
-    :goto_8
-    if-ge v2, v1, :cond_8
-
-    .line 149
-    .line 150
-    invoke-static {p1, v0, v2}, LX/0Yf;->A05(Landroid/os/Parcel;[Ljava/lang/Object;I)I
-
-    .line 151
-    .line 152
-    .line 153
     move-result v2
 
-    .line 154
+    .line 146
     goto :goto_8
 
-    .line 155
+    .line 147
     :cond_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 156
-    .line 157
-    .line 158
+    .line 148
+    .line 149
+    .line 150
     move-result-object v0
 
-    .line 159
+    .line 151
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A08:Ljava/lang/String;
 
-    .line 160
-    .line 161
+    .line 152
+    .line 153
     goto :goto_7
 
-    .line 162
+    .line 154
     :cond_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 163
-    .line 164
-    .line 165
+    .line 155
+    .line 156
+    .line 157
     move-result-object v0
 
-    .line 166
+    .line 158
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A07:Ljava/lang/String;
 
-    .line 167
-    .line 168
+    .line 159
+    .line 160
     goto :goto_6
 
-    .line 169
+    .line 161
     :cond_7
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 170
-    .line 171
-    .line 172
+    .line 162
+    .line 163
+    .line 164
     move-result-object v0
 
-    .line 173
+    .line 165
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A06:Ljava/lang/String;
 
-    .line 174
-    .line 175
+    .line 166
+    .line 167
     goto :goto_5
 
-    .line 176
+    .line 168
     :cond_8
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 177
-    .line 178
-    .line 179
+    .line 169
+    .line 170
+    .line 171
     move-result-object v1
 
-    .line 180
+    .line 172
     :cond_9
     iput-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A02:Lcom/google/common/collect/ImmutableList;
 
-    .line 181
-    .line 182
+    .line 173
+    .line 174
     return-void
 .end method
 
@@ -481,7 +465,7 @@
 
     const-string/jumbo v0, "geoAreas"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A03:Lcom/google/common/collect/ImmutableMap;
 
@@ -542,7 +526,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -562,7 +546,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -582,7 +566,7 @@
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -614,7 +598,7 @@
 
     .line 49
     .line 50
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 51
     .line 52
@@ -634,7 +618,7 @@
 
     .line 59
     .line 60
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 61
     .line 62
@@ -654,7 +638,7 @@
 
     .line 69
     .line 70
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 71
     .line 72
@@ -674,7 +658,7 @@
 
     .line 79
     .line 80
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 81
     .line 82
@@ -706,7 +690,7 @@
 
     .line 95
     .line 96
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 97
     .line 98
@@ -734,7 +718,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -750,7 +734,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -769,7 +753,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -799,7 +783,7 @@
 
     .line 32
     .line 33
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 34
     .line 35
@@ -818,7 +802,7 @@
 
     .line 41
     .line 42
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 43
     .line 44
@@ -837,7 +821,7 @@
 
     .line 50
     .line 51
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 52
     .line 53
@@ -856,7 +840,7 @@
 
     .line 59
     .line 60
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 61
     .line 62
@@ -871,33 +855,40 @@
 
     .line 66
     .line 67
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 68
     .line 69
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 70
-    move-result v1
-
     .line 71
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A02:Lcom/google/common/collect/ImmutableList;
-
     .line 72
-    .line 73
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 74
-    .line 75
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 76
-    .line 77
-    .line 78
     move-result v0
 
-    .line 79
+    .line 73
     add-int/2addr v1, v0
 
+    .line 74
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerLocalAlertData;->A02:Lcom/google/common/collect/ImmutableList;
+
+    .line 75
+    .line 76
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 77
+    .line 78
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 79
     .line 80
+    .line 81
+    move-result v0
+
+    .line 82
+    add-int/2addr v1, v0
+
+    .line 83
     return v1
 .end method
 
@@ -912,7 +903,7 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -921,7 +912,7 @@
 
     .line 7
     .line 8
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 9
     .line 10
@@ -953,7 +944,7 @@
 
     .line 24
     .line 25
-    invoke-static {p1, v0}, LX/0Yd;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableMap;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0F(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableMap;)LX/1tw;
 
     .line 26
     .line 27
@@ -974,7 +965,7 @@
 
     .line 34
     .line 35
-    invoke-static {p1, v1}, LX/0Yd;->A0c(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0n(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 36
     .line 37
@@ -983,7 +974,7 @@
 
     .line 39
     :cond_1
-    invoke-static {p1, v0}, LX/0Yc;->A01(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0E(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 40
     .line 41
@@ -1004,7 +995,7 @@
 
     .line 48
     .line 49
-    invoke-static {v1}, LX/0Ye;->A09(Ljava/util/Iterator;)I
+    invoke-static {v1}, LX/0X3;->A06(Ljava/util/Iterator;)I
 
     .line 50
     .line 51
@@ -1025,7 +1016,7 @@
 
     .line 58
     .line 59
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 60
     .line 61
@@ -1034,7 +1025,7 @@
 
     .line 63
     .line 64
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 65
     .line 66
@@ -1043,7 +1034,7 @@
 
     .line 68
     .line 69
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 70
     .line 71
@@ -1075,7 +1066,7 @@
 
     .line 85
     :cond_4
-    invoke-static {p1, v0}, LX/0Yc;->A01(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0E(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 86
     .line 87
@@ -1096,7 +1087,7 @@
 
     .line 94
     .line 95
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 96
     .line 97

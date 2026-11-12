@@ -1,325 +1,450 @@
-.class public final LX/3o6;
+.class public abstract LX/3o6;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final A00:LX/3tb;
+.field public static final A00:Lcom/facebook/common/json/FbJsonDeserializer;
+
+.field public static final A01:Ljava/util/concurrent/ConcurrentMap;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     .line 0
-    new-instance v0, LX/3v7;
+    invoke-static {}, LX/0X7;->A0j()Ljava/util/concurrent/ConcurrentHashMap;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/3v7;-><init>()V
+    .line 3
+    move-result-object v2
+
+    .line 4
+    sput-object v2, LX/3o6;->A01:Ljava/util/concurrent/ConcurrentMap;
+
+    .line 5
+    .line 6
+    new-instance v0, Lcom/facebook/common/json/FbJsonDeserializer;
+
+    .line 7
+    .line 8
+    invoke-direct {v0}, Lcom/facebook/common/json/FbJsonDeserializer;-><init>()V
+
+    .line 9
+    .line 10
+    .line 11
+    sput-object v0, LX/3o6;->A00:Lcom/facebook/common/json/FbJsonDeserializer;
+
+    .line 12
+    .line 13
+    const-class v1, LX/2Rs;
+
+    .line 14
+    .line 15
+    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/JsonNodeDeserializer;->A00:Lcom/fasterxml/jackson/databind/deser/std/JsonNodeDeserializer;
+
+    .line 16
+    .line 17
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    .line 20
+    const-class v1, Ljava/lang/String;
+
+    .line 21
+    .line 22
+    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/StringDeserializer;->A00:Lcom/fasterxml/jackson/databind/deser/std/StringDeserializer;
+
+    .line 23
+    .line 24
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 25
+    .line 26
+    .line 27
+    const-class v0, Ljava/lang/Integer;
+
+    .line 28
+    .line 29
+    invoke-static {v0, v2}, LX/3o6;->A01(Ljava/lang/Class;Ljava/util/AbstractMap;)V
+
+    .line 30
+    .line 31
+    .line 32
+    const-class v0, Ljava/lang/Long;
+
+    .line 33
+    .line 34
+    invoke-static {v0, v2}, LX/3o6;->A01(Ljava/lang/Class;Ljava/util/AbstractMap;)V
+
+    .line 35
+    .line 36
+    .line 37
+    const-class v0, Ljava/lang/Boolean;
+
+    .line 38
+    .line 39
+    invoke-static {v0, v2}, LX/3o6;->A01(Ljava/lang/Class;Ljava/util/AbstractMap;)V
+
+    .line 40
+    .line 41
+    .line 42
+    const-class v0, Ljava/lang/Float;
+
+    .line 43
+    .line 44
+    invoke-static {v0, v2}, LX/3o6;->A01(Ljava/lang/Class;Ljava/util/AbstractMap;)V
+
+    .line 45
+    .line 46
+    .line 47
+    const-class v0, Ljava/lang/Double;
+
+    .line 48
+    .line 49
+    invoke-static {v0, v2}, LX/3o6;->A01(Ljava/lang/Class;Ljava/util/AbstractMap;)V
+
+    .line 50
+    .line 51
+    .line 52
+    const-class v1, Landroid/net/Uri;
+
+    .line 53
+    .line 54
+    new-instance v0, Lcom/facebook/common/json/UriDeserializer;
+
+    .line 55
+    .line 56
+    invoke-direct {v0}, Lcom/facebook/common/json/UriDeserializer;-><init>()V
+
+    .line 57
+    .line 58
+    .line 59
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 60
+    .line 61
+    .line 62
+    const-class v1, LX/40a;
+
+    .line 63
+    .line 64
+    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/JacksonDeserializers$TokenBufferDeserializer;->A00:Lcom/fasterxml/jackson/databind/deser/std/JacksonDeserializers$TokenBufferDeserializer;
+
+    .line 65
+    .line 66
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 67
+    .line 68
+    .line 69
+    const-class v1, Ljava/lang/Object;
+
+    .line 70
+    .line 71
+    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/UntypedObjectDeserializer;->A00:Lcom/fasterxml/jackson/databind/deser/std/UntypedObjectDeserializer;
+
+    .line 72
+    .line 73
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 74
+    .line 75
+    .line 76
+    return-void
+.end method
+
+.method public static A00(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
+    .locals 5
+
+    .line 0
+    sget-object v4, LX/3o6;->A01:Ljava/util/concurrent/ConcurrentMap;
+
+    .line 1
+    .line 2
+    invoke-interface {v4, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, LX/3o6;->A00:LX/3tb;
+    move-result-object v0
 
     .line 6
+    check-cast v0, Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
     .line 7
-    return-void
+    .line 8
+    sget-object v3, LX/3o6;->A00:Lcom/facebook/common/json/FbJsonDeserializer;
+
+    .line 9
+    .line 10
+    if-ne v0, v3, :cond_1
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    :cond_0
+    return-object v0
+
+    .line 14
+    :cond_1
+    if-nez v0, :cond_0
+
+    .line 15
+    .line 16
+    const-class v0, LX/1gn;
+
+    .line 17
+    .line 18
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    if-eqz v0, :cond_4
+
+    .line 23
+    .line 24
+    new-instance v0, Lcom/facebook/common/json/TypeModelBase64Deserializer;
+
+    .line 25
+    .line 26
+    invoke-direct {v0}, Lcom/facebook/common/json/TypeModelBase64Deserializer;-><init>()V
+
+    .line 27
+    .line 28
+    .line 29
+    :goto_0
+    iput-object p0, v0, Lcom/facebook/common/json/FbJsonDeserializer;->A00:Ljava/lang/Class;
+
+    .line 30
+    .line 31
+    :cond_2
+    :goto_1
+    if-eqz v0, :cond_3
+
+    .line 32
+    .line 33
+    move-object v3, v0
+
+    .line 34
+    :cond_3
+    invoke-interface {v4, p0, v3}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 35
+    .line 36
+    .line 37
+    return-object v0
+
+    .line 38
+    :cond_4
+    const-class v0, LX/1H2;
+
+    .line 39
+    .line 40
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v0
+
+    .line 44
+    if-eqz v0, :cond_5
+
+    .line 45
+    .line 46
+    new-instance v0, Lcom/facebook/common/json/TreeFragmentModelBase64Deserializer;
+
+    .line 47
+    .line 48
+    invoke-direct {v0, p0}, Lcom/facebook/common/json/TreeFragmentModelBase64Deserializer;-><init>(Ljava/lang/Class;)V
+
+    .line 49
+    .line 50
+    .line 51
+    goto :goto_1
+
+    .line 52
+    :cond_5
+    const-class v0, LX/3o9;
+
+    .line 53
+    .line 54
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    .line 55
+    .line 56
+    .line 57
+    move-result v0
+
+    .line 58
+    if-eqz v0, :cond_6
+
+    .line 59
+    .line 60
+    new-instance v0, Lcom/facebook/common/json/FBJsonSelfDeserializer;
+
+    .line 61
+    .line 62
+    invoke-direct {v0}, Lcom/facebook/common/json/FBJsonSelfDeserializer;-><init>()V
+
+    .line 63
+    .line 64
+    .line 65
+    goto :goto_0
+
+    .line 66
+    :cond_6
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v2
+
+    .line 70
+    const/16 v1, 0x24
+
+    .line 71
+    .line 72
+    const/16 v0, 0x5f
+
+    .line 73
+    .line 74
+    invoke-virtual {v2, v1, v0}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    .line 75
+    .line 76
+    .line 77
+    move-result-object v1
+
+    .line 78
+    const-string v0, "Deserializer"
+
+    .line 79
+    .line 80
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 81
+    .line 82
+    .line 83
+    move-result-object v0
+
+    .line 84
+    :try_start_0
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object v0
+
+    .line 88
+    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+
+    .line 89
+    .line 90
+    .line 91
+    move-result-object v0
+
+    .line 92
+    check-cast v0, Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    .line 93
+    .line 94
+    if-nez v0, :cond_2
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ExceptionInInitializerError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 95
+    .line 96
+    :catch_0
+    const-string v0, "$Deserializer"
+
+    .line 97
+    .line 98
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 99
+    .line 100
+    .line 101
+    move-result-object v0
+
+    .line 102
+    :try_start_1
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    .line 103
+    .line 104
+    .line 105
+    move-result-object v0
+
+    .line 106
+    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+
+    .line 107
+    .line 108
+    .line 109
+    move-result-object v0
+
+    .line 110
+    check-cast v0, Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    .line 111
+    .line 112
+    goto :goto_1
+    :try_end_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/ExceptionInInitializerError; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/InstantiationException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 113
+    :catch_1
+    const/4 v0, 0x0
+
+    .line 114
+    goto :goto_1
 .end method
 
-.method public constructor <init>()V
-    .locals 0
+.method public static A01(Ljava/lang/Class;Ljava/util/AbstractMap;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     .line 1
     .line 2
     .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-static {p0, v0}, LX/6J2;->A00(Ljava/lang/Class;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/deser/std/StdScalarDeserializer;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-virtual {p1, p0, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    .line 11
     return-void
-.end method
-
-.method public static final A00(LX/4mm;LX/3R0;LX/0po;Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3vH;LX/3nu;LX/3qh;LX/3o5;LX/3q6;LX/3tb;LX/3Wj;LX/3hk;LX/3oT;LX/2JT;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/util/concurrent/atomic/AtomicBoolean;FZ)V
-    .locals 25
-    .param p2    # LX/0po;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        .end annotation
-    .end param
-    .param p3    # Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        .end annotation
-    .end param
-    .param p4    # LX/3vH;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        .end annotation
-    .end param
-    .param p5    # LX/3nu;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        .end annotation
-    .end param
-    .param p6    # LX/3qh;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        .end annotation
-    .end param
-    .param p7    # LX/3o5;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        .end annotation
-    .end param
-    .param p8    # LX/3q6;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        .end annotation
-    .end param
-    .param p9    # LX/3tb;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        .end annotation
-    .end param
-    .param p10    # LX/3Wj;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p11    # LX/3hk;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p12    # LX/3oT;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p13    # LX/2JT;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p14    # Ljava/lang/Integer;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p15    # Ljava/lang/Integer;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p16    # Ljava/lang/Integer;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p17    # Ljava/util/concurrent/atomic/AtomicBoolean;
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p18    # F
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-    .param p19    # Z
-        .annotation runtime Lcom/facebook/litho/annotations/Prop;
-            optional = true
-        .end annotation
-    .end param
-
-    const/4 v4, 0x0
-
-    .line 374491
-    move-object/from16 v5, p10
-
-    move-object/from16 v6, p8
-
-    move-object/from16 v14, p5
-
-    invoke-static {v6, v5, v14}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 374492
-    const/4 v0, 0x4
-
-    .line 374493
-    move-object/from16 v10, p1
-
-    move-object/from16 v12, p3
-
-    invoke-static {v12, v0, v10}, LX/0Yd;->A0o(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    .line 374494
-    const/16 v0, 0x29
-
-    move-object/from16 v8, p17
-
-    invoke-static {v8, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    const-string v0, "GrootVideoComponentSpec.onMount"
-
-    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
-
-    .line 374495
-    :try_start_0
-    sget v0, LX/2eq;->Acw:I
-
-    .line 374496
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    .line 374497
-    check-cast v9, LX/3Wi;
-
-    .line 374498
-    invoke-virtual {v5}, LX/3Wj;->A03()Ljava/lang/String;
-
-    move-result-object v3
-
-    move-object/from16 v7, p0
-
-    if-eqz p16, :cond_0
-
-    .line 374499
-    invoke-virtual/range {p16 .. p16}, Ljava/lang/Number;->intValue()I
-
-    move-result v2
-
-    if-lez v2, :cond_0
-
-    .line 374500
-    invoke-static {v3}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 374501
-    iget-object v0, v9, LX/3Wi;->A08:LX/1Nm;
-
-    .line 374502
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 374503
-    check-cast v0, LX/3Ws;
-
-    .line 374504
-    iget-object v1, v0, LX/3Ws;->A02:LX/20m;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v3, v0}, LX/20m;->A03(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 374505
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    .line 374506
-    iget-object v0, v7, LX/4mm;->A01:LX/4mg;
-
-    .line 374507
-    if-eqz v0, :cond_0
-
-    .line 374508
-    const/high16 v2, -0x80000000
-
-    .line 374509
-    invoke-static {v1}, LX/0Yh;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 374510
-    new-instance v0, LX/2VA;
-
-    invoke-direct {v0, v1, v2}, LX/2VA;-><init>([Ljava/lang/Object;I)V
-
-    .line 374511
-    invoke-virtual {v7, v0}, LX/4mm;->A07(LX/2VA;)V
-
-    .line 374512
-    :cond_0
-    invoke-virtual {v8}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 374513
-    invoke-static {v3}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 374514
-    iget-object v0, v9, LX/3Wi;->A08:LX/1Nm;
-
-    .line 374515
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 374516
-    check-cast v0, LX/3Ws;
-
-    .line 374517
-    iget-object v1, v0, LX/3Ws;->A02:LX/20m;
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v3, v0}, LX/20m;->A03(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 374518
-    invoke-virtual {v8, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 374519
-    :cond_1
-    sget-object v8, LX/3nx;->A00:LX/3nx;
-
-    .line 374520
-    iget-object v9, v7, LX/4mm;->A0C:Landroid/content/Context;
-
-    .line 374521
-    invoke-static {v9}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 374522
-    move-object/from16 v21, p12
-
-    move-object/from16 v20, p11
-
-    move-object/from16 v18, p9
-
-    move-object/from16 v16, p7
-
-    move/from16 p1, p19
-
-    move-object/from16 v15, p6
-
-    move/from16 p0, p18
-
-    move-object/from16 v13, p4
-
-    move-object/from16 v24, p15
-
-    move-object/from16 v11, p2
-
-    move-object/from16 v23, p14
-
-    move-object/from16 v22, p13
-
-    move-object/from16 v19, v5
-
-    move-object/from16 v17, v6
-
-    invoke-virtual/range {v8 .. v26}, LX/3nx;->A00(Landroid/content/Context;LX/3R0;LX/0po;Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3vH;LX/3nu;LX/3qh;LX/3o5;LX/3q6;LX/3tb;LX/3Wj;LX/3hk;LX/3oT;LX/2JT;Ljava/lang/Integer;Ljava/lang/Integer;FZ)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
-    throw v0
 .end method

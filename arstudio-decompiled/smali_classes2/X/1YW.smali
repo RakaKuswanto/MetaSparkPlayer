@@ -1,174 +1,29 @@
-.class public final LX/1YW;
+.class public abstract LX/1yW;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/21i;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CheckApprovedMachineMethod"
+.field public static final A00:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/ThreadLocal;
 
     .line 1
     .line 2
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/1yW;->A00:Ljava/lang/ThreadLocal;
+
+    .line 6
+    .line 7
     return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic ALJ(Ljava/lang/Object;)LX/222;
-    .locals 3
-
-    .line 0
-    check-cast p1, Lcom/facebook/account/twofac/protocol/CheckApprovedMachineParams;
-
-    .line 1
-    .line 2
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v2
-
-    .line 6
-    iget-wide v0, p1, Lcom/facebook/account/twofac/protocol/CheckApprovedMachineParams;->A00:J
-
-    .line 7
-    .line 8
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    const-string/jumbo v0, "u"
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-static {v0, v1, v2}, LX/0Yc;->A1T(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
-
-    .line 16
-    .line 17
-    .line 18
-    iget-object v1, p1, Lcom/facebook/account/twofac/protocol/CheckApprovedMachineParams;->A01:Ljava/lang/String;
-
-    .line 19
-    .line 20
-    const-string/jumbo v0, "m"
-
-    .line 21
-    .line 22
-    .line 23
-    invoke-static {v0, v1, v2}, LX/0Yc;->A1T(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
-
-    .line 24
-    .line 25
-    .line 26
-    invoke-static {}, LX/221;->A03()LX/221;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v1
-
-    .line 30
-    const-string v0, "checkApprovedMachine"
-
-    .line 31
-    .line 32
-    iput-object v0, v1, LX/221;->A0D:Ljava/lang/String;
-
-    .line 33
-    .line 34
-    const-string v0, "GET"
-
-    .line 35
-    .line 36
-    iput-object v0, v1, LX/221;->A0E:Ljava/lang/String;
-
-    .line 37
-    .line 38
-    const-string v0, "check_approved_machine"
-
-    .line 39
-    .line 40
-    iput-object v0, v1, LX/221;->A0F:Ljava/lang/String;
-
-    .line 41
-    .line 42
-    iput-object v2, v1, LX/221;->A0J:Ljava/util/List;
-
-    .line 43
-    .line 44
-    sget-object v0, Lcom/facebook/http/interfaces/RequestPriority;->INTERACTIVE:Lcom/facebook/http/interfaces/RequestPriority;
-
-    .line 45
-    .line 46
-    invoke-virtual {v1, v0}, LX/221;->A05(Lcom/facebook/http/interfaces/RequestPriority;)V
-
-    .line 47
-    .line 48
-    .line 49
-    sget-object v0, LX/014;->A0B:Ljava/lang/Integer;
-
-    .line 50
-    .line 51
-    iput-object v0, v1, LX/221;->A06:Ljava/lang/Integer;
-
-    .line 52
-    .line 53
-    invoke-static {v1}, LX/221;->A01(LX/221;)LX/222;
-
-    .line 54
-    .line 55
-    .line 56
-    move-result-object v0
-
-    .line 57
-    return-object v0
-.end method
-
-.method public final bridge synthetic ALS(LX/1wn;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    invoke-virtual {p1}, LX/1wn;->A04()V
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p1}, LX/1wn;->A01()LX/27m;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v1
-
-    .line 7
-    const-class v0, Lcom/facebook/account/twofac/protocol/CheckApprovedMachineMethod$Result;
-
-    .line 8
-    .line 9
-    invoke-virtual {v1, v0}, LX/27m;->A0z(Ljava/lang/Class;)Ljava/lang/Object;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    return-object v0
 .end method

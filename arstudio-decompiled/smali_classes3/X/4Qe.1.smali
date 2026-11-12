@@ -1,18 +1,17 @@
 .class public final LX/4Qe;
-.super Landroid/text/method/LinkMovementMethod;
+.super LX/4Qd;
 .source ""
 
-
-# static fields
-.field public static A00:LX/4Qe;
+# interfaces
+.implements LX/4q4;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/content/Context;Landroid/view/View;Landroid/view/ViewGroup;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Landroid/text/method/LinkMovementMethod;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, LX/4Qd;-><init>(Landroid/content/Context;Landroid/view/View;Landroid/view/ViewGroup;)V
 
     .line 1
     .line 2
@@ -22,146 +21,34 @@
 
 
 # virtual methods
-.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
-    .locals 6
+.method public final A2f(Landroid/view/View;)V
+    .locals 1
 
     .line 0
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
+    iget-object v0, p0, LX/4Qd;->A00:LX/4Qc;
 
     .line 1
     .line 2
+    invoke-virtual {v0, p1}, LX/4Qc;->A00(Landroid/view/View;)V
+
     .line 3
-    move-result v0
-
     .line 4
-    const/4 v4, 0x1
-
     .line 5
-    if-eq v0, v4, :cond_0
+    return-void
+.end method
 
-    .line 6
-    .line 7
-    if-nez v0, :cond_1
+.method public final AhK(Landroid/view/View;)V
+    .locals 1
 
-    .line 8
-    .line 9
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
+    .line 0
+    iget-object v0, p0, LX/4Qd;->A00:LX/4Qc;
 
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/4Qc;->A01(Landroid/view/View;)V
 
-    .line 13
-    float-to-int v5, v0
-
-    .line 14
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
-
-    .line 18
-    float-to-int v1, v0
-
-    .line 19
-    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    sub-int/2addr v5, v0
-
-    .line 24
-    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v0
-
-    .line 28
-    sub-int/2addr v1, v0
-
-    .line 29
-    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
-
-    .line 30
-    .line 31
-    .line 32
-    move-result v0
-
-    .line 33
-    add-int/2addr v5, v0
-
-    .line 34
-    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
-
-    .line 35
-    .line 36
-    .line 37
-    move-result v0
-
-    .line 38
-    add-int/2addr v1, v0
-
-    .line 39
-    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v3
-
-    .line 43
-    invoke-virtual {v3, v1}, Landroid/text/Layout;->getLineForVertical(I)I
-
-    .line 44
-    .line 45
-    .line 46
-    move-result v2
-
-    .line 47
-    int-to-float v0, v5
-
-    .line 48
-    invoke-virtual {v3, v2, v0}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
-
-    .line 49
-    .line 50
-    .line 51
-    move-result v1
-
-    .line 52
-    invoke-virtual {v3, v2}, Landroid/text/Layout;->getLineVisibleEnd(I)I
-
-    .line 53
-    .line 54
-    .line 55
-    move-result v0
-
-    .line 56
-    if-lt v1, v0, :cond_1
-
-    .line 57
-    .line 58
-    return v4
-
-    .line 59
-    :cond_1
-    invoke-super {p0, p1, p2, p3}, Landroid/text/method/LinkMovementMethod;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
-
-    .line 60
-    .line 61
-    .line 62
-    move-result v4
-
-    .line 63
-    return v4
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method

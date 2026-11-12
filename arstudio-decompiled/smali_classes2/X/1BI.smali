@@ -1,18 +1,14 @@
 .class public final LX/1BI;
-.super LX/1Bn;
+.super LX/1BJ;
 .source ""
-
-# interfaces
-.implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/0yO;
 
 
 # direct methods
-.method public constructor <init>(I[I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0}, LX/1BJ;-><init>()V
 
     .line 1
     .line 2

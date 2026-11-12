@@ -31,11 +31,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x61
+    const/16 v0, 0x48
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -59,51 +59,31 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A0L(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 4
     .line 5
     .line 6
-    move-result v0
+    move-result-object v0
 
     .line 7
-    if-nez v0, :cond_0
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/MusicSaveParams;->A01:Ljava/lang/String;
 
     .line 8
     .line 9
-    const/4 v0, 0x0
-
-    .line 10
-    :goto_0
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/MusicSaveParams;->A01:Ljava/lang/String;
-
-    .line 11
-    .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 13
-    .line 14
-    .line 15
+    .line 10
+    .line 11
+    .line 12
     move-result v0
 
-    .line 16
+    .line 13
     iput v0, p0, Lcom/facebook/photos/creativeediting/model/MusicSaveParams;->A00:I
 
-    .line 17
-    .line 18
+    .line 14
+    .line 15
     return-void
-
-    .line 19
-    :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    goto :goto_0
 .end method
 
 .method public constructor <init>(Ljava/lang/String;I)V
@@ -162,7 +142,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -202,7 +182,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -232,7 +212,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yc;->A0D(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0k(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 3
     .line 4

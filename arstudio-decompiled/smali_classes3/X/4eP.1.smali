@@ -1,258 +1,67 @@
-.class public LX/4eP;
-.super Ljava/lang/Object;
+.class public final LX/4eP;
+.super Ljava/lang/RuntimeException;
 .source ""
 
 
-# instance fields
-.field public A00:LX/4ej;
-
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:I
-
-.field public A04:Ljava/nio/ByteBuffer;
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/String;)V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/4ej;->A00:LX/4ej;
+    move-result v3
 
     .line 4
-    .line 5
-    if-nez v0, :cond_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataSize()I
 
+    .line 5
     .line 6
     .line 7
-    new-instance v0, LX/4ei;
-
-    .line 8
-    .line 9
-    invoke-direct {v0}, LX/4ei;-><init>()V
-
-    .line 10
-    .line 11
-    .line 12
-    sput-object v0, LX/4ej;->A00:LX/4ej;
-
-    .line 13
-    .line 14
-    :cond_0
-    iput-object v0, p0, LX/4eP;->A00:LX/4ej;
-
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public static A00(LX/4eP;)I
-    .locals 3
-
-    .line 0
-    const/4 v0, 0x4
-
-    .line 1
-    invoke-virtual {p0, v0}, LX/4eP;->A03(I)I
-
-    .line 2
-    .line 3
-    .line 4
     move-result v2
 
-    .line 5
-    if-eqz v2, :cond_0
-
-    .line 6
-    .line 7
-    iget-object v1, p0, LX/4eP;->A04:Ljava/nio/ByteBuffer;
-
     .line 8
-    .line 9
-    iget v0, p0, LX/4eP;->A01:I
+    invoke-static {p2}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     .line 10
     .line 11
-    add-int/2addr v2, v0
+    move-result-object v1
 
     .line 12
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->getInt(I)I
+    const-string v0, " Parcel: pos="
 
     .line 13
     .line 14
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 15
-    move-result v0
-
     .line 16
-    return v0
-
     .line 17
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 18
-    return v0
-.end method
-
-.method public static A01(LX/4eP;I)I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/4eP;->A01:I
-
-    .line 1
-    .line 2
-    add-int/2addr p1, v0
-
-    .line 3
-    iget-object v0, p0, LX/4eP;->A04:Ljava/nio/ByteBuffer;
-
-    .line 4
-    .line 5
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->getInt(I)I
-
-    .line 6
-    .line 7
-    .line 8
-    move-result v0
-
-    .line 9
-    add-int/2addr p1, v0
-
-    .line 10
-    iget-object v0, p0, LX/4eP;->A04:Ljava/nio/ByteBuffer;
-
-    .line 11
-    .line 12
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->getInt(I)I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
-    return v0
-.end method
-
-.method public static A02(LX/4eP;I)I
-    .locals 3
-
-    .line 0
-    const/16 v0, 0x10
-
-    .line 1
-    .line 2
-    invoke-virtual {p0, v0}, LX/4eP;->A03(I)I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v1
-
-    .line 6
-    if-eqz v1, :cond_0
-
-    .line 7
-    .line 8
-    iget-object v2, p0, LX/4eP;->A04:Ljava/nio/ByteBuffer;
-
-    .line 9
-    .line 10
-    iget v0, p0, LX/4eP;->A01:I
-
-    .line 11
-    .line 12
-    add-int/2addr v1, v0
-
-    .line 13
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->getInt(I)I
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    add-int/2addr v1, v0
-
-    .line 18
-    add-int/lit8 v1, v1, 0x4
-
     .line 19
     .line 20
-    mul-int/lit8 v0, p1, 0x4
+    const-string v0, " size="
 
     .line 21
     .line 22
-    add-int/2addr v1, v0
+    invoke-static {v0, v1, v2}, LX/001;->A0P(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
     .line 23
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->getInt(I)I
-
     .line 24
     .line 25
+    move-result-object v0
+
     .line 26
-    move-result v0
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     .line 27
-    return v0
-
     .line 28
-    :cond_0
-    const/4 v0, 0x0
-
     .line 29
-    return v0
-.end method
-
-
-# virtual methods
-.method public final A03(I)I
-    .locals 2
-
-    .line 0
-    iget v0, p0, LX/4eP;->A02:I
-
-    .line 1
-    .line 2
-    if-ge p1, v0, :cond_0
-
-    .line 3
-    .line 4
-    iget-object v1, p0, LX/4eP;->A04:Ljava/nio/ByteBuffer;
-
-    .line 5
-    .line 6
-    iget v0, p0, LX/4eP;->A03:I
-
-    .line 7
-    .line 8
-    add-int/2addr v0, p1
-
-    .line 9
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
-
-    .line 13
-    return v0
-
-    .line 14
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 15
-    return v0
+    return-void
 .end method

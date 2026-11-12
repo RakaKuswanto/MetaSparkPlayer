@@ -2,130 +2,203 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "BufferedDiskCache$put$1$1"
+
 
 # instance fields
-.field public A00:LX/0ZF;
+.field public final synthetic A00:LX/3Pi;
+
+.field public final synthetic A01:LX/3NB;
+
+.field public final synthetic A02:LX/3Mp;
 
 
 # direct methods
-.method public constructor <init>(LX/0ZF;)V
+.method public constructor <init>(LX/3Pi;LX/3NB;LX/3Mp;)V
     .locals 0
 
-    .line 0
+    iput-object p2, p0, LX/3Nr;->A01:LX/3NB;
+
+    iput-object p1, p0, LX/3Nr;->A00:LX/3Pi;
+
+    iput-object p3, p0, LX/3Nr;->A02:LX/3Mp;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/3Nr;->A00:LX/0ZF;
-
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Ljava/lang/String;)Z
-    .locals 5
+.method public final run()V
+    .locals 8
 
     .line 0
-    const/4 v4, 0x0
+    :try_start_0
+    iget-object v7, p0, LX/3Nr;->A01:LX/3NB;
 
     .line 1
-    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
-
     .line 2
+    iget-object v6, p0, LX/3Nr;->A00:LX/3Pi;
+
     .line 3
     .line 4
-    move-result v0
+    iget-object v5, p0, LX/3Nr;->A02:LX/3Mp;
 
     .line 5
-    if-nez v0, :cond_0
-
     .line 6
+    const-class v4, LX/3NB;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 7
-    iget-object v2, p0, LX/3Nr;->A00:LX/0ZF;
-
     .line 8
-    .line 9
-    const-wide v0, 0x83003a002b007eL
+    :try_start_1
+    iget-object v1, v7, LX/3NB;->A00:LX/3Oe;
 
+    .line 9
     .line 10
+    new-instance v0, LX/3O2;
+
     .line 11
     .line 12
+    invoke-direct {v0, v7, v5}, LX/3O2;-><init>(LX/3NB;LX/3Mp;)V
+
     .line 13
     .line 14
-    invoke-interface {v2, v0, v1}, LX/35B;->AMY(J)Ljava/lang/String;
-
     .line 15
+    invoke-interface {v1, v6, v0}, LX/3Oe;->AO6(LX/3Pi;LX/3O2;)LX/3QP;
+
     .line 16
     .line 17
-    move-result-object v1
-
     .line 18
-    if-eqz v1, :cond_0
+    goto :goto_0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 19
+    :catch_0
+    :try_start_2
+    move-exception v3
+
     .line 20
-    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 21
     .line 22
     .line 23
-    move-result v0
+    move-result-object v2
 
     .line 24
-    if-nez v0, :cond_0
-
-    .line 25
-    .line 26
-    invoke-static {v1}, LX/0Yi;->A1b(Ljava/lang/String;)[Ljava/lang/String;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v3
-
-    .line 30
-    array-length v2, v3
-
-    .line 31
     const/4 v1, 0x0
 
+    .line 25
+    invoke-interface {v6}, LX/3Pi;->AMA()Ljava/lang/String;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    aput-object v0, v2, v1
+
+    .line 30
+    .line 31
+    const-string v0, "Failed to write to disk-cache for key %s"
+
     .line 32
-    :goto_0
-    if-ge v1, v2, :cond_0
-
     .line 33
-    .line 34
-    aget-object v0, v3, v1
+    invoke-static {v4, v0, v3, v2}, LX/0HP;->A04(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 34
     .line 35
     .line 36
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    :goto_0
+    iget-object v0, v7, LX/3NB;->A03:LX/3NC;
 
     .line 37
     .line 38
+    invoke-static {v5}, LX/0WV;->A07(Ljava/lang/Object;)V
+
     .line 39
-    move-result v0
-
     .line 40
-    if-eqz v0, :cond_1
-
     .line 41
+    invoke-virtual {v0, v6, v5}, LX/3NC;->A04(LX/3Pi;LX/3Mp;)V
+
     .line 42
-    const/4 v4, 0x1
-
     .line 43
-    :cond_0
-    return v4
-
     .line 44
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
+    if-eqz v5, :cond_0
 
     .line 45
     .line 46
-    goto :goto_0
+    invoke-virtual {v5}, LX/3Mp;->close()V
+
+    .line 47
+    .line 48
+    .line 49
+    :cond_0
+    return-void
+
+    .line 50
+    :catchall_0
+    move-exception v0
+
+    .line 51
+    :try_start_3
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 52
+    :catchall_1
+    move-exception v3
+
+    .line 53
+    iget-object v0, p0, LX/3Nr;->A01:LX/3NB;
+
+    .line 54
+    .line 55
+    iget-object v2, v0, LX/3NB;->A03:LX/3NC;
+
+    .line 56
+    .line 57
+    iget-object v1, p0, LX/3Nr;->A00:LX/3Pi;
+
+    .line 58
+    .line 59
+    iget-object v0, p0, LX/3Nr;->A02:LX/3Mp;
+
+    .line 60
+    .line 61
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 62
+    .line 63
+    .line 64
+    invoke-virtual {v2, v1, v0}, LX/3NC;->A04(LX/3Pi;LX/3Mp;)V
+
+    .line 65
+    .line 66
+    .line 67
+    if-eqz v0, :cond_1
+
+    .line 68
+    .line 69
+    invoke-virtual {v0}, LX/3Mp;->close()V
+
+    .line 70
+    .line 71
+    .line 72
+    :cond_1
+    throw v3
 .end method

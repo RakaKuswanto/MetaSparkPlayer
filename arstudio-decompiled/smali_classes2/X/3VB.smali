@@ -1,43 +1,25 @@
 .class public final LX/3VB;
-.super Ljava/lang/Object;
+.super LX/20G;
 .source ""
 
 
 # instance fields
-.field public final A00:J
-
-.field public final A01:LX/3V1;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Z
+.field public final A00:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public constructor <init>(LX/3V1;Ljava/lang/String;JZ)V
+.method public constructor <init>(Landroid/graphics/RectF;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/20G;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-wide p3, p0, LX/3VB;->A00:J
+    iput-object p1, p0, LX/3VB;->A00:Landroid/graphics/RectF;
 
     .line 4
     .line 5
-    iput-boolean p5, p0, LX/3VB;->A03:Z
-
-    .line 6
-    .line 7
-    iput-object p2, p0, LX/3VB;->A02:Ljava/lang/String;
-
-    .line 8
-    .line 9
-    iput-object p1, p0, LX/3VB;->A01:LX/3V1;
-
-    .line 10
-    .line 11
     return-void
 .end method

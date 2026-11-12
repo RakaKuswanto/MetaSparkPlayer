@@ -1,88 +1,162 @@
-.class public final LX/2fe;
-.super LX/3GC;
+.class public final LX/2fE;
+.super LX/2f8;
 .source ""
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/2f8;
 
-.field public final A01:[[I
+.field public final A01:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 6
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/3GC;-><init>()V
+    invoke-direct {p0}, LX/2f8;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v5, 0x0
+    sget v0, LX/2I6;->A0z:I
 
     .line 4
-    invoke-static {p1, v5}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
-
     .line 5
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 6
     .line 7
+    .line 8
     move-result-object v0
 
-    .line 8
-    iput-object v0, p0, LX/2fe;->A00:LX/1zG;
-
     .line 9
-    .line 10
-    const/4 v4, 0x2
+    iput-object v0, p0, LX/2fE;->A01:LX/0RP;
 
+    .line 10
     .line 11
-    new-array v3, v4, [[I
+    invoke-virtual {v0}, LX/0lf;->get()Ljava/lang/Object;
 
     .line 12
     .line 13
-    const/4 v2, 0x1
-
     .line 14
-    new-array v1, v2, [I
+    move-result-object v1
 
     .line 15
+    check-cast v1, Lcom/facebook/traffic/monitor/api/ITrafficTransportMonitor;
+
     .line 16
-    const/16 v0, 0x41
-
     .line 17
+    new-instance v0, LX/2fF;
+
     .line 18
-    aput v0, v1, v5
-
     .line 19
-    .line 20
-    aput-object v1, v3, v5
+    invoke-direct {v0, v1}, LX/2fF;-><init>(Lcom/facebook/traffic/monitor/api/ITrafficTransportMonitor;)V
 
+    .line 20
     .line 21
     .line 22
-    new-array v0, v4, [I
+    iput-object v0, p0, LX/2fE;->A00:LX/2f8;
 
     .line 23
     .line 24
-    fill-array-data v0, :array_0
-
-    .line 25
-    .line 26
-    .line 27
-    aput-object v0, v3, v2
-
-    .line 28
-    .line 29
-    iput-object v3, p0, LX/2fe;->A01:[[I
-
-    .line 30
-    .line 31
     return-void
+.end method
 
-    .line 32
-    :array_0
-    .array-data 4
-        0x49
-        0x5e
-    .end array-data
+
+# virtual methods
+.method public final bridge synthetic A70(LX/2Vl;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2fE;->A00:LX/2f8;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1, p2, p3}, LX/2fA;->A70(LX/2Vl;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 3
+    .line 4
+    .line 5
+    sget-object v0, LX/1yI;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 6
+    .line 7
+    return-object v0
+.end method
+
+.method public final AJA()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2fE;->A00:LX/2f8;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/2fA;->AJA()Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final AJB()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2fE;->A00:LX/2f8;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/2fA;->AJB()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final AKo()Ljava/lang/Class;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2fE;->A00:LX/2f8;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/2fA;->AKo()Ljava/lang/Class;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final AOp(LX/3Jz;)Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2fE;->A00:LX/2f8;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1}, LX/2fA;->AOp(LX/3Jz;)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
 .end method

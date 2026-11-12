@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/3aN;
+.field public static final Companion:LX/0w3;
 
 
 # direct methods
@@ -12,28 +12,29 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/3aN;
+    new-instance v0, LX/0w3;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/3aN;-><init>()V
+    invoke-direct {v0}, LX/0w3;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/distribgw/client/tigon/TigonDGWNetworkStackWrapperHolder;->Companion:LX/3aN;
+    sput-object v0, Lcom/facebook/distribgw/client/tigon/TigonDGWNetworkStackWrapperHolder;->Companion:LX/0w3;
 
     .line 6
     .line 7
-    const-string v0, "distribgw-tigon-jni"
+    const-string/jumbo v0, "distribgw-tigon-jni"
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 10
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 11
     .line 12
+    .line 13
     return-void
 .end method
 
@@ -49,7 +50,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, LX/0PS;->A07(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 5
     .line 6

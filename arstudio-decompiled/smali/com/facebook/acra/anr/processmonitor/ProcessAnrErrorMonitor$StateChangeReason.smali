@@ -22,189 +22,253 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 15
+.method public static synthetic $values()[Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    .locals 3
 
     .line 0
-    const-string v0, "MONITOR_STARTED"
+    const/4 v0, 0x7
 
     .line 1
-    .line 2
-    const/4 v14, 0x0
+    new-array v2, v0, [Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
+    .line 2
     .line 3
-    new-instance v13, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MONITOR_STARTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 4
     .line 5
-    invoke-direct {v13, v0, v14}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_CLEARED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_DETECTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_BEFORE_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_AFTER_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+
+    .line 24
+    .line 25
+    const/4 v0, 0x4
+
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
+    .line 28
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->STOP_REQUESTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+
+    .line 29
+    .line 30
+    const/4 v0, 0x5
+
+    .line 31
+    aput-object v1, v2, v0
+
+    .line 32
+    .line 33
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_QUERYING_ACTIVITY_MANAGER:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+
+    .line 34
+    .line 35
+    const/4 v0, 0x6
+
+    .line 36
+    aput-object v1, v2, v0
+
+    .line 37
+    .line 38
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "MONITOR_STARTED"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v13, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MONITOR_STARTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sput-object v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MONITOR_STARTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 9
     .line 10
-    const-string v0, "ERROR_CLEARED"
+    const-string v2, "ERROR_CLEARED"
 
     .line 11
     .line 12
-    const/4 v12, 0x1
+    const/4 v1, 0x1
 
     .line 13
-    new-instance v11, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    new-instance v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 14
     .line 15
-    invoke-direct {v11, v0, v12}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v11, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_CLEARED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sput-object v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_CLEARED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 19
     .line 20
-    const-string v0, "ERROR_DETECTED"
+    const-string v2, "ERROR_DETECTED"
 
     .line 21
     .line 22
-    const/4 v10, 0x2
+    const/4 v1, 0x2
 
     .line 23
-    new-instance v9, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    new-instance v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 24
     .line 25
-    invoke-direct {v9, v0, v10}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v9, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_DETECTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sput-object v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_DETECTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 29
     .line 30
-    const-string v0, "MAX_NUMBER_BEFORE_ERROR"
+    const-string v2, "MAX_NUMBER_BEFORE_ERROR"
 
     .line 31
     .line 32
-    const/4 v8, 0x3
+    const/4 v1, 0x3
 
     .line 33
-    new-instance v7, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    new-instance v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 34
     .line 35
-    invoke-direct {v7, v0, v8}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
 
     .line 36
     .line 37
     .line 38
-    sput-object v7, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_BEFORE_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sput-object v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_BEFORE_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 39
     .line 40
-    const-string v0, "MAX_NUMBER_AFTER_ERROR"
+    const-string v2, "MAX_NUMBER_AFTER_ERROR"
 
     .line 41
     .line 42
-    const/4 v6, 0x4
+    const/4 v1, 0x4
 
     .line 43
-    new-instance v5, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    new-instance v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 44
     .line 45
-    invoke-direct {v5, v0, v6}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
 
     .line 46
     .line 47
     .line 48
-    sput-object v5, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_AFTER_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sput-object v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_AFTER_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 49
     .line 50
-    const-string v0, "STOP_REQUESTED"
+    const-string v2, "STOP_REQUESTED"
 
     .line 51
     .line 52
-    const/4 v4, 0x5
+    const/4 v1, 0x5
 
     .line 53
-    new-instance v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    new-instance v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 54
     .line 55
-    invoke-direct {v3, v0, v4}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
 
     .line 56
     .line 57
     .line 58
-    sput-object v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->STOP_REQUESTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sput-object v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->STOP_REQUESTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 59
     .line 60
-    const-string v0, "ERROR_QUERYING_ACTIVITY_MANAGER"
+    const-string v2, "ERROR_QUERYING_ACTIVITY_MANAGER"
 
     .line 61
     .line 62
-    const/4 v2, 0x6
+    const/4 v1, 0x6
 
     .line 63
-    new-instance v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    new-instance v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 64
     .line 65
-    invoke-direct {v1, v0, v2}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;-><init>(Ljava/lang/String;I)V
 
     .line 66
     .line 67
     .line 68
-    sput-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_QUERYING_ACTIVITY_MANAGER:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sput-object v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_QUERYING_ACTIVITY_MANAGER:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 69
     .line 70
-    const/4 v0, 0x7
+    invoke-static {}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->$values()[Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 71
-    new-array v0, v0, [Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
-
     .line 72
     .line 73
-    aput-object v13, v0, v14
+    move-result-object v0
 
     .line 74
-    .line 75
-    aput-object v11, v0, v12
-
-    .line 76
-    .line 77
-    aput-object v9, v0, v10
-
-    .line 78
-    .line 79
-    aput-object v7, v0, v8
-
-    .line 80
-    .line 81
-    aput-object v5, v0, v6
-
-    .line 82
-    .line 83
-    aput-object v3, v0, v4
-
-    .line 84
-    .line 85
-    aput-object v1, v0, v2
-
-    .line 86
-    .line 87
     sput-object v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->$VALUES:[Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
-    .line 88
-    .line 89
+    .line 75
+    .line 76
     return-void
 .end method
 

@@ -1,121 +1,232 @@
-.class public final LX/3Qi;
-.super Ljava/lang/Object;
+.class public final enum LX/3Qi;
+.super Ljava/lang/Enum;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "BusySignalHandler$1"
+.field public static final synthetic $VALUES:[LX/3Qi;
 
+.field public static final enum IDLE:LX/3Qi;
 
-# instance fields
-.field public final synthetic A00:LX/3Qg;
+.field public static final enum QUEUED:LX/3Qi;
+
+.field public static final enum RUNNING:LX/3Qi;
+
+.field public static final enum RUNNING_AND_PENDING:LX/3Qi;
 
 
 # direct methods
-.method public constructor <init>(LX/3Qg;)V
-    .locals 0
+.method public static synthetic $values()[LX/3Qi;
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/3Qi;->A00:LX/3Qg;
+    const/4 v0, 0x4
 
     .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array v2, v0, [LX/3Qi;
 
+    .line 2
     .line 3
+    sget-object v1, LX/3Qi;->IDLE:LX/3Qi;
+
     .line 4
     .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 6
-
-    .line 0
-    iget-object v5, p0, LX/3Qi;->A00:LX/3Qg;
-
-    .line 1
-    .line 2
-    iget-object v4, v5, LX/3Qg;->A08:Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    monitor-enter v4
-
-    .line 5
-    :try_start_0
-    iget-object v0, v5, LX/3Qg;->A0B:Ljava/util/Set;
+    const/4 v0, 0x0
 
     .line 6
-    .line 7
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    aput-object v1, v2, v0
 
+    .line 7
     .line 8
+    sget-object v1, LX/3Qi;->QUEUED:LX/3Qi;
+
     .line 9
     .line 10
-    move-result-object v3
+    const/4 v0, 0x1
 
     .line 11
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    aput-object v1, v2, v0
 
     .line 12
     .line 13
-    .line 14
-    move-result v0
+    sget-object v1, LX/3Qi;->RUNNING:LX/3Qi;
 
+    .line 14
     .line 15
-    if-eqz v0, :cond_0
+    const/4 v0, 0x2
 
     .line 16
-    .line 17
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aput-object v1, v2, v0
 
+    .line 17
     .line 18
+    sget-object v1, LX/3Qi;->RUNNING_AND_PENDING:LX/3Qi;
+
     .line 19
     .line 20
-    move-result-object v2
+    const/4 v0, 0x3
 
     .line 21
-    check-cast v2, LX/3XH;
+    aput-object v1, v2, v0
 
     .line 22
     .line 23
-    iget-object v1, v5, LX/3Qg;->A0D:Ljava/util/WeakHashMap;
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "IDLE"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/3Qi;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/3Qi;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/3Qi;->IDLE:LX/3Qi;
+
+    .line 9
+    .line 10
+    const-string v2, "QUEUED"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/3Qi;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/3Qi;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/3Qi;->QUEUED:LX/3Qi;
+
+    .line 19
+    .line 20
+    const-string v2, "RUNNING"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/3Qi;
 
     .line 24
     .line 25
-    const/4 v0, 0x0
+    invoke-direct {v0, v2, v1}, LX/3Qi;-><init>(Ljava/lang/String;I)V
 
     .line 26
-    invoke-virtual {v1, v2, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 27
     .line 28
-    .line 29
-    goto :goto_0
+    sput-object v0, LX/3Qi;->RUNNING:LX/3Qi;
 
+    .line 29
     .line 30
-    :cond_0
-    monitor-exit v4
+    const-string v2, "RUNNING_AND_PENDING"
 
     .line 31
-    return-void
-
     .line 32
-    :catchall_0
-    move-exception v0
+    const/4 v1, 0x3
 
     .line 33
-    monitor-exit v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v0, LX/3Qi;
 
     .line 34
-    throw v0
+    .line 35
+    invoke-direct {v0, v2, v1}, LX/3Qi;-><init>(Ljava/lang/String;I)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, LX/3Qi;->RUNNING_AND_PENDING:LX/3Qi;
+
+    .line 39
+    .line 40
+    invoke-static {}, LX/3Qi;->$values()[LX/3Qi;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    sput-object v0, LX/3Qi;->$VALUES:[LX/3Qi;
+
+    .line 45
+    .line 46
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/3Qi;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/3Qi;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/3Qi;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/3Qi;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/3Qi;->$VALUES:[LX/3Qi;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/3Qi;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

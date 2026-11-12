@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5W5;
+.field public static final Companion:LX/6Af;
 
 
 # instance fields
@@ -18,16 +18,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5W5;
+    new-instance v0, LX/6Af;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5W5;-><init>()V
+    invoke-direct {v0}, LX/6Af;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/implementation/PlatformTextureDataProviderConfigurationHybrid;->Companion:LX/5W5;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/implementation/PlatformTextureDataProviderConfigurationHybrid;->Companion:LX/6Af;
 
     .line 6
     .line 7
@@ -41,7 +41,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

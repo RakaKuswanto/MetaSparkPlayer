@@ -1,113 +1,67 @@
 .class public final LX/4iN;
-.super LX/4me;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:Landroid/content/Context;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
+.field public A00:I
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public A01:J
 
-.field public A01:LX/4nC;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xc
-    .end annotation
+.field public A02:Landroid/graphics/Rect;
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public A03:LX/4ei;
 
-.field public A02:LX/4nC;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xc
-    .end annotation
+.field public A04:LX/4ei;
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public A05:Ljava/lang/String;
 
-.field public A03:Ljava/lang/String;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
+.field public A06:Z
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public A07:Z
 
-.field public A04:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
+.field public final A08:LX/4ei;
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A05:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public final A09:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/graphics/Rect;LX/4ei;LX/4ei;LX/4ei;Ljava/lang/String;Ljava/lang/String;J)V
+    .locals 0
 
     .line 0
-    const-string v0, "CTCConfirmationBottomSheetComponent"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
-
     .line 3
+    iput-object p5, p0, LX/4iN;->A09:Ljava/lang/String;
+
     .line 4
     .line 5
-    const/4 v0, 0x0
+    iput-object p2, p0, LX/4iN;->A03:LX/4ei;
 
     .line 6
-    iput-boolean v0, p0, LX/4iN;->A04:Z
-
     .line 7
+    iput-object p3, p0, LX/4iN;->A04:LX/4ei;
+
     .line 8
+    .line 9
+    iput-object p4, p0, LX/4iN;->A08:LX/4ei;
+
+    .line 10
+    .line 11
+    iput-object p6, p0, LX/4iN;->A05:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    iput-wide p7, p0, LX/4iN;->A01:J
+
+    .line 14
+    .line 15
+    iput-object p1, p0, LX/4iN;->A02:Landroid/graphics/Rect;
+
+    .line 16
+    .line 17
     return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic A0L()LX/4mg;
-    .locals 1
-
-    .line 0
-    invoke-super {p0}, LX/4mg;->A0L()LX/4mg;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
 .end method

@@ -48,7 +48,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/facebook/xanalytics/XAnalyticsHolder;DLjava/lang/String;Lcom/facebook/realtime/common/appstate/AppStateSyncer;Lcom/facebook/realtime/common/network/NetworkDetailedStateGetter;LX/2St;)V
+.method public synthetic constructor <init>(Lcom/facebook/xanalytics/XAnalyticsHolder;DLjava/lang/String;Lcom/facebook/realtime/common/appstate/AppStateSyncer;Lcom/facebook/realtime/common/network/NetworkDetailedStateGetter;LX/0sq;)V
     .locals 0
 
     .line 268435456

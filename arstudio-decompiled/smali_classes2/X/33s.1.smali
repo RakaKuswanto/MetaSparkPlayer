@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/365;
+
 
 # direct methods
 .method public constructor <init>()V

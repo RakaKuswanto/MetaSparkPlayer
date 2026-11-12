@@ -3,61 +3,73 @@
 .source ""
 
 
-# static fields
-.field public static final A00:[Ljava/lang/String;
+# instance fields
+.field public A00:I
+
+.field public A01:LX/3LX;
+
+.field public A02:LX/3LX;
+
+.field public A03:Ljava/util/LinkedList;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/util/LinkedList;I)V
+    .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yi;->A1Y()[Ljava/lang/String;
+    const/4 v0, 0x0
 
     .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 2
     .line 3
-    move-result-object v2
-
     .line 4
-    const/4 v1, 0x0
+    iput-object v0, p0, LX/3LX;->A02:LX/3LX;
 
     .line 5
-    const-string v0, "chromeless:content:fragment:tag"
-
     .line 6
+    iput p2, p0, LX/3LX;->A00:I
+
     .line 7
-    aput-object v0, v2, v1
-
     .line 8
-    .line 9
-    const/4 v1, 0x1
+    iput-object p1, p0, LX/3LX;->A03:Ljava/util/LinkedList;
 
+    .line 9
     .line 10
-    const-string/jumbo v0, "ufi:popover:content:fragment:tag"
+    iput-object v0, p0, LX/3LX;->A01:LX/3LX;
 
     .line 11
     .line 12
-    .line 13
-    aput-object v0, v2, v1
-
-    .line 14
-    .line 15
-    const/4 v1, 0x2
-
-    .line 16
-    const-string/jumbo v0, "transliteration:fragment:tag"
-
-    .line 17
-    .line 18
-    .line 19
-    aput-object v0, v2, v1
-
-    .line 20
-    .line 21
-    sput-object v2, LX/3LX;->A00:[Ljava/lang/String;
-
-    .line 22
-    .line 23
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    const-string v2, "LinkedEntry(key: "
+
+    .line 1
+    .line 2
+    iget v1, p0, LX/3LX;->A00:I
+
+    .line 3
+    .line 4
+    const-string v0, ")"
+
+    .line 5
+    .line 6
+    invoke-static {v2, v0, v1}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
 .end method

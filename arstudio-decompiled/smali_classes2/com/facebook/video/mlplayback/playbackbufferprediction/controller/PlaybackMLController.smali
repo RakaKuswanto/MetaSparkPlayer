@@ -18,19 +18,19 @@
 # instance fields
 .field public A00:I
 
-.field public A01:Landroid/os/HandlerThread;
+.field public A01:Landroid/os/Handler;
 
-.field public A02:LX/0Zb;
+.field public A02:Landroid/os/HandlerThread;
 
-.field public A03:LX/1jV;
+.field public A03:LX/16Z;
 
-.field public A04:Ljava/lang/String;
+.field public A04:LX/0lL;
 
-.field public A05:Landroid/os/Handler;
+.field public A05:Ljava/lang/String;
 
-.field public final A06:Ljava/lang/Runnable;
+.field public final A06:Ljava/lang/Object;
 
-.field public final A07:Ljava/lang/Object;
+.field public final A07:Ljava/lang/Runnable;
 
 .field public volatile A08:I
 
@@ -71,7 +71,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -79,7 +79,7 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A07:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A06:Ljava/lang/Object;
 
     .line 8
     .line 9
@@ -91,16 +91,16 @@
 
     .line 12
     .line 13
-    new-instance v0, LX/3pC;
+    new-instance v0, LX/3sZ;
 
     .line 14
     .line 15
-    invoke-direct {v0, p0}, LX/3pC;-><init>(Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;)V
+    invoke-direct {v0, p0}, LX/3sZ;-><init>(Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;)V
 
     .line 16
     .line 17
     .line 18
-    iput-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A06:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A07:Ljava/lang/Runnable;
 
     .line 19
     .line 20
@@ -144,135 +144,7 @@
     return-void
 .end method
 
-.method public static A00(Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;)Landroid/os/Handler;
-    .locals 4
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A05:Landroid/os/Handler;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_3
-
-    .line 3
-    .line 4
-    iget-object v3, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A07:Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    monitor-enter v3
-
-    .line 7
-    :try_start_0
-    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A05:Landroid/os/Handler;
-
-    .line 8
-    .line 9
-    if-nez v0, :cond_1
-
-    .line 10
-    .line 11
-    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A01:Landroid/os/HandlerThread;
-
-    .line 12
-    .line 13
-    if-nez v0, :cond_0
-
-    .line 14
-    .line 15
-    const/16 v2, 0xa
-
-    .line 16
-    .line 17
-    const-string v1, "PlaybackMLBackgroundController"
-
-    .line 18
-    .line 19
-    new-instance v0, Landroid/os/HandlerThread;
-
-    .line 20
-    .line 21
-    invoke-direct {v0, v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
-
-    .line 22
-    .line 23
-    .line 24
-    iput-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A01:Landroid/os/HandlerThread;
-
-    .line 25
-    .line 26
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    .line 27
-    .line 28
-    .line 29
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A01:Landroid/os/HandlerThread;
-
-    .line 30
-    .line 31
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v1
-
-    .line 35
-    if-eqz v1, :cond_2
-
-    .line 36
-    .line 37
-    new-instance v0, Landroid/os/Handler;
-
-    .line 38
-    .line 39
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    .line 40
-    .line 41
-    .line 42
-    :goto_0
-    iput-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A05:Landroid/os/Handler;
-
-    .line 43
-    .line 44
-    :cond_1
-    monitor-exit v3
-
-    .line 45
-    goto :goto_1
-
-    .line 46
-    :cond_2
-    const/4 v0, 0x0
-
-    .line 47
-    goto :goto_0
-
-    .line 48
-    :catchall_0
-    move-exception v0
-
-    .line 49
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 50
-    throw v0
-
-    .line 51
-    :cond_3
-    :goto_1
-    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A05:Landroid/os/Handler;
-
-    .line 52
-    .line 53
-    return-object v0
-.end method
-
-.method public static declared-synchronized A01()Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;
+.method public static declared-synchronized A00()Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;
     .locals 2
 
     .line 0
@@ -304,6 +176,153 @@
 
     .line 9
     throw v0
+.end method
+
+.method public static A01(Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;J)V
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A01:Landroid/os/Handler;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_3
+
+    .line 3
+    .line 4
+    iget-object v3, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A06:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    monitor-enter v3
+
+    .line 7
+    :try_start_0
+    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A01:Landroid/os/Handler;
+
+    .line 8
+    .line 9
+    if-nez v0, :cond_1
+
+    .line 10
+    .line 11
+    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A02:Landroid/os/HandlerThread;
+
+    .line 12
+    .line 13
+    if-nez v0, :cond_0
+
+    .line 14
+    .line 15
+    const/16 v2, 0xa
+
+    .line 16
+    .line 17
+    const-string v1, "PlaybackMLBackgroundController"
+
+    .line 18
+    .line 19
+    new-instance v0, Landroid/os/HandlerThread;
+
+    .line 20
+    .line 21
+    invoke-direct {v0, v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
+
+    .line 22
+    .line 23
+    .line 24
+    iput-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A02:Landroid/os/HandlerThread;
+
+    .line 25
+    .line 26
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    .line 27
+    .line 28
+    .line 29
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A02:Landroid/os/HandlerThread;
+
+    .line 30
+    .line 31
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v1
+
+    .line 35
+    if-eqz v1, :cond_2
+
+    .line 36
+    .line 37
+    new-instance v0, Landroid/os/Handler;
+
+    .line 38
+    .line 39
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    .line 40
+    .line 41
+    .line 42
+    :goto_0
+    iput-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A01:Landroid/os/Handler;
+
+    .line 43
+    .line 44
+    :cond_1
+    monitor-exit v3
+
+    .line 45
+    goto :goto_1
+
+    .line 46
+    :cond_2
+    const/4 v0, 0x0
+
+    .line 47
+    goto :goto_0
+
+    .line 48
+    :catchall_0
+    move-exception v0
+
+    .line 49
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 50
+    throw v0
+
+    .line 51
+    :cond_3
+    :goto_1
+    iget-object v1, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A01:Landroid/os/Handler;
+
+    .line 52
+    .line 53
+    if-eqz v1, :cond_4
+
+    .line 54
+    .line 55
+    iget-object v0, p0, Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;->A07:Ljava/lang/Runnable;
+
+    .line 56
+    .line 57
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 58
+    .line 59
+    .line 60
+    invoke-virtual {v1, v0, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 61
+    .line 62
+    .line 63
+    :cond_4
+    return-void
 .end method
 
 .method public static final declared-synchronized A02(Lcom/facebook/video/mlplayback/playbackbufferprediction/controller/PlaybackMLController;)Z

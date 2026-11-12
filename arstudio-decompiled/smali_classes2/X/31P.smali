@@ -1,42 +1,33 @@
 .class public final LX/31P;
-.super LX/3YP;
+.super LX/2j2;
 .source ""
 
 
-# instance fields
-.field public A00:Z
-
-.field public final A01:LX/0ZF;
+# static fields
+.field public static A00:LX/31P;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, LX/2j2;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(LX/2j1;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3YP;-><init>()V
+    invoke-direct {p0, p1}, LX/2j2;-><init>(LX/2j1;)V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    iput-boolean v0, p0, LX/31P;->A00:Z
-
-    .line 5
-    .line 6
-    invoke-static {}, LX/1z6;->A0L()LX/0ZF;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    iput-object v0, p0, LX/31P;->A01:LX/0ZF;
-
-    .line 11
-    .line 12
     return-void
 .end method

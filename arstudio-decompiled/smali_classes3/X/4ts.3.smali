@@ -3,228 +3,130 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultItemAnimator$1"
+.implements Landroid/content/ServiceConnection;
 
 
 # instance fields
-.field public final synthetic A00:LX/4tl;
-
-.field public final synthetic A01:Ljava/util/ArrayList;
+.field public final synthetic A00:LX/4tt;
 
 
 # direct methods
-.method public constructor <init>(LX/4tl;Ljava/util/ArrayList;)V
+.method public synthetic constructor <init>(LX/4tt;)V
     .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/4ts;->A00:LX/4tl;
+    iput-object p1, p0, LX/4ts;->A00:LX/4tt;
 
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/4ts;->A01:Ljava/util/ArrayList;
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 12
+.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+    .locals 4
 
     .line 0
-    iget-object v2, p0, LX/4ts;->A01:Ljava/util/ArrayList;
+    iget-object v3, p0, LX/4ts;->A00:LX/4tt;
 
     .line 1
     .line 2
-    invoke-virtual {v2}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    iget-object v2, v3, LX/4tt;->A06:LX/6WC;
 
     .line 3
     .line 4
+    invoke-static {p1}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
+
     .line 5
-    move-result-object v4
-
     .line 6
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
     .line 7
-    .line 8
-    .line 9
-    move-result v0
+    move-result-object v1
 
+    .line 8
+    const-string v0, "ServiceConnectionImpl.onServiceConnected(%s)"
+
+    .line 9
     .line 10
-    if-eqz v0, :cond_2
+    invoke-virtual {v2, v0, v1}, LX/6WC;->A01(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 11
     .line 12
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 13
+    new-instance v1, LX/4tq;
+
     .line 14
     .line 15
-    move-result-object v3
+    invoke-direct {v1, p2, p0}, LX/4tq;-><init>(Landroid/os/IBinder;LX/4ts;)V
 
     .line 16
-    check-cast v3, LX/4uP;
-
     .line 17
     .line 18
-    iget-object v8, p0, LX/4ts;->A00:LX/4tl;
+    invoke-virtual {v3}, LX/4tt;->A01()Landroid/os/Handler;
 
     .line 19
     .line 20
-    iget-object v9, v3, LX/4uP;->A04:LX/4tc;
-
     .line 21
+    move-result-object v0
+
     .line 22
-    iget v1, v3, LX/4uP;->A00:I
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 23
     .line 24
-    iget v0, v3, LX/4uP;->A01:I
-
     .line 25
-    .line 26
-    iget v10, v3, LX/4uP;->A02:I
+    return-void
+.end method
 
-    .line 27
-    .line 28
-    iget v11, v3, LX/4uP;->A03:I
+.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+    .locals 4
 
-    .line 29
-    .line 30
-    iget-object v6, v9, LX/4tc;->itemView:Landroid/view/View;
+    .line 0
+    iget-object v3, p0, LX/4ts;->A00:LX/4tt;
 
-    .line 31
-    .line 32
-    sub-int/2addr v10, v1
+    .line 1
+    .line 2
+    iget-object v2, v3, LX/4tt;->A06:LX/6WC;
 
-    .line 33
-    sub-int/2addr v11, v0
+    .line 3
+    .line 4
+    invoke-static {p1}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 34
-    const/4 v1, 0x0
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v1
 
-    .line 35
-    if-eqz v10, :cond_0
+    .line 8
+    const-string v0, "ServiceConnectionImpl.onServiceDisconnected(%s)"
 
-    .line 36
-    .line 37
-    invoke-virtual {v6}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    .line 9
+    .line 10
+    invoke-virtual {v2, v0, v1}, LX/6WC;->A01(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 38
-    .line 39
-    .line 40
+    .line 11
+    .line 12
+    .line 13
+    new-instance v1, LX/4tr;
+
+    .line 14
+    .line 15
+    invoke-direct {v1, p0}, LX/4tr;-><init>(LX/4ts;)V
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {v3}, LX/4tt;->A01()Landroid/os/Handler;
+
+    .line 19
+    .line 20
+    .line 21
     move-result-object v0
 
-    .line 41
-    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+    .line 22
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 42
-    .line 43
-    .line 44
-    :cond_0
-    if-eqz v11, :cond_1
-
-    .line 45
-    .line 46
-    invoke-virtual {v6}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
-
-    .line 51
-    .line 52
-    .line 53
-    :cond_1
-    invoke-virtual {v6}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    .line 54
-    .line 55
-    .line 56
-    move-result-object v7
-
-    .line 57
-    iget-object v0, v8, LX/4tl;->A04:Ljava/util/ArrayList;
-
-    .line 58
-    .line 59
-    invoke-virtual {v0, v9}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 60
-    .line 61
-    .line 62
-    const-wide/16 v0, 0xfa
-
-    .line 63
-    .line 64
-    invoke-virtual {v7, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    .line 65
-    .line 66
-    .line 67
-    move-result-object v0
-
-    .line 68
-    new-instance v5, LX/4u9;
-
-    .line 69
-    .line 70
-    invoke-direct/range {v5 .. v11}, LX/4u9;-><init>(Landroid/view/View;Landroid/view/ViewPropertyAnimator;LX/4tl;LX/4tc;II)V
-
-    .line 71
-    .line 72
-    .line 73
-    invoke-virtual {v0, v5}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    .line 74
-    .line 75
-    .line 76
-    move-result-object v0
-
-    .line 77
-    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    .line 78
-    .line 79
-    .line 80
-    goto :goto_0
-
-    .line 81
-    :cond_2
-    invoke-virtual {v2}, Ljava/util/AbstractCollection;->clear()V
-
-    .line 82
-    .line 83
-    .line 84
-    iget-object v0, p0, LX/4ts;->A00:LX/4tl;
-
-    .line 85
-    .line 86
-    iget-object v0, v0, LX/4tl;->A05:Ljava/util/ArrayList;
-
-    .line 87
-    .line 88
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
-
-    .line 89
-    .line 90
-    .line 91
+    .line 23
+    .line 24
+    .line 25
     return-void
 .end method

@@ -1,160 +1,213 @@
 .class public final LX/4iP;
-.super LX/4mQ;
+.super LX/4vQ;
 .source ""
 
-
-# static fields
-.field public static final A03:J
-
-.field public static final A04:J
-
-.field public static final A05:J
-
-.field public static final A06:J
-
-.field public static final A07:J
+# interfaces
+.implements LX/0GZ;
 
 
 # instance fields
-.field public final A00:Ljava/lang/String;
+.field public A00:Ljava/lang/Object;
 
-.field public final A01:Ljava/util/Set;
+.field public A01:Ljava/lang/String;
 
-.field public final A02:LX/0Cl;
+.field public A02:Ljava/lang/String;
+
+.field public A03:Z
+
+.field public A04:Z
+
+.field public final A05:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;IZZ)V
+    .locals 1
 
     .line 0
-    const/16 v2, 0x10
+    iput p4, p0, LX/4iP;->A05:I
 
     .line 1
     .line 2
-    int-to-double v0, v2
+    iput-object p2, p0, LX/4iP;->A02:Ljava/lang/String;
 
     .line 3
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
     .line 4
+    iput-object p1, p0, LX/4iP;->A00:Ljava/lang/Object;
+
     .line 5
     .line 6
-    move-result-wide v0
+    iput-object p3, p0, LX/4iP;->A01:Ljava/lang/String;
 
     .line 7
-    sput-wide v0, LX/4iP;->A05:J
-
     .line 8
-    .line 9
-    const/4 v0, 0x0
+    iput-boolean p5, p0, LX/4iP;->A03:Z
 
+    .line 9
     .line 10
-    int-to-double v0, v0
+    iput-boolean p6, p0, LX/4iP;->A04:Z
 
     .line 11
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
     .line 12
+    const/4 v0, 0x1
+
     .line 13
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
+
     .line 14
-    move-result-wide v0
-
     .line 15
-    sput-wide v0, LX/4iP;->A03:J
-
     .line 16
-    .line 17
-    const/4 v0, 0x4
-
-    .line 18
-    int-to-double v0, v0
-
-    .line 19
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-wide v0
-
-    .line 23
-    sput-wide v0, LX/4iP;->A04:J
-
-    .line 24
-    .line 25
-    int-to-float v0, v2
-
-    .line 26
-    invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    .line 27
-    .line 28
-    .line 29
-    move-result v0
-
-    .line 30
-    int-to-long v2, v0
-
-    .line 31
-    const-wide/high16 v0, 0x7ffa000000000000L
-
-    .line 32
-    .line 33
-    or-long/2addr v2, v0
-
-    .line 34
-    sput-wide v2, LX/4iP;->A07:J
-
-    .line 35
-    .line 36
-    const/16 v0, 0x8
-
-    .line 37
-    .line 38
-    int-to-double v0, v0
-
-    .line 39
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-wide v0
-
-    .line 43
-    sput-wide v0, LX/4iP;->A06:J
-
-    .line 44
-    .line 45
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/util/Set;LX/0Cl;)V
-    .locals 0
+
+# virtual methods
+.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
     .line 0
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    iget v0, p0, LX/4iP;->A05:I
 
     .line 1
     .line 2
-    .line 3
-    invoke-direct {p0}, LX/4mQ;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    iput-object p1, p0, LX/4iP;->A00:Ljava/lang/String;
+    invoke-static {p1}, LX/4vQ;->A04(Ljava/lang/Object;)LX/4iL;
 
+    .line 6
     .line 7
     .line 8
-    iput-object p2, p0, LX/4iP;->A01:Ljava/util/Set;
+    move-result-object v0
 
     .line 9
-    .line 10
-    iput-object p3, p0, LX/4iP;->A02:LX/0Cl;
+    iget-object v2, p0, LX/4iP;->A02:Ljava/lang/String;
 
+    .line 10
     .line 11
+    iget-object v1, p0, LX/4iP;->A00:Ljava/lang/Object;
+
     .line 12
-    return-void
+    .line 13
+    check-cast v1, LX/3y7;
+
+    .line 14
+    .line 15
+    iget-object v3, p0, LX/4iP;->A01:Ljava/lang/String;
+
+    .line 16
+    .line 17
+    iget-boolean v4, p0, LX/4iP;->A03:Z
+
+    .line 18
+    .line 19
+    iget-boolean v5, p0, LX/4iP;->A04:Z
+
+    .line 20
+    .line 21
+    invoke-interface/range {v0 .. v5}, LX/4iL;->ApY(LX/3y7;Ljava/lang/String;Ljava/lang/String;ZZ)V
+
+    .line 22
+    .line 23
+    .line 24
+    :goto_0
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
+
+    .line 25
+    .line 26
+    return-object v0
+
+    .line 27
+    :pswitch_0
+    invoke-static {p1}, LX/4vQ;->A04(Ljava/lang/Object;)LX/4iL;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    iget-object v2, p0, LX/4iP;->A02:Ljava/lang/String;
+
+    .line 32
+    .line 33
+    iget-object v1, p0, LX/4iP;->A00:Ljava/lang/Object;
+
+    .line 34
+    .line 35
+    check-cast v1, LX/3y7;
+
+    .line 36
+    .line 37
+    iget-object v3, p0, LX/4iP;->A01:Ljava/lang/String;
+
+    .line 38
+    .line 39
+    iget-boolean v4, p0, LX/4iP;->A03:Z
+
+    .line 40
+    .line 41
+    iget-boolean v5, p0, LX/4iP;->A04:Z
+
+    .line 42
+    .line 43
+    invoke-interface/range {v0 .. v5}, LX/4iL;->ApW(LX/3y7;Ljava/lang/String;Ljava/lang/String;ZZ)V
+
+    .line 44
+    .line 45
+    .line 46
+    goto :goto_0
+
+    .line 47
+    :pswitch_1
+    invoke-static {p1}, LX/4vQ;->A04(Ljava/lang/Object;)LX/4iL;
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-object v0
+
+    .line 51
+    iget-object v2, p0, LX/4iP;->A02:Ljava/lang/String;
+
+    .line 52
+    .line 53
+    iget-object v1, p0, LX/4iP;->A00:Ljava/lang/Object;
+
+    .line 54
+    .line 55
+    check-cast v1, LX/4kR;
+
+    .line 56
+    .line 57
+    iget-object v3, p0, LX/4iP;->A01:Ljava/lang/String;
+
+    .line 58
+    .line 59
+    iget-boolean v4, p0, LX/4iP;->A03:Z
+
+    .line 60
+    .line 61
+    iget-boolean v5, p0, LX/4iP;->A04:Z
+
+    .line 62
+    .line 63
+    invoke-interface/range {v0 .. v5}, LX/4iL;->ApL(LX/4kR;Ljava/lang/String;Ljava/lang/String;ZZ)V
+
+    .line 64
+    .line 65
+    .line 66
+    goto :goto_0
+
+    .line 67
+    nop
+
+    .line 68
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -60,6 +60,16 @@
 # virtual methods
 .method public doEquivalent(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "a",
+            "b"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -75,6 +85,14 @@
 
 .method public doHash(Ljava/lang/Object;)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I

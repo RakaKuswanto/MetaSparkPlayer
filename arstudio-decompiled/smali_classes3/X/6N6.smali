@@ -1,25 +1,21 @@
 .class public final LX/6N6;
-.super Ljava/lang/Object;
+.super LX/68X;
 .source ""
 
 
 # direct methods
-.method public static final A00(Landroid/content/Context;)Ljava/io/File;
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     .line 0
-    invoke-virtual {p0}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
+    const/16 v0, 0x3003
 
     .line 1
     .line 2
+    invoke-direct {p0, v0, p1}, LX/68X;-><init>(ILjava/lang/String;)V
+
     .line 3
-    move-result-object p0
-
     .line 4
-    invoke-static {p0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 5
-    .line 6
-    .line 7
-    return-object p0
+    return-void
 .end method

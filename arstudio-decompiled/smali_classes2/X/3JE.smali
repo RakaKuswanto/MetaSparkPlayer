@@ -2,10 +2,13 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3JA;
+
 
 # virtual methods
-.method public abstract ATy()V
+.method public abstract AQ4(Ljava/lang/String;)Z
 .end method
 
-.method public abstract start()V
+.method public abstract AV2(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 .end method

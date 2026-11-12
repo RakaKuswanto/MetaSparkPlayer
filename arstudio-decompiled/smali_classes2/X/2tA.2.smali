@@ -1,271 +1,100 @@
 .class public final LX/2tA;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/AbstractExecutorService;
 .source ""
 
-# interfaces
-.implements Lorg/apache/http/client/RedirectHandler;
 
-
-# instance fields
-.field public A00:Landroid/net/Uri;
-
-.field public final A01:LX/2im;
+# static fields
+.field public static final A00:LX/2tA;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;LX/2im;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/2tA;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/2tA;->A00:Landroid/net/Uri;
+    invoke-direct {v0}, LX/2tA;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/2tA;->A01:LX/2im;
+    sput-object v0, LX/2tA;->A00:LX/2tA;
 
     .line 6
     .line 7
     return-void
 .end method
 
-
-# virtual methods
-.method public final getLocationURI(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)Ljava/net/URI;
-    .locals 3
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    iget-object v2, p0, LX/2tA;->A00:Landroid/net/Uri;
+    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
 
     .line 1
     .line 2
-    const-string v0, "Location"
-
     .line 3
-    .line 4
-    invoke-interface {p1, v0}, Lorg/apache/http/HttpMessage;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    if-eqz v0, :cond_1
-
-    .line 9
-    .line 10
-    invoke-interface {v0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v1
-
-    .line 18
-    invoke-virtual {v1}, Landroid/net/Uri;->isAbsolute()Z
-
-    .line 19
-    .line 20
-    .line 21
-    move-result v0
-
-    .line 22
-    if-nez v0, :cond_0
-
-    .line 23
-    .line 24
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    invoke-static {v0}, Ljava/net/URI;->create(Ljava/lang/String;)Ljava/net/URI;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v1
-
-    .line 32
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 33
-    .line 34
-    .line 35
-    move-result-object v0
-
-    .line 36
-    invoke-static {v0}, Ljava/net/URI;->create(Ljava/lang/String;)Ljava/net/URI;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    invoke-virtual {v0, v1}, Ljava/net/URI;->resolve(Ljava/net/URI;)Ljava/net/URI;
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v0
-
-    .line 44
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 45
-    .line 46
-    .line 47
-    move-result-object v0
-
-    .line 48
-    invoke-static {v0}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
-
-    .line 49
-    .line 50
-    .line 51
-    move-result-object v1
-
-    .line 52
-    :cond_0
-    iput-object v1, p0, LX/2tA;->A00:Landroid/net/Uri;
-
-    .line 53
-    .line 54
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v1
-
-    .line 58
-    iget-object v0, p0, LX/2tA;->A01:LX/2im;
-
-    .line 59
-    .line 60
-    invoke-virtual {v0, v1}, LX/2im;->A07(Ljava/lang/String;)V
-
-    .line 61
-    .line 62
-    .line 63
-    invoke-static {v1}, Ljava/net/URI;->create(Ljava/lang/String;)Ljava/net/URI;
-
-    .line 64
-    .line 65
-    .line 66
-    move-result-object v0
-
-    .line 67
-    return-object v0
-
-    .line 68
-    :cond_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 69
-    .line 70
-    .line 71
-    move-result-object v1
-
-    .line 72
-    const-string v0, "Received redirect response "
-
-    .line 73
-    .line 74
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 75
-    .line 76
-    .line 77
-    invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
-
-    .line 78
-    .line 79
-    .line 80
-    move-result-object v0
-
-    .line 81
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 82
-    .line 83
-    .line 84
-    const-string v0, " but no Location header"
-
-    .line 85
-    .line 86
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 87
-    .line 88
-    .line 89
-    move-result-object v1
-
-    .line 90
-    new-instance v0, Lorg/apache/http/ProtocolException;
-
-    .line 91
-    .line 92
-    invoke-direct {v0, v1}, Lorg/apache/http/ProtocolException;-><init>(Ljava/lang/String;)V
-
-    .line 93
-    .line 94
-    .line 95
-    throw v0
+    return-void
 .end method
 
-.method public final isRedirectRequested(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)Z
-    .locals 3
+
+# virtual methods
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
 
     .line 0
-    invoke-static {p1}, LX/0Yh;->A07(Lorg/apache/http/HttpResponse;)I
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     .line 1
     .line 2
     .line 3
-    move-result v2
+    return-void
+.end method
 
-    .line 4
-    const/16 v0, 0x12e
+.method public final isShutdown()Z
+    .locals 1
 
-    .line 5
-    .line 6
-    if-eq v2, v0, :cond_0
-
-    .line 7
-    .line 8
-    const/16 v1, 0x12d
-
-    .line 9
-    .line 10
     const/4 v0, 0x0
 
-    .line 11
-    if-ne v2, v1, :cond_1
-
-    .line 12
-    .line 13
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 14
-    :cond_1
     return v0
+.end method
+
+.method public final isTerminated()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final shutdown()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final shutdownNow()Ljava/util/List;
+    .locals 1
+
+    .line 0
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

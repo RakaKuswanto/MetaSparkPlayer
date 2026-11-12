@@ -1,22 +1,19 @@
-.class public final LX/2Qb;
+.class public final LX/2qB;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/2Ql;
-
 
 # instance fields
-.field public final A00:J
+.field public final A00:LX/3EG;
 
-.field public final A01:LX/2Ql;
+.field public final A01:LX/0jd;
 
-.field public final A02:LX/2QZ;
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/2Ql;LX/2QZ;)V
-    .locals 2
+.method public constructor <init>(LX/0jd;Ljava/lang/String;)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,349 +21,60 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2Qb;->A01:LX/2Ql;
+    iput-object p2, p0, LX/2qB;->A02:Ljava/lang/String;
 
     .line 4
     .line 5
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iput-object p1, p0, LX/2qB;->A01:LX/0jd;
 
     .line 6
     .line 7
+    const/4 v0, 0x0
+
     .line 8
-    move-result-wide v0
+    iput-object v0, p0, LX/2qB;->A00:LX/3EG;
 
     .line 9
-    iput-wide v0, p0, LX/2Qb;->A00:J
-
     .line 10
-    .line 11
-    iput-object p2, p0, LX/2Qb;->A02:LX/2QZ;
+    return-void
+.end method
 
-    .line 12
-    .line 13
+.method public constructor <init>(LX/3EG;Ljava/lang/String;)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput-object p2, p0, LX/2qB;->A02:Ljava/lang/String;
+
+    .line 268435460
+    .line 268435461
+    const/4 v0, 0x0
+
+    .line 268435462
+    iput-object v0, p0, LX/2qB;->A01:LX/0jd;
+
+    .line 268435463
+    .line 268435464
+    iput-object p1, p0, LX/2qB;->A00:LX/3EG;
+
+    .line 268435465
+    .line 268435466
     return-void
 .end method
 
 
 # virtual methods
-.method public final ABc()Ljava/util/Collection;
-    .locals 6
-
-    .line 0
-    iget-object v0, p0, LX/2Qb;->A01:LX/2Ql;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/2Ql;->ABc()Ljava/util/Collection;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v5
-
-    .line 6
-    iget-object v4, p0, LX/2Qb;->A02:LX/2QZ;
-
-    .line 7
-    .line 8
-    invoke-static {v4}, LX/2QZ;->A00(LX/2QZ;)V
-
-    .line 9
-    .line 10
-    .line 11
-    iget-object v3, v4, LX/2QZ;->A02:Ljava/util/Map;
-
-    .line 12
-    .line 13
-    monitor-enter v3
-
-    .line 14
-    :try_start_0
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v1
-
-    .line 18
-    invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
-    .line 23
-    .line 24
-    .line 25
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v2
-
-    .line 29
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 30
-    .line 31
-    .line 32
-    move-result v0
-
-    .line 33
-    if-eqz v0, :cond_1
-
-    .line 34
-    .line 35
-    invoke-static {v2}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
-
-    .line 36
-    .line 37
-    .line 38
-    move-result-object v1
-
-    .line 39
-    invoke-interface {v5, v1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    .line 40
-    .line 41
-    .line 42
-    move-result v0
-
-    .line 43
-    if-nez v0, :cond_0
-
-    .line 44
-    .line 45
-    invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 46
-    .line 47
-    .line 48
-    const/4 v0, 0x1
-
-    .line 49
-    iput-boolean v0, v4, LX/2QZ;->A00:Z
-
-    .line 50
-    .line 51
-    goto :goto_0
-
-    .line 52
-    :cond_1
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 53
-    invoke-static {v4}, LX/2QZ;->A01(LX/2QZ;)V
-
-    .line 54
-    .line 55
-    .line 56
-    return-object v5
-
-    .line 57
-    :catchall_0
-    move-exception v0
-
-    .line 58
-    :try_start_1
-    monitor-exit v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 59
-    throw v0
-.end method
-
-.method public final ARm(Ljava/lang/String;)Z
+.method public final toString()Ljava/lang/String;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/2Qb;->A01:LX/2Ql;
+    iget-object v0, p0, LX/2qB;->A02:Ljava/lang/String;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1}, LX/2Ql;->ARm(Ljava/lang/String;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final ARt(Ljava/lang/String;)J
-    .locals 6
-
-    .line 0
-    iget-object v5, p0, LX/2Qb;->A02:LX/2QZ;
-
-    .line 1
-    .line 2
-    const-string v0, "eviction_timestamps"
-
-    .line 3
-    .line 4
-    invoke-virtual {v5, p1, v0}, LX/2QZ;->A02(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v1
-
-    .line 8
-    instance-of v0, v1, Ljava/lang/Long;
-
-    .line 9
-    .line 10
-    if-eqz v0, :cond_0
-
-    .line 11
-    .line 12
-    iget-wide v3, p0, LX/2Qb;->A00:J
-
-    .line 13
-    .line 14
-    invoke-static {v1}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-wide v1
-
-    .line 18
-    cmp-long v0, v3, v1
-
-    .line 19
-    .line 20
-    if-lez v0, :cond_0
-
-    .line 21
-    .line 22
-    const-wide/high16 v0, -0x8000000000000000L
-
-    .line 23
-    .line 24
-    return-wide v0
-
-    .line 25
-    :cond_0
-    const-string v0, "eviction_priority"
-
-    .line 26
-    .line 27
-    invoke-virtual {v5, p1, v0}, LX/2QZ;->A02(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v1
-
-    .line 31
-    instance-of v0, v1, Ljava/lang/Long;
-
-    .line 32
-    .line 33
-    if-eqz v0, :cond_1
-
-    .line 34
-    .line 35
-    invoke-static {v1}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 36
-    .line 37
-    .line 38
-    move-result-wide v0
-
-    .line 39
-    return-wide v0
-
-    .line 40
-    :cond_1
-    iget-object v0, p0, LX/2Qb;->A01:LX/2Ql;
-
-    .line 41
-    .line 42
-    invoke-interface {v0, p1}, LX/2Ql;->ARt(Ljava/lang/String;)J
-
-    .line 43
-    .line 44
-    .line 45
-    move-result-wide v0
-
-    .line 46
-    return-wide v0
-.end method
-
-.method public final getItemInformation(Ljava/lang/String;)[J
-    .locals 4
-
-    .line 0
-    iget-object v0, p0, LX/2Qb;->A01:LX/2Ql;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/2Ql;->getItemInformation(Ljava/lang/String;)[J
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v3
-
-    .line 6
-    invoke-virtual {p0, p1}, LX/2Qb;->ARt(Ljava/lang/String;)J
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-wide v1
-
-    .line 10
-    const/4 v0, 0x0
-
-    .line 11
-    aput-wide v1, v3, v0
-
-    .line 12
-    .line 13
-    return-object v3
-.end method
-
-.method public final remove(Ljava/lang/String;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2Qb;->A02:LX/2QZ;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, LX/2QZ;->A04(Ljava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    iget-object v0, p0, LX/2Qb;->A01:LX/2Ql;
-
-    .line 6
-    .line 7
-    invoke-interface {v0, p1}, LX/2Ql;->remove(Ljava/lang/String;)Z
-
-    .line 8
-    .line 9
-    .line 10
-    move-result v0
-
-    .line 11
-    return v0
+    return-object v0
 .end method

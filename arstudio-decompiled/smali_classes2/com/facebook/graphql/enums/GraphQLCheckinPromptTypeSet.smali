@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLCheckinPromptTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLCheckinPromptTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yi;->A1Y()[Ljava/lang/String;
+    invoke-static {}, LX/0X6;->A1b()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -31,36 +31,27 @@
 
     .line 8
     .line 9
-    const/4 v1, 0x1
-
-    .line 10
     const-string v0, "HOME_CREATION"
 
+    .line 10
     .line 11
-    .line 12
-    aput-object v0, v2, v1
+    invoke-static {v2, v0}, LX/0X2;->A1O([Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 12
     .line 13
     .line 14
-    const/4 v1, 0x2
+    invoke-static {v2}, LX/1fN;->A04([Ljava/lang/Object;)Ljava/util/HashSet;
 
     .line 15
-    const-string v0, "NONE"
-
     .line 16
     .line 17
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
-    .line 18
-    .line 19
-    .line 20
     move-result-object v0
 
-    .line 21
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCheckinPromptTypeSet;->A00:Ljava/util/Set;
+    .line 18
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCheckinPromptTypeSet;->A00:Ljava/util/HashSet;
 
-    .line 22
-    .line 23
+    .line 19
+    .line 20
     return-void
 .end method
 
@@ -76,11 +67,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCheckinPromptTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCheckinPromptTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

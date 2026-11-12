@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 10
 
     .line 0
@@ -49,7 +49,7 @@
     .line 9
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 10
     .line 11
@@ -57,7 +57,7 @@
     move-result-object v1
 
     .line 13
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 14
     .line 15
@@ -65,7 +65,7 @@
 
     .line 16
     .line 17
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 18
     .line 19
@@ -87,14 +87,14 @@
     .line 27
     .line 28
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 29
     .line 30
     .line 31
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 32
     .line 33
@@ -102,7 +102,7 @@
     move-result-object v1
 
     .line 35
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 36
     .line 37
@@ -110,301 +110,313 @@
 
     .line 38
     .line 39
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 40
+    .line 41
     :sswitch_0
     const-string/jumbo v0, "page_i_d"
 
-    .line 41
     .line 42
     .line 43
+    .line 44
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 44
     .line 45
     .line 46
-    move-result v0
-
     .line 47
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 48
-    .line 49
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v7
-
-    .line 53
-    const-string/jumbo v0, "pageID"
-
-    .line 54
-    .line 55
-    .line 56
-    invoke-static {v0, v7}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 57
-    .line 58
-    .line 59
-    goto :goto_0
-
-    .line 60
-    :sswitch_1
-    const-string v0, "default_photo_uri"
-
-    .line 61
-    .line 62
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 63
-    .line 64
-    .line 65
-    move-result v0
-
-    .line 66
     if-eqz v0, :cond_1
 
+    .line 49
+    .line 50
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v7
+
+    .line 54
+    const-string/jumbo v0, "pageID"
+
+    .line 55
+    .line 56
+    .line 57
+    invoke-static {v7, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 58
+    .line 59
+    .line 60
+    goto :goto_0
+
+    .line 61
+    :sswitch_1
+    const-string/jumbo v0, "default_photo_uri"
+
+    .line 62
+    .line 63
+    .line 64
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 65
+    .line 66
     .line 67
+    move-result v0
+
     .line 68
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    if-eqz v0, :cond_1
 
     .line 69
     .line 70
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 71
+    .line 72
+    .line 73
     move-result-object v6
 
-    .line 72
+    .line 74
     goto :goto_0
 
-    .line 73
+    .line 75
     :sswitch_2
     const-string/jumbo v0, "title"
 
-    .line 74
-    .line 75
     .line 76
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 77
     .line 78
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 79
+    .line 80
+    .line 81
     move-result v0
 
-    .line 80
-    if-eqz v0, :cond_1
-
-    .line 81
     .line 82
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    if-eqz v0, :cond_1
 
     .line 83
     .line 84
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 85
+    .line 86
+    .line 87
     move-result-object v9
 
-    .line 86
+    .line 88
     goto :goto_0
 
-    .line 87
-    :sswitch_3
-    const-string v0, "additional_data"
-
-    .line 88
     .line 89
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_3
+    const-string/jumbo v0, "additional_data"
 
     .line 90
     .line 91
     .line 92
-    move-result v0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 93
-    if-eqz v0, :cond_1
-
     .line 94
     .line 95
-    const-class v0, Lcom/facebook/ipc/composer/model/ComposerLocalDevPlatformPostDefinitionAdditionalData;
+    move-result v0
 
     .line 96
-    .line 97
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
+    .line 97
     .line 98
+    const-class v0, Lcom/facebook/ipc/composer/model/ComposerLocalDevPlatformPostDefinitionAdditionalData;
+
     .line 99
     .line 100
-    move-result-object v2
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 101
-    check-cast v2, Lcom/facebook/ipc/composer/model/ComposerLocalDevPlatformPostDefinitionAdditionalData;
-
     .line 102
     .line 103
-    goto :goto_0
+    move-result-object v2
 
     .line 104
-    :sswitch_4
-    const-string v0, "app_config_i_d"
+    check-cast v2, Lcom/facebook/ipc/composer/model/ComposerLocalDevPlatformPostDefinitionAdditionalData;
 
     .line 105
     .line 106
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
     .line 107
+    :sswitch_4
+    const-string/jumbo v0, "app_config_i_d"
+
     .line 108
     .line 109
-    move-result v0
-
     .line 110
-    if-eqz v0, :cond_1
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 111
     .line 112
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 113
-    .line 114
-    .line 115
-    move-result-object v3
+    move-result v0
 
+    .line 114
+    if-eqz v0, :cond_1
+
+    .line 115
     .line 116
-    const-string v0, "appConfigID"
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 117
     .line 118
-    invoke-static {v0, v3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
     .line 119
+    move-result-object v3
+
     .line 120
+    const-string/jumbo v0, "appConfigID"
+
     .line 121
-    goto :goto_0
-
     .line 122
-    :sswitch_5
-    const-string v0, "default_photo_id"
-
     .line 123
-    .line 124
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 124
     .line 125
     .line 126
+    goto :goto_0
+
     .line 127
-    move-result v0
+    :sswitch_5
+    const-string/jumbo v0, "default_photo_id"
 
     .line 128
-    if-eqz v0, :cond_1
-
     .line 129
     .line 130
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 131
     .line 132
     .line 133
-    move-result-object v5
-
-    .line 134
-    goto :goto_0
-
-    .line 135
-    :sswitch_6
-    const-string v0, "button_text"
-
-    .line 136
-    .line 137
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 138
-    .line 139
-    .line 140
     move-result v0
 
-    .line 141
+    .line 134
     if-eqz v0, :cond_1
+
+    .line 135
+    .line 136
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v5
+
+    .line 140
+    goto :goto_0
+
+    .line 141
+    :sswitch_6
+    const-string/jumbo v0, "button_text"
 
     .line 142
     .line 143
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 144
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 145
     .line 146
-    move-result-object v4
-
     .line 147
-    goto :goto_0
+    move-result v0
 
     .line 148
-    :sswitch_7
-    const-string/jumbo v0, "subtitle"
+    if-eqz v0, :cond_1
 
     .line 149
     .line 150
-    .line 151
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
+    .line 151
     .line 152
     .line 153
+    move-result-object v4
+
     .line 154
-    move-result v0
+    goto :goto_0
 
     .line 155
-    if-eqz v0, :cond_1
+    :sswitch_7
+    const-string/jumbo v0, "subtitle"
 
     .line 156
     .line 157
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 158
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 159
     .line 160
+    .line 161
+    move-result v0
+
+    .line 162
+    if-eqz v0, :cond_1
+
+    .line 163
+    .line 164
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 165
+    .line 166
+    .line 167
     move-result-object v8
 
-    .line 161
+    .line 168
     goto/16 :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 162
-    .line 163
+    .line 169
+    .line 170
     :goto_1
     new-instance v1, Lcom/facebook/ipc/composer/model/ComposerGetBookingsThirdPartyData;
 
-    .line 164
-    .line 165
-    invoke-direct/range {v1 .. v9}, Lcom/facebook/ipc/composer/model/ComposerGetBookingsThirdPartyData;-><init>(Lcom/facebook/ipc/composer/model/ComposerLocalDevPlatformPostDefinitionAdditionalData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 166
-    .line 167
-    .line 168
-    return-object v1
-
-    .line 169
-    :catch_0
-    move-exception v1
-
-    .line 170
-    const-class v0, Lcom/facebook/ipc/composer/model/ComposerGetBookingsThirdPartyData;
-
     .line 171
     .line 172
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    invoke-direct/range {v1 .. v9}, Lcom/facebook/ipc/composer/model/ComposerGetBookingsThirdPartyData;-><init>(Lcom/facebook/ipc/composer/model/ComposerLocalDevPlatformPostDefinitionAdditionalData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 173
     .line 174
     .line 175
-    const/4 v0, 0x0
+    return-object v1
 
     .line 176
-    throw v0
+    :catch_0
+    move-exception v1
 
     .line 177
-    nop
+    const-class v0, Lcom/facebook/ipc/composer/model/ComposerGetBookingsThirdPartyData;
 
     .line 178
+    .line 179
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
+    .line 180
+    .line 181
+    .line 182
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 183
+    .line 184
+    .line 185
+    move-result-object v0
+
+    .line 186
+    throw v0
+
+    .line 187
+    nop
+
+    .line 188
     :sswitch_data_0
     .sparse-switch
         -0x7ad0b3e8 -> :sswitch_7

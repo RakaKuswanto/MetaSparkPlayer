@@ -256,46 +256,49 @@
 
     .line 117
     .line 118
-    const-string v0, "YIR16"
+    const-string/jumbo v0, "YIR16"
 
     .line 119
     .line 120
+    .line 121
     aput-object v0, v2, v1
 
-    .line 121
     .line 122
+    .line 123
     const/16 v1, 0x15
 
-    .line 123
     .line 124
-    const-string v0, "YIR17"
-
     .line 125
-    .line 126
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "YIR17"
 
+    .line 126
     .line 127
     .line 128
-    const/16 v1, 0x16
+    aput-object v0, v2, v1
 
     .line 129
     .line 130
-    const-string v0, "YIR18"
+    const/16 v1, 0x16
 
     .line 131
     .line 132
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "YIR18"
 
     .line 133
     .line 134
     .line 135
-    move-result-object v0
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 136
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLGoodwillVideoCampaignTypeEnumSet;->A00:Ljava/util/Set;
-
     .line 137
     .line 138
+    move-result-object v0
+
+    .line 139
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLGoodwillVideoCampaignTypeEnumSet;->A00:Ljava/util/Set;
+
+    .line 140
+    .line 141
     return-void
 .end method
 

@@ -3,146 +3,146 @@
 .source ""
 
 # interfaces
-.implements LX/0VX;
+.implements LX/027;
 
 
 # instance fields
-.field public A00:Landroid/content/SharedPreferences$Editor;
-
-.field public final synthetic A01:LX/0M9;
+.field public final A00:Landroid/view/ContentInfo;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/SharedPreferences$Editor;LX/0M9;)V
+.method public constructor <init>(Landroid/view/ContentInfo;)V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/0MA;->A01:LX/0M9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     .line 4
     .line 5
-    iput-object p1, p0, LX/0MA;->A00:Landroid/content/SharedPreferences$Editor;
-
     .line 6
+    iput-object p1, p0, LX/0MA;->A00:Landroid/view/ContentInfo;
+
     .line 7
+    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final A6p()LX/0VX;
+.method public final ABv()Landroid/content/ClipData;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/0MA;->A00:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, LX/0MA;->A00:Landroid/view/ContentInfo;
 
     .line 1
     .line 2
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Landroid/view/ContentInfo;->getClip()Landroid/content/ClipData;
 
     .line 3
     .line 4
     .line 5
-    return-object p0
+    move-result-object v0
+
+    .line 6
+    return-object v0
 .end method
 
-.method public final Ah7(Ljava/lang/String;Z)LX/0VX;
+.method public final AEQ()I
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/0MA;->A00:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, LX/0MA;->A00:Landroid/view/ContentInfo;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Landroid/view/ContentInfo;->getFlags()I
 
     .line 3
     .line 4
     .line 5
-    return-object p0
+    move-result v0
+
+    .line 6
+    return v0
 .end method
 
-.method public final AhD(Ljava/lang/String;I)LX/0VX;
+.method public final AKs()I
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/0MA;->A00:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, LX/0MA;->A00:Landroid/view/ContentInfo;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Landroid/view/ContentInfo;->getSource()I
 
     .line 3
     .line 4
     .line 5
-    return-object p0
+    move-result v0
+
+    .line 6
+    return v0
 .end method
 
-.method public final AhH(Ljava/lang/String;J)LX/0VX;
+.method public final AMr()Landroid/view/ContentInfo;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/0MA;->A00:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, LX/0MA;->A00:Landroid/view/ContentInfo;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    .line 3
-    .line 4
-    .line 5
-    return-object p0
+    return-object v0
 .end method
 
-.method public final AhK(Ljava/lang/String;Ljava/lang/String;)LX/0VX;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/0MA;->A00:Landroid/content/SharedPreferences$Editor;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
     .line 3
+    move-result-object v1
+
     .line 4
+    const-string v0, "ContentInfoCompat{"
+
     .line 5
-    return-object p0
-.end method
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final Air(Ljava/lang/String;)LX/0VX;
-    .locals 1
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/0MA;->A00:Landroid/view/ContentInfo;
 
-    .line 0
-    iget-object v0, p0, LX/0MA;->A00:Landroid/content/SharedPreferences$Editor;
+    .line 10
+    .line 11
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    .line 12
+    .line 13
+    .line 14
+    const-string v0, "}"
 
-    .line 3
-    .line 4
-    .line 5
-    return-object p0
-.end method
+    .line 15
+    .line 16
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-.method public final commit()V
-    .locals 1
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
 
-    .line 0
-    iget-object v0, p0, LX/0MA;->A00:Landroid/content/SharedPreferences$Editor;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    .line 20
+    return-object v0
 .end method

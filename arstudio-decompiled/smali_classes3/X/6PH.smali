@@ -1,180 +1,195 @@
-.class public final LX/6PH;
-.super Ljava/lang/Object;
+.class public abstract enum LX/6PH;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements Landroid/widget/TextView$OnEditorActionListener;
+
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/6PH;
+
+.field public static final enum DEFAULT_LENGTH:LX/6PH;
+
+.field public static final enum LONG_LENGTH:LX/6PH;
+
+.field public static final enum SHORT_LENGTH:LX/6PH;
 
 
 # instance fields
-.field public A00:Ljava/lang/Object;
-
-.field public final A01:I
+.field public final value:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;I)V
-    .locals 0
+.method public static final synthetic $values()[LX/6PH;
+    .locals 3
+
+    const/4 v0, 0x3
+
+    new-array v2, v0, [LX/6PH;
+
+    sget-object v1, LX/6PH;->SHORT_LENGTH:LX/6PH;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/6PH;->DEFAULT_LENGTH:LX/6PH;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/6PH;->LONG_LENGTH:LX/6PH;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput p2, p0, LX/6PH;->A01:I
+    new-instance v0, LX/6PI;
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/6PH;->A00:Ljava/lang/Object;
+    invoke-direct {v0}, LX/6PI;-><init>()V
 
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 5
+    sput-object v0, LX/6PH;->SHORT_LENGTH:LX/6PH;
+
     .line 6
     .line 7
+    new-instance v0, LX/6PK;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, LX/6PK;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    sput-object v0, LX/6PH;->DEFAULT_LENGTH:LX/6PH;
+
+    .line 13
+    .line 14
+    new-instance v0, LX/6PJ;
+
+    .line 15
+    .line 16
+    invoke-direct {v0}, LX/6PJ;-><init>()V
+
+    .line 17
+    .line 18
+    .line 19
+    sput-object v0, LX/6PH;->LONG_LENGTH:LX/6PH;
+
+    .line 20
+    .line 21
+    invoke-static {}, LX/6PH;->$values()[LX/6PH;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    sput-object v0, LX/6PH;->$VALUES:[LX/6PH;
+
+    .line 26
+    .line 27
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    sput-object v0, LX/6PH;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 32
+    .line 33
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IJ)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-wide p3, p0, LX/6PH;->value:J
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;IJLkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3, p4}, LX/6PH;-><init>(Ljava/lang/String;IJ)V
+
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/6PH;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/6PH;
+    .locals 1
+
+    const-class v0, LX/6PH;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/6PH;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/6PH;
+    .locals 1
+
+    sget-object v0, LX/6PH;->$VALUES:[LX/6PH;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/6PH;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .locals 3
+.method public final getValue()J
+    .locals 2
 
     .line 0
-    iget v0, p0, LX/6PH;->A01:I
+    iget-wide v0, p0, LX/6PH;->value:J
 
     .line 1
     .line 2
-    if-eqz v0, :cond_5
+    return-wide v0
+.end method
 
-    .line 3
-    .line 4
-    const/4 v0, 0x6
-
-    .line 5
-    if-ne p2, v0, :cond_4
-
-    .line 6
-    .line 7
-    iget-object v2, p0, LX/6PH;->A00:Ljava/lang/Object;
-
-    .line 8
-    .line 9
-    check-cast v2, LX/4gW;
-
-    .line 10
-    .line 11
-    iget-object v0, v2, LX/4gW;->A01:Landroid/widget/EditText;
-
-    .line 12
-    .line 13
-    if-eqz v0, :cond_0
-
-    .line 14
-    .line 15
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v1
-
-    .line 23
-    if-nez v1, :cond_2
-
-    .line 24
-    .line 25
-    :cond_0
-    iget-object v0, v2, LX/4gW;->A03:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/EditedText;
-
-    .line 26
-    .line 27
-    if-eqz v0, :cond_1
-
-    .line 28
-    .line 29
-    iget-object v1, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/EditedText;->mText:Ljava/lang/String;
-
-    .line 30
-    .line 31
-    if-nez v1, :cond_2
-
-    .line 32
-    .line 33
-    :cond_1
-    const-string v1, ""
-
-    .line 34
-    .line 35
-    :cond_2
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/EditedText;
-
-    .line 36
-    .line 37
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/EditedText;-><init>(Ljava/lang/String;)V
-
-    .line 38
-    .line 39
-    .line 40
-    iput-object v0, v2, LX/4gW;->A03:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/EditedText;
-
-    .line 41
-    .line 42
-    iget-object v0, v2, LX/4gW;->A04:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceDelegateWrapper;
-
-    .line 43
-    .line 44
-    if-eqz v0, :cond_3
-
-    .line 45
-    .line 46
-    invoke-virtual {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceDelegateWrapper;->onTextEditComplete(Ljava/lang/String;)V
-
-    .line 47
-    .line 48
-    .line 49
-    :cond_3
-    const/4 v0, 0x0
-
-    .line 50
-    iput-object v0, v2, LX/4gW;->A04:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/UIControlServiceDelegateWrapper;
-
-    .line 51
-    .line 52
-    invoke-static {v2}, LX/4gW;->A02(LX/4gW;)V
-
-    .line 53
-    .line 54
-    .line 55
-    :cond_4
-    const/4 v0, 0x0
-
-    .line 56
-    return v0
-
-    .line 57
-    :cond_5
-    iget-object v0, p0, LX/6PH;->A00:Ljava/lang/Object;
-
-    .line 58
-    .line 59
-    check-cast v0, Landroidx/appcompat/widget/SearchView;
-
-    .line 60
-    .line 61
-    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->onSubmitQuery()V
-
-    .line 62
-    .line 63
-    .line 64
-    const/4 v0, 0x1
-
-    .line 65
-    return v0
+.method public abstract nextState()LX/6PH;
 .end method

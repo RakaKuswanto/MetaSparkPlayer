@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/proxygen/HttpNetworkException;
-.super LX/1xx;
+.super LX/27E;
 .source ""
 
 
@@ -15,7 +15,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -24,7 +24,7 @@
 
     .line 5
     .line 6
-    invoke-direct {p0, v0}, LX/1xx;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, LX/27E;-><init>(Ljava/lang/String;)V
 
     .line 7
     .line 8

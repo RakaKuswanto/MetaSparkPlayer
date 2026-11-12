@@ -1,121 +1,438 @@
-.class public LX/4vA;
-.super LX/4fy;
+.class public abstract LX/4va;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static A00:Z = true
-
-
 # direct methods
-.method public constructor <init>()V
+.method public static A00(LX/4yE;)LX/4rj;
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4fy;-><init>()V
+    iget-object p0, p0, LX/4yE;->A00:LX/4yT;
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public A00(Landroid/view/View;)F
-    .locals 1
-
-    .line 0
-    sget-boolean v0, LX/4vA;->A00:Z
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    iget-object p0, p0, LX/4yT;->A03:LX/4rj;
 
     .line 3
     .line 4
-    :try_start_0
-    invoke-virtual {p1}, Landroid/view/View;->getTransitionAlpha()F
+    invoke-static {p0}, LX/4va;->A03(Ljava/lang/Object;)V
 
     .line 5
     .line 6
     .line 7
-    move-result v0
+    return-object p0
+.end method
 
+.method public static A01()V
+    .locals 3
+
+    .line 0
+    const-string v2, "Must not be called on GoogleApiHandler thread."
+
+    .line 1
+    .line 2
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
     .line 8
-    return v0
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
     .line 9
-    :catch_0
-    const/4 v0, 0x0
-
     .line 10
-    sput-boolean v0, LX/4vA;->A00:Z
-
     .line 11
+    move-result-object v0
+
     .line 12
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     .line 13
     .line 14
     .line 15
-    move-result v0
+    move-result-object v1
 
     .line 16
-    return v0
-.end method
+    const-string v0, "GoogleApiHandler"
 
-.method public final A03(Landroid/view/View;)V
-    .locals 0
+    .line 17
+    .line 18
+    if-eq v1, v0, :cond_1
 
+    .line 19
+    .line 20
+    if-eqz v1, :cond_0
+
+    .line 21
+    .line 22
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    if-nez v0, :cond_1
+
+    .line 27
+    .line 28
+    :cond_0
     return-void
+
+    .line 29
+    :cond_1
+    invoke-static {v2}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    throw v0
 .end method
 
-.method public final A04(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public A05(Landroid/view/View;F)V
-    .locals 1
+.method public static A02(Landroid/os/Handler;)V
+    .locals 5
 
     .line 0
-    sget-boolean v0, LX/4vA;->A00:Z
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
-
     .line 3
+    move-result-object v1
+
     .line 4
-    :try_start_0
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionAlpha(F)V
+    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     .line 5
     .line 6
     .line 7
-    return-void
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
     .line 8
-    :catch_0
-    const/4 v0, 0x0
+    if-eq v1, v0, :cond_1
 
     .line 9
-    sput-boolean v0, LX/4vA;->A00:Z
+    .line 10
+    if-eqz v1, :cond_0
+
+    .line 11
+    .line 12
+    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v4
+
+    .line 20
+    :goto_0
+    invoke-static {p0}, LX/432;->A0v(Landroid/os/Handler;)Ljava/lang/Thread;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v3
+
+    .line 28
+    const-string v2, "Must be called on "
+
+    .line 29
+    .line 30
+    const-string v1, " thread, but got "
+
+    .line 31
+    .line 32
+    const-string v0, "."
+
+    .line 33
+    .line 34
+    invoke-static {v2, v3, v1, v4, v0}, LX/004;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    throw v0
+
+    .line 43
+    :cond_0
+    const-string v4, "null current looper"
+
+    .line 44
+    .line 45
+    goto :goto_0
+
+    .line 46
+    :cond_1
+    return-void
+.end method
+
+.method public static A03(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    if-eqz p0, :cond_0
+
+    .line 1
+    .line 2
+    return-void
+
+    .line 3
+    :cond_0
+    const-string p0, "null reference"
+
+    .line 4
+    .line 5
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    throw p0
+.end method
+
+.method public static A04(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    if-eqz p0, :cond_0
+
+    .line 1
+    .line 2
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p0
+
+    .line 11
+    throw p0
+.end method
+
+.method public static A05(Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
+
+    .line 4
+    if-nez p0, :cond_0
+
+    .line 5
+    .line 6
+    return-void
+
+    .line 7
+    :cond_0
+    const-string p0, "Given String is empty or null"
+
+    .line 8
+    .line 9
+    invoke-static {p0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 10
     .line 11
+    .line 12
+    move-result-object p0
+
+    .line 13
+    throw p0
+.end method
+
+.method public static A06(Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    if-ne v1, v0, :cond_0
+
+    .line 9
+    .line 10
+    invoke-static {p0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    throw v0
+
+    .line 15
     :cond_0
-    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
+    return-void
+.end method
+
+.method public static A07(Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
+
+    .line 4
+    if-nez p0, :cond_0
+
+    .line 5
+    .line 6
+    return-void
+
+    .line 7
+    :cond_0
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p0
+
+    .line 11
+    invoke-static {p0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 12
     .line 13
     .line 14
+    move-result-object p0
+
+    .line 15
+    throw p0
+.end method
+
+.method public static A08(ZLjava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    if-eqz p0, :cond_0
+
+    .line 1
+    .line 2
     return-void
+
+    .line 3
+    :cond_0
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    invoke-static {p0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p0
+
+    .line 11
+    throw p0
+.end method
+
+.method public static A09(ZLjava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    if-eqz p0, :cond_0
+
+    .line 1
+    .line 2
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    invoke-static {p0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p0
+
+    .line 11
+    throw p0
 .end method

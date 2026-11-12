@@ -22,6 +22,7 @@
     <string name="abc_searchview_description_submit">Thumela umbuzo</string>
     <string name="abc_searchview_description_voice">Ukusesha ngezwi</string>
     <string name="abc_toolbar_collapse_description">Goqa</string>
+    <string name="accessibility_sound_toggle_button">Guqula umsindo wevidiyo</string>
     <string name="common_google_play_services_enable_button">Nika amandla</string>
     <string name="common_google_play_services_enable_text">I-%1$s ngeke isebenze ngaphandle kokuthi unike amandla amasevisi we-Google Play.</string>
     <string name="common_google_play_services_enable_title">Nika amandla amasevisi we-Google Play</string>
@@ -41,4 +42,6 @@
     <string name="dialog_dismiss">Chitha</string>
     <string name="runtime_permissions_allow">Vumela</string>
     <string name="runtime_permissions_deny">Nqabela</string>
+    <string name="video_play_button_description">Dlala ividiyo yamanje</string>
+    <string name="video_thumbnail_description">Ividiyo</string>
 </resources>

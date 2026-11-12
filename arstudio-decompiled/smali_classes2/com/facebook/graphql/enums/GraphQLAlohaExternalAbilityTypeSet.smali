@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLAlohaExternalAbilityTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLAlohaExternalAbilityTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -124,22 +124,23 @@
 
     .line 51
     .line 52
-    const-string v0, "WEB_VIEW"
+    const-string/jumbo v0, "WEB_VIEW"
 
     .line 53
     .line 54
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 55
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 56
     .line 57
+    .line 58
     move-result-object v0
 
-    .line 58
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAlohaExternalAbilityTypeSet;->A00:Ljava/util/Set;
-
     .line 59
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAlohaExternalAbilityTypeSet;->A00:Ljava/util/HashSet;
+
     .line 60
+    .line 61
     return-void
 .end method
 
@@ -155,11 +156,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAlohaExternalAbilityTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAlohaExternalAbilityTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

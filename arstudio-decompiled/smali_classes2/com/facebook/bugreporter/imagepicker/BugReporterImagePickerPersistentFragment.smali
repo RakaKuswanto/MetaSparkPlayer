@@ -1,5 +1,5 @@
 .class public Lcom/facebook/bugreporter/imagepicker/BugReporterImagePickerPersistentFragment;
-.super LX/3e4;
+.super LX/3FR;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3e4;-><init>()V
+    invoke-direct {p0}, LX/3FR;-><init>()V
 
     .line 1
     .line 2
@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/37j;->A01()LX/37j;
+    invoke-static {}, LX/2uz;->A01()LX/2uz;
 
     .line 1
     .line 2
@@ -31,6 +31,16 @@
 
     .line 4
     return-object v0
+.end method
+
+.method public synthetic isNavigationAnalyticsOptOutEnabled()Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    return v0
 .end method
 
 .method public onFragmentCreate(Landroid/os/Bundle;)V

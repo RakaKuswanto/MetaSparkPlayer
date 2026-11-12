@@ -1,163 +1,196 @@
-.class public final LX/4bm;
-.super LX/4bq;
+.class public final LX/4bM;
+.super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:I
+# interfaces
+.implements LX/4aI;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
-
-    .line 1342961147
-    invoke-direct {p0}, LX/4bq;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 1342961148
-    iput v0, p0, LX/4bm;->A00:I
-
-    const v0, 0x800013
-
-    .line 1342961149
-    iput v0, p0, LX/4bq;->A00:I
-
-    return-void
-.end method
-
-.method public constructor <init>(LX/4bm;)V
-    .locals 1
-
-    .line 536870912
-    invoke-direct {p0, p1}, LX/4bq;-><init>(LX/4bq;)V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    const/4 v0, 0x0
-
-    .line 536870916
-    iput v0, p0, LX/4bm;->A00:I
-
-    .line 536870917
-    .line 536870918
-    iget v0, p1, LX/4bm;->A00:I
-
-    .line 536870919
-    .line 536870920
-    iput v0, p0, LX/4bm;->A00:I
-
-    .line 536870921
-    .line 536870922
-    return-void
-.end method
-
-.method public constructor <init>(LX/4bq;)V
-    .locals 1
-
-    .line 805306368
-    invoke-direct {p0, p1}, LX/4bq;-><init>(LX/4bq;)V
-
-    .line 805306369
-    .line 805306370
-    .line 805306371
-    const/4 v0, 0x0
-
-    .line 805306372
-    iput v0, p0, LX/4bm;->A00:I
-
-    .line 805306373
-    .line 805306374
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/4bq;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A5I(LX/4D6;)Lcom/facebook/dsp/core/ColorData;
+    .locals 1
+
     const/4 v0, 0x0
 
+    return-object v0
+.end method
+
+.method public final A5t(LX/4aT;)Ljava/lang/Integer;
+    .locals 3
+
+    .line 0
+    invoke-static {p1}, LX/431;->A0B(Ljava/lang/Enum;)I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v2
+
     .line 4
-    iput v0, p0, LX/4bm;->A00:I
+    const/4 v0, 0x6
+
+    .line 5
+    const/16 v1, 0xc
+
+    .line 6
+    .line 7
+    if-eq v2, v0, :cond_0
+
+    .line 8
+    .line 9
+    const/16 v0, 0x8
+
+    .line 10
+    .line 11
+    if-eq v2, v0, :cond_0
+
+    .line 12
+    .line 13
+    const/16 v0, 0x9
+
+    .line 14
+    .line 15
+    if-eq v2, v0, :cond_0
+
+    .line 16
+    .line 17
+    const/4 v0, 0x0
+
+    .line 18
+    return-object v0
+
+    .line 19
+    :cond_0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    return-object v0
+.end method
+
+.method public final AIH()LX/6Vc;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/6Vc;->MARKETPLACE_BLUEPRINT:LX/6Vc;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final Ama(LX/4aV;)LX/4aY;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final An3(LX/4aU;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AnK(LX/4aG;)Ljava/lang/Float;
+    .locals 3
+
+    .line 0
+    invoke-static {p1}, LX/431;->A0B(Ljava/lang/Enum;)I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v2
+
+    .line 4
+    const/16 v0, 0xf
 
     .line 5
     .line 6
-    return-void
-.end method
+    if-eq v2, v0, :cond_0
 
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 1
+    .line 7
+    .line 8
+    const/16 v0, 0x18
 
-    .line 1073741824
-    invoke-direct {p0, p1}, LX/4bq;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 9
+    .line 10
+    const/4 v1, 0x0
 
-    .line 1073741825
-    .line 1073741826
-    .line 1073741827
+    .line 11
+    if-eq v2, v0, :cond_1
+
+    .line 12
+    .line 13
+    const/16 v0, 0x3a
+
+    .line 14
+    .line 15
+    const/high16 v1, 0x41400000    # 12.0f
+
+    .line 16
+    .line 17
+    if-eq v2, v0, :cond_1
+
+    .line 18
+    .line 19
+    const/16 v0, 0x3f
+
+    .line 20
+    .line 21
+    if-eq v2, v0, :cond_1
+
+    .line 22
+    .line 23
     const/4 v0, 0x0
 
-    .line 1073741828
-    iput v0, p0, LX/4bm;->A00:I
+    .line 24
+    return-object v0
 
-    .line 1073741829
-    .line 1073741830
-    return-void
+    .line 25
+    :cond_0
+    const/high16 v1, 0x41000000    # 8.0f
+
+    .line 26
+    .line 27
+    :cond_1
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    return-object v0
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+.method public final Aou(LX/4ah;)LX/4ak;
     .locals 1
 
-    .line 268435456
-    invoke-direct {p0, p1}, LX/4bq;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
     const/4 v0, 0x0
 
-    .line 268435460
-    iput v0, p0, LX/4bm;->A00:I
-
-    .line 268435461
-    .line 268435462
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    .line 268435463
-    .line 268435464
-    iput v0, p0, LX/4bm;->leftMargin:I
-
-    .line 268435465
-    .line 268435466
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    .line 268435467
-    .line 268435468
-    iput v0, p0, LX/4bm;->topMargin:I
-
-    .line 268435469
-    .line 268435470
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    .line 268435471
-    .line 268435472
-    iput v0, p0, LX/4bm;->rightMargin:I
-
-    .line 268435473
-    .line 268435474
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    .line 268435475
-    .line 268435476
-    iput v0, p0, LX/4bm;->bottomMargin:I
-
-    .line 268435477
-    .line 268435478
-    return-void
+    return-object v0
 .end method

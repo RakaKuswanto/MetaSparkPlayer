@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1t0;
+.implements Lcom/facebook/graphservice/interfaces/GraphQLConsistency;
 
 
 # instance fields

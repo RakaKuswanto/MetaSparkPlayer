@@ -1,6 +1,9 @@
-.class public abstract LX/2JC;
-.super LX/2JD;
+.class public final LX/2JC;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/0e8;
 
 
 # direct methods
@@ -8,7 +11,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/2JD;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

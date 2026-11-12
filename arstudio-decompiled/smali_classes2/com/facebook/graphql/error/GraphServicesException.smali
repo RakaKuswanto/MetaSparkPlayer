@@ -195,7 +195,7 @@
 
     .line 3
     .line 4
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 5
     .line 6
@@ -212,11 +212,11 @@
     .line 11
     .line 12
     .line 13
-    iget v0, v1, Lcom/facebook/tigon/TigonError;->mCategory:I
+    iget v0, v1, Lcom/facebook/tigon/TigonError;->_category:I
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/1pJ;->A00(I)Ljava/lang/String;
+    invoke-static {v0}, LX/1v8;->A00(I)Ljava/lang/String;
 
     .line 16
     .line 17
@@ -238,7 +238,7 @@
     .line 25
     .line 26
     .line 27
-    iget-object v0, v1, Lcom/facebook/tigon/TigonError;->mErrorDomain:Ljava/lang/String;
+    iget-object v0, v1, Lcom/facebook/tigon/TigonError;->_errorDomain:Ljava/lang/String;
 
     .line 28
     .line 29
@@ -256,7 +256,7 @@
     .line 35
     .line 36
     .line 37
-    iget v0, v1, Lcom/facebook/tigon/TigonError;->mDomainErrorCode:I
+    iget v0, v1, Lcom/facebook/tigon/TigonError;->_domainErrorCode:I
 
     .line 38
     .line 39
@@ -265,7 +265,7 @@
     .line 40
     .line 41
     .line 42
-    iget-object v1, v1, Lcom/facebook/tigon/TigonError;->mAnalyticsDetail:Ljava/lang/String;
+    iget-object v1, v1, Lcom/facebook/tigon/TigonError;->_analyticsDetail:Ljava/lang/String;
 
     .line 43
     .line 44
@@ -350,7 +350,7 @@
 
     .line 82
     .line 83
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 84
     .line 85
@@ -358,79 +358,80 @@
     move-result-object v2
 
     .line 87
-    const-string v0, "[code] "
+    const-string/jumbo v0, "[code] "
 
     .line 88
     .line 89
+    .line 90
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 90
     .line 91
     .line 92
+    .line 93
     invoke-virtual {v1}, Lcom/facebook/http/protocol/ApiErrorResult;->A00()I
 
-    .line 93
     .line 94
     .line 95
+    .line 96
     move-result v0
 
-    .line 96
+    .line 97
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 97
     .line 98
     .line 99
+    .line 100
     const-string v0, " [message]: "
 
-    .line 100
     .line 101
+    .line 102
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 102
     .line 103
     .line 104
+    .line 105
     invoke-virtual {v1}, Lcom/facebook/http/protocol/ApiErrorResult;->A02()Ljava/lang/String;
 
-    .line 105
     .line 106
     .line 107
-    move-result-object v0
-
     .line 108
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     .line 109
-    .line 110
-    .line 111
-    const-string v0, " [extra]: "
-
-    .line 112
-    .line 113
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 110
+    .line 111
+    .line 112
+    const-string v0, " [extra]: "
+
+    .line 113
     .line 114
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 115
     .line 116
+    .line 117
     invoke-virtual {v1}, Lcom/facebook/http/protocol/ApiErrorResult;->A01()Ljava/lang/String;
 
-    .line 117
     .line 118
     .line 119
+    .line 120
     move-result-object v0
 
-    .line 120
+    .line 121
     goto :goto_0
 
-    .line 121
+    .line 122
     :cond_4
     iget-object v2, p0, Lcom/facebook/graphql/error/GraphServicesException;->mSummary:Lcom/facebook/graphservice/interfaces/Summary;
 
-    .line 122
     .line 123
+    .line 124
     if-eqz v2, :cond_1
 
-    .line 124
     .line 125
+    .line 126
     goto :goto_1
 .end method
 

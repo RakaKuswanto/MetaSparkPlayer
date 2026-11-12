@@ -1,28 +1,45 @@
-.class public final LX/5xg;
-.super Ljava/lang/Object;
+.class public final LX/5Xg;
+.super LX/6Zy;
 .source ""
 
-# interfaces
-.implements LX/5xp;
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "Http2Connection$2"
 
 
 # instance fields
-.field public final synthetic A00:LX/5xx;
+.field public final synthetic A00:I
+
+.field public final synthetic A01:J
+
+.field public final synthetic A02:LX/5Wy;
 
 
 # direct methods
-.method public constructor <init>(LX/5xx;)V
-    .locals 0
+.method public varargs constructor <init>(LX/5Wy;[Ljava/lang/Object;IJ)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/5xg;->A00:LX/5xx;
+    const-string v0, "OkHttp Window Update %s stream %d"
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/5Xg;->A02:LX/5Wy;
 
     .line 3
     .line 4
+    iput p3, p0, LX/5Xg;->A00:I
+
     .line 5
+    .line 6
+    iput-wide p4, p0, LX/5Xg;->A01:J
+
+    .line 7
+    .line 8
+    invoke-direct {p0, v0, p2}, LX/6Zy;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 9
+    .line 10
+    .line 11
     return-void
 .end method

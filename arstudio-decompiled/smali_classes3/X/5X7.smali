@@ -2,482 +2,409 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;
-
-.field public final A01:LX/5UZ;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Ljava/lang/String;
-
-.field public final A04:Ljava/lang/String;
-
-.field public final A05:Ljava/lang/String;
-
-.field public final A06:Ljava/lang/String;
-
-.field public final A07:Ljava/lang/String;
-
-.field public final A08:Ljava/lang/String;
-
-.field public final A09:Ljava/lang/String;
-
-.field public final A0A:Ljava/lang/String;
-
-.field public final A0B:Ljava/lang/String;
-
-.field public final A0C:Ljava/util/HashMap;
-
-.field public final A0D:Z
+# interfaces
+.implements LX/5XH;
 
 
 # direct methods
-.method public constructor <init>(LX/5UZ;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    const-string v1, "msqrd_player_app"
-
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p12, p0, LX/5X7;->A0C:Ljava/util/HashMap;
-
-    iput-object p5, p0, LX/5X7;->A05:Ljava/lang/String;
-
-    iput-object p6, p0, LX/5X7;->A06:Ljava/lang/String;
-
-    iput-object p10, p0, LX/5X7;->A0A:Ljava/lang/String;
-
-    iput-object p11, p0, LX/5X7;->A0B:Ljava/lang/String;
-
-    iput-object p8, p0, LX/5X7;->A08:Ljava/lang/String;
-
-    iput-object p9, p0, LX/5X7;->A09:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, LX/5X7;->A0D:Z
-
-    iput-object p3, p0, LX/5X7;->A03:Ljava/lang/String;
-
-    iput-object p7, p0, LX/5X7;->A07:Ljava/lang/String;
-
-    iput-object v1, p0, LX/5X7;->A02:Ljava/lang/String;
-
-    iput-object p2, p0, LX/5X7;->A00:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;
-
-    iput-object p1, p0, LX/5X7;->A01:LX/5UZ;
-
-    iput-object p4, p0, LX/5X7;->A04:Ljava/lang/String;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
+.end method
+
+.method public static final A00()LX/5X7;
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/5X7;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/5X7;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
+.end method
+
+.method public static A01(Ljava/lang/String;)LX/5Xe;
+    .locals 5
+
+    .line 0
+    const-string v1, "Host"
+
+    .line 1
+    .line 2
+    invoke-static {p0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v4
+
+    .line 14
+    const-string v1, "Port"
+
+    .line 15
+    .line 16
+    invoke-static {p0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    if-eqz v0, :cond_1
+
+    .line 29
+    .line 30
+    :try_start_0
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v3
+
+    .line 34
+    if-lez v3, :cond_1
+
+    .line 35
+    .line 36
+    const v0, 0xffff
+
+    .line 37
+    .line 38
+    .line 39
+    if-gt v3, v0, :cond_1
+
+    .line 40
+    .line 41
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v1
+
+    .line 45
+    const-string v0, "socksProxy"
+
+    .line 46
+    .line 47
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v0
+
+    .line 51
+    if-eqz v0, :cond_0
+
+    .line 52
+    .line 53
+    sget-object v2, Ljava/net/Proxy$Type;->SOCKS:Ljava/net/Proxy$Type;
+
+    .line 54
+    .line 55
+    :goto_0
+    const-string v0, "type"
+
+    .line 56
+    .line 57
+    invoke-static {v0, v1, v1}, LX/0X4;->A0s(Ljava/lang/Object;Ljava/util/AbstractCollection;Ljava/util/HashSet;)Ljava/util/HashSet;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v1
+
+    .line 61
+    new-instance v0, LX/5Xe;
+
+    .line 62
+    .line 63
+    invoke-direct {v0, v4, v2, v1, v3}, LX/5Xe;-><init>(Ljava/lang/String;Ljava/net/Proxy$Type;Ljava/util/Set;I)V
+
+    .line 64
+    .line 65
+    .line 66
+    goto :goto_1
+
+    .line 67
+    :cond_0
+    sget-object v2, Ljava/net/Proxy$Type;->HTTP:Ljava/net/Proxy$Type;
+
+    .line 68
+    .line 69
+    goto :goto_0
+
+    .line 70
+    :goto_1
+    return-object v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 71
+    :catch_0
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 72
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final A00(Ljava/lang/Object;)Z
-    .locals 4
+.method public final Afz()LX/5XK;
+    .locals 6
 
     .line 0
-    const/4 v3, 0x1
+    const-string v0, "http.proxy"
 
     .line 1
-    if-eq p0, p1, :cond_2
-
     .line 2
+    invoke-static {v0}, LX/5X7;->A01(Ljava/lang/String;)LX/5Xe;
+
     .line 3
-    const/4 v2, 0x0
-
     .line 4
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 5
-    .line 6
-    .line 7
-    move-result-object v1
+    move-result-object v5
 
+    .line 6
+    const-string v0, "https.proxy"
+
+    .line 7
     .line 8
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0}, LX/5X7;->A01(Ljava/lang/String;)LX/5Xe;
 
     .line 9
     .line 10
     .line 11
-    move-result-object v0
+    move-result-object v4
 
     .line 12
-    if-eq v1, v0, :cond_0
+    const-string v0, "socksProxy"
 
     .line 13
     .line 14
-    return v2
+    invoke-static {v0}, LX/5X7;->A01(Ljava/lang/String;)LX/5Xe;
 
     .line 15
-    :cond_0
-    check-cast p1, LX/5X7;
-
     .line 16
     .line 17
-    iget-object v1, p0, LX/5X7;->A0C:Ljava/util/HashMap;
+    move-result-object v3
 
     .line 18
+    const/16 v0, 0x5d
+
     .line 19
-    iget-object v0, p1, LX/5X7;->A0C:Ljava/util/HashMap;
-
     .line 20
-    .line 21
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/0X0;->A00(I)Ljava/lang/String;
 
+    .line 21
     .line 22
     .line 23
+    move-result-object v1
+
     .line 24
-    move-result v0
+    const-string v0, ""
 
     .line 25
-    if-eqz v0, :cond_1
-
     .line 26
-    .line 27
-    iget-object v1, p0, LX/5X7;->A05:Ljava/lang/String;
+    invoke-static {v1, v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 27
     .line 28
     .line 29
-    iget-object v0, p1, LX/5X7;->A05:Ljava/lang/String;
+    move-result-object v0
 
     .line 30
-    .line 31
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
+    .line 31
     .line 32
     .line 33
+    move-result-object v1
+
     .line 34
-    move-result v0
+    const-string v0, ","
 
     .line 35
-    if-eqz v0, :cond_1
-
     .line 36
-    .line 37
-    iget-object v1, p0, LX/5X7;->A06:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
+    .line 37
     .line 38
     .line 39
-    iget-object v0, p1, LX/5X7;->A06:Ljava/lang/String;
+    move-result-object v0
 
     .line 40
-    .line 41
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
+    .line 41
     .line 42
     .line 43
+    move-result-object v2
+
     .line 44
-    move-result v0
+    if-nez v5, :cond_0
 
     .line 45
-    if-eqz v0, :cond_1
-
     .line 46
+    if-nez v4, :cond_0
+
     .line 47
-    iget-object v1, p0, LX/5X7;->A0A:Ljava/lang/String;
-
     .line 48
+    if-eqz v3, :cond_1
+
     .line 49
-    iget-object v0, p1, LX/5X7;->A0A:Ljava/lang/String;
-
     .line 50
-    .line 51
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v1, LX/5XL;
 
+    .line 51
     .line 52
+    invoke-direct {v1}, LX/5XL;-><init>()V
+
     .line 53
     .line 54
-    move-result v0
-
     .line 55
-    if-eqz v0, :cond_1
+    sget-object v0, LX/5Xm;->SYSTEM:LX/5Xm;
 
     .line 56
     .line 57
-    iget-object v1, p0, LX/5X7;->A0B:Ljava/lang/String;
+    invoke-virtual {v1, v0}, LX/5XL;->A01(LX/5Xm;)V
 
     .line 58
     .line 59
-    iget-object v0, p1, LX/5X7;->A0B:Ljava/lang/String;
-
     .line 60
-    .line 61
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v0, LX/4sT;->GLOBAL:LX/4sT;
 
+    .line 61
     .line 62
+    invoke-virtual {v1, v0}, LX/5XL;->A00(LX/4sT;)V
+
     .line 63
     .line 64
-    move-result v0
-
     .line 65
-    if-eqz v0, :cond_1
+    iput-object v3, v1, LX/5XL;->A03:LX/5Xe;
 
     .line 66
     .line 67
-    iget-object v1, p0, LX/5X7;->A08:Ljava/lang/String;
+    iput-object v3, v1, LX/5XL;->A02:LX/5Xe;
 
     .line 68
     .line 69
-    iget-object v0, p1, LX/5X7;->A08:Ljava/lang/String;
+    :goto_0
+    iput-object v2, v1, LX/5XL;->A04:Lcom/google/common/collect/ImmutableList;
 
     .line 70
     .line 71
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v0, "nonProxyHosts"
 
     .line 72
     .line 73
+    invoke-static {v2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 74
-    move-result v0
-
     .line 75
-    if-eqz v0, :cond_1
-
     .line 76
+    new-instance v0, LX/5XK;
+
     .line 77
-    iget-object v1, p0, LX/5X7;->A09:Ljava/lang/String;
-
     .line 78
-    .line 79
-    iget-object v0, p1, LX/5X7;->A09:Ljava/lang/String;
+    invoke-direct {v0, v1}, LX/5XK;-><init>(LX/5XL;)V
 
+    .line 79
     .line 80
     .line 81
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v0
 
     .line 82
+    :cond_0
+    new-instance v1, LX/5XL;
+
     .line 83
     .line 84
-    move-result v0
+    invoke-direct {v1}, LX/5XL;-><init>()V
 
     .line 85
-    if-eqz v0, :cond_1
-
     .line 86
     .line 87
-    iget-object v1, p0, LX/5X7;->A04:Ljava/lang/String;
+    sget-object v0, LX/5Xm;->SYSTEM:LX/5Xm;
 
     .line 88
     .line 89
-    iget-object v0, p1, LX/5X7;->A04:Ljava/lang/String;
+    invoke-virtual {v1, v0}, LX/5XL;->A01(LX/5Xm;)V
 
     .line 90
     .line 91
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     .line 92
+    sget-object v0, LX/4sT;->GLOBAL:LX/4sT;
+
     .line 93
     .line 94
-    move-result v0
+    invoke-virtual {v1, v0}, LX/5XL;->A00(LX/4sT;)V
 
     .line 95
-    if-eqz v0, :cond_1
-
     .line 96
     .line 97
-    iget-object v1, p0, LX/5X7;->A03:Ljava/lang/String;
+    iput-object v4, v1, LX/5XL;->A03:LX/5Xe;
 
     .line 98
     .line 99
-    iget-object v0, p1, LX/5X7;->A03:Ljava/lang/String;
+    iput-object v5, v1, LX/5XL;->A02:LX/5Xe;
 
     .line 100
     .line 101
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    goto :goto_0
 
     .line 102
-    .line 103
-    .line 104
-    move-result v0
-
-    .line 105
-    if-eqz v0, :cond_1
-
-    .line 106
-    .line 107
-    iget-object v1, p0, LX/5X7;->A07:Ljava/lang/String;
-
-    .line 108
-    .line 109
-    iget-object v0, p1, LX/5X7;->A07:Ljava/lang/String;
-
-    .line 110
-    .line 111
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 112
-    .line 113
-    .line 114
-    move-result v0
-
-    .line 115
-    if-eqz v0, :cond_1
-
-    .line 116
-    .line 117
-    iget-object v1, p0, LX/5X7;->A00:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;
-
-    .line 118
-    .line 119
-    iget-object v0, p1, LX/5X7;->A00:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;
-
-    .line 120
-    .line 121
-    if-ne v1, v0, :cond_1
-
-    .line 122
-    .line 123
-    iget-object v1, p0, LX/5X7;->A01:LX/5UZ;
-
-    .line 124
-    .line 125
-    iget-object v0, p1, LX/5X7;->A01:LX/5UZ;
-
-    .line 126
-    .line 127
-    invoke-static {v1, v0}, LX/6L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 128
-    .line 129
-    .line 130
-    move-result v0
-
-    .line 131
-    if-eqz v0, :cond_1
-
-    .line 132
-    .line 133
-    return v3
-
-    .line 134
     :cond_1
-    const/4 v3, 0x0
+    const/4 v0, 0x0
 
-    .line 135
-    :cond_2
-    return v3
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    const-string v0, "FbMsqrdConfig{hashCode="
-
-    .line 5
-    .line 6
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 7
-    .line 8
-    .line 9
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
-
-    .line 13
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 14
-    .line 15
-    .line 16
-    const-string v0, " effectId="
-
-    .line 17
-    .line 18
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 19
-    .line 20
-    .line 21
-    iget-object v0, p0, LX/5X7;->A07:Ljava/lang/String;
-
-    .line 22
-    .line 23
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 24
-    .line 25
-    .line 26
-    const-string v0, " effectInstanceId="
-
-    .line 27
-    .line 28
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 29
-    .line 30
-    .line 31
-    const-string v0, "0"
-
-    .line 32
-    .line 33
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 34
-    .line 35
-    .line 36
-    const-string v0, " effectName="
-
-    .line 37
-    .line 38
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 39
-    .line 40
-    .line 41
-    const/4 v1, 0x0
-
-    .line 42
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 43
-    .line 44
-    .line 45
-    const-string v0, " effectSessionId="
-
-    .line 46
-    .line 47
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 48
-    .line 49
-    .line 50
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 51
-    .line 52
-    .line 53
-    const-string v0, " deliveryOperationId="
-
-    .line 54
-    .line 55
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 56
-    .line 57
-    .line 58
-    invoke-static {v1, v2}, LX/0Yd;->A0S(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 59
-    .line 60
-    .line 61
-    move-result-object v0
-
-    .line 62
+    .line 103
     return-object v0
 .end method

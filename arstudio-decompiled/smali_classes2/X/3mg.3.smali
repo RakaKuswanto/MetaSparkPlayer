@@ -1,56 +1,322 @@
-.class public final synthetic LX/3mg;
-.super Ljava/lang/Object;
+.class public final LX/3mg;
+.super Ljava/util/HashMap;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AppStateManager$$ExternalSyntheticLambda1"
-
-
-# instance fields
-.field public final synthetic A00:LX/2sb;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/HashMap<",
+        "Ljava/lang/String;",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/2sb;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, LX/3mg;->A00:LX/2sb;
+    .line 1
+    .line 2
+    .line 3
+    const-string/jumbo v0, "qt_server_checksum"
 
+    .line 4
+    .line 5
+    .line 6
+    invoke-virtual {p0, v0, p1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final bridge containsKey(Ljava/lang/Object;)Z
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/3mg;->A00:LX/2sb;
+    if-eqz p1, :cond_0
 
     .line 1
     .line 2
-    invoke-static {}, Landroid/os/Looper;->myQueue()Landroid/os/MessageQueue;
+    instance-of v0, p1, Ljava/lang/String;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v1
+    if-nez v0, :cond_0
 
+    .line 5
     .line 6
-    iget-object v0, v0, LX/2sb;->A06:Landroid/os/MessageQueue$IdleHandler;
+    const/4 v0, 0x0
 
     .line 7
+    return v0
+
     .line 8
-    invoke-virtual {v1, v0}, Landroid/os/MessageQueue;->addIdleHandler(Landroid/os/MessageQueue$IdleHandler;)V
+    :cond_0
+    invoke-super {p0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     .line 9
     .line 10
     .line 11
-    return-void
+    move-result v0
+
+    .line 12
+    return v0
+.end method
+
+.method public final bridge containsValue(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    instance-of v0, p1, Ljava/lang/String;
+
+    .line 3
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return v0
+
+    .line 8
+    :cond_0
+    invoke-super {p0, p1}, Ljava/util/HashMap;->containsValue(Ljava/lang/Object;)Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    return v0
+.end method
+
+.method public final bridge entrySet()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    instance-of v0, p1, Ljava/lang/String;
+
+    .line 3
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return-object v0
+
+    .line 8
+    :cond_0
+    invoke-super {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
+.end method
+
+.method public final bridge synthetic getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    instance-of v0, p1, Ljava/lang/String;
+
+    .line 3
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    return-object p2
+
+    .line 7
+    :cond_0
+    invoke-super {p0, p1, p2}, Ljava/util/HashMap;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    return-object v0
+.end method
+
+.method public final bridge keySet()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final bridge synthetic remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    instance-of v0, p1, Ljava/lang/String;
+
+    .line 3
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return-object v0
+
+    .line 8
+    :cond_0
+    invoke-super {p0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
+.end method
+
+.method public final bridge remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 2
+
+    .line 268435456
+    if-nez p1, :cond_1
+
+    .line 268435457
+    .line 268435458
+    const/4 v0, 0x1
+
+    .line 268435459
+    :goto_0
+    const/4 v1, 0x0
+
+    .line 268435460
+    if-eqz v0, :cond_0
+
+    .line 268435461
+    .line 268435462
+    if-eqz p2, :cond_2
+
+    .line 268435463
+    .line 268435464
+    instance-of v0, p2, Ljava/lang/String;
+
+    .line 268435465
+    .line 268435466
+    if-nez v0, :cond_2
+
+    .line 268435467
+    .line 268435468
+    :cond_0
+    return v1
+
+    .line 268435469
+    :cond_1
+    instance-of v0, p1, Ljava/lang/String;
+
+    .line 268435470
+    .line 268435471
+    goto :goto_0
+
+    .line 268435472
+    :cond_2
+    invoke-super {p0, p1, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 268435473
+    .line 268435474
+    .line 268435475
+    move-result v0
+
+    .line 268435476
+    return v0
+.end method
+
+.method public final bridge size()I
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Ljava/util/HashMap;->size()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    return v0
+.end method
+
+.method public final bridge values()Ljava/util/Collection;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

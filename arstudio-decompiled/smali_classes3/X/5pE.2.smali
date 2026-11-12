@@ -1,60 +1,38 @@
-.class public final LX/5pE;
+.class public interface abstract LX/5pe;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "StateCallbackNotifier$2"
-
-
-# instance fields
-.field public final synthetic A00:LX/5YN;
-
-.field public final synthetic A01:Ljava/lang/Throwable;
-
-
-# direct methods
-.method public constructor <init>(LX/5YN;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/5pE;->A00:LX/5YN;
-
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/5pE;->A01:Ljava/lang/Throwable;
-
-    .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public abstract onDoubleTap(Landroid/view/MotionEvent;)V
+.end method
 
-    .line 0
-    iget-object v1, p0, LX/5pE;->A00:LX/5YN;
+.method public abstract onDown(JFF)V
+.end method
 
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/5pE;->A01:Ljava/lang/Throwable;
+.method public abstract onLongPress(FF)V
+.end method
 
-    .line 3
-    .line 4
-    invoke-interface {v1, v0}, LX/5YN;->AXY(Ljava/lang/Throwable;)V
+.method public abstract onLongPressBegin()Z
+.end method
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
+.method public abstract onLongPressEnd(FF)V
+.end method
+
+.method public abstract onMoved(JFFFF)V
+.end method
+
+.method public abstract onScroll(FFFF)Z
+.end method
+
+.method public abstract onScrollBegin()Z
+.end method
+
+.method public abstract onScrollEnd(FFFF)V
+.end method
+
+.method public abstract onSingleTapUp(Landroid/view/MotionEvent;)Z
+.end method
+
+.method public abstract onUp(JFFFF)V
 .end method

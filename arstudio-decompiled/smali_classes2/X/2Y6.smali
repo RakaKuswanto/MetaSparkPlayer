@@ -1,32 +1,33 @@
-.class public abstract LX/2Y6;
-.super LX/2Y3;
+.class public final LX/2Y6;
+.super LX/2Wx;
 .source ""
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0}, LX/2Y3;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
-
-.method public constructor <init>(LX/2Y2;)V
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    sget v0, LX/2I6;->A3k:I
 
     .line 1
-    invoke-direct {p0, v0}, LX/2Y3;-><init>(LX/2Y2;)V
-
     .line 2
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 3
     .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/2XT;
+
+    .line 7
+    .line 8
+    invoke-direct {p0, v0}, LX/2Wx;-><init>(LX/2XT;)V
+
+    .line 9
+    .line 10
+    .line 11
     return-void
 .end method

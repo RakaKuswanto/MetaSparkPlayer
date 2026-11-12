@@ -1,14 +1,41 @@
-.class public interface abstract LX/4ql;
-.super Ljava/lang/Object;
+.class public final LX/4ql;
+.super LX/6b2;
 .source ""
 
 
-# virtual methods
-.method public abstract A5b(Ljava/lang/String;I)LX/4ql;
+# static fields
+.field public static final A00:LX/4ql;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/4ql;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/4ql;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/4ql;->A00:LX/4ql;
+
+    .line 6
+    .line 7
+    return-void
 .end method
 
-.method public abstract A5c(Ljava/lang/Object;Ljava/lang/String;)LX/4ql;
-.end method
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract flush()V
+    .line 0
+    invoke-direct {p0}, LX/6b2;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

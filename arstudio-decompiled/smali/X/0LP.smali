@@ -1,120 +1,99 @@
-.class public final LX/0LP;
+.class public abstract LX/0LP;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:I
-
-.field public final A01:I
-
-.field public final A02:I
-
-.field public final A03:Z
-
-.field public final A04:Z
-
-.field public final A05:Z
-
-.field public final A06:Z
-
-.field public final A07:Z
-
-
 # direct methods
-.method public constructor <init>(IIIZZZZZ)V
+.method public static A00()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Landroid/os/Trace;->endSection()V
 
     .line 1
     .line 2
     .line 3
-    iput p1, p0, LX/0LP;->A01:I
-
-    .line 4
-    .line 5
-    iput-boolean p4, p0, LX/0LP;->A05:Z
-
-    .line 6
-    .line 7
-    iput-boolean p5, p0, LX/0LP;->A04:Z
-
-    .line 8
-    .line 9
-    iput-boolean p6, p0, LX/0LP;->A06:Z
-
-    .line 10
-    .line 11
-    iput-boolean p7, p0, LX/0LP;->A07:Z
-
-    .line 12
-    .line 13
-    iput p2, p0, LX/0LP;->A02:I
-
-    .line 14
-    .line 15
-    iput-boolean p8, p0, LX/0LP;->A03:Z
-
-    .line 16
-    .line 17
-    iput p3, p0, LX/0LP;->A00:I
-
-    .line 18
-    .line 19
     return-void
 .end method
 
-.method public constructor <init>(IZ)V
-    .locals 2
+.method public static A01(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    .line 268435456
-    const/4 v0, 0x3
+    .line 0
+    invoke-static {p0, p1, p2}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 268435457
-    const/4 v1, 0x1
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
 
-    .line 268435458
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 4
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    iput v0, p0, LX/0LP;->A01:I
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
 
-    .line 268435462
-    .line 268435463
-    iput-boolean v1, p0, LX/0LP;->A05:Z
+    .line 8
+    const/16 v1, 0x7f
 
-    .line 268435464
-    .line 268435465
-    iput-boolean p2, p0, LX/0LP;->A04:Z
+    .line 9
+    .line 10
+    if-le v0, v1, :cond_0
 
-    .line 268435466
-    .line 268435467
+    .line 11
+    .line 12
+    if-eqz p1, :cond_0
+
+    .line 13
+    .line 14
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    sub-int/2addr v1, v0
+
+    .line 19
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    sub-int/2addr v1, v0
+
+    .line 24
     const/4 v0, 0x0
 
-    .line 268435468
-    iput-boolean v0, p0, LX/0LP;->A06:Z
+    .line 25
+    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    .line 268435469
-    .line 268435470
-    iput-boolean v0, p0, LX/0LP;->A07:Z
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
 
-    .line 268435471
-    .line 268435472
-    iput v0, p0, LX/0LP;->A02:I
+    .line 29
+    invoke-static {p0, v0, p2}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 268435473
-    .line 268435474
-    iput-boolean v1, p0, LX/0LP;->A03:Z
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v2
 
-    .line 268435475
-    .line 268435476
-    iput p1, p0, LX/0LP;->A00:I
+    .line 33
+    :cond_0
+    invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 268435477
-    .line 268435478
+    .line 34
+    .line 35
+    .line 36
     return-void
 .end method

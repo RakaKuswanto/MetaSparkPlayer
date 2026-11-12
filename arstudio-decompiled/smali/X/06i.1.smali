@@ -1,94 +1,48 @@
-.class public final LX/06i;
+.class public final synthetic LX/06i;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4q9;
 
-# static fields
-.field public static final A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+# instance fields
+.field public final synthetic A00:LX/06o;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(LX/06o;)V
+    .locals 0
 
-    .line 0
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p1, p0, LX/06i;->A00:LX/06o;
 
-    .line 2
-    .line 3
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    .line 4
-    .line 5
-    .line 6
-    sput-object v0, LX/06i;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 7
-    .line 8
     return-void
 .end method
 
-.method public static final A00(Landroid/content/Context;)V
+
+# virtual methods
+.method public final AU3()V
     .locals 2
 
     .line 0
-    sget-object v1, LX/06i;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v1, p0, LX/06i;->A00:LX/06o;
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+    invoke-static {v1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 4
     .line 5
     .line 6
-    move-result v0
+    invoke-virtual {v1}, LX/06o;->A02()V
 
     .line 7
-    if-nez v0, :cond_0
-
     .line 8
     .line 9
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v1
-
-    .line 13
-    const-string v0, "null cannot be cast to non-null type android.app.Application"
-
-    .line 14
-    .line 15
-    invoke-static {v1, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 16
-    .line 17
-    .line 18
-    check-cast v1, Landroid/app/Application;
-
-    .line 19
-    .line 20
-    new-instance v0, Landroidx/lifecycle/LifecycleDispatcher$DispatcherActivityCallback;
-
-    .line 21
-    .line 22
-    invoke-direct {v0}, Landroidx/lifecycle/LifecycleDispatcher$DispatcherActivityCallback;-><init>()V
-
-    .line 23
-    .line 24
-    .line 25
-    invoke-virtual {v1, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    .line 26
-    .line 27
-    .line 28
-    :cond_0
     return-void
 .end method

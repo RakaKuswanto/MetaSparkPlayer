@@ -1,14 +1,31 @@
-.class public interface abstract LX/4q2;
-.super Ljava/lang/Object;
+.class public final LX/4q2;
+.super LX/4qA;
 .source ""
 
 
-# virtual methods
-.method public abstract A4w(LX/4rC;)V
-.end method
+# instance fields
+.field public final synthetic A00:Landroid/graphics/Rect;
 
-.method public abstract AHt()LX/4pB;
-.end method
+.field public final synthetic A01:Landroidx/transition/FragmentTransitionSupport;
 
-.method public abstract Aj7(LX/4rC;)V
+
+# direct methods
+.method public constructor <init>(Landroid/graphics/Rect;Landroidx/transition/FragmentTransitionSupport;)V
+    .locals 0
+
+    .line 0
+    iput-object p2, p0, LX/4q2;->A01:Landroidx/transition/FragmentTransitionSupport;
+
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/4q2;->A00:Landroid/graphics/Rect;
+
+    .line 3
+    .line 4
+    invoke-direct {p0}, LX/4qA;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
 .end method

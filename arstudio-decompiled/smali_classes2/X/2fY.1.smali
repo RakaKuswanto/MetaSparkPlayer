@@ -1,152 +1,292 @@
-.class public final LX/2fY;
+.class public abstract LX/2fY;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
+# static fields
+.field public static A00:LX/2ew;
 
-.field public final A01:Landroid/content/Context;
-
-.field public final A02:LX/0Af;
-
-.field public final A03:LX/303;
-
-.field public final A04:LX/2BK;
-
-.field public final A05:Lcom/facebook/phonenumbers/PhoneNumberUtil;
-
-.field public volatile A06:Lcom/facebook/growth/model/DeviceOwnerData;
+.field public static A01:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 3
+.method public static A00()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, LX/2fY;->A00:LX/2ew;
 
     .line 1
     .line 2
-    .line 3
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
 
+    .line 3
     .line 4
-    sget v0, LX/2eq;->AJI:I
+    const-string/jumbo v0, "qpl.scroll_health.method_trace_end"
 
     .line 5
     .line 6
-    const/4 v1, 0x0
-
     .line 7
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    invoke-static {v0}, LX/2fY;->A03(Ljava/lang/String;)V
 
     .line 8
     .line 9
     .line 10
-    move-result-object v0
+    sget-object v0, LX/2fY;->A00:LX/2ew;
 
     .line 11
-    check-cast v0, LX/303;
-
     .line 12
-    .line 13
-    iput-object v0, p0, LX/2fY;->A03:LX/303;
+    invoke-interface {v0}, LX/2ew;->AoW()V
 
+    .line 13
     .line 14
     .line 15
-    sget v0, LX/2eq;->AJJ:I
+    invoke-static {}, LX/2fY;->A01()V
 
     .line 16
     .line 17
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
     .line 18
+    :cond_0
+    invoke-static {}, LX/2fY;->A01()V
+
     .line 19
     .line 20
-    move-result-object v0
+    .line 21
+    return-void
+.end method
+
+.method public static A01()V
+    .locals 2
+
+    .line 0
+    sget-boolean v0, LX/2fY;->A01:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_1
+
+    .line 3
+    .line 4
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 5
+    .line 6
+    const/16 v0, 0x1d
+
+    .line 7
+    .line 8
+    if-lt v1, v0, :cond_0
+
+    .line 9
+    .line 10
+    invoke-static {}, Landroid/os/Trace;->isEnabled()Z
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    if-eqz v0, :cond_1
+
+    .line 15
+    .line 16
+    :cond_0
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_1
+    return-void
+.end method
+
+.method public static A02(Ljava/lang/String;)V
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/2fY;->A00:LX/2ew;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    const-string/jumbo v0, "qpl.scroll_health.method_trace_start"
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-static {v0}, LX/2fY;->A03(Ljava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    sget-object v0, LX/2fY;->A00:LX/2ew;
+
+    .line 11
+    .line 12
+    invoke-interface {v0}, LX/2ew;->AoX()V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-static {}, LX/2fY;->A01()V
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_0
+    invoke-static {p0}, LX/2fY;->A03(Ljava/lang/String;)V
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
+.end method
+
+.method public static A03(Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    sget-boolean v0, LX/2fY;->A01:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_1
+
+    .line 3
+    .line 4
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 5
+    .line 6
+    const/16 v0, 0x1d
+
+    .line 7
+    .line 8
+    if-lt v1, v0, :cond_0
+
+    .line 9
+    .line 10
+    invoke-static {}, Landroid/os/Trace;->isEnabled()Z
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    if-eqz v0, :cond_1
+
+    .line 15
+    .line 16
+    :cond_0
+    invoke-static {p0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_1
+    return-void
+.end method
+
+.method public static A04(Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    sget-object v0, LX/2fY;->A00:LX/2ew;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    const-string/jumbo v0, "qpl.scroll_health.method_trace_start"
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-static {v0}, LX/2fY;->A03(Ljava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    sget-object v0, LX/2fY;->A00:LX/2ew;
+
+    .line 11
+    .line 12
+    invoke-interface {v0}, LX/2ew;->AoX()V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-static {}, LX/2fY;->A01()V
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_0
+    sget-boolean v0, LX/2fY;->A01:Z
+
+    .line 19
+    .line 20
+    if-eqz v0, :cond_2
 
     .line 21
-    check-cast v0, LX/2BK;
-
     .line 22
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
     .line 23
-    iput-object v0, p0, LX/2fY;->A04:LX/2BK;
-
     .line 24
+    const/16 v0, 0x1d
+
     .line 25
-    sget v0, LX/2eq;->A5B:I
-
     .line 26
-    .line 27
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    if-lt v1, v0, :cond_1
 
+    .line 27
     .line 28
+    invoke-static {}, Landroid/os/Trace;->isEnabled()Z
+
     .line 29
     .line 30
-    move-result-object v0
-
     .line 31
-    check-cast v0, Landroid/content/Context;
+    move-result v0
 
     .line 32
+    if-eqz v0, :cond_2
+
     .line 33
-    iput-object v0, p0, LX/2fY;->A01:Landroid/content/Context;
-
     .line 34
-    .line 35
-    invoke-static {}, LX/1z6;->A03()LX/0Af;
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
+    .line 35
     .line 36
+    invoke-static {p1}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
+
     .line 37
     .line 38
-    move-result-object v0
-
     .line 39
-    iput-object v0, p0, LX/2fY;->A02:LX/0Af;
+    move-result-object v0
 
     .line 40
-    .line 41
-    sget v0, LX/2eq;->AAC:I
+    invoke-static {v1, p0, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 41
     .line 42
     .line 43
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    move-result-object p0
 
     .line 44
+    :cond_1
+    invoke-static {p0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
     .line 45
     .line 46
-    sget v0, LX/2eq;->AHx:I
-
     .line 47
-    .line 48
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 49
-    .line 50
-    .line 51
-    move-result-object v0
-
-    .line 52
-    check-cast v0, Lcom/facebook/phonenumbers/PhoneNumberUtil;
-
-    .line 53
-    .line 54
-    iput-object v0, p0, LX/2fY;->A05:Lcom/facebook/phonenumbers/PhoneNumberUtil;
-
-    .line 55
-    .line 56
-    invoke-static {p1, v2}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
-
-    .line 57
-    .line 58
-    .line 59
-    move-result-object v0
-
-    .line 60
-    iput-object v0, p0, LX/2fY;->A00:LX/1zG;
-
-    .line 61
-    .line 62
+    :cond_2
     return-void
 .end method

@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xcb5c
 
-.field public static final __CONFIG__:I = 0x384
+.field public static final __CONFIG__:I = 0x33e
 
-.field public static final max_threads:J = 0x82038400000988L
+.field public static final max_threads:J = 0x82033e00000895L
 
 
 # direct methods

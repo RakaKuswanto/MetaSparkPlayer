@@ -1,22 +1,74 @@
-.class public final synthetic LX/56w;
+.class public abstract LX/56w;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/578;
-
-
-# instance fields
-.field public final synthetic A00:Lcom/google/android/gms/common/internal/TelemetryData;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/android/gms/common/internal/TelemetryData;)V
+.method public constructor <init>()V
     .locals 0
 
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/56w;->A00:Lcom/google/android/gms/common/internal/TelemetryData;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
+.end method
+
+
+# virtual methods
+.method public final A00()Ljava/lang/reflect/Type;
+    .locals 3
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {v0}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v2
+
+    .line 8
+    instance-of v1, v2, Ljava/lang/reflect/ParameterizedType;
+
+    .line 9
+    .line 10
+    const-string v0, "%s isn\'t parameterized"
+
+    .line 11
+    .line 12
+    invoke-static {v1, v0, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
+
+    .line 13
+    .line 14
+    .line 15
+    check-cast v2, Ljava/lang/reflect/ParameterizedType;
+
+    .line 16
+    .line 17
+    invoke-interface {v2}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v1
+
+    .line 21
+    const/4 v0, 0x0
+
+    .line 22
+    aget-object v0, v1, v0
+
+    .line 23
+    .line 24
+    return-object v0
 .end method

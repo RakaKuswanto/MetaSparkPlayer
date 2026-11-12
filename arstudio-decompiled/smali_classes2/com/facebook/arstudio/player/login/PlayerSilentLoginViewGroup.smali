@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/3LB;
+.implements LX/2w3;
 
 
 # instance fields
@@ -11,11 +11,11 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/3H4;)V
+.method public constructor <init>(Landroid/content/Context;LX/32w;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;-><init>(Landroid/content/Context;LX/3H4;)V
+    invoke-direct {p0, p1, p2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;-><init>(Landroid/content/Context;LX/32w;)V
 
     .line 1
     .line 2
@@ -28,12 +28,12 @@
 
     .line 6
     .line 7
-    const v0, 0x7f0d0119
+    const v0, 0x7f0c00f0
 
     .line 8
     .line 9
     .line 10
-    invoke-virtual {p0, v0}, LX/4QS;->setContentView(I)V
+    invoke-virtual {p0, v0}, LX/3h6;->setContentView(I)V
 
     .line 11
     .line 12
@@ -79,26 +79,26 @@
     move-result-object v1
 
     .line 16
-    invoke-static {v2}, LX/0PS;->A07(Ljava/lang/Object;)V
+    invoke-static {v2}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 17
     .line 18
     .line 19
-    new-instance v0, LX/3Rv;
+    new-instance v0, LX/1ki;
 
     .line 20
     .line 21
-    invoke-direct {v0, v2}, LX/3Rv;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, LX/1ki;-><init>(Landroid/content/Context;)V
 
     .line 22
     .line 23
     .line 24
-    invoke-virtual {v0}, LX/3Rv;->A06()Z
+    invoke-virtual {v0}, LX/1ki;->A03()Z
 
     .line 25
     .line 26
     .line 27
-    invoke-static {v2, v1}, LX/0Ye;->A0g(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {v2, v1}, LX/0X3;->A0y(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 28
     .line 29

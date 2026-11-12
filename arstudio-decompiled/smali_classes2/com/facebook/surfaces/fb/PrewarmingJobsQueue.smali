@@ -3,30 +3,28 @@
 .source ""
 
 # interfaces
-.implements LX/1yz;
+.implements LX/2Dd;
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/0YO;
+.field public final A01:Ljava/lang/Object;
 
-.field public final A02:LX/0Na;
+.field public final A02:Ljava/util/Deque;
 
-.field public final A03:LX/0Na;
+.field public final A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final A04:Ljava/lang/Object;
+.field public final A04:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public final A05:Ljava/util/Deque;
+.field public final A05:LX/0Of;
 
-.field public final A06:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final A07:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final A06:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,11 +32,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AaP:I
+    sget v0, LX/2I6;->AXK:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -46,19 +44,19 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A03:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A00:LX/0RP;
 
     .line 10
     .line 11
-    sget v1, LX/2eq;->A5B:I
+    sget-object v0, LX/3Ff;->A00:LX/0li;
 
     .line 12
     .line 13
-    iget-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A00:LX/1zG;
+    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A06:LX/0RP;
 
     .line 14
     .line 15
-    invoke-static {v0, v1}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 16
     .line 17
@@ -66,11 +64,11 @@
     move-result-object v0
 
     .line 19
-    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A01:Ljava/lang/Object;
 
     .line 20
     .line 21
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/0X6;->A1B()Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 22
     .line 23
@@ -78,54 +76,52 @@
     move-result-object v0
 
     .line 25
-    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A04:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A04:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 26
     .line 27
-    const/4 v0, 0x0
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
 
     .line 28
-    invoke-static {v0}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
-
     .line 29
     .line 30
-    .line 31
     move-result-object v0
+
+    .line 31
+    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A02:Ljava/util/Deque;
 
     .line 32
-    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A07:Ljava/util/concurrent/atomic/AtomicReference;
-
     .line 33
-    .line 34
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    new-instance v0, LX/0Of;
 
+    .line 34
     .line 35
+    invoke-direct {v0}, LX/0Of;-><init>()V
+
     .line 36
     .line 37
-    move-result-object v0
-
     .line 38
-    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A05:Ljava/util/Deque;
+    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A05:LX/0Of;
 
     .line 39
     .line 40
-    new-instance v0, LX/0YO;
+    invoke-static {}, LX/0X2;->A0r()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 41
     .line 42
-    invoke-direct {v0}, LX/0YO;-><init>()V
-
     .line 43
+    move-result-object v0
+
     .line 44
+    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
+
     .line 45
-    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A01:LX/0YO;
-
     .line 46
-    .line 47
-    const/4 v1, 0x0
+    sget v0, LX/2I6;->A8t:I
 
+    .line 47
     .line 48
-    invoke-static {v1}, LX/0Yi;->A16(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 49
     .line 50
@@ -133,47 +129,19 @@
     move-result-object v0
 
     .line 52
-    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A06:Ljava/util/concurrent/atomic/AtomicBoolean;
+    check-cast v0, LX/2Da;
 
     .line 53
     .line 54
-    invoke-static {p1, v1}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
+    iget-object v0, v0, LX/2Da;->A01:Ljava/util/HashSet;
 
     .line 55
     .line 56
-    .line 57
-    move-result-object v0
-
-    .line 58
-    iput-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A00:LX/1zG;
-
-    .line 59
-    .line 60
-    sget v0, LX/2eq;->ACB:I
-
-    .line 61
-    .line 62
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    check-cast v0, LX/1yw;
-
-    .line 67
-    .line 68
-    iget-object v0, v0, LX/1yw;->A01:Ljava/util/HashSet;
-
-    .line 69
-    .line 70
     invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    .line 71
-    .line 72
-    .line 73
+    .line 57
+    .line 58
+    .line 59
     return-void
 .end method
 
@@ -181,7 +149,7 @@
     .locals 5
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A07:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v1, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A04:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 1
     .line 2
@@ -200,7 +168,7 @@
     const/4 v0, 0x0
 
     .line 9
-    invoke-virtual {v1, v4, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v0, v1}, LX/57q;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;)Z
 
     .line 10
     .line 11
@@ -212,11 +180,11 @@
 
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A03:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A00:LX/0RP;
 
     .line 16
     .line 17
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 18
     .line 19
@@ -224,7 +192,7 @@
     move-result-object v3
 
     .line 21
-    check-cast v3, LX/2Z8;
+    check-cast v3, LX/1cK;
 
     .line 22
     .line 23
@@ -232,7 +200,7 @@
 
     .line 24
     :try_start_0
-    iget-object v1, v3, LX/2Z8;->A01:Ljava/util/List;
+    iget-object v1, v3, LX/1cK;->A00:Ljava/util/List;
 
     .line 25
     .line 26
@@ -240,7 +208,7 @@
 
     .line 27
     .line 28
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 29
     .line 30
@@ -248,7 +216,7 @@
     move-result-object v0
 
     .line 32
-    iput-object v0, v3, LX/2Z8;->A01:Ljava/util/List;
+    iput-object v0, v3, LX/1cK;->A00:Ljava/util/List;
 
     .line 33
     .line 34
@@ -282,7 +250,7 @@
     move-result-object v1
 
     .line 48
-    check-cast v1, LX/2aI;
+    check-cast v1, LX/2H0;
 
     .line 49
     .line 50
@@ -290,7 +258,7 @@
 
     .line 51
     .line 52
-    iget-object v0, v3, LX/2Z8;->A01:Ljava/util/List;
+    iget-object v0, v3, LX/1cK;->A00:Ljava/util/List;
 
     .line 53
     .line 54
@@ -327,11 +295,11 @@
 
 
 # virtual methods
-.method public final A6y()V
+.method public final A58()V
     .locals 5
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A04:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A01:Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -339,7 +307,7 @@
 
     .line 3
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A05:Ljava/util/Deque;
+    iget-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A02:Ljava/util/Deque;
 
     .line 4
     .line 5
@@ -348,11 +316,11 @@
     .line 6
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A01:LX/0YO;
+    iget-object v0, p0, Lcom/facebook/surfaces/fb/PrewarmingJobsQueue;->A05:LX/0Of;
 
     .line 9
     .line 10
-    invoke-virtual {v0}, LX/010;->clear()V
+    invoke-virtual {v0}, LX/012;->clear()V
 
     .line 11
     .line 12
@@ -362,11 +330,11 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     .line 14
-    sget-object v2, LX/2IP;->A00:LX/2Z7;
+    sget-object v2, LX/2HW;->A00:LX/2HR;
 
     .line 15
     .line 16
-    iget-object v1, v2, LX/2Z7;->A03:LX/2aV;
+    iget-object v1, v2, LX/2HR;->A02:LX/2HV;
 
     .line 17
     .line 18
@@ -374,29 +342,29 @@
 
     .line 19
     :try_start_1
-    iget-object v0, v2, LX/2Z7;->A02:LX/0YO;
+    iget-object v0, v2, LX/2HR;->A01:LX/0Of;
 
     .line 20
     .line 21
-    invoke-virtual {v0}, LX/010;->clear()V
+    invoke-virtual {v0}, LX/012;->clear()V
 
     .line 22
     .line 23
     .line 24
-    iget-object v0, v2, LX/2Z7;->A01:LX/0YO;
+    iget-object v0, v2, LX/2HR;->A00:LX/0Of;
 
     .line 25
     .line 26
-    invoke-virtual {v0}, LX/010;->clear()V
+    invoke-virtual {v0}, LX/012;->clear()V
 
     .line 27
     .line 28
     .line 29
-    sget-object v4, LX/2Zc;->A03:LX/2Zc;
+    sget-object v4, LX/2HT;->A03:LX/2HT;
 
     .line 30
     .line 31
-    iget-object v3, v4, LX/2Zc;->A02:LX/2aV;
+    iget-object v3, v4, LX/2HT;->A02:LX/2HV;
 
     .line 32
     .line 33
@@ -406,11 +374,11 @@
 
     .line 34
     :try_start_2
-    iget-object v0, v4, LX/2Zc;->A01:LX/0YO;
+    iget-object v0, v4, LX/2HT;->A01:LX/0Of;
 
     .line 35
     .line 36
-    invoke-virtual {v0}, LX/010;->clear()V
+    invoke-virtual {v0}, LX/012;->clear()V
 
     .line 37
     .line 38
@@ -426,11 +394,11 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
     .line 41
-    iget-object v1, v2, LX/2Z7;->A04:LX/2ZI;
+    iget-object v1, v2, LX/2HR;->A03:LX/2HS;
 
     .line 42
     .line 43
-    iget-object v2, v1, LX/2ZI;->A02:LX/2aV;
+    iget-object v2, v1, LX/2HS;->A02:LX/2HV;
 
     .line 44
     .line 45
@@ -438,11 +406,11 @@
 
     .line 46
     :try_start_4
-    iget-object v0, v1, LX/2ZI;->A01:LX/0YO;
+    iget-object v0, v1, LX/2HS;->A01:LX/0Of;
 
     .line 47
     .line 48
-    invoke-virtual {v0}, LX/010;->clear()V
+    invoke-virtual {v0}, LX/012;->clear()V
 
     .line 49
     .line 50
@@ -453,11 +421,11 @@
 
     .line 52
     :try_start_5
-    iget-object v0, v4, LX/2Zc;->A00:LX/0YO;
+    iget-object v0, v4, LX/2HT;->A00:LX/0Of;
 
     .line 53
     .line 54
-    invoke-virtual {v0}, LX/010;->clear()V
+    invoke-virtual {v0}, LX/012;->clear()V
 
     .line 55
     .line 56
@@ -468,16 +436,16 @@
 
     .line 58
     :try_start_6
-    iget-object v0, v1, LX/2ZI;->A00:LX/0YO;
+    iget-object v0, v1, LX/2HS;->A00:LX/0Of;
 
     .line 59
     .line 60
-    invoke-virtual {v0}, LX/010;->clear()V
+    invoke-virtual {v0}, LX/012;->clear()V
 
     .line 61
     .line 62
     .line 63
-    sget-object v1, LX/2a7;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
+    sget-object v1, LX/2HU;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 64
     .line 65

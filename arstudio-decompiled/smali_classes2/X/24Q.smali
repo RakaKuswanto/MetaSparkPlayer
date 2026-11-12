@@ -2,56 +2,20 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2SR;
+
 
 # static fields
-.field public static final A09:Ljava/lang/ClassLoader;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AuthMessengerOnlyMigrateAccountMethod"
 
 
 # instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Na;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
-
-.field public final A06:LX/0Na;
-
-.field public final A07:LX/0Na;
-
-.field public final A08:LX/0Na;
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    const-class v0, LX/24Q;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    sput-object v0, LX/24Q;->A09:Ljava/lang/ClassLoader;
-
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -60,134 +24,117 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AEX:I
+    invoke-static {}, LX/0lf;->A01()LX/0lf;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
+    .line 7
+    iput-object v0, p0, LX/24Q;->A00:LX/0RP;
+
+    .line 8
     .line 9
-    iput-object v0, p0, LX/24Q;->A04:LX/0Na;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic AJo(Ljava/lang/Object;)LX/2SB;
+    .locals 3
+
+    .line 0
+    check-cast p1, LX/24R;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x2
+
+    .line 3
+    invoke-static {v0}, LX/20u;->A00(I)Ljava/util/ArrayList;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v2
+
+    .line 7
+    iget-object v1, p1, LX/24R;->A01:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    const-string/jumbo v0, "target_user_id"
 
     .line 10
     .line 11
-    invoke-static {}, LX/0Zq;->A0I()LX/0Zq;
-
     .line 12
+    invoke-static {v0, v1, v2}, LX/0X1;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
+
     .line 13
     .line 14
-    move-result-object v0
-
     .line 15
-    iput-object v0, p0, LX/24Q;->A01:LX/0Na;
+    iget-object v1, p1, LX/24R;->A00:Ljava/lang/String;
 
     .line 16
     .line 17
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
+    const-string/jumbo v0, "target_session_token"
 
     .line 18
     .line 19
     .line 20
-    move-result-object v0
+    invoke-static {v0, v1, v2}, LX/0X1;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
     .line 21
-    iput-object v0, p0, LX/24Q;->A05:LX/0Na;
-
     .line 22
     .line 23
-    invoke-static {}, LX/0Zq;->A03()LX/0Zq;
+    iget-object v0, p0, LX/24Q;->A00:LX/0RP;
 
     .line 24
     .line 25
+    invoke-static {v0, v2}, LX/2Ox;->A03(LX/0RP;Ljava/util/AbstractCollection;)V
+
     .line 26
-    move-result-object v0
-
     .line 27
-    iput-object v0, p0, LX/24Q;->A08:LX/0Na;
-
     .line 28
-    .line 29
-    invoke-static {}, LX/0Zq;->A0C()LX/0Zq;
+    invoke-static {}, LX/2SA;->A05()LX/2SA;
 
+    .line 29
     .line 30
     .line 31
+    move-result-object v1
+
     .line 32
-    move-result-object v0
+    const-string/jumbo v0, "messenger_only_migrate_account"
 
     .line 33
-    iput-object v0, p0, LX/24Q;->A06:LX/0Na;
-
     .line 34
     .line 35
-    sget v0, LX/2eq;->A5b:I
+    invoke-static {v1, v0}, LX/2SA;->A06(LX/2SA;Ljava/lang/String;)V
 
     .line 36
     .line 37
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 38
+    const-string v0, "/me/messenger_only_account_migrations"
+
     .line 39
     .line 40
-    move-result-object v0
+    invoke-static {v1, v0, v2}, LX/2SA;->A04(LX/2SA;Ljava/lang/String;Ljava/util/List;)LX/2SB;
 
     .line 41
-    iput-object v0, p0, LX/24Q;->A07:LX/0Na;
-
     .line 42
     .line 43
-    invoke-static {}, LX/0Zq;->A0F()LX/0Zq;
+    move-result-object v0
 
     .line 44
-    .line 45
-    .line 46
-    move-result-object v0
-
-    .line 47
-    iput-object v0, p0, LX/24Q;->A03:LX/0Na;
-
-    .line 48
-    .line 49
-    sget v0, LX/2eq;->A92:I
-
-    .line 50
-    .line 51
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 52
-    .line 53
-    .line 54
-    move-result-object v0
-
-    .line 55
-    iput-object v0, p0, LX/24Q;->A02:LX/0Na;
-
-    .line 56
-    .line 57
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 58
-    .line 59
-    .line 60
-    move-result-object v0
-
-    .line 61
-    iput-object v0, p0, LX/24Q;->A00:LX/1zG;
-
-    .line 62
-    .line 63
-    return-void
+    return-object v0
 .end method
 
-.method public static A00([B)Landroid/os/Bundle;
+.method public final bridge synthetic AK1(LX/2NB;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
     .line 0
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-static {p1}, LX/2NB;->A00(LX/2NB;)LX/2Rs;
 
     .line 1
     .line 2
@@ -195,149 +142,53 @@
     move-result-object v2
 
     .line 4
-    :try_start_0
-    array-length v1, p0
+    const-string/jumbo v0, "logout_success"
 
     .line 5
-    const/4 v0, 0x0
-
     .line 6
-    invoke-virtual {v2, p0, v0, v1}, Landroid/os/Parcel;->unmarshall([BII)V
-
     .line 7
+    invoke-virtual {v2, v0}, LX/2Rs;->A0F(Ljava/lang/String;)LX/2Rs;
+
     .line 8
     .line 9
-    invoke-virtual {v2, v0}, Landroid/os/Parcel;->setDataPosition(I)V
-
     .line 10
-    .line 11
-    .line 12
-    sget-object v0, LX/24Q;->A09:Ljava/lang/ClassLoader;
-
-    .line 13
-    .line 14
-    invoke-virtual {v2, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
-
-    .line 15
-    .line 16
-    .line 17
     move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 18
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 19
-    .line 20
-    .line 21
-    return-object v0
-
-    .line 22
-    :catchall_0
-    move-exception v0
-
-    .line 23
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 24
-    .line 25
-    .line 26
-    throw v0
-.end method
-
-.method public static final A01(LX/24Q;Ljava/lang/String;)V
-    .locals 5
-
-    .line 0
-    iget-object v0, p0, LX/24Q;->A01:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/0Yf;->A0z(LX/0Na;)V
-
-    .line 3
-    .line 4
-    .line 5
-    const-string/jumbo v4, "request_id"
-
-    .line 6
-    .line 7
-    .line 8
-    const-string v1, "="
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/24Q;->A04:LX/0Na;
 
     .line 11
+    const/4 v1, 0x0
+
     .line 12
-    invoke-static {v0}, LX/24V;->A00(LX/0Na;)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-static {v0, v1}, Lcom/facebook/common/util/JSONUtil;->A06(LX/2Rs;Z)Z
 
     .line 13
     .line 14
     .line 15
-    move-result-object v3
+    const-string/jumbo v0, "migration_pending"
 
     .line 16
-    :try_start_0
-    const-string/jumbo v2, "pending_request"
-
     .line 17
     .line 18
-    .line 19
-    const-string v0, "?"
+    invoke-virtual {v2, v0}, LX/2Rs;->A0F(Ljava/lang/String;)LX/2Rs;
 
+    .line 19
     .line 20
     .line 21
-    invoke-static {v4, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
     .line 22
+    invoke-static {v0, v1}, Lcom/facebook/common/util/JSONUtil;->A06(LX/2Rs;Z)Z
+
     .line 23
     .line 24
-    move-result-object v1
-
     .line 25
-    const/4 v0, 0x1
+    new-instance v0, LX/24V;
 
     .line 26
-    invoke-static {p1, v0}, LX/0Yg;->A1a(Ljava/lang/Object;I)[Ljava/lang/String;
-
     .line 27
+    invoke-direct {v0}, LX/24V;-><init>()V
+
     .line 28
     .line 29
-    move-result-object v0
-
     .line 30
-    invoke-virtual {v3, v2, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
-
-    .line 31
-    .line 32
-    .line 33
-    return-void
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 34
-    :catch_0
-    move-exception v1
-
-    .line 35
-    invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
-
-    .line 36
-    .line 37
-    .line 38
-    move-result v0
-
-    .line 39
-    if-eqz v0, :cond_0
-
-    .line 40
-    .line 41
-    throw v1
-
-    .line 42
-    :cond_0
-    return-void
+    return-object v0
 .end method

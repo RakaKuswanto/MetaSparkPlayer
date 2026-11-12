@@ -1,87 +1,33 @@
-.class public LX/41o;
-.super Ljava/lang/Object;
+.class public final LX/41o;
+.super LX/41p;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/3zC;
-
-.field public final A01:LX/429;
+# static fields
+.field public static final serialVersionUID:J = 0x7bL
 
 
 # direct methods
-.method public constructor <init>(LX/41p;)V
-    .locals 1
+.method public constructor <init>(LX/3uZ;Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/41p;-><init>(LX/3uZ;Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    iget-object v0, p1, LX/41p;->A00:LX/3zC;
-
-    .line 4
-    .line 5
-    iput-object v0, p0, LX/41o;->A00:LX/3zC;
-
-    .line 6
-    .line 7
-    iget-object v0, p1, LX/41p;->A01:LX/429;
-
-    .line 8
-    .line 9
-    iput-object v0, p0, LX/41o;->A01:LX/429;
-
-    .line 10
-    .line 11
     return-void
 .end method
 
+.method public constructor <init>(LX/3uZ;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-# virtual methods
-.method public hashCode()I
-    .locals 3
+    .line 268435456
+    invoke-direct {p0, p1, p2, p3}, LX/41p;-><init>(LX/3uZ;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 0
-    iget-object v0, p0, LX/41o;->A00:LX/3zC;
-
-    .line 1
-    .line 2
-    const/4 v2, 0x0
-
-    .line 3
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    mul-int/lit8 v1, v0, 0x1f
-
-    .line 8
-    .line 9
-    iget-object v0, p0, LX/41o;->A01:LX/429;
-
-    .line 10
-    .line 11
-    if-eqz v0, :cond_0
-
-    .line 12
-    .line 13
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v2
-
-    .line 17
-    :cond_0
-    add-int/2addr v1, v2
-
-    .line 18
-    return v1
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
 .end method

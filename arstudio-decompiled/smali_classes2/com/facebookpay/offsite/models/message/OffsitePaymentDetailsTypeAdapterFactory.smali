@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1WO;
+.implements LX/56Y;
 
 
 # instance fields
@@ -33,7 +33,7 @@
     .locals 2
 
     .line 0
-    invoke-static {p1, p2}, LX/0PS;->A09(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2

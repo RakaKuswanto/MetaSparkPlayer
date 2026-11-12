@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedPrefillTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedPrefillTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x1f
+    const/16 v0, 0x20
 
     .line 1
     .line 2
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "DOB"
+    const-string v0, "DATE_TIME"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "EMAIL"
+    const-string v0, "DOB"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "FIRST_NAME"
+    const-string v0, "EMAIL"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "FULL_ADDRESS"
+    const-string v0, "FIRST_NAME"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "FULL_NAME"
+    const-string v0, "FULL_ADDRESS"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "GENDER"
+    const-string v0, "FULL_NAME"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "JOB_TITLE"
+    const-string v0, "GENDER"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "LAST_NAME"
+    const-string v0, "JOB_TITLE"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "MARITAL_STATUS"
+    const-string v0, "LAST_NAME"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "MILITARY_STATUS"
+    const-string v0, "MARITAL_STATUS"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "NATIONAL_ID_ARGENTINA"
+    const-string v0, "MILITARY_STATUS"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "NATIONAL_ID_BRAZIL"
+    const-string v0, "NATIONAL_ID_ARGENTINA"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "NATIONAL_ID_CHILE"
+    const-string v0, "NATIONAL_ID_BRAZIL"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "NATIONAL_ID_COLOMBIA"
+    const-string v0, "NATIONAL_ID_CHILE"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "NATIONAL_ID_ECUADOR"
+    const-string v0, "NATIONAL_ID_COLOMBIA"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "NATIONAL_ID_MEXICO"
+    const-string v0, "NATIONAL_ID_ECUADOR"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "NATIONAL_ID_PERU"
+    const-string v0, "NATIONAL_ID_MEXICO"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "NONE"
+    const-string v0, "NATIONAL_ID_PERU"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "PHONE"
+    const-string v0, "NONE"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "PHONE_OTP"
+    const-string v0, "PHONE"
 
     .line 131
     .line 132
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "STATE"
+    const-string v0, "SLIDER"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "STREET_ADDRESS"
+    const-string v0, "STATE"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "WORK_EMAIL"
+    const-string v0, "STREET_ADDRESS"
 
     .line 167
     .line 168
@@ -364,34 +364,49 @@
 
     .line 171
     .line 172
-    const-string v0, "WORK_PHONE"
+    const-string/jumbo v0, "WORK_EMAIL"
 
     .line 173
     .line 174
+    .line 175
     aput-object v0, v2, v1
 
-    .line 175
     .line 176
+    .line 177
     const/16 v1, 0x1e
 
-    .line 177
     .line 178
-    const-string v0, "ZIP_CODE"
-
     .line 179
-    .line 180
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WORK_PHONE"
 
+    .line 180
     .line 181
     .line 182
-    .line 183
-    move-result-object v0
+    aput-object v0, v2, v1
 
+    .line 183
     .line 184
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedPrefillTypeSet;->A00:Ljava/util/Set;
+    const/16 v1, 0x1f
 
     .line 185
     .line 186
+    const-string/jumbo v0, "ZIP_CODE"
+
+    .line 187
+    .line 188
+    .line 189
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 190
+    .line 191
+    .line 192
+    move-result-object v0
+
+    .line 193
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedPrefillTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 194
+    .line 195
     return-void
 .end method
 
@@ -407,11 +422,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedPrefillTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedPrefillTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

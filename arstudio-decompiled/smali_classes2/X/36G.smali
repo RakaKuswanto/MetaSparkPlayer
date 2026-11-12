@@ -1,213 +1,142 @@
 .class public final LX/36G;
-.super LX/3X9;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
 
 # static fields
-.field public static final A03:Ljava/lang/Object;
-
-
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
+.field public static volatile A00:LX/36G;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-class v0, Ljava/util/concurrent/Future;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    sput-object v0, LX/36G;->A03:Ljava/lang/Object;
-
     .line 3
-    .line 4
     return-void
 .end method
 
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public static A00()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/3X9;-><init>()V
+    invoke-static {}, LX/36G;->A01()V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A5f:I
+    invoke-static {}, LX/36G;->A02()V
 
     .line 4
     .line 5
+    .line 6
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    throw v0
+.end method
+
+.method public static A01()V
+    .locals 2
+
+    .line 0
+    sget-object v0, LX/36G;->A00:LX/36G;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
+    .line 4
+    const-class v1, LX/36G;
+
+    .line 5
+    .line 6
+    monitor-enter v1
+
+    .line 7
+    :try_start_0
+    sget-object v0, LX/36G;->A00:LX/36G;
+
+    .line 8
+    .line 9
+    if-nez v0, :cond_0
+
+    .line 10
+    .line 11
+    new-instance v0, LX/36G;
+
+    .line 12
+    .line 13
+    invoke-direct {v0}, LX/36G;-><init>()V
+
+    .line 14
+    .line 15
+    .line 16
+    sput-object v0, LX/36G;->A00:LX/36G;
+
+    .line 17
+    .line 18
+    :cond_0
+    monitor-exit v1
+
+    .line 19
+    return-void
+
+    .line 20
+    :catchall_0
+    move-exception v0
+
+    .line 21
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 22
+    throw v0
+
+    .line 23
+    :cond_1
+    return-void
+.end method
+
+.method public static A02()V
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/36G;->A01()V
+
+    .line 1
+    .line 2
+    .line 3
     const/4 v1, 0x0
 
-    .line 6
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    iput-object v0, p0, LX/36G;->A01:LX/0Na;
-
-    .line 11
-    .line 12
-    sget v0, LX/2eq;->AQR:I
-
-    .line 13
-    .line 14
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    iput-object v0, p0, LX/36G;->A02:LX/0Na;
-
-    .line 19
-    .line 20
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    iput-object v0, p0, LX/36G;->A00:LX/1zG;
-
-    .line 25
-    .line 26
-    return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic A8q(LX/5SE;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 2
-
-    .line 0
-    check-cast p2, Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 1
-    .line 2
-    check-cast p3, Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 3
     .line 4
-    iget-object v0, p0, LX/36G;->A02:LX/0Na;
+    const-string v0, "FBPay SDK has not been initialized"
 
     .line 5
     .line 6
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-static {v1, v0}, LX/01t;->A02(ZLjava/lang/Object;)V
 
     .line 7
     .line 8
     .line 9
-    move-result-object v1
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 10
-    check-cast v1, LX/36H;
-
     .line 11
     .line 12
-    new-instance v0, LX/36F;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, p1}, LX/36F;-><init>(LX/5SE;)V
-
-    .line 15
-    .line 16
-    .line 17
-    invoke-virtual {v1, v0, p2, p3}, LX/36H;->A00(LX/3Yv;Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/ListenableFuture;)LX/5Qx;
-
-    .line 18
-    .line 19
-    .line 20
     move-result-object v0
 
-    .line 21
-    return-object v0
-.end method
-
-.method public final AKg()Ljava/lang/String;
-    .locals 1
-
-    const-string/jumbo v0, "memory_stats"
-
-    return-object v0
-.end method
-
-.method public final AKh()I
-    .locals 1
-
-    const/4 v0, 0x5
-
-    return v0
-.end method
-
-.method public final AMG()Ljava/lang/Class;
-    .locals 1
-
-    .line 0
-    const-class v0, Ljava/util/concurrent/Future;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final AQC(LX/2IY;)Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    return v0
-.end method
-
-.method public final bridge synthetic call()Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/36G;->A01:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    check-cast v1, Landroid/app/ActivityManager;
-
-    .line 7
-    .line 8
-    new-instance v0, LX/36R;
-
-    .line 9
-    .line 10
-    invoke-direct {v0, v1}, LX/36R;-><init>(Landroid/app/ActivityManager;)V
-
-    .line 11
-    .line 12
     .line 13
-    return-object v0
+    throw v0
 .end method

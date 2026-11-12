@@ -3,114 +3,218 @@
 .source ""
 
 # interfaces
-.implements LX/5CG;
+.implements LX/5C9;
 
 
 # instance fields
-.field public final A00:LX/5CG;
+.field public final A00:D
 
-.field public final A01:LX/5CG;
+.field public final A01:I
 
-.field public final A02:LX/5CG;
+.field public final A02:I
 
-.field public final A03:LX/5CG;
+.field public final A03:J
+
+.field public final A04:J
+
+.field public final A05:J
 
 
 # direct methods
-.method public constructor <init>(LX/5CG;LX/5CG;LX/5CG;LX/5CG;)V
+.method public constructor <init>(DIIJJJ)V
     .locals 0
 
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/5C8;->A00:LX/5CG;
+    .line 1
+    .line 2
+    .line 3
+    iput-wide p5, p0, LX/5C8;->A03:J
 
-    iput-object p2, p0, LX/5C8;->A01:LX/5CG;
+    .line 4
+    .line 5
+    iput-wide p7, p0, LX/5C8;->A05:J
 
-    iput-object p3, p0, LX/5C8;->A02:LX/5CG;
+    .line 6
+    .line 7
+    iput-wide p9, p0, LX/5C8;->A04:J
 
-    iput-object p4, p0, LX/5C8;->A03:LX/5CG;
+    .line 8
+    .line 9
+    iput p3, p0, LX/5C8;->A02:I
 
+    .line 10
+    .line 11
+    iput p4, p0, LX/5C8;->A01:I
+
+    .line 12
+    .line 13
+    iput-wide p1, p0, LX/5C8;->A00:D
+
+    .line 14
+    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic AsA()Ljava/lang/Object;
-    .locals 5
+.method public final getEstimatedBitrate(JILjava/lang/String;)J
+    .locals 6
 
     .line 0
-    iget-object v0, p0, LX/5C8;->A00:LX/5CG;
+    iget v0, p0, LX/5C8;->A02:I
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5CG;->AsA()Ljava/lang/Object;
+    if-ge p3, v0, :cond_0
+
+    .line 3
+    .line 4
+    iget-wide v4, p0, LX/5C8;->A04:J
+
+    .line 5
+    .line 6
+    :goto_0
+    iget-wide v2, p0, LX/5C8;->A00:D
+
+    .line 7
+    .line 8
+    long-to-double v0, v4
+
+    .line 9
+    mul-double/2addr v2, v0
+
+    .line 10
+    double-to-long v0, v2
+
+    .line 11
+    return-wide v0
+
+    .line 12
+    :cond_0
+    iget v0, p0, LX/5C8;->A01:I
+
+    .line 13
+    .line 14
+    if-ge p3, v0, :cond_1
+
+    .line 15
+    .line 16
+    iget-wide v4, p0, LX/5C8;->A05:J
+
+    .line 17
+    .line 18
+    goto :goto_0
+
+    .line 19
+    :cond_1
+    iget-wide v4, p0, LX/5C8;->A03:J
+
+    .line 20
+    .line 21
+    goto :goto_0
+.end method
+
+.method public final getEstimatedRequestTTFBMs(ILjava/lang/String;)J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final getEstimatedThroughput(ILjava/lang/String;)J
+    .locals 2
+
+    .line 0
+    const-wide/16 v0, 0x0
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, v0, v1, p1, p2}, LX/5C8;->getEstimatedBitrate(JILjava/lang/String;)J
 
     .line 3
     .line 4
     .line 5
-    move-result-object v4
+    move-result-wide v0
 
     .line 6
-    iget-object v0, p0, LX/5C8;->A01:LX/5CG;
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 7
+
+    .line 0
+    const-string v2, "sbw_h="
+
+    .line 1
+    .line 2
+    iget-wide v0, p0, LX/5C8;->A03:J
+
+    .line 3
+    .line 4
+    const-wide/16 v5, 0x3e8
+
+    .line 5
+    .line 6
+    div-long/2addr v0, v5
 
     .line 7
-    .line 8
-    invoke-interface {v0}, LX/5CG;->AsA()Ljava/lang/Object;
+    invoke-static {v2, v0, v1}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
+    .line 8
     .line 9
     .line 10
+    move-result-object v4
+
     .line 11
-    move-result-object v3
+    const-string v2, ", sbw_m="
 
     .line 12
-    check-cast v3, LX/5C1;
-
     .line 13
-    .line 14
-    iget-object v0, p0, LX/5C8;->A02:LX/5CG;
+    iget-wide v0, p0, LX/5C8;->A05:J
 
+    .line 14
     .line 15
+    div-long/2addr v0, v5
+
     .line 16
-    invoke-interface {v0}, LX/5CG;->AsA()Ljava/lang/Object;
+    invoke-static {v2, v0, v1}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
     .line 17
     .line 18
     .line 19
-    move-result-object v2
+    move-result-object v3
 
     .line 20
-    check-cast v2, LX/5CC;
+    const-string v2, ", sbw_l="
 
     .line 21
     .line 22
-    iget-object v0, p0, LX/5C8;->A03:LX/5CG;
+    iget-wide v0, p0, LX/5C8;->A04:J
 
     .line 23
     .line 24
-    invoke-interface {v0}, LX/5CG;->AsA()Ljava/lang/Object;
+    div-long/2addr v0, v5
 
     .line 25
+    invoke-static {v2, v0, v1}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
+
     .line 26
     .line 27
-    move-result-object v1
-
     .line 28
-    check-cast v1, LX/5C6;
+    move-result-object v0
 
     .line 29
-    .line 30
-    check-cast v4, LX/528;
+    invoke-static {v4, v3, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 30
     .line 31
     .line 32
-    new-instance v0, LX/5Bx;
+    move-result-object v0
 
     .line 33
-    .line 34
-    invoke-direct {v0, v4, v1, v2, v3}, LX/5Bx;-><init>(LX/528;LX/5C6;LX/5CC;LX/5C1;)V
-
-    .line 35
-    .line 36
-    .line 37
     return-object v0
 .end method

@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final mWorker:LX/2IQ;
+.field public final mWorker:LX/39A;
 
 
 # direct methods
-.method public constructor <init>(LX/2IQ;)V
+.method public constructor <init>(LX/39A;)V
     .locals 1
 
     .line 0
@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/NetworkClientImpl;->mWorker:LX/2IQ;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/NetworkClientImpl;->mWorker:LX/39A;
 
     .line 4
     .line 5
@@ -67,7 +67,7 @@
 
     .line 0
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/NetworkClientImpl;->mWorker:LX/2IQ;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/networking/implementation/NetworkClientImpl;->mWorker:LX/39A;
 
     .line 1
     .line 2
@@ -108,7 +108,7 @@
 
     .line 18
     .line 19
-    invoke-interface/range {v0 .. v8}, LX/2IQ;->sendRequest(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ZLorg/apache/http/client/ResponseHandler;LX/1RS;)V
+    invoke-interface/range {v0 .. v8}, LX/39A;->sendRequest(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ZLorg/apache/http/client/ResponseHandler;LX/1tL;)V
 
     .line 20
     .line 21

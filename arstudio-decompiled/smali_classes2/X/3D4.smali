@@ -2,32 +2,66 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3DI;
+
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:Landroid/app/job/JobParameters;
+
+.field public final A01:LX/3DF;
+
+.field public final synthetic A02:Lcom/facebook/analytics2/logger/LollipopUpload;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(Landroid/app/job/JobParameters;Lcom/facebook/analytics2/logger/LollipopUpload;LX/3DF;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/3D4;->A02:Lcom/facebook/analytics2/logger/LollipopUpload;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    iput-object p1, p0, LX/3D4;->A00:Landroid/app/job/JobParameters;
 
+    .line 6
     .line 7
-    iput-object v0, p0, LX/3D4;->A00:LX/1zG;
+    iput-object p3, p0, LX/3D4;->A01:LX/3DF;
 
     .line 8
     .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final Adf(Z)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3D4;->A00:Landroid/app/job/JobParameters;
+
+    .line 1
+    .line 2
+    invoke-virtual {v1}, Landroid/app/job/JobParameters;->getJobId()I
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/3D4;->A01:LX/3DF;
+
+    .line 6
+    .line 7
+    invoke-interface {v0, v1, p1}, LX/3DF;->Aim(Landroid/app/job/JobParameters;Z)V
+
+    .line 8
+    .line 9
+    .line 10
     return-void
 .end method

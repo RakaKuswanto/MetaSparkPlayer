@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract Aqz(LX/0TQ;)V
+.method public abstract A8x(LX/6Jq;LX/5n9;LX/35N;)Lcom/fasterxml/jackson/databind/JsonSerializer;
 .end method

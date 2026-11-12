@@ -3,8 +3,16 @@
 .source ""
 
 
+# instance fields
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:Z
+
+
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(IIZ)V
     .locals 0
 
     .line 0
@@ -13,26 +21,17 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput p1, p0, LX/4kv;->A01:I
 
-.method public static A00(LX/4nC;)V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/4kv;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/4kv;-><init>()V
-
-    .line 3
     .line 4
     .line 5
-    invoke-virtual {p0, v0}, LX/4nC;->A00(Ljava/lang/Object;)Ljava/lang/Object;
+    iput p2, p0, LX/4kv;->A00:I
 
     .line 6
     .line 7
+    iput-boolean p3, p0, LX/4kv;->A02:Z
+
     .line 8
+    .line 9
     return-void
 .end method

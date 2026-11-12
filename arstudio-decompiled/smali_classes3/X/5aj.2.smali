@@ -1,389 +1,240 @@
-.class public abstract LX/5aj;
-.super Ljava/lang/Object;
+.class public final enum LX/5aj;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/5ar;
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-# instance fields
-.field public A00:LX/5bV;
+.field public static final synthetic $VALUES:[LX/5aj;
 
-.field public A01:Landroid/view/Surface;
+.field public static final enum BACKGROUND:LX/5aj;
 
-.field public final A02:Ljava/util/concurrent/atomic/AtomicReference;
+.field public static final enum COLD:LX/5aj;
 
-.field public final A03:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static final enum LUKEWARM:LX/5aj;
 
-.field public final A04:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static final enum UNKNOWN:LX/5aj;
 
-.field public volatile A05:Z
+.field public static final enum WARM:LX/5aj;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static final synthetic $values()[LX/5aj;
+    .locals 3
+
+    const/4 v0, 0x5
+
+    new-array v2, v0, [LX/5aj;
+
+    sget-object v1, LX/5aj;->UNKNOWN:LX/5aj;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5aj;->COLD:LX/5aj;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5aj;->LUKEWARM:LX/5aj;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5aj;->WARM:LX/5aj;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/5aj;->BACKGROUND:LX/5aj;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
     .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "UNKNOWN"
 
     .line 1
     .line 2
-    .line 3
-    const/4 v2, 0x0
-
-    .line 4
     const/4 v1, 0x0
 
-    .line 5
-    invoke-static {v1}, LX/0Yi;->A16(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/5aj;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 10
-    .line 11
-    invoke-static {v1}, LX/0Yi;->A16(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/5aj;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 16
-    .line 17
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 18
-    .line 19
-    invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    .line 20
-    .line 21
-    .line 22
-    iput-object v0, p0, LX/5aj;->A02:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 23
-    .line 24
-    const/4 v0, 0x1
-
-    .line 25
-    iput-boolean v0, p0, LX/5aj;->A05:Z
-
-    .line 26
-    .line 27
-    return-void
-.end method
-
-
-# virtual methods
-.method public declared-synchronized A6S()Z
-    .locals 2
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5aj;->A00:LX/5bV;
-
-    .line 2
     .line 3
-    if-eqz v0, :cond_0
+    new-instance v0, LX/5aj;
 
     .line 4
     .line 5
-    iget-boolean v1, p0, LX/5aj;->A05:Z
+    invoke-direct {v0, v2, v1}, LX/5aj;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
-    const/4 v0, 0x1
-
     .line 8
-    if-nez v1, :cond_1
+    sput-object v0, LX/5aj;->UNKNOWN:LX/5aj;
 
     .line 9
     .line 10
-    :cond_0
-    const/4 v0, 0x0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 11
-    :cond_1
-    monitor-exit p0
-
-    .line 12
-    return v0
-
-    .line 13
-    :catchall_0
-    move-exception v0
-
-    .line 14
-    monitor-exit p0
-
-    .line 15
-    throw v0
-.end method
-
-.method public final APM(Landroid/view/Surface;LX/5cA;)V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/5aj;->A00:LX/5bV;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_1
-
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/5aj;->A01:Landroid/view/Surface;
-
-    .line 5
-    .line 6
-    if-ne v0, p1, :cond_0
-
-    .line 7
-    .line 8
-    const-string v1, "BaseVideoOutput"
-
-    .line 9
-    .line 10
-    const-string v0, "GLSurface already created, high chance it might cause an issue"
+    const-string v2, "COLD"
 
     .line 11
     .line 12
-    invoke-static {v1, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, 0x1
 
     .line 13
+    new-instance v0, LX/5aj;
+
     .line 14
     .line 15
-    return-void
+    invoke-direct {v0, v2, v1}, LX/5aj;-><init>(Ljava/lang/String;I)V
 
     .line 16
-    :cond_0
-    invoke-virtual {p0}, LX/5aj;->release()V
-
     .line 17
     .line 18
+    sput-object v0, LX/5aj;->COLD:LX/5aj;
+
     .line 19
-    :cond_1
-    if-eqz p1, :cond_2
-
     .line 20
+    const-string v2, "LUKEWARM"
+
     .line 21
-    invoke-virtual {p1}, Landroid/view/Surface;->isValid()Z
-
     .line 22
-    .line 23
-    .line 24
-    move-result v0
+    const/4 v1, 0x2
 
+    .line 23
+    new-instance v0, LX/5aj;
+
+    .line 24
     .line 25
-    if-eqz v0, :cond_2
+    invoke-direct {v0, v2, v1}, LX/5aj;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
-    invoke-interface {p2, p1}, LX/5cA;->A88(Landroid/view/Surface;)LX/5bV;
-
     .line 28
+    sput-object v0, LX/5aj;->LUKEWARM:LX/5aj;
+
     .line 29
     .line 30
-    move-result-object v0
+    const-string v2, "WARM"
 
     .line 31
-    iput-object v0, p0, LX/5aj;->A00:LX/5bV;
-
     .line 32
+    const/4 v1, 0x3
+
     .line 33
-    iput-object p1, p0, LX/5aj;->A01:Landroid/view/Surface;
+    new-instance v0, LX/5aj;
 
     .line 34
     .line 35
-    iget-object v1, p0, LX/5aj;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0, v2, v1}, LX/5aj;-><init>(Ljava/lang/String;I)V
 
     .line 36
     .line 37
-    const/4 v0, 0x1
-
     .line 38
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    sput-object v0, LX/5aj;->WARM:LX/5aj;
 
     .line 39
     .line 40
-    .line 41
-    :cond_2
-    iget-object v1, p0, LX/5aj;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v2, "BACKGROUND"
 
+    .line 41
     .line 42
+    const/4 v1, 0x4
+
     .line 43
-    const/4 v0, 0x0
+    new-instance v0, LX/5aj;
 
     .line 44
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
     .line 45
+    invoke-direct {v0, v2, v1}, LX/5aj;-><init>(Ljava/lang/String;I)V
+
     .line 46
     .line 47
+    .line 48
+    sput-object v0, LX/5aj;->BACKGROUND:LX/5aj;
+
+    .line 49
+    .line 50
+    invoke-static {}, LX/5aj;->$values()[LX/5aj;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v0
+
+    .line 54
+    sput-object v0, LX/5aj;->$VALUES:[LX/5aj;
+
+    .line 55
+    .line 56
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v0
+
+    .line 60
+    sput-object v0, LX/5aj;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 61
+    .line 62
     return-void
 .end method
 
-.method public AdZ()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
     .line 0
-    iget-object v2, p0, LX/5aj;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    const/4 v1, 0x0
-
     .line 3
-    const/4 v0, 0x1
-
-    .line 4
-    invoke-virtual {v2, v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
-.method public getHeight()I
-    .locals 3
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
 
-    .line 0
-    iget-object v2, p0, LX/5aj;->A00:LX/5bV;
+    sget-object v0, LX/5aj;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 1
-    .line 2
-    if-eqz v2, :cond_0
-
-    .line 3
-    .line 4
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 5
-    .line 6
-    const/16 v0, 0x18
-
-    .line 7
-    .line 8
-    if-lt v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    invoke-interface {v2}, LX/5bV;->getHeight()I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    return v0
-
-    .line 15
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 16
-    return v0
+    return-object v0
 .end method
 
-.method public getWidth()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)LX/5aj;
+    .locals 1
 
-    .line 0
-    iget-object v2, p0, LX/5aj;->A00:LX/5bV;
+    const-class v0, LX/5aj;
 
-    .line 1
-    .line 2
-    if-eqz v2, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 3
-    .line 4
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result-object v0
 
-    .line 5
-    .line 6
-    const/16 v0, 0x18
+    check-cast v0, LX/5aj;
 
-    .line 7
-    .line 8
-    if-lt v1, v0, :cond_0
-
-    .line 9
-    .line 10
-    invoke-interface {v2}, LX/5bV;->getWidth()I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    return v0
-
-    .line 15
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 16
-    return v0
+    return-object v0
 .end method
 
-.method public release()V
-    .locals 3
+.method public static values()[LX/5aj;
+    .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/5aj;->A00:LX/5bV;
+    sget-object v0, LX/5aj;->$VALUES:[LX/5aj;
 
-    .line 1
-    .line 2
-    const/4 v2, 0x0
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 3
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 4
-    .line 5
-    invoke-interface {v0}, LX/5bV;->release()V
+    check-cast v0, [LX/5aj;
 
-    .line 6
-    .line 7
-    .line 8
-    iput-object v2, p0, LX/5aj;->A00:LX/5bV;
-
-    .line 9
-    .line 10
-    :cond_0
-    iget-object v1, p0, LX/5aj;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 11
-    .line 12
-    const/4 v0, 0x0
-
-    .line 13
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 14
-    .line 15
-    .line 16
-    iput-object v2, p0, LX/5aj;->A01:Landroid/view/Surface;
-
-    .line 17
-    .line 18
-    return-void
+    return-object v0
 .end method

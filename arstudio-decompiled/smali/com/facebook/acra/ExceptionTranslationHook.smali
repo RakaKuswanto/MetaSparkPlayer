@@ -9,22 +9,25 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
 .method public static staplePreviousException(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    .locals 1
+    .locals 2
 
     .line 0
-    if-eq p0, p1, :cond_0
+    if-eq p0, p1, :cond_1
 
     .line 1
     .line 2
@@ -42,15 +45,36 @@
     .line 8
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 9
     .line 10
     .line 11
+    return-object p0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 12
     :catch_0
     :cond_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 13
+    .line 14
+    const/16 v0, 0x13
+
+    .line 15
+    .line 16
+    if-lt v1, v0, :cond_1
+
+    .line 17
+    .line 18
+    invoke-static {p0, p1}, Lcom/facebook/acra/ExceptionTranslationHook$Api19Utils;->addSuppressed(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 19
+    .line 20
+    .line 21
+    :cond_1
     return-object p0
 .end method
 

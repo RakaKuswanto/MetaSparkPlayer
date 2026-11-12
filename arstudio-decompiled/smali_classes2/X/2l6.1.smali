@@ -2,137 +2,121 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "XplatServiceDelegate$startClientSync$1$1"
+
 
 # instance fields
-.field public final A00:Landroid/util/LruCache;
+.field public final synthetic A00:Lcom/facebook/mqtt/service/ConnectionConfig;
 
-.field public final A01:LX/2jw;
+.field public final synthetic A01:Lcom/facebook/mqtt/service/XplatServiceDelegate;
 
-.field public final A02:Ljava/lang/StringBuilder;
-
-.field public final A03:LX/1Nw;
+.field public final synthetic A02:Ljava/util/concurrent/CountDownLatch;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 2
+.method public constructor <init>(Lcom/facebook/mqtt/service/ConnectionConfig;Lcom/facebook/mqtt/service/XplatServiceDelegate;Ljava/util/concurrent/CountDownLatch;)V
+    .locals 0
 
-    .line 0
+    iput-object p3, p0, LX/2l6;->A02:Ljava/util/concurrent/CountDownLatch;
+
+    iput-object p2, p0, LX/2l6;->A01:Lcom/facebook/mqtt/service/XplatServiceDelegate;
+
+    iput-object p1, p0, LX/2l6;->A00:Lcom/facebook/mqtt/service/ConnectionConfig;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/2l6;->A03:LX/1Nw;
-
-    .line 4
-    .line 5
-    new-instance v0, LX/2jw;
-
-    .line 6
-    .line 7
-    invoke-direct {v0}, LX/2jw;-><init>()V
-
-    .line 8
-    .line 9
-    .line 10
-    iput-object v0, p0, LX/2l6;->A01:LX/2jw;
-
-    .line 11
-    .line 12
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    iput-object v0, p0, LX/2l6;->A02:Ljava/lang/StringBuilder;
-
-    .line 17
-    .line 18
-    const/16 v1, 0xa
-
-    .line 19
-    .line 20
-    new-instance v0, Landroid/util/LruCache;
-
-    .line 21
-    .line 22
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
-
-    .line 23
-    .line 24
-    .line 25
-    iput-object v0, p0, LX/2l6;->A00:Landroid/util/LruCache;
-
-    .line 26
-    .line 27
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Lcom/google/common/collect/ImmutableMap;Ljava/lang/String;)V
-    .locals 2
+.method public final run()V
+    .locals 4
 
     .line 0
-    if-eqz p2, :cond_1
+    :try_start_0
+    sget-object v3, Lcom/facebook/mqtt/service/XplatServiceDelegate;->A05:Ljava/lang/Object;
 
     .line 1
     .line 2
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    iget-object v2, p0, LX/2l6;->A01:Lcom/facebook/mqtt/service/XplatServiceDelegate;
 
     .line 3
     .line 4
-    .line 5
-    move-result v0
+    iget-object v1, p0, LX/2l6;->A00:Lcom/facebook/mqtt/service/ConnectionConfig;
 
+    .line 5
     .line 6
-    if-eqz v0, :cond_1
+    monitor-enter v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 7
+    :try_start_1
+    sget-object v0, Lcom/facebook/mqtt/service/XplatServiceDelegate;->A08:LX/2kd;
+
     .line 8
-    iget-object v1, p0, LX/2l6;->A00:Landroid/util/LruCache;
-
     .line 9
-    .line 10
-    invoke-virtual {v1, p2}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    check-cast v0, Ljava/util/Map;
-
-    .line 15
-    .line 16
     if-nez v0, :cond_0
 
-    .line 17
-    .line 18
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    .line 10
+    .line 11
+    invoke-static {v1, v2}, Lcom/facebook/mqtt/service/XplatServiceDelegate;->A00(Lcom/facebook/mqtt/service/ConnectionConfig;Lcom/facebook/mqtt/service/XplatServiceDelegate;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
+    .line 13
+    .line 14
+    :cond_0
+    :try_start_2
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 15
+    iget-object v0, p0, LX/2l6;->A02:Ljava/util/concurrent/CountDownLatch;
+
+    .line 16
+    .line 17
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    .line 18
     .line 19
     .line 20
+    return-void
+
     .line 21
-    move-result-object v0
+    :catchall_0
+    move-exception v0
 
     .line 22
-    invoke-virtual {v1, p2, v0}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_start_3
+    monitor-exit v3
 
     .line 23
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
     .line 24
+    :catchall_1
+    move-exception v1
+
     .line 25
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    iget-object v0, p0, LX/2l6;->A02:Ljava/util/concurrent/CountDownLatch;
 
     .line 26
     .line 27
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
     .line 28
-    :cond_1
-    return-void
+    .line 29
+    .line 30
+    throw v1
 .end method

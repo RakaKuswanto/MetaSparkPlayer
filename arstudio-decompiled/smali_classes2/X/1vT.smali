@@ -1,35 +1,21 @@
-.class public interface abstract LX/1vT;
-.super Ljava/lang/Object;
+.class public final LX/1VT;
+.super LX/1gb;
 .source ""
 
+# interfaces
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1H2;
 
-# virtual methods
-.method public abstract AUZ()Ljava/util/List;
-.end method
 
-.method public abstract AUa(Z)Ljava/util/List;
-.end method
+# direct methods
+.method public constructor <init>(I[I)V
+    .locals 0
 
-.method public abstract AVE(Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;LX/1Zv;)Ljava/util/List;
-.end method
+    .line 0
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
-.method public abstract AVF(Ljava/lang/Throwable;)Ljava/util/List;
-.end method
-
-.method public abstract AVM()Ljava/util/List;
-.end method
-
-.method public abstract AVN(LX/1Zv;Z)Ljava/util/List;
-.end method
-
-.method public abstract AW2()Ljava/util/List;
-.end method
-
-.method public abstract AW3(LX/1Zv;Z)Ljava/util/List;
-.end method
-
-.method public abstract AZc(Z)Ljava/util/List;
-.end method
-
-.method public abstract AeS(Ljava/lang/String;Z)Ljava/util/List;
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

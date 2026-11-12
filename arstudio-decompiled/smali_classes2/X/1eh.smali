@@ -1,426 +1,240 @@
-.class public final LX/1eh;
-.super LX/1ek;
+.class public final enum LX/1eh;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements Ljava/util/NavigableSet;
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/common/collect/AbstractMapBasedMultimap<",
-        "TK;TV;>.SortedKeySet;",
-        "Ljava/util/NavigableSet<",
-        "TK;>;"
-    }
-.end annotation
+.field public static final synthetic $VALUES:[LX/1eh;
 
+.field public static final enum CONFIRMATION:LX/1eh;
 
-# instance fields
-.field public final synthetic A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
+.field public static final enum EXISTING_SESSION_LOGIN:LX/1eh;
+
+.field public static final enum LOGIN:LX/1eh;
+
+.field public static final enum REGISTRATION:LX/1eh;
+
+.field public static final enum RESURRECTION:LX/1eh;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
-    .locals 0
+.method public static final synthetic $values()[LX/1eh;
+    .locals 3
+
+    const/4 v0, 0x5
+
+    new-array v2, v0, [LX/1eh;
+
+    sget-object v1, LX/1eh;->LOGIN:LX/1eh;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1eh;->REGISTRATION:LX/1eh;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1eh;->CONFIRMATION:LX/1eh;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1eh;->EXISTING_SESSION_LOGIN:LX/1eh;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1eh;->RESURRECTION:LX/1eh;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/1eh;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
+    const-string v2, "LOGIN"
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, p2}, LX/1ek;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/SortedMap;)V
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/1eh;
+
     .line 4
     .line 5
+    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/1eh;->LOGIN:LX/1eh;
+
+    .line 9
+    .line 10
+    const-string v2, "REGISTRATION"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/1eh;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/1eh;->REGISTRATION:LX/1eh;
+
+    .line 19
+    .line 20
+    const-string v2, "CONFIRMATION"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/1eh;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/1eh;->CONFIRMATION:LX/1eh;
+
+    .line 29
+    .line 30
+    const-string v2, "EXISTING_SESSION_LOGIN"
+
+    .line 31
+    .line 32
+    const/4 v1, 0x3
+
+    .line 33
+    new-instance v0, LX/1eh;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Ljava/lang/String;I)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, LX/1eh;->EXISTING_SESSION_LOGIN:LX/1eh;
+
+    .line 39
+    .line 40
+    const-string v2, "RESURRECTION"
+
+    .line 41
+    .line 42
+    const/4 v1, 0x4
+
+    .line 43
+    new-instance v0, LX/1eh;
+
+    .line 44
+    .line 45
+    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Ljava/lang/String;I)V
+
+    .line 46
+    .line 47
+    .line 48
+    sput-object v0, LX/1eh;->RESURRECTION:LX/1eh;
+
+    .line 49
+    .line 50
+    invoke-static {}, LX/1eh;->$values()[LX/1eh;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v0
+
+    .line 54
+    sput-object v0, LX/1eh;->$VALUES:[LX/1eh;
+
+    .line 55
+    .line 56
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v0
+
+    .line 60
+    sput-object v0, LX/1eh;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 61
+    .line 62
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-# virtual methods
-.method public final ceiling(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
     .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/1cA;->A00:Ljava/util/Map;
+    sget-object v0, LX/1eh;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 1
-    .line 2
-    check-cast v0, Ljava/util/SortedMap;
-
-    .line 3
-    .line 4
-    check-cast v0, Ljava/util/NavigableMap;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->ceilingKey(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
     return-object v0
 .end method
 
-.method public final descendingIterator()Ljava/util/Iterator;
+.method public static valueOf(Ljava/lang/String;)LX/1eh;
     .locals 1
 
-    .line 0
-    invoke-virtual {p0}, LX/1eh;->descendingSet()Ljava/util/NavigableSet;
+    const-class v0, LX/1eh;
 
-    .line 1
-    .line 2
-    .line 3
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
     move-result-object v0
 
-    .line 4
-    invoke-interface {v0}, Ljava/util/NavigableSet;->iterator()Ljava/util/Iterator;
+    check-cast v0, LX/1eh;
 
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
     return-object v0
 .end method
 
-.method public final descendingSet()Ljava/util/NavigableSet;
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/1eh;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/1cA;->A00:Ljava/util/Map;
-
-    .line 3
-    .line 4
-    check-cast v0, Ljava/util/SortedMap;
-
-    .line 5
-    .line 6
-    check-cast v0, Ljava/util/NavigableMap;
-
-    .line 7
-    .line 8
-    invoke-interface {v0}, Ljava/util/NavigableMap;->descendingMap()Ljava/util/NavigableMap;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    new-instance v0, LX/1eh;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
-
-    .line 15
-    .line 16
-    .line 17
-    return-object v0
-.end method
-
-.method public final floor(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static values()[LX/1eh;
     .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/1cA;->A00:Ljava/util/Map;
+    sget-object v0, LX/1eh;->$VALUES:[LX/1eh;
 
-    .line 1
-    .line 2
-    check-cast v0, Ljava/util/SortedMap;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 3
-    .line 4
-    check-cast v0, Ljava/util/NavigableMap;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->floorKey(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    .line 9
     move-result-object v0
 
-    .line 10
-    return-object v0
-.end method
+    check-cast v0, [LX/1eh;
 
-.method public final headSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/1eh;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/1cA;->A00:Ljava/util/Map;
-
-    .line 3
-    .line 4
-    check-cast v0, Ljava/util/SortedMap;
-
-    .line 5
-    .line 6
-    check-cast v0, Ljava/util/NavigableMap;
-
-    .line 7
-    .line 8
-    invoke-interface {v0, p1, p2}, Ljava/util/NavigableMap;->headMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    new-instance v0, LX/1eh;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
-
-    .line 15
-    .line 16
-    .line 17
-    return-object v0
-.end method
-
-.method public final higher(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1cA;->A00:Ljava/util/Map;
-
-    .line 1
-    .line 2
-    check-cast v0, Ljava/util/SortedMap;
-
-    .line 3
-    .line 4
-    check-cast v0, Ljava/util/NavigableMap;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->higherKey(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    return-object v0
-.end method
-
-.method public final lower(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1cA;->A00:Ljava/util/Map;
-
-    .line 1
-    .line 2
-    check-cast v0, Ljava/util/SortedMap;
-
-    .line 3
-    .line 4
-    check-cast v0, Ljava/util/NavigableMap;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->lowerKey(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    return-object v0
-.end method
-
-.method public final pollFirst()Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    if-eqz v0, :cond_0
-
-    .line 9
-    .line 10
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
-
-    .line 15
-    .line 16
-    .line 17
-    return-object v0
-
-    .line 18
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 19
-    return-object v0
-.end method
-
-.method public final pollLast()Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    invoke-virtual {p0}, LX/1eh;->descendingIterator()Ljava/util/Iterator;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    if-eqz v0, :cond_0
-
-    .line 9
-    .line 10
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
-
-    .line 15
-    .line 16
-    .line 17
-    return-object v0
-
-    .line 18
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 19
-    return-object v0
-.end method
-
-.method public final subSet(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableSet;
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/1eh;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/1cA;->A00:Ljava/util/Map;
-
-    .line 3
-    .line 4
-    check-cast v0, Ljava/util/SortedMap;
-
-    .line 5
-    .line 6
-    check-cast v0, Ljava/util/NavigableMap;
-
-    .line 7
-    .line 8
-    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/NavigableMap;->subMap(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableMap;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    new-instance v0, LX/1eh;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
-
-    .line 15
-    .line 16
-    .line 17
-    return-object v0
-.end method
-
-.method public final tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/1eh;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/1cA;->A00:Ljava/util/Map;
-
-    .line 3
-    .line 4
-    check-cast v0, Ljava/util/SortedMap;
-
-    .line 5
-    .line 6
-    check-cast v0, Ljava/util/NavigableMap;
-
-    .line 7
-    .line 8
-    invoke-interface {v0, p1, p2}, Ljava/util/NavigableMap;->tailMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    new-instance v0, LX/1eh;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, v2, v1}, LX/1eh;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
-
-    .line 15
-    .line 16
-    .line 17
     return-object v0
 .end method

@@ -1,41 +1,31 @@
-.class public interface abstract LX/394;
+.class public final LX/394;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A5U()I
-.end method
+# instance fields
+.field public final A00:Ljava/lang/String;
 
-.method public abstract AFO(Ljava/lang/String;)J
-.end method
+.field public final A01:Ljava/util/Map;
 
-.method public abstract AGa(Ljava/lang/String;)J
-.end method
 
-.method public abstract AHm()J
-.end method
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/util/Map;)V
+    .locals 0
 
-.method public abstract AJE(Ljava/lang/String;)J
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract AKs()J
-.end method
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/394;->A00:Ljava/lang/String;
 
-.method public abstract AL1()J
-.end method
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/394;->A01:Ljava/util/Map;
 
-.method public abstract AQI(Ljava/lang/String;Z)Z
-.end method
-
-.method public abstract AQJ(Ljava/lang/String;)Z
-.end method
-
-.method public abstract AQz()Z
-.end method
-
-.method public abstract ATi()I
-.end method
-
-.method public abstract AoA()Z
+    .line 6
+    .line 7
+    return-void
 .end method

@@ -3,201 +3,230 @@
 .source ""
 
 
+# static fields
+.field public static final A01:Ljava/util/regex/Pattern;
+
+.field public static final A02:Ljava/util/regex/Pattern;
+
+.field public static final A03:Ljava/util/regex/Pattern;
+
+
 # instance fields
-.field public final A00:Ljava/util/Map;
-
-.field public final A01:Ljava/util/Set;
-
-.field public final A02:Ljava/util/Set;
+.field public final A00:Ljava/util/List;
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    const-string v0, "\\{([#]?)([^ }]+)\\}"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    sput-object v0, LX/4BK;->A03:Ljava/util/regex/Pattern;
+
+    .line 7
+    .line 8
+    const-string v0, "\\{([#!]?)([^ }]+)(?: ([^}]+))?\\}"
+
+    .line 9
+    .line 10
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    sput-object v0, LX/4BK;->A02:Ljava/util/regex/Pattern;
+
+    .line 15
+    .line 16
+    const-string v0, "&?([^=]+)=([^&]+)"
+
+    .line 17
+    .line 18
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    sput-object v0, LX/4BK;->A01:Ljava/util/regex/Pattern;
+
+    .line 23
+    .line 24
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 268435460
-    .line 268435461
-    .line 268435462
-    move-result-object v0
-
-    .line 268435463
-    iput-object v0, p0, LX/4BK;->A00:Ljava/util/Map;
-
-    .line 268435464
-    .line 268435465
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 268435466
-    .line 268435467
-    .line 268435468
-    move-result-object v0
-
-    .line 268435469
-    iput-object v0, p0, LX/4BK;->A02:Ljava/util/Set;
-
-    .line 268435470
-    .line 268435471
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 268435472
-    .line 268435473
-    .line 268435474
-    move-result-object v0
-
-    .line 268435475
-    iput-object v0, p0, LX/4BK;->A01:Ljava/util/Set;
-
-    .line 268435476
-    .line 268435477
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 1
-
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const-string v0, "resource_counts"
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
     .line 5
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
+    .line 7
+    iput-object v0, p0, LX/4BK;->A00:Ljava/util/List;
+
+    .line 8
     .line 9
-    check-cast v0, Ljava/util/Map;
+    return-void
+.end method
+
+.method public static A00(Ljava/lang/String;)[Ljava/lang/String;
+    .locals 7
+
+    .line 0
+    const/4 v6, 0x0
+
+    .line 1
+    const/4 v5, 0x0
+
+    .line 2
+    const/4 v4, 0x0
+
+    .line 3
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    const/4 v3, 0x2
+
+    .line 8
+    const/4 v2, 0x1
+
+    .line 9
+    if-ge v5, v0, :cond_3
 
     .line 10
     .line 11
-    iput-object v0, p0, LX/4BK;->A00:Ljava/util/Map;
+    invoke-virtual {p0, v5}, Ljava/lang/String;->charAt(I)C
 
     .line 12
     .line 13
-    const-string v0, "resource_domains"
-
     .line 14
+    move-result v1
+
     .line 15
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+    const/16 v0, 0x3f
 
     .line 16
     .line 17
-    .line 18
-    move-result-object v0
+    if-eq v1, v0, :cond_2
 
+    .line 18
     .line 19
-    check-cast v0, Ljava/util/Set;
+    const/16 v0, 0x7b
 
     .line 20
     .line 21
-    iput-object v0, p0, LX/4BK;->A02:Ljava/util/Set;
+    if-eq v1, v0, :cond_1
 
     .line 22
     .line 23
-    const-string v0, "images_url"
+    const/16 v0, 0x7d
 
     .line 24
     .line 25
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+    if-ne v1, v0, :cond_0
 
     .line 26
     .line 27
+    const/4 v4, 0x0
+
     .line 28
-    move-result-object v0
+    :cond_0
+    :goto_1
+    add-int/lit8 v5, v5, 0x1
 
     .line 29
-    check-cast v0, Ljava/util/Set;
-
     .line 30
+    goto :goto_0
+
     .line 31
-    iput-object v0, p0, LX/4BK;->A01:Ljava/util/Set;
+    :cond_1
+    const/4 v4, 0x1
 
     .line 32
+    goto :goto_1
+
     .line 33
-    return-void
-.end method
+    :cond_2
+    if-nez v4, :cond_0
 
+    .line 34
+    .line 35
+    new-array v1, v3, [Ljava/lang/String;
 
-# virtual methods
-.method public final A00(Ljava/lang/String;)V
-    .locals 3
+    .line 36
+    .line 37
+    invoke-virtual {p0, v6, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    .line 0
-    iget-object v2, p0, LX/4BK;->A02:Ljava/util/Set;
-
-    .line 1
-    .line 2
-    monitor-enter v2
-
-    .line 3
-    :try_start_0
-    invoke-static {p1}, LX/4BD;->A0O(Ljava/lang/String;)Landroid/net/Uri;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v1
-
-    .line 7
-    if-eqz v1, :cond_0
-
-    .line 8
-    .line 9
-    invoke-virtual {v1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
-
-    .line 10
-    .line 11
-    .line 12
+    .line 38
+    .line 39
+    .line 40
     move-result-object v0
 
-    .line 13
-    if-eqz v0, :cond_0
+    .line 41
+    aput-object v0, v1, v6
 
-    .line 14
-    .line 15
-    invoke-virtual {v1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+    .line 42
+    .line 43
+    invoke-static {v5, p0}, LX/434;->A15(ILjava/lang/String;)Ljava/lang/String;
 
-    .line 16
-    .line 17
-    .line 18
+    .line 44
+    .line 45
+    .line 46
     move-result-object v0
 
-    .line 19
-    invoke-interface {v2, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    .line 47
+    goto :goto_2
 
-    .line 20
-    .line 21
-    .line 22
-    :cond_0
-    monitor-exit v2
+    .line 48
+    :cond_3
+    new-array v1, v3, [Ljava/lang/String;
 
-    .line 23
-    return-void
+    .line 49
+    .line 50
+    aput-object p0, v1, v6
 
-    .line 24
-    :catchall_0
-    move-exception v0
+    .line 51
+    .line 52
+    const-string v0, ""
 
-    .line 25
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 53
+    .line 54
+    :goto_2
+    aput-object v0, v1, v2
 
-    .line 26
-    throw v0
+    .line 55
+    .line 56
+    return-object v1
 .end method

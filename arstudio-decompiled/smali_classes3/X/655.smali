@@ -1,62 +1,78 @@
-.class public final enum LX/655;
-.super LX/651;
+.class public final LX/655;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ArEngineControllerImpl$1$1"
+
+
+# instance fields
+.field public final synthetic A00:LX/61C;
+
+.field public final synthetic A01:LX/60J;
+
+.field public final synthetic A02:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method public constructor <init>(LX/61C;LX/60J;Ljava/util/List;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x0
+    iput-object p1, p0, LX/655;->A00:LX/61C;
 
     .line 1
-    invoke-direct {p0, p1, p2, v0}, LX/651;-><init>(Ljava/lang/String;ILX/65X;)V
-
     .line 2
+    iput-object p2, p0, LX/655;->A01:LX/60J;
+
     .line 3
     .line 4
+    iput-object p3, p0, LX/655;->A02:Ljava/util/List;
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public copyEntry(LX/64t;LX/650;LX/650;)LX/650;
-    .locals 1
+.method public final run()V
+    .locals 5
 
     .line 0
-    invoke-super {p0, p1, p2, p3}, LX/651;->copyEntry(LX/64t;LX/650;LX/650;)LX/650;
+    iget-object v4, p0, LX/655;->A01:LX/60J;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    const-string v3, "ArEngineControllerImpl"
 
+    .line 3
     .line 4
-    invoke-virtual {p0, p2, v0}, LX/651;->copyWriteEntry(LX/650;LX/650;)V
+    invoke-static {p0}, LX/434;->A0P(Ljava/lang/Object;)J
 
     .line 5
     .line 6
     .line 7
-    return-object v0
-.end method
+    move-result-wide v1
 
-.method public newEntry(LX/64t;Ljava/lang/Object;ILX/650;)LX/650;
-    .locals 2
+    .line 8
+    iget-object v0, p0, LX/655;->A02:Ljava/util/List;
 
-    .line 0
-    iget-object v1, p1, LX/64t;->keyReferenceQueue:Ljava/lang/ref/ReferenceQueue;
+    .line 9
+    .line 10
+    invoke-static {v4, v3, v0, v1, v2}, LX/60I;->A01(LX/60J;Ljava/lang/String;Ljava/util/List;J)V
 
-    .line 1
-    .line 2
-    new-instance v0, LX/65H;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, p4, p2, v1, p3}, LX/65H;-><init>(LX/650;Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;I)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
+    .line 11
+    .line 12
+    .line 13
+    return-void
 .end method

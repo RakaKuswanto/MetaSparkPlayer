@@ -10,6 +10,18 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Splitter$1;Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "splitter",
+            "toSplit"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/base/Splitter$1$1;->this$0:Lcom/google/common/base/Splitter$1;
@@ -28,6 +40,14 @@
 # virtual methods
 .method public separatorEnd(I)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "separatorPosition"
+        }
+    .end annotation
 
     add-int/lit8 v0, p1, 0x1
 
@@ -36,6 +56,14 @@
 
 .method public separatorStart(I)I
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "start"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/base/Splitter$1$1;->this$0:Lcom/google/common/base/Splitter$1;

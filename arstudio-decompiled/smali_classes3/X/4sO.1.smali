@@ -1,14 +1,167 @@
-.class public interface abstract LX/4sO;
+.class public final LX/4So;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract Aal()V
+# instance fields
+.field public A00:Ljava/lang/reflect/Method;
+
+.field public A01:Ljava/lang/reflect/Method;
+
+.field public A02:Ljava/lang/reflect/Method;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 6
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {}, LX/4So;->A00()V
+
+    .line 4
+    .line 5
+    .line 6
+    const/4 v5, 0x0
+
+    .line 7
+    const/4 v4, 0x1
+
+    .line 8
+    :try_start_0
+    const-class v1, Landroid/widget/AutoCompleteTextView;
+
+    .line 9
+    .line 10
+    const-string v0, "doBeforeTextChanged"
+
+    .line 11
+    .line 12
+    invoke-static {v1, v0}, LX/434;->A1G(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    iput-object v0, p0, LX/4So;->A01:Ljava/lang/reflect/Method;
+
+    .line 17
+    .line 18
+    invoke-virtual {v0, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 19
+    .line 20
+    .line 21
+    :catch_0
+    :try_start_1
+    const-class v1, Landroid/widget/AutoCompleteTextView;
+
+    .line 22
+    .line 23
+    const-string v0, "doAfterTextChanged"
+
+    .line 24
+    .line 25
+    invoke-static {v1, v0}, LX/434;->A1G(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    iput-object v0, p0, LX/4So;->A00:Ljava/lang/reflect/Method;
+
+    .line 30
+    .line 31
+    invoke-virtual {v0, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 32
+    .line 33
+    .line 34
+    :catch_1
+    :try_start_2
+    const-class v3, Landroid/widget/AutoCompleteTextView;
+
+    .line 35
+    .line 36
+    const-string v2, "ensureImeVisible"
+
+    .line 37
+    .line 38
+    new-array v1, v4, [Ljava/lang/Class;
+
+    .line 39
+    .line 40
+    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    .line 41
+    .line 42
+    invoke-static {v3, v0, v2, v1, v5}, LX/0X6;->A10(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v0
+
+    .line 46
+    iput-object v0, p0, LX/4So;->A02:Ljava/lang/reflect/Method;
+
+    .line 47
+    .line 48
+    invoke-virtual {v0, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_2
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 49
+    .line 50
+    .line 51
+    :catch_2
+    return-void
 .end method
 
-.method public abstract Aey()V
-.end method
+.method public static A00()V
+    .locals 2
 
-.method public abstract Aez()V
+    .line 0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 1
+    .line 2
+    const/16 v0, 0x1d
+
+    .line 3
+    .line 4
+    if-ge v1, v0, :cond_0
+
+    .line 5
+    .line 6
+    return-void
+
+    .line 7
+    :cond_0
+    const-string v1, "This function can only be used for API Level < 29."
+
+    .line 8
+    .line 9
+    new-instance v0, Ljava/lang/UnsupportedClassVersionError;
+
+    .line 10
+    .line 11
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedClassVersionError;-><init>(Ljava/lang/String;)V
+
+    .line 12
+    .line 13
+    .line 14
+    throw v0
 .end method

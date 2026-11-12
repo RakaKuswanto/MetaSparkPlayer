@@ -1,83 +1,163 @@
-.class public abstract LX/4mQ;
-.super LX/4mg;
+.class public final LX/4Mq;
+.super LX/4Mr;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/4l1;
+# instance fields
+.field public A00:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/4l1;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/4l1;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/4mQ;->A00:LX/4l1;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, LX/4mg;-><init>()V
+    .line 1342705563
+    invoke-direct {p0}, LX/4Mr;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    const/4 v0, 0x0
+
+    .line 1342705564
+    iput v0, p0, LX/4Mq;->A00:I
+
+    const v0, 0x800013
+
+    .line 1342705565
+    iput v0, p0, LX/4Mr;->A00:I
+
     return-void
 .end method
 
-
-# virtual methods
-.method public final A0L()LX/4mg;
+.method public constructor <init>(LX/4Mq;)V
     .locals 1
 
-    .line 0
-    invoke-super {p0}, LX/4mg;->A0L()LX/4mg;
+    .line 805306368
+    invoke-direct {p0, p1}, LX/4Mr;-><init>(LX/4Mr;)V
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
+    .line 805306369
+    .line 805306370
+    .line 805306371
+    const/4 v0, 0x0
 
-    .line 4
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    .line 805306372
+    iput v0, p0, LX/4Mq;->A00:I
 
-    .line 5
-    .line 6
-    .line 7
-    return-object v0
+    .line 805306373
+    .line 805306374
+    iget v0, p1, LX/4Mq;->A00:I
+
+    .line 805306375
+    .line 805306376
+    iput v0, p0, LX/4Mq;->A00:I
+
+    .line 805306377
+    .line 805306378
+    return-void
 .end method
 
-.method public final A0W(LX/4mg;LX/4mg;LX/6MF;LX/6MF;)Z
+.method public constructor <init>(LX/4Mr;)V
+    .locals 1
+
+    .line 536870912
+    invoke-direct {p0, p1}, LX/4Mr;-><init>(LX/4Mr;)V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    const/4 v0, 0x0
+
+    .line 536870916
+    iput v0, p0, LX/4Mq;->A00:I
+
+    .line 536870917
+    .line 536870918
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yc;->A0L(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, LX/4Mr;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-super {p0, p1, p2, p3, p4}, LX/4mg;->A0W(LX/4mg;LX/4mg;LX/6MF;LX/6MF;)Z
+    const/4 v0, 0x0
 
     .line 4
+    iput v0, p0, LX/4Mq;->A00:I
+
     .line 5
     .line 6
-    move-result v0
+    return-void
+.end method
 
-    .line 7
-    return v0
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 1
+
+    .line 1073741824
+    invoke-direct {p0, p1}, LX/4Mr;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1073741825
+    .line 1073741826
+    .line 1073741827
+    const/4 v0, 0x0
+
+    .line 1073741828
+    iput v0, p0, LX/4Mq;->A00:I
+
+    .line 1073741829
+    .line 1073741830
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0, p1}, LX/4Mr;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const/4 v0, 0x0
+
+    .line 268435460
+    iput v0, p0, LX/4Mq;->A00:I
+
+    .line 268435461
+    .line 268435462
+    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    .line 268435463
+    .line 268435464
+    iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    .line 268435465
+    .line 268435466
+    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    .line 268435467
+    .line 268435468
+    iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    .line 268435469
+    .line 268435470
+    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    .line 268435471
+    .line 268435472
+    iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    .line 268435473
+    .line 268435474
+    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    .line 268435475
+    .line 268435476
+    iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    .line 268435477
+    .line 268435478
+    return-void
 .end method

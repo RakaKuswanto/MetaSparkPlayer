@@ -1,96 +1,266 @@
-.class public final LX/62r;
+.class public interface abstract LX/62r;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Landroid/os/Handler;
+# static fields
+.field public static final A00:LX/5yr;
 
-.field public final A01:LX/63g;
+.field public static final A01:LX/5yr;
+
+.field public static final A02:LX/5yr;
+
+.field public static final A03:LX/5yr;
+
+.field public static final A04:LX/5yr;
+
+.field public static final A05:LX/5yr;
+
+.field public static final A06:LX/5yr;
+
+.field public static final A07:LX/5yr;
+
+.field public static final A08:LX/5yr;
+
+.field public static final A09:LX/5yr;
+
+.field public static final A0A:LX/5yr;
+
+.field public static final A0B:LX/5yr;
+
+.field public static final A0C:LX/5yr;
+
+.field public static final A0D:LX/5yr;
+
+.field public static final A0E:LX/5yr;
+
+.field public static final A0F:LX/5yr;
+
+.field public static final A0G:LX/5yr;
+
+.field public static final A0H:LX/5yr;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;LX/63g;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
     .line 4
-    .line 5
-    .line 6
-    iput-object p1, p0, LX/62r;->A00:Landroid/os/Handler;
-
-    .line 7
-    .line 8
-    iput-object p2, p0, LX/62r;->A01:LX/63g;
-
-    .line 9
-    .line 10
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00(LX/6NL;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/62r;->A00:Landroid/os/Handler;
-
-    .line 1
-    .line 2
-    new-instance v0, LX/63h;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, p0, p1}, LX/63h;-><init>(LX/62r;LX/6NL;)V
+    sput-object v0, LX/62r;->A00:LX/5yr;
 
     .line 5
     .line 6
-    .line 7
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 8
-    .line 9
-    .line 10
-    return-void
-.end method
-
-.method public final A01(Ljava/lang/Object;)V
-    .locals 4
-
-    .line 0
-    iget-object v3, p0, LX/62r;->A00:Landroid/os/Handler;
-
-    .line 1
-    .line 2
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-wide v1
-
-    .line 6
-    new-instance v0, LX/63n;
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
 
     .line 7
     .line 8
-    invoke-direct {v0, p0, p1, v1, v2}, LX/63n;-><init>(LX/62r;Ljava/lang/Object;J)V
-
     .line 9
+    move-result-object v0
+
     .line 10
+    sput-object v0, LX/62r;->A0A:LX/5yr;
+
     .line 11
-    invoke-virtual {v3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
     .line 12
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
     .line 13
     .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    sput-object v0, LX/62r;->A0B:LX/5yr;
+
+    .line 17
+    .line 18
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    sput-object v0, LX/62r;->A03:LX/5yr;
+
+    .line 23
+    .line 24
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    sput-object v0, LX/62r;->A09:LX/5yr;
+
+    .line 29
+    .line 30
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    sput-object v0, LX/62r;->A02:LX/5yr;
+
+    .line 35
+    .line 36
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    sput-object v0, LX/62r;->A0C:LX/5yr;
+
+    .line 41
+    .line 42
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v0
+
+    .line 46
+    sput-object v0, LX/62r;->A0E:LX/5yr;
+
+    .line 47
+    .line 48
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    sput-object v0, LX/62r;->A0F:LX/5yr;
+
+    .line 53
+    .line 54
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    sput-object v0, LX/62r;->A0H:LX/5yr;
+
+    .line 59
+    .line 60
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v0
+
+    .line 64
+    sput-object v0, LX/62r;->A07:LX/5yr;
+
+    .line 65
+    .line 66
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v0
+
+    .line 70
+    sput-object v0, LX/62r;->A0D:LX/5yr;
+
+    .line 71
+    .line 72
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v0
+
+    .line 76
+    sput-object v0, LX/62r;->A01:LX/5yr;
+
+    .line 77
+    .line 78
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v0
+
+    .line 82
+    sput-object v0, LX/62r;->A05:LX/5yr;
+
+    .line 83
+    .line 84
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object v0
+
+    .line 88
+    sput-object v0, LX/62r;->A08:LX/5yr;
+
+    .line 89
+    .line 90
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v0
+
+    .line 94
+    sput-object v0, LX/62r;->A0G:LX/5yr;
+
+    .line 95
+    .line 96
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 97
+    .line 98
+    .line 99
+    move-result-object v0
+
+    .line 100
+    sput-object v0, LX/62r;->A06:LX/5yr;
+
+    .line 101
+    .line 102
+    invoke-static {}, LX/5yr;->A00()LX/5yr;
+
+    .line 103
+    .line 104
+    .line 105
+    move-result-object v0
+
+    .line 106
+    sput-object v0, LX/62r;->A04:LX/5yr;
+
+    .line 107
+    .line 108
     return-void
 .end method

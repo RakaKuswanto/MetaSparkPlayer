@@ -4,8 +4,3 @@
 
 # interfaces
 .implements Landroid/os/IInterface;
-
-
-# virtual methods
-.method public abstract AsD(Landroid/location/Location;)V
-.end method

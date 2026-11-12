@@ -2,136 +2,227 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0Nf;
+
+
+# instance fields
+.field public A00:J
+
+.field public A01:LX/0I5;
+
+.field public A02:Ljava/util/Collection;
+
+.field public final A03:LX/0Nf;
+
 
 # direct methods
-.method public static A00(LX/2VS;LX/2J5;)LX/2VS;
-    .locals 1
+.method public constructor <init>(LX/0I5;LX/0Nf;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
-    .line 4
-    invoke-interface {p0}, LX/2VS;->AHY()LX/2J5;
+    iput-object p2, p0, LX/2VN;->A03:LX/0Nf;
 
+    .line 4
     .line 5
+    iput-object p1, p0, LX/2VN;->A01:LX/0I5;
+
     .line 6
     .line 7
-    move-result-object v0
-
-    .line 8
-    invoke-static {v0, p1}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    if-nez v0, :cond_0
-
-    .line 13
-    .line 14
-    const/4 p0, 0x0
-
-    .line 15
-    :cond_0
-    return-object p0
+    return-void
 .end method
 
-.method public static A01(LX/2VS;LX/2J5;)LX/2VQ;
-    .locals 1
+
+# virtual methods
+.method public final declared-synchronized getDataPoints()Ljava/util/Collection;
+    .locals 6
 
     .line 0
-    const/4 v0, 0x1
+    monitor-enter p0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    :try_start_0
+    iget-object v0, p0, LX/2VN;->A02:Ljava/util/Collection;
 
     .line 2
     .line 3
-    .line 4
-    invoke-interface {p0}, LX/2VS;->AHY()LX/2J5;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    invoke-static {v0, p1}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
     if-eqz v0, :cond_0
 
-    .line 13
-    .line 14
-    sget-object p0, LX/2J2;->A00:LX/2J2;
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/2VN;->A01:LX/0I5;
 
+    .line 6
+    .line 7
+    invoke-interface {v0}, LX/0I5;->now()J
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-wide v4
+
+    .line 11
+    iget-wide v2, p0, LX/2VN;->A00:J
+
+    .line 12
+    .line 13
+    const-wide/16 v0, 0x1f4
+
+    .line 14
     .line 15
+    add-long/2addr v2, v0
+
     .line 16
-    :cond_0
-    check-cast p0, LX/2VQ;
+    cmp-long v0, v4, v2
 
     .line 17
     .line 18
-    return-object p0
+    if-ltz v0, :cond_1
+
+    .line 19
+    .line 20
+    :cond_0
+    iget-object v0, p0, LX/2VN;->A03:LX/0Nf;
+
+    .line 21
+    .line 22
+    invoke-interface {v0}, LX/0Nf;->getDataPoints()Ljava/util/Collection;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    iput-object v0, p0, LX/2VN;->A02:Ljava/util/Collection;
+
+    .line 27
+    .line 28
+    iget-object v0, p0, LX/2VN;->A01:LX/0I5;
+
+    .line 29
+    .line 30
+    invoke-interface {v0}, LX/0I5;->now()J
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-wide v0
+
+    .line 34
+    iput-wide v0, p0, LX/2VN;->A00:J
+
+    .line 35
+    .line 36
+    :cond_1
+    iget-object v0, p0, LX/2VN;->A02:Ljava/util/Collection;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 37
+    .line 38
+    monitor-exit p0
+
+    .line 39
+    return-object v0
+
+    .line 40
+    :catchall_0
+    move-exception v0
+
+    .line 41
+    monitor-exit p0
+
+    .line 42
+    throw v0
 .end method
 
-.method public static A02(LX/2VS;LX/2VQ;)LX/2VQ;
+.method public final synthetic getIndexedDataPoints()Ljava/util/Map;
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    return-object v0
+.end method
+
+.method public final shouldCollectMetrics(I)Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2VN;->A03:LX/0Nf;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1}, LX/0Nf;->shouldCollectMetrics(I)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final synthetic shouldCollectMetrics(ILX/0NU;)Z
+    .locals 1
+
+    invoke-static {p2, p0, p1}, LX/0Ne;->A00(LX/0NU;LX/0Nf;I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final synthetic supportsIndexedDataPoints()Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
     .line 0
-    const/4 v0, 0x1
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
+    move-result-object v1
+
     .line 4
-    sget-object v0, LX/2J2;->A00:LX/2J2;
+    const-string v0, "RateLimited{"
 
     .line 5
     .line 6
-    if-eq p1, v0, :cond_0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
-    const/16 v1, 0x10
-
     .line 9
+    iget-object v0, p0, LX/2VN;->A03:LX/0Nf;
+
     .line 10
-    new-instance v0, LX/2Vr;
-
     .line 11
-    .line 12
-    invoke-direct {v0, v1}, LX/2Vr;-><init>(I)V
+    invoke-static {v0, v1}, LX/0X1;->A0O(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 12
     .line 13
     .line 14
+    move-result-object v0
+
     .line 15
-    invoke-interface {p1, p0, v0}, LX/2VQ;->AAk(Ljava/lang/Object;LX/0Ch;)Ljava/lang/Object;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object p0
-
-    .line 19
-    check-cast p0, LX/2VQ;
-
-    .line 20
-    .line 21
-    :cond_0
-    return-object p0
+    return-object v0
 .end method

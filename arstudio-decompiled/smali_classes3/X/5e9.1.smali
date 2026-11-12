@@ -1,50 +1,30 @@
 .class public final LX/5e9;
-.super Ljava/lang/Object;
+.super LX/6bU;
 .source ""
 
 
-# instance fields
-.field public A00:F
-
-.field public A01:F
-
-.field public A02:F
-
-.field public A03:F
-
-.field public A04:F
-
-.field public A05:F
-
-.field public A06:F
-
-.field public A07:F
-
-.field public A08:F
-
-.field public A09:F
-
-.field public A0A:I
-
-.field public A0B:I
-
-.field public A0C:J
-
-.field public A0D:J
-
-.field public A0E:J
-
-.field public A0F:Ljava/lang/String;
-
-.field public A0G:Z
+# static fields
+.field public static final A00:LX/5e9;
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/5e9;
+
+    invoke-direct {v0}, LX/5e9;-><init>()V
+
+    sput-object v0, LX/5e9;->A00:LX/5e9;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/6bU;-><init>()V
 
     .line 1
     .line 2

@@ -1,29 +1,26 @@
 .class public final LX/0Bh;
-.super Ljava/lang/Object;
+.super LX/0I7;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/0Bi;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/04n;)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/0Bi;
+    invoke-direct {p0, p1}, LX/0I7;-><init>(LX/04n;)V
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/0Bi;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/0Bh;->A00:LX/0Bi;
+    return-void
+.end method
 
-    .line 6
-    .line 7
+
+# virtual methods
+.method public final addExtraDataToAccessibilityNodeInfo(ILandroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 0
     return-void
 .end method

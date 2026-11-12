@@ -2,42 +2,17 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A01:LX/0Iw;
+# interfaces
+.implements LX/0Hc;
 
 
 # instance fields
-.field public final A00:Ljava/lang/String;
+.field public final A00:LX/0Hc;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 0
-    const-string v1, ""
-
-    .line 1
-    .line 2
-    new-instance v0, LX/0Iw;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/0Iw;-><init>(Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    sput-object v0, LX/0Iw;->A01:LX/0Iw;
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(LX/0Hc;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,147 +20,165 @@
     .line 1
     .line 2
     .line 3
-    if-eqz p1, :cond_0
+    iput-object p1, p0, LX/0Iw;->A00:LX/0Hc;
 
     .line 4
     .line 5
-    const-string v0, ":"
-
-    .line 6
-    .line 7
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    .line 8
-    .line 9
-    .line 10
-    move-result v0
-
-    .line 11
-    if-nez v0, :cond_0
-
-    .line 12
-    .line 13
-    iput-object p1, p0, LX/0Iw;->A00:Ljava/lang/String;
-
-    .line 14
-    .line 15
     return-void
-
-    .line 16
-    :cond_0
-    const-string v0, "Invalid name"
-
-    .line 17
-    .line 18
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final load(Ljava/lang/String;I)V
     .locals 4
 
     .line 0
-    const/4 v3, 0x1
+    iget-object v2, p0, LX/0Iw;->A00:LX/0Hc;
 
     .line 1
-    if-eq p0, p1, :cond_1
-
     .line 2
-    .line 3
-    const/4 v2, 0x0
+    sget-object v3, LX/08I;->A00:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 3
     .line 4
-    if-eqz p1, :cond_0
+    invoke-static {v3}, LX/002;->A0E(Ljava/util/concurrent/atomic/AtomicReference;)[LX/08J;
 
     .line 5
     .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
-    .line 10
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 11
-    .line 12
-    .line 13
     move-result-object v0
 
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    .line 10
+    array-length v1, v0
+
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    if-ge v0, v1, :cond_0
+
+    .line 13
     .line 14
-    if-ne v1, v0, :cond_0
+    const-string v0, "onSoFileLoaderLoadStart"
 
     .line 15
     .line 16
-    check-cast p1, LX/0Iw;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 17
     .line 18
-    iget-object v1, p0, LX/0Iw;->A00:Ljava/lang/String;
-
     .line 19
+    move-result-object v0
+
     .line 20
-    iget-object v0, p1, LX/0Iw;->A00:Ljava/lang/String;
+    throw v0
 
     .line 21
-    .line 22
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_0
+    :try_start_0
+    invoke-interface {v2, p1, p2}, LX/0Hc;->load(Ljava/lang/String;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 22
     .line 23
     .line 24
+    invoke-static {v3}, LX/002;->A0E(Ljava/util/concurrent/atomic/AtomicReference;)[LX/08J;
+
     .line 25
-    move-result v0
-
     .line 26
-    if-nez v0, :cond_1
-
     .line 27
+    move-result-object v0
+
     .line 28
-    :cond_0
-    return v2
+    if-eqz v0, :cond_1
 
     .line 29
+    .line 30
+    array-length v1, v0
+
+    .line 31
+    const/4 v0, 0x0
+
+    .line 32
+    if-ge v0, v1, :cond_1
+
+    .line 33
+    .line 34
+    const-string v0, "onSoFileLoaderLoadEnd"
+
+    .line 35
+    .line 36
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    throw v0
+
+    .line 41
     :cond_1
-    return v3
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 1
+    .line 42
+    :catchall_0
+    move-exception v0
 
-    .line 0
-    iget-object v0, p0, LX/0Iw;->A00:Ljava/lang/String;
+    .line 43
+    :try_start_1
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    .line 44
+    :catchall_1
+    move-exception v2
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    .line 45
+    invoke-static {v3}, LX/002;->A0E(Ljava/util/concurrent/atomic/AtomicReference;)[LX/08J;
 
-    .line 6
-    return v0
-.end method
+    .line 46
+    .line 47
+    .line 48
+    move-result-object v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    .line 49
+    if-eqz v0, :cond_2
 
-    .line 0
-    iget-object v0, p0, LX/0Iw;->A00:Ljava/lang/String;
+    .line 50
+    .line 51
+    array-length v1, v0
 
-    .line 1
-    .line 2
-    return-object v0
+    .line 52
+    const/4 v0, 0x0
+
+    .line 53
+    if-ge v0, v1, :cond_2
+
+    .line 54
+    .line 55
+    const-string v0, "onSoFileLoaderLoadEnd"
+
+    .line 56
+    .line 57
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v0
+
+    .line 61
+    throw v0
+
+    .line 62
+    :cond_2
+    throw v2
 .end method

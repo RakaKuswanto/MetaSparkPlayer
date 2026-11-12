@@ -18,11 +18,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x27
+    const/16 v0, 0x14
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -172,7 +172,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0, v1}, LX/0Yi;->A07(Ljava/lang/String;I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 7
     .line 8
@@ -180,7 +180,10 @@
     move-result v0
 
     .line 10
-    return v0
+    add-int/2addr v1, v0
+
+    .line 11
+    return v1
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V

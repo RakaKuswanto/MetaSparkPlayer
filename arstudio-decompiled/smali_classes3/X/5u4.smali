@@ -1,63 +1,29 @@
-.class public final LX/5u4;
-.super LX/5u1;
+.class public interface abstract LX/5U4;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final isSurfaceValid:Z
-
-.field public final surfaceIdentityHashCode:I
+# static fields
+.field public static final A00:LX/5U4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Surface;LX/5uB;Ljava/lang/Throwable;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p2, p3}, LX/5u1;-><init>(LX/5uB;Ljava/lang/Throwable;)V
+    new-instance v0, LX/5U5;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    invoke-direct {v0}, LX/5U5;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    sput-object v0, LX/5U4;->A00:LX/5U4;
+
     .line 6
-    move-result v0
-
     .line 7
-    iput v0, p0, LX/5u4;->surfaceIdentityHashCode:I
-
-    .line 8
-    .line 9
-    if-eqz p1, :cond_0
-
-    .line 10
-    .line 11
-    invoke-virtual {p1}, Landroid/view/Surface;->isValid()Z
-
-    .line 12
-    .line 13
-    .line 14
-    move-result v1
-
-    .line 15
-    const/4 v0, 0x0
-
-    .line 16
-    if-eqz v1, :cond_1
-
-    .line 17
-    .line 18
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 19
-    :cond_1
-    iput-boolean v0, p0, LX/5u4;->isSurfaceValid:Z
-
-    .line 20
-    .line 21
     return-void
 .end method

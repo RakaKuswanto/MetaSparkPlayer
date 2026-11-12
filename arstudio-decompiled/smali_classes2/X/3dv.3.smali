@@ -1,14 +1,14 @@
-.class public abstract LX/3dv;
-.super Ljava/lang/Object;
+.class public final LX/3dv;
+.super LX/4nS;
 .source ""
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/4nS;-><init>(Landroid/view/View;)V
 
     .line 1
     .line 2

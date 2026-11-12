@@ -3,22 +3,39 @@
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/lang/Object;
+# instance fields
+.field public final A00:LX/3JF;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    sget-object v0, LX/1sI;->COROUTINE_SUSPENDED:LX/1sI;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    sput-object v0, LX/2NE;->A00:Ljava/lang/Object;
-
     .line 3
+    sget v0, LX/2I6;->A8g:I
+
     .line 4
+    .line 5
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    check-cast v0, LX/3JF;
+
+    .line 10
+    .line 11
+    iput-object v0, p0, LX/2NE;->A00:LX/3JF;
+
+    .line 12
+    .line 13
     return-void
 .end method

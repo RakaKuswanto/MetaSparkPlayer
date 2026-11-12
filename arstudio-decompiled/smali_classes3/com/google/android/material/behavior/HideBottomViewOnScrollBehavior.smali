@@ -70,7 +70,7 @@
     .locals 2
 
     .line 0
-    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-static {p2}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 1
     .line 2
@@ -78,32 +78,28 @@
     move-result-object v0
 
     .line 4
-    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
 
     .line 5
     .line 6
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
-
     .line 7
-    .line 8
-    .line 9
     move-result v1
 
-    .line 10
+    .line 8
     iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 11
-    .line 12
+    .line 9
+    .line 10
     add-int/2addr v1, v0
 
-    .line 13
+    .line 11
     iput v1, p0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->A01:I
 
-    .line 14
-    .line 15
+    .line 12
+    .line 13
     const/4 v0, 0x0
 
-    .line 16
+    .line 14
     return v0
 .end method
 
@@ -153,7 +149,7 @@
 
     .line 20
     .line 21
-    sget-object v4, LX/4UM;->A01:Landroid/animation/TimeInterpolator;
+    sget-object v4, LX/4Wv;->A01:Landroid/animation/TimeInterpolator;
 
     .line 22
     .line 23
@@ -200,11 +196,11 @@
     const/4 v1, 0x3
 
     .line 43
-    new-instance v0, LX/6Oj;
+    new-instance v0, LX/6fG;
 
     .line 44
     .line 45
-    invoke-direct {v0, p0, v1}, LX/6Oj;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/6fG;-><init>(Ljava/lang/Object;I)V
 
     .line 46
     .line 47
@@ -264,7 +260,7 @@
 
     .line 73
     .line 74
-    sget-object v4, LX/4UM;->A04:Landroid/animation/TimeInterpolator;
+    sget-object v4, LX/4Wv;->A04:Landroid/animation/TimeInterpolator;
 
     .line 75
     .line 76
@@ -285,7 +281,7 @@
     const/4 v0, 0x2
 
     .line 1
-    invoke-static {p5, v0}, LX/001;->A1O(II)Z
+    invoke-static {p5, v0}, LX/001;->A1N(II)Z
 
     .line 2
     .line 3

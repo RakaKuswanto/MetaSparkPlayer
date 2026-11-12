@@ -24,11 +24,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1c
+    const/16 v0, 0x16
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -136,35 +136,35 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Parcel;LX/1QO;)V
+.method public synthetic constructor <init>(Landroid/os/Parcel;LX/1b7;)V
     .locals 0
 
-    .line 536870912
+    .line 805306368
     invoke-direct {p0, p1}, Lcom/facebook/cameracore/ardelivery/model/ARCapabilityMinVersionModeling;-><init>(Landroid/os/Parcel;)V
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
+    .line 805306369
+    .line 805306370
+    .line 805306371
     return-void
 .end method
 
 .method public constructor <init>(Lcom/facebook/cameracore/ardelivery/model/VersionedCapability;I)V
     .locals 0
 
-    .line 805306368
+    .line 536870912
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 805306369
-    .line 805306370
-    .line 805306371
+    .line 536870913
+    .line 536870914
+    .line 536870915
     iput-object p1, p0, Lcom/facebook/cameracore/ardelivery/model/ARCapabilityMinVersionModeling;->mCapability:Lcom/facebook/cameracore/ardelivery/model/VersionedCapability;
 
-    .line 805306372
-    .line 805306373
+    .line 536870916
+    .line 536870917
     iput p2, p0, Lcom/facebook/cameracore/ardelivery/model/ARCapabilityMinVersionModeling;->mMinVersion:I
 
-    .line 805306374
-    .line 805306375
+    .line 536870918
+    .line 536870919
     return-void
 .end method
 
@@ -256,7 +256,7 @@
 
     .line 35
     .line 36
-    invoke-static {v0, v1}, LX/0Ye;->A1X(ILjava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/0X2;->A1Q(ILjava/lang/Object;)Z
 
     .line 37
     .line 38
@@ -328,7 +328,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -459,29 +459,6 @@
     return v0
 .end method
 
-.method public isCapabilityHandTracking()Z
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/ardelivery/model/ARCapabilityMinVersionModeling;->mCapability:Lcom/facebook/cameracore/ardelivery/model/VersionedCapability;
-
-    .line 1
-    .line 2
-    sget-object v0, Lcom/facebook/cameracore/ardelivery/model/VersionedCapability;->HandTracker:Lcom/facebook/cameracore/ardelivery/model/VersionedCapability;
-
-    .line 3
-    .line 4
-    invoke-static {v1, v0}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-.end method
-
 .method public isCapabilitySegmentation()Z
     .locals 2
 
@@ -532,7 +509,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -540,45 +517,46 @@
     move-result-object v1
 
     .line 4
-    const-string v0, "capability: "
+    const-string/jumbo v0, "capability: "
 
     .line 5
     .line 6
+    .line 7
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     .line 8
     .line 9
+    .line 10
     iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARCapabilityMinVersionModeling;->mCapability:Lcom/facebook/cameracore/ardelivery/model/VersionedCapability;
 
-    .line 10
     .line 11
+    .line 12
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 12
     .line 13
     .line 14
+    .line 15
     const-string v0, ", minVersion:"
 
-    .line 15
     .line 16
+    .line 17
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     iget v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARCapabilityMinVersionModeling;->mMinVersion:I
 
-    .line 20
     .line 21
-    invoke-static {v1, v0}, LX/0Yh;->A0c(Ljava/lang/StringBuilder;I)Ljava/lang/String;
-
     .line 22
+    invoke-static {v1, v0}, LX/0X5;->A0g(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+
     .line 23
     .line 24
+    .line 25
     move-result-object v0
 
-    .line 25
+    .line 26
     return-object v0
 .end method
 
@@ -590,7 +568,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yh;->A0p(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X3;->A12(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 3
     .line 4

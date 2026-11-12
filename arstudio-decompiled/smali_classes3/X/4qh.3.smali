@@ -1,8 +1,33 @@
-.class public interface abstract LX/4qh;
-.super Ljava/lang/Object;
+.class public final LX/4qh;
+.super LX/6b2;
 .source ""
 
 
-# virtual methods
-.method public abstract A7p(LX/4oG;)LX/4wt;
+# instance fields
+.field public final A00:Landroid/util/SparseArray;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/6b2;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {}, LX/434;->A0S()Landroid/util/SparseArray;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/4qh;->A00:Landroid/util/SparseArray;
+
+    .line 8
+    .line 9
+    return-void
 .end method

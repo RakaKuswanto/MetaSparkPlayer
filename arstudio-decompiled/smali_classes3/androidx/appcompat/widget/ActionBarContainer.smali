@@ -10,11 +10,11 @@
 
 .field public A02:Landroid/graphics/drawable/Drawable;
 
-.field public A03:Z
+.field public A03:Landroid/view/View;
 
 .field public A04:Z
 
-.field public A05:Landroid/view/View;
+.field public A05:Z
 
 .field public A06:I
 
@@ -50,11 +50,11 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/4QY;
+    new-instance v0, LX/4OP;
 
     .line 4
     .line 5
-    invoke-direct {v0, p0}, LX/4QY;-><init>(Landroidx/appcompat/widget/ActionBarContainer;)V
+    invoke-direct {v0, p0}, LX/4OP;-><init>(Landroidx/appcompat/widget/ActionBarContainer;)V
 
     .line 6
     .line 7
@@ -64,7 +64,7 @@
     .line 9
     .line 10
     .line 11
-    sget-object v0, LX/4XG;->A00:[I
+    sget-object v0, LX/4M2;->A00:[I
 
     .line 12
     .line 13
@@ -133,7 +133,7 @@
     move-result v2
 
     .line 44
-    const v0, 0x7f0a0582
+    const v0, 0x7f0904b7
 
     .line 45
     .line 46
@@ -145,7 +145,7 @@
 
     .line 49
     .line 50
-    iput-boolean v1, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iput-boolean v1, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 51
     .line 52
@@ -167,7 +167,7 @@
     .line 59
     .line 60
     .line 61
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 62
     .line 63
@@ -251,7 +251,7 @@
 
     .line 14
     .line 15
-    invoke-static {v0, p0}, LX/4BD;->A14(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    invoke-static {v0, p0}, LX/432;->A16(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
     .line 16
     .line 17
@@ -281,7 +281,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0, p0}, LX/4BD;->A14(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    invoke-static {v0, p0}, LX/432;->A16(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
     .line 31
     .line 32
@@ -311,7 +311,7 @@
 
     .line 44
     .line 45
-    invoke-static {v0, p0}, LX/4BD;->A14(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    invoke-static {v0, p0}, LX/432;->A16(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
     .line 46
     .line 47
@@ -324,7 +324,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 1
     .line 2
@@ -394,7 +394,7 @@
     .line 1
     .line 2
     .line 3
-    const v0, 0x7f0a003d
+    const v0, 0x7f09003c
 
     .line 4
     .line 5
@@ -411,7 +411,7 @@
 
     .line 11
     .line 12
-    const v0, 0x7f0a0044
+    const v0, 0x7f090043
 
     .line 13
     .line 14
@@ -490,7 +490,7 @@
     .line 1
     .line 2
     .line 3
-    iget-object v5, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iget-object v5, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 4
     .line 5
@@ -549,7 +549,7 @@
     move-result v4
 
     .line 30
-    invoke-static {v5}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v5}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 31
     .line 32
@@ -569,7 +569,7 @@
 
     .line 39
     .line 40
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    iget v0, v2, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     .line 41
     .line 42
@@ -585,7 +585,7 @@
     .line 46
     .line 47
     :cond_2
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 48
     .line 49
@@ -720,7 +720,7 @@
 
     .line 112
     :cond_5
-    iput-boolean v3, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
+    iput-boolean v3, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Z
 
     .line 113
     .line 114
@@ -944,10 +944,10 @@
     .line 36
     .line 37
     .line 38
-    move-result v4
+    move-result v5
 
     .line 39
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 40
     .line 41
@@ -975,7 +975,7 @@
 
     .line 52
     .line 53
-    if-eq v4, v0, :cond_1
+    if-eq v5, v0, :cond_1
 
     .line 54
     .line 55
@@ -1020,12 +1020,12 @@
     .line 74
     .line 75
     :goto_0
-    invoke-static {v0}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v0}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 76
     .line 77
     .line 78
-    move-result-object v2
+    move-result-object v1
 
     .line 79
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
@@ -1033,156 +1033,144 @@
     .line 80
     .line 81
     .line 82
-    move-result v1
+    move-result v0
 
     .line 83
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
     .line 84
     .line 85
-    add-int/2addr v1, v0
-
     .line 86
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    move-result v4
 
     .line 87
-    .line 88
-    add-int/2addr v1, v0
-
-    .line 89
     :goto_1
-    if-ne v4, v3, :cond_2
+    if-ne v5, v3, :cond_2
+
+    .line 88
+    .line 89
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     .line 90
     .line 91
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
     .line 92
-    .line 93
-    .line 94
-    move-result v5
+    move-result v3
 
-    .line 95
+    .line 93
     :goto_2
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
+    .line 94
+    .line 95
     .line 96
-    .line 97
-    .line 98
-    move-result v4
+    move-result v2
 
+    .line 97
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
+
+    .line 98
     .line 99
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    invoke-static {v0}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 100
     .line 101
-    invoke-static {v0}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
-
     .line 102
-    .line 103
-    .line 104
-    move-result-object v3
+    move-result-object v1
 
-    .line 105
+    .line 103
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
+    .line 104
+    .line 105
     .line 106
+    move-result v0
+
     .line 107
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
+
     .line 108
-    move-result v2
-
     .line 109
-    iget v0, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
     .line 110
+    move-result v0
+
     .line 111
-    add-int/2addr v2, v0
+    add-int/2addr v4, v0
 
     .line 112
-    iget v0, v3, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    invoke-static {v4, v3}, Ljava/lang/Math;->min(II)I
 
     .line 113
     .line 114
-    add-int/2addr v2, v0
-
     .line 115
-    add-int/2addr v1, v2
+    move-result v0
 
     .line 116
-    invoke-static {v1, v5}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {p0, v2, v0}, Landroid/view/View;->setMeasuredDimension(II)V
 
     .line 117
     .line 118
     .line 119
-    move-result v0
+    :cond_1
+    return-void
 
     .line 120
-    invoke-virtual {p0, v4, v0}, Landroid/view/View;->setMeasuredDimension(II)V
+    :cond_2
+    const v3, 0x7fffffff
 
     .line 121
     .line 122
     .line 123
-    :cond_1
-    return-void
-
-    .line 124
-    :cond_2
-    const v5, 0x7fffffff
-
-    .line 125
-    .line 126
-    .line 127
     goto :goto_2
 
-    .line 128
+    .line 124
     :cond_3
     iget-object v2, p0, Landroidx/appcompat/widget/ActionBarContainer;->A08:Landroid/view/View;
 
-    .line 129
-    .line 130
+    .line 125
+    .line 126
     if-eqz v2, :cond_4
 
-    .line 131
-    .line 132
+    .line 127
+    .line 128
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+
+    .line 129
+    .line 130
+    .line 131
+    move-result v1
+
+    .line 132
+    const/16 v0, 0x8
 
     .line 133
     .line 134
-    .line 135
-    move-result v1
+    if-eq v1, v0, :cond_4
 
+    .line 135
     .line 136
-    const/16 v0, 0x8
+    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
     .line 137
     .line 138
-    if-eq v1, v0, :cond_4
-
     .line 139
+    move-result v0
+
     .line 140
-    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
+    if-eqz v0, :cond_4
 
     .line 141
     .line 142
-    .line 143
-    move-result v0
-
-    .line 144
-    if-eqz v0, :cond_4
-
-    .line 145
-    .line 146
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A08:Landroid/view/View;
 
-    .line 147
-    .line 148
+    .line 143
+    .line 144
     goto :goto_0
 
-    .line 149
+    .line 145
     :cond_4
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
-    .line 150
+    .line 146
     goto :goto_1
 .end method
 
@@ -1306,7 +1294,7 @@
     .line 50
     .line 51
     :cond_1
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 52
     .line 53
@@ -1349,7 +1337,7 @@
 
     .line 71
     .line 72
-    invoke-static {p0}, LX/4Qa;->A00(Landroidx/appcompat/widget/ActionBarContainer;)V
+    invoke-static {p0}, LX/4OR;->A00(Landroidx/appcompat/widget/ActionBarContainer;)V
 
     .line 73
     .line 74
@@ -1427,7 +1415,7 @@
     .line 19
     .line 20
     .line 21
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 22
     .line 23
@@ -1465,7 +1453,7 @@
     .line 39
     .line 40
     :cond_1
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 41
     .line 42
@@ -1508,7 +1496,7 @@
 
     .line 60
     .line 61
-    invoke-static {p0}, LX/4Qa;->A00(Landroidx/appcompat/widget/ActionBarContainer;)V
+    invoke-static {p0}, LX/4OR;->A00(Landroidx/appcompat/widget/ActionBarContainer;)V
 
     .line 62
     .line 63
@@ -1576,7 +1564,7 @@
     .line 18
     .line 19
     .line 20
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Z
 
     .line 21
     .line 22
@@ -1592,7 +1580,7 @@
 
     .line 27
     .line 28
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 29
     .line 30
@@ -1604,7 +1592,7 @@
     move-result v3
 
     .line 34
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 35
     .line 36
@@ -1616,7 +1604,7 @@
     move-result v2
 
     .line 40
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 41
     .line 42
@@ -1628,7 +1616,7 @@
     move-result v1
 
     .line 46
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 47
     .line 48
@@ -1646,7 +1634,7 @@
     .line 54
     .line 55
     :cond_1
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 56
     .line 57
@@ -1689,7 +1677,7 @@
 
     .line 75
     .line 76
-    invoke-static {p0}, LX/4Qa;->A00(Landroidx/appcompat/widget/ActionBarContainer;)V
+    invoke-static {p0}, LX/4OR;->A00(Landroidx/appcompat/widget/ActionBarContainer;)V
 
     .line 77
     .line 78
@@ -1721,11 +1709,11 @@
     goto :goto_1
 .end method
 
-.method public setTabContainer(LX/4Qb;)V
-    .locals 2
+.method public setTabContainer(LX/4LM;)V
+    .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 1
     .line 2
@@ -1739,7 +1727,7 @@
     .line 6
     .line 7
     :cond_0
-    iput-object p1, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Landroid/view/View;
+    iput-object p1, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Landroid/view/View;
 
     .line 8
     .line 9
@@ -1752,43 +1740,21 @@
     .line 12
     .line 13
     .line 14
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    const-string v0, "getLayoutParams"
 
     .line 15
     .line 16
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
     .line 17
-    move-result-object v1
-
     .line 18
-    const/4 v0, -0x1
-
     .line 19
-    iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 20
-    .line 21
-    const/4 v0, -0x2
-
-    .line 22
-    iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 23
-    .line 24
-    const-string v0, "setAllowCollapse"
-
-    .line 25
-    .line 26
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 27
-    .line 28
-    .line 29
     move-result-object v0
 
-    .line 30
+    .line 20
     throw v0
 
-    .line 31
+    .line 21
     :cond_1
     return-void
 .end method
@@ -1834,7 +1800,7 @@
     const/4 v2, 0x0
 
     .line 4
-    invoke-static {p1}, LX/001;->A1M(I)Z
+    invoke-static {p1}, LX/001;->A1L(I)Z
 
     .line 5
     .line 6
@@ -1933,7 +1899,7 @@
 
     .line 3
     .line 4
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 5
     .line 6
@@ -1950,7 +1916,7 @@
 
     .line 11
     .line 12
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A05:Z
 
     .line 13
     .line 14
@@ -1967,7 +1933,7 @@
 
     .line 19
     .line 20
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
 
     .line 21
     .line 22

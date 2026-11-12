@@ -1,42 +1,37 @@
 .class public final LX/51N;
-.super LX/51L;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final A00:LX/53I;
+
+.field public final A01:LX/54r;
+
+.field public final A02:Ljava/lang/String;
+
+
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(LX/53I;LX/54r;Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/51L;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput-object p3, p0, LX/51N;->A02:Ljava/lang/String;
 
-
-# virtual methods
-.method public final A00()Z
-    .locals 2
-
-    .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 1
-    .line 2
-    const/16 v0, 0x1d
-
-    .line 3
     .line 4
-    invoke-static {v1, v0}, LX/0Yf;->A1R(II)Z
-
     .line 5
+    iput-object p1, p0, LX/51N;->A00:LX/53I;
+
     .line 6
     .line 7
-    move-result v0
+    iput-object p2, p0, LX/51N;->A01:LX/54r;
 
     .line 8
-    return v0
+    .line 9
+    return-void
 .end method

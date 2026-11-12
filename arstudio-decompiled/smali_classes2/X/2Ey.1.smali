@@ -1,200 +1,370 @@
-.class public final LX/2Ey;
-.super LX/2EF;
+.class public final LX/2eY;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/0LF;
 
 
 # instance fields
-.field public final A00:Ljava/lang/String;
+.field public A00:LX/2in;
 
-.field public final A01:Ljava/lang/String;
+.field public final synthetic A01:LX/2oa;
 
 
 # direct methods
-.method public constructor <init>(LX/2EI;LX/2EC;)V
-    .locals 4
+.method public constructor <init>(LX/2oa;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/2EF;-><init>(LX/2EI;LX/2EC;)V
+    iput-object p1, p0, LX/2eY;->A01:LX/2oa;
 
     .line 1
     .line 2
-    .line 3
-    iget-object v0, p1, LX/2EI;->_class:Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v3
-
-    .line 9
-    const/16 v0, 0x2e
-
-    .line 10
-    .line 11
-    invoke-virtual {v3, v0}, Ljava/lang/String;->lastIndexOf(I)I
-
-    .line 12
-    .line 13
-    .line 14
-    move-result v2
-
-    .line 15
-    if-gez v2, :cond_0
-
-    .line 16
-    .line 17
-    const-string v0, ""
-
-    .line 18
-    .line 19
-    iput-object v0, p0, LX/2Ey;->A01:Ljava/lang/String;
-
-    .line 20
-    .line 21
-    const-string v0, "."
-
-    .line 22
-    .line 23
-    iput-object v0, p0, LX/2Ey;->A00:Ljava/lang/String;
-
-    .line 24
-    .line 25
-    return-void
-
-    .line 26
-    :cond_0
-    add-int/lit8 v0, v2, 0x1
-
-    .line 27
-    .line 28
-    const/4 v1, 0x0
-
-    .line 29
-    invoke-virtual {v3, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v0
-
-    .line 33
-    iput-object v0, p0, LX/2Ey;->A00:Ljava/lang/String;
-
-    .line 34
-    .line 35
-    invoke-virtual {v3, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    .line 36
-    .line 37
-    .line 38
-    move-result-object v0
-
-    .line 39
-    iput-object v0, p0, LX/2Ey;->A01:Ljava/lang/String;
-
-    .line 40
-    .line 41
     return-void
 .end method
 
 
 # virtual methods
-.method public final Aq6(Ljava/lang/String;)LX/2EI;
-    .locals 3
+.method public final declared-synchronized AcL()V
+    .locals 5
 
     .line 0
-    const-string v0, "."
+    monitor-enter p0
 
     .line 1
-    .line 2
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    const-wide/16 v3, 0x1000
 
+    .line 2
     .line 3
+    :try_start_0
+    invoke-static {v3, v4}, Lcom/facebook/systrace/Systrace;->A0C(J)Z
+
     .line 4
     .line 5
+    .line 6
     move-result v0
 
-    .line 6
-    if-eqz v0, :cond_0
-
     .line 7
-    .line 8
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    if-eqz v0, :cond_1
 
+    .line 8
     .line 9
+    invoke-virtual {p0}, LX/2eY;->AcM()V
+
     .line 10
     .line 11
-    move-result v1
-
     .line 12
-    iget-object v2, p0, LX/2Ey;->A01:Ljava/lang/String;
+    sget v0, LX/2I6;->AHo:I
 
     .line 13
     .line 14
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 15
     .line 16
     .line 17
-    move-result v0
+    move-result-object v2
 
     .line 18
-    add-int/2addr v1, v0
+    check-cast v2, LX/2in;
 
     .line 19
-    invoke-static {v1}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
     .line 20
+    iput-object v2, p0, LX/2eY;->A00:LX/2in;
+
     .line 21
     .line 22
-    move-result-object v1
+    if-eqz v2, :cond_1
 
     .line 23
-    if-nez v0, :cond_1
-
     .line 24
+    monitor-enter v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
     .line 25
-    const/4 v0, 0x1
+    :try_start_1
+    iget-boolean v0, v2, LX/2in;->A00:Z
 
     .line 26
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    .line 27
+    if-nez v0, :cond_0
+
+    .line 28
+    .line 29
+    invoke-static {v3, v4}, Lcom/facebook/systrace/Systrace;->A0C(J)Z
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v0
+
+    .line 33
+    if-eqz v0, :cond_0
+
+    .line 34
+    .line 35
+    const/4 v0, 0x0
+
+    .line 36
+    iput-boolean v0, v2, LX/2in;->A01:Z
+
+    .line 37
+    .line 38
+    move-object v0, v2
+
+    .line 39
+    check-cast v0, LX/2ec;
+
+    .line 40
+    .line 41
+    iget-object v1, v0, LX/2ec;->A01:LX/2eZ;
+
+    .line 42
+    .line 43
+    iget-object v0, v0, LX/2ec;->A00:LX/2n7;
+
+    .line 44
+    .line 45
+    invoke-virtual {v1, v0}, LX/2eZ;->A01(LX/2n7;)V
+
+    .line 46
+    .line 47
+    .line 48
+    const/4 v0, 0x1
+
+    .line 49
+    iput-boolean v0, v2, LX/2in;->A00:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 50
+    .line 51
+    :cond_0
+    :try_start_2
+    monitor-exit v2
+
+    .line 52
+    goto :goto_0
+
+    .line 53
+    :catchall_0
+    move-exception v0
+
+    .line 54
+    monitor-exit v2
+
+    .line 55
+    throw v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 56
+    :cond_1
+    :goto_0
+    monitor-exit p0
+
+    .line 57
+    return-void
+
+    .line 58
+    :catchall_1
+    move-exception v0
+
+    .line 59
+    monitor-exit p0
+
+    .line 60
+    throw v0
+.end method
+
+.method public final declared-synchronized AcM()V
+    .locals 4
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v3, p0, LX/2eY;->A00:LX/2in;
+
+    .line 2
+    .line 3
+    if-eqz v3, :cond_3
+
+    .line 4
+    .line 5
+    monitor-enter v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    .line 6
+    :try_start_1
+    iget-boolean v0, v3, LX/2in;->A00:Z
+
+    .line 7
+    .line 8
+    if-eqz v0, :cond_2
+
+    .line 9
+    .line 10
+    iget-boolean v0, v3, LX/2in;->A01:Z
+
+    .line 11
+    .line 12
+    if-eqz v0, :cond_0
+
+    .line 13
+    .line 14
+    const-wide/16 v0, 0x1000
+
+    .line 15
+    .line 16
+    invoke-static {v0, v1}, Lcom/facebook/systrace/Systrace;->A01(J)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_0
+    move-object v0, v3
+
+    .line 20
+    check-cast v0, LX/2ec;
+
+    .line 21
+    .line 22
+    iget-object v2, v0, LX/2ec;->A01:LX/2eZ;
+
+    .line 23
+    .line 24
+    iget-object v0, v0, LX/2ec;->A00:LX/2n7;
+
+    .line 25
+    .line 26
+    if-eqz v0, :cond_1
 
     .line 27
     .line 28
-    .line 29
-    move-result-object p1
+    iget-object v1, v2, LX/2eZ;->A03:Ljava/util/List;
 
+    .line 29
     .line 30
-    :goto_0
-    invoke-static {p1, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    monitor-enter v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 31
+    :try_start_2
+    invoke-interface {v1, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
     .line 32
     .line 33
-    move-result-object p1
-
     .line 34
-    :cond_0
-    invoke-super {p0, p1}, LX/2EF;->Aq6(Ljava/lang/String;)LX/2EI;
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     .line 35
     .line 36
     .line 37
-    move-result-object v0
+    move-result v0
 
     .line 38
-    return-object v0
+    monitor-exit v1
 
     .line 39
-    :cond_1
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
     .line 40
     .line 41
-    .line 42
     goto :goto_0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 42
+    :catchall_0
+    move-exception v0
+
+    .line 43
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 44
+    :try_start_4
+    throw v0
+
+    .line 45
+    :goto_0
+    iget-object v1, v2, LX/2eZ;->A00:Landroid/os/Handler;
+
+    .line 46
+    .line 47
+    iget-object v0, v2, LX/2eZ;->A02:Ljava/lang/Runnable;
+
+    .line 48
+    .line 49
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 50
+    .line 51
+    .line 52
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 53
+    iput-boolean v0, v3, LX/2in;->A00:Z
+
+    .line 54
+    .line 55
+    goto :goto_1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    .line 56
+    :catchall_1
+    :try_start_5
+    move-exception v0
+
+    .line 57
+    monitor-exit v3
+
+    .line 58
+    throw v0
+
+    .line 59
+    :cond_2
+    :goto_1
+    monitor-exit v3
+
+    .line 60
+    :cond_3
+    const/4 v0, 0x0
+
+    .line 61
+    iput-object v0, p0, LX/2eY;->A00:LX/2in;
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    .line 62
+    .line 63
+    monitor-exit p0
+
+    .line 64
+    return-void
+
+    .line 65
+    :catchall_2
+    move-exception v0
+
+    .line 66
+    monitor-exit p0
+
+    .line 67
+    throw v0
 .end method

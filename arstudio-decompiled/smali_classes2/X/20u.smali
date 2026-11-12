@@ -1,162 +1,303 @@
-.class public final LX/20u;
+.class public abstract LX/20u;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/20r;
-
-
-# instance fields
-.field public final A00:D
-
-.field public final A01:D
-
-.field public final A02:I
-
-.field public final A03:LX/20s;
-
-.field public final A04:LX/20r;
-
 
 # direct methods
-.method public constructor <init>(LX/20s;LX/20r;DDI)V
-    .locals 0
+.method public static A00(I)Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "initialArraySize"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string/jumbo v0, "initialArraySize"
 
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/20u;->A04:LX/20r;
+    invoke-static {p0, v0}, LX/1rB;->A00(ILjava/lang/String;)V
 
     .line 4
     .line 5
-    iput-wide p3, p0, LX/20u;->A00:D
-
     .line 6
-    .line 7
-    iput-wide p5, p0, LX/20u;->A01:D
+    invoke-static {p0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
+    .line 7
     .line 8
     .line 9
-    iput p7, p0, LX/20u;->A02:I
+    move-result-object v0
 
     .line 10
-    .line 11
-    iput-object p1, p0, LX/20u;->A03:LX/20s;
-
-    .line 12
-    .line 13
-    return-void
+    return-object v0
 .end method
 
-
-# virtual methods
-.method public final ANN(LX/2vL;)D
-    .locals 10
+.method public static A01(Ljava/lang/Iterable;)Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
     .line 0
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
+    instance-of v0, p0, Ljava/util/Collection;
+
     .line 4
-    iget-object v0, p0, LX/20u;->A04:LX/20r;
-
     .line 5
-    .line 6
-    invoke-interface {v0, p1}, LX/20r;->ANN(LX/2vL;)D
+    if-eqz v0, :cond_0
 
+    .line 6
     .line 7
+    check-cast p0, Ljava/util/Collection;
+
     .line 8
     .line 9
-    move-result-wide v4
+    invoke-static {p0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 10
-    iget-wide v0, p0, LX/20u;->A00:D
-
     .line 11
     .line 12
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    move-result-object v0
 
     .line 13
+    return-object v0
+
     .line 14
-    sub-double v6, v2, v0
+    :cond_0
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 15
     .line 16
-    const-wide/16 v0, 0x0
-
     .line 17
+    move-result-object p0
+
     .line 18
-    invoke-static {v0, v1, v6, v7}, Ljava/lang/Math;->max(DD)D
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 19
     .line 20
     .line 21
-    move-result-wide v8
+    move-result-object v0
 
     .line 22
-    iget-wide v6, p0, LX/20u;->A01:D
+    invoke-static {v0, p0}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
 
     .line 23
     .line 24
-    iget v0, p0, LX/20u;->A02:I
+    .line 25
+    return-object v0
+.end method
+
+.method public static varargs A02([Ljava/lang/Object;)Ljava/util/ArrayList;
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1
+    .line 2
+    .line 3
+    array-length v4, p0
+
+    .line 4
+    int-to-long v2, v4
+
+    .line 5
+    const-wide/16 v0, 0x5
+
+    .line 6
+    .line 7
+    add-long/2addr v2, v0
+
+    .line 8
+    div-int/lit8 v0, v4, 0xa
+
+    .line 9
+    .line 10
+    int-to-long v0, v0
+
+    .line 11
+    add-long/2addr v2, v0
+
+    .line 12
+    invoke-static {v2, v3}, LX/212;->A00(J)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    invoke-static {v0, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    .line 21
+    .line 22
+    .line 23
+    return-object v0
+.end method
+
+.method public static A03(Lcom/google/common/base/Function;Ljava/util/List;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "fromList",
+            "function"
+        }
+    .end annotation
+
+    .line 0
+    instance-of v0, p1, Ljava/util/RandomAccess;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    new-instance v0, Lcom/google/common/collect/Lists$TransformingRandomAccessList;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Lists$TransformingRandomAccessList;-><init>(Lcom/google/common/base/Function;Ljava/util/List;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-object v0
+
+    .line 10
+    :cond_0
+    new-instance v0, Lcom/google/common/collect/Lists$TransformingSequentialList;
+
+    .line 11
+    .line 12
+    invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Lists$TransformingSequentialList;-><init>(Lcom/google/common/base/Function;Ljava/util/List;)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-object v0
+.end method
+
+.method public static A04(Ljava/util/List;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "list"
+        }
+    .end annotation
+
+    .line 0
+    instance-of v0, p0, Lcom/google/common/collect/ImmutableList;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    check-cast p0, Lcom/google/common/collect/ImmutableList;
+
+    .line 5
+    .line 6
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->reverse()Lcom/google/common/collect/ImmutableList;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+
+    .line 11
+    :cond_0
+    instance-of v0, p0, LX/20w;
+
+    .line 12
+    .line 13
+    if-eqz v0, :cond_1
+
+    .line 14
+    .line 15
+    check-cast p0, LX/20w;
+
+    .line 16
+    .line 17
+    iget-object v0, p0, LX/20w;->A00:Ljava/util/List;
+
+    .line 18
+    .line 19
+    return-object v0
+
+    .line 20
+    :cond_1
+    instance-of v0, p0, Ljava/util/RandomAccess;
+
+    .line 21
+    .line 22
+    if-eqz v0, :cond_2
+
+    .line 23
+    .line 24
+    new-instance v0, LX/20v;
 
     .line 25
     .line 26
-    int-to-float v0, v0
+    invoke-direct {v0, p0}, LX/20v;-><init>(Ljava/util/List;)V
 
     .line 27
-    float-to-double v0, v0
-
     .line 28
-    mul-double/2addr v6, v0
-
     .line 29
-    iget-object v0, p0, LX/20u;->A03:LX/20s;
+    return-object v0
 
     .line 30
-    .line 31
-    invoke-interface {v0}, LX/20s;->get()Ljava/lang/Object;
+    :cond_2
+    new-instance v0, LX/20w;
 
+    .line 31
     .line 32
+    invoke-direct {v0, p0}, LX/20w;-><init>(Ljava/util/List;)V
+
     .line 33
     .line 34
-    move-result-object v0
-
     .line 35
-    check-cast v0, LX/37W;
-
-    .line 36
-    .line 37
-    iget v0, v0, LX/37W;->A02:I
-
-    .line 38
-    .line 39
-    int-to-double v0, v0
-
-    .line 40
-    div-double/2addr v6, v0
-
-    .line 41
-    add-double/2addr v4, v8
-
-    .line 42
-    add-double/2addr v4, v6
-
-    .line 43
-    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(DD)D
-
-    .line 44
-    .line 45
-    .line 46
-    move-result-wide v0
-
-    .line 47
-    return-wide v0
+    return-object v0
 .end method

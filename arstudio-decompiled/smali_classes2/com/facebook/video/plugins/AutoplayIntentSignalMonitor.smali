@@ -13,11 +13,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A6G:I
+    sget v0, LX/2I6;->A2k:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 6
     .line 7

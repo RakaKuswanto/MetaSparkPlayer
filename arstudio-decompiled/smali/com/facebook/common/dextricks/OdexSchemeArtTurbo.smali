@@ -167,7 +167,7 @@
 
     .line 34
     .line 35
-    invoke-static {v0, v2}, LX/00I;->A06(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0, v2}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 36
     .line 37
@@ -194,7 +194,7 @@
     move-result-object v0
 
     .line 6
-    invoke-static {v1, v0, p0}, LX/00I;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
+    invoke-static {v1, v0, p0}, LX/004;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     .line 7
     .line 8
@@ -224,7 +224,7 @@
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 22
     .line 23
@@ -232,7 +232,7 @@
     move-result-object v0
 
     .line 25
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 26
     .line 27
@@ -262,7 +262,7 @@
     .line 5
     .line 6
     :cond_0
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 7
     .line 8
@@ -418,7 +418,7 @@
 
 
 # virtual methods
-.method public configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+.method public configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
     .locals 7
 
     .line 0
@@ -503,7 +503,7 @@
     move-result-object v1
 
     .line 37
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 38
     .line 39
@@ -511,7 +511,7 @@
     move-result-object v0
 
     .line 41
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 42
     .line 43
@@ -611,7 +611,7 @@
 
     .line 85
     .line 86
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 87
     .line 88
@@ -619,7 +619,7 @@
     move-result-object v0
 
     .line 90
-    invoke-virtual {p2, v0, v5}, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->addDex(Ljava/io/File;Z)V
+    invoke-virtual {p2, v0, v5}, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->addDex(Ljava/io/File;Z)V
 
     .line 91
     .line 92

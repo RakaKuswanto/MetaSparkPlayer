@@ -33,11 +33,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1c
+    const/16 v0, 0x8
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -61,7 +61,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -81,7 +81,7 @@
 
     .line 12
     .line 13
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 14
     .line 15
@@ -214,7 +214,7 @@
 
     .line 25
     .line 26
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 27
     .line 28
@@ -250,38 +250,45 @@
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 7
     .line 8
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 9
-    move-result v1
-
     .line 10
-    iget-object v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoData;->A01:Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;
-
     .line 11
-    .line 12
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 13
-    .line 14
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 15
-    .line 16
-    .line 17
     move-result v0
 
-    .line 18
+    .line 12
     add-int/2addr v1, v0
 
+    .line 13
+    iget-object v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoData;->A01:Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;
+
+    .line 14
+    .line 15
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 16
+    .line 17
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 18
     .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    add-int/2addr v1, v0
+
+    .line 22
     return v1
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    .locals 1
 
     .line 0
     iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoData;->A00:I
@@ -302,38 +309,14 @@
     .line 8
     .line 9
     .line 10
-    iget-object v1, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoData;->A01:Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;
+    iget-object v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoData;->A01:Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;
 
     .line 11
     .line 12
-    if-nez v1, :cond_0
+    invoke-static {p1, v0, p2}, LX/0X1;->A0X(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 13
     .line 14
-    const/4 v0, 0x0
-
     .line 15
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 16
-    .line 17
-    .line 18
-    return-void
-
-    .line 19
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 20
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 21
-    .line 22
-    .line 23
-    invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    .line 24
-    .line 25
-    .line 26
     return-void
 .end method

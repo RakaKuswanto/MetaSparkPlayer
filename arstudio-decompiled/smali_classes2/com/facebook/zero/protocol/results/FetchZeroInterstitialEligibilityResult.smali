@@ -50,11 +50,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0xa
+    const/16 v0, 0x55
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -248,7 +248,7 @@
 
     .line 34
     .line 35
-    invoke-static {v0, v1}, LX/0Ye;->A1X(ILjava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/0X2;->A1Q(ILjava/lang/Object;)Z
 
     .line 36
     .line 37
@@ -276,7 +276,7 @@
 
     .line 48
     .line 49
-    invoke-static {v0, v1}, LX/0Ye;->A1X(ILjava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/0X2;->A1Q(ILjava/lang/Object;)Z
 
     .line 50
     .line 51
@@ -299,7 +299,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -333,7 +333,7 @@
 
     .line 15
     .line 16
-    invoke-static {v2, v0}, LX/0Yd;->A1S([Ljava/lang/Object;I)V
+    invoke-static {v2, v0}, LX/0X2;->A1M([Ljava/lang/Object;I)V
 
     .line 17
     .line 18
@@ -365,64 +365,66 @@
 
     .line 5
     .line 6
-    const-string v0, "campaignId"
+    const-string/jumbo v0, "campaignId"
 
     .line 7
     .line 8
+    .line 9
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 9
     .line 10
     .line 11
+    .line 12
     iget-object v1, p0, Lcom/facebook/zero/protocol/results/FetchZeroInterstitialEligibilityResult;->mType:Ljava/lang/String;
 
-    .line 12
     .line 13
+    .line 14
     const-string/jumbo v0, "type"
 
-    .line 14
     .line 15
     .line 16
+    .line 17
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     iget v1, p0, Lcom/facebook/zero/protocol/results/FetchZeroInterstitialEligibilityResult;->mTtl:I
 
-    .line 20
     .line 21
+    .line 22
     const-string/jumbo v0, "ttl"
 
-    .line 22
     .line 23
     .line 24
+    .line 25
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 25
     .line 26
     .line 27
+    .line 28
     iget v1, p0, Lcom/facebook/zero/protocol/results/FetchZeroInterstitialEligibilityResult;->mDelayInterval:I
 
-    .line 28
     .line 29
-    const-string v0, "delayInterval"
-
     .line 30
-    .line 31
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "delayInterval"
 
+    .line 31
     .line 32
     .line 33
-    .line 34
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 34
     .line 35
     .line 36
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
     .line 37
+    .line 38
+    .line 39
     move-result-object v0
 
-    .line 38
+    .line 40
     return-object v0
 .end method
 

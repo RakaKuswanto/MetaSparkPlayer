@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public final AhP(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)Lcom/facebook/push/fbns/ipc/FbnsAIDLResult;
+.method public final Afj(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)Lcom/facebook/push/fbns/ipc/FbnsAIDLResult;
     .locals 5
 
     .line 0
@@ -87,7 +87,7 @@
     .line 23
     .line 24
     .line 25
-    invoke-virtual {p1, v4, v2}, Lcom/facebook/push/fbns/ipc/FbnsAIDLResult;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-interface {p1, v4, v2}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 26
     .line 27
@@ -182,7 +182,7 @@
     throw v0
 .end method
 
-.method public final AqM(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)V
+.method public final ApB(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)V
     .locals 5
 
     .line 0
@@ -211,66 +211,70 @@
 
     .line 11
     .line 12
-    const/4 v0, 0x1
+    goto :goto_0
 
     .line 13
-    invoke-virtual {v4, v0}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_0
+    invoke-virtual {v4, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 14
     .line 15
     .line 16
-    invoke-virtual {p1, v4, v1}, Lcom/facebook/push/fbns/ipc/FbnsAIDLResult;->writeToParcel(Landroid/os/Parcel;I)V
+    goto :goto_1
 
     .line 17
-    .line 18
-    .line 19
-    goto :goto_0
-
-    .line 20
-    :cond_0
-    invoke-virtual {v4, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 21
-    .line 22
-    .line 23
     :goto_0
-    iget-object v3, p0, Lcom/facebook/push/fbns/ipc/IFbnsAIDLService$Stub$Proxy;->A00:Landroid/os/IBinder;
-
-    .line 24
-    .line 25
-    const/4 v2, 0x2
-
-    .line 26
-    const/4 v1, 0x0
-
-    .line 27
     const/4 v0, 0x1
 
+    .line 18
+    invoke-virtual {v4, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-interface {p1, v4, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+
+    .line 22
+    .line 23
+    .line 24
+    :goto_1
+    iget-object v3, p0, Lcom/facebook/push/fbns/ipc/IFbnsAIDLService$Stub$Proxy;->A00:Landroid/os/IBinder;
+
+    .line 25
+    .line 26
+    const/4 v2, 0x2
+
+    .line 27
+    const/4 v1, 0x0
+
     .line 28
+    const/4 v0, 0x1
+
+    .line 29
     invoke-interface {v3, v2, v4, v1, v0}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 29
     .line 30
     .line 31
+    .line 32
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 32
     .line 33
     .line 34
+    .line 35
     return-void
 
-    .line 35
+    .line 36
     :catchall_0
     move-exception v0
 
-    .line 36
+    .line 37
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 37
     .line 38
     .line 39
+    .line 40
     throw v0
 .end method
 

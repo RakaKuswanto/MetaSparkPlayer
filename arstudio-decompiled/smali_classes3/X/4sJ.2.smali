@@ -3,33 +3,36 @@
 .source ""
 
 
-# instance fields
-.field public A00:J
+# static fields
+.field public static A00:LX/4rH;
 
-.field public A01:J
+.field public static A01:Ljava/lang/Object;
 
-.field public A02:J
-
-.field public A03:J
-
-.field public A04:J
-
-.field public A05:J
-
-.field public A06:J
-
-.field public A07:J
-
-.field public A08:J
-
-.field public A09:J
-
-.field public A0A:J
+.field public static A02:Ljava/lang/Boolean;
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    sput-object v0, LX/4sJ;->A01:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
 .method public constructor <init>()V
-    .locals 2
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,53 +40,105 @@
     .line 1
     .line 2
     .line 3
-    const-wide/16 v0, 0x0
+    return-void
+.end method
+
+.method public static A00(Landroid/content/Context;)Z
+    .locals 4
+
+    .line 0
+    invoke-static {p0}, LX/4va;->A03(Ljava/lang/Object;)V
+
+    .line 1
+    .line 2
+    .line 3
+    sget-object v0, LX/4sJ;->A02:Ljava/lang/Boolean;
 
     .line 4
     .line 5
-    iput-wide v0, p0, LX/4sJ;->A00:J
+    if-eqz v0, :cond_0
 
     .line 6
     .line 7
-    iput-wide v0, p0, LX/4sJ;->A05:J
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 8
     .line 9
-    iput-wide v0, p0, LX/4sJ;->A04:J
-
     .line 10
+    move-result v1
+
     .line 11
-    iput-wide v0, p0, LX/4sJ;->A01:J
+    return v1
 
     .line 12
-    .line 13
-    iput-wide v0, p0, LX/4sJ;->A02:J
+    :cond_0
+    const-string v3, "com.google.android.gms.analytics.AnalyticsReceiver"
 
+    .line 13
     .line 14
+    const/4 v2, 0x0
+
     .line 15
-    iput-wide v0, p0, LX/4sJ;->A03:J
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     .line 16
     .line 17
-    iput-wide v0, p0, LX/4sJ;->A06:J
-
     .line 18
+    move-result-object v1
+
     .line 19
-    iput-wide v0, p0, LX/4sJ;->A0A:J
+    new-instance v0, Landroid/content/ComponentName;
 
     .line 20
     .line 21
-    iput-wide v0, p0, LX/4sJ;->A09:J
+    invoke-direct {v0, p0, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 22
     .line 23
-    iput-wide v0, p0, LX/4sJ;->A07:J
-
     .line 24
-    .line 25
-    iput-wide v0, p0, LX/4sJ;->A08:J
+    invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->getReceiverInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
 
+    .line 25
     .line 26
     .line 27
-    return-void
+    move-result-object v0
+
+    .line 28
+    if-eqz v0, :cond_1
+
+    .line 29
+    .line 30
+    iget-boolean v0, v0, Landroid/content/pm/ComponentInfo;->enabled:Z
+
+    .line 31
+    .line 32
+    const/4 v1, 0x1
+
+    .line 33
+    if-nez v0, :cond_2
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 34
+    .line 35
+    :catch_0
+    :cond_1
+    const/4 v1, 0x0
+
+    .line 36
+    :cond_2
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    sput-object v0, LX/4sJ;->A02:Ljava/lang/Boolean;
+
+    .line 41
+    .line 42
+    return v1
 .end method

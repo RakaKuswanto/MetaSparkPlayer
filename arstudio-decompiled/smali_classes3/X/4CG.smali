@@ -1,145 +1,194 @@
 .class public final LX/4CG;
-.super LX/4CJ;
+.super LX/00m;
 .source ""
 
 
+# static fields
+.field public static final A02:Ljava/util/concurrent/Executor;
+
+.field public static volatile A03:LX/4CG;
+
+
 # instance fields
-.field public final synthetic A00:Landroid/os/Bundle;
+.field public A00:LX/00m;
 
-.field public final synthetic A01:LX/4CF;
-
-.field public final synthetic A02:Lcom/facebook/iabeventlogging/model/IABEvent;
-
-.field public final synthetic A03:Lcom/facebook/privacy/zone/policy/ZonePolicy;
+.field public final A01:LX/00m;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;LX/4CF;Lcom/facebook/iabeventlogging/model/IABEvent;Lcom/facebook/privacy/zone/policy/ZonePolicy;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    iput-object p2, p0, LX/4CG;->A01:LX/4CF;
+    const/4 v1, 0x0
 
     .line 1
+    new-instance v0, LX/6gW;
+
     .line 2
-    iput-object p3, p0, LX/4CG;->A02:Lcom/facebook/iabeventlogging/model/IABEvent;
-
     .line 3
-    .line 4
-    iput-object p1, p0, LX/4CG;->A00:Landroid/os/Bundle;
+    invoke-direct {v0, v1}, LX/6gW;-><init>(I)V
 
+    .line 4
     .line 5
     .line 6
-    iput-object p4, p0, LX/4CG;->A03:Lcom/facebook/privacy/zone/policy/ZonePolicy;
+    sput-object v0, LX/4CG;->A02:Ljava/util/concurrent/Executor;
 
     .line 7
     .line 8
-    invoke-direct {p0, p2}, LX/4CJ;-><init>(LX/4CF;)V
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/00m;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    new-instance v0, LX/4CD;
+
+    .line 4
+    .line 5
+    invoke-direct {v0}, LX/4CD;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    iput-object v0, p0, LX/4CG;->A01:LX/00m;
 
     .line 9
     .line 10
+    iput-object v0, p0, LX/4CG;->A00:LX/00m;
+
     .line 11
+    .line 12
     return-void
+.end method
+
+.method public static A00()LX/4CG;
+    .locals 2
+
+    .line 0
+    sget-object v0, LX/4CG;->A03:LX/4CG;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
+    .line 4
+    const-class v1, LX/4CG;
+
+    .line 5
+    .line 6
+    monitor-enter v1
+
+    .line 7
+    :try_start_0
+    sget-object v0, LX/4CG;->A03:LX/4CG;
+
+    .line 8
+    .line 9
+    if-nez v0, :cond_0
+
+    .line 10
+    .line 11
+    new-instance v0, LX/4CG;
+
+    .line 12
+    .line 13
+    invoke-direct {v0}, LX/4CG;-><init>()V
+
+    .line 14
+    .line 15
+    .line 16
+    sput-object v0, LX/4CG;->A03:LX/4CG;
+
+    .line 17
+    .line 18
+    :cond_0
+    monitor-exit v1
+
+    .line 19
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 20
+    :catchall_0
+    move-exception v0
+
+    .line 21
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 22
+    throw v0
+
+    .line 23
+    :cond_1
+    :goto_0
+    sget-object v0, LX/4CG;->A03:LX/4CG;
+
+    .line 24
+    .line 25
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final A00(Lcom/facebook/browser/lite/ipc/BrowserLiteCallback$Stub$Proxy;)V
-    .locals 5
+.method public final A01(Ljava/lang/Runnable;)V
+    .locals 1
 
     .line 0
-    iget-object v2, p0, LX/4CG;->A02:Lcom/facebook/iabeventlogging/model/IABEvent;
+    iget-object v0, p0, LX/4CG;->A00:LX/00m;
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/4CG;->A00:Landroid/os/Bundle;
+    invoke-virtual {v0, p1}, LX/00m;->A01(Ljava/lang/Runnable;)V
 
     .line 3
     .line 4
-    iget-object v0, p0, LX/4CG;->A03:Lcom/facebook/privacy/zone/policy/ZonePolicy;
-
     .line 5
-    .line 6
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v4
-
-    .line 10
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v3
-
-    .line 14
-    :try_start_0
-    invoke-static {v4, v2}, LX/6M3;->A01(Landroid/os/Parcel;Landroid/os/Parcelable;)Z
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v2
-
-    .line 18
-    invoke-static {v4, v1}, LX/6M3;->A00(Landroid/os/Parcel;Landroid/os/Parcelable;)V
-
-    .line 19
-    .line 20
-    .line 21
-    invoke-static {v4, v0}, LX/6M3;->A00(Landroid/os/Parcel;Landroid/os/Parcelable;)V
-
-    .line 22
-    .line 23
-    .line 24
-    iget-object v1, p1, Lcom/facebook/browser/lite/ipc/BrowserLiteCallback$Stub$Proxy;->A00:Landroid/os/IBinder;
-
-    .line 25
-    .line 26
-    const/4 v0, 0x4
-
-    .line 27
-    invoke-interface {v1, v0, v4, v3, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 28
-    .line 29
-    .line 30
-    invoke-virtual {v3}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 31
-    .line 32
-    .line 33
-    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
-
-    .line 34
-    .line 35
-    .line 36
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 37
-    .line 38
-    .line 39
     return-void
+.end method
 
-    .line 40
-    :catchall_0
-    move-exception v0
+.method public final A02(Ljava/lang/Runnable;)V
+    .locals 1
 
-    .line 41
-    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
+    .line 0
+    iget-object v0, p0, LX/4CG;->A00:LX/00m;
 
-    .line 42
-    .line 43
-    .line 44
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/00m;->A02(Ljava/lang/Runnable;)V
 
-    .line 45
-    .line 46
-    .line 47
-    throw v0
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final A03()Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4CG;->A00:LX/00m;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, LX/00m;->A03()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
 .end method

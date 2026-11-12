@@ -77,7 +77,7 @@
     move-result-object v0
 
     .line 19
-    invoke-interface {p0, v0}, Lcom/facebook/browser/lite/ipc/AutofillContactDataCallback;->AVe(Ljava/util/List;)V
+    invoke-interface {p0, v0}, Lcom/facebook/browser/lite/ipc/AutofillContactDataCallback;->ATz(Ljava/util/List;)V
 
     .line 20
     .line 21

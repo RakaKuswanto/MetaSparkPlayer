@@ -4,13 +4,9 @@
 
 
 # static fields
-.field public static final LOAD_RESULT_CREATED_BY_OATMEAL:I = 0x80
-
 .field public static final LOAD_RESULT_DEX2OAT_CLASSPATH_SET:I = 0x4000
 
 .field public static final LOAD_RESULT_DEX2OAT_QUICKENED:I = 0x200
-
-.field public static final LOAD_RESULT_DEX2OAT_QUICKEN_ATTEMPTED:I = 0x1000
 
 .field public static final LOAD_RESULT_DEX2OAT_TRY_PERIODIC_PGO_COMP:I = 0x20000
 
@@ -25,10 +21,6 @@
 .field public static final LOAD_RESULT_NEED_REOPTIMIZATION:I = 0x100000
 
 .field public static final LOAD_RESULT_NOT_OPTIMIZED:I = 0x8
-
-.field public static final LOAD_RESULT_OATMEAL_QUICKENED:I = 0x100
-
-.field public static final LOAD_RESULT_OATMEAL_QUICKEN_ATTEMPTED:I = 0x800
 
 .field public static final LOAD_RESULT_OPTIMIZATION_IS_CRAZY_EXPENSIVE:I = 0x4
 

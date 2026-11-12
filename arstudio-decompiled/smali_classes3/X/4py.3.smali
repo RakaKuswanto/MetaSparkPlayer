@@ -1,45 +1,75 @@
 .class public final LX/4py;
-.super Ljava/lang/Object;
+.super LX/4q5;
 .source ""
 
-# interfaces
-.implements LX/4rV;
+
+# instance fields
+.field public final synthetic A00:Landroidx/transition/FragmentTransitionSupport;
+
+.field public final synthetic A01:Ljava/lang/Object;
+
+.field public final synthetic A02:Ljava/lang/Object;
+
+.field public final synthetic A03:Ljava/lang/Object;
+
+.field public final synthetic A04:Ljava/util/ArrayList;
+
+.field public final synthetic A05:Ljava/util/ArrayList;
+
+.field public final synthetic A06:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroidx/transition/FragmentTransitionSupport;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/4py;->A00:Landroidx/transition/FragmentTransitionSupport;
 
     .line 1
     .line 2
+    iput-object p2, p0, LX/4py;->A01:Ljava/lang/Object;
+
     .line 3
+    .line 4
+    iput-object p5, p0, LX/4py;->A04:Ljava/util/ArrayList;
+
+    .line 5
+    .line 6
+    iput-object p3, p0, LX/4py;->A02:Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    iput-object p6, p0, LX/4py;->A05:Ljava/util/ArrayList;
+
+    .line 9
+    .line 10
+    iput-object p4, p0, LX/4py;->A03:Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    iput-object p7, p0, LX/4py;->A06:Ljava/util/ArrayList;
+
+    .line 13
+    .line 14
+    invoke-direct {p0}, LX/4q5;-><init>()V
+
+    .line 15
+    .line 16
+    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic AQG(Ljava/lang/Object;)Z
-    .locals 1
+.method public final Aca(LX/4pn;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    invoke-virtual {p1, p0}, LX/4pn;->A0C(LX/4q0;)LX/4pn;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
-    .line 4
-    invoke-static {p0, p1}, LX/6Kh;->A03(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
+    return-void
 .end method

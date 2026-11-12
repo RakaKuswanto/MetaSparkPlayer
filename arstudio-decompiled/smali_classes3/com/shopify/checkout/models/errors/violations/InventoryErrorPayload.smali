@@ -3,11 +3,6 @@
 .source ""
 
 
-# annotations
-.annotation runtime Lkotlinx/serialization/Serializable;
-.end annotation
-
-
 # static fields
 .field public static final Companion:Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload$Companion;
 
@@ -61,56 +56,61 @@
 
     .line 5
     .line 6
-    sget-object v0, LX/6Cd;->A01:LX/2KY;
+    sget-object v0, LX/5j1;->A01:LX/3iV;
 
     .line 7
     .line 8
-    invoke-static {v0, p6, v1}, LX/2KP;->A00(LX/2Kr;II)V
+    invoke-static {v0, p6, v1}, LX/5cB;->A00(LX/6Xn;II)V
 
     .line 9
     .line 10
     .line 11
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
     throw v0
 
-    .line 13
+    .line 16
     :cond_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
-    .line 15
-    .line 16
-    iput-object p4, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A03:Ljava/lang/String;
-
     .line 17
     .line 18
+    .line 19
+    iput-object p4, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A03:Ljava/lang/String;
+
+    .line 20
+    .line 21
     iput-object p2, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A01:Lcom/shopify/checkout/models/errors/violations/InventoryErrorCode;
 
-    .line 19
-    .line 20
+    .line 22
+    .line 23
     and-int/lit8 v0, p6, 0x4
 
-    .line 21
-    .line 22
+    .line 24
+    .line 25
     if-eqz v0, :cond_1
 
-    .line 23
-    .line 24
+    .line 26
+    .line 27
     iput-object p5, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A04:Ljava/lang/String;
 
-    .line 25
-    .line 26
+    .line 28
+    .line 29
     :cond_1
     iput-object p1, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
 
-    .line 27
-    .line 28
+    .line 30
+    .line 31
     iput-object p3, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A02:Lcom/shopify/checkout/models/errors/violations/ViolationErrorType;
 
-    .line 29
-    .line 30
+    .line 32
+    .line 33
     return-void
 .end method
 
@@ -135,7 +135,7 @@
 
     iget-object v0, p1, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A03:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -151,7 +151,7 @@
 
     iget-object v0, p1, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A04:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -184,7 +184,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A06(Ljava/lang/String;)I
+    invoke-static {v0}, LX/433;->A0D(Ljava/lang/String;)I
 
     .line 3
     .line 4
@@ -196,7 +196,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 9
     .line 10
@@ -208,7 +208,7 @@
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 15
     .line 16
@@ -227,7 +227,7 @@
 
     .line 22
     .line 23
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 24
     .line 25
@@ -239,7 +239,7 @@
 
     .line 28
     .line 29
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
 
     .line 30
     .line 31
@@ -254,7 +254,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/4BE;->A0u()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -262,25 +262,25 @@
     move-result-object v1
 
     .line 4
-    iget-object v0, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
+    const-string v0, "\n            Group: "
 
     .line 5
     .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
     .line 9
-    const-string v0, "\n            Reason: "
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A00:Lcom/shopify/checkout/models/errors/ErrorGroup;
 
     .line 10
     .line 11
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 12
     .line 13
     .line 14
-    iget-object v0, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A04:Ljava/lang/String;
+    const-string v0, "\n            Reason: "
 
     .line 15
     .line 16
@@ -289,7 +289,7 @@
     .line 17
     .line 18
     .line 19
-    const-string v0, "\n            Code: "
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A04:Ljava/lang/String;
 
     .line 20
     .line 21
@@ -298,26 +298,35 @@
     .line 22
     .line 23
     .line 24
-    iget-object v0, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A01:Lcom/shopify/checkout/models/errors/violations/InventoryErrorCode;
+    const-string v0, "\n            Code: "
 
     .line 25
     .line 26
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 27
     .line 28
     .line 29
-    const-string v0, "\n        "
+    iget-object v0, p0, Lcom/shopify/checkout/models/errors/violations/InventoryErrorPayload;->A01:Lcom/shopify/checkout/models/errors/violations/InventoryErrorCode;
 
     .line 30
     .line 31
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 32
     .line 33
     .line 34
-    move-result-object v0
+    const-string v0, "\n        "
 
     .line 35
+    .line 36
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
     return-object v0
 .end method

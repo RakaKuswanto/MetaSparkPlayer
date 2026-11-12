@@ -1,144 +1,67 @@
-.class public abstract LX/0Qk;
-.super Ljava/lang/ref/PhantomReference;
+.class public final LX/0QK;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public next:LX/0Qk;
+.field public final A00:I
 
-.field public previous:LX/0Qk;
+.field public final A01:I
+
+.field public final A02:I
+
+.field public final A03:J
+
+.field public final A04:Ljava/lang/Object;
+
+.field public final A05:Ljava/lang/Object;
+
+.field public final A06:Ljava/lang/String;
+
+.field public final A07:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 536870912
-    sget-object v1, LX/0Qn;->A02:Ljava/lang/ref/ReferenceQueue;
-
-    .line 536870913
-    .line 536870914
-    const/4 v0, 0x0
-
-    .line 536870915
-    invoke-direct {p0, v0, v1}, Ljava/lang/ref/PhantomReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
-
-    .line 536870916
-    .line 536870917
-    .line 536870918
-    return-void
-.end method
-
-.method public synthetic constructor <init>(LX/0Qj;)V
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;Ljava/util/concurrent/TimeUnit;IIIJ)V
     .locals 0
 
-    .line 268435456
-    invoke-direct {p0}, LX/0Qk;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 3
-
     .line 0
-    sget-object v0, LX/0Qn;->A02:Ljava/lang/ref/ReferenceQueue;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Ljava/lang/ref/PhantomReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
-
     .line 3
+    iput-wide p8, p0, LX/0QK;->A03:J
+
     .line 4
     .line 5
-    sget-object v2, LX/0Qn;->A01:LX/0Qm;
+    iput-object p4, p0, LX/0QK;->A07:Ljava/util/concurrent/TimeUnit;
 
     .line 6
     .line 7
-    :cond_0
-    iget-object v1, v2, LX/0Qm;->A00:Ljava/util/concurrent/atomic/AtomicReference;
+    iput p5, p0, LX/0QK;->A02:I
 
     .line 8
     .line 9
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iput p6, p0, LX/0QK;->A01:I
 
     .line 10
     .line 11
-    .line 12
-    move-result-object v0
+    iput p7, p0, LX/0QK;->A00:I
 
+    .line 12
     .line 13
-    check-cast v0, LX/0Qk;
+    iput-object p3, p0, LX/0QK;->A06:Ljava/lang/String;
 
     .line 14
     .line 15
-    iput-object v0, p0, LX/0Qk;->next:LX/0Qk;
+    iput-object p1, p0, LX/0QK;->A04:Ljava/lang/Object;
 
     .line 16
     .line 17
-    invoke-virtual {v1, v0, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-object p2, p0, LX/0QK;->A05:Ljava/lang/Object;
 
     .line 18
     .line 19
-    .line 20
-    move-result v0
-
-    .line 21
-    if-eqz v0, :cond_0
-
-    .line 22
-    .line 23
     return-void
-.end method
-
-.method public static synthetic access$300(LX/0Qk;)LX/0Qk;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, LX/0Qk;->previous:LX/0Qk;
-
-    .line 1
-    .line 2
-    return-object p0
-.end method
-
-.method public static synthetic access$302(LX/0Qk;LX/0Qk;)LX/0Qk;
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/0Qk;->previous:LX/0Qk;
-
-    .line 1
-    .line 2
-    return-object p1
-.end method
-
-.method public static synthetic access$600(LX/0Qk;)LX/0Qk;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, LX/0Qk;->next:LX/0Qk;
-
-    .line 1
-    .line 2
-    return-object p0
-.end method
-
-.method public static synthetic access$602(LX/0Qk;LX/0Qk;)LX/0Qk;
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/0Qk;->next:LX/0Qk;
-
-    .line 1
-    .line 2
-    return-object p1
-.end method
-
-
-# virtual methods
-.method public abstract destruct()V
 .end method

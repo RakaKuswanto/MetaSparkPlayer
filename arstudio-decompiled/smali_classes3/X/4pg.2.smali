@@ -1,49 +1,83 @@
-.class public final LX/4pg;
-.super Ljava/lang/Object;
+.class public LX/4pg;
+.super LX/4pk;
 .source ""
 
 
-# instance fields
-.field public final A00:I
-
-.field public final A01:I
-
-.field public final A02:I
-
-.field public final A03:Ljava/util/List;
-
-.field public final A04:Ljava/util/List;
+# static fields
+.field public static A00:Z = true
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;III)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/4pk;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput p3, p0, LX/4pg;->A02:I
+    return-void
+.end method
 
+
+# virtual methods
+.method public A06(Landroid/view/View;I)V
+    .locals 2
+
+    .line 0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 1
+    .line 2
+    const/16 v0, 0x1c
+
+    .line 3
     .line 4
+    if-ne v1, v0, :cond_1
+
     .line 5
-    iput p4, p0, LX/4pg;->A00:I
-
     .line 6
-    .line 7
-    iput p5, p0, LX/4pg;->A01:I
+    invoke-super {p0, p1, p2}, LX/4Z4;->A06(Landroid/view/View;I)V
 
+    .line 7
     .line 8
     .line 9
-    iput-object p1, p0, LX/4pg;->A03:Ljava/util/List;
+    :cond_0
+    return-void
 
     .line 10
-    .line 11
-    iput-object p2, p0, LX/4pg;->A04:Ljava/util/List;
+    :cond_1
+    sget-boolean v0, LX/4pg;->A00:Z
 
+    .line 11
     .line 12
+    if-eqz v0, :cond_0
+
     .line 13
+    .line 14
+    :try_start_0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionVisibility(I)V
+
+    .line 15
+    .line 16
+    .line 17
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 18
+    :catch_0
+    const/4 v0, 0x0
+
+    .line 19
+    sput-boolean v0, LX/4pg;->A00:Z
+
+    .line 20
+    .line 21
+    return-void
+
+    .line 22
+    :goto_0
     return-void
 .end method

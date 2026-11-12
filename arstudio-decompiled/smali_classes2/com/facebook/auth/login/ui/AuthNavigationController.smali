@@ -6,11 +6,11 @@
 # static fields
 .field public static final AUTH_STATE_MACHINE_CONFIG:Ljava/lang/String; = "auth_state_machine_config"
 
-.field public static final STUB_LOGOUT_CONFIG:LX/3Hr;
+.field public static final STUB_LOGOUT_CONFIG:LX/2w0;
 
 
 # instance fields
-.field public config:LX/3FJ;
+.field public config:LX/2vk;
 
 .field public mFirstAuthFragment:Z
 
@@ -20,25 +20,25 @@
     .locals 2
 
     .line 0
-    new-instance v1, LX/3L9;
+    new-instance v1, LX/2w2;
 
     .line 1
     .line 2
-    invoke-direct {v1}, LX/3L9;-><init>()V
+    invoke-direct {v1}, LX/2w2;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    new-instance v0, LX/3Hr;
+    new-instance v0, LX/2w0;
 
     .line 6
     .line 7
-    invoke-direct {v0, v1}, LX/3Hr;-><init>(LX/3JT;)V
+    invoke-direct {v0, v1}, LX/2w0;-><init>(LX/2Ek;)V
 
     .line 8
     .line 9
     .line 10
-    sput-object v0, Lcom/facebook/auth/login/ui/AuthNavigationController;->STUB_LOGOUT_CONFIG:LX/3Hr;
+    sput-object v0, Lcom/facebook/auth/login/ui/AuthNavigationController;->STUB_LOGOUT_CONFIG:LX/2w0;
 
     .line 11
     .line 12
@@ -59,22 +59,22 @@
 
 
 # virtual methods
-.method public getConfiguration()LX/3FJ;
+.method public getConfiguration()LX/2vk;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/3FJ;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/2vk;
 
     .line 1
     .line 2
     return-object v0
 .end method
 
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/37j;->A00()LX/37j;
+    invoke-static {}, LX/2uz;->A00()LX/2uz;
 
     .line 1
     .line 2
@@ -123,49 +123,50 @@
 
     .line 1
     .line 2
-    const-string v0, "auth_state_machine_config"
+    const-string/jumbo v0, "auth_state_machine_config"
 
     .line 3
     .line 4
+    .line 5
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    .line 5
     .line 6
     .line 7
+    .line 8
     move-result-object v2
 
-    .line 8
+    .line 9
     check-cast v2, Lcom/facebook/auth/login/ui/AuthStateMachineConfig$ParcelableConfigInformation;
 
-    .line 9
     .line 10
+    .line 11
     if-eqz v2, :cond_0
 
-    .line 11
     .line 12
-    sget-object v1, Lcom/facebook/auth/login/ui/AuthNavigationController;->STUB_LOGOUT_CONFIG:LX/3Hr;
-
     .line 13
+    sget-object v1, Lcom/facebook/auth/login/ui/AuthNavigationController;->STUB_LOGOUT_CONFIG:LX/2w0;
+
     .line 14
-    new-instance v0, LX/3FJ;
-
     .line 15
-    .line 16
-    invoke-direct {v0, v2, v1}, LX/3FJ;-><init>(Lcom/facebook/auth/login/ui/AuthStateMachineConfig$ParcelableConfigInformation;LX/3Hr;)V
+    new-instance v0, LX/2vk;
 
+    .line 16
     .line 17
+    invoke-direct {v0, v2, v1}, LX/2vk;-><init>(Lcom/facebook/auth/login/ui/AuthStateMachineConfig$ParcelableConfigInformation;LX/2w0;)V
+
     .line 18
     .line 19
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/3FJ;
-
     .line 20
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/2vk;
+
     .line 21
+    .line 22
     :cond_0
     invoke-super {p0, p1}, Lcom/facebook/base/fragment/AbstractNavigableFragmentController;->onFragmentCreate(Landroid/os/Bundle;)V
 
-    .line 22
     .line 23
     .line 24
+    .line 25
     return-void
 .end method
 
@@ -178,15 +179,15 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/3FJ;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/2vk;
 
     .line 4
     .line 5
-    iget-object v2, v0, LX/3FJ;->A01:Lcom/google/common/collect/ImmutableMap;
+    iget-object v2, v0, LX/2vk;->A01:Lcom/google/common/collect/ImmutableMap;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/3FJ;->A02:Ljava/lang/Class;
+    iget-object v0, v0, LX/2vk;->A02:Ljava/lang/Class;
 
     .line 8
     .line 9
@@ -199,23 +200,24 @@
     .line 12
     .line 13
     .line 14
-    const-string v0, "auth_state_machine_config"
+    const-string/jumbo v0, "auth_state_machine_config"
 
     .line 15
     .line 16
+    .line 17
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     return-void
 .end method
 
-.method public setConfiguration(LX/3FJ;)V
+.method public setConfiguration(LX/2vk;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/3FJ;
+    iput-object p1, p0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/2vk;
 
     .line 1
     .line 2

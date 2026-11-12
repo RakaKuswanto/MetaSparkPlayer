@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/facebook/payments/paymentmethods/model/FbPaymentCard;
+.implements Landroid/os/Parcelable;
 
 
 # annotations
@@ -106,11 +106,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5b
+    const/16 v0, 0x35
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -227,7 +227,7 @@
 .end method
 
 .method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 4
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -295,11 +295,11 @@
 
     .line 32
     .line 33
-    const-class v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    const-class v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 34
     .line 35
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-static {p1, v0}, LX/1PJ;->A01(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/lang/Enum;
 
     .line 36
     .line 37
@@ -307,241 +307,154 @@
     move-result-object v0
 
     .line 39
-    if-nez v0, :cond_0
+    check-cast v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 40
     .line 41
-    const/4 v0, 0x0
-
-    .line 42
-    :goto_0
-    check-cast v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
-
-    .line 43
-    .line 44
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->mFbPaymentCardType:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
-    .line 45
-    .line 46
+    .line 42
+    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 47
-    .line 48
-    .line 49
+    .line 44
+    .line 45
+    .line 46
     move-result-object v0
 
-    .line 50
+    .line 47
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->mCardAssociationImageURL:Ljava/lang/String;
 
-    .line 51
-    .line 52
+    .line 48
+    .line 49
     const-class v0, Lcom/facebook/payments/paymentmethods/model/BillingAddress;
 
+    .line 50
+    .line 51
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 52
     .line 53
     .line 54
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    move-result-object v0
 
     .line 55
-    .line 56
-    .line 57
-    move-result-object v0
-
-    .line 58
     check-cast v0, Lcom/facebook/payments/paymentmethods/model/BillingAddress;
 
-    .line 59
-    .line 60
+    .line 56
+    .line 57
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->mAddress:Lcom/facebook/payments/paymentmethods/model/BillingAddress;
 
+    .line 58
+    .line 59
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
+
+    .line 60
     .line 61
     .line 62
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
-    .line 63
-    .line 64
-    .line 65
     move-result v0
 
-    .line 66
+    .line 63
     iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->mIsSavedWithAuth:Z
 
-    .line 67
-    .line 68
-    const-class v3, Lcom/facebook/payments/paymentmethods/model/VerifyField;
+    .line 64
+    .line 65
+    const-class v0, Lcom/facebook/payments/paymentmethods/model/VerifyField;
 
+    .line 66
+    .line 67
+    invoke-static {p1, v0}, LX/1PJ;->A00(Landroid/os/Parcel;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
+    .line 68
     .line 69
     .line 70
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 71
-    .line 72
-    .line 73
     move-result-object v0
 
-    .line 74
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
+    .line 71
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->mVerifyFields:Lcom/google/common/collect/ImmutableList;
 
+    .line 72
+    .line 73
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 74
     .line 75
     .line 76
+    move-result-object v0
+
     .line 77
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A01:Ljava/lang/String;
 
     .line 78
     .line 79
-    .line 80
-    move-result-object v2
+    const-class v0, Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
 
+    .line 80
     .line 81
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 82
     .line 83
     .line 84
-    move-result-object v1
+    move-result-object v0
 
     .line 85
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
 
     .line 86
     .line 87
-    .line 88
-    move-result v0
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A00:Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
 
+    .line 88
     .line 89
-    if-eqz v0, :cond_1
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 90
     .line 91
-    invoke-static {v1}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
-
     .line 92
-    .line 93
-    .line 94
-    move-result-object v0
+    move-result v0
 
+    .line 93
+    iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A05:Z
+
+    .line 94
     .line 95
-    invoke-static {v3, v0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 96
     .line 97
     .line 98
-    move-result-object v0
+    move-result v0
 
     .line 99
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A03:Z
 
     .line 100
     .line 101
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
+
     .line 102
-    goto :goto_1
-
     .line 103
-    :cond_0
-    invoke-static {v1, v0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
     .line 104
+    move-result v0
+
     .line 105
-    .line 106
-    move-result-object v0
-
-    .line 107
-    goto :goto_0
-
-    .line 108
-    :cond_1
-    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
-
-    .line 109
-    .line 110
-    .line 111
-    move-result-object v0
-
-    .line 112
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->mVerifyFields:Lcom/google/common/collect/ImmutableList;
-
-    .line 113
-    .line 114
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    .line 115
-    .line 116
-    .line 117
-    move-result-object v0
-
-    .line 118
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A01:Ljava/lang/String;
-
-    .line 119
-    .line 120
-    const-class v0, Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
-
-    .line 121
-    .line 122
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
-
-    .line 123
-    .line 124
-    .line 125
-    move-result-object v0
-
-    .line 126
-    check-cast v0, Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
-
-    .line 127
-    .line 128
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A00:Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
-
-    .line 129
-    .line 130
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
-    .line 131
-    .line 132
-    .line 133
-    move-result v0
-
-    .line 134
-    iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A05:Z
-
-    .line 135
-    .line 136
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
-    .line 137
-    .line 138
-    .line 139
-    move-result v0
-
-    .line 140
-    iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A03:Z
-
-    .line 141
-    .line 142
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
-    .line 143
-    .line 144
-    .line 145
-    move-result v0
-
-    .line 146
     iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A04:Z
 
-    .line 147
-    .line 148
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    .line 106
+    .line 107
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
-    .line 149
-    .line 150
-    .line 151
+    .line 108
+    .line 109
+    .line 110
     move-result v0
 
-    .line 152
+    .line 111
     iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/CreditCard;->A02:Z
 
-    .line 153
-    .line 154
+    .line 112
+    .line 113
     return-void
 .end method
 
@@ -608,7 +521,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1, v0}, LX/15E;->A01(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/1PJ;->A03(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 28
     .line 29
@@ -644,7 +557,7 @@
 
     .line 46
     .line 47
-    invoke-static {p1, v0}, LX/15E;->A00(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableList;)V
+    invoke-static {p1, v0}, LX/1PJ;->A02(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableList;)V
 
     .line 48
     .line 49

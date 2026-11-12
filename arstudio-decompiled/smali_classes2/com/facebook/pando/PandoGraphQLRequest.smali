@@ -3,11 +3,11 @@
 .source ""
 
 # interfaces
-.implements LX/46D;
+.implements LX/0aC;
 
 
 # static fields
-.field public static final Companion:LX/1oS;
+.field public static final Companion:LX/1vt;
 
 
 # instance fields
@@ -33,16 +33,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/1oS;
+    new-instance v0, LX/1vt;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1oS;-><init>()V
+    invoke-direct {v0}, LX/1vt;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/pando/PandoGraphQLRequest;->Companion:LX/1oS;
+    sput-object v0, Lcom/facebook/pando/PandoGraphQLRequest;->Companion:LX/1vt;
 
     .line 6
     .line 7
@@ -51,7 +51,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -59,188 +59,274 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1oR;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;ZLcom/facebook/pando/PandoRealtimeInfoJNI;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-    .locals 10
+.method public constructor <init>(LX/1vr;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;ZLcom/facebook/pando/PandoRealtimeInfoJNI;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    .locals 16
 
     .line 0
-    const/4 v9, 0x0
+    move-object/from16 v14, p11
 
     .line 1
-    const/4 v0, 0x1
-
     .line 2
-    move-object v8, p5
+    move-object/from16 v0, p4
 
     .line 3
-    invoke-static {p1, v0, p5}, LX/0Yd;->A0n(Ljava/lang/Object;ILjava/lang/Object;)V
-
     .line 4
+    move-object/from16 v3, p3
+
     .line 5
     .line 6
-    move-object v1, p0
+    const/4 v13, 0x0
 
     .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v12, p5
 
     .line 8
     .line 9
+    move-object/from16 v4, p1
+
     .line 10
-    move/from16 v0, p6
-
     .line 11
-    .line 12
-    iput-boolean v0, p0, Lcom/facebook/pando/PandoGraphQLRequest;->isMutation:Z
+    invoke-static {v4, v12}, LX/0X4;->A19(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 12
     .line 13
     .line 14
-    move/from16 v0, p8
+    move-object/from16 v5, p0
 
     .line 15
     .line 16
-    iput v0, p0, Lcom/facebook/pando/PandoGraphQLRequest;->injectionCapabilities:I
+    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
     .line 17
     .line 18
-    move-object/from16 v0, p9
-
     .line 19
+    move/from16 v1, p6
+
     .line 20
-    iput-object v0, p0, Lcom/facebook/pando/PandoGraphQLRequest;->rootCallVariable:Ljava/lang/String;
-
     .line 21
-    .line 22
-    move-object v4, p2
+    iput-boolean v1, v5, Lcom/facebook/pando/PandoGraphQLRequest;->isMutation:Z
 
+    .line 22
     .line 23
-    invoke-interface {p1, p2}, LX/1oR;->clientDocIdForQuery(Ljava/lang/String;)Ljava/lang/String;
+    move/from16 v1, p8
 
     .line 24
     .line 25
-    .line 26
-    move-result-object v3
+    iput v1, v5, Lcom/facebook/pando/PandoGraphQLRequest;->injectionCapabilities:I
 
+    .line 26
     .line 27
-    if-nez v3, :cond_4
+    move-object/from16 v1, p9
 
     .line 28
     .line 29
-    invoke-interface {p1, p2}, LX/1oR;->persistIdForQuery(Ljava/lang/String;)Ljava/lang/String;
+    iput-object v1, v5, Lcom/facebook/pando/PandoGraphQLRequest;->rootCallVariable:Ljava/lang/String;
 
     .line 30
     .line 31
-    .line 32
-    move-result-object v2
+    move-object/from16 v8, p2
 
+    .line 32
     .line 33
-    :goto_0
-    iput-object p2, p0, Lcom/facebook/pando/PandoGraphQLRequest;->queryName:Ljava/lang/String;
+    invoke-interface {v4, v8}, LX/1vr;->clientDocIdForQuery(Ljava/lang/String;)Ljava/lang/String;
 
     .line 34
     .line 35
-    invoke-interface {p1, p2}, LX/1oR;->schemaForQuery(Ljava/lang/String;)Ljava/lang/String;
-
     .line 36
-    .line 37
-    .line 38
-    move-result-object v0
+    move-result-object v7
 
+    .line 37
+    if-nez v7, :cond_0
+
+    .line 38
     .line 39
-    iput-object v0, p0, Lcom/facebook/pando/PandoGraphQLRequest;->schemaName:Ljava/lang/String;
+    invoke-interface {v4, v8}, LX/1vr;->persistIdForQuery(Ljava/lang/String;)Ljava/lang/String;
 
     .line 40
     .line 41
-    iput-object p3, p0, Lcom/facebook/pando/PandoGraphQLRequest;->params:Ljava/util/Map;
-
     .line 42
+    move-result-object v6
+
     .line 43
-    iput-object p4, p0, Lcom/facebook/pando/PandoGraphQLRequest;->transientParams:Ljava/util/Map;
+    :goto_0
+    iput-object v8, v5, Lcom/facebook/pando/PandoGraphQLRequest;->queryName:Ljava/lang/String;
 
     .line 44
     .line 45
-    const-string v5, ""
+    invoke-interface {v4, v8}, LX/1vr;->schemaForQuery(Ljava/lang/String;)Ljava/lang/String;
 
     .line 46
     .line 47
-    if-nez v2, :cond_0
-
     .line 48
+    move-result-object v1
+
     .line 49
-    move-object v2, v5
+    iput-object v1, v5, Lcom/facebook/pando/PandoGraphQLRequest;->schemaName:Ljava/lang/String;
 
     .line 50
-    :cond_0
-    if-nez v3, :cond_1
-
     .line 51
-    .line 52
-    move-object v3, v5
+    if-eqz p11, :cond_1
 
+    .line 52
     .line 53
-    :cond_1
-    if-nez p3, :cond_2
+    invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 54
     .line 55
-    invoke-static {}, LX/1Th;->A00()LX/1Th;
-
     .line 56
+    move-result-object v2
+
     .line 57
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
     .line 58
-    move-result-object p3
-
     .line 59
-    :cond_2
-    new-instance v6, Lcom/facebook/nativeutil/NativeMap;
-
     .line 60
+    move-result v1
+
     .line 61
-    invoke-direct {v6, p3}, Lcom/facebook/nativeutil/NativeMap;-><init>(Ljava/util/Map;)V
+    if-eqz v1, :cond_1
 
     .line 62
     .line 63
-    .line 64
-    if-nez p4, :cond_3
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 64
     .line 65
     .line 66
-    invoke-static {}, LX/1Th;->A00()LX/1Th;
+    move-result-object v1
 
     .line 67
+    check-cast v1, Lcom/facebook/pando/PandoGraphQLConnectionConfig;
+
     .line 68
     .line 69
-    move-result-object p4
+    invoke-virtual {v1, v4}, Lcom/facebook/pando/PandoGraphQLConnectionConfig;->setGeneratedPaginationQueryClientDocId(LX/1vr;)V
 
     .line 70
-    :cond_3
-    new-instance v7, Lcom/facebook/nativeutil/NativeMap;
-
     .line 71
     .line 72
-    invoke-direct {v7, p4}, Lcom/facebook/nativeutil/NativeMap;-><init>(Ljava/util/Map;)V
+    goto :goto_1
 
     .line 73
+    :cond_0
+    const/4 v6, 0x0
+
     .line 74
+    goto :goto_0
+
     .line 75
-    invoke-direct/range {v1 .. v9}, Lcom/facebook/pando/PandoGraphQLRequest;->initHybridData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/facebook/nativeutil/NativeMap;Lcom/facebook/nativeutil/NativeMap;Ljava/lang/Class;Lcom/facebook/pando/PandoRealtimeInfoJNI;)Lcom/facebook/jni/HybridData;
+    :cond_1
+    iput-object v3, v5, Lcom/facebook/pando/PandoGraphQLRequest;->params:Ljava/util/Map;
 
     .line 76
     .line 77
-    .line 78
-    move-result-object v0
+    iput-object v0, v5, Lcom/facebook/pando/PandoGraphQLRequest;->transientParams:Ljava/util/Map;
 
+    .line 78
     .line 79
-    iput-object v0, p0, Lcom/facebook/pando/PandoGraphQLRequest;->mHybridData:Lcom/facebook/jni/HybridData;
+    const-string v9, ""
 
     .line 80
     .line 81
-    return-void
+    if-nez v6, :cond_2
 
     .line 82
-    :cond_4
-    const/4 v2, 0x0
-
     .line 83
-    goto :goto_0
+    move-object v6, v9
+
+    .line 84
+    :cond_2
+    if-nez v7, :cond_3
+
+    .line 85
+    .line 86
+    move-object v7, v9
+
+    .line 87
+    :cond_3
+    if-nez p3, :cond_4
+
+    .line 88
+    .line 89
+    invoke-static {}, LX/0X5;->A0w()LX/24e;
+
+    .line 90
+    .line 91
+    .line 92
+    move-result-object v3
+
+    .line 93
+    :cond_4
+    new-instance v10, Lcom/facebook/nativeutil/NativeMap;
+
+    .line 94
+    .line 95
+    invoke-direct {v10, v3}, Lcom/facebook/nativeutil/NativeMap;-><init>(Ljava/util/Map;)V
+
+    .line 96
+    .line 97
+    .line 98
+    if-nez p4, :cond_5
+
+    .line 99
+    .line 100
+    invoke-static {}, LX/0X5;->A0w()LX/24e;
+
+    .line 101
+    .line 102
+    .line 103
+    move-result-object v0
+
+    .line 104
+    :cond_5
+    new-instance v11, Lcom/facebook/nativeutil/NativeMap;
+
+    .line 105
+    .line 106
+    invoke-direct {v11, v0}, Lcom/facebook/nativeutil/NativeMap;-><init>(Ljava/util/Map;)V
+
+    .line 107
+    .line 108
+    .line 109
+    if-nez p11, :cond_6
+
+    .line 110
+    .line 111
+    sget-object v14, LX/0Gx;->A00:LX/0Gx;
+
+    .line 112
+    .line 113
+    :cond_6
+    iget-object v15, v5, Lcom/facebook/pando/PandoGraphQLRequest;->schemaName:Ljava/lang/String;
+
+    .line 114
+    .line 115
+    if-nez v15, :cond_7
+
+    .line 116
+    .line 117
+    move-object v15, v9
+
+    .line 118
+    :cond_7
+    invoke-direct/range {v5 .. v15}, Lcom/facebook/pando/PandoGraphQLRequest;->initHybridData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/facebook/nativeutil/NativeMap;Lcom/facebook/nativeutil/NativeMap;Ljava/lang/Class;Lcom/facebook/pando/PandoRealtimeInfoJNI;Ljava/util/List;Ljava/lang/String;)Lcom/facebook/jni/HybridData;
+
+    .line 119
+    .line 120
+    .line 121
+    move-result-object v0
+
+    .line 122
+    iput-object v0, v5, Lcom/facebook/pando/PandoGraphQLRequest;->mHybridData:Lcom/facebook/jni/HybridData;
+
+    .line 123
+    .line 124
+    return-void
+.end method
+
+.method private final native addAdditionalHttpHeaderNative(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method private final native addTrackedHttpResponseHeaderNative(Ljava/lang/String;)V
@@ -252,7 +338,16 @@
 .method private final native hasRealtimeSubscriptionInfo()Z
 .end method
 
-.method private final native initHybridData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/facebook/nativeutil/NativeMap;Lcom/facebook/nativeutil/NativeMap;Ljava/lang/Class;Lcom/facebook/pando/PandoRealtimeInfoJNI;)Lcom/facebook/jni/HybridData;
+.method private final native initHybridData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/facebook/nativeutil/NativeMap;Lcom/facebook/nativeutil/NativeMap;Ljava/lang/Class;Lcom/facebook/pando/PandoRealtimeInfoJNI;Ljava/util/List;Ljava/lang/String;)Lcom/facebook/jni/HybridData;
+.end method
+
+.method private final native removeAdditionalHttpHeaderNative(Ljava/lang/String;)V
+.end method
+
+.method private final native setAcsTokenNative(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method private final native setCacheFallbackByDuration_EXPERIMENTALNative(J)V
 .end method
 
 .method private final native setCacheTtlMs(J)V
@@ -261,7 +356,16 @@
 .method private final native setEnsureCacheWriteNative(Z)V
 .end method
 
+.method private final native setForceCacheOnNetworkError_EXPERIMENTALNative(Z)V
+.end method
+
 .method private final native setFreshCacheTtlMs(J)V
+.end method
+
+.method private final native setOhaiConfigNative(ILjava/lang/String;III)V
+.end method
+
+.method private final native setOptimisticUpdater(Lcom/facebook/pando/TreeUpdaterJNI;)V
 .end method
 
 .method private final native setPublishMode(I)V
@@ -285,7 +389,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -300,7 +404,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -315,7 +419,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -324,6 +428,9 @@
 
     .line 4
     throw v0
+.end method
+
+.method public native getCacheFallbackByDuration_EXPERIMENTAL()J
 .end method
 
 .method public getCallName()Ljava/lang/String;
@@ -341,7 +448,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -356,7 +463,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -371,7 +478,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -382,19 +489,10 @@
     throw v0
 .end method
 
-.method public getEnsureCacheWrite()Z
-    .locals 1
+.method public native getEnsureCacheWrite()Z
+.end method
 
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
+.method public native getForceCacheOnNetworkError_EXPERIMENTAL()Z
 .end method
 
 .method public native getFreshCacheAgeMs()J
@@ -423,7 +521,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -456,7 +554,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -471,7 +569,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -486,7 +584,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -497,11 +595,11 @@
     throw v0
 .end method
 
-.method public getQuery()LX/1cc;
+.method public getQuery()LX/1p4;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -512,11 +610,11 @@
     throw v0
 .end method
 
-.method public getQueryParams()LX/1jN;
+.method public getQueryParams()LX/1yO;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -533,11 +631,11 @@
 .method public native getRetryPolicy()I
 .end method
 
-.method public getSubscriptionTargetId()I
+.method public getSequencingKey()Ljava/lang/String;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -552,7 +650,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -567,7 +665,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -589,7 +687,10 @@
     return v0
 .end method
 
-.method public bridge synthetic setEnsureCacheWrite(Z)LX/46D;
+.method public final native setAdditionalCacheQueryKey(Ljava/lang/String;)V
+.end method
+
+.method public bridge synthetic setEnsureCacheWrite(Z)LX/0aC;
     .locals 0
 
     .line 0
@@ -619,7 +720,7 @@
 .method public final native setManuallyManageActiveFieldUpdates(Z)V
 .end method
 
-.method public bridge synthetic setMaxToleratedCacheAgeMs(J)LX/46D;
+.method public bridge synthetic setMaxToleratedCacheAgeMs(J)LX/0aC;
     .locals 0
 
     .line 0
@@ -654,7 +755,7 @@
 
     .line 1
     .line 2
-    invoke-static {}, LX/1Th;->A00()LX/1Th;
+    invoke-static {}, LX/0X5;->A0w()LX/24e;
 
     .line 3
     .line 4
@@ -676,7 +777,7 @@
 
     .line 12
     .line 13
-    invoke-static {}, LX/1Th;->A00()LX/1Th;
+    invoke-static {}, LX/0X5;->A0w()LX/24e;
 
     .line 14
     .line 15

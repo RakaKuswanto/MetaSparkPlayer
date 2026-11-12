@@ -1,17 +1,14 @@
-.class public final LX/4l1;
+.class public interface abstract LX/4l1;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract A3l(Ljava/lang/String;I)LX/4l1;
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract A3m(Ljava/lang/Object;Ljava/lang/String;)LX/4l1;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract flush()V
 .end method

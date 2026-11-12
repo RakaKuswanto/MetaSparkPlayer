@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/1Wd;->A00()V
+    invoke-static {}, LX/3hX;->A00()V
 
     .line 1
     .line 2
@@ -37,11 +37,11 @@
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/0Jt;->A01:LX/0I6;
+    sget-object v0, LX/0Il;->A01:LX/0HQ;
 
     .line 4
     .line 5
-    invoke-interface {v0, p0}, LX/0I6;->AQr(I)Z
+    invoke-interface {v0, p0}, LX/0HQ;->APR(I)Z
 
     .line 6
     .line 7
@@ -53,11 +53,11 @@
 
     .line 10
     .line 11
-    sget-object v0, LX/0Jt;->A01:LX/0I6;
+    sget-object v0, LX/0Il;->A01:LX/0HQ;
 
     .line 12
     .line 13
-    invoke-interface {v0, p0, v1, p1}, LX/0I6;->ASA(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p0, v1, p1}, LX/0HQ;->AQl(ILjava/lang/String;Ljava/lang/String;)V
 
     .line 14
     .line 15
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public static native registerLoggerNative(JIZ)V
+.method public static native registerLoggerNative(JIZI)V
 .end method
 
 .method public static native setLogLevel(I)V

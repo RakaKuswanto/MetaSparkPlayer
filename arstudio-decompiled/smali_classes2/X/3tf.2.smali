@@ -1,27 +1,31 @@
-.class public final LX/3tf;
+.class public final LX/3tF;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/2on;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayer$FbHeroPlayerListener$5"
 
 
 # instance fields
-.field public final synthetic A00:Landroid/view/Surface;
+.field public final synthetic A00:LX/3q9;
 
-.field public final synthetic A01:LX/3pU;
+.field public final synthetic A01:LX/3v7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Surface;LX/3pU;)V
+.method public constructor <init>(LX/3q9;LX/3v7;)V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/3tf;->A01:LX/3pU;
+    iput-object p1, p0, LX/3tF;->A00:LX/3q9;
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/3tf;->A00:Landroid/view/Surface;
+    iput-object p2, p0, LX/3tF;->A01:LX/3v7;
 
     .line 3
     .line 4
@@ -35,18 +39,83 @@
 
 
 # virtual methods
-.method public final AAZ()V
-    .locals 1
+.method public final run()V
+    .locals 5
 
     .line 0
-    iget-object v0, p0, LX/3tf;->A00:Landroid/view/Surface;
+    const-string v0, "FbHeroPlayer.mVideoPlayerListener.onError"
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Landroid/view/Surface;->release()V
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
 
     .line 3
     .line 4
     .line 5
+    :try_start_0
+    iget-object v0, p0, LX/3tF;->A00:LX/3q9;
+
+    .line 6
+    .line 7
+    iget-object v0, v0, LX/3q9;->A02:LX/3q7;
+
+    .line 8
+    .line 9
+    iget-object v4, v0, LX/3q7;->A0R:LX/3sj;
+
+    .line 10
+    .line 11
+    iget-object v3, p0, LX/3tF;->A01:LX/3v7;
+
+    .line 12
+    .line 13
+    iget-object v0, v3, LX/3v7;->A00:LX/3tH;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v2
+
+    .line 19
+    invoke-static {v0}, LX/3tG;->fromVideoErrorCode(LX/3tH;)LX/3tG;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    iget-object v0, v3, LX/3v7;->A02:Ljava/lang/String;
+
+    .line 24
+    .line 25
+    invoke-interface {v4, v1, v2, v0}, LX/3sj;->AW2(LX/3tG;Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 26
+    .line 27
+    .line 28
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 29
+    .line 30
+    .line 31
     return-void
+
+    .line 32
+    :catchall_0
+    move-exception v0
+
+    .line 33
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 34
+    .line 35
+    .line 36
+    throw v0
 .end method

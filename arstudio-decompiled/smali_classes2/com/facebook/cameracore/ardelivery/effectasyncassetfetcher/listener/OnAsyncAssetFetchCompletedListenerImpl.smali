@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/1RM;
+.field public static final Companion:LX/1cI;
 
 
 # direct methods
@@ -12,28 +12,29 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/1RM;
+    new-instance v0, LX/1cI;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1RM;-><init>()V
+    invoke-direct {v0}, LX/1cI;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/ardelivery/effectasyncassetfetcher/listener/OnAsyncAssetFetchCompletedListenerImpl;->Companion:LX/1RM;
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/effectasyncassetfetcher/listener/OnAsyncAssetFetchCompletedListenerImpl;->Companion:LX/1cI;
 
     .line 6
     .line 7
-    const-string v0, "ard-android-async-asset-fetcher-listener"
+    const-string/jumbo v0, "ard-android-async-asset-fetcher-listener"
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 10
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 11
     .line 12
+    .line 13
     return-void
 .end method
 

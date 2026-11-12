@@ -70,9 +70,9 @@
 
 .field public A0T:Landroid/text/Layout;
 
-.field public A0U:LX/4Vg;
+.field public A0U:LX/4S4;
 
-.field public A0V:LX/4Ve;
+.field public A0V:LX/4S2;
 
 .field public A0W:Ljava/lang/CharSequence;
 
@@ -96,7 +96,7 @@
 
 .field public final A0g:Landroid/text/TextPaint;
 
-.field public final A0h:LX/4Wu;
+.field public final A0h:LX/4SI;
 
 
 # direct methods
@@ -107,11 +107,11 @@
     const/4 v2, 0x0
 
     .line 1
-    new-instance v0, LX/6Oo;
+    new-instance v0, LX/6fQ;
 
     .line 2
     .line 3
-    invoke-direct {v0, v2}, LX/6Oo;-><init>(I)V
+    invoke-direct {v0, v2}, LX/6fQ;-><init>(I)V
 
     .line 4
     .line 5
@@ -120,7 +120,7 @@
 
     .line 7
     .line 8
-    invoke-static {}, LX/4BF;->A1Q()[I
+    invoke-static {}, LX/434;->A1Z()[I
 
     .line 9
     .line 10
@@ -163,7 +163,7 @@
     .locals 1
 
     .line 268435456
-    const v0, 0x7f04085a
+    const v0, 0x7f040880
 
     .line 268435457
     .line 268435458
@@ -180,22 +180,22 @@
     .locals 15
 
     .line 0
-    move-object v12, p0
+    move-object v11, p0
 
     .line 1
-    move-object/from16 v9, p1
+    move-object/from16 v8, p1
 
     .line 2
     .line 3
-    move-object/from16 v11, p2
+    move-object/from16 v10, p2
 
     .line 4
     .line 5
-    move/from16 v14, p3
+    move/from16 v13, p3
 
     .line 6
     .line 7
-    invoke-direct {p0, v9, v11, v14}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, v8, v10, v13}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 8
     .line 9
@@ -211,14 +211,14 @@
 
     .line 14
     .line 15
-    const/4 v5, 0x0
+    const/4 v14, 0x0
 
     .line 16
-    iput-boolean v5, p0, Landroidx/appcompat/widget/SwitchCompat;->A0Z:Z
+    iput-boolean v14, p0, Landroidx/appcompat/widget/SwitchCompat;->A0Z:Z
 
     .line 17
     .line 18
-    iput-boolean v5, p0, Landroidx/appcompat/widget/SwitchCompat;->A0a:Z
+    iput-boolean v14, p0, Landroidx/appcompat/widget/SwitchCompat;->A0a:Z
 
     .line 19
     .line 20
@@ -230,11 +230,11 @@
 
     .line 23
     .line 24
-    iput-boolean v5, p0, Landroidx/appcompat/widget/SwitchCompat;->A0b:Z
+    iput-boolean v14, p0, Landroidx/appcompat/widget/SwitchCompat;->A0b:Z
 
     .line 25
     .line 26
-    iput-boolean v5, p0, Landroidx/appcompat/widget/SwitchCompat;->A0c:Z
+    iput-boolean v14, p0, Landroidx/appcompat/widget/SwitchCompat;->A0c:Z
 
     .line 27
     .line 28
@@ -250,14 +250,14 @@
 
     .line 33
     .line 34
-    const/4 v2, 0x1
+    const/4 v4, 0x1
 
     .line 35
-    iput-boolean v2, p0, Landroidx/appcompat/widget/SwitchCompat;->A0Y:Z
+    iput-boolean v4, p0, Landroidx/appcompat/widget/SwitchCompat;->A0Y:Z
 
     .line 36
     .line 37
-    invoke-static {}, LX/4BF;->A0R()Landroid/graphics/Rect;
+    invoke-static {}, LX/434;->A0R()Landroid/graphics/Rect;
 
     .line 38
     .line 39
@@ -274,28 +274,28 @@
     .line 44
     .line 45
     .line 46
-    move-result-object v4
+    move-result-object v3
 
     .line 47
-    invoke-static {v4, p0}, LX/4W6;->A03(Landroid/content/Context;Landroid/view/View;)V
+    invoke-static {v3, p0}, LX/4Ri;->A03(Landroid/content/Context;Landroid/view/View;)V
 
     .line 48
     .line 49
     .line 50
-    new-instance v3, Landroid/text/TextPaint;
+    new-instance v2, Landroid/text/TextPaint;
 
     .line 51
     .line 52
-    invoke-direct {v3, v2}, Landroid/text/TextPaint;-><init>(I)V
+    invoke-direct {v2, v4}, Landroid/text/TextPaint;-><init>(I)V
 
     .line 53
     .line 54
     .line 55
-    iput-object v3, p0, Landroidx/appcompat/widget/SwitchCompat;->A0g:Landroid/text/TextPaint;
+    iput-object v2, p0, Landroidx/appcompat/widget/SwitchCompat;->A0g:Landroid/text/TextPaint;
 
     .line 56
     .line 57
-    invoke-static {p0}, LX/4BE;->A0U(Landroid/view/View;)Landroid/util/DisplayMetrics;
+    invoke-static {p0}, LX/433;->A0O(Landroid/view/View;)Landroid/util/DisplayMetrics;
 
     .line 58
     .line 59
@@ -307,27 +307,27 @@
 
     .line 62
     .line 63
-    iput v0, v3, Landroid/text/TextPaint;->density:F
+    iput v0, v2, Landroid/text/TextPaint;->density:F
 
     .line 64
     .line 65
-    sget-object v13, LX/4XG;->A0M:[I
+    sget-object v12, LX/4M2;->A0M:[I
 
     .line 66
     .line 67
-    invoke-static {v9, v11, v13, v14, v5}, LX/4WR;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[III)LX/4WR;
+    invoke-static {v8, v10, v12, v13, v14}, LX/4Pg;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[III)LX/4Pg;
 
     .line 68
     .line 69
     .line 70
-    move-result-object v3
+    move-result-object v2
 
     .line 71
-    iget-object v10, v3, LX/4WR;->A02:Landroid/content/res/TypedArray;
+    iget-object v9, v2, LX/4Pg;->A02:Landroid/content/res/TypedArray;
 
     .line 72
     .line 73
-    invoke-static/range {v9 .. v14}, LX/03G;->A0I(Landroid/content/Context;Landroid/content/res/TypedArray;Landroid/util/AttributeSet;Landroid/view/View;[II)V
+    invoke-static/range {v8 .. v14}, LX/03U;->A0K(Landroid/content/Context;Landroid/content/res/TypedArray;Landroid/util/AttributeSet;Landroid/view/View;[III)V
 
     .line 74
     .line 75
@@ -335,7 +335,7 @@
     const/4 v0, 0x2
 
     .line 77
-    invoke-virtual {v3, v0}, LX/4WR;->A02(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v0}, LX/4Pg;->A02(I)Landroid/graphics/drawable/Drawable;
 
     .line 78
     .line 79
@@ -361,7 +361,7 @@
 
     .line 89
     .line 90
-    invoke-virtual {v3, v0}, LX/4WR;->A02(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v0}, LX/4Pg;->A02(I)Landroid/graphics/drawable/Drawable;
 
     .line 91
     .line 92
@@ -383,7 +383,7 @@
     .line 100
     .line 101
     :cond_1
-    invoke-virtual {v10, v5}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v9, v14}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
 
     .line 102
     .line 103
@@ -396,7 +396,7 @@
     .line 106
     .line 107
     .line 108
-    invoke-virtual {v10, v2}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v9, v4}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
 
     .line 109
     .line 110
@@ -412,7 +412,7 @@
     const/4 v0, 0x3
 
     .line 116
-    invoke-virtual {v10, v0, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v9, v0, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 117
     .line 118
@@ -428,7 +428,7 @@
 
     .line 123
     .line 124
-    invoke-virtual {v10, v0, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {v9, v0, v14}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     .line 125
     .line 126
@@ -443,7 +443,7 @@
     const/4 v0, 0x5
 
     .line 131
-    invoke-virtual {v10, v0, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {v9, v0, v14}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     .line 132
     .line 133
@@ -458,7 +458,7 @@
     const/4 v0, 0x6
 
     .line 138
-    invoke-virtual {v10, v0, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {v9, v0, v14}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     .line 139
     .line 140
@@ -473,7 +473,7 @@
     const/4 v0, 0x4
 
     .line 145
-    invoke-virtual {v10, v0, v5}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v9, v0, v14}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 146
     .line 147
@@ -489,7 +489,7 @@
 
     .line 152
     .line 153
-    invoke-virtual {v3, v0}, LX/4WR;->A01(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v2, v0}, LX/4Pg;->A01(I)Landroid/content/res/ColorStateList;
 
     .line 154
     .line 155
@@ -505,7 +505,7 @@
 
     .line 160
     .line 161
-    iput-boolean v2, p0, Landroidx/appcompat/widget/SwitchCompat;->A0Z:Z
+    iput-boolean v4, p0, Landroidx/appcompat/widget/SwitchCompat;->A0Z:Z
 
     .line 162
     .line 163
@@ -514,10 +514,10 @@
 
     .line 164
     .line 165
-    const/4 v7, -0x1
+    const/4 v6, -0x1
 
     .line 166
-    invoke-virtual {v10, v0, v7}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v9, v0, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
     .line 167
     .line 168
@@ -525,27 +525,27 @@
     move-result v0
 
     .line 170
-    invoke-static {v1, v0}, LX/4Vd;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v1, v0}, LX/4Rs;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
 
     .line 171
     .line 172
     .line 173
-    move-result-object v6
+    move-result-object v5
 
     .line 174
     iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0P:Landroid/graphics/PorterDuff$Mode;
 
     .line 175
     .line 176
-    if-eq v0, v6, :cond_3
+    if-eq v0, v5, :cond_3
 
     .line 177
     .line 178
-    iput-object v6, p0, Landroidx/appcompat/widget/SwitchCompat;->A0P:Landroid/graphics/PorterDuff$Mode;
+    iput-object v5, p0, Landroidx/appcompat/widget/SwitchCompat;->A0P:Landroid/graphics/PorterDuff$Mode;
 
     .line 179
     .line 180
-    iput-boolean v2, p0, Landroidx/appcompat/widget/SwitchCompat;->A0a:Z
+    iput-boolean v4, p0, Landroidx/appcompat/widget/SwitchCompat;->A0a:Z
 
     .line 181
     .line 182
@@ -577,7 +577,7 @@
 
     .line 194
     .line 195
-    invoke-virtual {v3, v0}, LX/4WR;->A01(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v2, v0}, LX/4Pg;->A01(I)Landroid/content/res/ColorStateList;
 
     .line 196
     .line 197
@@ -593,7 +593,7 @@
 
     .line 202
     .line 203
-    iput-boolean v2, p0, Landroidx/appcompat/widget/SwitchCompat;->A0b:Z
+    iput-boolean v4, p0, Landroidx/appcompat/widget/SwitchCompat;->A0b:Z
 
     .line 204
     .line 205
@@ -602,7 +602,7 @@
 
     .line 206
     .line 207
-    invoke-virtual {v10, v0, v7}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v9, v0, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
     .line 208
     .line 209
@@ -610,7 +610,7 @@
     move-result v0
 
     .line 211
-    invoke-static {v1, v0}, LX/4Vd;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v1, v0}, LX/4Rs;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
 
     .line 212
     .line 213
@@ -630,7 +630,7 @@
 
     .line 220
     .line 221
-    iput-boolean v2, p0, Landroidx/appcompat/widget/SwitchCompat;->A0c:Z
+    iput-boolean v4, p0, Landroidx/appcompat/widget/SwitchCompat;->A0c:Z
 
     .line 222
     .line 223
@@ -661,7 +661,7 @@
     const/4 v0, 0x7
 
     .line 235
-    invoke-virtual {v10, v0, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {v9, v0, v14}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     .line 236
     .line 237
@@ -673,11 +673,11 @@
 
     .line 240
     .line 241
-    sget-object v0, LX/4XG;->A0N:[I
+    sget-object v0, LX/4M2;->A0N:[I
 
     .line 242
     .line 243
-    invoke-virtual {v9, v1, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+    invoke-virtual {v8, v1, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     .line 244
     .line 245
@@ -685,19 +685,19 @@
     move-result-object v0
 
     .line 247
-    new-instance v1, LX/4WR;
+    new-instance v1, LX/4Pg;
 
     .line 248
     .line 249
-    invoke-direct {v1, v9, v0}, LX/4WR;-><init>(Landroid/content/Context;Landroid/content/res/TypedArray;)V
+    invoke-direct {v1, v8, v0}, LX/4Pg;-><init>(Landroid/content/Context;Landroid/content/res/TypedArray;)V
 
     .line 250
     .line 251
     .line 252
-    const/4 v6, 0x3
+    const/4 v5, 0x3
 
     .line 253
-    invoke-virtual {v1, v6}, LX/4WR;->A01(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v5}, LX/4Pg;->A01(I)Landroid/content/res/ColorStateList;
 
     .line 254
     .line 255
@@ -722,11 +722,11 @@
 
     .line 264
     .line 265
-    iget-object v3, v1, LX/4WR;->A02:Landroid/content/res/TypedArray;
+    iget-object v2, v1, LX/4Pg;->A02:Landroid/content/res/TypedArray;
 
     .line 266
     .line 267
-    invoke-virtual {v3, v5, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    invoke-virtual {v2, v14, v14}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     .line 268
     .line 269
@@ -738,7 +738,7 @@
 
     .line 272
     .line 273
-    int-to-float v8, v0
+    int-to-float v7, v0
 
     .line 274
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->A0g:Landroid/text/TextPaint;
@@ -753,7 +753,7 @@
     move-result v0
 
     .line 280
-    cmpl-float v0, v8, v0
+    cmpl-float v0, v7, v0
 
     .line 281
     .line 282
@@ -761,7 +761,7 @@
 
     .line 283
     .line 284
-    invoke-virtual {v1, v8}, Landroid/graphics/Paint;->setTextSize(F)V
+    invoke-virtual {v1, v7}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 285
     .line 286
@@ -772,7 +772,7 @@
     .line 289
     .line 290
     :cond_b
-    invoke-virtual {v3, v2, v7}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v2, v4, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
     .line 291
     .line 292
@@ -783,15 +783,15 @@
     const/4 v0, 0x2
 
     .line 295
-    invoke-virtual {v3, v0, v7}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v2, v0, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
     .line 296
     .line 297
     .line 298
-    move-result v8
+    move-result v7
 
     .line 299
-    if-eq v1, v2, :cond_15
+    if-eq v1, v4, :cond_15
 
     .line 300
     .line 301
@@ -799,7 +799,7 @@
 
     .line 302
     .line 303
-    if-eq v1, v6, :cond_13
+    if-eq v1, v5, :cond_13
 
     .line 304
     .line 305
@@ -807,13 +807,13 @@
 
     .line 306
     :goto_0
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     .line 307
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
     .line 308
-    if-lez v8, :cond_12
+    if-lez v7, :cond_12
 
     .line 309
     .line 310
@@ -821,7 +821,7 @@
 
     .line 311
     .line 312
-    invoke-static {v8}, Landroid/graphics/Typeface;->defaultFromStyle(I)Landroid/graphics/Typeface;
+    invoke-static {v7}, Landroid/graphics/Typeface;->defaultFromStyle(I)Landroid/graphics/Typeface;
 
     .line 313
     .line 314
@@ -848,18 +848,18 @@
 
     .line 325
     :goto_2
-    xor-int/lit8 v2, v0, -0x1
+    xor-int/lit8 v4, v0, -0x1
 
     .line 326
     .line 327
-    and-int/2addr v2, v8
+    and-int/2addr v4, v7
 
     .line 328
     iget-object v1, p0, Landroidx/appcompat/widget/SwitchCompat;->A0g:Landroid/text/TextPaint;
 
     .line 329
     .line 330
-    and-int/lit8 v0, v2, 0x1
+    and-int/lit8 v0, v4, 0x1
 
     .line 331
     .line 332
@@ -867,16 +867,16 @@
 
     .line 333
     .line 334
-    const/4 v7, 0x1
+    const/4 v6, 0x1
 
     .line 335
     :cond_c
-    invoke-virtual {v1, v7}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
+    invoke-virtual {v1, v6}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
     .line 336
     .line 337
     .line 338
-    and-int/lit8 v0, v2, 0x2
+    and-int/lit8 v0, v4, 0x2
 
     .line 339
     .line 340
@@ -884,12 +884,12 @@
 
     .line 341
     .line 342
-    const/high16 v6, -0x41800000    # -0.25f
+    const/high16 v5, -0x41800000    # -0.25f
 
     .line 343
     .line 344
     :cond_d
-    invoke-virtual {v1, v6}, Landroid/graphics/Paint;->setTextSkewX(F)V
+    invoke-virtual {v1, v5}, Landroid/graphics/Paint;->setTextSkewX(F)V
 
     .line 345
     .line 346
@@ -899,7 +899,7 @@
 
     .line 348
     .line 349
-    invoke-virtual {v3, v0, v5}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v2, v0, v14}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 350
     .line 351
@@ -911,11 +911,11 @@
 
     .line 354
     .line 355
-    new-instance v0, LX/4O3;
+    new-instance v0, LX/4Bb;
 
     .line 356
     .line 357
-    invoke-direct {v0, v4}, LX/4O3;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v3}, LX/4Bb;-><init>(Landroid/content/Context;)V
 
     .line 358
     .line 359
@@ -943,36 +943,36 @@
     .line 370
     .line 371
     .line 372
-    invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
+    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 373
     .line 374
     .line 375
     :cond_e
-    new-instance v0, LX/4Wu;
+    new-instance v0, LX/4SI;
 
     .line 376
     .line 377
-    invoke-direct {v0, p0}, LX/4Wu;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v0, p0}, LX/4SI;-><init>(Landroid/widget/TextView;)V
 
     .line 378
     .line 379
     .line 380
-    iput-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0h:LX/4Wu;
+    iput-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0h:LX/4SI;
 
     .line 381
     .line 382
-    invoke-virtual {v0, v11, v14}, LX/4Wu;->A0D(Landroid/util/AttributeSet;I)V
+    invoke-virtual {v0, v10, v13}, LX/4SI;->A0D(Landroid/util/AttributeSet;I)V
 
     .line 383
     .line 384
     .line 385
-    invoke-virtual {v10}, Landroid/content/res/TypedArray;->recycle()V
+    invoke-virtual {v9}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 386
     .line 387
     .line 388
-    invoke-static {v9}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+    invoke-static {v8}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     .line 389
     .line 390
@@ -1004,7 +1004,7 @@
 
     .line 403
     .line 404
-    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4Vg;
+    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4S4;
 
     .line 405
     .line 406
@@ -1012,7 +1012,7 @@
     move-result-object v0
 
     .line 408
-    invoke-virtual {v0, v11, v14}, LX/4Vg;->A00(Landroid/util/AttributeSet;I)V
+    invoke-virtual {v0, v10, v13}, LX/4S4;->A00(Landroid/util/AttributeSet;I)V
 
     .line 409
     .line 410
@@ -1053,7 +1053,7 @@
 
     .line 426
     :cond_11
-    invoke-static {v1, v8}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
+    invoke-static {v1, v7}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
 
     .line 427
     .line 428
@@ -1069,12 +1069,12 @@
 
     .line 432
     .line 433
-    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
+    invoke-virtual {v0, v14}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
     .line 434
     .line 435
     .line 436
-    invoke-virtual {v0, v6}, Landroid/graphics/Paint;->setTextSkewX(F)V
+    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setTextSkewX(F)V
 
     .line 437
     .line 438
@@ -1136,7 +1136,7 @@
     move-result v0
 
     .line 9
-    invoke-static {v0}, LX/4BF;->A02(F)I
+    invoke-static {v0}, LX/433;->A03(F)I
 
     .line 10
     .line 11
@@ -1207,7 +1207,7 @@
     .line 11
     .line 12
     :cond_0
-    invoke-static {v1}, LX/4Z4;->A03(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1}, LX/4XA;->A03(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     .line 13
     .line 14
@@ -1231,7 +1231,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0, v1}, LX/4Z4;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, LX/4XA;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
 
     .line 25
     .line 26
@@ -1253,7 +1253,7 @@
 
     .line 34
     .line 35
-    invoke-static {v0, v1}, LX/4Z4;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, LX/4XA;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
 
     .line 36
     .line 37
@@ -1279,7 +1279,7 @@
 
     .line 47
     .line 48
-    invoke-static {v0, p0}, LX/4BD;->A14(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    invoke-static {v0, p0}, LX/432;->A16(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
     .line 49
     .line 50
@@ -1317,7 +1317,7 @@
     .line 11
     .line 12
     :cond_0
-    invoke-static {v1}, LX/4Z4;->A03(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1}, LX/4XA;->A03(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     .line 13
     .line 14
@@ -1341,7 +1341,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0, v1}, LX/4Z4;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, LX/4XA;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
 
     .line 25
     .line 26
@@ -1363,7 +1363,7 @@
 
     .line 34
     .line 35
-    invoke-static {v0, v1}, LX/4Z4;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, LX/4XA;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
 
     .line 36
     .line 37
@@ -1389,7 +1389,7 @@
 
     .line 47
     .line 48
-    invoke-static {v0, p0}, LX/4BD;->A14(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    invoke-static {v0, p0}, LX/432;->A16(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
     .line 49
     .line 50
@@ -1402,7 +1402,7 @@
     .locals 3
 
     .line 0
-    iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0V:LX/4Ve;
+    iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0V:LX/4S2;
 
     .line 1
     .line 2
@@ -1410,19 +1410,19 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0U:LX/4Vg;
+    iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0U:LX/4S4;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/4Vg;->A00:LX/4Vh;
+    iget-object v0, v0, LX/4S4;->A00:LX/4S7;
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/4Vh;->A00:LX/4Vf;
+    iget-object v0, v0, LX/4S7;->A00:LX/4S5;
 
     .line 9
     .line 10
-    invoke-virtual {v0}, LX/4Vf;->A03()Z
+    invoke-virtual {v0}, LX/4S5;->A03()Z
 
     .line 11
     .line 12
@@ -1434,7 +1434,7 @@
 
     .line 15
     .line 16
-    sget-object v0, LX/4dz;->A0A:LX/4dz;
+    sget-object v0, LX/4Sn;->A0A:LX/4Sn;
 
     .line 17
     .line 18
@@ -1442,7 +1442,7 @@
 
     .line 19
     .line 20
-    invoke-static {}, LX/4dz;->A00()LX/4dz;
+    invoke-static {}, LX/4Sn;->A00()LX/4Sn;
 
     .line 21
     .line 22
@@ -1450,7 +1450,7 @@
     move-result-object v2
 
     .line 24
-    invoke-virtual {v2}, LX/4dz;->A03()I
+    invoke-virtual {v2}, LX/4Sn;->A03()I
 
     .line 25
     .line 26
@@ -1470,20 +1470,20 @@
     .line 32
     .line 33
     :cond_0
-    new-instance v0, LX/4Ve;
+    new-instance v0, LX/4S2;
 
     .line 34
     .line 35
-    invoke-direct {v0, p0}, LX/4Ve;-><init>(Landroidx/appcompat/widget/SwitchCompat;)V
+    invoke-direct {v0, p0}, LX/4S2;-><init>(Landroidx/appcompat/widget/SwitchCompat;)V
 
     .line 36
     .line 37
     .line 38
-    iput-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0V:LX/4Ve;
+    iput-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0V:LX/4S2;
 
     .line 39
     .line 40
-    invoke-virtual {v2, v0}, LX/4dz;->A06(LX/4WM;)V
+    invoke-virtual {v2, v0}, LX/4Sn;->A06(LX/4Ta;)V
 
     .line 41
     .line 42
@@ -1492,11 +1492,11 @@
     return-void
 .end method
 
-.method private getEmojiTextViewHelper()LX/4Vg;
+.method private getEmojiTextViewHelper()LX/4S4;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0U:LX/4Vg;
+    iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0U:LX/4S4;
 
     .line 1
     .line 2
@@ -1504,16 +1504,16 @@
 
     .line 3
     .line 4
-    new-instance v0, LX/4Vg;
+    new-instance v0, LX/4S4;
 
     .line 5
     .line 6
-    invoke-direct {v0, p0}, LX/4Vg;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v0, p0}, LX/4S4;-><init>(Landroid/widget/TextView;)V
 
     .line 7
     .line 8
     .line 9
-    iput-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0U:LX/4Vg;
+    iput-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0U:LX/4S4;
 
     .line 10
     .line 11
@@ -1537,7 +1537,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/001;->A1N(I)Z
+    invoke-static {v0}, LX/001;->A1M(I)Z
 
     .line 7
     .line 8
@@ -1552,7 +1552,7 @@
     .locals 2
 
     .line 0
-    invoke-static {p0}, LX/03G;->A03(Landroid/view/View;)I
+    invoke-static {p0}, LX/03U;->A04(Landroid/view/View;)I
 
     .line 1
     .line 2
@@ -1590,7 +1590,7 @@
     int-to-float v0, v0
 
     .line 17
-    invoke-static {v1, v0}, LX/4BE;->A05(FF)I
+    invoke-static {v1, v0}, LX/433;->A04(FF)I
 
     .line 18
     .line 19
@@ -1638,7 +1638,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/4Vd;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v0}, LX/4Rs;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     .line 14
     .line 15
@@ -1690,7 +1690,7 @@
 
     .line 35
     :cond_0
-    sget-object v2, LX/4Vd;->A00:Landroid/graphics/Rect;
+    sget-object v2, LX/4Rs;->A00:Landroid/graphics/Rect;
 
     .line 36
     .line 37
@@ -1712,7 +1712,7 @@
 
     .line 1
     .line 2
-    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4Vg;
+    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4S4;
 
     .line 3
     .line 4
@@ -1724,15 +1724,15 @@
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/4Vg;->A00:LX/4Vh;
+    iget-object v0, v0, LX/4S4;->A00:LX/4S7;
 
     .line 9
     .line 10
-    iget-object v0, v0, LX/4Vh;->A00:LX/4Vf;
+    iget-object v0, v0, LX/4S7;->A00:LX/4S5;
 
     .line 11
     .line 12
-    invoke-virtual {v0, v1}, LX/4Vf;->A00(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+    invoke-virtual {v0, v1}, LX/4S5;->A00(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
 
     .line 13
     .line 14
@@ -1789,7 +1789,7 @@
 
     .line 1
     .line 2
-    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4Vg;
+    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4S4;
 
     .line 3
     .line 4
@@ -1801,15 +1801,15 @@
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/4Vg;->A00:LX/4Vh;
+    iget-object v0, v0, LX/4S4;->A00:LX/4S7;
 
     .line 9
     .line 10
-    iget-object v0, v0, LX/4Vh;->A00:LX/4Vf;
+    iget-object v0, v0, LX/4S7;->A00:LX/4S5;
 
     .line 11
     .line 12
-    invoke-virtual {v0, v1}, LX/4Vf;->A00(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+    invoke-virtual {v0, v1}, LX/4S5;->A00(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
 
     .line 13
     .line 14
@@ -1933,7 +1933,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/4Vd;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v0}, LX/4Rs;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     .line 20
     .line 21
@@ -2108,7 +2108,7 @@
 
     .line 99
     .line 100
-    invoke-static {v0, v1, v5, v3, v4}, LX/4Z4;->A0C(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-static {v0, v1, v5, v3, v4}, LX/4XA;->A0C(Landroid/graphics/drawable/Drawable;IIII)V
 
     .line 101
     .line 102
@@ -2123,7 +2123,7 @@
 
     .line 107
     :cond_6
-    sget-object v2, LX/4Vd;->A00:Landroid/graphics/Rect;
+    sget-object v2, LX/4Rs;->A00:Landroid/graphics/Rect;
 
     .line 108
     .line 109
@@ -2160,7 +2160,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0, p1, p2}, LX/4Z4;->A0A(Landroid/graphics/drawable/Drawable;FF)V
+    invoke-static {v0, p1, p2}, LX/4XA;->A0A(Landroid/graphics/drawable/Drawable;FF)V
 
     .line 14
     .line 15
@@ -2174,7 +2174,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0, p1, p2}, LX/4Z4;->A0A(Landroid/graphics/drawable/Drawable;FF)V
+    invoke-static {v0, p1, p2}, LX/4XA;->A0A(Landroid/graphics/drawable/Drawable;FF)V
 
     .line 21
     .line 22
@@ -2284,7 +2284,7 @@
     .locals 2
 
     .line 0
-    invoke-static {p0}, LX/4BD;->A1Y(Landroid/view/View;)Z
+    invoke-static {p0}, LX/431;->A1W(Landroid/view/View;)Z
 
     .line 1
     .line 2
@@ -2346,7 +2346,7 @@
     .locals 2
 
     .line 0
-    invoke-static {p0}, LX/4BD;->A1Y(Landroid/view/View;)Z
+    invoke-static {p0}, LX/431;->A1W(Landroid/view/View;)Z
 
     .line 1
     .line 2
@@ -2416,7 +2416,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, LX/4Wz;->A02(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;
+    invoke-static {v0}, LX/4SQ;->A02(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;
 
     .line 5
     .line 6
@@ -2768,7 +2768,7 @@
 
     .line 31
     .line 32
-    invoke-static {v8}, LX/4Vd;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v8}, LX/4Rs;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     .line 33
     .line 34
@@ -3120,7 +3120,7 @@
     .line 21
     .line 22
     :goto_0
-    invoke-static {p1, v0}, LX/4BE;->A1F(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
+    invoke-static {p1, v0}, LX/433;->A1B(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
 
     .line 23
     .line 24
@@ -3179,7 +3179,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/4Vd;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v0}, LX/4Rs;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     .line 20
     .line 21
@@ -3195,7 +3195,7 @@
 
     .line 26
     .line 27
-    invoke-static {v1, v0, v5}, LX/4BE;->A0B(III)I
+    invoke-static {v1, v0, v5}, LX/433;->A09(III)I
 
     .line 28
     .line 29
@@ -3211,7 +3211,7 @@
 
     .line 34
     .line 35
-    invoke-static {v1, v0, v5}, LX/4BE;->A0B(III)I
+    invoke-static {v1, v0, v5}, LX/433;->A09(III)I
 
     .line 36
     .line 37
@@ -3220,7 +3220,7 @@
 
     .line 39
     :goto_1
-    invoke-static {p0}, LX/03G;->A03(Landroid/view/View;)I
+    invoke-static {p0}, LX/03U;->A04(Landroid/view/View;)I
 
     .line 40
     .line 41
@@ -3325,7 +3325,7 @@
 
     .line 86
     :cond_0
-    invoke-static {p0}, LX/4BD;->A08(Landroid/view/View;)I
+    invoke-static {p0}, LX/432;->A06(Landroid/view/View;)I
 
     .line 87
     .line 88
@@ -3364,7 +3364,7 @@
     add-int/2addr v2, v1
 
     .line 104
-    invoke-static {p0, v2}, LX/4BF;->A0D(Landroid/view/View;I)I
+    invoke-static {p0, v2}, LX/434;->A0D(Landroid/view/View;I)I
 
     .line 105
     .line 106
@@ -3391,7 +3391,7 @@
 
     .line 116
     :cond_2
-    invoke-static {p0}, LX/4BD;->A09(Landroid/view/View;)I
+    invoke-static {p0}, LX/432;->A07(Landroid/view/View;)I
 
     .line 117
     .line 118
@@ -3662,7 +3662,7 @@
 
     .line 107
     .line 108
-    invoke-static {v0}, LX/4Vd;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v0}, LX/4Rs;->A01(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     .line 109
     .line 110
@@ -3718,7 +3718,7 @@
     add-int/2addr v0, v3
 
     .line 135
-    invoke-static {v0, v2, v1}, LX/4BE;->A0A(III)I
+    invoke-static {v0, v2, v1}, LX/434;->A05(III)I
 
     .line 136
     .line 137
@@ -3887,7 +3887,7 @@
     move-result v1
 
     .line 9
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
     .line 10
     if-eqz v1, :cond_13
@@ -3897,7 +3897,7 @@
     const/4 v6, 0x2
 
     .line 13
-    if-eq v1, v4, :cond_a
+    if-eq v1, v5, :cond_a
 
     .line 14
     .line 15
@@ -3930,7 +3930,7 @@
 
     .line 26
     .line 27
-    if-eq v0, v4, :cond_8
+    if-eq v0, v5, :cond_8
 
     .line 28
     .line 29
@@ -3962,7 +3962,7 @@
 
     .line 42
     .line 43
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     .line 44
     if-eqz v2, :cond_7
@@ -3977,7 +3977,7 @@
     .line 48
     :cond_2
     :goto_1
-    invoke-static {p0}, LX/03G;->A03(Landroid/view/View;)I
+    invoke-static {p0}, LX/03U;->A04(Landroid/view/View;)I
 
     .line 49
     .line 50
@@ -3985,7 +3985,7 @@
     move-result v0
 
     .line 52
-    if-ne v0, v4, :cond_3
+    if-ne v0, v5, :cond_3
 
     .line 53
     .line 54
@@ -4005,7 +4005,7 @@
 
     .line 60
     .line 61
-    cmpg-float v0, v2, v5
+    cmpg-float v0, v2, v4
 
     .line 62
     .line 63
@@ -4036,7 +4036,7 @@
     .line 74
     .line 75
     :cond_5
-    return v4
+    return v5
 
     .line 76
     :cond_6
@@ -4056,7 +4056,7 @@
 
     .line 83
     :cond_7
-    cmpl-float v0, v1, v5
+    cmpl-float v0, v1, v4
 
     .line 84
     .line 85
@@ -4081,7 +4081,7 @@
     .line 93
     .line 94
     .line 95
-    move-result v5
+    move-result v4
 
     .line 96
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
@@ -4096,7 +4096,7 @@
 
     .line 101
     .line 102
-    invoke-static {v5, v0}, LX/4BE;->A01(FF)F
+    invoke-static {v4, v0}, LX/433;->A01(FF)F
 
     .line 103
     .line 104
@@ -4123,7 +4123,7 @@
 
     .line 114
     .line 115
-    invoke-static {v3, v0}, LX/4BE;->A01(FF)F
+    invoke-static {v3, v0}, LX/433;->A01(FF)F
 
     .line 116
     .line 117
@@ -4144,12 +4144,12 @@
 
     .line 124
     .line 125
-    invoke-static {p0, v4}, LX/4BE;->A1E(Landroid/view/View;Z)V
+    invoke-static {p0, v5}, LX/434;->A1Q(Landroid/view/View;Z)V
 
     .line 126
     .line 127
     .line 128
-    iput v5, p0, Landroidx/appcompat/widget/SwitchCompat;->A0F:F
+    iput v4, p0, Landroidx/appcompat/widget/SwitchCompat;->A0F:F
 
     .line 129
     .line 130
@@ -4157,7 +4157,7 @@
 
     .line 131
     .line 132
-    return v4
+    return v5
 
     .line 133
     :cond_a
@@ -4184,10 +4184,10 @@
     move-result v0
 
     .line 144
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
     .line 145
-    if-ne v0, v4, :cond_b
+    if-ne v0, v5, :cond_b
 
     .line 146
     .line 147
@@ -4263,7 +4263,7 @@
 
     .line 180
     .line 181
-    invoke-static {p0}, LX/4BE;->A1a(Landroid/view/View;)Z
+    invoke-static {p0}, LX/433;->A1W(Landroid/view/View;)Z
 
     .line 182
     .line 183
@@ -4287,7 +4287,7 @@
     .line 191
     .line 192
     :goto_3
-    if-eq v5, v3, :cond_d
+    if-eq v4, v3, :cond_d
 
     .line 193
     .line 194
@@ -4297,7 +4297,7 @@
     .line 196
     .line 197
     :cond_d
-    invoke-virtual {p0, v5}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
+    invoke-virtual {p0, v4}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
     .line 198
     .line 199
@@ -4333,7 +4333,7 @@
     .line 215
     .line 216
     .line 217
-    return v4
+    return v5
 
     .line 218
     :cond_e
@@ -4349,7 +4349,7 @@
 
     .line 223
     :cond_f
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     .line 224
     goto :goto_3
@@ -4361,14 +4361,14 @@
     .line 226
     .line 227
     .line 228
-    move-result v5
+    move-result v4
 
     .line 229
     goto :goto_3
 
     .line 230
     :cond_11
-    move v5, v3
+    move v4, v3
 
     .line 231
     goto :goto_3
@@ -4433,7 +4433,7 @@
     .line 259
     .line 260
     .line 261
-    move-result v5
+    move-result v4
 
     .line 262
     iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->A0A:Landroid/graphics/drawable/Drawable;
@@ -4464,34 +4464,34 @@
 
     .line 275
     .line 276
-    add-int/2addr v6, v5
+    add-int/2addr v6, v4
 
     .line 277
     sub-int/2addr v6, v7
 
     .line 278
-    iget v5, p0, Landroidx/appcompat/widget/SwitchCompat;->A05:I
+    iget v4, p0, Landroidx/appcompat/widget/SwitchCompat;->A05:I
 
     .line 279
     .line 280
-    add-int/2addr v5, v6
+    add-int/2addr v4, v6
 
     .line 281
     iget v0, v1, Landroid/graphics/Rect;->left:I
 
     .line 282
     .line 283
-    add-int/2addr v5, v0
+    add-int/2addr v4, v0
 
     .line 284
     iget v0, v1, Landroid/graphics/Rect;->right:I
 
     .line 285
     .line 286
-    add-int/2addr v5, v0
+    add-int/2addr v4, v0
 
     .line 287
-    add-int/2addr v5, v7
+    add-int/2addr v4, v7
 
     .line 288
     iget v1, p0, Landroidx/appcompat/widget/SwitchCompat;->A02:I
@@ -4512,7 +4512,7 @@
 
     .line 295
     .line 296
-    int-to-float v0, v5
+    int-to-float v0, v4
 
     .line 297
     cmpg-float v0, v3, v0
@@ -4545,7 +4545,7 @@
 
     .line 310
     .line 311
-    iput v4, p0, Landroidx/appcompat/widget/SwitchCompat;->A06:I
+    iput v5, p0, Landroidx/appcompat/widget/SwitchCompat;->A06:I
 
     .line 312
     .line 313
@@ -4569,7 +4569,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4Vg;
+    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4S4;
 
     .line 4
     .line 5
@@ -4577,15 +4577,15 @@
     move-result-object v0
 
     .line 7
-    iget-object v0, v0, LX/4Vg;->A00:LX/4Vh;
+    iget-object v0, v0, LX/4S4;->A00:LX/4S7;
 
     .line 8
     .line 9
-    iget-object v0, v0, LX/4Vh;->A00:LX/4Vf;
+    iget-object v0, v0, LX/4S7;->A00:LX/4S5;
 
     .line 10
     .line 11
-    invoke-virtual {v0, p1}, LX/4Vf;->A01(Z)V
+    invoke-virtual {v0, p1}, LX/4S5;->A01(Z)V
 
     .line 12
     .line 13
@@ -4642,7 +4642,7 @@
     move-result-object v1
 
     .line 23
-    const v0, 0x7f120118
+    const v0, 0x7f1100dd
 
     .line 24
     .line 25
@@ -4657,7 +4657,7 @@
 
     .line 30
     :cond_0
-    invoke-static {p0, v0}, LX/03G;->A0g(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v0}, LX/03U;->A0k(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 31
     .line 32
@@ -4675,7 +4675,7 @@
 
     .line 38
     .line 39
-    invoke-static {p0}, LX/03G;->A0m(Landroid/view/View;)Z
+    invoke-static {p0}, LX/03U;->A0u(Landroid/view/View;)Z
 
     .line 40
     .line 41
@@ -4750,7 +4750,7 @@
 
     .line 74
     .line 75
-    invoke-static {v0}, LX/4Vr;->A00(Landroid/animation/ObjectAnimator;)V
+    invoke-static {v0}, LX/4S0;->A00(Landroid/animation/ObjectAnimator;)V
 
     .line 76
     .line 77
@@ -4789,7 +4789,7 @@
     move-result-object v1
 
     .line 94
-    const v0, 0x7f120117
+    const v0, 0x7f1100dc
 
     .line 95
     .line 96
@@ -4836,7 +4836,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p0}, LX/4Wz;->A03(Landroid/view/ActionMode$Callback;Landroid/widget/TextView;)Landroid/view/ActionMode$Callback;
+    invoke-static {p1, p0}, LX/4SQ;->A03(Landroid/view/ActionMode$Callback;Landroid/widget/TextView;)Landroid/view/ActionMode$Callback;
 
     .line 1
     .line 2
@@ -4856,7 +4856,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4Vg;
+    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4S4;
 
     .line 1
     .line 2
@@ -4864,15 +4864,15 @@
     move-result-object v0
 
     .line 4
-    iget-object v0, v0, LX/4Vg;->A00:LX/4Vh;
+    iget-object v0, v0, LX/4S4;->A00:LX/4S7;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/4Vh;->A00:LX/4Vf;
+    iget-object v0, v0, LX/4S7;->A00:LX/4S5;
 
     .line 7
     .line 8
-    invoke-virtual {v0, p1}, LX/4Vf;->A02(Z)V
+    invoke-virtual {v0, p1}, LX/4S5;->A02(Z)V
 
     .line 9
     .line 10
@@ -4923,7 +4923,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4Vg;
+    invoke-direct {p0}, Landroidx/appcompat/widget/SwitchCompat;->getEmojiTextViewHelper()LX/4S4;
 
     .line 1
     .line 2
@@ -4931,15 +4931,15 @@
     move-result-object v0
 
     .line 4
-    iget-object v0, v0, LX/4Vg;->A00:LX/4Vh;
+    iget-object v0, v0, LX/4S4;->A00:LX/4S7;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/4Vh;->A00:LX/4Vf;
+    iget-object v0, v0, LX/4S7;->A00:LX/4S5;
 
     .line 7
     .line 8
-    invoke-virtual {v0, p1}, LX/4Vf;->A04([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+    invoke-virtual {v0, p1}, LX/4S5;->A04([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
 
     .line 9
     .line 10
@@ -5168,7 +5168,7 @@
     move-result-object v1
 
     .line 26
-    const v0, 0x7f120117
+    const v0, 0x7f1100dc
 
     .line 27
     .line 28
@@ -5182,7 +5182,7 @@
 
     .line 33
     :cond_0
-    invoke-static {p0, v0}, LX/03G;->A0g(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v0}, LX/03U;->A0k(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 34
     .line 35
@@ -5245,7 +5245,7 @@
     move-result-object v1
 
     .line 26
-    const v0, 0x7f120118
+    const v0, 0x7f1100dd
 
     .line 27
     .line 28
@@ -5259,7 +5259,7 @@
 
     .line 33
     :cond_0
-    invoke-static {p0, v0}, LX/03G;->A0g(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v0}, LX/03U;->A0k(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 34
     .line 35
@@ -5276,7 +5276,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/4BD;->A12(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, LX/431;->A0t(Landroid/graphics/drawable/Drawable;)V
 
     .line 3
     .line 4
@@ -5323,7 +5323,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0, p1}, LX/4Wb;->A03(Landroid/view/View;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, p1}, LX/431;->A0I(Landroid/view/View;I)Landroid/graphics/drawable/Drawable;
 
     .line 1
     .line 2
@@ -5409,7 +5409,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/4BD;->A12(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, LX/431;->A0t(Landroid/graphics/drawable/Drawable;)V
 
     .line 3
     .line 4
@@ -5440,7 +5440,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0, p1}, LX/4Wb;->A03(Landroid/view/View;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, p1}, LX/431;->A0I(Landroid/view/View;I)Landroid/graphics/drawable/Drawable;
 
     .line 1
     .line 2

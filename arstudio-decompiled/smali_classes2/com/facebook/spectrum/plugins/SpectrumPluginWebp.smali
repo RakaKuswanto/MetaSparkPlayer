@@ -80,7 +80,7 @@
     .line 13
     .line 14
     .line 15
-    invoke-static {v0}, LX/3BP;->A00(Ljava/lang/String;)V
+    invoke-static {v0}, LX/2do;->A00(Ljava/lang/String;)V
 
     .line 16
     .line 17

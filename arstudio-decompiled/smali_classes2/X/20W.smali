@@ -1,49 +1,132 @@
 .class public final LX/20W;
-.super Ljava/io/File;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Lcom/facebook/quicklog/EventBuilder;
+
+
+# static fields
+.field public static final A00:LX/20W;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
+    new-instance v0, LX/20W;
 
     .line 1
     .line 2
+    invoke-direct {v0}, LX/20W;-><init>()V
+
     .line 3
-    move-result-object v0
-
     .line 4
-    invoke-direct {p0, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
     .line 5
+    sput-object v0, LX/20W;->A00:LX/20W;
+
     .line 6
     .line 7
     return-void
 .end method
 
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 536870912
-    invoke-direct {p0, p1, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
+
+# virtual methods
+.method public final annotate(Ljava/lang/String;D)Lcom/facebook/quicklog/EventBuilder;
     .locals 0
 
-    .line 268435456
-    invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    return-object p0
+.end method
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
+.method public final annotate(Ljava/lang/String;I)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final annotate(Ljava/lang/String;J)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final annotate(Ljava/lang/String;Z)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final annotate(Ljava/lang/String;[D)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final annotate(Ljava/lang/String;[I)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final annotate(Ljava/lang/String;[J)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final annotate(Ljava/lang/String;[Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final annotate(Ljava/lang/String;[Z)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final isSampled()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final report()V
+    .locals 0
+
     return-void
+.end method
+
+.method public final setActionId(S)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final setLevel(I)Lcom/facebook/quicklog/EventBuilder;
+    .locals 0
+
+    return-object p0
 .end method

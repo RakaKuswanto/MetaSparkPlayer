@@ -3,21 +3,19 @@
 .source ""
 
 # interfaces
-.implements LX/0Gh;
+.implements LX/0Fq;
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/0Na;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/0Na;
-
-.field public final A03:Ljava/lang/ThreadLocal;
+.field public final A02:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -26,7 +24,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A0B()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0A()LX/0lf;
 
     .line 4
     .line 5
@@ -34,11 +32,11 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A01:LX/0RP;
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
 
     .line 10
     .line 11
@@ -46,45 +44,33 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A00:LX/0RP;
 
     .line 14
     .line 15
-    new-instance v0, LX/37h;
+    new-instance v0, LX/1x4;
 
     .line 16
     .line 17
-    invoke-direct {v0, p0}, LX/37h;-><init>(Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;)V
+    invoke-direct {v0, p0}, LX/1x4;-><init>(Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;)V
 
     .line 18
     .line 19
     .line 20
-    iput-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A03:Ljava/lang/ThreadLocal;
+    iput-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A02:Ljava/lang/ThreadLocal;
 
     .line 21
     .line 22
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    iput-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A00:LX/1zG;
-
-    .line 27
-    .line 28
     return-void
 .end method
 
 
 # virtual methods
-.method public final ASw(Ljava/lang/String;Ljava/lang/String;)V
+.method public final ARL(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     .line 0
-    iget-object v2, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A03:Ljava/lang/ThreadLocal;
+    iget-object v2, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A02:Ljava/lang/ThreadLocal;
 
     .line 1
     .line 2
@@ -96,7 +82,7 @@
     move-result-object v0
 
     .line 6
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
 
     .line 7
     .line 8
@@ -108,7 +94,7 @@
 
     .line 11
     .line 12
-    invoke-static {}, LX/0Yf;->A0P()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0V()Ljava/lang/Boolean;
 
     .line 13
     .line 14
@@ -121,11 +107,11 @@
     .line 17
     .line 18
     .line 19
-    iget-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A02:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/common/errorreporting/ErrorReporterQplBridgeImpl;->A01:LX/0RP;
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/0Yg;->A0P(LX/0Na;)Lcom/facebook/quicklog/QuickPerformanceLogger;
+    invoke-static {v0}, LX/0X4;->A0S(LX/0RP;)Lcom/facebook/quicklog/QuickPerformanceLogger;
 
     .line 22
     .line 23
@@ -162,12 +148,12 @@
     .line 38
     .line 39
     .line 40
-    invoke-static {v1, v0, p2}, LX/0Yf;->A12(Lcom/facebook/quicklog/EventBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0, p2}, LX/0X3;->A1C(Lcom/facebook/quicklog/EventBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 41
     .line 42
     .line 43
-    invoke-static {}, LX/0Yf;->A0O()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
 
     .line 44
     .line 45

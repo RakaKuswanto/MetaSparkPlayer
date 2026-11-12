@@ -32,289 +32,417 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 16
+.method public static synthetic $values()[Lcom/google/errorprone/annotations/Modifier;
+    .locals 3
 
     .line 0
-    const-string v0, "PUBLIC"
+    const/16 v0, 0xc
 
     .line 1
     .line 2
-    const/4 v14, 0x0
+    new-array v2, v0, [Lcom/google/errorprone/annotations/Modifier;
 
     .line 3
-    new-instance v13, Lcom/google/errorprone/annotations/Modifier;
+    .line 4
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->PUBLIC:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->PROTECTED:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    aput-object v1, v2, v0
+
+    .line 13
+    .line 14
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->PRIVATE:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 15
+    .line 16
+    const/4 v0, 0x2
+
+    .line 17
+    aput-object v1, v2, v0
+
+    .line 18
+    .line 19
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->ABSTRACT:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 20
+    .line 21
+    const/4 v0, 0x3
+
+    .line 22
+    aput-object v1, v2, v0
+
+    .line 23
+    .line 24
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->DEFAULT:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 25
+    .line 26
+    const/4 v0, 0x4
+
+    .line 27
+    aput-object v1, v2, v0
+
+    .line 28
+    .line 29
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->STATIC:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 30
+    .line 31
+    const/4 v0, 0x5
+
+    .line 32
+    aput-object v1, v2, v0
+
+    .line 33
+    .line 34
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->FINAL:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 35
+    .line 36
+    const/4 v0, 0x6
+
+    .line 37
+    aput-object v1, v2, v0
+
+    .line 38
+    .line 39
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->TRANSIENT:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 40
+    .line 41
+    const/4 v0, 0x7
+
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
+    .line 44
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->VOLATILE:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 45
+    .line 46
+    const/16 v0, 0x8
+
+    .line 47
+    .line 48
+    aput-object v1, v2, v0
+
+    .line 49
+    .line 50
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->SYNCHRONIZED:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 51
+    .line 52
+    const/16 v0, 0x9
+
+    .line 53
+    .line 54
+    aput-object v1, v2, v0
+
+    .line 55
+    .line 56
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->NATIVE:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 57
+    .line 58
+    const/16 v0, 0xa
+
+    .line 59
+    .line 60
+    aput-object v1, v2, v0
+
+    .line 61
+    .line 62
+    sget-object v1, Lcom/google/errorprone/annotations/Modifier;->STRICTFP:Lcom/google/errorprone/annotations/Modifier;
+
+    .line 63
+    .line 64
+    const/16 v0, 0xb
+
+    .line 65
+    .line 66
+    aput-object v1, v2, v0
+
+    .line 67
+    .line 68
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "PUBLIC"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 4
     .line 5
-    invoke-direct {v13, v0, v14}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v13, Lcom/google/errorprone/annotations/Modifier;->PUBLIC:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->PUBLIC:Lcom/google/errorprone/annotations/Modifier;
 
     .line 9
     .line 10
-    const-string v0, "PROTECTED"
+    const-string v2, "PROTECTED"
 
     .line 11
     .line 12
-    const/4 v12, 0x1
+    const/4 v1, 0x1
 
     .line 13
-    new-instance v11, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 14
     .line 15
-    invoke-direct {v11, v0, v12}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v11, Lcom/google/errorprone/annotations/Modifier;->PROTECTED:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->PROTECTED:Lcom/google/errorprone/annotations/Modifier;
 
     .line 19
     .line 20
-    const-string v1, "PRIVATE"
+    const-string v2, "PRIVATE"
 
     .line 21
     .line 22
-    const/4 v0, 0x2
+    const/4 v1, 0x2
 
     .line 23
-    new-instance v10, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 24
     .line 25
-    invoke-direct {v10, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v10, Lcom/google/errorprone/annotations/Modifier;->PRIVATE:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->PRIVATE:Lcom/google/errorprone/annotations/Modifier;
 
     .line 29
     .line 30
-    const-string v1, "ABSTRACT"
+    const-string v2, "ABSTRACT"
 
     .line 31
     .line 32
-    const/4 v0, 0x3
+    const/4 v1, 0x3
 
     .line 33
-    new-instance v9, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 34
     .line 35
-    invoke-direct {v9, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 36
     .line 37
     .line 38
-    sput-object v9, Lcom/google/errorprone/annotations/Modifier;->ABSTRACT:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->ABSTRACT:Lcom/google/errorprone/annotations/Modifier;
 
     .line 39
     .line 40
-    const-string v1, "DEFAULT"
+    const-string v2, "DEFAULT"
 
     .line 41
     .line 42
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
     .line 43
-    new-instance v8, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 44
     .line 45
-    invoke-direct {v8, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 46
     .line 47
     .line 48
-    sput-object v8, Lcom/google/errorprone/annotations/Modifier;->DEFAULT:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->DEFAULT:Lcom/google/errorprone/annotations/Modifier;
 
     .line 49
     .line 50
-    const-string v1, "STATIC"
+    const-string v2, "STATIC"
 
     .line 51
     .line 52
-    const/4 v0, 0x5
+    const/4 v1, 0x5
 
     .line 53
-    new-instance v7, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 54
     .line 55
-    invoke-direct {v7, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 56
     .line 57
     .line 58
-    sput-object v7, Lcom/google/errorprone/annotations/Modifier;->STATIC:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->STATIC:Lcom/google/errorprone/annotations/Modifier;
 
     .line 59
     .line 60
-    const-string v1, "FINAL"
+    const-string v2, "FINAL"
 
     .line 61
     .line 62
-    const/4 v0, 0x6
+    const/4 v1, 0x6
 
     .line 63
-    new-instance v6, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 64
     .line 65
-    invoke-direct {v6, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 66
     .line 67
     .line 68
-    sput-object v6, Lcom/google/errorprone/annotations/Modifier;->FINAL:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->FINAL:Lcom/google/errorprone/annotations/Modifier;
 
     .line 69
     .line 70
-    const-string v1, "TRANSIENT"
+    const-string v2, "TRANSIENT"
 
     .line 71
     .line 72
-    const/4 v0, 0x7
+    const/4 v1, 0x7
 
     .line 73
-    new-instance v5, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 74
     .line 75
-    invoke-direct {v5, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 76
     .line 77
     .line 78
-    sput-object v5, Lcom/google/errorprone/annotations/Modifier;->TRANSIENT:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->TRANSIENT:Lcom/google/errorprone/annotations/Modifier;
 
     .line 79
     .line 80
-    const-string v1, "VOLATILE"
+    const-string v2, "VOLATILE"
 
     .line 81
     .line 82
-    const/16 v0, 0x8
+    const/16 v1, 0x8
 
     .line 83
     .line 84
-    new-instance v4, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 85
     .line 86
-    invoke-direct {v4, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 87
     .line 88
     .line 89
-    sput-object v4, Lcom/google/errorprone/annotations/Modifier;->VOLATILE:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->VOLATILE:Lcom/google/errorprone/annotations/Modifier;
 
     .line 90
     .line 91
-    const-string v1, "SYNCHRONIZED"
+    const-string v2, "SYNCHRONIZED"
 
     .line 92
     .line 93
-    const/16 v0, 0x9
+    const/16 v1, 0x9
 
     .line 94
     .line 95
-    new-instance v3, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 96
     .line 97
-    invoke-direct {v3, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 98
     .line 99
     .line 100
-    sput-object v3, Lcom/google/errorprone/annotations/Modifier;->SYNCHRONIZED:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->SYNCHRONIZED:Lcom/google/errorprone/annotations/Modifier;
 
     .line 101
     .line 102
-    const-string v1, "NATIVE"
+    const-string v2, "NATIVE"
 
     .line 103
     .line 104
-    const/16 v0, 0xa
+    const/16 v1, 0xa
 
     .line 105
     .line 106
-    new-instance v2, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 107
     .line 108
-    invoke-direct {v2, v1, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 109
     .line 110
     .line 111
-    sput-object v2, Lcom/google/errorprone/annotations/Modifier;->NATIVE:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->NATIVE:Lcom/google/errorprone/annotations/Modifier;
 
     .line 112
     .line 113
-    const-string v15, "STRICTFP"
+    const-string v2, "STRICTFP"
 
     .line 114
     .line 115
-    const/16 v0, 0xb
+    const/16 v1, 0xb
 
     .line 116
     .line 117
-    new-instance v1, Lcom/google/errorprone/annotations/Modifier;
+    new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     .line 118
     .line 119
-    invoke-direct {v1, v15, v0}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/errorprone/annotations/Modifier;-><init>(Ljava/lang/String;I)V
 
     .line 120
     .line 121
     .line 122
-    sput-object v1, Lcom/google/errorprone/annotations/Modifier;->STRICTFP:Lcom/google/errorprone/annotations/Modifier;
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->STRICTFP:Lcom/google/errorprone/annotations/Modifier;
 
     .line 123
     .line 124
-    const/16 v0, 0xc
+    invoke-static {}, Lcom/google/errorprone/annotations/Modifier;->$values()[Lcom/google/errorprone/annotations/Modifier;
 
     .line 125
     .line 126
-    new-array v0, v0, [Lcom/google/errorprone/annotations/Modifier;
-
     .line 127
+    move-result-object v0
+
     .line 128
-    aput-object v13, v0, v14
+    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->$VALUES:[Lcom/google/errorprone/annotations/Modifier;
 
     .line 129
     .line 130
-    aput-object v11, v0, v12
-
-    .line 131
-    .line 132
-    invoke-static {v10, v9, v8, v7, v0}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 133
-    .line 134
-    .line 135
-    invoke-static {v6, v5, v4, v3, v0}, LX/0Yc;->A0R(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 136
-    .line 137
-    .line 138
-    invoke-static {v0, v2, v1}, LX/0Yg;->A1J([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 139
-    .line 140
-    .line 141
-    sput-object v0, Lcom/google/errorprone/annotations/Modifier;->$VALUES:[Lcom/google/errorprone/annotations/Modifier;
-
-    .line 142
-    .line 143
     return-void
 .end method
 

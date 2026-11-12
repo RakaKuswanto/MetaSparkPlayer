@@ -22,6 +22,8 @@
 
 .field public static final enum LONG_VIDEO_TO_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
+.field public static final enum MAI_SCREENSHOT_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+
 .field public static final enum MID_VIDEO_TO_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
 .field public static final enum UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
@@ -40,19 +42,19 @@
 
     .line 1
     .line 2
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
     .line 3
-    new-instance v12, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v13, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 4
     .line 5
-    invoke-direct {v12, v0, v13, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v13, v0, v14, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 9
     .line 10
@@ -60,39 +62,39 @@
 
     .line 11
     .line 12
-    const/4 v11, 0x1
+    const/4 v12, 0x1
 
     .line 13
-    new-instance v10, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v11, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 14
     .line 15
-    invoke-direct {v10, v0, v11, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v11, v0, v12, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->ADVERTISER_PROFILE_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->ADVERTISER_PROFILE_CARD:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 19
     .line 20
-    const-string v0, "CAPTION_TO_CAROUSEL"
+    const-string v1, "CAPTION_TO_CAROUSEL"
 
     .line 21
     .line 22
-    const/4 v9, 0x2
+    const/4 v0, 0x2
 
     .line 23
-    new-instance v8, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v10, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 24
     .line 25
-    invoke-direct {v8, v0, v9, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v10, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->CAPTION_TO_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->CAPTION_TO_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 29
     .line 30
@@ -103,16 +105,16 @@
     const/4 v0, 0x3
 
     .line 33
-    new-instance v7, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v9, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 34
     .line 35
-    invoke-direct {v7, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v9, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 36
     .line 37
     .line 38
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->DYNAMIC_CAPTION_LINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->DYNAMIC_CAPTION_LINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 39
     .line 40
@@ -123,16 +125,16 @@
     const/4 v0, 0x4
 
     .line 43
-    new-instance v6, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v8, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 44
     .line 45
-    invoke-direct {v6, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v8, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 46
     .line 47
     .line 48
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->END_SCENE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->END_SCENE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 49
     .line 50
@@ -143,16 +145,16 @@
     const/4 v0, 0x5
 
     .line 53
-    new-instance v5, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v7, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 54
     .line 55
-    invoke-direct {v5, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v7, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 56
     .line 57
     .line 58
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->HEADLINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->HEADLINE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 59
     .line 60
@@ -163,16 +165,16 @@
     const/4 v0, 0x6
 
     .line 63
-    new-instance v4, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v6, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 64
     .line 65
-    invoke-direct {v4, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v6, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 66
     .line 67
     .line 68
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->LIGHTWEIGHT_CLICK_TO_MESSAGE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->LIGHTWEIGHT_CLICK_TO_MESSAGE:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 69
     .line 70
@@ -183,16 +185,16 @@
     const/4 v0, 0x7
 
     .line 73
-    new-instance v3, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v5, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 74
     .line 75
-    invoke-direct {v3, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v5, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 76
     .line 77
     .line 78
-    sput-object v3, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->LIGHTWEIGHT_LEADGEN_STICKER:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->LIGHTWEIGHT_LEADGEN_STICKER:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 79
     .line 80
@@ -204,20 +206,20 @@
 
     .line 83
     .line 84
-    new-instance v2, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v4, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 85
     .line 86
-    invoke-direct {v2, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v4, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 87
     .line 88
     .line 89
-    sput-object v2, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->LONG_VIDEO_TO_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->LONG_VIDEO_TO_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 90
     .line 91
-    const-string v14, "MID_VIDEO_TO_CAROUSEL"
+    const-string v1, "MAI_SCREENSHOT_CAROUSEL"
 
     .line 92
     .line 93
@@ -225,58 +227,79 @@
 
     .line 94
     .line 95
-    new-instance v1, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    new-instance v3, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 96
     .line 97
-    invoke-direct {v1, v14, v0, v14}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v3, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 98
     .line 99
     .line 100
-    sput-object v1, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->MID_VIDEO_TO_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    sput-object v3, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->MAI_SCREENSHOT_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 101
     .line 102
-    const/16 v0, 0xa
+    const-string v0, "MID_VIDEO_TO_CAROUSEL"
 
     .line 103
     .line 104
-    new-array v0, v0, [Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    const/16 v2, 0xa
 
     .line 105
     .line 106
-    aput-object v12, v0, v13
+    new-instance v1, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 107
     .line 108
-    aput-object v10, v0, v11
+    invoke-direct {v1, v0, v2, v0}, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 109
     .line 110
-    aput-object v8, v0, v9
-
     .line 111
-    .line 112
-    invoke-static {v0, v7, v6}, LX/0Ye;->A1T([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    sput-object v1, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->MID_VIDEO_TO_CAROUSEL:Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
+    .line 112
     .line 113
+    const/16 v0, 0xb
+
     .line 114
     .line 115
-    invoke-static {v5, v4, v3, v0}, LX/0Yc;->A1O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    new-array v0, v0, [Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
 
     .line 116
     .line 117
-    .line 118
-    invoke-static {v0, v2, v1}, LX/0Yh;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    aput-object v13, v0, v14
 
+    .line 118
     .line 119
+    aput-object v11, v0, v12
+
     .line 120
     .line 121
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+    invoke-static {v0, v10, v9}, LX/0X3;->A1V([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 122
     .line 123
+    .line 124
+    invoke-static {v8, v7, v6, v5, v0}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 125
+    .line 126
+    .line 127
+    invoke-static {v0, v4, v3}, LX/0X1;->A1U([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 128
+    .line 129
+    .line 130
+    aput-object v1, v0, v2
+
+    .line 131
+    .line 132
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLFBStoryAdsOptimizationType;
+
+    .line 133
+    .line 134
     return-void
 .end method
 
@@ -304,7 +327,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

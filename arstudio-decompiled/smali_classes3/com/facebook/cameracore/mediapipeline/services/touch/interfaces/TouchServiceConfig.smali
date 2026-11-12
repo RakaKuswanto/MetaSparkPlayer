@@ -16,9 +16,11 @@
 
 .field public final supportsTapGesture:Z
 
+.field public final usesTouchService:Z
+
 
 # direct methods
-.method public constructor <init>(ZZZZZZ)V
+.method public constructor <init>(ZZZZZZZ)V
     .locals 0
 
     .line 0
@@ -51,5 +53,9 @@
 
     .line 14
     .line 15
+    iput-boolean p7, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;->usesTouchService:Z
+
+    .line 16
+    .line 17
     return-void
 .end method

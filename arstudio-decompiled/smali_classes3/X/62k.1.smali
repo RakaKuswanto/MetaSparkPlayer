@@ -2,212 +2,269 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/66x;
+
+
+# instance fields
+.field public A00:LX/61z;
+
+.field public A01:LX/62V;
+
+.field public A02:LX/628;
+
+.field public A03:Z
+
+.field public final A04:LX/67A;
+
+.field public final A05:LX/69m;
+
+.field public final A06:LX/69T;
+
 
 # direct methods
-.method public static A00()Z
-    .locals 3
+.method public constructor <init>(LX/67A;LX/69m;)V
+    .locals 2
 
-    .line 0
-    sget v1, Lcom/google/android/exoplayer2/util/Util;->A00:I
+    .line 268435456
+    const/4 v1, 0x1
 
-    .line 1
-    .line 2
-    const/4 v2, 0x0
+    .line 268435457
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    const/16 v0, 0x11
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    iput-object p1, p0, LX/62k;->A04:LX/67A;
 
-    .line 4
-    .line 5
-    if-lt v1, v0, :cond_0
+    .line 268435461
+    .line 268435462
+    new-instance v0, LX/69T;
 
-    .line 6
-    .line 7
-    invoke-static {v2}, Landroid/opengl/EGL14;->eglGetDisplay(I)Landroid/opengl/EGLDisplay;
+    .line 268435463
+    .line 268435464
+    invoke-direct {v0, p1}, LX/69T;-><init>(LX/67A;)V
 
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v1
+    .line 268435465
+    .line 268435466
+    .line 268435467
+    iput-object v0, p0, LX/62k;->A06:LX/69T;
 
-    .line 11
-    const/16 v0, 0x3055
+    .line 268435468
+    .line 268435469
+    iput-object p2, p0, LX/62k;->A05:LX/69m;
 
-    .line 12
-    .line 13
-    invoke-static {v1, v0}, Landroid/opengl/EGL14;->eglQueryString(Landroid/opengl/EGLDisplay;I)Ljava/lang/String;
+    .line 268435470
+    .line 268435471
+    iput-boolean v1, p0, LX/62k;->A03:Z
 
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v1
-
-    .line 17
-    if-eqz v1, :cond_0
-
-    .line 18
-    .line 19
-    const-string v0, "EGL_KHR_surfaceless_context"
-
-    .line 20
-    .line 21
-    invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v0
-
-    .line 25
-    if-eqz v0, :cond_0
-
-    .line 26
-    .line 27
-    const/4 v2, 0x1
-
-    .line 28
-    :cond_0
-    return v2
+    .line 268435472
+    .line 268435473
+    return-void
 .end method
 
-.method public static A01(Landroid/content/Context;)Z
-    .locals 3
+.method public constructor <init>(LX/67A;LX/69m;Z)V
+    .locals 2
 
     .line 0
-    sget v1, Lcom/google/android/exoplayer2/util/Util;->A00:I
+    const/4 v1, 0x0
 
     .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 2
-    const/4 v2, 0x0
-
     .line 3
-    const/16 v0, 0x18
-
     .line 4
+    iput-object p1, p0, LX/62k;->A04:LX/67A;
+
     .line 5
-    if-lt v1, v0, :cond_0
-
     .line 6
+    new-instance v0, LX/69T;
+
     .line 7
-    const/16 v0, 0x1a
-
     .line 8
-    .line 9
-    if-ge v1, v0, :cond_1
+    invoke-direct {v0, p1}, LX/69T;-><init>(LX/67A;)V
 
+    .line 9
     .line 10
     .line 11
-    sget-object v1, Lcom/google/android/exoplayer2/util/Util;->A03:Ljava/lang/String;
+    iput-object v0, p0, LX/62k;->A06:LX/69T;
 
     .line 12
     .line 13
-    const-string v0, "samsung"
+    iput-object p2, p0, LX/62k;->A05:LX/69m;
 
     .line 14
     .line 15
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-boolean v1, p0, LX/62k;->A03:Z
 
     .line 16
     .line 17
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A3w(LX/62V;)V
+    .locals 2
+
+    .line 0
+    iput-object p1, p0, LX/62k;->A01:LX/62V;
+
+    .line 1
+    .line 2
+    iget-object v1, p0, LX/62k;->A05:LX/69m;
+
+    .line 3
+    .line 4
+    instance-of v0, v1, LX/66x;
+
+    .line 5
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    check-cast v1, LX/66x;
+
+    .line 9
+    .line 10
+    invoke-interface {v1, p1}, LX/66x;->A3w(LX/62V;)V
+
+    .line 11
+    .line 12
+    .line 13
+    :cond_0
+    return-void
+.end method
+
+.method public final A7M()V
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x0
+
+    .line 1
+    iput-object v2, p0, LX/62k;->A01:LX/62V;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/62k;->A05:LX/69m;
+
+    .line 4
+    .line 5
+    instance-of v0, v1, LX/66x;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    check-cast v1, LX/66x;
+
+    .line 10
+    .line 11
+    invoke-interface {v1}, LX/66x;->A7M()V
+
+    .line 12
+    .line 13
+    .line 14
+    :cond_0
+    iget-object v0, p0, LX/62k;->A02:LX/628;
+
+    .line 15
+    .line 16
+    if-eqz v0, :cond_1
+
+    .line 17
     .line 18
-    move-result v0
+    invoke-virtual {v0}, LX/62j;->A7M()V
 
     .line 19
-    if-nez v0, :cond_0
-
     .line 20
     .line 21
-    sget-object v1, Lcom/google/android/exoplayer2/util/Util;->A04:Ljava/lang/String;
+    iget-object v0, p0, LX/62k;->A02:LX/628;
 
     .line 22
     .line 23
-    const-string v0, "XT1650"
+    iput-object v2, v0, LX/62j;->A00:LX/61z;
 
     .line 24
     .line 25
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-object v2, p0, LX/62k;->A02:LX/628;
 
     .line 26
     .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    if-nez v0, :cond_0
-
-    .line 30
-    .line 31
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v1
-
-    .line 35
-    const-string v0, "android.hardware.vr.high_performance"
-
-    .line 36
-    .line 37
-    invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
-
-    .line 38
-    .line 39
-    .line 40
-    move-result v0
-
-    .line 41
-    if-nez v0, :cond_1
-
-    .line 42
-    .line 43
-    :cond_0
-    return v2
-
-    .line 44
     :cond_1
-    invoke-static {v2}, Landroid/opengl/EGL14;->eglGetDisplay(I)Landroid/opengl/EGLDisplay;
+    return-void
+.end method
 
-    .line 45
-    .line 46
-    .line 47
-    move-result-object v1
+.method public final ANo(LX/61z;)V
+    .locals 2
 
-    .line 48
-    const/16 v0, 0x3055
+    .line 0
+    iput-object p1, p0, LX/62k;->A00:LX/61z;
 
-    .line 49
-    .line 50
-    invoke-static {v1, v0}, Landroid/opengl/EGL14;->eglQueryString(Landroid/opengl/EGLDisplay;I)Ljava/lang/String;
+    .line 1
+    .line 2
+    iget-object v1, p0, LX/62k;->A05:LX/69m;
 
-    .line 51
-    .line 52
-    .line 53
-    move-result-object v1
+    .line 3
+    .line 4
+    instance-of v0, v1, LX/66x;
 
-    .line 54
-    if-eqz v1, :cond_0
-
-    .line 55
-    .line 56
-    const-string v0, "EGL_EXT_protected_content"
-
-    .line 57
-    .line 58
-    invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    .line 59
-    .line 60
-    .line 61
-    move-result v0
-
-    .line 62
+    .line 5
+    .line 6
     if-eqz v0, :cond_0
 
-    .line 63
-    .line 64
-    const/4 v2, 0x1
+    .line 7
+    .line 8
+    check-cast v1, LX/66x;
 
-    .line 65
-    return v2
+    .line 9
+    .line 10
+    invoke-interface {v1, p1}, LX/66x;->ANo(LX/61z;)V
+
+    .line 11
+    .line 12
+    .line 13
+    :cond_0
+    return-void
+.end method
+
+.method public final release()V
+    .locals 2
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    iput-object v0, p0, LX/62k;->A00:LX/61z;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/62k;->A05:LX/69m;
+
+    .line 4
+    .line 5
+    instance-of v0, v1, LX/66x;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    check-cast v1, LX/66x;
+
+    .line 10
+    .line 11
+    invoke-interface {v1}, LX/66x;->release()V
+
+    .line 12
+    .line 13
+    .line 14
+    :cond_0
+    return-void
 .end method

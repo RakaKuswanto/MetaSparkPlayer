@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5gb;
+.field public static final Companion:LX/69y;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5gb;
+    new-instance v0, LX/69y;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5gb;-><init>()V
+    invoke-direct {v0}, LX/69y;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/logging/spars/xplatimpl/XplatSparsLogger;->Companion:LX/5gb;
+    sput-object v0, Lcom/facebook/cameracore/logging/spars/xplatimpl/XplatSparsLogger;->Companion:LX/69y;
 
     .line 6
     .line 7
@@ -33,7 +33,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -149,14 +149,14 @@
     return-object v0
 .end method
 
-.method public static final makeInstance(LX/5gj;)Lcom/facebook/cameracore/logging/spars/xplatimpl/XplatSparsLogger;
+.method public static final makeInstance(LX/6B6;)Lcom/facebook/cameracore/logging/spars/xplatimpl/XplatSparsLogger;
     .locals 2
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -165,7 +165,7 @@
 
     .line 5
     .line 6
-    invoke-direct {v1, p0}, Lcom/facebook/cameracore/logging/spars/xplatimpl/XplatRawEventLogger;-><init>(LX/5gj;)V
+    invoke-direct {v1, p0}, Lcom/facebook/cameracore/logging/spars/xplatimpl/XplatRawEventLogger;-><init>(LX/6B6;)V
 
     .line 7
     .line 8
@@ -220,7 +220,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -249,7 +249,7 @@
     move-object v4, p3
 
     .line 3
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0N(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2, p3}, LX/0X1;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 4
     .line 5
@@ -260,7 +260,7 @@
     move-object v6, p5
 
     .line 8
-    invoke-static {p5, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p5, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 9
     .line 10
@@ -272,7 +272,7 @@
 
     .line 13
     .line 14
-    invoke-static {v8, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v8, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 15
     .line 16

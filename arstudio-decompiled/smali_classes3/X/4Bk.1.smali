@@ -1,34 +1,36 @@
-.class public final LX/4Bk;
-.super Landroid/webkit/WebViewClient;
+.class public final synthetic LX/4Bk;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/util/function/Consumer;
+
+
+# instance fields
+.field public final synthetic A00:LX/4Be;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(LX/4Be;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p1, p0, LX/4Bk;->A00:LX/4Be;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final onRenderProcessGone(Landroid/webkit/WebView;Landroid/webkit/RenderProcessGoneDetail;)Z
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    .line 0
-    invoke-static {}, LX/4BP;->A00()V
+    iget-object v0, p0, LX/4Bk;->A00:LX/4Be;
 
-    .line 1
-    .line 2
-    .line 3
-    const/4 v0, 0x1
+    check-cast p1, LX/4Bf;
 
-    .line 4
-    return v0
+    invoke-virtual {v0, p1}, LX/4Be;->A07(LX/4Bf;)V
+
+    return-void
 .end method

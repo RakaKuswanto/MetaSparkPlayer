@@ -158,7 +158,7 @@
     move-exception v0
 
     .line 17
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 18
     .line 19
@@ -402,7 +402,7 @@
 
     .line 109
     :pswitch_1
-    const-string v0, "\\r"
+    const-string v0, "\\t"
 
     .line 110
     .line 111
@@ -410,7 +410,7 @@
 
     .line 112
     :pswitch_2
-    const-string v0, "\\t"
+    const-string v0, "\\n"
 
     .line 113
     .line 114
@@ -418,7 +418,7 @@
 
     .line 115
     :pswitch_3
-    const-string v0, "\\n"
+    const-string v0, "\\f"
 
     .line 116
     .line 117
@@ -426,7 +426,7 @@
 
     .line 118
     :pswitch_4
-    const-string v0, "\\f"
+    const-string v0, "\\r"
 
     .line 119
     .line 120
@@ -448,11 +448,11 @@
     .line 126
     :pswitch_data_0
     .packed-switch 0x9
-        :pswitch_2
-        :pswitch_3
-        :pswitch_0
-        :pswitch_4
         :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_3
+        :pswitch_4
     .end packed-switch
 .end method
 
@@ -559,7 +559,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v0}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 3
     .line 4
@@ -581,7 +581,7 @@
 
     .line 11
     .line 12
-    invoke-static {v4}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v4}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 13
     .line 14
@@ -761,7 +761,7 @@
 
     .line 37
     .line 38
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 39
     .line 40
@@ -950,7 +950,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {p0}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    invoke-static {p0}, LX/001;->A0d(Ljava/util/AbstractMap;)Ljava/util/Iterator;
 
     .line 11
     .line 12
@@ -972,7 +972,7 @@
 
     .line 19
     .line 20
-    invoke-static {v4}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v4}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 21
     .line 22
@@ -992,7 +992,7 @@
 
     .line 29
     .line 30
-    invoke-static {v1}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 31
     .line 32
@@ -1014,7 +1014,7 @@
     .line 40
     .line 41
     .line 42
-    invoke-static {v1}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 43
     .line 44
@@ -1037,7 +1037,7 @@
     const/4 v2, 0x0
 
     .line 53
-    invoke-static {v1}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 54
     .line 55
@@ -1071,7 +1071,7 @@
     .line 69
     .line 70
     :cond_1
-    invoke-static {v1, v5}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v5}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 71
     .line 72
@@ -1118,7 +1118,7 @@
     .line 268435464
     .line 268435465
     .line 268435466
-    invoke-static {p0}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    invoke-static {p0}, LX/001;->A0d(Ljava/util/AbstractMap;)Ljava/util/Iterator;
 
     .line 268435467
     .line 268435468
@@ -1140,7 +1140,7 @@
 
     .line 268435475
     .line 268435476
-    invoke-static {v4}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v4}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 268435477
     .line 268435478
@@ -1160,7 +1160,7 @@
 
     .line 268435485
     .line 268435486
-    invoke-static {v1}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 268435487
     .line 268435488
@@ -1182,7 +1182,7 @@
     .line 268435496
     .line 268435497
     .line 268435498
-    invoke-static {v1}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 268435499
     .line 268435500
@@ -1205,7 +1205,7 @@
     const/4 v2, 0x0
 
     .line 268435509
-    invoke-static {v1}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 268435510
     .line 268435511
@@ -1239,7 +1239,7 @@
     .line 268435525
     .line 268435526
     :cond_1
-    invoke-static {v1, v5}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v5}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 268435527
     .line 268435528
@@ -1312,73 +1312,69 @@
 
     .line 268435478
     .line 268435479
-    goto :goto_0
+    const-string v1, "ISO8859-1"
 
     .line 268435480
-    :cond_0
-    new-instance v1, Ljava/io/InputStreamReader;
-
     .line 268435481
-    .line 268435482
-    invoke-direct {v1, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+    new-instance v0, Ljava/io/InputStreamReader;
 
+    .line 268435482
     .line 268435483
+    invoke-direct {v0, v2, v1}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+
     .line 268435484
     .line 268435485
-    goto :goto_1
-
     .line 268435486
-    :goto_0
-    const-string v0, "ISO8859-1"
+    goto :goto_0
 
     .line 268435487
+    :cond_0
+    new-instance v0, Ljava/io/InputStreamReader;
+
     .line 268435488
-    new-instance v1, Ljava/io/InputStreamReader;
-
     .line 268435489
-    .line 268435490
-    invoke-direct {v1, v2, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
+    .line 268435490
     .line 268435491
     .line 268435492
-    .line 268435493
-    :goto_1
-    invoke-virtual {p0, v1}, Lcom/facebook/acra/CrashReportData;->load(Ljava/io/Reader;)V
+    :goto_0
+    invoke-virtual {p0, v0}, Lcom/facebook/acra/CrashReportData;->load(Ljava/io/Reader;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 268435493
     .line 268435494
     .line 268435495
-    .line 268435496
     monitor-exit p0
 
-    .line 268435497
+    .line 268435496
     return-void
 
-    .line 268435498
+    .line 268435497
     :cond_1
     :try_start_1
     new-instance v0, Ljava/lang/NullPointerException;
 
+    .line 268435498
     .line 268435499
-    .line 268435500
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
+    .line 268435500
     .line 268435501
     .line 268435502
-    .line 268435503
     throw v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 268435504
+    .line 268435503
     :catchall_0
     move-exception v0
 
-    .line 268435505
+    .line 268435504
     monitor-exit p0
 
-    .line 268435506
+    .line 268435505
     throw v0
 .end method
 
@@ -2030,40 +2026,40 @@
 
     .line 278
     .line 279
-    :goto_5
-    const-string v0, "luni.09"
-
-    .line 280
-    .line 281
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 282
-    .line 283
-    .line 284
-    move-result-object v0
-
-    .line 285
-    goto :goto_6
-
-    .line 286
     :cond_1f
     move/from16 v0, v17
 
-    .line 287
-    .line 288
+    .line 280
+    .line 281
     if-ne v6, v0, :cond_20
 
-    .line 289
-    .line 290
+    .line 282
+    .line 283
     if-gt v5, v11, :cond_20
 
-    .line 291
-    .line 292
+    .line 284
+    .line 285
     const-string v0, "luni.08"
+
+    .line 286
+    .line 287
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 288
+    .line 289
+    .line 290
+    move-result-object v0
+
+    .line 291
+    goto :goto_6
+
+    .line 292
+    :goto_5
+    const-string v0, "luni.09"
 
     .line 293
     .line 294
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 295
     .line 296
@@ -2129,7 +2125,7 @@
 
     .line 323
     .line 324
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 325
     .line 326
@@ -2137,7 +2133,7 @@
     move-result-object v0
 
     .line 328
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 329
     .line 330
@@ -2204,7 +2200,7 @@
 
     .line 13
     .line 14
-    invoke-static {v3}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    invoke-static {v3}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 15
     .line 16
@@ -2365,7 +2361,7 @@
 
     .line 4
     .line 5
-    invoke-static {p1}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {p1}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 6
     .line 7
@@ -2386,7 +2382,7 @@
 
     .line 14
     .line 15
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 16
     .line 17
@@ -2394,7 +2390,7 @@
     move-result-object v0
 
     .line 19
-    invoke-static {v0}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v0}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 20
     .line 21
@@ -2402,7 +2398,7 @@
     move-result-object v1
 
     .line 23
-    invoke-static {v0}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v0}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 24
     .line 25
@@ -2516,7 +2512,7 @@
     .line 5
     .line 6
     :cond_0
-    invoke-static {p0}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    invoke-static {p0}, LX/001;->A0d(Ljava/util/AbstractMap;)Ljava/util/Iterator;
 
     .line 7
     .line 8
@@ -2537,7 +2533,7 @@
 
     .line 15
     .line 16
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 17
     .line 18
@@ -2545,7 +2541,7 @@
     move-result-object v0
 
     .line 20
-    invoke-static {v0}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v0}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 21
     .line 22
@@ -2553,7 +2549,7 @@
     move-result-object v1
 
     .line 24
-    invoke-static {v0}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v0}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 25
     .line 26
@@ -2662,7 +2658,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1, p3, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p3, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 21
     .line 22
@@ -2695,7 +2691,7 @@
 
     .line 35
     .line 36
-    invoke-static {v1, p3, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p3, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 37
     .line 38
@@ -2820,7 +2816,7 @@
     .line 102
     .line 103
     :cond_0
-    invoke-static {p0}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    invoke-static {p0}, LX/001;->A0d(Ljava/util/AbstractMap;)Ljava/util/Iterator;
 
     .line 104
     .line 105
@@ -2841,7 +2837,7 @@
 
     .line 112
     .line 113
-    invoke-static {v3}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v3}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 114
     .line 115
@@ -2849,7 +2845,7 @@
     move-result-object v0
 
     .line 117
-    invoke-static {v0}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v0}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 118
     .line 119
@@ -2857,7 +2853,7 @@
     move-result-object v2
 
     .line 121
-    invoke-static {v0}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v0}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 122
     .line 123

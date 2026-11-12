@@ -10,15 +10,13 @@
 
 .field public A02:Lcom/google/common/collect/ImmutableMap;
 
-.field public A03:LX/1zG;
+.field public final A03:Lcom/facebook/prefs/shared/FbSharedPreferences;
 
-.field public final A04:Lcom/facebook/prefs/shared/FbSharedPreferences;
-
-.field public final A05:Ljava/util/Set;
+.field public final A04:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
@@ -27,7 +25,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1z6;->A0Q()Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {}, LX/2I6;->A0Z()Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 4
     .line 5
@@ -35,15 +33,15 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/analytics/NetworkDataCategorizer;->A04:Lcom/facebook/prefs/shared/FbSharedPreferences;
+    iput-object v0, p0, Lcom/facebook/analytics/NetworkDataCategorizer;->A03:Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 8
     .line 9
-    sget v0, LX/2eq;->A6Y:I
+    sget v0, LX/2I6;->A3h:I
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/1z6;->A0Z(I)Ljava/util/Set;
+    invoke-static {v0}, LX/3Fc;->A05(I)Ljava/util/Set;
 
     .line 12
     .line 13
@@ -51,7 +49,7 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, Lcom/facebook/analytics/NetworkDataCategorizer;->A05:Ljava/util/Set;
+    iput-object v0, p0, Lcom/facebook/analytics/NetworkDataCategorizer;->A04:Ljava/util/Set;
 
     .line 16
     .line 17
@@ -63,18 +61,6 @@
 
     .line 20
     .line 21
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    iput-object v0, p0, Lcom/facebook/analytics/NetworkDataCategorizer;->A03:LX/1zG;
-
-    .line 26
-    .line 27
     return-void
 .end method
 
@@ -169,7 +155,7 @@
     .line 39
     .line 40
     .line 41
-    iget-object v0, p0, Lcom/facebook/analytics/NetworkDataCategorizer;->A05:Ljava/util/Set;
+    iget-object v0, p0, Lcom/facebook/analytics/NetworkDataCategorizer;->A04:Ljava/util/Set;
 
     .line 42
     .line 43
@@ -203,7 +189,7 @@
     .line 57
     .line 58
     .line 59
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 60
     .line 61
@@ -251,7 +237,7 @@
     move-result-object v3
 
     .line 80
-    invoke-static {v5}, LX/0Yg;->A0V(Lcom/google/common/collect/ImmutableMap;)LX/1bX;
+    invoke-static {v5}, LX/0X3;->A0S(Lcom/google/common/collect/ImmutableMap;)LX/1tw;
 
     .line 81
     .line 82
@@ -272,7 +258,7 @@
 
     .line 89
     .line 90
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 91
     .line 92
@@ -316,7 +302,7 @@
 
     .line 111
     .line 112
-    invoke-static {v1}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 113
     .line 114
@@ -332,7 +318,7 @@
 
     .line 118
     .line 119
-    invoke-static {v0}, LX/0Yg;->A0V(Lcom/google/common/collect/ImmutableMap;)LX/1bX;
+    invoke-static {v0}, LX/0X3;->A0S(Lcom/google/common/collect/ImmutableMap;)LX/1tw;
 
     .line 120
     .line 121
@@ -353,7 +339,7 @@
 
     .line 128
     .line 129
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 130
     .line 131
@@ -361,7 +347,7 @@
     move-result-object v1
 
     .line 133
-    invoke-static {v1}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 134
     .line 135
@@ -381,7 +367,7 @@
 
     .line 142
     .line 143
-    invoke-static {v1}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 144
     .line 145
@@ -405,154 +391,159 @@
 
     .line 153
     .line 154
-    const-string v0, "fbcdn"
+    const-string/jumbo v0, "fbcdn"
 
     .line 155
     .line 156
+    .line 157
     invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 157
     .line 158
     .line 159
-    move-result v0
-
     .line 160
-    if-nez v0, :cond_7
+    move-result v0
 
     .line 161
+    if-nez v0, :cond_7
+
     .line 162
-    const-string v0, "fbstatic"
-
     .line 163
-    .line 164
-    invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    const-string/jumbo v0, "fbstatic"
 
+    .line 164
     .line 165
     .line 166
+    invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
     .line 167
+    .line 168
+    .line 169
     move-result v0
 
-    .line 168
-    if-eqz v0, :cond_8
-
-    .line 169
     .line 170
-    :cond_7
-    const-string v0, "cdn"
+    if-eqz v0, :cond_8
 
     .line 171
     .line 172
-    goto :goto_0
+    :cond_7
+    const-string/jumbo v0, "cdn"
 
     .line 173
+    .line 174
+    .line 175
+    goto :goto_0
+
+    .line 176
     :cond_8
     if-eqz v1, :cond_9
 
-    .line 174
-    .line 175
-    const-string v0, "fbexternal"
-
-    .line 176
     .line 177
-    invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
     .line 178
+    const-string/jumbo v0, "fbexternal"
+
     .line 179
     .line 180
-    move-result v0
-
     .line 181
-    if-eqz v0, :cond_9
+    invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     .line 182
     .line 183
-    const-string v0, "cdn_external"
-
     .line 184
+    move-result v0
+
     .line 185
-    goto :goto_0
+    if-eqz v0, :cond_9
 
     .line 186
+    .line 187
+    const-string/jumbo v0, "cdn_external"
+
+    .line 188
+    .line 189
+    .line 190
+    goto :goto_0
+
+    .line 191
     :cond_9
     invoke-virtual {p1}, Ljava/net/URI;->getHost()Ljava/lang/String;
 
-    .line 187
-    .line 188
-    .line 189
-    move-result-object v1
-
-    .line 190
-    if-eqz v1, :cond_a
-
-    .line 191
     .line 192
-    const-string v0, ".facebook.com"
-
     .line 193
     .line 194
-    invoke-virtual {v1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    move-result-object v1
 
     .line 195
+    if-eqz v1, :cond_a
+
     .line 196
     .line 197
-    move-result v1
+    const-string v0, ".facebook.com"
 
     .line 198
-    const/4 v0, 0x1
-
     .line 199
-    if-nez v1, :cond_b
+    invoke-virtual {v1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     .line 200
     .line 201
-    :cond_a
-    const/4 v0, 0x0
-
     .line 202
-    :cond_b
-    if-eqz v0, :cond_c
+    move-result v1
 
     .line 203
+    const/4 v0, 0x1
+
     .line 204
-    const-string/jumbo v0, "other_fb"
+    if-nez v1, :cond_b
 
     .line 205
     .line 206
+    :cond_a
+    const/4 v0, 0x0
+
     .line 207
-    goto :goto_0
+    :cond_b
+    if-eqz v0, :cond_c
 
     .line 208
+    .line 209
+    const-string/jumbo v0, "other_fb"
+
+    .line 210
+    .line 211
+    .line 212
+    goto :goto_0
+
+    .line 213
     :cond_c
     const-string/jumbo v0, "uncategorized"
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 209
-    .line 210
-    .line 211
+    .line 214
+    .line 215
+    .line 216
     :goto_0
     monitor-exit v6
 
-    .line 212
+    .line 217
     return-object v0
 
-    .line 213
+    .line 218
     :catchall_0
     move-exception v0
 
-    .line 214
+    .line 219
     :try_start_2
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 215
+    .line 220
     :catchall_1
     move-exception v0
 
-    .line 216
+    .line 221
     monitor-exit v6
 
-    .line 217
+    .line 222
     throw v0
 .end method

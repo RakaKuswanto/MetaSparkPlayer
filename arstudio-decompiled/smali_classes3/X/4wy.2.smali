@@ -1,18 +1,47 @@
-.class public final LX/4wy;
+.class public final LX/4wY;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/util/ArrayList;
+.field public A00:LX/4wD;
 
-.field public final A01:Ljava/util/ArrayList;
-
-.field public final A02:Ljava/util/ArrayList;
+.field public final A01:Ljava/util/HashMap;
 
 
 # direct methods
 .method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const/4 v0, 0x0
+
+    .line 268435460
+    iput-object v0, p0, LX/4wY;->A00:LX/4wD;
+
+    .line 268435461
+    .line 268435462
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 268435463
+    .line 268435464
+    .line 268435465
+    move-result-object v0
+
+    .line 268435466
+    iput-object v0, p0, LX/4wY;->A01:Ljava/util/HashMap;
+
+    .line 268435467
+    .line 268435468
+    return-void
+.end method
+
+.method public constructor <init>(LX/4wD;)V
     .locals 1
 
     .line 0
@@ -21,116 +50,28 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    const/4 v0, 0x0
 
     .line 4
+    iput-object v0, p0, LX/4wY;->A00:LX/4wD;
+
     .line 5
     .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/4wy;->A00:Ljava/util/ArrayList;
-
-    .line 8
-    .line 9
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/4wy;->A02:Ljava/util/ArrayList;
-
-    .line 14
-    .line 15
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, LX/4wy;->A01:Ljava/util/ArrayList;
-
-    .line 20
-    .line 21
-    return-void
-.end method
-
-.method public static A00(LX/4sH;LX/4sH;Ljava/lang/String;)V
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, LX/4sH;->A02:Ljava/util/ArrayList;
-
-    .line 1
-    .line 2
-    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result p0
-
-    .line 6
-    if-eqz p0, :cond_1
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 7
     .line 8
-    iget-object p0, p1, LX/4sH;->A03:Ljava/util/Map;
-
     .line 9
+    move-result-object v0
+
     .line 10
-    if-eqz p0, :cond_0
+    iput-object v0, p0, LX/4wY;->A01:Ljava/util/HashMap;
 
     .line 11
     .line 12
-    invoke-interface {p0, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p1, p0, LX/4wY;->A00:LX/4wD;
 
     .line 13
     .line 14
-    .line 15
-    move-result-object p0
-
-    .line 16
-    if-eqz p0, :cond_0
-
-    .line 17
-    .line 18
     return-void
-
-    .line 19
-    :cond_0
-    const-string p0, "Tried to remove non-existent input with name: "
-
-    .line 20
-    .line 21
-    invoke-static {p0, p2}, LX/00I;->A06(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object p0
-
-    .line 25
-    throw p0
-
-    .line 26
-    :cond_1
-    const-string p0, "Tried to remove non-existent input!"
-
-    .line 27
-    .line 28
-    invoke-static {p0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object p0
-
-    .line 32
-    throw p0
 .end method

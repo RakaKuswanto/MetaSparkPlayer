@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/facebook/smartcapture/docauth/DocumentType;
 
 .field public static final enum ID1:Lcom/facebook/smartcapture/docauth/DocumentType;
@@ -122,6 +124,18 @@
 
     .line 35
     .line 36
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    sput-object v0, Lcom/facebook/smartcapture/docauth/DocumentType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 41
+    .line 42
     return-void
 .end method
 
@@ -141,31 +155,57 @@
     return-void
 .end method
 
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/facebook/smartcapture/docauth/DocumentType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/smartcapture/docauth/DocumentType;
     .locals 1
 
+    .line 0
     const-class v0, Lcom/facebook/smartcapture/docauth/DocumentType;
 
+    .line 1
+    .line 2
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
+    .line 6
     check-cast v0, Lcom/facebook/smartcapture/docauth/DocumentType;
 
+    .line 7
+    .line 8
     return-object v0
 .end method
 
 .method public static values()[Lcom/facebook/smartcapture/docauth/DocumentType;
     .locals 1
 
+    .line 0
     sget-object v0, Lcom/facebook/smartcapture/docauth/DocumentType;->$VALUES:[Lcom/facebook/smartcapture/docauth/DocumentType;
 
+    .line 1
+    .line 2
     invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
+    .line 6
     check-cast v0, [Lcom/facebook/smartcapture/docauth/DocumentType;
 
+    .line 7
+    .line 8
     return-object v0
 .end method
 

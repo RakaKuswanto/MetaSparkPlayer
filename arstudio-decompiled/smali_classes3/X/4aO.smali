@@ -1,31 +1,46 @@
-.class public LX/4aO;
-.super LX/01t;
+.class public final LX/4AO;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/0NL;
 
 
 # instance fields
-.field public final A00:Landroid/view/ActionProvider;
-
-.field public final synthetic A01:LX/4aH;
+.field public final synthetic A00:Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/ActionProvider;LX/4aH;)V
+.method public constructor <init>(Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;)V
     .locals 0
 
     .line 0
-    iput-object p3, p0, LX/4aO;->A01:LX/4aH;
+    iput-object p1, p0, LX/4AO;->A00:Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
 
     .line 1
     .line 2
-    invoke-direct {p0, p1}, LX/01t;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/4aO;->A00:Landroid/view/ActionProvider;
+    return-void
+.end method
 
-    .line 6
-    .line 7
+
+# virtual methods
+.method public final AV7([J[Ljava/lang/String;I)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4AO;->A00:Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p1, p2, p3}, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->access$000(Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;[J[Ljava/lang/String;I)V
+
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

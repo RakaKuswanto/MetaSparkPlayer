@@ -2,12 +2,21 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3Mc;
+
+# instance fields
+.field public final A00:I
+
+.field public final A01:I
+
+.field public final A02:I
+
+.field public final A03:I
+
+.field public final A04:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(IIIII)V
     .locals 0
 
     .line 0
@@ -16,15 +25,25 @@
     .line 1
     .line 2
     .line 3
+    iput p1, p0, LX/3J2;->A01:I
+
+    .line 4
+    .line 5
+    iput p2, p0, LX/3J2;->A03:I
+
+    .line 6
+    .line 7
+    iput p3, p0, LX/3J2;->A04:I
+
+    .line 8
+    .line 9
+    iput p4, p0, LX/3J2;->A02:I
+
+    .line 10
+    .line 11
+    iput p5, p0, LX/3J2;->A00:I
+
+    .line 12
+    .line 13
     return-void
-.end method
-
-
-# virtual methods
-.method public final ARk(Ljava/lang/String;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

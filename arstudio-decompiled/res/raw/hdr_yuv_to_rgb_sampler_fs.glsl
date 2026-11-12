@@ -1,4 +1,6 @@
 #version 300 es
+#extension GL_EXT_YUV_target : require
+#extension GL_OES_EGL_image_external : require
 
 /*
 This shader converts pixels from YUV to RGBA non-linear conserving BT2020 color space.
@@ -6,9 +8,6 @@ This is done using a custom texture sampler that retrieves raw YUV pixel values 
 converting the values. Otherwise, OpenGl will convert automatically whenever we write to a
 Frame Buffer configured as RGBA format but will not preserve the right color space.
 */
-
-#extension GL_EXT_YUV_target : require
-#extension GL_OES_EGL_image_external : require
 
 precision mediump float;
 

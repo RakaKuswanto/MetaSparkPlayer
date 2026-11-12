@@ -1,128 +1,43 @@
-.class public abstract LX/2Gv;
-.super LX/2Gt;
+.class public abstract LX/2GV;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final _scope:Ljava/lang/Class;
+# static fields
+.field public static final A00:LX/2H7;
+
+.field public static final A01:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/2Gt;-><init>()V
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2Gv;->_scope:Ljava/lang/Class;
+    move-result-object v0
 
     .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    .line 0
-    instance-of v0, p0, LX/2Ez;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v1, p0
+    sput-object v0, LX/2GV;->A01:Ljava/util/Map;
 
     .line 5
-    check-cast v1, LX/2Ez;
-
     .line 6
+    new-instance v0, LX/2H7;
+
     .line 7
-    :try_start_0
-    iget-object v0, v1, LX/2Ez;->_property:LX/2DX;
-
     .line 8
-    .line 9
-    invoke-virtual {v0, p1}, LX/2DX;->A02(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0}, LX/2H7;-><init>()V
 
+    .line 9
     .line 10
     .line 11
+    sput-object v0, LX/2GV;->A00:LX/2H7;
+
     .line 12
-    move-result-object v0
-
     .line 13
-    return-object v0
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 14
-    :catch_0
-    move-exception v3
-
-    .line 15
-    const-string v2, "Problem accessing property \'"
-
-    .line 16
-    .line 17
-    iget-object v0, v1, LX/2Ez;->_property:LX/2DX;
-
-    .line 18
-    .line 19
-    iget-object v0, v0, LX/2DX;->A06:LX/29U;
-
-    .line 20
-    .line 21
-    iget-object v1, v0, LX/29U;->_value:Ljava/lang/String;
-
-    .line 22
-    .line 23
-    const-string v0, "\': "
-
-    .line 24
-    .line 25
-    invoke-static {v2, v1, v0, v3}, LX/0Yg;->A0p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    .line 30
-    .line 31
-    invoke-direct {v1, v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 32
-    .line 33
-    .line 34
-    throw v1
-
-    .line 35
-    :catch_1
-    move-exception v1
-
-    .line 36
-    throw v1
-
-    .line 37
-    :cond_0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v1
-
-    .line 41
-    throw v1
+    return-void
 .end method

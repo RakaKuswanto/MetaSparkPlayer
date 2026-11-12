@@ -23,7 +23,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yj;->A0b()Ljava/util/LinkedHashMap;
+    invoke-static {}, LX/0X7;->A0f()Ljava/util/LinkedHashMap;
 
     .line 4
     .line 5
@@ -35,11 +35,11 @@
 
     .line 8
     .line 9
-    new-instance v0, LX/5Bp;
+    new-instance v0, LX/53w;
 
     .line 10
     .line 11
-    invoke-direct {v0, p0}, LX/5Bp;-><init>(Landroidx/room/MultiInstanceInvalidationService;)V
+    invoke-direct {v0, p0}, LX/53w;-><init>(Landroidx/room/MultiInstanceInvalidationService;)V
 
     .line 12
     .line 13

@@ -1,29 +1,31 @@
-.class public interface abstract LX/5bC;
+.class public final LX/5Bc;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ABl(Ljava/util/List;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
-.end method
+# instance fields
+.field public final synthetic A00:Lcom/facebook/exoplayer/monitor/VpsEventCallback;
 
-.method public abstract ABm(Ljava/util/List;)Ljava/util/List;
-.end method
+.field public final synthetic A01:LX/5BV;
 
-.method public abstract AlK(I)V
-.end method
 
-.method public abstract Alc(Ljava/lang/String;)V
-.end method
+# direct methods
+.method public constructor <init>(Lcom/facebook/exoplayer/monitor/VpsEventCallback;LX/5BV;)V
+    .locals 0
 
-.method public abstract Ald(Ljava/lang/String;)V
-.end method
+    .line 0
+    iput-object p2, p0, LX/5Bc;->A01:LX/5BV;
 
-.method public abstract Ale(Ljava/util/Map;)V
-.end method
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/5Bc;->A00:Lcom/facebook/exoplayer/monitor/VpsEventCallback;
 
-.method public abstract AmQ(I)V
-.end method
+    .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract Anc(Ljava/lang/String;)V
+    .line 5
+    .line 6
+    .line 7
+    return-void
 .end method

@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5bI;
+
 
 # direct methods
 .method public constructor <init>()V

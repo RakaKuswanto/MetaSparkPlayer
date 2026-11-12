@@ -1,4 +1,4 @@
-.class public final LX/5MG;
+.class public final synthetic LX/5MG;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,82 +7,54 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "Worker$2"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaSourceEventListener$EventDispatcher$$ExternalSyntheticLambda7"
 
 
 # instance fields
-.field public final synthetic A00:Landroidx/work/Worker;
+.field public final synthetic A00:Landroid/net/Uri;
 
-.field public final synthetic A01:LX/5ND;
+.field public final synthetic A01:LX/5Lx;
+
+.field public final synthetic A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/work/Worker;LX/5ND;)V
+.method public synthetic constructor <init>(Landroid/net/Uri;LX/5Lx;Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$future"
-        }
-    .end annotation
 
-    .line 0
-    iput-object p1, p0, LX/5MG;->A00:Landroidx/work/Worker;
-
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/5MG;->A01:LX/5ND;
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
+    iput-object p2, p0, LX/5MG;->A01:LX/5Lx;
+
+    iput-object p1, p0, LX/5MG;->A00:Landroid/net/Uri;
+
+    iput-object p3, p0, LX/5MG;->A02:Ljava/lang/String;
+
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 3
 
     .line 0
-    :try_start_0
-    const-string v0, "Expedited WorkRequests require a Worker to provide an implementation for \n `getForegroundInfo()`"
+    iget-object v2, p0, LX/5MG;->A01:LX/5Lx;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    iget-object v1, p0, LX/5MG;->A00:Landroid/net/Uri;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iget-object v0, p0, LX/5MG;->A02:Ljava/lang/String;
 
+    .line 5
     .line 6
-    throw v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {v2, v0, v1}, LX/5Lx;->AXd(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 7
-    :catchall_0
-    move-exception v1
-
     .line 8
-    iget-object v0, p0, LX/5MG;->A01:LX/5ND;
-
     .line 9
-    .line 10
-    invoke-virtual {v0, v1}, LX/5QS;->A07(Ljava/lang/Throwable;)V
-
-    .line 11
-    .line 12
-    .line 13
     return-void
 .end method

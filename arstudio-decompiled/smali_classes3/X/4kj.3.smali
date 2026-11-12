@@ -1,21 +1,11 @@
-.class public final LX/4kj;
+.class public interface abstract LX/4kj;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4lu;
 
-# instance fields
-.field public A00:Landroid/view/View;
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract AQZ(LX/4ho;J)LX/4jg;
 .end method

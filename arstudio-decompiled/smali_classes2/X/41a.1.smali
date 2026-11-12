@@ -1,121 +1,145 @@
 .class public final LX/41a;
-.super Ljava/lang/Object;
+.super Ljava/util/LinkedHashMap;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/common/callercontext/CallerContextable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/LinkedHashMap<",
+        "Ljava/lang/String;",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AnalyticsTagger"
-
-
-# instance fields
-.field public final A00:LX/1Nw;
+.field public static final A00:LX/41a;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/41a;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/41a;->A00:LX/1Nw;
+    invoke-direct {v0}, LX/41a;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    sput-object v0, LX/41a;->A00:LX/41a;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
-.method public static final A00(Landroid/view/View;)Lcom/facebook/common/callercontext/CallerContext;
+.method public constructor <init>()V
     .locals 3
 
     .line 0
-    const v0, 0x7f0a0065
+    const/16 v2, 0x64
 
     .line 1
     .line 2
-    .line 3
-    const v2, 0x7f0a0065
+    const v1, 0x3f4ccccd    # 0.8f
 
+    .line 3
     .line 4
     .line 5
+    const/4 v0, 0x1
+
     .line 6
-    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+    invoke-direct {p0, v2, v1, v0}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
     .line 7
     .line 8
     .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized A00(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-static {p1, p0}, LX/0X6;->A0t(Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/String;
+
+    .line 2
+    .line 3
+    .line 4
     move-result-object v0
 
+    .line 5
+    if-nez v0, :cond_0
+
+    .line 6
+    .line 7
+    invoke-virtual {p1}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    .line 8
+    .line 9
     .line 10
-    check-cast v0, Lcom/facebook/common/callercontext/CallerContext;
+    move-result-object v0
 
     .line 11
-    .line 12
-    if-nez v0, :cond_1
+    invoke-virtual {p0, v0, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     .line 13
     .line 14
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    :cond_0
+    monitor-exit p0
 
     .line 15
+    return-object v0
+
     .line 16
+    :catchall_0
+    move-exception v0
+
     .line 17
-    move-result-object v1
+    monitor-exit p0
 
     .line 18
-    :goto_0
-    instance-of v0, v1, Landroid/view/View;
+    throw v0
+.end method
 
-    .line 19
-    .line 20
-    if-eqz v0, :cond_0
+.method public final removeEldestEntry(Ljava/util/Map$Entry;)Z
+    .locals 2
 
-    .line 21
-    .line 22
-    move-object v0, v1
+    .line 0
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
 
-    .line 23
-    check-cast v0, Landroid/view/View;
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
 
-    .line 24
-    .line 25
-    invoke-virtual {v0, v2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+    .line 4
+    const/16 v0, 0x64
 
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
+    .line 5
+    .line 6
+    invoke-static {v1, v0}, LX/0X4;->A1R(II)Z
 
-    .line 29
-    check-cast v0, Lcom/facebook/common/callercontext/CallerContext;
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
 
-    .line 30
-    .line 31
-    if-nez v0, :cond_1
-
-    .line 32
-    .line 33
-    invoke-interface {v1}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v1
-
-    .line 37
-    goto :goto_0
-
-    .line 38
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 39
-    :cond_1
-    return-object v0
+    .line 10
+    return v0
 .end method

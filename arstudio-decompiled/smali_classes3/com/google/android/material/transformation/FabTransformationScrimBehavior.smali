@@ -27,15 +27,3 @@
     .line 3
     return-void
 .end method
-
-
-# virtual methods
-.method public final layoutDependsOn(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
-.end method

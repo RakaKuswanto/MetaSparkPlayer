@@ -24,6 +24,24 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Equivalence;Lcom/google/common/base/Equivalence;Lcom/google/common/collect/MapMakerInternalMap$Strength;Lcom/google/common/collect/MapMakerInternalMap$Strength;Ljava/util/concurrent/ConcurrentMap;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "keyStrength",
+            "valueStrength",
+            "keyEquivalence",
+            "valueEquivalence",
+            "concurrencyLevel",
+            "delegate"
+        }
+    .end annotation
 
     .line 0
     invoke-direct/range {p0 .. p6}, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;-><init>(Lcom/google/common/base/Equivalence;Lcom/google/common/base/Equivalence;Lcom/google/common/collect/MapMakerInternalMap$Strength;Lcom/google/common/collect/MapMakerInternalMap$Strength;Ljava/util/concurrent/ConcurrentMap;I)V
@@ -35,7 +53,15 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 9
+    .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "in"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
@@ -48,13 +74,13 @@
     .line 4
     .line 5
     .line 6
-    move-result v8
+    move-result v7
 
     .line 7
     const/4 v0, 0x1
 
     .line 8
-    if-gez v8, :cond_0
+    if-gez v7, :cond_0
 
     .line 9
     .line 10
@@ -67,45 +93,45 @@
     .line 12
     .line 13
     .line 14
-    iget-object v6, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->keyStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+    iget-object v5, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->keyStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     .line 15
     .line 16
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 17
     .line 18
     .line 19
-    sget-object v3, Lcom/google/common/collect/MapMakerInternalMap$Strength;->STRONG:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+    sget-object v2, Lcom/google/common/collect/MapMakerInternalMap$Strength;->STRONG:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     .line 20
     .line 21
-    iget-object v2, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->valueStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+    iget-object v1, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->valueStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     .line 22
     .line 23
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 24
     .line 25
     .line 26
-    iget-object v4, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->keyEquivalence:Lcom/google/common/base/Equivalence;
+    iget-object v3, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->keyEquivalence:Lcom/google/common/base/Equivalence;
 
     .line 27
     .line 28
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 29
     .line 30
     .line 31
-    iget v7, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->concurrencyLevel:I
+    iget v6, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->concurrencyLevel:I
 
     .line 32
     .line 33
     const/4 v0, 0x1
 
     .line 34
-    if-gtz v7, :cond_1
+    if-gtz v6, :cond_1
 
     .line 35
     .line 36
@@ -118,34 +144,34 @@
     .line 38
     .line 39
     .line 40
-    if-ne v6, v3, :cond_3
+    if-ne v5, v2, :cond_4
 
     .line 41
     .line 42
-    if-ne v2, v3, :cond_4
+    if-ne v1, v2, :cond_3
 
     .line 43
     .line 44
-    new-instance v5, LX/6Au;
+    new-instance v4, LX/256;
 
     .line 45
     .line 46
-    invoke-direct {v5}, LX/6Au;-><init>()V
+    invoke-direct {v4}, LX/256;-><init>()V
 
     .line 47
     .line 48
     .line 49
     :goto_0
-    new-instance v3, Lcom/google/common/collect/MapMakerInternalMap;
+    new-instance v2, Lcom/google/common/collect/MapMakerInternalMap;
 
     .line 50
     .line 51
-    invoke-direct/range {v3 .. v8}, Lcom/google/common/collect/MapMakerInternalMap;-><init>(Lcom/google/common/base/Equivalence;LX/1gy;Lcom/google/common/collect/MapMakerInternalMap$Strength;II)V
+    invoke-direct/range {v2 .. v7}, Lcom/google/common/collect/MapMakerInternalMap;-><init>(Lcom/google/common/base/Equivalence;LX/24r;Lcom/google/common/collect/MapMakerInternalMap$Strength;II)V
 
     .line 52
     .line 53
     .line 54
-    iput-object v3, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->A00:Ljava/util/concurrent/ConcurrentMap;
+    iput-object v2, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->A00:Ljava/util/concurrent/ConcurrentMap;
 
     .line 55
     .line 56
@@ -187,102 +213,78 @@
 
     .line 73
     :cond_3
-    if-ne v6, v3, :cond_5
+    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     .line 74
     .line 75
-    :cond_4
-    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+    if-ne v1, v0, :cond_4
 
     .line 76
     .line 77
-    if-ne v2, v0, :cond_5
+    new-instance v4, LX/25A;
 
     .line 78
     .line 79
-    new-instance v5, LX/6Ap;
+    invoke-direct {v4}, LX/25A;-><init>()V
 
     .line 80
     .line 81
-    invoke-direct {v5}, LX/6Ap;-><init>()V
-
     .line 82
-    .line 83
-    .line 84
     goto :goto_0
 
+    .line 83
+    :cond_4
+    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+
+    .line 84
     .line 85
-    :cond_5
-    move-object v1, v6
+    if-ne v5, v0, :cond_6
 
     .line 86
-    if-nez v6, :cond_6
-
     .line 87
-    .line 88
-    move-object v1, v3
+    if-ne v1, v2, :cond_5
 
+    .line 88
     .line 89
-    :cond_6
-    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+    new-instance v4, LX/25H;
 
     .line 90
     .line 91
-    if-ne v1, v0, :cond_7
+    invoke-direct {v4}, LX/25H;-><init>()V
 
     .line 92
     .line 93
-    if-ne v2, v3, :cond_7
-
     .line 94
+    goto :goto_0
+
     .line 95
-    new-instance v5, LX/6Am;
+    :cond_5
+    if-ne v1, v0, :cond_6
 
     .line 96
     .line 97
-    invoke-direct {v5}, LX/6Am;-><init>()V
+    new-instance v4, LX/25D;
 
     .line 98
     .line 99
+    invoke-direct {v4}, LX/25D;-><init>()V
+
     .line 100
+    .line 101
+    .line 102
     goto :goto_0
 
-    .line 101
-    :cond_7
-    if-eqz v6, :cond_8
-
-    .line 102
     .line 103
-    if-ne v6, v0, :cond_8
+    :cond_6
+    new-instance v0, Ljava/lang/AssertionError;
 
     .line 104
     .line 105
-    if-ne v2, v0, :cond_8
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
     .line 106
     .line 107
-    new-instance v5, LX/6Ao;
-
     .line 108
-    .line 109
-    invoke-direct {v5}, LX/6Ao;-><init>()V
-
-    .line 110
-    .line 111
-    .line 112
-    goto :goto_0
-
-    .line 113
-    :cond_8
-    new-instance v0, Ljava/lang/AssertionError;
-
-    .line 114
-    .line 115
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    .line 116
-    .line 117
-    .line 118
     throw v0
 .end method
 
@@ -299,6 +301,14 @@
 
 .method private writeObject(Ljava/io/ObjectOutputStream;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "out"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
@@ -327,7 +337,7 @@
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v0}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 15
     .line 16
@@ -348,7 +358,7 @@
 
     .line 23
     .line 24
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 25
     .line 26

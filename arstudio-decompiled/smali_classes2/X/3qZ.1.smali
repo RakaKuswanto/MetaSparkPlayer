@@ -1,166 +1,513 @@
-.class public final LX/3qZ;
-.super Ljava/lang/Object;
+.class public final enum LX/3Qz;
+.super Ljava/lang/Enum;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "VideoPerformanceTracking$2"
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/3Qz;
+
+.field public static final enum CANCELED:LX/3Qz;
+
+.field public static final Companion:LX/3R6;
+
+.field public static final enum DRAW:LX/3Qz;
+
+.field public static final enum EMPTY_EVENT:LX/3Qz;
+
+.field public static final enum ERROR:LX/3Qz;
+
+.field public static final enum INTERMEDIATE_AVAILABLE:LX/3Qz;
+
+.field public static final enum RELEASED:LX/3Qz;
+
+.field public static final enum REQUESTED:LX/3Qz;
+
+.field public static final enum SUCCESS:LX/3Qz;
+
+.field public static final enum UNKNOWN:LX/3Qz;
+
+.field public static final VALUES:[LX/3Qz;
 
 
 # instance fields
-.field public final synthetic A00:LX/3Op;
-
-.field public final synthetic A01:LX/3Rh;
-
-.field public final synthetic A02:Ljava/lang/String;
+.field public final value:I
 
 
 # direct methods
-.method public constructor <init>(LX/3Op;LX/3Rh;Ljava/lang/String;)V
-    .locals 0
+.method public static final synthetic $values()[LX/3Qz;
+    .locals 3
+
+    const/16 v0, 0x9
+
+    new-array v2, v0, [LX/3Qz;
+
+    sget-object v1, LX/3Qz;->UNKNOWN:LX/3Qz;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3Qz;->REQUESTED:LX/3Qz;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3Qz;->INTERMEDIATE_AVAILABLE:LX/3Qz;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3Qz;->SUCCESS:LX/3Qz;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3Qz;->CANCELED:LX/3Qz;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3Qz;->ERROR:LX/3Qz;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3Qz;->DRAW:LX/3Qz;
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3Qz;->EMPTY_EVENT:LX/3Qz;
+
+    const/4 v0, 0x7
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3Qz;->RELEASED:LX/3Qz;
+
+    const/16 v0, 0x8
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 0
-    iput-object p1, p0, LX/3qZ;->A00:LX/3Op;
+    const-string v2, "UNKNOWN"
 
     .line 1
     .line 2
-    iput-object p3, p0, LX/3qZ;->A02:Ljava/lang/String;
+    const/4 v3, 0x0
 
     .line 3
+    const/4 v1, -0x1
+
     .line 4
-    iput-object p2, p0, LX/3qZ;->A01:LX/3Rh;
+    new-instance v0, LX/3Qz;
 
     .line 5
     .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v2, v3, v1}, LX/3Qz;-><init>(Ljava/lang/String;II)V
 
     .line 7
     .line 8
     .line 9
+    sput-object v0, LX/3Qz;->UNKNOWN:LX/3Qz;
+
+    .line 10
+    .line 11
+    const-string v2, "REQUESTED"
+
+    .line 12
+    .line 13
+    const/4 v1, 0x1
+
+    .line 14
+    new-instance v0, LX/3Qz;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v2, v1, v3}, LX/3Qz;-><init>(Ljava/lang/String;II)V
+
+    .line 17
+    .line 18
+    .line 19
+    sput-object v0, LX/3Qz;->REQUESTED:LX/3Qz;
+
+    .line 20
+    .line 21
+    const-string v2, "INTERMEDIATE_AVAILABLE"
+
+    .line 22
+    .line 23
+    const/4 v1, 0x2
+
+    .line 24
+    new-instance v0, LX/3Qz;
+
+    .line 25
+    .line 26
+    invoke-direct {v0, v2, v1, v1}, LX/3Qz;-><init>(Ljava/lang/String;II)V
+
+    .line 27
+    .line 28
+    .line 29
+    sput-object v0, LX/3Qz;->INTERMEDIATE_AVAILABLE:LX/3Qz;
+
+    .line 30
+    .line 31
+    const-string v2, "SUCCESS"
+
+    .line 32
+    .line 33
+    const/4 v1, 0x3
+
+    .line 34
+    new-instance v0, LX/3Qz;
+
+    .line 35
+    .line 36
+    invoke-direct {v0, v2, v1, v1}, LX/3Qz;-><init>(Ljava/lang/String;II)V
+
+    .line 37
+    .line 38
+    .line 39
+    sput-object v0, LX/3Qz;->SUCCESS:LX/3Qz;
+
+    .line 40
+    .line 41
+    const-string v2, "CANCELED"
+
+    .line 42
+    .line 43
+    const/4 v1, 0x4
+
+    .line 44
+    new-instance v0, LX/3Qz;
+
+    .line 45
+    .line 46
+    invoke-direct {v0, v2, v1, v1}, LX/3Qz;-><init>(Ljava/lang/String;II)V
+
+    .line 47
+    .line 48
+    .line 49
+    sput-object v0, LX/3Qz;->CANCELED:LX/3Qz;
+
+    .line 50
+    .line 51
+    const-string v2, "ERROR"
+
+    .line 52
+    .line 53
+    const/4 v1, 0x5
+
+    .line 54
+    new-instance v0, LX/3Qz;
+
+    .line 55
+    .line 56
+    invoke-direct {v0, v2, v1, v1}, LX/3Qz;-><init>(Ljava/lang/String;II)V
+
+    .line 57
+    .line 58
+    .line 59
+    sput-object v0, LX/3Qz;->ERROR:LX/3Qz;
+
+    .line 60
+    .line 61
+    const-string v2, "DRAW"
+
+    .line 62
+    .line 63
+    const/4 v1, 0x6
+
+    .line 64
+    new-instance v0, LX/3Qz;
+
+    .line 65
+    .line 66
+    invoke-direct {v0, v2, v1, v1}, LX/3Qz;-><init>(Ljava/lang/String;II)V
+
+    .line 67
+    .line 68
+    .line 69
+    sput-object v0, LX/3Qz;->DRAW:LX/3Qz;
+
+    .line 70
+    .line 71
+    const-string v2, "EMPTY_EVENT"
+
+    .line 72
+    .line 73
+    const/4 v1, 0x7
+
+    .line 74
+    new-instance v0, LX/3Qz;
+
+    .line 75
+    .line 76
+    invoke-direct {v0, v2, v1, v1}, LX/3Qz;-><init>(Ljava/lang/String;II)V
+
+    .line 77
+    .line 78
+    .line 79
+    sput-object v0, LX/3Qz;->EMPTY_EVENT:LX/3Qz;
+
+    .line 80
+    .line 81
+    const-string v2, "RELEASED"
+
+    .line 82
+    .line 83
+    const/16 v1, 0x8
+
+    .line 84
+    .line 85
+    new-instance v0, LX/3Qz;
+
+    .line 86
+    .line 87
+    invoke-direct {v0, v2, v1, v1}, LX/3Qz;-><init>(Ljava/lang/String;II)V
+
+    .line 88
+    .line 89
+    .line 90
+    sput-object v0, LX/3Qz;->RELEASED:LX/3Qz;
+
+    .line 91
+    .line 92
+    invoke-static {}, LX/3Qz;->$values()[LX/3Qz;
+
+    .line 93
+    .line 94
+    .line 95
+    move-result-object v0
+
+    .line 96
+    sput-object v0, LX/3Qz;->$VALUES:[LX/3Qz;
+
+    .line 97
+    .line 98
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 99
+    .line 100
+    .line 101
+    move-result-object v0
+
+    .line 102
+    sput-object v0, LX/3Qz;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 103
+    .line 104
+    new-instance v0, LX/3R6;
+
+    .line 105
+    .line 106
+    invoke-direct {v0}, LX/3R6;-><init>()V
+
+    .line 107
+    .line 108
+    .line 109
+    sput-object v0, LX/3Qz;->Companion:LX/3R6;
+
+    .line 110
+    .line 111
+    invoke-static {}, LX/3Qz;->values()[LX/3Qz;
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-object v0
+
+    .line 115
+    sput-object v0, LX/3Qz;->VALUES:[LX/3Qz;
+
+    .line 116
+    .line 117
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput p3, p0, LX/3Qz;->value:I
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static final synthetic access$getVALUES$cp()[LX/3Qz;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/3Qz;->VALUES:[LX/3Qz;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/3Qz;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/3Qz;
+    .locals 1
+
+    const-class v0, LX/3Qz;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/3Qz;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/3Qz;
+    .locals 1
+
+    sget-object v0, LX/3Qz;->$VALUES:[LX/3Qz;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/3Qz;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final getValue()I
+    .locals 1
 
     .line 0
-    iget-object v3, p0, LX/3qZ;->A00:LX/3Op;
+    iget v0, p0, LX/3Qz;->value:I
 
     .line 1
     .line 2
-    iget-object v0, v3, LX/3Op;->A09:Ljava/util/Map;
+    return v0
+.end method
 
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 1
+    .line 2
     .line 3
+    move-result v0
+
     .line 4
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
     .line 5
     .line 6
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
     .line 7
+    :pswitch_0
+    const-string/jumbo v0, "unknown"
+
     .line 8
     .line 9
-    move-result-object v0
-
     .line 10
-    iput-object v0, v3, LX/3Op;->A09:Ljava/util/Map;
+    return-object v0
 
     .line 11
-    .line 12
-    :cond_0
-    iget-object v2, p0, LX/3qZ;->A02:Ljava/lang/String;
+    :pswitch_1
+    const-string/jumbo v0, "released"
 
+    .line 12
     .line 13
     .line 14
-    invoke-interface {v0, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    return-object v0
 
     .line 15
+    :pswitch_2
+    const-string/jumbo v0, "error"
+
     .line 16
     .line 17
-    move-result v0
-
     .line 18
-    if-eqz v0, :cond_2
+    return-object v0
 
     .line 19
-    .line 20
-    iget-object v0, v3, LX/3Op;->A09:Ljava/util/Map;
+    :pswitch_3
+    const-string/jumbo v0, "intermediate_available"
 
+    .line 20
     .line 21
     .line 22
-    invoke-static {v2, v0}, LX/0Yh;->A0i(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
+    return-object v0
 
     .line 23
+    :pswitch_4
+    const-string/jumbo v0, "canceled"
+
     .line 24
     .line 25
-    move-result-object v1
-
     .line 26
-    if-eqz v1, :cond_1
+    return-object v0
 
     .line 27
-    .line 28
-    iget-object v0, p0, LX/3qZ;->A01:LX/3Rh;
+    :pswitch_5
+    const-string/jumbo v0, "success"
 
+    .line 28
     .line 29
     .line 30
-    invoke-static {v0}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    return-object v0
 
     .line 31
+    :pswitch_6
+    const-string/jumbo v0, "requested"
+
     .line 32
     .line 33
-    move-result-object v0
-
     .line 34
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    return-object v0
 
     .line 35
+    nop
+
     .line 36
-    .line 37
-    :cond_1
-    return-void
-
-    .line 38
-    :cond_2
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v1
-
-    .line 42
-    iget-object v0, p0, LX/3qZ;->A01:LX/3Rh;
-
-    .line 43
-    .line 44
-    invoke-static {v0}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
-
-    .line 45
-    .line 46
-    .line 47
-    move-result-object v0
-
-    .line 48
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 49
-    .line 50
-    .line 51
-    iget-object v0, v3, LX/3Op;->A09:Ljava/util/Map;
-
-    .line 52
-    .line 53
-    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 54
-    .line 55
-    .line 56
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_3
+        :pswitch_5
+        :pswitch_4
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

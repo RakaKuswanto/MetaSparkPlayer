@@ -2,39 +2,217 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/io/Serializable;
-
 
 # static fields
-.field public static final A00:LX/2Fr;
+.field public static final A01:LX/1GO;
 
-.field public static final serialVersionUID:J = 0x1L
+.field public static final A02:LX/1GO;
+
+.field public static final A03:LX/1GO;
+
+.field public static final A04:LX/1GO;
+
+.field public static final A05:LX/1GO;
+
+.field public static final A06:LX/1GO;
+
+.field public static final A07:LX/1GO;
+
+.field public static final A08:LX/1GO;
+
+.field public static final A09:LX/1GO;
+
+.field public static final A0A:LX/1GO;
+
+
+# instance fields
+.field public final A00:LX/0RP;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     .line 0
-    new-instance v0, LX/2Fr;
+    sget-object v1, LX/1GN;->A0B:LX/1GO;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/2Fr;-><init>()V
+    const-string/jumbo v0, "autofill_not_now_root/"
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, LX/2Fr;->A00:LX/2Fr;
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
 
     .line 6
     .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    sput-object v0, LX/2Fr;->A07:LX/1GO;
+
+    .line 10
+    .line 11
+    const-string/jumbo v0, "autofill_ads_consent_root/"
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    sput-object v0, LX/2Fr;->A01:LX/1GO;
+
+    .line 19
+    .line 20
+    const-string/jumbo v0, "autofill_script_root/"
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    sput-object v0, LX/2Fr;->A09:LX/1GO;
+
+    .line 28
+    .line 29
+    const-string/jumbo v0, "autofill_fbpay_disclosure_root/"
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
+
+    .line 36
+    sput-object v0, LX/2Fr;->A05:LX/1GO;
+
+    .line 37
+    .line 38
+    const-string/jumbo v0, "autofill_eligible_for_browser_setting_reopt_in_prompt_root/"
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v0
+
+    .line 45
+    sput-object v0, LX/2Fr;->A04:LX/1GO;
+
+    .line 46
+    .line 47
+    const-string/jumbo v0, "autofill_internal_settings_root/"
+
+    .line 48
+    .line 49
+    .line 50
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v0
+
+    .line 54
+    sput-object v0, LX/2Fr;->A06:LX/1GO;
+
+    .line 55
+    .line 56
+    const-string/jumbo v0, "autofill_backtest_qrt_test_group_root/"
+
+    .line 57
+    .line 58
+    .line 59
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v0
+
+    .line 63
+    sput-object v0, LX/2Fr;->A03:LX/1GO;
+
+    .line 64
+    .line 65
+    const-string/jumbo v0, "autofill_automatic_contact_update_qrt_enabled_prefix_root/"
+
+    .line 66
+    .line 67
+    .line 68
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v0
+
+    .line 72
+    sput-object v0, LX/2Fr;->A02:LX/1GO;
+
+    .line 73
+    .line 74
+    const-string/jumbo v0, "autofill_qrt_experiment_versions_prefix_root/"
+
+    .line 75
+    .line 76
+    .line 77
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v0
+
+    .line 81
+    sput-object v0, LX/2Fr;->A08:LX/1GO;
+
+    .line 82
+    .line 83
+    const-string/jumbo v0, "system_autofill_qrt_test_group_root/"
+
+    .line 84
+    .line 85
+    .line 86
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 87
+    .line 88
+    .line 89
+    move-result-object v0
+
+    .line 90
+    sput-object v0, LX/2Fr;->A0A:LX/1GO;
+
+    .line 91
+    .line 92
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,371 +220,21 @@
     .line 1
     .line 2
     .line 3
+    sget v0, LX/2I6;->A1d:I
+
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/2Fr;->A00:LX/0RP;
+
+    .line 10
+    .line 11
     return-void
-.end method
-
-.method public static A00(LX/2Fr;Ljava/lang/Class;)Z
-    .locals 3
-
-    .line 0
-    const-string/jumbo v2, "org.w3c.dom.Node"
-
-    .line 1
-    .line 2
-    .line 3
-    :goto_0
-    if-eqz p1, :cond_0
-
-    .line 4
-    .line 5
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
-
-    .line 13
-    const/4 v1, 0x1
-
-    .line 14
-    if-nez v0, :cond_1
-
-    .line 15
-    .line 16
-    invoke-direct {p0, p1}, LX/2Fr;->A02(Ljava/lang/Class;)Z
-
-    .line 17
-    .line 18
-    .line 19
-    move-result v0
-
-    .line 20
-    if-nez v0, :cond_1
-
-    .line 21
-    .line 22
-    invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object p1
-
-    .line 26
-    goto :goto_0
-
-    .line 27
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 28
-    :cond_1
-    return v1
-.end method
-
-.method public static A01(LX/2Fr;Ljava/lang/Class;)Z
-    .locals 4
-
-    .line 0
-    const-string/jumbo v3, "javax.xml."
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v2
-
-    .line 7
-    :goto_0
-    const/4 v1, 0x1
-
-    .line 8
-    if-eqz v2, :cond_0
-
-    .line 9
-    .line 10
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
-
-    .line 18
-    if-nez v0, :cond_1
-
-    .line 19
-    .line 20
-    invoke-virtual {v2}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v2
-
-    .line 24
-    goto :goto_0
-
-    .line 25
-    :cond_0
-    invoke-direct {p0, p1}, LX/2Fr;->A03(Ljava/lang/Class;)Z
-
-    .line 26
-    .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    if-nez v0, :cond_1
-
-    .line 30
-    .line 31
-    invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object p1
-
-    .line 35
-    if-nez p1, :cond_0
-
-    .line 36
-    .line 37
-    const/4 v1, 0x0
-
-    .line 38
-    :cond_1
-    return v1
-.end method
-
-.method private A02(Ljava/lang/Class;)Z
-    .locals 7
-
-    .line 0
-    const-string/jumbo v6, "org.w3c.dom.Node"
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p1}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v5
-
-    .line 7
-    array-length v4, v5
-
-    .line 8
-    const/4 v3, 0x0
-
-    .line 9
-    const/4 v1, 0x0
-
-    .line 10
-    :goto_0
-    const/4 v2, 0x1
-
-    .line 11
-    if-ge v1, v4, :cond_0
-
-    .line 12
-    .line 13
-    aget-object v0, v5, v1
-
-    .line 14
-    .line 15
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    if-nez v0, :cond_1
-
-    .line 24
-    .line 25
-    add-int/lit8 v1, v1, 0x1
-
-    .line 26
-    .line 27
-    goto :goto_0
-
-    .line 28
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 29
-    :goto_1
-    if-ge v1, v4, :cond_2
-
-    .line 30
-    .line 31
-    aget-object v0, v5, v1
-
-    .line 32
-    .line 33
-    invoke-direct {p0, v0}, LX/2Fr;->A02(Ljava/lang/Class;)Z
-
-    .line 34
-    .line 35
-    .line 36
-    move-result v0
-
-    .line 37
-    if-nez v0, :cond_1
-
-    .line 38
-    .line 39
-    add-int/lit8 v1, v1, 0x1
-
-    .line 40
-    .line 41
-    goto :goto_1
-
-    .line 42
-    :cond_1
-    return v2
-
-    .line 43
-    :cond_2
-    return v3
-.end method
-
-.method private A03(Ljava/lang/Class;)Z
-    .locals 7
-
-    .line 0
-    const-string/jumbo v6, "javax.xml."
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p1}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v5
-
-    .line 7
-    array-length v4, v5
-
-    .line 8
-    const/4 v3, 0x0
-
-    .line 9
-    const/4 v1, 0x0
-
-    .line 10
-    :goto_0
-    const/4 v2, 0x1
-
-    .line 11
-    if-ge v1, v4, :cond_0
-
-    .line 12
-    .line 13
-    aget-object v0, v5, v1
-
-    .line 14
-    .line 15
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    invoke-virtual {v0, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    if-nez v0, :cond_1
-
-    .line 24
-    .line 25
-    add-int/lit8 v1, v1, 0x1
-
-    .line 26
-    .line 27
-    goto :goto_0
-
-    .line 28
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 29
-    :goto_1
-    if-ge v1, v4, :cond_2
-
-    .line 30
-    .line 31
-    aget-object v0, v5, v1
-
-    .line 32
-    .line 33
-    invoke-direct {p0, v0}, LX/2Fr;->A03(Ljava/lang/Class;)Z
-
-    .line 34
-    .line 35
-    .line 36
-    move-result v0
-
-    .line 37
-    if-nez v0, :cond_1
-
-    .line 38
-    .line 39
-    add-int/lit8 v1, v1, 0x1
-
-    .line 40
-    .line 41
-    goto :goto_1
-
-    .line 42
-    :cond_1
-    return v2
-
-    .line 43
-    :cond_2
-    return v3
 .end method

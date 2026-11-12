@@ -1,37 +1,37 @@
 .class public final LX/3Wz;
-.super Ljava/lang/Object;
+.super LX/3VF;
 .source ""
 
-
-# instance fields
-.field public A00:LX/3Wz;
-
-.field public final A01:Ljava/lang/Runnable;
-
-.field public final A02:Ljava/util/concurrent/Executor;
+# interfaces
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(LX/3Wz;Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+.method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    const v0, -0x2756904d
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-direct {p0, v0}, LX/3VF;-><init>(I)V
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/3VF;-><init>(I)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/3Wz;->A01:Ljava/lang/Runnable;
-
-    .line 4
-    .line 5
-    iput-object p3, p0, LX/3Wz;->A02:Ljava/util/concurrent/Executor;
-
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/3Wz;->A00:LX/3Wz;
-
-    .line 8
-    .line 9
     return-void
 .end method

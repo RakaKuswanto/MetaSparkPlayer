@@ -6,9 +6,9 @@
 # instance fields
 .field public final A00:Landroid/content/Context;
 
-.field public final A01:LX/4L2;
+.field public final A01:LX/4Cl;
 
-.field public final A02:LX/4CY;
+.field public final A02:LX/44M;
 
 .field public final A03:Ljava/util/Map;
 
@@ -16,7 +16,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/4L2;LX/4CY;Ljava/util/Map;Z)V
+.method public constructor <init>(Landroid/content/Context;LX/4Cl;LX/44M;Ljava/util/Map;Z)V
     .locals 0
 
     .line 0
@@ -29,7 +29,7 @@
 
     .line 4
     .line 5
-    iput-object p2, p0, Lcom/facebook/browser/lite/extensions/autofill/base/AutofillOptOutCallbackHandler;->A01:LX/4L2;
+    iput-object p2, p0, Lcom/facebook/browser/lite/extensions/autofill/base/AutofillOptOutCallbackHandler;->A01:LX/4Cl;
 
     .line 6
     .line 7
@@ -37,7 +37,7 @@
 
     .line 8
     .line 9
-    iput-object p3, p0, Lcom/facebook/browser/lite/extensions/autofill/base/AutofillOptOutCallbackHandler;->A02:LX/4CY;
+    iput-object p3, p0, Lcom/facebook/browser/lite/extensions/autofill/base/AutofillOptOutCallbackHandler;->A02:LX/44M;
 
     .line 10
     .line 11

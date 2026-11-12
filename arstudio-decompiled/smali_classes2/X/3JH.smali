@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract AiG(LX/32l;)V
+.method public abstract A9q(LX/3J6;I)LX/2Ui;
 .end method

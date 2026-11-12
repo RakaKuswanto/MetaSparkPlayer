@@ -1,55 +1,124 @@
 .class public final LX/0b0;
-.super Ljava/lang/Object;
+.super LX/0ax;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
+# static fields
+.field public static final serialVersionUID:J = 0x1L
 
-.field public final A01:LX/1wQ;
+
+# instance fields
+.field public errorCode:I
+
+.field public failingUrl:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/0ax;-><init>(Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->ATq:I
+    iput p2, p0, LX/0b0;->errorCode:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iput-object p3, p0, LX/0b0;->failingUrl:Ljava/lang/String;
 
     .line 6
     .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    const-string/jumbo v0, "{FacebookDialogException: "
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 8
-    move-result-object v0
-
     .line 9
-    check-cast v0, LX/1wQ;
-
     .line 10
-    .line 11
-    iput-object v0, p0, LX/0b0;->A01:LX/1wQ;
+    const-string/jumbo v0, "errorCode: "
 
+    .line 11
     .line 12
     .line 13
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 14
     .line 15
     .line 16
-    move-result-object v0
+    iget v0, p0, LX/0b0;->errorCode:I
 
     .line 17
-    iput-object v0, p0, LX/0b0;->A00:LX/1zG;
-
     .line 18
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     .line 19
-    return-void
+    .line 20
+    .line 21
+    const-string v0, ", message: "
+
+    .line 22
+    .line 23
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 31
+    .line 32
+    .line 33
+    const-string v0, ", url: "
+
+    .line 34
+    .line 35
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 36
+    .line 37
+    .line 38
+    iget-object v0, p0, LX/0b0;->failingUrl:Ljava/lang/String;
+
+    .line 39
+    .line 40
+    invoke-static {v0, v1}, LX/0X2;->A0l(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    return-object v0
 .end method

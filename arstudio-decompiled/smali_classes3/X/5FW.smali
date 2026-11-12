@@ -1,124 +1,139 @@
 .class public final LX/5FW;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "zzk"
 
 
 # instance fields
-.field public final synthetic A00:LX/5CN;
-
-.field public final synthetic A01:LX/5FX;
+.field public final synthetic A00:LX/5FQ;
 
 
 # direct methods
-.method public constructor <init>(LX/5CN;LX/5FX;)V
+.method public constructor <init>(Landroid/os/Looper;LX/5FQ;)V
     .locals 0
 
-    iput-object p2, p0, LX/5FW;->A01:LX/5FX;
+    .line 0
+    iput-object p2, p0, LX/5FW;->A00:LX/5FQ;
 
-    iput-object p1, p0, LX/5FW;->A00:LX/5CN;
+    .line 1
+    .line 2
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final handleMessage(Landroid/os/Message;)V
     .locals 4
 
     .line 0
-    iget-object v0, p0, LX/5FW;->A01:LX/5FX;
+    iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 1
     .line 2
-    iget-object v3, v0, LX/5FX;->A01:Ljava/lang/Object;
+    check-cast v3, [B
 
     .line 3
     .line 4
-    monitor-enter v3
+    if-eqz v3, :cond_1
 
     .line 5
-    :try_start_0
-    iget-object v2, v0, LX/5FX;->A00:LX/5FY;
-
     .line 6
+    iget-object v0, p0, LX/5FW;->A00:LX/5FQ;
+
     .line 7
-    iget-object v0, p0, LX/5FW;->A00:LX/5CN;
-
     .line 8
+    iget-object v0, v0, LX/5FQ;->A08:Ljava/util/List;
+
     .line 9
-    check-cast v0, LX/5CL;
-
     .line 10
-    .line 11
-    iget-object v1, v0, LX/5CL;->A04:Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
+    .line 11
     .line 12
     .line 13
-    monitor-enter v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    move-result-object v1
 
     .line 14
-    :try_start_1
-    iget-object v0, v0, LX/5CL;->A00:Ljava/lang/Exception;
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 15
     .line 16
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
     .line 17
-    :try_start_2
-    invoke-static {v0}, LX/51D;->A02(Ljava/lang/Object;)V
+    move-result v0
 
     .line 18
+    if-eqz v0, :cond_1
+
     .line 19
     .line 20
-    invoke-interface {v2, v0}, LX/5FY;->AY3(Ljava/lang/Exception;)V
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 21
     .line 22
     .line 23
-    monitor-exit v3
+    move-result-object v2
 
     .line 24
-    return-void
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    check-cast v2, LX/5FR;
 
     .line 25
-    :catchall_0
-    :try_start_3
-    move-exception v0
-
     .line 26
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-static {v2}, LX/5FR;->A00(LX/5FR;)V
 
     .line 27
-    :try_start_4
-    throw v0
-
     .line 28
-    :catchall_1
-    move-exception v0
-
     .line 29
-    monitor-exit v3
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    iget-object v0, v2, LX/5FR;->A04:[B
 
     .line 30
-    throw v0
+    .line 31
+    invoke-static {v0, v3}, Ljava/util/Arrays;->equals([B[B)Z
+
+    .line 32
+    .line 33
+    .line 34
+    move-result v0
+
+    .line 35
+    if-eqz v0, :cond_0
+
+    .line 36
+    .line 37
+    iget v1, p1, Landroid/os/Message;->what:I
+
+    .line 38
+    .line 39
+    const/4 v0, 0x2
+
+    .line 40
+    if-ne v1, v0, :cond_1
+
+    .line 41
+    .line 42
+    iget v1, v2, LX/5FR;->A00:I
+
+    .line 43
+    .line 44
+    const/4 v0, 0x4
+
+    .line 45
+    if-ne v1, v0, :cond_1
+
+    .line 46
+    .line 47
+    const/4 v0, 0x0
+
+    .line 48
+    invoke-static {v2, v0}, LX/5FR;->A03(LX/5FR;Z)V
+
+    .line 49
+    .line 50
+    .line 51
+    :cond_1
+    return-void
 .end method

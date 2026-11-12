@@ -2,96 +2,91 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "BitmapUtilImpl$1$3"
+
 
 # instance fields
-.field public A00:Ljava/lang/String;
-
-.field public A01:Ljava/lang/String;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Z
+.field public final synthetic A00:LX/3Uu;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(LX/3Uu;)V
+    .locals 0
 
-    .line 536870912
-    const-string v1, ""
+    .line 0
+    iput-object p1, p0, LX/3V2;->A00:LX/3Uu;
 
-    .line 536870913
-    .line 536870914
-    const/4 v0, 0x0
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 536870915
-    invoke-direct {p0, v1, v1, v1, v0}, LX/3V2;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    .line 536870916
-    .line 536870917
-    .line 536870918
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+
+# virtual methods
+.method public final run()V
+    .locals 4
 
     .line 0
-    const/4 v0, 0x1
+    iget-object v3, p0, LX/3V2;->A00:LX/3Uu;
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 2
+    iget-object v2, v3, LX/3Uu;->A01:LX/3Zv;
+
     .line 3
     .line 4
-    iput-object p1, p0, LX/3V2;->A02:Ljava/lang/String;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 5
     .line 6
-    iput-boolean v0, p0, LX/3V2;->A03:Z
-
     .line 7
+    move-result-object v1
+
     .line 8
-    const-string v0, ""
+    const-string v0, "Unable to cast to CloseableBitmap: "
 
     .line 9
     .line 10
-    iput-object v0, p0, LX/3V2;->A00:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 11
     .line 12
-    iput-object v0, p0, LX/3V2;->A01:Ljava/lang/String;
-
     .line 13
+    iget-object v0, v3, LX/3Uu;->A00:Landroid/net/Uri;
+
     .line 14
-    return-void
-.end method
+    .line 15
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v1
 
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 19
+    new-instance v0, Ljava/lang/Throwable;
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, LX/3V2;->A02:Ljava/lang/String;
+    .line 20
+    .line 21
+    invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    .line 268435460
-    .line 268435461
-    iput-boolean p4, p0, LX/3V2;->A03:Z
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v2, v0}, LX/3Zv;->A00(Ljava/lang/Throwable;)V
 
-    .line 268435462
-    .line 268435463
-    iput-object p2, p0, LX/3V2;->A00:Ljava/lang/String;
-
-    .line 268435464
-    .line 268435465
-    iput-object p3, p0, LX/3V2;->A01:Ljava/lang/String;
-
-    .line 268435466
-    .line 268435467
+    .line 25
+    .line 26
+    .line 27
     return-void
 .end method

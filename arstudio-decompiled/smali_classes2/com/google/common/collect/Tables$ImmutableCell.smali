@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/Tables$ImmutableCell;
-.super LX/1bO;
+.super LX/1oQ;
 .source ""
 
 # interfaces
@@ -21,9 +21,21 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "rowKey",
+            "columnKey",
+            "value"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1bO;-><init>()V
+    invoke-direct {p0}, LX/1oQ;-><init>()V
 
     .line 1
     .line 2

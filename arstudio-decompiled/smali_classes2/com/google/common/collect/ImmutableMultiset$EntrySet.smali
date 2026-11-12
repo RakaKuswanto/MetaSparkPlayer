@@ -14,6 +14,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableMultiset;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMultiset$EntrySet;->this$0:Lcom/google/common/collect/ImmutableMultiset;
@@ -28,13 +36,49 @@
     return-void
 .end method
 
+.method private readObject(Ljava/io/ObjectInputStream;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
+
+    .line 0
+    const-string v1, "Use EntrySetSerializedForm"
+
+    .line 1
+    .line 2
+    new-instance v0, Ljava/io/InvalidObjectException;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    throw v0
+.end method
+
 
 # virtual methods
 .method public final contains(Ljava/lang/Object;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     .line 0
-    instance-of v0, p1, LX/1g2;
+    instance-of v0, p1, LX/22t;
 
     .line 1
     .line 2
@@ -45,11 +89,11 @@
 
     .line 4
     .line 5
-    check-cast p1, LX/1g2;
+    check-cast p1, LX/22t;
 
     .line 6
     .line 7
-    invoke-virtual {p1}, LX/1g2;->A00()I
+    invoke-virtual {p1}, LX/22t;->A00()I
 
     .line 8
     .line 9
@@ -65,7 +109,7 @@
 
     .line 14
     .line 15
-    invoke-virtual {p1}, LX/1g2;->A01()Ljava/lang/Object;
+    invoke-virtual {p1}, LX/22t;->A01()Ljava/lang/Object;
 
     .line 16
     .line 17
@@ -73,7 +117,7 @@
     move-result-object v0
 
     .line 19
-    invoke-interface {v1, v0}, LX/1f6;->A7b(Ljava/lang/Object;)I
+    invoke-interface {v1, v0}, LX/22O;->A5u(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -81,7 +125,7 @@
     move-result v1
 
     .line 23
-    invoke-virtual {p1}, LX/1g2;->A00()I
+    invoke-virtual {p1}, LX/22t;->A00()I
 
     .line 24
     .line 25

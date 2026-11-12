@@ -1,35 +1,27 @@
-.class public final LX/2gW;
-.super Ljava/lang/Object;
+.class public final LX/2GW;
+.super LX/2GM;
 .source ""
 
 
 # instance fields
-.field public A00:J
-
-.field public A01:J
-
-.field public A02:J
-
-.field public A03:J
-
-.field public A04:J
+.field public final A00:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Z)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, LX/2GN;->AA_TEST_EXPERIMENT:LX/2GN;
 
     .line 1
     .line 2
-    .line 3
-    const-wide/16 v0, -0x1
+    invoke-direct {p0, v0}, LX/2GM;-><init>(LX/2GN;)V
 
+    .line 3
     .line 4
     .line 5
-    iput-wide v0, p0, LX/2gW;->A02:J
+    iput-boolean p1, p0, LX/2GW;->A00:Z
 
     .line 6
     .line 7

@@ -1,119 +1,217 @@
-.class public final LX/15E;
-.super Ljava/lang/Object;
+.class public final enum LX/15E;
+.super Ljava/lang/Enum;
 .source ""
+
+# interfaces
+.implements LX/0B2;
+
+
+# static fields
+.field public static final synthetic $VALUES:[LX/15E;
+
+.field public static final enum NONE:LX/15E;
+
+.field public static final enum ORGANIC:LX/15E;
+
+.field public static final enum PAID:LX/15E;
+
+
+# instance fields
+.field public final mValue:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 8
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "NONE"
 
     .line 1
     .line 2
+    const/4 v7, 0x0
+
     .line 3
-    return-void
-.end method
-
-.method public static A00(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableList;)V
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
+    const-string/jumbo v0, "none"
 
     .line 4
-    invoke-virtual {p1}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
-
     .line 5
     .line 6
-    .line 7
-    move-result-object v1
+    new-instance v6, LX/15E;
 
+    .line 7
     .line 8
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {v6, v1, v7, v0}, LX/15E;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 9
     .line 10
     .line 11
-    move-result v0
+    sput-object v6, LX/15E;->NONE:LX/15E;
 
     .line 12
-    if-eqz v0, :cond_0
-
     .line 13
+    const-string v1, "ORGANIC"
+
     .line 14
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 15
+    const/4 v5, 0x1
+
     .line 16
+    const-string/jumbo v0, "organic"
+
     .line 17
-    move-result-object v0
-
     .line 18
-    check-cast v0, Ljava/lang/Enum;
-
     .line 19
-    .line 20
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    new-instance v4, LX/15E;
 
+    .line 20
     .line 21
+    invoke-direct {v4, v1, v5, v0}, LX/15E;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 22
     .line 23
-    move-result-object v0
-
     .line 24
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    sput-object v4, LX/15E;->ORGANIC:LX/15E;
 
     .line 25
     .line 26
-    .line 27
-    goto :goto_0
+    const-string v3, "PAID"
 
+    .line 27
     .line 28
-    :cond_0
-    invoke-virtual {p0, v2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+    const/4 v2, 0x2
 
     .line 29
+    const-string/jumbo v0, "paid"
+
     .line 30
     .line 31
+    .line 32
+    new-instance v1, LX/15E;
+
+    .line 33
+    .line 34
+    invoke-direct {v1, v3, v2, v0}, LX/15E;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 35
+    .line 36
+    .line 37
+    sput-object v1, LX/15E;->PAID:LX/15E;
+
+    .line 38
+    .line 39
+    const/4 v0, 0x3
+
+    .line 40
+    new-array v0, v0, [LX/15E;
+
+    .line 41
+    .line 42
+    aput-object v6, v0, v7
+
+    .line 43
+    .line 44
+    aput-object v4, v0, v5
+
+    .line 45
+    .line 46
+    aput-object v1, v0, v2
+
+    .line 47
+    .line 48
+    sput-object v0, LX/15E;->$VALUES:[LX/15E;
+
+    .line 49
+    .line 50
     return-void
 .end method
 
-.method public static A01(Landroid/os/Parcel;Ljava/lang/Enum;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
     .line 0
-    if-nez p1, :cond_0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    const/4 v0, 0x0
-
     .line 3
-    :goto_0
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iput-object p3, p0, LX/15E;->mValue:Ljava/lang/String;
 
     .line 4
     .line 5
-    .line 6
     return-void
+.end method
 
-    .line 7
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+.method public static valueOf(Ljava/lang/String;)LX/15E;
+    .locals 1
 
-    .line 8
-    .line 9
-    .line 10
+    .line 0
+    const-class v0, LX/15E;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 11
-    goto :goto_0
+    .line 6
+    check-cast v0, LX/15E;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/15E;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/15E;->$VALUES:[LX/15E;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/15E;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public bridge synthetic getValue()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/15E;->getValue()Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public getValue()Ljava/lang/String;
+    .locals 1
+
+    .line 268435456
+    iget-object v0, p0, LX/15E;->mValue:Ljava/lang/String;
+
+    .line 268435457
+    .line 268435458
+    return-object v0
 .end method

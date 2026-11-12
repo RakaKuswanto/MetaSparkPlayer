@@ -1,22 +1,25 @@
-.class public final LX/3uF;
-.super LX/3vS;
+.class public final LX/3Uf;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/3Zi;
 
 
 # instance fields
-.field public final synthetic A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic A00:LX/3Ue;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
+.method public constructor <init>(LX/3Ue;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3uF;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p1, p0, LX/3Uf;->A00:LX/3Ue;
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/3vS;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
@@ -26,21 +29,25 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0H(LX/0tw;)V
-    .locals 2
+.method public final ABS(I)LX/3Nf;
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/3uF;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, LX/3Uf;->A00:LX/3Ue;
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    iget-object v0, v0, LX/3Ue;->A02:LX/3ZL;
 
     .line 3
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
     .line 4
+    invoke-interface {v0, p1}, LX/3ZL;->ABT(I)LX/3Nf;
+
     .line 5
     .line 6
-    return-void
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
 .end method

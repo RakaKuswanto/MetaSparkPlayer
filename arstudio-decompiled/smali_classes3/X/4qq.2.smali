@@ -1,77 +1,58 @@
-.class public final LX/4qq;
-.super LX/4ti;
+.class public final LX/4qQ;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ChoreographerCompat$FrameCallback$2"
 
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:I
+.field public final synthetic A00:LX/4qO;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;II)V
+.method public constructor <init>(LX/4qO;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/4ti;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, LX/4qQ;->A00:LX/4qO;
 
     .line 1
     .line 2
-    .line 3
-    iput p2, p0, LX/4qq;->A01:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput p3, p0, LX/4qq;->A00:I
-
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final calculateDtToFit(IIIII)I
-    .locals 2
+.method public final run()V
+    .locals 3
 
     .line 0
-    invoke-super/range {p0 .. p5}, LX/4ti;->calculateDtToFit(IIIII)I
+    iget-object v2, p0, LX/4qQ;->A00:LX/4qO;
 
     .line 1
     .line 2
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
     .line 3
-    move-result v1
-
     .line 4
-    iget v0, p0, LX/4qq;->A00:I
-
     .line 5
+    move-result-wide v0
+
     .line 6
-    add-int/2addr v1, v0
+    invoke-static {v2, v0, v1}, LX/4qO;->A00(LX/4qO;J)V
 
     .line 7
-    return v1
-.end method
-
-.method public final getHorizontalSnapPreference()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/4qq;->A01:I
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final getVerticalSnapPreference()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/4qq;->A01:I
-
-    .line 1
-    .line 2
-    return v0
+    .line 8
+    .line 9
+    return-void
 .end method

@@ -112,23 +112,24 @@
 
     .line 49
     .line 50
-    const-string v1, "avif"
+    const-string/jumbo v1, "avif"
 
     .line 51
     .line 52
+    .line 53
     new-instance v0, Lcom/facebook/spectrum/image/EncodedImageFormat;
 
-    .line 53
     .line 54
+    .line 55
     invoke-direct {v0, v1}, Lcom/facebook/spectrum/image/EncodedImageFormat;-><init>(Ljava/lang/String;)V
 
-    .line 55
     .line 56
     .line 57
+    .line 58
     sput-object v0, Lcom/facebook/spectrum/image/EncodedImageFormat;->AVIF:Lcom/facebook/spectrum/image/EncodedImageFormat;
 
-    .line 58
     .line 59
+    .line 60
     return-void
 .end method
 

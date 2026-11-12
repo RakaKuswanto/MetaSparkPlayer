@@ -192,11 +192,11 @@
 
     .line 64
     .line 65
-    new-instance v0, LX/0NJ;
+    new-instance v0, LX/0Pg;
 
     .line 66
     .line 67
-    invoke-direct {v0}, LX/0NJ;-><init>()V
+    invoke-direct {v0}, LX/0Pg;-><init>()V
 
     .line 68
     .line 69

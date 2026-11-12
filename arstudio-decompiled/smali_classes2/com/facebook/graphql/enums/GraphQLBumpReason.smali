@@ -68,6 +68,8 @@
 
 .field public static final enum BUMP_STORY_TIME:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
+.field public static final enum BUMP_UNFINISHED_VIDEO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+
 .field public static final enum BUMP_UNREAD:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
 .field public static final enum BUMP_UNREAD_ACTION_TYPE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
@@ -84,6 +86,8 @@
 
 .field public static final enum BUMP_VIDEO_NOT_PLAY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
+.field public static final enum BUMP_VIDEO_ON_GOOD_BWE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+
 .field public static final enum UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
 
@@ -93,7 +97,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 44
+    .locals 46
 
     .line 0
     const-string v1, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -108,10 +112,10 @@
     .line 4
     .line 5
     .line 6
-    move-result-object v43
+    move-result-object v15
 
     .line 7
-    sput-object v43, Lcom/facebook/graphql/enums/GraphQLBumpReason;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLBumpReason;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 8
     .line 9
@@ -127,10 +131,10 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v42
+    move-result-object v14
 
     .line 16
-    sput-object v42, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_ACTION_TYPE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_ACTION_TYPE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 17
     .line 18
@@ -146,10 +150,10 @@
     .line 22
     .line 23
     .line 24
-    move-result-object v3
+    move-result-object v45
 
     .line 25
-    sput-object v3, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_CHATROOM_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v45, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_CHATROOM_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 26
     .line 27
@@ -165,10 +169,10 @@
     .line 31
     .line 32
     .line 33
-    move-result-object v2
+    move-result-object v44
 
     .line 34
-    sput-object v2, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_CLEAN_NATIVE_SIF:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v44, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_CLEAN_NATIVE_SIF:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 35
     .line 36
@@ -184,10 +188,10 @@
     .line 40
     .line 41
     .line 42
-    move-result-object v41
+    move-result-object v43
 
     .line 43
-    sput-object v41, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_COMMENT_FROM_MUTIPLE_OBJECTS:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v43, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_COMMENT_FROM_MUTIPLE_OBJECTS:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 44
     .line 45
@@ -203,10 +207,10 @@
     .line 49
     .line 50
     .line 51
-    move-result-object v40
+    move-result-object v42
 
     .line 52
-    sput-object v40, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_CONNECTED_LIVE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v42, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_CONNECTED_LIVE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 53
     .line 54
@@ -222,10 +226,10 @@
     .line 58
     .line 59
     .line 60
-    move-result-object v39
+    move-result-object v41
 
     .line 61
-    sput-object v39, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_ENGAGEMENT_QP:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v41, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_ENGAGEMENT_QP:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 62
     .line 63
@@ -241,10 +245,10 @@
     .line 67
     .line 68
     .line 69
-    move-result-object v38
+    move-result-object v40
 
     .line 70
-    sput-object v38, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_EXPLORE_FEED_WIDGET:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v40, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_EXPLORE_FEED_WIDGET:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 71
     .line 72
@@ -261,10 +265,10 @@
     .line 77
     .line 78
     .line 79
-    move-result-object v37
+    move-result-object v39
 
     .line 80
-    sput-object v37, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_FIXED_QP_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v39, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_FIXED_QP_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 81
     .line 82
@@ -281,10 +285,10 @@
     .line 87
     .line 88
     .line 89
-    move-result-object v36
+    move-result-object v38
 
     .line 90
-    sput-object v36, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_FROM_NOTIFICATION:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v38, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_FROM_NOTIFICATION:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 91
     .line 92
@@ -301,10 +305,10 @@
     .line 97
     .line 98
     .line 99
-    move-result-object v35
+    move-result-object v37
 
     .line 100
-    sput-object v35, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_FURTHER_EXTENDED_TIME_RANGE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v37, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_FURTHER_EXTENDED_TIME_RANGE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 101
     .line 102
@@ -321,10 +325,10 @@
     .line 107
     .line 108
     .line 109
-    move-result-object v34
+    move-result-object v36
 
     .line 110
-    sput-object v34, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_HOISTED_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v36, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_HOISTED_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 111
     .line 112
@@ -341,10 +345,10 @@
     .line 117
     .line 118
     .line 119
-    move-result-object v33
+    move-result-object v35
 
     .line 120
-    sput-object v33, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_HOT_CONVERSATION:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v35, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_HOT_CONVERSATION:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 121
     .line 122
@@ -361,10 +365,10 @@
     .line 127
     .line 128
     .line 129
-    move-result-object v32
+    move-result-object v34
 
     .line 130
-    sput-object v32, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_IMAGE_NOT_LOADED:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v34, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_IMAGE_NOT_LOADED:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 131
     .line 132
@@ -381,10 +385,10 @@
     .line 137
     .line 138
     .line 139
-    move-result-object v31
+    move-result-object v33
 
     .line 140
-    sput-object v31, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_INTENTIONALLY_RESURFACE_SEEN_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v33, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_INTENTIONALLY_RESURFACE_SEEN_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 141
     .line 142
@@ -401,10 +405,10 @@
     .line 147
     .line 148
     .line 149
-    move-result-object v30
+    move-result-object v32
 
     .line 150
-    sput-object v30, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_LIKE_ACTION:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v32, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_LIKE_ACTION:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 151
     .line 152
@@ -421,10 +425,10 @@
     .line 157
     .line 158
     .line 159
-    move-result-object v29
+    move-result-object v31
 
     .line 160
-    sput-object v29, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_LIVE_VIDEO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v31, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_LIVE_VIDEO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 161
     .line 162
@@ -441,10 +445,10 @@
     .line 167
     .line 168
     .line 169
-    move-result-object v28
+    move-result-object v30
 
     .line 170
-    sput-object v28, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_NEW_APP:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v30, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_NEW_APP:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 171
     .line 172
@@ -461,10 +465,10 @@
     .line 177
     .line 178
     .line 179
-    move-result-object v27
+    move-result-object v29
 
     .line 180
-    sput-object v27, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_NEW_ATTACHED_PHOTO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v29, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_NEW_ATTACHED_PHOTO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 181
     .line 182
@@ -481,10 +485,10 @@
     .line 187
     .line 188
     .line 189
-    move-result-object v26
+    move-result-object v28
 
     .line 190
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_NEW_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v28, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_NEW_STORY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 191
     .line 192
@@ -501,10 +505,10 @@
     .line 197
     .line 198
     .line 199
-    move-result-object v25
+    move-result-object v27
 
     .line 200
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_NONE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v27, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_NONE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 201
     .line 202
@@ -521,10 +525,10 @@
     .line 207
     .line 208
     .line 209
-    move-result-object v24
+    move-result-object v26
 
     .line 210
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_OUT_OF_TIME_RANGE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v26, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_OUT_OF_TIME_RANGE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 211
     .line 212
@@ -541,10 +545,10 @@
     .line 217
     .line 218
     .line 219
-    move-result-object v23
+    move-result-object v25
 
     .line 220
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_PREMIUM_MUSIC_VIDEO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v25, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_PREMIUM_MUSIC_VIDEO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 221
     .line 222
@@ -561,10 +565,10 @@
     .line 227
     .line 228
     .line 229
-    move-result-object v22
+    move-result-object v24
 
     .line 230
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_PRIVACY_UPDATED:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v24, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_PRIVACY_UPDATED:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 231
     .line 232
@@ -581,10 +585,10 @@
     .line 237
     .line 238
     .line 239
-    move-result-object v21
+    move-result-object v23
 
     .line 240
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_READ:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_READ:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 241
     .line 242
@@ -601,10 +605,10 @@
     .line 247
     .line 248
     .line 249
-    move-result-object v20
+    move-result-object v22
 
     .line 250
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_REVIVE_FROM_VIEWSTATE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_REVIVE_FROM_VIEWSTATE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 251
     .line 252
@@ -621,10 +625,10 @@
     .line 257
     .line 258
     .line 259
-    move-result-object v19
+    move-result-object v21
 
     .line 260
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SAVED:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SAVED:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 261
     .line 262
@@ -641,10 +645,10 @@
     .line 267
     .line 268
     .line 269
-    move-result-object v15
+    move-result-object v20
 
     .line 270
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SCHEDULED_LIVE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SCHEDULED_LIVE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 271
     .line 272
@@ -661,10 +665,10 @@
     .line 277
     .line 278
     .line 279
-    move-result-object v14
+    move-result-object v19
 
     .line 280
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SHARE_COMPOSER_ABANDON:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SHARE_COMPOSER_ABANDON:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 281
     .line 282
@@ -681,10 +685,10 @@
     .line 287
     .line 288
     .line 289
-    move-result-object v13
+    move-result-object v18
 
     .line 290
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SHORT_VPVD:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SHORT_VPVD:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 291
     .line 292
@@ -701,10 +705,10 @@
     .line 297
     .line 298
     .line 299
-    move-result-object v12
+    move-result-object v17
 
     .line 300
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SKIPPED:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_SKIPPED:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 301
     .line 302
@@ -721,14 +725,14 @@
     .line 307
     .line 308
     .line 309
-    move-result-object v11
+    move-result-object v13
 
     .line 310
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_STORY_TIME:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_STORY_TIME:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 311
     .line 312
-    const-string v1, "BUMP_UNREAD"
+    const-string v1, "BUMP_UNFINISHED_VIDEO"
 
     .line 313
     .line 314
@@ -741,14 +745,14 @@
     .line 317
     .line 318
     .line 319
-    move-result-object v10
+    move-result-object v12
 
     .line 320
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNREAD:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNFINISHED_VIDEO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 321
     .line 322
-    const-string v1, "BUMP_UNREAD_ACTION_TYPE"
+    const-string v1, "BUMP_UNREAD"
 
     .line 323
     .line 324
@@ -761,14 +765,14 @@
     .line 327
     .line 328
     .line 329
-    move-result-object v9
+    move-result-object v11
 
     .line 330
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNREAD_ACTION_TYPE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNREAD:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 331
     .line 332
-    const-string v1, "BUMP_UNREAD_FROM_MULTI_PHOTO"
+    const-string v1, "BUMP_UNREAD_ACTION_TYPE"
 
     .line 333
     .line 334
@@ -781,14 +785,14 @@
     .line 337
     .line 338
     .line 339
-    move-result-object v8
+    move-result-object v10
 
     .line 340
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNREAD_FROM_MULTI_PHOTO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNREAD_ACTION_TYPE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 341
     .line 342
-    const-string v1, "BUMP_UNREAD_FROM_MUTIPLE_OBJECTS"
+    const-string v1, "BUMP_UNREAD_FROM_MULTI_PHOTO"
 
     .line 343
     .line 344
@@ -801,14 +805,14 @@
     .line 347
     .line 348
     .line 349
-    move-result-object v7
+    move-result-object v9
 
     .line 350
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNREAD_FROM_MUTIPLE_OBJECTS:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNREAD_FROM_MULTI_PHOTO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 351
     .line 352
-    const-string v1, "BUMP_VH_LIVE"
+    const-string v1, "BUMP_UNREAD_FROM_MUTIPLE_OBJECTS"
 
     .line 353
     .line 354
@@ -821,14 +825,14 @@
     .line 357
     .line 358
     .line 359
-    move-result-object v6
+    move-result-object v8
 
     .line 360
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VH_LIVE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_UNREAD_FROM_MUTIPLE_OBJECTS:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 361
     .line 362
-    const-string v1, "BUMP_VIDEO"
+    const-string v1, "BUMP_VH_LIVE"
 
     .line 363
     .line 364
@@ -841,14 +845,14 @@
     .line 367
     .line 368
     .line 369
-    move-result-object v18
+    move-result-object v7
 
     .line 370
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VIDEO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VH_LIVE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 371
     .line 372
-    const-string v1, "BUMP_VIDEO_CHAINING"
+    const-string v1, "BUMP_VIDEO"
 
     .line 373
     .line 374
@@ -861,224 +865,259 @@
     .line 377
     .line 378
     .line 379
-    move-result-object v17
+    move-result-object v6
 
     .line 380
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VIDEO_CHAINING:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VIDEO:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 381
     .line 382
-    const-string v0, "BUMP_VIDEO_NOT_PLAY"
+    const-string v1, "BUMP_VIDEO_CHAINING"
 
     .line 383
     .line 384
-    const/16 v5, 0x27
+    const/16 v0, 0x27
 
     .line 385
     .line 386
-    invoke-static {v0, v5}, Lcom/facebook/graphql/enums/GraphQLBumpReason;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLBumpReason;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 387
     .line 388
     .line 389
-    move-result-object v16
+    move-result-object v5
 
     .line 390
-    sput-object v16, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VIDEO_NOT_PLAY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VIDEO_CHAINING:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 391
     .line 392
-    const/16 v0, 0x28
+    const-string v1, "BUMP_VIDEO_NOT_PLAY"
 
     .line 393
     .line 394
-    new-array v4, v0, [Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    const/16 v0, 0x28
 
     .line 395
     .line 396
-    move-object/from16 v1, v43
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLBumpReason;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 397
     .line 398
-    move-object/from16 v0, v42
-
     .line 399
+    move-result-object v4
+
     .line 400
-    invoke-static {v4, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VIDEO_NOT_PLAY:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 401
     .line 402
+    const-string v0, "BUMP_VIDEO_ON_GOOD_BWE"
+
     .line 403
-    move-object/from16 v1, v41
-
     .line 404
+    const/16 v3, 0x29
+
     .line 405
-    move-object/from16 v0, v40
-
     .line 406
-    .line 407
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLBumpReason;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
+    .line 407
     .line 408
     .line 409
+    move-result-object v16
+
     .line 410
-    move-object/from16 v1, v39
+    sput-object v16, Lcom/facebook/graphql/enums/GraphQLBumpReason;->BUMP_VIDEO_ON_GOOD_BWE:Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 411
     .line 412
-    move-object/from16 v0, v38
+    const/16 v0, 0x2a
 
     .line 413
     .line 414
-    invoke-static {v4, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLBumpReason;
 
     .line 415
     .line 416
+    move-object/from16 v1, v45
+
     .line 417
-    move-object/from16 v3, v37
-
     .line 418
+    move-object/from16 v0, v44
+
     .line 419
-    move-object/from16 v2, v36
-
     .line 420
-    .line 421
-    move-object/from16 v1, v35
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 421
     .line 422
     .line 423
-    move-object/from16 v0, v34
+    move-object/from16 v15, v43
 
     .line 424
     .line 425
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v42
 
     .line 426
     .line 427
+    move-object/from16 v1, v41
+
     .line 428
-    move-object/from16 v1, v33
-
     .line 429
+    move-object/from16 v0, v40
+
     .line 430
-    move-object/from16 v0, v32
-
     .line 431
-    .line 432
-    invoke-static {v4, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 432
     .line 433
     .line 434
+    move-object/from16 v15, v39
+
     .line 435
-    move-object/from16 v3, v31
-
     .line 436
+    move-object/from16 v14, v38
+
     .line 437
-    move-object/from16 v2, v30
-
     .line 438
+    move-object/from16 v1, v37
+
     .line 439
-    move-object/from16 v1, v29
-
     .line 440
+    move-object/from16 v0, v36
+
     .line 441
-    move-object/from16 v0, v28
-
     .line 442
-    .line 443
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 443
     .line 444
     .line 445
+    const/16 v0, 0xc
+
     .line 446
-    const/16 v0, 0x12
-
     .line 447
+    aput-object v35, v2, v0
+
     .line 448
-    aput-object v27, v4, v0
-
     .line 449
+    move-object/from16 v15, v34
+
     .line 450
-    move-object/from16 v3, v26
-
     .line 451
+    move-object/from16 v14, v33
+
     .line 452
-    move-object/from16 v2, v25
-
     .line 453
+    move-object/from16 v1, v32
+
     .line 454
-    move-object/from16 v1, v24
-
     .line 455
+    move-object/from16 v0, v31
+
     .line 456
-    move-object/from16 v0, v23
-
     .line 457
-    .line 458
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 458
     .line 459
     .line 460
+    move-object/from16 v15, v30
+
     .line 461
-    move-object/from16 v3, v22
-
     .line 462
+    move-object/from16 v14, v29
+
     .line 463
-    move-object/from16 v2, v21
-
     .line 464
+    move-object/from16 v1, v28
+
     .line 465
-    move-object/from16 v1, v20
-
     .line 466
+    move-object/from16 v0, v27
+
     .line 467
-    move-object/from16 v0, v19
-
     .line 468
-    .line 469
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A19(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 469
     .line 470
     .line 471
-    .line 472
-    invoke-static {v4, v15, v14}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v15, v26
 
+    .line 472
     .line 473
+    move-object/from16 v14, v25
+
     .line 474
     .line 475
-    invoke-static {v13, v12, v11, v10, v4}, LX/001;->A0s(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v24
 
     .line 476
     .line 477
-    .line 478
-    invoke-static {v9, v8, v7, v6, v4}, LX/001;->A0t(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v0, v23
 
+    .line 478
     .line 479
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1A(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 480
     .line 481
-    const/16 v0, 0x25
-
     .line 482
+    move-object/from16 v15, v22
+
     .line 483
-    aput-object v18, v4, v0
-
     .line 484
+    move-object/from16 v14, v21
+
     .line 485
-    const/16 v0, 0x26
-
     .line 486
+    move-object/from16 v1, v20
+
     .line 487
-    aput-object v17, v4, v0
-
     .line 488
+    move-object/from16 v0, v19
+
     .line 489
-    aput-object v16, v4, v5
-
     .line 490
-    .line 491
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLBumpReason;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLBumpReason;
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A1B(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 491
     .line 492
     .line 493
+    move-object/from16 v1, v18
+
+    .line 494
+    .line 495
+    move-object/from16 v0, v17
+
+    .line 496
+    .line 497
+    invoke-static {v1, v0, v13, v12, v2}, LX/0X1;->A1C(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 498
+    .line 499
+    .line 500
+    invoke-static {v11, v10, v9, v8, v2}, LX/0X1;->A1D(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 501
+    .line 502
+    .line 503
+    invoke-static {v7, v6, v5, v4, v2}, LX/0X1;->A1E(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 504
+    .line 505
+    .line 506
+    aput-object v16, v2, v3
+
+    .line 507
+    .line 508
+    sput-object v2, Lcom/facebook/graphql/enums/GraphQLBumpReason;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLBumpReason;
+
+    .line 509
+    .line 510
     return-void
 .end method
 
@@ -1122,7 +1161,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

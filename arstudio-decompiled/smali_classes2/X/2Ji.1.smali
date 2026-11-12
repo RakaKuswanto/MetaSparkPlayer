@@ -1,107 +1,63 @@
 .class public final LX/2Ji;
-.super LX/2Jh;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final synthetic A00:LX/2Jg;
+.field public final A00:Lcom/facebook/common/time/RealtimeSinceBootClock;
+
+.field public final A01:LX/0Ve;
 
 
 # direct methods
-.method public constructor <init>(LX/2Jg;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/2Ji;->A00:LX/2Jg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget-object v0, p1, LX/2Jg;->A00:LX/2Jd;
-
     .line 3
+    sget v0, LX/2I6;->A6A:I
+
     .line 4
-    invoke-direct {p0, v0}, LX/2Jh;-><init>(LX/2Jd;)V
-
     .line 5
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/2Jh;->A02:LX/2Je;
-
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/2Jh;->A03:LX/2Jd;
-
-    .line 3
-    .line 4
-    iget-object v0, v1, LX/2Jd;->header:LX/2Je;
-
-    .line 5
-    .line 6
-    if-eq v2, v0, :cond_1
-
     .line 7
     .line 8
-    iget v1, v1, LX/2Jd;->modCount:I
+    move-result-object v1
 
     .line 9
+    check-cast v1, LX/0Ve;
+
     .line 10
-    iget v0, p0, LX/2Jh;->A00:I
-
     .line 11
+    sget v0, LX/2I6;->A69:I
+
     .line 12
-    if-ne v1, v0, :cond_0
-
     .line 13
-    .line 14
-    iget-object v0, v2, LX/2Je;->A04:LX/2Je;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
+    .line 14
     .line 15
     .line 16
-    iput-object v0, p0, LX/2Jh;->A02:LX/2Je;
-
-    .line 17
-    .line 18
-    iput-object v2, p0, LX/2Jh;->A01:LX/2Je;
-
-    .line 19
-    .line 20
-    iget-object v0, v2, LX/2Je;->A07:Ljava/lang/Object;
-
-    .line 21
-    .line 22
-    return-object v0
-
-    .line 23
-    :cond_0
-    new-instance v0, Ljava/util/ConcurrentModificationException;
-
-    .line 24
-    .line 25
-    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
-
-    .line 26
-    .line 27
-    .line 28
-    throw v0
-
-    .line 29
-    :cond_1
-    invoke-static {}, LX/0Yj;->A0d()Ljava/util/NoSuchElementException;
-
-    .line 30
-    .line 31
-    .line 32
     move-result-object v0
 
-    .line 33
-    throw v0
+    .line 17
+    check-cast v0, Lcom/facebook/common/time/RealtimeSinceBootClock;
+
+    .line 18
+    .line 19
+    iput-object v1, p0, LX/2Ji;->A01:LX/0Ve;
+
+    .line 20
+    .line 21
+    iput-object v0, p0, LX/2Ji;->A00:Lcom/facebook/common/time/RealtimeSinceBootClock;
+
+    .line 22
+    .line 23
+    return-void
 .end method

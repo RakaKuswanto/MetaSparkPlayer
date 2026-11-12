@@ -2,511 +2,499 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultPhotoOutput$1"
-
-
-# instance fields
-.field public final synthetic A00:I
-
-.field public final synthetic A01:I
-
-.field public final synthetic A02:LX/5ZG;
-
-.field public final synthetic A03:LX/5Z6;
-
-.field public final synthetic A04:Ljava/nio/Buffer;
-
 
 # direct methods
-.method public constructor <init>(LX/5ZG;LX/5Z6;Ljava/nio/Buffer;II)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/5Z7;->A03:LX/5Z6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput p4, p0, LX/5Z7;->A01:I
-
     .line 3
-    .line 4
-    iput p5, p0, LX/5Z7;->A00:I
-
-    .line 5
-    .line 6
-    iput-object p1, p0, LX/5Z7;->A02:LX/5ZG;
-
-    .line 7
-    .line 8
-    iput-object p3, p0, LX/5Z7;->A04:Ljava/nio/Buffer;
-
-    .line 9
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 11
-    .line 12
-    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 11
+.method public final A00(Ljava/nio/ByteBuffer;)LX/5ZG;
+    .locals 7
 
     .line 0
-    iget-object v5, p0, LX/5Z7;->A03:LX/5Z6;
+    const/4 v3, 0x0
 
     .line 1
-    .line 2
-    iget-object v8, v5, LX/5Z6;->A0B:LX/5ZA;
+    invoke-static {p1, v3}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    iget v7, p0, LX/5Z7;->A01:I
+    const-string v5, "KEYF"
 
     .line 5
     .line 6
-    iget v6, p0, LX/5Z7;->A00:I
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     .line 7
     .line 8
-    invoke-interface {v8, v7, v6}, LX/5ZA;->A7q(II)Landroid/graphics/Bitmap;
-
     .line 9
+    move-result v0
+
     .line 10
+    const/4 v4, 0x4
+
     .line 11
-    move-result-object v9
+    if-ne v0, v4, :cond_5
 
     .line 12
-    if-nez v9, :cond_0
-
     .line 13
+    const/4 v2, 0x0
+
     .line 14
-    iget-object v0, p0, LX/5Z7;->A02:LX/5ZG;
+    :cond_0
+    invoke-virtual {v5, v2}, Ljava/lang/String;->charAt(I)C
 
     .line 15
     .line 16
-    iget-object v4, v0, LX/5ZG;->A00:LX/5Z8;
-
     .line 17
+    move-result v1
+
     .line 18
-    const-string v0, "Failed to create bitmap with dimensions: "
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
     .line 19
     .line 20
-    const-string v1, "x"
-
     .line 21
+    move-result v0
+
     .line 22
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/lit8 v0, v0, 0x4
 
     .line 23
     .line 24
+    add-int/2addr v0, v2
+
     .line 25
-    move-result-object v0
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
     .line 26
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
     .line 27
     .line 28
+    move-result v0
+
     .line 29
-    invoke-static {v1, v0, v6}, LX/001;->A0L(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    int-to-char v0, v0
 
     .line 30
+    if-ne v1, v0, :cond_5
+
     .line 31
     .line 32
-    move-result-object v0
+    add-int/lit8 v2, v2, 0x1
 
     .line 33
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
     .line 34
+    if-lt v2, v4, :cond_0
+
     .line 35
     .line 36
-    move-result-object v0
+    new-instance v6, LX/5Zh;
 
     .line 37
-    :goto_0
-    invoke-virtual {v4, v0}, LX/5Z8;->A01(Ljava/lang/Throwable;)V
-
     .line 38
+    invoke-direct {v6}, LX/5Zh;-><init>()V
+
     .line 39
     .line 40
-    return-void
-
     .line 41
-    :cond_0
-    const/4 v2, 0x0
+    :try_start_0
+    new-instance v2, LX/5Z6;
 
     .line 42
-    const/4 v10, 0x1
-
     .line 43
-    :try_start_0
-    iget-object v0, p0, LX/5Z7;->A04:Ljava/nio/Buffer;
+    invoke-direct {v2}, LX/5Z6;-><init>()V
 
     .line 44
     .line 45
-    invoke-virtual {v9, v0}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 46
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
     .line 47
     .line 48
-    iget-object v4, p0, LX/5Z7;->A02:LX/5ZG;
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
     .line 49
     .line 50
-    iget-object v3, v4, LX/5ZG;->A01:Ljava/io/File;
-
     .line 51
-    .line 52
-    if-nez v3, :cond_2
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
+    .line 52
     .line 53
     .line 54
-    iget-object v4, v4, LX/5ZG;->A00:LX/5Z8;
+    move-result v1
 
     .line 55
-    .line 56
-    invoke-virtual {v4, v9}, LX/5Z8;->A00(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->getInt(I)I
 
+    .line 56
     .line 57
     .line 58
+    move-result v0
+
     .line 59
-    :cond_1
-    iget-object v3, v4, LX/5Z8;->A01:LX/5a1;
+    add-int/2addr v0, v1
 
     .line 60
-    .line 61
-    iget-object v1, v3, LX/5a1;->A0J:Landroid/os/Handler;
+    invoke-virtual {v2, p1, v0}, LX/5Z6;->A6h(Ljava/nio/ByteBuffer;I)V
 
+    .line 61
     .line 62
     .line 63
-    new-instance v0, LX/5ZB;
+    invoke-virtual {v2, v6}, LX/5Z6;->A00(LX/5Zh;)V
 
     .line 64
     .line 65
-    invoke-direct {v0, v4}, LX/5ZB;-><init>(LX/5Z8;)V
-
     .line 66
+    iget-object v0, v6, LX/5Zh;->A01:Ljava/util/List;
+
     .line 67
     .line 68
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 v2, 0x0
 
     .line 69
+    if-eqz v0, :cond_1
+
     .line 70
     .line 71
-    iget-object v1, v3, LX/5a1;->A0M:LX/5aV;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     .line 72
     .line 73
-    iget-object v0, v4, LX/5Z8;->A02:LX/5Z6;
-
     .line 74
+    move-result v0
+
     .line 75
-    invoke-virtual {v1, v0}, LX/5aV;->A04(LX/5ar;)V
+    new-array v1, v0, [LX/5ZZ;
 
     .line 76
     .line 77
+    iput-object v1, v6, LX/5ZG;->A04:[LX/5ZZ;
+
     .line 78
-    iput-boolean v2, v3, LX/5a1;->A0Y:Z
-
     .line 79
-    .line 80
-    return-void
+    iget-object v0, v6, LX/5Zh;->A01:Ljava/util/List;
 
+    .line 80
     .line 81
-    :cond_2
-    const-string v1, "Could not save file."
+    invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 82
     .line 83
-    invoke-interface {v8, v9}, LX/5ZA;->A7Y(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-
     .line 84
-    .line 85
-    .line 86
     move-result-object v0
 
+    .line 85
+    check-cast v0, [LX/5ZZ;
+
+    .line 86
     .line 87
-    if-eqz v0, :cond_3
+    iput-object v0, v6, LX/5ZG;->A04:[LX/5ZZ;
 
     .line 88
     .line 89
-    iget-object v4, v4, LX/5ZG;->A00:LX/5Z8;
+    iput-object v2, v6, LX/5Zh;->A01:Ljava/util/List;
 
     .line 90
     .line 91
-    invoke-virtual {v4, v0}, LX/5Z8;->A00(Landroid/graphics/Bitmap;)V
+    iput v3, v6, LX/5ZG;->A00:I
 
     .line 92
     .line 93
-    .line 94
-    invoke-static {v9, v5, v3, v10}, LX/5Z6;->A01(Landroid/graphics/Bitmap;LX/5Z6;Ljava/io/File;Z)Z
+    :cond_1
+    iget-object v1, v6, LX/5Zh;->A00:Ljava/util/List;
 
+    .line 94
     .line 95
+    if-eqz v1, :cond_3
+
     .line 96
     .line 97
-    move-result v0
+    iget-object v0, v6, LX/5ZG;->A01:LX/5Zq;
 
     .line 98
-    :goto_1
-    if-nez v0, :cond_1
-
     .line 99
-    .line 100
-    invoke-static {v1}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    if-nez v0, :cond_2
 
+    .line 100
     .line 101
+    new-instance v0, LX/5Zq;
+
     .line 102
     .line 103
-    move-result-object v0
+    invoke-direct {v0}, LX/5Zq;-><init>()V
 
     .line 104
-    goto :goto_0
-
     .line 105
-    :cond_3
-    invoke-static {v9, v5, v3, v2}, LX/5Z6;->A01(Landroid/graphics/Bitmap;LX/5Z6;Ljava/io/File;Z)Z
-
     .line 106
+    iput-object v0, v6, LX/5ZG;->A01:LX/5Zq;
+
     .line 107
     .line 108
-    move-result v0
+    :cond_2
+    iput-object v1, v0, LX/5Zq;->A00:Ljava/util/List;
 
     .line 109
-    iget-object v4, v4, LX/5ZG;->A00:LX/5Z8;
-
     .line 110
-    .line 111
-    invoke-virtual {v4, v9}, LX/5Z8;->A00(Landroid/graphics/Bitmap;)V
+    iput-object v2, v6, LX/5Zh;->A00:Ljava/util/List;
 
+    .line 111
     .line 112
+    :cond_3
+    iget-object v0, v6, LX/5ZG;->A03:[B
+
     .line 113
     .line 114
-    goto :goto_1
+    if-nez v0, :cond_4
 
     .line 115
-    :catchall_0
-    move-exception v3
-
     .line 116
-    const/16 v0, 0xc
+    const/4 v0, 0x1
 
     .line 117
+    new-array v0, v0, [B
+
     .line 118
-    new-array v4, v0, [Ljava/lang/Object;
-
     .line 119
-    .line 120
-    invoke-static {v3, v4, v2}, LX/0Yf;->A1B(Ljava/lang/Object;[Ljava/lang/Object;I)V
+    aput-byte v3, v0, v3
 
+    .line 120
     .line 121
+    iput-object v0, v6, LX/5ZG;->A03:[B
+
     .line 122
     .line 123
-    iget-object v0, p0, LX/5Z7;->A04:Ljava/nio/Buffer;
+    :cond_4
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 124
     .line 125
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
     .line 126
-    .line 127
-    .line 128
-    move-result v0
+    move-result-object v0
 
+    .line 127
+    iput-object v0, v6, LX/5ZG;->A02:Ljava/util/Map;
+
+    .line 128
     .line 129
-    invoke-static {v4, v0, v10}, LX/001;->A1A([Ljava/lang/Object;II)V
+    iget-object v5, v6, LX/5ZG;->A04:[LX/5ZZ;
 
     .line 130
     .line 131
+    array-length v4, v5
+
     .line 132
-    const/4 v1, 0x2
+    :goto_0
+    if-ge v3, v4, :cond_7
 
     .line 133
-    invoke-static {v9}, LX/5Z6;->A00(Landroid/graphics/Bitmap;)I
-
     .line 134
+    aget-object v0, v5, v3
+
     .line 135
     .line 136
-    move-result v0
+    iget-object v2, v6, LX/5ZG;->A02:Ljava/util/Map;
 
     .line 137
-    invoke-static {v4, v0, v1}, LX/001;->A1A([Ljava/lang/Object;II)V
-
     .line 138
+    iget-object v1, v6, LX/5ZG;->A05:[LX/5Zi;
+
     .line 139
     .line 140
-    const/4 v2, 0x3
+    iget-object v0, v0, LX/5ZZ;->A02:LX/5Z3;
 
     .line 141
-    const/high16 v1, 0x3f800000    # 1.0f
-
     .line 142
-    .line 143
-    invoke-static {v7, v6}, LX/5bR;->A00(II)LX/5bR;
+    invoke-virtual {v0, v2, v1}, LX/5Z3;->A01(Ljava/util/Map;[LX/5Zi;)V
 
+    .line 143
     .line 144
     .line 145
-    .line 146
-    move-result-object v0
+    add-int/lit8 v3, v3, 0x1
 
+    .line 146
     .line 147
-    invoke-interface {v8, v0, v1}, LX/5ZA;->A9T(LX/5bR;F)Z
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 148
-    .line 149
-    .line 150
-    move-result v0
+    :catch_0
+    move-exception v1
 
+    .line 149
+    new-instance v0, LX/6bQ;
+
+    .line 150
     .line 151
-    invoke-static {v4, v2, v0}, LX/001;->A1C([Ljava/lang/Object;IZ)V
+    invoke-direct {v0, v1}, LX/6bQ;-><init>(Ljava/lang/Exception;)V
 
     .line 152
     .line 153
     .line 154
-    const/4 v1, 0x4
+    throw v0
 
     .line 155
-    iget v0, v5, LX/5Z6;->A03:I
+    :cond_5
+    const-string v3, "KYF3"
 
     .line 156
     .line 157
-    invoke-static {v4, v0, v1}, LX/001;->A1A([Ljava/lang/Object;II)V
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     .line 158
     .line 159
     .line 160
-    const/4 v1, 0x5
+    move-result v0
 
     .line 161
-    iget v0, v5, LX/5Z6;->A00:I
+    if-ne v0, v4, :cond_8
 
     .line 162
     .line 163
-    invoke-static {v4, v0, v1}, LX/001;->A1A([Ljava/lang/Object;II)V
+    const/4 v2, 0x0
 
     .line 164
+    :cond_6
+    invoke-virtual {v3, v2}, Ljava/lang/String;->charAt(I)C
+
     .line 165
     .line 166
-    const/4 v0, 0x6
-
     .line 167
-    invoke-static {v4, v7, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+    move-result v1
 
     .line 168
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
     .line 169
     .line 170
-    const/4 v0, 0x7
-
     .line 171
-    invoke-static {v4, v6, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
+    move-result v0
 
     .line 172
+    add-int/lit8 v0, v0, 0x4
+
     .line 173
     .line 174
-    const/16 v1, 0x8
+    add-int/2addr v0, v2
 
     .line 175
-    .line 176
-    iget-object v2, v5, LX/5Z6;->A04:Landroid/graphics/RectF;
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
+    .line 176
     .line 177
     .line 178
-    iget v0, v2, Landroid/graphics/RectF;->left:F
+    move-result v0
 
     .line 179
+    int-to-char v0, v0
+
     .line 180
-    invoke-static {v4, v0, v1}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
+    if-ne v1, v0, :cond_8
 
     .line 181
     .line 182
+    add-int/lit8 v2, v2, 0x1
+
     .line 183
-    const/16 v1, 0x9
-
     .line 184
+    if-lt v2, v4, :cond_6
+
     .line 185
-    iget v0, v2, Landroid/graphics/RectF;->top:F
-
     .line 186
-    .line 187
-    invoke-static {v4, v0, v1}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
+    new-instance v6, LX/5ZE;
 
+    .line 187
     .line 188
+    invoke-direct {v6}, LX/5ZE;-><init>()V
+
     .line 189
     .line 190
-    const/16 v1, 0xa
-
     .line 191
+    :try_start_1
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
     .line 192
-    iget v0, v2, Landroid/graphics/RectF;->right:F
-
     .line 193
-    .line 194
-    invoke-static {v4, v0, v1}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 194
     .line 195
     .line 196
-    .line 197
-    const/16 v1, 0xb
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
+    .line 197
     .line 198
     .line 199
-    iget v0, v2, Landroid/graphics/RectF;->bottom:F
+    move-result v1
 
     .line 200
-    .line 201
-    invoke-static {v4, v0, v1}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->getInt(I)I
 
+    .line 201
     .line 202
     .line 203
+    move-result v0
+
     .line 204
-    const-string v0, "Could not save photo, copyPixelsFromBuffer Failed: %s, ib.capacity: %d, bitmap-bytecount:%d, doesFitInMemory:%b, mWidth:%d, mHeight:%d, croppedWidth:%d, croppedHeight:%d, mCropRect:(l:%f,t:%f,r:%f,b:%f)"
+    add-int/2addr v0, v1
 
     .line 205
-    .line 206
-    invoke-static {v0, v4}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v6, p1, v0}, LX/5ZE;->A6h(Ljava/nio/ByteBuffer;I)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 206
     .line 207
     .line 208
+    :cond_7
+    invoke-static {v6}, LX/0WV;->A07(Ljava/lang/Object;)V
+
     .line 209
-    move-result-object v1
-
     .line 210
-    const-string v0, "PhotoOutput"
-
     .line 211
+    return-object v6
+
     .line 212
-    invoke-static {v0, v1, v3}, LX/0Jt;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :catch_1
+    move-exception v1
 
     .line 213
+    new-instance v0, LX/6bQ;
+
     .line 214
     .line 215
-    iget-object v0, p0, LX/5Z7;->A02:LX/5ZG;
+    invoke-direct {v0, v1}, LX/6bQ;-><init>(Ljava/lang/Exception;)V
 
     .line 216
     .line 217
-    iget-object v4, v0, LX/5ZG;->A00:LX/5Z8;
-
     .line 218
+    throw v0
+
     .line 219
-    invoke-static {v1}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    :cond_8
+    const-string v1, "unrecognized asset format"
 
     .line 220
     .line 221
-    .line 222
-    move-result-object v0
+    new-instance v0, LX/6bQ;
 
+    .line 222
     .line 223
-    goto/16 :goto_0
+    invoke-direct {v0, v1}, LX/6bQ;-><init>(Ljava/lang/String;)V
+
+    .line 224
+    .line 225
+    .line 226
+    throw v0
 .end method

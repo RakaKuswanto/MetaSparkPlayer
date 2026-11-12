@@ -1,14 +1,21 @@
-.class public interface abstract LX/4GY;
+.class public final LX/4GY;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4HA;
+
+# static fields
+.field public static A00:Z
 
 
-# virtual methods
-.method public abstract AnC(LX/4IS;)V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AoH()Z
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

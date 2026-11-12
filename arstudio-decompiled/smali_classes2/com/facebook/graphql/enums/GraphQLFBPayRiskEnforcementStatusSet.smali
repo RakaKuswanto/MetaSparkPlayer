@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLFBPayRiskEnforcementStatusSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLFBPayRiskEnforcementStatusSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0x()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A12()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -82,18 +82,29 @@
 
     .line 31
     .line 32
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 33
     .line 34
+    const/4 v1, 0x6
+
     .line 35
-    move-result-object v0
+    const-string v0, "CREATE_APPEAL_KYX"
 
     .line 36
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLFBPayRiskEnforcementStatusSet;->A00:Ljava/util/Set;
-
     .line 37
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLFBPayRiskEnforcementStatusSet;->A00:Ljava/util/HashSet;
+
+    .line 42
+    .line 43
     return-void
 .end method
 
@@ -109,11 +120,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLFBPayRiskEnforcementStatusSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLFBPayRiskEnforcementStatusSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

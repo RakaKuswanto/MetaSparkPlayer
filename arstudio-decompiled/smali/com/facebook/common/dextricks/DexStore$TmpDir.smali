@@ -121,7 +121,7 @@
 
     .line 36
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 37
     if-eqz v2, :cond_0
@@ -136,21 +136,32 @@
     .line 40
     .line 41
     .line 42
-    :catchall_1
-    :cond_0
-    throw v0
+    throw v1
 
     .line 43
+    :catchall_1
+    move-exception v0
+
+    .line 44
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 45
+    .line 46
+    .line 47
+    :cond_0
+    throw v1
+
+    .line 48
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 44
-    .line 45
+    .line 49
+    .line 50
     invoke-virtual {v2}, Lcom/facebook/common/dextricks/ReentrantLockFile$Lock;->close()V
 
-    .line 46
-    .line 47
-    .line 48
+    .line 51
+    .line 52
+    .line 53
     :cond_1
     return-void
 .end method

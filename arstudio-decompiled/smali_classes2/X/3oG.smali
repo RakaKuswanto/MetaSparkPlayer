@@ -1,200 +1,253 @@
-.class public interface abstract LX/3oG;
+.class public final LX/3OG;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/2yX;
+.implements LX/2MU;
+
+
+# instance fields
+.field public final synthetic A00:LX/3Oi;
+
+.field public final synthetic A01:LX/3NN;
+
+.field public final synthetic A02:LX/3Rv;
+
+.field public final synthetic A03:Ljava/lang/Object;
+
+.field public final synthetic A04:Ljava/lang/Object;
+
+.field public final synthetic A05:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(LX/3Oi;LX/3NN;LX/3Rv;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    iput-object p2, p0, LX/3OG;->A01:LX/3NN;
+
+    .line 1
+    .line 2
+    iput-object p3, p0, LX/3OG;->A02:LX/3Rv;
+
+    .line 3
+    .line 4
+    iput-object p6, p0, LX/3OG;->A05:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    iput-object p4, p0, LX/3OG;->A04:Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    iput-object p5, p0, LX/3OG;->A03:Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    iput-object p1, p0, LX/3OG;->A00:LX/3Oi;
+
+    .line 11
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 13
+    .line 14
+    .line 15
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract A5m(Landroid/view/ViewGroup;LX/2to;LX/3wA;Z)V
+.method public final bridge synthetic get()Ljava/lang/Object;
+    .locals 9
+
+    .line 0
+    iget-object v3, p0, LX/3OG;->A01:LX/3NN;
+
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/3OG;->A02:LX/3Rv;
+
+    .line 3
+    .line 4
+    iget-object v8, p0, LX/3OG;->A05:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    iget-object v6, p0, LX/3OG;->A04:Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    iget-object v7, p0, LX/3OG;->A03:Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    iget-object v1, p0, LX/3OG;->A00:LX/3Oi;
+
+    .line 11
+    .line 12
+    instance-of v0, v3, LX/3NL;
+
+    .line 13
+    .line 14
+    if-eqz v0, :cond_0
+
+    .line 15
+    .line 16
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    throw v0
+
+    .line 21
+    :cond_0
+    check-cast v3, LX/3NM;
+
+    .line 22
+    .line 23
+    check-cast v6, LX/3N2;
+
+    .line 24
+    .line 25
+    iget-object v3, v3, LX/3NM;->A01:LX/3N5;
+
+    .line 26
+    .line 27
+    invoke-static {v1}, LX/3NM;->A00(LX/3Oi;)LX/3Ob;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v5
+
+    .line 31
+    instance-of v0, v2, LX/3Qq;
+
+    .line 32
+    .line 33
+    if-eqz v0, :cond_2
+
+    .line 34
+    .line 35
+    check-cast v2, LX/3Qq;
+
+    .line 36
+    .line 37
+    monitor-enter v2
+
+    .line 38
+    const/4 v4, 0x0
+
+    .line 39
+    :try_start_0
+    iget-object v0, v2, LX/3Qq;->A06:Ljava/util/Set;
+
+    .line 40
+    .line 41
+    if-eqz v0, :cond_1
+
+    .line 42
+    .line 43
+    new-instance v4, LX/3PK;
+
+    .line 44
+    .line 45
+    invoke-direct {v4, v0}, LX/3PK;-><init>(Ljava/util/Set;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 46
+    .line 47
+    .line 48
+    :cond_1
+    monitor-exit v2
+
+    .line 49
+    goto :goto_0
+
+    .line 50
+    :catchall_0
+    move-exception v0
+
+    .line 51
+    monitor-exit v2
+
+    .line 52
+    throw v0
+
+    .line 53
+    :cond_2
+    const/4 v4, 0x0
+
+    .line 54
+    :goto_0
+    invoke-virtual/range {v3 .. v8}, LX/3N5;->A03(LX/3PN;LX/3Ob;LX/3N2;Ljava/lang/Object;Ljava/lang/String;)LX/3QB;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    return-object v0
 .end method
 
-.method public abstract A6x()V
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-.method public abstract A9C(Landroid/view/ViewGroup;Z)V
-.end method
+    .line 0
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
-.method public abstract ABQ()I
-.end method
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
 
-.method public abstract ABR()I
-.end method
+    .line 4
+    new-instance v2, LX/3Ry;
 
-.method public abstract ABk()Ljava/util/List;
-.end method
+    .line 5
+    .line 6
+    invoke-direct {v2, v0}, LX/3Ry;-><init>(Ljava/lang/String;)V
 
-.method public abstract AC2()I
-.end method
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/3OG;->A04:Ljava/lang/Object;
 
-.method public abstract AC4()LX/3s3;
-.end method
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-.method public abstract ADG()Ljava/lang/String;
-.end method
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
 
-.method public abstract AEn()I
-.end method
+    .line 15
+    const-string/jumbo v0, "request"
 
-.method public abstract AG8()Ljava/util/List;
-.end method
+    .line 16
+    .line 17
+    .line 18
+    invoke-static {v2, v1, v0}, LX/3Ry;->A00(LX/3Ry;Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public abstract AGV()Ljava/lang/String;
-.end method
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-.method public abstract AHk()J
-.end method
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
 
-.method public abstract AI3()I
-.end method
-
-.method public abstract AI5()I
-.end method
-
-.method public abstract AI7()J
-.end method
-
-.method public abstract AI8()Ljava/lang/Long;
-.end method
-
-.method public abstract AI9()Ljava/lang/Long;
-.end method
-
-.method public abstract AJ1()Ljava/lang/String;
-.end method
-
-.method public abstract AK5()J
-.end method
-
-.method public abstract AK6()F
-.end method
-
-.method public abstract AK7()F
-.end method
-
-.method public abstract AKB()J
-.end method
-
-.method public abstract AKC()Landroid/view/View;
-.end method
-
-.method public abstract AMW()I
-.end method
-
-.method public abstract AMo()Ljava/lang/String;
-.end method
-
-.method public abstract AN8()I
-.end method
-
-.method public abstract ANp()I
-.end method
-
-.method public abstract ANq()I
-.end method
-
-.method public abstract AO1()Ljava/lang/String;
-.end method
-
-.method public abstract AOA()F
-.end method
-
-.method public abstract APw()Z
-.end method
-
-.method public abstract AQl()Z
-.end method
-
-.method public abstract ARA()Z
-.end method
-
-.method public abstract ARC()Z
-.end method
-
-.method public abstract ARD(Landroid/view/ViewGroup;)Z
-.end method
-
-.method public abstract ARK()Z
-.end method
-
-.method public abstract ARS()Z
-.end method
-
-.method public abstract ARj()Z
-.end method
-
-.method public abstract ARn()Z
-.end method
-
-.method public abstract ASZ()V
-.end method
-
-.method public abstract Afi(Ljava/lang/String;)V
-.end method
-
-.method public abstract Afj()V
-.end method
-
-.method public abstract Afr()V
-.end method
-
-.method public abstract Afv()V
-.end method
-
-.method public abstract Ajf(LX/3Wf;)V
-.end method
-
-.method public abstract Ajg(LX/3Wf;Z)V
-.end method
-
-.method public abstract Akc(IZ)V
-.end method
-
-.method public abstract Akd(LX/3t4;)V
-.end method
-
-.method public abstract AmE(Z)V
-.end method
-
-.method public abstract AmF(Z)V
-.end method
-
-.method public abstract An1(I)V
-.end method
-
-.method public abstract AnE(LX/3WZ;)V
-.end method
-
-.method public abstract AnG(ZLjava/lang/String;)V
-.end method
-
-.method public abstract AnI(Z)V
-.end method
-
-.method public abstract Anb(Lcom/facebook/video/heroplayer/ipc/VideoPlayRequest;)V
-.end method
-
-.method public abstract Anj(Ljava/lang/String;F)V
-.end method
-
-.method public abstract Aq5(Lcom/facebook/video/heroplayer/ipc/VideoPlayRequest;)LX/3rb;
-.end method
-
-.method public abstract ArI()Z
-.end method
-
-.method public abstract getCurrentPositionMs()I
-.end method
-
-.method public abstract getSessionId()Ljava/lang/String;
-.end method
-
-.method public abstract isPlaying()Z
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract seekTo(I)V
+    .line 25
+    return-object v0
 .end method

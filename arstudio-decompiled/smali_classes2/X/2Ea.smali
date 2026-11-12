@@ -1,100 +1,84 @@
-.class public final LX/2Ea;
-.super LX/2Dv;
+.class public final LX/2EA;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x1L
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "PublicBaseJobIntentServiceWithSwitchOff$1"
 
 
 # instance fields
-.field public final _objectIdReader:LX/2Fs;
+.field public final synthetic A00:I
+
+.field public final synthetic A01:Landroid/content/Context;
+
+.field public final synthetic A02:Landroid/content/Intent;
+
+.field public final synthetic A03:Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>(LX/2Ea;Ljava/lang/String;)V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0, p1, p2}, LX/2Dv;-><init>(LX/2Dv;Ljava/lang/String;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iget-object v0, p1, LX/2Ea;->_objectIdReader:LX/2Fs;
-
-    .line 268435460
-    .line 268435461
-    iput-object v0, p0, LX/2Ea;->_objectIdReader:LX/2Fs;
-
-    .line 268435462
-    .line 268435463
-    return-void
-.end method
-
-.method public constructor <init>(LX/2Fs;)V
-    .locals 8
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    .locals 0
 
     .line 0
-    const/4 v7, 0x1
+    iput-object p1, p0, LX/2EA;->A01:Landroid/content/Context;
 
     .line 1
-    iget-object v6, p1, LX/2Fs;->propertyName:Ljava/lang/String;
-
     .line 2
+    iput-object p2, p0, LX/2EA;->A03:Ljava/lang/Class;
+
     .line 3
-    iget-object v2, p1, LX/2Fs;->idType:LX/2EI;
-
     .line 4
-    .line 5
-    const/4 v3, 0x0
+    iput-object p4, p0, LX/2EA;->A02:Landroid/content/Intent;
 
+    .line 5
     .line 6
-    move-object v1, p0
+    iput p3, p0, LX/2EA;->A00:I
 
     .line 7
-    move-object v4, v3
-
     .line 8
-    move-object v5, v3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 9
-    invoke-direct/range {v1 .. v7}, LX/2Dv;-><init>(LX/2EI;LX/2FX;LX/299;LX/2He;Ljava/lang/String;Z)V
-
     .line 10
     .line 11
-    .line 12
-    iput-object p1, p0, LX/2Ea;->_objectIdReader:LX/2Fs;
-
-    .line 13
-    .line 14
-    iget-object v0, p1, LX/2Fs;->deserializer:Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    .line 15
-    .line 16
-    iput-object v0, p0, LX/2Dv;->_valueDeserializer:Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    .line 17
-    .line 18
     return-void
 .end method
 
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/JsonDeserializer;LX/2Ea;)V
-    .locals 1
 
-    .line 536870912
-    invoke-direct {p0, p1, p2}, LX/2Dv;-><init>(Lcom/fasterxml/jackson/databind/JsonDeserializer;LX/2Dv;)V
+# virtual methods
+.method public final run()V
+    .locals 4
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    iget-object v0, p2, LX/2Ea;->_objectIdReader:LX/2Fs;
+    .line 0
+    iget-object v3, p0, LX/2EA;->A01:Landroid/content/Context;
 
-    .line 536870916
-    .line 536870917
-    iput-object v0, p0, LX/2Ea;->_objectIdReader:LX/2Fs;
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/2EA;->A03:Ljava/lang/Class;
 
-    .line 536870918
-    .line 536870919
+    .line 3
+    .line 4
+    iget-object v1, p0, LX/2EA;->A02:Landroid/content/Intent;
+
+    .line 5
+    .line 6
+    iget v0, p0, LX/2EA;->A00:I
+
+    .line 7
+    .line 8
+    add-int/lit8 v0, v0, 0x1
+
+    .line 9
+    .line 10
+    invoke-static {v3, v2, v0, v1}, LX/2E8;->A00(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+
+    .line 11
+    .line 12
+    .line 13
     return-void
 .end method

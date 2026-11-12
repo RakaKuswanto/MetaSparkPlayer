@@ -1,33 +1,25 @@
 .class public final LX/3wf;
-.super LX/4wN;
+.super LX/3yG;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/util/Map;
+.field public final synthetic A00:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4wN;-><init>()V
+    iput-object p1, p0, LX/3wf;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/0Yj;->A0b()Ljava/util/LinkedHashMap;
+    invoke-direct {p0}, LX/3yG;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/3wf;->A00:Ljava/util/Map;
-
-    .line 8
-    .line 9
     return-void
 .end method

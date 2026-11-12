@@ -1,123 +1,222 @@
-.class public final LX/2iT;
-.super Ljava/lang/Object;
+.class public abstract LX/2it;
+.super LX/2ix;
 .source ""
 
-
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Na;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
+# interfaces
+.implements LX/2NN;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/2ix;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AFz:I
+    return-void
+.end method
 
-    .line 4
-    .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
 
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
+# virtual methods
+.method public final A90(Landroid/app/Activity;)V
+    .locals 0
 
-    .line 9
-    iput-object v0, p0, LX/2iT;->A01:LX/0Na;
+    return-void
+.end method
 
-    .line 10
-    .line 11
-    sget v0, LX/2eq;->AFv:I
+.method public final AJ2()I
+    .locals 1
 
-    .line 12
-    .line 13
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    const/4 v0, 0x1
 
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
+    return v0
+.end method
 
-    .line 17
-    iput-object v0, p0, LX/2iT;->A04:LX/0Na;
+.method public final ASo(Landroid/app/Activity;)V
+    .locals 0
 
-    .line 18
-    .line 19
-    sget v0, LX/2eq;->AFu:I
+    return-void
+.end method
 
-    .line 20
-    .line 21
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+.method public final ATC(Landroid/app/Activity;Landroid/content/res/Resources$Theme;IZ)V
+    .locals 0
 
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
+    return-void
+.end method
 
-    .line 25
-    iput-object v0, p0, LX/2iT;->A02:LX/0Na;
+.method public final ATG(Landroid/app/Activity;Landroidx/fragment/app/Fragment;)V
+    .locals 0
 
-    .line 26
-    .line 27
-    sget v0, LX/2eq;->AFt:I
+    return-void
+.end method
 
-    .line 28
-    .line 29
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+.method public final ATd(Landroid/app/Activity;)Z
+    .locals 1
 
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v0
+    const/4 v0, 0x0
 
-    .line 33
-    iput-object v0, p0, LX/2iT;->A03:LX/0Na;
+    return v0
+.end method
 
-    .line 34
-    .line 35
-    sget v0, LX/2eq;->AFw:I
+.method public final ATg(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
-    .line 36
-    .line 37
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    return-void
+.end method
 
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v0
+.method public final ATj(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
-    .line 41
-    iput-object v0, p0, LX/2iT;->A05:LX/0Na;
+    return-void
+.end method
 
-    .line 42
-    .line 43
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+.method public final AUd(Landroid/app/Activity;Landroid/content/res/Configuration;)V
+    .locals 0
 
-    .line 44
-    .line 45
-    .line 46
-    move-result-object v0
+    return-void
+.end method
 
-    .line 47
-    iput-object v0, p0, LX/2iT;->A00:LX/1zG;
+.method public final AUm(Landroid/app/Activity;)V
+    .locals 0
 
-    .line 48
-    .line 49
+    return-void
+.end method
+
+.method public final AUw(Landroid/app/Activity;I)Landroid/app/Dialog;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AUy(Landroid/view/Menu;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AXS(Landroid/app/Activity;Landroid/view/KeyEvent;I)Ljava/lang/Boolean;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AXT(Landroid/app/Activity;Landroid/view/KeyEvent;I)Ljava/lang/Boolean;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AXU(Landroid/app/Activity;Landroid/view/KeyEvent;I)Ljava/lang/Boolean;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AYd(Landroid/app/Activity;Landroid/content/Intent;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AYt(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AZE(Landroid/app/Activity;Landroid/content/res/Configuration;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AZV(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AZb(Landroid/app/Activity;Landroid/app/Dialog;I)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AZc(Landroid/view/Menu;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Aam(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Aao(Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Aat(Landroid/app/Activity;)Ljava/lang/Boolean;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final Aaw(Landroid/app/Activity;Ljava/lang/Throwable;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AcD(Ljava/lang/CharSequence;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Acg(Landroid/app/Activity;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Ad1(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Ad4(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Adl(Landroid/app/Activity;Z)V
+    .locals 0
+
     return-void
 .end method

@@ -1,80 +1,83 @@
-.class public final LX/3Sm;
-.super Ljava/lang/Object;
+.class public abstract LX/3SM;
+.super LX/2sT;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ThreadSafeMqttClient$7"
-
-
-# instance fields
-.field public final synthetic A00:LX/3Sw;
 
 
 # direct methods
-.method public constructor <init>(LX/3Sw;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3Sm;->A00:LX/3Sw;
+    invoke-direct {p0}, LX/2sT;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final bridge synthetic A9h(Ljava/lang/String;)LX/3SU;
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/3Sm;->A00:LX/3Sw;
+    const/4 v0, 0x0
+
+    .line 1
+    return-object v0
+.end method
+
+.method public final AjU(LX/40d;LX/6Hz;LX/6JY;)V
+    .locals 1
+
+    .line 0
+    instance-of v0, p0, LX/3SN;
 
     .line 1
     .line 2
-    iget-boolean v0, v1, LX/3Sw;->A02:Z
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    if-nez v0, :cond_0
+    invoke-virtual {p1}, LX/40d;->A0O()V
 
     .line 5
     .line 6
-    iget-object v0, v1, LX/3Sw;->A00:Lcom/facebook/proxygen/MQTTClient;
-
     .line 7
+    return-void
+
     .line 8
-    invoke-virtual {v0}, Lcom/facebook/proxygen/MQTTClient;->sendPingResponse()V
+    :cond_0
+    invoke-virtual {p3, p1, p0}, LX/6JY;->A04(LX/40d;Ljava/lang/Object;)V
 
     .line 9
     .line 10
     .line 11
-    return-void
+    invoke-virtual {p0, p1, p2}, LX/2sT;->AjT(LX/40d;LX/6Hz;)V
 
     .line 12
-    :cond_0
-    const-string v1, "ThreadSafeMqttClient"
-
     .line 13
     .line 14
-    const-string/jumbo v0, "sendPingResponse ignored as client has been closed"
+    invoke-virtual {p3, p1, p0}, LX/6JY;->A07(LX/40d;Ljava/lang/Object;)V
 
     .line 15
     .line 16
     .line 17
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 18
-    .line 19
-    .line 20
     return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/2Rs;->A0J()Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

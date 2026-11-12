@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 17
 
     .line 0
@@ -59,7 +59,7 @@
     const/4 v12, 0x0
 
     .line 13
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 14
     .line 15
@@ -73,7 +73,7 @@
 
     .line 18
     .line 19
-    invoke-virtual {v2}, LX/27m;->A0q()LX/270;
+    invoke-virtual {v2}, LX/3oD;->A0t()LX/3ns;
 
     .line 20
     .line 21
@@ -81,7 +81,7 @@
     move-result-object v1
 
     .line 23
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 24
     .line 25
@@ -89,7 +89,7 @@
 
     .line 26
     .line 27
-    invoke-static {v2}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {v2}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 28
     .line 29
@@ -115,14 +115,14 @@
     .line 39
     .line 40
     :cond_1
-    invoke-virtual {v2}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {v2}, LX/3oD;->A1G()LX/3oD;
 
     .line 41
     .line 42
     .line 43
     :cond_2
     :goto_0
-    invoke-static {v2}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {v2}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 44
     .line 45
@@ -130,7 +130,7 @@
     move-result-object v1
 
     .line 47
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 48
     .line 49
@@ -143,435 +143,441 @@
     .line 52
     .line 53
     :sswitch_0
-    const-string v1, "edit_mode"
+    const-string/jumbo v3, "media_data"
 
     .line 54
     .line 55
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 56
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 57
     .line 58
-    move-result v0
-
     .line 59
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 60
-    .line 61
-    invoke-virtual {v2}, LX/27m;->A15()Z
+    if-eqz v0, :cond_1
 
+    .line 61
     .line 62
+    invoke-static {v2, v1}, LX/27L;->A03(LX/3oD;LX/6HS;)Lcom/facebook/ipc/media/data/MediaData;
+
     .line 63
     .line 64
-    move-result v16
-
     .line 65
-    goto :goto_0
+    move-result-object v6
 
     .line 66
-    :sswitch_1
-    const-string/jumbo v1, "inpainting_method"
-
-    .line 67
-    .line 68
-    .line 69
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 70
-    .line 71
-    .line 72
-    move-result v0
-
-    .line 73
-    if-eqz v0, :cond_1
-
-    .line 74
-    .line 75
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v11
-
-    .line 79
     goto :goto_0
 
-    .line 80
-    :sswitch_2
-    const-string v1, "depth_encoding_type"
+    .line 67
+    :sswitch_1
+    const-string/jumbo v1, "depth_encoding_normalized"
 
-    .line 81
-    .line 82
+    .line 68
+    .line 69
+    .line 70
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 83
-    .line 84
-    .line 85
+    .line 71
+    .line 72
+    .line 73
     move-result v0
 
-    .line 86
+    .line 74
     if-eqz v0, :cond_1
 
+    .line 75
+    .line 76
+    invoke-virtual {v2}, LX/3oD;->A19()Z
+
+    .line 77
+    .line 78
+    .line 79
+    move-result v15
+
+    .line 80
+    goto :goto_0
+
+    .line 81
+    :sswitch_2
+    const-string/jumbo v1, "depth_encoding_inverted"
+
+    .line 82
+    .line 83
+    .line 84
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 85
+    .line 86
     .line 87
+    move-result v0
+
     .line 88
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    if-eqz v0, :cond_1
 
     .line 89
     .line 90
+    invoke-virtual {v2}, LX/3oD;->A19()Z
+
     .line 91
-    move-result-object v7
-
     .line 92
-    goto :goto_0
-
     .line 93
-    :sswitch_3
-    const-string v3, "asset3_d_category"
+    move-result v14
 
     .line 94
+    goto :goto_0
+
     .line 95
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_3
+    const-string/jumbo v1, "fallback_image_path"
 
     .line 96
     .line 97
     .line 98
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 99
-    if-eqz v0, :cond_1
-
     .line 100
     .line 101
-    const-class v0, Lcom/facebook/graphql/enums/GraphQLAsset3DCategory;
+    move-result v0
 
     .line 102
-    .line 103
-    invoke-static {v2, v1, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
+    .line 103
     .line 104
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 105
     .line 106
-    move-result-object v4
-
     .line 107
-    check-cast v4, Lcom/facebook/graphql/enums/GraphQLAsset3DCategory;
+    move-result-object v10
 
     .line 108
+    goto :goto_0
+
     .line 109
-    const-string v0, "asset3DCategory"
+    :sswitch_4
+    const-string/jumbo v1, "threed_file_path"
 
     .line 110
     .line 111
-    invoke-static {v4, v0, v13}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0L(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
-
     .line 112
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 113
     .line 114
-    move-result-object v13
-
     .line 115
-    goto :goto_0
+    move-result v0
 
     .line 116
-    :sswitch_4
-    const-string v3, "asset3d"
+    if-eqz v0, :cond_1
 
     .line 117
     .line 118
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 119
     .line 120
     .line 121
-    move-result v0
+    move-result-object v12
 
     .line 122
-    if-eqz v0, :cond_1
+    goto :goto_0
 
     .line 123
-    .line 124
-    const-class v0, Lcom/facebook/graphql/model/GraphQLObjectWithAsset3D;
+    :sswitch_5
+    const-string/jumbo v1, "depth_map_source"
 
+    .line 124
     .line 125
     .line 126
-    invoke-static {v2, v1, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 127
     .line 128
     .line 129
-    move-result-object v5
+    move-result v0
 
     .line 130
-    check-cast v5, Lcom/facebook/graphql/model/GraphQLObjectWithAsset3D;
+    if-eqz v0, :cond_1
 
     .line 131
     .line 132
-    goto :goto_0
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 133
-    :sswitch_5
-    const-string v1, "depth_file_path"
-
     .line 134
     .line 135
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v9
 
     .line 136
-    .line 137
-    .line 138
-    move-result v0
-
-    .line 139
-    if-eqz v0, :cond_1
-
-    .line 140
-    .line 141
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
-    .line 142
-    .line 143
-    .line 144
-    move-result-object v8
-
-    .line 145
     goto :goto_0
 
-    .line 146
+    .line 137
     :sswitch_6
-    const-string v1, "depth_map_source"
+    const-string/jumbo v1, "depth_file_path"
+
+    .line 138
+    .line 139
+    .line 140
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 141
+    .line 142
+    .line 143
+    move-result v0
+
+    .line 144
+    if-eqz v0, :cond_1
+
+    .line 145
+    .line 146
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 147
     .line 148
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 149
+    move-result-object v8
+
     .line 150
+    goto :goto_0
+
     .line 151
-    move-result v0
+    :sswitch_7
+    const-string/jumbo v3, "asset3d"
 
     .line 152
-    if-eqz v0, :cond_1
-
     .line 153
     .line 154
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 155
     .line 156
     .line 157
-    move-result-object v9
+    move-result v0
 
     .line 158
-    goto :goto_0
+    if-eqz v0, :cond_1
 
     .line 159
-    :sswitch_7
-    const-string/jumbo v1, "threed_file_path"
-
     .line 160
+    const-class v0, Lcom/facebook/graphql/model/GraphQLObjectWithAsset3D;
+
     .line 161
     .line 162
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2, v1, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 163
     .line 164
     .line 165
-    move-result v0
+    move-result-object v5
 
     .line 166
-    if-eqz v0, :cond_1
+    check-cast v5, Lcom/facebook/graphql/model/GraphQLObjectWithAsset3D;
 
     .line 167
     .line 168
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    goto :goto_0
 
     .line 169
+    :sswitch_8
+    const-string/jumbo v3, "asset3_d_category"
+
     .line 170
     .line 171
-    move-result-object v12
-
     .line 172
-    goto/16 :goto_0
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 173
     .line 174
-    :sswitch_8
-    const-string v1, "fallback_image_path"
-
     .line 175
+    move-result v0
+
     .line 176
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 177
     .line 178
-    .line 179
-    move-result v0
+    const-class v0, Lcom/facebook/graphql/enums/GraphQLAsset3DCategory;
 
+    .line 179
     .line 180
-    if-eqz v0, :cond_1
+    invoke-static {v2, v1, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 181
     .line 182
-    invoke-static {v2}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 183
-    .line 184
-    .line 185
-    move-result-object v10
+    move-result-object v4
 
+    .line 184
+    check-cast v4, Lcom/facebook/graphql/enums/GraphQLAsset3DCategory;
+
+    .line 185
     .line 186
-    goto/16 :goto_0
+    const-string/jumbo v0, "asset3DCategory"
 
     .line 187
     .line 188
-    :sswitch_9
-    const-string v1, "depth_encoding_inverted"
-
     .line 189
-    .line 190
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v0, v13}, LX/1O4;->A08(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
 
+    .line 190
     .line 191
     .line 192
+    move-result-object v13
+
     .line 193
-    move-result v0
-
-    .line 194
-    if-eqz v0, :cond_1
-
-    .line 195
-    .line 196
-    invoke-virtual {v2}, LX/27m;->A15()Z
-
-    .line 197
-    .line 198
-    .line 199
-    move-result v14
-
-    .line 200
     goto/16 :goto_0
 
+    .line 194
+    .line 195
+    :sswitch_9
+    const-string/jumbo v1, "depth_encoding_type"
+
+    .line 196
+    .line 197
+    .line 198
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 199
+    .line 200
     .line 201
+    move-result v0
+
     .line 202
-    :sswitch_a
-    const-string v1, "depth_encoding_normalized"
+    if-eqz v0, :cond_1
 
     .line 203
     .line 204
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 205
     .line 206
     .line 207
-    move-result v0
+    move-result-object v7
 
     .line 208
-    if-eqz v0, :cond_1
+    goto/16 :goto_0
 
     .line 209
     .line 210
-    invoke-virtual {v2}, LX/27m;->A15()Z
+    :sswitch_a
+    const-string/jumbo v1, "inpainting_method"
 
     .line 211
     .line 212
     .line 213
-    move-result v15
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 214
-    goto/16 :goto_0
-
     .line 215
     .line 216
-    :sswitch_b
-    const-string/jumbo v3, "media_data"
+    move-result v0
 
     .line 217
+    if-eqz v0, :cond_1
+
     .line 218
     .line 219
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 220
     .line 221
     .line 222
-    move-result v0
+    move-result-object v11
 
     .line 223
-    if-eqz v0, :cond_1
+    goto/16 :goto_0
 
     .line 224
     .line 225
-    const-class v0, Lcom/facebook/ipc/media/data/MediaData;
+    :sswitch_b
+    const-string/jumbo v1, "edit_mode"
 
     .line 226
     .line 227
-    invoke-static {v2, v1, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
     .line 228
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 229
     .line 230
-    move-result-object v6
-
     .line 231
-    check-cast v6, Lcom/facebook/ipc/media/data/MediaData;
+    move-result v0
 
     .line 232
+    if-eqz v0, :cond_1
+
     .line 233
+    .line 234
+    invoke-virtual {v2}, LX/3oD;->A19()Z
+
+    .line 235
+    .line 236
+    .line 237
+    move-result v16
+
+    .line 238
     goto/16 :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 234
-    .line 235
+    .line 239
+    .line 240
     :goto_1
     new-instance v3, Lcom/facebook/ipc/composer/model/ComposerThreedInfo;
 
-    .line 236
-    .line 237
-    invoke-direct/range {v3 .. v16}, Lcom/facebook/ipc/composer/model/ComposerThreedInfo;-><init>(Lcom/facebook/graphql/enums/GraphQLAsset3DCategory;Lcom/facebook/graphql/model/GraphQLObjectWithAsset3D;Lcom/facebook/ipc/media/data/MediaData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;ZZZ)V
-
-    .line 238
-    .line 239
-    .line 240
-    return-object v3
-
     .line 241
-    :catch_0
-    move-exception v1
-
     .line 242
-    const-class v0, Lcom/facebook/ipc/composer/model/ComposerThreedInfo;
+    invoke-direct/range {v3 .. v16}, Lcom/facebook/ipc/composer/model/ComposerThreedInfo;-><init>(Lcom/facebook/graphql/enums/GraphQLAsset3DCategory;Lcom/facebook/graphql/model/GraphQLObjectWithAsset3D;Lcom/facebook/ipc/media/data/MediaData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;ZZZ)V
 
     .line 243
     .line 244
-    invoke-static {v2, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 245
+    return-object v3
+
     .line 246
+    :catch_0
+    move-exception v1
+
     .line 247
-    const/4 v0, 0x0
+    const-class v0, Lcom/facebook/ipc/composer/model/ComposerThreedInfo;
 
     .line 248
-    throw v0
-
     .line 249
-    nop
+    invoke-static {v2, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 250
+    .line 251
+    .line 252
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 253
+    .line 254
+    .line 255
+    move-result-object v0
+
+    .line 256
+    throw v0
+
+    .line 257
+    nop
+
+    .line 258
     :sswitch_data_0
     .sparse-switch
-        -0x6f3c4548 -> :sswitch_0
-        -0x6a950d09 -> :sswitch_1
-        -0x6a807dd6 -> :sswitch_2
-        -0x4f51970b -> :sswitch_3
-        -0x2a020a7f -> :sswitch_4
-        -0x1e455d74 -> :sswitch_5
-        -0x1a4c7ca6 -> :sswitch_6
-        -0xf18b171 -> :sswitch_7
-        -0x7d1fdfa -> :sswitch_8
-        0x361f89e5 -> :sswitch_9
-        0x705481e7 -> :sswitch_a
-        0x73988725 -> :sswitch_b
+        -0x6f3c4548 -> :sswitch_b
+        -0x6a950d09 -> :sswitch_a
+        -0x6a807dd6 -> :sswitch_9
+        -0x4f51970b -> :sswitch_8
+        -0x2a020a7f -> :sswitch_7
+        -0x1e455d74 -> :sswitch_6
+        -0x1a4c7ca6 -> :sswitch_5
+        -0xf18b171 -> :sswitch_4
+        -0x7d1fdfa -> :sswitch_3
+        0x361f89e5 -> :sswitch_2
+        0x705481e7 -> :sswitch_1
+        0x73988725 -> :sswitch_0
     .end sparse-switch
 .end method

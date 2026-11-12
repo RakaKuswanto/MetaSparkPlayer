@@ -1,85 +1,113 @@
-.class public final LX/35i;
-.super LX/37L;
+.class public interface abstract LX/35i;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/util/Map;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, LX/37L;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/35i;->A00:Ljava/util/Map;
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-
 # virtual methods
-.method public final AHy()LX/0TS;
-    .locals 3
-
-    .line 0
-    const/4 v0, 0x3
-
-    .line 1
-    new-array v2, v0, [I
-
-    .line 2
-    .line 3
-    fill-array-data v2, :array_0
-
-    .line 4
-    .line 5
-    .line 6
-    const/4 v1, 0x0
-
-    .line 7
-    new-instance v0, LX/0TS;
-
-    .line 8
-    .line 9
-    invoke-direct {v0, v2, v1}, LX/0TS;-><init>([I[I)V
-
-    .line 10
-    .line 11
-    .line 12
-    return-object v0
-
-    .line 13
-    nop
-
-    .line 14
-    :array_0
-    .array-data 4
-        0x3d0007
-        0x3d0008
-        0x3d0009
-    .end array-data
+.method public abstract A8L()Z
 .end method
 
-.method public final getName()Ljava/lang/String;
-    .locals 1
+.method public abstract AAD()I
+.end method
 
-    const-string/jumbo v0, "system_service_binder_logger"
+.method public abstract ABH()I
+.end method
 
-    return-object v0
+.method public abstract ADf()Z
+.end method
+
+.method public abstract ADi()Z
+.end method
+
+.method public abstract ADw()Ljava/lang/String;
+.end method
+
+.method public abstract AE0()J
+.end method
+
+.method public abstract AE3()Ljava/util/Set;
+.end method
+
+.method public abstract AEj()Ljava/util/Set;
+.end method
+
+.method public abstract AF7()J
+.end method
+
+.method public abstract AF8()J
+.end method
+
+.method public abstract AF9()J
+.end method
+
+.method public abstract AFA()J
+.end method
+
+.method public abstract AFD()J
+.end method
+
+.method public abstract AFE()J
+.end method
+
+.method public abstract AFF()J
+.end method
+
+.method public abstract AFG()J
+.end method
+
+.method public abstract AFH()I
+.end method
+
+.method public abstract AFI()I
+.end method
+
+.method public abstract AI8()I
+.end method
+
+.method public abstract AIK()Ljava/util/Set;
+.end method
+
+.method public abstract AJR()J
+.end method
+
+.method public abstract AJS()J
+.end method
+
+.method public abstract AJT()J
+.end method
+
+.method public abstract AJU()J
+.end method
+
+.method public abstract AJW()J
+.end method
+
+.method public abstract AJX()J
+.end method
+
+.method public abstract AJY()J
+.end method
+
+.method public abstract AJZ()J
+.end method
+
+.method public abstract AJa()I
+.end method
+
+.method public abstract AJb()I
+.end method
+
+.method public abstract AKg()Z
+.end method
+
+.method public abstract AL5()Ljava/util/Set;
+.end method
+
+.method public abstract AOu()Z
+.end method
+
+.method public abstract AP3()Z
+.end method
+
+.method public abstract AP4()Z
 .end method

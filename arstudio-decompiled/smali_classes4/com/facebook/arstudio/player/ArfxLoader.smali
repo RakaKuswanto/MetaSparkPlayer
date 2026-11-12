@@ -6,45 +6,23 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "ArfxLoader"
 
-.field private static final TARGET_SDK_VERSION:Ljava/lang/String; = "175.0"
+.field private static final TARGET_SDK_VERSION:Ljava/lang/String; = "187.0"
 
 
 # direct methods
-.method static bridge synthetic -$$Nest$smcopyFile(Ljava/io/File;Ljava/io/File;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/facebook/arstudio/player/ArfxLoader;->copyFile(Ljava/io/File;Ljava/io/File;)V
+    .line 28
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static bridge synthetic -$$Nest$smcopyStream(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+.method static synthetic access$000(Landroid/app/Activity;Landroid/net/Uri;)Ljava/lang/String;
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/facebook/arstudio/player/ArfxLoader;->copyStream(Ljava/io/InputStream;Ljava/io/OutputStream;)V
-
-    return-void
-.end method
-
-.method static bridge synthetic -$$Nest$smprocessBrotliOrTar(Ljava/io/File;Ljava/io/File;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/facebook/arstudio/player/ArfxLoader;->processBrotliOrTar(Ljava/io/File;Ljava/io/File;)V
-
-    return-void
-.end method
-
-.method static bridge synthetic -$$Nest$smprocessZipFile(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/facebook/arstudio/player/ArfxLoader;->processZipFile(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
-
-    return-void
-.end method
-
-.method static bridge synthetic -$$Nest$smresolveDisplayName(Landroid/app/Activity;Landroid/net/Uri;)Ljava/lang/String;
-    .locals 0
-
+    .line 28
     invoke-static {p0, p1}, Lcom/facebook/arstudio/player/ArfxLoader;->resolveDisplayName(Landroid/app/Activity;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p0
@@ -52,9 +30,10 @@
     return-object p0
 .end method
 
-.method static bridge synthetic -$$Nest$smsanitizeEffectName(Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$100(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 28
     invoke-static {p0}, Lcom/facebook/arstudio/player/ArfxLoader;->sanitizeEffectName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -62,11 +41,58 @@
     return-object p0
 .end method
 
-.method public constructor <init>()V
+.method static synthetic access$200(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
     .line 28
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0, p1}, Lcom/facebook/arstudio/player/ArfxLoader;->copyStream(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 28
+    invoke-static {p0, p1, p2}, Lcom/facebook/arstudio/player/ArfxLoader;->processZipFile(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Ljava/io/File;Ljava/io/File;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 28
+    invoke-static {p0, p1}, Lcom/facebook/arstudio/player/ArfxLoader;->processBrotliOrTar(Ljava/io/File;Ljava/io/File;)V
+
+    return-void
+.end method
+
+.method static synthetic access$500(Ljava/io/File;Ljava/io/File;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 28
+    invoke-static {p0, p1}, Lcom/facebook/arstudio/player/ArfxLoader;->copyFile(Ljava/io/File;Ljava/io/File;)V
 
     return-void
 .end method
@@ -252,7 +278,7 @@
 .end method
 
 .method private static patchManifest([B)[B
-    .locals 4
+    .locals 5
 
     .line 480
     const-string v0, "UTF-8"
@@ -274,7 +300,7 @@
     .line 482
     const-string v2, "\"requiredSdkVersion\"\\s*:\\s*\"[^\"]+\""
 
-    const-string v3, "\"requiredSdkVersion\":\"175.0\""
+    const-string v3, "\"requiredSdkVersion\":\"187.0\""
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -296,11 +322,37 @@
     if-eq v2, v3, :cond_1
 
     .line 486
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     add-int/lit8 v2, v2, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {v1, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v1, v4, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "\"requiredSdkVersion\":\""
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "187.0"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "\","
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -308,21 +360,7 @@
 
     move-result-object v1
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "\"requiredSdkVersion\":\"175.0\","
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -652,21 +690,21 @@
     .line 258
     const-string p0, "ArfxLoader"
 
-    invoke-virtual {v2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Mengekstrak inner ARFX: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Mengekstrak inner ARFX: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1055,7 +1093,7 @@
     .line 328
     const-string p1, "ArfxLoader"
 
-    const-string v3, "manifest.json berhasil di-patch ke SDK 175.0 dalam ZIP"
+    const-string v3, "manifest.json berhasil di-patch ke SDK 187.0 dalam ZIP"
 
     invoke-static {p1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1301,21 +1339,21 @@
 
     .line 182
     :cond_3
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "filter_"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "filter_"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
@@ -1578,19 +1616,19 @@
     if-eqz v0, :cond_8
 
     .line 211
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "filter_"
+    const-string v0, "filter_"
 
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
 
     invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -2138,7 +2176,7 @@
     nop
 
     .line 438
-    const-string v3, "manifest.json berhasil di-patch ke SDK 175.0 dari TAR"
+    const-string v3, "manifest.json berhasil di-patch ke SDK 187.0 dari TAR"
 
     invoke-static {v11, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

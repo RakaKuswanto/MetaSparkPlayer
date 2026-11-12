@@ -1,74 +1,85 @@
 .class public final LX/4WT;
-.super LX/4WS;
+.super Landroid/view/animation/Animation;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:I
+
+.field public final synthetic A01:I
+
+.field public final synthetic A02:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
+
+
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+.method public constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;II)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/4WS;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    iput-object p1, p0, LX/4WT;->A02:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     .line 1
     .line 2
+    iput p2, p0, LX/4WT;->A01:I
+
     .line 3
+    .line 4
+    iput p3, p0, LX/4WT;->A00:I
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01(IIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
-    .locals 6
+.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
+    .locals 4
 
     .line 0
-    const/4 v5, 0x0
-
-    .line 1
-    move v0, p1
-
-    .line 2
-    move v1, p2
-
-    .line 3
-    move v2, p3
-
-    .line 4
-    move-object v3, p4
-
-    .line 5
-    move-object v4, p5
-
-    .line 6
-    invoke-static/range {v0 .. v5}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final getOutline(Landroid/graphics/Outline;)V
-    .locals 2
-
-    .line 0
-    invoke-virtual {p0}, LX/4WS;->A00()V
+    iget-object v0, p0, LX/4WT;->A02:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     .line 1
     .line 2
+    iget-object v3, v0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mProgress:LX/4Wt;
+
     .line 3
-    iget-object v1, p0, LX/4WS;->A07:Landroid/graphics/Rect;
-
     .line 4
-    .line 5
-    iget v0, p0, LX/4WS;->A00:F
+    iget v2, p0, LX/4WT;->A01:I
 
+    .line 5
     .line 6
+    int-to-float v1, v2
+
     .line 7
-    invoke-virtual {p1, v1, v0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
+    iget v0, p0, LX/4WT;->A00:I
 
     .line 8
     .line 9
+    sub-int/2addr v0, v2
+
     .line 10
+    int-to-float v0, v0
+
+    .line 11
+    mul-float/2addr v0, p1
+
+    .line 12
+    add-float/2addr v1, v0
+
+    .line 13
+    float-to-int v0, v1
+
+    .line 14
+    invoke-virtual {v3, v0}, LX/4Wt;->setAlpha(I)V
+
+    .line 15
+    .line 16
+    .line 17
     return-void
 .end method

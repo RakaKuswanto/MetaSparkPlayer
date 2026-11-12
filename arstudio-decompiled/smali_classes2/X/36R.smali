@@ -1,86 +1,79 @@
-.class public final LX/36R;
-.super Ljava/lang/Object;
+.class public abstract LX/36R;
+.super LX/3Iw;
 .source ""
 
 
 # instance fields
-.field public final A00:J
-
-.field public final A01:J
-
-.field public final A02:Landroid/app/ActivityManager$MemoryInfo;
+.field public final A00:Lcom/google/common/collect/ImmutableList;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/ActivityManager;)V
-    .locals 4
+.method public constructor <init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, LX/3Iw;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
-    new-instance v0, Landroid/app/ActivityManager$MemoryInfo;
+    iput-object p1, p0, LX/36R;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 4
     .line 5
-    invoke-direct {v0}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
+    return-void
+.end method
+
+
+# virtual methods
+.method public A00(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/36R;->A00:Lcom/google/common/collect/ImmutableList;
+
+    .line 1
+    .line 2
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->size()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v2
 
     .line 6
+    const/4 v1, 0x0
+
     .line 7
+    :goto_0
+    if-ge v1, v2, :cond_0
+
     .line 8
-    iput-object v0, p0, LX/36R;->A02:Landroid/app/ActivityManager$MemoryInfo;
-
     .line 9
-    .line 10
-    invoke-virtual {p1, v0}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
+    .line 10
     .line 11
     .line 12
+    move-result-object v0
+
     .line 13
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    check-cast v0, LX/308;
 
     .line 14
     .line 15
+    invoke-virtual {v0, p1, p2, p3}, LX/308;->A01(Landroid/database/sqlite/SQLiteDatabase;II)V
+
     .line 16
-    move-result-object v0
-
     .line 17
-    invoke-virtual {v0}, Ljava/lang/Runtime;->totalMemory()J
-
     .line 18
+    add-int/lit8 v1, v1, 0x1
+
     .line 19
     .line 20
-    move-result-wide v2
+    goto :goto_0
 
     .line 21
-    invoke-virtual {v0}, Ljava/lang/Runtime;->freeMemory()J
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-wide v0
-
-    .line 25
-    sub-long/2addr v2, v0
-
-    .line 26
-    iput-wide v2, p0, LX/36R;->A00:J
-
-    .line 27
-    .line 28
-    invoke-static {}, Landroid/os/Debug;->getNativeHeapAllocatedSize()J
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-wide v0
-
-    .line 32
-    iput-wide v0, p0, LX/36R;->A01:J
-
-    .line 33
-    .line 34
+    :cond_0
     return-void
 .end method

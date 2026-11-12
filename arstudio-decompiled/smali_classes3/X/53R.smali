@@ -1,273 +1,109 @@
 .class public final LX/53R;
-.super LX/53V;
+.super LX/53M;
 .source ""
 
 
-# static fields
-.field public static A00:[I
+# instance fields
+.field public A00:J
+
+.field public A01:LX/0I2;
+
+.field public A02:Ljava/util/concurrent/ScheduledExecutorService;
+
+.field public A03:Ljava/util/concurrent/ScheduledFuture;
+
+.field public final A04:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/0I2;LX/0I5;LX/54P;LX/2TV;LX/36b;LX/53T;LX/2UV;LX/2sj;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/ScheduledExecutorService;)V
+    .locals 15
 
     .line 0
-    invoke-static {}, LX/4BF;->A1R()[I
+    new-instance v10, LX/5C1;
 
     .line 1
     .line 2
+    invoke-direct {v10}, LX/5C1;-><init>()V
+
     .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/53R;->A00:[I
-
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public constructor <init>(LX/53P;)V
-    .locals 2
-
-    .line 0
-    invoke-direct {p0, p1}, LX/53V;-><init>(LX/53P;)V
-
-    .line 1
-    .line 2
-    .line 3
-    iget-object v1, p0, LX/53V;->A05:LX/53Z;
-
     .line 4
     .line 5
-    sget-object v0, LX/014;->A0M:Ljava/lang/Integer;
+    const/4 v9, 0x0
 
     .line 6
+    move-object v1, p0
+
     .line 7
-    iput-object v0, v1, LX/53Z;->A06:Ljava/lang/Integer;
+    move-object/from16 v2, p1
 
     .line 8
     .line 9
-    iget-object v1, p0, LX/53V;->A04:LX/53Z;
+    move-object/from16 v3, p2
 
     .line 10
     .line 11
-    sget-object v0, LX/014;->A0X:Ljava/lang/Integer;
+    move-object/from16 v4, p3
 
     .line 12
     .line 13
-    iput-object v0, v1, LX/53Z;->A06:Ljava/lang/Integer;
+    move-object/from16 v5, p4
 
     .line 14
     .line 15
-    const/4 v0, 0x0
-
-    .line 16
-    iput v0, p0, LX/53V;->A01:I
-
-    .line 17
-    .line 18
-    return-void
-.end method
-
-.method public static A00([IFIIIII)V
-    .locals 5
-
-    .line 0
-    sub-int/2addr p3, p2
-
-    .line 1
-    sub-int/2addr p5, p4
-
-    .line 2
-    const/4 v0, -0x1
-
-    .line 3
-    const/4 v4, 0x0
-
-    .line 4
-    const/high16 v3, 0x3f000000    # 0.5f
-
-    .line 5
-    .line 6
-    const/4 v2, 0x1
-
-    .line 7
-    if-eq p6, v0, :cond_1
-
-    .line 8
-    .line 9
-    if-eqz p6, :cond_2
-
-    .line 10
-    .line 11
-    int-to-float v0, p3
-
-    .line 12
-    mul-float/2addr v0, p1
-
-    .line 13
-    add-float/2addr v0, v3
-
-    .line 14
-    float-to-int v0, v0
-
-    .line 15
-    :goto_0
-    aput p3, p0, v4
+    move-object/from16 v6, p5
 
     .line 16
     .line 17
-    aput v0, p0, v2
+    move-object/from16 v7, p6
 
     .line 18
     .line 19
-    :cond_0
-    return-void
+    move-object/from16 v8, p7
 
     .line 20
-    :cond_1
-    int-to-float v0, p5
-
     .line 21
-    mul-float/2addr v0, p1
+    move-object/from16 v11, p8
 
     .line 22
-    add-float/2addr v0, v3
-
     .line 23
-    float-to-int v1, v0
+    move-object/from16 v12, p9
 
     .line 24
-    int-to-float v0, p3
-
     .line 25
-    div-float/2addr v0, p1
+    move-object/from16 v13, p10
 
     .line 26
-    add-float/2addr v0, v3
-
     .line 27
-    float-to-int v0, v0
+    move-object/from16 v14, p11
 
     .line 28
-    if-le v1, p3, :cond_3
-
     .line 29
-    .line 30
-    if-gt v0, p5, :cond_0
+    invoke-direct/range {v1 .. v14}, LX/53M;-><init>(LX/0I2;LX/0I5;LX/54P;LX/2TV;LX/36b;LX/53T;LX/2UV;LX/2bX;LX/5C1;LX/2sj;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/ScheduledExecutorService;)V
 
+    .line 30
     .line 31
     .line 32
-    goto :goto_0
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 33
-    :cond_2
-    int-to-float v0, p5
-
     .line 34
-    mul-float/2addr v0, p1
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     .line 35
-    add-float/2addr v0, v3
-
     .line 36
-    float-to-int v1, v0
-
     .line 37
-    :cond_3
-    aput v1, p0, v4
+    iput-object v0, p0, LX/53R;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 38
     .line 39
-    aput p5, p0, v2
+    iput-object v14, p0, LX/53R;->A02:Ljava/util/concurrent/ScheduledExecutorService;
 
     .line 40
     .line 41
+    iput-object v2, p0, LX/53R;->A01:LX/0I2;
+
+    .line 42
+    .line 43
     return-void
-.end method
-
-
-# virtual methods
-.method public final A0G()V
-    .locals 2
-
-    .line 0
-    const/4 v1, 0x0
-
-    .line 1
-    iput-boolean v1, p0, LX/53V;->A09:Z
-
-    .line 2
-    .line 3
-    iget-object v0, p0, LX/53V;->A05:LX/53Z;
-
-    .line 4
-    .line 5
-    invoke-virtual {v0}, LX/53Z;->A01()V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-boolean v1, v0, LX/53Z;->A0B:Z
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/53V;->A04:LX/53Z;
-
-    .line 11
-    .line 12
-    invoke-virtual {v0}, LX/53Z;->A01()V
-
-    .line 13
-    .line 14
-    .line 15
-    iput-boolean v1, v0, LX/53Z;->A0B:Z
-
-    .line 16
-    .line 17
-    iget-object v0, p0, LX/53V;->A06:LX/53i;
-
-    .line 18
-    .line 19
-    iput-boolean v1, v0, LX/53Z;->A0B:Z
-
-    .line 20
-    .line 21
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    const-string v2, "HorizontalRun "
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/53V;->A03:LX/53P;
-
-    .line 3
-    .line 4
-    iget-object v1, v0, LX/53P;->A0n:Ljava/lang/String;
-
-    .line 5
-    .line 6
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    return-object v0
 .end method

@@ -2,202 +2,282 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2rx;
 
-# static fields
-.field public static final A00:Ljava/util/Set;
 
-.field public static final A01:Ljava/util/Set;
+# instance fields
+.field public final A00:Landroid/util/SparseIntArray;
 
-.field public static final A02:Ljava/util/Set;
+.field public final A01:Landroid/util/SparseIntArray;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    .line 268435460
+    .line 268435461
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    iput-object v0, p0, LX/2sD;->A01:Landroid/util/SparseIntArray;
+
+    .line 268435465
+    .line 268435466
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    .line 268435467
+    .line 268435468
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    .line 268435469
+    .line 268435470
+    .line 268435471
+    iput-object v0, p0, LX/2sD;->A00:Landroid/util/SparseIntArray;
+
+    .line 268435472
+    .line 268435473
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
 
     .line 0
-    const/4 v6, 0x5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    new-array v5, v6, [Ljava/lang/String;
-
     .line 2
     .line 3
-    sget-object v0, LX/2sA;->VIDEO_DISPLAYED:LX/2sA;
+    new-instance v0, Landroid/util/SparseIntArray;
 
     .line 4
     .line 5
-    iget-object v0, v0, LX/2sA;->value:Ljava/lang/String;
+    invoke-direct {v0, p1}, Landroid/util/SparseIntArray;-><init>(I)V
 
     .line 6
     .line 7
-    const/4 v4, 0x0
-
     .line 8
-    aput-object v0, v5, v4
+    iput-object v0, p0, LX/2sD;->A01:Landroid/util/SparseIntArray;
 
     .line 9
     .line 10
-    sget-object v0, LX/2sA;->VIDEO_REQUESTED_PLAYING:LX/2sA;
+    new-instance v0, Landroid/util/SparseIntArray;
 
     .line 11
     .line 12
-    iget-object v0, v0, LX/2sA;->value:Ljava/lang/String;
+    invoke-direct {v0, p1}, Landroid/util/SparseIntArray;-><init>(I)V
 
     .line 13
     .line 14
-    const/4 v2, 0x1
-
     .line 15
-    aput-object v0, v5, v2
+    iput-object v0, p0, LX/2sD;->A00:Landroid/util/SparseIntArray;
 
     .line 16
     .line 17
-    sget-object v0, LX/2sA;->VIDEO_START:LX/2sA;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final get(IJ)J
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2sD;->A01:Landroid/util/SparseIntArray;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-ltz v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-virtual {p0, v0}, LX/2sD;->valueAt(I)J
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-wide p2
+
+    .line 12
+    :cond_0
+    return-wide p2
+.end method
+
+.method public final indexOfKey(I)I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2sD;->A01:Landroid/util/SparseIntArray;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final keyAt(I)I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2sD;->A01:Landroid/util/SparseIntArray;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->keyAt(I)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final put(IJ)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/2sD;->A01:Landroid/util/SparseIntArray;
+
+    .line 1
+    .line 2
+    long-to-int v0, p2
+
+    .line 3
+    invoke-virtual {v1, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v1, p0, LX/2sD;->A00:Landroid/util/SparseIntArray;
+
+    .line 7
+    .line 8
+    invoke-static {p2, p3}, LX/0X6;->A02(J)I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    invoke-virtual {v1, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-void
+.end method
+
+.method public final size()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2sD;->A00:Landroid/util/SparseIntArray;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/util/SparseIntArray;->size()I
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/2sD;->A01:Landroid/util/SparseIntArray;
+
+    .line 6
+    .line 7
+    invoke-virtual {v0}, Landroid/util/SparseIntArray;->size()I
+
+    .line 8
+    .line 9
+    .line 10
+    move-result v0
+
+    .line 11
+    return v0
+.end method
+
+.method public final valueAt(I)J
+    .locals 6
+
+    .line 0
+    iget-object v0, p0, LX/2sD;->A01:Landroid/util/SparseIntArray;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->valueAt(I)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    int-to-long v4, v0
+
+    .line 7
+    iget-object v0, p0, LX/2sD;->A00:Landroid/util/SparseIntArray;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->valueAt(I)I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    int-to-long v2, v0
+
+    .line 14
+    const-wide v0, 0xffffffffL
+
+    .line 15
+    .line 16
+    .line 17
     .line 18
     .line 19
-    iget-object v0, v0, LX/2sA;->value:Ljava/lang/String;
+    and-long/2addr v4, v0
 
     .line 20
-    .line 21
-    const/4 v3, 0x2
+    const/16 v0, 0x20
 
+    .line 21
     .line 22
-    aput-object v0, v5, v3
+    shl-long/2addr v2, v0
 
     .line 23
+    or-long/2addr v4, v2
+
     .line 24
-    sget-object v0, LX/2sA;->VIDEO_UNPAUSED:LX/2sA;
-
-    .line 25
-    .line 26
-    iget-object v1, v0, LX/2sA;->value:Ljava/lang/String;
-
-    .line 27
-    .line 28
-    const/4 v0, 0x3
-
-    .line 29
-    aput-object v1, v5, v0
-
-    .line 30
-    .line 31
-    sget-object v0, LX/2sA;->VIDEO_UNMUTED:LX/2sA;
-
-    .line 32
-    .line 33
-    iget-object v1, v0, LX/2sA;->value:Ljava/lang/String;
-
-    .line 34
-    .line 35
-    const/4 v0, 0x4
-
-    .line 36
-    aput-object v1, v5, v0
-
-    .line 37
-    .line 38
-    invoke-static {v5, v6}, LX/0Yi;->A0P([Ljava/lang/Object;I)LX/0Hj;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-
-    .line 42
-    invoke-static {v0}, LX/0Yf;->A0p(Ljava/util/Collection;)Ljava/util/Set;
-
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v0
-
-    .line 46
-    sput-object v0, LX/2sD;->A01:Ljava/util/Set;
-
-    .line 47
-    .line 48
-    new-array v1, v3, [Ljava/lang/String;
-
-    .line 49
-    .line 50
-    sget-object v0, LX/2sA;->VIDEO_REQUESTED_PLAYING:LX/2sA;
-
-    .line 51
-    .line 52
-    iget-object v0, v0, LX/2sA;->value:Ljava/lang/String;
-
-    .line 53
-    .line 54
-    aput-object v0, v1, v4
-
-    .line 55
-    .line 56
-    sget-object v0, LX/2sA;->VIDEO_UNMUTED:LX/2sA;
-
-    .line 57
-    .line 58
-    iget-object v0, v0, LX/2sA;->value:Ljava/lang/String;
-
-    .line 59
-    .line 60
-    aput-object v0, v1, v2
-
-    .line 61
-    .line 62
-    invoke-static {v1, v3}, LX/0Yi;->A0P([Ljava/lang/Object;I)LX/0Hj;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    invoke-static {v0}, LX/0Yf;->A0p(Ljava/util/Collection;)Ljava/util/Set;
-
-    .line 67
-    .line 68
-    .line 69
-    move-result-object v0
-
-    .line 70
-    sput-object v0, LX/2sD;->A02:Ljava/util/Set;
-
-    .line 71
-    .line 72
-    new-array v1, v2, [Ljava/lang/String;
-
-    .line 73
-    .line 74
-    const-string/jumbo v0, "video_chaining_impression"
-
-    .line 75
-    .line 76
-    .line 77
-    aput-object v0, v1, v4
-
-    .line 78
-    .line 79
-    invoke-static {v1, v2}, LX/0Yi;->A0P([Ljava/lang/Object;I)LX/0Hj;
-
-    .line 80
-    .line 81
-    .line 82
-    move-result-object v0
-
-    .line 83
-    invoke-static {v0}, LX/0Yf;->A0p(Ljava/util/Collection;)Ljava/util/Set;
-
-    .line 84
-    .line 85
-    .line 86
-    move-result-object v0
-
-    .line 87
-    sput-object v0, LX/2sD;->A00:Ljava/util/Set;
-
-    .line 88
-    .line 89
-    return-void
+    return-wide v4
 .end method

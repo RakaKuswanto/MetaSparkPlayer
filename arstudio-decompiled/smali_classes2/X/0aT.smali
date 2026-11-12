@@ -1,47 +1,64 @@
 .class public final LX/0aT;
-.super Ljava/lang/Object;
+.super LX/0aO;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:Landroid/content/Context;
-
-
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(LX/0aJ;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/0aO;-><init>(LX/0aJ;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1zE;->A00()Landroid/content/Context;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final writeTo(Ljava/io/OutputStream;)V
+    .locals 2
+
+    .line 0
+    new-instance v1, LX/0aU;
+
+    .line 1
+    .line 2
+    invoke-direct {v1, p1}, LX/0aU;-><init>(Ljava/io/OutputStream;)V
+
+    .line 3
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    :try_start_0
+    iget-object v0, p0, LX/0aO;->A00:LX/0aJ;
 
+    .line 6
     .line 7
-    iput-object v0, p0, LX/0aT;->A01:Landroid/content/Context;
+    invoke-interface {v0, v1}, LX/0aJ;->writeTo(Ljava/io/OutputStream;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 8
     .line 9
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
     .line 10
+    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+
     .line 11
     .line 12
-    move-result-object v0
-
     .line 13
-    iput-object v0, p0, LX/0aT;->A00:LX/1zG;
+    return-void
 
     .line 14
+    :catchall_0
+    move-exception v0
+
     .line 15
-    return-void
+    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+
+    .line 16
+    .line 17
+    .line 18
+    throw v0
 .end method

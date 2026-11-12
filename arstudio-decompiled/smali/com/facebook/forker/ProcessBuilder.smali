@@ -38,7 +38,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 268435460
     .line 268435461
@@ -265,7 +265,7 @@
 
     .line 8
     .line 9
-    invoke-static {p0, v3}, LX/002;->A0D(Ljava/util/AbstractList;I)Ljava/lang/String;
+    invoke-static {p0, v3}, LX/001;->A0T(Ljava/util/AbstractList;I)Ljava/lang/String;
 
     .line 10
     .line 11
@@ -285,7 +285,7 @@
 
     .line 18
     .line 19
-    invoke-static {p1, v3}, LX/002;->A0D(Ljava/util/AbstractList;I)Ljava/lang/String;
+    invoke-static {p1, v3}, LX/001;->A0T(Ljava/util/AbstractList;I)Ljava/lang/String;
 
     .line 20
     .line 21
@@ -355,7 +355,7 @@
 
     .line 51
     .line 52
-    invoke-static {p0, v1}, LX/002;->A0D(Ljava/util/AbstractList;I)Ljava/lang/String;
+    invoke-static {p0, v1}, LX/001;->A0T(Ljava/util/AbstractList;I)Ljava/lang/String;
 
     .line 53
     .line 54
@@ -377,7 +377,7 @@
     .line 62
     .line 63
     .line 64
-    invoke-static {p1, v1}, LX/002;->A0D(Ljava/util/AbstractList;I)Ljava/lang/String;
+    invoke-static {p1, v1}, LX/001;->A0T(Ljava/util/AbstractList;I)Ljava/lang/String;
 
     .line 65
     .line 66
@@ -446,7 +446,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0, v0}, LX/0YP;->A00(Landroid/content/Context;I)Ljava/io/File;
+    invoke-static {p0, v0}, LX/0Jr;->A00(Landroid/content/Context;I)Ljava/io/File;
 
     .line 4
     .line 5
@@ -609,7 +609,7 @@
 
     .line 9
     .line 10
-    invoke-static {v1}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    invoke-static {v1}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 11
     .line 12
@@ -680,7 +680,7 @@
 
     .line 3
     .line 4
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 5
     .line 6
@@ -692,7 +692,7 @@
 
     .line 9
     .line 10
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 11
     .line 12
@@ -1032,7 +1032,7 @@
     move-result v0
 
     .line 12
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 13
     .line 14
@@ -1040,7 +1040,7 @@
     move-result-object v4
 
     .line 16
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 17
     .line 18
@@ -1048,7 +1048,7 @@
     move-result-object v3
 
     .line 20
-    invoke-static {v1}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v1}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 21
     .line 22
@@ -1069,7 +1069,7 @@
 
     .line 29
     .line 30
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 31
     .line 32
@@ -1117,17 +1117,6 @@
     .line 53
     :cond_1
     return-void
-.end method
-
-.method public setDefaultTmpDir(Ljava/io/File;)Lcom/facebook/forker/ProcessBuilder;
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Lcom/facebook/forker/ProcessBuilder;->mTmpDir:Ljava/io/File;
-
-    .line 1
-    .line 2
-    return-object p0
 .end method
 
 .method public setExecutable(Ljava/lang/String;)Lcom/facebook/forker/ProcessBuilder;
@@ -1284,7 +1273,7 @@
 
     .line 40
     .line 41
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 42
     .line 43
@@ -1300,7 +1289,7 @@
 
     .line 47
     .line 48
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 49
     .line 50
@@ -1398,7 +1387,7 @@
 
     .line 40
     .line 41
-    invoke-static {v0, v1}, LX/002;->A0D(Ljava/util/AbstractList;I)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/001;->A0T(Ljava/util/AbstractList;I)Ljava/lang/String;
 
     .line 42
     .line 43
@@ -1419,7 +1408,7 @@
 
     .line 51
     :cond_1
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 52
     .line 53

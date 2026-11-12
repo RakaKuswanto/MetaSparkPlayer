@@ -1,30 +1,44 @@
 .class public final LX/3yO;
-.super LX/3yc;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "GrootPlayerImpl$recreateSurface$1"
 
 
 # instance fields
-.field public final A00:Landroid/content/res/AssetManager;
+.field public final synthetic A00:LX/3q8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/AssetManager;LX/3yt;Ljava/util/concurrent/Executor;)V
+.method public constructor <init>(LX/3q8;)V
     .locals 0
 
+    iput-object p1, p0, LX/3yO;->A00:LX/3q8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
     .line 0
-    invoke-static {p3, p2, p1}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v0, p0, LX/3yO;->A00:LX/3q8;
 
     .line 1
     .line 2
-    .line 3
-    invoke-direct {p0, p2, p3}, LX/3yc;-><init>(LX/3yt;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {v0}, LX/3q8;->AeF()V
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    iput-object p1, p0, LX/3yO;->A00:Landroid/content/res/AssetManager;
-
-    .line 7
-    .line 8
     return-void
 .end method

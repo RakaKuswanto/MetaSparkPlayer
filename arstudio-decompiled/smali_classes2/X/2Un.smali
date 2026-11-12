@@ -1,17 +1,35 @@
-.class public final LX/2Un;
-.super LX/2Uo;
+.class public interface abstract LX/2UN;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract append(JLjava/lang/Object;)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, LX/2Uo;-><init>()V
+.method public abstract clear()V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract get(J)Ljava/lang/Object;
+.end method
+
+.method public abstract indexOfKey(J)I
+.end method
+
+.method public abstract put(JLjava/lang/Object;)V
+.end method
+
+.method public abstract remove(J)V
+.end method
+
+.method public abstract removeAt(I)V
+.end method
+
+.method public abstract setValueAt(ILjava/lang/Object;)V
+.end method
+
+.method public abstract size()I
+.end method
+
+.method public abstract valueAt(I)Ljava/lang/Object;
 .end method

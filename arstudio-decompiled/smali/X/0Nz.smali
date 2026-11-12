@@ -1,25 +1,21 @@
-.class public final LX/0Nz;
+.class public final LX/0NZ;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MqttClient$4"
+.implements LX/0Rs;
 
 
 # instance fields
-.field public final synthetic A00:LX/0NA;
+.field public final synthetic A00:LX/0TS;
 
 
 # direct methods
-.method public constructor <init>(LX/0NA;)V
+.method public constructor <init>(LX/0TS;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/0Nz;->A00:LX/0NA;
+    iput-object p1, p0, LX/0NZ;->A00:LX/0TS;
 
     .line 1
     .line 2
@@ -33,22 +29,24 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final AWR(LX/0Rh;)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/0Nz;->A00:LX/0NA;
+    iget-object v0, p0, LX/0NZ;->A00:LX/0TS;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/0NA;->A0G:LX/0Mx;
+    invoke-static {v0}, LX/0TS;->A03(LX/0TS;)V
 
     .line 3
     .line 4
-    invoke-interface {v0}, LX/0Mx;->Ap8()V
-
     .line 5
-    .line 6
-    .line 7
+    return-void
+.end method
+
+.method public final Abj(J)V
+    .locals 0
+
     return-void
 .end method

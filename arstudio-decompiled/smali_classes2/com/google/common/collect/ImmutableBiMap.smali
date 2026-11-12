@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1cG;
+.implements LX/1rr;
 
 
 # annotations
@@ -16,10 +16,14 @@
         ">",
         "Lcom/google/common/collect/ImmutableMap<",
         "TK;TV;>;",
-        "LX/1cG<",
+        "LX/1rr<",
         "TK;TV;>;"
     }
 .end annotation
+
+
+# static fields
+.field public static final serialVersionUID:J = 0xdecafL
 
 
 # direct methods
@@ -35,6 +39,29 @@
     return-void
 .end method
 
+.method private readObject(Ljava/io/ObjectInputStream;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {}, LX/0X6;->A0d()Ljava/io/InvalidObjectException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
 
 # virtual methods
 .method public final bridge synthetic createValues()Lcom/google/common/collect/ImmutableCollection;
@@ -46,7 +73,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
+    invoke-static {v0}, LX/0X7;->A0R(Ljava/lang/Object;)Ljava/lang/AssertionError;
 
     .line 4
     .line 5
@@ -68,7 +95,7 @@
 
     .line 2
     .line 3
-    iget-object v0, v0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:Lcom/google/common/collect/RegularImmutableBiMap;
+    iget-object v0, v0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:Lcom/google/common/collect/RegularImmutableBiMap;
 
     .line 4
     .line 5
@@ -94,7 +121,7 @@
 
     .line 268435458
     .line 268435459
-    iget-object v0, v0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:Lcom/google/common/collect/RegularImmutableBiMap;
+    iget-object v0, v0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:Lcom/google/common/collect/RegularImmutableBiMap;
 
     .line 268435460
     .line 268435461
@@ -113,14 +140,13 @@
     .locals 1
 
     .line 0
-    new-instance v0, Lcom/google/common/collect/ImmutableBiMap$SerializedForm;
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
-    invoke-direct {v0, p0}, Lcom/google/common/collect/ImmutableBiMap$SerializedForm;-><init>(Lcom/google/common/collect/ImmutableBiMap;)V
-
     .line 3
+    move-result-object v0
+
     .line 4
-    .line 5
-    return-object v0
+    throw v0
 .end method

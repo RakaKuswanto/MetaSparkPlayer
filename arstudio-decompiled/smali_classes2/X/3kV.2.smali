@@ -1,46 +1,33 @@
-.class public final LX/3kV;
+.class public final LX/3kv;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3l3;
+
 
 # direct methods
-.method public static A00()LX/3Mq;
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/16 v0, 0x15
-
     .line 3
-    .line 4
-    if-lt v1, v0, :cond_0
+    return-void
+.end method
 
-    .line 5
-    .line 6
-    new-instance v0, LX/3ke;
 
-    .line 7
-    .line 8
-    invoke-direct {v0}, LX/3ke;-><init>()V
+# virtual methods
+.method public final A9U()I
+    .locals 1
 
-    .line 9
-    .line 10
-    .line 11
-    return-object v0
+    .line 0
+    const/16 v0, 0x16
 
-    .line 12
-    :cond_0
-    new-instance v0, LX/3kR;
-
-    .line 13
-    .line 14
-    invoke-direct {v0}, LX/3kR;-><init>()V
-
-    .line 15
-    .line 16
-    .line 17
-    return-object v0
+    .line 1
+    .line 2
+    return v0
 .end method

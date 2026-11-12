@@ -1,86 +1,100 @@
 .class public final LX/4ML;
-.super Ljava/lang/Object;
+.super LX/4M5;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/util/BitSet;
+.field public A00:I
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+    .end annotation
+.end field
 
-.field public final A01:Ljava/util/Map;
+.field public A01:I
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+    .end annotation
+.end field
 
-.field public final A02:Ljava/util/Map;
+.field public A02:Z
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+    .end annotation
+.end field
 
-.field public final A03:Ljava/util/Map;
+.field public A03:Z
 
-.field public final A04:Landroid/content/Context;
+.field public A04:Z
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+    .end annotation
+.end field
+
+.field public A05:Z
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
+
+    .line 805306368
+    const/4 v0, -0x2
+
+    .line 805306369
+    invoke-direct {p0, v0}, LX/4M5;-><init>(I)V
+
+    .line 805306370
+    .line 805306371
+    .line 805306372
+    const/4 v0, 0x0
+
+    .line 805306373
+    iput-boolean v0, p0, LX/4ML;->A04:Z
+
+    .line 805306374
+    .line 805306375
+    return-void
+.end method
+
+.method public constructor <init>(LX/4ML;)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0, p1}, LX/4M5;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iget-boolean v0, p1, LX/4ML;->A04:Z
+
+    .line 268435460
+    .line 268435461
+    iput-boolean v0, p0, LX/4ML;->A04:Z
+
+    .line 268435462
+    .line 268435463
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/4M5;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    return-void
+.end method
 
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
 
-    .line 7
-    iput-object v0, p0, LX/4ML;->A03:Ljava/util/Map;
+    .line 536870912
+    invoke-direct {p0, p1}, LX/4M5;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 8
-    .line 9
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/4ML;->A02:Ljava/util/Map;
-
-    .line 14
-    .line 15
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, LX/4ML;->A01:Ljava/util/Map;
-
-    .line 20
-    .line 21
-    const/16 v1, 0x9
-
-    .line 22
-    .line 23
-    new-instance v0, Ljava/util/BitSet;
-
-    .line 24
-    .line 25
-    invoke-direct {v0, v1}, Ljava/util/BitSet;-><init>(I)V
-
-    .line 26
-    .line 27
-    .line 28
-    iput-object v0, p0, LX/4ML;->A00:Ljava/util/BitSet;
-
-    .line 29
-    .line 30
-    iput-object p1, p0, LX/4ML;->A04:Landroid/content/Context;
-
-    .line 31
-    .line 32
+    .line 536870913
+    .line 536870914
+    .line 536870915
     return-void
 .end method

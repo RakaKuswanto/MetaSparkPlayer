@@ -1,277 +1,208 @@
-.class public final LX/5gm;
+.class public abstract LX/5gM;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:I
-
-.field public A04:I
-
-.field public A05:I
-
-.field public A06:J
-
-.field public A07:J
-
-.field public A08:Ljava/lang/Integer;
-
-.field public A09:Ljava/lang/Integer;
-
-.field public A0A:Ljava/lang/Integer;
-
-.field public A0B:Ljava/lang/String;
-
-.field public A0C:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;III)V
-    .locals 2
+.method public static final A00(LX/5bD;)LX/5gN;
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    instance-of v0, p0, LX/5gQ;
 
     .line 1
     .line 2
-    .line 3
-    const/4 v0, 0x0
+    if-nez v0, :cond_0
 
+    .line 3
     .line 4
-    iput v0, p0, LX/5gm;->A00:I
+    const/4 v0, 0x1
 
     .line 5
+    :goto_0
+    new-instance v3, LX/5gN;
+
     .line 6
-    iput v0, p0, LX/5gm;->A05:I
-
     .line 7
-    .line 8
-    const-wide/16 v0, -0x1
+    invoke-direct {v3, p0, v0}, LX/5gN;-><init>(LX/5bD;I)V
 
+    .line 8
     .line 9
     .line 10
-    iput-wide v0, p0, LX/5gm;->A06:J
+    return-object v3
 
     .line 11
+    :cond_0
+    sget-object v1, LX/5gQ;->A04:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
     .line 12
-    iput-wide v0, p0, LX/5gm;->A07:J
-
     .line 13
-    .line 14
-    if-nez p1, :cond_0
+    :cond_1
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 14
     .line 15
     .line 16
-    const-string v0, "Both file path or file descriptor must be not be null, one must be set."
+    move-result-object v3
 
     .line 17
-    .line 18
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    if-nez v3, :cond_3
 
+    .line 18
     .line 19
+    sget-object v0, LX/5gP;->A00:LX/0RD;
+
     .line 20
     .line 21
-    move-result-object v0
+    invoke-virtual {v1, p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 22
-    throw v0
-
     .line 23
-    :cond_0
-    if-eqz p2, :cond_2
-
     .line 24
+    :cond_2
+    :goto_1
+    const/4 v0, 0x2
+
     .line 25
-    if-eqz p4, :cond_1
+    goto :goto_0
 
     .line 26
+    :cond_3
+    instance-of v0, v3, LX/5gN;
+
     .line 27
-    iput-object p1, p0, LX/5gm;->A0B:Ljava/lang/String;
-
     .line 28
+    if-eqz v0, :cond_4
+
     .line 29
-    iput-object p3, p0, LX/5gm;->A0C:Ljava/lang/String;
-
     .line 30
+    sget-object v0, LX/5gP;->A00:LX/0RD;
+
     .line 31
-    iput p2, p0, LX/5gm;->A03:I
-
     .line 32
-    .line 33
-    iput p4, p0, LX/5gm;->A02:I
+    invoke-static {p0, v3, v0, v1}, LX/5by;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)Z
 
+    .line 33
     .line 34
     .line 35
-    iput p5, p0, LX/5gm;->A04:I
+    move-result v0
 
     .line 36
+    if-eqz v0, :cond_1
+
     .line 37
-    iput p6, p0, LX/5gm;->A01:I
-
     .line 38
-    .line 39
-    return-void
+    check-cast v3, LX/5gN;
 
+    .line 39
     .line 40
-    :cond_1
-    const-string v0, "Frame height must be greater 0"
+    if-eqz v3, :cond_2
 
     .line 41
     .line 42
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    sget-object v2, LX/5gN;->A04:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     .line 43
     .line 44
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 45
-    move-result-object v0
-
     .line 46
-    throw v0
-
     .line 47
-    :cond_2
-    const-string v0, "Frame width must be greater 0"
+    move-result-object v1
 
     .line 48
-    .line 49
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    instance-of v0, v1, LX/5gY;
 
+    .line 49
     .line 50
+    if-eqz v0, :cond_5
+
     .line 51
     .line 52
-    move-result-object v0
+    check-cast v1, LX/5gY;
 
     .line 53
+    .line 54
+    iget-object v0, v1, LX/5gY;->A00:Ljava/lang/Object;
+
+    .line 55
+    .line 56
+    if-eqz v0, :cond_5
+
+    .line 57
+    .line 58
+    invoke-virtual {v3}, LX/5gN;->A0A()V
+
+    .line 59
+    .line 60
+    .line 61
+    goto :goto_1
+
+    .line 62
+    :cond_4
+    sget-object v0, LX/5gP;->A00:LX/0RD;
+
+    .line 63
+    .line 64
+    if-eq v3, v0, :cond_1
+
+    .line 65
+    .line 66
+    instance-of v0, v3, Ljava/lang/Throwable;
+
+    .line 67
+    .line 68
+    if-nez v0, :cond_1
+
+    .line 69
+    .line 70
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v1
+
+    .line 74
+    const-string v0, "Inconsistent state "
+
+    .line 75
+    .line 76
+    invoke-static {v3, v0, v1}, LX/431;->A0X(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
+
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
+
+    .line 80
     throw v0
-.end method
 
+    .line 81
+    :cond_5
+    sget-object v1, LX/5gN;->A02:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-# virtual methods
-.method public final A00(LX/5gp;Ljava/lang/Object;)V
-    .locals 2
+    .line 82
+    .line 83
+    const v0, 0x1fffffff
 
-    .line 0
-    iget v0, p1, LX/5gp;->A00:I
+    .line 84
+    .line 85
+    .line 86
+    invoke-virtual {v1, v3, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->set(Ljava/lang/Object;I)V
 
-    .line 1
-    .line 2
-    packed-switch v0, :pswitch_data_0
+    .line 87
+    .line 88
+    .line 89
+    sget-object v0, LX/5h5;->A00:LX/5h5;
 
-    .line 3
-    .line 4
-    .line 5
-    invoke-static {p2}, LX/002;->A01(Ljava/lang/Object;)J
+    .line 90
+    .line 91
+    invoke-virtual {v2, v3, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 6
-    .line 7
-    .line 8
-    move-result-wide v0
-
-    .line 9
-    iput-wide v0, p0, LX/5gm;->A07:J
-
-    .line 10
-    .line 11
-    return-void
-
-    .line 12
-    :pswitch_0
-    invoke-static {p2}, LX/002;->A00(Ljava/lang/Object;)I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
-    iput v0, p0, LX/5gm;->A00:I
-
-    .line 17
-    .line 18
-    return-void
-
-    .line 19
-    :pswitch_1
-    invoke-static {p2}, LX/002;->A00(Ljava/lang/Object;)I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    iput v0, p0, LX/5gm;->A05:I
-
-    .line 24
-    .line 25
-    return-void
-
-    .line 26
-    :pswitch_2
-    check-cast p2, Ljava/lang/Integer;
-
-    .line 27
-    .line 28
-    iput-object p2, p0, LX/5gm;->A08:Ljava/lang/Integer;
-
-    .line 29
-    .line 30
-    return-void
-
-    .line 31
-    :pswitch_3
-    check-cast p2, Ljava/lang/Integer;
-
-    .line 32
-    .line 33
-    iput-object p2, p0, LX/5gm;->A09:Ljava/lang/Integer;
-
-    .line 34
-    .line 35
-    return-void
-
-    .line 36
-    :pswitch_4
-    check-cast p2, Ljava/lang/Integer;
-
-    .line 37
-    .line 38
-    iput-object p2, p0, LX/5gm;->A0A:Ljava/lang/Integer;
-
-    .line 39
-    .line 40
-    return-void
-
-    .line 41
-    :pswitch_5
-    invoke-static {p2}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 42
-    .line 43
-    .line 44
-    move-result-wide v0
-
-    .line 45
-    iput-wide v0, p0, LX/5gm;->A06:J
-
-    .line 46
-    .line 47
-    return-void
-
-    .line 48
-    :pswitch_data_0
-    .packed-switch 0x7
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-    .end packed-switch
+    .line 92
+    .line 93
+    .line 94
+    return-object v3
 .end method

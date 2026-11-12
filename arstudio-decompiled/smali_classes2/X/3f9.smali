@@ -1,69 +1,29 @@
-.class public final LX/3f9;
-.super Ljava/lang/Object;
+.class public final LX/3F9;
+.super Ljava/lang/RuntimeException;
 .source ""
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
-
-
-# instance fields
-.field public final synthetic A00:LX/3ed;
-
-.field public final synthetic A01:LX/3fA;
 
 
 # direct methods
-.method public constructor <init>(LX/3ed;LX/3fA;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/3f9;->A00:LX/3ed;
+    const-string v0, "Invalid size: "
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/3f9;->A01:LX/3fA;
+    invoke-static {v0, p1}, LX/0X4;->A0n(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 5
+    move-result-object v0
+
     .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/3f9;->A00:LX/3ed;
-
-    .line 1
-    .line 2
-    iget-object v1, v0, LX/3ed;->A02:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/3f9;->A01:LX/3fA;
-
-    .line 5
-    .line 6
-    iget-object v0, v0, LX/3fA;->A0M:Landroid/content/DialogInterface;
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     .line 7
     .line 8
-    invoke-interface {v1, v0, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
-
     .line 9
-    .line 10
-    .line 11
-    invoke-interface {v0}, Landroid/content/DialogInterface;->dismiss()V
-
-    .line 12
-    .line 13
-    .line 14
     return-void
 .end method

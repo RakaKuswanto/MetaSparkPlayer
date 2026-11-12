@@ -9,22 +9,26 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "description"
+        }
+    .end annotation
 
     .line 0
-    const-string v0, "CharMatcher.none()"
+    invoke-direct {p0}, Lcom/google/common/base/CharMatcher$FastMatcher;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Lcom/google/common/base/CharMatcher$FastMatcher;-><init>()V
-
     .line 3
+    iput-object p1, p0, Lcom/google/common/base/CharMatcher$NamedFastMatcher;->description:Ljava/lang/String;
+
     .line 4
     .line 5
-    iput-object v0, p0, Lcom/google/common/base/CharMatcher$NamedFastMatcher;->description:Ljava/lang/String;
-
-    .line 6
-    .line 7
     return-void
 .end method
 

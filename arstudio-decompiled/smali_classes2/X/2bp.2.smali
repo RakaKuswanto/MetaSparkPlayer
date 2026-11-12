@@ -1,53 +1,48 @@
 .class public final LX/2bp;
-.super LX/2bb;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbTrashManager$emptyAsync$1"
+
+
+# instance fields
+.field public final synthetic A00:Lcom/facebook/storage/trash/fbapps/FbTrashManager;
 
 
 # direct methods
-.method public constructor <init>(LX/0Hd;Ljava/lang/String;Ljava/lang/String;LX/2bv;LX/2bJ;)V
-    .locals 1
-
-    .line 268435456
-    const/4 v0, 0x3
-
-    .line 268435457
-    invoke-static {p5, v0, p3}, LX/0Yg;->A19(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    .line 268435458
-    .line 268435459
-    .line 268435460
-    invoke-direct/range {p0 .. p5}, LX/2bb;-><init>(LX/0Hd;Ljava/lang/String;Ljava/lang/String;LX/2bv;LX/2bJ;)V
-
-    .line 268435461
-    .line 268435462
-    .line 268435463
-    return-void
-.end method
-
-.method public constructor <init>(LX/2bJ;)V
+.method public constructor <init>(Lcom/facebook/storage/trash/fbapps/FbTrashManager;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0, p1}, LX/2bb;-><init>(LX/2bJ;)V
+    iput-object p1, p0, LX/2bp;->A00:Lcom/facebook/storage/trash/fbapps/FbTrashManager;
 
-    .line 1
-    .line 2
-    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
 .end method
 
-.method public static A01(LX/0Hd;Ljava/lang/String;Ljava/lang/String;LX/2bv;LX/2bJ;)LX/2bp;
+
+# virtual methods
+.method public final run()V
     .locals 1
 
     .line 0
-    new-instance v0, LX/2bp;
+    iget-object v0, p0, LX/2bp;->A00:Lcom/facebook/storage/trash/fbapps/FbTrashManager;
 
     .line 1
     .line 2
-    invoke-direct/range {v0 .. v5}, LX/2bp;-><init>(LX/0Hd;Ljava/lang/String;Ljava/lang/String;LX/2bv;LX/2bJ;)V
+    iget-object v0, v0, LX/2ib;->A00:Ljava/io/File;
 
     .line 3
     .line 4
+    invoke-static {v0}, LX/0GM;->A00(Ljava/io/File;)V
+
     .line 5
-    return-object v0
+    .line 6
+    .line 7
+    return-void
 .end method

@@ -1,10 +1,10 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/music/MusicServiceConfiguration;
-.super LX/5Vj;
+.super LX/68F;
 .source ""
 
 
 # static fields
-.field public static final MUSIC_SERVICE_TYPE_KEY:LX/5TT;
+.field public static final MUSIC_SERVICE_TYPE_KEY:LX/67w;
 
 
 # instance fields
@@ -16,20 +16,20 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/5Tk;->MusicService:LX/5Tk;
+    sget-object v1, LX/63t;->MusicService:LX/63t;
 
     .line 1
     .line 2
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/5TT;-><init>(LX/5Tk;)V
+    invoke-direct {v0, v1}, LX/67w;-><init>(LX/63t;)V
 
     .line 5
     .line 6
     .line 7
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/music/MusicServiceConfiguration;->MUSIC_SERVICE_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/music/MusicServiceConfiguration;->MUSIC_SERVICE_TYPE_KEY:LX/67w;
 
     .line 8
     .line 9
@@ -40,7 +40,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5Vj;-><init>()V
+    invoke-direct {p0}, LX/68F;-><init>()V
 
     .line 1
     .line 2

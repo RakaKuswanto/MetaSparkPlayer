@@ -1,37 +1,62 @@
-.class public final LX/2zC;
-.super LX/49U;
+.class public final LX/2Zc;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final A00:Landroid/os/Handler;
+
+.field public final A01:LX/0lu;
+
+.field public final A02:Ljava/lang/Runnable;
+
+
 # direct methods
-.method public constructor <init>(LX/3Uk;Ljava/io/IOException;)V
-    .locals 6
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    const-string v3, "Cleartext HTTP traffic not permitted. See https://developer.android.com/guide/topics/media/issues/cleartext-not-permitted"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/16 v4, 0x7d7
-
     .line 3
+    invoke-static {}, LX/2I6;->A0Q()LX/0lu;
+
     .line 4
-    const/4 v5, 0x1
-
     .line 5
-    move-object v0, p0
-
     .line 6
-    move-object v1, p1
+    move-result-object v0
 
     .line 7
-    move-object v2, p2
+    iput-object v0, p0, LX/2Zc;->A01:LX/0lu;
 
     .line 8
-    invoke-direct/range {v0 .. v5}, LX/49U;-><init>(LX/3Uk;Ljava/io/IOException;Ljava/lang/String;II)V
-
     .line 9
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
+
     .line 10
     .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/2Zc;->A00:Landroid/os/Handler;
+
+    .line 14
+    .line 15
+    new-instance v0, LX/2hU;
+
+    .line 16
+    .line 17
+    invoke-direct {v0, p0}, LX/2hU;-><init>(LX/2Zc;)V
+
+    .line 18
+    .line 19
+    .line 20
+    iput-object v0, p0, LX/2Zc;->A02:Ljava/lang/Runnable;
+
+    .line 21
+    .line 22
     return-void
 .end method

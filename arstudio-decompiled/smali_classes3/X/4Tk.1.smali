@@ -1,70 +1,67 @@
-.class public final LX/4Tk;
+.class public final LX/4tK;
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A04:LX/4Vo;
+# interfaces
+.implements LX/6b4;
 
 
 # instance fields
-.field public A00:LX/4Vo;
+.field public final A00:LX/6b4;
 
-.field public A01:LX/4Vo;
-
-.field public A02:LX/4Vo;
-
-.field public A03:LX/4Vo;
+.field public final A01:LX/6a7;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(LX/6b4;LX/6a7;)V
+    .locals 0
 
-    .line 0
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    new-instance v0, LX/4Tn;
+    iput-object p2, p0, LX/4tK;->A01:LX/6a7;
 
-    .line 2
-    .line 3
-    invoke-direct {v0, v1}, LX/4Tn;-><init>(F)V
+    iput-object p1, p0, LX/4tK;->A00:LX/6b4;
 
-    .line 4
-    .line 5
-    .line 6
-    sput-object v0, LX/4Tk;->A04:LX/4Vo;
-
-    .line 7
-    .line 8
     return-void
 .end method
 
-.method public constructor <init>(LX/4Vo;LX/4Vo;LX/4Vo;LX/4Vo;)V
-    .locals 0
+
+# virtual methods
+.method public final bridge synthetic Aqz()Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, LX/4tK;->A00:LX/6b4;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/4Tk;->A02:LX/4Vo;
+    invoke-interface {v0}, LX/6b4;->Aqz()Ljava/lang/Object;
 
+    .line 3
     .line 4
     .line 5
-    iput-object p3, p0, LX/4Tk;->A03:LX/4Vo;
+    move-result-object v0
 
     .line 6
-    .line 7
-    iput-object p4, p0, LX/4Tk;->A01:LX/4Vo;
+    if-eqz v0, :cond_0
 
+    .line 7
     .line 8
+    return-object v0
+
     .line 9
-    iput-object p2, p0, LX/4Tk;->A00:LX/4Vo;
+    :cond_0
+    const-string v0, "Cannot return null from a non-@Nullable @Provides method"
 
     .line 10
     .line 11
-    return-void
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    throw v0
 .end method

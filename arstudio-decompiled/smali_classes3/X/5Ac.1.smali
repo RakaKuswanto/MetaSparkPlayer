@@ -1,73 +1,179 @@
-.class public final LX/5Ac;
+.class public final LX/5ac;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "zav"
+.implements LX/3gS;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic A00:LX/59m;
+.field public _value:Ljava/lang/Object;
+
+.field public initializer:LX/0Gw;
 
 
 # direct methods
-.method public constructor <init>(LX/59m;)V
-    .locals 0
+.method public constructor <init>(LX/0Gw;)V
+    .locals 1
 
-    iput-object p1, p0, LX/5Ac;->A00:LX/59m;
-
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/5ac;->initializer:LX/0Gw;
+
+    .line 4
+    .line 5
+    sget-object v0, LX/5ag;->A00:LX/5ag;
+
+    .line 6
+    .line 7
+    iput-object v0, p0, LX/5ac;->_value:Ljava/lang/Object;
+
+    .line 8
+    .line 9
     return-void
+.end method
+
+.method private final writeReplace()Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    invoke-virtual {p0}, LX/5ac;->getValue()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    new-instance v0, LX/5af;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v1}, LX/5af;-><init>(Ljava/lang/Object;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final APJ()Z
     .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5Ac;->A00:LX/59m;
+    iget-object v1, p0, LX/5ac;->_value:Ljava/lang/Object;
 
     .line 1
     .line 2
-    iget-object v1, v0, LX/59m;->A0B:Ljava/util/concurrent/locks/Lock;
+    sget-object v0, LX/5ag;->A00:LX/5ag;
 
     .line 3
     .line 4
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
+    invoke-static {v1, v0}, LX/0X4;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 5
     .line 6
     .line 7
-    :try_start_0
-    invoke-static {v0}, LX/59m;->A02(LX/59m;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v0
 
     .line 8
+    return v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/5ac;->_value:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    sget-object v0, LX/5ag;->A00:LX/5ag;
+
+    .line 3
+    .line 4
+    if-ne v1, v0, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5ac;->initializer:LX/0Gw;
+
+    .line 7
+    .line 8
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
+
     .line 9
     .line 10
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    .line 11
+    invoke-interface {v0}, LX/0Gw;->invoke()Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    iput-object v1, p0, LX/5ac;->_value:Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    const/4 v0, 0x0
+
+    .line 18
+    iput-object v0, p0, LX/5ac;->initializer:LX/0Gw;
+
+    .line 19
+    .line 20
+    :cond_0
+    return-object v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/5ac;->APJ()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {p0}, LX/5ac;->getValue()Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 11
     .line 12
     .line 13
-    return-void
+    move-result-object v0
 
     .line 14
-    :catchall_0
-    move-exception v0
+    return-object v0
 
     .line 15
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    :cond_0
+    const-string v0, "Lazy value not initialized yet."
 
     .line 16
     .line 17
-    .line 18
-    throw v0
+    return-object v0
 .end method

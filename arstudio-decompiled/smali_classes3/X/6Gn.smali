@@ -1,245 +1,415 @@
-.class public final enum LX/6Gn;
-.super Ljava/lang/Enum;
+.class public final LX/6gN;
+.super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final synthetic $VALUES:[LX/6Gn;
-
-.field public static final enum NO_WRAP:LX/6Gn;
-
-.field public static final enum WRAP:LX/6Gn;
-
-.field public static final enum WRAP_REVERSE:LX/6Gn;
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final mIntValue:I
+.field public A00:Ljava/lang/Object;
+
+.field public A01:Ljava/lang/String;
+
+.field public final A02:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
-
-    .line 0
-    const-string v0, "NO_WRAP"
-
-    .line 1
-    .line 2
-    const/4 v6, 0x0
-
-    .line 3
-    new-instance v5, LX/6Gn;
-
-    .line 4
-    .line 5
-    invoke-direct {v5, v0, v6, v6}, LX/6Gn;-><init>(Ljava/lang/String;II)V
-
-    .line 6
-    .line 7
-    .line 8
-    sput-object v5, LX/6Gn;->NO_WRAP:LX/6Gn;
-
-    .line 9
-    .line 10
-    const-string v0, "WRAP"
-
-    .line 11
-    .line 12
-    const/4 v4, 0x1
-
-    .line 13
-    new-instance v3, LX/6Gn;
-
-    .line 14
-    .line 15
-    invoke-direct {v3, v0, v4, v4}, LX/6Gn;-><init>(Ljava/lang/String;II)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v3, LX/6Gn;->WRAP:LX/6Gn;
-
-    .line 19
-    .line 20
-    const-string v0, "WRAP_REVERSE"
-
-    .line 21
-    .line 22
-    const/4 v2, 0x2
-
-    .line 23
-    new-instance v1, LX/6Gn;
-
-    .line 24
-    .line 25
-    invoke-direct {v1, v0, v2, v2}, LX/6Gn;-><init>(Ljava/lang/String;II)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v1, LX/6Gn;->WRAP_REVERSE:LX/6Gn;
-
-    .line 29
-    .line 30
-    const/4 v0, 0x3
-
-    .line 31
-    new-array v0, v0, [LX/6Gn;
-
-    .line 32
-    .line 33
-    aput-object v5, v0, v6
-
-    .line 34
-    .line 35
-    aput-object v3, v0, v4
-
-    .line 36
-    .line 37
-    aput-object v1, v0, v2
-
-    .line 38
-    .line 39
-    sput-object v0, LX/6Gn;->$VALUES:[LX/6Gn;
-
-    .line 40
-    .line 41
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p3, p0, LX/6gN;->A02:I
 
     .line 1
     .line 2
-    .line 3
-    iput p3, p0, LX/6Gn;->mIntValue:I
+    iput-object p1, p0, LX/6gN;->A00:Ljava/lang/Object;
 
+    .line 3
     .line 4
+    iput-object p2, p0, LX/6gN;->A01:Ljava/lang/String;
+
     .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
-.method public static fromInt(I)LX/6Gn;
-    .locals 1
+.method private final A00(LX/5OM;)I
+    .locals 6
 
     .line 0
-    if-eqz p0, :cond_2
+    iget-object v3, p0, LX/6gN;->A00:Ljava/lang/Object;
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    check-cast v3, LX/5OC;
 
     .line 3
-    if-eq p0, v0, :cond_1
-
     .line 4
-    .line 5
-    const/4 v0, 0x2
+    iget-boolean v0, v3, LX/5OC;->A03:Z
 
+    .line 5
     .line 6
-    if-ne p0, v0, :cond_0
+    const/4 v1, 0x0
 
     .line 7
+    if-eqz v0, :cond_0
+
     .line 8
-    sget-object v0, LX/6Gn;->WRAP_REVERSE:LX/6Gn;
-
     .line 9
-    .line 10
-    return-object v0
+    iget-boolean v0, p1, LX/5OM;->A07:Z
 
+    .line 10
     .line 11
-    :cond_0
-    const-string v0, "Unknown enum value: "
+    if-eqz v0, :cond_0
 
     .line 12
     .line 13
-    invoke-static {v0, p0}, LX/00I;->A02(Ljava/lang/String;I)Ljava/lang/IllegalArgumentException;
+    const/4 v1, 0x1
 
     .line 14
+    :cond_0
+    iget-object v2, p0, LX/6gN;->A01:Ljava/lang/String;
+
     .line 15
     .line 16
-    move-result-object v0
+    const-string v0, "video/av01"
 
     .line 17
-    throw v0
-
     .line 18
-    :cond_1
-    sget-object v0, LX/6Gn;->WRAP:LX/6Gn;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 19
     .line 20
-    return-object v0
-
     .line 21
-    :cond_2
-    sget-object v0, LX/6Gn;->NO_WRAP:LX/6Gn;
+    move-result v0
 
     .line 22
+    if-eqz v0, :cond_5
+
     .line 23
-    return-object v0
+    .line 24
+    iget-boolean v5, v3, LX/5OC;->A04:Z
+
+    .line 25
+    .line 26
+    iget-boolean v2, v3, LX/5OC;->A02:Z
+
+    .line 27
+    .line 28
+    iget-object v1, p1, LX/5OM;->A03:Ljava/lang/String;
+
+    .line 29
+    .line 30
+    const/4 v4, 0x0
+
+    .line 31
+    const-string v0, "c2.android.av1-dav1d.decoder"
+
+    .line 32
+    .line 33
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 34
+    .line 35
+    .line 36
+    move-result v0
+
+    .line 37
+    invoke-static {v0}, LX/001;->A1K(I)Z
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v3
+
+    .line 41
+    if-eqz v2, :cond_1
+
+    .line 42
+    .line 43
+    const-string v0, "meta.dav1d.av1.decoder"
+
+    .line 44
+    .line 45
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 46
+    .line 47
+    .line 48
+    move-result v0
+
+    .line 49
+    const/4 v2, 0x1
+
+    .line 50
+    if-nez v0, :cond_2
+
+    .line 51
+    .line 52
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 53
+    :cond_2
+    iget-boolean v0, p1, LX/5OM;->A07:Z
+
+    .line 54
+    .line 55
+    const/4 v1, 0x0
+
+    .line 56
+    if-eqz v0, :cond_3
+
+    .line 57
+    .line 58
+    const/4 v1, 0x3
+
+    .line 59
+    :cond_3
+    if-eq v5, v3, :cond_4
+
+    .line 60
+    .line 61
+    const/4 v4, 0x2
+
+    .line 62
+    :cond_4
+    add-int/2addr v1, v4
+
+    .line 63
+    xor-int/lit8 v0, v2, 0x1
+
+    .line 64
+    .line 65
+    add-int/2addr v1, v0
+
+    .line 66
+    :cond_5
+    return v1
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/6Gn;
-    .locals 1
+.method private final A01(LX/5OM;)I
+    .locals 6
 
     .line 0
-    const-class v0, LX/6Gn;
+    iget-object v3, p0, LX/6gN;->A00:Ljava/lang/Object;
 
     .line 1
     .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast v3, LX/5OD;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iget-boolean v0, v3, LX/5OD;->A01:Z
 
+    .line 5
     .line 6
-    check-cast v0, LX/6Gn;
+    const/4 v1, 0x0
 
     .line 7
+    if-eqz v0, :cond_0
+
     .line 8
-    return-object v0
-.end method
+    .line 9
+    iget-boolean v0, p1, LX/5OM;->A07:Z
 
-.method public static values()[LX/6Gn;
-    .locals 1
+    .line 10
+    .line 11
+    if-eqz v0, :cond_0
 
-    .line 0
-    sget-object v0, LX/6Gn;->$VALUES:[LX/6Gn;
+    .line 12
+    .line 13
+    const/4 v1, 0x1
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 14
+    :cond_0
+    iget-object v2, p0, LX/6gN;->A01:Ljava/lang/String;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    .line 15
+    .line 16
+    const-string v0, "video/av01"
 
-    .line 6
-    check-cast v0, [LX/6Gn;
+    .line 17
+    .line 18
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 7
-    .line 8
-    return-object v0
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    if-eqz v0, :cond_5
+
+    .line 23
+    .line 24
+    iget-boolean v5, v3, LX/5OD;->A02:Z
+
+    .line 25
+    .line 26
+    iget-boolean v2, v3, LX/5OD;->A00:Z
+
+    .line 27
+    .line 28
+    iget-object v1, p1, LX/5OM;->A03:Ljava/lang/String;
+
+    .line 29
+    .line 30
+    const/4 v4, 0x0
+
+    .line 31
+    const-string v0, "c2.android.av1-dav1d.decoder"
+
+    .line 32
+    .line 33
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 34
+    .line 35
+    .line 36
+    move-result v0
+
+    .line 37
+    invoke-static {v0}, LX/001;->A1K(I)Z
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v3
+
+    .line 41
+    if-eqz v2, :cond_1
+
+    .line 42
+    .line 43
+    const-string v0, "meta.dav1d.av1.decoder"
+
+    .line 44
+    .line 45
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 46
+    .line 47
+    .line 48
+    move-result v0
+
+    .line 49
+    const/4 v2, 0x1
+
+    .line 50
+    if-nez v0, :cond_2
+
+    .line 51
+    .line 52
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 53
+    :cond_2
+    iget-boolean v0, p1, LX/5OM;->A07:Z
+
+    .line 54
+    .line 55
+    const/4 v1, 0x3
+
+    .line 56
+    if-eqz v0, :cond_3
+
+    .line 57
+    .line 58
+    const/4 v1, 0x0
+
+    .line 59
+    :cond_3
+    if-eq v5, v3, :cond_4
+
+    .line 60
+    .line 61
+    const/4 v4, 0x2
+
+    .line 62
+    :cond_4
+    add-int/2addr v1, v4
+
+    .line 63
+    xor-int/lit8 v0, v2, 0x1
+
+    .line 64
+    .line 65
+    add-int/2addr v1, v0
+
+    .line 66
+    :cond_5
+    return v1
 .end method
 
 
 # virtual methods
-.method public intValue()I
-    .locals 1
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
     .line 0
-    iget v0, p0, LX/6Gn;->mIntValue:I
+    iget v0, p0, LX/6gN;->A02:I
 
     .line 1
     .line 2
-    return v0
+    check-cast p1, LX/5OM;
+
+    .line 3
+    .line 4
+    check-cast p2, LX/5OM;
+
+    .line 5
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-direct {p0, p1}, LX/6gN;->A01(LX/5OM;)I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v1
+
+    .line 12
+    invoke-direct {p0, p2}, LX/6gN;->A01(LX/5OM;)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    :goto_0
+    sub-int/2addr v1, v0
+
+    .line 17
+    return v1
+
+    .line 18
+    :cond_0
+    invoke-direct {p0, p1}, LX/6gN;->A00(LX/5OM;)I
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v1
+
+    .line 22
+    invoke-direct {p0, p2}, LX/6gN;->A00(LX/5OM;)I
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    goto :goto_0
 .end method

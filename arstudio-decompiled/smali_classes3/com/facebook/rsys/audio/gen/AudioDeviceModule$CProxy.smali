@@ -83,7 +83,13 @@
 .method public native hashCode()I
 .end method
 
+.method public native startPlayout()V
+.end method
+
 .method public native startRecording()V
+.end method
+
+.method public native stopPlayout()V
 .end method
 
 .method public native stopRecording()V

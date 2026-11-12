@@ -25,7 +25,7 @@
 .method public abstract getAudioSessionId()I
 .end method
 
-.method public abstract getStreamType()LX/6JV;
+.method public abstract getStreamType()LX/6Y9;
 .end method
 
 .method public abstract isCaptureEnabled()Z
@@ -64,10 +64,10 @@
 .method public abstract setCaptureEnabled(Z)V
 .end method
 
-.method public abstract setExternalAudioProvider(LX/5YY;)V
+.method public abstract setExternalAudioProvider(LX/5Uk;)V
 .end method
 
-.method public abstract setLogger(LX/5YX;)V
+.method public abstract setLogger(LX/5Ul;)V
 .end method
 
 .method public abstract setMuted(Z)V
@@ -76,7 +76,7 @@
 .method public abstract setRenderCallback(Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioRenderCallback;)V
 .end method
 
-.method public abstract setStreamType(LX/6JV;I)V
+.method public abstract setStreamType(LX/6Y9;I)V
 .end method
 
 .method public abstract startRecording(Z)V

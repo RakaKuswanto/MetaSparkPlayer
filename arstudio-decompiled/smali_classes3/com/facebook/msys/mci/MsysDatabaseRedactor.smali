@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract copyAndRedactDatabase(Lcom/facebook/msys/mci/SqliteHolder;Ljava/lang/String;)I
+.method public abstract copyAndRedactDatabase(Lcom/facebook/msys/mci/sqliteholder/SqliteHolder;Ljava/lang/String;)I
 .end method
 
-.method public abstract copyAndRedactDatabase(Lcom/facebook/msys/mci/SqliteHolder;Ljava/lang/String;LX/66B;)I
+.method public abstract copyAndRedactDatabase(Lcom/facebook/msys/mci/sqliteholder/SqliteHolder;Ljava/lang/String;LX/4H6;)I
 .end method

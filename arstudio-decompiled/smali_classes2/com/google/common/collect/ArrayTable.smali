@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/ArrayTable;
-.super LX/1bQ;
+.super LX/1qQ;
 .source ""
 
 # interfaces
@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public transient A00:LX/1bV;
+.field public transient A00:LX/1qj;
 
 .field public final array:[[Ljava/lang/Object;
 
@@ -27,9 +27,19 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Iterable;Ljava/lang/Iterable;)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "rowKeys",
+            "columnKeys"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1bQ;-><init>()V
+    invoke-direct {p0}, LX/1qQ;-><init>()V
 
     .line 1
     .line 2
@@ -80,7 +90,7 @@
     const/4 v8, 0x0
 
     .line 25
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 26
     .line 27
@@ -166,7 +176,7 @@
 
     .line 67
     :cond_0
-    invoke-virtual {v5}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+    invoke-virtual {v5}, Lcom/google/common/collect/ImmutableMap$Builder;->buildOrThrow()Lcom/google/common/collect/ImmutableMap;
 
     .line 68
     .line 69
@@ -251,7 +261,7 @@
 
     .line 108
     :cond_1
-    invoke-virtual {v5}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+    invoke-virtual {v5}, Lcom/google/common/collect/ImmutableMap$Builder;->buildOrThrow()Lcom/google/common/collect/ImmutableMap;
 
     .line 109
     .line 110
@@ -352,6 +362,16 @@
 # virtual methods
 .method public final A02(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "rowKey",
+            "columnKey"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/ArrayTable;->rowKeyToIndex:Lcom/google/common/collect/ImmutableMap;
@@ -410,7 +430,7 @@
     move-result v1
 
     .line 28
-    invoke-static {p0, v0, v1}, LX/1bQ;->A00(Lcom/google/common/collect/ArrayTable;II)[Ljava/lang/Object;
+    invoke-static {p0, v0, v1}, LX/1qQ;->A00(Lcom/google/common/collect/ArrayTable;II)[Ljava/lang/Object;
 
     .line 29
     .line 30

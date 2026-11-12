@@ -137,7 +137,7 @@
 
     .line 39
     .line 40
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 41
     .line 42
@@ -243,7 +243,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 10
     .line 11
@@ -262,7 +262,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 19
     .line 20
@@ -284,7 +284,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 31
     .line 32
@@ -1164,7 +1164,7 @@
     .line 8
     if-eqz v0, :cond_0
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 9
     .line 10
@@ -1179,23 +1179,23 @@
     .line 14
     return-object v4
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 15
     :catch_0
     move-exception v3
 
     .line 16
-    goto :goto_0
+    const-string v0, ""
 
     .line 17
+    .line 18
+    goto :goto_0
+
+    .line 19
     :catch_1
     move-exception v3
 
-    .line 18
-    const-string v0, ""
-
-    .line 19
     .line 20
     :goto_0
     sget-object v2, Lcom/facebook/acra/util/minidump/MinidumpReader;->LOG_TAG:Ljava/lang/String;
@@ -1214,7 +1214,7 @@
 
     .line 27
     .line 28
-    invoke-static {v2, v0, v3, v1}, LX/0Jt;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v1}, LX/0Il;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 29
     .line 30
@@ -1224,7 +1224,7 @@
 .end method
 
 .method public getCustomDataFromJson(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     .line 0
     new-instance v0, Ljava/io/StringReader;
@@ -1236,11 +1236,11 @@
     .line 3
     .line 4
     .line 5
-    new-instance v1, Landroid/util/JsonReader;
+    new-instance v2, Landroid/util/JsonReader;
 
     .line 6
     .line 7
-    invoke-direct {v1, v0}, Landroid/util/JsonReader;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v2, v0}, Landroid/util/JsonReader;-><init>(Ljava/io/Reader;)V
 
     .line 8
     .line 9
@@ -1250,7 +1250,7 @@
 
     .line 11
     .line 12
-    invoke-static {v1, v0}, Lcom/facebook/acra/util/minidump/MinidumpReader;->retrieveJsonNode(Landroid/util/JsonReader;Ljava/lang/String;)Landroid/util/JsonReader;
+    invoke-static {v2, v0}, Lcom/facebook/acra/util/minidump/MinidumpReader;->retrieveJsonNode(Landroid/util/JsonReader;Ljava/lang/String;)Landroid/util/JsonReader;
 
     .line 13
     .line 14
@@ -1288,7 +1288,7 @@
 
     .line 28
     :goto_0
-    invoke-virtual {v1}, Landroid/util/JsonReader;->close()V
+    invoke-virtual {v2}, Landroid/util/JsonReader;->close()V
 
     .line 29
     .line 30
@@ -1297,19 +1297,30 @@
 
     .line 32
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 33
     :try_start_1
-    invoke-virtual {v1}, Landroid/util/JsonReader;->close()V
+    invoke-virtual {v2}, Landroid/util/JsonReader;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 34
     .line 35
     .line 36
+    throw v1
+
+    .line 37
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 38
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 39
+    .line 40
+    .line 41
+    throw v1
 .end method
 
 .method public getErrorLogData()Ljava/lang/String;
@@ -1343,36 +1354,37 @@
 
     .line 10
     .line 11
-    const/4 v0, 0x1
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 12
-    new-array v2, v0, [Ljava/lang/Object;
-
     .line 13
     .line 14
-    const/4 v1, 0x0
+    move-result-object v2
 
     .line 15
-    const-string v0, ""
+    const/4 v1, 0x0
 
     .line 16
+    const-string v0, ""
+
     .line 17
+    .line 18
     aput-object v0, v2, v1
 
-    .line 18
     .line 19
+    .line 20
     const-string v0, "getErrorLogData error: %s"
 
-    .line 20
     .line 21
-    invoke-static {v3, v0, v4, v2}, LX/0Jt;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
-
     .line 22
+    invoke-static {v3, v0, v4, v2}, LX/0Il;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+
     .line 23
     .line 24
+    .line 25
     const/4 v0, 0x0
 
-    .line 25
+    .line 26
     return-object v0
 .end method
 
@@ -1434,7 +1446,7 @@
 
     .line 12
     .line 13
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 14
     .line 15
@@ -1531,7 +1543,7 @@
 
     .line 36
     .line 37
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 38
     .line 39
@@ -1570,7 +1582,7 @@
 
     .line 11
     .line 12
-    invoke-static {v1, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
     .line 14
@@ -1603,7 +1615,7 @@
     move-result v7
 
     .line 28
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 29
     .line 30
@@ -1746,7 +1758,7 @@
 
     .line 94
     .line 95
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 96
     .line 97

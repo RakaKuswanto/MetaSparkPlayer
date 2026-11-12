@@ -1,53 +1,182 @@
-.class public abstract LX/4tt;
-.super LX/4tg;
+.class public final LX/4tt;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A0D:Ljava/util/Map;
+
+
 # instance fields
-.field public A00:Z
+.field public A00:Landroid/content/ServiceConnection;
+
+.field public A01:Landroid/os/IInterface;
+
+.field public A02:Z
+
+.field public final A03:Landroid/content/Context;
+
+.field public final A04:Landroid/content/Intent;
+
+.field public final A05:Landroid/os/IBinder$DeathRecipient;
+
+.field public final A06:LX/6WC;
+
+.field public final A07:Ljava/lang/Object;
+
+.field public final A08:Ljava/lang/ref/WeakReference;
+
+.field public final A09:Ljava/util/List;
+
+.field public final A0A:Ljava/util/Set;
+
+.field public final A0B:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final A0C:LX/4cn;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/4tg;-><init>()V
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x1
+    move-result-object v0
 
     .line 4
-    iput-boolean v0, p0, LX/4tt;->A00:Z
+    sput-object v0, LX/4tt;->A0D:Ljava/util/Map;
 
     .line 5
     .line 6
     return-void
 .end method
 
-
-# virtual methods
-.method public final A0B(LX/4tc;IIII)Z
-    .locals 9
+.method public constructor <init>(Landroid/content/Context;Landroid/content/Intent;LX/6WC;LX/4cn;)V
+    .locals 1
 
     .line 0
-    move-object v3, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    check-cast v3, LX/4tl;
-
     .line 2
     .line 3
-    move-object v4, p1
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
-    iget-object v2, p1, LX/4tc;->itemView:Landroid/view/View;
-
     .line 5
     .line 6
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/4tt;->A09:Ljava/util/List;
+
+    .line 8
+    .line 9
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/4tt;->A0A:Ljava/util/Set;
+
+    .line 14
+    .line 15
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    iput-object v0, p0, LX/4tt;->A07:Ljava/lang/Object;
+
+    .line 20
+    .line 21
+    new-instance v0, LX/4tv;
+
+    .line 22
+    .line 23
+    invoke-direct {v0, p0}, LX/4tv;-><init>(LX/4tt;)V
+
+    .line 24
+    .line 25
+    .line 26
+    iput-object v0, p0, LX/4tt;->A05:Landroid/os/IBinder$DeathRecipient;
+
+    .line 27
+    .line 28
+    invoke-static {}, LX/0X3;->A0t()Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    iput-object v0, p0, LX/4tt;->A0B:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 33
+    .line 34
+    iput-object p1, p0, LX/4tt;->A03:Landroid/content/Context;
+
+    .line 35
+    .line 36
+    iput-object p3, p0, LX/4tt;->A06:LX/6WC;
+
+    .line 37
+    .line 38
+    iput-object p2, p0, LX/4tt;->A04:Landroid/content/Intent;
+
+    .line 39
+    .line 40
+    iput-object p4, p0, LX/4tt;->A0C:LX/4cn;
+
+    .line 41
+    .line 42
+    const/4 v0, 0x0
+
+    .line 43
+    invoke-static {v0}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+
+    .line 44
+    .line 45
+    .line 46
+    move-result-object v0
+
+    .line 47
+    iput-object v0, p0, LX/4tt;->A08:Ljava/lang/ref/WeakReference;
+
+    .line 48
+    .line 49
+    return-void
+.end method
+
+.method public static final A00(LX/4tt;)V
+    .locals 4
+
+    .line 0
+    iget-object p0, p0, LX/4tt;->A0A:Ljava/util/Set;
+
+    .line 1
+    .line 2
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v3
+
+    .line 6
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     .line 7
     .line 8
@@ -55,119 +184,224 @@
     move-result v0
 
     .line 10
-    float-to-int v0, v0
+    if-eqz v0, :cond_0
 
     .line 11
-    add-int v5, p2, v0
-
     .line 12
-    .line 13
-    iget-object v0, p1, LX/4tc;->itemView:Landroid/view/View;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 13
     .line 14
     .line 15
-    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
+    move-result-object v2
 
     .line 16
+    check-cast v2, LX/0fX;
+
     .line 17
     .line 18
-    move-result v0
+    const-string v0, "SplitInstallService"
 
     .line 19
-    float-to-int v0, v0
-
     .line 20
-    add-int v6, p3, v0
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 21
     .line 22
-    invoke-static {v3, p1}, LX/4tl;->A01(LX/4tl;LX/4tc;)V
-
     .line 23
-    .line 24
-    .line 25
-    move v7, p4
+    move-result-object v1
 
+    .line 24
+    const-string v0, " : Binder has died."
+
+    .line 25
     .line 26
-    sub-int v0, p4, v5
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     .line 27
     .line 28
-    move v8, p5
-
     .line 29
-    sub-int v1, p5, v6
+    move-result-object v1
 
     .line 30
+    new-instance v0, Landroid/os/RemoteException;
+
     .line 31
-    if-nez v0, :cond_0
-
     .line 32
-    .line 33
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1}, Landroid/os/RemoteException;-><init>(Ljava/lang/String;)V
 
+    .line 33
     .line 34
     .line 35
-    invoke-virtual {v3, p1}, LX/4tg;->A07(LX/4tc;)V
+    invoke-virtual {v2, v0}, LX/0fX;->A00(Ljava/lang/Exception;)V
 
     .line 36
     .line 37
     .line 38
-    const/4 v0, 0x0
+    goto :goto_0
 
     .line 39
-    return v0
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Set;->clear()V
 
     .line 40
-    :cond_0
-    neg-int v0, v0
-
     .line 41
-    int-to-float v0, v0
-
     .line 42
-    invoke-virtual {v2, v0}, Landroid/view/View;->setTranslationX(F)V
+    return-void
+.end method
 
-    .line 43
-    .line 44
-    .line 45
-    if-eqz v1, :cond_2
 
-    .line 46
-    .line 47
-    :cond_1
-    neg-int v0, v1
+# virtual methods
+.method public final A01()Landroid/os/Handler;
+    .locals 4
 
-    .line 48
-    int-to-float v0, v0
+    .line 0
+    sget-object v3, LX/4tt;->A0D:Ljava/util/Map;
 
-    .line 49
-    invoke-virtual {v2, v0}, Landroid/view/View;->setTranslationY(F)V
+    .line 1
+    .line 2
+    monitor-enter v3
 
-    .line 50
-    .line 51
-    .line 52
-    :cond_2
-    iget-object v0, v3, LX/4tl;->A08:Ljava/util/ArrayList;
+    .line 3
+    :try_start_0
+    const-string v2, "SplitInstallService"
 
-    .line 53
-    .line 54
-    new-instance v3, LX/4uP;
+    .line 4
+    .line 5
+    invoke-interface {v3, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 55
-    .line 56
-    invoke-direct/range {v3 .. v8}, LX/4uP;-><init>(LX/4tc;IIII)V
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
 
-    .line 57
-    .line 58
-    .line 59
-    invoke-virtual {v0, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    .line 9
+    if-nez v0, :cond_0
 
-    .line 60
-    .line 61
-    .line 62
-    const/4 v0, 0x1
+    .line 10
+    .line 11
+    const/16 v1, 0xa
 
-    .line 63
-    return v0
+    .line 12
+    .line 13
+    new-instance v0, Landroid/os/HandlerThread;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-static {v0}, LX/0X3;->A0D(Landroid/os/HandlerThread;)Landroid/os/Handler;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    .line 28
+    :cond_0
+    invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    check-cast v0, Landroid/os/Handler;
+
+    .line 33
+    .line 34
+    monitor-exit v3
+
+    .line 35
+    return-object v0
+
+    .line 36
+    :catchall_0
+    move-exception v0
+
+    .line 37
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 38
+    throw v0
+.end method
+
+.method public final A02(LX/0fX;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/4tt;->A07:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v1
+
+    .line 3
+    :try_start_0
+    iget-object v0, p0, LX/4tt;->A0A:Ljava/util/Set;
+
+    .line 4
+    .line 5
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 6
+    .line 7
+    .line 8
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 9
+    new-instance v1, LX/4tw;
+
+    .line 10
+    .line 11
+    invoke-direct {v1, p0}, LX/4tw;-><init>(LX/4tt;)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-virtual {p0}, LX/4tt;->A01()Landroid/os/Handler;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
+
+    .line 22
+    :catchall_0
+    move-exception v0
+
+    .line 23
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 24
+    throw v0
 .end method

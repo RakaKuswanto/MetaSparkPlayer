@@ -16,16 +16,47 @@
 
 
 # direct methods
-.method public constructor <init>(LX/1fk;)V
+.method public constructor <init>(LX/1ox;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "domain"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0, p1}, Lcom/google/common/collect/ContiguousSet;-><init>(LX/1fk;)V
+    invoke-direct {p0, p1}, Lcom/google/common/collect/ContiguousSet;-><init>(LX/1ox;)V
 
     .line 1
     .line 2
     .line 3
     return-void
+.end method
+
+.method private readObject(Ljava/io/ObjectInputStream;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {}, LX/0X6;->A0d()Ljava/io/InvalidObjectException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
 
@@ -47,6 +78,14 @@
 
 .method public final contains(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -55,6 +94,14 @@
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Ljava/util/Set;
@@ -103,11 +150,11 @@
     return v0
 .end method
 
-.method public final iterator()LX/1bX;
+.method public final iterator()LX/1tw;
     .locals 1
 
     .line 0
-    sget-object v0, LX/1eN;->A01:LX/1dA;
+    sget-object v0, LX/211;->A01:LX/210;
 
     .line 1
     .line 2
@@ -118,7 +165,7 @@
     .locals 1
 
     .line 268435456
-    sget-object v0, LX/1eN;->A01:LX/1dA;
+    sget-object v0, LX/211;->A01:LX/210;
 
     .line 268435457
     .line 268435458
@@ -136,7 +183,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "[]"
+    const-string/jumbo v0, "[]"
 
     return-object v0
 .end method
@@ -145,7 +192,7 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/google/common/collect/ContiguousSet;->domain:LX/1fk;
+    iget-object v1, p0, Lcom/google/common/collect/ContiguousSet;->domain:LX/1ox;
 
     .line 1
     .line 2
@@ -153,7 +200,7 @@
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;-><init>(LX/1fk;)V
+    invoke-direct {v0, v1}, Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;-><init>(LX/1ox;)V
 
     .line 5
     .line 6

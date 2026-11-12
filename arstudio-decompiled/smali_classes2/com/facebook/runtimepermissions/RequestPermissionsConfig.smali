@@ -39,11 +39,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x10
+    const/16 v0, 0x60
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -153,7 +153,7 @@
 
     .line 45
     .line 46
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 47
     .line 48
@@ -165,7 +165,7 @@
 
     .line 51
     .line 52
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 53
     .line 54
@@ -177,7 +177,7 @@
 
     .line 57
     .line 58
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 59
     .line 60
@@ -189,7 +189,7 @@
 
     .line 63
     .line 64
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 65
     .line 66
@@ -201,7 +201,7 @@
 
     .line 69
     .line 70
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 71
     .line 72
@@ -227,7 +227,7 @@
     goto :goto_0
 .end method
 
-.method public constructor <init>(Ljava/util/List;)V
+.method public constructor <init>(Ljava/lang/Integer;Ljava/util/List;)V
     .locals 2
 
     .line 268435456
@@ -243,7 +243,7 @@
 
     .line 268435461
     .line 268435462
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     .line 268435463
     .line 268435464
@@ -271,66 +271,63 @@
 
     .line 268435474
     .line 268435475
-    const/4 v0, 0x2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 268435476
-    iput v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A00:I
-
     .line 268435477
     .line 268435478
-    const/4 v0, 0x0
+    const/4 v0, 0x2
 
     .line 268435479
-    iput v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A01:I
+    iput v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A00:I
 
     .line 268435480
     .line 268435481
-    iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A09:Z
+    const/4 v0, 0x0
 
     .line 268435482
+    iput v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A01:I
+
     .line 268435483
-    iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A08:Z
-
     .line 268435484
-    .line 268435485
-    const/4 v0, 0x1
+    iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A09:Z
 
+    .line 268435485
     .line 268435486
-    iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A07:Z
+    iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A08:Z
 
     .line 268435487
     .line 268435488
-    iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A05:Z
+    const/4 v0, 0x1
 
     .line 268435489
+    iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A07:Z
+
     .line 268435490
+    .line 268435491
+    iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A05:Z
+
+    .line 268435492
+    .line 268435493
     iput-boolean v0, p0, Lcom/facebook/runtimepermissions/RequestPermissionsConfig;->A06:Z
 
-    .line 268435491
-    .line 268435492
+    .line 268435494
+    .line 268435495
     return-void
 
-    .line 268435493
+    .line 268435496
     :cond_0
     const/4 v0, 0x0
 
-    .line 268435494
-    new-array v0, v0, [Ljava/lang/String;
-
-    .line 268435495
-    .line 268435496
-    invoke-interface {p1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
     .line 268435497
+    invoke-static {p2, v0}, LX/0X4;->A1b(Ljava/util/List;I)[Ljava/lang/String;
+
     .line 268435498
     .line 268435499
+    .line 268435500
     move-result-object v0
 
-    .line 268435500
-    check-cast v0, [Ljava/lang/String;
-
     .line 268435501
-    .line 268435502
     goto :goto_0
 .end method
 

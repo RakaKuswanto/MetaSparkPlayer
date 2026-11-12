@@ -1,46 +1,41 @@
 .class public final Lcom/facebook/tigon/video/MainTigonDataSourceFactory;
-.super LX/3T6;
+.super LX/39l;
 .source ""
-
-# interfaces
-.implements LX/0Qe;
 
 
 # instance fields
-.field public A00:LX/0Na;
+.field public A00:LX/0RP;
 
-.field public A01:LX/0Na;
+.field public A01:LX/0RP;
 
-.field public A02:LX/0Na;
+.field public A02:LX/0RP;
 
-.field public A03:LX/0Na;
+.field public A03:LX/0RP;
 
 .field public A04:Ljava/util/concurrent/ScheduledExecutorService;
 
-.field public final A05:LX/0Na;
+.field public final A05:LX/0RP;
 
-.field public final A06:LX/0Na;
+.field public final A06:Landroid/content/Context;
 
-.field public final A07:LX/0Na;
-
-.field public final A08:Landroid/content/Context;
+.field public final A07:LX/0RP;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/3T6;-><init>()V
+    invoke-direct {p0}, LX/39l;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AJ1:I
+    sget v0, LX/2I6;->AEx:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -48,15 +43,15 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A07:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A05:LX/0RP;
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->AL1:I
+    sget v0, LX/2I6;->AF9:I
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 14
     .line 15
@@ -64,34 +59,34 @@
     move-result-object v0
 
     .line 17
-    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A05:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A07:LX/0RP;
 
     .line 18
     .line 19
-    sget v0, LX/2eq;->AJC:I
+    iput-object p1, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A06:Landroid/content/Context;
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A06:LX/0Na;
-
-    .line 26
-    .line 27
-    iput-object p1, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A08:Landroid/content/Context;
-
-    .line 28
-    .line 29
     const/4 v0, 0x1
 
-    .line 30
+    .line 22
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(I)Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A04:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 27
+    .line 28
+    sget v0, LX/2I6;->AF3:I
+
+    .line 29
+    .line 30
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 31
     .line 32
@@ -99,15 +94,15 @@
     move-result-object v0
 
     .line 34
-    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A04:Ljava/util/concurrent/ScheduledExecutorService;
+    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A03:LX/0RP;
 
     .line 35
     .line 36
-    sget v0, LX/2eq;->AJ7:I
+    sget v0, LX/2I6;->A6q:I
 
     .line 37
     .line 38
-    invoke-static {p1, v0}, LX/1zT;->A01(Landroid/content/Context;I)LX/1zT;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 39
     .line 40
@@ -115,62 +110,47 @@
     move-result-object v0
 
     .line 42
-    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A03:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A02:LX/0RP;
 
     .line 43
     .line 44
-    sget v0, LX/2eq;->A9s:I
+    sget v1, LX/2I6;->AF8:I
 
     .line 45
     .line 46
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    new-instance v0, LX/3FX;
 
     .line 47
     .line 48
+    invoke-direct {v0, p1, v1}, LX/3FX;-><init>(Landroid/content/Context;I)V
+
     .line 49
-    move-result-object v0
-
     .line 50
-    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A02:LX/0Na;
-
     .line 51
+    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A01:LX/0RP;
+
     .line 52
-    sget v0, LX/2eq;->AJB:I
-
     .line 53
-    .line 54
-    invoke-static {p1, v0}, LX/1zT;->A01(Landroid/content/Context;I)LX/1zT;
+    sget v0, LX/2I6;->AF6:I
 
+    .line 54
     .line 55
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 56
     .line 57
-    move-result-object v0
-
     .line 58
-    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A01:LX/0Na;
+    move-result-object v0
 
     .line 59
+    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A00:LX/0RP;
+
     .line 60
-    sget v0, LX/2eq;->AA0:I
-
     .line 61
-    .line 62
-    invoke-static {p1, v0}, LX/1zT;->A01(Landroid/content/Context;I)LX/1zT;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    iput-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A00:LX/0Na;
-
-    .line 67
-    .line 68
     return-void
 .end method
 
-.method public static declared-synchronized A00(Landroid/content/Context;)LX/3T6;
+.method public static declared-synchronized A00(Landroid/content/Context;)LX/39l;
     .locals 3
 
     .line 0
@@ -182,7 +162,7 @@
 
     .line 3
     :try_start_0
-    const-class v1, LX/3T6;
+    const-class v1, LX/39l;
 
     .line 4
     .line 5
@@ -192,7 +172,7 @@
 
     .line 6
     :try_start_1
-    sget-object v0, LX/3T6;->A00:LX/3T6;
+    sget-object v0, LX/39l;->A00:LX/39l;
 
     .line 7
     .line 8
@@ -212,7 +192,7 @@
     .line 13
     .line 14
     .line 15
-    sput-object v0, LX/3T6;->A00:LX/3T6;
+    sput-object v0, LX/39l;->A00:LX/39l;
 
     .line 16
     .line 17
@@ -234,7 +214,7 @@
     .line 22
     :cond_0
     :goto_0
-    sget-object v0, LX/3T6;->A00:LX/3T6;
+    sget-object v0, LX/39l;->A00:LX/39l;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -273,4 +253,149 @@
 
     .line 32
     throw v0
+.end method
+
+
+# virtual methods
+.method public final A01(LX/5BT;LX/6bi;LX/6ap;Ljava/lang/String;II)LX/5BO;
+    .locals 13
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A05:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v6
+
+    .line 6
+    check-cast v6, Lcom/facebook/tigon/tigonliger/TigonLigerService;
+
+    .line 7
+    .line 8
+    iget-object v10, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A04:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 9
+    .line 10
+    iget-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A02:LX/0RP;
+
+    .line 11
+    .line 12
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v2
+
+    .line 16
+    check-cast v2, LX/2nY;
+
+    .line 17
+    .line 18
+    iget-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A01:LX/0RP;
+
+    .line 19
+    .line 20
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v3
+
+    .line 24
+    check-cast v3, LX/36h;
+
+    .line 25
+    .line 26
+    iget-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A00:LX/0RP;
+
+    .line 27
+    .line 28
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v1
+
+    .line 32
+    check-cast v1, LX/2TA;
+
+    .line 33
+    .line 34
+    iget-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A07:LX/0RP;
+
+    .line 35
+    .line 36
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v4
+
+    .line 40
+    check-cast v4, LX/36T;
+
+    .line 41
+    .line 42
+    iget-object v0, p0, Lcom/facebook/tigon/video/MainTigonDataSourceFactory;->A03:LX/0RP;
+
+    .line 43
+    .line 44
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v5
+
+    .line 48
+    check-cast v5, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;
+
+    .line 49
+    .line 50
+    new-instance v0, LX/36x;
+
+    .line 51
+    .line 52
+    move-object v7, p2
+
+    .line 53
+    move-object/from16 v8, p3
+
+    .line 54
+    .line 55
+    move-object/from16 v9, p4
+
+    .line 56
+    .line 57
+    move/from16 v11, p5
+
+    .line 58
+    .line 59
+    move/from16 v12, p6
+
+    .line 60
+    .line 61
+    invoke-direct/range {v0 .. v12}, LX/36x;-><init>(LX/2TA;LX/2nY;LX/36h;LX/36T;Lcom/facebook/tigon/tigonliger/TigonLigerConfig;Lcom/facebook/tigon/tigonliger/TigonLigerService;LX/6bi;LX/6ap;Ljava/lang/String;Ljava/util/concurrent/Executor;II)V
+
+    .line 62
+    .line 63
+    .line 64
+    return-object v0
+.end method
+
+.method public final A02()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Tigon"
+
+    return-object v0
 .end method

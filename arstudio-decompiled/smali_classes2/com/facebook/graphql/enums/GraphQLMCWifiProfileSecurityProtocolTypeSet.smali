@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yi;->A1Y()[Ljava/lang/String;
+    invoke-static {}, LX/0X6;->A1b()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -45,22 +45,23 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "WPA"
+    const-string/jumbo v0, "WPA"
 
     .line 16
     .line 17
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 18
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 19
     .line 20
+    .line 21
     move-result-object v0
 
-    .line 21
+    .line 22
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLMCWifiProfileSecurityProtocolTypeSet;->A00:Ljava/util/Set;
 
-    .line 22
     .line 23
+    .line 24
     return-void
 .end method
 

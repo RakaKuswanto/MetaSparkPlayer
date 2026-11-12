@@ -2,63 +2,71 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "LightSharedPreferencesImpl$1"
+
+
+# instance fields
+.field public final synthetic A00:LX/2Ui;
+
+.field public final synthetic A01:Ljava/lang/Throwable;
+
 
 # direct methods
-.method public static A00(Ljava/lang/Integer;)Ljava/lang/String;
+.method public constructor <init>(LX/2Ui;Ljava/lang/Throwable;)V
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    iput-object p1, p0, LX/2Zr;->A00:LX/2Ui;
 
     .line 1
     .line 2
-    .line 3
-    move-result p0
+    iput-object p2, p0, LX/2Zr;->A01:Ljava/lang/Throwable;
 
+    .line 3
     .line 4
-    packed-switch p0, :pswitch_data_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5
     .line 6
     .line 7
-    const-string p0, "PERMISSION_DENIED"
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/2Zr;->A00:LX/2Ui;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/2Zr;->A01:Ljava/lang/Throwable;
+
+    .line 3
+    .line 4
+    iput-object v0, v1, LX/2Ui;->A00:Ljava/lang/Throwable;
+
+    .line 5
+    .line 6
+    const-string/jumbo v0, "onSharedPreferenceChanged"
+
+    .line 7
     .line 8
     .line 9
-    return-object p0
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 10
-    :pswitch_0
-    const-string p0, "LOCATION_UNSUPPORTED"
-
     .line 11
     .line 12
-    return-object p0
+    move-result-object v0
 
     .line 13
-    :pswitch_1
-    const-string p0, "LOCATION_DISABLED"
-
-    .line 14
-    .line 15
-    return-object p0
-
-    .line 16
-    :pswitch_2
-    const-string p0, "OKAY"
-
-    .line 17
-    .line 18
-    return-object p0
-
-    .line 19
-    nop
-
-    .line 20
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    throw v0
 .end method

@@ -39,11 +39,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0xd
+    const/16 v0, 0x32
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -67,7 +67,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -78,7 +78,7 @@
     const/4 v0, 0x1
 
     .line 8
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 9
     .line 10
@@ -90,7 +90,7 @@
 
     .line 13
     .line 14
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 15
     .line 16
@@ -102,7 +102,7 @@
 
     .line 19
     .line 20
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 21
     .line 22
@@ -114,7 +114,7 @@
 
     .line 25
     .line 26
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 27
     .line 28
@@ -126,7 +126,7 @@
 
     .line 31
     .line 32
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 33
     .line 34
@@ -138,7 +138,7 @@
 
     .line 37
     .line 38
-    invoke-static {p1}, LX/0Yd;->A0H(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X1;->A0J(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 39
     .line 40
@@ -277,7 +277,7 @@
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 45
     .line 46
@@ -305,7 +305,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A04(Z)I
+    invoke-static {v0}, LX/1O4;->A03(Z)I
 
     .line 3
     .line 4
@@ -317,69 +317,97 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 11
-    move-result v1
-
     .line 12
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/StoryCrossPostingToInstagramModel;->A03:Z
-
     .line 13
+    move-result v0
+
     .line 14
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    add-int/2addr v1, v0
 
     .line 15
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/StoryCrossPostingToInstagramModel;->A03:Z
+
     .line 16
     .line 17
-    move-result v1
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 18
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/StoryCrossPostingToInstagramModel;->A04:Z
-
     .line 19
-    .line 20
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
+    .line 20
     .line 21
     .line 22
+    move-result v0
+
     .line 23
-    move-result v1
+    add-int/2addr v1, v0
 
     .line 24
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/StoryCrossPostingToInstagramModel;->A05:Z
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/StoryCrossPostingToInstagramModel;->A04:Z
 
     .line 25
     .line 26
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 27
     .line 28
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 29
-    move-result v1
-
     .line 30
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/StoryCrossPostingToInstagramModel;->A00:Ljava/lang/String;
-
     .line 31
-    .line 32
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 33
-    .line 34
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 35
-    .line 36
-    .line 37
     move-result v0
 
-    .line 38
+    .line 32
     add-int/2addr v1, v0
 
+    .line 33
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/StoryCrossPostingToInstagramModel;->A05:Z
+
+    .line 34
+    .line 35
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 36
+    .line 37
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 38
     .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    add-int/2addr v1, v0
+
+    .line 42
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/StoryCrossPostingToInstagramModel;->A00:Ljava/lang/String;
+
+    .line 43
+    .line 44
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 45
+    .line 46
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 47
+    .line 48
+    .line 49
+    move-result v0
+
+    .line 50
+    add-int/2addr v1, v0
+
+    .line 51
     return v1
 .end method
 
@@ -436,7 +464,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1, v0}, LX/0Yc;->A0D(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0k(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 28
     .line 29

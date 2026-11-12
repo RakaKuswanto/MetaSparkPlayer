@@ -77,7 +77,7 @@
 
     .line 16
     .line 17
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 18
     .line 19
@@ -99,15 +99,71 @@
     return-void
 .end method
 
-.method private final A00(Z)V
-    .locals 5
+.method public static A00(Landroid/app/Application;)V
+    .locals 2
 
     .line 0
-    sget-object v4, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A04:Lcom/google/android/gms/common/api/internal/BackgroundDetector;
+    sget-object v1, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A04:Lcom/google/android/gms/common/api/internal/BackgroundDetector;
 
     .line 1
     .line 2
-    monitor-enter v4
+    monitor-enter v1
+
+    .line 3
+    :try_start_0
+    iget-boolean v0, v1, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A00:Z
+
+    .line 4
+    .line 5
+    if-nez v0, :cond_0
+
+    .line 6
+    .line 7
+    invoke-virtual {p0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {p0, v1}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+
+    .line 11
+    .line 12
+    .line 13
+    const/4 v0, 0x1
+
+    .line 14
+    iput-boolean v0, v1, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A00:Z
+
+    .line 15
+    .line 16
+    :cond_0
+    monitor-exit v1
+
+    .line 17
+    return-void
+
+    .line 18
+    :catchall_0
+    move-exception v0
+
+    .line 19
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 20
+    throw v0
+.end method
+
+.method private final A01(Z)V
+    .locals 3
+
+    .line 0
+    sget-object v2, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A04:Lcom/google/android/gms/common/api/internal/BackgroundDetector;
+
+    .line 1
+    .line 2
+    monitor-enter v2
 
     .line 3
     :try_start_0
@@ -120,11 +176,11 @@
     .line 6
     .line 7
     .line 8
-    move-result-object v3
+    move-result-object v1
 
     .line 9
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 10
     .line 11
@@ -136,7 +192,7 @@
 
     .line 14
     .line 15
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 16
     .line 17
@@ -144,57 +200,34 @@
     move-result-object v0
 
     .line 19
-    check-cast v0, LX/52o;
+    check-cast v0, LX/4zR;
 
     .line 20
     .line 21
-    check-cast v0, LX/52n;
+    invoke-interface {v0, p1}, LX/4zR;->ATe(Z)V
 
     .line 22
     .line 23
-    iget-object v0, v0, LX/52n;->A00:LX/56I;
-
     .line 24
-    .line 25
-    iget-object v2, v0, LX/56I;->A04:Landroid/os/Handler;
-
-    .line 26
-    .line 27
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v1
-
-    .line 31
-    const/4 v0, 0x1
-
-    .line 32
-    invoke-static {v2, v1, v0}, LX/0Yd;->A0Z(Landroid/os/Handler;Ljava/lang/Object;I)V
-
-    .line 33
-    .line 34
-    .line 35
     goto :goto_0
 
-    .line 36
+    .line 25
     :cond_0
-    monitor-exit v4
+    monitor-exit v2
 
-    .line 37
+    .line 26
     return-void
 
-    .line 38
+    .line 27
     :catchall_0
     move-exception v0
 
-    .line 39
-    monitor-exit v4
+    .line 28
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 40
+    .line 29
     throw v0
 .end method
 
@@ -204,38 +237,38 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v3, p0, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 1
     .line 2
-    const/4 v3, 0x1
+    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 3
-    const/4 v2, 0x0
-
     .line 4
-    invoke-virtual {v0, v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    const/4 v2, 0x1
 
     .line 5
+    const/4 v1, 0x0
+
     .line 6
+    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
     .line 7
-    move-result v1
-
     .line 8
-    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
-
     .line 9
+    move-result v0
+
     .line 10
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     .line 11
     .line 12
     .line 13
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 14
     .line 15
-    invoke-direct {p0, v2}, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A00(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A01(Z)V
 
     .line 16
     .line 17
@@ -260,38 +293,38 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v3, p0, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 1
     .line 2
-    const/4 v3, 0x1
+    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 3
-    const/4 v2, 0x0
-
     .line 4
-    invoke-virtual {v0, v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    const/4 v2, 0x1
 
     .line 5
+    const/4 v1, 0x0
+
     .line 6
+    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
     .line 7
-    move-result v1
-
     .line 8
-    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
-
     .line 9
+    move-result v0
+
     .line 10
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     .line 11
     .line 12
     .line 13
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 14
     .line 15
-    invoke-direct {p0, v2}, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A00(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A01(Z)V
 
     .line 16
     .line 17
@@ -373,7 +406,7 @@
     .line 17
     .line 18
     .line 19
-    invoke-direct {p0, v1}, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A00(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/common/api/internal/BackgroundDetector;->A01(Z)V
 
     .line 20
     .line 21

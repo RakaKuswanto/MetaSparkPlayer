@@ -34,11 +34,11 @@
     .locals 3
 
     .line 0
-    iget v2, p0, Lcom/facebook/forker/UnsafeByteArrayOutputStream;->count:I
+    iget v2, p0, Ljava/io/ByteArrayOutputStream;->count:I
 
     .line 1
     .line 2
-    iget-object v1, p0, Lcom/facebook/forker/UnsafeByteArrayOutputStream;->buf:[B
+    iget-object v1, p0, Ljava/io/ByteArrayOutputStream;->buf:[B
 
     .line 3
     .line 4

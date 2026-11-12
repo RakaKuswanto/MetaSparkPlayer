@@ -1,301 +1,342 @@
 .class public final LX/3fY;
-.super Landroid/net/ConnectivityManager$NetworkCallback;
+.super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final synthetic A00:LX/3fT;
+# interfaces
+.implements LX/3fe;
 
 
 # direct methods
-.method public constructor <init>(LX/3fT;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3fY;->A00:LX/3fT;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAvailable(Landroid/net/Network;)V
-    .locals 3
+.method public final bridge synthetic Afw(Ljava/io/File;)Ljava/lang/Object;
+    .locals 8
 
     .line 0
-    const/4 v0, 0x0
+    const/4 v7, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    const/4 v6, 0x0
 
     .line 2
+    const/4 v1, 0x1
+
     .line 3
-    .line 4
-    invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onAvailable(Landroid/net/Network;)V
-
-    .line 5
-    .line 6
-    .line 7
-    iget-object v0, p0, LX/3fY;->A00:LX/3fT;
-
-    .line 8
-    .line 9
-    invoke-virtual {v0}, LX/3fT;->A02()LX/3hU;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iget-object v2, v0, LX/3hU;->A00:LX/3fO;
-
-    .line 14
-    .line 15
-    iget-object v1, v2, LX/3fO;->A03:LX/3fb;
-
-    .line 16
-    .line 17
-    new-instance v0, LX/3gf;
-
-    .line 18
-    .line 19
-    invoke-direct {v0, v2}, LX/3gf;-><init>(LX/3fO;)V
-
-    .line 20
-    .line 21
-    .line 22
-    invoke-virtual {v1, v0}, LX/3fb;->A01(Ljava/lang/Runnable;)Z
-
-    .line 23
-    .line 24
-    .line 25
-    return-void
-.end method
-
-.method public final onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
-    .locals 4
-
-    .line 0
-    const/4 v1, 0x0
-
-    .line 1
-    invoke-static {p1, p2}, LX/0Yd;->A1Z(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 2
-    .line 3
-    .line 4
-    move-result v0
-
-    .line 5
     :try_start_0
-    invoke-super {p0, p1, p2}, Landroid/net/ConnectivityManager$NetworkCallback;->onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+    invoke-static {p1}, LX/0X5;->A0S(Ljava/io/File;)Ljava/io/DataInputStream;
 
+    .line 4
+    .line 5
     .line 6
+    move-result-object v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
     .line 7
+    :try_start_1
+    invoke-virtual {v5}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+
     .line 8
-    const/4 v2, 0x1
-
     .line 9
-    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
-
     .line 10
-    .line 11
-    .line 12
-    move-result v3
+    move-result-object v4
 
+    .line 11
+    const-string v0, "GK_STATE"
+
+    .line 12
     .line 13
-    invoke-virtual {p2, v1}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 14
     .line 15
     .line 16
-    move-result v1
+    move-result v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 17
-    const/4 v0, 0x3
+    const-string v3, "StateFileSerializer"
 
     .line 18
-    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
-
     .line 19
-    .line 20
-    .line 21
-    move-result v0
-
-    .line 22
     if-nez v0, :cond_0
 
-    .line 23
-    .line 24
-    const/4 v0, 0x2
+    .line 20
+    .line 21
+    :try_start_2
+    const-string v2, "Cannot read gatekeepers state, invalid signature: %s"
 
+    .line 22
+    .line 23
+    new-array v1, v1, [Ljava/lang/Object;
+
+    .line 24
     .line 25
-    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+    goto :goto_0
 
     .line 26
+    :cond_0
+    invoke-virtual {v5}, Ljava/io/DataInputStream;->readInt()I
+
     .line 27
     .line 28
+    .line 29
     move-result v0
 
-    .line 29
-    if-nez v0, :cond_0
-
     .line 30
-    .line 31
-    const/4 v0, 0x4
+    if-eq v0, v1, :cond_1
 
+    .line 31
     .line 32
-    invoke-virtual {p2, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+    const-string v2, "Cannot read gatekeepers state, invalid version: %s"
 
     .line 33
     .line 34
-    .line 35
-    move-result v0
+    new-array v1, v1, [Ljava/lang/Object;
 
+    .line 35
     .line 36
-    if-nez v0, :cond_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 37
     .line 38
-    const/4 v2, 0x0
-
     .line 39
-    :cond_0
-    iget-object v0, p0, LX/3fY;->A00:LX/3fT;
+    move-result-object v4
 
     .line 40
+    :goto_0
+    aput-object v4, v1, v6
+
     .line 41
-    if-eqz v1, :cond_1
-
     .line 42
-    .line 43
-    or-int/lit8 v3, v3, 0x2
+    invoke-static {v3, v2, v1}, LX/0Il;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 43
     .line 44
     .line 45
-    :cond_1
-    if-eqz v2, :cond_2
+    :try_start_3
+    invoke-interface {v5}, Ljava/io/Closeable;->close()V
 
     .line 46
     .line 47
-    or-int/lit8 v3, v3, 0x4
-
     .line 48
+    return-object v7
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
     .line 49
-    :cond_2
-    invoke-virtual {v0}, LX/3fT;->A02()LX/3hU;
+    :cond_1
+    :try_start_4
+    invoke-virtual {v5}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     .line 50
     .line 51
     .line 52
-    move-result-object v0
+    move-result-object v1
 
     .line 53
-    iget-object v2, v0, LX/3hU;->A00:LX/3fO;
+    invoke-virtual {v5}, Ljava/io/DataInputStream;->readInt()I
 
     .line 54
     .line 55
-    iget-object v1, v2, LX/3fO;->A03:LX/3fb;
-
     .line 56
+    move-result v0
+
     .line 57
-    new-instance v0, LX/3ft;
+    new-array v0, v0, [B
 
     .line 58
     .line 59
-    invoke-direct {v0, v2, v3}, LX/3ft;-><init>(LX/3fO;I)V
+    invoke-virtual {v5, v0}, Ljava/io/DataInputStream;->readFully([B)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     .line 60
     .line 61
     .line 62
-    invoke-virtual {v1, v0}, LX/3fb;->A01(Ljava/lang/Runnable;)Z
+    :try_start_5
+    new-instance v7, LX/3fc;
 
     .line 63
     .line 64
+    invoke-direct {v7, v1, v0}, LX/3fc;-><init>(Ljava/lang/String;[B)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
     .line 65
-    return-void
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 66
-    :catch_0
-    move-exception v2
-
     .line 67
-    const-string v1, "NetworkMonitor"
+    invoke-static {v5, v6}, LX/2NF;->A00(Ljava/io/Closeable;Z)V
 
     .line 68
     .line 69
-    const-string v0, "Error getting network information."
-
     .line 70
+    :catch_0
+    return-object v7
+
     .line 71
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :catchall_0
+    move-exception v1
 
     .line 72
+    move-object v7, v5
+
     .line 73
+    goto :goto_1
+
     .line 74
-    return-void
+    :catchall_1
+    move-exception v1
+
+    .line 75
+    goto :goto_1
+
+    .line 76
+    :catchall_2
+    move-exception v1
+
+    .line 77
+    move-object v7, v5
+
+    .line 78
+    const/4 v6, 0x1
+
+    .line 79
+    :goto_1
+    xor-int/lit8 v0, v6, 0x1
+
+    .line 80
+    .line 81
+    invoke-static {v7, v0}, LX/2NF;->A00(Ljava/io/Closeable;Z)V
+
+    .line 82
+    .line 83
+    .line 84
+    throw v1
 .end method
 
-.method public final onLost(Landroid/net/Network;)V
+.method public final bridge synthetic AqG(Ljava/io/File;Ljava/lang/Object;)V
     .locals 3
 
     .line 0
-    const/4 v0, 0x0
+    check-cast p2, LX/3fc;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    invoke-static {p1}, LX/0X7;->A0Q(Ljava/io/File;)Ljava/io/FileOutputStream;
+
     .line 3
     .line 4
-    invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onLost(Landroid/net/Network;)V
-
     .line 5
+    move-result-object v2
+
     .line 6
+    const/16 v1, 0x400
+
     .line 7
-    iget-object v0, p0, LX/3fY;->A00:LX/3fT;
-
     .line 8
-    .line 9
-    invoke-virtual {v0}, LX/3fT;->A02()LX/3hU;
+    new-instance v0, Ljava/io/BufferedOutputStream;
 
+    .line 9
     .line 10
+    invoke-direct {v0, v2, v1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
+
     .line 11
     .line 12
-    move-result-object v0
-
     .line 13
-    iget-object v2, v0, LX/3hU;->A00:LX/3fO;
+    new-instance v2, Ljava/io/DataOutputStream;
 
     .line 14
     .line 15
-    iget-object v1, v2, LX/3fO;->A03:LX/3fb;
+    invoke-direct {v2, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 16
     .line 17
-    new-instance v0, LX/3fh;
-
     .line 18
+    const/4 v1, 0x1
+
     .line 19
-    invoke-direct {v0, v2}, LX/3fh;-><init>(LX/3fO;)V
+    :try_start_0
+    const-string v0, "GK_STATE"
 
     .line 20
     .line 21
-    .line 22
-    invoke-virtual {v1, v0}, LX/3fb;->A01(Ljava/lang/Runnable;)Z
+    invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
+    .line 22
     .line 23
     .line 24
+    invoke-virtual {v2, v1}, Ljava/io/DataOutputStream;->writeInt(I)V
+
     .line 25
+    .line 26
+    .line 27
+    iget-object v0, p2, LX/3fc;->A00:Ljava/lang/String;
+
+    .line 28
+    .line 29
+    invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
+
+    .line 30
+    .line 31
+    .line 32
+    iget-object v1, p2, LX/3fc;->A01:[B
+
+    .line 33
+    .line 34
+    array-length v0, v1
+
+    .line 35
+    invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->writeInt(I)V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {v2, v1}, Ljava/io/OutputStream;->write([B)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    const/4 v0, 0x0
+
+    .line 42
+    invoke-static {v2, v0}, LX/2NF;->A00(Ljava/io/Closeable;Z)V
+
+    .line 43
+    .line 44
+    .line 45
     return-void
+
+    .line 46
+    :catchall_0
+    move-exception v0
+
+    .line 47
+    :try_start_1
+    invoke-interface {v2}, Ljava/io/Closeable;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 48
+    .line 49
+    .line 50
+    :catch_0
+    throw v0
 .end method

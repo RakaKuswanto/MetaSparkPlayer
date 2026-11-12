@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/workshared/auth/community/WorkCommunity;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 # interfaces
@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final CREATOR:LX/1LM;
+.field public static final CREATOR:LX/1Yp;
 
 
 # instance fields
@@ -25,21 +25,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    const/16 v0, 0x4a
 
     .line 1
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
-
     .line 2
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
-    sput-object v0, Lcom/facebook/workshared/auth/community/WorkCommunity;->CREATOR:LX/1LM;
-
     .line 6
+    sput-object v0, Lcom/facebook/workshared/auth/community/WorkCommunity;->CREATOR:LX/1Yp;
+
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -47,7 +48,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 1
     .line 2
@@ -100,7 +101,7 @@
 
     iget-object v0, p1, Lcom/facebook/workshared/auth/community/WorkCommunity;->A02:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -110,7 +111,7 @@
 
     iget-object v0, p1, Lcom/facebook/workshared/auth/community/WorkCommunity;->A00:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -120,7 +121,7 @@
 
     iget-object v0, p1, Lcom/facebook/workshared/auth/community/WorkCommunity;->A03:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -130,7 +131,7 @@
 
     iget-object v0, p1, Lcom/facebook/workshared/auth/community/WorkCommunity;->A01:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -154,7 +155,7 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 4
     .line 5
@@ -170,7 +171,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 12
     .line 13
@@ -189,7 +190,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 21
     .line 22
@@ -234,7 +235,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="__external__address_line_1">Heimilisfang</string>
-    <string name="__external__ar_try_on_bottomsheet_dismiss_button_title">Ekki núna</string>
     <string name="__external__autofill">Sjálfvirk útfylling</string>
     <string name="__external__bondi_moreinfo_about_title">Um</string>
     <string name="__external__bondi_moreinfo_accessibility_verified">Staðfest</string>
@@ -17,7 +16,6 @@
     <string name="__external__bondi_static_action_go_to_settings">Farðu í stillingar</string>
     <string name="__external__bondi_static_action_refresh">Endurhlaða</string>
     <string name="__external__browser_add_to_collection_hint">Bæta við safn</string>
-    <string name="__external__browser_back_button_description">Fara til baka</string>
     <string name="__external__browser_change_collection_hint">Breyta söfnun</string>
     <string name="__external__browser_close_button_description">Loka vafra</string>
     <string name="__external__browser_error_dialog_body">Því miður er tæknilegt vandamál með þennan eiginleika. Við erum að vinna að úrlausn hans.</string>
@@ -33,16 +31,12 @@
     <string name="__external__browser_ssl_error_message">Vandamál kom upp með öryggisvottorð þessarar síðu</string>
     <string name="__external__browser_ssl_error_positive_button_text">Fara til baka</string>
     <string name="__external__browser_ssl_error_title">Öryggisvilla</string>
-    <string name="__external__business_extension_autofill_save_accept">VISTA</string>
-    <string name="__external__business_extension_autofill_save_request">Viltu vista þessar upplýsingar?</string>
-    <string name="__external__call_extension_confirmation_dialog_call_button">Hringja</string>
     <string name="__external__call_extension_confirmation_dialog_cancel_button">Hætta við</string>
-    <string name="__external__code_copied_text">Afritað!</string>
-    <string name="__external__code_copied_text_V2">Afritað</string>
     <string name="__external__confirm_button">Staðfesta</string>
     <string name="__external__contact_info_title">Samskiptaupplýsingar</string>
-    <string name="__external__copy_promo_code_message">Afrita kóða</string>
     <string name="__external__cta_text">Hringja</string>
+    <string name="__external__demask_card_fragment_ok_title">Staðfesta</string>
+    <string name="__external__dialog_ok">Í lagi</string>
     <string name="__external__edit">Breyta</string>
     <string name="__external__email">Netfang</string>
     <string name="__external__feed_browser_cannot_load_page">Ekki er hægt að hlaða síðu</string>
@@ -52,27 +46,13 @@
     <string name="__external__feed_browser_menu_item_open_with_app">Opna í forriti</string>
     <string name="__external__feed_browser_menu_item_open_with_specific_app">Opna í %1$s</string>
     <string name="__external__feed_browser_more_options">Fleiri valkostir</string>
-    <string name="__external__header_loading_screen_default_string">Hleður vefsíðu</string>
-    <string name="__external__header_loading_screen_string">Hleður %1$s</string>
-    <string name="__external__instant_experiences_iab_autofill_save_accept">VISTA</string>
-    <string name="__external__instant_experiences_iab_autofill_save_decline">EKKI NÚNA</string>
-    <string name="__external__instant_experiences_iab_autofill_save_hide_details">Fela nánari upplýsingar</string>
-    <string name="__external__instant_experiences_iab_autofill_save_reassurance">Þetta verður ekki birt á Facebook</string>
-    <string name="__external__instant_experiences_iab_autofill_save_request">Viltu vista þessar upplýsingar fyrir næsta skipti?</string>
-    <string name="__external__instant_experiences_iab_autofill_save_show_details">Sjá meira</string>
     <string name="__external__learn_more">Frekari upplýsingar</string>
     <string name="__external__name">Nafn</string>
     <string name="__external__not_now">Ekki núna</string>
-    <string name="__external__offer_browser_save_button_save">Vista</string>
-    <string name="__external__offer_browser_save_button_saved">Vistað</string>
-    <string name="__external__offer_save_text">Vista</string>
-    <string name="__external__offer_save_transition_text">Vista...</string>
-    <string name="__external__offer_saved_text">Vistað</string>
-    <string name="__external__offer_saving_fail_action_text">Reyna aftur</string>
     <string name="__external__ok_button">Í lagi</string>
-    <string name="__external__pages_surface_info_like">Líkar þetta</string>
+    <string name="__external__payment_default_error_message">Því miður fór eitthvað úrskeiðis</string>
+    <string name="__external__payment_default_error_title">Greiðsluvilla kom upp</string>
     <string name="__external__pre_call_cta_text">Hringja núna</string>
-    <string name="__external__quote_share_action_button_text">DEILA TILBOÐI</string>
     <string name="__external__request_autofill_title">Fylla út sjálfkrafa með Facebook?</string>
     <string name="__external__safe_browsing_bh_proceed_to_site">Þú getur ennþá &lt;a id=\"proceed\" href=\"#\">farið inn á þessa síðu&lt;/a> ef þig langar til þess.</string>
     <string name="__external__safe_browsing_bh_warning">Þessi vefsíða kann að innihalda skaðlegt eða vafasamt efni.</string>
@@ -102,8 +82,6 @@
     <string name="__external__update_autofill_title">Viltu uppfæra þessar upplýsingar?</string>
     <string name="__external__update_button">Uppfæra</string>
     <string name="__external__update_payment_autofill_title">Uppfæra samskiptaupplýsingar</string>
-    <string name="__external_browser_ad_prefs_about_link_title">Hvers vegna sé ég þessa auglýsingu?</string>
-    <string name="__external_browser_ad_sponsored_text">Kostuð færsla</string>
     <string name="abc_action_bar_up_description">Fara upp</string>
     <string name="abc_action_menu_overflow_description">Fleiri valkostir</string>
     <string name="abc_action_mode_done">Lokið</string>
@@ -179,13 +157,6 @@
     <string name="dialog_close">Loka</string>
     <string name="dialog_dismiss">Hunsa</string>
     <string name="dialog_ok">Í lagi</string>
-    <string name="ecp_confirmation_close_button">Loka</string>
-    <string name="ecpx_back_label">Til baka</string>
-    <string name="ecpx_error_dialog_non_retryable_ok_cta">Í lagi</string>
-    <string name="ecpx_error_dialog_retryable_ok_cta">Í lagi</string>
-    <string name="ecpx_exit_dialog_cancel">Hætta við</string>
-    <string name="ecpx_ig_nux_title_unbranded">Greiðsla</string>
-    <string name="ecpx_title_unbranded">Umsögn</string>
     <string name="error_opening_third_party_application">Vandamál kom upp við að opna þetta forrit.</string>
     <string name="generic_error_message">Eitthvað fór úrskeiðis. Vinsamlegast reyndu aftur.</string>
     <string name="global_subtitle_settings_always_on">Skjátextar eiga alltaf að sjást</string>
@@ -249,9 +220,31 @@
     <string name="start_screen_sso_text">Halda áfram sem [[name]]</string>
     <string name="start_screen_sso_text_not_you_link">Ekki þú?</string>
     <string name="time_date">%1$s kl. %2$s</string>
+    <string name="time_days_ago">Fyrir%1$d dögum síðan</string>
+    <string name="time_days_ago_shortest">%1$d dagar</string>
+    <string name="time_days_from_now_shortest">%1$d dagar</string>
+    <string name="time_hours_ago">Fyrir %1$d klst. síðan</string>
+    <string name="time_hours_ago_shortest">%1$d klst.</string>
+    <string name="time_hours_from_now_shortest">%1$d klst.</string>
     <string name="time_just_now">Rétt í þessu</string>
+    <string name="time_minutes_ago">Fyrir %1$d mín.</string>
+    <string name="time_minutes_ago_shortest">%1$d mín.</string>
+    <string name="time_minutes_from_now_shortest">%1$d mín</string>
+    <string name="time_today">Í dag</string>
+    <string name="time_today_at">Í dag kl. %1$s</string>
+    <string name="time_today_at_dot">Í dag • %1$s</string>
+    <string name="time_today_at_lower_case">í dag kl. %1$s</string>
+    <string name="time_today_lowercase">%1$s í dag</string>
+    <string name="time_tomorrow">Á morgun</string>
     <string name="time_tomorrow_at">Á morgun kl. %1$s</string>
+    <string name="time_tomorrow_at_dot">Á morgun • %1$s</string>
+    <string name="time_tomorrow_lowercase">%1$s á morgun</string>
     <string name="time_week_day_at_time">%1$s kl. %2$s</string>
+    <string name="time_weeks_ago">fyrir %1$d vikum síðan</string>
+    <string name="time_weeks_ago_shortest">%1$d v.</string>
+    <string name="time_years_ago_shortest">%1$d ár</string>
+    <string name="time_years_from_now_shortest">%1$d ár</string>
+    <string name="time_yesterday">Í gær</string>
     <string name="time_yesterday_at">Í gær klukkan %1$s</string>
     <string name="tos_dialog_continue">Áfram</string>
     <string name="tos_dialog_text">Með því að smella á halda áfram samþykkir þú okkar %1$s og %2$s. Við notum þjónustu sem er fyrirfram uppsett á tækinu þínu til að uppfæra forrit sjálfkrafa. Þú getur slökkt á þjónustunni hvenær sem er. %3$s.</string>
@@ -270,4 +263,5 @@
     <string name="video_settings_autoplay_title">Sjálfvirk spilun</string>
     <string name="video_settings_autoplay_wifi_only">Einungis á þráðlausu neti</string>
     <string name="video_thumbnail_description">Myndskeið</string>
+    <string name="visited_just_now">Þú varst að heimsækja</string>
 </resources>

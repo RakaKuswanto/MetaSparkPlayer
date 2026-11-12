@@ -1,22 +1,54 @@
 .class public final LX/3yU;
-.super LX/3yc;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "SecureWindowUtils$1"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/view/Window;
 
 
 # direct methods
-.method public constructor <init>(LX/3yt;Ljava/util/concurrent/Executor;)V
+.method public constructor <init>(Landroid/view/Window;)V
     .locals 0
 
     .line 0
-    invoke-static {p2, p1}, LX/0Yc;->A0M(Ljava/lang/Object;Ljava/lang/Object;)V
+    iput-object p1, p0, LX/3yU;->A00:Landroid/view/Window;
 
     .line 1
     .line 2
-    .line 3
-    invoke-direct {p0, p1, p2}, LX/3yc;-><init>(LX/3yt;Ljava/util/concurrent/Executor;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3yU;->A00:Landroid/view/Window;
+
+    .line 1
+    .line 2
+    const/16 v0, 0x2000
+
+    .line 3
+    .line 4
+    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
+
+    .line 5
     .line 6
+    .line 7
     return-void
 .end method

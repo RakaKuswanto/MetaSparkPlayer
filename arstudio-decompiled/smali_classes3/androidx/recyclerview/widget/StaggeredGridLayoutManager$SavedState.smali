@@ -41,11 +41,11 @@
 
     .line 1
     .line 2
-    new-instance v0, LX/1PM;
+    new-instance v0, LX/2Nf;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/1PM;-><init>(I)V
+    invoke-direct {v0, v1}, LX/2Nf;-><init>(I)V
 
     .line 5
     .line 6
@@ -173,7 +173,7 @@
     const/4 v0, 0x1
 
     .line 50
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 51
     .line 52
@@ -185,7 +185,7 @@
 
     .line 55
     .line 56
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 57
     .line 58
@@ -197,7 +197,7 @@
 
     .line 61
     .line 62
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 63
     .line 64
@@ -213,7 +213,7 @@
 
     .line 69
     .line 70
-    invoke-static {p1, v0}, LX/0Yf;->A0m(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     .line 71
     .line 72
@@ -221,10 +221,18 @@
     move-result-object v0
 
     .line 74
-    iput-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$SavedState;->A04:Ljava/util/List;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
 
     .line 75
     .line 76
+    .line 77
+    move-result-object v0
+
+    .line 78
+    iput-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$SavedState;->A04:Ljava/util/List;
+
+    .line 79
+    .line 80
     return-void
 .end method
 

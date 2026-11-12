@@ -1,346 +1,257 @@
 .class public final LX/4Dw;
-.super Ljava/lang/Object;
+.super LX/0NH;
 .source ""
 
-# interfaces
-.implements LX/4Dx;
 
+# instance fields
+.field public A00:Z
 
-# static fields
-.field public static A00:Landroid/webkit/CookieManager;
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static final A00()V
+.method public constructor <init>(I)V
     .locals 2
 
     .line 0
-    sget-object v0, LX/4Dw;->A00:Landroid/webkit/CookieManager;
+    iput p1, p0, LX/4Dw;->A01:I
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
+    if-eqz p1, :cond_0
 
     .line 3
     .line 4
-    const-string v1, "SystemCookieManager"
+    const/4 v1, 0x1
 
     .line 5
-    .line 6
-    const-string v0, "cookieManager is null"
+    iput v1, p0, LX/4Dw;->A01:I
 
+    .line 6
     .line 7
+    const/4 v0, 0x0
+
     .line 8
-    invoke-static {v1, v0}, LX/0Jt;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    iput v1, p0, LX/4Dw;->A01:I
 
     .line 9
     .line 10
+    :goto_0
+    invoke-direct {p0}, LX/0NH;-><init>()V
+
     .line 11
-    :cond_0
+    .line 12
+    .line 13
+    iput-boolean v0, p0, LX/4Dw;->A00:Z
+
+    .line 14
+    .line 15
     return-void
+
+    .line 16
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 17
+    iput v0, p0, LX/4Dw;->A01:I
+
+    .line 18
+    .line 19
+    iput v0, p0, LX/4Dw;->A01:I
+
+    .line 20
+    .line 21
+    goto :goto_0
+.end method
+
+.method public constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;IIZ)V
+    .locals 2
+
+    .line 268435456
+    iput p3, p0, LX/4Dw;->A01:I
+
+    .line 268435457
+    .line 268435458
+    const/4 v1, 0x0
+
+    .line 268435459
+    if-eqz p3, :cond_0
+
+    .line 268435460
+    .line 268435461
+    const/4 v0, 0x1
+
+    .line 268435462
+    :goto_0
+    iput v0, p0, LX/4Dw;->A01:I
+
+    .line 268435463
+    .line 268435464
+    invoke-direct {p0}, LX/0NH;-><init>()V
+
+    .line 268435465
+    .line 268435466
+    .line 268435467
+    iput-boolean v1, p0, LX/4Dw;->A00:Z
+
+    .line 268435468
+    .line 268435469
+    return-void
+
+    .line 268435470
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 268435471
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final Aiy()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
     .line 0
-    invoke-static {}, LX/4Dw;->A00()V
+    iget v0, p0, LX/4Dw;->A01:I
 
     .line 1
     .line 2
-    .line 3
-    sget-object v0, LX/4Dw;->A00:Landroid/webkit/CookieManager;
+    packed-switch v0, :pswitch_data_0
 
+    .line 3
     .line 4
     .line 5
-    if-eqz v0, :cond_0
+    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 6
     .line 7
-    invoke-virtual {v0}, Landroid/webkit/CookieManager;->removeAllCookie()V
-
     .line 8
+    move-result v0
+
     .line 9
+    return v0
+
     .line 10
-    :cond_0
-    return-void
-.end method
+    :pswitch_0
+    if-eq p0, p1, :cond_1
 
-.method public final Aiz(LX/4Di;)V
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/4Dw;->A00()V
-
-    .line 1
-    .line 2
-    .line 3
-    sget-object v2, LX/4Dw;->A00:Landroid/webkit/CookieManager;
-
-    .line 4
-    .line 5
-    if-eqz v2, :cond_0
-
-    .line 6
-    .line 7
+    .line 11
+    .line 12
     const/4 v1, 0x0
 
-    .line 8
-    new-instance v0, LX/4qg;
-
-    .line 9
-    .line 10
-    invoke-direct {v0, p1, v1}, LX/4qg;-><init>(Ljava/lang/Object;I)V
-
-    .line 11
-    .line 12
     .line 13
-    invoke-virtual {v2, v0}, Landroid/webkit/CookieManager;->removeAllCookies(Landroid/webkit/ValueCallback;)V
+    goto :goto_0
 
     .line 14
+    :pswitch_1
+    if-eq p0, p1, :cond_1
+
     .line 15
     .line 16
-    :cond_0
-    return-void
-.end method
-
-.method public final AlZ(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/4Dw;->A00()V
-
-    .line 1
-    .line 2
-    .line 3
-    sget-object v0, LX/4Dw;->A00:Landroid/webkit/CookieManager;
-
-    .line 4
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    .line 7
-    invoke-virtual {v0, p1, p2}, Landroid/webkit/CookieManager;->setCookie(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 8
-    .line 9
-    .line 10
-    :cond_0
-    return-void
-.end method
-
-.method public final Ala(LX/4Di;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/4Dw;->A00()V
-
-    .line 1
-    .line 2
-    .line 3
-    sget-object v2, LX/4Dw;->A00:Landroid/webkit/CookieManager;
-
-    .line 4
-    .line 5
-    if-eqz v2, :cond_0
-
-    .line 6
-    .line 7
     const/4 v1, 0x1
 
-    .line 8
-    new-instance v0, LX/4qg;
-
-    .line 9
-    .line 10
-    invoke-direct {v0, p1, v1}, LX/4qg;-><init>(Ljava/lang/Object;I)V
-
-    .line 11
-    .line 12
-    .line 13
-    invoke-virtual {v2, p2, p3, v0}, Landroid/webkit/CookieManager;->setCookie(Ljava/lang/String;Ljava/lang/String;Landroid/webkit/ValueCallback;)V
-
-    .line 14
-    .line 15
-    .line 16
-    :cond_0
-    return-void
-.end method
-
-.method public final AqW()V
-    .locals 1
-
-    .line 0
-    invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/4Dw;->A00:Landroid/webkit/CookieManager;
-
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public final flush()V
-    .locals 4
-
-    .line 0
-    :try_start_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 1
-    .line 2
-    const/16 v0, 0x15
-
-    .line 3
-    .line 4
-    if-ge v1, v0, :cond_1
-
-    .line 5
-    .line 6
-    invoke-static {}, LX/4Dw;->A00()V
-
-    .line 7
-    .line 8
-    .line 9
-    sget-object v0, LX/4Dw;->A00:Landroid/webkit/CookieManager;
-
-    .line 10
-    .line 11
-    const/4 v3, 0x0
-
-    .line 12
-    if-eqz v0, :cond_0
-
-    .line 13
-    .line 14
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 15
-    .line 16
     .line 17
-    move-result-object v1
+    :goto_0
+    instance-of v0, p1, LX/4Dw;
 
     .line 18
-    if-eqz v1, :cond_0
-
     .line 19
+    if-eqz v0, :cond_0
+
     .line 20
-    const-string v0, "flushCookieStore"
-
     .line 21
-    .line 22
-    invoke-static {v1, v0}, LX/0Yj;->A0W(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
+    check-cast p1, LX/4Dw;
 
+    .line 22
     .line 23
+    iget v0, p1, LX/4Dw;->A01:I
+
     .line 24
     .line 25
-    move-result-object v2
+    if-ne v0, v1, :cond_0
 
     .line 26
-    if-eqz v2, :cond_0
-
     .line 27
-    .line 28
-    const/4 v0, 0x1
+    iget-boolean v1, p0, LX/4Dw;->A00:Z
 
+    .line 28
     .line 29
-    invoke-virtual {v2, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    iget-boolean v0, p1, LX/4Dw;->A00:Z
 
     .line 30
     .line 31
-    .line 32
-    sget-object v1, LX/4Dw;->A00:Landroid/webkit/CookieManager;
+    if-eq v1, v0, :cond_1
 
+    .line 32
     .line 33
+    :cond_0
+    const/4 v0, 0x0
+
     .line 34
-    new-array v0, v3, [Ljava/lang/Object;
+    return v0
 
     .line 35
+    :cond_1
+    const/4 v0, 0x1
+
     .line 36
-    invoke-virtual {v2, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
 
     .line 37
-    .line 38
-    .line 39
-    :cond_0
-    invoke-static {}, Landroid/webkit/CookieSyncManager;->getInstance()Landroid/webkit/CookieSyncManager;
+    nop
 
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
 
-    .line 43
-    invoke-virtual {v0}, Landroid/webkit/CookieSyncManager;->sync()V
+.method public final hashCode()I
+    .locals 1
 
-    .line 44
-    .line 45
-    .line 46
-    return-void
+    .line 0
+    iget v0, p0, LX/4Dw;->A01:I
 
-    .line 47
-    :cond_1
-    invoke-static {}, LX/4Dw;->A00()V
+    .line 1
+    .line 2
+    packed-switch v0, :pswitch_data_0
 
-    .line 48
-    .line 49
-    .line 50
-    sget-object v0, LX/4Dw;->A00:Landroid/webkit/CookieManager;
+    .line 3
+    .line 4
+    .line 5
+    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
 
-    .line 51
-    .line 52
-    if-eqz v0, :cond_2
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
 
-    .line 53
-    .line 54
-    invoke-virtual {v0}, Landroid/webkit/CookieManager;->flush()V
+    .line 9
+    return v0
 
-    .line 55
-    .line 56
-    .line 57
-    return-void
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .line 10
+    :pswitch_0
+    iget-boolean v0, p0, LX/4Dw;->A00:Z
 
-    .line 58
-    :catch_0
-    move-exception v2
+    .line 11
+    .line 12
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
-    .line 59
-    const-string v1, "SystemCookieManager"
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
 
-    .line 60
-    .line 61
-    const-string v0, "error flushing cookies"
+    .line 16
+    return v0
 
-    .line 62
-    .line 63
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 17
+    nop
 
-    .line 64
-    .line 65
-    .line 66
-    :cond_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

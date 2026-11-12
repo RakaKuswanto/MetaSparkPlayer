@@ -1,180 +1,209 @@
 .class public final LX/53S;
-.super LX/53V;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MockStaticMpkFbLocationManager$1"
 
 
 # instance fields
-.field public A00:LX/53Z;
-
-.field public A01:LX/53i;
+.field public final synthetic A00:LX/53R;
 
 
 # direct methods
-.method public constructor <init>(LX/53P;)V
-    .locals 3
+.method public constructor <init>(LX/53R;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/53V;-><init>(LX/53P;)V
+    iput-object p1, p0, LX/53S;->A00:LX/53R;
 
     .line 1
     .line 2
-    .line 3
-    new-instance v2, LX/53Z;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    invoke-direct {v2, p0}, LX/53Z;-><init>(LX/53V;)V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v2, p0, LX/53S;->A00:LX/53Z;
-
-    .line 9
-    .line 10
-    const/4 v0, 0x0
-
-    .line 11
-    iput-object v0, p0, LX/53S;->A01:LX/53i;
-
-    .line 12
-    .line 13
-    iget-object v1, p0, LX/53V;->A05:LX/53Z;
-
-    .line 14
-    .line 15
-    sget-object v0, LX/014;->A0h:Ljava/lang/Integer;
-
-    .line 16
-    .line 17
-    iput-object v0, v1, LX/53Z;->A06:Ljava/lang/Integer;
-
-    .line 18
-    .line 19
-    iget-object v1, p0, LX/53V;->A04:LX/53Z;
-
-    .line 20
-    .line 21
-    sget-object v0, LX/014;->A0s:Ljava/lang/Integer;
-
-    .line 22
-    .line 23
-    iput-object v0, v1, LX/53Z;->A06:Ljava/lang/Integer;
-
-    .line 24
-    .line 25
-    sget-object v0, LX/014;->A12:Ljava/lang/Integer;
-
-    .line 26
-    .line 27
-    iput-object v0, v2, LX/53Z;->A06:Ljava/lang/Integer;
-
-    .line 28
-    .line 29
-    const/4 v0, 0x1
-
-    .line 30
-    iput v0, p0, LX/53V;->A01:I
-
-    .line 31
-    .line 32
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0G()V
-    .locals 2
+.method public final run()V
+    .locals 7
 
     .line 0
-    const/4 v1, 0x0
+    iget-object v5, p0, LX/53S;->A00:LX/53R;
 
     .line 1
-    iput-boolean v1, p0, LX/53V;->A09:Z
-
     .line 2
+    iget-object v0, v5, LX/53R;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
+
     .line 3
-    iget-object v0, p0, LX/53V;->A05:LX/53Z;
-
     .line 4
-    .line 5
-    invoke-virtual {v0}, LX/53Z;->A01()V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
+    .line 5
     .line 6
     .line 7
+    move-result v0
+
     .line 8
-    iput-boolean v1, v0, LX/53Z;->A0B:Z
+    if-eqz v0, :cond_0
 
     .line 9
     .line 10
-    iget-object v0, p0, LX/53V;->A04:LX/53Z;
+    const/4 v4, 0x0
 
     .line 11
-    .line 12
-    invoke-virtual {v0}, LX/53Z;->A01()V
+    const-wide v2, 0x4042be146a1a500dL    # 37.484998
 
+    .line 12
     .line 13
     .line 14
     .line 15
-    iput-boolean v1, v0, LX/53Z;->A0B:Z
-
     .line 16
-    .line 17
-    iget-object v0, p0, LX/53S;->A00:LX/53Z;
+    const-wide v0, -0x3fa17683be6601bdL    # -122.148209
 
+    .line 17
     .line 18
     .line 19
-    invoke-virtual {v0}, LX/53Z;->A01()V
-
     .line 20
     .line 21
+    new-instance v6, Landroid/location/Location;
+
     .line 22
-    iput-boolean v1, v0, LX/53Z;->A0B:Z
-
     .line 23
-    .line 24
-    iget-object v0, p0, LX/53V;->A06:LX/53i;
+    invoke-direct {v6, v4}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
 
+    .line 24
     .line 25
     .line 26
-    iput-boolean v1, v0, LX/53Z;->A0B:Z
+    invoke-virtual {v6, v2, v3}, Landroid/location/Location;->setLatitude(D)V
 
     .line 27
     .line 28
+    .line 29
+    invoke-virtual {v6, v0, v1}, Landroid/location/Location;->setLongitude(D)V
+
+    .line 30
+    .line 31
+    .line 32
+    const-string v0, "MockStaticMpkFbLocationManager"
+
+    .line 33
+    .line 34
+    invoke-virtual {v6, v0}, Landroid/location/Location;->setProvider(Ljava/lang/String;)V
+
+    .line 35
+    .line 36
+    .line 37
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 38
+    .line 39
+    invoke-virtual {v6, v0}, Landroid/location/Location;->setAccuracy(F)V
+
+    .line 40
+    .line 41
+    .line 42
+    iget-object v0, v5, LX/53R;->A01:LX/0I2;
+
+    .line 43
+    .line 44
+    invoke-interface {v0}, LX/0I2;->now()J
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-wide v3
+
+    .line 48
+    const-wide/16 v1, 0x0
+
+    .line 49
+    .line 50
+    cmp-long v0, v3, v1
+
+    .line 51
+    .line 52
+    invoke-static {v0}, LX/001;->A1K(I)Z
+
+    .line 53
+    .line 54
+    .line 55
+    move-result v0
+
+    .line 56
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
+
+    .line 57
+    .line 58
+    .line 59
+    invoke-virtual {v6, v3, v4}, Landroid/location/Location;->setTime(J)V
+
+    .line 60
+    .line 61
+    .line 62
+    new-instance v0, LX/5ER;
+
+    .line 63
+    .line 64
+    invoke-direct {v0, v6}, LX/5ER;-><init>(Landroid/location/Location;)V
+
+    .line 65
+    .line 66
+    .line 67
+    invoke-virtual {v5, v0}, LX/53M;->A0B(LX/5ER;)Z
+
+    .line 68
+    .line 69
+    .line 70
+    iget-wide v3, v5, LX/53R;->A00:J
+
+    .line 71
+    .line 72
+    cmp-long v0, v3, v1
+
+    .line 73
+    .line 74
+    if-ltz v0, :cond_0
+
+    .line 75
+    .line 76
+    iget-object v2, v5, LX/53R;->A02:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 77
+    .line 78
+    new-instance v1, LX/53S;
+
+    .line 79
+    .line 80
+    invoke-direct {v1, v5}, LX/53S;-><init>(LX/53R;)V
+
+    .line 81
+    .line 82
+    .line 83
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 84
+    .line 85
+    invoke-interface {v2, v1, v3, v4, v0}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v0
+
+    .line 89
+    iput-object v0, v5, LX/53R;->A03:Ljava/util/concurrent/ScheduledFuture;
+
+    .line 90
+    .line 91
+    :cond_0
     return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    const-string v2, "VerticalRun "
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/53V;->A03:LX/53P;
-
-    .line 3
-    .line 4
-    iget-object v1, v0, LX/53P;->A0n:Ljava/lang/String;
-
-    .line 5
-    .line 6
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    return-object v0
 .end method

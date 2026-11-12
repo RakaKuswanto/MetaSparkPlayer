@@ -1,10 +1,10 @@
-.class public final LX/3Fp;
-.super Landroid/text/style/URLSpan;
+.class public final LX/3FP;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:LX/3Jg;
+.field public final A00:LX/0lu;
 
 
 # direct methods
@@ -12,37 +12,26 @@
     .locals 1
 
     .line 0
-    const-string v0, "about:blank"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, Landroid/text/style/URLSpan;-><init>(Ljava/lang/String;)V
-
     .line 3
+    sget v0, LX/2I6;->AVT:I
+
     .line 4
     .line 5
-    return-void
-.end method
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3Fp;->A00:LX/3Jg;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-virtual {v0}, LX/3Jg;->A00()V
-
-    .line 5
     .line 6
     .line 7
-    :cond_0
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/3FP;->A00:LX/0lu;
+
+    .line 10
+    .line 11
     return-void
 .end method

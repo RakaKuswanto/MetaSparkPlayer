@@ -185,13 +185,5 @@
     return v2
 .end method
 
-.method public hashCode()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public abstract toString()Ljava/lang/String;
 .end method

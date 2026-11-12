@@ -1,0 +1,31 @@
+.class public final LX/6Yr;
+.super LX/6X5;
+.source ""
+
+
+# instance fields
+.field public final synthetic A00:J
+
+.field public final synthetic A01:LX/5WL;
+
+
+# direct methods
+.method public constructor <init>(LX/5WL;J)V
+    .locals 0
+
+    .line 0
+    iput-wide p2, p0, LX/6Yr;->A00:J
+
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/6Yr;->A01:LX/5WL;
+
+    .line 3
+    .line 4
+    invoke-direct {p0}, LX/6X5;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method

@@ -2,12 +2,13 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3Jm;
+
+# instance fields
+.field public final A00:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
     .line 0
@@ -16,26 +17,9 @@
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/3Jl;->A00:Ljava/util/List;
+
+    .line 4
+    .line 5
     return-void
-.end method
-
-
-# virtual methods
-.method public final AGG()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final ALd()Ljava/util/List;
-    .locals 1
-
-    .line 0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    .line 1
-    .line 2
-    return-object v0
 .end method

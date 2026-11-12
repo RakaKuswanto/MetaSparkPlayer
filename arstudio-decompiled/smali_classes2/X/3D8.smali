@@ -4,12 +4,16 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:I
+
+.field public final A01:LX/3CR;
+
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(LX/3CR;Ljava/lang/String;I)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -17,15 +21,15 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    iput p3, p0, LX/3D8;->A00:I
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    iput-object p1, p0, LX/3D8;->A01:LX/3CR;
 
+    .line 6
     .line 7
-    iput-object v0, p0, LX/3D8;->A00:LX/1zG;
+    iput-object p2, p0, LX/3D8;->A02:Ljava/lang/String;
 
     .line 8
     .line 9

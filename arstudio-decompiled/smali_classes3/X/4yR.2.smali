@@ -1,4 +1,4 @@
-.class public final LX/4yR;
+.class public final LX/4yr;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,15 +7,27 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AnimationCoordinator$clearUnusedFrameLoaders$1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "zzbt"
+
+
+# instance fields
+.field public final synthetic A00:LX/4yi;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/4yi;)V
     .locals 0
 
+    .line 0
+    iput-object p1, p0, LX/4yr;->A00:LX/4yi;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
@@ -25,289 +37,529 @@
     .locals 9
 
     .line 0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     .line 1
     .line 2
     .line 3
-    move-result-wide v0
+    move-result-object v1
 
     .line 4
-    const-wide/16 v2, 0x2710
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     .line 5
     .line 6
-    sub-long/2addr v0, v2
-
     .line 7
-    new-instance v6, Ljava/util/Date;
+    move-result-object v0
 
     .line 8
-    .line 9
-    invoke-direct {v6, v0, v1}, Ljava/util/Date;-><init>(J)V
+    iget-object v5, p0, LX/4yr;->A00:LX/4yi;
 
+    .line 9
     .line 10
+    if-ne v1, v0, :cond_1
+
     .line 11
     .line 12
-    sget-object v7, LX/6Hj;->A02:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v0, v5, LX/4yi;->A00:LX/4yT;
 
     .line 13
     .line 14
-    monitor-enter v7
+    iget-object v0, v0, LX/4yT;->A03:LX/4rj;
 
     .line 15
-    :try_start_0
-    invoke-static {}, LX/0Yj;->A0b()Ljava/util/LinkedHashMap;
-
     .line 16
+    invoke-static {v0}, LX/4va;->A03(Ljava/lang/Object;)V
+
     .line 17
     .line 18
-    move-result-object v5
-
     .line 19
-    invoke-static {v7}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    iget-object v0, v0, LX/4rj;->A02:LX/4rg;
 
     .line 20
     .line 21
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/AbstractExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+
     .line 22
-    move-result-object v4
-
     .line 23
-    :cond_0
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
     .line 24
-    .line 25
-    .line 26
-    move-result v0
+    :cond_0
+    return-void
 
+    .line 25
+    :cond_1
+    iget-wide v3, v5, LX/4yi;->A02:J
+
+    .line 26
     .line 27
-    if-eqz v0, :cond_1
+    const-wide/16 v0, 0x0
 
     .line 28
     .line 29
-    invoke-static {v4}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    cmp-long v2, v3, v0
 
     .line 30
     .line 31
+    invoke-static {v2}, LX/001;->A1K(I)Z
+
     .line 32
-    move-result-object v1
-
     .line 33
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
     .line 34
-    .line 35
-    .line 36
-    move-result-object v0
+    move-result v2
 
+    .line 35
+    iput-wide v0, v5, LX/4yi;->A02:J
+
+    .line 36
     .line 37
-    check-cast v0, LX/4yW;
+    if-eqz v2, :cond_0
 
     .line 38
     .line 39
-    iget-object v0, v0, LX/4yW;->A01:Ljava/util/Date;
+    instance-of v2, v5, LX/4yf;
 
     .line 40
     .line 41
-    invoke-virtual {v0, v6}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+    if-eqz v2, :cond_2
 
     .line 42
     .line 43
-    .line 44
-    move-result v0
+    check-cast v5, LX/4yf;
 
+    .line 44
     .line 45
-    if-gez v0, :cond_0
+    iget-object v5, v5, LX/4yf;->A00:LX/4yO;
 
     .line 46
     .line 47
-    invoke-static {v5, v1}, LX/0Yf;->A1G(Ljava/util/AbstractMap;Ljava/util/Map$Entry;)V
+    goto :goto_2
 
     .line 48
+    :cond_2
+    instance-of v2, v5, LX/4yK;
+
     .line 49
     .line 50
-    goto :goto_0
+    if-eqz v2, :cond_4
 
     .line 51
-    :cond_1
-    invoke-static {v5}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
-
     .line 52
+    check-cast v5, LX/4yK;
+
     .line 53
     .line 54
-    move-result-object v8
+    iget-object v8, v5, LX/4yK;->A00:LX/4yO;
 
     .line 55
-    :goto_1
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
-
     .line 56
+    iget-wide v3, v8, LX/4yO;->A00:J
+
     .line 57
     .line 58
-    move-result v0
+    invoke-static {}, LX/4rj;->A00()V
 
     .line 59
-    if-eqz v0, :cond_3
-
     .line 60
     .line 61
-    invoke-static {v8}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-virtual {v8}, LX/4yM;->A0K()V
 
     .line 62
     .line 63
     .line 64
-    move-result-object v6
+    iget-object v2, v8, LX/4yE;->A00:LX/4yT;
 
     .line 65
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
     .line 66
+    iget-object v7, v2, LX/4yT;->A0D:LX/4yg;
+
     .line 67
     .line 68
-    move-result-object v0
+    invoke-static {v7}, LX/4yT;->A01(LX/4yM;)V
 
     .line 69
-    check-cast v0, LX/4yW;
-
     .line 70
     .line 71
-    iget-object v5, v0, LX/4yW;->A00:LX/4yP;
+    invoke-virtual {v7}, LX/4yg;->A0M()J
 
     .line 72
     .line 73
-    iget-object v4, v5, LX/4yP;->A08:Ljava/util/concurrent/ConcurrentHashMap;
-
     .line 74
+    move-result-wide v5
+
     .line 75
-    invoke-virtual {v4}, Ljava/util/AbstractMap;->values()Ljava/util/Collection;
+    cmp-long v2, v5, v0
 
     .line 76
     .line 77
-    .line 78
-    move-result-object v0
+    if-eqz v2, :cond_3
 
+    .line 78
     .line 79
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     .line 80
     .line 81
     .line 82
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    move-result-wide v0
 
     .line 83
+    invoke-static {v0, v1, v5, v6}, LX/434;->A0O(JJ)J
+
     .line 84
     .line 85
-    move-result-object v1
-
     .line 86
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    move-result-wide v0
 
     .line 87
+    :goto_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
     .line 88
     .line 89
-    move-result v0
-
     .line 90
-    if-eqz v0, :cond_2
+    move-result-object v1
 
     .line 91
-    .line 92
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string v0, "Dispatching local hits. Elapsed time since last dispatch (ms)"
 
+    .line 92
     .line 93
+    invoke-virtual {v8, v0, v1}, LX/4yE;->A0G(Ljava/lang/String;Ljava/lang/Object;)V
+
     .line 94
     .line 95
-    move-result-object v0
-
     .line 96
-    check-cast v0, LX/4yY;
+    invoke-static {v8}, LX/4yO;->A09(LX/4yO;)V
 
     .line 97
     .line 98
-    iget-object v0, v0, LX/4yY;->A01:LX/41z;
-
     .line 99
+    goto :goto_1
+
     .line 100
-    invoke-virtual {v0}, LX/41z;->close()V
+    :cond_3
+    const-wide/16 v0, -0x1
 
     .line 101
     .line 102
+    goto :goto_0
+
     .line 103
-    goto :goto_2
+    :goto_1
+    :try_start_0
+    invoke-static {v8}, LX/4yO;->A0A(LX/4yO;)V
 
     .line 104
-    :cond_2
-    invoke-virtual {v4}, Ljava/util/AbstractMap;->clear()V
-
     .line 105
     .line 106
+    invoke-static {v7}, LX/4yT;->A01(LX/4yM;)V
+
     .line 107
-    const/4 v0, -0x1
-
     .line 108
-    iput v0, v5, LX/4yP;->A00:I
-
     .line 109
-    .line 110
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-virtual {v7}, LX/4yg;->A0N()V
 
+    .line 110
     .line 111
     .line 112
+    invoke-virtual {v8}, LX/4yO;->A0M()V
+
     .line 113
-    move-result-object v0
-
     .line 114
-    invoke-virtual {v7, v0}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 115
+    invoke-virtual {v8}, LX/4yO;->A0M()V
+
     .line 116
     .line 117
-    goto :goto_1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 118
-    :cond_3
-    monitor-exit v7
+    iget-wide v1, v8, LX/4yO;->A00:J
 
     .line 119
-    sget-object v0, LX/4yS;->A06:LX/0tD;
-
     .line 120
-    .line 121
-    invoke-interface {v0}, LX/0tD;->getValue()Ljava/lang/Object;
+    cmp-long v0, v1, v3
 
+    .line 121
     .line 122
+    if-eqz v0, :cond_0
+
     .line 123
     .line 124
-    move-result-object v1
+    invoke-static {v8}, LX/4yE;->A06(LX/4yO;)V
 
     .line 125
-    check-cast v1, Landroid/os/Handler;
-
     .line 126
     .line 127
-    sget-object v0, LX/4yS;->A01:Ljava/lang/Runnable;
+    goto :goto_4
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 128
-    .line 129
-    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    :cond_4
+    check-cast v5, LX/4yw;
 
+    .line 129
     .line 130
+    iget-object v1, v5, LX/4yw;->A00:LX/4yX;
+
     .line 131
     .line 132
-    return-void
+    invoke-static {}, LX/4rj;->A00()V
 
     .line 133
-    :catchall_0
-    move-exception v0
-
     .line 134
-    monitor-exit v7
-
     .line 135
-    throw v0
+    invoke-static {}, LX/4rj;->A00()V
+
+    .line 136
+    .line 137
+    .line 138
+    invoke-virtual {v1}, LX/4yM;->A0K()V
+
+    .line 139
+    .line 140
+    .line 141
+    iget-object v0, v1, LX/4yX;->A00:Lcom/google/android/gms/internal/gtm/zzce;
+
+    .line 142
+    .line 143
+    if-eqz v0, :cond_0
+
+    .line 144
+    .line 145
+    const-string v0, "Inactivity, disconnecting from device AnalyticsService"
+
+    .line 146
+    .line 147
+    invoke-virtual {v1, v0}, LX/4yE;->A0C(Ljava/lang/String;)V
+
+    .line 148
+    .line 149
+    .line 150
+    invoke-virtual {v1}, LX/4yX;->A0L()V
+
+    .line 151
+    .line 152
+    .line 153
+    return-void
+
+    .line 154
+    :goto_2
+    :try_start_1
+    iget-object v7, v5, LX/4yO;->A04:LX/4yS;
+
+    .line 155
+    .line 156
+    invoke-static {}, LX/4rj;->A00()V
+
+    .line 157
+    .line 158
+    .line 159
+    invoke-virtual {v7}, LX/4yM;->A0K()V
+
+    .line 160
+    .line 161
+    .line 162
+    iget-object v2, v7, LX/4yS;->A00:LX/4yx;
+
+    .line 163
+    .line 164
+    const-wide/32 v0, 0x5265c00
+
+    .line 165
+    .line 166
+    .line 167
+    invoke-virtual {v2, v0, v1}, LX/4yx;->A00(J)Z
+
+    .line 168
+    .line 169
+    .line 170
+    move-result v0
+
+    .line 171
+    const/4 v8, 0x0
+
+    .line 172
+    if-eqz v0, :cond_5
+
+    .line 173
+    .line 174
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    .line 175
+    .line 176
+    .line 177
+    move-result-wide v0
+
+    .line 178
+    iput-wide v0, v2, LX/4yx;->A00:J
+
+    .line 179
+    .line 180
+    const-string v0, "Deleting stale hits (if any)"
+
+    .line 181
+    .line 182
+    invoke-virtual {v7, v0}, LX/4yE;->A0C(Ljava/lang/String;)V
+
+    .line 183
+    .line 184
+    .line 185
+    invoke-virtual {v7}, LX/4yS;->A0L()Landroid/database/sqlite/SQLiteDatabase;
+
+    .line 186
+    .line 187
+    .line 188
+    move-result-object v6
+
+    .line 189
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    .line 190
+    .line 191
+    .line 192
+    move-result-wide v3
+
+    .line 193
+    const-wide v0, 0x9a7ec800L
+
+    .line 194
+    .line 195
+    .line 196
+    .line 197
+    .line 198
+    sub-long/2addr v3, v0
+
+    .line 199
+    const/4 v0, 0x1
+
+    .line 200
+    new-array v2, v0, [Ljava/lang/String;
+
+    .line 201
+    .line 202
+    invoke-static {v3, v4}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    .line 203
+    .line 204
+    .line 205
+    move-result-object v0
+
+    .line 206
+    aput-object v0, v2, v8
+
+    .line 207
+    .line 208
+    const-string v1, "hits2"
+
+    .line 209
+    .line 210
+    const-string v0, "hit_time < ?"
+
+    .line 211
+    .line 212
+    invoke-virtual {v6, v1, v0, v2}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    .line 213
+    .line 214
+    .line 215
+    move-result v0
+
+    .line 216
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 217
+    .line 218
+    .line 219
+    move-result-object v1
+
+    .line 220
+    const-string v0, "Deleted stale hits, count"
+
+    .line 221
+    .line 222
+    invoke-virtual {v7, v0, v1}, LX/4yE;->A0F(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 223
+    .line 224
+    .line 225
+    :cond_5
+    invoke-virtual {v5}, LX/4yO;->A0M()V
+
+    .line 226
+    .line 227
+    .line 228
+    goto :goto_3
+    :try_end_1
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 229
+    :catch_0
+    move-exception v1
+
+    .line 230
+    const-string v0, "Failed to delete stale hits"
+
+    .line 231
+    .line 232
+    invoke-virtual {v5, v0, v1}, LX/4yE;->A0H(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 233
+    .line 234
+    .line 235
+    :goto_3
+    iget-object v2, v5, LX/4yO;->A05:LX/4yi;
+
+    .line 236
+    .line 237
+    const-wide/32 v0, 0x5265c00
+
+    .line 238
+    .line 239
+    .line 240
+    invoke-virtual {v2, v0, v1}, LX/4yi;->A01(J)V
+
+    .line 241
+    .line 242
+    .line 243
+    return-void
+
+    .line 244
+    :goto_4
+    return-void
+
+    .line 245
+    :catch_1
+    move-exception v1
+
+    .line 246
+    const-string v0, "Local dispatch failed"
+
+    .line 247
+    .line 248
+    invoke-virtual {v8, v0, v1}, LX/4yE;->A0I(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 249
+    .line 250
+    .line 251
+    invoke-static {v7}, LX/4yT;->A01(LX/4yM;)V
+
+    .line 252
+    .line 253
+    .line 254
+    invoke-virtual {v7}, LX/4yg;->A0N()V
+
+    .line 255
+    .line 256
+    .line 257
+    invoke-virtual {v8}, LX/4yO;->A0M()V
+
+    .line 258
+    .line 259
+    .line 260
+    invoke-virtual {v8}, LX/4yO;->A0M()V
+
+    .line 261
+    .line 262
+    .line 263
+    return-void
 .end method

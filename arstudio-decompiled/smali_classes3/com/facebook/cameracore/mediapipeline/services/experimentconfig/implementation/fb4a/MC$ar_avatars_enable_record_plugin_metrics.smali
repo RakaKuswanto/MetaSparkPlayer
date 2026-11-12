@@ -6,13 +6,11 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xcd2c
 
-.field public static final __CONFIG__:I = 0x38a
+.field public static final __CONFIG__:I = 0x343
 
-.field public static final gk_avatar_glb_prefetch_perf_log:J = 0x81038a00022794L
+.field public static final gk_avatar_glb_prefetch_perf_log:J = 0x81034300022365L
 
-.field public static final gk_record_plugin_metrics:J = 0x81038a00002792L
-
-.field public static final gk_run_jest_e2e:J = 0x81038a00012793L
+.field public static final gk_record_plugin_metrics:J = 0x81034300002364L
 
 
 # direct methods

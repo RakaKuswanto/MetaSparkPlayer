@@ -39,30 +39,24 @@
     .line 0
     :try_start_0
     invoke-direct {p0}, Lcom/facebook/proxygen/EventBase;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1
     .line 2
     .line 3
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 4
-    .line 5
-    .line 6
-    return-void
-
-    .line 7
     :catchall_0
     move-exception v0
 
-    .line 8
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 9
-    .line 10
-    .line 11
+    .line 5
     throw v0
+
+    .line 6
+    :goto_0
+    return-void
 .end method
 
 .method public native loopForever()V

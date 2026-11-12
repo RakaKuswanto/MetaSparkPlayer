@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract Abj(Landroid/content/Context;Landroid/content/Intent;Ljava/util/Collection;)V
+.method public abstract getKey()Ljava/lang/String;
+.end method
+
+.method public abstract getValue()Ljava/lang/String;
 .end method

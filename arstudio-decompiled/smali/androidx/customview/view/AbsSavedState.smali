@@ -37,11 +37,11 @@
     const/4 v1, 0x0
 
     .line 8
-    new-instance v0, LX/02D;
+    new-instance v0, LX/0Wz;
 
     .line 9
     .line 10
-    invoke-direct {v0, v1}, LX/02D;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Wz;-><init>(I)V
 
     .line 11
     .line 12
@@ -142,7 +142,7 @@
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 16
     .line 17

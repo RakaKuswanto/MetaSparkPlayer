@@ -19,7 +19,7 @@
     .end annotation
 .end field
 
-.field public trackingCodes:LX/26k;
+.field public trackingCodes:LX/2sS;
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
         value = "tracking"
     .end annotation

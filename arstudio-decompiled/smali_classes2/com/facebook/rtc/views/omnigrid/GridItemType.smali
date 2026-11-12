@@ -4,9 +4,11 @@
 
 
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/facebook/rtc/views/omnigrid/GridItemType;
 
-.field public static final Companion:LX/0qn;
+.field public static final Companion:LX/13g;
 
 .field public static final enum OTHER:Lcom/facebook/rtc/views/omnigrid/GridItemType;
 
@@ -126,31 +128,43 @@
 
     .line 35
     .line 36
-    new-instance v0, LX/0qn;
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
     .line 37
     .line 38
-    invoke-direct {v0}, LX/0qn;-><init>()V
-
     .line 39
-    .line 40
-    .line 41
-    sput-object v0, Lcom/facebook/rtc/views/omnigrid/GridItemType;->Companion:LX/0qn;
-
-    .line 42
-    .line 43
-    invoke-static {}, Lcom/facebook/rtc/views/omnigrid/GridItemType;->values()[Lcom/facebook/rtc/views/omnigrid/GridItemType;
-
-    .line 44
-    .line 45
-    .line 46
     move-result-object v0
 
+    .line 40
+    sput-object v0, Lcom/facebook/rtc/views/omnigrid/GridItemType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 41
+    .line 42
+    new-instance v0, LX/13g;
+
+    .line 43
+    .line 44
+    invoke-direct {v0}, LX/13g;-><init>()V
+
+    .line 45
+    .line 46
     .line 47
-    sput-object v0, Lcom/facebook/rtc/views/omnigrid/GridItemType;->VALUES:[Lcom/facebook/rtc/views/omnigrid/GridItemType;
+    sput-object v0, Lcom/facebook/rtc/views/omnigrid/GridItemType;->Companion:LX/13g;
 
     .line 48
     .line 49
+    invoke-static {}, Lcom/facebook/rtc/views/omnigrid/GridItemType;->values()[Lcom/facebook/rtc/views/omnigrid/GridItemType;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v0
+
+    .line 53
+    sput-object v0, Lcom/facebook/rtc/views/omnigrid/GridItemType;->VALUES:[Lcom/facebook/rtc/views/omnigrid/GridItemType;
+
+    .line 54
+    .line 55
     return-void
 .end method
 
@@ -178,6 +192,14 @@
 
     .line 1
     .line 2
+    return-object v0
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/facebook/rtc/views/omnigrid/GridItemType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
     return-object v0
 .end method
 

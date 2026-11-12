@@ -1,66 +1,83 @@
 .class public final LX/2WZ;
-.super LX/2Wb;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A02:LX/28F;
+
+
+# instance fields
+.field public final A00:LX/0RP;
+
+.field public final A01:LX/0RP;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/2Wb;-><init>()V
+    sget-object v1, LX/1GN;->A04:LX/28F;
 
     .line 1
     .line 2
+    const-string/jumbo v0, "fos_headersv2"
+
     .line 3
+    .line 4
+    .line 5
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    sput-object v0, LX/2WZ;->A02:LX/28F;
+
+    .line 10
+    .line 11
     return-void
 .end method
 
-
-# virtual methods
-.method public final A03(II)I
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 4
-    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ThreadLocalRandom;->nextInt(II)I
-
     .line 5
     .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-.end method
-
-.method public final A04()Ljava/util/Random;
-    .locals 1
-
-    .line 0
-    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
-
-    .line 1
-    .line 2
-    .line 3
     move-result-object v0
 
-    .line 4
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 5
-    .line 6
     .line 7
-    check-cast v0, Ljava/util/Random;
+    iput-object v0, p0, LX/2WZ;->A00:LX/0RP;
 
     .line 8
     .line 9
-    return-object v0
+    sget v0, LX/2I6;->ADL:I
+
+    .line 10
+    .line 11
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    iput-object v0, p0, LX/2WZ;->A01:LX/0RP;
+
+    .line 16
+    .line 17
+    return-void
 .end method

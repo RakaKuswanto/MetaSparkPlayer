@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract AJg()Ljava/util/TreeMap;
+.method public abstract AAy()LX/2OK;
+.end method
+
+.method public abstract AHK()J
 .end method

@@ -4,32 +4,30 @@
 
 
 # direct methods
-.method public static A00(Landroid/widget/PopupWindow;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setEnterTransition(Landroid/transition/Transition;)V
-
     .line 2
     .line 3
-    .line 4
     return-void
 .end method
 
-.method public static A01(Landroid/widget/PopupWindow;)V
+.method public static final A00()V
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    new-instance v0, LX/4d2;
 
     .line 1
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setExitTransition(Landroid/transition/Transition;)V
-
     .line 2
+    invoke-direct {v0}, LX/4d2;-><init>()V
+
     .line 3
     .line 4
+    .line 5
     return-void
 .end method

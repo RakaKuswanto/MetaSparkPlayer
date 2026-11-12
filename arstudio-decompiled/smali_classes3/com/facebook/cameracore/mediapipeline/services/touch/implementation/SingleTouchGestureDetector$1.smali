@@ -37,7 +37,7 @@
 
     .line 1
     .line 2
-    invoke-static {}, LX/0Yf;->A0O()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
 
     .line 3
     .line 4
@@ -49,11 +49,11 @@
 
     .line 7
     .line 8
-    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 9
     .line 10
-    invoke-interface {v0}, LX/5ju;->onLongPressBegin()Z
+    invoke-interface {v0}, LX/5pe;->onLongPressBegin()Z
 
     .line 11
     .line 12
@@ -137,7 +137,7 @@
 
     .line 51
     .line 52
-    iget-object v2, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5ju;
+    iget-object v2, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->mListener:LX/5pe;
 
     .line 53
     .line 54
@@ -149,7 +149,7 @@
 
     .line 57
     .line 58
-    invoke-interface {v2, v1, v0}, LX/5ju;->onLongPress(FF)V
+    invoke-interface {v2, v1, v0}, LX/5pe;->onLongPress(FF)V
 
     .line 59
     .line 60

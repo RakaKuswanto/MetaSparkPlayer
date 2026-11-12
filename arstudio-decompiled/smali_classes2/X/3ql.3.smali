@@ -2,443 +2,710 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A00:Ljava/util/Map;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayerLogger$19"
 
-.field public static final A01:Ljava/util/Map;
 
-.field public static final A02:Ljava/util/Map;
+# instance fields
+.field public final synthetic A00:I
 
-.field public static final A03:Ljava/util/Map;
+.field public final synthetic A01:I
 
-.field public static final A04:Ljava/util/Map;
+.field public final synthetic A02:LX/3qM;
 
-.field public static final A05:Ljava/util/Map;
+.field public final synthetic A03:LX/3vE;
 
-.field public static final A06:Ljava/util/Map;
+.field public final synthetic A04:LX/3v7;
 
-.field public static final A07:Ljava/util/Map;
+.field public final synthetic A05:LX/6Vq;
+
+.field public final synthetic A06:LX/6Za;
+
+.field public final synthetic A07:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 10
+.method public constructor <init>(LX/3qM;LX/3vE;LX/3v7;LX/6Vq;LX/6Za;Ljava/lang/String;II)V
+    .locals 0
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iput-object p1, p0, LX/3ql;->A02:LX/3qM;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v2
+    iput p7, p0, LX/3ql;->A01:I
 
+    .line 3
     .line 4
-    sget-object v9, LX/3sL;->A03:[Ljava/lang/String;
+    iput-object p5, p0, LX/3ql;->A06:LX/6Za;
 
     .line 5
     .line 6
-    const/4 v8, 0x0
+    iput-object p4, p0, LX/3ql;->A05:LX/6Vq;
 
     .line 7
-    aget-object v1, v9, v8
-
     .line 8
-    .line 9
-    const-string/jumbo v0, "pt_seg_detect_unet.ptl"
+    iput-object p2, p0, LX/3ql;->A03:LX/3vE;
 
+    .line 9
     .line 10
+    iput p8, p0, LX/3ql;->A00:I
+
     .line 11
     .line 12
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p3, p0, LX/3ql;->A04:LX/3v7;
+
+    .line 13
+    .line 14
+    iput-object p6, p0, LX/3ql;->A07:Ljava/lang/String;
+
+    .line 15
+    .line 16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 60
+
+    .line 0
+    move-object/from16 v4, p0
+
+    .line 1
+    .line 2
+    iget v6, v4, LX/3ql;->A01:I
+
+    .line 3
+    .line 4
+    if-ltz v6, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v9, v4, LX/3ql;->A02:LX/3qM;
+
+    .line 7
+    .line 8
+    iget-boolean v0, v9, LX/3qM;->A0S:Z
+
+    .line 9
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-virtual {v9}, LX/3qM;->A08()V
 
     .line 13
     .line 14
     .line 15
-    const/4 v7, 0x1
+    iget-object v7, v4, LX/3ql;->A06:LX/6Za;
 
     .line 16
-    aget-object v1, v9, v7
-
     .line 17
-    .line 18
-    const-string/jumbo v0, "pt_seg_track_unet.ptl"
+    iget-object v5, v4, LX/3ql;->A05:LX/6Vq;
 
+    .line 18
     .line 19
+    iget-object v10, v4, LX/3ql;->A03:LX/3vE;
+
     .line 20
     .line 21
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, v4, LX/3ql;->A00:I
 
     .line 22
     .line 23
+    int-to-long v0, v0
+
     .line 24
-    const/4 v6, 0x2
+    iget-object v11, v9, LX/3qM;->A0q:LX/3lK;
 
     .line 25
-    aget-object v1, v9, v6
-
     .line 26
+    const/4 v15, 0x0
+
     .line 27
-    const-string/jumbo v0, "pt_multiclass_seg_detect.ptl"
+    iget-object v2, v4, LX/3ql;->A04:LX/3v7;
 
     .line 28
     .line 29
-    .line 30
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, v2, LX/3v7;->A02:Ljava/lang/String;
 
+    .line 30
     .line 31
+    iget-object v2, v4, LX/3ql;->A07:Ljava/lang/String;
+
     .line 32
     .line 33
-    const/4 v5, 0x3
+    const-wide/16 v19, 0x0
 
     .line 34
-    aget-object v1, v9, v5
-
     .line 35
-    .line 36
-    const-string/jumbo v0, "pt_multiclass_seg_track.ptl"
+    new-instance v8, LX/3qO;
 
+    .line 36
     .line 37
+    move-object/from16 v17, v15
+
     .line 38
     .line 39
-    invoke-static {v1, v0, v2}, LX/0Yi;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+    move/from16 v18, v6
 
     .line 40
     .line 41
-    .line 42
-    move-result-object v0
+    move-wide/from16 v21, v0
 
+    .line 42
     .line 43
-    sput-object v0, LX/3ql;->A07:Ljava/util/Map;
+    move-object v12, v5
 
     .line 44
+    move-object v13, v7
+
     .line 45
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    move-object v14, v2
 
     .line 46
+    move-object/from16 v16, v3
+
     .line 47
     .line 48
-    move-result-object v2
+    invoke-direct/range {v8 .. v22}, LX/3qO;-><init>(LX/3qM;LX/3vE;LX/3lK;LX/6Vq;LX/6Za;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJ)V
 
     .line 49
-    sget-object v4, LX/3sL;->A02:[Ljava/lang/String;
-
     .line 50
     .line 51
-    aget-object v1, v4, v8
+    invoke-static {v9, v8}, LX/3qM;->A06(LX/3qM;Ljava/lang/Runnable;)V
 
     .line 52
     .line 53
-    const-string/jumbo v0, "pt_hair_seg_detect.ptl"
-
     .line 54
+    :cond_0
+    iget-object v3, v4, LX/3ql;->A02:LX/3qM;
+
     .line 55
     .line 56
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
     .line 57
+    iput-boolean v0, v3, LX/3qM;->A0S:Z
+
     .line 58
     .line 59
-    aget-object v1, v4, v7
+    const-string v11, "FbHeroPlayerLogger"
 
     .line 60
     .line 61
-    const-string/jumbo v0, "pt_hair_seg_track.ptl"
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
 
     .line 62
     .line 63
     .line 64
-    invoke-static {v1, v0, v2}, LX/0Yi;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+    move-result-object v7
 
     .line 65
+    iget-object v5, v4, LX/3ql;->A04:LX/3v7;
+
     .line 66
     .line 67
-    move-result-object v0
+    iget-object v2, v5, LX/3v7;->A02:Ljava/lang/String;
 
     .line 68
-    sput-object v0, LX/3ql;->A06:Ljava/util/Map;
-
     .line 69
+    aput-object v2, v7, v0
+
     .line 70
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
     .line 71
-    .line 72
-    .line 73
-    move-result-object v2
+    const/4 v1, 0x1
 
+    .line 72
+    iget-object v0, v3, LX/3qM;->A0F:LX/28V;
+
+    .line 73
     .line 74
-    aget-object v0, v9, v8
+    aput-object v0, v7, v1
 
     .line 75
     .line 76
-    const-string/jumbo v3, "seg_init_net.pb"
+    const/4 v0, 0x2
 
     .line 77
+    iget-object v1, v3, LX/3qM;->A0b:Lcom/facebook/video/engine/api/VideoPlayerParams;
+
     .line 78
     .line 79
-    invoke-virtual {v2, v0, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v10, v1, Lcom/facebook/video/engine/api/VideoPlayerParams;->A0j:Ljava/lang/String;
 
     .line 80
     .line 81
+    aput-object v10, v7, v0
+
     .line 82
-    aget-object v0, v9, v7
-
     .line 83
-    .line 84
-    const-string/jumbo v1, "seg_predict_net.pb"
+    const-string v0, "HeroPlayer error[%s] playerType[%s] videoId[%s]"
 
+    .line 84
     .line 85
+    invoke-static {v11, v0, v7}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
     .line 86
     .line 87
-    invoke-static {v0, v1, v2}, LX/0Yi;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
-
     .line 88
+    const-string v0, "HeroPlayer error:"
+
     .line 89
     .line 90
-    move-result-object v0
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 91
-    sput-object v0, LX/3ql;->A05:Ljava/util/Map;
-
     .line 92
     .line 93
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    move-result-object v0
 
     .line 94
+    invoke-static {v2, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 95
     .line 96
-    move-result-object v2
-
     .line 97
-    aget-object v0, v9, v8
+    move-result-object v23
 
     .line 98
-    .line 99
-    invoke-virtual {v2, v0, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v3, LX/3qM;->A0c:LX/3jM;
 
+    .line 99
     .line 100
+    move-object/from16 v59, v0
+
     .line 101
     .line 102
-    aget-object v0, v9, v7
+    iget-object v0, v3, LX/3qM;->A0F:LX/28V;
 
     .line 103
     .line 104
-    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-object/from16 v58, v0
 
     .line 105
     .line 106
+    iget-object v0, v1, Lcom/facebook/video/engine/api/VideoPlayerParams;->A0V:Lcom/facebook/video/engine/api/VideoDataSource;
+
     .line 107
-    aget-object v1, v9, v6
-
     .line 108
-    .line 109
-    const-string/jumbo v0, "multiclass_seg_init_net.pb"
+    iget-object v12, v0, Lcom/facebook/video/engine/api/VideoDataSource;->A03:Landroid/net/Uri;
 
+    .line 109
     .line 110
+    iget-object v0, v3, LX/3qM;->A0G:LX/3m5;
+
     .line 111
     .line 112
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, LX/3m5;->value:Ljava/lang/String;
 
     .line 113
     .line 114
+    move-object/from16 v25, v0
+
     .line 115
-    aget-object v1, v9, v5
-
     .line 116
-    .line 117
-    const-string/jumbo v0, "multiclass_seg_predict_net.pb"
+    iget-object v0, v3, LX/3qM;->A0H:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
 
+    .line 117
     .line 118
+    move-object/from16 v57, v0
+
     .line 119
     .line 120
-    invoke-static {v1, v0, v2}, LX/0Yi;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+    iget-object v0, v5, LX/3v7;->A01:LX/6VM;
 
     .line 121
     .line 122
-    .line 123
-    move-result-object v0
+    move-object/from16 v56, v0
 
+    .line 123
     .line 124
-    sput-object v0, LX/3ql;->A04:Ljava/util/Map;
+    iget-object v0, v5, LX/3v7;->A00:LX/3tH;
 
     .line 125
     .line 126
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    move-object/from16 v55, v0
 
     .line 127
     .line 128
-    .line 129
-    move-result-object v2
+    iget-object v0, v5, LX/3v7;->A03:Ljava/lang/String;
 
+    .line 129
     .line 130
-    aget-object v1, v4, v8
+    move-object/from16 v26, v0
 
     .line 131
     .line 132
-    const-string/jumbo v0, "hair_seg_init_net.pb"
+    sget-object v0, LX/3yA;->EXOPLAYER2:LX/3yA;
 
     .line 133
     .line 134
-    .line 135
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, LX/3yA;->value:Ljava/lang/String;
 
+    .line 135
     .line 136
+    move-object/from16 v27, v0
+
     .line 137
     .line 138
-    aget-object v1, v4, v7
+    iget-object v0, v3, LX/3qM;->A0q:LX/3lK;
 
     .line 139
     .line 140
-    const-string/jumbo v0, "hair_seg_predict_net.pb"
+    iget-object v0, v0, LX/3lK;->value:Ljava/lang/String;
 
     .line 141
     .line 142
-    .line 143
-    invoke-static {v1, v0, v2}, LX/0Yi;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+    move-object/from16 v24, v0
 
+    .line 143
     .line 144
+    iget-object v0, v4, LX/3ql;->A06:LX/6Za;
+
     .line 145
     .line 146
-    move-result-object v0
+    if-eqz v0, :cond_4
 
     .line 147
-    sput-object v0, LX/3ql;->A03:Ljava/util/Map;
-
     .line 148
-    .line 149
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iget v9, v0, LX/6Za;->A05:I
 
+    .line 149
     .line 150
+    iget v8, v0, LX/6Za;->A04:I
+
     .line 151
     .line 152
-    move-result-object v5
+    :goto_0
+    iget-object v0, v3, LX/3qM;->A0K:LX/3kD;
 
     .line 153
-    sget-object v4, LX/3sL;->A00:[Ljava/lang/String;
-
     .line 154
-    .line 155
-    array-length v3, v4
+    move-object/from16 v18, v0
 
+    .line 155
     .line 156
-    const/4 v2, 0x0
+    iget-object v0, v3, LX/3qM;->A0J:LX/3kD;
 
     .line 157
-    :goto_0
-    if-ge v2, v3, :cond_0
-
     .line 158
+    move-object/from16 v19, v0
+
     .line 159
-    aget-object v1, v4, v2
-
     .line 160
-    .line 161
-    const-string/jumbo v0, "v14/"
+    const/16 v22, 0x0
 
+    .line 161
     .line 162
+    iget-object v0, v4, LX/3ql;->A05:LX/6Vq;
+
     .line 163
     .line 164
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v0, v0, LX/6Vq;->A0B:Z
 
     .line 165
     .line 166
-    .line 167
-    move-result-object v0
+    move/from16 v17, v0
 
+    .line 167
     .line 168
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    iget-boolean v15, v3, LX/3qM;->A0R:Z
 
     .line 169
     .line 170
+    invoke-static {v3}, LX/3qM;->A03(LX/3qM;)Ljava/lang/String;
+
     .line 171
-    move-result-object v0
-
     .line 172
-    invoke-virtual {v5, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 173
+    move-result-object v29
+
     .line 174
+    iget-object v14, v4, LX/3ql;->A07:Ljava/lang/String;
+
     .line 175
-    add-int/lit8 v2, v2, 0x1
-
     .line 176
-    .line 177
-    goto :goto_0
+    iget-object v13, v3, LX/3qM;->A0N:Ljava/lang/String;
 
+    .line 177
     .line 178
-    :cond_0
-    invoke-static {v5}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    iget-object v0, v3, LX/3qM;->A0K:LX/3kD;
 
     .line 179
     .line 180
-    .line 181
-    move-result-object v0
+    if-eqz v0, :cond_3
 
+    .line 181
     .line 182
-    sput-object v0, LX/3ql;->A02:Ljava/util/Map;
+    iget-object v4, v0, LX/3kD;->codecs:Ljava/lang/String;
 
     .line 183
     .line 184
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    :goto_1
+    iget-object v0, v3, LX/3qM;->A0J:LX/3kD;
 
     .line 185
     .line 186
-    .line 187
-    move-result-object v2
+    if-eqz v0, :cond_2
 
+    .line 187
     .line 188
-    sget-object v3, LX/3sL;->A01:[Ljava/lang/String;
+    iget-object v0, v0, LX/3kD;->codecs:Ljava/lang/String;
 
     .line 189
     .line 190
-    aget-object v1, v3, v8
+    :goto_2
+    const-wide/16 v38, 0x0
 
     .line 191
     .line 192
-    const-string v0, "expression_fitting_model.bin"
+    const-wide/16 v40, -0x1
 
     .line 193
     .line 194
-    invoke-static {v1, v0, v2}, LX/0Yi;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+    const/16 v44, 0x0
 
     .line 195
     .line 196
-    .line 197
-    move-result-object v0
+    sget-object v7, Lcom/facebook/video/engine/api/VideoDataSource;->A09:Landroid/graphics/RectF;
 
+    .line 197
     .line 198
-    sput-object v0, LX/3ql;->A01:Ljava/util/Map;
+    new-instance v5, Landroid/graphics/RectF;
 
     .line 199
     .line 200
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-direct {v5, v7}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
 
     .line 201
     .line 202
     .line 203
-    move-result-object v2
+    sget-object v51, LX/3vg;->NONE:LX/3vg;
 
     .line 204
-    aget-object v1, v3, v8
-
     .line 205
+    new-instance v16, Lcom/facebook/video/engine/api/VideoDataSource;
+
     .line 206
-    const-string v0, "deep_expression_tracker_v0_model_pytorch_edge.pt"
-
     .line 207
-    .line 208
-    invoke-static {v1, v0, v2}, LX/0Yi;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/util/Map;
+    move-object/from16 v45, v16
 
+    .line 208
     .line 209
+    move-object/from16 v46, v5
+
     .line 210
     .line 211
-    move-result-object v0
+    move-object/from16 v47, v22
 
     .line 212
-    sput-object v0, LX/3ql;->A00:Ljava/util/Map;
-
     .line 213
+    move-object/from16 v48, v22
+
     .line 214
+    .line 215
+    move-object/from16 v49, v12
+
+    .line 216
+    .line 217
+    move-object/from16 v50, v22
+
+    .line 218
+    .line 219
+    move-object/from16 v52, v22
+
+    .line 220
+    .line 221
+    move-object/from16 v53, v22
+
+    .line 222
+    .line 223
+    move-object/from16 v54, v22
+
+    .line 224
+    .line 225
+    invoke-direct/range {v45 .. v54}, Lcom/facebook/video/engine/api/VideoDataSource;-><init>(Landroid/graphics/RectF;Landroid/net/Uri;Landroid/net/Uri;Landroid/net/Uri;LX/3tx;LX/3vg;Lcom/facebook/video/heroplayer/ipc/VideoProtocolProps;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 226
+    .line 227
+    .line 228
+    invoke-static/range {v56 .. v56}, Lcom/google/common/base/Optional;->fromNullable(Ljava/lang/Object;)Lcom/google/common/base/Optional;
+
+    .line 229
+    .line 230
+    .line 231
+    move-result-object v20
+
+    .line 232
+    invoke-static/range {v55 .. v55}, Lcom/google/common/base/Optional;->fromNullable(Ljava/lang/Object;)Lcom/google/common/base/Optional;
+
+    .line 233
+    .line 234
+    .line 235
+    move-result-object v21
+
+    .line 236
+    move-object/from16 v28, v24
+
+    .line 237
+    .line 238
+    move-object/from16 v30, v14
+
+    .line 239
+    .line 240
+    move-object/from16 v31, v13
+
+    .line 241
+    .line 242
+    move-object/from16 v32, v22
+
+    .line 243
+    .line 244
+    move-object/from16 v33, v4
+
+    .line 245
+    .line 246
+    move-object/from16 v34, v0
+
+    .line 247
+    .line 248
+    move/from16 v35, v9
+
+    .line 249
+    .line 250
+    move/from16 v36, v8
+
+    .line 251
+    .line 252
+    move/from16 v37, v6
+
+    .line 253
+    .line 254
+    move/from16 v42, v17
+
+    .line 255
+    .line 256
+    move/from16 v43, v15
+
+    .line 257
+    .line 258
+    move/from16 v45, v44
+
+    .line 259
+    .line 260
+    move-object/from16 v13, v59
+
+    .line 261
+    .line 262
+    move-object/from16 v14, v58
+
+    .line 263
+    .line 264
+    move-object/from16 v15, v57
+
+    .line 265
+    .line 266
+    move-object/from16 v17, v1
+
+    .line 267
+    .line 268
+    move-object/from16 v24, v10
+
+    .line 269
+    .line 270
+    invoke-virtual/range {v13 .. v45}, LX/3jM;->A0c(LX/28V;Lcom/facebook/video/common/playerorigin/PlayerOrigin;Lcom/facebook/video/engine/api/VideoDataSource;Lcom/facebook/video/engine/api/VideoPlayerParams;LX/3kD;LX/3kD;Lcom/google/common/base/Optional;Lcom/google/common/base/Optional;Ljava/lang/Exception;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIJJZZZZ)V
+
+    .line 271
+    .line 272
+    .line 273
+    iget-object v0, v3, LX/3qM;->A0f:LX/3nJ;
+
+    .line 274
+    .line 275
+    move-object v12, v0
+
+    .line 276
+    move-object/from16 v13, v55
+
+    .line 277
+    .line 278
+    move-object/from16 v14, v56
+
+    .line 279
+    .line 280
+    move-object v15, v11
+
+    .line 281
+    move-object/from16 v16, v10
+
+    .line 282
+    .line 283
+    move-object/from16 v17, v23
+
+    .line 284
+    .line 285
+    invoke-virtual/range {v12 .. v17}, LX/3nJ;->A05(LX/3tH;LX/6VM;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 286
+    .line 287
+    .line 288
+    iget-object v4, v3, LX/3qM;->A0e:LX/3jP;
+
+    .line 289
+    .line 290
+    if-eqz v4, :cond_1
+
+    .line 291
+    .line 292
+    iget-object v1, v3, LX/3qM;->A0H:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+
+    .line 293
+    .line 294
+    iget-object v0, v3, LX/3qM;->A0F:LX/28V;
+
+    .line 295
+    .line 296
+    invoke-virtual {v4, v0, v1, v2, v6}, LX/3jP;->A02(LX/28V;Lcom/facebook/video/common/playerorigin/PlayerOrigin;Ljava/lang/String;I)V
+
+    .line 297
+    .line 298
+    .line 299
+    :cond_1
     return-void
+
+    .line 300
+    :cond_2
+    const/4 v0, 0x0
+
+    .line 301
+    goto :goto_2
+
+    .line 302
+    :cond_3
+    const/4 v4, 0x0
+
+    .line 303
+    goto :goto_1
+
+    .line 304
+    :cond_4
+    const/4 v9, 0x0
+
+    .line 305
+    const/4 v8, 0x0
+
+    .line 306
+    goto/16 :goto_0
 .end method

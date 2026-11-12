@@ -23,6 +23,18 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableList;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "offset",
+            "length"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
@@ -135,6 +147,14 @@
 
 .method public final get(I)Ljava/lang/Object;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
     iget v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->A00:I
@@ -172,7 +192,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->iterator()LX/1bX;
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->iterator()LX/1tw;
 
     .line 1
     .line 2
@@ -187,7 +207,7 @@
     .locals 1
 
     .line 268435456
-    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->listIterator()LX/1dA;
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->listIterator()LX/210;
 
     .line 268435457
     .line 268435458
@@ -200,9 +220,17 @@
 
 .method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
-    invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableList;->listIterator(I)LX/1dA;
+    invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableList;->listIterator(I)LX/210;
 
     .line 1
     .line 2
@@ -226,6 +254,16 @@
 
 .method public final subList(II)Lcom/google/common/collect/ImmutableList;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "fromIndex",
+            "toIndex"
+        }
+    .end annotation
 
     .line 0
     iget v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->A00:I
@@ -259,5 +297,20 @@
     move-result-object v0
 
     .line 15
+    return-object v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     return-object v0
 .end method

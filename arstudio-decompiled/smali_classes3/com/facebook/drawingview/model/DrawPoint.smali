@@ -32,7 +32,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/4BF;->A0Q()Landroid/graphics/Path;
+    invoke-static {}, LX/435;->A03()Landroid/graphics/Path;
 
     .line 1
     .line 2
@@ -44,15 +44,15 @@
 
     .line 5
     .line 6
-    const/16 v1, 0x34
+    const/16 v1, 0x2a
 
     .line 7
     .line 8
-    new-instance v0, LX/1QO;
+    new-instance v0, LX/1b7;
 
     .line 9
     .line 10
-    invoke-direct {v0, v1}, LX/1QO;-><init>(I)V
+    invoke-direct {v0, v1}, LX/1b7;-><init>(I)V
 
     .line 11
     .line 12
@@ -274,7 +274,7 @@
 
     .line 47
     .line 48
-    invoke-static {p2, v0}, LX/4BD;->A10(Landroid/graphics/Paint;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p2, v0}, LX/433;->A12(Landroid/graphics/Paint;Landroid/graphics/PorterDuff$Mode;)V
 
     .line 49
     .line 50
@@ -351,7 +351,7 @@
 
     .line 88
     .line 89
-    invoke-static {p2, v0}, LX/4BD;->A10(Landroid/graphics/Paint;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p2, v0}, LX/433;->A12(Landroid/graphics/Paint;Landroid/graphics/PorterDuff$Mode;)V
 
     .line 90
     .line 91
@@ -434,7 +434,7 @@
 
     .line 132
     .line 133
-    invoke-static {p2, v0}, LX/4BD;->A10(Landroid/graphics/Paint;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p2, v0}, LX/433;->A12(Landroid/graphics/Paint;Landroid/graphics/PorterDuff$Mode;)V
 
     .line 134
     .line 135

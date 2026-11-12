@@ -22,15 +22,15 @@
     .locals 2
 
     .line 0
-    const/16 v1, 0x36
+    const/16 v1, 0x2c
 
     .line 1
     .line 2
-    new-instance v0, LX/1QO;
+    new-instance v0, LX/1b7;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/1QO;-><init>(I)V
+    invoke-direct {v0, v1}, LX/1b7;-><init>(I)V
 
     .line 5
     .line 6
@@ -51,7 +51,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
 
     .line 4
     .line 5
@@ -117,7 +117,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 3
     .line 4

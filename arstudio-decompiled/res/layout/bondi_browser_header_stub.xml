@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<X.4GU android:id="@id/personalized_footer_browser_header" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_stacked_max_height"
+<X.48y android:id="@id/personalized_footer_browser_header" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_button_min_height_material"
   xmlns:android="http://schemas.android.com/apk/res/android" />

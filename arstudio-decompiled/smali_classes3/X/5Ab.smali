@@ -1,78 +1,121 @@
-.class public final LX/5Ab;
+.class public final LX/5aB;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/view/SurfaceHolder;
 
-# static fields
-.field public static final A00:LX/59U;
 
-.field public static final A01:LX/576;
-
-.field public static final A02:LX/5BX;
-
-.field public static final A03:LX/57i;
+# instance fields
+.field public final A00:Landroid/view/Surface;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/view/Surface;)V
+    .locals 0
 
     .line 0
-    new-instance v3, LX/59U;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v3}, LX/59U;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/5aB;->A00:Landroid/view/Surface;
+
     .line 4
     .line 5
-    sput-object v3, LX/5Ab;->A00:LX/59U;
+    return-void
+.end method
 
-    .line 6
-    .line 7
-    new-instance v2, LX/5Aa;
 
-    .line 8
-    .line 9
-    invoke-direct {v2}, LX/5Aa;-><init>()V
+# virtual methods
+.method public final addCallback(Landroid/view/SurfaceHolder$Callback;)V
+    .locals 0
 
-    .line 10
-    .line 11
-    .line 12
-    sput-object v2, LX/5Ab;->A03:LX/57i;
+    return-void
+.end method
 
-    .line 13
-    .line 14
-    const-string v1, "LocationServices.API"
+.method public final getSurface()Landroid/view/Surface;
+    .locals 1
 
-    .line 15
-    .line 16
-    new-instance v0, LX/576;
+    .line 0
+    iget-object v0, p0, LX/5aB;->A00:Landroid/view/Surface;
 
-    .line 17
-    .line 18
-    invoke-direct {v0, v2, v3, v1}, LX/576;-><init>(LX/57i;LX/59U;Ljava/lang/String;)V
+    .line 1
+    .line 2
+    return-object v0
+.end method
 
-    .line 19
-    .line 20
-    .line 21
-    sput-object v0, LX/5Ab;->A01:LX/576;
+.method public final getSurfaceFrame()Landroid/graphics/Rect;
+    .locals 1
 
-    .line 22
-    .line 23
-    new-instance v0, LX/5BK;
+    const/4 v0, 0x0
 
-    .line 24
-    .line 25
-    invoke-direct {v0}, LX/5BK;-><init>()V
+    return-object v0
+.end method
 
-    .line 26
-    .line 27
-    .line 28
-    sput-object v0, LX/5Ab;->A02:LX/5BX;
+.method public final isCreating()Z
+    .locals 1
 
-    .line 29
-    .line 30
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final lockCanvas()Landroid/graphics/Canvas;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final lockCanvas(Landroid/graphics/Rect;)Landroid/graphics/Canvas;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final removeCallback(Landroid/view/SurfaceHolder$Callback;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setFixedSize(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setFormat(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setKeepScreenOn(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setSizeFromLayout()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setType(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final unlockCanvasAndPost(Landroid/graphics/Canvas;)V
+    .locals 0
+
     return-void
 .end method

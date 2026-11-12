@@ -1,95 +1,84 @@
-.class public final LX/5oY;
+.class public final LX/5Oy;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RecordingThreadController$17"
-
 
 # instance fields
-.field public final synthetic A00:LX/5e7;
+.field public A00:Landroid/os/Handler;
 
-.field public final synthetic A01:LX/5oX;
+.field public A01:Landroid/util/Pair;
 
-.field public final synthetic A02:LX/5og;
+.field public A02:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+.field public A03:Z
+
+.field public A04:LX/5KS;
+
+.field public final A05:LX/5Ol;
+
+.field public final A06:LX/5At;
+
+.field public final A07:Ljava/util/ArrayDeque;
+
+.field public final A08:Ljava/util/ArrayDeque;
 
 
 # direct methods
-.method public constructor <init>(LX/5e7;LX/5oX;LX/5og;)V
-    .locals 0
+.method public constructor <init>(LX/5Ol;LX/5At;)V
+    .locals 1
 
     .line 0
-    iput-object p3, p0, LX/5oY;->A02:LX/5og;
-
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/5oY;->A00:LX/5e7;
-
-    .line 3
-    .line 4
-    iput-object p2, p0, LX/5oY;->A01:LX/5oX;
-
-    .line 5
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/5oY;->A00:LX/5e7;
-
     .line 1
     .line 2
-    instance-of v0, v2, LX/5oR;
-
     .line 3
+    iput-object p2, p0, LX/5Oy;->A06:LX/5At;
+
     .line 4
-    iget-object v1, p0, LX/5oY;->A01:LX/5oX;
-
     .line 5
+    iput-object p1, p0, LX/5Oy;->A05:LX/5Ol;
+
     .line 6
-    if-eqz v0, :cond_0
-
     .line 7
+    invoke-static {}, LX/434;->A1H()Ljava/util/ArrayDeque;
+
     .line 8
-    move-object v0, v2
-
     .line 9
-    check-cast v0, LX/5oR;
-
     .line 10
+    move-result-object v0
+
     .line 11
-    :goto_0
-    invoke-interface {v1, v0}, LX/5oX;->AVq(LX/5oR;)V
+    iput-object v0, p0, LX/5Oy;->A08:Ljava/util/ArrayDeque;
 
     .line 12
     .line 13
+    invoke-static {}, LX/434;->A1H()Ljava/util/ArrayDeque;
+
     .line 14
-    return-void
-
     .line 15
-    :cond_0
-    new-instance v0, LX/5oR;
-
     .line 16
+    move-result-object v0
+
     .line 17
-    invoke-direct {v0, v2}, LX/5oR;-><init>(Ljava/lang/Throwable;)V
+    iput-object v0, p0, LX/5Oy;->A07:Ljava/util/ArrayDeque;
 
     .line 18
     .line 19
+    const/4 v0, 0x1
+
     .line 20
-    goto :goto_0
+    iput-boolean v0, p0, LX/5Oy;->A03:Z
+
+    .line 21
+    .line 22
+    sget-object v0, LX/5KS;->A04:LX/5KS;
+
+    .line 23
+    .line 24
+    iput-object v0, p0, LX/5Oy;->A04:LX/5KS;
+
+    .line 25
+    .line 26
+    return-void
 .end method

@@ -1,37 +1,21 @@
 .class public final LX/4Jl;
-.super LX/4Jv;
+.super Ljava/lang/Thread;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:I
-
-.field public A04:Landroid/view/View;
-
-.field public A05:Landroid/view/View;
-
-.field public final synthetic A06:LX/4Jk;
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "RxThreadFactory$RxCustomThread"
 
 
 # direct methods
-.method public constructor <init>(LX/4Jk;)V
+.method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4Jl;->A06:LX/4Jk;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/4Jv;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method

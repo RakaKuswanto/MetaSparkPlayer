@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMessengerCallLinkSurfaceSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMessengerCallLinkSurfaceSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x16
+    const/16 v0, 0x15
 
     .line 1
     .line 2
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "HALO"
+    const-string v0, "IG_THREADS_APP_HANGOUTS"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "IG_THREADS_APP_HANGOUTS"
+    const-string v0, "INSTAGRAM"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "INSTAGRAM"
+    const-string v0, "LIVE_AUDIO"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "LIVE_AUDIO"
+    const-string v0, "LIVE_TO_ROOMS"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "LIVE_TO_ROOMS"
+    const-string v0, "LIVE_WITH"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "LIVE_WITH"
+    const-string v0, "MESSENGER"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "MESSENGER"
+    const-string v0, "MESSENGER_V2"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "MESSENGER_V2"
+    const-string v0, "ORIGAMI_RESEARCH"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "ORIGAMI_RESEARCH"
+    const-string v0, "RECRUITING"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "RECRUITING"
+    const-string v0, "ROBOTICS"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "ROBOTICS"
+    const-string v0, "STAGES"
 
     .line 95
     .line 96
@@ -220,70 +220,62 @@
 
     .line 99
     .line 100
-    const-string v0, "STAGES"
+    const-string/jumbo v0, "WORKPLACE"
 
     .line 101
     .line 102
+    .line 103
     aput-object v0, v2, v1
 
-    .line 103
     .line 104
+    .line 105
     const/16 v1, 0x12
 
-    .line 105
     .line 106
-    const-string v0, "WORKPLACE"
-
     .line 107
-    .line 108
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORKPLACE_GROUP"
 
+    .line 108
     .line 109
     .line 110
-    const/16 v1, 0x13
+    aput-object v0, v2, v1
 
     .line 111
     .line 112
-    const-string v0, "WORKPLACE_GROUP"
+    const/16 v1, 0x13
 
     .line 113
     .line 114
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORKPLACE_MEETING"
 
     .line 115
     .line 116
-    const/16 v1, 0x14
-
     .line 117
-    .line 118
-    const-string v0, "WORKPLACE_MEETING"
-
-    .line 119
-    .line 120
     aput-object v0, v2, v1
 
-    .line 121
-    .line 122
-    const/16 v1, 0x15
+    .line 118
+    .line 119
+    const/16 v1, 0x14
 
+    .line 120
+    .line 121
+    const-string/jumbo v0, "WORKPLACE_TEAMWORKS"
+
+    .line 122
     .line 123
     .line 124
-    const-string v0, "WORKPLACE_TEAMWORKS"
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 125
     .line 126
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 127
-    .line 128
-    .line 129
     move-result-object v0
 
-    .line 130
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerCallLinkSurfaceSet;->A00:Ljava/util/Set;
+    .line 128
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerCallLinkSurfaceSet;->A00:Ljava/util/HashSet;
 
-    .line 131
-    .line 132
+    .line 129
+    .line 130
     return-void
 .end method
 
@@ -299,11 +291,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerCallLinkSurfaceSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerCallLinkSurfaceSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

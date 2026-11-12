@@ -1,1309 +1,728 @@
-.class public final LX/3SG;
+.class public final LX/3sG;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/0Mx;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final serialVersionUID:J = -0x4504bd2dcb6bcde3L
 
 
 # instance fields
-.field public A00:LX/0Kp;
+.field public final mAssetUrl:Ljava/lang/String;
 
-.field public A01:Ljava/lang/String;
+.field public final mCacheName:Ljava/lang/String;
 
-.field public A02:Ljava/lang/String;
+.field public final mCachedRangeEnd:J
 
-.field public A03:LX/3Sw;
+.field public final mCachedRangeStart:J
 
-.field public A04:LX/3Sr;
+.field public final mEvictionReason:Ljava/lang/String;
 
-.field public final A05:LX/3SL;
+.field public final mIsSecondPhasePrefetch:Z
 
-.field public final A06:LX/0Lx;
+.field public final mKey:Ljava/lang/String;
 
-.field public final A07:LX/0Up;
+.field public final mLength:J
 
-.field public final A08:Lcom/facebook/proxygen/MQTTClientCallback;
+.field public final mNewLength:J
+
+.field public final mNewPosition:J
+
+.field public final mOperation:LX/5BF;
+
+.field public final mPosition:J
+
+.field public final mPrefetchModule:Ljava/lang/String;
+
+.field public final mPrefetchTag:Ljava/lang/String;
+
+.field public final mRequestType:Ljava/lang/String;
+
+.field public final mRequestedRangeEnd:J
+
+.field public final mRequestedRangeStart:J
+
+.field public final mSourceModule:Ljava/lang/String;
+
+.field public final mStreamType:Ljava/lang/String;
+
+.field public final mSubOrigin:Ljava/lang/String;
+
+.field public final mTimestamp:J
 
 
 # direct methods
-.method public constructor <init>(LX/3SL;Lcom/facebook/proxygen/MQTTClientFactory;Lcom/facebook/proxygen/ProxygenRadioMeter;LX/0Lx;Ljava/util/concurrent/Executor;IIZZ)V
-    .locals 4
+.method public constructor <init>(LX/5BF;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJJJ)V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
     .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 2
     .line 3
-    new-instance v2, LX/3SF;
-
     .line 4
-    .line 5
-    invoke-direct {v2, p0}, LX/3SF;-><init>(LX/3SG;)V
+    iput-object p1, p0, LX/3sG;->mOperation:LX/5BF;
 
+    .line 5
     .line 6
+    iput-object p2, p0, LX/3sG;->mCacheName:Ljava/lang/String;
+
     .line 7
     .line 8
-    iput-object v2, p0, LX/3SG;->A08:Lcom/facebook/proxygen/MQTTClientCallback;
+    iput-object p3, p0, LX/3sG;->mSourceModule:Ljava/lang/String;
 
     .line 9
     .line 10
-    iput-object p4, p0, LX/3SG;->A06:LX/0Lx;
+    iput-object p4, p0, LX/3sG;->mSubOrigin:Ljava/lang/String;
 
     .line 11
     .line 12
-    iput-object p1, p0, LX/3SG;->A05:LX/3SL;
+    iput-object p5, p0, LX/3sG;->mRequestType:Ljava/lang/String;
 
     .line 13
     .line 14
-    if-eqz p9, :cond_4
+    iput-object p6, p0, LX/3sG;->mStreamType:Ljava/lang/String;
 
     .line 15
     .line 16
-    iget-object v1, p1, LX/3SL;->A01:LX/0Uj;
+    iput-object p7, p0, LX/3sG;->mKey:Ljava/lang/String;
 
     .line 17
     .line 18
-    new-instance v0, LX/0Lq;
+    iput-wide p12, p0, LX/3sG;->mPosition:J
 
     .line 19
     .line 20
-    invoke-direct {v0, p4, v1}, LX/0Lq;-><init>(LX/0Lx;LX/0Uj;)V
+    move-wide/from16 v0, p14
 
     .line 21
     .line 22
+    iput-wide v0, p0, LX/3sG;->mLength:J
+
     .line 23
-    :goto_0
-    iput-object v0, p0, LX/3SG;->A07:LX/0Up;
-
     .line 24
+    move-wide/from16 v0, p16
+
     .line 25
-    new-instance v3, Lcom/facebook/proxygen/ConnectionParams;
-
     .line 26
-    .line 27
-    invoke-direct {v3}, Lcom/facebook/proxygen/ConnectionParams;-><init>()V
+    iput-wide v0, p0, LX/3sG;->mNewPosition:J
 
+    .line 27
     .line 28
+    move-wide/from16 v0, p18
+
     .line 29
     .line 30
-    const/4 v0, 0x1
+    iput-wide v0, p0, LX/3sG;->mNewLength:J
 
     .line 31
-    if-eq p6, v0, :cond_3
-
     .line 32
-    .line 33
-    const/4 v0, 0x2
+    iput-object p9, p0, LX/3sG;->mEvictionReason:Ljava/lang/String;
 
+    .line 33
     .line 34
-    if-eq p6, v0, :cond_2
+    const-wide/16 v0, 0x0
 
     .line 35
     .line 36
-    sget-object v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->RAW:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+    iput-wide v0, p0, LX/3sG;->mRequestedRangeStart:J
 
     .line 37
     .line 38
-    :goto_1
-    iput-object v0, v3, Lcom/facebook/proxygen/ConnectionParams;->publishFormat:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+    iput-wide v0, p0, LX/3sG;->mRequestedRangeEnd:J
 
     .line 39
     .line 40
-    iput p7, v3, Lcom/facebook/proxygen/ConnectionParams;->keepaliveSecs:I
+    iput-wide v0, p0, LX/3sG;->mCachedRangeStart:J
 
     .line 41
     .line 42
-    const-string v0, ""
+    iput-wide v0, p0, LX/3sG;->mCachedRangeEnd:J
 
     .line 43
     .line 44
-    iput-object v0, v3, Lcom/facebook/proxygen/ConnectionParams;->clientId:Ljava/lang/String;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     .line 45
     .line 46
-    const/4 v0, 0x1
-
     .line 47
-    iput-boolean v0, v3, Lcom/facebook/proxygen/ConnectionParams;->enableTopicEncoding:Z
+    move-result-wide v0
 
     .line 48
+    iput-wide v0, p0, LX/3sG;->mTimestamp:J
+
     .line 49
-    new-instance v1, Lcom/facebook/proxygen/MQTTClient;
-
     .line 50
-    .line 51
-    invoke-direct {v1, p2, v2, v3}, Lcom/facebook/proxygen/MQTTClient;-><init>(Lcom/facebook/proxygen/MQTTClientFactory;Lcom/facebook/proxygen/MQTTClientCallback;Lcom/facebook/proxygen/ConnectionParams;)V
+    iput-object p8, p0, LX/3sG;->mAssetUrl:Ljava/lang/String;
 
+    .line 51
     .line 52
+    iput-object p10, p0, LX/3sG;->mPrefetchTag:Ljava/lang/String;
+
     .line 53
     .line 54
-    if-eqz p3, :cond_0
+    iput-object p11, p0, LX/3sG;->mPrefetchModule:Ljava/lang/String;
 
     .line 55
     .line 56
-    iput-object p3, v1, Lcom/facebook/proxygen/MQTTClient;->mRadioMeter:Lcom/facebook/proxygen/ProxygenRadioMeter;
+    iput-boolean v2, p0, LX/3sG;->mIsSecondPhasePrefetch:Z
 
     .line 57
     .line 58
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/util/Pair;LX/5BF;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJ)V
+    .locals 6
+
+    .line 268435456
+    const/4 v5, 0x0
+
+    .line 268435457
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    iput-object p2, p0, LX/3sG;->mOperation:LX/5BF;
+
+    .line 268435461
+    .line 268435462
+    iput-object p3, p0, LX/3sG;->mCacheName:Ljava/lang/String;
+
+    .line 268435463
+    .line 268435464
+    iput-object p4, p0, LX/3sG;->mSourceModule:Ljava/lang/String;
+
+    .line 268435465
+    .line 268435466
+    const/4 v4, 0x0
+
+    .line 268435467
+    iput-object v4, p0, LX/3sG;->mSubOrigin:Ljava/lang/String;
+
+    .line 268435468
+    .line 268435469
+    iput-object p5, p0, LX/3sG;->mRequestType:Ljava/lang/String;
+
+    .line 268435470
+    .line 268435471
+    iput-object v4, p0, LX/3sG;->mStreamType:Ljava/lang/String;
+
+    .line 268435472
+    .line 268435473
+    iput-object p6, p0, LX/3sG;->mKey:Ljava/lang/String;
+
+    .line 268435474
+    .line 268435475
+    move-wide/from16 v0, p10
+
+    .line 268435476
+    .line 268435477
+    iput-wide v0, p0, LX/3sG;->mRequestedRangeStart:J
+
+    .line 268435478
+    .line 268435479
+    move-wide/from16 v0, p12
+
+    .line 268435480
+    .line 268435481
+    iput-wide v0, p0, LX/3sG;->mRequestedRangeEnd:J
+
+    .line 268435482
+    .line 268435483
+    const-wide/16 v2, -0x1
+
+    .line 268435484
+    .line 268435485
+    if-nez p1, :cond_1
+
+    .line 268435486
+    .line 268435487
+    const-wide/16 v0, -0x1
+
+    .line 268435488
+    .line 268435489
+    :goto_0
+    iput-wide v0, p0, LX/3sG;->mCachedRangeStart:J
+
+    .line 268435490
+    .line 268435491
+    if-eqz p1, :cond_0
+
+    .line 268435492
+    .line 268435493
+    iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    .line 268435494
+    .line 268435495
+    invoke-static {v0}, LX/001;->A02(Ljava/lang/Object;)J
+
+    .line 268435496
+    .line 268435497
+    .line 268435498
+    move-result-wide v2
+
+    .line 268435499
     :cond_0
-    if-eqz p8, :cond_1
+    iput-wide v2, p0, LX/3sG;->mCachedRangeEnd:J
 
-    .line 59
-    .line 60
-    iput-object p1, v1, Lcom/facebook/proxygen/MQTTClient;->mLogger:Lcom/facebook/proxygen/AnalyticsLogger;
+    .line 268435500
+    .line 268435501
+    const-wide/16 v0, 0x0
 
-    .line 61
-    .line 62
-    new-instance v0, LX/3Sr;
+    .line 268435502
+    .line 268435503
+    iput-wide v0, p0, LX/3sG;->mPosition:J
 
-    .line 63
-    .line 64
-    invoke-direct {v0}, LX/3Sr;-><init>()V
+    .line 268435504
+    .line 268435505
+    iput-wide v0, p0, LX/3sG;->mLength:J
 
-    .line 65
-    .line 66
-    .line 67
-    iput-object v0, p0, LX/3SG;->A04:LX/3Sr;
+    .line 268435506
+    .line 268435507
+    iput-wide v0, p0, LX/3sG;->mNewPosition:J
 
-    .line 68
-    .line 69
-    iput-object v0, v1, Lcom/facebook/proxygen/MQTTClient;->mByteEventLogger:Lcom/facebook/proxygen/ByteEventLogger;
+    .line 268435508
+    .line 268435509
+    iput-wide v0, p0, LX/3sG;->mNewLength:J
 
-    .line 70
-    .line 71
-    :cond_1
-    invoke-virtual {v1}, Lcom/facebook/proxygen/MQTTClient;->init()V
+    .line 268435510
+    .line 268435511
+    iput-object v4, p0, LX/3sG;->mEvictionReason:Ljava/lang/String;
 
-    .line 72
-    .line 73
-    .line 74
-    new-instance v0, LX/3Sw;
+    .line 268435512
+    .line 268435513
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 75
-    .line 76
-    invoke-direct {v0, v1, p5}, LX/3Sw;-><init>(Lcom/facebook/proxygen/MQTTClient;Ljava/util/concurrent/Executor;)V
+    .line 268435514
+    .line 268435515
+    .line 268435516
+    move-result-wide v0
 
-    .line 77
-    .line 78
-    .line 79
-    iput-object v0, p0, LX/3SG;->A03:LX/3Sw;
+    .line 268435517
+    iput-wide v0, p0, LX/3sG;->mTimestamp:J
 
-    .line 80
-    .line 81
+    .line 268435518
+    .line 268435519
+    iput-object p7, p0, LX/3sG;->mAssetUrl:Ljava/lang/String;
+
+    .line 268435520
+    .line 268435521
+    iput-object p8, p0, LX/3sG;->mPrefetchTag:Ljava/lang/String;
+
+    .line 268435522
+    .line 268435523
+    iput-object p9, p0, LX/3sG;->mPrefetchModule:Ljava/lang/String;
+
+    .line 268435524
+    .line 268435525
+    iput-boolean v5, p0, LX/3sG;->mIsSecondPhasePrefetch:Z
+
+    .line 268435526
+    .line 268435527
     return-void
 
-    .line 82
-    :cond_2
-    sget-object v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->ZLIB_OPTIONAL:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
-
-    .line 83
-    .line 84
-    goto :goto_1
-
-    .line 85
-    :cond_3
-    sget-object v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->ZLIB:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
-
-    .line 86
-    .line 87
-    goto :goto_1
-
-    .line 88
-    :cond_4
-    new-instance v0, LX/0Lp;
-
-    .line 89
-    .line 90
-    invoke-direct {v0}, LX/0Lp;-><init>()V
-
-    .line 91
-    .line 92
-    .line 93
-    goto :goto_0
-.end method
-
-.method public static A00(LX/0LC;I)LX/0L1;
-    .locals 5
-
-    .line 0
-    new-instance v4, LX/0LO;
-
-    .line 1
-    .line 2
-    invoke-direct {v4, p0}, LX/0LO;-><init>(LX/0LC;)V
-
-    .line 3
-    .line 4
-    .line 5
-    new-instance v3, LX/0LN;
-
-    .line 6
-    .line 7
-    invoke-direct {v3, p1}, LX/0LN;-><init>(I)V
-
-    .line 8
-    .line 9
-    .line 10
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v2
-
-    .line 14
-    const/4 v0, 0x3
-
-    .line 15
-    if-eq v2, v0, :cond_1
-
-    .line 16
-    .line 17
-    const/16 v0, 0x8
-
-    .line 18
-    .line 19
-    const/4 v1, 0x0
-
-    .line 20
-    if-eq v2, v0, :cond_0
-
-    .line 21
-    .line 22
-    new-instance v0, LX/0L1;
-
-    .line 23
-    .line 24
-    invoke-direct {v0, v4, v3, v1}, LX/0L1;-><init>(LX/0LO;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 25
-    .line 26
-    .line 27
-    return-object v0
-
-    .line 28
-    :cond_0
-    new-instance v0, LX/0Kc;
-
-    .line 29
-    .line 30
-    invoke-direct {v0, v4, v3, v1}, LX/0Kc;-><init>(LX/0LO;LX/0LN;LX/0Kn;)V
-
-    .line 31
-    .line 32
-    .line 33
-    return-object v0
-
-    .line 34
+    .line 268435528
     :cond_1
-    new-instance v0, LX/0Ke;
+    iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    .line 35
-    .line 36
-    invoke-direct {v0, v4, v3}, LX/0Ke;-><init>(LX/0LO;LX/0LN;)V
+    .line 268435529
+    .line 268435530
+    invoke-static {v0}, LX/001;->A02(Ljava/lang/Object;)J
 
-    .line 37
-    .line 38
-    .line 39
-    return-object v0
-.end method
+    .line 268435531
+    .line 268435532
+    .line 268435533
+    move-result-wide v0
 
-.method public static A01(Lcom/facebook/proxygen/MQTTClientError;)Ljava/lang/Exception;
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, Lcom/facebook/proxygen/MQTTClientError;->mErrMsg:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, Lcom/facebook/proxygen/MQTTClientError;->mErrType:Lcom/facebook/proxygen/MQTTClientError$MQTTErrorType;
-
-    .line 3
-    .line 4
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    packed-switch v0, :pswitch_data_0
-
-    .line 9
-    .line 10
-    .line 11
-    :pswitch_0
-    invoke-static {v1}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    return-object v0
-
-    .line 16
-    :pswitch_1
-    new-instance v0, Ljava/util/zip/DataFormatException;
-
-    .line 17
-    .line 18
-    invoke-direct {v0, v1}, Ljava/util/zip/DataFormatException;-><init>(Ljava/lang/String;)V
-
-    .line 19
-    .line 20
-    .line 21
-    return-object v0
-
-    .line 22
-    :pswitch_2
-    new-instance v0, Ljava/net/SocketException;
-
-    .line 23
-    .line 24
-    invoke-direct {v0, v1}, Ljava/net/SocketException;-><init>(Ljava/lang/String;)V
-
-    .line 25
-    .line 26
-    .line 27
-    return-object v0
-
-    .line 28
-    :pswitch_3
-    new-instance v0, Ljava/net/SocketException;
-
-    .line 29
-    .line 30
-    invoke-direct {v0, v1}, Ljava/net/SocketException;-><init>(Ljava/lang/String;)V
-
-    .line 31
-    .line 32
-    .line 33
-    return-object v0
-
-    .line 34
-    :pswitch_4
-    new-instance v0, Ljava/util/zip/DataFormatException;
-
-    .line 35
-    .line 36
-    invoke-direct {v0, v1}, Ljava/util/zip/DataFormatException;-><init>(Ljava/lang/String;)V
-
-    .line 37
-    .line 38
-    .line 39
-    return-object v0
-
-    .line 40
-    :pswitch_5
-    invoke-static {v1}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v0
-
-    .line 44
-    return-object v0
-
-    .line 45
-    :pswitch_6
-    new-instance v0, Ljava/io/EOFException;
-
-    .line 46
-    .line 47
-    invoke-direct {v0, v1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
-
-    .line 48
-    .line 49
-    .line 50
-    return-object v0
-
-    .line 51
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_3
-        :pswitch_0
-        :pswitch_2
-        :pswitch_5
-        :pswitch_4
-        :pswitch_6
-        :pswitch_0
-        :pswitch_0
-        :pswitch_4
-    .end packed-switch
-.end method
-
-.method public static A02(LX/3SG;)Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, LX/3SG;->A00:LX/0Kp;
-
-    .line 1
-    .line 2
-    iget-object p0, p0, LX/0Kp;->A00:LX/0NA;
-
-    .line 3
-    .line 4
-    iget-object p0, p0, LX/0NA;->A0d:LX/0OT;
-
-    .line 5
-    .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object p0
-
-    .line 10
-    return-object p0
+    .line 268435534
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final A6n()V
-    .locals 5
-
-    .line 0
-    iget-object v4, p0, LX/3SG;->A07:LX/0Up;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/3SG;->A00:LX/0Kp;
-
-    .line 3
-    .line 4
-    iget-object v0, v0, LX/0Kp;->A00:LX/0NA;
-
-    .line 5
-    .line 6
-    iget-wide v2, v0, LX/0NA;->A0a:J
-
-    .line 7
-    .line 8
-    invoke-static {p0}, LX/3SG;->A02(LX/3SG;)Ljava/lang/String;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    const-string/jumbo v0, "whistle_android"
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-interface {v4, v2, v3, v1, v0}, LX/0Up;->A9M(JLjava/lang/String;Ljava/lang/String;)V
-
-    .line 16
-    .line 17
-    .line 18
-    iget-object v2, p0, LX/3SG;->A03:LX/3Sw;
-
-    .line 19
-    .line 20
-    new-instance v0, LX/3Sk;
-
-    .line 21
-    .line 22
-    invoke-direct {v0, v2}, LX/3Sk;-><init>(LX/3Sw;)V
-
-    .line 23
-    .line 24
-    .line 25
-    iget-object v1, v2, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
-
-    .line 26
-    .line 27
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 28
-    .line 29
-    .line 30
-    new-instance v0, LX/3Sj;
-
-    .line 31
-    .line 32
-    invoke-direct {v0, v2}, LX/3Sj;-><init>(LX/3Sw;)V
-
-    .line 33
-    .line 34
-    .line 35
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 36
-    .line 37
-    .line 38
-    iget-object v0, p0, LX/3SG;->A00:LX/0Kp;
-
-    .line 39
-    .line 40
-    sget-object v1, LX/0OT;->DISCONNECTED:LX/0OT;
-
-    .line 41
-    .line 42
-    iget-object v0, v0, LX/0Kp;->A00:LX/0NA;
-
-    .line 43
-    .line 44
-    iput-object v1, v0, LX/0NA;->A0d:LX/0OT;
-
-    .line 45
-    .line 46
-    iget-object v0, p0, LX/3SG;->A00:LX/0Kp;
-
-    .line 47
-    .line 48
-    invoke-virtual {v0}, LX/0Kp;->A00()V
-
-    .line 49
-    .line 50
-    .line 51
-    const/4 v0, 0x0
-
-    .line 52
-    iput-object v0, p0, LX/3SG;->A01:Ljava/lang/String;
-
-    .line 53
-    .line 54
-    return-void
-.end method
-
-.method public final A7I(LX/0LR;Ljava/lang/String;IIZZ)V
+.method public final toString()Ljava/lang/String;
     .locals 17
 
     .line 0
-    const/4 v7, 0x0
+    move-object/from16 v13, p0
 
     .line 1
-    const/4 v6, 0x1
-
     .line 2
-    :try_start_0
-    move-object/from16 v3, p0
+    iget-object v1, v13, LX/3sG;->mOperation:LX/5BF;
 
     .line 3
     .line 4
-    move-object/from16 v5, p1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     .line 5
     .line 6
-    invoke-static {v5}, LX/3SH;->A01(LX/0LR;)Ljava/util/List;
-
     .line 7
+    move-result v0
+
     .line 8
+    const/4 v15, 0x5
+
     .line 9
-    move-result-object v15
+    const/4 v11, 0x4
 
     .line 10
-    iget-object v11, v5, LX/0LR;->A03:Ljava/lang/String;
+    const/4 v12, 0x3
 
     .line 11
+    const/4 v10, 0x2
+
     .line 12
-    iget-object v14, v5, LX/0LR;->A06:Ljava/lang/String;
+    const/4 v14, 0x1
 
     .line 13
+    const/16 v16, 0x0
+
     .line 14
-    iget-object v13, v5, LX/0LR;->A05:Ljava/lang/String;
-
     .line 15
-    .line 16
-    invoke-static {v5}, LX/3SH;->A00(LX/0LR;)LX/3SR;
+    packed-switch v0, :pswitch_data_0
 
+    .line 16
     .line 17
     .line 18
-    .line 19
-    move-result-object v8
+    const-string v0, "Unknown. Err-roar"
 
+    .line 19
     .line 20
-    iget-object v12, v5, LX/0LR;->A04:Ljava/lang/String;
+    return-object v0
 
     .line 21
+    :pswitch_0
+    sget-object v9, Ljava/util/Locale;->US:Ljava/util/Locale;
+
     .line 22
-    iget-object v0, v5, LX/0LR;->A02:LX/0LQ;
-
     .line 23
+    new-array v8, v11, [Ljava/lang/Object;
+
     .line 24
-    iget-object v2, v0, LX/0LQ;->A0L:Ljava/util/Map;
-
     .line 25
+    iget-object v0, v13, LX/3sG;->mRequestType:Ljava/lang/String;
+
     .line 26
-    iget-object v1, v5, LX/0LR;->A00:Ljava/lang/String;
-
     .line 27
-    .line 28
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    aput-object v0, v8, v16
 
+    .line 28
     .line 29
+    aput-object v1, v8, v14
+
     .line 30
     .line 31
-    move-result-object v0
+    iget-wide v0, v13, LX/3sG;->mRequestedRangeStart:J
 
     .line 32
-    new-instance v9, LX/3SZ;
-
     .line 33
-    .line 34
-    invoke-direct {v9, v1, v0}, LX/3SZ;-><init>(Ljava/lang/String;Ljava/lang/Integer;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
+    .line 34
     .line 35
     .line 36
+    move-result-object v2
+
     .line 37
-    :try_start_1
-    new-instance v0, Ljava/io/ByteArrayOutputStream;
+    iget-wide v0, v13, LX/3sG;->mRequestedRangeEnd:J
 
     .line 38
     .line 39
-    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 40
     .line 41
     .line 42
-    invoke-static {v0}, LX/3SV;->A02(Ljava/io/OutputStream;)LX/3SV;
+    move-result-object v0
 
     .line 43
+    invoke-static {v2, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
     .line 44
     .line 45
-    move-result-object v10
-
     .line 46
-    move-object/from16 v16, v2
+    move-result-object v0
 
     .line 47
-    .line 48
-    invoke-static/range {v8 .. v16}, LX/3SU;->A00(LX/3SR;LX/3SZ;LX/3SW;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;)V
+    aput-object v0, v8, v10
 
+    .line 48
     .line 49
+    iget-wide v0, v13, LX/3sG;->mCachedRangeStart:J
+
     .line 50
     .line 51
-    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 52
     .line 53
     .line 54
-    move-result-object v7
-    :try_end_1
-    .catch LX/3TN; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    move-result-object v2
 
     .line 55
-    iget-object v5, v3, LX/3SG;->A03:LX/3Sw;
+    iget-wide v0, v13, LX/3sG;->mCachedRangeEnd:J
 
     .line 56
     .line 57
-    array-length v0, v7
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 58
-    new-instance v4, LX/3Sg;
-
     .line 59
     .line 60
-    move-object/from16 v6, p2
+    move-result-object v0
 
     .line 61
-    .line 62
-    move/from16 v8, p3
+    invoke-static {v2, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
+    .line 62
     .line 63
     .line 64
-    move/from16 v10, p6
+    move-result-object v0
 
     .line 65
-    .line 66
-    move v9, v0
+    aput-object v0, v8, v12
 
+    .line 66
     .line 67
-    invoke-direct/range {v4 .. v10}, LX/3Sg;-><init>(LX/3Sw;Ljava/lang/String;[BIIZ)V
+    const-string/jumbo v0, "[%s][%s] Requested %s, cached %s"
 
     .line 68
     .line 69
     .line 70
-    iget-object v0, v5, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
+    goto :goto_0
 
     .line 71
+    :pswitch_1
+    sget-object v9, Ljava/util/Locale;->US:Ljava/util/Locale;
+
     .line 72
-    invoke-interface {v0, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
     .line 73
+    const/4 v0, 0x7
+
     .line 74
+    new-array v8, v0, [Ljava/lang/Object;
+
     .line 75
-    iget-object v2, v3, LX/3SG;->A00:LX/0Kp;
-
     .line 76
+    iget-object v0, v13, LX/3sG;->mSourceModule:Ljava/lang/String;
+
     .line 77
-    sget-object v0, LX/0LC;->CONNECT:LX/0LC;
-
     .line 78
-    .line 79
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    aput-object v0, v8, v16
 
+    .line 79
     .line 80
+    iget-object v0, v13, LX/3sG;->mRequestType:Ljava/lang/String;
+
     .line 81
     .line 82
-    move-result-object v1
+    invoke-static {v1, v0, v8, v14, v10}, LX/0X2;->A1B(Ljava/lang/Enum;Ljava/lang/Object;[Ljava/lang/Object;II)V
 
     .line 83
-    const-string v0, ""
-
     .line 84
     .line 85
-    invoke-virtual {v2, v1, v0}, LX/0Kp;->A05(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, v13, LX/3sG;->mPrefetchTag:Ljava/lang/String;
 
     .line 86
     .line 87
+    aput-object v0, v8, v12
+
     .line 88
-    iget-object v1, v3, LX/3SG;->A05:LX/3SL;
-
     .line 89
+    iget-object v0, v13, LX/3sG;->mKey:Ljava/lang/String;
+
     .line 90
-    if-eqz v1, :cond_0
-
     .line 91
+    aput-object v0, v8, v11
+
     .line 92
-    iget-object v0, v1, LX/3SL;->A02:LX/0U3;
-
     .line 93
+    iget-wide v0, v13, LX/3sG;->mPosition:J
+
     .line 94
-    if-eqz v0, :cond_0
-
     .line 95
-    .line 96
-    invoke-virtual {v0}, LX/0U3;->A04()LX/0Vd;
+    invoke-static {v8, v15, v0, v1}, LX/001;->A1B([Ljava/lang/Object;IJ)V
 
+    .line 96
     .line 97
     .line 98
+    const/4 v4, 0x6
+
     .line 99
-    move-result-object v0
+    iget-wide v2, v13, LX/3sG;->mLength:J
 
     .line 100
-    iput-object v0, v1, LX/3SL;->A00:LX/0Vd;
-
     .line 101
+    add-long/2addr v0, v2
+
     .line 102
-    :cond_0
-    const-string v1, ":"
+    invoke-static {v8, v4, v0, v1}, LX/001;->A1B([Ljava/lang/Object;IJ)V
 
     .line 103
     .line 104
-    invoke-static {v8}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
     .line 105
+    const-string/jumbo v0, "[%s][%s][%s][%s] - %s [%d, %d] - [%s]"
+
     .line 106
     .line 107
-    move-result-object v0
-
     .line 108
-    invoke-static {v6, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    goto :goto_0
 
     .line 109
+    :pswitch_2
+    iget-wide v6, v13, LX/3sG;->mPosition:J
+
     .line 110
     .line 111
-    move-result-object v0
+    iget-wide v4, v13, LX/3sG;->mNewPosition:J
 
     .line 112
-    iput-object v0, v3, LX/3SG;->A02:Ljava/lang/String;
-
     .line 113
+    cmp-long v0, v6, v4
+
     .line 114
-    iget-object v0, v3, LX/3SG;->A07:LX/0Up;
-
     .line 115
-    .line 116
-    invoke-interface {v0}, LX/0Up;->connect()V
+    if-nez v0, :cond_0
 
+    .line 116
     .line 117
+    iget-wide v2, v13, LX/3sG;->mLength:J
+
     .line 118
     .line 119
-    return-void
+    iget-wide v0, v13, LX/3sG;->mNewLength:J
 
     .line 120
-    :catch_0
-    :try_start_2
-    move-exception v1
-
     .line 121
-    new-instance v0, Ljava/io/IOException;
+    cmp-long v8, v2, v0
 
     .line 122
     .line 123
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    if-nez v8, :cond_0
 
     .line 124
     .line 125
-    .line 126
-    throw v0
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    sget-object v9, Ljava/util/Locale;->US:Ljava/util/Locale;
 
+    .line 126
     .line 127
-    :catch_1
-    move-exception v4
+    new-array v8, v12, [Ljava/lang/Object;
 
     .line 128
-    const-string v2, "WhistleClientCore"
-
     .line 129
+    iget-object v0, v13, LX/3sG;->mKey:Ljava/lang/String;
+
     .line 130
-    new-array v1, v6, [Ljava/lang/Object;
-
     .line 131
+    aput-object v0, v8, v16
+
     .line 132
-    aput-object p1, v1, v7
-
     .line 133
-    .line 134
-    const-string v0, "Failed to encode connectPayload=%s"
+    invoke-static {v8, v14, v6, v7}, LX/001;->A1B([Ljava/lang/Object;IJ)V
 
+    .line 134
     .line 135
     .line 136
-    invoke-static {v2, v0, v4, v1}, LX/0Jt;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    add-long/2addr v6, v2
 
     .line 137
+    invoke-static {v8, v10, v6, v7}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+
     .line 138
     .line 139
-    iget-object v2, v3, LX/3SG;->A00:LX/0Kp;
-
     .line 140
-    .line 141
-    sget-object v1, LX/0MS;->FAILED_CONNECT_MESSAGE:LX/0MS;
+    const-string/jumbo v0, "[SPAN HIT] - %s [%d, %d]"
 
+    .line 141
     .line 142
     .line 143
-    new-instance v0, LX/0OU;
+    :goto_0
+    invoke-static {v9, v0, v8}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 144
     .line 145
-    invoke-direct {v0, v1, v4}, LX/0OU;-><init>(LX/0MS;Ljava/lang/Exception;)V
-
     .line 146
+    move-result-object v0
+
     .line 147
+    return-object v0
+
     .line 148
-    invoke-virtual {v2, v0}, LX/0Kp;->A01(LX/0OU;)V
+    :cond_0
+    sget-object v9, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     .line 149
     .line 150
+    new-array v8, v15, [Ljava/lang/Object;
+
     .line 151
-    return-void
-.end method
-
-.method public final A8p(LX/0Kd;)Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p1, LX/0L1;->A02:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    check-cast v0, LX/0Kt;
-
-    .line 3
-    .line 4
-    iget-object v0, v0, LX/0Kt;->A01:Ljava/lang/String;
-
-    .line 5
-    .line 6
-    return-object v0
-.end method
-
-.method public final ADH()B
-    .locals 1
-
-    const/4 v0, 0x4
-
-    return v0
-.end method
-
-.method public final ADs()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    const-string v0, "WhistleClientCore"
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final ALA()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3SG;->A01:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 3
-    .line 4
-    const-string v0, ""
-
-    .line 5
-    .line 6
-    :cond_0
-    return-object v0
-.end method
-
-.method public final Akq()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/3SG;->A03:LX/3Sw;
-
-    .line 1
-    .line 2
-    new-instance v1, LX/3Sl;
-
-    .line 3
-    .line 4
-    invoke-direct {v1, v0}, LX/3Sl;-><init>(LX/3Sw;)V
-
-    .line 5
-    .line 6
-    .line 7
-    iget-object v0, v0, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
-
-    .line 8
-    .line 9
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public final Akr()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/3SG;->A03:LX/3Sw;
-
-    .line 1
-    .line 2
-    new-instance v1, LX/3Sm;
-
-    .line 3
-    .line 4
-    invoke-direct {v1, v0}, LX/3Sm;-><init>(LX/3Sw;)V
-
-    .line 5
-    .line 6
-    .line 7
-    iget-object v0, v0, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
-
-    .line 8
-    .line 9
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public final Aks(ILjava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final Akt(Ljava/lang/String;[BII)V
-    .locals 7
-
-    .line 0
-    iget-object v0, p0, LX/3SG;->A07:LX/0Up;
-
-    .line 1
-    .line 2
-    move-object v3, p1
-
-    .line 3
-    move-object v4, p2
-
-    .line 4
-    move v5, p3
-
-    .line 5
-    move v6, p4
-
-    .line 6
-    invoke-interface {v0, p1, p2, p3, p4}, LX/0Up;->Akt(Ljava/lang/String;[BII)V
-
-    .line 7
-    .line 8
-    .line 9
-    iget-object v2, p0, LX/3SG;->A03:LX/3Sw;
-
-    .line 10
-    .line 11
-    new-instance v1, LX/3Si;
-
-    .line 12
-    .line 13
-    invoke-direct/range {v1 .. v6}, LX/3Si;-><init>(LX/3Sw;Ljava/lang/String;[BII)V
-
-    .line 14
-    .line 15
-    .line 16
-    iget-object v0, v2, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
-
-    .line 17
-    .line 18
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 19
-    .line 20
-    .line 21
-    return-void
-.end method
-
-.method public final Akv(Ljava/util/List;I)V
-    .locals 5
-
-    .line 0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    new-array v4, v0, [Ljava/lang/String;
-
-    .line 5
-    .line 6
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
-    new-array v3, v0, [I
-
-    .line 11
-    .line 12
-    const/4 v2, 0x0
-
-    .line 13
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    if-ge v2, v0, :cond_0
-
-    .line 18
-    .line 19
-    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v1
-
-    .line 23
-    check-cast v1, Lcom/facebook/rti/mqtt/protocol/messages/SubscribeTopic;
-
-    .line 24
-    .line 25
-    iget-object v0, v1, Lcom/facebook/rti/mqtt/protocol/messages/SubscribeTopic;->A01:Ljava/lang/String;
-
-    .line 26
-    .line 27
-    aput-object v0, v4, v2
-
-    .line 28
-    .line 29
-    iget v0, v1, Lcom/facebook/rti/mqtt/protocol/messages/SubscribeTopic;->A00:I
-
-    .line 30
-    .line 31
-    aput v0, v3, v2
-
-    .line 32
-    .line 33
-    add-int/lit8 v2, v2, 0x1
-
-    .line 34
-    .line 35
+    .line 152
+    iget-object v0, v13, LX/3sG;->mKey:Ljava/lang/String;
+
+    .line 153
+    .line 154
+    aput-object v0, v8, v16
+
+    .line 155
+    .line 156
+    invoke-static {v8, v14, v6, v7}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+
+    .line 157
+    .line 158
+    .line 159
+    iget-wide v0, v13, LX/3sG;->mLength:J
+
+    .line 160
+    .line 161
+    add-long/2addr v6, v0
+
+    .line 162
+    invoke-static {v8, v10, v6, v7}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+
+    .line 163
+    .line 164
+    .line 165
+    invoke-static {v8, v12, v4, v5}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+
+    .line 166
+    .line 167
+    .line 168
+    iget-wide v0, v13, LX/3sG;->mNewLength:J
+
+    .line 169
+    .line 170
+    add-long/2addr v4, v0
+
+    .line 171
+    invoke-static {v8, v11, v4, v5}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+
+    .line 172
+    .line 173
+    .line 174
+    const-string/jumbo v0, "[SPAN_TOUCHED] - %s [%d, %d],[%d,%d]"
+
+    .line 175
+    .line 176
+    .line 177
     goto :goto_0
 
-    .line 36
-    :cond_0
-    iget-object v0, p0, LX/3SG;->A03:LX/3Sw;
-
-    .line 37
-    .line 38
-    new-instance v1, LX/3Sf;
-
-    .line 39
-    .line 40
-    invoke-direct {v1, v0, v3, v4}, LX/3Sf;-><init>(LX/3Sw;[I[Ljava/lang/String;)V
-
-    .line 41
-    .line 42
-    .line 43
-    iget-object v0, v0, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
-
-    .line 44
-    .line 45
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 46
-    .line 47
-    .line 48
-    return-void
-.end method
-
-.method public final Akw(Ljava/util/List;I)V
-    .locals 3
-
-    .line 0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    new-array v2, v0, [Ljava/lang/String;
-
-    .line 5
-    .line 6
-    invoke-interface {p1, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    .line 9
-    invoke-static {v2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 10
-    .line 11
-    .line 12
-    iget-object v0, p0, LX/3SG;->A03:LX/3Sw;
-
-    .line 13
-    .line 14
-    new-instance v1, LX/3Sh;
-
-    .line 15
-    .line 16
-    invoke-direct {v1, v0, v2, p2}, LX/3Sh;-><init>(LX/3Sw;[Ljava/lang/String;I)V
-
-    .line 17
-    .line 18
-    .line 19
-    iget-object v0, v0, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
-
-    .line 20
-    .line 21
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 22
-    .line 23
-    .line 24
-    return-void
-.end method
-
-.method public final AlJ(LX/0Kq;LX/0Kp;)V
-    .locals 1
-
-    .line 0
-    iput-object p2, p0, LX/3SG;->A00:LX/0Kp;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/3SG;->A04:LX/3Sr;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    iput-object p1, v0, LX/3Sr;->A00:LX/0Kq;
-
-    .line 7
-    .line 8
-    :cond_0
-    return-void
-.end method
-
-.method public final Als(Z)V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/3SG;->A03:LX/3Sw;
-
-    .line 1
-    .line 2
-    iget-object v1, v2, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
-
-    .line 3
-    .line 4
-    new-instance v0, LX/3Su;
-
-    .line 5
-    .line 6
-    invoke-direct {v0, v2, p1}, LX/3Su;-><init>(LX/3Sw;Z)V
-
-    .line 7
-    .line 8
-    .line 9
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public final Ap8()V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/3SG;->A03:LX/3Sw;
-
-    .line 1
-    .line 2
-    iget-object v1, v2, LX/3Sw;->A01:Ljava/util/concurrent/Executor;
-
-    .line 3
-    .line 4
-    new-instance v0, LX/3St;
-
-    .line 5
-    .line 6
-    invoke-direct {v0, v2}, LX/3St;-><init>(LX/3Sw;)V
-
-    .line 7
-    .line 8
-    .line 9
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
+    .line 178
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

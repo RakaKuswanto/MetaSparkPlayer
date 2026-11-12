@@ -1,119 +1,199 @@
-.class public final LX/2kS;
-.super Ljava/lang/Object;
+.class public final enum LX/2Ks;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public A00:Z
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-.field public A01:LX/1zG;
+.field public static final synthetic $VALUES:[LX/2Ks;
 
-.field public final A02:LX/2vp;
+.field public static final enum COMPACT:LX/2Ks;
 
-.field public final A03:LX/5tK;
+.field public static final Companion:LX/2In;
 
-.field public final A04:Ljava/util/Queue;
+.field public static final enum EXPANDED:LX/2Ks;
 
-.field public final A05:LX/1o2;
+.field public static final enum MEDIUM:LX/2Ks;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public static final synthetic $values()[LX/2Ks;
+    .locals 3
+
+    const/4 v0, 0x3
+
+    new-array v2, v0, [LX/2Ks;
+
+    sget-object v1, LX/2Ks;->COMPACT:LX/2Ks;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2Ks;->MEDIUM:LX/2Ks;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2Ks;->EXPANDED:LX/2Ks;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "COMPACT"
 
     .line 1
     .line 2
+    const/4 v1, 0x0
+
     .line 3
-    const/4 v0, 0x1
+    new-instance v0, LX/2Ks;
 
     .line 4
-    iput-boolean v0, p0, LX/2kS;->A00:Z
-
     .line 5
-    .line 6
-    new-instance v1, Ljava/util/concurrent/LinkedBlockingQueue;
+    invoke-direct {v0, v2, v1}, LX/2Ks;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     .line 7
     .line 8
-    invoke-direct {v1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+    sput-object v0, LX/2Ks;->COMPACT:LX/2Ks;
 
     .line 9
     .line 10
-    .line 11
-    iput-object v1, p0, LX/2kS;->A04:Ljava/util/Queue;
+    const-string v2, "MEDIUM"
 
+    .line 11
     .line 12
+    const/4 v1, 0x1
+
     .line 13
-    new-instance v0, LX/5tO;
+    new-instance v0, LX/2Ks;
 
     .line 14
     .line 15
-    invoke-direct {v0, v1}, LX/5tO;-><init>(Ljava/lang/Iterable;)V
+    invoke-direct {v0, v2, v1}, LX/2Ks;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
     .line 18
-    iput-object v0, p0, LX/2kS;->A03:LX/5tK;
+    sput-object v0, LX/2Ks;->MEDIUM:LX/2Ks;
 
     .line 19
     .line 20
-    sget v0, LX/2eq;->ASd:I
+    const-string v2, "EXPANDED"
 
     .line 21
     .line 22
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     .line 23
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    new-instance v0, LX/2Ks;
 
     .line 24
     .line 25
+    invoke-direct {v0, v2, v1}, LX/2Ks;-><init>(Ljava/lang/String;I)V
+
     .line 26
-    move-result-object v0
-
     .line 27
-    check-cast v0, LX/1o2;
-
     .line 28
+    sput-object v0, LX/2Ks;->EXPANDED:LX/2Ks;
+
     .line 29
-    iput-object v0, p0, LX/2kS;->A05:LX/1o2;
-
     .line 30
-    .line 31
-    sget v0, LX/2eq;->ASe:I
+    invoke-static {}, LX/2Ks;->$values()[LX/2Ks;
 
+    .line 31
     .line 32
     .line 33
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    move-result-object v0
 
     .line 34
+    sput-object v0, LX/2Ks;->$VALUES:[LX/2Ks;
+
     .line 35
     .line 36
-    move-result-object v0
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
     .line 37
-    check-cast v0, LX/2vp;
-
     .line 38
     .line 39
-    iput-object v0, p0, LX/2kS;->A02:LX/2vp;
-
-    .line 40
-    .line 41
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 42
-    .line 43
-    .line 44
     move-result-object v0
 
-    .line 45
-    iput-object v0, p0, LX/2kS;->A01:LX/1zG;
+    .line 40
+    sput-object v0, LX/2Ks;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
+    .line 41
+    .line 42
+    new-instance v0, LX/2In;
+
+    .line 43
+    .line 44
+    invoke-direct {v0}, LX/2In;-><init>()V
+
+    .line 45
     .line 46
     .line 47
+    sput-object v0, LX/2Ks;->Companion:LX/2In;
+
+    .line 48
+    .line 49
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/2Ks;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/2Ks;
+    .locals 1
+
+    const-class v0, LX/2Ks;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/2Ks;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/2Ks;
+    .locals 1
+
+    sget-object v0, LX/2Ks;->$VALUES:[LX/2Ks;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/2Ks;
+
+    return-object v0
 .end method

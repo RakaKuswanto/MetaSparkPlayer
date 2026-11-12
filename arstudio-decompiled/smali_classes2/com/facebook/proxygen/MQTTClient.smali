@@ -68,9 +68,6 @@
 .method public native connectWithPassword(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Z)V
 .end method
 
-.method public native connectXplat(Lcom/facebook/proxygen/JniXplatMQTTConnectPayload;)V
-.end method
-
 .method public native disconnect()V
 .end method
 

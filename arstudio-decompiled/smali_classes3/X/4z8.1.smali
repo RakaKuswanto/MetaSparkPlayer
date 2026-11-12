@@ -1,17 +1,17 @@
-.class public interface abstract LX/4z8;
-.super Ljava/lang/Object;
+.class public final LX/4z8;
+.super LX/4zC;
 .source ""
 
 
-# virtual methods
-.method public abstract A6H()Landroidx/media/AudioAttributesImpl;
-.end method
+# direct methods
+.method public constructor <init>(Ljava/lang/Boolean;)V
+    .locals 0
 
-.method public abstract AlX(I)LX/4z8;
-.end method
+    .line 0
+    invoke-direct {p0, p1}, LX/4zC;-><init>(Ljava/lang/Object;)V
 
-.method public abstract AmC(I)LX/4z8;
-.end method
-
-.method public abstract AnT(I)LX/4z8;
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

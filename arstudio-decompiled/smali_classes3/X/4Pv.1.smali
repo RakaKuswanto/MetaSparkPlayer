@@ -1,293 +1,374 @@
-.class public final LX/4Pv;
-.super Ljava/lang/Object;
+.class public final LX/4pV;
+.super LX/4pn;
 .source ""
 
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
+# static fields
+.field public static final A00:Landroid/util/Property;
 
-# instance fields
-.field public final A00:I
+.field public static final A01:Landroid/util/Property;
 
-.field public final A01:I
+.field public static final A02:Landroid/util/Property;
 
-.field public final A02:I
+.field public static final A03:Landroid/util/Property;
 
-.field public final A03:Landroid/app/Dialog;
+.field public static final A04:Landroid/util/Property;
+
+.field public static final A05:[Ljava/lang/String;
+
+.field public static final A06:Landroid/util/Property;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 7
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v5, 0x5
 
     .line 1
+    new-array v6, v5, [Ljava/lang/String;
+
     .line 2
     .line 3
-    iput-object p1, p0, LX/4Pv;->A03:Landroid/app/Dialog;
+    const/4 v1, 0x0
 
     .line 4
+    const-string v0, "android:changeBounds:bounds"
+
     .line 5
-    iget v0, p2, Landroid/graphics/Rect;->left:I
-
     .line 6
-    .line 7
-    iput v0, p0, LX/4Pv;->A00:I
+    aput-object v0, v6, v1
 
+    .line 7
     .line 8
+    const/4 v1, 0x1
+
     .line 9
-    iget v0, p2, Landroid/graphics/Rect;->top:I
+    const-string v0, "android:changeBounds:clip"
 
     .line 10
     .line 11
-    iput v0, p0, LX/4Pv;->A02:I
+    aput-object v0, v6, v1
 
     .line 12
     .line 13
-    invoke-virtual {p1}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+    const/4 v4, 0x2
 
     .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledWindowTouchSlop()I
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v0
-
-    .line 25
-    iput v0, p0, LX/4Pv;->A01:I
-
-    .line 26
-    .line 27
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 5
-
-    .line 0
-    const v0, 0x1020002
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v4
-
-    .line 7
-    iget v3, p0, LX/4Pv;->A00:I
-
-    .line 8
-    .line 9
-    invoke-virtual {v4}, Landroid/view/View;->getLeft()I
-
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
-
-    .line 13
-    add-int/2addr v3, v0
-
-    .line 14
-    invoke-virtual {v4}, Landroid/view/View;->getWidth()I
+    const-string v0, "android:changeBounds:parent"
 
     .line 15
     .line 16
-    .line 17
-    move-result v2
+    aput-object v0, v6, v4
 
+    .line 17
     .line 18
-    add-int/2addr v2, v3
+    const/4 v3, 0x3
 
     .line 19
-    iget v1, p0, LX/4Pv;->A02:I
+    const-string v0, "android:changeBounds:windowX"
 
     .line 20
     .line 21
-    invoke-virtual {v4}, Landroid/view/View;->getTop()I
+    aput-object v0, v6, v3
 
     .line 22
     .line 23
+    const/4 v2, 0x4
+
     .line 24
-    move-result v0
+    const-string v0, "android:changeBounds:windowY"
 
     .line 25
-    add-int/2addr v1, v0
-
     .line 26
-    invoke-virtual {v4}, Landroid/view/View;->getHeight()I
+    aput-object v0, v6, v2
 
     .line 27
     .line 28
-    .line 29
-    move-result v0
+    sput-object v6, LX/4pV;->A05:[Ljava/lang/String;
 
+    .line 29
     .line 30
-    add-int/2addr v0, v1
+    new-instance v0, LX/4Xa;
 
     .line 31
-    int-to-float v4, v3
-
     .line 32
-    int-to-float v3, v1
+    invoke-direct {v0}, LX/4Xa;-><init>()V
 
     .line 33
-    int-to-float v1, v2
-
     .line 34
-    int-to-float v0, v0
-
     .line 35
-    new-instance v2, Landroid/graphics/RectF;
+    sput-object v0, LX/4pV;->A06:Landroid/util/Property;
 
     .line 36
     .line 37
-    invoke-direct {v2, v4, v3, v1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+    new-instance v0, LX/6fQ;
 
     .line 38
     .line 39
-    .line 40
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    invoke-direct {v0, v1}, LX/6fQ;-><init>(I)V
 
+    .line 40
     .line 41
     .line 42
-    .line 43
-    move-result v1
+    sput-object v0, LX/4pV;->A04:Landroid/util/Property;
 
+    .line 43
     .line 44
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    new-instance v0, LX/6fQ;
 
     .line 45
     .line 46
+    invoke-direct {v0, v4}, LX/6fQ;-><init>(I)V
+
     .line 47
-    move-result v0
-
     .line 48
-    invoke-virtual {v2, v1, v0}, Landroid/graphics/RectF;->contains(FF)Z
-
     .line 49
+    sput-object v0, LX/4pV;->A01:Landroid/util/Property;
+
     .line 50
     .line 51
-    move-result v0
+    new-instance v0, LX/6fQ;
 
     .line 52
-    const/4 v4, 0x0
-
     .line 53
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v3}, LX/6fQ;-><init>(I)V
 
     .line 54
     .line 55
-    return v4
-
     .line 56
-    :cond_0
-    invoke-static {p2}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
+    sput-object v0, LX/4pV;->A00:Landroid/util/Property;
 
     .line 57
     .line 58
-    .line 59
-    move-result-object v3
+    new-instance v0, LX/6fQ;
 
+    .line 59
     .line 60
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    invoke-direct {v0, v2}, LX/6fQ;-><init>(I)V
 
     .line 61
     .line 62
     .line 63
-    move-result v0
+    sput-object v0, LX/4pV;->A03:Landroid/util/Property;
 
     .line 64
-    const/4 v2, 0x1
-
     .line 65
-    if-ne v0, v2, :cond_1
+    new-instance v0, LX/6fQ;
 
     .line 66
     .line 67
-    const/4 v0, 0x4
+    invoke-direct {v0, v5}, LX/6fQ;-><init>(I)V
 
     .line 68
-    invoke-virtual {v3, v0}, Landroid/view/MotionEvent;->setAction(I)V
-
     .line 69
     .line 70
+    sput-object v0, LX/4pV;->A02:Landroid/util/Property;
+
     .line 71
-    :cond_1
+    .line 72
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, LX/4pn;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static A00(Landroid/graphics/Path;Landroid/util/Property;Ljava/lang/Object;)Landroid/animation/ObjectAnimator;
+    .locals 2
+
+    .line 0
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 72
-    .line 73
-    const/16 v0, 0x1c
+    .line 1
+    .line 2
+    const/16 v0, 0x15
 
-    .line 74
-    .line 75
-    if-ge v1, v0, :cond_2
+    .line 3
+    .line 4
+    if-lt v1, v0, :cond_0
 
-    .line 76
-    .line 77
-    invoke-virtual {v3, v4}, Landroid/view/MotionEvent;->setAction(I)V
+    .line 5
+    .line 6
+    const/4 v0, 0x0
 
-    .line 78
-    .line 79
-    .line 80
-    iget v0, p0, LX/4Pv;->A01:I
+    .line 7
+    invoke-static {p2, p1, v0, p0}, Landroid/animation/ObjectAnimator;->ofObject(Ljava/lang/Object;Landroid/util/Property;Landroid/animation/TypeConverter;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
 
-    .line 81
-    .line 82
-    neg-int v0, v0
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
 
-    .line 83
-    sub-int/2addr v0, v2
+    .line 11
+    return-object v0
 
-    .line 84
-    int-to-float v0, v0
+    .line 12
+    :cond_0
+    new-instance v1, LX/4XZ;
 
-    .line 85
-    invoke-virtual {v3, v0, v0}, Landroid/view/MotionEvent;->setLocation(FF)V
+    .line 13
+    .line 14
+    invoke-direct {v1, p0, p1}, LX/4XZ;-><init>(Landroid/graphics/Path;Landroid/util/Property;)V
 
-    .line 86
-    .line 87
-    .line 88
-    :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
+    .line 15
+    .line 16
+    .line 17
+    const/4 v0, 0x2
 
-    .line 89
-    .line 90
-    .line 91
-    iget-object v0, p0, LX/4Pv;->A03:Landroid/app/Dialog;
+    .line 18
+    new-array v0, v0, [F
 
-    .line 92
-    .line 93
-    invoke-virtual {v0, v3}, Landroid/app/Dialog;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    .line 19
+    .line 20
+    fill-array-data v0, :array_0
 
-    .line 94
-    .line 95
-    .line 96
+    .line 21
+    .line 22
+    .line 23
+    invoke-static {p2, v1, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    return-object v0
+
+    .line 28
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public static A01(LX/4pr;)V
+    .locals 7
+
+    .line 0
+    iget-object v6, p0, LX/4pr;->A00:Landroid/view/View;
+
+    .line 1
+    .line 2
+    invoke-static {v6}, LX/03U;->A0u(Landroid/view/View;)Z
+
+    .line 3
+    .line 4
+    .line 5
     move-result v0
 
-    .line 97
-    return v0
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-virtual {v6}, Landroid/view/View;->getWidth()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    invoke-virtual {v6}, Landroid/view/View;->getHeight()I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    if-eqz v0, :cond_1
+
+    .line 19
+    .line 20
+    :cond_0
+    iget-object v5, p0, LX/4pr;->A02:Ljava/util/Map;
+
+    .line 21
+    .line 22
+    invoke-virtual {v6}, Landroid/view/View;->getLeft()I
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v4
+
+    .line 26
+    invoke-virtual {v6}, Landroid/view/View;->getTop()I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v3
+
+    .line 30
+    invoke-virtual {v6}, Landroid/view/View;->getRight()I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v2
+
+    .line 34
+    invoke-virtual {v6}, Landroid/view/View;->getBottom()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    new-instance v1, Landroid/graphics/Rect;
+
+    .line 39
+    .line 40
+    invoke-direct {v1, v4, v3, v2, v0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 41
+    .line 42
+    .line 43
+    const-string v0, "android:changeBounds:bounds"
+
+    .line 44
+    .line 45
+    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 46
+    .line 47
+    .line 48
+    invoke-virtual {v6}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v1
+
+    .line 52
+    const-string v0, "android:changeBounds:parent"
+
+    .line 53
+    .line 54
+    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 55
+    .line 56
+    .line 57
+    :cond_1
+    return-void
 .end method

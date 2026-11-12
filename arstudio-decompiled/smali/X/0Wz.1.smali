@@ -2,93 +2,241 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/os/Parcelable$ClassLoaderCreator;
+.implements Landroid/os/Parcelable$Creator;
+
+
+# instance fields
+.field public final A00:I
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public constructor <init>(I)V
+    .locals 0
+
+    .line 0
+    iput p1, p0, LX/0Wz;->A00:I
+
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    iget v0, p0, LX/0Wz;->A00:I
+
+    .line 1
+    .line 2
+    packed-switch v0, :pswitch_data_0
+
+    .line 3
+    .line 4
+    .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    return-object v1
+
+    .line 7
+    :pswitch_0
+    const/4 v0, 0x0
+
+    .line 8
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    sget-object v1, Landroidx/customview/view/AbsSavedState;->A01:Landroidx/customview/view/AbsSavedState;
+
+    .line 15
+    .line 16
+    return-object v1
+
+    .line 17
+    :cond_0
+    const-string v0, "superState must be null"
+
+    .line 18
+    .line 19
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    throw v0
+
+    .line 24
+    :pswitch_1
+    const/4 v0, 0x0
+
+    .line 25
+    new-instance v1, Landroidx/fragment/app/Fragment$SavedState;
+
+    .line 26
+    .line 27
+    invoke-direct {v1, p1, v0}, Landroidx/fragment/app/Fragment$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    .line 28
+    .line 29
+    .line 30
+    return-object v1
+
+    .line 31
+    nop
+
+    .line 32
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 1
 
-    const/16 v0, 0x43e
+    .line 268435456
+    iget v0, p0, LX/0Wz;->A00:I
 
-    if-eq p0, v0, :cond_8
+    .line 268435457
+    .line 268435458
+    packed-switch v0, :pswitch_data_0
 
-    const/16 v0, 0x9f1
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    const/4 v0, 0x0
 
-    if-eq p0, v0, :cond_7
-
-    const/16 v0, 0x1452
-
-    if-eq p0, v0, :cond_6
-
-    const/16 v0, 0x1658
-
-    if-eq p0, v0, :cond_5
-
-    const/16 v0, 0x16bd
-
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x171c
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x1d25
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x1e69
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x3b34
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
+    .line 268435462
     return-object v0
 
+    .line 268435463
+    :pswitch_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    move-result-object v0
+
+    .line 268435467
+    if-nez v0, :cond_0
+
+    .line 268435468
+    .line 268435469
+    sget-object v0, Landroidx/customview/view/AbsSavedState;->A01:Landroidx/customview/view/AbsSavedState;
+
+    .line 268435470
+    .line 268435471
+    return-object v0
+
+    .line 268435472
     :cond_0
-    const-string v0, "CAA_AR_CAA_AR_SEARCH"
+    const-string v0, "superState must be null"
 
+    .line 268435473
+    .line 268435474
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 268435475
+    .line 268435476
+    .line 268435477
+    move-result-object v0
+
+    .line 268435478
+    throw v0
+
+    .line 268435479
+    :pswitch_1
+    new-instance v0, Landroidx/fragment/app/Fragment$SavedState;
+
+    .line 268435480
+    .line 268435481
+    invoke-direct {v0, p1, p2}, Landroidx/fragment/app/Fragment$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    .line 268435482
+    .line 268435483
+    .line 268435484
     return-object v0
 
-    :cond_1
-    const-string v0, "CAA_AR_CAA_AR_FRIEND_SEARCH"
+    .line 268435485
+    nop
 
+    .line 268435486
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/0Wz;->A00:I
+
+    .line 1
+    .line 2
+    packed-switch v0, :pswitch_data_0
+
+    .line 3
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    new-array v0, v0, [Ljava/lang/Object;
+
+    .line 7
+    .line 8
     return-object v0
 
-    :cond_2
-    const-string v0, "CAA_AR_CAA_PASSWORD_ENTRY"
+    .line 9
+    :pswitch_0
+    new-array v0, p1, [Landroidx/customview/view/AbsSavedState;
 
+    .line 10
+    .line 11
     return-object v0
 
-    :cond_3
-    const-string v0, "CAA_AR_SELECT_AUTHENTICATION_OPTION"
+    .line 12
+    :pswitch_1
+    new-array v0, p1, [Landroidx/fragment/app/Fragment$SavedState;
 
+    .line 13
+    .line 14
     return-object v0
 
-    :cond_4
-    const-string v0, "CAA_AR_CODE_ENTRY"
+    .line 15
+    nop
 
-    return-object v0
-
-    :cond_5
-    const-string v0, "CAA_AR_CAA_AR_AUTH_METHOD"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "CAA_AR_CAA_AR_SELECT_ACCOUNT"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "CAA_AR_SECURE_ACCOUNT"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "CAA_AR_RESET_PASSWORD"
-
-    return-object v0
+    .line 16
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

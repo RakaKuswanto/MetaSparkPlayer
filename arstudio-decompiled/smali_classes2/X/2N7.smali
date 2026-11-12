@@ -1,25 +1,8 @@
-.class public final LX/2N7;
-.super LX/2N9;
+.class public interface abstract LX/2N7;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
-    invoke-direct {p0, p1}, LX/2N9;-><init>(Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
+# virtual methods
+.method public abstract AYT(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 .end method

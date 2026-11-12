@@ -1,65 +1,74 @@
-.class public final LX/0ax;
-.super Ljava/lang/Object;
+.class public LX/0ax;
+.super Ljava/lang/RuntimeException;
 .source ""
 
 
-# instance fields
-.field public A00:Landroid/content/Context;
-
-.field public A01:LX/1zG;
-
-.field public final A02:LX/0Na;
+# static fields
+.field public static final serialVersionUID:J = 0x1L
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
+
+    .line 805306368
+    invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
+
+    .line 805306369
+    .line 805306370
+    .line 805306371
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1zE;->A00()Landroid/content/Context;
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    .line 536870912
+    invoke-direct {p0, p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
 
     .line 4
-    .line 5
-    .line 6
-    move-result-object v1
-
-    .line 7
-    iput-object v1, p0, LX/0ax;->A00:Landroid/content/Context;
-
-    .line 8
-    .line 9
-    sget v0, LX/2eq;->A8C:I
-
-    .line 10
-    .line 11
-    invoke-static {v1, v0}, LX/1zU;->A00(Landroid/content/Context;I)LX/1zU;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/0ax;->A02:LX/0Na;
-
-    .line 16
-    .line 17
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    iput-object v0, p0, LX/0ax;->A01:LX/1zG;
-
-    .line 22
-    .line 23
-    return-void
+    return-object v0
 .end method

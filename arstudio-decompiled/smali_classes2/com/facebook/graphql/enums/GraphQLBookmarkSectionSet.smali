@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLBookmarkSectionSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLBookmarkSectionSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -556,94 +556,101 @@
 
     .line 267
     .line 268
-    const-string v0, "WORK_GROUPS_ANNOUNCEMENT"
+    const-string/jumbo v0, "WORK_GROUPS_ANNOUNCEMENT"
 
     .line 269
     .line 270
+    .line 271
     aput-object v0, v2, v1
 
-    .line 271
     .line 272
+    .line 273
     const/16 v1, 0x2e
 
-    .line 273
     .line 274
-    const-string v0, "WORK_GROUPS_CROSS_COMPANY"
-
     .line 275
-    .line 276
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORK_GROUPS_CROSS_COMPANY"
 
+    .line 276
     .line 277
     .line 278
-    const/16 v1, 0x2f
+    aput-object v0, v2, v1
 
     .line 279
     .line 280
-    const-string v0, "WORK_GROUPS_FEEDBACK"
+    const/16 v1, 0x2f
 
     .line 281
     .line 282
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORK_GROUPS_FEEDBACK"
 
     .line 283
     .line 284
-    const/16 v1, 0x30
-
     .line 285
-    .line 286
-    const-string v0, "WORK_GROUPS_MULTI_COMPANY"
-
-    .line 287
-    .line 288
     aput-object v0, v2, v1
 
-    .line 289
-    .line 290
-    const/16 v1, 0x31
+    .line 286
+    .line 287
+    const/16 v1, 0x30
 
+    .line 288
+    .line 289
+    const-string/jumbo v0, "WORK_GROUPS_MULTI_COMPANY"
+
+    .line 290
     .line 291
     .line 292
-    const-string v0, "WORK_GROUPS_SOCIAL"
+    aput-object v0, v2, v1
 
     .line 293
     .line 294
-    aput-object v0, v2, v1
+    const/16 v1, 0x31
 
     .line 295
     .line 296
-    const/16 v1, 0x32
+    const-string/jumbo v0, "WORK_GROUPS_SOCIAL"
 
     .line 297
     .line 298
-    const-string v0, "WORK_GROUPS_TEAM"
-
     .line 299
-    .line 300
     aput-object v0, v2, v1
 
+    .line 300
     .line 301
+    const/16 v1, 0x32
+
     .line 302
-    const/16 v1, 0x33
-
     .line 303
-    .line 304
-    const-string v0, "WORK_PINNED_GROUPS"
+    const-string/jumbo v0, "WORK_GROUPS_TEAM"
 
+    .line 304
     .line 305
     .line 306
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 307
     .line 308
-    .line 309
-    move-result-object v0
+    const/16 v1, 0x33
 
+    .line 309
     .line 310
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLBookmarkSectionSet;->A00:Ljava/util/Set;
+    const-string/jumbo v0, "WORK_PINNED_GROUPS"
 
     .line 311
     .line 312
+    .line 313
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 314
+    .line 315
+    .line 316
+    move-result-object v0
+
+    .line 317
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLBookmarkSectionSet;->A00:Ljava/util/HashSet;
+
+    .line 318
+    .line 319
     return-void
 .end method
 
@@ -659,11 +666,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLBookmarkSectionSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLBookmarkSectionSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

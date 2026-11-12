@@ -1,104 +1,66 @@
-.class public final LX/2Yz;
-.super Ljava/lang/Object;
+.class public final LX/2YZ;
+.super LX/4iK;
 .source ""
-
-# interfaces
-.implements Lcom/facebook/common/callercontext/CallerContextable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "QTLanguagePackDownloader"
 
 
 # instance fields
-.field public final A00:LX/1Nm;
-
-.field public final A01:LX/1Nm;
-
-.field public final A02:LX/1Nm;
-
-.field public final A03:LX/1Nm;
-
-.field public final A04:LX/1Nw;
+.field public A00:I
+    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
+        type = 0x3
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/4iK;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2Yz;->A04:LX/1Nw;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A01(LX/3y7;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p1, LX/3y7;->A01:[Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    iget v0, p1, LX/3y7;->A00:I
+
+    .line 3
     .line 4
-    .line 5
-    sget v0, LX/2eq;->AYS:I
+    if-nez v0, :cond_0
 
+    .line 5
     .line 6
+    const/4 v0, 0x0
+
     .line 7
-    invoke-static {p1, v0}, LX/1Nw;->A01(LX/1Nw;I)LX/1Nm;
+    aget-object v0, v1, v0
 
     .line 8
     .line 9
+    invoke-static {v0}, LX/002;->A00(Ljava/lang/Object;)I
+
     .line 10
-    move-result-object v0
-
     .line 11
-    iput-object v0, p0, LX/2Yz;->A01:LX/1Nm;
-
     .line 12
+    move-result v0
+
     .line 13
-    sget v0, LX/2eq;->AAE:I
+    iput v0, p0, LX/2YZ;->A00:I
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, LX/2Yz;->A03:LX/1Nm;
-
-    .line 20
-    .line 21
-    sget v0, LX/2eq;->A73:I
-
-    .line 22
-    .line 23
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 24
-    .line 25
-    .line 26
-    move-result-object v0
-
-    .line 27
-    iput-object v0, p0, LX/2Yz;->A00:LX/1Nm;
-
-    .line 28
-    .line 29
-    sget v0, LX/2eq;->AYT:I
-
-    .line 30
-    .line 31
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v0
-
-    .line 35
-    iput-object v0, p0, LX/2Yz;->A02:LX/1Nm;
-
-    .line 36
-    .line 37
+    :cond_0
     return-void
 .end method

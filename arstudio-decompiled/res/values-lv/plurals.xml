@@ -3,11 +3,84 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s lapas atzīmes Patīk</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s patīk</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">Pirms %1$d dienām</item>
+        <item quantity="one">Pirms %1$d dienas</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d dienas</item>
+        <item quantity="one">%1$d diena</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d dienas</item>
+        <item quantity="zero">%1$d dienu</item>
+        <item quantity="one">%1$d diena</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d stundas</item>
+        <item quantity="zero">%1$d stundu</item>
+        <item quantity="one">%1$d stunda</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minūtes</item>
+        <item quantity="one">%1$d minūte</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d mēneši</item>
+        <item quantity="zero">%1$d mēnešu</item>
+        <item quantity="one">%1$d mēnesis</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d sekundes</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d nedēļas</item>
+        <item quantity="zero">%1$d nedēļu</item>
+        <item quantity="one">%1$d nedēļa</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Vēl %1$d dienas</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">vēl %1$d stundas</item>
+        <item quantity="one">vēl %1$d stunda</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">Vēl %1$d minūtes</item>
+        <item quantity="one">Vēl %1$d minūte</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">Vēl %1$d mēnešus</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">vēl %1$d sekundes</item>
+        <item quantity="zero">vēl %1$d sekunžu</item>
+        <item quantity="one">vēl %1$d sekunde</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">Vēl %1$d nedēļas</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">Vēl %1$d gadi</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d gadi</item>
+        <item quantity="one">%1$d gads</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">Pirms %1$d h</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d st.</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d h</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d h</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">Pirms %1$d st.</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">%1$d stundas kopš šī brīža</item>
@@ -17,7 +90,60 @@
         <item quantity="zero">%1$d minūšu no šī brīža</item>
         <item quantity="one">%1$d minūte no šī brīža</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">Pirms %1$d min</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">Pirms %1$d minūtēm</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">Pirms %1$d mēnešiem</item>
+        <item quantity="one">Pirms %1$d mēneša</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">Pirms %1$d sekundēm</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">Pirms %1$d nedēļām</item>
+        <item quantity="one">Pirms %1$d nedēļas</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">Atlikušas %1$d st.</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">Atlikušas %1$d minūtes</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">Pirms %1$d gadiem</item>
+        <item quantity="one">Pirms %1$d gada</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Tu apmeklēji pirms %1$d dienām</item>
+        <item quantity="one">Tu apmeklēji pirms %1$d dienas</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Tu apmeklēji pirms %1$d stundām</item>
+        <item quantity="one">Tu apmeklēji pirms %1$d stundas</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Tu apmeklēji pirms %1$d min</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Tu apmeklēji pirms %1$d mēnešiem</item>
+        <item quantity="one">Tu apmeklēji pirms %1$d mēneša</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Tu apmeklēji pirms %1$d nedēļām</item>
+        <item quantity="one">Tu apmeklēji pirms %1$d nedēļas</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Tu apmeklēji pirms %1$d gadiem</item>
+        <item quantity="one">Tu apmeklēji pirms %1$d gada</item>
     </plurals>
 </resources>

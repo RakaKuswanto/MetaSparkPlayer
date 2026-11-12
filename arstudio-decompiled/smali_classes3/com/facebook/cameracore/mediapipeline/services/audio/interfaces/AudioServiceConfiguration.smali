@@ -6,11 +6,11 @@
 # instance fields
 .field public mAudioGraphClientProvider:Lcom/facebook/cameracore/audiograph/AudioGraphClientProvider;
 
-.field public mAudioLogger:LX/5YX;
+.field public mAudioLogger:LX/5Ul;
 
-.field public mAudioProvider:LX/5YY;
+.field public mAudioProvider:LX/5Uk;
 
-.field public mAudioSamplesReader:LX/5Zn;
+.field public mAudioSamplesReader:LX/5Um;
 
 .field public mAudioServiceConfigurationAnnouncer:Lcom/facebook/cameracore/musiceffect/AudioServiceConfigurationAnnouncer;
 
@@ -21,8 +21,6 @@
 .field public mMuted:Z
 
 .field public mPlatform:Ljava/lang/ref/WeakReference;
-
-.field public mPlatformEffectHooks:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformEffectHooks;
 
 
 # direct methods
@@ -116,22 +114,11 @@
     return-object v0
 .end method
 
-.method public getAudioPlatformEffectHooks()Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformEffectHooks;
+.method public getAudioSamplesReader()LX/5Um;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mPlatformEffectHooks:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformEffectHooks;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public getAudioSamplesReader()LX/5Zn;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioSamplesReader:LX/5Zn;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioSamplesReader:LX/5Um;
 
     .line 1
     .line 2
@@ -209,19 +196,19 @@
 
     .line 10
     .line 11
-    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl;->mExternalAudioProvider:LX/5YY;
+    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl;->mExternalAudioProvider:LX/5Uk;
 
     .line 12
     .line 13
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioLogger:LX/5YX;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioLogger:LX/5Ul;
 
     .line 14
     .line 15
-    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl;->mAudioLogger:LX/5YX;
+    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl;->mAudioLogger:LX/5Ul;
 
     .line 16
     .line 17
-    invoke-static {p1}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {p1}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     .line 18
     .line 19
@@ -244,33 +231,22 @@
     goto :goto_0
 .end method
 
-.method public setAudioPlatformEffectHooks(Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformEffectHooks;)V
+.method public setAudioSamplesReader(LX/5Um;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mPlatformEffectHooks:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformEffectHooks;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioSamplesReader:LX/5Um;
 
     .line 1
     .line 2
     return-void
 .end method
 
-.method public setAudioSamplesReader(LX/5Zn;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioSamplesReader:LX/5Zn;
-
-    .line 1
-    .line 2
-    return-void
-.end method
-
-.method public setExternalAudioProvider(LX/5YY;)V
+.method public setExternalAudioProvider(LX/5Uk;)V
     .locals 1
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioProvider:LX/5YY;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioProvider:LX/5Uk;
 
     .line 1
     .line 2
@@ -286,7 +262,7 @@
 
     .line 7
     .line 8
-    invoke-virtual {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;->setExternalAudioProvider(LX/5YY;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;->setExternalAudioProvider(LX/5Uk;)V
 
     .line 9
     .line 10
@@ -295,11 +271,11 @@
     return-void
 .end method
 
-.method public setLoggerOnPlatform(LX/5YX;)V
+.method public setLoggerOnPlatform(LX/5Ul;)V
     .locals 2
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioLogger:LX/5YX;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->mAudioLogger:LX/5Ul;
 
     .line 1
     .line 2
@@ -339,7 +315,7 @@
 
     .line 19
     .line 20
-    iput-object p1, v0, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl;->mAudioLogger:LX/5YX;
+    iput-object p1, v0, Lcom/facebook/cameracore/mediapipeline/services/audio/implementation/AudioPlatformComponentHostImpl;->mAudioLogger:LX/5Ul;
 
     .line 21
     .line 22

@@ -2,60 +2,122 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/64z;
-
 
 # instance fields
-.field public final A00:Lcom/google/common/base/Stopwatch;
+.field public A00:I
 
-.field public final A01:Lcom/google/common/util/concurrent/SettableFuture;
+.field public A01:I
 
-.field public volatile A02:LX/64z;
+.field public A02:J
+
+.field public A03:Landroid/os/Looper;
+
+.field public A04:Ljava/lang/Object;
+
+.field public A05:Z
+
+.field public A06:Z
+
+.field public A07:Z
+
+.field public final A08:LX/5St;
+
+.field public final A09:Lcom/google/android/exoplayer2/Timeline;
+
+.field public final A0A:LX/5Sn;
+
+.field public final A0B:LX/5U4;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/os/Looper;LX/5Sn;LX/5St;Lcom/google/android/exoplayer2/Timeline;LX/5U4;I)V
     .locals 2
 
     .line 0
-    sget-object v1, LX/64s;->A0M:LX/64z;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p2, p0, LX/5R1;->A0A:LX/5Sn;
+
     .line 4
     .line 5
-    new-instance v0, Lcom/google/common/util/concurrent/SettableFuture;
+    iput-object p3, p0, LX/5R1;->A08:LX/5St;
 
     .line 6
     .line 7
-    invoke-direct {v0}, Lcom/google/common/util/concurrent/SettableFuture;-><init>()V
+    iput-object p4, p0, LX/5R1;->A09:Lcom/google/android/exoplayer2/Timeline;
 
     .line 8
     .line 9
+    iput-object p1, p0, LX/5R1;->A03:Landroid/os/Looper;
+
     .line 10
-    iput-object v0, p0, LX/5R1;->A01:Lcom/google/common/util/concurrent/SettableFuture;
-
     .line 11
+    iput-object p5, p0, LX/5R1;->A0B:LX/5U4;
+
     .line 12
-    new-instance v0, Lcom/google/common/base/Stopwatch;
-
     .line 13
-    .line 14
-    invoke-direct {v0}, Lcom/google/common/base/Stopwatch;-><init>()V
+    iput p6, p0, LX/5R1;->A00:I
 
+    .line 14
     .line 15
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
     .line 16
     .line 17
-    iput-object v0, p0, LX/5R1;->A00:Lcom/google/common/base/Stopwatch;
-
     .line 18
     .line 19
-    iput-object v1, p0, LX/5R1;->A02:LX/64z;
+    .line 20
+    iput-wide v0, p0, LX/5R1;->A02:J
 
+    .line 21
+    .line 22
+    return-void
+.end method
+
+.method public static A00(LX/5R1;Ljava/lang/Object;I)V
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, LX/5R1;->A07:Z
+
+    .line 1
+    .line 2
+    xor-int/lit8 v0, v0, 0x1
+
+    .line 3
+    .line 4
+    invoke-static {v0}, LX/55g;->A05(Z)V
+
+    .line 5
+    .line 6
+    .line 7
+    iput p2, p0, LX/5R1;->A01:I
+
+    .line 8
+    .line 9
+    iget-boolean v0, p0, LX/5R1;->A07:Z
+
+    .line 10
+    .line 11
+    xor-int/lit8 v0, v0, 0x1
+
+    .line 12
+    .line 13
+    invoke-static {v0}, LX/55g;->A05(Z)V
+
+    .line 14
+    .line 15
+    .line 16
+    iput-object p1, p0, LX/5R1;->A04:Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    invoke-virtual {p0}, LX/5R1;->A01()V
+
+    .line 19
     .line 20
     .line 21
     return-void
@@ -63,132 +125,87 @@
 
 
 # virtual methods
-.method public final A7Z(LX/650;Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)LX/64z;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final AFF()LX/650;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final AOD()I
-    .locals 1
+.method public final A01()V
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5R1;->A02:LX/64z;
+    iget-boolean v0, p0, LX/5R1;->A07:Z
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/64z;->AOD()I
+    const/4 v1, 0x1
 
     .line 3
+    xor-int/lit8 v0, v0, 0x1
+
     .line 4
     .line 5
-    move-result v0
+    invoke-static {v0}, LX/55g;->A05(Z)V
 
-    .line 6
-    return v0
-.end method
-
-.method public final APq()Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5R1;->A02:LX/64z;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/64z;->APq()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final AQn()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final AU6(Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    if-eqz p1, :cond_0
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/5R1;->A01:Lcom/google/common/util/concurrent/SettableFuture;
-
-    .line 3
-    .line 4
-    invoke-virtual {v0, p1}, LX/5QT;->set(Ljava/lang/Object;)Z
-
-    .line 5
     .line 6
     .line 7
-    return-void
-
     .line 8
-    :cond_0
-    sget-object v0, LX/64s;->A0M:LX/64z;
+    iput-boolean v1, p0, LX/5R1;->A07:Z
 
     .line 9
     .line 10
-    iput-object v0, p0, LX/5R1;->A02:LX/64z;
+    iget-object v0, p0, LX/5R1;->A0A:LX/5Sn;
 
     .line 11
     .line 12
+    invoke-interface {v0, p0}, LX/5Sn;->AjK(LX/5R1;)V
+
+    .line 13
+    .line 14
+    .line 15
     return-void
 .end method
 
-.method public final ArF()Ljava/lang/Object;
+.method public final declared-synchronized A02(Z)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/5R1;->A01:Lcom/google/common/util/concurrent/SettableFuture;
+    monitor-enter p0
 
     .line 1
+    :try_start_0
+    iget-boolean v0, p0, LX/5R1;->A05:Z
+
     .line 2
-    invoke-static {v0}, LX/20y;->A00(Ljava/util/concurrent/Future;)Ljava/lang/Object;
-
     .line 3
+    or-int/2addr p1, v0
+
     .line 4
+    iput-boolean p1, p0, LX/5R1;->A05:Z
+
     .line 5
-    move-result-object v0
-
     .line 6
-    return-object v0
-.end method
+    const/4 v0, 0x1
 
-.method public final get()Ljava/lang/Object;
-    .locals 1
+    .line 7
+    iput-boolean v0, p0, LX/5R1;->A06:Z
 
-    .line 0
-    iget-object v0, p0, LX/5R1;->A02:LX/64z;
+    .line 8
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/64z;->get()Ljava/lang/Object;
+    .line 10
+    .line 11
+    .line 12
+    monitor-exit p0
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    .line 13
+    return-void
 
-    .line 6
-    return-object v0
+    .line 14
+    :catchall_0
+    move-exception v0
+
+    .line 15
+    monitor-exit p0
+
+    .line 16
+    throw v0
 .end method

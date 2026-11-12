@@ -1,61 +1,52 @@
 .class public final LX/3Q9;
-.super Ljava/lang/Object;
+.super LX/3QB;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final A02:Ljava/util/concurrent/atomic/AtomicReference;
+# static fields
+.field public static final A00:LX/3Q9;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v2, LX/3Q9;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/0Yj;->A0k()Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {v2}, LX/3Q9;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    sput-object v2, LX/3Q9;->A00:LX/3Q9;
 
+    .line 6
     .line 7
-    iput-object v0, p0, LX/3Q9;->A01:Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v1, 0x0
 
     .line 8
+    const/4 v0, 0x1
+
     .line 9
-    invoke-static {}, LX/0Yj;->A0k()Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v2, v1, v1, v0}, LX/3QB;->A0F(Ljava/lang/Object;Ljava/util/Map;Z)Z
 
     .line 10
     .line 11
     .line 12
-    move-result-object v0
+    return-void
+.end method
 
-    .line 13
-    iput-object v0, p0, LX/3Q9;->A02:Ljava/util/concurrent/atomic/AtomicReference;
+.method public constructor <init>()V
+    .locals 0
 
-    .line 14
-    .line 15
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    .line 0
+    invoke-direct {p0}, LX/3QB;-><init>()V
 
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, LX/3Q9;->A00:LX/1zG;
-
-    .line 20
-    .line 21
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

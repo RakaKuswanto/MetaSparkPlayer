@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLAREffectMLModelAssetTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLAREffectMLModelAssetTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x2a
+    const/16 v0, 0x2c
 
     .line 1
     .line 2
@@ -23,7 +23,7 @@
     const/4 v1, 0x0
 
     .line 5
-    const-string v0, "CAFFE2_INIT_NET"
+    const-string v0, "BODY_TRACKING_3D_DETECTION"
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "CAFFE2_PREDICT_NET"
+    const-string v0, "BODY_TRACKING_3D_LANDMARK"
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "EXPRESSION_FITTING"
+    const-string v0, "CAFFE2_INIT_NET"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "FACE_TRACKER_FACE_ALIGN"
+    const-string v0, "CAFFE2_PREDICT_NET"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "FACE_TRACKER_FACE_CONTOUR"
+    const-string v0, "EXPRESSION_FITTING"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "FACE_TRACKER_FACE_DETECT"
+    const-string v0, "FACE_TRACKER_FACE_ALIGN"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "FACE_TRACKER_FACE_MESH"
+    const-string v0, "FACE_TRACKER_FACE_CONTOUR"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "MULTICLASS_INIT_NET"
+    const-string v0, "FACE_TRACKER_FACE_DETECT"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "MULTICLASS_PREDICT_NET"
+    const-string v0, "FACE_TRACKER_FACE_MESH"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "M_SUGGESTIONS_CORE_P13N_FILTERING_FEATURES"
+    const-string v0, "MULTICLASS_INIT_NET"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "M_SUGGESTIONS_CORE_P13N_FILTERING_INIT"
+    const-string v0, "MULTICLASS_PREDICT_NET"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "M_SUGGESTIONS_CORE_P13N_FILTERING_PREDICT"
+    const-string v0, "M_SUGGESTIONS_CORE_P13N_FILTERING_FEATURES"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "M_SUGGESTIONS_CORE_SENSITIVITY_INIT"
+    const-string v0, "M_SUGGESTIONS_CORE_P13N_FILTERING_INIT"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "M_SUGGESTIONS_CORE_SENSITIVITY_PREDICT"
+    const-string v0, "M_SUGGESTIONS_CORE_P13N_FILTERING_PREDICT"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "M_SUGGESTIONS_CORE_STICKER_RECEIVER_INTENT_INIT"
+    const-string v0, "M_SUGGESTIONS_CORE_SENSITIVITY_INIT"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "M_SUGGESTIONS_CORE_STICKER_RECEIVER_INTENT_PREDICT"
+    const-string v0, "M_SUGGESTIONS_CORE_SENSITIVITY_PREDICT"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "M_SUGGESTIONS_CORE_STICKER_RECEIVER_TAG_INIT"
+    const-string v0, "M_SUGGESTIONS_CORE_STICKER_RECEIVER_INTENT_INIT"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "M_SUGGESTIONS_CORE_STICKER_RECEIVER_TAG_PREDICT"
+    const-string v0, "M_SUGGESTIONS_CORE_STICKER_RECEIVER_INTENT_PREDICT"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "M_SUGGESTIONS_CORE_STICKER_SENDER_INTENT_INIT"
+    const-string v0, "M_SUGGESTIONS_CORE_STICKER_RECEIVER_TAG_INIT"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "M_SUGGESTIONS_CORE_STICKER_SENDER_INTENT_PREDICT"
+    const-string v0, "M_SUGGESTIONS_CORE_STICKER_RECEIVER_TAG_PREDICT"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "M_SUGGESTIONS_CORE_STICKER_SENDER_TAG_INIT"
+    const-string v0, "M_SUGGESTIONS_CORE_STICKER_SENDER_INTENT_INIT"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "M_SUGGESTIONS_CORE_STICKER_SENDER_TAG_PREDICT"
+    const-string v0, "M_SUGGESTIONS_CORE_STICKER_SENDER_INTENT_PREDICT"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "NAMETAG_DETECTION_INIT"
+    const-string v0, "M_SUGGESTIONS_CORE_STICKER_SENDER_TAG_INIT"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "NAMETAG_DETECTION_PRED"
+    const-string v0, "M_SUGGESTIONS_CORE_STICKER_SENDER_TAG_PREDICT"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "NAMETAG_OCR_INIT"
+    const-string v0, "NAMETAG_DETECTION_INIT"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "NAMETAG_OCR_PRED"
+    const-string v0, "NAMETAG_DETECTION_PRED"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "OCR2GO_CONFIG"
+    const-string v0, "NAMETAG_OCR_INIT"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "OCR2GO_DET_MODEL"
+    const-string v0, "NAMETAG_OCR_PRED"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "OCR2GO_RCG_MODEL"
+    const-string v0, "OCR2GO_CONFIG"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "PYTORCH_MODEL"
+    const-string v0, "OCR2GO_DET_MODEL"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "RECOGNITION_CLASSIFICATION_INIT"
+    const-string v0, "OCR2GO_RCG_MODEL"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "RECOGNITION_DETECTION_INIT"
+    const-string v0, "PYTORCH_MODEL"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "RUNTIME_RIG_RETARGETING_CONFIG"
+    const-string v0, "RECOGNITION_CLASSIFICATION_INIT"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "TARGET_RECOGNITION_CLASSIFICATION_INIT"
+    const-string v0, "RECOGNITION_DETECTION_INIT"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "TARGET_RECOGNITION_CLASSIFICATION_PRED"
+    const-string v0, "RUNTIME_RIG_RETARGETING_CONFIG"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "TARGET_RECOGNITION_DETECTION_INIT"
+    const-string v0, "TARGET_RECOGNITION_CLASSIFICATION_INIT"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "TARGET_RECOGNITION_DETECTION_PRED"
+    const-string v0, "TARGET_RECOGNITION_CLASSIFICATION_PRED"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "UNKNOWN"
+    const-string v0, "TARGET_RECOGNITION_DETECTION_INIT"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "XRAY_CLASSES"
+    const-string v0, "TARGET_RECOGNITION_DETECTION_PRED"
 
     .line 227
     .line 228
@@ -484,7 +484,7 @@
 
     .line 231
     .line 232
-    const-string v0, "XRAY_CONFIGURATION"
+    const-string v0, "UNKNOWN"
 
     .line 233
     .line 234
@@ -496,34 +496,62 @@
 
     .line 237
     .line 238
-    const-string v0, "XRAY_INIT_NET"
+    const-string/jumbo v0, "XRAY_CLASSES"
 
     .line 239
     .line 240
+    .line 241
     aput-object v0, v2, v1
 
-    .line 241
     .line 242
+    .line 243
     const/16 v1, 0x29
 
-    .line 243
     .line 244
-    const-string v0, "XRAY_PREDICT_NET"
-
     .line 245
-    .line 246
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "XRAY_CONFIGURATION"
 
+    .line 246
     .line 247
     .line 248
-    .line 249
-    move-result-object v0
+    aput-object v0, v2, v1
 
+    .line 249
     .line 250
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAREffectMLModelAssetTypeSet;->A00:Ljava/util/Set;
+    const/16 v1, 0x2a
 
     .line 251
     .line 252
+    const-string/jumbo v0, "XRAY_INIT_NET"
+
+    .line 253
+    .line 254
+    .line 255
+    aput-object v0, v2, v1
+
+    .line 256
+    .line 257
+    const/16 v1, 0x2b
+
+    .line 258
+    .line 259
+    const-string/jumbo v0, "XRAY_PREDICT_NET"
+
+    .line 260
+    .line 261
+    .line 262
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 263
+    .line 264
+    .line 265
+    move-result-object v0
+
+    .line 266
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAREffectMLModelAssetTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 267
+    .line 268
     return-void
 .end method
 
@@ -539,11 +567,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAREffectMLModelAssetTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAREffectMLModelAssetTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

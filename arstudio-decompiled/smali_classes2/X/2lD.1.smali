@@ -1,87 +1,82 @@
-.class public final LX/2lD;
-.super LX/2oT;
+.class public final LX/2Ld;
+.super Ljava/util/HashMap;
 .source ""
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/HashMap<",
+        "Ljava/lang/String;",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
+
+
 # instance fields
-.field public A00:LX/1zG;
+.field public final synthetic val$codeLocation:Ljava/lang/String;
 
-.field public final A01:LX/0Na;
+.field public final synthetic val$errorName:Ljava/lang/String;
 
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Na;
+.field public final synthetic val$humanReadableErrorMessage:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/2oT;-><init>()V
+    const-string v1, "DiskCorruptionError"
 
     .line 1
     .line 2
+    iput-object v1, p0, LX/2Ld;->val$errorName:Ljava/lang/String;
+
     .line 3
-    sget v0, LX/2eq;->ARP:I
-
     .line 4
-    .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object p1, p0, LX/2Ld;->val$codeLocation:Ljava/lang/String;
 
+    .line 5
     .line 6
+    iput-object p2, p0, LX/2Ld;->val$humanReadableErrorMessage:Ljava/lang/String;
+
     .line 7
     .line 8
-    move-result-object v0
+    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     .line 9
-    iput-object v0, p0, LX/2lD;->A02:LX/0Na;
-
     .line 10
     .line 11
-    sget v0, LX/2eq;->ARQ:I
+    const-string/jumbo v0, "err_name"
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 14
+    invoke-virtual {p0, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 15
     .line 16
-    move-result-object v0
-
     .line 17
-    iput-object v0, p0, LX/2lD;->A03:LX/0Na;
+    const-string/jumbo v0, "call_path"
 
     .line 18
     .line 19
-    sget v0, LX/2eq;->ARR:I
-
     .line 20
-    .line 21
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-virtual {p0, v0, p1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 21
     .line 22
     .line 23
+    const-string/jumbo v0, "err_message"
+
     .line 24
-    move-result-object v0
-
     .line 25
-    iput-object v0, p0, LX/2lD;->A01:LX/0Na;
-
     .line 26
-    .line 27
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-virtual {p0, v0, p2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 27
     .line 28
     .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    iput-object v0, p0, LX/2lD;->A00:LX/1zG;
-
-    .line 32
-    .line 33
     return-void
 .end method

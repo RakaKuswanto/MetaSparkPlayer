@@ -1,21 +1,31 @@
-.class public final LX/1AZ;
-.super LX/1Bn;
+.class public final LX/1Az;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/0yO;
+
+# instance fields
+.field public final A00:LX/1B8;
+
+.field public final A01:LX/1Ay;
 
 
 # direct methods
-.method public constructor <init>(I[I)V
+.method public constructor <init>(LX/1B8;LX/1Ay;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p2, p0, LX/1Az;->A01:LX/1Ay;
+
+    .line 4
+    .line 5
+    iput-object p1, p0, LX/1Az;->A00:LX/1B8;
+
+    .line 6
+    .line 7
     return-void
 .end method

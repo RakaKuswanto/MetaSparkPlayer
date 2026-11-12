@@ -1,154 +1,201 @@
-.class public final LX/1WT;
+.class public abstract LX/1wT;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "StubFbErrorReporter$2"
-
-
-# instance fields
-.field public final synthetic A00:LX/1WU;
-
-.field public final synthetic A01:Ljava/lang/Object;
-
-.field public final synthetic A02:Ljava/lang/Object;
-
-.field public final synthetic A03:Ljava/lang/String;
-
-.field public final synthetic A04:Ljava/lang/String;
-
 
 # direct methods
-.method public constructor <init>(LX/1WU;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+.method public static A00()Lcom/facebook/auth/usersession/FbUserSession;
+    .locals 1
+
+    .line 0
+    sget v0, LX/2I6;->A3O:I
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/3Fa;->A04(I)Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/1xX;
+
+    .line 7
+    .line 8
+    invoke-static {v0}, LX/1wT;->A04(LX/1xX;)Lcom/facebook/auth/usersession/FbUserSession;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
+.end method
+
+.method public static A01()Lcom/facebook/auth/usersession/FbUserSession;
+    .locals 1
+
+    .line 0
+    sget v0, LX/2I6;->A3O:I
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/3Fa;->A04(I)Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/1xX;
+
+    .line 7
+    .line 8
+    invoke-static {v0}, LX/1wT;->A04(LX/1xX;)Lcom/facebook/auth/usersession/FbUserSession;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
+.end method
+
+.method public static A02(I)Lcom/facebook/auth/usersession/FbUserSession;
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/1WT;->A00:LX/1WU;
+    invoke-static {p0}, LX/3Fa;->A04(I)Ljava/lang/Object;
 
     .line 1
     .line 2
-    iput-object p4, p0, LX/1WT;->A03:Ljava/lang/String;
-
     .line 3
+    move-result-object p0
+
     .line 4
-    iput-object p5, p0, LX/1WT;->A04:Ljava/lang/String;
+    check-cast p0, LX/1xX;
 
     .line 5
     .line 6
-    iput-object p2, p0, LX/1WT;->A01:Ljava/lang/Object;
+    invoke-static {p0}, LX/1wT;->A04(LX/1xX;)Lcom/facebook/auth/usersession/FbUserSession;
 
     .line 7
     .line 8
-    iput-object p3, p0, LX/1WT;->A02:Ljava/lang/Object;
-
     .line 9
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    .line 11
-    .line 12
-    .line 13
-    return-void
+    .line 10
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 4
+.method public static A03(Landroid/content/Context;LX/1rU;I)Lcom/facebook/auth/usersession/FbUserSession;
+    .locals 0
 
     .line 0
-    :try_start_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {p0, p1, p2}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v3
+    move-result-object p0
 
     .line 4
-    const-string v2, "Category: %s\nMessage: %s"
+    check-cast p0, LX/1xX;
 
     .line 5
     .line 6
-    iget-object v1, p0, LX/1WT;->A03:Ljava/lang/String;
+    invoke-static {p0}, LX/1wT;->A04(LX/1xX;)Lcom/facebook/auth/usersession/FbUserSession;
 
     .line 7
     .line 8
-    iget-object v0, p0, LX/1WT;->A04:Ljava/lang/String;
-
     .line 9
+    move-result-object p0
+
     .line 10
-    invoke-static {v2, v1, v0}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String;
+    return-object p0
+.end method
+
+.method public static final A04(LX/1xX;)Lcom/facebook/auth/usersession/FbUserSession;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    sget v0, LX/2I6;->A3X:I
+
+    .line 5
+    .line 6
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v2
+
+    .line 10
+    check-cast v2, LX/1xv;
 
     .line 11
     .line 12
+    invoke-interface {p0}, LX/1xX;->AMc()Lcom/facebook/auth/viewercontext/ViewerContext;
+
     .line 13
-    move-result-object v0
-
     .line 14
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 15
+    move-result-object v1
+
     .line 16
+    if-nez v1, :cond_0
+
     .line 17
-    iget-object v1, p0, LX/1WT;->A01:Ljava/lang/Object;
-
     .line 18
-    .line 19
-    if-eqz v1, :cond_0
+    invoke-interface {p0}, LX/1xX;->AHx()Lcom/facebook/auth/viewercontext/ViewerContext;
 
+    .line 19
     .line 20
     .line 21
-    const-string v0, "\nCaused By: "
+    move-result-object v1
 
     .line 22
-    .line 23
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_1
 
+    .line 23
     .line 24
+    :cond_0
+    iget-object v0, v1, Lcom/facebook/auth/viewercontext/ViewerContext;->mUserId:Ljava/lang/String;
+
     .line 25
     .line 26
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
     .line 27
     .line 28
-    .line 29
-    :cond_0
-    iget-object v0, p0, LX/1WT;->A02:Ljava/lang/Object;
+    invoke-static {v2, v1, v0}, LX/1xv;->A01(LX/1xv;Lcom/facebook/auth/viewercontext/ViewerContext;Ljava/lang/String;)Lcom/facebook/auth/usersession/FbUserSession;
 
+    .line 29
     .line 30
     .line 31
-    const-string v2, "SOFT_ERROR"
+    move-result-object v0
 
     .line 32
+    return-object v0
+
     .line 33
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :cond_1
+    sget-object v0, Lcom/facebook/auth/usersession/FbUserSession;->A01:Lcom/facebook/auth/usersession/FbUserSession;
 
     .line 34
     .line 35
-    .line 36
-    move-result-object v1
-
-    .line 37
-    invoke-static {v0}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v0
-
-    .line 41
-    invoke-static {v2, v1, v0}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 42
-    .line 43
-    .line 44
-    :catchall_0
-    return-void
+    return-object v0
 .end method

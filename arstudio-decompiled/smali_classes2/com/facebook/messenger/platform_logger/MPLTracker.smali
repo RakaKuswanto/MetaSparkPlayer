@@ -27,7 +27,7 @@
 
     .line 6
     .line 7
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 8
     .line 9
@@ -39,7 +39,7 @@
 
     .line 12
     .line 13
-    const-class v1, LX/1T5;
+    const-class v1, LX/16P;
 
     .line 14
     .line 15
@@ -47,7 +47,7 @@
 
     .line 16
     :try_start_0
-    sget-boolean v0, LX/1T5;->A00:Z
+    sget-boolean v0, LX/16P;->A00:Z
 
     .line 17
     .line 18
@@ -60,7 +60,7 @@
     .line 21
     .line 22
     .line 23
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 24
     .line 25
@@ -68,7 +68,7 @@
     const/4 v0, 0x1
 
     .line 27
-    sput-boolean v0, LX/1T5;->A00:Z
+    sput-boolean v0, LX/16P;->A00:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -103,6 +103,9 @@
     return-void
 .end method
 
+.method private final native addStoredProcedureNameNative(IILjava/lang/String;ILjava/lang/String;)V
+.end method
+
 .method private final native allSyncGroupsUpToDateNative(IILjava/lang/String;J)V
 .end method
 
@@ -110,6 +113,9 @@
 .end method
 
 .method private final native endInteractionNative(IISJ)V
+.end method
+
+.method private final native endInteractionsNative(ISJ)V
 .end method
 
 .method private final native expectPointNative(IILjava/lang/String;Z)V
@@ -152,7 +158,7 @@
     move-result-object v0
 
     .line 6
-    invoke-static {v0, p1}, LX/1T6;->A00(Ljava/lang/Object;I)LX/1T6;
+    invoke-static {v0, p1}, LX/1Cm;->A00(Ljava/lang/Object;I)LX/1Cm;
 
     .line 7
     .line 8
@@ -187,6 +193,9 @@
 .end method
 
 .method private final native recordSurfaceLeftOnlyNative(IIJLjava/lang/String;I)V
+.end method
+
+.method private final native removeExpectedPointNative(IILjava/lang/String;)V
 .end method
 
 .method private final native removeQueryNative(IILjava/lang/String;)V

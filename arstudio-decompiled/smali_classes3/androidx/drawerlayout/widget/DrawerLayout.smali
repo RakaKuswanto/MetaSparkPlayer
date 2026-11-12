@@ -2,9 +2,6 @@
 .super Landroid/view/ViewGroup;
 .source ""
 
-# interfaces
-.implements LX/4zS;
-
 
 # virtual methods
 .method public abstract getDrawerElevation()F
@@ -16,7 +13,7 @@
 .method public abstract setDrawerElevation(F)V
 .end method
 
-.method public abstract setDrawerListener(LX/4zT;)V
+.method public abstract setDrawerListener(LX/4AB;)V
 .end method
 
 .method public abstract setDrawerLockMode(I)V

@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract enableRestrictSensitiveWebContent()V
+.method public abstract getAttributionBehavior()I
 .end method
 
 .method public abstract getDisabledActionModeMenuItems()I
@@ -28,7 +28,16 @@
 .method public abstract getSafeBrowsingEnabled()Z
 .end method
 
+.method public abstract getUserAgentMetadataMap()Ljava/util/Map;
+.end method
+
 .method public abstract getWebAuthnSupport()I
+.end method
+
+.method public abstract getWebViewMediaIntegrityApiDefaultStatus()I
+.end method
+
+.method public abstract getWebViewMediaIntegrityApiOverrideRules()Ljava/util/Map;
 .end method
 
 .method public abstract getWillSuppressErrorPage()Z
@@ -38,6 +47,9 @@
 .end method
 
 .method public abstract setAlgorithmicDarkeningAllowed(Z)V
+.end method
+
+.method public abstract setAttributionBehavior(I)V
 .end method
 
 .method public abstract setDisabledActionModeMenuItems(I)V
@@ -61,7 +73,13 @@
 .method public abstract setSafeBrowsingEnabled(Z)V
 .end method
 
+.method public abstract setUserAgentMetadataFromMap(Ljava/util/Map;)V
+.end method
+
 .method public abstract setWebAuthnSupport(I)V
+.end method
+
+.method public abstract setWebViewMediaIntegrityApiStatus(ILjava/util/Map;)V
 .end method
 
 .method public abstract setWillSuppressErrorPage(Z)V

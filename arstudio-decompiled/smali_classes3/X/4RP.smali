@@ -1,63 +1,73 @@
 .class public final LX/4RP;
-.super LX/01q;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/4RI;
 
 
 # instance fields
-.field public final synthetic A00:LX/4SZ;
-
-.field public final synthetic A01:Z
+.field public final synthetic A00:LX/4RN;
 
 
 # direct methods
-.method public constructor <init>(LX/4SZ;Z)V
+.method public constructor <init>(LX/4RN;)V
     .locals 0
 
-    .line 0
-    iput-boolean p2, p0, LX/4RP;->A01:Z
+    iput-object p1, p0, LX/4RP;->A00:LX/4RN;
 
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/4RP;->A00:LX/4SZ;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    invoke-direct {p0}, LX/01q;-><init>()V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0L(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
-    .locals 1
+.method public final AbD()V
+    .locals 3
 
     .line 0
-    invoke-super {p0, p1, p2}, LX/01q;->A0L(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
+    iget-object v2, p0, LX/4RP;->A00:LX/4RN;
 
     .line 1
     .line 2
+    iget-object v1, v2, LX/4RN;->A01:Landroid/os/Looper;
+
     .line 3
-    iget-boolean v0, p0, LX/4RP;->A01:Z
-
     .line 4
-    .line 5
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLongClickable(Z)V
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
+    .line 5
     .line 6
     .line 7
+    move-result-object v0
+
     .line 8
-    iget-object v0, p0, LX/4RP;->A00:LX/4SZ;
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 9
     .line 10
-    invoke-static {p2, v0}, LX/4SY;->A02(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;LX/4SZ;)V
-
     .line 11
+    move-result v0
+
     .line 12
+    if-eqz v0, :cond_0
+
     .line 13
+    .line 14
+    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
+
+    .line 15
+    .line 16
+    .line 17
+    return-void
+
+    .line 18
+    :cond_0
+    invoke-virtual {v2}, Landroid/view/View;->postInvalidate()V
+
+    .line 19
+    .line 20
+    .line 21
     return-void
 .end method

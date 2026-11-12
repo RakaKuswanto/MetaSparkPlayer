@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 4
     .line 5

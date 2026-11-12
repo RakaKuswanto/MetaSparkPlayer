@@ -1,145 +1,203 @@
-.class public final LX/3qi;
-.super LX/3hn;
+.class public interface abstract LX/3qi;
+.super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final A01:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic A02:LX/3qh;
-
-
-# direct methods
-.method public constructor <init>(LX/3qh;)V
-    .locals 2
-
-    .line 0
-    iput-object p1, p0, LX/3qi;->A02:LX/3qh;
-
-    .line 1
-    .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    invoke-direct {p0, v0, v0}, LX/3hn;-><init>(ZZ)V
-
-    .line 4
-    .line 5
-    .line 6
-    const/4 v1, 0x0
-
-    .line 7
-    invoke-static {v1}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    iput-object v0, p0, LX/3qi;->A01:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 12
-    .line 13
-    invoke-static {v1}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, LX/3qi;->A00:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 18
-    .line 19
-    return-void
-.end method
+# interfaces
+.implements LX/3wg;
 
 
 # virtual methods
-.method public final A0G()Ljava/lang/Class;
-    .locals 1
-
-    const-class v0, LX/3qV;
-
-    return-object v0
+.method public abstract A3y(Landroid/view/ViewGroup;)V
 .end method
 
-.method public final bridge synthetic A0H(LX/0tw;)V
-    .locals 4
+.method public abstract A57()V
+.end method
 
-    .line 0
-    check-cast p1, LX/3qV;
+.method public abstract A7N(Landroid/view/ViewGroup;)V
+.end method
 
-    .line 1
-    .line 2
-    const/4 v0, 0x0
+.method public abstract A9w()I
+.end method
 
-    .line 3
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+.method public abstract A9x()I
+.end method
 
-    .line 4
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/3qi;->A02:LX/3qh;
+.method public abstract AAI()Ljava/util/List;
+.end method
 
-    .line 7
-    .line 8
-    iget-object v3, v0, LX/3qh;->A00:LX/3nu;
+.method public abstract AAa()I
+.end method
 
-    .line 9
-    .line 10
-    if-eqz v3, :cond_1
+.method public abstract AAc()LX/3tL;
+.end method
 
-    .line 11
-    .line 12
-    invoke-virtual {v3}, LX/3nu;->getPlayerState()LX/3qu;
+.method public abstract ABs()Ljava/lang/String;
+.end method
 
-    .line 13
-    .line 14
-    .line 15
-    iget-object v2, p1, LX/3qV;->A03:LX/3oO;
+.method public abstract ADO()I
+.end method
 
-    .line 16
-    .line 17
-    iget v0, p1, LX/3qV;->A02:I
+.method public abstract AEi()Ljava/util/List;
+.end method
 
-    .line 18
-    .line 19
-    invoke-virtual {v3}, LX/3nu;->getCurrentPositionMs()I
+.method public abstract AF6()Ljava/lang/String;
+.end method
 
-    .line 20
-    .line 21
-    .line 22
-    const/4 v1, -0x1
+.method public abstract AGF()J
+.end method
 
-    .line 23
-    if-eq v0, v1, :cond_0
+.method public abstract AGU()I
+.end method
 
-    .line 24
-    .line 25
-    invoke-virtual {v3, v2, v0}, LX/3nu;->A11(LX/3oO;I)V
+.method public abstract AGW()I
+.end method
 
-    .line 26
-    .line 27
-    .line 28
-    :cond_0
-    iget v0, p1, LX/3qV;->A01:I
+.method public abstract AGY()J
+.end method
 
-    .line 29
-    .line 30
-    if-eq v0, v1, :cond_1
+.method public abstract AGZ()Ljava/lang/Long;
+.end method
 
-    .line 31
-    .line 32
-    invoke-virtual {v3, v0}, LX/3nu;->A0t(I)V
+.method public abstract AGa()Ljava/lang/Long;
+.end method
 
-    .line 33
-    .line 34
-    .line 35
-    :cond_1
-    return-void
+.method public abstract AHU()Ljava/lang/String;
+.end method
+
+.method public abstract AIZ()J
+.end method
+
+.method public abstract AIa()F
+.end method
+
+.method public abstract AIb()F
+.end method
+
+.method public abstract AIf()J
+.end method
+
+.method public abstract AIh()Landroid/view/View;
+.end method
+
+.method public abstract AL3()I
+.end method
+
+.method public abstract ALL()Ljava/lang/String;
+.end method
+
+.method public abstract ALi()I
+.end method
+
+.method public abstract AM6()Ljava/lang/Float;
+.end method
+
+.method public abstract AML()I
+.end method
+
+.method public abstract AMM()I
+.end method
+
+.method public abstract AMY()Ljava/lang/String;
+.end method
+
+.method public abstract AMg()F
+.end method
+
+.method public abstract AOW()Z
+.end method
+
+.method public abstract APN()Z
+.end method
+
+.method public abstract APj()Z
+.end method
+
+.method public abstract APl()Z
+.end method
+
+.method public abstract APm(Landroid/view/ViewGroup;)Z
+.end method
+
+.method public abstract APu()Z
+.end method
+
+.method public abstract AQ2()Z
+.end method
+
+.method public abstract AQK()Z
+.end method
+
+.method public abstract AQP()Z
+.end method
+
+.method public abstract AR7()V
+.end method
+
+.method public abstract Ae6(Ljava/lang/String;)V
+.end method
+
+.method public abstract Ae7()V
+.end method
+
+.method public abstract AeF()V
+.end method
+
+.method public abstract AeJ()V
+.end method
+
+.method public abstract AiB(LX/3nM;)V
+.end method
+
+.method public abstract AiC(LX/3nM;Z)V
+.end method
+
+.method public abstract Aj8(IZ)V
+.end method
+
+.method public abstract Aj9(LX/3uz;)V
+.end method
+
+.method public abstract Akt(Z)V
+.end method
+
+.method public abstract Aku(Z)V
+.end method
+
+.method public abstract AlP(Ljava/lang/String;)V
+.end method
+
+.method public abstract Alj(I)V
+.end method
+
+.method public abstract Alx(LX/3vE;)V
+.end method
+
+.method public abstract Am2(ZLjava/lang/String;)V
+.end method
+
+.method public abstract Am4(Z)V
+.end method
+
+.method public abstract AmN(LX/5Ip;)V
+.end method
+
+.method public abstract AmU(Ljava/lang/String;F)V
+.end method
+
+.method public abstract Aq9()Z
+.end method
+
+.method public abstract getCurrentPositionMs()I
+.end method
+
+.method public abstract getSessionId()Ljava/lang/String;
+.end method
+
+.method public abstract isPlaying()Z
+.end method
+
+.method public abstract release()V
+.end method
+
+.method public abstract seekTo(I)V
 .end method

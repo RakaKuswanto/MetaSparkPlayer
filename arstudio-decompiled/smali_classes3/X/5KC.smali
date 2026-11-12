@@ -2,31 +2,39 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/concurrent/Executor;
-
 
 # instance fields
-.field public A00:Ljava/lang/Runnable;
+.field public A00:I
 
-.field public final A01:Ljava/lang/Object;
+.field public final A01:Landroid/util/SparseArray;
 
-.field public final A02:Ljava/util/ArrayDeque;
-
-.field public final A03:Ljava/util/concurrent/Executor;
+.field public final A02:LX/5LL;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+.method public constructor <init>()V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "executor"
-        }
-    .end annotation
+
+    .line 268435456
+    new-instance v0, LX/5LD;
+
+    .line 268435457
+    .line 268435458
+    invoke-direct {v0}, LX/5LD;-><init>()V
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    invoke-direct {p0, v0}, LX/5KC;-><init>(LX/5LL;)V
+
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    return-void
+.end method
+
+.method public constructor <init>(LX/5LL;)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,146 +42,158 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5KC;->A03:Ljava/util/concurrent/Executor;
+    invoke-static {}, LX/434;->A0S()Landroid/util/SparseArray;
 
     .line 4
     .line 5
-    invoke-static {}, LX/4BF;->A16()Ljava/util/ArrayDeque;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
+    .line 7
+    iput-object v0, p0, LX/5KC;->A01:Landroid/util/SparseArray;
+
+    .line 8
     .line 9
-    iput-object v0, p0, LX/5KC;->A02:Ljava/util/ArrayDeque;
+    iput-object p1, p0, LX/5KC;->A02:LX/5LL;
 
     .line 10
     .line 11
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    const/4 v0, -0x1
 
     .line 12
+    iput v0, p0, LX/5KC;->A00:I
+
     .line 13
     .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/5KC;->A01:Ljava/lang/Object;
-
-    .line 16
-    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/5KC;->A02:Ljava/util/ArrayDeque;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    check-cast v1, Ljava/lang/Runnable;
-
-    .line 7
-    .line 8
-    iput-object v1, p0, LX/5KC;->A00:Ljava/lang/Runnable;
-
-    .line 9
-    .line 10
-    if-eqz v1, :cond_0
-
-    .line 11
-    .line 12
-    iget-object v0, p0, LX/5KC;->A03:Ljava/util/concurrent/Executor;
-
-    .line 13
-    .line 14
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 15
-    .line 16
-    .line 17
-    :cond_0
-    return-void
-.end method
-
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final A00(I)Ljava/lang/Object;
     .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "command"
-        }
-    .end annotation
 
     .line 0
-    iget-object v2, p0, LX/5KC;->A01:Ljava/lang/Object;
+    iget v1, p0, LX/5KC;->A00:I
 
     .line 1
     .line 2
-    monitor-enter v2
+    const/4 v0, -0x1
 
     .line 3
-    :try_start_0
-    iget-object v1, p0, LX/5KC;->A02:Ljava/util/ArrayDeque;
+    if-ne v1, v0, :cond_0
 
     .line 4
     .line 5
-    new-instance v0, LX/5KD;
+    const/4 v1, 0x0
 
     .line 6
-    .line 7
-    invoke-direct {v0, p0, p1}, LX/5KD;-><init>(LX/5KC;Ljava/lang/Runnable;)V
+    :goto_0
+    iput v1, p0, LX/5KC;->A00:I
 
+    .line 7
     .line 8
+    :cond_0
+    if-lez v1, :cond_1
+
     .line 9
     .line 10
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    iget-object v0, p0, LX/5KC;->A01:Landroid/util/SparseArray;
 
     .line 11
     .line 12
-    .line 13
-    iget-object v0, p0, LX/5KC;->A00:Ljava/lang/Runnable;
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
+    .line 13
     .line 14
     .line 15
-    if-nez v0, :cond_0
+    move-result v0
 
     .line 16
-    .line 17
-    invoke-virtual {p0}, LX/5KC;->A00()V
+    if-ge p1, v0, :cond_1
 
+    .line 17
     .line 18
+    iget v0, p0, LX/5KC;->A00:I
+
     .line 19
     .line 20
-    :cond_0
-    monitor-exit v2
+    add-int/lit8 v1, v0, -0x1
 
     .line 21
-    return-void
-
     .line 22
-    :catchall_0
-    move-exception v0
+    goto :goto_0
 
     .line 23
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_1
+    :goto_1
+    iget v2, p0, LX/5KC;->A00:I
 
     .line 24
-    throw v0
+    .line 25
+    iget-object v1, p0, LX/5KC;->A01:Landroid/util/SparseArray;
+
+    .line 26
+    .line 27
+    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v0
+
+    .line 31
+    add-int/lit8 v0, v0, -0x1
+
+    .line 32
+    .line 33
+    if-ge v2, v0, :cond_2
+
+    .line 34
+    .line 35
+    add-int/lit8 v0, v2, 0x1
+
+    .line 36
+    .line 37
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    if-lt p1, v0, :cond_2
+
+    .line 42
+    .line 43
+    iget v0, p0, LX/5KC;->A00:I
+
+    .line 44
+    .line 45
+    add-int/lit8 v0, v0, 0x1
+
+    .line 46
+    .line 47
+    iput v0, p0, LX/5KC;->A00:I
+
+    .line 48
+    .line 49
+    goto :goto_1
+
+    .line 50
+    :cond_2
+    iget v0, p0, LX/5KC;->A00:I
+
+    .line 51
+    .line 52
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v0
+
+    .line 56
+    return-object v0
 .end method

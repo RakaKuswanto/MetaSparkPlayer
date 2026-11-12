@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public A00:LX/2fG;
+.field public A00:LX/26u;
 
 
 # direct methods
@@ -22,11 +22,11 @@
 
 
 # virtual methods
-.method public final A00()LX/3kr;
+.method public final A00()LX/3B3;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/conditionalworker/LollipopConditionalWorkerService;->A00:LX/2fG;
+    iget-object v0, p0, Lcom/facebook/conditionalworker/LollipopConditionalWorkerService;->A00:LX/26u;
 
     .line 1
     .line 2
@@ -34,11 +34,11 @@
 
     .line 3
     .line 4
-    sget v0, LX/2eq;->AUA:I
+    sget v0, LX/2I6;->AOR:I
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 7
     .line 8
@@ -46,11 +46,11 @@
     move-result-object v0
 
     .line 10
-    check-cast v0, LX/2fG;
+    check-cast v0, LX/26u;
 
     .line 11
     .line 12
-    iput-object v0, p0, Lcom/facebook/conditionalworker/LollipopConditionalWorkerService;->A00:LX/2fG;
+    iput-object v0, p0, Lcom/facebook/conditionalworker/LollipopConditionalWorkerService;->A00:LX/26u;
 
     .line 13
     .line 14

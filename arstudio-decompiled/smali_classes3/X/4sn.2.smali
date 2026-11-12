@@ -1,11 +1,29 @@
-.class public interface abstract LX/4sn;
-.super Ljava/lang/Object;
+.class public final LX/4sN;
+.super Landroid/os/Handler;
 .source ""
 
 
-# virtual methods
-.method public abstract AfB(Landroid/view/View;)V
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
 .end method
 
-.method public abstract AfC()V
+.method public constructor <init>(Landroid/os/Looper;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

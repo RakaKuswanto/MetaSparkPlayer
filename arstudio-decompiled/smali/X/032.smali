@@ -1,89 +1,179 @@
 .class public final LX/032;
-.super Ljava/lang/Object;
+.super LX/5b6;
 .source ""
+
+# interfaces
+.implements LX/0GL;
+
+
+# annotations
+.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
+    c = "kotlinx.coroutines.flow.internal.ChannelFlowOperator$collectWithContextUndispatched$2"
+    f = "ChannelFlow.kt"
+    i = {}
+    l = {
+        0x94
+    }
+    m = "invokeSuspend"
+    n = {}
+    s = {}
+.end annotation
+
+
+# instance fields
+.field public synthetic L$0:Ljava/lang/Object;
+
+.field public label:I
+
+.field public final synthetic this$0:LX/01K;
 
 
 # direct methods
-.method public static A00(Landroid/view/View;)I
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->getAccessibilityLiveRegion()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
-
-    .line 4
-    return p0
-.end method
-
-.method public static A01(Landroid/view/View;)V
+.method public constructor <init>(LX/5bD;LX/01K;)V
     .locals 1
 
-    .line 0
-    const/4 v0, 0x1
+    iput-object p2, p0, LX/032;->this$0:LX/01K;
 
-    .line 1
-    invoke-virtual {p0, v0}, Landroid/view/View;->setAccessibilityLiveRegion(I)V
+    const/4 v0, 0x2
 
-    .line 2
-    .line 3
-    .line 4
+    invoke-direct {p0, p1, v0}, LX/5b6;-><init>(LX/5bD;I)V
+
     return-void
 .end method
 
-.method public static A02(Landroid/view/View;Landroid/view/View;Landroid/view/ViewParent;I)V
-    .locals 0
+.method private final A00(LX/5bD;LX/0UK;)Ljava/lang/Object;
+    .locals 2
 
-    .line 0
-    invoke-interface {p2, p0, p1, p3}, Landroid/view/ViewParent;->notifySubtreeAccessibilityStateChanged(Landroid/view/View;Landroid/view/View;I)V
+    invoke-virtual {p0, p2, p1}, LX/5b1;->A04(Ljava/lang/Object;LX/5bD;)LX/5bD;
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+    move-result-object v1
+
+    check-cast v1, LX/032;
+
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
+
+    invoke-virtual {v1, v0}, LX/032;->A03(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public static A03(Landroid/view/accessibility/AccessibilityEvent;I)V
-    .locals 0
+
+# virtual methods
+.method public final A03(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
     .line 0
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setContentChangeTypes(I)V
+    invoke-static {}, LX/5bT;->A00()LX/6aL;
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-.method public static A04(Landroid/view/View;)Z
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
+    move-result-object v3
 
     .line 4
-    return p0
+    iget v0, p0, LX/032;->label:I
+
+    .line 5
+    .line 6
+    const/4 v2, 0x1
+
+    .line 7
+    if-eqz v0, :cond_1
+
+    .line 8
+    .line 9
+    if-ne v0, v2, :cond_2
+
+    .line 10
+    .line 11
+    invoke-static {p1}, LX/0Vm;->A00(Ljava/lang/Object;)V
+
+    .line 12
+    .line 13
+    .line 14
+    :cond_0
+    sget-object v3, LX/0Vw;->A00:LX/0Vw;
+
+    .line 15
+    .line 16
+    return-object v3
+
+    .line 17
+    :cond_1
+    invoke-static {p1}, LX/0Vm;->A00(Ljava/lang/Object;)V
+
+    .line 18
+    .line 19
+    .line 20
+    iget-object v1, p0, LX/032;->L$0:Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    check-cast v1, LX/0UK;
+
+    .line 23
+    .line 24
+    iget-object v0, p0, LX/032;->this$0:LX/01K;
+
+    .line 25
+    .line 26
+    iput v2, p0, LX/032;->label:I
+
+    .line 27
+    .line 28
+    invoke-virtual {v0, p0, v1}, LX/01K;->A0C(LX/5bD;LX/0UK;)Ljava/lang/Object;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    if-ne v0, v3, :cond_0
+
+    .line 33
+    .line 34
+    return-object v3
+
+    .line 35
+    :cond_2
+    invoke-static {}, LX/001;->A0D()Ljava/lang/IllegalStateException;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v0
+
+    .line 39
+    throw v0
 .end method
 
-.method public static A05(Landroid/view/View;)Z
-    .locals 0
+.method public final A04(Ljava/lang/Object;LX/5bD;)LX/5bD;
+    .locals 2
 
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
+    iget-object v1, p0, LX/032;->this$0:LX/01K;
 
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
+    new-instance v0, LX/032;
 
-    .line 4
-    return p0
+    invoke-direct {v0, p2, v1}, LX/032;-><init>(LX/5bD;LX/01K;)V
+
+    iput-object p1, v0, LX/032;->L$0:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, LX/0UK;
+
+    check-cast p2, LX/5bD;
+
+    invoke-direct {p0, p2, p1}, LX/032;->A00(LX/5bD;LX/0UK;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

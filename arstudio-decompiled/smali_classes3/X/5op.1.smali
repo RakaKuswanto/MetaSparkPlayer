@@ -1,236 +1,77 @@
-.class public final LX/5op;
+.class public interface abstract LX/5Op;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:Z
-
-.field public A02:Z
-
-.field public final A03:Landroid/os/Handler;
-
-.field public final A04:LX/5YN;
-
-.field public final A05:Ljava/util/LinkedList;
-
-.field public final A06:Ljava/util/concurrent/atomic/AtomicInteger;
-
-
-# direct methods
-.method public constructor <init>(Landroid/os/Handler;LX/5YN;)V
-    .locals 2
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    const/4 v1, 0x0
-
-    .line 4
-    invoke-static {v1}, LX/0Yj;->A0j(I)Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    iput-object v0, p0, LX/5op;->A06:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 9
-    .line 10
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    iput-object v0, p0, LX/5op;->A05:Ljava/util/LinkedList;
-
-    .line 15
-    .line 16
-    iput v1, p0, LX/5op;->A00:I
-
-    .line 17
-    .line 18
-    iput-boolean v1, p0, LX/5op;->A01:Z
-
-    .line 19
-    .line 20
-    iput-boolean v1, p0, LX/5op;->A02:Z
-
-    .line 21
-    .line 22
-    iput-object p2, p0, LX/5op;->A04:LX/5YN;
-
-    .line 23
-    .line 24
-    iput-object p1, p0, LX/5op;->A03:Landroid/os/Handler;
-
-    .line 25
-    .line 26
-    return-void
-.end method
-
-
 # virtual methods
-.method public final declared-synchronized A00(Ljava/lang/Runnable;)LX/6Le;
-    .locals 2
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-boolean v0, p0, LX/5op;->A01:Z
-
-    .line 2
-    .line 3
-    if-nez v0, :cond_0
-
-    .line 4
-    .line 5
-    iget v0, p0, LX/5op;->A00:I
-
-    .line 6
-    .line 7
-    add-int/lit8 v0, v0, 0x1
-
-    .line 8
-    .line 9
-    iput v0, p0, LX/5op;->A00:I
-
-    .line 10
-    .line 11
-    const/4 v1, 0x3
-
-    .line 12
-    new-instance v0, LX/6Le;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, p0, v1, p1}, LX/6Le;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 15
-    .line 16
-    .line 17
-    monitor-exit p0
-
-    .line 18
-    return-object v0
-
-    .line 19
-    :cond_0
-    :try_start_1
-    const-string v0, "Cannot generate callbacks after complete is called"
-
-    .line 20
-    .line 21
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 26
-    :catchall_0
-    move-exception v0
-
-    .line 27
-    monitor-exit p0
-
-    .line 28
-    throw v0
+.method public abstract A5Y(Landroid/media/MediaCrypto;Landroid/media/MediaFormat;Landroid/view/Surface;Ljava/lang/Object;I)V
 .end method
 
-.method public final declared-synchronized A01()V
-    .locals 2
+.method public abstract A7D()I
+.end method
 
-    .line 0
-    monitor-enter p0
+.method public abstract A7F(Landroid/media/MediaCodec$BufferInfo;)I
+.end method
 
-    .line 1
-    const/4 v0, 0x1
+.method public abstract AFg(I)Ljava/nio/ByteBuffer;
+.end method
 
-    .line 2
-    :try_start_0
-    iput-boolean v0, p0, LX/5op;->A01:Z
+.method public abstract AHz(I)Ljava/nio/ByteBuffer;
+.end method
 
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/5op;->A06:Ljava/util/concurrent/atomic/AtomicInteger;
+.method public abstract AI1()Landroid/media/MediaFormat;
+.end method
 
-    .line 5
-    .line 6
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+.method public abstract AIM()Landroid/util/Pair;
+.end method
 
-    .line 7
-    .line 8
-    .line 9
-    move-result v1
+.method public abstract ALk()I
+.end method
 
-    .line 10
-    iget v0, p0, LX/5op;->A00:I
+.method public abstract AQ3(I)Z
+.end method
 
-    .line 11
-    .line 12
-    if-ne v1, v0, :cond_0
+.method public abstract ASB()Z
+.end method
 
-    .line 13
-    .line 14
-    iget-object v1, p0, LX/5op;->A04:LX/5YN;
+.method public abstract Af7()V
+.end method
 
-    .line 15
-    .line 16
-    iget-object v0, p0, LX/5op;->A03:Landroid/os/Handler;
+.method public abstract Afn(IIIJI)V
+.end method
 
-    .line 17
-    .line 18
-    invoke-static {v0, v1}, LX/5pF;->A00(Landroid/os/Handler;LX/5YN;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public abstract Afp(LX/5K5;IIIJ)V
+.end method
 
-    .line 19
-    .line 20
-    .line 21
-    :cond_0
-    monitor-exit p0
+.method public abstract Agv(IJ)V
+.end method
 
-    .line 22
-    return-void
+.method public abstract Agw(IZ)V
+.end method
 
-    .line 23
-    :catchall_0
-    move-exception v0
+.method public abstract Al4(Landroid/os/Handler;LX/5Px;)V
+.end method
 
-    .line 24
-    :try_start_1
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+.method public abstract AlB(Landroid/view/Surface;)V
+.end method
 
-    .line 25
-    :catchall_1
-    move-exception v0
+.method public abstract AlH(Landroid/os/Bundle;)V
+.end method
 
-    .line 26
-    monitor-exit p0
+.method public abstract AmQ(I)V
+.end method
 
-    .line 27
-    throw v0
+.method public abstract flush()V
+.end method
+
+.method public abstract release()V
+.end method
+
+.method public abstract reset()V
+.end method
+
+.method public abstract start()V
+.end method
+
+.method public abstract stop()V
 .end method

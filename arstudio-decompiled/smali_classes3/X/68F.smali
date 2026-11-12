@@ -1,18 +1,10 @@
-.class public final LX/68F;
+.class public abstract LX/68F;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0Gk;
-
-.field public final A01:LX/3ZS;
-
-.field public final A02:LX/0Gd;
-
-
 # direct methods
-.method public constructor <init>(LX/0Gk;LX/3ZS;LX/0Gd;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -21,17 +13,21 @@
     .line 1
     .line 2
     .line 3
-    iput-object p3, p0, LX/68F;->A02:LX/0Gd;
+    return-void
+.end method
 
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/68F;->A00:LX/0Gk;
 
-    .line 6
-    .line 7
-    iput-object p2, p0, LX/68F;->A01:LX/3ZS;
+# virtual methods
+.method public createHybrid()Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
+    .locals 1
 
-    .line 8
-    .line 9
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public stop()V
+    .locals 0
+
     return-void
 .end method

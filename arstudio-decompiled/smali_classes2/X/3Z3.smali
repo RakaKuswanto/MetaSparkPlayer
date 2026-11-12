@@ -1,17 +1,35 @@
-.class public final LX/3Z3;
+.class public interface abstract LX/3Z3;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract doesRenderSupportScaling()Z
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract getAnimatedBitmapConfig()Landroid/graphics/Bitmap$Config;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract getFrame(I)LX/3Zr;
+.end method
+
+.method public abstract getFrameCount()I
+.end method
+
+.method public abstract getFrameDurations()[I
+.end method
+
+.method public abstract getFrameInfo(I)LX/3Zo;
+.end method
+
+.method public abstract getHeight()I
+.end method
+
+.method public abstract getLoopCount()I
+.end method
+
+.method public abstract getSizeInBytes()I
+.end method
+
+.method public abstract getWidth()I
 .end method

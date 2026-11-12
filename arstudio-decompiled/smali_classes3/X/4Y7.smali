@@ -1,101 +1,93 @@
-.class public final LX/4Y7;
-.super LX/4me;
+.class public abstract LX/4Y7;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
+# static fields
+.field public static final A00:[I
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_OFFSET:LX/4Y9;
-    .end annotation
-.end field
+.field public static final A01:[I
 
-.field public A01:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_SIZE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A02:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_SIZE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A03:F
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x0
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->DIMEN_SIZE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A04:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->COLOR:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A05:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->COLOR:LX/4Y9;
-    .end annotation
-.end field
+.field public static final A02:[I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    const-string v0, "CardShadow"
+    const/4 v0, 0x6
 
     .line 1
-    .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
+    new-array v0, v0, [I
 
+    .line 2
     .line 3
+    fill-array-data v0, :array_0
+
     .line 4
     .line 5
-    const/high16 v0, -0x40800000    # -1.0f
-
     .line 6
+    sput-object v0, LX/4Y7;->A00:[I
+
     .line 7
-    iput v0, p0, LX/4Y7;->A01:F
-
     .line 8
-    .line 9
-    iput v0, p0, LX/4Y7;->A02:F
+    invoke-static {}, LX/434;->A1a()[I
 
+    .line 9
     .line 10
     .line 11
+    move-result-object v0
+
+    .line 12
+    fill-array-data v0, :array_1
+
+    .line 13
+    .line 14
+    .line 15
+    sput-object v0, LX/4Y7;->A01:[I
+
+    .line 16
+    .line 17
+    const/4 v0, 0x4
+
+    .line 18
+    new-array v0, v0, [I
+
+    .line 19
+    .line 20
+    fill-array-data v0, :array_2
+
+    .line 21
+    .line 22
+    .line 23
+    sput-object v0, LX/4Y7;->A02:[I
+
+    .line 24
+    .line 25
     return-void
+
+    :array_0
+    .array-data 4
+        0x101011c
+        0x1010194
+        0x1010195
+        0x1010196
+        0x101030c
+        0x101030d
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x10100d0
+        0x1010199
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x1010199
+        0x1010449
+        0x101044a
+        0x101044b
+    .end array-data
 .end method

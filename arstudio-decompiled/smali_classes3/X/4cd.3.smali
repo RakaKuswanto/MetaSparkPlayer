@@ -7,24 +7,28 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AppLocalesStorageHelper$SerialExecutor$$ExternalSyntheticLambda0"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "EmojiCompatInitializer$BackgroundDefaultLoader$$ExternalSyntheticLambda0"
 
 
 # instance fields
-.field public final synthetic A00:LX/4cA;
+.field public final synthetic A00:LX/4ce;
 
-.field public final synthetic A01:Ljava/lang/Runnable;
+.field public final synthetic A01:LX/4cY;
+
+.field public final synthetic A02:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/4cA;Ljava/lang/Runnable;)V
+.method public synthetic constructor <init>(LX/4ce;LX/4cY;Ljava/util/concurrent/ThreadPoolExecutor;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/4cd;->A00:LX/4cA;
+    iput-object p2, p0, LX/4cd;->A01:LX/4cY;
 
-    iput-object p2, p0, LX/4cd;->A01:Ljava/lang/Runnable;
+    iput-object p1, p0, LX/4cd;->A00:LX/4ce;
+
+    iput-object p3, p0, LX/4cd;->A02:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
@@ -32,41 +36,15 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 3
 
-    .line 0
-    iget-object v1, p0, LX/4cd;->A00:LX/4cA;
+    iget-object v2, p0, LX/4cd;->A01:LX/4cY;
 
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/4cd;->A01:Ljava/lang/Runnable;
+    iget-object v1, p0, LX/4cd;->A00:LX/4ce;
 
-    .line 3
-    .line 4
-    :try_start_0
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, p0, LX/4cd;->A02:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    .line 5
-    .line 6
-    .line 7
-    invoke-static {v1}, LX/4cA;->A00(LX/4cA;)V
+    invoke-virtual {v2, v1, v0}, LX/4cY;->A00(LX/4ce;Ljava/util/concurrent/ThreadPoolExecutor;)V
 
-    .line 8
-    .line 9
-    .line 10
     return-void
-
-    .line 11
-    :catchall_0
-    move-exception v0
-
-    .line 12
-    invoke-static {v1}, LX/4cA;->A00(LX/4cA;)V
-
-    .line 13
-    .line 14
-    .line 15
-    throw v0
 .end method

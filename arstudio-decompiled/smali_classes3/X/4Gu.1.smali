@@ -1,206 +1,287 @@
-.class public final LX/4Gu;
-.super Ljava/lang/Object;
+.class public final LX/4gu;
+.super LX/4vQ;
 .source ""
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements LX/0GL;
 
 
 # instance fields
-.field public final synthetic A00:I
+.field public final synthetic $onRefresh:LX/0Gw;
 
-.field public final synthetic A01:Landroid/content/Context;
+.field public final synthetic $onScrollListeners:Ljava/util/List;
 
-.field public final synthetic A02:Landroid/os/Bundle;
+.field public final synthetic $recyclerEventsController:LX/4k1;
 
-.field public final synthetic A03:Landroid/widget/LinearLayout;
-
-.field public final synthetic A04:Landroid/widget/TextView;
-
-.field public final synthetic A05:LX/4OH;
-
-.field public final synthetic A06:Lcom/facebook/privacy/zone/policy/ZonePolicy;
-
-.field public final synthetic A07:Ljava/lang/String;
-
-.field public final synthetic A08:Ljava/lang/String;
-
-.field public final synthetic A09:Ljava/util/Map;
+.field public final synthetic this$0:LX/4gr;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Bundle;Landroid/widget/LinearLayout;Landroid/widget/TextView;LX/4OH;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;I)V
-    .locals 0
+.method public constructor <init>(LX/4gr;LX/4k1;Ljava/util/List;LX/0Gw;)V
+    .locals 1
 
-    .line 0
-    iput-object p1, p0, LX/4Gu;->A01:Landroid/content/Context;
+    iput-object p1, p0, LX/4gu;->this$0:LX/4gr;
 
-    .line 1
-    .line 2
-    iput-object p7, p0, LX/4Gu;->A07:Ljava/lang/String;
+    iput-object p4, p0, LX/4gu;->$onRefresh:LX/0Gw;
 
-    .line 3
-    .line 4
-    iput p10, p0, LX/4Gu;->A00:I
+    iput-object p3, p0, LX/4gu;->$onScrollListeners:Ljava/util/List;
 
-    .line 5
-    .line 6
-    iput-object p8, p0, LX/4Gu;->A08:Ljava/lang/String;
+    iput-object p2, p0, LX/4gu;->$recyclerEventsController:LX/4k1;
 
-    .line 7
-    .line 8
-    iput-object p3, p0, LX/4Gu;->A03:Landroid/widget/LinearLayout;
+    const/4 v0, 0x2
 
-    .line 9
-    .line 10
-    iput-object p9, p0, LX/4Gu;->A09:Ljava/util/Map;
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
 
-    .line 11
-    .line 12
-    iput-object p2, p0, LX/4Gu;->A02:Landroid/os/Bundle;
-
-    .line 13
-    .line 14
-    iput-object p6, p0, LX/4Gu;->A06:Lcom/facebook/privacy/zone/policy/ZonePolicy;
-
-    .line 15
-    .line 16
-    iput-object p4, p0, LX/4Gu;->A04:Landroid/widget/TextView;
-
-    .line 17
-    .line 18
-    iput-object p5, p0, LX/4Gu;->A05:LX/4OH;
-
-    .line 19
-    .line 20
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 21
-    .line 22
-    .line 23
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 11
+.method public final bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
     .line 0
-    iget-object v2, p0, LX/4Gu;->A01:Landroid/content/Context;
+    move-object v5, p2
 
     .line 1
-    .line 2
-    iget-object v6, p0, LX/4Gu;->A07:Ljava/lang/String;
+    check-cast v5, LX/4gD;
 
+    .line 2
     .line 3
+    const/4 v0, 0x1
+
     .line 4
-    iget v9, p0, LX/4Gu;->A00:I
+    invoke-static {v5, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 5
     .line 6
-    iget-object v7, p0, LX/4Gu;->A08:Ljava/lang/String;
-
     .line 7
+    const/4 v0, 0x0
+
     .line 8
-    iget-object v4, p0, LX/4Gu;->A03:Landroid/widget/LinearLayout;
+    iput-object v0, v5, LX/4gD;->A01:LX/4mE;
 
     .line 9
     .line 10
-    iget-object v8, p0, LX/4Gu;->A09:Ljava/util/Map;
+    invoke-virtual {v5, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 11
     .line 12
-    iget-object v3, p0, LX/4Gu;->A02:Landroid/os/Bundle;
-
     .line 13
+    iget-object v0, p0, LX/4gu;->this$0:LX/4gr;
+
     .line 14
-    iget-object v5, p0, LX/4Gu;->A06:Lcom/facebook/privacy/zone/policy/ZonePolicy;
-
     .line 15
-    .line 16
-    const/4 v10, 0x0
+    iget-boolean v0, v0, LX/4gr;->A0G:Z
 
+    .line 16
     .line 17
-    invoke-static/range {v2 .. v10}, LX/4Gp;->A01(Landroid/content/Context;Landroid/os/Bundle;Landroid/widget/LinearLayout;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;IZ)V
+    if-eqz v0, :cond_0
 
     .line 18
     .line 19
-    .line 20
-    iget-object v1, p0, LX/4Gu;->A04:Landroid/widget/TextView;
+    iget-object v1, p0, LX/4gu;->$onRefresh:LX/0Gw;
 
+    .line 20
     .line 21
-    .line 22
     const/4 v0, 0x1
 
+    .line 22
+    if-nez v1, :cond_1
+
     .line 23
-    invoke-static {v2, v1, v7, v0}, LX/4Gp;->A03(Landroid/content/Context;Landroid/widget/TextView;Ljava/lang/String;Z)V
-
     .line 24
-    .line 25
-    .line 26
-    iget-object v1, p0, LX/4Gu;->A05:LX/4OH;
+    :cond_0
+    const/4 v0, 0x0
 
+    .line 25
+    :cond_1
+    invoke-virtual {v5, v0}, Landroid/view/View;->setEnabled(Z)V
+
+    .line 26
     .line 27
     .line 28
-    invoke-virtual {v1, v10}, Landroid/view/View;->setVisibility(I)V
+    iget-object v2, p0, LX/4gu;->$onRefresh:LX/0Gw;
 
     .line 29
     .line 30
+    if-eqz v2, :cond_2
+
     .line 31
-    const v0, 0x7f080644
-
     .line 32
-    .line 33
-    .line 34
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+    const/4 v1, 0x0
 
+    .line 33
+    new-instance v0, LX/5Jb;
+
+    .line 34
     .line 35
+    invoke-direct {v0, v2, v1}, LX/5Jb;-><init>(Ljava/lang/Object;I)V
+
     .line 36
     .line 37
-    invoke-static {}, LX/4CF;->A00()LX/4CF;
-
     .line 38
+    iput-object v0, v5, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->A0H:LX/4Wq;
+
     .line 39
     .line 40
-    move-result-object v1
+    :cond_2
+    invoke-static {v5}, LX/4jP;->A00(LX/4gD;)LX/4hk;
 
     .line 41
-    const-string v0, "offer_ads_copy_code"
-
     .line 42
     .line 43
-    invoke-virtual {v1, v3, v5, v0, v8}, LX/4CF;->A0B(Landroid/os/Bundle;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;Ljava/util/Map;)V
+    move-result-object v3
 
     .line 44
+    iget-object v0, p0, LX/4gu;->$onScrollListeners:Ljava/util/List;
+
     .line 45
     .line 46
-    new-instance v3, Landroid/os/Handler;
+    if-eqz v0, :cond_3
 
     .line 47
     .line 48
-    invoke-direct {v3}, Landroid/os/Handler;-><init>()V
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     .line 49
     .line 50
     .line 51
-    new-instance v2, LX/4Gv;
+    move-result v2
 
     .line 52
+    const/4 v1, 0x0
+
     .line 53
-    invoke-direct {v2, p0}, LX/4Gv;-><init>(LX/4Gu;)V
+    :goto_0
+    if-ge v1, v2, :cond_3
 
     .line 54
     .line 55
+    iget-object v0, p0, LX/4gu;->$onScrollListeners:Ljava/util/List;
+
     .line 56
-    const-wide/16 v0, 0x3e8
-
     .line 57
-    .line 58
-    invoke-virtual {v3, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
+    .line 58
     .line 59
     .line 60
+    move-result-object v0
+
     .line 61
-    return-void
+    check-cast v0, LX/4oH;
+
+    .line 62
+    .line 63
+    invoke-virtual {v3, v0}, Landroidx/recyclerview/widget/RecyclerView;->A0r(LX/4oH;)V
+
+    .line 64
+    .line 65
+    .line 66
+    add-int/lit8 v1, v1, 0x1
+
+    .line 67
+    .line 68
+    goto :goto_0
+
+    .line 69
+    :cond_3
+    iget-object v1, p0, LX/4gu;->this$0:LX/4gr;
+
+    .line 70
+    .line 71
+    iget-object v0, v3, Landroidx/recyclerview/widget/RecyclerView;->A0F:LX/4nM;
+
+    .line 72
+    .line 73
+    if-nez v0, :cond_4
+
+    .line 74
+    .line 75
+    iget-object v0, v1, LX/4gr;->A04:LX/4nK;
+
+    .line 76
+    .line 77
+    if-eqz v0, :cond_4
+
+    .line 78
+    .line 79
+    invoke-virtual {v0, v3}, LX/4nK;->A01(Landroidx/recyclerview/widget/RecyclerView;)V
+
+    .line 80
+    .line 81
+    .line 82
+    :cond_4
+    iget-object v1, p0, LX/4gu;->$recyclerEventsController:LX/4k1;
+
+    .line 83
+    .line 84
+    if-eqz v1, :cond_5
+
+    .line 85
+    .line 86
+    iput-object v5, v1, LX/4k1;->A01:LX/4gD;
+
+    .line 87
+    .line 88
+    iget-object v0, p0, LX/4gu;->this$0:LX/4gr;
+
+    .line 89
+    .line 90
+    iget-object v0, v0, LX/4gr;->A04:LX/4nK;
+
+    .line 91
+    .line 92
+    iput-object v0, v1, LX/4k1;->A00:LX/4nK;
+
+    .line 93
+    .line 94
+    :cond_5
+    iget-boolean v0, v5, LX/4gD;->A02:Z
+
+    .line 95
+    .line 96
+    if-eqz v0, :cond_6
+
+    .line 97
+    .line 98
+    invoke-virtual {v3}, Landroid/view/View;->requestLayout()V
+
+    .line 99
+    .line 100
+    .line 101
+    const/4 v0, 0x0
+
+    .line 102
+    iput-boolean v0, v5, LX/4gD;->A02:Z
+
+    .line 103
+    .line 104
+    :cond_6
+    iget-object v2, p0, LX/4gu;->this$0:LX/4gr;
+
+    .line 105
+    .line 106
+    iget-object v4, p0, LX/4gu;->$recyclerEventsController:LX/4k1;
+
+    .line 107
+    .line 108
+    iget-object v6, p0, LX/4gu;->$onScrollListeners:Ljava/util/List;
+
+    .line 109
+    .line 110
+    const/4 v7, 0x0
+
+    .line 111
+    new-instance v1, LX/5fM;
+
+    .line 112
+    .line 113
+    invoke-direct/range {v1 .. v7}, LX/5fM;-><init>(LX/4gr;LX/4hk;LX/4k1;LX/4gD;Ljava/util/List;I)V
+
+    .line 114
+    .line 115
+    .line 116
+    return-object v1
 .end method

@@ -2,156 +2,72 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3Bd;
+
 
 # instance fields
-.field public A00:Ljava/util/Map;
-
-.field public A01:Z
-
-.field public final A02:Ljava/lang/String;
+.field public final synthetic A00:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(LX/0RP;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/2uV;->A00:LX/0RP;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
-    const/4 v0, 0x0
-
     .line 4
-    iput-boolean v0, p0, LX/2uV;->A01:Z
-
     .line 5
-    .line 6
-    iput-object p1, p0, LX/2uV;->A02:Ljava/lang/String;
-
-    .line 7
-    .line 8
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    iput-object v0, p0, LX/2uV;->A00:Ljava/util/Map;
-
-    .line 13
-    .line 14
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()Ljava/lang/String;
-    .locals 5
+.method public final A9n()Ljava/lang/String;
+    .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    iget-object v0, p0, LX/2uV;->A00:LX/0RP;
 
     .line 1
     .line 2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 3
-    move-result-object v4
-
     .line 4
-    iget-object v0, p0, LX/2uV;->A00:Ljava/util/Map;
-
     .line 5
+    move-result-object v0
+
     .line 6
-    invoke-static {v0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    check-cast v0, LX/2WU;
 
     .line 7
     .line 8
-    .line 9
-    move-result-object v3
+    iget-object v2, v0, LX/2WU;->A00:LX/2Ui;
 
+    .line 9
     .line 10
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 11
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    const-string/jumbo v0, "phone_id"
 
     .line 12
     .line 13
     .line 14
-    move-result v0
+    invoke-virtual {v2, v0, v1}, LX/2Ui;->A0B(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 15
-    if-eqz v0, :cond_1
-
     .line 16
     .line 17
-    invoke-static {v3}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    move-result-object v0
 
     .line 18
-    .line 19
-    .line 20
-    move-result-object v1
-
-    .line 21
-    if-lez v2, :cond_0
-
-    .line 22
-    .line 23
-    const-string v0, " , "
-
-    .line 24
-    .line 25
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 26
-    .line 27
-    .line 28
-    :cond_0
-    invoke-static {v1}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    invoke-static {v4, v0}, LX/0Yh;->A1S(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 33
-    .line 34
-    .line 35
-    invoke-static {v1}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
-
-    .line 36
-    .line 37
-    .line 38
-    move-result-object v0
-
-    .line 39
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 40
-    .line 41
-    .line 42
-    add-int/lit8 v2, v2, 0x1
-
-    .line 43
-    .line 44
-    goto :goto_0
-
-    .line 45
-    :cond_1
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 46
-    .line 47
-    .line 48
-    move-result-object v0
-
-    .line 49
     return-object v0
 .end method

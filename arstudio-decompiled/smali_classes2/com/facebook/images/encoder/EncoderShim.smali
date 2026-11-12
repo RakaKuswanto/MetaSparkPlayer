@@ -3,17 +3,15 @@
 .source ""
 
 # interfaces
-.implements LX/3Ge;
+.implements LX/338;
 
 
 # instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -22,11 +20,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->ARf:I
+    sget v0, LX/2I6;->AMY:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -34,36 +32,24 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/images/encoder/EncoderShim;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/images/encoder/EncoderShim;->A00:LX/0RP;
 
     .line 10
     .line 11
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, Lcom/facebook/images/encoder/EncoderShim;->A00:LX/1zG;
-
-    .line 16
-    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final A7B(Landroid/graphics/Bitmap;Ljava/io/OutputStream;)Z
+.method public final A5S(Landroid/graphics/Bitmap;Ljava/io/OutputStream;)Z
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/images/encoder/EncoderShim;->A01:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/images/encoder/EncoderShim;->A00:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -75,7 +61,7 @@
 
     .line 7
     .line 8
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A7B(Landroid/graphics/Bitmap;Ljava/io/OutputStream;)Z
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A5S(Landroid/graphics/Bitmap;Ljava/io/OutputStream;)Z
 
     .line 9
     .line 10

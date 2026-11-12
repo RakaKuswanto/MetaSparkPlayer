@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 7
 
     .line 0
@@ -39,7 +39,7 @@
     .line 5
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 6
     .line 7
@@ -47,7 +47,7 @@
     move-result-object v1
 
     .line 9
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 10
     .line 11
@@ -55,7 +55,7 @@
 
     .line 12
     .line 13
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 14
     .line 15
@@ -77,14 +77,14 @@
     .line 23
     .line 24
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 25
     .line 26
     .line 27
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 28
     .line 29
@@ -92,7 +92,7 @@
     move-result-object v1
 
     .line 31
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 32
     .line 33
@@ -121,7 +121,7 @@
 
     .line 44
     .line 45
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 46
     .line 47
@@ -133,113 +133,111 @@
 
     .line 50
     :sswitch_1
-    const-string v0, "expiration_time"
+    const-string/jumbo v0, "expiration_time"
 
     .line 51
     .line 52
+    .line 53
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 53
     .line 54
     .line 55
+    .line 56
     move-result v0
 
-    .line 56
+    .line 57
     if-eqz v0, :cond_1
 
-    .line 57
     .line 58
-    invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0G(LX/27m;LX/2DN;)Ljava/lang/Integer;
-
     .line 59
+    invoke-static {p1, p2}, LX/27L;->A0B(LX/3oD;LX/6HS;)Ljava/lang/Integer;
+
     .line 60
     .line 61
+    .line 62
     move-result-object v4
 
-    .line 62
+    .line 63
     goto :goto_0
 
-    .line 63
+    .line 64
     :sswitch_2
     const-string/jumbo v0, "group_id"
 
-    .line 64
     .line 65
     .line 66
+    .line 67
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 67
     .line 68
     .line 69
-    move-result v0
-
     .line 70
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 71
-    .line 72
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
-    .line 73
-    .line 74
-    .line 75
-    move-result-object v5
-
-    .line 76
-    goto :goto_0
-
-    .line 77
-    :sswitch_3
-    const-string v0, "access_type"
-
-    .line 78
-    .line 79
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 80
-    .line 81
-    .line 82
-    move-result v0
-
-    .line 83
     if-eqz v0, :cond_1
 
+    .line 72
+    .line 73
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v5
+
+    .line 77
+    goto :goto_0
+
+    .line 78
+    :sswitch_3
+    const-string/jumbo v0, "access_type"
+
+    .line 79
+    .line 80
+    .line 81
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 82
+    .line 83
     .line 84
+    move-result v0
+
     .line 85
-    invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0G(LX/27m;LX/2DN;)Ljava/lang/Integer;
+    if-eqz v0, :cond_1
 
     .line 86
     .line 87
+    invoke-static {p1, p2}, LX/27L;->A0B(LX/3oD;LX/6HS;)Ljava/lang/Integer;
+
     .line 88
+    .line 89
+    .line 90
     move-result-object v3
 
-    .line 89
+    .line 91
     goto :goto_0
 
-    .line 90
+    .line 92
     :sswitch_4
     const-string/jumbo v0, "notif_enabled"
 
-    .line 91
-    .line 92
     .line 93
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 94
     .line 95
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 96
+    .line 97
+    .line 98
     move-result v0
 
-    .line 97
-    if-eqz v0, :cond_1
-
-    .line 98
     .line 99
-    const-class v0, Ljava/lang/Boolean;
+    if-eqz v0, :cond_1
 
     .line 100
     .line 101
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-static {p1, p2}, LX/27L;->A08(LX/3oD;LX/6HS;)Ljava/lang/Boolean;
 
     .line 102
     .line 103
@@ -247,47 +245,51 @@
     move-result-object v2
 
     .line 105
-    check-cast v2, Ljava/lang/Boolean;
-
-    .line 106
-    .line 107
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 108
+    .line 106
     :goto_1
     new-instance v1, Lcom/facebook/ipc/composer/model/ComposerProductExclusiveModel;
 
-    .line 109
-    .line 110
+    .line 107
+    .line 108
     invoke-direct/range {v1 .. v6}, Lcom/facebook/ipc/composer/model/ComposerProductExclusiveModel;-><init>(Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 109
+    .line 110
     .line 111
-    .line 112
-    .line 113
     return-object v1
 
-    .line 114
+    .line 112
     :catch_0
     move-exception v1
 
-    .line 115
+    .line 113
     const-class v0, Lcom/facebook/ipc/composer/model/ComposerProductExclusiveModel;
+
+    .line 114
+    .line 115
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 116
     .line 117
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 118
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
     .line 119
     .line 120
-    const/4 v0, 0x0
-
     .line 121
-    throw v0
+    move-result-object v0
 
     .line 122
+    throw v0
+
+    .line 123
+    nop
+
+    .line 124
     :sswitch_data_0
     .sparse-switch
         -0x4408aece -> :sswitch_4

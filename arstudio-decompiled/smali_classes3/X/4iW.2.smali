@@ -1,34 +1,25 @@
 .class public final LX/4iW;
-.super LX/4me;
+.super LX/4iK;
 .source ""
 
 
 # instance fields
-.field public A00:Landroid/app/Dialog;
+.field public A00:I
     .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
+        type = 0x3
     .end annotation
 .end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .line 0
-    const-string v0, "SurveyOutroComponent"
+    invoke-direct {p0}, LX/4iK;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method

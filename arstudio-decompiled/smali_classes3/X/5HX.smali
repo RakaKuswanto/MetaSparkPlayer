@@ -1,45 +1,25 @@
 .class public final LX/5HX;
-.super LX/6Kx;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "Http2Connection$4"
-
-
 # instance fields
-.field public final synthetic A00:Ljava/util/List;
-
-.field public final synthetic A01:I
-
-.field public final synthetic A02:LX/5HL;
+.field public final synthetic A00:LX/5HB;
 
 
 # direct methods
-.method public varargs constructor <init>(Ljava/util/List;LX/5HL;[Ljava/lang/Object;I)V
-    .locals 1
+.method public constructor <init>(LX/5HB;)V
+    .locals 0
 
     .line 0
-    const-string v0, "OkHttp %s Push Request[%s]"
+    iput-object p1, p0, LX/5HX;->A00:LX/5HB;
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/5HX;->A02:LX/5HL;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    iput p4, p0, LX/5HX;->A01:I
-
     .line 5
-    .line 6
-    iput-object p1, p0, LX/5HX;->A00:Ljava/util/List;
-
-    .line 7
-    .line 8
-    invoke-direct {p0, v0, p3}, LX/6Kx;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 9
-    .line 10
-    .line 11
     return-void
 .end method

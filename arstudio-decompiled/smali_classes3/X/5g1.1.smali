@@ -1,17 +1,8 @@
-.class public final LX/5g1;
-.super LX/0Qc;
+.class public interface abstract LX/5g1;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/0Qc;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract ABY()LX/5g1;
 .end method

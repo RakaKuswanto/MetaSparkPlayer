@@ -1,25 +1,20 @@
-.class public final LX/4xg;
-.super LX/4xd;
+.class public abstract LX/4xG;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static A00(Landroid/content/Context;)Ljava/io/File;
+    .locals 0
 
     .line 0
-    const-string v1, "STARTUP_FEATURE_SET_DIRECTORY_BASE_PATHS"
+    invoke-virtual {p0}, Landroid/content/Context;->getCodeCacheDir()Ljava/io/File;
 
     .line 1
     .line 2
-    const-string v0, "STARTUP_FEATURE_SET_DIRECTORY_BASE_PATH"
-
     .line 3
-    .line 4
-    invoke-direct {p0, v1, v0}, LX/4xd;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object p0
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
+    .line 4
+    return-object p0
 .end method

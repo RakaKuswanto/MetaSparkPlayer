@@ -31,11 +31,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x39
+    const/16 v0, 0x32
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -63,7 +63,7 @@
 
     .line 4
     .line 5
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 6
     .line 7
@@ -139,7 +139,7 @@
 
     .line 42
     .line 43
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 44
     .line 45
@@ -155,19 +155,11 @@
 
     .line 50
     .line 51
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {p1, v0, v1}, LX/0X5;->A13(Landroid/os/Parcel;Ljava/lang/Class;Ljava/util/Map;)V
 
     .line 52
     .line 53
     .line 54
-    move-result-object v0
-
-    .line 55
-    invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->readMap(Ljava/util/Map;Ljava/lang/ClassLoader;)V
-
-    .line 56
-    .line 57
-    .line 58
     return-void
 .end method
 

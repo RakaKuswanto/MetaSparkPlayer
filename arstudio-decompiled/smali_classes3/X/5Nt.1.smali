@@ -1,8 +1,25 @@
-.class public interface abstract LX/5Nt;
+.class public final LX/5Nt;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AaC(I)V
+# instance fields
+.field public final A00:Lcom/facebook/spherical/video/spatialaudio/AudioSpatializer;
+
+
+# direct methods
+.method public constructor <init>(Lcom/facebook/spherical/video/spatialaudio/AudioSpatializer;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/5Nt;->A00:Lcom/facebook/spherical/video/spatialaudio/AudioSpatializer;
+
+    .line 4
+    .line 5
+    return-void
 .end method

@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static sInitalizedSucceded:Lcom/facebook/common/util/TriState;
+.field public static A01:Lcom/facebook/common/util/TriState;
 
 
 # instance fields
-.field public final mFbErrorReporter:LX/0Gk;
+.field public final A00:LX/0Ft;
 
 
 # direct methods
@@ -20,14 +20,14 @@
 
     .line 1
     .line 2
-    sput-object v0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->sInitalizedSucceded:Lcom/facebook/common/util/TriState;
+    sput-object v0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A01:Lcom/facebook/common/util/TriState;
 
     .line 3
     .line 4
     return-void
 .end method
 
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -36,7 +36,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1z6;->A06()LX/0Gk;
+    invoke-static {}, LX/2I6;->A07()LX/0Ft;
 
     .line 4
     .line 5
@@ -44,20 +44,14 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->mFbErrorReporter:LX/0Gk;
+    iput-object v0, p0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A00:LX/0Ft;
 
     .line 8
     .line 9
     return-void
 .end method
 
-.method private native isHeartbeatActivated()Z
-.end method
-
-.method private native nativeApply(I)Z
-.end method
-
-.method private declared-synchronized tryInit()Z
+.method private declared-synchronized A00()Z
     .locals 2
 
     .line 0
@@ -65,7 +59,7 @@
 
     .line 1
     :try_start_0
-    sget-object v1, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->sInitalizedSucceded:Lcom/facebook/common/util/TriState;
+    sget-object v1, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A01:Lcom/facebook/common/util/TriState;
 
     .line 2
     .line 3
@@ -85,7 +79,7 @@
     move-result v0
 
     .line 11
-    goto :goto_0
+    goto :goto_1
 
     .line 12
     :cond_0
@@ -94,7 +88,7 @@
     .line 13
     .line 14
     .line 15
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 16
     .line 17
@@ -103,87 +97,63 @@
 
     .line 19
     .line 20
-    sput-object v0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->sInitalizedSucceded:Lcom/facebook/common/util/TriState;
+    sput-object v0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A01:Lcom/facebook/common/util/TriState;
 
     .line 21
     .line 22
-    const/4 v0, 0x1
-
-    .line 23
     goto :goto_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
+    .line 23
     :catchall_0
     :try_start_1
     sget-object v0, Lcom/facebook/common/util/TriState;->NO:Lcom/facebook/common/util/TriState;
 
+    .line 24
     .line 25
-    .line 26
-    sput-object v0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->sInitalizedSucceded:Lcom/facebook/common/util/TriState;
+    sput-object v0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A01:Lcom/facebook/common/util/TriState;
 
+    .line 26
     .line 27
-    .line 28
     const/4 v0, 0x0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 28
+    goto :goto_1
 
     .line 29
     :goto_0
-    monitor-exit p0
+    const/4 v0, 0x1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 30
-    return v0
+    :goto_1
+    monitor-exit p0
 
     .line 31
+    return v0
+
+    .line 32
     :catchall_1
     move-exception v0
 
-    .line 32
+    .line 33
     monitor-exit p0
 
-    .line 33
+    .line 34
     throw v0
+.end method
+
+.method private native isHeartbeatActivated()Z
+.end method
+
+.method private native nativeApply(I)Z
 .end method
 
 
 # virtual methods
-.method public needsFix()Z
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->tryInit()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-nez v0, :cond_0
-
-    .line 5
-    .line 6
-    const/4 v0, 0x0
-
-    .line 7
-    return v0
-
-    .line 8
-    :cond_0
-    invoke-direct {p0}, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->isHeartbeatActivated()Z
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    return v0
-.end method
-
-.method public declared-synchronized tryApplyHeartbleedFix(Ljavax/net/ssl/SSLContext;)V
+.method public final declared-synchronized A01(Ljavax/net/ssl/SSLContext;)V
     .locals 4
 
     .line 0
@@ -194,7 +164,7 @@
 
     .line 2
     :try_start_0
-    invoke-virtual {p0}, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->needsFix()Z
+    invoke-virtual {p0}, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A02()Z
 
     .line 3
     .line 4
@@ -220,7 +190,7 @@
 
     .line 12
     :try_start_2
-    invoke-direct {p0}, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->tryInit()Z
+    invoke-direct {p0}, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A00()Z
 
     .line 13
     .line 14
@@ -285,7 +255,7 @@
 
     .line 44
     .line 45
-    invoke-static {v1}, LX/0Yh;->A03(Ljava/lang/Object;)I
+    invoke-static {v1}, LX/0X5;->A01(Ljava/lang/Object;)I
 
     .line 46
     .line 47
@@ -334,7 +304,7 @@
 
     .line 67
     .line 68
-    iget-object v2, p0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->mFbErrorReporter:LX/0Gk;
+    iget-object v2, p0, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A00:LX/0Ft;
 
     .line 69
     .line 70
@@ -343,47 +313,82 @@
     .line 71
     .line 72
     .line 73
-    const-string v0, "could not init"
+    const-string/jumbo v0, "could not init"
 
     .line 74
     .line 75
-    invoke-interface {v2, v1, v0}, LX/0Gk;->AoW(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 76
+    invoke-interface {v2, v1, v0}, LX/0Ft;->AnC(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 77
     .line 78
+    .line 79
     goto :goto_1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 79
+    .line 80
     :catchall_0
     move-exception v0
 
-    .line 80
+    .line 81
     :try_start_3
     throw v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 81
+    .line 82
     :catchall_1
     :cond_1
     :goto_1
     monitor-exit v3
 
-    .line 82
+    .line 83
     return-void
 
-    .line 83
+    .line 84
     :catchall_2
     move-exception v0
 
-    .line 84
+    .line 85
     monitor-exit v3
 
-    .line 85
+    .line 86
     throw v0
+.end method
+
+.method public final A02()Z
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->A00()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return v0
+
+    .line 8
+    :cond_0
+    invoke-direct {p0}, Lcom/facebook/ssl/openssl/heartbleed/HeartbleedMitigation;->isHeartbeatActivated()Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    return v0
 .end method
 
 .method public native wasCallbackInvoked()Z

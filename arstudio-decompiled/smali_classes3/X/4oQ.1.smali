@@ -1,129 +1,372 @@
-.class public final LX/4oQ;
-.super Ljava/lang/Object;
+.class public final LX/4Oq;
+.super Landroid/widget/SeekBar;
 .source ""
 
 
 # instance fields
-.field public A00:Ljava/util/Set;
-
-.field public final A01:Ljava/util/Map;
-
-.field public final A02:Ljava/util/Map;
+.field public final A00:LX/4Op;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v1, 0x7f0407cb
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Ye;->A0b()Ljava/util/Map;
+    invoke-direct {p0, p1, p2, v1}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
     .line 5
     .line 6
-    move-result-object v0
+    invoke-static {p0}, LX/432;->A19(Landroid/view/View;)V
 
     .line 7
-    iput-object v0, p0, LX/4oQ;->A02:Ljava/util/Map;
-
     .line 8
     .line 9
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    new-instance v0, LX/4Op;
 
     .line 10
     .line 11
+    invoke-direct {v0, p0}, LX/4Op;-><init>(Landroid/widget/SeekBar;)V
+
     .line 12
-    move-result-object v0
-
     .line 13
-    iput-object v0, p0, LX/4oQ;->A01:Ljava/util/Map;
-
     .line 14
-    .line 15
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    iput-object v0, p0, LX/4Oq;->A00:LX/4Op;
 
+    .line 15
     .line 16
+    invoke-virtual {v0, p2, v1}, LX/4Rt;->A02(Landroid/util/AttributeSet;I)V
+
     .line 17
     .line 18
-    move-result-object v0
-
     .line 19
-    iput-object v0, p0, LX/4oQ;->A00:Ljava/util/Set;
-
-    .line 20
-    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized A00(LX/4mt;)V
+.method public final drawableStateChanged()V
+    .locals 3
+
+    .line 0
+    invoke-super {p0}, Landroid/widget/AbsSeekBar;->drawableStateChanged()V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/4Oq;->A00:LX/4Op;
+
+    .line 4
+    .line 5
+    iget-object v2, v1, LX/4Op;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 6
+    .line 7
+    if-eqz v2, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    if-eqz v0, :cond_0
+
+    .line 14
+    .line 15
+    iget-object v1, v1, LX/4Op;->A05:Landroid/widget/SeekBar;
+
+    .line 16
+    .line 17
+    invoke-virtual {v1}, Landroid/view/View;->getDrawableState()[I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v0
+
+    .line 25
+    if-eqz v0, :cond_0
+
+    .line 26
+    .line 27
+    invoke-virtual {v1, v2}, Landroid/widget/ProgressBar;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 28
+    .line 29
+    .line 30
+    :cond_0
+    return-void
+.end method
+
+.method public final jumpDrawablesToCurrentState()V
     .locals 1
+
+    .line 0
+    invoke-super {p0}, Landroid/widget/AbsSeekBar;->jumpDrawablesToCurrentState()V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v0, p0, LX/4Oq;->A00:LX/4Op;
+
+    .line 4
+    .line 5
+    iget-object v0, v0, LX/4Op;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    return-void
+.end method
+
+.method public final declared-synchronized onDraw(Landroid/graphics/Canvas;)V
+    .locals 8
 
     .line 0
     monitor-enter p0
 
     .line 1
     :try_start_0
-    iget-object v0, p0, LX/4oQ;->A00:Ljava/util/Set;
+    invoke-super {p0, p1}, Landroid/widget/AbsSeekBar;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2
     .line 3
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
     .line 4
+    iget-object v5, p0, LX/4Oq;->A00:LX/4Op;
+
     .line 5
     .line 6
-    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
+    iget-object v0, v5, LX/4Op;->A00:Landroid/graphics/drawable/Drawable;
 
     .line 7
     .line 8
-    .line 9
-    move-result v0
+    if-eqz v0, :cond_3
 
+    .line 9
     .line 10
-    if-eqz v0, :cond_0
+    iget-object v6, v5, LX/4Op;->A05:Landroid/widget/SeekBar;
 
     .line 11
     .line 12
-    iget-object v0, p0, LX/4oQ;->A01:Ljava/util/Map;
+    invoke-virtual {v6}, Landroid/widget/ProgressBar;->getMax()I
 
     .line 13
     .line 14
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-
     .line 15
+    move-result v4
+
     .line 16
+    const/4 v7, 0x1
+
     .line 17
-    iget-object v0, p0, LX/4oQ;->A02:Ljava/util/Map;
+    if-le v4, v7, :cond_3
 
     .line 18
     .line 19
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, v5, LX/4Op;->A00:Landroid/graphics/drawable/Drawable;
 
     .line 20
     .line 21
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
     .line 22
+    .line 23
+    .line 24
+    move-result v1
+
+    .line 25
+    iget-object v0, v5, LX/4Op;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 26
+    .line 27
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v0
+
+    .line 31
+    if-ltz v1, :cond_0
+
+    .line 32
+    .line 33
+    div-int/lit8 v3, v1, 0x2
+
+    .line 34
+    .line 35
+    goto :goto_0
+
+    .line 36
     :cond_0
+    const/4 v3, 0x1
+
+    .line 37
+    :goto_0
+    if-ltz v0, :cond_1
+
+    .line 38
+    .line 39
+    div-int/lit8 v7, v0, 0x2
+
+    .line 40
+    .line 41
+    :cond_1
+    iget-object v2, v5, LX/4Op;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 42
+    .line 43
+    neg-int v1, v3
+
+    .line 44
+    neg-int v0, v7
+
+    .line 45
+    invoke-virtual {v2, v1, v0, v3, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    .line 46
+    .line 47
+    .line 48
+    invoke-virtual {v6}, Landroid/view/View;->getWidth()I
+
+    .line 49
+    .line 50
+    .line 51
+    move-result v0
+
+    .line 52
+    invoke-static {v6, v0}, LX/431;->A07(Landroid/view/View;I)I
+
+    .line 53
+    .line 54
+    .line 55
+    move-result v0
+
+    .line 56
+    int-to-float v3, v0
+
+    .line 57
+    int-to-float v0, v4
+
+    .line 58
+    div-float/2addr v3, v0
+
+    .line 59
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    .line 60
+    .line 61
+    .line 62
+    move-result v2
+
+    .line 63
+    invoke-virtual {v6}, Landroid/view/View;->getPaddingLeft()I
+
+    .line 64
+    .line 65
+    .line 66
+    move-result v0
+
+    .line 67
+    int-to-float v1, v0
+
+    .line 68
+    invoke-virtual {v6}, Landroid/view/View;->getHeight()I
+
+    .line 69
+    .line 70
+    .line 71
+    move-result v0
+
+    .line 72
+    div-int/lit8 v0, v0, 0x2
+
+    .line 73
+    .line 74
+    int-to-float v0, v0
+
+    .line 75
+    invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->translate(FF)V
+
+    .line 76
+    .line 77
+    .line 78
+    const/4 v1, 0x0
+
+    .line 79
+    :cond_2
+    iget-object v0, v5, LX/4Op;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 80
+    .line 81
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    .line 82
+    .line 83
+    .line 84
+    const/4 v0, 0x0
+
+    .line 85
+    invoke-virtual {p1, v3, v0}, Landroid/graphics/Canvas;->translate(FF)V
+
+    .line 86
+    .line 87
+    .line 88
+    add-int/lit8 v1, v1, 0x1
+
+    .line 89
+    .line 90
+    if-le v1, v4, :cond_2
+
+    .line 91
+    .line 92
+    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 93
+    .line 94
+    .line 95
+    :cond_3
     monitor-exit p0
 
-    .line 23
+    .line 96
     return-void
 
-    .line 24
+    .line 97
     :catchall_0
     move-exception v0
 
-    .line 25
+    .line 98
     monitor-exit p0
 
-    .line 26
+    .line 99
     throw v0
 .end method

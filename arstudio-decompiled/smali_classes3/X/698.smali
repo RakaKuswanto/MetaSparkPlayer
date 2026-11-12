@@ -1,21 +1,11 @@
-.class public final LX/698;
-.super LX/5f7;
+.class public interface abstract LX/698;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+# virtual methods
+.method public abstract deliverOnRenderThread()Z
+.end method
 
-    .line 0
-    const/16 v0, 0x502
-
-    .line 1
-    .line 2
-    invoke-direct {p0, v0, p1}, LX/5f7;-><init>(ILjava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+.method public abstract getType()LX/61j;
 .end method

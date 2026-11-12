@@ -1,38 +1,18 @@
-.class public final LX/4oY;
+.class public final LX/4oy;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5yT;
+.implements LX/4pN;
+
 
 # instance fields
-.field public final A00:F
-
-.field public final A01:F
-
-.field public final A02:J
-
-.field public final A03:Landroid/graphics/Rect;
-
-.field public final A04:LX/4nC;
-
-.field public final A05:LX/4nC;
-
-.field public final A06:LX/4nC;
-
-.field public final A07:LX/4nC;
-
-.field public final A08:LX/4nC;
-
-.field public final A09:LX/4nC;
-
-.field public final A0A:Ljava/lang/String;
-
-.field public final A0B:Ljava/lang/String;
-
-.field public final A0C:Z
+.field public A00:Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceDataSource;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;LX/4nC;LX/4nC;LX/4nC;LX/4nC;LX/4nC;LX/4nC;Ljava/lang/String;Ljava/lang/String;FFJZ)V
+.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceDataSource;)V
     .locals 0
 
     .line 0
@@ -41,57 +21,64 @@
     .line 1
     .line 2
     .line 3
-    iput-object p8, p0, LX/4oY;->A0A:Ljava/lang/String;
+    iput-object p1, p0, LX/4oy;->A00:Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceDataSource;
 
     .line 4
     .line 5
-    iput-object p9, p0, LX/4oY;->A0B:Ljava/lang/String;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final AOe()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final AVl(Lcom/facebook/arstudio/player/model/EffectFile;LX/61O;)V
+    .locals 3
+
+    .line 0
+    sget-object v2, Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceConfiguration;->GALLERY_PICKER_SERVICE_TYPE_KEY:LX/67w;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/4oy;->A00:Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceDataSource;
+
+    .line 3
+    .line 4
+    new-instance v1, Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceConfiguration;
+
+    .line 5
     .line 6
-    .line 7
-    iput-object p1, p0, LX/4oY;->A03:Landroid/graphics/Rect;
+    invoke-direct {v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceConfiguration;-><init>(Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceDataSource;)V
 
+    .line 7
     .line 8
     .line 9
-    iput-boolean p14, p0, LX/4oY;->A0C:Z
+    iget-object v0, p2, LX/61O;->A08:Ljava/util/HashMap;
 
     .line 10
     .line 11
-    iput-wide p12, p0, LX/4oY;->A02:J
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 12
     .line 13
-    iput p10, p0, LX/4oY;->A00:F
-
     .line 14
-    .line 15
-    iput p11, p0, LX/4oY;->A01:F
+    return-void
+.end method
 
-    .line 16
-    .line 17
-    iput-object p2, p0, LX/4oY;->A09:LX/4nC;
+.method public final AVn(Lcom/facebook/arstudio/player/model/EffectFile;Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectManifest;)V
+    .locals 0
 
-    .line 18
-    .line 19
-    iput-object p3, p0, LX/4oY;->A06:LX/4nC;
+    return-void
+.end method
 
-    .line 20
-    .line 21
-    iput-object p4, p0, LX/4oY;->A04:LX/4nC;
+.method public final AVo()V
+    .locals 0
 
-    .line 22
-    .line 23
-    iput-object p5, p0, LX/4oY;->A07:LX/4nC;
-
-    .line 24
-    .line 25
-    iput-object p6, p0, LX/4oY;->A05:LX/4nC;
-
-    .line 26
-    .line 27
-    iput-object p7, p0, LX/4oY;->A08:LX/4nC;
-
-    .line 28
-    .line 29
     return-void
 .end method

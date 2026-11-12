@@ -1,15 +1,14 @@
-.class public abstract LX/4DP;
+.class public final LX/4DP;
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:Landroid/webkit/WebChromeClient;
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -17,95 +16,264 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, Landroid/webkit/WebChromeClient;
+    return-void
+.end method
+
+.method public static A00(LX/4Dg;)I
+    .locals 6
+
+    .line 0
+    iget-object v1, p0, LX/4Dg;->A01:LX/4D9;
+
+    .line 1
+    .line 2
+    const/4 v5, 0x3
+
+    .line 3
+    const/4 v4, 0x2
 
     .line 4
+    const/4 v3, 0x1
+
     .line 5
-    invoke-direct {v0}, Landroid/webkit/WebChromeClient;-><init>()V
+    const/4 v2, 0x0
 
     .line 6
+    if-eqz v1, :cond_1
+
     .line 7
     .line 8
-    iput-object v0, p0, LX/4DP;->A00:Landroid/webkit/WebChromeClient;
+    invoke-virtual {v1}, LX/4D9;->A0M()Z
 
     .line 9
     .line 10
-    return-void
+    .line 11
+    move-result v0
+
+    .line 12
+    if-eqz v0, :cond_3
+
+    .line 13
+    .line 14
+    instance-of v0, v1, LX/4Cc;
+
+    .line 15
+    .line 16
+    if-nez v0, :cond_0
+
+    .line 17
+    .line 18
+    instance-of v0, v1, LX/4Ch;
+
+    .line 19
+    .line 20
+    if-eqz v0, :cond_3
+
+    .line 21
+    .line 22
+    :cond_0
+    return v2
+
+    .line 23
+    :cond_1
+    iget-object v1, p0, LX/4Dg;->A03:Ljava/lang/String;
+
+    .line 24
+    .line 25
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
+
+    .line 29
+    sparse-switch v0, :sswitch_data_0
+
+    .line 30
+    .line 31
+    .line 32
+    :cond_2
+    return v5
+
+    .line 33
+    :sswitch_0
+    const-string v0, "BLOKS_PAYMENT_USAGE"
+
+    .line 34
+    .line 35
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v0
+
+    .line 39
+    if-nez v0, :cond_4
+
+    .line 40
+    .line 41
+    return v5
+
+    .line 42
+    :cond_3
+    invoke-virtual {v1}, LX/4D9;->A0M()Z
+
+    .line 43
+    .line 44
+    .line 45
+    move-result v0
+
+    .line 46
+    if-nez v0, :cond_5
+
+    .line 47
+    .line 48
+    instance-of v0, v1, LX/4Cc;
+
+    .line 49
+    .line 50
+    if-nez v0, :cond_4
+
+    .line 51
+    .line 52
+    instance-of v0, v1, LX/4Ch;
+
+    .line 53
+    .line 54
+    if-eqz v0, :cond_2
+
+    .line 55
+    .line 56
+    :cond_4
+    return v4
+
+    .line 57
+    :sswitch_1
+    const-string v0, "BLOKS_HYBRID_PAYMENT_USAGE"
+
+    .line 58
+    .line 59
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 60
+    .line 61
+    .line 62
+    move-result v0
+
+    .line 63
+    if-nez v0, :cond_0
+
+    .line 64
+    .line 65
+    return v5
+
+    .line 66
+    :sswitch_2
+    const-string v0, "BLOKS_CONTACT_USAGE"
+
+    .line 67
+    .line 68
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 69
+    .line 70
+    .line 71
+    move-result v0
+
+    .line 72
+    if-nez v0, :cond_5
+
+    .line 73
+    .line 74
+    return v5
+
+    .line 75
+    :cond_5
+    return v3
+
+    .line 76
+    :sswitch_data_0
+    .sparse-switch
+        -0x56fac16a -> :sswitch_0
+        0x9a40477 -> :sswitch_1
+        0x7884b530 -> :sswitch_2
+    .end sparse-switch
 .end method
 
 
 # virtual methods
-.method public final A00(Landroid/webkit/PermissionRequest;)V
-    .locals 1
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 5
 
     .line 0
-    iget-object v0, p0, LX/4DP;->A00:Landroid/webkit/WebChromeClient;
+    check-cast p1, LX/4Dg;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1}, Landroid/webkit/WebChromeClient;->onPermissionRequest(Landroid/webkit/PermissionRequest;)V
+    check-cast p2, LX/4Dg;
 
     .line 3
     .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final A01(Landroid/webkit/PermissionRequest;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4DP;->A00:Landroid/webkit/WebChromeClient;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, Landroid/webkit/WebChromeClient;->onPermissionRequestCanceled(Landroid/webkit/PermissionRequest;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final A02(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/4FM;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    const-string v0, "onShowFileChooser"
+    invoke-static {p1}, LX/4DP;->A00(LX/4Dg;)I
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
     .line 7
+    move-result v1
+
     .line 8
+    invoke-static {p2}, LX/4DP;->A00(LX/4Dg;)I
+
     .line 9
-    move-result-object v0
-
     .line 10
-    throw v0
-
     .line 11
-    :cond_0
-    iget-object v0, p0, LX/4DP;->A00:Landroid/webkit/WebChromeClient;
+    move-result v0
 
     .line 12
+    sub-int/2addr v1, v0
+
     .line 13
-    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebChromeClient;->onShowFileChooser(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
+    if-nez v1, :cond_0
 
     .line 14
     .line 15
-    .line 16
-    move-result v0
+    iget-wide v3, p1, LX/4Dg;->A00:J
 
+    .line 16
     .line 17
-    return v0
+    iget-wide v1, p2, LX/4Dg;->A00:J
+
+    .line 18
+    .line 19
+    cmp-long v0, v3, v1
+
+    .line 20
+    .line 21
+    if-gez v0, :cond_1
+
+    .line 22
+    .line 23
+    const/4 v1, -0x1
+
+    .line 24
+    :cond_0
+    return v1
+
+    .line 25
+    :cond_1
+    cmp-long v0, v3, v1
+
+    .line 26
+    .line 27
+    invoke-static {v0}, LX/0X6;->A1R(I)Z
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v1
+
+    .line 31
+    return v1
 .end method

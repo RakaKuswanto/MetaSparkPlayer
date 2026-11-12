@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static sCallback:LX/0D6;
+.field public static sCallback:LX/0HF;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 4
     .line 5
@@ -51,7 +51,7 @@
 
     .line 3
     :try_start_0
-    sget-object v0, Lcom/facebook/xplat/fbglog/FbGlog;->sCallback:LX/0D6;
+    sget-object v0, Lcom/facebook/xplat/fbglog/FbGlog;->sCallback:LX/0HF;
 
     .line 4
     .line 5
@@ -59,20 +59,20 @@
 
     .line 6
     .line 7
-    new-instance v2, LX/0D6;
+    new-instance v2, LX/0HF;
 
     .line 8
     .line 9
-    invoke-direct {v2}, LX/0D6;-><init>()V
+    invoke-direct {v2}, LX/0HF;-><init>()V
 
     .line 10
     .line 11
     .line 12
-    sput-object v2, Lcom/facebook/xplat/fbglog/FbGlog;->sCallback:LX/0D6;
+    sput-object v2, Lcom/facebook/xplat/fbglog/FbGlog;->sCallback:LX/0HF;
 
     .line 13
     .line 14
-    const-class v1, LX/0Jt;
+    const-class v1, LX/0Il;
 
     .line 15
     .line 16
@@ -82,7 +82,7 @@
 
     .line 17
     :try_start_1
-    sget-object v0, LX/0Jt;->A00:Ljava/util/List;
+    sget-object v0, LX/0Il;->A00:Ljava/util/List;
 
     .line 18
     .line 19
@@ -97,11 +97,11 @@
     monitor-exit v1
 
     .line 23
-    sget-object v0, LX/0Jt;->A01:LX/0I6;
+    sget-object v0, LX/0Il;->A01:LX/0HQ;
 
     .line 24
     .line 25
-    invoke-interface {v0}, LX/0I6;->AIu()I
+    invoke-interface {v0}, LX/0HQ;->AHN()I
 
     .line 26
     .line 27

@@ -3,6 +3,6 @@
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
     <View android:background="?fds_usage_divider" android:layout_width="fill_parent" android:layout_height="@dimen/action_sheet_native_base_section_divider_height" />
     <LinearLayout android:gravity="right" android:orientation="horizontal" android:background="?fds_usage_nav_bar_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/abc_button_padding_horizontal_material" android:layout_marginBottom="@dimen/abc_button_padding_horizontal_material">
-        <X.4OG android:id="@id/bwp_bottom_toolbar_static_action_item" android:background="@drawable/bondi_dfiad_button_background" android:layout_width="@dimen/autofill_bottom_sheet_margin_top" android:layout_height="@dimen/autofill_bottom_sheet_margin_top" android:layout_marginRight="@dimen/action_sheet_native_base_header_dragger_width" android:scaleType="center" fb:glyphColor="?fds_usage_primary_icon" />
+        <X.6Zl android:id="@id/bwp_bottom_toolbar_static_action_item" android:background="@drawable/bondi_dfiad_button_background" android:layout_width="@dimen/autofill_bottom_sheet_margin_top" android:layout_height="@dimen/autofill_bottom_sheet_margin_top" android:layout_marginRight="@dimen/action_sheet_native_base_header_dragger_width" android:scaleType="center" fb:glyphColor="?fds_usage_primary_icon" />
     </LinearLayout>
 </LinearLayout>

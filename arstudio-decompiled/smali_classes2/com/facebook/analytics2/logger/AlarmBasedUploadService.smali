@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public A00:LX/3lf;
+.field public A00:LX/3CK;
 
 
 # direct methods
@@ -89,7 +89,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, LX/3lf;->A00(Landroid/content/Context;)LX/3lf;
+    invoke-static {p0}, LX/3CK;->A00(Landroid/content/Context;)LX/3CK;
 
     .line 1
     .line 2
@@ -97,7 +97,7 @@
     move-result-object v0
 
     .line 4
-    iput-object v0, p0, Lcom/facebook/analytics2/logger/AlarmBasedUploadService;->A00:LX/3lf;
+    iput-object v0, p0, Lcom/facebook/analytics2/logger/AlarmBasedUploadService;->A00:LX/3CK;
 
     .line 5
     .line 6
@@ -120,56 +120,57 @@
     move-result-object v0
 
     .line 6
-    const-string v1, "com.facebook.analytics2.logger.UPLOAD_NOW"
+    const-string/jumbo v1, "com.facebook.analytics2.logger.UPLOAD_NOW"
 
     .line 7
     .line 8
+    .line 9
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    .line 9
     .line 10
     .line 11
-    move-result v0
-
     .line 12
-    if-eqz v0, :cond_0
+    move-result v0
 
     .line 13
+    if-eqz v0, :cond_0
+
     .line 14
+    .line 15
     invoke-virtual {p1, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 15
     .line 16
     .line 17
-    :cond_0
-    iget-object v2, p0, Lcom/facebook/analytics2/logger/AlarmBasedUploadService;->A00:LX/3lf;
-
     .line 18
-    .line 19
-    invoke-static {v2}, LX/0Qb;->A00(Ljava/lang/Object;)V
+    :cond_0
+    iget-object v2, p0, Lcom/facebook/analytics2/logger/AlarmBasedUploadService;->A00:LX/3CK;
 
+    .line 19
     .line 20
+    invoke-static {v2}, LX/0Ms;->A00(Ljava/lang/Object;)V
+
     .line 21
     .line 22
-    new-instance v1, LX/3n6;
-
     .line 23
-    .line 24
-    invoke-direct {v1, p0, p3}, LX/3n6;-><init>(Landroid/app/Service;I)V
+    new-instance v1, LX/3DA;
 
+    .line 24
     .line 25
+    invoke-direct {v1, p0, p3}, LX/3DA;-><init>(Landroid/app/Service;I)V
+
     .line 26
     .line 27
+    .line 28
     const/4 v0, 0x2
 
-    .line 28
-    invoke-virtual {v2, p1, v1, v0}, LX/3lf;->A03(Landroid/content/Intent;LX/3n6;I)I
-
     .line 29
+    invoke-virtual {v2, p1, v1, v0}, LX/3CK;->A03(Landroid/content/Intent;LX/3DA;I)I
+
     .line 30
     .line 31
+    .line 32
     move-result v0
 
-    .line 32
+    .line 33
     return v0
 .end method

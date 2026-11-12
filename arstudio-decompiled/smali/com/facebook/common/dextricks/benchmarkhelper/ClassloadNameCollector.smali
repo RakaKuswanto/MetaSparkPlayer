@@ -12,7 +12,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 1
     .line 2

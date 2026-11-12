@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field public final freshness:LX/46J;
+.field public final freshness:LX/2OO;
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
         value = "freshness"
     .end annotation
@@ -34,7 +34,7 @@
 
     .line 536870914
     .line 536870915
-    invoke-direct {p0, v2, v0, v1}, Lcom/facebook/fbservice/results/BaseResult;-><init>(LX/46J;J)V
+    invoke-direct {p0, v2, v0, v1}, Lcom/facebook/fbservice/results/BaseResult;-><init>(LX/2OO;J)V
 
     .line 536870916
     .line 536870917
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/46J;J)V
+.method public constructor <init>(LX/2OO;J)V
     .locals 0
 
     .line 268435456
@@ -51,7 +51,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    iput-object p1, p0, Lcom/facebook/fbservice/results/BaseResult;->freshness:LX/46J;
+    iput-object p1, p0, Lcom/facebook/fbservice/results/BaseResult;->freshness:LX/2OO;
 
     .line 268435460
     .line 268435461
@@ -79,11 +79,11 @@
     move-result-object v0
 
     .line 7
-    check-cast v0, LX/46J;
+    check-cast v0, LX/2OO;
 
     .line 8
     .line 9
-    iput-object v0, p0, Lcom/facebook/fbservice/results/BaseResult;->freshness:LX/46J;
+    iput-object v0, p0, Lcom/facebook/fbservice/results/BaseResult;->freshness:LX/2OO;
 
     .line 10
     .line 11

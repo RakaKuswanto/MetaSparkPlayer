@@ -78,57 +78,6 @@
     return-void
 .end method
 
-.method private convertNativeArImageCubemapToArray([J)[Lcom/google/ar/core/ArImage;
-    .locals 7
-
-    .line 0
-    array-length v6, p1
-
-    .line 1
-    new-array v5, v6, [Lcom/google/ar/core/ArImage;
-
-    .line 2
-    .line 3
-    const/4 v4, 0x0
-
-    .line 4
-    :goto_0
-    if-ge v4, v6, :cond_0
-
-    .line 5
-    .line 6
-    iget-object v3, p0, Lcom/google/ar/core/LightEstimate;->session:Lcom/google/ar/core/Session;
-
-    .line 7
-    .line 8
-    aget-wide v1, p1, v4
-
-    .line 9
-    .line 10
-    new-instance v0, Lcom/google/ar/core/ArImage;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/ar/core/ArImage;-><init>(Lcom/google/ar/core/Session;J)V
-
-    .line 13
-    .line 14
-    .line 15
-    aput-object v0, v5, v4
-
-    .line 16
-    .line 17
-    add-int/lit8 v4, v4, 0x1
-
-    .line 18
-    .line 19
-    goto :goto_0
-
-    .line 20
-    :cond_0
-    return-object v5
-.end method
-
 .method private native nativeAcquireEnvironmentalHdrCubeMap(JJ)[J
 .end method
 
@@ -161,8 +110,8 @@
 
 
 # virtual methods
-.method public acquireEnvironmentalHdrCubeMap()[Lcom/google/ar/core/ArImage;
-    .locals 4
+.method public acquireEnvironmentalHdrCubeMap()[Landroid/media/Image;
+    .locals 8
 
     .line 0
     iget-object v0, p0, Lcom/google/ar/core/LightEstimate;->session:Lcom/google/ar/core/Session;
@@ -182,18 +131,54 @@
     .line 7
     .line 8
     .line 9
-    move-result-object v0
+    move-result-object v7
 
     .line 10
-    invoke-direct {p0, v0}, Lcom/google/ar/core/LightEstimate;->convertNativeArImageCubemapToArray([J)[Lcom/google/ar/core/ArImage;
+    array-length v6, v7
 
     .line 11
+    new-array v5, v6, [Lcom/google/ar/core/ArImage;
+
     .line 12
     .line 13
-    move-result-object v0
+    const/4 v4, 0x0
 
     .line 14
-    return-object v0
+    :goto_0
+    if-ge v4, v6, :cond_0
+
+    .line 15
+    .line 16
+    iget-object v3, p0, Lcom/google/ar/core/LightEstimate;->session:Lcom/google/ar/core/Session;
+
+    .line 17
+    .line 18
+    aget-wide v1, v7, v4
+
+    .line 19
+    .line 20
+    new-instance v0, Lcom/google/ar/core/ArImage;
+
+    .line 21
+    .line 22
+    invoke-direct {v0, v3, v1, v2}, Lcom/google/ar/core/ArImage;-><init>(Lcom/google/ar/core/Session;J)V
+
+    .line 23
+    .line 24
+    .line 25
+    aput-object v0, v5, v4
+
+    .line 26
+    .line 27
+    add-int/lit8 v4, v4, 0x1
+
+    .line 28
+    .line 29
+    goto :goto_0
+
+    .line 30
+    :cond_0
+    return-object v5
 .end method
 
 .method public finalize()V
@@ -226,11 +211,6 @@
     .line 12
     .line 13
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 14
-    .line 15
-    .line 16
     return-void
 .end method
 

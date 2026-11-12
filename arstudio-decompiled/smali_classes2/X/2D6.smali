@@ -1,44 +1,67 @@
 .class public final LX/2D6;
-.super Ljava/lang/Object;
+.super LX/2DY;
 .source ""
 
 
 # static fields
-.field public static final A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$25"
 
-.field public static final A01:Lcom/fasterxml/jackson/databind/JsonSerializer;
+
+# instance fields
+.field public final synthetic A00:LX/2D1;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/2D1;Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/util/concurrent/atomic/AtomicInteger;)V
+    .locals 10
 
     .line 0
-    new-instance v0, Lcom/fasterxml/jackson/databind/ser/std/StdKeySerializer;
+    const-string v3, "AfterLogout"
 
     .line 1
     .line 2
-    invoke-direct {v0}, Lcom/fasterxml/jackson/databind/ser/std/StdKeySerializer;-><init>()V
+    const-string v4, "ConditionalWorkerManager"
 
     .line 3
     .line 4
-    .line 5
-    sput-object v0, LX/2D6;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
+    const-string/jumbo v5, "afterLogout"
 
+    .line 5
     .line 6
     .line 7
-    new-instance v0, Lcom/fasterxml/jackson/databind/ser/std/StdKeySerializers$StringKeySerializer;
+    const v8, 0x940009
 
     .line 8
     .line 9
-    invoke-direct {v0}, Lcom/fasterxml/jackson/databind/ser/std/StdKeySerializers$StringKeySerializer;-><init>()V
-
     .line 10
+    const-string/jumbo v6, "type"
+
     .line 11
     .line 12
-    sput-object v0, LX/2D6;->A01:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
     .line 13
+    const/4 v9, 0x1
+
     .line 14
+    move-object v0, p0
+
+    .line 15
+    iput-object p1, p0, LX/2D6;->A00:LX/2D1;
+
+    .line 16
+    .line 17
+    move-object v1, p2
+
+    .line 18
+    move-object v2, p3
+
+    .line 19
+    move-object v7, p4
+
+    .line 20
+    invoke-direct/range {v0 .. v9}, LX/2DY;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;IZ)V
+
+    .line 21
+    .line 22
+    .line 23
     return-void
 .end method

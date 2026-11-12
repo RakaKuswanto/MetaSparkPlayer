@@ -85,3 +85,9 @@
 
 .method public native hashCode()I
 .end method
+
+.method public native setPlayoutEnabled(Z)V
+.end method
+
+.method public native setPlayoutVolume(F)V
+.end method

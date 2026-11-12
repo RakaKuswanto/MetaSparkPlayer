@@ -11,7 +11,7 @@
 
 # direct methods
 .method public constructor <init>(ZLcom/facebook/rsys/mosaicgrid/gen/FrameSize;)V
-    .locals 1
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,32 +19,24 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1}, LX/0X4;->A1H(Z)V
 
     .line 4
     .line 5
     .line 6
-    move-result-object v0
-
-    .line 7
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 8
-    .line 9
-    .line 10
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 11
-    .line 12
-    .line 13
+    .line 7
+    .line 8
+    .line 9
     iput-boolean p1, p0, Lcom/facebook/rsys/mosaicgrid/gen/MosaicGridParams;->isMosaicGridCapable:Z
 
-    .line 14
-    .line 15
+    .line 10
+    .line 11
     iput-object p2, p0, Lcom/facebook/rsys/mosaicgrid/gen/MosaicGridParams;->initialVideoSize:Lcom/facebook/rsys/mosaicgrid/gen/FrameSize;
 
-    .line 16
-    .line 17
+    .line 12
+    .line 13
     return-void
 .end method
 
@@ -137,7 +129,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A00(I)I
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 3
     .line 4
@@ -149,7 +141,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
 
     .line 9
     .line 10
@@ -164,7 +156,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -203,7 +195,7 @@
 
     .line 20
     .line 21
-    invoke-static {v0, v1}, LX/0Yd;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X1;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 22
     .line 23

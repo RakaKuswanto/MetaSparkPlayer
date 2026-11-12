@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/45k;
+.implements LX/3Lj;
 
 
 # instance fields
@@ -41,11 +41,11 @@
 
 
 # virtual methods
-.method public createImageTranscoder(LX/45P;Z)LX/409;
+.method public createImageTranscoder(LX/2uX;Z)LX/3OR;
     .locals 4
 
     .line 0
-    sget-object v0, LX/3yY;->A05:LX/45P;
+    sget-object v0, LX/3Nc;->A05:LX/2uX;
 
     .line 1
     .line 2

@@ -2,13 +2,8 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:Z
-
-.field public A01:LX/4vc;
-
-.field public A02:Z
+# interfaces
+.implements Ljava/security/PrivilegedExceptionAction;
 
 
 # direct methods
@@ -26,233 +21,100 @@
 
 
 # virtual methods
-.method public final A00()V
-    .locals 2
+.method public final bridge synthetic run()Ljava/lang/Object;
+    .locals 6
 
     .line 0
-    monitor-enter p0
+    const-class v5, Lsun/misc/Unsafe;
 
     .line 1
-    :try_start_0
-    iget-boolean v0, p0, LX/4vZ;->A02:Z
-
     .line 2
-    .line 3
-    if-eqz v0, :cond_0
+    invoke-virtual {v5}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
+    .line 3
     .line 4
     .line 5
-    monitor-exit p0
+    move-result-object v4
 
     .line 6
-    return-void
+    array-length v3, v4
 
     .line 7
-    :cond_0
-    const/4 v0, 0x1
+    const/4 v2, 0x0
 
     .line 8
-    iput-boolean v0, p0, LX/4vZ;->A02:Z
+    :goto_0
+    if-ge v2, v3, :cond_1
 
     .line 9
     .line 10
-    iput-boolean v0, p0, LX/4vZ;->A00:Z
+    aget-object v1, v4, v2
 
     .line 11
     .line 12
-    iget-object v0, p0, LX/4vZ;->A01:LX/4vc;
+    const/4 v0, 0x1
 
     .line 13
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
     .line 14
-    monitor-exit p0
-
     .line 15
-    const/4 v1, 0x0
-
     .line 16
-    if-eqz v0, :cond_1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_3
+    const/4 v0, 0x0
 
     .line 17
-    .line 18
-    :try_start_1
-    invoke-interface {v0}, LX/4vc;->AVi()V
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 18
     .line 19
     .line 20
+    move-result-object v1
+
     .line 21
-    goto :goto_2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v5, v1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     .line 22
-    :catchall_0
-    move-exception v0
-
     .line 23
-    monitor-enter p0
-
     .line 24
-    :try_start_2
-    iput-boolean v1, p0, LX/4vZ;->A00:Z
+    move-result v0
 
     .line 25
-    .line 26
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    if-eqz v0, :cond_0
 
+    .line 26
     .line 27
+    invoke-virtual {v5, v1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 28
     .line 29
-    :goto_0
-    monitor-exit p0
-
     .line 30
-    goto :goto_1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    move-result-object v0
 
     .line 31
-    :catchall_1
-    move-exception v0
+    return-object v0
 
     .line 32
-    goto :goto_0
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
     .line 33
-    :goto_1
-    throw v0
-
     .line 34
-    :cond_1
-    :goto_2
-    monitor-enter p0
+    goto :goto_0
 
     .line 35
-    :try_start_3
-    iput-boolean v1, p0, LX/4vZ;->A00:Z
+    :cond_1
+    const-string v1, "the Unsafe"
 
     .line 36
     .line 37
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    new-instance v0, Ljava/lang/NoSuchFieldError;
 
     .line 38
     .line 39
+    invoke-direct {v0, v1}, Ljava/lang/NoSuchFieldError;-><init>(Ljava/lang/String;)V
+
     .line 40
-    monitor-exit p0
-
     .line 41
-    return-void
-
     .line 42
-    :catchall_2
-    move-exception v0
-
-    .line 43
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    .line 44
-    throw v0
-
-    .line 45
-    :catchall_3
-    move-exception v0
-
-    .line 46
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    .line 47
-    throw v0
-.end method
-
-.method public final A01(LX/4vc;)V
-    .locals 1
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :catch_0
-    :goto_0
-    :try_start_0
-    iget-boolean v0, p0, LX/4vZ;->A00:Z
-
-    .line 2
-    .line 3
-    if-eqz v0, :cond_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    .line 5
-    :try_start_1
-    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
-
-    .line 6
-    .line 7
-    .line 8
-    goto :goto_0
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 9
-    :cond_0
-    :try_start_2
-    iget-object v0, p0, LX/4vZ;->A01:LX/4vc;
-
-    .line 10
-    .line 11
-    if-eq v0, p1, :cond_1
-
-    .line 12
-    .line 13
-    iput-object p1, p0, LX/4vZ;->A01:LX/4vc;
-
-    .line 14
-    .line 15
-    iget-boolean v0, p0, LX/4vZ;->A02:Z
-
-    .line 16
-    .line 17
-    if-eqz v0, :cond_1
-
-    .line 18
-    .line 19
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 20
-    invoke-interface {p1}, LX/4vc;->AVi()V
-
-    .line 21
-    .line 22
-    .line 23
-    return-void
-
-    .line 24
-    :cond_1
-    :try_start_3
-    monitor-exit p0
-
-    .line 25
-    return-void
-
-    .line 26
-    :catchall_0
-    move-exception v0
-
-    .line 27
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    .line 28
     throw v0
 .end method

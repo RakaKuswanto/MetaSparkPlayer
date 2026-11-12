@@ -1,198 +1,212 @@
 .class public final LX/4BS;
-.super LX/4CJ;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final serialVersionUID:J = 0x1L
 
 
 # instance fields
-.field public final synthetic A00:Landroid/os/Bundle;
+.field public final hashCode:I
 
-.field public final synthetic A01:LX/4CF;
+.field public final key:Ljava/lang/Object;
 
-.field public final synthetic A02:Lcom/facebook/privacy/zone/policy/ZonePolicy;
+.field public final scope:Ljava/lang/Class;
 
-.field public final synthetic A03:Ljava/lang/String;
-
-.field public final synthetic A04:Z
-
-.field public final synthetic A05:[J
+.field public final type:Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;LX/4CF;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;[JZ)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V
+    .locals 2
 
     .line 0
-    iput-object p2, p0, LX/4BS;->A01:LX/4CF;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p5, p0, LX/4BS;->A05:[J
-
     .line 3
+    iput-object p1, p0, LX/4BS;->type:Ljava/lang/Class;
+
     .line 4
-    iput-object p1, p0, LX/4BS;->A00:Landroid/os/Bundle;
-
     .line 5
+    iput-object p2, p0, LX/4BS;->scope:Ljava/lang/Class;
+
     .line 6
-    iput-object p4, p0, LX/4BS;->A03:Ljava/lang/String;
-
     .line 7
+    iput-object p3, p0, LX/4BS;->key:Ljava/lang/Object;
+
     .line 8
-    iput-boolean p6, p0, LX/4BS;->A04:Z
-
     .line 9
-    .line 10
-    iput-object p3, p0, LX/4BS;->A02:Lcom/facebook/privacy/zone/policy/ZonePolicy;
+    invoke-virtual {p3}, Ljava/lang/Object;->hashCode()I
 
+    .line 10
     .line 11
     .line 12
-    invoke-direct {p0, p2}, LX/4CJ;-><init>(LX/4CF;)V
+    move-result v1
 
     .line 13
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
     .line 14
     .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-static {v0, v1}, LX/434;->A0K(Ljava/lang/String;I)I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v1
+
+    .line 21
+    if-eqz p2, :cond_0
+
+    .line 22
+    .line 23
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v0
+
+    .line 31
+    xor-int/2addr v1, v0
+
+    .line 32
+    :cond_0
+    iput v1, p0, LX/4BS;->hashCode:I
+
+    .line 33
+    .line 34
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Lcom/facebook/browser/lite/ipc/BrowserLiteCallback$Stub$Proxy;)V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     .line 0
-    iget-object v1, p0, LX/4BS;->A05:[J
+    const/4 v3, 0x1
 
     .line 1
-    .line 2
-    array-length v0, v1
+    if-eq p1, p0, :cond_0
 
+    .line 2
     .line 3
-    if-lez v0, :cond_0
+    const/4 v2, 0x0
 
     .line 4
+    if-eqz p1, :cond_2
+
     .line 5
-    iget-object v0, p0, LX/4BS;->A00:Landroid/os/Bundle;
-
     .line 6
-    .line 7
-    invoke-virtual {p1, v0, v1}, Lcom/facebook/browser/lite/ipc/BrowserLiteCallback$Stub$Proxy;->A00(Landroid/os/Bundle;[J)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 7
     .line 8
     .line 9
+    move-result-object v1
+
     .line 10
-    :cond_0
-    iget-object v2, p0, LX/4BS;->A03:Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 11
     .line 12
-    iget-boolean v0, p0, LX/4BS;->A04:Z
-
     .line 13
+    move-result-object v0
+
     .line 14
-    iget-object v5, p0, LX/4BS;->A00:Landroid/os/Bundle;
+    if-ne v1, v0, :cond_2
 
     .line 15
     .line 16
-    iget-object v1, p0, LX/4BS;->A02:Lcom/facebook/privacy/zone/policy/ZonePolicy;
+    check-cast p1, LX/4BS;
 
     .line 17
     .line 18
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    iget-object v1, p1, LX/4BS;->key:Ljava/lang/Object;
 
     .line 19
     .line 20
-    .line 21
-    move-result-object v4
+    iget-object v0, p0, LX/4BS;->key:Ljava/lang/Object;
 
+    .line 21
     .line 22
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 23
     .line 24
     .line 25
-    move-result-object v3
+    move-result v0
 
     .line 26
-    :try_start_0
-    invoke-static {v4, v2}, LX/4BD;->A17(Landroid/os/Parcel;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v0, :cond_1
 
     .line 27
     .line 28
-    .line 29
-    const/4 v2, 0x0
+    iget-object v1, p1, LX/4BS;->type:Ljava/lang/Class;
 
+    .line 29
     .line 30
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    iget-object v0, p0, LX/4BS;->type:Ljava/lang/Class;
 
     .line 31
     .line 32
-    .line 33
-    move-result v0
+    if-ne v1, v0, :cond_1
 
+    .line 33
     .line 34
-    :try_start_1
-    invoke-virtual {v4, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, p1, LX/4BS;->scope:Ljava/lang/Class;
 
     .line 35
     .line 36
-    .line 37
-    invoke-static {v4, v5}, LX/6M3;->A00(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    iget-object v0, p0, LX/4BS;->scope:Ljava/lang/Class;
 
+    .line 37
     .line 38
+    if-ne v1, v0, :cond_1
+
     .line 39
     .line 40
-    invoke-static {v4, v1}, LX/6M3;->A00(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    :cond_0
+    return v3
 
     .line 41
+    :cond_1
+    const/4 v3, 0x0
+
     .line 42
+    return v3
+
     .line 43
-    iget-object v1, p1, Lcom/facebook/browser/lite/ipc/BrowserLiteCallback$Stub$Proxy;->A00:Landroid/os/IBinder;
+    :cond_2
+    return v2
+.end method
 
-    .line 44
-    .line 45
-    const/4 v0, 0x7
+.method public final hashCode()I
+    .locals 1
 
-    .line 46
-    invoke-interface {v1, v0, v4, v3, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .line 0
+    iget v0, p0, LX/4BS;->hashCode:I
 
-    .line 47
-    .line 48
-    .line 49
-    invoke-virtual {v3}, Landroid/os/Parcel;->readException()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 50
-    .line 51
-    .line 52
-    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
-
-    .line 53
-    .line 54
-    .line 55
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 56
-    .line 57
-    .line 58
-    return-void
-
-    .line 59
-    :catchall_0
-    move-exception v0
-
-    .line 60
-    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
-
-    .line 61
-    .line 62
-    .line 63
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 64
-    .line 65
-    .line 66
-    throw v0
+    .line 1
+    .line 2
+    return v0
 .end method

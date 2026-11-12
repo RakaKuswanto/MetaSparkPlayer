@@ -1,4 +1,4 @@
-.class public final synthetic Lorg/webrtc/VideoEncoderFactory$VideoEncoderSelector$-CC;
+.class public abstract synthetic Lorg/webrtc/VideoEncoderFactory$VideoEncoderSelector$-CC;
 .super Ljava/lang/Object;
 .source ""
 

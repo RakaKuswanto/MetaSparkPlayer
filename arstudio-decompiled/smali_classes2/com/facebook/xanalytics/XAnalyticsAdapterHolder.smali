@@ -20,7 +20,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 5
     .line 6
@@ -119,15 +119,16 @@
     long-to-double v1, p2
 
     .line 3
-    const-string v0, "counters"
+    const-string/jumbo v0, "counters"
 
     .line 4
     .line 5
+    .line 6
     invoke-interface {v3, p1, v1, v2, v0}, Lcom/facebook/xanalytics/XAnalyticsAdapter;->logCounter(Ljava/lang/String;DLjava/lang/String;)V
 
-    .line 6
     .line 7
     .line 8
+    .line 9
     return-void
 .end method
 

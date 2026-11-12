@@ -1,206 +1,232 @@
-.class public final LX/3kk;
-.super Ljava/lang/Object;
+.class public final enum LX/3kK;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/3l0;
 
+# static fields
+.field public static final synthetic $VALUES:[LX/3kK;
 
-# instance fields
-.field public final A00:Ljava/lang/String;
+.field public static final enum IN_PLAY:LX/3kK;
+
+.field public static final enum PREFETCH:LX/3kK;
+
+.field public static final enum UNKNOWN:LX/3kK;
+
+.field public static final enum WARM_UP:LX/3kK;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public static synthetic $values()[LX/3kK;
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
     .line 1
+    new-array v2, v0, [LX/3kK;
+
     .line 2
     .line 3
-    iput-object p1, p0, LX/3kk;->A00:Ljava/lang/String;
+    sget-object v1, LX/3kK;->UNKNOWN:LX/3kK;
 
     .line 4
     .line 5
-    return-void
-.end method
+    const/4 v0, 0x0
 
-
-# virtual methods
-.method public final Akl(Landroid/support/v4/app/INotificationSideChannel;)V
-    .locals 5
-
-    .line 0
-    iget-object v1, p0, LX/3kk;->A00:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    check-cast p1, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;
-
-    .line 3
-    .line 4
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    .line 5
     .line 6
-    .line 7
-    move-result-object v4
+    aput-object v1, v2, v0
 
+    .line 7
     .line 8
-    :try_start_0
-    sget-object v0, Landroid/support/v4/app/INotificationSideChannel;->A00:Ljava/lang/String;
+    sget-object v1, LX/3kK;->WARM_UP:LX/3kK;
 
     .line 9
     .line 10
-    invoke-virtual {v4, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 11
-    .line 12
-    .line 13
-    invoke-virtual {v4, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 14
-    .line 15
-    .line 16
-    iget-object v3, p1, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->A00:Landroid/os/IBinder;
-
-    .line 17
-    .line 18
-    const/4 v2, 0x3
-
-    .line 19
-    const/4 v1, 0x0
-
-    .line 20
     const/4 v0, 0x1
 
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/3kK;->PREFETCH:LX/3kK;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, LX/3kK;->IN_PLAY:LX/3kK;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
     .line 21
-    invoke-interface {v3, v2, v4, v1, v0}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    aput-object v1, v2, v0
 
     .line 22
     .line 23
-    .line 24
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 25
-    .line 26
-    .line 27
-    return-void
-
-    .line 28
-    :catchall_0
-    move-exception v0
-
-    .line 29
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 30
-    .line 31
-    .line 32
-    throw v0
+    return-object v2
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    const-string v0, "CancelTask["
+    const-string v2, "UNKNOWN"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/3kK;
+
     .line 4
     .line 5
-    move-result-object v1
+    invoke-direct {v0, v2, v1}, LX/3kK;-><init>(Ljava/lang/String;I)V
 
     .line 6
-    const-string/jumbo v0, "packageName:"
-
     .line 7
     .line 8
-    .line 9
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, LX/3kK;->UNKNOWN:LX/3kK;
 
+    .line 9
     .line 10
+    const-string v2, "WARM_UP"
+
     .line 11
     .line 12
-    iget-object v0, p0, LX/3kk;->A00:Ljava/lang/String;
+    const/4 v1, 0x1
 
     .line 13
-    .line 14
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, LX/3kK;
 
+    .line 14
     .line 15
+    invoke-direct {v0, v2, v1}, LX/3kK;-><init>(Ljava/lang/String;I)V
+
     .line 16
     .line 17
-    const-string v0, ", id:"
-
     .line 18
-    .line 19
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, LX/3kK;->WARM_UP:LX/3kK;
 
+    .line 19
     .line 20
+    const-string v2, "PREFETCH"
+
     .line 21
     .line 22
-    const/4 v0, 0x0
+    const/4 v1, 0x2
 
     .line 23
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, LX/3kK;
 
     .line 24
     .line 25
-    .line 26
-    const-string v0, ", tag:"
+    invoke-direct {v0, v2, v1}, LX/3kK;-><init>(Ljava/lang/String;I)V
 
+    .line 26
     .line 27
     .line 28
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, LX/3kK;->PREFETCH:LX/3kK;
 
     .line 29
     .line 30
-    .line 31
-    const/4 v0, 0x0
+    const-string v2, "IN_PLAY"
 
+    .line 31
     .line 32
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x3
 
     .line 33
+    new-instance v0, LX/3kK;
+
     .line 34
     .line 35
-    const-string v0, ", all:"
+    invoke-direct {v0, v2, v1}, LX/3kK;-><init>(Ljava/lang/String;I)V
 
     .line 36
     .line 37
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 38
+    sput-object v0, LX/3kK;->IN_PLAY:LX/3kK;
+
     .line 39
     .line 40
-    const/4 v0, 0x1
+    invoke-static {}, LX/3kK;->$values()[LX/3kK;
 
     .line 41
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
     .line 42
     .line 43
+    move-result-object v0
+
     .line 44
-    const-string v0, "]"
+    sput-object v0, LX/3kK;->$VALUES:[LX/3kK;
 
     .line 45
     .line 46
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    return-void
+.end method
 
-    .line 47
-    .line 48
-    .line 49
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/3kK;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/3kK;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 50
+    .line 6
+    check-cast v0, LX/3kK;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/3kK;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/3kK;->$VALUES:[LX/3kK;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/3kK;
+
+    .line 7
+    .line 8
     return-object v0
 .end method

@@ -1,57 +1,31 @@
-.class public final LX/5lM;
+.class public abstract LX/5lM;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:I
-
-.field public final A01:Landroid/util/SparseArray;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Ljava/lang/String;
-
-.field public final A04:Ljava/util/List;
-
-
 # direct methods
-.method public constructor <init>(Landroid/util/SparseArray;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;I)V
-    .locals 1
+.method public static A00(Landroid/app/Notification;Landroid/app/Service;II)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "service",
+            "id",
+            "notification",
+            "foregroundServiceType"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1, p2, p0, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/5lM;->A03:Ljava/lang/String;
-
-    .line 4
-    .line 5
-    iput-object p3, p0, LX/5lM;->A02:Ljava/lang/String;
-
-    .line 6
-    .line 7
-    iput p5, p0, LX/5lM;->A00:I
-
-    .line 8
-    .line 9
-    iput-object p1, p0, LX/5lM;->A01:Landroid/util/SparseArray;
-
-    .line 10
-    .line 11
-    invoke-static {p4}, LX/5lD;->A00(Ljava/util/List;)Ljava/util/List;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/5lM;->A04:Ljava/util/List;
-
-    .line 16
-    .line 17
     return-void
 .end method

@@ -1,886 +1,537 @@
-.class public final LX/5jl;
+.class public final LX/5JL;
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A06:Ljava/util/UUID;
+# interfaces
+.implements LX/5JM;
 
 
 # instance fields
-.field public A00:Landroid/os/Handler;
+.field public A00:LX/5J7;
 
-.field public A01:Ljava/util/UUID;
+.field public A01:LX/5J7;
 
-.field public final A02:Landroid/os/Handler;
+.field public A02:LX/5Iz;
 
-.field public final A03:Landroid/os/Handler;
+.field public A03:LX/6XX;
 
-.field public final A04:Landroid/os/HandlerThread;
+.field public A04:LX/5K7;
 
-.field public final A05:Landroid/os/HandlerThread;
+.field public A05:LX/5LM;
+
+.field public A06:LX/5Kl;
+
+.field public A07:Z
+
+.field public A08:LX/5Dx;
+
+.field public A09:LX/5Dx;
+
+.field public A0A:LX/5Dx;
+
+.field public A0B:LX/6ap;
+
+.field public A0C:Z
+
+.field public final A0D:I
+
+.field public final A0E:I
+
+.field public final A0F:LX/5J5;
+
+.field public final A0G:LX/5CB;
+
+.field public final A0H:LX/5Kp;
+
+.field public final A0I:LX/5EK;
+
+.field public final A0J:LX/5Dx;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/5J5;LX/5J7;LX/5J7;LX/5Iz;LX/6XX;LX/5CB;LX/5K7;LX/5LM;LX/5Kp;LX/5Kl;LX/5Dx;LX/5Dx;LX/5Dx;LX/5Dx;LX/6ap;IZ)V
+    .locals 3
 
     .line 0
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    const/4 v1, 0x1
 
     .line 1
+    sget-object v2, LX/5GE;->A0A:LX/5EK;
+
     .line 2
     .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/5jl;->A06:Ljava/util/UUID;
-
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    const-string v1, "Optic-Task-Handler-Thread"
-
     .line 4
     .line 5
-    new-instance v0, Landroid/os/HandlerThread;
-
     .line 6
+    const/4 v0, 0x0
+
     .line 7
-    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    iput-boolean v0, p0, LX/5JL;->A07:Z
 
     .line 8
     .line 9
+    const/4 v0, 0x0
+
     .line 10
-    iput-object v0, p0, LX/5jl;->A05:Landroid/os/HandlerThread;
+    iput-object v0, p0, LX/5JL;->A05:LX/5LM;
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/4BF;->A0U(Landroid/os/HandlerThread;)Landroid/os/Looper;
+    iput-object v0, p0, LX/5JL;->A06:LX/5Kl;
 
     .line 13
     .line 14
-    .line 15
-    move-result-object v1
+    iput-object v0, p0, LX/5JL;->A04:LX/5K7;
 
+    .line 15
     .line 16
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object v0, p0, LX/5JL;->A03:LX/6XX;
 
     .line 17
     .line 18
+    iput-object v0, p0, LX/5JL;->A01:LX/5J7;
+
     .line 19
-    new-instance v0, Landroid/os/Handler;
-
     .line 20
-    .line 21
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-object v0, p0, LX/5JL;->A00:LX/5J7;
 
+    .line 21
     .line 22
+    iput-object v0, p0, LX/5JL;->A02:LX/5Iz;
+
     .line 23
     .line 24
-    iput-object v0, p0, LX/5jl;->A03:Landroid/os/Handler;
+    iput-object v2, p0, LX/5JL;->A0I:LX/5EK;
 
     .line 25
     .line 26
-    const-string v1, "Optic-Camera-Handler-Thread"
+    iput-object p11, p0, LX/5JL;->A0J:LX/5Dx;
 
     .line 27
     .line 28
-    new-instance v0, Landroid/os/HandlerThread;
+    iput v1, p0, LX/5JL;->A0E:I
 
     .line 29
     .line 30
-    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    move/from16 v0, p16
 
     .line 31
     .line 32
+    mul-int/lit16 v0, v0, 0x3e8
+
     .line 33
-    iput-object v0, p0, LX/5jl;->A04:Landroid/os/HandlerThread;
-
     .line 34
-    .line 35
-    invoke-static {v0}, LX/4BF;->A0U(Landroid/os/HandlerThread;)Landroid/os/Looper;
+    iput v0, p0, LX/5JL;->A0D:I
 
+    .line 35
     .line 36
+    iput-object p1, p0, LX/5JL;->A0F:LX/5J5;
+
     .line 37
     .line 38
-    move-result-object v1
+    iput-object p9, p0, LX/5JL;->A0H:LX/5Kp;
 
     .line 39
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 40
+    iput-object p6, p0, LX/5JL;->A0G:LX/5CB;
+
     .line 41
     .line 42
-    new-instance v0, Landroid/os/Handler;
+    iput-boolean v1, p0, LX/5JL;->A07:Z
 
     .line 43
     .line 44
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-object p12, p0, LX/5JL;->A0A:LX/5Dx;
 
     .line 45
     .line 46
-    .line 47
-    iput-object v0, p0, LX/5jl;->A02:Landroid/os/Handler;
+    move-object/from16 v0, p13
 
+    .line 47
     .line 48
+    iput-object v0, p0, LX/5JL;->A08:LX/5Dx;
+
     .line 49
+    .line 50
+    move-object/from16 v0, p14
+
+    .line 51
+    .line 52
+    iput-object v0, p0, LX/5JL;->A09:LX/5Dx;
+
+    .line 53
+    .line 54
+    move/from16 v0, p17
+
+    .line 55
+    .line 56
+    iput-boolean v0, p0, LX/5JL;->A0C:Z
+
+    .line 57
+    .line 58
+    iput-object p8, p0, LX/5JL;->A05:LX/5LM;
+
+    .line 59
+    .line 60
+    iput-object p10, p0, LX/5JL;->A06:LX/5Kl;
+
+    .line 61
+    .line 62
+    iput-object p7, p0, LX/5JL;->A04:LX/5K7;
+
+    .line 63
+    .line 64
+    iput-object p5, p0, LX/5JL;->A03:LX/6XX;
+
+    .line 65
+    .line 66
+    iput-object p2, p0, LX/5JL;->A01:LX/5J7;
+
+    .line 67
+    .line 68
+    iput-object p3, p0, LX/5JL;->A00:LX/5J7;
+
+    .line 69
+    .line 70
+    iput-object p4, p0, LX/5JL;->A02:LX/5Iz;
+
+    .line 71
+    .line 72
+    move-object/from16 v0, p15
+
+    .line 73
+    .line 74
+    iput-object v0, p0, LX/5JL;->A0B:LX/6ap;
+
+    .line 75
+    .line 76
+    if-eqz p6, :cond_0
+
+    .line 77
+    .line 78
     return-void
+
+    .line 79
+    :cond_0
+    const-string v0, "Use new DebugEventLoggerImpl(null) if you don\'t need to pass a logger."
+
+    .line 80
+    .line 81
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v0
+
+    .line 85
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized A00(LX/5Rr;Ljava/lang/String;Ljava/util/concurrent/Callable;)LX/5Ro;
-    .locals 5
+.method public final A6E(LX/5JY;LX/5Q4;LX/5Le;LX/4FV;LX/5JQ;LX/5Jf;LX/5Fk;LX/5Jt;LX/5LK;LX/6ap;Ljava/util/List;[IIIJZ)LX/5JN;
+    .locals 46
 
     .line 0
-    monitor-enter p0
+    const/4 v12, 0x2
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5jl;->A01:Ljava/util/UUID;
+    const/4 v11, 0x1
 
     .line 2
-    .line 3
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object/from16 v14, p0
 
+    .line 3
     .line 4
+    move/from16 v13, p14
+
     .line 5
     .line 6
-    new-instance v4, LX/5Ro;
+    if-ne v13, v11, :cond_2
 
     .line 7
     .line 8
-    invoke-direct {v4, p0, p2, v0, p3}, LX/5Ro;-><init>(LX/5jl;Ljava/lang/String;Ljava/util/UUID;Ljava/util/concurrent/Callable;)V
+    iget-object v0, v14, LX/5JL;->A08:LX/5Dx;
 
     .line 9
     .line 10
+    :goto_0
+    if-eqz v0, :cond_4
+
     .line 11
-    if-eqz p1, :cond_0
-
     .line 12
-    .line 13
-    invoke-virtual {v4, p1}, LX/5Ro;->A01(LX/5Rr;)V
+    :goto_1
+    invoke-interface {v0}, LX/5Dx;->A6F()LX/58n;
 
+    .line 13
     .line 14
     .line 15
+    move-result-object v31
+
     .line 16
-    :cond_0
-    iget-object v3, p0, LX/5jl;->A03:Landroid/os/Handler;
+    iget v0, v14, LX/5JL;->A0E:I
 
     .line 17
     .line 18
-    iget-object v2, p0, LX/5jl;->A01:Ljava/util/UUID;
+    move/from16 v18, v0
 
     .line 19
     .line 20
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    iget v0, v14, LX/5JL;->A0D:I
 
     .line 21
     .line 22
-    .line 23
-    move-result-wide v0
+    move/from16 v17, v0
 
+    .line 23
     .line 24
-    invoke-virtual {v3, v4, v2, v0, v1}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-boolean v0, v14, LX/5JL;->A07:Z
 
     .line 25
     .line 26
-    .line 27
-    monitor-exit p0
-
-    .line 28
-    return-object v4
-
-    .line 29
-    :catchall_0
-    move-exception v0
-
-    .line 30
-    monitor-exit p0
-
-    .line 31
-    throw v0
-.end method
-
-.method public final declared-synchronized A01(LX/5Rr;Ljava/util/concurrent/Callable;)LX/5Ro;
-    .locals 5
-
-    .line 0
-    const-string v0, "load_camera_infos"
-
-    .line 1
-    .line 2
-    monitor-enter p0
-
-    .line 3
-    :try_start_0
-    sget-object v4, LX/5jl;->A06:Ljava/util/UUID;
-
-    .line 4
-    .line 5
-    new-instance v3, LX/5Ro;
-
-    .line 6
-    .line 7
-    invoke-direct {v3, p0, v0, v4, p2}, LX/5Ro;-><init>(LX/5jl;Ljava/lang/String;Ljava/util/UUID;Ljava/util/concurrent/Callable;)V
-
-    .line 8
-    .line 9
-    .line 10
-    invoke-virtual {v3, p1}, LX/5Ro;->A01(LX/5Rr;)V
-
-    .line 11
-    .line 12
-    .line 13
-    iget-object v2, p0, LX/5jl;->A03:Landroid/os/Handler;
-
-    .line 14
-    .line 15
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-wide v0
-
-    .line 19
-    invoke-virtual {v2, v3, v4, v0, v1}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 20
-    .line 21
-    .line 22
-    monitor-exit p0
-
-    .line 23
-    return-object v3
-
-    .line 24
-    :catchall_0
-    move-exception v0
-
-    .line 25
-    monitor-exit p0
-
-    .line 26
-    throw v0
-.end method
-
-.method public final declared-synchronized A02(Ljava/lang/String;Ljava/util/concurrent/Callable;J)LX/5Ro;
-    .locals 5
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5jl;->A01:Ljava/util/UUID;
-
-    .line 2
-    .line 3
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 4
-    .line 5
-    .line 6
-    new-instance v4, LX/5Ro;
-
-    .line 7
-    .line 8
-    invoke-direct {v4, p0, p1, v0, p2}, LX/5Ro;-><init>(LX/5jl;Ljava/lang/String;Ljava/util/UUID;Ljava/util/concurrent/Callable;)V
-
-    .line 9
-    .line 10
-    .line 11
-    iget-object v3, p0, LX/5jl;->A03:Landroid/os/Handler;
-
-    .line 12
-    .line 13
-    iget-object v2, p0, LX/5jl;->A01:Ljava/util/UUID;
-
-    .line 14
-    .line 15
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-wide v0
-
-    .line 19
-    add-long/2addr v0, p3
-
-    .line 20
-    invoke-virtual {v3, v4, v2, v0, v1}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 21
-    .line 22
-    .line 23
-    monitor-exit p0
-
-    .line 24
-    return-object v4
-
-    .line 25
-    :catchall_0
-    move-exception v0
-
-    .line 26
-    monitor-exit p0
-
-    .line 27
-    throw v0
-.end method
-
-.method public final A03(Ljava/lang/String;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5jl;->A01:Ljava/util/UUID;
-
-    .line 2
-    .line 3
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 4
-    .line 5
-    .line 6
-    new-instance v1, LX/5Ro;
-
-    .line 7
-    .line 8
-    invoke-direct {v1, p0, p1, v0, p2}, LX/5Ro;-><init>(LX/5jl;Ljava/lang/String;Ljava/util/UUID;Ljava/util/concurrent/Callable;)V
-
-    .line 9
-    .line 10
-    .line 11
-    iget-object v0, p0, LX/5jl;->A02:Landroid/os/Handler;
-
-    .line 12
-    .line 13
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 14
-    .line 15
-    .line 16
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 17
-    invoke-virtual {v1}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    return-object v0
-
-    .line 22
-    :catchall_0
-    move-exception v0
-
-    .line 23
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final A04(Ljava/lang/String;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5jl;->A01:Ljava/util/UUID;
-
-    .line 2
-    .line 3
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 4
-    .line 5
-    .line 6
-    new-instance v1, LX/5Ro;
-
-    .line 7
-    .line 8
-    invoke-direct {v1, p0, p1, v0, p2}, LX/5Ro;-><init>(LX/5jl;Ljava/lang/String;Ljava/util/UUID;Ljava/util/concurrent/Callable;)V
-
-    .line 9
-    .line 10
-    .line 11
-    iget-object v0, p0, LX/5jl;->A02:Landroid/os/Handler;
-
-    .line 12
-    .line 13
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 14
-    .line 15
-    .line 16
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 17
-    invoke-virtual {v1}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    check-cast v0, LX/5jm;
-
-    .line 22
-    .line 23
-    invoke-interface {v0}, LX/5jm;->A6C()V
-
-    .line 24
-    .line 25
-    .line 26
-    invoke-interface {v0}, LX/5jm;->ALU()Ljava/lang/Object;
+    move/from16 v16, v0
 
     .line 27
     .line 28
-    .line 29
-    move-result-object v0
+    iget-boolean v15, v14, LX/5JL;->A0C:Z
 
+    .line 29
     .line 30
-    return-object v0
+    move-object/from16 v20, p1
 
     .line 31
-    :catchall_0
-    move-exception v0
-
     .line 32
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 33
-    throw v0
-.end method
-
-.method public final declared-synchronized A05(Ljava/lang/Runnable;Ljava/util/UUID;)V
-    .locals 4
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5jl;->A01:Ljava/util/UUID;
-
-    .line 2
-    .line 3
-    if-eqz v0, :cond_0
-
-    .line 4
-    .line 5
-    invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 6
-    .line 7
-    .line 8
-    move-result v0
-
-    .line 9
-    if-nez v0, :cond_1
-
-    .line 10
-    .line 11
-    :cond_0
-    sget-object v0, LX/5jl;->A06:Ljava/util/UUID;
-
-    .line 12
-    .line 13
-    invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    if-nez v0, :cond_1
-
-    .line 18
-    .line 19
-    goto :goto_0
-
-    .line 20
-    :cond_1
-    iget-object v2, p0, LX/5jl;->A00:Landroid/os/Handler;
-
-    .line 21
-    .line 22
-    if-eqz v2, :cond_2
-
-    .line 23
-    .line 24
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-wide v0
-
-    .line 28
-    invoke-virtual {v2, p1, p2, v0, v1}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
-
-    .line 29
-    .line 30
-    .line 31
-    goto :goto_0
-
-    .line 32
-    :cond_2
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    move-object/from16 v0, v20
 
     .line 33
     .line 34
-    .line 35
-    move-result-wide v1
+    iget-boolean v10, v0, LX/5JY;->A0k:Z
 
+    .line 35
     .line 36
-    const-class v3, LX/5jk;
+    iget-object v9, v14, LX/5JL;->A05:LX/5LM;
 
     .line 37
     .line 38
-    monitor-enter v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    iget-object v8, v14, LX/5JL;->A06:LX/5Kl;
 
     .line 39
-    :try_start_1
-    sget-object v0, LX/5jk;->A00:Landroid/os/Handler;
-
     .line 40
-    .line 41
-    invoke-virtual {v0, p1, p2, v1, v2}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v7, v14, LX/5JL;->A04:LX/5K7;
 
+    .line 41
     .line 42
+    iget-object v6, v14, LX/5JL;->A03:LX/6XX;
+
     .line 43
     .line 44
-    :try_start_2
-    monitor-exit v3
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    iget-object v5, v14, LX/5JL;->A0G:LX/5CB;
 
     .line 45
-    :goto_0
-    monitor-exit p0
-
     .line 46
-    return-void
+    iget-object v4, v14, LX/5JL;->A0F:LX/5J5;
 
     .line 47
-    :catchall_0
-    :try_start_3
-    move-exception v0
-
     .line 48
-    monitor-exit v3
+    iget-object v3, v14, LX/5JL;->A0H:LX/5Kp;
 
     .line 49
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
     .line 50
-    :catchall_1
-    move-exception v0
+    iget-object v2, v14, LX/5JL;->A02:LX/5Iz;
 
     .line 51
-    monitor-exit p0
-
     .line 52
-    throw v0
-.end method
+    iget-object v1, v14, LX/5JL;->A0B:LX/6ap;
 
-.method public final A06(Ljava/lang/String;)V
-    .locals 2
+    .line 53
+    .line 54
+    new-instance v0, LX/5JR;
 
-    .line 0
-    invoke-virtual {p0}, LX/5jl;->A09()Z
+    .line 55
+    .line 56
+    move-object/from16 v35, p12
 
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
+    .line 57
+    .line 58
+    move-object/from16 v34, p11
 
-    .line 4
-    if-eqz v0, :cond_0
+    .line 59
+    .line 60
+    move/from16 v42, p17
 
-    .line 5
-    .line 6
-    return-void
+    .line 61
+    .line 62
+    move-object/from16 v26, p4
 
-    .line 7
+    .line 63
+    .line 64
+    move-wide/from16 v40, p15
+
+    .line 65
+    .line 66
+    move/from16 v36, p13
+
+    .line 67
+    .line 68
+    move-object/from16 v25, p3
+
+    .line 69
+    .line 70
+    move-object/from16 v27, p5
+
+    .line 71
+    .line 72
+    move-object/from16 v28, p6
+
+    .line 73
+    .line 74
+    move-object/from16 v29, p7
+
+    .line 75
+    .line 76
+    move-object/from16 v30, p8
+
+    .line 77
+    .line 78
+    move-object/from16 v32, p9
+
+    .line 79
+    .line 80
+    move-object/from16 v33, v1
+
+    .line 81
+    .line 82
+    move/from16 v37, v13
+
+    .line 83
+    .line 84
+    move/from16 v38, v18
+
+    .line 85
+    .line 86
+    move/from16 v39, v17
+
+    .line 87
+    .line 88
+    move/from16 v43, v16
+
+    .line 89
+    .line 90
+    move/from16 v44, v15
+
+    .line 91
+    .line 92
+    move/from16 v45, v10
+
+    .line 93
+    .line 94
+    move-object/from16 v21, v7
+
+    .line 95
+    .line 96
+    move-object/from16 v22, v9
+
+    .line 97
+    .line 98
+    move-object/from16 v23, v3
+
+    .line 99
+    .line 100
+    move-object/from16 v24, v8
+
+    .line 101
+    .line 102
+    move-object/from16 v17, v2
+
+    .line 103
+    .line 104
+    move-object/from16 v18, v6
+
+    .line 105
+    .line 106
+    move-object/from16 v19, v5
+
+    .line 107
+    .line 108
+    move-object v15, v0
+
+    .line 109
+    move-object/from16 v16, v4
+
+    .line 110
+    .line 111
+    invoke-direct/range {v15 .. v45}, LX/5JR;-><init>(LX/5J5;LX/5Iz;LX/6XX;LX/5CB;LX/5JY;LX/5K7;LX/5LM;LX/5Kp;LX/5Kl;LX/5Le;LX/4FV;LX/5JQ;LX/5Jf;LX/5Fk;LX/5Jt;LX/58n;LX/5LK;LX/6ap;Ljava/util/List;[IIIIIJZZZZ)V
+
+    .line 112
+    .line 113
+    .line 114
+    if-ne v13, v12, :cond_1
+
+    .line 115
+    .line 116
+    iget-object v1, v14, LX/5JL;->A01:LX/5J7;
+
+    .line 117
+    .line 118
+    :goto_2
+    if-eqz v1, :cond_0
+
+    .line 119
+    .line 120
+    iput-object v0, v1, LX/5J7;->A00:LX/5JR;
+
+    .line 121
+    .line 122
     :cond_0
-    const-string v1, " Current thread: "
+    return-object v0
 
-    .line 8
-    .line 9
-    invoke-static {}, LX/4BE;->A0o()Ljava/lang/String;
+    .line 123
+    :cond_1
+    if-ne v13, v11, :cond_0
 
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
+    .line 124
+    .line 125
+    iget-object v1, v14, LX/5JL;->A00:LX/5J7;
 
-    .line 13
-    invoke-static {p1, v1, v0}, LX/4BD;->A0e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    throw v0
-.end method
-
-.method public final declared-synchronized A07(Ljava/lang/String;Ljava/util/concurrent/Callable;)V
-    .locals 1
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    const/4 v0, 0x0
-
-    .line 2
-    :try_start_0
-    invoke-virtual {p0, v0, p1, p2}, LX/5jl;->A00(LX/5Rr;Ljava/lang/String;Ljava/util/concurrent/Callable;)LX/5Ro;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 3
-    .line 4
-    .line 5
-    monitor-exit p0
-
-    .line 6
-    return-void
-
-    .line 7
-    :catchall_0
-    move-exception v0
-
-    .line 8
-    monitor-exit p0
-
-    .line 9
-    throw v0
-.end method
-
-.method public final declared-synchronized A08(Ljava/util/concurrent/FutureTask;)V
-    .locals 1
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5jl;->A03:Landroid/os/Handler;
-
-    .line 2
-    .line 3
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    .line 5
-    .line 6
-    monitor-exit p0
-
-    .line 7
-    return-void
-
-    .line 8
-    :catchall_0
-    move-exception v0
-
-    .line 9
-    monitor-exit p0
-
-    .line 10
-    throw v0
-.end method
-
-.method public final A09()Z
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/5jl;->A03:Landroid/os/Handler;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/4BE;->A0w(Landroid/os/Handler;)Ljava/lang/Thread;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
-    .line 6
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    return v0
-.end method
-
-.method public final finalize()V
-    .locals 3
-
-    .line 0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 1
-    .line 2
-    .line 3
-    iget-object v0, p0, LX/5jl;->A04:Landroid/os/HandlerThread;
-
-    .line 4
-    .line 5
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 6
-    .line 7
-    const/16 v1, 0x12
-
-    .line 8
-    .line 9
-    if-lt v2, v1, :cond_0
-
-    .line 10
-    .line 11
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
-
-    .line 12
-    .line 13
-    .line 14
-    goto :goto_0
-
-    .line 15
-    :cond_0
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
-
-    .line 16
-    .line 17
-    .line 18
-    :goto_0
-    :try_start_0
-    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
-
-    .line 19
-    .line 20
-    .line 21
-    goto :goto_1
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 22
-    :catch_0
-    invoke-static {}, LX/0Yf;->A0s()V
-
-    .line 23
-    .line 24
-    .line 25
-    :goto_1
-    iget-object v0, p0, LX/5jl;->A05:Landroid/os/HandlerThread;
-
-    .line 26
-    .line 27
-    if-lt v2, v1, :cond_1
-
-    .line 28
-    .line 29
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
-
-    .line 30
-    .line 31
-    .line 32
+    .line 126
+    .line 127
     goto :goto_2
 
-    .line 33
-    :cond_1
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
+    .line 128
+    :cond_2
+    if-ne v13, v12, :cond_3
 
-    .line 34
-    .line 35
-    .line 36
-    :goto_2
-    :try_start_1
-    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
+    .line 129
+    .line 130
+    iget-object v0, v14, LX/5JL;->A0A:LX/5Dx;
 
-    .line 37
-    .line 38
-    .line 39
-    goto :goto_3
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
+    .line 131
+    .line 132
+    goto :goto_0
 
-    .line 40
-    :catch_1
-    invoke-static {}, LX/0Yf;->A0s()V
+    .line 133
+    :cond_3
+    const/4 v0, 0x3
 
-    .line 41
-    .line 42
-    .line 43
-    return-void
+    .line 134
+    if-ne v13, v0, :cond_4
 
-    .line 44
-    :goto_3
-    return-void
+    .line 135
+    .line 136
+    iget-object v0, v14, LX/5JL;->A09:LX/5Dx;
+
+    .line 137
+    .line 138
+    goto :goto_0
+
+    .line 139
+    :cond_4
+    iget-object v0, v14, LX/5JL;->A0J:LX/5Dx;
+
+    .line 140
+    .line 141
+    goto/16 :goto_1
 .end method

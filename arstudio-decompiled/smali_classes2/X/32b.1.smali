@@ -1,44 +1,47 @@
 .class public final LX/32b;
-.super LX/3ZC;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:Z
+.field public final A00:Landroid/net/Uri;
 
-.field public A01:Z
-
-.field public final A02:LX/0ZF;
+.field public final A01:Ljava/io/OutputStream;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/net/Uri;Ljava/io/OutputStream;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3ZC;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    iput-object p2, p0, LX/32b;->A01:Ljava/io/OutputStream;
 
     .line 4
-    iput-boolean v0, p0, LX/32b;->A01:Z
-
     .line 5
+    iput-object p1, p0, LX/32b;->A00:Landroid/net/Uri;
+
     .line 6
-    invoke-static {}, LX/1z6;->A0L()LX/0ZF;
-
     .line 7
-    .line 8
-    .line 9
-    move-result-object v0
+    return-void
+.end method
 
-    .line 10
-    iput-object v0, p0, LX/32b;->A02:LX/0ZF;
+.method public static A00(LX/32b;)V
+    .locals 0
 
-    .line 11
-    .line 12
+    .line 0
+    iget-object p0, p0, LX/32b;->A01:Ljava/io/OutputStream;
+
+    .line 1
+    .line 2
+    invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
+
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

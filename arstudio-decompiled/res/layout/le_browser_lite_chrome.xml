@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:orientation="vertical" android:id="@id/chrome_header_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_stacked_max_height">
-        <X.4HO android:id="@id/le_progress_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="10000" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/browser_le_progress_bar" android:layout_alignParentTop="true" style="?android:progressBarStyleHorizontal" />
-        <X.6H3 android:id="@id/close_button" android:background="@drawable/clickable_item_bg" android:layout_width="@dimen/abc_action_bar_stacked_max_height" android:layout_height="@dimen/abc_action_bar_stacked_max_height" android:scaleType="centerInside" android:tint="@color/fds_gray_40" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
-        <X.6H3 android:id="@id/browser_menu_button" android:background="@drawable/clickable_item_bg" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/abc_action_bar_stacked_max_height" android:scaleType="centerInside" android:tint="@color/fds_gray_40" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
-        <X.4F7 android:id="@id/chrome_url_bar_outer_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_stacked_max_height" android:layout_toLeftOf="@id/browser_menu_button" android:layout_toRightOf="@id/close_button" android:layout_alignParentTop="true" android:layout_toStartOf="@id/browser_menu_button" android:layout_toEndOf="@id/close_button">
+    <RelativeLayout android:orientation="vertical" android:id="@id/chrome_header_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_button_min_height_material">
+        <X.4Bz android:id="@id/le_progress_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="10000" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/browser_le_progress_bar" android:layout_alignParentTop="true" style="?android:progressBarStyleHorizontal" />
+        <X.6dz android:id="@id/close_button" android:background="@drawable/clickable_item_bg" android:layout_width="@dimen/abc_action_button_min_height_material" android:layout_height="@dimen/abc_action_button_min_height_material" android:scaleType="centerInside" android:tint="@color/fds_gray_40" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+        <X.6dz android:id="@id/browser_menu_button" android:background="@drawable/clickable_item_bg" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/abc_action_button_min_height_material" android:scaleType="centerInside" android:tint="@color/fds_gray_40" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        <X.46y android:id="@id/chrome_url_bar_outer_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_button_min_height_material" android:layout_toLeftOf="@id/browser_menu_button" android:layout_toRightOf="@id/close_button" android:layout_alignParentTop="true" android:layout_toStartOf="@id/browser_menu_button" android:layout_toEndOf="@id/close_button">
             <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/chrome_url_bar_inner_wrapper_loading" android:paddingLeft="@dimen/abc_action_bar_elevation_material" android:paddingRight="@dimen/abc_action_bar_elevation_material" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true">
                 <TextView android:ellipsize="end" android:id="@id/chrome_url_bar_loading_url_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
             </LinearLayout>
@@ -23,7 +23,7 @@
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
-        </X.4F7>
+        </X.46y>
         <View android:id="@id/chrome_header_container_bottom_divider" android:background="@color/fds_black_alpha20" android:layout_width="fill_parent" android:layout_height="@dimen/action_sheet_native_base_section_divider_height" android:layout_alignParentBottom="true" />
     </RelativeLayout>
 </merge>

@@ -1,70 +1,29 @@
-.class public final LX/52D;
+.class public abstract LX/52d;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/content/ServiceConnection;
-
 
 # instance fields
-.field public A00:Z
+.field public A00:Ljava/lang/Object;
 
-.field public final A01:Ljava/util/concurrent/BlockingQueue;
+.field public A01:Z
+
+.field public final synthetic A02:LX/51v;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/51v;Ljava/lang/Object;)V
     .locals 1
 
-    .line 0
+    iput-object p1, p0, LX/52d;->A02:LX/51v;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p2, p0, LX/52d;->A00:Ljava/lang/Object;
+
     const/4 v0, 0x0
 
-    .line 4
-    iput-boolean v0, p0, LX/52D;->A00:Z
-
-    .line 5
-    .line 6
-    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    .line 7
-    .line 8
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
-    iput-object v0, p0, LX/52D;->A01:Ljava/util/concurrent/BlockingQueue;
-
-    .line 12
-    .line 13
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/52D;->A01:Ljava/util/concurrent/BlockingQueue;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p2}, Ljava/util/concurrent/BlockingQueue;->add(Ljava/lang/Object;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 0
+    iput-boolean v0, p0, LX/52d;->A01:Z
 
     return-void
 .end method

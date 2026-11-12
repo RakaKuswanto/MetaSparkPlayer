@@ -1,190 +1,323 @@
 .class public final LX/380;
-.super Ljava/lang/Object;
+.super Ljava/io/OutputStream;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/lang/String;
+.field public A00:Ljava/nio/ByteBuffer;
 
-.field public final A01:Ljava/lang/String;
+.field public A01:Z
 
-.field public final A02:Ljava/lang/String;
+.field public final A02:I
+
+.field public final A03:Lcom/facebook/tigon/TigonBodyStream;
+
+.field public final synthetic A04:LX/37y;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lcom/facebook/tigon/TigonBodyStream;LX/37y;I)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/380;->A04:LX/37y;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/380;->A01:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/380;->A02:Ljava/lang/String;
+    const/16 v0, 0x1000
 
     .line 6
     .line 7
-    iput-object p3, p0, LX/380;->A00:Ljava/lang/String;
+    invoke-static {p3, v0}, Ljava/lang/Math;->max(II)I
 
     .line 8
     .line 9
+    .line 10
+    move-result v0
+
+    .line 11
+    iput v0, p0, LX/380;->A02:I
+
+    .line 12
+    .line 13
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    iput-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 18
+    .line 19
+    iput-object p1, p0, LX/380;->A03:Lcom/facebook/tigon/TigonBodyStream;
+
+    .line 20
+    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    .line 0
-    instance-of v0, p1, LX/380;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_2
-
-    .line 3
-    .line 4
-    check-cast p1, LX/380;
-
-    .line 5
-    .line 6
-    iget-object v1, p0, LX/380;->A01:Ljava/lang/String;
-
-    .line 7
-    .line 8
-    iget-object v0, p1, LX/380;->A01:Ljava/lang/String;
-
-    .line 9
-    .line 10
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    if-eqz v0, :cond_0
-
-    .line 15
-    .line 16
-    iget-object v1, p0, LX/380;->A02:Ljava/lang/String;
-
-    .line 17
-    .line 18
-    iget-object v0, p1, LX/380;->A02:Ljava/lang/String;
-
-    .line 19
-    .line 20
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 21
-    .line 22
-    .line 23
-    move-result v0
-
-    .line 24
-    if-eqz v0, :cond_0
-
-    .line 25
-    .line 26
-    iget-object v1, p0, LX/380;->A00:Ljava/lang/String;
-
-    .line 27
-    .line 28
-    iget-object v0, p1, LX/380;->A00:Ljava/lang/String;
-
-    .line 29
-    .line 30
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 31
-    .line 32
-    .line 33
-    move-result v1
-
-    .line 34
-    const/4 v0, 0x1
-
-    .line 35
-    if-nez v1, :cond_1
-
-    .line 36
-    .line 37
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 38
-    :cond_1
-    return v0
-
-    .line 39
-    :cond_2
-    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 40
-    .line 41
-    .line 42
-    move-result v0
-
-    .line 43
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final A00()V
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
+    iget-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
 
     .line 1
     .line 2
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
     .line 3
-    move-result-object v2
-
     .line 4
-    iget-object v1, p0, LX/380;->A01:Ljava/lang/String;
-
     .line 5
+    move-result v0
+
     .line 6
-    const/4 v0, 0x0
+    if-lez v0, :cond_0
 
     .line 7
-    aput-object v1, v2, v0
-
     .line 8
+    iget-object v2, p0, LX/380;->A03:Lcom/facebook/tigon/TigonBodyStream;
+
     .line 9
-    iget-object v1, p0, LX/380;->A02:Ljava/lang/String;
-
     .line 10
-    .line 11
-    const/4 v0, 0x1
+    iget-object v1, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
 
+    .line 11
     .line 12
-    aput-object v1, v2, v0
+    invoke-virtual {v1}, Ljava/nio/Buffer;->position()I
 
     .line 13
     .line 14
-    iget-object v1, p0, LX/380;->A00:Ljava/lang/String;
-
     .line 15
+    move-result v0
+
     .line 16
-    const/4 v0, 0x2
+    invoke-interface {v2, v1, v0}, Lcom/facebook/tigon/TigonBodyStream;->transferBytes(Ljava/nio/ByteBuffer;I)I
 
     .line 17
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
+    .line 18
+    .line 19
+    move-result v1
+
+    .line 20
+    const/4 v0, 0x1
+
+    .line 21
+    if-ne v0, v1, :cond_0
+
+    .line 22
+    .line 23
+    iput-boolean v0, p0, LX/380;->A01:Z
+
+    .line 24
+    .line 25
+    :cond_0
+    return-void
+.end method
+
+.method public final write(I)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/nio/Buffer;->hasRemaining()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-virtual {p0}, LX/380;->A00()V
+
+    .line 9
+    .line 10
+    .line 11
+    iget v0, p0, LX/380;->A02:I
+
+    .line 12
+    .line 13
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    iput-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
 
     .line 18
     .line 19
+    :cond_0
+    iget-boolean v0, p0, LX/380;->A01:Z
+
     .line 20
+    .line 21
+    if-nez v0, :cond_1
+
+    .line 22
+    .line 23
+    iget-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 24
+    .line 25
+    invoke-virtual {v0}, Ljava/nio/Buffer;->hasRemaining()Z
+
+    .line 26
+    .line 27
+    .line 28
     move-result v0
 
-    .line 21
-    return v0
+    .line 29
+    invoke-static {v0}, LX/0Ho;->A02(Z)V
+
+    .line 30
+    .line 31
+    .line 32
+    iget-object v1, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 33
+    .line 34
+    int-to-byte v0, p1
+
+    .line 35
+    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    .line 36
+    .line 37
+    .line 38
+    :cond_1
+    return-void
+.end method
+
+.method public final write([BII)V
+    .locals 2
+
+    .line 268435456
+    :goto_0
+    if-lez p3, :cond_1
+
+    .line 268435457
+    .line 268435458
+    iget-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 268435459
+    .line 268435460
+    invoke-virtual {v0}, Ljava/nio/Buffer;->hasRemaining()Z
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result v0
+
+    .line 268435464
+    if-nez v0, :cond_0
+
+    .line 268435465
+    .line 268435466
+    invoke-virtual {p0}, LX/380;->A00()V
+
+    .line 268435467
+    .line 268435468
+    .line 268435469
+    iget v0, p0, LX/380;->A02:I
+
+    .line 268435470
+    .line 268435471
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    .line 268435472
+    .line 268435473
+    .line 268435474
+    move-result-object v0
+
+    .line 268435475
+    iput-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 268435476
+    .line 268435477
+    :cond_0
+    iget-boolean v0, p0, LX/380;->A01:Z
+
+    .line 268435478
+    .line 268435479
+    if-nez v0, :cond_1
+
+    .line 268435480
+    .line 268435481
+    iget-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 268435482
+    .line 268435483
+    invoke-virtual {v0}, Ljava/nio/Buffer;->hasRemaining()Z
+
+    .line 268435484
+    .line 268435485
+    .line 268435486
+    move-result v0
+
+    .line 268435487
+    invoke-static {v0}, LX/0Ho;->A02(Z)V
+
+    .line 268435488
+    .line 268435489
+    .line 268435490
+    iget-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 268435491
+    .line 268435492
+    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+
+    .line 268435493
+    .line 268435494
+    .line 268435495
+    move-result v0
+
+    .line 268435496
+    invoke-static {v0, p3}, Ljava/lang/Math;->min(II)I
+
+    .line 268435497
+    .line 268435498
+    .line 268435499
+    move-result v1
+
+    .line 268435500
+    iget-object v0, p0, LX/380;->A00:Ljava/nio/ByteBuffer;
+
+    .line 268435501
+    .line 268435502
+    invoke-virtual {v0, p1, p2, v1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
+    .line 268435503
+    .line 268435504
+    .line 268435505
+    add-int/2addr p2, v1
+
+    .line 268435506
+    sub-int/2addr p3, v1
+
+    .line 268435507
+    goto :goto_0
+
+    .line 268435508
+    :cond_1
+    return-void
 .end method

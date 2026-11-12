@@ -2,24 +2,17 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
-
-
-# instance fields
-.field public final synthetic A00:Lcom/facebook/arstudio/player/settings/PlayerSettingsFragment;
-
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/arstudio/player/settings/PlayerSettingsFragment;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/3gI;->A00:Lcom/facebook/arstudio/player/settings/PlayerSettingsFragment;
+    const-class v0, LX/3gI;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, LX/6Zp;->A00(Ljava/lang/Class;)Ljava/lang/String;
 
     .line 3
     .line 4
@@ -27,40 +20,45 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    .line 3
+    return-void
+.end method
 
+.method public static final A00()I
+    .locals 2
+
+    .line 0
+    const/4 v1, 0x0
+
+    .line 1
+    :try_start_0
+    invoke-static {}, Landroidx/window/extensions/WindowExtensionsProvider;->getWindowExtensions()Landroidx/window/extensions/WindowExtensions;
+
+    .line 2
     .line 3
     .line 4
+    move-result-object v0
+
     .line 5
-    move-result v0
+    invoke-interface {v0}, Landroidx/window/extensions/WindowExtensions;->getVendorApiLevel()I
 
     .line 6
-    if-eqz v0, :cond_0
-
     .line 7
     .line 8
-    iget-object v0, p0, LX/3gI;->A00:Lcom/facebook/arstudio/player/settings/PlayerSettingsFragment;
+    move-result v1
+    :try_end_0
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 9
-    .line 10
-    invoke-virtual {v0}, Lcom/facebook/arstudio/player/settings/PlayerSettingsFragment;->checkOverlayPermission()V
-
-    .line 11
-    .line 12
-    .line 13
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 14
-    return v0
+    :catch_0
+    return v1
 .end method

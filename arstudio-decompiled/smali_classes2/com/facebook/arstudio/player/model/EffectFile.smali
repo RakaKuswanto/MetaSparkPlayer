@@ -27,11 +27,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x3e
+    const/16 v0, 0x3d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -97,7 +97,7 @@
 
     .line 13
     .line 14
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 15
     .line 16
@@ -150,62 +150,6 @@
     .line 39
     .line 40
     return-void
-.end method
-
-.method public static A00(Landroid/content/Context;Lcom/facebook/arstudio/player/model/EffectFile;Ljava/lang/Class;)Landroid/content/Intent;
-    .locals 3
-
-    .line 0
-    new-instance v2, Landroid/content/Intent;
-
-    .line 1
-    .line 2
-    invoke-direct {v2, p0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 3
-    .line 4
-    .line 5
-    new-instance v1, Landroid/os/Bundle;
-
-    .line 6
-    .line 7
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    .line 8
-    .line 9
-    .line 10
-    const-string v0, "data"
-
-    .line 11
-    .line 12
-    invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
-
-    .line 16
-    .line 17
-    .line 18
-    iget-object v0, p1, Lcom/facebook/arstudio/player/model/EffectFile;->A03:Lcom/facebook/arstudio/player/model/EffectInfo;
-
-    .line 19
-    .line 20
-    iget-object v1, v0, Lcom/facebook/arstudio/player/model/EffectInfo;->A08:Ljava/lang/String;
-
-    .line 21
-    .line 22
-    const-string v0, "effect_id"
-
-    .line 23
-    .line 24
-    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 25
-    .line 26
-    .line 27
-    return-object v2
 .end method
 
 
@@ -316,14 +260,14 @@
 .end method
 
 .method public final hashCode()I
-    .locals 5
+    .locals 3
 
     .line 0
     iget-object v0, p0, Lcom/facebook/arstudio/player/model/EffectFile;->A04:Ljava/lang/String;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 3
     .line 4
@@ -331,32 +275,26 @@
     move-result v0
 
     .line 6
-    mul-int/lit8 v4, v0, 0x1f
+    mul-int/lit8 v2, v0, 0x1f
 
     .line 7
     .line 8
-    iget-wide v2, p0, Lcom/facebook/arstudio/player/model/EffectFile;->A02:J
+    iget-wide v0, p0, Lcom/facebook/arstudio/player/model/EffectFile;->A02:J
 
     .line 9
     .line 10
-    const/16 v0, 0x20
+    invoke-static {v0, v1}, LX/0X6;->A03(J)I
 
     .line 11
     .line 12
-    ushr-long v0, v2, v0
-
     .line 13
+    move-result v0
+
     .line 14
-    xor-long/2addr v2, v0
+    add-int/2addr v2, v0
 
     .line 15
-    long-to-int v0, v2
-
-    .line 16
-    add-int/2addr v4, v0
-
-    .line 17
-    return v4
+    return v2
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V

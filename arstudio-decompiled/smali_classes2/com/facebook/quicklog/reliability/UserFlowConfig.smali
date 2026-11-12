@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ZLX/3iF;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ZLX/36A;)V
     .locals 0
 
     .line 268435456
@@ -247,7 +247,7 @@
     move-result-object v0
 
     .line 17
-    invoke-static {v0, v2}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v2}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 18
     .line 19

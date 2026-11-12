@@ -1,56 +1,45 @@
-.class public final synthetic LX/052;
+.class public abstract LX/052;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultSpecialEffectsController$$ExternalSyntheticLambda3"
-
-
-# instance fields
-.field public final synthetic A00:Landroid/graphics/Rect;
-
-.field public final synthetic A01:Landroid/view/View;
-
-.field public final synthetic A02:LX/069;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/graphics/Rect;Landroid/view/View;LX/069;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p3, p0, LX/052;->A02:LX/069;
-
-    iput-object p2, p0, LX/052;->A01:Landroid/view/View;
-
-    iput-object p1, p0, LX/052;->A00:Landroid/graphics/Rect;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method public static A00(FFFF)Landroid/view/animation/Interpolator;
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/052;->A01:Landroid/view/View;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/052;->A00:Landroid/graphics/Rect;
+    const/16 v0, 0x15
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/069;->A00(Landroid/view/View;Landroid/graphics/Rect;)V
+    if-lt v1, v0, :cond_0
 
     .line 5
     .line 6
+    invoke-static {p0, p1, p2, p3}, LX/051;->A00(FFFF)Landroid/view/animation/Interpolator;
+
     .line 7
-    return-void
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+
+    .line 11
+    :cond_0
+    new-instance v0, LX/050;
+
+    .line 12
+    .line 13
+    invoke-direct {v0, p0, p1, p2, p3}, LX/050;-><init>(FFFF)V
+
+    .line 14
+    .line 15
+    .line 16
+    return-object v0
 .end method

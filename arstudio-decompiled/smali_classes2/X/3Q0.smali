@@ -1,164 +1,232 @@
-.class public abstract LX/3Q0;
-.super Ljava/util/concurrent/AbstractExecutorService;
+.class public final LX/3Q0;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/1iJ;
+.implements LX/3Lg;
+
+
+# instance fields
+.field public final A00:Landroid/net/Uri;
+
+.field public final A01:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/net/Uri;Ljava/util/Map;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/3Q0;->A00:Landroid/net/Uri;
+
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/3Q0;->A01:Ljava/util/Map;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final ApK(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     .line 0
-    invoke-super {p0, p1}, Ljava/util/concurrent/AbstractExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    const/4 v2, 0x1
 
     .line 1
+    if-eq p0, p1, :cond_2
+
     .line 2
     .line 3
-    move-result-object v0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 4
-    check-cast v0, Lcom/google/common/util/concurrent/ListenableFuture;
-
     .line 5
     .line 6
-    return-object v0
-.end method
-
-.method public final ApL(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
-
-    .line 0
-    invoke-super {p0, p1}, Ljava/util/concurrent/AbstractExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    check-cast v0, Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 5
-    .line 6
-    return-object v0
-.end method
-
-.method public final ApP(Ljava/lang/Object;Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 1
-
-    .line 0
-    invoke-super {p0, p2, p1}, Ljava/util/concurrent/AbstractExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    check-cast v0, Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 5
-    .line 6
-    return-object v0
-.end method
-
-.method public final newTaskFor(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/RunnableFuture;
-    .locals 2
-
-    .line 268435456
-    invoke-static {p1, p2}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Callable;
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
     move-result-object v1
 
-    .line 268435460
-    new-instance v0, LX/3bT;
+    .line 7
+    invoke-static {p1}, LX/0X4;->A0Y(Ljava/lang/Object;)Ljava/lang/Class;
 
-    .line 268435461
-    .line 268435462
-    invoke-direct {v0, v1}, LX/3bT;-><init>(Ljava/util/concurrent/Callable;)V
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
 
-    .line 268435463
-    .line 268435464
-    .line 268435465
-    return-object v0
+    .line 11
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    const/4 v0, 0x0
+
+    .line 16
+    if-nez v1, :cond_0
+
+    .line 17
+    .line 18
+    return v0
+
+    .line 19
+    :cond_0
+    const-string/jumbo v0, "null cannot be cast to non-null type com.facebook.fresco.vito.source.SingleImageSource"
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-static {p1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 23
+    .line 24
+    .line 25
+    check-cast p1, LX/3Q0;
+
+    .line 26
+    .line 27
+    iget-object v1, p0, LX/3Q0;->A00:Landroid/net/Uri;
+
+    .line 28
+    .line 29
+    iget-object v0, p1, LX/3Q0;->A00:Landroid/net/Uri;
+
+    .line 30
+    .line 31
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 32
+    .line 33
+    .line 34
+    move-result v0
+
+    .line 35
+    if-eqz v0, :cond_1
+
+    .line 36
+    .line 37
+    iget-object v1, p0, LX/3Q0;->A01:Ljava/util/Map;
+
+    .line 38
+    .line 39
+    iget-object v0, p1, LX/3Q0;->A01:Ljava/util/Map;
+
+    .line 40
+    .line 41
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 42
+    .line 43
+    .line 44
+    move-result v0
+
+    .line 45
+    if-eqz v0, :cond_1
+
+    .line 46
+    .line 47
+    return v2
+
+    .line 48
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 49
+    :cond_2
+    return v2
 .end method
 
-.method public final newTaskFor(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/RunnableFuture;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
     .line 0
-    new-instance v0, LX/3bT;
+    iget-object v0, p0, LX/3Q0;->A00:Landroid/net/Uri;
 
     .line 1
     .line 2
-    invoke-direct {v0, p1}, LX/3bT;-><init>(Ljava/util/concurrent/Callable;)V
+    invoke-static {v0}, LX/0X6;->A06(Ljava/lang/Object;)I
 
     .line 3
     .line 4
     .line 5
-    return-object v0
+    move-result v1
+
+    .line 6
+    iget-object v0, p0, LX/3Q0;->A01:Ljava/util/Map;
+
+    .line 7
+    .line 8
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    return v0
 .end method
 
-.method public final bridge synthetic submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     .line 0
-    invoke-virtual {p0, p1}, LX/3Q0;->ApK(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    move-result-object v1
 
     .line 4
-    return-object v0
-.end method
+    const-string v0, "SingleImageSource(uri="
 
-.method public final bridge synthetic submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-    .locals 1
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 536870912
-    invoke-virtual {p0, p2, p1}, LX/3Q0;->ApP(Ljava/lang/Object;Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/3Q0;->A00:Landroid/net/Uri;
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
+    .line 10
+    .line 11
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 12
+    .line 13
+    .line 14
+    const-string v0, ", extras="
+
+    .line 15
+    .line 16
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 17
+    .line 18
+    .line 19
+    iget-object v0, p0, LX/3Q0;->A01:Ljava/util/Map;
+
+    .line 20
+    .line 21
+    invoke-static {v0, v1}, LX/0X1;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 22
+    .line 23
+    .line 24
     move-result-object v0
 
-    .line 536870916
-    return-object v0
-.end method
-
-.method public final bridge synthetic submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-    .locals 1
-
-    .line 268435456
-    invoke-virtual {p0, p1}, LX/3Q0;->ApL(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    move-result-object v0
-
-    .line 268435460
+    .line 25
     return-object v0
 .end method

@@ -1,88 +1,43 @@
-.class public abstract LX/68B;
-.super Ljava/lang/ref/PhantomReference;
+.class public final LX/68b;
+.super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:LX/68B;
-
-.field public A01:LX/68B;
+# interfaces
+.implements LX/698;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
-
-    .line 268435456
-    sget-object v1, LX/68D;->A02:Ljava/lang/ref/ReferenceQueue;
-
-    .line 268435457
-    .line 268435458
-    const/4 v0, 0x0
-
-    .line 268435459
-    invoke-direct {p0, v0, v1}, Ljava/lang/ref/PhantomReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
-
-    .line 268435460
-    .line 268435461
-    .line 268435462
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 3
+    .locals 0
 
     .line 0
-    sget-object v0, LX/68D;->A02:Ljava/lang/ref/ReferenceQueue;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, Ljava/lang/ref/PhantomReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
-
     .line 3
-    .line 4
-    .line 5
-    sget-object v2, LX/68D;->A01:LX/68N;
-
-    .line 6
-    .line 7
-    :cond_0
-    iget-object v1, v2, LX/68N;->A00:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 8
-    .line 9
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    check-cast v0, LX/68B;
-
-    .line 14
-    .line 15
-    iput-object v0, p0, LX/68B;->A00:LX/68B;
-
-    .line 16
-    .line 17
-    invoke-virtual {v1, v0, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 18
-    .line 19
-    .line 20
-    move-result v0
-
-    .line 21
-    if-eqz v0, :cond_0
-
-    .line 22
-    .line 23
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract destruct()V
+.method public final deliverOnRenderThread()Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    return v0
+.end method
+
+.method public final getType()LX/61j;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/61j;->INPUT_STOP_CAPTURE_PHOTO:LX/61j;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

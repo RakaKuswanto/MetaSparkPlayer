@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;
-.super LX/3Ub;
+.super LX/3kn;
 .source ""
 
 # interfaces
@@ -19,7 +19,7 @@
 
 .field public final bufferedDurationMsAtDataSpecCreation:I
 
-.field public final cacheType:LX/3UP;
+.field public final cacheType:LX/3lH;
 
 .field public final cdnResponseTime:J
 
@@ -141,11 +141,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x46
+    const/16 v0, 0x3b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -160,289 +160,289 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/3UP;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIIIIIIIIJJJJJJJJJJJJJJJJZZZZZZZZZZZZZZ)V
+.method public constructor <init>(LX/3lH;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIIIIIIIIJJJJJJJJJJJJJJJJZZZZZZZZZZZZZZ)V
     .locals 2
 
-    .line 268929879
-    sget-object v0, LX/3TB;->HTTP_TRANSFER_REQUESTED:LX/3TB;
+    .line 268887330
+    sget-object v0, LX/3kk;->HTTP_TRANSFER_REQUESTED:LX/3kk;
 
-    invoke-direct {p0, v0}, LX/3Ub;-><init>(LX/3TB;)V
+    invoke-direct {p0, v0}, LX/3kn;-><init>(LX/3kk;)V
 
-    .line 268929880
+    .line 268887331
     move-wide/from16 v0, p32
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->timeMs:J
 
-    .line 268929881
+    .line 268887332
     iput-object p2, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->videoId:Ljava/lang/String;
 
-    .line 268929882
+    .line 268887333
     move-wide/from16 v0, p34
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playerId:J
 
-    .line 268929883
+    .line 268887334
     iput-object p3, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->url:Ljava/lang/String;
 
-    .line 268929884
+    .line 268887335
     iput-object p4, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->exceptionMessage:Ljava/lang/String;
 
-    .line 268929885
+    .line 268887336
     move/from16 v0, p64
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isPrefetch:Z
 
-    .line 268929886
+    .line 268887337
     iput-object p5, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->prefetchSource:Ljava/lang/String;
 
-    .line 268929887
+    .line 268887338
     move/from16 v0, p19
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->transferSeqNum:I
 
-    .line 268929888
-    iput-object p1, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cacheType:LX/3UP;
+    .line 268887339
+    iput-object p1, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cacheType:LX/3lH;
 
-    .line 268929889
+    .line 268887340
     move/from16 v0, p65
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFirstTimePlay:Z
 
-    .line 268929890
+    .line 268887341
     move/from16 v0, p66
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isInWarmup:Z
 
-    .line 268929891
+    .line 268887342
     iput-object p6, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playOrigin:Ljava/lang/String;
 
-    .line 268929892
+    .line 268887343
     iput-object p10, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playSubOrigin:Ljava/lang/String;
 
-    .line 268929893
+    .line 268887344
     move-wide/from16 v0, p36
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startingByteOffset:J
 
-    .line 268929894
+    .line 268887345
     move-wide/from16 v0, p38
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->requestedLength:J
 
-    .line 268929895
+    .line 268887346
     move/from16 v0, p20
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->streamType:I
 
-    .line 268929896
+    .line 268887347
     move-wide/from16 v0, p40
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->segmentStartMs:J
 
-    .line 268929897
+    .line 268887348
     move/from16 v0, p21
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->segmentDurationMs:I
 
-    .line 268929898
+    .line 268887349
     iput-object p7, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->dataSourceFactory:Ljava/lang/String;
 
-    .line 268929899
+    .line 268887350
     iput-object p8, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->qualityLabel:Ljava/lang/String;
 
-    .line 268929900
+    .line 268887351
     move/from16 v0, p22
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->networkPriority:I
 
-    .line 268929901
+    .line 268887352
     move-wide/from16 v0, p42
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->avgBitrate:J
 
-    .line 268929902
+    .line 268887353
     move/from16 v0, p67
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isLowestBitrate:Z
 
-    .line 268929903
+    .line 268887354
     move/from16 v0, p23
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->bufferedDurationMs:I
 
-    .line 268929904
+    .line 268887355
     move-wide/from16 v0, p44
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startVideoBandwidth:J
 
-    .line 268929905
+    .line 268887356
     move-wide/from16 v0, p46
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startVideoTTFB:J
 
-    .line 268929906
+    .line 268887357
     move/from16 v0, p68
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSpherical:Z
 
-    .line 268929907
+    .line 268887358
     move/from16 v0, p69
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSponsored:Z
 
-    .line 268929908
+    .line 268887359
     move/from16 v0, p70
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isTemplatedManifest:Z
 
-    .line 268929909
+    .line 268887360
     iput-object p9, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->videoBandwidthEstimateStr:Ljava/lang/String;
 
-    .line 268929910
+    .line 268887361
     move-wide/from16 v0, p48
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->upstreamTTFB:J
 
-    .line 268929911
+    .line 268887362
     move-wide/from16 v0, p50
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestFirstSegmentStartTs:J
 
-    .line 268929912
+    .line 268887363
     move-wide/from16 v0, p52
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestLastSegmentEndTs:J
 
-    .line 268929913
+    .line 268887364
     move-wide/from16 v0, p54
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestNumSegments:J
 
-    .line 268929914
+    .line 268887365
     move/from16 v0, p24
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->bufferedDurationMsAtDataSpecCreation:I
 
-    .line 268929915
+    .line 268887366
     move-wide/from16 v0, p56
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->dataSpecCreationTimeMs:J
 
-    .line 268929916
+    .line 268887367
     move/from16 v0, p71
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFBMS:Z
 
-    .line 268929917
+    .line 268887368
     move/from16 v0, p72
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFbPredictiveDASH:Z
 
-    .line 268929918
+    .line 268887369
     move/from16 v0, p73
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSkipAheadChunk:Z
 
-    .line 268929919
+    .line 268887370
     move/from16 v0, p74
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->inRewoundState:Z
 
-    .line 268929920
+    .line 268887371
     move/from16 v0, p75
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isManifestDynamic:Z
 
-    .line 268929921
+    .line 268887372
     move/from16 v0, p76
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isChunkedTransfer:Z
 
-    .line 268929922
+    .line 268887373
     move/from16 v0, p77
 
     iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isPredictedURL:Z
 
-    .line 268929923
+    .line 268887374
     move/from16 v0, p26
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->expectedPredictedNumber:I
 
-    .line 268929924
+    .line 268887375
     move/from16 v0, p25
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->predictedNumberMapping:I
 
-    .line 268929925
+    .line 268887376
     move-wide/from16 v0, p58
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->numSegmentsToEndOfManifest:J
 
-    .line 268929926
+    .line 268887377
     iput-object p11, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->codec:Ljava/lang/String;
 
-    .line 268929927
+    .line 268887378
     move-wide/from16 v0, p60
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cdnResponseTime:J
 
-    .line 268929928
+    .line 268887379
     iput-object p12, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->contentType:Ljava/lang/String;
 
-    .line 268929929
+    .line 268887380
     move/from16 v0, p27
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->latestSegmentId:I
 
-    .line 268929930
+    .line 268887381
     move-wide/from16 v0, p62
 
     iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->confidenceBasedBitrateEstimate:J
 
-    .line 268929931
+    .line 268887382
     move/from16 v0, p28
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->confidencePctForBitrateEstimate:I
 
-    .line 268929932
+    .line 268887383
     move/from16 v0, p29
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->minimumLoadPositionMs:I
 
-    .line 268929933
+    .line 268887384
     iput-object p13, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneReqWave:Ljava/lang/String;
 
-    .line 268929934
+    .line 268887385
     move-object/from16 v0, p14
 
     iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneResWave:Ljava/lang/String;
 
-    .line 268929935
+    .line 268887386
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneObserved:Ljava/lang/String;
 
-    .line 268929936
+    .line 268887387
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneVariant:Ljava/lang/String;
 
-    .line 268929937
+    .line 268887388
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playerType:Ljava/lang/String;
 
-    .line 268929938
+    .line 268887389
     move/from16 v0, p30
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->positionInUnit:I
 
-    .line 268929939
+    .line 268887390
     move-object/from16 v0, p18
 
     iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->vpSessionId:Ljava/lang/String;
 
-    .line 268929940
+    .line 268887391
     move/from16 v0, p31
 
     iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->firstChunkSize:I
@@ -451,14 +451,14 @@
 .end method
 
 .method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    .locals 4
 
     .line 0
-    sget-object v0, LX/3TB;->HTTP_TRANSFER_REQUESTED:LX/3TB;
+    sget-object v0, LX/3kk;->HTTP_TRANSFER_REQUESTED:LX/3kk;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/3Ub;-><init>(LX/3TB;)V
+    invoke-direct {p0, v0}, LX/3kn;-><init>(LX/3kk;)V
 
     .line 3
     .line 4
@@ -475,7 +475,7 @@
 
     .line 10
     .line 11
-    invoke-static {p1}, LX/0Yh;->A0V(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X6;->A0o(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 12
     .line 13
@@ -528,513 +528,517 @@
     .line 36
     .line 37
     .line 38
-    move-result v1
+    move-result v0
 
     .line 39
-    const/4 v0, 0x1
+    const/4 v3, 0x0
 
     .line 40
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    const/4 v2, 0x1
 
     .line 41
+    invoke-static {v0, v2}, LX/001;->A1N(II)Z
+
     .line 42
     .line 43
-    move-result v0
-
     .line 44
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isPrefetch:Z
+    move-result v0
 
     .line 45
-    .line 46
-    invoke-static {p1}, LX/0Yh;->A0V(Landroid/os/Parcel;)Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isPrefetch:Z
 
+    .line 46
     .line 47
+    invoke-static {p1}, LX/0X6;->A0o(Landroid/os/Parcel;)Ljava/lang/String;
+
     .line 48
     .line 49
-    move-result-object v0
-
     .line 50
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->prefetchSource:Ljava/lang/String;
+    move-result-object v0
 
     .line 51
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->prefetchSource:Ljava/lang/String;
+
     .line 52
+    .line 53
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 53
     .line 54
     .line 55
-    move-result v0
-
     .line 56
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->transferSeqNum:I
+    move-result v0
 
     .line 57
-    .line 58
-    invoke-static {p1}, LX/3Ub;->A02(Landroid/os/Parcel;)LX/3UP;
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->transferSeqNum:I
 
+    .line 58
     .line 59
+    const-class v0, LX/3lH;
+
     .line 60
     .line 61
-    move-result-object v0
+    invoke-static {p1, v0}, LX/0X4;->A0e(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 62
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cacheType:LX/3UP;
-
     .line 63
     .line 64
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
+    move-result-object v0
 
     .line 65
+    check-cast v0, LX/3lH;
+
     .line 66
     .line 67
-    move-result v0
+    if-nez v0, :cond_0
 
     .line 68
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFirstTimePlay:Z
-
     .line 69
-    .line 70
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
+    sget-object v0, LX/3lH;->NOT_APPLY:LX/3lH;
 
+    .line 70
     .line 71
+    :cond_0
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cacheType:LX/3lH;
+
     .line 72
     .line 73
-    move-result v0
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
 
     .line 74
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isInWarmup:Z
-
     .line 75
     .line 76
-    invoke-static {p1}, LX/0Yh;->A0V(Landroid/os/Parcel;)Ljava/lang/String;
+    move-result v0
 
     .line 77
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFirstTimePlay:Z
+
     .line 78
     .line 79
-    move-result-object v0
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
 
     .line 80
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playOrigin:Ljava/lang/String;
-
     .line 81
     .line 82
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result v0
 
     .line 83
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isInWarmup:Z
+
     .line 84
     .line 85
-    move-result-object v0
+    invoke-static {p1}, LX/0X6;->A0o(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 86
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playSubOrigin:Ljava/lang/String;
-
     .line 87
     .line 88
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    move-result-object v0
 
     .line 89
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playOrigin:Ljava/lang/String;
+
     .line 90
     .line 91
-    move-result-wide v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 92
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startingByteOffset:J
-
     .line 93
     .line 94
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    move-result-object v0
 
     .line 95
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playSubOrigin:Ljava/lang/String;
+
     .line 96
     .line 97
-    move-result-wide v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     .line 98
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->requestedLength:J
-
     .line 99
     .line 100
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result-wide v0
 
     .line 101
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startingByteOffset:J
+
     .line 102
     .line 103
-    move-result v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     .line 104
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->streamType:I
-
     .line 105
     .line 106
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    move-result-wide v0
 
     .line 107
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->requestedLength:J
+
     .line 108
     .line 109
-    move-result-wide v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 110
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->segmentStartMs:J
-
     .line 111
     .line 112
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
 
     .line 113
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->streamType:I
+
     .line 114
     .line 115
-    move-result v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     .line 116
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->segmentDurationMs:I
-
     .line 117
     .line 118
-    invoke-static {p1}, LX/0Yh;->A0V(Landroid/os/Parcel;)Ljava/lang/String;
+    move-result-wide v0
 
     .line 119
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->segmentStartMs:J
+
     .line 120
     .line 121
-    move-result-object v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 122
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->dataSourceFactory:Ljava/lang/String;
-
     .line 123
     .line 124
-    invoke-static {p1}, LX/0Yh;->A0V(Landroid/os/Parcel;)Ljava/lang/String;
+    move-result v0
 
     .line 125
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->segmentDurationMs:I
+
     .line 126
     .line 127
-    move-result-object v0
+    invoke-static {p1}, LX/0X6;->A0o(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 128
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->qualityLabel:Ljava/lang/String;
-
     .line 129
     .line 130
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    .line 131
-    .line 132
-    .line 133
-    move-result v0
-
-    .line 134
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->networkPriority:I
-
-    .line 135
-    .line 136
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    .line 137
-    .line 138
-    .line 139
-    move-result-wide v0
-
-    .line 140
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->avgBitrate:J
-
-    .line 141
-    .line 142
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
-
-    .line 143
-    .line 144
-    .line 145
-    move-result v0
-
-    .line 146
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isLowestBitrate:Z
-
-    .line 147
-    .line 148
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    .line 149
-    .line 150
-    .line 151
-    move-result v0
-
-    .line 152
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->bufferedDurationMs:I
-
-    .line 153
-    .line 154
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    .line 155
-    .line 156
-    .line 157
-    move-result-wide v0
-
-    .line 158
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startVideoBandwidth:J
-
-    .line 159
-    .line 160
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    .line 161
-    .line 162
-    .line 163
-    move-result-wide v0
-
-    .line 164
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startVideoTTFB:J
-
-    .line 165
-    .line 166
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
-
-    .line 167
-    .line 168
-    .line 169
-    move-result v0
-
-    .line 170
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSpherical:Z
-
-    .line 171
-    .line 172
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
-
-    .line 173
-    .line 174
-    .line 175
-    move-result v0
-
-    .line 176
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSponsored:Z
-
-    .line 177
-    .line 178
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
-
-    .line 179
-    .line 180
-    .line 181
-    move-result v0
-
-    .line 182
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isTemplatedManifest:Z
-
-    .line 183
-    .line 184
-    invoke-static {p1}, LX/0Yh;->A0V(Landroid/os/Parcel;)Ljava/lang/String;
-
-    .line 185
-    .line 186
-    .line 187
     move-result-object v0
 
-    .line 188
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->videoBandwidthEstimateStr:Ljava/lang/String;
+    .line 131
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->dataSourceFactory:Ljava/lang/String;
 
+    .line 132
+    .line 133
+    invoke-static {p1}, LX/0X6;->A0o(Landroid/os/Parcel;)Ljava/lang/String;
+
+    .line 134
+    .line 135
+    .line 136
+    move-result-object v0
+
+    .line 137
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->qualityLabel:Ljava/lang/String;
+
+    .line 138
+    .line 139
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 140
+    .line 141
+    .line 142
+    move-result v0
+
+    .line 143
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->networkPriority:I
+
+    .line 144
+    .line 145
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    .line 146
+    .line 147
+    .line 148
+    move-result-wide v0
+
+    .line 149
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->avgBitrate:J
+
+    .line 150
+    .line 151
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
+
+    .line 152
+    .line 153
+    .line 154
+    move-result v0
+
+    .line 155
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isLowestBitrate:Z
+
+    .line 156
+    .line 157
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 158
+    .line 159
+    .line 160
+    move-result v0
+
+    .line 161
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->bufferedDurationMs:I
+
+    .line 162
+    .line 163
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    .line 164
+    .line 165
+    .line 166
+    move-result-wide v0
+
+    .line 167
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startVideoBandwidth:J
+
+    .line 168
+    .line 169
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    .line 170
+    .line 171
+    .line 172
+    move-result-wide v0
+
+    .line 173
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->startVideoTTFB:J
+
+    .line 174
+    .line 175
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
+
+    .line 176
+    .line 177
+    .line 178
+    move-result v0
+
+    .line 179
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSpherical:Z
+
+    .line 180
+    .line 181
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
+
+    .line 182
+    .line 183
+    .line 184
+    move-result v0
+
+    .line 185
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSponsored:Z
+
+    .line 186
+    .line 187
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
+
+    .line 188
     .line 189
     .line 190
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    move-result v0
 
     .line 191
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isTemplatedManifest:Z
+
     .line 192
     .line 193
-    move-result-wide v0
+    invoke-static {p1}, LX/0X6;->A0o(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 194
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->upstreamTTFB:J
-
     .line 195
     .line 196
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    move-result-object v0
 
     .line 197
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->videoBandwidthEstimateStr:Ljava/lang/String;
+
     .line 198
     .line 199
-    move-result-wide v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     .line 200
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestFirstSegmentStartTs:J
-
     .line 201
     .line 202
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    move-result-wide v0
 
     .line 203
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->upstreamTTFB:J
+
     .line 204
     .line 205
-    move-result-wide v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     .line 206
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestLastSegmentEndTs:J
-
     .line 207
     .line 208
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    move-result-wide v0
 
     .line 209
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestFirstSegmentStartTs:J
+
     .line 210
     .line 211
-    move-result-wide v0
-
-    .line 212
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestNumSegments:J
-
-    .line 213
-    .line 214
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    .line 215
-    .line 216
-    .line 217
-    move-result v0
-
-    .line 218
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->bufferedDurationMsAtDataSpecCreation:I
-
-    .line 219
-    .line 220
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    .line 221
-    .line 222
-    .line 223
+    .line 212
+    .line 213
+    .line 214
     move-result-wide v0
 
-    .line 224
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->dataSpecCreationTimeMs:J
+    .line 215
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestLastSegmentEndTs:J
 
+    .line 216
+    .line 217
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    .line 218
+    .line 219
+    .line 220
+    move-result-wide v0
+
+    .line 221
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->manifestNumSegments:J
+
+    .line 222
+    .line 223
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 224
     .line 225
     .line 226
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 227
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->bufferedDurationMsAtDataSpecCreation:I
+
     .line 228
     .line 229
-    move-result v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     .line 230
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFBMS:Z
-
     .line 231
     .line 232
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
+    move-result-wide v0
 
     .line 233
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->dataSpecCreationTimeMs:J
+
     .line 234
     .line 235
-    move-result v0
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
 
     .line 236
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFbPredictiveDASH:Z
-
     .line 237
     .line 238
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 239
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFBMS:Z
+
     .line 240
     .line 241
-    move-result v0
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
 
     .line 242
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSkipAheadChunk:Z
-
     .line 243
     .line 244
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 245
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isFbPredictiveDASH:Z
+
     .line 246
     .line 247
-    move-result v0
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
 
     .line 248
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->inRewoundState:Z
-
     .line 249
     .line 250
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 251
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isSkipAheadChunk:Z
+
     .line 252
     .line 253
-    move-result v0
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
 
     .line 254
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isManifestDynamic:Z
-
     .line 255
     .line 256
-    invoke-static {p1}, LX/0Yc;->A1b(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 257
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->inRewoundState:Z
+
     .line 258
     .line 259
-    move-result v0
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
 
     .line 260
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isChunkedTransfer:Z
-
     .line 261
     .line 262
-    invoke-static {p1}, LX/0Yi;->A1S(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 263
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isManifestDynamic:Z
+
     .line 264
     .line 265
-    move-result v0
+    invoke-static {p1}, LX/0X1;->A1Z(Landroid/os/Parcel;)Z
 
     .line 266
-    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isPredictedURL:Z
-
     .line 267
     .line 268
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
 
     .line 269
+    iput-boolean v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isChunkedTransfer:Z
+
     .line 270
     .line 271
-    move-result v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     .line 272
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->expectedPredictedNumber:I
-
     .line 273
     .line 274
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    .line 275
-    .line 276
-    .line 277
     move-result v0
 
+    .line 275
+    if-ne v0, v2, :cond_1
+
+    .line 276
+    .line 277
+    const/4 v3, 0x1
+
     .line 278
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->predictedNumberMapping:I
+    :cond_1
+    iput-boolean v3, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->isPredictedURL:Z
 
     .line 279
     .line 280
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 281
     .line 282
     .line 283
-    move-result-wide v0
+    move-result v0
 
     .line 284
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->numSegmentsToEndOfManifest:J
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->expectedPredictedNumber:I
 
     .line 285
     .line 286
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 287
     .line 288
     .line 289
-    move-result-object v0
+    move-result v0
 
     .line 290
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->codec:Ljava/lang/String;
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->predictedNumberMapping:I
 
     .line 291
     .line 292
@@ -1046,11 +1050,11 @@
     move-result-wide v0
 
     .line 296
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cdnResponseTime:J
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->numSegmentsToEndOfManifest:J
 
     .line 297
     .line 298
-    invoke-static {p1}, LX/0Yh;->A0V(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 299
     .line 300
@@ -1058,31 +1062,31 @@
     move-result-object v0
 
     .line 302
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->contentType:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->codec:Ljava/lang/String;
 
     .line 303
     .line 304
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     .line 305
     .line 306
     .line 307
-    move-result v0
+    move-result-wide v0
 
     .line 308
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->latestSegmentId:I
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cdnResponseTime:J
 
     .line 309
     .line 310
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    invoke-static {p1}, LX/0X6;->A0o(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 311
     .line 312
     .line 313
-    move-result-wide v0
+    move-result-object v0
 
     .line 314
-    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->confidenceBasedBitrateEstimate:J
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->contentType:Ljava/lang/String;
 
     .line 315
     .line 316
@@ -1094,43 +1098,43 @@
     move-result v0
 
     .line 320
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->confidencePctForBitrateEstimate:I
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->latestSegmentId:I
 
     .line 321
     .line 322
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     .line 323
     .line 324
     .line 325
-    move-result v0
+    move-result-wide v0
 
     .line 326
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->minimumLoadPositionMs:I
+    iput-wide v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->confidenceBasedBitrateEstimate:J
 
     .line 327
     .line 328
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 329
     .line 330
     .line 331
-    move-result-object v0
+    move-result v0
 
     .line 332
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneReqWave:Ljava/lang/String;
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->confidencePctForBitrateEstimate:I
 
     .line 333
     .line 334
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 335
     .line 336
     .line 337
-    move-result-object v0
+    move-result v0
 
     .line 338
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneResWave:Ljava/lang/String;
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->minimumLoadPositionMs:I
 
     .line 339
     .line 340
@@ -1142,7 +1146,7 @@
     move-result-object v0
 
     .line 344
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneObserved:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneReqWave:Ljava/lang/String;
 
     .line 345
     .line 346
@@ -1154,7 +1158,7 @@
     move-result-object v0
 
     .line 350
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneVariant:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneResWave:Ljava/lang/String;
 
     .line 351
     .line 352
@@ -1166,19 +1170,19 @@
     move-result-object v0
 
     .line 356
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playerType:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneObserved:Ljava/lang/String;
 
     .line 357
     .line 358
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 359
     .line 360
     .line 361
-    move-result v0
+    move-result-object v0
 
     .line 362
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->positionInUnit:I
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->oneVariant:Ljava/lang/String;
 
     .line 363
     .line 364
@@ -1190,7 +1194,7 @@
     move-result-object v0
 
     .line 368
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->vpSessionId:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->playerType:Ljava/lang/String;
 
     .line 369
     .line 370
@@ -1202,10 +1206,34 @@
     move-result v0
 
     .line 374
-    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->firstChunkSize:I
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->positionInUnit:I
 
     .line 375
     .line 376
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 377
+    .line 378
+    .line 379
+    move-result-object v0
+
+    .line 380
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->vpSessionId:Ljava/lang/String;
+
+    .line 381
+    .line 382
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 383
+    .line 384
+    .line 385
+    move-result v0
+
+    .line 386
+    iput v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->firstChunkSize:I
+
+    .line 387
+    .line 388
     return-void
 .end method
 
@@ -1223,7 +1251,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -1240,7 +1268,7 @@
 
     .line 8
     .line 9
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 10
     .line 11
@@ -1253,7 +1281,7 @@
 
     .line 15
     .line 16
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 17
     .line 18
@@ -1266,7 +1294,7 @@
 
     .line 22
     .line 23
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 24
     .line 25
@@ -1279,7 +1307,7 @@
 
     .line 29
     .line 30
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 31
     .line 32
@@ -1292,7 +1320,7 @@
 
     .line 36
     .line 37
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 38
     .line 39
@@ -1305,7 +1333,7 @@
 
     .line 43
     .line 44
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 45
     .line 46
@@ -1318,7 +1346,7 @@
 
     .line 50
     .line 51
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 52
     .line 53
@@ -1331,7 +1359,7 @@
 
     .line 57
     .line 58
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 59
     .line 60
@@ -1340,15 +1368,15 @@
 
     .line 62
     .line 63
-    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cacheType:LX/3UP;
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cacheType:LX/3lH;
 
     .line 64
     .line 65
-    iget-object v0, v0, LX/3UP;->mName:Ljava/lang/String;
+    iget-object v0, v0, LX/3lH;->mName:Ljava/lang/String;
 
     .line 66
     .line 67
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 68
     .line 69
@@ -1361,7 +1389,7 @@
 
     .line 73
     .line 74
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 75
     .line 76
@@ -1374,7 +1402,7 @@
 
     .line 80
     .line 81
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 82
     .line 83
@@ -1387,7 +1415,7 @@
 
     .line 87
     .line 88
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 89
     .line 90
@@ -1400,7 +1428,7 @@
 
     .line 94
     .line 95
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 96
     .line 97
@@ -1413,7 +1441,7 @@
 
     .line 101
     .line 102
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 103
     .line 104
@@ -1426,7 +1454,7 @@
 
     .line 108
     .line 109
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 110
     .line 111
@@ -1439,7 +1467,7 @@
 
     .line 115
     .line 116
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 117
     .line 118
@@ -1452,7 +1480,7 @@
 
     .line 122
     .line 123
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 124
     .line 125
@@ -1465,7 +1493,7 @@
 
     .line 129
     .line 130
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 131
     .line 132
@@ -1478,7 +1506,7 @@
 
     .line 136
     .line 137
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 138
     .line 139
@@ -1491,7 +1519,7 @@
 
     .line 143
     .line 144
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 145
     .line 146
@@ -1504,7 +1532,7 @@
 
     .line 150
     .line 151
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 152
     .line 153
@@ -1517,7 +1545,7 @@
 
     .line 157
     .line 158
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 159
     .line 160
@@ -1530,7 +1558,7 @@
 
     .line 164
     .line 165
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 166
     .line 167
@@ -1543,7 +1571,7 @@
 
     .line 171
     .line 172
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 173
     .line 174
@@ -1556,7 +1584,7 @@
 
     .line 178
     .line 179
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 180
     .line 181
@@ -1569,7 +1597,7 @@
 
     .line 185
     .line 186
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 187
     .line 188
@@ -1582,7 +1610,7 @@
 
     .line 192
     .line 193
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 194
     .line 195
@@ -1595,7 +1623,7 @@
 
     .line 199
     .line 200
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 201
     .line 202
@@ -1608,7 +1636,7 @@
 
     .line 206
     .line 207
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 208
     .line 209
@@ -1621,7 +1649,7 @@
 
     .line 213
     .line 214
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 215
     .line 216
@@ -1634,7 +1662,7 @@
 
     .line 220
     .line 221
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 222
     .line 223
@@ -1647,7 +1675,7 @@
 
     .line 227
     .line 228
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 229
     .line 230
@@ -1660,7 +1688,7 @@
 
     .line 234
     .line 235
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 236
     .line 237
@@ -1673,7 +1701,7 @@
 
     .line 241
     .line 242
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 243
     .line 244
@@ -1686,7 +1714,7 @@
 
     .line 248
     .line 249
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 250
     .line 251
@@ -1699,7 +1727,7 @@
 
     .line 255
     .line 256
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 257
     .line 258
@@ -1712,7 +1740,7 @@
 
     .line 262
     .line 263
-    invoke-static {v1, v2, v0}, LX/3Ub;->A04(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A02(Ljava/lang/String;Ljava/lang/StringBuilder;Z)V
 
     .line 264
     .line 265
@@ -1725,7 +1753,7 @@
 
     .line 269
     .line 270
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 271
     .line 272
@@ -1738,7 +1766,7 @@
 
     .line 276
     .line 277
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 278
     .line 279
@@ -1751,7 +1779,7 @@
 
     .line 283
     .line 284
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 285
     .line 286
@@ -1764,7 +1792,7 @@
 
     .line 290
     .line 291
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 292
     .line 293
@@ -1777,7 +1805,7 @@
 
     .line 297
     .line 298
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 299
     .line 300
@@ -1790,7 +1818,7 @@
 
     .line 304
     .line 305
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 306
     .line 307
@@ -1803,7 +1831,7 @@
 
     .line 311
     .line 312
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 313
     .line 314
@@ -1816,7 +1844,7 @@
 
     .line 318
     .line 319
-    invoke-static {v3, v2, v0, v1}, LX/3Ub;->A03(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
+    invoke-static {v3, v2, v0, v1}, LX/3kn;->A01(Ljava/lang/String;Ljava/lang/StringBuilder;J)V
 
     .line 320
     .line 321
@@ -1829,7 +1857,7 @@
 
     .line 325
     .line 326
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 327
     .line 328
@@ -1842,7 +1870,7 @@
 
     .line 332
     .line 333
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 334
     .line 335
@@ -1855,7 +1883,7 @@
 
     .line 339
     .line 340
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 341
     .line 342
@@ -1868,7 +1896,7 @@
 
     .line 346
     .line 347
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 348
     .line 349
@@ -1881,7 +1909,7 @@
 
     .line 353
     .line 354
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 355
     .line 356
@@ -1894,7 +1922,7 @@
 
     .line 360
     .line 361
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 362
     .line 363
@@ -1907,7 +1935,7 @@
 
     .line 367
     .line 368
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 369
     .line 370
@@ -1920,7 +1948,7 @@
 
     .line 374
     .line 375
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 376
     .line 377
@@ -1933,7 +1961,7 @@
 
     .line 381
     .line 382
-    invoke-static {v1, v0, v2}, LX/0Yd;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0, v2}, LX/0X1;->A1O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 383
     .line 384
@@ -1946,7 +1974,7 @@
 
     .line 388
     .line 389
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1R(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+    invoke-static {v1, v2, v0}, LX/3kn;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
 
     .line 390
     .line 391
@@ -2041,7 +2069,7 @@
     .line 39
     .line 40
     .line 41
-    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cacheType:LX/3UP;
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/HttpTransferRequestedEvent;->cacheType:LX/3lH;
 
     .line 42
     .line 43

@@ -16,32 +16,68 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 6
+.method public static synthetic $values()[Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+    .locals 3
 
     .line 0
-    const-string v1, "OES"
+    const/4 v0, 0x2
+
+    .line 1
+    new-array v2, v0, [Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+
+    .line 2
+    .line 3
+    sget-object v1, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->OES:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->RGB:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v3, "OES"
 
     .line 1
     .line 2
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
     .line 3
-    const v0, 0x8d65
+    const v1, 0x8d65
 
     .line 4
     .line 5
     .line 6
-    new-instance v4, Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+    new-instance v0, Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
     .line 7
     .line 8
-    invoke-direct {v4, v1, v5, v0}, Lorg/webrtc/VideoFrame$TextureBuffer$Type;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/VideoFrame$TextureBuffer$Type;-><init>(Ljava/lang/String;II)V
 
     .line 9
     .line 10
     .line 11
-    sput-object v4, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->OES:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+    sput-object v0, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->OES:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
     .line 12
     .line 13
@@ -52,42 +88,35 @@
     const/4 v2, 0x1
 
     .line 16
-    const/16 v0, 0xde1
+    const/16 v1, 0xde1
 
     .line 17
     .line 18
-    new-instance v1, Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+    new-instance v0, Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
     .line 19
     .line 20
-    invoke-direct {v1, v3, v2, v0}, Lorg/webrtc/VideoFrame$TextureBuffer$Type;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/VideoFrame$TextureBuffer$Type;-><init>(Ljava/lang/String;II)V
 
     .line 21
     .line 22
     .line 23
-    sput-object v1, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->RGB:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+    sput-object v0, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->RGB:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
     .line 24
     .line 25
-    const/4 v0, 0x2
+    invoke-static {}, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->$values()[Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
     .line 26
-    new-array v0, v0, [Lorg/webrtc/VideoFrame$TextureBuffer$Type;
-
     .line 27
     .line 28
-    aput-object v4, v0, v5
+    move-result-object v0
 
     .line 29
-    .line 30
-    aput-object v1, v0, v2
-
-    .line 31
-    .line 32
     sput-object v0, Lorg/webrtc/VideoFrame$TextureBuffer$Type;->$VALUES:[Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
-    .line 33
-    .line 34
+    .line 30
+    .line 31
     return-void
 .end method
 

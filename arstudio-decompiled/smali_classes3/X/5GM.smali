@@ -1,110 +1,132 @@
-.class public final LX/5GM;
-.super Ljava/io/OutputStream;
+.class public abstract LX/5GM;
+.super LX/5GN;
 .source ""
 
 
 # instance fields
-.field public final synthetic A00:LX/5GA;
+.field public final A00:J
 
 
 # direct methods
-.method public constructor <init>(LX/5GA;)V
-    .locals 0
+.method public constructor <init>(LX/5Fy;LX/58n;LX/5Bk;Ljava/lang/Object;IJJJ)V
+    .locals 13
 
     .line 0
-    iput-object p1, p0, LX/5GM;->A00:LX/5GA;
+    const/4 v7, 0x1
 
     .line 1
+    move-object v2, p0
+
     .line 2
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+    move-object v3, p1
 
     .line 3
+    move-object v4, p2
+
     .line 4
+    move-object/from16 v5, p3
+
     .line 5
+    .line 6
+    move-object/from16 v6, p4
+
+    .line 7
+    .line 8
+    move/from16 v8, p5
+
+    .line 9
+    .line 10
+    move-wide/from16 v9, p6
+
+    .line 11
+    .line 12
+    move-wide/from16 v11, p8
+
+    .line 13
+    .line 14
+    invoke-direct/range {v2 .. v12}, LX/5GN;-><init>(LX/5Fy;LX/58n;LX/5Bk;Ljava/lang/Object;IIJJ)V
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 18
+    .line 19
+    .line 20
+    move-wide/from16 v0, p10
+
+    .line 21
+    .line 22
+    iput-wide v0, p0, LX/5GM;->A00:J
+
+    .line 23
+    .line 24
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final flush()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final A00()J
+    .locals 5
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    instance-of v0, p0, LX/5GJ;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    if-eqz v0, :cond_1
 
+    .line 3
     .line 4
-    iget-object v0, p0, LX/5GM;->A00:LX/5GA;
+    move-object v0, p0
 
     .line 5
-    .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v0, LX/5GJ;
 
+    .line 6
     .line 7
+    iget-wide v3, v0, LX/5GM;->A00:J
+
     .line 8
     .line 9
-    const-string v0, ".outputStream()"
+    iget v0, v0, LX/5GJ;->A02:I
 
     .line 10
     .line 11
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    int-to-long v0, v0
 
     .line 12
+    add-long/2addr v3, v0
+
     .line 13
+    :cond_0
+    return-wide v3
+
     .line 14
-    move-result-object v0
+    :cond_1
+    iget-wide v1, p0, LX/5GM;->A00:J
 
     .line 15
-    return-object v0
-.end method
+    .line 16
+    const-wide/16 v3, -0x1
 
-.method public final write(I)V
-    .locals 2
+    .line 17
+    .line 18
+    cmp-long v0, v1, v3
 
-    .line 268435456
-    iget-object v1, p0, LX/5GM;->A00:LX/5GA;
+    .line 19
+    .line 20
+    if-eqz v0, :cond_0
 
-    .line 268435457
-    .line 268435458
-    int-to-byte v0, p1
+    .line 21
+    .line 22
+    const-wide/16 v3, 0x1
 
-    .line 268435459
-    invoke-virtual {v1, v0}, LX/5GA;->A0A(I)V
+    .line 23
+    .line 24
+    add-long/2addr v3, v1
 
-    .line 268435460
-    .line 268435461
-    .line 268435462
-    return-void
-.end method
-
-.method public final write([BII)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5GM;->A00:LX/5GA;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1, p2, p3}, LX/5GA;->A0G([BII)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    .line 25
+    return-wide v3
 .end method

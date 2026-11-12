@@ -1,64 +1,68 @@
-.class public final LX/5tV;
+.class public final LX/5TV;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ObservableSubscribeOn$SubscribeTask"
-
-
-# instance fields
-.field public final A00:LX/5tI;
-
-.field public final synthetic A01:LX/5tJ;
+.implements LX/1kh;
 
 
 # direct methods
-.method public constructor <init>(LX/5tI;LX/5tJ;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/5tV;->A01:LX/5tJ;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/5tV;->A00:LX/5tI;
-
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final AHm(I)I
     .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5tV;->A01:LX/5tJ;
+    const/4 v0, 0x1
 
     .line 1
+    if-eq p1, v0, :cond_1
+
     .line 2
-    iget-object v1, v0, LX/5tb;->A00:LX/5tK;
-
     .line 3
+    if-eqz p1, :cond_0
+
     .line 4
-    iget-object v0, p0, LX/5tV;->A00:LX/5tI;
-
     .line 5
-    .line 6
-    invoke-virtual {v1, v0}, LX/5tK;->A00(LX/5tZ;)V
+    rem-int/lit8 v1, p1, 0x64
 
+    .line 6
     .line 7
+    if-lt v1, v0, :cond_2
+
     .line 8
     .line 9
-    return-void
+    const/16 v0, 0x13
+
+    .line 10
+    .line 11
+    if-gt v1, v0, :cond_2
+
+    .line 12
+    .line 13
+    :cond_0
+    const/4 v0, 0x3
+
+    .line 14
+    :cond_1
+    return v0
+
+    .line 15
+    :cond_2
+    const/4 v0, 0x5
+
+    .line 16
+    return v0
 .end method

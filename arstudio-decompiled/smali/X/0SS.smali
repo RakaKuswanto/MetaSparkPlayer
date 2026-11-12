@@ -1,93 +1,52 @@
-.class public final LX/0SS;
-.super LX/06a;
+.class public final LX/0Ss;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/06E;
 
 
 # instance fields
-.field public final containerId:I
+.field public final synthetic A00:Landroidx/fragment/app/Fragment;
 
-.field public final expectedParentFragment:Landroidx/fragment/app/Fragment;
+.field public final synthetic A01:LX/0VG;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;I)V
-    .locals 2
+.method public constructor <init>(Landroidx/fragment/app/Fragment;LX/0VG;)V
+    .locals 0
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    iput-object p2, p0, LX/0Ss;->A01:LX/0VG;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    iput-object p1, p0, LX/0Ss;->A00:Landroidx/fragment/app/Fragment;
 
+    .line 3
     .line 4
-    const-string v0, "Attempting to nest fragment "
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5
     .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 7
-    .line 8
-    .line 9
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    .line 10
-    .line 11
-    .line 12
-    const-string v0, " within the view of parent fragment "
 
-    .line 13
-    .line 14
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+# virtual methods
+.method public final ATI(Landroidx/fragment/app/Fragment;LX/0VG;)V
+    .locals 1
 
-    .line 15
-    .line 16
-    .line 17
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 0
+    iget-object v0, p0, LX/0Ss;->A00:Landroidx/fragment/app/Fragment;
 
-    .line 18
-    .line 19
-    .line 20
-    const-string v0, " via container with ID "
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/Fragment;->onAttachFragment(Landroidx/fragment/app/Fragment;)V
 
-    .line 21
-    .line 22
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 23
-    .line 24
-    .line 25
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 26
-    .line 27
-    .line 28
-    const-string v0, " without using parent\'s childFragmentManager"
-
-    .line 29
-    .line 30
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 31
-    .line 32
-    .line 33
-    move-result-object v0
-
-    .line 34
-    invoke-direct {p0, p1, v0}, LX/06a;-><init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
-
-    .line 35
-    .line 36
-    .line 37
-    iput-object p2, p0, LX/0SS;->expectedParentFragment:Landroidx/fragment/app/Fragment;
-
-    .line 38
-    .line 39
-    iput p3, p0, LX/0SS;->containerId:I
-
-    .line 40
-    .line 41
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

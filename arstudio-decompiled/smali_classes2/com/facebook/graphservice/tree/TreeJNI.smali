@@ -39,7 +39,7 @@
     const/4 v0, 0x0
 
     .line 8
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 9
     .line 10
@@ -85,23 +85,46 @@
 
     .line 1
     .line 2
-    invoke-static {p0, p1}, LX/001;->A1O(II)Z
+    invoke-static {p0, p1}, LX/001;->A1N(II)Z
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    const-string v0, "Expected typeTag %d but got %d"
+    const-string v1, "Expected typeTag %d but got %d"
 
     .line 7
     .line 8
-    invoke-static {v1, v0, p1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
+    if-nez v0, :cond_0
 
     .line 9
     .line 10
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
+
     .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    invoke-static {v0, p1, p0}, LX/0X1;->A1S([Ljava/lang/Object;II)V
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-static {v1, v0}, LX/0X5;->A0U(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/IllegalArgumentException;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    throw v0
+
+    .line 22
     :cond_0
     return-void
 .end method
@@ -471,8 +494,84 @@
     return-object p0
 .end method
 
+.method private native rootNodeHashCode()I
+.end method
+
 
 # virtual methods
+.method public equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    sget-boolean v0, LX/1kQ;->A02:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_2
+
+    .line 3
+    .line 4
+    const/4 v2, 0x1
+
+    .line 5
+    if-eq p0, p1, :cond_0
+
+    .line 6
+    .line 7
+    instance-of v0, p1, Lcom/facebook/graphservice/tree/TreeJNI;
+
+    .line 8
+    .line 9
+    if-nez v0, :cond_1
+
+    .line 10
+    .line 11
+    const/4 v2, 0x0
+
+    .line 12
+    :cond_0
+    return v2
+
+    .line 13
+    :cond_1
+    move-object v0, p1
+
+    .line 14
+    check-cast v0, Lcom/facebook/graphservice/tree/TreeJNI;
+
+    .line 15
+    .line 16
+    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->isDeepEqualBestGuess(Lcom/facebook/graphservice/tree/TreeJNI;)Lcom/facebook/graphservice/interfaces/Tree$DeepEqualGuess;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v1
+
+    .line 20
+    sget-object v0, Lcom/facebook/graphservice/interfaces/Tree$DeepEqualGuess;->TRUE:Lcom/facebook/graphservice/interfaces/Tree$DeepEqualGuess;
+
+    .line 21
+    .line 22
+    if-ne v1, v0, :cond_2
+
+    .line 23
+    .line 24
+    return v2
+
+    .line 25
+    :cond_2
+    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v2
+
+    .line 29
+    return v2
+.end method
+
 .method public final native fulfillsType(Ljava/lang/String;)Z
 .end method
 
@@ -741,7 +840,7 @@
     return v0
 .end method
 
-.method public final getPaginableTreeList(Ljava/lang/String;)LX/1Ci;
+.method public final getPaginableTreeList(Ljava/lang/String;)LX/1gj;
     .locals 2
 
     .line 0
@@ -752,7 +851,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, p1, v1, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getPaginableTreeList(Ljava/lang/String;Ljava/lang/Class;I)LX/1Ci;
+    invoke-virtual {p0, p1, v1, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getPaginableTreeList(Ljava/lang/String;Ljava/lang/Class;I)LX/1gj;
 
     .line 4
     .line 5
@@ -763,385 +862,394 @@
     return-object v0
 .end method
 
-.method public final getPaginableTreeList(Ljava/lang/String;Ljava/lang/Class;I)LX/1Ci;
+.method public final getPaginableTreeList(Ljava/lang/String;Ljava/lang/Class;I)LX/1gj;
     .locals 11
 
     .line 268435456
-    const-string v1, "_key"
+    const-string/jumbo v1, "_key"
 
     .line 268435457
     .line 268435458
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 268435459
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 268435460
     .line 268435461
-    move-result-object v0
-
     .line 268435462
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    move-result-object v0
 
     .line 268435463
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 268435464
     .line 268435465
+    .line 268435466
     move-result-object v10
 
-    .line 268435466
-    const-string v1, "_has_previous_page"
-
     .line 268435467
-    .line 268435468
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v1, "_has_previous_page"
 
+    .line 268435468
     .line 268435469
     .line 268435470
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 268435471
+    .line 268435472
+    .line 268435473
     move-result-object v0
 
-    .line 268435472
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 268435473
     .line 268435474
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 268435475
+    .line 268435476
+    .line 268435477
     move-result-object v9
 
-    .line 268435476
-    const-string v1, "_has_next_page"
-
-    .line 268435477
     .line 268435478
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v1, "_has_next_page"
 
     .line 268435479
     .line 268435480
     .line 268435481
-    move-result-object v0
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 268435482
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 268435483
     .line 268435484
-    .line 268435485
-    move-result-object v8
-
-    .line 268435486
-    const-string v1, "_is_loading_previous"
-
-    .line 268435487
-    .line 268435488
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 268435489
-    .line 268435490
-    .line 268435491
     move-result-object v0
 
+    .line 268435485
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 268435486
+    .line 268435487
+    .line 268435488
+    move-result-object v8
+
+    .line 268435489
+    const-string/jumbo v1, "_is_loading_previous"
+
+    .line 268435490
+    .line 268435491
     .line 268435492
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 268435493
     .line 268435494
     .line 268435495
-    move-result-object v7
+    move-result-object v0
 
     .line 268435496
-    const-string v1, "_is_loading_next"
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 268435497
     .line 268435498
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 268435499
+    move-result-object v7
+
     .line 268435500
+    const-string/jumbo v1, "_is_loading_next"
+
     .line 268435501
-    move-result-object v0
-
     .line 268435502
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 268435503
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 268435504
     .line 268435505
-    move-result-object v6
-
     .line 268435506
-    const-string v1, "_failed_last_load_previous_page"
-
-    .line 268435507
-    .line 268435508
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 268435509
-    .line 268435510
-    .line 268435511
     move-result-object v0
 
-    .line 268435512
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 268435507
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 268435508
+    .line 268435509
+    .line 268435510
+    move-result-object v6
+
+    .line 268435511
+    const-string/jumbo v1, "_failed_last_load_previous_page"
+
+    .line 268435512
     .line 268435513
     .line 268435514
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 268435515
-    move-result-object v5
-
     .line 268435516
-    const-string v1, "_failed_last_load_next_page"
-
     .line 268435517
+    move-result-object v0
+
     .line 268435518
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 268435519
     .line 268435520
     .line 268435521
-    move-result-object v0
+    move-result-object v5
 
     .line 268435522
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const-string/jumbo v1, "_failed_last_load_next_page"
 
     .line 268435523
     .line 268435524
     .line 268435525
-    move-result-object v4
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 268435526
-    const-string v1, "_next_page_uuid"
-
     .line 268435527
     .line 268435528
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 268435529
-    .line 268435530
-    .line 268435531
     move-result-object v0
 
+    .line 268435529
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 268435530
+    .line 268435531
     .line 268435532
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    move-result-object v4
 
     .line 268435533
+    const-string/jumbo v1, "_next_page_uuid"
+
     .line 268435534
     .line 268435535
-    move-result-object v3
-
     .line 268435536
-    const-string v1, "_previous_page_uuid"
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 268435537
     .line 268435538
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 268435539
-    .line 268435540
-    .line 268435541
     move-result-object v0
 
+    .line 268435540
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 268435541
     .line 268435542
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 268435543
+    move-result-object v3
+
     .line 268435544
+    const-string/jumbo v1, "_previous_page_uuid"
+
     .line 268435545
-    move-result-object v2
-
     .line 268435546
-    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/graphservice/tree/TreeJNI;->getTreeArray(Ljava/lang/String;Ljava/lang/Class;I)[Lcom/facebook/graphservice/tree/TreeJNI;
-
     .line 268435547
+    invoke-static {p1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 268435548
     .line 268435549
-    move-result-object v1
-
     .line 268435550
-    invoke-virtual {v10}, Ljava/lang/String;->hashCode()I
-
-    .line 268435551
-    .line 268435552
-    .line 268435553
-    move-result v0
-
-    .line 268435554
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getString(I)Ljava/lang/String;
-
-    .line 268435555
-    .line 268435556
-    .line 268435557
     move-result-object v0
 
+    .line 268435551
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 268435552
+    .line 268435553
+    .line 268435554
+    move-result-object v2
+
+    .line 268435555
+    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/graphservice/tree/TreeJNI;->getTreeArray(Ljava/lang/String;Ljava/lang/Class;I)[Lcom/facebook/graphservice/tree/TreeJNI;
+
+    .line 268435556
+    .line 268435557
     .line 268435558
-    if-nez v0, :cond_1
+    move-result-object v1
 
     .line 268435559
-    .line 268435560
-    if-nez v1, :cond_0
+    invoke-virtual {v10}, Ljava/lang/String;->hashCode()I
 
+    .line 268435560
     .line 268435561
     .line 268435562
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+    move-result v0
 
     .line 268435563
+    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getString(I)Ljava/lang/String;
+
     .line 268435564
     .line 268435565
-    move-result-object v1
-
     .line 268435566
-    :goto_0
-    new-instance v0, LX/1Ci;
+    move-result-object v0
 
     .line 268435567
-    .line 268435568
-    invoke-direct {v0, v1}, LX/1Ci;-><init>(Lcom/google/common/collect/ImmutableList;)V
+    if-nez v0, :cond_1
 
+    .line 268435568
     .line 268435569
+    if-nez v1, :cond_0
+
     .line 268435570
     .line 268435571
-    return-object v0
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     .line 268435572
-    :cond_0
-    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
     .line 268435573
     .line 268435574
-    .line 268435575
     move-result-object v1
 
-    .line 268435576
-    goto :goto_0
+    .line 268435575
+    :goto_0
+    new-instance v0, LX/1gj;
 
+    .line 268435576
     .line 268435577
-    :cond_1
-    if-nez v1, :cond_2
+    invoke-direct {v0, v1}, LX/1gj;-><init>(Lcom/google/common/collect/ImmutableList;)V
 
     .line 268435578
     .line 268435579
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
-
     .line 268435580
+    return-object v0
+
     .line 268435581
+    :cond_0
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
     .line 268435582
+    .line 268435583
+    .line 268435584
     move-result-object v1
 
-    .line 268435583
+    .line 268435585
+    goto :goto_0
+
+    .line 268435586
+    :cond_1
+    if-nez v1, :cond_2
+
+    .line 268435587
+    .line 268435588
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
+    .line 268435589
+    .line 268435590
+    .line 268435591
+    move-result-object v1
+
+    .line 268435592
     :goto_1
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
-    .line 268435584
-    .line 268435585
-    .line 268435586
-    move-result v0
-
-    .line 268435587
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
-
-    .line 268435588
-    .line 268435589
-    .line 268435590
-    invoke-virtual {v8}, Ljava/lang/String;->hashCode()I
-
-    .line 268435591
-    .line 268435592
     .line 268435593
+    .line 268435594
+    .line 268435595
     move-result v0
 
-    .line 268435594
+    .line 268435596
     invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
 
-    .line 268435595
-    .line 268435596
     .line 268435597
-    invoke-virtual {v7}, Ljava/lang/String;->hashCode()I
-
     .line 268435598
     .line 268435599
+    invoke-virtual {v8}, Ljava/lang/String;->hashCode()I
+
     .line 268435600
+    .line 268435601
+    .line 268435602
     move-result v0
 
-    .line 268435601
+    .line 268435603
     invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
 
-    .line 268435602
-    .line 268435603
     .line 268435604
-    invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
-
     .line 268435605
     .line 268435606
+    invoke-virtual {v7}, Ljava/lang/String;->hashCode()I
+
     .line 268435607
+    .line 268435608
+    .line 268435609
     move-result v0
 
-    .line 268435608
+    .line 268435610
     invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
 
-    .line 268435609
-    .line 268435610
     .line 268435611
-    invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
-
     .line 268435612
     .line 268435613
+    invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
+
     .line 268435614
+    .line 268435615
+    .line 268435616
     move-result v0
 
-    .line 268435615
+    .line 268435617
     invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
 
-    .line 268435616
-    .line 268435617
     .line 268435618
-    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
-
     .line 268435619
     .line 268435620
+    invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
+
     .line 268435621
+    .line 268435622
+    .line 268435623
     move-result v0
 
-    .line 268435622
+    .line 268435624
     invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
 
-    .line 268435623
-    .line 268435624
     .line 268435625
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
     .line 268435626
     .line 268435627
+    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
+
     .line 268435628
+    .line 268435629
+    .line 268435630
     move-result v0
 
-    .line 268435629
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getString(I)Ljava/lang/String;
-
-    .line 268435630
     .line 268435631
-    .line 268435632
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
 
+    .line 268435632
     .line 268435633
     .line 268435634
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
     .line 268435635
+    .line 268435636
+    .line 268435637
     move-result v0
 
-    .line 268435636
+    .line 268435638
     invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getString(I)Ljava/lang/String;
 
-    .line 268435637
-    .line 268435638
     .line 268435639
+    .line 268435640
+    .line 268435641
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    .line 268435642
+    .line 268435643
+    .line 268435644
+    move-result v0
+
+    .line 268435645
+    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getString(I)Ljava/lang/String;
+
+    .line 268435646
+    .line 268435647
+    .line 268435648
     goto :goto_0
 
-    .line 268435640
+    .line 268435649
     :cond_2
     invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 268435641
-    .line 268435642
-    .line 268435643
+    .line 268435650
+    .line 268435651
+    .line 268435652
     move-result-object v1
 
-    .line 268435644
+    .line 268435653
     goto :goto_1
 .end method
 
@@ -1340,8 +1448,23 @@
 .method public bridge synthetic getTree(I)Lcom/facebook/graphservice/interfaces/Tree;
     .locals 1
 
-    .line 268435456
+    .line 1073741824
     invoke-virtual {p0, p1}, Lcom/facebook/graphservice/tree/TreeJNI;->getTree(I)Lcom/facebook/graphservice/tree/TreeJNI;
+
+    .line 1073741825
+    .line 1073741826
+    .line 1073741827
+    move-result-object v0
+
+    .line 1073741828
+    return-object v0
+.end method
+
+.method public bridge synthetic getTree(Ljava/lang/String;)Lcom/facebook/graphservice/interfaces/Tree;
+    .locals 1
+
+    .line 268435456
+    invoke-virtual {p0, p1}, Lcom/facebook/graphservice/tree/TreeJNI;->getTree(Ljava/lang/String;)Lcom/facebook/graphservice/tree/TreeJNI;
 
     .line 268435457
     .line 268435458
@@ -1349,21 +1472,6 @@
     move-result-object v0
 
     .line 268435460
-    return-object v0
-.end method
-
-.method public bridge synthetic getTree(Ljava/lang/String;)Lcom/facebook/graphservice/interfaces/Tree;
-    .locals 1
-
-    .line 1342177280
-    invoke-virtual {p0, p1}, Lcom/facebook/graphservice/tree/TreeJNI;->getTree(Ljava/lang/String;)Lcom/facebook/graphservice/tree/TreeJNI;
-
-    .line 1342177281
-    .line 1342177282
-    .line 1342177283
-    move-result-object v0
-
-    .line 1342177284
     return-object v0
 .end method
 
@@ -1426,22 +1534,22 @@
 .method public final getTree(Ljava/lang/String;)Lcom/facebook/graphservice/tree/TreeJNI;
     .locals 2
 
-    .line 1073741824
+    .line 1342177280
     const-class v1, Lcom/facebook/graphservice/tree/TreeJNI;
 
-    .line 1073741825
-    .line 1073741826
+    .line 1342177281
+    .line 1342177282
     const/4 v0, 0x0
 
-    .line 1073741827
+    .line 1342177283
     invoke-virtual {p0, p1, v1, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getTree(Ljava/lang/String;Ljava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
 
-    .line 1073741828
-    .line 1073741829
-    .line 1073741830
+    .line 1342177284
+    .line 1342177285
+    .line 1342177286
     move-result-object v0
 
-    .line 1073741831
+    .line 1342177287
     return-object v0
 .end method
 
@@ -1630,6 +1738,43 @@
 .end method
 
 .method public final native hasPrimaryKey()Z
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    .line 0
+    sget-boolean v0, LX/1kQ;->A03:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-direct {p0}, Lcom/facebook/graphservice/tree/TreeJNI;->rootNodeHashCode()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    if-nez v0, :cond_1
+
+    .line 9
+    .line 10
+    :cond_0
+    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    :cond_1
+    return v0
 .end method
 
 .method public isDeepEqual(Lcom/facebook/graphservice/interfaces/Tree;)Z
@@ -1844,7 +1989,7 @@
     move-result v0
 
     .line 12
-    invoke-static {v1, v0}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -1856,7 +2001,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, v1}, LX/0Jt;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, LX/0Il;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 19
     .line 20
@@ -1909,7 +2054,7 @@
 
     .line 19
     .line 20
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 21
     .line 22
@@ -1925,7 +2070,7 @@
     move-result-object v0
 
     .line 28
-    invoke-static {v2, v0, v1}, LX/001;->A1G([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 29
     .line 30
@@ -1938,13 +2083,16 @@
 
     .line 34
     .line 35
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 36
     .line 37
     .line 38
     :cond_0
     return-void
+.end method
+
+.method public final native logToFlipper(Ljava/lang/String;)V
 .end method
 
 .method public final native reinterpret(Ljava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;

@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/iabadscontext/IABAdsBwPExtension;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 # interfaces
@@ -13,7 +13,7 @@
 # instance fields
 .field public final A00:I
 
-.field public final A01:LX/1RN;
+.field public final A01:LX/1bR;
 
 .field public final A02:Ljava/lang/String;
 
@@ -21,17 +21,21 @@
 
 .field public final A04:Ljava/lang/String;
 
+.field public final A05:Ljava/lang/String;
+
+.field public final A06:Ljava/lang/String;
+
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    const/16 v0, 0x54
+    const/16 v0, 0x4c
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -46,28 +50,28 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1RN;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+.method public constructor <init>(LX/1bR;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
 
     .line 0
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 5
     .line 6
     .line 7
-    iput-object p1, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1RN;
+    iput-object p1, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1bR;
 
     .line 8
     .line 9
-    iput-object p2, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A05:Ljava/lang/String;
 
     .line 10
     .line 11
@@ -79,10 +83,18 @@
 
     .line 14
     .line 15
-    iput p5, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A00:I
+    iput p7, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A00:I
 
     .line 16
     .line 17
+    iput-object p5, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+
+    .line 18
+    .line 19
+    iput-object p6, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A06:Ljava/lang/String;
+
+    .line 20
+    .line 21
     return-void
 .end method
 
@@ -111,17 +123,17 @@
 
     check-cast p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;
 
-    iget-object v1, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1RN;
+    iget-object v1, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1bR;
 
-    iget-object v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1RN;
+    iget-object v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1bR;
 
     if-ne v1, v0, :cond_0
 
-    iget-object v1, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A05:Ljava/lang/String;
 
-    iget-object v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A05:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -131,7 +143,7 @@
 
     iget-object v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A03:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -141,7 +153,7 @@
 
     iget-object v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A02:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -151,7 +163,27 @@
 
     iget v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A00:I
 
-    if-eq v1, v0, :cond_1
+    if-ne v1, v0, :cond_0
+
+    iget-object v1, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+
+    iget-object v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A06:Ljava/lang/String;
+
+    iget-object v0, p1, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A06:Ljava/lang/String;
+
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     :cond_0
     return v2
@@ -164,11 +196,11 @@
     .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1RN;
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1bR;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A04(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X6;->A06(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -176,14 +208,14 @@
     move-result v1
 
     .line 6
-    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A05:Ljava/lang/String;
 
     .line 7
     .line 8
     const/4 v2, 0x0
 
     .line 9
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 10
     .line 11
@@ -202,7 +234,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 19
     .line 20
@@ -221,33 +253,71 @@
 
     .line 26
     .line 27
-    if-eqz v0, :cond_0
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 28
     .line 29
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
     .line 30
+    move-result v0
+
     .line 31
+    add-int/2addr v1, v0
+
     .line 32
-    move-result v2
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 33
-    :cond_0
-    add-int/2addr v1, v2
-
     .line 34
-    mul-int/lit8 v1, v1, 0x1f
+    iget v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A00:I
 
     .line 35
     .line 36
-    iget v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A00:I
-
-    .line 37
-    .line 38
     add-int/2addr v1, v0
 
+    .line 37
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 38
     .line 39
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+
+    .line 40
+    .line 41
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 42
+    .line 43
+    .line 44
+    move-result v0
+
+    .line 45
+    add-int/2addr v1, v0
+
+    .line 46
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 47
+    .line 48
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A06:Ljava/lang/String;
+
+    .line 49
+    .line 50
+    if-eqz v0, :cond_0
+
+    .line 51
+    .line 52
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    .line 53
+    .line 54
+    .line 55
+    move-result v2
+
+    .line 56
+    :cond_0
+    add-int/2addr v1, v2
+
+    .line 57
     return v1
 .end method
 
@@ -255,7 +325,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -272,7 +342,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1RN;
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1bR;
 
     .line 10
     .line 11
@@ -290,7 +360,7 @@
     .line 17
     .line 18
     .line 19
-    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A05:Ljava/lang/String;
 
     .line 20
     .line 21
@@ -348,14 +418,50 @@
 
     .line 50
     .line 51
-    invoke-static {v1, v0}, LX/0Yd;->A0U(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 52
     .line 53
     .line 54
-    move-result-object v0
+    const-string v0, ", bauProductUrl="
 
     .line 55
+    .line 56
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 57
+    .line 58
+    .line 59
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+
+    .line 60
+    .line 61
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 62
+    .line 63
+    .line 64
+    const-string v0, ", pageName="
+
+    .line 65
+    .line 66
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 67
+    .line 68
+    .line 69
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A06:Ljava/lang/String;
+
+    .line 70
+    .line 71
+    invoke-static {v0, v1}, LX/0X2;->A0k(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 72
+    .line 73
+    .line 74
+    move-result-object v0
+
+    .line 75
     return-object v0
 .end method
 
@@ -366,21 +472,21 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1RN;
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A01:LX/1bR;
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A05:Ljava/lang/String;
 
     .line 10
     .line 11
@@ -416,5 +522,23 @@
     .line 27
     .line 28
     .line 29
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A04:Ljava/lang/String;
+
+    .line 30
+    .line 31
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 32
+    .line 33
+    .line 34
+    iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsBwPExtension;->A06:Ljava/lang/String;
+
+    .line 35
+    .line 36
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 37
+    .line 38
+    .line 39
     return-void
 .end method

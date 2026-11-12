@@ -3,11 +3,11 @@
 .source ""
 
 # interfaces
-.implements LX/4dD;
+.implements LX/4O1;
 
 
 # instance fields
-.field public A00:LX/4dN;
+.field public A00:LX/4O8;
 
 
 # direct methods
@@ -41,7 +41,7 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Landroidx/appcompat/widget/FitWindowsFrameLayout;->A00:LX/4dN;
+    iget-object v0, p0, Landroidx/appcompat/widget/FitWindowsFrameLayout;->A00:LX/4O8;
 
     .line 1
     .line 2
@@ -49,18 +49,18 @@
 
     .line 3
     .line 4
-    check-cast v0, LX/4ct;
+    check-cast v0, LX/4Nt;
 
     .line 5
     .line 6
-    iget-object v1, v0, LX/4ct;->A00:LX/4bP;
+    iget-object v1, v0, LX/4Nt;->A00:LX/4NG;
 
     .line 7
     .line 8
     const/4 v0, 0x0
 
     .line 9
-    invoke-virtual {v1, p1, v0}, LX/4bP;->A0O(Landroid/graphics/Rect;LX/046;)I
+    invoke-virtual {v1, p1, v0}, LX/4NG;->A0O(Landroid/graphics/Rect;LX/04J;)I
 
     .line 10
     .line 11
@@ -84,11 +84,11 @@
     return v0
 .end method
 
-.method public setOnFitSystemWindowsListener(LX/4dN;)V
+.method public setOnFitSystemWindowsListener(LX/4O8;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Landroidx/appcompat/widget/FitWindowsFrameLayout;->A00:LX/4dN;
+    iput-object p1, p0, Landroidx/appcompat/widget/FitWindowsFrameLayout;->A00:LX/4O8;
 
     .line 1
     .line 2

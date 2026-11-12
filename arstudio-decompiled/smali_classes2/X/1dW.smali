@@ -1,31 +1,117 @@
-.class public final LX/1dW;
-.super LX/1dX;
+.class public final enum LX/1DW;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements Ljava/util/SortedSet;
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<E:",
-        "Ljava/lang/Object;",
-        ">",
-        "LX/1dX<",
-        "TE;>;",
-        "Ljava/util/SortedSet<",
-        "TE;>;"
-    }
-.end annotation
+.field public static final synthetic $VALUES:[LX/1DW;
+
+.field public static final enum INTERRUPTION_REQUIREMENT_MET:LX/1DW;
+
+.field public static final enum SURFACE_CHANGE:LX/1DW;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/base/Predicate;Ljava/util/SortedSet;)V
+.method public static final synthetic $values()[LX/1DW;
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v2, v0, [LX/1DW;
+
+    sget-object v1, LX/1DW;->SURFACE_CHANGE:LX/1DW;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1DW;->INTERRUPTION_REQUIREMENT_MET:LX/1DW;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "SURFACE_CHANGE"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/1DW;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/1DW;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/1DW;->SURFACE_CHANGE:LX/1DW;
+
+    .line 9
+    .line 10
+    const-string v2, "INTERRUPTION_REQUIREMENT_MET"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/1DW;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/1DW;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/1DW;->INTERRUPTION_REQUIREMENT_MET:LX/1DW;
+
+    .line 19
+    .line 20
+    invoke-static {}, LX/1DW;->$values()[LX/1DW;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    sput-object v0, LX/1DW;->$VALUES:[LX/1DW;
+
+    .line 25
+    .line 26
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    sput-object v0, LX/1DW;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 31
+    .line 32
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1dX;-><init>(Lcom/google/common/base/Predicate;Ljava/util/Set;)V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
@@ -33,265 +119,38 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final comparator()Ljava/util/Comparator;
+.method public static getEntries()Lkotlin/enums/EnumEntries;
     .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/1dY;->A01:Ljava/util/Collection;
+    sget-object v0, LX/1DW;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 1
-    .line 2
-    check-cast v0, Ljava/util/SortedSet;
+    return-object v0
+.end method
 
-    .line 3
-    .line 4
-    invoke-interface {v0}, Ljava/util/SortedSet;->comparator()Ljava/util/Comparator;
+.method public static valueOf(Ljava/lang/String;)LX/1DW;
+    .locals 1
 
-    .line 5
-    .line 6
-    .line 7
+    const-class v0, LX/1DW;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
     move-result-object v0
 
-    .line 8
+    check-cast v0, LX/1DW;
+
     return-object v0
 .end method
 
-.method public final first()Ljava/lang/Object;
-    .locals 4
+.method public static values()[LX/1DW;
+    .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/1dY;->A01:Ljava/util/Collection;
+    sget-object v0, LX/1DW;->$VALUES:[LX/1DW;
 
-    .line 1
-    .line 2
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v3
-
-    .line 6
-    iget-object v2, p0, LX/1dY;->A00:Lcom/google/common/base/Predicate;
-
-    .line 7
-    .line 8
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 12
-    .line 13
-    .line 14
-    :cond_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
-
-    .line 18
-    if-eqz v0, :cond_1
-
-    .line 19
-    .line 20
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v1
-
-    .line 24
-    invoke-interface {v2, v1}, Lcom/google/common/base/Predicate;->apply(Ljava/lang/Object;)Z
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v0
-
-    .line 28
-    if-eqz v0, :cond_0
-
-    .line 29
-    .line 30
-    return-object v1
-
-    .line 31
-    :cond_1
-    invoke-static {}, LX/0Yj;->A0d()Ljava/util/NoSuchElementException;
-
-    .line 32
-    .line 33
-    .line 34
     move-result-object v0
 
-    .line 35
-    throw v0
-.end method
+    check-cast v0, [LX/1DW;
 
-.method public final headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/1dY;->A01:Ljava/util/Collection;
-
-    .line 1
-    .line 2
-    check-cast v0, Ljava/util/SortedSet;
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1}, Ljava/util/SortedSet;->headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v2
-
-    .line 8
-    iget-object v1, p0, LX/1dY;->A00:Lcom/google/common/base/Predicate;
-
-    .line 9
-    .line 10
-    new-instance v0, LX/1dW;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, v1, v2}, LX/1dW;-><init>(Lcom/google/common/base/Predicate;Ljava/util/SortedSet;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-object v0
-.end method
-
-.method public final last()Ljava/lang/Object;
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/1dY;->A01:Ljava/util/Collection;
-
-    .line 1
-    .line 2
-    check-cast v2, Ljava/util/SortedSet;
-
-    .line 3
-    .line 4
-    :goto_0
-    invoke-interface {v2}, Ljava/util/SortedSet;->last()Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v1
-
-    .line 8
-    iget-object v0, p0, LX/1dY;->A00:Lcom/google/common/base/Predicate;
-
-    .line 9
-    .line 10
-    invoke-interface {v0, v1}, Lcom/google/common/base/Predicate;->apply(Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    if-eqz v0, :cond_0
-
-    .line 15
-    .line 16
-    return-object v1
-
-    .line 17
-    :cond_0
-    invoke-interface {v2, v1}, Ljava/util/SortedSet;->headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v2
-
-    .line 21
-    goto :goto_0
-.end method
-
-.method public final subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/1dY;->A01:Ljava/util/Collection;
-
-    .line 1
-    .line 2
-    check-cast v0, Ljava/util/SortedSet;
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1, p2}, Ljava/util/SortedSet;->subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v2
-
-    .line 8
-    iget-object v1, p0, LX/1dY;->A00:Lcom/google/common/base/Predicate;
-
-    .line 9
-    .line 10
-    new-instance v0, LX/1dW;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, v1, v2}, LX/1dW;-><init>(Lcom/google/common/base/Predicate;Ljava/util/SortedSet;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-object v0
-.end method
-
-.method public final tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/1dY;->A01:Ljava/util/Collection;
-
-    .line 1
-    .line 2
-    check-cast v0, Ljava/util/SortedSet;
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1}, Ljava/util/SortedSet;->tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v2
-
-    .line 8
-    iget-object v1, p0, LX/1dY;->A00:Lcom/google/common/base/Predicate;
-
-    .line 9
-    .line 10
-    new-instance v0, LX/1dW;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, v1, v2}, LX/1dW;-><init>(Lcom/google/common/base/Predicate;Ljava/util/SortedSet;)V
-
-    .line 13
-    .line 14
-    .line 15
     return-object v0
 .end method

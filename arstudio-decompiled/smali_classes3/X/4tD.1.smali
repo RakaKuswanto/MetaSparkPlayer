@@ -1,33 +1,20 @@
-.class public abstract LX/4tD;
-.super LX/4t8;
+.class public abstract LX/4Td;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/4zg;
-
-
 # direct methods
-.method public constructor <init>(LX/4tD;)V
+.method public static A00(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/4t8;-><init>(LX/4t8;)V
+    invoke-static {p0, p1, p2}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    move-result-object p0
 
-.method public constructor <init>(LX/4tL;)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0, p1}, LX/4t8;-><init>(LX/4t5;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
+    .line 4
+    return-object p0
 .end method

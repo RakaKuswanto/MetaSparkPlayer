@@ -1,11 +1,21 @@
-.class public interface abstract LX/04Y;
-.super Ljava/lang/Object;
+.class public final LX/04Y;
+.super LX/0O6;
 .source ""
 
 
-# virtual methods
-.method public abstract AHH()Ljava/util/ArrayList;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.method public abstract Abi(Landroid/content/Context;Landroid/content/Intent;LX/04w;)V
+    .line 0
+    const-string v0, "c"
+
+    .line 1
+    .line 2
+    invoke-direct {p0, v0}, LX/0O6;-><init>(Ljava/lang/String;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method

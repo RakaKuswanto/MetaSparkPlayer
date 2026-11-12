@@ -1,10 +1,10 @@
 .class public final Lcom/facebook/cameracore/mediapipeline/services/messagechannel/implementation/directbytebufferfactory/DirectByteBufferFactory;
-.super LX/5H8;
+.super LX/5Cv;
 .source ""
 
 
 # static fields
-.field public static final Companion:LX/5H9;
+.field public static final Companion:LX/5Cw;
 
 .field public static final INSTANCE:Lcom/facebook/cameracore/mediapipeline/services/messagechannel/implementation/directbytebufferfactory/DirectByteBufferFactory;
 
@@ -14,16 +14,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5H9;
+    new-instance v0, LX/5Cw;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5H9;-><init>()V
+    invoke-direct {v0}, LX/5Cw;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/messagechannel/implementation/directbytebufferfactory/DirectByteBufferFactory;->Companion:LX/5H9;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/messagechannel/implementation/directbytebufferfactory/DirectByteBufferFactory;->Companion:LX/5Cw;
 
     .line 6
     .line 7
@@ -47,7 +47,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5H8;-><init>()V
+    invoke-direct {p0}, LX/5Cv;-><init>()V
 
     .line 1
     .line 2
@@ -81,7 +81,7 @@
     move-result-object v0
 
     .line 10
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 11
     .line 12

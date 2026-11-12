@@ -1,109 +1,76 @@
 .class public final LX/3tr;
-.super Ljava/lang/Object;
+.super LX/421;
 .source ""
 
-# interfaces
-.implements LX/3sj;
 
+# instance fields
+.field public A00:I
 
-# static fields
-.field public static final A00:Ljava/util/List;
+.field public A01:Z
+
+.field public A02:Z
+
+.field public A03:Z
+
+.field public A04:Z
+
+.field public A05:Z
+
+.field public A06:Z
+
+.field public A07:Z
+
+.field public A08:Z
+
+.field public A09:Z
+
+.field public final A0A:LX/302;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/0Cx;->A00:LX/0Cx;
-
-    .line 1
-    .line 2
-    sput-object v0, LX/3tr;->A00:Ljava/util/List;
-
-    .line 3
-    .line 4
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/421;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A9J()Z
-    .locals 1
-
     const/4 v0, 0x0
 
-    return v0
-.end method
-
-.method public final A9n()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final AQA()Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
-.end method
-
-.method public final AQm()Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
-.end method
-
-.method public final AoC()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final AoD()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final Apn()Landroid/util/ArrayMap;
-    .locals 1
-
-    .line 0
-    new-instance v0, Landroid/util/ArrayMap;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
-
-    .line 3
     .line 4
+    iput-boolean v0, p0, LX/3tr;->A06:Z
+
     .line 5
-    return-object v0
+    .line 6
+    iput-boolean v0, p0, LX/3tr;->A09:Z
+
+    .line 7
+    .line 8
+    iput-boolean v0, p0, LX/3tr;->A07:Z
+
+    .line 9
+    .line 10
+    iput-boolean v0, p0, LX/3tr;->A04:Z
+
+    .line 11
+    .line 12
+    iput-boolean v0, p0, LX/3tr;->A02:Z
+
+    .line 13
+    .line 14
+    invoke-static {}, LX/0X1;->A0B()LX/302;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    iput-object v0, p0, LX/3tr;->A0A:LX/302;
+
+    .line 19
+    .line 20
+    return-void
 .end method

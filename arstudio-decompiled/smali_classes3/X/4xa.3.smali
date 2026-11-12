@@ -1,381 +1,189 @@
-.class public final enum LX/4xa;
-.super Ljava/lang/Enum;
+.class public final LX/4xa;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/4xa;
-
-.field public static final enum BOTTOM:LX/4xa;
-
-.field public static final enum CENTER:LX/4xa;
-
-.field public static final enum END:LX/4xa;
-
-.field public static final enum INNER_BOTTOM:LX/4xa;
-
-.field public static final enum INNER_CENTER:LX/4xa;
-
-.field public static final enum INNER_END:LX/4xa;
-
-.field public static final enum INNER_START:LX/4xa;
-
-.field public static final enum INNER_TOP:LX/4xa;
-
-.field public static final enum NONE:LX/4xa;
-
-.field public static final enum START:LX/4xa;
-
-.field public static final enum TOP:LX/4xa;
-
-
 # instance fields
-.field public mIsHorizontal:Z
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 16
-
-    .line 0
-    const-string v0, "NONE"
-
-    .line 1
-    .line 2
-    const/4 v15, 0x0
-
-    .line 3
-    const/4 v14, 0x1
-
-    .line 4
-    new-instance v13, LX/4xa;
-
-    .line 5
-    .line 6
-    invoke-direct {v13, v0, v15, v14}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 7
-    .line 8
-    .line 9
-    sput-object v13, LX/4xa;->NONE:LX/4xa;
-
-    .line 10
-    .line 11
-    const-string v0, "TOP"
-
-    .line 12
-    .line 13
-    new-instance v12, LX/4xa;
-
-    .line 14
-    .line 15
-    invoke-direct {v12, v0, v14, v14}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v12, LX/4xa;->TOP:LX/4xa;
-
-    .line 19
-    .line 20
-    const-string v1, "BOTTOM"
-
-    .line 21
-    .line 22
-    const/4 v0, 0x2
-
-    .line 23
-    new-instance v11, LX/4xa;
-
-    .line 24
-    .line 25
-    invoke-direct {v11, v1, v0, v14}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v11, LX/4xa;->BOTTOM:LX/4xa;
-
-    .line 29
-    .line 30
-    const-string v1, "START"
-
-    .line 31
-    .line 32
-    const/4 v0, 0x3
-
-    .line 33
-    new-instance v10, LX/4xa;
-
-    .line 34
-    .line 35
-    invoke-direct {v10, v1, v0, v15}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v10, LX/4xa;->START:LX/4xa;
-
-    .line 39
-    .line 40
-    const-string v1, "END"
-
-    .line 41
-    .line 42
-    const/4 v0, 0x4
-
-    .line 43
-    new-instance v9, LX/4xa;
-
-    .line 44
-    .line 45
-    invoke-direct {v9, v1, v0, v15}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 46
-    .line 47
-    .line 48
-    sput-object v9, LX/4xa;->END:LX/4xa;
-
-    .line 49
-    .line 50
-    const-string v1, "INNER_TOP"
-
-    .line 51
-    .line 52
-    const/4 v0, 0x5
-
-    .line 53
-    new-instance v8, LX/4xa;
-
-    .line 54
-    .line 55
-    invoke-direct {v8, v1, v0, v14}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 56
-    .line 57
-    .line 58
-    sput-object v8, LX/4xa;->INNER_TOP:LX/4xa;
-
-    .line 59
-    .line 60
-    const-string v1, "INNER_BOTTOM"
-
-    .line 61
-    .line 62
-    const/4 v0, 0x6
-
-    .line 63
-    new-instance v7, LX/4xa;
-
-    .line 64
-    .line 65
-    invoke-direct {v7, v1, v0, v14}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 66
-    .line 67
-    .line 68
-    sput-object v7, LX/4xa;->INNER_BOTTOM:LX/4xa;
-
-    .line 69
-    .line 70
-    const-string v1, "INNER_START"
-
-    .line 71
-    .line 72
-    const/4 v0, 0x7
-
-    .line 73
-    new-instance v6, LX/4xa;
-
-    .line 74
-    .line 75
-    invoke-direct {v6, v1, v0, v15}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 76
-    .line 77
-    .line 78
-    sput-object v6, LX/4xa;->INNER_START:LX/4xa;
-
-    .line 79
-    .line 80
-    const-string v1, "INNER_END"
-
-    .line 81
-    .line 82
-    const/16 v0, 0x8
-
-    .line 83
-    .line 84
-    new-instance v5, LX/4xa;
-
-    .line 85
-    .line 86
-    invoke-direct {v5, v1, v0, v15}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 87
-    .line 88
-    .line 89
-    sput-object v5, LX/4xa;->INNER_END:LX/4xa;
-
-    .line 90
-    .line 91
-    const-string v1, "CENTER"
-
-    .line 92
-    .line 93
-    const/16 v0, 0x9
-
-    .line 94
-    .line 95
-    new-instance v4, LX/4xa;
-
-    .line 96
-    .line 97
-    invoke-direct {v4, v1, v0, v14}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 98
-    .line 99
-    .line 100
-    sput-object v4, LX/4xa;->CENTER:LX/4xa;
-
-    .line 101
-    .line 102
-    const-string v0, "INNER_CENTER"
-
-    .line 103
-    .line 104
-    const/16 v3, 0xa
-
-    .line 105
-    .line 106
-    new-instance v2, LX/4xa;
-
-    .line 107
-    .line 108
-    invoke-direct {v2, v0, v3, v14}, LX/4xa;-><init>(Ljava/lang/String;IZ)V
-
-    .line 109
-    .line 110
-    .line 111
-    sput-object v2, LX/4xa;->INNER_CENTER:LX/4xa;
-
-    .line 112
-    .line 113
-    const/16 v0, 0xb
-
-    .line 114
-    .line 115
-    new-array v1, v0, [LX/4xa;
-
-    .line 116
-    .line 117
-    aput-object v13, v1, v15
-
-    .line 118
-    .line 119
-    aput-object v12, v1, v14
-
-    .line 120
-    .line 121
-    invoke-static {v11, v10, v9, v1}, LX/0Yc;->A1R(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 122
-    .line 123
-    .line 124
-    const/4 v0, 0x5
-
-    .line 125
-    aput-object v8, v1, v0
-
-    .line 126
-    .line 127
-    invoke-static {v7, v6, v5, v4, v1}, LX/0Yc;->A0R(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 128
-    .line 129
-    .line 130
-    aput-object v2, v1, v3
-
-    .line 131
-    .line 132
-    sput-object v1, LX/4xa;->$VALUES:[LX/4xa;
-
-    .line 133
-    .line 134
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IZ)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-boolean p3, p0, LX/4xa;->mIsHorizontal:Z
+    iput-object p1, p0, LX/4xa;->A00:Ljava/lang/String;
 
-    .line 4
-    .line 5
+    iput-object p2, p0, LX/4xa;->A01:Ljava/lang/String;
+
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/4xa;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/4xa;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/4xa;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/4xa;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/4xa;->$VALUES:[LX/4xa;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/4xa;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public isHorizontal()Z
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     .line 0
-    iget-boolean v0, p0, LX/4xa;->mIsHorizontal:Z
+    const/4 v3, 0x1
+
+    .line 1
+    if-eq p1, p0, :cond_1
+
+    .line 2
+    .line 3
+    instance-of v0, p1, LX/4xa;
+
+    .line 4
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    if-eqz v0, :cond_2
+
+    .line 7
+    .line 8
+    check-cast p1, LX/4xa;
+
+    .line 9
+    .line 10
+    iget-object v1, p0, LX/4xa;->A00:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    iget-object v0, p1, LX/4xa;->A00:Ljava/lang/String;
+
+    .line 13
+    .line 14
+    if-eq v1, v0, :cond_0
+
+    .line 15
+    .line 16
+    if-eqz v1, :cond_2
+
+    .line 17
+    .line 18
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    if-eqz v0, :cond_2
+
+    .line 23
+    .line 24
+    :cond_0
+    iget-object v1, p0, LX/4xa;->A01:Ljava/lang/String;
+
+    .line 25
+    .line 26
+    iget-object v0, p1, LX/4xa;->A01:Ljava/lang/String;
+
+    .line 27
+    .line 28
+    if-eq v1, v0, :cond_1
+
+    .line 29
+    .line 30
+    if-eqz v1, :cond_2
+
+    .line 31
+    .line 32
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v0
+
+    .line 36
+    if-eqz v0, :cond_2
+
+    .line 37
+    .line 38
+    :cond_1
+    return v3
+
+    .line 39
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/4xa;->A00:Ljava/lang/String;
 
     .line 1
     .line 2
-    return v0
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    mul-int/lit8 v1, v0, 0x25
+
+    .line 7
+    .line 8
+    iget-object v0, p0, LX/4xa;->A01:Ljava/lang/String;
+
+    .line 9
+    .line 10
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    add-int/2addr v1, v0
+
+    .line 15
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    .line 0
+    const-string v4, "[packageName="
+
+    .line 1
+    .line 2
+    iget-object v3, p0, LX/4xa;->A00:Ljava/lang/String;
+
+    .line 3
+    .line 4
+    const-string v2, ",libraryName="
+
+    .line 5
+    .line 6
+    iget-object v1, p0, LX/4xa;->A01:Ljava/lang/String;
+
+    .line 7
+    .line 8
+    const-string v0, "]"
+
+    .line 9
+    .line 10
+    invoke-static {v4, v3, v2, v1, v0}, LX/004;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
 .end method

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final A00:LX/1wQ;
+.field public final A00:LX/1Vw;
 
 .field public final A01:Ljava/lang/String;
 
@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>(LX/1wQ;Ljava/lang/String;)V
+.method public constructor <init>(LX/1Vw;Ljava/lang/String;)V
     .locals 0
 
     .line 0
@@ -21,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/ffmpeg/FFMpegMediaMetadataRetriever;->A00:LX/1wQ;
+    iput-object p1, p0, Lcom/facebook/ffmpeg/FFMpegMediaMetadataRetriever;->A00:LX/1Vw;
 
     .line 4
     .line 5
@@ -89,16 +89,11 @@
     .locals 0
 
     .line 0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+    invoke-direct {p0}, Lcom/facebook/ffmpeg/FFMpegMediaMetadataRetriever;->nativeFinalize()V
 
     .line 1
     .line 2
     .line 3
-    invoke-direct {p0}, Lcom/facebook/ffmpeg/FFMpegMediaMetadataRetriever;->nativeFinalize()V
-
-    .line 4
-    .line 5
-    .line 6
     return-void
 .end method
 
@@ -106,7 +101,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/ffmpeg/FFMpegMediaMetadataRetriever;->A00:LX/1wQ;
+    iget-object v0, p0, Lcom/facebook/ffmpeg/FFMpegMediaMetadataRetriever;->A00:LX/1Vw;
 
     .line 1
     .line 2

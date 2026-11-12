@@ -1,181 +1,139 @@
-.class public final LX/0Ny;
+.class public LX/0Ny;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MqttClient$5"
-
 
 # instance fields
-.field public final synthetic A00:I
-
-.field public final synthetic A01:LX/0NA;
-
-.field public final synthetic A02:Ljava/util/List;
+.field public final A00:[Ljavax/net/ssl/X509TrustManager;
 
 
 # direct methods
-.method public constructor <init>(LX/0NA;Ljava/util/List;I)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/0Ny;->A01:LX/0NA;
-
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/0Ny;->A02:Ljava/util/List;
-
-    .line 3
-    .line 4
-    iput p3, p0, LX/0Ny;->A00:I
-
-    .line 5
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 5
-
-    .line 0
-    iget-object v3, p0, LX/0Ny;->A01:LX/0NA;
-
     .line 1
     .line 2
-    iget-object v4, p0, LX/0Ny;->A02:Ljava/util/List;
-
     .line 3
+    const/4 v0, 0x1
+
     .line 4
-    iget v2, p0, LX/0Ny;->A00:I
+    new-array v2, v0, [Ljavax/net/ssl/X509TrustManager;
 
     .line 5
     .line 6
-    :try_start_0
-    iget-object v0, v3, LX/0NA;->A0I:LX/0Mk;
+    iput-object v2, p0, LX/0Ny;->A00:[Ljavax/net/ssl/X509TrustManager;
 
     .line 7
     .line 8
-    iget v0, v0, LX/0Mk;->A03:I
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 9
     .line 10
-    mul-int/lit16 v0, v0, 0x3e8
+    const/16 v0, 0x18
 
     .line 11
     .line 12
-    int-to-long v0, v0
+    if-lt v1, v0, :cond_0
 
     .line 13
-    invoke-virtual {v3, v0, v1}, LX/0NA;->A04(J)V
-
     .line 14
+    new-instance v1, LX/04v;
+
     .line 15
     .line 16
-    iget-object v1, v3, LX/0NA;->A0d:LX/0OT;
+    invoke-direct {v1, p1, p2}, LX/04v;-><init>(J)V
 
     .line 17
     .line 18
-    sget-object v0, LX/0OT;->CONNECTED:LX/0OT;
-
     .line 19
+    :goto_0
+    const/4 v0, 0x0
+
     .line 20
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    aput-object v1, v2, v0
 
     .line 21
     .line 22
+    return-void
+
     .line 23
-    move-result v0
+    :cond_0
+    new-instance v1, LX/0Pj;
 
     .line 24
-    if-eqz v0, :cond_0
-
     .line 25
-    .line 26
-    iget-object v0, v3, LX/0NA;->A0G:LX/0Mx;
+    invoke-direct {v1, p1, p2}, LX/0Pj;-><init>(J)V
 
+    .line 26
     .line 27
     .line 28
-    invoke-interface {v0, v4, v2}, LX/0Mx;->Akv(Ljava/util/List;I)V
+    goto :goto_0
+.end method
 
-    .line 29
-    .line 30
-    .line 31
-    iget-object v0, v3, LX/0NA;->A0H:LX/0Mr;
+.method public constructor <init>(JZ)V
+    .locals 3
 
-    .line 32
-    .line 33
-    invoke-interface {v0, v4, v2}, LX/0Mr;->Adp(Ljava/util/List;I)V
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
-    .line 35
-    .line 36
-    iget-object v2, v3, LX/0NA;->A0c:LX/0LU;
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const/4 v0, 0x1
 
-    .line 37
-    .line 38
-    if-eqz v2, :cond_0
+    .line 268435460
+    new-array v2, v0, [Ljavax/net/ssl/X509TrustManager;
 
-    .line 39
-    .line 40
-    iget-object v0, v2, LX/0LU;->A02:LX/0Rq;
+    .line 268435461
+    .line 268435462
+    iput-object v2, p0, LX/0Ny;->A00:[Ljavax/net/ssl/X509TrustManager;
 
-    .line 41
-    .line 42
-    iget-object v1, v0, LX/0Rq;->A08:Landroid/os/Handler;
+    .line 268435463
+    .line 268435464
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 43
-    .line 44
-    new-instance v0, LX/0S6;
+    .line 268435465
+    .line 268435466
+    const/16 v0, 0x11
 
-    .line 45
-    .line 46
-    invoke-direct {v0, v2}, LX/0S6;-><init>(LX/0LU;)V
+    .line 268435467
+    .line 268435468
+    if-lt v1, v0, :cond_0
 
-    .line 47
-    .line 48
-    .line 49
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    .line 268435469
+    .line 268435470
+    new-instance v1, LX/04u;
 
-    .line 50
-    .line 51
-    .line 52
+    .line 268435471
+    .line 268435472
+    invoke-direct {v1, p1, p2}, LX/04u;-><init>(J)V
+
+    .line 268435473
+    .line 268435474
+    .line 268435475
+    :goto_0
+    const/4 v0, 0x0
+
+    .line 268435476
+    aput-object v1, v2, v0
+
+    .line 268435477
+    .line 268435478
     return-void
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 53
-    :catchall_0
-    move-exception v2
-
-    .line 54
-    invoke-static {v2}, LX/0MM;->getFromWriteException(Ljava/lang/Throwable;)LX/0MM;
-
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v1
-
-    .line 58
-    sget-object v0, LX/0Mf;->SUBSCRIBE:LX/0Mf;
-
-    .line 59
-    .line 60
-    invoke-static {v3, v0, v1, v2}, LX/0NA;->A03(LX/0NA;LX/0Mf;LX/0MM;Ljava/lang/Throwable;)V
-
-    .line 61
-    .line 62
-    .line 63
+    .line 268435479
     :cond_0
-    return-void
+    new-instance v1, LX/0Pj;
+
+    .line 268435480
+    .line 268435481
+    invoke-direct {v1, p1, p2}, LX/0Pj;-><init>(J)V
+
+    .line 268435482
+    .line 268435483
+    .line 268435484
+    goto :goto_0
 .end method

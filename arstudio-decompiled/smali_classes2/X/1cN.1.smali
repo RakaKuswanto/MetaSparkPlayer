@@ -1,103 +1,17 @@
-.class public final enum LX/1cN;
-.super Ljava/lang/Enum;
+.class public final LX/1cn;
+.super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final synthetic $VALUES:[LX/1cN;
-
-.field public static final enum ALWAYS:LX/1cN;
-
-.field public static final enum APP_USE:LX/1cN;
+# interfaces
+.implements LX/1cl;
 
 
 # direct methods
-.method public static final synthetic $values()[LX/1cN;
-    .locals 3
-
-    const/4 v0, 0x2
-
-    new-array v2, v0, [LX/1cN;
-
-    sget-object v1, LX/1cN;->APP_USE:LX/1cN;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/1cN;->ALWAYS:LX/1cN;
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 0
-    const-string v2, "APP_USE"
-
-    .line 1
-    .line 2
-    const/4 v1, 0x0
-
-    .line 3
-    new-instance v0, LX/1cN;
-
-    .line 4
-    .line 5
-    invoke-direct {v0, v2, v1}, LX/1cN;-><init>(Ljava/lang/String;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    sput-object v0, LX/1cN;->APP_USE:LX/1cN;
-
-    .line 9
-    .line 10
-    const-string v2, "ALWAYS"
-
-    .line 11
-    .line 12
-    const/4 v1, 0x1
-
-    .line 13
-    new-instance v0, LX/1cN;
-
-    .line 14
-    .line 15
-    invoke-direct {v0, v2, v1}, LX/1cN;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v0, LX/1cN;->ALWAYS:LX/1cN;
-
-    .line 19
-    .line 20
-    invoke-static {}, LX/1cN;->$values()[LX/1cN;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    sput-object v0, LX/1cN;->$VALUES:[LX/1cN;
-
-    .line 25
-    .line 26
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
@@ -105,30 +19,123 @@
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/1cN;
+
+# virtual methods
+.method public final clear()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final containsKey(Ljava/lang/Object;)Z
     .locals 1
 
-    const-class v0, LX/1cN;
+    const/4 v0, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    return v0
+.end method
 
+.method public final containsValue(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final entrySet()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1
+    .line 2
+    .line 3
     move-result-object v0
 
-    check-cast v0, LX/1cN;
-
+    .line 4
     return-object v0
 .end method
 
-.method public static values()[LX/1cN;
+.method public final bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, LX/1cN;->$VALUES:[LX/1cN;
+    .line 0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 1
+    return-object v0
+.end method
 
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final keySet()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1
+    .line 2
+    .line 3
     move-result-object v0
 
-    check-cast v0, [LX/1cN;
+    .line 4
+    return-object v0
+.end method
 
+.method public final bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    return-object v0
+.end method
+
+.method public final putAll(Ljava/util/Map;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final bridge synthetic remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final values()Ljava/util/Collection;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     return-object v0
 .end method

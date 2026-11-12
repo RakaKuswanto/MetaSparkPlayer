@@ -3,19 +3,19 @@
 .source ""
 
 # interfaces
-.implements LX/5lc;
+.implements LX/5y2;
 
 
 # instance fields
 .field public final synthetic this$0:Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl;
 
-.field public final synthetic val$cameraDevice:LX/5aZ;
+.field public final synthetic val$cameraDevice:LX/5zJ;
 
 .field public final synthetic val$mode:Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/FocusMode;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl;LX/5aZ;Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/FocusMode;)V
+.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl;LX/5zJ;Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/FocusMode;)V
     .locals 0
 
     .line 0
@@ -23,7 +23,7 @@
 
     .line 1
     .line 2
-    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl$1;->val$cameraDevice:LX/5aZ;
+    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl$1;->val$cameraDevice:LX/5zJ;
 
     .line 3
     .line 4
@@ -66,11 +66,11 @@
     .locals 9
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl$1;->val$cameraDevice:LX/5aZ;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl$1;->val$cameraDevice:LX/5zJ;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5aZ;->isOpen()Z
+    invoke-interface {v0}, LX/5zJ;->isOpen()Z
 
     .line 3
     .line 4
@@ -94,12 +94,12 @@
 
     .line 13
     .line 14
-    sget-object v3, LX/5lF;->AUTO:LX/5lF;
+    sget-object v3, LX/5uN;->AUTO:LX/5uN;
 
     .line 15
     .line 16
     :goto_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl$1;->val$cameraDevice:LX/5aZ;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/cameracontrol/CameraControlServiceDelegateImpl$1;->val$cameraDevice:LX/5zJ;
 
     .line 17
     .line 18
@@ -114,7 +114,7 @@
     move-result-object v8
 
     .line 23
-    new-instance v1, LX/5kS;
+    new-instance v1, LX/5wr;
 
     .line 24
     .line 25
@@ -130,12 +130,12 @@
     move-object v7, v2
 
     .line 29
-    invoke-direct/range {v1 .. v8}, LX/5kS;-><init>(LX/569;LX/5lF;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/util/HashMap;Ljava/util/Map;)V
+    invoke-direct/range {v1 .. v8}, LX/5wr;-><init>(LX/4KB;LX/5uN;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/util/HashMap;Ljava/util/Map;)V
 
     .line 30
     .line 31
     .line 32
-    invoke-interface {v0, v1}, LX/5aZ;->ATd(LX/5kS;)V
+    invoke-interface {v0, v1}, LX/5zJ;->ARy(LX/5wr;)V
 
     .line 33
     .line 34
@@ -145,7 +145,7 @@
 
     .line 36
     :cond_1
-    sget-object v3, LX/5lF;->CONTINUOUS_VIDEO:LX/5lF;
+    sget-object v3, LX/5uN;->CONTINUOUS_VIDEO:LX/5uN;
 
     .line 37
     .line 38

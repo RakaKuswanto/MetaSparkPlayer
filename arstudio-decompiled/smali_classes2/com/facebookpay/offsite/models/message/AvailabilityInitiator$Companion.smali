@@ -10,6 +10,8 @@
 
 .field public static final INITIATOR_JS_SDK:Ljava/lang/String; = "JS_SDK"
 
+.field public static final INITIATOR_UAC:Ljava/lang/String; = "UAC"
+
 
 # direct methods
 .method public static constructor <clinit>()V

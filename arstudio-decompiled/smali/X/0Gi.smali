@@ -1,11 +1,11 @@
-.class public interface abstract LX/0Gi;
+.class public interface abstract LX/0GI;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0VH;
+
 
 # virtual methods
-.method public abstract ARb()Lcom/facebook/common/util/TriState;
-.end method
-
-.method public abstract AoE()Lcom/facebook/common/util/TriState;
+.method public abstract invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 .end method

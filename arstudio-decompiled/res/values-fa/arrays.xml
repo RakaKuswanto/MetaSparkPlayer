@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>گپ‌ها</item>
+        <item>مسدود کردن/لغو انسداد</item>
+        <item>تماس‌ها</item>
+        <item>وضعیت فعال</item>
+        <item>جستجو</item>
+        <item>اعلان‌ها</item>
+        <item>برگه برگزیده‌ها</item>
+        <item>داستان‌ها</item>
+        <item>موارد دیگر</item>
+    </string-array>
+</resources>

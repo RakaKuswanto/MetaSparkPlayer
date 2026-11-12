@@ -1,34 +1,45 @@
-.class public final LX/2Ce;
-.super Ljava/lang/Object;
+.class public LX/2CE;
+.super Ljava/lang/RuntimeException;
 .source ""
 
-# interfaces
-.implements LX/2C9;
 
-
-# instance fields
-.field public final synthetic A00:LX/28I;
-
-.field public final synthetic A01:LX/28I;
+# static fields
+.field public static final serialVersionUID:J = 0x1L
 
 
 # direct methods
-.method public constructor <init>(LX/28I;LX/28I;)V
+.method public constructor <init>()V
+    .locals 0
+
+    .line 536870912
+    invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/2Ce;->A00:LX/28I;
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/2Ce;->A01:LX/28I;
-
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    .line 5
-    .line 6
-    .line 7
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
     return-void
 .end method

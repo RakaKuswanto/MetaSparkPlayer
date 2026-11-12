@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLPaymentPlatformAttachmentCallToActionTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLPaymentPlatformAttachmentCallToActionTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yi;->A1Y()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A0z()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -23,7 +23,7 @@
     const/4 v1, 0x0
 
     .line 5
-    const-string v0, "INFORMATIONAL_MESSAGE_BOTTOM_SHEET"
+    const-string v0, "ASYNC_CONTROLLER"
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "IN_APP_URL"
+    const-string v0, "INFORMATIONAL_MESSAGE_BOTTOM_SHEET"
 
     .line 11
     .line 12
@@ -45,22 +45,33 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "JSON_CHECKOUT"
+    const-string v0, "IN_APP_URL"
 
     .line 16
     .line 17
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 18
     .line 19
+    const/4 v1, 0x3
+
     .line 20
-    move-result-object v0
+    const-string v0, "JSON_CHECKOUT"
 
     .line 21
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentPlatformAttachmentCallToActionTypeSet;->A00:Ljava/util/Set;
-
     .line 22
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentPlatformAttachmentCallToActionTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 27
+    .line 28
     return-void
 .end method
 
@@ -76,11 +87,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentPlatformAttachmentCallToActionTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentPlatformAttachmentCallToActionTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

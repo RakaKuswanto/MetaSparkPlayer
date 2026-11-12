@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3KS;
-
 
 # direct methods
 .method public constructor <init>()V
@@ -17,4 +14,12 @@
     .line 2
     .line 3
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract getFilename()Ljava/lang/String;
+.end method
+
+.method public abstract getJavaByteBuffer()Ljava/nio/ByteBuffer;
 .end method

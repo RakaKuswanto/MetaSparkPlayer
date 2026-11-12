@@ -23,11 +23,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x13
+    const/16 v0, 0x5b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -46,7 +46,7 @@
     .locals 0
 
     .line 0
-    invoke-static {p2, p3}, LX/0Yc;->A0M(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p2, p3}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
@@ -100,7 +100,7 @@
 
     iget-object v0, p1, Lcom/facebookpay/expresscheckout/logging/ComponentLoggingData;->A01:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -110,7 +110,7 @@
 
     iget-object v0, p1, Lcom/facebookpay/expresscheckout/logging/ComponentLoggingData;->A02:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -120,7 +120,7 @@
 
     iget-object v0, p1, Lcom/facebookpay/expresscheckout/logging/ComponentLoggingData;->A00:Lcom/google/common/collect/ImmutableMap;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -141,41 +141,45 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget-object v0, p0, Lcom/facebookpay/expresscheckout/logging/ComponentLoggingData;->A02:Ljava/lang/String;
+    mul-int/lit8 v1, v0, 0x1f
 
     .line 7
     .line 8
-    invoke-static {v0, v1}, LX/001;->A02(Ljava/lang/String;I)I
+    iget-object v0, p0, Lcom/facebookpay/expresscheckout/logging/ComponentLoggingData;->A02:Ljava/lang/String;
 
     .line 9
     .line 10
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
+
     .line 11
+    .line 12
+    .line 13
     move-result v1
 
-    .line 12
-    iget-object v0, p0, Lcom/facebookpay/expresscheckout/logging/ComponentLoggingData;->A00:Lcom/google/common/collect/ImmutableMap;
-
-    .line 13
     .line 14
-    invoke-static {v0}, LX/0Yd;->A02(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebookpay/expresscheckout/logging/ComponentLoggingData;->A00:Lcom/google/common/collect/ImmutableMap;
 
     .line 15
     .line 16
+    invoke-static {v0}, LX/0X2;->A08(Ljava/lang/Object;)I
+
     .line 17
+    .line 18
+    .line 19
     move-result v0
 
-    .line 18
+    .line 20
     add-int/2addr v1, v0
 
-    .line 19
+    .line 21
     return v1
 .end method
 
@@ -183,7 +187,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -240,7 +244,7 @@
 
     .line 30
     .line 31
-    invoke-static {v0, v1}, LX/0Yc;->A05(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X1;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 32
     .line 33
@@ -256,7 +260,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     iget-object v0, p0, Lcom/facebookpay/expresscheckout/logging/ComponentLoggingData;->A01:Ljava/lang/String;
 

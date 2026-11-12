@@ -1,70 +1,34 @@
-.class public final LX/5oW;
+.class public interface abstract LX/5OW;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RecordingControllerImplNative$prepare$1"
-
-
-# instance fields
-.field public final synthetic A00:Landroid/os/Handler;
-
-.field public final synthetic A01:LX/5YN;
-
-.field public final synthetic A02:LX/5oN;
+.field public static final A00:LX/5OW;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;LX/5YN;LX/5oN;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput-object p3, p0, LX/5oW;->A02:LX/5oN;
+    new-instance v0, LX/5OV;
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/5oW;->A01:LX/5YN;
+    invoke-direct {v0}, LX/5OV;-><init>()V
 
     .line 3
     .line 4
-    iput-object p1, p0, LX/5oW;->A00:Landroid/os/Handler;
-
     .line 5
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, LX/5OW;->A00:LX/5OW;
 
+    .line 6
     .line 7
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/5oW;->A02:LX/5oN;
-
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/5oW;->A01:LX/5YN;
-
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/5oW;->A00:Landroid/os/Handler;
-
-    .line 5
-    .line 6
-    invoke-static {v0, v1, v2}, LX/5oN;->A00(Landroid/os/Handler;LX/5YN;LX/5oN;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
+.method public abstract AD1(Ljava/lang/String;ZZ)Ljava/util/List;
 .end method

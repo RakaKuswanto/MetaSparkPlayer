@@ -4,8 +4,6 @@
 
 
 # static fields
-.field public static final VM_SAFE_MODE_ENABLED:Z
-
 .field public static final sIsJitDisabled:Z
 
 
@@ -14,7 +12,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/0Ba;->A00()Landroid/app/Application;
+    invoke-static {}, LX/0Bu;->A00()Landroid/app/Application;
 
     .line 1
     .line 2
@@ -81,14 +79,10 @@
     .line 30
     :catch_0
     :cond_0
-    sput-boolean v2, Lcom/facebook/common/jit/common/JitDisabledChecker;->VM_SAFE_MODE_ENABLED:Z
+    sput-boolean v2, Lcom/facebook/common/jit/common/JitDisabledChecker;->sIsJitDisabled:Z
 
     .line 31
     .line 32
-    sput-boolean v2, Lcom/facebook/common/jit/common/JitDisabledChecker;->sIsJitDisabled:Z
-
-    .line 33
-    .line 34
     return-void
 .end method
 

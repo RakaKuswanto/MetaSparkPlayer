@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5Vz;
+.field public static final Companion:LX/6AC;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5Vz;
+    new-instance v0, LX/6AC;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5Vz;-><init>()V
+    invoke-direct {v0}, LX/6AC;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/randomgenerator/RandomGeneratorServiceConfigurationHybrid;->Companion:LX/5Vz;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/randomgenerator/RandomGeneratorServiceConfigurationHybrid;->Companion:LX/6AC;
 
     .line 6
     .line 7
@@ -35,7 +35,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -52,16 +52,11 @@
     move-result-object v0
 
     .line 10
-    invoke-static {v0}, LX/0PS;->A07(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;-><init>(Lcom/facebook/jni/HybridData;)V
 
     .line 11
     .line 12
     .line 13
-    invoke-direct {p0, v0}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;-><init>(Lcom/facebook/jni/HybridData;)V
-
-    .line 14
-    .line 15
-    .line 16
     return-void
 .end method
 

@@ -46,7 +46,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -217,7 +217,7 @@
 
 
 # virtual methods
-.method public declared-synchronized configure(Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+.method public declared-synchronized configure(Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
     .locals 7
 
     .line 0
@@ -225,7 +225,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p1, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->mDexFiles:Ljava/util/ArrayList;
+    iget-object v0, p1, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->mDexFiles:Ljava/util/ArrayList;
 
     .line 2
     .line 3
@@ -245,7 +245,7 @@
 
     .line 10
     .line 11
-    iget v2, p1, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->configFlags:I
+    iget v2, p1, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->configFlags:I
 
     .line 12
     .line 13
@@ -475,7 +475,7 @@
 
     .line 6
     .line 7
-    invoke-static {v0, v1}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 8
     .line 9
@@ -536,7 +536,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2

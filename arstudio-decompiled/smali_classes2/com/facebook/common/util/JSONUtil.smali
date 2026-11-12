@@ -1,135 +1,132 @@
-.class public final Lcom/facebook/common/util/JSONUtil;
+.class public abstract Lcom/facebook/common/util/JSONUtil;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static A00(LX/1we;)I
-    .locals 3
+.method public static A00(LX/2Rs;I)I
+    .locals 2
 
     .line 0
-    const/4 v2, 0x0
-
-    .line 1
     if-eqz p0, :cond_1
 
+    .line 1
     .line 2
-    .line 3
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
+    .line 3
     .line 4
     .line 5
-    .line 6
     move-result-object v1
+
+    .line 6
+    sget-object v0, LX/2Rt;->NULL:LX/2Rt;
 
     .line 7
-    sget-object v0, LX/014;->A0X:Ljava/lang/Integer;
-
     .line 8
-    .line 9
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 9
     .line 10
     .line 11
-    .line 12
     move-result v0
 
-    .line 13
+    .line 12
     if-nez v0, :cond_1
 
+    .line 13
     .line 14
-    .line 15
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
+    .line 15
     .line 16
     .line 17
-    .line 18
     move-result-object v1
 
+    .line 18
+    sget-object v0, LX/2Rt;->STRING:LX/2Rt;
+
     .line 19
-    sget-object v0, LX/014;->A1D:Ljava/lang/Integer;
-
     .line 20
-    .line 21
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 21
     .line 22
     .line 23
-    .line 24
     move-result v0
 
-    .line 25
+    .line 24
     if-eqz v0, :cond_0
 
+    .line 25
     .line 26
-    .line 27
     :try_start_0
-    invoke-virtual {p0}, LX/1we;->A0J()Ljava/lang/String;
+    invoke-virtual {p0}, LX/2Rs;->A0K()Ljava/lang/String;
 
+    .line 27
     .line 28
     .line 29
-    .line 30
     move-result-object v0
 
-    .line 31
+    .line 30
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
+    .line 31
     .line 32
     .line 33
-    .line 34
-    move-result v2
+    move-result p1
 
-    .line 35
-    return v2
+    .line 34
+    return p1
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 36
+    .line 35
     :catch_0
-    return v2
+    return p1
+
+    .line 36
+    :cond_0
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 37
-    :cond_0
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
-
     .line 38
     .line 39
-    .line 40
     move-result-object v1
 
+    .line 40
+    sget-object v0, LX/2Rt;->NUMBER:LX/2Rt;
+
     .line 41
-    sget-object v0, LX/014;->A0h:Ljava/lang/Integer;
-
     .line 42
-    .line 43
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 43
     .line 44
     .line 45
-    .line 46
     move-result v0
 
-    .line 47
+    .line 46
     if-eqz v0, :cond_1
 
+    .line 47
     .line 48
-    .line 49
-    invoke-virtual {p0}, LX/1we;->A07()I
+    invoke-virtual {p0}, LX/2Rs;->A08()I
 
+    .line 49
     .line 50
     .line 51
-    .line 52
     move-result v0
 
-    .line 53
+    .line 52
     return v0
 
-    .line 54
+    .line 53
     :cond_1
-    return v2
+    return p1
 .end method
 
-.method public static A01(LX/1we;)J
+.method public static A01(LX/2Rs;)J
     .locals 4
 
     .line 0
@@ -141,7 +138,7 @@
 
     .line 3
     .line 4
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 5
     .line 6
@@ -149,11 +146,11 @@
     move-result-object v1
 
     .line 8
-    sget-object v0, LX/014;->A0X:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->NULL:LX/2Rt;
 
     .line 9
     .line 10
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 11
     .line 12
@@ -165,7 +162,7 @@
 
     .line 15
     .line 16
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 17
     .line 18
@@ -173,11 +170,11 @@
     move-result-object v1
 
     .line 20
-    sget-object v0, LX/014;->A1D:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->STRING:LX/2Rt;
 
     .line 21
     .line 22
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 23
     .line 24
@@ -190,7 +187,7 @@
     .line 27
     .line 28
     :try_start_0
-    invoke-virtual {p0}, LX/1we;->A0J()Ljava/lang/String;
+    invoke-virtual {p0}, LX/2Rs;->A0K()Ljava/lang/String;
 
     .line 29
     .line 30
@@ -216,7 +213,7 @@
 
     .line 38
     :cond_0
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 39
     .line 40
@@ -224,11 +221,11 @@
     move-result-object v1
 
     .line 42
-    sget-object v0, LX/014;->A0h:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->NUMBER:LX/2Rt;
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 45
     .line 46
@@ -240,7 +237,7 @@
 
     .line 49
     .line 50
-    invoke-virtual {p0}, LX/1we;->A0A()J
+    invoke-virtual {p0}, LX/2Rs;->A0B()J
 
     .line 51
     .line 52
@@ -255,15 +252,15 @@
     return-wide v2
 .end method
 
-.method public static A02(LX/1we;)Lcom/facebook/common/util/TriState;
+.method public static A02(LX/2Rs;)Lcom/facebook/common/util/TriState;
     .locals 3
 
     .line 0
-    if-eqz p0, :cond_4
+    if-eqz p0, :cond_5
 
     .line 1
     .line 2
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 3
     .line 4
@@ -271,11 +268,11 @@
     move-result-object v1
 
     .line 6
-    sget-object v0, LX/014;->A0X:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->NULL:LX/2Rt;
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 9
     .line 10
@@ -283,11 +280,11 @@
     move-result v0
 
     .line 12
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     .line 13
     .line 14
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 15
     .line 16
@@ -295,155 +292,158 @@
     move-result-object v1
 
     .line 18
-    sget-object v0, LX/014;->A0B:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->BOOLEAN:LX/2Rt;
 
     .line 19
     .line 20
-    if-ne v1, v0, :cond_1
+    if-ne v1, v0, :cond_2
 
     .line 21
     .line 22
-    invoke-virtual {p0}, LX/1we;->A0P()Z
+    instance-of v0, p0, LX/3SL;
 
     .line 23
     .line 24
-    .line 25
-    move-result v2
+    if-eqz v0, :cond_1
 
+    .line 25
     .line 26
+    check-cast p0, LX/3SL;
+
+    .line 27
+    .line 28
+    iget-boolean v2, p0, LX/3SL;->A00:Z
+
+    .line 29
+    .line 30
     :cond_0
     :goto_0
     invoke-static {v2}, Lcom/facebook/common/util/TriState;->valueOf(Z)Lcom/facebook/common/util/TriState;
 
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v0
-
-    .line 30
-    return-object v0
-
     .line 31
-    :cond_1
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
-
     .line 32
     .line 33
+    move-result-object v0
+
     .line 34
-    move-result-object v1
+    return-object v0
 
     .line 35
-    sget-object v0, LX/014;->A1D:Ljava/lang/Integer;
+    :cond_1
+    const/4 v2, 0x0
 
     .line 36
+    goto :goto_0
+
     .line 37
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :cond_2
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 38
     .line 39
     .line 40
-    move-result v0
-
-    .line 41
-    const/4 v2, 0x0
-
-    .line 42
-    if-eqz v0, :cond_3
-
-    .line 43
-    .line 44
-    invoke-virtual {p0}, LX/1we;->A0J()Ljava/lang/String;
-
-    .line 45
-    .line 46
-    .line 47
     move-result-object v1
 
+    .line 41
+    sget-object v0, LX/2Rt;->STRING:LX/2Rt;
+
+    .line 42
+    .line 43
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 44
+    .line 45
+    .line 46
+    move-result v0
+
+    .line 47
+    const/4 v2, 0x0
+
     .line 48
-    const-string/jumbo v0, "on"
+    if-eqz v0, :cond_4
 
     .line 49
     .line 50
-    .line 51
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, LX/2Rs;->A0K()Ljava/lang/String;
 
+    .line 51
     .line 52
     .line 53
+    move-result-object v1
+
     .line 54
-    move-result v0
+    const-string/jumbo v0, "on"
 
     .line 55
-    if-nez v0, :cond_2
-
     .line 56
     .line 57
-    const-string v0, "1"
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 58
     .line 59
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 60
-    .line 61
-    .line 62
     move-result v0
 
+    .line 61
+    if-nez v0, :cond_3
+
+    .line 62
     .line 63
-    if-nez v0, :cond_2
+    const-string v0, "1"
 
     .line 64
     .line 65
-    const-string/jumbo v0, "true"
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 66
     .line 67
     .line 68
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 69
-    .line 70
-    .line 71
     move-result v0
 
+    .line 69
+    if-nez v0, :cond_3
+
+    .line 70
+    .line 71
+    const-string/jumbo v0, "true"
+
     .line 72
+    .line 73
+    .line 74
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 75
+    .line 76
+    .line 77
+    move-result v0
+
+    .line 78
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 73
-    .line 74
-    :cond_2
+    .line 79
+    .line 80
+    :cond_3
     const/4 v2, 0x1
 
-    .line 75
+    .line 81
     goto :goto_0
 
-    .line 76
-    :cond_3
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
-
-    .line 77
-    .line 78
-    .line 79
-    move-result-object v1
-
-    .line 80
-    sget-object v0, LX/014;->A0h:Ljava/lang/Integer;
-
-    .line 81
     .line 82
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :cond_4
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 83
     .line 84
     .line 85
-    move-result v0
+    move-result-object v1
 
     .line 86
-    if-eqz v0, :cond_4
+    sget-object v0, LX/2Rt;->NUMBER:LX/2Rt;
 
     .line 87
     .line 88
-    invoke-virtual {p0}, LX/1we;->A07()I
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 89
     .line 90
@@ -451,18 +451,30 @@
     move-result v0
 
     .line 92
-    goto :goto_1
+    if-eqz v0, :cond_5
 
     .line 93
-    :cond_4
+    .line 94
+    invoke-virtual {p0}, LX/2Rs;->A08()I
+
+    .line 95
+    .line 96
+    .line 97
+    move-result v0
+
+    .line 98
+    goto :goto_1
+
+    .line 99
+    :cond_5
     sget-object v0, Lcom/facebook/common/util/TriState;->UNSET:Lcom/facebook/common/util/TriState;
 
-    .line 94
-    .line 95
+    .line 100
+    .line 101
     return-object v0
 .end method
 
-.method public static A03(Ljava/lang/Object;)LX/26l;
+.method public static A03(Ljava/lang/Object;)LX/2sT;
     .locals 5
 
     .line 0
@@ -470,7 +482,7 @@
 
     .line 1
     .line 2
-    sget-object v4, LX/26v;->A00:LX/26v;
+    sget-object v4, LX/3SO;->A00:LX/3SO;
 
     .line 3
     .line 4
@@ -495,11 +507,11 @@
     move-result-object v0
 
     .line 13
-    new-instance v4, LX/29I;
+    new-instance v4, LX/41L;
 
     .line 14
     .line 15
-    invoke-direct {v4, v0}, LX/29I;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v0}, LX/41L;-><init>(Ljava/lang/String;)V
 
     .line 16
     .line 17
@@ -516,7 +528,7 @@
 
     .line 22
     .line 23
-    invoke-static {p0}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    invoke-static {p0}, LX/001;->A1S(Ljava/lang/Object;)Z
 
     .line 24
     .line 25
@@ -528,7 +540,7 @@
 
     .line 28
     .line 29
-    sget-object v4, LX/26t;->A02:LX/26t;
+    sget-object v4, LX/3SL;->A02:LX/3SL;
 
     .line 30
     .line 31
@@ -544,7 +556,7 @@
 
     .line 35
     .line 36
-    invoke-static {p0}, LX/0Yi;->A00(Ljava/lang/Object;)F
+    invoke-static {p0}, LX/0X6;->A00(Ljava/lang/Object;)F
 
     .line 37
     .line 38
@@ -552,11 +564,11 @@
     move-result v0
 
     .line 40
-    new-instance v4, LX/271;
+    new-instance v4, LX/3nt;
 
     .line 41
     .line 42
-    invoke-direct {v4, v0}, LX/271;-><init>(F)V
+    invoke-direct {v4, v0}, LX/3nt;-><init>(F)V
 
     .line 43
     .line 44
@@ -573,7 +585,7 @@
 
     .line 49
     .line 50
-    invoke-static {p0}, LX/0Yj;->A00(Ljava/lang/Object;)D
+    invoke-static {p0}, LX/0X7;->A00(Ljava/lang/Object;)D
 
     .line 51
     .line 52
@@ -581,11 +593,11 @@
     move-result-wide v0
 
     .line 54
-    new-instance v4, LX/272;
+    new-instance v4, LX/3nu;
 
     .line 55
     .line 56
-    invoke-direct {v4, v0, v1}, LX/272;-><init>(D)V
+    invoke-direct {v4, v0, v1}, LX/3nu;-><init>(D)V
 
     .line 57
     .line 58
@@ -614,11 +626,11 @@
     move-result v0
 
     .line 70
-    new-instance v4, LX/26y;
+    new-instance v4, LX/3nz;
 
     .line 71
     .line 72
-    invoke-direct {v4, v0}, LX/26y;-><init>(S)V
+    invoke-direct {v4, v0}, LX/3nz;-><init>(S)V
 
     .line 73
     .line 74
@@ -643,7 +655,7 @@
     move-result v0
 
     .line 84
-    invoke-static {v0}, LX/26z;->A03(I)LX/26z;
+    invoke-static {v0}, LX/3o0;->A04(I)LX/3o0;
 
     .line 85
     .line 86
@@ -663,7 +675,7 @@
 
     .line 92
     .line 93
-    invoke-static {p0}, LX/002;->A01(Ljava/lang/Object;)J
+    invoke-static {p0}, LX/001;->A02(Ljava/lang/Object;)J
 
     .line 94
     .line 95
@@ -671,11 +683,11 @@
     move-result-wide v0
 
     .line 97
-    new-instance v4, LX/26x;
+    new-instance v4, LX/3nx;
 
     .line 98
     .line 99
-    invoke-direct {v4, v0, v1}, LX/26x;-><init>(J)V
+    invoke-direct {v4, v0, v1}, LX/3nx;-><init>(J)V
 
     .line 100
     .line 101
@@ -696,11 +708,11 @@
 
     .line 108
     .line 109
-    new-instance v4, LX/27I;
+    new-instance v4, LX/3ny;
 
     .line 110
     .line 111
-    invoke-direct {v4, p0}, LX/27I;-><init>(Ljava/math/BigDecimal;)V
+    invoke-direct {v4, p0}, LX/3ny;-><init>(Ljava/math/BigDecimal;)V
 
     .line 112
     .line 113
@@ -721,11 +733,11 @@
 
     .line 120
     .line 121
-    new-instance v4, LX/26w;
+    new-instance v4, LX/3nv;
 
     .line 122
     .line 123
-    invoke-direct {v4, p0}, LX/26w;-><init>(Ljava/math/BigInteger;)V
+    invoke-direct {v4, p0}, LX/3nv;-><init>(Ljava/math/BigInteger;)V
 
     .line 124
     .line 125
@@ -742,7 +754,7 @@
 
     .line 130
     .line 131
-    invoke-static {}, LX/1we;->A01()LX/26j;
+    invoke-static {}, LX/2Rs;->A01()LX/2sR;
 
     .line 132
     .line 133
@@ -754,7 +766,7 @@
 
     .line 136
     .line 137
-    invoke-static {p0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {p0}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 138
     .line 139
@@ -775,7 +787,7 @@
 
     .line 146
     .line 147
-    invoke-static {v3}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v3}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 148
     .line 149
@@ -807,7 +819,7 @@
     move-result-object v0
 
     .line 163
-    invoke-static {v0}, Lcom/facebook/common/util/JSONUtil;->A03(Ljava/lang/Object;)LX/26l;
+    invoke-static {v0}, Lcom/facebook/common/util/JSONUtil;->A03(Ljava/lang/Object;)LX/2sT;
 
     .line 164
     .line 165
@@ -815,7 +827,7 @@
     move-result-object v0
 
     .line 167
-    invoke-virtual {v4, v0, v1}, LX/26j;->A0R(LX/1we;Ljava/lang/String;)V
+    invoke-virtual {v4, v0, v1}, LX/2sR;->A0P(LX/2Rs;Ljava/lang/String;)V
 
     .line 168
     .line 169
@@ -832,15 +844,15 @@
 
     .line 174
     .line 175
-    sget-object v0, LX/26o;->A00:LX/26o;
+    sget-object v0, LX/3o5;->A00:LX/3o5;
 
     .line 176
     .line 177
-    new-instance v4, LX/26k;
+    new-instance v4, LX/2sS;
 
     .line 178
     .line 179
-    invoke-direct {v4, v0}, LX/26k;-><init>(LX/26o;)V
+    invoke-direct {v4, v0}, LX/2sS;-><init>(LX/3o5;)V
 
     .line 180
     .line 181
@@ -878,7 +890,7 @@
     move-result-object v0
 
     .line 198
-    invoke-static {v0}, Lcom/facebook/common/util/JSONUtil;->A03(Ljava/lang/Object;)LX/26l;
+    invoke-static {v0}, Lcom/facebook/common/util/JSONUtil;->A03(Ljava/lang/Object;)LX/2sT;
 
     .line 199
     .line 200
@@ -890,12 +902,12 @@
 
     .line 203
     .line 204
-    sget-object v1, LX/26v;->A00:LX/26v;
+    sget-object v1, LX/3SO;->A00:LX/3SO;
 
     .line 205
     .line 206
     :cond_c
-    iget-object v0, v4, LX/26k;->A00:Ljava/util/List;
+    iget-object v0, v4, LX/2sS;->A00:Ljava/util/List;
 
     .line 207
     .line 208
@@ -916,15 +928,15 @@
 
     .line 215
     .line 216
-    sget-object v0, LX/26o;->A00:LX/26o;
+    sget-object v0, LX/3o5;->A00:LX/3o5;
 
     .line 217
     .line 218
-    new-instance v4, LX/26k;
+    new-instance v4, LX/2sS;
 
     .line 219
     .line 220
-    invoke-direct {v4, v0}, LX/26k;-><init>(LX/26o;)V
+    invoke-direct {v4, v0}, LX/2sS;-><init>(LX/3o5;)V
 
     .line 221
     .line 222
@@ -948,7 +960,7 @@
 
     .line 230
     .line 231
-    invoke-static {v0}, Lcom/facebook/common/util/JSONUtil;->A03(Ljava/lang/Object;)LX/26l;
+    invoke-static {v0}, Lcom/facebook/common/util/JSONUtil;->A03(Ljava/lang/Object;)LX/2sT;
 
     .line 232
     .line 233
@@ -960,12 +972,12 @@
 
     .line 236
     .line 237
-    sget-object v1, LX/26v;->A00:LX/26v;
+    sget-object v1, LX/3SO;->A00:LX/3SO;
 
     .line 238
     .line 239
     :cond_e
-    iget-object v0, v4, LX/26k;->A00:Ljava/util/List;
+    iget-object v0, v4, LX/2sS;->A00:Ljava/util/List;
 
     .line 240
     .line 241
@@ -982,7 +994,7 @@
 
     .line 247
     :cond_f
-    sget-object v4, LX/26t;->A01:LX/26t;
+    sget-object v4, LX/3SL;->A01:LX/3SL;
 
     .line 248
     .line 249
@@ -1014,11 +1026,11 @@
 
     .line 261
     .line 262
-    new-instance v4, LX/26s;
+    new-instance v4, LX/3SJ;
 
     .line 263
     .line 264
-    invoke-direct {v4, p0}, LX/26s;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v4, p0}, LX/3SJ;-><init>(Ljava/lang/Object;)V
 
     .line 265
     .line 266
@@ -1027,7 +1039,7 @@
 
     .line 268
     :cond_11
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 269
     .line 270
@@ -1053,7 +1065,7 @@
 
     .line 281
     .line 282
-    invoke-static {v2, v0, v1}, LX/0Yc;->A03(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v2, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
     .line 283
     .line 284
@@ -1064,7 +1076,7 @@
     throw v0
 .end method
 
-.method public static A04(LX/1we;Ljava/lang/String;)Ljava/lang/String;
+.method public static A04(LX/2Rs;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .line 0
@@ -1072,7 +1084,7 @@
 
     .line 1
     .line 2
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 3
     .line 4
@@ -1080,11 +1092,11 @@
     move-result-object v1
 
     .line 6
-    sget-object v0, LX/014;->A0X:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->NULL:LX/2Rt;
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 9
     .line 10
@@ -1096,7 +1108,7 @@
 
     .line 13
     .line 14
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 15
     .line 16
@@ -1104,11 +1116,11 @@
     move-result-object v1
 
     .line 18
-    sget-object v0, LX/014;->A1D:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->STRING:LX/2Rt;
 
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22
@@ -1120,7 +1132,7 @@
 
     .line 25
     .line 26
-    invoke-virtual {p0}, LX/1we;->A0J()Ljava/lang/String;
+    invoke-virtual {p0}, LX/2Rs;->A0K()Ljava/lang/String;
 
     .line 27
     .line 28
@@ -1133,7 +1145,7 @@
 
     .line 31
     :cond_1
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 32
     .line 33
@@ -1141,11 +1153,11 @@
     move-result-object v1
 
     .line 35
-    sget-object v0, LX/014;->A0h:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->NUMBER:LX/2Rt;
 
     .line 36
     .line 37
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 38
     .line 39
@@ -1157,7 +1169,7 @@
 
     .line 42
     .line 43
-    invoke-virtual {p0}, LX/1we;->A0H()Ljava/lang/Number;
+    invoke-virtual {p0}, LX/2Rs;->A0I()Ljava/lang/Number;
 
     .line 44
     .line 45
@@ -1180,7 +1192,7 @@
     .locals 0
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/common/util/JSONUtil;->A03(Ljava/lang/Object;)LX/26l;
+    invoke-static {p0}, Lcom/facebook/common/util/JSONUtil;->A03(Ljava/lang/Object;)LX/2sT;
 
     .line 1
     .line 2
@@ -1199,7 +1211,7 @@
     return-object p0
 .end method
 
-.method public static A06(LX/1we;Z)Z
+.method public static A06(LX/2Rs;Z)Z
     .locals 3
 
     .line 0
@@ -1207,7 +1219,7 @@
 
     .line 1
     .line 2
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 3
     .line 4
@@ -1215,11 +1227,11 @@
     move-result-object v1
 
     .line 6
-    sget-object v0, LX/014;->A0X:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->NULL:LX/2Rt;
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 9
     .line 10
@@ -1231,7 +1243,7 @@
 
     .line 13
     .line 14
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 15
     .line 16
@@ -1239,7 +1251,7 @@
     move-result-object v1
 
     .line 18
-    sget-object v0, LX/014;->A0B:Ljava/lang/Integer;
+    sget-object v0, LX/2Rt;->BOOLEAN:LX/2Rt;
 
     .line 19
     .line 20
@@ -1247,145 +1259,160 @@
 
     .line 21
     .line 22
-    invoke-virtual {p0}, LX/1we;->A0P()Z
+    instance-of v0, p0, LX/3SL;
 
     .line 23
     .line 24
-    .line 25
-    move-result p1
+    if-eqz v0, :cond_5
 
+    .line 25
     .line 26
+    check-cast p0, LX/3SL;
+
+    .line 27
+    .line 28
+    iget-boolean p1, p0, LX/3SL;->A00:Z
+
+    .line 29
+    .line 30
     :cond_0
     return p1
 
-    .line 27
-    :cond_1
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v1
-
     .line 31
-    sget-object v0, LX/014;->A1D:Ljava/lang/Integer;
+    :cond_1
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 32
     .line 33
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     .line 34
-    .line 35
-    .line 36
-    move-result v0
-
-    .line 37
-    const/4 v2, 0x0
-
-    .line 38
-    if-eqz v0, :cond_4
-
-    .line 39
-    .line 40
-    invoke-virtual {p0}, LX/1we;->A0J()Ljava/lang/String;
-
-    .line 41
-    .line 42
-    .line 43
     move-result-object v1
 
+    .line 35
+    sget-object v0, LX/2Rt;->STRING:LX/2Rt;
+
+    .line 36
+    .line 37
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    const/4 v2, 0x0
+
+    .line 42
+    if-eqz v0, :cond_4
+
+    .line 43
     .line 44
-    const-string/jumbo v0, "on"
+    invoke-virtual {p0}, LX/2Rs;->A0K()Ljava/lang/String;
 
     .line 45
     .line 46
     .line 47
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
     .line 48
+    const-string/jumbo v0, "on"
+
     .line 49
     .line 50
-    move-result v0
-
     .line 51
-    if-nez v0, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 52
     .line 53
-    const-string v0, "1"
-
     .line 54
+    move-result v0
+
     .line 55
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-nez v0, :cond_2
 
     .line 56
     .line 57
-    .line 58
-    move-result v0
+    const-string v0, "1"
 
+    .line 58
     .line 59
-    if-nez v0, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 60
     .line 61
-    const-string/jumbo v0, "true"
-
     .line 62
-    .line 63
-    .line 64
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 65
-    .line 66
-    .line 67
     move-result v0
 
+    .line 63
+    if-nez v0, :cond_2
+
+    .line 64
+    .line 65
+    const-string/jumbo v0, "true"
+
+    .line 66
+    .line 67
     .line 68
-    :goto_0
-    if-eqz v0, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 69
     .line 70
-    :cond_2
-    const/4 v2, 0x1
-
     .line 71
-    :cond_3
-    return v2
+    move-result v0
 
     .line 72
-    :cond_4
-    invoke-virtual {p0}, LX/1we;->A0G()Ljava/lang/Integer;
+    :goto_0
+    if-eqz v0, :cond_3
 
     .line 73
     .line 74
+    :cond_2
+    const/4 v2, 0x1
+
     .line 75
-    move-result-object v1
+    :cond_3
+    return v2
 
     .line 76
-    sget-object v0, LX/014;->A0h:Ljava/lang/Integer;
+    :cond_4
+    invoke-virtual {p0}, LX/2Rs;->A0H()LX/2Rt;
 
     .line 77
     .line 78
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     .line 79
-    .line 80
-    .line 81
-    move-result v0
+    move-result-object v1
 
+    .line 80
+    sget-object v0, LX/2Rt;->NUMBER:LX/2Rt;
+
+    .line 81
     .line 82
-    if-eqz v0, :cond_0
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 83
     .line 84
-    invoke-virtual {p0}, LX/1we;->A07()I
-
     .line 85
-    .line 86
-    .line 87
     move-result v0
 
+    .line 86
+    if-eqz v0, :cond_0
+
+    .line 87
     .line 88
+    invoke-virtual {p0}, LX/2Rs;->A08()I
+
+    .line 89
+    .line 90
+    .line 91
+    move-result v0
+
+    .line 92
     goto :goto_0
+
+    .line 93
+    :cond_5
+    const/4 p1, 0x0
+
+    .line 94
+    return p1
 .end method

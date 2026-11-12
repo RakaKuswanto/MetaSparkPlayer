@@ -7,7 +7,7 @@
 .method public abstract onAuthenticationChallengeReceived()Lcom/facebook/flipper/core/FlipperObject;
 .end method
 
-.method public abstract onConnectionEvent(Lcom/facebook/flipper/core/FlipperSocketEventHandler$SocketEvent;)V
+.method public abstract onConnectionEvent(Lcom/facebook/flipper/core/FlipperSocketEventHandler$SocketEvent;Ljava/lang/String;)V
 .end method
 
 .method public abstract onMessageReceived(Ljava/lang/String;)V

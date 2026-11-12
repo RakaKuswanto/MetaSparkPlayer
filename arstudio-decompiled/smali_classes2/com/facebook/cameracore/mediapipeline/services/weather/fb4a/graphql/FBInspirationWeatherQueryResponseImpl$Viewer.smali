@@ -1,10 +1,10 @@
 .class public final Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryResponseImpl$Viewer;
-.super LX/1Bn;
+.super LX/1gb;
 .source ""
 
 # interfaces
 .implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/0yO;
+.implements LX/1H2;
 
 
 # static fields
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2
@@ -44,7 +44,7 @@
     .line 6
     .line 7
     .line 8
-    invoke-virtual {p0, v1, v2, v0}, LX/1Bn;->getCachedTree(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
+    invoke-virtual {p0, v1, v2, v0}, LX/1gb;->getCachedNullableTree(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
 
     .line 9
     .line 10

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape android:shape="rectangle"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="@dimen/bondi_personalized_footer_reward_actiavtion_bottom_text_padding" />
+    <corners android:radius="@dimen/fds_tooltip_arrow_inset_threshold" />
     <solid android:color="@color/offline_game_red" />
 </shape>

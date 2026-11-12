@@ -3,27 +3,23 @@
 .source ""
 
 
-# static fields
-.field public static final A00:LX/3mB;
+# instance fields
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/0RP;)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/3mB;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/3mB;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/3l2;->A00:LX/0RP;
+
     .line 4
     .line 5
-    sput-object v0, LX/3l2;->A00:LX/3mB;
-
-    .line 6
-    .line 7
     return-void
 .end method

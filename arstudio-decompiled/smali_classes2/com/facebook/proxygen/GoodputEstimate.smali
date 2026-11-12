@@ -173,7 +173,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -185,202 +185,204 @@
 
     .line 5
     .line 6
-    const-string v0, "achievableBps="
+    const-string/jumbo v0, "achievableBps="
 
     .line 7
     .line 8
+    .line 9
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 9
     .line 10
     .line 11
+    .line 12
     iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->achievableBps:J
 
-    .line 12
     .line 13
+    .line 14
     invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 14
     .line 15
     .line 16
+    .line 17
     const-string v0, ",isMaximumAchievableBps="
 
-    .line 17
     .line 18
+    .line 19
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 19
     .line 20
     .line 21
+    .line 22
     iget-boolean v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->isMaximumAchievableBps:Z
 
-    .line 22
     .line 23
+    .line 24
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 24
     .line 25
     .line 26
+    .line 27
     const-string v0, ",minRttUs="
 
-    .line 27
     .line 28
+    .line 29
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 29
     .line 30
     .line 31
+    .line 32
     iget-object v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->minRttUs:Ljava/lang/Long;
 
-    .line 32
     .line 33
+    .line 34
     if-nez v0, :cond_1
 
-    .line 34
     .line 35
+    .line 36
     const-wide/16 v0, -0x1
 
-    .line 36
     .line 37
+    .line 38
     :goto_0
     invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 38
     .line 39
     .line 40
+    .line 41
     const-string v0, ","
 
-    .line 41
     .line 42
+    .line 43
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 43
     .line 44
     .line 45
-    :cond_0
-    const-string v0, "cdfSrc="
-
     .line 46
-    .line 47
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    const-string/jumbo v0, "cdfSrc="
 
+    .line 47
     .line 48
     .line 49
-    .line 50
-    iget-object v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->cdfSrc:Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 50
     .line 51
     .line 52
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->cdfSrc:Ljava/lang/String;
 
     .line 53
     .line 54
-    .line 55
-    const-string v0, ",cdfMsSinceLastUpdated="
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 55
     .line 56
     .line 57
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ",cdfMsSinceLastUpdated="
 
     .line 58
     .line 59
-    .line 60
-    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->cdfMsSinceLastUpdated:J
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 60
     .line 61
     .line 62
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->cdfMsSinceLastUpdated:J
 
     .line 63
     .line 64
-    .line 65
-    const-string v0, ",cdfSamplesSinceInit="
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 65
     .line 66
     .line 67
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ",cdfSamplesSinceInit="
 
     .line 68
     .line 69
-    .line 70
-    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->cdfSamplesSinceInit:J
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 70
     .line 71
     .line 72
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->cdfSamplesSinceInit:J
 
     .line 73
     .line 74
-    .line 75
-    const-string v0, ",ctmNumKnobFramesReceived="
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 75
     .line 76
     .line 77
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ",ctmNumKnobFramesReceived="
 
     .line 78
     .line 79
-    .line 80
-    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->ctmNumKnobFramesReceived:J
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 80
     .line 81
     .line 82
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->ctmNumKnobFramesReceived:J
 
     .line 83
     .line 84
-    .line 85
-    const-string v0, ",ctmNumKnobFrameErrors="
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 85
     .line 86
     .line 87
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ",ctmNumKnobFrameErrors="
 
     .line 88
     .line 89
-    .line 90
-    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->ctmNumKnobFrameErrors:J
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 90
     .line 91
     .line 92
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->ctmNumKnobFrameErrors:J
 
     .line 93
     .line 94
-    .line 95
-    const-string v0, ",ctmNumSocketObserversAttached="
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 95
     .line 96
     .line 97
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ",ctmNumSocketObserversAttached="
 
     .line 98
     .line 99
-    .line 100
-    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->ctmNumSocketObserversAttached:J
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 100
     .line 101
     .line 102
-    invoke-static {v2, v0, v1}, LX/0Yg;->A0s(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+    iget-wide v0, p0, Lcom/facebook/proxygen/GoodputEstimate;->ctmNumSocketObserversAttached:J
 
     .line 103
     .line 104
+    invoke-static {v2, v0, v1}, LX/0X5;->A0h(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+
     .line 105
+    .line 106
+    .line 107
     move-result-object v0
 
-    .line 106
+    .line 108
     return-object v0
 
-    .line 107
+    .line 109
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    .line 108
-    .line 109
     .line 110
+    .line 111
+    .line 112
     move-result-wide v0
 
-    .line 111
+    .line 113
     goto :goto_0
 .end method
 
@@ -399,7 +401,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -538,7 +540,7 @@
 
     .line 75
     .line 76
-    invoke-static {v2, v0, v1}, LX/0Yg;->A0s(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/0X5;->A0h(Ljava/lang/StringBuilder;J)Ljava/lang/String;
 
     .line 77
     .line 78

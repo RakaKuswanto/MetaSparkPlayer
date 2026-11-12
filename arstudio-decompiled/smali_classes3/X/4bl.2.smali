@@ -1,207 +1,162 @@
-.class public final LX/4bl;
+.class public final LX/4bL;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/4d0;
-
-
-# instance fields
-.field public final synthetic A00:LX/4bP;
+.implements LX/4aI;
 
 
 # direct methods
-.method public constructor <init>(LX/4bP;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4bl;->A00:LX/4bP;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AW6(LX/4ay;Z)V
-    .locals 9
+.method public final A5I(LX/4D6;)Lcom/facebook/dsp/core/ColorData;
+    .locals 1
 
-    .line 0
-    invoke-virtual {p1}, LX/4ay;->A03()LX/4ay;
+    const/4 v0, 0x0
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v8
-
-    .line 4
-    const/4 v7, 0x1
-
-    .line 5
-    invoke-static {v8, p1}, LX/0Yf;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 6
-    .line 7
-    .line 8
-    move-result v6
-
-    .line 9
-    iget-object v5, p0, LX/4bl;->A00:LX/4bP;
-
-    .line 10
-    .line 11
-    if-eqz v6, :cond_0
-
-    .line 12
-    .line 13
-    move-object p1, v8
-
-    .line 14
-    :cond_0
-    iget-object v4, v5, LX/4bP;->A0c:[LX/4bk;
-
-    .line 15
-    .line 16
-    const/4 v3, 0x0
-
-    .line 17
-    if-eqz v4, :cond_1
-
-    .line 18
-    .line 19
-    array-length v2, v4
-
-    .line 20
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    .line 21
-    .line 22
-    aget-object v1, v4, v3
-
-    .line 23
-    .line 24
-    if-eqz v1, :cond_2
-
-    .line 25
-    .line 26
-    iget-object v0, v1, LX/4bk;->A0A:LX/4ay;
-
-    .line 27
-    .line 28
-    if-ne v0, p1, :cond_2
-
-    .line 29
-    .line 30
-    if-eqz v6, :cond_3
-
-    .line 31
-    .line 32
-    iget v0, v1, LX/4bk;->A02:I
-
-    .line 33
-    .line 34
-    invoke-virtual {v5, v8, v1, v0}, LX/4bP;->A0T(Landroid/view/Menu;LX/4bk;I)V
-
-    .line 35
-    .line 36
-    .line 37
-    invoke-virtual {v5, v1, v7}, LX/4bP;->A0U(LX/4bk;Z)V
-
-    .line 38
-    .line 39
-    .line 40
-    :cond_1
-    return-void
-
-    .line 41
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
-    .line 42
-    .line 43
-    goto :goto_0
-
-    .line 44
-    :cond_3
-    invoke-virtual {v5, v1, p2}, LX/4bP;->A0U(LX/4bk;Z)V
-
-    .line 45
-    .line 46
-    .line 47
-    return-void
+    return-object v0
 .end method
 
-.method public final AaO(LX/4ay;)Z
+.method public final A5t(LX/4aT;)Ljava/lang/Integer;
     .locals 3
 
     .line 0
-    invoke-virtual {p1}, LX/4ay;->A03()LX/4ay;
+    invoke-static {p1}, LX/431;->A0B(Ljava/lang/Enum;)I
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    move-result v2
 
     .line 4
-    if-ne p1, v0, :cond_0
+    const/4 v0, 0x2
 
     .line 5
+    const/16 v1, 0x8
+
     .line 6
-    iget-object v2, p0, LX/4bl;->A00:LX/4bP;
-
     .line 7
-    .line 8
-    iget-boolean v0, v2, LX/4bP;->A0U:Z
+    if-eq v2, v0, :cond_0
 
+    .line 8
     .line 9
+    const/4 v0, 0x3
+
     .line 10
-    if-eqz v0, :cond_0
+    if-eq v2, v0, :cond_0
 
     .line 11
     .line 12
-    iget-object v0, v2, LX/4bP;->A07:Landroid/view/Window;
+    const/4 v0, 0x4
 
     .line 13
-    .line 14
-    invoke-virtual {v0}, Landroid/view/Window;->getCallback()Landroid/view/Window$Callback;
+    if-eq v2, v0, :cond_0
 
+    .line 14
     .line 15
+    const/4 v0, 0x0
+
     .line 16
+    return-object v0
+
     .line 17
-    move-result-object v1
+    :cond_0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 18
-    if-eqz v1, :cond_0
-
     .line 19
     .line 20
-    iget-boolean v0, v2, LX/4bP;->A0S:Z
+    move-result-object v0
 
     .line 21
-    .line 22
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    .line 23
-    .line 24
-    const/16 v0, 0x6c
+.method public final AIH()LX/6Vc;
+    .locals 1
 
-    .line 25
-    .line 26
-    invoke-interface {v1, v0, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
+    .line 0
+    sget-object v0, LX/6Vc;->DEFAULT:LX/6Vc;
 
-    .line 27
-    .line 28
-    .line 29
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final Ama(LX/4aV;)LX/4aY;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final An3(LX/4aU;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AnK(LX/4aG;)Ljava/lang/Float;
+    .locals 2
+
+    .line 0
+    invoke-static {p1}, LX/431;->A0B(Ljava/lang/Enum;)I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
+
+    .line 4
+    const/16 v0, 0x26
+
+    .line 5
+    .line 6
+    if-ne v1, v0, :cond_0
+
+    .line 7
+    .line 8
+    const/high16 v0, 0x41400000    # 12.0f
+
+    .line 9
+    .line 10
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+
+    .line 15
     :cond_0
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    .line 30
-    return v0
+    .line 16
+    return-object v0
+.end method
+
+.method public final Aou(LX/4ah;)LX/4ak;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

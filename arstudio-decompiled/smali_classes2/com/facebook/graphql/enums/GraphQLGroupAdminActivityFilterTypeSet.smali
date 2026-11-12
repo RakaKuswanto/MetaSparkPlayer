@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLGroupAdminActivityFilterTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLGroupAdminActivityFilterTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -172,22 +172,23 @@
 
     .line 75
     .line 76
-    const-string v0, "WITH_NOTE"
+    const-string/jumbo v0, "WITH_NOTE"
 
     .line 77
     .line 78
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 79
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 80
     .line 81
+    .line 82
     move-result-object v0
 
-    .line 82
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLGroupAdminActivityFilterTypeSet;->A00:Ljava/util/Set;
-
     .line 83
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLGroupAdminActivityFilterTypeSet;->A00:Ljava/util/HashSet;
+
     .line 84
+    .line 85
     return-void
 .end method
 
@@ -203,11 +204,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLGroupAdminActivityFilterTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLGroupAdminActivityFilterTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

@@ -1,50 +1,21 @@
-.class public final synthetic LX/5r4;
-.super Ljava/lang/Object;
+.class public final LX/5r4;
+.super LX/5qm;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AsyncSurfaceVideoEncoderImpl$$ExternalSyntheticLambda1"
-
-
-# instance fields
-.field public final synthetic A00:Landroid/os/Handler;
-
-.field public final synthetic A01:LX/5ow;
-
-.field public final synthetic A02:LX/5qw;
+.implements LX/2h0;
+.implements LX/2jL;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/os/Handler;LX/5ow;LX/5qw;)V
+.method public constructor <init>(LX/2Tp;LX/5qi;LX/5qn;LX/5qq;LX/5ql;LX/1z2;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct/range {p0 .. p6}, LX/5qm;-><init>(LX/2Tp;LX/5qi;LX/5qn;LX/5qq;LX/5ql;LX/1z2;)V
 
-    iput-object p3, p0, LX/5r4;->A02:LX/5qw;
-
-    iput-object p2, p0, LX/5r4;->A01:LX/5ow;
-
-    iput-object p1, p0, LX/5r4;->A00:Landroid/os/Handler;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    iget-object v2, p0, LX/5r4;->A02:LX/5qw;
-
-    iget-object v1, p0, LX/5r4;->A01:LX/5ow;
-
-    iget-object v0, p0, LX/5r4;->A00:Landroid/os/Handler;
-
-    invoke-virtual {v2, v1, v0}, LX/5qw;->A06(LX/5ow;Landroid/os/Handler;)V
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

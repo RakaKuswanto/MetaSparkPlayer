@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0Qe;
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V

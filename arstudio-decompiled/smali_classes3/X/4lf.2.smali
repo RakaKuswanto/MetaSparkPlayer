@@ -1,14 +1,12 @@
-.class public final LX/4lf;
+.class public final LX/4lF;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:Landroid/view/View;
+.field public volatile A00:Z
 
-.field public A01:Landroid/view/accessibility/AccessibilityEvent;
-
-.field public A02:LX/01q;
+.field public volatile A01:Z
 
 
 # direct methods

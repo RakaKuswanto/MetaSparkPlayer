@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMessengerAdsConversionDetectionTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMessengerAdsConversionDetectionTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x21
+    const/16 v0, 0x23
 
     .line 1
     .line 2
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "CONFIRM_ORDER_DEPRECATED"
+    const-string v0, "CONFIRM_ORDER_AFTER_FOLLOWUP"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "CONFIRM_ORDER_INTENT"
+    const-string v0, "CONFIRM_ORDER_DEPRECATED"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "CONFIRM_SHIPPED_ORDER"
+    const-string v0, "CONFIRM_ORDER_INTENT"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "CONSUMER_QUESTION"
+    const-string v0, "CONFIRM_SHIPPED_ORDER"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "CONVERSATION_FEEDBACK_SELLER_SENTIMENT"
+    const-string v0, "CONSUMER_QUESTION"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "CTM_CALL"
+    const-string v0, "CONVERSATION_FEEDBACK_LEAD_QUALITY"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "CTM_THREAD_UPSELL"
+    const-string v0, "CONVERSATION_FEEDBACK_SELLER_SENTIMENT"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "CTS_THREAD_UPSELL"
+    const-string v0, "CTM_CALL"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "CTX_AD_DUPLICATION_UPSELL"
+    const-string v0, "CTM_THREAD_UPSELL"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "GENERIC"
+    const-string v0, "CTS_THREAD_UPSELL"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "INCOMPLETE_LEAD"
+    const-string v0, "CTX_AD_DUPLICATION_UPSELL"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "INSTANT_REPLIES"
+    const-string v0, "GENERIC"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "INSTANT_REPLIES_DEPRECATED"
+    const-string v0, "INCOMPLETE_LEAD"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "JOBS_CREATOR_FEEDBACK"
+    const-string v0, "INSTANT_REPLIES"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "LEAD_QUALITY_SIGNAL"
+    const-string v0, "INSTANT_REPLIES_DEPRECATED"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "LWI"
+    const-string v0, "JOBS_CREATOR_FEEDBACK"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "MARK_AS_LEAD"
+    const-string v0, "LEAD_QUALITY_SIGNAL"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "NONE"
+    const-string v0, "LWI"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "PURCHASE_OPTIMIZATION_THREAD_UPSELL"
+    const-string v0, "MARK_AS_LEAD"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "SAVED_REPLIES_UPSELL"
+    const-string v0, "NONE"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "SELLER_CREATE_INVOICE"
+    const-string v0, "PURCHASE_OPTIMIZATION_THREAD_UPSELL"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "SELLER_ONBOARD"
+    const-string v0, "SAVED_REPLIES_UPSELL"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "SHIPPOP_UPSELL"
+    const-string v0, "SELLER_CREATE_INVOICE"
 
     .line 185
     .line 186
@@ -400,22 +400,46 @@
 
     .line 189
     .line 190
-    const-string v0, "SUGGEST_AS_YOU_TYPE"
+    const-string v0, "SELLER_ONBOARD"
 
     .line 191
     .line 192
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 193
     .line 194
-    .line 195
-    move-result-object v0
+    const/16 v1, 0x21
 
+    .line 195
     .line 196
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsConversionDetectionTypeSet;->A00:Ljava/util/Set;
+    const-string v0, "SHIPPOP_UPSELL"
 
     .line 197
     .line 198
+    aput-object v0, v2, v1
+
+    .line 199
+    .line 200
+    const/16 v1, 0x22
+
+    .line 201
+    .line 202
+    const-string v0, "SUGGEST_AS_YOU_TYPE"
+
+    .line 203
+    .line 204
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 205
+    .line 206
+    .line 207
+    move-result-object v0
+
+    .line 208
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsConversionDetectionTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 209
+    .line 210
     return-void
 .end method
 
@@ -431,11 +455,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsConversionDetectionTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsConversionDetectionTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

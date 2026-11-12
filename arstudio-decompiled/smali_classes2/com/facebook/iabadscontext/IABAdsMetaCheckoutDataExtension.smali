@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/iabadscontext/IABAdsMetaCheckoutDataExtension;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 # interfaces
@@ -19,11 +19,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x56
+    const/16 v0, 0x4e
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -45,12 +45,12 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 5
     .line 6
@@ -117,7 +117,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     iget-object v0, p0, Lcom/facebook/iabadscontext/IABAdsMetaCheckoutDataExtension;->A00:Lcom/facebook/iabadscontext/MetaCheckoutExperienceType;
 

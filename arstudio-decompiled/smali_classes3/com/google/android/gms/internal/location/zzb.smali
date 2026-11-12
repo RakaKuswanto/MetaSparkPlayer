@@ -1,4 +1,4 @@
-.class public Lcom/google/android/gms/internal/location/zzb;
+.class public abstract Lcom/google/android/gms/internal/location/zzb;
 .super Ljava/lang/Object;
 .source ""
 
@@ -35,48 +35,6 @@
 
 
 # virtual methods
-.method public final A00(Landroid/os/Parcel;I)V
-    .locals 3
-
-    .line 0
-    :try_start_0
-    iget-object v2, p0, Lcom/google/android/gms/internal/location/zzb;->A00:Landroid/os/IBinder;
-
-    .line 1
-    .line 2
-    const/4 v1, 0x0
-
-    .line 3
-    const/4 v0, 0x1
-
-    .line 4
-    invoke-interface {v2, p2, p1, v1, v0}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 5
-    .line 6
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    .line 8
-    .line 9
-    .line 10
-    return-void
-
-    .line 11
-    :catchall_0
-    move-exception v0
-
-    .line 12
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    .line 13
-    .line 14
-    .line 15
-    throw v0
-.end method
-
 .method public final asBinder()Landroid/os/IBinder;
     .locals 1
 

@@ -4,463 +4,266 @@
 
 
 # instance fields
-.field public final A00:Landroid/net/Uri;
-
-.field public final A01:Ljava/util/List;
-
-.field public final A02:Ljava/util/List;
-
-.field public final A03:Ljava/util/Map;
-
-.field public final A04:Ljava/util/Map;
-
-.field public final A05:Ljava/util/UUID;
-
-.field public final A06:Ljava/util/UUID;
-
-.field public final A07:Z
-
-.field public final A08:Z
-
-.field public final A09:Z
-
-.field public final A0A:[B
+.field public final synthetic A00:LX/5zN;
 
 
 # direct methods
-.method public constructor <init>(LX/5zS;)V
-    .locals 3
+.method public constructor <init>(LX/5zN;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/5zR;->A00:LX/5zN;
 
     .line 1
     .line 2
-    .line 3
-    iget-boolean v2, p1, LX/5zS;->A04:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    if-eqz v2, :cond_0
-
-    .line 6
-    .line 7
-    iget-object v1, p1, LX/5zS;->A00:Landroid/net/Uri;
-
-    .line 8
-    .line 9
-    const/4 v0, 0x0
-
-    .line 10
-    if-eqz v1, :cond_1
-
-    .line 11
-    .line 12
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 13
-    :cond_1
-    invoke-static {v0}, LX/5PE;->A06(Z)V
-
-    .line 14
-    .line 15
-    .line 16
-    iget-object v0, p1, LX/5zS;->A03:Ljava/util/UUID;
-
-    .line 17
-    .line 18
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 19
-    .line 20
-    .line 21
-    iput-object v0, p0, LX/5zR;->A05:Ljava/util/UUID;
-
-    .line 22
-    .line 23
-    iput-object v0, p0, LX/5zR;->A06:Ljava/util/UUID;
-
-    .line 24
-    .line 25
-    iget-object v0, p1, LX/5zS;->A00:Landroid/net/Uri;
-
-    .line 26
-    .line 27
-    iput-object v0, p0, LX/5zR;->A00:Landroid/net/Uri;
-
-    .line 28
-    .line 29
-    iget-object v0, p1, LX/5zS;->A02:Ljava/util/Map;
-
-    .line 30
-    .line 31
-    iput-object v0, p0, LX/5zR;->A04:Ljava/util/Map;
-
-    .line 32
-    .line 33
-    iput-object v0, p0, LX/5zR;->A03:Ljava/util/Map;
-
-    .line 34
-    .line 35
-    iget-boolean v0, p1, LX/5zS;->A05:Z
-
-    .line 36
-    .line 37
-    iput-boolean v0, p0, LX/5zR;->A08:Z
-
-    .line 38
-    .line 39
-    iput-boolean v2, p0, LX/5zR;->A07:Z
-
-    .line 40
-    .line 41
-    iget-boolean v0, p1, LX/5zS;->A06:Z
-
-    .line 42
-    .line 43
-    iput-boolean v0, p0, LX/5zR;->A09:Z
-
-    .line 44
-    .line 45
-    iget-object v0, p1, LX/5zS;->A01:Ljava/util/List;
-
-    .line 46
-    .line 47
-    iput-object v0, p0, LX/5zR;->A02:Ljava/util/List;
-
-    .line 48
-    .line 49
-    iput-object v0, p0, LX/5zR;->A01:Ljava/util/List;
-
-    .line 50
-    .line 51
-    iget-object v1, p1, LX/5zS;->A07:[B
-
-    .line 52
-    .line 53
-    if-eqz v1, :cond_2
-
-    .line 54
-    .line 55
-    array-length v0, v1
-
-    .line 56
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    .line 57
-    .line 58
-    .line 59
-    move-result-object v0
-
-    .line 60
-    :goto_0
-    iput-object v0, p0, LX/5zR;->A0A:[B
-
-    .line 61
-    .line 62
     return-void
-
-    .line 63
-    :cond_2
-    const/4 v0, 0x0
-
-    .line 64
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final A00(LX/5sC;LX/5sC;LX/5sC;)V
+    .locals 5
 
     .line 0
-    const/4 v2, 0x1
+    iget-object v4, p0, LX/5zR;->A00:LX/5zN;
 
     .line 1
-    if-eq p0, p1, :cond_2
-
     .line 2
+    iget-object v1, v4, LX/5zN;->A02:LX/5zJ;
+
     .line 3
-    instance-of v1, p1, LX/5zR;
-
     .line 4
-    .line 5
-    const/4 v0, 0x0
+    if-eqz v1, :cond_4
 
+    .line 5
     .line 6
-    if-nez v1, :cond_0
+    new-instance v0, LX/5vF;
 
     .line 7
     .line 8
-    return v0
+    invoke-direct {v0, p1, p2, p3}, LX/5vF;-><init>(LX/5sC;LX/5sC;LX/5sC;)V
 
     .line 9
-    :cond_0
-    check-cast p1, LX/5zR;
-
     .line 10
     .line 11
-    iget-object v1, p0, LX/5zR;->A05:Ljava/util/UUID;
+    iput-object v0, v4, LX/5zN;->A03:LX/5vF;
 
     .line 12
     .line 13
-    iget-object v0, p1, LX/5zR;->A05:Ljava/util/UUID;
+    invoke-interface {v1}, LX/5zJ;->ABd()LX/5Yi;
 
     .line 14
     .line 15
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
     .line 16
-    .line 17
-    .line 18
-    move-result v0
+    move-result-object v0
 
+    .line 17
+    iput-object v0, v4, LX/5zN;->A07:LX/5Yi;
+
+    .line 18
     .line 19
-    if-eqz v0, :cond_1
+    iput-object p1, v4, LX/5zN;->A0B:LX/5sC;
 
     .line 20
     .line 21
-    iget-object v1, p0, LX/5zR;->A00:Landroid/net/Uri;
+    invoke-static {v4}, LX/5zN;->A01(LX/5zN;)V
 
     .line 22
     .line 23
-    iget-object v0, p1, LX/5zR;->A00:Landroid/net/Uri;
-
     .line 24
-    .line 25
-    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0Q(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-boolean v0, v4, LX/5zN;->A0M:Z
 
+    .line 25
     .line 26
+    if-nez v0, :cond_0
+
     .line 27
     .line 28
-    move-result v0
+    invoke-static {v4}, LX/5zN;->A04(LX/5zN;)Z
 
     .line 29
-    if-eqz v0, :cond_1
-
     .line 30
     .line 31
-    iget-object v1, p0, LX/5zR;->A03:Ljava/util/Map;
-
-    .line 32
-    .line 33
-    iget-object v0, p1, LX/5zR;->A03:Ljava/util/Map;
-
-    .line 34
-    .line 35
-    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0Q(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 36
-    .line 37
-    .line 38
     move-result v0
 
+    .line 32
+    if-nez v0, :cond_1
+
+    .line 33
+    .line 34
+    :cond_0
+    iget-object v1, v4, LX/5zN;->A02:LX/5zJ;
+
+    .line 35
+    .line 36
+    if-eqz v1, :cond_1
+
+    .line 37
+    .line 38
+    iget-object v0, v4, LX/5zN;->A0A:LX/60W;
+
     .line 39
-    if-eqz v0, :cond_1
-
     .line 40
-    .line 41
-    iget-boolean v1, p0, LX/5zR;->A08:Z
+    invoke-interface {v1, v0}, LX/5zJ;->A2v(LX/5vV;)V
 
+    .line 41
     .line 42
     .line 43
-    iget-boolean v0, p1, LX/5zR;->A08:Z
+    :cond_1
+    iget-object v0, v4, LX/5zN;->A0E:LX/61s;
 
     .line 44
     .line 45
-    if-ne v1, v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 46
     .line 47
-    iget-boolean v1, p0, LX/5zR;->A07:Z
+    iget-object v2, v4, LX/5zN;->A0R:LX/5zd;
 
     .line 48
     .line 49
-    iget-boolean v0, p1, LX/5zR;->A07:Z
+    invoke-interface {v0}, LX/61s;->Ai0()Z
 
     .line 50
     .line 51
-    if-ne v1, v0, :cond_1
-
     .line 52
+    move-result v1
+
     .line 53
-    iget-boolean v1, p0, LX/5zR;->A09:Z
+    new-instance v0, LX/67F;
 
     .line 54
     .line 55
-    iget-boolean v0, p1, LX/5zR;->A09:Z
+    invoke-direct {v0, v1}, LX/67F;-><init>(Z)V
 
     .line 56
     .line 57
-    if-ne v1, v0, :cond_1
-
     .line 58
-    .line 59
-    iget-object v1, p0, LX/5zR;->A01:Ljava/util/List;
+    invoke-virtual {v2, v0}, LX/5zd;->A00(LX/698;)V
 
+    .line 59
     .line 60
     .line 61
-    iget-object v0, p1, LX/5zR;->A01:Ljava/util/List;
+    :cond_2
+    iget-object v0, v4, LX/5zN;->A0E:LX/61s;
 
     .line 62
     .line 63
-    invoke-interface {v1, v0}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_3
 
     .line 64
     .line 65
-    .line 66
-    move-result v0
+    iget-object v3, v4, LX/5zN;->A0R:LX/5zd;
 
+    .line 66
     .line 67
-    if-eqz v0, :cond_1
+    invoke-interface {v0}, LX/61s;->AJ1()I
 
     .line 68
     .line 69
-    iget-object v1, p0, LX/5zR;->A0A:[B
-
     .line 70
+    move-result v2
+
     .line 71
-    iget-object v0, p1, LX/5zR;->A0A:[B
+    iget-object v0, v4, LX/5zN;->A0E:LX/61s;
 
     .line 72
     .line 73
-    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([B[B)Z
+    invoke-interface {v0}, LX/61s;->AIw()I
 
     .line 74
     .line 75
     .line 76
-    move-result v0
+    move-result v1
 
     .line 77
-    if-eqz v0, :cond_1
+    new-instance v0, LX/66f;
 
     .line 78
     .line 79
-    return v2
+    invoke-direct {v0, v2, v1}, LX/66f;-><init>(II)V
 
     .line 80
-    :cond_1
-    const/4 v2, 0x0
-
     .line 81
-    :cond_2
-    return v2
-.end method
+    .line 82
+    invoke-virtual {v3, v0}, LX/5zd;->A00(LX/698;)V
 
-.method public final hashCode()I
-    .locals 2
+    .line 83
+    .line 84
+    .line 85
+    :cond_3
+    iget-object v2, v4, LX/5zN;->A0R:LX/5zd;
 
-    .line 0
-    iget-object v0, p0, LX/5zR;->A05:Ljava/util/UUID;
+    .line 86
+    .line 87
+    iget-object v0, v4, LX/5zN;->A07:LX/5Yi;
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/0Yi;->A04(Ljava/lang/Object;)I
+    .line 88
+    .line 89
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    .line 3
-    .line 4
-    .line 5
+    .line 90
+    .line 91
+    .line 92
     move-result v1
 
-    .line 6
-    iget-object v0, p0, LX/5zR;->A00:Landroid/net/Uri;
+    .line 93
+    const/4 v0, 0x1
 
-    .line 7
-    .line 8
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    .line 94
+    if-eq v1, v0, :cond_5
 
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
+    .line 95
+    .line 96
+    sget-object v1, LX/5As;->FRONT:LX/5As;
 
-    .line 12
-    add-int/2addr v1, v0
+    .line 97
+    .line 98
+    :goto_0
+    new-instance v0, LX/65L;
 
-    .line 13
-    mul-int/lit8 v1, v1, 0x1f
+    .line 99
+    .line 100
+    invoke-direct {v0, v1}, LX/65L;-><init>(LX/5As;)V
 
-    .line 14
-    .line 15
-    iget-object v0, p0, LX/5zR;->A03:Ljava/util/Map;
+    .line 101
+    .line 102
+    .line 103
+    invoke-virtual {v2, v0}, LX/5zd;->A00(LX/698;)V
 
-    .line 16
-    .line 17
-    invoke-interface {v0}, Ljava/util/Map;->hashCode()I
+    .line 104
+    .line 105
+    .line 106
+    invoke-virtual {v4}, LX/5zN;->A05()LX/66e;
 
-    .line 18
-    .line 19
-    .line 20
-    move-result v0
+    .line 107
+    .line 108
+    .line 109
+    move-result-object v0
 
-    .line 21
-    add-int/2addr v1, v0
+    .line 110
+    if-eqz v0, :cond_4
 
-    .line 22
-    mul-int/lit8 v1, v1, 0x1f
+    .line 111
+    .line 112
+    invoke-virtual {v2, v0}, LX/5zd;->A00(LX/698;)V
 
-    .line 23
-    .line 24
-    iget-boolean v0, p0, LX/5zR;->A08:Z
+    .line 113
+    .line 114
+    .line 115
+    :cond_4
+    return-void
 
-    .line 25
-    .line 26
-    add-int/2addr v1, v0
+    .line 116
+    :cond_5
+    sget-object v1, LX/5As;->BACK:LX/5As;
 
-    .line 27
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 28
-    .line 29
-    iget-boolean v0, p0, LX/5zR;->A07:Z
-
-    .line 30
-    .line 31
-    add-int/2addr v1, v0
-
-    .line 32
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 33
-    .line 34
-    iget-boolean v0, p0, LX/5zR;->A09:Z
-
-    .line 35
-    .line 36
-    add-int/2addr v1, v0
-
-    .line 37
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 38
-    .line 39
-    iget-object v0, p0, LX/5zR;->A01:Ljava/util/List;
-
-    .line 40
-    .line 41
-    invoke-static {v0, v1}, LX/4BF;->A0L(Ljava/util/List;I)I
-
-    .line 42
-    .line 43
-    .line 44
-    move-result v1
-
-    .line 45
-    iget-object v0, p0, LX/5zR;->A0A:[B
-
-    .line 46
-    .line 47
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
-
-    .line 48
-    .line 49
-    .line 50
-    move-result v0
-
-    .line 51
-    add-int/2addr v1, v0
-
-    .line 52
-    return v1
+    .line 117
+    .line 118
+    goto :goto_0
 .end method

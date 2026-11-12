@@ -8,9 +8,13 @@
 
 .field public static final BILLING_ADDRESS:Ljava/lang/String; = "BILLING_ADDRESS"
 
+.field public static final EMAIL:Ljava/lang/String; = "EMAIL"
+
 .field public static final FULFILLMENT_OPTION_ID:Ljava/lang/String; = "FULFILLMENT_OPTION_ID"
 
 .field public static final OFFERS:Ljava/lang/String; = "OFFERS"
+
+.field public static final PHONE_NUMBER:Ljava/lang/String; = "PHONE_NUMBER"
 
 .field public static final PICKUP_ZIP_CODE:Ljava/lang/String; = "PICKUP_ZIP_CODE"
 

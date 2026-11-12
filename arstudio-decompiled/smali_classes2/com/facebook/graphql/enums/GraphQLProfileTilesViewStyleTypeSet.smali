@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLProfileTilesViewStyleTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLProfileTilesViewStyleTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x3c
+    const/16 v0, 0x3a
 
     .line 1
     .line 2
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "BLOOD_DONATIONS"
+    const-string v0, "BUTTON_TEXT"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "BUTTON_TEXT"
+    const-string v0, "CELL_LIST"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "CELL_LIST"
+    const-string v0, "CHANNELS_LIST"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "CHANNELS_LIST"
+    const-string v0, "COLLAGE"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "COLLAGE"
+    const-string v0, "COMMUNITY_HSCROLL"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "COMMUNITY_HSCROLL"
+    const-string v0, "COMMUNITY_LIST"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "COMMUNITY_LIST"
+    const-string v0, "CONDENSED_CONTEXT_LIST"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "CONDENSED_CONTEXT_LIST"
+    const-string v0, "CONTEXT_LIST"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "CONTEXT_LIST"
+    const-string v0, "COWORKERS_LIST"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "COWORKERS_LIST"
+    const-string v0, "DESCRIPTION"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "DESCRIPTION"
+    const-string v0, "EVENTS_LIST"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "EVENTS_LIST"
+    const-string v0, "FRIEND_GRID"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "FRIEND_GRID"
+    const-string v0, "FUNDRAISERS"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "FUNDRAISERS"
+    const-string v0, "FUN_FACT_ANSWERS_LIST"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "FUN_FACT_ANSWERS_LIST"
+    const-string v0, "GROUPS_LIST"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "GROUPS_LIST"
+    const-string v0, "HIGHLIGHT_FANOUT_SUGGESTION"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "HIGHLIGHT_FANOUT_SUGGESTION"
+    const-string v0, "HSCROLL_CARDS"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "HOBBIES"
+    const-string v0, "IMAGE_WITH_HEADER"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "HSCROLL_CARDS"
+    const-string v0, "INTERESTS_TOP_LISTS"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "IMAGE_WITH_HEADER"
+    const-string v0, "INTRO_BIO"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "INTERESTS_TOP_LISTS"
+    const-string v0, "INTRO_LINKS"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "INTRO_BIO"
+    const-string v0, "INTRO_PINNED_HSCROLL"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "INTRO_LINKS"
+    const-string v0, "LIFE_EVENTS_HSCROLL"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "INTRO_PINNED_HSCROLL"
+    const-string v0, "LIST"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "LIFE_EVENTS_HSCROLL"
+    const-string v0, "LIVE_SHOPPING_CARD"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "LIST"
+    const-string v0, "MEDIA_CARD"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "LIVE_SHOPPING_CARD"
+    const-string v0, "MEDIA_COLLAGE"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "MEDIA_CARD"
+    const-string v0, "MEDIA_LIST"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "MEDIA_COLLAGE"
+    const-string v0, "MENU_GRID"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "MEDIA_LIST"
+    const-string v0, "NATIVE_TEMPLATE"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "MENU_GRID"
+    const-string v0, "PHOTO_AND_VIDEO_GRID"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "NATIVE_TEMPLATE"
+    const-string v0, "PHOTO_GRID"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "PHOTO_AND_VIDEO_GRID"
+    const-string v0, "PHOTO_SCROLL"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "PHOTO_GRID"
+    const-string v0, "PILLS"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "PHOTO_SCROLL"
+    const-string v0, "PLAYLISTS"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "PILLS"
+    const-string v0, "POPULAR_VIDEO"
 
     .line 227
     .line 228
@@ -484,7 +484,7 @@
 
     .line 231
     .line 232
-    const-string v0, "PLAYLISTS"
+    const-string v0, "PREMIUM_CONTENT"
 
     .line 233
     .line 234
@@ -496,7 +496,7 @@
 
     .line 237
     .line 238
-    const-string v0, "POPULAR_VIDEO"
+    const-string v0, "PRIVACY_AND_LEGAL_INFO"
 
     .line 239
     .line 240
@@ -508,7 +508,7 @@
 
     .line 243
     .line 244
-    const-string v0, "PREMIUM_CONTENT"
+    const-string v0, "PROFILE_DISCOVERY_BUCKETS_GRID"
 
     .line 245
     .line 246
@@ -520,7 +520,7 @@
 
     .line 249
     .line 250
-    const-string v0, "PRIVACY_AND_LEGAL_INFO"
+    const-string v0, "PROFILE_WIZARD_NUX"
 
     .line 251
     .line 252
@@ -532,7 +532,7 @@
 
     .line 255
     .line 256
-    const-string v0, "PROFILE_DISCOVERY_BUCKETS_GRID"
+    const-string v0, "PYMK_SCROLL"
 
     .line 257
     .line 258
@@ -544,7 +544,7 @@
 
     .line 261
     .line 262
-    const-string v0, "PROFILE_WIZARD_NUX"
+    const-string v0, "RULES"
 
     .line 263
     .line 264
@@ -556,7 +556,7 @@
 
     .line 267
     .line 268
-    const-string v0, "PYMK_SCROLL"
+    const-string v0, "SAME_NAME_LIST"
 
     .line 269
     .line 270
@@ -568,7 +568,7 @@
 
     .line 273
     .line 274
-    const-string v0, "RULES"
+    const-string v0, "SERIES"
 
     .line 275
     .line 276
@@ -580,7 +580,7 @@
 
     .line 279
     .line 280
-    const-string v0, "SAME_NAME_LIST"
+    const-string v0, "SHOP_CARD"
 
     .line 281
     .line 282
@@ -592,7 +592,7 @@
 
     .line 285
     .line 286
-    const-string v0, "SERIES"
+    const-string v0, "SIMILAR_NAMES_LIST"
 
     .line 287
     .line 288
@@ -604,7 +604,7 @@
 
     .line 291
     .line 292
-    const-string v0, "SHOP_CARD"
+    const-string v0, "STORY_GRID"
 
     .line 293
     .line 294
@@ -616,7 +616,7 @@
 
     .line 297
     .line 298
-    const-string v0, "SIMILAR_NAMES_LIST"
+    const-string v0, "SUGGEST_EDITS"
 
     .line 299
     .line 300
@@ -628,7 +628,7 @@
 
     .line 303
     .line 304
-    const-string v0, "STORY_GRID"
+    const-string v0, "TRANSPARENCY"
 
     .line 305
     .line 306
@@ -640,7 +640,7 @@
 
     .line 309
     .line 310
-    const-string v0, "SUGGEST_EDITS"
+    const-string v0, "USER_HIGHLIGHT"
 
     .line 311
     .line 312
@@ -652,7 +652,7 @@
 
     .line 315
     .line 316
-    const-string v0, "TRANSPARENCY"
+    const-string v0, "VIDEO_GRID"
 
     .line 317
     .line 318
@@ -664,82 +664,62 @@
 
     .line 321
     .line 322
-    const-string v0, "USER_HIGHLIGHT"
+    const-string/jumbo v0, "WORK_ACCESS"
 
     .line 323
     .line 324
+    .line 325
     aput-object v0, v2, v1
 
-    .line 325
     .line 326
+    .line 327
     const/16 v1, 0x37
 
-    .line 327
     .line 328
-    const-string v0, "VIDEO_GRID"
-
     .line 329
-    .line 330
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORK_BADGES_LIST"
 
+    .line 330
     .line 331
     .line 332
-    const/16 v1, 0x38
+    aput-object v0, v2, v1
 
     .line 333
     .line 334
-    const-string v0, "WORK_ACCESS"
+    const/16 v1, 0x38
 
     .line 335
     .line 336
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORK_GROUPS"
 
     .line 337
     .line 338
-    const/16 v1, 0x39
-
     .line 339
-    .line 340
-    const-string v0, "WORK_BADGES_LIST"
-
-    .line 341
-    .line 342
     aput-object v0, v2, v1
 
-    .line 343
-    .line 344
-    const/16 v1, 0x3a
+    .line 340
+    .line 341
+    const/16 v1, 0x39
 
+    .line 342
+    .line 343
+    const-string/jumbo v0, "WORK_SKILLS"
+
+    .line 344
     .line 345
     .line 346
-    const-string v0, "WORK_GROUPS"
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 347
     .line 348
-    aput-object v0, v2, v1
-
     .line 349
+    move-result-object v0
+
     .line 350
-    const/16 v1, 0x3b
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLProfileTilesViewStyleTypeSet;->A00:Ljava/util/HashSet;
 
     .line 351
     .line 352
-    const-string v0, "WORK_SKILLS"
-
-    .line 353
-    .line 354
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
-    .line 355
-    .line 356
-    .line 357
-    move-result-object v0
-
-    .line 358
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLProfileTilesViewStyleTypeSet;->A00:Ljava/util/Set;
-
-    .line 359
-    .line 360
     return-void
 .end method
 
@@ -755,11 +735,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLProfileTilesViewStyleTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLProfileTilesViewStyleTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

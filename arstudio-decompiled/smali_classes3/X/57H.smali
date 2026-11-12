@@ -1,5 +1,5 @@
 .class public final LX/57H;
-.super LX/57i;
+.super LX/57G;
 .source ""
 
 
@@ -7,7 +7,11 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, LX/57i;-><init>()V
+    .line 0
+    invoke-direct {p0}, LX/57G;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

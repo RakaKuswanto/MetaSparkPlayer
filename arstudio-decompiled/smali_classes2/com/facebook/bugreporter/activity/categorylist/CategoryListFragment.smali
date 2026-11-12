@@ -1,5 +1,5 @@
 .class public Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;
-.super LX/3e4;
+.super LX/3FR;
 .source ""
 
 # interfaces
@@ -7,17 +7,17 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public mBugReporterAnalyticsLogger:LX/33z;
+.field public mBugReporterAnalyticsLogger:LX/2y1;
 
-.field public mCategoryInfoComparator:LX/1RY;
+.field public mCategoryInfoComparator:LX/2VR;
 
-.field public mCategoryListAdapter:LX/359;
+.field public mCategoryListAdapter:LX/2yd;
 
 .field public mIsCurrentUserEmployee:Lcom/facebook/common/util/TriState;
 
-.field public mListener:LX/3CC;
+.field public mListener:LX/2vx;
 
 
 # direct methods
@@ -25,7 +25,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3e4;-><init>()V
+    invoke-direct {p0}, LX/3FR;-><init>()V
 
     .line 1
     .line 2
@@ -45,11 +45,11 @@
     return-void
 .end method
 
-.method public static synthetic access$100(Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;)LX/3CC;
+.method public static synthetic access$100(Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;)LX/2vx;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/3CC;
+    iget-object p0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/2vx;
 
     .line 1
     .line 2
@@ -60,7 +60,7 @@
     .locals 3
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mBugReporterAnalyticsLogger:LX/33z;
+    iget-object v1, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mBugReporterAnalyticsLogger:LX/2y1;
 
     .line 1
     .line 2
@@ -69,16 +69,16 @@
     .line 3
     .line 4
     .line 5
-    sget-object v0, LX/2sC;->BUG_REPORT_DID_SELECT_PRODUCT:LX/2sC;
+    sget-object v0, LX/2yj;->BUG_REPORT_DID_SELECT_PRODUCT:LX/2yj;
 
     .line 6
     .line 7
-    invoke-static {v0, v1}, LX/2sC;->A00(LX/2sC;LX/33z;)V
+    invoke-virtual {v1, v0}, LX/2y1;->A03(LX/2yj;)V
 
     .line 8
     .line 9
     .line 10
-    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/3CC;
+    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/2vx;
 
     .line 11
     .line 12
@@ -86,7 +86,7 @@
 
     .line 13
     .line 14
-    invoke-static {}, LX/0Yj;->A07()Landroid/content/Intent;
+    invoke-static {}, LX/0X7;->A07()Landroid/content/Intent;
 
     .line 15
     .line 16
@@ -94,7 +94,7 @@
     move-result-object v2
 
     .line 18
-    iget-object v1, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryListAdapter:LX/359;
+    iget-object v1, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryListAdapter:LX/2yd;
 
     .line 19
     .line 20
@@ -103,7 +103,7 @@
     .line 21
     .line 22
     .line 23
-    iget-object v0, v1, LX/359;->A00:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, v1, LX/2yd;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 24
     .line 25
@@ -119,7 +119,7 @@
 
     .line 30
     .line 31
-    iget-object v0, v1, LX/359;->A00:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, v1, LX/2yd;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 32
     .line 33
@@ -151,25 +151,26 @@
     move-result-object v1
 
     .line 47
-    const-string v0, "category_id"
+    const-string/jumbo v0, "category_id"
 
     .line 48
     .line 49
+    .line 50
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 50
     .line 51
     .line 52
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/3CC;
-
     .line 53
-    .line 54
-    invoke-interface {v0, p0, v2}, LX/3CC;->AY9(Lcom/facebook/base/fragment/NavigableFragment;Landroid/content/Intent;)V
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/2vx;
 
+    .line 54
     .line 55
+    invoke-interface {v0, p0, v2}, LX/2vx;->AWZ(Lcom/facebook/base/fragment/NavigableFragment;Landroid/content/Intent;)V
+
     .line 56
     .line 57
+    .line 58
     :cond_1
     return-void
 .end method
@@ -178,7 +179,7 @@
     .locals 2
 
     .line 0
-    const v0, 0x7f120147
+    const v0, 0x7f11010e
 
     .line 1
     .line 2
@@ -188,15 +189,15 @@
     .line 4
     .line 5
     .line 6
-    const/16 v1, 0x26
+    const/16 v1, 0x27
 
     .line 7
     .line 8
-    new-instance v0, LX/1n2;
+    new-instance v0, LX/0Yx;
 
     .line 9
     .line 10
-    invoke-direct {v0, p0, v1}, LX/1n2;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/0Yx;-><init>(Ljava/lang/Object;I)V
 
     .line 11
     .line 12
@@ -211,11 +212,11 @@
 
 
 # virtual methods
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/37j;->A01()LX/37j;
+    invoke-static {}, LX/2uz;->A01()LX/2uz;
 
     .line 1
     .line 2
@@ -237,12 +238,12 @@
 
     .line 2
     .line 3
-    const v0, 0x7f0a01a7
+    const v0, 0x7f090183
 
     .line 4
     .line 5
     .line 6
-    invoke-static {p0, v0}, LX/3Ff;->A02(Landroidx/fragment/app/Fragment;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A01(Landroidx/fragment/app/Fragment;I)Landroid/view/View;
 
     .line 7
     .line 8
@@ -284,7 +285,7 @@
 
     .line 27
     .line 28
-    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryInfoComparator:LX/1RY;
+    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryInfoComparator:LX/2VR;
 
     .line 29
     .line 30
@@ -293,11 +294,11 @@
     .line 31
     .line 32
     .line 33
-    new-instance v5, LX/1fn;
+    new-instance v5, LX/23W;
 
     .line 34
     .line 35
-    invoke-direct {v5, v0}, LX/1fn;-><init>(Ljava/util/Comparator;)V
+    invoke-direct {v5, v0}, LX/23W;-><init>(Ljava/util/Comparator;)V
 
     .line 36
     .line 37
@@ -306,7 +307,7 @@
 
     .line 39
     .line 40
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 41
     .line 42
@@ -376,7 +377,7 @@
 
     .line 74
     :cond_0
-    invoke-virtual {v5, v2}, LX/1fn;->A05(Ljava/lang/Object;)V
+    invoke-virtual {v5, v2}, LX/23W;->A08(Ljava/lang/Object;)V
 
     .line 75
     .line 76
@@ -385,7 +386,7 @@
 
     .line 78
     :cond_1
-    iget-object v1, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryListAdapter:LX/359;
+    iget-object v1, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryListAdapter:LX/2yd;
 
     .line 79
     .line 80
@@ -394,7 +395,7 @@
     .line 81
     .line 82
     .line 83
-    invoke-virtual {v5}, LX/1fn;->A04()Lcom/google/common/collect/RegularImmutableSortedSet;
+    invoke-virtual {v5}, LX/23W;->A07()Lcom/google/common/collect/RegularImmutableSortedSet;
 
     .line 84
     .line 85
@@ -406,7 +407,7 @@
 
     .line 88
     .line 89
-    iput-object v0, v1, LX/359;->A00:Lcom/google/common/collect/ImmutableList;
+    iput-object v0, v1, LX/2yd;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 90
     .line 91
@@ -420,7 +421,7 @@
     .line 95
     .line 96
     .line 97
-    invoke-static {p0, v0}, LX/3Ff;->A02(Landroidx/fragment/app/Fragment;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A01(Landroidx/fragment/app/Fragment;I)Landroid/view/View;
 
     .line 98
     .line 99
@@ -432,7 +433,7 @@
 
     .line 102
     .line 103
-    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryListAdapter:LX/359;
+    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryListAdapter:LX/2yd;
 
     .line 104
     .line 105
@@ -446,11 +447,11 @@
     .line 109
     .line 110
     .line 111
-    new-instance v0, LX/37d;
+    new-instance v0, LX/6fy;
 
     .line 112
     .line 113
-    invoke-direct {v0, p0}, LX/37d;-><init>(Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;)V
+    invoke-direct {v0, p0, v3}, LX/6fy;-><init>(Ljava/lang/Object;I)V
 
     .line 114
     .line 115
@@ -488,7 +489,7 @@
 
     .line 132
     .line 133
-    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/3CC;
+    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/2vx;
 
     .line 134
     .line 135
@@ -496,7 +497,7 @@
 
     .line 136
     .line 137
-    invoke-static {}, LX/0Yj;->A07()Landroid/content/Intent;
+    invoke-static {}, LX/0X7;->A07()Landroid/content/Intent;
 
     .line 138
     .line 139
@@ -509,11 +510,11 @@
     .line 142
     .line 143
     .line 144
-    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/3CC;
+    iget-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/2vx;
 
     .line 145
     .line 146
-    invoke-interface {v0, p0, v1}, LX/3CC;->AY9(Lcom/facebook/base/fragment/NavigableFragment;Landroid/content/Intent;)V
+    invoke-interface {v0, p0, v1}, LX/2vx;->AWZ(Lcom/facebook/base/fragment/NavigableFragment;Landroid/content/Intent;)V
 
     .line 147
     .line 148
@@ -526,7 +527,7 @@
     .locals 2
 
     .line 0
-    const v1, 0x7f0d00a8
+    const v1, 0x7f0c0098
 
     .line 1
     .line 2
@@ -549,7 +550,7 @@
     .locals 3
 
     .line 0
-    sget v2, LX/2eq;->ATc:I
+    sget v1, LX/2I6;->AO4:I
 
     .line 1
     .line 2
@@ -558,13 +559,13 @@
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    move-result-object v0
 
     .line 6
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
     .line 7
-    invoke-static {v1, v0, v2}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    invoke-static {v0, v2, v1}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
 
     .line 8
     .line 9
@@ -572,19 +573,19 @@
     move-result-object v0
 
     .line 11
-    check-cast v0, LX/359;
+    check-cast v0, LX/2yd;
 
     .line 12
     .line 13
-    iput-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryListAdapter:LX/359;
+    iput-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryListAdapter:LX/2yd;
 
     .line 14
     .line 15
-    sget v0, LX/2eq;->AQ2:I
+    sget v1, LX/2I6;->ALZ:I
 
     .line 16
     .line 17
-    invoke-static {p0, v0}, LX/1zE;->A0D(Landroidx/fragment/app/Fragment;I)Ljava/lang/Object;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 18
     .line 19
@@ -592,62 +593,86 @@
     move-result-object v0
 
     .line 21
-    check-cast v0, LX/33z;
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 22
     .line 23
-    iput-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mBugReporterAnalyticsLogger:LX/33z;
-
     .line 24
+    move-result-object v0
+
     .line 25
-    sget v0, LX/2eq;->ATb:I
+    check-cast v0, LX/2y1;
 
     .line 26
     .line 27
-    invoke-static {p0, v0}, LX/1zE;->A0D(Landroidx/fragment/app/Fragment;I)Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mBugReporterAnalyticsLogger:LX/2y1;
 
     .line 28
     .line 29
-    .line 30
-    move-result-object v0
+    sget v1, LX/2I6;->AO3:I
 
+    .line 30
     .line 31
-    check-cast v0, LX/1RY;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     .line 32
     .line 33
-    iput-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryInfoComparator:LX/1RY;
-
     .line 34
+    move-result-object v0
+
     .line 35
-    sget v0, LX/2eq;->A5N:I
+    invoke-static {v0, v2, v1}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
 
     .line 36
     .line 37
-    invoke-static {p0, v0}, LX/1zE;->A0D(Landroidx/fragment/app/Fragment;I)Ljava/lang/Object;
-
     .line 38
-    .line 39
-    .line 40
     move-result-object v0
 
+    .line 39
+    check-cast v0, LX/2VR;
+
+    .line 40
     .line 41
-    check-cast v0, Lcom/facebook/common/util/TriState;
+    iput-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mCategoryInfoComparator:LX/2VR;
 
     .line 42
     .line 43
-    iput-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mIsCurrentUserEmployee:Lcom/facebook/common/util/TriState;
+    sget v1, LX/2I6;->A2Z:I
 
     .line 44
     .line 45
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
+
+    .line 46
+    .line 47
+    .line 48
+    move-result-object v0
+
+    .line 49
+    invoke-static {v0, v2, v1}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v0
+
+    .line 53
+    check-cast v0, Lcom/facebook/common/util/TriState;
+
+    .line 54
+    .line 55
+    iput-object v0, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mIsCurrentUserEmployee:Lcom/facebook/common/util/TriState;
+
+    .line 56
+    .line 57
     return-void
 .end method
 
-.method public setNavigationListener(LX/3CC;)V
+.method public setNavigationListener(LX/2vx;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/3CC;
+    iput-object p1, p0, Lcom/facebook/bugreporter/activity/categorylist/CategoryListFragment;->mListener:LX/2vx;
 
     .line 1
     .line 2

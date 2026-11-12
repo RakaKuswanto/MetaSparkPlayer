@@ -1,20 +1,49 @@
-.class public interface abstract LX/5p7;
+.class public final LX/5P7;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5oy;
+
+# instance fields
+.field public final A00:Landroid/media/MediaCrypto;
+
+.field public final A01:Landroid/media/MediaFormat;
+
+.field public final A02:Landroid/view/Surface;
+
+.field public final A03:LX/5Fy;
+
+.field public final A04:LX/5OM;
 
 
-# virtual methods
-.method public abstract AH9()Landroid/view/Surface;
-.end method
+# direct methods
+.method public constructor <init>(Landroid/media/MediaCrypto;Landroid/media/MediaFormat;Landroid/view/Surface;LX/5Fy;LX/5OM;)V
+    .locals 0
 
-.method public abstract AgN(LX/5ow;Landroid/os/Handler;)V
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract Aoi(LX/5ow;Landroid/os/Handler;)V
-.end method
+    .line 1
+    .line 2
+    .line 3
+    iput-object p5, p0, LX/5P7;->A04:LX/5OM;
 
-.method public abstract Ap5(LX/5ow;Landroid/os/Handler;)V
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/5P7;->A01:Landroid/media/MediaFormat;
+
+    .line 6
+    .line 7
+    iput-object p4, p0, LX/5P7;->A03:LX/5Fy;
+
+    .line 8
+    .line 9
+    iput-object p3, p0, LX/5P7;->A02:Landroid/view/Surface;
+
+    .line 10
+    .line 11
+    iput-object p1, p0, LX/5P7;->A00:Landroid/media/MediaCrypto;
+
+    .line 12
+    .line 13
+    return-void
 .end method

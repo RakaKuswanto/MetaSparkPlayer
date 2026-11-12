@@ -19,6 +19,16 @@
 # direct methods
 .method public constructor <init>([Ljava/lang/Object;Ljava/util/Comparator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "comparator",
+            "elements"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,11 +57,11 @@
 
     .line 1
     .line 2
-    new-instance v1, LX/1fn;
+    new-instance v1, LX/23W;
 
     .line 3
     .line 4
-    invoke-direct {v1, v0}, LX/1fn;-><init>(Ljava/util/Comparator;)V
+    invoke-direct {v1, v0}, LX/23W;-><init>(Ljava/util/Comparator;)V
 
     .line 5
     .line 6
@@ -60,12 +70,12 @@
 
     .line 8
     .line 9
-    invoke-virtual {v1, v0}, LX/1fn;->A06([Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, LX/23W;->A09([Ljava/lang/Object;)V
 
     .line 10
     .line 11
     .line 12
-    invoke-virtual {v1}, LX/1fn;->A04()Lcom/google/common/collect/RegularImmutableSortedSet;
+    invoke-virtual {v1}, LX/23W;->A07()Lcom/google/common/collect/RegularImmutableSortedSet;
 
     .line 13
     .line 14

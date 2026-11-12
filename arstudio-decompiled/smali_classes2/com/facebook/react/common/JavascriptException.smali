@@ -1,4 +1,4 @@
-.class public Lcom/facebook/react/common/JavascriptException;
+.class public abstract Lcom/facebook/react/common/JavascriptException;
 .super Ljava/lang/RuntimeException;
 .source ""
 

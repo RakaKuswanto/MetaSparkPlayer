@@ -1,11 +1,20 @@
-.class public interface abstract LX/4Rx;
+.class public abstract LX/4Rx;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract Ab1(Landroid/view/View;I)V
-.end method
+# direct methods
+.method public static A00(Landroid/animation/ObjectAnimator;)V
+    .locals 1
 
-.method public abstract Ab4(Landroid/view/View;LX/4Rz;)V
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
 .end method

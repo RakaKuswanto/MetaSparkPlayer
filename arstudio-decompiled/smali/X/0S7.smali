@@ -3,90 +3,120 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements LX/0MS;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbnsConnectionManager$CallbackHandler$4"
-
-
-# instance fields
-.field public final synthetic A00:LX/0LU;
+.field public static final A00:LX/0MS;
 
 
 # direct methods
-.method public constructor <init>(LX/0LU;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/0S7;->A00:LX/0LU;
+    new-instance v0, LX/0S7;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, LX/0S7;-><init>()V
 
     .line 3
     .line 4
     .line 5
+    sput-object v0, LX/0S7;->A00:LX/0MS;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final ACj()I
+    .locals 1
+
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public final ACl()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final AIF()I
+    .locals 1
+
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public final AII()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final ALR()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, ""
+
+    return-object v0
+.end method
+
+.method public final AM0()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AMy()Ljava/util/Iterator;
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/0S7;->A00:LX/0LU;
+    sget-object v0, LX/0MP;->A00:LX/0MP;
 
     .line 1
     .line 2
-    iget-object v2, v1, LX/0LU;->A02:LX/0Rq;
+    return-object v0
+.end method
 
-    .line 3
-    .line 4
-    iget-object v0, v2, LX/0Rq;->A10:LX/0NA;
+.method public final AQg()Ljava/util/Iterator;
+    .locals 1
 
-    .line 5
-    .line 6
-    iget-object v1, v1, LX/0LU;->A00:LX/0NA;
+    .line 0
+    sget-object v0, LX/0MP;->A00:LX/0MP;
 
-    .line 7
-    .line 8
-    if-ne v0, v1, :cond_1
+    .line 1
+    .line 2
+    return-object v0
+.end method
 
-    .line 9
-    .line 10
-    sget-object v1, LX/0M6;->CONNECTION_LOST:LX/0M6;
+.method public final close()V
+    .locals 0
 
-    .line 11
-    .line 12
-    sget-object v0, LX/0MG;->A00:LX/0MG;
-
-    .line 13
-    .line 14
-    invoke-static {v0, v2, v1}, LX/0Rq;->A02(LX/0Vl;LX/0Rq;LX/0M6;)V
-
-    .line 15
-    .line 16
-    .line 17
-    :cond_0
-    return-void
-
-    .line 18
-    :cond_1
-    iget-object v0, v2, LX/0Rq;->A11:LX/0NA;
-
-    .line 19
-    .line 20
-    if-ne v0, v1, :cond_0
-
-    .line 21
-    .line 22
-    invoke-static {v2}, LX/0Rq;->A03(LX/0Rq;)V
-
-    .line 23
-    .line 24
-    .line 25
     return-void
 .end method

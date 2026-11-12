@@ -1,4 +1,4 @@
-.class public Lcom/facebook/http/debug/NetworkStatsModule;
+.class public final Lcom/facebook/http/debug/NetworkStatsModule;
 .super Ljava/lang/Object;
 .source ""
 

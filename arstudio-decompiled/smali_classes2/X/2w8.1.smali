@@ -2,33 +2,30 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/2xV;
+
+# instance fields
+.field public final A00:Ljava/util/List;
+
+.field public final A01:LX/2xW;
+
+.field public final A02:LX/2w7;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/util/Set;LX/2xW;LX/2w7;)V
+    .locals 1
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
+    iput-object p3, p0, LX/2w8;->A02:LX/2w7;
 
+    iput-object p2, p0, LX/2w8;->A01:LX/2xW;
 
-# virtual methods
-.method public final A65(LX/46o;)V
-    .locals 0
+    invoke-static {p1}, LX/00Q;->A08(Ljava/lang/Iterable;)Ljava/util/List;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final Aq8()V
-    .locals 0
+    iput-object v0, p0, LX/2w8;->A00:Ljava/util/List;
 
     return-void
 .end method

@@ -158,7 +158,7 @@
     return-object v0
 
     :cond_0
-    const-string v0, "excellent"
+    const-string/jumbo v0, "excellent"
 
     return-object v0
 

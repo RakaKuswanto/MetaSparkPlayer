@@ -3,13 +3,13 @@
 .source ""
 
 # interfaces
-.implements LX/4hR;
+.implements LX/4n2;
 
 
 # instance fields
-.field public A00:LX/4hJ;
+.field public A00:LX/4me;
 
-.field public A01:LX/0Na;
+.field public A01:LX/0RP;
 
 .field public A02:Ljava/lang/String;
 
@@ -35,7 +35,7 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4hJ;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4me;
 
     .line 3
     .line 4
@@ -43,12 +43,12 @@
 
     .line 5
     .line 6
-    const v1, 0x7f120227
+    const v1, 0x7f1101f4
 
     .line 7
     .line 8
     .line 9
-    iget-object v0, v0, LX/4hJ;->A03:Landroid/widget/TextView;
+    iget-object v0, v0, LX/4me;->A03:Landroid/widget/TextView;
 
     .line 10
     .line 11
@@ -57,16 +57,16 @@
     .line 12
     .line 13
     .line 14
-    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4hJ;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4me;
 
     .line 15
     .line 16
-    const v1, 0x7f120226
+    const v1, 0x7f1101f3
 
     .line 17
     .line 18
     .line 19
-    iget-object v0, v0, LX/4hJ;->A02:Landroid/widget/TextView;
+    iget-object v0, v0, LX/4me;->A02:Landroid/widget/TextView;
 
     .line 20
     .line 21
@@ -79,12 +79,12 @@
 
     .line 25
     :cond_0
-    const v1, 0x7f120221
+    const v1, 0x7f1101ee
 
     .line 26
     .line 27
     .line 28
-    iget-object v0, v0, LX/4hJ;->A03:Landroid/widget/TextView;
+    iget-object v0, v0, LX/4me;->A03:Landroid/widget/TextView;
 
     .line 29
     .line 30
@@ -93,14 +93,14 @@
     .line 31
     .line 32
     .line 33
-    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4hJ;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4me;
 
     .line 34
     .line 35
     const/4 v1, 0x0
 
     .line 36
-    iget-object v0, v0, LX/4hJ;->A02:Landroid/widget/TextView;
+    iget-object v0, v0, LX/4me;->A02:Landroid/widget/TextView;
 
     .line 37
     .line 38
@@ -114,71 +114,76 @@
 
 
 # virtual methods
-.method public final A0K(Landroid/os/Bundle;)V
+.method public final A1I(Landroid/os/Bundle;)V
     .locals 2
 
     .line 0
-    sget v0, LX/2eq;->A6X:I
+    invoke-static {p0}, Lcom/facebook/base/activity/FbFragmentActivity;->A0D(Lcom/facebook/base/activity/FbFragmentActivity;)LX/2Sv;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 3
+    sget v0, LX/2I6;->A3g:I
+
     .line 4
     .line 5
-    move-result-object v0
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
-    iput-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A01:LX/0Na;
-
     .line 7
     .line 8
-    const v0, 0x7f0d00ca
+    move-result-object v0
 
     .line 9
+    iput-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A01:LX/0RP;
+
     .line 10
     .line 11
-    invoke-virtual {p0, v0}, Lcom/facebook/base/activity/FbFragmentActivity;->setContentView(I)V
+    const v0, 0x7f0c00b4
 
     .line 12
     .line 13
     .line 14
-    const v0, 0x7f0a04ab
+    invoke-virtual {p0, v0}, Lcom/facebook/base/activity/FbFragmentActivity;->setContentView(I)V
 
     .line 15
     .line 16
     .line 17
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    const v0, 0x7f0903f4
 
     .line 18
     .line 19
     .line 20
-    move-result-object v1
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     .line 21
-    new-instance v0, LX/4hJ;
-
     .line 22
     .line 23
-    invoke-direct {v0, v1, p0}, LX/4hJ;-><init>(Landroid/view/View;LX/4hR;)V
+    move-result-object v1
 
     .line 24
+    new-instance v0, LX/4me;
+
     .line 25
     .line 26
-    iput-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4hJ;
+    invoke-direct {v0, v1, p0}, LX/4me;-><init>(Landroid/view/View;LX/4n2;)V
 
     .line 27
     .line 28
-    invoke-direct {p0}, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00()V
-
     .line 29
+    iput-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4me;
+
     .line 30
     .line 31
+    invoke-direct {p0}, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00()V
+
+    .line 32
+    .line 33
+    .line 34
     return-void
 .end method
 
-.method public final Aao(Ljava/lang/String;)V
+.method public final AZF(Ljava/lang/String;)V
     .locals 2
 
     .line 0
@@ -198,11 +203,11 @@
 
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A01:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A01:LX/0RP;
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 11
     .line 12
@@ -210,7 +215,7 @@
     move-result-object v0
 
     .line 14
-    invoke-interface {v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->edit()LX/1hU;
+    invoke-interface {v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->edit()LX/1D7;
 
     .line 15
     .line 16
@@ -218,21 +223,21 @@
     move-result-object v1
 
     .line 18
-    sget-object v0, LX/3eT;->A03:LX/1b2;
+    sget-object v0, LX/3bB;->A03:LX/28F;
 
     .line 19
     .line 20
-    invoke-interface {v1, v0, p1}, LX/1hU;->AhJ(LX/1b2;Ljava/lang/String;)LX/2O0;
+    invoke-interface {v1, v0, p1}, LX/1D7;->Aff(LX/28F;Ljava/lang/String;)LX/2Cv;
 
     .line 21
     .line 22
     .line 23
-    invoke-interface {v1}, LX/1hU;->commit()V
+    invoke-interface {v1}, LX/1D7;->commit()V
 
     .line 24
     .line 25
     .line 26
-    const v1, 0x7f120224
+    const v1, 0x7f1101f1
 
     .line 27
     .line 28
@@ -270,11 +275,11 @@
 
     .line 44
     .line 45
-    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4hJ;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4me;
 
     .line 46
     .line 47
-    invoke-virtual {v0}, LX/4hJ;->A00()V
+    invoke-virtual {v0}, LX/4me;->A00()V
 
     .line 48
     .line 49
@@ -288,11 +293,11 @@
 
     .line 54
     :cond_1
-    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4hJ;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4me;
 
     .line 55
     .line 56
-    invoke-virtual {v0}, LX/4hJ;->A01()V
+    invoke-virtual {v0}, LX/4me;->A01()V
 
     .line 57
     .line 58
@@ -319,11 +324,11 @@
 
     .line 6
     .line 7
-    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4hJ;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/settings/PlayerPinSettingsActivity;->A00:LX/4me;
 
     .line 8
     .line 9
-    invoke-virtual {v0}, LX/4hJ;->A00()V
+    invoke-virtual {v0}, LX/4me;->A00()V
 
     .line 10
     .line 11

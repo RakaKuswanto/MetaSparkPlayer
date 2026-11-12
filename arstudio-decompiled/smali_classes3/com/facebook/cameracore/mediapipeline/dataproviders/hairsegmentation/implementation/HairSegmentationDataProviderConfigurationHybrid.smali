@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5Td;
+.field public static final Companion:LX/6Ao;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5Td;
+    new-instance v0, LX/6Ao;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5Td;-><init>()V
+    invoke-direct {v0}, LX/6Ao;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/hairsegmentation/implementation/HairSegmentationDataProviderConfigurationHybrid;->Companion:LX/5Td;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/hairsegmentation/implementation/HairSegmentationDataProviderConfigurationHybrid;->Companion:LX/6Ao;
 
     .line 6
     .line 7
@@ -33,7 +33,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -48,7 +48,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

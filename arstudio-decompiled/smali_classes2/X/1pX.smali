@@ -2,37 +2,192 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/1dN;
+
+# static fields
+.field public static final A0y:LX/3gS;
+
+.field public static final A0z:LX/3gS;
+
+.field public static final A10:LX/3gS;
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0lu;
 
-.field public final A01:LX/2gU;
+.field public final A01:LX/3gS;
 
-.field public final A02:LX/2lw;
+.field public final A02:LX/3gS;
 
-.field public final A03:LX/1q1;
+.field public final A03:LX/3gS;
 
-.field public final A04:LX/0J9;
+.field public final A04:LX/3gS;
 
-.field public final A05:LX/46E;
+.field public final A05:LX/3gS;
 
-.field public final A06:LX/1im;
+.field public final A06:LX/3gS;
 
-.field public final A07:LX/1oO;
+.field public final A07:LX/3gS;
 
-.field public final A08:LX/1wh;
+.field public final A08:LX/3gS;
 
-.field public final A09:LX/0Na;
+.field public final A09:LX/3gS;
 
-.field public final A0A:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
+.field public final A0A:LX/3gS;
+
+.field public final A0B:LX/3gS;
+
+.field public final A0C:LX/3gS;
+
+.field public final A0D:LX/3gS;
+
+.field public final A0E:LX/3gS;
+
+.field public final A0F:LX/3gS;
+
+.field public final A0G:LX/3gS;
+
+.field public final A0H:LX/3gS;
+
+.field public final A0I:LX/3gS;
+
+.field public final A0J:LX/3gS;
+
+.field public final A0K:LX/3gS;
+
+.field public final A0L:LX/3gS;
+
+.field public final A0M:LX/3gS;
+
+.field public final A0N:LX/3gS;
+
+.field public final A0O:LX/3gS;
+
+.field public final A0P:LX/3gS;
+
+.field public final A0Q:LX/3gS;
+
+.field public final A0R:LX/3gS;
+
+.field public final A0S:LX/3gS;
+
+.field public final A0T:LX/3gS;
+
+.field public final A0U:LX/3gS;
+
+.field public final A0V:LX/3gS;
+
+.field public final A0W:LX/3gS;
+
+.field public final A0X:LX/3gS;
+
+.field public final A0Y:LX/3gS;
+
+.field public final A0Z:LX/3gS;
+
+.field public final A0a:LX/3gS;
+
+.field public final A0b:LX/3gS;
+
+.field public final A0c:LX/3gS;
+
+.field public final A0d:LX/3gS;
+
+.field public final A0e:LX/3gS;
+
+.field public final A0f:LX/3gS;
+
+.field public final A0g:LX/3gS;
+
+.field public final A0h:LX/3gS;
+
+.field public final A0i:LX/3gS;
+
+.field public final A0j:LX/3gS;
+
+.field public final A0k:LX/3gS;
+
+.field public final A0l:LX/3gS;
+
+.field public final A0m:LX/3gS;
+
+.field public final A0n:LX/3gS;
+
+.field public final A0o:LX/3gS;
+
+.field public final A0p:LX/3gS;
+
+.field public final A0q:LX/3gS;
+
+.field public final A0r:LX/3gS;
+
+.field public final A0s:LX/3gS;
+
+.field public final A0t:LX/3gS;
+
+.field public final A0u:LX/3gS;
+
+.field public final A0v:LX/3gS;
+
+.field public final A0w:LX/3gS;
+
+.field public final A0x:LX/3gS;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x5
+
+    .line 1
+    invoke-static {v0}, LX/34R;->A00(I)LX/5ad;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    sput-object v0, LX/1pX;->A10:LX/3gS;
+
+    .line 6
+    .line 7
+    const/4 v0, 0x4
+
+    .line 8
+    invoke-static {v0}, LX/34R;->A00(I)LX/5ad;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    sput-object v0, LX/1pX;->A0z:LX/3gS;
+
+    .line 13
+    .line 14
+    const/4 v0, 0x3
+
+    .line 15
+    invoke-static {v0}, LX/34R;->A00(I)LX/5ad;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    sput-object v0, LX/1pX;->A0y:LX/3gS;
+
+    .line 20
+    .line 21
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 8
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,450 +195,120 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AEL:I
+    const/4 v0, 0x5
 
     .line 4
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
     .line 5
-    const/4 v1, 0x0
-
     .line 6
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
     .line 7
-    .line 8
-    .line 9
     move-result-object v0
 
+    .line 8
+    iput-object v0, p0, LX/1pX;->A0P:LX/3gS;
+
+    .line 9
     .line 10
-    check-cast v0, LX/1oO;
+    const/16 v0, 0x11
 
     .line 11
     .line 12
-    iput-object v0, p0, LX/1pX;->A07:LX/1oO;
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
     .line 13
     .line 14
-    sget v0, LX/2eq;->AEt:I
-
     .line 15
+    move-result-object v0
+
     .line 16
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object v0, p0, LX/1pX;->A0a:LX/3gS;
 
     .line 17
     .line 18
+    const/4 v0, 0x7
+
     .line 19
-    move-result-object v0
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
     .line 20
-    iput-object v0, p0, LX/1pX;->A09:LX/0Na;
-
     .line 21
     .line 22
-    sget v0, LX/2eq;->AEG:I
-
-    .line 23
-    .line 24
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
-    .line 25
-    .line 26
-    .line 27
     move-result-object v0
 
-    .line 28
-    check-cast v0, LX/1im;
+    .line 23
+    iput-object v0, p0, LX/1pX;->A0Q:LX/3gS;
 
+    .line 24
+    .line 25
+    const/16 v4, 0x2b
+
+    .line 26
+    .line 27
+    invoke-static {p0, v4}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
+
+    .line 28
     .line 29
     .line 30
-    iput-object v0, p0, LX/1pX;->A06:LX/1im;
+    move-result-object v0
 
     .line 31
+    iput-object v0, p0, LX/1pX;->A03:LX/3gS;
+
     .line 32
-    invoke-static {}, LX/1z6;->A0A()LX/0J9;
-
     .line 33
-    .line 34
-    .line 35
-    move-result-object v0
-
-    .line 36
-    iput-object v0, p0, LX/1pX;->A04:LX/0J9;
-
-    .line 37
-    .line 38
-    sget v0, LX/2eq;->AEF:I
-
-    .line 39
-    .line 40
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v0
-
-    .line 44
-    check-cast v0, LX/46E;
-
-    .line 45
-    .line 46
-    iput-object v0, p0, LX/1pX;->A05:LX/46E;
-
-    .line 47
-    .line 48
-    sget v0, LX/2eq;->AEi:I
-
-    .line 49
-    .line 50
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 51
-    .line 52
-    .line 53
-    move-result-object v0
-
-    .line 54
-    check-cast v0, LX/2lw;
-
-    .line 55
-    .line 56
-    iput-object v0, p0, LX/1pX;->A02:LX/2lw;
-
-    .line 57
-    .line 58
-    sget v0, LX/2eq;->AA3:I
-
-    .line 59
-    .line 60
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 61
-    .line 62
-    .line 63
-    move-result-object v0
-
-    .line 64
-    check-cast v0, LX/1wh;
-
-    .line 65
-    .line 66
-    iput-object v0, p0, LX/1pX;->A08:LX/1wh;
-
-    .line 67
-    .line 68
-    sget v0, LX/2eq;->AEb:I
-
-    .line 69
-    .line 70
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
-    .line 71
-    .line 72
-    .line 73
-    move-result-object v0
-
-    .line 74
-    check-cast v0, LX/2gU;
-
-    .line 75
-    .line 76
-    iput-object v0, p0, LX/1pX;->A01:LX/2gU;
-
-    .line 77
-    .line 78
-    sget v0, LX/2eq;->A08:I
-
-    .line 79
-    .line 80
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v0
-
-    .line 84
-    check-cast v0, LX/1q1;
-
-    .line 85
-    .line 86
-    iput-object v0, p0, LX/1pX;->A03:LX/1q1;
-
-    .line 87
-    .line 88
-    invoke-static {}, LX/1z6;->A0R()Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
-
-    .line 89
-    .line 90
-    .line 91
-    move-result-object v0
-
-    .line 92
-    iput-object v0, p0, LX/1pX;->A0A:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
-
-    .line 93
-    .line 94
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 95
-    .line 96
-    .line 97
-    move-result-object v0
-
-    .line 98
-    iput-object v0, p0, LX/1pX;->A00:LX/1zG;
-
-    .line 99
-    .line 100
-    return-void
-.end method
-
-.method private A00(LX/1cc;LX/46G;Lcom/facebook/graphservice/interfaces/GraphQLService;Ljava/util/concurrent/Executor;Z)Lcom/google/common/util/concurrent/SettableFuture;
-    .locals 11
-
-    .line 0
-    move-object v5, p1
-
-    .line 1
-    invoke-static {}, LX/0Yj;->A0I()Lcom/google/common/util/concurrent/SettableFuture;
-
-    .line 2
-    .line 3
-    .line 4
-    move-result-object v8
-
-    .line 5
-    move-object v4, p0
-
-    .line 6
-    iget-object v0, p0, LX/1pX;->A07:LX/1oO;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0, p1, p2}, LX/1oO;->A00(LX/1cc;LX/46G;)Lcom/facebook/graphservice/interfaces/GraphQLQuery;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v6
-
-    .line 12
-    iget-object v2, p0, LX/1pX;->A01:LX/2gU;
-
-    .line 13
-    .line 14
-    new-instance v3, LX/1pR;
-
-    .line 15
-    .line 16
-    move-object v7, p3
-
-    .line 17
-    move-object v9, p4
-
-    .line 18
-    move/from16 v10, p5
-
-    .line 19
-    .line 20
-    invoke-direct/range {v3 .. v10}, LX/1pR;-><init>(LX/1pX;LX/1cc;Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService;Lcom/google/common/util/concurrent/SettableFuture;Ljava/util/concurrent/Executor;Z)V
-
-    .line 21
-    .line 22
-    .line 23
-    iput-object v3, v2, LX/2gU;->A01:Ljava/lang/Runnable;
-
-    .line 24
-    .line 25
-    check-cast v5, LX/1j0;
-
-    .line 26
-    .line 27
-    iget-object v1, v5, LX/1j0;->A08:Ljava/lang/String;
-
-    .line 28
-    .line 29
     const/4 v0, 0x0
 
-    .line 30
-    invoke-static {v1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 31
-    .line 32
-    .line 33
-    iput-object v1, v2, LX/2gU;->A02:Ljava/lang/String;
-
     .line 34
-    .line 35
-    const-string v0, "GraphQL"
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
+    .line 35
     .line 36
     .line 37
-    iput-object v0, v2, LX/2gU;->A03:Ljava/lang/String;
-
-    .line 38
-    .line 39
-    new-instance v0, LX/1yK;
-
-    .line 40
-    .line 41
-    invoke-direct {v0}, LX/1yK;-><init>()V
-
-    .line 42
-    .line 43
-    .line 44
-    iput-object v0, v2, LX/2gU;->A00:LX/1iJ;
-
-    .line 45
-    .line 46
-    invoke-virtual {v2}, LX/2gU;->A00()LX/2lv;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v1
-
-    .line 50
-    iget-object v0, p0, LX/1pX;->A02:LX/2lw;
-
-    .line 51
-    .line 52
-    invoke-virtual {v0, v1}, LX/2lw;->A03(LX/2lv;)V
-
-    .line 53
-    .line 54
-    .line 55
-    return-object v8
-.end method
-
-
-# virtual methods
-.method public final AAP(LX/46D;LX/1RS;Ljava/util/concurrent/Executor;)V
-    .locals 15
-
-    .line 0
-    move-object/from16 v3, p1
-
-    .line 1
-    .line 2
-    invoke-interface {v3}, LX/46D;->isMutation()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    move-object v5, p0
-
-    .line 7
-    if-eqz v0, :cond_2
-
-    .line 8
-    .line 9
-    instance-of v0, v3, LX/1pa;
-
-    .line 10
-    .line 11
-    if-eqz v0, :cond_3
-
-    .line 12
-    .line 13
-    move-object v1, v3
-
-    .line 14
-    check-cast v1, LX/1pZ;
-
-    .line 15
-    .line 16
-    iget-object v0, v1, LX/1pZ;->A01:LX/0yO;
-
-    .line 17
-    .line 18
-    if-nez v0, :cond_1
-
-    .line 19
-    .line 20
-    iget-object v0, v1, LX/1pZ;->A02:LX/1JH;
-
-    .line 21
-    .line 22
-    if-nez v0, :cond_1
-
-    .line 23
-    .line 24
-    iget-object v0, v1, LX/1pZ;->A00:LX/0yO;
-
-    .line 25
-    .line 26
-    if-nez v0, :cond_1
-
-    .line 27
-    .line 28
-    move-object v0, v3
-
-    .line 29
-    check-cast v0, LX/1j2;
-
-    .line 30
-    .line 31
-    iget-object v0, v0, LX/1j2;->A0J:LX/1j0;
-
-    .line 32
-    .line 33
-    if-eqz v0, :cond_3
-
-    .line 34
-    .line 35
-    iget v2, v0, LX/1j0;->A01:I
-
-    .line 36
-    .line 37
-    const/16 v1, 0x20
-
-    .line 38
-    .line 39
-    and-int/lit8 v0, v2, 0x20
-
-    .line 40
-    .line 41
-    if-ne v0, v1, :cond_0
-
-    .line 42
-    .line 43
-    const-string v0, "This query is not suitable for running in logged out state since it requires a mutationId to be randomly generated"
-
-    .line 44
-    .line 45
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 46
-    .line 47
-    .line 48
     move-result-object v0
 
-    .line 49
-    throw v0
+    .line 38
+    iput-object v0, p0, LX/1pX;->A05:LX/3gS;
 
+    .line 39
+    .line 40
+    const/16 v0, 0x12
+
+    .line 41
+    .line 42
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v0
+
+    .line 46
+    iput-object v0, p0, LX/1pX;->A08:LX/3gS;
+
+    .line 47
+    .line 48
+    const/16 v2, 0x31
+
+    .line 49
     .line 50
-    :cond_0
-    const/16 v1, 0x40
+    invoke-static {p0, v2}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
     .line 51
     .line 52
-    and-int/lit8 v0, v2, 0x40
-
     .line 53
+    move-result-object v0
+
     .line 54
-    if-ne v0, v1, :cond_3
+    iput-object v0, p0, LX/1pX;->A0G:LX/3gS;
 
     .line 55
     .line 56
-    const-string v0, "This query is not suitable for running in logged out state since it requires an actorId from the viewerContext to be injected"
+    const/16 v0, 0x18
 
     .line 57
     .line 58
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
     .line 59
     .line 60
@@ -491,227 +316,825 @@
     move-result-object v0
 
     .line 62
-    throw v0
+    iput-object v0, p0, LX/1pX;->A0e:LX/3gS;
 
     .line 63
-    :cond_1
-    const-string v0, "Logged out GraphService does not support optimistic models on mutations yet"
-
     .line 64
-    .line 65
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    const/16 v0, 0x1b
 
+    .line 65
     .line 66
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
     .line 67
     .line 68
+    .line 69
     move-result-object v0
 
-    .line 69
-    throw v0
-
     .line 70
-    :cond_2
-    iget-object v1, p0, LX/1pX;->A06:LX/1im;
+    iput-object v0, p0, LX/1pX;->A0g:LX/3gS;
 
     .line 71
     .line 72
-    invoke-interface {v3}, LX/46D;->getQuery()LX/1cc;
+    const/16 v0, 0x20
 
     .line 73
     .line 74
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
     .line 75
+    .line 76
+    .line 77
     move-result-object v0
 
-    .line 76
-    invoke-virtual {v1, v0}, LX/1im;->A00(LX/1cc;)V
-
-    .line 77
     .line 78
+    iput-object v0, p0, LX/1pX;->A0l:LX/3gS;
+
     .line 79
-    :cond_3
-    iget-object v4, p0, LX/1pX;->A03:LX/1q1;
-
     .line 80
+    const/16 v0, 0x1f
+
     .line 81
-    iget-object v2, p0, LX/1pX;->A0A:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
-
     .line 82
-    .line 83
-    const-string v1, "LoggedOutGraphServiceQueryExecutor"
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
+    .line 83
     .line 84
     .line 85
-    const-string/jumbo v0, "startInner"
+    move-result-object v0
 
     .line 86
+    iput-object v0, p0, LX/1pX;->A0k:LX/3gS;
+
     .line 87
     .line 88
-    invoke-static {v4, v3, v2, v1, v0}, LX/1q3;->A00(LX/0HM;LX/46D;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;Ljava/lang/String;Ljava/lang/String;)V
+    const/16 v0, 0x1e
 
     .line 89
     .line 90
-    .line 91
-    invoke-interface {v3}, LX/46D;->getQuery()LX/1cc;
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
+    .line 91
     .line 92
     .line 93
-    .line 94
     move-result-object v0
 
+    .line 94
+    iput-object v0, p0, LX/1pX;->A0j:LX/3gS;
+
     .line 95
-    check-cast v0, LX/1j0;
-
     .line 96
+    const/16 v0, 0x1c
+
     .line 97
-    iget-object v0, v0, LX/1j0;->A08:Ljava/lang/String;
-
     .line 98
-    .line 99
-    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
+    .line 99
     .line 100
     .line 101
+    move-result-object v0
+
     .line 102
-    iget-object v1, p0, LX/1pX;->A05:LX/46E;
+    iput-object v0, p0, LX/1pX;->A0h:LX/3gS;
 
     .line 103
     .line 104
-    const/4 v0, 0x0
+    const/16 v0, 0x21
 
     .line 105
-    invoke-virtual {v1, v3, v0}, LX/46E;->A01(LX/46D;Z)LX/46G;
-
     .line 106
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
     .line 107
     .line 108
-    move-result-object v7
-
     .line 109
-    :try_start_0
-    iget-object v0, p0, LX/1pX;->A09:LX/0Na;
+    move-result-object v0
 
     .line 110
-    .line 111
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    iput-object v0, p0, LX/1pX;->A0m:LX/3gS;
 
+    .line 111
     .line 112
+    const/16 v0, 0x1d
+
     .line 113
     .line 114
-    move-result-object v8
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
     .line 115
-    check-cast v8, Lcom/facebook/graphservice/interfaces/GraphQLService;
-
     .line 116
     .line 117
-    invoke-interface {v3}, LX/46D;->isMutation()Z
+    move-result-object v0
 
     .line 118
+    iput-object v0, p0, LX/1pX;->A0i:LX/3gS;
+
     .line 119
     .line 120
-    move-result v0
+    const/16 v3, 0x2c
 
     .line 121
-    move-object/from16 v13, p3
-
     .line 122
-    .line 123
-    if-eqz v0, :cond_4
+    invoke-static {p0, v3}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
 
+    .line 123
     .line 124
     .line 125
-    invoke-interface {v3}, LX/46D;->getQuery()LX/1cc;
+    move-result-object v0
 
     .line 126
+    iput-object v0, p0, LX/1pX;->A0H:LX/3gS;
+
     .line 127
     .line 128
-    move-result-object v6
+    const/4 v0, 0x3
 
     .line 129
-    invoke-interface {v3}, LX/46D;->isMutation()Z
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
 
     .line 130
     .line 131
     .line 132
-    move-result v10
-
-    .line 133
-    const/4 v9, 0x0
-
-    .line 134
-    invoke-direct/range {v5 .. v10}, LX/1pX;->A00(LX/1cc;LX/46G;Lcom/facebook/graphservice/interfaces/GraphQLService;Ljava/util/concurrent/Executor;Z)Lcom/google/common/util/concurrent/SettableFuture;
-
-    .line 135
-    .line 136
-    .line 137
     move-result-object v0
 
-    .line 138
-    goto :goto_0
+    .line 133
+    iput-object v0, p0, LX/1pX;->A0O:LX/3gS;
 
+    .line 134
+    .line 135
+    const/4 v0, 0x4
+
+    .line 136
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 137
+    .line 138
     .line 139
-    :cond_4
-    invoke-interface {v3}, LX/46D;->getQuery()LX/1cc;
+    move-result-object v0
 
     .line 140
+    iput-object v0, p0, LX/1pX;->A06:LX/3gS;
+
     .line 141
     .line 142
-    move-result-object v10
+    const/16 v0, 0xa
 
     .line 143
-    invoke-interface {v3}, LX/46D;->isMutation()Z
-
     .line 144
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
     .line 145
     .line 146
-    move-result v14
-
     .line 147
-    move-object v9, p0
+    move-result-object v0
 
     .line 148
-    move-object v11, v7
+    iput-object v0, p0, LX/1pX;->A0T:LX/3gS;
 
     .line 149
-    move-object v12, v8
-
     .line 150
-    invoke-direct/range {v9 .. v14}, LX/1pX;->A00(LX/1cc;LX/46G;Lcom/facebook/graphservice/interfaces/GraphQLService;Ljava/util/concurrent/Executor;Z)Lcom/google/common/util/concurrent/SettableFuture;
+    const/16 v0, 0xe
 
     .line 151
     .line 152
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
     .line 153
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 154
-    :goto_0
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
     .line 155
+    move-result-object v0
+
     .line 156
+    iput-object v0, p0, LX/1pX;->A0X:LX/3gS;
+
     .line 157
-    move-object/from16 v1, p2
-
     .line 158
-    .line 159
-    invoke-static {v1, v0, v13}, LX/1xZ;->A01(LX/1RS;Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/Executor;)V
+    const/16 v0, 0xb
 
+    .line 159
     .line 160
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
     .line 161
     .line 162
-    return-void
-
     .line 163
-    :catchall_0
-    move-exception v0
+    move-result-object v0
 
     .line 164
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+    iput-object v0, p0, LX/1pX;->A0U:LX/3gS;
 
     .line 165
     .line 166
+    const/16 v0, 0x9
+
     .line 167
-    throw v0
+    .line 168
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 169
+    .line 170
+    .line 171
+    move-result-object v0
+
+    .line 172
+    iput-object v0, p0, LX/1pX;->A0S:LX/3gS;
+
+    .line 173
+    .line 174
+    const/4 v0, 0x1
+
+    .line 175
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 176
+    .line 177
+    .line 178
+    move-result-object v0
+
+    .line 179
+    iput-object v0, p0, LX/1pX;->A0M:LX/3gS;
+
+    .line 180
+    .line 181
+    const/4 v0, 0x2
+
+    .line 182
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 183
+    .line 184
+    .line 185
+    move-result-object v0
+
+    .line 186
+    iput-object v0, p0, LX/1pX;->A0N:LX/3gS;
+
+    .line 187
+    .line 188
+    const/16 v0, 0x23
+
+    .line 189
+    .line 190
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 191
+    .line 192
+    .line 193
+    move-result-object v0
+
+    .line 194
+    iput-object v0, p0, LX/1pX;->A0o:LX/3gS;
+
+    .line 195
+    .line 196
+    const/16 v0, 0x24
+
+    .line 197
+    .line 198
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 199
+    .line 200
+    .line 201
+    move-result-object v0
+
+    .line 202
+    iput-object v0, p0, LX/1pX;->A0p:LX/3gS;
+
+    .line 203
+    .line 204
+    const/16 v0, 0x25
+
+    .line 205
+    .line 206
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 207
+    .line 208
+    .line 209
+    move-result-object v0
+
+    .line 210
+    iput-object v0, p0, LX/1pX;->A0q:LX/3gS;
+
+    .line 211
+    .line 212
+    const/16 v0, 0x22
+
+    .line 213
+    .line 214
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 215
+    .line 216
+    .line 217
+    move-result-object v0
+
+    .line 218
+    iput-object v0, p0, LX/1pX;->A0n:LX/3gS;
+
+    .line 219
+    .line 220
+    const/16 v6, 0x30
+
+    .line 221
+    .line 222
+    invoke-static {p0, v6}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 223
+    .line 224
+    .line 225
+    move-result-object v0
+
+    .line 226
+    iput-object v0, p0, LX/1pX;->A0x:LX/3gS;
+
+    .line 227
+    .line 228
+    const/16 v7, 0x2d
+
+    .line 229
+    .line 230
+    invoke-static {p0, v7}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 231
+    .line 232
+    .line 233
+    move-result-object v0
+
+    .line 234
+    iput-object v0, p0, LX/1pX;->A0u:LX/3gS;
+
+    .line 235
+    .line 236
+    const/16 v1, 0x2e
+
+    .line 237
+    .line 238
+    invoke-static {p0, v1}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 239
+    .line 240
+    .line 241
+    move-result-object v0
+
+    .line 242
+    iput-object v0, p0, LX/1pX;->A0v:LX/3gS;
+
+    .line 243
+    .line 244
+    const/16 v5, 0x2f
+
+    .line 245
+    .line 246
+    invoke-static {p0, v5}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 247
+    .line 248
+    .line 249
+    move-result-object v0
+
+    .line 250
+    iput-object v0, p0, LX/1pX;->A0w:LX/3gS;
+
+    .line 251
+    .line 252
+    invoke-static {p0, v6}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
+
+    .line 253
+    .line 254
+    .line 255
+    move-result-object v0
+
+    .line 256
+    iput-object v0, p0, LX/1pX;->A0L:LX/3gS;
+
+    .line 257
+    .line 258
+    invoke-static {p0, v5}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
+
+    .line 259
+    .line 260
+    .line 261
+    move-result-object v0
+
+    .line 262
+    iput-object v0, p0, LX/1pX;->A0K:LX/3gS;
+
+    .line 263
+    .line 264
+    const/16 v6, 0x2a
+
+    .line 265
+    .line 266
+    invoke-static {p0, v6}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
+
+    .line 267
+    .line 268
+    .line 269
+    move-result-object v0
+
+    .line 270
+    iput-object v0, p0, LX/1pX;->A02:LX/3gS;
+
+    .line 271
+    .line 272
+    const/16 v5, 0x29
+
+    .line 273
+    .line 274
+    invoke-static {p0, v5}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
+
+    .line 275
+    .line 276
+    .line 277
+    move-result-object v0
+
+    .line 278
+    iput-object v0, p0, LX/1pX;->A01:LX/3gS;
+
+    .line 279
+    .line 280
+    const/16 v0, 0xc
+
+    .line 281
+    .line 282
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 283
+    .line 284
+    .line 285
+    move-result-object v0
+
+    .line 286
+    iput-object v0, p0, LX/1pX;->A0V:LX/3gS;
+
+    .line 287
+    .line 288
+    invoke-static {p0, v7}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
+
+    .line 289
+    .line 290
+    .line 291
+    move-result-object v0
+
+    .line 292
+    iput-object v0, p0, LX/1pX;->A0I:LX/3gS;
+
+    .line 293
+    .line 294
+    const/16 v0, 0xf
+
+    .line 295
+    .line 296
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 297
+    .line 298
+    .line 299
+    move-result-object v0
+
+    .line 300
+    iput-object v0, p0, LX/1pX;->A0Y:LX/3gS;
+
+    .line 301
+    .line 302
+    const/16 v0, 0x19
+
+    .line 303
+    .line 304
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 305
+    .line 306
+    .line 307
+    move-result-object v0
+
+    .line 308
+    iput-object v0, p0, LX/1pX;->A0f:LX/3gS;
+
+    .line 309
+    .line 310
+    const/16 v0, 0x8
+
+    .line 311
+    .line 312
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 313
+    .line 314
+    .line 315
+    move-result-object v0
+
+    .line 316
+    iput-object v0, p0, LX/1pX;->A0R:LX/3gS;
+
+    .line 317
+    .line 318
+    const/16 v0, 0x1a
+
+    .line 319
+    .line 320
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 321
+    .line 322
+    .line 323
+    move-result-object v0
+
+    .line 324
+    iput-object v0, p0, LX/1pX;->A0B:LX/3gS;
+
+    .line 325
+    .line 326
+    const/16 v0, 0x15
+
+    .line 327
+    .line 328
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 329
+    .line 330
+    .line 331
+    move-result-object v0
+
+    .line 332
+    iput-object v0, p0, LX/1pX;->A0d:LX/3gS;
+
+    .line 333
+    .line 334
+    const/16 v0, 0x16
+
+    .line 335
+    .line 336
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 337
+    .line 338
+    .line 339
+    move-result-object v0
+
+    .line 340
+    iput-object v0, p0, LX/1pX;->A09:LX/3gS;
+
+    .line 341
+    .line 342
+    const/16 v0, 0x17
+
+    .line 343
+    .line 344
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 345
+    .line 346
+    .line 347
+    move-result-object v0
+
+    .line 348
+    iput-object v0, p0, LX/1pX;->A0A:LX/3gS;
+
+    .line 349
+    .line 350
+    const/16 v0, 0x26
+
+    .line 351
+    .line 352
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 353
+    .line 354
+    .line 355
+    move-result-object v0
+
+    .line 356
+    iput-object v0, p0, LX/1pX;->A0r:LX/3gS;
+
+    .line 357
+    .line 358
+    invoke-static {p0, v6}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 359
+    .line 360
+    .line 361
+    move-result-object v0
+
+    .line 362
+    iput-object v0, p0, LX/1pX;->A0t:LX/3gS;
+
+    .line 363
+    .line 364
+    const/16 v0, 0xd
+
+    .line 365
+    .line 366
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 367
+    .line 368
+    .line 369
+    move-result-object v0
+
+    .line 370
+    iput-object v0, p0, LX/1pX;->A0W:LX/3gS;
+
+    .line 371
+    .line 372
+    const/4 v0, 0x6
+
+    .line 373
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 374
+    .line 375
+    .line 376
+    move-result-object v0
+
+    .line 377
+    iput-object v0, p0, LX/1pX;->A07:LX/3gS;
+
+    .line 378
+    .line 379
+    invoke-static {p0, v5}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 380
+    .line 381
+    .line 382
+    move-result-object v0
+
+    .line 383
+    iput-object v0, p0, LX/1pX;->A0D:LX/3gS;
+
+    .line 384
+    .line 385
+    const/16 v0, 0x28
+
+    .line 386
+    .line 387
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 388
+    .line 389
+    .line 390
+    move-result-object v0
+
+    .line 391
+    iput-object v0, p0, LX/1pX;->A0C:LX/3gS;
+
+    .line 392
+    .line 393
+    invoke-static {p0, v4}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 394
+    .line 395
+    .line 396
+    move-result-object v0
+
+    .line 397
+    iput-object v0, p0, LX/1pX;->A0E:LX/3gS;
+
+    .line 398
+    .line 399
+    invoke-static {p0, v3}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 400
+    .line 401
+    .line 402
+    move-result-object v0
+
+    .line 403
+    iput-object v0, p0, LX/1pX;->A0F:LX/3gS;
+
+    .line 404
+    .line 405
+    const/16 v0, 0x27
+
+    .line 406
+    .line 407
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 408
+    .line 409
+    .line 410
+    move-result-object v0
+
+    .line 411
+    iput-object v0, p0, LX/1pX;->A0s:LX/3gS;
+
+    .line 412
+    .line 413
+    const/16 v0, 0x10
+
+    .line 414
+    .line 415
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 416
+    .line 417
+    .line 418
+    move-result-object v0
+
+    .line 419
+    iput-object v0, p0, LX/1pX;->A0Z:LX/3gS;
+
+    .line 420
+    .line 421
+    invoke-static {p0, v2}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
+
+    .line 422
+    .line 423
+    .line 424
+    move-result-object v0
+
+    .line 425
+    iput-object v0, p0, LX/1pX;->A04:LX/3gS;
+
+    .line 426
+    .line 427
+    invoke-static {p0, v1}, LX/3VG;->A02(Ljava/lang/Object;I)LX/5ad;
+
+    .line 428
+    .line 429
+    .line 430
+    move-result-object v0
+
+    .line 431
+    iput-object v0, p0, LX/1pX;->A0J:LX/3gS;
+
+    .line 432
+    .line 433
+    const/16 v0, 0x13
+
+    .line 434
+    .line 435
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 436
+    .line 437
+    .line 438
+    move-result-object v0
+
+    .line 439
+    iput-object v0, p0, LX/1pX;->A0b:LX/3gS;
+
+    .line 440
+    .line 441
+    const/16 v0, 0x14
+
+    .line 442
+    .line 443
+    invoke-static {p0, v0}, LX/1pX;->A00(LX/1pX;I)LX/5ad;
+
+    .line 444
+    .line 445
+    .line 446
+    move-result-object v0
+
+    .line 447
+    iput-object v0, p0, LX/1pX;->A0c:LX/3gS;
+
+    .line 448
+    .line 449
+    sget v0, LX/2I6;->A1d:I
+
+    .line 450
+    .line 451
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 452
+    .line 453
+    .line 454
+    move-result-object v0
+
+    .line 455
+    iput-object v0, p0, LX/1pX;->A00:LX/0lu;
+
+    .line 456
+    .line 457
+    return-void
+.end method
+
+.method public static A00(LX/1pX;I)LX/5ad;
+    .locals 2
+
+    .line 0
+    new-instance v1, LX/1qM;
+
+    .line 1
+    .line 2
+    invoke-direct {v1, p0, p1}, LX/1qM;-><init>(LX/1pX;I)V
+
+    .line 3
+    .line 4
+    .line 5
+    new-instance v0, LX/5ad;
+
+    .line 6
+    .line 7
+    invoke-direct {v0, v1}, LX/5ad;-><init>(LX/0Gw;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-object v0
 .end method

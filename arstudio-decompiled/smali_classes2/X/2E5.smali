@@ -1,371 +1,413 @@
-.class public LX/2E5;
-.super LX/2E4;
+.class public abstract LX/2E5;
+.super LX/2E7;
 .source ""
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements LX/0Hw;
+.implements LX/2E0;
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x4a2f47f9ad71b962L
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbIntentService"
+
+
+# instance fields
+.field public A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+.field public final A01:LX/0RP;
+
+.field public final A02:LX/0RP;
+
+.field public final A03:LX/0Hx;
+
+.field public final A04:LX/0RP;
+
+.field public final A05:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/2Bn;LX/2E5;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/2E4;-><init>(LX/2Bn;LX/2E4;)V
+    invoke-direct {p0, p1}, LX/2E7;-><init>(Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-.method public constructor <init>(LX/2EI;LX/2Gu;Ljava/lang/Class;Ljava/lang/String;Z)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct/range {p0 .. p5}, LX/2E4;-><init>(LX/2EI;LX/2Gu;Ljava/lang/Class;Ljava/lang/String;Z)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
-
-.method public static final A01(LX/27m;LX/2DN;LX/2E5;)Ljava/lang/Object;
-    .locals 5
-
-    .line 0
-    invoke-virtual {p0}, LX/27m;->A0q()LX/270;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
+    new-instance v0, LX/0Hx;
 
     .line 4
-    sget-object v0, LX/270;->START_ARRAY:LX/270;
-
     .line 5
-    .line 6
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0}, LX/0Hx;-><init>()V
 
+    .line 6
     .line 7
     .line 8
-    .line 9
-    move-result v4
+    iput-object v0, p0, LX/2E5;->A03:LX/0Hx;
 
+    .line 9
     .line 10
-    if-nez v4, :cond_0
+    sget v0, LX/2I6;->A66:I
 
     .line 11
     .line 12
-    iget-object v0, p2, LX/2E4;->_defaultImpl:LX/2EI;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 13
     .line 14
-    if-nez v0, :cond_3
-
     .line 15
+    move-result-object v0
+
     .line 16
-    sget-object v2, LX/270;->START_ARRAY:LX/270;
+    iput-object v0, p0, LX/2E5;->A05:LX/0RP;
 
     .line 17
     .line 18
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    sget v1, LX/2I6;->A3O:I
 
     .line 19
     .line 20
-    .line 21
-    move-result-object v1
+    new-instance v0, LX/3FX;
 
+    .line 21
     .line 22
-    const-string/jumbo v0, "need JSON Array to contain As.WRAPPER_ARRAY type information for class "
+    invoke-direct {v0, p0, v1}, LX/3FX;-><init>(Landroid/content/Context;I)V
 
     .line 23
     .line 24
     .line 25
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, LX/2E5;->A02:LX/0RP;
 
     .line 26
     .line 27
-    .line 28
-    iget-object v0, p2, LX/2E4;->_baseType:LX/2EI;
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
 
+    .line 28
     .line 29
     .line 30
-    iget-object v0, v0, LX/2EI;->_class:Ljava/lang/Class;
+    move-result-object v0
 
     .line 31
-    .line 32
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object v0, p0, LX/2E5;->A01:LX/0RP;
 
+    .line 32
     .line 33
+    sget-object v0, LX/3Ff;->A00:LX/0li;
+
     .line 34
     .line 35
-    move-result-object v0
+    iput-object v0, p0, LX/2E5;->A04:LX/0RP;
 
     .line 36
-    :goto_0
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 37
+    return-void
+.end method
 
+
+# virtual methods
+.method public abstract A00(Landroid/content/Intent;)V
+.end method
+
+.method public final AJ9(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2E5;->A03:LX/0Hx;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/0Hx;->A00(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final Agc(LX/2Dn;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2E5;->A05:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/2E1;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0, p1}, LX/2E1;->A01(LX/2Dn;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public final Ala(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2E5;->A03:LX/0Hx;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2}, LX/0Hx;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final getResources()Landroid/content/res/Resources;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/2E5;->A04:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-interface {v1}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-static {v1}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    if-eqz v0, :cond_0
+
+    .line 13
+    .line 14
+    invoke-static {v1}, LX/0X2;->A0F(LX/0RP;)Landroid/content/res/Resources;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    return-object v0
+
+    .line 19
+    :cond_0
+    invoke-super {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    return-object v0
+.end method
+
+.method public final onCreate()V
+    .locals 4
+
+    .line 0
+    invoke-static {}, Lcom/facebook/quicklog/QuickPerformanceLoggerProvider;->getQPLInstance()Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v3
+
+    .line 4
+    iput-object v3, p0, LX/2E5;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+    .line 5
+    .line 6
+    if-eqz v3, :cond_0
+
+    .line 7
+    .line 8
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    const v2, 0x29b0003
+
+    .line 13
+    .line 14
+    .line 15
+    const-string/jumbo v0, "class-name"
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-interface {v3, v2, v0, v1}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerStart(ILjava/lang/String;Ljava/lang/String;)V
+
+    .line 19
+    .line 20
+    .line 21
+    iget-object v1, p0, LX/2E5;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+    .line 22
+    .line 23
+    const-string/jumbo v0, "on-create"
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-interface {v1, v2, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerPoint(ILjava/lang/String;)V
+
+    .line 27
+    .line 28
+    .line 29
+    :cond_0
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v1
+
+    .line 33
+    const-string v0, "FbIntentService[%s].onCreate"
+
+    .line 34
+    .line 35
+    invoke-static {v0, v1}, Lcom/facebook/debug/tracer/Tracer;->A03(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 36
     .line 37
     .line 38
+    :try_start_0
+    invoke-super {p0}, Landroid/app/IntentService;->onCreate()V
+
     .line 39
-    move-result-object v0
-
     .line 40
-    invoke-static {p0, v2, v0}, LX/2DN;->A00(LX/27m;LX/270;Ljava/lang/String;)LX/28X;
-
     .line 41
-    .line 42
-    .line 43
-    move-result-object v0
+    move-object v1, p0
 
+    .line 42
+    check-cast v1, Lcom/facebook/account/twofac/protocol/LoginApprovalNotificationService;
+
+    .line 43
     .line 44
-    throw v0
+    sget v0, LX/2I6;->A3p:I
 
     .line 45
-    :cond_0
-    invoke-virtual {p0}, LX/27m;->A1H()LX/270;
-
     .line 46
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 47
     .line 48
-    move-result-object v0
-
     .line 49
-    sget-object v2, LX/270;->VALUE_STRING:LX/270;
+    move-result-object v0
 
     .line 50
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
+
     .line 51
-    if-ne v0, v2, :cond_2
-
     .line 52
-    .line 53
-    invoke-virtual {p0}, LX/27m;->A1D()Ljava/lang/String;
+    iput-object v0, v1, Lcom/facebook/account/twofac/protocol/LoginApprovalNotificationService;->A00:Ljava/util/concurrent/ExecutorService;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 53
     .line 54
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
     .line 55
     .line 56
-    move-result-object v3
-
     .line 57
-    invoke-virtual {p0}, LX/27m;->A1H()LX/270;
+    return-void
 
     .line 58
-    .line 59
-    .line 60
-    :goto_1
-    invoke-virtual {p2, p1, v3}, LX/2E4;->A07(LX/2DN;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
+    :catchall_0
+    move-exception v0
 
+    .line 59
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 60
     .line 61
     .line 62
-    .line 63
-    move-result-object v2
-
-    .line 64
-    iget-boolean v0, p2, LX/2E4;->_typeIdVisible:Z
-
-    .line 65
-    .line 66
-    if-eqz v0, :cond_1
-
-    .line 67
-    .line 68
-    invoke-virtual {p0}, LX/27m;->A0q()LX/270;
-
-    .line 69
-    .line 70
-    .line 71
-    move-result-object v1
-
-    .line 72
-    sget-object v0, LX/270;->START_OBJECT:LX/270;
-
-    .line 73
-    .line 74
-    if-ne v1, v0, :cond_1
-
-    .line 75
-    .line 76
-    const/4 v0, 0x0
-
-    .line 77
-    new-instance v1, LX/286;
-
-    .line 78
-    .line 79
-    invoke-direct {v1, v0}, LX/286;-><init>(LX/1j1;)V
-
-    .line 80
-    .line 81
-    .line 82
-    invoke-virtual {v1}, LX/28C;->A0M()V
-
-    .line 83
-    .line 84
-    .line 85
-    iget-object v0, p2, LX/2E4;->_typePropertyName:Ljava/lang/String;
-
-    .line 86
-    .line 87
-    invoke-virtual {v1, v0}, LX/28C;->A0W(Ljava/lang/String;)V
-
-    .line 88
-    .line 89
-    .line 90
-    invoke-virtual {v1, v3}, LX/28C;->A0a(Ljava/lang/String;)V
-
-    .line 91
-    .line 92
-    .line 93
-    invoke-virtual {v1, p0}, LX/286;->A0h(LX/27m;)LX/283;
-
-    .line 94
-    .line 95
-    .line 96
-    move-result-object v0
-
-    .line 97
-    invoke-static {v0, p0}, LX/21d;->A00(LX/27m;LX/27m;)LX/21d;
-
-    .line 98
-    .line 99
-    .line 100
-    move-result-object p0
-
-    .line 101
-    invoke-virtual {p0}, LX/27m;->A1H()LX/270;
-
-    .line 102
-    .line 103
-    .line 104
-    :cond_1
-    invoke-virtual {v2, p0, p1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
-
-    .line 105
-    .line 106
-    .line 107
-    move-result-object v2
-
-    .line 108
-    if-eqz v4, :cond_4
-
-    .line 109
-    .line 110
-    invoke-virtual {p0}, LX/27m;->A1H()LX/270;
-
-    .line 111
-    .line 112
-    .line 113
-    move-result-object v0
-
-    .line 114
-    sget-object v1, LX/270;->END_ARRAY:LX/270;
-
-    .line 115
-    .line 116
-    if-eq v0, v1, :cond_4
-
-    .line 117
-    .line 118
-    const-string v0, "expected closing END_ARRAY after type information and deserialized value"
-
-    .line 119
-    .line 120
-    invoke-static {p0, v1, v0}, LX/2DN;->A00(LX/27m;LX/270;Ljava/lang/String;)LX/28X;
-
-    .line 121
-    .line 122
-    .line 123
-    move-result-object v0
-
-    .line 124
     throw v0
+.end method
 
-    .line 125
-    :cond_2
-    iget-object v0, p2, LX/2E4;->_defaultImpl:LX/2EI;
+.method public final onDestroy()V
+    .locals 3
 
-    .line 126
-    .line 127
-    if-nez v0, :cond_3
+    .line 0
+    invoke-super {p0}, Landroid/app/IntentService;->onDestroy()V
 
-    .line 128
-    .line 129
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    .line 1
+    .line 2
+    .line 3
+    iget-object v0, p0, LX/2E5;->A05:LX/0RP;
 
-    .line 130
-    .line 131
-    .line 132
-    move-result-object v1
+    .line 4
+    .line 5
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    .line 133
-    const-string/jumbo v0, "need JSON String that contains type id (for subtype of "
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
 
-    .line 134
-    .line 135
-    .line 136
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 9
+    check-cast v0, LX/2E1;
 
-    .line 137
-    .line 138
-    .line 139
-    iget-object v0, p2, LX/2E4;->_baseType:LX/2EI;
+    .line 10
+    .line 11
+    invoke-virtual {v0}, LX/2E1;->A00()V
 
-    .line 140
-    .line 141
-    iget-object v0, v0, LX/2EI;->_class:Ljava/lang/Class;
+    .line 12
+    .line 13
+    .line 14
+    iget-object v2, p0, LX/2E5;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
 
-    .line 142
-    .line 143
-    invoke-static {v0, v1}, LX/0Ye;->A0r(Ljava/lang/Class;Ljava/lang/StringBuilder;)V
+    .line 15
+    .line 16
+    if-eqz v2, :cond_0
 
-    .line 144
-    .line 145
-    .line 146
-    const-string v0, ")"
+    .line 17
+    .line 18
+    const v1, 0x29b0003
 
-    .line 147
-    .line 148
-    goto :goto_0
+    .line 19
+    .line 20
+    .line 21
+    const/4 v0, 0x2
 
-    .line 149
-    :cond_3
-    iget-object v2, p2, LX/2E4;->_idResolver:LX/2Gu;
+    .line 22
+    invoke-interface {v2, v1, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerEnd(IS)V
 
-    .line 150
-    .line 151
-    check-cast v2, LX/2Gb;
-
-    .line 152
-    .line 153
-    iget-object v0, v2, LX/2Gb;->A00:LX/2EI;
-
-    .line 154
-    .line 155
-    iget-object v1, v0, LX/2EI;->_class:Ljava/lang/Class;
-
-    .line 156
-    .line 157
-    const/4 v0, 0x0
-
-    .line 158
-    invoke-interface {v2, v1, v0}, LX/2Gu;->AP2(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 159
-    .line 160
-    .line 161
-    move-result-object v3
-
-    .line 162
-    goto :goto_1
-
-    .line 163
-    :cond_4
-    return-object v2
+    .line 23
+    .line 24
+    .line 25
+    :cond_0
+    return-void
 .end method

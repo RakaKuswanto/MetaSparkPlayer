@@ -1,150 +1,60 @@
-.class public final LX/21W;
+.class public abstract LX/21w;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "HeadersRequestProviderImpl$1"
-
-
-# instance fields
-.field public final synthetic A00:LX/1yZ;
-
-.field public final synthetic A01:LX/1ya;
-
-.field public final synthetic A02:Ljava/lang/String;
-
-.field public final synthetic A03:Ljava/lang/String;
-
-.field public final synthetic A04:Ljava/lang/String;
-
-.field public final synthetic A05:Ljava/lang/String;
-
-.field public final synthetic A06:Ljava/lang/String;
-
-.field public final synthetic A07:Ljava/lang/String;
-
-.field public final synthetic A08:Z
-
-.field public final synthetic A09:Z
-
-.field public final synthetic A0A:Z
-
 
 # direct methods
-.method public constructor <init>(LX/1yZ;LX/1ya;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZ)V
-    .locals 0
+.method public static A00(I)I
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hashCode"
+        }
+    .end annotation
 
     .line 0
-    iput-object p2, p0, LX/21W;->A01:LX/1ya;
+    int-to-long v2, p0
 
     .line 1
-    .line 2
-    iput-object p3, p0, LX/21W;->A05:Ljava/lang/String;
+    const-wide/32 v0, -0x3361d2af
 
+    .line 2
     .line 3
     .line 4
-    iput-object p4, p0, LX/21W;->A03:Ljava/lang/String;
+    mul-long/2addr v2, v0
 
     .line 5
+    long-to-int v1, v2
+
     .line 6
-    iput-object p5, p0, LX/21W;->A06:Ljava/lang/String;
+    const/16 v0, 0xf
 
     .line 7
     .line 8
-    iput-object p1, p0, LX/21W;->A00:LX/1yZ;
+    invoke-static {v1, v0}, Ljava/lang/Integer;->rotateLeft(II)I
 
     .line 9
     .line 10
-    iput-object p6, p0, LX/21W;->A04:Ljava/lang/String;
-
     .line 11
+    move-result v0
+
     .line 12
-    iput-object p7, p0, LX/21W;->A07:Ljava/lang/String;
+    int-to-long v2, v0
 
     .line 13
-    .line 14
-    iput-boolean p9, p0, LX/21W;->A0A:Z
+    const-wide/32 v0, 0x1b873593
 
+    .line 14
     .line 15
     .line 16
-    iput-boolean p10, p0, LX/21W;->A08:Z
+    mul-long/2addr v2, v0
 
     .line 17
+    long-to-int v0, v2
+
     .line 18
-    iput-boolean p11, p0, LX/21W;->A09:Z
-
-    .line 19
-    .line 20
-    iput-object p8, p0, LX/21W;->A02:Ljava/lang/String;
-
-    .line 21
-    .line 22
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 23
-    .line 24
-    .line 25
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 11
-
-    .line 0
-    iget-object v1, p0, LX/21W;->A01:LX/1ya;
-
-    .line 1
-    .line 2
-    iget-object v2, p0, LX/21W;->A05:Ljava/lang/String;
-
-    .line 3
-    .line 4
-    iget-object v3, p0, LX/21W;->A03:Ljava/lang/String;
-
-    .line 5
-    .line 6
-    iget-object v4, p0, LX/21W;->A06:Ljava/lang/String;
-
-    .line 7
-    .line 8
-    iget-object v0, p0, LX/21W;->A00:LX/1yZ;
-
-    .line 9
-    .line 10
-    iget-object v5, p0, LX/21W;->A04:Ljava/lang/String;
-
-    .line 11
-    .line 12
-    iget-object v6, p0, LX/21W;->A07:Ljava/lang/String;
-
-    .line 13
-    .line 14
-    iget-boolean v8, p0, LX/21W;->A0A:Z
-
-    .line 15
-    .line 16
-    iget-boolean v9, p0, LX/21W;->A08:Z
-
-    .line 17
-    .line 18
-    iget-boolean v10, p0, LX/21W;->A09:Z
-
-    .line 19
-    .line 20
-    iget-object v7, p0, LX/21W;->A02:Ljava/lang/String;
-
-    .line 21
-    .line 22
-    invoke-static/range {v0 .. v10}, LX/1ya;->A00(LX/1yZ;LX/1ya;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZ)V
-
-    .line 23
-    .line 24
-    .line 25
-    return-void
+    return v0
 .end method

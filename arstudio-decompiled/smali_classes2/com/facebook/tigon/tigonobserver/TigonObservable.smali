@@ -8,15 +8,15 @@
 
 
 # instance fields
-.field public final mDebugObservers:[LX/3ij;
+.field public final mDebugObservers:[LX/39y;
 
 .field public final mExecutor:Ljava/util/concurrent/Executor;
 
 .field public final mHybridData:Lcom/facebook/jni/HybridData;
 
-.field public final mObjectPool:LX/0Ir;
+.field public final mObjectPool:LX/0Hl;
 
-.field public final mObservers:[LX/3ik;
+.field public final mObservers:[LX/39x;
 
 
 # direct methods
@@ -29,7 +29,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/tigon/TigonXplatService;ZZLjava/util/concurrent/Executor;[LX/3ik;[LX/3ij;)V
+.method public constructor <init>(Lcom/facebook/tigon/TigonXplatService;ZZLjava/util/concurrent/Executor;[LX/39x;[LX/39y;)V
     .locals 5
 
     .line 0
@@ -57,7 +57,7 @@
     .line 2
     .line 3
     .line 4
-    const-class v3, LX/3O7;
+    const-class v3, LX/36r;
 
     .line 5
     .line 6
@@ -65,98 +65,101 @@
 
     .line 7
     .line 8
-    new-instance v1, LX/3QO;
+    const/4 v0, 0x1
 
     .line 9
-    .line 10
-    invoke-direct {v1, p0}, LX/3QO;-><init>(Lcom/facebook/tigon/tigonobserver/TigonObservable;)V
+    new-instance v1, LX/0ZE;
 
+    .line 10
     .line 11
+    invoke-direct {v1, p0, v0}, LX/0ZE;-><init>(Ljava/lang/Object;I)V
+
     .line 12
     .line 13
+    .line 14
     if-eqz v2, :cond_0
 
-    .line 14
     .line 15
-    new-instance v0, LX/0Ir;
-
     .line 16
-    .line 17
-    invoke-direct {v0, v1, v2, v3}, LX/0Ir;-><init>(LX/0Od;LX/0JA;Ljava/lang/Class;)V
+    new-instance v0, LX/0Hl;
 
+    .line 17
     .line 18
+    invoke-direct {v0, v1, v2, v3}, LX/0Hl;-><init>(LX/0W0;LX/0I5;Ljava/lang/Class;)V
+
     .line 19
     .line 20
-    iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObjectPool:LX/0Ir;
-
     .line 21
+    iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObjectPool:LX/0Hl;
+
     .line 22
+    .line 23
     const-string v0, "Executor is required"
 
-    .line 23
     .line 24
-    invoke-static {v0, p4}, LX/0Iv;->A01(Ljava/lang/String;Ljava/lang/Object;)V
-
     .line 25
+    invoke-static {p4, v0}, LX/0Ho;->A00(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 26
     .line 27
+    .line 28
     invoke-virtual {p1}, Lcom/facebook/tigon/TigonXplatService;->isObservable()Z
 
-    .line 28
     .line 29
     .line 30
+    .line 31
     move-result v1
 
-    .line 31
+    .line 32
     const-string v0, "Tigon stack is not Observable"
 
-    .line 32
     .line 33
-    invoke-static {v1, v0}, LX/0Iv;->A04(ZLjava/lang/String;)V
-
     .line 34
+    invoke-static {v1, v0}, LX/0Ho;->A03(ZLjava/lang/String;)V
+
     .line 35
     .line 36
-    iput-object p5, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObservers:[LX/3ik;
-
     .line 37
-    .line 38
-    iput-object p6, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mDebugObservers:[LX/3ij;
+    iput-object p5, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObservers:[LX/39x;
 
+    .line 38
     .line 39
+    iput-object p6, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mDebugObservers:[LX/39y;
+
     .line 40
+    .line 41
     iput-object p4, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 41
     .line 42
+    .line 43
     invoke-direct {p0, p1, v4, p3}, Lcom/facebook/tigon/tigonobserver/TigonObservable;->initHybrid(Lcom/facebook/tigon/TigonXplatService;ZZ)Lcom/facebook/jni/HybridData;
 
-    .line 43
     .line 44
     .line 45
+    .line 46
     move-result-object v0
 
-    .line 46
+    .line 47
     iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mHybridData:Lcom/facebook/jni/HybridData;
 
-    .line 47
     .line 48
+    .line 49
     return-void
 
-    .line 49
+    .line 50
     :cond_0
     const-string v0, "Must add a clock to the object pool builder"
 
-    .line 50
     .line 51
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
     .line 52
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 53
     .line 54
+    .line 55
     move-result-object v0
 
-    .line 55
+    .line 56
     throw v0
 .end method
 
@@ -186,7 +189,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 10
     .line 11
@@ -211,7 +214,7 @@
 
     .line 21
     .line 22
-    invoke-static {v3, v0, v2}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v2}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 23
     .line 24
@@ -232,11 +235,11 @@
     const/4 v2, 0x7
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObjectPool:LX/0Ir;
+    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObjectPool:LX/0Hl;
 
     .line 2
     .line 3
-    invoke-virtual {v0}, LX/0Ir;->A01()Ljava/lang/Object;
+    invoke-virtual {v0}, LX/0Hl;->A01()Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -244,15 +247,15 @@
     move-result-object v1
 
     .line 7
-    check-cast v1, LX/3O7;
+    check-cast v1, LX/36r;
 
     .line 8
     .line 9
-    iput v2, v1, LX/3O7;->A00:I
+    iput v2, v1, LX/36r;->A00:I
 
     .line 10
     .line 11
-    iput-object p1, v1, LX/3O7;->A01:Lcom/facebook/tigon/tigonobserver/TigonBodyObservation;
+    iput-object p1, v1, LX/36r;->A01:Lcom/facebook/tigon/tigonobserver/TigonBodyObservation;
 
     .line 12
     .line 13
@@ -335,11 +338,11 @@
     const/4 v2, 0x6
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObjectPool:LX/0Ir;
+    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObjectPool:LX/0Hl;
 
     .line 2
     .line 3
-    invoke-virtual {v0}, LX/0Ir;->A01()Ljava/lang/Object;
+    invoke-virtual {v0}, LX/0Hl;->A01()Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -347,15 +350,15 @@
     move-result-object v1
 
     .line 7
-    check-cast v1, LX/3O7;
+    check-cast v1, LX/36r;
 
     .line 8
     .line 9
-    iput v2, v1, LX/3O7;->A00:I
+    iput v2, v1, LX/36r;->A00:I
 
     .line 10
     .line 11
-    iput-object p1, v1, LX/3O7;->A01:Lcom/facebook/tigon/tigonobserver/TigonBodyObservation;
+    iput-object p1, v1, LX/36r;->A01:Lcom/facebook/tigon/tigonobserver/TigonBodyObservation;
 
     .line 12
     .line 13
@@ -390,11 +393,11 @@
     .locals 6
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObjectPool:LX/0Ir;
+    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObservable;->mObjectPool:LX/0Hl;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/0Ir;->A01()Ljava/lang/Object;
+    invoke-virtual {v0}, LX/0Hl;->A01()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -402,15 +405,15 @@
     move-result-object v5
 
     .line 6
-    check-cast v5, LX/3O7;
+    check-cast v5, LX/36r;
 
     .line 7
     .line 8
-    iput p1, v5, LX/3O7;->A00:I
+    iput p1, v5, LX/36r;->A00:I
 
     .line 9
     .line 10
-    iput-object p2, v5, LX/3O7;->A02:Lcom/facebook/tigon/tigonobserver/TigonObserverData;
+    iput-object p2, v5, LX/36r;->A02:Lcom/facebook/tigon/tigonobserver/TigonObserverData;
 
     .line 11
     .line 12
@@ -426,11 +429,11 @@
 
     .line 17
     .line 18
-    iget-object v4, v5, LX/3O7;->A03:Ljava/lang/String;
+    iget-object v4, v5, LX/36r;->A03:Ljava/lang/String;
 
     .line 19
     .line 20
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 21
     .line 22
@@ -458,7 +461,7 @@
 
     .line 33
     .line 34
-    invoke-static {v4, v0, v3}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v3}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 35
     .line 36

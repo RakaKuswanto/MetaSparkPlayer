@@ -1,109 +1,159 @@
-.class public final LX/2jZ;
-.super Ljava/lang/Object;
+.class public final LX/2Jz;
+.super LX/2Jq;
 .source ""
-
-# interfaces
-.implements LX/04Y;
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;
+.field public final A00:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;)V
-    .locals 0
+.method public constructor <init>(LX/2K3;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/2jZ;->A00:Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;
+    invoke-direct {p0, p1}, LX/2Jq;-><init>(LX/2Jp;)V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iget-object v0, p1, LX/2K3;->A00:Ljava/lang/Runnable;
+
     .line 4
     .line 5
+    iput-object v0, p0, LX/2Jz;->A00:Ljava/lang/Runnable;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final AHH()Ljava/util/ArrayList;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     .line 0
-    new-instance v2, Landroid/content/IntentFilter;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
-    invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
-
     .line 3
+    move-result-object v1
+
     .line 4
+    const-string v0, "RunnableJob{jobId["
+
     .line 5
-    const-string v0, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
-
     .line 6
-    .line 7
-    invoke-virtual {v2, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     .line 8
     .line 9
+    iget v0, p0, LX/2Jq;->A00:I
+
     .line 10
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
     .line 11
-    .line 12
-    const/16 v0, 0x21
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 12
     .line 13
     .line 14
-    if-lt v1, v0, :cond_0
+    const-string/jumbo v0, "] desc["
 
     .line 15
     .line 16
-    const-string v0, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
-
     .line 17
-    .line 18
-    invoke-virtual {v2, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 18
     .line 19
     .line 20
-    .line 21
-    :cond_0
-    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    iget-object v0, p0, LX/2Jq;->A03:Ljava/lang/String;
 
+    .line 21
     .line 22
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 23
     .line 24
-    move-result-object v0
-
     .line 25
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    const-string/jumbo v0, "] group["
 
     .line 26
     .line 27
     .line 28
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 29
+    .line 30
+    .line 31
+    const/4 v0, 0x0
+
+    .line 32
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 33
+    .line 34
+    .line 35
+    const-string/jumbo v0, "] deps["
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 39
+    .line 40
+    .line 41
+    const/4 v0, 0x0
+
+    .line 42
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v0
+
+    .line 46
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 47
+    .line 48
+    .line 49
+    const-string/jumbo v0, "] hints["
+
+    .line 50
+    .line 51
+    .line 52
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 53
+    .line 54
+    .line 55
+    iget-object v0, p0, LX/2Jq;->A04:Ljava/util/EnumSet;
+
+    .line 56
+    .line 57
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 58
+    .line 59
+    .line 60
+    const-string/jumbo v0, "]}"
+
+    .line 61
+    .line 62
+    .line 63
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v0
+
+    .line 67
     return-object v0
-.end method
-
-.method public final Abi(Landroid/content/Context;Landroid/content/Intent;LX/04w;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2jZ;->A00:Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;->A00(Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
 .end method

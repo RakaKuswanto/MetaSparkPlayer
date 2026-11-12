@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract response()LX/3Ro;
+.method public abstract response()LX/388;
 .end method

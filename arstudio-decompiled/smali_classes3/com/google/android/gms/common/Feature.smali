@@ -20,11 +20,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0xa
+    const/16 v0, 0x4b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/58O;->A02(I)LX/58O;
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
 
     .line 3
     .line 4
@@ -188,7 +188,7 @@
     .locals 6
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -231,19 +231,22 @@
 
     .line 20
     :cond_0
-    invoke-static {v5, v3, v4}, LX/0Yf;->A1K([Ljava/lang/Object;J)V
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 21
     .line 22
     .line 23
-    invoke-static {v5}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    move-result-object v0
 
     .line 24
+    invoke-static {v5, v0}, LX/0X2;->A0D([Ljava/lang/Object;Ljava/lang/Object;)I
+
     .line 25
     .line 26
+    .line 27
     move-result v0
 
-    .line 27
+    .line 28
     return v0
 .end method
 
@@ -251,11 +254,11 @@
     .locals 6
 
     .line 0
-    new-instance v5, LX/4Pw;
+    new-instance v5, LX/4Bw;
 
     .line 1
     .line 2
-    invoke-direct {v5, p0}, LX/4Pw;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v5, p0}, LX/4Bw;-><init>(Ljava/lang/Object;)V
 
     .line 3
     .line 4
@@ -268,7 +271,7 @@
 
     .line 8
     .line 9
-    invoke-virtual {v5, v1, v0}, LX/4Pw;->A00(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v5, v1, v0}, LX/4Bw;->A00(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -309,7 +312,7 @@
 
     .line 28
     .line 29
-    invoke-virtual {v5, v1, v0}, LX/4Pw;->A00(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v5, v1, v0}, LX/4Bw;->A00(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 30
     .line 31
@@ -329,7 +332,7 @@
     .locals 7
 
     .line 0
-    invoke-static {p1}, LX/57v;->A00(Landroid/os/Parcel;)I
+    invoke-static {p1}, LX/51b;->A00(Landroid/os/Parcel;)I
 
     .line 1
     .line 2
@@ -344,7 +347,7 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-static {p1, v1, v0}, LX/57v;->A08(Landroid/os/Parcel;Ljava/lang/String;I)V
+    invoke-static {p1, v1, v0}, LX/51b;->A06(Landroid/os/Parcel;Ljava/lang/String;I)V
 
     .line 8
     .line 9
@@ -356,7 +359,7 @@
     const/4 v0, 0x2
 
     .line 13
-    invoke-static {p1, v0, v5}, LX/57v;->A04(Landroid/os/Parcel;II)V
+    invoke-static {p1, v0, v5}, LX/51b;->A03(Landroid/os/Parcel;II)V
 
     .line 14
     .line 15
@@ -381,18 +384,25 @@
 
     .line 25
     :cond_0
-    const/4 v0, 0x3
+    const v0, 0x80003
 
     .line 26
-    invoke-static {p1, v0, v1, v2}, LX/57v;->A05(Landroid/os/Parcel;IJ)V
-
     .line 27
     .line 28
-    .line 29
-    invoke-static {p1, v6}, LX/57v;->A03(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 29
     .line 30
     .line 31
+    invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
+
     .line 32
+    .line 33
+    .line 34
+    invoke-static {p1, v6}, LX/51b;->A02(Landroid/os/Parcel;I)V
+
+    .line 35
+    .line 36
+    .line 37
     return-void
 .end method

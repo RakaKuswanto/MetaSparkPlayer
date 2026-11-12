@@ -1,11 +1,17 @@
-.class public interface abstract LX/42k;
+.class public abstract LX/42k;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AU5(LX/41I;LX/41X;)V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AU8(LX/41S;LX/41I;)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

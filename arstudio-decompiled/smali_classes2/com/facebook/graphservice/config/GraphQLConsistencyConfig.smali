@@ -4,8 +4,6 @@
 
 
 # instance fields
-.field public collectForTargetedLoadingUpdate:Z
-
 .field public disableGBNS:Z
 
 .field public disableQueueHealthCheck:Z
@@ -13,8 +11,6 @@
 .field public enableBlackboxConsistencyService:Z
 
 .field public enableGlobalFullConsistency:Z
-
-.field public killAddMissingRecords:Z
 
 .field public minFlushesToSkip:I
 
@@ -40,7 +36,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(LX/3iZ;)V
+.method public synthetic constructor <init>(LX/1vL;)V
     .locals 0
 
     .line 0
@@ -52,15 +48,15 @@
     return-void
 .end method
 
-.method public static Builder()LX/3XV;
+.method public static Builder()LX/1vJ;
     .locals 1
 
     .line 0
-    new-instance v0, LX/3XV;
+    new-instance v0, LX/1vJ;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/3XV;-><init>()V
+    invoke-direct {v0}, LX/1vJ;-><init>()V
 
     .line 3
     .line 4
@@ -68,33 +64,11 @@
     return-object v0
 .end method
 
-.method public static synthetic access$1002(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
-    .locals 0
-
-    .line 0
-    iput p1, p0, Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;->prunePersistentStoreStrategy:I
-
-    .line 1
-    .line 2
-    return p1
-.end method
-
 .method public static synthetic access$102(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
     .locals 0
 
     .line 0
     iput p1, p0, Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;->minFlushesToSkip:I
-
-    .line 1
-    .line 2
-    return p1
-.end method
-
-.method public static synthetic access$1102(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;Z)Z
-    .locals 0
-
-    .line 0
-    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;->collectForTargetedLoadingUpdate:Z
 
     .line 1
     .line 2
@@ -112,18 +86,7 @@
     return p1
 .end method
 
-.method public static synthetic access$302(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;Z)Z
-    .locals 0
-
-    .line 0
-    iput-boolean p1, p0, Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;->killAddMissingRecords:Z
-
-    .line 1
-    .line 2
-    return p1
-.end method
-
-.method public static synthetic access$402(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
+.method public static synthetic access$302(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
     .locals 0
 
     .line 0
@@ -134,7 +97,7 @@
     return p1
 .end method
 
-.method public static synthetic access$502(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
+.method public static synthetic access$402(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
     .locals 0
 
     .line 0
@@ -145,7 +108,7 @@
     return p1
 .end method
 
-.method public static synthetic access$602(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;Z)Z
+.method public static synthetic access$502(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;Z)Z
     .locals 0
 
     .line 0
@@ -156,7 +119,7 @@
     return p1
 .end method
 
-.method public static synthetic access$702(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
+.method public static synthetic access$602(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
     .locals 0
 
     .line 0
@@ -167,7 +130,7 @@
     return p1
 .end method
 
-.method public static synthetic access$802(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;Z)Z
+.method public static synthetic access$702(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;Z)Z
     .locals 0
 
     .line 0
@@ -178,7 +141,7 @@
     return p1
 .end method
 
-.method public static synthetic access$902(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;Z)Z
+.method public static synthetic access$802(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;Z)Z
     .locals 0
 
     .line 0
@@ -189,19 +152,19 @@
     return p1
 .end method
 
-
-# virtual methods
-.method public collectForTargetedLoadingUpdate()Z
-    .locals 1
+.method public static synthetic access$902(Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;I)I
+    .locals 0
 
     .line 0
-    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;->collectForTargetedLoadingUpdate:Z
+    iput p1, p0, Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;->prunePersistentStoreStrategy:I
 
     .line 1
     .line 2
-    return v0
+    return p1
 .end method
 
+
+# virtual methods
 .method public disableGBNS()Z
     .locals 1
 
@@ -273,17 +236,6 @@
 
     .line 0
     iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;->enableBlackboxConsistencyService:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public isKillAddMissingRecords()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, Lcom/facebook/graphservice/config/GraphQLConsistencyConfig;->killAddMissingRecords:Z
 
     .line 1
     .line 2

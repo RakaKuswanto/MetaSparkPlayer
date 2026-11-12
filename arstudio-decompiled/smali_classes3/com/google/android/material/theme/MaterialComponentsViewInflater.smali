@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/theme/MaterialComponentsViewInflater;
-.super LX/4WB;
+.super LX/4Lw;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4WB;-><init>()V
+    invoke-direct {p0}, LX/4Lw;-><init>()V
 
     .line 1
     .line 2

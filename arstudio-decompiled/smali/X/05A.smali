@@ -1,66 +1,76 @@
 .class public final LX/05A;
-.super Ljava/lang/Object;
+.super Landroid/view/inputmethod/InputConnectionWrapper;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DialogFragment$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/02T;
+.field public final synthetic A00:LX/05D;
 
 
 # direct methods
-.method public constructor <init>(LX/02T;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/inputmethod/InputConnection;LX/05D;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/05A;->A00:LX/02T;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/05A;->A00:LX/05D;
 
+    .line 2
     .line 3
+    invoke-direct {p0, p1, v0}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
+
     .line 4
     .line 5
+    .line 6
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
     .locals 2
 
     .line 0
-    iget-object v0, p0, LX/05A;->A00:LX/02T;
+    iget-object v1, p0, LX/05A;->A00:LX/05D;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/02T;->A01(LX/02T;)Landroid/content/DialogInterface$OnDismissListener;
+    invoke-static {p1}, LX/05G;->A00(Ljava/lang/Object;)LX/05G;
 
     .line 3
     .line 4
     .line 5
-    move-result-object v1
+    move-result-object v0
 
     .line 6
-    invoke-static {v0}, LX/02T;->A00(LX/02T;)Landroid/app/Dialog;
+    invoke-interface {v1, p3, v0, p2}, LX/05D;->AUT(Landroid/os/Bundle;LX/05G;I)Z
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
+    move-result v0
 
     .line 10
-    invoke-interface {v1, v0}, Landroid/content/DialogInterface$OnDismissListener;->onDismiss(Landroid/content/DialogInterface;)V
+    if-eqz v0, :cond_0
 
     .line 11
     .line 12
+    const/4 v0, 0x1
+
     .line 13
-    return-void
+    return v0
+
+    .line 14
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/InputConnectionWrapper;->commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    return v0
 .end method

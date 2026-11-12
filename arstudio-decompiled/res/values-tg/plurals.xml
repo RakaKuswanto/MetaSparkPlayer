@@ -4,11 +4,59 @@
         <item quantity="other">%1$s маъқули Саҳифа</item>
         <item quantity="one">%1$s қайди \"маъқули\" Саҳифа</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s маъқул</item>
-        <item quantity="one">%1$s like</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d рӯз пеш</item>
+        <item quantity="one">1 рӯз пеш</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d рӯз</item>
+        <item quantity="one">1 рӯз</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d рӯз</item>
+        <item quantity="one">1 рӯз</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d соат</item>
+        <item quantity="one">1 соат</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d дақиқа</item>
+        <item quantity="one">1 дақиқа</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d months</item>
+        <item quantity="one">1 моҳа</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d ҳафта</item>
+        <item quantity="one">1 ҳафта</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">%1$d ҳафтаи дигар</item>
+        <item quantity="one">1 more week</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d сол</item>
+        <item quantity="one">1 сол</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d соат пеш</item>
+        <item quantity="one">1 соат пеш</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d соат</item>
+        <item quantity="one">1 соат</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$dс</item>
+        <item quantity="one">1с</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d соат</item>
+        <item quantity="one">1 соат</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d соат пеш</item>
         <item quantity="one">1 соат пеш</item>
     </plurals>
@@ -20,8 +68,60 @@
         <item quantity="other">%1$d дақиқа пас</item>
         <item quantity="one">1 дақиқа пас</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d дақиқа пеш</item>
+        <item quantity="one">1 дақиқа пеш</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d дақиқа пеш</item>
         <item quantity="one">1 дақиқа пеш</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d дақиқа</item>
+        <item quantity="one">1 дақиқа</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$dм</item>
+        <item quantity="one">1м</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d моҳ пеш</item>
+        <item quantity="one">1 моҳ пеш</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d сония пеш</item>
+        <item quantity="one">1 сония</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d ҳафта пеш</item>
+        <item quantity="one">1 ҳафта пеш</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d сол пеш</item>
+        <item quantity="one">1 сол пеш</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Шумо %1$d рӯз пеш ташриф оварда будед</item>
+        <item quantity="one">Шумо 1 рӯз пеш ташриф оварда будед</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Шумо %1$d соат пеш боздид кардед</item>
+        <item quantity="one">Шумо 1 соат пеш боздид кардед</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Шумо %1$d дақиқа пеш ташриф оварда будед</item>
+        <item quantity="one">Шумо 1 дақиқа пеш ташриф оварда будед</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Шумо %1$d моҳ пеш боздид карда будед</item>
+        <item quantity="one">Шумо 1 моҳ пеш ташриф оварда будед</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Шумо %1$d ҳафта пеш ташриф оварда будед</item>
+        <item quantity="one">Шумо 1 ҳафта пеш ташриф оварда будед</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Шумо %1$d сол пеш ташриф оварда будед</item>
+        <item quantity="one">Шумо 1 сол пеш ташриф оварда будед</item>
     </plurals>
 </resources>

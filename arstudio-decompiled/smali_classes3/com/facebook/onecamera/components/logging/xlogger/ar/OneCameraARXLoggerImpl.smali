@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5Xy;
+.implements LX/693;
 
 
 # static fields
@@ -24,7 +24,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/4BF;->A1N()Z
+    invoke-static {}, LX/434;->A1V()Z
 
     .line 4
     .line 5
@@ -122,7 +122,7 @@
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 6
     .line 7
@@ -135,13 +135,16 @@
     return-void
 .end method
 
-.method private native onEventInternal(ILjava/lang/String;Z)V
+.method private native onEventInternal(ILjava/lang/String;Z)Z
 .end method
 
-.method private native onFailureEventInternal(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+.method private native onFailureEventInternal(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Z
 .end method
 
-.method private native onStartEventInternal(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method private native onStartEventInternal(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+.end method
+
+.method private native updateAnnotationInternal(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 
@@ -158,35 +161,56 @@
     return-void
 .end method
 
-.method public onEvent(ILjava/lang/String;Z)V
-    .locals 0
+.method public onEvent(ILjava/lang/String;Z)Z
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/onecamera/components/logging/xlogger/ar/OneCameraARXLoggerImpl;->onEventInternal(ILjava/lang/String;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/onecamera/components/logging/xlogger/ar/OneCameraARXLoggerImpl;->onEventInternal(ILjava/lang/String;Z)Z
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result v0
+
+    .line 4
+    return v0
 .end method
 
-.method public onFailureEvent(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method public onFailureEvent(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Z
+    .locals 1
 
     .line 0
-    invoke-direct/range {p0 .. p5}, Lcom/facebook/onecamera/components/logging/xlogger/ar/OneCameraARXLoggerImpl;->onFailureEventInternal(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct/range {p0 .. p5}, Lcom/facebook/onecamera/components/logging/xlogger/ar/OneCameraARXLoggerImpl;->onFailureEventInternal(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Z
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result v0
+
+    .line 4
+    return v0
 .end method
 
-.method public onStartEvent(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public onStartEvent(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
+
+    .line 0
+    invoke-direct/range {p0 .. p8}, Lcom/facebook/onecamera/components/logging/xlogger/ar/OneCameraARXLoggerImpl;->onStartEventInternal(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    return v0
+.end method
+
+.method public updateAnnotation(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    invoke-direct/range {p0 .. p8}, Lcom/facebook/onecamera/components/logging/xlogger/ar/OneCameraARXLoggerImpl;->onStartEventInternal(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/onecamera/components/logging/xlogger/ar/OneCameraARXLoggerImpl;->updateAnnotationInternal(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1
     .line 2

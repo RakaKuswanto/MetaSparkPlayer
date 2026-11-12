@@ -1,62 +1,100 @@
-.class public final synthetic LX/63V;
+.class public final LX/63V;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AudioRendererEventListener$EventDispatcher$$ExternalSyntheticLambda5"
-
 
 # instance fields
-.field public final synthetic A00:LX/63E;
+.field public A00:LX/645;
 
-.field public final synthetic A01:LX/62Y;
+.field public A01:LX/639;
+
+.field public A02:LX/69t;
+
+.field public A03:Z
+
+.field public volatile A04:Z
+
+.field public volatile A05:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/63E;LX/62Y;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/63V;->A00:LX/63E;
-
-    iput-object p2, p0, LX/63V;->A01:LX/62Y;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/63V;->A00:LX/63E;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/63V;->A01:LX/62Y;
-
     .line 3
+    const/4 v0, 0x0
+
     .line 4
-    monitor-enter v1
+    iput-boolean v0, p0, LX/63V;->A05:Z
 
     .line 5
-    monitor-exit v1
-
     .line 6
-    iget-object v0, v0, LX/63E;->A01:LX/63U;
+    iput-boolean v0, p0, LX/63V;->A04:Z
 
     .line 7
     .line 8
-    invoke-interface {v0, v1}, LX/63U;->AV2(LX/62Y;)V
+    iget-object v2, p0, LX/63V;->A00:LX/645;
 
     .line 9
     .line 10
+    if-eqz v2, :cond_0
+
     .line 11
+    .line 12
+    const-wide/16 v0, 0x0
+
+    .line 13
+    .line 14
+    iput-wide v0, v2, LX/645;->A02:J
+
+    .line 15
+    .line 16
+    :cond_0
+    iget-object v2, p0, LX/63V;->A02:LX/69t;
+
+    .line 17
+    .line 18
+    if-eqz v2, :cond_1
+
+    .line 19
+    .line 20
+    const-wide/16 v0, 0x0
+
+    .line 21
+    .line 22
+    iput-wide v0, v2, LX/69t;->A00:J
+
+    .line 23
+    .line 24
+    :cond_1
+    iget-object v2, p0, LX/63V;->A01:LX/639;
+
+    .line 25
+    .line 26
+    if-eqz v2, :cond_2
+
+    .line 27
+    .line 28
+    const-wide/16 v0, 0x0
+
+    .line 29
+    .line 30
+    iput-wide v0, v2, LX/639;->A01:J
+
+    .line 31
+    .line 32
+    :cond_2
+    const/4 v0, 0x1
+
+    .line 33
+    iput-boolean v0, p0, LX/63V;->A03:Z
+
+    .line 34
+    .line 35
     return-void
 .end method

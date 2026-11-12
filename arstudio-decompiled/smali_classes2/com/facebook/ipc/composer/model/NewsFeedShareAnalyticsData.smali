@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field public final A00:LX/0ry;
+.field public final A00:LX/14u;
 
 .field public final A01:Ljava/lang/String;
 
@@ -33,25 +33,26 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x1
+    const/16 v0, 0x26
 
     .line 1
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
-
     .line 2
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
-.method public constructor <init>(LX/0ry;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(LX/14u;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -60,7 +61,7 @@
 
     iput-object p3, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A02:Ljava/lang/String;
 
-    iput-object p1, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/0ry;
+    iput-object p1, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/14u;
 
     return-void
 .end method
@@ -74,7 +75,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -123,7 +124,7 @@
 
     .line 25
     .line 26
-    invoke-static {}, LX/0ry;->values()[LX/0ry;
+    invoke-static {}, LX/14u;->values()[LX/14u;
 
     .line 27
     .line 28
@@ -144,7 +145,7 @@
     .line 35
     .line 36
     :cond_0
-    iput-object v1, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/0ry;
+    iput-object v1, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/14u;
 
     .line 37
     .line 38
@@ -227,7 +228,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -247,7 +248,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -259,11 +260,11 @@
 
     .line 29
     .line 30
-    iget-object v1, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/0ry;
+    iget-object v1, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/14u;
 
     .line 31
     .line 32
-    iget-object v0, p1, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/0ry;
+    iget-object v0, p1, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/14u;
 
     .line 33
     .line 34
@@ -287,7 +288,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -303,7 +304,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -314,11 +315,11 @@
     add-int/2addr v2, v0
 
     .line 15
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/0ry;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/14u;
 
     .line 16
     .line 17
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
     .line 18
     .line 19
@@ -344,7 +345,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -353,16 +354,16 @@
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 8
     .line 9
     .line 10
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/0ry;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/NewsFeedShareAnalyticsData;->A00:LX/14u;
 
     .line 11
     .line 12
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 13
     .line 14

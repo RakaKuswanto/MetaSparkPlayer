@@ -23,7 +23,7 @@
 
     .line 4
     .line 5
-    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataProviderConfiguration;->mDataSource:LX/5WZ;
+    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataProviderConfiguration;->mDataSource:LX/5pC;
 
     .line 6
     .line 7
@@ -31,7 +31,7 @@
 
     .line 8
     .line 9
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;-><init>(LX/5WZ;)V
+    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;-><init>(LX/5pC;)V
 
     .line 10
     .line 11

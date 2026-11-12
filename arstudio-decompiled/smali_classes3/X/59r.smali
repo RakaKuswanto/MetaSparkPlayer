@@ -1,35 +1,130 @@
-.class public final LX/59r;
-.super LX/5A3;
+.class public final LX/59R;
+.super Ljava/io/BufferedOutputStream;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "zaao"
-
-
 # instance fields
-.field public final A00:Ljava/util/Map;
-
-.field public final synthetic A01:LX/59l;
+.field public A00:Z
 
 
 # direct methods
-.method public constructor <init>(LX/59l;Ljava/util/Map;)V
+.method public constructor <init>(Ljava/io/OutputStream;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/io/OutputStream;I)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/59r;->A01:LX/59l;
+    invoke-direct {p0, p1, p2}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
 
     .line 1
     .line 2
-    invoke-direct {p0, p1}, LX/5A3;-><init>(LX/59l;)V
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00(Ljava/io/OutputStream;)V
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, LX/59R;->A00:Z
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/55g;->A05(Z)V
 
     .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/59r;->A00:Ljava/util/Map;
+    iput-object p1, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     .line 6
     .line 7
+    const/4 v0, 0x0
+
+    .line 8
+    iput v0, p0, Ljava/io/BufferedOutputStream;->count:I
+
+    .line 9
+    .line 10
+    iput-boolean v0, p0, LX/59R;->A00:Z
+
+    .line 11
+    .line 12
     return-void
+.end method
+
+.method public final close()V
+    .locals 2
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    iput-boolean v0, p0, LX/59R;->A00:Z
+
+    .line 2
+    .line 3
+    :try_start_0
+    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
+
+    .line 4
+    .line 5
+    .line 6
+    const/4 v1, 0x0
+
+    .line 7
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 8
+    :catchall_0
+    move-exception v1
+
+    .line 9
+    :goto_0
+    :try_start_1
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+
+    .line 12
+    .line 13
+    .line 14
+    if-nez v1, :cond_0
+
+    .line 15
+    .line 16
+    return-void
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 17
+    :catchall_1
+    move-exception v0
+
+    .line 18
+    if-nez v1, :cond_0
+
+    .line 19
+    .line 20
+    throw v0
+
+    .line 21
+    :cond_0
+    throw v1
 .end method

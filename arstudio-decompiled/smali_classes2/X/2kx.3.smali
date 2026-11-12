@@ -1,143 +1,123 @@
 .class public final LX/2kx;
-.super LX/5B7;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbNetworkManager$ActivityLifecycleListener$1"
 
 
 # instance fields
-.field public final A00:LX/1Nm;
-
-.field public final A01:LX/1Nw;
+.field public final synthetic A00:Lcom/facebook/common/network/FbNetworkManager$ActivityLifecycleListener;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public constructor <init>(Lcom/facebook/common/network/FbNetworkManager$ActivityLifecycleListener;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5B7;-><init>()V
+    iput-object p1, p0, LX/2kx;->A00:Lcom/facebook/common/network/FbNetworkManager$ActivityLifecycleListener;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/2kx;->A01:LX/1Nw;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    invoke-static {}, LX/1Nl;->A05()LX/1Nm;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/2kx;->A00:LX/1Nm;
-
-    .line 10
-    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()J
-    .locals 3
+.method public final run()V
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/2kx;->A00:LX/1Nm;
+    iget-object v0, p0, LX/2kx;->A00:Lcom/facebook/common/network/FbNetworkManager$ActivityLifecycleListener;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
+    iget-object v3, v0, Lcom/facebook/common/network/FbNetworkManager$ActivityLifecycleListener;->A00:Lcom/facebook/common/network/FbNetworkManager;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v2
+    iget-object v2, v3, Lcom/facebook/common/network/FbNetworkManager;->A0M:Ljava/lang/Object;
 
+    .line 5
     .line 6
-    const-wide v0, 0x82004a0034024bL
+    monitor-enter v2
 
     .line 7
+    :try_start_0
+    iget-object v0, v3, Lcom/facebook/common/network/FbNetworkManager;->A02:Landroid/net/NetworkInfo;
+
     .line 8
     .line 9
+    if-eqz v0, :cond_0
+
     .line 10
     .line 11
-    invoke-interface {v2, v0, v1}, LX/35B;->AIM(J)J
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getDetailedState()Landroid/net/NetworkInfo$DetailedState;
 
     .line 12
     .line 13
     .line 14
-    move-result-wide v0
+    move-result-object v1
 
     .line 15
-    return-wide v0
-.end method
+    sget-object v0, Landroid/net/NetworkInfo$DetailedState;->BLOCKED:Landroid/net/NetworkInfo$DetailedState;
 
-.method public final A01()Z
-    .locals 3
+    .line 16
+    .line 17
+    if-ne v1, v0, :cond_0
 
-    .line 0
-    iget-object v0, p0, LX/2kx;->A00:LX/1Nm;
+    .line 18
+    .line 19
+    iget-object v0, v3, Lcom/facebook/common/network/FbNetworkManager;->A0E:LX/0RP;
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
+    .line 20
+    .line 21
+    invoke-static {v0}, LX/0X6;->A19(LX/0RP;)Ljava/util/concurrent/ExecutorService;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v2
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v1
 
-    .line 6
-    const-wide v0, 0x81004a00330476L
+    .line 25
+    new-instance v0, LX/2lA;
 
-    .line 7
-    .line 8
-    .line 9
-    .line 10
-    .line 11
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    .line 26
+    .line 27
+    invoke-direct {v0, p0}, LX/2lA;-><init>(LX/2kx;)V
 
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
+    .line 28
+    .line 29
+    .line 30
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 15
-    return v0
-.end method
+    .line 31
+    .line 32
+    .line 33
+    :cond_0
+    monitor-exit v2
 
-.method public final A02()Z
-    .locals 3
+    .line 34
+    return-void
 
-    .line 0
-    iget-object v0, p0, LX/2kx;->A00:LX/1Nm;
+    .line 35
+    :catchall_0
+    move-exception v0
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
+    .line 36
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v2
-
-    .line 6
-    const-wide v0, 0x81004a00350477L
-
-    .line 7
-    .line 8
-    .line 9
-    .line 10
-    .line 11
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
-
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
-
-    .line 15
-    return v0
+    .line 37
+    throw v0
 .end method

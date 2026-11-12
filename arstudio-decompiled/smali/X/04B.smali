@@ -1,123 +1,238 @@
 .class public final LX/04B;
-.super Ljava/lang/Object;
+.super LX/0Mw;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/049;
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:LX/0Ug;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroid/view/Window;)V
-    .locals 2
+.method public constructor <init>(LX/0S2;LX/0RK;Ljava/lang/String;IIIJ)V
+    .locals 7
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v0, p0
 
     .line 1
+    move-object v1, p1
+
     .line 2
+    move-object v2, p2
+
     .line 3
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-object v3, p3
 
     .line 4
+    move v4, p4
+
     .line 5
-    const/16 v0, 0x1e
+    move-wide v5, p7
 
     .line 6
-    .line 7
-    if-lt v1, v0, :cond_0
+    invoke-direct/range {v0 .. v6}, LX/0Mw;-><init>(LX/0S2;LX/0RK;Ljava/lang/String;IJ)V
 
+    .line 7
     .line 8
     .line 9
-    new-instance v0, LX/0VC;
+    iput p5, p0, LX/04B;->A00:I
 
     .line 10
     .line 11
-    invoke-direct {v0, p2, p0}, LX/0VC;-><init>(Landroid/view/Window;LX/04B;)V
+    iput p6, p0, LX/04B;->A01:I
+
+    .line 12
+    .line 13
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/04B;->A02:LX/0Ug;
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    .line 6
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    iput-object v0, p0, LX/04B;->A02:LX/0Ug;
+
+    .line 10
+    .line 11
+    :cond_0
+    invoke-super {p0}, LX/0Mw;->A00()V
 
     .line 12
     .line 13
     .line 14
-    :goto_0
-    iput-object v0, p0, LX/04B;->A00:LX/049;
+    return-void
+.end method
+
+.method public final A01()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/04B;->A02:LX/0Ug;
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    .line 6
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    iput-object v0, p0, LX/04B;->A02:LX/0Ug;
+
+    .line 10
+    .line 11
+    :cond_0
+    invoke-super {p0}, LX/0Mw;->A01()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public final A03(LX/0Rg;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/04B;->A02:LX/0Ug;
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    .line 6
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    iput-object v0, p0, LX/04B;->A02:LX/0Ug;
+
+    .line 10
+    .line 11
+    :cond_0
+    invoke-super {p0, p1}, LX/0Mw;->A03(LX/0Rg;)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
+
+    .line 4
+    const-string v0, "MqttRetriableOperation{mResponseType="
+
+    .line 5
+    .line 6
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/0Mw;->A04:LX/0RK;
+
+    .line 10
+    .line 11
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 12
+    .line 13
+    .line 14
+    const-string v0, ", mOperationId="
 
     .line 15
     .line 16
-    return-void
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 17
-    :cond_0
-    const/16 v0, 0x1a
-
     .line 18
     .line 19
-    if-lt v1, v0, :cond_1
+    iget v0, p0, LX/0Mw;->A01:I
 
     .line 20
     .line 21
-    new-instance v0, LX/02X;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 22
     .line 23
-    invoke-direct {v0, p1, p2}, LX/02X;-><init>(Landroid/view/View;Landroid/view/Window;)V
-
     .line 24
+    const-string v0, ", mCreationTime="
+
     .line 25
     .line 26
-    goto :goto_0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 27
-    :cond_1
-    const/16 v0, 0x17
-
     .line 28
     .line 29
-    if-lt v1, v0, :cond_2
+    iget-wide v0, p0, LX/0Mw;->A02:J
 
     .line 30
     .line 31
-    new-instance v0, LX/0BS;
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 32
     .line 33
-    invoke-direct {v0, p1, p2}, LX/0BS;-><init>(Landroid/view/View;Landroid/view/Window;)V
-
     .line 34
+    invoke-static {v2}, LX/001;->A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 35
     .line 36
-    goto :goto_0
-
     .line 37
-    :cond_2
-    const/16 v0, 0x14
+    move-result-object v0
 
     .line 38
-    .line 39
-    if-lt v1, v0, :cond_3
-
-    .line 40
-    .line 41
-    new-instance v0, LX/0VE;
-
-    .line 42
-    .line 43
-    invoke-direct {v0, p1, p2}, LX/0VE;-><init>(Landroid/view/View;Landroid/view/Window;)V
-
-    .line 44
-    .line 45
-    .line 46
-    goto :goto_0
-
-    .line 47
-    :cond_3
-    new-instance v0, LX/049;
-
-    .line 48
-    .line 49
-    invoke-direct {v0}, LX/049;-><init>()V
-
-    .line 50
-    .line 51
-    .line 52
-    goto :goto_0
+    return-object v0
 .end method

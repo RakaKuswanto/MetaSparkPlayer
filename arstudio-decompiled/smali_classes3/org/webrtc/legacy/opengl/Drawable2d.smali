@@ -79,7 +79,6 @@
     .line 29
     nop
 
-    .line 30
     :array_0
     .array-data 4
         -0x40800000    # -1.0f
@@ -92,7 +91,6 @@
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 31
     :array_1
     .array-data 4
         0x0

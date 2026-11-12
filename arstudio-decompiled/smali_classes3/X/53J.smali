@@ -2,70 +2,118 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/555;
+.implements LX/554;
+.implements LX/55C;
 
-# static fields
-.field public static A00:[Ljava/lang/String;
+
+# instance fields
+.field public final synthetic A00:LX/52u;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(LX/52u;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x4
+    iput-object p1, p0, LX/53J;->A00:LX/52u;
 
     .line 1
-    new-array v2, v0, [Ljava/lang/String;
-
     .line 2
-    .line 3
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
-    const-string v0, "standard"
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AUg(Landroid/os/Bundle;)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/53J;->A00:LX/52u;
+
+    .line 1
+    .line 2
+    iget-object v1, v0, LX/52u;->A06:Ljava/util/concurrent/ExecutorService;
+
+    .line 3
+    .line 4
+    new-instance v0, LX/53L;
 
     .line 5
     .line 6
-    aput-object v0, v2, v1
+    invoke-direct {v0, p0}, LX/53L;-><init>(LX/53J;)V
 
     .line 7
     .line 8
-    const/4 v1, 0x1
-
     .line 9
-    const-string v0, "accelerate"
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     .line 10
     .line 11
-    aput-object v0, v2, v1
-
     .line 12
-    .line 13
-    const/4 v1, 0x2
+    return-void
+.end method
 
-    .line 14
-    const-string v0, "decelerate"
+.method public final AUi(Lcom/google/android/gms/common/ConnectionResult;)V
+    .locals 2
 
-    .line 15
-    .line 16
-    aput-object v0, v2, v1
+    .line 0
+    iget-object v0, p0, LX/53J;->A00:LX/52u;
 
-    .line 17
-    .line 18
-    const/4 v1, 0x3
+    .line 1
+    .line 2
+    iget-object v1, v0, LX/52u;->A06:Ljava/util/concurrent/ExecutorService;
 
-    .line 19
-    const-string v0, "linear"
+    .line 3
+    .line 4
+    new-instance v0, LX/53K;
 
-    .line 20
-    .line 21
-    aput-object v0, v2, v1
+    .line 5
+    .line 6
+    invoke-direct {v0, p0, p1}, LX/53K;-><init>(LX/53J;Lcom/google/android/gms/common/ConnectionResult;)V
 
-    .line 22
-    .line 23
-    sput-object v2, LX/53J;->A00:[Ljava/lang/String;
+    .line 7
+    .line 8
+    .line 9
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 24
-    .line 25
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public final AUk(I)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/53J;->A00:LX/52u;
+
+    .line 1
+    .line 2
+    iget-object v1, v0, LX/52u;->A06:Ljava/util/concurrent/ExecutorService;
+
+    .line 3
+    .line 4
+    new-instance v0, LX/53Y;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0}, LX/53Y;-><init>(LX/53J;)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 10
+    .line 11
+    .line 12
     return-void
 .end method

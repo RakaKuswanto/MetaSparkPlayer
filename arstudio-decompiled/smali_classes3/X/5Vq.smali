@@ -1,14 +1,29 @@
-.class public interface abstract LX/5Vq;
+.class public abstract LX/5VQ;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract cancel()V
-.end method
+# static fields
+.field public static final A00:Ljava/lang/ThreadLocal;
 
-.method public abstract vibrate(Ljava/util/List;Ljava/util/List;)V
-.end method
 
-.method public abstract vibrateSingleShot()V
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/5VP;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/5VP;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/5VQ;->A00:Ljava/lang/ThreadLocal;
+
+    .line 6
+    .line 7
+    return-void
 .end method

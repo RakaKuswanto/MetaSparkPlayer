@@ -1,40 +1,23 @@
-.class public final LX/2rx;
+.class public interface abstract LX/2rx;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/2xd;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
 
 # virtual methods
-.method public final A5n()V
-    .locals 0
-
-    return-void
+.method public abstract get(IJ)J
 .end method
 
-.method public final A7H(Landroid/content/Context;Ljava/lang/String;I)V
-    .locals 0
-
-    return-void
+.method public abstract indexOfKey(I)I
 .end method
 
-.method public final notAsBadTimeToDoGc()V
-    .locals 0
+.method public abstract keyAt(I)I
+.end method
 
-    return-void
+.method public abstract put(IJ)V
+.end method
+
+.method public abstract size()I
+.end method
+
+.method public abstract valueAt(I)J
 .end method

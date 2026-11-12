@@ -25,27 +25,28 @@
 
     .line 0
     :try_start_0
-    const-string v0, "com.facebook.analytics2.logger.GooglePlayUploadService"
+    const-string/jumbo v0, "com.facebook.analytics2.logger.GooglePlayUploadService"
 
     .line 1
     .line 2
+    .line 3
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 3
     .line 4
     .line 5
+    .line 6
     const/4 v0, 0x1
 
-    .line 6
+    .line 7
     return v0
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
+    .line 8
     :catch_0
     const/4 v0, 0x0
 
-    .line 8
+    .line 9
     return v0
 .end method
 
@@ -88,7 +89,7 @@
 
     .line 15
     .line 16
-    iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+    iget-object v1, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
     .line 17
     .line 18
@@ -96,44 +97,45 @@
 
     .line 19
     .line 20
-    const-string v0, "com.google.android.gms.version"
+    const-string/jumbo v0, "com.google.android.gms.version"
 
     .line 21
     .line 22
+    .line 23
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 23
     .line 24
     .line 25
+    .line 26
     move-result v0
 
-    .line 26
+    .line 27
     return v0
 
-    .line 27
+    .line 28
     :cond_0
     const/4 v0, 0x0
 
-    .line 28
+    .line 29
     return v0
 
-    .line 29
+    .line 30
     :catch_0
     move-exception v0
 
-    .line 30
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
     .line 31
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
     .line 32
     .line 33
+    .line 34
     move-result-object v0
 
-    .line 34
+    .line 35
     throw v0
 .end method
 
-.method public static createUploadSchedulerImpl(Landroid/content/Context;)LX/3m2;
+.method public static createUploadSchedulerImpl(Landroid/content/Context;)LX/3Co;
     .locals 2
 
     .line 0
@@ -168,7 +170,7 @@
 
     .line 14
     .line 15
-    invoke-virtual {v0, p0}, LX/4fK;->isGooglePlayServicesAvailable(Landroid/content/Context;)I
+    invoke-virtual {v0, p0}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->isGooglePlayServicesAvailable(Landroid/content/Context;)I
 
     .line 16
     .line 17
@@ -185,11 +187,11 @@
     .line 22
     .line 23
     .line 24
-    new-instance v1, LX/3kI;
+    new-instance v1, LX/3Cd;
 
     .line 25
     .line 26
-    invoke-direct {v1, p0}, LX/3kI;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, LX/3Cd;-><init>(Landroid/content/Context;)V
 
     .line 27
     .line 28

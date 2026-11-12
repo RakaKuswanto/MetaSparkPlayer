@@ -3,13 +3,53 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s ecibandinên Rûpelê</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s ecibandin</item>
-        <item quantity="one">%1$s Ecibandin</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">Bereî %1$d rojan</item>
+        <item quantity="one">Rojek berê</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d roj</item>
+        <item quantity="one">Rojek</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d roj</item>
+        <item quantity="one">rojek</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d saet</item>
+        <item quantity="one">Saetek</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d deqîqe</item>
+        <item quantity="one">Deqîqeyek</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d hefte</item>
+        <item quantity="one">Heftîyek</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d sal</item>
+        <item quantity="one">Salek</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">Berî %1$d saetan</item>
         <item quantity="one">saetek berê</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d saet</item>
+        <item quantity="one">Saetek</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d saet</item>
+        <item quantity="one">saetek</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d saet</item>
+        <item quantity="one">Saetek</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">berî %1$d saetan</item>
+        <item quantity="one">Berî saetekê</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">Piştî %1$d saetan</item>
@@ -19,8 +59,60 @@
         <item quantity="other">piştî %1$d deqîqeyan</item>
         <item quantity="one">Piştî deqîqeyekê</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">berî %1$d deqîqeyan</item>
+        <item quantity="one">berî deqîqeyekê</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">Berî %1$d deqîqeyan</item>
         <item quantity="one">Berî deqîqeyekê</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d deqîqeyan</item>
+        <item quantity="one">Deqîqeyek</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$ddq</item>
+        <item quantity="one">1dq</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">berî %1$d mehan</item>
+        <item quantity="one">Mehek berê</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">Beriya %1$d saniyeyan</item>
+        <item quantity="one">1 saniye</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d hefte berê</item>
+        <item quantity="one">Hefteyek berê</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d sal berê</item>
+        <item quantity="one">Salek berê</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Te berî %1$d rojan serdan kir</item>
+        <item quantity="one">Te berî 1 rojê serdan kir</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Te berî %1$d saetan serdan kiriye</item>
+        <item quantity="one">Te berî saetekê serdan kiriye</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Te berî %1$d deqîqeyan serdan kir</item>
+        <item quantity="one">Te berî 1 deqîqe serdan kir</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Te berî %1$d mehan serdan kir</item>
+        <item quantity="one">Te berî mehekê serdan kir</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Te berî %1$d hefteyan serdan kir</item>
+        <item quantity="one">Te berî 1 hefte serdan kir</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Te berî %1$d salan serdan kiribû</item>
+        <item quantity="one">Te berî 1 mehê serdan kir</item>
     </plurals>
 </resources>

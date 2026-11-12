@@ -3,52 +3,23 @@
 .source ""
 
 
-# static fields
-.field public static final A00:[I
-
-
 # instance fields
 .field public mGutterSize:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    new-array v2, v0, [I
-
-    .line 2
-    .line 3
-    const/4 v1, 0x0
-
-    .line 4
-    const v0, 0x10100b3
-
-    .line 5
-    .line 6
-    .line 7
-    aput v0, v2, v1
-
-    .line 8
-    .line 9
-    sput-object v2, Landroidx/viewpager/widget/ViewPager;->A00:[I
-
-    .line 10
-    .line 11
-    return-void
-.end method
-
 .method private getClientWidth()I
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     throw v0
 .end method
 
@@ -56,15 +27,20 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     throw v0
 .end method
 
 
 # virtual methods
-.method public abstract getAdapter()LX/07i;
+.method public abstract getAdapter()LX/089;
 .end method
 
 .method public abstract getCurrentItem()I
@@ -76,7 +52,7 @@
 .method public abstract getPageMargin()I
 .end method
 
-.method public abstract setAdapter(LX/07i;)V
+.method public abstract setAdapter(LX/089;)V
 .end method
 
 .method public abstract setCurrentItem(I)V
@@ -88,7 +64,7 @@
 .method public abstract setOffscreenPageLimit(I)V
 .end method
 
-.method public abstract setOnPageChangeListener(LX/07o;)V
+.method public abstract setOnPageChangeListener(LX/08G;)V
 .end method
 
 .method public abstract setPageMargin(I)V

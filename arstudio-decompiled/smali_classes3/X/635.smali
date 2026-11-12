@@ -3,196 +3,148 @@
 .source ""
 
 # interfaces
-.implements LX/645;
-.implements Landroid/hardware/display/DisplayManager$DisplayListener;
+.implements LX/68C;
 
 
 # instance fields
-.field public A00:LX/64A;
+.field public A00:LX/5wv;
 
-.field public final A01:Landroid/hardware/display/DisplayManager;
+.field public final synthetic A01:LX/622;
 
 
 # direct methods
-.method public constructor <init>(Landroid/hardware/display/DisplayManager;)V
+.method public constructor <init>(LX/5wv;LX/622;)V
     .locals 0
 
     .line 0
+    iput-object p2, p0, LX/635;->A01:LX/622;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/635;->A01:Landroid/hardware/display/DisplayManager;
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static A00(Landroid/content/Context;)LX/635;
-    .locals 1
-
-    .line 0
-    const-string v0, "display"
-
-    .line 1
-    .line 2
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
     .line 3
     .line 4
     .line 5
-    move-result-object p0
+    iput-object p1, p0, LX/635;->A00:LX/5wv;
 
     .line 6
-    check-cast p0, Landroid/hardware/display/DisplayManager;
-
     .line 7
-    .line 8
-    if-eqz p0, :cond_0
-
-    .line 9
-    .line 10
-    new-instance v0, LX/635;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, p0}, LX/635;-><init>(Landroid/hardware/display/DisplayManager;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-object v0
-
-    .line 16
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 17
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final AiA(LX/64A;)V
-    .locals 2
-
-    .line 0
-    iput-object p1, p0, LX/635;->A00:LX/64A;
-
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/635;->A01:Landroid/hardware/display/DisplayManager;
-
-    .line 3
-    .line 4
-    const/4 v0, 0x0
-
-    .line 5
-    invoke-static {v0}, LX/5PE;->A01(Landroid/os/Handler$Callback;)Landroid/os/Handler;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    invoke-virtual {v1, p0, v0}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
-
-    .line 10
-    .line 11
-    .line 12
-    const/4 v0, 0x0
-
-    .line 13
-    invoke-virtual {v1, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    invoke-interface {p1, v0}, LX/64A;->AWn(Landroid/view/Display;)V
-
-    .line 18
-    .line 19
-    .line 20
-    return-void
-.end method
-
-.method public final AqF()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/635;->A01:Landroid/hardware/display/DisplayManager;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p0}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
-
-    .line 3
-    .line 4
-    .line 5
-    const/4 v0, 0x0
-
-    .line 6
-    iput-object v0, p0, LX/635;->A00:LX/64A;
-
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public final onDisplayAdded(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onDisplayChanged(I)V
+.method public final AoI(Landroid/view/Surface;LX/62t;)V
     .locals 3
 
     .line 0
-    iget-object v2, p0, LX/635;->A00:LX/64A;
+    if-eqz p2, :cond_0
 
     .line 1
     .line 2
-    if-eqz v2, :cond_0
+    iget-object v2, p0, LX/635;->A01:LX/622;
 
     .line 3
     .line 4
-    if-nez p1, :cond_0
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 5
     .line 6
-    iget-object v1, p0, LX/635;->A01:Landroid/hardware/display/DisplayManager;
-
     .line 7
+    move-result-object v1
+
     .line 8
-    const/4 v0, 0x0
+    invoke-static {v1, p2, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 9
-    invoke-virtual {v1, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
-
     .line 10
     .line 11
-    .line 12
-    move-result-object v0
+    const/16 v0, 0xa
 
+    .line 12
     .line 13
-    invoke-interface {v2, v0}, LX/64A;->AWn(Landroid/view/Display;)V
+    invoke-static {v2, v1, v0}, LX/622;->A01(LX/622;[Ljava/lang/Object;I)V
 
     .line 14
     .line 15
     .line 16
-    :cond_0
     return-void
+
+    .line 17
+    :cond_0
+    const-string v0, "Cannot create surface given null output"
+
+    .line 18
+    .line 19
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    throw v0
 .end method
 
-.method public final onDisplayRemoved(I)V
-    .locals 0
+.method public final AoJ(LX/62t;)V
+    .locals 2
 
+    .line 0
+    iget-object v1, p0, LX/635;->A01:LX/622;
+
+    .line 1
+    .line 2
+    iget-object v0, v1, LX/622;->A03:LX/62D;
+
+    .line 3
+    .line 4
+    if-eqz p1, :cond_0
+
+    .line 5
+    .line 6
+    monitor-enter p1
+
+    .line 7
+    :try_start_0
+    iget-object v0, v0, LX/62D;->A0f:Ljava/util/Set;
+
+    .line 8
+    .line 9
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 10
+    .line 11
+    .line 12
+    monitor-exit p1
+
+    .line 13
+    goto :goto_0
+
+    .line 14
+    :catchall_0
+    move-exception v0
+
+    .line 15
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 16
+    throw v0
+
+    .line 17
+    :cond_0
+    :goto_0
+    const/16 v0, 0xb
+
+    .line 18
+    .line 19
+    invoke-static {v1, p1, v0}, LX/622;->A00(LX/622;Ljava/lang/Object;I)V
+
+    .line 20
+    .line 21
+    .line 22
     return-void
 .end method

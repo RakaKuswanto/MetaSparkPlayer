@@ -1,14 +1,17 @@
-.class public interface abstract LX/00B;
+.class public abstract LX/00B;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/concurrent/Executor;
 
+# direct methods
+.method public static A00(Landroid/view/View;)V
+    .locals 0
 
-# virtual methods
-.method public abstract A4W()V
-.end method
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->cancelPendingInputEvents()V
 
-.method public abstract Aqx(Landroid/view/View;)V
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

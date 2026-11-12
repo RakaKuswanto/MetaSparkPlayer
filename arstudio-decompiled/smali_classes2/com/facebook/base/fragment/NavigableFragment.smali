@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract setNavigationListener(LX/3CC;)V
+.method public abstract setNavigationListener(LX/2vx;)V
 .end method

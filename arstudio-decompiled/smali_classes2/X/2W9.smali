@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0JA;
+.implements LX/4b8;
 
 
 # direct methods
@@ -21,17 +21,18 @@
 
 
 # virtual methods
-.method public final now()J
-    .locals 2
+.method public final ADx()LX/4b7;
+    .locals 1
 
     .line 0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    new-instance v0, LX/2W8;
 
     .line 1
     .line 2
-    .line 3
-    move-result-wide v0
+    invoke-direct {v0}, LX/2W8;-><init>()V
 
+    .line 3
     .line 4
-    return-wide v0
+    .line 5
+    return-object v0
 .end method

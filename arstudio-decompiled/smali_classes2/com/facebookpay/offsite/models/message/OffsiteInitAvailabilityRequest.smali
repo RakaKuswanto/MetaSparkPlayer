@@ -32,40 +32,13 @@
     return-void
 .end method
 
-.method public static synthetic buildInitAvailabilityRequest$default(Lcom/facebookpay/offsite/models/message/OffsiteInitAvailabilityRequest;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/facebookpay/offsite/models/message/PaymentRequest;
-    .locals 1
-
-    .line 0
-    and-int/lit8 v0, p3, 0x2
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    const/4 p2, 0x0
-
-    .line 5
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/facebookpay/offsite/models/message/OffsiteInitAvailabilityRequest;->buildInitAvailabilityRequest(Ljava/lang/String;Ljava/lang/String;)Lcom/facebookpay/offsite/models/message/PaymentRequest;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final buildInitAvailabilityRequest(Ljava/lang/String;Ljava/lang/String;)Lcom/facebookpay/offsite/models/message/PaymentRequest;
+.method public final buildInitAvailabilityRequest()Lcom/facebookpay/offsite/models/message/PaymentRequest;
     .locals 19
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 1
     .line 2
@@ -73,7 +46,7 @@
     move-result-object v3
 
     .line 4
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 5
     .line 6
@@ -81,7 +54,7 @@
     move-result-object v4
 
     .line 8
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 9
     .line 10
@@ -89,7 +62,7 @@
     move-result-object v5
 
     .line 12
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 13
     .line 14
@@ -122,40 +95,40 @@
     move-object v12, v8
 
     .line 25
-    invoke-direct/range {v1 .. v12}, Lcom/facebookpay/offsite/models/message/PaymentDetails;-><init>(Lcom/facebookpay/offsite/models/message/PaymentItem;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Lcom/facebookpay/offsite/models/message/W3CShippingAddress;Lcom/facebookpay/offsite/models/message/W3CShippingAddress;Ljava/util/List;Lcom/facebookpay/offsite/models/message/PaymentPickupInfo;)V
-
-    .line 26
-    .line 27
-    .line 28
-    const/4 v3, 0x1
-
-    .line 29
-    const/4 v12, 0x0
-
-    .line 30
-    new-instance v2, Lcom/facebookpay/offsite/models/message/PaymentOptions;
-
-    .line 31
-    .line 32
-    move v4, v3
-
-    .line 33
-    move v5, v3
-
-    .line 34
-    move v6, v3
-
-    .line 35
-    move v7, v3
-
-    .line 36
-    move v11, v3
-
-    .line 37
     move-object v13, v8
 
-    .line 38
+    .line 26
     move-object v14, v8
+
+    .line 27
+    invoke-direct/range {v1 .. v14}, Lcom/facebookpay/offsite/models/message/PaymentDetails;-><init>(Lcom/facebookpay/offsite/models/message/PaymentItem;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Lcom/facebookpay/offsite/models/message/W3CShippingAddress;Lcom/facebookpay/offsite/models/message/W3CShippingAddress;Ljava/util/List;Lcom/facebookpay/offsite/models/message/PaymentPickupInfo;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 28
+    .line 29
+    .line 30
+    const/4 v3, 0x1
+
+    .line 31
+    const/4 v12, 0x0
+
+    .line 32
+    new-instance v2, Lcom/facebookpay/offsite/models/message/PaymentOptions;
+
+    .line 33
+    .line 34
+    move v4, v3
+
+    .line 35
+    move v5, v3
+
+    .line 36
+    move v6, v3
+
+    .line 37
+    move v7, v3
+
+    .line 38
+    move v11, v3
 
     .line 39
     move-object v15, v8
@@ -178,7 +151,7 @@
     .line 47
     .line 48
     .line 49
-    invoke-static {}, LX/1Th;->A00()LX/1Th;
+    invoke-static {}, LX/0X5;->A0w()LX/24e;
 
     .line 50
     .line 51
@@ -198,7 +171,7 @@
     move-result-object v13
 
     .line 59
-    invoke-static {v13}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v13}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 60
     .line 61
@@ -246,18 +219,19 @@
     move-result-wide v6
 
     .line 83
-    const-string v9, "fbpayAvailableOnInitRequest"
+    const-string/jumbo v9, "fbpayAvailableOnInitRequest"
 
     .line 84
     .line 85
+    .line 86
     new-instance v3, Lcom/facebookpay/offsite/models/message/PaymentRequest;
 
-    .line 86
     .line 87
+    .line 88
     invoke-direct/range {v3 .. v10}, Lcom/facebookpay/offsite/models/message/PaymentRequest;-><init>(Ljava/lang/String;Lcom/facebookpay/offsite/models/message/PaymentRequestContent;JLjava/lang/String;Ljava/lang/String;Lcom/facebookpay/offsite/models/message/PaymentError;)V
 
-    .line 88
     .line 89
     .line 90
+    .line 91
     return-object v3
 .end method

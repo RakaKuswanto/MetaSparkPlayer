@@ -7,33 +7,33 @@
 
 
 # static fields
-.field public static volatile A0D:LX/0j7;
+.field public static volatile A0D:LX/17S;
 
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
 
 # instance fields
-.field public final A00:F
+.field public final A00:LX/3jk;
 
-.field public final A01:F
+.field public final A01:LX/3jm;
 
-.field public final A02:F
+.field public final A02:D
 
-.field public final A03:LX/32N;
+.field public final A03:D
 
-.field public final A04:Lcom/facebook/spherical/video/model/GuidedTourParams;
+.field public final A04:F
 
-.field public final A05:LX/33v;
+.field public final A05:F
 
-.field public final A06:D
+.field public final A06:F
 
-.field public final A07:D
+.field public final A07:Lcom/facebook/spherical/model/PanoBounds;
 
-.field public final A08:Lcom/facebook/spherical/model/PanoBounds;
+.field public final A08:LX/17S;
 
-.field public final A09:LX/0j7;
+.field public final A09:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
 
-.field public final A0A:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
+.field public final A0A:Lcom/facebook/spherical/video/model/GuidedTourParams;
 
 .field public final A0B:Ljava/util/Set;
 
@@ -45,11 +45,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x21
+    const/16 v0, 0xd
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -73,7 +73,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -96,7 +96,7 @@
 
     .line 13
     .line 14
-    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:LX/33v;
+    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:LX/3jm;
 
     .line 15
     .line 16
@@ -112,7 +112,7 @@
     const/4 v2, 0x0
 
     .line 21
-    invoke-static {v0}, LX/0Ye;->A1V(I)Z
+    invoke-static {v0}, LX/0X3;->A1X(I)Z
 
     .line 22
     .line 23
@@ -132,7 +132,7 @@
     move-result-wide v0
 
     .line 31
-    iput-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:D
+    iput-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:D
 
     .line 32
     .line 33
@@ -148,7 +148,7 @@
 
     .line 38
     .line 39
-    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:Lcom/facebook/spherical/video/model/GuidedTourParams;
+    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/model/GuidedTourParams;
 
     .line 40
     .line 41
@@ -165,7 +165,7 @@
 
     .line 46
     .line 47
-    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
+    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
 
     .line 48
     .line 49
@@ -178,7 +178,7 @@
     move-result v0
 
     .line 53
-    iput v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:F
+    iput v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:F
 
     .line 54
     .line 55
@@ -190,7 +190,7 @@
     move-result v0
 
     .line 59
-    iput v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:F
+    iput v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:F
 
     .line 60
     .line 61
@@ -202,7 +202,7 @@
     move-result v0
 
     .line 65
-    iput v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:F
+    iput v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:F
 
     .line 66
     .line 67
@@ -214,7 +214,7 @@
     move-result-wide v0
 
     .line 71
-    iput-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:D
+    iput-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:D
 
     .line 72
     .line 73
@@ -230,7 +230,7 @@
 
     .line 78
     .line 79
-    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:Lcom/facebook/spherical/model/PanoBounds;
+    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:Lcom/facebook/spherical/model/PanoBounds;
 
     .line 80
     .line 81
@@ -247,7 +247,7 @@
 
     .line 86
     .line 87
-    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:LX/32N;
+    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:LX/3jk;
 
     .line 88
     .line 89
@@ -264,7 +264,7 @@
 
     .line 94
     .line 95
-    invoke-static {}, LX/0j7;->values()[LX/0j7;
+    invoke-static {}, LX/17S;->values()[LX/17S;
 
     .line 96
     .line 97
@@ -285,11 +285,11 @@
     .line 104
     .line 105
     :cond_0
-    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:LX/0j7;
+    iput-object v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:LX/17S;
 
     .line 106
     .line 107
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 108
     .line 109
@@ -310,159 +310,160 @@
 
     .line 116
     .line 117
-    invoke-static {p1, v1, v2}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v1}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 118
     .line 119
     .line 120
-    move-result v2
+    add-int/lit8 v2, v2, 0x1
 
     .line 121
+    .line 122
     goto :goto_5
 
-    .line 122
-    :cond_1
-    invoke-static {}, LX/32N;->values()[LX/32N;
-
     .line 123
+    :cond_1
+    invoke-static {}, LX/3jk;->values()[LX/3jk;
+
     .line 124
     .line 125
+    .line 126
     move-result-object v1
 
-    .line 126
+    .line 127
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 127
     .line 128
     .line 129
+    .line 130
     move-result v0
 
-    .line 130
+    .line 131
     aget-object v0, v1, v0
 
-    .line 131
     .line 132
-    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:LX/32N;
-
     .line 133
+    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:LX/3jk;
+
     .line 134
+    .line 135
     goto :goto_4
 
-    .line 135
+    .line 136
     :cond_2
     sget-object v0, Lcom/facebook/spherical/model/PanoBounds;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 136
     .line 137
+    .line 138
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    .line 138
     .line 139
     .line 140
+    .line 141
     move-result-object v0
 
-    .line 141
+    .line 142
     check-cast v0, Lcom/facebook/spherical/model/PanoBounds;
 
-    .line 142
     .line 143
-    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:Lcom/facebook/spherical/model/PanoBounds;
-
     .line 144
+    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:Lcom/facebook/spherical/model/PanoBounds;
+
     .line 145
+    .line 146
     goto :goto_3
 
-    .line 146
+    .line 147
     :cond_3
     sget-object v0, Lcom/facebook/spherical/video/hotspot/model/HotspotParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 147
     .line 148
+    .line 149
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    .line 149
     .line 150
     .line 151
+    .line 152
     move-result-object v0
 
-    .line 152
+    .line 153
     check-cast v0, Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
 
-    .line 153
     .line 154
-    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
-
     .line 155
+    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
+
     .line 156
+    .line 157
     goto :goto_2
 
-    .line 157
+    .line 158
     :cond_4
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    .line 158
     .line 159
     .line 160
+    .line 161
     move-result-object v0
 
-    .line 161
+    .line 162
     check-cast v0, Lcom/facebook/spherical/video/model/GuidedTourParams;
 
-    .line 162
     .line 163
-    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:Lcom/facebook/spherical/video/model/GuidedTourParams;
-
     .line 164
+    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/model/GuidedTourParams;
+
     .line 165
+    .line 166
     goto :goto_1
 
-    .line 166
-    :cond_5
-    invoke-static {}, LX/33v;->values()[LX/33v;
-
     .line 167
+    :cond_5
+    invoke-static {}, LX/3jm;->values()[LX/3jm;
+
     .line 168
     .line 169
+    .line 170
     move-result-object v1
 
-    .line 170
+    .line 171
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 171
     .line 172
     .line 173
+    .line 174
     move-result v0
 
-    .line 174
+    .line 175
     aget-object v0, v1, v0
 
-    .line 175
     .line 176
-    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:LX/33v;
-
     .line 177
+    iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:LX/3jm;
+
     .line 178
+    .line 179
     goto/16 :goto_0
 
-    .line 179
     .line 180
+    .line 181
     :cond_6
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 181
     .line 182
     .line 183
+    .line 184
     move-result-object v0
 
-    .line 184
+    .line 185
     iput-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0B:Ljava/util/Set;
 
-    .line 185
     .line 186
+    .line 187
     return-void
 .end method
 
-.method private final A00()LX/0j7;
+.method private final A00()LX/17S;
     .locals 2
 
     .line 0
@@ -487,7 +488,7 @@
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:LX/0j7;
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:LX/17S;
 
     .line 12
     .line 13
@@ -495,7 +496,7 @@
 
     .line 14
     :cond_0
-    sget-object v0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0D:LX/0j7;
+    sget-object v0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0D:LX/17S;
 
     .line 15
     .line 16
@@ -507,7 +508,7 @@
 
     .line 19
     :try_start_0
-    sget-object v0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0D:LX/0j7;
+    sget-object v0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0D:LX/17S;
 
     .line 20
     .line 21
@@ -515,11 +516,11 @@
 
     .line 22
     .line 23
-    sget-object v0, LX/0j7;->MONO:LX/0j7;
+    sget-object v0, LX/17S;->MONO:LX/17S;
 
     .line 24
     .line 25
-    sput-object v0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0D:LX/0j7;
+    sput-object v0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0D:LX/17S;
 
     .line 26
     .line 27
@@ -544,7 +545,7 @@
     .line 32
     :cond_2
     :goto_0
-    sget-object v0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0D:LX/0j7;
+    sget-object v0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0D:LX/17S;
 
     .line 33
     .line 34
@@ -587,11 +588,11 @@
 
     .line 9
     .line 10
-    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:LX/33v;
+    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:LX/3jm;
 
     .line 11
     .line 12
-    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:LX/33v;
+    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:LX/3jm;
 
     .line 13
     .line 14
@@ -611,11 +612,11 @@
 
     .line 21
     .line 22
-    iget-wide v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:D
+    iget-wide v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:D
 
     .line 23
     .line 24
-    iget-wide v1, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:D
+    iget-wide v1, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:D
 
     .line 25
     .line 26
@@ -627,15 +628,15 @@
 
     .line 29
     .line 30
-    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:Lcom/facebook/spherical/video/model/GuidedTourParams;
+    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/model/GuidedTourParams;
 
     .line 31
     .line 32
-    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:Lcom/facebook/spherical/video/model/GuidedTourParams;
+    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/model/GuidedTourParams;
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -647,15 +648,15 @@
 
     .line 39
     .line 40
-    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
+    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
 
     .line 41
     .line 42
-    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
+    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 45
     .line 46
@@ -667,11 +668,11 @@
 
     .line 49
     .line 50
-    iget v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:F
+    iget v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:F
 
     .line 51
     .line 52
-    iget v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:F
+    iget v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:F
 
     .line 53
     .line 54
@@ -683,11 +684,11 @@
 
     .line 57
     .line 58
-    iget v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:F
+    iget v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:F
 
     .line 59
     .line 60
-    iget v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:F
+    iget v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:F
 
     .line 61
     .line 62
@@ -699,11 +700,11 @@
 
     .line 65
     .line 66
-    iget v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:F
+    iget v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:F
 
     .line 67
     .line 68
-    iget v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:F
+    iget v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:F
 
     .line 69
     .line 70
@@ -715,11 +716,11 @@
 
     .line 73
     .line 74
-    iget-wide v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:D
+    iget-wide v3, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:D
 
     .line 75
     .line 76
-    iget-wide v1, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:D
+    iget-wide v1, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:D
 
     .line 77
     .line 78
@@ -731,15 +732,15 @@
 
     .line 81
     .line 82
-    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:Lcom/facebook/spherical/model/PanoBounds;
+    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:Lcom/facebook/spherical/model/PanoBounds;
 
     .line 83
     .line 84
-    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:Lcom/facebook/spherical/model/PanoBounds;
+    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:Lcom/facebook/spherical/model/PanoBounds;
 
     .line 85
     .line 86
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 87
     .line 88
@@ -751,11 +752,11 @@
 
     .line 91
     .line 92
-    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:LX/32N;
+    iget-object v1, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:LX/3jk;
 
     .line 93
     .line 94
-    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:LX/32N;
+    iget-object v0, p1, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:LX/3jk;
 
     .line 95
     .line 96
@@ -763,7 +764,7 @@
 
     .line 97
     .line 98
-    invoke-direct {p0}, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00()LX/0j7;
+    invoke-direct {p0}, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00()LX/17S;
 
     .line 99
     .line 100
@@ -771,7 +772,7 @@
     move-result-object v1
 
     .line 102
-    invoke-direct {p1}, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00()LX/0j7;
+    invoke-direct {p1}, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00()LX/17S;
 
     .line 103
     .line 104
@@ -795,14 +796,14 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:LX/33v;
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:LX/3jm;
 
     .line 1
     .line 2
     const/4 v3, -0x1
 
     .line 3
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
     .line 4
     .line 5
@@ -818,194 +819,196 @@
 
     .line 10
     .line 11
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v2, v1, 0x1f
 
     .line 12
     .line 13
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 14
-    move-result v2
-
     .line 15
-    iget-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:D
-
     .line 16
+    move-result v0
+
     .line 17
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    add-int/2addr v2, v0
 
     .line 18
+    iget-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:D
+
     .line 19
     .line 20
-    move-result-wide v0
-
-    .line 21
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v1
-
-    .line 25
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:Lcom/facebook/spherical/video/model/GuidedTourParams;
-
-    .line 26
-    .line 27
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 28
-    .line 29
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 30
-    .line 31
-    .line 32
-    move-result v0
-
-    .line 33
-    add-int/2addr v1, v0
-
-    .line 34
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
-
-    .line 35
-    .line 36
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 37
-    .line 38
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 39
-    .line 40
-    .line 41
-    move-result v0
-
-    .line 42
-    add-int/2addr v1, v0
-
-    .line 43
-    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:F
-
-    .line 44
-    .line 45
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
-
-    .line 46
-    .line 47
-    .line 48
-    move-result v1
-
-    .line 49
-    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:F
-
-    .line 50
-    .line 51
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
-
-    .line 52
-    .line 53
-    .line 54
-    move-result v1
-
-    .line 55
-    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:F
-
-    .line 56
-    .line 57
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
-
-    .line 58
-    .line 59
-    .line 60
-    move-result v2
-
-    .line 61
-    iget-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:D
-
-    .line 62
-    .line 63
     invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    .line 64
-    .line 65
-    .line 66
+    .line 21
+    .line 22
+    .line 23
     move-result-wide v0
 
-    .line 67
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    .line 24
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
-    .line 68
-    .line 69
-    .line 70
+    .line 25
+    .line 26
+    .line 27
     move-result v1
 
-    .line 71
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:Lcom/facebook/spherical/model/PanoBounds;
+    .line 28
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/model/GuidedTourParams;
 
+    .line 29
+    .line 30
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 31
+    .line 32
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v0
+
+    .line 36
+    add-int/2addr v1, v0
+
+    .line 37
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
+
+    .line 38
+    .line 39
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 40
+    .line 41
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 42
+    .line 43
+    .line 44
+    move-result v0
+
+    .line 45
+    add-int/2addr v1, v0
+
+    .line 46
+    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:F
+
+    .line 47
+    .line 48
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 49
+    .line 50
+    .line 51
+    move-result v1
+
+    .line 52
+    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:F
+
+    .line 53
+    .line 54
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 55
+    .line 56
+    .line 57
+    move-result v1
+
+    .line 58
+    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:F
+
+    .line 59
+    .line 60
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 61
+    .line 62
+    .line 63
+    move-result v2
+
+    .line 64
+    iget-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:D
+
+    .line 65
+    .line 66
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-wide v0
+
+    .line 70
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
+
+    .line 71
     .line 72
     .line 73
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v1
 
     .line 74
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:Lcom/facebook/spherical/model/PanoBounds;
+
     .line 75
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 76
-    .line 77
-    .line 78
-    move-result v0
-
-    .line 79
-    add-int/2addr v1, v0
-
-    .line 80
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:LX/32N;
-
-    .line 81
-    .line 82
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
-
-    .line 83
-    .line 84
-    .line 85
-    move-result v0
-
-    .line 86
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 87
-    .line 88
+    .line 77
+    .line 78
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 79
+    .line 80
+    .line 81
+    move-result v0
+
+    .line 82
     add-int/2addr v1, v0
 
+    .line 83
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:LX/3jk;
+
+    .line 84
+    .line 85
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
+
+    .line 86
+    .line 87
+    .line 88
+    move-result v0
+
     .line 89
-    invoke-direct {p0}, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00()LX/0j7;
+    mul-int/lit8 v2, v1, 0x1f
 
     .line 90
     .line 91
+    add-int/2addr v2, v0
+
     .line 92
-    move-result-object v0
+    invoke-direct {p0}, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00()LX/17S;
 
     .line 93
-    if-eqz v0, :cond_0
-
     .line 94
     .line 95
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    move-result-object v0
 
     .line 96
+    invoke-static {v0, v3}, LX/0X6;->A05(Ljava/lang/Enum;I)I
+
     .line 97
     .line 98
-    move-result v3
-
     .line 99
-    :cond_0
-    mul-int/lit8 v0, v1, 0x1f
+    move-result v1
 
     .line 100
-    .line 101
-    add-int/2addr v0, v3
+    mul-int/lit8 v0, v2, 0x1f
 
+    .line 101
     .line 102
+    add-int/2addr v0, v1
+
+    .line 103
     return v0
 .end method
 
@@ -1013,7 +1016,7 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:LX/33v;
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:LX/3jm;
 
     .line 1
     .line 2
@@ -1023,7 +1026,7 @@
     const/4 v2, 0x1
 
     .line 4
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 5
     .line 6
@@ -1037,7 +1040,7 @@
     .line 10
     .line 11
     .line 12
-    iget-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:D
+    iget-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:D
 
     .line 13
     .line 14
@@ -1046,16 +1049,16 @@
     .line 15
     .line 16
     .line 17
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:Lcom/facebook/spherical/video/model/GuidedTourParams;
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/model/GuidedTourParams;
 
     .line 18
     .line 19
-    invoke-static {p1, v0, p2}, LX/0Yc;->A08(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+    invoke-static {p1, v0, p2}, LX/0X1;->A0Y(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 20
     .line 21
     .line 22
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A0A:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:Lcom/facebook/spherical/video/hotspot/model/HotspotParams;
 
     .line 23
     .line 24
@@ -1069,7 +1072,7 @@
     .line 28
     .line 29
     :goto_0
-    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:F
+    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A04:F
 
     .line 30
     .line 31
@@ -1078,7 +1081,7 @@
     .line 32
     .line 33
     .line 34
-    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A01:F
+    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A05:F
 
     .line 35
     .line 36
@@ -1087,7 +1090,7 @@
     .line 37
     .line 38
     .line 39
-    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A02:F
+    iget v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A06:F
 
     .line 40
     .line 41
@@ -1096,7 +1099,7 @@
     .line 42
     .line 43
     .line 44
-    iget-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:D
+    iget-wide v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:D
 
     .line 45
     .line 46
@@ -1105,7 +1108,7 @@
     .line 47
     .line 48
     .line 49
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:Lcom/facebook/spherical/model/PanoBounds;
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A07:Lcom/facebook/spherical/model/PanoBounds;
 
     .line 50
     .line 51
@@ -1119,20 +1122,20 @@
     .line 55
     .line 56
     :goto_1
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A03:LX/32N;
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A00:LX/3jk;
 
     .line 57
     .line 58
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 59
     .line 60
     .line 61
-    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A09:LX/0j7;
+    iget-object v0, p0, Lcom/facebook/spherical/video/model/SphericalVideoParams;->A08:LX/17S;
 
     .line 62
     .line 63
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 64
     .line 65
@@ -1141,7 +1144,7 @@
 
     .line 67
     .line 68
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
     .line 69
     .line 70
@@ -1162,7 +1165,7 @@
 
     .line 77
     .line 78
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 79
     .line 80

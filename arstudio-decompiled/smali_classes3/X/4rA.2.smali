@@ -1,11 +1,31 @@
-.class public interface abstract LX/4rA;
+.class public final LX/4rA;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract Ao2(IIIII)Z
-.end method
+# instance fields
+.field public final A00:LX/4r3;
 
-.method public abstract Ao4(IIIII)Z
+.field public final A01:Ljava/util/Date;
+
+
+# direct methods
+.method public constructor <init>(LX/4r3;Ljava/util/Date;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/4rA;->A00:LX/4r3;
+
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/4rA;->A01:Ljava/util/Date;
+
+    .line 6
+    .line 7
+    return-void
 .end method

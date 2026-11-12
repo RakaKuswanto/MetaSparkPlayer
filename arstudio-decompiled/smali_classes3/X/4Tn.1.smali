@@ -1,132 +1,84 @@
-.class public final LX/4Tn;
-.super Ljava/lang/Object;
+.class public final LX/4tN;
+.super LX/4tO;
 .source ""
 
-# interfaces
-.implements LX/4Vo;
+
+# static fields
+.field public static A03:LX/4tN;
 
 
 # instance fields
-.field public final A00:F
+.field public final A00:LX/4tQ;
+
+.field public final A01:Ljava/util/Set;
+
+.field public final A02:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(F)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput p1, p0, LX/4Tn;->A00:F
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ADt(Landroid/graphics/RectF;)F
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/4Tn;->A00:F
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public constructor <init>(Landroid/content/Context;LX/4tQ;)V
     .locals 3
 
     .line 0
-    const/4 v2, 0x1
+    const-string v0, "SplitInstallListenerRegistry"
 
     .line 1
-    if-eq p0, p1, :cond_1
-
     .line 2
+    new-instance v2, LX/6WC;
+
     .line 3
-    instance-of v1, p1, LX/4Tn;
-
     .line 4
+    invoke-direct {v2, v0}, LX/6WC;-><init>(Ljava/lang/String;)V
+
     .line 5
-    const/4 v0, 0x0
-
     .line 6
-    if-nez v1, :cond_0
-
     .line 7
-    .line 8
-    return v0
+    const-string v1, "com.google.android.play.core.splitinstall.receiver.SplitInstallUpdateIntentService"
 
+    .line 8
     .line 9
-    :cond_0
-    check-cast p1, LX/4Tn;
+    new-instance v0, Landroid/content/IntentFilter;
 
     .line 10
     .line 11
-    iget v1, p0, LX/4Tn;->A00:F
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     .line 12
     .line 13
-    iget v0, p1, LX/4Tn;->A00:F
-
     .line 14
-    .line 15
-    cmpl-float v0, v1, v0
+    invoke-direct {p0, p1, v0, v2}, LX/4tO;-><init>(Landroid/content/Context;Landroid/content/IntentFilter;LX/6WC;)V
 
+    .line 15
     .line 16
     .line 17
-    if-eqz v0, :cond_1
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 18
     .line 19
-    const/4 v2, 0x0
-
     .line 20
-    :cond_1
-    return v2
-.end method
+    move-result-object v0
 
-.method public final hashCode()I
-    .locals 3
+    .line 21
+    iput-object v0, p0, LX/4tN;->A02:Landroid/os/Handler;
 
-    .line 0
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    .line 22
+    .line 23
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
+    .line 24
+    .line 25
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 4
-    iget v0, p0, LX/4Tn;->A00:F
+    .line 26
+    .line 27
+    .line 28
+    iput-object v0, p0, LX/4tN;->A01:Ljava/util/Set;
 
-    .line 5
-    .line 6
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 29
+    .line 30
+    iput-object p2, p0, LX/4tN;->A00:LX/4tQ;
 
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
-    .line 10
-    const/4 v0, 0x0
-
-    .line 11
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
-
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
-
-    .line 15
-    return v0
+    .line 31
+    .line 32
+    return-void
 .end method

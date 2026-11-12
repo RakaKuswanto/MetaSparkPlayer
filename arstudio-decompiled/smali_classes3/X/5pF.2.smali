@@ -1,127 +1,79 @@
-.class public final LX/5pF;
+.class public final LX/5pf;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AudioPipelineController$25"
+
+
+# instance fields
+.field public final synthetic A00:LX/5VZ;
+
+.field public final synthetic A01:LX/694;
+
+.field public final synthetic A02:Ljava/lang/String;
+
 
 # direct methods
-.method public static A00(Landroid/os/Handler;LX/5YN;)V
-    .locals 1
+.method public constructor <init>(LX/5VZ;LX/694;Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    if-eqz p1, :cond_1
+    iput-object p2, p0, LX/5pf;->A01:LX/694;
 
     .line 1
     .line 2
-    if-eqz p0, :cond_0
+    iput-object p3, p0, LX/5pf;->A02:Ljava/lang/String;
 
     .line 3
     .line 4
-    new-instance v0, LX/5pG;
+    iput-object p1, p0, LX/5pf;->A00:LX/5VZ;
 
     .line 5
     .line 6
-    invoke-direct {v0, p1}, LX/5pG;-><init>(LX/5YN;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
     .line 8
     .line 9
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 10
-    .line 11
-    .line 12
     return-void
-
-    .line 13
-    :cond_0
-    const-string v0, "handler cannot be null"
-
-    .line 14
-    .line 15
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    throw v0
-
-    .line 20
-    :cond_1
-    const-string v0, "stateCallback cannot be null"
-
-    .line 21
-    .line 22
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    throw v0
 .end method
 
-.method public static A01(Landroid/os/Handler;LX/5YN;Ljava/lang/Throwable;)V
-    .locals 1
+
+# virtual methods
+.method public final run()V
+    .locals 4
 
     .line 0
-    if-eqz p1, :cond_1
+    iget-object v3, p0, LX/5pf;->A01:LX/694;
 
     .line 1
     .line 2
-    if-eqz p0, :cond_0
+    iget-object v2, p0, LX/5pf;->A02:Ljava/lang/String;
 
     .line 3
     .line 4
-    new-instance v0, LX/5pE;
+    iget-object v1, p0, LX/5pf;->A00:LX/5VZ;
 
     .line 5
     .line 6
-    invoke-direct {v0, p1, p2}, LX/5pE;-><init>(LX/5YN;Ljava/lang/Throwable;)V
+    new-instance v0, LX/5Vn;
 
     .line 7
     .line 8
-    .line 9
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-direct {v0, v1, v2}, LX/5Vn;-><init>(LX/5VZ;Ljava/lang/String;)V
 
+    .line 9
     .line 10
     .line 11
+    invoke-interface {v3, v0}, LX/694;->AVu(LX/5VZ;)V
+
     .line 12
-    return-void
-
     .line 13
-    :cond_0
-    const-string v0, "handler cannot be null"
-
     .line 14
-    .line 15
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    throw v0
-
-    .line 20
-    :cond_1
-    const-string v0, "stateCallback cannot be null"
-
-    .line 21
-    .line 22
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    throw v0
+    return-void
 .end method

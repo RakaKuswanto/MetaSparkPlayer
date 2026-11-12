@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x40
+    const/16 v0, 0x37
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -61,7 +61,7 @@
 
     .line 8
     .line 9
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 10
     .line 11
@@ -73,26 +73,6 @@
 
     .line 14
     .line 15
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, Lcom/facebook/video/events/VideoCacheStatus;->A00:Ljava/lang/String;
-
-    .line 268435460
-    .line 268435461
-    iput-boolean p2, p0, Lcom/facebook/video/events/VideoCacheStatus;->A01:Z
-
-    .line 268435462
-    .line 268435463
     return-void
 .end method
 

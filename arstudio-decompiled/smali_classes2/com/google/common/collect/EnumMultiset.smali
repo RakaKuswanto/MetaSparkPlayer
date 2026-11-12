@@ -1,5 +1,5 @@
 .class public abstract Lcom/google/common/collect/EnumMultiset;
-.super LX/1g6;
+.super LX/22u;
 .source ""
 
 # interfaces
@@ -12,7 +12,7 @@
         "<E:",
         "Ljava/lang/Enum<",
         "TE;>;>",
-        "LX/1g6<",
+        "LX/22u<",
         "TE;>;",
         "Ljava/io/Serializable;"
     }
@@ -26,20 +26,46 @@
 # direct methods
 .method private readObject(Ljava/io/ObjectInputStream;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     throw v0
 .end method
 
 .method private writeObject(Ljava/io/ObjectOutputStream;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     throw v0
 .end method

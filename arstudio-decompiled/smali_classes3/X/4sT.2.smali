@@ -1,333 +1,199 @@
-.class public final LX/4sT;
-.super LX/3gb;
+.class public final enum LX/4sT;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/3f4;
+# static fields
+.field public static final synthetic $VALUES:[LX/4sT;
+
+.field public static final enum GLOBAL:LX/4sT;
+
+.field public static final enum HOST:LX/4sT;
+
+.field public static final enum UNKNOWN:LX/4sT;
 
 
 # direct methods
-.method public constructor <init>(LX/3f4;)V
-    .locals 0
+.method public static synthetic $values()[LX/4sT;
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/4sT;->A00:LX/3f4;
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    invoke-direct {p0}, LX/3gb;-><init>()V
+    new-array v2, v0, [LX/4sT;
 
+    .line 2
     .line 3
+    sget-object v1, LX/4sT;->UNKNOWN:LX/4sT;
+
     .line 4
     .line 5
-    return-void
-.end method
+    const/4 v0, 0x0
 
-
-# virtual methods
-.method public final AUd(Landroid/os/Bundle;Landroid/view/View;Landroidx/fragment/app/Fragment;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4sT;->A00:LX/3f4;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/3f4;->A02:LX/6Lq;
-
-    .line 3
-    .line 4
-    check-cast v0, LX/4sn;
-
-    .line 5
     .line 6
-    invoke-interface {v0, p2}, LX/4sn;->AfB(Landroid/view/View;)V
+    aput-object v1, v2, v0
 
     .line 7
     .line 8
+    sget-object v1, LX/4sT;->HOST:LX/4sT;
+
     .line 9
-    return-void
-.end method
-
-.method public final AUe(Landroidx/fragment/app/Fragment;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4sT;->A00:LX/3f4;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/3f4;->A02:LX/6Lq;
-
-    .line 3
-    .line 4
-    check-cast v0, LX/4sn;
-
-    .line 5
-    .line 6
-    invoke-interface {v0}, LX/4sn;->AfC()V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final AVI(LX/3hR;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4sT;->A00:LX/3f4;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/3f4;->A02:LX/6Lq;
-
-    .line 3
-    .line 4
-    check-cast v0, LX/4gg;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, p1}, LX/4gg;->AVI(LX/3hR;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final AWq(Landroidx/fragment/app/Fragment;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/4sT;->A00:LX/3f4;
-
-    .line 1
-    .line 2
-    iget-object v0, v1, LX/3f4;->A02:LX/6Lq;
-
-    .line 3
-    .line 4
-    check-cast v0, LX/4sr;
-
-    .line 5
-    .line 6
-    invoke-interface {v0}, LX/4sr;->AYP()V
-
-    .line 7
-    .line 8
-    .line 9
-    iget-object v1, v1, LX/3f4;->A02:LX/6Lq;
-
     .line 10
+    const/4 v0, 0x1
+
     .line 11
-    check-cast v1, LX/4sm;
+    aput-object v1, v2, v0
 
     .line 12
     .line 13
-    instance-of v0, v1, LX/4sP;
+    sget-object v1, LX/4sT;->GLOBAL:LX/4sT;
 
     .line 14
     .line 15
-    if-eqz v0, :cond_1
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "UNKNOWN"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/4sT;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/4sT;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/4sT;->UNKNOWN:LX/4sT;
+
+    .line 9
+    .line 10
+    const-string v2, "HOST"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/4sT;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/4sT;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
-    check-cast v1, LX/4sP;
-
     .line 18
-    .line 19
-    const/4 v0, 0x0
+    sput-object v0, LX/4sT;->HOST:LX/4sT;
 
+    .line 19
     .line 20
-    iput-object v0, v1, LX/4sP;->A00:LX/4Sq;
+    const-string v2, "GLOBAL"
 
     .line 21
     .line 22
-    iput-object v0, v1, LX/4sP;->A02:LX/4hB;
+    const/4 v1, 0x2
 
     .line 23
+    new-instance v0, LX/4sT;
+
     .line 24
-    iput-object v0, v1, LX/4sP;->A03:LX/4gx;
-
     .line 25
-    .line 26
-    iput-object v0, v1, LX/4sP;->A06:LX/4gW;
+    invoke-direct {v0, v2, v1}, LX/4sT;-><init>(Ljava/lang/String;I)V
 
+    .line 26
     .line 27
     .line 28
-    iput-object v0, v1, LX/4sP;->A04:LX/4gc;
+    sput-object v0, LX/4sT;->GLOBAL:LX/4sT;
 
     .line 29
     .line 30
-    iput-object v0, v1, LX/4sP;->A05:LX/4gk;
+    invoke-static {}, LX/4sT;->$values()[LX/4sT;
 
     .line 31
     .line 32
-    iput-object v0, v1, LX/4sP;->A01:LX/4sV;
-
     .line 33
+    move-result-object v0
+
     .line 34
-    iput-object v0, v1, LX/4sP;->A07:LX/4hC;
+    sput-object v0, LX/4sT;->$VALUES:[LX/4sT;
 
     .line 35
     .line 36
-    :cond_0
-    return-void
-
-    .line 37
-    :cond_1
-    instance-of v0, v1, LX/4sQ;
-
-    .line 38
-    .line 39
-    if-eqz v0, :cond_0
-
-    .line 40
-    .line 41
-    check-cast v1, LX/4sQ;
-
-    .line 42
-    .line 43
-    const/4 v0, 0x0
-
-    .line 44
-    iput-object v0, v1, LX/4sQ;->A00:LX/4Sq;
-
-    .line 45
-    .line 46
-    iput-object v0, v1, LX/4sQ;->A02:LX/4hB;
-
-    .line 47
-    .line 48
-    iput-object v0, v1, LX/4sQ;->A03:LX/4gx;
-
-    .line 49
-    .line 50
-    iput-object v0, v1, LX/4sQ;->A06:LX/4gW;
-
-    .line 51
-    .line 52
-    iput-object v0, v1, LX/4sQ;->A04:LX/4gc;
-
-    .line 53
-    .line 54
-    iput-object v0, v1, LX/4sQ;->A05:LX/4gk;
-
-    .line 55
-    .line 56
-    iput-object v0, v1, LX/4sQ;->A01:LX/4sV;
-
-    .line 57
-    .line 58
-    iput-object v0, v1, LX/4sQ;->A07:LX/4hC;
-
-    .line 59
-    .line 60
     return-void
 .end method
 
-.method public final Aaf(Landroidx/fragment/app/Fragment;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4sT;->A00:LX/3f4;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/3f4;->A02:LX/6Lq;
-
-    .line 3
-    .line 4
-    check-cast v0, LX/4ss;
-
-    .line 5
-    .line 6
-    invoke-interface {v0}, LX/4ss;->Aad()V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final AcG(Landroidx/fragment/app/Fragment;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4sT;->A00:LX/3f4;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/3f4;->A02:LX/6Lq;
-
-    .line 3
-    .line 4
-    check-cast v0, LX/4st;
-
-    .line 5
-    .line 6
-    invoke-interface {v0}, LX/4st;->AcE()V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final AcO(Landroid/os/Bundle;Landroidx/fragment/app/Fragment;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4sT;->A00:LX/3f4;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/3f4;->A02:LX/6Lq;
-
-    .line 3
-    .line 4
-    check-cast v0, LX/4so;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, p1}, LX/4so;->AcN(Landroid/os/Bundle;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final Aca(Landroidx/fragment/app/Fragment;ZZ)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     .line 0
-    return-void
-.end method
-
-.method public final Act(Landroidx/fragment/app/Fragment;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4sT;->A00:LX/3f4;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/3f4;->A02:LX/6Lq;
+    .line 3
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/4sT;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/4sT;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4
-    check-cast v0, LX/4sp;
-
     .line 5
+    move-result-object v0
+
     .line 6
-    invoke-interface {v0, p1}, LX/4sp;->Act(Landroidx/fragment/app/Fragment;)V
+    check-cast v0, LX/4sT;
 
     .line 7
     .line 8
-    .line 9
-    return-void
+    return-object v0
+.end method
+
+.method public static values()[LX/4sT;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/4sT;->$VALUES:[LX/4sT;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/4sT;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

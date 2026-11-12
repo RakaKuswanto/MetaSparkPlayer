@@ -1,27 +1,49 @@
-.class public final LX/2Xw;
+.class public final LX/2XW;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ResourceMonitor$1"
+
 
 # instance fields
-.field public A00:LX/2Y0;
-
-.field public final A01:Ljava/lang/Object;
-
-.field public final A02:Ljava/util/concurrent/Executor;
+.field public final synthetic A00:Lcom/facebook/device/resourcemonitor/ResourceMonitor;
 
 
 # direct methods
-.method public constructor <init>(LX/2Y0;Ljava/util/concurrent/Executor;)V
-    .locals 1
+.method public constructor <init>(Lcom/facebook/device/resourcemonitor/ResourceMonitor;)V
+    .locals 0
 
     .line 0
+    iput-object p1, p0, LX/2XW;->A00:Lcom/facebook/device/resourcemonitor/ResourceMonitor;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    .line 0
+    :try_start_0
+    const-string/jumbo v0, "updateMemoryUsage"
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 4
     .line 5
@@ -29,58 +51,28 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, LX/2Xw;->A01:Ljava/lang/Object;
+    throw v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 8
+    :catch_0
+    move-exception v2
+
     .line 9
-    if-eqz p1, :cond_1
+    const-class v1, Lcom/facebook/device/resourcemonitor/ResourceMonitor;
 
     .line 10
     .line 11
-    if-eqz p2, :cond_0
+    const-string/jumbo v0, "updateMemoryUsage throws"
 
     .line 12
     .line 13
-    iput-object p2, p0, LX/2Xw;->A02:Ljava/util/concurrent/Executor;
-
     .line 14
-    .line 15
-    iput-object p1, p0, LX/2Xw;->A00:LX/2Y0;
+    invoke-static {v1, v0, v2}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 15
     .line 16
     .line 17
     return-void
-
-    .line 18
-    :cond_0
-    const-string v0, "executor is null"
-
-    .line 19
-    .line 20
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-
-    .line 25
-    :cond_1
-    const-string/jumbo v0, "listener is null"
-
-    .line 26
-    .line 27
-    .line 28
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    throw v0
 .end method

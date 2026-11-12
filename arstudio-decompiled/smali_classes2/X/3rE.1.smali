@@ -1,104 +1,54 @@
-.class public final LX/3rE;
+.class public abstract LX/3Re;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3wC;
 
+# static fields
+.field public static final A00:LX/3Gx;
 
-# instance fields
-.field public A00:LX/3hk;
-
-.field public A01:LX/3rF;
+.field public static final A01:LX/3Gx;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string/jumbo v1, "mx(\\d+)x(\\d+)"
 
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/3rF;
+    new-instance v0, LX/3Gx;
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/3rF;-><init>()V
+    invoke-direct {v0, v1}, LX/3Gx;-><init>(Ljava/lang/String;)V
 
     .line 6
     .line 7
     .line 8
-    iput-object v0, p0, LX/3rE;->A01:LX/3rF;
+    sput-object v0, LX/3Re;->A00:LX/3Gx;
 
     .line 9
     .line 10
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AiB(LX/3hn;)Z
-    .locals 4
-
-    .line 0
-    iget-object v0, p0, LX/3rE;->A00:LX/3hk;
-
-    .line 1
-    .line 2
-    const/4 v3, 0x1
-
-    .line 3
-    if-nez v0, :cond_1
-
-    .line 4
-    .line 5
-    iget-object v2, p0, LX/3rE;->A01:LX/3rF;
-
-    .line 6
-    .line 7
-    new-array v1, v3, [LX/3hn;
-
-    .line 8
-    .line 9
-    const/4 v0, 0x0
-
-    .line 10
-    aput-object p1, v1, v0
+    const-string/jumbo v1, "[sp](\\d+)x(\\d+)"
 
     .line 11
     .line 12
-    aget-object v1, v1, v0
-
     .line 13
+    new-instance v0, LX/3Gx;
+
     .line 14
-    if-eqz v1, :cond_0
-
     .line 15
-    .line 16
-    iget-object v0, v2, LX/3rF;->A01:Ljava/util/List;
+    invoke-direct {v0, v1}, LX/3Gx;-><init>(Ljava/lang/String;)V
 
+    .line 16
     .line 17
     .line 18
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    sput-object v0, LX/3Re;->A01:LX/3Gx;
 
     .line 19
     .line 20
-    .line 21
-    :cond_0
-    return v3
-
-    .line 22
-    :cond_1
-    invoke-virtual {v0, p1}, LX/2Uo;->A03(LX/2Up;)Z
-
-    .line 23
-    .line 24
-    .line 25
-    move-result v3
-
-    .line 26
-    return v3
+    return-void
 .end method

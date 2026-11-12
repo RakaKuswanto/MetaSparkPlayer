@@ -1,4 +1,4 @@
-.class public final LX/5pJ;
+.class public final LX/5pj;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,44 +7,54 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "StateCallback2Notifier$1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AudioPipelineController$24"
 
 
 # instance fields
-.field public final synthetic A00:LX/5ow;
+.field public final synthetic A00:LX/5Vn;
+
+.field public final synthetic A01:LX/694;
 
 
 # direct methods
-.method public constructor <init>(LX/5ow;)V
+.method public constructor <init>(LX/5Vn;LX/694;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5pJ;->A00:LX/5ow;
+    iput-object p2, p0, LX/5pj;->A01:LX/694;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/5pj;->A00:LX/5Vn;
 
     .line 3
     .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5pJ;->A00:LX/5ow;
+    iget-object v1, p0, LX/5pj;->A01:LX/694;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5ow;->AdJ()V
+    iget-object v0, p0, LX/5pj;->A00:LX/5Vn;
 
     .line 3
     .line 4
+    invoke-interface {v1, v0}, LX/694;->AVu(LX/5VZ;)V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method

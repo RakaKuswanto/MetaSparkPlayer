@@ -1,274 +1,778 @@
-.class public final enum LX/3s3;
-.super Ljava/lang/Enum;
+.class public final LX/3S3;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/3s3;
+.field public static A06:LX/3S3;
 
-.field public static final enum ACQUIRED:LX/3s3;
+.field public static A07:LX/3S3;
 
-.field public static final enum ACQUIRE_DELAYED:LX/3s3;
+.field public static A08:LX/3S3;
 
-.field public static final enum ACQUIRE_FAILED:LX/3s3;
+.field public static A09:LX/3S3;
 
-.field public static final enum LOST:LX/3s3;
+.field public static final A0A:Ljava/util/concurrent/Executor;
 
-.field public static final enum LOST_TRANSIENT:LX/3s3;
+.field public static final A0B:Ljava/util/concurrent/ExecutorService;
 
-.field public static final enum LOST_TRANSIENT_CAN_DUCK:LX/3s3;
+.field public static final A0C:Ljava/util/concurrent/Executor;
 
-.field public static final enum UNSET:LX/3s3;
+
+# instance fields
+.field public A00:Ljava/lang/Exception;
+
+.field public A01:Ljava/lang/Object;
+
+.field public A02:Ljava/util/List;
+
+.field public A03:Z
+
+.field public A04:Z
+
+.field public final A05:Ljava/lang/Object;
 
 
 # direct methods
-.method public static final synthetic $values()[LX/3s3;
-    .locals 3
-
-    const/4 v0, 0x7
-
-    new-array v2, v0, [LX/3s3;
-
-    sget-object v1, LX/3s3;->UNSET:LX/3s3;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/3s3;->ACQUIRE_FAILED:LX/3s3;
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/3s3;->ACQUIRE_DELAYED:LX/3s3;
-
-    const/4 v0, 0x2
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/3s3;->ACQUIRED:LX/3s3;
-
-    const/4 v0, 0x3
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/3s3;->LOST:LX/3s3;
-
-    const/4 v0, 0x4
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/3s3;->LOST_TRANSIENT:LX/3s3;
-
-    const/4 v0, 0x5
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/3s3;->LOST_TRANSIENT_CAN_DUCK:LX/3s3;
-
-    const/4 v0, 0x6
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
 .method public static constructor <clinit>()V
     .locals 3
 
     .line 0
-    const-string v2, "UNSET"
+    sget-object v1, LX/3S5;->A03:LX/3S5;
 
     .line 1
     .line 2
-    const/4 v1, 0x0
+    iget-object v0, v1, LX/3S5;->A01:Ljava/util/concurrent/ExecutorService;
 
     .line 3
-    new-instance v0, LX/3s3;
-
     .line 4
-    .line 5
-    invoke-direct {v0, v2, v1}, LX/3s3;-><init>(Ljava/lang/String;I)V
+    sput-object v0, LX/3S3;->A0B:Ljava/util/concurrent/ExecutorService;
 
+    .line 5
     .line 6
+    iget-object v0, v1, LX/3S5;->A00:Ljava/util/concurrent/Executor;
+
     .line 7
     .line 8
-    sput-object v0, LX/3s3;->UNSET:LX/3s3;
+    sput-object v0, LX/3S3;->A0C:Ljava/util/concurrent/Executor;
 
     .line 9
     .line 10
-    const-string v2, "ACQUIRE_FAILED"
+    sget-object v0, LX/3S8;->A03:LX/3S8;
 
     .line 11
     .line 12
-    const/4 v1, 0x1
+    iget-object v0, v0, LX/3S8;->A00:Ljava/util/concurrent/Executor;
 
     .line 13
-    new-instance v0, LX/3s3;
-
     .line 14
+    sput-object v0, LX/3S3;->A0A:Ljava/util/concurrent/Executor;
+
     .line 15
-    invoke-direct {v0, v2, v1}, LX/3s3;-><init>(Ljava/lang/String;I)V
-
     .line 16
+    const/4 v1, 0x0
+
     .line 17
+    new-instance v0, LX/3S3;
+
     .line 18
-    sput-object v0, LX/3s3;->ACQUIRE_FAILED:LX/3s3;
-
     .line 19
-    .line 20
-    const-string v2, "ACQUIRE_DELAYED"
+    invoke-direct {v0, v1}, LX/3S3;-><init>(Ljava/lang/Object;)V
 
+    .line 20
     .line 21
     .line 22
-    const/4 v1, 0x2
+    sput-object v0, LX/3S3;->A07:LX/3S3;
 
     .line 23
-    new-instance v0, LX/3s3;
-
     .line 24
+    const/4 v2, 0x1
+
     .line 25
-    invoke-direct {v0, v2, v1}, LX/3s3;-><init>(Ljava/lang/String;I)V
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 26
     .line 27
     .line 28
-    sput-object v0, LX/3s3;->ACQUIRE_DELAYED:LX/3s3;
+    move-result-object v1
 
     .line 29
+    new-instance v0, LX/3S3;
+
     .line 30
-    const-string v2, "ACQUIRED"
-
     .line 31
+    invoke-direct {v0, v1}, LX/3S3;-><init>(Ljava/lang/Object;)V
+
     .line 32
-    const/4 v1, 0x3
-
     .line 33
-    new-instance v0, LX/3s3;
-
     .line 34
-    .line 35
-    invoke-direct {v0, v2, v1}, LX/3s3;-><init>(Ljava/lang/String;I)V
+    sput-object v0, LX/3S3;->A08:LX/3S3;
 
+    .line 35
     .line 36
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
+
     .line 37
     .line 38
-    sput-object v0, LX/3s3;->ACQUIRED:LX/3s3;
-
     .line 39
+    move-result-object v1
+
     .line 40
-    const-string v2, "LOST"
+    new-instance v0, LX/3S3;
 
     .line 41
     .line 42
-    const/4 v1, 0x4
+    invoke-direct {v0, v1}, LX/3S3;-><init>(Ljava/lang/Object;)V
 
     .line 43
-    new-instance v0, LX/3s3;
-
     .line 44
     .line 45
-    invoke-direct {v0, v2, v1}, LX/3s3;-><init>(Ljava/lang/String;I)V
+    sput-object v0, LX/3S3;->A06:LX/3S3;
 
     .line 46
     .line 47
+    new-instance v0, LX/3S3;
+
     .line 48
-    sput-object v0, LX/3s3;->LOST:LX/3s3;
-
     .line 49
-    .line 50
-    const-string v2, "LOST_TRANSIENT"
+    invoke-direct {v0, v2}, LX/3S3;-><init>(Z)V
 
+    .line 50
     .line 51
     .line 52
-    const/4 v1, 0x5
+    sput-object v0, LX/3S3;->A09:LX/3S3;
 
     .line 53
-    new-instance v0, LX/3s3;
-
     .line 54
-    .line 55
-    invoke-direct {v0, v2, v1}, LX/3s3;-><init>(Ljava/lang/String;I)V
-
-    .line 56
-    .line 57
-    .line 58
-    sput-object v0, LX/3s3;->LOST_TRANSIENT:LX/3s3;
-
-    .line 59
-    .line 60
-    const-string v2, "LOST_TRANSIENT_CAN_DUCK"
-
-    .line 61
-    .line 62
-    const/4 v1, 0x6
-
-    .line 63
-    new-instance v0, LX/3s3;
-
-    .line 64
-    .line 65
-    invoke-direct {v0, v2, v1}, LX/3s3;-><init>(Ljava/lang/String;I)V
-
-    .line 66
-    .line 67
-    .line 68
-    sput-object v0, LX/3s3;->LOST_TRANSIENT_CAN_DUCK:LX/3s3;
-
-    .line 69
-    .line 70
-    invoke-static {}, LX/3s3;->$values()[LX/3s3;
-
-    .line 71
-    .line 72
-    .line 73
-    move-result-object v0
-
-    .line 74
-    sput-object v0, LX/3s3;->$VALUES:[LX/3s3;
-
-    .line 75
-    .line 76
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
+
+    .line 536870912
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
+
+    .line 536870916
+    .line 536870917
+    .line 536870918
+    move-result-object v0
+
+    .line 536870919
+    iput-object v0, p0, LX/3S3;->A05:Ljava/lang/Object;
+
+    .line 536870920
+    .line 536870921
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 536870922
+    .line 536870923
+    .line 536870924
+    move-result-object v0
+
+    .line 536870925
+    iput-object v0, p0, LX/3S3;->A02:Ljava/util/List;
+
+    .line 536870926
+    .line 536870927
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/3S3;->A05:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/3S3;->A02:Ljava/util/List;
+
+    .line 14
+    .line 15
+    invoke-virtual {p0, p1}, LX/3S3;->A06(Ljava/lang/Object;)Z
+
+    .line 16
+    .line 17
+    .line 18
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/3s3;
+.method public constructor <init>(Z)V
     .locals 1
 
-    const-class v0, LX/3s3;
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
+    .line 268435460
+    .line 268435461
+    .line 268435462
     move-result-object v0
 
-    check-cast v0, LX/3s3;
+    .line 268435463
+    iput-object v0, p0, LX/3S3;->A05:Ljava/lang/Object;
 
+    .line 268435464
+    .line 268435465
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 268435466
+    .line 268435467
+    .line 268435468
+    move-result-object v0
+
+    .line 268435469
+    iput-object v0, p0, LX/3S3;->A02:Ljava/util/List;
+
+    .line 268435470
+    .line 268435471
+    invoke-virtual {p0}, LX/3S3;->A05()Z
+
+    .line 268435472
+    .line 268435473
+    .line 268435474
+    return-void
+.end method
+
+.method public static A00(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)LX/3S3;
+    .locals 3
+
+    .line 0
+    new-instance v2, LX/3S2;
+
+    .line 1
+    .line 2
+    invoke-direct {v2}, LX/3S2;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    :try_start_0
+    new-instance v0, LX/3S6;
+
+    .line 6
+    .line 7
+    invoke-direct {v0, v2, p0}, LX/3S6;-><init>(LX/3S2;Ljava/util/concurrent/Callable;)V
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 11
+    .line 12
+    .line 13
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 14
+    :catch_0
+    move-exception v1
+
+    .line 15
+    new-instance v0, LX/3SA;
+
+    .line 16
+    .line 17
+    invoke-direct {v0, v1}, LX/3SA;-><init>(Ljava/lang/Exception;)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v2, v0}, LX/3S2;->A00(Ljava/lang/Exception;)V
+
+    .line 21
+    .line 22
+    .line 23
+    :goto_0
+    iget-object v0, v2, LX/3S2;->A00:LX/3S3;
+
+    .line 24
+    .line 25
     return-object v0
 .end method
 
-.method public static values()[LX/3s3;
-    .locals 1
+.method public static A01(LX/3S3;)V
+    .locals 3
 
-    sget-object v0, LX/3s3;->$VALUES:[LX/3s3;
+    .line 0
+    iget-object v2, p0, LX/3S3;->A05:Ljava/lang/Object;
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 1
+    .line 2
+    monitor-enter v2
 
+    .line 3
+    :try_start_0
+    iget-object v0, p0, LX/3S3;->A02:Ljava/util/List;
+
+    .line 4
+    .line 5
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
+
+    .line 9
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    if-eqz v0, :cond_0
+
+    .line 14
+    .line 15
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    .line 18
     move-result-object v0
 
-    check-cast v0, [LX/3s3;
+    .line 19
+    check-cast v0, LX/3SB;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 20
+    .line 21
+    :try_start_1
+    invoke-interface {v0, p0}, LX/3SB;->AoP(LX/3S3;)Ljava/lang/Object;
+
+    .line 22
+    .line 23
+    .line 24
+    goto :goto_0
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 25
+    :catch_0
+    move-exception v0
+
+    .line 26
+    :try_start_2
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    throw v0
+
+    .line 31
+    :catch_1
+    move-exception v0
+
+    .line 32
+    throw v0
+
+    .line 33
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 34
+    iput-object v0, p0, LX/3S3;->A02:Ljava/util/List;
+
+    .line 35
+    .line 36
+    monitor-exit v2
+
+    .line 37
+    return-void
+
+    .line 38
+    :catchall_0
+    move-exception v0
+
+    .line 39
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 40
+    throw v0
+.end method
+
+
+# virtual methods
+.method public final A02()Ljava/lang/Exception;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3S3;->A05:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v1
+
+    .line 3
+    :try_start_0
+    iget-object v0, p0, LX/3S3;->A00:Ljava/lang/Exception;
+
+    .line 4
+    .line 5
+    monitor-exit v1
+
+    .line 6
     return-object v0
+
+    .line 7
+    :catchall_0
+    move-exception v0
+
+    .line 8
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final A03(LX/3SB;)V
+    .locals 6
+
+    .line 0
+    sget-object v5, LX/3S3;->A0C:Ljava/util/concurrent/Executor;
+
+    .line 1
+    .line 2
+    new-instance v4, LX/3S2;
+
+    .line 3
+    .line 4
+    invoke-direct {v4}, LX/3S2;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v3, p0, LX/3S3;->A05:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    monitor-enter v3
+
+    .line 10
+    :try_start_0
+    iget-boolean v2, p0, LX/3S3;->A04:Z
+
+    .line 11
+    .line 12
+    if-nez v2, :cond_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 13
+    .line 14
+    :try_start_1
+    iget-object v1, p0, LX/3S3;->A02:Ljava/util/List;
+
+    .line 15
+    .line 16
+    new-instance v0, LX/3S9;
+
+    .line 17
+    .line 18
+    invoke-direct {v0, p1, p0, v4, v5}, LX/3S9;-><init>(LX/3SB;LX/3S3;LX/3S2;Ljava/util/concurrent/Executor;)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 22
+    .line 23
+    .line 24
+    :cond_0
+    monitor-exit v3
+
+    .line 25
+    if-eqz v2, :cond_1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 26
+    .line 27
+    :try_start_2
+    new-instance v0, LX/3S7;
+
+    .line 28
+    .line 29
+    invoke-direct {v0, p1, p0, v4}, LX/3S7;-><init>(LX/3SB;LX/3S3;LX/3S2;)V
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-interface {v5, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 33
+    .line 34
+    .line 35
+    return-void
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    .line 36
+    :catch_0
+    move-exception v1
+
+    .line 37
+    new-instance v0, LX/3SA;
+
+    .line 38
+    .line 39
+    invoke-direct {v0, v1}, LX/3SA;-><init>(Ljava/lang/Exception;)V
+
+    .line 40
+    .line 41
+    .line 42
+    invoke-virtual {v4, v0}, LX/3S2;->A00(Ljava/lang/Exception;)V
+
+    .line 43
+    .line 44
+    .line 45
+    :cond_1
+    return-void
+
+    .line 46
+    :catchall_0
+    move-exception v0
+
+    .line 47
+    :try_start_3
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 48
+    :catchall_1
+    move-exception v0
+
+    .line 49
+    :try_start_4
+    monitor-exit v3
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    .line 50
+    throw v0
+.end method
+
+.method public final A04()Z
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/3S3;->A05:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v1
+
+    .line 3
+    :try_start_0
+    invoke-virtual {p0}, LX/3S3;->A02()Ljava/lang/Exception;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
+
+    .line 8
+    .line 9
+    .line 10
+    move-result v0
+
+    .line 11
+    :try_start_1
+    monitor-exit v1
+
+    .line 12
+    return v0
+
+    .line 13
+    :catchall_0
+    move-exception v0
+
+    .line 14
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 15
+    throw v0
+.end method
+
+.method public final A05()Z
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/3S3;->A05:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v2
+
+    .line 3
+    :try_start_0
+    iget-boolean v1, p0, LX/3S3;->A04:Z
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    if-nez v1, :cond_0
+
+    .line 7
+    .line 8
+    const/4 v0, 0x1
+
+    .line 9
+    iput-boolean v0, p0, LX/3S3;->A04:Z
+
+    .line 10
+    .line 11
+    iput-boolean v0, p0, LX/3S3;->A03:Z
+
+    .line 12
+    .line 13
+    invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-static {p0}, LX/3S3;->A01(LX/3S3;)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_0
+    monitor-exit v2
+
+    .line 20
+    return v0
+
+    .line 21
+    :catchall_0
+    move-exception v0
+
+    .line 22
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 23
+    throw v0
+.end method
+
+.method public final A06(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/3S3;->A05:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v2
+
+    .line 3
+    :try_start_0
+    iget-boolean v1, p0, LX/3S3;->A04:Z
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    if-nez v1, :cond_0
+
+    .line 7
+    .line 8
+    const/4 v0, 0x1
+
+    .line 9
+    iput-boolean v0, p0, LX/3S3;->A04:Z
+
+    .line 10
+    .line 11
+    iput-object p1, p0, LX/3S3;->A01:Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-static {p0}, LX/3S3;->A01(LX/3S3;)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_0
+    monitor-exit v2
+
+    .line 20
+    return v0
+
+    .line 21
+    :catchall_0
+    move-exception v0
+
+    .line 22
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 23
+    throw v0
 .end method

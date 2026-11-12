@@ -2,17 +2,24 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayer$VideoSurfaceListener$1"
+
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/bugreporter/reportdescription/BugReporterDescriptionFragment;
+.field public final synthetic A00:LX/3rF;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/bugreporter/reportdescription/BugReporterDescriptionFragment;)V
+.method public constructor <init>(LX/3rF;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3vy;->A00:Lcom/facebook/bugreporter/reportdescription/BugReporterDescriptionFragment;
+    iput-object p1, p0, LX/3vy;->A00:LX/3rF;
 
     .line 1
     .line 2
@@ -21,5 +28,31 @@
     .line 3
     .line 4
     .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/3vy;->A00:LX/3rF;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/3rF;->A00:LX/3q7;
+
+    .line 3
+    .line 4
+    iget-object v0, v0, LX/3q7;->A0R:LX/3sj;
+
+    .line 5
+    .line 6
+    invoke-interface {v0}, LX/3sj;->Abp()V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method

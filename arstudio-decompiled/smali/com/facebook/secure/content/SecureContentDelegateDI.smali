@@ -4,11 +4,11 @@
 
 
 # direct methods
-.method public constructor <init>(LX/5Sw;)V
+.method public constructor <init>(LX/5mn;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, Lcom/facebook/secure/content/DeferredInitAbstractContentProviderDIDelegate;-><init>(LX/5Sw;)V
+    invoke-direct {p0, p1}, Lcom/facebook/secure/content/DeferredInitAbstractContentProviderDIDelegate;-><init>(LX/5mn;)V
 
     .line 1
     .line 2
@@ -22,7 +22,7 @@
     .locals 3
 
     .line 0
-    invoke-virtual {p0}, LX/5Sx;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, LX/5mo;->getContext()Landroid/content/Context;
 
     .line 1
     .line 2
@@ -51,7 +51,7 @@
     move-result v0
 
     .line 14
-    invoke-static {v2, v1, v0}, LX/02v;->A05(Landroid/content/Context;II)Z
+    invoke-static {v2, v1, v0}, LX/0TL;->A04(Landroid/content/Context;II)Z
 
     .line 15
     .line 16

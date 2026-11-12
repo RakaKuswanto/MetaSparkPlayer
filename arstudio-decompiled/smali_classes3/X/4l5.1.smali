@@ -1,40 +1,14 @@
-.class public abstract LX/4l5;
+.class public final LX/4l5;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A01:LX/4l3;
-
-.field public static latest:LX/4l5;
-
-
 # instance fields
-.field public final A00:Landroid/content/res/Configuration;
+.field public final A00:LX/4fg;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/4l3;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/4l3;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/4l5;->A01:LX/4l3;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/res/Configuration;)V
+.method public constructor <init>(LX/4fg;)V
     .locals 0
 
     .line 0
@@ -43,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4l5;->A00:Landroid/content/res/Configuration;
+    iput-object p1, p0, LX/4l5;->A00:LX/4fg;
 
     .line 4
     .line 5

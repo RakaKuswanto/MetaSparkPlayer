@@ -1,43 +1,37 @@
 .class public final LX/3Vj;
-.super Ljava/lang/Object;
+.super LX/3VF;
 .source ""
 
-
-# instance fields
-.field public final A00:Ljava/util/Map;
-
-.field public final A01:Ljava/util/Map;
-
-.field public final A02:Ljava/util/Map;
-
-.field public final A03:Ljava/util/Map;
+# interfaces
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
+.method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    const v0, -0x35466ec0    # -6080672.0f
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-direct {p0, v0}, LX/3VF;-><init>(I)V
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/3VF;-><init>(I)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3Vj;->A03:Ljava/util/Map;
-
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/3Vj;->A01:Ljava/util/Map;
-
-    .line 6
-    .line 7
-    iput-object p3, p0, LX/3Vj;->A02:Ljava/util/Map;
-
-    .line 8
-    .line 9
-    iput-object p4, p0, LX/3Vj;->A00:Ljava/util/Map;
-
-    .line 10
-    .line 11
     return-void
 .end method

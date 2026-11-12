@@ -1,18 +1,10 @@
-.class public final LX/0IA;
+.class public abstract LX/0IA;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final A03:Ljava/util/regex/Pattern;
-
-
-# instance fields
-.field public final A00:LX/0ID;
-
-.field public final A01:Landroid/content/Context;
-
-.field public final A02:Ljava/lang/String;
+.field public static final A00:[B
 
 
 # direct methods
@@ -20,264 +12,255 @@
     .locals 1
 
     .line 0
-    const-string v0, "^[0-9]+L$"
+    const/16 v0, 0x10
 
     .line 1
     .line 2
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    new-array v0, v0, [B
 
     .line 3
     .line 4
+    fill-array-data v0, :array_0
+
     .line 5
-    move-result-object v0
-
     .line 6
-    sput-object v0, LX/0IA;->A03:Ljava/util/regex/Pattern;
-
     .line 7
+    sput-object v0, LX/0IA;->A00:[B
+
     .line 8
+    .line 9
     return-void
+
+    .line 10
+    :array_0
+    .array-data 1
+        0x30t
+        0x31t
+        0x32t
+        0x33t
+        0x34t
+        0x35t
+        0x36t
+        0x37t
+        0x38t
+        0x39t
+        0x61t
+        0x62t
+        0x63t
+        0x64t
+        0x65t
+        0x66t
+    .end array-data
 .end method
 
-.method public constructor <init>(Landroid/content/Context;LX/0ID;)V
+.method public static A00(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    const-string v0, "utf-8"
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/0IA;->A01:Landroid/content/Context;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
+    .line 3
     .line 4
     .line 5
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
     .line 6
+    const-string v0, "MD5"
+
     .line 7
     .line 8
-    iput-object p2, p0, LX/0IA;->A00:LX/0ID;
+    invoke-static {p0, v0}, LX/0IA;->A02([BLjava/lang/String;)Ljava/lang/String;
 
     .line 9
     .line 10
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
     .line 11
-    .line 12
-    .line 13
     move-result-object v0
 
-    .line 14
-    iput-object v0, p0, LX/0IA;->A02:Ljava/lang/String;
-
-    .line 15
-    .line 16
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00()LX/0I9;
-    .locals 8
-
-    .line 0
-    iget-object v2, p0, LX/0IA;->A02:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    const-string v0, "com.facebook.versioncontrol.revision"
-
-    .line 3
-    .line 4
-    iget-object v1, p0, LX/0IA;->A00:LX/0ID;
-
-    .line 5
-    .line 6
-    invoke-virtual {v1, v0, v2}, LX/0ID;->A00(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v5
-
-    .line 10
-    if-nez v5, :cond_0
-
-    .line 11
     .line 12
-    const-string v5, ""
+    return-object v0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 13
+    :catch_0
+    move-exception v0
+
     .line 14
-    :cond_0
-    const-string v0, "com.facebook.versioncontrol.branch"
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 15
     .line 16
-    invoke-virtual {v1, v0, v2}, LX/0ID;->A00(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 17
+    move-result-object v0
+
+    .line 18
+    throw v0
+.end method
+
+.method public static A01([B)Ljava/lang/String;
+    .locals 6
+
+    .line 0
+    array-length v5, p0
+
+    .line 1
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    .line 2
+    .line 3
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 4
+    .line 5
+    .line 6
+    const/4 v3, 0x0
+
+    .line 7
+    :goto_0
+    if-ge v3, v5, :cond_0
+
+    .line 8
+    .line 9
+    aget-byte v0, p0, v3
+
+    .line 10
+    .line 11
+    and-int/lit16 v2, v0, 0xff
+
+    .line 12
+    .line 13
+    sget-object v1, LX/0IA;->A00:[B
+
+    .line 14
+    .line 15
+    ushr-int/lit8 v0, v2, 0x4
+
+    .line 16
+    .line 17
+    aget-byte v0, v1, v0
+
     .line 18
     .line 19
-    move-result-object v6
+    int-to-char v0, v0
 
     .line 20
-    if-nez v6, :cond_1
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 21
     .line 22
-    const-string v6, ""
-
     .line 23
+    and-int/lit8 v0, v2, 0xf
+
     .line 24
-    :cond_1
-    const-string v0, "com.facebook.build_time"
-
     .line 25
+    aget-byte v0, v1, v0
+
     .line 26
-    invoke-virtual {v1, v0, v2}, LX/0ID;->A00(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 27
+    int-to-char v0, v0
+
     .line 28
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     .line 29
-    move-result-object v1
-
     .line 30
-    if-nez v1, :cond_2
-
     .line 31
-    .line 32
-    const-string v1, ""
+    add-int/lit8 v3, v3, 0x1
 
+    .line 32
     .line 33
+    goto :goto_0
+
     .line 34
-    :cond_2
-    sget-object v0, LX/0IA;->A03:Ljava/util/regex/Pattern;
+    :cond_0
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 35
     .line 36
-    invoke-virtual {v0, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
     .line 37
+    move-result-object v0
+
     .line 38
-    .line 39
+    return-object v0
+.end method
+
+.method public static A02([BLjava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    :try_start_0
+    invoke-static {p1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
+
+    .line 4
+    const/4 v1, 0x0
+
+    .line 5
+    array-length v0, p0
+
+    .line 6
+    invoke-virtual {v2, p0, v1, v0}, Ljava/security/MessageDigest;->update([BII)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
+
+    .line 10
+    .line 11
+    .line 12
     move-result-object v0
 
-    .line 40
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+    .line 13
+    invoke-static {v0}, LX/0IA;->A01([B)Ljava/lang/String;
 
-    .line 41
-    .line 42
-    .line 43
-    move-result v0
-
-    .line 44
-    if-eqz v0, :cond_3
-
-    .line 45
-    .line 46
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    .line 47
-    .line 48
-    .line 49
-    move-result v0
-
-    .line 50
-    add-int/lit8 v0, v0, -0x1
-
-    .line 51
-    .line 52
-    const/4 v2, 0x0
-
-    .line 53
-    invoke-virtual {v1, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    .line 54
-    .line 55
-    .line 56
+    .line 14
+    .line 15
+    .line 16
     move-result-object v0
 
-    .line 57
-    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    .line 17
+    return-object v0
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
-    .line 59
-    .line 60
-    move-result-wide v3
+    .line 18
+    :catch_0
+    move-exception v0
 
-    .line 61
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    .line 19
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
-    .line 62
-    .line 63
-    const/4 v0, 0x1
-
-    .line 64
-    invoke-static {v0, v2, v1}, Ljava/text/DateFormat;->getDateTimeInstance(IILjava/util/Locale;)Ljava/text/DateFormat;
-
-    .line 65
-    .line 66
-    .line 67
-    move-result-object v1
-
-    .line 68
-    const-string v0, "PST8PDT"
-
-    .line 69
-    .line 70
-    invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    .line 71
-    .line 72
-    .line 73
+    .line 20
+    .line 21
+    .line 22
     move-result-object v0
 
-    .line 74
-    invoke-virtual {v1, v0}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+    .line 23
+    throw v0
 
-    .line 75
-    .line 76
-    .line 77
-    new-instance v0, Ljava/util/Date;
+    .line 24
+    :catch_1
+    move-exception v0
 
-    .line 78
-    .line 79
-    invoke-direct {v0, v3, v4}, Ljava/util/Date;-><init>(J)V
+    .line 25
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
-    .line 80
-    .line 81
-    .line 82
-    invoke-virtual {v1, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
 
-    .line 83
-    .line 84
-    .line 85
-    move-result-object v7
-
-    .line 86
-    :goto_0
-    new-instance v2, LX/0I9;
-
-    .line 87
-    .line 88
-    invoke-direct/range {v2 .. v7}, LX/0I9;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 89
-    .line 90
-    .line 91
-    return-object v2
-
-    .line 92
-    :cond_3
-    const-wide/16 v3, 0x0
-
-    .line 93
-    .line 94
-    const-string v7, ""
-
-    .line 95
-    .line 96
-    goto :goto_0
+    .line 29
+    throw v0
 .end method

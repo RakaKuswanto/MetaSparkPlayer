@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <X.4OA android:id="@id/email_login_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/email_login_button_text" />
-    <X.4OA android:id="@id/email_reg_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/email_reg_button_text" />
-    <X.4OA android:id="@id/ig_login_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ig_login_button_text" />
-    <X.4OA android:id="@id/fb_login_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_login_button_text" />
-    <X.4OA android:id="@id/skip_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/skip_button_text" />
+    <X.4Ic android:id="@id/email_login_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/email_login_button_text" />
+    <X.4Ic android:id="@id/email_reg_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/email_reg_button_text" />
+    <X.4Ic android:id="@id/ig_login_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ig_login_button_text" />
+    <X.4Ic android:id="@id/fb_login_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_login_button_text" />
+    <X.4Ic android:id="@id/skip_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/skip_button_text" />
 </LinearLayout>

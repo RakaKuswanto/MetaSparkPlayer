@@ -3,211 +3,59 @@
 .source ""
 
 # interfaces
-.implements LX/0Ti;
+.implements LX/24Y;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AuthOperations$PartiesSsoAuthOperation"
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:Ljava/lang/String;
 
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Gd;
+.field public final synthetic A01:LX/2Ok;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(LX/2Ok;Ljava/lang/String;)V
+    .locals 0
 
     .line 0
+    iput-object p1, p0, LX/2Oz;->A01:LX/2Ok;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
     .line 3
-    const/16 v0, 0x78
-
     .line 4
     .line 5
-    invoke-static {p0, v0}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
+    iput-object p2, p0, LX/2Oz;->A00:Ljava/lang/String;
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/2Oz;->A03:LX/0Gd;
-
-    .line 10
-    .line 11
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/2Oz;->A02:LX/0Na;
-
-    .line 16
-    .line 17
-    sget v0, LX/2eq;->AXP:I
-
-    .line 18
-    .line 19
-    invoke-static {v0}, LX/1zT;->A00(I)LX/1zT;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    iput-object v0, p0, LX/2Oz;->A01:LX/0Na;
-
-    .line 24
-    .line 25
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    iput-object v0, p0, LX/2Oz;->A00:LX/1zG;
-
-    .line 30
-    .line 31
     return-void
-.end method
-
-.method public static A00(LX/2Oz;)LX/1b2;
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/2Oz;->A01:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/1kc;
-
-    .line 7
-    .line 8
-    iget-object v0, v0, LX/1kc;->A01:LX/0Na;
-
-    .line 9
-    .line 10
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object p0
-
-    .line 14
-    check-cast p0, LX/2Nz;
-
-    .line 15
-    .line 16
-    sget-object v2, LX/1b0;->A0B:LX/1b1;
-
-    .line 17
-    .line 18
-    const-string/jumbo v1, "settings/mqtt/mqtt_connect_hash"
-
-    .line 19
-    .line 20
-    .line 21
-    const/4 v0, 0x1
-
-    .line 22
-    invoke-virtual {p0, v2, v1, v0}, LX/2Nz;->A02(LX/1b2;Ljava/lang/String;Z)LX/1b2;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final A6r()V
-    .locals 2
+.method public final bridge synthetic call()Ljava/lang/Object;
+    .locals 19
 
     .line 0
-    iget-object v0, p0, LX/2Oz;->A02:LX/0Na;
+    move-object/from16 v3, p0
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yd;->A0B(LX/0Na;)LX/1hU;
+    iget-object v6, v3, LX/2Oz;->A01:LX/2Ok;
 
     .line 3
     .line 4
+    iget-object v2, v6, LX/2Ok;->A0W:LX/0RP;
+
     .line 5
-    move-result-object v1
-
     .line 6
-    invoke-static {p0}, LX/2Oz;->A00(LX/2Oz;)LX/1b2;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    invoke-interface {v1, v0}, LX/1hU;->Aiq(LX/1b2;)LX/2O0;
-
-    .line 11
-    .line 12
-    .line 13
-    invoke-interface {v1}, LX/1hU;->commit()V
-
-    .line 14
-    .line 15
-    .line 16
-    return-void
-.end method
-
-.method public final ADI()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, ""
-
-    return-object v0
-.end method
-
-.method public final ADe()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/2Oz;->A02:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v2
-
-    .line 6
-    invoke-static {p0}, LX/2Oz;->A00(LX/2Oz;)LX/1b2;
+    invoke-static {v2}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 7
     .line 8
@@ -215,119 +63,202 @@
     move-result-object v1
 
     .line 10
-    const-string v0, ""
+    sget-object v0, LX/2PN;->A08:LX/28F;
 
     .line 11
     .line 12
-    invoke-interface {v2, v1, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AMa(LX/1b2;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v11, 0x0
 
     .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    return-object v0
-.end method
-
-.method public final AHa()LX/0Tj;
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2Oz;->A03:LX/0Gd;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/0Gd;->get()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, Lcom/facebook/auth/credentials/UserTokenCredentials;
-
-    .line 7
-    .line 8
-    if-nez v0, :cond_0
-
-    .line 9
-    .line 10
-    sget-object v0, LX/0Tj;->A00:LX/0Tj;
-
-    .line 11
-    .line 12
-    return-object v0
-
-    .line 13
-    :cond_0
-    iget-object v1, v0, Lcom/facebook/auth/credentials/UserTokenCredentials;->A00:Ljava/lang/String;
+    invoke-interface {v1, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AL7(LX/28F;)Ljava/lang/String;
 
     .line 14
     .line 15
-    iget-object v0, v0, Lcom/facebook/auth/credentials/UserTokenCredentials;->A01:Ljava/lang/String;
-
     .line 16
+    move-result-object v9
+
     .line 17
-    invoke-static {v1, v0}, LX/0Tj;->A00(Ljava/lang/String;Ljava/lang/String;)LX/0Tj;
+    invoke-static {v2}, LX/0X2;->A0g(LX/0RP;)Ljava/lang/String;
 
     .line 18
     .line 19
     .line 20
-    move-result-object v0
+    move-result-object v10
 
     .line 21
-    return-object v0
-.end method
+    iget-object v0, v3, LX/2Oz;->A00:Ljava/lang/String;
 
-.method public final AlU(Ljava/lang/String;)V
-    .locals 2
+    .line 22
+    .line 23
+    iget-object v7, v6, LX/2Ok;->A0l:LX/0VC;
 
-    .line 0
-    iget-object v0, p0, LX/2Oz;->A02:LX/0Na;
+    .line 24
+    .line 25
+    invoke-static {v7}, LX/0X1;->A1b(LX/0VC;)Z
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/0Yd;->A0B(LX/0Na;)LX/1hU;
+    .line 26
+    .line 27
+    .line 28
+    move-result v18
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
+    .line 29
+    new-instance v12, LX/2Qu;
 
-    .line 6
-    invoke-static {p0}, LX/2Oz;->A00(LX/2Oz;)LX/1b2;
+    .line 30
+    .line 31
+    move-object v13, v0
 
-    .line 7
-    .line 8
-    .line 9
+    .line 32
+    move-object v14, v9
+
+    .line 33
+    move-object v15, v10
+
+    .line 34
+    move-object/from16 v16, v11
+
+    .line 35
+    .line 36
+    move-object/from16 v17, v11
+
+    .line 37
+    .line 38
+    invoke-direct/range {v12 .. v18}, LX/2Qu;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    .line 39
+    .line 40
+    .line 41
+    iget-object v0, v6, LX/2Ok;->A0k:LX/0VC;
+
+    .line 42
+    .line 43
+    invoke-interface {v0}, LX/0VC;->get()Ljava/lang/Object;
+
+    .line 44
+    .line 45
+    .line 46
+    move-result-object v5
+
+    .line 47
+    check-cast v5, LX/19S;
+
+    .line 48
+    .line 49
+    iget-object v1, v6, LX/2Ok;->A0A:LX/2QL;
+
+    .line 50
+    .line 51
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v4
+
+    .line 55
+    const-string v3, "AuthOperations"
+
+    .line 56
+    .line 57
+    new-instance v0, Lcom/facebook/common/callercontext/CallerContext;
+
+    .line 58
+    .line 59
+    invoke-direct {v0, v4, v11, v3, v11}, Lcom/facebook/common/callercontext/CallerContext;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 60
+    .line 61
+    .line 62
+    invoke-virtual {v5, v0, v1, v11, v12}, LX/19S;->A09(Lcom/facebook/common/callercontext/CallerContext;LX/2SR;LX/1mX;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 63
+    .line 64
+    .line 65
     move-result-object v0
 
-    .line 10
-    invoke-interface {v1, v0, p1}, LX/1hU;->AhJ(LX/1b2;Ljava/lang/String;)LX/2O0;
+    .line 66
+    check-cast v0, Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;
 
-    .line 11
-    .line 12
-    .line 13
-    invoke-interface {v1}, LX/1hU;->commit()V
+    .line 67
+    .line 68
+    check-cast v0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;
 
-    .line 14
-    .line 15
-    .line 16
-    return-void
-.end method
+    .line 69
+    .line 70
+    iget-object v0, v0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A00:Lcom/facebook/auth/credentials/FacebookCredentials;
 
-.method public final AqN(LX/0Tj;)Z
-    .locals 1
+    .line 71
+    .line 72
+    iget-object v2, v0, Lcom/facebook/auth/credentials/FacebookCredentials;->A07:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    .line 73
+    .line 74
+    iget-object v1, v0, Lcom/facebook/auth/credentials/FacebookCredentials;->A06:Ljava/lang/String;
 
-    return v0
-.end method
+    .line 75
+    .line 76
+    sget-object v0, LX/2PV;->BONFIRE_ACCOUNT_SWITCH:LX/2PV;
 
-.method public final clear()V
-    .locals 0
+    .line 77
+    .line 78
+    new-instance v8, Lcom/facebook/auth/credentials/PasswordCredentials;
 
-    return-void
+    .line 79
+    .line 80
+    invoke-direct {v8, v0, v2, v1}, Lcom/facebook/auth/credentials/PasswordCredentials;-><init>(LX/2PV;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 81
+    .line 82
+    .line 83
+    invoke-static {v7}, LX/0X1;->A1b(LX/0VC;)Z
+
+    .line 84
+    .line 85
+    .line 86
+    move-result v16
+
+    .line 87
+    new-instance v7, LX/2Qm;
+
+    .line 88
+    .line 89
+    move-object v12, v11
+
+    .line 90
+    move-object v13, v11
+
+    .line 91
+    move-object v14, v11
+
+    .line 92
+    move-object v15, v11
+
+    .line 93
+    invoke-direct/range {v7 .. v16}, LX/2Qm;-><init>(Lcom/facebook/auth/credentials/PasswordCredentials;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    .line 94
+    .line 95
+    .line 96
+    iget-object v1, v6, LX/2Ok;->A09:LX/2QJ;
+
+    .line 97
+    .line 98
+    new-instance v0, Lcom/facebook/common/callercontext/CallerContext;
+
+    .line 99
+    .line 100
+    invoke-direct {v0, v4, v11, v3, v11}, Lcom/facebook/common/callercontext/CallerContext;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 101
+    .line 102
+    .line 103
+    invoke-virtual {v5, v0, v1, v11, v7}, LX/19S;->A09(Lcom/facebook/common/callercontext/CallerContext;LX/2SR;LX/1mX;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 104
+    .line 105
+    .line 106
+    move-result-object v0
+
+    .line 107
+    return-object v0
 .end method

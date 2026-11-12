@@ -1,20 +1,32 @@
-.class public final LX/5vt;
+.class public LX/5Vt;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5vs;
+.implements LX/5a5;
 
 
 # instance fields
-.field public final A00:LX/5vs;
+.field public A00:I
 
-.field public final A01:J
+.field public A01:[LX/5Vs;
 
 
 # direct methods
-.method public constructor <init>(LX/5vs;J)V
+.method public constructor <init>()V
     .locals 0
+
+    .line 536870912
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -22,146 +34,276 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5vt;->A00:LX/5vs;
+    new-array v2, p1, [LX/5Vs;
 
     .line 4
     .line 5
-    iput-wide p2, p0, LX/5vt;->A01:J
+    iput-object v2, p0, LX/5Vt;->A01:[LX/5Vs;
 
     .line 6
     .line 7
+    const/4 v1, 0x0
+
+    .line 8
+    :goto_0
+    if-ge v1, p1, :cond_0
+
+    .line 9
+    .line 10
+    new-instance v0, LX/5Vs;
+
+    .line 11
+    .line 12
+    invoke-direct {v0}, LX/5Vs;-><init>()V
+
+    .line 13
+    .line 14
+    .line 15
+    aput-object v0, v2, v1
+
+    .line 16
+    .line 17
+    add-int/lit8 v1, v1, 0x1
+
+    .line 18
+    .line 19
+    goto :goto_0
+
+    .line 20
+    :cond_0
+    iput p1, p0, LX/5Vt;->A00:I
+
+    .line 21
+    .line 22
+    return-void
+.end method
+
+.method public constructor <init>([LX/5Vs;)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput-object p1, p0, LX/5Vt;->A01:[LX/5Vs;
+
+    .line 268435460
+    .line 268435461
+    array-length v0, p1
+
+    .line 268435462
+    iput v0, p0, LX/5Vt;->A00:I
+
+    .line 268435463
+    .line 268435464
     return-void
 .end method
 
 
 # virtual methods
-.method public final AE2()Landroid/util/Pair;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final AQc()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final ARL()Z
-    .locals 1
+.method public final A00()[I
+    .locals 6
 
     .line 0
-    iget-object v0, p0, LX/5vt;->A00:LX/5vs;
+    iget-object v0, p0, LX/5Vt;->A01:[LX/5Vs;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5vs;->ARL()Z
+    array-length v0, v0
 
     .line 3
+    new-array v5, v0, [I
+
     .line 4
     .line 5
-    move-result v0
+    const/4 v4, 0x0
 
     .line 6
-    return v0
-.end method
-
-.method public final ATU()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5vt;->A00:LX/5vs;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/5vs;->ATU()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final Ahf(LX/5QB;LX/5K0;I)I
-    .locals 7
-
-    .line 0
-    iget-object v0, p0, LX/5vt;->A00:LX/5vs;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2, p3}, LX/5vs;->Ahf(LX/5QB;LX/5K0;I)I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v6
-
-    .line 6
-    const/4 v0, -0x4
+    :goto_0
+    iget v3, p0, LX/5Vt;->A00:I
 
     .line 7
-    if-ne v6, v0, :cond_0
-
     .line 8
+    move v2, v3
+
     .line 9
-    const-wide/16 v4, 0x0
+    iget-object v0, p0, LX/5Vt;->A01:[LX/5Vs;
 
     .line 10
     .line 11
-    iget-wide v2, p2, LX/5K0;->A01:J
+    if-ge v4, v3, :cond_0
 
     .line 12
     .line 13
-    iget-wide v0, p0, LX/5vt;->A01:J
+    aget-object v0, v0, v4
 
     .line 14
     .line 15
-    add-long/2addr v2, v0
+    iget v3, v0, LX/5Vs;->A00:I
 
     .line 16
-    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->max(JJ)J
-
     .line 17
+    iget v2, v0, LX/5Vs;->A03:I
+
     .line 18
     .line 19
-    move-result-wide v0
+    iget v1, v0, LX/5Vs;->A02:I
 
     .line 20
-    iput-wide v0, p2, LX/5K0;->A01:J
-
     .line 21
+    iget v0, v0, LX/5Vs;->A01:I
+
     .line 22
+    .line 23
+    invoke-static {v3, v2, v1, v0}, Landroid/graphics/Color;->argb(IIII)I
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    aput v0, v5, v4
+
+    .line 28
+    .line 29
+    add-int/lit8 v4, v4, 0x1
+
+    .line 30
+    .line 31
+    goto :goto_0
+
+    .line 32
     :cond_0
-    return v6
+    array-length v1, v0
+
+    .line 33
+    if-le v1, v3, :cond_1
+
+    .line 34
+    .line 35
+    :goto_1
+    if-ge v3, v1, :cond_1
+
+    .line 36
+    .line 37
+    add-int/lit8 v0, v2, -0x1
+
+    .line 38
+    .line 39
+    aget v0, v5, v0
+
+    .line 40
+    .line 41
+    aput v0, v5, v3
+
+    .line 42
+    .line 43
+    add-int/lit8 v3, v3, 0x1
+
+    .line 44
+    .line 45
+    goto :goto_1
+
+    .line 46
+    :cond_1
+    return-object v5
 .end method
 
-.method public final AoR(J)I
-    .locals 3
+.method public final bridge synthetic AOD(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
     .line 0
-    iget-object v2, p0, LX/5vt;->A00:LX/5vs;
+    check-cast p2, LX/5Vt;
 
     .line 1
     .line 2
-    iget-wide v0, p0, LX/5vt;->A01:J
+    check-cast p3, LX/5Vt;
 
     .line 3
     .line 4
-    sub-long/2addr p1, v0
+    iget v1, p0, LX/5Vt;->A00:I
 
     .line 5
-    invoke-interface {v2, p1, p2}, LX/5vs;->AoR(J)I
-
     .line 6
+    iget v0, p2, LX/5Vt;->A00:I
+
     .line 7
     .line 8
-    move-result v0
+    if-ne v1, v0, :cond_1
 
     .line 9
-    return v0
+    .line 10
+    iput v1, p3, LX/5Vt;->A00:I
+
+    .line 11
+    .line 12
+    const/4 v3, 0x0
+
+    .line 13
+    :goto_0
+    iget v0, p0, LX/5Vt;->A00:I
+
+    .line 14
+    .line 15
+    if-ge v3, v0, :cond_0
+
+    .line 16
+    .line 17
+    iget-object v0, p0, LX/5Vt;->A01:[LX/5Vs;
+
+    .line 18
+    .line 19
+    aget-object v2, v0, v3
+
+    .line 20
+    .line 21
+    iget-object v0, p2, LX/5Vt;->A01:[LX/5Vs;
+
+    .line 22
+    .line 23
+    aget-object v1, v0, v3
+
+    .line 24
+    .line 25
+    iget-object v0, p3, LX/5Vt;->A01:[LX/5Vs;
+
+    .line 26
+    .line 27
+    aget-object v0, v0, v3
+
+    .line 28
+    .line 29
+    invoke-virtual {v2, v1, v0, p1}, LX/5Vs;->A00(LX/5Vs;LX/5Vs;F)V
+
+    .line 30
+    .line 31
+    .line 32
+    add-int/lit8 v3, v3, 0x1
+
+    .line 33
+    .line 34
+    goto :goto_0
+
+    .line 35
+    :cond_0
+    return-object p3
+
+    .line 36
+    :cond_1
+    const-string v0, "cannot interpolate between mismatched lengths"
+
+    .line 37
+    .line 38
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    throw v0
 .end method

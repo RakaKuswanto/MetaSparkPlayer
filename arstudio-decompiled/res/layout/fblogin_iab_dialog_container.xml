@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<X.4KI android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <com.facebook.litho.LithoView android:layout_gravity="center" android:id="@id/iab_fblogin_litho_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    </LinearLayout>
-</X.4KI>

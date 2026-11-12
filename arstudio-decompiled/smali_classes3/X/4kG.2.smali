@@ -1,14 +1,38 @@
-.class public interface abstract LX/4kG;
+.class public final LX/4kG;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4FO;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract A5S(LX/4je;)LX/4kG;
-.end method
+.method public final A6O(Landroid/content/Context;IZZ)LX/4jp;
+    .locals 1
 
-.method public abstract A6I(LX/4j5;)LX/4id;
-.end method
+    .line 0
+    new-instance v0, LX/4jp;
 
-.method public abstract ATD(LX/4jM;F)LX/4kG;
+    .line 1
+    .line 2
+    invoke-direct {v0, p1, p3, p2, p4}, LX/4jp;-><init>(Landroid/content/Context;ZIZ)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
 .end method

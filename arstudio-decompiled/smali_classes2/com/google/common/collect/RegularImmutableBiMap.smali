@@ -22,9 +22,9 @@
 
 
 # instance fields
-.field public final transient A00:[Ljava/lang/Object;
+.field public final transient A00:Lcom/google/common/collect/RegularImmutableBiMap;
 
-.field public final transient A01:Lcom/google/common/collect/RegularImmutableBiMap;
+.field public final transient A01:[Ljava/lang/Object;
 
 .field public final transient A02:I
 
@@ -77,7 +77,7 @@
 
     .line 536870920
     .line 536870921
-    iput-object v0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:[Ljava/lang/Object;
+    iput-object v0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:[Ljava/lang/Object;
 
     .line 536870922
     .line 536870923
@@ -89,7 +89,7 @@
 
     .line 536870926
     .line 536870927
-    iput-object p0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:Lcom/google/common/collect/RegularImmutableBiMap;
+    iput-object p0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:Lcom/google/common/collect/RegularImmutableBiMap;
 
     .line 536870928
     .line 536870929
@@ -98,6 +98,20 @@
 
 .method public constructor <init>(Lcom/google/common/collect/RegularImmutableBiMap;Ljava/lang/Object;[Ljava/lang/Object;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "valueHashTable",
+            "alternatingKeysAndValues",
+            "size",
+            "inverse"
+        }
+    .end annotation
 
     .line 268435456
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableBiMap;-><init>()V
@@ -109,7 +123,7 @@
 
     .line 268435460
     .line 268435461
-    iput-object p3, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:[Ljava/lang/Object;
+    iput-object p3, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:[Ljava/lang/Object;
 
     .line 268435462
     .line 268435463
@@ -124,7 +138,7 @@
 
     .line 268435467
     .line 268435468
-    iput-object p1, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:Lcom/google/common/collect/RegularImmutableBiMap;
+    iput-object p1, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:Lcom/google/common/collect/RegularImmutableBiMap;
 
     .line 268435469
     .line 268435470
@@ -132,7 +146,17 @@
 .end method
 
 .method public constructor <init>([Ljava/lang/Object;I)V
-    .locals 3
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "alternatingKeysAndValues",
+            "size"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableBiMap;-><init>()V
@@ -140,7 +164,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:[Ljava/lang/Object;
+    iput-object p1, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:[Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -148,17 +172,17 @@
 
     .line 6
     .line 7
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
     .line 8
-    iput v2, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A02:I
+    iput v0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A02:I
 
     .line 9
     .line 10
-    const/4 v0, 0x2
+    const/4 v3, 0x2
 
     .line 11
-    if-lt p2, v0, :cond_0
+    if-lt p2, v3, :cond_0
 
     .line 12
     .line 13
@@ -167,54 +191,94 @@
     .line 14
     .line 15
     .line 16
-    move-result v1
+    move-result v2
 
     .line 17
     :goto_0
-    invoke-static {p1, p2, v1, v2}, Lcom/google/common/collect/RegularImmutableMap;->A01([Ljava/lang/Object;III)Ljava/lang/Object;
+    invoke-static {p1, p2, v2, v0}, Lcom/google/common/collect/RegularImmutableMap;->A02([Ljava/lang/Object;III)Ljava/lang/Object;
 
     .line 18
     .line 19
     .line 20
-    move-result-object v0
+    move-result-object v1
 
     .line 21
-    iput-object v0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A04:Ljava/lang/Object;
+    instance-of v0, v1, [Ljava/lang/Object;
 
     .line 22
     .line 23
-    const/4 v0, 0x1
+    if-nez v0, :cond_1
 
     .line 24
-    invoke-static {p1, p2, v1, v0}, Lcom/google/common/collect/RegularImmutableMap;->A01([Ljava/lang/Object;III)Ljava/lang/Object;
-
     .line 25
+    iput-object v1, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A04:Ljava/lang/Object;
+
     .line 26
     .line 27
-    move-result-object v1
+    const/4 v0, 0x1
 
     .line 28
-    new-instance v0, Lcom/google/common/collect/RegularImmutableBiMap;
+    invoke-static {p1, p2, v2, v0}, Lcom/google/common/collect/RegularImmutableMap;->A02([Ljava/lang/Object;III)Ljava/lang/Object;
 
     .line 29
     .line 30
-    invoke-direct {v0, p0, v1, p1, p2}, Lcom/google/common/collect/RegularImmutableBiMap;-><init>(Lcom/google/common/collect/RegularImmutableBiMap;Ljava/lang/Object;[Ljava/lang/Object;I)V
-
     .line 31
+    move-result-object v1
+
     .line 32
+    instance-of v0, v1, [Ljava/lang/Object;
+
     .line 33
-    iput-object v0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:Lcom/google/common/collect/RegularImmutableBiMap;
-
     .line 34
-    .line 35
-    return-void
+    if-nez v0, :cond_1
 
+    .line 35
     .line 36
-    :cond_0
-    const/4 v1, 0x0
+    new-instance v0, Lcom/google/common/collect/RegularImmutableBiMap;
 
     .line 37
+    .line 38
+    invoke-direct {v0, p0, v1, p1, p2}, Lcom/google/common/collect/RegularImmutableBiMap;-><init>(Lcom/google/common/collect/RegularImmutableBiMap;Ljava/lang/Object;[Ljava/lang/Object;I)V
+
+    .line 39
+    .line 40
+    .line 41
+    iput-object v0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:Lcom/google/common/collect/RegularImmutableBiMap;
+
+    .line 42
+    .line 43
+    return-void
+
+    .line 44
+    :cond_0
+    const/4 v2, 0x0
+
+    .line 45
     goto :goto_0
+
+    .line 46
+    :cond_1
+    check-cast v1, [Ljava/lang/Object;
+
+    .line 47
+    .line 48
+    aget-object v0, v1, v3
+
+    .line 49
+    .line 50
+    check-cast v0, LX/23L;
+
+    .line 51
+    .line 52
+    invoke-virtual {v0}, LX/23L;->A00()Ljava/lang/IllegalArgumentException;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v0
+
+    .line 56
+    throw v0
 .end method
 
 
@@ -223,7 +287,7 @@
     .locals 4
 
     .line 0
-    iget-object v3, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:[Ljava/lang/Object;
+    iget-object v3, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -251,7 +315,7 @@
     .locals 4
 
     .line 0
-    iget-object v3, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:[Ljava/lang/Object;
+    iget-object v3, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -286,13 +350,21 @@
 
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
 
     .line 0
     iget-object v3, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A04:Ljava/lang/Object;
 
     .line 1
     .line 2
-    iget-object v2, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A00:[Ljava/lang/Object;
+    iget-object v2, p0, Lcom/google/common/collect/RegularImmutableBiMap;->A01:[Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -304,7 +376,7 @@
 
     .line 7
     .line 8
-    invoke-static {v3, p1, v2, v1, v0}, Lcom/google/common/collect/RegularImmutableMap;->A00(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;II)Ljava/lang/Object;
+    invoke-static {v3, p1, v2, v1, v0}, Lcom/google/common/collect/RegularImmutableMap;->A01(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;II)Ljava/lang/Object;
 
     .line 9
     .line 10
@@ -312,6 +384,14 @@
     move-result-object v0
 
     .line 12
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    :cond_0
     return-object v0
 .end method
 
@@ -332,4 +412,20 @@
     .line 1
     .line 2
     return v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    new-instance v0, Lcom/google/common/collect/ImmutableBiMap$SerializedForm;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p0}, Lcom/google/common/collect/ImmutableBiMap$SerializedForm;-><init>(Lcom/google/common/collect/ImmutableBiMap;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/ImmutableList$Builder;
-.super LX/1fo;
+.super LX/23T;
 .source ""
 
 
@@ -21,9 +21,17 @@
 
 .method public constructor <init>(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "capacity"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1fo;-><init>()V
+    invoke-direct {p0}, LX/23T;-><init>()V
 
     .line 1
     .line 2
@@ -33,8 +41,16 @@
 
 
 # virtual methods
-.method public bridge synthetic add(Ljava/lang/Object;)LX/1fo;
+.method public bridge synthetic add(Ljava/lang/Object;)LX/23O;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "element"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
@@ -45,11 +61,19 @@
     return-object p0
 .end method
 
-.method public bridge synthetic add(Ljava/lang/Object;)LX/1fr;
+.method public bridge synthetic add([Ljava/lang/Object;)LX/23O;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
     .line 805306368
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList$Builder;->add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
     .line 805306369
     .line 805306370
@@ -57,11 +81,19 @@
     return-object p0
 .end method
 
-.method public bridge synthetic add([Ljava/lang/Object;)LX/1fr;
+.method public bridge synthetic add(Ljava/lang/Object;)LX/23T;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "element"
+        }
+    .end annotation
 
     .line 1073741824
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList$Builder;->add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
     .line 1073741825
     .line 1073741826
@@ -71,21 +103,17 @@
 
 .method public add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
     .locals 0
-
-    .line 268435456
-    invoke-super {p0, p1}, LX/1fo;->add(Ljava/lang/Object;)LX/1fo;
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-object p0
-.end method
-
-.method public varargs add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
-    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "element"
+        }
+    .end annotation
 
     .line 536870912
-    invoke-super {p0, p1}, LX/1fo;->add([Ljava/lang/Object;)LX/1fr;
+    invoke-super {p0, p1}, LX/23T;->add(Ljava/lang/Object;)LX/23T;
 
     .line 536870913
     .line 536870914
@@ -93,11 +121,19 @@
     return-object p0
 .end method
 
-.method public bridge synthetic addAll(Ljava/lang/Iterable;)LX/1fr;
+.method public varargs add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
     .line 268435456
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList$Builder;->addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList$Builder;
+    invoke-super {p0, p1}, LX/23T;->add([Ljava/lang/Object;)LX/23O;
 
     .line 268435457
     .line 268435458
@@ -107,18 +143,34 @@
 
 .method public addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList$Builder;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
-    .line 536870912
-    invoke-super {p0, p1}, LX/1fo;->addAll(Ljava/lang/Iterable;)LX/1fr;
+    .line 268435456
+    invoke-virtual {p0, p1}, LX/23T;->A02(Ljava/lang/Iterable;)V
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
+    .line 268435457
+    .line 268435458
+    .line 268435459
     return-object p0
 .end method
 
 .method public addAll(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
     .line 0
     :goto_0
@@ -142,7 +194,7 @@
     move-result-object v0
 
     .line 10
-    invoke-virtual {p0, v0}, LX/1fr;->add(Ljava/lang/Object;)LX/1fr;
+    invoke-virtual {p0, v0}, LX/23O;->add(Ljava/lang/Object;)LX/23O;
 
     .line 11
     .line 12
@@ -176,15 +228,15 @@
     const/4 v0, 0x1
 
     .line 1
-    iput-boolean v0, p0, LX/1fo;->A01:Z
+    iput-boolean v0, p0, LX/23T;->A01:Z
 
     .line 2
     .line 3
-    iget-object v1, p0, LX/1fo;->A02:[Ljava/lang/Object;
+    iget-object v1, p0, LX/23T;->A02:[Ljava/lang/Object;
 
     .line 4
     .line 5
-    iget v0, p0, LX/1fo;->A00:I
+    iget v0, p0, LX/23T;->A00:I
 
     .line 6
     .line 7

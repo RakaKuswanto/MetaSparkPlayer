@@ -1,7 +1,8 @@
-.class public final LX/4tR;
+.class public interface abstract LX/4tR;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static A00:LX/4tS;
+# virtual methods
+.method public abstract AbR(Ljava/lang/Object;)V
+.end method

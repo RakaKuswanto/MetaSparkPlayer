@@ -7,5 +7,5 @@
 .method public abstract callFunction(Ljava/lang/String;Ljava/lang/String;Lcom/facebook/react/bridge/NativeArray;)V
 .end method
 
-.method public abstract invokeCallback(ILX/5ON;)V
+.method public abstract invokeCallback(ILX/4sC;)V
 .end method

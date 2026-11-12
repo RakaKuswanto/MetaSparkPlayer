@@ -8,7 +8,7 @@
 
 .field public mCameraARAnalyticsLogger:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;
 
-.field public final mCameraARBugReportLogger:LX/0tE;
+.field public final mCameraARBugReportLogger:LX/3FN;
 
 .field public final mCrashMetadataLogger:Lcom/facebook/cameracore/logging/crashmetadatalogger/implementation/CameraARCrashMetadataLogger;
 
@@ -27,7 +27,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;-><init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/0tE;)V
+    invoke-direct {p0, p1, v0}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;-><init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/3FN;)V
 
     .line 2
     .line 3
@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/0tE;)V
+.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/3FN;)V
     .locals 1
 
     .line 536870912
@@ -43,7 +43,7 @@
 
     .line 536870913
     .line 536870914
-    invoke-direct {p0, p1, p2, v0}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;-><init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/0tE;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;-><init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/3FN;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;)V
 
     .line 536870915
     .line 536870916
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/0tE;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;)V
+.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;LX/3FN;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;)V
     .locals 2
 
     .line 268435456
@@ -100,7 +100,7 @@
 
     .line 268435478
     .line 268435479
-    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARBugReportLogger:LX/0tE;
+    iput-object p2, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARBugReportLogger:LX/3FN;
 
     .line 268435480
     .line 268435481
@@ -262,7 +262,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARBugReportLogger:LX/0tE;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARBugReportLogger:LX/3FN;
 
     .line 1
     .line 2
@@ -270,7 +270,7 @@
 
     .line 3
     .line 4
-    invoke-interface {v0, p1, p2}, LX/0tE;->logForBugReport(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, LX/3FN;->logForBugReport(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     .line 6
@@ -383,132 +383,7 @@
     return-void
 .end method
 
-.method public setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;)V
-    .locals 9
-
-    .line 268435456
-    move-object v1, p1
-
-    .line 268435457
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mProductName:Ljava/lang/String;
-
-    .line 268435458
-    .line 268435459
-    move-object/from16 v8, p7
-
-    .line 268435460
-    .line 268435461
-    iput-object v8, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mEffectStartIntent:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;
-
-    .line 268435462
-    .line 268435463
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARAnalyticsLogger:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;
-
-    .line 268435464
-    .line 268435465
-    if-eqz v0, :cond_0
-
-    .line 268435466
-    .line 268435467
-    const/4 v7, 0x0
-
-    .line 268435468
-    move-object v2, p2
-
-    .line 268435469
-    move-object v3, p3
-
-    .line 268435470
-    move-object v4, p4
-
-    .line 268435471
-    move-object v5, p5
-
-    .line 268435472
-    move v6, p6
-
-    .line 268435473
-    invoke-interface/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;->setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;)V
-
-    .line 268435474
-    .line 268435475
-    .line 268435476
-    :cond_0
-    return-void
-.end method
-
-.method public setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
-    .locals 9
-
-    .line 805803337
-    move-object v1, p1
-
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mProductName:Ljava/lang/String;
-
-    .line 805803338
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARAnalyticsLogger:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;
-
-    if-eqz v0, :cond_0
-
-    const/4 v8, 0x0
-
-    .line 805803339
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    move v6, p6
-
-    move-object/from16 v7, p7
-
-    invoke-interface/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;->setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;)V
-    .locals 9
-
-    .line 537367304
-    move-object v1, p1
-
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mProductName:Ljava/lang/String;
-
-    .line 537367305
-    move-object/from16 v8, p8
-
-    iput-object v8, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mEffectStartIntent:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;
-
-    .line 537367306
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARAnalyticsLogger:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;
-
-    if-eqz v0, :cond_0
-
-    .line 537367307
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    move v6, p6
-
-    move-object/from16 v7, p7
-
-    invoke-interface/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;->setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 9
 
     .line 0
@@ -519,45 +394,56 @@
 
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARAnalyticsLogger:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;
+    move-object/from16 v8, p8
 
     .line 4
     .line 5
-    if-eqz v0, :cond_0
+    if-eqz p8, :cond_0
 
     .line 6
     .line 7
-    const/4 v4, 0x0
+    iput-object v8, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mEffectStartIntent:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;
 
     .line 8
-    move-object v2, p2
-
     .line 9
-    move-object v3, p3
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/implementation/AnalyticsLoggerImpl;->mCameraARAnalyticsLogger:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;
 
     .line 10
-    move v6, p4
-
     .line 11
-    move-object v5, v4
+    if-eqz v0, :cond_1
 
     .line 12
-    move-object v7, v4
-
     .line 13
-    move-object v8, v4
+    move-object v2, p2
 
     .line 14
-    invoke-interface/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;->setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;)V
+    move-object v3, p3
 
     .line 15
+    move-object v4, p4
+
     .line 16
+    move-object v5, p5
+
     .line 17
-    :cond_0
+    move v6, p6
+
+    .line 18
+    move-object/from16 v7, p7
+
+    .line 19
+    .line 20
+    invoke-interface/range {v0 .. v8}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;->setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;)V
+
+    .line 21
+    .line 22
+    .line 23
+    :cond_1
     return-void
 .end method
 
-.method public setSessionListener(LX/3iM;)V
+.method public setSessionListener(LX/2wE;)V
     .locals 1
 
     .line 0
@@ -569,7 +455,7 @@
 
     .line 3
     .line 4
-    invoke-interface {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;->setSessionListener(LX/3iM;)V
+    invoke-interface {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/CameraARAnalyticsLogger;->setSessionListener(LX/2wE;)V
 
     .line 5
     .line 6

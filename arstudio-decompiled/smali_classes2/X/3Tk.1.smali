@@ -2,36 +2,43 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ImageFetchSubscriber$invalidate$1"
+
 
 # instance fields
-.field public final A00:J
-
-.field public final A01:Ljava/lang/String;
-
-.field public final A02:Z
+.field public final synthetic A00:LX/3T7;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Z)V
+.method public constructor <init>(LX/3T7;)V
     .locals 0
 
-    .line 0
+    iput-object p1, p0, LX/3Tk;->A00:LX/3T7;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/3Tk;->A00:LX/3T7;
 
     .line 1
     .line 2
-    .line 3
-    iput-boolean p4, p0, LX/3Tk;->A02:Z
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p3, p0, LX/3Tk;->A01:Ljava/lang/String;
-
-    .line 6
-    .line 7
-    iput-wide p1, p0, LX/3Tk;->A00:J
-
-    .line 8
-    .line 9
     return-void
 .end method

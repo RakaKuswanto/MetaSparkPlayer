@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public A00:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
+.field public final A00:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 
 .field public final A01:Ljava/lang/String;
 
@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5e
+    const/16 v0, 0x3b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
 
     .line 3
     .line 4
@@ -49,7 +49,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p2}, LX/51D;->A04(Ljava/lang/String;)V
+    invoke-static {p2}, LX/4va;->A05(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -154,7 +154,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yd;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 3
     .line 4
@@ -174,7 +174,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/0Yd;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A08(Ljava/lang/Object;)I
 
     .line 13
     .line 14
@@ -192,7 +192,7 @@
     .locals 3
 
     .line 0
-    invoke-static {p1}, LX/57v;->A00(Landroid/os/Parcel;)I
+    invoke-static {p1}, LX/51b;->A00(Landroid/os/Parcel;)I
 
     .line 1
     .line 2
@@ -207,7 +207,7 @@
     const/4 v0, 0x2
 
     .line 7
-    invoke-static {p1, v1, v0}, LX/57v;->A08(Landroid/os/Parcel;Ljava/lang/String;I)V
+    invoke-static {p1, v1, v0}, LX/51b;->A06(Landroid/os/Parcel;Ljava/lang/String;I)V
 
     .line 8
     .line 9
@@ -219,12 +219,12 @@
     const/4 v0, 0x5
 
     .line 13
-    invoke-static {p1, v1, v0, p2}, LX/57v;->A07(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
+    invoke-static {p1, v1, v0, p2}, LX/51b;->A05(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
 
     .line 14
     .line 15
     .line 16
-    invoke-static {p1, v2}, LX/57v;->A03(Landroid/os/Parcel;I)V
+    invoke-static {p1, v2}, LX/51b;->A02(Landroid/os/Parcel;I)V
 
     .line 17
     .line 18

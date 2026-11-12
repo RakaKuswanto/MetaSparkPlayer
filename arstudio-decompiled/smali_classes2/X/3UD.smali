@@ -1,41 +1,33 @@
-.class public final LX/3UD;
+.class public abstract LX/3UD;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/6Ls;
 
-
-# instance fields
-.field public final A00:LX/3TA;
+# static fields
+.field public static final A00:LX/0GZ;
 
 
 # direct methods
-.method public constructor <init>(LX/3TA;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x11
 
     .line 1
     .line 2
+    new-instance v0, LX/3T9;
+
     .line 3
-    iput-object p1, p0, LX/3UD;->A00:LX/3TA;
-
     .line 4
+    invoke-direct {v0, v1}, LX/3T9;-><init>(I)V
+
     .line 5
+    .line 6
+    .line 7
+    sput-object v0, LX/3UD;->A00:LX/0GZ;
+
+    .line 8
+    .line 9
     return-void
-.end method
-
-
-# virtual methods
-.method public final AB0()I
-    .locals 1
-
-    .line 0
-    const/16 v0, 0xc
-
-    .line 1
-    .line 2
-    return v0
 .end method

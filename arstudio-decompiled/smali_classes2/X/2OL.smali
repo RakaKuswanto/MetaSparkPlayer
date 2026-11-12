@@ -1,42 +1,138 @@
-.class public final LX/2OL;
-.super LX/1wb;
+.class public final enum LX/2OL;
+.super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$43"
+.field public static final synthetic $VALUES:[LX/2OL;
+
+.field public static final enum FROM_SERVER:LX/2OL;
+
+.field public static final enum FROM_USER:LX/2OL;
 
 
 # instance fields
-.field public final synthetic A00:LX/2OB;
+.field public final dbName:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/2OB;Ljava/lang/Class;)V
+.method public static synthetic $values()[LX/2OL;
     .locals 3
 
     .line 0
-    const-string v2, "UnregisterPushToken"
+    const/4 v0, 0x2
+
+    .line 1
+    new-array v2, v0, [LX/2OL;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/2OL;->FROM_SERVER:LX/2OL;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/2OL;->FROM_USER:LX/2OL;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v3, "FROM_SERVER"
 
     .line 1
     .line 2
-    const-string v1, "AccountSwitchPerfLogger"
+    const/4 v2, 0x0
 
     .line 3
-    .line 4
-    const-string/jumbo v0, "onUnregisterPushToken"
+    const-string/jumbo v1, "from_server"
 
+    .line 4
     .line 5
     .line 6
+    new-instance v0, LX/2OL;
+
     .line 7
-    iput-object p1, p0, LX/2OL;->A00:LX/2OB;
-
     .line 8
-    .line 9
-    invoke-direct {p0, p2, v2, v1, v0}, LX/1wb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v2, v1}, LX/2OL;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 9
     .line 10
     .line 11
+    sput-object v0, LX/2OL;->FROM_SERVER:LX/2OL;
+
     .line 12
+    .line 13
+    const-string v3, "FROM_USER"
+
+    .line 14
+    .line 15
+    const/4 v2, 0x1
+
+    .line 16
+    const-string/jumbo v1, "from_user"
+
+    .line 17
+    .line 18
+    .line 19
+    new-instance v0, LX/2OL;
+
+    .line 20
+    .line 21
+    invoke-direct {v0, v3, v2, v1}, LX/2OL;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 22
+    .line 23
+    .line 24
+    sput-object v0, LX/2OL;->FROM_USER:LX/2OL;
+
+    .line 25
+    .line 26
+    invoke-static {}, LX/2OL;->$values()[LX/2OL;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    sput-object v0, LX/2OL;->$VALUES:[LX/2OL;
+
+    .line 31
+    .line 32
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/2OL;->dbName:Ljava/lang/String;
+
+    .line 4
+    .line 5
     return-void
 .end method

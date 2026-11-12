@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s likes</item>
-        <item quantity="one">%1$s like</item>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d hrs</item>
+        <item quantity="one">1 hr</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d mins</item>
+        <item quantity="one">1 min.</item>
     </plurals>
 </resources>

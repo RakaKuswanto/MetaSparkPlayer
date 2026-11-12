@@ -3,10 +3,87 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s પેજ લાઇક</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s લાઇક</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d દિવસ પહેલાં</item>
+        <item quantity="one">1 દિવસ પહેલાં</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d દિવસ</item>
+        <item quantity="one">1 દિવસ</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d દિવસ</item>
+        <item quantity="one">1 દિવસ</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d કલાક</item>
+        <item quantity="one">1 કલાક</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d મિનિટ</item>
+        <item quantity="one">1 મિનિટ</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d મહિના</item>
+        <item quantity="one">1 મહિનો</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d સેકંડ</item>
+        <item quantity="one">1 સેકંડ</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d અઠવાડિયા</item>
+        <item quantity="one">1 અઠવાડિયું</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">વધુ %1$d દિવસ</item>
+        <item quantity="one">વધુ 1 દિવસ</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">વધુ %1$d કલાક</item>
+        <item quantity="one">વધુ 1 કલાક</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">વધુ %1$d મિનિટ</item>
+        <item quantity="one">વધુ 1 મિનિટ</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">વધુ %1$d મહિના</item>
+        <item quantity="one">વધુ 1 મહિનો</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">વધુ %1$d સેકન્ડ</item>
+        <item quantity="one">વધુ 1 સેકન્ડ</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">વધુ %1$d અઠવાડિયા</item>
+        <item quantity="one">વધુ 1 અઠવાડિયું</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">વધુ %1$d વર્ષ</item>
+        <item quantity="one">વધુ 1 વર્ષ</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d વર્ષ</item>
+        <item quantity="one">1 વર્ષ</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d કલાક પહેલાં</item>
+        <item quantity="one">1 કલાક પહેલાં</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d કલાક</item>
+        <item quantity="one">1 કલાક</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d કલાક</item>
+        <item quantity="one">1 કલાક</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d કલાક</item>
+        <item quantity="one">1 કલાક</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d કલાક પહેલાં</item>
         <item quantity="one">1 કલાક પહેલાં</item>
     </plurals>
@@ -18,8 +95,68 @@
         <item quantity="other">હવેથી %1$d મિનીટો</item>
         <item quantity="one">હવેથી 1 મિનીટ</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d મિનિટ પહેલાં</item>
+        <item quantity="one">1 મિનિટ પહેલાં</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d મિનિટ પહેલાં</item>
         <item quantity="one">1 મિનિટ પહેલાં</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d મિનિટ</item>
+        <item quantity="one">1 મિનિટ</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d મિનિટ</item>
+        <item quantity="one">1 મિનિટ</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d મહિના પહેલાં</item>
+        <item quantity="one">1 મહિના પહેલાં</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d સેકંડ પહેલાં</item>
+        <item quantity="one">1 સેકંડ</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d અઠવાડિયા પહેલાં</item>
+        <item quantity="one">1 અઠવાડિયા પહેલાં</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d કલાક બાકી</item>
+        <item quantity="one">1 કલાક બાકી</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d મિનિટ બાકી</item>
+        <item quantity="one">1 મિનિટ બાકી</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d વર્ષ પહેલાં</item>
+        <item quantity="one">1 વર્ષ પહેલાં</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">તમે %1$d દિવસ પહેલાં મુલાકાત લીધી</item>
+        <item quantity="one">તમે 1 દિવસ પહેલાં મુલાકાત લીધી</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">તમે %1$d કલાક પહેલાં મુલાકાત લીધી</item>
+        <item quantity="one">તમે 1 કલાક પહેલાં મુલાકાત લીધી</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">તમે %1$d મિનિટ પહેલાં મુલાકાત લીધી</item>
+        <item quantity="one">તમે 1 મિનિટ પહેલાં મુલાકાત લીધી</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">તમે %1$d મહિના પહેલાં મુલાકાત લીધી</item>
+        <item quantity="one">તમે 1 મહિના પહેલાં મુલાકાત લીધી</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">તમે %1$d અઠવાડિયા પહેલાં મુલાકાત લીધી</item>
+        <item quantity="one">તમે 1 અઠવાડિયા પહેલાં મુલાકાત લીધી</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">તમે %1$d વર્ષ પહેલાં મુલાકાત લીધી</item>
+        <item quantity="one">તમે 1 વર્ષ પહેલાં મુલાકાત લીધી</item>
     </plurals>
 </resources>

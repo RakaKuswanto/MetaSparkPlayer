@@ -1,25 +1,21 @@
-.class public final LX/0WT;
+.class public final LX/0Wt;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultAnalyticsLogger$UploadRunnable"
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final synthetic A00:LX/0MZ;
+.field public final A00:I
 
 
 # direct methods
-.method public constructor <init>(LX/0MZ;)V
+.method public constructor <init>(I)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/0WT;->A00:LX/0MZ;
+    iput p1, p0, LX/0Wt;->A00:I
 
     .line 1
     .line 2
@@ -33,533 +29,208 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 23
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 7
 
     .line 0
-    move-object/from16 v0, p0
+    iget v0, p0, LX/0Wt;->A00:I
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/0WT;->A00:LX/0MZ;
+    packed-switch v0, :pswitch_data_0
 
     .line 3
     .line 4
-    iget-object v12, v0, LX/0MZ;->A03:LX/0Wg;
-
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    iget-object v11, v12, LX/0Wg;->A01:LX/0Wa;
+    return v0
 
     .line 7
+    :pswitch_0
+    check-cast p1, Ljava/io/File;
+
     .line 8
-    const-string v1, "upload_event_attempted"
-
     .line 9
+    check-cast p2, Ljava/io/File;
+
     .line 10
-    const-wide/16 v4, 0x1
-
     .line 11
-    .line 12
-    new-instance v0, LX/0Wp;
+    invoke-virtual {p2}, Ljava/io/File;->lastModified()J
 
+    .line 12
     .line 13
     .line 14
-    invoke-direct {v0, v1, v4, v5}, LX/0Wp;-><init>(Ljava/lang/String;J)V
+    move-result-wide v2
 
     .line 15
+    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+
     .line 16
     .line 17
-    invoke-virtual {v11, v0}, LX/0Wa;->A00(LX/0Wp;)V
-
     .line 18
+    move-result-wide v0
+
     .line 19
+    sub-long/2addr v2, v0
+
     .line 20
-    const-string v10, "AnalyticsUploader"
+    long-to-int v0, v2
 
     .line 21
+    return v0
+
     .line 22
-    iget-object v1, v12, LX/0Wg;->A02:Ljava/io/File;
+    :pswitch_1
+    check-cast p1, Ljava/lang/reflect/Field;
 
     .line 23
     .line 24
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    check-cast p2, Ljava/lang/reflect/Field;
 
     .line 25
     .line 26
+    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
+
     .line 27
-    move-result v0
-
     .line 28
-    const/16 v21, 0x1
-
     .line 29
+    move-result-object v1
+
     .line 30
-    if-eqz v0, :cond_1
+    invoke-virtual {p2}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     .line 31
     .line 32
-    invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
     .line 33
+    move-result-object v0
+
     .line 34
+    invoke-virtual {v1, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
     .line 35
-    move-result-object v9
-
     .line 36
-    const-string v20, "upload_event_succeeded"
-
     .line 37
-    .line 38
-    const-wide/16 v2, 0x0
-
-    .line 39
-    .line 40
-    const-string v8, "uploaded_log_event_file_size_in_bytes"
-
-    .line 41
-    .line 42
-    if-nez v9, :cond_4
-
-    .line 43
-    .line 44
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    .line 45
-    .line 46
-    .line 47
     move-result v0
 
+    .line 38
+    return v0
+
+    .line 39
+    :pswitch_2
+    check-cast p1, LX/0J8;
+
+    .line 40
+    .line 41
+    check-cast p2, LX/0J8;
+
+    .line 42
+    .line 43
+    iget-wide v1, p1, LX/0J8;->A01:J
+
+    .line 44
+    .line 45
+    iget-wide v3, p1, LX/0J8;->A02:J
+
+    .line 46
+    .line 47
+    sub-long/2addr v1, v3
+
     .line 48
-    if-nez v0, :cond_2
+    iget-wide v3, p2, LX/0J8;->A01:J
 
     .line 49
     .line 50
-    const-string v0, "directory_not_found"
+    iget-wide v5, p2, LX/0J8;->A02:J
 
     .line 51
     .line 52
-    :goto_0
-    invoke-static {v10, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    sub-long/2addr v3, v5
 
     .line 53
+    cmp-long v0, v1, v3
+
     .line 54
     .line 55
-    :cond_0
-    new-instance v0, LX/0Wp;
+    if-gez v0, :cond_0
 
     .line 56
     .line 57
-    invoke-direct {v0, v8, v2, v3}, LX/0Wp;-><init>(Ljava/lang/String;J)V
+    const/4 v0, -0x1
 
     .line 58
-    .line 59
-    .line 60
-    invoke-virtual {v11, v0}, LX/0Wa;->A00(LX/0Wp;)V
+    return v0
 
+    .line 59
+    :cond_0
+    cmp-long v0, v1, v3
+
+    .line 60
     .line 61
+    invoke-static {v0}, LX/001;->A1M(I)Z
+
     .line 62
     .line 63
-    new-instance v1, LX/0Wp;
-
     .line 64
+    move-result v0
+
     .line 65
-    move-object/from16 v0, v20
+    return v0
 
     .line 66
-    .line 67
-    invoke-direct {v1, v0, v4, v5}, LX/0Wp;-><init>(Ljava/lang/String;J)V
+    :pswitch_3
+    check-cast p1, Ljava/util/Map$Entry;
 
+    .line 67
     .line 68
+    check-cast p2, Ljava/util/Map$Entry;
+
     .line 69
     .line 70
-    :goto_1
-    invoke-virtual {v11, v1}, LX/0Wa;->A00(LX/0Wp;)V
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     .line 71
     .line 72
     .line 73
-    :cond_1
-    return-void
+    move-result-object v1
 
     .line 74
-    :cond_2
-    invoke-virtual {v1}, Ljava/io/File;->isFile()Z
+    check-cast v1, Ljava/lang/Long;
 
     .line 75
     .line 76
+    invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
     .line 77
-    move-result v0
-
     .line 78
-    if-eqz v0, :cond_3
-
     .line 79
+    move-result-object v0
+
     .line 80
-    const-string v0, "directory_is_file"
+    check-cast v0, Ljava/lang/Long;
 
     .line 81
     .line 82
-    goto :goto_0
+    invoke-virtual {v1, v0}, Ljava/lang/Long;->compareTo(Ljava/lang/Long;)I
 
     .line 83
-    :cond_3
-    const-string v0, "directory_unknown_error"
-
     .line 84
     .line 85
-    goto :goto_0
+    move-result v0
 
     .line 86
-    :cond_4
-    array-length v0, v9
+    return v0
 
     .line 87
-    move/from16 v22, v0
+    nop
 
     .line 88
-    .line 89
-    const/4 v7, 0x0
-
-    .line 90
-    const/4 v6, 0x0
-
-    .line 91
-    :goto_2
-    move/from16 v0, v22
-
-    .line 92
-    .line 93
-    if-ge v6, v0, :cond_0
-
-    .line 94
-    .line 95
-    aget-object v19, v9, v6
-
-    .line 96
-    .line 97
-    const-wide/16 v0, 0x0
-
-    .line 98
-    .line 99
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 100
-    .line 101
-    .line 102
-    move-result-object v18
-
-    .line 103
-    const/16 v17, 0x0
-
-    .line 104
-    .line 105
-    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 106
-    .line 107
-    .line 108
-    move-result-object v16
-
-    .line 109
-    :try_start_0
-    invoke-static/range {v19 .. v19}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
-
-    .line 110
-    .line 111
-    .line 112
-    move-result-object v1
-
-    .line 113
-    const-string v0, "UTF-8"
-
-    .line 114
-    .line 115
-    new-instance v13, Ljava/io/InputStreamReader;
-
-    .line 116
-    .line 117
-    invoke-direct {v13, v1, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 118
-    .line 119
-    .line 120
-    :try_start_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 121
-    .line 122
-    .line 123
-    move-result-object v15
-
-    .line 124
-    const/16 v0, 0x400
-
-    .line 125
-    .line 126
-    new-array v14, v0, [C
-
-    .line 127
-    .line 128
-    :goto_3
-    invoke-virtual {v13, v14}, Ljava/io/Reader;->read([C)I
-
-    .line 129
-    .line 130
-    .line 131
-    move-result v1
-
-    .line 132
-    const/4 v0, -0x1
-
-    .line 133
-    if-eq v1, v0, :cond_5
-
-    .line 134
-    .line 135
-    invoke-virtual {v15, v14, v7, v1}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
-
-    .line 136
-    .line 137
-    .line 138
-    goto :goto_3
-
-    .line 139
-    :cond_5
-    invoke-virtual {v15}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 140
-    .line 141
-    .line 142
-    move-result-object v14
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 143
-    :try_start_2
-    invoke-virtual {v13}, Ljava/io/Reader;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
-
-    .line 144
-    .line 145
-    .line 146
-    :catch_0
-    iget-object v0, v12, LX/0Wg;->A00:LX/0Wl;
-
-    .line 147
-    .line 148
-    invoke-virtual {v0, v14}, LX/0Wl;->A00(Ljava/lang/String;)I
-
-    .line 149
-    .line 150
-    .line 151
-    move-result v1
-
-    .line 152
-    const/16 v0, 0xc8
-
-    .line 153
-    .line 154
-    if-ne v1, v0, :cond_8
-
-    .line 155
-    .line 156
-    invoke-virtual/range {v19 .. v19}, Ljava/io/File;->delete()Z
-
-    .line 157
-    .line 158
-    .line 159
-    move-result v0
-
-    .line 160
-    if-nez v0, :cond_6
-
-    .line 161
-    .line 162
-    move/from16 v0, v21
-
-    .line 163
-    .line 164
-    new-array v1, v0, [Ljava/lang/Object;
-
-    .line 165
-    .line 166
-    aput-object v19, v1, v7
-
-    .line 167
-    .line 168
-    const-string v0, "File %s was not deleted"
-
-    .line 169
-    .line 170
-    invoke-static {v10, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 171
-    .line 172
-    .line 173
-    :cond_6
-    :goto_4
-    const/16 v17, 0x1
-
-    .line 174
-    .line 175
-    :cond_7
-    invoke-static/range {v17 .. v17}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 176
-    .line 177
-    .line 178
-    move-result-object v13
-
-    .line 179
-    invoke-virtual {v14}, Ljava/lang/String;->length()I
-
-    .line 180
-    .line 181
-    .line 182
-    move-result v0
-
-    .line 183
-    int-to-long v0, v0
-
-    .line 184
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 185
-    .line 186
-    .line 187
-    move-result-object v0
-
-    .line 188
-    invoke-static {v13, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    .line 189
-    .line 190
-    .line 191
-    move-result-object v1
-
-    .line 192
-    goto :goto_6
-
-    .line 193
-    :cond_8
-    if-ne v1, v0, :cond_7
-
-    .line 194
-    .line 195
-    goto :goto_4
-
-    .line 196
-    :catchall_0
-    move-exception v0
-
-    .line 197
-    :try_start_3
-    invoke-virtual {v13}, Ljava/io/Reader;->close()V
-
-    .line 198
-    .line 199
-    .line 200
-    goto :goto_5
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
-
-    .line 201
-    :catchall_1
-    move-exception v0
-
-    .line 202
-    :catch_1
-    :goto_5
-    :try_start_4
-    throw v0
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
-
-    .line 203
-    :catch_2
-    move-exception v1
-
-    .line 204
-    const-string v0, "Unable to read file"
-
-    .line 205
-    .line 206
-    invoke-static {v10, v0, v1}, LX/0Jt;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 207
-    .line 208
-    .line 209
-    move-object/from16 v1, v16
-
-    .line 210
-    .line 211
-    move-object/from16 v0, v18
-
-    .line 212
-    .line 213
-    invoke-static {v1, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    .line 214
-    .line 215
-    .line 216
-    move-result-object v1
-
-    .line 217
-    :goto_6
-    iget-object v0, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    .line 218
-    .line 219
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
-
-    .line 220
-    .line 221
-    .line 222
-    move-result v0
-
-    .line 223
-    if-nez v0, :cond_9
-
-    .line 224
-    .line 225
-    new-instance v1, LX/0Wp;
-
-    .line 226
-    .line 227
-    invoke-direct {v1, v8, v2, v3}, LX/0Wp;-><init>(Ljava/lang/String;J)V
-
-    .line 228
-    .line 229
-    .line 230
-    goto/16 :goto_1
-
-    .line 231
-    .line 232
-    :cond_9
-    iget-object v0, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    .line 233
-    .line 234
-    invoke-static {v0}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 235
-    .line 236
-    .line 237
-    move-result-wide v0
-
-    .line 238
-    add-long/2addr v2, v0
-
-    .line 239
-    add-int/lit8 v6, v6, 0x1
-
-    .line 240
-    .line 241
-    goto/16 :goto_2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method

@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field public final mPaymentCardType:LX/5Ii;
+.field public final mPaymentCardType:LX/4KO;
 
 .field public final mRectangularDrawableResourceIdClassic:I
 
@@ -41,312 +41,386 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 16
+.method public static synthetic $values()[Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    .locals 3
 
     .line 0
-    sget-object v4, LX/5Ii;->UNKNOWN:LX/5Ii;
+    const/4 v0, 0x7
+
+    .line 1
+    new-array v2, v0, [Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+
+    .line 2
+    .line 3
+    sget-object v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->UNKNOWN:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->AMEX:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->DISCOVER:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->JCB:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    sget-object v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->MASTER_CARD:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+
+    .line 24
+    .line 25
+    const/4 v0, 0x4
+
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
+    .line 28
+    sget-object v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->RUPAY:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+
+    .line 29
+    .line 30
+    const/4 v0, 0x5
+
+    .line 31
+    aput-object v1, v2, v0
+
+    .line 32
+    .line 33
+    sget-object v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->VISA:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+
+    .line 34
+    .line 35
+    const/4 v0, 0x6
+
+    .line 36
+    aput-object v1, v2, v0
+
+    .line 37
+    .line 38
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 7
+
+    .line 0
+    sget-object v3, LX/4KO;->UNKNOWN:LX/4KO;
 
     .line 1
     .line 2
-    const v5, 0x7f081736
+    const v4, 0x7f081820
 
     .line 3
     .line 4
     .line 5
-    const-string v2, "UNKNOWN"
+    const-string v1, "UNKNOWN"
 
     .line 6
     .line 7
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 8
-    new-instance v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    new-instance v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 9
     .line 10
-    move v6, v5
+    move v5, v4
 
     .line 11
-    move v7, v5
+    move v6, v4
 
     .line 12
-    invoke-direct/range {v1 .. v7}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/5Ii;III)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/4KO;III)V
 
     .line 13
     .line 14
     .line 15
-    sput-object v1, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->UNKNOWN:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    sput-object v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->UNKNOWN:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 16
     .line 17
-    sget-object v5, LX/5Ii;->AMEX:LX/5Ii;
+    sget-object v3, LX/4KO;->AMEX:LX/4KO;
 
     .line 18
     .line 19
-    const v6, 0x7f081732
+    const v4, 0x7f08181c
 
     .line 20
     .line 21
     .line 22
-    const v7, 0x7f0800ae
+    const v5, 0x7f0800ac
 
     .line 23
     .line 24
     .line 25
-    const v8, 0x7f08171d
+    const v6, 0x7f081801
 
     .line 26
     .line 27
     .line 28
-    const-string v3, "AMEX"
+    const-string v1, "AMEX"
 
     .line 29
     .line 30
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
     .line 31
-    new-instance v2, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    new-instance v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 32
     .line 33
-    invoke-direct/range {v2 .. v8}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/5Ii;III)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/4KO;III)V
 
     .line 34
     .line 35
     .line 36
-    sput-object v2, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->AMEX:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    sput-object v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->AMEX:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 37
     .line 38
-    sget-object v6, LX/5Ii;->DISCOVER:LX/5Ii;
+    sget-object v3, LX/4KO;->DISCOVER:LX/4KO;
 
     .line 39
     .line 40
-    const v7, 0x7f081733
+    const v4, 0x7f08181d
 
     .line 41
     .line 42
     .line 43
-    const v8, 0x7f0800af
+    const v5, 0x7f0800ad
 
     .line 44
     .line 45
     .line 46
-    const v9, 0x7f081720
+    const v6, 0x7f081804
 
     .line 47
     .line 48
     .line 49
-    const-string v4, "DISCOVER"
+    const-string v1, "DISCOVER"
 
     .line 50
     .line 51
-    const/4 v5, 0x2
+    const/4 v2, 0x2
 
     .line 52
-    new-instance v3, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    new-instance v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 53
     .line 54
-    invoke-direct/range {v3 .. v9}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/5Ii;III)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/4KO;III)V
 
     .line 55
     .line 56
     .line 57
-    sput-object v3, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->DISCOVER:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    sput-object v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->DISCOVER:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 58
     .line 59
-    sget-object v7, LX/5Ii;->JCB:LX/5Ii;
+    sget-object v3, LX/4KO;->JCB:LX/4KO;
 
     .line 60
     .line 61
-    const v8, 0x7f081734
+    const v4, 0x7f08181e
 
     .line 62
     .line 63
     .line 64
-    const v9, 0x7f0800b0
+    const v5, 0x7f0800ae
 
     .line 65
     .line 66
     .line 67
-    const v10, 0x7f081723
+    const v6, 0x7f081807
 
     .line 68
     .line 69
     .line 70
-    const-string v5, "JCB"
+    const-string v1, "JCB"
 
     .line 71
     .line 72
-    const/4 v6, 0x3
+    const/4 v2, 0x3
 
     .line 73
-    new-instance v4, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    new-instance v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 74
     .line 75
-    invoke-direct/range {v4 .. v10}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/5Ii;III)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/4KO;III)V
 
     .line 76
     .line 77
     .line 78
-    sput-object v4, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->JCB:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    sput-object v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->JCB:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 79
     .line 80
-    sget-object v8, LX/5Ii;->MASTER_CARD:LX/5Ii;
+    sget-object v3, LX/4KO;->MASTER_CARD:LX/4KO;
 
     .line 81
     .line 82
-    const v9, 0x7f081735
+    const v4, 0x7f08181f
 
     .line 83
     .line 84
     .line 85
-    const v10, 0x7f0800b1
+    const v5, 0x7f0800af
 
     .line 86
     .line 87
     .line 88
-    const v11, 0x7f081725
+    const v6, 0x7f081809
 
     .line 89
     .line 90
     .line 91
-    const-string v6, "MASTER_CARD"
+    const-string v1, "MASTER_CARD"
 
     .line 92
     .line 93
-    const/4 v7, 0x4
+    const/4 v2, 0x4
 
     .line 94
-    new-instance v5, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    new-instance v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 95
     .line 96
-    invoke-direct/range {v5 .. v11}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/5Ii;III)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/4KO;III)V
 
     .line 97
     .line 98
     .line 99
-    sput-object v5, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->MASTER_CARD:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    sput-object v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->MASTER_CARD:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 100
     .line 101
-    sget-object v9, LX/5Ii;->RUPAY:LX/5Ii;
+    sget-object v3, LX/4KO;->RUPAY:LX/4KO;
 
     .line 102
     .line 103
-    const v10, 0x7f081737
+    const v4, 0x7f081821
 
     .line 104
     .line 105
     .line 106
-    const v11, 0x7f0800b2
+    const v5, 0x7f0800b0
 
     .line 107
     .line 108
     .line 109
-    const v12, 0x7f081726
+    const v6, 0x7f08180a
 
     .line 110
     .line 111
     .line 112
-    const-string v7, "RUPAY"
+    const-string v1, "RUPAY"
 
     .line 113
     .line 114
-    const/4 v8, 0x5
+    const/4 v2, 0x5
 
     .line 115
-    new-instance v6, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    new-instance v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 116
     .line 117
-    invoke-direct/range {v6 .. v12}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/5Ii;III)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/4KO;III)V
 
     .line 118
     .line 119
     .line 120
-    sput-object v6, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->RUPAY:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    sput-object v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->RUPAY:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 121
     .line 122
-    sget-object v12, LX/5Ii;->VISA:LX/5Ii;
+    sget-object v3, LX/4KO;->VISA:LX/4KO;
 
     .line 123
     .line 124
-    const v13, 0x7f081738
+    const v4, 0x7f081822
 
     .line 125
     .line 126
     .line 127
-    const v14, 0x7f0800b3
+    const v5, 0x7f0800b1
 
     .line 128
     .line 129
     .line 130
-    const v15, 0x7f081728
+    const v6, 0x7f08180c
 
     .line 131
     .line 132
     .line 133
-    const-string v10, "VISA"
+    const-string v1, "VISA"
 
     .line 134
     .line 135
-    const/4 v11, 0x6
+    const/4 v2, 0x6
 
     .line 136
-    new-instance v9, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    new-instance v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 137
     .line 138
-    invoke-direct/range {v9 .. v15}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/5Ii;III)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;-><init>(Ljava/lang/String;ILX/4KO;III)V
 
     .line 139
     .line 140
     .line 141
-    sput-object v9, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->VISA:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    sput-object v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->VISA:Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 142
     .line 143
-    const/4 v0, 0x7
+    invoke-static {}, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->$values()[Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 144
-    new-array v0, v0, [Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
-
     .line 145
     .line 146
-    invoke-static {v0, v1, v2}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v0
 
     .line 147
-    .line 148
-    .line 149
-    invoke-static {v3, v4, v5, v0}, LX/0Yc;->A1R(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 150
-    .line 151
-    .line 152
-    aput-object v6, v0, v8
-
-    .line 153
-    .line 154
-    aput-object v9, v0, v11
-
-    .line 155
-    .line 156
     sput-object v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->$VALUES:[Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
-    .line 157
-    .line 158
+    .line 148
+    .line 149
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILX/5Ii;III)V
+.method public constructor <init>(Ljava/lang/String;ILX/4KO;III)V
     .locals 0
 
     .line 0
@@ -355,7 +429,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p3, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/5Ii;
+    iput-object p3, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/4KO;
 
     .line 4
     .line 5
@@ -403,11 +477,11 @@
 
     .line 9
     .line 10
-    iget-object v0, v3, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/5Ii;
+    iget-object v0, v3, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/4KO;
 
     .line 11
     .line 12
-    invoke-virtual {v0}, LX/5Ii;->getAssociation()Ljava/lang/String;
+    invoke-virtual {v0}, LX/4KO;->getAssociation()Ljava/lang/String;
 
     .line 13
     .line 14
@@ -538,11 +612,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/5Ii;
+    iget-object v0, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/4KO;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/5Ii;->getAssociation()Ljava/lang/String;
+    invoke-virtual {v0}, LX/4KO;->getAssociation()Ljava/lang/String;
 
     .line 3
     .line 4
@@ -557,11 +631,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/5Ii;
+    iget-object v0, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/4KO;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/5Ii;->getCardLength()I
+    invoke-virtual {v0}, LX/4KO;->getCardLength()I
 
     .line 3
     .line 4
@@ -572,7 +646,7 @@
     return v0
 .end method
 
-.method public getDrawable(Landroid/content/Context;LX/6Hn;)Landroid/graphics/drawable/Drawable;
+.method public getDrawable(Landroid/content/Context;LX/4CR;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
     .line 0
@@ -610,7 +684,7 @@
     .line 14
     .line 15
     :goto_0
-    invoke-static {p1, v0}, LX/01W;->A03(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0}, LX/01f;->A04(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     .line 16
     .line 17
@@ -641,11 +715,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/5Ii;
+    iget-object v0, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/4KO;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/5Ii;->getHumanReadableName()Ljava/lang/String;
+    invoke-virtual {v0}, LX/4KO;->getHumanReadableName()Ljava/lang/String;
 
     .line 3
     .line 4
@@ -656,18 +730,18 @@
     return-object v0
 .end method
 
-.method public getPaymentCardType()LX/5Ii;
+.method public getPaymentCardType()LX/4KO;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/5Ii;
+    iget-object v0, p0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;->mPaymentCardType:LX/4KO;
 
     .line 1
     .line 2
     return-object v0
 .end method
 
-.method public toFbPayCardType()LX/5If;
+.method public toFbPayCardType()LX/4KN;
     .locals 1
 
     .line 0
@@ -684,7 +758,7 @@
     .line 5
     .line 6
     .line 7
-    sget-object v0, LX/5If;->UNKNOWN:LX/5If;
+    sget-object v0, LX/4KN;->UNKNOWN:LX/4KN;
 
     .line 8
     .line 9
@@ -692,7 +766,7 @@
 
     .line 10
     :pswitch_0
-    sget-object v0, LX/5If;->DISCOVER:LX/5If;
+    sget-object v0, LX/4KN;->MASTERCARD:LX/4KN;
 
     .line 11
     .line 12
@@ -700,7 +774,7 @@
 
     .line 13
     :pswitch_1
-    sget-object v0, LX/5If;->RUPAY:LX/5If;
+    sget-object v0, LX/4KN;->AMERICAN_EXPRESS:LX/4KN;
 
     .line 14
     .line 15
@@ -708,7 +782,7 @@
 
     .line 16
     :pswitch_2
-    sget-object v0, LX/5If;->VISA:LX/5If;
+    sget-object v0, LX/4KN;->JCB:LX/4KN;
 
     .line 17
     .line 18
@@ -716,7 +790,7 @@
 
     .line 19
     :pswitch_3
-    sget-object v0, LX/5If;->JCB:LX/5If;
+    sget-object v0, LX/4KN;->VISA:LX/4KN;
 
     .line 20
     .line 21
@@ -724,7 +798,7 @@
 
     .line 22
     :pswitch_4
-    sget-object v0, LX/5If;->AMERICAN_EXPRESS:LX/5If;
+    sget-object v0, LX/4KN;->RUPAY:LX/4KN;
 
     .line 23
     .line 24
@@ -732,21 +806,20 @@
 
     .line 25
     :pswitch_5
-    sget-object v0, LX/5If;->MASTERCARD:LX/5If;
+    sget-object v0, LX/4KN;->DISCOVER:LX/4KN;
 
     .line 26
     .line 27
     return-object v0
 
-    .line 28
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_4
-        :pswitch_0
-        :pswitch_3
-        :pswitch_5
         :pswitch_1
+        :pswitch_5
         :pswitch_2
+        :pswitch_0
+        :pswitch_4
+        :pswitch_3
     .end packed-switch
 .end method
 

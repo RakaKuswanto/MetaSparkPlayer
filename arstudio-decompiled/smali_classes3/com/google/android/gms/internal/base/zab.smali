@@ -37,7 +37,7 @@
 .end method
 
 .method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 2
+    .locals 3
 
     .line 0
     const v0, 0xffffff
@@ -83,10 +83,10 @@
     .line 19
     .line 20
     :cond_1
-    move-object v1, p0
+    move-object v2, p0
 
     .line 21
-    check-cast v1, Lcom/google/android/gms/signin/internal/zad;
+    check-cast v2, Lcom/google/android/gms/signin/internal/zad;
 
     .line 22
     .line 23
@@ -115,7 +115,7 @@
 
     .line 32
     .line 33
-    invoke-static {p2, v0}, LX/4BF;->A1H(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)V
+    invoke-static {p2, v0}, LX/433;->A13(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)V
 
     .line 34
     .line 35
@@ -140,7 +140,7 @@
 
     .line 43
     .line 44
-    invoke-static {p2, v0}, LX/4BF;->A1H(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)V
+    invoke-static {p2, v0}, LX/433;->A13(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)V
 
     .line 45
     .line 46
@@ -150,45 +150,92 @@
     .line 48
     .line 49
     :goto_1
-    invoke-static {p2, v0}, LX/4BF;->A1H(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)V
+    invoke-static {p2, v0}, LX/433;->A13(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)V
 
     .line 50
     .line 51
     .line 52
-    goto :goto_2
+    invoke-virtual {p2}, Landroid/os/Parcel;->dataAvail()I
 
     .line 53
+    .line 54
+    .line 55
+    move-result v0
+
+    .line 56
+    if-lez v0, :cond_2
+
+    .line 57
+    .line 58
+    invoke-static {v0}, LX/433;->A0M(I)Landroid/os/BadParcelableException;
+
+    .line 59
+    .line 60
+    .line 61
+    move-result-object v0
+
+    .line 62
+    throw v0
+
+    .line 63
     :pswitch_5
     sget-object v0, Lcom/google/android/gms/signin/internal/zak;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 54
-    .line 55
-    invoke-static {p2, v0}, LX/4BD;->A0P(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    .line 56
-    .line 57
-    .line 58
-    move-result-object v0
-
-    .line 59
-    check-cast v0, Lcom/google/android/gms/signin/internal/zak;
-
-    .line 60
-    .line 61
-    invoke-interface {v1, v0}, Lcom/google/android/gms/signin/internal/zae;->Art(Lcom/google/android/gms/signin/internal/zak;)V
-
-    .line 62
-    .line 63
     .line 64
-    :goto_2
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
     .line 65
+    invoke-static {p2, v0}, LX/431;->A0K(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
     .line 66
     .line 67
+    .line 68
+    move-result-object v1
+
+    .line 69
+    check-cast v1, Lcom/google/android/gms/signin/internal/zak;
+
+    .line 70
+    .line 71
+    invoke-virtual {p2}, Landroid/os/Parcel;->dataAvail()I
+
+    .line 72
+    .line 73
+    .line 74
+    move-result v0
+
+    .line 75
+    if-gtz v0, :cond_3
+
+    .line 76
+    .line 77
+    invoke-interface {v2, v1}, Lcom/google/android/gms/signin/internal/zae;->Aqi(Lcom/google/android/gms/signin/internal/zak;)V
+
+    .line 78
+    .line 79
+    .line 80
+    :cond_2
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 81
+    .line 82
+    .line 83
     goto :goto_0
 
-    .line 68
+    .line 84
+    :cond_3
+    invoke-static {v0}, LX/433;->A0M(I)Landroid/os/BadParcelableException;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object v0
+
+    .line 88
+    throw v0
+
+    .line 89
+    nop
+
+    .line 90
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_2

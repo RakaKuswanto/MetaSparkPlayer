@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract AMu(Ljava/lang/String;)Ljava/util/ArrayList;
+.method public abstract ARn()V
 .end method

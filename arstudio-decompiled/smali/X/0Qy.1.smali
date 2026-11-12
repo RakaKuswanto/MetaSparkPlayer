@@ -1,55 +1,74 @@
 .class public final LX/0Qy;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DeallocationMonitor$AddObjRefToPhantomThread"
-
-
 # instance fields
-.field public final synthetic A00:LX/0NR;
+.field public final A00:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(LX/0NR;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 1
 
     .line 0
-    iput-object p1, p0, LX/0Qy;->A00:LX/0NR;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const-string v0, "AddObjRefPhantomThread"
-
     .line 3
-    .line 4
-    invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    invoke-static {p1}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
+    .line 4
     .line 5
     .line 6
+    move-result-object v0
+
     .line 7
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    iput-object v0, p0, LX/0Qy;->A00:Ljava/util/List;
+
+    .line 12
+    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/0Qy;->A00:LX/0NR;
+    iget-object v0, p0, LX/0Qy;->A00:Ljava/util/List;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/0NR;->A04:LX/0R2;
+    invoke-interface {v0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     .line 3
     .line 4
-    invoke-interface {v0}, LX/0R2;->Aot()V
-
     .line 5
+    move-result-object v1
+
     .line 6
+    const-string v0, ","
+
     .line 7
-    return-void
+    .line 8
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
 .end method

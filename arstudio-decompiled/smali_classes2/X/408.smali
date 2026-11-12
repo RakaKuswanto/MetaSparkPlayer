@@ -1,31 +1,23 @@
-.class public final LX/408;
-.super LX/41h;
+.class public interface abstract LX/408;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/40J;
+.implements LX/3wN;
 
-# instance fields
-.field public A00:LX/42T;
 
-.field public final synthetic A01:LX/3zX;
+# static fields
+.field public static final A00:LX/42u;
 
 
 # direct methods
-.method public constructor <init>(LX/3zX;LX/42T;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 0
-    iput-object p1, p0, LX/408;->A01:LX/3zX;
+    sget-object v0, LX/42u;->A00:LX/42u;
 
-    .line 1
-    .line 2
-    invoke-direct {p0}, LX/41h;-><init>()V
+    sput-object v0, LX/408;->A00:LX/42u;
 
-    .line 3
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/408;->A00:LX/42T;
-
-    .line 6
-    .line 7
     return-void
 .end method

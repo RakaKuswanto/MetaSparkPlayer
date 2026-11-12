@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 8
 
     .line 0
@@ -45,7 +45,7 @@
     .line 9
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 10
     .line 11
@@ -53,7 +53,7 @@
     move-result-object v1
 
     .line 13
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 14
     .line 15
@@ -61,7 +61,7 @@
 
     .line 16
     .line 17
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 18
     .line 19
@@ -83,14 +83,14 @@
     .line 27
     .line 28
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 29
     .line 30
     .line 31
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 32
     .line 33
@@ -98,7 +98,7 @@
     move-result-object v1
 
     .line 35
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 36
     .line 37
@@ -110,7 +110,7 @@
 
     .line 40
     :sswitch_0
-    const-string/jumbo v0, "image_i_ds"
+    const-string/jumbo v0, "publish_target_i_d"
 
     .line 41
     .line 42
@@ -127,20 +127,20 @@
 
     .line 48
     .line 49
-    invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0D(LX/27m;LX/2DN;)Lcom/google/common/collect/ImmutableList;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 50
     .line 51
     .line 52
-    move-result-object v3
+    move-result-object v5
 
     .line 53
-    const-string/jumbo v0, "imageIDs"
+    const-string/jumbo v0, "publishTargetID"
 
     .line 54
     .line 55
     .line 56
-    invoke-static {v0, v3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v5, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 57
     .line 58
@@ -149,179 +149,188 @@
 
     .line 60
     :sswitch_1
-    const-string v0, "draft_i_d"
+    const-string/jumbo v1, "title"
 
     .line 61
     .line 62
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 63
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 64
     .line 65
+    .line 66
     move-result v0
 
-    .line 66
+    .line 67
     if-eqz v0, :cond_1
 
-    .line 67
     .line 68
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 69
+    invoke-static {p1, v1}, LX/1O4;->A06(LX/3oD;Ljava/lang/String;)Ljava/lang/String;
+
     .line 70
     .line 71
-    move-result-object v4
-
     .line 72
-    const-string v0, "draftID"
+    move-result-object v6
 
     .line 73
+    goto :goto_0
+
     .line 74
-    invoke-static {v0, v4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    :sswitch_2
+    const-string/jumbo v1, "type"
 
     .line 75
     .line 76
     .line 77
-    goto :goto_0
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 78
-    :sswitch_2
-    const-string/jumbo v1, "type"
-
     .line 79
     .line 80
+    move-result v0
+
     .line 81
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 82
     .line 83
+    invoke-static {p1, v1}, LX/1O4;->A06(LX/3oD;Ljava/lang/String;)Ljava/lang/String;
+
     .line 84
-    move-result v0
-
     .line 85
-    if-eqz v0, :cond_1
-
     .line 86
-    .line 87
-    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0K(LX/27m;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 88
-    .line 89
-    .line 90
     move-result-object v7
 
-    .line 91
+    .line 87
     goto :goto_0
 
-    .line 92
+    .line 88
     :sswitch_3
-    const-string/jumbo v1, "title"
+    const-string/jumbo v0, "draft_i_d"
 
+    .line 89
+    .line 90
+    .line 91
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 92
     .line 93
     .line 94
+    move-result v0
+
     .line 95
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 96
     .line 97
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 98
-    move-result v0
-
     .line 99
-    if-eqz v0, :cond_1
-
     .line 100
+    move-result-object v4
+
     .line 101
-    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0K(LX/27m;Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v0, "draftID"
 
     .line 102
     .line 103
     .line 104
-    move-result-object v6
+    invoke-static {v4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 105
+    .line 106
+    .line 107
     goto :goto_0
 
-    .line 106
-    :sswitch_4
-    const-string/jumbo v0, "publish_target_i_d"
-
-    .line 107
     .line 108
-    .line 109
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_4
+    const-string/jumbo v0, "image_i_ds"
 
+    .line 109
     .line 110
     .line 111
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 112
+    .line 113
+    .line 114
     move-result v0
 
-    .line 113
-    if-eqz v0, :cond_1
-
-    .line 114
     .line 115
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    if-eqz v0, :cond_1
 
     .line 116
     .line 117
+    invoke-static {p1, p2}, LX/27L;->A06(LX/3oD;LX/6HS;)Lcom/google/common/collect/ImmutableList;
+
     .line 118
-    move-result-object v5
-
     .line 119
-    const-string/jumbo v0, "publishTargetID"
-
     .line 120
-    .line 121
-    .line 122
-    invoke-static {v0, v5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    move-result-object v3
 
+    .line 121
+    const-string/jumbo v0, "imageIDs"
+
+    .line 122
     .line 123
     .line 124
+    invoke-static {v3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 125
+    .line 126
+    .line 127
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 126
+    .line 128
     :goto_1
     new-instance v2, Lcom/facebook/ipc/composer/model/CommunityGivingModel;
 
-    .line 127
-    .line 128
-    invoke-direct/range {v2 .. v7}, Lcom/facebook/ipc/composer/model/CommunityGivingModel;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 129
     .line 130
+    invoke-direct/range {v2 .. v7}, Lcom/facebook/ipc/composer/model/CommunityGivingModel;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
     .line 131
+    .line 132
+    .line 133
     return-object v2
 
-    .line 132
+    .line 134
     :catch_0
     move-exception v1
 
-    .line 133
-    const-class v0, Lcom/facebook/ipc/composer/model/CommunityGivingModel;
-
-    .line 134
     .line 135
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    const-class v0, Lcom/facebook/ipc/composer/model/CommunityGivingModel;
 
     .line 136
     .line 137
-    .line 138
-    const/4 v0, 0x0
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
+    .line 138
     .line 139
+    .line 140
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 141
+    .line 142
+    .line 143
+    move-result-object v0
+
+    .line 144
     throw v0
 
-    .line 140
+    .line 145
+    nop
+
     :sswitch_data_0
     .sparse-switch
-        -0x56042377 -> :sswitch_0
-        -0x13247990 -> :sswitch_1
+        -0x56042377 -> :sswitch_4
+        -0x13247990 -> :sswitch_3
         0x368f3a -> :sswitch_2
-        0x6942258 -> :sswitch_3
-        0x66c04f90 -> :sswitch_4
+        0x6942258 -> :sswitch_1
+        0x66c04f90 -> :sswitch_0
     .end sparse-switch
 .end method

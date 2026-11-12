@@ -1,14 +1,17 @@
-.class public abstract LX/1eW;
-.super LX/1dn;
+.class public final LX/1eW;
+.super LX/1gb;
 .source ""
+
+# interfaces
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(I[I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/1dn;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2

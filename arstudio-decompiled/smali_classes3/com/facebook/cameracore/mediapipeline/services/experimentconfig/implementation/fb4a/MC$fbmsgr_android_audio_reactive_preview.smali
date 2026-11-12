@@ -6,11 +6,11 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xbc5d
 
-.field public static final __CONFIG__:I = 0x33b
+.field public static final __CONFIG__:I = 0x2fe
 
-.field public static final enabled_fb:J = 0x81033b0000248fL
+.field public static final enabled_fb:J = 0x8102fe00001fedL
 
-.field public static final enabled_msgr:J = 0x81033b00012490L
+.field public static final enabled_msgr:J = 0x8102fe00011feeL
 
 
 # direct methods

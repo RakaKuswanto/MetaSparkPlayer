@@ -1,44 +1,26 @@
-.class public final synthetic LX/5yj;
+.class public interface abstract LX/5yJ;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ProgressiveMediaPeriod$$ExternalSyntheticLambda2"
-
-
-# instance fields
-.field public final synthetic A00:LX/5xt;
-
-
-# direct methods
-.method public synthetic constructor <init>(LX/5xt;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/5yj;->A00:LX/5xt;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public abstract A3v(Ljava/lang/String;)V
+.end method
 
-    .line 0
-    iget-object v0, p0, LX/5yj;->A00:LX/5xt;
+.method public abstract AC3(LX/6Aw;)LX/5yq;
+.end method
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/5xt;->A02(LX/5xt;)V
+.method public abstract AC4(LX/5ys;)LX/5yn;
+.end method
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
+.method public abstract AOc(LX/5ys;)Z
+.end method
+
+.method public abstract destroy()V
+.end method
+
+.method public abstract pause()V
+.end method
+
+.method public abstract resume()V
 .end method

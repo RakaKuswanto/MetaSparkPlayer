@@ -1,25 +1,35 @@
-.class public final LX/4iJ;
+.class public interface abstract LX/4iJ;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/4kG;
+# virtual methods
+.method public abstract ACr(J)LX/4ew;
+.end method
 
+.method public abstract AD5(J)I
+.end method
 
-# direct methods
-.method public constructor <init>(LX/4kG;)V
-    .locals 0
+.method public abstract AHa(J)LX/4ew;
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract AKf()Z
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/4iJ;->A00:LX/4kG;
+.method public abstract ANF(J)Z
+.end method
 
-    .line 4
-    .line 5
-    return-void
+.method public abstract Acq(J)V
+.end method
+
+.method public abstract Aeo(Ljava/util/Map;)V
+.end method
+
+.method public abstract AkC(JI)V
+.end method
+
+.method public abstract commit()V
+.end method
+
+.method public abstract reset()V
 .end method

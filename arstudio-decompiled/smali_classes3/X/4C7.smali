@@ -1,20 +1,20 @@
-.class public final LX/4C7;
+.class public abstract LX/4C7;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static A00(Landroid/webkit/WebSettings;)V
-    .locals 1
+.method public static A00(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
     .line 1
-    invoke-virtual {p0, v0}, Landroid/webkit/WebSettings;->setMixedContentMode(I)V
-
     .line 2
     .line 3
+    move-result-object p0
+
     .line 4
-    return-void
+    return-object p0
 .end method

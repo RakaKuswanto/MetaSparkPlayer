@@ -1,123 +1,127 @@
-.class public final synthetic LX/3xD;
+.class public final LX/3xD;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final synthetic A00:[I
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$32"
+
+
+# instance fields
+.field public final synthetic A00:J
+
+.field public final synthetic A01:J
+
+.field public final synthetic A02:LX/3wv;
+
+.field public final synthetic A03:Ljava/lang/String;
+
+.field public final synthetic A04:[B
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(LX/3wv;Ljava/lang/String;[BJJ)V
+    .locals 0
 
-    invoke-static {}, Landroid/graphics/Bitmap$Config;->values()[Landroid/graphics/Bitmap$Config;
+    .line 0
+    iput-object p1, p0, LX/3xD;->A02:LX/3wv;
 
-    move-result-object v0
+    .line 1
+    .line 2
+    iput-object p3, p0, LX/3xD;->A04:[B
 
-    array-length v0, v0
+    .line 3
+    .line 4
+    iput-object p2, p0, LX/3xD;->A03:Ljava/lang/String;
 
-    new-array v2, v0, [I
+    .line 5
+    .line 6
+    iput-wide p4, p0, LX/3xD;->A00:J
 
-    :try_start_0
-    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    .line 7
+    .line 8
+    iput-wide p6, p0, LX/3xD;->A01:J
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    .line 9
+    .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v1
+    .line 11
+    .line 12
+    .line 13
+    return-void
+.end method
 
-    const/4 v0, 0x1
 
-    aput v0, v2, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+# virtual methods
+.method public final run()V
+    .locals 9
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
+    .line 0
+    iget-object v0, p0, LX/3xD;->A02:LX/3wv;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
 
-    move-result v1
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
 
-    const/4 v0, 0x2
+    .line 6
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    aput v0, v2, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
 
-    :catch_1
-    :try_start_2
-    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
+    .line 10
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    .line 11
+    .line 12
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v1
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v2
 
-    const/4 v0, 0x3
+    .line 16
+    check-cast v2, LX/3xA;
 
-    aput v0, v2, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    .line 17
+    .line 18
+    iget-object v4, p0, LX/3xD;->A04:[B
 
-    :catch_2
-    :try_start_3
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
+    .line 19
+    .line 20
+    iget-object v3, p0, LX/3xD;->A03:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    .line 21
+    .line 22
+    iget-wide v5, p0, LX/3xD;->A00:J
 
-    move-result v1
+    .line 23
+    .line 24
+    iget-wide v7, p0, LX/3xD;->A01:J
 
-    const/4 v0, 0x4
+    .line 25
+    .line 26
+    invoke-interface/range {v2 .. v8}, LX/3xA;->AXZ(Ljava/lang/String;[BJJ)V
 
-    aput v0, v2, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    .line 27
+    .line 28
+    .line 29
+    goto :goto_0
 
-    :catch_3
-    :try_start_4
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGBA_F16:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v0, 0x5
-
-    aput v0, v2, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGBA_1010102:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v0, 0x6
-
-    aput v0, v2, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v0, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v0, 0x7
-
-    aput v0, v2, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v2, LX/3xD;->A00:[I
-
+    .line 30
+    :cond_0
     return-void
 .end method

@@ -92,11 +92,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x4a
+    const/16 v0, 0x49
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -267,7 +267,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -288,7 +288,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0, v2}, LX/0Ye;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;)C
+    invoke-static {v0, v2}, LX/0X3;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;)C
 
     .line 12
     .line 13
@@ -516,7 +516,7 @@
     .line 137
     .line 138
     .line 139
-    invoke-static {v2}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2}, LX/001;->A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 140
     .line 141
@@ -598,53 +598,37 @@
 
     .line 36
     .line 37
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {p1, v0}, LX/0X6;->A1G(Landroid/os/Parcel;Ljava/lang/Boolean;)V
 
     .line 38
     .line 39
     .line 40
-    move-result v0
-
-    .line 41
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 42
-    .line 43
-    .line 44
     iget-object v0, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mAlternativeAccessToken:Ljava/lang/String;
 
-    .line 45
-    .line 46
+    .line 41
+    .line 42
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 47
-    .line 48
-    .line 49
+    .line 43
+    .line 44
+    .line 45
     iget-object v0, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mLopNonce:Ljava/lang/String;
 
-    .line 50
-    .line 51
+    .line 46
+    .line 47
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 52
-    .line 53
-    .line 54
+    .line 48
+    .line 49
+    .line 50
     iget-object v0, p0, Lcom/facebook/auth/credentials/DBLFacebookCredentials;->mIsPrimaryTestUser:Ljava/lang/Boolean;
 
+    .line 51
+    .line 52
+    invoke-static {p1, v0}, LX/0X6;->A1G(Landroid/os/Parcel;Ljava/lang/Boolean;)V
+
+    .line 53
+    .line 54
     .line 55
-    .line 56
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 57
-    .line 58
-    .line 59
-    move-result v0
-
-    .line 60
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 61
-    .line 62
-    .line 63
     return-void
 .end method

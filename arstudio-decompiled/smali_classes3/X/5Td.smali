@@ -1,6 +1,9 @@
-.class public final LX/5Td;
+.class public final LX/5TD;
 .super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/1kh;
 
 
 # direct methods
@@ -14,4 +17,14 @@
     .line 2
     .line 3
     return-void
+.end method
+
+
+# virtual methods
+.method public final AHm(I)I
+    .locals 1
+
+    const/4 v0, 0x5
+
+    return v0
 .end method

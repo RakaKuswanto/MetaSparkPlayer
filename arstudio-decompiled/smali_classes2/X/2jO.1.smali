@@ -1,1289 +1,1325 @@
-.class public final LX/2jO;
-.super Ljava/lang/Object;
+.class public final enum LX/2Jo;
+.super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static final A0A:Ljava/nio/charset/Charset;
+.field public static final synthetic $VALUES:[LX/2Jo;
 
+.field public static final enum BATTERY_CHARGING:LX/2Jo;
 
-# instance fields
-.field public A00:I
+.field public static final enum BATTERY_NOT_LOW:LX/2Jo;
 
-.field public A01:I
+.field public static final enum CLEAN_UP:LX/2Jo;
 
-.field public A02:I
+.field public static final enum CRASH_REPORTER:LX/2Jo;
 
-.field public A03:I
+.field public static final enum DEFERRABLE:LX/2Jo;
 
-.field public A04:[I
+.field public static final enum FOR_NEXT_COLD_START:LX/2Jo;
 
-.field public A05:I
+.field public static final enum GRAPHQL:LX/2Jo;
 
-.field public A06:I
+.field public static final enum GROUP_CANCEL_PREVIOUS:LX/2Jo;
 
-.field public A07:Ljava/nio/ByteBuffer;
+.field public static final enum GROUP_CANCEL_PREVIOUS_ON_SUCCESS:LX/2Jo;
 
-.field public A08:Z
+.field public static final enum IMMEDIATE:LX/2Jo;
 
-.field public A09:[I
+.field public static final enum INITIALIZES_METRIC:LX/2Jo;
+
+.field public static final enum NEEDS_UI:LX/2Jo;
+
+.field public static final enum PREFETCH:LX/2Jo;
+
+.field public static final enum RUN_GROUP_SERIALLY:LX/2Jo;
+
+.field public static final enum RUN_LAST:LX/2Jo;
+
+.field public static final enum SCOPE_APP_IN_FOREGROUND:LX/2Jo;
+
+.field public static final enum SCOPE_COLD_START:LX/2Jo;
+
+.field public static final enum SCOPE_MAIN_TABS:LX/2Jo;
+
+.field public static final enum SURFACE_GROUPS:LX/2Jo;
+
+.field public static final enum SURFACE_NEWSFEED:LX/2Jo;
+
+.field public static final enum SURFACE_STORIES_TRAY:LX/2Jo;
+
+.field public static final enum TRIGGER_SCOPE_ENTER:LX/2Jo;
+
+.field public static final enum TRIGGER_SCOPE_EXIT:LX/2Jo;
+
+.field public static final enum USER_ACTIVE:LX/2Jo;
+
+.field public static final enum USER_DAP:LX/2Jo;
+
+.field public static final enum USER_LOGGED_IN_OR_OUT_PERMITTED:LX/2Jo;
+
+.field public static final enum USER_LOGGED_IN_REQUIRED:LX/2Jo;
+
+.field public static final enum USER_LOGGED_OUT_REQUIRED:LX/2Jo;
+
+.field public static final enum USER_MAP:LX/2Jo;
+
+.field public static final enum USER_NON_MAP:LX/2Jo;
+
+.field public static final enum USER_WAP:LX/2Jo;
+
+.field public static final enum USES_IO:LX/2Jo;
+
+.field public static final enum USES_NETWORK:LX/2Jo;
+
+.field public static final enum USES_NETWORK_CELL_ONLY:LX/2Jo;
+
+.field public static final enum USES_NETWORK_WIFI_ONLY:LX/2Jo;
+
+.field public static final enum USES_SHARED_PREF:LX/2Jo;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public static synthetic $values()[LX/2Jo;
+    .locals 3
 
     .line 0
-    const-string v0, "UTF-8"
+    const/16 v0, 0x24
 
     .line 1
     .line 2
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    new-array v2, v0, [LX/2Jo;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    sget-object v1, LX/2Jo;->DEFERRABLE:LX/2Jo;
 
+    .line 5
     .line 6
-    sput-object v0, LX/2jO;->A0A:Ljava/nio/charset/Charset;
+    const/4 v0, 0x0
 
     .line 7
+    aput-object v1, v2, v0
+
     .line 8
-    return-void
-.end method
+    .line 9
+    sget-object v1, LX/2Jo;->IMMEDIATE:LX/2Jo;
 
-.method public constructor <init>()V
-    .locals 1
-
-    .line 268435456
-    const/16 v0, 0x400
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {p0, v0}, LX/2jO;-><init>(I)V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
+    .line 10
+    .line 11
     const/4 v0, 0x1
 
-    .line 4
-    iput v0, p0, LX/2jO;->A05:I
-
-    .line 5
-    .line 6
-    const/4 v0, 0x0
-
-    .line 7
-    iput-object v0, p0, LX/2jO;->A09:[I
-
-    .line 8
-    .line 9
-    const/4 v1, 0x0
-
-    .line 10
-    iput v1, p0, LX/2jO;->A03:I
-
-    .line 11
     .line 12
-    iput-boolean v1, p0, LX/2jO;->A08:Z
+    aput-object v1, v2, v0
 
     .line 13
     .line 14
-    const/16 v0, 0x10
+    sget-object v1, LX/2Jo;->NEEDS_UI:LX/2Jo;
 
     .line 15
     .line 16
-    new-array v0, v0, [I
-
-    .line 17
-    .line 18
-    iput-object v0, p0, LX/2jO;->A04:[I
-
-    .line 19
-    .line 20
-    iput v1, p0, LX/2jO;->A00:I
-
-    .line 21
-    .line 22
-    iput v1, p0, LX/2jO;->A02:I
-
-    .line 23
-    .line 24
-    iput p1, p0, LX/2jO;->A06:I
-
-    .line 25
-    .line 26
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v1
-
-    .line 30
-    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    .line 31
-    .line 32
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 33
-    .line 34
-    .line 35
-    iput-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 36
-    .line 37
-    return-void
-.end method
-
-.method public static A00(LX/2jO;)I
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v1
-
-    .line 6
-    iget v0, p0, LX/2jO;->A06:I
-
-    .line 7
-    .line 8
-    sub-int/2addr v1, v0
-
-    .line 9
-    return v1
-.end method
-
-.method public static final A01(LX/2jO;II)V
-    .locals 7
-
-    .line 0
-    iget v0, p0, LX/2jO;->A05:I
-
-    .line 1
-    .line 2
-    if-le p1, v0, :cond_0
-
-    .line 3
-    .line 4
-    iput p1, p0, LX/2jO;->A05:I
-
-    .line 5
-    .line 6
-    :cond_0
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 7
-    .line 8
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    iget v1, p0, LX/2jO;->A06:I
-
-    .line 13
-    .line 14
-    sub-int/2addr v0, v1
-
-    .line 15
-    add-int/2addr v0, p2
-
-    .line 16
-    xor-int/lit8 v0, v0, -0x1
-
-    .line 17
-    .line 18
-    add-int/lit8 v4, v0, 0x1
-
-    .line 19
-    .line 20
-    add-int/lit8 v0, p1, -0x1
-
-    .line 21
-    .line 22
-    and-int/2addr v4, v0
-
-    .line 23
-    :goto_0
-    add-int v0, v4, p1
-
-    .line 24
-    .line 25
-    add-int/2addr v0, p2
-
-    .line 26
-    if-ge v1, v0, :cond_2
-
-    .line 27
-    .line 28
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 29
-    .line 30
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    .line 31
-    .line 32
-    .line 33
-    move-result v6
-
-    .line 34
-    iget-object v5, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 35
-    .line 36
-    invoke-virtual {v5}, Ljava/nio/Buffer;->capacity()I
-
-    .line 37
-    .line 38
-    .line 39
-    move-result v3
-
-    .line 40
-    const/high16 v0, -0x40000000    # -2.0f
-
-    .line 41
-    .line 42
-    and-int/2addr v0, v3
-
-    .line 43
-    if-nez v0, :cond_1
-
-    .line 44
-    .line 45
-    shl-int/lit8 v1, v3, 0x1
-
-    .line 46
-    .line 47
-    const/4 v0, 0x0
-
-    .line 48
-    invoke-virtual {v5, v0}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
-
-    .line 49
-    .line 50
-    .line 51
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    .line 52
-    .line 53
-    .line 54
-    move-result-object v2
-
-    .line 55
-    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    .line 56
-    .line 57
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 58
-    .line 59
-    .line 60
-    sub-int/2addr v1, v3
-
-    .line 61
-    invoke-virtual {v2, v1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
-
-    .line 62
-    .line 63
-    .line 64
-    invoke-virtual {v2, v5}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    .line 65
-    .line 66
-    .line 67
-    iput-object v2, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 68
-    .line 69
-    iget v1, p0, LX/2jO;->A06:I
-
-    .line 70
-    .line 71
-    invoke-virtual {v2}, Ljava/nio/Buffer;->capacity()I
-
-    .line 72
-    .line 73
-    .line 74
-    move-result v0
-
-    .line 75
-    sub-int/2addr v0, v6
-
-    .line 76
-    add-int/2addr v1, v0
-
-    .line 77
-    iput v1, p0, LX/2jO;->A06:I
-
-    .line 78
-    .line 79
-    goto :goto_0
-
-    .line 80
-    :cond_1
-    const-string v0, "FlatBuffers: cannot grow buffer beyond 2 gigabytes."
-
-    .line 81
-    .line 82
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
-
-    .line 83
-    .line 84
-    .line 85
-    move-result-object v0
-
-    .line 86
-    throw v0
-
-    .line 87
-    :cond_2
-    const/4 v3, 0x0
-
-    .line 88
-    const/4 v2, 0x0
-
-    .line 89
-    :goto_1
-    if-ge v2, v4, :cond_3
-
-    .line 90
-    .line 91
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 92
-    .line 93
-    iget v0, p0, LX/2jO;->A06:I
-
-    .line 94
-    .line 95
-    add-int/lit8 v0, v0, -0x1
-
-    .line 96
-    .line 97
-    iput v0, p0, LX/2jO;->A06:I
-
-    .line 98
-    .line 99
-    invoke-virtual {v1, v0, v3}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
-
-    .line 100
-    .line 101
-    .line 102
-    add-int/lit8 v2, v2, 0x1
-
-    .line 103
-    .line 104
-    goto :goto_1
-
-    .line 105
-    :cond_3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A02()I
-    .locals 10
-
-    .line 0
-    iget-object v0, p0, LX/2jO;->A09:[I
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_6
-
-    .line 3
-    .line 4
-    iget-boolean v0, p0, LX/2jO;->A08:Z
-
-    .line 5
-    .line 6
-    if-eqz v0, :cond_6
-
-    .line 7
-    .line 8
-    const/4 v3, 0x0
-
-    .line 9
-    const/4 v0, 0x4
-
-    .line 10
-    invoke-static {p0, v0, v3}, LX/2jO;->A01(LX/2jO;II)V
-
-    .line 11
-    .line 12
-    .line 13
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 14
-    .line 15
-    iget v0, p0, LX/2jO;->A06:I
-
-    .line 16
-    .line 17
-    add-int/lit8 v0, v0, -0x4
-
-    .line 18
-    .line 19
-    iput v0, p0, LX/2jO;->A06:I
-
-    .line 20
-    .line 21
-    invoke-virtual {v1, v0, v3}, Ljava/nio/ByteBuffer;->putInt(II)Ljava/nio/ByteBuffer;
-
-    .line 22
-    .line 23
-    .line 24
-    invoke-static {p0}, LX/2jO;->A00(LX/2jO;)I
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v9
-
-    .line 28
-    iget v4, p0, LX/2jO;->A03:I
-
-    .line 29
-    .line 30
-    :goto_0
-    add-int/lit8 v4, v4, -0x1
-
-    .line 31
-    .line 32
-    if-ltz v4, :cond_1
-
-    .line 33
-    .line 34
-    iget-object v1, p0, LX/2jO;->A09:[I
-
-    .line 35
-    .line 36
-    aget v0, v1, v4
-
-    .line 37
-    .line 38
-    if-eqz v0, :cond_0
-
-    .line 39
-    .line 40
-    aget v0, v1, v4
-
-    .line 41
-    .line 42
-    sub-int v0, v9, v0
-
-    .line 43
-    .line 44
-    :goto_1
-    int-to-short v2, v0
-
-    .line 45
     const/4 v0, 0x2
 
+    .line 17
+    aput-object v1, v2, v0
+
+    .line 18
+    .line 19
+    sget-object v1, LX/2Jo;->SCOPE_MAIN_TABS:LX/2Jo;
+
+    .line 20
+    .line 21
+    const/4 v0, 0x3
+
+    .line 22
+    aput-object v1, v2, v0
+
+    .line 23
+    .line 24
+    sget-object v1, LX/2Jo;->SCOPE_COLD_START:LX/2Jo;
+
+    .line 25
+    .line 26
+    const/4 v0, 0x4
+
+    .line 27
+    aput-object v1, v2, v0
+
+    .line 28
+    .line 29
+    sget-object v1, LX/2Jo;->SCOPE_APP_IN_FOREGROUND:LX/2Jo;
+
+    .line 30
+    .line 31
+    const/4 v0, 0x5
+
+    .line 32
+    aput-object v1, v2, v0
+
+    .line 33
+    .line 34
+    sget-object v1, LX/2Jo;->TRIGGER_SCOPE_ENTER:LX/2Jo;
+
+    .line 35
+    .line 36
+    const/4 v0, 0x6
+
+    .line 37
+    aput-object v1, v2, v0
+
+    .line 38
+    .line 39
+    sget-object v1, LX/2Jo;->TRIGGER_SCOPE_EXIT:LX/2Jo;
+
+    .line 40
+    .line 41
+    const/4 v0, 0x7
+
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
+    .line 44
+    sget-object v1, LX/2Jo;->SURFACE_STORIES_TRAY:LX/2Jo;
+
+    .line 45
     .line 46
-    invoke-static {p0, v0, v3}, LX/2jO;->A01(LX/2jO;II)V
+    const/16 v0, 0x8
 
     .line 47
     .line 48
+    aput-object v1, v2, v0
+
     .line 49
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
     .line 50
+    sget-object v1, LX/2Jo;->SURFACE_NEWSFEED:LX/2Jo;
+
     .line 51
-    iget v0, p0, LX/2jO;->A06:I
-
     .line 52
+    const/16 v0, 0x9
+
     .line 53
-    add-int/lit8 v0, v0, -0x2
-
     .line 54
+    aput-object v1, v2, v0
+
     .line 55
-    iput v0, p0, LX/2jO;->A06:I
-
     .line 56
-    .line 57
-    invoke-virtual {v1, v0, v2}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
+    sget-object v1, LX/2Jo;->SURFACE_GROUPS:LX/2Jo;
 
+    .line 57
     .line 58
+    const/16 v0, 0xa
+
     .line 59
     .line 60
-    goto :goto_0
+    aput-object v1, v2, v0
 
     .line 61
-    :cond_0
-    const/4 v0, 0x0
-
     .line 62
-    goto :goto_1
+    sget-object v1, LX/2Jo;->USES_IO:LX/2Jo;
 
     .line 63
-    :cond_1
-    iget v0, p0, LX/2jO;->A01:I
-
     .line 64
+    const/16 v0, 0xb
+
     .line 65
-    sub-int v0, v9, v0
-
     .line 66
-    .line 67
-    int-to-short v2, v0
+    aput-object v1, v2, v0
 
+    .line 67
     .line 68
-    const/4 v4, 0x2
+    sget-object v1, LX/2Jo;->USES_NETWORK:LX/2Jo;
 
     .line 69
-    invoke-static {p0, v4, v3}, LX/2jO;->A01(LX/2jO;II)V
-
     .line 70
+    const/16 v0, 0xc
+
     .line 71
     .line 72
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
+    aput-object v1, v2, v0
 
     .line 73
     .line 74
-    iget v0, p0, LX/2jO;->A06:I
+    sget-object v1, LX/2Jo;->USES_NETWORK_CELL_ONLY:LX/2Jo;
 
     .line 75
     .line 76
-    add-int/lit8 v0, v0, -0x2
+    const/16 v0, 0xd
 
     .line 77
     .line 78
-    iput v0, p0, LX/2jO;->A06:I
+    aput-object v1, v2, v0
 
     .line 79
     .line 80
-    invoke-virtual {v1, v0, v2}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
+    sget-object v1, LX/2Jo;->USES_NETWORK_WIFI_ONLY:LX/2Jo;
 
     .line 81
     .line 82
+    const/16 v0, 0xe
+
     .line 83
-    iget v0, p0, LX/2jO;->A03:I
-
     .line 84
+    aput-object v1, v2, v0
+
     .line 85
-    add-int/lit8 v0, v0, 0x2
-
     .line 86
+    sget-object v1, LX/2Jo;->USES_SHARED_PREF:LX/2Jo;
+
     .line 87
-    mul-int/lit8 v0, v0, 0x2
-
     .line 88
-    .line 89
-    int-to-short v2, v0
+    const/16 v0, 0xf
 
+    .line 89
     .line 90
-    invoke-static {p0, v4, v3}, LX/2jO;->A01(LX/2jO;II)V
+    aput-object v1, v2, v0
 
     .line 91
     .line 92
+    sget-object v1, LX/2Jo;->CRASH_REPORTER:LX/2Jo;
+
     .line 93
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
     .line 94
+    const/16 v0, 0x10
+
     .line 95
-    iget v0, p0, LX/2jO;->A06:I
-
     .line 96
+    aput-object v1, v2, v0
+
     .line 97
-    add-int/lit8 v0, v0, -0x2
-
     .line 98
+    sget-object v1, LX/2Jo;->FOR_NEXT_COLD_START:LX/2Jo;
+
     .line 99
-    iput v0, p0, LX/2jO;->A06:I
-
     .line 100
-    .line 101
-    invoke-virtual {v1, v0, v2}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
+    const/16 v0, 0x11
 
+    .line 101
     .line 102
+    aput-object v1, v2, v0
+
     .line 103
     .line 104
-    const/4 v7, 0x0
+    sget-object v1, LX/2Jo;->CLEAN_UP:LX/2Jo;
 
     .line 105
-    :goto_2
-    iget v0, p0, LX/2jO;->A00:I
-
     .line 106
+    const/16 v0, 0x12
+
     .line 107
-    if-ge v7, v0, :cond_4
-
     .line 108
+    aput-object v1, v2, v0
+
     .line 109
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
     .line 110
-    .line 111
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+    sget-object v1, LX/2Jo;->GRAPHQL:LX/2Jo;
 
+    .line 111
     .line 112
+    const/16 v0, 0x13
+
     .line 113
     .line 114
-    move-result v8
+    aput-object v1, v2, v0
 
     .line 115
-    iget-object v0, p0, LX/2jO;->A04:[I
-
     .line 116
+    sget-object v1, LX/2Jo;->INITIALIZES_METRIC:LX/2Jo;
+
     .line 117
-    aget v0, v0, v7
-
     .line 118
-    .line 119
-    sub-int/2addr v8, v0
+    const/16 v0, 0x14
 
+    .line 119
     .line 120
-    iget v6, p0, LX/2jO;->A06:I
+    aput-object v1, v2, v0
 
     .line 121
     .line 122
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
+    sget-object v1, LX/2Jo;->USER_LOGGED_IN_REQUIRED:LX/2Jo;
 
     .line 123
     .line 124
-    invoke-virtual {v0, v8}, Ljava/nio/ByteBuffer;->getShort(I)S
+    const/16 v0, 0x15
 
     .line 125
     .line 126
-    .line 127
-    move-result v5
+    aput-object v1, v2, v0
 
+    .line 127
     .line 128
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
+    sget-object v1, LX/2Jo;->USER_LOGGED_OUT_REQUIRED:LX/2Jo;
 
     .line 129
     .line 130
-    invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->getShort(I)S
+    const/16 v0, 0x16
 
     .line 131
     .line 132
-    .line 133
-    move-result v0
+    aput-object v1, v2, v0
 
+    .line 133
     .line 134
-    if-ne v5, v0, :cond_2
+    sget-object v1, LX/2Jo;->USER_LOGGED_IN_OR_OUT_PERMITTED:LX/2Jo;
 
     .line 135
     .line 136
-    const/4 v4, 0x2
+    const/16 v0, 0x17
 
     .line 137
-    :goto_3
-    if-ge v4, v5, :cond_3
-
     .line 138
+    aput-object v1, v2, v0
+
     .line 139
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
     .line 140
+    sget-object v1, LX/2Jo;->BATTERY_CHARGING:LX/2Jo;
+
     .line 141
-    add-int v0, v8, v4
-
     .line 142
-    .line 143
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->getShort(I)S
+    const/16 v0, 0x18
 
+    .line 143
     .line 144
+    aput-object v1, v2, v0
+
     .line 145
     .line 146
-    move-result v2
+    sget-object v1, LX/2Jo;->BATTERY_NOT_LOW:LX/2Jo;
 
     .line 147
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
     .line 148
+    const/16 v0, 0x19
+
     .line 149
-    add-int v0, v6, v4
-
     .line 150
-    .line 151
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->getShort(I)S
+    aput-object v1, v2, v0
 
+    .line 151
     .line 152
+    sget-object v1, LX/2Jo;->PREFETCH:LX/2Jo;
+
     .line 153
     .line 154
-    move-result v0
+    const/16 v0, 0x1a
 
     .line 155
-    if-ne v2, v0, :cond_2
-
     .line 156
+    aput-object v1, v2, v0
+
     .line 157
-    add-int/lit8 v4, v4, 0x2
-
     .line 158
-    .line 159
-    goto :goto_3
+    sget-object v1, LX/2Jo;->RUN_GROUP_SERIALLY:LX/2Jo;
 
+    .line 159
     .line 160
-    :cond_2
-    add-int/lit8 v7, v7, 0x1
+    const/16 v0, 0x1b
 
     .line 161
     .line 162
-    goto :goto_2
+    aput-object v1, v2, v0
 
     .line 163
-    :cond_3
-    iget-object v0, p0, LX/2jO;->A04:[I
-
     .line 164
+    sget-object v1, LX/2Jo;->GROUP_CANCEL_PREVIOUS:LX/2Jo;
+
     .line 165
-    aget v2, v0, v7
-
     .line 166
+    const/16 v0, 0x1c
+
     .line 167
-    if-eqz v2, :cond_4
-
     .line 168
+    aput-object v1, v2, v0
+
     .line 169
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
     .line 170
-    .line 171
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+    sget-object v1, LX/2Jo;->GROUP_CANCEL_PREVIOUS_ON_SUCCESS:LX/2Jo;
 
+    .line 171
     .line 172
+    const/16 v0, 0x1d
+
     .line 173
     .line 174
-    move-result v1
+    aput-object v1, v2, v0
 
     .line 175
-    sub-int/2addr v1, v9
-
     .line 176
-    iput v1, p0, LX/2jO;->A06:I
+    sget-object v1, LX/2Jo;->USER_ACTIVE:LX/2Jo;
 
     .line 177
     .line 178
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
+    const/16 v0, 0x1e
 
     .line 179
     .line 180
-    sub-int/2addr v2, v9
+    aput-object v1, v2, v0
 
     .line 181
-    invoke-virtual {v0, v1, v2}, Ljava/nio/ByteBuffer;->putInt(II)Ljava/nio/ByteBuffer;
-
     .line 182
+    sget-object v1, LX/2Jo;->USER_DAP:LX/2Jo;
+
     .line 183
     .line 184
-    goto :goto_4
+    const/16 v0, 0x1f
 
     .line 185
-    :cond_4
-    iget v1, p0, LX/2jO;->A00:I
-
     .line 186
+    aput-object v1, v2, v0
+
     .line 187
-    iget-object v2, p0, LX/2jO;->A04:[I
-
     .line 188
-    .line 189
-    array-length v0, v2
+    sget-object v1, LX/2Jo;->USER_WAP:LX/2Jo;
 
+    .line 189
     .line 190
-    if-ne v1, v0, :cond_5
+    const/16 v0, 0x20
 
     .line 191
     .line 192
-    mul-int/lit8 v0, v1, 0x2
+    aput-object v1, v2, v0
 
     .line 193
     .line 194
-    invoke-static {v2, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    sget-object v1, LX/2Jo;->USER_MAP:LX/2Jo;
 
     .line 195
     .line 196
-    .line 197
-    move-result-object v2
+    const/16 v0, 0x21
 
+    .line 197
     .line 198
-    iput-object v2, p0, LX/2jO;->A04:[I
+    aput-object v1, v2, v0
 
     .line 199
     .line 200
-    :cond_5
-    iget v1, p0, LX/2jO;->A00:I
+    sget-object v1, LX/2Jo;->USER_NON_MAP:LX/2Jo;
 
     .line 201
     .line 202
-    add-int/lit8 v0, v1, 0x1
+    const/16 v0, 0x22
 
     .line 203
     .line 204
-    iput v0, p0, LX/2jO;->A00:I
+    aput-object v1, v2, v0
 
     .line 205
     .line 206
-    invoke-static {p0}, LX/2jO;->A00(LX/2jO;)I
+    sget-object v1, LX/2Jo;->RUN_LAST:LX/2Jo;
+
+    .line 207
+    .line 208
+    const/16 v0, 0x23
+
+    .line 209
+    .line 210
+    aput-object v1, v2, v0
+
+    .line 211
+    .line 212
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 2
+
+    .line 0
+    const-string v1, "DEFERRABLE"
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    sput-object v0, LX/2Jo;->DEFERRABLE:LX/2Jo;
+
+    .line 8
+    .line 9
+    const-string v1, "IMMEDIATE"
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    sput-object v0, LX/2Jo;->IMMEDIATE:LX/2Jo;
+
+    .line 17
+    .line 18
+    const-string v1, "NEEDS_UI"
+
+    .line 19
+    .line 20
+    const/4 v0, 0x2
+
+    .line 21
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    sput-object v0, LX/2Jo;->NEEDS_UI:LX/2Jo;
+
+    .line 26
+    .line 27
+    const-string v1, "SCOPE_MAIN_TABS"
+
+    .line 28
+    .line 29
+    const/4 v0, 0x3
+
+    .line 30
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    sput-object v0, LX/2Jo;->SCOPE_MAIN_TABS:LX/2Jo;
+
+    .line 35
+    .line 36
+    const-string v1, "SCOPE_COLD_START"
+
+    .line 37
+    .line 38
+    const/4 v0, 0x4
+
+    .line 39
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v0
+
+    .line 43
+    sput-object v0, LX/2Jo;->SCOPE_COLD_START:LX/2Jo;
+
+    .line 44
+    .line 45
+    const-string v1, "SCOPE_APP_IN_FOREGROUND"
+
+    .line 46
+    .line 47
+    const/4 v0, 0x5
+
+    .line 48
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    sput-object v0, LX/2Jo;->SCOPE_APP_IN_FOREGROUND:LX/2Jo;
+
+    .line 53
+    .line 54
+    const-string v1, "TRIGGER_SCOPE_ENTER"
+
+    .line 55
+    .line 56
+    const/4 v0, 0x6
+
+    .line 57
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v0
+
+    .line 61
+    sput-object v0, LX/2Jo;->TRIGGER_SCOPE_ENTER:LX/2Jo;
+
+    .line 62
+    .line 63
+    const-string v1, "TRIGGER_SCOPE_EXIT"
+
+    .line 64
+    .line 65
+    const/4 v0, 0x7
+
+    .line 66
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v0
+
+    .line 70
+    sput-object v0, LX/2Jo;->TRIGGER_SCOPE_EXIT:LX/2Jo;
+
+    .line 71
+    .line 72
+    const-string v1, "SURFACE_STORIES_TRAY"
+
+    .line 73
+    .line 74
+    const/16 v0, 0x8
+
+    .line 75
+    .line 76
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
+
+    .line 80
+    sput-object v0, LX/2Jo;->SURFACE_STORIES_TRAY:LX/2Jo;
+
+    .line 81
+    .line 82
+    const-string v1, "SURFACE_NEWSFEED"
+
+    .line 83
+    .line 84
+    const/16 v0, 0x9
+
+    .line 85
+    .line 86
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 87
+    .line 88
+    .line 89
+    move-result-object v0
+
+    .line 90
+    sput-object v0, LX/2Jo;->SURFACE_NEWSFEED:LX/2Jo;
+
+    .line 91
+    .line 92
+    const-string v1, "SURFACE_GROUPS"
+
+    .line 93
+    .line 94
+    const/16 v0, 0xa
+
+    .line 95
+    .line 96
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 97
+    .line 98
+    .line 99
+    move-result-object v0
+
+    .line 100
+    sput-object v0, LX/2Jo;->SURFACE_GROUPS:LX/2Jo;
+
+    .line 101
+    .line 102
+    const-string v1, "USES_IO"
+
+    .line 103
+    .line 104
+    const/16 v0, 0xb
+
+    .line 105
+    .line 106
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 107
+    .line 108
+    .line 109
+    move-result-object v0
+
+    .line 110
+    sput-object v0, LX/2Jo;->USES_IO:LX/2Jo;
+
+    .line 111
+    .line 112
+    const-string v1, "USES_NETWORK"
+
+    .line 113
+    .line 114
+    const/16 v0, 0xc
+
+    .line 115
+    .line 116
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 117
+    .line 118
+    .line 119
+    move-result-object v0
+
+    .line 120
+    sput-object v0, LX/2Jo;->USES_NETWORK:LX/2Jo;
+
+    .line 121
+    .line 122
+    const-string v1, "USES_NETWORK_CELL_ONLY"
+
+    .line 123
+    .line 124
+    const/16 v0, 0xd
+
+    .line 125
+    .line 126
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 127
+    .line 128
+    .line 129
+    move-result-object v0
+
+    .line 130
+    sput-object v0, LX/2Jo;->USES_NETWORK_CELL_ONLY:LX/2Jo;
+
+    .line 131
+    .line 132
+    const-string v1, "USES_NETWORK_WIFI_ONLY"
+
+    .line 133
+    .line 134
+    const/16 v0, 0xe
+
+    .line 135
+    .line 136
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v0
+
+    .line 140
+    sput-object v0, LX/2Jo;->USES_NETWORK_WIFI_ONLY:LX/2Jo;
+
+    .line 141
+    .line 142
+    const-string v1, "USES_SHARED_PREF"
+
+    .line 143
+    .line 144
+    const/16 v0, 0xf
+
+    .line 145
+    .line 146
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 147
+    .line 148
+    .line 149
+    move-result-object v0
+
+    .line 150
+    sput-object v0, LX/2Jo;->USES_SHARED_PREF:LX/2Jo;
+
+    .line 151
+    .line 152
+    const-string v1, "CRASH_REPORTER"
+
+    .line 153
+    .line 154
+    const/16 v0, 0x10
+
+    .line 155
+    .line 156
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 157
+    .line 158
+    .line 159
+    move-result-object v0
+
+    .line 160
+    sput-object v0, LX/2Jo;->CRASH_REPORTER:LX/2Jo;
+
+    .line 161
+    .line 162
+    const-string v1, "FOR_NEXT_COLD_START"
+
+    .line 163
+    .line 164
+    const/16 v0, 0x11
+
+    .line 165
+    .line 166
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 167
+    .line 168
+    .line 169
+    move-result-object v0
+
+    .line 170
+    sput-object v0, LX/2Jo;->FOR_NEXT_COLD_START:LX/2Jo;
+
+    .line 171
+    .line 172
+    const-string v1, "CLEAN_UP"
+
+    .line 173
+    .line 174
+    const/16 v0, 0x12
+
+    .line 175
+    .line 176
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 177
+    .line 178
+    .line 179
+    move-result-object v0
+
+    .line 180
+    sput-object v0, LX/2Jo;->CLEAN_UP:LX/2Jo;
+
+    .line 181
+    .line 182
+    const-string v1, "GRAPHQL"
+
+    .line 183
+    .line 184
+    const/16 v0, 0x13
+
+    .line 185
+    .line 186
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-object v0
+
+    .line 190
+    sput-object v0, LX/2Jo;->GRAPHQL:LX/2Jo;
+
+    .line 191
+    .line 192
+    const-string v1, "INITIALIZES_METRIC"
+
+    .line 193
+    .line 194
+    const/16 v0, 0x14
+
+    .line 195
+    .line 196
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 197
+    .line 198
+    .line 199
+    move-result-object v0
+
+    .line 200
+    sput-object v0, LX/2Jo;->INITIALIZES_METRIC:LX/2Jo;
+
+    .line 201
+    .line 202
+    const-string v1, "USER_LOGGED_IN_REQUIRED"
+
+    .line 203
+    .line 204
+    const/16 v0, 0x15
+
+    .line 205
+    .line 206
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
 
     .line 207
     .line 208
     .line 209
-    move-result v0
+    move-result-object v0
 
     .line 210
-    aput v0, v2, v1
+    sput-object v0, LX/2Jo;->USER_LOGGED_IN_REQUIRED:LX/2Jo;
 
     .line 211
     .line 212
-    iget-object v2, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
+    const-string v1, "USER_LOGGED_OUT_REQUIRED"
 
     .line 213
     .line 214
-    invoke-virtual {v2}, Ljava/nio/Buffer;->capacity()I
+    const/16 v0, 0x16
 
     .line 215
     .line 216
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
     .line 217
-    move-result v1
-
     .line 218
-    sub-int/2addr v1, v9
-
     .line 219
-    invoke-static {p0}, LX/2jO;->A00(LX/2jO;)I
+    move-result-object v0
 
     .line 220
+    sput-object v0, LX/2Jo;->USER_LOGGED_OUT_REQUIRED:LX/2Jo;
+
     .line 221
     .line 222
-    move-result v0
+    const-string v1, "USER_LOGGED_IN_OR_OUT_PERMITTED"
 
     .line 223
-    sub-int/2addr v0, v9
-
     .line 224
-    invoke-virtual {v2, v1, v0}, Ljava/nio/ByteBuffer;->putInt(II)Ljava/nio/ByteBuffer;
+    const/16 v0, 0x17
 
     .line 225
     .line 226
-    .line 227
-    :goto_4
-    iput-boolean v3, p0, LX/2jO;->A08:Z
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
 
+    .line 227
     .line 228
     .line 229
-    return v9
+    move-result-object v0
 
     .line 230
-    :cond_6
-    const-string v0, "FlatBuffers: endObject called without startObject"
+    sput-object v0, LX/2Jo;->USER_LOGGED_IN_OR_OUT_PERMITTED:LX/2Jo;
 
     .line 231
     .line 232
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
+    const-string v1, "BATTERY_CHARGING"
 
     .line 233
     .line 234
+    const/16 v0, 0x18
+
     .line 235
-    move-result-object v0
-
     .line 236
-    throw v0
-.end method
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
 
-.method public final A03()I
-    .locals 3
-
-    .line 0
-    iget v2, p0, LX/2jO;->A02:I
-
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 3
-    .line 4
-    iget v0, p0, LX/2jO;->A06:I
-
-    .line 5
-    .line 6
-    add-int/lit8 v0, v0, -0x4
-
-    .line 7
-    .line 8
-    iput v0, p0, LX/2jO;->A06:I
-
-    .line 9
-    .line 10
-    invoke-virtual {v1, v0, v2}, Ljava/nio/ByteBuffer;->putInt(II)Ljava/nio/ByteBuffer;
-
-    .line 11
-    .line 12
-    .line 13
-    invoke-static {p0}, LX/2jO;->A00(LX/2jO;)I
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    return v0
-.end method
-
-.method public final A04(Ljava/lang/String;)I
-    .locals 6
-
-    .line 0
-    sget-object v0, LX/2jO;->A0A:Ljava/nio/charset/Charset;
-
-    .line 1
-    .line 2
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v5
-
-    .line 6
-    const/4 v4, 0x0
-
-    .line 7
-    const/4 v3, 0x1
-
-    .line 8
-    invoke-static {p0, v3, v4}, LX/2jO;->A01(LX/2jO;II)V
-
-    .line 9
-    .line 10
-    .line 11
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 12
-    .line 13
-    iget v0, p0, LX/2jO;->A06:I
-
-    .line 14
-    .line 15
-    add-int/lit8 v0, v0, -0x1
-
-    .line 16
-    .line 17
-    iput v0, p0, LX/2jO;->A06:I
-
-    .line 18
-    .line 19
-    invoke-virtual {v1, v0, v4}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
-
-    .line 20
-    .line 21
-    .line 22
-    array-length v2, v5
-
-    .line 23
-    invoke-virtual {p0, v3, v2, v3}, LX/2jO;->A08(III)V
-
-    .line 24
-    .line 25
-    .line 26
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 27
-    .line 28
-    iget v0, p0, LX/2jO;->A06:I
-
-    .line 29
-    .line 30
-    sub-int/2addr v0, v2
-
-    .line 31
-    iput v0, p0, LX/2jO;->A06:I
-
-    .line 32
-    .line 33
-    invoke-virtual {v1, v0}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
-
-    .line 34
-    .line 35
-    .line 36
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
-
-    .line 37
-    .line 38
-    invoke-virtual {v0, v5, v4, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
-
-    .line 39
-    .line 40
-    .line 41
-    invoke-virtual {p0}, LX/2jO;->A03()I
-
-    .line 42
-    .line 43
-    .line 44
-    move-result v0
-
-    .line 45
-    return v0
-.end method
-
-.method public final A05()V
-    .locals 3
-
-    .line 0
-    const/4 v2, 0x3
-
-    .line 1
-    iget-boolean v0, p0, LX/2jO;->A08:Z
-
-    .line 2
-    .line 3
-    if-nez v0, :cond_2
-
-    .line 4
-    .line 5
-    iget-object v1, p0, LX/2jO;->A09:[I
-
-    .line 6
-    .line 7
-    if-eqz v1, :cond_0
-
-    .line 8
-    .line 9
-    array-length v0, v1
-
-    .line 10
-    if-ge v0, v2, :cond_1
-
-    .line 11
-    .line 12
-    :cond_0
-    new-array v1, v2, [I
-
-    .line 13
-    .line 14
-    iput-object v1, p0, LX/2jO;->A09:[I
-
-    .line 15
-    .line 16
-    :cond_1
-    iput v2, p0, LX/2jO;->A03:I
-
-    .line 17
-    .line 18
-    const/4 v0, 0x0
-
-    .line 19
-    invoke-static {v1, v0, v2, v0}, Ljava/util/Arrays;->fill([IIII)V
-
-    .line 20
-    .line 21
-    .line 22
-    const/4 v0, 0x1
-
-    .line 23
-    iput-boolean v0, p0, LX/2jO;->A08:Z
-
-    .line 24
-    .line 25
-    invoke-static {p0}, LX/2jO;->A00(LX/2jO;)I
-
-    .line 26
-    .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    iput v0, p0, LX/2jO;->A01:I
-
-    .line 30
-    .line 31
-    return-void
-
-    .line 32
-    :cond_2
-    const-string v0, "FlatBuffers: object serialization must not be nested."
-
-    .line 33
-    .line 34
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
-
-    .line 35
-    .line 36
-    .line 37
+    .line 237
+    .line 238
+    .line 239
     move-result-object v0
 
-    .line 38
-    throw v0
-.end method
+    .line 240
+    sput-object v0, LX/2Jo;->BATTERY_CHARGING:LX/2Jo;
 
-.method public final A06(I)V
-    .locals 3
+    .line 241
+    .line 242
+    const-string v1, "BATTERY_NOT_LOW"
 
-    .line 0
-    const/4 v1, 0x4
+    .line 243
+    .line 244
+    const/16 v0, 0x19
 
-    .line 1
-    const/4 v0, 0x0
+    .line 245
+    .line 246
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
 
-    .line 2
-    invoke-static {p0, v1, v0}, LX/2jO;->A01(LX/2jO;II)V
+    .line 247
+    .line 248
+    .line 249
+    move-result-object v0
 
-    .line 3
-    .line 4
-    .line 5
-    iget-object v0, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
+    .line 250
+    sput-object v0, LX/2Jo;->BATTERY_NOT_LOW:LX/2Jo;
 
-    .line 6
-    .line 7
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+    .line 251
+    .line 252
+    const-string v1, "PREFETCH"
 
-    .line 8
-    .line 9
-    .line 10
-    move-result v1
+    .line 253
+    .line 254
+    const/16 v0, 0x1a
 
-    .line 11
-    iget v0, p0, LX/2jO;->A06:I
+    .line 255
+    .line 256
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
 
-    .line 12
-    .line 13
-    sub-int/2addr v1, v0
+    .line 257
+    .line 258
+    .line 259
+    move-result-object v0
 
-    .line 14
-    sub-int/2addr v1, p1
+    .line 260
+    sput-object v0, LX/2Jo;->PREFETCH:LX/2Jo;
 
-    .line 15
-    add-int/lit8 v2, v1, 0x4
+    .line 261
+    .line 262
+    const-string v1, "RUN_GROUP_SERIALLY"
 
-    .line 16
-    .line 17
-    iget-object v1, p0, LX/2jO;->A07:Ljava/nio/ByteBuffer;
+    .line 263
+    .line 264
+    const/16 v0, 0x1b
 
-    .line 18
-    .line 19
-    add-int/lit8 v0, v0, -0x4
+    .line 265
+    .line 266
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
 
-    .line 20
-    .line 21
-    iput v0, p0, LX/2jO;->A06:I
+    .line 267
+    .line 268
+    .line 269
+    move-result-object v0
 
-    .line 22
-    .line 23
-    invoke-virtual {v1, v0, v2}, Ljava/nio/ByteBuffer;->putInt(II)Ljava/nio/ByteBuffer;
+    .line 270
+    sput-object v0, LX/2Jo;->RUN_GROUP_SERIALLY:LX/2Jo;
 
-    .line 24
-    .line 25
-    .line 26
+    .line 271
+    .line 272
+    const-string v1, "GROUP_CANCEL_PREVIOUS"
+
+    .line 273
+    .line 274
+    const/16 v0, 0x1c
+
+    .line 275
+    .line 276
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 277
+    .line 278
+    .line 279
+    move-result-object v0
+
+    .line 280
+    sput-object v0, LX/2Jo;->GROUP_CANCEL_PREVIOUS:LX/2Jo;
+
+    .line 281
+    .line 282
+    const-string v1, "GROUP_CANCEL_PREVIOUS_ON_SUCCESS"
+
+    .line 283
+    .line 284
+    const/16 v0, 0x1d
+
+    .line 285
+    .line 286
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 287
+    .line 288
+    .line 289
+    move-result-object v0
+
+    .line 290
+    sput-object v0, LX/2Jo;->GROUP_CANCEL_PREVIOUS_ON_SUCCESS:LX/2Jo;
+
+    .line 291
+    .line 292
+    const-string v1, "USER_ACTIVE"
+
+    .line 293
+    .line 294
+    const/16 v0, 0x1e
+
+    .line 295
+    .line 296
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 297
+    .line 298
+    .line 299
+    move-result-object v0
+
+    .line 300
+    sput-object v0, LX/2Jo;->USER_ACTIVE:LX/2Jo;
+
+    .line 301
+    .line 302
+    const-string v1, "USER_DAP"
+
+    .line 303
+    .line 304
+    const/16 v0, 0x1f
+
+    .line 305
+    .line 306
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 307
+    .line 308
+    .line 309
+    move-result-object v0
+
+    .line 310
+    sput-object v0, LX/2Jo;->USER_DAP:LX/2Jo;
+
+    .line 311
+    .line 312
+    const-string v1, "USER_WAP"
+
+    .line 313
+    .line 314
+    const/16 v0, 0x20
+
+    .line 315
+    .line 316
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 317
+    .line 318
+    .line 319
+    move-result-object v0
+
+    .line 320
+    sput-object v0, LX/2Jo;->USER_WAP:LX/2Jo;
+
+    .line 321
+    .line 322
+    const-string v1, "USER_MAP"
+
+    .line 323
+    .line 324
+    const/16 v0, 0x21
+
+    .line 325
+    .line 326
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 327
+    .line 328
+    .line 329
+    move-result-object v0
+
+    .line 330
+    sput-object v0, LX/2Jo;->USER_MAP:LX/2Jo;
+
+    .line 331
+    .line 332
+    const-string v1, "USER_NON_MAP"
+
+    .line 333
+    .line 334
+    const/16 v0, 0x22
+
+    .line 335
+    .line 336
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 337
+    .line 338
+    .line 339
+    move-result-object v0
+
+    .line 340
+    sput-object v0, LX/2Jo;->USER_NON_MAP:LX/2Jo;
+
+    .line 341
+    .line 342
+    const-string v1, "RUN_LAST"
+
+    .line 343
+    .line 344
+    const/16 v0, 0x23
+
+    .line 345
+    .line 346
+    invoke-static {v1, v0}, LX/2Jo;->A00(Ljava/lang/String;I)LX/2Jo;
+
+    .line 347
+    .line 348
+    .line 349
+    move-result-object v0
+
+    .line 350
+    sput-object v0, LX/2Jo;->RUN_LAST:LX/2Jo;
+
+    .line 351
+    .line 352
+    invoke-static {}, LX/2Jo;->$values()[LX/2Jo;
+
+    .line 353
+    .line 354
+    .line 355
+    move-result-object v0
+
+    .line 356
+    sput-object v0, LX/2Jo;->$VALUES:[LX/2Jo;
+
+    .line 357
+    .line 358
     return-void
 .end method
 
-.method public final A07(II)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
-    if-eq p2, v0, :cond_0
-
     .line 2
     .line 3
-    invoke-virtual {p0, p2}, LX/2jO;->A06(I)V
-
-    .line 4
-    .line 5
-    .line 6
-    iget-object v1, p0, LX/2jO;->A09:[I
-
-    .line 7
-    .line 8
-    invoke-static {p0}, LX/2jO;->A00(LX/2jO;)I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    aput v0, v1, p1
-
-    .line 13
-    .line 14
-    :cond_0
     return-void
 .end method
 
-.method public final A08(III)V
+.method public static A00(Ljava/lang/String;I)LX/2Jo;
     .locals 1
 
     .line 0
-    iget-boolean v0, p0, LX/2jO;->A08:Z
+    new-instance v0, LX/2Jo;
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
+    invoke-direct {v0, p0, p1}, LX/2Jo;-><init>(Ljava/lang/String;I)V
 
     .line 3
     .line 4
-    iput p2, p0, LX/2jO;->A02:I
-
     .line 5
-    .line 6
-    mul-int/2addr p1, p2
+    return-object v0
+.end method
 
-    .line 7
-    const/4 v0, 0x4
+.method public static valueOf(Ljava/lang/String;)LX/2Jo;
+    .locals 1
 
-    .line 8
-    invoke-static {p0, v0, p1}, LX/2jO;->A01(LX/2jO;II)V
+    .line 0
+    const-class v0, LX/2Jo;
 
-    .line 9
-    .line 10
-    .line 11
-    invoke-static {p0, p3, p1}, LX/2jO;->A01(LX/2jO;II)V
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 12
-    .line 13
-    .line 14
-    return-void
-
-    .line 15
-    :cond_0
-    const-string v0, "FlatBuffers: object serialization must not be nested."
-
-    .line 16
-    .line 17
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
-
-    .line 18
-    .line 19
-    .line 20
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 21
-    throw v0
+    .line 6
+    check-cast v0, LX/2Jo;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/2Jo;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/2Jo;->$VALUES:[LX/2Jo;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/2Jo;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

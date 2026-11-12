@@ -1,4 +1,4 @@
-.class public final LX/4cM;
+.class public final synthetic LX/4cM;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,27 +7,25 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SearchView$2"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ResourcesCompat$FontCallback$$ExternalSyntheticLambda0"
 
 
 # instance fields
-.field public final synthetic A00:Landroidx/appcompat/widget/SearchView;
+.field public final synthetic A00:Landroid/graphics/Typeface;
+
+.field public final synthetic A01:LX/4cJ;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/SearchView;)V
+.method public synthetic constructor <init>(Landroid/graphics/Typeface;LX/4cJ;)V
     .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/4cM;->A00:Landroidx/appcompat/widget/SearchView;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
+    iput-object p2, p0, LX/4cM;->A01:LX/4cJ;
+
+    iput-object p1, p0, LX/4cM;->A00:Landroid/graphics/Typeface;
+
     return-void
 .end method
 
@@ -37,30 +35,18 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, LX/4cM;->A00:Landroidx/appcompat/widget/SearchView;
+    iget-object v1, p0, LX/4cM;->A01:LX/4cJ;
 
     .line 1
     .line 2
-    iget-object v1, v0, Landroidx/appcompat/widget/SearchView;->mSuggestionsAdapter:LX/4b9;
+    iget-object v0, p0, LX/4cM;->A00:Landroid/graphics/Typeface;
 
     .line 3
     .line 4
-    instance-of v0, v1, LX/4b3;
+    invoke-virtual {v1, v0}, LX/4cJ;->A01(Landroid/graphics/Typeface;)V
 
     .line 5
     .line 6
-    if-eqz v0, :cond_0
-
     .line 7
-    .line 8
-    const/4 v0, 0x0
-
-    .line 9
-    invoke-virtual {v1, v0}, LX/4b9;->A6e(Landroid/database/Cursor;)V
-
-    .line 10
-    .line 11
-    .line 12
-    :cond_0
     return-void
 .end method

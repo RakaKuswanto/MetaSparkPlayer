@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5WR;
+.field public static final Companion:LX/6Ac;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5WR;
+    new-instance v0, LX/6Ac;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5WR;-><init>()V
+    invoke-direct {v0}, LX/6Ac;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/implementation/WorldTrackerDataProviderModule;->Companion:LX/5WR;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/implementation/WorldTrackerDataProviderModule;->Companion:LX/6Ac;
 
     .line 6
     .line 7
@@ -29,7 +29,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -66,7 +66,7 @@
 
 
 # virtual methods
-.method public createConfiguration(LX/5UZ;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
+.method public createConfiguration(LX/61H;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
     .locals 2
 
     .line 0
@@ -77,7 +77,7 @@
 
     .line 2
     .line 3
-    iget-object v0, p1, LX/5UZ;->A04:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;
+    iget-object v0, p1, LX/61H;->A04:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;
 
     .line 4
     .line 5

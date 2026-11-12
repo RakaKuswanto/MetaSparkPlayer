@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method public constructor <init>(LX/0M1;I)V
+.method public constructor <init>(LX/0Kf;I)V
     .locals 1
 
     .line 0
@@ -36,7 +36,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p2}, Lcom/facebook/acra/anr/processmonitor/detector/ProcessErrorMonitorANRDetector;->getInstance(LX/0M1;I)Lcom/facebook/acra/anr/processmonitor/detector/ProcessErrorMonitorANRDetector;
+    invoke-static {p1, p2}, Lcom/facebook/acra/anr/processmonitor/detector/ProcessErrorMonitorANRDetector;->getInstance(LX/0Kf;I)Lcom/facebook/acra/anr/processmonitor/detector/ProcessErrorMonitorANRDetector;
 
     .line 4
     .line 5
@@ -48,7 +48,7 @@
 
     .line 8
     .line 9
-    invoke-static {p1}, Lcom/facebook/acra/anr/sigquit/detector/SigquitBasedANRDetector;->getInstance(LX/0M1;)Lcom/facebook/acra/anr/sigquit/detector/SigquitBasedANRDetector;
+    invoke-static {p1}, Lcom/facebook/acra/anr/sigquit/detector/SigquitBasedANRDetector;->getInstance(LX/0Kf;)Lcom/facebook/acra/anr/sigquit/detector/SigquitBasedANRDetector;
 
     .line 10
     .line 11
@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public static declared-synchronized getInstance(LX/0M1;I)Lcom/facebook/acra/anr/hybrid/HybridANRDetector;
+.method public static declared-synchronized getInstance(LX/0Kf;I)Lcom/facebook/acra/anr/hybrid/HybridANRDetector;
     .locals 2
 
     .line 0
@@ -107,7 +107,7 @@
 
     .line 8
     .line 9
-    invoke-direct {v0, p0, p1}, Lcom/facebook/acra/anr/hybrid/HybridANRDetector;-><init>(LX/0M1;I)V
+    invoke-direct {v0, p0, p1}, Lcom/facebook/acra/anr/hybrid/HybridANRDetector;-><init>(LX/0Kf;I)V
 
     .line 10
     .line 11
@@ -404,7 +404,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -419,7 +419,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2

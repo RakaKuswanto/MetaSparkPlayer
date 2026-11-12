@@ -1,232 +1,199 @@
-.class public LX/4Oe;
-.super LX/4Od;
+.class public final enum LX/4Oe;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public A00:LX/0Na;
+# static fields
+.field public static final synthetic $VALUES:[LX/4Oe;
 
-.field public A01:LX/4Og;
+.field public static final enum BOTTOM:LX/4Oe;
+
+.field public static final enum MIDDLE:LX/4Oe;
+
+.field public static final enum TOP:LX/4Oe;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
-
-    .line 536870912
-    invoke-direct {p0, p1}, LX/4Od;-><init>(Landroid/content/Context;)V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 4
-
-    .line 268435456
-    invoke-direct {p0, p1, p2}, LX/4Od;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    sget v0, LX/2eq;->A0E:I
-
-    .line 268435460
-    .line 268435461
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 268435462
-    .line 268435463
-    .line 268435464
-    move-result-object v3
-
-    .line 268435465
-    sget v2, LX/2eq;->AMQ:I
-
-    .line 268435466
-    .line 268435467
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 268435468
-    .line 268435469
-    .line 268435470
-    move-result-object v1
-
-    .line 268435471
-    new-instance v0, LX/1zU;
-
-    .line 268435472
-    .line 268435473
-    invoke-direct {v0, v1, v2}, LX/1zU;-><init>(Landroid/content/Context;I)V
-
-    .line 268435474
-    .line 268435475
-    .line 268435476
-    iput-object v0, p0, LX/4Oe;->A00:LX/0Na;
-
-    .line 268435477
-    .line 268435478
-    invoke-interface {v3}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 268435479
-    .line 268435480
-    .line 268435481
-    move-result-object v0
-
-    .line 268435482
-    check-cast v0, Landroid/text/TextWatcher;
-
-    .line 268435483
-    .line 268435484
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    .line 268435485
-    .line 268435486
-    .line 268435487
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 4
+.method public static synthetic $values()[LX/4Oe;
+    .locals 3
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/4Od;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    const/4 v0, 0x3
 
     .line 1
+    new-array v2, v0, [LX/4Oe;
+
     .line 2
     .line 3
-    sget v0, LX/2eq;->A0E:I
+    sget-object v1, LX/4Oe;->BOTTOM:LX/4Oe;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/4Oe;->TOP:LX/4Oe;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/4Oe;->MIDDLE:LX/4Oe;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "BOTTOM"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/4Oe;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/4Oe;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    move-result-object v3
+    sput-object v0, LX/4Oe;->BOTTOM:LX/4Oe;
 
     .line 9
-    sget v2, LX/2eq;->AMQ:I
-
     .line 10
+    const-string v2, "TOP"
+
     .line 11
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
     .line 12
-    .line 13
-    .line 14
-    move-result-object v1
+    const/4 v1, 0x1
 
+    .line 13
+    new-instance v0, LX/4Oe;
+
+    .line 14
     .line 15
-    new-instance v0, LX/1zU;
+    invoke-direct {v0, v2, v1}, LX/4Oe;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
-    invoke-direct {v0, v1, v2}, LX/1zU;-><init>(Landroid/content/Context;I)V
-
     .line 18
+    sput-object v0, LX/4Oe;->TOP:LX/4Oe;
+
     .line 19
     .line 20
-    iput-object v0, p0, LX/4Oe;->A00:LX/0Na;
+    const-string v2, "MIDDLE"
 
     .line 21
     .line 22
-    invoke-interface {v3}, LX/0Na;->get()Ljava/lang/Object;
+    const/4 v1, 0x2
 
     .line 23
+    new-instance v0, LX/4Oe;
+
     .line 24
     .line 25
-    move-result-object v0
+    invoke-direct {v0, v2, v1}, LX/4Oe;-><init>(Ljava/lang/String;I)V
 
     .line 26
-    check-cast v0, Landroid/text/TextWatcher;
-
     .line 27
     .line 28
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    sput-object v0, LX/4Oe;->MIDDLE:LX/4Oe;
 
     .line 29
     .line 30
+    invoke-static {}, LX/4Oe;->$values()[LX/4Oe;
+
     .line 31
-    return-void
-.end method
-
-
-# virtual methods
-.method public setDropDownListener(LX/4Og;)V
-    .locals 2
-
-    .line 0
-    iput-object p1, p0, LX/4Oe;->A01:LX/4Og;
-
-    .line 1
-    .line 2
-    if-eqz p1, :cond_0
-
-    .line 3
-    .line 4
-    new-instance v1, LX/4Of;
-
-    .line 5
-    .line 6
-    invoke-direct {v1, p1, p0}, LX/4Of;-><init>(LX/4Og;LX/4Oe;)V
-
-    .line 7
-    .line 8
-    .line 9
-    :goto_0
-    iget-object v0, p0, LX/4Oe;->A00:LX/0Na;
-
-    .line 10
-    .line 11
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 12
-    .line 13
-    .line 14
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    .line 17
+    .line 32
+    .line 33
     move-result-object v0
 
-    .line 18
-    check-cast v0, LX/4P2;
+    .line 34
+    sput-object v0, LX/4Oe;->$VALUES:[LX/4Oe;
 
-    .line 19
-    .line 20
-    invoke-virtual {v0, p0, v1}, LX/4P2;->A02(Landroid/widget/AutoCompleteTextView;LX/4Of;)V
-
-    .line 21
-    .line 22
-    .line 23
+    .line 35
+    .line 36
     return-void
-
-    .line 24
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 25
-    goto :goto_0
 .end method
 
-.method public final showDropDown()V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->isPopupShowing()Z
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
-    invoke-super {p0}, Landroid/widget/AutoCompleteTextView;->showDropDown()V
+    return-void
+.end method
 
+.method public static valueOf(Ljava/lang/String;)LX/4Oe;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/4Oe;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
     .line 4
     .line 5
+    move-result-object v0
+
     .line 6
-    return-void
+    check-cast v0, LX/4Oe;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/4Oe;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/4Oe;->$VALUES:[LX/4Oe;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/4Oe;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

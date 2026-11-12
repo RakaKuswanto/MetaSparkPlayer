@@ -1,145 +1,43 @@
-.class public final LX/2LS;
-.super Ljava/lang/Object;
+.class public final enum LX/2LS;
+.super Ljava/lang/Enum;
 .source ""
-
-# interfaces
-.implements LX/2KV;
 
 
 # static fields
-.field public static final A00:LX/2LS;
+.field public static final synthetic $VALUES:[LX/2LS;
 
-.field public static final synthetic A01:LX/2KY;
+.field public static final enum ASYNC_FULL:LX/2LS;
+
+.field public static final enum CARRIER_PART:LX/2LS;
+
+.field public static final enum EP_PART:LX/2LS;
+
+.field public static final enum SYNC_FULL:LX/2LS;
+
+.field public static final enum SYNC_PART:LX/2LS;
+
+.field public static final enum SYNC_PART_AND_FULL:LX/2LS;
+
+.field public static final enum UNSPECIFIED:LX/2LS;
+
+
+# instance fields
+.field public mValue:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
-
-    .line 0
-    new-instance v3, LX/2LS;
-
-    .line 1
-    .line 2
-    invoke-direct {v3}, LX/2LS;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v3, LX/2LS;->A00:LX/2LS;
-
-    .line 6
-    .line 7
-    const-string v1, "com.shopify.checkout.models.CheckoutCompletedPayload"
-
-    .line 8
-    .line 9
-    const/4 v0, 0x6
-
-    .line 10
-    new-instance v2, LX/2KY;
-
-    .line 11
-    .line 12
-    invoke-direct {v2, v1, v3, v0}, LX/2KY;-><init>(Ljava/lang/String;LX/2KV;I)V
-
-    .line 13
-    .line 14
-    .line 15
-    const-string/jumbo v0, "flowType"
-
-    .line 16
-    .line 17
-    .line 18
-    const/4 v1, 0x0
-
-    .line 19
-    invoke-virtual {v2, v0, v1}, LX/2KY;->A01(Ljava/lang/String;Z)V
-
-    .line 20
-    .line 21
-    .line 22
-    const-string/jumbo v0, "orderDetails"
-
-    .line 23
-    .line 24
-    .line 25
-    invoke-virtual {v2, v0, v1}, LX/2KY;->A01(Ljava/lang/String;Z)V
-
-    .line 26
-    .line 27
-    .line 28
-    const-string v0, "confirmationURL"
-
-    .line 29
-    .line 30
-    invoke-virtual {v2, v0, v1}, LX/2KY;->A01(Ljava/lang/String;Z)V
-
-    .line 31
-    .line 32
-    .line 33
-    const-string/jumbo v0, "orderId"
-
-    .line 34
-    .line 35
-    .line 36
-    invoke-virtual {v2, v0, v1}, LX/2KY;->A01(Ljava/lang/String;Z)V
-
-    .line 37
-    .line 38
-    .line 39
-    const-string v0, "cart"
-
-    .line 40
-    .line 41
-    invoke-virtual {v2, v0, v1}, LX/2KY;->A01(Ljava/lang/String;Z)V
-
-    .line 42
-    .line 43
-    .line 44
-    const-string/jumbo v0, "thankYouPageUrl"
-
-    .line 45
-    .line 46
-    .line 47
-    invoke-virtual {v2, v0, v1}, LX/2KY;->A01(Ljava/lang/String;Z)V
-
-    .line 48
-    .line 49
-    .line 50
-    sput-object v2, LX/2LS;->A01:LX/2KY;
-
-    .line 51
-    .line 52
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A6m()[LX/2LY;
+.method public static synthetic $values()[LX/2LS;
     .locals 3
 
     .line 0
-    const/4 v0, 0x6
+    const/4 v0, 0x7
 
     .line 1
-    new-array v2, v0, [LX/2LY;
+    new-array v2, v0, [LX/2LS;
 
     .line 2
     .line 3
-    sget-object v1, LX/2Ma;->A01:LX/2Ma;
+    sget-object v1, LX/2LS;->UNSPECIFIED:LX/2LS;
 
     .line 4
     .line 5
@@ -150,272 +48,308 @@
 
     .line 7
     .line 8
-    sget-object v0, LX/2LP;->A00:LX/2LP;
+    sget-object v1, LX/2LS;->SYNC_PART:LX/2LS;
 
     .line 9
     .line 10
-    invoke-static {v2, v0, v1}, LX/0Yf;->A1P([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
     .line 11
-    .line 12
-    .line 13
-    const/4 v0, 0x3
-
-    .line 14
     aput-object v1, v2, v0
 
-    .line 15
-    .line 16
-    sget-object v0, LX/2M4;->A00:LX/2M4;
-
-    .line 17
-    .line 18
-    invoke-static {v2, v0, v1}, LX/0Yh;->A1V([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 19
-    .line 20
-    .line 21
-    return-object v2
-.end method
-
-.method public final bridge synthetic A98(LX/2Ll;)Ljava/lang/Object;
-    .locals 16
-
-    .line 0
-    const/4 v8, 0x0
-
-    .line 1
-    move-object/from16 v0, p1
-
-    .line 2
-    .line 3
-    invoke-static {v0, v8}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 4
-    .line 5
-    .line 6
-    sget-object v7, LX/2LS;->A01:LX/2KY;
-
-    .line 7
-    .line 8
-    invoke-interface {v0, v7}, LX/2Ll;->A5z(LX/2Kr;)LX/2Lz;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v6
-
     .line 12
-    const/4 v5, 0x5
-
     .line 13
-    const/4 v4, 0x3
+    sget-object v1, LX/2LS;->SYNC_FULL:LX/2LS;
 
     .line 14
-    const/4 v3, 0x4
-
     .line 15
-    const/4 v2, 0x2
+    const/4 v0, 0x2
 
     .line 16
-    const/4 v1, 0x1
+    aput-object v1, v2, v0
 
     .line 17
-    const/4 v11, 0x0
-
     .line 18
-    move-object v10, v11
+    sget-object v1, LX/2LS;->ASYNC_FULL:LX/2LS;
 
     .line 19
-    move-object v12, v11
-
     .line 20
-    move-object v13, v11
+    const/4 v0, 0x3
 
     .line 21
-    move-object v9, v11
+    aput-object v1, v2, v0
 
     .line 22
-    move-object v14, v11
-
     .line 23
-    const/4 v15, 0x0
+    sget-object v1, LX/2LS;->SYNC_PART_AND_FULL:LX/2LS;
 
     .line 24
-    :goto_0
-    invoke-interface {v6, v7}, LX/2Lz;->A8Y(LX/2Kr;)I
-
     .line 25
-    .line 26
-    .line 27
-    move-result v0
+    const/4 v0, 0x4
 
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
     .line 28
-    packed-switch v0, :pswitch_data_0
+    sget-object v1, LX/2LS;->EP_PART:LX/2LS;
 
     .line 29
     .line 30
+    const/4 v0, 0x5
+
     .line 31
-    new-instance v1, LX/2L9;
+    aput-object v1, v2, v0
 
     .line 32
     .line 33
-    invoke-direct {v1, v0}, LX/2L9;-><init>(I)V
+    sget-object v1, LX/2LS;->CARRIER_PART:LX/2LS;
 
     .line 34
     .line 35
+    const/4 v0, 0x6
+
     .line 36
-    throw v1
+    aput-object v1, v2, v0
 
     .line 37
-    :pswitch_0
-    invoke-interface {v6, v7, v8}, LX/2Lz;->A8o(LX/2Kr;I)Ljava/lang/String;
+    .line 38
+    return-object v2
+.end method
 
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v3, "UNSPECIFIED"
+
+    .line 1
+    .line 2
+    const/4 v2, 0x0
+
+    .line 3
+    const/4 v1, -0x1
+
+    .line 4
+    new-instance v0, LX/2LS;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v3, v2, v1}, LX/2LS;-><init>(Ljava/lang/String;II)V
+
+    .line 7
+    .line 8
+    .line 9
+    sput-object v0, LX/2LS;->UNSPECIFIED:LX/2LS;
+
+    .line 10
+    .line 11
+    const-string v1, "SYNC_PART"
+
+    .line 12
+    .line 13
+    const/4 v3, 0x1
+
+    .line 14
+    new-instance v0, LX/2LS;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v1, v3, v2}, LX/2LS;-><init>(Ljava/lang/String;II)V
+
+    .line 17
+    .line 18
+    .line 19
+    sput-object v0, LX/2LS;->SYNC_PART:LX/2LS;
+
+    .line 20
+    .line 21
+    const-string v1, "SYNC_FULL"
+
+    .line 22
+    .line 23
+    const/4 v2, 0x2
+
+    .line 24
+    new-instance v0, LX/2LS;
+
+    .line 25
+    .line 26
+    invoke-direct {v0, v1, v2, v3}, LX/2LS;-><init>(Ljava/lang/String;II)V
+
+    .line 27
+    .line 28
+    .line 29
+    sput-object v0, LX/2LS;->SYNC_FULL:LX/2LS;
+
+    .line 30
+    .line 31
+    const-string v1, "ASYNC_FULL"
+
+    .line 32
+    .line 33
+    const/4 v3, 0x3
+
+    .line 34
+    new-instance v0, LX/2LS;
+
+    .line 35
+    .line 36
+    invoke-direct {v0, v1, v3, v2}, LX/2LS;-><init>(Ljava/lang/String;II)V
+
+    .line 37
     .line 38
     .line 39
-    .line 40
-    move-result-object v11
+    sput-object v0, LX/2LS;->ASYNC_FULL:LX/2LS;
 
+    .line 40
     .line 41
-    or-int/lit8 v15, v15, 0x1
+    const-string v1, "SYNC_PART_AND_FULL"
 
     .line 42
     .line 43
-    goto :goto_0
+    const/4 v2, 0x4
 
     .line 44
-    :pswitch_1
-    sget-object v0, LX/2LP;->A00:LX/2LP;
+    new-instance v0, LX/2LS;
 
     .line 45
     .line 46
-    invoke-interface {v6, v10, v0, v7, v1}, LX/2Lz;->A8k(Ljava/lang/Object;LX/2NA;LX/2Kr;I)Ljava/lang/Object;
+    invoke-direct {v0, v1, v2, v3}, LX/2LS;-><init>(Ljava/lang/String;II)V
 
     .line 47
     .line 48
     .line 49
-    move-result-object v10
+    sput-object v0, LX/2LS;->SYNC_PART_AND_FULL:LX/2LS;
 
     .line 50
-    or-int/lit8 v15, v15, 0x2
-
     .line 51
-    .line 52
-    goto :goto_0
+    const-string v1, "EP_PART"
 
+    .line 52
     .line 53
-    :pswitch_2
-    invoke-interface {v6, v7, v2}, LX/2Lz;->A8o(LX/2Kr;I)Ljava/lang/String;
+    const/4 v3, 0x5
 
     .line 54
+    new-instance v0, LX/2LS;
+
     .line 55
     .line 56
-    move-result-object v12
+    invoke-direct {v0, v1, v3, v2}, LX/2LS;-><init>(Ljava/lang/String;II)V
 
     .line 57
-    or-int/lit8 v15, v15, 0x4
-
     .line 58
     .line 59
-    goto :goto_0
+    sput-object v0, LX/2LS;->EP_PART:LX/2LS;
 
     .line 60
-    :pswitch_3
-    invoke-interface {v6, v7, v4}, LX/2Lz;->A8o(LX/2Kr;I)Ljava/lang/String;
-
     .line 61
+    const-string v2, "CARRIER_PART"
+
     .line 62
     .line 63
-    move-result-object v13
+    const/4 v1, 0x6
 
     .line 64
-    or-int/lit8 v15, v15, 0x8
+    new-instance v0, LX/2LS;
 
     .line 65
     .line 66
-    goto :goto_0
+    invoke-direct {v0, v2, v1, v3}, LX/2LS;-><init>(Ljava/lang/String;II)V
 
     .line 67
-    :pswitch_4
-    sget-object v0, LX/2M4;->A00:LX/2M4;
-
     .line 68
     .line 69
-    invoke-interface {v6, v9, v0, v7, v3}, LX/2Lz;->A8k(Ljava/lang/Object;LX/2NA;LX/2Kr;I)Ljava/lang/Object;
+    sput-object v0, LX/2LS;->CARRIER_PART:LX/2LS;
 
     .line 70
     .line 71
+    invoke-static {}, LX/2LS;->$values()[LX/2LS;
+
     .line 72
-    move-result-object v9
-
     .line 73
-    or-int/lit8 v15, v15, 0x10
-
     .line 74
+    move-result-object v0
+
     .line 75
-    goto :goto_0
+    sput-object v0, LX/2LS;->$VALUES:[LX/2LS;
 
     .line 76
-    :pswitch_5
-    invoke-interface {v6, v7, v5}, LX/2Lz;->A8o(LX/2Kr;I)Ljava/lang/String;
-
     .line 77
-    .line 78
-    .line 79
-    move-result-object v14
-
-    .line 80
-    or-int/lit8 v15, v15, 0x20
-
-    .line 81
-    .line 82
-    goto :goto_0
-
-    .line 83
-    :pswitch_6
-    invoke-interface {v6, v7}, LX/2Lz;->A9y(LX/2Kr;)V
-
-    .line 84
-    .line 85
-    .line 86
-    check-cast v10, Lcom/shopify/checkout/models/OrderDetails;
-
-    .line 87
-    .line 88
-    check-cast v9, Lcom/shopify/checkout/models/CartInfo;
-
-    .line 89
-    .line 90
-    new-instance v8, Lcom/shopify/checkout/models/CheckoutCompletedPayload;
-
-    .line 91
-    .line 92
-    invoke-direct/range {v8 .. v15}, Lcom/shopify/checkout/models/CheckoutCompletedPayload;-><init>(Lcom/shopify/checkout/models/CartInfo;Lcom/shopify/checkout/models/OrderDetails;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-
-    .line 93
-    .line 94
-    .line 95
-    return-object v8
-
-    :pswitch_data_0
-    .packed-switch -0x1
-        :pswitch_6
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-    .end packed-switch
+    return-void
 .end method
 
-.method public final AEY()LX/2Kr;
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
     .line 0
-    sget-object v0, LX/2LS;->A01:LX/2KY;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
+    .line 3
+    iput p3, p0, LX/2LS;->mValue:I
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/2LS;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/2LS;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/2LS;
+
+    .line 7
+    .line 8
     return-object v0
+.end method
+
+.method public static values()[LX/2LS;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/2LS;->$VALUES:[LX/2LS;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/2LS;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getValue()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/2LS;->mValue:I
+
+    .line 1
+    .line 2
+    return v0
 .end method

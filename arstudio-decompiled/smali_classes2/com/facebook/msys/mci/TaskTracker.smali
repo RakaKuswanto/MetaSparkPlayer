@@ -20,8 +20,6 @@
 # instance fields
 .field public final mExecutionContext:I
 
-.field public mNativeHolder:Lcom/facebook/simplejni/NativeHolder;
-
 .field public final mQueueName:Ljava/lang/String;
 
 
@@ -30,7 +28,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/1Wd;->A00()V
+    invoke-static {}, LX/3hX;->A00()V
 
     .line 1
     .line 2
@@ -178,14 +176,11 @@
     return-void
 .end method
 
-.method public static native initNativeHolders([I[Ljava/lang/String;)[Lcom/facebook/simplejni/NativeHolder;
+.method public static native nativeGetLong(II)J
 .end method
 
-.method private native nativeGetLong(I)J
+.method public static native nativeGetString(II)Ljava/lang/String;
 .end method
 
-.method private native nativeGetString(I)Ljava/lang/String;
-.end method
-
-.method private native nativeGetTaskCount()I
+.method public static native nativeGetTaskCount(I)I
 .end method

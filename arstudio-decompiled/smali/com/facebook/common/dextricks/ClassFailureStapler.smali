@@ -21,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 4
     .line 5
@@ -61,7 +61,7 @@
     .locals 3
 
     .line 0
-    sget-boolean v0, LX/0Hl;->A00:Z
+    sget-boolean v0, LX/0H5;->A00:Z
 
     .line 1
     .line 2

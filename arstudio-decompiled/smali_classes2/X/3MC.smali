@@ -3,483 +3,865 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "UnifiedSubscriptionManager$2"
+.implements Ljava/io/Closeable;
+.implements LX/3MD;
 
 
 # instance fields
-.field public final synthetic A00:LX/27Y;
+.field public A00:Ljava/nio/ByteBuffer;
 
-.field public final synthetic A01:LX/3MA;
+.field public final A01:J
 
-.field public final synthetic A02:LX/33F;
-
-.field public final synthetic A03:[Ljava/lang/Boolean;
+.field public final A02:I
 
 
 # direct methods
-.method public constructor <init>(LX/27Y;LX/3MA;LX/33F;[Ljava/lang/Boolean;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
     .line 0
-    iput-object p3, p0, LX/3MC;->A02:LX/33F;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p4, p0, LX/3MC;->A03:[Ljava/lang/Boolean;
-
     .line 3
-    .line 4
-    iput-object p2, p0, LX/3MC;->A01:LX/3MA;
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
+    .line 4
     .line 5
     .line 6
-    iput-object p1, p0, LX/3MC;->A00:LX/27Y;
+    move-result-object v0
 
     .line 7
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
 
+    .line 8
     .line 9
+    iput p1, p0, LX/3MC;->A02:I
+
     .line 10
     .line 11
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    int-to-long v0, v0
+
+    .line 16
+    iput-wide v0, p0, LX/3MC;->A01:J
+
+    .line 17
+    .line 18
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 11
+.method private A00(ILX/3MD;II)V
+    .locals 4
 
     .line 0
-    iget-object v4, p0, LX/3MC;->A03:[Ljava/lang/Boolean;
+    instance-of v0, p2, LX/3MC;
 
     .line 1
     .line 2
-    iget-object v7, p0, LX/3MC;->A01:LX/3MA;
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    iget-object v1, p0, LX/3MC;->A00:LX/27Y;
+    invoke-virtual {p0}, LX/3MC;->isClosed()Z
 
     .line 5
     .line 6
-    iget-object v0, v7, LX/3MA;->A02:Ljava/lang/ref/WeakReference;
-
     .line 7
+    move-result v0
+
     .line 8
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    xor-int/lit8 v0, v0, 0x1
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0H2;->A01(Z)V
+
     .line 11
-    move-result-object v0
-
     .line 12
-    const/4 v3, 0x0
-
     .line 13
-    if-eqz v0, :cond_2
+    invoke-interface {p2}, LX/3MD;->isClosed()Z
 
     .line 14
     .line 15
-    iget-object v0, v7, LX/3MA;->A01:Ljava/lang/ref/WeakReference;
-
     .line 16
+    move-result v0
+
     .line 17
-    if-eqz v0, :cond_2
+    xor-int/lit8 v0, v0, 0x1
 
     .line 18
     .line 19
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-static {v0}, LX/0H2;->A01(Z)V
 
     .line 20
     .line 21
     .line 22
-    move-result-object v5
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
 
     .line 23
-    check-cast v5, LX/3MQ;
-
     .line 24
-    .line 25
-    if-eqz v5, :cond_2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 25
     .line 26
     .line 27
-    iget-object v1, v1, LX/27Y;->A00:Ljava/util/List;
+    invoke-interface {p2}, LX/3MD;->getSize()I
 
     .line 28
     .line 29
-    const/4 v10, 0x1
-
     .line 30
-    if-eqz v1, :cond_6
+    move-result v1
 
     .line 31
-    .line 32
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    iget v0, p0, LX/3MC;->A02:I
 
+    .line 32
     .line 33
+    invoke-static {p1, v1, p3, p4, v0}, LX/3ME;->A00(IIIII)V
+
     .line 34
     .line 35
-    move-result v0
-
     .line 36
-    if-nez v0, :cond_6
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
 
     .line 37
     .line 38
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, p1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 39
     .line 40
     .line 41
-    move-result-object v2
+    invoke-interface {p2}, LX/3MD;->getByteBuffer()Ljava/nio/ByteBuffer;
 
     .line 42
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
     .line 43
     .line 44
+    move-result-object v3
+
     .line 45
-    move-result v0
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 46
-    if-eqz v0, :cond_6
-
     .line 47
     .line 48
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v3, p3}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
     .line 49
     .line 50
     .line 51
-    move-result-object v6
+    new-array v2, p4, [B
 
     .line 52
-    check-cast v6, LX/3ME;
-
     .line 53
-    .line 54
-    iget-object v1, v7, LX/3MA;->A04:LX/33S;
+    iget-object v1, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
 
+    .line 54
     .line 55
+    const/4 v0, 0x0
+
     .line 56
-    iget-object v0, v1, LX/33S;->A07:Ljava/lang/String;
+    invoke-virtual {v1, v2, v0, p4}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     .line 57
     .line 58
-    iget-object v9, v6, LX/3ME;->A04:Ljava/lang/String;
-
     .line 59
-    .line 60
-    invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v2, v0, p4}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
+    .line 60
     .line 61
     .line 62
-    .line 63
-    move-result v0
-
-    .line 64
-    if-eqz v0, :cond_0
-
-    .line 65
-    .line 66
-    iget-object v0, v1, LX/33S;->A06:Ljava/lang/String;
-
-    .line 67
-    .line 68
-    iget-object v8, v6, LX/3ME;->A02:Ljava/lang/String;
-
-    .line 69
-    .line 70
-    invoke-virtual {v0, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 71
-    .line 72
-    .line 73
-    move-result v0
-
-    .line 74
-    if-eqz v0, :cond_0
-
-    .line 75
-    .line 76
-    iget-object v0, v6, LX/3ME;->A03:Ljava/lang/String;
-
-    .line 77
-    .line 78
-    iput-object v0, v1, LX/33S;->A04:Ljava/lang/String;
-
-    .line 79
-    .line 80
-    iput v3, v7, LX/3MA;->A00:I
-
-    .line 81
-    .line 82
-    iget-object v2, v5, LX/3MQ;->A00:LX/3MD;
-
-    .line 83
-    .line 84
-    iget-object v0, v2, LX/3MD;->A03:Ljava/lang/ref/WeakReference;
-
-    .line 85
-    .line 86
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    .line 87
-    .line 88
-    .line 89
-    move-result-object v1
-
-    .line 90
-    check-cast v1, LX/3nu;
-
-    .line 91
-    .line 92
-    if-nez v1, :cond_3
-
-    .line 93
-    .line 94
-    const/4 v0, 0x0
-
-    .line 95
-    iput-object v0, v2, LX/3MD;->A00:LX/3MA;
-
-    .line 96
-    .line 97
-    iput-object v0, v2, LX/3MD;->A01:Lcom/facebook/video/engine/api/VideoPlayerParams;
-
-    .line 98
-    .line 99
-    const/4 v10, 0x0
-
-    .line 100
-    :cond_1
-    :goto_0
-    move v3, v10
-
-    .line 101
-    :cond_2
-    :goto_1
-    invoke-static {v4, v3}, LX/0Yg;->A1K([Ljava/lang/Object;Z)V
-
-    .line 102
-    .line 103
-    .line 104
     return-void
 
-    .line 105
-    :cond_3
-    iget-object v0, v6, LX/3ME;->A01:LX/3MP;
+    .line 63
+    :cond_0
+    const-string v0, "Cannot copy two incompatible MemoryChunks"
 
-    .line 106
-    .line 107
-    if-eqz v0, :cond_4
+    .line 64
+    .line 65
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
-    .line 108
-    .line 109
-    invoke-static {v1}, LX/3nu;->A09(LX/3nu;)Ljava/lang/Object;
+    .line 66
+    .line 67
+    .line 68
+    move-result-object v0
 
-    .line 110
-    .line 111
-    .line 112
-    move-result-object v5
+    .line 69
+    throw v0
+.end method
 
-    .line 113
-    check-cast v5, LX/3hk;
 
-    .line 114
-    .line 115
-    invoke-static {v9}, LX/0PS;->A02(Ljava/lang/Object;)V
+# virtual methods
+.method public final declared-synchronized close()V
+    .locals 1
 
-    .line 116
-    .line 117
-    .line 118
-    invoke-static {v8}, LX/0PS;->A02(Ljava/lang/Object;)V
+    .line 0
+    monitor-enter p0
 
-    .line 119
-    .line 120
-    .line 121
-    iget-object v8, v0, LX/3MP;->A00:LX/1we;
-
-    .line 122
-    .line 123
-    const-string v0, "c"
-
-    .line 124
-    .line 125
-    invoke-static {v8, v0}, LX/33L;->A00(LX/1we;Ljava/lang/String;)I
-
-    .line 126
-    .line 127
-    .line 128
-    const-string/jumbo v0, "loc"
-
-    .line 129
-    .line 130
-    .line 131
-    invoke-static {v8, v0}, LX/33L;->A00(LX/1we;Ljava/lang/String;)I
-
-    .line 132
-    .line 133
-    .line 134
-    const-string/jumbo v0, "lcc"
-
-    .line 135
-    .line 136
-    .line 137
-    invoke-static {v8, v0}, LX/33L;->A00(LX/1we;Ljava/lang/String;)I
-
-    .line 138
-    .line 139
-    .line 140
-    const-string/jumbo v0, "lvc"
-
-    .line 141
-    .line 142
-    .line 143
-    invoke-static {v8, v0}, LX/33L;->A00(LX/1we;Ljava/lang/String;)I
-
-    .line 144
-    .line 145
-    .line 146
-    const-string/jumbo v0, "ljc"
-
-    .line 147
-    .line 148
-    .line 149
-    invoke-static {v8, v0}, LX/33L;->A00(LX/1we;Ljava/lang/String;)I
-
-    .line 150
-    .line 151
-    .line 152
-    const-string v1, "bs"
-
-    .line 153
-    .line 154
+    .line 1
     const/4 v0, 0x0
 
-    .line 155
-    invoke-static {v8, v1, v0}, LX/33L;->A01(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 2
+    :try_start_0
+    iput-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 156
-    .line 157
-    .line 158
+    .line 3
+    .line 4
+    monitor-exit p0
+
+    .line 5
+    return-void
+
+    .line 6
+    :catchall_0
+    move-exception v0
+
+    .line 7
+    monitor-exit p0
+
+    .line 8
+    throw v0
+.end method
+
+.method public final copy(ILX/3MD;II)V
+    .locals 8
+
+    .line 0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-interface {p2}, LX/3MD;->getUniqueId()J
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-wide v6
+
+    .line 7
+    iget-wide v0, p0, LX/3MC;->A01:J
+
+    .line 8
+    .line 9
+    cmp-long v2, v6, v0
+
+    .line 10
+    .line 11
+    if-nez v2, :cond_0
+
+    .line 12
+    .line 13
+    const-string v5, "BufferMemoryChunk"
+
+    .line 14
+    .line 15
+    const-string v4, "Copying from BufferMemoryChunk "
+
+    .line 16
+    .line 17
+    invoke-static {v0, v1}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v3
+
+    .line 21
+    const-string v2, " to BufferMemoryChunk "
+
+    .line 22
+    .line 23
+    invoke-static {v6, v7}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
     move-result-object v1
 
-    .line 159
-    new-instance v0, LX/3MK;
+    .line 27
+    const-string v0, " which are the same "
 
-    .line 160
-    .line 161
-    invoke-direct {v0, v1}, LX/3MK;-><init>(Ljava/lang/String;)V
+    .line 28
+    .line 29
+    invoke-static {v4, v3, v2, v1, v0}, LX/004;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 162
-    .line 163
-    .line 164
-    iput-object v0, v2, LX/3MD;->A02:LX/3MK;
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
 
-    .line 165
-    .line 166
-    iput-object v0, v2, LX/3MD;->A02:LX/3MK;
+    .line 33
+    invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
-    .line 168
-    if-eqz v5, :cond_4
-
-    .line 169
-    .line 170
-    invoke-virtual {v5, v0}, LX/3hk;->A05(LX/3u5;)V
-
-    .line 171
-    .line 172
-    .line 173
-    :cond_4
-    iget-object v5, v6, LX/3ME;->A00:LX/3MJ;
-
-    .line 174
-    .line 175
-    if-eqz v5, :cond_1
-
-    .line 176
-    .line 177
-    iget-object v1, v5, LX/3MJ;->A01:Ljava/lang/String;
-
-    .line 178
-    .line 179
-    const-string/jumbo v0, "p"
-
-    .line 180
-    .line 181
-    .line 182
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 183
-    .line 184
-    .line 185
-    move-result v0
-
-    .line 186
-    if-eqz v0, :cond_5
-
-    .line 187
-    .line 188
-    iget v0, v5, LX/3MJ;->A00:I
-
-    .line 189
-    .line 190
-    iput v0, v7, LX/3MA;->A00:I
-
-    .line 191
-    .line 192
-    goto :goto_0
-
-    .line 193
-    :cond_5
-    const-string/jumbo v0, "s"
-
-    .line 194
-    .line 195
-    .line 196
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 197
-    .line 198
-    .line 199
-    move-result v0
-
-    .line 200
-    if-eqz v0, :cond_1
-
-    .line 201
-    .line 202
+    .line 34
+    .line 35
+    .line 36
     const/4 v0, 0x0
 
-    .line 203
-    iput-object v0, v2, LX/3MD;->A00:LX/3MA;
+    .line 37
+    invoke-static {v0}, LX/0X1;->A1Q(Z)V
 
-    .line 204
-    .line 205
-    iput-object v0, v2, LX/3MD;->A01:Lcom/facebook/video/engine/api/VideoPlayerParams;
+    .line 38
+    .line 39
+    .line 40
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
-    .line 206
-    .line 207
-    iput-object v0, v2, LX/3MD;->A02:LX/3MK;
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
 
-    .line 208
-    .line 209
-    goto :goto_1
+    .line 44
+    throw v0
 
-    .line 210
-    :cond_6
-    const/4 v3, 0x1
+    .line 45
+    :cond_0
+    cmp-long v2, v6, v0
 
-    .line 211
-    goto :goto_1
+    .line 46
+    .line 47
+    if-gez v2, :cond_1
+
+    .line 48
+    .line 49
+    monitor-enter p2
+
+    .line 50
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 51
+    :try_start_1
+    invoke-direct {p0, p1, p2, p3, p4}, LX/3MC;->A00(ILX/3MD;II)V
+
+    .line 52
+    .line 53
+    .line 54
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 55
+    :try_start_2
+    monitor-exit p2
+
+    .line 56
+    return-void
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 57
+    :catchall_0
+    move-exception v0
+
+    .line 58
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 59
+    :try_start_4
+    throw v0
+
+    .line 60
+    :catchall_1
+    move-exception v0
+
+    .line 61
+    monitor-exit p2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    .line 62
+    throw v0
+
+    .line 63
+    :cond_1
+    monitor-enter p0
+
+    .line 64
+    :try_start_5
+    monitor-enter p2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    .line 65
+    :try_start_6
+    invoke-direct {p0, p1, p2, p3, p4}, LX/3MC;->A00(ILX/3MD;II)V
+
+    .line 66
+    .line 67
+    .line 68
+    monitor-exit p2
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    .line 69
+    :try_start_7
+    monitor-exit p0
+
+    .line 70
+    return-void
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+
+    .line 71
+    :catchall_2
+    move-exception v0
+
+    .line 72
+    :try_start_8
+    monitor-exit p2
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+
+    .line 73
+    :try_start_9
+    throw v0
+
+    .line 74
+    :catchall_3
+    move-exception v0
+
+    .line 75
+    monitor-exit p0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    .line 76
+    throw v0
+.end method
+
+.method public final declared-synchronized getByteBuffer()Ljava/nio/ByteBuffer;
+    .locals 1
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    .line 3
+    monitor-exit p0
+
+    .line 4
+    return-object v0
+
+    .line 5
+    :catchall_0
+    move-exception v0
+
+    .line 6
+    monitor-exit p0
+
+    .line 7
+    throw v0
+.end method
+
+.method public final getNativePtr()J
+    .locals 1
+
+    .line 0
+    const-string v0, "Cannot get the pointer of a BufferMemoryChunk"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/3MC;->A02:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final getUniqueId()J
+    .locals 2
+
+    .line 0
+    iget-wide v0, p0, LX/3MC;->A01:J
+
+    .line 1
+    .line 2
+    return-wide v0
+.end method
+
+.method public final declared-synchronized isClosed()Z
+    .locals 1
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    .line 3
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    monitor-exit p0
+
+    .line 8
+    return v0
+
+    .line 9
+    :catchall_0
+    move-exception v0
+
+    .line 10
+    monitor-exit p0
+
+    .line 11
+    throw v0
+.end method
+
+.method public final declared-synchronized read(I)B
+    .locals 2
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p0}, LX/3MC;->isClosed()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    const/4 v1, 0x1
+
+    .line 6
+    invoke-static {v0}, LX/001;->A1L(I)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    :try_start_1
+    invoke-static {v0}, LX/0H2;->A01(Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-static {p1}, LX/0X2;->A1P(I)Z
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    :try_start_2
+    invoke-static {v0}, LX/0X1;->A1Q(Z)V
+
+    .line 18
+    .line 19
+    .line 20
+    iget v0, p0, LX/3MC;->A02:I
+
+    .line 21
+    .line 22
+    if-lt p1, v0, :cond_0
+
+    .line 23
+    .line 24
+    const/4 v1, 0x0
+
+    .line 25
+    :cond_0
+    invoke-static {v1}, LX/0X1;->A1Q(Z)V
+
+    .line 26
+    .line 27
+    .line 28
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+
+    .line 29
+    .line 30
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 31
+    .line 32
+    .line 33
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+
+    .line 34
+    .line 35
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->get(I)B
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 39
+    monitor-exit p0
+
+    .line 40
+    return v0
+
+    .line 41
+    :catchall_0
+    move-exception v0
+
+    .line 42
+    monitor-exit p0
+
+    .line 43
+    throw v0
+.end method
+
+.method public final declared-synchronized read(I[BII)I
+    .locals 3
+
+    .line 268435456
+    monitor-enter p0
+
+    .line 268435457
+    :try_start_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    invoke-virtual {p0}, LX/3MC;->isClosed()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result v0
+
+    .line 268435464
+    invoke-static {v0}, LX/001;->A1L(I)Z
+
+    .line 268435465
+    .line 268435466
+    .line 268435467
+    move-result v0
+
+    .line 268435468
+    :try_start_1
+    invoke-static {v0}, LX/0H2;->A01(Z)V
+
+    .line 268435469
+    .line 268435470
+    .line 268435471
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+
+    .line 268435472
+    .line 268435473
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 268435474
+    .line 268435475
+    .line 268435476
+    iget v2, p0, LX/3MC;->A02:I
+
+    .line 268435477
+    .line 268435478
+    invoke-static {v2, p1, p4}, LX/0X4;->A02(III)I
+
+    .line 268435479
+    .line 268435480
+    .line 268435481
+    move-result v1
+
+    .line 268435482
+    array-length v0, p2
+
+    .line 268435483
+    invoke-static {p1, v0, p3, v1, v2}, LX/3ME;->A00(IIIII)V
+
+    .line 268435484
+    .line 268435485
+    .line 268435486
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+
+    .line 268435487
+    .line 268435488
+    invoke-virtual {v0, p1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
+
+    .line 268435489
+    .line 268435490
+    .line 268435491
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+
+    .line 268435492
+    .line 268435493
+    invoke-virtual {v0, p2, p3, v1}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 268435494
+    .line 268435495
+    .line 268435496
+    monitor-exit p0
+
+    .line 268435497
+    return v1
+
+    .line 268435498
+    :catchall_0
+    move-exception v0
+
+    .line 268435499
+    monitor-exit p0
+
+    .line 268435500
+    throw v0
+.end method
+
+.method public final declared-synchronized write(I[BII)I
+    .locals 3
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-virtual {p0}, LX/3MC;->isClosed()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    invoke-static {v0}, LX/001;->A1L(I)Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    :try_start_1
+    invoke-static {v0}, LX/0H2;->A01(Z)V
+
+    .line 13
+    .line 14
+    .line 15
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+
+    .line 16
+    .line 17
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 18
+    .line 19
+    .line 20
+    iget v2, p0, LX/3MC;->A02:I
+
+    .line 21
+    .line 22
+    invoke-static {v2, p1, p4}, LX/0X4;->A02(III)I
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v1
+
+    .line 26
+    array-length v0, p2
+
+    .line 27
+    invoke-static {p1, v0, p3, v1, v2}, LX/3ME;->A00(IIIII)V
+
+    .line 28
+    .line 29
+    .line 30
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+
+    .line 31
+    .line 32
+    invoke-virtual {v0, p1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
+
+    .line 33
+    .line 34
+    .line 35
+    iget-object v0, p0, LX/3MC;->A00:Ljava/nio/ByteBuffer;
+
+    .line 36
+    .line 37
+    invoke-virtual {v0, p2, p3, v1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 38
+    .line 39
+    .line 40
+    monitor-exit p0
+
+    .line 41
+    return v1
+
+    .line 42
+    :catchall_0
+    move-exception v0
+
+    .line 43
+    monitor-exit p0
+
+    .line 44
+    throw v0
 .end method

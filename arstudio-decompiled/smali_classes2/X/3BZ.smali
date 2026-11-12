@@ -1,29 +1,26 @@
-.class public final LX/3BZ;
-.super Ljava/lang/Exception;
+.class public interface abstract LX/3BZ;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final serialVersionUID:J = 0x2faaa6ae37ddfd21L
+# virtual methods
+.method public abstract ASO()V
+.end method
 
+.method public abstract ASQ()V
+.end method
 
-# instance fields
-.field public final errorBundle:Landroid/os/Bundle;
+.method public abstract ASR(J)V
+.end method
 
+.method public abstract ASS([JII)V
+.end method
 
-# direct methods
-.method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 0
+.method public abstract ASa(Ljava/lang/String;)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
+.method public abstract Akp(Ljava/lang/Object;)V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/3BZ;->errorBundle:Landroid/os/Bundle;
-
-    .line 4
-    .line 5
-    return-void
+.method public abstract Aok()V
 .end method

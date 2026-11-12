@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x41
+    const/16 v0, 0x20
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
 
     .line 3
     .line 4
@@ -84,7 +84,7 @@
 
     .line 268435474
     .line 268435475
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 268435476
     .line 268435477
@@ -316,7 +316,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0, v1, v2}, LX/4BE;->A0D(JI)I
+    invoke-static {v0, v1}, LX/0X6;->A03(J)I
 
     .line 11
     .line 12
@@ -324,7 +324,10 @@
     move-result v0
 
     .line 14
-    return v0
+    add-int/2addr v2, v0
+
+    .line 15
+    return v2
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -371,7 +374,7 @@
     .line 20
     .line 21
     :goto_0
-    invoke-static {v6, v5, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6, v5, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 22
     .line 23
@@ -387,7 +390,7 @@
 
     .line 27
     .line 28
-    invoke-static {v3, v4, v0}, LX/00I;->A0A(JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v4}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
     .line 29
     .line 30

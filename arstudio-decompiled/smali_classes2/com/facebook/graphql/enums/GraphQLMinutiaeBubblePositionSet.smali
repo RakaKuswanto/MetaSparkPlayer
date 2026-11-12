@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMinutiaeBubblePositionSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMinutiaeBubblePositionSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0w()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A10()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -35,7 +35,7 @@
 
     .line 10
     .line 11
-    invoke-static {v2, v0}, LX/0Yf;->A1M([Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v0}, LX/0X2;->A1O([Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 12
     .line 13
@@ -58,7 +58,7 @@
 
     .line 21
     .line 22
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 23
     .line 24
@@ -66,7 +66,7 @@
     move-result-object v0
 
     .line 26
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMinutiaeBubblePositionSet;->A00:Ljava/util/Set;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMinutiaeBubblePositionSet;->A00:Ljava/util/HashSet;
 
     .line 27
     .line 28
@@ -85,11 +85,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMinutiaeBubblePositionSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMinutiaeBubblePositionSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

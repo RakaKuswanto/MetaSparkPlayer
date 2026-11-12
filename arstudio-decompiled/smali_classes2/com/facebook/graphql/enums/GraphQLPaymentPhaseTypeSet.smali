@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLPaymentPhaseTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLPaymentPhaseTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -15,7 +15,7 @@
     const/4 v0, 0x3
 
     .line 1
-    invoke-static {v0}, LX/0Yg;->A1Z(I)[Ljava/lang/String;
+    invoke-static {v0}, LX/0X4;->A1Z(I)[Ljava/lang/String;
 
     .line 2
     .line 3
@@ -41,7 +41,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 14
     .line 15
@@ -49,7 +49,7 @@
     move-result-object v0
 
     .line 17
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentPhaseTypeSet;->A00:Ljava/util/Set;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentPhaseTypeSet;->A00:Ljava/util/HashSet;
 
     .line 18
     .line 19
@@ -68,11 +68,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentPhaseTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLPaymentPhaseTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

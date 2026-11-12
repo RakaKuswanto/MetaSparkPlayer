@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract Aof()LX/2J8;
+.method public abstract AHm(I)I
 .end method

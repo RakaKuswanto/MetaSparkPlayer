@@ -1,103 +1,166 @@
-.class public LX/015;
-.super LX/02Z;
+.class public abstract LX/015;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/01Y;
+# static fields
+.field public static final A00:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/046;Landroid/view/WindowInsets;)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/02Z;-><init>(LX/046;Landroid/view/WindowInsets;)V
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    move-result-object v0
 
     .line 4
-    iput-object v0, p0, LX/015;->A00:LX/01Y;
+    sput-object v0, LX/015;->A00:Ljava/lang/Object;
 
     .line 5
     .line 6
     return-void
 .end method
 
-
-# virtual methods
-.method public final A00()LX/01Y;
-    .locals 1
+.method public static final A00(LX/014;I)Ljava/lang/Object;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/015;->A00:LX/01Y;
+    iget-object v1, p0, LX/014;->A02:[I
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
+    iget v0, p0, LX/014;->A00:I
 
     .line 3
     .line 4
-    iget-object v0, p0, LX/0VH;->A04:Landroid/view/WindowInsets;
+    invoke-static {v1, v0, p1}, LX/018;->A00([III)I
 
     .line 5
     .line 6
-    invoke-virtual {v0}, Landroid/view/WindowInsets;->getMandatorySystemGestureInsets()Landroid/graphics/Insets;
-
     .line 7
-    .line 8
-    .line 9
-    move-result-object v0
+    move-result v1
 
+    .line 8
+    if-ltz v1, :cond_0
+
+    .line 9
     .line 10
-    invoke-static {v0}, LX/01Y;->A01(Landroid/graphics/Insets;)LX/01Y;
+    iget-object v0, p0, LX/014;->A03:[Ljava/lang/Object;
 
     .line 11
     .line 12
-    .line 13
-    move-result-object v0
+    aget-object v1, v0, v1
 
+    .line 13
     .line 14
-    iput-object v0, p0, LX/015;->A00:LX/01Y;
+    sget-object v0, LX/015;->A00:Ljava/lang/Object;
 
     .line 15
     .line 16
+    if-ne v1, v0, :cond_1
+
+    .line 17
+    .line 18
     :cond_0
-    return-object v0
+    const/4 v1, 0x0
+
+    .line 19
+    :cond_1
+    return-object v1
 .end method
 
-.method public final A07(IIII)LX/046;
-    .locals 1
+.method public static final A01(LX/014;)V
+    .locals 8
 
     .line 0
-    iget-object v0, p0, LX/0VH;->A04:Landroid/view/WindowInsets;
+    iget v7, p0, LX/014;->A00:I
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/view/WindowInsets;->inset(IIII)Landroid/view/WindowInsets;
+    iget-object v6, p0, LX/014;->A02:[I
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iget-object v5, p0, LX/014;->A03:[Ljava/lang/Object;
 
+    .line 5
     .line 6
-    invoke-static {v0}, LX/046;->A02(Landroid/view/WindowInsets;)LX/046;
+    const/4 v4, 0x0
 
     .line 7
+    const/4 v3, 0x0
+
     .line 8
+    const/4 v2, 0x0
+
     .line 9
-    move-result-object v0
+    :goto_0
+    if-ge v3, v7, :cond_2
 
     .line 10
-    return-object v0
-.end method
+    .line 11
+    aget-object v1, v5, v3
 
-.method public final A09(LX/01Y;)V
-    .locals 0
+    .line 12
+    .line 13
+    sget-object v0, LX/015;->A00:Ljava/lang/Object;
 
+    .line 14
+    .line 15
+    if-eq v1, v0, :cond_1
+
+    .line 16
+    .line 17
+    if-eq v3, v2, :cond_0
+
+    .line 18
+    .line 19
+    aget v0, v6, v3
+
+    .line 20
+    .line 21
+    aput v0, v6, v2
+
+    .line 22
+    .line 23
+    aput-object v1, v5, v2
+
+    .line 24
+    .line 25
+    const/4 v0, 0x0
+
+    .line 26
+    aput-object v0, v5, v3
+
+    .line 27
+    .line 28
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    .line 29
+    .line 30
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
+
+    .line 31
+    .line 32
+    goto :goto_0
+
+    .line 33
+    :cond_2
+    iput-boolean v4, p0, LX/014;->A01:Z
+
+    .line 34
+    .line 35
+    iput v2, p0, LX/014;->A00:I
+
+    .line 36
+    .line 37
     return-void
 .end method

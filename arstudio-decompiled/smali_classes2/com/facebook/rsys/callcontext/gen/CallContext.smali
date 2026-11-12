@@ -23,7 +23,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p3}, LX/0Yd;->A0l(Ljava/lang/Object;I)V
+    invoke-static {p1, p3}, LX/0X2;->A1D(Ljava/lang/Object;I)V
 
     .line 4
     .line 5
@@ -191,56 +191,64 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yf;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget-object v0, p0, Lcom/facebook/rsys/callcontext/gen/CallContext;->selfActorId:Ljava/lang/String;
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
-
     .line 9
-    .line 10
-    .line 11
-    move-result v0
+    move-result v1
 
+    .line 10
+    iget-object v0, p0, Lcom/facebook/rsys/callcontext/gen/CallContext;->selfActorId:Ljava/lang/String;
+
+    .line 11
     .line 12
-    add-int/2addr v1, v0
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 13
-    mul-int/lit8 v1, v1, 0x1f
-
     .line 14
     .line 15
-    iget v0, p0, Lcom/facebook/rsys/callcontext/gen/CallContext;->roomType:I
+    move-result v0
 
     .line 16
-    .line 17
     add-int/2addr v1, v0
 
-    .line 18
+    .line 17
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 18
     .line 19
-    .line 20
-    iget-object v0, p0, Lcom/facebook/rsys/callcontext/gen/CallContext;->appContext:Lcom/facebook/djinni/msys/infra/McfReference;
+    iget v0, p0, Lcom/facebook/rsys/callcontext/gen/CallContext;->roomType:I
 
+    .line 20
     .line 21
+    add-int/2addr v1, v0
+
     .line 22
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 23
     .line 24
+    iget-object v0, p0, Lcom/facebook/rsys/callcontext/gen/CallContext;->appContext:Lcom/facebook/djinni/msys/infra/McfReference;
+
     .line 25
+    .line 26
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
+
+    .line 27
+    .line 28
+    .line 29
     move-result v0
 
-    .line 26
+    .line 30
     return v0
 .end method
 
@@ -248,7 +256,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -323,7 +331,7 @@
 
     .line 40
     .line 41
-    invoke-static {v0, v1}, LX/0Yd;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X1;->A0P(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 42
     .line 43

@@ -1,41 +1,25 @@
-.class public final LX/0Vy;
-.super Ljava/lang/Exception;
+.class public abstract LX/0Vy;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final mResult:LX/0W2;
-
-
 # direct methods
-.method public constructor <init>(LX/0W2;Ljava/lang/String;)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, LX/0Vy;->mResult:LX/0W2;
-
-    .line 268435460
-    .line 268435461
-    return-void
-.end method
-
-.method public constructor <init>(LX/0W2;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p2, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/0Vy;->mResult:LX/0W2;
-
-    .line 4
-    .line 5
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract A00(Landroid/content/Intent;LX/0WY;)LX/0Wa;
+.end method
+
+.method public abstract A01(Landroid/content/Context;)LX/0OQ;
 .end method

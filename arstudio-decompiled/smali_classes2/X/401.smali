@@ -1,132 +1,113 @@
 .class public final LX/401;
-.super LX/3zw;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/4lN;
+
+
+# instance fields
+.field public final A00:I
 
 
 # direct methods
-.method public constructor <init>(LX/41z;LX/3k2;II)V
+.method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    const/4 v0, 0x1
+
+    .line 268435457
+    invoke-direct {p0, v0}, LX/401;-><init>(I)V
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2, p3, p4}, LX/3zw;-><init>(LX/41z;LX/3k2;II)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput p1, p0, LX/401;->A00:I
 
-.method public constructor <init>(Landroid/graphics/Bitmap;LX/2rM;LX/3k2;)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0, p1, p2, p3}, LX/3zw;-><init>(Landroid/graphics/Bitmap;LX/2rM;LX/3k2;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final finalize()V
-    .locals 3
+.method public final Amh(IIIII)Z
+    .locals 1
 
     .line 0
-    invoke-virtual {p0}, LX/3zw;->isClosed()Z
+    iget v0, p0, LX/401;->A00:I
 
     .line 1
     .line 2
+    sub-int/2addr p2, v0
+
     .line 3
-    move-result v0
+    add-int/2addr p3, v0
 
     .line 4
-    if-nez v0, :cond_0
+    const/4 v0, 0x0
 
     .line 5
-    .line 6
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    if-gt p2, p1, :cond_0
 
+    .line 6
     .line 7
+    if-gt p1, p3, :cond_0
+
     .line 8
     .line 9
-    move-result-object v2
+    const/4 v0, 0x1
 
     .line 10
-    const/4 v1, 0x0
+    :cond_0
+    return v0
+.end method
+
+.method public final Amj(IIIII)Z
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/401;->A00:I
+
+    .line 1
+    .line 2
+    sub-int/2addr p2, v0
+
+    .line 3
+    add-int/2addr p3, v0
+
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    if-gt p2, p1, :cond_0
+
+    .line 6
+    .line 7
+    if-gt p1, p3, :cond_0
+
+    .line 8
+    .line 9
+    const/4 v0, 0x1
+
+    .line 10
+    :cond_0
+    xor-int/lit8 v0, v0, 0x1
 
     .line 11
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
-
     .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    aput-object v0, v2, v1
-
-    .line 16
-    .line 17
-    const/4 v1, 0x1
-
-    .line 18
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    .line 19
-    .line 20
-    .line 21
-    move-result v0
-
-    .line 22
-    invoke-static {v2, v0, v1}, LX/001;->A1A([Ljava/lang/Object;II)V
-
-    .line 23
-    .line 24
-    .line 25
-    const-string v1, "DefaultCloseableStaticBitmap"
-
-    .line 26
-    .line 27
-    const-string/jumbo v0, "finalize: %s %x still open."
-
-    .line 28
-    .line 29
-    .line 30
-    invoke-static {v1, v0, v2}, LX/0I5;->A0B(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 31
-    .line 32
-    .line 33
-    :try_start_0
-    invoke-virtual {p0}, LX/3zw;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 34
-    .line 35
-    .line 36
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 37
-    .line 38
-    .line 39
-    return-void
-
-    .line 40
-    :catchall_0
-    move-exception v0
-
-    .line 41
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 42
-    .line 43
-    .line 44
-    throw v0
-
-    .line 45
-    :cond_0
-    return-void
+    return v0
 .end method

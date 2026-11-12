@@ -1,19 +1,40 @@
-.class public final synthetic LX/5g8;
+.class public interface abstract LX/5G8;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/5fN;
+# static fields
+.field public static final A00:LX/5G8;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5fN;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    new-instance v0, LX/5G9;
 
-    iput-object p1, p0, LX/5g8;->A00:LX/5fN;
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/5G9;-><init>()V
 
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/5G8;->A00:LX/5G8;
+
+    .line 6
+    .line 7
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract A8U()V
+.end method
+
+.method public abstract Aj7(LX/5KW;)V
+.end method
+
+.method public abstract Aoa(II)LX/5Fj;
 .end method

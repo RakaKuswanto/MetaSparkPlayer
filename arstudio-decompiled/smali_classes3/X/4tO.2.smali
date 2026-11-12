@@ -1,35 +1,23 @@
-.class public final LX/4tO;
+.class public abstract LX/4tO;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:F
+.field public A00:LX/4tP;
 
-.field public A01:J
+.field public final A01:Landroid/content/Context;
 
-.field public A02:J
+.field public final A02:Landroid/content/IntentFilter;
 
-.field public A03:J
+.field public final A03:LX/6WC;
 
-.field public A04:J
-
-.field public A05:J
-
-.field public A06:J
-
-.field public A07:J
-
-.field public A08:Z
-
-.field public final A09:Ljava/util/Set;
-
-.field public final A0A:Ljava/util/Set;
+.field public final A04:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Landroid/content/IntentFilter;LX/6WC;)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,243 +25,246 @@
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 4
-    iput-boolean v0, p0, LX/4tO;->A08:Z
-
     .line 5
     .line 6
-    const v0, 0x4b7e502b    # 1.6666667E7f
+    move-result-object v0
 
     .line 7
+    iput-object v0, p0, LX/4tO;->A04:Ljava/util/Set;
+
     .line 8
     .line 9
-    iput v0, p0, LX/4tO;->A00:F
+    const/4 v0, 0x0
 
     .line 10
+    iput-object v0, p0, LX/4tO;->A00:LX/4tP;
+
     .line 11
-    const-wide/16 v0, 0x0
-
     .line 12
+    iput-object p3, p0, LX/4tO;->A03:LX/6WC;
+
     .line 13
-    iput-wide v0, p0, LX/4tO;->A03:J
-
     .line 14
+    iput-object p2, p0, LX/4tO;->A02:Landroid/content/IntentFilter;
+
     .line 15
-    iput-wide v0, p0, LX/4tO;->A04:J
-
     .line 16
-    .line 17
-    iput-wide v0, p0, LX/4tO;->A07:J
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
+    .line 17
     .line 18
     .line 19
-    iput-wide v0, p0, LX/4tO;->A02:J
+    move-result-object v0
 
     .line 20
-    .line 21
-    iput-wide v0, p0, LX/4tO;->A01:J
+    if-eqz v0, :cond_0
 
+    .line 21
     .line 22
+    move-object p1, v0
+
     .line 23
-    iput-wide v0, p0, LX/4tO;->A06:J
+    :cond_0
+    iput-object p1, p0, LX/4tO;->A01:Landroid/content/Context;
 
     .line 24
     .line 25
-    iput-wide v0, p0, LX/4tO;->A05:J
-
-    .line 26
-    .line 27
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    iput-object v0, p0, LX/4tO;->A09:Ljava/util/Set;
-
-    .line 32
-    .line 33
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v0
-
-    .line 37
-    iput-object v0, p0, LX/4tO;->A0A:Ljava/util/Set;
-
-    .line 38
-    .line 39
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()LX/3k9;
-    .locals 19
+.method public final declared-synchronized A00(LX/4tR;)V
+    .locals 7
 
     .line 0
-    move-object/from16 v3, p0
+    monitor-enter p0
 
     .line 1
+    :try_start_0
+    iget-object v2, p0, LX/4tO;->A03:LX/6WC;
+
     .line 2
-    iget-boolean v0, v3, LX/4tO;->A08:Z
-
     .line 3
+    const-string v1, "registerListener"
+
     .line 4
-    if-eqz v0, :cond_1
-
     .line 5
-    .line 6
-    iget-wide v4, v3, LX/4tO;->A06:J
+    invoke-static {}, LX/0X7;->A0v()[Ljava/lang/Object;
 
+    .line 6
     .line 7
     .line 8
-    const-wide/16 v10, 0x0
+    move-result-object v0
 
     .line 9
-    .line 10
-    cmp-long v0, v4, v10
+    invoke-virtual {v2, v1, v0}, LX/6WC;->A01(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     .line 11
     .line 12
-    if-eqz v0, :cond_1
+    const-string v0, "Registered Play Core listener should not be null."
 
     .line 13
     .line 14
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    if-eqz p1, :cond_3
 
     .line 15
     .line 16
-    .line 17
-    move-result-wide v8
+    iget-object v6, p0, LX/4tO;->A04:Ljava/util/Set;
 
+    .line 17
     .line 18
-    const-wide/32 v6, 0xf4240
+    invoke-interface {v6, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 19
     .line 20
     .line 21
-    mul-long/2addr v8, v6
+    const/4 v5, 0x0
 
     .line 22
-    sub-long/2addr v8, v4
+    invoke-interface {v6}, Ljava/util/Set;->isEmpty()Z
 
     .line 23
-    sub-long/2addr v8, v10
-
     .line 24
-    cmp-long v0, v8, v10
-
     .line 25
+    move-result v0
+
     .line 26
-    if-gtz v0, :cond_0
+    if-nez v0, :cond_0
 
     .line 27
     .line 28
-    const/high16 v8, 0x42700000    # 60.0f
+    iget-object v0, p0, LX/4tO;->A00:LX/4tP;
 
     .line 29
     .line 30
-    :goto_0
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    if-nez v0, :cond_0
 
     .line 31
     .line 32
-    .line 33
-    move-result-wide v1
+    new-instance v4, LX/4tP;
 
+    .line 33
     .line 34
-    mul-long/2addr v1, v6
+    invoke-direct {v4, p0}, LX/4tP;-><init>(LX/4tO;)V
 
     .line 35
-    sub-long/2addr v1, v4
-
     .line 36
-    sub-long/2addr v1, v10
-
     .line 37
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iput-object v4, p0, LX/4tO;->A00:LX/4tP;
 
     .line 38
     .line 39
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 40
     .line 41
-    invoke-virtual {v4, v1, v2, v0}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    const/16 v0, 0x21
 
     .line 42
     .line 43
-    .line 44
-    move-result-wide v9
+    iget-object v2, p0, LX/4tO;->A01:Landroid/content/Context;
 
+    .line 44
     .line 45
-    iget-wide v11, v3, LX/4tO;->A04:J
+    iget-object v1, p0, LX/4tO;->A02:Landroid/content/IntentFilter;
 
     .line 46
     .line 47
-    iget-wide v13, v3, LX/4tO;->A07:J
+    if-lt v3, v0, :cond_1
 
     .line 48
     .line 49
-    iget-wide v15, v3, LX/4tO;->A02:J
+    const/4 v0, 0x2
 
     .line 50
-    .line 51
-    iget-wide v0, v3, LX/4tO;->A01:J
+    invoke-virtual {v2, v4, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
 
+    .line 51
     .line 52
     .line 53
-    new-instance v7, LX/3k9;
+    :cond_0
+    :goto_0
+    invoke-interface {v6}, Ljava/util/Set;->isEmpty()Z
 
     .line 54
     .line 55
-    move-wide/from16 v17, v0
-
     .line 56
+    move-result v0
+
     .line 57
-    invoke-direct/range {v7 .. v18}, LX/3k9;-><init>(FJJJJJ)V
+    if-eqz v0, :cond_2
 
     .line 58
     .line 59
-    .line 60
-    return-object v7
+    iget-object v1, p0, LX/4tO;->A00:LX/4tP;
 
+    .line 60
     .line 61
-    :cond_0
-    long-to-float v2, v8
+    if-eqz v1, :cond_2
 
     .line 62
-    const v0, 0x4e6e6b28    # 1.0E9f
-
     .line 63
+    iget-object v0, p0, LX/4tO;->A01:Landroid/content/Context;
+
     .line 64
     .line 65
-    div-float/2addr v2, v0
+    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 66
-    iget-wide v0, v3, LX/4tO;->A03:J
-
     .line 67
     .line 68
-    long-to-float v8, v0
+    iput-object v5, p0, LX/4tO;->A00:LX/4tP;
 
     .line 69
-    div-float/2addr v8, v2
-
     .line 70
-    goto :goto_0
+    goto :goto_1
 
     .line 71
     :cond_1
-    const/4 v7, 0x0
+    invoke-virtual {v2, v4, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 72
-    return-object v7
+    .line 73
+    .line 74
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 75
+    :cond_2
+    :goto_1
+    monitor-exit p0
+
+    .line 76
+    return-void
+
+    .line 77
+    :cond_3
+    :try_start_1
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v0
+
+    .line 81
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 82
+    :catchall_0
+    move-exception v0
+
+    .line 83
+    monitor-exit p0
+
+    .line 84
+    throw v0
 .end method

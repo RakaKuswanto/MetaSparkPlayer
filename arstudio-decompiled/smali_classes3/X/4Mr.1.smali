@@ -1,57 +1,127 @@
-.class public final LX/4Mr;
-.super Ljava/lang/Object;
+.class public abstract LX/4Mr;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 .source ""
 
 
-# static fields
-.field public static final A01:LX/4Mr;
-
-
 # instance fields
-.field public final A00:Ljava/util/List;
+.field public A00:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    .line 805306368
+    const/4 v0, -0x2
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
+    .line 805306369
+    invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 4
-    new-instance v0, LX/4Mr;
+    .line 805306370
+    .line 805306371
+    .line 805306372
+    const v0, 0x800013
 
-    .line 5
-    .line 6
-    invoke-direct {v0, v1}, LX/4Mr;-><init>(Ljava/util/List;)V
+    .line 805306373
+    .line 805306374
+    .line 805306375
+    iput v0, p0, LX/4Mr;->A00:I
 
-    .line 7
-    .line 8
-    .line 9
-    sput-object v0, LX/4Mr;->A01:LX/4Mr;
-
-    .line 10
-    .line 11
+    .line 805306376
+    .line 805306377
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(LX/4Mr;)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const/4 v0, 0x0
+
+    .line 268435460
+    iput v0, p0, LX/4Mr;->A00:I
+
+    .line 268435461
+    .line 268435462
+    iget v0, p1, LX/4Mr;->A00:I
+
+    .line 268435463
+    .line 268435464
+    iput v0, p0, LX/4Mr;->A00:I
+
+    .line 268435465
+    .line 268435466
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4Mr;->A00:Ljava/util/List;
+    const/4 v2, 0x0
 
     .line 4
+    iput v2, p0, LX/4Mr;->A00:I
+
     .line 5
+    .line 6
+    sget-object v0, LX/4M2;->A01:[I
+
+    .line 7
+    .line 8
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    invoke-virtual {v1, v2, v2}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    iput v0, p0, LX/4Mr;->A00:I
+
+    .line 17
+    .line 18
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 1
+
+    .line 536870912
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    const/4 v0, 0x0
+
+    .line 536870916
+    iput v0, p0, LX/4Mr;->A00:I
+
+    .line 536870917
+    .line 536870918
     return-void
 .end method

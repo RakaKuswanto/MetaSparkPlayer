@@ -1,258 +1,37 @@
-.class public final LX/6KT;
-.super Lcom/facebook/quicklog/MarkerEditor;
+.class public final LX/6Kt;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/quicklog/PointEditor;
 
+# instance fields
+.field public final A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
 
-# static fields
-.field public static final A00:LX/6KT;
+.field public final A01:LX/6J5;
+
+.field public final A02:LX/6Kt;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/fasterxml/jackson/databind/JsonSerializer;LX/6J5;LX/6Kt;)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/6KT;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/6KT;-><init>()V
-
     .line 3
+    iput-object p3, p0, LX/6Kt;->A02:LX/6Kt;
+
     .line 4
     .line 5
-    sput-object v0, LX/6KT;->A00:LX/6KT;
+    iput-object p2, p0, LX/6Kt;->A01:LX/6J5;
 
     .line 6
     .line 7
+    iput-object p1, p0, LX/6Kt;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
+
+    .line 8
+    .line 9
     return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Lcom/facebook/quicklog/MarkerEditor;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final addPointData(Ljava/lang/String;D)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;F)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;I)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;J)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;Z)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;[D)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;[F)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;[I)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;[J)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;[Ljava/lang/String;)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final addPointData(Ljava/lang/String;[Z)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;D)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;I)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;J)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;Z)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[D)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[I)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[J)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[Ljava/lang/String;)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[Z)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final isSampled()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final markerEditingCompleted()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final point(Ljava/lang/String;)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final point(Ljava/lang/String;J)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final point(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final point(Ljava/lang/String;Ljava/lang/String;J)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final pointCustomTimestamp(J)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final pointEditingCompleted()Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final pointEditor(Ljava/lang/String;)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final pointShouldIncludeMetadata(Z)Lcom/facebook/quicklog/PointEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final pointWithMetadata(Ljava/lang/String;Ljava/lang/String;J)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final setSurviveUserSwitch(Z)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final withLevel(I)Lcom/facebook/quicklog/MarkerEditor;
-    .locals 0
-
-    return-object p0
 .end method

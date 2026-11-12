@@ -1,49 +1,47 @@
-.class public interface abstract LX/4qd;
-.super Ljava/lang/Object;
+.class public final LX/4qd;
+.super LX/6b2;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/4qd;
+# instance fields
+.field public final A00:Ljava/lang/ThreadLocal;
 
-.field public static final A01:LX/4qd;
+.field public final A01:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    new-instance v0, LX/4qp;
+    invoke-direct {p0}, LX/6b2;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/4qp;-><init>()V
-
     .line 3
+    invoke-static {}, LX/435;->A0B()Ljava/lang/ThreadLocal;
+
     .line 4
     .line 5
-    sput-object v0, LX/4qd;->A01:LX/4qd;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    new-instance v0, LX/4qo;
+    iput-object v0, p0, LX/4qd;->A00:Ljava/lang/ThreadLocal;
 
     .line 8
     .line 9
-    invoke-direct {v0}, LX/4qo;-><init>()V
+    invoke-static {}, LX/435;->A0B()Ljava/lang/ThreadLocal;
 
     .line 10
     .line 11
     .line 12
-    sput-object v0, LX/4qd;->A00:LX/4qd;
+    move-result-object v0
 
     .line 13
+    iput-object v0, p0, LX/4qd;->A01:Ljava/lang/ThreadLocal;
+
     .line 14
+    .line 15
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract Apy(LX/4rl;IIII)V
 .end method

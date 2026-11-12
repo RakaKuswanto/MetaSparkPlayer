@@ -1,45 +1,25 @@
-.class public final LX/5Fq;
+.class public final LX/5fQ;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/6bd;
+
 
 # static fields
-.field public static final A00:LX/5Fq;
-
-.field public static final A01:Ljava/util/WeakHashMap;
+.field public static final synthetic A00:LX/5fQ;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 0
-    new-instance v0, LX/5Fq;
+    new-instance v0, LX/5fQ;
 
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/5Fq;-><init>()V
+    invoke-direct {v0}, LX/5fQ;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/5Fq;->A00:LX/5Fq;
+    sput-object v0, LX/5fQ;->A00:LX/5fQ;
 
-    .line 6
-    .line 7
-    new-instance v0, Ljava/util/WeakHashMap;
-
-    .line 8
-    .line 9
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
-
-    .line 10
-    .line 11
-    .line 12
-    sput-object v0, LX/5Fq;->A01:Ljava/util/WeakHashMap;
-
-    .line 13
-    .line 14
     return-void
 .end method
 

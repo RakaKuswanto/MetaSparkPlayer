@@ -1,168 +1,131 @@
-.class public final LX/0SG;
+.class public final LX/0Sg;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbnsConnectionManager$CallbackHandler$1"
+.field public static final A02:Ljava/util/List;
 
 
 # instance fields
-.field public final synthetic A00:LX/0LU;
+.field public final A00:Landroid/net/Uri;
+
+.field public final A01:Lcom/facebook/acra/util/HttpConnectionProvider;
 
 
 # direct methods
-.method public constructor <init>(LX/0LU;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/0SG;->A00:LX/0LU;
+    const/4 v0, 0x6
 
     .line 1
+    new-array v2, v0, [Ljava/lang/String;
+
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    const/4 v1, 0x0
+
     .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 5
-
-    .line 0
-    iget-object v1, p0, LX/0SG;->A00:LX/0LU;
-
-    .line 1
-    .line 2
-    iget-object v4, v1, LX/0LU;->A02:LX/0Rq;
-
-    .line 3
-    .line 4
-    iget-object v0, v4, LX/0Rq;->A0R:LX/0LG;
+    const-string v0, "log_type"
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/0LG;->A00:Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;
+    aput-object v0, v2, v1
 
     .line 7
     .line 8
-    invoke-static {v0}, Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;->A0A(Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;)V
+    const/4 v1, 0x1
 
     .line 9
+    const-string v0, "build_id"
+
     .line 10
     .line 11
-    iget-boolean v0, v1, LX/0LU;->A01:Z
+    aput-object v0, v2, v1
 
     .line 12
     .line 13
-    if-eqz v0, :cond_1
+    const/4 v1, 0x2
 
     .line 14
-    .line 15
-    invoke-static {v1}, LX/0LU;->A00(LX/0LU;)V
+    const-string v0, "app_id"
 
+    .line 15
     .line 16
+    aput-object v0, v2, v1
+
     .line 17
     .line 18
-    iget-object v0, v4, LX/0Rq;->A10:LX/0NA;
+    const/4 v1, 0x3
 
     .line 19
+    const-string v0, "user_id"
+
     .line 20
-    iget-object v3, v1, LX/0LU;->A00:LX/0NA;
-
     .line 21
-    .line 22
-    if-ne v0, v3, :cond_1
+    aput-object v0, v2, v1
 
+    .line 22
     .line 23
+    const/4 v1, 0x4
+
     .line 24
-    invoke-virtual {v4}, LX/0Rq;->A0E()V
+    const-string v0, "device_id"
 
     .line 25
     .line 26
+    aput-object v0, v2, v1
+
     .line 27
-    iget-object v0, v4, LX/0Rq;->A0R:LX/0LG;
-
     .line 28
+    sget-object v0, LX/0KB;->A09:LX/06A;
+
     .line 29
-    iget-object v2, v0, LX/0LG;->A00:Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;
-
     .line 30
+    iget-object v1, v0, LX/0K4;->A00:Ljava/lang/String;
+
     .line 31
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
     .line 32
-    .line 33
-    .line 34
-    move-result-wide v0
+    const/4 v0, 0x5
 
+    .line 33
+    aput-object v1, v2, v0
+
+    .line 34
     .line 35
-    iput-wide v0, v2, Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;->A00:J
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 36
     .line 37
-    invoke-static {v2}, Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;->A0A(Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;)V
-
     .line 38
+    move-result-object v0
+
     .line 39
+    sput-object v0, LX/0Sg;->A02:Ljava/util/List;
+
     .line 40
-    monitor-enter v3
-
     .line 41
-    :try_start_0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    return-void
+.end method
 
-    .line 42
-    .line 43
-    .line 44
-    move-result-object v1
+.method public constructor <init>(Landroid/net/Uri;Lcom/facebook/acra/util/HttpConnectionProvider;)V
+    .locals 0
 
-    .line 45
-    iget-object v0, v3, LX/0NA;->A01:Ljava/util/List;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
-    .line 47
-    if-eqz v0, :cond_0
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/0Sg;->A00:Landroid/net/Uri;
 
-    .line 48
-    .line 49
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/0Sg;->A01:Lcom/facebook/acra/util/HttpConnectionProvider;
 
-    .line 50
-    .line 51
-    .line 52
-    goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 53
-    :catchall_0
-    move-exception v0
-
-    .line 54
-    monitor-exit v3
-
-    .line 55
-    throw v0
-
-    .line 56
-    :cond_0
-    :goto_0
-    monitor-exit v3
-
-    .line 57
-    invoke-virtual {v4, v1}, LX/0Rq;->A0P(Ljava/util/List;)V
-
-    .line 58
-    .line 59
-    .line 60
-    :cond_1
+    .line 6
+    .line 7
     return-void
 .end method

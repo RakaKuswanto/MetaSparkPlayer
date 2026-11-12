@@ -1,109 +1,31 @@
 .class public abstract LX/3UQ;
-.super LX/3Ub;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final creationTime:J
+.field public final A00:Ljava/lang/String;
 
-.field public final eventId:J
-
-.field public final isLocallyCached:Z
-
-.field public final loapStreamId:Ljava/lang/String;
-
-.field public final loapStreamType:I
-
-.field public final metadata:Ljava/util/Map;
-
-.field public final parentSource:Ljava/lang/String;
-
-.field public final severity:Ljava/lang/String;
-
-.field public final source:Ljava/lang/String;
-
-.field public final traceId:J
-
-.field public final videoId:Ljava/lang/String;
+.field public final A01:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/3Uq;LX/3TB;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJZ)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p2}, LX/3Ub;-><init>(LX/3TB;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iget-object v0, p1, LX/3Uq;->A05:Ljava/lang/String;
+    iput-object p1, p0, LX/3UQ;->A01:Ljava/lang/String;
 
     .line 4
     .line 5
-    iput-object v0, p0, LX/3UQ;->videoId:Ljava/lang/String;
+    iput-object p2, p0, LX/3UQ;->A00:Ljava/lang/String;
 
     .line 6
     .line 7
-    iget-object v0, p1, LX/3Uq;->A07:[LX/3WF;
-
-    .line 8
-    .line 9
-    aget-object v0, v0, p6
-
-    .line 10
-    .line 11
-    iget-wide v0, v0, LX/3WF;->A01:J
-
-    .line 12
-    .line 13
-    iput-wide v0, p0, LX/3UQ;->traceId:J
-
-    .line 14
-    .line 15
-    iput-object p3, p0, LX/3UQ;->source:Ljava/lang/String;
-
-    .line 16
-    .line 17
-    iput-object p4, p0, LX/3UQ;->parentSource:Ljava/lang/String;
-
-    .line 18
-    .line 19
-    iget-object v0, p1, LX/3Uq;->A03:Ljava/lang/String;
-
-    .line 20
-    .line 21
-    iput-object v0, p0, LX/3UQ;->severity:Ljava/lang/String;
-
-    .line 22
-    .line 23
-    iput-wide p8, p0, LX/3UQ;->eventId:J
-
-    .line 24
-    .line 25
-    iput-object p5, p0, LX/3UQ;->loapStreamId:Ljava/lang/String;
-
-    .line 26
-    .line 27
-    iput p7, p0, LX/3UQ;->loapStreamType:I
-
-    .line 28
-    .line 29
-    iput-wide p10, p0, LX/3UQ;->creationTime:J
-
-    .line 30
-    .line 31
-    iget-object v0, p1, LX/3Uq;->A06:Ljava/util/Map;
-
-    .line 32
-    .line 33
-    iput-object v0, p0, LX/3UQ;->metadata:Ljava/util/Map;
-
-    .line 34
-    .line 35
-    iput-boolean p12, p0, LX/3UQ;->isLocallyCached:Z
-
-    .line 36
-    .line 37
     return-void
 .end method

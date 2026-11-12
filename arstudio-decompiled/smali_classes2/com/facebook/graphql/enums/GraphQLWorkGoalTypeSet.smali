@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLWorkGoalTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLWorkGoalTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x98
+    const/16 v0, 0xa0
 
     .line 1
     .line 2
@@ -1276,7 +1276,7 @@
 
     .line 627
     .line 628
-    const-string v0, "PICK_ONBOARDING_EXPERIENCE"
+    const-string v0, "PARTNER_HUB_SETUP_CONNECT_IDP"
 
     .line 629
     .line 630
@@ -1288,7 +1288,7 @@
 
     .line 633
     .line 634
-    const-string v0, "PRELAUNCH_CREATE_OFFICIAL_GROUP"
+    const-string v0, "PARTNER_HUB_SETUP_ENABLE_SSO"
 
     .line 635
     .line 636
@@ -1300,7 +1300,7 @@
 
     .line 639
     .line 640
-    const-string v0, "PRELAUNCH_CREATE_PEOPLE_SET"
+    const-string v0, "PARTNER_HUB_SETUP_INTRO"
 
     .line 641
     .line 642
@@ -1312,7 +1312,7 @@
 
     .line 645
     .line 646
-    const-string v0, "PRELAUNCH_DIALOG_ALL_ACTIONS_COMPLETED"
+    const-string v0, "PARTNER_HUB_SETUP_VERIFY_DOMAIN"
 
     .line 647
     .line 648
@@ -1324,7 +1324,7 @@
 
     .line 651
     .line 652
-    const-string v0, "PRELAUNCH_DIALOG_CONTINUE"
+    const-string v0, "PICK_ONBOARDING_EXPERIENCE"
 
     .line 653
     .line 654
@@ -1336,7 +1336,7 @@
 
     .line 657
     .line 658
-    const-string v0, "PRELAUNCH_DIALOG_GET_STARTED"
+    const-string v0, "PRELAUNCH_CREATE_OFFICIAL_GROUP"
 
     .line 659
     .line 660
@@ -1348,7 +1348,7 @@
 
     .line 663
     .line 664
-    const-string v0, "PRELAUNCH_DIALOG_MAIN_ACTION_COMPLETED"
+    const-string v0, "PRELAUNCH_CREATE_PEOPLE_SET"
 
     .line 665
     .line 666
@@ -1360,7 +1360,7 @@
 
     .line 669
     .line 670
-    const-string v0, "PRELAUNCH_DOWNLOAD_COMMS_PLAN"
+    const-string v0, "PRELAUNCH_DIALOG_ALL_ACTIONS_COMPLETED"
 
     .line 671
     .line 672
@@ -1372,7 +1372,7 @@
 
     .line 675
     .line 676
-    const-string v0, "PRELAUNCH_INVITE_CHAMPIONS"
+    const-string v0, "PRELAUNCH_DIALOG_CONTINUE"
 
     .line 677
     .line 678
@@ -1384,7 +1384,7 @@
 
     .line 681
     .line 682
-    const-string v0, "PRELAUNCH_INVITE_EVERYONE"
+    const-string v0, "PRELAUNCH_DIALOG_GET_STARTED"
 
     .line 683
     .line 684
@@ -1396,7 +1396,7 @@
 
     .line 687
     .line 688
-    const-string v0, "PRELAUNCH_PIN_POST"
+    const-string v0, "PRELAUNCH_DIALOG_MAIN_ACTION_COMPLETED"
 
     .line 689
     .line 690
@@ -1408,7 +1408,7 @@
 
     .line 693
     .line 694
-    const-string v0, "PRELAUNCH_SETUP_PEOPLE_PROFILES"
+    const-string v0, "PRELAUNCH_DOWNLOAD_COMMS_PLAN"
 
     .line 695
     .line 696
@@ -1420,7 +1420,7 @@
 
     .line 699
     .line 700
-    const-string v0, "PRELAUNCH_UPLOAD_COMPANY_LOGO"
+    const-string v0, "PRELAUNCH_INVITE_CHAMPIONS"
 
     .line 701
     .line 702
@@ -1432,7 +1432,7 @@
 
     .line 705
     .line 706
-    const-string v0, "PRELAUNCH_VERIFY_EMAIL_DOMAIN"
+    const-string v0, "PRELAUNCH_INVITE_EVERYONE"
 
     .line 707
     .line 708
@@ -1444,7 +1444,7 @@
 
     .line 711
     .line 712
-    const-string v0, "PROFILE_COMPLETION_SET_JOB_TITLE"
+    const-string v0, "PRELAUNCH_PIN_POST"
 
     .line 713
     .line 714
@@ -1456,7 +1456,7 @@
 
     .line 717
     .line 718
-    const-string v0, "PROFILE_COMPLETION_SET_MANAGER"
+    const-string v0, "PRELAUNCH_SETUP_PEOPLE_PROFILES"
 
     .line 719
     .line 720
@@ -1468,7 +1468,7 @@
 
     .line 723
     .line 724
-    const-string v0, "PROFILE_COMPLETION_SET_PROFILE_PICTURE"
+    const-string v0, "PRELAUNCH_UPLOAD_COMPANY_LOGO"
 
     .line 725
     .line 726
@@ -1480,7 +1480,7 @@
 
     .line 729
     .line 730
-    const-string v0, "PROFILE_COMPLETION_SET_SKILLS"
+    const-string v0, "PRELAUNCH_VERIFY_EMAIL_DOMAIN"
 
     .line 731
     .line 732
@@ -1492,7 +1492,7 @@
 
     .line 735
     .line 736
-    const-string v0, "PROFILE_PIC_EMAIL_MODULE"
+    const-string v0, "PROFILE_COMPLETION_SET_JOB_TITLE"
 
     .line 737
     .line 738
@@ -1504,7 +1504,7 @@
 
     .line 741
     .line 742
-    const-string v0, "SET_PROFILE_PICTURE"
+    const-string v0, "PROFILE_COMPLETION_SET_MANAGER"
 
     .line 743
     .line 744
@@ -1516,7 +1516,7 @@
 
     .line 747
     .line 748
-    const-string v0, "SMB_MIGRATION_TO_GEMINI"
+    const-string v0, "PROFILE_COMPLETION_SET_PROFILE_PICTURE"
 
     .line 749
     .line 750
@@ -1528,7 +1528,7 @@
 
     .line 753
     .line 754
-    const-string v0, "SUBDOMAIN_UPSELL"
+    const-string v0, "PROFILE_COMPLETION_SET_SKILLS"
 
     .line 755
     .line 756
@@ -1540,7 +1540,7 @@
 
     .line 759
     .line 760
-    const-string v0, "UPLOAD_FILE_EMAIL_MODULE"
+    const-string v0, "PROFILE_PIC_EMAIL_MODULE"
 
     .line 761
     .line 762
@@ -1552,7 +1552,7 @@
 
     .line 765
     .line 766
-    const-string v0, "UPLOAD_LOGO"
+    const-string v0, "SET_PROFILE_PICTURE"
 
     .line 767
     .line 768
@@ -1564,7 +1564,7 @@
 
     .line 771
     .line 772
-    const-string v0, "VC_CREATE_GROUP"
+    const-string v0, "SMB_MIGRATION_TO_GEMINI"
 
     .line 773
     .line 774
@@ -1576,7 +1576,7 @@
 
     .line 777
     .line 778
-    const-string v0, "VC_CREATE_PROFILE"
+    const-string v0, "SUBDOMAIN_UPSELL"
 
     .line 779
     .line 780
@@ -1588,7 +1588,7 @@
 
     .line 783
     .line 784
-    const-string v0, "VC_CREATE_ROOM"
+    const-string v0, "UPLOAD_FILE_EMAIL_MODULE"
 
     .line 785
     .line 786
@@ -1600,7 +1600,7 @@
 
     .line 789
     .line 790
-    const-string v0, "VC_EXPLORE_WORKPLACE"
+    const-string v0, "UPLOAD_LOGO"
 
     .line 791
     .line 792
@@ -1612,7 +1612,7 @@
 
     .line 795
     .line 796
-    const-string v0, "VC_LEARN_MORE"
+    const-string v0, "VC_CREATE_GROUP"
 
     .line 797
     .line 798
@@ -1624,7 +1624,7 @@
 
     .line 801
     .line 802
-    const-string v0, "VISIT_DASHBOARD"
+    const-string v0, "VC_CREATE_PROFILE"
 
     .line 803
     .line 804
@@ -1636,7 +1636,7 @@
 
     .line 807
     .line 808
-    const-string v0, "WELCOME_MESSAGE"
+    const-string v0, "VC_CREATE_ROOM"
 
     .line 809
     .line 810
@@ -1648,7 +1648,7 @@
 
     .line 813
     .line 814
-    const-string v0, "WELCOME_VIDEO"
+    const-string v0, "VC_EXPLORE_WORKPLACE"
 
     .line 815
     .line 816
@@ -1660,7 +1660,7 @@
 
     .line 819
     .line 820
-    const-string v0, "WELCOME_VIDEO_INLINE"
+    const-string v0, "VC_LEARN_MORE"
 
     .line 821
     .line 822
@@ -1672,7 +1672,7 @@
 
     .line 825
     .line 826
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_ADD_PEOPLE"
+    const-string v0, "VISIT_DASHBOARD"
 
     .line 827
     .line 828
@@ -1684,166 +1684,283 @@
 
     .line 831
     .line 832
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_CREATE_ACCOUNT"
+    const-string/jumbo v0, "WELCOME_MESSAGE"
 
     .line 833
     .line 834
+    .line 835
     aput-object v0, v2, v1
 
-    .line 835
     .line 836
+    .line 837
     const/16 v1, 0x8c
 
-    .line 837
     .line 838
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_ACCOUNT_SECURITY"
-
     .line 839
-    .line 840
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WELCOME_VIDEO"
 
+    .line 840
     .line 841
     .line 842
-    const/16 v1, 0x8d
+    aput-object v0, v2, v1
 
     .line 843
     .line 844
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_ADD_ACCOUNTS"
+    const/16 v1, 0x8d
 
     .line 845
     .line 846
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WELCOME_VIDEO_INLINE"
 
     .line 847
     .line 848
-    const/16 v1, 0x8e
-
     .line 849
-    .line 850
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_CONTACT_SALES"
-
-    .line 851
-    .line 852
     aput-object v0, v2, v1
 
-    .line 853
-    .line 854
-    const/16 v1, 0x8f
+    .line 850
+    .line 851
+    const/16 v1, 0x8e
 
+    .line 852
+    .line 853
+    const-string/jumbo v0, "WORK_ACCOUNTS_INSIGHTS_Q4B_MANAGE_APPS"
+
+    .line 854
     .line 855
     .line 856
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_CREATE_ACCOUNTS"
+    aput-object v0, v2, v1
 
     .line 857
     .line 858
-    aput-object v0, v2, v1
+    const/16 v1, 0x8f
 
     .line 859
     .line 860
-    const/16 v1, 0x90
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_ADD_PEOPLE"
 
     .line 861
     .line 862
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_DEVICE_MANAGER"
-
     .line 863
-    .line 864
     aput-object v0, v2, v1
 
+    .line 864
     .line 865
+    const/16 v1, 0x90
+
     .line 866
-    const/16 v1, 0x91
-
     .line 867
-    .line 868
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_INTRO"
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_BM_CONNECT_BUSINESS_TOOLS"
 
+    .line 868
     .line 869
     .line 870
     aput-object v0, v2, v1
 
     .line 871
     .line 872
-    const/16 v1, 0x92
+    const/16 v1, 0x91
 
     .line 873
     .line 874
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_MANAGE_DEVICES"
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_CREATE_ACCOUNT"
 
     .line 875
     .line 876
-    aput-object v0, v2, v1
-
     .line 877
-    .line 878
-    const/16 v1, 0x93
-
-    .line 879
-    .line 880
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_ORDER_DEVICES"
-
-    .line 881
-    .line 882
     aput-object v0, v2, v1
 
+    .line 878
+    .line 879
+    const/16 v1, 0x92
+
+    .line 880
+    .line 881
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_ACCOUNT_SECURITY"
+
+    .line 882
     .line 883
     .line 884
-    const/16 v1, 0x94
+    aput-object v0, v2, v1
 
     .line 885
     .line 886
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_SETUP_BUSINESS_CONSOLE"
+    const/16 v1, 0x93
 
     .line 887
     .line 888
-    aput-object v0, v2, v1
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_ADD_ACCOUNTS"
 
     .line 889
     .line 890
-    const/16 v1, 0x95
-
     .line 891
-    .line 892
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_SETUP_PEM"
-
-    .line 893
-    .line 894
     aput-object v0, v2, v1
 
-    .line 895
-    .line 896
-    const/16 v1, 0x96
+    .line 892
+    .line 893
+    const/16 v1, 0x94
 
+    .line 894
+    .line 895
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_CONTACT_SALES"
+
+    .line 896
     .line 897
     .line 898
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_SETUP_QUEST_FOR_BUSINESS"
+    aput-object v0, v2, v1
 
     .line 899
     .line 900
-    aput-object v0, v2, v1
+    const/16 v1, 0x95
 
     .line 901
     .line 902
-    const/16 v1, 0x97
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_CREATE_ACCOUNTS"
 
     .line 903
     .line 904
-    const-string v0, "WORK_ACCOUNTS_ONBOARDING_VERIFY_DOMAIN"
-
     .line 905
-    .line 906
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
+    .line 906
     .line 907
+    const/16 v1, 0x96
+
     .line 908
     .line 909
-    move-result-object v0
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_DEVICE_MANAGER"
 
     .line 910
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLWorkGoalTypeSet;->A00:Ljava/util/Set;
-
     .line 911
     .line 912
+    aput-object v0, v2, v1
+
+    .line 913
+    .line 914
+    const/16 v1, 0x97
+
+    .line 915
+    .line 916
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_ENROLL_DEVICE"
+
+    .line 917
+    .line 918
+    .line 919
+    aput-object v0, v2, v1
+
+    .line 920
+    .line 921
+    const/16 v1, 0x98
+
+    .line 922
+    .line 923
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_INTRO"
+
+    .line 924
+    .line 925
+    .line 926
+    aput-object v0, v2, v1
+
+    .line 927
+    .line 928
+    const/16 v1, 0x99
+
+    .line 929
+    .line 930
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_MANAGE_DEVICES"
+
+    .line 931
+    .line 932
+    .line 933
+    aput-object v0, v2, v1
+
+    .line 934
+    .line 935
+    const/16 v1, 0x9a
+
+    .line 936
+    .line 937
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_Q4B_ORDER_DEVICES"
+
+    .line 938
+    .line 939
+    .line 940
+    aput-object v0, v2, v1
+
+    .line 941
+    .line 942
+    const/16 v1, 0x9b
+
+    .line 943
+    .line 944
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_SETUP_BUSINESS_CONSOLE"
+
+    .line 945
+    .line 946
+    .line 947
+    aput-object v0, v2, v1
+
+    .line 948
+    .line 949
+    const/16 v1, 0x9c
+
+    .line 950
+    .line 951
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_SETUP_PEM"
+
+    .line 952
+    .line 953
+    .line 954
+    aput-object v0, v2, v1
+
+    .line 955
+    .line 956
+    const/16 v1, 0x9d
+
+    .line 957
+    .line 958
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_SETUP_QUEST_FOR_BUSINESS"
+
+    .line 959
+    .line 960
+    .line 961
+    aput-object v0, v2, v1
+
+    .line 962
+    .line 963
+    const/16 v1, 0x9e
+
+    .line 964
+    .line 965
+    const-string/jumbo v0, "WORK_ACCOUNTS_ONBOARDING_VERIFY_DOMAIN"
+
+    .line 966
+    .line 967
+    .line 968
+    aput-object v0, v2, v1
+
+    .line 969
+    .line 970
+    const/16 v1, 0x9f
+
+    .line 971
+    .line 972
+    const-string/jumbo v0, "WORK_ACCOUNTS_Q4B_CONTACT_SALES_BANNER"
+
+    .line 973
+    .line 974
+    .line 975
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 976
+    .line 977
+    .line 978
+    move-result-object v0
+
+    .line 979
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLWorkGoalTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 980
+    .line 981
     return-void
 .end method
 
@@ -1859,11 +1976,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLWorkGoalTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLWorkGoalTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

@@ -8,29 +8,30 @@
     .locals 1
 
     .line 0
-    const-string v0, "fb"
+    const-string/jumbo v0, "fb"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 3
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 4
     .line 5
+    .line 6
     const-string/jumbo v0, "tigonnativeservice"
 
-    .line 6
     .line 7
     .line 8
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 9
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 10
     .line 11
+    .line 12
     return-void
 .end method
 
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
@@ -42,11 +43,11 @@
     .line 2
     .line 3
     .line 4
-    sget v0, LX/2eq;->ADx:I
+    sget v0, LX/2I6;->AAa:I
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 7
     .line 8
@@ -58,11 +59,11 @@
 
     .line 11
     .line 12
-    sget v0, LX/2eq;->ADy:I
+    sget v0, LX/2I6;->AAb:I
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 15
     .line 16

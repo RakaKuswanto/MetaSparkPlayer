@@ -1,542 +1,464 @@
-.class public final LX/0Yq;
+.class public final LX/0YQ;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0Zu;
+
 
 # instance fields
-.field public A00:D
+.field public A00:Ljava/lang/Object;
 
-.field public A01:D
+.field public A01:Ljava/lang/String;
 
-.field public A02:I
-
-.field public A03:I
-
-.field public A04:I
-
-.field public A05:I
-
-.field public A06:J
-
-.field public A07:J
-
-.field public A08:J
-
-.field public A09:J
-
-.field public A0A:J
-
-.field public A0B:Ljava/lang/String;
-
-.field public A0C:Ljava/lang/String;
-
-.field public A0D:Z
-
-.field public A0E:Z
-
-.field public A0F:Z
-
-.field public A0G:Z
-
-.field public A0H:Z
-
-.field public A0I:Z
-
-.field public A0J:Z
-
-.field public A0K:Z
-
-.field public A0L:Z
-
-.field public A0M:Z
-
-.field public A0N:Z
-
-.field public A0O:Z
-
-.field public A0P:Z
-
-.field public A0Q:Z
-
-.field public A0R:Z
-
-.field public A0S:Z
+.field public final A02:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, LX/0YQ;->A02:I
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/0YQ;->A00:Ljava/lang/Object;
+
     .line 3
-    const/high16 v0, 0x6400000
-
     .line 4
+    iput-object p2, p0, LX/0YQ;->A01:Ljava/lang/String;
+
     .line 5
-    iput v0, p0, LX/0Yq;->A03:I
-
     .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 7
-    const/4 v4, 0x0
-
     .line 8
-    iput-boolean v4, p0, LX/0Yq;->A0S:Z
-
     .line 9
-    .line 10
-    const/high16 v0, 0x100000
-
-    .line 11
-    .line 12
-    iput v0, p0, LX/0Yq;->A05:I
-
-    .line 13
-    .line 14
-    const-wide v0, 0x3fd3333333333333L    # 0.3
-
-    .line 15
-    .line 16
-    .line 17
-    .line 18
-    .line 19
-    iput-wide v0, p0, LX/0Yq;->A01:D
-
-    .line 20
-    .line 21
-    iput-boolean v4, p0, LX/0Yq;->A0R:Z
-
-    .line 22
-    .line 23
-    iput-boolean v4, p0, LX/0Yq;->A0G:Z
-
-    .line 24
-    .line 25
-    iput v4, p0, LX/0Yq;->A04:I
-
-    .line 26
-    .line 27
-    const-wide v0, 0x3fb999999999999aL    # 0.1
-
-    .line 28
-    .line 29
-    .line 30
-    .line 31
-    .line 32
-    iput-wide v0, p0, LX/0Yq;->A00:D
-
-    .line 33
-    .line 34
-    iput-boolean v4, p0, LX/0Yq;->A0D:Z
-
-    .line 35
-    .line 36
-    iput-boolean v4, p0, LX/0Yq;->A0P:Z
-
-    .line 37
-    .line 38
-    iput-boolean v4, p0, LX/0Yq;->A0Q:Z
-
-    .line 39
-    .line 40
-    iput-boolean v4, p0, LX/0Yq;->A0E:Z
-
-    .line 41
-    .line 42
-    const-wide/16 v2, 0x0
-
-    .line 43
-    .line 44
-    iput-wide v2, p0, LX/0Yq;->A0A:J
-
-    .line 45
-    .line 46
-    const-wide/32 v0, 0xea60
-
-    .line 47
-    .line 48
-    .line 49
-    iput-wide v0, p0, LX/0Yq;->A09:J
-
-    .line 50
-    .line 51
-    const-wide/32 v0, 0x36ee80
-
-    .line 52
-    .line 53
-    .line 54
-    iput-wide v0, p0, LX/0Yq;->A08:J
-
-    .line 55
-    .line 56
-    iput-boolean v4, p0, LX/0Yq;->A0M:Z
-
-    .line 57
-    .line 58
-    iput-boolean v4, p0, LX/0Yq;->A0H:Z
-
-    .line 59
-    .line 60
-    iput v4, p0, LX/0Yq;->A02:I
-
-    .line 61
-    .line 62
-    iput-boolean v4, p0, LX/0Yq;->A0K:Z
-
-    .line 63
-    .line 64
-    iput-boolean v4, p0, LX/0Yq;->A0J:Z
-
-    .line 65
-    .line 66
-    iput-boolean v4, p0, LX/0Yq;->A0L:Z
-
-    .line 67
-    .line 68
-    iput-wide v2, p0, LX/0Yq;->A06:J
-
-    .line 69
-    .line 70
-    iput-boolean v4, p0, LX/0Yq;->A0F:Z
-
-    .line 71
-    .line 72
-    iput-boolean v4, p0, LX/0Yq;->A0N:Z
-
-    .line 73
-    .line 74
-    iput-boolean v4, p0, LX/0Yq;->A0I:Z
-
-    .line 75
-    .line 76
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()LX/489;
-    .locals 56
+.method public final AUZ(LX/0bI;)V
+    .locals 12
 
     .line 0
-    move-object/from16 v14, p0
+    iget v0, p0, LX/0YQ;->A02:I
 
     .line 1
     .line 2
-    iget-object v0, v14, LX/0Yq;->A0B:Ljava/lang/String;
+    if-eqz v0, :cond_5
 
     .line 3
     .line 4
-    move-object/from16 v55, v0
+    iget-object v2, p0, LX/0YQ;->A00:Ljava/lang/Object;
 
     .line 5
     .line 6
-    iget-object v0, v14, LX/0Yq;->A0C:Ljava/lang/String;
+    check-cast v2, LX/0bU;
 
     .line 7
     .line 8
-    move-object/from16 v54, v0
+    iget-object v0, v2, LX/0bU;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 9
     .line 10
-    iget v0, v14, LX/0Yq;->A03:I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     .line 11
     .line 12
-    move/from16 v53, v0
-
     .line 13
+    move-result v0
+
     .line 14
-    iget-boolean v0, v14, LX/0Yq;->A0S:Z
+    if-nez v0, :cond_0
 
     .line 15
     .line 16
-    move/from16 v37, v0
+    iget-object v0, p1, LX/0bI;->A00:LX/0bW;
 
     .line 17
     .line 18
-    iget v0, v14, LX/0Yq;->A05:I
+    if-eqz v0, :cond_1
 
     .line 19
     .line 20
-    move/from16 v32, v0
+    iget-object v0, v0, LX/0bW;->A02:LX/0ax;
 
     .line 21
     .line 22
-    iget-wide v12, v14, LX/0Yq;->A01:D
+    invoke-static {v0, v2}, LX/0bU;->A02(LX/0ax;LX/0bU;)V
 
     .line 23
     .line 24
-    iget-boolean v0, v14, LX/0Yq;->A0R:Z
-
     .line 25
+    :cond_0
+    return-void
+
     .line 26
-    move/from16 v31, v0
+    :cond_1
+    :try_start_0
+    iget-object v1, p1, LX/0bI;->A04:Lorg/json/JSONObject;
 
     .line 27
     .line 28
-    iget-boolean v0, v14, LX/0Yq;->A0G:Z
+    const-string/jumbo v0, "id"
 
     .line 29
     .line 30
-    move/from16 v30, v0
-
     .line 31
-    .line 32
-    iget v0, v14, LX/0Yq;->A04:I
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 32
     .line 33
     .line 34
-    move/from16 v29, v0
+    move-result-object v7
 
     .line 35
-    .line 36
-    iget-wide v10, v14, LX/0Yq;->A00:D
+    const-string/jumbo v0, "permissions"
 
+    .line 36
     .line 37
     .line 38
-    iget-boolean v0, v14, LX/0Yq;->A0D:Z
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     .line 39
     .line 40
-    move/from16 v28, v0
-
     .line 41
+    move-result-object v1
+
     .line 42
-    iget-boolean v0, v14, LX/0Yq;->A0P:Z
+    const-string/jumbo v0, "data"
 
     .line 43
     .line 44
-    move/from16 v27, v0
-
     .line 45
-    .line 46
-    iget-boolean v0, v14, LX/0Yq;->A0Q:Z
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
+    .line 46
     .line 47
     .line 48
-    move/from16 v25, v0
+    move-result-object v5
 
     .line 49
-    .line 50
-    iget-boolean v0, v14, LX/0Yq;->A0E:Z
+    invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
 
+    .line 50
     .line 51
     .line 52
-    move/from16 v24, v0
+    move-result v0
 
     .line 53
-    .line 54
-    iget-wide v8, v14, LX/0Yq;->A0A:J
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
+    .line 54
     .line 55
     .line 56
-    iget-wide v6, v14, LX/0Yq;->A09:J
+    move-result-object v8
 
     .line 57
-    .line 58
-    iget-wide v4, v14, LX/0Yq;->A08:J
+    invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
 
+    .line 58
     .line 59
     .line 60
-    iget-boolean v0, v14, LX/0Yq;->A0M:Z
+    move-result v0
 
     .line 61
-    .line 62
-    move/from16 v23, v0
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
+    .line 62
     .line 63
     .line 64
-    iget-boolean v0, v14, LX/0Yq;->A0H:Z
+    move-result-object v9
 
     .line 65
+    const/4 v4, 0x0
+
     .line 66
-    move/from16 v22, v0
+    :goto_0
+    invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
 
     .line 67
     .line 68
-    iget v0, v14, LX/0Yq;->A02:I
-
     .line 69
+    move-result v0
+
     .line 70
-    move/from16 v26, v0
+    if-ge v4, v0, :cond_4
 
     .line 71
     .line 72
-    iget-boolean v0, v14, LX/0Yq;->A0K:Z
+    invoke-virtual {v5, v4}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     .line 73
     .line 74
-    move/from16 v21, v0
-
     .line 75
+    move-result-object v1
+
     .line 76
-    iget-boolean v0, v14, LX/0Yq;->A0O:Z
+    const-string/jumbo v0, "permission"
 
     .line 77
     .line 78
-    move/from16 v20, v0
-
     .line 79
-    .line 80
-    iget-boolean v0, v14, LX/0Yq;->A0J:Z
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 80
     .line 81
     .line 82
-    move/from16 v19, v0
+    move-result-object v3
 
     .line 83
+    if-eqz v3, :cond_3
+
     .line 84
-    iget-boolean v0, v14, LX/0Yq;->A0L:Z
-
     .line 85
-    .line 86
-    move/from16 v18, v0
+    const-string/jumbo v0, "installed"
 
+    .line 86
     .line 87
     .line 88
-    iget-wide v2, v14, LX/0Yq;->A07:J
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 89
     .line 90
-    iget-wide v0, v14, LX/0Yq;->A06:J
-
     .line 91
+    move-result v0
+
     .line 92
-    iget-boolean v15, v14, LX/0Yq;->A0F:Z
+    if-nez v0, :cond_3
 
     .line 93
     .line 94
-    move/from16 v17, v15
+    const-string/jumbo v0, "status"
 
     .line 95
     .line 96
-    iget-boolean v15, v14, LX/0Yq;->A0N:Z
-
     .line 97
-    .line 98
-    iget-boolean v14, v14, LX/0Yq;->A0I:Z
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 98
     .line 99
     .line 100
-    new-instance v16, LX/489;
+    move-result-object v1
 
     .line 101
+    if-eqz v1, :cond_3
+
     .line 102
-    move-wide/from16 v33, v2
-
     .line 103
-    .line 104
-    move-wide/from16 v35, v0
+    const-string/jumbo v0, "granted"
 
+    .line 104
     .line 105
     .line 106
-    move/from16 v38, v31
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 107
     .line 108
-    move/from16 v39, v30
-
     .line 109
+    move-result v0
+
     .line 110
-    move/from16 v40, v28
+    if-eqz v0, :cond_2
 
     .line 111
     .line 112
-    move/from16 v41, v27
+    invoke-virtual {v8, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 113
     .line 114
-    move/from16 v42, v25
-
     .line 115
+    goto :goto_1
+
     .line 116
-    move/from16 v43, v24
+    :cond_2
+    const-string/jumbo v0, "declined"
 
     .line 117
     .line 118
-    move/from16 v44, v23
-
     .line 119
-    .line 120
-    move/from16 v45, v22
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 120
     .line 121
     .line 122
-    move/from16 v46, v21
+    move-result v0
 
     .line 123
+    if-eqz v0, :cond_3
+
     .line 124
-    move/from16 v47, v20
-
     .line 125
-    .line 126
-    move/from16 v48, v19
+    invoke-virtual {v9, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
+    .line 126
     .line 127
     .line 128
-    move/from16 v49, v18
+    :cond_3
+    :goto_1
+    add-int/lit8 v4, v4, 0x1
 
     .line 129
     .line 130
-    move/from16 v50, v17
+    goto :goto_0
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 131
+    :cond_4
+    iget-object v0, v2, LX/0bU;->A01:Lcom/facebook/login/DeviceAuthMethodHandler;
+
     .line 132
-    move/from16 v51, v15
-
     .line 133
+    iget-object v5, p0, LX/0YQ;->A01:Ljava/lang/String;
+
     .line 134
-    move/from16 v52, v14
-
     .line 135
-    .line 136
-    move-object/from16 v17, v55
+    invoke-static {}, Lcom/facebook/internal/Validate;->A00()V
 
+    .line 136
     .line 137
     .line 138
-    move-object/from16 v18, v54
+    sget-object v6, Lcom/facebook/FacebookSdk;->A0A:Ljava/lang/String;
 
     .line 139
     .line 140
-    move-wide/from16 v19, v12
+    sget-object v4, LX/0b1;->DEVICE_AUTH:LX/0b1;
 
     .line 141
     .line 142
-    move-wide/from16 v21, v10
+    const/4 v10, 0x0
 
     .line 143
-    .line 144
-    move/from16 v23, v53
+    new-instance v3, Lcom/facebook/AccessToken;
 
+    .line 144
     .line 145
+    move-object v11, v10
+
     .line 146
-    move/from16 v24, v32
+    invoke-direct/range {v3 .. v11}, Lcom/facebook/AccessToken;-><init>(LX/0b1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Date;Ljava/util/Date;)V
 
     .line 147
     .line 148
-    move/from16 v25, v29
-
     .line 149
+    iget-object v1, v0, Lcom/facebook/login/LoginMethodHandler;->A00:Lcom/facebook/login/LoginClient;
+
     .line 150
-    move-wide/from16 v27, v8
-
     .line 151
+    iget-object v0, v1, Lcom/facebook/login/LoginClient;->A02:Lcom/facebook/login/LoginClient$Request;
+
     .line 152
-    move-wide/from16 v29, v6
-
     .line 153
-    .line 154
-    move-wide/from16 v31, v4
+    invoke-static {v3, v0}, Lcom/facebook/login/LoginClient$Result;->A00(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;)Lcom/facebook/login/LoginClient$Result;
 
+    .line 154
     .line 155
     .line 156
-    invoke-direct/range {v16 .. v52}, LX/489;-><init>(Ljava/lang/String;Ljava/lang/String;DDIIIIJJJJJZZZZZZZZZZZZZZZZ)V
+    move-result-object v0
 
     .line 157
+    invoke-virtual {v1, v0}, Lcom/facebook/login/LoginClient;->A04(Lcom/facebook/login/LoginClient$Result;)V
+
     .line 158
     .line 159
-    return-object v16
+    .line 160
+    iget-object v0, v2, LX/0bU;->A00:Landroid/app/Dialog;
+
+    .line 161
+    .line 162
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
+
+    .line 163
+    .line 164
+    .line 165
+    return-void
+
+    .line 166
+    :catch_0
+    move-exception v1
+
+    .line 167
+    new-instance v0, LX/0ax;
+
+    .line 168
+    .line 169
+    invoke-direct {v0, v1}, LX/0ax;-><init>(Ljava/lang/Throwable;)V
+
+    .line 170
+    .line 171
+    .line 172
+    invoke-static {v0, v2}, LX/0bU;->A02(LX/0ax;LX/0bU;)V
+
+    .line 173
+    .line 174
+    .line 175
+    return-void
+
+    .line 176
+    :cond_5
+    iget-object v0, p1, LX/0bI;->A00:LX/0bW;
+
+    .line 177
+    .line 178
+    if-eqz v0, :cond_6
+
+    .line 179
+    .line 180
+    iget-object v1, p0, LX/0YQ;->A00:Ljava/lang/Object;
+
+    .line 181
+    .line 182
+    check-cast v1, LX/0aR;
+
+    .line 183
+    .line 184
+    iget-object v0, v0, LX/0bW;->A02:LX/0ax;
+
+    .line 185
+    .line 186
+    invoke-interface {v1, v0}, LX/0aR;->AWO(LX/0ax;)V
+
+    .line 187
+    .line 188
+    .line 189
+    return-void
+
+    .line 190
+    :cond_6
+    iget-object v2, p0, LX/0YQ;->A01:Ljava/lang/String;
+
+    .line 191
+    .line 192
+    iget-object v1, p1, LX/0bI;->A04:Lorg/json/JSONObject;
+
+    .line 193
+    .line 194
+    sget-object v0, LX/0Zx;->A00:Ljava/util/concurrent/ConcurrentHashMap;
+
+    .line 195
+    .line 196
+    invoke-virtual {v0, v2, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 197
+    .line 198
+    .line 199
+    iget-object v0, p0, LX/0YQ;->A00:Ljava/lang/Object;
+
+    .line 200
+    .line 201
+    check-cast v0, LX/0aR;
+
+    .line 202
+    .line 203
+    invoke-interface {v0, v1}, LX/0aR;->Abm(Lorg/json/JSONObject;)V
+
+    .line 204
+    .line 205
+    .line 206
+    return-void
 .end method

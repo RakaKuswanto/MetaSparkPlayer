@@ -1,5 +1,5 @@
 .class public Lcom/facebook/video/plugins/VideoPlugin;
-.super LX/3tS;
+.super LX/3mW;
 .source ""
 
 
@@ -8,35 +8,33 @@
 
 .field public A01:D
 
-.field public A02:Landroid/graphics/RectF;
+.field public A02:Landroid/graphics/Point;
 
-.field public A03:Landroid/widget/ImageView;
+.field public A03:Landroid/graphics/RectF;
 
-.field public A04:LX/0Na;
+.field public A04:Landroid/widget/FrameLayout;
 
-.field public A05:LX/0Na;
+.field public A05:Landroid/widget/ImageView;
 
-.field public A06:LX/0Na;
+.field public A06:LX/0RP;
 
-.field public A07:LX/2kf;
+.field public A07:LX/0RP;
 
-.field public A08:Z
+.field public A08:LX/0RP;
 
-.field public A09:Z
+.field public A09:LX/2IR;
 
-.field public A0A:I
+.field public A0A:LX/3rf;
 
-.field public A0B:Landroid/graphics/Point;
+.field public A0B:Z
 
-.field public A0C:LX/0uz;
+.field public A0C:Z
 
-.field public A0D:Z
+.field public A0D:I
 
-.field public A0E:Landroid/widget/FrameLayout;
+.field public A0E:Z
 
-.field public A0F:LX/3pT;
-
-.field public final A0G:LX/3wa;
+.field public final A0F:LX/40A;
 
 
 # direct methods
@@ -61,407 +59,653 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 6
 
+    .line 268435456
     const/4 v4, 0x0
 
+    .line 268435457
     const/4 v1, 0x0
 
-    .line 268930263
-    invoke-direct {p0, p1, v4, v1}, LX/3tS;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 268435458
+    invoke-direct {p0, p1, v4, v1}, LX/3mW;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 268435459
+    .line 268435460
+    .line 268435461
     const-wide v2, 0x3ffc71c71c71c71cL    # 1.7777777777777777
 
-    .line 268930264
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    .line 268435465
+    .line 268435466
     iput-wide v2, p0, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
 
+    .line 268435467
+    .line 268435468
     const-wide/high16 v2, -0x4010000000000000L    # -1.0
 
-    .line 268930265
+    .line 268435469
+    .line 268435470
     iput-wide v2, p0, Lcom/facebook/video/plugins/VideoPlugin;->A01:D
 
+    .line 268435471
+    .line 268435472
     const/4 v3, 0x1
 
-    .line 268930266
-    iput-boolean v3, p0, Lcom/facebook/video/plugins/VideoPlugin;->A08:Z
+    .line 268435473
+    iput-boolean v3, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0B:Z
 
-    .line 268930267
-    sget v0, LX/2eq;->Aeh:I
+    .line 268435474
+    .line 268435475
+    const-class v0, LX/2IR;
 
-    .line 268930268
-    invoke-static {p1, v4, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    .line 268435476
+    .line 268435477
+    invoke-static {p1, v0, v4}, LX/3Fa;->A07(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
 
+    .line 268435478
+    .line 268435479
+    .line 268435480
     move-result-object v0
 
-    .line 268930269
-    check-cast v0, LX/2kf;
+    .line 268435481
+    check-cast v0, LX/2IR;
 
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A07:LX/2kf;
+    .line 268435482
+    .line 268435483
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A09:LX/2IR;
 
-    .line 268930270
-    sget v0, LX/2eq;->AZQ:I
+    .line 268435484
+    .line 268435485
+    const-class v0, LX/2Ue;
 
-    invoke-static {p1, v0}, LX/1zD;->A01(Landroid/content/Context;I)Ljava/lang/Object;
+    .line 268435486
+    .line 268435487
+    invoke-static {v0, v4}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
 
+    .line 268435488
+    .line 268435489
+    .line 268435490
     move-result-object v0
 
-    check-cast v0, LX/0uz;
+    .line 268435491
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A06:LX/0RP;
 
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0C:LX/0uz;
+    .line 268435492
+    .line 268435493
+    const-class v0, LX/18u;
 
-    .line 268930271
-    invoke-static {}, LX/0Zq;->A0I()LX/0Zq;
+    .line 268435494
+    .line 268435495
+    invoke-static {v0, v4}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
 
+    .line 268435496
+    .line 268435497
+    .line 268435498
     move-result-object v0
 
-    .line 268930272
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A04:LX/0Na;
+    .line 268435499
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A07:LX/0RP;
 
-    .line 268930273
-    sget v0, LX/2eq;->Aes:I
+    .line 268435500
+    .line 268435501
+    const-class v0, LX/0yU;
 
-    .line 268930274
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    .line 268435502
+    .line 268435503
+    invoke-static {p1, v0}, LX/3Fb;->A00(Landroid/content/Context;Ljava/lang/Class;)LX/3FW;
 
+    .line 268435504
+    .line 268435505
+    .line 268435506
     move-result-object v0
 
-    .line 268930275
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A05:LX/0Na;
+    .line 268435507
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A08:LX/0RP;
 
-    .line 268930276
-    sget v0, LX/2eq;->AZN:I
-
-    .line 268930277
-    invoke-static {p1, v0}, LX/1zU;->A00(Landroid/content/Context;I)LX/1zU;
-
-    move-result-object v0
-
-    .line 268930278
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A06:LX/0Na;
-
+    .line 268435508
+    .line 268435509
     const/4 v0, 0x7
 
-    new-array v2, v0, [LX/3hn;
+    .line 268435510
+    new-array v2, v0, [LX/3Z7;
 
-    .line 268930279
-    new-instance v0, LX/3pl;
+    .line 268435511
+    .line 268435512
+    new-instance v0, LX/3s3;
 
-    invoke-direct {v0, p0}, LX/3pl;-><init>(Lcom/facebook/video/plugins/VideoPlugin;)V
+    .line 268435513
+    .line 268435514
+    invoke-direct {v0, p0}, LX/3s3;-><init>(Lcom/facebook/video/plugins/VideoPlugin;)V
 
+    .line 268435515
+    .line 268435516
+    .line 268435517
     aput-object v0, v2, v1
 
-    const/16 v1, 0x62
+    .line 268435518
+    .line 268435519
+    const/16 v1, 0x5f
 
-    new-instance v0, LX/3oT;
+    .line 268435520
+    .line 268435521
+    new-instance v0, LX/3pu;
 
-    invoke-direct {v0, p0, v1}, LX/3oT;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
+    .line 268435522
+    .line 268435523
+    invoke-direct {v0, p0, v1}, LX/3pu;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
 
+    .line 268435524
+    .line 268435525
+    .line 268435526
     aput-object v0, v2, v3
 
-    const/16 v0, 0x65
+    .line 268435527
+    .line 268435528
+    const/16 v0, 0x62
 
-    new-instance v1, LX/3oT;
+    .line 268435529
+    .line 268435530
+    new-instance v1, LX/3pu;
 
-    invoke-direct {v1, p0, v0}, LX/3oT;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
+    .line 268435531
+    .line 268435532
+    invoke-direct {v1, p0, v0}, LX/3pu;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
 
+    .line 268435533
+    .line 268435534
+    .line 268435535
     const/4 v0, 0x2
 
+    .line 268435536
     aput-object v1, v2, v0
 
-    const/16 v0, 0x66
-
-    new-instance v1, LX/3oT;
-
-    invoke-direct {v1, p0, v0}, LX/3oT;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
-
-    const/4 v0, 0x3
-
-    aput-object v1, v2, v0
-
-    const/16 v0, 0x61
-
-    new-instance v1, LX/3oT;
-
-    invoke-direct {v1, p0, v0}, LX/3oT;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
-
-    const/4 v0, 0x4
-
-    aput-object v1, v2, v0
-
-    const/16 v0, 0x64
-
-    new-instance v1, LX/3oT;
-
-    invoke-direct {v1, p0, v0}, LX/3oT;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
-
-    const/4 v0, 0x5
-
-    aput-object v1, v2, v0
-
+    .line 268435537
+    .line 268435538
     const/16 v0, 0x63
 
-    new-instance v1, LX/3oT;
+    .line 268435539
+    .line 268435540
+    new-instance v1, LX/3pu;
 
-    invoke-direct {v1, p0, v0}, LX/3oT;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
+    .line 268435541
+    .line 268435542
+    invoke-direct {v1, p0, v0}, LX/3pu;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
 
-    const/4 v0, 0x6
+    .line 268435543
+    .line 268435544
+    .line 268435545
+    const/4 v0, 0x3
 
+    .line 268435546
     aput-object v1, v2, v0
 
-    invoke-virtual {p0, v2}, LX/3od;->A0S([LX/3hn;)V
+    .line 268435547
+    .line 268435548
+    const/16 v0, 0x5e
 
-    .line 268930280
-    const v0, 0x7f0d015e
+    .line 268435549
+    .line 268435550
+    new-instance v1, LX/3pu;
 
-    .line 268930281
-    invoke-virtual {p0, v0}, LX/4QN;->setContentView(I)V
+    .line 268435551
+    .line 268435552
+    invoke-direct {v1, p0, v0}, LX/3pu;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
 
-    .line 268930282
-    const v0, 0x7f0a0614
+    .line 268435553
+    .line 268435554
+    .line 268435555
+    const/4 v0, 0x4
 
-    .line 268930283
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    .line 268435556
+    aput-object v1, v2, v0
 
+    .line 268435557
+    .line 268435558
+    const/16 v0, 0x61
+
+    .line 268435559
+    .line 268435560
+    new-instance v1, LX/3pu;
+
+    .line 268435561
+    .line 268435562
+    invoke-direct {v1, p0, v0}, LX/3pu;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
+
+    .line 268435563
+    .line 268435564
+    .line 268435565
+    const/4 v0, 0x5
+
+    .line 268435566
+    aput-object v1, v2, v0
+
+    .line 268435567
+    .line 268435568
+    const/16 v0, 0x60
+
+    .line 268435569
+    .line 268435570
+    new-instance v1, LX/3pu;
+
+    .line 268435571
+    .line 268435572
+    invoke-direct {v1, p0, v0}, LX/3pu;-><init>(Lcom/facebook/video/plugins/VideoPlugin;I)V
+
+    .line 268435573
+    .line 268435574
+    .line 268435575
+    const/4 v0, 0x6
+
+    .line 268435576
+    aput-object v1, v2, v0
+
+    .line 268435577
+    .line 268435578
+    invoke-virtual {p0, v2}, LX/3pj;->A0O([LX/3Z7;)V
+
+    .line 268435579
+    .line 268435580
+    .line 268435581
+    const v0, 0x7f0c0132
+
+    .line 268435582
+    .line 268435583
+    .line 268435584
+    invoke-virtual {p0, v0}, LX/3vV;->setContentView(I)V
+
+    .line 268435585
+    .line 268435586
+    .line 268435587
+    const v0, 0x7f090546
+
+    .line 268435588
+    .line 268435589
+    .line 268435590
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
+
+    .line 268435591
+    .line 268435592
+    .line 268435593
     move-result-object v0
 
-    .line 268930284
+    .line 268435594
     check-cast v0, Landroid/widget/FrameLayout;
 
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Landroid/widget/FrameLayout;
+    .line 268435595
+    .line 268435596
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A04:Landroid/widget/FrameLayout;
 
-    .line 268930285
-    const v0, 0x7f0a049d
+    .line 268435597
+    .line 268435598
+    const v0, 0x7f0903e0
 
-    .line 268930286
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    .line 268435599
+    .line 268435600
+    .line 268435601
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
+    .line 268435602
+    .line 268435603
+    .line 268435604
     move-result-object v0
 
-    .line 268930287
+    .line 268435605
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A03:Landroid/widget/ImageView;
+    .line 268435606
+    .line 268435607
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A05:Landroid/widget/ImageView;
 
-    .line 268930288
+    .line 268435608
+    .line 268435609
     move-object v1, p0
 
-    instance-of v0, p0, LX/3ps;
+    .line 268435610
+    instance-of v0, p0, LX/3rV;
 
+    .line 268435611
+    .line 268435612
     if-eqz v0, :cond_0
 
-    check-cast v1, LX/3ps;
+    .line 268435613
+    .line 268435614
+    check-cast v1, LX/3rV;
 
-    .line 268930289
-    new-instance v2, LX/3w3;
+    .line 268435615
+    .line 268435616
+    new-instance v5, LX/3zj;
 
-    invoke-direct {v2, v1}, LX/3w3;-><init>(LX/3ps;)V
+    .line 268435617
+    .line 268435618
+    invoke-direct {v5, v1}, LX/3zj;-><init>(LX/3rV;)V
 
-    .line 268930290
-    iget-object v1, v1, Lcom/facebook/video/plugins/VideoPlugin;->A07:LX/2kf;
+    .line 268435619
+    .line 268435620
+    .line 268435621
+    iget-object v1, v1, Lcom/facebook/video/plugins/VideoPlugin;->A09:LX/2IR;
 
-    .line 268930291
-    iget-object v0, v1, LX/2kf;->A05:LX/1Nm;
+    .line 268435622
+    .line 268435623
+    iget-object v0, v1, LX/2IR;->A05:LX/0lu;
 
-    .line 268930292
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    .line 268435624
+    .line 268435625
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
-    move-result-object v5
-
-    .line 268930293
-    check-cast v5, LX/2vp;
-
-    .line 268930294
-    iget-object v0, v1, LX/2kf;->A00:LX/1Nm;
-
-    .line 268930295
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 268930296
-    check-cast v1, LX/1zB;
-
-    .line 268930297
-    invoke-static {v1}, LX/1zB;->A00(LX/1zB;)Landroid/content/Context;
-
+    .line 268435626
+    .line 268435627
+    .line 268435628
     move-result-object v4
 
-    .line 268930298
-    :try_start_0
-    new-instance v0, LX/3qS;
+    .line 268435629
+    check-cast v4, LX/3GS;
 
-    invoke-direct {v0, v1, v2}, LX/3qS;-><init>(LX/1zC;LX/3w3;)V
+    .line 268435630
+    .line 268435631
+    iget-object v0, v1, LX/2IR;->A00:LX/0lu;
+
+    .line 268435632
+    .line 268435633
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
+
+    .line 268435634
+    .line 268435635
+    .line 268435636
+    move-result-object v1
+
+    .line 268435637
+    check-cast v1, LX/3Fo;
+
+    .line 268435638
+    .line 268435639
+    invoke-static {}, LX/3Ff;->A01()Landroid/content/Context;
+
+    .line 268435640
+    .line 268435641
+    .line 268435642
+    move-result-object v2
+
+    .line 268435643
+    invoke-static {v1}, LX/3Fo;->A00(LX/3Fo;)V
+
+    .line 268435644
+    .line 268435645
+    .line 268435646
+    :try_start_0
+    new-instance v0, LX/3sh;
+
+    .line 268435647
+    .line 268435648
+    invoke-direct {v0, v1, v5}, LX/3sh;-><init>(LX/3Ft;LX/3zj;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 268930299
-    invoke-static {}, LX/1zE;->A0G()V
+    .line 268435649
+    .line 268435650
+    .line 268435651
+    invoke-static {}, LX/3Fa;->A0A()V
 
-    .line 268930300
-    invoke-static {v4}, LX/1zI;->A04(Landroid/content/Context;)V
+    .line 268435652
+    .line 268435653
+    .line 268435654
+    invoke-static {v2}, LX/3Ff;->A03(Landroid/content/Context;)V
 
-    .line 268930301
-    invoke-static {v5}, LX/1zB;->A00(LX/1zB;)Landroid/content/Context;
+    .line 268435655
+    .line 268435656
+    .line 268435657
+    invoke-static {}, LX/3Ff;->A01()Landroid/content/Context;
 
-    move-result-object v4
+    .line 268435658
+    .line 268435659
+    .line 268435660
+    move-result-object v2
 
-    .line 268930302
+    .line 268435661
+    invoke-static {v4}, LX/3Fo;->A00(LX/3Fo;)V
+
+    .line 268435662
+    .line 268435663
+    .line 268435664
     :try_start_1
-    new-instance v2, LX/3pV;
+    new-instance v1, LX/3rh;
 
-    invoke-direct {v2, v5, v0}, LX/3pV;-><init>(LX/1zC;LX/3wA;)V
+    .line 268435665
+    .line 268435666
+    invoke-direct {v1, v0}, LX/3rh;-><init>(LX/40M;)V
 
+    .line 268435667
+    .line 268435668
+    .line 268435669
     goto :goto_2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 268930303
+    .line 268435670
     :cond_0
-    sget-object v0, LX/0aW;->REGULAR_TEXTURE_VIEW:LX/0aW;
+    sget-object v0, LX/13t;->REGULAR_TEXTURE_VIEW:LX/13t;
 
-    .line 268930304
-    iget-object v4, p0, Lcom/facebook/video/plugins/VideoPlugin;->A07:LX/2kf;
+    .line 268435671
+    .line 268435672
+    iget-object v4, p0, Lcom/facebook/video/plugins/VideoPlugin;->A09:LX/2IR;
 
-    .line 268930305
+    .line 268435673
+    .line 268435674
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
+    .line 268435675
+    .line 268435676
+    .line 268435677
     move-result v2
 
+    .line 268435678
     if-ne v2, v3, :cond_1
 
-    .line 268930306
-    iget-object v0, v4, LX/2kf;->A03:LX/1Nm;
+    .line 268435679
+    .line 268435680
+    iget-object v0, v4, LX/2IR;->A03:LX/0lu;
 
-    .line 268930307
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    .line 268435681
+    .line 268435682
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
+    .line 268435683
+    .line 268435684
+    .line 268435685
     move-result-object v1
 
-    .line 268930308
-    check-cast v1, LX/1zB;
+    .line 268435686
+    check-cast v1, LX/3Fo;
 
-    .line 268930309
-    iget-object v0, v4, LX/2kf;->A02:LX/1Nm;
+    .line 268435687
+    .line 268435688
+    iget-object v0, v4, LX/2IR;->A02:LX/0lu;
 
-    .line 268930310
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    .line 268435689
+    .line 268435690
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
+    .line 268435691
+    .line 268435692
+    .line 268435693
     move-result-object v0
 
-    .line 268930311
-    check-cast v0, LX/2qf;
+    .line 268435694
+    check-cast v0, LX/0c1;
 
-    .line 268930312
-    invoke-static {v1}, LX/1zB;->A00(LX/1zB;)Landroid/content/Context;
+    .line 268435695
+    .line 268435696
+    invoke-static {}, LX/3Ff;->A01()Landroid/content/Context;
 
-    move-result-object v4
+    .line 268435697
+    .line 268435698
+    .line 268435699
+    move-result-object v2
 
-    .line 268930313
+    .line 268435700
+    invoke-static {v1}, LX/3Fo;->A00(LX/3Fo;)V
+
+    .line 268435701
+    .line 268435702
+    .line 268435703
     :try_start_2
-    new-instance v2, LX/3pU;
+    new-instance v1, LX/3rg;
 
-    invoke-direct {v2, v1, v0}, LX/3pU;-><init>(LX/1zC;LX/2qf;)V
+    .line 268435704
+    .line 268435705
+    invoke-direct {v1, v0}, LX/3rg;-><init>(LX/0c1;)V
 
+    .line 268435706
+    .line 268435707
+    .line 268435708
     goto :goto_2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 268930314
+    .line 268435709
     :cond_1
-    iget-object v0, v4, LX/2kf;->A05:LX/1Nm;
+    iget-object v0, v4, LX/2IR;->A05:LX/0lu;
 
-    .line 268930315
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    .line 268435710
+    .line 268435711
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
+    .line 268435712
+    .line 268435713
+    .line 268435714
     move-result-object v1
 
-    .line 268930316
-    check-cast v1, LX/2vp;
+    .line 268435715
+    check-cast v1, LX/3GS;
 
-    .line 268930317
+    .line 268435716
+    .line 268435717
     const/4 v0, 0x2
 
+    .line 268435718
     if-ne v2, v0, :cond_2
 
-    .line 268930318
-    iget-object v0, v4, LX/2kf;->A01:LX/1Nm;
+    .line 268435719
+    .line 268435720
+    iget-object v0, v4, LX/2IR;->A01:LX/0lu;
 
-    .line 268930319
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    .line 268435721
+    .line 268435722
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
+    .line 268435723
+    .line 268435724
+    .line 268435725
     move-result-object v0
 
-    .line 268930320
-    check-cast v0, LX/3fx;
+    .line 268435726
+    check-cast v0, LX/3GX;
 
-    .line 268930321
+    .line 268435727
+    .line 268435728
     :goto_0
-    check-cast v0, LX/3wA;
+    check-cast v0, LX/40M;
 
-    .line 268930322
-    invoke-static {v1}, LX/1zB;->A00(LX/1zB;)Landroid/content/Context;
+    .line 268435729
+    .line 268435730
+    invoke-static {}, LX/3Ff;->A01()Landroid/content/Context;
 
-    move-result-object v4
+    .line 268435731
+    .line 268435732
+    .line 268435733
+    move-result-object v2
 
-    .line 268930323
+    .line 268435734
+    invoke-static {v1}, LX/3Fo;->A00(LX/3Fo;)V
+
+    .line 268435735
+    .line 268435736
+    .line 268435737
     goto :goto_1
 
-    .line 268930324
+    .line 268435738
     :cond_2
-    iget-object v0, v4, LX/2kf;->A04:LX/1Nm;
+    iget-object v0, v4, LX/2IR;->A04:LX/0lu;
 
-    .line 268930325
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    .line 268435739
+    .line 268435740
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
+    .line 268435741
+    .line 268435742
+    .line 268435743
     move-result-object v0
 
-    .line 268930326
-    check-cast v0, LX/3fF;
+    .line 268435744
+    check-cast v0, LX/3vr;
 
+    .line 268435745
+    .line 268435746
     goto :goto_0
 
-    .line 268930327
+    .line 268435747
     :goto_1
     :try_start_3
-    new-instance v2, LX/3pV;
+    new-instance v1, LX/3rh;
 
-    invoke-direct {v2, v1, v0}, LX/3pV;-><init>(LX/1zC;LX/3wA;)V
+    .line 268435748
+    .line 268435749
+    invoke-direct {v1, v0}, LX/3rh;-><init>(LX/40M;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 268930328
+    .line 268435750
+    .line 268435751
+    .line 268435752
     :goto_2
-    invoke-static {}, LX/1zE;->A0G()V
+    invoke-static {}, LX/3Fa;->A0A()V
 
-    .line 268930329
-    invoke-static {v4}, LX/1zI;->A04(Landroid/content/Context;)V
+    .line 268435753
+    .line 268435754
+    .line 268435755
+    invoke-static {v2}, LX/3Ff;->A03(Landroid/content/Context;)V
 
-    .line 268930330
-    iput-object v2, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
+    .line 268435756
+    .line 268435757
+    .line 268435758
+    iput-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
-    .line 268930331
-    new-instance v0, LX/3wa;
+    .line 268435759
+    .line 268435760
+    new-instance v0, LX/40A;
 
-    .line 268930332
-    invoke-direct {v0, p0}, LX/3wa;-><init>(Lcom/facebook/video/plugins/VideoPlugin;)V
+    .line 268435761
+    .line 268435762
+    invoke-direct {v0, p0}, LX/40A;-><init>(Lcom/facebook/video/plugins/VideoPlugin;)V
 
-    .line 268930333
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0G:LX/3wa;
+    .line 268435763
+    .line 268435764
+    .line 268435765
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/40A;
 
-    .line 268930334
-    iput v3, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:I
+    .line 268435766
+    .line 268435767
+    iput v3, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0D:I
 
+    .line 268435768
+    .line 268435769
     return-void
 
-    .line 268930335
+    .line 268435770
     :catchall_0
     move-exception v0
 
-    .line 268930336
-    invoke-static {}, LX/1zE;->A0G()V
+    .line 268435771
+    invoke-static {}, LX/3Fa;->A0A()V
 
-    .line 268930337
-    invoke-static {v4}, LX/1zI;->A04(Landroid/content/Context;)V
+    .line 268435772
+    .line 268435773
+    .line 268435774
+    invoke-static {v2}, LX/3Ff;->A03(Landroid/content/Context;)V
 
-    .line 268930338
+    .line 268435775
+    .line 268435776
+    .line 268435777
     throw v0
 .end method
 
@@ -469,7 +713,7 @@
     .locals 4
 
     .line 0
-    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0D:Z
+    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Z
 
     .line 1
     .line 2
@@ -487,7 +731,7 @@
 
     .line 7
     .line 8
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
+    iget-object v0, p0, LX/3pj;->A08:LX/3v9;
 
     .line 9
     .line 10
@@ -495,7 +739,7 @@
 
     .line 11
     .line 12
-    invoke-interface {v0}, LX/3sJ;->isPlaying()Z
+    invoke-interface {v0}, LX/3v9;->isPlaying()Z
 
     .line 13
     .line 14
@@ -512,16 +756,16 @@
 
     .line 19
     :cond_0
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A06:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A08:LX/0RP;
 
     .line 20
     .line 21
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 22
     .line 23
     .line 24
-    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A03:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A05:Landroid/widget/ImageView;
 
     .line 25
     .line 26
@@ -542,7 +786,7 @@
     .line 32
     .line 33
     .line 34
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A04:Landroid/widget/FrameLayout;
 
     .line 35
     .line 36
@@ -569,970 +813,112 @@
     goto :goto_0
 .end method
 
-.method public static A01(Lcom/facebook/video/plugins/VideoPlugin;)V
-    .locals 20
+.method public static final A01(Lcom/facebook/video/plugins/VideoPlugin;)V
+    .locals 3
 
     .line 0
-    move-object/from16 v13, p0
+    iget-object v2, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
     .line 1
     .line 2
-    iget-object v0, v13, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
-
-    .line 3
-    .line 4
-    invoke-virtual {v0}, LX/3pT;->A04()Landroid/view/View;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v12
-
-    .line 8
-    iget-object v0, v13, LX/3od;->A01:Landroid/view/ViewGroup;
-
-    .line 9
-    .line 10
-    if-eqz v12, :cond_1
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    iget-object v3, v13, Lcom/facebook/video/plugins/VideoPlugin;->A02:Landroid/graphics/RectF;
-
-    .line 15
-    .line 16
-    if-eqz v3, :cond_3
-
-    .line 17
-    .line 18
-    iget-wide v5, v13, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
-
-    .line 19
-    .line 20
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    .line 21
-    .line 22
-    .line 23
-    move-result v8
-
-    .line 24
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v7
-
-    .line 28
-    if-lez v8, :cond_0
-
-    .line 29
-    .line 30
-    if-lez v7, :cond_0
-
-    .line 31
-    .line 32
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
-
-    .line 33
-    .line 34
-    .line 35
-    move-result v0
-
-    .line 36
     const/4 v1, 0x0
 
-    .line 37
-    cmpg-float v0, v0, v1
-
-    .line 38
-    .line 39
-    if-lez v0, :cond_0
-
-    .line 40
-    .line 41
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
-
-    .line 42
-    .line 43
-    .line 44
-    move-result v0
-
-    .line 45
-    cmpg-float v0, v0, v1
-
-    .line 46
-    .line 47
-    if-lez v0, :cond_0
-
-    .line 48
-    .line 49
-    const-wide/16 v1, 0x0
-
-    .line 50
-    .line 51
-    cmpg-double v0, v5, v1
-
-    .line 52
-    .line 53
-    if-lez v0, :cond_0
-
-    .line 54
-    .line 55
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
-
-    .line 56
-    .line 57
-    .line 58
-    move-result v1
-
-    .line 59
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
-
-    .line 60
-    .line 61
-    .line 62
-    move-result v0
-
-    .line 63
-    div-float/2addr v1, v0
-
-    .line 64
-    float-to-double v0, v1
-
-    .line 65
-    mul-double/2addr v5, v0
-
-    .line 66
-    int-to-double v3, v8
-
-    .line 67
-    int-to-double v1, v7
-
-    .line 68
-    div-double v9, v3, v1
-
-    .line 69
-    .line 70
-    cmpl-double v0, v5, v9
-
-    .line 71
-    .line 72
-    if-lez v0, :cond_2
-
-    .line 73
-    .line 74
-    div-double/2addr v3, v5
-
-    .line 75
-    invoke-static {v3, v4}, Ljava/lang/Math;->rint(D)D
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-wide v0
-
-    .line 79
-    double-to-int v7, v0
-
-    .line 80
-    :goto_0
-    invoke-virtual {v12}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v0
-
-    .line 84
-    iput v7, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 85
-    .line 86
-    iput v8, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 87
-    .line 88
-    invoke-virtual {v12, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 89
-    .line 90
-    .line 91
-    :cond_0
-    :goto_1
-    iget-object v1, v13, Lcom/facebook/video/plugins/VideoPlugin;->A0B:Landroid/graphics/Point;
-
-    .line 92
-    .line 93
-    if-eqz v1, :cond_1
-
-    .line 94
-    .line 95
-    iget v0, v1, Landroid/graphics/Point;->x:I
-
-    .line 96
-    .line 97
-    iget v1, v1, Landroid/graphics/Point;->y:I
-
-    .line 98
-    .line 99
-    int-to-float v0, v0
-
-    .line 100
-    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationX(F)V
-
-    .line 101
-    .line 102
-    .line 103
-    int-to-float v0, v1
-
-    .line 104
-    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    .line 105
-    .line 106
-    .line 107
-    :cond_1
-    return-void
-
-    .line 108
-    :cond_2
-    mul-double/2addr v1, v5
-
-    .line 109
-    invoke-static {v1, v2}, Ljava/lang/Math;->rint(D)D
-
-    .line 110
-    .line 111
-    .line 112
-    move-result-wide v0
-
-    .line 113
-    double-to-int v8, v0
-
-    .line 114
-    goto :goto_0
-
-    .line 115
-    :cond_3
-    iget-wide v7, v13, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
-
-    .line 116
-    .line 117
-    iget-wide v9, v13, Lcom/facebook/video/plugins/VideoPlugin;->A01:D
-
-    .line 118
-    .line 119
-    iget-boolean v14, v13, Lcom/facebook/video/plugins/VideoPlugin;->A09:Z
-
-    .line 120
-    .line 121
-    iget-boolean v15, v13, Lcom/facebook/video/plugins/VideoPlugin;->A08:Z
-
-    .line 122
-    .line 123
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    .line 124
-    .line 125
-    .line 126
-    move-result v11
-
-    .line 127
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    .line 128
-    .line 129
-    .line 130
-    move-result v6
-
-    .line 131
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 132
-    .line 133
-    .line 134
-    move-result-object v1
-
-    .line 135
-    if-eqz v1, :cond_4
-
-    .line 136
-    .line 137
-    iget v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 138
-    .line 139
-    if-lez v0, :cond_4
-
-    .line 140
-    .line 141
-    move v11, v0
-
-    .line 142
-    :cond_4
-    if-eqz v1, :cond_5
-
-    .line 143
-    .line 144
-    iget v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 145
-    .line 146
-    if-lez v0, :cond_5
-
-    .line 147
-    .line 148
-    move v6, v0
-
-    .line 149
-    :cond_5
-    if-lez v11, :cond_0
-
-    .line 150
-    .line 151
-    if-lez v6, :cond_0
-
-    .line 152
-    .line 153
-    const-wide/16 v19, 0x0
-
-    .line 154
-    .line 155
-    cmpg-double v0, v7, v19
-
-    .line 156
-    .line 157
-    if-lez v0, :cond_0
-
-    .line 158
-    .line 159
-    int-to-double v4, v11
-
-    .line 160
-    const-wide/high16 v17, 0x3ff0000000000000L    # 1.0
-
-    .line 161
-    .line 162
-    mul-double v2, v4, v17
-
-    .line 163
-    .line 164
-    int-to-double v0, v6
-
-    .line 165
-    div-double/2addr v2, v0
-
-    .line 166
-    cmpl-double v16, v9, v19
-
-    .line 167
-    .line 168
-    if-lez v16, :cond_6
-
-    .line 169
-    .line 170
-    cmpl-double v16, v9, v2
-
-    .line 171
-    .line 172
-    if-lez v16, :cond_e
-
-    .line 173
-    .line 174
-    div-double/2addr v4, v9
-
-    .line 175
-    invoke-static {v4, v5}, Ljava/lang/Math;->ceil(D)D
-
-    .line 176
-    .line 177
-    .line 178
-    move-result-wide v0
-
-    .line 179
-    double-to-int v6, v0
-
-    .line 180
-    :goto_2
-    int-to-double v2, v11
-
-    .line 181
-    mul-double v2, v2, v17
-
-    .line 182
-    .line 183
-    int-to-double v0, v6
-
-    .line 184
-    div-double/2addr v2, v0
-
-    .line 185
-    :cond_6
-    cmpg-double v0, v7, v2
-
-    .line 186
-    .line 187
-    if-gez v0, :cond_7
-
-    .line 188
-    .line 189
-    if-eqz v14, :cond_8
-
-    .line 190
-    .line 191
-    :cond_7
-    cmpl-double v0, v7, v2
-
-    .line 192
-    .line 193
-    if-lez v0, :cond_d
-
-    .line 194
-    .line 195
-    if-eqz v14, :cond_d
-
-    .line 196
-    .line 197
-    :cond_8
-    int-to-double v0, v6
-
-    .line 198
-    mul-double/2addr v0, v7
-
-    .line 199
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
-
-    .line 200
-    .line 201
-    .line 202
-    move-result-wide v0
-
-    .line 203
-    double-to-int v3, v0
-
-    .line 204
-    move v2, v6
-
-    .line 205
-    :goto_3
-    invoke-virtual {v12}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 206
-    .line 207
-    .line 208
-    move-result-object v4
-
-    .line 209
-    iget v1, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 210
-    .line 211
-    add-int/lit8 v0, v2, -0x5
-
-    .line 212
-    .line 213
-    if-lt v1, v0, :cond_9
-
-    .line 214
-    .line 215
-    add-int/lit8 v0, v2, 0x5
-
-    .line 216
-    .line 217
-    if-gt v1, v0, :cond_9
-
-    .line 218
-    .line 219
-    iget v1, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 220
-    .line 221
-    add-int/lit8 v0, v3, -0x5
-
-    .line 222
-    .line 223
-    if-lt v1, v0, :cond_9
-
-    .line 224
-    .line 225
-    add-int/lit8 v0, v3, 0x5
-
-    .line 226
-    .line 227
-    if-le v1, v0, :cond_a
-
-    .line 228
-    .line 229
-    :cond_9
-    iput v2, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 230
-    .line 231
-    iput v3, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 232
-    .line 233
-    invoke-virtual {v12, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 234
-    .line 235
-    .line 236
-    :cond_a
-    if-eqz v14, :cond_c
-
-    .line 237
-    .line 238
-    if-eqz v15, :cond_0
-
-    .line 239
-    .line 240
-    sub-int/2addr v11, v3
-
-    .line 241
-    div-int/lit8 v1, v11, 0x2
-
-    .line 242
-    .line 243
-    invoke-virtual {v12}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 244
-    .line 245
-    .line 246
-    move-result-object v0
-
-    .line 247
-    invoke-static {v0}, LX/2i0;->A00(Landroid/content/Context;)Z
-
-    .line 248
-    .line 249
-    .line 250
-    move-result v0
-
-    .line 251
-    if-eqz v0, :cond_b
-
-    .line 252
-    .line 253
-    neg-int v1, v1
-
-    .line 254
-    :cond_b
-    int-to-float v0, v1
-
-    .line 255
-    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationX(F)V
-
-    .line 256
-    .line 257
-    .line 258
-    sub-int/2addr v6, v2
-
-    .line 259
-    div-int/lit8 v0, v6, 0x2
-
-    .line 260
-    .line 261
-    int-to-float v0, v0
-
-    .line 262
-    :goto_4
-    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    .line 263
-    .line 264
-    .line 265
-    goto/16 :goto_1
-
-    .line 266
-    .line 267
-    :cond_c
-    const/4 v0, 0x0
-
-    .line 268
-    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationX(F)V
-
-    .line 269
-    .line 270
-    .line 271
-    goto :goto_4
-
-    .line 272
-    :cond_d
-    int-to-double v0, v11
-
-    .line 273
-    div-double/2addr v0, v7
-
-    .line 274
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
-
-    .line 275
-    .line 276
-    .line 277
-    move-result-wide v0
-
-    .line 278
-    double-to-int v2, v0
-
-    .line 279
-    move v3, v11
-
-    .line 280
-    goto :goto_3
-
-    .line 281
-    :cond_e
-    mul-double/2addr v0, v9
-
-    .line 282
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
-
-    .line 283
-    .line 284
-    .line 285
-    move-result-wide v0
-
-    .line 286
-    double-to-int v11, v0
-
-    .line 287
-    goto :goto_2
-.end method
-
-.method public static final A02(Lcom/facebook/video/plugins/VideoPlugin;)V
-    .locals 6
-
-    .line 0
-    iget-object v2, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
-
     .line 3
+    instance-of v0, v2, LX/3rh;
+
     .line 4
-    if-eqz v0, :cond_5
-
     .line 5
+    if-eqz v0, :cond_0
+
     .line 6
-    invoke-interface {v0}, LX/3te;->getPlayerOrigin()Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
     .line 7
-    .line 8
-    .line 9
-    move-result-object v0
+    move-object v0, v2
 
+    .line 8
+    check-cast v0, LX/3rh;
+
+    .line 9
     .line 10
-    if-eqz v0, :cond_5
+    iput-boolean v1, v0, LX/3rh;->A05:Z
 
     .line 11
     .line 12
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
+    :cond_0
+    iget-object v0, p0, LX/3pj;->A07:LX/3mU;
 
     .line 13
     .line 14
-    invoke-interface {v0}, LX/3te;->getPlayerOrigin()Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+    if-eqz v0, :cond_1
 
     .line 15
     .line 16
-    .line 17
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
+    invoke-interface {v0}, LX/3mU;->A4d()Z
 
+    .line 17
     .line 18
     .line 19
-    invoke-interface {v0}, LX/3te;->getPlayerOrigin()Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+    move-result v0
 
     .line 20
+    if-nez v0, :cond_1
+
     .line 21
     .line 22
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
+    iget-object v0, p0, LX/3pj;->A08:LX/3v9;
 
     .line 23
     .line 24
-    invoke-interface {v0}, LX/3te;->getPlayerType()LX/0po;
+    if-eqz v0, :cond_1
 
     .line 25
     .line 26
+    invoke-interface {v0, v2}, LX/3v9;->Alm(LX/3rf;)V
+
     .line 27
-    move-result-object v0
-
     .line 28
-    if-eqz v0, :cond_0
-
     .line 29
-    .line 30
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
+    :cond_1
+    invoke-virtual {v2}, LX/3rf;->A03()Landroid/view/View;
 
+    .line 30
     .line 31
     .line 32
-    invoke-interface {v0}, LX/3te;->getPlayerType()LX/0po;
+    move-result-object v0
 
     .line 33
-    .line 34
-    .line 35
-    :cond_0
-    :goto_0
-    const/4 v5, 0x0
-
-    .line 36
-    instance-of v4, v2, LX/3pV;
-
-    .line 37
-    .line 38
-    if-eqz v4, :cond_1
-
-    .line 39
-    .line 40
-    move-object v0, v2
-
-    .line 41
-    check-cast v0, LX/3pV;
-
-    .line 42
-    .line 43
-    iput-boolean v5, v0, LX/3pV;->A05:Z
-
-    .line 44
-    .line 45
-    :cond_1
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
-
-    .line 46
-    .line 47
-    if-eqz v0, :cond_4
-
-    .line 48
-    .line 49
-    invoke-interface {v0}, LX/3te;->getPlayerOrigin()Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v0
-
-    .line 53
-    if-eqz v0, :cond_4
-
-    .line 54
-    .line 55
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A06:LX/0Na;
-
-    .line 56
-    .line 57
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 58
-    .line 59
-    .line 60
-    move-result-object v1
-
-    .line 61
-    check-cast v1, LX/0uy;
-
-    .line 62
-    .line 63
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
-
-    .line 64
-    .line 65
-    invoke-interface {v0}, LX/3te;->getPlayerOrigin()Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 66
-    .line 67
-    .line 68
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
-
-    .line 69
-    .line 70
-    invoke-interface {v0}, LX/3te;->getPlayerOrigin()Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 71
-    .line 72
-    .line 73
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
-
-    .line 74
-    .line 75
-    invoke-interface {v0}, LX/3te;->getPlayerType()LX/0po;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v0
-
-    .line 79
     if-eqz v0, :cond_2
 
-    .line 80
-    .line 81
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
-
-    .line 82
-    .line 83
-    invoke-interface {v0}, LX/3te;->getPlayerType()LX/0po;
-
-    .line 84
-    .line 85
-    .line 86
-    :cond_2
-    iget-object v0, v1, LX/0uy;->A02:LX/0Na;
-
-    .line 87
-    .line 88
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 89
-    .line 90
-    .line 91
-    :goto_1
-    iget-object v0, p0, LX/3od;->A08:LX/3rZ;
-
-    .line 92
-    .line 93
-    if-eqz v0, :cond_3
-
-    .line 94
-    .line 95
-    invoke-interface {v0}, LX/3rZ;->A6V()Z
-
-    .line 96
-    .line 97
-    .line 98
-    move-result v0
-
-    .line 99
-    if-nez v0, :cond_3
-
-    .line 100
-    .line 101
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
-
-    .line 102
-    .line 103
-    invoke-interface {v0, v2}, LX/3sJ;->An4(LX/3pT;)V
-
-    .line 104
-    .line 105
-    .line 106
-    :cond_3
-    invoke-virtual {v2}, LX/3pT;->A04()Landroid/view/View;
-
-    .line 107
-    .line 108
-    .line 109
-    move-result-object v0
-
-    .line 110
-    if-eqz v0, :cond_6
-
-    .line 111
-    .line 112
+    .line 34
+    .line 35
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    .line 113
-    .line 114
-    .line 115
+    .line 36
+    .line 37
+    .line 38
     move-result-object v0
 
-    .line 116
-    if-eqz v0, :cond_6
+    .line 39
+    if-eqz v0, :cond_2
 
-    .line 117
-    .line 118
+    .line 40
+    .line 41
     return-void
 
-    .line 119
-    :cond_4
-    const-string v3, "VideoPlugin"
+    .line 42
+    :cond_2
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A04:Landroid/widget/FrameLayout;
 
-    .line 120
-    .line 121
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    .line 43
+    .line 44
+    invoke-virtual {v2, v0}, LX/3rf;->A05(Landroid/view/ViewGroup;)V
 
-    .line 122
-    .line 123
-    .line 124
-    move-result-object v1
-
-    .line 125
-    iget-object v0, p0, LX/3od;->A09:LX/3sJ;
-
-    .line 126
-    .line 127
-    aput-object v0, v1, v5
-
-    .line 128
-    .line 129
-    const-string/jumbo v0, "shouldHideViewBeforeRender can\'t determine player origin. pbc[%s]"
-
-    .line 130
-    .line 131
-    .line 132
-    invoke-static {v3, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 133
-    .line 134
-    .line 135
-    goto :goto_1
-
-    .line 136
-    :cond_5
-    const-string v4, "VideoPlugin"
-
-    .line 137
-    .line 138
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
-
-    .line 139
-    .line 140
-    .line 141
-    move-result-object v3
-
-    .line 142
-    iget-object v1, p0, LX/3od;->A09:LX/3sJ;
-
-    .line 143
-    .line 144
-    const/4 v0, 0x0
-
-    .line 145
-    aput-object v1, v3, v0
-
-    .line 146
-    .line 147
-    const-string/jumbo v0, "isManagedTextureViewEnabledForVideo can\'t determine player origin. pbc[%s]"
-
-    .line 148
-    .line 149
-    .line 150
-    invoke-static {v4, v0, v3}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 151
-    .line 152
-    .line 153
-    goto :goto_0
-
-    .line 154
-    :cond_6
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Landroid/widget/FrameLayout;
-
-    .line 155
-    .line 156
-    invoke-virtual {v2, v0}, LX/3pT;->A06(Landroid/view/ViewGroup;)V
-
-    .line 157
-    .line 158
-    .line 159
+    .line 45
+    .line 46
+    .line 47
     return-void
 .end method
 
-.method public static A03(Lcom/facebook/video/plugins/VideoPlugin;Z)V
+.method public static A02(Lcom/facebook/video/plugins/VideoPlugin;Z)V
     .locals 5
 
     .line 0
@@ -1540,7 +926,7 @@
 
     .line 1
     .line 2
-    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0D:Z
+    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Z
 
     .line 3
     .line 4
@@ -1549,7 +935,7 @@
     .line 5
     .line 6
     :cond_0
-    iget-object v0, p0, LX/3od;->A08:LX/3rZ;
+    iget-object v0, p0, LX/3pj;->A07:LX/3mU;
 
     .line 7
     .line 8
@@ -1557,7 +943,7 @@
 
     .line 9
     .line 10
-    invoke-interface {v0}, LX/3rZ;->getCurrentPositionMs()I
+    invoke-interface {v0}, LX/3mU;->getCurrentPositionMs()I
 
     .line 11
     .line 12
@@ -1569,38 +955,38 @@
 
     .line 15
     .line 16
-    iget-object v0, p0, LX/3od;->A08:LX/3rZ;
+    iget-object v0, p0, LX/3pj;->A07:LX/3mU;
 
     .line 17
     .line 18
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     .line 19
     if-eqz v0, :cond_1
 
     .line 20
     .line 21
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A05:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A07:LX/0RP;
 
     .line 22
     .line 23
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 24
     .line 25
     .line 26
-    move-result-object v2
+    move-result-object v4
 
     .line 27
-    check-cast v2, LX/2wi;
+    check-cast v4, LX/18u;
 
     .line 28
     .line 29
-    iget-object v0, p0, LX/3od;->A08:LX/3rZ;
+    iget-object v0, p0, LX/3pj;->A07:LX/3mU;
 
     .line 30
     .line 31
-    invoke-interface {v0}, LX/3rZ;->getVideoId()Ljava/lang/String;
+    invoke-interface {v0}, LX/3mU;->getVideoId()Ljava/lang/String;
 
     .line 32
     .line 33
@@ -1608,18 +994,18 @@
     move-result-object v1
 
     .line 35
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 36
     if-eqz v1, :cond_3
 
     .line 37
     .line 38
-    iget-object v0, v2, LX/2wi;->A00:LX/20m;
+    iget-object v0, v4, LX/18u;->A00:LX/1DN;
 
     .line 39
     .line 40
-    invoke-virtual {v0, v1}, LX/20m;->A00(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, LX/1DN;->A00(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 41
     .line 42
@@ -1627,7 +1013,7 @@
     move-result-object v0
 
     .line 44
-    check-cast v0, LX/3us;
+    check-cast v0, LX/3ye;
 
     .line 45
     .line 46
@@ -1635,15 +1021,15 @@
 
     .line 47
     .line 48
-    iget-object v3, v0, LX/3us;->A00:Landroid/graphics/Bitmap;
+    iget-object v2, v0, LX/3ye;->A00:Landroid/graphics/Bitmap;
 
     .line 49
     .line 50
-    if-eqz v3, :cond_3
+    if-eqz v2, :cond_3
 
     .line 51
     .line 52
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->isRecycled()Z
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     .line 53
     .line 54
@@ -1655,7 +1041,7 @@
 
     .line 57
     .line 58
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     .line 59
     .line 60
@@ -1663,7 +1049,7 @@
     move-result-object v1
 
     .line 62
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->isMutable()Z
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->isMutable()Z
 
     .line 63
     .line 64
@@ -1671,17 +1057,17 @@
     move-result v0
 
     .line 66
-    invoke-virtual {v3, v1, v0}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
+    invoke-virtual {v2, v1, v0}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
 
     .line 67
     .line 68
     .line 69
-    move-result-object v4
+    move-result-object v3
 
     .line 70
     :cond_1
     :goto_0
-    invoke-direct {p0, v4}, Lcom/facebook/video/plugins/VideoPlugin;->setPauseFrame(Landroid/graphics/Bitmap;)V
+    invoke-direct {p0, v3}, Lcom/facebook/video/plugins/VideoPlugin;->setPauseFrame(Landroid/graphics/Bitmap;)V
 
     .line 71
     .line 72
@@ -1691,11 +1077,11 @@
 
     .line 74
     :cond_3
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A06:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A08:LX/0RP;
 
     .line 75
     .line 76
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 77
     .line 78
@@ -1703,11 +1089,11 @@
     move-result-object v1
 
     .line 80
-    check-cast v1, LX/0uy;
+    check-cast v1, LX/0yU;
 
     .line 81
     .line 82
-    invoke-virtual {v1}, LX/0uy;->A02()Z
+    invoke-virtual {v1}, LX/0yU;->A01()Z
 
     .line 83
     .line 84
@@ -1719,11 +1105,11 @@
 
     .line 87
     .line 88
-    iget-object v1, v1, LX/0uy;->A01:LX/0Na;
+    iget-object v0, v1, LX/0yU;->A01:LX/0lu;
 
     .line 89
     .line 90
-    invoke-static {v1}, LX/0Yf;->A0f(LX/0Na;)Ljava/lang/String;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 91
     .line 92
@@ -1731,317 +1117,352 @@
     move-result-object v0
 
     .line 94
-    if-eqz v0, :cond_4
+    check-cast v0, LX/0VD;
 
     .line 95
     .line 96
-    invoke-static {v1}, LX/0Yf;->A0f(LX/0Na;)Ljava/lang/String;
+    if-eqz v0, :cond_4
 
     .line 97
     .line 98
-    .line 99
-    move-result-object v2
+    iget-object v1, v0, LX/0VD;->A04:Ljava/lang/String;
 
+    .line 99
     .line 100
-    const-wide v0, 0x11c693bb5535eL
+    :goto_1
+    const-string v0, "312713275593566"
 
     .line 101
     .line 102
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 103
     .line 104
     .line 105
-    invoke-static {v2, v0, v1}, LX/0Yg;->A1V(Ljava/lang/String;J)Z
-
-    .line 106
-    .line 107
-    .line 108
     move-result v0
 
+    .line 106
+    if-nez v0, :cond_1
+
+    .line 107
+    .line 108
+    move-object v3, v2
+
     .line 109
-    if-eqz v0, :cond_4
+    goto :goto_0
 
     .line 110
-    .line 111
-    goto :goto_0
-
-    .line 112
     :cond_4
-    move-object v4, v3
+    const/4 v1, 0x0
 
-    .line 113
-    goto :goto_0
+    .line 111
+    goto :goto_1
 .end method
 
-.method public static A04(LX/3Wj;Lcom/facebook/video/plugins/VideoPlugin;Z)Z
-    .locals 11
+.method public static A03(LX/3m2;Lcom/facebook/video/plugins/VideoPlugin;Z)Z
+    .locals 12
 
     .line 0
-    iget-wide v1, p0, LX/3Wj;->A00:D
+    const/4 v11, 0x0
 
     .line 1
-    .line 2
-    const/4 v9, 0x1
+    if-nez p0, :cond_0
 
+    .line 2
     .line 3
-    const/4 v0, 0x0
+    return v11
 
     .line 4
-    const-wide/16 v3, 0x0
+    :cond_0
+    iget-wide v2, p0, LX/3m2;->A00:D
 
     .line 5
     .line 6
-    cmpl-double v5, v1, v3
-
-    .line 7
-    .line 8
-    if-eqz v5, :cond_0
-
-    .line 9
-    .line 10
-    iget-wide v5, p1, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
-
-    .line 11
-    .line 12
-    sub-double v7, v1, v5
-
-    .line 13
-    .line 14
-    invoke-static {v7, v8}, Ljava/lang/Math;->abs(D)D
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-wide v10
-
-    .line 18
-    const-wide v6, 0x3f50624dd2f1a9fcL    # 0.001
-
-    .line 19
-    .line 20
-    .line 21
-    .line 22
-    .line 23
-    cmpl-double v5, v10, v6
-
-    .line 24
-    .line 25
     const/4 v10, 0x1
 
+    .line 7
+    const-wide/16 v8, 0x0
+
+    .line 8
+    .line 9
+    cmpl-double v0, v2, v8
+
+    .line 10
+    .line 11
+    if-eqz v0, :cond_1
+
+    .line 12
+    .line 13
+    iget-wide v4, p1, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
+
+    .line 14
+    .line 15
+    sub-double v0, v2, v4
+
+    .line 16
+    .line 17
+    invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-wide v6
+
+    .line 21
+    const-wide v4, 0x3f50624dd2f1a9fcL    # 0.001
+
+    .line 22
+    .line 23
+    .line 24
+    .line 25
     .line 26
-    if-gtz v5, :cond_1
+    cmpl-double v0, v6, v4
 
     .line 27
     .line 28
-    :cond_0
-    const/4 v10, 0x0
+    const/4 v7, 0x1
 
     .line 29
-    :cond_1
-    if-eqz p2, :cond_7
+    if-gtz v0, :cond_2
 
     .line 30
     .line 31
-    const-wide/high16 v5, -0x4010000000000000L    # -1.0
-
-    .line 32
-    .line 33
-    iput-wide v5, p1, Lcom/facebook/video/plugins/VideoPlugin;->A01:D
-
-    .line 34
-    .line 35
-    :goto_0
-    cmpl-double v5, v1, v3
-
-    .line 36
-    .line 37
-    if-eqz v5, :cond_5
-
-    .line 38
-    .line 39
-    sget v5, LX/2eq;->A5N:I
-
-    .line 40
-    .line 41
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 42
-    .line 43
-    .line 44
-    move-result-object v8
-
-    .line 45
+    :cond_1
     const/4 v7, 0x0
 
+    .line 32
+    :cond_2
+    if-eqz p2, :cond_8
+
+    .line 33
+    .line 34
+    const-wide/high16 v0, -0x4010000000000000L    # -1.0
+
+    .line 35
+    .line 36
+    iput-wide v0, p1, Lcom/facebook/video/plugins/VideoPlugin;->A01:D
+
+    .line 37
+    .line 38
+    :goto_0
+    cmpl-double v0, v2, v8
+
+    .line 39
+    .line 40
+    if-eqz v0, :cond_6
+
+    .line 41
+    .line 42
+    const-class v1, Lcom/facebook/common/util/TriState;
+
+    .line 43
+    .line 44
+    const-class v0, Lcom/facebook/auth/annotations/IsMeUserAnEmployee;
+
+    .line 45
     .line 46
-    invoke-static {v8, v7, v5}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     .line 47
     .line 48
     .line 49
-    move-result-object v6
+    move-result-object v5
 
     .line 50
-    sget v5, LX/2eq;->Aah:I
+    invoke-static {v5, v1, v0}, LX/3Fa;->A07(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 51
     .line 52
-    invoke-static {v8, v7, v5}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
     .line 53
-    .line 54
-    .line 55
-    move-result-object v5
+    move-result-object v4
 
+    .line 54
+    const-class v1, Ljava/lang/Boolean;
+
+    .line 55
     .line 56
-    invoke-static {v5}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    const-class v0, Lcom/facebook/video/engine/logging/IsVideoPlayerDebugEnabled;
 
     .line 57
     .line 58
+    invoke-static {v5, v1, v0}, LX/3Fa;->A07(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
+
     .line 59
-    move-result v5
-
     .line 60
-    if-nez v5, :cond_2
-
     .line 61
+    move-result-object v0
+
     .line 62
-    sget-object v5, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
 
     .line 63
     .line 64
-    if-ne v6, v5, :cond_4
-
     .line 65
+    move-result v0
+
     .line 66
-    :cond_2
-    invoke-virtual {p1}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    if-nez v0, :cond_3
 
     .line 67
     .line 68
-    .line 69
-    move-result-object v8
+    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
 
+    .line 69
     .line 70
-    const/4 v5, 0x6
+    if-ne v4, v0, :cond_5
 
     .line 71
-    new-array v7, v5, [Ljava/lang/Object;
-
     .line 72
-    .line 73
-    iget-wide v5, p1, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
+    :cond_3
+    invoke-virtual {p1}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
+    .line 73
     .line 74
     .line 75
-    invoke-static {v7, v5, v6, v0}, LX/0Yi;->A1J([Ljava/lang/Object;DI)V
+    move-result-object v6
 
     .line 76
-    .line 77
-    .line 78
-    invoke-static {v7, v1, v2, v9}, LX/0Yi;->A1J([Ljava/lang/Object;DI)V
+    const/4 v0, 0x6
 
+    .line 77
+    new-array v5, v0, [Ljava/lang/Object;
+
+    .line 78
     .line 79
+    iget-wide v0, p1, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
+
     .line 80
     .line 81
-    const/4 v0, 0x2
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     .line 82
-    invoke-static {v7, v0, p2}, LX/001;->A1C([Ljava/lang/Object;IZ)V
-
     .line 83
     .line 84
+    move-result-object v0
+
     .line 85
-    const/4 v5, 0x3
+    aput-object v0, v5, v11
 
     .line 86
-    invoke-static {p1}, LX/0Ye;->A0V(Ljava/lang/Object;)Ljava/lang/String;
-
     .line 87
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
     .line 88
     .line 89
-    move-result-object v0
-
     .line 90
-    aput-object v0, v7, v5
+    move-result-object v0
 
     .line 91
-    .line 92
-    const/4 v6, 0x4
+    aput-object v0, v5, v10
 
+    .line 92
     .line 93
-    iget-object v5, p1, LX/3od;->A08:LX/3rZ;
+    const/4 v0, 0x2
 
     .line 94
-    .line 95
-    if-eqz v5, :cond_6
+    invoke-static {v5, v0, p2}, LX/001;->A1C([Ljava/lang/Object;IZ)V
 
+    .line 95
     .line 96
     .line 97
-    invoke-interface {v5}, LX/3rZ;->getVideoId()Ljava/lang/String;
+    const/4 v1, 0x3
 
     .line 98
+    invoke-static {p1}, LX/0X2;->A0h(Ljava/lang/Object;)Ljava/lang/String;
+
     .line 99
     .line 100
+    .line 101
     move-result-object v0
 
-    .line 101
-    :goto_1
-    aput-object v0, v7, v6
-
     .line 102
-    .line 103
-    const/4 v0, 0x5
+    aput-object v0, v5, v1
 
+    .line 103
     .line 104
-    if-eqz v5, :cond_3
+    const/4 v1, 0x4
 
     .line 105
-    .line 106
-    invoke-interface {v5}, LX/3rZ;->getAspectRatio()D
+    iget-object v4, p1, LX/3pj;->A07:LX/3mU;
 
+    .line 106
     .line 107
+    if-eqz v4, :cond_7
+
     .line 108
     .line 109
-    move-result-wide v3
+    invoke-interface {v4}, LX/3mU;->getVideoId()Ljava/lang/String;
 
     .line 110
-    :cond_3
-    invoke-static {v7, v3, v4, v0}, LX/0Yi;->A1J([Ljava/lang/Object;DI)V
-
     .line 111
     .line 112
+    move-result-object v0
+
     .line 113
-    const-string v0, "Updating aspect ratio from [%f] to [%f]. IsInitial [%s]. VideoPlugin [%s]. VideoId [%s]. RVP Aspect Ratio. [%f]"
+    :goto_1
+    aput-object v0, v5, v1
 
     .line 114
     .line 115
-    invoke-static {v8, v0, v7}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v1, 0x5
 
     .line 116
+    if-eqz v4, :cond_4
+
     .line 117
     .line 118
-    :cond_4
-    iput-wide v1, p1, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
+    invoke-interface {v4}, LX/3mU;->getAspectRatio()D
 
     .line 119
     .line 120
-    :cond_5
-    return v10
-
     .line 121
-    :cond_6
-    const-string v0, "NullRVP"
+    move-result-wide v8
 
     .line 122
+    :cond_4
+    invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
     .line 123
+    .line 124
+    .line 125
+    move-result-object v0
+
+    .line 126
+    aput-object v0, v5, v1
+
+    .line 127
+    .line 128
+    const-string v0, "Updating aspect ratio from [%f] to [%f]. IsInitial [%s]. VideoPlugin [%s]. VideoId [%s]. RVP Aspect Ratio. [%f]"
+
+    .line 129
+    .line 130
+    invoke-static {v6, v0, v5}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 131
+    .line 132
+    .line 133
+    :cond_5
+    iput-wide v2, p1, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
+
+    .line 134
+    .line 135
+    :cond_6
+    return v7
+
+    .line 136
+    :cond_7
+    const-string v0, "NullRVP"
+
+    .line 137
+    .line 138
     goto :goto_1
 
-    .line 124
-    :cond_7
-    if-eqz v10, :cond_5
+    .line 139
+    :cond_8
+    if-eqz v7, :cond_6
 
-    .line 125
-    .line 126
+    .line 140
+    .line 141
     goto :goto_0
 .end method
 
@@ -2049,7 +1470,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A03:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A05:Landroid/widget/ImageView;
 
     .line 1
     .line 2
@@ -2058,7 +1479,7 @@
     .line 3
     .line 4
     .line 5
-    invoke-static {p1}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {p1}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 6
     .line 7
@@ -2066,7 +1487,7 @@
     move-result v0
 
     .line 9
-    iput-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0D:Z
+    iput-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Z
 
     .line 10
     .line 11
@@ -2080,15 +1501,15 @@
 
 
 # virtual methods
-.method public A0C()V
+.method public A0A()V
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
+    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
     .line 1
     .line 2
-    invoke-virtual {v1}, LX/3pT;->A04()Landroid/view/View;
+    invoke-virtual {v1}, LX/3rf;->A03()Landroid/view/View;
 
     .line 3
     .line 4
@@ -2112,7 +1533,7 @@
 
     .line 13
     .line 14
-    invoke-virtual {v1}, LX/3pT;->A05()V
+    invoke-virtual {v1}, LX/3rf;->A04()V
 
     .line 15
     .line 16
@@ -2121,15 +1542,15 @@
     return-void
 .end method
 
-.method public final A0D()V
+.method public final A0B()V
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
+    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
     .line 1
     .line 2
-    invoke-virtual {v1}, LX/3pT;->A04()Landroid/view/View;
+    invoke-virtual {v1}, LX/3rf;->A03()Landroid/view/View;
 
     .line 3
     .line 4
@@ -2153,7 +1574,7 @@
 
     .line 13
     .line 14
-    invoke-virtual {v1}, LX/3pT;->A05()V
+    invoke-virtual {v1}, LX/3rf;->A04()V
 
     .line 15
     .line 16
@@ -2162,60 +1583,11 @@
     return-void
 .end method
 
-.method public final A0J(LX/3Wj;)V
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A02(Lcom/facebook/video/plugins/VideoPlugin;)V
-
-    .line 1
-    .line 2
-    .line 3
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A06:LX/0Na;
-
-    .line 4
-    .line 5
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 6
-    .line 7
-    .line 8
-    invoke-static {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A01(Lcom/facebook/video/plugins/VideoPlugin;)V
-
-    .line 9
-    .line 10
-    .line 11
-    const/4 v0, 0x1
-
-    .line 12
-    invoke-static {p0, v0}, Lcom/facebook/video/plugins/VideoPlugin;->A03(Lcom/facebook/video/plugins/VideoPlugin;Z)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public final A0K(LX/3Wj;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p1, p0, v0}, Lcom/facebook/video/plugins/VideoPlugin;->A04(LX/3Wj;Lcom/facebook/video/plugins/VideoPlugin;Z)Z
-
-    .line 2
-    .line 3
-    .line 4
-    return-void
-.end method
-
-.method public final A0L(LX/3Wj;)V
+.method public final A0I(LX/3m2;)V
     .locals 7
 
     .line 0
-    iget-object v0, p0, LX/3od;->A08:LX/3rZ;
+    iget-object v0, p0, LX/3pj;->A07:LX/3mU;
 
     .line 1
     .line 2
@@ -2223,11 +1595,11 @@
 
     .line 3
     .line 4
-    check-cast v0, LX/3oQ;
+    check-cast v0, LX/3pp;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/3oQ;->A0O:LX/3oP;
+    iget-object v0, v0, LX/3pp;->A0M:LX/3pq;
 
     .line 7
     .line 8
@@ -2235,11 +1607,11 @@
 
     .line 9
     .line 10
-    iget-object v0, v0, LX/3oP;->A07:LX/3ov;
+    iget-object v0, v0, LX/3pq;->A07:LX/3qx;
 
     .line 11
     .line 12
-    invoke-interface {v0}, LX/3ov;->ApV()Z
+    invoke-interface {v0}, LX/3qx;->AoC()Z
 
     .line 13
     .line 14
@@ -2251,11 +1623,11 @@
 
     .line 17
     .line 18
-    iget-object v3, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
+    iget-object v3, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
     .line 19
     .line 20
-    instance-of v0, v3, LX/3pV;
+    instance-of v0, v3, LX/3rh;
 
     .line 21
     .line 22
@@ -2263,11 +1635,11 @@
 
     .line 23
     .line 24
-    check-cast v3, LX/3pV;
+    check-cast v3, LX/3rh;
 
     .line 25
     .line 26
-    iget-object v6, v3, LX/3pT;->A02:LX/3p8;
+    iget-object v6, v3, LX/3rf;->A02:LX/3rF;
 
     .line 27
     .line 28
@@ -2275,11 +1647,11 @@
 
     .line 29
     .line 30
-    iget-object v2, v3, LX/3pV;->A03:Ljava/lang/Integer;
+    iget-object v2, v3, LX/3rh;->A02:LX/3vm;
 
     .line 31
     .line 32
-    sget-object v1, LX/014;->A0B:Ljava/lang/Integer;
+    sget-object v1, LX/3vm;->USES_MANAGED_SURFACETEXTURE:LX/3vm;
 
     .line 33
     .line 34
@@ -2290,7 +1662,7 @@
 
     .line 36
     .line 37
-    iget-boolean v0, v3, LX/3pV;->A05:Z
+    iget-boolean v0, v3, LX/3rh;->A05:Z
 
     .line 38
     .line 39
@@ -2313,26 +1685,26 @@
 
     .line 46
     .line 47
-    iget-object v1, v6, LX/3p8;->A00:LX/3nw;
+    iget-object v1, v6, LX/3rF;->A00:LX/3q7;
 
     .line 48
     .line 49
-    iput-boolean v4, v1, LX/3nw;->A0D:Z
+    iput-boolean v4, v1, LX/3q7;->A0D:Z
 
     .line 50
     .line 51
     const/4 v0, -0x1
 
     .line 52
-    iput v0, v1, LX/3nw;->A0q:I
+    iput v0, v1, LX/3q7;->A0q:I
 
     .line 53
     .line 54
-    iput-object v5, v1, LX/3nw;->A09:Ljava/util/List;
+    iput-object v5, v1, LX/3q7;->A09:Ljava/util/List;
 
     .line 55
     .line 56
-    iput-object v5, v1, LX/3nw;->A0s:Landroid/view/Surface;
+    iput-object v5, v1, LX/3q7;->A0s:Landroid/view/Surface;
 
     .line 57
     .line 58
@@ -2341,7 +1713,7 @@
     const/4 v0, 0x0
 
     .line 59
-    iput-boolean v0, v3, LX/3pV;->A04:Z
+    iput-boolean v0, v3, LX/3rh;->A04:Z
 
     .line 60
     .line 61
@@ -2349,7 +1721,7 @@
     const/4 v0, 0x1
 
     .line 62
-    invoke-virtual {p0, p1, v0}, Lcom/facebook/video/plugins/VideoPlugin;->A0Q(LX/3Wj;Z)V
+    invoke-virtual {p0, p1, v0}, LX/3pj;->A0M(LX/3m2;Z)V
 
     .line 63
     .line 64
@@ -2368,19 +1740,19 @@
     .line 70
     .line 71
     :try_start_0
-    iget-object v2, v6, LX/3p8;->A00:LX/3nw;
+    iget-object v2, v6, LX/3rF;->A00:LX/3q7;
 
     .line 72
     .line 73
-    iput-object v5, v2, LX/3nw;->A0s:Landroid/view/Surface;
+    iput-object v5, v2, LX/3q7;->A0s:Landroid/view/Surface;
 
     .line 74
     .line 75
-    iput-boolean v4, v2, LX/3nw;->A0v:Z
+    iput-boolean v4, v2, LX/3q7;->A0v:Z
 
     .line 76
     .line 77
-    iget-object v1, v2, LX/3nw;->A05:LX/3nz;
+    iget-object v1, v2, LX/3q7;->A05:LX/3qM;
 
     .line 78
     .line 79
@@ -2388,25 +1760,25 @@
 
     .line 80
     .line 81
-    sget-object v0, LX/3oO;->BY_SURFACE:LX/3oO;
+    sget-object v0, LX/3m5;->BY_SURFACE:LX/3m5;
 
     .line 82
     .line 83
-    iput-object v0, v1, LX/3nz;->A0i:LX/3oO;
+    iput-object v0, v1, LX/3qM;->A0o:LX/3m5;
 
     .line 84
     .line 85
-    invoke-virtual {v1}, LX/3nz;->A08()V
+    invoke-virtual {v1}, LX/3qM;->A08()V
 
     .line 86
     .line 87
     .line 88
     :cond_4
-    iget-object v0, v2, LX/3nw;->A07:LX/46o;
+    iget-object v0, v2, LX/3q7;->A07:LX/3ws;
 
     .line 89
     .line 90
-    invoke-virtual {v0, v5}, LX/46o;->A0M(Ljava/lang/String;)V
+    invoke-virtual {v0, v5}, LX/3ws;->A0O(Ljava/lang/String;)V
 
     .line 91
     .line 92
@@ -2420,32 +1792,32 @@
 
     .line 97
     .line 98
-    invoke-static {v2, v1, v0}, LX/3nw;->A05(LX/3nw;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v0}, LX/3q7;->A06(LX/3q7;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 99
     .line 100
     .line 101
-    iget-object v0, v2, LX/3nw;->A07:LX/46o;
+    iget-object v0, v2, LX/3q7;->A07:LX/3ws;
 
     .line 102
     .line 103
-    invoke-virtual {v0, v5}, LX/46o;->A0H(Landroid/view/Surface;)V
+    invoke-virtual {v0, v5}, LX/3ws;->A0J(Landroid/view/Surface;)V
 
     .line 104
     .line 105
     .line 106
-    iput-boolean v4, v2, LX/3nw;->A0D:Z
+    iput-boolean v4, v2, LX/3q7;->A0D:Z
 
     .line 107
     .line 108
     const/4 v0, -0x1
 
     .line 109
-    iput v0, v2, LX/3nw;->A0q:I
+    iput v0, v2, LX/3q7;->A0q:I
 
     .line 110
     .line 111
-    iput-object v5, v2, LX/3nw;->A09:Ljava/util/List;
+    iput-object v5, v2, LX/3q7;->A09:Ljava/util/List;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2472,7 +1844,7 @@
 
     .line 122
     :cond_5
-    invoke-super {p0, p1}, LX/3od;->A0L(LX/3Wj;)V
+    invoke-super {p0, p1}, LX/3pj;->A0I(LX/3m2;)V
 
     .line 123
     .line 124
@@ -2480,11 +1852,36 @@
     return-void
 .end method
 
-.method public final A0Q(LX/3Wj;Z)V
+.method public final A0J(LX/3m2;)V
     .locals 1
 
     .line 0
-    invoke-static {p1, p0, p2}, Lcom/facebook/video/plugins/VideoPlugin;->A04(LX/3Wj;Lcom/facebook/video/plugins/VideoPlugin;Z)Z
+    invoke-static {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A01(Lcom/facebook/video/plugins/VideoPlugin;)V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A0P()V
+
+    .line 4
+    .line 5
+    .line 6
+    const/4 v0, 0x1
+
+    .line 7
+    invoke-static {p0, v0}, Lcom/facebook/video/plugins/VideoPlugin;->A02(Lcom/facebook/video/plugins/VideoPlugin;Z)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final A0M(LX/3m2;Z)V
+    .locals 1
+
+    .line 0
+    invoke-static {p1, p0, p2}, Lcom/facebook/video/plugins/VideoPlugin;->A03(LX/3m2;Lcom/facebook/video/plugins/VideoPlugin;Z)Z
 
     .line 1
     .line 2
@@ -2501,35 +1898,671 @@
     .line 7
     .line 8
     :cond_0
-    invoke-static {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A02(Lcom/facebook/video/plugins/VideoPlugin;)V
+    invoke-static {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A01(Lcom/facebook/video/plugins/VideoPlugin;)V
 
     .line 9
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A06:LX/0Na;
+    invoke-virtual {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A0P()V
 
     .line 12
     .line 13
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 14
+    :cond_1
+    invoke-static {p0, p2}, Lcom/facebook/video/plugins/VideoPlugin;->A02(Lcom/facebook/video/plugins/VideoPlugin;Z)V
+
     .line 15
     .line 16
-    invoke-static {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A01(Lcom/facebook/video/plugins/VideoPlugin;)V
-
     .line 17
-    .line 18
-    .line 19
-    :cond_1
-    invoke-static {p0, p2}, Lcom/facebook/video/plugins/VideoPlugin;->A03(Lcom/facebook/video/plugins/VideoPlugin;Z)V
-
-    .line 20
-    .line 21
-    .line 22
     return-void
 .end method
 
-.method public A0U(II)V
+.method public final A0P()V
+    .locals 21
+
+    .line 0
+    move-object/from16 v13, p0
+
+    .line 1
+    .line 2
+    iget-object v0, v13, Lcom/facebook/video/plugins/VideoPlugin;->A08:LX/0RP;
+
+    .line 3
+    .line 4
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v0, v13, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, LX/3rf;->A03()Landroid/view/View;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v12
+
+    .line 13
+    iget-object v0, v13, LX/3pj;->A01:Landroid/view/ViewGroup;
+
+    .line 14
+    .line 15
+    if-eqz v12, :cond_1
+
+    .line 16
+    .line 17
+    if-eqz v0, :cond_1
+
+    .line 18
+    .line 19
+    iget-object v3, v13, Lcom/facebook/video/plugins/VideoPlugin;->A03:Landroid/graphics/RectF;
+
+    .line 20
+    .line 21
+    if-eqz v3, :cond_3
+
+    .line 22
+    .line 23
+    iget-wide v5, v13, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
+
+    .line 24
+    .line 25
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v8
+
+    .line 29
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v7
+
+    .line 33
+    if-lez v8, :cond_0
+
+    .line 34
+    .line 35
+    if-lez v7, :cond_0
+
+    .line 36
+    .line 37
+    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    const/4 v1, 0x0
+
+    .line 42
+    cmpg-float v0, v0, v1
+
+    .line 43
+    .line 44
+    if-lez v0, :cond_0
+
+    .line 45
+    .line 46
+    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
+
+    .line 47
+    .line 48
+    .line 49
+    move-result v0
+
+    .line 50
+    cmpg-float v0, v0, v1
+
+    .line 51
+    .line 52
+    if-lez v0, :cond_0
+
+    .line 53
+    .line 54
+    const-wide/16 v1, 0x0
+
+    .line 55
+    .line 56
+    cmpg-double v0, v5, v1
+
+    .line 57
+    .line 58
+    if-lez v0, :cond_0
+
+    .line 59
+    .line 60
+    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
+
+    .line 61
+    .line 62
+    .line 63
+    move-result v1
+
+    .line 64
+    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
+
+    .line 65
+    .line 66
+    .line 67
+    move-result v0
+
+    .line 68
+    div-float/2addr v1, v0
+
+    .line 69
+    float-to-double v0, v1
+
+    .line 70
+    mul-double/2addr v5, v0
+
+    .line 71
+    int-to-double v3, v8
+
+    .line 72
+    int-to-double v1, v7
+
+    .line 73
+    div-double v9, v3, v1
+
+    .line 74
+    .line 75
+    cmpl-double v0, v5, v9
+
+    .line 76
+    .line 77
+    if-lez v0, :cond_2
+
+    .line 78
+    .line 79
+    div-double/2addr v3, v5
+
+    .line 80
+    invoke-static {v3, v4}, Ljava/lang/Math;->rint(D)D
+
+    .line 81
+    .line 82
+    .line 83
+    move-result-wide v0
+
+    .line 84
+    double-to-int v7, v0
+
+    .line 85
+    :goto_0
+    invoke-virtual {v12}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v0
+
+    .line 89
+    iput v7, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 90
+    .line 91
+    iput v8, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 92
+    .line 93
+    invoke-virtual {v12, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 94
+    .line 95
+    .line 96
+    :cond_0
+    :goto_1
+    iget-object v1, v13, Lcom/facebook/video/plugins/VideoPlugin;->A02:Landroid/graphics/Point;
+
+    .line 97
+    .line 98
+    if-eqz v1, :cond_1
+
+    .line 99
+    .line 100
+    iget v0, v1, Landroid/graphics/Point;->x:I
+
+    .line 101
+    .line 102
+    iget v1, v1, Landroid/graphics/Point;->y:I
+
+    .line 103
+    .line 104
+    int-to-float v0, v0
+
+    .line 105
+    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationX(F)V
+
+    .line 106
+    .line 107
+    .line 108
+    int-to-float v0, v1
+
+    .line 109
+    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    .line 110
+    .line 111
+    .line 112
+    :cond_1
+    return-void
+
+    .line 113
+    :cond_2
+    mul-double/2addr v1, v5
+
+    .line 114
+    invoke-static {v1, v2}, Ljava/lang/Math;->rint(D)D
+
+    .line 115
+    .line 116
+    .line 117
+    move-result-wide v0
+
+    .line 118
+    double-to-int v8, v0
+
+    .line 119
+    goto :goto_0
+
+    .line 120
+    :cond_3
+    iget-wide v7, v13, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
+
+    .line 121
+    .line 122
+    iget-wide v9, v13, Lcom/facebook/video/plugins/VideoPlugin;->A01:D
+
+    .line 123
+    .line 124
+    iget-boolean v14, v13, Lcom/facebook/video/plugins/VideoPlugin;->A0C:Z
+
+    .line 125
+    .line 126
+    iget-boolean v15, v13, Lcom/facebook/video/plugins/VideoPlugin;->A0B:Z
+
+    .line 127
+    .line 128
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    .line 129
+    .line 130
+    .line 131
+    move-result v11
+
+    .line 132
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    .line 133
+    .line 134
+    .line 135
+    move-result v6
+
+    .line 136
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v1
+
+    .line 140
+    if-eqz v1, :cond_4
+
+    .line 141
+    .line 142
+    iget v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 143
+    .line 144
+    if-lez v0, :cond_4
+
+    .line 145
+    .line 146
+    move v11, v0
+
+    .line 147
+    :cond_4
+    if-eqz v1, :cond_5
+
+    .line 148
+    .line 149
+    iget v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 150
+    .line 151
+    if-lez v0, :cond_5
+
+    .line 152
+    .line 153
+    move v6, v0
+
+    .line 154
+    :cond_5
+    if-lez v11, :cond_0
+
+    .line 155
+    .line 156
+    if-lez v6, :cond_0
+
+    .line 157
+    .line 158
+    const-wide/16 v19, 0x0
+
+    .line 159
+    .line 160
+    cmpg-double v0, v7, v19
+
+    .line 161
+    .line 162
+    if-lez v0, :cond_0
+
+    .line 163
+    .line 164
+    int-to-double v4, v11
+
+    .line 165
+    const-wide/high16 v17, 0x3ff0000000000000L    # 1.0
+
+    .line 166
+    .line 167
+    mul-double v2, v4, v17
+
+    .line 168
+    .line 169
+    int-to-double v0, v6
+
+    .line 170
+    div-double/2addr v2, v0
+
+    .line 171
+    cmpl-double v16, v9, v19
+
+    .line 172
+    .line 173
+    if-lez v16, :cond_6
+
+    .line 174
+    .line 175
+    cmpl-double v16, v9, v2
+
+    .line 176
+    .line 177
+    if-lez v16, :cond_e
+
+    .line 178
+    .line 179
+    div-double/2addr v4, v9
+
+    .line 180
+    invoke-static {v4, v5}, Ljava/lang/Math;->ceil(D)D
+
+    .line 181
+    .line 182
+    .line 183
+    move-result-wide v0
+
+    .line 184
+    double-to-int v6, v0
+
+    .line 185
+    :goto_2
+    int-to-double v2, v11
+
+    .line 186
+    mul-double v2, v2, v17
+
+    .line 187
+    .line 188
+    int-to-double v0, v6
+
+    .line 189
+    div-double/2addr v2, v0
+
+    .line 190
+    :cond_6
+    cmpg-double v0, v7, v2
+
+    .line 191
+    .line 192
+    if-gez v0, :cond_7
+
+    .line 193
+    .line 194
+    if-eqz v14, :cond_8
+
+    .line 195
+    .line 196
+    :cond_7
+    cmpl-double v0, v7, v2
+
+    .line 197
+    .line 198
+    if-lez v0, :cond_d
+
+    .line 199
+    .line 200
+    if-eqz v14, :cond_d
+
+    .line 201
+    .line 202
+    :cond_8
+    int-to-double v0, v6
+
+    .line 203
+    mul-double/2addr v0, v7
+
+    .line 204
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    .line 205
+    .line 206
+    .line 207
+    move-result-wide v0
+
+    .line 208
+    double-to-int v3, v0
+
+    .line 209
+    move v2, v6
+
+    .line 210
+    :goto_3
+    invoke-virtual {v12}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    .line 211
+    .line 212
+    .line 213
+    move-result-object v4
+
+    .line 214
+    iget v1, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 215
+    .line 216
+    add-int/lit8 v0, v2, -0x5
+
+    .line 217
+    .line 218
+    if-lt v1, v0, :cond_9
+
+    .line 219
+    .line 220
+    add-int/lit8 v0, v2, 0x5
+
+    .line 221
+    .line 222
+    if-gt v1, v0, :cond_9
+
+    .line 223
+    .line 224
+    iget v1, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 225
+    .line 226
+    add-int/lit8 v0, v3, -0x5
+
+    .line 227
+    .line 228
+    if-lt v1, v0, :cond_9
+
+    .line 229
+    .line 230
+    add-int/lit8 v0, v3, 0x5
+
+    .line 231
+    .line 232
+    if-le v1, v0, :cond_a
+
+    .line 233
+    .line 234
+    :cond_9
+    iput v2, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 235
+    .line 236
+    iput v3, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 237
+    .line 238
+    invoke-virtual {v12, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 239
+    .line 240
+    .line 241
+    :cond_a
+    if-eqz v14, :cond_c
+
+    .line 242
+    .line 243
+    if-eqz v15, :cond_0
+
+    .line 244
+    .line 245
+    sub-int/2addr v11, v3
+
+    .line 246
+    div-int/lit8 v1, v11, 0x2
+
+    .line 247
+    .line 248
+    invoke-virtual {v12}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    .line 249
+    .line 250
+    .line 251
+    move-result-object v0
+
+    .line 252
+    invoke-static {v0}, LX/3vC;->A00(Landroid/content/Context;)Z
+
+    .line 253
+    .line 254
+    .line 255
+    move-result v0
+
+    .line 256
+    if-eqz v0, :cond_b
+
+    .line 257
+    .line 258
+    neg-int v1, v1
+
+    .line 259
+    :cond_b
+    int-to-float v0, v1
+
+    .line 260
+    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationX(F)V
+
+    .line 261
+    .line 262
+    .line 263
+    sub-int/2addr v6, v2
+
+    .line 264
+    div-int/lit8 v0, v6, 0x2
+
+    .line 265
+    .line 266
+    int-to-float v0, v0
+
+    .line 267
+    :goto_4
+    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    .line 268
+    .line 269
+    .line 270
+    goto/16 :goto_1
+
+    .line 271
+    .line 272
+    :cond_c
+    const/4 v0, 0x0
+
+    .line 273
+    invoke-virtual {v12, v0}, Landroid/view/View;->setTranslationX(F)V
+
+    .line 274
+    .line 275
+    .line 276
+    goto :goto_4
+
+    .line 277
+    :cond_d
+    int-to-double v0, v11
+
+    .line 278
+    div-double/2addr v0, v7
+
+    .line 279
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    .line 280
+    .line 281
+    .line 282
+    move-result-wide v0
+
+    .line 283
+    double-to-int v2, v0
+
+    .line 284
+    move v3, v11
+
+    .line 285
+    goto :goto_3
+
+    .line 286
+    :cond_e
+    mul-double/2addr v0, v9
+
+    .line 287
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    .line 288
+    .line 289
+    .line 290
+    move-result-wide v0
+
+    .line 291
+    double-to-int v11, v0
+
+    .line 292
+    goto :goto_2
+.end method
+
+.method public A0Q(II)V
     .locals 7
 
     .line 0
@@ -2550,204 +2583,213 @@
     div-double/2addr v2, v0
 
     .line 7
-    sget v0, LX/2eq;->A5N:I
+    const-class v1, Lcom/facebook/common/util/TriState;
 
     .line 8
     .line 9
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const-class v0, Lcom/facebook/auth/annotations/IsMeUserAnEmployee;
 
     .line 10
     .line 11
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
     .line 12
-    move-result-object v5
-
     .line 13
-    const/4 v4, 0x0
-
     .line 14
-    invoke-static {v5, v4, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    move-result-object v5
 
     .line 15
+    invoke-static {v5, v1, v0}, LX/3Fa;->A07(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
+
     .line 16
     .line 17
-    move-result-object v1
-
     .line 18
-    sget v0, LX/2eq;->Aah:I
+    move-result-object v4
 
     .line 19
-    .line 20
-    invoke-static {v5, v4, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    const-class v1, Ljava/lang/Boolean;
 
+    .line 20
     .line 21
+    const-class v0, Lcom/facebook/video/engine/logging/IsVideoPlayerDebugEnabled;
+
     .line 22
     .line 23
-    move-result-object v0
+    invoke-static {v5, v1, v0}, LX/3Fa;->A07(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 24
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
-
     .line 25
     .line 26
-    .line 27
-    move-result v0
-
-    .line 28
-    if-nez v0, :cond_0
-
-    .line 29
-    .line 30
-    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
-
-    .line 31
-    .line 32
-    if-ne v1, v0, :cond_1
-
-    .line 33
-    .line 34
-    :cond_0
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
-
-    .line 35
-    .line 36
-    .line 37
-    move-result-object v6
-
-    .line 38
-    invoke-static {}, LX/0Yj;->A0s()[Ljava/lang/Object;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v5
-
-    .line 42
-    const/4 v0, 0x0
-
-    .line 43
-    invoke-static {v5, v2, v3, v0}, LX/0Yi;->A1J([Ljava/lang/Object;DI)V
-
-    .line 44
-    .line 45
-    .line 46
-    const/4 v1, 0x1
-
-    .line 47
-    invoke-static {p0}, LX/0Ye;->A0V(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 48
-    .line 49
-    .line 50
     move-result-object v0
 
-    .line 51
+    .line 27
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v0
+
+    .line 31
+    if-nez v0, :cond_0
+
+    .line 32
+    .line 33
+    sget-object v0, Lcom/facebook/common/util/TriState;->YES:Lcom/facebook/common/util/TriState;
+
+    .line 34
+    .line 35
+    if-ne v4, v0, :cond_1
+
+    .line 36
+    .line 37
+    :cond_0
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v6
+
+    .line 41
+    const/4 v0, 0x4
+
+    .line 42
+    new-array v5, v0, [Ljava/lang/Object;
+
+    .line 43
+    .line 44
+    const/4 v1, 0x0
+
+    .line 45
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    .line 46
+    .line 47
+    .line 48
+    move-result-object v0
+
+    .line 49
     aput-object v0, v5, v1
 
+    .line 50
+    .line 51
+    const/4 v1, 0x1
+
     .line 52
+    invoke-static {p0}, LX/0X2;->A0h(Ljava/lang/Object;)Ljava/lang/String;
+
     .line 53
-    const/4 v4, 0x2
-
     .line 54
-    iget-object v1, p0, LX/3od;->A08:LX/3rZ;
-
     .line 55
+    move-result-object v0
+
     .line 56
-    if-eqz v1, :cond_4
+    aput-object v0, v5, v1
 
     .line 57
     .line 58
-    invoke-interface {v1}, LX/3rZ;->getVideoId()Ljava/lang/String;
+    const/4 v4, 0x2
 
     .line 59
+    iget-object v1, p0, LX/3pj;->A07:LX/3mU;
+
     .line 60
     .line 61
-    move-result-object v0
+    if-eqz v1, :cond_4
 
     .line 62
+    .line 63
+    invoke-interface {v1}, LX/3mU;->getVideoId()Ljava/lang/String;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v0
+
+    .line 67
     :goto_0
     aput-object v0, v5, v4
 
-    .line 63
-    .line 64
-    const/4 v4, 0x3
-
-    .line 65
-    if-eqz v1, :cond_3
-
-    .line 66
-    .line 67
-    invoke-interface {v1}, LX/3rZ;->getAspectRatio()D
-
     .line 68
     .line 69
+    const/4 v4, 0x3
+
     .line 70
-    move-result-wide v0
+    if-eqz v1, :cond_3
 
     .line 71
-    :goto_1
-    invoke-static {v5, v0, v1, v4}, LX/0Yi;->A1J([Ljava/lang/Object;DI)V
-
     .line 72
+    invoke-interface {v1}, LX/3mU;->getAspectRatio()D
+
     .line 73
     .line 74
-    const-string v0, "Updating aspect ratio to [%f] based on setVideoSize. VideoPlugin [%s]. VideoId [%s]. RVP Aspect Ratio. [%f]"
-
     .line 75
+    move-result-wide v0
+
     .line 76
-    invoke-static {v6, v0, v5}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :goto_1
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     .line 77
     .line 78
     .line 79
+    move-result-object v0
+
+    .line 80
+    aput-object v0, v5, v4
+
+    .line 81
+    .line 82
+    const-string v0, "Updating aspect ratio to [%f] based on setVideoSize. VideoPlugin [%s]. VideoId [%s]. RVP Aspect Ratio. [%f]"
+
+    .line 83
+    .line 84
+    invoke-static {v6, v0, v5}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 85
+    .line 86
+    .line 87
     :cond_1
     iput-wide v2, p0, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
 
-    .line 80
-    .line 81
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A06:LX/0Na;
-
-    .line 82
-    .line 83
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 84
-    .line 85
-    .line 86
-    invoke-static {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A01(Lcom/facebook/video/plugins/VideoPlugin;)V
-
-    .line 87
     .line 88
     .line 89
+    invoke-virtual {p0}, Lcom/facebook/video/plugins/VideoPlugin;->A0P()V
+
+    .line 90
+    .line 91
+    .line 92
     :cond_2
     return-void
 
-    .line 90
+    .line 93
     :cond_3
     const-wide/16 v0, 0x0
 
-    .line 91
-    .line 92
+    .line 94
+    .line 95
     goto :goto_1
 
-    .line 93
+    .line 96
     :cond_4
     const-string v0, "NullRVP"
 
-    .line 94
-    .line 95
+    .line 97
+    .line 98
     goto :goto_0
 .end method
 
-.method public final Ajf(LX/3Wf;)V
+.method public final AiB(LX/3nM;)V
     .locals 3
 
     .line 0
-    invoke-super {p0, p1}, LX/3od;->Ajf(LX/3Wf;)V
+    invoke-super {p0, p1}, LX/3pj;->AiB(LX/3nM;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 4
     .line 5
@@ -2772,12 +2814,12 @@
     .line 14
     .line 15
     .line 16
-    invoke-virtual {p1, v2, v0, v1}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     .line 18
     .line 19
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 20
     .line 21
@@ -2802,12 +2844,12 @@
     .line 30
     .line 31
     .line 32
-    invoke-virtual {p1, v2, v0, v1}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 33
     .line 34
     .line 35
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 36
     .line 37
@@ -2815,7 +2857,7 @@
     move-result-object v2
 
     .line 39
-    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A09:Z
+    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0C:Z
 
     .line 40
     .line 41
@@ -2832,12 +2874,12 @@
     .line 46
     .line 47
     .line 48
-    invoke-virtual {p1, v2, v0, v1}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
     .line 50
     .line 51
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 52
     .line 53
@@ -2845,7 +2887,7 @@
     move-result-object v2
 
     .line 55
-    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0D:Z
+    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Z
 
     .line 56
     .line 57
@@ -2862,12 +2904,12 @@
     .line 62
     .line 63
     .line 64
-    invoke-virtual {p1, v2, v0, v1}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 65
     .line 66
     .line 67
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A02:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A03:Landroid/graphics/RectF;
 
     .line 68
     .line 69
@@ -2875,7 +2917,7 @@
 
     .line 70
     .line 71
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 72
     .line 73
@@ -2896,13 +2938,13 @@
     .line 80
     .line 81
     .line 82
-    invoke-virtual {p1, v2, v0, v1}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 83
     .line 84
     .line 85
     :cond_0
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 86
     .line 87
@@ -2910,7 +2952,7 @@
     move-result-object v2
 
     .line 89
-    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A08:Z
+    iget-boolean v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0B:Z
 
     .line 90
     .line 91
@@ -2927,12 +2969,12 @@
     .line 96
     .line 97
     .line 98
-    invoke-virtual {p1, v2, v0, v1}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     .line 100
     .line 101
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0B:Landroid/graphics/Point;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A02:Landroid/graphics/Point;
 
     .line 102
     .line 103
@@ -2940,7 +2982,7 @@
 
     .line 104
     .line 105
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 106
     .line 107
@@ -2961,13 +3003,13 @@
     .line 114
     .line 115
     .line 116
-    invoke-virtual {p1, v2, v0, v1}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 117
     .line 118
     .line 119
     :cond_1
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 120
     .line 121
@@ -2975,7 +3017,7 @@
     move-result-object v2
 
     .line 123
-    iget v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:I
+    iget v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0D:I
 
     .line 124
     .line 125
@@ -2992,12 +3034,12 @@
     .line 130
     .line 131
     .line 132
-    invoke-virtual {p1, v2, v0, v1}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 133
     .line 134
     .line 135
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 136
     .line 137
@@ -3021,12 +3063,12 @@
     .line 145
     .line 146
     .line 147
-    invoke-virtual {p1, v1, v0, v2}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v0, v2}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 148
     .line 149
     .line 150
-    invoke-virtual {p0}, LX/3od;->getLogContextTag()Ljava/lang/String;
+    invoke-virtual {p0}, LX/3pj;->getLogContextTag()Ljava/lang/String;
 
     .line 151
     .line 152
@@ -3039,12 +3081,12 @@
     .line 155
     .line 156
     .line 157
-    invoke-virtual {p1, v1, v0, v2}, LX/3Wf;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v0, v2}, LX/3nM;->A07(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 158
     .line 159
     .line 160
-    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Landroid/widget/FrameLayout;
+    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A04:Landroid/widget/FrameLayout;
 
     .line 161
     .line 162
@@ -3052,16 +3094,16 @@
 
     .line 163
     .line 164
-    invoke-static {v1, p1, v0}, LX/3qf;->A00(Landroid/view/View;LX/3Wf;Ljava/lang/String;)V
+    invoke-static {v1, p1, v0}, LX/3tE;->A00(Landroid/view/View;LX/3nM;Ljava/lang/String;)V
 
     .line 165
     .line 166
     .line 167
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
     .line 168
     .line 169
-    invoke-virtual {v0, p1}, LX/3pT;->Ajf(LX/3Wf;)V
+    invoke-virtual {v0, p1}, LX/3rf;->AiB(LX/3nM;)V
 
     .line 170
     .line 171
@@ -3073,27 +3115,30 @@
     .locals 14
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/video/plugins/VideoPlugin;->A02:Landroid/graphics/RectF;
+    iget-object v0, p0, LX/3pj;->A01:Landroid/view/ViewGroup;
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/3od;->A01:Landroid/view/ViewGroup;
+    if-nez v0, :cond_0
 
     .line 3
     .line 4
-    iget-wide v4, p0, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
+    const/4 v2, 0x0
 
     .line 5
+    return-object v2
+
     .line 6
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    :cond_0
+    iget-object v3, p0, Lcom/facebook/video/plugins/VideoPlugin;->A03:Landroid/graphics/RectF;
 
     .line 7
     .line 8
-    .line 9
-    move-result v12
+    iget-wide v7, p0, Lcom/facebook/video/plugins/VideoPlugin;->A00:D
 
+    .line 9
     .line 10
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     .line 11
     .line 12
@@ -3101,192 +3146,200 @@
     move-result v11
 
     .line 14
-    const/4 v10, 0x0
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     .line 15
-    if-nez v3, :cond_1
-
     .line 16
     .line 17
-    if-lez v12, :cond_2
+    move-result v10
 
     .line 18
+    const/4 v9, 0x0
+
     .line 19
-    if-lez v11, :cond_2
+    if-nez v3, :cond_2
 
     .line 20
     .line 21
-    const-wide/16 v1, 0x0
+    if-lez v11, :cond_3
 
     .line 22
     .line 23
-    cmpg-double v0, v4, v1
+    if-lez v10, :cond_3
 
     .line 24
     .line 25
-    if-lez v0, :cond_2
+    const-wide/16 v1, 0x0
 
     .line 26
     .line 27
-    int-to-double v8, v12
+    cmpg-double v0, v7, v1
 
     .line 28
-    int-to-double v6, v11
-
     .line 29
-    div-double v0, v8, v6
+    if-lez v0, :cond_3
 
     .line 30
     .line 31
-    cmpl-double v13, v4, v0
+    int-to-double v5, v11
 
     .line 32
+    int-to-double v3, v10
+
     .line 33
-    :goto_0
-    if-lez v13, :cond_0
+    div-double v0, v5, v3
 
     .line 34
     .line 35
-    div-double/2addr v8, v4
+    cmpl-double v2, v7, v0
 
     .line 36
-    double-to-int v11, v8
-
     .line 37
-    :goto_1
-    int-to-float v1, v12
+    :goto_0
+    if-lez v2, :cond_1
 
     .line 38
-    int-to-float v0, v11
-
     .line 39
-    new-instance v2, Landroid/graphics/RectF;
+    div-double/2addr v5, v7
 
     .line 40
+    double-to-int v10, v5
+
     .line 41
-    invoke-direct {v2, v10, v10, v1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+    :goto_1
+    int-to-float v1, v11
 
     .line 42
-    .line 43
-    .line 44
-    return-object v2
+    int-to-float v0, v10
 
+    .line 43
+    new-instance v2, Landroid/graphics/RectF;
+
+    .line 44
     .line 45
-    :cond_0
-    mul-double/2addr v6, v4
+    invoke-direct {v2, v9, v9, v1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
 
     .line 46
-    double-to-int v12, v6
-
     .line 47
-    goto :goto_1
-
     .line 48
-    :cond_1
-    if-lez v12, :cond_2
+    return-object v2
 
     .line 49
+    :cond_1
+    mul-double/2addr v3, v7
+
     .line 50
-    if-lez v11, :cond_2
+    double-to-int v11, v3
 
     .line 51
+    goto :goto_1
+
     .line 52
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
+    :cond_2
+    if-lez v11, :cond_3
 
     .line 53
     .line 54
-    .line 55
-    move-result v0
+    if-lez v10, :cond_3
 
+    .line 55
     .line 56
-    cmpg-float v0, v0, v10
+    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
 
     .line 57
     .line 58
-    if-lez v0, :cond_2
-
     .line 59
+    move-result v0
+
     .line 60
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
+    cmpg-float v0, v0, v9
 
     .line 61
     .line 62
-    .line 63
-    move-result v0
+    if-lez v0, :cond_3
 
+    .line 63
     .line 64
-    cmpg-float v0, v0, v10
+    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
 
     .line 65
     .line 66
-    if-lez v0, :cond_2
-
     .line 67
+    move-result v0
+
     .line 68
-    const-wide/16 v1, 0x0
+    cmpg-float v0, v0, v9
 
     .line 69
     .line 70
-    cmpg-double v0, v4, v1
+    if-lez v0, :cond_3
 
     .line 71
     .line 72
-    if-lez v0, :cond_2
+    const-wide/16 v1, 0x0
 
     .line 73
     .line 74
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
+    cmpg-double v0, v7, v1
 
     .line 75
     .line 76
-    .line 77
-    move-result v1
+    if-lez v0, :cond_3
 
+    .line 77
     .line 78
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
 
     .line 79
     .line 80
     .line 81
-    move-result v0
+    move-result v1
 
     .line 82
-    div-float/2addr v1, v0
+    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
 
     .line 83
-    float-to-double v2, v1
-
     .line 84
-    mul-double/2addr v2, v4
-
     .line 85
-    int-to-double v8, v12
+    move-result v0
 
     .line 86
-    int-to-double v6, v11
+    div-float/2addr v1, v0
 
     .line 87
-    div-double v0, v8, v6
+    float-to-double v0, v1
 
     .line 88
+    mul-double/2addr v0, v7
+
     .line 89
-    cmpl-double v13, v2, v0
+    int-to-double v5, v11
 
     .line 90
+    int-to-double v3, v10
+
     .line 91
-    goto :goto_0
+    div-double v12, v5, v3
 
     .line 92
-    :cond_2
+    .line 93
+    cmpl-double v2, v0, v12
+
+    .line 94
+    .line 95
+    goto :goto_0
+
+    .line 96
+    :cond_3
     new-instance v2, Landroid/graphics/RectF;
 
-    .line 93
-    .line 94
-    invoke-direct {v2, v10, v10, v10, v10}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    .line 95
-    .line 96
     .line 97
+    .line 98
+    invoke-direct {v2, v9, v9, v9, v9}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    .line 99
+    .line 100
+    .line 101
     return-object v2
 .end method
 
@@ -3294,7 +3347,7 @@
     .locals 1
 
     .line 0
-    const v0, 0x7f0d015e
+    const v0, 0x7f0c0132
 
     .line 1
     .line 2
@@ -3306,7 +3359,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A02:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A03:Landroid/graphics/RectF;
 
     .line 1
     .line 2
@@ -3321,11 +3374,11 @@
     return-object v0
 .end method
 
-.method public getRenderTarget()LX/3pT;
+.method public getRenderTarget()LX/3rf;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
     .line 1
     .line 2
@@ -3336,7 +3389,7 @@
     .locals 3
 
     .line 0
-    iget-object v2, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
+    iget-object v2, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
     .line 1
     .line 2
@@ -3344,7 +3397,7 @@
 
     .line 3
     .line 4
-    invoke-virtual {v2, v0, v1, v0, v1}, LX/3pT;->A03(DD)Landroid/graphics/Bitmap;
+    invoke-virtual {v2, v0, v1, v0, v1}, LX/3rf;->A02(DD)Landroid/graphics/Bitmap;
 
     .line 5
     .line 6
@@ -3359,7 +3412,7 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A04:Landroid/widget/FrameLayout;
 
     .line 1
     .line 2
@@ -3420,7 +3473,7 @@
     .line 3
     .line 4
     .line 5
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0B:Landroid/graphics/Point;
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A02:Landroid/graphics/Point;
 
     .line 6
     .line 7
@@ -3440,7 +3493,7 @@
     .line 3
     .line 4
     .line 5
-    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A02:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A03:Landroid/graphics/RectF;
 
     .line 6
     .line 7
@@ -3451,7 +3504,7 @@
     .locals 0
 
     .line 0
-    iput-boolean p1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A08:Z
+    iput-boolean p1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0B:Z
 
     .line 1
     .line 2
@@ -3462,7 +3515,7 @@
     .locals 0
 
     .line 0
-    iput-boolean p1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A09:Z
+    iput-boolean p1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0C:Z
 
     .line 1
     .line 2
@@ -3473,11 +3526,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0F:LX/3pT;
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0A:LX/3rf;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/3pT;->A04()Landroid/view/View;
+    invoke-virtual {v0}, LX/3rf;->A03()Landroid/view/View;
 
     .line 3
     .line 4
@@ -3514,14 +3567,14 @@
     return-void
 .end method
 
-.method public setVideoPluginAlignment(LX/0rx;)V
+.method public setVideoPluginAlignment(LX/3wJ;)V
     .locals 2
 
     .line 0
     const/4 v0, 0x1
 
     .line 1
-    new-array v1, v0, [LX/0rx;
+    new-array v1, v0, [LX/3wJ;
 
     .line 2
     .line 3
@@ -3532,7 +3585,7 @@
 
     .line 5
     .line 6
-    invoke-virtual {p0, v1}, Lcom/facebook/video/plugins/VideoPlugin;->setVideoPluginAlignments([LX/0rx;)V
+    invoke-virtual {p0, v1}, Lcom/facebook/video/plugins/VideoPlugin;->setVideoPluginAlignments([LX/3wJ;)V
 
     .line 7
     .line 8
@@ -3540,11 +3593,11 @@
     return-void
 .end method
 
-.method public varargs setVideoPluginAlignments([LX/0rx;)V
+.method public varargs setVideoPluginAlignments([LX/3wJ;)V
     .locals 9
 
     .line 0
-    iget-object v8, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Landroid/widget/FrameLayout;
+    iget-object v8, p0, Lcom/facebook/video/plugins/VideoPlugin;->A04:Landroid/widget/FrameLayout;
 
     .line 1
     .line 2
@@ -3676,18 +3729,23 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/video/plugins/VideoPlugin;->A0E:Landroid/widget/FrameLayout;
+    iget-object v1, p0, LX/3pj;->A01:Landroid/view/ViewGroup;
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/3od;->A01:Landroid/view/ViewGroup;
+    if-eqz v1, :cond_0
 
     .line 3
     .line 4
-    invoke-static {v1, v0, p1}, LX/3qG;->A00(Landroid/view/View;Landroid/view/View;F)V
+    iget-object v0, p0, Lcom/facebook/video/plugins/VideoPlugin;->A04:Landroid/widget/FrameLayout;
 
     .line 5
     .line 6
+    invoke-static {v0, v1, p1}, LX/3vB;->A00(Landroid/view/View;Landroid/view/View;F)V
+
     .line 7
+    .line 8
+    .line 9
+    :cond_0
     return-void
 .end method

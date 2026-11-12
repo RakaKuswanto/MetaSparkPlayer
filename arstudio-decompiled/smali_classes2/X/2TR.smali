@@ -2,6 +2,10 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0Cl;
-.implements LX/2TM;
+
+# virtual methods
+.method public abstract A8t(ILjava/lang/String;)I
+.end method
+
+.method public abstract APW(I)Z
+.end method

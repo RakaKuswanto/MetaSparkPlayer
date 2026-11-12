@@ -1,65 +1,48 @@
-.class public abstract LX/3aq;
+.class public final LX/3aq;
 .super LX/3an;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:I
-
-.field public final A02:LX/1kQ;
-
-.field public final A03:Ljava/lang/CharSequence;
-
-.field public final A04:Z
-
-
 # direct methods
-.method public constructor <init>(LX/3as;Ljava/lang/CharSequence;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/res/Resources;Ljava/io/File;[I[I)V
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, LX/3an;-><init>()V
+    invoke-static {}, LX/0X1;->A05()LX/0Qq;
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    move-result-object v0
 
     .line 4
-    iput v0, p0, LX/3aq;->A00:I
+    iget-boolean v0, v0, LX/0Qq;->A0x:Z
 
     .line 5
     .line 6
-    iget-object v0, p1, LX/3as;->A00:LX/1kQ;
+    xor-int/lit8 v5, v0, 0x1
 
     .line 7
     .line 8
-    iput-object v0, p0, LX/3aq;->A02:LX/1kQ;
+    move-object v0, p0
 
     .line 9
+    move-object v1, p1
+
     .line 10
-    iget-boolean v0, p1, LX/3as;->A02:Z
+    move-object v2, p2
 
     .line 11
+    move-object v3, p3
+
     .line 12
-    iput-boolean v0, p0, LX/3aq;->A04:Z
+    move-object v4, p4
 
     .line 13
-    .line 14
-    const v0, 0x7fffffff
+    invoke-direct/range {v0 .. v5}, LX/3an;-><init>(Landroid/content/res/Resources;Ljava/io/File;[I[IZ)V
 
+    .line 14
     .line 15
     .line 16
-    .line 17
-    iput v0, p0, LX/3aq;->A01:I
-
-    .line 18
-    .line 19
-    iput-object p2, p0, LX/3aq;->A03:Ljava/lang/CharSequence;
-
-    .line 20
-    .line 21
     return-void
 .end method

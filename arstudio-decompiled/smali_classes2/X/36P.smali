@@ -1,226 +1,276 @@
 .class public final LX/36P;
-.super Ljava/lang/Object;
+.super LX/308;
 .source ""
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
-
-# instance fields
-.field public final A00:J
+# static fields
+.field public static final A00:Lcom/google/common/collect/ImmutableList;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/ActivityManager;)V
-    .locals 5
+.method public static constructor <clinit>()V
+    .locals 10
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, LX/36Q;->A04:LX/36S;
 
     .line 1
     .line 2
+    sget-object v1, LX/36Q;->A05:LX/36S;
+
     .line 3
-    if-eqz p1, :cond_0
-
     .line 4
-    .line 5
-    invoke-static {p1}, LX/36P;->A00(Landroid/app/ActivityManager;)J
+    sget-object v2, LX/36Q;->A07:LX/36S;
 
+    .line 5
     .line 6
+    sget-object v3, LX/36Q;->A06:LX/36S;
+
     .line 7
     .line 8
-    move-result-wide v3
+    sget-object v4, LX/36Q;->A08:LX/36S;
 
     .line 9
-    const-wide/16 v1, 0x0
-
     .line 10
+    sget-object v5, LX/36Q;->A03:LX/36S;
+
     .line 11
-    cmp-long v0, v3, v1
-
     .line 12
+    sget-object v6, LX/36Q;->A01:LX/36S;
+
     .line 13
-    if-lez v0, :cond_0
-
     .line 14
-    .line 15
-    const-wide v1, 0x7fffffffffffffffL
+    sget-object v7, LX/36Q;->A00:LX/36S;
 
+    .line 15
     .line 16
+    sget-object v8, LX/36Q;->A02:LX/36S;
+
     .line 17
     .line 18
+    sget-object v9, LX/36Q;->A09:LX/36S;
+
     .line 19
     .line 20
-    cmp-long v0, v3, v1
+    invoke-static/range {v0 .. v9}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     .line 21
     .line 22
-    if-nez v0, :cond_1
-
     .line 23
+    move-result-object v0
+
     .line 24
-    :cond_0
-    const-wide/16 v3, -0x1
+    sput-object v0, LX/36P;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 25
     .line 26
-    :cond_1
-    iput-wide v3, p0, LX/36P;->A00:J
-
-    .line 27
-    .line 28
     return-void
 .end method
 
-.method public static A00(Landroid/app/ActivityManager;)J
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    new-instance v0, Landroid/app/ActivityManager$MemoryInfo;
+    sget-object v1, LX/36P;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 1
     .line 2
-    invoke-direct {v0}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
+    const-string/jumbo v0, "tabs_table"
 
     .line 3
     .line 4
     .line 5
-    invoke-virtual {p0, v0}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
+    invoke-direct {p0, v0, v1}, LX/308;-><init>(Ljava/lang/String;Lcom/google/common/collect/ImmutableList;)V
 
     .line 6
     .line 7
     .line 8
-    iget-wide v0, v0, Landroid/app/ActivityManager$MemoryInfo;->totalMem:J
-
-    .line 9
-    .line 10
-    return-wide v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic call()Ljava/lang/Object;
-    .locals 10
+.method public final A00(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 6
 
     .line 0
-    iget-wide v5, p0, LX/36P;->A00:J
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    const-wide/high16 v0, -0x4010000000000000L    # -1.0
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-super {p0, p1}, LX/308;->A00(Landroid/database/sqlite/SQLiteDatabase;)V
 
     .line 5
     .line 6
     .line 7
-    move-result-object v9
+    sget-object v0, LX/36Q;->A04:LX/36S;
 
     .line 8
-    const-wide/16 v1, -0x1
-
     .line 9
-    .line 10
-    cmp-long v0, v5, v1
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
+    .line 10
     .line 11
     .line 12
-    if-eqz v0, :cond_0
+    move-result-object v5
 
     .line 13
-    .line 14
-    sget-object v2, LX/3Ds;->A00:[Ljava/lang/String;
+    const-string/jumbo v3, "tabs_table"
 
+    .line 14
     .line 15
     .line 16
-    array-length v0, v2
+    const-string v4, "INDEX_TAB_ID"
 
     .line 17
-    new-array v1, v0, [J
-
     .line 18
+    const-string v0, ", "
+
     .line 19
-    const-string v0, "/proc/self/status"
-
     .line 20
-    .line 21
-    invoke-static {v0, v1, v2}, LX/0J0;->A02(Ljava/lang/String;[J[Ljava/lang/String;)Z
+    new-instance v2, Lcom/google/common/base/Joiner;
 
+    .line 21
     .line 22
+    invoke-direct {v2, v0}, Lcom/google/common/base/Joiner;-><init>(Ljava/lang/String;)V
+
     .line 23
     .line 24
-    const/4 v0, 0x3
-
     .line 25
-    aget-wide v7, v1, v0
+    sget-object v1, LX/36S;->A03:Lcom/google/common/base/Function;
 
     .line 26
     .line 27
-    const-wide/16 v1, 0x0
+    new-instance v0, LX/20p;
 
     .line 28
     .line 29
-    cmp-long v0, v7, v1
+    invoke-direct {v0, v1, v5}, LX/20p;-><init>(Lcom/google/common/base/Function;Ljava/util/Collection;)V
 
     .line 30
     .line 31
-    if-lez v0, :cond_0
-
     .line 32
-    .line 33
-    const-wide v1, 0x7fffffffffffffffL
+    invoke-virtual {v2, v0}, Lcom/google/common/base/Joiner;->join(Ljava/lang/Iterable;)Ljava/lang/String;
 
+    .line 33
     .line 34
     .line 35
+    move-result-object v2
+
     .line 36
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
     .line 37
     .line 38
-    cmp-long v0, v7, v1
-
     .line 39
+    move-result v0
+
     .line 40
-    if-eqz v0, :cond_0
+    add-int/lit8 v1, v0, 0x29
 
     .line 41
     .line 42
-    long-to-double v3, v7
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     .line 43
-    const-wide/high16 v0, 0x4090000000000000L    # 1024.0
-
     .line 44
     .line 45
-    mul-double/2addr v3, v0
+    move-result v0
 
     .line 46
-    long-to-double v0, v5
+    add-int/2addr v1, v0
 
     .line 47
-    div-double/2addr v3, v0
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     .line 48
-    const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
-
     .line 49
     .line 50
-    cmpl-double v0, v3, v1
+    move-result v0
 
     .line 51
+    add-int/2addr v1, v0
+
     .line 52
-    if-gez v0, :cond_0
+    invoke-static {v1}, LX/0X7;->A0X(I)Ljava/lang/StringBuilder;
 
     .line 53
     .line 54
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
     .line 55
-    .line 56
-    .line 57
-    move-result-object v9
+    move-result-object v1
 
+    .line 56
+    const-string v0, "CREATE"
+
+    .line 57
     .line 58
-    :cond_0
-    return-object v9
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 59
+    .line 60
+    .line 61
+    const-string v0, " INDEX IF NOT EXISTS "
+
+    .line 62
+    .line 63
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 64
+    .line 65
+    .line 66
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 67
+    .line 68
+    .line 69
+    const-string v0, " ON "
+
+    .line 70
+    .line 71
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 72
+    .line 73
+    .line 74
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 75
+    .line 76
+    .line 77
+    const-string v0, " ("
+
+    .line 78
+    .line 79
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 80
+    .line 81
+    .line 82
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 83
+    .line 84
+    .line 85
+    const-string v0, ")"
+
+    .line 86
+    .line 87
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 88
+    .line 89
+    .line 90
+    move-result-object v0
+
+    .line 91
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    .line 92
+    .line 93
+    .line 94
+    return-void
 .end method

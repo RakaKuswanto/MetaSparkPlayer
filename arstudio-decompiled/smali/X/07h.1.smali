@@ -1,20 +1,40 @@
-.class public final LX/07h;
+.class public final synthetic LX/07h;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/view/Choreographer$FrameCallback;
+
+
+# instance fields
+.field public final synthetic A00:Ljava/lang/Runnable;
+
 
 # direct methods
-.method public static A00()Z
+.method public synthetic constructor <init>(Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/07h;->A00:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final doFrame(J)V
     .locals 1
 
     .line 0
-    invoke-static {}, Landroid/os/Trace;->isEnabled()Z
+    iget-object v0, p0, LX/07h;->A00:Ljava/lang/Runnable;
 
     .line 1
     .line 2
-    .line 3
-    move-result v0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
+    .line 3
     .line 4
-    return v0
+    .line 5
+    return-void
 .end method

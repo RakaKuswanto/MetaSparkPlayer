@@ -1,22 +1,11 @@
-.class public abstract LX/2J6;
+.class public interface abstract LX/2J6;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract AF3(Ljava/lang/String;)LX/1uU;
 .end method
 
-
-# virtual methods
-.method public abstract A00(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract AF4(Ljava/lang/String;)Ljava/lang/String;
 .end method

@@ -64,6 +64,8 @@
 
 .field public final requiresReauth:Z
 
+.field public final retryTimes:Ljava/util/List;
+
 .field public final rtt:J
 
 .field public final serverFlushTime:J
@@ -78,63 +80,67 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZZLjava/lang/String;IJJJJJIJJJJJJZIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZLjava/lang/String;JJJJZLjava/lang/String;JJ)V
-    .locals 54
+.method public constructor <init>(Ljava/lang/String;ZZLjava/lang/String;ILjava/util/List;JJJJJIJJJJJJZIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZLjava/lang/String;JJJJZLjava/lang/String;JJ)V
+    .locals 55
 
-    const/16 v53, 0x0
+    const/16 v54, 0x0
 
-    .line 268928747
-    move-object/from16 v38, p38
-
-    move/from16 v36, p36
-
-    move-wide/from16 v27, p27
-
-    move-wide/from16 v25, p25
-
-    move-wide/from16 v23, p23
-
-    move-wide/from16 v21, p21
-
-    move-wide/from16 v19, p19
+    .line 268726915
+    move-object/from16 v39, p39
 
     move/from16 v37, p37
 
-    move-wide/from16 v8, p8
+    move-wide/from16 v28, p28
 
-    move-wide/from16 v39, p39
+    move-wide/from16 v26, p26
 
-    move-wide/from16 v10, p10
+    move-wide/from16 v24, p24
 
-    move-wide/from16 v41, p41
+    move-wide/from16 v22, p22
 
-    move-wide/from16 v12, p12
+    move-wide/from16 v20, p20
 
-    move-wide/from16 v43, p43
+    move-wide/from16 v18, p18
 
-    move-wide/from16 v14, p14
+    move/from16 v38, p38
 
-    move-wide/from16 v6, p6
+    move-wide/from16 v9, p9
 
-    move/from16 v35, p35
+    move-wide/from16 v40, p40
 
-    move-wide/from16 v45, p45
+    move-wide/from16 v11, p11
 
-    move/from16 v16, p16
+    move-wide/from16 v42, p42
 
-    move/from16 v47, p47
+    move-wide/from16 v13, p13
 
-    move-object/from16 v48, p48
+    move-wide/from16 v44, p44
 
-    move-wide/from16 v49, p49
+    move-wide/from16 v15, p15
 
-    move-wide/from16 v51, p51
+    move-wide/from16 v7, p7
+
+    move/from16 v36, p36
+
+    move-wide/from16 v46, p46
+
+    move/from16 v17, p17
+
+    move/from16 v48, p48
+
+    move-object/from16 v49, p49
+
+    move-wide/from16 v50, p50
+
+    move-wide/from16 v52, p52
+
+    move-object/from16 v6, p6
+
+    move-object/from16 v35, p35
 
     move/from16 v5, p5
 
     move-object/from16 v34, p34
-
-    move-wide/from16 v17, p17
 
     move-object/from16 v4, p4
 
@@ -142,7 +148,7 @@
 
     move/from16 v3, p3
 
-    move-object/from16 v32, p32
+    move/from16 v32, p32
 
     move/from16 v2, p2
 
@@ -154,178 +160,179 @@
 
     move-object/from16 v0, p0
 
-    move/from16 v29, p29
-
-    invoke-direct/range {v0 .. v53}, Lcom/facebook/graphservice/interfaces/Summary;-><init>(Ljava/lang/String;ZZLjava/lang/String;IJJJJJIJJJJJJZIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZLjava/lang/String;JJJJZLjava/lang/String;JJLcom/facebook/graphservice/interfaces/GraphQLQuery;)V
+    invoke-direct/range {v0 .. v54}, Lcom/facebook/graphservice/interfaces/Summary;-><init>(Ljava/lang/String;ZZLjava/lang/String;ILjava/util/List;JJJJJIJJJJJJZIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZLjava/lang/String;JJJJZLjava/lang/String;JJLcom/facebook/graphservice/interfaces/GraphQLQuery;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ZZLjava/lang/String;IJJJJJIJJJJJJZIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZLjava/lang/String;JJJJZLjava/lang/String;JJLcom/facebook/graphservice/interfaces/GraphQLQuery;)V
+.method public constructor <init>(Ljava/lang/String;ZZLjava/lang/String;ILjava/util/List;JJJJJIJJJJJJZIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZLjava/lang/String;JJJJZLjava/lang/String;JJLcom/facebook/graphservice/interfaces/GraphQLQuery;)V
     .locals 2
 
-    .line 452788
+    .line 291460
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 452789
+    .line 291461
     iput-object p1, p0, Lcom/facebook/graphservice/interfaces/Summary;->source:Ljava/lang/String;
 
-    .line 452790
+    .line 291462
     iput-boolean p2, p0, Lcom/facebook/graphservice/interfaces/Summary;->isFinal:Z
 
-    .line 452791
+    .line 291463
     iput-boolean p3, p0, Lcom/facebook/graphservice/interfaces/Summary;->isNetworkComplete:Z
 
-    .line 452792
+    .line 291464
     iput-object p4, p0, Lcom/facebook/graphservice/interfaces/Summary;->fbRequestId:Ljava/lang/String;
 
-    .line 452793
+    .line 291465
     iput p5, p0, Lcom/facebook/graphservice/interfaces/Summary;->attempts:I
 
-    .line 452794
-    iput-wide p6, p0, Lcom/facebook/graphservice/interfaces/Summary;->requestStart:J
+    .line 291466
+    iput-object p6, p0, Lcom/facebook/graphservice/interfaces/Summary;->retryTimes:Ljava/util/List;
 
-    .line 452795
-    iput-wide p8, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkStart:J
+    .line 291467
+    iput-wide p7, p0, Lcom/facebook/graphservice/interfaces/Summary;->requestStart:J
 
-    .line 452796
-    iput-wide p10, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkEnd:J
+    .line 291468
+    iput-wide p9, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkStart:J
 
-    .line 452797
-    iput-wide p12, p0, Lcom/facebook/graphservice/interfaces/Summary;->parseStart:J
+    .line 291469
+    iput-wide p11, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkEnd:J
 
-    .line 452798
-    move-wide/from16 v0, p14
+    .line 291470
+    iput-wide p13, p0, Lcom/facebook/graphservice/interfaces/Summary;->parseStart:J
+
+    .line 291471
+    move-wide/from16 v0, p15
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->requestEnd:J
 
-    .line 452799
-    move/from16 v0, p16
+    .line 291472
+    move/from16 v0, p17
 
     iput v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->parsedDataSize:I
 
-    .line 452800
-    move-wide/from16 v0, p17
+    .line 291473
+    move-wide/from16 v0, p18
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->additiveParseTimeMs:J
 
-    .line 452801
-    move-wide/from16 v0, p19
+    .line 291474
+    move-wide/from16 v0, p20
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkChunksCount:J
 
-    .line 452802
-    move-wide/from16 v0, p21
+    .line 291475
+    move-wide/from16 v0, p22
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->additiveThreadHopTimeMs:J
 
-    .line 452803
-    move-wide/from16 v0, p23
+    .line 291476
+    move-wide/from16 v0, p24
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->fetchCachedResponseStart:J
 
-    .line 452804
-    move-wide/from16 v0, p25
+    .line 291477
+    move-wide/from16 v0, p26
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->fetchCachedResponseEnd:J
 
-    .line 452805
-    move-wide/from16 v0, p27
+    .line 291478
+    move-wide/from16 v0, p28
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->cachedResponseAge:J
 
-    .line 452806
-    move/from16 v0, p29
+    .line 291479
+    move/from16 v0, p30
 
     iput-boolean v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->freshResponse:Z
 
-    .line 452807
-    move/from16 v0, p30
+    .line 291480
+    move/from16 v0, p31
 
     iput v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->code:I
 
-    .line 452808
-    move/from16 v0, p31
+    .line 291481
+    move/from16 v0, p32
 
     iput v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->apiErrorCode:I
 
-    .line 452809
-    move-object/from16 v0, p32
+    .line 291482
+    move-object/from16 v0, p33
 
     iput-object v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->summary:Ljava/lang/String;
 
-    .line 452810
-    move-object/from16 v0, p33
+    .line 291483
+    move-object/from16 v0, p34
 
     iput-object v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->description:Ljava/lang/String;
 
-    .line 452811
-    move-object/from16 v0, p34
+    .line 291484
+    move-object/from16 v0, p35
 
     iput-object v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->debugInfo:Ljava/lang/String;
 
-    .line 452812
-    move/from16 v0, p35
+    .line 291485
+    move/from16 v0, p36
 
     iput-boolean v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->isSilent:Z
 
-    .line 452813
-    move/from16 v0, p36
+    .line 291486
+    move/from16 v0, p37
 
     iput-boolean v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->isTransient:Z
 
-    .line 452814
-    move/from16 v0, p37
+    .line 291487
+    move/from16 v0, p38
 
     iput-boolean v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->requiresReauth:Z
 
-    .line 452815
-    move-object/from16 v0, p38
+    .line 291488
+    move-object/from16 v0, p39
 
     iput-object v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->consistencySource:Ljava/lang/String;
 
-    .line 452816
-    move-wide/from16 v0, p39
+    .line 291489
+    move-wide/from16 v0, p40
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->serverStartTime:J
 
-    .line 452817
-    move-wide/from16 v0, p41
+    .line 291490
+    move-wide/from16 v0, p42
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->serverFlushTime:J
 
-    .line 452818
-    move-wide/from16 v0, p43
+    .line 291491
+    move-wide/from16 v0, p44
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->cacheSyncStart:J
 
-    .line 452819
-    move-wide/from16 v0, p45
+    .line 291492
+    move-wide/from16 v0, p46
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->cacheSyncEnd:J
 
-    .line 452820
-    move/from16 v0, p47
+    .line 291493
+    move/from16 v0, p48
 
     iput-boolean v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->rejectedFromAdaptiveFetch:Z
 
-    .line 452821
-    move-object/from16 v0, p48
+    .line 291494
+    move-object/from16 v0, p49
 
     iput-object v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->prefetchPredictionID:Ljava/lang/String;
 
-    .line 452822
-    move-wide/from16 v0, p49
+    .line 291495
+    move-wide/from16 v0, p50
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->rtt:J
 
-    .line 452823
-    move-wide/from16 v0, p51
+    .line 291496
+    move-wide/from16 v0, p52
 
     iput-wide v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->upstreamLatency:J
 
-    .line 452824
-    move-object/from16 v0, p53
+    .line 291497
+    move-object/from16 v0, p54
 
     iput-object v0, p0, Lcom/facebook/graphservice/interfaces/Summary;->query:Lcom/facebook/graphservice/interfaces/GraphQLQuery;
 
@@ -392,309 +399,331 @@
 
     .line 29
     .line 30
-    const-string v0, "attempts"
+    const-string/jumbo v0, "attempts"
 
     .line 31
     .line 32
+    .line 33
     invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 33
     .line 34
     .line 35
-    iget-object v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->fbRequestId:Ljava/lang/String;
-
     .line 36
+    iget-object v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->retryTimes:Ljava/util/List;
+
     .line 37
-    const-string v0, "fbRequestId"
-
     .line 38
-    .line 39
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "retryTimes"
 
+    .line 39
     .line 40
     .line 41
-    .line 42
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->requestStart:J
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 42
     .line 43
     .line 44
-    const-string/jumbo v0, "requestStart"
+    iget-object v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->fbRequestId:Ljava/lang/String;
 
     .line 45
     .line 46
-    .line 47
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "fbRequestId"
 
+    .line 47
     .line 48
     .line 49
-    .line 50
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkStart:J
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 50
     .line 51
     .line 52
-    const-string/jumbo v0, "networkStart"
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->requestStart:J
 
     .line 53
     .line 54
-    .line 55
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "requestStart"
 
+    .line 55
     .line 56
     .line 57
-    .line 58
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkEnd:J
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 58
     .line 59
     .line 60
-    const-string/jumbo v0, "networkEnd"
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkStart:J
 
     .line 61
     .line 62
-    .line 63
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "networkStart"
 
+    .line 63
     .line 64
     .line 65
-    .line 66
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->parseStart:J
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 66
     .line 67
     .line 68
-    const-string/jumbo v0, "parseStart"
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkEnd:J
 
     .line 69
     .line 70
-    .line 71
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "networkEnd"
 
+    .line 71
     .line 72
     .line 73
-    .line 74
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->requestEnd:J
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 74
     .line 75
     .line 76
-    const-string/jumbo v0, "requestEnd"
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->parseStart:J
 
     .line 77
     .line 78
-    .line 79
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "parseStart"
 
+    .line 79
     .line 80
     .line 81
-    .line 82
-    iget v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->parsedDataSize:I
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 82
     .line 83
     .line 84
-    const-string/jumbo v0, "parsedDataSize"
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->requestEnd:J
 
     .line 85
     .line 86
-    .line 87
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "requestEnd"
 
+    .line 87
     .line 88
     .line 89
-    .line 90
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->additiveParseTimeMs:J
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 90
     .line 91
     .line 92
-    const-string v0, "additiveParseTimeMs"
+    iget v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->parsedDataSize:I
 
     .line 93
     .line 94
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "parsedDataSize"
 
     .line 95
     .line 96
     .line 97
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkChunksCount:J
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 98
     .line 99
-    const-string/jumbo v0, "networkChunksCount"
-
     .line 100
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->additiveParseTimeMs:J
+
     .line 101
     .line 102
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "additiveParseTimeMs"
 
     .line 103
     .line 104
     .line 105
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->additiveThreadHopTimeMs:J
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 106
     .line 107
-    const-string v0, "additiveThreadHopTimeMs"
-
     .line 108
-    .line 109
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->networkChunksCount:J
 
+    .line 109
     .line 110
+    const-string/jumbo v0, "networkChunksCount"
+
     .line 111
     .line 112
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->fetchCachedResponseStart:J
-
     .line 113
-    .line 114
-    const-string v0, "fetchCachedResponseStart"
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 114
     .line 115
     .line 116
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->additiveThreadHopTimeMs:J
 
     .line 117
     .line 118
-    .line 119
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->fetchCachedResponseEnd:J
+    const-string/jumbo v0, "additiveThreadHopTimeMs"
 
+    .line 119
     .line 120
     .line 121
-    const-string v0, "fetchCachedResponseEnd"
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 122
     .line 123
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
-
     .line 124
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->fetchCachedResponseStart:J
+
     .line 125
     .line 126
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->cachedResponseAge:J
+    const-string/jumbo v0, "fetchCachedResponseStart"
 
     .line 127
     .line 128
-    const-string v0, "cachedResponseAge"
-
     .line 129
-    .line 130
     invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 130
     .line 131
     .line 132
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->fetchCachedResponseEnd:J
+
     .line 133
-    iget-boolean v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->freshResponse:Z
-
     .line 134
-    .line 135
-    const-string/jumbo v0, "freshResponse"
+    const-string/jumbo v0, "fetchCachedResponseEnd"
 
+    .line 135
     .line 136
     .line 137
-    .line 138
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 138
     .line 139
     .line 140
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->cachedResponseAge:J
+
     .line 141
-    iget-object v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->consistencySource:Ljava/lang/String;
-
     .line 142
-    .line 143
-    const-string v0, "consistencySource"
+    const-string/jumbo v0, "cachedResponseAge"
 
+    .line 143
     .line 144
     .line 145
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 146
     .line 147
     .line 148
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->serverStartTime:J
+    iget-boolean v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->freshResponse:Z
 
     .line 149
     .line 150
-    const-string/jumbo v0, "serverStartTime"
+    const-string/jumbo v0, "freshResponse"
 
     .line 151
     .line 152
     .line 153
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 154
     .line 155
     .line 156
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->serverFlushTime:J
+    iget-object v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->consistencySource:Ljava/lang/String;
 
     .line 157
     .line 158
-    const-string/jumbo v0, "serverFlushTime"
+    const-string/jumbo v0, "consistencySource"
 
     .line 159
     .line 160
     .line 161
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 162
     .line 163
     .line 164
-    iget-boolean v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->rejectedFromAdaptiveFetch:Z
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->serverStartTime:J
 
     .line 165
     .line 166
-    const-string/jumbo v0, "rejectedFromAdaptiveFetch"
+    const-string/jumbo v0, "serverStartTime"
 
     .line 167
     .line 168
     .line 169
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 170
     .line 171
     .line 172
-    iget-object v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->prefetchPredictionID:Ljava/lang/String;
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->serverFlushTime:J
 
     .line 173
     .line 174
-    const-string/jumbo v0, "prefetchPredictionID"
+    const-string/jumbo v0, "serverFlushTime"
 
     .line 175
     .line 176
     .line 177
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 178
     .line 179
     .line 180
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->rtt:J
+    iget-boolean v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->rejectedFromAdaptiveFetch:Z
 
     .line 181
     .line 182
-    const-string/jumbo v0, "rtt"
+    const-string/jumbo v0, "rejectedFromAdaptiveFetch"
 
     .line 183
     .line 184
     .line 185
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 186
     .line 187
     .line 188
-    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->upstreamLatency:J
+    iget-object v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->prefetchPredictionID:Ljava/lang/String;
 
     .line 189
     .line 190
-    const-string/jumbo v0, "upstreamLatency"
+    const-string/jumbo v0, "prefetchPredictionID"
 
     .line 191
     .line 192
     .line 193
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 194
     .line 195
     .line 196
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->rtt:J
 
     .line 197
     .line 198
+    const-string/jumbo v0, "rtt"
+
     .line 199
+    .line 200
+    .line 201
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
+    .line 202
+    .line 203
+    .line 204
+    iget-wide v1, p0, Lcom/facebook/graphservice/interfaces/Summary;->upstreamLatency:J
+
+    .line 205
+    .line 206
+    const-string/jumbo v0, "upstreamLatency"
+
+    .line 207
+    .line 208
+    .line 209
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
+    .line 210
+    .line 211
+    .line 212
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 213
+    .line 214
+    .line 215
     move-result-object v0
 
-    .line 200
+    .line 216
     return-object v0
 .end method

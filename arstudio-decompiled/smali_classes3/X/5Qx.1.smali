@@ -1,93 +1,164 @@
 .class public final LX/5Qx;
-.super LX/5QV;
+.super LX/5R4;
 .source ""
 
 
 # instance fields
-.field public A00:LX/5Qy;
+.field public A00:[I
+
+.field public A01:[I
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/collect/ImmutableCollection;Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0}, LX/5R4;-><init>()V
 
     .line 1
-    invoke-direct {p0, p1, v0, v0}, LX/5QV;-><init>(Lcom/google/common/collect/ImmutableCollection;ZZ)V
-
     .line 2
     .line 3
-    .line 4
-    new-instance v0, LX/5Qz;
-
-    .line 5
-    .line 6
-    invoke-direct {v0, p0, p2, p3}, LX/5Qz;-><init>(LX/5Qx;Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)V
-
-    .line 7
-    .line 8
-    .line 9
-    iput-object v0, p0, LX/5Qx;->A00:LX/5Qy;
-
-    .line 10
-    .line 11
-    invoke-virtual {p0}, LX/5QV;->A03()V
-
-    .line 12
-    .line 13
-    .line 14
     return-void
 .end method
 
 
 # virtual methods
-.method public final A04(Ljava/lang/Integer;)V
-    .locals 1
+.method public final Afm(Ljava/nio/ByteBuffer;)V
+    .locals 7
 
     .line 0
-    invoke-super {p0, p1}, LX/5QV;->A04(Ljava/lang/Integer;)V
+    iget-object v6, p0, LX/5Qx;->A00:[I
 
     .line 1
     .line 2
-    .line 3
-    sget-object v0, LX/014;->A00:Ljava/lang/Integer;
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 3
     .line 4
     .line 5
-    if-ne p1, v0, :cond_0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
     .line 6
     .line 7
-    const/4 v0, 0x0
-
     .line 8
-    iput-object v0, p0, LX/5Qx;->A00:LX/5Qy;
+    move-result v5
 
     .line 9
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
     .line 10
+    .line 11
+    .line 12
+    move-result v4
+
+    .line 13
+    sub-int v1, v4, v5
+
+    .line 14
+    .line 15
+    iget-object v0, p0, LX/5R4;->A00:LX/5R2;
+
+    .line 16
+    .line 17
+    iget v0, v0, LX/5R2;->A00:I
+
+    .line 18
+    .line 19
+    div-int/2addr v1, v0
+
+    .line 20
+    iget-object v0, p0, LX/5R4;->A06:LX/5R2;
+
+    .line 21
+    .line 22
+    iget v0, v0, LX/5R2;->A00:I
+
+    .line 23
+    .line 24
+    mul-int/2addr v1, v0
+
+    .line 25
+    invoke-virtual {p0, v1}, LX/5R4;->A02(I)Ljava/nio/ByteBuffer;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v3
+
+    .line 29
+    :goto_0
+    if-ge v5, v4, :cond_1
+
+    .line 30
+    .line 31
+    array-length v2, v6
+
+    .line 32
+    const/4 v1, 0x0
+
+    .line 33
+    :goto_1
+    if-ge v1, v2, :cond_0
+
+    .line 34
+    .line 35
+    aget v0, v6, v1
+
+    .line 36
+    .line 37
+    mul-int/lit8 v0, v0, 0x2
+
+    .line 38
+    .line 39
+    add-int/2addr v0, v5
+
+    .line 40
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v0
+
+    .line 44
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    .line 45
+    .line 46
+    .line 47
+    add-int/lit8 v1, v1, 0x1
+
+    .line 48
+    .line 49
+    goto :goto_1
+
+    .line 50
     :cond_0
-    return-void
-.end method
+    iget-object v0, p0, LX/5R4;->A00:LX/5R2;
 
-.method public final interruptTask()V
-    .locals 1
+    .line 51
+    .line 52
+    iget v0, v0, LX/5R2;->A00:I
 
-    .line 0
-    iget-object v0, p0, LX/5Qx;->A00:LX/5Qy;
+    .line 53
+    .line 54
+    add-int/2addr v5, v0
 
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    .line 55
+    goto :goto_0
 
-    .line 3
-    .line 4
-    invoke-virtual {v0}, LX/3bV;->A02()V
+    .line 56
+    :cond_1
+    invoke-virtual {p1, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
+    .line 57
+    .line 58
+    .line 59
+    invoke-virtual {v3}, Ljava/nio/Buffer;->flip()Ljava/nio/Buffer;
+
+    .line 60
+    .line 61
+    .line 62
     return-void
 .end method

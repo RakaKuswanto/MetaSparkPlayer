@@ -22,7 +22,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yi;->A17()Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {}, LX/0X6;->A1A()Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 4
     .line 5

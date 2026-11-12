@@ -1,334 +1,241 @@
 .class public final LX/2lL;
-.super LX/32i;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MqttClientStateManager$3"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "XplatServiceDelegate$onDestroy$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/2lK;
+.field public final synthetic A00:Lcom/facebook/mqtt/service/XplatServiceDelegate;
 
 
 # direct methods
-.method public constructor <init>(LX/2lK;)V
-    .locals 2
+.method public constructor <init>(Lcom/facebook/mqtt/service/XplatServiceDelegate;)V
+    .locals 0
 
-    .line 0
-    const-string v1, "MqttClientStateManager"
+    iput-object p1, p0, LX/2lL;->A00:Lcom/facebook/mqtt/service/XplatServiceDelegate;
 
-    .line 1
-    .line 2
-    const-string v0, "appStateCheck"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    iput-object p1, p0, LX/2lL;->A00:LX/2lK;
-
-    .line 5
-    .line 6
-    invoke-direct {p0, v1, v0}, LX/32i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 11
+    .locals 5
 
     .line 0
-    iget-object v5, p0, LX/2lL;->A00:LX/2lK;
+    iget-object v4, p0, LX/2lL;->A00:Lcom/facebook/mqtt/service/XplatServiceDelegate;
 
     .line 1
     .line 2
-    iget-object v7, v5, LX/2lK;->A0B:LX/2sb;
+    instance-of v0, v4, Lcom/facebook/push/mqtt/service/xplat/MqttXplatServiceDelegate;
 
     .line 3
     .line 4
-    invoke-virtual {v7}, LX/2sb;->A04()Z
+    if-eqz v0, :cond_2
 
     .line 5
     .line 6
-    .line 7
-    move-result v0
+    check-cast v4, Lcom/facebook/push/mqtt/service/xplat/MqttXplatServiceDelegate;
 
+    .line 7
     .line 8
-    if-eqz v0, :cond_0
+    :try_start_0
+    iget-object v0, v4, LX/0Hg;->A01:LX/0Hh;
 
     .line 9
     .line 10
-    iget-object v0, v5, LX/2lK;->A0E:LX/0Na;
+    invoke-static {v0}, LX/0WV;->A01(Landroid/content/Context;)Landroid/content/Context;
 
     .line 11
     .line 12
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 13
-    .line 14
-    .line 15
-    move-result-object v0
+    move-result-object v1
 
+    .line 14
+    iget-object v0, v4, Lcom/facebook/push/mqtt/service/xplat/MqttXplatServiceDelegate;->A04:LX/01u;
+
+    .line 15
     .line 16
-    check-cast v0, LX/2kr;
+    invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 17
     .line 18
-    iget-object v0, v0, LX/2kr;->A00:Landroid/os/PowerManager;
-
     .line 19
-    .line 20
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
+    iget-object v0, v4, Lcom/facebook/push/mqtt/service/xplat/MqttXplatServiceDelegate;->A02:LX/2AS;
 
+    .line 20
     .line 21
+    if-eqz v0, :cond_1
+
     .line 22
     .line 23
-    move-result v0
+    sget v0, LX/2I6;->API:I
 
     .line 24
-    if-nez v0, :cond_0
-
     .line 25
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 26
-    monitor-enter v7
-
     .line 27
-    :try_start_0
-    iget v0, v7, LX/2sb;->A0S:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 28
+    move-result-object v3
+
     .line 29
-    monitor-exit v7
+    check-cast v3, LX/1DO;
 
     .line 30
-    if-gtz v0, :cond_1
-
     .line 31
+    iget-object v2, v4, Lcom/facebook/push/mqtt/service/xplat/MqttXplatServiceDelegate;->A02:LX/2AS;
+
     .line 32
-    monitor-enter v7
-
     .line 33
-    monitor-exit v7
-
-    .line 34
-    :cond_0
-    :goto_0
     const/4 v0, 0x0
 
-    .line 35
-    iput-object v0, v5, LX/2lK;->A01:Ljava/util/concurrent/ScheduledFuture;
+    .line 34
+    invoke-static {v2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 35
     .line 36
     .line 37
-    return-void
+    iget-object v0, v3, LX/1DO;->A04:LX/0lu;
 
     .line 38
-    :cond_1
-    const/4 v0, 0x6
-
     .line 39
-    new-array v4, v0, [Ljava/lang/Object;
+    invoke-static {v0}, LX/0lu;->A07(LX/0lu;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 40
     .line 41
-    const/4 v1, 0x0
-
     .line 42
-    monitor-enter v7
+    move-result-object v1
 
     .line 43
-    monitor-exit v7
+    invoke-static {v3}, LX/1DO;->A00(LX/1DO;)LX/15v;
 
     .line 44
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     .line 45
     .line 46
-    .line 47
     move-result-object v0
 
+    .line 47
+    iget-object v0, v0, LX/15v;->A03:LX/1GO;
+
     .line 48
-    aput-object v0, v4, v1
-
     .line 49
+    invoke-interface {v1, v2, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->Ap8(LX/1D3;LX/28F;)V
+
     .line 50
-    const/4 v1, 0x1
-
     .line 51
-    monitor-enter v7
-
     .line 52
-    :try_start_1
-    iget v0, v7, LX/2sb;->A0S:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const/4 v0, 0x0
 
     .line 53
-    .line 54
-    monitor-exit v7
+    iput-object v0, v4, Lcom/facebook/push/mqtt/service/xplat/MqttXplatServiceDelegate;->A02:LX/2AS;
 
+    .line 54
     .line 55
-    invoke-static {v4, v0, v1}, LX/001;->A1A([Ljava/lang/Object;II)V
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 56
+    :catch_0
+    move-exception v2
+
     .line 57
+    invoke-static {v2}, LX/001;->A1V(Ljava/lang/Throwable;)Z
+
     .line 58
-    const/4 v1, 0x2
-
     .line 59
-    invoke-virtual {v7}, LX/2sb;->A02()Z
-
     .line 60
-    .line 61
-    .line 62
     move-result v0
 
+    .line 61
+    if-eqz v0, :cond_0
+
+    .line 62
     .line 63
-    invoke-static {v4, v1, v0}, LX/001;->A1C([Ljava/lang/Object;IZ)V
+    const-string v1, "MqttXplatServiceDelegate"
 
     .line 64
     .line 65
-    .line 66
-    const/4 v8, 0x3
+    const-string v0, "Error removing connection config listener. System is dead"
 
+    .line 66
     .line 67
-    iget-object v6, v7, LX/2sb;->A0J:LX/0Na;
+    invoke-static {v1, v0, v2}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 68
     .line 69
-    invoke-static {v6}, LX/0Yd;->A07(LX/0Na;)J
-
     .line 70
+    goto :goto_0
+
     .line 71
+    :cond_0
+    throw v2
+
     .line 72
-    move-result-wide v2
+    :catch_1
+    move-exception v2
 
     .line 73
-    iget-wide v0, v7, LX/2sb;->A0X:J
+    const-string v1, "MqttXplatServiceDelegate"
 
     .line 74
     .line 75
-    sub-long/2addr v2, v0
+    const-string v0, "Illegal argument passed to unregister"
 
     .line 76
-    invoke-static {v6}, LX/0Yd;->A07(LX/0Na;)J
-
     .line 77
+    invoke-static {v1, v0, v2}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 78
     .line 79
-    move-result-wide v0
-
     .line 80
-    const-wide/16 v9, 0x0
+    :cond_1
+    :goto_0
+    sget v0, LX/2I6;->AQX:I
 
     .line 81
     .line 82
-    sub-long/2addr v0, v9
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 83
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
     .line 84
     .line 85
+    move-result-object v2
+
     .line 86
-    move-result-wide v0
+    check-cast v2, LX/1u4;
 
     .line 87
-    invoke-static {v4, v8, v0, v1}, LX/001;->A1B([Ljava/lang/Object;IJ)V
-
     .line 88
+    iget-object v1, v2, LX/1u4;->A02:LX/2jL;
+
     .line 89
     .line 90
-    const/4 v8, 0x4
+    new-instance v0, LX/27c;
 
     .line 91
-    invoke-static {v6}, LX/0Yd;->A07(LX/0Na;)J
-
     .line 92
+    invoke-direct {v0, v2}, LX/27c;-><init>(LX/1u4;)V
+
     .line 93
     .line 94
-    move-result-wide v2
-
     .line 95
-    iget-wide v0, v7, LX/2sb;->A0Y:J
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     .line 96
     .line 97
-    sub-long/2addr v2, v0
-
     .line 98
-    invoke-static {v6}, LX/0Yd;->A07(LX/0Na;)J
-
-    .line 99
-    .line 100
-    .line 101
-    move-result-wide v0
-
-    .line 102
-    sub-long/2addr v0, v9
-
-    .line 103
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    .line 104
-    .line 105
-    .line 106
-    move-result-wide v0
-
-    .line 107
-    invoke-static {v4, v8, v0, v1}, LX/001;->A1B([Ljava/lang/Object;IJ)V
-
-    .line 108
-    .line 109
-    .line 110
-    const/4 v2, 0x5
-
-    .line 111
-    invoke-static {v6}, LX/0Yd;->A07(LX/0Na;)J
-
-    .line 112
-    .line 113
-    .line 114
-    move-result-wide v0
-
-    .line 115
-    sub-long/2addr v0, v9
-
-    .line 116
-    invoke-static {v4, v2, v0, v1}, LX/001;->A1B([Ljava/lang/Object;IJ)V
-
-    .line 117
-    .line 118
-    .line 119
-    const-string v1, "MqttClientStateManager"
-
-    .line 120
-    .line 121
-    const-string/jumbo v0, "reportWrongAppState: Screen is off, but there are still active windows  Active floating windows= %d, active activities= %d, Is AppBackgrounded: %s, Time since backgrounded: %d, Time since foreground: %d, Time since applaunch: %d"
-
-    .line 122
-    .line 123
-    .line 124
-    invoke-static {v1, v0, v4}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 125
-    .line 126
-    .line 127
-    goto :goto_0
-
-    .line 128
-    :catchall_0
-    move-exception v0
-
-    .line 129
-    monitor-exit v7
-
-    .line 130
-    throw v0
+    :cond_2
+    return-void
 .end method

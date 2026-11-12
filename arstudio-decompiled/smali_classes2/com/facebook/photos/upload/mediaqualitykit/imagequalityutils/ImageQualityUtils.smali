@@ -6,7 +6,7 @@
 # static fields
 .field public static BLUE_CHANNEL:I
 
-.field public static final Companion:LX/0xG;
+.field public static final Companion:LX/1gl;
 
 .field public static GREEN_CHANNEL:I
 
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/0xG;
+    new-instance v0, LX/1gl;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/0xG;-><init>()V
+    invoke-direct {v0}, LX/1gl;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/photos/upload/mediaqualitykit/imagequalityutils/ImageQualityUtils;->Companion:LX/0xG;
+    sput-object v0, Lcom/facebook/photos/upload/mediaqualitykit/imagequalityutils/ImageQualityUtils;->Companion:LX/1gl;
 
     .line 6
     .line 7
@@ -48,7 +48,7 @@
     .line 14
     .line 15
     .line 16
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 17
     .line 18
@@ -79,6 +79,9 @@
 
 # virtual methods
 .method public final native calculateColorChannelSSIM(ILandroid/graphics/Bitmap;Landroid/graphics/Bitmap;)F
+.end method
+
+.method public final native calculateESSIM(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)F
 .end method
 
 .method public final native calculateMSSSIM(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)D

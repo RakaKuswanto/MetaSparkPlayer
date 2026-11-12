@@ -27,32 +27,19 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, p2}, LX/0X2;->A1D(Ljava/lang/Object;I)V
 
     .line 8
     .line 9
     .line 10
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput p1, p0, Lcom/facebook/rsys/mosaicgrid/gen/FrameSize;->width:I
 
     .line 11
     .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 15
-    .line 16
-    .line 17
-    iput p1, p0, Lcom/facebook/rsys/mosaicgrid/gen/FrameSize;->width:I
-
-    .line 18
-    .line 19
     iput p2, p0, Lcom/facebook/rsys/mosaicgrid/gen/FrameSize;->height:I
 
-    .line 20
-    .line 21
+    .line 13
+    .line 14
     return-void
 .end method
 
@@ -137,7 +124,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A00(I)I
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 3
     .line 4
@@ -179,7 +166,7 @@
 
     .line 9
     .line 10
-    invoke-static {v4, v2, v0, v3, v1}, LX/00I;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
+    invoke-static {v4, v2, v0, v3, v1}, LX/004;->A0I(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
     .line 11
     .line 12

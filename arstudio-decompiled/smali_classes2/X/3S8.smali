@@ -1,52 +1,98 @@
-.class public final synthetic LX/3S8;
+.class public final LX/3S8;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "HeroManager$$ExternalSyntheticLambda7"
+.field public static final A01:I
+
+.field public static final A02:I
+
+.field public static final A03:LX/3S8;
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
-
-.field public final synthetic A01:LX/46k;
+.field public final A00:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;LX/46k;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, LX/3S8;->A01:LX/46k;
-
-    iput-object p1, p0, LX/3S8;->A00:Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method public static constructor <clinit>()V
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/3S8;->A01:LX/46k;
+    new-instance v0, LX/3S8;
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/3S8;->A00:Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
+    invoke-direct {v0}, LX/3S8;-><init>()V
 
     .line 3
     .line 4
-    invoke-static {v0, v1}, LX/46k;->A04(Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;LX/46k;)V
-
     .line 5
+    sput-object v0, LX/3S8;->A03:LX/3S8;
+
     .line 6
     .line 7
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    add-int/lit8 v0, v1, 0x1
+
+    .line 16
+    .line 17
+    sput v0, LX/3S8;->A01:I
+
+    .line 18
+    .line 19
+    mul-int/lit8 v0, v1, 0x2
+
+    .line 20
+    .line 21
+    add-int/lit8 v0, v0, 0x1
+
+    .line 22
+    .line 23
+    sput v0, LX/3S8;->A02:I
+
+    .line 24
+    .line 25
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    new-instance v0, LX/14a;
+
+    .line 4
+    .line 5
+    invoke-direct {v0}, LX/14a;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    iput-object v0, p0, LX/3S8;->A00:Ljava/util/concurrent/Executor;
+
+    .line 9
+    .line 10
     return-void
 .end method

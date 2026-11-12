@@ -1,69 +1,54 @@
-.class public LX/4Ng;
-.super LX/4DM;
+.class public final LX/4Ng;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/4BX;
-.implements LX/4Be;
-.implements LX/4Cr;
+.implements LX/07u;
 
 
 # instance fields
-.field public A00:LX/4Nl;
-
-.field public A01:LX/4Ni;
-
-.field public A02:LX/1VG;
+.field public final synthetic A00:Landroidx/appcompat/app/AppCompatActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatActivity;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4DM;-><init>()V
+    iput-object p1, p0, LX/4Ng;->A00:Landroidx/appcompat/app/AppCompatActivity;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public ATt(LX/4CY;)V
-    .locals 1
+.method public final Aj1()Landroid/os/Bundle;
+    .locals 2
 
     .line 0
-    const/4 v0, 0x0
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
+    move-result-object v1
+
     .line 4
-    iget-object v0, p0, LX/4DM;->A03:LX/4Ed;
+    iget-object v0, p0, LX/4Ng;->A00:Landroidx/appcompat/app/AppCompatActivity;
 
     .line 5
     .line 6
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatActivity;->A1B()LX/4NK;
 
     .line 7
     .line 8
-    new-instance v0, LX/4Nl;
-
     .line 9
-    .line 10
-    invoke-direct {v0, p0}, LX/4Nl;-><init>(LX/4Ng;)V
-
-    .line 11
-    .line 12
-    .line 13
-    iput-object v0, p0, LX/4Ng;->A00:LX/4Nl;
-
-    .line 14
-    .line 15
-    :cond_0
-    return-void
+    return-object v1
 .end method

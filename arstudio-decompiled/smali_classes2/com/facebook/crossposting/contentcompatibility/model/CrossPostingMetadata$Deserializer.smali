@@ -18,8 +18,8 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
-    .locals 18
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
+    .locals 21
 
     .line 0
     const/4 v6, 0x0
@@ -45,586 +45,702 @@
 
     .line 8
     .line 9
-    const/4 v10, 0x0
+    const/16 v18, 0x0
 
     .line 10
-    const/4 v7, 0x0
-
     .line 11
-    const/4 v8, 0x0
+    const/16 v19, 0x0
 
     .line 12
-    const/4 v11, 0x0
-
     .line 13
-    const/4 v12, 0x0
+    const/4 v10, 0x0
 
     .line 14
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    const/4 v7, 0x0
 
     .line 15
-    .line 16
-    .line 17
-    move-result-object v13
+    const/4 v8, 0x0
 
+    .line 16
+    const/16 v20, 0x0
+
+    .line 17
     .line 18
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v11, 0x0
 
     .line 19
+    const/4 v12, 0x0
+
     .line 20
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
     .line 21
-    move-result-object v9
-
     .line 22
-    :cond_0
-    :try_start_0
-    move-object/from16 v1, p1
-
     .line 23
+    move-result-object v13
+
     .line 24
-    invoke-virtual {v1}, LX/27m;->A0q()LX/270;
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 25
     .line 26
     .line 27
-    move-result-object v2
+    move-result-object v9
 
     .line 28
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    :cond_0
+    :try_start_0
+    move-object/from16 v1, p1
 
     .line 29
     .line 30
-    if-ne v2, v0, :cond_2
+    invoke-virtual {v1}, LX/3oD;->A0t()LX/3ns;
 
     .line 31
     .line 32
-    invoke-static {v1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
-
     .line 33
-    .line 34
-    .line 35
-    move-result-object v0
+    move-result-object v2
 
+    .line 34
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
+
+    .line 35
     .line 36
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    if-ne v2, v0, :cond_2
 
     .line 37
     .line 38
+    invoke-static {v1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
+
     .line 39
-    move-result v3
-
     .line 40
-    move-object/from16 v2, p2
-
     .line 41
+    move-result-object v0
+
     .line 42
-    sparse-switch v3, :sswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 43
     .line 44
     .line 45
-    :cond_1
-    invoke-virtual {v1}, LX/27m;->A1B()LX/27m;
+    move-result v3
 
     .line 46
+    move-object/from16 v2, p2
+
     .line 47
     .line 48
-    :cond_2
-    :goto_0
-    invoke-static {v1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    sparse-switch v3, :sswitch_data_0
 
     .line 49
     .line 50
     .line 51
-    move-result-object v0
+    :cond_1
+    invoke-virtual {v1}, LX/3oD;->A1G()LX/3oD;
 
     .line 52
-    sget-object v1, LX/270;->END_OBJECT:LX/270;
-
     .line 53
     .line 54
-    if-ne v0, v1, :cond_0
+    :cond_2
+    :goto_0
+    invoke-static {v1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 55
     .line 56
-    goto/16 :goto_1
-
     .line 57
+    move-result-object v2
+
     .line 58
-    :sswitch_0
-    const-string/jumbo v2, "is_server_validation_check_bypassed"
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 59
     .line 60
-    .line 61
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ne v2, v0, :cond_0
 
+    .line 61
     .line 62
+    goto/16 :goto_1
+
     .line 63
     .line 64
-    move-result v0
+    :sswitch_0
+    const-string/jumbo v2, "is_server_validation_check_bypassed"
 
     .line 65
-    if-eqz v0, :cond_1
-
     .line 66
     .line 67
-    invoke-virtual {v1}, LX/27m;->A15()Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 68
     .line 69
     .line 70
-    move-result v16
+    move-result v0
 
     .line 71
-    goto :goto_0
+    if-eqz v0, :cond_1
 
     .line 72
+    .line 73
+    invoke-virtual {v1}, LX/3oD;->A19()Z
+
+    .line 74
+    .line 75
+    .line 76
+    move-result v18
+
+    .line 77
+    goto :goto_0
+
+    .line 78
     :sswitch_1
     const-string/jumbo v2, "has_crossposting_setting_changed_in_current_session"
 
-    .line 73
-    .line 74
-    .line 75
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 76
-    .line 77
-    .line 78
-    move-result v0
-
     .line 79
-    if-eqz v0, :cond_1
-
     .line 80
     .line 81
-    invoke-virtual {v1}, LX/27m;->A15()Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 82
     .line 83
     .line 84
-    move-result v14
+    move-result v0
 
     .line 85
-    goto :goto_0
+    if-eqz v0, :cond_1
 
     .line 86
+    .line 87
+    invoke-virtual {v1}, LX/3oD;->A19()Z
+
+    .line 88
+    .line 89
+    .line 90
+    move-result v14
+
+    .line 91
+    goto :goto_0
+
+    .line 92
     :sswitch_2
     const-string/jumbo v2, "is_session_cross_posting_enabled"
 
-    .line 87
-    .line 88
-    .line 89
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 90
-    .line 91
-    .line 92
-    move-result v0
-
     .line 93
-    if-eqz v0, :cond_1
-
     .line 94
     .line 95
-    invoke-virtual {v1}, LX/27m;->A15()Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 96
     .line 97
     .line 98
-    move-result v17
+    move-result v0
 
     .line 99
-    goto :goto_0
+    if-eqz v0, :cond_1
 
     .line 100
+    .line 101
+    invoke-virtual {v1}, LX/3oD;->A19()Z
+
+    .line 102
+    .line 103
+    .line 104
+    move-result v19
+
+    .line 105
+    goto :goto_0
+
+    .line 106
     :sswitch_3
     const-string/jumbo v2, "user_name"
 
-    .line 101
-    .line 102
-    .line 103
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 104
-    .line 105
-    .line 106
-    move-result v0
-
     .line 107
-    if-eqz v0, :cond_1
-
     .line 108
     .line 109
-    invoke-static {v1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 110
     .line 111
     .line 112
-    move-result-object v12
+    move-result v0
 
     .line 113
-    goto :goto_0
+    if-eqz v0, :cond_1
 
     .line 114
+    .line 115
+    invoke-static {v1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 116
+    .line 117
+    .line 118
+    move-result-object v12
+
+    .line 119
+    goto :goto_0
+
+    .line 120
     :sswitch_4
     const-string/jumbo v2, "profile_url"
 
-    .line 115
-    .line 116
-    .line 117
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 118
-    .line 119
-    .line 120
-    move-result v0
-
     .line 121
-    if-eqz v0, :cond_1
-
     .line 122
     .line 123
-    invoke-static {v1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 124
     .line 125
     .line 126
-    move-result-object v10
+    move-result v0
 
     .line 127
-    goto :goto_0
+    if-eqz v0, :cond_1
 
     .line 128
+    .line 129
+    invoke-static {v1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 130
+    .line 131
+    .line 132
+    move-result-object v10
+
+    .line 133
+    goto :goto_0
+
+    .line 134
     :sswitch_5
     const-string/jumbo v2, "is_auto_cross_posting_enabled"
 
-    .line 129
-    .line 130
-    .line 131
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 132
-    .line 133
-    .line 134
-    move-result v0
-
     .line 135
-    if-eqz v0, :cond_1
-
     .line 136
     .line 137
-    invoke-virtual {v1}, LX/27m;->A15()Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 138
     .line 139
     .line 140
-    move-result v15
-
-    .line 141
-    goto :goto_0
-
-    .line 142
-    :sswitch_6
-    const-string v3, "content_ineligibility"
-
-    .line 143
-    .line 144
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 145
-    .line 146
-    .line 147
     move-result v0
 
-    .line 148
+    .line 141
     if-eqz v0, :cond_1
+
+    .line 142
+    .line 143
+    invoke-virtual {v1}, LX/3oD;->A19()Z
+
+    .line 144
+    .line 145
+    .line 146
+    move-result v16
+
+    .line 147
+    goto :goto_0
+
+    .line 148
+    :sswitch_6
+    const-string/jumbo v3, "content_ineligibility"
 
     .line 149
     .line 150
-    const-class v0, LX/0o7;
-
     .line 151
-    .line 152
-    invoke-static {v1, v2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 152
     .line 153
     .line 154
+    move-result v0
+
     .line 155
-    move-result-object v4
+    if-eqz v0, :cond_1
 
     .line 156
-    check-cast v4, LX/0o7;
-
     .line 157
+    const-class v0, LX/11U;
+
     .line 158
-    const-string v0, "contentIneligibility"
-
     .line 159
-    .line 160
-    invoke-static {v4, v0, v13}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0L(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
+    invoke-static {v1, v2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
+    .line 160
     .line 161
     .line 162
+    move-result-object v4
+
     .line 163
-    move-result-object v13
+    check-cast v4, LX/11U;
 
     .line 164
-    goto :goto_0
-
     .line 165
-    :sswitch_7
-    const-string/jumbo v2, "target_id"
+    const-string/jumbo v0, "contentIneligibility"
 
     .line 166
     .line 167
     .line 168
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v0, v13}, LX/1O4;->A08(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
 
     .line 169
     .line 170
     .line 171
-    move-result v0
+    move-result-object v13
 
     .line 172
-    if-eqz v0, :cond_1
+    goto :goto_0
 
     .line 173
-    .line 174
-    invoke-static {v1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    :sswitch_7
+    const-string/jumbo v2, "target_id"
 
+    .line 174
     .line 175
     .line 176
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 177
-    move-result-object v11
-
     .line 178
-    goto/16 :goto_0
-
     .line 179
+    move-result v0
+
     .line 180
-    :sswitch_8
-    const-string/jumbo v3, "remix_setting_status"
+    if-eqz v0, :cond_1
 
     .line 181
     .line 182
-    .line 183
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
+    .line 183
     .line 184
     .line 185
+    move-result-object v11
+
     .line 186
-    move-result v0
+    goto/16 :goto_0
 
     .line 187
-    if-eqz v0, :cond_1
-
     .line 188
-    .line 189
-    const-class v0, Lcom/facebook/graphql/enums/GraphQLXCXPCXPIdentityRemixSettingStatus;
+    :sswitch_8
+    const-string/jumbo v3, "remix_setting_status"
 
+    .line 189
     .line 190
     .line 191
-    invoke-static {v1, v2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 192
     .line 193
     .line 194
-    move-result-object v7
+    move-result v0
 
     .line 195
-    check-cast v7, Lcom/facebook/graphql/enums/GraphQLXCXPCXPIdentityRemixSettingStatus;
+    if-eqz v0, :cond_1
 
     .line 196
     .line 197
-    goto/16 :goto_0
+    const-class v0, Lcom/facebook/graphql/enums/GraphQLXCXPCXPIdentityRemixSettingStatus;
 
     .line 198
     .line 199
-    :sswitch_9
-    const-string v3, "account_privacy_type"
+    invoke-static {v1, v2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 200
     .line 201
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 202
-    .line 203
-    .line 204
-    move-result v0
+    move-result-object v7
 
+    .line 203
+    check-cast v7, Lcom/facebook/graphql/enums/GraphQLXCXPCXPIdentityRemixSettingStatus;
+
+    .line 204
     .line 205
-    if-eqz v0, :cond_1
+    goto/16 :goto_0
 
     .line 206
     .line 207
-    const-class v0, Lcom/facebook/graphql/enums/GraphQLXCXPCXPAccountPrivacyType;
+    :sswitch_9
+    const-string/jumbo v3, "account_privacy_type"
 
     .line 208
     .line 209
-    invoke-static {v1, v2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
-
     .line 210
-    .line 211
-    .line 212
-    move-result-object v6
-
-    .line 213
-    check-cast v6, Lcom/facebook/graphql/enums/GraphQLXCXPCXPAccountPrivacyType;
-
-    .line 214
-    .line 215
-    goto/16 :goto_0
-
-    .line 216
-    .line 217
-    :sswitch_a
-    const-string/jumbo v3, "server_validation_bypass_list"
-
-    .line 218
-    .line 219
-    .line 220
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 221
-    .line 222
-    .line 223
+    .line 211
+    .line 212
+    .line 213
     move-result v0
 
-    .line 224
+    .line 214
     if-eqz v0, :cond_1
+
+    .line 215
+    .line 216
+    const-class v0, Lcom/facebook/graphql/enums/GraphQLXCXPCXPAccountPrivacyType;
+
+    .line 217
+    .line 218
+    invoke-static {v1, v2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
+    .line 219
+    .line 220
+    .line 221
+    move-result-object v6
+
+    .line 222
+    check-cast v6, Lcom/facebook/graphql/enums/GraphQLXCXPCXPAccountPrivacyType;
+
+    .line 223
+    .line 224
+    goto/16 :goto_0
 
     .line 225
     .line 226
-    invoke-static {v1, v2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0D(LX/27m;LX/2DN;)Lcom/google/common/collect/ImmutableList;
+    :sswitch_a
+    const-string/jumbo v2, "show_snackbar_after_share"
 
     .line 227
     .line 228
     .line 229
-    move-result-object v8
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 230
-    goto/16 :goto_0
-
     .line 231
     .line 232
-    :sswitch_b
-    const-string v3, "destination_app"
-
-    .line 233
-    .line 234
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 235
-    .line 236
-    .line 237
     move-result v0
 
-    .line 238
+    .line 233
     if-eqz v0, :cond_1
 
+    .line 234
+    .line 235
+    invoke-virtual {v1}, LX/3oD;->A19()Z
+
+    .line 236
+    .line 237
+    .line 238
+    move-result v20
+
     .line 239
+    goto/16 :goto_0
+
     .line 240
-    const-class v0, Lcom/facebook/graphql/enums/GraphQLXCXPAppName;
-
     .line 241
-    .line 242
-    invoke-static {v1, v2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    :sswitch_b
+    const-string/jumbo v2, "is_for_creation"
 
+    .line 242
     .line 243
     .line 244
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 245
-    move-result-object v5
-
     .line 246
-    check-cast v5, Lcom/facebook/graphql/enums/GraphQLXCXPAppName;
-
     .line 247
+    move-result v0
+
     .line 248
-    goto/16 :goto_0
+    if-eqz v0, :cond_1
 
     .line 249
     .line 250
-    :sswitch_c
-    const-string v3, "count_of_linked_destination"
+    invoke-virtual {v1}, LX/3oD;->A19()Z
 
     .line 251
     .line 252
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 253
-    .line 254
-    .line 255
-    move-result v0
+    move-result v17
 
+    .line 254
+    goto/16 :goto_0
+
+    .line 255
     .line 256
-    if-eqz v0, :cond_1
+    :sswitch_c
+    const-string/jumbo v3, "server_validation_bypass_list"
 
     .line 257
     .line 258
-    invoke-static {v1, v2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0G(LX/27m;LX/2DN;)Ljava/lang/Integer;
-
     .line 259
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 260
     .line 261
-    move-result-object v9
-
     .line 262
-    const-string v0, "countOfLinkedDestination"
+    move-result v0
 
     .line 263
-    .line 264
-    invoke-static {v0, v9}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    if-eqz v0, :cond_1
 
+    .line 264
     .line 265
+    invoke-static {v1, v2}, LX/27L;->A06(LX/3oD;LX/6HS;)Lcom/google/common/collect/ImmutableList;
+
     .line 266
     .line 267
-    goto/16 :goto_0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 268
+    move-result-object v8
+
     .line 269
-    :goto_1
-    new-instance v3, Lcom/facebook/crossposting/contentcompatibility/model/CrossPostingMetadata;
+    goto/16 :goto_0
 
     .line 270
     .line 271
-    invoke-direct/range {v3 .. v17}, Lcom/facebook/crossposting/contentcompatibility/model/CrossPostingMetadata;-><init>(LX/0o7;Lcom/facebook/graphql/enums/GraphQLXCXPAppName;Lcom/facebook/graphql/enums/GraphQLXCXPCXPAccountPrivacyType;Lcom/facebook/graphql/enums/GraphQLXCXPCXPIdentityRemixSettingStatus;Lcom/google/common/collect/ImmutableList;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;ZZZZ)V
+    :sswitch_d
+    const-string/jumbo v2, "has_turned_on_cross_posting_setting_from_post_share_upsell"
 
     .line 272
     .line 273
     .line 274
-    return-object v3
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 275
-    :catch_0
-    move-exception v2
-
     .line 276
-    const-class v0, Lcom/facebook/crossposting/contentcompatibility/model/CrossPostingMetadata;
-
     .line 277
+    move-result v0
+
     .line 278
-    invoke-static {v1, v0, v2}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    if-eqz v0, :cond_1
 
     .line 279
     .line 280
+    invoke-virtual {v1}, LX/3oD;->A19()Z
+
     .line 281
-    const/4 v0, 0x0
-
     .line 282
-    throw v0
-
     .line 283
-    nop
+    move-result v15
 
     .line 284
+    goto/16 :goto_0
+
+    .line 285
+    .line 286
+    :sswitch_e
+    const-string/jumbo v3, "destination_app"
+
+    .line 287
+    .line 288
+    .line 289
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 290
+    .line 291
+    .line 292
+    move-result v0
+
+    .line 293
+    if-eqz v0, :cond_1
+
+    .line 294
+    .line 295
+    const-class v0, Lcom/facebook/graphql/enums/GraphQLXCXPAppName;
+
+    .line 296
+    .line 297
+    invoke-static {v1, v2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
+    .line 298
+    .line 299
+    .line 300
+    move-result-object v5
+
+    .line 301
+    check-cast v5, Lcom/facebook/graphql/enums/GraphQLXCXPAppName;
+
+    .line 302
+    .line 303
+    goto/16 :goto_0
+
+    .line 304
+    .line 305
+    :sswitch_f
+    const-string/jumbo v3, "count_of_linked_destination"
+
+    .line 306
+    .line 307
+    .line 308
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 309
+    .line 310
+    .line 311
+    move-result v0
+
+    .line 312
+    if-eqz v0, :cond_1
+
+    .line 313
+    .line 314
+    invoke-static {v1, v2}, LX/27L;->A0B(LX/3oD;LX/6HS;)Ljava/lang/Integer;
+
+    .line 315
+    .line 316
+    .line 317
+    move-result-object v9
+
+    .line 318
+    const-string/jumbo v0, "countOfLinkedDestination"
+
+    .line 319
+    .line 320
+    .line 321
+    invoke-static {v9, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 322
+    .line 323
+    .line 324
+    goto/16 :goto_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 325
+    .line 326
+    :goto_1
+    new-instance v3, Lcom/facebook/crossposting/contentcompatibility/model/CrossPostingMetadata;
+
+    .line 327
+    .line 328
+    invoke-direct/range {v3 .. v20}, Lcom/facebook/crossposting/contentcompatibility/model/CrossPostingMetadata;-><init>(LX/11U;Lcom/facebook/graphql/enums/GraphQLXCXPAppName;Lcom/facebook/graphql/enums/GraphQLXCXPCXPAccountPrivacyType;Lcom/facebook/graphql/enums/GraphQLXCXPCXPIdentityRemixSettingStatus;Lcom/google/common/collect/ImmutableList;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;ZZZZZZZ)V
+
+    .line 329
+    .line 330
+    .line 331
+    return-object v3
+
+    .line 332
+    :catch_0
+    move-exception v2
+
+    .line 333
+    const-class v0, Lcom/facebook/crossposting/contentcompatibility/model/CrossPostingMetadata;
+
+    .line 334
+    .line 335
+    invoke-static {v1, v0, v2}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
+    .line 336
+    .line 337
+    .line 338
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 339
+    .line 340
+    .line 341
+    move-result-object v0
+
+    .line 342
+    throw v0
+
+    .line 343
+    nop
+
+    .line 344
     :sswitch_data_0
     .sparse-switch
-        -0x6c8f24e0 -> :sswitch_c
-        -0x6909c990 -> :sswitch_b
-        -0x5d0444b5 -> :sswitch_a
+        -0x6c8f24e0 -> :sswitch_f
+        -0x6909c990 -> :sswitch_e
+        -0x64fa29bc -> :sswitch_d
+        -0x5d0444b5 -> :sswitch_c
+        -0x51340976 -> :sswitch_b
+        -0x4d2b447c -> :sswitch_a
         -0x4b26559d -> :sswitch_9
         -0x354f2f89 -> :sswitch_8
         -0x309cb577 -> :sswitch_7

@@ -1,5 +1,5 @@
 .class public abstract Lcom/google/common/collect/AbstractMapBasedMultimap;
-.super LX/1dn;
+.super LX/21N;
 .source ""
 
 # interfaces
@@ -19,9 +19,17 @@
 # direct methods
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "map"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1dn;-><init>()V
+    invoke-direct {p0}, LX/21N;-><init>()V
 
     .line 1
     .line 2
@@ -48,133 +56,123 @@
 
 
 # virtual methods
-.method public final A05()Ljava/util/Collection;
-    .locals 2
+.method public final A04()Ljava/util/Collection;
+    .locals 1
 
     .line 0
-    move-object v1, p0
+    instance-of v0, p0, Lcom/google/common/collect/Multimaps$CustomListMultimap;
 
     .line 1
-    check-cast v1, Lcom/google/common/collect/AbstractListMultimap;
-
     .line 2
-    .line 3
-    instance-of v0, v1, Lcom/google/common/collect/Multimaps$CustomListMultimap;
-
-    .line 4
-    .line 5
     if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    move-object v0, p0
+
+    .line 5
+    check-cast v0, Lcom/google/common/collect/Multimaps$CustomListMultimap;
 
     .line 6
     .line 7
-    check-cast v1, Lcom/google/common/collect/Multimaps$CustomListMultimap;
+    iget-object v0, v0, Lcom/google/common/collect/Multimaps$CustomListMultimap;->A00:Lcom/google/common/base/Supplier;
 
     .line 8
     .line 9
-    iget-object v0, v1, Lcom/google/common/collect/Multimaps$CustomListMultimap;->A00:Lcom/google/common/base/Supplier;
+    invoke-interface {v0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
 
     .line 10
     .line 11
-    invoke-interface {v0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
-
     .line 12
-    .line 13
-    .line 14
     move-result-object v0
 
-    .line 15
-    check-cast v0, Ljava/util/List;
+    .line 13
+    check-cast v0, Ljava/util/Collection;
 
-    .line 16
-    .line 17
+    .line 14
+    .line 15
     return-object v0
 
-    .line 18
+    .line 16
     :cond_0
     const/4 v0, 0x3
 
-    .line 19
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    return-object v0
-.end method
-
-.method public final A06(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/Collection;
-    .locals 2
-
-    .line 0
-    instance-of v0, p0, Lcom/google/common/collect/AbstractListMultimap;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_1
-
-    .line 3
-    .line 4
-    check-cast p2, Ljava/util/List;
-
-    .line 5
-    .line 6
-    const/4 v1, 0x0
-
-    .line 7
-    instance-of v0, p2, Ljava/util/RandomAccess;
-
-    .line 8
-    .line 9
-    if-eqz v0, :cond_0
-
-    .line 10
-    .line 11
-    new-instance v0, LX/1dx;
-
-    .line 12
-    .line 13
-    invoke-direct {v0, v1, p0, p1, p2}, LX/1dx;-><init>(LX/1dr;Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/lang/Object;Ljava/util/List;)V
-
-    .line 14
-    .line 15
-    .line 16
-    return-object v0
-
     .line 17
-    :cond_0
-    new-instance v0, LX/1du;
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 18
     .line 19
-    invoke-direct {v0, v1, p0, p1, p2}, LX/1du;-><init>(LX/1dr;Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/lang/Object;Ljava/util/List;)V
-
     .line 20
+    move-result-object v0
+
     .line 21
-    .line 22
-    return-object v0
-
-    .line 23
-    :cond_1
-    const/4 v1, 0x0
-
-    .line 24
-    new-instance v0, LX/1dr;
-
-    .line 25
-    .line 26
-    invoke-direct {v0, v1, p0, p1, p2}, LX/1dr;-><init>(LX/1dr;Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/lang/Object;Ljava/util/Collection;)V
-
-    .line 27
-    .line 28
-    .line 29
     return-object v0
 .end method
 
-.method public final A07(Ljava/util/Map;)V
+.method public final A05(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "collection"
+        }
+    .end annotation
+
+    .line 0
+    check-cast p2, Ljava/util/List;
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    instance-of v0, p2, Ljava/util/RandomAccess;
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 6
+    .line 7
+    new-instance v0, LX/21k;
+
+    .line 8
+    .line 9
+    invoke-direct {v0, v1, p0, p1, p2}, LX/21k;-><init>(LX/224;Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/lang/Object;Ljava/util/List;)V
+
+    .line 10
+    .line 11
+    .line 12
+    return-object v0
+
+    .line 13
+    :cond_0
+    new-instance v0, LX/223;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v1, p0, p1, p2}, LX/223;-><init>(LX/224;Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/lang/Object;Ljava/util/List;)V
+
+    .line 16
+    .line 17
+    .line 18
+    return-object v0
+.end method
+
+.method public final A06(Ljava/util/Map;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "map"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A01:Ljava/util/Map;
@@ -188,7 +186,7 @@
 
     .line 4
     .line 5
-    invoke-static {p1}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {p1}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 6
     .line 7
@@ -264,8 +262,16 @@
     return-void
 .end method
 
-.method public ABI(Ljava/lang/Object;)Ljava/util/Collection;
+.method public A9o(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A01:Ljava/util/Map;
@@ -288,7 +294,7 @@
 
     .line 9
     .line 10
-    invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A05()Ljava/util/Collection;
+    invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A04()Ljava/util/Collection;
 
     .line 11
     .line 12
@@ -297,7 +303,7 @@
 
     .line 14
     :cond_0
-    invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A06(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/Collection;
+    invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A05(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/List;
 
     .line 15
     .line 16
@@ -308,8 +314,148 @@
     return-object v0
 .end method
 
-.method public Aix(Ljava/lang/Object;)Ljava/util/Collection;
+.method public final AfO(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A01:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, Ljava/util/Collection;
+
+    .line 7
+    .line 8
+    const/4 v2, 0x1
+
+    .line 9
+    if-nez v0, :cond_1
+
+    .line 10
+    .line 11
+    invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A04()Ljava/util/Collection;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    invoke-interface {v1, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    if-eqz v0, :cond_0
+
+    .line 20
+    .line 21
+    iget v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A00:I
+
+    .line 22
+    .line 23
+    add-int/lit8 v0, v0, 0x1
+
+    .line 24
+    .line 25
+    iput v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A00:I
+
+    .line 26
+    .line 27
+    iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A01:Ljava/util/Map;
+
+    .line 28
+    .line 29
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 30
+    .line 31
+    .line 32
+    return v2
+
+    .line 33
+    :cond_0
+    const-string v0, "New Collection violated the Collection spec"
+
+    .line 34
+    .line 35
+    invoke-static {v0}, LX/0X7;->A0R(Ljava/lang/Object;)Ljava/lang/AssertionError;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v0
+
+    .line 39
+    throw v0
+
+    .line 40
+    :cond_1
+    invoke-interface {v0, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v0
+
+    .line 44
+    if-eqz v0, :cond_2
+
+    .line 45
+    .line 46
+    iget v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A00:I
+
+    .line 47
+    .line 48
+    add-int/lit8 v0, v0, 0x1
+
+    .line 49
+    .line 50
+    iput v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A00:I
+
+    .line 51
+    .line 52
+    return v2
+
+    .line 53
+    :cond_2
+    const/4 v2, 0x0
+
+    .line 54
+    return v2
+.end method
+
+.method public AhR(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A01:Ljava/util/Map;
@@ -332,104 +478,67 @@
 
     .line 9
     .line 10
-    instance-of v0, p0, Lcom/google/common/collect/AbstractListMultimap;
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     .line 11
     .line 12
-    if-eqz v0, :cond_1
-
     .line 13
-    .line 14
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    .line 15
-    .line 16
-    .line 17
     move-result-object v0
 
-    .line 18
+    .line 14
     return-object v0
 
-    .line 19
+    .line 15
     :cond_0
-    invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A05()Ljava/util/Collection;
+    invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A04()Ljava/util/Collection;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v2
+
+    .line 19
+    invoke-interface {v2, v3}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
 
     .line 20
     .line 21
     .line 22
-    move-result-object v2
-
-    .line 23
-    invoke-interface {v2, v3}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
-
-    .line 24
-    .line 25
-    .line 26
     iget v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A00:I
 
-    .line 27
-    .line 28
+    .line 23
+    .line 24
     invoke-interface {v3}, Ljava/util/Collection;->size()I
 
-    .line 29
-    .line 30
-    .line 31
+    .line 25
+    .line 26
+    .line 27
     move-result v0
 
-    .line 32
+    .line 28
     sub-int/2addr v1, v0
 
-    .line 33
+    .line 29
     iput v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A00:I
 
-    .line 34
-    .line 35
+    .line 30
+    .line 31
     invoke-interface {v3}, Ljava/util/Collection;->clear()V
 
-    .line 36
-    .line 37
-    .line 38
-    instance-of v0, p0, Lcom/google/common/collect/AbstractListMultimap;
-
-    .line 39
-    .line 40
-    if-eqz v0, :cond_2
-
-    .line 41
-    .line 42
+    .line 32
+    .line 33
+    .line 34
     check-cast v2, Ljava/util/List;
 
-    .line 43
-    .line 44
+    .line 35
+    .line 36
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    .line 45
-    .line 46
-    .line 47
+    .line 37
+    .line 38
+    .line 39
     move-result-object v0
 
-    .line 48
-    return-object v0
-
-    .line 49
-    :cond_1
-    invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A05()Ljava/util/Collection;
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v2
-
-    .line 53
-    :cond_2
-    invoke-static {v2}, Ljava/util/Collections;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
-
-    .line 54
-    .line 55
-    .line 56
-    move-result-object v0
-
-    .line 57
+    .line 40
     return-object v0
 .end method
 
@@ -441,7 +550,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v0}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 3
     .line 4
@@ -504,6 +613,14 @@
 
 .method public final containsKey(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap;->A01:Ljava/util/Map;

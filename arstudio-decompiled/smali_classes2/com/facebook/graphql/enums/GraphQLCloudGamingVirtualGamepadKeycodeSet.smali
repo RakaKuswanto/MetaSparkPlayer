@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLCloudGamingVirtualGamepadKeycodeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLCloudGamingVirtualGamepadKeycodeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -328,34 +328,36 @@
 
     .line 153
     .line 154
-    const-string v0, "X"
+    const-string/jumbo v0, "X"
 
     .line 155
     .line 156
+    .line 157
     aput-object v0, v2, v1
 
-    .line 157
     .line 158
+    .line 159
     const/16 v1, 0x1b
 
-    .line 159
     .line 160
-    const-string v0, "Y"
-
     .line 161
-    .line 162
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "Y"
 
+    .line 162
     .line 163
     .line 164
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 165
+    .line 166
+    .line 167
     move-result-object v0
 
-    .line 166
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCloudGamingVirtualGamepadKeycodeSet;->A00:Ljava/util/Set;
-
-    .line 167
     .line 168
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCloudGamingVirtualGamepadKeycodeSet;->A00:Ljava/util/HashSet;
+
+    .line 169
+    .line 170
     return-void
 .end method
 
@@ -371,11 +373,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCloudGamingVirtualGamepadKeycodeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCloudGamingVirtualGamepadKeycodeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

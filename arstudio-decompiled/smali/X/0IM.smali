@@ -1,1109 +1,1733 @@
-.class public abstract LX/0IM;
-.super Ljava/lang/Object;
+.class public final enum LX/0IM;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/07b;
+# static fields
+.field public static final synthetic $VALUES:[LX/0IM;
 
-.field public final A01:LX/06M;
+.field public static final enum ADSMANAGER:LX/0IM;
 
-.field public final A02:LX/06O;
+.field public static final enum ALOHA:LX/0IM;
 
-.field public final A03:Ljava/lang/Integer;
+.field public static final enum ANNA:LX/0IM;
+
+.field public static final enum APPMANAGER:LX/0IM;
+
+.field public static final enum APTLY_PLAYGROUND:LX/0IM;
+
+.field public static final enum ARSTUDIO_PLAYER:LX/0IM;
+
+.field public static final enum BIZAPPSAPPROVAL:LX/0IM;
+
+.field public static final enum CREATOR_STUDIO:LX/0IM;
+
+.field public static final enum CRM:LX/0IM;
+
+.field public static final enum CRS:LX/0IM;
+
+.field public static final enum FACEBOOK_SERVICES:LX/0IM;
+
+.field public static final enum FB4A:LX/0IM;
+
+.field public static final enum FB4A_PLAYGROUND:LX/0IM;
+
+.field public static final enum FBCAMERA:LX/0IM;
+
+.field public static final enum FBCREATORS:LX/0IM;
+
+.field public static final enum GAMES:LX/0IM;
+
+.field public static final enum GAMESPORTAL:LX/0IM;
+
+.field public static final enum GETAPPS:LX/0IM;
+
+.field public static final enum GIFTS:LX/0IM;
+
+.field public static final enum GROUPS:LX/0IM;
+
+.field public static final enum HOME:LX/0IM;
+
+.field public static final enum KOTOTORO:LX/0IM;
+
+.field public static final enum LIVEMAPSWAYFINDER:LX/0IM;
+
+.field public static final enum LYNX:LX/0IM;
+
+.field public static final enum ME:LX/0IM;
+
+.field public static final enum MESSENGER:LX/0IM;
+
+.field public static final enum META_TV:LX/0IM;
+
+.field public static final enum MOMENTS:LX/0IM;
+
+.field public static final enum NATIVEMSITE:LX/0IM;
+
+.field public static final enum OCULUS_TWILIGHT:LX/0IM;
+
+.field public static final enum PAA:LX/0IM;
+
+.field public static final enum PARTIES:LX/0IM;
+
+.field public static final enum PETOPE:LX/0IM;
+
+.field public static final enum PHONE:LX/0IM;
+
+.field public static final enum PWC:LX/0IM;
+
+.field public static final enum RSYS_SDK_SAMPLE:LX/0IM;
+
+.field public static final enum SAMPLE:LX/0IM;
+
+.field public static final enum SCENES:LX/0IM;
+
+.field public static final enum SOCAL:LX/0IM;
+
+.field public static final enum SPACESHIP:LX/0IM;
+
+.field public static final enum SPARKLABS:LX/0IM;
+
+.field public static final enum STUDY:LX/0IM;
+
+.field public static final enum TALK:LX/0IM;
+
+.field public static final enum UNKNOWN:LX/0IM;
+
+.field public static final enum VIDEOS:LX/0IM;
+
+.field public static final enum WORKROOMS:LX/0IM;
+
+.field public static final enum WORKSPEED:LX/0IM;
+
+.field public static final enum WP4A_PLAYGROUND:LX/0IM;
 
 
 # direct methods
-.method public constructor <init>(LX/07b;LX/06O;LX/06M;Ljava/lang/Integer;)V
-    .locals 0
+.method public static synthetic $values()[LX/0IM;
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x30
 
     .line 1
     .line 2
+    new-array v2, v0, [LX/0IM;
+
     .line 3
-    iput-object p1, p0, LX/0IM;->A00:LX/07b;
-
     .line 4
-    .line 5
-    iput-object p3, p0, LX/0IM;->A01:LX/06M;
-
-    .line 6
-    .line 7
-    iput-object p2, p0, LX/0IM;->A02:LX/06O;
-
-    .line 8
-    .line 9
-    iput-object p4, p0, LX/0IM;->A03:Ljava/lang/Integer;
-
-    .line 10
-    .line 11
-    return-void
-.end method
-
-.method public static A03(Ljava/util/List;)Landroid/content/Intent;
-    .locals 5
-
-    .line 0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    add-int/lit8 v0, v0, -0x1
+    sget-object v1, LX/0IM;->MESSENGER:LX/0IM;
 
     .line 5
     .line 6
-    new-array v4, v0, [Landroid/content/Intent;
+    const/4 v0, 0x0
 
     .line 7
-    .line 8
-    const/4 v3, 0x0
+    aput-object v1, v2, v0
 
+    .line 8
     .line 9
-    const/4 v2, 0x0
+    sget-object v1, LX/0IM;->FB4A:LX/0IM;
 
     .line 10
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
     .line 11
+    const/4 v0, 0x1
+
     .line 12
-    .line 13
-    move-result v0
+    aput-object v1, v2, v0
 
+    .line 13
     .line 14
-    add-int/lit8 v0, v0, -0x1
+    sget-object v1, LX/0IM;->PAA:LX/0IM;
 
     .line 15
     .line 16
-    if-ge v2, v0, :cond_0
+    const/4 v0, 0x2
 
     .line 17
-    .line 18
-    add-int/lit8 v1, v2, 0x1
+    aput-object v1, v2, v0
 
-    .line 19
-    .line 20
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    aput-object v0, v4, v2
-
-    .line 25
-    .line 26
-    move v2, v1
-
-    .line 27
-    goto :goto_0
-
-    .line 28
-    :cond_0
-    invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v1
-
-    .line 32
-    check-cast v1, Landroid/content/Intent;
-
-    .line 33
-    .line 34
-    const-string v0, "Choose an app to launch."
-
-    .line 35
-    .line 36
-    invoke-static {v1, v0}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v1
-
-    .line 40
-    const-string v0, "android.intent.extra.INITIAL_INTENTS"
-
-    .line 41
-    .line 42
-    invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 43
-    .line 44
-    .line 45
-    return-object v1
-.end method
-
-.method public static A04(Landroid/content/Intent;)Ljava/lang/String;
-    .locals 5
-
-    .line 0
-    if-nez p0, :cond_0
-
-    .line 1
-    .line 2
-    const-string v0, "null"
-
-    .line 3
-    .line 4
-    return-object v0
-
-    .line 5
-    :cond_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v4
-
-    .line 9
-    const-string v0, "intent("
-
-    .line 10
-    .line 11
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 12
-    .line 13
-    .line 14
-    const-string v0, "action = "
-
-    .line 15
-    .line 16
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 17
     .line 18
     .line 19
-    invoke-virtual {p0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    sget-object v1, LX/0IM;->SAMPLE:LX/0IM;
 
     .line 20
     .line 21
+    const/4 v0, 0x3
+
     .line 22
-    move-result-object v0
+    aput-object v1, v2, v0
 
     .line 23
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 24
+    sget-object v1, LX/0IM;->GIFTS:LX/0IM;
+
     .line 25
     .line 26
-    const-string v0, ", data= "
+    const/4 v0, 0x4
 
     .line 27
-    .line 28
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v1, v2, v0
 
+    .line 28
     .line 29
+    sget-object v1, LX/0IM;->NATIVEMSITE:LX/0IM;
+
     .line 30
     .line 31
-    invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+    const/4 v0, 0x5
 
     .line 32
+    aput-object v1, v2, v0
+
     .line 33
     .line 34
-    move-result-object v0
+    sget-object v1, LX/0IM;->HOME:LX/0IM;
 
     .line 35
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 36
+    const/4 v0, 0x6
+
     .line 37
+    aput-object v1, v2, v0
+
     .line 38
-    const-string v0, ", type= "
-
     .line 39
+    sget-object v1, LX/0IM;->GAMESPORTAL:LX/0IM;
+
     .line 40
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 41
-    .line 42
-    .line 43
-    invoke-virtual {p0}, Landroid/content/Intent;->getType()Ljava/lang/String;
+    const/4 v0, 0x7
 
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
     .line 44
+    sget-object v1, LX/0IM;->PHONE:LX/0IM;
+
     .line 45
     .line 46
-    move-result-object v0
+    const/16 v0, 0x8
 
     .line 47
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 48
+    aput-object v1, v2, v0
+
     .line 49
     .line 50
-    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+    sget-object v1, LX/0IM;->PETOPE:LX/0IM;
 
     .line 51
     .line 52
-    .line 53
-    move-result-object v0
+    const/16 v0, 0x9
 
+    .line 53
     .line 54
-    if-eqz v0, :cond_1
+    aput-object v1, v2, v0
 
     .line 55
     .line 56
-    const-string v0, ", component = "
+    sget-object v1, LX/0IM;->GROUPS:LX/0IM;
 
     .line 57
     .line 58
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v0, 0xa
 
     .line 59
     .line 60
-    .line 61
-    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+    aput-object v1, v2, v0
 
+    .line 61
     .line 62
+    sget-object v1, LX/0IM;->ME:LX/0IM;
+
     .line 63
     .line 64
-    move-result-object v0
+    const/16 v0, 0xb
 
     .line 65
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 66
+    aput-object v1, v2, v0
+
     .line 67
     .line 68
-    :cond_1
-    invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    sget-object v1, LX/0IM;->MOMENTS:LX/0IM;
 
     .line 69
     .line 70
-    .line 71
-    move-result-object v3
+    const/16 v0, 0xc
 
+    .line 71
     .line 72
-    if-eqz v3, :cond_3
+    aput-object v1, v2, v0
 
     .line 73
     .line 74
-    const-string v0, ", extras = ["
+    sget-object v1, LX/0IM;->APPMANAGER:LX/0IM;
 
     .line 75
     .line 76
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v0, 0xd
 
     .line 77
     .line 78
-    .line 79
-    invoke-virtual {v3}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
+    aput-object v1, v2, v0
 
+    .line 79
     .line 80
+    sget-object v1, LX/0IM;->FACEBOOK_SERVICES:LX/0IM;
+
     .line 81
     .line 82
-    move-result-object v0
+    const/16 v0, 0xe
 
     .line 83
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
     .line 84
+    aput-object v1, v2, v0
+
     .line 85
     .line 86
-    move-result-object v2
+    sget-object v1, LX/0IM;->GETAPPS:LX/0IM;
 
     .line 87
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
     .line 88
+    const/16 v0, 0xf
+
     .line 89
     .line 90
-    move-result v0
+    aput-object v1, v2, v0
 
     .line 91
-    if-eqz v0, :cond_2
-
     .line 92
-    .line 93
-    invoke-static {v2}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    sget-object v1, LX/0IM;->FBCAMERA:LX/0IM;
 
+    .line 93
     .line 94
+    const/16 v0, 0x10
+
     .line 95
     .line 96
-    move-result-object v1
+    aput-object v1, v2, v0
 
     .line 97
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 98
+    sget-object v1, LX/0IM;->ALOHA:LX/0IM;
+
     .line 99
     .line 100
-    const-string v0, " = "
+    const/16 v0, 0x11
 
     .line 101
     .line 102
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v1, v2, v0
 
     .line 103
     .line 104
-    .line 105
-    invoke-virtual {v3, v1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+    sget-object v1, LX/0IM;->PARTIES:LX/0IM;
 
+    .line 105
     .line 106
+    const/16 v0, 0x12
+
     .line 107
     .line 108
-    move-result-object v0
+    aput-object v1, v2, v0
 
     .line 109
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 110
+    sget-object v1, LX/0IM;->ARSTUDIO_PLAYER:LX/0IM;
+
     .line 111
     .line 112
-    const-string v0, ", "
+    const/16 v0, 0x13
 
     .line 113
     .line 114
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v1, v2, v0
 
     .line 115
     .line 116
-    .line 117
-    goto :goto_0
+    sget-object v1, LX/0IM;->FBCREATORS:LX/0IM;
 
+    .line 117
     .line 118
-    :cond_2
-    const-string v0, "]"
+    const/16 v0, 0x14
 
     .line 119
     .line 120
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v1, v2, v0
 
     .line 121
     .line 122
+    sget-object v1, LX/0IM;->TALK:LX/0IM;
+
     .line 123
-    :cond_3
-    const-string v0, ")"
-
     .line 124
-    .line 125
-    invoke-static {v0, v4}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const/16 v0, 0x15
 
+    .line 125
     .line 126
+    aput-object v1, v2, v0
+
     .line 127
     .line 128
-    move-result-object v0
+    sget-object v1, LX/0IM;->SPACESHIP:LX/0IM;
 
     .line 129
-    return-object v0
+    .line 130
+    const/16 v0, 0x16
+
+    .line 131
+    .line 132
+    aput-object v1, v2, v0
+
+    .line 133
+    .line 134
+    sget-object v1, LX/0IM;->LIVEMAPSWAYFINDER:LX/0IM;
+
+    .line 135
+    .line 136
+    const/16 v0, 0x17
+
+    .line 137
+    .line 138
+    aput-object v1, v2, v0
+
+    .line 139
+    .line 140
+    sget-object v1, LX/0IM;->BIZAPPSAPPROVAL:LX/0IM;
+
+    .line 141
+    .line 142
+    const/16 v0, 0x18
+
+    .line 143
+    .line 144
+    aput-object v1, v2, v0
+
+    .line 145
+    .line 146
+    sget-object v1, LX/0IM;->LYNX:LX/0IM;
+
+    .line 147
+    .line 148
+    const/16 v0, 0x19
+
+    .line 149
+    .line 150
+    aput-object v1, v2, v0
+
+    .line 151
+    .line 152
+    sget-object v1, LX/0IM;->ANNA:LX/0IM;
+
+    .line 153
+    .line 154
+    const/16 v0, 0x1a
+
+    .line 155
+    .line 156
+    aput-object v1, v2, v0
+
+    .line 157
+    .line 158
+    sget-object v1, LX/0IM;->STUDY:LX/0IM;
+
+    .line 159
+    .line 160
+    const/16 v0, 0x1b
+
+    .line 161
+    .line 162
+    aput-object v1, v2, v0
+
+    .line 163
+    .line 164
+    sget-object v1, LX/0IM;->GAMES:LX/0IM;
+
+    .line 165
+    .line 166
+    const/16 v0, 0x1c
+
+    .line 167
+    .line 168
+    aput-object v1, v2, v0
+
+    .line 169
+    .line 170
+    sget-object v1, LX/0IM;->VIDEOS:LX/0IM;
+
+    .line 171
+    .line 172
+    const/16 v0, 0x1d
+
+    .line 173
+    .line 174
+    aput-object v1, v2, v0
+
+    .line 175
+    .line 176
+    sget-object v1, LX/0IM;->KOTOTORO:LX/0IM;
+
+    .line 177
+    .line 178
+    const/16 v0, 0x1e
+
+    .line 179
+    .line 180
+    aput-object v1, v2, v0
+
+    .line 181
+    .line 182
+    sget-object v1, LX/0IM;->CRS:LX/0IM;
+
+    .line 183
+    .line 184
+    const/16 v0, 0x1f
+
+    .line 185
+    .line 186
+    aput-object v1, v2, v0
+
+    .line 187
+    .line 188
+    sget-object v1, LX/0IM;->WORKSPEED:LX/0IM;
+
+    .line 189
+    .line 190
+    const/16 v0, 0x20
+
+    .line 191
+    .line 192
+    aput-object v1, v2, v0
+
+    .line 193
+    .line 194
+    sget-object v1, LX/0IM;->PWC:LX/0IM;
+
+    .line 195
+    .line 196
+    const/16 v0, 0x21
+
+    .line 197
+    .line 198
+    aput-object v1, v2, v0
+
+    .line 199
+    .line 200
+    sget-object v1, LX/0IM;->SOCAL:LX/0IM;
+
+    .line 201
+    .line 202
+    const/16 v0, 0x22
+
+    .line 203
+    .line 204
+    aput-object v1, v2, v0
+
+    .line 205
+    .line 206
+    sget-object v1, LX/0IM;->CREATOR_STUDIO:LX/0IM;
+
+    .line 207
+    .line 208
+    const/16 v0, 0x23
+
+    .line 209
+    .line 210
+    aput-object v1, v2, v0
+
+    .line 211
+    .line 212
+    sget-object v1, LX/0IM;->OCULUS_TWILIGHT:LX/0IM;
+
+    .line 213
+    .line 214
+    const/16 v0, 0x24
+
+    .line 215
+    .line 216
+    aput-object v1, v2, v0
+
+    .line 217
+    .line 218
+    sget-object v1, LX/0IM;->SPARKLABS:LX/0IM;
+
+    .line 219
+    .line 220
+    const/16 v0, 0x25
+
+    .line 221
+    .line 222
+    aput-object v1, v2, v0
+
+    .line 223
+    .line 224
+    sget-object v1, LX/0IM;->CRM:LX/0IM;
+
+    .line 225
+    .line 226
+    const/16 v0, 0x26
+
+    .line 227
+    .line 228
+    aput-object v1, v2, v0
+
+    .line 229
+    .line 230
+    sget-object v1, LX/0IM;->FB4A_PLAYGROUND:LX/0IM;
+
+    .line 231
+    .line 232
+    const/16 v0, 0x27
+
+    .line 233
+    .line 234
+    aput-object v1, v2, v0
+
+    .line 235
+    .line 236
+    sget-object v1, LX/0IM;->WP4A_PLAYGROUND:LX/0IM;
+
+    .line 237
+    .line 238
+    const/16 v0, 0x28
+
+    .line 239
+    .line 240
+    aput-object v1, v2, v0
+
+    .line 241
+    .line 242
+    sget-object v1, LX/0IM;->SCENES:LX/0IM;
+
+    .line 243
+    .line 244
+    const/16 v0, 0x29
+
+    .line 245
+    .line 246
+    aput-object v1, v2, v0
+
+    .line 247
+    .line 248
+    sget-object v1, LX/0IM;->META_TV:LX/0IM;
+
+    .line 249
+    .line 250
+    const/16 v0, 0x2a
+
+    .line 251
+    .line 252
+    aput-object v1, v2, v0
+
+    .line 253
+    .line 254
+    sget-object v1, LX/0IM;->APTLY_PLAYGROUND:LX/0IM;
+
+    .line 255
+    .line 256
+    const/16 v0, 0x2b
+
+    .line 257
+    .line 258
+    aput-object v1, v2, v0
+
+    .line 259
+    .line 260
+    sget-object v1, LX/0IM;->WORKROOMS:LX/0IM;
+
+    .line 261
+    .line 262
+    const/16 v0, 0x2c
+
+    .line 263
+    .line 264
+    aput-object v1, v2, v0
+
+    .line 265
+    .line 266
+    sget-object v1, LX/0IM;->RSYS_SDK_SAMPLE:LX/0IM;
+
+    .line 267
+    .line 268
+    const/16 v0, 0x2d
+
+    .line 269
+    .line 270
+    aput-object v1, v2, v0
+
+    .line 271
+    .line 272
+    sget-object v1, LX/0IM;->ADSMANAGER:LX/0IM;
+
+    .line 273
+    .line 274
+    const/16 v0, 0x2e
+
+    .line 275
+    .line 276
+    aput-object v1, v2, v0
+
+    .line 277
+    .line 278
+    sget-object v1, LX/0IM;->UNKNOWN:LX/0IM;
+
+    .line 279
+    .line 280
+    const/16 v0, 0x2f
+
+    .line 281
+    .line 282
+    aput-object v1, v2, v0
+
+    .line 283
+    .line 284
+    return-object v2
 .end method
 
-.method public static A05(Landroid/content/Context;Landroid/content/Intent;I)Ljava/util/ArrayList;
-    .locals 1
-
-    .line 0
-    invoke-static {p0, p1, p2}, LX/06A;->A04(Landroid/content/Context;Landroid/content/Intent;I)Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    const/4 v0, 0x1
-
-    .line 5
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object p2
-
-    .line 9
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object p1
-
-    .line 13
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    if-eqz v0, :cond_1
-
-    .line 18
-    .line 19
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    check-cast v0, Landroid/content/pm/ResolveInfo;
-
-    .line 24
-    .line 25
-    iget-object p0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    .line 26
-    .line 27
-    if-eqz p0, :cond_0
-
-    .line 28
-    .line 29
-    iget-object v0, p0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    .line 30
-    .line 31
-    if-eqz v0, :cond_0
-
-    .line 32
-    .line 33
-    invoke-virtual {p2, p0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 34
-    .line 35
-    .line 36
-    goto :goto_0
-
-    .line 37
-    :cond_1
-    return-object p2
-.end method
-
-.method public static A06(Landroid/content/Context;Landroid/content/Intent;I)Ljava/util/ArrayList;
-    .locals 1
-
-    .line 0
-    invoke-static {p0, p1, p2}, LX/06A;->A05(Landroid/content/Context;Landroid/content/Intent;I)Ljava/util/List;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    const/4 v0, 0x1
-
-    .line 5
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object p2
-
-    .line 9
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object p1
-
-    .line 13
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    if-eqz v0, :cond_1
-
-    .line 18
-    .line 19
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    check-cast v0, Landroid/content/pm/ResolveInfo;
-
-    .line 24
-    .line 25
-    iget-object p0, v0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
-
-    .line 26
-    .line 27
-    if-eqz p0, :cond_0
-
-    .line 28
-    .line 29
-    iget-object v0, p0, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    .line 30
-    .line 31
-    if-eqz v0, :cond_0
-
-    .line 32
-    .line 33
-    invoke-virtual {p2, p0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 34
-    .line 35
-    .line 36
-    goto :goto_0
-
-    .line 37
-    :cond_1
-    return-object p2
-.end method
-
-.method public static A07(Landroid/content/Intent;Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 7
-
-    .line 0
-    invoke-static {p1}, LX/001;->A0V(Ljava/util/List;)Ljava/util/ArrayList;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v6
-
-    .line 4
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v5
-
-    .line 8
-    :goto_0
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    if-eqz v0, :cond_0
-
-    .line 13
-    .line 14
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v4
-
-    .line 18
-    check-cast v4, Landroid/content/pm/ComponentInfo;
-
-    .line 19
-    .line 20
-    new-instance v3, Landroid/content/Intent;
-
-    .line 21
-    .line 22
-    invoke-direct {v3, p0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
-
-    .line 23
-    .line 24
-    .line 25
-    iget-object v2, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    .line 26
-    .line 27
-    iget-object v1, v4, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
-
-    .line 28
-    .line 29
-    new-instance v0, Landroid/content/ComponentName;
-
-    .line 30
-    .line 31
-    invoke-direct {v0, v2, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 32
-    .line 33
-    .line 34
-    invoke-virtual {v3, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    .line 35
-    .line 36
-    .line 37
-    iget-object v0, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    .line 38
-    .line 39
-    invoke-virtual {v3, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 40
-    .line 41
-    .line 42
-    invoke-virtual {v6, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 43
-    .line 44
-    .line 45
-    goto :goto_0
-
-    .line 46
-    :cond_0
-    return-object v6
-.end method
-
-.method public static A08(Landroid/content/Context;Landroid/content/Intent;)Z
+.method public static constructor <clinit>()V
     .locals 2
 
     .line 0
-    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+    const-string v1, "MESSENGER"
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v1
-
-    .line 14
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 19
-    .line 20
-    .line 21
-    move-result v1
-
-    .line 22
-    const/4 v0, 0x1
-
-    .line 23
-    if-nez v1, :cond_1
-
-    .line 24
-    .line 25
-    :cond_0
     const/4 v0, 0x0
 
-    .line 26
-    :cond_1
-    return v0
-.end method
-
-
-# virtual methods
-.method public abstract A09(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
-.end method
-
-.method public abstract A0A(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
-.end method
-
-.method public abstract A0B(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
-.end method
-
-.method public final A0C(Landroid/content/Context;Landroid/content/Intent;)Ljava/util/ArrayList;
-    .locals 5
-
-    .line 0
-    invoke-virtual {p2}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
-
-    .line 1
-    .line 2
     .line 3
-    move-result-object v2
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
 
     .line 4
-    invoke-virtual {p2}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
     .line 5
     .line 6
-    .line 7
     move-result-object v0
 
+    .line 7
+    sput-object v0, LX/0IM;->MESSENGER:LX/0IM;
+
     .line 8
-    if-eqz v0, :cond_0
-
     .line 9
+    const-string v1, "FB4A"
+
     .line 10
-    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
     .line 11
+    const/4 v0, 0x1
+
     .line 12
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
     .line 13
-    move-result-object v1
-
     .line 14
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
     .line 15
-    .line 16
-    .line 17
-    move-result v0
+    move-result-object v0
 
+    .line 16
+    sput-object v0, LX/0IM;->FB4A:LX/0IM;
+
+    .line 17
     .line 18
-    if-nez v0, :cond_0
+    const-string v1, "PAA"
 
     .line 19
     .line 20
-    move-object v2, v1
+    const/4 v0, 0x2
 
     .line 21
-    :cond_0
-    :try_start_0
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
 
     .line 22
     .line 23
     .line 24
-    move-result v1
+    move-result-object v0
 
     .line 25
-    const/16 v0, 0x40
+    sput-object v0, LX/0IM;->PAA:LX/0IM;
 
     .line 26
     .line 27
-    if-nez v1, :cond_1
+    const-string v1, "SAMPLE"
 
     .line 28
     .line 29
-    invoke-static {p1, v2, v0}, LX/06A;->A02(Landroid/content/Context;Ljava/lang/String;I)LX/06K;
+    const/4 v0, 0x3
 
     .line 30
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
     .line 31
     .line 32
-    move-result-object v0
-
     .line 33
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    move-result-object v0
 
     .line 34
+    sput-object v0, LX/0IM;->SAMPLE:LX/0IM;
+
     .line 35
     .line 36
-    move-result-object v0
+    const-string v1, "GIFTS"
 
     .line 37
-    goto :goto_0
-
     .line 38
-    :cond_1
-    invoke-static {p1}, LX/06A;->A03(Landroid/content/Context;)Ljava/util/List;
+    const/4 v0, 0x4
 
     .line 39
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
     .line 40
     .line 41
-    move-result-object v0
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 42
-    :goto_0
-    invoke-static {v0}, LX/001;->A0V(Ljava/util/List;)Ljava/util/ArrayList;
+    move-result-object v0
 
     .line 43
+    sput-object v0, LX/0IM;->GIFTS:LX/0IM;
+
     .line 44
     .line 45
-    move-result-object v4
+    const-string v1, "NATIVEMSITE"
 
     .line 46
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
     .line 47
+    const/4 v0, 0x5
+
     .line 48
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
     .line 49
-    move-result-object v2
-
     .line 50
-    :cond_2
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
     .line 51
-    .line 52
-    .line 53
-    move-result v0
+    move-result-object v0
 
+    .line 52
+    sput-object v0, LX/0IM;->NATIVEMSITE:LX/0IM;
+
+    .line 53
     .line 54
-    if-eqz v0, :cond_3
+    const-string v1, "HOME"
 
     .line 55
     .line 56
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v0, 0x6
 
     .line 57
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
     .line 58
     .line 59
-    move-result-object v1
-
     .line 60
-    check-cast v1, LX/06K;
+    move-result-object v0
 
     .line 61
-    .line 62
-    invoke-virtual {p0, p1, v1}, LX/0IM;->A0G(Landroid/content/Context;LX/06K;)Z
+    sput-object v0, LX/0IM;->HOME:LX/0IM;
 
+    .line 62
     .line 63
+    const-string v1, "GAMESPORTAL"
+
     .line 64
     .line 65
-    move-result v0
+    const/4 v0, 0x7
 
     .line 66
-    if-eqz v0, :cond_2
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
 
     .line 67
     .line 68
-    invoke-virtual {v4, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 69
-    .line 70
-    .line 71
-    goto :goto_1
+    move-result-object v0
 
+    .line 70
+    sput-object v0, LX/0IM;->GAMESPORTAL:LX/0IM;
+
+    .line 71
     .line 72
-    :catch_0
-    move-exception v3
+    const-string v1, "PHONE"
 
     .line 73
-    iget-object v2, p0, LX/0IM;->A01:LX/06M;
-
     .line 74
+    const/16 v0, 0x8
+
     .line 75
-    const-string v1, "BaseIntentScope"
-
     .line 76
-    .line 77
-    const-string v0, "Error querying PackageManager."
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
 
+    .line 77
     .line 78
     .line 79
-    invoke-interface {v2, v1, v0, v3}, LX/06M;->AjZ(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v0
 
     .line 80
+    sput-object v0, LX/0IM;->PHONE:LX/0IM;
+
     .line 81
     .line 82
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    const-string v1, "PETOPE"
 
     .line 83
     .line 84
-    .line 85
-    move-result-object v4
+    const/16 v0, 0x9
 
+    .line 85
     .line 86
-    :cond_3
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
 
     .line 87
     .line 88
     .line 89
-    move-result v0
+    move-result-object v0
 
     .line 90
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    sput-object v0, LX/0IM;->PETOPE:LX/0IM;
 
     .line 91
     .line 92
-    .line 93
-    move-result-object v3
+    const-string v1, "GROUPS"
 
+    .line 93
     .line 94
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    const/16 v0, 0xa
 
     .line 95
     .line 96
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
     .line 97
-    move-result-object v2
-
     .line 98
-    :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
     .line 99
-    .line 100
-    .line 101
-    move-result v0
+    move-result-object v0
 
+    .line 100
+    sput-object v0, LX/0IM;->GROUPS:LX/0IM;
+
+    .line 101
     .line 102
-    if-eqz v0, :cond_4
+    const-string v1, "ME"
 
     .line 103
     .line 104
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/16 v0, 0xb
 
     .line 105
     .line 106
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
     .line 107
+    .line 108
+    .line 109
     move-result-object v0
 
-    .line 108
-    check-cast v0, LX/06K;
-
-    .line 109
     .line 110
-    new-instance v1, Landroid/content/Intent;
+    sput-object v0, LX/0IM;->ME:LX/0IM;
 
     .line 111
     .line 112
-    invoke-direct {v1, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+    const-string v1, "MOMENTS"
 
     .line 113
     .line 114
+    const/16 v0, 0xc
+
     .line 115
-    iget-object v0, v0, LX/06K;->A01:Ljava/lang/String;
-
     .line 116
-    .line 117
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
 
+    .line 117
     .line 118
     .line 119
+    move-result-object v0
+
     .line 120
-    invoke-virtual {v3, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    sput-object v0, LX/0IM;->MOMENTS:LX/0IM;
 
     .line 121
     .line 122
+    const-string v1, "APPMANAGER"
+
     .line 123
-    goto :goto_2
-
     .line 124
-    :cond_4
-    return-object v3
+    const/16 v0, 0xd
+
+    .line 125
+    .line 126
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 127
+    .line 128
+    .line 129
+    move-result-object v0
+
+    .line 130
+    sput-object v0, LX/0IM;->APPMANAGER:LX/0IM;
+
+    .line 131
+    .line 132
+    const-string v1, "FACEBOOK_SERVICES"
+
+    .line 133
+    .line 134
+    const/16 v0, 0xe
+
+    .line 135
+    .line 136
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v0
+
+    .line 140
+    sput-object v0, LX/0IM;->FACEBOOK_SERVICES:LX/0IM;
+
+    .line 141
+    .line 142
+    const-string v1, "GETAPPS"
+
+    .line 143
+    .line 144
+    const/16 v0, 0xf
+
+    .line 145
+    .line 146
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 147
+    .line 148
+    .line 149
+    move-result-object v0
+
+    .line 150
+    sput-object v0, LX/0IM;->GETAPPS:LX/0IM;
+
+    .line 151
+    .line 152
+    const-string v1, "FBCAMERA"
+
+    .line 153
+    .line 154
+    const/16 v0, 0x10
+
+    .line 155
+    .line 156
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 157
+    .line 158
+    .line 159
+    move-result-object v0
+
+    .line 160
+    sput-object v0, LX/0IM;->FBCAMERA:LX/0IM;
+
+    .line 161
+    .line 162
+    const-string v1, "ALOHA"
+
+    .line 163
+    .line 164
+    const/16 v0, 0x11
+
+    .line 165
+    .line 166
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 167
+    .line 168
+    .line 169
+    move-result-object v0
+
+    .line 170
+    sput-object v0, LX/0IM;->ALOHA:LX/0IM;
+
+    .line 171
+    .line 172
+    const-string v1, "PARTIES"
+
+    .line 173
+    .line 174
+    const/16 v0, 0x12
+
+    .line 175
+    .line 176
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 177
+    .line 178
+    .line 179
+    move-result-object v0
+
+    .line 180
+    sput-object v0, LX/0IM;->PARTIES:LX/0IM;
+
+    .line 181
+    .line 182
+    const-string v1, "ARSTUDIO_PLAYER"
+
+    .line 183
+    .line 184
+    const/16 v0, 0x13
+
+    .line 185
+    .line 186
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-object v0
+
+    .line 190
+    sput-object v0, LX/0IM;->ARSTUDIO_PLAYER:LX/0IM;
+
+    .line 191
+    .line 192
+    const-string v1, "FBCREATORS"
+
+    .line 193
+    .line 194
+    const/16 v0, 0x14
+
+    .line 195
+    .line 196
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 197
+    .line 198
+    .line 199
+    move-result-object v0
+
+    .line 200
+    sput-object v0, LX/0IM;->FBCREATORS:LX/0IM;
+
+    .line 201
+    .line 202
+    const-string v1, "TALK"
+
+    .line 203
+    .line 204
+    const/16 v0, 0x15
+
+    .line 205
+    .line 206
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 207
+    .line 208
+    .line 209
+    move-result-object v0
+
+    .line 210
+    sput-object v0, LX/0IM;->TALK:LX/0IM;
+
+    .line 211
+    .line 212
+    const-string v1, "SPACESHIP"
+
+    .line 213
+    .line 214
+    const/16 v0, 0x16
+
+    .line 215
+    .line 216
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 217
+    .line 218
+    .line 219
+    move-result-object v0
+
+    .line 220
+    sput-object v0, LX/0IM;->SPACESHIP:LX/0IM;
+
+    .line 221
+    .line 222
+    const-string v1, "LIVEMAPSWAYFINDER"
+
+    .line 223
+    .line 224
+    const/16 v0, 0x17
+
+    .line 225
+    .line 226
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 227
+    .line 228
+    .line 229
+    move-result-object v0
+
+    .line 230
+    sput-object v0, LX/0IM;->LIVEMAPSWAYFINDER:LX/0IM;
+
+    .line 231
+    .line 232
+    const-string v1, "BIZAPPSAPPROVAL"
+
+    .line 233
+    .line 234
+    const/16 v0, 0x18
+
+    .line 235
+    .line 236
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 237
+    .line 238
+    .line 239
+    move-result-object v0
+
+    .line 240
+    sput-object v0, LX/0IM;->BIZAPPSAPPROVAL:LX/0IM;
+
+    .line 241
+    .line 242
+    const-string v1, "LYNX"
+
+    .line 243
+    .line 244
+    const/16 v0, 0x19
+
+    .line 245
+    .line 246
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 247
+    .line 248
+    .line 249
+    move-result-object v0
+
+    .line 250
+    sput-object v0, LX/0IM;->LYNX:LX/0IM;
+
+    .line 251
+    .line 252
+    const-string v1, "ANNA"
+
+    .line 253
+    .line 254
+    const/16 v0, 0x1a
+
+    .line 255
+    .line 256
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 257
+    .line 258
+    .line 259
+    move-result-object v0
+
+    .line 260
+    sput-object v0, LX/0IM;->ANNA:LX/0IM;
+
+    .line 261
+    .line 262
+    const-string v1, "STUDY"
+
+    .line 263
+    .line 264
+    const/16 v0, 0x1b
+
+    .line 265
+    .line 266
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 267
+    .line 268
+    .line 269
+    move-result-object v0
+
+    .line 270
+    sput-object v0, LX/0IM;->STUDY:LX/0IM;
+
+    .line 271
+    .line 272
+    const-string v1, "GAMES"
+
+    .line 273
+    .line 274
+    const/16 v0, 0x1c
+
+    .line 275
+    .line 276
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 277
+    .line 278
+    .line 279
+    move-result-object v0
+
+    .line 280
+    sput-object v0, LX/0IM;->GAMES:LX/0IM;
+
+    .line 281
+    .line 282
+    const-string v1, "VIDEOS"
+
+    .line 283
+    .line 284
+    const/16 v0, 0x1d
+
+    .line 285
+    .line 286
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 287
+    .line 288
+    .line 289
+    move-result-object v0
+
+    .line 290
+    sput-object v0, LX/0IM;->VIDEOS:LX/0IM;
+
+    .line 291
+    .line 292
+    const-string v1, "KOTOTORO"
+
+    .line 293
+    .line 294
+    const/16 v0, 0x1e
+
+    .line 295
+    .line 296
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 297
+    .line 298
+    .line 299
+    move-result-object v0
+
+    .line 300
+    sput-object v0, LX/0IM;->KOTOTORO:LX/0IM;
+
+    .line 301
+    .line 302
+    const-string v1, "CRS"
+
+    .line 303
+    .line 304
+    const/16 v0, 0x1f
+
+    .line 305
+    .line 306
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 307
+    .line 308
+    .line 309
+    move-result-object v0
+
+    .line 310
+    sput-object v0, LX/0IM;->CRS:LX/0IM;
+
+    .line 311
+    .line 312
+    const-string v1, "WORKSPEED"
+
+    .line 313
+    .line 314
+    const/16 v0, 0x20
+
+    .line 315
+    .line 316
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 317
+    .line 318
+    .line 319
+    move-result-object v0
+
+    .line 320
+    sput-object v0, LX/0IM;->WORKSPEED:LX/0IM;
+
+    .line 321
+    .line 322
+    const-string v1, "PWC"
+
+    .line 323
+    .line 324
+    const/16 v0, 0x21
+
+    .line 325
+    .line 326
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 327
+    .line 328
+    .line 329
+    move-result-object v0
+
+    .line 330
+    sput-object v0, LX/0IM;->PWC:LX/0IM;
+
+    .line 331
+    .line 332
+    const-string v1, "SOCAL"
+
+    .line 333
+    .line 334
+    const/16 v0, 0x22
+
+    .line 335
+    .line 336
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 337
+    .line 338
+    .line 339
+    move-result-object v0
+
+    .line 340
+    sput-object v0, LX/0IM;->SOCAL:LX/0IM;
+
+    .line 341
+    .line 342
+    const-string v1, "CREATOR_STUDIO"
+
+    .line 343
+    .line 344
+    const/16 v0, 0x23
+
+    .line 345
+    .line 346
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 347
+    .line 348
+    .line 349
+    move-result-object v0
+
+    .line 350
+    sput-object v0, LX/0IM;->CREATOR_STUDIO:LX/0IM;
+
+    .line 351
+    .line 352
+    const-string v1, "OCULUS_TWILIGHT"
+
+    .line 353
+    .line 354
+    const/16 v0, 0x24
+
+    .line 355
+    .line 356
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 357
+    .line 358
+    .line 359
+    move-result-object v0
+
+    .line 360
+    sput-object v0, LX/0IM;->OCULUS_TWILIGHT:LX/0IM;
+
+    .line 361
+    .line 362
+    const-string v1, "SPARKLABS"
+
+    .line 363
+    .line 364
+    const/16 v0, 0x25
+
+    .line 365
+    .line 366
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 367
+    .line 368
+    .line 369
+    move-result-object v0
+
+    .line 370
+    sput-object v0, LX/0IM;->SPARKLABS:LX/0IM;
+
+    .line 371
+    .line 372
+    const-string v1, "CRM"
+
+    .line 373
+    .line 374
+    const/16 v0, 0x26
+
+    .line 375
+    .line 376
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 377
+    .line 378
+    .line 379
+    move-result-object v0
+
+    .line 380
+    sput-object v0, LX/0IM;->CRM:LX/0IM;
+
+    .line 381
+    .line 382
+    const-string v1, "FB4A_PLAYGROUND"
+
+    .line 383
+    .line 384
+    const/16 v0, 0x27
+
+    .line 385
+    .line 386
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 387
+    .line 388
+    .line 389
+    move-result-object v0
+
+    .line 390
+    sput-object v0, LX/0IM;->FB4A_PLAYGROUND:LX/0IM;
+
+    .line 391
+    .line 392
+    const-string v1, "WP4A_PLAYGROUND"
+
+    .line 393
+    .line 394
+    const/16 v0, 0x28
+
+    .line 395
+    .line 396
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 397
+    .line 398
+    .line 399
+    move-result-object v0
+
+    .line 400
+    sput-object v0, LX/0IM;->WP4A_PLAYGROUND:LX/0IM;
+
+    .line 401
+    .line 402
+    const-string v1, "SCENES"
+
+    .line 403
+    .line 404
+    const/16 v0, 0x29
+
+    .line 405
+    .line 406
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 407
+    .line 408
+    .line 409
+    move-result-object v0
+
+    .line 410
+    sput-object v0, LX/0IM;->SCENES:LX/0IM;
+
+    .line 411
+    .line 412
+    const-string v1, "META_TV"
+
+    .line 413
+    .line 414
+    const/16 v0, 0x2a
+
+    .line 415
+    .line 416
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 417
+    .line 418
+    .line 419
+    move-result-object v0
+
+    .line 420
+    sput-object v0, LX/0IM;->META_TV:LX/0IM;
+
+    .line 421
+    .line 422
+    const-string v1, "APTLY_PLAYGROUND"
+
+    .line 423
+    .line 424
+    const/16 v0, 0x2b
+
+    .line 425
+    .line 426
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 427
+    .line 428
+    .line 429
+    move-result-object v0
+
+    .line 430
+    sput-object v0, LX/0IM;->APTLY_PLAYGROUND:LX/0IM;
+
+    .line 431
+    .line 432
+    const-string v1, "WORKROOMS"
+
+    .line 433
+    .line 434
+    const/16 v0, 0x2c
+
+    .line 435
+    .line 436
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 437
+    .line 438
+    .line 439
+    move-result-object v0
+
+    .line 440
+    sput-object v0, LX/0IM;->WORKROOMS:LX/0IM;
+
+    .line 441
+    .line 442
+    const-string v1, "RSYS_SDK_SAMPLE"
+
+    .line 443
+    .line 444
+    const/16 v0, 0x2d
+
+    .line 445
+    .line 446
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 447
+    .line 448
+    .line 449
+    move-result-object v0
+
+    .line 450
+    sput-object v0, LX/0IM;->RSYS_SDK_SAMPLE:LX/0IM;
+
+    .line 451
+    .line 452
+    const-string v1, "ADSMANAGER"
+
+    .line 453
+    .line 454
+    const/16 v0, 0x2e
+
+    .line 455
+    .line 456
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 457
+    .line 458
+    .line 459
+    move-result-object v0
+
+    .line 460
+    sput-object v0, LX/0IM;->ADSMANAGER:LX/0IM;
+
+    .line 461
+    .line 462
+    const-string v1, "UNKNOWN"
+
+    .line 463
+    .line 464
+    const/16 v0, 0x2f
+
+    .line 465
+    .line 466
+    invoke-static {v1, v0}, LX/0IM;->A00(Ljava/lang/String;I)LX/0IM;
+
+    .line 467
+    .line 468
+    .line 469
+    move-result-object v0
+
+    .line 470
+    sput-object v0, LX/0IM;->UNKNOWN:LX/0IM;
+
+    .line 471
+    .line 472
+    invoke-static {}, LX/0IM;->$values()[LX/0IM;
+
+    .line 473
+    .line 474
+    .line 475
+    move-result-object v0
+
+    .line 476
+    sput-object v0, LX/0IM;->$VALUES:[LX/0IM;
+
+    .line 477
+    .line 478
+    return-void
 .end method
 
-.method public abstract A0D(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Ljava/util/List;
-.end method
-
-.method public final A0E()Z
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
     .line 0
-    iget-object v2, p0, LX/0IM;->A00:LX/07b;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    monitor-enter v2
-
     .line 3
-    :try_start_0
-    iget-object v1, v2, LX/07b;->A00:Ljava/lang/Integer;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    .line 5
-    monitor-exit v2
-
-    .line 6
-    sget-object v0, LX/014;->A0M:Ljava/lang/Integer;
-
-    .line 7
-    .line 8
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    return v0
-
-    .line 13
-    :catchall_0
-    move-exception v0
-
-    .line 14
-    monitor-exit v2
-
-    .line 15
-    throw v0
+    return-void
 .end method
 
-.method public final A0F()Z
-    .locals 3
+.method public static A00(Ljava/lang/String;I)LX/0IM;
+    .locals 1
 
     .line 0
-    iget-object v2, p0, LX/0IM;->A00:LX/07b;
+    new-instance v0, LX/0IM;
 
     .line 1
     .line 2
-    monitor-enter v2
+    invoke-direct {v0, p0, p1}, LX/0IM;-><init>(Ljava/lang/String;I)V
 
     .line 3
-    :try_start_0
-    iget-object v1, v2, LX/07b;->A00:Ljava/lang/Integer;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 4
     .line 5
-    monitor-exit v2
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/0IM;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/0IM;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
     .line 6
-    sget-object v0, LX/014;->A00:Ljava/lang/Integer;
+    check-cast v0, LX/0IM;
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    return v0
-
-    .line 13
-    :catchall_0
-    move-exception v0
-
-    .line 14
-    monitor-exit v2
-
-    .line 15
-    throw v0
+    return-object v0
 .end method
 
-.method public abstract A0G(Landroid/content/Context;LX/06K;)Z
+.method public static values()[LX/0IM;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/0IM;->$VALUES:[LX/0IM;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/0IM;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

@@ -1,48 +1,55 @@
 .class public final LX/2OC;
-.super LX/1wb;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$12"
-
-
 # instance fields
-.field public final synthetic A00:Ljava/lang/Throwable;
+.field public final A00:Lcom/facebook/auth/protocol/CreateMessengerAccountCredentials;
 
-.field public final synthetic A01:LX/2OB;
+.field public final A01:Lcom/facebook/auth/protocol/InstagramUserInfo;
+
+.field public final A02:Ljava/lang/String;
+
+.field public final A03:Ljava/lang/String;
+
+.field public final A04:Z
+
+.field public final A05:Z
 
 
 # direct methods
-.method public constructor <init>(LX/2OB;Ljava/lang/Class;Ljava/lang/Throwable;)V
-    .locals 3
+.method public constructor <init>(Lcom/facebook/auth/protocol/CreateMessengerAccountCredentials;Lcom/facebook/auth/protocol/InstagramUserInfo;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .locals 0
 
     .line 0
-    const-string v2, "AuthFailed"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const-string v1, "AccountSwitchPerfLogger"
-
     .line 3
-    .line 4
-    const-string/jumbo v0, "onAuthFailed"
+    iput-object p1, p0, LX/2OC;->A00:Lcom/facebook/auth/protocol/CreateMessengerAccountCredentials;
 
+    .line 4
     .line 5
+    iput-boolean p5, p0, LX/2OC;->A05:Z
+
     .line 6
     .line 7
-    iput-object p1, p0, LX/2OC;->A01:LX/2OB;
+    iput-boolean p6, p0, LX/2OC;->A04:Z
 
     .line 8
     .line 9
-    iput-object p3, p0, LX/2OC;->A00:Ljava/lang/Throwable;
+    iput-object p3, p0, LX/2OC;->A02:Ljava/lang/String;
 
     .line 10
     .line 11
-    invoke-direct {p0, p2, v2, v1, v0}, LX/1wb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p4, p0, LX/2OC;->A03:Ljava/lang/String;
 
     .line 12
     .line 13
+    iput-object p2, p0, LX/2OC;->A01:Lcom/facebook/auth/protocol/InstagramUserInfo;
+
     .line 14
+    .line 15
     return-void
 .end method

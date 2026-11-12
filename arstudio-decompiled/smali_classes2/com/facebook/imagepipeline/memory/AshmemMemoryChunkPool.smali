@@ -1,14 +1,14 @@
 .class public Lcom/facebook/imagepipeline/memory/AshmemMemoryChunkPool;
-.super LX/3wy;
+.super LX/3Ki;
 .source ""
 
 
 # direct methods
-.method public constructor <init>(LX/6NF;LX/37w;LX/2xo;)V
+.method public constructor <init>(LX/6cy;LX/2tN;LX/2Ze;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, LX/3wy;-><init>(LX/6NF;LX/37w;LX/2xo;)V
+    invoke-direct {p0, p1, p2, p3}, LX/3Ki;-><init>(LX/6cy;LX/2tN;LX/2Ze;)V
 
     .line 1
     .line 2
@@ -22,11 +22,11 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/3yz;
+    new-instance v0, LX/3MB;
 
     .line 1
     .line 2
-    invoke-direct {v0, p1}, LX/3yz;-><init>(I)V
+    invoke-direct {v0, p1}, LX/3MB;-><init>(I)V
 
     .line 3
     .line 4

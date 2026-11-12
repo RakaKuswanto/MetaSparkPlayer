@@ -1,17 +1,14 @@
-.class public final LX/3LN;
-.super LX/3Yo;
+.class public interface abstract LX/3LN;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract ATv(Ljava/lang/Object;)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, LX/3Yo;-><init>()V
+.method public abstract ATw(Ljava/lang/Object;)V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract ATx(Ljava/lang/Object;)V
 .end method

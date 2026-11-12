@@ -69,11 +69,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5c
+    const/16 v0, 0x36
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -135,22 +135,22 @@
 
     .line 268435476
     .line 268435477
-    const/4 v2, 0x0
+    invoke-static {}, LX/0X2;->A0X()Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 268435478
-    invoke-static {}, LX/0Ye;->A0K()Lcom/google/common/collect/ImmutableMap$Builder;
-
     .line 268435479
     .line 268435480
+    move-result-object v2
+
     .line 268435481
-    move-result-object v1
+    const/4 v1, 0x0
 
     .line 268435482
     new-instance v0, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
 
     .line 268435483
     .line 268435484
-    invoke-direct {v0, v1}, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;-><init>(Lcom/google/common/collect/ImmutableMap$Builder;)V
+    invoke-direct {v0, v2}, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;-><init>(Lcom/google/common/collect/ImmutableMap$Builder;)V
 
     .line 268435485
     .line 268435486
@@ -159,15 +159,15 @@
 
     .line 268435488
     .line 268435489
-    iput-object v2, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mHeader:Lcom/facebook/payments/paymentmethods/model/CardFormHeaderParams;
+    iput-object v1, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mHeader:Lcom/facebook/payments/paymentmethods/model/CardFormHeaderParams;
 
     .line 268435490
     .line 268435491
-    iput-object v2, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A03:Lcom/facebook/payments/checkout/configuration/model/bubble/BubbleComponent;
+    iput-object v1, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A03:Lcom/facebook/payments/checkout/configuration/model/bubble/BubbleComponent;
 
     .line 268435492
     .line 268435493
-    iput-object v2, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A02:Ljava/lang/String;
+    iput-object v1, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A02:Ljava/lang/String;
 
     .line 268435494
     .line 268435495
@@ -175,7 +175,7 @@
 .end method
 
 .method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 4
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Lcom/facebook/payments/paymentmethods/model/NewPaymentOption;-><init>()V
@@ -195,11 +195,11 @@
 
     .line 8
     .line 9
-    const-class v0, LX/0q4;
+    const-class v0, LX/1Jr;
 
     .line 10
     .line 11
-    invoke-static {p1, v0}, LX/0Yf;->A0m(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-static {p1, v0}, LX/0X3;->A0n(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/util/ArrayList;
 
     .line 12
     .line 13
@@ -219,11 +219,11 @@
 
     .line 19
     .line 20
-    const-class v3, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
+    const-class v0, Lcom/facebook/payments/paymentmethods/model/FbPaymentCardType;
 
     .line 21
     .line 22
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {p1, v0}, LX/1PJ;->A00(Landroid/os/Parcel;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
 
     .line 23
     .line 24
@@ -231,290 +231,217 @@
     move-result-object v0
 
     .line 26
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mAvailableFbPaymentCardTypes:Lcom/google/common/collect/ImmutableList;
 
     .line 27
     .line 28
-    .line 29
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    const-class v0, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
 
+    .line 29
     .line 30
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
     .line 31
     .line 32
-    move-result-object v2
-
     .line 33
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    move-result-object v0
 
     .line 34
+    check-cast v0, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
+
     .line 35
     .line 36
-    move-result-object v1
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A00:Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
 
     .line 37
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 38
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 39
     .line 40
-    move-result v0
-
     .line 41
-    if-eqz v0, :cond_2
+    move-result-object v0
 
     .line 42
-    .line 43
-    invoke-static {v1}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mTitle:Ljava/lang/String;
 
+    .line 43
     .line 44
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 45
     .line 46
-    move-result-object v0
-
     .line 47
-    invoke-static {v3, v0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-result-object v0
 
     .line 48
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mCountryCode:Ljava/lang/String;
+
     .line 49
     .line 50
-    move-result-object v0
+    const-class v0, Lcom/facebook/payments/paymentmethods/model/CardFormHeaderParams;
 
     .line 51
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 52
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
     .line 53
     .line 54
-    goto :goto_1
-
     .line 55
-    :cond_0
-    instance-of v0, v1, Ljava/util/Collection;
+    move-result-object v0
 
     .line 56
+    check-cast v0, Lcom/facebook/payments/paymentmethods/model/CardFormHeaderParams;
+
     .line 57
-    if-eqz v0, :cond_1
-
     .line 58
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mHeader:Lcom/facebook/payments/paymentmethods/model/CardFormHeaderParams;
+
     .line 59
-    check-cast v1, Ljava/util/Collection;
-
     .line 60
-    .line 61
-    invoke-static {v1}, LX/0Yj;->A0a(Ljava/util/Collection;)Ljava/util/HashSet;
+    const-class v0, Lcom/facebook/payments/checkout/configuration/model/bubble/BubbleComponent;
 
+    .line 61
     .line 62
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
     .line 63
     .line 64
-    move-result-object v0
-
     .line 65
-    :goto_2
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableSet;->A02(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSet;
+    move-result-object v0
 
     .line 66
+    check-cast v0, Lcom/facebook/payments/checkout/configuration/model/bubble/BubbleComponent;
+
     .line 67
     .line 68
-    move-result-object v0
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A03:Lcom/facebook/payments/checkout/configuration/model/bubble/BubbleComponent;
 
     .line 69
-    goto :goto_0
-
     .line 70
-    :cond_1
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 71
     .line 72
     .line 73
-    move-result-object v1
+    move-result-object v0
 
     .line 74
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A02:Ljava/lang/String;
 
     .line 75
     .line 76
+    return-void
+
     .line 77
-    move-result-object v0
+    :cond_0
+    instance-of v0, v1, Ljava/util/Collection;
 
     .line 78
-    invoke-static {v0, v1}, LX/1dd;->A03(Ljava/util/Collection;Ljava/util/Iterator;)Z
-
     .line 79
+    if-eqz v0, :cond_1
+
     .line 80
     .line 81
-    goto :goto_2
+    invoke-static {v1}, LX/0X7;->A0e(Ljava/util/Collection;)Ljava/util/HashSet;
 
     .line 82
-    :cond_2
-    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
-
     .line 83
     .line 84
-    .line 85
     move-result-object v0
 
-    .line 86
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mAvailableFbPaymentCardTypes:Lcom/google/common/collect/ImmutableList;
+    .line 85
+    :goto_1
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableSet;->A02(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSet;
 
+    .line 86
     .line 87
     .line 88
-    const-class v0, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
+    move-result-object v0
 
     .line 89
+    goto :goto_0
+
     .line 90
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
     .line 91
     .line 92
     .line 93
-    move-result-object v0
+    move-result-object v1
 
     .line 94
-    check-cast v0, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 95
     .line 96
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A00:Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
-
     .line 97
+    move-result-object v0
+
     .line 98
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-static {v0, v1}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
 
     .line 99
     .line 100
     .line 101
-    move-result-object v0
-
-    .line 102
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mTitle:Ljava/lang/String;
-
-    .line 103
-    .line 104
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    .line 105
-    .line 106
-    .line 107
-    move-result-object v0
-
-    .line 108
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mCountryCode:Ljava/lang/String;
-
-    .line 109
-    .line 110
-    const-class v0, Lcom/facebook/payments/paymentmethods/model/CardFormHeaderParams;
-
-    .line 111
-    .line 112
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
-
-    .line 113
-    .line 114
-    .line 115
-    move-result-object v0
-
-    .line 116
-    check-cast v0, Lcom/facebook/payments/paymentmethods/model/CardFormHeaderParams;
-
-    .line 117
-    .line 118
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->mHeader:Lcom/facebook/payments/paymentmethods/model/CardFormHeaderParams;
-
-    .line 119
-    .line 120
-    const-class v0, Lcom/facebook/payments/checkout/configuration/model/bubble/BubbleComponent;
-
-    .line 121
-    .line 122
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
-
-    .line 123
-    .line 124
-    .line 125
-    move-result-object v0
-
-    .line 126
-    check-cast v0, Lcom/facebook/payments/checkout/configuration/model/bubble/BubbleComponent;
-
-    .line 127
-    .line 128
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A03:Lcom/facebook/payments/checkout/configuration/model/bubble/BubbleComponent;
-
-    .line 129
-    .line 130
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    .line 131
-    .line 132
-    .line 133
-    move-result-object v0
-
-    .line 134
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A02:Ljava/lang/String;
-
-    .line 135
-    .line 136
-    return-void
+    goto :goto_1
 .end method
 
-.method private setAdditionalFields(LX/26k;)V
+.method private setAdditionalFields(LX/2sS;)V
     .locals 11
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
         value = "additional_fields"
     .end annotation
 
     .line 0
-    const/4 v5, 0x0
+    invoke-static {}, LX/0X2;->A0X()Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 1
-    invoke-static {}, LX/0Ye;->A0K()Lcom/google/common/collect/ImmutableMap$Builder;
-
     .line 2
     .line 3
+    move-result-object v3
+
     .line 4
-    move-result-object v4
+    invoke-virtual {p1}, LX/2Rs;->iterator()Ljava/util/Iterator;
 
     .line 5
-    invoke-virtual {p1}, LX/1we;->iterator()Ljava/util/Iterator;
-
     .line 6
     .line 7
-    .line 8
     move-result-object v10
 
-    .line 9
+    .line 8
     :goto_0
     invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 9
     .line 10
     .line 11
-    .line 12
     move-result v0
 
-    .line 13
+    .line 12
     if-eqz v0, :cond_7
 
+    .line 13
     .line 14
-    .line 15
     invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 15
     .line 16
     .line 17
-    .line 18
     move-result-object v9
 
+    .line 18
+    check-cast v9, LX/2Rs;
+
     .line 19
-    check-cast v9, LX/1we;
-
     .line 20
-    .line 21
-    const-string v0, "country"
+    const-string/jumbo v0, "country"
 
+    .line 21
     .line 22
     .line 23
-    invoke-static {v9, v0, v5}, LX/1we;->A02(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v9, v0}, LX/2Rs;->A0F(Ljava/lang/String;)LX/2Rs;
 
     .line 24
     .line 25
@@ -522,309 +449,312 @@
     move-result-object v0
 
     .line 27
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v5, 0x0
 
     .line 28
+    invoke-static {v0, v5}, Lcom/facebook/common/util/JSONUtil;->A04(LX/2Rs;Ljava/lang/String;)Ljava/lang/String;
+
     .line 29
     .line 30
-    invoke-static {v0}, Lcom/facebook/common/locale/Country;->A00(Ljava/lang/String;)Lcom/facebook/common/locale/Country;
-
     .line 31
+    move-result-object v0
+
     .line 32
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     .line 33
-    move-result-object v3
-
     .line 34
-    const-string/jumbo v8, "fields"
-
     .line 35
+    invoke-static {v5, v0}, Lcom/facebook/common/locale/Country;->A00(Lcom/facebook/common/locale/Country;Ljava/lang/String;)Lcom/facebook/common/locale/Country;
+
     .line 36
     .line 37
-    const-class v6, LX/26k;
-
     .line 38
+    move-result-object v4
+
     .line 39
-    invoke-virtual {v9, v8}, LX/1we;->A0E(Ljava/lang/String;)LX/1we;
+    const-string/jumbo v8, "fields"
 
     .line 40
     .line 41
     .line 42
-    move-result-object v7
+    const-class v6, LX/2sS;
 
     .line 43
-    if-eqz v7, :cond_0
-
     .line 44
-    .line 45
-    invoke-virtual {v6, v7}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v8}, LX/2Rs;->A0F(Ljava/lang/String;)LX/2Rs;
 
+    .line 45
     .line 46
     .line 47
+    move-result-object v7
+
     .line 48
-    move-result v0
+    if-eqz v7, :cond_0
 
     .line 49
-    const/4 v1, 0x0
-
     .line 50
-    if-eqz v0, :cond_1
+    invoke-virtual {v6, v7}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     .line 51
     .line 52
+    .line 53
+    move-result v0
+
+    .line 54
+    const/4 v1, 0x0
+
+    .line 55
+    if-eqz v0, :cond_1
+
+    .line 56
+    .line 57
     :cond_0
     const/4 v1, 0x1
 
-    .line 53
+    .line 58
     :cond_1
     invoke-virtual {v6}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    .line 54
-    .line 55
-    .line 56
-    move-result-object v0
-
-    .line 57
-    const-string v2, "Node %s in not an %s in %s"
-
-    .line 58
     .line 59
-    if-eqz v1, :cond_6
-
     .line 60
     .line 61
-    invoke-virtual {v6, v7}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 62
-    .line 63
-    .line 64
     move-result-object v0
 
+    .line 62
+    const-string v2, "Node %s in not an %s in %s"
+
+    .line 63
+    .line 64
+    if-eqz v1, :cond_6
+
     .line 65
-    check-cast v0, LX/1we;
-
     .line 66
-    .line 67
-    if-nez v0, :cond_2
+    invoke-virtual {v6, v7}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 67
     .line 68
     .line 69
-    sget-object v1, LX/26o;->A00:LX/26o;
+    move-result-object v0
 
     .line 70
-    .line 71
-    invoke-virtual {v6, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast v0, LX/2Rs;
 
+    .line 71
     .line 72
+    if-nez v0, :cond_2
+
     .line 73
     .line 74
-    move-result v0
+    sget-object v1, LX/3o5;->A00:LX/3o5;
 
     .line 75
-    if-eqz v0, :cond_4
-
     .line 76
-    .line 77
-    new-instance v0, LX/26k;
+    invoke-virtual {v6, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
+    .line 77
     .line 78
     .line 79
-    invoke-direct {v0, v1}, LX/26k;-><init>(LX/26o;)V
+    move-result v0
 
     .line 80
+    if-eqz v0, :cond_4
+
     .line 81
     .line 82
-    :cond_2
-    :goto_1
-    new-instance v2, Lcom/google/common/collect/ImmutableList$Builder;
+    new-instance v0, LX/2sS;
 
     .line 83
     .line 84
-    invoke-direct {v2}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
+    invoke-direct {v0, v1}, LX/2sS;-><init>(LX/3o5;)V
 
     .line 85
     .line 86
     .line 87
-    invoke-virtual {v0}, LX/1we;->iterator()Ljava/util/Iterator;
+    :cond_2
+    :goto_1
+    new-instance v2, Lcom/google/common/collect/ImmutableList$Builder;
 
     .line 88
     .line 89
+    invoke-direct {v2}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
+
     .line 90
+    .line 91
+    .line 92
+    invoke-virtual {v0}, LX/2Rs;->iterator()Ljava/util/Iterator;
+
+    .line 93
+    .line 94
+    .line 95
     move-result-object v1
 
-    .line 91
+    .line 96
     :goto_2
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 92
-    .line 93
-    .line 94
-    move-result v0
-
-    .line 95
-    if-eqz v0, :cond_3
-
-    .line 96
     .line 97
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 98
     .line 99
+    move-result v0
+
     .line 100
-    move-result-object v0
+    if-eqz v0, :cond_3
 
     .line 101
-    check-cast v0, LX/1we;
-
     .line 102
-    .line 103
-    invoke-static {v0, v5}, Lcom/facebook/common/util/JSONUtil;->A04(LX/1we;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 103
     .line 104
     .line 105
-    .line 106
     move-result-object v0
+
+    .line 106
+    check-cast v0, LX/2Rs;
 
     .line 107
-    invoke-static {v0}, Lcom/facebook/payments/paymentmethods/model/VerifyField;->forValue(Ljava/lang/String;)Lcom/facebook/payments/paymentmethods/model/VerifyField;
-
     .line 108
+    invoke-static {v0, v5}, Lcom/facebook/common/util/JSONUtil;->A04(LX/2Rs;Ljava/lang/String;)Ljava/lang/String;
+
     .line 109
     .line 110
+    .line 111
     move-result-object v0
 
-    .line 111
-    invoke-virtual {v2, v0}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
-
     .line 112
+    invoke-static {v0}, Lcom/facebook/payments/paymentmethods/model/VerifyField;->forValue(Ljava/lang/String;)Lcom/facebook/payments/paymentmethods/model/VerifyField;
+
     .line 113
     .line 114
+    .line 115
+    move-result-object v0
+
+    .line 116
+    invoke-virtual {v2, v0}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+
+    .line 117
+    .line 118
+    .line 119
     goto :goto_2
 
-    .line 115
+    .line 120
     :cond_3
     invoke-virtual {v2}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
-    .line 116
-    .line 117
-    .line 118
-    move-result-object v0
-
-    .line 119
-    invoke-virtual {v4, v3, v0}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
-
-    .line 120
     .line 121
     .line 122
-    goto :goto_0
-
     .line 123
-    :cond_4
-    const-class v0, LX/26j;
-
-    .line 124
-    .line 125
-    invoke-virtual {v0, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 126
-    .line 127
-    .line 128
-    move-result v0
-
-    .line 129
-    if-eqz v0, :cond_5
-
-    .line 130
-    .line 131
-    new-instance v0, LX/26j;
-
-    .line 132
-    .line 133
-    invoke-direct {v0, v1}, LX/26j;-><init>(LX/26o;)V
-
-    .line 134
-    .line 135
-    .line 136
-    goto :goto_1
-
-    .line 137
-    :cond_5
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 138
-    .line 139
-    .line 140
-    move-result-object v1
-
-    .line 141
-    const-string v0, "Unsupported node type: "
-
-    .line 142
-    .line 143
-    invoke-static {v6, v0, v1}, LX/0Yc;->A03(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
-
-    .line 144
-    .line 145
-    .line 146
     move-result-object v0
 
-    .line 147
-    throw v0
+    .line 124
+    invoke-virtual {v3, v4, v0}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
+    .line 125
+    .line 126
+    .line 127
+    goto :goto_0
+
+    .line 128
+    :cond_4
+    const-class v0, LX/2sR;
+
+    .line 129
+    .line 130
+    invoke-virtual {v0, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 131
+    .line 132
+    .line 133
+    move-result v0
+
+    .line 134
+    if-eqz v0, :cond_5
+
+    .line 135
+    .line 136
+    new-instance v0, LX/2sR;
+
+    .line 137
+    .line 138
+    invoke-direct {v0, v1}, LX/2sR;-><init>(LX/3o5;)V
+
+    .line 139
+    .line 140
+    .line 141
+    goto :goto_1
+
+    .line 142
+    :cond_5
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 143
+    .line 144
+    .line 145
+    move-result-object v1
+
+    .line 146
+    const-string v0, "Unsupported node type: "
+
+    .line 147
     .line 148
-    :cond_6
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
+    invoke-static {v6, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
     .line 149
     .line 150
     .line 151
-    move-result-object v1
+    move-result-object v0
 
     .line 152
-    invoke-static {v1, v8, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 153
-    .line 154
-    .line 155
-    const/4 v0, 0x2
-
-    .line 156
-    aput-object v9, v1, v0
-
-    .line 157
-    .line 158
-    invoke-static {v2, v1}, Lcom/google/common/base/Strings;->lenientFormat(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 159
-    .line 160
-    .line 161
-    move-result-object v0
-
-    .line 162
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 163
-    .line 164
-    .line 165
-    move-result-object v0
-
-    .line 166
     throw v0
 
+    .line 153
+    :cond_6
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
+
+    .line 154
+    .line 155
+    .line 156
+    move-result-object v1
+
+    .line 157
+    invoke-static {v1, v8, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 158
+    .line 159
+    .line 160
+    const/4 v0, 0x2
+
+    .line 161
+    aput-object v9, v1, v0
+
+    .line 162
+    .line 163
+    invoke-static {v2, v1}, LX/0X5;->A0U(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/IllegalArgumentException;
+
+    .line 164
+    .line 165
+    .line 166
+    move-result-object v0
+
     .line 167
+    throw v0
+
+    .line 168
     :cond_7
     new-instance v0, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
 
-    .line 168
     .line 169
-    invoke-direct {v0, v4}, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;-><init>(Lcom/google/common/collect/ImmutableMap$Builder;)V
-
     .line 170
+    invoke-direct {v0, v3}, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;-><init>(Lcom/google/common/collect/ImmutableMap$Builder;)V
+
     .line 171
     .line 172
+    .line 173
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/NewCreditCardOption;->A00:Lcom/facebook/payments/paymentmethods/model/AdditionalFields;
 
-    .line 173
     .line 174
+    .line 175
     return-void
 .end method
 
@@ -838,7 +768,7 @@
         value = {
             "(",
             "Ljava/util/EnumSet<",
-            "LX/0q4;",
+            "LX/1Jr;",
             ">;)V"
         }
     .end annotation
@@ -926,7 +856,7 @@
 
     .line 38
     :cond_1
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 39
     .line 40
@@ -966,7 +896,7 @@
     move-result-object v2
 
     .line 58
-    invoke-static {v2, v1}, LX/1dd;->A03(Ljava/util/Collection;Ljava/util/Iterator;)Z
+    invoke-static {v2, v1}, LX/1uG;->A02(Ljava/util/Collection;Ljava/util/Iterator;)Z
 
     .line 59
     .line 60
@@ -975,7 +905,7 @@
 
     .line 62
     :cond_2
-    invoke-virtual {v2}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 63
     .line 64
@@ -1024,7 +954,7 @@
 
     .line 85
     :cond_4
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 86
     .line 87
@@ -1032,111 +962,112 @@
     move-result-object v2
 
     .line 89
-    const-string v0, "expected one element but was: <"
+    const-string/jumbo v0, "expected one element but was: <"
 
     .line 90
     .line 91
+    .line 92
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 92
     .line 93
     .line 94
+    .line 95
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 95
     .line 96
     .line 97
+    .line 98
     const/4 v1, 0x0
 
-    .line 98
+    .line 99
     :goto_2
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 99
     .line 100
     .line 101
+    .line 102
     move-result v0
 
-    .line 102
+    .line 103
     if-eqz v0, :cond_5
 
-    .line 103
     .line 104
-    invoke-static {v2}, LX/0Yg;->A1E(Ljava/lang/StringBuilder;)V
-
     .line 105
+    invoke-static {v2}, LX/0X5;->A1O(Ljava/lang/StringBuilder;)V
+
     .line 106
     .line 107
+    .line 108
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 108
     .line 109
     .line 110
+    .line 111
     move-result-object v0
 
-    .line 111
+    .line 112
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 112
     .line 113
     .line 114
+    .line 115
     add-int/lit8 v1, v1, 0x1
 
-    .line 115
     .line 116
+    .line 117
     const/4 v0, 0x4
 
-    .line 117
+    .line 118
     if-ge v1, v0, :cond_5
 
-    .line 118
     .line 119
+    .line 120
     goto :goto_2
 
-    .line 120
+    .line 121
     :cond_5
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 121
     .line 122
     .line 123
+    .line 124
     move-result v0
 
-    .line 124
+    .line 125
     if-eqz v0, :cond_6
 
-    .line 125
     .line 126
+    .line 127
     const-string v0, ", ..."
 
-    .line 127
     .line 128
+    .line 129
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 129
     .line 130
     .line 131
+    .line 132
     :cond_6
     const/16 v0, 0x3e
 
-    .line 132
     .line 133
-    invoke-static {v2, v0}, LX/0Yh;->A0b(Ljava/lang/StringBuilder;C)Ljava/lang/String;
-
     .line 134
+    invoke-static {v2, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
     .line 135
     .line 136
-    move-result-object v0
-
     .line 137
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    move-result-object v0
 
     .line 138
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 139
     .line 140
+    .line 141
     move-result-object v0
 
-    .line 141
+    .line 142
     throw v0
 .end method
 
@@ -1184,7 +1115,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1, v0}, LX/15E;->A00(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableList;)V
+    invoke-static {p1, v0}, LX/1PJ;->A02(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableList;)V
 
     .line 16
     .line 17
@@ -1247,7 +1178,7 @@
 
     .line 49
     :cond_0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 50
     .line 51

@@ -82,11 +82,11 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/55m;
+    new-instance v0, LX/4y5;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/55m;-><init>()V
+    invoke-direct {v0}, LX/4y5;-><init>()V
 
     .line 3
     .line 4
@@ -95,11 +95,11 @@
 
     .line 6
     .line 7
-    new-instance v0, LX/55s;
+    new-instance v0, LX/4y4;
 
     .line 8
     .line 9
-    invoke-direct {v0}, LX/55s;-><init>()V
+    invoke-direct {v0}, LX/4y4;-><init>()V
 
     .line 10
     .line 11
@@ -108,11 +108,11 @@
 
     .line 13
     .line 14
-    new-instance v0, LX/55r;
+    new-instance v0, LX/4y3;
 
     .line 15
     .line 16
-    invoke-direct {v0}, LX/55r;-><init>()V
+    invoke-direct {v0}, LX/4y3;-><init>()V
 
     .line 17
     .line 18
@@ -121,11 +121,11 @@
 
     .line 20
     .line 21
-    new-instance v0, LX/55q;
+    new-instance v0, LX/4y2;
 
     .line 22
     .line 23
-    invoke-direct {v0}, LX/55q;-><init>()V
+    invoke-direct {v0}, LX/4y2;-><init>()V
 
     .line 24
     .line 25
@@ -134,11 +134,11 @@
 
     .line 27
     .line 28
-    new-instance v0, LX/55p;
+    new-instance v0, LX/4y1;
 
     .line 29
     .line 30
-    invoke-direct {v0}, LX/55p;-><init>()V
+    invoke-direct {v0}, LX/4y1;-><init>()V
 
     .line 31
     .line 32
@@ -147,11 +147,11 @@
 
     .line 34
     .line 35
-    new-instance v0, LX/55o;
+    new-instance v0, LX/4y0;
 
     .line 36
     .line 37
-    invoke-direct {v0}, LX/55o;-><init>()V
+    invoke-direct {v0}, LX/4y0;-><init>()V
 
     .line 38
     .line 39
@@ -160,11 +160,11 @@
 
     .line 41
     .line 42
-    new-instance v0, LX/55n;
+    new-instance v0, LX/4xz;
 
     .line 43
     .line 44
-    invoke-direct {v0}, LX/55n;-><init>()V
+    invoke-direct {v0}, LX/4xz;-><init>()V
 
     .line 45
     .line 46
@@ -259,30 +259,18 @@
 
     .line 18
     :cond_1
-    const/16 v0, 0x3b
+    const-string v0, "Unexpected value for native Availability, value="
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
+    invoke-static {v0, p0}, LX/431;->A0P(Ljava/lang/String;I)Lcom/google/ar/core/exceptions/FatalException;
 
     .line 21
     .line 22
     .line 23
-    move-result-object v1
-
-    .line 24
-    const-string v0, "Unexpected value for native Availability, value="
-
-    .line 25
-    .line 26
-    invoke-static {v0, v1, p0}, LX/4BD;->A0V(Ljava/lang/String;Ljava/lang/StringBuilder;I)Lcom/google/ar/core/exceptions/FatalException;
-
-    .line 27
-    .line 28
-    .line 29
     move-result-object v0
 
-    .line 30
+    .line 24
     throw v0
 .end method
 

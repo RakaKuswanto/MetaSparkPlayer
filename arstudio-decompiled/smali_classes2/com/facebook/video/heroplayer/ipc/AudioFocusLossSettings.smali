@@ -15,9 +15,9 @@
 # instance fields
 .field public final A00:F
 
-.field public final A01:LX/1Sj;
+.field public final A01:LX/3vk;
 
-.field public final A02:LX/1Sj;
+.field public final A02:LX/3vk;
 
 
 # direct methods
@@ -38,11 +38,11 @@
 
     .line 6
     .line 7
-    const/16 v0, 0x41
+    const/16 v0, 0x38
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 10
     .line 11
@@ -66,19 +66,19 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    sget-object v0, LX/1Sj;->PAUSE:LX/1Sj;
+    sget-object v0, LX/3vk;->PAUSE:LX/3vk;
 
     .line 268435460
     .line 268435461
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/1Sj;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/3vk;
 
     .line 268435462
     .line 268435463
-    sget-object v0, LX/1Sj;->NONE:LX/1Sj;
+    sget-object v0, LX/3vk;->NONE:LX/3vk;
 
     .line 268435464
     .line 268435465
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/1Sj;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/3vk;
 
     .line 268435466
     .line 268435467
@@ -113,12 +113,12 @@
 
     .line 8
     .line 9
-    sget-object v0, LX/1Sj;->NONE:LX/1Sj;
+    sget-object v0, LX/3vk;->NONE:LX/3vk;
 
     .line 10
     .line 11
     :goto_0
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/1Sj;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/3vk;
 
     .line 12
     .line 13
@@ -134,12 +134,12 @@
 
     .line 18
     .line 19
-    sget-object v0, LX/1Sj;->NONE:LX/1Sj;
+    sget-object v0, LX/3vk;->NONE:LX/3vk;
 
     .line 20
     .line 21
     :goto_1
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/1Sj;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/3vk;
 
     .line 22
     .line 23
@@ -159,7 +159,7 @@
 
     .line 30
     :cond_0
-    invoke-static {v0}, LX/1Sj;->valueOf(Ljava/lang/String;)LX/1Sj;
+    invoke-static {v0}, LX/3vk;->valueOf(Ljava/lang/String;)LX/3vk;
 
     .line 31
     .line 32
@@ -171,7 +171,7 @@
 
     .line 35
     :cond_1
-    invoke-static {v0}, LX/1Sj;->valueOf(Ljava/lang/String;)LX/1Sj;
+    invoke-static {v0}, LX/3vk;->valueOf(Ljava/lang/String;)LX/3vk;
 
     .line 36
     .line 37
@@ -242,11 +242,11 @@
 
     .line 20
     .line 21
-    iget-object v1, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/1Sj;
+    iget-object v1, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/3vk;
 
     .line 22
     .line 23
-    iget-object v0, p1, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/1Sj;
+    iget-object v0, p1, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/3vk;
 
     .line 24
     .line 25
@@ -254,11 +254,11 @@
 
     .line 26
     .line 27
-    iget-object v1, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/1Sj;
+    iget-object v1, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/3vk;
 
     .line 28
     .line 29
-    iget-object v0, p1, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/1Sj;
+    iget-object v0, p1, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/3vk;
 
     .line 30
     .line 31
@@ -281,7 +281,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -289,7 +289,7 @@
     move-result-object v2
 
     .line 4
-    iget-object v1, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/1Sj;
+    iget-object v1, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/3vk;
 
     .line 5
     .line 6
@@ -300,7 +300,7 @@
 
     .line 8
     .line 9
-    iget-object v1, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/1Sj;
+    iget-object v1, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/3vk;
 
     .line 10
     .line 11
@@ -320,20 +320,17 @@
     .line 17
     .line 18
     .line 19
-    move-result-object v1
+    move-result-object v0
 
     .line 20
-    const/4 v0, 0x2
+    invoke-static {v2, v0}, LX/0X4;->A07([Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 21
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
-
     .line 22
     .line 23
-    .line 24
     move-result v0
 
-    .line 25
+    .line 24
     return v0
 .end method
 
@@ -341,7 +338,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -358,7 +355,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/1Sj;
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/3vk;
 
     .line 10
     .line 11
@@ -376,7 +373,7 @@
     .line 17
     .line 18
     .line 19
-    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/1Sj;
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/3vk;
 
     .line 20
     .line 21
@@ -403,7 +400,7 @@
     .line 32
     .line 33
     .line 34
-    invoke-static {v1}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1}, LX/001;->A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 35
     .line 36
@@ -418,20 +415,20 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/1Sj;
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A01:LX/3vk;
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/1Sj;
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/AudioFocusLossSettings;->A02:LX/3vk;
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 8
     .line 9

@@ -1,226 +1,300 @@
-.class public interface abstract LX/25D;
+.class public final LX/25D;
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A00:LX/24w;
-
-.field public static final A01:LX/24w;
-
-.field public static final A02:LX/24w;
-
-.field public static final A03:LX/24w;
-
-.field public static final A04:LX/24w;
-
-.field public static final A05:LX/24w;
-
-.field public static final A06:LX/24w;
-
-.field public static final A07:LX/24w;
-
-.field public static final A08:LX/24w;
-
-.field public static final A09:LX/24w;
+# interfaces
+.implements LX/24r;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string v1, "_id"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const-string v0, "INTEGER PRIMARY KEY"
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic A5p(LX/1zb;LX/1zb;Lcom/google/common/collect/MapMakerInternalMap$Segment;)LX/1zb;
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "segment",
+            "entry",
+            "newNext"
+        }
+    .end annotation
+
+    .line 0
+    check-cast p3, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;
+
+    .line 1
+    .line 2
+    check-cast p1, LX/25E;
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    check-cast p2, LX/25E;
 
     .line 5
     .line 6
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
     .line 7
-    move-result-object v0
-
     .line 8
-    sput-object v0, LX/25D;->A09:LX/24w;
-
     .line 9
+    move-result-object v3
+
     .line 10
-    const-string v0, "confirmed_model"
+    const/4 v0, 0x0
 
     .line 11
+    if-eqz v3, :cond_0
+
     .line 12
-    const-string v3, "INTEGER NOT NULL"
-
     .line 13
-    .line 14
-    invoke-static {v0, v3}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    iget-object v1, p1, LX/25E;->A00:LX/252;
 
+    .line 14
     .line 15
+    invoke-interface {v1}, LX/252;->get()Ljava/lang/Object;
+
     .line 16
     .line 17
-    move-result-object v0
-
     .line 18
-    sput-object v0, LX/25D;->A00:LX/24w;
+    move-result-object v1
 
     .line 19
-    .line 20
-    const-string/jumbo v0, "optimistic_model"
+    if-eqz v1, :cond_0
 
+    .line 20
     .line 21
+    iget v2, p1, LX/25F;->A00:I
+
     .line 22
     .line 23
-    invoke-static {v0, v3}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    iget-object v1, p3, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;->queueForKeys:Ljava/lang/ref/ReferenceQueue;
 
     .line 24
     .line 25
-    .line 26
-    move-result-object v0
+    if-nez p2, :cond_1
 
+    .line 26
     .line 27
-    sput-object v0, LX/25D;->A03:LX/24w;
+    new-instance v0, LX/25E;
 
     .line 28
     .line 29
-    const-string/jumbo v1, "model_type"
+    invoke-direct {v0, v3, v1, v2}, LX/25E;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;I)V
 
     .line 30
     .line 31
     .line 32
-    const-string v0, "BLOB NOT NULL"
+    :goto_0
+    iget-object v2, p1, LX/25E;->A00:LX/252;
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    iget-object v1, p3, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;->queueForValues:Ljava/lang/ref/ReferenceQueue;
 
     .line 35
     .line 36
+    invoke-interface {v2, v0, v1}, LX/252;->A5s(LX/1zb;Ljava/lang/ref/ReferenceQueue;)LX/252;
+
     .line 37
-    move-result-object v0
-
     .line 38
-    sput-object v0, LX/25D;->A02:LX/24w;
-
     .line 39
+    move-result-object v1
+
     .line 40
-    const-string/jumbo v0, "session_id"
+    iput-object v1, v0, LX/25E;->A00:LX/252;
 
     .line 41
     .line 42
+    :cond_0
+    return-object v0
+
     .line 43
-    const-string v2, "TEXT NOT NULL"
+    :cond_1
+    new-instance v0, LX/25J;
 
     .line 44
     .line 45
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    invoke-direct {v0, p2, v3, v1, v2}, LX/25J;-><init>(LX/25E;Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;I)V
 
     .line 46
     .line 47
     .line 48
-    move-result-object v0
+    goto :goto_0
+.end method
 
-    .line 49
-    sput-object v0, LX/25D;->A04:LX/24w;
+.method public final AQX()Lcom/google/common/collect/MapMakerInternalMap$Strength;
+    .locals 1
 
-    .line 50
-    .line 51
-    const-string/jumbo v0, "user_id"
+    .line 0
+    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
-    .line 52
-    .line 53
-    .line 54
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    .line 1
+    .line 2
+    return-object v0
+.end method
 
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v0
+.method public final bridge synthetic ASD(LX/1zb;Lcom/google/common/collect/MapMakerInternalMap$Segment;Ljava/lang/Object;I)LX/1zb;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "segment",
+            "key",
+            "hash",
+            "next"
+        }
+    .end annotation
 
-    .line 58
-    sput-object v0, LX/25D;->A07:LX/24w;
+    .line 0
+    check-cast p2, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;
 
-    .line 59
-    .line 60
-    const-string/jumbo v1, "flags"
+    .line 1
+    .line 2
+    check-cast p1, LX/25E;
 
-    .line 61
-    .line 62
-    .line 63
-    const-string v0, "INTEGER"
+    .line 3
+    .line 4
+    iget-object v1, p2, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;->queueForKeys:Ljava/lang/ref/ReferenceQueue;
 
-    .line 64
-    .line 65
-    invoke-static {v1, v0}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    .line 5
+    .line 6
+    if-nez p1, :cond_0
 
-    .line 66
-    .line 67
-    .line 68
-    move-result-object v0
+    .line 7
+    .line 8
+    new-instance v0, LX/25E;
 
-    .line 69
-    sput-object v0, LX/25D;->A01:LX/24w;
+    .line 9
+    .line 10
+    invoke-direct {v0, p3, v1, p4}, LX/25E;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;I)V
 
-    .line 70
-    .line 71
-    const-string/jumbo v0, "version"
+    .line 11
+    .line 12
+    .line 13
+    return-object v0
 
-    .line 72
-    .line 73
-    .line 74
-    invoke-static {v0, v3}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    .line 14
+    :cond_0
+    new-instance v0, LX/25J;
 
-    .line 75
-    .line 76
-    .line 77
-    move-result-object v0
+    .line 15
+    .line 16
+    invoke-direct {v0, p1, p3, v1, p4}, LX/25J;-><init>(LX/25E;Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;I)V
 
-    .line 78
-    sput-object v0, LX/25D;->A08:LX/24w;
+    .line 17
+    .line 18
+    .line 19
+    return-object v0
+.end method
 
-    .line 79
-    .line 80
-    const-string/jumbo v0, "sort_key"
+.method public final bridge synthetic ASE(Lcom/google/common/collect/MapMakerInternalMap;I)Lcom/google/common/collect/MapMakerInternalMap$Segment;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "map",
+            "initialCapacity"
+        }
+    .end annotation
 
-    .line 81
-    .line 82
-    .line 83
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    .line 0
+    new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;
 
-    .line 84
-    .line 85
-    .line 86
-    move-result-object v0
+    .line 1
+    .line 2
+    invoke-direct {v0, p1, p2}, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;-><init>(Lcom/google/common/collect/MapMakerInternalMap;I)V
 
-    .line 87
-    sput-object v0, LX/25D;->A05:LX/24w;
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
+.end method
 
-    .line 88
-    .line 89
-    const-string/jumbo v1, "tags"
+.method public final bridge synthetic AmG(LX/1zb;Lcom/google/common/collect/MapMakerInternalMap$Segment;Ljava/lang/Object;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "segment",
+            "entry",
+            "value"
+        }
+    .end annotation
 
-    .line 90
-    .line 91
-    .line 92
-    const-string v0, "TEXT"
+    .line 0
+    check-cast p2, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;
 
-    .line 93
-    .line 94
-    invoke-static {v1, v0}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    .line 1
+    .line 2
+    check-cast p1, LX/25E;
 
-    .line 95
-    .line 96
-    .line 97
-    move-result-object v0
+    .line 3
+    .line 4
+    iget-object v2, p1, LX/25E;->A00:LX/252;
 
-    .line 98
-    sput-object v0, LX/25D;->A06:LX/24w;
+    .line 5
+    .line 6
+    iget-object v1, p2, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueSegment;->queueForValues:Ljava/lang/ref/ReferenceQueue;
 
-    .line 99
-    .line 100
+    .line 7
+    .line 8
+    new-instance v0, LX/25G;
+
+    .line 9
+    .line 10
+    invoke-direct {v0, p1, p3, v1}, LX/25G;-><init>(LX/1zb;Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
+
+    .line 11
+    .line 12
+    .line 13
+    iput-object v0, p1, LX/25E;->A00:LX/252;
+
+    .line 14
+    .line 15
+    invoke-interface {v2}, LX/252;->clear()V
+
+    .line 16
+    .line 17
+    .line 18
     return-void
+.end method
+
+.method public final Apt()Lcom/google/common/collect/MapMakerInternalMap$Strength;
+    .locals 1
+
+    .line 0
+    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

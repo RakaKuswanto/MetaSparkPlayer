@@ -4,29 +4,27 @@
 
 
 # instance fields
-.field public A00:LX/1b2;
+.field public A00:LX/28F;
 
-.field public A01:LX/1zG;
+.field public final A01:Landroid/media/AudioManager;
 
-.field public final A02:Landroid/media/AudioManager;
+.field public final A02:LX/3wb;
 
-.field public final A03:LX/3ga;
+.field public final A03:LX/0RP;
 
-.field public final A04:LX/0Na;
+.field public final A04:LX/28F;
 
-.field public final A05:LX/1b2;
+.field public final A05:Landroid/content/res/Resources;
 
-.field public final A06:Landroid/content/res/Resources;
+.field public final A06:Landroid/view/WindowManager;
 
-.field public final A07:Landroid/view/WindowManager;
+.field public final A07:LX/0RP;
 
-.field public final A08:LX/0Na;
-
-.field public final A09:LX/0Na;
+.field public final A08:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 6
 
     .line 0
@@ -35,67 +33,67 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    const-class v0, Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 4
     .line 5
+    const/4 v5, 0x0
+
     .line 6
-    move-result-object v0
+    invoke-static {v0, v5}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A04:LX/0Na;
-
     .line 8
     .line 9
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
-
-    .line 10
-    .line 11
-    .line 12
     move-result-object v0
 
+    .line 10
+    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A03:LX/0RP;
+
+    .line 11
+    .line 12
+    const-class v0, LX/0Ft;
+
     .line 13
-    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A08:LX/0Na;
-
     .line 14
-    .line 15
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    invoke-static {v0, v5}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
 
+    .line 15
     .line 16
     .line 17
+    move-result-object v0
+
     .line 18
-    move-result-object v2
+    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A07:LX/0RP;
 
     .line 19
-    iput-object v2, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A09:LX/0Na;
-
     .line 20
+    const-class v0, LX/302;
+
     .line 21
-    sget-object v1, LX/1b0;->A02:LX/1b2;
-
     .line 22
-    .line 23
-    const-string/jumbo v0, "sound_toggle_label_shown_times"
+    invoke-static {v0, v5}, LX/3Fc;->A02(Ljava/lang/Class;Ljava/lang/Class;)LX/0lf;
 
+    .line 23
     .line 24
     .line 25
+    move-result-object v3
+
     .line 26
-    invoke-static {v1, v0}, LX/1b3;->A06(LX/1b3;Ljava/lang/String;)LX/1b2;
+    iput-object v3, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A08:LX/0RP;
 
     .line 27
     .line 28
-    .line 29
-    move-result-object v0
+    sget-object v1, LX/1GN;->A02:LX/28F;
 
+    .line 29
     .line 30
-    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A05:LX/1b2;
+    const-string/jumbo v0, "sound_toggle_label_shown_times"
 
     .line 31
     .line 32
-    const/4 v4, 0x0
-
     .line 33
-    invoke-static {p1, v4}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
 
     .line 34
     .line 35
@@ -103,282 +101,310 @@
     move-result-object v0
 
     .line 37
-    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A01:LX/1zG;
+    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A04:LX/28F;
 
     .line 38
     .line 39
-    sget v0, LX/2eq;->A5B:I
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 40
     .line 41
-    const/4 v1, 0x0
-
     .line 42
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    move-result-object v4
 
     .line 43
+    invoke-static {}, LX/3Fa;->A00()Landroid/content/Context;
+
     .line 44
     .line 45
-    move-result-object v3
-
     .line 46
-    check-cast v3, Landroid/content/Context;
+    move-result-object v2
 
     .line 47
+    const-class v1, Landroid/content/Context;
+
     .line 48
-    sget v0, LX/2eq;->ALV:I
-
     .line 49
-    .line 50
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    const-class v0, Lcom/facebook/inject/UnsafeContextInjection;
 
+    .line 50
     .line 51
+    invoke-static {v2, v1, v0}, LX/3Fa;->A07(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
+
     .line 52
     .line 53
-    move-result-object v0
-
     .line 54
-    check-cast v0, Landroid/view/WindowManager;
+    move-result-object v1
 
     .line 55
-    .line 56
-    invoke-static {v2}, LX/0Zq;->A0K(LX/0Zq;)LX/35B;
+    check-cast v1, Landroid/content/Context;
 
+    .line 56
     .line 57
+    const-class v0, Landroid/view/WindowManager;
+
     .line 58
     .line 59
-    move-result-object v5
+    invoke-static {v1, v0, v5}, LX/3Fb;->A03(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 60
-    const-wide v1, 0x810165001212cbL
-
     .line 61
     .line 62
+    move-result-object v0
+
     .line 63
+    check-cast v0, Landroid/view/WindowManager;
+
     .line 64
     .line 65
-    invoke-interface {v5, v1, v2}, LX/35B;->ACd(J)Z
+    invoke-static {v3}, LX/0lf;->A0H(LX/0lf;)LX/30K;
 
     .line 66
     .line 67
     .line 68
-    new-instance v5, LX/3ga;
+    move-result-object v3
 
     .line 69
-    .line 70
-    invoke-direct {v5}, LX/3ga;-><init>()V
+    const-wide v1, 0x81014c00121042L
 
+    .line 70
     .line 71
     .line 72
     .line 73
-    const/4 v2, 0x1
-
     .line 74
-    iput-boolean v2, v5, LX/3ga;->A04:Z
+    check-cast v3, LX/302;
 
     .line 75
     .line 76
-    iput-boolean v2, v5, LX/3ga;->A02:Z
+    invoke-static {v3, v1, v2}, LX/302;->A0K(LX/302;J)Z
 
     .line 77
     .line 78
-    const/16 v1, 0xf
-
     .line 79
+    new-instance v3, LX/3wb;
+
     .line 80
-    iput v1, v5, LX/3ga;->A00:I
-
     .line 81
-    .line 82
-    iput-boolean v2, v5, LX/3ga;->A05:Z
+    invoke-direct {v3}, LX/3wb;-><init>()V
 
+    .line 82
     .line 83
     .line 84
-    const-string/jumbo v1, "v1"
+    const/4 v2, 0x1
 
     .line 85
+    iput-boolean v2, v3, LX/3wb;->A03:Z
+
     .line 86
     .line 87
-    iput-object v1, v5, LX/3ga;->A01:Ljava/lang/String;
+    iput-boolean v2, v3, LX/3wb;->A02:Z
 
     .line 88
     .line 89
-    iput-boolean v2, v5, LX/3ga;->A03:Z
+    const/16 v1, 0xf
 
     .line 90
     .line 91
-    iput-object v5, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A03:LX/3ga;
+    iput v1, v3, LX/3wb;->A00:I
 
     .line 92
     .line 93
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    iput-boolean v2, v3, LX/3wb;->A04:Z
 
     .line 94
     .line 95
+    const-string/jumbo v1, "v1"
+
     .line 96
-    move-result-object v1
-
     .line 97
-    iput-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A06:Landroid/content/res/Resources;
-
     .line 98
+    iput-object v1, v3, LX/3wb;->A01:Ljava/lang/String;
+
     .line 99
-    const-string v1, "audio"
-
     .line 100
-    .line 101
-    invoke-virtual {v3, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iput-object v3, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A02:LX/3wb;
 
+    .line 101
     .line 102
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
     .line 103
     .line 104
+    .line 105
     move-result-object v1
 
-    .line 105
-    check-cast v1, Landroid/media/AudioManager;
-
     .line 106
+    iput-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A05:Landroid/content/res/Resources;
+
     .line 107
-    iput-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A02:Landroid/media/AudioManager;
-
     .line 108
-    .line 109
-    iget-object v2, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A05:LX/1b2;
+    const-string/jumbo v1, "audio"
 
+    .line 109
     .line 110
     .line 111
-    iget-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A03:LX/3ga;
+    invoke-virtual {v4, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     .line 112
     .line 113
-    iget-object v1, v1, LX/3ga;->A01:Ljava/lang/String;
-
     .line 114
+    move-result-object v1
+
     .line 115
-    invoke-static {v2, v1}, LX/1b3;->A06(LX/1b3;Ljava/lang/String;)LX/1b2;
+    check-cast v1, Landroid/media/AudioManager;
 
     .line 116
     .line 117
-    .line 118
-    move-result-object v1
+    iput-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A01:Landroid/media/AudioManager;
 
+    .line 118
     .line 119
-    iput-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A00:LX/1b2;
+    iget-object v2, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A04:LX/28F;
 
     .line 120
     .line 121
-    iget-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A04:LX/0Na;
+    iget-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A02:LX/3wb;
 
     .line 122
     .line 123
-    invoke-static {v1}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    iget-object v1, v1, LX/3wb;->A01:Ljava/lang/String;
 
     .line 124
     .line 125
+    invoke-static {v2, v1}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 126
-    move-result-object v2
-
     .line 127
-    iget-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A00:LX/1b2;
-
     .line 128
+    move-result-object v1
+
     .line 129
-    invoke-interface {v2, v1, v4}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AHE(LX/1b2;I)I
+    iput-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A00:LX/28F;
 
     .line 130
     .line 131
+    iget-object v1, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A03:LX/0RP;
+
     .line 132
-    if-nez v0, :cond_0
-
     .line 133
-    .line 134
-    const-string/jumbo v0, "window"
+    invoke-static {v1}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
+    .line 134
     .line 135
     .line 136
+    move-result-object v3
+
     .line 137
-    invoke-virtual {v3, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iget-object v2, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A00:LX/28F;
 
     .line 138
     .line 139
+    const/4 v1, 0x0
+
     .line 140
-    move-result-object v0
+    invoke-interface {v3, v2, v1}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AFn(LX/28F;I)I
 
     .line 141
-    check-cast v0, Landroid/view/WindowManager;
-
     .line 142
     .line 143
-    :cond_0
-    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A07:Landroid/view/WindowManager;
+    if-nez v0, :cond_0
 
     .line 144
     .line 145
-    new-instance v1, Landroid/graphics/Point;
+    const-string/jumbo v0, "window"
 
     .line 146
     .line 147
-    invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
-
     .line 148
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
     .line 149
     .line 150
-    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
     .line 151
-    .line 152
-    .line 153
     move-result-object v0
 
+    .line 152
+    check-cast v0, Landroid/view/WindowManager;
+
+    .line 153
     .line 154
-    invoke-virtual {v0, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
+    :cond_0
+    iput-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A06:Landroid/view/WindowManager;
 
     .line 155
     .line 156
+    new-instance v1, Landroid/graphics/Point;
+
     .line 157
+    .line 158
+    invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
+
+    .line 159
+    .line 160
+    .line 161
+    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    .line 162
+    .line 163
+    .line 164
+    move-result-object v0
+
+    .line 165
+    invoke-virtual {v0, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
+
+    .line 166
+    .line 167
+    .line 168
     return-void
 .end method
 
 .method public static A00(Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;)V
-    .locals 3
+    .locals 2
 
     .line 0
-    const-string v2, "com.facebook.feed.video.inline.sound.api.InlineVideoSoundUtil"
+    const-string/jumbo v1, "com.facebook.feed.video.inline.sound.api.InlineVideoSoundUtil"
 
     .line 1
     .line 2
-    const-string v1, "AudioManager is NULL"
-
     .line 3
-    .line 4
-    const/4 v0, 0x0
+    const-string v0, "AudioManager is NULL"
 
+    .line 4
     .line 5
-    invoke-static {v2, v1, v0}, LX/0Ye;->A0E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)LX/0Gs;
+    invoke-static {v1, v0}, LX/0G0;->A02(Ljava/lang/String;Ljava/lang/String;)LX/0G2;
 
     .line 6
     .line 7
     .line 8
-    move-result-object v1
+    move-result-object v0
 
     .line 9
-    iget-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A08:LX/0Na;
+    new-instance v1, LX/0G0;
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
+    invoke-direct {v1, v0}, LX/0G0;-><init>(LX/0G2;)V
 
     .line 12
     .line 13
     .line 14
-    move-result-object v0
+    iget-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A07:LX/0RP;
 
     .line 15
-    invoke-interface {v0, v1}, LX/0Gk;->AoV(LX/0Gs;)V
-
     .line 16
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
+
     .line 17
     .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    invoke-interface {v0, v1}, LX/0Ft;->AnB(LX/0G0;)V
+
+    .line 21
+    .line 22
+    .line 23
     return-void
 .end method
 
@@ -388,7 +414,7 @@
     .locals 7
 
     .line 0
-    iget-object v2, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A02:Landroid/media/AudioManager;
+    iget-object v2, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A01:Landroid/media/AudioManager;
 
     .line 1
     .line 2
@@ -507,7 +533,7 @@
     .locals 3
 
     .line 0
-    iget-object v2, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A02:Landroid/media/AudioManager;
+    iget-object v2, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A01:Landroid/media/AudioManager;
 
     .line 1
     .line 2
@@ -547,4 +573,43 @@
 
     .line 17
     return v1
+.end method
+
+.method public final A03()Z
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A03:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    sget-object v1, LX/16R;->A02:LX/28F;
+
+    .line 7
+    .line 8
+    iget-object v0, p0, Lcom/facebook/feed/video/inline/sound/api/InlineVideoSoundUtil;->A02:LX/3wb;
+
+    .line 9
+    .line 10
+    iget-boolean v0, v0, LX/3wb;->A02:Z
+
+    .line 11
+    .line 12
+    invoke-interface {v2, v1, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ABB(LX/28F;Z)Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    return v0
 .end method

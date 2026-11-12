@@ -21,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {p1}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 4
     .line 5
@@ -62,7 +62,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v0}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 11
     .line 12

@@ -22,11 +22,11 @@
     const/4 v1, 0x1
 
     .line 1
-    new-instance v0, LX/02D;
+    new-instance v0, LX/0Wz;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/02D;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Wz;-><init>(I)V
 
     .line 4
     .line 5

@@ -1,10 +1,10 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceConfiguration;
-.super LX/5Vj;
+.super LX/68F;
 .source ""
 
 
 # static fields
-.field public static final INSTRUCTION_SERVICE_TYPE_KEY:LX/5TT;
+.field public static final INSTRUCTION_SERVICE_TYPE_KEY:LX/67w;
 
 
 # instance fields
@@ -16,31 +16,31 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/5Tk;->InstructionService:LX/5Tk;
+    sget-object v1, LX/63t;->InstructionService:LX/63t;
 
     .line 1
     .line 2
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/5TT;-><init>(LX/5Tk;)V
+    invoke-direct {v0, v1}, LX/67w;-><init>(LX/63t;)V
 
     .line 5
     .line 6
     .line 7
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceConfiguration;->INSTRUCTION_SERVICE_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceConfiguration;->INSTRUCTION_SERVICE_TYPE_KEY:LX/67w;
 
     .line 8
     .line 9
     return-void
 .end method
 
-.method public constructor <init>(LX/4su;)V
+.method public constructor <init>(LX/4nG;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/5Vj;-><init>()V
+    invoke-direct {p0}, LX/68F;-><init>()V
 
     .line 1
     .line 2
@@ -49,7 +49,7 @@
 
     .line 4
     .line 5
-    invoke-direct {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceListenerWrapper;-><init>(LX/4su;)V
+    invoke-direct {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceListenerWrapper;-><init>(LX/4nG;)V
 
     .line 6
     .line 7

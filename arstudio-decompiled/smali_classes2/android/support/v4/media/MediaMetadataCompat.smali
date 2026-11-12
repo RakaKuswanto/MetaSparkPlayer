@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final A01:LX/0YO;
+.field public static final A01:LX/0Of;
 
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -21,16 +21,16 @@
     .locals 6
 
     .line 0
-    new-instance v3, LX/0YO;
+    new-instance v3, LX/0Of;
 
     .line 1
     .line 2
-    invoke-direct {v3}, LX/0YO;-><init>()V
+    invoke-direct {v3}, LX/0Of;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v3, Landroid/support/v4/media/MediaMetadataCompat;->A01:LX/0YO;
+    sput-object v3, Landroid/support/v4/media/MediaMetadataCompat;->A01:LX/0Of;
 
     .line 6
     .line 7
@@ -45,330 +45,361 @@
     move-result-object v4
 
     .line 12
-    const-string v0, "android.media.metadata.TITLE"
+    const-string/jumbo v0, "android.media.metadata.TITLE"
 
     .line 13
     .line 14
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 15
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 16
     .line 17
-    const-string v0, "android.media.metadata.ARTIST"
-
     .line 18
-    .line 19
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.ARTIST"
 
+    .line 19
     .line 20
     .line 21
-    .line 22
-    invoke-static {}, LX/0Yi;->A0d()Ljava/lang/Integer;
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 22
     .line 23
     .line 24
+    invoke-static {}, LX/0X6;->A0e()Ljava/lang/Integer;
+
     .line 25
+    .line 26
+    .line 27
     move-result-object v2
 
-    .line 26
-    const-string v0, "android.media.metadata.DURATION"
-
-    .line 27
     .line 28
-    invoke-virtual {v3, v0, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.DURATION"
 
     .line 29
     .line 30
     .line 31
-    const-string v0, "android.media.metadata.ALBUM"
+    invoke-virtual {v3, v0, v2}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 32
     .line 33
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 34
+    const-string/jumbo v0, "android.media.metadata.ALBUM"
+
     .line 35
     .line 36
-    const-string v0, "android.media.metadata.AUTHOR"
-
     .line 37
-    .line 38
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 38
     .line 39
     .line 40
-    .line 41
-    const-string v0, "android.media.metadata.WRITER"
+    const-string/jumbo v0, "android.media.metadata.AUTHOR"
 
+    .line 41
     .line 42
     .line 43
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 44
     .line 45
     .line 46
-    const-string v0, "android.media.metadata.COMPOSER"
+    const-string/jumbo v0, "android.media.metadata.WRITER"
 
     .line 47
     .line 48
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 49
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 50
     .line 51
-    const-string v0, "android.media.metadata.COMPILATION"
-
     .line 52
-    .line 53
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.COMPOSER"
 
+    .line 53
     .line 54
     .line 55
-    .line 56
-    const-string v0, "android.media.metadata.DATE"
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 56
     .line 57
     .line 58
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.COMPILATION"
 
     .line 59
     .line 60
     .line 61
-    const-string v0, "android.media.metadata.YEAR"
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 62
     .line 63
-    invoke-virtual {v3, v0, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 64
+    const-string/jumbo v0, "android.media.metadata.DATE"
+
     .line 65
     .line 66
-    const-string v0, "android.media.metadata.GENRE"
-
     .line 67
-    .line 68
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 68
     .line 69
     .line 70
-    .line 71
-    const-string v0, "android.media.metadata.TRACK_NUMBER"
+    const-string/jumbo v0, "android.media.metadata.YEAR"
 
+    .line 71
     .line 72
     .line 73
-    invoke-virtual {v3, v0, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v2}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 74
     .line 75
     .line 76
-    const-string v0, "android.media.metadata.NUM_TRACKS"
+    const-string/jumbo v0, "android.media.metadata.GENRE"
 
     .line 77
     .line 78
-    invoke-virtual {v3, v0, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 79
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 80
     .line 81
-    const-string v0, "android.media.metadata.DISC_NUMBER"
-
     .line 82
-    .line 83
-    invoke-virtual {v3, v0, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.TRACK_NUMBER"
 
+    .line 83
     .line 84
     .line 85
-    .line 86
-    const-string v0, "android.media.metadata.ALBUM_ARTIST"
+    invoke-virtual {v3, v0, v2}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 86
     .line 87
     .line 88
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.NUM_TRACKS"
 
     .line 89
     .line 90
     .line 91
-    const/4 v0, 0x2
+    invoke-virtual {v3, v0, v2}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 92
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     .line 93
     .line 94
+    const-string/jumbo v0, "android.media.metadata.DISC_NUMBER"
+
     .line 95
-    move-result-object v5
-
     .line 96
-    const-string v0, "android.media.metadata.ART"
-
     .line 97
-    .line 98
-    invoke-virtual {v3, v0, v5}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v2}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 98
     .line 99
     .line 100
-    .line 101
-    const-string v0, "android.media.metadata.ART_URI"
+    const-string/jumbo v0, "android.media.metadata.ALBUM_ARTIST"
 
+    .line 101
     .line 102
     .line 103
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 104
     .line 105
     .line 106
-    const-string v0, "android.media.metadata.ALBUM_ART"
+    const/4 v0, 0x2
 
     .line 107
-    .line 108
-    invoke-virtual {v3, v0, v5}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    .line 108
     .line 109
     .line 110
+    move-result-object v5
+
     .line 111
-    const-string v0, "android.media.metadata.ALBUM_ART_URI"
+    const-string/jumbo v0, "android.media.metadata.ART"
 
     .line 112
     .line 113
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 114
+    invoke-virtual {v3, v0, v5}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 115
     .line 116
-    const/4 v0, 0x3
-
     .line 117
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string/jumbo v0, "android.media.metadata.ART_URI"
 
     .line 118
     .line 119
     .line 120
-    move-result-object v1
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 121
-    const-string v0, "android.media.metadata.USER_RATING"
-
     .line 122
     .line 123
-    invoke-virtual {v3, v0, v1}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.ALBUM_ART"
 
     .line 124
     .line 125
     .line 126
-    const-string v0, "android.media.metadata.RATING"
+    invoke-virtual {v3, v0, v5}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 127
     .line 128
-    invoke-virtual {v3, v0, v1}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 129
+    const-string/jumbo v0, "android.media.metadata.ALBUM_ART_URI"
+
     .line 130
     .line 131
-    const-string v0, "android.media.metadata.DISPLAY_TITLE"
-
     .line 132
-    .line 133
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 133
     .line 134
     .line 135
+    const/4 v0, 0x3
+
     .line 136
-    const-string v0, "android.media.metadata.DISPLAY_SUBTITLE"
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 137
     .line 138
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 139
-    .line 140
-    .line 141
-    const-string v0, "android.media.metadata.DISPLAY_DESCRIPTION"
+    move-result-object v1
 
+    .line 140
+    const-string/jumbo v0, "android.media.metadata.USER_RATING"
+
+    .line 141
     .line 142
     .line 143
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v1}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 144
     .line 145
     .line 146
-    const-string v0, "android.media.metadata.DISPLAY_ICON"
+    const-string/jumbo v0, "android.media.metadata.RATING"
 
     .line 147
     .line 148
-    invoke-virtual {v3, v0, v5}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 149
+    invoke-virtual {v3, v0, v1}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 150
     .line 151
-    const-string v0, "android.media.metadata.DISPLAY_ICON_URI"
-
     .line 152
-    .line 153
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.DISPLAY_TITLE"
 
+    .line 153
     .line 154
     .line 155
-    .line 156
-    const-string v0, "android.media.metadata.MEDIA_ID"
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 156
     .line 157
     .line 158
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v0, "android.media.metadata.DISPLAY_SUBTITLE"
 
     .line 159
     .line 160
     .line 161
-    const-string v0, "android.media.metadata.BT_FOLDER_TYPE"
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 162
     .line 163
-    invoke-virtual {v3, v0, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 164
+    const-string/jumbo v0, "android.media.metadata.DISPLAY_DESCRIPTION"
+
     .line 165
     .line 166
-    const-string v0, "android.media.metadata.MEDIA_URI"
-
     .line 167
-    .line 168
-    invoke-virtual {v3, v0, v4}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 168
     .line 169
     .line 170
-    .line 171
-    const-string v0, "android.media.metadata.ADVERTISEMENT"
+    const-string/jumbo v0, "android.media.metadata.DISPLAY_ICON"
 
+    .line 171
     .line 172
     .line 173
-    invoke-virtual {v3, v0, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v5}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 174
     .line 175
     .line 176
-    const-string v0, "android.media.metadata.DOWNLOAD_STATUS"
+    const-string/jumbo v0, "android.media.metadata.DISPLAY_ICON_URI"
 
     .line 177
     .line 178
-    invoke-virtual {v3, v0, v2}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 179
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 180
     .line 181
-    const/4 v0, 0x1
-
     .line 182
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    const-string/jumbo v0, "android.media.metadata.MEDIA_ID"
 
     .line 183
     .line 184
     .line 185
-    move-result-object v0
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 186
-    sput-object v0, Landroid/support/v4/media/MediaMetadataCompat;->CREATOR:Landroid/os/Parcelable$Creator;
-
     .line 187
     .line 188
+    const-string/jumbo v0, "android.media.metadata.BT_FOLDER_TYPE"
+
+    .line 189
+    .line 190
+    .line 191
+    invoke-virtual {v3, v0, v2}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 192
+    .line 193
+    .line 194
+    const-string/jumbo v0, "android.media.metadata.MEDIA_URI"
+
+    .line 195
+    .line 196
+    .line 197
+    invoke-virtual {v3, v0, v4}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 198
+    .line 199
+    .line 200
+    const-string/jumbo v0, "android.media.metadata.ADVERTISEMENT"
+
+    .line 201
+    .line 202
+    .line 203
+    invoke-virtual {v3, v0, v2}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 204
+    .line 205
+    .line 206
+    const-string/jumbo v0, "android.media.metadata.DOWNLOAD_STATUS"
+
+    .line 207
+    .line 208
+    .line 209
+    invoke-virtual {v3, v0, v2}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 210
+    .line 211
+    .line 212
+    const/4 v0, 0x1
+
+    .line 213
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
+
+    .line 214
+    .line 215
+    .line 216
+    move-result-object v0
+
+    .line 217
+    sput-object v0, Landroid/support/v4/media/MediaMetadataCompat;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 218
+    .line 219
     return-void
 .end method
 
@@ -381,7 +412,7 @@
     .line 1
     .line 2
     .line 3
-    const-class v0, LX/1Kf;
+    const-class v0, LX/1cW;
 
     .line 4
     .line 5

@@ -16,7 +16,11 @@
 
 .field public static final ART_HACK_DISABLE_MONITOR_VISITLOCKS:I = 0x80
 
+.field public static final ART_HACK_DISABLE_RUNTIME_IMAGE_WRITE:I = 0x400
+
 .field public static final ART_HACK_DISABLE_VERIFIER:I = 0x4
+
+.field public static final ART_HACK_MADVISE:I = 0x200
 
 .field public static final FADV_DONTNEED:I = 0x4
 
@@ -74,7 +78,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -84,7 +88,7 @@
     .line 6
     .line 7
     .line 8
-    sget-boolean v0, LX/0Hl;->A00:Z
+    sget-boolean v0, LX/0H5;->A00:Z
 
     .line 9
     .line 10
@@ -119,76 +123,76 @@
     .line 24
     .line 25
     goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 26
-    :cond_0
-    const/16 v0, 0x15
+    :catch_0
+    move-exception v0
 
     .line 27
+    new-array v1, v3, [Ljava/lang/Object;
+
     .line 28
-    if-lt v1, v0, :cond_1
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
-
     .line 29
-    .line 30
-    invoke-static {v1}, Lcom/facebook/common/dextricks/DalvikInternals;->integrateWithLibSigChain(I)V
+    aput-object v0, v1, v4
 
+    .line 30
     .line 31
+    const-string v0, "Failed to nop dvmVerifyClass"
+
     .line 32
     .line 33
-    if-ne v1, v0, :cond_1
+    invoke-static {v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 34
     .line 35
-    :try_start_1
-    invoke-static {}, Lcom/facebook/common/dextricks/DalvikInternals;->fixArtMirandaBug()V
-
     .line 36
-    .line 37
-    .line 38
     goto :goto_0
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 37
+    :cond_0
+    const/16 v0, 0x15
+
+    .line 38
     .line 39
-    :catch_0
-    move-exception v2
+    if-lt v1, v0, :cond_1
 
     .line 40
-    new-array v1, v4, [Ljava/lang/Object;
-
     .line 41
-    .line 42
-    const-string v0, "could not patch ART 5.0.x miranda bug"
+    invoke-static {v1}, Lcom/facebook/common/dextricks/DalvikInternals;->integrateWithLibSigChain(I)V
 
+    .line 42
     .line 43
     .line 44
-    invoke-static {v2, v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    if-ne v1, v0, :cond_1
 
     .line 45
     .line 46
+    :try_start_1
+    invoke-static {}, Lcom/facebook/common/dextricks/DalvikInternals;->fixArtMirandaBug()V
+
     .line 47
-    goto :goto_0
-
     .line 48
-    :catch_1
-    move-exception v0
-
     .line 49
-    new-array v1, v3, [Ljava/lang/Object;
+    goto :goto_0
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 50
+    :catch_1
+    move-exception v2
+
     .line 51
-    aput-object v0, v1, v4
+    new-array v1, v4, [Ljava/lang/Object;
 
     .line 52
     .line 53
-    const-string v0, "Failed to nop dvmVerifyClass"
+    const-string v0, "could not patch ART 5.0.x miranda bug"
 
     .line 54
     .line 55
-    invoke-static {v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 56
     .line 57
@@ -199,7 +203,7 @@
 
     .line 59
     .line 60
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 61
     .line 62
@@ -291,7 +295,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
@@ -838,6 +842,9 @@
 .end method
 
 .method public static synchronized native setIsArt(Z)V
+.end method
+
+.method public static native setMadviseFileForRangeEnabled(Z)V
 .end method
 
 .method public static synchronized native setSdkInt(I)V

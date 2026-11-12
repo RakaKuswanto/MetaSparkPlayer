@@ -3,25 +3,39 @@
 .source ""
 
 # interfaces
-.implements LX/5Rl;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "SystemForegroundService$3"
 
 
 # instance fields
-.field public final synthetic A00:LX/5kp;
+.field public final synthetic A00:I
 
-.field public final synthetic A01:LX/5lc;
+.field public final synthetic A01:Landroidx/work/impl/foreground/SystemForegroundService;
 
 
 # direct methods
-.method public constructor <init>(LX/5lc;LX/5kp;)V
+.method public constructor <init>(Landroidx/work/impl/foreground/SystemForegroundService;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$notificationId"
+        }
+    .end annotation
 
     .line 0
-    iput-object p2, p0, LX/5lK;->A00:LX/5kp;
+    iput-object p1, p0, LX/5lK;->A01:Landroidx/work/impl/foreground/SystemForegroundService;
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/5lK;->A01:LX/5lc;
+    iput p2, p0, LX/5lK;->A00:I
 
     .line 3
     .line 4
@@ -35,47 +49,26 @@
 
 
 # virtual methods
-.method public final AA8(Ljava/lang/Exception;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final AXp(Ljava/lang/Exception;)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5lK;->A01:LX/5lc;
+    iget-object v0, p0, LX/5lK;->A01:Landroidx/work/impl/foreground/SystemForegroundService;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1}, LX/5lc;->onFailure(Ljava/lang/Throwable;)V
+    iget-object v1, v0, Landroidx/work/impl/foreground/SystemForegroundService;->A00:Landroid/app/NotificationManager;
 
     .line 3
     .line 4
+    iget v0, p0, LX/5lK;->A00:I
+
     .line 5
-    return-void
-.end method
+    .line 6
+    invoke-virtual {v1, v0}, Landroid/app/NotificationManager;->cancel(I)V
 
-.method public final bridge synthetic AdO(Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5lK;->A01:LX/5lc;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/5lc;->onSuccess(Ljava/lang/Object;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final bridge synthetic ApS(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method

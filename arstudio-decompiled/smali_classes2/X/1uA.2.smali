@@ -3,25 +3,29 @@
 .source ""
 
 # interfaces
-.implements Lcom/facebook/models/ModelLoaderCallbacks;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FutureUtils$1"
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/models/ModelLoader;
+.field public final synthetic A00:LX/1tL;
 
-.field public final synthetic A01:Lcom/google/common/util/concurrent/SettableFuture;
+.field public final synthetic A01:Lcom/google/common/util/concurrent/ListenableFuture;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/models/ModelLoader;Lcom/google/common/util/concurrent/SettableFuture;)V
+.method public constructor <init>(LX/1tL;Lcom/google/common/util/concurrent/ListenableFuture;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/1uA;->A00:Lcom/facebook/models/ModelLoader;
+    iput-object p2, p0, LX/1uA;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/1uA;->A01:Lcom/google/common/util/concurrent/SettableFuture;
+    iput-object p1, p0, LX/1uA;->A00:LX/1tL;
 
     .line 3
     .line 4
@@ -35,63 +39,102 @@
 
 
 # virtual methods
-.method public final onError(Ljava/lang/String;)V
+.method public final run()V
     .locals 3
 
     .line 0
-    const-class v2, Lcom/facebook/models/ModelLoader;
+    :try_start_0
+    iget-object v0, p0, LX/1uA;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 1
     .line 2
-    invoke-static {p1}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {v0}, LX/26a;->A00(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     .line 3
     .line 4
     .line 5
     move-result-object v1
+    :try_end_0
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 6
-    const-string v0, "Failed to resolve ModelMetadata: %s"
+    iget-object v0, p0, LX/1uA;->A00:LX/1tL;
 
     .line 7
     .line 8
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0A(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, v1}, LX/1tL;->onSuccess(Ljava/lang/Object;)V
 
     .line 9
     .line 10
     .line 11
-    iget-object v1, p0, LX/1uA;->A01:Lcom/google/common/util/concurrent/SettableFuture;
+    return-void
 
     .line 12
+    :catch_0
+    move-exception v1
+
     .line 13
-    invoke-static {p1}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    iget-object v0, p0, LX/1uA;->A00:LX/1tL;
 
     .line 14
     .line 15
+    invoke-interface {v0, v1}, LX/1tL;->onFailure(Ljava/lang/Throwable;)V
+
     .line 16
+    .line 17
+    .line 18
+    return-void
+
+    .line 19
+    :catch_1
+    move-exception v2
+
+    .line 20
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 21
+    .line 22
+    .line 23
     move-result-object v0
 
-    .line 17
-    invoke-virtual {v1, v0}, LX/5QT;->setException(Ljava/lang/Throwable;)Z
+    .line 24
+    instance-of v0, v0, Ljava/lang/Error;
 
-    .line 18
-    .line 19
-    .line 20
+    .line 25
+    .line 26
+    if-nez v0, :cond_0
+
+    .line 27
+    .line 28
+    iget-object v1, p0, LX/1uA;->A00:LX/1tL;
+
+    .line 29
+    .line 30
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    invoke-interface {v1, v0}, LX/1tL;->onFailure(Ljava/lang/Throwable;)V
+
+    .line 35
+    .line 36
+    .line 37
     return-void
-.end method
 
-.method public final onResult(Lcom/facebook/models/ModelMetadata;)V
-    .locals 1
+    .line 38
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-    .line 0
-    iget-object v0, p0, LX/1uA;->A01:Lcom/google/common/util/concurrent/SettableFuture;
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
 
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, LX/5QT;->set(Ljava/lang/Object;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    .line 42
+    throw v0
 .end method

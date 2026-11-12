@@ -1,5 +1,5 @@
 .class public final Lcom/google/common/collect/ByFunctionOrdering;
-.super LX/1eq;
+.super LX/23n;
 .source ""
 
 # interfaces
@@ -13,15 +13,25 @@
 # instance fields
 .field public final function:Lcom/google/common/base/Function;
 
-.field public final ordering:LX/1eq;
+.field public final ordering:LX/23n;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/base/Function;LX/1eq;)V
+.method public constructor <init>(Lcom/google/common/base/Function;LX/23n;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "function",
+            "ordering"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1eq;-><init>()V
+    invoke-direct {p0}, LX/23n;-><init>()V
 
     .line 1
     .line 2
@@ -30,10 +40,15 @@
 
     .line 4
     .line 5
-    iput-object p2, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/1eq;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 6
     .line 7
+    .line 8
+    iput-object p2, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/23n;
+
+    .line 9
+    .line 10
     return-void
 .end method
 
@@ -41,6 +56,14 @@
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     const/4 v2, 0x1
@@ -85,11 +108,11 @@
 
     .line 19
     .line 20
-    iget-object v1, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/1eq;
+    iget-object v1, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/23n;
 
     .line 21
     .line 22
-    iget-object v0, p1, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/1eq;
+    iget-object v0, p1, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/23n;
 
     .line 23
     .line 24
@@ -124,7 +147,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -143,11 +166,11 @@
 
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/1eq;
+    iget-object v0, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/23n;
 
     .line 10
     .line 11
-    invoke-static {v0, v2}, LX/0Ye;->A08(Ljava/lang/Object;[Ljava/lang/Object;)I
+    invoke-static {v2, v0}, LX/0X2;->A0D([Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 12
     .line 13
@@ -162,7 +185,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -170,7 +193,7 @@
     move-result-object v1
 
     .line 4
-    iget-object v0, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/1eq;
+    iget-object v0, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:LX/23n;
 
     .line 5
     .line 6
@@ -192,7 +215,7 @@
 
     .line 15
     .line 16
-    invoke-static {v0, v1}, LX/0Yd;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X2;->A0i(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 17
     .line 18

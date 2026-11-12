@@ -1,174 +1,311 @@
-.class public final enum LX/1Lj;
-.super Ljava/lang/Enum;
+.class public final LX/1lJ;
+.super LX/1fQ;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/1Lj;
+# instance fields
+.field public final A00:I
 
-.field public static final enum AUTH:LX/1Lj;
+.field public final A01:Ljava/nio/ByteBuffer;
 
-.field public static final enum CAPTURE:LX/1Lj;
+.field public final A02:Ljava/util/Map;
 
-.field public static final enum CHARGE:LX/1Lj;
+.field public final A03:Z
 
 
 # direct methods
-.method public static final synthetic $values()[LX/1Lj;
-    .locals 3
-
-    const/4 v0, 0x3
-
-    new-array v2, v0, [LX/1Lj;
-
-    sget-object v1, LX/1Lj;->AUTH:LX/1Lj;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/1Lj;->CAPTURE:LX/1Lj;
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/1Lj;->CHARGE:LX/1Lj;
-
-    const/4 v0, 0x2
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
-.method public static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lorg/json/JSONObject;)V
+    .locals 12
 
     .line 0
-    const-string v3, "AUTH"
+    const-string/jumbo v0, "urlPattern"
 
     .line 1
     .line 2
-    const/4 v2, 0x0
-
     .line 3
-    const-string v1, "auth"
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 4
     .line 5
-    new-instance v0, LX/1Lj;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    invoke-direct {v0, v3, v2, v1}, LX/1Lj;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     .line 8
     .line 9
     .line 10
-    sput-object v0, LX/1Lj;->AUTH:LX/1Lj;
+    move-result-object v11
+
+    .line 11
+    const-string/jumbo v0, "redirect"
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v10
+
+    .line 18
+    const-string/jumbo v0, "responseCode"
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v9
+
+    .line 25
+    const-string/jumbo v0, "responseData"
+
+    .line 26
+    .line 27
+    .line 28
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v1
+
+    .line 32
+    const/4 v0, 0x0
+
+    .line 33
+    invoke-static {v1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v8
+
+    .line 41
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v7
+
+    .line 45
+    const-string/jumbo v0, "responseHeaders"
+
+    .line 46
+    .line 47
+    .line 48
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v6
+
+    .line 52
+    invoke-virtual {v6}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v5
+
+    .line 56
+    :goto_0
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 57
+    .line 58
+    .line 59
+    move-result v0
+
+    .line 60
+    if-eqz v0, :cond_1
+
+    .line 61
+    .line 62
+    invoke-static {v5}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
+
+    .line 63
+    .line 64
+    .line 65
+    move-result-object v4
+
+    .line 66
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v3
+
+    .line 70
+    invoke-virtual {v6, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v2
+
+    .line 74
+    const/4 v1, 0x0
+
+    .line 75
+    :goto_1
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+
+    .line 76
+    .line 77
+    .line 78
+    move-result v0
+
+    .line 79
+    if-ge v1, v0, :cond_0
+
+    .line 80
+    .line 81
+    invoke-static {v3, v2, v1}, LX/0X3;->A05(Ljava/util/AbstractCollection;Lorg/json/JSONArray;I)I
+
+    .line 82
+    .line 83
+    .line 84
+    move-result v1
+
+    .line 85
+    goto :goto_1
+
+    .line 86
+    :cond_0
+    invoke-virtual {v7, v4, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 87
+    .line 88
+    .line 89
+    goto :goto_0
+
+    .line 90
+    :cond_1
+    invoke-direct {p0, v11}, LX/1fQ;-><init>(Ljava/util/regex/Pattern;)V
+
+    .line 91
+    .line 92
+    .line 93
+    iput-boolean v10, p0, LX/1lJ;->A03:Z
+
+    .line 94
+    .line 95
+    iput v9, p0, LX/1lJ;->A00:I
+
+    .line 96
+    .line 97
+    iput-object v8, p0, LX/1lJ;->A01:Ljava/nio/ByteBuffer;
+
+    .line 98
+    .line 99
+    iput-object v7, p0, LX/1lJ;->A02:Ljava/util/Map;
+
+    .line 100
+    .line 101
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x4
+
+    .line 1
+    new-array v2, v0, [Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    const-class v0, LX/1lJ;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
+
+    .line 9
+    const/4 v0, 0x0
+
+    .line 10
+    aput-object v1, v2, v0
 
     .line 11
     .line 12
-    const-string v3, "CAPTURE"
+    iget-object v1, p0, LX/1fQ;->A00:Ljava/util/regex/Pattern;
 
     .line 13
     .line 14
-    const/4 v2, 0x1
+    const/4 v0, 0x1
 
     .line 15
-    const-string v1, "capture"
+    aput-object v1, v2, v0
 
     .line 16
     .line 17
-    new-instance v0, LX/1Lj;
+    iget-boolean v0, p0, LX/1lJ;->A03:Z
 
     .line 18
     .line 19
-    invoke-direct {v0, v3, v2, v1}, LX/1Lj;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 20
     .line 21
     .line 22
-    sput-object v0, LX/1Lj;->CAPTURE:LX/1Lj;
+    move-result-object v1
 
     .line 23
+    const/4 v0, 0x2
+
     .line 24
-    const-string v3, "CHARGE"
+    aput-object v1, v2, v0
 
     .line 25
     .line 26
-    const/4 v2, 0x2
+    iget v0, p0, LX/1lJ;->A00:I
 
     .line 27
-    const-string v1, "charge"
-
     .line 28
-    .line 29
-    new-instance v0, LX/1Lj;
+    invoke-static {v2, v0}, LX/0X1;->A1R([Ljava/lang/Object;I)V
 
+    .line 29
     .line 30
     .line 31
-    invoke-direct {v0, v3, v2, v1}, LX/1Lj;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const-string v0, "%s(urlPattern=%s, redirect=%s, responseCode=%s)"
 
     .line 32
     .line 33
-    .line 34
-    sput-object v0, LX/1Lj;->CHARGE:LX/1Lj;
+    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 34
     .line 35
     .line 36
-    invoke-static {}, LX/1Lj;->$values()[LX/1Lj;
+    move-result-object v0
 
     .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    sput-object v0, LX/1Lj;->$VALUES:[LX/1Lj;
-
-    .line 41
-    .line 42
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/1Lj;
-    .locals 1
-
-    const-class v0, LX/1Lj;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, LX/1Lj;
-
-    return-object v0
-.end method
-
-.method public static values()[LX/1Lj;
-    .locals 1
-
-    sget-object v0, LX/1Lj;->$VALUES:[LX/1Lj;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [LX/1Lj;
-
     return-object v0
 .end method

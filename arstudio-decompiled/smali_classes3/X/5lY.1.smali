@@ -1,60 +1,72 @@
-.class public final LX/5lY;
+.class public final synthetic LX/5Ly;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Landroid/hardware/Camera$AutoFocusCallback;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaSourceEventListener$EventDispatcher$$ExternalSyntheticLambda11"
 
 
 # instance fields
-.field public final synthetic A00:Landroid/hardware/Camera$AutoFocusCallback;
+.field public final synthetic A00:LX/5Lc;
 
-.field public final synthetic A01:LX/5kr;
+.field public final synthetic A01:LX/5RP;
+
+.field public final synthetic A02:LX/5Le;
+
+.field public final synthetic A03:LX/5Lx;
 
 
 # direct methods
-.method public constructor <init>(Landroid/hardware/Camera$AutoFocusCallback;LX/5kr;)V
+.method public synthetic constructor <init>(LX/5Lc;LX/5RP;LX/5Le;LX/5Lx;)V
     .locals 0
 
-    .line 0
-    iput-object p2, p0, LX/5lY;->A01:LX/5kr;
-
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/5lY;->A00:Landroid/hardware/Camera$AutoFocusCallback;
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
+    iput-object p3, p0, LX/5Ly;->A02:LX/5Le;
+
+    iput-object p4, p0, LX/5Ly;->A03:LX/5Lx;
+
+    iput-object p2, p0, LX/5Ly;->A01:LX/5RP;
+
+    iput-object p1, p0, LX/5Ly;->A00:LX/5Lc;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAutoFocus(ZLandroid/hardware/Camera;)V
-    .locals 1
+.method public final run()V
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/5lY;->A01:LX/5kr;
+    iget-object v0, p0, LX/5Ly;->A02:LX/5Le;
 
     .line 1
     .line 2
-    iput-boolean p1, v0, LX/5kr;->A0D:Z
+    iget-object v3, p0, LX/5Ly;->A03:LX/5Lx;
 
     .line 3
     .line 4
-    iget-object v0, p0, LX/5lY;->A00:Landroid/hardware/Camera$AutoFocusCallback;
+    iget-object v2, p0, LX/5Ly;->A01:LX/5RP;
 
     .line 5
     .line 6
-    invoke-interface {v0, p1, p2}, Landroid/hardware/Camera$AutoFocusCallback;->onAutoFocus(ZLandroid/hardware/Camera;)V
+    iget-object v1, p0, LX/5Ly;->A00:LX/5Lc;
 
     .line 7
     .line 8
+    iget v0, v0, LX/5Le;->A00:I
+
     .line 9
+    .line 10
+    invoke-interface {v3, v1, v2, v0}, LX/5Lx;->Acw(LX/5Lc;LX/5RP;I)V
+
+    .line 11
+    .line 12
+    .line 13
     return-void
 .end method

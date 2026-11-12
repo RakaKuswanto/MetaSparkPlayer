@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5Vv;
+.field public static final Companion:LX/6AG;
 
 
 # instance fields
@@ -18,16 +18,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5Vv;
+    new-instance v0, LX/6AG;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5Vv;-><init>()V
+    invoke-direct {v0}, LX/6AG;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataServiceConfigurationHybrid;->Companion:LX/5Vv;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataServiceConfigurationHybrid;->Companion:LX/6AG;
 
     .line 6
     .line 7
@@ -41,7 +41,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -55,40 +55,35 @@
 
     .line 8
     .line 9
-    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataServiceConfiguration;->mDataSource:Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataSource;
+    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataServiceConfiguration;->dataSource:Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataSource;
 
     .line 10
     .line 11
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceHybrid;
 
     .line 12
     .line 13
-    .line 14
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceHybrid;
+    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceHybrid;-><init>(Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataSource;)V
 
+    .line 14
     .line 15
     .line 16
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceHybrid;-><init>(Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/interfaces/PlatformAlgorithmDataSource;)V
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataServiceConfigurationHybrid;->dataSource:Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceHybrid;
 
     .line 17
     .line 18
-    .line 19
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataServiceConfigurationHybrid;->dataSource:Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceHybrid;
-
-    .line 20
-    .line 21
     invoke-static {v0}, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataServiceConfigurationHybrid;->initHybrid(Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceHybrid;)Lcom/facebook/jni/HybridData;
 
-    .line 22
-    .line 23
-    .line 24
+    .line 19
+    .line 20
+    .line 21
     move-result-object v0
 
-    .line 25
+    .line 22
     iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;->mHybridData:Lcom/facebook/jni/HybridData;
 
-    .line 26
-    .line 27
+    .line 23
+    .line 24
     return-void
 .end method
 

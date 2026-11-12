@@ -1,20 +1,31 @@
-.class public final LX/51Z;
-.super Ljava/lang/Object;
+.class public final LX/51z;
+.super LX/52R;
 .source ""
 
 
+# instance fields
+.field public final A00:Landroid/os/IBinder;
+
+.field public final synthetic A01:LX/51v;
+
+
 # direct methods
-.method public static A00()Ljava/lang/ClassLoader;
-    .locals 1
+.method public constructor <init>(Landroid/os/Bundle;Landroid/os/IBinder;LX/51v;I)V
+    .locals 0
 
     .line 0
-    invoke-static {}, Landroid/webkit/WebView;->getWebViewClassLoader()Ljava/lang/ClassLoader;
+    iput-object p3, p0, LX/51z;->A01:LX/51v;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    invoke-direct {p0, p1, p3, p4}, LX/52R;-><init>(Landroid/os/Bundle;LX/51v;I)V
 
+    .line 3
     .line 4
-    return-object v0
+    .line 5
+    iput-object p2, p0, LX/51z;->A00:Landroid/os/IBinder;
+
+    .line 6
+    .line 7
+    return-void
 .end method

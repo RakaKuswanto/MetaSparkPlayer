@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/4RX;
+.implements LX/4Tg;
 
 
 # instance fields
@@ -37,7 +37,7 @@
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4Ym;
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/RawTextInputView;->mRawTextInputListener:LX/4UG;
 
     .line 3
     .line 4
@@ -53,11 +53,11 @@
     move-result-object v1
 
     .line 10
-    check-cast v0, LX/4gc;
+    check-cast v0, LX/4mg;
 
     .line 11
     .line 12
-    iget-object v0, v0, LX/4gc;->A00:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/RawEditableTextListener;
+    iget-object v0, v0, LX/4mg;->A01:LX/4UF;
 
     .line 13
     .line 14
@@ -65,7 +65,7 @@
 
     .line 15
     .line 16
-    invoke-virtual {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/RawEditableTextListener;->onTextChanged(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, LX/4UF;->onTextChanged(Ljava/lang/String;)V
 
     .line 17
     .line 18

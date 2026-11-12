@@ -4,12 +4,88 @@
         <item quantity="other">%1$s харесвания на страницата</item>
         <item quantity="one">%1$s харесване на страницата</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s харесвания</item>
-        <item quantity="one">%1$s харесване</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">Преди %1$d дни</item>
+        <item quantity="one">Преди 1 ден</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d дни</item>
+        <item quantity="one">1 ден</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d дни</item>
+        <item quantity="one">1 ден</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d часа</item>
+        <item quantity="one">1 час</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d минути</item>
+        <item quantity="one">1 минута</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d месеца</item>
+        <item quantity="one">1 месец</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d секунди</item>
+        <item quantity="one">1 секунда</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d седмици</item>
+        <item quantity="one">1 седмица</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Още %1$d дни</item>
+        <item quantity="one">още 1 ден</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">Още %1$d часа</item>
+        <item quantity="one">Още 1 час</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">Още %1$d минути</item>
+        <item quantity="one">Още 1 минута</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">Още %1$d месеца</item>
+        <item quantity="one">Още 1 месец</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">още %1$d секунди</item>
+        <item quantity="one">Още 1 секунда</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">още %1$d седмици</item>
+        <item quantity="one">Още 1 седмица</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">Още %1$d години</item>
+        <item quantity="one">Още 1 година</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d години</item>
+        <item quantity="one">1 година</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">Преди %1$d часа</item>
+        <item quantity="one">Преди 1 час</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d часа</item>
+        <item quantity="one">1 час</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d ч</item>
+        <item quantity="one">1 ч</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d часа</item>
+        <item quantity="one">1 час</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">преди %1$d часа</item>
         <item quantity="one">Преди 1 час</item>
     </plurals>
     <plurals name="time_in_x_hours">
@@ -20,8 +96,68 @@
         <item quantity="other">След %1$d минути</item>
         <item quantity="one">След 1 минута</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">преди %1$d минути</item>
+        <item quantity="one">преди 1 минута</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">Преди %1$d минути</item>
         <item quantity="one">Преди 1 минута</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d мин</item>
+        <item quantity="one">1 мин</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d мин</item>
+        <item quantity="one">1 мин</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">Преди %1$d месеца</item>
+        <item quantity="one">Преди 1 месец</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">Преди %1$d секунди</item>
+        <item quantity="one">1 секунда</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">Преди %1$d седмици</item>
+        <item quantity="one">Преди 1 седмица</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">Остават %1$d часа</item>
+        <item quantity="one">Остава 1 час</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">Остават %1$d мин</item>
+        <item quantity="one">Остава 1 минута</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">Преди %1$d години</item>
+        <item quantity="one">Преди 1 година</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Посетихте преди %1$d дни</item>
+        <item quantity="one">Посетихте преди 1 ден</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Посетихте преди %1$d часа</item>
+        <item quantity="one">Посетихте преди 1 час</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Посетихте преди %1$d минути</item>
+        <item quantity="one">Посетихте преди 1 минута</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Посетихте преди %1$d месеца</item>
+        <item quantity="one">Посетихте преди 1 месец</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Посетихте преди %1$d седмици</item>
+        <item quantity="one">Посетихте преди 1 седмица</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Посетихте преди %1$d години</item>
+        <item quantity="one">Посетихте преди 1 година</item>
     </plurals>
 </resources>

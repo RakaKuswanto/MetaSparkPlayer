@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/cameracore/camerasdk/common/CameraStateException;
-.super LX/5eC;
+.super LX/5x3;
 .source ""
 
 
@@ -12,7 +12,7 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0, p3, p1, p2}, LX/5eC;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p3, p1, p2}, LX/5x3;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
 
     .line 1
     .line 2

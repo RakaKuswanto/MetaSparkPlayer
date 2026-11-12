@@ -10,9 +10,11 @@
 
 .field public final A02:Ljava/lang/String;
 
+.field public final A03:Ljava/util/List;
+
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/privacy/zone/api/ZonedValue;Ljava/lang/String;Ljava/lang/String;JJ)V
+.method public constructor <init>(Lcom/facebook/privacy/zone/api/ZonedValue;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;JJ)V
     .locals 7
 
     .line 0
@@ -22,30 +24,30 @@
     move-object v2, p2
 
     .line 2
-    invoke-static {p2, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 3
     .line 4
     .line 5
-    sget-object v1, LX/1QX;->IAB_LANDING_PAGE_FINISHED:LX/1QX;
+    sget-object v1, LX/1bd;->IAB_LANDING_PAGE_FINISHED:LX/1bd;
 
     .line 6
     .line 7
     move-object v0, p0
 
     .line 8
-    move-wide v3, p4
+    move-wide v3, p5
 
     .line 9
-    move-wide v5, p6
+    move-wide v5, p7
 
     .line 10
-    invoke-direct/range {v0 .. v6}, Lcom/facebook/iabeventlogging/model/IABEvent;-><init>(LX/1QX;Ljava/lang/String;JJ)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/iabeventlogging/model/IABEvent;-><init>(LX/1bd;Ljava/lang/String;JJ)V
 
     .line 11
     .line 12
     .line 13
-    iput-wide p6, p0, Lcom/facebook/iabeventlogging/model/IABLandingPageFinishedEvent;->A00:J
+    iput-wide p7, p0, Lcom/facebook/iabeventlogging/model/IABLandingPageFinishedEvent;->A00:J
 
     .line 14
     .line 15
@@ -57,6 +59,10 @@
 
     .line 18
     .line 19
+    iput-object p4, p0, Lcom/facebook/iabeventlogging/model/IABLandingPageFinishedEvent;->A03:Ljava/util/List;
+
+    .line 20
+    .line 21
     return-void
 .end method
 
@@ -70,7 +76,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/0X7;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 3
     .line 4
@@ -92,7 +98,7 @@
 
     .line 13
     .line 14
-    invoke-static {v0, v2}, LX/0Ye;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;)C
+    invoke-static {v0, v2}, LX/0X3;->A00(Ljava/lang/String;Ljava/lang/StringBuilder;)C
 
     .line 15
     .line 16
@@ -123,83 +129,55 @@
     .line 29
     .line 30
     .line 31
-    const-string v0, ", type="
+    invoke-static {p0, v2}, Lcom/facebook/iabeventlogging/model/IABEvent;->A02(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/StringBuilder;)V
 
     .line 32
     .line 33
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 34
+    iget-wide v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A01:J
+
     .line 35
     .line 36
-    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A02:LX/1QX;
+    invoke-static {v2, v0, v1}, Lcom/facebook/iabeventlogging/model/IABEvent;->A03(Ljava/lang/StringBuilder;J)V
 
     .line 37
     .line 38
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 39
+    iget-wide v0, p0, Lcom/facebook/iabeventlogging/model/IABLandingPageFinishedEvent;->A00:J
+
     .line 40
     .line 41
-    const-string v0, ", iabSessionId=\'"
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 42
     .line 43
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 44
+    const-string v0, ", postClickEligibleExperienceTypes="
+
     .line 45
     .line 46
-    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A03:Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 47
     .line 48
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 49
+    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABLandingPageFinishedEvent;->A03:Ljava/util/List;
+
     .line 50
     .line 51
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2}, LX/0X1;->A0O(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 52
     .line 53
     .line 54
-    const-string v0, ", eventTs="
-
-    .line 55
-    .line 56
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 57
-    .line 58
-    .line 59
-    invoke-static {p0, v2}, Lcom/facebook/iabeventlogging/model/IABEvent;->A03(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/StringBuilder;)V
-
-    .line 60
-    .line 61
-    .line 62
-    iget-wide v0, p0, Lcom/facebook/iabeventlogging/model/IABLandingPageFinishedEvent;->A00:J
-
-    .line 63
-    .line 64
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    .line 65
-    .line 66
-    .line 67
-    invoke-static {v2}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 68
-    .line 69
-    .line 70
     move-result-object v0
 
-    .line 71
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    .line 55
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
-    .line 72
-    .line 73
-    .line 74
+    .line 56
+    .line 57
+    .line 58
     return-object v0
 .end method
 
@@ -210,7 +188,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -238,5 +216,14 @@
     .line 15
     .line 16
     .line 17
+    iget-object v0, p0, Lcom/facebook/iabeventlogging/model/IABLandingPageFinishedEvent;->A03:Ljava/util/List;
+
+    .line 18
+    .line 19
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
+
+    .line 20
+    .line 21
+    .line 22
     return-void
 .end method

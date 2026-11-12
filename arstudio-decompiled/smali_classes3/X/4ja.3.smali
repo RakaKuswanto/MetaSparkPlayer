@@ -1,109 +1,76 @@
-.class public final LX/4ja;
-.super LX/6Kq;
+.class public final synthetic LX/4ja;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "RecyclerBinder$$ExternalSyntheticLambda1"
 
 
 # instance fields
-.field public A00:LX/4mP;
+.field public final synthetic A00:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(LX/4mP;LX/4mm;)V
+.method public synthetic constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0, p1, p2}, LX/6Kq;-><init>(LX/4mg;LX/4mm;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/4ja;->A00:LX/4mP;
+    iput-object p1, p0, LX/4ja;->A00:Ljava/util/List;
 
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0Q(LX/4id;)V
-    .locals 1
+.method public final run()V
+    .locals 4
 
     .line 0
-    if-eqz p1, :cond_0
+    iget-object v3, p0, LX/4ja;->A00:Ljava/util/List;
 
     .line 1
     .line 2
-    invoke-virtual {p1}, LX/4id;->A04()LX/4mg;
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
     .line 3
     .line 4
     .line 5
-    move-result-object v0
+    move-result v2
 
     .line 6
-    invoke-virtual {p0, v0}, LX/4ja;->A0R(LX/4mg;)V
+    const/4 v1, 0x0
 
     .line 7
+    :goto_0
+    if-ge v1, v2, :cond_0
+
     .line 8
     .line 9
-    :cond_0
-    return-void
-.end method
+    invoke-static {v3, v1}, LX/434;->A0g(Ljava/util/List;I)LX/4gd;
 
-.method public final A0R(LX/4mg;)V
-    .locals 2
-
-    .line 0
-    if-eqz p1, :cond_1
-
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/4ja;->A00:LX/4mP;
-
-    .line 3
-    .line 4
-    iget-object v0, v1, LX/4mP;->A04:Ljava/util/List;
-
-    .line 5
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    .line 8
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 9
     .line 10
     .line 11
+    .line 12
     move-result-object v0
 
-    .line 12
-    iput-object v0, v1, LX/4mP;->A04:Ljava/util/List;
-
     .line 13
-    .line 14
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, LX/4gd;->A03()V
 
+    .line 14
     .line 15
     .line 16
+    add-int/lit8 v1, v1, 0x1
+
     .line 17
-    :cond_1
-    return-void
-.end method
+    .line 18
+    goto :goto_0
 
-.method public final A0S(LX/4jf;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4ja;->A00:LX/4mP;
-
-    .line 1
-    .line 2
-    iput-object p1, v0, LX/4mP;->A02:LX/4jf;
-
-    .line 3
-    .line 4
+    .line 19
+    :cond_0
     return-void
 .end method

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public A00:LX/24a;
+.field public A00:LX/270;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public final declared-synchronized A00()LX/3kr;
+.method public final declared-synchronized A00()LX/3B3;
     .locals 1
 
     .line 0
@@ -30,7 +30,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/graphql/executor/offlinemutations/OfflineMutationsRetryJobService;->A00:LX/24a;
+    iget-object v0, p0, Lcom/facebook/graphql/executor/offlinemutations/OfflineMutationsRetryJobService;->A00:LX/270;
 
     .line 2
     .line 3
@@ -38,11 +38,11 @@
 
     .line 4
     .line 5
-    sget v0, LX/2eq;->AF0:I
+    sget v0, LX/2I6;->ABQ:I
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 8
     .line 9
@@ -50,11 +50,11 @@
     move-result-object v0
 
     .line 11
-    check-cast v0, LX/24a;
+    check-cast v0, LX/270;
 
     .line 12
     .line 13
-    iput-object v0, p0, Lcom/facebook/graphql/executor/offlinemutations/OfflineMutationsRetryJobService;->A00:LX/24a;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/offlinemutations/OfflineMutationsRetryJobService;->A00:LX/270;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

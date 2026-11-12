@@ -3,15 +3,30 @@
 .source ""
 
 
+# static fields
+.field public static A00:Ljava/nio/charset/Charset;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "UTF-8"
 
     .line 1
     .line 2
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
     .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    sput-object v0, LX/2CJ;->A00:Ljava/nio/charset/Charset;
+
+    .line 7
+    .line 8
     return-void
 .end method

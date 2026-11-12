@@ -2,23 +2,34 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5Er;
-
 
 # instance fields
-.field public final A00:LX/5Er;
+.field public final A00:I
 
-.field public final A01:LX/5Er;
+.field public final A01:I
 
-.field public final A02:LX/5Er;
+.field public final A02:Ljava/lang/String;
 
-.field public final A03:LX/5Er;
+.field public final A03:Ljava/lang/String;
+
+.field public final A04:Ljava/lang/String;
+
+.field public final A05:Ljava/util/List;
+
+.field public final A06:Ljava/util/List;
+
+.field public final A07:Ljava/util/List;
+
+.field public final A08:Ljava/util/List;
+
+.field public final A09:Z
+
+.field public final A0A:Z
 
 
 # direct methods
-.method public constructor <init>(LX/5Er;LX/5Er;LX/5Er;LX/5Er;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;IIZZ)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,177 +37,123 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5FK;->A01:LX/5Er;
+    iput p8, p0, LX/5FK;->A00:I
 
     .line 4
     .line 5
-    iput-object p2, p0, LX/5FK;->A00:LX/5Er;
+    iput p9, p0, LX/5FK;->A01:I
 
     .line 6
     .line 7
-    iput-object p3, p0, LX/5FK;->A03:LX/5Er;
+    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     .line 8
     .line 9
-    iput-object p4, p0, LX/5FK;->A02:LX/5Er;
-
     .line 10
+    move-result-object v0
+
     .line 11
+    iput-object v0, p0, LX/5FK;->A07:Ljava/util/List;
+
+    .line 12
+    .line 13
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    iput-object v0, p0, LX/5FK;->A05:Ljava/util/List;
+
+    .line 18
+    .line 19
+    invoke-static {p6}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    iput-object v0, p0, LX/5FK;->A06:Ljava/util/List;
+
+    .line 24
+    .line 25
+    invoke-static {p7}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    iput-object v0, p0, LX/5FK;->A08:Ljava/util/List;
+
+    .line 30
+    .line 31
+    iput-object p1, p0, LX/5FK;->A03:Ljava/lang/String;
+
+    .line 32
+    .line 33
+    iput-object p2, p0, LX/5FK;->A04:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    iput-object p3, p0, LX/5FK;->A02:Ljava/lang/String;
+
+    .line 36
+    .line 37
+    iput-boolean p10, p0, LX/5FK;->A09:Z
+
+    .line 38
+    .line 39
+    iput-boolean p11, p0, LX/5FK;->A0A:Z
+
+    .line 40
+    .line 41
     return-void
 .end method
 
-
-# virtual methods
-.method public final ANj(LX/0TQ;)J
-    .locals 11
+.method public static A00(LX/5FK;)Ljava/util/Iterator;
+    .locals 0
 
     .line 0
-    iget-object v0, p0, LX/5FK;->A01:LX/5Er;
+    iget-object p0, p0, LX/5FK;->A07:Ljava/util/List;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1}, LX/5Er;->ANj(LX/0TQ;)J
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 3
     .line 4
     .line 5
-    move-result-wide v3
+    move-result-object p0
 
     .line 6
-    iget-object v0, p0, LX/5FK;->A00:LX/5Er;
+    return-object p0
+.end method
+
+.method public static A01(Ljava/util/List;I)Ljava/util/List;
+    .locals 0
+
+    .line 0
+    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    check-cast p0, LX/5FK;
+
+    .line 5
+    .line 6
+    iget-object p0, p0, LX/5FK;->A07:Ljava/util/List;
 
     .line 7
     .line 8
-    invoke-interface {v0, p1}, LX/5Er;->ANj(LX/0TQ;)J
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-wide v7
-
-    .line 12
-    iget-object v0, p0, LX/5FK;->A03:LX/5Er;
-
-    .line 13
-    .line 14
-    invoke-interface {v0, p1}, LX/5Er;->ANj(LX/0TQ;)J
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-wide v1
-
-    .line 18
-    iget-object v0, p0, LX/5FK;->A02:LX/5Er;
-
-    .line 19
-    .line 20
-    invoke-interface {v0, p1}, LX/5Er;->ANj(LX/0TQ;)J
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-wide v5
-
-    .line 24
-    const-wide/16 v9, 0x0
-
-    .line 25
-    .line 26
-    cmp-long v0, v3, v9
-
-    .line 27
-    .line 28
-    if-lez v0, :cond_0
-
-    .line 29
-    .line 30
-    cmp-long v0, v7, v9
-
-    .line 31
-    .line 32
-    if-lez v0, :cond_0
-
-    .line 33
-    .line 34
-    cmp-long v0, v1, v9
-
-    .line 35
-    .line 36
-    if-lez v0, :cond_0
-
-    .line 37
-    .line 38
-    cmp-long v0, v5, v9
-
-    .line 39
-    .line 40
-    if-lez v0, :cond_0
-
-    .line 41
-    .line 42
-    mul-long/2addr v7, v3
-
-    .line 43
-    mul-long/2addr v5, v1
-
-    .line 44
-    cmp-long v0, v7, v9
-
-    .line 45
-    .line 46
-    if-lez v0, :cond_0
-
-    .line 47
-    .line 48
-    cmp-long v0, v5, v9
-
-    .line 49
-    .line 50
-    if-lez v0, :cond_0
-
-    .line 51
-    .line 52
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
-
-    .line 53
-    .line 54
-    long-to-double v3, v7
-
-    .line 55
-    mul-double/2addr v3, v0
-
-    .line 56
-    long-to-double v0, v5
-
-    .line 57
-    div-double/2addr v3, v0
-
-    .line 58
-    const-wide/high16 v1, 0x3ffc000000000000L    # 1.75
-
-    .line 59
-    .line 60
-    cmpl-double v0, v3, v1
-
-    .line 61
-    .line 62
-    if-ltz v0, :cond_0
-
-    .line 63
-    .line 64
-    const-wide/16 v9, 0x1
-
-    .line 65
-    .line 66
-    :cond_0
-    return-wide v9
-.end method
-
-.method public final getName()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "is_overfetched"
-
-    return-object v0
+    return-object p0
 .end method

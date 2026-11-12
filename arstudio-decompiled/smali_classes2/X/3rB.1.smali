@@ -1,190 +1,195 @@
-.class public final LX/3rB;
-.super LX/4id;
+.class public final LX/3Rb;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:LX/4mm;
+.field public final A00:I
 
-.field public A01:LX/3oj;
-
-.field public final A02:Ljava/util/BitSet;
-
-.field public final A03:[Ljava/lang/String;
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>(LX/4mm;LX/3oj;)V
-    .locals 4
+.method public constructor <init>(II)V
+    .locals 0
 
     .line 0
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    invoke-direct {p0, p2, p1, v1}, LX/4id;-><init>(LX/4mg;LX/4mm;I)V
-
     .line 2
     .line 3
+    iput p1, p0, LX/3Rb;->A01:I
+
     .line 4
-    const/16 v2, 0x8
-
     .line 5
+    iput p2, p0, LX/3Rb;->A00:I
+
     .line 6
-    new-array v3, v2, [Ljava/lang/String;
-
     .line 7
-    .line 8
-    const-string v0, "boundRichVideoPlayerEventBus"
-
-    .line 9
-    .line 10
-    aput-object v0, v3, v1
-
-    .line 11
-    .line 12
-    const/4 v1, 0x1
-
-    .line 13
-    const-string/jumbo v0, "logTag"
-
-    .line 14
-    .line 15
-    .line 16
-    aput-object v0, v3, v1
-
-    .line 17
-    .line 18
-    const/4 v1, 0x2
-
-    .line 19
-    const-string/jumbo v0, "playerOrigin"
-
-    .line 20
-    .line 21
-    .line 22
-    aput-object v0, v3, v1
-
-    .line 23
-    .line 24
-    const/4 v1, 0x3
-
-    .line 25
-    const-string/jumbo v0, "playerType"
-
-    .line 26
-    .line 27
-    .line 28
-    aput-object v0, v3, v1
-
-    .line 29
-    .line 30
-    const/4 v1, 0x4
-
-    .line 31
-    const-string/jumbo v0, "pluginPacks"
-
-    .line 32
-    .line 33
-    .line 34
-    aput-object v0, v3, v1
-
-    .line 35
-    .line 36
-    const/4 v1, 0x5
-
-    .line 37
-    const-string/jumbo v0, "richVideoPlayerParams"
-
-    .line 38
-    .line 39
-    .line 40
-    aput-object v0, v3, v1
-
-    .line 41
-    .line 42
-    const/4 v1, 0x6
-
-    .line 43
-    const-string/jumbo v0, "videoPlaybackStatusProvider"
-
-    .line 44
-    .line 45
-    .line 46
-    aput-object v0, v3, v1
-
-    .line 47
-    .line 48
-    const/4 v1, 0x7
-
-    .line 49
-    const-string/jumbo v0, "videoState"
-
-    .line 50
-    .line 51
-    .line 52
-    aput-object v0, v3, v1
-
-    .line 53
-    .line 54
-    iput-object v3, p0, LX/3rB;->A03:[Ljava/lang/String;
-
-    .line 55
-    .line 56
-    new-instance v0, Ljava/util/BitSet;
-
-    .line 57
-    .line 58
-    invoke-direct {v0, v2}, Ljava/util/BitSet;-><init>(I)V
-
-    .line 59
-    .line 60
-    .line 61
-    iput-object v0, p0, LX/3rB;->A02:Ljava/util/BitSet;
-
-    .line 62
-    .line 63
-    iput-object p2, p0, LX/3rB;->A01:LX/3oj;
-
-    .line 64
-    .line 65
-    iput-object p1, p0, LX/3rB;->A00:LX/4mm;
-
-    .line 66
-    .line 67
-    invoke-virtual {v0}, Ljava/util/BitSet;->clear()V
-
-    .line 68
-    .line 69
-    .line 70
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A04()LX/4mg;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
     .line 0
-    iget-object v2, p0, LX/3rB;->A02:Ljava/util/BitSet;
+    const/4 v2, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_2
+
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    invoke-static {p1}, LX/0X4;->A0Y(Ljava/lang/Object;)Ljava/lang/Class;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    const/4 v0, 0x0
+
+    .line 16
+    if-nez v1, :cond_0
+
+    .line 17
+    .line 18
+    return v0
+
+    .line 19
+    :cond_0
+    const-string/jumbo v0, "null cannot be cast to non-null type com.facebook.fresco.urimod.Dimensions"
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-static {p1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 23
+    .line 24
+    .line 25
+    check-cast p1, LX/3Rb;
+
+    .line 26
+    .line 27
+    iget v1, p0, LX/3Rb;->A01:I
+
+    .line 28
+    .line 29
+    iget v0, p1, LX/3Rb;->A01:I
+
+    .line 30
+    .line 31
+    if-ne v1, v0, :cond_1
+
+    .line 32
+    .line 33
+    iget v1, p0, LX/3Rb;->A00:I
+
+    .line 34
+    .line 35
+    iget v0, p1, LX/3Rb;->A00:I
+
+    .line 36
+    .line 37
+    if-ne v1, v0, :cond_1
+
+    .line 38
+    .line 39
+    return v2
+
+    .line 40
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 41
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    .line 0
+    iget v0, p0, LX/3Rb;->A01:I
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/3rB;->A03:[Ljava/lang/String;
+    mul-int/lit8 v1, v0, 0x1f
 
     .line 3
     .line 4
-    const/16 v0, 0x8
+    iget v0, p0, LX/3Rb;->A00:I
 
     .line 5
     .line 6
-    invoke-static {v2, v1, v0}, LX/4id;->A03(Ljava/util/BitSet;[Ljava/lang/String;I)V
+    add-int/2addr v1, v0
+
+    .line 7
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    iget v0, p0, LX/3Rb;->A01:I
+
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, LX/3rB;->A01:LX/3oj;
+    const/16 v0, 0x78
 
     .line 10
     .line 11
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 12
+    .line 13
+    .line 14
+    iget v0, p0, LX/3Rb;->A00:I
+
+    .line 15
+    .line 16
+    invoke-static {v1, v0}, LX/0X5;->A0g(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
     return-object v0
 .end method

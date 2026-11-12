@@ -10,6 +10,9 @@
 .method public abstract getDropDataProvider()Ljava/lang/reflect/InvocationHandler;
 .end method
 
+.method public abstract getProfileStore()Ljava/lang/reflect/InvocationHandler;
+.end method
+
 .method public abstract getProxyController()Ljava/lang/reflect/InvocationHandler;
 .end method
 
@@ -26,7 +29,4 @@
 .end method
 
 .method public abstract getWebkitToCompatConverter()Ljava/lang/reflect/InvocationHandler;
-.end method
-
-.method public abstract setSupportLibraryVersion(Ljava/lang/String;)V
 .end method

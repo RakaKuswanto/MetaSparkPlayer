@@ -2,12 +2,17 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3aS;
+
+# instance fields
+.field public final A00:I
+
+.field public final A01:I
+
+.field public final A02:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(III)V
     .locals 0
 
     .line 0
@@ -16,33 +21,17 @@
     .line 1
     .line 2
     .line 3
+    iput p1, p0, LX/5Pp;->A02:I
+
+    .line 4
+    .line 5
+    iput p2, p0, LX/5Pp;->A00:I
+
+    .line 6
+    .line 7
+    iput p3, p0, LX/5Pp;->A01:I
+
+    .line 8
+    .line 9
     return-void
-.end method
-
-
-# virtual methods
-.method public final AJH(I)I
-    .locals 2
-
-    const/4 v1, 0x1
-
-    if-ltz p1, :cond_1
-
-    if-le p1, v1, :cond_0
-
-    const/16 v0, 0xb
-
-    if-lt p1, v0, :cond_1
-
-    const/16 v0, 0x63
-
-    if-gt p1, v0, :cond_1
-
-    :cond_0
-    return v1
-
-    :cond_1
-    const/4 v1, 0x5
-
-    return v1
 .end method

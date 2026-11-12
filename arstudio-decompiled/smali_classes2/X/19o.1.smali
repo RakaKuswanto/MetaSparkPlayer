@@ -1,42 +1,65 @@
 .class public final LX/19o;
-.super LX/1Bn;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/1AH;
+.implements LX/2vE;
+
+
+# instance fields
+.field public final A00:LX/2Mu;
 
 
 # direct methods
-.method public constructor <init>(I[I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    sget v0, LX/2I6;->AYP:I
+
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    check-cast v0, LX/2Mu;
+
+    .line 10
+    .line 11
+    iput-object v0, p0, LX/19o;->A00:LX/2Mu;
+
+    .line 12
+    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final getName()Ljava/lang/String;
+.method public final Ain(LX/2ub;)Z
     .locals 1
 
     .line 0
-    const v0, 0x337a8b
+    iget-object v0, p0, LX/19o;->A00:LX/2Mu;
 
     .line 1
     .line 2
-    .line 3
-    invoke-virtual {p0, v0}, LX/1Bn;->getCachedString(I)Ljava/lang/String;
+    invoke-virtual {v0}, LX/2Mu;->A00()V
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    const/4 v0, 0x1
 
-    .line 7
-    return-object v0
+    .line 6
+    return v0
 .end method

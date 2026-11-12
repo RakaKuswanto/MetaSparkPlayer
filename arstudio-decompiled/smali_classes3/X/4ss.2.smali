@@ -1,8 +1,3 @@
-.class public interface abstract LX/4ss;
+.class public interface abstract LX/4sS;
 .super Ljava/lang/Object;
 .source ""
-
-
-# virtual methods
-.method public abstract Aad()V
-.end method

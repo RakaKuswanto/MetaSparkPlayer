@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field public final synthetic A00:LX/5AO;
+.field public final synthetic A00:LX/53T;
 
 
 # direct methods
-.method public constructor <init>(LX/5AO;)V
+.method public constructor <init>(LX/53T;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/location/appstate/GeoApiLocationAppStateListener$LifecycleCallback;->A00:LX/5AO;
+    iput-object p1, p0, Lcom/facebook/location/appstate/GeoApiLocationAppStateListener$LifecycleCallback;->A00:LX/53T;
 
     .line 1
     .line 2
@@ -45,11 +45,11 @@
     .locals 5
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/location/appstate/GeoApiLocationAppStateListener$LifecycleCallback;->A00:LX/5AO;
+    iget-object v1, p0, Lcom/facebook/location/appstate/GeoApiLocationAppStateListener$LifecycleCallback;->A00:LX/53T;
 
     .line 1
     .line 2
-    iget-object v0, v1, LX/5AO;->A03:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, v1, LX/53T;->A03:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 3
     .line 4
@@ -65,15 +65,15 @@
 
     .line 9
     .line 10
-    iget-object v4, v1, LX/5AO;->A00:Ljava/util/concurrent/ScheduledExecutorService;
+    iget-object v4, v1, LX/53T;->A00:Ljava/util/concurrent/ScheduledExecutorService;
 
     .line 11
     .line 12
-    new-instance v3, LX/5AR;
+    new-instance v3, LX/53X;
 
     .line 13
     .line 14
-    invoke-direct {v3, v1}, LX/5AR;-><init>(LX/5AO;)V
+    invoke-direct {v3, v1}, LX/53X;-><init>(LX/53T;)V
 
     .line 15
     .line 16

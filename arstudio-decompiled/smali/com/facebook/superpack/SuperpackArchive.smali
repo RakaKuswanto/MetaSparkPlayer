@@ -26,7 +26,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -339,7 +339,7 @@
 
     .line 6
     .line 7
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 8
     .line 9
@@ -358,7 +358,7 @@
 
     .line 15
     .line 16
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 17
     .line 18
@@ -393,11 +393,11 @@
     .line 31
     :cond_0
     :try_start_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
     .line 32
     .line 33
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     .line 34
     .line 35
@@ -406,11 +406,11 @@
 
     .line 37
     :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
     .line 38
     .line 39
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
     .line 40
     .line 41

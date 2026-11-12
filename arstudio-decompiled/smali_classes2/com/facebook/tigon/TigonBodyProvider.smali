@@ -6,7 +6,7 @@
 # instance fields
 .field public mHybridData:Lcom/facebook/jni/HybridData;
 
-.field public mInfo:LX/3T3;
+.field public mInfo:LX/38f;
 
 
 # direct methods

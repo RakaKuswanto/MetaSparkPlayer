@@ -1,183 +1,220 @@
-.class public final LX/1NY;
-.super Ljava/lang/Object;
+.class public final enum LX/1nY;
+.super Ljava/lang/Enum;
 .source ""
 
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/1nY;
+
+.field public static final enum CHECKSUM:LX/1nY;
+
+.field public static final enum CONTENT:LX/1nY;
+
+.field public static final enum STATUS:LX/1nY;
+
+
+# instance fields
+.field public final text:Ljava/lang/String;
+
+
 # direct methods
-.method public static A00(LX/1we;)Lcom/facebook/auth/protocol/UserTypeResult;
-    .locals 12
+.method public static final synthetic $values()[LX/1nY;
+    .locals 3
+
+    const/4 v0, 0x3
+
+    new-array v2, v0, [LX/1nY;
+
+    sget-object v1, LX/1nY;->STATUS:LX/1nY;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1nY;->CHECKSUM:LX/1nY;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1nY;->CONTENT:LX/1nY;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 0
-    const-string v0, "account_id"
+    const-string v3, "STATUS"
 
     .line 1
     .line 2
-    invoke-virtual {p0, v0}, LX/1we;->A0E(Ljava/lang/String;)LX/1we;
+    const/4 v2, 0x0
 
     .line 3
+    const-string/jumbo v1, "lp_status"
+
     .line 4
     .line 5
-    move-result-object v0
-
     .line 6
-    const/4 v1, 0x0
+    new-instance v0, LX/1nY;
 
     .line 7
-    invoke-static {v0, v1}, Lcom/facebook/common/util/JSONUtil;->A04(LX/1we;Ljava/lang/String;)Ljava/lang/String;
-
     .line 8
+    invoke-direct {v0, v3, v2, v1}, LX/1nY;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 9
     .line 10
-    move-result-object v3
-
     .line 11
-    const-string/jumbo v0, "first_name"
+    sput-object v0, LX/1nY;->STATUS:LX/1nY;
 
     .line 12
     .line 13
+    const-string v3, "CHECKSUM"
+
     .line 14
-    invoke-virtual {p0, v0}, LX/1we;->A0E(Ljava/lang/String;)LX/1we;
-
     .line 15
+    const/4 v2, 0x1
+
     .line 16
+    const-string/jumbo v1, "lp_checksum"
+
     .line 17
-    move-result-object v0
-
     .line 18
-    const-string v2, ""
-
     .line 19
-    .line 20
-    invoke-static {v0, v2}, Lcom/facebook/common/util/JSONUtil;->A04(LX/1we;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v0, LX/1nY;
 
+    .line 20
     .line 21
+    invoke-direct {v0, v3, v2, v1}, LX/1nY;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 22
     .line 23
-    move-result-object v4
-
     .line 24
-    const-string/jumbo v0, "last_name"
+    sput-object v0, LX/1nY;->CHECKSUM:LX/1nY;
 
     .line 25
     .line 26
+    const-string v3, "CONTENT"
+
     .line 27
-    invoke-static {p0, v0, v2}, LX/1we;->A02(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 28
+    const/4 v2, 0x2
+
     .line 29
+    const-string/jumbo v1, "lp_content"
+
     .line 30
-    move-result-object v5
-
     .line 31
-    const-string/jumbo v0, "full_name"
-
     .line 32
+    new-instance v0, LX/1nY;
+
     .line 33
     .line 34
-    invoke-static {p0, v0, v2}, LX/1we;->A02(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v0, v3, v2, v1}, LX/1nY;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 35
     .line 36
     .line 37
-    move-result-object v6
+    sput-object v0, LX/1nY;->CONTENT:LX/1nY;
 
     .line 38
-    const-string/jumbo v0, "profile_pic"
-
     .line 39
+    invoke-static {}, LX/1nY;->$values()[LX/1nY;
+
     .line 40
     .line 41
-    invoke-static {p0, v0, v2}, LX/1we;->A02(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 42
-    .line 43
-    .line 44
-    move-result-object v7
+    move-result-object v0
 
+    .line 43
+    sput-object v0, LX/1nY;->$VALUES:[LX/1nY;
+
+    .line 44
     .line 45
-    const-string/jumbo v0, "instagram_username"
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
     .line 46
     .line 47
     .line 48
-    invoke-static {p0, v0, v1}, LX/1we;->A02(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
     .line 49
+    sput-object v0, LX/1nY;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
     .line 50
     .line 51
-    move-result-object v8
+    return-void
+.end method
 
-    .line 52
-    const-string v0, "account_type"
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    .line 53
-    .line 54
-    invoke-static {p0, v0, v1}, LX/1we;->A02(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v9
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/1nY;->text:Ljava/lang/String;
 
-    .line 58
-    const-string/jumbo v0, "instagram_login_screen_style"
+    .line 4
+    .line 5
+    return-void
+.end method
 
-    .line 59
-    .line 60
-    .line 61
-    invoke-static {p0, v0, v1}, LX/1we;->A02(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
 
-    .line 62
-    .line 63
-    .line 64
-    move-result-object v10
+    sget-object v0, LX/1nY;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 65
-    const-string/jumbo v0, "instagram_phone_number"
+    return-object v0
+.end method
 
-    .line 66
-    .line 67
-    .line 68
-    invoke-static {p0, v0, v1}, LX/1we;->A02(LX/1we;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public static valueOf(Ljava/lang/String;)LX/1nY;
+    .locals 1
 
-    .line 69
-    .line 70
-    .line 71
-    move-result-object v11
+    const-class v0, LX/1nY;
 
-    .line 72
-    const-string/jumbo v0, "is_twofac_user"
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 73
-    .line 74
-    .line 75
-    invoke-virtual {p0, v0}, LX/1we;->A0E(Ljava/lang/String;)LX/1we;
+    move-result-object v0
 
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v1
+    check-cast v0, LX/1nY;
 
-    .line 79
-    const/4 v0, 0x0
+    return-object v0
+.end method
 
-    .line 80
-    invoke-static {v1, v0}, Lcom/facebook/common/util/JSONUtil;->A06(LX/1we;Z)Z
+.method public static values()[LX/1nY;
+    .locals 1
 
-    .line 81
-    .line 82
-    .line 83
-    move-result p0
+    sget-object v0, LX/1nY;->$VALUES:[LX/1nY;
 
-    .line 84
-    new-instance v2, Lcom/facebook/auth/protocol/UserTypeResult;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 85
-    .line 86
-    invoke-direct/range {v2 .. v12}, Lcom/facebook/auth/protocol/UserTypeResult;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    move-result-object v0
 
-    .line 87
-    .line 88
-    .line 89
-    return-object v2
+    check-cast v0, [LX/1nY;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getText()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1nY;->text:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

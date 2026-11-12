@@ -41,21 +41,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x6
+    const/16 v0, 0x2b
 
     .line 1
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
-
     .line 2
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/ipc/composer/model/ProductItemNearbyLocations;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -68,7 +69,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yd;->A0K(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X1;->A0M(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 4
     .line 5
@@ -160,15 +161,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "address"
+    const-string/jumbo v0, "address"
 
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/facebook/ipc/composer/model/ProductItemNearbyLocations;->A02:Ljava/lang/String;
 
     const-string/jumbo v0, "imageURL"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/ipc/composer/model/ProductItemNearbyLocations;->A03:Ljava/lang/String;
 
@@ -176,13 +177,13 @@
 
     const-string/jumbo v0, "locationPageId"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/facebook/ipc/composer/model/ProductItemNearbyLocations;->A04:Ljava/lang/String;
 
     const-string/jumbo v0, "locationType"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/facebook/ipc/composer/model/ProductItemNearbyLocations;->A05:Ljava/lang/String;
 
@@ -190,7 +191,7 @@
 
     const-string/jumbo v0, "name"
 
-    invoke-static {v0, p5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p5, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p5, p0, Lcom/facebook/ipc/composer/model/ProductItemNearbyLocations;->A06:Ljava/lang/String;
 
@@ -241,7 +242,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -261,7 +262,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -297,7 +298,7 @@
 
     .line 41
     .line 42
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 43
     .line 44
@@ -317,7 +318,7 @@
 
     .line 51
     .line 52
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 53
     .line 54
@@ -353,7 +354,7 @@
 
     .line 69
     .line 70
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 71
     .line 72
@@ -381,7 +382,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -397,7 +398,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -420,7 +421,7 @@
     move-result-wide v0
 
     .line 21
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 22
     .line 23
@@ -436,7 +437,7 @@
 
     .line 28
     .line 29
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 30
     .line 31
@@ -455,7 +456,7 @@
 
     .line 37
     .line 38
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 39
     .line 40
@@ -478,7 +479,7 @@
     move-result-wide v0
 
     .line 49
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 50
     .line 51
@@ -494,7 +495,7 @@
 
     .line 56
     .line 57
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 58
     .line 59

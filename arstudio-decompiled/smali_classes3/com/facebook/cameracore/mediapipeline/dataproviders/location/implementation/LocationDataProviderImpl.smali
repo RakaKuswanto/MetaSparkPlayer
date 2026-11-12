@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5BI;
+.implements LX/54o;
 
 
 # instance fields
@@ -121,7 +121,7 @@
     const/4 v0, 0x0
 
     .line 5
-    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/5BI;
+    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/54o;
 
     .line 6
     .line 7
@@ -148,7 +148,7 @@
     const/4 v0, 0x0
 
     .line 7
-    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/5BI;
+    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->mLocationDataUpdateListener:LX/54o;
 
     .line 8
     .line 9
@@ -157,7 +157,7 @@
 
     .line 10
     .line 11
-    invoke-virtual {p1, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->setLocationDataUpdateListener(LX/5BI;)V
+    invoke-virtual {p1, p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->setLocationDataUpdateListener(LX/54o;)V
 
     .line 12
     .line 13

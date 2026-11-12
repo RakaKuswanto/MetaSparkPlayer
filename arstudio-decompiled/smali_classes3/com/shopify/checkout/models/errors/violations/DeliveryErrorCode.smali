@@ -3,16 +3,12 @@
 .source ""
 
 
-# annotations
-.annotation runtime Lkotlinx/serialization/Serializable;
-    with = Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCodeSerializer;
-.end annotation
-
-
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;
 
-.field public static final $cachedSerializer$delegate:LX/0tD;
+.field public static final $cachedSerializer$delegate:LX/3gS;
 
 .field public static final Companion:Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode$Companion;
 
@@ -80,38 +76,51 @@
 
     .line 17
     .line 18
-    new-instance v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode$Companion;
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
     .line 19
     .line 20
-    invoke-direct {v0}, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode$Companion;-><init>()V
-
     .line 21
-    .line 22
-    .line 23
-    sput-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;->Companion:Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode$Companion;
-
-    .line 24
-    .line 25
-    sget-object v1, LX/6MG;->PUBLICATION:LX/6MG;
-
-    .line 26
-    .line 27
-    const/4 v0, 0x7
-
-    .line 28
-    invoke-static {v1, v0}, LX/4wr;->A00(LX/6MG;I)LX/0tD;
-
-    .line 29
-    .line 30
-    .line 31
     move-result-object v0
 
-    .line 32
-    sput-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;->$cachedSerializer$delegate:LX/0tD;
+    .line 22
+    sput-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
+    .line 23
+    .line 24
+    new-instance v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode$Companion;
+
+    .line 25
+    .line 26
+    invoke-direct {v0}, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode$Companion;-><init>()V
+
+    .line 27
+    .line 28
+    .line 29
+    sput-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;->Companion:Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode$Companion;
+
+    .line 30
+    .line 31
+    sget-object v1, LX/2G8;->PUBLICATION:LX/2G8;
+
+    .line 32
     .line 33
+    const/16 v0, 0x18
+
     .line 34
+    .line 35
+    invoke-static {v1, v0}, LX/4Kh;->A00(LX/2G8;I)LX/3gS;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v0
+
+    .line 39
+    sput-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;->$cachedSerializer$delegate:LX/3gS;
+
+    .line 40
+    .line 41
     return-void
 .end method
 
@@ -131,14 +140,22 @@
     return-void
 .end method
 
-.method public static final synthetic access$get$cachedSerializer$delegate$cp()LX/0tD;
+.method public static final synthetic access$get$cachedSerializer$delegate$cp()LX/3gS;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;->$cachedSerializer$delegate:LX/0tD;
+    sget-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;->$cachedSerializer$delegate:LX/3gS;
 
     .line 1
     .line 2
+    return-object v0
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/shopify/checkout/models/errors/violations/DeliveryErrorCode;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
     return-object v0
 .end method
 

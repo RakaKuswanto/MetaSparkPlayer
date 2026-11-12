@@ -4,13 +4,11 @@
 
 
 # instance fields
-.field public final A00:LX/1Nm;
-
-.field public final A01:LX/1Nw;
+.field public final A00:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -19,25 +17,21 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/video/fbgrootplayer/VideoAudioVolumeObserversManager;->A01:LX/1Nw;
+    sget v0, LX/2I6;->AVf:I
 
     .line 4
     .line 5
-    sget v0, LX/2eq;->Acx:I
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
     .line 8
-    .line 9
-    .line 10
     move-result-object v0
 
-    .line 11
-    iput-object v0, p0, Lcom/facebook/video/fbgrootplayer/VideoAudioVolumeObserversManager;->A00:LX/1Nm;
+    .line 9
+    iput-object v0, p0, Lcom/facebook/video/fbgrootplayer/VideoAudioVolumeObserversManager;->A00:LX/0lu;
 
-    .line 12
-    .line 13
+    .line 10
+    .line 11
     return-void
 .end method

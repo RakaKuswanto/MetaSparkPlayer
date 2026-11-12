@@ -18,6 +18,14 @@
 # direct methods
 .method public constructor <init>()V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "expectedSize"
+        }
+    .end annotation
 
     .line 0
     const/4 v0, 0x0
@@ -45,7 +53,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1bx;->A00(I)I
+    invoke-static {v0}, LX/1tD;->A00(I)I
 
     .line 3
     .line 4

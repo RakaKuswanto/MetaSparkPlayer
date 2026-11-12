@@ -1,49 +1,21 @@
 .class public final LX/3AS;
-.super Ljava/lang/Object;
+.super Ljava/lang/RuntimeException;
 .source ""
-
-# interfaces
-.implements LX/1ij;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ADa()I
+.method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 1
 
-    const/16 v0, 0x719
-
-    return v0
-.end method
-
-.method public final AWH(I)V
-    .locals 2
-
     .line 0
-    const-class v1, LX/1n5;
+    const-string v0, "Scheduled Executor Swallowed Crash"
 
     .line 1
     .line 2
-    const/4 v0, 0x0
+    invoke-direct {p0, v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 3
-    invoke-static {v1, v0}, LX/1z6;->A0X(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
-
     .line 4
     .line 5
-    .line 6
     return-void
 .end method

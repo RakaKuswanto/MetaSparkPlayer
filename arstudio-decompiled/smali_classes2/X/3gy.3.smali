@@ -1,24 +1,17 @@
-.class public interface abstract LX/3gy;
+.class public abstract LX/3gy;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/3gz;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    sget-object v0, LX/3gz;->A01:LX/3gz;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, LX/3gy;->A00:LX/3gz;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract A7C(Landroid/app/Activity;)LX/1NJ;
 .end method

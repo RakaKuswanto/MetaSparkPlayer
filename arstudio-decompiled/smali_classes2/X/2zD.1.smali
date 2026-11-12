@@ -1,61 +1,47 @@
-.class public final LX/2zD;
-.super LX/481;
+.class public abstract LX/2Zd;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/exoplayer2/source/TrackGroup;I)V
-    .locals 2
+.method public static final A00(Lorg/apache/http/protocol/HttpContext;)LX/2aI;
+    .locals 1
 
     .line 0
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 1
-    const/4 v0, 0x1
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
-    new-array v0, v0, [I
-
     .line 3
     .line 4
-    aput p2, v0, v1
+    const-string/jumbo v0, "fb_http_request_context"
 
     .line 5
     .line 6
-    invoke-direct {p0, p1, v0}, LX/481;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;[I)V
-
     .line 7
+    invoke-interface {p0, v0}, Lorg/apache/http/protocol/HttpContext;->getAttribute(Ljava/lang/String;)Ljava/lang/Object;
+
     .line 8
     .line 9
-    return-void
-.end method
+    .line 10
+    move-result-object p0
 
+    .line 11
+    const-string/jumbo v0, "null cannot be cast to non-null type com.facebook.http.observer.RequestContext"
 
-# virtual methods
-.method public final ALz()I
-    .locals 1
+    .line 12
+    .line 13
+    .line 14
+    invoke-static {p0, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    .line 15
+    .line 16
+    .line 17
+    check-cast p0, LX/2aI;
 
-    return v0
-.end method
-
-.method public final AM0()Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return-object v0
-.end method
-
-.method public final AM1()I
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
+    .line 18
+    .line 19
+    return-object p0
 .end method

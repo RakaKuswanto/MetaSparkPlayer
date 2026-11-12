@@ -1,84 +1,148 @@
-.class public final synthetic LX/60S;
+.class public final LX/60S;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaSourceList$ForwardingEventListener$$ExternalSyntheticLambda9"
-
 
 # instance fields
-.field public final synthetic A00:Landroid/util/Pair;
+.field public final synthetic A00:LX/68m;
 
-.field public final synthetic A01:LX/60P;
+.field public final synthetic A01:LX/604;
 
-.field public final synthetic A02:LX/5zq;
+.field public final synthetic A02:LX/607;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/util/Pair;LX/60P;LX/5zq;)V
+.method public constructor <init>(LX/68m;LX/604;LX/607;)V
     .locals 0
 
+    .line 0
+    iput-object p2, p0, LX/60S;->A01:LX/604;
+
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/60S;->A00:LX/68m;
+
+    .line 3
+    .line 4
+    iput-object p3, p0, LX/60S;->A02:LX/607;
+
+    .line 5
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, LX/60S;->A01:LX/60P;
-
-    iput-object p1, p0, LX/60S;->A00:Landroid/util/Pair;
-
-    iput-object p3, p0, LX/60S;->A02:LX/5zq;
-
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final A00(Landroid/graphics/Bitmap;)V
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/60S;->A01:LX/60P;
+    iget-object v2, p0, LX/60S;->A01:LX/604;
 
     .line 1
     .line 2
-    iget-object v4, p0, LX/60S;->A00:Landroid/util/Pair;
+    const/4 v1, 0x7
 
     .line 3
+    iget-object v0, v2, LX/604;->A0Q:LX/60J;
+
     .line 4
-    iget-object v3, p0, LX/60S;->A02:LX/5zq;
-
     .line 5
-    .line 6
-    iget-object v0, v0, LX/60P;->A01:LX/609;
+    invoke-interface {v0, v1}, LX/60J;->AW9(I)V
 
+    .line 6
     .line 7
     .line 8
-    iget-object v2, v0, LX/609;->A04:LX/60Z;
+    iget-object v1, v2, LX/604;->A0J:Landroid/os/Handler;
 
     .line 9
     .line 10
-    invoke-static {v4}, LX/4BD;->A06(Landroid/util/Pair;)I
+    new-instance v0, LX/66H;
 
     .line 11
     .line 12
+    invoke-direct {v0, p1, p0}, LX/66H;-><init>(Landroid/graphics/Bitmap;LX/60S;)V
+
     .line 13
-    move-result v1
-
     .line 14
-    iget-object v0, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
-
     .line 15
-    .line 16
-    check-cast v0, LX/61D;
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 16
     .line 17
     .line 18
-    invoke-interface {v2, v3, v0, v1}, LX/5zs;->AXA(LX/5zq;LX/61D;I)V
+    const/4 v0, 0x0
 
     .line 19
+    iput-boolean v0, v2, LX/604;->A0Y:Z
+
     .line 20
     .line 21
+    return-void
+.end method
+
+.method public final A01(Ljava/lang/Throwable;)V
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/60S;->A01:LX/604;
+
+    .line 1
+    .line 2
+    const/4 v1, 0x7
+
+    .line 3
+    iget-object v0, v2, LX/604;->A0Q:LX/60J;
+
+    .line 4
+    .line 5
+    invoke-interface {v0, v1}, LX/60J;->AW8(I)V
+
+    .line 6
+    .line 7
+    .line 8
+    iget-object v1, v2, LX/604;->A0N:LX/622;
+
+    .line 9
+    .line 10
+    iget-object v0, p0, LX/60S;->A02:LX/607;
+
+    .line 11
+    .line 12
+    invoke-virtual {v1, v0}, LX/622;->A04(LX/62t;)V
+
+    .line 13
+    .line 14
+    .line 15
+    iget-object v1, v2, LX/604;->A0J:Landroid/os/Handler;
+
+    .line 16
+    .line 17
+    new-instance v0, LX/63d;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, p0, p1}, LX/63d;-><init>(LX/60S;Ljava/lang/Throwable;)V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    const/4 v0, 0x0
+
+    .line 26
+    iput-boolean v0, v2, LX/604;->A0Y:Z
+
+    .line 27
+    .line 28
     return-void
 .end method

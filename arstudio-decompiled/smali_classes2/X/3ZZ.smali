@@ -1,17 +1,11 @@
-.class public final LX/3ZZ;
+.class public interface abstract LX/3ZZ;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract AK5(Landroid/graphics/RectF;)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract ALq(Landroid/graphics/Matrix;)V
 .end method

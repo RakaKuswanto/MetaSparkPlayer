@@ -28,11 +28,11 @@
     const/4 v1, 0x1
 
     .line 1
-    new-instance v0, LX/04O;
+    new-instance v0, LX/0Wv;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/04O;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Wv;-><init>(I)V
 
     .line 4
     .line 5
@@ -51,7 +51,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p2, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -97,7 +97,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

@@ -1,28 +1,114 @@
 .class public final LX/2Xh;
-.super Ljava/lang/Throwable;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0LF;
 
-# instance fields
-.field public mIpcException:LX/2Xg;
+
+# static fields
+.field public static A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
 
 
 # direct methods
-.method public constructor <init>(LX/2Xg;)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    new-instance v0, LX/2Xh;
 
     .line 1
-    invoke-direct {p0, v0}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
     .line 2
+    invoke-direct {v0}, LX/2Xh;-><init>()V
+
     .line 3
     .line 4
-    iput-object p1, p0, LX/2Xh;->mIpcException:LX/2Xg;
+    .line 5
+    invoke-static {v0}, LX/0Kr;->A00(LX/0LF;)V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AcL()V
+    .locals 2
+
+    .line 0
+    sget-object v0, LX/2Xh;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    const-wide/16 v0, 0x4
 
     .line 5
     .line 6
+    invoke-static {v0, v1}, Lcom/facebook/systrace/Systrace;->A0C(J)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    sget-object v0, LX/2Xh;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+    .line 13
+    .line 14
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-interface {v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->updateListenerMarkers()V
+
+    .line 18
+    .line 19
+    .line 20
+    :cond_0
+    return-void
+.end method
+
+.method public final AcM()V
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/2Xh;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-interface {v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->updateListenerMarkers()V
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
     return-void
 .end method

@@ -12,12 +12,12 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/1Wd;->A00()V
+    invoke-static {}, LX/3hX;->A00()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yj;->A0g()Ljava/util/concurrent/ConcurrentLinkedQueue;
+    invoke-static {}, LX/0X7;->A0k()Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     .line 4
     .line 5

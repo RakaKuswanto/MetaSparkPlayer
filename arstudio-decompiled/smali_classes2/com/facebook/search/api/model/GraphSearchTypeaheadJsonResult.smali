@@ -322,7 +322,7 @@
 
     .line 7
     .line 8
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+    invoke-static {}, LX/0X6;->A0b()Lcom/google/common/collect/ImmutableList;
 
     .line 9
     .line 10
@@ -330,185 +330,180 @@
     move-result-object v0
 
     .line 12
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    iput-object v0, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->fragments:Ljava/util/List;
 
     .line 13
     .line 14
-    .line 15
-    iput-object v0, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->fragments:Ljava/util/List;
-
-    .line 16
-    .line 17
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->semantic:Ljava/lang/String;
 
-    .line 18
-    .line 19
+    .line 15
+    .line 16
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->grammarType:Ljava/lang/String;
 
-    .line 20
-    .line 21
+    .line 17
+    .line 18
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->name:Ljava/lang/String;
 
-    .line 22
-    .line 23
+    .line 19
+    .line 20
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->category:Ljava/lang/String;
 
-    .line 24
-    .line 25
+    .line 21
+    .line 22
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->categoryName:Ljava/lang/String;
 
-    .line 26
-    .line 27
+    .line 23
+    .line 24
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->subtext:Ljava/lang/String;
 
-    .line 28
-    .line 29
+    .line 25
+    .line 26
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->boldedSubtext:Ljava/lang/String;
 
-    .line 30
-    .line 31
+    .line 27
+    .line 28
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->keywordType:Ljava/lang/String;
 
-    .line 32
-    .line 33
+    .line 29
+    .line 30
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->keywordSource:Ljava/lang/String;
 
-    .line 34
-    .line 35
+    .line 31
+    .line 32
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->photoUri:Ljava/lang/String;
 
-    .line 36
-    .line 37
+    .line 33
+    .line 34
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->matchedPos:Ljava/lang/String;
 
-    .line 38
-    .line 39
+    .line 35
+    .line 36
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->matchedLength:Ljava/lang/String;
 
-    .line 40
-    .line 41
+    .line 37
+    .line 38
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->friendshipStatus:Ljava/lang/String;
 
-    .line 42
-    .line 43
+    .line 39
+    .line 40
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->isVerified:Ljava/lang/String;
 
-    .line 44
-    .line 45
+    .line 41
+    .line 42
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->verificationStatus:Ljava/lang/String;
 
-    .line 46
-    .line 47
+    .line 43
+    .line 44
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->canLike:Ljava/lang/String;
 
-    .line 48
-    .line 49
+    .line 45
+    .line 46
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->path:Ljava/lang/String;
 
-    .line 50
-    .line 51
+    .line 47
+    .line 48
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->fallbackPath:Ljava/lang/String;
 
-    .line 52
-    .line 53
+    .line 49
+    .line 50
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->isScoped:Ljava/lang/String;
 
-    .line 54
-    .line 55
+    .line 51
+    .line 52
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->uid:Ljava/lang/String;
 
-    .line 56
-    .line 57
+    .line 53
+    .line 54
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->creationTime:Ljava/lang/String;
 
-    .line 58
-    .line 59
+    .line 55
+    .line 56
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->allSharedStoriesCount:Ljava/lang/String;
 
-    .line 60
-    .line 61
+    .line 57
+    .line 58
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->text:Ljava/lang/String;
 
-    .line 62
-    .line 63
+    .line 59
+    .line 60
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->source:Ljava/lang/String;
 
-    .line 64
-    .line 65
+    .line 61
+    .line 62
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->externalUrl:Ljava/lang/String;
 
-    .line 66
-    .line 67
+    .line 63
+    .line 64
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->link:Ljava/lang/String;
+
+    .line 65
+    .line 66
+    const/4 v0, 0x0
+
+    .line 67
+    iput-boolean v0, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->isLive:Z
 
     .line 68
     .line 69
-    const/4 v0, 0x0
-
-    .line 70
-    iput-boolean v0, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->isLive:Z
-
-    .line 71
-    .line 72
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->nativeAndroidUrl:Ljava/lang/String;
 
-    .line 73
-    .line 74
+    .line 70
+    .line 71
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->entityData:Lcom/facebook/search/api/model/GraphSearchTypeaheadEntityDataJson;
 
-    .line 75
-    .line 76
+    .line 72
+    .line 73
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->logInfo:Ljava/util/Map;
 
-    .line 77
-    .line 78
+    .line 74
+    .line 75
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->itemLoggingId:Ljava/lang/String;
 
-    .line 79
-    .line 80
+    .line 76
+    .line 77
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->itemLoggingInfo:Ljava/lang/String;
 
-    .line 81
-    .line 82
+    .line 78
+    .line 79
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->entityId:Ljava/lang/String;
 
-    .line 83
-    .line 84
+    .line 80
+    .line 81
     iput-boolean v0, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->isConnected:Z
 
-    .line 85
-    .line 86
+    .line 82
+    .line 83
     iput-boolean v0, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->isBadged:Z
 
-    .line 87
-    .line 88
+    .line 84
+    .line 85
     iput-boolean v0, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->isProminent:Z
 
-    .line 89
-    .line 90
+    .line 86
+    .line 87
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->accountClaimStatus:Ljava/lang/String;
 
-    .line 91
-    .line 92
+    .line 88
+    .line 89
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->workForeignEntityType:Ljava/lang/String;
 
-    .line 93
-    .line 94
+    .line 90
+    .line 91
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->suffixToMatch:Ljava/lang/String;
 
-    .line 95
-    .line 96
+    .line 92
+    .line 93
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->structuredInfo:Lcom/facebook/search/sts/common/GraphSearchKeywordStructuredInfo;
 
-    .line 97
-    .line 98
+    .line 94
+    .line 95
     iput-object v1, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->keys:Lcom/facebook/search/serverdriven/dedup/SearchTypeaheadSuggestionKeys;
 
-    .line 99
-    .line 100
+    .line 96
+    .line 97
     iput-boolean v0, p0, Lcom/facebook/search/api/model/GraphSearchTypeaheadJsonResult;->isMultiCompanyGroup:Z
 
-    .line 101
-    .line 102
+    .line 98
+    .line 99
     return-void
 .end method

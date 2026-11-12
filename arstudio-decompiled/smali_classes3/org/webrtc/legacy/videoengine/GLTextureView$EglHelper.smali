@@ -132,7 +132,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 3
     .line 4
@@ -140,7 +140,7 @@
     move-result-object p0
 
     .line 6
-    invoke-static {p1, p0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 7
     .line 8
@@ -172,9 +172,14 @@
     .line 268435463
     .line 268435464
     .line 268435465
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 268435466
+    .line 268435467
+    .line 268435468
+    move-result-object v0
+
+    .line 268435469
     throw v0
 .end method
 
@@ -186,7 +191,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/00I;->A06(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {p0, v0}, LX/004;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 3
     .line 4
@@ -463,7 +468,7 @@
 
     .line 68
     .line 69
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 70
     .line 71
@@ -479,7 +484,7 @@
 
     .line 75
     .line 76
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 77
     .line 78
@@ -495,7 +500,7 @@
 
     .line 82
     .line 83
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 84
     .line 85
@@ -645,7 +650,7 @@
 
     .line 19
     .line 20
-    invoke-static {}, LX/4BF;->A1R()[I
+    invoke-static {}, LX/434;->A1a()[I
 
     .line 21
     .line 22
@@ -714,106 +719,114 @@
     .line 52
     .line 53
     .line 54
-    throw v4
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    throw v0
+
+    .line 59
     :cond_1
     iget-object v2, v5, Lorg/webrtc/legacy/videoengine/GLTextureView;->mEGLConfigChooser:Lorg/webrtc/legacy/videoengine/GLTextureView$EGLConfigChooser;
 
-    .line 56
-    .line 57
-    iget-object v1, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEgl:Ljavax/microedition/khronos/egl/EGL10;
-
-    .line 58
-    .line 59
-    iget-object v0, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglDisplay:Ljavax/microedition/khronos/egl/EGLDisplay;
-
     .line 60
     .line 61
-    invoke-interface {v2, v1, v0}, Lorg/webrtc/legacy/videoengine/GLTextureView$EGLConfigChooser;->chooseConfig(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;)Ljavax/microedition/khronos/egl/EGLConfig;
+    iget-object v1, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEgl:Ljavax/microedition/khronos/egl/EGL10;
 
     .line 62
     .line 63
-    .line 64
-    move-result-object v3
+    iget-object v0, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglDisplay:Ljavax/microedition/khronos/egl/EGLDisplay;
 
+    .line 64
     .line 65
-    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglConfig:Ljavax/microedition/khronos/egl/EGLConfig;
+    invoke-interface {v2, v1, v0}, Lorg/webrtc/legacy/videoengine/GLTextureView$EGLConfigChooser;->chooseConfig(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;)Ljavax/microedition/khronos/egl/EGLConfig;
 
     .line 66
     .line 67
-    iget-object v2, v5, Lorg/webrtc/legacy/videoengine/GLTextureView;->mEGLContextFactory:Lorg/webrtc/legacy/videoengine/GLTextureView$EGLContextFactory;
-
     .line 68
+    move-result-object v3
+
     .line 69
-    iget-object v1, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEgl:Ljavax/microedition/khronos/egl/EGL10;
+    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglConfig:Ljavax/microedition/khronos/egl/EGLConfig;
 
     .line 70
     .line 71
-    iget-object v0, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglDisplay:Ljavax/microedition/khronos/egl/EGLDisplay;
+    iget-object v2, v5, Lorg/webrtc/legacy/videoengine/GLTextureView;->mEGLContextFactory:Lorg/webrtc/legacy/videoengine/GLTextureView$EGLContextFactory;
 
     .line 72
     .line 73
-    invoke-interface {v2, v1, v0, v3}, Lorg/webrtc/legacy/videoengine/GLTextureView$EGLContextFactory;->createContext(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLContext;
+    iget-object v1, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEgl:Ljavax/microedition/khronos/egl/EGL10;
 
     .line 74
     .line 75
-    .line 76
-    move-result-object v1
+    iget-object v0, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglDisplay:Ljavax/microedition/khronos/egl/EGLDisplay;
 
+    .line 76
     .line 77
-    iput-object v1, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglContext:Ljavax/microedition/khronos/egl/EGLContext;
+    invoke-interface {v2, v1, v0, v3}, Lorg/webrtc/legacy/videoengine/GLTextureView$EGLContextFactory;->createContext(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLContext;
 
     .line 78
     .line 79
-    if-eqz v1, :cond_0
-
     .line 80
+    move-result-object v1
+
     .line 81
-    sget-object v0, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_CONTEXT:Ljavax/microedition/khronos/egl/EGLContext;
+    iput-object v1, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglContext:Ljavax/microedition/khronos/egl/EGLContext;
 
     .line 82
     .line 83
-    if-eq v1, v0, :cond_0
+    if-eqz v1, :cond_0
 
     .line 84
     .line 85
-    iput-object v4, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
+    sget-object v0, Ljavax/microedition/khronos/egl/EGL10;->EGL_NO_CONTEXT:Ljavax/microedition/khronos/egl/EGLContext;
 
     .line 86
     .line 87
-    return-void
+    if-eq v1, v0, :cond_0
 
     .line 88
+    .line 89
+    iput-object v4, p0, Lorg/webrtc/legacy/videoengine/GLTextureView$EglHelper;->mEglSurface:Ljavax/microedition/khronos/egl/EGLSurface;
+
+    .line 90
+    .line 91
+    return-void
+
+    .line 92
     :cond_2
     const-string v0, "eglInitialize failed"
 
-    .line 89
-    .line 90
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 91
-    .line 92
     .line 93
-    move-result-object v0
-
     .line 94
-    throw v0
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 95
+    .line 96
+    .line 97
+    move-result-object v0
+
+    .line 98
+    throw v0
+
+    .line 99
     :cond_3
     const-string v0, "eglGetDisplay failed"
 
-    .line 96
-    .line 97
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 98
-    .line 99
     .line 100
+    .line 101
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 102
+    .line 103
+    .line 104
     move-result-object v0
 
-    .line 101
+    .line 105
     throw v0
 .end method
 

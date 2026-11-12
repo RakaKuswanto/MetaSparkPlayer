@@ -57,7 +57,7 @@
     .line 16
     .line 17
     .line 18
-    invoke-static {p0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 19
     .line 20
@@ -181,100 +181,40 @@
     const/4 v0, 0x0
 
     .line 268435457
-    invoke-static {p0, p1, p2, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {}, LX/0Mr;->A00()V
 
     .line 268435458
     .line 268435459
     .line 268435460
-    move-result-object v0
+    invoke-static {p0, p1, p2, v0}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result-object v0
+
+    .line 268435464
     return-object v0
 .end method
 
 .method public static hookDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-    .locals 3
+    .locals 0
 
     .line 0
-    invoke-static {}, LX/0Qa;->A00()V
+    invoke-static {}, LX/0Mr;->A00()V
 
     .line 1
     .line 2
     .line 3
-    sget-boolean v0, LX/3yJ;->A02:Z
+    invoke-static {p0, p1, p2, p3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 4
     .line 5
-    move-object v1, p0
-
     .line 6
-    move v2, p1
+    move-result-object p0
 
     .line 7
-    move p0, p2
-
-    .line 8
-    move-object p1, p3
-
-    .line 9
-    if-eqz v0, :cond_0
-
-    .line 10
-    .line 11
-    invoke-static {v1, v2, p2}, LX/3yJ;->A00([BII)Z
-
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
-
-    .line 15
-    if-eqz v0, :cond_0
-
-    .line 16
-    .line 17
-    invoke-static {p3}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->getScaleFromOptions(Landroid/graphics/BitmapFactory$Options;)F
-
-    .line 18
-    .line 19
-    .line 20
-    move-result p2
-
-    .line 21
-    invoke-static {p3}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->getInTempStorageFromOptions(Landroid/graphics/BitmapFactory$Options;)[B
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object p3
-
-    .line 25
-    invoke-static/range {v1 .. v6}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->nativeDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    invoke-static {v0, p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->setWebpBitmapOptions(Landroid/graphics/Bitmap;Landroid/graphics/BitmapFactory$Options;)V
-
-    .line 30
-    .line 31
-    .line 32
-    return-object v0
-
-    .line 33
-    :cond_0
-    invoke-static {v1, v2, p2, p3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v0
-
-    .line 37
-    return-object v0
+    return-object p0
 .end method
 
 .method public static hookDecodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
@@ -303,11 +243,11 @@
 
     .line 268435457
     :try_start_0
-    new-instance v1, Ljava/io/FileInputStream;
+    new-instance v0, Ljava/io/FileInputStream;
 
     .line 268435458
     .line 268435459
-    invoke-direct {v1, p0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -315,7 +255,7 @@
     .line 268435461
     .line 268435462
     :try_start_1
-    invoke-static {v1, v2, p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {v0, v2, p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 268435463
     .line 268435464
@@ -326,7 +266,7 @@
 
     .line 268435466
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     .line 268435467
     .line 268435468
@@ -337,24 +277,36 @@
 
     .line 268435470
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 268435471
     :try_start_3
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     .line 268435472
     .line 268435473
     .line 268435474
+    goto :goto_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 268435475
     :catchall_1
+    move-exception v0
+
+    .line 268435476
     :try_start_4
-    throw v0
+    invoke-static {v1, v0}, LX/6dW;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 268435477
+    .line 268435478
+    .line 268435479
+    :goto_0
+    throw v1
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 268435475
+    .line 268435480
     :catch_0
     return-object v2
 .end method
@@ -381,7 +333,7 @@
     .locals 7
 
     .line 268435456
-    invoke-static {}, LX/0Qa;->A00()V
+    invoke-static {}, LX/0Mr;->A00()V
 
     .line 268435457
     .line 268435458
@@ -409,7 +361,7 @@
 
     .line 268435469
     .line 268435470
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     .line 268435471
     .line 268435472
@@ -498,63 +450,71 @@
     .line 268435510
     .line 268435511
     invoke-virtual {v5}, Ljava/io/InputStream;->reset()V
-
-    .line 268435512
-    .line 268435513
-    .line 268435514
-    goto :goto_1
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 268435515
+    .line 268435512
+    .line 268435513
+    .line 268435514
     :catch_0
-    const/4 v3, 0x0
+    :try_start_2
+    const/4 v0, 0x1
+
+    .line 268435515
+    invoke-static {p0, v1, v2, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->nativeSeek(Ljava/io/FileDescriptor;JZ)J
 
     .line 268435516
-    :goto_1
-    :try_start_2
-    sget-boolean v0, LX/3yJ;->A02:Z
-
     .line 268435517
     .line 268435518
-    if-eqz v0, :cond_2
+    invoke-static {p0, p1, p2}, Landroid/graphics/BitmapFactory;->decodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 268435519
     .line 268435520
-    if-eqz v3, :cond_2
-
     .line 268435521
+    move-result-object v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
     .line 268435522
-    invoke-static {v3, v6, v4}, LX/3yJ;->A00([BII)Z
+    :try_start_3
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
 
     .line 268435523
     .line 268435524
     .line 268435525
-    move-result v0
+    return-object v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     .line 268435526
-    if-eqz v0, :cond_2
+    :catchall_0
+    move-exception v0
 
     .line 268435527
-    .line 268435528
-    invoke-static {p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->getScaleFromOptions(Landroid/graphics/BitmapFactory$Options;)F
+    :try_start_4
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 268435528
     .line 268435529
     .line 268435530
+    :catchall_1
+    throw v0
+
     .line 268435531
-    move-result v1
+    :cond_2
+    new-instance v0, Ljava/io/FileInputStream;
 
     .line 268435532
-    invoke-static {p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->getInTempStorageFromOptions(Landroid/graphics/BitmapFactory$Options;)[B
-
     .line 268435533
+    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
+
     .line 268435534
     .line 268435535
-    move-result-object v0
-
     .line 268435536
-    invoke-static {v5, p2, v1, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->nativeDecodeStream(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
+    invoke-static {v0, p1, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 268435537
     .line 268435538
@@ -567,84 +527,6 @@
     .line 268435541
     .line 268435542
     .line 268435543
-    invoke-static {v0, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->setWebpBitmapOptions(Landroid/graphics/Bitmap;Landroid/graphics/BitmapFactory$Options;)V
-
-    .line 268435544
-    .line 268435545
-    .line 268435546
-    goto :goto_2
-
-    .line 268435547
-    :cond_2
-    const/4 v0, 0x1
-
-    .line 268435548
-    invoke-static {p0, v1, v2, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->nativeSeek(Ljava/io/FileDescriptor;JZ)J
-
-    .line 268435549
-    .line 268435550
-    .line 268435551
-    invoke-static {p0, p1, p2}, Landroid/graphics/BitmapFactory;->decodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    .line 268435552
-    .line 268435553
-    .line 268435554
-    move-result-object v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 268435555
-    :goto_2
-    :try_start_3
-    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
-
-    .line 268435556
-    .line 268435557
-    .line 268435558
-    return-object v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    .line 268435559
-    :catchall_0
-    move-exception v0
-
-    .line 268435560
-    :try_start_4
-    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    .line 268435561
-    .line 268435562
-    .line 268435563
-    :catchall_1
-    throw v0
-
-    .line 268435564
-    :cond_3
-    new-instance v0, Ljava/io/FileInputStream;
-
-    .line 268435565
-    .line 268435566
-    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
-
-    .line 268435567
-    .line 268435568
-    .line 268435569
-    invoke-static {v0, p1, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    .line 268435570
-    .line 268435571
-    .line 268435572
-    move-result-object v0
-
-    .line 268435573
-    invoke-static {p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->setPaddingDefaultValues(Landroid/graphics/Rect;)V
-
-    .line 268435574
-    .line 268435575
-    .line 268435576
     :catchall_2
     return-object v0
 .end method
@@ -671,11 +553,11 @@
     .locals 3
 
     .line 268435456
-    new-instance v0, Landroid/util/TypedValue;
+    new-instance v1, Landroid/util/TypedValue;
 
     .line 268435457
     .line 268435458
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+    invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
 
     .line 268435459
     .line 268435460
@@ -684,18 +566,18 @@
 
     .line 268435462
     :try_start_0
-    invoke-virtual {p0, p1, v0}, Landroid/content/res/Resources;->openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
+    invoke-virtual {p0, p1, v1}, Landroid/content/res/Resources;->openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
 
     .line 268435463
     .line 268435464
     .line 268435465
-    move-result-object v1
+    move-result-object v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 268435466
     :try_start_1
-    invoke-static {p0, v0, v1, v2, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {p0, v1, v0, v2, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 268435467
     .line 268435468
@@ -703,81 +585,93 @@
     move-result-object v2
 
     .line 268435470
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 268435471
     .line 268435472
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     .line 268435473
     .line 268435474
     .line 268435475
-    goto :goto_0
+    goto :goto_1
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 268435476
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 268435477
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 268435478
     .line 268435479
     :try_start_3
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     .line 268435480
     .line 268435481
     .line 268435482
+    goto :goto_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 268435483
     :catchall_1
-    :cond_0
+    move-exception v0
+
+    .line 268435484
     :try_start_4
-    throw v0
+    invoke-static {v1, v0}, LX/6dW;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 268435485
+    .line 268435486
+    .line 268435487
+    :cond_0
+    :goto_0
+    throw v1
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 268435483
+    .line 268435488
     :catch_0
     :cond_1
-    :goto_0
+    :goto_1
     if-nez v2, :cond_2
 
-    .line 268435484
-    .line 268435485
+    .line 268435489
+    .line 268435490
     if-eqz p2, :cond_2
 
-    .line 268435486
-    .line 268435487
+    .line 268435491
+    .line 268435492
     iget-object v0, p2, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 268435488
-    .line 268435489
+    .line 268435493
+    .line 268435494
     if-eqz v0, :cond_2
 
-    .line 268435490
-    .line 268435491
-    const-string v0, "Problem decoding into existing bitmap"
-
-    .line 268435492
-    .line 268435493
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 268435494
     .line 268435495
     .line 268435496
-    move-result-object v0
+    const-string v0, "Problem decoding into existing bitmap"
 
     .line 268435497
+    .line 268435498
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 268435499
+    .line 268435500
+    .line 268435501
+    move-result-object v0
+
+    .line 268435502
     throw v0
 
-    .line 268435498
+    .line 268435503
     :cond_2
     return-object v2
 .end method
@@ -902,10 +796,10 @@
 .end method
 
 .method public static hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-    .locals 4
+    .locals 2
 
     .line 268435456
-    invoke-static {}, LX/0Qa;->A00()V
+    invoke-static {}, LX/0Mr;->A00()V
 
     .line 268435457
     .line 268435458
@@ -939,141 +833,14 @@
 
     .line 268435473
     :cond_0
-    const/16 v3, 0x14
+    invoke-static {p0, p1, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 268435474
     .line 268435475
-    invoke-virtual {p0, v3}, Ljava/io/InputStream;->mark(I)V
-
     .line 268435476
+    move-result-object v0
+
     .line 268435477
-    .line 268435478
-    if-eqz p2, :cond_1
-
-    .line 268435479
-    .line 268435480
-    iget-object v2, p2, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
-
-    .line 268435481
-    .line 268435482
-    if-eqz v2, :cond_1
-
-    .line 268435483
-    .line 268435484
-    array-length v0, v2
-
-    .line 268435485
-    if-lt v0, v3, :cond_1
-
-    .line 268435486
-    .line 268435487
-    :goto_0
-    const/4 v1, 0x0
-
-    .line 268435488
-    goto :goto_1
-
-    .line 268435489
-    :cond_1
-    new-array v2, v3, [B
-
-    .line 268435490
-    .line 268435491
-    goto :goto_0
-
-    .line 268435492
-    :goto_1
-    :try_start_0
-    invoke-virtual {p0, v2, v1, v3}, Ljava/io/InputStream;->read([BII)I
-
-    .line 268435493
-    .line 268435494
-    .line 268435495
-    invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
-
-    .line 268435496
-    .line 268435497
-    .line 268435498
-    goto :goto_2
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 268435499
-    :catch_0
-    const/4 v2, 0x0
-
-    .line 268435500
-    :goto_2
-    sget-boolean v0, LX/3yJ;->A02:Z
-
-    .line 268435501
-    .line 268435502
-    if-eqz v0, :cond_2
-
-    .line 268435503
-    .line 268435504
-    if-eqz v2, :cond_2
-
-    .line 268435505
-    .line 268435506
-    invoke-static {v2, v1, v3}, LX/3yJ;->A00([BII)Z
-
-    .line 268435507
-    .line 268435508
-    .line 268435509
-    move-result v0
-
-    .line 268435510
-    if-eqz v0, :cond_2
-
-    .line 268435511
-    .line 268435512
-    invoke-static {p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->getScaleFromOptions(Landroid/graphics/BitmapFactory$Options;)F
-
-    .line 268435513
-    .line 268435514
-    .line 268435515
-    move-result v1
-
-    .line 268435516
-    invoke-static {p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->getInTempStorageFromOptions(Landroid/graphics/BitmapFactory$Options;)[B
-
-    .line 268435517
-    .line 268435518
-    .line 268435519
-    move-result-object v0
-
-    .line 268435520
-    invoke-static {p0, p2, v1, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->nativeDecodeStream(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
-
-    .line 268435521
-    .line 268435522
-    .line 268435523
-    move-result-object v0
-
-    .line 268435524
-    invoke-static {v0, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->setWebpBitmapOptions(Landroid/graphics/Bitmap;Landroid/graphics/BitmapFactory$Options;)V
-
-    .line 268435525
-    .line 268435526
-    .line 268435527
-    invoke-static {p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->setPaddingDefaultValues(Landroid/graphics/Rect;)V
-
-    .line 268435528
-    .line 268435529
-    .line 268435530
-    return-object v0
-
-    .line 268435531
-    :cond_2
-    invoke-static {p0, p1, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    .line 268435532
-    .line 268435533
-    .line 268435534
-    move-result-object v0
-
-    .line 268435535
     return-object v0
 .end method
 
@@ -1337,104 +1104,6 @@
     .line 11
     :cond_0
     return-void
-.end method
-
-.method public static setWebpBitmapOptions(Landroid/graphics/Bitmap;Landroid/graphics/BitmapFactory$Options;)V
-    .locals 3
-
-    .line 0
-    if-eqz p0, :cond_3
-
-    .line 1
-    .line 2
-    if-eqz p1, :cond_1
-
-    .line 3
-    .line 4
-    iget v2, p1, Landroid/graphics/BitmapFactory$Options;->inDensity:I
-
-    .line 5
-    .line 6
-    if-eqz v2, :cond_2
-
-    .line 7
-    .line 8
-    invoke-virtual {p0, v2}, Landroid/graphics/Bitmap;->setDensity(I)V
-
-    .line 9
-    .line 10
-    .line 11
-    iget v1, p1, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
-
-    .line 12
-    .line 13
-    if-eqz v1, :cond_0
-
-    .line 14
-    .line 15
-    if-eq v2, v1, :cond_0
-
-    .line 16
-    .line 17
-    iget v0, p1, Landroid/graphics/BitmapFactory$Options;->inScreenDensity:I
-
-    .line 18
-    .line 19
-    if-eq v2, v0, :cond_0
-
-    .line 20
-    .line 21
-    iget-boolean v0, p1, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
-
-    .line 22
-    .line 23
-    if-eqz v0, :cond_0
-
-    .line 24
-    .line 25
-    :goto_0
-    invoke-virtual {p0, v1}, Landroid/graphics/Bitmap;->setDensity(I)V
-
-    .line 26
-    .line 27
-    .line 28
-    :cond_0
-    :goto_1
-    const-string/jumbo v0, "image/webp"
-
-    .line 29
-    .line 30
-    .line 31
-    iput-object v0, p1, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
-
-    .line 32
-    .line 33
-    :cond_1
-    return-void
-
-    .line 34
-    :cond_2
-    iget-object v0, p1, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
-
-    .line 35
-    .line 36
-    if-eqz v0, :cond_0
-
-    .line 37
-    .line 38
-    const/16 v1, 0xa0
-
-    .line 39
-    .line 40
-    goto :goto_0
-
-    .line 41
-    :cond_3
-    if-eqz p1, :cond_1
-
-    .line 42
-    .line 43
-    goto :goto_1
 .end method
 
 .method public static shouldPremultiply(Landroid/graphics/BitmapFactory$Options;)Z

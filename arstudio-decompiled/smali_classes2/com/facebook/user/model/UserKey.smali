@@ -31,7 +31,7 @@
     .end annotation
 .end field
 
-.field public final type:LX/17J;
+.field public final type:LX/1aT;
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
         value = "type"
     .end annotation
@@ -43,11 +43,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x33
+    const/16 v0, 0x23
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/17J;Ljava/lang/String;)V
+.method public constructor <init>(LX/1aT;Ljava/lang/String;)V
     .locals 0
 
     .line 0
@@ -71,7 +71,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/user/model/UserKey;->type:LX/17J;
+    iput-object p1, p0, Lcom/facebook/user/model/UserKey;->type:LX/1aT;
 
     .line 4
     .line 5
@@ -154,11 +154,11 @@
 
     .line 27
     .line 28
-    iget-object v1, p0, Lcom/facebook/user/model/UserKey;->type:LX/17J;
+    iget-object v1, p0, Lcom/facebook/user/model/UserKey;->type:LX/1aT;
 
     .line 29
     .line 30
-    iget-object v0, p1, Lcom/facebook/user/model/UserKey;->type:LX/17J;
+    iget-object v0, p1, Lcom/facebook/user/model/UserKey;->type:LX/1aT;
 
     .line 31
     .line 32
@@ -185,7 +185,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 3
     .line 4
@@ -197,11 +197,11 @@
 
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/user/model/UserKey;->type:LX/17J;
+    iget-object v0, p0, Lcom/facebook/user/model/UserKey;->type:LX/1aT;
 
     .line 9
     .line 10
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
 
     .line 11
     .line 12
@@ -232,7 +232,7 @@
 
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/user/model/UserKey;->type:LX/17J;
+    iget-object v0, p0, Lcom/facebook/user/model/UserKey;->type:LX/1aT;
 
     .line 9
     .line 10
@@ -248,7 +248,7 @@
 
     .line 15
     .line 16
-    invoke-static {v1, v0, v2}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 17
     .line 18
@@ -261,6 +261,14 @@
     .line 21
     .line 22
     :cond_0
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
     return-object v0
 .end method
 
@@ -268,11 +276,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/user/model/UserKey;->type:LX/17J;
+    iget-object v0, p0, Lcom/facebook/user/model/UserKey;->type:LX/1aT;
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 3
     .line 4

@@ -37,7 +37,7 @@
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceListenerWrapper;->mListener:LX/4su;
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/instruction/InstructionServiceListenerWrapper;->mListener:LX/4nG;
 
     .line 3
     .line 4
@@ -45,7 +45,7 @@
 
     .line 5
     .line 6
-    invoke-interface {v0}, LX/4su;->AOy()V
+    invoke-interface {v0}, LX/4nG;->ANZ()V
 
     .line 7
     .line 8

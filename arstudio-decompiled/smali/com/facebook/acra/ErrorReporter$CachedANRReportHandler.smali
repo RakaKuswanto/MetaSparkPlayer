@@ -23,7 +23,7 @@
     .locals 17
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
@@ -122,7 +122,7 @@
 
     .line 47
     .line 48
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 49
     .line 50
@@ -502,8 +502,8 @@
     invoke-direct {v10, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_2
 
     .line 16
     .line 17
@@ -812,7 +812,7 @@
 
     .line 165
     .line 166
-    invoke-static {v4, v3, v2, v12}, LX/001;->A0y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v4, v3, v2, v12}, LX/001;->A10(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 167
     .line 168
@@ -877,79 +877,91 @@
     return v19
     :try_end_3
     .catch Ljava/text/ParseException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_2
 
     .line 196
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 197
     :try_start_4
     invoke-virtual {v10}, Ljava/io/Reader;->close()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 198
     .line 199
     .line 200
-    :catchall_1
-    :try_start_5
-    throw v0
-    :try_end_5
-    .catch Ljava/text/ParseException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/lang/NumberFormatException; {:try_start_5 .. :try_end_5} :catch_0
+    goto :goto_2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 201
-    :catch_0
-    move-exception v2
+    :catchall_1
+    move-exception v0
 
     .line 202
-    sget-object v1, Lcom/facebook/acra/ACRA;->LOG_TAG:Ljava/lang/String;
+    :try_start_5
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 203
     .line 204
-    const-string v0, "Failed to extract pid from ANR traces."
-
     .line 205
+    :goto_2
+    throw v1
+    :try_end_5
+    .catch Ljava/text/ParseException; {:try_start_5 .. :try_end_5} :catch_1
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_5 .. :try_end_5} :catch_2
+
     .line 206
-    goto :goto_2
+    :catch_0
+    move-exception v2
 
     .line 207
+    sget-object v1, Lcom/facebook/acra/ACRA;->LOG_TAG:Ljava/lang/String;
+
+    .line 208
+    .line 209
+    const-string v0, "Failed to read ANR traces."
+
+    .line 210
+    .line 211
+    goto :goto_3
+
+    .line 212
     :catch_1
     move-exception v2
 
-    .line 208
+    .line 213
     sget-object v1, Lcom/facebook/acra/ACRA;->LOG_TAG:Ljava/lang/String;
 
-    .line 209
-    .line 210
+    .line 214
+    .line 215
     const-string v0, "Failed to parse ANR timestamp."
 
-    .line 211
-    .line 212
-    goto :goto_2
+    .line 216
+    .line 217
+    goto :goto_3
 
-    .line 213
+    .line 218
     :catch_2
     move-exception v2
 
-    .line 214
+    .line 219
     sget-object v1, Lcom/facebook/acra/ACRA;->LOG_TAG:Ljava/lang/String;
 
-    .line 215
-    .line 216
-    const-string v0, "Failed to read ANR traces."
-
-    .line 217
-    .line 218
-    :goto_2
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 219
     .line 220
     .line 221
+    const-string v0, "Failed to extract pid from ANR traces."
+
+    .line 222
+    .line 223
+    :goto_3
+    invoke-static {v1, v0, v2}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 224
+    .line 225
+    .line 226
     :cond_6
     return v19
 .end method

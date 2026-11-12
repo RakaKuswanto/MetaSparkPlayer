@@ -18,25 +18,25 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 6
 
     .line 0
-    const/4 v4, 0x0
-
-    .line 1
-    const/4 v2, 0x0
-
-    .line 2
     const/4 v1, 0x0
 
-    .line 3
+    .line 1
     const/4 v3, 0x0
+
+    .line 2
+    const/4 v4, 0x0
+
+    .line 3
+    const/4 v2, 0x0
 
     .line 4
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 5
     .line 6
@@ -44,7 +44,7 @@
     move-result-object v5
 
     .line 8
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 9
     .line 10
@@ -52,7 +52,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -74,14 +74,14 @@
     .line 22
     .line 23
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 24
     .line 25
     .line 26
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 27
     .line 28
@@ -89,7 +89,7 @@
     move-result-object v5
 
     .line 30
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 31
     .line 32
@@ -101,159 +101,165 @@
 
     .line 35
     :sswitch_0
-    const-string v0, "bottom"
+    const-string/jumbo v0, "right"
 
     .line 36
     .line 37
+    .line 38
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 38
     .line 39
     .line 40
-    move-result v0
-
     .line 41
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 42
-    .line 43
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    if-eqz v0, :cond_1
 
+    .line 43
     .line 44
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
     .line 45
     .line 46
+    .line 47
     move-result v4
 
-    .line 47
-    goto :goto_0
-
     .line 48
-    :sswitch_1
-    const-string/jumbo v0, "top"
+    goto :goto_0
 
     .line 49
-    .line 50
-    .line 51
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 52
-    .line 53
-    .line 54
-    move-result v0
-
-    .line 55
-    if-eqz v0, :cond_1
-
-    .line 56
-    .line 57
-    invoke-virtual {p1}, LX/27m;->A0g()F
-
-    .line 58
-    .line 59
-    .line 60
-    move-result v3
-
-    .line 61
-    goto :goto_0
-
-    .line 62
-    :sswitch_2
+    :sswitch_1
     const-string/jumbo v0, "left"
 
-    .line 63
-    .line 64
-    .line 65
+    .line 50
+    .line 51
+    .line 52
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 66
-    .line 67
-    .line 68
+    .line 53
+    .line 54
+    .line 55
     move-result v0
 
-    .line 69
+    .line 56
     if-eqz v0, :cond_1
 
-    .line 70
-    .line 71
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    .line 57
+    .line 58
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
-    .line 72
-    .line 73
-    .line 74
-    move-result v2
+    .line 59
+    .line 60
+    .line 61
+    move-result v3
 
-    .line 75
+    .line 62
     goto :goto_0
 
-    .line 76
-    :sswitch_3
-    const-string/jumbo v0, "right"
+    .line 63
+    :sswitch_2
+    const-string/jumbo v0, "top"
 
-    .line 77
-    .line 78
-    .line 79
+    .line 64
+    .line 65
+    .line 66
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 80
-    .line 81
-    .line 82
+    .line 67
+    .line 68
+    .line 69
     move-result v0
 
-    .line 83
+    .line 70
     if-eqz v0, :cond_1
 
-    .line 84
-    .line 85
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    .line 71
+    .line 72
+    invoke-virtual {p1}, LX/3oD;->A0g()F
 
+    .line 73
+    .line 74
+    .line 75
+    move-result v2
+
+    .line 76
+    goto :goto_0
+
+    .line 77
+    :sswitch_3
+    const-string/jumbo v0, "bottom"
+
+    .line 78
+    .line 79
+    .line 80
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 81
+    .line 82
+    .line 83
+    move-result v0
+
+    .line 84
+    if-eqz v0, :cond_1
+
+    .line 85
     .line 86
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
     .line 87
     .line 88
+    .line 89
     move-result v1
 
-    .line 89
+    .line 90
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 90
+    .line 91
     :goto_1
     new-instance v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
-    .line 91
     .line 92
-    invoke-direct {v0, v4, v2, v1, v3}, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;-><init>(FFFF)V
-
     .line 93
+    invoke-direct {v0, v1, v3, v4, v2}, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;-><init>(FFFF)V
+
     .line 94
     .line 95
+    .line 96
     return-object v0
 
-    .line 96
+    .line 97
     :catch_0
     move-exception v1
 
-    .line 97
+    .line 98
     const-class v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
-    .line 98
     .line 99
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 100
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 101
     .line 102
-    const/4 v0, 0x0
-
     .line 103
-    throw v0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 104
+    .line 105
+    .line 106
+    move-result-object v0
+
+    .line 107
+    throw v0
+
+    .line 108
     :sswitch_data_0
     .sparse-switch
-        -0x527265d5 -> :sswitch_0
-        0x1c155 -> :sswitch_1
-        0x32a007 -> :sswitch_2
-        0x677c21c -> :sswitch_3
+        -0x527265d5 -> :sswitch_3
+        0x1c155 -> :sswitch_2
+        0x32a007 -> :sswitch_1
+        0x677c21c -> :sswitch_0
     .end sparse-switch
 .end method

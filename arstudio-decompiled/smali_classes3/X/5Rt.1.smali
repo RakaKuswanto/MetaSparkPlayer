@@ -1,474 +1,359 @@
-.class public LX/5Rt;
-.super LX/5Ru;
+.class public final LX/5rT;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ThreadUtil$1"
 
 
 # instance fields
-.field public final A00:Ljava/lang/Character;
+.field public final synthetic A00:LX/5rX;
 
-.field public final A01:LX/5Rs;
+.field public final synthetic A01:Ljava/util/concurrent/FutureTask;
 
 
 # direct methods
-.method public constructor <init>(LX/5Rs;Ljava/lang/Character;)V
-    .locals 3
+.method public constructor <init>(LX/5rX;Ljava/util/concurrent/FutureTask;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5Ru;-><init>()V
+    iput-object p2, p0, LX/5rT;->A01:Ljava/util/concurrent/FutureTask;
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/5rT;->A00:LX/5rX;
+
     .line 3
-    iput-object p1, p0, LX/5Rt;->A01:LX/5Rs;
-
     .line 4
-    .line 5
-    if-eqz p2, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     .line 6
     .line 7
-    invoke-virtual {p2}, Ljava/lang/Character;->charValue()C
-
-    .line 8
-    .line 9
-    .line 10
-    move-result v2
-
-    .line 11
-    iget-object v1, p1, LX/5Rs;->A04:[B
-
-    .line 12
-    .line 13
-    array-length v0, v1
-
-    .line 14
-    if-ge v2, v0, :cond_0
-
-    .line 15
-    .line 16
-    aget-byte v2, v1, v2
-
-    .line 17
-    .line 18
-    const/4 v0, -0x1
-
-    .line 19
-    const/4 v1, 0x0
-
-    .line 20
-    if-ne v2, v0, :cond_1
-
-    .line 21
-    .line 22
-    :cond_0
-    const/4 v1, 0x1
-
-    .line 23
-    :cond_1
-    const-string v0, "Padding character %s was already in alphabet"
-
-    .line 24
-    .line 25
-    invoke-static {v1, v0, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
-
-    .line 26
-    .line 27
-    .line 28
-    iput-object p2, p0, LX/5Rt;->A00:Ljava/lang/Character;
-
-    .line 29
-    .line 30
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01(Ljava/lang/Appendable;[BII)V
-    .locals 10
+.method public final run()V
+    .locals 5
 
     .line 0
-    add-int v1, p3, p4
+    :try_start_0
+    iget-object v4, p0, LX/5rT;->A01:Ljava/util/concurrent/FutureTask;
 
     .line 1
     .line 2
-    array-length v0, p2
+    invoke-virtual {v4}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
 
     .line 3
-    invoke-static {p3, v1, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
-
     .line 4
     .line 5
+    move-result-object v3
+
     .line 6
-    iget-object v5, p0, LX/5Rt;->A01:LX/5Rs;
+    iget-object v2, p0, LX/5rT;->A00:LX/5rX;
 
     .line 7
     .line 8
-    iget v3, v5, LX/5Rs;->A02:I
+    if-eqz v2, :cond_1
 
     .line 9
     .line 10
-    const/4 v2, 0x0
+    instance-of v0, v2, LX/5rU;
 
     .line 11
-    invoke-static {p4, v3}, LX/0Yf;->A1S(II)Z
-
     .line 12
+    if-eqz v0, :cond_0
+
     .line 13
     .line 14
-    move-result v0
+    move-object v0, v2
 
     .line 15
-    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
+    check-cast v0, LX/5rU;
 
     .line 16
     .line 17
-    .line 18
-    const-wide/16 v8, 0x0
+    invoke-interface {v0, v3}, LX/5rU;->Abn(Ljava/lang/Object;)V
 
+    .line 18
     .line 19
     .line 20
-    const/4 v6, 0x0
+    :cond_0
+    new-instance v1, LX/5rW;
 
     .line 21
-    :goto_0
-    const/16 v4, 0x8
-
     .line 22
-    .line 23
-    if-ge v6, p4, :cond_0
+    invoke-direct {v1, v2, v3}, LX/5rW;-><init>(LX/5rX;Ljava/lang/Object;)V
 
+    .line 23
     .line 24
     .line 25
-    add-int v0, p3, v6
+    sget-object v0, LX/5rS;->A01:Landroid/os/Handler;
 
     .line 26
     .line 27
-    aget-byte v0, p2, v0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     .line 28
     .line 29
-    and-int/lit16 v0, v0, 0xff
-
     .line 30
-    .line 31
-    int-to-long v0, v0
+    :cond_1
+    const-class v1, LX/5rS;
 
+    .line 31
     .line 32
-    or-long/2addr v8, v0
+    monitor-enter v1
 
     .line 33
-    shl-long/2addr v8, v4
+    :try_start_1
+    sget-object v0, LX/5rS;->A02:Ljava/util/HashSet;
 
     .line 34
-    add-int/lit8 v6, v6, 0x1
-
     .line 35
+    invoke-virtual {v0, v4}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
     .line 36
-    goto :goto_0
-
     .line 37
-    :cond_0
-    add-int/lit8 v0, p4, 0x1
-
     .line 38
+    sget-object v0, LX/5rS;->A03:Ljava/util/HashSet;
+
     .line 39
-    mul-int/lit8 v7, v0, 0x8
-
     .line 40
-    .line 41
-    iget v6, v5, LX/5Rs;->A00:I
+    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
+    .line 41
     .line 42
     .line 43
-    sub-int/2addr v7, v6
+    monitor-exit v1
 
     .line 44
-    :goto_1
-    mul-int/lit8 v0, p4, 0x8
+    return-void
 
     .line 45
+    :catchall_0
+    move-exception v3
+
     .line 46
-    if-ge v2, v0, :cond_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 47
+    throw v3
+
     .line 48
-    sub-int v0, v7, v2
+    :catch_0
+    move-exception v3
 
     .line 49
+    :try_start_2
+    iget-object v2, p0, LX/5rT;->A00:LX/5rX;
+
     .line 50
-    ushr-long v0, v8, v0
-
     .line 51
-    .line 52
-    long-to-int v4, v0
+    if-eqz v2, :cond_3
 
+    .line 52
     .line 53
-    iget v0, v5, LX/5Rs;->A01:I
+    instance-of v0, v2, LX/5rU;
 
     .line 54
     .line 55
-    and-int/2addr v4, v0
+    if-eqz v0, :cond_2
 
     .line 56
-    iget-object v0, v5, LX/5Rs;->A05:[C
-
     .line 57
+    move-object v0, v2
+
     .line 58
-    aget-char v0, v0, v4
+    check-cast v0, LX/5rU;
 
     .line 59
     .line 60
-    invoke-interface {p1, v0}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
+    invoke-interface {v0, v3}, LX/5rU;->AWG(Ljava/lang/Exception;)V
 
     .line 61
     .line 62
     .line 63
-    add-int/2addr v2, v6
+    :cond_2
+    new-instance v1, LX/5rV;
 
     .line 64
-    goto :goto_1
-
     .line 65
-    :cond_1
-    iget-object v1, p0, LX/5Rt;->A00:Ljava/lang/Character;
+    invoke-direct {v1, v2, v3}, LX/5rV;-><init>(LX/5rX;Ljava/lang/Exception;)V
 
     .line 66
     .line 67
-    if-eqz v1, :cond_2
-
     .line 68
+    sget-object v0, LX/5rS;->A01:Landroid/os/Handler;
+
     .line 69
-    :goto_2
-    mul-int/lit8 v0, v3, 0x8
-
     .line 70
-    .line 71
-    if-ge v2, v0, :cond_2
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
+    .line 71
     .line 72
     .line 73
-    invoke-virtual {v1}, Ljava/lang/Character;->charValue()C
+    :cond_3
+    const-class v2, LX/5rS;
 
     .line 74
     .line 75
+    monitor-enter v2
+
     .line 76
-    move-result v0
+    :try_start_3
+    sget-object v1, LX/5rS;->A02:Ljava/util/HashSet;
 
     .line 77
-    invoke-interface {p1, v0}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
-
     .line 78
+    iget-object v0, p0, LX/5rT;->A01:Ljava/util/concurrent/FutureTask;
+
     .line 79
     .line 80
-    add-int/2addr v2, v6
+    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
     .line 81
-    goto :goto_2
-
     .line 82
-    :cond_2
+    .line 83
+    sget-object v0, LX/5rS;->A03:Ljava/util/HashSet;
+
+    .line 84
+    .line 85
+    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    .line 86
+    .line 87
+    .line 88
+    monitor-exit v2
+
+    .line 89
     return-void
-.end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .line 90
+    :catchall_1
+    move-exception v3
 
-    .line 0
-    instance-of v0, p1, LX/5Rt;
+    .line 91
+    monitor-exit v2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1
-    .line 2
-    const/4 v2, 0x0
+    .line 92
+    throw v3
 
-    .line 3
-    if-eqz v0, :cond_0
+    .line 93
+    :catchall_2
+    move-exception v3
 
-    .line 4
-    .line 5
-    check-cast p1, LX/5Rt;
+    .line 94
+    const-class v2, LX/5rS;
 
-    .line 6
-    .line 7
-    iget-object v1, p0, LX/5Rt;->A01:LX/5Rs;
+    .line 95
+    .line 96
+    monitor-enter v2
 
-    .line 8
-    .line 9
-    iget-object v0, p1, LX/5Rt;->A01:LX/5Rs;
+    .line 97
+    :try_start_4
+    sget-object v1, LX/5rS;->A02:Ljava/util/HashSet;
 
-    .line 10
-    .line 11
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    .line 98
+    .line 99
+    iget-object v0, p0, LX/5rT;->A01:Ljava/util/concurrent/FutureTask;
 
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
+    .line 100
+    .line 101
+    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
-    .line 15
-    if-eqz v0, :cond_0
+    .line 102
+    .line 103
+    .line 104
+    sget-object v0, LX/5rS;->A03:Ljava/util/HashSet;
 
-    .line 16
-    .line 17
-    iget-object v1, p0, LX/5Rt;->A00:Ljava/lang/Character;
+    .line 105
+    .line 106
+    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
-    .line 18
-    .line 19
-    iget-object v0, p1, LX/5Rt;->A00:Ljava/lang/Character;
-
-    .line 20
-    .line 21
-    invoke-static {v1, v0}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v0
-
-    .line 25
-    if-eqz v0, :cond_0
-
-    .line 26
-    .line 27
-    const/4 v2, 0x1
-
-    .line 28
-    :cond_0
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    .line 0
-    iget-object v0, p0, LX/5Rt;->A01:LX/5Rs;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v3
-
-    .line 6
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v2
-
-    .line 10
-    iget-object v1, p0, LX/5Rt;->A00:Ljava/lang/Character;
-
-    .line 11
-    .line 12
-    const/4 v0, 0x0
-
-    .line 13
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    xor-int/2addr v3, v0
-
-    .line 18
-    return v3
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    const-string v0, "BaseEncoding."
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v2
-
-    .line 6
-    iget-object v0, p0, LX/5Rt;->A01:LX/5Rs;
-
-    .line 7
-    .line 8
-    invoke-static {v2, v0}, LX/001;->A10(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
-
-    .line 9
-    .line 10
-    .line 11
-    iget v1, v0, LX/5Rs;->A00:I
-
-    .line 12
-    .line 13
-    const/16 v0, 0x8
-
-    .line 14
-    .line 15
-    rem-int/2addr v0, v1
-
-    .line 16
-    if-eqz v0, :cond_0
-
-    .line 17
-    .line 18
-    iget-object v1, p0, LX/5Rt;->A00:Ljava/lang/Character;
-
-    .line 19
-    .line 20
-    if-nez v1, :cond_1
-
-    .line 21
-    .line 22
-    const-string v0, ".omitPadding()"
-
-    .line 23
-    .line 24
+    .line 107
+    .line 108
+    .line 109
     :goto_0
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-exit v2
 
-    .line 25
-    .line 26
-    .line 27
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 110
+    goto :goto_1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
+    .line 111
+    :catchall_3
+    move-exception v3
 
-    .line 31
-    return-object v0
-
-    .line 32
-    :cond_1
-    const-string v0, ".withPadChar(\'"
-
-    .line 33
-    .line 34
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 35
-    .line 36
-    .line 37
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 38
-    .line 39
-    .line 40
-    const-string v0, "\')"
-
-    .line 41
-    .line 42
+    .line 112
     goto :goto_0
+
+    .line 113
+    :goto_1
+    throw v3
+
+    .line 114
+    :catch_1
+    const-class v2, LX/5rS;
+
+    .line 115
+    .line 116
+    monitor-enter v2
+
+    .line 117
+    :try_start_5
+    sget-object v1, LX/5rS;->A02:Ljava/util/HashSet;
+
+    .line 118
+    .line 119
+    iget-object v0, p0, LX/5rT;->A01:Ljava/util/concurrent/FutureTask;
+
+    .line 120
+    .line 121
+    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    .line 122
+    .line 123
+    .line 124
+    sget-object v0, LX/5rS;->A03:Ljava/util/HashSet;
+
+    .line 125
+    .line 126
+    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    .line 127
+    .line 128
+    .line 129
+    monitor-exit v2
+
+    .line 130
+    return-void
+
+    .line 131
+    :catchall_4
+    move-exception v3
+
+    .line 132
+    monitor-exit v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_4
+
+    .line 133
+    throw v3
 .end method

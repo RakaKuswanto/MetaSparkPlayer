@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract AAM()LX/0Ic;
+.method public abstract A8k()LX/0KI;
 .end method
 
 .method public abstract startFacebookActivity(Landroid/content/Intent;Landroid/content/Context;)V

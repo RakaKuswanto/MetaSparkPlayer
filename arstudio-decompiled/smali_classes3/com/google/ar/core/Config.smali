@@ -129,6 +129,9 @@
 .method private native nativeGetFocusMode(JJ)I
 .end method
 
+.method private native nativeGetGeospatialMode(JJJ)I
+.end method
+
 .method private native nativeGetInstantPlacementMode(JJ)I
 .end method
 
@@ -163,6 +166,9 @@
 .end method
 
 .method private native nativeSetFocusMode(JJI)V
+.end method
+
+.method private native nativeSetGeospatialMode(JJJI)V
 .end method
 
 .method private native nativeSetInstantPlacementMode(JJI)V
@@ -212,11 +218,6 @@
     .line 12
     .line 13
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 14
-    .line 15
-    .line 16
     return-void
 .end method
 
@@ -467,6 +468,48 @@
     move-result-object v0
 
     .line 14
+    return-object v0
+.end method
+
+.method public getGeospatialMode()Lcom/google/ar/core/Config$GeospatialMode;
+    .locals 8
+
+    .line 0
+    move-object v1, p0
+
+    .line 1
+    iget-wide v2, p0, Lcom/google/ar/core/Config;->nativeSymbolTableHandle:J
+
+    .line 2
+    .line 3
+    iget-object v0, p0, Lcom/google/ar/core/Config;->session:Lcom/google/ar/core/Session;
+
+    .line 4
+    .line 5
+    iget-wide v4, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 6
+    .line 7
+    iget-wide v6, p0, Lcom/google/ar/core/Config;->nativeHandle:J
+
+    .line 8
+    .line 9
+    invoke-direct/range {v1 .. v7}, Lcom/google/ar/core/Config;->nativeGetGeospatialMode(JJJ)I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    invoke-static {v0}, Lcom/google/ar/core/Config$GeospatialMode;->forNumber(I)Lcom/google/ar/core/Config$GeospatialMode;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
     return-object v0
 .end method
 
@@ -872,6 +915,41 @@
     .line 10
     .line 11
     .line 12
+    return-object p0
+.end method
+
+.method public setGeospatialMode(Lcom/google/ar/core/Config$GeospatialMode;)Lcom/google/ar/core/Config;
+    .locals 9
+
+    .line 0
+    move-object v1, p0
+
+    .line 1
+    iget-wide v2, p0, Lcom/google/ar/core/Config;->nativeSymbolTableHandle:J
+
+    .line 2
+    .line 3
+    iget-object v0, p0, Lcom/google/ar/core/Config;->session:Lcom/google/ar/core/Session;
+
+    .line 4
+    .line 5
+    iget-wide v4, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 6
+    .line 7
+    iget-wide v6, p0, Lcom/google/ar/core/Config;->nativeHandle:J
+
+    .line 8
+    .line 9
+    iget v8, p1, Lcom/google/ar/core/Config$GeospatialMode;->nativeCode:I
+
+    .line 10
+    .line 11
+    invoke-direct/range {v1 .. v8}, Lcom/google/ar/core/Config;->nativeSetGeospatialMode(JJJI)V
+
+    .line 12
+    .line 13
+    .line 14
     return-object p0
 .end method
 

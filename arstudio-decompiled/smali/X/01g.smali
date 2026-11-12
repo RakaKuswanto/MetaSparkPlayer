@@ -1,35 +1,35 @@
-.class public final LX/01g;
-.super Ljava/lang/Object;
+.class public final LX/01G;
+.super Ljava/lang/ThreadLocal;
 .source ""
 
 
 # direct methods
-.method public static varargs A00([Ljava/lang/Object;)I
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result p0
-
-    .line 4
-    return p0
+    return-void
 .end method
 
-.method public static A01(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
+
+# virtual methods
+.method public final bridge synthetic initialValue()Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    invoke-static {p0, p1}, LX/01f;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v0, LX/02O;
 
     .line 1
     .line 2
-    .line 3
-    move-result p0
+    invoke-direct {v0}, LX/02O;-><init>()V
 
+    .line 3
     .line 4
-    return p0
+    .line 5
+    return-object v0
 .end method

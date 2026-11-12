@@ -1,14 +1,14 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;
-.super LX/5Vj;
+.super LX/68F;
 .source ""
 
 
 # static fields
-.field public static final HAPTIC_SERVICE_TYPE_KEY:LX/5TT;
+.field public static final HAPTIC_SERVICE_TYPE_KEY:LX/67w;
 
 
 # instance fields
-.field public final mDelegate:LX/5Vq;
+.field public final mDelegate:LX/68w;
 
 
 # direct methods
@@ -16,36 +16,36 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/5Tk;->HapticService:LX/5Tk;
+    sget-object v1, LX/63t;->HapticService:LX/63t;
 
     .line 1
     .line 2
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/5TT;-><init>(LX/5Tk;)V
+    invoke-direct {v0, v1}, LX/67w;-><init>(LX/63t;)V
 
     .line 5
     .line 6
     .line 7
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;->HAPTIC_SERVICE_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;->HAPTIC_SERVICE_TYPE_KEY:LX/67w;
 
     .line 8
     .line 9
     return-void
 .end method
 
-.method public constructor <init>(LX/5Vq;)V
+.method public constructor <init>(LX/68w;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5Vj;-><init>()V
+    invoke-direct {p0}, LX/68F;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;->mDelegate:LX/5Vq;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;->mDelegate:LX/68w;
 
     .line 4
     .line 5
@@ -70,11 +70,11 @@
     return-object v0
 .end method
 
-.method public getDelegate()LX/5Vq;
+.method public getDelegate()LX/68w;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;->mDelegate:LX/5Vq;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;->mDelegate:LX/68w;
 
     .line 1
     .line 2

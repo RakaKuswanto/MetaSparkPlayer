@@ -1,20 +1,42 @@
-.class public abstract LX/5kb;
+.class public final LX/5kB;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5ZF;
+.implements LX/5lZ;
 
 
 # instance fields
-.field public final A00:Landroid/os/Handler;
-
-.field public final A01:LX/5ZF;
+.field public final A00:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;LX/5ZF;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    const-string v0, "SystemAlarmScheduler"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/5kg;->A01(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -22,284 +44,167 @@
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/5kb;->A01:LX/5ZF;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     .line 4
     .line 5
-    iput-object p1, p0, LX/5kb;->A00:Landroid/os/Handler;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    return-void
-.end method
-
-.method public static A00(LX/5kb;LX/5e7;)V
-    .locals 9
-
-    .line 0
-    move-object v0, p0
-
-    .line 1
-    check-cast v0, LX/5ka;
-
-    .line 2
-    .line 3
-    iget-object v1, v0, LX/5ka;->A00:LX/5kF;
-
-    .line 4
-    .line 5
-    iget-object v0, v1, LX/5kF;->A01:LX/5e1;
-
-    .line 6
-    .line 7
-    iget-object v0, v0, LX/5e1;->A01:LX/5dF;
+    iput-object v0, p0, LX/5kB;->A00:Landroid/content/Context;
 
     .line 8
     .line 9
-    const-string v3, "FbCameraDeviceWrapper"
-
-    .line 10
-    .line 11
-    invoke-static {v1}, LX/4BF;->A0N(Ljava/lang/Object;)J
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-wide v7
-
-    .line 15
-    new-instance v1, LX/5eC;
-
-    .line 16
-    .line 17
-    invoke-direct {v1, p1}, LX/5eC;-><init>(Ljava/lang/Throwable;)V
-
-    .line 18
-    .line 19
-    .line 20
-    const-string v2, "camera_error"
-
-    .line 21
-    .line 22
-    const-string v4, "low"
-
-    .line 23
-    .line 24
-    const-string v5, "FbCameraDeviceWrapper.startRecordingVideo()"
-
-    .line 25
-    .line 26
-    const/4 v6, 0x0
-
-    .line 27
-    invoke-interface/range {v0 .. v8}, LX/5dF;->ASK(LX/5e7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
-
-    .line 28
-    .line 29
-    .line 30
-    iget-object v0, p0, LX/5kb;->A01:LX/5ZF;
-
-    .line 31
-    .line 32
-    if-eqz v0, :cond_0
-
-    .line 33
-    .line 34
-    invoke-interface {v0, p1}, LX/5ZF;->AVp(LX/5e7;)V
-
-    .line 35
-    .line 36
-    .line 37
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final AVp(LX/5e7;)V
+.method public final A4g(Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "workSpecId"
+        }
+    .end annotation
 
     .line 0
-    iget-object v0, p0, LX/5kb;->A01:LX/5ZF;
+    iget-object v2, p0, LX/5kB;->A00:Landroid/content/Context;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    const-class v0, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
 
     .line 3
     .line 4
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    invoke-static {v2, v0}, LX/0X7;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v2
+    move-result-object v1
 
     .line 8
-    iget-object v1, p0, LX/5kb;->A00:Landroid/os/Handler;
+    const-string v0, "ACTION_STOP_WORK"
 
     .line 9
     .line 10
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 11
     .line 12
     .line 13
-    move-result-object v0
+    const-string v0, "KEY_WORKSPEC_ID"
 
     .line 14
-    if-eq v2, v0, :cond_0
-
     .line 15
-    .line 16
-    new-instance v0, LX/5ke;
+    invoke-virtual {v1, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 16
     .line 17
     .line 18
-    invoke-direct {v0, p0, p1}, LX/5ke;-><init>(LX/5kb;LX/5e7;)V
+    invoke-virtual {v2, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 19
     .line 20
     .line 21
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 22
-    .line 23
-    .line 24
-    return-void
-
-    .line 25
-    :cond_0
-    invoke-static {p0, p1}, LX/5kb;->A00(LX/5kb;LX/5e7;)V
-
-    .line 26
-    .line 27
-    .line 28
     return-void
 .end method
 
-.method public final AVs()V
-    .locals 4
+.method public final ANI()Z
+    .locals 1
 
-    .line 0
-    iget-object v3, p0, LX/5kb;->A01:LX/5ZF;
+    const/4 v0, 0x1
 
-    .line 1
-    .line 2
-    if-eqz v3, :cond_0
-
-    .line 3
-    .line 4
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v2
-
-    .line 8
-    iget-object v1, p0, LX/5kb;->A00:Landroid/os/Handler;
-
-    .line 9
-    .line 10
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    if-ne v2, v0, :cond_1
-
-    .line 15
-    .line 16
-    invoke-interface {v3}, LX/5ZF;->AVs()V
-
-    .line 17
-    .line 18
-    .line 19
-    :cond_0
-    return-void
-
-    .line 20
-    :cond_1
-    new-instance v0, LX/5kd;
-
-    .line 21
-    .line 22
-    invoke-direct {v0, p0}, LX/5kd;-><init>(LX/5kb;)V
-
-    .line 23
-    .line 24
-    .line 25
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 26
-    .line 27
-    .line 28
-    return-void
+    return v0
 .end method
 
-.method public final AVu()V
-    .locals 4
+.method public final varargs Aj2([LX/5i4;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "workSpecs"
+        }
+    .end annotation
 
     .line 0
-    iget-object v3, p0, LX/5kb;->A01:LX/5ZF;
+    array-length v5, p1
 
     .line 1
+    const/4 v4, 0x0
+
     .line 2
-    if-eqz v3, :cond_0
+    :goto_0
+    if-ge v4, v5, :cond_0
 
     .line 3
     .line 4
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    aget-object v0, p1, v4
 
     .line 5
     .line 6
+    invoke-static {}, LX/5kg;->A00()LX/5kg;
+
     .line 7
-    move-result-object v2
-
     .line 8
-    iget-object v1, p0, LX/5kb;->A00:Landroid/os/Handler;
-
     .line 9
-    .line 10
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    iget-object v3, p0, LX/5kB;->A00:Landroid/content/Context;
 
+    .line 10
     .line 11
+    invoke-static {v0}, LX/5lb;->A00(LX/5i4;)LX/5ky;
+
     .line 12
     .line 13
-    move-result-object v0
-
     .line 14
-    if-ne v2, v0, :cond_1
+    move-result-object v2
 
     .line 15
-    .line 16
-    invoke-interface {v3}, LX/5ZF;->AVu()V
+    const-class v0, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
 
+    .line 16
     .line 17
+    invoke-static {v3, v0}, LX/0X7;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
     .line 18
     .line 19
-    :cond_0
-    return-void
-
     .line 20
-    :cond_1
-    new-instance v0, LX/5kc;
+    move-result-object v1
 
     .line 21
-    .line 22
-    invoke-direct {v0, p0}, LX/5kc;-><init>(LX/5kb;)V
+    const-string v0, "ACTION_SCHEDULE_WORK"
 
+    .line 22
     .line 23
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
     .line 24
     .line 25
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
     .line 26
+    invoke-static {v1, v2}, LX/5jt;->A02(Landroid/content/Intent;LX/5ky;)V
+
     .line 27
     .line 28
+    .line 29
+    invoke-virtual {v3, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    .line 30
+    .line 31
+    .line 32
+    add-int/lit8 v4, v4, 0x1
+
+    .line 33
+    .line 34
+    goto :goto_0
+
+    .line 35
+    :cond_0
     return-void
 .end method

@@ -18,452 +18,454 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
-    .locals 4
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
+    .locals 14
 
     .line 0
-    new-instance v1, LX/18R;
+    const/4 v8, 0x0
 
     .line 1
+    const/4 v4, 0x0
+
     .line 2
-    invoke-direct {v1}, LX/18R;-><init>()V
+    const/4 v9, 0x0
 
     .line 3
+    const/4 v6, 0x0
+
     .line 4
+    const/4 v3, 0x0
+
     .line 5
-    :cond_0
-    :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    const/4 v10, 0x0
 
     .line 6
+    const-wide/16 v12, 0x0
+
     .line 7
     .line 8
-    move-result-object v2
+    const/4 v11, 0x0
 
     .line 9
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 10
     .line 11
-    if-ne v2, v0, :cond_2
-
     .line 12
+    move-result-object v7
+
     .line 13
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    const-string v5, ""
 
     .line 14
     .line 15
+    :cond_0
+    :try_start_0
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
+
     .line 16
-    move-result-object v3
-
     .line 17
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
     .line 18
-    .line 19
-    .line 20
-    move-result v0
+    move-result-object v1
 
+    .line 19
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
+
+    .line 20
     .line 21
-    sparse-switch v0, :sswitch_data_0
+    if-ne v1, v0, :cond_2
 
     .line 22
     .line 23
-    .line 24
-    :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
+    .line 24
     .line 25
     .line 26
+    move-result-object v1
+
     .line 27
-    :cond_2
-    :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     .line 28
     .line 29
     .line 30
-    move-result-object v2
+    move-result v0
 
     .line 31
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sparse-switch v0, :sswitch_data_0
 
     .line 32
     .line 33
-    if-ne v2, v0, :cond_0
-
     .line 34
-    .line 35
-    goto/16 :goto_1
+    :cond_1
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
+    .line 35
     .line 36
     .line 37
-    :sswitch_0
-    const-string/jumbo v0, "media_type"
+    :cond_2
+    :goto_0
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 38
     .line 39
     .line 40
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
     .line 41
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
+
     .line 42
     .line 43
-    move-result v0
+    if-ne v1, v0, :cond_0
 
     .line 44
-    if-eqz v0, :cond_1
-
     .line 45
-    .line 46
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    goto/16 :goto_1
 
+    .line 46
     .line 47
+    :sswitch_0
+    const-string/jumbo v0, "media_type"
+
     .line 48
     .line 49
-    move-result-object v2
-
     .line 50
-    iput-object v2, v1, LX/18R;->A08:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 51
     .line 52
-    const-string/jumbo v0, "mediaType"
-
     .line 53
-    .line 54
-    .line 55
-    invoke-static {v1, v2, v0}, LX/18R;->A00(LX/18R;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 56
-    .line 57
-    .line 58
-    goto :goto_0
-
-    .line 59
-    :sswitch_1
-    const-string/jumbo v0, "width"
-
-    .line 60
-    .line 61
-    .line 62
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 63
-    .line 64
-    .line 65
     move-result v0
 
-    .line 66
+    .line 54
     if-eqz v0, :cond_1
 
+    .line 55
+    .line 56
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v6
+
+    .line 60
+    const-string/jumbo v0, "mediaType"
+
+    .line 61
+    .line 62
+    .line 63
+    invoke-static {v6, v0, v7}, LX/1O4;->A08(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v7
+
     .line 67
+    goto :goto_0
+
     .line 68
-    invoke-virtual {p1}, LX/27m;->A0i()I
+    :sswitch_1
+    const-string/jumbo v0, "width"
 
     .line 69
     .line 70
     .line 71
-    move-result v0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 72
-    iput v0, v1, LX/18R;->A03:I
-
     .line 73
     .line 74
-    goto :goto_0
+    move-result v0
 
     .line 75
-    :sswitch_2
-    const-string/jumbo v2, "id"
+    if-eqz v0, :cond_1
 
     .line 76
     .line 77
-    .line 78
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, LX/3oD;->A0k()I
 
+    .line 78
     .line 79
     .line 80
+    move-result v11
+
     .line 81
-    move-result v0
+    goto :goto_0
 
     .line 82
-    if-eqz v0, :cond_1
+    :sswitch_2
+    const-string/jumbo v2, "id"
 
     .line 83
     .line 84
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 85
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 86
     .line 87
-    move-result-object v0
-
     .line 88
-    iput-object v0, v1, LX/18R;->A07:Ljava/lang/String;
+    move-result v0
 
     .line 89
-    .line 90
-    invoke-static {v2, v0}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    if-eqz v0, :cond_1
 
+    .line 90
     .line 91
+    invoke-static {p1, v2}, LX/1O4;->A06(LX/3oD;Ljava/lang/String;)Ljava/lang/String;
+
     .line 92
     .line 93
+    .line 94
+    move-result-object v5
+
+    .line 95
     goto :goto_0
 
-    .line 94
+    .line 96
     :sswitch_3
     const-string/jumbo v0, "mime_type"
 
-    .line 95
-    .line 96
     .line 97
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 98
     .line 99
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 100
+    .line 101
+    .line 102
     move-result v0
 
-    .line 101
-    if-eqz v0, :cond_1
-
-    .line 102
     .line 103
-    const-class v0, Lcom/facebook/ipc/media/data/MimeType;
+    if-eqz v0, :cond_1
 
     .line 104
     .line 105
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    const-class v0, Lcom/facebook/ipc/media/data/MimeType;
 
     .line 106
     .line 107
-    .line 108
-    move-result-object v2
+    move-object/from16 v1, p2
 
+    .line 108
     .line 109
-    check-cast v2, Lcom/facebook/ipc/media/data/MimeType;
+    invoke-static {p1, v1, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 110
     .line 111
-    iput-object v2, v1, LX/18R;->A05:Lcom/facebook/ipc/media/data/MimeType;
-
     .line 112
+    move-result-object v3
+
     .line 113
-    const-string/jumbo v0, "mimeType"
+    check-cast v3, Lcom/facebook/ipc/media/data/MimeType;
 
     .line 114
     .line 115
-    .line 116
-    invoke-static {v1, v2, v0}, LX/18R;->A00(LX/18R;Ljava/lang/Object;Ljava/lang/String;)V
+    const-string/jumbo v0, "mimeType"
 
+    .line 116
     .line 117
     .line 118
+    invoke-static {v3, v0, v7}, LX/1O4;->A08(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
+
     .line 119
+    .line 120
+    .line 121
+    move-result-object v7
+
+    .line 122
     goto :goto_0
 
-    .line 120
+    .line 123
     :sswitch_4
     const-string/jumbo v0, "time_added_ms"
-
-    .line 121
-    .line 122
-    .line 123
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 124
     .line 125
     .line 126
-    move-result v0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 127
-    if-eqz v0, :cond_1
-
     .line 128
     .line 129
-    invoke-virtual {p1}, LX/27m;->A0m()J
+    move-result v0
 
     .line 130
+    if-eqz v0, :cond_1
+
     .line 131
     .line 132
-    move-result-wide v2
+    invoke-virtual {p1}, LX/3oD;->A0o()J
 
     .line 133
-    iput-wide v2, v1, LX/18R;->A04:J
-
     .line 134
     .line 135
-    goto :goto_0
+    move-result-wide v12
 
     .line 136
+    goto :goto_0
+
+    .line 137
     :sswitch_5
     const-string/jumbo v0, "height"
 
-    .line 137
     .line 138
     .line 139
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 140
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 141
     .line 142
-    move-result v0
-
     .line 143
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 144
-    .line 145
-    invoke-virtual {p1}, LX/27m;->A0i()I
+    if-eqz v0, :cond_1
 
+    .line 145
     .line 146
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 147
     .line 148
-    move-result v0
-
     .line 149
-    iput v0, v1, LX/18R;->A01:I
+    move-result v9
 
     .line 150
-    .line 151
     goto :goto_0
 
-    .line 152
+    .line 151
     :sswitch_6
     const-string/jumbo v0, "file_path_uri"
 
+    .line 152
     .line 153
     .line 154
-    .line 155
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 155
     .line 156
     .line 157
-    .line 158
     move-result v0
 
-    .line 159
+    .line 158
     if-eqz v0, :cond_1
 
+    .line 159
     .line 160
-    .line 161
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
+    .line 161
     .line 162
     .line 163
+    move-result-object v4
+
     .line 164
-    move-result-object v0
+    goto :goto_0
 
     .line 165
-    iput-object v0, v1, LX/18R;->A06:Ljava/lang/String;
-
-    .line 166
-    .line 167
-    goto/16 :goto_0
-
-    .line 168
-    .line 169
     :sswitch_7
     const-string/jumbo v0, "orientation"
 
+    .line 166
+    .line 167
+    .line 168
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 169
     .line 170
     .line 171
+    move-result v0
+
     .line 172
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 173
     .line 174
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 175
-    move-result v0
-
     .line 176
-    if-eqz v0, :cond_1
-
     .line 177
+    move-result v10
+
     .line 178
-    invoke-virtual {p1}, LX/27m;->A0i()I
+    goto/16 :goto_0
 
     .line 179
     .line 180
+    :sswitch_8
+    const-string/jumbo v0, "duration"
+
     .line 181
-    move-result v0
-
     .line 182
-    iput v0, v1, LX/18R;->A02:I
-
     .line 183
-    .line 184
-    goto/16 :goto_0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 184
     .line 185
     .line 186
-    :sswitch_8
-    const-string v0, "duration"
+    move-result v0
 
     .line 187
-    .line 188
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 189
-    .line 190
-    .line 191
-    move-result v0
-
-    .line 192
     if-eqz v0, :cond_1
 
+    .line 188
+    .line 189
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
+    .line 190
+    .line 191
+    .line 192
+    move-result v8
+
     .line 193
-    .line 194
-    invoke-virtual {p1}, LX/27m;->A0i()I
-
-    .line 195
-    .line 196
-    .line 197
-    move-result v0
-
-    .line 198
-    iput v0, v1, LX/18R;->A00:I
-
-    .line 199
-    .line 200
     goto/16 :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 201
-    .line 202
+    .line 194
+    .line 195
     :goto_1
-    new-instance v0, Lcom/facebook/media/model/MediaModel;
+    new-instance v2, Lcom/facebook/media/model/MediaModel;
+
+    .line 196
+    .line 197
+    invoke-direct/range {v2 .. v13}, Lcom/facebook/media/model/MediaModel;-><init>(Lcom/facebook/ipc/media/data/MimeType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;IIIIJ)V
+
+    .line 198
+    .line 199
+    .line 200
+    return-object v2
+
+    .line 201
+    :catch_0
+    move-exception v1
+
+    .line 202
+    const-class v0, Lcom/facebook/media/model/MediaModel;
 
     .line 203
     .line 204
-    invoke-direct {v0, v1}, Lcom/facebook/media/model/MediaModel;-><init>(LX/18R;)V
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 205
     .line 206
     .line 207
-    return-object v0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 208
-    :catch_0
-    move-exception v1
-
     .line 209
-    const-class v0, Lcom/facebook/media/model/MediaModel;
-
     .line 210
+    move-result-object v0
+
     .line 211
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
-    .line 212
-    .line 213
-    .line 214
-    const/4 v0, 0x0
-
-    .line 215
     throw v0
 
-    .line 216
+    .line 212
     :sswitch_data_0
     .sparse-switch
         -0x76bbb26c -> :sswitch_8

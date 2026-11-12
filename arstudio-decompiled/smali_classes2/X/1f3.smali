@@ -2,298 +2,189 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/16v;
+
+
+# static fields
+.field public static final A00:Ljava/util/HashSet;
+
+.field public static final A01:Ljava/util/HashSet;
+
 
 # direct methods
-.method public static A00(Ljava/lang/Class;Ljava/lang/String;)LX/1ez;
+.method public static constructor <clinit>()V
+    .locals 5
+
+    .line 0
+    const/4 v4, 0x2
+
+    .line 1
+    new-array v1, v4, [Ljava/lang/String;
+
+    .line 2
+    .line 3
+    const-string v0, "/br_sr"
+
+    .line 4
+    .line 5
+    const/4 v3, 0x0
+
+    .line 6
+    aput-object v0, v1, v3
+
+    .line 7
+    .line 8
+    const-string v0, "/rs_req"
+
+    .line 9
+    .line 10
+    const/4 v2, 0x1
+
+    .line 11
+    invoke-static {v0, v1, v2}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    sput-object v0, LX/1f3;->A00:Ljava/util/HashSet;
+
+    .line 16
+    .line 17
+    new-array v1, v4, [Ljava/lang/String;
+
+    .line 18
+    .line 19
+    const-string v0, "/sr_res"
+
+    .line 20
+    .line 21
+    aput-object v0, v1, v3
+
+    .line 22
+    .line 23
+    const-string v0, "/rs_resp"
+
+    .line 24
+    .line 25
+    invoke-static {v0, v1, v2}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    sput-object v0, LX/1f3;->A01:Ljava/util/HashSet;
+
+    .line 30
+    .line 31
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    :try_start_0
-    invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object p1
-
-    .line 4
-    new-instance p0, LX/1ez;
-
-    .line 5
-    .line 6
-    invoke-direct {p0, p1}, LX/1ez;-><init>(Ljava/lang/reflect/Field;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-object p0
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 10
-    :catch_0
-    move-exception p0
-
-    .line 11
-    invoke-static {p0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object p0
-
-    .line 15
-    throw p0
+    return-void
 .end method
 
-.method public static A01(LX/1dg;Ljava/io/ObjectOutputStream;)V
-    .locals 2
+
+# virtual methods
+.method public final A9i()Lcom/google/common/collect/ImmutableMap;
+    .locals 5
 
     .line 0
-    invoke-interface {p0}, LX/1dg;->A5e()Ljava/util/Map;
+    invoke-static {}, LX/0X2;->A0X()Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    move-result-object v4
 
     .line 4
-    invoke-interface {v0}, Ljava/util/Map;->size()I
+    sget-object v0, LX/1f3;->A01:Ljava/util/HashSet;
 
     .line 5
     .line 6
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
     .line 7
-    move-result v0
-
     .line 8
-    invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeInt(I)V
-
     .line 9
-    .line 10
-    .line 11
-    invoke-interface {p0}, LX/1dg;->A5e()Ljava/util/Map;
+    move-result-object v3
 
+    .line 10
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 11
     .line 12
     .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    invoke-static {v0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object p0
-
-    .line 19
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 20
-    .line 21
-    .line 22
     move-result v0
 
-    .line 23
-    if-eqz v0, :cond_1
+    .line 14
+    if-eqz v0, :cond_0
 
+    .line 15
+    .line 16
+    invoke-static {v3}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v2
+
+    .line 20
+    sget-object v0, LX/0RA;->ACKNOWLEDGED_DELIVERY:LX/0RA;
+
+    .line 21
+    .line 22
+    invoke-virtual {v0}, LX/0RA;->getValue()I
+
+    .line 23
     .line 24
     .line 25
-    invoke-static {p0}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    move-result v0
 
     .line 26
+    new-instance v1, Lcom/facebook/rti/mqtt/protocol/messages/SubscribeTopic;
+
     .line 27
     .line 28
-    move-result-object v1
+    invoke-direct {v1, v2, v0}, Lcom/facebook/rti/mqtt/protocol/messages/SubscribeTopic;-><init>(Ljava/lang/String;I)V
 
     .line 29
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
     .line 30
     .line 31
-    .line 32
-    move-result-object v0
+    sget-object v0, LX/15i;->ALWAYS:LX/15i;
 
+    .line 32
     .line 33
-    invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
+    invoke-virtual {v4, v1, v0}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 34
     .line 35
     .line 36
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    check-cast v0, Ljava/util/Collection;
-
-    .line 41
-    .line 42
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    .line 43
-    .line 44
-    .line 45
-    move-result v0
-
-    .line 46
-    invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeInt(I)V
-
-    .line 47
-    .line 48
-    .line 49
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v0
-
-    .line 53
-    check-cast v0, Ljava/util/Collection;
-
-    .line 54
-    .line 55
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    .line 56
-    .line 57
-    .line 58
-    move-result-object v1
-
-    .line 59
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 60
-    .line 61
-    .line 62
-    move-result v0
-
-    .line 63
-    if-eqz v0, :cond_0
-
-    .line 64
-    .line 65
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 66
-    .line 67
-    .line 68
-    move-result-object v0
-
-    .line 69
-    invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
-
-    .line 70
-    .line 71
-    .line 72
     goto :goto_0
 
-    .line 73
-    :cond_1
-    return-void
-.end method
-
-.method public static A02(LX/1f6;Ljava/io/ObjectOutputStream;)V
-    .locals 2
-
-    .line 0
-    invoke-interface {p0}, LX/1f6;->entrySet()Ljava/util/Set;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Set;->size()I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeInt(I)V
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-interface {p0}, LX/1f6;->entrySet()Ljava/util/Set;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object p0
-
-    .line 19
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    if-eqz v0, :cond_0
-
-    .line 24
-    .line 25
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v1
-
-    .line 29
-    check-cast v1, LX/1g2;
-
-    .line 30
-    .line 31
-    invoke-virtual {v1}, LX/1g2;->A01()Ljava/lang/Object;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v0
-
-    .line 35
-    invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
-
-    .line 36
     .line 37
-    .line 38
-    invoke-virtual {v1}, LX/1g2;->A00()I
-
-    .line 39
-    .line 40
-    .line 41
-    move-result v0
-
-    .line 42
-    invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeInt(I)V
-
-    .line 43
-    .line 44
-    .line 45
-    goto :goto_0
-
-    .line 46
     :cond_0
-    return-void
+    invoke-virtual {v4}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
+    return-object v0
 .end method

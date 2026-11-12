@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 11
 
     .line 0
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 1
     const/4 v10, 0x0
@@ -56,31 +56,31 @@
     .line 12
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 13
     .line 14
     .line 15
-    move-result-object v1
+    move-result-object v2
 
     .line 16
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 17
     .line 18
-    if-ne v1, v0, :cond_2
+    if-ne v2, v0, :cond_2
 
     .line 19
     .line 20
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 21
     .line 22
     .line 23
-    move-result-object v1
+    move-result-object v2
 
     .line 24
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     .line 25
     .line 26
@@ -94,26 +94,26 @@
     .line 30
     .line 31
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 32
     .line 33
     .line 34
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 35
     .line 36
     .line 37
-    move-result-object v1
+    move-result-object v2
 
     .line 38
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 39
     .line 40
-    if-ne v1, v0, :cond_0
+    if-ne v2, v0, :cond_0
 
     .line 41
     .line 42
@@ -121,12 +121,12 @@
 
     .line 43
     :sswitch_0
-    const-string/jumbo v0, "job_photo_uri"
+    const-string/jumbo v0, "job_title"
 
     .line 44
     .line 45
     .line 46
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 47
     .line 48
@@ -138,24 +138,24 @@
 
     .line 51
     .line 52
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 53
     .line 54
     .line 55
-    move-result-object v6
+    move-result-object v8
 
     .line 56
     goto :goto_0
 
     .line 57
     :sswitch_1
-    const-string/jumbo v0, "job_city"
+    const-string/jumbo v0, "crosspost_locations"
 
     .line 58
     .line 59
     .line 60
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 61
     .line 62
@@ -167,245 +167,253 @@
 
     .line 65
     .line 66
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    const-class v0, Lcom/facebook/ipc/composer/model/ComposerPublishJobPostCrosspostLocationData;
 
     .line 67
     .line 68
+    invoke-static {p1, v1, p2, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
     .line 69
-    move-result-object v4
-
     .line 70
-    goto :goto_0
-
     .line 71
-    :sswitch_2
-    const-string/jumbo v0, "job_id"
+    move-result-object v3
 
     .line 72
+    const-string/jumbo v0, "crosspostLocations"
+
     .line 73
     .line 74
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 75
+    invoke-static {v3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 76
     .line 77
-    move-result v0
-
     .line 78
-    if-eqz v0, :cond_1
-
-    .line 79
-    .line 80
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v5
-
-    .line 84
     goto :goto_0
 
+    .line 79
+    :sswitch_2
+    const-string/jumbo v0, "waterfall_session_id"
+
+    .line 80
+    .line 81
+    .line 82
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 83
+    .line 84
     .line 85
-    :sswitch_3
-    const-string/jumbo v0, "job_subtitle"
+    move-result v0
 
     .line 86
+    if-eqz v0, :cond_1
+
     .line 87
     .line 88
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 89
     .line 90
     .line 91
-    move-result v0
+    move-result-object v9
 
     .line 92
-    if-eqz v0, :cond_1
-
-    .line 93
-    .line 94
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
-    .line 95
-    .line 96
-    .line 97
-    move-result-object v7
-
-    .line 98
     goto :goto_0
 
+    .line 93
+    :sswitch_3
+    const-string/jumbo v0, "created_via_interception"
+
+    .line 94
+    .line 95
+    .line 96
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 97
+    .line 98
     .line 99
-    :sswitch_4
-    const-string v0, "created_via_interception"
-
-    .line 100
-    .line 101
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 102
-    .line 103
-    .line 104
     move-result v0
 
-    .line 105
+    .line 100
     if-eqz v0, :cond_1
 
+    .line 101
+    .line 102
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
+    .line 103
+    .line 104
+    .line 105
+    move-result v10
+
     .line 106
+    goto :goto_0
+
     .line 107
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    :sswitch_4
+    const-string/jumbo v0, "job_subtitle"
 
     .line 108
     .line 109
     .line 110
-    move-result v10
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 111
-    goto :goto_0
-
     .line 112
-    :sswitch_5
-    const-string/jumbo v0, "waterfall_session_id"
-
     .line 113
-    .line 114
-    .line 115
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 116
-    .line 117
-    .line 118
     move-result v0
 
-    .line 119
+    .line 114
     if-eqz v0, :cond_1
 
+    .line 115
+    .line 116
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 117
+    .line 118
+    .line 119
+    move-result-object v7
+
     .line 120
+    goto :goto_0
+
     .line 121
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    :sswitch_5
+    const-string/jumbo v0, "job_id"
 
     .line 122
     .line 123
     .line 124
-    move-result-object v9
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 125
-    goto :goto_0
-
     .line 126
-    :sswitch_6
-    const-string v0, "crosspost_locations"
-
     .line 127
+    move-result v0
+
     .line 128
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 129
     .line 130
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 131
-    move-result v0
-
     .line 132
-    if-eqz v0, :cond_1
-
     .line 133
+    move-result-object v5
+
     .line 134
-    const-class v0, Lcom/facebook/ipc/composer/model/ComposerPublishJobPostCrosspostLocationData;
+    goto :goto_0
 
     .line 135
-    .line 136
-    invoke-static {p1, v2, p2, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    :sswitch_6
+    const-string/jumbo v0, "job_city"
 
+    .line 136
     .line 137
     .line 138
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 139
-    move-result-object v3
-
     .line 140
-    const-string v0, "crosspostLocations"
-
     .line 141
+    move-result v0
+
     .line 142
-    invoke-static {v0, v3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    if-eqz v0, :cond_1
 
     .line 143
     .line 144
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 145
+    .line 146
+    .line 147
+    move-result-object v4
+
+    .line 148
     goto :goto_0
 
-    .line 146
-    :sswitch_7
-    const-string/jumbo v0, "job_title"
-
-    .line 147
-    .line 148
     .line 149
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_7
+    const-string/jumbo v0, "job_photo_uri"
 
     .line 150
     .line 151
     .line 152
-    move-result v0
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 153
-    if-eqz v0, :cond_1
-
     .line 154
     .line 155
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    move-result v0
 
     .line 156
+    if-eqz v0, :cond_1
+
     .line 157
     .line 158
-    move-result-object v8
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 159
+    .line 160
+    .line 161
+    move-result-object v6
+
+    .line 162
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 160
+    .line 163
     :goto_1
     new-instance v2, Lcom/facebook/ipc/composer/model/ComposerPublishJobPostData;
 
-    .line 161
-    .line 162
-    invoke-direct/range {v2 .. v10}, Lcom/facebook/ipc/composer/model/ComposerPublishJobPostData;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    .line 163
     .line 164
     .line 165
-    return-object v2
+    invoke-direct/range {v2 .. v10}, Lcom/facebook/ipc/composer/model/ComposerPublishJobPostData;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 166
+    .line 167
+    .line 168
+    return-object v2
+
+    .line 169
     :catch_0
     move-exception v1
 
-    .line 167
+    .line 170
     const-class v0, Lcom/facebook/ipc/composer/model/ComposerPublishJobPostData;
 
-    .line 168
-    .line 169
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
-    .line 170
     .line 171
     .line 172
-    throw v2
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 173
-    nop
-
     .line 174
+    .line 175
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 176
+    .line 177
+    .line 178
+    move-result-object v0
+
+    .line 179
+    throw v0
+
+    .line 180
     :sswitch_data_0
     .sparse-switch
-        -0x73716823 -> :sswitch_0
-        -0x604b7b53 -> :sswitch_1
-        -0x44d41f23 -> :sswitch_2
-        -0x329639a6 -> :sswitch_3
-        -0x2eaf1ef2 -> :sswitch_4
-        -0x2988034f -> :sswitch_5
-        0x45c4cabf -> :sswitch_6
-        0x57cb9f56 -> :sswitch_7
+        -0x73716823 -> :sswitch_7
+        -0x604b7b53 -> :sswitch_6
+        -0x44d41f23 -> :sswitch_5
+        -0x329639a6 -> :sswitch_4
+        -0x2eaf1ef2 -> :sswitch_3
+        -0x2988034f -> :sswitch_2
+        0x45c4cabf -> :sswitch_1
+        0x57cb9f56 -> :sswitch_0
     .end sparse-switch
 .end method

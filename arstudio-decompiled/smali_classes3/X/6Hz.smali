@@ -1,98 +1,84 @@
-.class public final LX/6Hz;
-.super Ljava/lang/Object;
+.class public final LX/6HZ;
+.super LX/6Hd;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final A01:I
-
-.field public final A02:I
-
-.field public final A03:LX/4zg;
+# static fields
+.field public static final A00:LX/6HZ;
 
 
 # direct methods
-.method public constructor <init>(LX/4zg;II)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/6HZ;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/0Yj;->A0k()Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {v0}, LX/6HZ;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    sput-object v0, LX/6HZ;->A00:LX/6HZ;
+
     .line 6
-    move-result-object v0
-
     .line 7
-    iput-object v0, p0, LX/6Hz;->A00:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 8
-    .line 9
-    iput-object p1, p0, LX/6Hz;->A03:LX/4zg;
-
-    .line 10
-    .line 11
-    iput p2, p0, LX/6Hz;->A02:I
-
-    .line 12
-    .line 13
-    iput p3, p0, LX/6Hz;->A01:I
-
-    .line 14
-    .line 15
     return-void
 .end method
 
-
-# virtual methods
-.method public final finalize()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    iget-object v0, p0, LX/6Hz;->A00:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, LX/6Hd;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    .line 3
+    return-void
+.end method
+
+.method public static A00(LX/5n9;Ljava/lang/String;I)LX/6Ig;
+    .locals 10
+
+    .line 0
+    const/4 v2, 0x0
+
+    .line 1
+    const/4 v9, 0x1
+
+    .line 2
+    new-instance v0, LX/6Ig;
 
     .line 3
     .line 4
+    move-object v1, p0
+
     .line 5
-    move-result-object v0
+    move-object v7, p1
 
     .line 6
-    check-cast v0, Landroid/util/Pair;
+    move v8, p2
 
     .line 7
+    move-object v3, v2
+
     .line 8
-    if-eqz v0, :cond_0
+    move-object v4, v2
 
     .line 9
+    move-object v5, v2
+
     .line 10
-    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+    move-object v6, v2
 
     .line 11
-    .line 12
-    if-eqz v0, :cond_0
+    invoke-direct/range {v0 .. v9}, LX/6Ig;-><init>(LX/5n9;LX/5VO;LX/6Gu;LX/6Vs;LX/6H4;Ljava/lang/Object;Ljava/lang/String;IZ)V
 
+    .line 12
     .line 13
     .line 14
-    check-cast v0, LX/41z;
-
-    .line 15
-    .line 16
-    invoke-virtual {v0}, LX/41z;->close()V
-
-    .line 17
-    .line 18
-    .line 19
-    :cond_0
-    return-void
+    return-object v0
 .end method

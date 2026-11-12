@@ -35,22 +35,21 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x18
+    const/4 v0, 0x4
 
     .line 1
-    .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
+    .line 2
     .line 3
     .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
+    .line 5
     sput-object v0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 6
     .line 7
-    .line 8
     return-void
 .end method
 
@@ -63,7 +62,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -103,7 +102,7 @@
 
     .line 21
     .line 22
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 23
     .line 24
@@ -127,46 +126,47 @@
 
     .line 32
     .line 33
-    invoke-static {p1, v2, v0}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v2}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 34
     .line 35
     .line 36
-    move-result v0
+    add-int/lit8 v0, v0, 0x1
 
     .line 37
+    .line 38
     goto :goto_1
 
-    .line 38
+    .line 39
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    .line 39
     .line 40
     .line 41
+    .line 42
     move-result-object v0
 
-    .line 42
+    .line 43
     check-cast v0, Lcom/facebook/search/sts/common/SearchKeywordStructuredText;
 
-    .line 43
     .line 44
+    .line 45
     goto :goto_0
 
-    .line 45
+    .line 46
     :cond_1
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 46
     .line 47
     .line 48
+    .line 49
     move-result-object v0
 
-    .line 49
+    .line 50
     iput-object v0, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A02:Ljava/util/Set;
 
-    .line 50
     .line 51
+    .line 52
     return-void
 .end method
 
@@ -179,7 +179,7 @@
 
     const-string/jumbo v0, "text"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A00:Ljava/lang/String;
 
@@ -195,7 +195,7 @@
 
 # virtual methods
 .method public final A00()Lcom/facebook/search/sts/common/SearchKeywordStructuredText;
-    .locals 4
+    .locals 3
 
     .line 0
     iget-object v1, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A02:Ljava/util/Set;
@@ -252,7 +252,7 @@
     .line 24
     .line 25
     .line 26
-    const-string v3, ""
+    const-string v2, ""
 
     .line 27
     .line 28
@@ -261,7 +261,7 @@
     .line 29
     .line 30
     .line 31
-    move-result-object v2
+    move-result-object v1
 
     .line 32
     const-string/jumbo v0, "icons"
@@ -269,62 +269,49 @@
     .line 33
     .line 34
     .line 35
-    invoke-static {v0, v2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 36
     .line 37
     .line 38
-    const-string/jumbo v1, "text"
+    new-instance v0, Lcom/facebook/search/sts/common/SearchKeywordStructuredText;
 
     .line 39
     .line 40
+    invoke-direct {v0, v2, v1}, Lcom/facebook/search/sts/common/SearchKeywordStructuredText;-><init>(Ljava/lang/String;Lcom/google/common/collect/ImmutableList;)V
+
     .line 41
-    const/4 v0, 0x1
-
     .line 42
-    invoke-static {v1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 43
-    .line 44
-    .line 45
-    new-instance v0, Lcom/facebook/search/sts/common/SearchKeywordStructuredText;
-
-    .line 46
-    .line 47
-    invoke-direct {v0, v3, v2}, Lcom/facebook/search/sts/common/SearchKeywordStructuredText;-><init>(Ljava/lang/String;Lcom/google/common/collect/ImmutableList;)V
-
-    .line 48
-    .line 49
-    .line 50
     sput-object v0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A03:Lcom/facebook/search/sts/common/SearchKeywordStructuredText;
 
-    .line 51
-    .line 52
+    .line 44
+    .line 45
     :cond_1
     monitor-exit p0
 
-    .line 53
+    .line 46
     goto :goto_0
 
-    .line 54
+    .line 47
     :catchall_0
     move-exception v0
 
-    .line 55
+    .line 48
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 56
+    .line 49
     throw v0
 
-    .line 57
+    .line 50
     :cond_2
     :goto_0
     sget-object v0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A03:Lcom/facebook/search/sts/common/SearchKeywordStructuredText;
 
-    .line 58
-    .line 59
+    .line 51
+    .line 52
     return-object v0
 .end method
 
@@ -378,7 +365,7 @@
     move-result-object v0
 
     .line 18
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 19
     .line 20
@@ -398,7 +385,7 @@
 
     .line 27
     .line 28
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 29
     .line 30
@@ -430,7 +417,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 5
     .line 6
@@ -446,7 +433,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 13
     .line 14
@@ -464,82 +451,57 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A01:Lcom/facebook/search/sts/common/SearchKeywordStructuredText;
+    iget-object v0, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A01:Lcom/facebook/search/sts/common/SearchKeywordStructuredText;
 
     .line 1
     .line 2
-    if-nez v1, :cond_0
+    invoke-static {p1, v0, p2}, LX/0X1;->A0X(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 3
     .line 4
-    const/4 v0, 0x0
-
     .line 5
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A00:Ljava/lang/String;
 
     .line 6
     .line 7
-    .line 8
-    :goto_0
-    iget-object v0, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A00:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 8
     .line 9
     .line 10
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iget-object v0, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A02:Ljava/util/Set;
 
     .line 11
     .line 12
-    .line 13
-    iget-object v0, p0, Lcom/facebook/search/sts/common/SearchKeywordStructuredBadgeInfo;->A02:Ljava/util/Set;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
+    .line 13
     .line 14
     .line 15
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
-
-    .line 16
-    .line 17
-    .line 18
     move-result-object v1
 
-    .line 19
-    :goto_1
+    .line 16
+    :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 20
-    .line 21
-    .line 22
+    .line 17
+    .line 18
+    .line 19
     move-result v0
 
-    .line 23
-    if-eqz v0, :cond_1
+    .line 20
+    if-eqz v0, :cond_0
 
+    .line 21
+    .line 22
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
+
+    .line 23
     .line 24
     .line 25
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
-
-    .line 26
-    .line 27
-    .line 28
-    goto :goto_1
-
-    .line 29
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 30
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 31
-    .line 32
-    .line 33
-    invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    .line 34
-    .line 35
-    .line 36
     goto :goto_0
 
-    .line 37
-    :cond_1
+    .line 26
+    :cond_0
     return-void
 .end method

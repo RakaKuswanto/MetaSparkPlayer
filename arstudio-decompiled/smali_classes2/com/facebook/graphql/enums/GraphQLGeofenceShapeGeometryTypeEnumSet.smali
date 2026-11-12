@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0z()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A13()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -67,55 +67,56 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "WIFI_AREA"
+    const-string/jumbo v0, "WIFI_AREA"
 
     .line 26
     .line 27
+    .line 28
     aput-object v0, v2, v1
 
-    .line 28
     .line 29
+    .line 30
     const/4 v1, 0x5
 
-    .line 30
+    .line 31
     const-string v0, "BLE_AREA"
 
-    .line 31
     .line 32
+    .line 33
     aput-object v0, v2, v1
 
-    .line 33
     .line 34
+    .line 35
     const/4 v1, 0x6
 
-    .line 35
+    .line 36
     const-string v0, "RF_AREA"
 
-    .line 36
     .line 37
+    .line 38
     aput-object v0, v2, v1
 
-    .line 38
     .line 39
+    .line 40
     const/4 v1, 0x7
 
-    .line 40
+    .line 41
     const-string v0, "CIRCLE_RF_HYBRID"
 
-    .line 41
     .line 42
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 43
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 44
     .line 45
+    .line 46
     move-result-object v0
 
-    .line 46
+    .line 47
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLGeofenceShapeGeometryTypeEnumSet;->A00:Ljava/util/Set;
 
-    .line 47
     .line 48
+    .line 49
     return-void
 .end method
 

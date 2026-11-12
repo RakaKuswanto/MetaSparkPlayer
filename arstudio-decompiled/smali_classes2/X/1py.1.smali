@@ -1,17 +1,20 @@
-.class public final LX/1py;
-.super LX/1pH;
+.class public abstract LX/1py;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/http/protocol/ApiErrorResult;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1}, LX/1pH;-><init>(Lcom/facebook/http/protocol/ApiErrorResult;)V
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method

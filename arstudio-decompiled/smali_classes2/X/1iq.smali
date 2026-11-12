@@ -1,183 +1,172 @@
-.class public final LX/1iq;
+.class public final LX/1iQ;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static A02:Ljava/lang/String;
-
-
 # instance fields
-.field public final A00:LX/1Nm;
+.field public final A00:LX/14d;
 
-.field public final A01:LX/1Nw;
+.field public final A01:Ljava/lang/String;
+
+.field public final A02:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>(LX/14d;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/1iq;->A01:LX/1Nw;
+    iput-boolean p3, p0, LX/1iQ;->A02:Z
 
-    .line 4
-    .line 5
-    invoke-static {}, LX/1Nl;->A01()LX/1Nm;
+    const-string/jumbo v0, "playerOriginSource"
 
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 9
-    iput-object v0, p0, LX/1iq;->A00:LX/1Nm;
+    iput-object p1, p0, LX/1iQ;->A00:LX/14d;
 
-    .line 10
-    .line 11
+    const-string/jumbo v0, "videoId"
+
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p2, p0, LX/1iQ;->A01:Ljava/lang/String;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(LX/3t9;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     .line 0
-    const/4 v0, 0x0
+    const/4 v3, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    if-eq p0, p1, :cond_1
 
     .line 2
     .line 3
-    .line 4
-    if-eqz p3, :cond_0
+    instance-of v0, p1, LX/1iQ;
 
+    .line 4
     .line 5
+    const/4 v2, 0x0
+
     .line 6
-    sput-object p3, LX/1iq;->A02:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
     .line 7
     .line 8
-    :cond_0
-    if-nez p2, :cond_1
+    check-cast p1, LX/1iQ;
 
     .line 9
     .line 10
-    const-string p2, ""
+    iget-boolean v1, p0, LX/1iQ;->A02:Z
 
     .line 11
     .line 12
-    :cond_1
-    sget-object v0, LX/1iq;->A02:Ljava/lang/String;
+    iget-boolean v0, p1, LX/1iQ;->A02:Z
 
     .line 13
     .line 14
-    if-nez v0, :cond_2
+    if-ne v1, v0, :cond_0
 
     .line 15
     .line 16
-    invoke-static {}, LX/0Ye;->A0R()Ljava/lang/String;
+    iget-object v1, p0, LX/1iQ;->A00:LX/14d;
 
     .line 17
     .line 18
-    .line 19
-    move-result-object v0
+    iget-object v0, p1, LX/1iQ;->A00:LX/14d;
 
+    .line 19
     .line 20
-    sput-object v0, LX/1iq;->A02:Ljava/lang/String;
+    if-ne v1, v0, :cond_0
 
     .line 21
     .line 22
-    :cond_2
-    iget-object v0, p0, LX/1iq;->A00:LX/1Nm;
+    iget-object v1, p0, LX/1iQ;->A01:Ljava/lang/String;
 
     .line 23
     .line 24
-    invoke-static {v0}, LX/1Nm;->A04(LX/1Nm;)LX/0Af;
+    iget-object v0, p1, LX/1iQ;->A01:Ljava/lang/String;
 
     .line 25
     .line 26
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 27
-    move-result-object v1
-
     .line 28
-    const-string/jumbo v0, "platform_login_iab_oauth_event"
-
     .line 29
-    .line 30
-    .line 31
-    invoke-interface {v1, v0}, LX/0Af;->A4R(Ljava/lang/String;)LX/0Ah;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v2
-
-    .line 35
-    invoke-interface {v2}, LX/0Ah;->isSampled()Z
-
-    .line 36
-    .line 37
-    .line 38
     move-result v0
 
-    .line 39
-    if-eqz v0, :cond_3
+    .line 30
+    if-nez v0, :cond_1
 
-    .line 40
-    .line 41
-    invoke-virtual {p1}, LX/3t9;->getEventName()Ljava/lang/String;
+    .line 31
+    .line 32
+    :cond_0
+    return v2
 
-    .line 42
-    .line 43
-    .line 44
-    move-result-object v1
+    .line 33
+    :cond_1
+    return v3
+.end method
 
-    .line 45
-    const-string v0, "event"
+.method public final hashCode()I
+    .locals 2
 
-    .line 46
-    .line 47
-    invoke-interface {v2, v0, v1}, LX/0Ah;->A5H(Ljava/lang/String;Ljava/lang/String;)V
+    .line 0
+    iget-boolean v0, p0, LX/1iQ;->A02:Z
 
-    .line 48
-    .line 49
-    .line 50
-    const-string/jumbo v0, "platform_app_id"
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/1O4;->A03(Z)I
 
-    .line 51
-    .line 52
-    .line 53
-    invoke-interface {v2, v0, p2}, LX/0Ah;->A5H(Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    .line 4
+    .line 5
+    move-result v1
 
-    .line 54
-    .line 55
-    .line 56
-    sget-object v1, LX/1iq;->A02:Ljava/lang/String;
+    .line 6
+    iget-object v0, p0, LX/1iQ;->A00:LX/14d;
 
-    .line 57
-    .line 58
-    const-string/jumbo v0, "logger_id"
+    .line 7
+    .line 8
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
-    .line 59
-    .line 60
-    .line 61
-    invoke-interface {v2, v0, v1}, LX/0Ah;->A5H(Ljava/lang/String;Ljava/lang/String;)V
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
 
-    .line 62
-    .line 63
-    .line 64
-    invoke-interface {v2}, LX/0Ah;->AS9()V
+    .line 12
+    mul-int/lit8 v1, v1, 0x1f
 
-    .line 65
-    .line 66
-    .line 67
-    :cond_3
-    return-void
+    .line 13
+    .line 14
+    add-int/2addr v1, v0
+
+    .line 15
+    iget-object v0, p0, LX/1iQ;->A01:Ljava/lang/String;
+
+    .line 16
+    .line 17
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 18
+    .line 19
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    add-int/2addr v1, v0
+
+    .line 24
+    return v1
 .end method

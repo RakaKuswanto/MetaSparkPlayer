@@ -1,5 +1,5 @@
 .class public Lcom/google/common/collect/Multisets$ImmutableEntry;
-.super LX/1g2;
+.super LX/22t;
 .source ""
 
 # interfaces
@@ -19,9 +19,19 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "element",
+            "count"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1g2;-><init>()V
+    invoke-direct {p0}, LX/22t;-><init>()V
 
     .line 1
     .line 2
@@ -34,14 +44,15 @@
 
     .line 6
     .line 7
-    const-string v0, "count"
+    const-string/jumbo v0, "count"
 
     .line 8
     .line 9
-    invoke-static {p2, v0}, LX/1dQ;->A00(ILjava/lang/String;)V
-
     .line 10
+    invoke-static {p2, v0}, LX/1rB;->A00(ILjava/lang/String;)V
+
     .line 11
     .line 12
+    .line 13
     return-void
 .end method

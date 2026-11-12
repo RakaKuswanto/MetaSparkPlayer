@@ -35,11 +35,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5c
+    const/16 v0, 0x59
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -67,7 +67,7 @@
 
     const-string/jumbo v0, "word"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionTokenParam;->A02:Ljava/lang/String;
 
@@ -83,7 +83,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -95,7 +95,7 @@
 
     .line 8
     .line 9
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 10
     .line 11
@@ -214,7 +214,7 @@
 
     .line 31
     .line 32
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 33
     .line 34
@@ -250,44 +250,51 @@
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 7
     .line 8
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 9
-    move-result v1
-
     .line 10
-    iget v0, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionTokenParam;->A01:I
-
     .line 11
-    .line 12
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v0
 
-    .line 13
-    .line 14
+    .line 12
     add-int/2addr v1, v0
 
+    .line 13
+    iget v0, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionTokenParam;->A01:I
+
+    .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionTokenParam;->A02:Ljava/lang/String;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 16
     .line 17
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 18
-    .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
     add-int/2addr v1, v0
 
+    .line 18
+    iget-object v0, p0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionTokenParam;->A02:Ljava/lang/String;
+
+    .line 19
+    .line 20
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 21
+    .line 22
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 23
     .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    add-int/2addr v1, v0
+
+    .line 27
     return v1
 .end method
 

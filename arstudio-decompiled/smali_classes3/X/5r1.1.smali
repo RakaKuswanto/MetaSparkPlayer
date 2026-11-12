@@ -2,67 +2,74 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SurfaceVideoEncoderImpl$1"
-
 
 # instance fields
-.field public final synthetic A00:LX/5qy;
+.field public A00:J
 
-.field public final synthetic A01:LX/5qv;
+.field public A01:J
+
+.field public A02:LX/2Tp;
+
+.field public final A03:I
+
+.field public final A04:I
+
+.field public final A05:I
+
+.field public final A06:I
+
+.field public final A07:I
+
+.field public final A08:J
+
+.field public final A09:J
 
 
 # direct methods
-.method public constructor <init>(LX/5qy;LX/5qv;)V
-    .locals 0
+.method public constructor <init>(IIIIIJ)V
+    .locals 2
 
     .line 0
-    iput-object p2, p0, LX/5r1;->A01:LX/5qv;
-
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/5r1;->A00:LX/5qy;
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/5r1;->A01:LX/5qv;
-
     .line 1
     .line 2
-    iget-object v1, p0, LX/5r1;->A00:LX/5qy;
-
     .line 3
-    .line 4
-    invoke-virtual {v1}, LX/5qy;->A00()Landroid/os/Handler;
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
+    .line 4
     .line 5
     .line 6
+    move-result-wide v0
+
     .line 7
-    move-result-object v0
+    iput-wide v0, p0, LX/5r1;->A08:J
 
     .line 8
-    invoke-static {v0, v1, v2}, LX/5qv;->A01(Landroid/os/Handler;LX/5ow;LX/5qv;)V
-
     .line 9
+    iput-wide p6, p0, LX/5r1;->A09:J
+
     .line 10
     .line 11
+    iput p1, p0, LX/5r1;->A05:I
+
+    .line 12
+    .line 13
+    iput p2, p0, LX/5r1;->A04:I
+
+    .line 14
+    .line 15
+    iput p3, p0, LX/5r1;->A03:I
+
+    .line 16
+    .line 17
+    iput p4, p0, LX/5r1;->A07:I
+
+    .line 18
+    .line 19
+    iput p5, p0, LX/5r1;->A06:I
+
+    .line 20
+    .line 21
     return-void
 .end method

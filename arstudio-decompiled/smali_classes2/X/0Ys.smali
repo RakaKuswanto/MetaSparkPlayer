@@ -1,206 +1,392 @@
-.class public final LX/0Ys;
+.class public final LX/0YS;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = 0x334de43c224a1L
+.implements LX/0Zu;
 
 
 # instance fields
-.field public final delayBytesInterval:I
+.field public A00:Ljava/lang/Object;
 
-.field public final delayFirstChunkMs:J
-
-.field public final enableSsBweForLive:Z
-
-.field public final enableSsBweForVod:Z
-
-.field public final highConfidenceBweKeyForLive:Ljava/lang/String;
-
-.field public final highConfidenceBweKeyForVod:Ljava/lang/String;
-
-.field public final highConfidenceBwePercentileForLive:I
-
-.field public final highConfidenceBwePercentileForVod:I
-
-.field public final lowConfidenceBweKeyForLive:Ljava/lang/String;
-
-.field public final lowConfidenceBweKeyForVod:Ljava/lang/String;
-
-.field public final lowConfidenceBwePercentileForLive:I
-
-.field public final lowConfidenceBwePercentileForVod:I
-
-.field public final minBufferToDelayMs:J
-
-.field public final regularConfidenceBweKeyForLive:Ljava/lang/String;
-
-.field public final regularConfidenceBweKeyForVod:Ljava/lang/String;
-
-.field public final ssBweHeaderToUseForLive:Ljava/lang/String;
-
-.field public final ssBweHeaderToUseForVod:Ljava/lang/String;
-
-.field public final ssbweScaleCoefficient:D
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>(LX/0Yr;)V
-    .locals 2
+.method public constructor <init>(LX/0bU;I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, LX/0YS;->A01:I
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/0YS;->A00:Ljava/lang/Object;
+
     .line 3
-    iget-wide v0, p1, LX/0Yr;->A06:J
-
     .line 4
-    .line 5
-    iput-wide v0, p0, LX/0Ys;->delayFirstChunkMs:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     .line 6
     .line 7
-    iget-object v0, p1, LX/0Yr;->A0E:Ljava/lang/String;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final AUZ(LX/0bI;)V
+    .locals 4
+
+    .line 0
+    iget v0, p0, LX/0YS;->A01:I
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_5
+
+    .line 3
+    .line 4
+    iget-object v2, p0, LX/0YS;->A00:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    check-cast v2, LX/0bU;
+
+    .line 7
     .line 8
+    iget-object v0, v2, LX/0bU;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
+
     .line 9
-    iput-object v0, p0, LX/0Ys;->ssBweHeaderToUseForLive:Ljava/lang/String;
-
     .line 10
-    .line 11
-    iget-object v0, p1, LX/0Yr;->A0F:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
+    .line 11
     .line 12
     .line 13
-    iput-object v0, p0, LX/0Ys;->ssBweHeaderToUseForVod:Ljava/lang/String;
+    move-result v0
 
     .line 14
+    if-nez v0, :cond_1
+
     .line 15
-    iget v0, p1, LX/0Yr;->A01:I
-
     .line 16
+    iget-object v3, p1, LX/0bI;->A00:LX/0bW;
+
     .line 17
-    iput v0, p0, LX/0Ys;->delayBytesInterval:I
-
     .line 18
+    if-eqz v3, :cond_4
+
     .line 19
-    iget-wide v0, p1, LX/0Yr;->A07:J
-
     .line 20
+    iget-object v1, v3, LX/0bW;->A03:Ljava/lang/String;
+
     .line 21
-    iput-wide v0, p0, LX/0Ys;->minBufferToDelayMs:J
-
     .line 22
+    if-nez v1, :cond_0
+
     .line 23
-    iget v0, p1, LX/0Yr;->A04:I
-
     .line 24
+    iget-object v0, v3, LX/0bW;->A02:LX/0ax;
+
     .line 25
-    iput v0, p0, LX/0Ys;->lowConfidenceBwePercentileForLive:I
-
     .line 26
-    .line 27
-    iget v0, p1, LX/0Yr;->A05:I
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
 
+    .line 27
     .line 28
     .line 29
-    iput v0, p0, LX/0Ys;->lowConfidenceBwePercentileForVod:I
+    move-result-object v1
 
     .line 30
-    .line 31
-    iget v0, p1, LX/0Yr;->A02:I
+    :cond_0
+    const-string/jumbo v0, "authorization_pending"
 
+    .line 31
     .line 32
     .line 33
-    iput v0, p0, LX/0Ys;->highConfidenceBwePercentileForLive:I
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 34
     .line 35
-    iget v0, p1, LX/0Yr;->A03:I
-
     .line 36
+    move-result v0
+
     .line 37
-    iput v0, p0, LX/0Ys;->highConfidenceBwePercentileForVod:I
+    if-nez v0, :cond_3
 
     .line 38
     .line 39
-    iget-object v0, p1, LX/0Yr;->A08:Ljava/lang/String;
+    const-string/jumbo v0, "slow_down"
 
     .line 40
     .line 41
-    iput-object v0, p0, LX/0Ys;->highConfidenceBweKeyForLive:Ljava/lang/String;
-
     .line 42
-    .line 43
-    iget-object v0, p1, LX/0Yr;->A09:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 43
     .line 44
     .line 45
-    iput-object v0, p0, LX/0Ys;->highConfidenceBweKeyForVod:Ljava/lang/String;
+    move-result v0
 
     .line 46
+    if-nez v0, :cond_3
+
     .line 47
-    iget-object v0, p1, LX/0Yr;->A0A:Ljava/lang/String;
-
     .line 48
-    .line 49
-    iput-object v0, p0, LX/0Ys;->lowConfidenceBweKeyForLive:Ljava/lang/String;
+    const-string/jumbo v0, "authorization_declined"
 
+    .line 49
     .line 50
     .line 51
-    iget-object v0, p1, LX/0Yr;->A0B:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 52
     .line 53
-    iput-object v0, p0, LX/0Ys;->lowConfidenceBweKeyForVod:Ljava/lang/String;
-
     .line 54
+    move-result v0
+
     .line 55
-    iget-object v0, p1, LX/0Yr;->A0C:Ljava/lang/String;
+    if-nez v0, :cond_2
 
     .line 56
     .line 57
-    iput-object v0, p0, LX/0Ys;->regularConfidenceBweKeyForLive:Ljava/lang/String;
+    const-string/jumbo v0, "code_expired"
 
     .line 58
     .line 59
-    iget-object v0, p1, LX/0Yr;->A0D:Ljava/lang/String;
-
     .line 60
-    .line 61
-    iput-object v0, p0, LX/0Ys;->regularConfidenceBweKeyForVod:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 61
     .line 62
     .line 63
-    iget-wide v0, p1, LX/0Yr;->A00:D
+    move-result v0
 
     .line 64
+    if-nez v0, :cond_2
+
     .line 65
-    iput-wide v0, p0, LX/0Ys;->ssbweScaleCoefficient:D
-
     .line 66
+    iget-object v0, v3, LX/0bW;->A02:LX/0ax;
+
     .line 67
-    iget-boolean v0, p1, LX/0Yr;->A0G:Z
-
     .line 68
-    .line 69
-    iput-boolean v0, p0, LX/0Ys;->enableSsBweForLive:Z
+    invoke-static {v0, v2}, LX/0bU;->A02(LX/0ax;LX/0bU;)V
 
+    .line 69
     .line 70
     .line 71
-    iget-boolean v0, p1, LX/0Yr;->A0H:Z
+    :cond_1
+    return-void
 
     .line 72
-    .line 73
-    iput-boolean v0, p0, LX/0Ys;->enableSsBweForVod:Z
+    :cond_2
+    invoke-static {v2}, LX/0bU;->A06(LX/0bU;)V
 
+    .line 73
     .line 74
     .line 75
+    return-void
+
+    .line 76
+    :cond_3
+    invoke-static {v2}, LX/0bU;->A08(LX/0bU;)V
+
+    .line 77
+    .line 78
+    .line 79
+    return-void
+
+    .line 80
+    :cond_4
+    :try_start_0
+    iget-object v1, p1, LX/0bI;->A04:Lorg/json/JSONObject;
+
+    .line 81
+    .line 82
+    const-string/jumbo v0, "access_token"
+
+    .line 83
+    .line 84
+    .line 85
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v0
+
+    .line 89
+    invoke-static {v2, v0}, LX/0bU;->A09(LX/0bU;Ljava/lang/String;)V
+
+    .line 90
+    .line 91
+    .line 92
+    return-void
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 93
+    :catch_0
+    move-exception v1
+
+    .line 94
+    new-instance v0, LX/0ax;
+
+    .line 95
+    .line 96
+    invoke-direct {v0, v1}, LX/0ax;-><init>(Ljava/lang/Throwable;)V
+
+    .line 97
+    .line 98
+    .line 99
+    invoke-static {v0, v2}, LX/0bU;->A02(LX/0ax;LX/0bU;)V
+
+    .line 100
+    .line 101
+    .line 102
+    return-void
+
+    .line 103
+    :cond_5
+    iget-object v0, p1, LX/0bI;->A00:LX/0bW;
+
+    .line 104
+    .line 105
+    if-eqz v0, :cond_6
+
+    .line 106
+    .line 107
+    iget-object v1, p0, LX/0YS;->A00:Ljava/lang/Object;
+
+    .line 108
+    .line 109
+    check-cast v1, LX/0bU;
+
+    .line 110
+    .line 111
+    iget-object v0, v0, LX/0bW;->A02:LX/0ax;
+
+    .line 112
+    .line 113
+    invoke-static {v0, v1}, LX/0bU;->A02(LX/0ax;LX/0bU;)V
+
+    .line 114
+    .line 115
+    .line 116
+    return-void
+
+    .line 117
+    :cond_6
+    iget-object v1, p1, LX/0bI;->A04:Lorg/json/JSONObject;
+
+    .line 118
+    .line 119
+    new-instance v2, Lcom/facebook/login/DeviceAuthDialog$RequestState;
+
+    .line 120
+    .line 121
+    invoke-direct {v2}, Lcom/facebook/login/DeviceAuthDialog$RequestState;-><init>()V
+
+    .line 122
+    .line 123
+    .line 124
+    :try_start_1
+    const-string/jumbo v0, "user_code"
+
+    .line 125
+    .line 126
+    .line 127
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 128
+    .line 129
+    .line 130
+    move-result-object v0
+
+    .line 131
+    iput-object v0, v2, Lcom/facebook/login/DeviceAuthDialog$RequestState;->A03:Ljava/lang/String;
+
+    .line 132
+    .line 133
+    const-string/jumbo v0, "code"
+
+    .line 134
+    .line 135
+    .line 136
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v0
+
+    .line 140
+    iput-object v0, v2, Lcom/facebook/login/DeviceAuthDialog$RequestState;->A02:Ljava/lang/String;
+
+    .line 141
+    .line 142
+    const-string/jumbo v0, "interval"
+
+    .line 143
+    .line 144
+    .line 145
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+
+    .line 146
+    .line 147
+    .line 148
+    move-result-wide v0
+
+    .line 149
+    iput-wide v0, v2, Lcom/facebook/login/DeviceAuthDialog$RequestState;->A00:J
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 150
+    .line 151
+    iget-object v0, p0, LX/0YS;->A00:Ljava/lang/Object;
+
+    .line 152
+    .line 153
+    check-cast v0, LX/0bU;
+
+    .line 154
+    .line 155
+    invoke-static {v2, v0}, LX/0bU;->A05(Lcom/facebook/login/DeviceAuthDialog$RequestState;LX/0bU;)V
+
+    .line 156
+    .line 157
+    .line 158
+    return-void
+
+    .line 159
+    :catch_1
+    move-exception v2
+
+    .line 160
+    iget-object v1, p0, LX/0YS;->A00:Ljava/lang/Object;
+
+    .line 161
+    .line 162
+    check-cast v1, LX/0bU;
+
+    .line 163
+    .line 164
+    new-instance v0, LX/0ax;
+
+    .line 165
+    .line 166
+    invoke-direct {v0, v2}, LX/0ax;-><init>(Ljava/lang/Throwable;)V
+
+    .line 167
+    .line 168
+    .line 169
+    invoke-static {v0, v1}, LX/0bU;->A02(LX/0ax;LX/0bU;)V
+
+    .line 170
+    .line 171
+    .line 172
     return-void
 .end method

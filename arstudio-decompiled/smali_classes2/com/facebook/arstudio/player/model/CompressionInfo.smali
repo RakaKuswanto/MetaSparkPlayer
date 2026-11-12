@@ -23,11 +23,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x3d
+    const/16 v0, 0x3c
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -79,7 +79,7 @@
 
     .line 16
     .line 17
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {p1, v0}, LX/0X4;->A0e(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 18
     .line 19
@@ -87,22 +87,14 @@
     move-result-object v0
 
     .line 21
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    check-cast v0, Ljava/lang/Boolean;
 
     .line 22
     .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    check-cast v0, Ljava/lang/Boolean;
-
-    .line 26
-    .line 27
     iput-object v0, p0, Lcom/facebook/arstudio/player/model/CompressionInfo;->A00:Ljava/lang/Boolean;
 
-    .line 28
-    .line 29
+    .line 24
+    .line 25
     return-void
 .end method
 
@@ -128,46 +120,6 @@
     .line 268435464
     .line 268435465
     return-void
-.end method
-
-.method public static A00(LX/1Rw;Ljava/lang/String;)Lcom/facebook/arstudio/player/model/CompressionInfo;
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0}, LX/1Rw;->A02()Ljava/lang/String;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    invoke-virtual {p0}, LX/1Rw;->A03()Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    new-instance v0, Lcom/facebook/arstudio/player/model/CompressionInfo;
-
-    .line 13
-    .line 14
-    invoke-direct {v0, v1, p1, v2}, Lcom/facebook/arstudio/player/model/CompressionInfo;-><init>(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 15
-    .line 16
-    .line 17
-    return-object v0
 .end method
 
 

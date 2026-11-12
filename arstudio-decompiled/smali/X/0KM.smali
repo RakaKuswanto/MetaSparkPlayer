@@ -1,172 +1,90 @@
-.class public final LX/0KM;
-.super LX/0Du;
+.class public abstract LX/0Km;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/0Du;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00()Ljava/lang/Class;
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    const-class v0, Ljava/lang/Long;
+    new-instance v0, LX/0HJ;
 
     .line 1
     .line 2
-    return-object v0
-.end method
-
-.method public final bridge synthetic A01(Landroid/content/SharedPreferences;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    check-cast p2, Ljava/lang/Number;
-
-    .line 1
-    .line 2
-    if-nez p2, :cond_0
+    invoke-direct {v0}, LX/0HJ;-><init>()V
 
     .line 3
     .line 4
-    const-wide v0, 0x7fffffffffffffffL
-
     .line 5
+    invoke-static {v0}, LX/0Kr;->A00(LX/0LF;)V
+
     .line 6
     .line 7
     .line 8
-    .line 9
-    :goto_0
-    invoke-interface {p1, p3, v0, v1}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-wide v0
-
-    .line 13
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    return-object v0
-
-    .line 18
-    :cond_0
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-wide v0
-
-    .line 22
-    goto :goto_0
-.end method
-
-.method public final bridge synthetic A02(Landroid/os/Bundle;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    check-cast p2, Ljava/lang/Number;
-
-    .line 1
-    .line 2
-    if-nez p2, :cond_0
-
-    .line 3
-    .line 4
-    const-wide v0, 0x7fffffffffffffffL
-
-    .line 5
-    .line 6
-    .line 7
-    .line 8
-    .line 9
-    :goto_0
-    invoke-virtual {p1, p3, v0, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-wide v0
-
-    .line 13
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    return-object v0
-
-    .line 18
-    :cond_0
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-wide v0
-
-    .line 22
-    goto :goto_0
-.end method
-
-.method public final bridge synthetic A03(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 2
-
-    .line 0
-    invoke-static {p3}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-wide v0
-
-    .line 4
-    invoke-interface {p1, p2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
-.method public final bridge synthetic A04(Landroid/os/Bundle;Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 2
+.method public static A00()V
+    .locals 5
 
     .line 0
-    invoke-static {p2}, LX/002;->A01(Ljava/lang/Object;)J
+    const-wide/16 v3, 0x40
 
     .line 1
     .line 2
-    .line 3
-    move-result-wide v0
+    sget-wide v0, LX/0Kr;->A01:J
 
+    .line 3
     .line 4
-    invoke-virtual {p1, p3, v0, v1}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    and-long/2addr v3, v0
 
     .line 5
+    const-wide/16 v1, 0x0
+
     .line 6
     .line 7
+    cmp-long v0, v3, v1
+
+    .line 8
+    .line 9
+    if-eqz v0, :cond_0
+
+    .line 10
+    .line 11
+    invoke-static {}, Landroid/os/Process;->myTid()I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v2
+
+    .line 15
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    const-string v0, "thread_name"
+
+    .line 24
+    .line 25
+    invoke-static {v0, v2, v1}, Lcom/facebook/systrace/Systrace;->A0A(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 26
+    .line 27
+    .line 28
+    :cond_0
     return-void
 .end method

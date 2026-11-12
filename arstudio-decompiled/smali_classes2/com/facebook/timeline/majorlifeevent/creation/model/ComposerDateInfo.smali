@@ -45,11 +45,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x25
+    const/16 v0, 0x13
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -65,29 +65,34 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 268435456
-    sget-object v0, Lcom/facebook/uicontrib/datepicker/Date;->A00:Lcom/facebook/uicontrib/datepicker/Date;
+    sget-object v1, Lcom/facebook/uicontrib/datepicker/Date;->A00:Lcom/facebook/uicontrib/datepicker/Date;
 
     .line 268435457
     .line 268435458
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v1}, LX/0WV;->A05(Ljava/lang/Object;)V
 
     .line 268435459
     .line 268435460
     .line 268435461
-    iput-object v0, p0, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->startDate:Lcom/facebook/uicontrib/datepicker/Date;
-
-    .line 268435462
-    .line 268435463
     const/4 v0, 0x0
 
+    .line 268435462
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435463
     .line 268435464
+    .line 268435465
+    iput-object v1, p0, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->startDate:Lcom/facebook/uicontrib/datepicker/Date;
+
+    .line 268435466
+    .line 268435467
     iput-boolean v0, p0, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->isCurrent:Z
 
-    .line 268435465
-    .line 268435466
+    .line 268435468
+    .line 268435469
     return-void
 .end method
 
@@ -104,7 +109,7 @@
 
     .line 4
     .line 5
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 6
     .line 7
@@ -124,7 +129,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 16
     .line 17
@@ -140,7 +145,7 @@
 
     .line 22
     :cond_0
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
 
     .line 23
     .line 24
@@ -161,6 +166,118 @@
     return v0
 .end method
 
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_0
+
+    .line 2
+    .line 3
+    instance-of v0, p1, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_1
+
+    .line 6
+    .line 7
+    iget-object v1, p0, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->startDate:Lcom/facebook/uicontrib/datepicker/Date;
+
+    .line 8
+    .line 9
+    check-cast p1, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;
+
+    .line 10
+    .line 11
+    iget-object v0, p1, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->startDate:Lcom/facebook/uicontrib/datepicker/Date;
+
+    .line 12
+    .line 13
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    if-eqz v0, :cond_1
+
+    .line 18
+    .line 19
+    iget-boolean v1, p0, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->isCurrent:Z
+
+    .line 20
+    .line 21
+    iget-boolean v0, p1, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->isCurrent:Z
+
+    .line 22
+    .line 23
+    if-ne v1, v0, :cond_1
+
+    .line 24
+    .line 25
+    :cond_0
+    return v2
+
+    .line 26
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 27
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    .line 0
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
+
+    .line 4
+    iget-object v1, p0, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->startDate:Lcom/facebook/uicontrib/datepicker/Date;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    iget-boolean v0, p0, Lcom/facebook/timeline/majorlifeevent/creation/model/ComposerDateInfo;->isCurrent:Z
+
+    .line 10
+    .line 11
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    invoke-static {v2, v0}, LX/0X2;->A0D([Ljava/lang/Object;Ljava/lang/Object;)I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    return v0
+.end method
+
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
@@ -168,7 +285,7 @@
     const/4 v1, 0x0
 
     .line 1
-    invoke-static {p1, v1}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v1}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

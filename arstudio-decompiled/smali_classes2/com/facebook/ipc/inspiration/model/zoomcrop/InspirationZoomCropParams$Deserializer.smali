@@ -18,8 +18,8 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
-    .locals 12
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
+    .locals 13
 
     .line 0
     const/4 v10, 0x0
@@ -28,436 +28,476 @@
     const/4 v11, 0x0
 
     .line 2
-    const/4 v4, 0x0
+    const/4 v12, 0x0
 
     .line 3
-    const/4 v8, 0x0
+    const/4 v4, 0x0
 
     .line 4
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
     .line 5
-    const/4 v5, 0x0
+    const/4 v9, 0x0
 
     .line 6
-    const/4 v7, 0x0
+    const/4 v5, 0x0
 
     .line 7
-    const/high16 v2, 0x3f800000    # 1.0f
+    const/4 v7, 0x0
 
     .line 8
+    const/high16 v2, 0x3f800000    # 1.0f
+
     .line 9
+    .line 10
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 10
     .line 11
+    .line 12
     const/high16 v6, 0x3f800000    # 1.0f
 
-    .line 12
     .line 13
+    .line 14
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
-    .line 14
     .line 15
     .line 16
-    move-result-object v1
-
     .line 17
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    move-result-object v1
 
     .line 18
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
+
     .line 19
+    .line 20
     if-ne v1, v0, :cond_2
 
-    .line 20
     .line 21
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
-
     .line 22
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
+
     .line 23
     .line 24
-    move-result-object v1
-
     .line 25
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    move-result-object v1
 
     .line 26
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
     .line 27
     .line 28
-    move-result v0
-
     .line 29
-    sparse-switch v0, :sswitch_data_0
+    move-result v0
 
     .line 30
+    sparse-switch v0, :sswitch_data_0
+
     .line 31
     .line 32
-    :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
-
     .line 33
+    :cond_1
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
+
     .line 34
     .line 35
+    .line 36
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
-    .line 36
     .line 37
     .line 38
+    .line 39
     move-result-object v1
 
-    .line 39
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
-
     .line 40
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
+
     .line 41
+    .line 42
     if-ne v1, v0, :cond_0
 
-    .line 42
     .line 43
+    .line 44
     goto/16 :goto_1
 
-    .line 44
     .line 45
-    :sswitch_0
-    const-string/jumbo v0, "left_percentage"
-
     .line 46
+    :sswitch_0
+    const-string/jumbo v0, "rotation_degrees"
+
     .line 47
     .line 48
+    .line 49
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 49
     .line 50
     .line 51
-    move-result v0
-
     .line 52
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 53
-    .line 54
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    if-eqz v0, :cond_1
 
+    .line 54
     .line 55
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
     .line 56
     .line 57
-    move-result v4
-
     .line 58
-    goto :goto_0
+    move-result v5
 
     .line 59
-    :sswitch_1
-    const-string/jumbo v0, "is_requesting_reset_toggle"
+    goto :goto_0
 
     .line 60
+    :sswitch_1
+    const-string/jumbo v0, "top_percentage"
+
     .line 61
     .line 62
+    .line 63
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 63
     .line 64
     .line 65
-    move-result v0
-
     .line 66
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 67
-    .line 68
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    if-eqz v0, :cond_1
 
+    .line 68
     .line 69
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
     .line 70
     .line 71
-    move-result v10
-
     .line 72
-    goto :goto_0
+    move-result v7
 
     .line 73
-    :sswitch_2
-    const-string/jumbo v0, "offset_x"
+    goto :goto_0
 
     .line 74
+    :sswitch_2
+    const-string/jumbo v0, "is_smart_crop"
+
     .line 75
     .line 76
+    .line 77
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 77
     .line 78
     .line 79
-    move-result v0
-
     .line 80
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 81
-    .line 82
-    invoke-virtual {p1}, LX/27m;->A0i()I
+    if-eqz v0, :cond_1
 
+    .line 82
     .line 83
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
     .line 84
     .line 85
-    move-result v8
-
     .line 86
-    goto :goto_0
+    move-result v12
 
     .line 87
-    :sswitch_3
-    const-string/jumbo v0, "offset_y"
-
-    .line 88
-    .line 89
-    .line 90
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 91
-    .line 92
-    .line 93
-    move-result v0
-
-    .line 94
-    if-eqz v0, :cond_1
-
-    .line 95
-    .line 96
-    invoke-virtual {p1}, LX/27m;->A0i()I
-
-    .line 97
-    .line 98
-    .line 99
-    move-result v9
-
-    .line 100
     goto :goto_0
 
-    .line 101
-    :sswitch_4
-    const-string v0, "auto_zoom_scale"
+    .line 88
+    :sswitch_3
+    const-string/jumbo v0, "full_zoom_scale"
 
-    .line 102
-    .line 103
+    .line 89
+    .line 90
+    .line 91
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 104
-    .line 105
-    .line 106
+    .line 92
+    .line 93
+    .line 94
     move-result v0
 
-    .line 107
+    .line 95
     if-eqz v0, :cond_1
 
+    .line 96
+    .line 97
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
+    .line 98
+    .line 99
+    .line 100
+    move-result v3
+
+    .line 101
+    goto :goto_0
+
+    .line 102
+    :sswitch_4
+    const-string/jumbo v0, "scale"
+
+    .line 103
+    .line 104
+    .line 105
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 106
+    .line 107
     .line 108
+    move-result v0
+
     .line 109
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    if-eqz v0, :cond_1
 
     .line 110
     .line 111
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
     .line 112
-    move-result v2
-
     .line 113
-    goto :goto_0
-
     .line 114
-    :sswitch_5
-    const-string/jumbo v0, "scale"
+    move-result v6
 
     .line 115
-    .line 116
-    .line 117
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
+    .line 116
+    :sswitch_5
+    const-string/jumbo v0, "auto_zoom_scale"
+
+    .line 117
     .line 118
     .line 119
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 120
+    .line 121
+    .line 122
     move-result v0
 
-    .line 121
-    if-eqz v0, :cond_1
-
-    .line 122
     .line 123
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    if-eqz v0, :cond_1
 
     .line 124
     .line 125
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
     .line 126
-    move-result v6
-
     .line 127
-    goto :goto_0
-
     .line 128
-    :sswitch_6
-    const-string/jumbo v0, "full_zoom_scale"
+    move-result v2
 
     .line 129
-    .line 130
-    .line 131
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
+    .line 130
+    :sswitch_6
+    const-string/jumbo v0, "offset_y"
+
+    .line 131
     .line 132
     .line 133
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 134
+    .line 135
+    .line 136
     move-result v0
 
-    .line 135
-    if-eqz v0, :cond_1
-
-    .line 136
     .line 137
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    if-eqz v0, :cond_1
 
     .line 138
     .line 139
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 140
-    move-result v3
-
     .line 141
-    goto :goto_0
-
     .line 142
-    :sswitch_7
-    const-string/jumbo v0, "is_smart_crop"
+    move-result v9
 
     .line 143
-    .line 144
-    .line 145
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
+    .line 144
+    :sswitch_7
+    const-string/jumbo v0, "offset_x"
+
+    .line 145
     .line 146
     .line 147
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 148
+    .line 149
+    .line 150
     move-result v0
 
-    .line 149
-    if-eqz v0, :cond_1
-
-    .line 150
     .line 151
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    if-eqz v0, :cond_1
 
     .line 152
     .line 153
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 154
-    move-result v11
-
     .line 155
-    goto :goto_0
-
     .line 156
-    :sswitch_8
-    const-string/jumbo v0, "top_percentage"
+    move-result v8
 
     .line 157
-    .line 158
-    .line 159
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
+    .line 158
+    :sswitch_8
+    const-string/jumbo v0, "is_requesting_reset_toggle"
+
+    .line 159
     .line 160
     .line 161
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 162
+    .line 163
+    .line 164
     move-result v0
 
-    .line 163
-    if-eqz v0, :cond_1
-
-    .line 164
     .line 165
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    if-eqz v0, :cond_1
 
     .line 166
     .line 167
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
     .line 168
-    move-result v7
-
     .line 169
-    goto/16 :goto_0
-
     .line 170
+    move-result v11
+
     .line 171
-    :sswitch_9
-    const-string/jumbo v0, "rotation_degrees"
+    goto/16 :goto_0
 
     .line 172
     .line 173
-    .line 174
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_9
+    const-string/jumbo v0, "left_percentage"
 
+    .line 174
     .line 175
     .line 176
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 177
+    .line 178
+    .line 179
     move-result v0
 
-    .line 178
-    if-eqz v0, :cond_1
-
-    .line 179
     .line 180
-    invoke-virtual {p1}, LX/27m;->A0g()F
+    if-eqz v0, :cond_1
 
     .line 181
     .line 182
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
     .line 183
-    move-result v5
-
     .line 184
-    goto/16 :goto_0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 185
+    move-result v4
+
     .line 186
-    :goto_1
-    new-instance v1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+    goto/16 :goto_0
 
     .line 187
     .line 188
-    invoke-direct/range {v1 .. v11}, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;-><init>(FFFFFFIIZZ)V
+    :sswitch_a
+    const-string/jumbo v0, "is_auto_apply"
 
     .line 189
     .line 190
     .line 191
-    return-object v1
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 192
-    :catch_0
-    move-exception v1
-
     .line 193
-    const-class v0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
-
     .line 194
+    move-result v0
+
     .line 195
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    if-eqz v0, :cond_1
 
     .line 196
     .line 197
-    .line 198
-    const/4 v0, 0x0
+    invoke-virtual {p1}, LX/3oD;->A19()Z
 
+    .line 198
     .line 199
+    .line 200
+    move-result v10
+
+    .line 201
+    goto/16 :goto_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 202
+    .line 203
+    :goto_1
+    new-instance v1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+
+    .line 204
+    .line 205
+    invoke-direct/range {v1 .. v12}, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;-><init>(FFFFFFIIZZZ)V
+
+    .line 206
+    .line 207
+    .line 208
+    return-object v1
+
+    .line 209
+    :catch_0
+    move-exception v1
+
+    .line 210
+    const-class v0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+
+    .line 211
+    .line 212
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
+    .line 213
+    .line 214
+    .line 215
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 216
+    .line 217
+    .line 218
+    move-result-object v0
+
+    .line 219
     throw v0
 
-    .line 200
+    .line 220
     :sswitch_data_0
     .sparse-switch
-        -0x6c4ed22e -> :sswitch_0
-        -0x64865205 -> :sswitch_1
-        -0x2d0f6834 -> :sswitch_2
-        -0x2d0f6833 -> :sswitch_3
-        -0x21467592 -> :sswitch_4
-        0x683094a -> :sswitch_5
-        0x14d5798e -> :sswitch_6
-        0x1dbe5d7b -> :sswitch_7
-        0x2af3cfc4 -> :sswitch_8
-        0x3981c366 -> :sswitch_9
+        -0x79f830ed -> :sswitch_a
+        -0x6c4ed22e -> :sswitch_9
+        -0x64865205 -> :sswitch_8
+        -0x2d0f6834 -> :sswitch_7
+        -0x2d0f6833 -> :sswitch_6
+        -0x21467592 -> :sswitch_5
+        0x683094a -> :sswitch_4
+        0x14d5798e -> :sswitch_3
+        0x1dbe5d7b -> :sswitch_2
+        0x2af3cfc4 -> :sswitch_1
+        0x3981c366 -> :sswitch_0
     .end sparse-switch
 .end method

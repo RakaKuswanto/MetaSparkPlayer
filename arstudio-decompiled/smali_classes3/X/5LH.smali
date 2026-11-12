@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract AIR(Ljava/lang/String;)Ljava/lang/Long;
-.end method
-
-.method public abstract APa(LX/6H7;)V
+.method public abstract Ab6(JZZ)V
 .end method

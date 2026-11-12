@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5UA;
+.field public static final Companion:LX/6Aj;
 
 
 # instance fields
@@ -18,16 +18,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5UA;
+    new-instance v0, LX/6Aj;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5UA;-><init>()V
+    invoke-direct {v0}, LX/6Aj;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerDataProviderConfigurationHybrid;->Companion:LX/5UA;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerDataProviderConfigurationHybrid;->Companion:LX/6Aj;
 
     .line 6
     .line 7
@@ -41,7 +41,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -55,11 +55,11 @@
 
     .line 8
     .line 9
-    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/interfaces/MultiplayerDataProviderConfiguration;->mEventInput:LX/5UC;
+    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/interfaces/MultiplayerDataProviderConfiguration;->mEventInput:LX/6Ah;
 
     .line 10
     .line 11
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 12
     .line 13
@@ -68,7 +68,7 @@
 
     .line 15
     .line 16
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputHybrid;-><init>(LX/5UC;)V
+    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputHybrid;-><init>(LX/6Ah;)V
 
     .line 17
     .line 18

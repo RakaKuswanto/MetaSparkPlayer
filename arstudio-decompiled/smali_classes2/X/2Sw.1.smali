@@ -1,247 +1,333 @@
 .class public final LX/2Sw;
-.super Lcom/facebook/realtime/requeststream/RequestStreamClient;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/1yz;
+
+# instance fields
+.field public final A00:LX/0IM;
+
+.field public final A01:LX/0RP;
+
+.field public final A02:LX/0RP;
+
+.field public final A03:LX/0RP;
+
+.field public final A04:LX/0RP;
+
+.field public final A05:LX/0RP;
+
+.field public final A06:LX/0RP;
+
+.field public final A07:LX/0RP;
+
+.field public final A08:LX/0RP;
+
+.field public final A09:LX/0RP;
+
+.field public final A0A:LX/0RP;
+
+.field public final A0B:LX/0RP;
+
+.field public final A0C:LX/0VC;
 
 
 # direct methods
-.method public constructor <init>(LX/1vx;)V
-    .locals 20
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    sget v0, LX/2eq;->AiP:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
     .line 3
+    const/4 v0, 0x0
+
     .line 4
+    invoke-static {p0, v0}, LX/0Xe;->A00(Ljava/lang/Object;I)LX/0Xe;
+
     .line 5
-    move-result-object v8
-
     .line 6
-    check-cast v8, LX/2fK;
-
     .line 7
+    move-result-object v0
+
     .line 8
-    sget v0, LX/2eq;->A6D:I
+    iput-object v0, p0, LX/2Sw;->A0C:LX/0VC;
 
     .line 9
     .line 10
-    const/4 v6, 0x0
+    invoke-static {}, LX/0lf;->A01()LX/0lf;
 
     .line 11
-    invoke-static {v6, v6, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
     .line 12
     .line 13
+    move-result-object v0
+
     .line 14
-    move-result-object v9
+    iput-object v0, p0, LX/2Sw;->A07:LX/0RP;
 
     .line 15
-    check-cast v9, Ljava/util/concurrent/ScheduledExecutorService;
-
     .line 16
-    .line 17
-    sget v0, LX/2eq;->AiS:I
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
+    .line 17
     .line 18
     .line 19
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    move-result-object v0
 
     .line 20
+    iput-object v0, p0, LX/2Sw;->A02:LX/0RP;
+
     .line 21
     .line 22
-    move-result-object v5
+    sget v0, LX/2I6;->AD2:I
 
     .line 23
-    check-cast v5, Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;
-
     .line 24
-    .line 25
-    sget v0, LX/2eq;->Ajj:I
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
+    .line 25
     .line 26
     .line 27
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    move-result-object v0
 
     .line 28
+    iput-object v0, p0, LX/2Sw;->A0B:LX/0RP;
+
     .line 29
     .line 30
-    move-result-object v12
+    sget v0, LX/2I6;->ADF:I
 
     .line 31
-    check-cast v12, Lcom/facebook/realtime/requeststream/network/NetworkDetailedStateGetter;
-
     .line 32
-    .line 33
-    sget v0, LX/2eq;->Aje:I
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
+    .line 33
     .line 34
     .line 35
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    move-result-object v0
 
     .line 36
+    iput-object v0, p0, LX/2Sw;->A03:LX/0RP;
+
     .line 37
     .line 38
-    move-result-object v13
+    sget v0, LX/2I6;->ADG:I
 
     .line 39
-    check-cast v13, Lcom/facebook/realtime/common/streamid/RSStreamIdProvider;
-
     .line 40
-    .line 41
-    invoke-static {}, LX/1z6;->A0P()Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
+    .line 41
     .line 42
     .line 43
+    move-result-object v0
+
     .line 44
-    move-result-object v14
+    iput-object v0, p0, LX/2Sw;->A0A:LX/0RP;
 
     .line 45
-    sget v0, LX/2eq;->Ajf:I
-
     .line 46
-    .line 47
-    invoke-static {v6, v6, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    sget v0, LX/2I6;->ACV:I
 
+    .line 47
     .line 48
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 49
     .line 50
-    move-result-object v15
-
     .line 51
-    check-cast v15, LX/2Sh;
+    move-result-object v0
 
     .line 52
-    .line 53
-    invoke-static {}, LX/1z6;->A0K()LX/0ZF;
+    iput-object v0, p0, LX/2Sw;->A08:LX/0RP;
 
+    .line 53
     .line 54
+    sget v0, LX/2I6;->A3V:I
+
     .line 55
     .line 56
-    move-result-object v16
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 57
-    sget v0, LX/2eq;->Ajg:I
-
     .line 58
     .line 59
-    move-object/from16 v7, p1
+    move-result-object v0
 
     .line 60
-    .line 61
-    invoke-static {v6, v7, v6, v0}, LX/1z1;->A01(Landroid/content/Context;LX/1vx;LX/1zG;I)Ljava/lang/Object;
+    iput-object v0, p0, LX/2Sw;->A05:LX/0RP;
 
+    .line 61
     .line 62
+    sget v0, LX/2I6;->A1X:I
+
     .line 63
     .line 64
-    move-result-object v4
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 65
-    check-cast v4, Lcom/facebook/realtime/requeststream/E2ELogging;
-
     .line 66
     .line 67
-    sget v0, LX/2eq;->Aji:I
+    move-result-object v0
 
     .line 68
-    .line 69
-    invoke-static {v6, v7, v6, v0}, LX/1z1;->A01(Landroid/content/Context;LX/1vx;LX/1zG;I)Ljava/lang/Object;
+    iput-object v0, p0, LX/2Sw;->A04:LX/0RP;
 
+    .line 69
     .line 70
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
+
     .line 71
     .line 72
-    move-result-object v3
-
     .line 73
-    check-cast v3, Lcom/facebook/realtime/requeststream/StreamGroupSelector;
+    move-result-object v0
 
     .line 74
+    iput-object v0, p0, LX/2Sw;->A01:LX/0RP;
+
     .line 75
-    sget v0, LX/2eq;->ACB:I
-
     .line 76
-    .line 77
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    sget v0, LX/2I6;->ADH:I
 
+    .line 77
     .line 78
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 79
     .line 80
-    move-result-object v2
-
     .line 81
-    check-cast v2, LX/1yw;
+    move-result-object v0
 
     .line 82
+    iput-object v0, p0, LX/2Sw;->A09:LX/0RP;
+
     .line 83
-    sget v1, LX/2eq;->Ajh:I
-
     .line 84
-    .line 85
-    new-instance v0, LX/1ui;
+    invoke-static {}, LX/2I6;->A0F()LX/0IM;
 
+    .line 85
     .line 86
     .line 87
-    invoke-direct {v0, v7, v6, v1}, LX/1ui;-><init>(LX/1vx;LX/1zG;I)V
+    move-result-object v0
 
     .line 88
+    iput-object v0, p0, LX/2Sw;->A00:LX/0IM;
+
     .line 89
     .line 90
-    iget-object v10, v5, Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;->A05:Lcom/facebook/realtime/common/appstate/AppStateGetter;
+    invoke-static {}, LX/0lf;->A06()LX/0lf;
 
     .line 91
     .line 92
-    iget-object v11, v5, Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;->A06:Lcom/facebook/realtime/common/appstate/AppStateSyncer;
-
     .line 93
+    move-result-object v0
+
     .line 94
-    move-object/from16 v6, p0
+    iput-object v0, p0, LX/2Sw;->A06:LX/0RP;
 
     .line 95
     .line 96
-    move-object/from16 v18, v3
-
-    .line 97
-    .line 98
-    move-object/from16 v19, v0
-
-    .line 99
-    .line 100
-    move-object/from16 v17, v4
-
-    .line 101
-    .line 102
-    invoke-direct/range {v6 .. v19}, Lcom/facebook/realtime/requeststream/RequestStreamClient;-><init>(LX/1vx;LX/2fK;Ljava/util/concurrent/ScheduledExecutorService;Lcom/facebook/realtime/common/appstate/AppStateGetter;Lcom/facebook/realtime/common/appstate/AppStateSyncer;Lcom/facebook/realtime/common/network/NetworkDetailedStateGetter;Lcom/facebook/realtime/common/streamid/RSStreamIdProvider;Lcom/facebook/prefs/shared/FbSharedPreferences;LX/2Sh;LX/0ZF;Lcom/facebook/realtime/requeststream/E2ELogging;Lcom/facebook/realtime/requeststream/builder/dgw/StreamGroupDecider;LX/0Gd;)V
-
-    .line 103
-    .line 104
-    .line 105
-    iget-object v0, v2, LX/1yw;->A02:Ljava/util/HashSet;
-
-    .line 106
-    .line 107
-    invoke-virtual {v0, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 108
-    .line 109
-    .line 110
     return-void
 .end method
 
 
 # virtual methods
-.method public final A6y()V
-    .locals 0
+.method public final A00()Z
+    .locals 3
 
     .line 0
-    invoke-virtual {p0}, Lcom/facebook/realtime/requeststream/api/BaseRequestStreamClient;->onClientSessionEnded()V
+    iget-object v0, p0, LX/2Sw;->A0B:LX/0RP;
 
     .line 1
     .line 2
+    invoke-static {v0}, LX/1q1;->A00(LX/0RP;)Ljava/lang/String;
+
     .line 3
-    return-void
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    const-string/jumbo v0, "mobile"
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    const/4 v2, 0x0
+
+    .line 14
+    if-nez v0, :cond_0
+
+    .line 15
+    .line 16
+    iget-object v0, p0, LX/2Sw;->A02:LX/0RP;
+
+    .line 17
+    .line 18
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v1
+
+    .line 22
+    invoke-static {}, LX/2I6;->A0b()LX/1pX;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    iget-object v0, v0, LX/1pX;->A01:LX/3gS;
+
+    .line 27
+    .line 28
+    invoke-static {v0}, LX/0X5;->A0J(LX/3gS;)LX/28F;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    invoke-interface {v1, v0, v2}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ABB(LX/28F;Z)Z
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v0
+
+    .line 36
+    if-nez v0, :cond_0
+
+    .line 37
+    .line 38
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 39
+    .line 40
+    const/16 v0, 0x15
+
+    .line 41
+    .line 42
+    if-lt v1, v0, :cond_0
+
+    .line 43
+    .line 44
+    const/4 v2, 0x1
+
+    .line 45
+    :cond_0
+    return v2
 .end method

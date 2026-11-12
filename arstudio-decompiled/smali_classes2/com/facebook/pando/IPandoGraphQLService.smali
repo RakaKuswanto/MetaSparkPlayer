@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract initiate(Ljava/lang/String;Lcom/facebook/pando/PandoGraphQLRequest;LX/1oc;Ljava/util/concurrent/Executor;)Lcom/facebook/pando/IPandoGraphQLService$Result;
+.method public abstract initiate(Ljava/lang/String;Lcom/facebook/pando/PandoGraphQLRequest;LX/1vk;Ljava/util/concurrent/Executor;)Lcom/facebook/pando/IPandoGraphQLService$Result;
 .end method

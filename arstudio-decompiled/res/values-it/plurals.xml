@@ -3,10 +3,87 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">\"Mi piace\" sulla Pagina: %1$s</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">\"Mi piace\": %1$s</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d giorni fa</item>
+        <item quantity="one">1 giorno fa</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d giorni</item>
+        <item quantity="one">1 giorno</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d giorni</item>
+        <item quantity="one">1 giorno</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d ore</item>
+        <item quantity="one">1 ora</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minuti</item>
+        <item quantity="one">1 minuto</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d mesi</item>
+        <item quantity="one">1 mese</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d secondi</item>
+        <item quantity="one">1 secondo</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d settimane</item>
+        <item quantity="one">1 settimana</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">%1$d giorni in più</item>
+        <item quantity="one">1 giorno in più</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">%1$d ore in più</item>
+        <item quantity="one">1 ora in più</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">%1$d minuti in più</item>
+        <item quantity="one">1 minuto in più</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">%1$d mesi in più</item>
+        <item quantity="one">1 mese in più</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">%1$d secondi in più</item>
+        <item quantity="one">1 secondo in più</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">%1$d settimane in più</item>
+        <item quantity="one">1 settimana in più</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">%1$d anni in più</item>
+        <item quantity="one">1 anno in più</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d anni</item>
+        <item quantity="one">1 anno</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ore fa</item>
+        <item quantity="one">1 ora fa</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d ore</item>
+        <item quantity="one">1 ora</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d h</item>
+        <item quantity="one">1 h</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d ore</item>
+        <item quantity="one">1 ora</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d ore fa</item>
         <item quantity="one">1 ora fa</item>
     </plurals>
@@ -18,8 +95,68 @@
         <item quantity="other">Tra %1$d minuti</item>
         <item quantity="one">Tra 1 minuto</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d minuti fa</item>
+        <item quantity="one">1 minuto fa</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d minuti fa</item>
         <item quantity="one">1 minuto fa</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d minuti</item>
+        <item quantity="one">1 minuto</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d mesi fa</item>
+        <item quantity="one">1 mese fa</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d secondi fa</item>
+        <item quantity="one">1 secondo</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d settimane fa</item>
+        <item quantity="one">1 settimana fa</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d ore rimanenti</item>
+        <item quantity="one">1 ora rimanente</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d min rimanenti</item>
+        <item quantity="one">1 minuto rimanente</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d anni fa</item>
+        <item quantity="one">1 anno fa</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Ultima visita: %1$d giorni fa</item>
+        <item quantity="one">Ultima visita: 1 giorno fa</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Ultima visita: %1$d ore fa</item>
+        <item quantity="one">Ultima visita: 1 ora fa</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Ultima visita: %1$d minuti fa</item>
+        <item quantity="one">Ultima visita: 1 minuto fa</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Ultima visita: %1$d mesi fa</item>
+        <item quantity="one">Ultima visita: 1 mese fa</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Ultima visita: %1$d settimane fa</item>
+        <item quantity="one">Ultima visita: 1 settimana fa</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Ultima visita: %1$d anni fa</item>
+        <item quantity="one">Ultima visita: 1 anno fa</item>
     </plurals>
 </resources>

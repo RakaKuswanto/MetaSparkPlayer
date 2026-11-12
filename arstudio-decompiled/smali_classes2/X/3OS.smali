@@ -1,252 +1,200 @@
-.class public final LX/3OS;
-.super Ljava/util/concurrent/AbstractExecutorService;
+.class public abstract LX/3OS;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/lang/Integer;
-
-.field public final synthetic A01:LX/3OR;
-
-
 # direct methods
-.method public constructor <init>(LX/3OR;Ljava/lang/Integer;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3OS;->A01:LX/3OR;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/3OS;->A00:Ljava/lang/Integer;
-
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 13
+.method public A04(LX/31y;LX/32M;)V
+    .locals 5
 
     .line 0
-    iget-object v2, p0, LX/3OS;->A01:LX/3OR;
+    instance-of v0, p0, LX/3JY;
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/3OS;->A00:Ljava/lang/Integer;
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    move-object v6, p1
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 5
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 6
     .line 7
+    iget-object v0, p1, LX/31y;->A04:LX/3Op;
+
     .line 8
-    iget-object v3, v2, LX/3OR;->A00:LX/3IX;
-
     .line 9
+    check-cast v0, LX/3Pu;
+
     .line 10
-    if-eqz v3, :cond_3
-
     .line 11
-    .line 12
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    iget-object v0, v0, LX/3Pu;->A07:LX/3N2;
 
+    .line 12
     .line 13
+    :try_start_0
+    iget-object v0, v0, LX/3N2;->A05:Landroid/net/Uri;
+
     .line 14
     .line 15
-    move-result v2
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 16
-    const/4 v0, 0x0
-
     .line 17
-    if-eq v2, v0, :cond_1
-
     .line 18
+    return-void
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 19
-    const/4 v0, 0x1
+    :catch_0
+    move-exception v2
 
     .line 20
-    if-eq v2, v0, :cond_0
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     .line 21
     .line 22
-    const/4 v0, 0x2
-
     .line 23
-    if-ne v2, v0, :cond_2
+    move-result-object v1
 
     .line 24
+    const-string v0, "MsysLegacyMediaNetworkFetcher"
+
     .line 25
-    sget-object v2, LX/2hD;->IMPORTANT:LX/2hD;
-
     .line 26
-    .line 27
-    :goto_0
-    check-cast v3, LX/5RC;
+    invoke-static {v0, v1}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 27
     .line 28
     .line 29
-    sget-object v8, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-interface {p2, v2}, LX/32M;->onFailure(Ljava/lang/Throwable;)V
 
     .line 30
     .line 31
-    sget-object v4, LX/014;->A00:Ljava/lang/Integer;
-
     .line 32
-    .line 33
-    const/4 v5, 0x0
-
-    .line 34
-    const-wide/16 v9, 0x0
-
-    .line 35
-    .line 36
-    move-object v7, v5
-
-    .line 37
-    move-wide v11, v9
-
-    .line 38
-    invoke-static/range {v2 .. v12}, LX/5RC;->A00(LX/2hD;LX/5RC;Ljava/lang/Integer;Ljava/lang/Object;Ljava/lang/Runnable;Ljava/util/concurrent/Callable;Ljava/util/concurrent/TimeUnit;JJ)LX/5RE;
-
-    .line 39
-    .line 40
-    .line 41
     return-void
 
-    .line 42
+    .line 33
     :cond_0
-    sget-object v2, LX/2hD;->FOREGROUND:LX/2hD;
+    instance-of v0, p0, LX/3Jb;
 
+    .line 34
+    .line 35
+    if-eqz v0, :cond_1
+
+    .line 36
+    .line 37
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 38
+    .line 39
+    .line 40
+    const-string/jumbo v0, "imageRequest is not an instance of E2EEImageRequest"
+
+    .line 41
+    .line 42
     .line 43
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 44
-    goto :goto_0
-
     .line 45
-    :cond_1
-    sget-object v2, LX/2hD;->NORMAL:LX/2hD;
-
     .line 46
-    .line 47
-    goto :goto_0
-
-    .line 48
-    :cond_2
-    const-string v1, "Bad taskPriority: "
-
-    .line 49
-    .line 50
-    packed-switch v2, :pswitch_data_0
-
-    .line 51
-    .line 52
-    .line 53
-    const-string v0, "LOW"
-
-    .line 54
-    .line 55
-    :goto_1
-    invoke-static {v1, v0}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 56
-    .line 57
-    .line 58
     move-result-object v0
 
+    .line 47
+    invoke-interface {p2, v0}, LX/32M;->onFailure(Ljava/lang/Throwable;)V
+
+    .line 48
+    .line 49
+    .line 50
+    return-void
+
+    .line 51
+    :cond_1
+    move-object v4, p0
+
+    .line 52
+    check-cast v4, LX/3JV;
+
+    .line 53
+    .line 54
+    check-cast p1, LX/3JX;
+
+    .line 55
+    .line 56
+    iget-object v0, v4, LX/3JV;->A01:LX/0I5;
+
+    .line 57
+    .line 58
+    invoke-interface {v0}, LX/0I5;->now()J
+
     .line 59
-    throw v0
-
     .line 60
-    :pswitch_0
-    const-string v0, "HIGH"
-
     .line 61
+    move-result-wide v0
+
     .line 62
-    goto :goto_1
+    iput-wide v0, p1, LX/3JX;->A02:J
 
     .line 63
-    :pswitch_1
-    const-string v0, "NORMAL"
-
     .line 64
-    .line 65
-    goto :goto_1
+    iget-object v1, v4, LX/3JV;->A02:Ljava/util/concurrent/ExecutorService;
 
+    .line 65
     .line 66
-    :cond_3
-    new-instance v0, LX/3QJ;
+    new-instance v0, LX/3JW;
 
     .line 67
     .line 68
-    invoke-direct {v0, v1, p1}, LX/3QJ;-><init>(Ljava/lang/Integer;Ljava/lang/Runnable;)V
+    invoke-direct {v0, p1, v4, p2}, LX/3JW;-><init>(LX/3JX;LX/3JV;LX/32M;)V
 
     .line 69
     .line 70
     .line 71
-    invoke-virtual {v2, v0}, LX/3OR;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     .line 72
     .line 73
     .line 74
-    return-void
+    move-result-object v3
 
     .line 75
-    nop
+    iget-object v2, p1, LX/31y;->A04:LX/3Op;
 
     .line 76
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    .line 77
+    const/4 v1, 0x0
 
-.method public final isShutdown()Z
-    .locals 1
+    .line 78
+    new-instance v0, LX/0ZA;
 
-    const/4 v0, 0x0
+    .line 79
+    .line 80
+    invoke-direct {v0, p2, v4, v3, v1}, LX/0ZA;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    return v0
-.end method
+    .line 81
+    .line 82
+    .line 83
+    invoke-interface {v2, v0}, LX/3Op;->A2n(LX/3Q8;)V
 
-.method public final isTerminated()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final shutdown()V
-    .locals 0
-
+    .line 84
+    .line 85
+    .line 86
     return-void
-.end method
-
-.method public final shutdownNow()Ljava/util/List;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
 .end method

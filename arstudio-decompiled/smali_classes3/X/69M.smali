@@ -1,18 +1,22 @@
 .class public final LX/69M;
-.super LX/5f7;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:LX/62D;
+
+
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(LX/62D;)V
+    .locals 0
 
     .line 0
-    const/16 v0, 0x3004
+    iput-object p1, p0, LX/69M;->A00:LX/62D;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0, p1}, LX/5f7;-><init>(ILjava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4

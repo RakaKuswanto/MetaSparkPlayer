@@ -1,40 +1,29 @@
-.class public final LX/2H2;
-.super LX/2HK;
+.class public abstract LX/2H2;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # static fields
-.field public static final serialVersionUID:J = -0x7beb8da55ae36f3aL
-
-
-# instance fields
-.field public _classMappings:Ljava/util/HashMap;
+.field public static final A00:LX/2H3;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/2HK;-><init>()V
+    new-instance v0, LX/2H3;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-direct {v0}, LX/2H3;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    sput-object v0, LX/2H2;->A00:LX/2H3;
+
     .line 6
-    move-result-object v0
-
     .line 7
-    iput-object v0, p0, LX/2H2;->_classMappings:Ljava/util/HashMap;
-
-    .line 8
-    .line 9
     return-void
 .end method

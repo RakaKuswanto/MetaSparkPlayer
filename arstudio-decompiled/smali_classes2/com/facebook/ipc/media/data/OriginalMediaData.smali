@@ -33,7 +33,7 @@
 
 .field public final A05:I
 
-.field public final A06:LX/17x;
+.field public final A06:LX/1Jg;
 
 .field public final A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
@@ -45,11 +45,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x19
+    const/16 v0, 0x45
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/17x;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Ljava/lang/String;IIIIII)V
+.method public constructor <init>(LX/1Jg;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Ljava/lang/String;IIIIII)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -75,11 +75,11 @@
 
     const-string/jumbo v0, "mediaId"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A08:Ljava/lang/String;
 
-    iput-object p1, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/17x;
+    iput-object p1, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/1Jg;
 
     iput p5, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A01:I
 
@@ -103,7 +103,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -159,7 +159,7 @@
 
     .line 29
     .line 30
-    invoke-static {}, LX/17x;->values()[LX/17x;
+    invoke-static {}, LX/1Jg;->values()[LX/1Jg;
 
     .line 31
     .line 32
@@ -180,7 +180,7 @@
     .line 39
     .line 40
     :cond_0
-    iput-object v1, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/17x;
+    iput-object v1, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/1Jg;
 
     .line 41
     .line 42
@@ -248,26 +248,18 @@
 
     .line 73
     :cond_1
-    sget-object v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-static {p1}, LX/0X4;->A0Q(Landroid/os/Parcel;)Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
     .line 74
     .line 75
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
     .line 76
-    .line 77
-    .line 78
     move-result-object v0
 
-    .line 79
-    check-cast v0, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
-    .line 80
-    .line 81
+    .line 77
     iput-object v0, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
-    .line 82
-    .line 83
+    .line 78
+    .line 79
     goto :goto_0
 .end method
 
@@ -315,7 +307,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -347,7 +339,7 @@
 
     .line 29
     .line 30
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 31
     .line 32
@@ -359,11 +351,11 @@
 
     .line 35
     .line 36
-    iget-object v1, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/17x;
+    iget-object v1, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/1Jg;
 
     .line 37
     .line 38
-    iget-object v0, p1, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/17x;
+    iget-object v0, p1, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/1Jg;
 
     .line 39
     .line 40
@@ -447,7 +439,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -474,7 +466,7 @@
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 16
     .line 17
@@ -485,11 +477,11 @@
     add-int/2addr v2, v0
 
     .line 20
-    iget-object v0, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/17x;
+    iget-object v0, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/1Jg;
 
     .line 21
     .line 22
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
     .line 23
     .line 24
@@ -566,7 +558,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -637,7 +629,7 @@
     .line 37
     .line 38
     .line 39
-    iget-object v0, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/17x;
+    iget-object v0, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/1Jg;
 
     .line 40
     .line 41
@@ -736,14 +728,19 @@
     .line 92
     .line 93
     .line 94
-    invoke-static {v1}, LX/0Ye;->A0X(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const-string/jumbo v0, "}"
 
     .line 95
     .line 96
     .line 97
-    move-result-object v0
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 98
+    .line 99
+    .line 100
+    move-result-object v0
+
+    .line 101
     return-object v0
 .end method
 
@@ -755,7 +752,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0, p2}, LX/0Yf;->A0v(Landroid/os/Parcel;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;I)V
+    invoke-static {p1, v0, p2}, LX/0X1;->A0d(Landroid/os/Parcel;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;I)V
 
     .line 3
     .line 4
@@ -778,11 +775,11 @@
     .line 13
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/17x;
+    iget-object v0, p0, Lcom/facebook/ipc/media/data/OriginalMediaData;->A06:LX/1Jg;
 
     .line 16
     .line 17
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 18
     .line 19

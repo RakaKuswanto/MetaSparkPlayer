@@ -3,198 +3,156 @@
 .source ""
 
 
+# static fields
+.field public static final A01:LX/5Q4;
+
+
 # instance fields
-.field public A00:Z
-
-.field public final A01:Ljava/lang/Object;
-
-.field public final A02:LX/0Cw;
-
-.field public final A03:Ljava/lang/Runnable;
-
-.field public final A04:Ljava/util/List;
-
-.field public final A05:Ljava/util/concurrent/Executor;
+.field public final A00:LX/5Q5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;LX/0Cw;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v1, Lcom/google/android/exoplayer2/util/Util;->A00:I
 
     .line 1
     .line 2
+    const/16 v0, 0x1f
+
     .line 3
-    iput-object p1, p0, LX/5Q4;->A05:Ljava/util/concurrent/Executor;
-
     .line 4
+    if-ge v1, v0, :cond_0
+
     .line 5
-    iput-object p2, p0, LX/5Q4;->A02:LX/0Cw;
-
     .line 6
-    .line 7
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    new-instance v1, LX/5Q4;
 
+    .line 7
     .line 8
+    invoke-direct {v1}, LX/5Q4;-><init>()V
+
     .line 9
     .line 10
-    move-result-object v0
-
     .line 11
-    iput-object v0, p0, LX/5Q4;->A01:Ljava/lang/Object;
+    :goto_0
+    sput-object v1, LX/5Q4;->A01:LX/5Q4;
 
     .line 12
     .line 13
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    return-void
 
     .line 14
+    :cond_0
+    sget-object v0, LX/5Q5;->A01:LX/5Q5;
+
     .line 15
     .line 16
-    move-result-object v0
+    new-instance v1, LX/5Q4;
 
     .line 17
-    iput-object v0, p0, LX/5Q4;->A04:Ljava/util/List;
-
     .line 18
-    .line 19
-    new-instance v0, LX/5Q5;
+    invoke-direct {v1, v0}, LX/5Q4;-><init>(LX/5Q5;)V
 
+    .line 19
     .line 20
     .line 21
-    invoke-direct {v0, p0}, LX/5Q5;-><init>(LX/5Q4;)V
+    goto :goto_0
+.end method
 
-    .line 22
-    .line 23
-    .line 24
-    iput-object v0, p0, LX/5Q4;->A03:Ljava/lang/Runnable;
+.method public constructor <init>()V
+    .locals 2
 
-    .line 25
-    .line 26
+    .line 536870912
+    const/4 v0, 0x0
+
+    .line 536870913
+    invoke-direct {p0, v0}, LX/5Q4;-><init>(LX/5Q5;)V
+
+    .line 536870914
+    .line 536870915
+    .line 536870916
+    sget v1, Lcom/google/android/exoplayer2/util/Util;->A00:I
+
+    .line 536870917
+    .line 536870918
+    const/16 v0, 0x1f
+
+    .line 536870919
+    .line 536870920
+    invoke-static {v1, v0}, LX/0X3;->A1Y(II)Z
+
+    .line 536870921
+    .line 536870922
+    .line 536870923
+    move-result v0
+
+    .line 536870924
+    invoke-static {v0}, LX/55g;->A05(Z)V
+
+    .line 536870925
+    .line 536870926
+    .line 536870927
+    return-void
+.end method
+
+.method public constructor <init>(LX/5Q5;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput-object p1, p0, LX/5Q4;->A00:LX/5Q5;
+
+    .line 268435460
+    .line 268435461
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/media/metrics/LogSessionId;)V
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/5Q5;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p1}, LX/5Q5;-><init>(Landroid/media/metrics/LogSessionId;)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-direct {p0, v0}, LX/5Q4;-><init>(LX/5Q5;)V
+
+    .line 6
+    .line 7
+    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()V
-    .locals 4
+.method public final A00()Landroid/media/metrics/LogSessionId;
+    .locals 1
 
     .line 0
-    iget-object v3, p0, LX/5Q4;->A01:Ljava/lang/Object;
+    iget-object v0, p0, LX/5Q4;->A00:LX/5Q5;
 
     .line 1
     .line 2
-    monitor-enter v3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 3
-    const/4 v0, 0x1
-
-    .line 4
-    :try_start_0
-    iput-boolean v0, p0, LX/5Q4;->A00:Z
-
-    .line 5
-    .line 6
-    iget-object v2, p0, LX/5Q4;->A04:Ljava/util/List;
-
-    .line 7
-    .line 8
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
-    if-eqz v0, :cond_0
-
-    .line 17
-    .line 18
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    check-cast v0, LX/0Cw;
-
-    .line 23
-    .line 24
-    invoke-interface {v0}, LX/0Cw;->APf()Ljava/lang/Object;
-
-    .line 25
-    .line 26
-    .line 27
-    goto :goto_0
-
-    .line 28
-    :cond_0
-    invoke-interface {v2}, Ljava/util/List;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 29
-    .line 30
-    .line 31
-    monitor-exit v3
-
-    .line 32
-    return-void
-
-    .line 33
-    :catchall_0
-    move-exception v0
-
-    .line 34
-    monitor-exit v3
-
-    .line 35
-    throw v0
-.end method
-
-.method public final A01()Z
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/5Q4;->A01:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    monitor-enter v1
-
-    .line 3
-    :try_start_0
-    iget-boolean v0, p0, LX/5Q4;->A00:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 4
     .line 5
-    monitor-exit v1
+    iget-object v0, v0, LX/5Q5;->A00:Landroid/media/metrics/LogSessionId;
 
     .line 6
-    return v0
-
     .line 7
-    :catchall_0
-    move-exception v0
-
-    .line 8
-    monitor-exit v1
-
-    .line 9
-    throw v0
+    return-object v0
 .end method

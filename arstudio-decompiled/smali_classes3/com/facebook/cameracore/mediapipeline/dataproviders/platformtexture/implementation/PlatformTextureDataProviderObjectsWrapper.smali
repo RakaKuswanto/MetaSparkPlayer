@@ -3,15 +3,11 @@
 .source ""
 
 # interfaces
-.implements LX/5Vb;
+.implements LX/67V;
 
 
 # instance fields
-.field public _isAlive:Z
-
 .field public final input:Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/interfaces/PlatformTextureInput;
-
-.field public final isAlive:Z
 
 .field public final mHybridData:Lcom/facebook/jni/HybridData;
 
@@ -34,7 +30,7 @@
 
     .line 6
     .line 7
-    iput-object p0, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/interfaces/PlatformTextureInput;->mListener:LX/5Vb;
+    iput-object p0, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/interfaces/PlatformTextureInput;->mListener:LX/67V;
 
     .line 8
     .line 9
@@ -51,14 +47,6 @@
 
     .line 14
     .line 15
-    iget-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/implementation/PlatformTextureDataProviderObjectsWrapper;->_isAlive:Z
-
-    .line 16
-    .line 17
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/implementation/PlatformTextureDataProviderObjectsWrapper;->isAlive:Z
-
-    .line 18
-    .line 19
     return-void
 .end method
 
@@ -91,22 +79,11 @@
     return-void
 .end method
 
-.method public isAlive()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/implementation/PlatformTextureDataProviderObjectsWrapper;->isAlive:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
 .method public queueContent(Ljava/lang/String;[BF)V
     .locals 0
 
     .line 0
-    invoke-static {p1, p2}, LX/0PS;->A09(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
@@ -119,39 +96,18 @@
     return-void
 .end method
 
-.method public final start()V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/implementation/PlatformTextureDataProviderObjectsWrapper;->_isAlive:Z
-
-    .line 2
-    .line 3
-    return-void
-.end method
-
 .method public stop()V
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/implementation/PlatformTextureDataProviderObjectsWrapper;->_isAlive:Z
-
-    .line 2
-    .line 3
     iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformtexture/implementation/PlatformTextureDataProviderObjectsWrapper;->mHybridData:Lcom/facebook/jni/HybridData;
 
-    .line 4
-    .line 5
+    .line 1
+    .line 2
     invoke-virtual {v0}, Lcom/facebook/jni/HybridData;->resetNative()V
 
-    .line 6
-    .line 7
-    .line 8
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

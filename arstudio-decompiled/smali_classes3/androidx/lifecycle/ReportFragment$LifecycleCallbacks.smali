@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final Companion:LX/4xK;
+.field public static final Companion:LX/5hf;
 
 
 # direct methods
@@ -15,16 +15,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/4xK;
+    new-instance v0, LX/5hf;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/4xK;-><init>()V
+    invoke-direct {v0}, LX/5hf;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;->Companion:LX/4xK;
+    sput-object v0, Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;->Companion:LX/5hf;
 
     .line 6
     .line 7
@@ -46,7 +46,7 @@
 .method public static final registerIn(Landroid/app/Activity;)V
     .locals 0
 
-    invoke-static {p0}, LX/4xK;->A00(Landroid/app/Activity;)V
+    invoke-static {p0}, LX/5hf;->A00(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -78,16 +78,16 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    sget-object v0, LX/06e;->ON_CREATE:LX/06e;
+    sget-object v0, LX/075;->ON_CREATE:LX/075;
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/4xE;->A01(Landroid/app/Activity;LX/06e;)V
+    invoke-static {p1, v0}, LX/5hZ;->A01(Landroid/app/Activity;LX/075;)V
 
     .line 7
     .line 8
@@ -102,16 +102,16 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    sget-object v0, LX/06e;->ON_RESUME:LX/06e;
+    sget-object v0, LX/075;->ON_RESUME:LX/075;
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/4xE;->A01(Landroid/app/Activity;LX/06e;)V
+    invoke-static {p1, v0}, LX/5hZ;->A01(Landroid/app/Activity;LX/075;)V
 
     .line 7
     .line 8
@@ -126,16 +126,16 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    sget-object v0, LX/06e;->ON_START:LX/06e;
+    sget-object v0, LX/075;->ON_START:LX/075;
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/4xE;->A01(Landroid/app/Activity;LX/06e;)V
+    invoke-static {p1, v0}, LX/5hZ;->A01(Landroid/app/Activity;LX/075;)V
 
     .line 7
     .line 8
@@ -150,16 +150,16 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    sget-object v0, LX/06e;->ON_DESTROY:LX/06e;
+    sget-object v0, LX/075;->ON_DESTROY:LX/075;
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/4xE;->A01(Landroid/app/Activity;LX/06e;)V
+    invoke-static {p1, v0}, LX/5hZ;->A01(Landroid/app/Activity;LX/075;)V
 
     .line 7
     .line 8
@@ -174,16 +174,16 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    sget-object v0, LX/06e;->ON_PAUSE:LX/06e;
+    sget-object v0, LX/075;->ON_PAUSE:LX/075;
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/4xE;->A01(Landroid/app/Activity;LX/06e;)V
+    invoke-static {p1, v0}, LX/5hZ;->A01(Landroid/app/Activity;LX/075;)V
 
     .line 7
     .line 8
@@ -198,16 +198,16 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    sget-object v0, LX/06e;->ON_STOP:LX/06e;
+    sget-object v0, LX/075;->ON_STOP:LX/075;
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/4xE;->A01(Landroid/app/Activity;LX/06e;)V
+    invoke-static {p1, v0}, LX/5hZ;->A01(Landroid/app/Activity;LX/075;)V
 
     .line 7
     .line 8

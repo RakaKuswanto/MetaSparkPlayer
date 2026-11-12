@@ -1,37 +1,61 @@
 .class public final LX/6Ht;
-.super Ljava/lang/Exception;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A08:[LX/6I2;
+
+
+# instance fields
+.field public A00:LX/35N;
+
+.field public A01:LX/6Gz;
+
+.field public A02:LX/6Kj;
+
+.field public A03:LX/6K5;
+
+.field public A04:Ljava/lang/Object;
+
+.field public A05:Ljava/util/List;
+
+.field public A06:[LX/6I2;
+
+.field public final A07:LX/6Jq;
+
+
 # direct methods
-.method public constructor <init>(Ljava/util/UUID;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
+
+    .line 1
+    new-array v0, v0, [LX/6I2;
+
+    .line 2
+    .line 3
+    sput-object v0, LX/6Ht;->A08:[LX/6I2;
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public constructor <init>(LX/6Jq;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v1
+    iput-object p1, p0, LX/6Ht;->A07:LX/6Jq;
 
     .line 4
-    const-string v0, "Media does not support uuid: "
-
     .line 5
-    .line 6
-    invoke-static {p1, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    .line 11
-    .line 12
-    .line 13
     return-void
 .end method

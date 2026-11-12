@@ -2,102 +2,94 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultAnalyticsLogger$AnalyticsBackgroundWorker"
+
+
+# instance fields
+.field public final synthetic A00:LX/0Oy;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(LX/0Oy;)V
+    .locals 0
 
-    const/16 v0, 0x10be
+    .line 0
+    iput-object p1, p0, LX/0V1;->A00:LX/0Oy;
 
-    if-eq p0, v0, :cond_9
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x215f
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
 
-    if-eq p0, v0, :cond_8
 
-    const/16 v0, 0x2172
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    if-eq p0, v0, :cond_7
+    .line 0
+    iget-object v2, p0, LX/0V1;->A00:LX/0Oy;
 
-    const/16 v0, 0x2397
+    .line 1
+    .line 2
+    iget-object v1, v2, LX/0Oy;->A0A:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    if-eq p0, v0, :cond_6
+    .line 3
+    .line 4
+    const/4 v0, 0x0
 
-    const/16 v0, 0x240e
+    .line 5
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    if-eq p0, v0, :cond_5
+    .line 6
+    .line 7
+    .line 8
+    :goto_0
+    iget-object v1, v2, LX/0Oy;->A09:Ljava/util/Queue;
 
-    const/16 v0, 0x256d
+    .line 9
+    .line 10
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
-    if-eq p0, v0, :cond_4
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
 
-    const/16 v0, 0x2b2e
+    .line 14
+    if-nez v0, :cond_0
 
-    if-eq p0, v0, :cond_3
+    .line 15
+    .line 16
+    invoke-interface {v1}, Ljava/util/Queue;->remove()Ljava/lang/Object;
 
-    const/16 v0, 0x2bdb
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
 
-    if-eq p0, v0, :cond_2
+    .line 20
+    check-cast v0, Ljava/lang/Runnable;
 
-    const/16 v0, 0x2c42
+    .line 21
+    .line 22
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    if-eq p0, v0, :cond_1
+    .line 23
+    .line 24
+    .line 25
+    goto :goto_0
 
-    const/16 v0, 0x2f0d
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
+    .line 26
     :cond_0
-    const-string v0, "SPARK_SCRIPTING_SCRIPTING_CALLBACKS"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "SPARK_SCRIPTING_REACTIVE_GRAPH_UPDATE"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "SPARK_SCRIPTING_TEST_UNCACHED_STATE_CHANGE"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "SPARK_SCRIPTING_TEST_CACHED_STATE_CHANGE"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "SPARK_SCRIPTING_SCENE_SYNCHRONIZE"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "SPARK_SCRIPTING_SCRIPT_UPDATE"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "SPARK_SCRIPTING_TEST_UNINSTANTIATE"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "SPARK_SCRIPTING_TEST_STARTUP"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "SPARK_SCRIPTING_TEST_UPDATE"
-
-    return-object v0
-
-    :cond_9
-    const-string v0, "SPARK_SCRIPTING_TEST_INSTANTIATE"
-
-    return-object v0
+    return-void
 .end method

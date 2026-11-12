@@ -178,10 +178,10 @@
 .method public abstract markerStartForUserFlow(IILjava/lang/String;ZJ)V
 .end method
 
-.method public abstract markerStartForUserFlow(IIZJ)V
+.method public abstract markerStartForUserFlow(IILjava/lang/String;ZJJLjava/util/concurrent/TimeUnit;)V
 .end method
 
-.method public abstract markerStartForUserFlowE2E(IIJLjava/util/concurrent/TimeUnit;Ljava/lang/String;Z)V
+.method public abstract markerStartForUserFlow(IIZJ)V
 .end method
 
 .method public abstract markerStartWithCancelPolicy(IZIJLjava/util/concurrent/TimeUnit;)V

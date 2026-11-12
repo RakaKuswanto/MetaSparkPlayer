@@ -4,12 +4,18 @@
 
 
 # instance fields
-.field public final A00:LX/20m;
+.field public final A00:I
+
+.field public final A01:I
+
+.field public final A02:I
+
+.field public final A03:Landroid/util/SparseIntArray;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Landroid/util/SparseIntArray;III)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -17,22 +23,34 @@
     .line 1
     .line 2
     .line 3
-    const/16 v1, 0xf
+    invoke-static {p3, p2}, LX/0X4;->A1P(II)Z
 
     .line 4
     .line 5
-    new-instance v0, LX/20m;
-
     .line 6
+    move-result v0
+
     .line 7
-    invoke-direct {v0, v1}, LX/20m;-><init>(I)V
+    invoke-static {v0}, LX/0H2;->A01(Z)V
 
     .line 8
     .line 9
     .line 10
-    iput-object v0, p0, LX/2tN;->A00:LX/20m;
+    iput p2, p0, LX/2tN;->A02:I
 
     .line 11
     .line 12
+    iput p3, p0, LX/2tN;->A01:I
+
+    .line 13
+    .line 14
+    iput-object p1, p0, LX/2tN;->A03:Landroid/util/SparseIntArray;
+
+    .line 15
+    .line 16
+    iput p4, p0, LX/2tN;->A00:I
+
+    .line 17
+    .line 18
     return-void
 .end method

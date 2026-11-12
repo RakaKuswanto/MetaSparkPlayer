@@ -1,32 +1,31 @@
 .class public final LX/1oV;
-.super Ljava/lang/Object;
+.super LX/1u9;
 .source ""
 
 
 # static fields
-.field public static final A00:Ljava/util/concurrent/Callable;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AbstractTransformFuture$TransformFuture"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/common/base/Function;Lcom/google/common/util/concurrent/ListenableFuture;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "inputFuture",
+            "function"
+        }
+    .end annotation
 
     .line 0
-    const/4 v1, 0x2
+    invoke-direct {p0, p2, p1}, LX/1u9;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/lang/Object;)V
 
     .line 1
-    new-instance v0, LX/1j6;
-
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/1j6;-><init>(I)V
-
-    .line 4
-    .line 5
-    .line 6
-    sput-object v0, LX/1oV;->A00:Ljava/util/concurrent/Callable;
-
-    .line 7
-    .line 8
     return-void
 .end method

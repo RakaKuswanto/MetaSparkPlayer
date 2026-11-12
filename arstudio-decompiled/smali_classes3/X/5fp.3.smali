@@ -1,42 +1,49 @@
-.class public final LX/5fp;
+.class public abstract LX/5fp;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5Xy;
-
-
-# instance fields
-.field public final synthetic A00:LX/5e6;
-
 
 # direct methods
-.method public constructor <init>(LX/5e6;)V
-    .locals 0
+.method public static final A00(Ljava/lang/Object;)LX/5ff;
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/5fp;->A00:LX/5e6;
+    sget-object v0, LX/5fW;->A00:LX/0RD;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eq p0, v0, :cond_0
 
     .line 3
     .line 4
+    const-string v0, "null cannot be cast to non-null type S of kotlinx.coroutines.internal.SegmentOrClosed"
+
     .line 5
-    return-void
-.end method
+    .line 6
+    invoke-static {p0, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
+    .line 8
+    .line 9
+    check-cast p0, LX/5ff;
 
-# virtual methods
-.method public final onEvent(ILjava/lang/String;Z)V
-    .locals 0
+    .line 10
+    .line 11
+    return-object p0
 
-    return-void
-.end method
+    .line 12
+    :cond_0
+    const-string v0, "Does not contain segment"
 
-.method public final onFailureEvent(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+    .line 13
+    .line 14
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
-    return-void
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    throw v0
 .end method

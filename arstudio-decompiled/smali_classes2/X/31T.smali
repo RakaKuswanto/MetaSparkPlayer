@@ -1,48 +1,56 @@
-.class public final LX/31T;
+.class public abstract LX/31T;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3j9;
 
+# static fields
+.field public static final A00:LX/28F;
 
-# instance fields
-.field public final A00:LX/3Y7;
-
-.field public final A01:LX/2yn;
-
-.field public final A02:LX/3j9;
+.field public static final A01:LX/28F;
 
 
 # direct methods
-.method public constructor <init>(LX/3Y7;LX/2yn;LX/3j9;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x2
+    sget-object v1, LX/1GN;->A04:LX/28F;
 
     .line 1
-    invoke-static {p1, v0, p2}, LX/0Yd;->A0m(Ljava/lang/Object;ILjava/lang/Object;)V
-
     .line 2
+    const-string/jumbo v0, "graph_cursor/"
+
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 5
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 6
     .line 7
-    iput-object p3, p0, LX/31T;->A02:LX/3j9;
-
     .line 8
+    move-result-object v1
+
     .line 9
-    iput-object p1, p0, LX/31T;->A00:LX/3Y7;
+    sput-object v1, LX/31T;->A01:LX/28F;
 
     .line 10
     .line 11
-    iput-object p2, p0, LX/31T;->A01:LX/2yn;
+    const-string/jumbo v0, "flat_buffer_corrupt_flag"
 
     .line 12
     .line 13
+    .line 14
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    sput-object v0, LX/31T;->A00:LX/28F;
+
+    .line 19
+    .line 20
     return-void
 .end method

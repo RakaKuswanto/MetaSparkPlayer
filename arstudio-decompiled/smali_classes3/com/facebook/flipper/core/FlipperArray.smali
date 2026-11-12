@@ -40,7 +40,7 @@
     move-exception v0
 
     .line 12
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 13
     .line 14
@@ -495,7 +495,7 @@
     move-result v3
 
     .line 6
-    invoke-static {v3}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v3}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 7
     .line 8

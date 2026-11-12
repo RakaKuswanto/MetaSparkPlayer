@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 7
 
     .line 0
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
     .line 1
     const/4 v1, 0x0
@@ -33,16 +33,16 @@
     .line 3
     .line 4
     .line 5
-    move-result-object v4
+    move-result-object v3
 
     .line 6
-    const-string v3, ""
+    const-string v2, ""
 
     .line 7
     .line 8
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 9
     .line 10
@@ -50,7 +50,7 @@
     move-result-object v5
 
     .line 12
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 13
     .line 14
@@ -58,7 +58,7 @@
 
     .line 15
     .line 16
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 17
     .line 18
@@ -126,12 +126,12 @@
 
     .line 50
     .line 51
-    invoke-static {p1, v2, p2, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    invoke-static {p1, v4, p2, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
 
     .line 52
     .line 53
     .line 54
-    move-result-object v4
+    move-result-object v3
 
     .line 55
     const-string/jumbo v0, "listOfCrossUniverseInstagramData"
@@ -139,7 +139,7 @@
     .line 56
     .line 57
     .line 58
-    invoke-static {v0, v4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 59
     .line 60
@@ -165,7 +165,7 @@
 
     .line 70
     .line 71
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    invoke-virtual {p1}, LX/3oD;->A19()Z
 
     .line 72
     .line 73
@@ -194,12 +194,12 @@
 
     .line 84
     .line 85
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 86
     .line 87
     .line 88
-    move-result-object v3
+    move-result-object v2
 
     .line 89
     const-string/jumbo v0, "selectedInstagramAccountForCrossposting"
@@ -207,14 +207,14 @@
     .line 90
     .line 91
     .line 92
-    invoke-static {v0, v3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 93
     .line 94
     .line 95
     :cond_3
     :goto_1
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 96
     .line 97
@@ -222,7 +222,7 @@
     move-result-object v5
 
     .line 99
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 100
     .line 101
@@ -234,7 +234,7 @@
 
     .line 104
     :cond_4
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 105
     .line 106
@@ -249,7 +249,7 @@
 
     .line 109
     .line 110
-    invoke-direct {v0, v4, v3, v1}, Lcom/facebook/ipc/composer/model/ComposerPostToInstagramData;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Z)V
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/ipc/composer/model/ComposerPostToInstagramData;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Z)V
 
     .line 111
     .line 112
@@ -265,10 +265,18 @@
 
     .line 116
     .line 117
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 118
     .line 119
     .line 120
-    throw v2
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 121
+    .line 122
+    .line 123
+    move-result-object v0
+
+    .line 124
+    throw v0
 .end method

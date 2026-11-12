@@ -56,11 +56,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x4f
+    const/16 v0, 0x27
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -236,46 +236,47 @@
 
     .line 21
     .line 22
-    const-string v0, "description"
+    const-string/jumbo v0, "description"
 
     .line 23
     .line 24
+    .line 25
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 25
     .line 26
     .line 27
+    .line 28
     iget-object v1, p0, Lcom/facebook/payments/p2p/model/CommerceOrder;->mSellerInfo:Ljava/lang/String;
 
-    .line 28
     .line 29
+    .line 30
     const-string/jumbo v0, "sellerInfo"
 
-    .line 30
     .line 31
     .line 32
+    .line 33
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 33
     .line 34
     .line 35
+    .line 36
     iget-object v1, p0, Lcom/facebook/payments/p2p/model/CommerceOrder;->mImageUrl:Ljava/lang/String;
 
-    .line 36
     .line 37
+    .line 38
     const-string/jumbo v0, "imageUrl"
 
-    .line 38
     .line 39
     .line 40
-    invoke-static {v2, v1, v0}, LX/0Yg;->A0j(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
-
     .line 41
+    invoke-static {v2, v1, v0}, LX/0X5;->A0c(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+
     .line 42
     .line 43
+    .line 44
     move-result-object v0
 
-    .line 44
+    .line 45
     return-object v0
 .end method
 

@@ -2,162 +2,217 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/1wj;
-
 
 # instance fields
-.field public final synthetic A00:Landroid/os/Bundle;
+.field public A00:LX/2Vf;
 
-.field public final synthetic A01:Lcom/facebook/login/GetTokenLoginMethodHandler;
+.field public A01:LX/2I8;
 
-.field public final synthetic A02:Lcom/facebook/login/LoginClient$Request;
+.field public A02:LX/0PL;
+
+.field public A03:LX/0VC;
+
+.field public A04:LX/0VC;
+
+.field public A05:LX/0VC;
+
+.field public A06:LX/0VC;
+
+.field public A07:LX/0VC;
+
+.field public A08:LX/0VC;
+
+.field public A09:LX/0VC;
+
+.field public A0A:LX/0VC;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;Lcom/facebook/login/GetTokenLoginMethodHandler;Lcom/facebook/login/LoginClient$Request;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/2IC;->A01:Lcom/facebook/login/GetTokenLoginMethodHandler;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/2IC;->A00:Landroid/os/Bundle;
-
     .line 3
-    .line 4
-    iput-object p3, p0, LX/2IC;->A02:Lcom/facebook/login/LoginClient$Request;
-
-    .line 5
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final AXy(LX/1tj;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2IC;->A01:Lcom/facebook/login/GetTokenLoginMethodHandler;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, Lcom/facebook/login/LoginMethodHandler;->A01:Lcom/facebook/login/LoginClient;
-
-    .line 3
-    .line 4
-    invoke-static {v0, p1}, Lcom/facebook/login/LoginClient$Result;->A02(Lcom/facebook/login/LoginClient;Ljava/lang/Throwable;)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public final AdN(Lorg/json/JSONObject;)V
-    .locals 4
+.method public final A00()V
+    .locals 3
 
     .line 0
     :try_start_0
-    const-string/jumbo v0, "id"
+    iget-object v2, p0, LX/2IC;->A00:LX/2Vf;
 
     .line 1
     .line 2
-    .line 3
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v2, :cond_1
 
+    .line 3
     .line 4
+    const-string/jumbo v0, "qpl.transitToEarlyStage"
+
     .line 5
     .line 6
-    move-result-object v1
-
     .line 7
-    iget-object v2, p0, LX/2IC;->A00:Landroid/os/Bundle;
+    invoke-static {v0}, LX/2fY;->A02(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     .line 8
     .line 9
-    const-string v0, "com.facebook.platform.extra.USER_ID"
-
     .line 10
-    .line 11
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    :try_start_1
+    iget-object v1, v2, LX/2Vf;->A0D:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 11
     .line 12
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
     .line 13
     .line 14
-    iget-object v3, p0, LX/2IC;->A01:Lcom/facebook/login/GetTokenLoginMethodHandler;
-
     .line 15
+    :try_start_2
+    iget v0, v2, LX/2Vf;->A0Z:I
+
     .line 16
-    iget-object v0, p0, LX/2IC;->A02:Lcom/facebook/login/LoginClient$Request;
-
     .line 17
-    .line 18
-    sget-object v1, LX/26J;->FACEBOOK_APPLICATION_SERVICE:LX/26J;
+    if-nez v0, :cond_0
 
+    .line 18
     .line 19
+    const/4 v0, 0x1
+
     .line 20
-    iget-object v0, v0, Lcom/facebook/login/LoginClient$Request;->A04:Ljava/lang/String;
+    iput v0, v2, LX/2Vf;->A0Z:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 21
     .line 22
-    invoke-static {v2, v1, v0}, Lcom/facebook/login/LoginMethodHandler;->A00(Landroid/os/Bundle;LX/26J;Ljava/lang/String;)Lcom/facebook/AccessToken;
+    :try_start_3
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 23
     .line 24
     .line 25
-    move-result-object v2
+    :try_start_4
+    invoke-static {}, LX/2fY;->A00()V
 
     .line 26
-    iget-object v1, v3, Lcom/facebook/login/LoginMethodHandler;->A01:Lcom/facebook/login/LoginClient;
-
     .line 27
     .line 28
-    iget-object v0, v1, Lcom/facebook/login/LoginClient;->A03:Lcom/facebook/login/LoginClient$Request;
+    sput-object v2, Lcom/facebook/quicklog/QuickPerformanceLoggerProvider;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
 
     .line 29
     .line 30
-    invoke-static {v2, v0}, Lcom/facebook/login/LoginClient$Result;->A00(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;)Lcom/facebook/login/LoginClient$Result;
+    return-void
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
     .line 31
+    :cond_0
+    :try_start_5
+    const-string/jumbo v0, "transitToEarlyStage can be done as first transition"
+
     .line 32
     .line 33
-    move-result-object v0
-
     .line 34
-    invoke-virtual {v1, v0}, Lcom/facebook/login/LoginClient;->A04(Lcom/facebook/login/LoginClient$Result;)V
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 35
     .line 36
     .line 37
-    return-void
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
     .line 38
-    :catch_0
-    move-exception v1
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     .line 39
-    iget-object v0, p0, LX/2IC;->A01:Lcom/facebook/login/GetTokenLoginMethodHandler;
+    :catchall_0
+    move-exception v0
 
     .line 40
-    .line 41
-    iget-object v0, v0, Lcom/facebook/login/LoginMethodHandler;->A01:Lcom/facebook/login/LoginClient;
+    :try_start_6
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 41
     .line 42
     .line 43
-    invoke-static {v0, v1}, Lcom/facebook/login/LoginClient$Result;->A02(Lcom/facebook/login/LoginClient;Ljava/lang/Throwable;)V
+    throw v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     .line 44
+    :cond_1
+    :try_start_7
+    const-string/jumbo v0, "setDependencies should be called prior to this method"
+
     .line 45
     .line 46
+    .line 47
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-object v0
+
+    .line 51
+    goto :goto_0
+
+    .line 52
+    :catchall_1
+    move-exception v0
+
+    .line 53
+    invoke-static {}, LX/2fY;->A00()V
+
+    .line 54
+    .line 55
+    .line 56
+    :goto_0
+    throw v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    .line 57
+    :catchall_2
+    move-exception v2
+
+    .line 58
+    const-string v1, "QuickPerformanceLoggerModule"
+
+    .line 59
+    .line 60
+    const-string v0, "QPL failed to transit to early stage"
+
+    .line 61
+    .line 62
+    invoke-static {v1, v0, v2}, LX/0Il;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 63
+    .line 64
+    .line 65
+    iget-object v0, p0, LX/2IC;->A06:LX/0VC;
+
+    .line 66
+    .line 67
+    invoke-static {v2, v0}, LX/2Iu;->A00(Ljava/lang/Throwable;LX/0VC;)V
+
+    .line 68
+    .line 69
+    .line 70
     return-void
 .end method

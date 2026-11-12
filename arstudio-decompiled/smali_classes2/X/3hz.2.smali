@@ -1,39 +1,39 @@
 .class public final LX/3hz;
-.super Ljava/lang/Object;
+.super LX/4vQ;
 .source ""
 
 # interfaces
-.implements Landroid/content/ServiceConnection;
+.implements LX/0GZ;
 
 
 # instance fields
-.field public final synthetic A00:LX/3hy;
+.field public final synthetic $key:Ljava/lang/String;
+
+.field public final synthetic $value:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/3hy;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    .line 0
-    iput-object p1, p0, LX/3hz;->A00:LX/3hy;
+    iput-object p1, p0, LX/3hz;->$key:Ljava/lang/String;
 
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/3hz;->$value:Ljava/lang/String;
 
-    .line 3
-    .line 4
-    .line 5
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0q()[Ljava/lang/Object;
+    invoke-static {p1}, LX/0X3;->A0O(Ljava/lang/Object;)LX/3hr;
 
     .line 1
     .line 2
@@ -41,46 +41,22 @@
     move-result-object v2
 
     .line 4
-    const-string v1, "HeroKeepAliveService.Client"
+    iget-object v1, p0, LX/3hz;->$key:Ljava/lang/String;
 
     .line 5
     .line 6
-    const-string v0, "Service Connected"
+    iget-object v0, p0, LX/3hz;->$value:Ljava/lang/String;
 
     .line 7
     .line 8
-    invoke-static {v1, v0, v2}, LX/47Q;->A02(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v2, v1, v0}, LX/3hr;->AdV(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     .line 10
     .line 11
-    return-void
-.end method
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
 
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0q()[Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    const-string v1, "HeroKeepAliveService.Client"
-
-    .line 5
-    .line 6
-    const-string v0, "Service Disconnected"
-
-    .line 7
-    .line 8
-    invoke-static {v1, v0, v2}, LX/47Q;->A02(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 9
-    .line 10
-    .line 11
-    return-void
+    .line 12
+    .line 13
+    return-object v0
 .end method

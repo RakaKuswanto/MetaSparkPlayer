@@ -1,63 +1,82 @@
-.class public final LX/1SU;
-.super Ljava/lang/Object;
+.class public final LX/1sU;
+.super LX/4sm;
 .source ""
 
 
+# instance fields
+.field public final A00:LX/1rI;
+
+.field public final synthetic A01:LX/1ri;
+
+
 # direct methods
-.method public static final A00()Ljava/lang/String;
-    .locals 4
+.method public constructor <init>(LX/1ri;)V
+    .locals 1
 
     .line 0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iput-object p1, p0, LX/1sU;->A01:LX/1ri;
 
     .line 1
     .line 2
-    .line 3
-    move-result-wide v0
+    invoke-direct {p0}, LX/4sm;-><init>()V
 
+    .line 3
     .line 4
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    .line 5
+    new-instance v0, LX/1sV;
+
+    .line 6
+    .line 7
+    invoke-direct {v0, p0}, LX/1sV;-><init>(LX/1sU;)V
+
+    .line 8
+    .line 9
+    .line 10
+    iput-object v0, p0, LX/1sU;->A00:LX/1rI;
+
+    .line 11
+    .line 12
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A03()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/1sU;->A01:LX/1ri;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/1sU;->A00:LX/1rI;
+
+    .line 3
+    .line 4
+    invoke-interface {v1, v0}, LX/1ri;->A38(LX/1rI;)V
 
     .line 5
     .line 6
     .line 7
-    move-result-object v3
+    return-void
+.end method
 
-    .line 8
-    invoke-static {}, LX/0Ye;->A0R()Ljava/lang/String;
+.method public final A04()V
+    .locals 2
 
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v2
+    .line 0
+    iget-object v1, p0, LX/1sU;->A01:LX/1ri;
 
-    .line 12
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/1sU;->A00:LX/1rI;
 
-    .line 13
-    .line 14
-    .line 15
-    const-string v1, "%s_%s_%s"
+    .line 3
+    .line 4
+    invoke-interface {v1, v0}, LX/1ri;->A79(LX/1rI;)V
 
-    .line 16
-    .line 17
-    const-string/jumbo v0, "upl"
-
-    .line 18
-    .line 19
-    .line 20
-    invoke-static {v1, v0, v3, v2}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 25
-    .line 26
-    .line 27
-    return-object v0
+    .line 5
+    .line 6
+    .line 7
+    return-void
 .end method

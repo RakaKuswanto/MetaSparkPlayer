@@ -57,7 +57,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/0Yf;->A0O()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
 
     .line 1
     .line 2
@@ -81,15 +81,15 @@
 
     .line 11
     .line 12
-    const/16 v1, 0x24
+    const/16 v1, 0x1e
 
     .line 13
     .line 14
-    new-instance v0, LX/1QO;
+    new-instance v0, LX/1b7;
 
     .line 15
     .line 16
-    invoke-direct {v0, v1}, LX/1QO;-><init>(I)V
+    invoke-direct {v0, v1}, LX/1b7;-><init>(I)V
 
     .line 17
     .line 18
@@ -104,7 +104,7 @@
 .method public constructor <init>(DDDDDDDDDLjava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Boolean;)V
     .locals 24
 
-    .line 806090197
+    .line 537650536
     sget-object v17, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_SKIP_ATTITUDE_INPUT:Ljava/lang/Boolean;
 
     move-object/from16 v22, p21
@@ -274,310 +274,260 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
-    .line 536870912
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
-
-    .line 536870916
-    .line 536870917
-    .line 536870918
-    move-result-wide v0
-
-    .line 536870919
-    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraX:D
-
-    .line 536870920
-    .line 536870921
-    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
-
-    .line 536870922
-    .line 536870923
-    .line 536870924
-    move-result-wide v0
-
-    .line 536870925
-    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraY:D
-
-    .line 536870926
-    .line 536870927
-    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
-
-    .line 536870928
-    .line 536870929
-    .line 536870930
-    move-result-wide v0
-
-    .line 536870931
-    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraZ:D
-
-    .line 536870932
-    .line 536870933
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    .line 536870934
-    .line 536870935
-    .line 536870936
-    move-result v0
-
-    .line 536870937
-    const/4 v2, 0x1
-
-    .line 536870938
-    invoke-static {v0}, LX/001;->A1L(I)Z
-
-    .line 536870939
-    .line 536870940
-    .line 536870941
-    move-result v0
-
-    .line 536870942
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->skipAttitudeInput:Z
-
-    .line 536870943
-    .line 536870944
-    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
-
-    .line 536870945
-    .line 536870946
-    .line 536870947
-    move-result-wide v0
-
-    .line 536870948
-    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->attitudeTimeDelay:D
-
-    .line 536870949
-    .line 536870950
-    invoke-static {p1}, LX/0Yc;->A1a(Landroid/os/Parcel;)Z
-
-    .line 536870951
-    .line 536870952
-    .line 536870953
-    move-result v0
-
-    .line 536870954
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->useVisionOnlySlam:Z
-
-    .line 536870955
-    .line 536870956
-    invoke-static {p1}, LX/0Yc;->A1a(Landroid/os/Parcel;)Z
-
-    .line 536870957
-    .line 536870958
-    .line 536870959
-    move-result v0
-
-    .line 536870960
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->isSlamCapable:Z
-
-    .line 536870961
-    .line 536870962
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    .line 536870963
-    .line 536870964
-    .line 536870965
-    move-result-object v0
-
-    .line 536870966
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->slamConfigurationParams:Ljava/lang/String;
-
-    .line 536870967
-    .line 536870968
-    const-class v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
-
-    .line 536870969
-    .line 536870970
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
-
-    .line 536870971
-    .line 536870972
-    .line 536870973
-    move-result-object v0
-
-    .line 536870974
-    check-cast v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
-
-    .line 536870975
-    .line 536870976
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->mCameraConfig:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
-
-    .line 536870977
-    .line 536870978
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    .line 536870979
-    .line 536870980
-    .line 536870981
-    move-result v0
-
-    .line 536870982
-    if-nez v0, :cond_0
-
-    .line 536870983
-    .line 536870984
-    const/4 v2, 0x0
-
-    .line 536870985
-    :cond_0
-    iput-boolean v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->isCalibratedDeviceConfig:Z
-
-    .line 536870986
-    .line 536870987
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;)V
-    .locals 11
-
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iget-wide v1, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraDistortion1:D
+    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     .line 4
     .line 5
-    iget-wide v3, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraDistortion2:D
-
     .line 6
+    move-result-wide v0
+
     .line 7
-    iget-wide v5, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraFocalLength:D
+    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraX:D
 
     .line 8
     .line 9
-    iget-wide v7, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraPrincipalPointX:D
+    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     .line 10
     .line 11
-    iget-wide v9, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraPrincipalPointY:D
-
     .line 12
+    move-result-wide v0
+
     .line 13
-    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
+    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraY:D
 
     .line 14
     .line 15
-    invoke-direct/range {v0 .. v10}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;-><init>(DDDDD)V
+    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     .line 16
     .line 17
     .line 18
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->mCameraConfig:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
+    move-result-wide v0
 
     .line 19
-    .line 20
-    const-wide v0, -0x3ffe3a7ce5229d1cL    # -2.221441469079183
+    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraZ:D
 
+    .line 20
     .line 21
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
     .line 22
     .line 23
     .line 24
+    move-result v0
+
     .line 25
-    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraX:D
+    const/4 v2, 0x1
 
     .line 26
-    .line 27
-    const-wide v0, 0x4001c5831add62e4L    # 2.221441469079183
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
+    .line 27
     .line 28
     .line 29
+    move-result v0
+
     .line 30
+    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->skipAttitudeInput:Z
+
     .line 31
     .line 32
-    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraY:D
+    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     .line 33
     .line 34
-    const-wide/16 v1, 0x0
-
     .line 35
+    move-result-wide v0
+
     .line 36
-    iput-wide v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraZ:D
+    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->attitudeTimeDelay:D
 
     .line 37
     .line 38
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_SKIP_ATTITUDE_INPUT:Ljava/lang/Boolean;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     .line 39
     .line 40
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
     .line 41
-    .line 42
-    .line 43
     move-result v0
 
-    .line 44
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->skipAttitudeInput:Z
+    .line 42
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
+    .line 43
+    .line 44
     .line 45
+    move-result v0
+
     .line 46
-    iput-wide v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->attitudeTimeDelay:D
+    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->useVisionOnlySlam:Z
 
     .line 47
     .line 48
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_USE_VISION_ONLY_SLAM:Ljava/lang/Boolean;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     .line 49
     .line 50
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
     .line 51
-    .line 52
-    .line 53
     move-result v0
 
-    .line 54
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->useVisionOnlySlam:Z
+    .line 52
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
+    .line 53
+    .line 54
     .line 55
+    move-result v0
+
     .line 56
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_IS_SLAM_CAPABLE:Ljava/lang/Boolean;
+    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->isSlamCapable:Z
 
     .line 57
     .line 58
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 59
     .line 60
     .line 61
-    move-result v0
+    move-result-object v0
 
     .line 62
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->isSlamCapable:Z
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->slamConfigurationParams:Ljava/lang/String;
 
     .line 63
     .line 64
-    const-string v0, ""
+    const-class v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
 
     .line 65
     .line 66
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->slamConfigurationParams:Ljava/lang/String;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 67
     .line 68
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_IS_CALIBRATED_DEVICE:Ljava/lang/Boolean;
-
     .line 69
+    move-result-object v0
+
     .line 70
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
 
     .line 71
     .line 72
-    .line 73
-    move-result v0
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->mCameraConfig:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
 
+    .line 73
     .line 74
-    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->isCalibratedDeviceConfig:Z
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     .line 75
     .line 76
+    .line 77
+    move-result v0
+
+    .line 78
+    if-nez v0, :cond_0
+
+    .line 79
+    .line 80
+    const/4 v2, 0x0
+
+    .line 81
+    :cond_0
+    iput-boolean v2, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->isCalibratedDeviceConfig:Z
+
+    .line 82
+    .line 83
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;)V
+    .locals 11
+
+    .line 806086023
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 806086024
+    iget-wide v1, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraDistortion1:D
+
+    iget-wide v3, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraDistortion2:D
+
+    iget-wide v5, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraFocalLength:D
+
+    iget-wide v7, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraPrincipalPointX:D
+
+    iget-wide v9, p1, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;->cameraPrincipalPointY:D
+
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
+
+    invoke-direct/range {v0 .. v10}, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;-><init>(DDDDD)V
+
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->mCameraConfig:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/CameraConfig;
+
+    const-wide v0, -0x3ffe3a7ce5229d1cL    # -2.221441469079183
+
+    .line 806086025
+    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraX:D
+
+    const-wide v0, 0x4001c5831add62e4L    # 2.221441469079183
+
+    .line 806086026
+    iput-wide v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraY:D
+
+    const-wide/16 v1, 0x0
+
+    .line 806086027
+    iput-wide v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->imuFromLandscapeCameraZ:D
+
+    .line 806086028
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_SKIP_ATTITUDE_INPUT:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->skipAttitudeInput:Z
+
+    .line 806086029
+    iput-wide v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->attitudeTimeDelay:D
+
+    .line 806086030
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_USE_VISION_ONLY_SLAM:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->useVisionOnlySlam:Z
+
+    .line 806086031
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_IS_SLAM_CAPABLE:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->isSlamCapable:Z
+
+    const-string v0, ""
+
+    .line 806086032
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->slamConfigurationParams:Ljava/lang/String;
+
+    .line 806086033
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->DEFAULT_IS_CALIBRATED_DEVICE:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/DeviceConfig;->isCalibratedDeviceConfig:Z
+
     return-void
 .end method
 

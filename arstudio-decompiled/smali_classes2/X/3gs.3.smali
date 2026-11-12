@@ -1,116 +1,96 @@
-.class public LX/3gs;
-.super Landroid/view/View;
+.class public final LX/3gs;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:Landroid/view/View;
-
-.field public A01:Z
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    iput-boolean v0, p0, LX/3gs;->A01:Z
-
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    const/4 v0, 0x0
-
-    .line 268435460
-    iput-boolean v0, p0, LX/3gs;->A01:Z
-
-    .line 268435461
-    .line 268435462
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+.method public final A00()LX/1sZ;
     .locals 1
 
     .line 0
-    iget-boolean v0, p0, LX/3gs;->A01:Z
+    sget-object v0, LX/3gr;->A06:LX/3gr;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 3
     .line 4
-    iget-object v0, p0, LX/3gs;->A00:Landroid/view/View;
+    sget-object v0, LX/3gr;->A06:LX/3gr;
 
     .line 5
     .line 6
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
     .line 7
     .line 8
-    invoke-virtual {v0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    const-string/jumbo v0, "managerInstance"
 
     .line 9
     .line 10
     .line 11
-    const/4 v0, 0x1
+    invoke-static {v0}, LX/0WV;->A0F(Ljava/lang/String;)V
 
     .line 12
-    return v0
-
     .line 13
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-
     .line 14
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
     .line 15
     .line 16
-    move-result v0
-
     .line 17
-    return v0
-.end method
+    move-result-object v0
 
-.method public setForwardingEnabled(Z)V
-    .locals 0
+    .line 18
+    throw v0
 
-    .line 0
-    iput-boolean p1, p0, LX/3gs;->A01:Z
+    .line 19
+    :cond_0
+    iget-object v0, v0, LX/3gr;->A02:LX/3gS;
 
-    .line 1
-    .line 2
-    return-void
-.end method
+    .line 20
+    .line 21
+    invoke-interface {v0}, LX/3gS;->getValue()Ljava/lang/Object;
 
-.method public setTouchRecipient(Landroid/view/View;)V
-    .locals 0
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
 
-    .line 0
-    iput-object p1, p0, LX/3gs;->A00:Landroid/view/View;
+    .line 25
+    check-cast v0, LX/1sZ;
 
-    .line 1
-    .line 2
-    return-void
+    .line 26
+    .line 27
+    return-object v0
+
+    .line 28
+    :cond_1
+    const-string v0, "W3CAppClient is not initialized yet"
+
+    .line 29
+    .line 30
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    throw v0
 .end method

@@ -1,66 +1,41 @@
-.class public final LX/5PT;
+.class public interface abstract LX/5PT;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3aS;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
 
 # virtual methods
-.method public final AJH(I)I
-    .locals 3
+.method public abstract AVA(LX/5Fy;I)V
+.end method
 
-    const/4 v2, 0x3
+.method public abstract AVj(IJ)V
+.end method
 
-    const/4 v1, 0x2
+.method public abstract AaO(Ljava/lang/Object;J)V
+.end method
 
-    const/4 v0, 0x1
+.method public abstract AdA(Ljava/lang/Exception;)V
+.end method
 
-    if-eqz p1, :cond_3
+.method public abstract AdB(Ljava/lang/String;)V
+.end method
 
-    if-eq p1, v0, :cond_2
+.method public abstract AdD(Ljava/lang/String;JJ)V
+.end method
 
-    if-eq p1, v1, :cond_1
+.method public abstract AdE(Ljava/lang/String;)V
+.end method
 
-    if-eq p1, v2, :cond_0
+.method public abstract AdF(LX/5Or;)V
+.end method
 
-    const/4 v0, 0x6
+.method public abstract AdG(LX/5Or;)V
+.end method
 
-    const/4 v2, 0x4
+.method public abstract AdJ(JI)V
+.end method
 
-    if-eq p1, v0, :cond_0
+.method public abstract AdL(LX/5Fy;LX/5Ow;)V
+.end method
 
-    const/4 v2, 0x5
-
-    :cond_0
-    return v2
-
-    :cond_1
-    const/4 v2, 0x2
-
-    return v2
-
-    :cond_2
-    const/4 v2, 0x1
-
-    return v2
-
-    :cond_3
-    const/4 v2, 0x0
-
-    return v2
+.method public abstract AdS(LX/5KS;)V
 .end method

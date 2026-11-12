@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLEventDashboardCardListUnitTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLEventDashboardCardListUnitTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x1a
+    const/16 v0, 0x20
 
     .line 1
     .line 2
@@ -23,7 +23,7 @@
     const/4 v1, 0x0
 
     .line 5
-    const-string v0, "EVENT_DASHBOARD_CALENDAR_TAB_NUX"
+    const-string v0, "EVENT_DASHBOARD_AP_PLUS_INTERCEPT_UPSELL"
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "EVENT_DASHBOARD_DISCOVERY"
+    const-string v0, "EVENT_DASHBOARD_CALENDAR_TAB_NUX"
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "EVENT_DASHBOARD_EDUCATION_TOP_UNIT"
+    const-string v0, "EVENT_DASHBOARD_CONTENT_REMINDER_UNIT"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "EVENT_DASHBOARD_FEEDBACK"
+    const-string v0, "EVENT_DASHBOARD_DISCOVERY"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "EVENT_DASHBOARD_FRIENDS"
+    const-string v0, "EVENT_DASHBOARD_EDUCATION_TOP_UNIT"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "EVENT_DASHBOARD_HERO_HSCROLL"
+    const-string v0, "EVENT_DASHBOARD_EVENT_SUGGESTED_POST_UPSELL"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "EVENT_DASHBOARD_HERO_HSCROLL_NUX"
+    const-string v0, "EVENT_DASHBOARD_EXPOSURE_LOGGING"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "EVENT_DASHBOARD_HOIST_NOTIFICATION"
+    const-string v0, "EVENT_DASHBOARD_FEEDBACK"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "EVENT_DASHBOARD_LOCATION_PICKER"
+    const-string v0, "EVENT_DASHBOARD_FRIENDS"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "EVENT_DASHBOARD_NATIVE_UPCOMING_HSCROLL"
+    const-string v0, "EVENT_DASHBOARD_HERO_HSCROLL"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "EVENT_DASHBOARD_PROMO_UNIT"
+    const-string v0, "EVENT_DASHBOARD_HERO_HSCROLL_NUX"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "EVENT_DASHBOARD_QP_BLOKS_UNIT"
+    const-string v0, "EVENT_DASHBOARD_HOIST_NOTIFICATION"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "EVENT_DASHBOARD_QP_BOTTOM_UNIT"
+    const-string v0, "EVENT_DASHBOARD_LOCATION_PICKER"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "EVENT_DASHBOARD_QP_TOP_UNIT"
+    const-string v0, "EVENT_DASHBOARD_NATIVE_UPCOMING_HSCROLL"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "EVENT_DASHBOARD_TEST"
+    const-string v0, "EVENT_DASHBOARD_PIN_TAB_UPSELL"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "EVENT_DASHBOARD_TIME_FILTER"
+    const-string v0, "EVENT_DASHBOARD_PROMO_UNIT"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "EVENT_DASHBOARD_TIME_FILTER_PILL"
+    const-string v0, "EVENT_DASHBOARD_QP_BLOKS_TOP_UNIT"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "EVENT_DASHBOARD_TURN_ON_NOTIFICATION_BANNER"
+    const-string v0, "EVENT_DASHBOARD_QP_BLOKS_UNIT"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "EVENT_DASHBOARD_UPCOMING"
+    const-string v0, "EVENT_DASHBOARD_QP_BOTTOM_UNIT"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "EVENT_DASHBOARD_UPCOMING_EXPANDED"
+    const-string v0, "EVENT_DASHBOARD_QP_TOP_UNIT"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "EVENT_DASHBOARD_UPCOMING_HSCROLL"
+    const-string v0, "EVENT_DASHBOARD_TEST"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "EVENT_DASHBOARD_UPCOMING_SHORT"
+    const-string v0, "EVENT_DASHBOARD_TIME_FILTER"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "EVENT_DASHBOARD_UPCOMING_UNIT_NUX"
+    const-string v0, "EVENT_DASHBOARD_TIME_FILTER_PILL"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "EVENT_DASHBOARD_WEEKLY_DIGEST"
+    const-string v0, "EVENT_DASHBOARD_TURN_ON_NOTIFICATION_BANNER"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "EVENT_DASHBOARD_YOUR_UPCOMING_EVENTS"
+    const-string v0, "EVENT_DASHBOARD_UPCOMING"
 
     .line 143
     .line 144
@@ -316,22 +316,94 @@
 
     .line 147
     .line 148
-    const-string v0, "EVENT_OTHER_TOUR_EVENTS"
+    const-string v0, "EVENT_DASHBOARD_UPCOMING_EXPANDED"
 
     .line 149
     .line 150
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 151
     .line 152
-    .line 153
-    move-result-object v0
+    const/16 v1, 0x1a
 
+    .line 153
     .line 154
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLEventDashboardCardListUnitTypeSet;->A00:Ljava/util/Set;
+    const-string v0, "EVENT_DASHBOARD_UPCOMING_HSCROLL"
 
     .line 155
     .line 156
+    aput-object v0, v2, v1
+
+    .line 157
+    .line 158
+    const/16 v1, 0x1b
+
+    .line 159
+    .line 160
+    const-string v0, "EVENT_DASHBOARD_UPCOMING_SHORT"
+
+    .line 161
+    .line 162
+    aput-object v0, v2, v1
+
+    .line 163
+    .line 164
+    const/16 v1, 0x1c
+
+    .line 165
+    .line 166
+    const-string v0, "EVENT_DASHBOARD_UPCOMING_UNIT_NUX"
+
+    .line 167
+    .line 168
+    aput-object v0, v2, v1
+
+    .line 169
+    .line 170
+    const/16 v1, 0x1d
+
+    .line 171
+    .line 172
+    const-string v0, "EVENT_DASHBOARD_WEEKLY_DIGEST"
+
+    .line 173
+    .line 174
+    aput-object v0, v2, v1
+
+    .line 175
+    .line 176
+    const/16 v1, 0x1e
+
+    .line 177
+    .line 178
+    const-string v0, "EVENT_DASHBOARD_YOUR_UPCOMING_EVENTS"
+
+    .line 179
+    .line 180
+    aput-object v0, v2, v1
+
+    .line 181
+    .line 182
+    const/16 v1, 0x1f
+
+    .line 183
+    .line 184
+    const-string v0, "EVENT_OTHER_TOUR_EVENTS"
+
+    .line 185
+    .line 186
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-object v0
+
+    .line 190
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLEventDashboardCardListUnitTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 191
+    .line 192
     return-void
 .end method
 
@@ -347,11 +419,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLEventDashboardCardListUnitTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLEventDashboardCardListUnitTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

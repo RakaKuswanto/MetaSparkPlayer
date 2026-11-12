@@ -22,7 +22,7 @@
 # instance fields
 .field public transient A00:Lcom/google/common/collect/ImmutableSet;
 
-.field public final transient A01:LX/1g5;
+.field public final transient A01:LX/231;
 
 .field public final transient A02:I
 
@@ -32,11 +32,11 @@
     .locals 2
 
     .line 0
-    new-instance v1, LX/1g5;
+    new-instance v1, LX/231;
 
     .line 1
     .line 2
-    invoke-direct {v1}, LX/1g5;-><init>()V
+    invoke-direct {v1}, LX/231;-><init>()V
 
     .line 3
     .line 4
@@ -45,7 +45,7 @@
 
     .line 6
     .line 7
-    invoke-direct {v0, v1}, Lcom/google/common/collect/RegularImmutableMultiset;-><init>(LX/1g5;)V
+    invoke-direct {v0, v1}, Lcom/google/common/collect/RegularImmutableMultiset;-><init>(LX/231;)V
 
     .line 8
     .line 9
@@ -57,8 +57,16 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1g5;)V
+.method public constructor <init>(LX/231;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "contents"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMultiset;-><init>()V
@@ -66,7 +74,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/1g5;
+    iput-object p1, p0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/231;
 
     .line 4
     .line 5
@@ -78,7 +86,7 @@
 
     .line 8
     :goto_0
-    iget v0, p1, LX/1g5;->A02:I
+    iget v0, p1, LX/231;->A02:I
 
     .line 9
     .line 10
@@ -91,7 +99,7 @@
     .line 13
     .line 14
     .line 15
-    iget-object v0, p1, LX/1g5;->A05:[I
+    iget-object v0, p1, LX/231;->A05:[I
 
     .line 16
     .line 17
@@ -113,7 +121,7 @@
 
     .line 24
     :cond_0
-    invoke-static {v3, v4}, LX/1e1;->A00(J)I
+    invoke-static {v3, v4}, LX/212;->A00(J)I
 
     .line 25
     .line 26
@@ -130,15 +138,23 @@
 
 
 # virtual methods
-.method public final A7b(Ljava/lang/Object;)I
+.method public final A5u(Ljava/lang/Object;)I
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "element"
+        }
+    .end annotation
 
     .line 0
-    iget-object v2, p0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/1g5;
+    iget-object v2, p0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/231;
 
     .line 1
     .line 2
-    invoke-virtual {v2, p1}, LX/1g5;->A04(Ljava/lang/Object;)I
+    invoke-virtual {v2, p1}, LX/231;->A04(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -160,7 +176,7 @@
 
     .line 11
     :cond_0
-    iget-object v0, v2, LX/1g5;->A05:[I
+    iget-object v0, v2, LX/231;->A05:[I
 
     .line 12
     .line 13
@@ -169,6 +185,35 @@
     .line 14
     .line 15
     return v0
+.end method
+
+.method public final bridge synthetic A80()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->A00:Lcom/google/common/collect/ImmutableSet;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    new-instance v0, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0}, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;-><init>(Lcom/google/common/collect/RegularImmutableMultiset;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->A00:Lcom/google/common/collect/ImmutableSet;
+
+    .line 10
+    .line 11
+    :cond_0
+    return-object v0
 .end method
 
 .method public final size()I
@@ -190,7 +235,7 @@
 
     .line 1
     .line 2
-    invoke-direct {v0, p0}, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;-><init>(LX/1f6;)V
+    invoke-direct {v0, p0}, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;-><init>(LX/22O;)V
 
     .line 3
     .line 4

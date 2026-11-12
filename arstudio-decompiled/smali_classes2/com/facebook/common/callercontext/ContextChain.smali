@@ -31,11 +31,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x26
+    const/16 v0, 0x20
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -99,7 +99,7 @@
 
     .line 22
     .line 23
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 24
     .line 25
@@ -139,7 +139,7 @@
 
     .line 268435464
     .line 268435465
-    invoke-static {p2, v0, p3}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0, p3}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 268435466
     .line 268435467
@@ -194,7 +194,7 @@
 
     .line 268435491
     :cond_1
-    invoke-static {v1}, LX/0Yj;->A0Y(Ljava/util/Map;)Ljava/util/HashMap;
+    invoke-static {v1}, LX/0X7;->A0c(Ljava/util/Map;)Ljava/util/HashMap;
 
     .line 268435492
     .line 268435493
@@ -292,7 +292,7 @@
 
     .line 21
     .line 22
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/1ce;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 23
     .line 24
@@ -312,7 +312,7 @@
 
     .line 31
     .line 32
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/1ce;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 33
     .line 34
@@ -340,33 +340,40 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
     .line 0
-    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
     .line 3
-    move-result v0
+    move-result-object v2
 
     .line 4
-    mul-int/lit8 v1, v0, 0x1f
+    iget-object v1, p0, Lcom/facebook/common/callercontext/ContextChain;->A03:Lcom/facebook/common/callercontext/ContextChain;
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/facebook/common/callercontext/ContextChain;->A00:Ljava/lang/String;
+    const/4 v0, 0x0
 
     .line 7
-    .line 8
-    invoke-static {v0, v1}, LX/0Yi;->A07(Ljava/lang/String;I)I
+    aput-object v1, v2, v0
 
+    .line 8
     .line 9
+    iget-object v0, p0, Lcom/facebook/common/callercontext/ContextChain;->A00:Ljava/lang/String;
+
     .line 10
     .line 11
-    move-result v0
+    invoke-static {v2, v0}, LX/0X2;->A0D([Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
     return v0
 .end method
 
@@ -410,7 +417,7 @@
 
     .line 17
     .line 18
-    invoke-static {v1, v2, v0}, LX/00I;->A0G(Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, LX/004;->A0D(Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
 
     .line 19
     .line 20

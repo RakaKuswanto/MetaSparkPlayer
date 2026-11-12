@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/65w;->A00()V
+    invoke-static {}, LX/4Gp;->A00()V
 
     .line 1
     .line 2
@@ -28,5 +28,5 @@
     return-void
 .end method
 
-.method public static native restoreFromExistingDatabase(Lcom/facebook/msys/mci/SqliteHolder;Ljava/lang/String;)I
+.method public static native restoreFromExistingDatabase(Lcom/facebook/msys/mci/sqliteholder/SqliteHolder;Ljava/lang/String;)I
 .end method

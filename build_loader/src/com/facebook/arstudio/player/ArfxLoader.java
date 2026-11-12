@@ -27,7 +27,7 @@ import java.util.zip.ZipOutputStream;
 
 public class ArfxLoader {
     private static final String TAG = "ArfxLoader";
-    private static final String TARGET_SDK_VERSION = "175.0";
+    private static final String TARGET_SDK_VERSION = "187.0";
 
     public static void load(final Activity activity, final Uri uri) {
         if (activity == null || uri == null) {
@@ -325,7 +325,7 @@ public class ArfxLoader {
                     zos.write(patchedData);
                     zos.closeEntry();
                     manifestWritten = true;
-                    Log.i(TAG, "manifest.json berhasil di-patch ke SDK 175.0 dalam ZIP");
+                    Log.i(TAG, "manifest.json berhasil di-patch ke SDK " + TARGET_SDK_VERSION + " dalam ZIP");
                 } else {
                     ZipEntry ze = new ZipEntry(relName);
                     zos.putNextEntry(ze);
@@ -435,7 +435,7 @@ public class ArfxLoader {
                         zos.closeEntry();
                         manifestWritten = true;
                         foundFiles = true;
-                        Log.i(TAG, "manifest.json berhasil di-patch ke SDK 175.0 dari TAR");
+                        Log.i(TAG, "manifest.json berhasil di-patch ke SDK " + TARGET_SDK_VERSION + " dari TAR");
                     } else {
                         ZipEntry ze = new ZipEntry(name);
                         zos.putNextEntry(ze);

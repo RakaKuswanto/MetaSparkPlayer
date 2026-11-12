@@ -1,35 +1,54 @@
-.class public interface abstract LX/6H2;
+.class public final LX/6H2;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# virtual methods
-.method public abstract doesRenderSupportScaling()Z
-.end method
 
-.method public abstract getAnimatedBitmapConfig()Landroid/graphics/Bitmap$Config;
-.end method
+# static fields
+.field public static final serialVersionUID:J = 0x1L
 
-.method public abstract getFrame(I)LX/54A;
-.end method
 
-.method public abstract getFrameCount()I
-.end method
+# instance fields
+.field public clazz:Ljava/lang/Class;
 
-.method public abstract getFrameDurations()[I
-.end method
+.field public name:Ljava/lang/String;
 
-.method public abstract getFrameInfo(I)LX/549;
-.end method
 
-.method public abstract getHeight()I
-.end method
+# direct methods
+.method public constructor <init>(Ljava/lang/reflect/Field;)V
+    .locals 1
 
-.method public abstract getLoopCount()I
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract getSizeInBytes()I
-.end method
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getDeclaringClass()Ljava/lang/Class;
 
-.method public abstract getWidth()I
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/6H2;->clazz:Ljava/lang/Class;
+
+    .line 8
+    .line 9
+    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/6H2;->name:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    return-void
 .end method

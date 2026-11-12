@@ -1,37 +1,38 @@
-.class public final LX/0B8;
-.super LX/0SU;
+.class public interface abstract LX/0B8;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
-    .locals 2
+# virtual methods
+.method public abstract A2l(Ljava/lang/String;Ljava/lang/Boolean;)V
+.end method
 
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+.method public abstract A2p(Ljava/lang/String;Ljava/lang/Double;)V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
+.method public abstract A2q(LX/0B2;Ljava/lang/String;)V
+.end method
 
-    .line 4
-    const-string v0, "Attempting to get target request code from fragment "
+.method public abstract A2x(Ljava/lang/String;Ljava/lang/Integer;)V
+.end method
 
-    .line 5
-    .line 6
-    invoke-static {p1, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+.method public abstract A34(Ljava/lang/String;Ljava/lang/Long;)V
+.end method
 
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
+.method public abstract A35(Ljava/lang/String;Ljava/util/Map;)V
+.end method
 
-    .line 10
-    invoke-direct {p0, p1, v0}, LX/0SU;-><init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
+.method public abstract A3K(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    .line 11
-    .line 12
-    .line 13
-    return-void
+.method public abstract A3L(LX/0DI;Ljava/lang/String;)V
+.end method
+
+.method public abstract A3S(Ljava/lang/String;Ljava/util/List;)V
+.end method
+
+.method public abstract AQk()V
+.end method
+
+.method public abstract isSampled()Z
 .end method

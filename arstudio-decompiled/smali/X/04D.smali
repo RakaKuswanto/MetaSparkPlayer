@@ -1,111 +1,161 @@
-.class public final LX/04D;
-.super LX/0NN;
+.class public abstract LX/04D;
+.super LX/0Ns;
 .source ""
-
-# interfaces
-.implements LX/0NM;
 
 
 # instance fields
-.field public final A00:Landroid/net/http/X509TrustManagerExtensions;
+.field public final A00:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0}, LX/0Ns;-><init>()V
 
     .line 1
-    invoke-direct {p0, v0, p1, p2}, LX/04D;-><init>(LX/0U6;J)V
-
     .line 2
     .line 3
+    iput-object p1, p0, LX/04D;->A00:Landroid/os/Handler;
+
     .line 4
-    return-void
-.end method
-
-.method public constructor <init>(LX/0U6;J)V
-    .locals 2
-
-    .line 268435456
-    invoke-direct {p0, p1, p2, p3}, LX/0NN;-><init>(LX/0U6;J)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iget-object v1, p0, LX/0NN;->A02:Ljavax/net/ssl/X509TrustManager;
-
-    .line 268435460
-    .line 268435461
-    new-instance v0, Landroid/net/http/X509TrustManagerExtensions;
-
-    .line 268435462
-    .line 268435463
-    invoke-direct {v0, v1}, Landroid/net/http/X509TrustManagerExtensions;-><init>(Ljavax/net/ssl/X509TrustManager;)V
-
-    .line 268435464
-    .line 268435465
-    .line 268435466
-    iput-object v0, p0, LX/04D;->A00:Landroid/net/http/X509TrustManagerExtensions;
-
-    .line 268435467
-    .line 268435468
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final A6j(Ljava/lang/String;Ljava/lang/String;[Ljava/security/cert/X509Certificate;)V
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    .line 0
-    iget-object v0, p0, LX/04D;->A00:Landroid/net/http/X509TrustManagerExtensions;
+    .line 268435456
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    .line 1
-    .line 2
-    invoke-virtual {v0, p3, p1, p2}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v1
 
-    .line 3
-    .line 4
-    .line 5
+    .line 268435460
+    iget-object v0, p0, LX/04D;->A00:Landroid/os/Handler;
+
+    .line 268435461
+    .line 268435462
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    .line 268435463
+    .line 268435464
+    .line 268435465
     move-result-object v0
 
-    .line 6
-    invoke-virtual {p0, v0}, LX/0NN;->A01(Ljava/util/List;)V
+    .line 268435466
+    if-ne v1, v0, :cond_0
 
-    .line 7
-    .line 8
-    .line 9
-    return-void
+    .line 268435467
+    .line 268435468
+    invoke-virtual {p0}, LX/0Ns;->isDone()Z
+
+    .line 268435469
+    .line 268435470
+    .line 268435471
+    move-result v0
+
+    .line 268435472
+    if-nez v0, :cond_0
+
+    .line 268435473
+    .line 268435474
+    const-string v0, "Must not call get() function from this Handler thread. Will deadlock!"
+
+    .line 268435475
+    .line 268435476
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 268435477
+    .line 268435478
+    .line 268435479
+    move-result-object v0
+
+    .line 268435480
+    throw v0
+
+    .line 268435481
+    :cond_0
+    invoke-super {p0}, LX/0Ns;->get()Ljava/lang/Object;
+
+    .line 268435482
+    .line 268435483
+    .line 268435484
+    move-result-object v0
+
+    .line 268435485
+    return-object v0
 .end method
 
-.method public final A6k(Ljava/lang/String;Ljava/lang/String;[Ljava/security/cert/X509Certificate;Z)V
-    .locals 1
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/04D;->A00:Landroid/net/http/X509TrustManagerExtensions;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p3, p1, p2}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
-
     .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    move-result-object v1
 
+    .line 4
+    iget-object v0, p0, LX/04D;->A00:Landroid/os/Handler;
+
+    .line 5
     .line 6
-    if-eqz p4, :cond_0
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     .line 7
     .line 8
-    invoke-virtual {p0, v0}, LX/0NN;->A01(Ljava/util/List;)V
-
     .line 9
+    move-result-object v0
+
     .line 10
+    if-ne v1, v0, :cond_0
+
     .line 11
+    .line 12
+    invoke-virtual {p0}, LX/0Ns;->isDone()Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    if-nez v0, :cond_0
+
+    .line 17
+    .line 18
+    const-string v0, "Must not call get() function from this Handler thread. Will deadlock!"
+
+    .line 19
+    .line 20
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    throw v0
+
+    .line 25
     :cond_0
-    return-void
+    invoke-super {p0, p1, p2, p3}, LX/0Ns;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    return-object v0
 .end method

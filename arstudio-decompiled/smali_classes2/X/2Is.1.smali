@@ -1,54 +1,43 @@
-.class public final LX/2Is;
+.class public abstract LX/2Is;
 .super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A00:LX/2KX;
+
+.field public static final A01:LX/0lu;
+
+
 # direct methods
-.method public static final A00(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    if-eqz p0, :cond_0
+    new-instance v0, LX/2KX;
 
     .line 1
     .line 2
-    if-nez p1, :cond_1
+    invoke-direct {v0}, LX/2KX;-><init>()V
 
     .line 3
     .line 4
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-
     .line 5
+    sput-object v0, LX/2Is;->A00:LX/2KX;
+
     .line 6
     .line 7
-    :cond_0
-    return-void
+    invoke-static {}, LX/2I6;->A0M()LX/0lu;
 
     .line 8
-    :cond_1
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-
     .line 9
     .line 10
+    move-result-object v0
+
     .line 11
-    goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sput-object v0, LX/2Is;->A01:LX/0lu;
 
     .line 12
-    :catchall_0
-    move-exception p0
-
     .line 13
-    invoke-static {p1, p0}, LX/2WP;->A01(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    .line 14
-    .line 15
-    .line 16
-    return-void
-
-    .line 17
-    :goto_0
     return-void
 .end method

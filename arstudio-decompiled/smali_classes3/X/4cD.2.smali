@@ -3,23 +3,19 @@
 .source ""
 
 # interfaces
-.implements LX/03i;
+.implements LX/01m;
 
 
 # instance fields
-.field public A00:I
-
-.field public A01:Z
-
-.field public final synthetic A02:LX/4bU;
+.field public final synthetic A00:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/4bU;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4cD;->A02:LX/4bU;
+    iput-object p1, p0, LX/4cD;->A00:Ljava/lang/String;
 
     .line 1
     .line 2
@@ -28,87 +24,117 @@
     .line 3
     .line 4
     .line 5
-    const/4 v0, 0x0
-
-    .line 6
-    iput-boolean v0, p0, LX/4cD;->A01:Z
-
-    .line 7
-    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final AUk(Landroid/view/View;)V
-    .locals 1
+.method public final bridge synthetic accept(Ljava/lang/Object;)V
+    .locals 4
 
     .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    iput-boolean v0, p0, LX/4cD;->A01:Z
-
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public final AUl(Landroid/view/View;)V
-    .locals 2
-
-    .line 0
-    iget-boolean v0, p0, LX/4cD;->A01:Z
+    sget-object v3, LX/4cP;->A02:Ljava/lang/Object;
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
+    monitor-enter v3
 
     .line 3
+    :try_start_0
+    sget-object v1, LX/4cP;->A01:LX/012;
+
     .line 4
-    iget-object v1, p0, LX/4cD;->A02:LX/4bU;
-
     .line 5
-    .line 6
-    const/4 v0, 0x0
+    iget-object v0, p0, LX/4cD;->A00:Ljava/lang/String;
 
+    .line 6
     .line 7
-    iput-object v0, v1, LX/4bU;->A02:LX/03h;
+    invoke-virtual {v1, v0}, LX/012;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 8
     .line 9
-    iget v0, p0, LX/4cD;->A00:I
-
     .line 10
+    move-result-object v2
+
     .line 11
-    invoke-static {v1, v0}, LX/4bU;->A03(LX/4bU;I)V
+    check-cast v2, Ljava/util/ArrayList;
 
     .line 12
     .line 13
+    if-nez v2, :cond_0
+
     .line 14
+    .line 15
+    monitor-exit v3
+
+    .line 16
+    return-void
+
+    .line 17
     :cond_0
+    invoke-virtual {v1, v0}, LX/012;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    .line 20
+    monitor-exit v3
+
+    .line 21
+    const/4 v1, 0x0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 22
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    if-ge v1, v0, :cond_1
+
+    .line 27
+    .line 28
+    invoke-virtual {v2, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    check-cast v0, LX/01m;
+
+    .line 33
+    .line 34
+    invoke-interface {v0, p1}, LX/01m;->accept(Ljava/lang/Object;)V
+
+    .line 35
+    .line 36
+    .line 37
+    add-int/lit8 v1, v1, 0x1
+
+    .line 38
+    .line 39
+    goto :goto_0
+
+    .line 40
+    :cond_1
     return-void
-.end method
 
-.method public final AUm(Landroid/view/View;)V
-    .locals 2
+    .line 41
+    :catchall_0
+    move-exception v0
 
-    .line 0
-    iget-object v1, p0, LX/4cD;->A02:LX/4bU;
+    .line 42
+    :try_start_1
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1
-    .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    invoke-static {v1}, LX/4bU;->A02(LX/4bU;)V
-
-    .line 4
-    .line 5
-    .line 6
-    iput-boolean v0, p0, LX/4cD;->A01:Z
-
-    .line 7
-    .line 8
-    return-void
+    .line 43
+    throw v0
 .end method

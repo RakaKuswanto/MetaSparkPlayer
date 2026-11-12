@@ -75,7 +75,7 @@
 
     .line 27
     .line 28
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 29
     .line 30
@@ -168,7 +168,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0, v7}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0, v7}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
     .line 13
     .line 14
@@ -180,7 +180,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, v3}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0, v3}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
     .line 19
     .line 20
@@ -236,7 +236,7 @@
 
     .line 44
     .line 45
-    invoke-static {v0, v3}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0, v3}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 46
     .line 47
@@ -317,7 +317,7 @@
 
     .line 80
     .line 81
-    invoke-static {v0, v7}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0, v7}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
     .line 82
     .line 83
@@ -334,7 +334,7 @@
 
     .line 89
     .line 90
-    invoke-static {v0, v3}, LX/001;->A09(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0, v3}, LX/001;->A08(Lcom/facebook/common/dextricks/DexStore;Ljava/lang/String;)Ljava/io/File;
 
     .line 91
     .line 92
@@ -367,41 +367,64 @@
 
     .line 104
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 105
     :try_start_4
     invoke-virtual {v8}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 106
     .line 107
     .line 108
-    :catchall_1
-    :try_start_5
-    throw v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    goto :goto_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 109
-    :catchall_2
+    :catchall_1
     move-exception v0
 
     .line 110
-    if-eqz v5, :cond_2
+    :try_start_5
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 111
     .line 112
+    .line 113
+    :goto_0
+    throw v1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    .line 114
+    :catchall_2
+    move-exception v1
+
+    .line 115
+    if-eqz v5, :cond_2
+
+    .line 116
+    .line 117
     :try_start_6
     invoke-virtual {v5}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 113
-    .line 114
-    .line 115
+    .line 118
+    .line 119
+    .line 120
+    throw v1
+
+    .line 121
     :catchall_3
+    move-exception v0
+
+    .line 122
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 123
+    .line 124
+    .line 125
     :cond_2
-    throw v0
+    throw v1
 .end method

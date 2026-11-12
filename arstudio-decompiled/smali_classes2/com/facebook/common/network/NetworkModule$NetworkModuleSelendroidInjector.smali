@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0Qe;
-
 
 # instance fields
 .field public final A00:Landroid/content/Context;
@@ -33,11 +30,11 @@
     .locals 1
 
     .line 0
-    sget v0, LX/2eq;->A0M:I
+    sget v0, LX/2I6;->A0E:I
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 3
     .line 4

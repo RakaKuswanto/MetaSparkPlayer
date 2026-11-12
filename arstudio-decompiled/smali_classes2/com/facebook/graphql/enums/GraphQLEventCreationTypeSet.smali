@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLEventCreationTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLEventCreationTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0x()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A11()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -67,33 +67,35 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "WORK_IN_PERSON"
+    const-string/jumbo v0, "WORK_IN_PERSON"
 
     .line 26
     .line 27
+    .line 28
     aput-object v0, v2, v1
 
-    .line 28
     .line 29
+    .line 30
     const/4 v1, 0x5
 
-    .line 30
-    const-string v0, "WORK_ONLINE"
-
     .line 31
-    .line 32
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WORK_ONLINE"
 
+    .line 32
     .line 33
     .line 34
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 35
+    .line 36
+    .line 37
     move-result-object v0
 
-    .line 36
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLEventCreationTypeSet;->A00:Ljava/util/Set;
-
-    .line 37
     .line 38
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLEventCreationTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 39
+    .line 40
     return-void
 .end method
 
@@ -109,11 +111,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLEventCreationTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLEventCreationTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

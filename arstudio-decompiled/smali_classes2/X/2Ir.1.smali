@@ -1,65 +1,81 @@
 .class public final LX/2Ir;
-.super Ljava/lang/RuntimeException;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final context:LX/2VQ;
-
-
 # direct methods
-.method public constructor <init>(LX/2VQ;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2Ir;->context:LX/2VQ;
-
-    .line 4
-    .line 5
     return-void
 .end method
 
-
-# virtual methods
-.method public final fillInStackTrace()Ljava/lang/Throwable;
+.method public static final A00(I)LX/2L9;
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    if-ltz p0, :cond_2
 
     .line 1
-    new-array v0, v0, [Ljava/lang/StackTraceElement;
-
     .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+    const/16 v0, 0x258
 
+    .line 3
     .line 4
+    if-ge p0, v0, :cond_0
+
     .line 5
     .line 6
-    return-object p0
-.end method
+    sget-object v0, LX/2L9;->COMPACT:LX/2L9;
 
-.method public final getLocalizedMessage()Ljava/lang/String;
-    .locals 1
+    .line 7
+    .line 8
+    return-object v0
 
-    .line 0
-    iget-object v0, p0, LX/2Ir;->context:LX/2VQ;
+    .line 9
+    :cond_0
+    const/16 v0, 0x348
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 10
+    .line 11
+    if-ge p0, v0, :cond_1
 
-    .line 3
-    .line 4
-    .line 5
+    .line 12
+    .line 13
+    sget-object v0, LX/2L9;->MEDIUM:LX/2L9;
+
+    .line 14
+    .line 15
+    return-object v0
+
+    .line 16
+    :cond_1
+    sget-object v0, LX/2L9;->EXPANDED:LX/2L9;
+
+    .line 17
+    .line 18
+    return-object v0
+
+    .line 19
+    :cond_2
+    const-string/jumbo v0, "Width cannot be negative!"
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 23
+    .line 24
+    .line 25
     move-result-object v0
 
-    .line 6
-    return-object v0
+    .line 26
+    throw v0
 .end method

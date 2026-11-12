@@ -50,7 +50,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/acra/ErrorReporter;->writeReportToStream(Ljava/lang/Throwable;Ljava/io/OutputStream;)V
+    invoke-static {v0, p1, p2}, Lcom/facebook/acra/ErrorReporter;->access$1200(Lcom/facebook/acra/ErrorReporter;Ljava/lang/Throwable;Ljava/io/OutputStream;)V
 
     .line 5
     .line 6

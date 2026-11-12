@@ -1,52 +1,138 @@
 .class public final LX/4M1;
-.super Ljava/lang/Object;
+.super Landroid/widget/RatingBar;
 .source ""
 
 
+# instance fields
+.field public final A00:LX/4Rt;
+
+
 # direct methods
-.method public static final A00(Lcom/fbpay/w3c/CardDetails;Ljava/lang/String;)LX/4LW;
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 2
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    const v1, 0x7f040783
 
     .line 1
     .line 2
     .line 3
-    move-result-object v2
+    invoke-direct {p0, p1, p2, v1}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    new-instance v1, LX/4LW;
-
     .line 5
     .line 6
-    invoke-direct {v1}, LX/4LW;-><init>()V
+    invoke-static {p0}, LX/432;->A19(Landroid/view/View;)V
 
     .line 7
     .line 8
     .line 9
-    const-string v0, "payment_info"
+    new-instance v0, LX/4Rt;
 
     .line 10
     .line 11
-    invoke-virtual {v2, v0, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    invoke-direct {v0, p0}, LX/4Rt;-><init>(Landroid/widget/ProgressBar;)V
 
     .line 12
     .line 13
     .line 14
-    const-string v0, "partial_credential_save_option"
+    iput-object v0, p0, LX/4M1;->A00:LX/4Rt;
 
     .line 15
     .line 16
-    invoke-virtual {v2, v0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p2, v1}, LX/4Rt;->A02(Landroid/util/AttributeSet;I)V
 
     .line 17
     .line 18
     .line 19
-    invoke-virtual {v1, v2}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
+    return-void
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized onMeasure(II)V
+    .locals 2
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4M1;->A00:LX/4Rt;
+
+    .line 5
+    .line 6
+    iget-object v0, v0, LX/4Rt;->A00:Landroid/graphics/Bitmap;
+
+    .line 7
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    .line 10
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v1
+
+    .line 14
+    invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    mul-int/2addr v1, v0
+
+    .line 19
+    const/4 v0, 0x0
 
     .line 20
+    invoke-static {v1, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
+
     .line 21
     .line 22
-    return-object v1
+    .line 23
+    move-result v1
+
+    .line 24
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v0
+
+    .line 28
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setMeasuredDimension(II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 29
+    .line 30
+    .line 31
+    :cond_0
+    monitor-exit p0
+
+    .line 32
+    return-void
+
+    .line 33
+    :catchall_0
+    move-exception v0
+
+    .line 34
+    monitor-exit p0
+
+    .line 35
+    throw v0
 .end method

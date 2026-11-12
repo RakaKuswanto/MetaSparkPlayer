@@ -1,49 +1,57 @@
-.class public final LX/2Pc;
+.class public final LX/2PC;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements LX/24Y;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "PreferenceStorageWriter$scheduleCleanUpOrphanedExternalValues$1"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AuthOperations$14"
 
 
 # instance fields
-.field public final synthetic A00:LX/2Pf;
+.field public final synthetic A00:Lcom/facebook/auth/credentials/WorkUserSwitchCredentials;
 
-.field public final synthetic A01:Ljava/util/Set;
+.field public final synthetic A01:LX/2Ok;
 
 
 # direct methods
-.method public constructor <init>(LX/2Pf;Ljava/util/Set;)V
+.method public constructor <init>(Lcom/facebook/auth/credentials/WorkUserSwitchCredentials;LX/2Ok;)V
     .locals 0
 
-    iput-object p1, p0, LX/2Pc;->A00:LX/2Pf;
+    .line 0
+    iput-object p2, p0, LX/2PC;->A01:LX/2Ok;
 
-    iput-object p2, p0, LX/2Pc;->A01:Ljava/util/Set;
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/2PC;->A00:Lcom/facebook/auth/credentials/WorkUserSwitchCredentials;
 
+    .line 3
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final bridge synthetic call()Ljava/lang/Object;
+    .locals 5
 
     .line 0
-    iget-object v0, p0, LX/2Pc;->A00:LX/2Pf;
+    iget-object v4, p0, LX/2PC;->A01:LX/2Ok;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/2Pf;->A07:LX/1Nm;
+    iget-object v0, v4, LX/2Ok;->A0W:LX/0RP;
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X2;->A0e(LX/0RP;)Ljava/lang/String;
 
     .line 5
     .line 6
@@ -51,144 +59,50 @@
     move-result-object v3
 
     .line 8
-    check-cast v3, LX/2Pb;
+    iget-object v1, p0, LX/2PC;->A00:Lcom/facebook/auth/credentials/WorkUserSwitchCredentials;
 
     .line 9
     .line 10
-    iget-object v1, p0, LX/2Pc;->A01:Ljava/util/Set;
+    iget-object v0, v4, LX/2Ok;->A0l:LX/0VC;
 
     .line 11
     .line 12
-    const-string v0, "PrefsExternalValueStorage.cleanUpOrphanedExternalValues"
+    invoke-static {v0}, LX/0X1;->A1b(LX/0VC;)Z
 
     .line 13
     .line 14
-    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
-
     .line 15
+    move-result v0
+
     .line 16
+    new-instance v2, LX/2Q8;
+
     .line 17
-    :try_start_0
-    iget-boolean v0, v3, LX/2Pb;->A08:Z
-
     .line 18
-    .line 19
-    if-eqz v0, :cond_1
+    invoke-direct {v2, v1, v3, v0}, LX/2Q8;-><init>(Lcom/facebook/auth/credentials/WorkUserSwitchCredentials;Ljava/lang/String;Z)V
 
+    .line 19
     .line 20
     .line 21
-    iget-object v2, v3, LX/2Pb;->A05:Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static {v4}, LX/0X3;->A0G(LX/2Ok;)LX/19S;
 
     .line 22
     .line 23
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
     .line 24
-    .line 25
-    .line 26
-    :try_start_1
-    invoke-static {v3}, LX/2Pb;->A00(LX/2Pb;)Ljava/util/Set;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v0
-
-    .line 30
-    invoke-static {v1, v0}, LX/2J7;->A06(Ljava/lang/Iterable;Ljava/util/Set;)Ljava/util/Set;
-
-    .line 31
-    .line 32
-    .line 33
-    move-result-object v0
-
-    .line 34
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 35
-    .line 36
-    .line 37
     move-result-object v1
 
-    .line 38
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    .line 25
+    iget-object v0, v4, LX/2Ok;->A0H:LX/2Pj;
 
-    .line 39
-    .line 40
-    .line 41
-    move-result v0
+    .line 26
+    .line 27
+    invoke-static {v1, v0, p0, v2}, LX/19S;->A00(LX/19S;LX/2SR;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
-    if-eqz v0, :cond_0
-
-    .line 43
-    .line 44
-    invoke-static {v1}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
-
-    .line 45
-    .line 46
-    .line 47
+    .line 28
+    .line 29
+    .line 30
     move-result-object v0
 
-    .line 48
-    invoke-static {v3, v0}, LX/2Pb;->A01(LX/2Pb;Ljava/lang/String;)V
-
-    .line 49
-    .line 50
-    .line 51
-    goto :goto_0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 52
-    :cond_0
-    :try_start_2
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    .line 53
-    .line 54
-    .line 55
-    goto :goto_1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 56
-    :catchall_0
-    move-exception v0
-
-    .line 57
-    :try_start_3
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    .line 58
-    .line 59
-    .line 60
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 61
-    :cond_1
-    :goto_1
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
-    .line 62
-    .line 63
-    .line 64
-    return-void
-
-    .line 65
-    :catchall_1
-    move-exception v0
-
-    .line 66
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
-    .line 67
-    .line 68
-    .line 69
-    throw v0
+    .line 31
+    return-object v0
 .end method

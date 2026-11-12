@@ -1,47 +1,25 @@
 .class public final LX/0aS;
-.super Ljava/lang/Object;
+.super Landroid/webkit/WebView;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/util/Map;
-
-.field public final A01:Ljava/util/Set;
+.field public final synthetic A00:LX/0bK;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;LX/0bK;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/0aS;->A00:LX/0bK;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-direct {p0, p1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
+    .line 3
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/0aS;->A01:Ljava/util/Set;
-
-    .line 8
-    .line 9
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/0aS;->A00:Ljava/util/Map;
-
-    .line 14
-    .line 15
     return-void
 .end method

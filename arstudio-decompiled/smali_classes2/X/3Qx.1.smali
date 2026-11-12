@@ -1,185 +1,280 @@
-.class public final enum LX/3Qx;
-.super Ljava/lang/Enum;
+.class public final LX/3Qx;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements LX/0Ad;
-
-
-# static fields
-.field public static final synthetic $VALUES:[LX/3Qx;
-
-.field public static final enum ACT:LX/3Qx;
-
-.field public static final enum OPEN:LX/3Qx;
 
 
 # instance fields
-.field public final mValue:Ljava/lang/String;
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:J
+
+.field public A03:J
+
+.field public A04:J
+
+.field public A05:J
+
+.field public A06:J
+
+.field public A07:J
+
+.field public A08:J
+
+.field public A09:J
+
+.field public A0A:J
+
+.field public A0B:J
+
+.field public A0C:LX/3Sw;
+
+.field public A0D:LX/3Qz;
+
+.field public A0E:LX/3R1;
+
+.field public A0F:Ljava/lang/Object;
+
+.field public A0G:Ljava/lang/Object;
+
+.field public A0H:Ljava/lang/Object;
+
+.field public A0I:Ljava/lang/String;
+
+.field public A0J:Ljava/lang/String;
+
+.field public A0K:Ljava/lang/Throwable;
+
+.field public A0L:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>()V
+    .locals 3
 
     .line 0
-    const-string v1, "ACT"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/4 v5, 0x0
-
     .line 3
-    const-string v0, "advanced_crypto_transport"
+    const-wide/16 v1, -0x1
 
     .line 4
     .line 5
-    new-instance v4, LX/3Qx;
+    iput-wide v1, p0, LX/3Qx;->A06:J
 
     .line 6
     .line 7
-    invoke-direct {v4, v1, v5, v0}, LX/3Qx;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    iput-wide v1, p0, LX/3Qx;->A05:J
 
     .line 8
     .line 9
+    iput-wide v1, p0, LX/3Qx;->A04:J
+
     .line 10
-    sput-object v4, LX/3Qx;->ACT:LX/3Qx;
-
     .line 11
+    iput-wide v1, p0, LX/3Qx;->A03:J
+
     .line 12
-    const-string v3, "OPEN"
-
     .line 13
-    .line 14
-    const/4 v2, 0x1
+    iput-wide v1, p0, LX/3Qx;->A02:J
 
+    .line 14
     .line 15
-    const-string/jumbo v0, "open"
+    iput-wide v1, p0, LX/3Qx;->A09:J
 
     .line 16
     .line 17
-    .line 18
-    new-instance v1, LX/3Qx;
+    iput-wide v1, p0, LX/3Qx;->A08:J
 
+    .line 18
     .line 19
+    const/4 v0, -0x1
+
     .line 20
-    invoke-direct {v1, v3, v2, v0}, LX/3Qx;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    iput v0, p0, LX/3Qx;->A01:I
 
     .line 21
     .line 22
+    iput v0, p0, LX/3Qx;->A00:I
+
     .line 23
-    sput-object v1, LX/3Qx;->OPEN:LX/3Qx;
-
     .line 24
-    .line 25
-    const/4 v0, 0x2
+    sget-object v0, LX/3Qz;->UNKNOWN:LX/3Qz;
 
+    .line 25
     .line 26
-    new-array v0, v0, [LX/3Qx;
+    iput-object v0, p0, LX/3Qx;->A0D:LX/3Qz;
 
     .line 27
     .line 28
-    aput-object v4, v0, v5
+    sget-object v0, LX/3R1;->UNKNOWN:LX/3R1;
 
     .line 29
     .line 30
-    aput-object v1, v0, v2
+    iput-object v0, p0, LX/3Qx;->A0E:LX/3R1;
 
     .line 31
     .line 32
-    sput-object v0, LX/3Qx;->$VALUES:[LX/3Qx;
+    iput-wide v1, p0, LX/3Qx;->A0B:J
 
     .line 33
     .line 34
+    iput-wide v1, p0, LX/3Qx;->A0A:J
+
+    .line 35
+    .line 36
+    iput-wide v1, p0, LX/3Qx;->A07:J
+
+    .line 37
+    .line 38
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p3, p0, LX/3Qx;->mValue:Ljava/lang/String;
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/3Qx;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/3Qx;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/3Qx;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/3Qx;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/3Qx;->$VALUES:[LX/3Qx;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/3Qx;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public bridge synthetic getValue()Ljava/lang/Object;
-    .locals 1
+.method public final A00()LX/3R3;
+    .locals 6
 
     .line 0
-    invoke-virtual {p0}, LX/3Qx;->getValue()Ljava/lang/String;
+    iget-object v2, p0, LX/3Qx;->A0H:Ljava/lang/Object;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    iget-object v3, p0, LX/3Qx;->A0F:Ljava/lang/Object;
 
+    .line 3
     .line 4
+    iget-object v4, p0, LX/3Qx;->A0G:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    iget-object v5, p0, LX/3Qx;->A0K:Ljava/lang/Throwable;
+
+    .line 7
+    .line 8
+    iget-object v1, p0, LX/3Qx;->A0C:LX/3Sw;
+
+    .line 9
+    .line 10
+    new-instance v0, LX/3R3;
+
+    .line 11
+    .line 12
+    invoke-direct/range {v0 .. v5}, LX/3R3;-><init>(LX/3Sw;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
+
+    .line 13
+    .line 14
+    .line 15
     return-object v0
 .end method
 
-.method public getValue()Ljava/lang/String;
-    .locals 1
+.method public final A01()V
+    .locals 2
 
-    .line 268435456
-    iget-object v0, p0, LX/3Qx;->mValue:Ljava/lang/String;
+    .line 0
+    const/4 v1, 0x0
 
-    .line 268435457
-    .line 268435458
-    return-object v0
+    .line 1
+    iput-object v1, p0, LX/3Qx;->A0J:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    iput-object v1, p0, LX/3Qx;->A0H:Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    iput-object v1, p0, LX/3Qx;->A0F:Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    iput-object v1, p0, LX/3Qx;->A0G:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    const/4 v0, 0x0
+
+    .line 10
+    iput-boolean v0, p0, LX/3Qx;->A0L:Z
+
+    .line 11
+    .line 12
+    const/4 v0, -0x1
+
+    .line 13
+    iput v0, p0, LX/3Qx;->A01:I
+
+    .line 14
+    .line 15
+    iput v0, p0, LX/3Qx;->A00:I
+
+    .line 16
+    .line 17
+    iput-object v1, p0, LX/3Qx;->A0K:Ljava/lang/Throwable;
+
+    .line 18
+    .line 19
+    sget-object v0, LX/3Qz;->UNKNOWN:LX/3Qz;
+
+    .line 20
+    .line 21
+    iput-object v0, p0, LX/3Qx;->A0D:LX/3Qz;
+
+    .line 22
+    .line 23
+    sget-object v0, LX/3R1;->UNKNOWN:LX/3R1;
+
+    .line 24
+    .line 25
+    iput-object v0, p0, LX/3Qx;->A0E:LX/3R1;
+
+    .line 26
+    .line 27
+    iput-object v1, p0, LX/3Qx;->A0C:LX/3Sw;
+
+    .line 28
+    .line 29
+    const-wide/16 v0, -0x1
+
+    .line 30
+    .line 31
+    iput-wide v0, p0, LX/3Qx;->A09:J
+
+    .line 32
+    .line 33
+    iput-wide v0, p0, LX/3Qx;->A08:J
+
+    .line 34
+    .line 35
+    iput-wide v0, p0, LX/3Qx;->A06:J
+
+    .line 36
+    .line 37
+    iput-wide v0, p0, LX/3Qx;->A04:J
+
+    .line 38
+    .line 39
+    iput-wide v0, p0, LX/3Qx;->A03:J
+
+    .line 40
+    .line 41
+    iput-wide v0, p0, LX/3Qx;->A02:J
+
+    .line 42
+    .line 43
+    iput-wide v0, p0, LX/3Qx;->A0B:J
+
+    .line 44
+    .line 45
+    iput-wide v0, p0, LX/3Qx;->A0A:J
+
+    .line 46
+    .line 47
+    iput-wide v0, p0, LX/3Qx;->A07:J
+
+    .line 48
+    .line 49
+    return-void
 .end method

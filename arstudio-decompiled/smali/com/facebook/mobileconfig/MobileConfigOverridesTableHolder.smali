@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0RW;
+.implements LX/0Nw;
 
 
 # instance fields
@@ -22,7 +22,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 4
     .line 5

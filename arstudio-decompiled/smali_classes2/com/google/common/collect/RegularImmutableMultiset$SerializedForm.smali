@@ -17,8 +17,16 @@
 
 
 # direct methods
-.method public constructor <init>(LX/1f6;)V
+.method public constructor <init>(LX/22O;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "multiset"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +34,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-interface {p1}, LX/1f6;->entrySet()Ljava/util/Set;
+    invoke-interface {p1}, LX/22O;->entrySet()Ljava/util/Set;
 
     .line 4
     .line 5
@@ -58,7 +66,7 @@
 
     .line 18
     .line 19
-    invoke-interface {p1}, LX/1f6;->entrySet()Ljava/util/Set;
+    invoke-interface {p1}, LX/22O;->entrySet()Ljava/util/Set;
 
     .line 20
     .line 21
@@ -98,7 +106,7 @@
     move-result-object v2
 
     .line 38
-    check-cast v2, LX/1g2;
+    check-cast v2, LX/22t;
 
     .line 39
     .line 40
@@ -106,7 +114,7 @@
 
     .line 41
     .line 42
-    invoke-virtual {v2}, LX/1g2;->A01()Ljava/lang/Object;
+    invoke-virtual {v2}, LX/22t;->A01()Ljava/lang/Object;
 
     .line 43
     .line 44
@@ -122,7 +130,7 @@
 
     .line 49
     .line 50
-    invoke-virtual {v2}, LX/1g2;->A00()I
+    invoke-virtual {v2}, LX/22t;->A00()I
 
     .line 51
     .line 52
@@ -158,11 +166,11 @@
     array-length v0, v0
 
     .line 3
-    new-instance v3, LX/1g0;
+    new-instance v3, LX/22r;
 
     .line 4
     .line 5
-    invoke-direct {v3, v0}, LX/1g0;-><init>(I)V
+    invoke-direct {v3, v0}, LX/22r;-><init>(I)V
 
     .line 6
     .line 7
@@ -194,7 +202,7 @@
 
     .line 19
     .line 20
-    invoke-virtual {v3, v1, v0}, LX/1g0;->A00(Ljava/lang/Object;I)V
+    invoke-virtual {v3, v1, v0}, LX/22r;->A00(Ljava/lang/Object;I)V
 
     .line 21
     .line 22
@@ -207,41 +215,50 @@
 
     .line 26
     :cond_0
-    iget-object v1, v3, LX/1g0;->A00:LX/1g5;
+    iget-object v0, v3, LX/22r;->A00:LX/231;
 
     .line 27
     .line 28
-    iget v0, v1, LX/1g5;->A02:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 29
     .line 30
+    .line 31
+    iget-object v1, v3, LX/22r;->A00:LX/231;
+
+    .line 32
+    .line 33
+    iget v0, v1, LX/231;->A02:I
+
+    .line 34
+    .line 35
     if-nez v0, :cond_1
 
-    .line 31
-    .line 32
+    .line 36
+    .line 37
     sget-object v0, Lcom/google/common/collect/RegularImmutableMultiset;->A03:Lcom/google/common/collect/RegularImmutableMultiset;
 
-    .line 33
-    .line 34
+    .line 38
+    .line 39
     return-object v0
 
-    .line 35
+    .line 40
     :cond_1
     const/4 v0, 0x1
 
-    .line 36
-    iput-boolean v0, v3, LX/1g0;->A01:Z
-
-    .line 37
-    .line 38
-    new-instance v0, Lcom/google/common/collect/RegularImmutableMultiset;
-
-    .line 39
-    .line 40
-    invoke-direct {v0, v1}, Lcom/google/common/collect/RegularImmutableMultiset;-><init>(LX/1g5;)V
-
     .line 41
+    iput-boolean v0, v3, LX/22r;->A01:Z
+
     .line 42
     .line 43
+    new-instance v0, Lcom/google/common/collect/RegularImmutableMultiset;
+
+    .line 44
+    .line 45
+    invoke-direct {v0, v1}, Lcom/google/common/collect/RegularImmutableMultiset;-><init>(LX/231;)V
+
+    .line 46
+    .line 47
+    .line 48
     return-object v0
 .end method

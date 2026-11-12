@@ -14,6 +14,14 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "reference"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/base/Optional;-><init>()V
@@ -32,6 +40,14 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Lcom/google/common/base/Present;
@@ -120,6 +136,14 @@
 
 .method public or(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "defaultValue"
+        }
+    .end annotation
 
     .line 0
     const-string/jumbo v0, "use Optional.orNull() instead of Optional.or(null)"
@@ -154,7 +178,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -175,7 +199,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0, v1}, LX/0Yd;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X2;->A0i(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 12
     .line 13

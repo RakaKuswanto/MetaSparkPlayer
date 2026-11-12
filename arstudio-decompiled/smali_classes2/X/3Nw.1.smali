@@ -3,23 +3,21 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CellDiagnostics$2"
+.implements LX/3M2;
 
 
 # instance fields
-.field public final synthetic A00:LX/3NX;
+.field public A00:Lcom/facebook/auth/usersession/FbUserSession;
+
+.field public final synthetic A01:LX/3Ny;
 
 
 # direct methods
-.method public constructor <init>(LX/3NX;)V
+.method public constructor <init>(Lcom/facebook/auth/usersession/FbUserSession;LX/3Ny;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3Nw;->A00:LX/3NX;
+    iput-object p2, p0, LX/3Nw;->A01:LX/3Ny;
 
     .line 1
     .line 2
@@ -28,58 +26,141 @@
     .line 3
     .line 4
     .line 5
+    iput-object p1, p0, LX/3Nw;->A00:Lcom/facebook/auth/usersession/FbUserSession;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final bridge synthetic A6i(LX/3NG;LX/3Mp;LX/39u;I)LX/3OQ;
+    .locals 5
 
     .line 0
-    iget-object v2, p0, LX/3Nw;->A00:LX/3NX;
+    const/4 v4, 0x0
 
     .line 1
-    .line 2
-    invoke-static {v2}, LX/3NX;->A02(LX/3NX;)Landroid/telephony/SubscriptionManager;
+    :try_start_0
+    invoke-virtual {p2}, LX/3Mp;->A08()Ljava/io/InputStream;
 
+    .line 2
     .line 3
     .line 4
+    move-result-object v3
+
     .line 5
-    move-result-object v1
+    if-eqz v3, :cond_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 6
-    if-eqz v1, :cond_0
-
     .line 7
-    .line 8
-    new-instance v0, LX/3Rl;
+    :try_start_1
+    invoke-static {p2}, LX/3Mp;->A04(LX/3Mp;)V
 
+    .line 8
     .line 9
     .line 10
-    invoke-direct {v0, p0}, LX/3Rl;-><init>(LX/3Nw;)V
+    iget-object v1, p2, LX/3Mp;->A07:LX/2uX;
 
     .line 11
     .line 12
-    .line 13
-    invoke-static {v0, v2}, LX/3NX;->A0a(Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;LX/3NX;)V
+    sget-object v0, LX/2kC;->A00:LX/2uX;
 
+    .line 13
     .line 14
+    if-ne v1, v0, :cond_0
+
     .line 15
     .line 16
-    invoke-static {v2}, LX/3NX;->A01(LX/3NX;)Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
+    iget-object v1, p0, LX/3Nw;->A01:LX/3Ny;
 
     .line 17
     .line 18
-    .line 19
-    move-result-object v0
+    iget-object v0, p0, LX/3Nw;->A00:Lcom/facebook/auth/usersession/FbUserSession;
 
+    .line 19
     .line 20
-    invoke-virtual {v1, v0}, Landroid/telephony/SubscriptionManager;->addOnSubscriptionsChangedListener(Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;)V
+    invoke-static {v0, v1, v3}, LX/3Ny;->A00(Lcom/facebook/auth/usersession/FbUserSession;LX/3Ny;Ljava/io/InputStream;)LX/5ZG;
 
     .line 21
     .line 22
     .line 23
+    move-result-object v2
+
+    .line 24
+    iget-object v1, v1, LX/3Ny;->A07:Ljava/nio/ByteBuffer;
+
+    .line 25
+    .line 26
+    if-eqz v1, :cond_0
+
+    .line 27
+    .line 28
+    new-instance v0, LX/3V0;
+
+    .line 29
+    .line 30
+    invoke-direct {v0, v2, v1}, LX/3V0;-><init>(LX/5ZG;Ljava/nio/ByteBuffer;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-static {v3}, LX/3Lw;->A01(Ljava/io/InputStream;)V
+
+    .line 34
+    .line 35
+    .line 36
+    return-object v0
+
+    .line 37
     :cond_0
-    return-void
+    invoke-static {v3}, LX/3Lw;->A01(Ljava/io/InputStream;)V
+
+    .line 38
+    .line 39
+    .line 40
+    return-object v4
+
+    .line 41
+    :catchall_0
+    move-exception v0
+
+    .line 42
+    goto :goto_0
+
+    .line 43
+    :catchall_1
+    move-exception v0
+
+    .line 44
+    move-object v4, v3
+
+    .line 45
+    :goto_0
+    invoke-static {v4}, LX/3Lw;->A01(Ljava/io/InputStream;)V
+
+    .line 46
+    .line 47
+    .line 48
+    throw v0
+
+    .line 49
+    :catch_0
+    move-object v3, v4
+
+    .line 50
+    :catch_1
+    invoke-static {v3}, LX/3Lw;->A01(Ljava/io/InputStream;)V
+
+    .line 51
+    .line 52
+    .line 53
+    return-object v4
 .end method

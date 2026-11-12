@@ -6,13 +6,13 @@
 # instance fields
 .field public mBaseModule:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceModule;
 
-.field public final mErrorReporter:LX/0Gk;
+.field public final mErrorReporter:LX/0Ft;
 
-.field public final mModule:LX/5TP;
+.field public final mModule:LX/67X;
 
 
 # direct methods
-.method public constructor <init>(LX/5TP;LX/5TQ;LX/0Gk;)V
+.method public constructor <init>(LX/67X;LX/6B8;LX/0Ft;)V
     .locals 1
 
     .line 0
@@ -21,15 +21,15 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mModule:LX/5TP;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mModule:LX/67X;
 
     .line 4
     .line 5
-    iput-object p3, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mErrorReporter:LX/0Gk;
+    iput-object p3, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mErrorReporter:LX/0Ft;
 
     .line 6
     .line 7
-    invoke-interface {p1}, LX/5TP;->AM7()LX/5Tk;
+    invoke-interface {p1}, LX/67X;->AKc()LX/63t;
 
     .line 8
     .line 9
@@ -37,7 +37,7 @@
     move-result-object v0
 
     .line 11
-    invoke-virtual {v0}, LX/5Tk;->getValue()I
+    invoke-virtual {v0}, LX/63t;->getValue()I
 
     .line 12
     .line 13
@@ -79,11 +79,11 @@
     .line 4
     .line 5
     :try_start_1
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mModule:LX/5TP;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mModule:LX/67X;
 
     .line 6
     .line 7
-    invoke-interface {v0}, LX/5TP;->AIw()Ljava/lang/String;
+    invoke-interface {v0}, LX/67X;->AHP()Ljava/lang/String;
 
     .line 8
     .line 9
@@ -138,7 +138,7 @@
 
     .line 31
     :try_start_2
-    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mErrorReporter:LX/0Gk;
+    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mErrorReporter:LX/0Ft;
 
     .line 32
     .line 33
@@ -154,11 +154,11 @@
 
     .line 38
     .line 39
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mModule:LX/5TP;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mModule:LX/67X;
 
     .line 40
     .line 41
-    invoke-interface {v0}, LX/5TP;->AIw()Ljava/lang/String;
+    invoke-interface {v0}, LX/67X;->AHP()Ljava/lang/String;
 
     .line 42
     .line 43
@@ -166,7 +166,7 @@
     move-result-object v1
 
     .line 45
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 46
     .line 47
@@ -174,7 +174,7 @@
     move-result-object v0
 
     .line 49
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 50
     .line 51
@@ -182,7 +182,7 @@
     move-result-object v0
 
     .line 53
-    invoke-interface {v4, v3, v0, v5}, LX/0Gk;->softReport(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v4, v3, v0, v5}, LX/0Ft;->softReport(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 54
     .line 55
@@ -216,15 +216,15 @@
 
 
 # virtual methods
-.method public createConfiguration(LX/5UZ;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
+.method public createConfiguration(LX/61H;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mModule:LX/5TP;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/arengineservices/modules/DynamicServiceModule;->mModule:LX/67X;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1}, LX/5TP;->AQa(LX/5UZ;)Z
+    invoke-interface {v0, p1}, LX/67X;->APF(LX/61H;)Z
 
     .line 3
     .line 4
@@ -251,7 +251,7 @@
 
     .line 14
     .line 15
-    invoke-virtual {v0, p1}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceModule;->createConfiguration(LX/5UZ;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
+    invoke-virtual {v0, p1}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceModule;->createConfiguration(LX/61H;)Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;
 
     .line 16
     .line 17

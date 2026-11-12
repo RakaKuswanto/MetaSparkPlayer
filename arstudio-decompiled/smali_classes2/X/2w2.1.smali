@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/3Ij;
+.implements LX/2Ek;
 
 
 # direct methods
@@ -21,7 +21,13 @@
 
 
 # virtual methods
-.method public final AiC(LX/2fR;)V
+.method public final A4A()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Any()V
     .locals 0
 
     return-void

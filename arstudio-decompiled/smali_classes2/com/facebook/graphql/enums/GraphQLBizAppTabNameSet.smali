@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLBizAppTabNameSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLBizAppTabNameSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x99
+    const/16 v0, 0xb3
 
     .line 1
     .line 2
@@ -23,7 +23,7 @@
     const/4 v1, 0x0
 
     .line 5
-    const-string v0, "AB_TESTING_COMPOSER"
+    const-string v0, "ACCOUNT_QUALITY"
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "ACCOUNT_QUALITY"
+    const-string v0, "ACCOUNT_QUALITY_EXTERNAL"
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "ACTIVITY"
+    const-string v0, "ACCOUNT_SWITCHER"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "ADS_MANAGEMENT"
+    const-string v0, "ACTIVITY"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "ADS_MANAGER"
+    const-string v0, "ADS_EXPERIMENTS"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "ADS_REPORTING"
+    const-string v0, "ADS_MANAGEMENT"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "ADS_TEST_TOOL"
+    const-string v0, "ADS_MANAGER"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "AD_ACCOUNT_SETTINGS"
+    const-string v0, "ADS_REPORTING"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "AD_APP_SETTINGS"
+    const-string v0, "ADS_TEST_TOOL"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "AD_CENTER"
+    const-string v0, "ADVERTISING_SETTINGS"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "AD_LIMITS"
+    const-string v0, "AD_ACCOUNT_SETTINGS"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "AFT_AGENCY_MANAGEMENT_TOOL"
+    const-string v0, "AD_APP_SETTINGS"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "APPOINTMENTS"
+    const-string v0, "AD_CENTER"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "AUDIENCES"
+    const-string v0, "AD_LIMITS"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "AUDIENCE_GROWTH"
+    const-string v0, "AD_LIMITS_EXTERNAL"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "AUTOMATED_RULES"
+    const-string v0, "AFT_AGENCY_MANAGEMENT_TOOL"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "AUTOMATIONS_COMPOSER"
+    const-string v0, "APPOINTMENTS"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "BANK_SLIPS"
+    const-string v0, "AUDIENCES"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "BILLING"
+    const-string v0, "AUDIENCE_GROWTH"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "BILLING_HUB"
+    const-string v0, "AUDIENCE_INSIGHTS"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "BRANDED_CONTENT"
+    const-string v0, "AUTOMATED_RULES"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "BRANDED_PROMOTIONAL_PROGRAMS"
+    const-string v0, "AUTOMATIONS_COMPOSER"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "BRAND_RIGHTS_PROTECTION"
+    const-string v0, "BANK_SLIPS"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "BRAND_SAFETY"
+    const-string v0, "BILLING"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "BULK_EDIT_COMPOSER"
+    const-string v0, "BILLING_HUB"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "BULK_UPLOAD_COMPOSER"
+    const-string v0, "BILLING_HUB_EXTERNAL"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "BUSINESS_APP_STORE"
+    const-string v0, "BM_INSIGHTS"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "BUSINESS_FEED"
+    const-string v0, "BRANDED_PROMOTIONAL_PROGRAMS"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "BUSINESS_HOME"
+    const-string v0, "BRAND_COLLABS_MANAGER"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "BUSINESS_MANAGER"
+    const-string v0, "BRAND_COLLABS_MANAGER_EXTERNAL"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "BUSINESS_SETTINGS"
+    const-string v0, "BRAND_RIGHTS_PROTECTION"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "CATALOG"
+    const-string v0, "BRAND_SAFETY"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "COLLABORATION_CENTER"
+    const-string v0, "BULK_EDIT_COMPOSER"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "COMMENTS"
+    const-string v0, "BULK_UPLOAD_COMPOSER"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "COMMERCE"
+    const-string v0, "BUSINESS_APP_STORE"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "COMPOSER"
+    const-string v0, "BUSINESS_CALL"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "CONSUMER_TRENDS"
+    const-string v0, "BUSINESS_FEED"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "CONTACTS"
+    const-string v0, "BUSINESS_HOME"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "CONTENT_CALENDAR"
+    const-string v0, "BUSINESS_MANAGER"
 
     .line 227
     .line 228
@@ -484,7 +484,7 @@
 
     .line 231
     .line 232
-    const-string v0, "CREATE_ADS"
+    const-string v0, "BUSINESS_SETTINGS"
 
     .line 233
     .line 234
@@ -496,7 +496,7 @@
 
     .line 237
     .line 238
-    const-string v0, "CREATE_CREATOR_CAMPAIGN"
+    const-string v0, "CAMPAIGN_PLANNER"
 
     .line 239
     .line 240
@@ -508,7 +508,7 @@
 
     .line 243
     .line 244
-    const-string v0, "CREATE_FUNDRAISER"
+    const-string v0, "CAMPAIGN_PLANNER_EXTERNAL"
 
     .line 245
     .line 246
@@ -520,7 +520,7 @@
 
     .line 249
     .line 250
-    const-string v0, "CREATE_MARKETING_EMAIL"
+    const-string v0, "CATALOG"
 
     .line 251
     .line 252
@@ -532,7 +532,7 @@
 
     .line 255
     .line 256
-    const-string v0, "CREATE_MARKETING_MESSAGE"
+    const-string v0, "COLLABORATION_CENTER"
 
     .line 257
     .line 258
@@ -544,7 +544,7 @@
 
     .line 261
     .line 262
-    const-string v0, "CREATE_POST"
+    const-string v0, "COMMENTS"
 
     .line 263
     .line 264
@@ -556,7 +556,7 @@
 
     .line 267
     .line 268
-    const-string v0, "CREATE_STORY"
+    const-string v0, "COMMERCE"
 
     .line 269
     .line 270
@@ -568,7 +568,7 @@
 
     .line 273
     .line 274
-    const-string v0, "CREATIVE_ASSETS"
+    const-string v0, "COMPOSER"
 
     .line 275
     .line 276
@@ -580,7 +580,7 @@
 
     .line 279
     .line 280
-    const-string v0, "CREATIVE_HUB"
+    const-string v0, "CONSUMER_TRENDS"
 
     .line 281
     .line 282
@@ -592,7 +592,7 @@
 
     .line 285
     .line 286
-    const-string v0, "CREATIVE_REPORTING"
+    const-string v0, "CONTACTS"
 
     .line 287
     .line 288
@@ -604,7 +604,7 @@
 
     .line 291
     .line 292
-    const-string v0, "CREATOR_MANAGEMENT_TOOL"
+    const-string v0, "CONTENT_CALENDAR"
 
     .line 293
     .line 294
@@ -616,7 +616,7 @@
 
     .line 297
     .line 298
-    const-string v0, "CREATOR_MARKETPLACE"
+    const-string v0, "CREATE_ADS"
 
     .line 299
     .line 300
@@ -628,7 +628,7 @@
 
     .line 303
     .line 304
-    const-string v0, "CREATOR_STUDIO"
+    const-string v0, "CREATE_CREATOR_CAMPAIGN"
 
     .line 305
     .line 306
@@ -640,7 +640,7 @@
 
     .line 309
     .line 310
-    const-string v0, "CREATOR_TOOLS"
+    const-string v0, "CREATE_FUNDRAISER"
 
     .line 311
     .line 312
@@ -652,7 +652,7 @@
 
     .line 315
     .line 316
-    const-string v0, "CUSTOMER"
+    const-string v0, "CREATE_MARKETING_EMAIL"
 
     .line 317
     .line 318
@@ -664,7 +664,7 @@
 
     .line 321
     .line 322
-    const-string v0, "DISMISSED_UNLABELLED_CONTENT"
+    const-string v0, "CREATE_MARKETING_MESSAGE"
 
     .line 323
     .line 324
@@ -676,7 +676,7 @@
 
     .line 327
     .line 328
-    const-string v0, "EDIT_NAV"
+    const-string v0, "CREATE_POST"
 
     .line 329
     .line 330
@@ -688,7 +688,7 @@
 
     .line 333
     .line 334
-    const-string v0, "EDUCATION_HUB"
+    const-string v0, "CREATE_STORY"
 
     .line 335
     .line 336
@@ -700,7 +700,7 @@
 
     .line 339
     .line 340
-    const-string v0, "EMAIL_MARKETING"
+    const-string v0, "CREATIVE_ASSETS"
 
     .line 341
     .line 342
@@ -712,7 +712,7 @@
 
     .line 345
     .line 346
-    const-string v0, "EVENTS"
+    const-string v0, "CREATIVE_HUB"
 
     .line 347
     .line 348
@@ -724,7 +724,7 @@
 
     .line 351
     .line 352
-    const-string v0, "EVENTS_MANAGER"
+    const-string v0, "CREATIVE_HUB_EXTERNAL"
 
     .line 353
     .line 354
@@ -736,7 +736,7 @@
 
     .line 357
     .line 358
-    const-string v0, "EXPERIMENTS"
+    const-string v0, "CREATIVE_IDEAS"
 
     .line 359
     .line 360
@@ -748,7 +748,7 @@
 
     .line 363
     .line 364
-    const-string v0, "FACEBOOK_INSIGHTS"
+    const-string v0, "CREATIVE_REPORTING"
 
     .line 365
     .line 366
@@ -760,7 +760,7 @@
 
     .line 369
     .line 370
-    const-string v0, "FACEBOOK_PAGE"
+    const-string v0, "CREATOR_MANAGEMENT_TOOL"
 
     .line 371
     .line 372
@@ -772,7 +772,7 @@
 
     .line 375
     .line 376
-    const-string v0, "FOAA_INSIGHTS"
+    const-string v0, "CREATOR_MARKETPLACE"
 
     .line 377
     .line 378
@@ -784,7 +784,7 @@
 
     .line 381
     .line 382
-    const-string v0, "FOR_REVIEW_UNLABELLED_CONTENT"
+    const-string v0, "CREATOR_STUDIO"
 
     .line 383
     .line 384
@@ -796,7 +796,7 @@
 
     .line 387
     .line 388
-    const-string v0, "GET_STARTED"
+    const-string v0, "CREATOR_TOOLS"
 
     .line 389
     .line 390
@@ -808,7 +808,7 @@
 
     .line 393
     .line 394
-    const-string v0, "GLOBAL_SEARCH"
+    const-string v0, "CUSTOMER"
 
     .line 395
     .line 396
@@ -820,7 +820,7 @@
 
     .line 399
     .line 400
-    const-string v0, "HELP_CENTER"
+    const-string v0, "DISMISSED_UNLABELLED_CONTENT"
 
     .line 401
     .line 402
@@ -832,7 +832,7 @@
 
     .line 405
     .line 406
-    const-string v0, "HOME"
+    const-string v0, "EDIT_NAV"
 
     .line 407
     .line 408
@@ -844,7 +844,7 @@
 
     .line 411
     .line 412
-    const-string v0, "IG_PRESENCE"
+    const-string v0, "EDUCATION_HUB"
 
     .line 413
     .line 414
@@ -856,7 +856,7 @@
 
     .line 417
     .line 418
-    const-string v0, "IMAGES_AND_VIDEO"
+    const-string v0, "EVENTS"
 
     .line 419
     .line 420
@@ -868,7 +868,7 @@
 
     .line 423
     .line 424
-    const-string v0, "INBOX"
+    const-string v0, "EVENTS_MANAGER"
 
     .line 425
     .line 426
@@ -880,7 +880,7 @@
 
     .line 429
     .line 430
-    const-string v0, "INBOX_SETTINGS"
+    const-string v0, "EXPERIMENTS"
 
     .line 431
     .line 432
@@ -892,7 +892,7 @@
 
     .line 435
     .line 436
-    const-string v0, "INSIGHTS"
+    const-string v0, "EXPERIMENTS_EXTERNAL"
 
     .line 437
     .line 438
@@ -904,7 +904,7 @@
 
     .line 441
     .line 442
-    const-string v0, "INSIGHTS_AD_AUDIENCE"
+    const-string v0, "FACEBOOK_INSIGHTS"
 
     .line 443
     .line 444
@@ -916,7 +916,7 @@
 
     .line 447
     .line 448
-    const-string v0, "INSIGHTS_AD_PERFORMANCE"
+    const-string v0, "FACEBOOK_PAGE"
 
     .line 449
     .line 450
@@ -928,7 +928,7 @@
 
     .line 453
     .line 454
-    const-string v0, "INSIGHTS_AD_PLACEMENTS"
+    const-string v0, "FBM_CHANNELS"
 
     .line 455
     .line 456
@@ -940,7 +940,7 @@
 
     .line 459
     .line 460
-    const-string v0, "INSIGHTS_CONTENT"
+    const-string v0, "FOAA_INSIGHTS"
 
     .line 461
     .line 462
@@ -952,7 +952,7 @@
 
     .line 465
     .line 466
-    const-string v0, "INSIGHTS_FACEBOOK_AUDIENCE"
+    const-string v0, "FOR_REVIEW_UNLABELLED_CONTENT"
 
     .line 467
     .line 468
@@ -964,7 +964,7 @@
 
     .line 471
     .line 472
-    const-string v0, "INSIGHTS_INSTAGRAM_AUDIENCE"
+    const-string v0, "GET_STARTED"
 
     .line 473
     .line 474
@@ -976,7 +976,7 @@
 
     .line 477
     .line 478
-    const-string v0, "INSIGHTS_TRENDS"
+    const-string v0, "GLOBAL_SEARCH"
 
     .line 479
     .line 480
@@ -988,7 +988,7 @@
 
     .line 483
     .line 484
-    const-string v0, "INSPIRATION_HUB"
+    const-string v0, "HELP_CENTER"
 
     .line 485
     .line 486
@@ -1000,7 +1000,7 @@
 
     .line 489
     .line 490
-    const-string v0, "INSTAGRAM_INSIGHTS"
+    const-string v0, "HOME"
 
     .line 491
     .line 492
@@ -1012,7 +1012,7 @@
 
     .line 495
     .line 496
-    const-string v0, "INSTAGRAM_PROFILE"
+    const-string v0, "IG_PRESENCE"
 
     .line 497
     .line 498
@@ -1024,7 +1024,7 @@
 
     .line 501
     .line 502
-    const-string v0, "INSTANT_FORMS"
+    const-string v0, "IMAGES_AND_VIDEO"
 
     .line 503
     .line 504
@@ -1036,7 +1036,7 @@
 
     .line 507
     .line 508
-    const-string v0, "INVENTORY"
+    const-string v0, "INBOX"
 
     .line 509
     .line 510
@@ -1048,7 +1048,7 @@
 
     .line 513
     .line 514
-    const-string v0, "JOBS"
+    const-string v0, "INBOX_SETTINGS"
 
     .line 515
     .line 516
@@ -1060,7 +1060,7 @@
 
     .line 519
     .line 520
-    const-string v0, "LANGUAGE_SETTINGS"
+    const-string v0, "INSIGHTS"
 
     .line 521
     .line 522
@@ -1072,7 +1072,7 @@
 
     .line 525
     .line 526
-    const-string v0, "LEADS_CENTER"
+    const-string v0, "INSIGHTS_AD_AUDIENCE"
 
     .line 527
     .line 528
@@ -1084,7 +1084,7 @@
 
     .line 531
     .line 532
-    const-string v0, "LICENSED_MUSIC"
+    const-string v0, "INSIGHTS_AD_PERFORMANCE"
 
     .line 533
     .line 534
@@ -1096,7 +1096,7 @@
 
     .line 537
     .line 538
-    const-string v0, "LIVE_VIDEO"
+    const-string v0, "INSIGHTS_AD_PLACEMENTS"
 
     .line 539
     .line 540
@@ -1108,7 +1108,7 @@
 
     .line 543
     .line 544
-    const-string v0, "MARKETING_MESSAGES"
+    const-string v0, "INSIGHTS_CONTENT"
 
     .line 545
     .line 546
@@ -1120,7 +1120,7 @@
 
     .line 549
     .line 550
-    const-string v0, "MARKETING_MESSAGE_COMPOSER"
+    const-string v0, "INSIGHTS_FACEBOOK_AUDIENCE"
 
     .line 551
     .line 552
@@ -1132,7 +1132,7 @@
 
     .line 555
     .line 556
-    const-string v0, "MARKETING_MESSAGE_GET_STARTED"
+    const-string v0, "INSIGHTS_INSTAGRAM_AUDIENCE"
 
     .line 557
     .line 558
@@ -1144,7 +1144,7 @@
 
     .line 561
     .line 562
-    const-string v0, "MARKETING_MESSAGE_INVITE_CONTACT"
+    const-string v0, "INSIGHTS_TRENDS"
 
     .line 563
     .line 564
@@ -1156,7 +1156,7 @@
 
     .line 567
     .line 568
-    const-string v0, "MARKETING_MESSAGE_ONBOARDING"
+    const-string v0, "INSPIRATION_HUB"
 
     .line 569
     .line 570
@@ -1168,7 +1168,7 @@
 
     .line 573
     .line 574
-    const-string v0, "MARKETING_MESSAGE_ONE_TIME_CAMPAIGNS"
+    const-string v0, "INSTAGRAM_INSIGHTS"
 
     .line 575
     .line 576
@@ -1180,7 +1180,7 @@
 
     .line 579
     .line 580
-    const-string v0, "MARKETING_MESSAGE_OPTIN"
+    const-string v0, "INSTAGRAM_PROFILE"
 
     .line 581
     .line 582
@@ -1192,7 +1192,7 @@
 
     .line 585
     .line 586
-    const-string v0, "MARKETING_MESSAGE_OPTIN_SURFACE"
+    const-string v0, "INSTANT_FORMS"
 
     .line 587
     .line 588
@@ -1204,7 +1204,7 @@
 
     .line 591
     .line 592
-    const-string v0, "MARKETING_MESSAGE_SUBSCRIBER_GROWTH"
+    const-string v0, "INVENTORY"
 
     .line 593
     .line 594
@@ -1216,7 +1216,7 @@
 
     .line 597
     .line 598
-    const-string v0, "MEDIA_LIBRARY"
+    const-string v0, "INVOICES"
 
     .line 599
     .line 600
@@ -1228,7 +1228,7 @@
 
     .line 603
     .line 604
-    const-string v0, "MESSENGER_SELLER_CENTER"
+    const-string v0, "JOBS"
 
     .line 605
     .line 606
@@ -1240,7 +1240,7 @@
 
     .line 609
     .line 610
-    const-string v0, "MESSENGER_SELLER_CENTER_V2"
+    const-string v0, "LANGUAGE_SETTINGS"
 
     .line 611
     .line 612
@@ -1252,7 +1252,7 @@
 
     .line 615
     .line 616
-    const-string v0, "MISSING_MUST_FIX"
+    const-string v0, "LEADS_CENTER"
 
     .line 617
     .line 618
@@ -1264,7 +1264,7 @@
 
     .line 621
     .line 622
-    const-string v0, "MM_CAMPAIGN_LIST"
+    const-string v0, "LICENSED_MUSIC"
 
     .line 623
     .line 624
@@ -1276,7 +1276,7 @@
 
     .line 627
     .line 628
-    const-string v0, "MONETIZATION"
+    const-string v0, "LIVE_VIDEO"
 
     .line 629
     .line 630
@@ -1288,7 +1288,7 @@
 
     .line 633
     .line 634
-    const-string v0, "MONETIZATION_REELS_ADS"
+    const-string v0, "MARKETING_MESSAGES"
 
     .line 635
     .line 636
@@ -1300,7 +1300,7 @@
 
     .line 639
     .line 640
-    const-string v0, "MORE_TOOLS"
+    const-string v0, "MARKETING_MESSAGE_COMPOSER"
 
     .line 641
     .line 642
@@ -1312,7 +1312,7 @@
 
     .line 645
     .line 646
-    const-string v0, "NONPROFIT_MANAGER"
+    const-string v0, "MARKETING_MESSAGE_GET_STARTED"
 
     .line 647
     .line 648
@@ -1324,7 +1324,7 @@
 
     .line 651
     .line 652
-    const-string v0, "OFFERS"
+    const-string v0, "MARKETING_MESSAGE_INVITE_CONTACT"
 
     .line 653
     .line 654
@@ -1336,7 +1336,7 @@
 
     .line 657
     .line 658
-    const-string v0, "ORDERS"
+    const-string v0, "MARKETING_MESSAGE_ONBOARDING"
 
     .line 659
     .line 660
@@ -1348,7 +1348,7 @@
 
     .line 663
     .line 664
-    const-string v0, "PAGES_FEED"
+    const-string v0, "MARKETING_MESSAGE_ONE_TIME_CAMPAIGNS"
 
     .line 665
     .line 666
@@ -1360,7 +1360,7 @@
 
     .line 669
     .line 670
-    const-string v0, "PAGE_PRESENCE"
+    const-string v0, "MARKETING_MESSAGE_OPTIN"
 
     .line 671
     .line 672
@@ -1372,7 +1372,7 @@
 
     .line 675
     .line 676
-    const-string v0, "PAGE_SETTINGS"
+    const-string v0, "MARKETING_MESSAGE_OPTIN_SURFACE"
 
     .line 677
     .line 678
@@ -1384,7 +1384,7 @@
 
     .line 681
     .line 682
-    const-string v0, "PAGE_TIMELINE"
+    const-string v0, "MARKETING_MESSAGE_SUBSCRIBER_GROWTH"
 
     .line 683
     .line 684
@@ -1396,7 +1396,7 @@
 
     .line 687
     .line 688
-    const-string v0, "PAYMENTS"
+    const-string v0, "MARKETING_SOLUTIONS"
 
     .line 689
     .line 690
@@ -1408,7 +1408,7 @@
 
     .line 693
     .line 694
-    const-string v0, "PAYMENTS_EARNINGS"
+    const-string v0, "MEDIA_LIBRARY"
 
     .line 695
     .line 696
@@ -1420,7 +1420,7 @@
 
     .line 699
     .line 700
-    const-string v0, "PAYMENTS_PAYOUTS"
+    const-string v0, "MESSENGER_SELLER_CENTER"
 
     .line 701
     .line 702
@@ -1432,7 +1432,7 @@
 
     .line 705
     .line 706
-    const-string v0, "PAYMENTS_SETTINGS"
+    const-string v0, "MESSENGER_SELLER_CENTER_V2"
 
     .line 707
     .line 708
@@ -1444,7 +1444,7 @@
 
     .line 711
     .line 712
-    const-string v0, "PAYMENTS_SUPPORT"
+    const-string v0, "MISSING_MUST_FIX"
 
     .line 713
     .line 714
@@ -1456,7 +1456,7 @@
 
     .line 717
     .line 718
-    const-string v0, "PHOTOS"
+    const-string v0, "MM_CAMPAIGN_LIST"
 
     .line 719
     .line 720
@@ -1468,7 +1468,7 @@
 
     .line 723
     .line 724
-    const-string v0, "PLANNER"
+    const-string v0, "MM_LWI"
 
     .line 725
     .line 726
@@ -1480,7 +1480,7 @@
 
     .line 729
     .line 730
-    const-string v0, "POST"
+    const-string v0, "MM_LWI_COMPOSER"
 
     .line 731
     .line 732
@@ -1492,7 +1492,7 @@
 
     .line 735
     .line 736
-    const-string v0, "POST_DETAIL"
+    const-string v0, "MONETIZATION"
 
     .line 737
     .line 738
@@ -1504,7 +1504,7 @@
 
     .line 741
     .line 742
-    const-string v0, "POST_DRAFTS"
+    const-string v0, "MONETIZATION_REELS_ADS"
 
     .line 743
     .line 744
@@ -1516,7 +1516,7 @@
 
     .line 747
     .line 748
-    const-string v0, "PRODUCT_TESTING_AND_OPTIMIZATION"
+    const-string v0, "MONETIZATION_UNIFIED_PROGRAM"
 
     .line 749
     .line 750
@@ -1528,7 +1528,7 @@
 
     .line 753
     .line 754
-    const-string v0, "PROFILE_PLUS_INSIGHTS"
+    const-string v0, "MORE_TOOLS"
 
     .line 755
     .line 756
@@ -1540,7 +1540,7 @@
 
     .line 759
     .line 760
-    const-string v0, "PUBLIC_CONVERSATIONS"
+    const-string v0, "NONPROFIT_MANAGER"
 
     .line 761
     .line 762
@@ -1552,7 +1552,7 @@
 
     .line 765
     .line 766
-    const-string v0, "PUBLISHED_CONTENT"
+    const-string v0, "OFFERS"
 
     .line 767
     .line 768
@@ -1564,7 +1564,7 @@
 
     .line 771
     .line 772
-    const-string v0, "PUBLISHED_POSTS"
+    const-string v0, "ORDERS"
 
     .line 773
     .line 774
@@ -1576,7 +1576,7 @@
 
     .line 777
     .line 778
-    const-string v0, "PUBLISHED_THREADS"
+    const-string v0, "PAGES_FEED"
 
     .line 779
     .line 780
@@ -1588,7 +1588,7 @@
 
     .line 783
     .line 784
-    const-string v0, "RATINGS_AND_REVIEWS"
+    const-string v0, "PAGE_POSTS"
 
     .line 785
     .line 786
@@ -1600,7 +1600,7 @@
 
     .line 789
     .line 790
-    const-string v0, "REELS_COMPOSER"
+    const-string v0, "PAGE_PRESENCE"
 
     .line 791
     .line 792
@@ -1612,7 +1612,7 @@
 
     .line 795
     .line 796
-    const-string v0, "REPORT_PROBLEM"
+    const-string v0, "PAGE_SETTINGS"
 
     .line 797
     .line 798
@@ -1624,7 +1624,7 @@
 
     .line 801
     .line 802
-    const-string v0, "RESOURCE_LIBRARY"
+    const-string v0, "PAGE_TIMELINE"
 
     .line 803
     .line 804
@@ -1636,7 +1636,7 @@
 
     .line 807
     .line 808
-    const-string v0, "REWARDS"
+    const-string v0, "PARTNER_CENTER"
 
     .line 809
     .line 810
@@ -1648,7 +1648,7 @@
 
     .line 813
     .line 814
-    const-string v0, "RIGHTS_MANAGER"
+    const-string v0, "PAYMENTS"
 
     .line 815
     .line 816
@@ -1660,7 +1660,7 @@
 
     .line 819
     .line 820
-    const-string v0, "SCHEDULED_CONTENT"
+    const-string v0, "PAYMENTS_EARNINGS"
 
     .line 821
     .line 822
@@ -1672,7 +1672,7 @@
 
     .line 825
     .line 826
-    const-string v0, "SCHEDULED_POSTS"
+    const-string v0, "PAYMENTS_PAYOUTS"
 
     .line 827
     .line 828
@@ -1684,7 +1684,7 @@
 
     .line 831
     .line 832
-    const-string v0, "SELF_VIEW"
+    const-string v0, "PAYMENTS_SETTINGS"
 
     .line 833
     .line 834
@@ -1696,7 +1696,7 @@
 
     .line 837
     .line 838
-    const-string v0, "SERVICES_MENU"
+    const-string v0, "PAYMENTS_SUPPORT"
 
     .line 839
     .line 840
@@ -1708,7 +1708,7 @@
 
     .line 843
     .line 844
-    const-string v0, "SETTINGS"
+    const-string v0, "PHOTOS"
 
     .line 845
     .line 846
@@ -1720,7 +1720,7 @@
 
     .line 849
     .line 850
-    const-string v0, "SHOPIFY_META_APP"
+    const-string v0, "PLANNER"
 
     .line 851
     .line 852
@@ -1732,7 +1732,7 @@
 
     .line 855
     .line 856
-    const-string v0, "SOUND_COLLECTION"
+    const-string v0, "POST"
 
     .line 857
     .line 858
@@ -1744,7 +1744,7 @@
 
     .line 861
     .line 862
-    const-string v0, "STORE_LOCATIONS"
+    const-string v0, "POST_DETAIL"
 
     .line 863
     .line 864
@@ -1756,7 +1756,7 @@
 
     .line 867
     .line 868
-    const-string v0, "STORY_COMPOSER"
+    const-string v0, "POST_DRAFTS"
 
     .line 869
     .line 870
@@ -1768,7 +1768,7 @@
 
     .line 873
     .line 874
-    const-string v0, "STREAMER_HOME"
+    const-string v0, "PRODUCT_TESTING_AND_OPTIMIZATION"
 
     .line 875
     .line 876
@@ -1780,7 +1780,7 @@
 
     .line 879
     .line 880
-    const-string v0, "TRAFFIC_ANALYSIS"
+    const-string v0, "PROFILE_PLUS_INSIGHTS"
 
     .line 881
     .line 882
@@ -1792,7 +1792,7 @@
 
     .line 885
     .line 886
-    const-string v0, "UNKNOWN"
+    const-string v0, "PUBLIC_CONVERSATIONS"
 
     .line 887
     .line 888
@@ -1804,7 +1804,7 @@
 
     .line 891
     .line 892
-    const-string v0, "VIDEOS"
+    const-string v0, "PUBLISHED_CONTENT"
 
     .line 893
     .line 894
@@ -1816,7 +1816,7 @@
 
     .line 897
     .line 898
-    const-string v0, "VIEW_PAGE"
+    const-string v0, "PUBLISHED_POSTS"
 
     .line 899
     .line 900
@@ -1828,7 +1828,7 @@
 
     .line 903
     .line 904
-    const-string v0, "WHATSAPP_CAMPAIGN_COMPOSER"
+    const-string v0, "PUBLISHED_THREADS"
 
     .line 905
     .line 906
@@ -1840,22 +1840,338 @@
 
     .line 909
     .line 910
-    const-string v0, "WHATSAPP_OPT_IN_COMPOSER"
+    const-string v0, "RATINGS_AND_REVIEWS"
 
     .line 911
     .line 912
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 913
     .line 914
-    .line 915
-    move-result-object v0
+    const/16 v1, 0x99
 
+    .line 915
     .line 916
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLBizAppTabNameSet;->A00:Ljava/util/Set;
+    const-string v0, "REELS_BULK_UPLOAD_COMPOSER"
 
     .line 917
     .line 918
+    aput-object v0, v2, v1
+
+    .line 919
+    .line 920
+    const/16 v1, 0x9a
+
+    .line 921
+    .line 922
+    const-string v0, "REELS_COMPOSER"
+
+    .line 923
+    .line 924
+    aput-object v0, v2, v1
+
+    .line 925
+    .line 926
+    const/16 v1, 0x9b
+
+    .line 927
+    .line 928
+    const-string v0, "REPORT_PROBLEM"
+
+    .line 929
+    .line 930
+    aput-object v0, v2, v1
+
+    .line 931
+    .line 932
+    const/16 v1, 0x9c
+
+    .line 933
+    .line 934
+    const-string v0, "RESOURCE_LIBRARY"
+
+    .line 935
+    .line 936
+    aput-object v0, v2, v1
+
+    .line 937
+    .line 938
+    const/16 v1, 0x9d
+
+    .line 939
+    .line 940
+    const-string v0, "REWARDS"
+
+    .line 941
+    .line 942
+    aput-object v0, v2, v1
+
+    .line 943
+    .line 944
+    const/16 v1, 0x9e
+
+    .line 945
+    .line 946
+    const-string v0, "RIGHTS_MANAGER"
+
+    .line 947
+    .line 948
+    aput-object v0, v2, v1
+
+    .line 949
+    .line 950
+    const/16 v1, 0x9f
+
+    .line 951
+    .line 952
+    const-string v0, "SCHEDULED_CONTENT"
+
+    .line 953
+    .line 954
+    aput-object v0, v2, v1
+
+    .line 955
+    .line 956
+    const/16 v1, 0xa0
+
+    .line 957
+    .line 958
+    const-string v0, "SCHEDULED_POSTS"
+
+    .line 959
+    .line 960
+    aput-object v0, v2, v1
+
+    .line 961
+    .line 962
+    const/16 v1, 0xa1
+
+    .line 963
+    .line 964
+    const-string v0, "SELF_VIEW"
+
+    .line 965
+    .line 966
+    aput-object v0, v2, v1
+
+    .line 967
+    .line 968
+    const/16 v1, 0xa2
+
+    .line 969
+    .line 970
+    const-string v0, "SERVICES_MENU"
+
+    .line 971
+    .line 972
+    aput-object v0, v2, v1
+
+    .line 973
+    .line 974
+    const/16 v1, 0xa3
+
+    .line 975
+    .line 976
+    const-string v0, "SETTINGS"
+
+    .line 977
+    .line 978
+    aput-object v0, v2, v1
+
+    .line 979
+    .line 980
+    const/16 v1, 0xa4
+
+    .line 981
+    .line 982
+    const-string v0, "SHOPIFY_META_APP"
+
+    .line 983
+    .line 984
+    aput-object v0, v2, v1
+
+    .line 985
+    .line 986
+    const/16 v1, 0xa5
+
+    .line 987
+    .line 988
+    const-string v0, "SOUND_COLLECTION"
+
+    .line 989
+    .line 990
+    aput-object v0, v2, v1
+
+    .line 991
+    .line 992
+    const/16 v1, 0xa6
+
+    .line 993
+    .line 994
+    const-string v0, "SOUND_COLLECTION_MBS"
+
+    .line 995
+    .line 996
+    aput-object v0, v2, v1
+
+    .line 997
+    .line 998
+    const/16 v1, 0xa7
+
+    .line 999
+    .line 1000
+    const-string v0, "STORE_LOCATIONS"
+
+    .line 1001
+    .line 1002
+    aput-object v0, v2, v1
+
+    .line 1003
+    .line 1004
+    const/16 v1, 0xa8
+
+    .line 1005
+    .line 1006
+    const-string v0, "STORY_COMPOSER"
+
+    .line 1007
+    .line 1008
+    aput-object v0, v2, v1
+
+    .line 1009
+    .line 1010
+    const/16 v1, 0xa9
+
+    .line 1011
+    .line 1012
+    const-string v0, "STREAMER_HOME"
+
+    .line 1013
+    .line 1014
+    aput-object v0, v2, v1
+
+    .line 1015
+    .line 1016
+    const/16 v1, 0xaa
+
+    .line 1017
+    .line 1018
+    const-string v0, "TRAFFIC_ANALYSIS"
+
+    .line 1019
+    .line 1020
+    aput-object v0, v2, v1
+
+    .line 1021
+    .line 1022
+    const/16 v1, 0xab
+
+    .line 1023
+    .line 1024
+    const-string v0, "UNIFIED_VOD_AND_REELS_COMPOSER"
+
+    .line 1025
+    .line 1026
+    aput-object v0, v2, v1
+
+    .line 1027
+    .line 1028
+    const/16 v1, 0xac
+
+    .line 1029
+    .line 1030
+    const-string v0, "UNKNOWN"
+
+    .line 1031
+    .line 1032
+    aput-object v0, v2, v1
+
+    .line 1033
+    .line 1034
+    const/16 v1, 0xad
+
+    .line 1035
+    .line 1036
+    const-string v0, "VIDEOS"
+
+    .line 1037
+    .line 1038
+    aput-object v0, v2, v1
+
+    .line 1039
+    .line 1040
+    const/16 v1, 0xae
+
+    .line 1041
+    .line 1042
+    const-string v0, "VIEW_PAGE"
+
+    .line 1043
+    .line 1044
+    aput-object v0, v2, v1
+
+    .line 1045
+    .line 1046
+    const/16 v1, 0xaf
+
+    .line 1047
+    .line 1048
+    const-string/jumbo v0, "WHATSAPP_CAMPAIGN_COMPOSER"
+
+    .line 1049
+    .line 1050
+    .line 1051
+    aput-object v0, v2, v1
+
+    .line 1052
+    .line 1053
+    const/16 v1, 0xb0
+
+    .line 1054
+    .line 1055
+    const-string/jumbo v0, "WHATSAPP_MANAGER"
+
+    .line 1056
+    .line 1057
+    .line 1058
+    aput-object v0, v2, v1
+
+    .line 1059
+    .line 1060
+    const/16 v1, 0xb1
+
+    .line 1061
+    .line 1062
+    const-string/jumbo v0, "WHATSAPP_MANAGER_EXTERNAL_LINK"
+
+    .line 1063
+    .line 1064
+    .line 1065
+    aput-object v0, v2, v1
+
+    .line 1066
+    .line 1067
+    const/16 v1, 0xb2
+
+    .line 1068
+    .line 1069
+    const-string/jumbo v0, "WHATSAPP_OPT_IN_COMPOSER"
+
+    .line 1070
+    .line 1071
+    .line 1072
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 1073
+    .line 1074
+    .line 1075
+    move-result-object v0
+
+    .line 1076
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLBizAppTabNameSet;->A00:Ljava/util/HashSet;
+
+    .line 1077
+    .line 1078
     return-void
 .end method
 
@@ -1871,11 +2187,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLBizAppTabNameSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLBizAppTabNameSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

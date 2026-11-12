@@ -1,154 +1,83 @@
 .class public final LX/26k;
-.super LX/26m;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/1tk;
 
 
 # instance fields
-.field public final A00:Ljava/util/List;
+.field public final A00:J
+
+.field public final A01:J
+
+.field public final A02:LX/0I5;
+
+.field public final A03:LX/1tk;
+
+.field public final A04:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method public constructor <init>(LX/26o;)V
-    .locals 1
+.method public constructor <init>(LX/0I5;LX/1tk;Ljava/util/concurrent/TimeUnit;JJ)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/26m;-><init>(LX/26o;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    iput-object p1, p0, LX/26k;->A02:LX/0I5;
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    iput-object p2, p0, LX/26k;->A03:LX/1tk;
 
+    .line 6
     .line 7
-    iput-object v0, p0, LX/26k;->A00:Ljava/util/List;
+    iput-wide p4, p0, LX/26k;->A01:J
 
     .line 8
     .line 9
+    iput-wide p6, p0, LX/26k;->A00:J
+
+    .line 10
+    .line 11
+    iput-object p3, p0, LX/26k;->A04:Ljava/util/concurrent/TimeUnit;
+
+    .line 12
+    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0R(Ljava/lang/String;)V
-    .locals 2
-
-    .line 0
-    if-nez p1, :cond_0
-
-    .line 1
-    .line 2
-    sget-object v1, LX/26v;->A00:LX/26v;
-
-    .line 3
-    .line 4
-    :goto_0
-    iget-object v0, p0, LX/26k;->A00:Ljava/util/List;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    invoke-static {p1}, LX/29I;->A03(Ljava/lang/String;)LX/29I;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v1
-
-    .line 14
-    goto :goto_0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    .line 0
-    if-ne p1, p0, :cond_0
-
-    .line 1
-    .line 2
-    const/4 v0, 0x1
-
-    .line 3
-    return v0
-
-    .line 4
-    :cond_0
-    const/4 v2, 0x0
-
-    .line 5
-    if-eqz p1, :cond_1
-
-    .line 6
-    .line 7
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v1
-
-    .line 11
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    if-ne v1, v0, :cond_1
-
-    .line 16
-    .line 17
-    iget-object v1, p0, LX/26k;->A00:Ljava/util/List;
-
-    .line 18
-    .line 19
-    check-cast p1, LX/26k;
-
-    .line 20
-    .line 21
-    iget-object v0, p1, LX/26k;->A00:Ljava/util/List;
-
-    .line 22
-    .line 23
-    invoke-interface {v1, v0}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    .line 24
-    .line 25
-    .line 26
-    move-result v0
-
-    .line 27
-    return v0
-
-    .line 28
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/26k;->A00:Ljava/util/List;
+    iget-object v0, p0, LX/26k;->A03:LX/1tk;
 
     .line 1
     .line 2
-    invoke-interface {v0}, Ljava/util/List;->hashCode()I
+    invoke-interface {v0, p1, p2}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final cancel(Z)Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/26k;->A03:LX/1tk;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     .line 3
     .line 4
@@ -159,15 +88,168 @@
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 5
 
     .line 0
-    iget-object v4, p0, LX/26k;->A00:Ljava/util/List;
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
     .line 1
     .line 2
-    invoke-interface {v4}, Ljava/util/List;->size()I
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 3
+    .line 4
+    invoke-virtual {p0, v0}, LX/26k;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-wide v3
+
+    .line 8
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-wide v1
+
+    .line 12
+    cmp-long v0, v3, v1
+
+    .line 13
+    .line 14
+    if-gez v0, :cond_0
+
+    .line 15
+    .line 16
+    const/4 v0, -0x1
+
+    .line 17
+    return v0
+
+    .line 18
+    :cond_0
+    cmp-long v0, v3, v1
+
+    .line 19
+    .line 20
+    invoke-static {v0}, LX/001;->A1M(I)Z
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v0
+
+    .line 24
+    return v0
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 1
+
+    .line 268435456
+    iget-object v0, p0, LX/26k;->A03:LX/1tk;
+
+    .line 268435457
+    .line 268435458
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    move-result-object v0
+
+    .line 268435462
+    return-object v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/26k;->A03:LX/1tk;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 7
+
+    .line 0
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 1
+    .line 2
+    iget-wide v1, p0, LX/26k;->A00:J
+
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/26k;->A04:Ljava/util/concurrent/TimeUnit;
+
+    .line 5
+    .line 6
+    invoke-virtual {v6, v1, v2, v0}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-wide v4
+
+    .line 10
+    iget-object v0, p0, LX/26k;->A02:LX/0I5;
+
+    .line 11
+    .line 12
+    invoke-interface {v0}, LX/0I5;->now()J
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-wide v2
+
+    .line 16
+    iget-wide v0, p0, LX/26k;->A01:J
+
+    .line 17
+    .line 18
+    sub-long/2addr v2, v0
+
+    .line 19
+    sub-long/2addr v4, v2
+
+    .line 20
+    invoke-virtual {p1, v4, v5, v6}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-wide v0
+
+    .line 24
+    return-wide v0
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/26k;->A03:LX/1tk;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isCancelled()Z
 
     .line 3
     .line 4
@@ -175,89 +257,24 @@
     move-result v0
 
     .line 6
-    shl-int/lit8 v0, v0, 0x4
+    return v0
+.end method
 
-    .line 7
-    .line 8
-    add-int/lit8 v0, v0, 0x10
+.method public final isDone()Z
+    .locals 1
 
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
+    .line 0
+    iget-object v0, p0, LX/26k;->A03:LX/1tk;
 
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v3
+    .line 1
+    .line 2
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
 
-    .line 14
-    const/16 v0, 0x5b
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
 
-    .line 15
-    .line 16
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 17
-    .line 18
-    .line 19
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v2
-
-    .line 23
-    const/4 v1, 0x0
-
-    .line 24
-    :goto_0
-    if-ge v1, v2, :cond_1
-
-    .line 25
-    .line 26
-    if-lez v1, :cond_0
-
-    .line 27
-    .line 28
-    const/16 v0, 0x2c
-
-    .line 29
-    .line 30
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 31
-    .line 32
-    .line 33
-    :cond_0
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v0
-
-    .line 37
-    invoke-static {v3, v0}, LX/001;->A10(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
-
-    .line 38
-    .line 39
-    .line 40
-    add-int/lit8 v1, v1, 0x1
-
-    .line 41
-    .line 42
-    goto :goto_0
-
-    .line 43
-    :cond_1
-    invoke-static {v3}, LX/001;->A0N(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 44
-    .line 45
-    .line 46
-    move-result-object v0
-
-    .line 47
-    return-object v0
+    .line 6
+    return v0
 .end method

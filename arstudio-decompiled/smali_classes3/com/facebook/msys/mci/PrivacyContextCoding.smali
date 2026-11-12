@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/65w;->A00()V
+    invoke-static {}, LX/4Gp;->A00()V
 
     .line 1
     .line 2
@@ -28,11 +28,11 @@
     return-void
 .end method
 
-.method public static native newPrivacyContextAllTransportNative(Lcom/facebook/msys/mci/SqliteHolder;)Lcom/facebook/msys/mci/PrivacyContext;
+.method public static native newPrivacyContextAllTransportNative(Lcom/facebook/msys/mci/sqliteholder/SqliteHolder;)Lcom/facebook/msys/mci/PrivacyContext;
 .end method
 
-.method public static native newPrivacyContextNative(Lcom/facebook/msys/mci/SqliteHolder;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/msys/mci/PrivacyContext;
+.method public static native newPrivacyContextNative(Lcom/facebook/msys/mci/sqliteholder/SqliteHolder;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/msys/mci/PrivacyContext;
 .end method
 
-.method public static native newPrivacyContextWithTransportKeyNative(Lcom/facebook/msys/mci/SqliteHolder;Ljava/lang/String;)Lcom/facebook/msys/mci/PrivacyContext;
+.method public static native newPrivacyContextWithTransportKeyNative(Lcom/facebook/msys/mci/sqliteholder/SqliteHolder;Ljava/lang/String;)Lcom/facebook/msys/mci/PrivacyContext;
 .end method

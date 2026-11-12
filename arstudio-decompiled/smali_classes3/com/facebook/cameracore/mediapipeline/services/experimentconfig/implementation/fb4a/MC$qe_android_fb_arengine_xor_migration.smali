@@ -6,17 +6,21 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xe39d
 
-.field public static final __CONFIG__:I = 0x3e5
+.field public static final __CONFIG__:I = 0x397
 
-.field public static final enable_mesh_id:J = 0x8103e5000029d8L
+.field public static final enable_mesh_id:J = 0x81039700002553L
 
-.field public static final enable_phase2_mesh_id:J = 0x8103e5000429dcL
+.field public static final enable_phase2_mesh_id:J = 0x81039700042557L
 
-.field public static final enable_scenetree_to_entity:J = 0x8103e5000229daL
+.field public static final enable_scenetree_to_entity:J = 0x81039700022555L
 
-.field public static final enable_uniform_block_arengine:J = 0x8103e5000329dbL
+.field public static final enable_scenetree_to_entity_production_rollout:J = 0x81039700052558L
 
-.field public static final enable_xor:J = 0x8103e5000129d9L
+.field public static final enable_scenetree_to_entity_production_rollout_batchb:J = 0x81039700062559L
+
+.field public static final enable_uniform_block_arengine:J = 0x81039700032556L
+
+.field public static final enable_xor:J = 0x81039700012554L
 
 
 # direct methods

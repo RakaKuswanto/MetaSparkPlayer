@@ -21,7 +21,7 @@
     .line 5
     .line 6
     .line 7
-    invoke-static {v0, v1}, LX/1qw;->A00(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, LX/3oB;->A00(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)V
 
     .line 8
     .line 9
@@ -39,4 +39,36 @@
     .line 2
     .line 3
     return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic A09(LX/40d;LX/6Hz;Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    invoke-virtual {p1}, LX/40d;->A0O()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p1}, LX/40d;->A0Q()V
+
+    .line 4
+    .line 5
+    .line 6
+    const-string/jumbo v0, "getTrackingCodes"
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    throw v0
 .end method

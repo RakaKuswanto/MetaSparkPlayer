@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5bo;
+.implements LX/698;
 
 
 # instance fields
@@ -48,11 +48,11 @@
     return-object v0
 .end method
 
-.method public getType()LX/5X9;
+.method public getType()LX/61j;
     .locals 1
 
     .line 0
-    sget-object v0, LX/5X9;->TOUCH_INPUT_CONFIG:LX/5X9;
+    sget-object v0, LX/61j;->TOUCH_INPUT_CONFIG:LX/61j;
 
     .line 1
     .line 2

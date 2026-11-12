@@ -28,224 +28,289 @@
 
 
 # direct methods
+.method public static synthetic $values()[Lcom/facebook/spectrum/image/ImageOrientation;
+    .locals 3
+
+    .line 0
+    const/16 v0, 0x8
+
+    .line 1
+    .line 2
+    new-array v2, v0, [Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 3
+    .line 4
+    sget-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->UP:Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    sget-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->UP_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    aput-object v1, v2, v0
+
+    .line 13
+    .line 14
+    sget-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->BOTTOM:Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 15
+    .line 16
+    const/4 v0, 0x2
+
+    .line 17
+    aput-object v1, v2, v0
+
+    .line 18
+    .line 19
+    sget-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->BOTTOM_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 20
+    .line 21
+    const/4 v0, 0x3
+
+    .line 22
+    aput-object v1, v2, v0
+
+    .line 23
+    .line 24
+    sget-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->LEFT_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 25
+    .line 26
+    const/4 v0, 0x4
+
+    .line 27
+    aput-object v1, v2, v0
+
+    .line 28
+    .line 29
+    sget-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->RIGHT:Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 30
+    .line 31
+    const/4 v0, 0x5
+
+    .line 32
+    aput-object v1, v2, v0
+
+    .line 33
+    .line 34
+    sget-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->RIGHT_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 35
+    .line 36
+    const/4 v0, 0x6
+
+    .line 37
+    aput-object v1, v2, v0
+
+    .line 38
+    .line 39
+    sget-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->LEFT:Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 40
+    .line 41
+    const/4 v0, 0x7
+
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
+    .line 44
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
-    .locals 18
+    .locals 4
 
     .line 0
     const-string v2, "UP"
 
     .line 1
     .line 2
-    const/16 v17, 0x0
+    const/4 v1, 0x0
 
     .line 3
+    const/4 v3, 0x1
+
     .line 4
-    const/16 v16, 0x1
+    new-instance v0, Lcom/facebook/spectrum/image/ImageOrientation;
 
     .line 5
     .line 6
-    new-instance v12, Lcom/facebook/spectrum/image/ImageOrientation;
+    invoke-direct {v0, v2, v1, v3}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
 
     .line 7
     .line 8
-    move/from16 v1, v17
-
     .line 9
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->UP:Lcom/facebook/spectrum/image/ImageOrientation;
+
     .line 10
-    move/from16 v0, v16
-
     .line 11
-    .line 12
-    invoke-direct {v12, v2, v1, v0}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
-
-    .line 13
-    .line 14
-    .line 15
-    sput-object v12, Lcom/facebook/spectrum/image/ImageOrientation;->UP:Lcom/facebook/spectrum/image/ImageOrientation;
-
-    .line 16
-    .line 17
     const-string v1, "UP_MIRRORED"
 
+    .line 12
+    .line 13
+    const/4 v2, 0x2
+
+    .line 14
+    new-instance v0, Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v1, v3, v2}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
+
+    .line 17
     .line 18
     .line 19
-    const/4 v13, 0x2
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->UP_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
 
     .line 20
-    new-instance v11, Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 21
+    const-string v1, "BOTTOM"
+
     .line 22
-    invoke-direct {v11, v1, v0, v13}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
-
     .line 23
+    const/4 v3, 0x3
+
     .line 24
+    new-instance v0, Lcom/facebook/spectrum/image/ImageOrientation;
+
     .line 25
-    sput-object v11, Lcom/facebook/spectrum/image/ImageOrientation;->UP_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 26
-    .line 27
-    const-string v0, "BOTTOM"
+    invoke-direct {v0, v1, v2, v3}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
 
+    .line 27
     .line 28
     .line 29
-    const/4 v14, 0x3
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->BOTTOM:Lcom/facebook/spectrum/image/ImageOrientation;
 
     .line 30
-    new-instance v10, Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 31
+    const-string v1, "BOTTOM_MIRRORED"
+
     .line 32
-    invoke-direct {v10, v0, v13, v14}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
-
     .line 33
+    const/4 v2, 0x4
+
     .line 34
+    new-instance v0, Lcom/facebook/spectrum/image/ImageOrientation;
+
     .line 35
-    sput-object v10, Lcom/facebook/spectrum/image/ImageOrientation;->BOTTOM:Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 36
-    .line 37
-    const-string v0, "BOTTOM_MIRRORED"
+    invoke-direct {v0, v1, v3, v2}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
 
+    .line 37
     .line 38
     .line 39
-    const/4 v9, 0x4
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->BOTTOM_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
 
     .line 40
-    new-instance v8, Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 41
+    const-string v1, "LEFT_MIRRORED"
+
     .line 42
-    invoke-direct {v8, v0, v14, v9}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
-
     .line 43
+    const/4 v3, 0x5
+
     .line 44
+    new-instance v0, Lcom/facebook/spectrum/image/ImageOrientation;
+
     .line 45
-    sput-object v8, Lcom/facebook/spectrum/image/ImageOrientation;->BOTTOM_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 46
-    .line 47
-    const-string v0, "LEFT_MIRRORED"
+    invoke-direct {v0, v1, v2, v3}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
 
+    .line 47
     .line 48
     .line 49
-    const/4 v7, 0x5
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->LEFT_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
 
     .line 50
-    new-instance v6, Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 51
+    const-string v1, "RIGHT"
+
     .line 52
-    invoke-direct {v6, v0, v9, v7}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
-
     .line 53
+    const/4 v2, 0x6
+
     .line 54
+    new-instance v0, Lcom/facebook/spectrum/image/ImageOrientation;
+
     .line 55
-    sput-object v6, Lcom/facebook/spectrum/image/ImageOrientation;->LEFT_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 56
-    .line 57
-    const-string v0, "RIGHT"
+    invoke-direct {v0, v1, v3, v2}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
 
+    .line 57
     .line 58
     .line 59
-    const/4 v5, 0x6
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->RIGHT:Lcom/facebook/spectrum/image/ImageOrientation;
 
     .line 60
-    new-instance v4, Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 61
+    const-string v1, "RIGHT_MIRRORED"
+
     .line 62
-    invoke-direct {v4, v0, v7, v5}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
-
     .line 63
-    .line 64
-    .line 65
-    sput-object v4, Lcom/facebook/spectrum/image/ImageOrientation;->RIGHT:Lcom/facebook/spectrum/image/ImageOrientation;
-
-    .line 66
-    .line 67
-    const-string v0, "RIGHT_MIRRORED"
-
-    .line 68
-    .line 69
     const/4 v3, 0x7
 
+    .line 64
+    new-instance v0, Lcom/facebook/spectrum/image/ImageOrientation;
+
+    .line 65
+    .line 66
+    invoke-direct {v0, v1, v2, v3}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
+
+    .line 67
+    .line 68
+    .line 69
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->RIGHT_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
+
     .line 70
-    new-instance v2, Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 71
-    .line 72
-    invoke-direct {v2, v0, v5, v3}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
+    const-string v2, "LEFT"
 
+    .line 72
     .line 73
+    const/16 v1, 0x8
+
     .line 74
     .line 75
-    sput-object v2, Lcom/facebook/spectrum/image/ImageOrientation;->RIGHT_MIRRORED:Lcom/facebook/spectrum/image/ImageOrientation;
+    new-instance v0, Lcom/facebook/spectrum/image/ImageOrientation;
 
     .line 76
     .line 77
-    const-string v15, "LEFT"
+    invoke-direct {v0, v2, v3, v1}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
 
     .line 78
     .line 79
-    const/16 v0, 0x8
-
     .line 80
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->LEFT:Lcom/facebook/spectrum/image/ImageOrientation;
+
     .line 81
-    new-instance v1, Lcom/facebook/spectrum/image/ImageOrientation;
-
     .line 82
-    .line 83
-    invoke-direct {v1, v15, v3, v0}, Lcom/facebook/spectrum/image/ImageOrientation;-><init>(Ljava/lang/String;IS)V
+    invoke-static {}, Lcom/facebook/spectrum/image/ImageOrientation;->$values()[Lcom/facebook/spectrum/image/ImageOrientation;
 
+    .line 83
     .line 84
     .line 85
+    move-result-object v0
+
     .line 86
-    sput-object v1, Lcom/facebook/spectrum/image/ImageOrientation;->LEFT:Lcom/facebook/spectrum/image/ImageOrientation;
+    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->$VALUES:[Lcom/facebook/spectrum/image/ImageOrientation;
 
     .line 87
     .line 88
-    new-array v0, v0, [Lcom/facebook/spectrum/image/ImageOrientation;
-
-    .line 89
-    .line 90
-    aput-object v12, v0, v17
-
-    .line 91
-    .line 92
-    aput-object v11, v0, v16
-
-    .line 93
-    .line 94
-    aput-object v10, v0, v13
-
-    .line 95
-    .line 96
-    aput-object v8, v0, v14
-
-    .line 97
-    .line 98
-    aput-object v6, v0, v9
-
-    .line 99
-    .line 100
-    aput-object v4, v0, v7
-
-    .line 101
-    .line 102
-    aput-object v2, v0, v5
-
-    .line 103
-    .line 104
-    aput-object v1, v0, v3
-
-    .line 105
-    .line 106
-    sput-object v0, Lcom/facebook/spectrum/image/ImageOrientation;->$VALUES:[Lcom/facebook/spectrum/image/ImageOrientation;
-
-    .line 107
-    .line 108
     return-void
 .end method
 
@@ -316,7 +381,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 21
     .line 22

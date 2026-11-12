@@ -1,350 +1,370 @@
-.class public abstract LX/1d9;
-.super LX/1dA;
+.class public final LX/1D9;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Landroid/content/SharedPreferences$Editor;
 
 
 # instance fields
-.field public A00:I
+.field public final A00:LX/1D7;
 
-.field public final A01:I
+.field public final A01:LX/28F;
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(LX/1D7;LX/28F;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/1dA;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {p2, p1}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
+    iput-object p2, p0, LX/1D9;->A01:LX/28F;
 
     .line 4
     .line 5
+    iput-object p1, p0, LX/1D9;->A00:LX/1D7;
+
     .line 6
-    iput p1, p0, LX/1d9;->A01:I
-
     .line 7
-    .line 8
-    iput p2, p0, LX/1d9;->A00:I
-
-    .line 9
-    .line 10
     return-void
 .end method
 
 
 # virtual methods
-.method public A00(I)Ljava/lang/Object;
+.method public final apply()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1D9;->A00:LX/1D7;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/1D7;->commit()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final clear()Landroid/content/SharedPreferences$Editor;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/1D9;->A00:LX/1D7;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/1D9;->A01:LX/28F;
+
+    .line 3
+    .line 4
+    invoke-interface {v1, v0}, LX/1D7;->Ahs(LX/28F;)LX/2Cv;
+
+    .line 5
+    .line 6
+    .line 7
+    return-object p0
+.end method
+
+.method public final commit()Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1D9;->A00:LX/1D7;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/1D7;->commit()V
+
+    .line 3
+    .line 4
+    .line 5
+    const/4 v0, 0x1
+
+    .line 6
+    return v0
+.end method
+
+.method public final putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/1D9;->A00:LX/1D7;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/1D9;->A01:LX/28F;
+
+    .line 3
+    .line 4
+    invoke-static {v0, p1}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v1, v0, p2}, LX/1D7;->putBoolean(LX/28F;Z)LX/1D7;
+
+    .line 9
+    .line 10
+    .line 11
+    return-object p0
+.end method
+
+.method public final putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
     .locals 3
 
     .line 0
-    instance-of v0, p0, LX/1eN;
+    iget-object v2, p0, LX/1D9;->A00:LX/1D7;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    iget-object v0, p0, LX/1D9;->A01:LX/28F;
 
     .line 3
     .line 4
-    move-object v0, p0
+    invoke-static {v0, p1}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
 
     .line 5
-    check-cast v0, LX/1eN;
-
     .line 6
     .line 7
-    iget-object v0, v0, LX/1eN;->A00:[Ljava/lang/Object;
+    move-result-object v1
 
     .line 8
-    .line 9
-    aget-object v2, v0, p1
+    check-cast v2, LX/2Cv;
 
+    .line 9
     .line 10
+    monitor-enter v2
+
     .line 11
-    return-object v2
+    :try_start_0
+    const/4 v0, 0x0
 
     .line 12
-    :cond_0
-    instance-of v0, p0, LX/1hd;
+    invoke-static {v1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 13
     .line 14
-    if-eqz v0, :cond_1
-
     .line 15
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
     .line 16
-    move-object v0, p0
-
     .line 17
-    check-cast v0, LX/1hd;
-
     .line 18
+    move-result-object v0
+
     .line 19
-    iget-object v0, v0, LX/1hd;->A00:LX/1rw;
+    invoke-static {v1, v2, v0}, LX/2Cv;->A00(LX/28F;LX/2Cv;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 20
     .line 21
-    iget-object v0, v0, LX/1rw;->A00:Ljava/lang/Object;
-
     .line 22
+    monitor-exit v2
+
     .line 23
-    check-cast v0, [Ljava/lang/Iterable;
+    return-object p0
 
     .line 24
+    :catchall_0
+    move-exception v0
+
     .line 25
-    aget-object v0, v0, p1
+    monitor-exit v2
 
     .line 26
+    throw v0
+.end method
+
+.method public final putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/1D9;->A00:LX/1D7;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/1D9;->A01:LX/28F;
+
+    .line 3
+    .line 4
+    invoke-static {v0, p1}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v1, v0, p2}, LX/1D7;->AfX(LX/28F;I)LX/2Cv;
+
+    .line 9
+    .line 10
+    .line 11
+    return-object p0
+.end method
+
+.method public final putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/1D9;->A00:LX/1D7;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/1D9;->A01:LX/28F;
+
+    .line 3
+    .line 4
+    invoke-static {v0, p1}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v1, v0, p2, p3}, LX/1D7;->Afb(LX/28F;J)LX/2Cv;
+
+    .line 9
+    .line 10
+    .line 11
+    return-object p0
+.end method
+
+.method public final putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    .locals 2
+
+    .line 0
+    if-nez p2, :cond_0
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, p1}, LX/1D9;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 3
+    .line 4
+    .line 5
+    return-object p0
+
+    .line 6
+    :cond_0
+    iget-object v1, p0, LX/1D9;->A00:LX/1D7;
+
+    .line 7
+    .line 8
+    iget-object v0, p0, LX/1D9;->A01:LX/28F;
+
+    .line 9
+    .line 10
+    invoke-static {v0, v1, p1, p2}, LX/28G;->A09(LX/28G;LX/1D7;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-object p0
+.end method
+
+.method public final putStringSet(Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
+    .locals 4
+
+    .line 0
+    if-nez p2, :cond_0
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, p1}, LX/1D9;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 3
+    .line 4
+    .line 5
+    return-object p0
+
+    .line 6
+    :cond_0
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v3
+
+    .line 10
+    const-string/jumbo v0, "__data__"
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-virtual {v3, v0, p2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 14
+    .line 15
+    .line 16
+    iget-object v2, p0, LX/1D9;->A00:LX/1D7;
+
+    .line 17
+    .line 18
+    iget-object v0, p0, LX/1D9;->A01:LX/28F;
+
+    .line 19
+    .line 20
+    invoke-static {v0, p1}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v1
+
+    .line 24
+    invoke-static {v3}, LX/0X5;->A0k(Ljava/util/Map;)Ljava/lang/String;
+
+    .line 25
+    .line 26
     .line 27
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    move-result-object v0
 
     .line 28
+    invoke-interface {v2, v1, v0}, LX/1D7;->Aff(LX/28F;Ljava/lang/String;)LX/2Cv;
+
     .line 29
     .line 30
-    move-result-object v2
-
     .line 31
-    return-object v2
-
-    .line 32
-    :cond_1
-    instance-of v0, p0, LX/1c7;
-
-    .line 33
-    .line 34
-    if-eqz v0, :cond_2
-
-    .line 35
-    .line 36
-    move-object v0, p0
-
-    .line 37
-    check-cast v0, LX/1c7;
-
-    .line 38
-    .line 39
-    iget-object v1, v0, LX/1c7;->A00:LX/1c6;
-
-    .line 40
-    .line 41
-    invoke-virtual {v1}, Ljava/util/AbstractMap;->size()I
-
-    .line 42
-    .line 43
-    .line 44
-    move-result v0
-
-    .line 45
-    invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
-
-    .line 46
-    .line 47
-    .line 48
-    new-instance v2, LX/1c8;
-
-    .line 49
-    .line 50
-    invoke-direct {v2, v1, p1}, LX/1c8;-><init>(LX/1c6;I)V
-
-    .line 51
-    .line 52
-    .line 53
-    return-object v2
-
-    .line 54
-    :cond_2
-    move-object v0, p0
-
-    .line 55
-    check-cast v0, LX/1bW;
-
-    .line 56
-    .line 57
-    iget-object v0, v0, LX/1bW;->A00:Lcom/google/common/collect/ArrayTable;
-
-    .line 58
-    .line 59
-    new-instance v2, LX/1bS;
-
-    .line 60
-    .line 61
-    invoke-direct {v2, v0, p1}, LX/1bS;-><init>(Lcom/google/common/collect/ArrayTable;I)V
-
-    .line 62
-    .line 63
-    .line 64
-    return-object v2
+    return-object p0
 .end method
 
-.method public final hasNext()Z
+.method public final remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
     .locals 2
 
     .line 0
-    iget v1, p0, LX/1d9;->A00:I
+    iget-object v1, p0, LX/1D9;->A00:LX/1D7;
 
     .line 1
     .line 2
-    iget v0, p0, LX/1d9;->A01:I
+    iget-object v0, p0, LX/1D9;->A01:LX/28F;
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/001;->A1P(II)Z
+    invoke-static {v0, p1}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
 
     .line 5
     .line 6
     .line 7
-    move-result v0
+    move-result-object v0
 
     .line 8
-    return v0
-.end method
-
-.method public final hasPrevious()Z
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/1d9;->A00:I
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/001;->A1N(I)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    invoke-virtual {p0}, LX/1d9;->hasNext()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    iget v1, p0, LX/1d9;->A00:I
-
-    .line 7
-    .line 8
-    add-int/lit8 v0, v1, 0x1
+    invoke-interface {v1, v0}, LX/1D7;->AhI(LX/28F;)LX/2Cv;
 
     .line 9
     .line 10
-    iput v0, p0, LX/1d9;->A00:I
-
     .line 11
-    .line 12
-    invoke-virtual {p0, v1}, LX/1d9;->A00(I)Ljava/lang/Object;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    return-object v0
-
-    .line 17
-    :cond_0
-    invoke-static {}, LX/0Yj;->A0d()Ljava/util/NoSuchElementException;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    throw v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/1d9;->A00:I
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, LX/1d9;->hasPrevious()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    iget v0, p0, LX/1d9;->A00:I
-
-    .line 7
-    .line 8
-    add-int/lit8 v0, v0, -0x1
-
-    .line 9
-    .line 10
-    iput v0, p0, LX/1d9;->A00:I
-
-    .line 11
-    .line 12
-    invoke-virtual {p0, v0}, LX/1d9;->A00(I)Ljava/lang/Object;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    return-object v0
-
-    .line 17
-    :cond_0
-    invoke-static {}, LX/0Yj;->A0d()Ljava/util/NoSuchElementException;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/1d9;->A00:I
-
-    .line 1
-    .line 2
-    add-int/lit8 v0, v0, -0x1
-
-    .line 3
-    .line 4
-    return v0
+    return-object p0
 .end method

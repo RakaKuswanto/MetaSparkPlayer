@@ -1,28 +1,38 @@
 .class public final LX/3vt;
-.super Ljava/lang/Object;
+.super LX/3nV;
 .source ""
-
-# interfaces
-.implements LX/2JV;
 
 
 # instance fields
-.field public final synthetic A00:LX/3pd;
+.field public final A00:Lcom/google/common/collect/ImmutableMap;
 
 
 # direct methods
-.method public constructor <init>(LX/3pd;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/3vt;->A00:LX/3pd;
+    invoke-direct {p0}, LX/3nV;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    invoke-static {p1, p2}, Lcom/google/common/collect/ImmutableMap;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
+
     .line 4
     .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 8
+    .line 9
+    .line 10
+    iput-object v0, p0, LX/3vt;->A00:Lcom/google/common/collect/ImmutableMap;
+
+    .line 11
+    .line 12
     return-void
 .end method

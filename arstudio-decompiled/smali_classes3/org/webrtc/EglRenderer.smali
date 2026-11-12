@@ -117,7 +117,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -129,7 +129,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 10
     .line 11
@@ -167,7 +167,7 @@
 
     .line 28
     .line 29
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 30
     .line 31
@@ -179,7 +179,7 @@
 
     .line 34
     .line 35
-    invoke-static {}, LX/4BF;->A0O()Landroid/graphics/Matrix;
+    invoke-static {}, LX/435;->A01()Landroid/graphics/Matrix;
 
     .line 36
     .line 37
@@ -191,7 +191,7 @@
 
     .line 40
     .line 41
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 42
     .line 43
@@ -203,7 +203,7 @@
 
     .line 46
     .line 47
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 48
     .line 49
@@ -222,7 +222,7 @@
 
     .line 55
     .line 56
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 57
     .line 58
@@ -383,7 +383,7 @@
 
     .line 5
     :cond_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 6
     .line 7
@@ -418,7 +418,7 @@
 
     .line 21
     .line 22
-    invoke-static {v0, v3}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v3}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 23
     .line 24
@@ -518,7 +518,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -552,7 +552,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, v1, p1, v2}, LX/001;->A0y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v0, v1, p1, v2}, LX/001;->A10(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 19
     .line 20
@@ -581,7 +581,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -615,7 +615,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, v1, p1, v2}, LX/001;->A0y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v0, v1, p1, v2}, LX/001;->A10(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 19
     .line 20
@@ -764,7 +764,7 @@
     div-float/2addr v7, v6
 
     .line 56
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 57
     .line 58
@@ -941,7 +941,7 @@
 
     .line 150
     .line 151
-    invoke-static {v0, v6}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v6}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 152
     .line 153
@@ -982,7 +982,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -1016,7 +1016,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, v1, p1, v2}, LX/001;->A0y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v0, v1, p1, v2}, LX/001;->A10(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 19
     .line 20
@@ -2488,7 +2488,7 @@
     .locals 6
 
     .line 268435456
-    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda7;
+    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda4;
 
     .line 268435457
     .line 268435458
@@ -2507,7 +2507,7 @@
     move v5, p4
 
     .line 268435463
-    invoke-direct/range {v0 .. v5}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda7;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
+    invoke-direct/range {v0 .. v5}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda4;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
 
     .line 268435464
     .line 268435465
@@ -2555,11 +2555,11 @@
 
     .line 6
     .line 7
-    new-instance v2, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda1;
+    new-instance v2, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda6;
 
     .line 8
     .line 9
-    invoke-direct/range {v2 .. v7}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda1;-><init>(Lorg/webrtc/EglRenderer;FFFF)V
+    invoke-direct/range {v2 .. v7}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda6;-><init>(Lorg/webrtc/EglRenderer;FFFF)V
 
     .line 10
     .line 11
@@ -2688,7 +2688,7 @@
 
     .line 268435475
     .line 268435476
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 268435477
     .line 268435478
@@ -2696,7 +2696,7 @@
     move-result-object v0
 
     .line 268435480
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 268435481
     .line 268435482
@@ -2713,7 +2713,7 @@
     .line 268435487
     .line 268435488
     .line 268435489
-    invoke-static {v0}, LX/4BF;->A0U(Landroid/os/HandlerThread;)Landroid/os/Looper;
+    invoke-static {v0}, LX/433;->A0N(Landroid/os/HandlerThread;)Landroid/os/Looper;
 
     .line 268435490
     .line 268435491
@@ -2743,11 +2743,11 @@
 
     .line 268435504
     .line 268435505
-    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda6;
+    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda7;
 
     .line 268435506
     .line 268435507
-    invoke-direct {v0, p0, p1, p2}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda6;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/EglBase$Context;[I)V
+    invoke-direct {v0, p0, p1, p2}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda7;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/EglBase$Context;[I)V
 
     .line 268435508
     .line 268435509
@@ -2827,7 +2827,7 @@
 
     .line 268435547
     .line 268435548
-    invoke-static {v1, v0}, LX/0Yf;->A0W(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v1, v0}, LX/0X3;->A0Y(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 268435549
     .line 268435550
@@ -3457,7 +3457,7 @@
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/4BE;->A0w(Landroid/os/Handler;)Ljava/lang/Thread;
+    invoke-static {v0}, LX/432;->A0v(Landroid/os/Handler;)Ljava/lang/Thread;
 
     .line 8
     .line 9
@@ -3557,7 +3557,7 @@
     .line 3
     .line 4
     .line 5
-    invoke-static {}, LX/0Yh;->A0k()Ljava/util/concurrent/CountDownLatch;
+    invoke-static {}, LX/0X5;->A0v()Ljava/util/concurrent/CountDownLatch;
 
     .line 6
     .line 7
@@ -3610,11 +3610,11 @@
 
     .line 29
     .line 30
-    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda4;
+    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda2;
 
     .line 31
     .line 32
-    invoke-direct {v0, p0, v4}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda4;-><init>(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {v0, p0, v4}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda2;-><init>(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;)V
 
     .line 33
     .line 34
@@ -3681,11 +3681,11 @@
 
     .line 64
     .line 65
-    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda2;
+    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda3;
 
     .line 66
     .line 67
-    invoke-direct {v0, p0, v2}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda2;-><init>(Lorg/webrtc/EglRenderer;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v2}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda3;-><init>(Lorg/webrtc/EglRenderer;Landroid/os/Looper;)V
 
     .line 68
     .line 69
@@ -3820,11 +3820,11 @@
 
     .line 19
     .line 20
-    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda3;
+    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda5;
 
     .line 21
     .line 22
-    invoke-direct {v0, p0, p1}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda3;-><init>(Lorg/webrtc/EglRenderer;Ljava/lang/Runnable;)V
+    invoke-direct {v0, p0, p1}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda5;-><init>(Lorg/webrtc/EglRenderer;Ljava/lang/Runnable;)V
 
     .line 23
     .line 24
@@ -3903,7 +3903,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/0Yh;->A0k()Ljava/util/concurrent/CountDownLatch;
+    invoke-static {}, LX/0X5;->A0v()Ljava/util/concurrent/CountDownLatch;
 
     .line 1
     .line 2
@@ -3942,7 +3942,7 @@
     move-result-object v1
 
     .line 17
-    invoke-static {v0}, LX/4BE;->A0w(Landroid/os/Handler;)Ljava/lang/Thread;
+    invoke-static {v0}, LX/432;->A0v(Landroid/os/Handler;)Ljava/lang/Thread;
 
     .line 18
     .line 19
@@ -3954,11 +3954,11 @@
 
     .line 22
     .line 23
-    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda5;
+    new-instance v0, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda1;
 
     .line 24
     .line 25
-    invoke-direct {v0, p0, v3, p1}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda5;-><init>(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$FrameListener;)V
+    invoke-direct {v0, p0, v3, p1}, Lorg/webrtc/EglRenderer$$ExternalSyntheticLambda1;-><init>(Lorg/webrtc/EglRenderer;Ljava/util/concurrent/CountDownLatch;Lorg/webrtc/EglRenderer$FrameListener;)V
 
     .line 26
     .line 27
@@ -3987,7 +3987,7 @@
 
     .line 37
     .line 38
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 39
     .line 40
@@ -4029,7 +4029,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p1}, LX/004;->A08(Ljava/lang/String;F)Ljava/lang/String;
 
     .line 3
     .line 4
@@ -4037,124 +4037,111 @@
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-direct {p0, v0}, Lorg/webrtc/EglRenderer;->logD(Ljava/lang/String;)V
 
     .line 7
     .line 8
     .line 9
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v5, p0, Lorg/webrtc/EglRenderer;->fpsReductionLock:Ljava/lang/Object;
 
     .line 10
     .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    invoke-direct {p0, v0}, Lorg/webrtc/EglRenderer;->logD(Ljava/lang/String;)V
-
-    .line 14
-    .line 15
-    .line 16
-    iget-object v5, p0, Lorg/webrtc/EglRenderer;->fpsReductionLock:Ljava/lang/Object;
-
-    .line 17
-    .line 18
     monitor-enter v5
 
-    .line 19
+    .line 12
     :try_start_0
     iget-wide v3, p0, Lorg/webrtc/EglRenderer;->minRenderPeriodNs:J
 
-    .line 20
-    .line 21
+    .line 13
+    .line 14
     const/4 v0, 0x0
 
-    .line 22
+    .line 15
     cmpg-float v0, p1, v0
 
-    .line 23
-    .line 24
+    .line 16
+    .line 17
     if-gtz v0, :cond_0
 
-    .line 25
-    .line 26
+    .line 18
+    .line 19
     const-wide v1, 0x7fffffffffffffffL
 
-    .line 27
-    .line 28
-    .line 29
-    .line 30
-    .line 31
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
     goto :goto_0
 
-    .line 32
+    .line 25
     :cond_0
     sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 33
-    .line 34
+    .line 26
+    .line 27
     const-wide/16 v0, 0x1
 
-    .line 35
-    .line 36
+    .line 28
+    .line 29
     invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    .line 37
-    .line 38
-    .line 39
+    .line 30
+    .line 31
+    .line 32
     move-result-wide v1
 
-    .line 40
+    .line 33
     long-to-float v0, v1
 
-    .line 41
+    .line 34
     div-float/2addr v0, p1
 
-    .line 42
+    .line 35
     float-to-long v1, v0
 
-    .line 43
+    .line 36
     :goto_0
     iput-wide v1, p0, Lorg/webrtc/EglRenderer;->minRenderPeriodNs:J
 
-    .line 44
-    .line 45
+    .line 37
+    .line 38
     cmp-long v0, v1, v3
 
-    .line 46
-    .line 47
+    .line 39
+    .line 40
     if-eqz v0, :cond_1
 
-    .line 48
-    .line 49
+    .line 41
+    .line 42
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    .line 50
-    .line 51
-    .line 52
+    .line 43
+    .line 44
+    .line 45
     move-result-wide v0
 
-    .line 53
+    .line 46
     iput-wide v0, p0, Lorg/webrtc/EglRenderer;->nextFrameTimeNs:J
 
-    .line 54
-    .line 55
+    .line 47
+    .line 48
     :cond_1
     monitor-exit v5
 
-    .line 56
+    .line 49
     return-void
 
-    .line 57
+    .line 50
     :catchall_0
     move-exception v0
 
-    .line 58
+    .line 51
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 59
+    .line 52
     throw v0
 .end method
 
@@ -4166,7 +4153,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p1}, LX/004;->A08(Ljava/lang/String;F)Ljava/lang/String;
 
     .line 3
     .line 4
@@ -4174,51 +4161,38 @@
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-direct {p0, v0}, Lorg/webrtc/EglRenderer;->logD(Ljava/lang/String;)V
 
     .line 7
     .line 8
     .line 9
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lorg/webrtc/EglRenderer;->layoutLock:Ljava/lang/Object;
 
     .line 10
     .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    invoke-direct {p0, v0}, Lorg/webrtc/EglRenderer;->logD(Ljava/lang/String;)V
-
-    .line 14
-    .line 15
-    .line 16
-    iget-object v1, p0, Lorg/webrtc/EglRenderer;->layoutLock:Ljava/lang/Object;
-
-    .line 17
-    .line 18
     monitor-enter v1
 
-    .line 19
+    .line 12
     :try_start_0
     iput p1, p0, Lorg/webrtc/EglRenderer;->layoutAspectRatio:F
 
-    .line 20
-    .line 21
+    .line 13
+    .line 14
     monitor-exit v1
 
-    .line 22
+    .line 15
     return-void
 
-    .line 23
+    .line 16
     :catchall_0
     move-exception v0
 
-    .line 24
+    .line 17
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 25
+    .line 18
     throw v0
 .end method
 
@@ -4230,7 +4204,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0, p1}, LX/00I;->A0R(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, p1}, LX/004;->A0O(Ljava/lang/String;Z)Ljava/lang/String;
 
     .line 3
     .line 4
@@ -4281,7 +4255,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0, p1}, LX/00I;->A0R(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, p1}, LX/004;->A0O(Ljava/lang/String;Z)Ljava/lang/String;
 
     .line 3
     .line 4
@@ -4332,7 +4306,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0, p1}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 3
     .line 4

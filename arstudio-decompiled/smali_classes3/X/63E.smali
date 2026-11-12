@@ -2,16 +2,27 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/hardware/SensorEventListener;
+
 
 # instance fields
-.field public final A00:Landroid/os/Handler;
+.field public A00:I
 
-.field public final A01:LX/63U;
+.field public final A01:Landroid/hardware/SensorManager;
+
+.field public final A02:LX/6BN;
+
+.field public final A03:Lcom/facebook/spherical/util/Quaternion;
+
+.field public final A04:[F
+
+.field public final A05:Landroid/hardware/SensorEventListener;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;LX/63U;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;LX/6BN;)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,51 +30,90 @@
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, LX/63D;
 
     .line 4
     .line 5
-    .line 6
-    iput-object p1, p0, LX/63E;->A00:Landroid/os/Handler;
+    invoke-direct {v0, p0}, LX/63D;-><init>(LX/63E;)V
 
+    .line 6
     .line 7
     .line 8
-    iput-object p2, p0, LX/63E;->A01:LX/63U;
+    iput-object v0, p0, LX/63E;->A05:Landroid/hardware/SensorEventListener;
 
     .line 9
     .line 10
+    new-instance v0, Lcom/facebook/spherical/util/Quaternion;
+
+    .line 11
+    .line 12
+    invoke-direct {v0}, Lcom/facebook/spherical/util/Quaternion;-><init>()V
+
+    .line 13
+    .line 14
+    .line 15
+    iput-object v0, p0, LX/63E;->A03:Lcom/facebook/spherical/util/Quaternion;
+
+    .line 16
+    .line 17
+    const/4 v0, 0x4
+
+    .line 18
+    new-array v0, v0, [F
+
+    .line 19
+    .line 20
+    iput-object v0, p0, LX/63E;->A04:[F
+
+    .line 21
+    .line 22
+    const-string v0, "sensor"
+
+    .line 23
+    .line 24
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    check-cast v0, Landroid/hardware/SensorManager;
+
+    .line 29
+    .line 30
+    iput-object v0, p0, LX/63E;->A01:Landroid/hardware/SensorManager;
+
+    .line 31
+    .line 32
+    iput-object p2, p0, LX/63E;->A02:LX/6BN;
+
+    .line 33
+    .line 34
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(LX/62Y;)V
-    .locals 2
+.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
+    .locals 1
 
     .line 0
-    monitor-enter p1
+    iget-object v0, p0, LX/63E;->A05:Landroid/hardware/SensorEventListener;
 
     .line 1
-    monitor-exit p1
-
     .line 2
-    iget-object v1, p0, LX/63E;->A00:Landroid/os/Handler;
+    invoke-interface {v0, p1}, Landroid/hardware/SensorEventListener;->onSensorChanged(Landroid/hardware/SensorEvent;)V
 
     .line 3
     .line 4
-    new-instance v0, LX/63V;
-
     .line 5
-    .line 6
-    invoke-direct {v0, p0, p1}, LX/63V;-><init>(LX/63E;LX/62Y;)V
-
-    .line 7
-    .line 8
-    .line 9
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 10
-    .line 11
-    .line 12
     return-void
 .end method

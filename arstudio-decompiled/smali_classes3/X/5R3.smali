@@ -1,837 +1,310 @@
-.class public LX/5R3;
-.super Ljava/lang/ref/WeakReference;
+.class public final LX/5R3;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/650;
+
+# static fields
+.field public static final A07:LX/5R3;
 
 
 # instance fields
-.field public final A00:I
+.field public final A00:LX/5SV;
 
-.field public final A01:LX/650;
+.field public final A01:LX/5SU;
 
-.field public volatile A02:LX/64z;
+.field public final A02:LX/5La;
+
+.field public final A03:LX/5Qy;
+
+.field public final A04:LX/5SE;
+
+.field public final A05:LX/5Qa;
+
+.field public final A06:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/650;Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;I)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p2, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
+    new-instance v0, LX/5Qk;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/5Qk;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, LX/5Qk;->A00()LX/5R3;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    sput-object v0, LX/5R3;->A07:LX/5R3;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public constructor <init>(LX/5SU;LX/5La;LX/5SE;LX/5Qa;Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/64s;->A0M:LX/64z;
+    iput-object p5, p0, LX/5R3;->A06:Ljava/lang/String;
 
     .line 4
     .line 5
-    iput-object v0, p0, LX/5R3;->A02:LX/64z;
+    iput-object p3, p0, LX/5R3;->A03:LX/5Qy;
 
     .line 6
     .line 7
-    iput p4, p0, LX/5R3;->A00:I
+    iput-object p3, p0, LX/5R3;->A04:LX/5SE;
 
     .line 8
     .line 9
-    iput-object p1, p0, LX/5R3;->A01:LX/650;
+    iput-object p2, p0, LX/5R3;->A02:LX/5La;
 
     .line 10
     .line 11
+    iput-object p4, p0, LX/5R3;->A05:LX/5Qa;
+
+    .line 12
+    .line 13
+    iput-object p1, p0, LX/5R3;->A00:LX/5SV;
+
+    .line 14
+    .line 15
+    iput-object p1, p0, LX/5R3;->A01:LX/5SU;
+
+    .line 16
+    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final getAccessTime()J
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     .line 0
-    instance-of v0, p0, LX/65I;
+    const/4 v2, 0x1
 
     .line 1
+    if-eq p0, p1, :cond_2
+
     .line 2
-    if-eqz v0, :cond_0
-
     .line 3
-    .line 4
-    move-object v0, p0
+    instance-of v1, p1, LX/5R3;
 
+    .line 4
     .line 5
-    check-cast v0, LX/65I;
+    const/4 v0, 0x0
 
     .line 6
+    if-nez v1, :cond_0
+
     .line 7
-    iget-wide v0, v0, LX/65I;->A04:J
-
     .line 8
-    .line 9
-    return-wide v0
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65J;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/65J;
-
-    .line 16
-    .line 17
-    iget-wide v0, v0, LX/65J;->A02:J
-
-    .line 18
-    .line 19
-    return-wide v0
-
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final getHash()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/5R3;->A00:I
-
-    .line 1
-    .line 2
     return v0
-.end method
 
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final getNext()LX/650;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5R3;->A01:LX/650;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final getNextInAccessQueue()LX/650;
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65I;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65I;
-
-    .line 6
-    .line 7
-    iget-object v0, v0, LX/65I;->A00:LX/650;
-
-    .line 8
     .line 9
-    return-object v0
+    :cond_0
+    check-cast p1, LX/5R3;
 
     .line 10
-    :cond_0
-    instance-of v0, p0, LX/65J;
-
     .line 11
+    iget-object v1, p0, LX/5R3;->A06:Ljava/lang/String;
+
     .line 12
-    if-eqz v0, :cond_1
-
     .line 13
-    .line 14
-    move-object v0, p0
+    iget-object v0, p1, LX/5R3;->A06:Ljava/lang/String;
 
+    .line 14
     .line 15
-    check-cast v0, LX/65J;
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 16
     .line 17
-    iget-object v0, v0, LX/65J;->A00:LX/650;
-
     .line 18
+    move-result v0
+
     .line 19
-    return-object v0
-
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final getNextInWriteQueue()LX/650;
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65H;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65H;
-
-    .line 6
-    .line 7
-    iget-object v0, v0, LX/65H;->A00:LX/650;
-
-    .line 8
-    .line 9
-    return-object v0
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65I;
-
-    .line 11
-    .line 12
     if-eqz v0, :cond_1
 
-    .line 13
-    .line 14
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/65I;
-
-    .line 16
-    .line 17
-    iget-object v0, v0, LX/65I;->A01:LX/650;
-
-    .line 18
-    .line 19
-    return-object v0
-
     .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
     .line 21
+    iget-object v1, p0, LX/5R3;->A00:LX/5SV;
+
     .line 22
     .line 23
-    move-result-object v0
+    iget-object v0, p1, LX/5R3;->A00:LX/5SV;
 
     .line 24
-    throw v0
-.end method
+    .line 25
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-.method public final getPreviousInAccessQueue()LX/650;
-    .locals 1
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
 
-    .line 0
-    instance-of v0, p0, LX/65I;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65I;
-
-    .line 6
-    .line 7
-    iget-object v0, v0, LX/65I;->A02:LX/650;
-
-    .line 8
-    .line 9
-    return-object v0
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65J;
-
-    .line 11
-    .line 12
+    .line 29
     if-eqz v0, :cond_1
 
-    .line 13
-    .line 14
-    move-object v0, p0
+    .line 30
+    .line 31
+    iget-object v1, p0, LX/5R3;->A03:LX/5Qy;
 
-    .line 15
-    check-cast v0, LX/65J;
+    .line 32
+    .line 33
+    iget-object v0, p1, LX/5R3;->A03:LX/5Qy;
 
-    .line 16
-    .line 17
-    iget-object v0, v0, LX/65J;->A01:LX/650;
+    .line 34
+    .line 35
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 18
-    .line 19
-    return-object v0
+    .line 36
+    .line 37
+    .line 38
+    move-result v0
 
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final getPreviousInWriteQueue()LX/650;
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65H;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65H;
-
-    .line 6
-    .line 7
-    iget-object v0, v0, LX/65H;->A01:LX/650;
-
-    .line 8
-    .line 9
-    return-object v0
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65I;
-
-    .line 11
-    .line 12
+    .line 39
     if-eqz v0, :cond_1
 
-    .line 13
-    .line 14
-    move-object v0, p0
+    .line 40
+    .line 41
+    iget-object v1, p0, LX/5R3;->A02:LX/5La;
 
-    .line 15
-    check-cast v0, LX/65I;
+    .line 42
+    .line 43
+    iget-object v0, p1, LX/5R3;->A02:LX/5La;
 
-    .line 16
-    .line 17
-    iget-object v0, v0, LX/65I;->A03:LX/650;
+    .line 44
+    .line 45
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 18
-    .line 19
-    return-object v0
+    .line 46
+    .line 47
+    .line 48
+    move-result v0
 
-    .line 20
+    .line 49
+    if-eqz v0, :cond_1
+
+    .line 50
+    .line 51
+    iget-object v1, p0, LX/5R3;->A05:LX/5Qa;
+
+    .line 52
+    .line 53
+    iget-object v0, p1, LX/5R3;->A05:LX/5Qa;
+
+    .line 54
+    .line 55
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 56
+    .line 57
+    .line 58
+    move-result v0
+
+    .line 59
+    if-eqz v0, :cond_1
+
+    .line 60
+    .line 61
+    return v2
+
+    .line 62
     :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    const/4 v2, 0x0
 
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
+    .line 63
+    :cond_2
+    return v2
 .end method
 
-.method public final getValueReference()LX/64z;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5R3;->A02:LX/64z;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final getWriteTime()J
+.method public final hashCode()I
     .locals 2
 
     .line 0
-    instance-of v0, p0, LX/65H;
+    iget-object v0, p0, LX/5R3;->A06:Ljava/lang/String;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    invoke-static {v0}, LX/433;->A0D(Ljava/lang/String;)I
 
     .line 3
     .line 4
-    move-object v0, p0
-
     .line 5
-    check-cast v0, LX/65H;
+    move-result v1
 
     .line 6
+    iget-object v0, p0, LX/5R3;->A03:LX/5Qy;
+
     .line 7
-    iget-wide v0, v0, LX/65H;->A02:J
-
     .line 8
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
     .line 9
-    return-wide v0
-
     .line 10
-    :cond_0
-    instance-of v0, p0, LX/65I;
-
     .line 11
+    move-result v0
+
     .line 12
-    if-eqz v0, :cond_1
+    add-int/2addr v1, v0
 
     .line 13
-    .line 14
-    move-object v0, p0
+    mul-int/lit8 v1, v1, 0x1f
 
+    .line 14
     .line 15
-    check-cast v0, LX/65I;
+    iget-object v0, p0, LX/5R3;->A02:LX/5La;
 
     .line 16
     .line 17
-    iget-wide v0, v0, LX/65I;->A05:J
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 18
     .line 19
-    return-wide v0
-
     .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    move-result v1
 
     .line 21
+    iget-object v0, p0, LX/5R3;->A00:LX/5SV;
+
     .line 22
     .line 23
-    move-result-object v0
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 24
-    throw v0
-.end method
-
-.method public final setAccessTime(J)V
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65I;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65I;
-
-    .line 6
-    .line 7
-    iput-wide p1, v0, LX/65I;->A04:J
-
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65J;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/65J;
-
-    .line 16
-    .line 17
-    iput-wide p1, v0, LX/65J;->A02:J
-
-    .line 18
-    .line 19
-    return-void
-
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final setNextInAccessQueue(LX/650;)V
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65I;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65I;
-
-    .line 6
-    .line 7
-    iput-object p1, v0, LX/65I;->A00:LX/650;
-
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65J;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/65J;
-
-    .line 16
-    .line 17
-    iput-object p1, v0, LX/65J;->A00:LX/650;
-
-    .line 18
-    .line 19
-    return-void
-
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final setNextInWriteQueue(LX/650;)V
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65H;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65H;
-
-    .line 6
-    .line 7
-    iput-object p1, v0, LX/65H;->A00:LX/650;
-
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65I;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/65I;
-
-    .line 16
-    .line 17
-    iput-object p1, v0, LX/65I;->A01:LX/650;
-
-    .line 18
-    .line 19
-    return-void
-
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final setPreviousInAccessQueue(LX/650;)V
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65I;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65I;
-
-    .line 6
-    .line 7
-    iput-object p1, v0, LX/65I;->A02:LX/650;
-
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65J;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/65J;
-
-    .line 16
-    .line 17
-    iput-object p1, v0, LX/65J;->A01:LX/650;
-
-    .line 18
-    .line 19
-    return-void
-
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final setPreviousInWriteQueue(LX/650;)V
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65H;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65H;
-
-    .line 6
-    .line 7
-    iput-object p1, v0, LX/65H;->A01:LX/650;
-
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65I;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/65I;
-
-    .line 16
-    .line 17
-    iput-object p1, v0, LX/65I;->A03:LX/650;
-
-    .line 18
-    .line 19
-    return-void
-
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-.end method
-
-.method public final setValueReference(LX/64z;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/5R3;->A02:LX/64z;
-
-    .line 1
-    .line 2
-    return-void
-.end method
-
-.method public final setWriteTime(J)V
-    .locals 1
-
-    .line 0
-    instance-of v0, p0, LX/65H;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/65H;
-
-    .line 6
-    .line 7
-    iput-wide p1, v0, LX/65H;->A02:J
-
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    instance-of v0, p0, LX/65I;
-
-    .line 11
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    .line 14
-    move-object v0, p0
-
-    .line 15
-    check-cast v0, LX/65I;
-
-    .line 16
-    .line 17
-    iput-wide p1, v0, LX/65I;->A05:J
-
-    .line 18
-    .line 19
-    return-void
-
-    .line 20
-    :cond_1
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
+    .line 25
+    .line 26
+    move-result v1
+
+    .line 27
+    iget-object v0, p0, LX/5R3;->A05:LX/5Qa;
+
+    .line 28
+    .line 29
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v0
+
+    .line 33
+    return v0
 .end method

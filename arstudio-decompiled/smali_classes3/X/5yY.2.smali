@@ -1,61 +1,57 @@
-.class public final LX/5yY;
+.class public final LX/5yy;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5z3;
+
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:I
-
-.field public final A02:I
-
-.field public final A03:I
-
-.field public final A04:I
-
-.field public final A05:I
-
-.field public final A06:[I
+.field public final synthetic A00:LX/5yv;
 
 
 # direct methods
-.method public constructor <init>([IIIIIII)V
+.method public constructor <init>(LX/5yv;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/5yy;->A00:LX/5yv;
 
     .line 1
     .line 2
-    .line 3
-    iput p2, p0, LX/5yY;->A05:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p1, p0, LX/5yY;->A06:[I
+    return-void
+.end method
 
+
+# virtual methods
+.method public final AYw(IIIIZ)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5yy;->A00:LX/5yv;
+
+    .line 1
+    .line 2
+    iput p1, v0, LX/5yv;->A03:I
+
+    .line 3
+    .line 4
+    iput p2, v0, LX/5yv;->A01:I
+
+    .line 5
     .line 6
+    iput p3, v0, LX/5yv;->A02:I
+
     .line 7
-    iput p3, p0, LX/5yY;->A04:I
-
     .line 8
+    iput p4, v0, LX/5yv;->A00:I
+
     .line 9
-    iput p4, p0, LX/5yY;->A03:I
-
     .line 10
-    .line 11
-    iput p5, p0, LX/5yY;->A01:I
-
-    .line 12
-    .line 13
-    iput p6, p0, LX/5yY;->A00:I
-
-    .line 14
-    .line 15
-    iput p7, p0, LX/5yY;->A02:I
-
-    .line 16
-    .line 17
     return-void
 .end method

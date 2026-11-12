@@ -3,6 +3,10 @@
 .source ""
 
 
+# instance fields
+.field public final typeTag:I
+
+
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
@@ -13,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -22,6 +26,25 @@
 .end method
 
 .method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Lcom/facebook/jni/HybridClassBase;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const/4 v0, 0x0
+
+    .line 268435460
+    iput v0, p0, Lcom/facebook/pando/TreeJNI;->typeTag:I
+
+    .line 268435461
+    .line 268435462
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
     .line 0
@@ -30,10 +53,11 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput p1, p0, Lcom/facebook/pando/TreeJNI;->typeTag:I
 
-.method private final native isFieldSet(Ljava/lang/String;)Z
+    .line 4
+    .line 5
+    return-void
 .end method
 
 
@@ -63,58 +87,6 @@
 .end method
 
 .method public final native getDoubleValueByHashCode(I)D
-.end method
-
-.method public final getEnumValue(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0, p1}, Lcom/facebook/pando/TreeJNI;->getStringValue(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    if-eqz v2, :cond_0
-
-    .line 5
-    .line 6
-    :try_start_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
-    .line 10
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    .line 11
-    .line 12
-    invoke-virtual {v2, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    invoke-static {v1, v0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object p2
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 20
-    :catch_0
-    :cond_0
-    return-object p2
 .end method
 
 .method public final native getFieldByHashCode_UNTYPED(I)Ljava/lang/Object;
@@ -238,6 +210,12 @@
 .end method
 
 .method public final native hasFieldValueByHashCode(I)Z
+.end method
+
+.method public final native isFieldSet(Ljava/lang/String;)Z
+.end method
+
+.method public final native logToFlipper(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method public final native maybeUpdateActiveFields()V

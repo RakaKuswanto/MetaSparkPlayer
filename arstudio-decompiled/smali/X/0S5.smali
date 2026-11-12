@@ -1,141 +1,59 @@
 .class public final LX/0S5;
-.super Ljava/lang/Object;
+.super LX/071;
 .source ""
 
 
-# static fields
-.field public static A00:I
-
-.field public static A01:[LX/0S3;
-
-.field public static final A02:Ljava/util/List;
-
-.field public static final A03:Ljava/util/List;
+# instance fields
+.field public final isVisibleToUser:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Landroidx/fragment/app/Fragment;Z)V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x4
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
-    new-array v5, v0, [Ljava/lang/String;
-
     .line 2
     .line 3
-    const-string v0, "media"
+    move-result-object v1
 
     .line 4
-    .line 5
-    const/4 v4, 0x0
+    const-string v0, "Attempting to set user visible hint to "
 
+    .line 5
     .line 6
-    aput-object v0, v5, v4
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
-    const-string v0, "mms"
-
     .line 9
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
     .line 10
-    const/4 v3, 0x1
-
     .line 11
-    aput-object v0, v5, v3
-
     .line 12
+    const-string v0, " for fragment "
+
     .line 13
-    const-string v0, "mms-sms"
-
     .line 14
+    invoke-static {p1, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 15
-    const/4 v2, 0x2
-
     .line 16
-    aput-object v0, v5, v2
-
     .line 17
+    move-result-object v0
+
     .line 18
-    const/4 v1, 0x3
+    invoke-direct {p0, p1, v0}, LX/071;-><init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
     .line 19
-    const-string v0, "sms"
-
     .line 20
     .line 21
-    aput-object v0, v5, v1
+    iput-boolean p2, p0, LX/0S5;->isVisibleToUser:Z
 
     .line 22
     .line 23
-    invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    .line 24
-    .line 25
-    .line 26
-    move-result-object v0
-
-    .line 27
-    sput-object v0, LX/0S5;->A03:Ljava/util/List;
-
-    .line 28
-    .line 29
-    new-array v1, v2, [Ljava/lang/String;
-
-    .line 30
-    .line 31
-    const-string v0, "com.android."
-
-    .line 32
-    .line 33
-    aput-object v0, v1, v4
-
-    .line 34
-    .line 35
-    const-string v0, "com.google.android."
-
-    .line 36
-    .line 37
-    aput-object v0, v1, v3
-
-    .line 38
-    .line 39
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v0
-
-    .line 43
-    sput-object v0, LX/0S5;->A02:Ljava/util/List;
-
-    .line 44
-    .line 45
-    const/16 v0, 0x8
-
-    .line 46
-    .line 47
-    new-array v0, v0, [LX/0S3;
-
-    .line 48
-    .line 49
-    sput-object v0, LX/0S5;->A01:[LX/0S3;
-
-    .line 50
-    .line 51
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
     return-void
 .end method

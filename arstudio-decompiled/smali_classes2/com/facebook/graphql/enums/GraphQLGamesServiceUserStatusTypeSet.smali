@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLGamesServiceUserStatusTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLGamesServiceUserStatusTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -15,7 +15,7 @@
     const/4 v0, 0x4
 
     .line 1
-    invoke-static {v0}, LX/0Yi;->A1a(I)[Ljava/lang/String;
+    invoke-static {v0}, LX/0X5;->A1b(I)[Ljava/lang/String;
 
     .line 2
     .line 3
@@ -52,7 +52,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 19
     .line 20
@@ -60,7 +60,7 @@
     move-result-object v0
 
     .line 22
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLGamesServiceUserStatusTypeSet;->A00:Ljava/util/Set;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLGamesServiceUserStatusTypeSet;->A00:Ljava/util/HashSet;
 
     .line 23
     .line 24
@@ -79,11 +79,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLGamesServiceUserStatusTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLGamesServiceUserStatusTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

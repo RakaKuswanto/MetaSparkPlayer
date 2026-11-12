@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d andro izay</item>
+        <item quantity="one">1 day ago</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d andro</item>
+        <item quantity="one">1 andro</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">andro %1$d</item>
+        <item quantity="one">1 andro</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">Ora %1$d</item>
+        <item quantity="one">1 Ora</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minitra</item>
+        <item quantity="one">1 minitra</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d Volana</item>
+        <item quantity="one">1 volana</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d weeks</item>
+        <item quantity="one">1 Herinandro</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Mbola misy %1$d andro</item>
+        <item quantity="one">1 more day</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d years</item>
+        <item quantity="one">1 taona</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ora lasa izay</item>
+        <item quantity="one">1 ora lasa</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d 0ra</item>
+        <item quantity="one">1 ora</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d ora</item>
+        <item quantity="one">1 ora</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d minitra lasa</item>
+        <item quantity="one">1 minitra lasa</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d M</item>
+        <item quantity="one">1min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d months ago</item>
+        <item quantity="one">1 volana lasa izay</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d segondra lasa izay</item>
+        <item quantity="one">1 second</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d herinandro lasa izay</item>
+        <item quantity="one">1 week ago</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d hrs left</item>
+        <item quantity="one">1 ora sisa</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d mins left</item>
+        <item quantity="one">1 min sisa</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d taona lasa</item>
+        <item quantity="one">1 Taona Lasa</item>
+    </plurals>
+</resources>

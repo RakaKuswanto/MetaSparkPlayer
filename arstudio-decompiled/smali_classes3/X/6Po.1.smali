@@ -2,110 +2,287 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
-
 
 # instance fields
-.field public A00:Ljava/lang/Object;
+.field public A00:LX/6Pn;
 
-.field public A01:Ljava/lang/Object;
+.field public A01:Ljava/util/HashMap;
 
-.field public final A02:I
+.field public final A02:LX/2Vp;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(LX/2Vp;)V
+    .locals 1
 
     .line 0
-    iput p2, p0, LX/6Po;->A02:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p3, p0, LX/6Po;->A00:Ljava/lang/Object;
-
     .line 3
-    .line 4
-    iput-object p1, p0, LX/6Po;->A01:Ljava/lang/Object;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
+    .line 4
     .line 5
     .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
     .line 7
+    iput-object v0, p0, LX/6Po;->A01:Ljava/util/HashMap;
+
     .line 8
     .line 9
+    new-instance v0, LX/6Pn;
+
+    .line 10
+    .line 11
+    invoke-direct {v0}, LX/6Pn;-><init>()V
+
+    .line 12
+    .line 13
+    .line 14
+    iput-object v0, p0, LX/6Po;->A00:LX/6Pn;
+
+    .line 15
+    .line 16
+    iput-object p1, p0, LX/6Po;->A02:LX/2Vp;
+
+    .line 17
+    .line 18
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss()V
-    .locals 2
+.method public final A00(LX/2Tp;LX/6aa;LX/5qz;LX/6WT;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;JJJJJJJJJ)V
+    .locals 5
 
     .line 0
-    iget v0, p0, LX/6Po;->A02:I
+    monitor-enter p0
 
     .line 1
+    :try_start_0
+    iget-object v0, p0, LX/6Po;->A00:LX/6Pn;
+
     .line 2
-    if-eqz v0, :cond_0
-
     .line 3
+    iput-object p2, v0, LX/6Pn;->A0B:LX/6aa;
+
     .line 4
-    const-string v0, "onDismissDropDown"
-
     .line 5
-    .line 6
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    iput-object p6, v0, LX/6Pn;->A0G:Ljava/lang/String;
 
+    .line 6
     .line 7
+    iput-object p7, v0, LX/6Pn;->A0F:Ljava/lang/String;
+
     .line 8
     .line 9
-    move-result-object v0
+    iput-object p3, v0, LX/6Pn;->A0C:LX/5qz;
 
     .line 10
-    throw v0
-
     .line 11
-    :cond_0
-    iget-object v0, p0, LX/6Po;->A00:Ljava/lang/Object;
+    iput-object p1, v0, LX/6Pn;->A0A:LX/2Tp;
 
     .line 12
     .line 13
-    check-cast v0, LX/4Xp;
+    iput-object p4, v0, LX/6Pn;->A0D:LX/6WT;
 
     .line 14
     .line 15
-    iget-object v0, v0, LX/4Xp;->A04:LX/4Xl;
+    iput-object p5, v0, LX/6Pn;->A0E:Ljava/lang/Boolean;
 
     .line 16
     .line 17
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    const/4 v1, 0x1
 
     .line 18
+    iput-boolean v1, v0, LX/6Pn;->A0H:Z
+
     .line 19
     .line 20
-    move-result-object v1
+    iget-object v1, p0, LX/6Po;->A01:Ljava/util/HashMap;
 
     .line 21
-    if-eqz v1, :cond_1
-
     .line 22
-    .line 23
-    iget-object v0, p0, LX/6Po;->A01:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 23
     .line 24
     .line 25
-    check-cast v0, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+    move-result-object v0
 
     .line 26
-    .line 27
-    invoke-virtual {v1, v0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    check-cast v0, LX/6Pn;
 
+    .line 27
     .line 28
+    if-nez v0, :cond_0
+
     .line 29
     .line 30
-    :cond_1
+    iget-object v0, p0, LX/6Po;->A00:LX/6Pn;
+
+    .line 31
+    .line 32
+    invoke-virtual {v1, v0, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 33
+    .line 34
+    .line 35
+    new-instance v1, LX/6Pn;
+
+    .line 36
+    .line 37
+    invoke-direct {v1}, LX/6Pn;-><init>()V
+
+    .line 38
+    .line 39
+    .line 40
+    iput-object v1, p0, LX/6Po;->A00:LX/6Pn;
+
+    .line 41
+    .line 42
+    :cond_0
+    iget-wide v1, v0, LX/6Pn;->A07:J
+
+    .line 43
+    .line 44
+    add-long/2addr v1, p8
+
+    .line 45
+    iput-wide v1, v0, LX/6Pn;->A07:J
+
+    .line 46
+    .line 47
+    iget-wide v1, v0, LX/6Pn;->A01:J
+
+    .line 48
+    .line 49
+    add-long/2addr v1, p10
+
+    .line 50
+    iput-wide v1, v0, LX/6Pn;->A01:J
+
+    .line 51
+    .line 52
+    iget-wide v1, v0, LX/6Pn;->A09:J
+
+    .line 53
+    .line 54
+    add-long v1, v1, p12
+
+    .line 55
+    .line 56
+    iput-wide v1, v0, LX/6Pn;->A09:J
+
+    .line 57
+    .line 58
+    iget-wide v1, v0, LX/6Pn;->A00:J
+
+    .line 59
+    .line 60
+    add-long v1, v1, p14
+
+    .line 61
+    .line 62
+    iput-wide v1, v0, LX/6Pn;->A00:J
+
+    .line 63
+    .line 64
+    iget-wide v1, v0, LX/6Pn;->A04:J
+
+    .line 65
+    .line 66
+    add-long v1, v1, p16
+
+    .line 67
+    .line 68
+    iput-wide v1, v0, LX/6Pn;->A04:J
+
+    .line 69
+    .line 70
+    iget-wide v1, v0, LX/6Pn;->A03:J
+
+    .line 71
+    .line 72
+    add-long v1, v1, p18
+
+    .line 73
+    .line 74
+    iput-wide v1, v0, LX/6Pn;->A03:J
+
+    .line 75
+    .line 76
+    iget-wide v1, v0, LX/6Pn;->A02:J
+
+    .line 77
+    .line 78
+    add-long v1, v1, p20
+
+    .line 79
+    .line 80
+    iput-wide v1, v0, LX/6Pn;->A02:J
+
+    .line 81
+    .line 82
+    iget-wide v1, v0, LX/6Pn;->A06:J
+
+    .line 83
+    .line 84
+    add-long v1, v1, p22
+
+    .line 85
+    .line 86
+    iput-wide v1, v0, LX/6Pn;->A06:J
+
+    .line 87
+    .line 88
+    iget-wide v1, v0, LX/6Pn;->A05:J
+
+    .line 89
+    .line 90
+    add-long v1, v1, p24
+
+    .line 91
+    .line 92
+    iput-wide v1, v0, LX/6Pn;->A05:J
+
+    .line 93
+    .line 94
+    iget-wide v3, v0, LX/6Pn;->A08:J
+
+    .line 95
+    .line 96
+    const-wide/16 v1, 0x1
+
+    .line 97
+    .line 98
+    add-long/2addr v3, v1
+
+    .line 99
+    iput-wide v3, v0, LX/6Pn;->A08:J
+
+    .line 100
+    .line 101
+    monitor-exit p0
+
+    .line 102
     return-void
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 103
+    :catchall_0
+    move-exception v0
+
+    .line 104
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 105
+    throw v0
 .end method

@@ -15,7 +15,7 @@
     const/4 v0, 0x2
 
     .line 1
-    invoke-static {v0}, LX/0Yh;->A1b(I)[Ljava/lang/String;
+    invoke-static {v0}, LX/0X5;->A1a(I)[Ljava/lang/String;
 
     .line 2
     .line 3
@@ -30,7 +30,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 9
     .line 10

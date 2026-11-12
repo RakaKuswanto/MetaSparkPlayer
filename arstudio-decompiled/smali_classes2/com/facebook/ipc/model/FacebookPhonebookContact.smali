@@ -78,11 +78,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1e
+    const/16 v0, 0x4a
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -196,7 +196,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/0Yc;->A1Y(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1W(Landroid/os/Parcel;)Z
 
     .line 16
     .line 17
@@ -236,7 +236,7 @@
 
     .line 34
     .line 35
-    invoke-static {p1, v1}, LX/0Yf;->A0m(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-static {p1, v1}, LX/0X3;->A0n(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/util/ArrayList;
 
     .line 36
     .line 37
@@ -260,7 +260,7 @@
 
     .line 46
     .line 47
-    invoke-static {p1, v1}, LX/0Yf;->A0m(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-static {p1, v1}, LX/0X3;->A0n(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/util/ArrayList;
 
     .line 48
     .line 49
@@ -505,84 +505,94 @@
 
     .line 9
     .line 10
-    invoke-static {v2, v0, v1}, LX/0Yf;->A1K([Ljava/lang/Object;J)V
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 11
     .line 12
     .line 13
-    iget-wide v0, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->userId:J
+    move-result-object v1
 
     .line 14
+    const/4 v0, 0x1
+
     .line 15
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    aput-object v1, v2, v0
 
     .line 16
     .line 17
-    .line 18
-    move-result-object v1
+    iget-wide v0, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->userId:J
 
+    .line 18
     .line 19
-    const/4 v0, 0x2
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 20
-    aput-object v1, v2, v0
-
     .line 21
     .line 22
-    iget-boolean v0, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->isFriend:Z
+    move-result-object v1
 
     .line 23
+    const/4 v0, 0x2
+
     .line 24
-    invoke-static {v2, v0}, LX/0Yg;->A1M([Ljava/lang/Object;Z)V
+    aput-object v1, v2, v0
 
     .line 25
     .line 26
+    iget-boolean v0, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->isFriend:Z
+
     .line 27
-    iget-wide v0, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->ordinal:J
-
     .line 28
-    .line 29
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v0}, LX/0X5;->A1T([Ljava/lang/Object;Z)V
 
+    .line 29
     .line 30
     .line 31
-    .line 32
-    move-result-object v1
+    iget-wide v0, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->ordinal:J
 
+    .line 32
     .line 33
-    const/4 v0, 0x4
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 34
-    aput-object v1, v2, v0
-
     .line 35
     .line 36
-    iget-object v1, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->A01:Ljava/util/List;
+    move-result-object v1
 
     .line 37
-    .line 38
-    const/4 v0, 0x5
+    const/4 v0, 0x4
 
-    .line 39
+    .line 38
     aput-object v1, v2, v0
 
+    .line 39
     .line 40
-    .line 41
-    iget-object v1, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->A00:Ljava/util/List;
+    iget-object v1, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->A01:Ljava/util/List;
 
+    .line 41
     .line 42
+    const/4 v0, 0x5
+
     .line 43
-    const/4 v0, 0x6
+    aput-object v1, v2, v0
 
     .line 44
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
-
     .line 45
+    iget-object v1, p0, Lcom/facebook/ipc/model/FacebookPhonebookContact;->A00:Ljava/util/List;
+
     .line 46
     .line 47
-    move-result v0
+    const/4 v0, 0x6
 
     .line 48
+    invoke-static {v1, v2, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
+
+    .line 49
+    .line 50
+    .line 51
+    move-result v0
+
+    .line 52
     return v0
 .end method
 

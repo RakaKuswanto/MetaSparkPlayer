@@ -1,13 +1,9 @@
-.class public final LX/0Ns;
-.super Ljava/lang/Object;
+.class public abstract LX/0Ns;
+.super LX/0Ui;
 .source ""
 
 # interfaces
-.implements Lcom/facebook/acra/util/HttpConnectionProvider;
-
-
-# instance fields
-.field public A00:LX/0RY;
+.implements Ljava/util/concurrent/Future;
 
 
 # direct methods
@@ -15,7 +11,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/0Ui;-><init>()V
 
     .line 1
     .line 2
@@ -25,144 +21,120 @@
 
 
 # virtual methods
-.method public final getConnection(Ljava/net/URL;)Ljava/net/HttpURLConnection;
-    .locals 6
+.method public abstract A01()LX/0Nr;
+.end method
+
+.method public cancel(Z)Z
+    .locals 1
 
     .line 0
-    invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+    invoke-virtual {p0}, LX/0Ns;->A01()LX/0Nr;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v5
+    move-result-object v0
 
     .line 4
-    check-cast v5, Ljava/net/HttpURLConnection;
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     .line 5
     .line 6
-    instance-of v0, v5, Ljavax/net/ssl/HttpsURLConnection;
-
     .line 7
+    move-result v0
+
     .line 8
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    .line 9
-    .line 10
-    move-object v4, v5
+.method public get()Ljava/lang/Object;
+    .locals 1
 
-    .line 11
-    check-cast v4, Ljavax/net/ssl/HttpsURLConnection;
+    .line 268435456
+    invoke-virtual {p0}, LX/0Ns;->A01()LX/0Nr;
 
-    .line 12
-    .line 13
-    iget-object v3, p0, LX/0Ns;->A00:LX/0RY;
-
-    .line 14
-    .line 15
-    if-nez v3, :cond_0
-
-    .line 16
-    .line 17
-    const-wide/16 v0, 0x0
-
-    .line 18
-    .line 19
-    new-instance v3, LX/0RY;
-
-    .line 20
-    .line 21
-    invoke-direct {v3, v0, v1}, LX/0RY;-><init>(J)V
-
-    .line 22
-    .line 23
-    .line 24
-    iput-object v3, p0, LX/0Ns;->A00:LX/0RY;
-
-    .line 25
-    .line 26
-    :cond_0
-    :try_start_0
-    const-string v0, "TLS"
-
-    .line 27
-    .line 28
-    invoke-static {v0}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v2
-
-    .line 32
-    iget-object v1, v3, LX/0RY;->A00:[Ljavax/net/ssl/X509TrustManager;
-
-    .line 33
-    .line 34
-    const/4 v0, 0x0
-
-    .line 35
-    invoke-virtual {v2, v0, v1, v0}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
-
-    .line 36
-    .line 37
-    .line 38
-    invoke-virtual {v2}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
-
-    .line 39
-    .line 40
-    .line 41
+    .line 268435457
+    .line 268435458
+    .line 268435459
     move-result-object v0
 
-    .line 42
-    invoke-virtual {v4, v0}, Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
+    .line 268435460
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
-    .line 43
-    .line 44
-    .line 45
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/security/KeyManagementException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result-object v0
 
-    .line 46
-    :catch_0
-    move-exception v2
+    .line 268435464
+    return-object v0
+.end method
 
-    .line 47
-    const-string v1, "lacrima"
+.method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
 
-    .line 48
-    .line 49
-    const-string v0, "Pinning failed"
+    .line 0
+    invoke-virtual {p0}, LX/0Ns;->A01()LX/0Nr;
 
-    .line 50
-    .line 51
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
 
-    .line 52
-    .line 53
-    .line 54
-    invoke-static {}, LX/0P1;->A00()V
+    .line 4
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
-    .line 55
-    .line 56
-    .line 57
-    :cond_1
-    :goto_0
-    const/16 v0, 0x7530
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
 
-    .line 58
-    .line 59
-    invoke-virtual {v5, v0}, Ljava/net/URLConnection;->setConnectTimeout(I)V
+    .line 8
+    return-object v0
+.end method
 
-    .line 60
-    .line 61
-    .line 62
-    invoke-virtual {v5, v0}, Ljava/net/URLConnection;->setReadTimeout(I)V
+.method public final isCancelled()Z
+    .locals 1
 
-    .line 63
-    .line 64
-    .line 65
-    return-object v5
+    .line 0
+    invoke-virtual {p0}, LX/0Ns;->A01()LX/0Nr;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isCancelled()Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/0Ns;->A01()LX/0Nr;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
 .end method

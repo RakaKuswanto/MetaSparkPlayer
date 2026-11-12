@@ -1,21 +1,32 @@
-.class public final LX/1AT;
-.super LX/1Bn;
+.class public abstract LX/1At;
+.super LX/1Aq;
 .source ""
-
-# interfaces
-.implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/0yO;
 
 
 # direct methods
-.method public constructor <init>(I[I)V
+.method public constructor <init>()V
     .locals 0
 
+    .line 268435456
+    invoke-direct {p0}, LX/1Aq;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(LX/1Av;)V
+    .locals 1
+
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    const/4 v0, 0x0
 
     .line 1
+    invoke-direct {p0, v0}, LX/1Aq;-><init>(LX/1Av;)V
+
     .line 2
     .line 3
+    .line 4
     return-void
 .end method

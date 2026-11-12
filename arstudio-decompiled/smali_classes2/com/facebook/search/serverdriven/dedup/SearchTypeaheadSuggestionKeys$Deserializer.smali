@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 6
 
     .line 0
@@ -33,7 +33,7 @@
     .line 3
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 4
     .line 5
@@ -41,7 +41,7 @@
     move-result-object v4
 
     .line 7
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 8
     .line 9
@@ -49,7 +49,7 @@
 
     .line 10
     .line 11
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 12
     .line 13
@@ -113,7 +113,7 @@
 
     .line 43
     .line 44
-    invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0D(LX/27m;LX/2DN;)Lcom/google/common/collect/ImmutableList;
+    invoke-static {p1, p2}, LX/27L;->A06(LX/3oD;LX/6HS;)Lcom/google/common/collect/ImmutableList;
 
     .line 45
     .line 46
@@ -125,119 +125,125 @@
 
     .line 49
     :cond_2
-    const-string v0, "default_key"
+    const-string/jumbo v0, "default_key"
 
     .line 50
     .line 51
+    .line 52
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 52
     .line 53
     .line 54
+    .line 55
     move-result v0
 
-    .line 55
+    .line 56
     if-eqz v0, :cond_4
 
-    .line 56
     .line 57
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 58
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 59
     .line 60
+    .line 61
     move-result-object v1
 
-    .line 61
+    .line 62
     goto :goto_1
 
-    .line 62
+    .line 63
     :goto_0
     const-string/jumbo v0, "tier"
 
-    .line 63
     .line 64
     .line 65
+    .line 66
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 66
     .line 67
     .line 68
+    .line 69
     move-result v0
 
-    .line 69
+    .line 70
     if-eqz v0, :cond_4
 
-    .line 70
     .line 71
-    invoke-virtual {p1}, LX/27m;->A0i()I
-
     .line 72
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 73
     .line 74
+    .line 75
     move-result v3
 
-    .line 75
+    .line 76
     :cond_3
     :goto_1
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
-    .line 76
     .line 77
     .line 78
+    .line 79
     move-result-object v4
 
-    .line 79
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
-
     .line 80
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
+
     .line 81
+    .line 82
     if-ne v4, v0, :cond_0
 
-    .line 82
     .line 83
+    .line 84
     goto :goto_2
 
-    .line 84
-    :cond_4
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
-
     .line 85
+    :cond_4
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
+
     .line 86
     .line 87
+    .line 88
     goto :goto_1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
+    .line 89
     :goto_2
     new-instance v0, Lcom/facebook/search/serverdriven/dedup/SearchTypeaheadSuggestionKeys;
 
-    .line 89
     .line 90
+    .line 91
     invoke-direct {v0, v2, v1, v3}, Lcom/facebook/search/serverdriven/dedup/SearchTypeaheadSuggestionKeys;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/lang/String;I)V
 
-    .line 91
     .line 92
     .line 93
+    .line 94
     return-object v0
 
-    .line 94
+    .line 95
     :catch_0
     move-exception v1
 
-    .line 95
+    .line 96
     const-class v0, Lcom/facebook/search/serverdriven/dedup/SearchTypeaheadSuggestionKeys;
 
-    .line 96
     .line 97
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 98
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 99
     .line 100
-    const/4 v0, 0x0
-
     .line 101
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 102
+    .line 103
+    .line 104
+    move-result-object v0
+
+    .line 105
     throw v0
 .end method

@@ -1,121 +1,61 @@
-.class public final LX/4V7;
+.class public abstract synthetic LX/4V7;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4Vu;
 
-
-# instance fields
-.field public final synthetic A00:LX/4Ux;
+# static fields
+.field public static final synthetic A00:[I
 
 
 # direct methods
-.method public constructor <init>(LX/4Ux;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/4V7;->A00:LX/4Ux;
+    invoke-static {}, Landroid/text/Layout$Alignment;->values()[Landroid/text/Layout$Alignment;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    move-result-object v0
+
     .line 4
+    array-length v0, v0
+
     .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AXJ(Lcom/google/android/material/textfield/TextInputLayout;)V
-    .locals 4
-
-    .line 0
-    iget-object v3, p1, Lcom/google/android/material/textfield/TextInputLayout;->A0G:Landroid/widget/EditText;
-
-    .line 1
-    .line 2
-    invoke-virtual {v3}, Landroid/view/View;->hasFocus()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    new-array v1, v0, [I
 
     .line 6
-    const/4 v2, 0x0
-
     .line 7
-    if-eqz v0, :cond_0
+    sput-object v1, LX/4V7;->A00:[I
 
     .line 8
     .line 9
-    invoke-virtual {v3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    :try_start_0
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
     .line 10
     .line 11
+    invoke-static {v0, v1}, LX/431;->A1A(Ljava/lang/Enum;[I)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 12
-    move-result-object v0
-
     .line 13
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
     .line 14
+    :catch_0
+    :try_start_1
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
+
     .line 15
     .line 16
-    move-result v1
+    invoke-static {v0, v1}, LX/431;->A1B(Ljava/lang/Enum;[I)V
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 17
-    const/4 v0, 0x1
-
     .line 18
-    if-gtz v1, :cond_1
-
     .line 19
-    .line 20
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 21
-    :cond_1
-    invoke-virtual {p1, v0}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconVisible(Z)V
-
-    .line 22
-    .line 23
-    .line 24
-    invoke-virtual {p1, v2}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconCheckable(Z)V
-
-    .line 25
-    .line 26
-    .line 27
-    iget-object v1, p0, LX/4V7;->A00:LX/4Ux;
-
-    .line 28
-    .line 29
-    iget-object v0, v1, LX/4Ux;->A03:Landroid/view/View$OnFocusChangeListener;
-
-    .line 30
-    .line 31
-    invoke-virtual {v3, v0}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
-
-    .line 32
-    .line 33
-    .line 34
-    iget-object v0, v1, LX/4Ux;->A02:Landroid/text/TextWatcher;
-
-    .line 35
-    .line 36
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
-
-    .line 37
-    .line 38
-    .line 39
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    .line 40
-    .line 41
-    .line 42
+    :catch_1
     return-void
 .end method

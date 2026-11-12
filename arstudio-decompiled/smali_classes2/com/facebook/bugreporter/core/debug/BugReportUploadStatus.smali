@@ -65,7 +65,7 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 268435456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -73,6 +73,37 @@
     .line 268435457
     .line 268435458
     .line 268435459
+    const/4 v0, 0x0
+
+    .line 268435460
+    iput-object v0, p0, Lcom/facebook/bugreporter/core/debug/BugReportUploadStatus;->reportId:Ljava/lang/String;
+
+    .line 268435461
+    .line 268435462
+    iput-object v0, p0, Lcom/facebook/bugreporter/core/debug/BugReportUploadStatus;->creationTime:Ljava/lang/String;
+
+    .line 268435463
+    .line 268435464
+    iput-object v0, p0, Lcom/facebook/bugreporter/core/debug/BugReportUploadStatus;->description:Ljava/lang/String;
+
+    .line 268435465
+    .line 268435466
+    iput-object v0, p0, Lcom/facebook/bugreporter/core/debug/BugReportUploadStatus;->networkType:Ljava/lang/String;
+
+    .line 268435467
+    .line 268435468
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 268435469
+    .line 268435470
+    .line 268435471
+    move-result-object v0
+
+    .line 268435472
+    iput-object v0, p0, Lcom/facebook/bugreporter/core/debug/BugReportUploadStatus;->failedUploadAttempts:Ljava/util/List;
+
+    .line 268435473
+    .line 268435474
     return-void
 .end method
 

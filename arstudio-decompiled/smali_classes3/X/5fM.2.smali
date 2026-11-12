@@ -1,330 +1,367 @@
 .class public final LX/5fM;
-.super LX/5dK;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5f8;
+.implements LX/4lw;
 
 
 # instance fields
-.field public A00:I
+.field public A00:Ljava/lang/Object;
 
-.field public A01:I
+.field public A01:Ljava/lang/Object;
 
-.field public A02:Landroid/view/OrientationEventListener;
+.field public A02:Ljava/lang/Object;
 
-.field public A03:LX/5ea;
+.field public A03:Ljava/lang/Object;
 
-.field public final A04:Landroid/content/Context;
+.field public A04:Ljava/lang/Object;
 
-.field public final A05:LX/5a4;
+.field public final A05:I
 
 
 # direct methods
-.method public constructor <init>(LX/5dm;)V
-    .locals 1
+.method public constructor <init>(LX/4gr;LX/4hk;LX/4k1;LX/4gD;Ljava/util/List;I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/5dK;-><init>(LX/5dm;)V
+    iput p6, p0, LX/5fM;->A05:I
 
     .line 1
     .line 2
+    if-eqz p6, :cond_0
+
     .line 3
-    new-instance v0, LX/5a4;
-
     .line 4
-    .line 5
-    invoke-direct {v0}, LX/5a4;-><init>()V
+    iput-object p2, p0, LX/5fM;->A02:Ljava/lang/Object;
 
+    .line 5
     .line 6
+    iput-object p1, p0, LX/5fM;->A04:Ljava/lang/Object;
+
     .line 7
     .line 8
-    iput-object v0, p0, LX/5fM;->A05:LX/5a4;
+    iput-object p4, p0, LX/5fM;->A03:Ljava/lang/Object;
 
     .line 9
     .line 10
-    invoke-interface {p1}, LX/5dm;->getContext()Landroid/content/Context;
+    :goto_0
+    iput-object p3, p0, LX/5fM;->A01:Ljava/lang/Object;
 
     .line 11
     .line 12
-    .line 13
-    move-result-object v0
+    iput-object p5, p0, LX/5fM;->A00:Ljava/lang/Object;
 
+    .line 13
     .line 14
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 15
     .line 16
     .line 17
-    iput-object v0, p0, LX/5fM;->A04:Landroid/content/Context;
-
-    .line 18
-    .line 19
     return-void
-.end method
 
-.method public static final A00(LX/5fM;)I
-    .locals 4
-
-    .line 0
-    const/4 v3, 0x0
-
-    .line 1
-    :try_start_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 2
-    .line 3
-    const/16 v0, 0x11
-
-    .line 4
-    .line 5
-    if-lt v1, v0, :cond_0
-
-    .line 6
-    .line 7
-    sget-object v2, LX/5db;->A00:LX/5gS;
-
-    .line 8
-    .line 9
-    iget-object v1, p0, LX/5dK;->A00:LX/5dm;
-
-    .line 10
-    .line 11
-    invoke-interface {v1, v2}, LX/5dm;->ADR(LX/5gS;)LX/5gT;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 16
-    .line 17
     .line 18
-    check-cast v0, LX/5db;
+    :cond_0
+    iput-object p4, p0, LX/5fM;->A03:Ljava/lang/Object;
 
     .line 19
     .line 20
-    invoke-interface {v0}, LX/5db;->AOr()Z
+    iput-object p1, p0, LX/5fM;->A04:Ljava/lang/Object;
 
     .line 21
     .line 22
-    .line 23
-    move-result v0
+    iput-object p2, p0, LX/5fM;->A02:Ljava/lang/Object;
 
+    .line 23
     .line 24
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final Acl()V
+    .locals 8
+
+    .line 0
+    iget v0, p0, LX/5fM;->A05:I
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_4
+
+    .line 3
+    .line 4
+    iget-object v7, p0, LX/5fM;->A02:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    check-cast v7, LX/4hk;
+
+    .line 7
+    .line 8
+    const/4 v0, -0x1
+
+    .line 9
+    invoke-virtual {v7, v0}, Landroid/view/View;->setId(I)V
+
+    .line 10
+    .line 11
+    .line 12
+    iget-object v0, p0, LX/5fM;->A04:Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    check-cast v0, LX/4gr;
+
+    .line 15
+    .line 16
+    iget-object v0, v0, LX/4gr;->A04:LX/4nK;
+
+    .line 17
+    .line 18
+    const/4 v6, 0x0
+
+    .line 19
     if-eqz v0, :cond_0
+
+    .line 20
+    .line 21
+    invoke-virtual {v0, v6}, LX/4nK;->A01(Landroidx/recyclerview/widget/RecyclerView;)V
+
+    .line 22
+    .line 23
+    .line 24
+    :cond_0
+    iget-object v5, p0, LX/5fM;->A03:Ljava/lang/Object;
 
     .line 25
     .line 26
-    invoke-interface {v1, v2}, LX/5dm;->ADR(LX/5gS;)LX/5gT;
+    check-cast v5, LX/4gD;
 
     .line 27
     .line 28
-    .line 29
-    move-result-object v0
+    iget-object v1, v5, LX/4gD;->A04:Landroidx/recyclerview/widget/RecyclerView;
 
+    .line 29
     .line 30
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    iget-object v0, v5, LX/4gD;->A00:LX/4nX;
 
     .line 31
     .line 32
-    .line 33
-    check-cast v0, LX/5db;
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(LX/4nX;)V
 
+    .line 33
     .line 34
     .line 35
-    invoke-interface {v0}, LX/5db;->AKU()Landroid/view/View;
+    iput-object v6, v5, LX/4gD;->A00:LX/4nX;
 
     .line 36
     .line 37
-    .line 38
-    move-result-object v0
+    iput-object v6, v5, LX/4gD;->A01:LX/4mE;
 
+    .line 38
     .line 39
-    invoke-virtual {v0}, Landroid/view/View;->getDisplay()Landroid/view/Display;
+    iget-object v0, p0, LX/5fM;->A01:Ljava/lang/Object;
 
     .line 40
     .line 41
-    .line 42
-    move-result-object v0
+    check-cast v0, LX/4k1;
 
+    .line 42
     .line 43
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
     .line 44
     .line 45
-    :cond_0
-    iget-object v0, p0, LX/5fM;->A04:Landroid/content/Context;
+    iput-object v6, v0, LX/4k1;->A01:LX/4gD;
 
     .line 46
     .line 47
-    invoke-static {v0}, LX/4BE;->A0Z(Landroid/content/Context;)Landroid/view/WindowManager;
+    iput-object v6, v0, LX/4k1;->A00:LX/4nK;
 
     .line 48
     .line 49
-    .line 50
-    move-result-object v0
+    :cond_1
+    iget-object v4, p0, LX/5fM;->A00:Ljava/lang/Object;
 
+    .line 50
     .line 51
-    if-eqz v0, :cond_3
+    check-cast v4, Ljava/util/List;
 
     .line 52
     .line 53
-    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    if-eqz v4, :cond_3
 
     .line 54
     .line 55
+    const/4 v3, 0x0
+
     .line 56
-    move-result-object v0
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     .line 57
-    if-eqz v0, :cond_3
-
     .line 58
     .line 59
-    :cond_1
-    invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
+    move-result v2
 
     .line 60
+    :goto_0
+    if-ge v3, v2, :cond_3
+
     .line 61
     .line 62
-    move-result v1
+    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 63
-    const/4 v0, 0x1
-
     .line 64
-    if-eq v1, v0, :cond_2
-
     .line 65
+    move-result-object v1
+
     .line 66
-    goto :goto_0
+    iget-object v0, v7, Landroidx/recyclerview/widget/RecyclerView;->A0M:Ljava/util/List;
 
     .line 67
-    :cond_2
-    const/16 v3, 0x5a
-
     .line 68
-    .line 69
-    return v3
+    if-eqz v0, :cond_2
 
+    .line 69
     .line 70
-    :goto_0
-    const/4 v0, 0x2
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     .line 71
-    if-eq v1, v0, :cond_4
-
     .line 72
     .line 73
-    const/4 v0, 0x3
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
 
     .line 74
-    if-ne v1, v0, :cond_3
-
     .line 75
+    goto :goto_0
+
     .line 76
-    const/16 v3, 0x10e
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_3
+    iput-object v6, v7, LX/4hk;->A00:LX/4mH;
 
     .line 77
     .line 78
-    :catch_0
-    :cond_3
-    return v3
+    iput-object v6, v5, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->A0H:LX/4Wq;
 
     .line 79
-    :cond_4
-    const/16 v3, 0xb4
-
     .line 80
+    return-void
+
     .line 81
-    return v3
-.end method
+    :cond_4
+    iget-object v7, p0, LX/5fM;->A03:Ljava/lang/Object;
 
-.method public static final A01(LX/5fM;)V
-    .locals 6
+    .line 82
+    .line 83
+    check-cast v7, LX/4gD;
 
-    .line 0
-    iget-object v0, p0, LX/5fM;->A05:LX/5a4;
+    .line 84
+    .line 85
+    const/4 v6, 0x0
 
-    .line 1
-    .line 2
-    iget-object v5, v0, LX/5a4;->A00:Ljava/util/List;
+    .line 86
+    iput-object v6, v7, LX/4gD;->A01:LX/4mE;
 
-    .line 3
-    .line 4
-    invoke-static {v5}, LX/0PS;->A03(Ljava/lang/Object;)V
+    .line 87
+    .line 88
+    iget-object v5, p0, LX/5fM;->A02:Ljava/lang/Object;
 
-    .line 5
-    .line 6
-    .line 7
-    invoke-interface {v5}, Ljava/util/List;->size()I
+    .line 89
+    .line 90
+    check-cast v5, LX/4hk;
 
-    .line 8
-    .line 9
-    .line 10
-    move-result v4
+    .line 91
+    .line 92
+    iget-object v0, p0, LX/5fM;->A01:Ljava/lang/Object;
 
-    .line 11
+    .line 93
+    .line 94
+    check-cast v0, LX/4k1;
+
+    .line 95
+    .line 96
+    if-eqz v0, :cond_5
+
+    .line 97
+    .line 98
+    iput-object v6, v0, LX/4k1;->A01:LX/4gD;
+
+    .line 99
+    .line 100
+    iput-object v6, v0, LX/4k1;->A00:LX/4nK;
+
+    .line 101
+    .line 102
+    :cond_5
+    iget-object v4, p0, LX/5fM;->A00:Ljava/lang/Object;
+
+    .line 103
+    .line 104
+    check-cast v4, Ljava/util/List;
+
+    .line 105
+    .line 106
+    if-eqz v4, :cond_7
+
+    .line 107
+    .line 108
     const/4 v3, 0x0
 
-    .line 12
-    :goto_0
-    if-ge v3, v4, :cond_0
+    .line 109
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    .line 13
-    .line 14
-    invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 110
+    .line 111
+    .line 112
+    move-result v2
 
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
+    .line 113
+    :goto_1
+    if-ge v3, v2, :cond_7
 
-    .line 18
-    check-cast v0, LX/5g7;
+    .line 114
+    .line 115
+    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 19
-    .line 20
-    iget v2, p0, LX/5fM;->A00:I
+    .line 116
+    .line 117
+    .line 118
+    move-result-object v1
 
-    .line 21
-    .line 22
-    iget-object v1, v0, LX/5g7;->A00:LX/5fN;
+    .line 119
+    iget-object v0, v5, Landroidx/recyclerview/widget/RecyclerView;->A0M:Ljava/util/List;
 
-    .line 23
-    .line 24
-    iget-object v0, v1, LX/5fN;->A0W:LX/5fQ;
+    .line 120
+    .line 121
+    if-eqz v0, :cond_6
 
-    .line 25
-    .line 26
-    invoke-interface {v0, v2}, LX/5fQ;->AaU(I)V
+    .line 122
+    .line 123
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 27
-    .line 28
-    .line 29
-    iget-object v0, v1, LX/5fN;->A0M:LX/5fh;
-
-    .line 30
-    .line 31
-    invoke-static {v1, v0}, LX/5fN;->A03(LX/5fN;LX/5fh;)V
-
-    .line 32
-    .line 33
-    .line 34
+    .line 124
+    .line 125
+    .line 126
+    :cond_6
     add-int/lit8 v3, v3, 0x1
 
-    .line 35
-    .line 36
-    goto :goto_0
+    .line 127
+    .line 128
+    goto :goto_1
 
-    .line 37
-    :cond_0
+    .line 129
+    :cond_7
+    iput-object v6, v5, LX/4hk;->A00:LX/4mH;
+
+    .line 130
+    .line 131
+    iput-object v6, v7, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->A0H:LX/4Wq;
+
+    .line 132
+    .line 133
     return-void
 .end method

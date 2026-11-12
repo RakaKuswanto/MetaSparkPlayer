@@ -1,52 +1,61 @@
-.class public final LX/38M;
+.class public final LX/38m;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "GrootPlayerImpl$SurfaceHolderCallbackImpl$surfaceDestroyed$surfaceDestroyedRunnable$1"
-
 
 # instance fields
-.field public final synthetic A00:Landroid/view/SurfaceHolder;
+.field public final A00:I
+
+.field public final A01:J
+
+.field public final A02:J
+
+.field public final A03:J
+
+.field public final A04:J
+
+.field public final A05:J
+
+.field public final A06:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/SurfaceHolder;)V
+.method public constructor <init>(IJJJJJZ)V
     .locals 0
 
-    iput-object p1, p0, LX/38M;->A00:Landroid/view/SurfaceHolder;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
     .line 0
-    iget-object v0, p0, LX/38M;->A00:Landroid/view/SurfaceHolder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-interface {v0}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
-
     .line 3
+    iput-wide p2, p0, LX/38m;->A03:J
+
     .line 4
     .line 5
-    move-result-object v0
+    iput-wide p4, p0, LX/38m;->A04:J
 
     .line 6
-    invoke-virtual {v0}, Landroid/view/Surface;->release()V
-
     .line 7
+    iput-wide p6, p0, LX/38m;->A05:J
+
     .line 8
     .line 9
+    iput-wide p8, p0, LX/38m;->A01:J
+
+    .line 10
+    .line 11
+    iput-wide p10, p0, LX/38m;->A02:J
+
+    .line 12
+    .line 13
+    iput p1, p0, LX/38m;->A00:I
+
+    .line 14
+    .line 15
+    iput-boolean p12, p0, LX/38m;->A06:Z
+
+    .line 16
+    .line 17
     return-void
 .end method

@@ -28,7 +28,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2, p3}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
@@ -36,7 +36,7 @@
     const/4 v0, 0x6
 
     .line 4
-    invoke-static {p6, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p6, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 5
     .line 6

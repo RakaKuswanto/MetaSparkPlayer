@@ -1,4 +1,4 @@
-.class public final synthetic Lcom/facebook/traffic/ctm/api/IClientTransportMonitor$-CC;
+.class public abstract synthetic Lcom/facebook/traffic/ctm/api/IClientTransportMonitor$-CC;
 .super Ljava/lang/Object;
 .source ""
 

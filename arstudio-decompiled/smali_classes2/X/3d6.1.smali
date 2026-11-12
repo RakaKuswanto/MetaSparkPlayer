@@ -1,77 +1,121 @@
 .class public final LX/3d6;
-.super LX/3dA;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x32fe068939101478L
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "SocketServer$2"
 
 
 # instance fields
-.field public group:LX/3d3;
-
-.field public option:LX/3d0;
+.field public final synthetic A00:LX/3cN;
 
 
 # direct methods
-.method public constructor <init>(LX/3d0;LX/3d3;)V
-    .locals 6
+.method public constructor <init>(LX/3cN;)V
+    .locals 0
 
     .line 0
-    const-string v0, "The option \'"
+    iput-object p1, p0, LX/3d6;->A00:LX/3cN;
 
     .line 1
     .line 2
-    iget-object v1, p1, LX/3d0;->opt:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    if-nez v1, :cond_0
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, LX/3d6;->A00:LX/3cN;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/3cN;->A09:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     .line 5
     .line 6
-    iget-object v1, p1, LX/3d0;->longOpt:Ljava/lang/String;
-
     .line 7
+    move-result-object v3
+
     .line 8
-    :cond_0
-    const-string v2, "\' was specified but an option from this group "
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     .line 9
     .line 10
-    const-string/jumbo v3, "has already been selected: \'"
-
     .line 11
+    move-result v0
+
     .line 12
+    if-eqz v0, :cond_0
+
     .line 13
-    iget-object v4, p2, LX/3d3;->selected:Ljava/lang/String;
-
     .line 14
-    .line 15
-    const-string v5, "\'"
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 15
     .line 16
     .line 17
-    invoke-static/range {v0 .. v5}, LX/00I;->A0P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v2
 
     .line 18
+    check-cast v2, LX/3cE;
+
     .line 19
     .line 20
-    move-result-object v0
+    iget-object v1, v2, LX/3cE;->A06:Ljava/lang/Object;
 
     .line 21
-    invoke-direct {p0, v0}, LX/3dA;-><init>(Ljava/lang/String;)V
-
     .line 22
+    monitor-enter v1
+
     .line 23
+    const/4 v0, 0x0
+
     .line 24
-    iput-object p2, p0, LX/3d6;->group:LX/3d3;
+    :try_start_0
+    iput v0, v2, LX/3cE;->A00:I
 
     .line 25
     .line 26
-    iput-object p1, p0, LX/3d6;->option:LX/3d0;
+    invoke-static {v2}, LX/3cE;->A00(LX/3cE;)V
 
     .line 27
     .line 28
+    .line 29
+    monitor-exit v1
+
+    .line 30
+    goto :goto_0
+
+    .line 31
+    :catchall_0
+    move-exception v0
+
+    .line 32
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 33
+    throw v0
+
+    .line 34
+    :cond_0
     return-void
 .end method

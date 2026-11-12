@@ -13,6 +13,14 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "val$separator"
+        }
+    .end annotation
 
     .line 0
     const-string v0, ","
@@ -35,6 +43,16 @@
 # virtual methods
 .method public bridge synthetic iterator(Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)Ljava/util/Iterator;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "splitter",
+            "toSplit"
+        }
+    .end annotation
 
     .line 0
     new-instance v0, Lcom/google/common/base/Splitter$2$1;

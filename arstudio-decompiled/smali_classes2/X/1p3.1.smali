@@ -2,280 +2,353 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/1w3;
+
+
+# static fields
+.field public static final A03:D
+
+.field public static final A04:Lcom/google/common/collect/ImmutableSet;
+
 
 # instance fields
-.field public final A00:LX/1Nm;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/1Nm;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/1Nm;
-
-.field public final A03:LX/1p4;
-
-.field public final A04:LX/1Nw;
-
-.field public final A05:LX/1Nm;
-
-.field public final A06:LX/1Nm;
-
-.field public final A07:LX/0tD;
-
-.field public final A08:LX/0tD;
-
-.field public final A09:LX/0tD;
+.field public final A02:LX/2Kt;
 
 
 # direct methods
-.method public constructor <init>(LX/1vx;LX/1Nw;)V
-    .locals 3
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x2
+    invoke-static {}, LX/1p8;->A01()Lcom/facebook/graphql/querybuilder/common/ScaleInputPixelRatio;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
+    move-result-object v0
+
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 5
     .line 6
     .line 7
-    iput-object p2, p0, LX/1p3;->A04:LX/1Nw;
+    move-result-object v0
 
     .line 8
-    .line 9
-    new-instance v0, LX/1p4;
+    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
+    .line 9
     .line 10
     .line 11
-    invoke-direct {v0}, LX/1p4;-><init>()V
+    move-result-wide v0
 
     .line 12
+    sput-wide v0, LX/1p3;->A03:D
+
     .line 13
     .line 14
-    iput-object v0, p0, LX/1p3;->A03:LX/1p4;
+    const-string/jumbo v1, "nt_context"
 
     .line 15
     .line 16
-    sget v0, LX/2eq;->AJb:I
+    .line 17
+    new-instance v0, Lcom/google/common/collect/SingletonImmutableSet;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, v1}, Lcom/google/common/collect/SingletonImmutableSet;-><init>(Ljava/lang/Object;)V
+
+    .line 20
+    .line 21
+    .line 22
+    sput-object v0, LX/1p3;->A04:Lcom/google/common/collect/ImmutableSet;
+
+    .line 23
+    .line 24
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    sget v0, LX/2I6;->ALE:I
+
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    check-cast v0, LX/2Kt;
+
+    .line 10
+    .line 11
+    iput-object v0, p0, LX/1p3;->A02:LX/2Kt;
+
+    .line 12
+    .line 13
+    sget v0, LX/2I6;->AKz:I
+
+    .line 14
+    .line 15
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    iput-object v0, p0, LX/1p3;->A01:LX/0RP;
+
+    .line 20
+    .line 21
+    sget-object v0, LX/3Ff;->A00:LX/0li;
+
+    .line 22
+    .line 23
+    iput-object v0, p0, LX/1p3;->A00:LX/0RP;
+
+    .line 24
+    .line 25
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()LX/1ol;
+    .locals 4
+
+    .line 0
+    const/4 v0, 0x6
+
+    .line 1
+    new-instance v3, LX/1ol;
+
+    .line 2
+    .line 3
+    invoke-direct {v3, v0}, LX/1ol;-><init>(I)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
+    .line 10
+    const-string/jumbo v0, "is_flipper_enabled"
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-static {v3, v1, v0}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    const-string v1, ""
 
     .line 17
     .line 18
-    iget-object v1, p2, LX/1Nw;->A00:LX/1zG;
+    const-string/jumbo v0, "styles_id"
 
     .line 19
     .line 20
-    invoke-static {p1, v1, v0}, LX/1ni;->A00(LX/1vx;LX/1zG;I)LX/1Nm;
-
     .line 21
+    invoke-static {v3, v1, v0}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 22
     .line 23
-    move-result-object v0
-
     .line 24
-    iput-object v0, p0, LX/1p3;->A05:LX/1Nm;
+    sget-wide v0, LX/1p3;->A03:D
 
     .line 25
     .line 26
-    sget v0, LX/2eq;->ABV:I
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
     .line 29
+    move-result-object v1
+
     .line 30
+    const-string/jumbo v0, "pixel_ratio"
+
     .line 31
-    move-result-object v0
-
     .line 32
-    iput-object v0, p0, LX/1p3;->A06:LX/1Nm;
-
     .line 33
-    .line 34
-    invoke-static {}, LX/1Nl;->A05()LX/1Nm;
+    invoke-static {v3, v1, v0}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 34
     .line 35
     .line 36
-    .line 37
-    move-result-object v0
+    const-string v1, "0377372ff93946309a716d7149abfc489098517026625ba232e51e8363e8c7c6"
 
+    .line 37
     .line 38
-    iput-object v0, p0, LX/1p3;->A02:LX/1Nm;
+    const-string/jumbo v0, "bloks_version"
 
     .line 39
     .line 40
-    invoke-static {}, LX/1Nl;->A04()LX/1Nm;
-
     .line 41
+    invoke-static {v3, v1, v0}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 42
     .line 43
-    move-result-object v0
-
     .line 44
-    iput-object v0, p0, LX/1p3;->A00:LX/1Nm;
+    iget-object v0, p0, LX/1p3;->A01:LX/0RP;
 
     .line 45
     .line 46
-    sget v0, LX/2eq;->AJa:I
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 47
     .line 48
-    invoke-static {v1, v0}, LX/1PK;->A01(LX/1zG;I)LX/1Nm;
-
     .line 49
+    const/4 v2, 0x1
+
     .line 50
+    invoke-static {}, Lcom/facebook/endtoend/EndToEnd;->isRunningEndToEndTest()Z
+
     .line 51
-    move-result-object v0
-
     .line 52
-    iput-object v0, p0, LX/1p3;->A01:LX/1Nm;
-
     .line 53
+    move-result v0
+
     .line 54
-    iget-object v0, p0, LX/1p3;->A00:LX/1Nm;
+    if-eqz v0, :cond_0
 
     .line 55
     .line 56
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 57
     .line 58
     .line 59
-    move-result-object v0
+    move-result-object v1
 
     .line 60
-    check-cast v0, LX/0J9;
+    const-string/jumbo v0, "is_e2e_test"
 
     .line 61
     .line 62
-    invoke-interface {v0}, LX/0J9;->now()J
-
     .line 63
+    invoke-static {v3, v1, v0}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 64
     .line 65
-    iget-object v0, p0, LX/1p3;->A02:LX/1Nm;
-
     .line 66
-    .line 67
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
+    :cond_0
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 67
     .line 68
     .line 69
+    move-result-object v1
+
     .line 70
-    move-result-object v2
+    const-string/jumbo v0, "using_white_navbar"
 
     .line 71
-    const-wide v0, 0x8103cb000d291aL
-
     .line 72
     .line 73
+    invoke-static {v3, v1, v0}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 74
     .line 75
     .line 76
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    iget-object v0, p0, LX/1p3;->A00:LX/0RP;
 
     .line 77
     .line 78
-    .line 79
-    iget-object v0, p0, LX/1p3;->A02:LX/1Nm;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
+    .line 79
     .line 80
     .line 81
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
+    invoke-static {}, LX/2I6;->A0Y()Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 82
     .line 83
     .line 84
-    move-result-object v2
+    move-result-object v1
 
     .line 85
-    const-wide v0, 0x8103cb00002913L
+    sget-object v0, LX/1DR;->A00:LX/28F;
 
     .line 86
     .line 87
+    invoke-interface {v1, v0, v2}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ABB(LX/28F;Z)Z
+
     .line 88
     .line 89
     .line 90
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    move-result v0
 
     .line 91
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
     .line 92
     .line 93
-    iget-object v0, p0, LX/1p3;->A02:LX/1Nm;
-
     .line 94
+    move-result-object v1
+
     .line 95
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
+    const-string/jumbo v0, "is_push_on"
 
     .line 96
     .line 97
     .line 98
-    move-result-object v2
+    invoke-static {v3, v1, v0}, LX/0X2;->A13(Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 99
-    const-wide v0, 0x8103cb00012914L
-
     .line 100
     .line 101
-    .line 102
-    .line 103
-    .line 104
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    return-object v3
+.end method
 
-    .line 105
-    .line 106
-    .line 107
-    const/16 v0, 0xc
+.method public final AIA()Lcom/google/common/collect/ImmutableSet;
+    .locals 1
 
-    .line 108
-    .line 109
-    invoke-static {p0, v0}, LX/2I2;->A05(Ljava/lang/Object;I)LX/51F;
+    .line 0
+    sget-object v0, LX/1p3;->A04:Lcom/google/common/collect/ImmutableSet;
 
-    .line 110
-    .line 111
-    .line 112
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final AIB(LX/1p4;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/1p3;->A00()LX/1ol;
+
+    .line 1
+    .line 2
+    .line 3
     move-result-object v0
 
-    .line 113
-    iput-object v0, p0, LX/1p3;->A07:LX/0tD;
-
-    .line 114
-    .line 115
-    const/16 v0, 0xd
-
-    .line 116
-    .line 117
-    invoke-static {p0, v0}, LX/2I2;->A05(Ljava/lang/Object;I)LX/51F;
-
-    .line 118
-    .line 119
-    .line 120
-    move-result-object v0
-
-    .line 121
-    iput-object v0, p0, LX/1p3;->A08:LX/0tD;
-
-    .line 122
-    .line 123
-    const/16 v0, 0xe
-
-    .line 124
-    .line 125
-    invoke-static {p0, v0}, LX/2I2;->A05(Ljava/lang/Object;I)LX/51F;
-
-    .line 126
-    .line 127
-    .line 128
-    move-result-object v0
-
-    .line 129
-    iput-object v0, p0, LX/1p3;->A09:LX/0tD;
-
-    .line 130
-    .line 131
-    return-void
+    .line 4
+    return-object v0
 .end method

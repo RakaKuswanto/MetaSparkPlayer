@@ -3,10 +3,87 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">გვერდის %1$s მოწონება</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s მოწონება</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d დღის წინ</item>
+        <item quantity="one">1 დღის წინ</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d დღე</item>
+        <item quantity="one">1 დღე</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d დღე</item>
+        <item quantity="one">1 დღე</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d საათი</item>
+        <item quantity="one">1 საათი</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d წუთი</item>
+        <item quantity="one">1 წუთი</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d თვე</item>
+        <item quantity="one">1 თვე</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d წამი</item>
+        <item quantity="one">1 წამი</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d კვირა</item>
+        <item quantity="one">1 კვირა</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">%1$d დამატებითი დღე</item>
+        <item quantity="one">კიდევ 1 დღე</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">კიდევ %1$d საათი</item>
+        <item quantity="one">1 დამატებითი საათი</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">კიდევ %1$d სუთი</item>
+        <item quantity="one">1 დამატებითი წუთი</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">კიდევ %1$d თვე</item>
+        <item quantity="one">კიდევ 1 თვე</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">კიდევ %1$d წამი</item>
+        <item quantity="one">კიდევ 1 წამი</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">%1$d დამატებითი კვირა</item>
+        <item quantity="one">კიდევ 1 კვირა</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">კიდევ %1$d წელი</item>
+        <item quantity="one">1 დამატებითი წელი</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d წელი</item>
+        <item quantity="one">1 წელი</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d საათის წინ</item>
+        <item quantity="one">1 საათის წინ</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d სთ</item>
+        <item quantity="one">1 სთ</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d სთ</item>
+        <item quantity="one">1 სთ</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d სთ</item>
+        <item quantity="one">1 სთ</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d საათის წინ</item>
         <item quantity="one">1 საათის წინ</item>
     </plurals>
@@ -18,8 +95,68 @@
         <item quantity="other">%1$d წუთში</item>
         <item quantity="one">1 წუთში</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d წთ. წინ</item>
+        <item quantity="one">1 წთ. წინ</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d წუთის წინ</item>
         <item quantity="one">1 წუთის წინ</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d წთ.</item>
+        <item quantity="one">1 წთ.</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d წთ</item>
+        <item quantity="one">1 წთ</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d თვის წინ</item>
+        <item quantity="one">1 თვის წინ</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d წამის წინ</item>
+        <item quantity="one">1 წამი</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d კვირის წინ</item>
+        <item quantity="one">1 კვირის წინ</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">დარჩენილია %1$d საათი</item>
+        <item quantity="one">დარჩენილია 1 სთ</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">დარჩენილია %1$d წუთი</item>
+        <item quantity="one">დარჩენილია 1 წთ</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d წლის წინ</item>
+        <item quantity="one">1 წლის წინ</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">თქვენ მოინახულეთ %1$d დღის წინ</item>
+        <item quantity="one">თქვენ მოინახულეთ 1 დღის წინ</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">ეწვიეთ %1$d საათის წინ</item>
+        <item quantity="one">ეწვიეთ 1 საათის წინ</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">მოინახულეთ %1$d წუთის წინ</item>
+        <item quantity="one">მოინახულეთ 1 წუთის წინ</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">მოინახულეთ %1$d თვის წინ</item>
+        <item quantity="one">მოინახულეთ 1 თვის წინ</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">თქვენ ეწვიეთ %1$d კვირის წინ</item>
+        <item quantity="one">თქვენ ეწვიეთ 1 კვირის წინ</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">თქვენ ეწვიეთ %1$d წლის წინ</item>
+        <item quantity="one">თქვენ ეწვიეთ 1 წლის წინ</item>
     </plurals>
 </resources>

@@ -92,7 +92,7 @@
 
 
 # virtual methods
-.method public abstract configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+.method public abstract configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
 .end method
 
 .method public abstract getSchemeName()Ljava/lang/String;
@@ -138,7 +138,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 1
     .line 2

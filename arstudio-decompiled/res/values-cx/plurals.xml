@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d ka adlaw na ang milabay</item>
+        <item quantity="one">1 ka adlaw na ang milabay</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d ka adlaw</item>
+        <item quantity="one">1 ka adlaw</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d ka adlaw</item>
+        <item quantity="one">1 ka adlaw</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d ka oras</item>
+        <item quantity="one">1 ka Oras</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d ka minuto</item>
+        <item quantity="one">1 ka minuto</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d ka Buwan</item>
+        <item quantity="one">1 ka buwan</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">1 ka segundo</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d ka semana</item>
+        <item quantity="one">1 ka Semana</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">%1$d pa ka adlaw</item>
+        <item quantity="one">1 more day</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d years</item>
+        <item quantity="one">1 ka tuig</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ka oras na ang milabay</item>
+        <item quantity="one">1 ka oras na ang milabay</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d ka oras</item>
+        <item quantity="one">1 ka oras</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d ka oras</item>
+        <item quantity="one">1 ka oras</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d ka oras</item>
+        <item quantity="one">1 ka oras</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d ka minuto na ang milabay</item>
+        <item quantity="one">1 ka minuto na ang milabay</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d ka minuto</item>
+        <item quantity="one">1 ka minuto</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d ka buwan na ang milabay</item>
+        <item quantity="one">1 ka Buwan na ang Milabay</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d ka segundo na ang milabay</item>
+        <item quantity="one">1 ka segundo</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d ka semana na ang milabay</item>
+        <item quantity="one">1 week ago</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d mins left</item>
+        <item quantity="one">1 ka minuto ang nahabilin</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d ka tuig ang milabay</item>
+        <item quantity="one">1 ka tuig na ang milabay</item>
+    </plurals>
+</resources>

@@ -2,206 +2,283 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5xp;
+
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:LX/5wu;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Z
-
-.field public final A04:[B
+.field public final synthetic A00:LX/5wa;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;[B[BIIIZ)V
-    .locals 2
+.method public constructor <init>(LX/5wa;)V
+    .locals 0
 
     .line 0
+    iput-object p1, p0, LX/5wb;->A00:LX/5wa;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AVz(Ljava/lang/Throwable;)V
+    .locals 13
+
+    .line 0
+    invoke-static {p1}, LX/432;->A0r(Ljava/lang/Throwable;)Ljava/lang/String;
 
     .line 1
     .line 2
     .line 3
-    const/4 v1, 0x1
+    move-result-object v2
 
     .line 4
-    invoke-static {p4}, LX/001;->A1M(I)Z
+    iget-object v1, p0, LX/5wb;->A00:LX/5wa;
 
     .line 5
     .line 6
-    .line 7
-    move-result v0
+    iget-object v3, v1, LX/5wa;->A03:LX/60J;
 
+    .line 7
     .line 8
-    if-eqz p3, :cond_0
+    const-string v6, "com.facebook.cameracore.camerasdk.camera.FbCameraPhysicalDeviceLifecycleWrapperV2"
 
     .line 9
     .line 10
-    const/4 v1, 0x0
+    invoke-static {p0}, LX/434;->A0P(Ljava/lang/Object;)J
 
     .line 11
-    :cond_0
-    xor-int/2addr v1, v0
-
     .line 12
-    invoke-static {v1}, LX/5PE;->A05(Z)V
-
     .line 13
+    move-result-wide v11
+
     .line 14
+    const/16 v0, 0x2720
+
     .line 15
-    iput-boolean p7, p0, LX/5wb;->A03:Z
-
     .line 16
+    new-instance v4, LX/5x3;
+
     .line 17
-    iput-object p1, p0, LX/5wb;->A02:Ljava/lang/String;
-
     .line 18
-    .line 19
-    iput p4, p0, LX/5wb;->A00:I
+    invoke-direct {v4, v0, v2, p1}, LX/5x3;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 19
     .line 20
     .line 21
-    iput-object p3, p0, LX/5wb;->A04:[B
+    const/4 v10, 0x0
 
     .line 22
+    const-string v5, "camera_update_failed"
+
     .line 23
-    if-eqz p1, :cond_2
-
     .line 24
-    .line 25
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+    const-string v7, "SWITCH"
 
+    .line 25
     .line 26
+    const-string v8, "medium"
+
     .line 27
     .line 28
-    move-result v0
+    move-object v9, v6
 
     .line 29
-    sparse-switch v0, :sswitch_data_0
+    invoke-interface/range {v3 .. v12}, LX/60J;->AQz(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
 
     .line 30
     .line 31
     .line 32
-    :cond_1
-    :goto_0
-    const-string v1, "Unsupported protection scheme type \'"
+    iget-object v0, v1, LX/5wa;->A02:LX/5xp;
 
     .line 33
     .line 34
-    const-string v0, "\'. Assuming AES-CTR crypto mode."
+    invoke-interface {v0, p1}, LX/5xp;->AVz(Ljava/lang/Throwable;)V
 
     .line 35
     .line 36
-    invoke-static {v1, p1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 37
+    return-void
+.end method
+
+.method public final AXK()V
+    .locals 11
+
+    .line 0
+    iget-object v0, p0, LX/5wb;->A00:LX/5wa;
+
+    .line 1
+    .line 2
+    iget-object v1, v0, LX/5wa;->A03:LX/60J;
+
+    .line 3
+    .line 4
+    const-string v4, "com.facebook.cameracore.camerasdk.camera.FbCameraPhysicalDeviceLifecycleWrapperV2"
+
+    .line 5
+    .line 6
+    invoke-static {p0}, LX/434;->A0P(Ljava/lang/Object;)J
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-wide v9
+
+    .line 10
+    new-instance v2, LX/5x3;
+
+    .line 11
+    .line 12
+    invoke-direct {v2}, LX/5x3;-><init>()V
+
+    .line 13
+    .line 14
+    .line 15
+    const-string v3, "camera_update_failed"
+
+    .line 16
+    .line 17
+    const-string v5, "SWITCH"
+
+    .line 18
+    .line 19
+    const-string v6, "medium"
+
+    .line 20
+    .line 21
+    const/4 v8, 0x0
+
+    .line 22
+    move-object v7, v4
+
+    .line 23
+    invoke-interface/range {v1 .. v10}, LX/60J;->AQz(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+
+    .line 24
+    .line 25
+    .line 26
+    iget-object v0, v0, LX/5wa;->A02:LX/5xp;
+
+    .line 27
+    .line 28
+    invoke-interface {v0}, LX/5xp;->AXK()V
+
+    .line 29
+    .line 30
+    .line 31
+    return-void
+.end method
+
+.method public final Abi()V
+    .locals 12
+
+    .line 0
+    iget-object v3, p0, LX/5wb;->A00:LX/5wa;
+
+    .line 1
+    .line 2
+    iget-object v5, v3, LX/5wa;->A03:LX/60J;
+
+    .line 3
+    .line 4
+    invoke-interface {v5}, LX/60J;->ABe()LX/63o;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v4
+
+    .line 8
+    iget-object v0, v3, LX/5wa;->A01:Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;
+
+    .line 9
+    .line 10
+    iget-object v0, v0, Lcom/facebook/cameracore/camerasdk/camera/FbCameraPhysicalDeviceLifecycleWrapperV2;->A00:LX/5x7;
+
+    .line 11
+    .line 12
+    iget-object v0, v0, LX/5x7;->A02:LX/5Yi;
+
+    .line 13
+    .line 14
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v2
+
+    .line 18
+    const/4 v0, 0x1
+
+    .line 19
+    if-eq v2, v0, :cond_0
+
+    .line 20
+    .line 21
+    const/4 v1, 0x0
+
+    .line 22
+    const/4 v0, 0x0
+
+    .line 23
+    if-eq v2, v1, :cond_0
+
+    .line 24
+    .line 25
+    const/4 v0, -0x1
+
+    .line 26
+    :cond_0
+    invoke-interface {v4, v0}, LX/63o;->Ajq(I)V
+
+    .line 27
+    .line 28
+    .line 29
+    const-string v7, "com.facebook.cameracore.camerasdk.camera.FbCameraPhysicalDeviceLifecycleWrapperV2"
+
+    .line 30
+    .line 31
+    invoke-static {p0}, LX/434;->A0P(Ljava/lang/Object;)J
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-wide v10
+
+    .line 35
+    const-string v6, "camera_update_finished"
+
+    .line 36
+    .line 37
+    const-string v8, "SWITCH"
+
     .line 38
     .line 39
-    move-result-object v1
+    const/4 v9, 0x0
 
     .line 40
-    const-string v0, "TrackEncryptionBox"
+    invoke-interface/range {v5 .. v11}, LX/60J;->AR0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
 
     .line 41
     .line 42
-    invoke-static {v0, v1}, LX/52Q;->A05(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 43
+    iget-object v0, v3, LX/5wa;->A02:LX/5xp;
+
     .line 44
     .line 45
-    :cond_2
-    const/4 v1, 0x1
+    invoke-interface {v0}, LX/5xp;->Abi()V
 
     .line 46
-    :goto_1
-    new-instance v0, LX/5wu;
-
     .line 47
     .line 48
-    invoke-direct {v0, p2, v1, p5, p6}, LX/5wu;-><init>([BIII)V
-
-    .line 49
-    .line 50
-    .line 51
-    iput-object v0, p0, LX/5wb;->A01:LX/5wu;
-
-    .line 52
-    .line 53
     return-void
-
-    .line 54
-    :sswitch_0
-    const-string v0, "cens"
-
-    .line 55
-    .line 56
-    goto :goto_2
-
-    .line 57
-    :sswitch_1
-    const-string v0, "cenc"
-
-    .line 58
-    .line 59
-    :goto_2
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 60
-    .line 61
-    .line 62
-    move-result v0
-
-    .line 63
-    if-nez v0, :cond_2
-
-    .line 64
-    .line 65
-    goto :goto_0
-
-    .line 66
-    :sswitch_2
-    const-string v0, "cbcs"
-
-    .line 67
-    .line 68
-    goto :goto_3
-
-    .line 69
-    :sswitch_3
-    const-string v0, "cbc1"
-
-    .line 70
-    .line 71
-    :goto_3
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 72
-    .line 73
-    .line 74
-    move-result v0
-
-    .line 75
-    if-eqz v0, :cond_1
-
-    .line 76
-    .line 77
-    const/4 v1, 0x2
-
-    .line 78
-    goto :goto_1
-
-    .line 79
-    nop
-
-    .line 80
-    :sswitch_data_0
-    .sparse-switch
-        0x2e7ccd -> :sswitch_3
-        0x2e7d0f -> :sswitch_2
-        0x2e8997 -> :sswitch_1
-        0x2e89a7 -> :sswitch_0
-    .end sparse-switch
 .end method

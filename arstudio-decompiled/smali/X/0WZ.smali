@@ -1,78 +1,146 @@
 .class public final LX/0WZ;
-.super Ljava/lang/Object;
+.super LX/00f;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:J
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Ljava/lang/String;
-
-.field public final A04:Ljava/util/Map;
-
-.field public final A05:Ljava/util/UUID;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/00f;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const-wide/16 v0, 0x0
+    return-void
+.end method
 
+
+# virtual methods
+.method public final bridge synthetic A03(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
+    .locals 5
+
+    .line 0
+    check-cast p2, Landroidx/activity/result/IntentSenderRequest;
+
+    .line 1
+    .line 2
+    const-string v0, "androidx.activity.result.contract.action.INTENT_SENDER_REQUEST"
+
+    .line 3
     .line 4
+    new-instance v4, Landroid/content/Intent;
+
     .line 5
-    iput-wide v0, p0, LX/0WZ;->A01:J
-
     .line 6
+    invoke-direct {v4, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
     .line 7
-    const/4 v0, 0x0
-
     .line 8
-    iput v0, p0, LX/0WZ;->A00:I
-
     .line 9
+    iget-object v2, p2, Landroidx/activity/result/IntentSenderRequest;->A02:Landroid/content/Intent;
+
     .line 10
-    iput-object p1, p0, LX/0WZ;->A02:Ljava/lang/String;
-
     .line 11
+    if-eqz v2, :cond_0
+
     .line 12
-    iput-object p2, p0, LX/0WZ;->A03:Ljava/lang/String;
-
     .line 13
-    .line 14
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    const-string v1, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
 
+    .line 14
     .line 15
+    invoke-virtual {v2, v1}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
+
     .line 16
     .line 17
-    move-result-object v0
-
     .line 18
-    iput-object v0, p0, LX/0WZ;->A05:Ljava/util/UUID;
+    move-result-object v0
 
     .line 19
-    .line 20
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    if-eqz v0, :cond_0
 
+    .line 20
     .line 21
+    invoke-virtual {v4, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
     .line 22
     .line 23
-    move-result-object v0
-
     .line 24
-    iput-object v0, p0, LX/0WZ;->A04:Ljava/util/Map;
+    invoke-virtual {v2, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
 
     .line 25
     .line 26
-    return-void
+    .line 27
+    const/4 v1, 0x0
+
+    .line 28
+    const-string v0, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
+
+    .line 29
+    .line 30
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v0
+
+    .line 34
+    if-eqz v0, :cond_0
+
+    .line 35
+    .line 36
+    iget-object v3, p2, Landroidx/activity/result/IntentSenderRequest;->A03:Landroid/content/IntentSender;
+
+    .line 37
+    .line 38
+    const/4 v2, 0x0
+
+    .line 39
+    iget v1, p2, Landroidx/activity/result/IntentSenderRequest;->A01:I
+
+    .line 40
+    .line 41
+    iget v0, p2, Landroidx/activity/result/IntentSenderRequest;->A00:I
+
+    .line 42
+    .line 43
+    new-instance p2, Landroidx/activity/result/IntentSenderRequest;
+
+    .line 44
+    .line 45
+    invoke-direct {p2, v2, v3, v0, v1}, Landroidx/activity/result/IntentSenderRequest;-><init>(Landroid/content/Intent;Landroid/content/IntentSender;II)V
+
+    .line 46
+    .line 47
+    .line 48
+    :cond_0
+    const-string v0, "androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST"
+
+    .line 49
+    .line 50
+    invoke-virtual {v4, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    .line 51
+    .line 52
+    .line 53
+    return-object v4
+.end method
+
+.method public final bridge synthetic A05(Landroid/content/Intent;I)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    new-instance v0, Landroidx/activity/result/ActivityResult;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p2, p1}, Landroidx/activity/result/ActivityResult;-><init>(ILandroid/content/Intent;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
 .end method

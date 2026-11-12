@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract run(Lcom/facebook/msys/mci/SqliteHolder;)V
+.method public abstract run(Lcom/facebook/msys/mci/sqliteholder/SqliteHolder;)V
 .end method

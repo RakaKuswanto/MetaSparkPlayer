@@ -1,98 +1,58 @@
-.class public final LX/5p6;
+.class public abstract LX/5P6;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:I
-
-.field public A04:J
-
-.field public A05:J
-
-.field public A06:J
-
-.field public A07:J
-
-.field public A08:Ljava/lang/String;
-
-.field public final A09:Ljava/util/List;
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public static A00(LX/5Q4;LX/5P7;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, LX/5Q4;->A00()Landroid/media/metrics/LogSessionId;
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    move-result-object p0
 
     .line 4
+    sget-object v0, Landroid/media/metrics/LogSessionId;->LOG_SESSION_ID_NONE:Landroid/media/metrics/LogSessionId;
+
     .line 5
     .line 6
-    move-result-object v0
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 7
-    iput-object v0, p0, LX/5p6;->A09:Ljava/util/List;
-
     .line 8
     .line 9
-    const-wide/16 v2, 0x0
+    move-result v0
 
     .line 10
+    if-nez v0, :cond_0
+
     .line 11
-    iput-wide v2, p0, LX/5p6;->A04:J
-
     .line 12
+    iget-object p1, p1, LX/5P7;->A01:Landroid/media/MediaFormat;
+
     .line 13
-    iput-wide v2, p0, LX/5p6;->A07:J
-
     .line 14
+    invoke-virtual {p0}, Landroid/media/metrics/LogSessionId;->getStringId()Ljava/lang/String;
+
     .line 15
-    const/4 v1, 0x0
-
     .line 16
-    iput v1, p0, LX/5p6;->A02:I
-
     .line 17
+    move-result-object p0
+
     .line 18
-    iput-wide v2, p0, LX/5p6;->A05:J
+    const-string v0, "log-session-id"
 
     .line 19
     .line 20
-    iput-wide v2, p0, LX/5p6;->A06:J
+    invoke-virtual {p1, v0, p0}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 21
     .line 22
-    iput v1, p0, LX/5p6;->A01:I
-
     .line 23
-    .line 24
-    const-string v0, ""
-
-    .line 25
-    .line 26
-    iput-object v0, p0, LX/5p6;->A08:Ljava/lang/String;
-
-    .line 27
-    .line 28
-    iput v1, p0, LX/5p6;->A00:I
-
-    .line 29
-    .line 30
-    iput v1, p0, LX/5p6;->A03:I
-
-    .line 31
-    .line 32
+    :cond_0
     return-void
 .end method

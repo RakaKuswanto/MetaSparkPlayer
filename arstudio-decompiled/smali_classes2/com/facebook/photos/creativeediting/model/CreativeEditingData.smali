@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/170;
 
 
 # annotations
@@ -18,7 +17,7 @@
 
 
 # static fields
-.field public static volatile A0P:Ljava/lang/String;
+.field public static volatile A0S:Ljava/lang/String;
 
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -34,11 +33,11 @@
 
 .field public final A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
 
-.field public final A05:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+.field public final A05:Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
 
-.field public final A06:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+.field public final A06:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
 
-.field public final A07:Lcom/google/common/collect/ImmutableList;
+.field public final A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
 .field public final A08:Lcom/google/common/collect/ImmutableList;
 
@@ -54,9 +53,9 @@
 
 .field public final A0E:Lcom/google/common/collect/ImmutableList;
 
-.field public final A0F:Ljava/lang/String;
+.field public final A0F:Lcom/google/common/collect/ImmutableList;
 
-.field public final A0G:Ljava/lang/String;
+.field public final A0G:Lcom/google/common/collect/ImmutableList;
 
 .field public final A0H:Ljava/lang/String;
 
@@ -64,15 +63,21 @@
 
 .field public final A0J:Ljava/lang/String;
 
-.field public final A0K:Z
+.field public final A0K:Ljava/lang/String;
 
-.field public final A0L:Z
+.field public final A0L:Ljava/lang/String;
 
-.field public final A0M:Z
+.field public final A0M:Ljava/lang/String;
 
-.field public final A0N:Ljava/lang/String;
+.field public final A0N:Z
 
-.field public final A0O:Ljava/util/Set;
+.field public final A0O:Z
+
+.field public final A0P:Z
+
+.field public final A0Q:Ljava/lang/String;
+
+.field public final A0R:Ljava/util/Set;
 
 
 # direct methods
@@ -80,11 +85,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5f
+    const/16 v0, 0x46
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -108,7 +113,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -121,477 +126,483 @@
     .line 8
     .line 9
     .line 10
-    move-result v1
+    move-result v2
 
     .line 11
-    const/4 v5, 0x0
+    new-array v1, v2, [Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
 
     .line 12
-    const/4 v0, 0x0
-
     .line 13
-    if-nez v1, :cond_3
+    const/4 v5, 0x0
 
     .line 14
+    const/4 v0, 0x0
+
     .line 15
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/google/common/collect/ImmutableList;
+    :goto_0
+    if-ge v0, v2, :cond_0
 
     .line 16
     .line 17
-    :goto_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    invoke-static {p1, v4, v1, v0}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
     .line 18
     .line 19
     .line 20
-    move-result v1
+    move-result v0
 
     .line 21
-    iput v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
+    goto :goto_0
 
     .line 22
-    .line 23
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    :cond_0
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
+    .line 23
     .line 24
     .line 25
+    move-result-object v0
+
     .line 26
-    move-result v1
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
 
     .line 27
-    if-nez v1, :cond_2
-
     .line 28
-    .line 29
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Ljava/lang/String;
-
-    .line 30
-    .line 31
-    :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 32
-    .line 33
-    .line 34
+    .line 29
+    .line 30
+    .line 31
     move-result v1
 
+    .line 32
+    const/4 v0, 0x0
+
+    .line 33
+    if-nez v1, :cond_7
+
+    .line 34
     .line 35
-    if-nez v1, :cond_1
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
 
     .line 36
     .line 37
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    :goto_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 38
     .line 39
-    :goto_2
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
     .line 40
-    .line 41
-    .line 42
     move-result v1
 
+    .line 41
+    if-nez v1, :cond_6
+
+    .line 42
     .line 43
-    if-nez v1, :cond_0
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
 
     .line 44
     .line 45
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Ljava/lang/String;
+    :goto_2
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 46
     .line 47
-    :goto_3
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
     .line 48
-    .line 49
-    .line 50
-    move-result v6
+    move-result v1
 
+    .line 49
+    if-nez v1, :cond_4
+
+    .line 50
     .line 51
-    new-array v3, v6, [Lcom/facebook/photos/creativeediting/model/DoodleParams;
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
 
     .line 52
     .line 53
-    const/4 v2, 0x0
+    :goto_3
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     .line 54
-    :goto_4
-    if-ge v2, v6, :cond_5
-
     .line 55
     .line 56
-    sget-object v1, Lcom/facebook/photos/creativeediting/model/DoodleParams;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result v1
 
     .line 57
-    .line 58
-    invoke-static {p1, v1, v3, v2}, LX/0Yf;->A03(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
+    iput v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
 
+    .line 58
     .line 59
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
     .line 60
     .line 61
-    move-result v2
-
     .line 62
-    goto :goto_4
+    move-result v1
 
     .line 63
-    :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    if-nez v1, :cond_3
 
     .line 64
     .line 65
-    .line 66
-    move-result-object v1
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
 
+    .line 66
     .line 67
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Ljava/lang/String;
+    :goto_4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 68
     .line 69
-    goto :goto_3
-
     .line 70
-    :cond_1
-    sget-object v1, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result v1
 
     .line 71
-    .line 72
-    invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    if-nez v1, :cond_2
 
+    .line 72
     .line 73
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+
     .line 74
     .line 75
-    move-result-object v1
+    :goto_5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 76
-    check-cast v1, Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
     .line 77
     .line 78
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    move-result v1
 
     .line 79
-    .line 80
-    goto :goto_2
+    if-nez v1, :cond_1
 
+    .line 80
     .line 81
-    :cond_2
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
 
     .line 82
     .line 83
-    .line 84
-    move-result-object v1
-
-    .line 85
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Ljava/lang/String;
-
-    .line 86
-    .line 87
-    goto :goto_1
-
-    .line 88
-    :cond_3
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    .line 89
-    .line 90
-    .line 91
-    move-result v3
-
-    .line 92
-    new-array v2, v3, [Ljava/lang/String;
-
-    .line 93
-    .line 94
-    const/4 v1, 0x0
-
-    .line 95
-    :goto_5
-    if-ge v1, v3, :cond_4
-
-    .line 96
-    .line 97
-    invoke-static {p1, v2, v1}, LX/0Yf;->A05(Landroid/os/Parcel;[Ljava/lang/Object;I)I
-
-    .line 98
-    .line 99
-    .line 100
-    move-result v1
-
-    .line 101
-    goto :goto_5
-
-    .line 102
-    :cond_4
-    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    .line 103
-    .line 104
-    .line 105
-    move-result-object v1
-
-    .line 106
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/google/common/collect/ImmutableList;
-
-    .line 107
-    .line 108
-    goto :goto_0
-
-    .line 109
-    :cond_5
-    invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    .line 110
-    .line 111
-    .line 112
-    move-result-object v1
-
-    .line 113
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
-
-    .line 114
-    .line 115
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    .line 116
-    .line 117
-    .line 118
-    move-result v1
-
-    .line 119
-    if-nez v1, :cond_7
-
-    .line 120
-    .line 121
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
-
-    .line 122
-    .line 123
     :goto_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
+    .line 84
+    .line 85
+    .line 86
+    move-result v6
+
+    .line 87
+    new-array v3, v6, [Lcom/facebook/photos/creativeediting/model/DoodleParams;
+
+    .line 88
+    .line 89
+    const/4 v2, 0x0
+
+    .line 90
+    :goto_7
+    if-ge v2, v6, :cond_8
+
+    .line 91
+    .line 92
+    sget-object v1, Lcom/facebook/photos/creativeediting/model/DoodleParams;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 93
+    .line 94
+    invoke-static {p1, v1, v3, v2}, LX/0X2;->A04(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
+
+    .line 95
+    .line 96
+    .line 97
+    move-result v2
+
+    .line 98
+    goto :goto_7
+
+    .line 99
+    :cond_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 100
+    .line 101
+    .line 102
+    move-result-object v1
+
+    .line 103
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
+
+    .line 104
+    .line 105
+    goto :goto_6
+
+    .line 106
+    :cond_2
+    invoke-static {p1}, LX/0X4;->A0Q(Landroid/os/Parcel;)Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+
+    .line 107
+    .line 108
+    .line 109
+    move-result-object v1
+
+    .line 110
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+
+    .line 111
+    .line 112
+    goto :goto_5
+
+    .line 113
+    :cond_3
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object v1
+
+    .line 117
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
+
+    .line 118
+    .line 119
+    goto :goto_4
+
+    .line 120
+    :cond_4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 121
+    .line 122
+    .line 123
+    move-result v3
+
     .line 124
+    new-array v2, v3, [Ljava/lang/String;
+
     .line 125
     .line 126
-    move-result v1
+    const/4 v1, 0x0
 
     .line 127
-    if-nez v1, :cond_6
+    :goto_8
+    if-ge v1, v3, :cond_5
 
     .line 128
     .line 129
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Ljava/lang/String;
+    invoke-static {p1, v2, v1}, LX/0X2;->A06(Landroid/os/Parcel;[Ljava/lang/Object;I)I
 
     .line 130
     .line 131
-    :goto_7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
     .line 132
+    move-result v1
+
     .line 133
+    goto :goto_8
+
     .line 134
-    move-result v6
+    :cond_5
+    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     .line 135
-    new-array v3, v6, [Lcom/facebook/photos/creativeediting/model/StickerParams;
-
     .line 136
     .line 137
-    const/4 v2, 0x0
+    move-result-object v1
 
     .line 138
-    :goto_8
-    if-ge v2, v6, :cond_8
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
 
     .line 139
     .line 140
-    sget-object v1, Lcom/facebook/photos/creativeediting/model/StickerParams;->CREATOR:Landroid/os/Parcelable$Creator;
+    goto :goto_3
 
     .line 141
-    .line 142
-    invoke-static {p1, v1, v3, v2}, LX/0Yf;->A03(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
-
-    .line 143
-    .line 144
-    .line 145
-    move-result v2
-
-    .line 146
-    goto :goto_8
-
-    .line 147
     :cond_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 148
-    .line 149
-    .line 150
+    .line 142
+    .line 143
+    .line 144
     move-result-object v1
 
+    .line 145
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
+
+    .line 146
+    .line 147
+    goto :goto_2
+
+    .line 148
+    :cond_7
+    invoke-virtual {p1, v4}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    .line 149
+    .line 150
     .line 151
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Ljava/lang/String;
+    move-result-object v1
 
     .line 152
-    .line 153
-    goto :goto_7
+    check-cast v1, Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
 
+    .line 153
     .line 154
-    :cond_7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
 
     .line 155
     .line 156
+    goto :goto_1
+
     .line 157
-    move-result-object v1
-
-    .line 158
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
-
-    .line 159
-    .line 160
-    goto :goto_6
-
-    .line 161
     :cond_8
     invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 162
-    .line 163
-    .line 164
+    .line 158
+    .line 159
+    .line 160
     move-result-object v1
 
-    .line 165
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
+    .line 161
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
 
+    .line 162
+    .line 163
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 164
+    .line 165
     .line 166
+    move-result v1
+
     .line 167
-    invoke-static {p1}, LX/1KF;->A02(Landroid/os/Parcel;)Ljava/util/ArrayList;
+    if-nez v1, :cond_a
 
     .line 168
     .line 169
-    .line 170
-    move-result-object v1
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Ljava/lang/String;
 
+    .line 170
     .line 171
-    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+    :goto_9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 172
     .line 173
     .line 174
-    move-result-object v1
+    move-result v1
 
     .line 175
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
+    if-nez v1, :cond_9
 
     .line 176
     .line 177
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0Q:Ljava/lang/String;
 
     .line 178
     .line 179
+    :goto_a
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
     .line 180
-    move-result v2
-
     .line 181
-    const/4 v1, 0x1
-
     .line 182
-    invoke-static {v2, v1}, LX/001;->A1O(II)Z
+    move-result v6
 
     .line 183
+    new-array v3, v6, [Lcom/facebook/photos/creativeediting/model/StickerParams;
+
     .line 184
     .line 185
-    move-result v1
+    const/4 v2, 0x0
 
     .line 186
-    iput-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Z
+    :goto_b
+    if-ge v2, v6, :cond_b
 
     .line 187
     .line 188
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    sget-object v1, Lcom/facebook/photos/creativeediting/model/StickerParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
     .line 189
     .line 190
+    invoke-static {p1, v1, v3, v2}, LX/0X2;->A04(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
+
     .line 191
-    move-result v1
-
     .line 192
-    iput-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Z
-
     .line 193
+    move-result v2
+
     .line 194
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    goto :goto_b
 
     .line 195
+    :cond_9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 196
     .line 197
-    move-result v1
-
     .line 198
-    if-nez v1, :cond_d
+    move-result-object v1
 
     .line 199
-    .line 200
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0Q:Ljava/lang/String;
 
+    .line 200
     .line 201
+    goto :goto_a
+
     .line 202
-    :goto_9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    :cond_a
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 203
     .line 204
     .line 205
-    move-result v1
+    move-result-object v1
 
     .line 206
-    if-nez v1, :cond_c
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Ljava/lang/String;
 
     .line 207
     .line 208
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
+    goto :goto_9
 
     .line 209
-    .line 210
-    :goto_a
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    :cond_b
+    invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
+    .line 210
     .line 211
     .line 212
+    move-result-object v1
+
     .line 213
-    move-result v1
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
 
     .line 214
-    if-nez v1, :cond_b
-
     .line 215
-    .line 216
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
+    invoke-static {p1}, LX/1cw;->A01(Landroid/os/Parcel;)Lcom/google/common/collect/ImmutableList;
 
+    .line 216
     .line 217
     .line 218
-    :goto_b
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result-object v1
 
     .line 219
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
+
     .line 220
     .line 221
-    move-result v1
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 222
-    if-nez v1, :cond_9
-
     .line 223
     .line 224
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
+    move-result v2
 
     .line 225
+    const/4 v1, 0x1
+
     .line 226
-    :goto_c
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {v2, v1}, LX/001;->A1N(II)Z
 
     .line 227
     .line 228
@@ -599,11 +610,11 @@
     move-result v1
 
     .line 230
-    iput v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
+    iput-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Z
 
     .line 231
     .line 232
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 233
     .line 234
@@ -611,11 +622,11 @@
     move-result v1
 
     .line 236
-    iput v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
+    iput-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Z
 
     .line 237
     .line 238
-    invoke-static {p1}, LX/0Yh;->A1Z(Landroid/os/Parcel;)Z
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 239
     .line 240
@@ -623,474 +634,583 @@
     move-result v1
 
     .line 242
-    iput-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Z
+    if-nez v1, :cond_10
 
     .line 243
     .line 244
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
 
     .line 245
     .line 246
+    :goto_c
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
     .line 247
-    move-result v6
-
     .line 248
-    new-array v3, v6, [Lcom/facebook/photos/creativeediting/model/StickerParams;
-
     .line 249
+    move-result v1
+
     .line 250
-    const/4 v2, 0x0
+    if-nez v1, :cond_f
 
     .line 251
-    :goto_d
-    if-ge v2, v6, :cond_e
-
     .line 252
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Ljava/lang/String;
+
     .line 253
-    sget-object v1, Lcom/facebook/photos/creativeediting/model/StickerParams;->CREATOR:Landroid/os/Parcelable$Creator;
-
     .line 254
-    .line 255
-    invoke-static {p1, v1, v3, v2}, LX/0Yf;->A03(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
+    :goto_d
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
+    .line 255
     .line 256
     .line 257
+    move-result v1
+
     .line 258
-    move-result v2
+    if-nez v1, :cond_e
 
     .line 259
-    goto :goto_d
-
     .line 260
-    :cond_9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Ljava/lang/String;
 
     .line 261
     .line 262
-    .line 263
-    move-result v3
-
-    .line 264
-    new-array v2, v3, [Ljava/lang/String;
-
-    .line 265
-    .line 266
-    const/4 v1, 0x0
-
-    .line 267
     :goto_e
-    if-ge v1, v3, :cond_a
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 268
-    .line 269
-    invoke-static {p1, v2, v1}, LX/0Yf;->A05(Landroid/os/Parcel;[Ljava/lang/Object;I)I
-
-    .line 270
-    .line 271
-    .line 272
+    .line 263
+    .line 264
+    .line 265
     move-result v1
 
+    .line 266
+    if-nez v1, :cond_c
+
+    .line 267
+    .line 268
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
+
+    .line 269
+    .line 270
+    :goto_f
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 271
+    .line 272
     .line 273
-    goto :goto_e
+    move-result v1
 
     .line 274
-    :cond_a
-    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    iput v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
 
     .line 275
     .line 276
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
     .line 277
-    move-result-object v1
-
     .line 278
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
-
     .line 279
+    move-result v1
+
     .line 280
-    goto :goto_c
+    iput v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
 
     .line 281
-    :cond_b
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
     .line 282
+    invoke-static {p1}, LX/0X2;->A1R(Landroid/os/Parcel;)Z
+
     .line 283
     .line 284
-    move-result-object v1
-
     .line 285
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
+    move-result v1
 
     .line 286
-    .line 287
-    goto :goto_b
+    iput-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Z
 
+    .line 287
     .line 288
-    :cond_c
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 289
     .line 290
     .line 291
-    move-result-object v1
+    move-result v6
 
     .line 292
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
+    new-array v3, v6, [Lcom/facebook/photos/creativeediting/model/StickerParams;
 
     .line 293
     .line 294
-    goto :goto_a
+    const/4 v2, 0x0
 
     .line 295
-    :cond_d
-    sget-object v1, Lcom/facebook/inspiration/magicmod/model/MagicModImage;->CREATOR:Landroid/os/Parcelable$Creator;
+    :goto_10
+    if-ge v2, v6, :cond_11
 
     .line 296
     .line 297
-    invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    sget-object v1, Lcom/facebook/photos/creativeediting/model/StickerParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
     .line 298
     .line 299
+    invoke-static {p1, v1, v3, v2}, LX/0X2;->A04(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
+
     .line 300
-    move-result-object v1
-
     .line 301
-    check-cast v1, Lcom/facebook/inspiration/magicmod/model/MagicModImage;
-
     .line 302
+    move-result v2
+
     .line 303
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+    goto :goto_10
 
     .line 304
-    .line 305
-    goto :goto_9
-
-    .line 306
-    :cond_e
-    invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    .line 307
-    .line 308
-    .line 309
-    move-result-object v1
-
-    .line 310
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
-
-    .line 311
-    .line 312
+    :cond_c
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 313
-    .line 314
-    .line 315
+    .line 305
+    .line 306
+    .line 307
     move-result v3
 
-    .line 316
-    new-array v2, v3, [Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
+    .line 308
+    new-array v2, v3, [Ljava/lang/String;
 
-    .line 317
-    .line 318
+    .line 309
+    .line 310
     const/4 v1, 0x0
 
-    .line 319
-    :goto_f
-    if-ge v1, v3, :cond_f
+    .line 311
+    :goto_11
+    if-ge v1, v3, :cond_d
 
-    .line 320
-    .line 321
-    invoke-static {p1, v4, v2, v1}, LX/0Yf;->A04(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
+    .line 312
+    .line 313
+    invoke-static {p1, v2, v1}, LX/0X2;->A06(Landroid/os/Parcel;[Ljava/lang/Object;I)I
 
-    .line 322
-    .line 323
-    .line 324
+    .line 314
+    .line 315
+    .line 316
     move-result v1
 
-    .line 325
-    goto :goto_f
+    .line 317
+    goto :goto_11
 
-    .line 326
-    :cond_f
+    .line 318
+    :cond_d
     invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 327
-    .line 328
-    .line 329
+    .line 319
+    .line 320
+    .line 321
     move-result-object v1
 
-    .line 330
+    .line 322
     iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
 
+    .line 323
+    .line 324
+    goto :goto_f
+
+    .line 325
+    :cond_e
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 326
+    .line 327
+    .line 328
+    move-result-object v1
+
+    .line 329
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Ljava/lang/String;
+
+    .line 330
     .line 331
+    goto :goto_e
+
     .line 332
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    :cond_f
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 333
     .line 334
     .line 335
-    move-result v1
+    move-result-object v1
 
     .line 336
-    if-nez v1, :cond_10
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Ljava/lang/String;
 
     .line 337
     .line 338
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+    goto :goto_d
 
     .line 339
-    .line 340
-    :goto_10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    :cond_10
+    sget-object v1, Lcom/facebook/inspiration/magicmod/model/MagicModImage;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 340
     .line 341
+    invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
     .line 342
     .line 343
-    move-result v4
-
     .line 344
-    new-array v3, v4, [Lcom/facebook/photos/creativeediting/model/TextParams;
+    move-result-object v1
 
     .line 345
-    .line 346
-    const/4 v2, 0x0
+    check-cast v1, Lcom/facebook/inspiration/magicmod/model/MagicModImage;
 
+    .line 346
     .line 347
-    :goto_11
-    if-ge v2, v4, :cond_11
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
 
     .line 348
     .line 349
-    sget-object v1, Lcom/facebook/photos/creativeediting/model/TextParams;->CREATOR:Landroid/os/Parcelable$Creator;
+    goto :goto_c
 
     .line 350
-    .line 351
-    invoke-static {p1, v1, v3, v2}, LX/0Yf;->A03(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
+    :cond_11
+    invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
+    .line 351
     .line 352
     .line 353
+    move-result-object v1
+
     .line 354
-    move-result v2
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0E:Lcom/google/common/collect/ImmutableList;
 
     .line 355
-    goto :goto_11
-
     .line 356
-    :cond_10
-    invoke-virtual {p1, v4}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 357
     .line 358
     .line 359
-    move-result-object v1
+    move-result v3
 
     .line 360
-    check-cast v1, Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+    new-array v2, v3, [Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
 
     .line 361
     .line 362
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+    const/4 v1, 0x0
 
     .line 363
-    .line 364
-    goto :goto_10
+    :goto_12
+    if-ge v1, v3, :cond_12
 
+    .line 364
     .line 365
-    :cond_11
-    invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    invoke-static {p1, v4, v2, v1}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
     .line 366
     .line 367
     .line 368
-    move-result-object v1
-
-    .line 369
-    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0E:Lcom/google/common/collect/ImmutableList;
-
-    .line 370
-    .line 371
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    .line 372
-    .line 373
-    .line 374
     move-result v1
 
-    .line 375
-    if-eqz v1, :cond_12
+    .line 369
+    goto :goto_12
 
-    .line 376
-    .line 377
-    sget-object v0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    .line 378
-    .line 379
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    .line 380
-    .line 381
-    .line 382
-    move-result-object v0
-
-    .line 383
-    check-cast v0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
-
-    .line 384
-    .line 385
+    .line 370
     :cond_12
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+    invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 386
-    .line 387
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 388
-    .line 389
-    .line 390
+    .line 371
+    .line 372
+    .line 373
     move-result-object v1
 
-    .line 391
+    .line 374
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Lcom/google/common/collect/ImmutableList;
+
+    .line 375
+    .line 376
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 377
+    .line 378
+    .line 379
+    move-result v1
+
+    .line 380
+    if-nez v1, :cond_13
+
+    .line 381
+    .line 382
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+
+    .line 383
+    .line 384
+    :goto_13
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 385
+    .line 386
+    .line 387
+    move-result v4
+
+    .line 388
+    new-array v3, v4, [Lcom/facebook/photos/creativeediting/model/TextParams;
+
+    .line 389
+    .line 390
+    const/4 v2, 0x0
+
+    .line 391
+    :goto_14
+    if-ge v2, v4, :cond_14
 
     .line 392
     .line 393
-    .line 394
-    move-result v0
+    sget-object v1, Lcom/facebook/photos/creativeediting/model/TextParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 394
     .line 395
-    :goto_12
-    if-ge v5, v0, :cond_13
+    invoke-static {p1, v1, v3, v2}, LX/0X2;->A04(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
 
     .line 396
     .line 397
-    invoke-static {p1, v1, v5}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
-
     .line 398
+    move-result v2
+
     .line 399
+    goto :goto_14
+
     .line 400
-    move-result v5
+    :cond_13
+    invoke-virtual {p1, v4}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     .line 401
-    goto :goto_12
-
     .line 402
-    :cond_13
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
     .line 403
-    .line 404
-    .line 405
-    move-result-object v0
+    move-result-object v1
 
+    .line 404
+    check-cast v1, Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+
+    .line 405
     .line 406
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Ljava/util/Set;
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
 
     .line 407
     .line 408
+    goto :goto_13
+
+    .line 409
+    :cond_14
+    invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 410
+    .line 411
+    .line 412
+    move-result-object v1
+
+    .line 413
+    iput-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Lcom/google/common/collect/ImmutableList;
+
+    .line 414
+    .line 415
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 416
+    .line 417
+    .line 418
+    move-result v1
+
+    .line 419
+    if-eqz v1, :cond_15
+
+    .line 420
+    .line 421
+    sget-object v0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 422
+    .line 423
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    .line 424
+    .line 425
+    .line 426
+    move-result-object v0
+
+    .line 427
+    check-cast v0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+
+    .line 428
+    .line 429
+    :cond_15
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+
+    .line 430
+    .line 431
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 432
+    .line 433
+    .line 434
+    move-result-object v1
+
+    .line 435
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 436
+    .line 437
+    .line 438
+    move-result v0
+
+    .line 439
+    :goto_15
+    if-ge v5, v0, :cond_16
+
+    .line 440
+    .line 441
+    invoke-static {p1, v1}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
+
+    .line 442
+    .line 443
+    .line 444
+    add-int/lit8 v5, v5, 0x1
+
+    .line 445
+    .line 446
+    goto :goto_15
+
+    .line 447
+    :cond_16
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    .line 448
+    .line 449
+    .line 450
+    move-result-object v0
+
+    .line 451
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0R:Ljava/util/Set;
+
+    .line 452
+    .line 453
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/inspiration/magicmod/model/MagicModImage;Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;FFIZZZ)V
+.method public constructor <init>(Lcom/facebook/inspiration/magicmod/model/MagicModImage;Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;Lcom/facebook/photos/creativeediting/model/AIBackdropParams;Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;FFIZZZ)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/google/common/collect/ImmutableList;
+    const-string/jumbo v0, "addYoursTemplateOverlayItems"
 
-    move/from16 v0, p20
-
-    iput v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
-
-    iput-object p13, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
-    iput-object p14, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Ljava/lang/String;
-
-    const-string v0, "doodleParamsList"
-
-    invoke-static {v0, p6}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p6, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p6, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
+
+    iput-object p3, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
 
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
 
-    move-object/from16 v0, p16
-
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Ljava/lang/String;
-
-    const-string/jumbo v0, "frameOverlayItems"
-
-    invoke-static {v0, p7}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
     iput-object p7, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
-
-    const-string/jumbo v0, "framePacks"
-
-    invoke-static {v0, p8}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
-    iput-object p8, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
 
     move/from16 v0, p23
 
-    iput-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Z
+    iput v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
 
-    move/from16 v0, p24
-
-    iput-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Z
-
-    iput-object p1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
-
-    move-object/from16 v0, p17
+    move-object/from16 v0, p16
 
     iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
 
-    move-object/from16 v0, p18
+    iput-object p5, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+
+    move-object/from16 v0, p17
 
     iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
 
+    const-string/jumbo v0, "doodleParamsList"
+
+    invoke-static {p8, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p8, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
+
+    move-object/from16 v0, p18
+
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Ljava/lang/String;
+
+    move-object/from16 v0, p19
+
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0Q:Ljava/lang/String;
+
+    const-string/jumbo v0, "frameOverlayItems"
+
+    invoke-static {p9, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     iput-object p9, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
 
-    move/from16 v0, p22
+    const-string/jumbo v0, "framePacks"
 
-    iput v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
-
-    move/from16 v0, p21
-
-    iput v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
-
-    move/from16 v0, p25
-
-    iput-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Z
-
-    const-string/jumbo v0, "stickerParamsList"
-
-    invoke-static {v0, p10}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p10, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p10, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
 
-    const-string/jumbo v0, "storiesPhotoOverlayItems"
+    move/from16 v0, p26
 
-    invoke-static {v0, p11}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    iput-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Z
+
+    move/from16 v0, p27
+
+    iput-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Z
+
+    iput-object p1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+
+    move-object/from16 v0, p20
+
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Ljava/lang/String;
+
+    move-object/from16 v0, p21
+
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Ljava/lang/String;
 
     iput-object p11, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
 
-    iput-object p3, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+    move/from16 v0, p25
 
-    const-string/jumbo v0, "textParamsList"
+    iput v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
 
-    invoke-static {v0, p12}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    move/from16 v0, p24
+
+    iput v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
+
+    move/from16 v0, p28
+
+    iput-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Z
+
+    const-string/jumbo v0, "stickerParamsList"
+
+    invoke-static {p12, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p12, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0E:Lcom/google/common/collect/ImmutableList;
 
+    const-string/jumbo v0, "storiesPhotoOverlayItems"
+
+    invoke-static {p13, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p13, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Lcom/google/common/collect/ImmutableList;
+
+    iput-object p4, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+
+    const-string/jumbo v0, "textParamsList"
+
+    invoke-static {p14, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p14, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Lcom/google/common/collect/ImmutableList;
+
     iput-object p2, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
 
-    invoke-static/range {p19 .. p19}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    invoke-static/range {p22 .. p22}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Ljava/util/Set;
+    iput-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0R:Ljava/util/Set;
 
     return-void
 .end method
@@ -1101,7 +1221,7 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Ljava/util/Set;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0R:Ljava/util/Set;
 
     .line 1
     .line 2
@@ -1122,7 +1242,7 @@
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0Q:Ljava/lang/String;
 
     .line 12
     .line 13
@@ -1130,7 +1250,7 @@
 
     .line 14
     :cond_0
-    sget-object v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Ljava/lang/String;
+    sget-object v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0S:Ljava/lang/String;
 
     .line 15
     .line 16
@@ -1142,7 +1262,7 @@
 
     .line 19
     :try_start_0
-    sget-object v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Ljava/lang/String;
+    sget-object v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0S:Ljava/lang/String;
 
     .line 20
     .line 21
@@ -1154,7 +1274,7 @@
 
     .line 24
     .line 25
-    sput-object v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Ljava/lang/String;
+    sput-object v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0S:Ljava/lang/String;
 
     .line 26
     .line 27
@@ -1179,7 +1299,7 @@
     .line 32
     :cond_2
     :goto_0
-    sget-object v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Ljava/lang/String;
+    sget-object v0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0S:Ljava/lang/String;
 
     .line 33
     .line 34
@@ -1220,15 +1340,15 @@
 
     .line 9
     .line 10
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/google/common/collect/ImmutableList;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
 
     .line 11
     .line 12
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -1240,91 +1360,91 @@
 
     .line 19
     .line 20
-    iget v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
 
     .line 21
     .line 22
-    iget v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
 
     .line 23
     .line 24
-    cmpl-float v0, v1, v0
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
-    if-nez v0, :cond_0
-
     .line 27
+    move-result v0
+
     .line 28
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
     .line 29
     .line 30
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
 
     .line 31
     .line 32
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
 
     .line 33
     .line 34
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 35
+    .line 36
+    .line 37
     move-result v0
 
-    .line 36
-    if-eqz v0, :cond_0
-
-    .line 37
     .line 38
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    if-eqz v0, :cond_0
 
     .line 39
     .line 40
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
 
     .line 41
     .line 42
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
 
     .line 43
     .line 44
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     .line 45
+    .line 46
+    .line 47
     move-result v0
 
-    .line 46
-    if-eqz v0, :cond_0
-
-    .line 47
     .line 48
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
     .line 49
     .line 50
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Ljava/lang/String;
+    iget v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
 
     .line 51
     .line 52
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
 
     .line 53
     .line 54
-    .line 55
-    move-result v0
+    cmpl-float v0, v1, v0
 
+    .line 55
     .line 56
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
     .line 57
     .line 58
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
 
     .line 59
     .line 60
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
 
     .line 61
     .line 62
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 63
     .line 64
@@ -1336,15 +1456,15 @@
 
     .line 67
     .line 68
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
     .line 69
     .line 70
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
     .line 71
     .line 72
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 73
     .line 74
@@ -1356,167 +1476,167 @@
 
     .line 77
     .line 78
-    invoke-virtual {p0}, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00()Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
 
     .line 79
     .line 80
-    .line 81
-    move-result-object v1
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
 
+    .line 81
     .line 82
-    invoke-virtual {p1}, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00()Ljava/lang/String;
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 83
     .line 84
     .line 85
-    move-result-object v0
+    move-result v0
 
     .line 86
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
     .line 87
     .line 88
-    .line 89
-    move-result v0
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
 
+    .line 89
     .line 90
-    if-eqz v0, :cond_0
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
 
     .line 91
     .line 92
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 93
     .line 94
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
-
     .line 95
+    move-result v0
+
     .line 96
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
     .line 97
     .line 98
-    .line 99
-    move-result v0
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Ljava/lang/String;
 
+    .line 99
     .line 100
-    if-eqz v0, :cond_0
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Ljava/lang/String;
 
     .line 101
     .line 102
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 103
     .line 104
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
-
     .line 105
+    move-result v0
+
     .line 106
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
     .line 107
     .line 108
+    invoke-virtual {p0}, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00()Ljava/lang/String;
+
     .line 109
-    move-result v0
-
     .line 110
-    if-eqz v0, :cond_0
-
     .line 111
+    move-result-object v1
+
     .line 112
-    iget-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Z
+    invoke-virtual {p1}, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00()Ljava/lang/String;
 
     .line 113
     .line 114
-    iget-boolean v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Z
-
     .line 115
+    move-result-object v0
+
     .line 116
-    if-ne v1, v0, :cond_0
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 117
     .line 118
-    iget-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Z
-
     .line 119
+    move-result v0
+
     .line 120
-    iget-boolean v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Z
+    if-eqz v0, :cond_0
 
     .line 121
     .line 122
-    if-ne v1, v0, :cond_0
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
 
     .line 123
     .line 124
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
 
     .line 125
     .line 126
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 127
     .line 128
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     .line 129
-    .line 130
-    .line 131
     move-result v0
 
-    .line 132
+    .line 130
     if-eqz v0, :cond_0
+
+    .line 131
+    .line 132
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
 
     .line 133
     .line 134
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
 
     .line 135
     .line 136
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 137
     .line 138
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     .line 139
-    .line 140
-    .line 141
     move-result v0
 
-    .line 142
+    .line 140
     if-eqz v0, :cond_0
+
+    .line 141
+    .line 142
+    iget-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Z
 
     .line 143
     .line 144
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
+    iget-boolean v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Z
 
     .line 145
     .line 146
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
+    if-ne v1, v0, :cond_0
 
     .line 147
     .line 148
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Z
 
     .line 149
     .line 150
-    .line 151
-    move-result v0
+    iget-boolean v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Z
 
+    .line 151
     .line 152
-    if-eqz v0, :cond_0
+    if-ne v1, v0, :cond_0
 
     .line 153
     .line 154
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
 
     .line 155
     .line 156
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
 
     .line 157
     .line 158
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 159
     .line 160
@@ -1528,55 +1648,55 @@
 
     .line 163
     .line 164
-    iget v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Ljava/lang/String;
 
     .line 165
     .line 166
-    iget v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Ljava/lang/String;
 
     .line 167
     .line 168
-    if-ne v1, v0, :cond_0
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 169
     .line 170
-    iget v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
-
     .line 171
+    move-result v0
+
     .line 172
-    iget v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
+    if-eqz v0, :cond_0
 
     .line 173
     .line 174
-    cmpl-float v0, v1, v0
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Ljava/lang/String;
 
     .line 175
     .line 176
-    if-nez v0, :cond_0
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Ljava/lang/String;
 
     .line 177
     .line 178
-    iget-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 179
     .line 180
-    iget-boolean v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Z
-
     .line 181
+    move-result v0
+
     .line 182
-    if-ne v1, v0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 183
     .line 184
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
 
     .line 185
     .line 186
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
 
     .line 187
     .line 188
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 189
     .line 190
@@ -1588,43 +1708,43 @@
 
     .line 193
     .line 194
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
+    iget v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
 
     .line 195
     .line 196
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
+    iget v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
 
     .line 197
     .line 198
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne v1, v0, :cond_0
 
     .line 199
     .line 200
-    .line 201
-    move-result v0
+    iget v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
 
+    .line 201
     .line 202
-    if-eqz v0, :cond_0
+    iget v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
 
     .line 203
     .line 204
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+    cmpl-float v0, v1, v0
 
     .line 205
     .line 206
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+    if-nez v0, :cond_0
 
     .line 207
     .line 208
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-boolean v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Z
 
     .line 209
     .line 210
-    .line 211
-    move-result v0
+    iget-boolean v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Z
 
+    .line 211
     .line 212
-    if-eqz v0, :cond_0
+    if-ne v1, v0, :cond_0
 
     .line 213
     .line 214
@@ -1636,7 +1756,7 @@
 
     .line 217
     .line 218
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 219
     .line 220
@@ -1648,15 +1768,15 @@
 
     .line 223
     .line 224
-    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Lcom/google/common/collect/ImmutableList;
 
     .line 225
     .line 226
-    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Lcom/google/common/collect/ImmutableList;
 
     .line 227
     .line 228
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 229
     .line 230
@@ -1664,14 +1784,74 @@
     move-result v0
 
     .line 232
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 233
     .line 234
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+
+    .line 235
+    .line 236
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+
+    .line 237
+    .line 238
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 239
+    .line 240
+    .line 241
+    move-result v0
+
+    .line 242
+    if-eqz v0, :cond_0
+
+    .line 243
+    .line 244
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Lcom/google/common/collect/ImmutableList;
+
+    .line 245
+    .line 246
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Lcom/google/common/collect/ImmutableList;
+
+    .line 247
+    .line 248
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 249
+    .line 250
+    .line 251
+    move-result v0
+
+    .line 252
+    if-eqz v0, :cond_0
+
+    .line 253
+    .line 254
+    iget-object v1, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+
+    .line 255
+    .line 256
+    iget-object v0, p1, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+
+    .line 257
+    .line 258
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 259
+    .line 260
+    .line 261
+    move-result v0
+
+    .line 262
+    if-nez v0, :cond_1
+
+    .line 263
+    .line 264
     :cond_0
     return v2
 
-    .line 235
+    .line 265
     :cond_1
     return v3
 .end method
@@ -1680,11 +1860,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -1692,76 +1872,76 @@
     move-result v1
 
     .line 6
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
     .line 11
-    move-result v1
-
     .line 12
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Ljava/lang/String;
-
     .line 13
+    move-result v0
+
     .line 14
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 15
-    .line 16
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
 
+    .line 16
     .line 17
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 18
     .line 19
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
-    add-int/2addr v1, v0
-
     .line 21
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
-
     .line 22
+    move-result v0
+
     .line 23
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 24
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
+
     .line 25
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 26
-    .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    add-int/2addr v1, v0
-
-    .line 30
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Ljava/lang/String;
-
-    .line 31
-    .line 32
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 33
-    .line 34
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    .line 27
+    .line 28
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
-    .line 35
-    .line 36
-    .line 37
+    .line 29
+    .line 30
+    .line 31
     move-result v0
 
-    .line 38
+    .line 32
     add-int/2addr v1, v0
 
+    .line 33
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
+
+    .line 34
+    .line 35
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v1
+
     .line 39
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
 
     .line 40
     .line 41
@@ -1769,7 +1949,7 @@
 
     .line 42
     .line 43
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 44
     .line 45
@@ -1780,7 +1960,7 @@
     add-int/2addr v1, v0
 
     .line 48
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
     .line 49
     .line 50
@@ -1788,7 +1968,7 @@
 
     .line 51
     .line 52
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 53
     .line 54
@@ -1799,260 +1979,262 @@
     add-int/2addr v1, v0
 
     .line 57
-    invoke-virtual {p0}, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00()Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
 
     .line 58
     .line 59
-    .line 60
-    move-result-object v0
-
-    .line 61
     mul-int/lit8 v1, v1, 0x1f
+
+    .line 60
+    .line 61
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 62
     .line 63
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 64
-    .line 65
-    .line 66
     move-result v0
 
-    .line 67
+    .line 65
     add-int/2addr v1, v0
 
+    .line 66
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
+
+    .line 67
     .line 68
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 69
     .line 70
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 71
     .line 72
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 73
-    .line 74
-    .line 75
     move-result v0
 
-    .line 76
+    .line 74
     add-int/2addr v1, v0
 
+    .line 75
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Ljava/lang/String;
+
+    .line 76
     .line 77
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 78
     .line 79
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 80
     .line 81
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 82
-    .line 83
-    .line 84
     move-result v0
 
-    .line 85
+    .line 83
     add-int/2addr v1, v0
 
-    .line 86
-    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Z
+    .line 84
+    invoke-virtual {p0}, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00()Ljava/lang/String;
 
+    .line 85
+    .line 86
     .line 87
+    move-result-object v0
+
     .line 88
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 89
     .line 90
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
     .line 91
-    move-result v1
-
     .line 92
-    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Z
-
     .line 93
+    move-result v0
+
     .line 94
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    add-int/2addr v1, v0
 
     .line 95
-    .line 96
-    .line 97
-    move-result v1
-
-    .line 98
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
-
-    .line 99
-    .line 100
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 101
-    .line 102
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 103
-    .line 104
-    .line 105
-    move-result v0
-
-    .line 106
-    add-int/2addr v1, v0
-
-    .line 107
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
-
-    .line 108
-    .line 109
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 110
-    .line 111
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 112
-    .line 113
-    .line 114
-    move-result v0
-
-    .line 115
-    add-int/2addr v1, v0
-
-    .line 116
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
-
-    .line 117
-    .line 118
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 119
-    .line 120
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 121
-    .line 122
-    .line 123
-    move-result v0
-
-    .line 124
-    add-int/2addr v1, v0
-
-    .line 125
     iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
 
-    .line 126
-    .line 127
+    .line 96
+    .line 97
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 128
-    .line 129
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    .line 98
+    .line 99
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
-    .line 130
-    .line 131
-    .line 132
+    .line 100
+    .line 101
+    .line 102
     move-result v0
 
-    .line 133
+    .line 103
     add-int/2addr v1, v0
 
-    .line 134
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
+    .line 104
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
 
-    .line 135
-    .line 136
+    .line 105
+    .line 106
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 137
-    .line 138
+    .line 107
+    .line 108
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 109
+    .line 110
+    .line 111
+    move-result v0
+
+    .line 112
     add-int/2addr v1, v0
 
+    .line 113
+    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Z
+
+    .line 114
+    .line 115
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 116
+    .line 117
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 118
+    .line 119
+    .line 120
+    move-result v0
+
+    .line 121
+    add-int/2addr v1, v0
+
+    .line 122
+    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Z
+
+    .line 123
+    .line 124
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 125
+    .line 126
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 127
+    .line 128
+    .line 129
+    move-result v0
+
+    .line 130
+    add-int/2addr v1, v0
+
+    .line 131
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+
+    .line 132
+    .line 133
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 134
+    .line 135
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 136
+    .line 137
+    .line 138
+    move-result v0
+
     .line 139
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
+    add-int/2addr v1, v0
 
     .line 140
-    .line 141
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Ljava/lang/String;
 
+    .line 141
     .line 142
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 143
     .line 144
-    move-result v1
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 145
-    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Z
-
     .line 146
     .line 147
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    move-result v0
 
     .line 148
-    .line 149
-    .line 150
-    move-result v1
+    add-int/2addr v1, v0
 
+    .line 149
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Ljava/lang/String;
+
+    .line 150
     .line 151
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 152
     .line 153
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 154
     .line 155
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 156
-    .line 157
-    .line 158
     move-result v0
 
-    .line 159
+    .line 157
     add-int/2addr v1, v0
 
-    .line 160
+    .line 158
     iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
+
+    .line 159
+    .line 160
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 161
     .line 162
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 163
     .line 164
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 165
-    .line 166
-    .line 167
     move-result v0
 
-    .line 168
+    .line 166
     add-int/2addr v1, v0
 
+    .line 167
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
+
+    .line 168
     .line 169
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 170
     .line 171
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 172
-    .line 173
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 174
-    .line 175
-    .line 176
-    move-result v0
-
-    .line 177
     add-int/2addr v1, v0
 
+    .line 172
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
+
+    .line 173
+    .line 174
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 175
+    .line 176
+    .line 177
+    move-result v1
+
     .line 178
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0E:Lcom/google/common/collect/ImmutableList;
+    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Z
 
     .line 179
     .line 180
@@ -2060,7 +2242,7 @@
 
     .line 181
     .line 182
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 183
     .line 184
@@ -2071,7 +2253,7 @@
     add-int/2addr v1, v0
 
     .line 187
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0E:Lcom/google/common/collect/ImmutableList;
 
     .line 188
     .line 189
@@ -2079,7 +2261,7 @@
 
     .line 190
     .line 191
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 192
     .line 193
@@ -2090,6 +2272,82 @@
     add-int/2addr v1, v0
 
     .line 196
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Lcom/google/common/collect/ImmutableList;
+
+    .line 197
+    .line 198
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 199
+    .line 200
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 201
+    .line 202
+    .line 203
+    move-result v0
+
+    .line 204
+    add-int/2addr v1, v0
+
+    .line 205
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+
+    .line 206
+    .line 207
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 208
+    .line 209
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 210
+    .line 211
+    .line 212
+    move-result v0
+
+    .line 213
+    add-int/2addr v1, v0
+
+    .line 214
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Lcom/google/common/collect/ImmutableList;
+
+    .line 215
+    .line 216
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 217
+    .line 218
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 219
+    .line 220
+    .line 221
+    move-result v0
+
+    .line 222
+    add-int/2addr v1, v0
+
+    .line 223
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+
+    .line 224
+    .line 225
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 226
+    .line 227
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 228
+    .line 229
+    .line 230
+    move-result v0
+
+    .line 231
+    add-int/2addr v1, v0
+
+    .line 232
     return v1
 .end method
 
@@ -2097,194 +2355,194 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
 
     .line 1
     .line 2
-    const/4 v3, 0x0
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 3
-    const/4 v2, 0x1
-
     .line 4
-    if-nez v0, :cond_1
-
     .line 5
+    move-result-object v1
+
     .line 6
-    invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 7
     .line 8
     .line 9
-    :cond_0
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
+    move-result v0
 
     .line 10
-    .line 11
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+    if-eqz v0, :cond_0
 
+    .line 11
     .line 12
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 13
     .line 14
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Ljava/lang/String;
-
     .line 15
+    move-result-object v0
+
     .line 16
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    check-cast v0, Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
 
     .line 17
     .line 18
-    .line 19
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 19
     .line 20
     .line 21
-    invoke-static {p1, v0, p2}, LX/0Yf;->A0v(Landroid/os/Parcel;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;I)V
+    goto :goto_0
 
     .line 22
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/AIBackdropParams;
+
     .line 23
     .line 24
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Ljava/lang/String;
+    const/4 v2, 0x0
 
     .line 25
+    const/4 v3, 0x1
+
     .line 26
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0, p2}, LX/0X1;->A0Y(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 27
     .line 28
     .line 29
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A08:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
 
     .line 30
     .line 31
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 32
     .line 33
     .line 34
-    move-result-object v1
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
 
     .line 35
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 36
+    if-nez v0, :cond_2
+
     .line 37
     .line 38
-    move-result v0
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 39
-    if-eqz v0, :cond_2
-
     .line 40
     .line 41
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_1
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A00:F
 
     .line 42
     .line 43
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
     .line 44
-    move-result-object v0
-
     .line 45
-    check-cast v0, Lcom/facebook/photos/creativeediting/model/DoodleParams;
-
     .line 46
-    .line 47
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/photos/creativeediting/model/DoodleParams;->writeToParcel(Landroid/os/Parcel;I)V
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
 
+    .line 47
     .line 48
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
+
     .line 49
     .line 50
-    goto :goto_0
-
     .line 51
-    :cond_1
-    invoke-static {p1, v0}, LX/0Yc;->A01(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A07:Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;
 
     .line 52
     .line 53
+    invoke-static {p1, v0, p2}, LX/0X1;->A0d(Landroid/os/Parcel;Lcom/facebook/photos/creativeediting/model/rect/PersistableRect;I)V
+
     .line 54
-    move-result-object v1
-
     .line 55
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 56
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
+
     .line 57
     .line 58
-    move-result v0
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 59
-    if-eqz v0, :cond_0
-
     .line 60
     .line 61
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
 
     .line 62
     .line 63
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
+
     .line 64
-    goto :goto_1
-
     .line 65
-    :cond_2
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0H:Ljava/lang/String;
-
     .line 66
+    move-result-object v1
+
     .line 67
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 68
     .line 69
     .line 70
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Ljava/lang/String;
+    move-result v0
 
     .line 71
-    .line 72
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    if-eqz v0, :cond_3
 
+    .line 72
     .line 73
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 74
     .line 75
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A09:Lcom/google/common/collect/ImmutableList;
-
     .line 76
+    move-result-object v0
+
     .line 77
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    check-cast v0, Lcom/facebook/photos/creativeediting/model/DoodleParams;
 
     .line 78
     .line 79
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/photos/creativeediting/model/DoodleParams;->writeToParcel(Landroid/os/Parcel;I)V
+
     .line 80
+    .line 81
+    .line 82
+    goto :goto_1
+
+    .line 83
+    :cond_2
+    invoke-static {p1, v0}, LX/0X1;->A0E(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
+
+    .line 84
+    .line 85
+    .line 86
     move-result-object v1
 
-    .line 81
+    .line 87
     :goto_2
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 82
-    .line 83
-    .line 84
-    move-result v0
-
-    .line 85
-    if-eqz v0, :cond_3
-
-    .line 86
-    .line 87
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 88
     .line 89
     .line 90
-    move-result-object v0
+    move-result v0
 
     .line 91
-    check-cast v0, Lcom/facebook/photos/creativeediting/model/StickerParams;
+    if-eqz v0, :cond_1
 
     .line 92
     .line 93
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/photos/creativeediting/model/StickerParams;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 94
     .line 95
@@ -2293,358 +2551,403 @@
 
     .line 97
     :cond_3
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0A:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Ljava/lang/String;
 
     .line 98
     .line 99
-    invoke-static {p1, v0}, LX/1KF;->A05(Landroid/os/Parcel;Ljava/util/List;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 100
     .line 101
     .line 102
-    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0K:Z
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0Q:Ljava/lang/String;
 
     .line 103
     .line 104
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 105
     .line 106
     .line 107
-    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Z
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
 
     .line 108
     .line 109
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 110
     .line 111
     .line 112
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+    move-result-object v1
 
     .line 113
-    .line 114
-    if-nez v0, :cond_6
+    :goto_3
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 114
     .line 115
     .line 116
-    invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v0
 
     .line 117
+    if-eqz v0, :cond_4
+
     .line 118
     .line 119
-    :goto_3
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0I:Ljava/lang/String;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 120
     .line 121
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
-
     .line 122
+    move-result-object v0
+
     .line 123
+    check-cast v0, Lcom/facebook/photos/creativeediting/model/StickerParams;
+
     .line 124
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0J:Ljava/lang/String;
-
     .line 125
-    .line 126
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/photos/creativeediting/model/StickerParams;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 126
     .line 127
     .line 128
+    goto :goto_3
+
     .line 129
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0B:Lcom/google/common/collect/ImmutableList;
+    :cond_4
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
 
     .line 130
     .line 131
-    if-nez v0, :cond_5
+    invoke-static {p1, v0}, LX/1cw;->A06(Landroid/os/Parcel;Ljava/util/List;)V
 
     .line 132
     .line 133
-    invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
-
     .line 134
+    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0N:Z
+
     .line 135
     .line 136
-    :cond_4
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 137
     .line 138
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
     .line 139
+    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Z
+
     .line 140
     .line 141
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 142
     .line 143
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
     .line 144
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A03:Lcom/facebook/inspiration/magicmod/model/MagicModImage;
+
     .line 145
     .line 146
-    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Z
+    if-nez v0, :cond_7
 
     .line 147
     .line 148
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 149
     .line 150
     .line 151
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0C:Lcom/google/common/collect/ImmutableList;
+    :goto_4
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0L:Ljava/lang/String;
 
     .line 152
     .line 153
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 154
     .line 155
     .line 156
-    move-result-object v1
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0M:Ljava/lang/String;
 
     .line 157
-    :goto_4
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 158
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
+
     .line 159
     .line 160
-    move-result v0
-
     .line 161
-    if-eqz v0, :cond_7
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
 
     .line 162
     .line 163
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-nez v0, :cond_6
 
     .line 164
     .line 165
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
+
     .line 166
-    move-result-object v0
-
     .line 167
-    check-cast v0, Lcom/facebook/photos/creativeediting/model/StickerParams;
-
     .line 168
-    .line 169
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/photos/creativeediting/model/StickerParams;->writeToParcel(Landroid/os/Parcel;I)V
+    :cond_5
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A02:I
 
+    .line 169
     .line 170
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
     .line 171
     .line 172
-    goto :goto_4
-
     .line 173
-    :cond_5
-    invoke-static {p1, v0}, LX/0Yc;->A01(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A01:F
 
     .line 174
     .line 175
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
     .line 176
-    move-result-object v1
-
     .line 177
-    :goto_5
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 178
+    iget-boolean v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0P:Z
+
     .line 179
     .line 180
-    move-result v0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 181
-    if-eqz v0, :cond_4
-
     .line 182
     .line 183
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0E:Lcom/google/common/collect/ImmutableList;
 
     .line 184
     .line 185
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
+
     .line 186
-    goto :goto_5
-
     .line 187
-    :cond_6
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
-
     .line 188
-    .line 189
-    .line 190
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/inspiration/magicmod/model/MagicModImage;->writeToParcel(Landroid/os/Parcel;I)V
-
-    .line 191
-    .line 192
-    .line 193
-    goto :goto_3
-
-    .line 194
-    :cond_7
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0D:Lcom/google/common/collect/ImmutableList;
-
-    .line 195
-    .line 196
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
-
-    .line 197
-    .line 198
-    .line 199
     move-result-object v1
 
+    .line 189
+    :goto_5
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 190
+    .line 191
+    .line 192
+    move-result v0
+
+    .line 193
+    if-eqz v0, :cond_8
+
+    .line 194
+    .line 195
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 196
+    .line 197
+    .line 198
+    move-result-object v0
+
+    .line 199
+    check-cast v0, Lcom/facebook/photos/creativeediting/model/StickerParams;
+
     .line 200
+    .line 201
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/photos/creativeediting/model/StickerParams;->writeToParcel(Landroid/os/Parcel;I)V
+
+    .line 202
+    .line 203
+    .line 204
+    goto :goto_5
+
+    .line 205
+    :cond_6
+    invoke-static {p1, v0}, LX/0X1;->A0E(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
+
+    .line 206
+    .line 207
+    .line 208
+    move-result-object v1
+
+    .line 209
     :goto_6
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 201
-    .line 202
-    .line 203
-    move-result v0
-
-    .line 204
-    if-eqz v0, :cond_8
-
-    .line 205
-    .line 206
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 207
-    .line 208
-    .line 209
-    move-result-object v0
-
     .line 210
-    check-cast v0, Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
-
     .line 211
     .line 212
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    move-result v0
 
     .line 213
+    if-eqz v0, :cond_5
+
     .line 214
     .line 215
-    goto :goto_6
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 216
-    :cond_8
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A05:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
-
     .line 217
     .line 218
-    invoke-static {p1, v0, p2}, LX/0Yc;->A08(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+    goto :goto_6
 
     .line 219
+    :cond_7
+    invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
+
     .line 220
     .line 221
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0E:Lcom/google/common/collect/ImmutableList;
-
     .line 222
-    .line 223
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/inspiration/magicmod/model/MagicModImage;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 223
     .line 224
     .line 225
+    goto :goto_4
+
     .line 226
-    move-result-object v1
+    :cond_8
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0F:Lcom/google/common/collect/ImmutableList;
 
     .line 227
+    .line 228
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
+
+    .line 229
+    .line 230
+    .line 231
+    move-result-object v1
+
+    .line 232
     :goto_7
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 228
-    .line 229
-    .line 230
-    move-result v0
-
-    .line 231
-    if-eqz v0, :cond_9
-
-    .line 232
     .line 233
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 234
     .line 235
+    move-result v0
+
     .line 236
-    move-result-object v0
+    if-eqz v0, :cond_9
 
     .line 237
-    check-cast v0, Lcom/facebook/photos/creativeediting/model/TextParams;
-
     .line 238
-    .line 239
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/photos/creativeediting/model/TextParams;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 239
     .line 240
     .line 241
+    move-result-object v0
+
     .line 242
-    goto :goto_7
+    check-cast v0, Lcom/facebook/photos/creativeediting/model/OverlayParamsHolder;
 
     .line 243
-    :cond_9
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
-
     .line 244
-    .line 245
-    if-nez v0, :cond_a
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 245
     .line 246
     .line 247
-    invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
+    goto :goto_7
 
     .line 248
+    :cond_9
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A06:Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;
+
     .line 249
     .line 250
-    :goto_8
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0O:Ljava/util/Set;
+    invoke-static {p1, v0, p2}, LX/0X1;->A0Y(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 251
     .line 252
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
-
     .line 253
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0G:Lcom/google/common/collect/ImmutableList;
+
     .line 254
     .line 255
-    move-result-object v1
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 256
-    :goto_9
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 257
     .line 258
+    move-result-object v1
+
     .line 259
-    move-result v0
+    :goto_8
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 260
-    if-eqz v0, :cond_b
-
     .line 261
     .line 262
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    move-result v0
 
     .line 263
+    if-eqz v0, :cond_a
+
     .line 264
     .line 265
-    goto :goto_9
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 266
-    :cond_a
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
-
     .line 267
     .line 268
+    move-result-object v0
+
     .line 269
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->writeToParcel(Landroid/os/Parcel;I)V
+    check-cast v0, Lcom/facebook/photos/creativeediting/model/TextParams;
 
     .line 270
     .line 271
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/photos/creativeediting/model/TextParams;->writeToParcel(Landroid/os/Parcel;I)V
+
     .line 272
+    .line 273
+    .line 274
     goto :goto_8
 
-    .line 273
+    .line 275
+    :cond_a
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A04:Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;
+
+    .line 276
+    .line 277
+    invoke-static {p1, v0, p2}, LX/0X3;->A10(Landroid/os/Parcel;Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;I)V
+
+    .line 278
+    .line 279
+    .line 280
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/CreativeEditingData;->A0R:Ljava/util/Set;
+
+    .line 281
+    .line 282
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+
+    .line 283
+    .line 284
+    .line 285
+    move-result-object v1
+
+    .line 286
+    :goto_9
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 287
+    .line 288
+    .line 289
+    move-result v0
+
+    .line 290
+    if-eqz v0, :cond_b
+
+    .line 291
+    .line 292
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
+
+    .line 293
+    .line 294
+    .line 295
+    goto :goto_9
+
+    .line 296
     :cond_b
     return-void
 .end method

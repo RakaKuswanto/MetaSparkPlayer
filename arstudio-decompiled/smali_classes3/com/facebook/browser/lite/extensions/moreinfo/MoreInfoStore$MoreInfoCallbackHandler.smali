@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public final synthetic A00:LX/4Dj;
+.field public final synthetic A00:LX/45f;
 
 
 # direct methods
-.method public constructor <init>(LX/4Dj;)V
+.method public constructor <init>(LX/45f;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/browser/lite/extensions/moreinfo/MoreInfoStore$MoreInfoCallbackHandler;->A00:LX/4Dj;
+    iput-object p1, p0, Lcom/facebook/browser/lite/extensions/moreinfo/MoreInfoStore$MoreInfoCallbackHandler;->A00:LX/45f;
 
     .line 1
     .line 2
@@ -26,14 +26,14 @@
 
 
 # virtual methods
-.method public final AVd(Landroid/os/Bundle;)V
+.method public final ATy(Landroid/os/Bundle;)V
     .locals 6
 
     .line 0
     const/4 v5, 0x0
 
     .line 1
-    invoke-static {p1, v5}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v5}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -42,28 +42,28 @@
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/1KF;->A01(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, LX/1cw;->A02(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 7
     .line 8
     .line 9
-    iget-object v3, p0, Lcom/facebook/browser/lite/extensions/moreinfo/MoreInfoStore$MoreInfoCallbackHandler;->A00:LX/4Dj;
+    iget-object v3, p0, Lcom/facebook/browser/lite/extensions/moreinfo/MoreInfoStore$MoreInfoCallbackHandler;->A00:LX/45f;
 
     .line 10
     .line 11
-    iget-boolean v0, v3, LX/4Dj;->A04:Z
+    iget-boolean v4, v3, LX/45f;->A0H:Z
 
     .line 12
     .line 13
-    iget-boolean v4, v3, LX/4Dj;->A0H:Z
+    const-string v1, "page_id"
 
     .line 14
     .line 15
-    const-string v1, "page_id"
+    if-nez v4, :cond_1
 
     .line 16
     .line 17
-    if-nez v4, :cond_1
+    iget-boolean v0, v3, LX/45f;->A04:Z
 
     .line 18
     .line 19
@@ -83,7 +83,7 @@
 
     .line 26
     .line 27
-    iget-object v0, v3, LX/4Dj;->A02:Ljava/lang/String;
+    iget-object v0, v3, LX/45f;->A02:Ljava/lang/String;
 
     .line 28
     .line 29
@@ -106,11 +106,11 @@
     const/4 v0, 0x1
 
     .line 38
-    iput-boolean v0, v3, LX/4Dj;->A05:Z
+    iput-boolean v0, v3, LX/45f;->A05:Z
 
     .line 39
     .line 40
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 41
     .line 42
@@ -118,11 +118,11 @@
     move-result-object v1
 
     .line 44
-    new-instance v0, LX/4Do;
+    new-instance v0, LX/45i;
 
     .line 45
     .line 46
-    invoke-direct {v0, v3}, LX/4Do;-><init>(LX/4Dj;)V
+    invoke-direct {v0, v3}, LX/45i;-><init>(LX/45f;)V
 
     .line 47
     .line 48
@@ -141,11 +141,11 @@
     const/4 v0, 0x1
 
     .line 54
-    iput-boolean v0, v3, LX/4Dj;->A04:Z
+    iput-boolean v0, v3, LX/45f;->A04:Z
 
     .line 55
     .line 56
-    iput-object p1, v3, LX/4Dj;->A00:Landroid/os/Bundle;
+    iput-object p1, v3, LX/45f;->A00:Landroid/os/Bundle;
 
     .line 57
     .line 58
@@ -157,15 +157,15 @@
     move-result-object v0
 
     .line 62
-    iput-object v0, v3, LX/4Dj;->A02:Ljava/lang/String;
+    iput-object v0, v3, LX/45f;->A02:Ljava/lang/String;
 
     .line 63
     .line 64
-    iget-object v1, v3, LX/4Dj;->A00:Landroid/os/Bundle;
+    iget-object v1, v3, LX/45f;->A00:Landroid/os/Bundle;
 
     .line 65
     .line 66
-    invoke-static {v1}, LX/0PS;->A07(Ljava/lang/Object;)V
+    invoke-static {v1}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 67
     .line 68
@@ -182,7 +182,7 @@
     move-result-object v1
 
     .line 75
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 76
     .line 77
@@ -190,7 +190,7 @@
     move-result-object v0
 
     .line 79
-    iput-object v0, v3, LX/4Dj;->A03:Ljava/util/HashSet;
+    iput-object v0, v3, LX/45f;->A03:Ljava/util/HashSet;
 
     .line 80
     .line 81
@@ -219,7 +219,7 @@
 
     .line 92
     .line 93
-    invoke-static {v2}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    invoke-static {v2}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 94
     .line 95
@@ -227,11 +227,11 @@
     move-result-object v0
 
     .line 97
-    iget-object v1, v3, LX/4Dj;->A03:Ljava/util/HashSet;
+    iget-object v1, v3, LX/45f;->A03:Ljava/util/HashSet;
 
     .line 98
     .line 99
-    invoke-static {v0}, LX/4Dp;->A00(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, LX/45j;->A00(Ljava/lang/String;)Ljava/lang/String;
 
     .line 100
     .line 101
@@ -252,25 +252,25 @@
 
     .line 108
     .line 109
-    iput-boolean v5, v3, LX/4Dj;->A05:Z
+    iput-boolean v5, v3, LX/45f;->A05:Z
 
     .line 110
     .line 111
     :cond_3
-    iget-object v1, v3, LX/4Dj;->A08:LX/4GN;
+    iget-object v1, v3, LX/45f;->A08:LX/43n;
 
     .line 112
     .line 113
-    sget-object v0, LX/014;->A0G:Ljava/lang/Integer;
+    sget-object v0, LX/478;->MORE_INFO_DATA_FINISHES_LOADING:LX/478;
 
     .line 114
     .line 115
-    invoke-interface {v1, v0}, LX/4GN;->ASz(Ljava/lang/Integer;)V
+    invoke-interface {v1, v0}, LX/43n;->AQm(LX/478;)V
 
     .line 116
     .line 117
     .line 118
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 119
     .line 120
@@ -278,11 +278,11 @@
     move-result-object v1
 
     .line 122
-    new-instance v0, LX/4Dn;
+    new-instance v0, LX/45h;
 
     .line 123
     .line 124
-    invoke-direct {v0, p1, v3}, LX/4Dn;-><init>(Landroid/os/Bundle;LX/4Dj;)V
+    invoke-direct {v0, p1, v3}, LX/45h;-><init>(Landroid/os/Bundle;LX/45f;)V
 
     .line 125
     .line 126

@@ -1,13 +1,35 @@
-.class public final synthetic LX/2qF;
+.class public final LX/2qF;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public synthetic constructor <init>()V
-    .locals 0
+# instance fields
+.field public A00:J
 
+.field public A01:J
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
+    const-wide/16 v0, 0x0
+
+    .line 4
+    .line 5
+    iput-wide v0, p0, LX/2qF;->A00:J
+
+    .line 6
+    .line 7
+    iput-wide v0, p0, LX/2qF;->A01:J
+
+    .line 8
+    .line 9
     return-void
 .end method

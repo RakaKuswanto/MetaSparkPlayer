@@ -4,12 +4,111 @@
 
 
 # instance fields
-.field public final A00:Lcom/google/common/collect/ImmutableList;
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:J
+
+.field public A03:J
+
+.field public A04:J
+
+.field public A05:J
+
+.field public A06:LX/2t8;
+
+.field public A07:Ljava/lang/String;
+
+.field public A08:Ljava/lang/String;
+
+.field public A09:Ljava/lang/String;
+
+.field public A0A:Ljava/lang/String;
+
+.field public A0B:Ljava/lang/String;
+
+.field public A0C:Ljava/lang/String;
+
+.field public A0D:Ljava/util/List;
+
+.field public A0E:Ljava/util/Map;
+
+.field public A0F:Ljava/util/Map;
+
+.field public A0G:Z
+
+.field public A0H:Z
+
+.field public A0I:Z
+
+.field public A0J:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    move-result-object v0
+
+    .line 268435463
+    iput-object v0, p0, LX/2t3;->A0E:Ljava/util/Map;
+
+    .line 268435464
+    .line 268435465
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 268435466
+    .line 268435467
+    .line 268435468
+    move-result-object v0
+
+    .line 268435469
+    iput-object v0, p0, LX/2t3;->A0F:Ljava/util/Map;
+
+    .line 268435470
+    .line 268435471
+    new-instance v0, LX/2t8;
+
+    .line 268435472
+    .line 268435473
+    invoke-direct {v0}, LX/2t8;-><init>()V
+
+    .line 268435474
+    .line 268435475
+    .line 268435476
+    iput-object v0, p0, LX/2t3;->A06:LX/2t8;
+
+    .line 268435477
+    .line 268435478
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 268435479
+    .line 268435480
+    .line 268435481
+    move-result-object v0
+
+    .line 268435482
+    iput-object v0, p0, LX/2t3;->A0D:Ljava/util/List;
+
+    .line 268435483
+    .line 268435484
+    return-void
+.end method
+
+.method public constructor <init>(LX/2t8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;IIJJJZZZZ)V
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -17,35 +116,146 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A9x:I
+    iput-object p2, p0, LX/2t3;->A08:Ljava/lang/String;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0Z(I)Ljava/util/Set;
+    iput-wide p13, p0, LX/2t3;->A03:J
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v2
+    move-wide/from16 v0, p15
 
+    .line 8
     .line 9
-    sget v0, LX/2eq;->A9y:I
+    iput-wide v0, p0, LX/2t3;->A02:J
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
+    move-wide/from16 v0, p17
 
     .line 12
     .line 13
-    .line 14
-    move-result-object v0
+    iput-wide v0, p0, LX/2t3;->A05:J
 
+    .line 14
     .line 15
-    check-cast v0, Ljava/util/Collection;
+    move/from16 v0, p19
 
     .line 16
     .line 17
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    iput-boolean v0, p0, LX/2t3;->A0J:Z
+
+    .line 18
+    .line 19
+    iput-object p3, p0, LX/2t3;->A0C:Ljava/lang/String;
+
+    .line 20
+    .line 21
+    iput-object p4, p0, LX/2t3;->A0B:Ljava/lang/String;
+
+    .line 22
+    .line 23
+    iput-object p5, p0, LX/2t3;->A09:Ljava/lang/String;
+
+    .line 24
+    .line 25
+    iput-object p10, p0, LX/2t3;->A0E:Ljava/util/Map;
+
+    .line 26
+    .line 27
+    iput-object p6, p0, LX/2t3;->A0A:Ljava/lang/String;
+
+    .line 28
+    .line 29
+    iput p11, p0, LX/2t3;->A01:I
+
+    .line 30
+    .line 31
+    iput-object p9, p0, LX/2t3;->A0F:Ljava/util/Map;
+
+    .line 32
+    .line 33
+    iput-object p7, p0, LX/2t3;->A07:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    move/from16 v0, p20
+
+    .line 36
+    .line 37
+    iput-boolean v0, p0, LX/2t3;->A0G:Z
+
+    .line 38
+    .line 39
+    move/from16 v0, p21
+
+    .line 40
+    .line 41
+    iput-boolean v0, p0, LX/2t3;->A0I:Z
+
+    .line 42
+    .line 43
+    iput p12, p0, LX/2t3;->A00:I
+
+    .line 44
+    .line 45
+    iput-object p1, p0, LX/2t3;->A06:LX/2t8;
+
+    .line 46
+    .line 47
+    move/from16 v0, p22
+
+    .line 48
+    .line 49
+    iput-boolean v0, p0, LX/2t3;->A0H:Z
+
+    .line 50
+    .line 51
+    iput-object p8, p0, LX/2t3;->A0D:Ljava/util/List;
+
+    .line 52
+    .line 53
+    return-void
+.end method
+
+.method public static A00(Lorg/json/JSONObject;)LX/2t8;
+    .locals 6
+
+    .line 0
+    :try_start_0
+    const-string/jumbo v0, "is_jio_headers_enabled"
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v5
+
+    .line 7
+    const-string/jumbo v0, "header_request_api"
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v4
+
+    .line 14
+    const-string/jumbo v0, "api_key"
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 18
     .line 19
@@ -53,263 +263,55 @@
     move-result-object v1
 
     .line 21
-    invoke-virtual {v1, v2}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    const-string/jumbo v0, "msisdn_cached_time"
 
     .line 22
     .line 23
     .line 24
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 25
     .line 26
     .line 27
-    new-instance v0, LX/3CP;
+    move-result-object v2
 
     .line 28
-    .line 29
-    invoke-direct {v0}, LX/3CP;-><init>()V
+    const-string/jumbo v0, "encrypted_device_id"
 
+    .line 29
     .line 30
     .line 31
-    .line 32
-    invoke-static {v1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 32
     .line 33
     .line 34
+    move-result-object v3
+
     .line 35
-    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+    new-instance v0, LX/2t8;
 
     .line 36
     .line 37
+    invoke-direct/range {v0 .. v5}, LX/2t8;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+
     .line 38
-    move-result-object v0
-
     .line 39
-    iput-object v0, p0, LX/2t3;->A00:Lcom/google/common/collect/ImmutableList;
-
     .line 40
-    .line 41
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00(LX/2t2;)Lorg/apache/http/impl/client/RequestWrapper;
-    .locals 5
-
-    .line 0
-    const-wide/16 v1, 0x20
-
-    .line 1
-    .line 2
-    const-string v0, "HttpFilterProcessor - process"
-
-    .line 3
-    .line 4
-    invoke-static {v1, v2, v0}, Lcom/facebook/systrace/Systrace;->A02(JLjava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    :try_start_0
-    iget-object v3, p1, LX/2t2;->A0L:Lorg/apache/http/client/methods/HttpUriRequest;
+    return-object v0
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
-    .line 9
-    :try_start_1
-    instance-of v0, v3, Lorg/apache/http/HttpEntityEnclosingRequest;
-
-    .line 10
-    .line 11
-    if-eqz v0, :cond_1
-
-    .line 12
-    .line 13
-    instance-of v0, v3, Lorg/apache/http/client/methods/AbortableHttpRequest;
-
-    .line 14
-    .line 15
-    if-eqz v0, :cond_0
-
-    .line 16
-    .line 17
-    move-object v0, v3
-
-    .line 18
-    check-cast v0, Lorg/apache/http/client/methods/AbortableHttpRequest;
-
-    .line 19
-    .line 20
-    check-cast v3, Lorg/apache/http/HttpEntityEnclosingRequest;
-
-    .line 21
-    .line 22
-    new-instance v4, LX/3Q1;
-
-    .line 23
-    .line 24
-    invoke-direct {v4, v3, v0}, LX/3Q1;-><init>(Lorg/apache/http/HttpEntityEnclosingRequest;Lorg/apache/http/client/methods/AbortableHttpRequest;)V
-
-    .line 25
-    .line 26
-    .line 27
-    :goto_0
-    invoke-virtual {v4}, Lorg/apache/http/impl/client/RequestWrapper;->resetHeaders()V
-
-    .line 28
-    .line 29
-    .line 30
-    goto :goto_1
-
-    .line 31
-    :cond_0
-    check-cast v3, Lorg/apache/http/HttpEntityEnclosingRequest;
-
-    .line 32
-    .line 33
-    new-instance v4, Lorg/apache/http/impl/client/EntityEnclosingRequestWrapper;
-
-    .line 34
-    .line 35
-    invoke-direct {v4, v3}, Lorg/apache/http/impl/client/EntityEnclosingRequestWrapper;-><init>(Lorg/apache/http/HttpEntityEnclosingRequest;)V
-
-    .line 36
-    .line 37
-    .line 38
-    goto :goto_0
-
-    .line 39
-    :cond_1
-    instance-of v0, v3, Lorg/apache/http/client/methods/AbortableHttpRequest;
-
-    .line 40
     .line 41
-    if-eqz v0, :cond_2
+    :catch_0
+    new-instance v0, LX/2t8;
 
     .line 42
     .line 43
-    move-object v0, v3
+    invoke-direct {v0}, LX/2t8;-><init>()V
 
     .line 44
-    check-cast v0, Lorg/apache/http/client/methods/AbortableHttpRequest;
-
     .line 45
     .line 46
-    new-instance v4, LX/3Q2;
-
-    .line 47
-    .line 48
-    invoke-direct {v4, v0, v3}, LX/3Q2;-><init>(Lorg/apache/http/client/methods/AbortableHttpRequest;Lorg/apache/http/client/methods/HttpUriRequest;)V
-
-    .line 49
-    .line 50
-    .line 51
-    goto :goto_0
-
-    .line 52
-    :cond_2
-    new-instance v4, Lorg/apache/http/impl/client/RequestWrapper;
-
-    .line 53
-    .line 54
-    invoke-direct {v4, v3}, Lorg/apache/http/impl/client/RequestWrapper;-><init>(Lorg/apache/http/HttpRequest;)V
-
-    .line 55
-    .line 56
-    .line 57
-    goto :goto_0
-    :try_end_1
-    .catch Lorg/apache/http/ProtocolException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 58
-    :goto_1
-    :try_start_2
-    iget-object v0, p0, LX/2t3;->A00:Lcom/google/common/collect/ImmutableList;
-
-    .line 59
-    .line 60
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
-
-    .line 61
-    .line 62
-    .line 63
-    move-result-object v3
-
-    .line 64
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 65
-    .line 66
-    .line 67
-    move-result v0
-
-    .line 68
-    if-eqz v0, :cond_3
-
-    .line 69
-    .line 70
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 71
-    .line 72
-    .line 73
-    const-string/jumbo v0, "getClass"
-
-    .line 74
-    .line 75
-    .line 76
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 77
-    .line 78
-    .line 79
-    move-result-object v0
-
-    .line 80
-    goto :goto_2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 81
-    :cond_3
-    invoke-static {v1, v2}, Lcom/facebook/systrace/Systrace;->A01(J)V
-
-    .line 82
-    .line 83
-    .line 84
-    return-object v4
-
-    .line 85
-    :catch_0
-    :try_start_3
-    move-exception v0
-
-    .line 86
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    .line 87
-    .line 88
-    .line 89
-    move-result-object v0
-
-    .line 90
-    :goto_2
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    .line 91
-    :catchall_0
-    move-exception v0
-
-    .line 92
-    invoke-static {v1, v2}, Lcom/facebook/systrace/Systrace;->A01(J)V
-
-    .line 93
-    .line 94
-    .line 95
-    throw v0
+    return-object v0
 .end method

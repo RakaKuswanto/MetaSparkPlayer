@@ -1,3 +1,3 @@
-.class public interface abstract LX/4mJ;
+.class public abstract LX/4mJ;
 .super Ljava/lang/Object;
 .source ""

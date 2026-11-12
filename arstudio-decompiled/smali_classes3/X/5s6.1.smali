@@ -1,116 +1,251 @@
-.class public final LX/5s6;
-.super LX/5rw;
+.class public abstract LX/5s6;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/5s8;
-
-.field public final A01:LX/5sG;
-
-.field public final A02:LX/5s7;
-
-.field public final A03:LX/5s7;
-
-.field public volatile A04:Z
-
-
 # direct methods
-.method public constructor <init>(LX/5sG;)V
-    .locals 3
+.method public static varargs A00([Ljava/lang/Object;)Ljava/util/HashSet;
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, LX/5rw;-><init>()V
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5s6;->A01:LX/5sG;
+    move-result-object v3
 
     .line 4
+    array-length v2, p0
+
     .line 5
-    new-instance v2, LX/5s7;
+    const/4 v1, 0x0
 
     .line 6
-    .line 7
-    invoke-direct {v2}, LX/5s7;-><init>()V
+    :goto_0
+    if-ge v1, v2, :cond_0
 
+    .line 7
     .line 8
+    aget-object v0, p0, v1
+
     .line 9
     .line 10
-    iput-object v2, p0, LX/5s6;->A03:LX/5s7;
+    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 11
     .line 12
-    new-instance v1, LX/5s8;
-
     .line 13
-    .line 14
-    invoke-direct {v1}, LX/5s8;-><init>()V
+    add-int/lit8 v1, v1, 0x1
 
+    .line 14
     .line 15
+    goto :goto_0
+
+    .line 16
+    :cond_0
+    return-object v3
+.end method
+
+.method public static A01(CCC)Z
+    .locals 7
+
+    .line 0
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    const-string v0, "samsung"
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    const/4 v6, 0x0
+
+    .line 9
+    if-eqz v0, :cond_2
+
+    .line 10
+    .line 11
+    sget-object v5, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    const-string v0, ":user/"
+
+    .line 14
+    .line 15
+    invoke-virtual {v5, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
     .line 16
     .line 17
-    iput-object v1, p0, LX/5s6;->A00:LX/5s8;
-
     .line 18
+    move-result v4
+
     .line 19
-    new-instance v0, LX/5s7;
+    const/4 v1, -0x1
 
     .line 20
-    .line 21
-    invoke-direct {v0}, LX/5s7;-><init>()V
+    if-ne v4, v1, :cond_0
 
+    .line 21
     .line 22
+    const-string v0, ":userdebug/"
+
     .line 23
     .line 24
-    iput-object v0, p0, LX/5s6;->A02:LX/5s7;
+    invoke-virtual {v5, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     .line 25
     .line 26
-    invoke-virtual {v0, v2}, LX/5s7;->A4b(LX/5sS;)Z
-
     .line 27
-    .line 28
-    .line 29
-    invoke-virtual {v0, v1}, LX/5s7;->A4b(LX/5sS;)Z
+    move-result v4
 
+    .line 28
+    :cond_0
+    if-ne v4, v1, :cond_1
+
+    .line 29
     .line 30
+    const-string v0, ":eng/"
+
     .line 31
     .line 32
-    return-void
+    invoke-virtual {v5, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v4
+
+    .line 36
+    :cond_1
+    const/4 v0, 0x3
+
+    .line 37
+    if-lt v4, v0, :cond_2
+
+    .line 38
+    .line 39
+    add-int/lit8 v0, v4, -0x3
+
+    .line 40
+    .line 41
+    invoke-virtual {v5, v0}, Ljava/lang/String;->charAt(I)C
+
+    .line 42
+    .line 43
+    .line 44
+    move-result v3
+
+    .line 45
+    add-int/lit8 v0, v4, -0x2
+
+    .line 46
+    .line 47
+    invoke-virtual {v5, v0}, Ljava/lang/String;->charAt(I)C
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v2
+
+    .line 51
+    const/4 v1, 0x1
+
+    .line 52
+    sub-int/2addr v4, v1
+
+    .line 53
+    invoke-virtual {v5, v4}, Ljava/lang/String;->charAt(I)C
+
+    .line 54
+    .line 55
+    .line 56
+    move-result v0
+
+    .line 57
+    if-gt v3, p0, :cond_3
+
+    .line 58
+    .line 59
+    if-ne v3, p0, :cond_2
+
+    .line 60
+    .line 61
+    if-gt v2, p1, :cond_3
+
+    .line 62
+    .line 63
+    if-ne v2, p1, :cond_2
+
+    .line 64
+    .line 65
+    if-lt v0, p2, :cond_2
+
+    .line 66
+    .line 67
+    const/4 v6, 0x1
+
+    .line 68
+    :cond_2
+    return v6
+
+    .line 69
+    :cond_3
+    return v1
 .end method
 
-
-# virtual methods
-.method public final dispose()V
+.method public static A02(Ljava/util/Set;)Z
     .locals 1
 
     .line 0
-    iget-boolean v0, p0, LX/5s6;->A04:Z
+    sget-object v0, LX/5s7;->A03:LX/5s7;
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
+    invoke-interface {p0, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     .line 3
     .line 4
-    const/4 v0, 0x1
-
     .line 5
-    iput-boolean v0, p0, LX/5s6;->A04:Z
+    move-result v0
 
     .line 6
+    if-nez v0, :cond_0
+
     .line 7
-    iget-object v0, p0, LX/5s6;->A02:LX/5s7;
-
     .line 8
-    .line 9
-    invoke-virtual {v0}, LX/5s7;->dispose()V
+    sget-object v0, LX/5s7;->A04:LX/5s7;
 
+    .line 9
     .line 10
+    invoke-interface {p0, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
     .line 11
     .line 12
+    .line 13
+    move-result p0
+
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    if-eqz p0, :cond_1
+
+    .line 16
+    .line 17
     :cond_0
-    return-void
+    const/4 v0, 0x1
+
+    .line 18
+    :cond_1
+    return v0
 .end method

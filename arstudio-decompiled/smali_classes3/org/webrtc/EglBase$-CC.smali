@@ -1,4 +1,4 @@
-.class public final synthetic Lorg/webrtc/EglBase$-CC;
+.class public abstract synthetic Lorg/webrtc/EglBase$-CC;
 .super Ljava/lang/Object;
 .source ""
 
@@ -165,7 +165,7 @@
 
     .line 45
     .line 46
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 47
     .line 48

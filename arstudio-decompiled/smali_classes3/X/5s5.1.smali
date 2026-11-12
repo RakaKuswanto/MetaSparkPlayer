@@ -1,158 +1,166 @@
-.class public abstract LX/5s5;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public final enum LX/5s5;
+.super Ljava/lang/Enum;
 .source ""
-
-# interfaces
-.implements LX/5sS;
-.implements LX/5sT;
 
 
 # static fields
-.field public static final A00:Ljava/util/concurrent/FutureTask;
+.field public static final synthetic $VALUES:[LX/5s5;
 
-.field public static final A01:Ljava/util/concurrent/FutureTask;
+.field public static final enum CAMERA1:LX/5s5;
 
-.field public static final serialVersionUID:J = 0x1924f211b909b42fL
-
-
-# instance fields
-.field public final runnable:Ljava/lang/Runnable;
-
-.field public runner:Ljava/lang/Thread;
+.field public static final enum CAMERA2:LX/5s5;
 
 
 # direct methods
+.method public static synthetic $values()[LX/5s5;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x2
+
+    .line 1
+    new-array v2, v0, [LX/5s5;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/5s5;->CAMERA1:LX/5s5;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/5s5;->CAMERA2:LX/5s5;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
     .locals 3
 
     .line 0
-    sget-object v2, LX/5tm;->A02:Ljava/lang/Runnable;
+    const-string v2, "CAMERA1"
 
     .line 1
     .line 2
     const/4 v1, 0x0
 
     .line 3
-    new-instance v0, Ljava/util/concurrent/FutureTask;
+    new-instance v0, LX/5s5;
 
     .line 4
     .line 5
-    invoke-direct {v0, v2, v1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+    invoke-direct {v0, v2, v1}, LX/5s5;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v0, LX/5s5;->A01:Ljava/util/concurrent/FutureTask;
+    sput-object v0, LX/5s5;->CAMERA1:LX/5s5;
 
     .line 9
     .line 10
-    new-instance v0, Ljava/util/concurrent/FutureTask;
+    const-string v2, "CAMERA2"
 
     .line 11
     .line 12
-    invoke-direct {v0, v2, v1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+    const/4 v1, 0x1
 
     .line 13
+    new-instance v0, LX/5s5;
+
     .line 14
     .line 15
-    sput-object v0, LX/5s5;->A00:Ljava/util/concurrent/FutureTask;
+    invoke-direct {v0, v2, v1}, LX/5s5;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Runnable;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/5s5;->runnable:Ljava/lang/Runnable;
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final dispose()V
-    .locals 3
-
-    .line 0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    check-cast v2, Ljava/util/concurrent/Future;
-
-    .line 5
-    .line 6
-    sget-object v0, LX/5s5;->A01:Ljava/util/concurrent/FutureTask;
-
-    .line 7
-    .line 8
-    if-eq v2, v0, :cond_0
-
-    .line 9
-    .line 10
-    sget-object v0, LX/5s5;->A00:Ljava/util/concurrent/FutureTask;
-
-    .line 11
-    .line 12
-    if-eq v2, v0, :cond_0
-
-    .line 13
-    .line 14
-    invoke-virtual {p0, v2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
-
     .line 18
-    if-eqz v0, :cond_0
+    sput-object v0, LX/5s5;->CAMERA2:LX/5s5;
 
     .line 19
     .line 20
-    if-eqz v2, :cond_0
+    invoke-static {}, LX/5s5;->$values()[LX/5s5;
 
     .line 21
     .line 22
-    iget-object v1, p0, LX/5s5;->runner:Ljava/lang/Thread;
-
     .line 23
+    move-result-object v0
+
     .line 24
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    sput-object v0, LX/5s5;->$VALUES:[LX/5s5;
 
     .line 25
     .line 26
-    .line 27
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/5s5;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/5s5;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 28
-    invoke-static {v1, v0}, LX/0Yf;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 6
+    check-cast v0, LX/5s5;
 
-    .line 29
-    .line 30
-    .line 31
-    move-result v0
+    .line 7
+    .line 8
+    return-object v0
+.end method
 
-    .line 32
-    invoke-interface {v2, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+.method public static values()[LX/5s5;
+    .locals 1
 
-    .line 33
-    .line 34
-    .line 35
-    :cond_0
-    return-void
+    .line 0
+    sget-object v0, LX/5s5;->$VALUES:[LX/5s5;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/5s5;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

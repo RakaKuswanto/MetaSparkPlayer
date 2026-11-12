@@ -1,5 +1,5 @@
 .class public final LX/4UX;
-.super LX/4UU;
+.super LX/4Ub;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/4UU;-><init>()V
+    invoke-direct {p0}, LX/4Ub;-><init>()V
 
     .line 1
     .line 2
@@ -18,22 +18,21 @@
 
 
 # virtual methods
-.method public final APP()V
+.method public final A00(Ljava/lang/CharSequence;)Z
     .locals 1
 
     .line 0
-    new-instance v0, LX/4Ud;
+    instance-of v0, p1, Landroid/text/PrecomputedText;
 
     .line 1
     .line 2
-    invoke-direct {v0, p0}, LX/4Ud;-><init>(LX/4UX;)V
+    invoke-static {v0}, LX/0X6;->A1R(I)Z
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, LX/4UT;->A0G:LX/4UW;
+    move-result v0
 
     .line 6
-    .line 7
-    return-void
+    return v0
 .end method

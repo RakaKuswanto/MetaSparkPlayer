@@ -3,74 +3,101 @@
 .source ""
 
 # interfaces
-.implements LX/45i;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$27"
 
 
 # instance fields
-.field public final A00:Ljava/util/concurrent/Executor;
+.field public final synthetic A00:J
+
+.field public final synthetic A01:LX/3wv;
+
+.field public final synthetic A02:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 1
+.method public constructor <init>(LX/3wv;[BJ)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/3xC;->A01:LX/3wv;
 
     .line 1
     .line 2
+    iput-object p2, p0, LX/3xC;->A02:[B
+
     .line 3
-    if-eqz p1, :cond_0
-
     .line 4
+    iput-wide p3, p0, LX/3xC;->A00:J
+
     .line 5
-    iput-object p1, p0, LX/3xC;->A00:Ljava/util/concurrent/Executor;
-
     .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 7
-    return-void
-
     .line 8
-    :cond_0
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
-
     .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    throw v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final A5K(Ljava/lang/Runnable;)V
-    .locals 1
+.method public final run()V
+    .locals 5
 
     .line 0
-    const/4 v0, 0x0
+    iget-object v0, p0, LX/3xC;->A01:LX/3wv;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
+
     .line 3
     .line 4
-    iget-object v0, p0, LX/3xC;->A00:Ljava/util/concurrent/Executor;
-
     .line 5
+    move-result-object v4
+
     .line 6
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     .line 7
     .line 8
     .line 9
-    return-void
-.end method
+    move-result v0
 
-.method public final Aiu(Ljava/lang/Runnable;)V
-    .locals 0
+    .line 10
+    if-eqz v0, :cond_0
 
+    .line 11
+    .line 12
+    invoke-static {v4}, LX/0X6;->A0X(Ljava/util/Iterator;)LX/3xA;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v3
+
+    .line 16
+    iget-object v2, p0, LX/3xC;->A02:[B
+
+    .line 17
+    .line 18
+    iget-wide v0, p0, LX/3xC;->A00:J
+
+    .line 19
+    .line 20
+    invoke-interface {v3, v2, v0, v1}, LX/3xA;->AYc([BJ)V
+
+    .line 21
+    .line 22
+    .line 23
+    goto :goto_0
+
+    .line 24
+    :cond_0
     return-void
 .end method

@@ -3,41 +3,75 @@
 .source ""
 
 
-# instance fields
-.field public final A00:I
-
-.field public final A01:LX/3de;
-
-.field public final A02:LX/3di;
-
-.field public final A03:Ljava/util/concurrent/ExecutorService;
-
-
 # direct methods
-.method public constructor <init>(LX/3de;LX/3di;Ljava/util/concurrent/ExecutorService;I)V
-    .locals 0
+.method public static A00(Landroid/content/Context;)Ljava/lang/String;
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     .line 1
     .line 2
     .line 3
-    iput p4, p0, LX/3dO;->A00:I
+    move-result-object v1
 
     .line 4
-    .line 5
-    iput-object p1, p0, LX/3dO;->A01:LX/3de;
+    const-string/jumbo v0, "mounted"
 
+    .line 5
     .line 6
     .line 7
-    iput-object p3, p0, LX/3dO;->A03:Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 8
     .line 9
-    iput-object p2, p0, LX/3dO;->A02:LX/3di;
-
     .line 10
+    move-result v0
+
     .line 11
-    return-void
+    if-eqz v0, :cond_0
+
+    .line 12
+    .line 13
+    const-string/jumbo v1, "sample"
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    if-eqz v0, :cond_0
+
+    .line 21
+    .line 22
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    return-object v0
+
+    .line 31
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 32
+    return-object v0
 .end method

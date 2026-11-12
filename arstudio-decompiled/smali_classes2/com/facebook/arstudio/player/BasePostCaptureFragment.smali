@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public mPostCaptureHelper:LX/3qd;
+.field public mPostCaptureHelper:LX/3rw;
 
-.field public final mSp:LX/0Na;
+.field public final mSp:LX/0RP;
 
 
 # direct methods
@@ -21,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 4
     .line 5
@@ -29,7 +29,7 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mSp:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mSp:LX/0RP;
 
     .line 8
     .line 9
@@ -122,15 +122,15 @@
 
 
 # virtual methods
-.method public final createCaptureCoordinatorHelper()LX/3qd;
-    .locals 10
+.method public final createCaptureCoordinatorHelper()LX/3rw;
+    .locals 11
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mSp:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mSp:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 3
     .line 4
@@ -138,19 +138,19 @@
     move-result-object v2
 
     .line 6
-    sget-object v1, LX/3eT;->A07:LX/1b2;
+    sget-object v1, LX/3bB;->A06:LX/28F;
 
     .line 7
     .line 8
     const/4 v0, 0x1
 
     .line 9
-    invoke-interface {v2, v1, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ACf(LX/1b2;Z)Z
+    invoke-interface {v2, v1, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ABB(LX/28F;Z)Z
 
     .line 10
     .line 11
     .line 12
-    move-result v3
+    move-result v4
 
     .line 13
     iget-boolean v0, p0, Lcom/facebook/arstudio/player/BaseEffectFragment;->mIsLiteCameraEnabled:Z
@@ -161,7 +161,7 @@
 
     .line 16
     .line 17
-    invoke-virtual {p0}, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->createLitePostCaptureCoordinatorHelper()LX/3qd;
+    invoke-virtual {p0}, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->createLitePostCaptureCoordinatorHelper()LX/3rw;
 
     .line 18
     .line 19
@@ -170,7 +170,7 @@
 
     .line 21
     :goto_0
-    iput-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3qd;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3rw;
 
     .line 22
     .line 23
@@ -178,107 +178,111 @@
 
     .line 24
     :cond_0
-    const/4 v4, 0x0
+    sget-object v3, LX/4FT;->PROD:LX/4FT;
 
     .line 25
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mSp:LX/0Na;
-
     .line 26
-    .line 27
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mSp:LX/0RP;
 
+    .line 27
     .line 28
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+
     .line 29
     .line 30
+    .line 31
     move-result-object v1
 
-    .line 31
-    sget-object v0, LX/3eT;->A0F:LX/1b2;
-
     .line 32
+    sget-object v0, LX/3bB;->A0F:LX/28F;
+
     .line 33
-    invoke-interface {v1, v0, v4}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ACf(LX/1b2;Z)Z
-
     .line 34
+    const/4 v5, 0x0
+
     .line 35
+    invoke-interface {v1, v0, v5}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ABB(LX/28F;Z)Z
+
     .line 36
-    move-result v5
-
     .line 37
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mSp:LX/0Na;
-
     .line 38
+    move-result v6
+
     .line 39
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mSp:LX/0RP;
 
     .line 40
     .line 41
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+
     .line 42
+    .line 43
+    .line 44
     move-result-object v1
 
-    .line 43
-    sget-object v0, LX/3eT;->A0R:LX/1b2;
-
-    .line 44
     .line 45
-    invoke-interface {v1, v0, v4}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ACf(LX/1b2;Z)Z
+    sget-object v0, LX/3bB;->A0R:LX/28F;
 
     .line 46
     .line 47
+    invoke-interface {v1, v0, v5}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ABB(LX/28F;Z)Z
+
     .line 48
-    move-result v6
-
     .line 49
-    new-instance v2, LX/5XU;
-
     .line 50
+    move-result v7
+
     .line 51
-    move v7, v4
+    new-instance v2, LX/648;
 
     .line 52
-    move v8, v4
-
     .line 53
-    move v9, v4
+    move v8, v5
 
     .line 54
-    invoke-direct/range {v2 .. v9}, LX/5XU;-><init>(ZZZZZZZ)V
+    move v9, v5
 
     .line 55
-    .line 56
-    .line 57
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+    move v10, v5
 
+    .line 56
+    invoke-direct/range {v2 .. v10}, LX/648;-><init>(LX/4FT;ZZZZZZZ)V
+
+    .line 57
     .line 58
     .line 59
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+
     .line 60
+    .line 61
+    .line 62
     move-result-object v1
 
-    .line 61
-    new-instance v0, LX/3em;
-
-    .line 62
     .line 63
-    invoke-direct {v0, v1}, LX/3em;-><init>(Landroidx/fragment/app/FragmentActivity;)V
+    new-instance v0, LX/3Uk;
 
     .line 64
     .line 65
-    .line 66
-    invoke-virtual {p0, v2, v0}, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->createPostCaptureCoordinatorHelper(LX/5XU;LX/3em;)LX/3qd;
+    invoke-direct {v0, v1}, LX/3Uk;-><init>(Landroidx/fragment/app/FragmentActivity;)V
 
+    .line 66
     .line 67
     .line 68
+    invoke-virtual {p0, v2, v0}, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->createPostCaptureCoordinatorHelper(LX/648;LX/3Uk;)LX/3rw;
+
     .line 69
+    .line 70
+    .line 71
     move-result-object v0
 
-    .line 70
+    .line 72
     goto :goto_0
 .end method
 
-.method public abstract createLitePostCaptureCoordinatorHelper()LX/3qd;
+.method public abstract createLitePostCaptureCoordinatorHelper()LX/3rw;
 .end method
 
-.method public abstract createPostCaptureCoordinatorHelper(LX/5XU;LX/3em;)LX/3qd;
+.method public abstract createPostCaptureCoordinatorHelper(LX/648;LX/3Uk;)LX/3rw;
 .end method
 
 .method public isReadyForRender()Z
@@ -321,14 +325,14 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3qd;
+    iget-object v1, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3rw;
 
     .line 1
     .line 2
     const/4 v0, 0x1
 
     .line 3
-    invoke-virtual {v1, v0}, LX/3qd;->A0J(Z)V
+    invoke-virtual {v1, v0}, LX/3rw;->A0I(Z)V
 
     .line 4
     .line 5
@@ -383,15 +387,15 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectFragment;->mEffectProvider:LX/3gL;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BaseEffectFragment;->mEffectProvider:LX/3dQ;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/3gL;->A01:LX/3h1;
+    iget-object v0, v0, LX/3dQ;->A01:LX/3dr;
 
     .line 3
     .line 4
-    invoke-interface {v0}, LX/3h1;->onUnsetEffect()V
+    invoke-interface {v0}, LX/3dr;->onUnsetEffect()V
 
     .line 5
     .line 6
@@ -404,11 +408,11 @@
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3qd;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3rw;
 
     .line 12
     .line 13
-    invoke-virtual {v0}, LX/3qd;->A0F()V
+    invoke-virtual {v0}, LX/3rw;->A0E()V
 
     .line 14
     .line 15
@@ -439,25 +443,25 @@
 
     .line 6
     .line 7
-    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3qd;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/BasePostCaptureFragment;->mPostCaptureHelper:LX/3rw;
 
     .line 8
     .line 9
-    invoke-virtual {v0}, LX/3qd;->A0G()V
+    invoke-virtual {v0}, LX/3rw;->A0F()V
 
     .line 10
     .line 11
     .line 12
     :cond_0
-    iget-object v1, p0, Lcom/facebook/arstudio/player/BaseEffectFragment;->mEffectProvider:LX/3gL;
+    iget-object v1, p0, Lcom/facebook/arstudio/player/BaseEffectFragment;->mEffectProvider:LX/3dQ;
 
     .line 13
     .line 14
-    check-cast v1, LX/3g9;
+    check-cast v1, LX/3dJ;
 
     .line 15
     .line 16
-    iget-object v0, v1, LX/3g9;->A00:Lcom/facebook/arstudio/player/model/EffectFile;
+    iget-object v0, v1, LX/3dJ;->A00:Lcom/facebook/arstudio/player/model/EffectFile;
 
     .line 17
     .line 18
@@ -465,7 +469,7 @@
 
     .line 19
     .line 20
-    invoke-virtual {v1, v0}, LX/3gL;->A00(Lcom/facebook/arstudio/player/model/EffectFile;)V
+    invoke-virtual {v1, v0}, LX/3dQ;->A00(Lcom/facebook/arstudio/player/model/EffectFile;)V
 
     .line 21
     .line 22
@@ -495,7 +499,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -558,7 +562,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p2}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {p2}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 1
     .line 2

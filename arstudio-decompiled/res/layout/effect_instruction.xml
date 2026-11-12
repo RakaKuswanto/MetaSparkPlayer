@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/instruction_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
-    <X.41M android:id="@id/instruction_image" android:visibility="gone" android:layout_width="@dimen/arplayer_instructions_image_size" android:layout_height="@dimen/arplayer_instructions_image_size" android:layout_marginBottom="@dimen/action_button_optional_padding_right" />
-    <X.4Ql android:textSize="@dimen/fbui_text_size_large" android:textColor="@android:color/white" android:gravity="center" android:id="@id/instruction_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/arplayer_instructions_text_max_width" />
+    <X.3TB android:id="@id/instruction_image" android:visibility="gone" android:layout_width="@dimen/arplayer_instructions_image_size" android:layout_height="@dimen/arplayer_instructions_image_size" android:layout_marginBottom="@dimen/action_button_optional_padding_right" />
+    <X.4RV android:textSize="@dimen/fbui_text_size_large" android:textColor="@android:color/white" android:gravity="center" android:id="@id/instruction_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/arplayer_instructions_text_max_width" />
 </LinearLayout>

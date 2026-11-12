@@ -1,44 +1,184 @@
-.class public final LX/3ub;
-.super Ljava/lang/Object;
+.class public final enum LX/3ub;
+.super Ljava/lang/Enum;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "PlayerListener$initVideoPlayerSessionLogger$runnable$1"
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
+.field public static final synthetic $VALUES:[LX/3ub;
 
-# instance fields
-.field public final synthetic A00:LX/3o1;
+.field public static final enum IN_REUSE:LX/3ub;
+
+.field public static final enum NOT_IN_REUSE:LX/3ub;
+
+.field public static final enum RETURNED_FROM_REUSE:LX/3ub;
 
 
 # direct methods
-.method public constructor <init>(LX/3o1;)V
-    .locals 0
+.method public static final synthetic $values()[LX/3ub;
+    .locals 3
 
-    iput-object p1, p0, LX/3ub;->A00:LX/3o1;
+    const/4 v0, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array v2, v0, [LX/3ub;
 
-    return-void
+    sget-object v1, LX/3ub;->NOT_IN_REUSE:LX/3ub;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3ub;->IN_REUSE:LX/3ub;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3ub;->RETURNED_FROM_REUSE:LX/3ub;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/3ub;->A00:LX/3o1;
+    const-string v2, "NOT_IN_REUSE"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/3o1;->A03(LX/3o1;)V
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/3ub;
+
     .line 4
     .line 5
+    invoke-direct {v0, v2, v1}, LX/3ub;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/3ub;->NOT_IN_REUSE:LX/3ub;
+
+    .line 9
+    .line 10
+    const-string v2, "IN_REUSE"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/3ub;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/3ub;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/3ub;->IN_REUSE:LX/3ub;
+
+    .line 19
+    .line 20
+    const-string v2, "RETURNED_FROM_REUSE"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/3ub;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/3ub;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/3ub;->RETURNED_FROM_REUSE:LX/3ub;
+
+    .line 29
+    .line 30
+    invoke-static {}, LX/3ub;->$values()[LX/3ub;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    sput-object v0, LX/3ub;->$VALUES:[LX/3ub;
+
+    .line 35
+    .line 36
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    sput-object v0, LX/3ub;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 41
+    .line 42
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/3ub;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/3ub;
+    .locals 1
+
+    const-class v0, LX/3ub;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/3ub;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/3ub;
+    .locals 1
+
+    sget-object v0, LX/3ub;->$VALUES:[LX/3ub;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/3ub;
+
+    return-object v0
 .end method

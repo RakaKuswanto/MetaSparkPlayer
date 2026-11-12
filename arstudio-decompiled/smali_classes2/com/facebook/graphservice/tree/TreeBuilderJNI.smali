@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/19O;
+.implements LX/1gF;
 
 
 # instance fields
@@ -23,7 +23,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 5
     .line 6
@@ -93,7 +93,7 @@
     move-result v0
 
     .line 8
-    invoke-static {v0, p2}, LX/001;->A1O(II)Z
+    invoke-static {v0, p2}, LX/001;->A1N(II)Z
 
     .line 9
     .line 10
@@ -112,7 +112,7 @@
 .method public final native hasPrimaryKey()Z
 .end method
 
-.method public bridge synthetic setBoolean(Ljava/lang/String;Ljava/lang/Boolean;)LX/19O;
+.method public bridge synthetic setBoolean(Ljava/lang/String;Ljava/lang/Boolean;)LX/1gF;
     .locals 1
 
     .line 0
@@ -130,7 +130,7 @@
 .method public final native setBoolean(Ljava/lang/String;Ljava/lang/Boolean;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setBooleanList(Ljava/lang/String;Ljava/lang/Iterable;)LX/19O;
+.method public bridge synthetic setBooleanList(Ljava/lang/String;Ljava/lang/Iterable;)LX/1gF;
     .locals 1
 
     .line 0
@@ -148,7 +148,7 @@
 .method public final native setBooleanList(Ljava/lang/String;Ljava/lang/Iterable;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setDouble(Ljava/lang/String;Ljava/lang/Double;)LX/19O;
+.method public bridge synthetic setDouble(Ljava/lang/String;Ljava/lang/Double;)LX/1gF;
     .locals 1
 
     .line 0
@@ -166,7 +166,7 @@
 .method public final native setDouble(Ljava/lang/String;Ljava/lang/Double;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setDoubleList(Ljava/lang/String;Ljava/lang/Iterable;)LX/19O;
+.method public bridge synthetic setDoubleList(Ljava/lang/String;Ljava/lang/Iterable;)LX/1gF;
     .locals 1
 
     .line 0
@@ -184,7 +184,7 @@
 .method public final native setDoubleList(Ljava/lang/String;Ljava/lang/Iterable;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setInt(Ljava/lang/String;Ljava/lang/Integer;)LX/19O;
+.method public bridge synthetic setInt(Ljava/lang/String;Ljava/lang/Integer;)LX/1gF;
     .locals 1
 
     .line 0
@@ -202,7 +202,7 @@
 .method public final native setInt(Ljava/lang/String;Ljava/lang/Integer;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setIntList(Ljava/lang/String;Ljava/lang/Iterable;)LX/19O;
+.method public bridge synthetic setIntList(Ljava/lang/String;Ljava/lang/Iterable;)LX/1gF;
     .locals 1
 
     .line 0
@@ -220,7 +220,7 @@
 .method public final native setIntList(Ljava/lang/String;Ljava/lang/Iterable;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setNull(Ljava/lang/String;)LX/19O;
+.method public bridge synthetic setNull(Ljava/lang/String;)LX/1gF;
     .locals 1
 
     .line 0
@@ -238,7 +238,7 @@
 .method public final native setNull(Ljava/lang/String;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setString(Ljava/lang/String;Ljava/lang/String;)LX/19O;
+.method public bridge synthetic setString(Ljava/lang/String;Ljava/lang/String;)LX/1gF;
     .locals 1
 
     .line 0
@@ -256,7 +256,7 @@
 .method public final native setString(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setStringList(Ljava/lang/String;Ljava/lang/Iterable;)LX/19O;
+.method public bridge synthetic setStringList(Ljava/lang/String;Ljava/lang/Iterable;)LX/1gF;
     .locals 1
 
     .line 0
@@ -274,7 +274,7 @@
 .method public final native setStringList(Ljava/lang/String;Ljava/lang/Iterable;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setTime(Ljava/lang/String;Ljava/lang/Long;)LX/19O;
+.method public bridge synthetic setTime(Ljava/lang/String;Ljava/lang/Long;)LX/1gF;
     .locals 1
 
     .line 0
@@ -292,7 +292,7 @@
 .method public final native setTime(Ljava/lang/String;Ljava/lang/Long;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setTimeList(Ljava/lang/String;Ljava/lang/Iterable;)LX/19O;
+.method public bridge synthetic setTimeList(Ljava/lang/String;Ljava/lang/Iterable;)LX/1gF;
     .locals 1
 
     .line 0
@@ -310,7 +310,7 @@
 .method public final native setTimeList(Ljava/lang/String;Ljava/lang/Iterable;)Lcom/facebook/graphservice/tree/TreeBuilderJNI;
 .end method
 
-.method public bridge synthetic setTree(Ljava/lang/String;Lcom/facebook/graphservice/interfaces/Tree;)LX/19O;
+.method public bridge synthetic setTree(Ljava/lang/String;Lcom/facebook/graphservice/interfaces/Tree;)LX/1gF;
     .locals 1
 
     .line 0
@@ -329,7 +329,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic setTreeFaster_UNSAFE(Ljava/lang/String;Lcom/facebook/graphservice/interfaces/Tree;)LX/19O;
+.method public bridge synthetic setTreeFaster_UNSAFE(Ljava/lang/String;Lcom/facebook/graphservice/interfaces/Tree;)LX/1gF;
     .locals 1
 
     .line 0
@@ -348,7 +348,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic setTreeList(Ljava/lang/String;Ljava/lang/Iterable;)LX/19O;
+.method public bridge synthetic setTreeList(Ljava/lang/String;Ljava/lang/Iterable;)LX/1gF;
     .locals 1
 
     .line 0
@@ -363,7 +363,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic setTreeListFaster_UNSAFE(Ljava/lang/String;Ljava/lang/Iterable;)LX/19O;
+.method public bridge synthetic setTreeListFaster_UNSAFE(Ljava/lang/String;Ljava/lang/Iterable;)LX/1gF;
     .locals 1
 
     .line 0

@@ -25,6 +25,14 @@
 
 .method public static fromNullable(Ljava/lang/Object;)Lcom/google/common/base/Optional;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nullableReference"
+        }
+    .end annotation
 
     .line 0
     if-nez p0, :cond_0
@@ -54,6 +62,14 @@
 
 # virtual methods
 .method public abstract equals(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 .end method
 
 .method public abstract get()Ljava/lang/Object;
@@ -66,6 +82,14 @@
 .end method
 
 .method public abstract or(Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "defaultValue"
+        }
+    .end annotation
 .end method
 
 .method public abstract orNull()Ljava/lang/Object;

@@ -16,11 +16,11 @@
     return-void
 .end method
 
-.method public static read(LX/4gJ;)Landroidx/media/AudioAttributesImplApi26;
+.method public static read(LX/4eL;)Landroidx/media/AudioAttributesImplApi26;
     .locals 0
 
     .line 0
-    invoke-static {p0}, Landroidx/media/AudioAttributesImplApi26Parcelizer;->read(LX/4gJ;)Landroidx/media/AudioAttributesImplApi26;
+    invoke-static {p0}, Landroidx/media/AudioAttributesImplApi26Parcelizer;->read(LX/4eL;)Landroidx/media/AudioAttributesImplApi26;
 
     .line 1
     .line 2
@@ -31,11 +31,11 @@
     return-object p0
 .end method
 
-.method public static write(Landroidx/media/AudioAttributesImplApi26;LX/4gJ;)V
+.method public static write(Landroidx/media/AudioAttributesImplApi26;LX/4eL;)V
     .locals 0
 
     .line 0
-    invoke-static {p0, p1}, Landroidx/media/AudioAttributesImplApi26Parcelizer;->write(Landroidx/media/AudioAttributesImplApi26;LX/4gJ;)V
+    invoke-static {p0, p1}, Landroidx/media/AudioAttributesImplApi26Parcelizer;->write(Landroidx/media/AudioAttributesImplApi26;LX/4eL;)V
 
     .line 1
     .line 2

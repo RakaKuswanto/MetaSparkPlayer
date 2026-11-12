@@ -20,3 +20,9 @@
 # virtual methods
 .method public abstract getAudioFrame(II)Lcom/facebook/rsys/audio/gen/AudioFrame;
 .end method
+
+.method public abstract setPlayoutEnabled(Z)V
+.end method
+
+.method public abstract setPlayoutVolume(F)V
+.end method

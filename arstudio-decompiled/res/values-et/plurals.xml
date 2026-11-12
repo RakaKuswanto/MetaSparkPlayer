@@ -4,11 +4,87 @@
         <item quantity="other">%1$s lehe meeldivaks märkimist</item>
         <item quantity="one">%1$s lehe meeldimine</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s meeldimist</item>
-        <item quantity="one">%1$s meeldimine</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d päeva tagasi</item>
+        <item quantity="one">1 päev tagasi</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d päeva</item>
+        <item quantity="one">1 päev</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d päeva</item>
+        <item quantity="one">1 päev</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d tundi</item>
+        <item quantity="one">1 tund</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minutit</item>
+        <item quantity="one">1 minut</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d kuud</item>
+        <item quantity="one">1 kuu</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d sekundit</item>
+        <item quantity="one">1 sekund</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d nädalat</item>
+        <item quantity="one">1 nädal</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Veel %1$d päeva</item>
+        <item quantity="one">Veel 1 päev</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">Veel %1$d tundi</item>
+        <item quantity="one">Veel 1 tund</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">Veel %1$d minutit</item>
+        <item quantity="one">Veel 1 minut</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">Veel %1$d kuud</item>
+        <item quantity="one">Veel 1 kuu</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">Veel %1$d sekundit</item>
+        <item quantity="one">Veel 1 sekund</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">Veel %1$d nädalat</item>
+        <item quantity="one">Veel 1 nädal</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">Veel %1$d aastat</item>
+        <item quantity="one">Veel 1 aasta</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d aastat</item>
+        <item quantity="one">1 aasta</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d tundi tagasi</item>
+        <item quantity="one">1 tund tagasi</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d h</item>
+        <item quantity="one">1 h</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d h</item>
+        <item quantity="one">1 h</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d h</item>
+        <item quantity="one">1 tund tagasi</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d tundi tagasi</item>
         <item quantity="one">1 tund tagasi</item>
     </plurals>
@@ -20,8 +96,68 @@
         <item quantity="other">%1$d minuti pärast</item>
         <item quantity="one">1 minuti pärast</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d minutit tagasi</item>
+        <item quantity="one">1 minut tagasi</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d minutit tagasi</item>
         <item quantity="one">1 minut tagasi</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d minutit</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d kuud tagasi</item>
+        <item quantity="one">1 kuu tagasi</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d sekundit tagasi</item>
+        <item quantity="one">1 sekund</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d nädalat tagasi</item>
+        <item quantity="one">1 nädal tagasi</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d h jäänud</item>
+        <item quantity="one">1 tund jäänud</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d min jäänud</item>
+        <item quantity="one">1 minut jäänud</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d aastat tagasi</item>
+        <item quantity="one">1 aasta tagasi</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Külastasid %1$d päeva tagasi</item>
+        <item quantity="one">Külastasid 1 päev tagasi</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Külastasid %1$d tundi tagasi</item>
+        <item quantity="one">Külastasid 1 tund tagasi</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Külastasid %1$d minutit tagasi</item>
+        <item quantity="one">Külastasid 1 minut tagasi</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Külastasid %1$d kuud tagasi</item>
+        <item quantity="one">Külastasid 1 kuu tagasi</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Külastasid %1$d nädalat tagasi</item>
+        <item quantity="one">Külastasid 1 nädal tagasi</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Külastasid %1$d aastat tagasi</item>
+        <item quantity="one">Külastasid 1 aasta tagasi</item>
     </plurals>
 </resources>

@@ -3,126 +3,169 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "GrootPlayerLogger$logCancelledEvent$1"
+.implements LX/2KV;
 
 
 # instance fields
-.field public final synthetic A00:I
+.field public A00:Landroid/content/Context;
 
-.field public final synthetic A01:J
+.field public final A01:Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;
 
-.field public final synthetic A02:LX/47P;
+.field public final A02:LX/0ll;
 
-.field public final synthetic A03:Lcom/facebook/video/heroplayer/ipc/LiveState;
+.field public final A03:LX/1pp;
 
-.field public final synthetic A04:Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;
-
-.field public final synthetic A05:Ljava/lang/String;
-
-.field public final synthetic A06:Ljava/lang/String;
-
-.field public final synthetic A07:Ljava/lang/String;
-
-.field public final synthetic A08:Ljava/lang/String;
-
-.field public final synthetic A09:Z
-
-.field public final synthetic A0A:Z
+.field public final A04:Lcom/google/common/util/concurrent/SettableFuture;
 
 
 # direct methods
-.method public constructor <init>(LX/47P;Lcom/facebook/video/heroplayer/ipc/LiveState;Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJZZ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, LX/2KT;->A02:LX/47P;
-
-    iput-object p3, p0, LX/2KT;->A04:Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;
-
-    iput-object p2, p0, LX/2KT;->A03:Lcom/facebook/video/heroplayer/ipc/LiveState;
-
-    iput-object p4, p0, LX/2KT;->A06:Ljava/lang/String;
-
-    iput-object p5, p0, LX/2KT;->A07:Ljava/lang/String;
-
-    iput-object p6, p0, LX/2KT;->A05:Ljava/lang/String;
-
-    iput-wide p9, p0, LX/2KT;->A01:J
-
-    iput p8, p0, LX/2KT;->A00:I
-
-    iput-boolean p11, p0, LX/2KT;->A09:Z
-
-    iput-boolean p12, p0, LX/2KT;->A0A:Z
-
-    iput-object p7, p0, LX/2KT;->A08:Ljava/lang/String;
-
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {}, LX/0X7;->A0O()Lcom/google/common/util/concurrent/SettableFuture;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/2KT;->A04:Lcom/google/common/util/concurrent/SettableFuture;
+
+    .line 8
+    .line 9
+    sget v1, LX/2I6;->ABw:I
+
+    .line 10
+    .line 11
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    check-cast v0, LX/0ll;
+
+    .line 20
+    .line 21
+    iput-object v0, p0, LX/2KT;->A02:LX/0ll;
+
+    .line 22
+    .line 23
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v1
+
+    .line 27
+    iput-object v1, p0, LX/2KT;->A00:Landroid/content/Context;
+
+    .line 28
+    .line 29
+    sget v0, LX/2I6;->AAO:I
+
+    .line 30
+    .line 31
+    invoke-static {v1, v0}, LX/3Fb;->A02(Landroid/content/Context;I)Ljava/lang/Object;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
+
+    .line 35
+    check-cast v0, LX/1pp;
+
+    .line 36
+    .line 37
+    iput-object v0, p0, LX/2KT;->A03:LX/1pp;
+
+    .line 38
+    .line 39
+    sget v0, LX/2I6;->ABv:I
+
+    .line 40
+    .line 41
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v0
+
+    .line 45
+    check-cast v0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;
+
+    .line 46
+    .line 47
+    iput-object v0, p0, LX/2KT;->A01:Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;
+
+    .line 48
+    .line 49
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 12
+.method public final declared-synchronized AE8(LX/2OL;Ljava/lang/String;)Lcom/facebook/abtest/qe/bootstrap/data/QuickExperimentInfo;
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/2KT;->A02:LX/47P;
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    monitor-exit p0
+
+    .line 6
+    return-object v0
+
+    .line 7
+    :catchall_0
+    move-exception v0
+
+    .line 8
+    monitor-exit p0
+
+    .line 9
+    throw v0
+.end method
+
+.method public final AFd()Lcom/google/common/util/concurrent/ListenableFuture;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2KT;->A04:Lcom/google/common/util/concurrent/SettableFuture;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/47P;->A02:LX/49f;
-
-    .line 3
-    .line 4
-    iget-object v2, p0, LX/2KT;->A04:Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;
-
-    .line 5
-    .line 6
-    iget-object v1, p0, LX/2KT;->A03:Lcom/facebook/video/heroplayer/ipc/LiveState;
-
-    .line 7
-    .line 8
-    iget-object v3, p0, LX/2KT;->A06:Ljava/lang/String;
-
-    .line 9
-    .line 10
-    iget-object v4, p0, LX/2KT;->A07:Ljava/lang/String;
-
-    .line 11
-    .line 12
-    iget-object v5, p0, LX/2KT;->A05:Ljava/lang/String;
-
-    .line 13
-    .line 14
-    iget-wide v8, p0, LX/2KT;->A01:J
-
-    .line 15
-    .line 16
-    iget v7, p0, LX/2KT;->A00:I
-
-    .line 17
-    .line 18
-    iget-boolean v10, p0, LX/2KT;->A09:Z
-
-    .line 19
-    .line 20
-    iget-boolean v11, p0, LX/2KT;->A0A:Z
-
-    .line 21
-    .line 22
-    iget-object v6, p0, LX/2KT;->A08:Ljava/lang/String;
-
-    .line 23
-    .line 24
-    invoke-interface/range {v0 .. v11}, LX/49f;->ASO(Lcom/facebook/video/heroplayer/ipc/LiveState;Lcom/facebook/video/heroplayer/ipc/ServicePlayerState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJZZ)V
-
-    .line 25
-    .line 26
-    .line 27
-    return-void
+    return-object v0
 .end method

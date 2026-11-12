@@ -1,37 +1,72 @@
-.class public final LX/5Nh;
+.class public final synthetic LX/5Nh;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A00:Ljava/lang/String;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "WarmUpPlayerListener$$ExternalSyntheticLambda7"
+
+
+# instance fields
+.field public final synthetic A00:LX/5Nb;
+
+.field public final synthetic A01:Ljava/lang/String;
+
+.field public final synthetic A02:Ljava/lang/String;
+
+.field public final synthetic A03:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(LX/5Nb;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/5Nh;->A00:LX/5Nb;
+
+    iput-object p2, p0, LX/5Nh;->A01:Ljava/lang/String;
+
+    iput-object p3, p0, LX/5Nh;->A02:Ljava/lang/String;
+
+    iput-object p4, p0, LX/5Nh;->A03:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 4
 
     .line 0
-    const-string v0, "BatteryChrgTracker"
+    iget-object v0, p0, LX/5Nh;->A00:LX/5Nb;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/5M2;->A01(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v3, p0, LX/5Nh;->A01:Ljava/lang/String;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iget-object v2, p0, LX/5Nh;->A02:Ljava/lang/String;
 
+    .line 5
     .line 6
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    iget-object v1, p0, LX/5Nh;->A03:Ljava/lang/String;
 
     .line 7
     .line 8
-    .line 9
-    sput-object v0, LX/5Nh;->A00:Ljava/lang/String;
+    iget-object v0, v0, LX/5Nb;->A00:LX/5Mc;
 
+    .line 9
     .line 10
+    invoke-virtual {v0, v3, v2, v1}, LX/5Mc;->Adi(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
     .line 11
+    .line 12
+    .line 13
     return-void
 .end method

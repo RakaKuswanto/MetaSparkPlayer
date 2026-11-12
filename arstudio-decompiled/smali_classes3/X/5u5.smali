@@ -1,20 +1,20 @@
-.class public interface abstract LX/5u5;
+.class public final LX/5U5;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5U4;
 
-# virtual methods
-.method public abstract ADM()I
-.end method
 
-.method public abstract ADN(I)Landroid/media/MediaCodecInfo;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AQP(Landroid/media/MediaCodecInfo$CodecCapabilities;Ljava/lang/String;Ljava/lang/String;)Z
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract AQQ(Landroid/media/MediaCodecInfo$CodecCapabilities;Ljava/lang/String;Ljava/lang/String;)Z
-.end method
-
-.method public abstract AkZ()Z
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

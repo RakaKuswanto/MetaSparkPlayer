@@ -1,143 +1,277 @@
 .class public final LX/0JM;
-.super Ljava/lang/Object;
+.super LX/0B5;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:LX/01d;
+
+
 # direct methods
-.method public static A00(Ljava/lang/Throwable;)Ljava/lang/String;
-    .locals 4
+.method public constructor <init>(LX/01d;)V
+    .locals 0
 
     .line 0
-    const-string v3, ""
+    iput-object p1, p0, LX/0JM;->A00:LX/01d;
 
     .line 1
     .line 2
-    if-nez p0, :cond_0
+    invoke-direct {p0}, LX/0B5;-><init>()V
 
     .line 3
     .line 4
-    return-object v3
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A01(Ljava/io/File;)V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/0JM;->A00:LX/01d;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/01d;->A01:Ljava/util/ArrayList;
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
     .line 5
-    :cond_0
-    :try_start_0
-    new-instance v2, Ljava/io/StringWriter;
-
     .line 6
     .line 7
-    invoke-direct {v2}, Ljava/io/StringWriter;-><init>()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v2
 
     .line 8
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
     .line 9
     .line 10
-    :try_start_1
-    const/4 v0, 0x1
-
     .line 11
-    new-instance v1, Ljava/io/PrintWriter;
+    move-result v0
 
     .line 12
-    .line 13
-    invoke-direct {v1, v2, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;Z)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+    if-eqz v0, :cond_0
 
+    .line 13
     .line 14
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 15
     .line 16
-    :try_start_2
-    invoke-virtual {p0, v1}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
     .line 17
-    .line 18
-    .line 19
-    :try_start_3
-    invoke-virtual {v1}, Ljava/io/Writer;->close()V
+    move-result-object v1
 
+    .line 18
+    check-cast v1, LX/01b;
+
+    .line 19
     .line 20
+    new-instance v0, LX/0Ix;
+
     .line 21
     .line 22
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-direct {v0, v1, v1}, LX/0Ix;-><init>(LX/01b;LX/03h;)V
 
     .line 23
     .line 24
     .line 25
-    move-result-object v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+    :try_start_0
+    invoke-virtual {v0, p1}, LX/0B5;->A01(Ljava/io/File;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 26
-    :try_start_4
-    invoke-virtual {v2}, Ljava/io/Writer;->close()V
+    .line 27
+    .line 28
+    invoke-virtual {v0}, LX/0B5;->close()V
+
+    .line 29
+    .line 30
+    .line 31
+    goto :goto_0
+
+    .line 32
+    :catchall_0
+    move-exception v1
+
+    .line 33
+    :try_start_1
+    invoke-virtual {v0}, LX/0B5;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 34
+    .line 35
+    .line 36
+    throw v1
+
+    .line 37
+    :catchall_1
+    move-exception v0
+
+    .line 38
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 39
+    .line 40
+    .line 41
+    throw v1
+
+    .line 42
+    :cond_0
+    return-void
+.end method
+
+.method public final A02()[LX/0BC;
+    .locals 4
+
+    .line 0
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v3
+
+    .line 4
+    iget-object v0, p0, LX/0JM;->A00:LX/01d;
+
+    .line 5
+    .line 6
+    iget-object v0, v0, LX/01d;->A01:Ljava/util/ArrayList;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    if-eqz v0, :cond_0
+
+    .line 17
+    .line 18
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    check-cast v0, LX/01b;
+
+    .line 23
+    .line 24
+    new-instance v2, LX/0Ix;
+
+    .line 25
+    .line 26
+    invoke-direct {v2, v0, v0}, LX/0Ix;-><init>(LX/01b;LX/03h;)V
 
     .line 27
     .line 28
     .line 29
-    return-object v0
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/lang/NullPointerException; {:try_start_4 .. :try_end_4} :catch_0
+    :try_start_0
+    invoke-virtual {v2}, LX/0B5;->A02()[LX/0BC;
 
     .line 30
-    :catchall_0
-    move-exception v0
-
     .line 31
-    :try_start_5
-    invoke-virtual {v1}, Ljava/io/Writer;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
     .line 32
-    .line 33
-    .line 34
-    :catchall_1
-    :try_start_6
-    throw v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
-
-    .line 35
-    :catchall_2
-    move-exception v0
-
-    .line 36
-    :try_start_7
-    invoke-virtual {v2}, Ljava/io/Writer;->close()V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
-
-    .line 37
-    .line 38
-    .line 39
-    :catchall_3
-    :try_start_8
-    throw v0
-    :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
-    .catch Ljava/lang/NullPointerException; {:try_start_8 .. :try_end_8} :catch_0
-
-    .line 40
-    :catch_0
-    return-object v3
-
-    .line 41
-    :catch_1
-    move-exception v0
-
-    .line 42
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    .line 43
-    .line 44
-    .line 45
     move-result-object v0
 
+    .line 33
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 38
+    .line 39
+    .line 40
+    invoke-virtual {v2}, LX/0B5;->close()V
+
+    .line 41
+    .line 42
+    .line 43
+    goto :goto_0
+
+    .line 44
+    :catchall_0
+    move-exception v1
+
+    .line 45
+    :try_start_1
+    invoke-virtual {v2}, LX/0B5;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
     .line 46
-    throw v0
+    .line 47
+    .line 48
+    throw v1
+
+    .line 49
+    :catchall_1
+    move-exception v0
+
+    .line 50
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 51
+    .line 52
+    .line 53
+    throw v1
+
+    .line 54
+    :cond_0
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->size()I
+
+    .line 55
+    .line 56
+    .line 57
+    move-result v0
+
+    .line 58
+    new-array v0, v0, [LX/0BC;
+
+    .line 59
+    .line 60
+    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v0
+
+    .line 64
+    check-cast v0, [LX/0BC;
+
+    .line 65
+    .line 66
+    return-object v0
 .end method

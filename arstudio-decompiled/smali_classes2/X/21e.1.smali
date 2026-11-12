@@ -1,49 +1,69 @@
-.class public final LX/21e;
+.class public interface abstract LX/21e;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/21Z;
+# virtual methods
+.method public abstract A3q()Ljava/util/Map;
+.end method
 
-.field public A01:LX/21b;
+.method public abstract A9o(Ljava/lang/Object;)Ljava/util/Collection;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+.end method
 
+.method public abstract AfO(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public abstract AhR(Ljava/lang/Object;)Ljava/util/Collection;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract clear()V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    new-instance v1, LX/21Z;
+.method public abstract containsKey(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+.end method
 
-    .line 4
-    .line 5
-    invoke-direct {v1}, LX/21Z;-><init>()V
+.method public abstract isEmpty()Z
+.end method
 
-    .line 6
-    .line 7
-    .line 8
-    iput-object v1, p0, LX/21e;->A00:LX/21Z;
+.method public abstract keySet()Ljava/util/Set;
+.end method
 
-    .line 9
-    .line 10
-    new-instance v0, LX/21b;
+.method public abstract size()I
+.end method
 
-    .line 11
-    .line 12
-    invoke-direct {v0, v1}, LX/21b;-><init>(LX/21Z;)V
-
-    .line 13
-    .line 14
-    .line 15
-    iput-object v0, p0, LX/21e;->A01:LX/21b;
-
-    .line 16
-    .line 17
-    return-void
+.method public abstract values()Ljava/util/Collection;
 .end method

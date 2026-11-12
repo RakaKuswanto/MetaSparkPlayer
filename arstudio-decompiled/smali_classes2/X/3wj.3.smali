@@ -1,19 +1,25 @@
-.class public interface abstract LX/3wj;
-.super Ljava/lang/Object;
+.class public final LX/3wj;
+.super LX/3nV;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/3wh;
-
-
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, LX/3wh;->A01:LX/3wh;
+    .line 0
+    const/4 v0, 0x1
 
-    sput-object v0, LX/3wj;->A00:LX/3wh;
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
+    .line 3
+    .line 4
+    invoke-direct {p0}, LX/3nV;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method

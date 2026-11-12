@@ -29,11 +29,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x19
+    const/16 v0, 0x18
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -92,7 +92,7 @@
     const/4 v0, 0x1
 
     .line 20
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 21
     .line 22
@@ -104,7 +104,7 @@
 
     .line 25
     .line 26
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 27
     .line 28
@@ -336,7 +336,7 @@
     move-result-object v0
 
     .line 57
-    invoke-static {v1, v0}, LX/0Yf;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0X3;->A1Z(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 58
     .line 59
@@ -385,46 +385,56 @@
 
     .line 14
     .line 15
-    invoke-static {v2, v0}, LX/0Yg;->A1L([Ljava/lang/Object;Z)V
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 16
     .line 17
     .line 18
-    iget-boolean v0, p0, Lcom/facebook/abtest/qe/protocol/sync/user/SyncQuickExperimentUserInfoResult;->A04:Z
+    move-result-object v1
 
     .line 19
+    const/4 v0, 0x2
+
     .line 20
-    invoke-static {v2, v0}, LX/0Yg;->A1M([Ljava/lang/Object;Z)V
+    aput-object v1, v2, v0
 
     .line 21
     .line 22
+    iget-boolean v0, p0, Lcom/facebook/abtest/qe/protocol/sync/user/SyncQuickExperimentUserInfoResult;->A04:Z
+
     .line 23
+    .line 24
+    invoke-static {v2, v0}, LX/0X5;->A1T([Ljava/lang/Object;Z)V
+
+    .line 25
+    .line 26
+    .line 27
     iget-object v1, p0, Lcom/facebook/abtest/qe/protocol/sync/user/SyncQuickExperimentUserInfoResult;->A03:Ljava/lang/String;
 
-    .line 24
-    .line 25
+    .line 28
+    .line 29
     const/4 v0, 0x4
 
-    .line 26
+    .line 30
     aput-object v1, v2, v0
 
-    .line 27
-    .line 28
+    .line 31
+    .line 32
     iget-object v1, p0, Lcom/facebook/abtest/qe/protocol/sync/user/SyncQuickExperimentUserInfoResult;->A00:Lcom/google/common/collect/ImmutableMap;
 
-    .line 29
-    .line 30
-    const/4 v0, 0x5
-
-    .line 31
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
-
-    .line 32
     .line 33
     .line 34
-    move-result v0
+    const/4 v0, 0x5
 
     .line 35
+    invoke-static {v1, v2, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v0
+
+    .line 39
     return v0
 .end method
 

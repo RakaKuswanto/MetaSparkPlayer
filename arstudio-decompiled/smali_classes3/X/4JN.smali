@@ -1,278 +1,365 @@
 .class public final LX/4JN;
-.super Ljava/lang/Object;
+.super LX/4JA;
 .source ""
-
-# interfaces
-.implements LX/4JU;
 
 
 # instance fields
-.field public A00:Landroid/animation/Animator;
+.field public isAttributionEnabled:Z
+
+.field public final sensorConsumption:Landroid/util/SparseArray;
+
+.field public final total:LX/4JM;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
+
+    .line 268435456
+    const/4 v0, 0x0
+
+    .line 268435457
+    invoke-direct {p0, v0}, LX/4JN;-><init>(Z)V
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    return-void
+.end method
+
+.method public constructor <init>(Z)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/4JA;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    new-instance v0, LX/4JM;
+
+    .line 4
+    .line 5
+    invoke-direct {v0}, LX/4JM;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    iput-object v0, p0, LX/4JN;->total:LX/4JM;
+
+    .line 9
+    .line 10
+    invoke-static {}, LX/434;->A0S()Landroid/util/SparseArray;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    iput-object v0, p0, LX/4JN;->sensorConsumption:Landroid/util/SparseArray;
+
+    .line 15
+    .line 16
+    iput-boolean p1, p0, LX/4JN;->isAttributionEnabled:Z
+
+    .line 17
+    .line 18
     return-void
 .end method
 
 
 # virtual methods
-.method public final APs()Z
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
     .line 0
-    iget-object v0, p0, LX/4JN;->A00:Landroid/animation/Animator;
+    const/4 v5, 0x1
 
     .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v1
-
-    .line 8
-    const/4 v0, 0x1
-
-    .line 9
-    if-nez v1, :cond_1
-
-    .line 10
-    .line 11
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 12
-    :cond_1
-    return v0
-.end method
-
-.method public final AX4(Landroid/view/View;LX/4JI;)V
-    .locals 7
-
-    .line 0
-    const/4 v5, 0x2
-
-    .line 1
-    new-array v1, v5, [F
+    if-eq p0, p1, :cond_1
 
     .line 2
     .line 3
-    fill-array-data v1, :array_0
+    const/4 v2, 0x0
 
     .line 4
+    if-eqz p1, :cond_3
+
     .line 5
     .line 6
-    const-string v0, "scaleX"
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
     .line 8
-    invoke-static {p1, v0, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
     .line 9
+    move-result-object v1
+
     .line 10
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     .line 11
-    move-result-object v4
-
     .line 12
-    const/16 v0, 0xc8
-
     .line 13
+    move-result-object v0
+
     .line 14
-    int-to-long v0, v0
+    if-ne v1, v0, :cond_3
 
     .line 15
-    invoke-virtual {v4, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
     .line 16
+    check-cast p1, LX/4JN;
+
     .line 17
     .line 18
-    sget-object v6, LX/4Ik;->EXPAND_COLLAPSE_OUT:LX/4Ik;
+    iget-boolean v1, p0, LX/4JN;->isAttributionEnabled:Z
 
     .line 19
     .line 20
-    iget-object v2, v6, LX/4Ik;->value:Landroid/view/animation/Interpolator;
+    iget-boolean v0, p1, LX/4JN;->isAttributionEnabled:Z
 
     .line 21
     .line 22
-    invoke-virtual {v4, v2}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    if-ne v1, v0, :cond_0
 
     .line 23
     .line 24
+    iget-object v1, p0, LX/4JN;->total:LX/4JM;
+
     .line 25
-    new-array v3, v5, [F
-
     .line 26
-    .line 27
-    fill-array-data v3, :array_1
+    iget-object v0, p1, LX/4JN;->total:LX/4JM;
 
+    .line 27
     .line 28
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
     .line 29
     .line 30
-    const-string v2, "scaleY"
-
     .line 31
+    move-result v0
+
     .line 32
-    invoke-static {p1, v2, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+    if-eqz v0, :cond_0
 
     .line 33
     .line 34
-    .line 35
-    move-result-object v3
+    iget-object v4, p0, LX/4JN;->sensorConsumption:Landroid/util/SparseArray;
 
+    .line 35
     .line 36
-    invoke-virtual {v3, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    iget-object v3, p1, LX/4JN;->sensorConsumption:Landroid/util/SparseArray;
 
     .line 37
     .line 38
+    if-eq v4, v3, :cond_1
+
     .line 39
-    iget-object v0, v6, LX/4Ik;->value:Landroid/view/animation/Interpolator;
-
     .line 40
-    .line 41
-    invoke-virtual {v3, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    if-eqz v4, :cond_0
 
+    .line 41
     .line 42
+    if-eqz v3, :cond_0
+
     .line 43
     .line 44
-    new-array v1, v5, [F
+    invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
 
     .line 45
     .line 46
-    fill-array-data v1, :array_2
-
     .line 47
-    .line 48
-    .line 49
-    const-string v0, "alpha"
+    move-result v1
 
+    .line 48
+    invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
+
+    .line 49
     .line 50
     .line 51
-    invoke-static {p1, v0, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+    move-result v0
 
     .line 52
+    if-eq v1, v0, :cond_2
+
     .line 53
     .line 54
-    move-result-object v6
+    :cond_0
+    const/4 v5, 0x0
 
     .line 55
-    const/16 v0, 0x64
+    :cond_1
+    return v5
 
     .line 56
+    :cond_2
+    :goto_0
+    invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
+
     .line 57
-    int-to-long v0, v0
-
     .line 58
-    invoke-virtual {v6, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
     .line 59
+    move-result v0
+
     .line 60
+    if-ge v2, v0, :cond_1
+
     .line 61
-    sget-object v0, LX/4Ik;->FADE_OUT:LX/4Ik;
-
     .line 62
-    .line 63
-    iget-object v0, v0, LX/4Ik;->value:Landroid/view/animation/Interpolator;
+    invoke-virtual {v4, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
+    .line 63
     .line 64
     .line 65
-    invoke-virtual {v6, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    move-result v0
 
     .line 66
+    invoke-virtual {v4, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
     .line 67
     .line 68
-    new-instance v2, Landroid/animation/AnimatorSet;
-
     .line 69
+    move-result-object v1
+
     .line 70
-    invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
+    invoke-virtual {v3, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     .line 71
     .line 72
     .line 73
-    const/4 v0, 0x3
+    move-result-object v0
 
     .line 74
-    new-array v0, v0, [Landroid/animation/Animator;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 75
     .line 76
-    invoke-static {v0, v4, v3}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 77
+    move-result v0
+
     .line 78
+    if-eqz v0, :cond_0
+
     .line 79
-    aput-object v6, v0, v5
-
     .line 80
+    add-int/lit8 v2, v2, 0x1
+
     .line 81
-    invoke-virtual {v2, v0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
-
     .line 82
+    goto :goto_0
+
     .line 83
-    .line 84
-    const/4 v1, 0x4
+    :cond_3
+    return v2
+.end method
 
-    .line 85
-    new-instance v0, LX/6Oh;
+.method public final hashCode()I
+    .locals 2
 
-    .line 86
-    .line 87
-    invoke-direct {v0, p2, v1, p0}, LX/6Oh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .line 0
+    iget-boolean v0, p0, LX/4JN;->isAttributionEnabled:Z
 
-    .line 88
-    .line 89
-    .line 90
-    invoke-virtual {v2, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    .line 1
+    .line 2
+    mul-int/lit8 v1, v0, 0x1f
 
-    .line 91
-    .line 92
-    .line 93
-    invoke-virtual {v2}, Landroid/animation/Animator;->start()V
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4JN;->total:LX/4JM;
 
-    .line 94
-    .line 95
-    .line 96
-    iput-object v2, p0, LX/4JN;->A00:Landroid/animation/Animator;
+    .line 5
+    .line 6
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
-    .line 97
-    .line 98
-    return-void
+    .line 7
+    .line 8
+    .line 9
+    move-result v1
 
-    .line 99
-    nop
+    .line 10
+    iget-object v0, p0, LX/4JN;->sensorConsumption:Landroid/util/SparseArray;
 
-    .line 100
-    :array_0
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
+    .line 11
+    .line 12
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
 
-    .line 101
-    .line 102
-    :array_1
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
 
-    :array_2
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
+    .line 16
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    const-string v0, "SensorMetrics{isAttributionEnabled="
+
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    iget-boolean v0, p0, LX/4JN;->isAttributionEnabled:Z
+
+    .line 10
+    .line 11
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 12
+    .line 13
+    .line 14
+    const-string v0, ", total="
+
+    .line 15
+    .line 16
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 17
+    .line 18
+    .line 19
+    iget-object v0, p0, LX/4JN;->total:LX/4JM;
+
+    .line 20
+    .line 21
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 22
+    .line 23
+    .line 24
+    const-string v0, ", sensorConsumption="
+
+    .line 25
+    .line 26
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 27
+    .line 28
+    .line 29
+    iget-object v0, p0, LX/4JN;->sensorConsumption:Landroid/util/SparseArray;
+
+    .line 30
+    .line 31
+    invoke-static {v0, v1}, LX/0X1;->A0O(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
+
+    .line 35
+    return-object v0
 .end method

@@ -1,25 +1,24 @@
-.class public final LX/5bz;
+.class public abstract LX/5bz;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/5b7;
+# static fields
+.field public static final A00:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/5b7;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/5bz;->A00:LX/5b7;
+    sget-object v0, LX/6aL;->COROUTINE_SUSPENDED:LX/6aL;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, LX/5bz;->A00:Ljava/lang/Object;
 
     .line 3
     .line 4
-    .line 5
     return-void
 .end method

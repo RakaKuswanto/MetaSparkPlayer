@@ -1,298 +1,235 @@
-.class public final LX/0Sc;
-.super LX/06N;
+.class public final LX/0SC;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MqttClient$6"
 
 
 # instance fields
-.field public final A00:LX/05s;
+.field public final synthetic A00:I
+
+.field public final synthetic A01:LX/0S2;
+
+.field public final synthetic A02:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(LX/4vZ;LX/05s;LX/06I;LX/06L;)V
-    .locals 1
+.method public constructor <init>(LX/0S2;Ljava/util/List;I)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    iput-object p1, p0, LX/0SC;->A01:LX/0S2;
 
     .line 1
-    invoke-static {p4, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    iput-object p2, p0, LX/0SC;->A02:Ljava/util/List;
+
     .line 3
     .line 4
-    const/4 v0, 0x2
+    iput p3, p0, LX/0SC;->A00:I
 
     .line 5
-    invoke-static {p3, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 7
     .line 8
-    invoke-virtual {p2}, LX/05s;->A03()Landroidx/fragment/app/Fragment;
-
     .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    invoke-direct {p0, p1, v0, p3, p4}, LX/06N;-><init>(LX/4vZ;Landroidx/fragment/app/Fragment;LX/06I;LX/06L;)V
-
-    .line 13
-    .line 14
-    .line 15
-    iput-object p2, p0, LX/0Sc;->A00:LX/05s;
-
-    .line 16
-    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01()V
-    .locals 1
+.method public final run()V
+    .locals 7
 
     .line 0
-    invoke-super {p0}, LX/06N;->A01()V
+    iget-object v4, p0, LX/0SC;->A01:LX/0S2;
 
     .line 1
     .line 2
-    .line 3
-    iget-object v0, p0, LX/0Sc;->A00:LX/05s;
-
-    .line 4
-    .line 5
-    invoke-virtual {v0}, LX/05s;->A06()V
-
-    .line 6
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public final A03()V
-    .locals 5
-
-    .line 0
-    iget-object v1, p0, LX/06N;->A00:LX/06I;
-
-    .line 1
-    .line 2
-    sget-object v0, LX/06I;->ADDING:LX/06I;
+    iget-object v6, p0, LX/0SC;->A02:Ljava/util/List;
 
     .line 3
     .line 4
-    if-ne v1, v0, :cond_4
+    iget v5, p0, LX/0SC;->A00:I
 
     .line 5
     .line 6
-    iget-object v4, p0, LX/0Sc;->A00:LX/05s;
+    :try_start_0
+    iget-object v0, v4, LX/0S2;->A0I:LX/0Rv;
 
     .line 7
     .line 8
-    invoke-virtual {v4}, LX/05s;->A03()Landroidx/fragment/app/Fragment;
+    iget v0, v0, LX/0Rv;->A03:I
 
     .line 9
     .line 10
-    .line 11
-    move-result-object v3
+    mul-int/lit16 v0, v0, 0x3e8
 
+    .line 11
     .line 12
-    iget-object v0, v3, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
+    int-to-long v0, v0
 
     .line 13
-    .line 14
-    invoke-virtual {v0}, Landroid/view/View;->findFocus()Landroid/view/View;
+    invoke-virtual {v4, v0, v1}, LX/0S2;->A04(J)V
 
+    .line 14
     .line 15
     .line 16
-    .line 17
-    move-result-object v0
+    iget-object v1, v4, LX/0S2;->A0d:LX/0Sa;
 
+    .line 17
     .line 18
-    if-eqz v0, :cond_0
+    sget-object v0, LX/0Sa;->CONNECTED:LX/0Sa;
 
     .line 19
     .line 20
-    invoke-virtual {v3, v0}, Landroidx/fragment/app/Fragment;->setFocusedView(Landroid/view/View;)V
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22
     .line 23
-    :cond_0
-    invoke-virtual {p0}, LX/06N;->A00()Landroidx/fragment/app/Fragment;
+    move-result v0
 
     .line 24
+    if-eqz v0, :cond_1
+
     .line 25
     .line 26
-    move-result-object v0
+    iget-object v3, v4, LX/0S2;->A0G:LX/0S0;
 
     .line 27
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->requireView()Landroid/view/View;
-
     .line 28
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
     .line 29
     .line 30
+    .line 31
     move-result-object v2
 
-    .line 31
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 32
+    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
     .line 33
     .line 34
-    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
     .line 35
+    move-result-object v1
+
     .line 36
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
     .line 37
-    move-result-object v0
-
     .line 38
-    const/4 v1, 0x0
-
     .line 39
-    if-nez v0, :cond_1
+    move-result v0
 
     .line 40
-    .line 41
-    invoke-virtual {v4}, LX/05s;->A04()V
+    if-eqz v0, :cond_0
 
+    .line 41
     .line 42
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 43
     .line 44
-    invoke-virtual {v2, v1}, Landroid/view/View;->setAlpha(F)V
-
     .line 45
-    .line 46
-    .line 47
-    :cond_1
-    invoke-virtual {v2}, Landroid/view/View;->getAlpha()F
+    move-result-object v0
 
+    .line 46
+    check-cast v0, Lcom/facebook/rti/mqtt/protocol/messages/SubscribeTopic;
+
+    .line 47
     .line 48
+    iget-object v0, v0, Lcom/facebook/rti/mqtt/protocol/messages/SubscribeTopic;->A01:Ljava/lang/String;
+
     .line 49
     .line 50
-    move-result v0
+    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 51
-    cmpg-float v0, v0, v1
-
     .line 52
     .line 53
-    if-nez v0, :cond_2
+    goto :goto_0
 
     .line 54
-    .line 55
-    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+    :cond_0
+    invoke-interface {v3, v2, v5}, LX/0S0;->AjR(Ljava/util/List;I)V
 
+    .line 55
     .line 56
     .line 57
-    .line 58
-    move-result v0
+    iget-object v0, v4, LX/0S2;->A0H:LX/0Ry;
 
+    .line 58
     .line 59
-    if-nez v0, :cond_2
+    invoke-interface {v0, v6, v5}, LX/0Ry;->AcF(Ljava/util/List;I)V
 
     .line 60
     .line 61
-    const/4 v0, 0x4
-
     .line 62
-    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
+    iget-object v2, v4, LX/0S2;->A0c:LX/0NR;
 
     .line 63
     .line 64
-    .line 65
-    :cond_2
-    invoke-virtual {v3}, Landroidx/fragment/app/Fragment;->getPostOnViewCreatedAlpha()F
+    if-eqz v2, :cond_1
 
+    .line 65
     .line 66
+    iget-object v0, v2, LX/0NR;->A02:LX/0TS;
+
     .line 67
     .line 68
-    move-result v0
+    iget-object v1, v0, LX/0TS;->A08:Landroid/os/Handler;
 
     .line 69
-    invoke-virtual {v2, v0}, Landroid/view/View;->setAlpha(F)V
-
     .line 70
+    new-instance v0, LX/0Tc;
+
     .line 71
     .line 72
-    :cond_3
-    return-void
+    invoke-direct {v0, v2}, LX/0Tc;-><init>(LX/0NR;)V
 
     .line 73
-    :cond_4
-    sget-object v0, LX/06I;->REMOVING:LX/06I;
-
     .line 74
     .line 75
-    if-ne v1, v0, :cond_3
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 76
     .line 77
-    iget-object v0, p0, LX/0Sc;->A00:LX/05s;
-
     .line 78
+    return-void
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 79
-    invoke-virtual {v0}, LX/05s;->A03()Landroidx/fragment/app/Fragment;
+    :catchall_0
+    move-exception v2
 
     .line 80
+    invoke-static {v2}, LX/0Rl;->getFromWriteException(Ljava/lang/Throwable;)LX/0Rl;
+
     .line 81
     .line 82
-    move-result-object v0
-
     .line 83
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->requireView()Landroid/view/View;
+    move-result-object v1
 
     .line 84
+    sget-object v0, LX/0Rr;->UNSUBSCRIBE:LX/0Rr;
+
     .line 85
     .line 86
-    move-result-object v2
+    invoke-static {v4, v0, v1, v2}, LX/0S2;->A03(LX/0S2;LX/0Rr;LX/0Rl;Ljava/lang/Throwable;)V
 
     .line 87
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 88
     .line 89
-    .line 90
-    const/4 v1, 0x2
-
-    .line 91
-    const-string v0, "FragmentManager"
-
-    .line 92
-    .line 93
-    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 94
-    .line 95
-    .line 96
-    move-result v0
-
-    .line 97
-    invoke-static {v0}, LX/001;->A1L(I)Z
-
-    .line 98
-    .line 99
-    .line 100
-    move-result v0
-
-    .line 101
-    if-eqz v0, :cond_5
-
-    .line 102
-    .line 103
-    invoke-virtual {v2}, Landroid/view/View;->findFocus()Landroid/view/View;
-
-    .line 104
-    .line 105
-    .line 106
-    :cond_5
-    invoke-virtual {v2}, Landroid/view/View;->clearFocus()V
-
-    .line 107
-    .line 108
-    .line 109
+    :cond_1
     return-void
 .end method

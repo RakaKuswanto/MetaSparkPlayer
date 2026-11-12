@@ -3,96 +3,102 @@
 .source ""
 
 # interfaces
-.implements LX/5eG;
+.implements LX/40R;
 
 
 # instance fields
-.field public final synthetic A00:LX/0Af;
+.field public A00:LX/3Z4;
 
-.field public final synthetic A01:LX/0Gk;
-
-.field public final synthetic A02:LX/0JB;
-
-.field public final synthetic A03:Lcom/facebook/quicklog/QuickPerformanceLogger;
-
-.field public final synthetic A04:LX/3ps;
+.field public A01:LX/3ti;
 
 
 # direct methods
-.method public constructor <init>(LX/0Af;LX/0Gk;LX/0JB;Lcom/facebook/quicklog/QuickPerformanceLogger;LX/3ps;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p5, p0, LX/3th;->A04:LX/3ps;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p4, p0, LX/3th;->A03:Lcom/facebook/quicklog/QuickPerformanceLogger;
-
     .line 3
+    new-instance v0, LX/3ti;
+
     .line 4
-    iput-object p2, p0, LX/3th;->A01:LX/0Gk;
-
     .line 5
-    .line 6
-    iput-object p3, p0, LX/3th;->A02:LX/0JB;
+    invoke-direct {v0}, LX/3ti;-><init>()V
 
+    .line 6
     .line 7
     .line 8
-    iput-object p1, p0, LX/3th;->A00:LX/0Af;
+    iput-object v0, p0, LX/3th;->A01:LX/3ti;
 
     .line 9
     .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 11
-    .line 12
-    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final AFj()LX/0Gk;
-    .locals 1
+.method public final AgX(LX/3Z7;)Z
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/3th;->A01:LX/0Gk;
+    iget-object v0, p0, LX/3th;->A00:LX/3Z4;
 
     .line 1
     .line 2
-    return-object v0
-.end method
+    const/4 v3, 0x1
 
-.method public final AIy()LX/0JB;
-    .locals 1
+    .line 3
+    if-nez v0, :cond_1
 
-    .line 0
-    iget-object v0, p0, LX/3th;->A02:LX/0JB;
+    .line 4
+    .line 5
+    iget-object v2, p0, LX/3th;->A01:LX/3ti;
 
-    .line 1
-    .line 2
-    return-object v0
-.end method
+    .line 6
+    .line 7
+    new-array v1, v3, [LX/3Z7;
 
-.method public final AKj()Lcom/facebook/quicklog/QuickPerformanceLogger;
-    .locals 1
+    .line 8
+    .line 9
+    const/4 v0, 0x0
 
-    .line 0
-    iget-object v0, p0, LX/3th;->A03:Lcom/facebook/quicklog/QuickPerformanceLogger;
+    .line 10
+    aput-object p1, v1, v0
 
-    .line 1
-    .line 2
-    return-object v0
-.end method
+    .line 11
+    .line 12
+    aget-object v1, v1, v0
 
-.method public final ANT()LX/0Af;
-    .locals 1
+    .line 13
+    .line 14
+    if-eqz v1, :cond_0
 
-    .line 0
-    iget-object v0, p0, LX/3th;->A00:LX/0Af;
+    .line 15
+    .line 16
+    iget-object v0, v2, LX/3ti;->A01:Ljava/util/List;
 
-    .line 1
-    .line 2
-    return-object v0
+    .line 17
+    .line 18
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 19
+    .line 20
+    .line 21
+    :cond_0
+    return v3
+
+    .line 22
+    :cond_1
+    invoke-virtual {v0, p1}, LX/24Z;->A04(LX/24a;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v3
+
+    .line 26
+    return v3
 .end method

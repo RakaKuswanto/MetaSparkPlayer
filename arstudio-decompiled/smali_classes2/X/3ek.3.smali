@@ -1,116 +1,84 @@
-.class public final LX/3ek;
-.super Ljava/lang/Object;
+.class public abstract LX/3ek;
+.super LX/3eo;
 .source ""
 
 
 # instance fields
-.field public A00:Ljava/lang/Integer;
+.field public A00:I
 
-.field public A01:Ljava/lang/String;
+.field public A01:I
 
-.field public A02:Ljava/lang/String;
+.field public A02:I
 
-.field public A03:Ljava/lang/String;
-
-.field public A04:LX/1zG;
-
-.field public final A05:LX/0Na;
-
-.field public final A06:LX/0Na;
-
-.field public final A07:LX/0Na;
-
-.field public final A08:LX/0Na;
+.field public A03:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIZZ)V
+    .locals 7
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v1, p0
 
     .line 1
+    move-object v2, p1
+
     .line 2
+    move-object v3, p2
+
     .line 3
-    sget v0, LX/2eq;->AVL:I
+    move-object v4, p3
 
     .line 4
+    move-object v5, p4
+
     .line 5
-    const/4 v1, 0x0
+    move v6, p8
 
     .line 6
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    invoke-direct/range {v1 .. v6}, LX/3eo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
+    const/4 v0, -0x1
 
     .line 10
-    iput-object v0, p0, LX/3ek;->A05:LX/0Na;
+    iput v0, p0, LX/3ek;->A01:I
 
     .line 11
     .line 12
-    invoke-static {}, LX/0Zq;->A0D()LX/0Zq;
+    iput v0, p0, LX/3ek;->A00:I
 
     .line 13
     .line 14
-    .line 15
-    move-result-object v0
+    iput-object p1, p0, LX/3eo;->A02:Ljava/lang/String;
 
+    .line 15
     .line 16
-    iput-object v0, p0, LX/3ek;->A06:LX/0Na;
+    iput-object p2, p0, LX/3eo;->A03:Ljava/lang/String;
 
     .line 17
     .line 18
-    sget v0, LX/2eq;->ANi:I
+    iput p5, p0, LX/3ek;->A02:I
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    move/from16 v0, p9
 
     .line 21
     .line 22
-    .line 23
-    move-result-object v0
+    iput-boolean v0, p0, LX/3ek;->A03:Z
 
+    .line 23
     .line 24
-    iput-object v0, p0, LX/3ek;->A07:LX/0Na;
+    iput p6, p0, LX/3ek;->A01:I
 
     .line 25
     .line 26
-    sget v0, LX/2eq;->AVM:I
+    iput p7, p0, LX/3ek;->A00:I
 
     .line 27
     .line 28
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    iput-object v0, p0, LX/3ek;->A08:LX/0Na;
-
-    .line 33
-    .line 34
-    iput-object v1, p0, LX/3ek;->A00:Ljava/lang/Integer;
-
-    .line 35
-    .line 36
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    iput-object v0, p0, LX/3ek;->A04:LX/1zG;
-
-    .line 41
-    .line 42
     return-void
 .end method

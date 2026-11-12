@@ -11,7 +11,13 @@
 
 
 # instance fields
-.field public final A00:Ljava/util/ArrayList;
+.field public final A00:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "defaultSelection"
+    .end annotation
+.end field
+
+.field public final A01:Ljava/util/ArrayList;
     .annotation runtime Lcom/google/gson/annotations/SerializedName;
         value = "shippingOptionList"
     .end annotation
@@ -25,34 +31,19 @@
     .end annotation
 .end field
 
-.field public final A01:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "defaultSelection"
-    .end annotation
-.end field
-
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    .line 0
-    const/16 v0, 0x2d
+    const/4 v1, 0x4
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    new-instance v0, LX/51p;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    invoke-direct {v0, v1}, LX/51p;-><init>(I)V
 
-    .line 6
     sput-object v0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 7
-    .line 8
     return-void
 .end method
 
@@ -65,11 +56,11 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->A01:Ljava/lang/String;
+    iput-object p1, p0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->A00:Ljava/lang/String;
 
     .line 4
     .line 5
-    iput-object p2, p0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->A00:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->A01:Ljava/util/ArrayList;
 
     .line 6
     .line 7
@@ -89,69 +80,43 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 0
     const/4 v0, 0x0
 
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    .line 2
-    .line 3
-    .line 4
-    iget-object v0, p0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->A01:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->A00:Ljava/lang/String;
 
-    .line 5
-    .line 6
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 7
-    .line 8
-    .line 9
-    iget-object v0, p0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->A00:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/facebookpay/expresscheckout/models/ShippingOptions;->A01:Ljava/util/ArrayList;
 
-    .line 10
-    .line 11
-    invoke-static {p1, v0}, LX/0Yg;->A0x(Landroid/os/Parcel;Ljava/util/AbstractCollection;)Ljava/util/Iterator;
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
 
-    .line 12
-    .line 13
-    .line 14
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
     move-result-object v1
 
-    .line 15
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 16
-    .line 17
-    .line 18
     move-result v0
 
-    .line 19
     if-eqz v0, :cond_0
 
-    .line 20
-    .line 21
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 22
-    .line 23
-    .line 24
     move-result-object v0
 
-    .line 25
     check-cast v0, Lcom/facebookpay/expresscheckout/models/ShippingOption;
 
-    .line 26
-    .line 27
     invoke-virtual {v0, p1, p2}, Lcom/facebookpay/expresscheckout/models/ShippingOption;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 28
-    .line 29
-    .line 30
     goto :goto_0
 
-    .line 31
     :cond_0
     return-void
 .end method

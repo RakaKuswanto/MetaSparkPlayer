@@ -1,14 +1,46 @@
-.class public interface abstract LX/03i;
+.class public abstract LX/03i;
 .super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A00:LX/03i;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/01n;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/01n;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/03i;->A00:LX/03i;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract AUk(Landroid/view/View;)V
-.end method
-
-.method public abstract AUl(Landroid/view/View;)V
-.end method
-
-.method public abstract AUm(Landroid/view/View;)V
+.method public abstract A00(Landroid/content/Context;Landroid/content/Intent;LX/01U;Ljava/lang/Object;)Z
 .end method

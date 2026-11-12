@@ -1,96 +1,71 @@
 .class public final LX/3g0;
-.super LX/4wp;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AutoDismissDialogFragment"
-
-
 # instance fields
-.field public A00:Landroid/app/Dialog;
+.field public A00:J
+
+.field public A01:J
+
+.field public A02:J
+
+.field public A03:J
+
+.field public A04:J
+
+.field public A05:J
+
+.field public A06:J
+
+.field public A07:J
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0}, LX/4wp;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/app/Dialog;)V
-    .locals 0
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/4wp;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3g0;->A00:Landroid/app/Dialog;
+    const-wide/16 v0, -0x1
 
     .line 4
     .line 5
-    return-void
-.end method
+    iput-wide v0, p0, LX/3g0;->A05:J
 
-
-# virtual methods
-.method public final A0J(Landroid/os/Bundle;)Landroid/app/Dialog;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3g0;->A00:Landroid/app/Dialog;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-virtual {p0}, LX/02T;->A0D()V
-
-    .line 5
     .line 6
     .line 7
-    invoke-super {p0, p1}, LX/02T;->A0J(Landroid/os/Bundle;)Landroid/app/Dialog;
+    iput-wide v0, p0, LX/3g0;->A02:J
 
     .line 8
     .line 9
+    iput-wide v0, p0, LX/3g0;->A07:J
+
     .line 10
-    move-result-object v0
-
     .line 11
-    :cond_0
-    return-object v0
-.end method
+    iput-wide v0, p0, LX/3g0;->A04:J
 
-.method public final onPause()V
-    .locals 1
+    .line 12
+    .line 13
+    iput-wide v0, p0, LX/3g0;->A06:J
 
-    .line 0
-    invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
+    .line 14
+    .line 15
+    iput-wide v0, p0, LX/3g0;->A03:J
 
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0}, LX/02T;->A0D()V
+    .line 16
+    .line 17
+    iput-wide v0, p0, LX/3g0;->A00:J
 
-    .line 4
-    .line 5
-    .line 6
-    const/4 v0, 0x0
+    .line 18
+    .line 19
+    iput-wide v0, p0, LX/3g0;->A01:J
 
-    .line 7
-    iput-object v0, p0, LX/3g0;->A00:Landroid/app/Dialog;
-
-    .line 8
-    .line 9
+    .line 20
+    .line 21
     return-void
 .end method

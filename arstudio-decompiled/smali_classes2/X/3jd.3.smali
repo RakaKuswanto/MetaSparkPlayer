@@ -1,272 +1,212 @@
-.class public final LX/3jd;
-.super Ljava/lang/Object;
+.class public final enum LX/3jd;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/2eR;
+
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/3jd;
+
+.field public static final Companion:LX/3l5;
+
+.field public static final enum MOBILE:LX/3jd;
+
+.field public static final enum TABLET:LX/3jd;
 
 
 # instance fields
-.field public final A00:Ljava/util/Map;
+.field public final value:Ljava/lang/String;
 
 
 # direct methods
-.method public varargs constructor <init>([Ljava/security/cert/X509Certificate;)V
-    .locals 6
+.method public static final synthetic $values()[LX/3jd;
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/0Yj;->A0b()Ljava/util/LinkedHashMap;
+    new-array v2, v0, [LX/3jd;
 
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
+    sget-object v1, LX/3jd;->TABLET:LX/3jd;
 
-    .line 7
-    iput-object v0, p0, LX/3jd;->A00:Ljava/util/Map;
+    const/4 v0, 0x0
 
-    .line 8
-    .line 9
-    array-length v5, p1
+    aput-object v1, v2, v0
 
-    .line 10
-    const/4 v4, 0x0
+    sget-object v1, LX/3jd;->MOBILE:LX/3jd;
 
-    .line 11
-    :goto_0
-    if-ge v4, v5, :cond_1
-
-    .line 12
-    .line 13
-    aget-object v3, p1, v4
-
-    .line 14
-    .line 15
-    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v2
-
-    .line 19
-    iget-object v0, p0, LX/3jd;->A00:Ljava/util/Map;
-
-    .line 20
-    .line 21
-    invoke-static {v2, v0}, LX/0Yi;->A13(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/Set;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v1
-
-    .line 25
-    if-nez v1, :cond_0
-
-    .line 26
-    .line 27
     const/4 v0, 0x1
 
-    .line 28
-    new-instance v1, Ljava/util/LinkedHashSet;
+    aput-object v1, v2, v0
 
-    .line 29
-    .line 30
-    invoke-direct {v1, v0}, Ljava/util/LinkedHashSet;-><init>(I)V
-
-    .line 31
-    .line 32
-    .line 33
-    iget-object v0, p0, LX/3jd;->A00:Ljava/util/Map;
-
-    .line 34
-    .line 35
-    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 36
-    .line 37
-    .line 38
-    :cond_0
-    invoke-interface {v1, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 39
-    .line 40
-    .line 41
-    add-int/lit8 v4, v4, 0x1
-
-    .line 42
-    .line 43
-    goto :goto_0
-
-    .line 44
-    :cond_1
-    return-void
+    return-object v2
 .end method
 
-
-# virtual methods
-.method public final AAS(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
+.method public static constructor <clinit>()V
     .locals 4
 
     .line 0
-    invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
+    const-string v3, "TABLET"
 
     .line 1
     .line 2
+    const/4 v2, 0x0
+
     .line 3
-    move-result-object v1
+    const-string/jumbo v1, "tablet"
 
     .line 4
-    iget-object v0, p0, LX/3jd;->A00:Ljava/util/Map;
-
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/0Yi;->A13(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/Set;
+    new-instance v0, LX/3jd;
 
     .line 7
     .line 8
+    invoke-direct {v0, v3, v2, v1}, LX/3jd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 9
-    move-result-object v0
-
     .line 10
-    const/4 v3, 0x0
-
     .line 11
-    if-eqz v0, :cond_0
+    sput-object v0, LX/3jd;->TABLET:LX/3jd;
 
     .line 12
     .line 13
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const-string v3, "MOBILE"
 
     .line 14
     .line 15
+    const/4 v2, 0x1
+
     .line 16
-    move-result-object v2
+    const-string/jumbo v1, "mobile"
 
     .line 17
-    :catch_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
     .line 18
     .line 19
-    .line 20
-    move-result v0
+    new-instance v0, LX/3jd;
 
+    .line 20
     .line 21
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v3, v2, v1}, LX/3jd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 22
     .line 23
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 24
+    sput-object v0, LX/3jd;->MOBILE:LX/3jd;
+
     .line 25
     .line 26
-    move-result-object v1
+    invoke-static {}, LX/3jd;->$values()[LX/3jd;
 
     .line 27
-    check-cast v1, Ljava/security/cert/X509Certificate;
-
     .line 28
     .line 29
-    invoke-virtual {v1}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
-
-    .line 30
-    .line 31
-    .line 32
     move-result-object v0
 
-    .line 33
-    :try_start_0
-    invoke-virtual {p1, v0}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    .line 30
+    sput-object v0, LX/3jd;->$VALUES:[LX/3jd;
 
+    .line 31
+    .line 32
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 33
     .line 34
     .line 35
+    move-result-object v0
+
     .line 36
-    return-object v1
+    sput-object v0, LX/3jd;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
     .line 37
-    :cond_0
-    return-object v3
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .line 38
+    new-instance v0, LX/3l5;
+
+    .line 39
+    .line 40
+    invoke-direct {v0}, LX/3l5;-><init>()V
+
+    .line 41
+    .line 42
+    .line 43
+    sput-object v0, LX/3jd;->Companion:LX/3l5;
+
+    .line 44
+    .line 45
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
     .line 0
-    const/4 v2, 0x1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
-    if-eq p1, p0, :cond_0
-
     .line 2
     .line 3
-    instance-of v0, p1, LX/3jd;
+    iput-object p3, p0, LX/3jd;->value:Ljava/lang/String;
 
     .line 4
     .line 5
-    if-eqz v0, :cond_1
+    return-void
+.end method
+
+.method public static final getDeviceType(Z)LX/3jd;
+    .locals 0
+
+    .line 0
+    if-eqz p0, :cond_0
+
+    .line 1
+    .line 2
+    sget-object p0, LX/3jd;->TABLET:LX/3jd;
+
+    .line 3
+    .line 4
+    return-object p0
+
+    .line 5
+    :cond_0
+    sget-object p0, LX/3jd;->MOBILE:LX/3jd;
 
     .line 6
     .line 7
-    check-cast p1, LX/3jd;
-
-    .line 8
-    .line 9
-    iget-object v1, p1, LX/3jd;->A00:Ljava/util/Map;
-
-    .line 10
-    .line 11
-    iget-object v0, p0, LX/3jd;->A00:Ljava/util/Map;
-
-    .line 12
-    .line 13
-    invoke-interface {v1, v0}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    if-eqz v0, :cond_1
-
-    .line 18
-    .line 19
-    :cond_0
-    return v2
-
-    .line 20
-    :cond_1
-    const/4 v2, 0x0
-
-    .line 21
-    return v2
+    return-object p0
 .end method
 
-.method public final hashCode()I
+.method public static getEntries()Lkotlin/enums/EnumEntries;
     .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/3jd;->A00:Ljava/util/Map;
+    sget-object v0, LX/3jd;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 1
-    .line 2
-    invoke-interface {v0}, Ljava/util/Map;->hashCode()I
+    return-object v0
+.end method
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+.method public static valueOf(Ljava/lang/String;)LX/3jd;
+    .locals 1
 
-    .line 6
-    return v0
+    const-class v0, LX/3jd;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/3jd;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/3jd;
+    .locals 1
+
+    sget-object v0, LX/3jd;->$VALUES:[LX/3jd;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/3jd;
+
+    return-object v0
 .end method

@@ -3,11 +3,55 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">Səhifədə %1$s bəyənmə reaksiyası</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s Bəyənmə</item>
-        <item quantity="one">%1$s bəyənmə</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d gün əvvəl</item>
+        <item quantity="one">1 gün əvvəl</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d gün</item>
+        <item quantity="one">1 gün</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d gün</item>
+        <item quantity="one">1 gün</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d dəqiqə</item>
+        <item quantity="one">1 dəqiqə</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d ay</item>
+        <item quantity="one">1 ay</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d həftə</item>
+        <item quantity="one">1 həftə</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d il</item>
+        <item quantity="one">1 il</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d saat əvvəl</item>
+        <item quantity="one">1 saat əvvəl</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d saat əvvəl</item>
         <item quantity="one">1 saat əvvəl</item>
     </plurals>
@@ -19,8 +63,60 @@
         <item quantity="other">%1$d dəqiqə sonra</item>
         <item quantity="one">1 dəqiqə sonra</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d dəq əvvəl</item>
+        <item quantity="one">1 dəq əvvəl</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d dəqiqə əvvəl</item>
         <item quantity="one">1 dəqiqə əvvəl</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d dəq</item>
+        <item quantity="one">1 dəq</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d dəq.</item>
+        <item quantity="one">1 dəq.</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d ay əvvəl</item>
+        <item quantity="one">1 ay əvvəl</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d saniyə əvvəl</item>
+        <item quantity="one">1 saniyə</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d həftə əvvəl</item>
+        <item quantity="one">1 həftə əvvəl</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d il əvvəl</item>
+        <item quantity="one">1 il əvvəl</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">%1$d gün əvvəl daxil olmusunuz</item>
+        <item quantity="one">1 gün əvvəl daxil olmusunuz</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">%1$d saat əvvəl daxil olmusunuz</item>
+        <item quantity="one">1 saat əvvəl daxil olmusunuz</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">%1$d dəqiqə əvvəl daxil olmusunuz</item>
+        <item quantity="one">1 dəqiqə əvvəl daxil olmusunuz</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">%1$d ay əvvəl daxil olmusunuz</item>
+        <item quantity="one">1 ay əvvəl daxil olmusunuz</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">%1$d həftə əvvəl daxil olmusunuz</item>
+        <item quantity="one">1 həftə əvvəl daxil olmusunuz</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">%1$d il əvvəl daxil olmusunuz</item>
+        <item quantity="one">1 il əvvəl daxil olmusunuz</item>
     </plurals>
 </resources>

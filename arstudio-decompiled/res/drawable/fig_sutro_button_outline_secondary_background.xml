@@ -11,14 +11,14 @@
         <shape>
             <corners android:radius="4.0dip" />
             <solid android:color="@color/cds_black_a05" />
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="@color/fds_gray_55" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="@color/fds_gray_55" />
         </shape>
     </item>
     <item>
         <shape>
             <corners android:radius="4.0dip" />
             <solid android:color="@color/fbui_transparent" />
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="@color/fds_gray_55" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="@color/fds_gray_55" />
         </shape>
     </item>
 </selector>

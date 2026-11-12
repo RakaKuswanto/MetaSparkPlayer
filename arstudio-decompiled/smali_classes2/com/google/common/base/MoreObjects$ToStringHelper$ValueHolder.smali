@@ -1,4 +1,4 @@
-.class public final Lcom/google/common/base/MoreObjects$ToStringHelper$ValueHolder;
+.class public Lcom/google/common/base/MoreObjects$ToStringHelper$ValueHolder;
 .super Ljava/lang/Object;
 .source ""
 

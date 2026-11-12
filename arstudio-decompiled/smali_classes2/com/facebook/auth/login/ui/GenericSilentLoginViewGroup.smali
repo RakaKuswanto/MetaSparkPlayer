@@ -8,11 +8,11 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/3H4;)V
+.method public constructor <init>(Landroid/content/Context;LX/32w;)V
     .locals 2
 
     .line 0
-    invoke-direct {p0, p1, p2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;-><init>(Landroid/content/Context;LX/3H4;)V
+    invoke-direct {p0, p1, p2}, Lcom/facebook/auth/login/ui/AuthFragmentViewGroup;-><init>(Landroid/content/Context;LX/32w;)V
 
     .line 1
     .line 2
@@ -37,7 +37,7 @@
 
     .line 12
     .line 13
-    invoke-virtual {p0, v0}, LX/4QS;->setContentView(I)V
+    invoke-virtual {p0, v0}, LX/3h6;->setContentView(I)V
 
     .line 14
     .line 15
@@ -50,7 +50,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2

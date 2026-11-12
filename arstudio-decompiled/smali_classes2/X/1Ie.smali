@@ -1,56 +1,43 @@
-.class public final LX/1Ie;
-.super LX/1Bn;
+.class public final LX/1iE;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/1Iv;
+
+# instance fields
+.field public A00:LX/14j;
+
+.field public A01:LX/1iD;
+
+.field public A02:LX/1iD;
+
+.field public A03:LX/1iD;
 
 
 # direct methods
-.method public constructor <init>(I[I)V
+.method public constructor <init>(LX/14j;LX/1iD;LX/1iD;LX/1iD;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput-object p1, p0, LX/1iE;->A00:LX/14j;
 
-
-# virtual methods
-.method public final A5g()LX/1M3;
-    .locals 3
-
-    .line 0
-    const-class v2, LX/1IY;
-
-    .line 1
-    .line 2
-    const v1, -0xc0661aa
-
-    .line 3
     .line 4
     .line 5
-    const v0, -0x78790008
+    iput-object p2, p0, LX/1iE;->A02:LX/1iD;
 
     .line 6
     .line 7
-    .line 8
-    invoke-virtual {p0, v1, v2, v0}, LX/1Bn;->getCachedReinterpret(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
+    iput-object p3, p0, LX/1iE;->A01:LX/1iD;
 
+    .line 8
     .line 9
+    iput-object p4, p0, LX/1iE;->A03:LX/1iD;
+
     .line 10
     .line 11
-    move-result-object v0
-
-    .line 12
-    check-cast v0, LX/1M3;
-
-    .line 13
-    .line 14
-    return-object v0
+    return-void
 .end method

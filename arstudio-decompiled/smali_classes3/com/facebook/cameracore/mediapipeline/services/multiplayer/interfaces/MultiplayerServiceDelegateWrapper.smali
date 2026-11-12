@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final Companion:LX/5Tz;
+.field public static final Companion:LX/6AJ;
 
 
 # instance fields
-.field public final delegate:LX/5U3;
+.field public final delegate:LX/6BA;
 
 
 # direct methods
@@ -16,23 +16,23 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5Tz;
+    new-instance v0, LX/6AJ;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5Tz;-><init>()V
+    invoke-direct {v0}, LX/6AJ;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/multiplayer/interfaces/MultiplayerServiceDelegateWrapper;->Companion:LX/5Tz;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/multiplayer/interfaces/MultiplayerServiceDelegateWrapper;->Companion:LX/6AJ;
 
     .line 6
     .line 7
     return-void
 .end method
 
-.method public constructor <init>(LX/5U3;)V
+.method public constructor <init>(LX/6BA;)V
     .locals 0
 
     .line 0
@@ -41,7 +41,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/multiplayer/interfaces/MultiplayerServiceDelegateWrapper;->delegate:LX/5U3;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/multiplayer/interfaces/MultiplayerServiceDelegateWrapper;->delegate:LX/6BA;
 
     .line 4
     .line 5
@@ -65,7 +65,7 @@
 
     .line 4
     .line 5
-    invoke-static {v4}, LX/0Yj;->A0X(I)Ljava/util/HashMap;
+    invoke-static {v4}, LX/0X7;->A0b(I)Ljava/util/HashMap;
 
     .line 6
     .line 7
@@ -107,7 +107,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 25
     .line 26
@@ -142,7 +142,7 @@
     .locals 0
 
     .line 0
-    invoke-static {p1, p2}, LX/0PS;->A09(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
@@ -154,7 +154,7 @@
     .locals 0
 
     .line 0
-    invoke-static {p1, p2}, LX/0PS;->A09(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2

@@ -19,13 +19,41 @@
 
 # virtual methods
 .method public abstract doEquivalent(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "a",
+            "b"
+        }
+    .end annotation
 .end method
 
 .method public abstract doHash(Ljava/lang/Object;)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "t"
+        }
+    .end annotation
 .end method
 
 .method public final equivalent(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "a",
+            "b"
+        }
+    .end annotation
 
     .line 0
     if-ne p1, p2, :cond_0

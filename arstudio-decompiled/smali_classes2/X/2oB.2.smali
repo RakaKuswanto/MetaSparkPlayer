@@ -1,14 +1,14 @@
-.class public final LX/2oB;
-.super LX/2oD;
+.class public final LX/2ob;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>([I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/2oD;-><init>([I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

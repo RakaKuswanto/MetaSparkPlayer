@@ -1,100 +1,299 @@
 .class public final LX/0KP;
-.super LX/0Du;
+.super LX/0U4;
 .source ""
 
 
+# instance fields
+.field public A00:J
+
+.field public A01:J
+
+.field public A02:J
+
+.field public A03:J
+
+.field public A04:J
+
+.field public A05:J
+
+.field public A06:Ljava/lang/String;
+
+.field public A07:Ljava/lang/String;
+
+.field public A08:Ljava/lang/String;
+
+.field public A09:Ljava/lang/String;
+
+.field public A0A:Z
+
+.field public A0B:Z
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, LX/0Du;-><init>()V
+    const-string v1, "fbns_push_notification_lifecycle"
 
     .line 1
     .line 2
+    move-object v0, p0
+
     .line 3
+    move-object v2, p2
+
+    .line 4
+    move-object v3, p3
+
+    .line 5
+    move-object v4, p4
+
+    .line 6
+    move-object v5, p5
+
+    .line 7
+    invoke-direct/range {v0 .. v5}, LX/0U4;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    iput-object p1, p0, LX/0KP;->A08:Ljava/lang/String;
+
+    .line 11
+    .line 12
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()Ljava/lang/Class;
-    .locals 1
-
-    .line 0
-    const-class v0, Ljava/lang/String;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final bridge synthetic A01(Landroid/content/SharedPreferences;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    check-cast p2, Ljava/lang/String;
-
-    .line 1
-    .line 2
-    invoke-interface {p1, p3, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final bridge synthetic A02(Landroid/os/Bundle;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    check-cast p2, Ljava/lang/String;
-
-    .line 1
-    .line 2
-    invoke-virtual {p1, p3, p2}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final bridge synthetic A03(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;Ljava/lang/Object;)V
+.method public final A02(Ljava/lang/String;)LX/0U4;
     .locals 0
 
-    .line 0
-    check-cast p3, Ljava/lang/String;
-
-    .line 1
-    .line 2
-    invoke-interface {p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+    return-object p0
 .end method
 
-.method public final bridge synthetic A04(Landroid/os/Bundle;Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
+.method public final A03()Lorg/json/JSONObject;
+    .locals 5
 
     .line 0
-    check-cast p2, Ljava/lang/String;
+    invoke-static {}, LX/002;->A0D()Lorg/json/JSONObject;
 
     .line 1
     .line 2
-    invoke-virtual {p1, p3, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 3
+    move-result-object v3
+
     .line 4
+    :try_start_0
+    invoke-static {p0, v3}, LX/0U4;->A00(LX/0U4;Lorg/json/JSONObject;)V
+
     .line 5
-    return-void
+    .line 6
+    .line 7
+    invoke-static {}, LX/002;->A0D()Lorg/json/JSONObject;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v4
+
+    .line 11
+    const-string v1, "event"
+
+    .line 12
+    .line 13
+    iget-object v0, p0, LX/0KP;->A08:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    invoke-virtual {v4, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 16
+    .line 17
+    .line 18
+    const-string v1, "pnid"
+
+    .line 19
+    .line 20
+    iget-object v0, p0, LX/0KP;->A09:Ljava/lang/String;
+
+    .line 21
+    .line 22
+    invoke-virtual {v4, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 23
+    .line 24
+    .line 25
+    const-string v1, "dpn"
+
+    .line 26
+    .line 27
+    iget-object v0, p0, LX/0KP;->A07:Ljava/lang/String;
+
+    .line 28
+    .line 29
+    invoke-virtual {v4, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 30
+    .line 31
+    .line 32
+    const-string v1, "ctnr"
+
+    .line 33
+    .line 34
+    iget-object v0, p0, LX/0U4;->A04:Ljava/lang/String;
+
+    .line 35
+    .line 36
+    invoke-virtual {v4, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 37
+    .line 38
+    .line 39
+    const-string v1, "exc"
+
+    .line 40
+    .line 41
+    iget-object v0, p0, LX/0KP;->A06:Ljava/lang/String;
+
+    .line 42
+    .line 43
+    invoke-virtual {v4, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 44
+    .line 45
+    .line 46
+    const-string v2, "d_delay_ms"
+
+    .line 47
+    .line 48
+    iget-wide v0, p0, LX/0KP;->A00:J
+
+    .line 49
+    .line 50
+    invoke-virtual {v4, v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 51
+    .line 52
+    .line 53
+    const-string v1, "scn_on"
+
+    .line 54
+    .line 55
+    iget-boolean v0, p0, LX/0KP;->A0B:Z
+
+    .line 56
+    .line 57
+    invoke-virtual {v4, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    .line 58
+    .line 59
+    .line 60
+    const-string v2, "s_boot"
+
+    .line 61
+    .line 62
+    iget-wide v0, p0, LX/0KP;->A01:J
+
+    .line 63
+    .line 64
+    invoke-virtual {v4, v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 65
+    .line 66
+    .line 67
+    const-string v2, "s_mqtt"
+
+    .line 68
+    .line 69
+    iget-wide v0, p0, LX/0KP;->A02:J
+
+    .line 70
+    .line 71
+    invoke-virtual {v4, v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 72
+    .line 73
+    .line 74
+    const-string v2, "s_net"
+
+    .line 75
+    .line 76
+    iget-wide v0, p0, LX/0KP;->A03:J
+
+    .line 77
+    .line 78
+    invoke-virtual {v4, v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 79
+    .line 80
+    .line 81
+    const-string v2, "s_scn"
+
+    .line 82
+    .line 83
+    iget-wide v0, p0, LX/0KP;->A04:J
+
+    .line 84
+    .line 85
+    invoke-virtual {v4, v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 86
+    .line 87
+    .line 88
+    const-string v2, "s_svc"
+
+    .line 89
+    .line 90
+    iget-wide v0, p0, LX/0KP;->A05:J
+
+    .line 91
+    .line 92
+    invoke-virtual {v4, v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 93
+    .line 94
+    .line 95
+    iget-boolean v0, p0, LX/0KP;->A0A:Z
+
+    .line 96
+    .line 97
+    invoke-static {p0, v4, v0}, LX/0U4;->A01(LX/0U4;Lorg/json/JSONObject;Z)V
+
+    .line 98
+    .line 99
+    .line 100
+    const-string v0, "extra"
+
+    .line 101
+    .line 102
+    invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 103
+    .line 104
+    .line 105
+    return-object v3
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 106
+    :catch_0
+    move-exception v2
+
+    .line 107
+    const-string v1, "FbnsNotifLifecycleEvent"
+
+    .line 108
+    .line 109
+    const-string v0, "Failed to serialize"
+
+    .line 110
+    .line 111
+    invoke-static {v1, v0, v2}, LX/0Il;->A0I(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 112
+    .line 113
+    .line 114
+    return-object v3
 .end method

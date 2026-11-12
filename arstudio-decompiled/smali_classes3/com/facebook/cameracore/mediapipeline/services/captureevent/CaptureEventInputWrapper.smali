@@ -3,17 +3,17 @@
 .source ""
 
 # interfaces
-.implements LX/4xD;
+.implements LX/4sw;
 
 
 # instance fields
-.field public final mCaptureEventInput:LX/5XD;
+.field public final mCaptureEventInput:LX/4sx;
 
 .field public final mHybridData:Lcom/facebook/jni/HybridData;
 
 
 # direct methods
-.method public constructor <init>(LX/5XD;)V
+.method public constructor <init>(LX/4sx;)V
     .locals 5
 
     .line 0
@@ -22,50 +22,54 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputWrapper;->mCaptureEventInput:LX/5XD;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputWrapper;->mCaptureEventInput:LX/4sx;
 
     .line 4
     .line 5
-    check-cast p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;
+    move-object v0, p1
 
     .line 6
+    check-cast v0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;
+
     .line 7
-    iget v4, p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mSafeAreaTop:I
-
     .line 8
+    iget v4, v0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mSafeAreaTop:I
+
     .line 9
-    iget v3, p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mSafeAreaLeft:I
-
     .line 10
+    iget v3, v0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mSafeAreaLeft:I
+
     .line 11
-    iget v2, p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mSafeAreaBottom:I
-
     .line 12
+    iget v2, v0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mSafeAreaBottom:I
+
     .line 13
-    iget v1, p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mSafeAreaRight:I
-
     .line 14
-    .line 15
-    iget v0, p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mZoomFactor:F
+    iget v1, v0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mSafeAreaRight:I
 
+    .line 15
     .line 16
+    iget v0, v0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mZoomFactor:F
+
     .line 17
+    .line 18
     invoke-static {v4, v3, v2, v1, v0}, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputWrapper;->initHybrid(IIIIF)Lcom/facebook/jni/HybridData;
 
-    .line 18
     .line 19
     .line 20
+    .line 21
     move-result-object v0
 
-    .line 21
+    .line 22
     iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputWrapper;->mHybridData:Lcom/facebook/jni/HybridData;
 
-    .line 22
     .line 23
-    iput-object p0, p1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mListener:LX/4xD;
-
     .line 24
+    invoke-interface {p1, p0}, LX/4sx;->addListener(LX/4sw;)V
+
     .line 25
+    .line 26
+    .line 27
     return-void
 .end method
 

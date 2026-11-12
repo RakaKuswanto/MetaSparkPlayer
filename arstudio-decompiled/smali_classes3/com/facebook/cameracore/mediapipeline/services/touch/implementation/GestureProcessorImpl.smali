@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5a9;
-
 
 # instance fields
 .field public final mActiveEngineGestureIdForRawTouches:Ljava/util/Map;
@@ -19,7 +16,7 @@
 
 .field public mGestureHandlerThread:Landroid/os/HandlerThread;
 
-.field public final mHitTestCallback:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl$HitTestCallback;
+.field public final mHitTestCallback:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchGesturesListener$HitTestCallback;
 
 .field public mImmediatelySendProductEvents:Z
 
@@ -55,7 +52,7 @@
 
 .field public final mSupportedGestureTypes:Ljava/util/Set;
 
-.field public final mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
+.field public final mTouchService:LX/64O;
 
 .field public mTouchServiceConfig:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;
 
@@ -65,8 +62,8 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;)V
-    .locals 7
+.method public constructor <init>(LX/64O;)V
+    .locals 8
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -74,7 +71,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 4
     .line 5
@@ -102,15 +99,15 @@
     .line 15
     .line 16
     .line 17
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mHitTestCallback:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl$HitTestCallback;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mHitTestCallback:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchGesturesListener$HitTestCallback;
 
     .line 18
     .line 19
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:LX/64O;
 
     .line 20
     .line 21
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 22
     .line 23
@@ -141,124 +138,127 @@
     move v6, v1
 
     .line 34
-    invoke-direct/range {v0 .. v6}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;-><init>(ZZZZZZ)V
+    move v7, v1
 
     .line 35
+    invoke-direct/range {v0 .. v7}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;-><init>(ZZZZZZZ)V
+
     .line 36
     .line 37
+    .line 38
     iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchServiceConfig:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;
 
-    .line 38
     .line 39
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
     .line 40
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 41
     .line 42
-    move-result-object v0
-
     .line 43
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveGestureIdForGestureType:Ljava/util/Map;
+    move-result-object v0
 
     .line 44
-    .line 45
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveGestureIdForGestureType:Ljava/util/Map;
 
+    .line 45
     .line 46
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 47
     .line 48
-    move-result-object v0
-
     .line 49
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveStateForGestureId:Ljava/util/Map;
+    move-result-object v0
 
     .line 50
-    .line 51
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveStateForGestureId:Ljava/util/Map;
 
+    .line 51
     .line 52
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 53
     .line 54
-    move-result-object v0
-
     .line 55
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveEngineGestureIdForRawTouches:Ljava/util/Map;
+    move-result-object v0
 
     .line 56
-    .line 57
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveEngineGestureIdForRawTouches:Ljava/util/Map;
 
+    .line 57
     .line 58
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 59
     .line 60
-    move-result-object v0
-
     .line 61
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestGestures:Ljava/util/Map;
+    move-result-object v0
 
     .line 62
-    .line 63
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestGestures:Ljava/util/Map;
 
+    .line 63
     .line 64
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
+
     .line 65
     .line 66
-    move-result-object v0
-
     .line 67
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestEvents:Ljava/util/List;
+    move-result-object v0
 
     .line 68
-    .line 69
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestEvents:Ljava/util/List;
 
+    .line 69
     .line 70
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
+
     .line 71
     .line 72
-    move-result-object v0
-
     .line 73
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingDoubleTapEvents:Ljava/util/List;
+    move-result-object v0
 
     .line 74
-    .line 75
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingDoubleTapEvents:Ljava/util/List;
 
+    .line 75
     .line 76
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
     .line 77
     .line 78
-    move-result-object v0
-
     .line 79
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingRemovalGestureTypes:Ljava/util/Set;
+    move-result-object v0
 
     .line 80
-    .line 81
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingRemovalGestureTypes:Ljava/util/Set;
 
+    .line 81
     .line 82
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
     .line 83
     .line 84
+    .line 85
     move-result-object v0
 
-    .line 85
+    .line 86
     iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingRemovalRawTouchGestureIds:Ljava/util/Set;
 
-    .line 86
     .line 87
+    .line 88
     new-instance v0, Ljava/util/LinkedHashSet;
 
-    .line 88
     .line 89
+    .line 90
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 90
     .line 91
     .line 92
+    .line 93
     iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mEventsToDispatchToProduct:Ljava/util/Set;
 
-    .line 93
     .line 94
+    .line 95
     return-void
 .end method
 
@@ -285,11 +285,11 @@
     return-object p0
 .end method
 
-.method public static synthetic access$1000(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)J
+.method public static synthetic access$1000(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;)J
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->prepareEngineGestureId(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)J
+    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->prepareEngineGestureId(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;)J
 
     .line 1
     .line 2
@@ -300,11 +300,11 @@
     return-wide p0
 .end method
 
-.method public static synthetic access$1100(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)V
+.method public static synthetic access$1100(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->enqueueGestureUpdates(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)V
+    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->enqueueGestureUpdates(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)V
 
     .line 1
     .line 2
@@ -367,11 +367,11 @@
     return p1
 .end method
 
-.method public static synthetic access$1700(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchEvent;)V
+.method public static synthetic access$1700(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchEvent;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->enqueueTouchEvents(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchEvent;)V
+    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->enqueueTouchEvents(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchEvent;)V
 
     .line 1
     .line 2
@@ -500,7 +500,7 @@
 
     .line 9
     .line 10
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 11
     .line 12
@@ -602,7 +602,7 @@
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/0Yf;->A0d(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X4;->A0g(Ljava/util/List;)Ljava/lang/Object;
 
     .line 22
     .line 23
@@ -610,7 +610,7 @@
     move-result-object v2
 
     .line 25
-    check-cast v2, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;
+    check-cast v2, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;
 
     .line 26
     .line 27
@@ -618,7 +618,7 @@
 
     .line 28
     .line 29
-    invoke-static {v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->isEndGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)Z
+    invoke-static {v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->isEndGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)Z
 
     .line 30
     .line 31
@@ -630,7 +630,7 @@
 
     .line 34
     .line 35
-    invoke-virtual {v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->getGestureType()Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    invoke-virtual {v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->getGestureType()Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 36
     .line 37
@@ -638,7 +638,7 @@
     move-result-object v1
 
     .line 39
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 40
     .line 41
@@ -646,7 +646,7 @@
 
     .line 42
     .line 43
-    iget-wide v0, v2, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
+    iget-wide v0, v2, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
 
     .line 44
     .line 45
@@ -687,7 +687,7 @@
 
     .line 61
     .line 62
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 63
     .line 64
@@ -703,7 +703,7 @@
 
     .line 69
     .line 70
-    invoke-static {p0, v1}, LX/4BD;->A0K(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Ljava/lang/Object;)J
+    invoke-static {p0, v1}, LX/431;->A0G(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Ljava/lang/Object;)J
 
     .line 71
     .line 72
@@ -719,12 +719,12 @@
 
     .line 77
     .line 78
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 79
     .line 80
     :cond_3
-    invoke-direct {p0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->removeGestureType(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)V
+    invoke-direct {p0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->removeGestureType(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;)V
 
     .line 81
     .line 82
@@ -733,7 +733,7 @@
 .end method
 
 .method private dispatchExistingGesturesToEngine(J)V
-    .locals 4
+    .locals 5
 
     .line 0
     iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveStateForGestureId:Ljava/util/Map;
@@ -766,25 +766,25 @@
     .line 14
     .line 15
     .line 16
-    move-result-object v3
+    move-result-object v4
 
     .line 17
-    check-cast v3, Ljava/util/List;
+    check-cast v4, Ljava/util/List;
 
     .line 18
     .line 19
-    if-eqz v3, :cond_0
+    if-eqz v4, :cond_1
 
     .line 20
     .line 21
     const/4 v2, 0x0
 
     .line 22
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
     .line 23
     :goto_0
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     .line 24
     .line 25
@@ -792,11 +792,11 @@
     move-result v0
 
     .line 27
-    if-ge v1, v0, :cond_2
+    if-ge v3, v0, :cond_3
 
     .line 28
     .line 29
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 30
     .line 31
@@ -804,137 +804,182 @@
     move-result-object v2
 
     .line 33
-    check-cast v2, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;
+    check-cast v2, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;
 
     .line 34
     .line 35
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:LX/64O;
 
     .line 36
     .line 37
-    invoke-virtual {v0, v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->sendGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)V
+    check-cast v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
 
     .line 38
     .line 39
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->mTouchGestureListeners:Ljava/util/List;
+
     .line 40
-    add-int/lit8 v1, v1, 0x1
-
     .line 41
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
     .line 42
-    goto :goto_0
-
     .line 43
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveGestureIdForGestureType:Ljava/util/Map;
-
     .line 44
+    move-result-object v1
+
     .line 45
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 46
     .line 47
-    invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
     .line 48
-    .line 49
-    .line 50
     move-result v0
 
+    .line 49
+    if-eqz v0, :cond_0
+
+    .line 50
     .line 51
-    if-eqz v0, :cond_3
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 52
     .line 53
-    invoke-static {p0, v1}, LX/4BD;->A0K(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Ljava/lang/Object;)J
-
     .line 54
-    .line 55
-    .line 56
-    move-result-wide v1
+    move-result-object v0
 
+    .line 55
+    check-cast v0, LX/6DK;
+
+    .line 56
     .line 57
-    cmp-long v0, v1, p1
+    invoke-interface {v0, v2}, LX/6DK;->addGestureEvent(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)V
 
     .line 58
     .line 59
-    if-nez v0, :cond_3
-
     .line 60
+    goto :goto_1
+
     .line 61
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
 
     .line 62
     .line 63
-    :cond_1
-    invoke-direct {p0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->removeGestureType(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)V
+    goto :goto_0
 
     .line 64
+    :cond_1
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveGestureIdForGestureType:Ljava/util/Map;
+
     .line 65
     .line 66
-    goto :goto_1
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 67
-    :cond_2
-    if-eqz v2, :cond_3
-
     .line 68
-    .line 69
-    invoke-static {v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->isEndGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)Z
+    invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
+    .line 69
     .line 70
     .line 71
-    .line 72
     move-result v0
 
+    .line 72
+    if-eqz v0, :cond_4
+
     .line 73
-    if-eqz v0, :cond_3
-
     .line 74
-    .line 75
-    invoke-virtual {v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->getGestureType()Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    invoke-static {p0, v1}, LX/431;->A0G(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;Ljava/lang/Object;)J
 
+    .line 75
     .line 76
     .line 77
+    move-result-wide v1
+
     .line 78
-    move-result-object v1
+    cmp-long v0, v1, p1
 
     .line 79
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
-
     .line 80
+    if-nez v0, :cond_4
+
     .line 81
-    if-ne v1, v0, :cond_1
-
     .line 82
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
+
     .line 83
-    iget-wide v0, v2, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
-
     .line 84
-    .line 85
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_2
+    invoke-direct {p0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->removeGestureType(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;)V
 
+    .line 85
     .line 86
     .line 87
+    goto :goto_2
+
     .line 88
-    move-result-object v0
+    :cond_3
+    if-eqz v2, :cond_4
 
     .line 89
-    invoke-direct {p0, v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->removeGestureId(Ljava/lang/Long;)V
-
     .line 90
+    invoke-static {v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->isEndGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)Z
+
     .line 91
     .line 92
-    :cond_3
-    :goto_1
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestEvents:Ljava/util/List;
-
     .line 93
+    move-result v0
+
     .line 94
-    invoke-interface {v0}, Ljava/util/List;->clear()V
+    if-eqz v0, :cond_4
 
     .line 95
     .line 96
+    invoke-virtual {v2}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->getGestureType()Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
+
     .line 97
+    .line 98
+    .line 99
+    move-result-object v1
+
+    .line 100
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
+
+    .line 101
+    .line 102
+    if-ne v1, v0, :cond_2
+
+    .line 103
+    .line 104
+    iget-wide v0, v2, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
+
+    .line 105
+    .line 106
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 107
+    .line 108
+    .line 109
+    move-result-object v0
+
+    .line 110
+    invoke-direct {p0, v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->removeGestureId(Ljava/lang/Long;)V
+
+    .line 111
+    .line 112
+    .line 113
+    :cond_4
+    :goto_2
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestEvents:Ljava/util/List;
+
+    .line 114
+    .line 115
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 116
+    .line 117
+    .line 118
     return-void
 .end method
 
@@ -980,7 +1025,7 @@
     .line 18
     .line 19
     .line 20
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     .line 21
     .line 22
@@ -1034,7 +1079,7 @@
 
     .line 45
     .line 46
-    invoke-static {v1}, LX/4BF;->A0a(Ljava/lang/ref/Reference;)Landroid/view/View;
+    invoke-static {v1}, LX/434;->A0W(Ljava/lang/ref/Reference;)Landroid/view/View;
 
     .line 47
     .line 48
@@ -1089,7 +1134,7 @@
     .line 15
     .line 16
     .line 17
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     .line 18
     .line 19
@@ -1143,7 +1188,7 @@
 
     .line 42
     .line 43
-    invoke-static {v1}, LX/4BF;->A0a(Ljava/lang/ref/Reference;)Landroid/view/View;
+    invoke-static {v1}, LX/434;->A0W(Ljava/lang/ref/Reference;)Landroid/view/View;
 
     .line 44
     .line 45
@@ -1163,7 +1208,7 @@
     return-void
 .end method
 
-.method private enqueueGestureUpdates(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)V
+.method private enqueueGestureUpdates(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)V
     .locals 4
 
     .line 0
@@ -1171,7 +1216,7 @@
 
     .line 1
     .line 2
-    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
+    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
 
     .line 3
     .line 4
@@ -1199,11 +1244,11 @@
 
     .line 15
     .line 16
-    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
+    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
 
     .line 17
     .line 18
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v0, v1}, LX/434;->A12(Ljava/util/Map;J)Ljava/lang/Object;
 
     .line 19
     .line 20
@@ -1211,292 +1256,415 @@
     move-result-object v0
 
     .line 22
-    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl$State;
 
     .line 23
     .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    check-cast v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl$State;
-
-    .line 27
-    .line 28
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    .line 29
-    .line 30
-    .line 31
+    .line 25
+    .line 26
+    .line 27
     move-result v1
 
-    .line 32
+    .line 28
     const/4 v0, 0x2
 
-    .line 33
+    .line 29
     if-eq v1, v0, :cond_0
 
-    .line 34
-    .line 35
+    .line 30
+    .line 31
     const/4 v0, 0x3
 
-    .line 36
-    if-eq v1, v0, :cond_2
+    .line 32
+    if-eq v1, v0, :cond_3
 
-    .line 37
-    .line 38
+    .line 33
+    .line 34
     const/4 v0, 0x0
 
+    .line 35
+    if-eq v1, v0, :cond_2
+
+    .line 36
+    .line 37
+    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestGestures:Ljava/util/Map;
+
+    .line 38
     .line 39
-    if-eq v1, v0, :cond_4
+    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
 
     .line 40
     .line 41
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestGestures:Ljava/util/Map;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 42
     .line 43
-    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
-
     .line 44
+    move-result-object v0
+
     .line 45
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-interface {v2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     .line 46
     .line 47
     .line 48
-    move-result-object v0
+    move-result v0
 
     .line 49
-    invoke-interface {v2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    if-nez v0, :cond_1
 
     .line 50
     .line 51
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
+
     .line 52
-    move-result v0
-
     .line 53
-    if-nez v0, :cond_1
-
     .line 54
+    move-result-object v3
+
     .line 55
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestGestures:Ljava/util/Map;
 
     .line 56
     .line 57
-    .line 58
-    move-result-object v3
+    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
 
+    .line 58
     .line 59
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestGestures:Ljava/util/Map;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 60
     .line 61
-    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
-
     .line 62
+    move-result-object v0
+
     .line 63
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-interface {v2, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 64
     .line 65
     .line 66
-    move-result-object v0
-
-    .line 67
-    invoke-interface {v2, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 68
-    .line 69
-    .line 70
     :goto_0
     invoke-interface {v3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 71
-    .line 72
-    .line 73
+    .line 67
+    .line 68
+    .line 69
     :cond_0
     return-void
 
-    .line 74
+    .line 70
     :cond_1
     iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingHitTestGestures:Ljava/util/Map;
 
+    .line 71
+    .line 72
+    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
+
+    .line 73
+    .line 74
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
     .line 75
     .line 76
-    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
-
     .line 77
+    move-result-object v0
+
     .line 78
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v2}, LX/0X6;->A14(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
 
     .line 79
     .line 80
     .line 81
-    move-result-object v0
-
-    .line 82
-    invoke-static {v0, v2}, LX/0Yh;->A0i(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
-
-    .line 83
-    .line 84
-    .line 85
     move-result-object v3
 
-    .line 86
+    .line 82
     goto :goto_0
 
-    .line 87
+    .line 83
     :cond_2
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
+    iget v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mNumGesturesPendingHitTest:I
+
+    .line 84
+    .line 85
+    add-int/lit8 v0, v0, 0x1
+
+    .line 86
+    .line 87
+    iput v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mNumGesturesPendingHitTest:I
 
     .line 88
     .line 89
-    invoke-virtual {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->sendGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)V
+    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveStateForGestureId:Ljava/util/Map;
 
     .line 90
     .line 91
-    .line 92
-    invoke-static {p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->isEndGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)Z
+    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
 
+    .line 92
     .line 93
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
     .line 94
     .line 95
-    move-result v0
-
     .line 96
-    if-eqz v0, :cond_0
-
-    .line 97
-    .line 98
-    invoke-virtual {p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->getGestureType()Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
-
-    .line 99
-    .line 100
-    .line 101
     move-result-object v1
 
+    .line 97
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl$State;->WAIT_HIT_TEST_RESULT:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl$State;
+
+    .line 98
+    .line 99
+    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 100
+    .line 101
     .line 102
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:LX/64O;
 
     .line 103
     .line 104
-    if-ne v1, v0, :cond_3
+    check-cast v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
 
     .line 105
     .line 106
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingRemovalRawTouchGestureIds:Ljava/util/Set;
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->mTouchGestureListeners:Ljava/util/List;
 
     .line 107
     .line 108
-    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 109
     .line 110
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
     .line 111
+    move-result-object v2
+
     .line 112
-    .line 113
-    move-result-object v1
-
-    .line 114
     :goto_1
-    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 113
+    .line 114
     .line 115
-    .line 116
-    .line 117
-    return-void
+    move-result v0
 
+    .line 116
+    if-eqz v0, :cond_0
+
+    .line 117
     .line 118
-    :cond_3
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingRemovalGestureTypes:Ljava/util/Set;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 119
     .line 120
-    goto :goto_1
-
     .line 121
-    :cond_4
-    iget v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mNumGesturesPendingHitTest:I
-
-    .line 122
-    .line 123
-    add-int/lit8 v0, v0, 0x1
-
-    .line 124
-    .line 125
-    iput v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mNumGesturesPendingHitTest:I
-
-    .line 126
-    .line 127
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mActiveStateForGestureId:Ljava/util/Map;
-
-    .line 128
-    .line 129
-    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->id:J
-
-    .line 130
-    .line 131
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 132
-    .line 133
-    .line 134
     move-result-object v1
 
+    .line 122
+    check-cast v1, LX/6DK;
+
+    .line 123
+    .line 124
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mHitTestCallback:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchGesturesListener$HitTestCallback;
+
+    .line 125
+    .line 126
+    invoke-interface {v1, p1, v0}, LX/6DK;->enqueueForHitTest(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchGesturesListener$HitTestCallback;)V
+
+    .line 127
+    .line 128
+    .line 129
+    goto :goto_1
+
+    .line 130
+    :cond_3
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:LX/64O;
+
+    .line 131
+    .line 132
+    check-cast v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
+
+    .line 133
+    .line 134
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->mTouchGestureListeners:Ljava/util/List;
+
     .line 135
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl$State;->WAIT_HIT_TEST_RESULT:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl$State;
-
     .line 136
-    .line 137
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
+    .line 137
     .line 138
     .line 139
+    move-result-object v1
+
     .line 140
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 141
     .line 142
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mHitTestCallback:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl$HitTestCallback;
-
     .line 143
+    move-result v0
+
     .line 144
-    invoke-virtual {v1, p1, v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->enqueueForHitTest(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl$HitTestCallback;)V
+    if-eqz v0, :cond_4
 
     .line 145
     .line 146
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 147
+    .line 148
+    .line 149
+    move-result-object v0
+
+    .line 150
+    check-cast v0, LX/6DK;
+
+    .line 151
+    .line 152
+    invoke-interface {v0, p1}, LX/6DK;->addGestureEvent(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)V
+
+    .line 153
+    .line 154
+    .line 155
+    goto :goto_2
+
+    .line 156
+    :cond_4
+    invoke-static {p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->isEndGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)Z
+
+    .line 157
+    .line 158
+    .line 159
+    move-result v0
+
+    .line 160
+    if-eqz v0, :cond_0
+
+    .line 161
+    .line 162
+    invoke-virtual {p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->getGestureType()Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
+
+    .line 163
+    .line 164
+    .line 165
+    move-result-object v1
+
+    .line 166
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
+
+    .line 167
+    .line 168
+    if-ne v1, v0, :cond_5
+
+    .line 169
+    .line 170
+    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingRemovalRawTouchGestureIds:Ljava/util/Set;
+
+    .line 171
+    .line 172
+    iget-wide v0, p1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->id:J
+
+    .line 173
+    .line 174
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 175
+    .line 176
+    .line 177
+    move-result-object v1
+
+    .line 178
+    :goto_3
+    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 179
+    .line 180
+    .line 181
     return-void
+
+    .line 182
+    :cond_5
+    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mPendingRemovalGestureTypes:Ljava/util/Set;
+
+    .line 183
+    .line 184
+    goto :goto_3
 .end method
 
-.method private enqueueTouchEvents(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchEvent;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->sendTouchEvent(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchEvent;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static isEndGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;)Z
+.method private enqueueTouchEvents(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchEvent;)V
     .locals 2
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture;->gestureState:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchService:LX/64O;
 
     .line 1
     .line 2
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;->ENDED:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;
+    check-cast v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;
+
+    .line 3
+    .line 4
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/TouchServiceImpl;->mTouchGestureListeners:Ljava/util/List;
+
+    .line 5
+    .line 6
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
+    .line 10
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    if-eqz v0, :cond_0
+
+    .line 15
+    .line 16
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    check-cast v0, LX/6DK;
+
+    .line 21
+    .line 22
+    invoke-interface {v0, p1}, LX/6DK;->addTouchEvent(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchEvent;)V
+
+    .line 23
+    .line 24
+    .line 25
+    goto :goto_0
+
+    .line 26
+    :cond_0
+    return-void
+.end method
+
+.method public static isEndGesture(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;)Z
+    .locals 2
+
+    .line 0
+    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture;->gestureState:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;
+
+    .line 1
+    .line 2
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;->ENDED:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;
 
     .line 3
     .line 4
@@ -1504,7 +1672,7 @@
 
     .line 5
     .line 6
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;->CANCELLED:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;->CANCELLED:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;
 
     .line 7
     .line 8
@@ -1512,7 +1680,7 @@
 
     .line 9
     .line 10
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;->FAILED:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureState;
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;->FAILED:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureState;
 
     .line 11
     .line 12
@@ -1590,7 +1758,7 @@
     return v0
 .end method
 
-.method private prepareEngineGestureId(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)J
+.method private prepareEngineGestureId(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;)J
     .locals 5
 
     .line 0
@@ -1841,7 +2009,7 @@
     return-void
 .end method
 
-.method private removeGestureType(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)V
+.method private removeGestureType(Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;)V
     .locals 2
 
     .line 0
@@ -2057,7 +2225,7 @@
 
     .line 12
     .line 13
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->TAP:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 14
     .line 15
@@ -2083,7 +2251,7 @@
 
     .line 25
     .line 26
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->PAN:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->PAN:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 27
     .line 28
@@ -2109,7 +2277,7 @@
 
     .line 38
     .line 39
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->PINCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 40
     .line 41
@@ -2135,7 +2303,7 @@
 
     .line 51
     .line 52
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->ROTATE:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->ROTATE:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 53
     .line 54
@@ -2161,7 +2329,7 @@
 
     .line 64
     .line 65
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->LONG_PRESS:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->LONG_PRESS:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
 
     .line 66
     .line 67
@@ -2183,11 +2351,32 @@
 
     .line 75
     .line 76
-    invoke-virtual {p0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->enableRawTouchGesture()V
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSupportedGestureTypes:Ljava/util/Set;
 
     .line 77
     .line 78
+    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/Gesture$GestureType;
+
     .line 79
+    .line 80
+    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 81
+    .line 82
+    .line 83
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSingleTouchGestureDetector:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;
+
+    .line 84
+    .line 85
+    if-eqz v0, :cond_5
+
+    .line 86
+    .line 87
+    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->enableRawTouchGesture()V
+
+    .line 88
+    .line 89
+    .line 90
     :cond_5
     return-void
 .end method
@@ -2244,178 +2433,6 @@
     goto :goto_0
 .end method
 
-.method public disableLongPressGesture()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSupportedGestureTypes:Ljava/util/Set;
-
-    .line 1
-    .line 2
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->LONG_PRESS:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
-
-    .line 3
-    .line 4
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    .line 5
-    .line 6
-    .line 7
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSingleTouchGestureDetector:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;
-
-    .line 8
-    .line 9
-    if-eqz v0, :cond_0
-
-    .line 10
-    .line 11
-    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->disableLongPress()V
-
-    .line 12
-    .line 13
-    .line 14
-    :cond_0
-    invoke-direct {p0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->removeGestureType(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)V
-
-    .line 15
-    .line 16
-    .line 17
-    return-void
-.end method
-
-.method public disableRawTouchGesture()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSupportedGestureTypes:Ljava/util/Set;
-
-    .line 1
-    .line 2
-    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
-
-    .line 3
-    .line 4
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    .line 5
-    .line 6
-    .line 7
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSingleTouchGestureDetector:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;
-
-    .line 8
-    .line 9
-    if-eqz v0, :cond_0
-
-    .line 10
-    .line 11
-    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->disableRawTouchGesture()V
-
-    .line 12
-    .line 13
-    .line 14
-    :cond_0
-    invoke-direct {p0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->removeGestureType(Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;)V
-
-    .line 15
-    .line 16
-    .line 17
-    return-void
-.end method
-
-.method public enableLongPressGesture()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchServiceConfig:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;
-
-    .line 1
-    .line 2
-    iget-boolean v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;->supportsLongPressGesture:Z
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSupportedGestureTypes:Ljava/util/Set;
-
-    .line 7
-    .line 8
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->LONG_PRESS:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
-
-    .line 9
-    .line 10
-    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSingleTouchGestureDetector:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;
-
-    .line 14
-    .line 15
-    if-eqz v0, :cond_1
-
-    .line 16
-    .line 17
-    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->enableLongPress()V
-
-    .line 18
-    .line 19
-    .line 20
-    :cond_1
-    return-void
-.end method
-
-.method public enableRawTouchGesture()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mTouchServiceConfig:Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;
-
-    .line 1
-    .line 2
-    iget-boolean v0, v0, Lcom/facebook/cameracore/mediapipeline/services/touch/interfaces/TouchServiceConfig;->supportsRawTouchGesture:Z
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSupportedGestureTypes:Ljava/util/Set;
-
-    .line 7
-    .line 8
-    sget-object v0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;->RAW_TOUCH:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/Gesture$GestureType;
-
-    .line 9
-    .line 10
-    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 11
-    .line 12
-    .line 13
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/GestureProcessorImpl;->mSingleTouchGestureDetector:Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;
-
-    .line 14
-    .line 15
-    if-eqz v0, :cond_1
-
-    .line 16
-    .line 17
-    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;->enableRawTouchGesture()V
-
-    .line 18
-    .line 19
-    .line 20
-    :cond_1
-    return-void
-.end method
-
 .method public init(Ljava/lang/ref/WeakReference;)V
     .locals 5
 
@@ -2436,7 +2453,7 @@
 
     .line 7
     .line 8
-    invoke-static {p1}, LX/4BF;->A0a(Ljava/lang/ref/Reference;)Landroid/view/View;
+    invoke-static {p1}, LX/434;->A0W(Ljava/lang/ref/Reference;)Landroid/view/View;
 
     .line 9
     .line 10
@@ -2503,7 +2520,7 @@
 
     .line 42
     .line 43
-    invoke-direct {v0, v4, v1, v3}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;-><init>(Landroid/content/Context;LX/5ju;Landroid/os/Handler;)V
+    invoke-direct {v0, v4, v1, v3}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/SingleTouchGestureDetector;-><init>(Landroid/content/Context;LX/5pe;Landroid/os/Handler;)V
 
     .line 44
     .line 45
@@ -2576,7 +2593,7 @@
 
     .line 80
     .line 81
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;-><init>(LX/4uy;)V
+    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/touch/implementation/RotationGestureDetector;-><init>(LX/4on;)V
 
     .line 82
     .line 83
@@ -2798,7 +2815,7 @@
 
     .line 85
     .line 86
-    invoke-static {v0}, LX/4BF;->A0a(Ljava/lang/ref/Reference;)Landroid/view/View;
+    invoke-static {v0}, LX/434;->A0W(Ljava/lang/ref/Reference;)Landroid/view/View;
 
     .line 87
     .line 88

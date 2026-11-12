@@ -59,64 +59,64 @@
     const/4 v1, 0x0
 
     .line 3
-    new-instance v22, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+    new-instance v15, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
 
     .line 4
     .line 5
-    move-object/from16 v0, v22
+    invoke-direct {v15, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 6
     .line 7
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
     .line 8
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+
     .line 9
     .line 10
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+    const-string v2, "ASSISTANT_TYPEAHEAD"
 
     .line 11
     .line 12
-    const-string v2, "ASSISTANT_TYPEAHEAD"
-
-    .line 13
-    .line 14
     const/4 v1, 0x1
 
+    .line 13
+    new-instance v22, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+
+    .line 14
     .line 15
-    new-instance v21, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+    move-object/from16 v0, v22
 
     .line 16
     .line 17
-    move-object/from16 v0, v21
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 18
     .line 19
-    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
     .line 20
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->ASSISTANT_TYPEAHEAD:Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+
     .line 21
     .line 22
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->ASSISTANT_TYPEAHEAD:Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+    const-string v2, "DELIGHT"
 
     .line 23
     .line 24
-    const-string v2, "DELIGHT"
-
-    .line 25
-    .line 26
     const/4 v1, 0x2
 
+    .line 25
+    new-instance v21, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+
+    .line 26
     .line 27
-    new-instance v15, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+    move-object/from16 v0, v21
 
     .line 28
     .line 29
-    invoke-direct {v15, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v2, v1, v2}, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 30
     .line 31
     .line 32
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->DELIGHT:Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->DELIGHT:Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
 
     .line 33
     .line 34
@@ -425,120 +425,100 @@
 
     .line 190
     .line 191
-    const-string v1, "WORK_CUSTOM_EMOJI"
+    const-string/jumbo v1, "WORK_CUSTOM_EMOJI"
 
     .line 192
     .line 193
+    .line 194
     const/16 v16, 0x11
 
-    .line 194
     .line 195
+    .line 196
     new-instance v4, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
 
-    .line 196
     .line 197
+    .line 198
     move/from16 v0, v16
 
-    .line 198
     .line 199
+    .line 200
     invoke-direct {v4, v1, v0, v1}, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 200
     .line 201
     .line 202
+    .line 203
     sput-object v4, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->WORK_CUSTOM_EMOJI:Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
 
-    .line 203
     .line 204
+    .line 205
     const/16 v0, 0x12
 
-    .line 205
     .line 206
+    .line 207
     new-array v3, v0, [Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
 
-    .line 207
     .line 208
-    move-object/from16 v1, v22
-
     .line 209
+    move-object/from16 v2, v22
+
     .line 210
-    move-object/from16 v0, v21
-
     .line 211
-    .line 212
-    invoke-static {v3, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v1, v21
 
+    .line 212
     .line 213
+    move-object/from16 v0, v20
+
     .line 214
     .line 215
-    move-object/from16 v2, v20
+    invoke-static {v15, v2, v1, v0, v3}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 216
     .line 217
-    move-object/from16 v1, v19
-
     .line 218
+    move-object/from16 v2, v19
+
     .line 219
-    move-object/from16 v0, v18
-
     .line 220
-    .line 221
-    invoke-static {v15, v2, v1, v0, v3}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v18
 
+    .line 221
     .line 222
+    move-object/from16 v0, v17
+
     .line 223
     .line 224
-    move-object/from16 v0, v17
+    invoke-static {v2, v1, v0, v14, v3}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 225
     .line 226
-    invoke-static {v3, v0, v14}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 227
+    invoke-static {v13, v12, v11, v10, v3}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
     .line 228
     .line 229
-    invoke-static {v13, v12, v11, v10, v3}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
     .line 230
+    const/16 v0, 0xc
+
     .line 231
     .line 232
-    invoke-static {v3, v9, v8}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    aput-object v9, v3, v0
 
     .line 233
     .line 234
-    .line 235
-    const/16 v0, 0xe
+    invoke-static {v8, v7, v6, v5, v3}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 235
     .line 236
     .line 237
-    aput-object v7, v3, v0
+    aput-object v4, v3, v16
 
     .line 238
     .line 239
-    const/16 v0, 0xf
+    sput-object v3, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
 
     .line 240
     .line 241
-    aput-object v6, v3, v0
-
-    .line 242
-    .line 243
-    const/16 v0, 0x10
-
-    .line 244
-    .line 245
-    aput-object v5, v3, v0
-
-    .line 246
-    .line 247
-    aput-object v4, v3, v16
-
-    .line 248
-    .line 249
-    sput-object v3, Lcom/facebook/graphql/enums/GraphQLComposedEntityType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLComposedEntityType;
-
-    .line 250
-    .line 251
     return-void
 .end method
 
@@ -566,7 +546,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

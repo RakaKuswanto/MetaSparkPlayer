@@ -1,17 +1,29 @@
-.class public final LX/3v9;
-.super LX/3u5;
+.class public interface abstract LX/3v9;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3lk;
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
 
-    .line 0
-    invoke-direct {p0}, LX/3u5;-><init>()V
+# virtual methods
+.method public abstract APr()Z
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AQG()Z
+.end method
+
+.method public abstract AQK()Z
+.end method
+
+.method public abstract Ae5(LX/3m5;)V
+.end method
+
+.method public abstract Alm(LX/3rf;)V
+.end method
+
+.method public abstract Apb(LX/3sb;Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method public abstract isPlaying()Z
 .end method

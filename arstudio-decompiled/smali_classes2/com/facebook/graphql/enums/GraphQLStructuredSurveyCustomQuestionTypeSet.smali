@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLStructuredSurveyCustomQuestionTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLStructuredSurveyCustomQuestionTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x2c
+    const/16 v0, 0x30
 
     .line 1
     .line 2
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "BLOOD_DONOR_REGISTRATION_PREVIEW"
+    const-string v0, "BUFF_RECOMMENDATION_QUALITY"
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "BUFF_RECOMMENDATION_QUALITY"
+    const-string v0, "BUSINESS_MANAGER_SELECTOR"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "BUSINESS_MANAGER_SELECTOR"
+    const-string v0, "CARRIER_DETECTION"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "CARRIER_DETECTION"
+    const-string v0, "CARRIER_DETECTION2"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "CARRIER_DETECTION2"
+    const-string v0, "CITY_WITH_FIVE_CANDIDATES_PIPED_MULTIPLE_CHOICE"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "CITY_WITH_FIVE_CANDIDATES_PIPED_MULTIPLE_CHOICE"
+    const-string v0, "DATA_FETCHER"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "DATA_FETCHER"
+    const-string v0, "DATE"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "DATE"
+    const-string v0, "DATE_OF_BIRTH"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "DATE_OF_BIRTH"
+    const-string v0, "EMAIL_ADDRESS"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "EMAIL_ADDRESS"
+    const-string v0, "EVENTS_PAGE_SELECTOR"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "EVENTS_PAGE_SELECTOR"
+    const-string v0, "FB_REACTION"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "FB_REACTION"
+    const-string v0, "FRIEND_DISTANCE_MAX_DIFF"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "FRIEND_DISTANCE_MAX_DIFF"
+    const-string v0, "FRIEND_GRAPH_MANAGEMENT"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "FRIEND_GRAPH_MANAGEMENT"
+    const-string v0, "FRIEND_GRAPH_MANAGEMENT_END_PAGE"
 
     .line 83
     .line 84
@@ -196,7 +196,7 @@
 
     .line 87
     .line 88
-    const-string v0, "FRIEND_GRAPH_MANAGEMENT_END_PAGE"
+    const-string v0, "FRIEND_TYPEAHEAD_RANDOM"
 
     .line 89
     .line 90
@@ -208,7 +208,7 @@
 
     .line 93
     .line 94
-    const-string v0, "FRIEND_TYPEAHEAD_RANDOM"
+    const-string v0, "GROUP_SELECTOR"
 
     .line 95
     .line 96
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "GROUP_SELECTOR"
+    const-string v0, "HOME_CITY_PIPED"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "HOME_CITY_PIPED"
+    const-string v0, "HOME_CITY_WITH_FIVE_CANDIDATES_PIPED"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "HOME_CITY_WITH_FIVE_CANDIDATES_PIPED"
+    const-string v0, "HOME_COUNTRY_PIPED"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "HOME_COUNTRY_PIPED"
+    const-string v0, "HOME_ZIPCODE"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "HOME_ZIPCODE"
+    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_DISATISFIED_ADS_FUNCTIONALITIES"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_DISATISFIED_ADS_FUNCTIONALITIES"
+    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_DISATISFIED_ORGANIC_FUNCTIONALITIES"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_DISATISFIED_ORGANIC_FUNCTIONALITIES"
+    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_OTHER_THOUGHTS"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_OTHER_THOUGHTS"
+    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_SATISFACTION"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_SATISFACTION"
+    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_USEFUL_FUNCTIONALITIES"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "INSTANT_ARTICLE_CREATOR_STUDIO_IN_PRODUCT_USEFUL_FUNCTIONALITIES"
+    const-string v0, "INSTANT_ARTICLE_ORGANIC_CREATOR_STUDIO_IN_PRODUCT_SATISFACTION"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "INSTANT_ARTICLE_ORGANIC_CREATOR_STUDIO_IN_PRODUCT_SATISFACTION"
+    const-string v0, "ISP_DETECTION"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "ISP_DETECTION"
+    const-string v0, "LANGUAGE_DYNAMIC_CANDIDATES"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "LANGUAGE_DYNAMIC_CANDIDATES"
+    const-string v0, "LANGUAGE_DYNAMIC_CANDIDATES_CAPS_RM_LAUNCH"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "LOP_NOTIFICATION"
+    const-string v0, "LANGUAGE_DYNAMIC_CANDIDATES_TOP_N_BLP"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "MARKETPLACE_NOTIFICATION"
+    const-string v0, "LANGUAGE_DYNAMIC_CANDIDATES_TOP_N_PER_COUNTRY"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "MESSENGER_CONTACT_TYPEAHEAD_RANDOM"
+    const-string v0, "LANGUAGE_DYNAMIC_CANDIDATES_TOP_N_PER_REGION"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "NOTIFICATION"
+    const-string v0, "LOP_NOTIFICATION"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "PHONE_AND_EMAIL"
+    const-string v0, "MARKETPLACE_NOTIFICATION"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "PROFILE_PIC"
+    const-string v0, "MESSENGER_CONTACT_TYPEAHEAD_RANDOM"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "PUBLIC_ENTITY_TYPEAHEAD_RANDOM"
+    const-string v0, "NOTIFICATION"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "SMILEY_RATING"
+    const-string v0, "PHONE_AND_EMAIL"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "SOLUTION_ENG_FOCUS_ACCOUNT_SELECTOR"
+    const-string v0, "PROFILE_PIC"
 
     .line 227
     .line 228
@@ -484,7 +484,7 @@
 
     .line 231
     .line 232
-    const-string v0, "TAB_BAR_BASE"
+    const-string v0, "PUBLIC_ENTITY_TYPEAHEAD_RANDOM"
 
     .line 233
     .line 234
@@ -496,7 +496,7 @@
 
     .line 237
     .line 238
-    const-string v0, "TAB_BAR_INTRO"
+    const-string v0, "SMILEY_RATING"
 
     .line 239
     .line 240
@@ -508,7 +508,7 @@
 
     .line 243
     .line 244
-    const-string v0, "TASK_TITLE"
+    const-string v0, "SOLUTION_ENG_FOCUS_ACCOUNT_SELECTOR"
 
     .line 245
     .line 246
@@ -520,7 +520,7 @@
 
     .line 249
     .line 250
-    const-string v0, "UNIVERSAL_FEEDBACK"
+    const-string v0, "TAB_BAR_BASE"
 
     .line 251
     .line 252
@@ -532,22 +532,71 @@
 
     .line 255
     .line 256
-    const-string v0, "UNIVERSAL_FEEDBACK_TEXT"
+    const-string v0, "TAB_BAR_INTRO"
 
     .line 257
     .line 258
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 259
     .line 260
-    .line 261
-    move-result-object v0
+    const/16 v1, 0x2c
 
+    .line 261
     .line 262
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLStructuredSurveyCustomQuestionTypeSet;->A00:Ljava/util/Set;
+    const-string v0, "TASK_TITLE"
 
     .line 263
     .line 264
+    aput-object v0, v2, v1
+
+    .line 265
+    .line 266
+    const/16 v1, 0x2d
+
+    .line 267
+    .line 268
+    const-string v0, "UNIVERSAL_FEEDBACK"
+
+    .line 269
+    .line 270
+    aput-object v0, v2, v1
+
+    .line 271
+    .line 272
+    const/16 v1, 0x2e
+
+    .line 273
+    .line 274
+    const-string v0, "UNIVERSAL_FEEDBACK_TEXT"
+
+    .line 275
+    .line 276
+    aput-object v0, v2, v1
+
+    .line 277
+    .line 278
+    const/16 v1, 0x2f
+
+    .line 279
+    .line 280
+    const-string/jumbo v0, "WORKFORCE_PRODUCTION_FEEDBACK_CONTROLLER"
+
+    .line 281
+    .line 282
+    .line 283
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 284
+    .line 285
+    .line 286
+    move-result-object v0
+
+    .line 287
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLStructuredSurveyCustomQuestionTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 288
+    .line 289
     return-void
 .end method
 
@@ -563,11 +612,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLStructuredSurveyCustomQuestionTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLStructuredSurveyCustomQuestionTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

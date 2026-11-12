@@ -4,13 +4,61 @@
         <item quantity="other">%1$s Bog ka helidyo</item>
         <item quantity="one">%1$s Bog ka helid</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s Likes</item>
-        <item quantity="one">%1$s Ka helay</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d maalmood ka hor</item>
+        <item quantity="one">1 maalin ka hor</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d maalin</item>
+        <item quantity="one">1 maalin</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d maalmood</item>
+        <item quantity="one">1 maalin</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d saacadood</item>
+        <item quantity="one">1 saac</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d daqiiqadood</item>
+        <item quantity="one">1 daqiiqo</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d ilbidhiqsi</item>
+        <item quantity="one">1 ilbidhiqsi</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d toddobaad</item>
+        <item quantity="one">1 toddobaad</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">%1$d toddobaadyo badan</item>
+        <item quantity="one">1 more week</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d sanadood</item>
+        <item quantity="one">1 sano</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">%1$d saacadood ka hor</item>
         <item quantity="one">1 saac ka hor</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d saacadood</item>
+        <item quantity="one">1 saac</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$dsaac</item>
+        <item quantity="one">1saac</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d saacadood</item>
+        <item quantity="one">1 saac</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">%1$d saacadood ka hor</item>
+        <item quantity="one">1 saac hor</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">%1$d saacadood hadda ka dib</item>
@@ -20,8 +68,60 @@
         <item quantity="other">%1$d daqiiqadood hadda laga bilaabo</item>
         <item quantity="one">1 daqiiqo hadda laga bilaabo</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d daqiiqadoodka hor</item>
+        <item quantity="one">1 daqiiqo ka hor</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d daqiiqadood ka hor</item>
         <item quantity="one">1 daqiiqo ka hor</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d daqiiqadood</item>
+        <item quantity="one">1 daqiiqo</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d daqiiqadood</item>
+        <item quantity="one">1 daqiiqo</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d bilood ka hor</item>
+        <item quantity="one">1 bil ka hor</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d ilbiriqsiyo ka hor</item>
+        <item quantity="one">1 ilbiriqsi</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d toddobaad ka hor</item>
+        <item quantity="one">1 toddobaad ka hor</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d Sanadood ka hor</item>
+        <item quantity="one">1 sanno ka hor</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Waxaad booqatay %1$d maalmood ka hor</item>
+        <item quantity="one">Waxaad booqatay 1 maalin ka hor</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Waxaad booqatay %1$d saacadood ka hor</item>
+        <item quantity="one">Waxaad booqatay 1 saac ka hor</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Waxaad booqatay %1$d daqiiqado ka hor</item>
+        <item quantity="one">Waxaad booqatay 1 daqiiqo ka hor</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Waxaad booqatay %1$d bilood ka hor</item>
+        <item quantity="one">Waxaad booqatay 1 bil ka hor</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Waxaad booqatay %1$d toddobaad ka hor</item>
+        <item quantity="one">Waxaad booqatay 1 toddobaad ka hor</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Waxaad booqatay %1$d sanado kahor</item>
+        <item quantity="one">Waxaad booqatay 1 sano ka hor</item>
     </plurals>
 </resources>

@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract onNewTextTyped(Ljava/lang/CharSequence;)V
+.method public abstract AQ1(Ljava/lang/CharSequence;II)Z
 .end method

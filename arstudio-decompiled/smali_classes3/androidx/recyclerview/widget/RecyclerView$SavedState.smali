@@ -16,14 +16,14 @@
     .locals 2
 
     .line 0
-    const/4 v1, 0x2
+    const/4 v1, 0x3
 
     .line 1
-    new-instance v0, LX/6Q8;
+    new-instance v0, LX/6gm;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/6Q8;-><init>(I)V
+    invoke-direct {v0, v1}, LX/6gm;-><init>(I)V
 
     .line 4
     .line 5
@@ -48,7 +48,7 @@
 
     .line 4
     .line 5
-    const-class v0, LX/4ta;
+    const-class v0, LX/4nQ;
 
     .line 6
     .line 7

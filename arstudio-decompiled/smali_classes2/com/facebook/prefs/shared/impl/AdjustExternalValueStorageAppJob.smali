@@ -4,11 +4,7 @@
 
 
 # static fields
-.field public static final A01:LX/1b2;
-
-
-# instance fields
-.field public final A00:LX/1Nw;
+.field public static final A00:LX/28F;
 
 
 # direct methods
@@ -16,43 +12,44 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/1b0;->A00:LX/1b2;
+    sget-object v1, LX/1GN;->A00:LX/28F;
 
     .line 1
     .line 2
-    const-string v0, "externalValueStorage/"
+    const-string/jumbo v0, "externalValueStorage/"
 
     .line 3
     .line 4
-    invoke-virtual {v1, v0}, LX/1b3;->A0C(Ljava/lang/String;)LX/1b3;
-
     .line 5
+    invoke-virtual {v1, v0}, LX/28G;->A0A(Ljava/lang/String;)LX/28G;
+
     .line 6
     .line 7
+    .line 8
     move-result-object v1
 
-    .line 8
+    .line 9
     const-string/jumbo v0, "threshold"
 
-    .line 9
     .line 10
     .line 11
-    invoke-static {v1, v0}, LX/1b3;->A05(LX/1b3;Ljava/lang/String;)LX/1b2;
-
     .line 12
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 13
     .line 14
+    .line 15
     move-result-object v0
 
-    .line 15
-    sput-object v0, Lcom/facebook/prefs/shared/impl/AdjustExternalValueStorageAppJob;->A01:LX/1b2;
-
     .line 16
+    sput-object v0, Lcom/facebook/prefs/shared/impl/AdjustExternalValueStorageAppJob;->A00:LX/28F;
+
     .line 17
+    .line 18
     return-void
 .end method
 
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -61,9 +58,5 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/prefs/shared/impl/AdjustExternalValueStorageAppJob;->A00:LX/1Nw;
-
-    .line 4
-    .line 5
     return-void
 .end method

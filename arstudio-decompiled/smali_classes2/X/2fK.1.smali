@@ -1,143 +1,203 @@
-.class public final LX/2fK;
+.class public final LX/2Fk;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:Lcom/facebook/distribgw/client/DGWClient;
-
-.field public final A01:LX/1Nw;
-
-.field public final A02:Ljava/util/concurrent/ScheduledExecutorService;
+.field public final A00:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 6
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    sget v0, LX/2eq;->AEB:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    .line 3
+    sget v0, LX/2I6;->A3y:I
+
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/2Fk;->A00:LX/0lu;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()J
+    .locals 5
+
+    .line 0
+    iget-object v0, p0, LX/2Fk;->A00:LX/0lu;
+
+    .line 1
+    .line 2
+    iget-object v1, v0, LX/0lu;->A00:LX/0RP;
 
     .line 3
     .line 4
+    invoke-interface {v1}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 5
-    move-result-object v5
-
     .line 6
-    check-cast v5, Lcom/facebook/tigon/iface/TigonServiceHolder;
-
     .line 7
+    move-result-object v0
+
     .line 8
-    sget v1, LX/2eq;->A6D:I
+    check-cast v0, LX/0IM;
 
     .line 9
     .line 10
-    iget-object v0, p1, LX/1Nw;->A00:LX/1zG;
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     .line 11
     .line 12
-    invoke-static {v0, v1}, LX/1zE;->A0E(LX/1zG;I)Ljava/lang/Object;
-
     .line 13
+    move-result v0
+
     .line 14
+    invoke-static {v0}, LX/0X3;->A1X(I)Z
+
     .line 15
-    move-result-object v4
-
     .line 16
-    check-cast v4, Ljava/util/concurrent/ScheduledExecutorService;
-
     .line 17
+    move-result v0
+
     .line 18
-    sget v0, LX/2eq;->AiS:I
+    const-wide/16 v3, 0x0
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
     .line 21
     .line 22
+    invoke-interface {v1}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 23
-    move-result-object v1
-
     .line 24
-    check-cast v1, Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;
-
     .line 25
+    move-result-object v0
+
     .line 26
-    sget v0, LX/2eq;->AiR:I
+    check-cast v0, LX/0IM;
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     .line 29
     .line 30
     .line 31
-    move-result-object v0
+    move-result v1
 
     .line 32
-    check-cast v0, LX/30R;
+    const/4 v0, 0x1
 
     .line 33
-    .line 34
-    invoke-virtual {v0}, LX/30R;->A00()Lcom/facebook/distribgw/client/DGWClientConfig;
+    if-ne v1, v0, :cond_1
 
+    .line 34
     .line 35
+    invoke-static {}, LX/0X4;->A0H()LX/0Qq;
+
     .line 36
     .line 37
-    move-result-object v3
-
     .line 38
-    const/4 v0, 0x2
+    move-result-object v0
 
     .line 39
-    invoke-static {v5, v4, v1, v0}, LX/0Yc;->A0Q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    iget-wide v1, v0, LX/0Qq;->A0b:J
 
     .line 40
     .line 41
-    .line 42
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    cmp-long v0, v1, v3
 
+    .line 42
     .line 43
+    if-gtz v0, :cond_0
+
     .line 44
     .line 45
-    iput-object p1, p0, LX/2fK;->A01:LX/1Nw;
+    invoke-static {}, LX/0X4;->A0H()LX/0Qq;
 
     .line 46
     .line 47
-    new-instance v2, Lcom/facebook/distribgw/client/tigon/TigonDGWNetworkStackWrapperHolder;
-
     .line 48
+    move-result-object v0
+
     .line 49
-    invoke-direct {v2, v5}, Lcom/facebook/distribgw/client/tigon/TigonDGWNetworkStackWrapperHolder;-><init>(Lcom/facebook/tigon/iface/TigonServiceHolder;)V
+    iget-wide v1, v0, LX/0Qq;->A0a:J
 
     .line 50
     .line 51
+    :cond_0
+    return-wide v1
+
     .line 52
-    iget-object v1, v1, Lcom/facebook/distribgw/client/di/AppStateSyncerProvider;->A06:Lcom/facebook/realtime/common/appstate/AppStateSyncer;
+    :cond_1
+    return-wide v3
+.end method
 
-    .line 53
-    .line 54
-    new-instance v0, Lcom/facebook/distribgw/client/DGWClient;
+.method public final A01()Z
+    .locals 3
 
-    .line 55
-    .line 56
-    invoke-direct {v0, v2, v4, v1, v3}, Lcom/facebook/distribgw/client/DGWClient;-><init>(Lcom/facebook/distribgw/client/DGWNetworkStackWrapperHolder;Ljava/util/concurrent/ScheduledExecutorService;Lcom/facebook/realtime/common/appstate/AppStateSyncer;Lcom/facebook/distribgw/client/DGWClientConfig;)V
+    .line 0
+    iget-object v0, p0, LX/2Fk;->A00:LX/0lu;
 
-    .line 57
-    .line 58
-    .line 59
-    iput-object v0, p0, LX/2fK;->A00:Lcom/facebook/distribgw/client/DGWClient;
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
-    .line 60
-    .line 61
-    iput-object v4, p0, LX/2fK;->A02:Ljava/util/concurrent/ScheduledExecutorService;
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 62
-    .line 63
-    return-void
+    .line 6
+    check-cast v0, LX/0IM;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v2
+
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    if-eq v2, v1, :cond_0
+
+    .line 14
+    .line 15
+    const/4 v0, 0x0
+
+    .line 16
+    if-eq v2, v0, :cond_0
+
+    .line 17
+    .line 18
+    const/4 v1, 0x0
+
+    .line 19
+    :cond_0
+    return v1
 .end method

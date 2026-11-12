@@ -2,62 +2,256 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0Mh;
+
+
+# instance fields
+.field public final synthetic A00:LX/00T;
+
+.field public final synthetic A01:LX/00Z;
+
+.field public final synthetic A02:LX/00f;
+
+.field public final synthetic A03:Ljava/lang/String;
+
 
 # direct methods
-.method public static final A00()V
-    .locals 2
+.method public constructor <init>(LX/00T;LX/00Z;LX/00f;Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput-object p2, p0, LX/0Br;->A01:LX/00Z;
 
     .line 1
     .line 2
-    const/16 v0, 0x12
+    iput-object p4, p0, LX/0Br;->A03:Ljava/lang/String;
 
     .line 3
     .line 4
-    if-lt v1, v0, :cond_0
+    iput-object p1, p0, LX/0Br;->A00:LX/00T;
 
     .line 5
     .line 6
-    invoke-static {}, LX/0Bq;->A00()V
+    iput-object p3, p0, LX/0Br;->A02:LX/00f;
 
     .line 7
     .line 8
-    .line 9
-    :cond_0
-    return-void
-.end method
-
-.method public static final A01(Ljava/lang/String;)V
-    .locals 2
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 5
-    .line 6
-    const/16 v0, 0x12
-
-    .line 7
-    .line 8
-    if-lt v1, v0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 9
     .line 10
-    invoke-static {p0}, LX/0Bq;->A01(Ljava/lang/String;)V
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AbQ(LX/075;LX/07B;)V
+    .locals 6
+
+    .line 0
+    sget-object v0, LX/075;->ON_START:LX/075;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-eqz v0, :cond_2
+
+    .line 7
+    .line 8
+    iget-object v5, p0, LX/0Br;->A01:LX/00Z;
+
+    .line 9
+    .line 10
+    iget-object v1, v5, LX/00Z;->A06:Ljava/util/Map;
 
     .line 11
     .line 12
+    iget-object v4, p0, LX/0Br;->A03:Ljava/lang/String;
+
     .line 13
+    .line 14
+    iget-object v3, p0, LX/0Br;->A00:LX/00T;
+
+    .line 15
+    .line 16
+    iget-object v2, p0, LX/0Br;->A02:LX/00f;
+
+    .line 17
+    .line 18
+    new-instance v0, LX/00X;
+
+    .line 19
+    .line 20
+    invoke-direct {v0, v3, v2}, LX/00X;-><init>(LX/00T;LX/00f;)V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-interface {v1, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 24
+    .line 25
+    .line 26
+    iget-object v1, v5, LX/00Z;->A03:Ljava/util/Map;
+
+    .line 27
+    .line 28
+    invoke-interface {v1, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v0
+
+    .line 32
+    if-eqz v0, :cond_0
+
+    .line 33
+    .line 34
+    invoke-interface {v1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {v1, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-interface {v3, v0}, LX/00T;->ASr(Ljava/lang/Object;)V
+
+    .line 42
+    .line 43
+    .line 44
     :cond_0
+    iget-object v1, v5, LX/00Z;->A01:Landroid/os/Bundle;
+
+    .line 45
+    .line 46
+    invoke-virtual {v1, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
+    .line 50
+    check-cast v0, Landroidx/activity/result/ActivityResult;
+
+    .line 51
+    .line 52
+    if-eqz v0, :cond_1
+
+    .line 53
+    .line 54
+    invoke-virtual {v1, v4}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+
+    .line 55
+    .line 56
+    .line 57
+    iget v1, v0, Landroidx/activity/result/ActivityResult;->A00:I
+
+    .line 58
+    .line 59
+    iget-object v0, v0, Landroidx/activity/result/ActivityResult;->A01:Landroid/content/Intent;
+
+    .line 60
+    .line 61
+    invoke-virtual {v2, v0, v1}, LX/00f;->A05(Landroid/content/Intent;I)Ljava/lang/Object;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v0
+
+    .line 65
+    invoke-interface {v3, v0}, LX/00T;->ASr(Ljava/lang/Object;)V
+
+    .line 66
+    .line 67
+    .line 68
+    :cond_1
+    return-void
+
+    .line 69
+    :cond_2
+    sget-object v0, LX/075;->ON_STOP:LX/075;
+
+    .line 70
+    .line 71
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 72
+    .line 73
+    .line 74
+    move-result v0
+
+    .line 75
+    if-eqz v0, :cond_3
+
+    .line 76
+    .line 77
+    iget-object v0, p0, LX/0Br;->A01:LX/00Z;
+
+    .line 78
+    .line 79
+    iget-object v1, v0, LX/00Z;->A06:Ljava/util/Map;
+
+    .line 80
+    .line 81
+    iget-object v0, p0, LX/0Br;->A03:Ljava/lang/String;
+
+    .line 82
+    .line 83
+    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 84
+    .line 85
+    .line 86
+    return-void
+
+    .line 87
+    :cond_3
+    sget-object v0, LX/075;->ON_DESTROY:LX/075;
+
+    .line 88
+    .line 89
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 90
+    .line 91
+    .line 92
+    move-result v0
+
+    .line 93
+    if-eqz v0, :cond_1
+
+    .line 94
+    .line 95
+    iget-object v1, p0, LX/0Br;->A01:LX/00Z;
+
+    .line 96
+    .line 97
+    iget-object v0, p0, LX/0Br;->A03:Ljava/lang/String;
+
+    .line 98
+    .line 99
+    invoke-virtual {v1, v0}, LX/00Z;->A05(Ljava/lang/String;)V
+
+    .line 100
+    .line 101
+    .line 102
     return-void
 .end method

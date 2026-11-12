@@ -1,236 +1,380 @@
-.class public final enum LX/6Hw;
-.super Ljava/lang/Enum;
+.class public final LX/6HW;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/6Hw;
-
-.field public static final enum Facebook:LX/6Hw;
-
-.field public static final enum Instagram:LX/6Hw;
-
-.field public static final enum Meta:LX/6Hw;
-
-.field public static final enum Oculus:LX/6Hw;
-
-.field public static final enum WhatsApp:LX/6Hw;
-
-
 # instance fields
-.field public final mCppValue:I
+.field public A00:LX/6Gu;
+
+.field public A01:LX/6Gt;
+
+.field public A02:LX/6Gt;
+
+.field public A03:LX/6Gt;
+
+.field public A04:LX/6Gt;
+
+.field public A05:LX/6Gt;
+
+.field public A06:LX/6Gt;
+
+.field public A07:LX/6Gt;
+
+.field public A08:LX/6Gt;
+
+.field public A09:[LX/6Ig;
+
+.field public A0A:[LX/6Ig;
+
+.field public final A0B:LX/6Jq;
+
+.field public final A0C:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(LX/6Jq;Z)V
+    .locals 1
 
     .line 0
-    const-string v0, "Facebook"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/4 v10, 0x0
-
     .line 3
-    new-instance v9, LX/6Hw;
+    const/4 v0, 0x0
 
     .line 4
-    .line 5
-    invoke-direct {v9, v0, v10, v10}, LX/6Hw;-><init>(Ljava/lang/String;II)V
+    iput-object v0, p0, LX/6HW;->A0A:[LX/6Ig;
 
+    .line 5
     .line 6
+    iput-object p1, p0, LX/6HW;->A0B:LX/6Jq;
+
     .line 7
     .line 8
-    sput-object v9, LX/6Hw;->Facebook:LX/6Hw;
+    iput-boolean p2, p0, LX/6HW;->A0C:Z
 
     .line 9
     .line 10
-    const-string v0, "Instagram"
+    return-void
+.end method
+
+.method public static final A00(LX/6HW;LX/6Gt;LX/6Gt;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    if-eqz p2, :cond_0
+
+    .line 1
+    .line 2
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    if-ne v1, v0, :cond_0
 
     .line 11
     .line 12
-    const/4 v8, 0x1
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 13
-    new-instance v7, LX/6Hw;
-
     .line 14
     .line 15
-    invoke-direct {v7, v0, v8, v8}, LX/6Hw;-><init>(Ljava/lang/String;II)V
+    move-result-object v1
 
     .line 16
+    const-string v0, "Conflicting "
+
     .line 17
     .line 18
-    sput-object v7, LX/6Hw;->Instagram:LX/6Hw;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 19
     .line 20
-    const-string v0, "Oculus"
-
     .line 21
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 22
-    const/4 v6, 0x2
-
     .line 23
-    new-instance v5, LX/6Hw;
-
     .line 24
-    .line 25
-    invoke-direct {v5, v0, v6, v6}, LX/6Hw;-><init>(Ljava/lang/String;II)V
+    const-string v0, " creators: already had "
 
+    .line 25
     .line 26
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 27
     .line 28
-    sput-object v5, LX/6Hw;->Oculus:LX/6Hw;
-
     .line 29
-    .line 30
-    const-string v0, "WhatsApp"
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
+    .line 30
     .line 31
     .line 32
-    const/4 v4, 0x3
+    const-string v0, ", encountered "
 
     .line 33
-    new-instance v3, LX/6Hw;
-
     .line 34
-    .line 35
-    invoke-direct {v3, v0, v4, v4}, LX/6Hw;-><init>(Ljava/lang/String;II)V
+    invoke-static {p1, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
+    .line 35
     .line 36
     .line 37
+    move-result-object v0
+
     .line 38
-    sput-object v3, LX/6Hw;->WhatsApp:LX/6Hw;
+    throw v0
 
     .line 39
+    :cond_0
+    iget-boolean v0, p0, LX/6HW;->A0C:Z
+
     .line 40
-    const-string v0, "Meta"
-
     .line 41
-    .line 42
-    const/4 v2, 0x4
+    if-eqz v0, :cond_1
 
+    .line 42
     .line 43
-    new-instance v1, LX/6Hw;
+    invoke-virtual {p1}, LX/6H0;->A0H()Ljava/lang/reflect/AnnotatedElement;
 
     .line 44
     .line 45
-    invoke-direct {v1, v0, v2, v2}, LX/6Hw;-><init>(Ljava/lang/String;II)V
-
     .line 46
+    move-result-object v0
+
     .line 47
+    check-cast v0, Ljava/lang/reflect/Member;
+
     .line 48
-    sput-object v1, LX/6Hw;->Meta:LX/6Hw;
-
     .line 49
+    invoke-static {v0}, LX/5Vo;->A06(Ljava/lang/reflect/Member;)V
+
     .line 50
-    const/4 v0, 0x5
-
     .line 51
-    new-array v0, v0, [LX/6Hw;
-
     .line 52
-    .line 53
-    aput-object v9, v0, v10
-
-    .line 54
-    .line 55
-    aput-object v7, v0, v8
-
-    .line 56
-    .line 57
-    aput-object v5, v0, v6
-
-    .line 58
-    .line 59
-    aput-object v3, v0, v4
-
-    .line 60
-    .line 61
-    aput-object v1, v0, v2
-
-    .line 62
-    .line 63
-    sput-object v0, LX/6Hw;->$VALUES:[LX/6Hw;
-
-    .line 64
-    .line 65
+    :cond_1
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    iput p3, p0, LX/6Hw;->mCppValue:I
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/6Hw;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/6Hw;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/6Hw;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/6Hw;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/6Hw;->$VALUES:[LX/6Hw;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/6Hw;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public getValue()I
-    .locals 1
+.method public final A01(LX/6Gt;[LX/6Ig;)V
+    .locals 2
 
     .line 0
-    iget v0, p0, LX/6Hw;->mCppValue:I
+    iget-object v1, p0, LX/6HW;->A03:LX/6Gt;
 
     .line 1
     .line 2
-    return v0
+    const-string v0, "delegate"
+
+    .line 3
+    .line 4
+    invoke-static {p0, p1, v1, v0}, LX/6HW;->A00(LX/6HW;LX/6Gt;LX/6Gt;Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/6HW;->A03:LX/6Gt;
+
+    .line 8
+    .line 9
+    iput-object p2, p0, LX/6HW;->A09:[LX/6Ig;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public final A02(LX/6Gt;[LX/6Ig;)V
+    .locals 6
+
+    .line 0
+    iget-object v1, p0, LX/6HW;->A07:LX/6Gt;
+
+    .line 1
+    .line 2
+    const-string v0, "property-based"
+
+    .line 3
+    .line 4
+    invoke-static {p0, p1, v1, v0}, LX/6HW;->A00(LX/6HW;LX/6Gt;LX/6Gt;Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/6HW;->A07:LX/6Gt;
+
+    .line 8
+    .line 9
+    array-length v5, p2
+
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    if-le v5, v0, :cond_2
+
+    .line 12
+    .line 13
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
+    const/4 v4, 0x0
+
+    .line 18
+    :goto_0
+    aget-object v0, p2, v4
+
+    .line 19
+    .line 20
+    iget-object v3, v0, LX/6IG;->_propName:Ljava/lang/String;
+
+    .line 21
+    .line 22
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    if-nez v0, :cond_1
+
+    .line 27
+    .line 28
+    aget-object v0, p2, v4
+
+    .line 29
+    .line 30
+    iget-object v0, v0, LX/6Ig;->_injectableValueId:Ljava/lang/Object;
+
+    .line 31
+    .line 32
+    if-eqz v0, :cond_1
+
+    .line 33
+    .line 34
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    .line 35
+    .line 36
+    if-ge v4, v5, :cond_2
+
+    .line 37
+    .line 38
+    goto :goto_0
+
+    .line 39
+    :cond_1
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v0
+
+    .line 43
+    invoke-virtual {v1, v3, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 44
+    .line 45
+    .line 46
+    move-result-object v2
+
+    .line 47
+    if-eqz v2, :cond_0
+
+    .line 48
+    .line 49
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v1
+
+    .line 53
+    const-string v0, "Duplicate creator property \""
+
+    .line 54
+    .line 55
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 56
+    .line 57
+    .line 58
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 59
+    .line 60
+    .line 61
+    const-string v0, "\" (index "
+
+    .line 62
+    .line 63
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 64
+    .line 65
+    .line 66
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 67
+    .line 68
+    .line 69
+    const-string v0, " vs "
+
+    .line 70
+    .line 71
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 72
+    .line 73
+    .line 74
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 75
+    .line 76
+    .line 77
+    const-string v0, ")"
+
+    .line 78
+    .line 79
+    invoke-static {v0, v1}, LX/001;->A0C(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+
+    .line 80
+    .line 81
+    .line 82
+    move-result-object v0
+
+    .line 83
+    throw v0
+
+    .line 84
+    :cond_2
+    iput-object p2, p0, LX/6HW;->A0A:[LX/6Ig;
+
+    .line 85
+    .line 86
+    return-void
 .end method

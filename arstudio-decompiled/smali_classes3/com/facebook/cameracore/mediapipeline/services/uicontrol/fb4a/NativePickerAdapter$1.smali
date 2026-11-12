@@ -43,7 +43,7 @@
 
     .line 1
     .line 2
-    iget-object v1, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;->mListener:LX/4Wa;
+    iget-object v1, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;->mListener:LX/4Yv;
 
     .line 3
     .line 4
@@ -51,7 +51,7 @@
 
     .line 5
     .line 6
-    invoke-virtual {v0}, LX/4tc;->getBindingAdapterPosition()I
+    invoke-virtual {v0}, LX/4nS;->getBindingAdapterPosition()I
 
     .line 7
     .line 8
@@ -59,7 +59,7 @@
     move-result v0
 
     .line 10
-    invoke-interface {v1, v0}, LX/4Wa;->onItemClick(I)V
+    invoke-interface {v1, v0}, LX/4Yv;->onItemClick(I)V
 
     .line 11
     .line 12

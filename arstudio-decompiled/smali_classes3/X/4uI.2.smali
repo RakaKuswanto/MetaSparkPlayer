@@ -1,115 +1,70 @@
 .class public final LX/4uI;
-.super LX/4uB;
+.super LX/4uM;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:I
-
-
 # direct methods
-.method public constructor <init>(II)V
-    .locals 1
+.method public constructor <init>(Landroid/text/Layout$Alignment;Ljava/lang/CharSequence;FFFIII)V
+    .locals 14
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/4uB;-><init>(II)V
+    const/high16 v12, -0x1000000
 
     .line 1
     .line 2
-    .line 3
-    const/4 v0, -0x1
+    const/high16 v11, -0x80000000
 
+    .line 3
     .line 4
-    iput v0, p0, LX/4uI;->A00:I
+    const v5, -0x800001
 
     .line 5
     .line 6
-    const/4 v0, 0x0
-
     .line 7
-    iput v0, p0, LX/4uI;->A01:I
+    move-object v0, p0
 
     .line 8
+    move-object v1, p1
+
     .line 9
-    return-void
-.end method
+    move-object/from16 v2, p2
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    .line 10
+    .line 11
+    move/from16 v3, p3
 
-    .line 268435456
-    invoke-direct {p0, p1, p2}, LX/4uB;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 12
+    .line 13
+    move/from16 v4, p4
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    const/4 v0, -0x1
+    .line 14
+    .line 15
+    move/from16 v6, p5
 
-    .line 268435460
-    iput v0, p0, LX/4uI;->A00:I
+    .line 16
+    .line 17
+    move/from16 v8, p6
 
-    .line 268435461
-    .line 268435462
-    const/4 v0, 0x0
+    .line 18
+    .line 19
+    move/from16 v9, p7
 
-    .line 268435463
-    iput v0, p0, LX/4uI;->A01:I
+    .line 20
+    .line 21
+    move/from16 v10, p8
 
-    .line 268435464
-    .line 268435465
-    return-void
-.end method
+    .line 22
+    .line 23
+    move v7, v5
 
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 1
+    .line 24
+    move v13, v11
 
-    .line 536870912
-    invoke-direct {p0, p1}, LX/4uB;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 25
+    invoke-direct/range {v0 .. v13}, LX/4uM;-><init>(Landroid/text/Layout$Alignment;Ljava/lang/CharSequence;FFFFFIIIIII)V
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    const/4 v0, -0x1
-
-    .line 536870916
-    iput v0, p0, LX/4uI;->A00:I
-
-    .line 536870917
-    .line 536870918
-    const/4 v0, 0x0
-
-    .line 536870919
-    iput v0, p0, LX/4uI;->A01:I
-
-    .line 536870920
-    .line 536870921
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-    .locals 1
-
-    .line 805306368
-    invoke-direct {p0, p1}, LX/4uB;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-
-    .line 805306369
-    .line 805306370
-    .line 805306371
-    const/4 v0, -0x1
-
-    .line 805306372
-    iput v0, p0, LX/4uI;->A00:I
-
-    .line 805306373
-    .line 805306374
-    const/4 v0, 0x0
-
-    .line 805306375
-    iput v0, p0, LX/4uI;->A01:I
-
-    .line 805306376
-    .line 805306377
+    .line 26
+    .line 27
+    .line 28
     return-void
 .end method

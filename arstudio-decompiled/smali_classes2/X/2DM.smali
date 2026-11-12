@@ -1,52 +1,33 @@
-.class public abstract LX/2DM;
-.super LX/2DN;
+.class public final LX/2DM;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = 0x1L
 
 
 # instance fields
-.field public transient A00:Ljava/util/LinkedHashMap;
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/27m;LX/2C2;LX/2DM;)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0, p1, p2, p3}, LX/2DN;-><init>(LX/27m;LX/2C2;LX/2DN;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
-.end method
-
-.method public constructor <init>(LX/2DM;LX/2Fk;)V
-    .locals 0
-
-    .line 536870912
-    invoke-direct {p0, p1, p2}, LX/2DN;-><init>(LX/2DN;LX/2Fk;)V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    return-void
-.end method
-
-.method public constructor <init>(LX/2Fk;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1}, LX/2DN;-><init>(LX/2Fk;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    invoke-static {}, LX/0lf;->A0A()LX/0lf;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/2DM;->A00:LX/0RP;
+
+    .line 8
+    .line 9
     return-void
 .end method

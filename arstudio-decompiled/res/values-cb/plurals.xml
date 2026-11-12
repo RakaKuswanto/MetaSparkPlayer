@@ -3,12 +3,53 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s بەدڵبوونی پەڕە</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s بەدڵبوون</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d ڕۆژ پێش ئێستا</item>
+        <item quantity="one">1 ڕۆژ پێش ئێستا</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d ڕۆژ</item>
+        <item quantity="one">1 ڕۆژ</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d ڕۆژ</item>
+        <item quantity="one">١ ڕۆژ</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d کاتژمێر</item>
+        <item quantity="one">١ کاتژمێر</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d خولەک</item>
+        <item quantity="one">١ خولەک</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d حەفتە</item>
+        <item quantity="one">١ ھەفتە</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d ساڵ</item>
+        <item quantity="one">1 ساڵ</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">%1$d کاتژمێر پێش ئێستا</item>
         <item quantity="one">١ کاتژمێر لەمەوبەر</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d کاتژمێر</item>
+        <item quantity="one">1 کاتژمێر</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$dکاتژمێر</item>
+        <item quantity="one">١ کاتژمێر</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d کاتژمێر</item>
+        <item quantity="one">1 کاتژمێر</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">%1$d کاتژمێر پێش ئێستا</item>
+        <item quantity="one">1 کاتژمێر پێش ئێستا</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">%1$d کاتژمێر لە ئێستاوە</item>
@@ -18,8 +59,60 @@
         <item quantity="other">%1$d خولەک لە ئێستاوە</item>
         <item quantity="one">1 خولەک لە ئێستاوە</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d خولەک پێش ئێستا</item>
+        <item quantity="one">1 خولەک پێش ئێستا</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d خولەک پێش ئێستا</item>
         <item quantity="one">١خولەک پێش ئێستا</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d خولەک</item>
+        <item quantity="one">1 خولەک</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$dخولەک</item>
+        <item quantity="one">١ خولەک</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d مانگ پێش ئێستا</item>
+        <item quantity="one">1 مانگ پێش ئێستا</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d چرکە پێش ئێستا</item>
+        <item quantity="one">1 چركه‌</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d حەفتە پێش ئێستا</item>
+        <item quantity="one">1 حەفتە پێش ئێستا</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d ساڵ پێش ئێستا</item>
+        <item quantity="one">1 ساڵ پێش ئێستا</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">%1$d ڕۆژ پێش ئێستا سەردانت کردووە</item>
+        <item quantity="one">1 ڕۆژ پێش ئێستا سەردانت کردووە</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">%1$d کاتژمێر پێش ئێستا سەردانت کردووە</item>
+        <item quantity="one">1 کاتژمێر پێش ئێستا سەردانت کردووە</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">تۆ %1$d خولەک لەمەوبەر سەردانت کرد</item>
+        <item quantity="one">تۆ 1 خولەک پێش ئێستا سەردانت کرد</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">%1$d مانگ پێش ئێستا سەردانت کردووە</item>
+        <item quantity="one">1 مانگ پێش ئێستا سەردانت کردووە</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">%1$d حەفتە پێش ئێستا سەردانت کردووە</item>
+        <item quantity="one">1 حەفتە پێش ئێستا سەردانت کردووە</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">%1$d ساڵ پێش ئێستا سەردانت کردووە</item>
+        <item quantity="one">1 ساڵ پێش ئێستا سەردانت کردووە</item>
     </plurals>
 </resources>

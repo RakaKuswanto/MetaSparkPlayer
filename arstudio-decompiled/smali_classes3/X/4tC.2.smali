@@ -1,106 +1,153 @@
 .class public final LX/4tC;
-.super LX/4t8;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/6b4;
+
+
+# instance fields
+.field public final A00:LX/6b4;
+
+.field public final A01:LX/6b4;
+
+.field public final A02:LX/6b4;
+
+.field public final A03:LX/6b4;
 
 
 # direct methods
-.method public constructor <init>(LX/4tC;)V
+.method public constructor <init>(LX/6b4;LX/6b4;LX/6b4;LX/6b4;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0, p1}, LX/4t8;-><init>(LX/4t8;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
+    iput-object p1, p0, LX/4tC;->A00:LX/6b4;
 
-.method public constructor <init>(Landroid/graphics/Paint;LX/3xa;Ljava/util/concurrent/Executor;I)V
-    .locals 1
+    iput-object p2, p0, LX/4tC;->A01:LX/6b4;
 
-    .line 268435456
-    new-instance v0, LX/4tB;
+    iput-object p3, p0, LX/4tC;->A02:LX/6b4;
 
-    .line 268435457
-    .line 268435458
-    invoke-direct {v0, p1, p2, p3, p4}, LX/4tB;-><init>(Landroid/graphics/Paint;LX/3xa;Ljava/util/concurrent/Executor;I)V
+    iput-object p4, p0, LX/4tC;->A03:LX/6b4;
 
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    invoke-direct {p0, v0}, LX/4t8;-><init>(LX/4t5;)V
-
-    .line 268435462
-    .line 268435463
-    .line 268435464
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()Landroid/graphics/Bitmap;
-    .locals 3
+.method public final bridge synthetic Aqz()Ljava/lang/Object;
+    .locals 6
 
     .line 0
-    iget-object v0, p0, LX/4t8;->A02:LX/4t5;
+    iget-object v0, p0, LX/4tC;->A00:LX/6b4;
 
     .line 1
     .line 2
-    check-cast v0, LX/4tB;
+    check-cast v0, LX/4tH;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/4tB;->A04:LX/3zw;
+    iget-object v0, v0, LX/4tH;->A00:LX/6a7;
 
     .line 5
     .line 6
-    const/4 v2, 0x0
+    iget-object v5, v0, LX/6a7;->A00:Landroid/content/Context;
 
     .line 7
-    if-eqz v0, :cond_0
-
     .line 8
+    if-eqz v5, :cond_1
+
     .line 9
-    iget-object v1, v0, LX/3zw;->A04:Landroid/graphics/Bitmap;
-
     .line 10
+    iget-object v0, p0, LX/4tC;->A01:LX/6b4;
+
     .line 11
-    if-eqz v1, :cond_0
-
     .line 12
-    .line 13
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
+    invoke-interface {v0}, LX/6b4;->Aqz()Ljava/lang/Object;
 
+    .line 13
     .line 14
     .line 15
+    move-result-object v4
+
     .line 16
-    move-result v0
+    check-cast v4, Ljava/io/File;
 
     .line 17
-    if-nez v0, :cond_0
-
     .line 18
+    iget-object v0, p0, LX/4tC;->A02:LX/6b4;
+
     .line 19
-    return-object v1
-
     .line 20
-    :cond_0
-    return-object v2
-.end method
+    invoke-interface {v0}, LX/6b4;->Aqz()Ljava/lang/Object;
 
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v3
 
-    .line 0
-    new-instance v0, LX/4tA;
+    .line 24
+    check-cast v3, LX/4t8;
 
-    .line 1
-    .line 2
-    invoke-direct {v0, p0}, LX/4tA;-><init>(LX/4tC;)V
+    .line 25
+    .line 26
+    iget-object v2, p0, LX/4tC;->A03:LX/6b4;
 
-    .line 3
-    .line 4
-    .line 5
+    .line 27
+    .line 28
+    instance-of v0, v2, LX/0Zg;
+
+    .line 29
+    .line 30
+    if-eqz v0, :cond_0
+
+    .line 31
+    .line 32
+    move-object v1, v2
+
+    .line 33
+    check-cast v1, LX/0Zg;
+
+    .line 34
+    .line 35
+    :goto_0
+    new-instance v0, LX/4t6;
+
+    .line 36
+    .line 37
+    invoke-direct {v0, v5, v1, v3, v4}, LX/4t6;-><init>(Landroid/content/Context;LX/0Zg;LX/4t8;Ljava/io/File;)V
+
+    .line 38
+    .line 39
+    .line 40
     return-object v0
+
+    .line 41
+    :cond_0
+    new-instance v1, LX/6cT;
+
+    .line 42
+    .line 43
+    invoke-direct {v1, v2}, LX/6cT;-><init>(LX/6b4;)V
+
+    .line 44
+    .line 45
+    .line 46
+    goto :goto_0
+
+    .line 47
+    :cond_1
+    const-string v0, "Cannot return null from a non-@Nullable @Provides method"
+
+    .line 48
+    .line 49
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v0
+
+    .line 53
+    throw v0
 .end method

@@ -1,98 +1,113 @@
-.class public final LX/4Km;
-.super Ljava/lang/Object;
+.class public final LX/4KM;
+.super Landroid/text/Editable$Factory;
 .source ""
 
-# interfaces
-.implements LX/02l;
 
+# static fields
+.field public static A00:Ljava/lang/Class;
 
-# instance fields
-.field public final synthetic A00:LX/4Kg;
+.field public static final A01:Ljava/lang/Object;
+
+.field public static volatile A02:Landroid/text/Editable$Factory;
 
 
 # direct methods
-.method public constructor <init>(LX/4Kg;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/4Km;->A00:LX/4Kg;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    move-result-object v0
+
+    .line 4
+    sput-object v0, LX/4KM;->A01:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 3
+
+    .line 0
+    invoke-direct {p0}, Landroid/text/Editable$Factory;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    :try_start_0
+    const-string v2, "android.text.DynamicLayout$ChangeWatcher"
+
     .line 4
     .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {v2, v1, v0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    sput-object v0, LX/4KM;->A00:Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 15
+    .line 16
+    :catchall_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final AUs(Landroid/view/View;LX/046;)LX/046;
-    .locals 3
+.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    .locals 2
 
     .line 0
-    iget-object v2, p0, LX/4Km;->A00:LX/4Kg;
+    sget-object v1, LX/4KM;->A00:Ljava/lang/Class;
 
     .line 1
     .line 2
-    iget-object v1, p2, LX/046;->A00:LX/043;
+    if-eqz v1, :cond_0
 
     .line 3
     .line 4
-    invoke-virtual {v1}, LX/043;->A02()LX/01Y;
+    new-instance v0, LX/6WV;
 
     .line 5
     .line 6
+    invoke-direct {v0, p1, v1}, LX/6WV;-><init>(Ljava/lang/CharSequence;Ljava/lang/Class;)V
+
     .line 7
-    move-result-object v0
-
     .line 8
-    iget v0, v0, LX/01Y;->A00:I
-
     .line 9
+    return-object v0
+
     .line 10
-    iput v0, v2, LX/4Kg;->A02:I
+    :cond_0
+    invoke-super {p0, p1}, Landroid/text/Editable$Factory;->newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
 
     .line 11
     .line 12
-    invoke-virtual {v1}, LX/043;->A02()LX/01Y;
-
     .line 13
+    move-result-object v0
+
     .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    iget v0, v0, LX/01Y;->A01:I
-
-    .line 17
-    .line 18
-    iput v0, v2, LX/4Kg;->A03:I
-
-    .line 19
-    .line 20
-    invoke-virtual {v1}, LX/043;->A02()LX/01Y;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    iget v0, v0, LX/01Y;->A02:I
-
-    .line 25
-    .line 26
-    iput v0, v2, LX/4Kg;->A04:I
-
-    .line 27
-    .line 28
-    invoke-static {v2}, LX/4Kg;->A03(LX/4Kg;)V
-
-    .line 29
-    .line 30
-    .line 31
-    return-object p2
+    return-object v0
 .end method

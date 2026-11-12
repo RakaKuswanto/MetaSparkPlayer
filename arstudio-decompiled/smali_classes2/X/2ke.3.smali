@@ -2,315 +2,484 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2kd;
+
 
 # instance fields
-.field public final A00:I
+.field public A00:LX/2kd;
 
-.field public final A01:LX/1Nm;
+.field public A01:LX/2lK;
 
-.field public final A02:LX/1Nm;
+.field public final A02:Landroid/content/Context;
 
-.field public final A03:Ljava/util/Queue;
+.field public final A03:LX/2kr;
 
-.field public final A04:Ljava/util/Set;
+.field public final A04:LX/2kd;
 
-.field public final A05:Ljava/util/Set;
-
-.field public final A06:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final A07:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final A08:LX/1Nw;
-
-.field public final A09:LX/1Nm;
-
-.field public final A0A:Ljava/util/Set;
-
-.field public final A0B:Ljava/util/Set;
+.field public final A05:LX/2lR;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 4
+.method public constructor <init>(Landroid/content/Context;LX/2kr;LX/2kd;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p3, p2}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2ke;->A08:LX/1Nw;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
     .line 5
-    const/16 v1, 0xa
+    .line 6
+    iput-object p3, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 7
+    .line 8
+    iput-object p2, p0, LX/2ke;->A03:LX/2kr;
+
+    .line 9
+    .line 10
+    iput-object p1, p0, LX/2ke;->A02:Landroid/content/Context;
+
+    .line 11
+    .line 12
+    new-instance v0, LX/2lR;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, p0}, LX/2lR;-><init>(LX/2ke;)V
+
+    .line 15
+    .line 16
+    .line 17
+    iput-object v0, p0, LX/2ke;->A05:LX/2lR;
+
+    .line 18
+    .line 19
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getConnectionState()LX/3mi;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/2kd;->getConnectionState()LX/3mi;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final getMqttHealthStats()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/2kd;->getMqttHealthStats()Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final isConnected()Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/2kd;->isConnected()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final isConnectedOrConnecting()Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/2kd;->isConnectedOrConnecting()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final kickOffConnection()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/2kd;->kickOffConnection()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final onNetworkAvailable()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onNetworkInterfaceChanged(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onNetworkUnavailable()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final publish(Ljava/lang/String;[BLX/2BA;Lcom/facebook/mqtt/service/MqttPublishListener;)I
+    .locals 1
+
+    .line 0
+    invoke-static {p1, p2, p3}, LX/0X1;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 4
+    .line 5
+    invoke-interface {v0, p1, p2, p3, p4}, LX/2kd;->publish(Ljava/lang/String;[BLX/2BA;Lcom/facebook/mqtt/service/MqttPublishListener;)I
 
     .line 6
     .line 7
-    new-instance v0, LX/1da;
+    .line 8
+    move-result v0
+
+    .line 9
+    return v0
+.end method
+
+.method public final publishExt(Ljava/lang/String;[BLX/2BA;Lcom/facebook/mqtt/service/MqttPublishExtListener;)I
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-static {p2, p3, p4}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
 
     .line 8
     .line 9
-    invoke-direct {v0, v1}, LX/1da;-><init>(I)V
+    invoke-interface {v0, p1, p2, p3, p4}, LX/2kd;->publishExt(Ljava/lang/String;[BLX/2BA;Lcom/facebook/mqtt/service/MqttPublishExtListener;)I
 
     .line 10
     .line 11
     .line 12
-    iput-object v0, p0, LX/2ke;->A0B:Ljava/util/Set;
+    move-result v0
 
     .line 13
+    return v0
+.end method
+
+.method public final setForeground(Z[BLcom/facebook/mqtt/service/MqttPublishListener;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1, p2, p3}, LX/2kd;->setForeground(Z[BLcom/facebook/mqtt/service/MqttPublishListener;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final start(Landroid/content/Context;Lcom/facebook/mqtt/service/ConnectionConfig;LX/2lB;Lcom/facebook/mqtt/service/MqttSubscribeListener;)Z
+    .locals 3
+
+    .line 0
+    invoke-static {p1, p2, p3}, LX/0X1;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 4
+    .line 5
+    invoke-interface {v1, p1, p2, p3, p4}, LX/2kd;->start(Landroid/content/Context;Lcom/facebook/mqtt/service/ConnectionConfig;LX/2lB;Lcom/facebook/mqtt/service/MqttSubscribeListener;)Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    if-eqz v0, :cond_1
+
+    .line 10
+    .line 11
+    iput-object v1, p0, LX/2ke;->A00:LX/2kd;
+
+    .line 12
+    .line 13
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
     .line 14
-    new-instance v0, LX/1da;
-
     .line 15
-    .line 16
-    invoke-direct {v0, v1}, LX/1da;-><init>(I)V
+    const/16 v0, 0x15
 
+    .line 16
     .line 17
+    iget-object v1, p0, LX/2ke;->A05:LX/2lR;
+
     .line 18
     .line 19
-    iput-object v0, p0, LX/2ke;->A0A:Ljava/util/Set;
+    if-ge v2, v0, :cond_0
 
     .line 20
     .line 21
-    new-instance v0, LX/1da;
+    new-instance v0, LX/2kj;
 
     .line 22
     .line 23
-    invoke-direct {v0, v1}, LX/1da;-><init>(I)V
+    invoke-direct {v0, v1}, LX/2kj;-><init>(LX/2lR;)V
 
     .line 24
     .line 25
     .line 26
-    iput-object v0, p0, LX/2ke;->A05:Ljava/util/Set;
+    :goto_0
+    invoke-virtual {v0, p1}, LX/2lK;->A00(Landroid/content/Context;)V
 
     .line 27
     .line 28
-    new-instance v0, LX/1da;
-
     .line 29
-    .line 30
-    invoke-direct {v0, v1}, LX/1da;-><init>(I)V
+    iput-object v0, p0, LX/2ke;->A01:LX/2lK;
 
+    .line 30
     .line 31
+    const/4 v0, 0x1
+
     .line 32
+    return v0
+
     .line 33
-    iput-object v0, p0, LX/2ke;->A04:Ljava/util/Set;
+    :cond_0
+    new-instance v0, LX/2kt;
 
     .line 34
     .line 35
-    invoke-static {}, LX/0Yj;->A0g()Ljava/util/concurrent/ConcurrentLinkedQueue;
+    invoke-direct {v0, v1}, LX/2kt;-><init>(LX/2lR;)V
 
     .line 36
     .line 37
     .line 38
-    move-result-object v0
+    goto :goto_0
 
     .line 39
-    iput-object v0, p0, LX/2ke;->A03:Ljava/util/Queue;
+    :cond_1
+    const/4 v0, 0x0
 
     .line 40
-    .line 41
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    .line 42
-    invoke-static {v1}, LX/0Yj;->A0j(I)Ljava/util/concurrent/atomic/AtomicInteger;
+.method public final stop()V
+    .locals 3
 
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v0
+    .line 0
+    const/4 v2, 0x0
 
-    .line 46
-    iput-object v0, p0, LX/2ke;->A07:Ljava/util/concurrent/atomic/AtomicInteger;
+    .line 1
+    iput-object v2, p0, LX/2ke;->A00:LX/2kd;
 
-    .line 47
-    .line 48
-    invoke-static {v1}, LX/0Yi;->A16(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/2ke;->A01:LX/2lK;
 
-    .line 49
-    .line 50
-    .line 51
-    move-result-object v0
+    .line 4
+    .line 5
+    if-eqz v1, :cond_0
 
-    .line 52
-    iput-object v0, p0, LX/2ke;->A06:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/2ke;->A02:Landroid/content/Context;
 
-    .line 53
-    .line 54
-    sget v0, LX/2eq;->AZt:I
+    .line 8
+    .line 9
+    invoke-virtual {v1, v0}, LX/2lK;->A01(Landroid/content/Context;)V
 
-    .line 55
-    .line 56
-    invoke-static {p1, v0}, LX/1Nw;->A01(LX/1Nw;I)LX/1Nm;
-
-    .line 57
-    .line 58
-    .line 59
-    move-result-object v0
-
-    .line 60
-    iput-object v0, p0, LX/2ke;->A02:LX/1Nm;
-
-    .line 61
-    .line 62
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v3
-
-    .line 66
-    check-cast v3, LX/2nS;
-
-    .line 67
-    .line 68
-    iget-object v0, v3, LX/2nS;->A03:Ljava/lang/Integer;
-
-    .line 69
-    .line 70
-    if-nez v0, :cond_0
-
-    .line 71
-    .line 72
-    iget-object v0, v3, LX/2nS;->A04:LX/1Nm;
-
-    .line 73
-    .line 74
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
-
-    .line 75
-    .line 76
-    .line 77
-    move-result-object v2
-
-    .line 78
-    const-wide v0, 0x820087000b0350L
-
-    .line 79
-    .line 80
-    .line 81
-    .line 82
-    .line 83
-    invoke-static {v2, v0, v1}, LX/0Yg;->A0Z(LX/35B;J)Ljava/lang/Integer;
-
-    .line 84
-    .line 85
-    .line 86
-    move-result-object v0
-
-    .line 87
-    iput-object v0, v3, LX/2nS;->A03:Ljava/lang/Integer;
-
-    .line 88
-    .line 89
+    .line 10
+    .line 11
+    .line 12
     :cond_0
-    invoke-static {v0}, LX/0PS;->A07(Ljava/lang/Object;)V
+    iput-object v2, p0, LX/2ke;->A01:LX/2lK;
 
-    .line 90
-    .line 91
-    .line 92
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    .line 13
+    .line 14
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
 
-    .line 93
-    .line 94
-    .line 95
+    .line 15
+    .line 16
+    invoke-interface {v0}, LX/2kd;->stop()V
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+.end method
+
+.method public final subscribe(Ljava/lang/String;LX/2BA;Lcom/facebook/mqtt/service/MqttSubscribeListener;)Z
+    .locals 1
+
+    .line 0
+    invoke-static {p1, p2, p3}, LX/0X1;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 4
+    .line 5
+    invoke-interface {v0, p1, p2, p3}, LX/2kd;->subscribe(Ljava/lang/String;LX/2BA;Lcom/facebook/mqtt/service/MqttSubscribeListener;)Z
+
+    .line 6
+    .line 7
+    .line 8
     move-result v0
 
-    .line 96
-    iput v0, p0, LX/2ke;->A00:I
+    .line 9
+    return v0
+.end method
 
-    .line 97
-    .line 98
-    iget-object v0, p0, LX/2ke;->A02:LX/1Nm;
+.method public final unsubscribe(Ljava/util/List;)Z
+    .locals 1
 
-    .line 99
-    .line 100
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    .line 0
+    const/4 v0, 0x0
 
-    .line 101
-    .line 102
-    .line 103
-    move-result-object v3
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    .line 104
-    check-cast v3, LX/2nS;
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
 
-    .line 105
-    .line 106
-    iget-object v0, v3, LX/2nS;->A02:Ljava/lang/Integer;
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, LX/2kd;->unsubscribe(Ljava/util/List;)Z
 
-    .line 107
-    .line 108
-    if-nez v0, :cond_1
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
 
-    .line 109
-    .line 110
-    iget-object v0, v3, LX/2nS;->A04:LX/1Nm;
+    .line 10
+    return v0
+.end method
 
-    .line 111
-    .line 112
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
+.method public final updateRegionPreference(Ljava/lang/String;)V
+    .locals 1
 
-    .line 113
-    .line 114
-    .line 115
-    move-result-object v2
+    .line 0
+    const/4 v0, 0x0
 
-    .line 116
-    const-wide v0, 0x820087000c0351L
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    .line 117
-    .line 118
-    .line 119
-    .line 120
-    .line 121
-    invoke-static {v2, v0, v1}, LX/0Yg;->A0Z(LX/35B;J)Ljava/lang/Integer;
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
 
-    .line 122
-    .line 123
-    .line 124
-    move-result-object v0
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, LX/2kd;->updateRegionPreference(Ljava/lang/String;)V
 
-    .line 125
-    iput-object v0, v3, LX/2nS;->A02:Ljava/lang/Integer;
-
-    .line 126
-    .line 127
-    :cond_1
-    invoke-static {v0}, LX/0PS;->A07(Ljava/lang/Object;)V
-
-    .line 128
-    .line 129
-    .line 130
-    sget v0, LX/2eq;->A74:I
-
-    .line 131
-    .line 132
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 133
-    .line 134
-    .line 135
-    move-result-object v0
-
-    .line 136
-    iput-object v0, p0, LX/2ke;->A09:LX/1Nm;
-
-    .line 137
-    .line 138
-    invoke-static {}, LX/1Nl;->A04()LX/1Nm;
-
-    .line 139
-    .line 140
-    .line 141
-    move-result-object v0
-
-    .line 142
-    iput-object v0, p0, LX/2ke;->A01:LX/1Nm;
-
-    .line 143
-    .line 144
+    .line 7
+    .line 8
+    .line 9
     return-void
+.end method
+
+.method public final verifyAuthToken(Ljava/lang/String;)Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/2ke;->A04:LX/2kd;
+
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, LX/2kd;->verifyAuthToken(Ljava/lang/String;)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    return v0
 .end method

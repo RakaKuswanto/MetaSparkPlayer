@@ -1,8 +1,11 @@
-.class public interface abstract LX/0Gh;
+.class public interface abstract LX/0GH;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0VH;
+
 
 # virtual methods
-.method public abstract ASw(Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 .end method

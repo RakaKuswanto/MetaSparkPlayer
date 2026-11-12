@@ -1,140 +1,183 @@
 .class public final LX/2tB;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "QeHttpRequestExecutor$InitializeExecutorThread"
-
-
 # instance fields
-.field public final synthetic A00:LX/2t4;
+.field public A00:I
+
+.field public final A01:[B
 
 
 # direct methods
-.method public constructor <init>(LX/2t4;)V
-    .locals 0
+.method public constructor <init>(LX/2tB;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/2tB;->A00:LX/2t4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
-
     .line 3
+    const/4 v0, 0x0
+
     .line 4
+    iput v0, p0, LX/2tB;->A00:I
+
     .line 5
+    .line 6
+    iget-object v0, p1, LX/2tB;->A01:[B
+
+    .line 7
+    .line 8
+    iput-object v0, p0, LX/2tB;->A01:[B
+
+    .line 9
+    .line 10
+    iget v0, p1, LX/2tB;->A00:I
+
+    .line 11
+    .line 12
+    iput v0, p0, LX/2tB;->A00:I
+
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public constructor <init>([B)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const/4 v0, 0x0
+
+    .line 268435460
+    iput v0, p0, LX/2tB;->A00:I
+
+    .line 268435461
+    .line 268435462
+    iput-object p1, p0, LX/2tB;->A01:[B
+
+    .line 268435463
+    .line 268435464
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final A00()I
+    .locals 6
 
     .line 0
-    iget-object v3, p0, LX/2tB;->A00:LX/2t4;
+    const/4 v5, 0x0
 
     .line 1
+    const/4 v4, 0x0
+
     .line 2
-    monitor-enter v3
+    const/4 v3, -0x1
 
     .line 3
-    :try_start_0
-    iget-object v0, v3, LX/2t4;->A02:LX/3Xi;
+    :cond_0
+    iget-object v1, p0, LX/2tB;->A01:[B
 
     .line 4
     .line 5
-    invoke-interface {v0}, LX/3Xi;->Aq4()Z
+    iget v0, p0, LX/2tB;->A00:I
 
     .line 6
     .line 7
-    .line 8
-    move-result v0
+    aget-byte v1, v1, v0
 
+    .line 8
     .line 9
-    if-eqz v0, :cond_0
+    add-int/lit8 v0, v0, 0x1
 
     .line 10
     .line 11
-    iget-object v0, v3, LX/2t4;->A03:LX/0Na;
+    iput v0, p0, LX/2tB;->A00:I
 
     .line 12
     .line 13
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    and-int/lit16 v2, v1, 0xff
 
     .line 14
     .line 15
-    .line 16
-    move-result-object v0
+    and-int/lit8 v1, v2, 0x7f
 
+    .line 16
     .line 17
-    check-cast v0, LX/2vb;
+    mul-int/lit8 v0, v4, 0x7
 
     .line 18
     .line 19
-    iput-object v0, v3, LX/2t4;->A00:LX/2vb;
+    shl-int/2addr v1, v0
 
     .line 20
+    or-int/2addr v5, v1
+
     .line 21
-    iget-object v2, v3, LX/2t4;->A01:LX/0Gk;
+    shl-int/lit8 v3, v3, 0x7
 
     .line 22
     .line 23
-    invoke-interface {v0}, LX/2vb;->AGk()Ljava/lang/String;
+    add-int/lit8 v4, v4, 0x1
 
     .line 24
     .line 25
-    .line 26
-    move-result-object v1
+    const/16 v0, 0x80
 
+    .line 26
     .line 27
-    const-string v0, "HTTP_ENGINE"
+    and-int/2addr v2, v0
 
     .line 28
+    if-ne v2, v0, :cond_1
+
     .line 29
-    invoke-interface {v2, v0, v1}, LX/0Gk;->Ah9(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 30
-    .line 31
-    .line 32
-    invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
+    const/4 v0, 0x5
 
+    .line 31
+    if-lt v4, v0, :cond_0
+
+    .line 32
     .line 33
+    const-string v0, "LEB128 larger than 28bit"
+
     .line 34
     .line 35
-    monitor-exit v3
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 36
-    return-void
-
     .line 37
-    :cond_0
-    const-string v1, "Failed to load Liger libraries."
-
     .line 38
+    move-result-object v0
+
     .line 39
-    new-instance v0, Ljava/lang/UnsatisfiedLinkError;
+    throw v0
 
     .line 40
+    :cond_1
+    shr-int/lit8 v0, v3, 0x1
+
     .line 41
-    invoke-direct {v0, v1}, Ljava/lang/UnsatisfiedLinkError;-><init>(Ljava/lang/String;)V
-
     .line 42
-    .line 43
-    .line 44
-    throw v0
+    and-int/2addr v0, v5
 
+    .line 43
+    if-eqz v0, :cond_2
+
+    .line 44
     .line 45
-    :catchall_0
-    move-exception v0
+    or-int/2addr v5, v3
 
     .line 46
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 47
-    throw v0
+    :cond_2
+    return v5
 .end method

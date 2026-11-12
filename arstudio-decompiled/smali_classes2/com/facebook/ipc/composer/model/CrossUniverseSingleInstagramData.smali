@@ -31,11 +31,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x51
+    const/16 v0, 0x11
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -59,35 +59,30 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0s(Ljava/lang/Object;)V
+    invoke-static {p1, p0}, LX/0X1;->A1a(Landroid/os/Parcel;Ljava/lang/Object;)Z
 
     .line 4
     .line 5
     .line 6
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
-    .line 7
-    .line 8
-    .line 9
     move-result v0
 
-    .line 10
+    .line 7
     iput-boolean v0, p0, Lcom/facebook/ipc/composer/model/CrossUniverseSingleInstagramData;->A01:Z
 
+    .line 8
+    .line 9
+    invoke-static {p1}, LX/0X1;->A0J(Landroid/os/Parcel;)Ljava/lang/String;
+
+    .line 10
     .line 11
     .line 12
-    invoke-static {p1}, LX/0Yd;->A0H(Landroid/os/Parcel;)Ljava/lang/String;
-
-    .line 13
-    .line 14
-    .line 15
     move-result-object v0
 
-    .line 16
+    .line 13
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/CrossUniverseSingleInstagramData;->A00:Ljava/lang/String;
 
-    .line 17
-    .line 18
+    .line 14
+    .line 15
     return-void
 .end method
 
@@ -159,7 +154,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22
@@ -187,7 +182,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A04(Z)I
+    invoke-static {v0}, LX/1O4;->A03(Z)I
 
     .line 3
     .line 4
@@ -203,7 +198,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -234,7 +229,7 @@
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/0Yc;->A0D(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0k(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 8
     .line 9

@@ -1,119 +1,76 @@
-.class public final LX/5RZ;
+.class public final synthetic LX/5RZ;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static A00:LX/5RZ;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaSourceList$ForwardingEventListener$$ExternalSyntheticLambda11"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/util/Pair;
+
+.field public final synthetic A01:LX/5RQ;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/5RZ;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/5RZ;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/5RZ;->A00:LX/5RZ;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Landroid/util/Pair;LX/5RQ;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p2, p0, LX/5RZ;->A01:LX/5RQ;
+
+    iput-object p1, p0, LX/5RZ;->A00:Landroid/util/Pair;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 6
+.method public final run()V
+    .locals 4
 
     .line 0
-    check-cast p1, LX/5RE;
+    iget-object v0, p0, LX/5RZ;->A01:LX/5RQ;
 
     .line 1
     .line 2
-    check-cast p2, LX/5RE;
+    iget-object v3, p0, LX/5RZ;->A00:Landroid/util/Pair;
 
     .line 3
     .line 4
-    invoke-virtual {p1}, LX/5RE;->ALf()J
+    iget-object v0, v0, LX/5RQ;->A01:LX/5Q9;
 
     .line 5
     .line 6
-    .line 7
-    move-result-wide v4
+    iget-object v2, v0, LX/5Q9;->A04:LX/5OE;
 
+    .line 7
     .line 8
-    invoke-virtual {p2}, LX/5RE;->ALf()J
+    invoke-static {v3}, LX/432;->A05(Landroid/util/Pair;)I
 
     .line 9
     .line 10
     .line 11
-    move-result-wide v0
+    move-result v1
 
     .line 12
-    sub-long/2addr v4, v0
+    iget-object v0, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     .line 13
-    const-wide/16 v2, 0x0
-
     .line 14
+    check-cast v0, LX/5RP;
+
     .line 15
-    cmp-long v0, v4, v2
-
     .line 16
-    .line 17
-    if-eqz v0, :cond_1
+    invoke-interface {v2, v0, v1}, LX/5M9;->AVf(LX/5RP;I)V
 
+    .line 17
     .line 18
     .line 19
-    cmp-long v1, v4, v2
-
-    .line 20
-    .line 21
-    const/4 v0, 0x1
-
-    .line 22
-    if-gez v1, :cond_0
-
-    .line 23
-    .line 24
-    const/4 v0, -0x1
-
-    .line 25
-    :cond_0
-    return v0
-
-    .line 26
-    :cond_1
-    invoke-static {p1, p2}, LX/5RS;->A00(LX/5RV;LX/5RV;)I
-
-    .line 27
-    .line 28
-    .line 29
-    move-result v0
-
-    .line 30
-    return v0
+    return-void
 .end method

@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5Tc;
+.implements LX/6BG;
 
 
 # instance fields
@@ -73,58 +73,33 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/implementation/SegmentationRoIDataSourceWrapper;->mDataSource:Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationRoIDataSource;
+    const/4 v0, 0x0
 
     .line 1
+    if-eq p1, v0, :cond_0
+
     .line 2
-    if-eq p1, v0, :cond_1
-
     .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    const-string v0, "detach"
-
-    .line 7
-    .line 8
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    throw v0
-
-    .line 13
-    :cond_0
     iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/implementation/SegmentationRoIDataSourceWrapper;->mDataSource:Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationRoIDataSource;
 
-    .line 14
-    .line 15
-    if-eqz p1, :cond_1
-
-    .line 16
-    .line 17
+    .line 4
+    .line 5
     const-string v0, "attach"
 
-    .line 18
-    .line 19
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    .line 6
+    .line 7
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
-    .line 20
-    .line 21
-    .line 22
+    .line 8
+    .line 9
+    .line 10
     move-result-object v0
 
-    .line 23
+    .line 11
     throw v0
 
-    .line 24
-    :cond_1
+    .line 12
+    :cond_0
     return-void
 .end method
 

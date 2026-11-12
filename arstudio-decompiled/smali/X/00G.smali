@@ -1,76 +1,44 @@
-.class public final LX/00G;
+.class public final synthetic LX/00G;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentDialog$$ExternalSyntheticLambda0"
+
+
+# instance fields
+.field public final synthetic A00:LX/0Ce;
+
 
 # direct methods
-.method public static final A00(LX/0Cw;)LX/00F;
-    .locals 1
+.method public synthetic constructor <init>(LX/0Ce;)V
+    .locals 0
 
-    .line 0
-    new-instance v0, LX/00F;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    invoke-direct {v0, p0}, LX/00F;-><init>(LX/0Cw;)V
+    iput-object p1, p0, LX/00G;->A00:LX/0Ce;
 
-    .line 3
-    .line 4
-    .line 5
-    return-object v0
-.end method
-
-.method public static final A01(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
-
-    .line 2
-    .line 3
-    check-cast p1, Landroid/window/OnBackInvokedCallback;
-
-    .line 4
-    .line 5
-    invoke-interface {p0, v0, p1}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
-
-    .line 6
-    .line 7
-    .line 8
     return-void
 .end method
 
-.method public static final A02(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+
+# virtual methods
+.method public final run()V
+    .locals 1
 
     .line 0
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
+    iget-object v0, p0, LX/00G;->A00:LX/0Ce;
 
     .line 1
     .line 2
-    check-cast p1, Landroid/window/OnBackInvokedCallback;
+    invoke-static {v0}, LX/0Ce;->A01(LX/0Ce;)V
 
     .line 3
     .line 4
-    invoke-interface {p0, p1}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
-
     .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public static synthetic A03(LX/0Cw;)V
-    .locals 0
-
-    .line 0
-    invoke-interface {p0}, LX/0Cw;->APf()Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    .line 3
     return-void
 .end method

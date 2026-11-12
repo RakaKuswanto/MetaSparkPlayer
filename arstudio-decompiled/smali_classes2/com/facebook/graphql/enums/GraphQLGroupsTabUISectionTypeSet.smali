@@ -124,58 +124,60 @@
 
     .line 51
     .line 52
-    const-string v0, "WELCOME_MAT"
+    const-string/jumbo v0, "WELCOME_MAT"
 
     .line 53
     .line 54
+    .line 55
     aput-object v0, v2, v1
 
-    .line 55
     .line 56
+    .line 57
     const/16 v1, 0xa
 
-    .line 57
     .line 58
+    .line 59
     const-string v0, "TOP_UNITS"
 
-    .line 59
     .line 60
+    .line 61
     aput-object v0, v2, v1
 
-    .line 61
     .line 62
+    .line 63
     const/16 v1, 0xb
 
-    .line 63
     .line 64
+    .line 65
     const-string v0, "MORE_TOGETHER_UNITS"
 
-    .line 65
     .line 66
+    .line 67
     aput-object v0, v2, v1
 
-    .line 67
     .line 68
+    .line 69
     const/16 v1, 0xc
 
-    .line 69
     .line 70
-    const-string v0, "YOUNG_ADULTS_EMOTION_UNITS"
-
     .line 71
-    .line 72
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "YOUNG_ADULTS_EMOTION_UNITS"
 
+    .line 72
     .line 73
     .line 74
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 75
+    .line 76
+    .line 77
     move-result-object v0
 
-    .line 76
+    .line 78
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLGroupsTabUISectionTypeSet;->A00:Ljava/util/Set;
 
-    .line 77
-    .line 78
+    .line 79
+    .line 80
     return-void
 .end method
 

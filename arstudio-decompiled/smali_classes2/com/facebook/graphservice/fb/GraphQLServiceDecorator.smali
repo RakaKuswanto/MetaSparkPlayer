@@ -66,11 +66,11 @@
     move-result-object v0
 
     .line 268435460
-    new-instance v1, LX/1sv;
+    new-instance v1, LX/1yR;
 
     .line 268435461
     .line 268435462
-    invoke-direct {v1, p2, v0}, LX/1sv;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/lang/String;)V
+    invoke-direct {v1, p2, v0}, LX/1yR;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/lang/String;)V
 
     .line 268435463
     .line 268435464
@@ -102,11 +102,11 @@
     move-result-object v0
 
     .line 4
-    new-instance v1, LX/1sv;
+    new-instance v1, LX/1yR;
 
     .line 5
     .line 6
-    invoke-direct {v1, p2, v0}, LX/1sv;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/lang/String;)V
+    invoke-direct {v1, p2, v0}, LX/1yR;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/lang/String;)V
 
     .line 7
     .line 8

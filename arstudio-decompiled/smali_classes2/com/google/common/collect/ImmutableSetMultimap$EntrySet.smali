@@ -25,6 +25,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableSetMultimap;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "multimap"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
@@ -43,6 +51,14 @@
 # virtual methods
 .method public final contains(Ljava/lang/Object;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Ljava/util/Map$Entry;
@@ -77,7 +93,7 @@
     move-result-object v1
 
     .line 16
-    invoke-virtual {v0}, LX/1dn;->A5e()Ljava/util/Map;
+    invoke-virtual {v0}, LX/21N;->A3q()Ljava/util/Map;
 
     .line 17
     .line 18
@@ -124,7 +140,7 @@
     return v0
 .end method
 
-.method public final iterator()LX/1bX;
+.method public final iterator()LX/1tw;
     .locals 2
 
     .line 0
@@ -132,11 +148,11 @@
 
     .line 1
     .line 2
-    new-instance v0, LX/1eP;
+    new-instance v0, LX/214;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/1eP;-><init>(Lcom/google/common/collect/ImmutableMultimap;)V
+    invoke-direct {v0, v1}, LX/214;-><init>(Lcom/google/common/collect/ImmutableMultimap;)V
 
     .line 5
     .line 6
@@ -152,11 +168,11 @@
 
     .line 268435457
     .line 268435458
-    new-instance v0, LX/1eP;
+    new-instance v0, LX/214;
 
     .line 268435459
     .line 268435460
-    invoke-direct {v0, v1}, LX/1eP;-><init>(Lcom/google/common/collect/ImmutableMultimap;)V
+    invoke-direct {v0, v1}, LX/214;-><init>(Lcom/google/common/collect/ImmutableMultimap;)V
 
     .line 268435461
     .line 268435462
@@ -177,4 +193,19 @@
     .line 3
     .line 4
     return v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableSet;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

@@ -1,3 +1,3 @@
-.class public final LX/4wZ;
-.super LX/4wN;
+.class public interface abstract LX/4Wz;
+.super Ljava/lang/Object;
 .source ""

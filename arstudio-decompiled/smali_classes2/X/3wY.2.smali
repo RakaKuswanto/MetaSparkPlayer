@@ -2,24 +2,33 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/42z;
+
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/video/plugins/CoverImagePlugin;
+.field public final A00:Landroid/graphics/SurfaceTexture;
+
+.field public final A01:Landroid/view/Surface;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/video/plugins/CoverImagePlugin;)V
+.method public constructor <init>(Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/3wY;->A00:Lcom/facebook/video/plugins/CoverImagePlugin;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/3wY;->A00:Landroid/graphics/SurfaceTexture;
+
     .line 4
     .line 5
+    iput-object p2, p0, LX/3wY;->A01:Landroid/view/Surface;
+
+    .line 6
+    .line 7
     return-void
 .end method

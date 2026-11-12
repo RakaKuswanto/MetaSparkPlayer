@@ -24,7 +24,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 3
     .line 4

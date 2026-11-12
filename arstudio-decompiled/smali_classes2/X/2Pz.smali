@@ -1,64 +1,55 @@
-.class public final LX/2Pz;
+.class public abstract LX/2PZ;
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A00:[Ljava/lang/String;
+# interfaces
+.implements LX/0VC;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public static A00(Lcom/facebook/auth/usersession/FbUserSession;Lcom/facebook/fbservice/service/BlueServiceLogic;Ljava/lang/String;)LX/19P;
+    .locals 4
 
-    .line 0
-    invoke-static {}, LX/0Yi;->A1Y()[Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/fbservice/service/BlueServiceLogic;->A0A:LX/0RP;
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    .line 4
-    const-string/jumbo v1, "key"
+    move-result-object v0
 
-    .line 5
-    .line 6
-    .line 7
-    const/4 v0, 0x0
+    check-cast v0, LX/1xX;
 
-    .line 8
-    aput-object v1, v2, v0
+    invoke-static {v0}, LX/1wT;->A04(LX/1xX;)Lcom/facebook/auth/usersession/FbUserSession;
 
-    .line 9
-    .line 10
-    const-string/jumbo v1, "type"
+    move-result-object v3
 
-    .line 11
-    .line 12
-    .line 13
-    const/4 v0, 0x1
+    if-eqz p0, :cond_0
 
-    .line 14
-    aput-object v1, v2, v0
+    move-object v0, v3
 
-    .line 15
-    .line 16
-    const-string/jumbo v1, "value"
+    check-cast v0, LX/1uo;
 
-    .line 17
-    .line 18
-    .line 19
-    const/4 v0, 0x2
+    iget-object v2, v0, LX/1uo;->A06:Ljava/lang/String;
 
-    .line 20
-    aput-object v1, v2, v0
+    check-cast p0, LX/1uo;
 
-    .line 21
-    .line 22
-    sput-object v2, LX/2Pz;->A00:[Ljava/lang/String;
+    iget-object v1, p0, LX/1uo;->A06:Ljava/lang/String;
 
-    .line 23
-    .line 24
-    return-void
+    const-string v0, "FbUserSession propagation mismatch in BlueServiceQueueLookupImpl. "
+
+    invoke-static {v2, v1, v0}, LX/1ul;->A00(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p1, Lcom/facebook/fbservice/service/BlueServiceLogic;->A03:LX/0RP;
+
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, LX/2QB;
+
+    invoke-interface {v0, v3, p2}, LX/2QB;->AKb(Lcom/facebook/auth/usersession/FbUserSession;Ljava/lang/String;)LX/19P;
+
+    move-result-object v0
+
+    return-object v0
 .end method

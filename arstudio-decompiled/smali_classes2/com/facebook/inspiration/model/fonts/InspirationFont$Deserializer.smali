@@ -18,702 +18,756 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
-    .locals 19
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
+    .locals 20
 
     .line 0
     const/4 v9, 0x0
 
     .line 1
-    const/16 v17, 0x0
+    const/16 v18, 0x0
 
     .line 2
     .line 3
-    const/16 v18, 0x0
+    const/16 v19, 0x0
 
     .line 4
     .line 5
-    const/4 v14, 0x0
-
-    .line 6
     const/4 v15, 0x0
 
+    .line 6
+    const/16 v16, 0x0
+
     .line 7
+    .line 8
     const/4 v4, 0x0
 
-    .line 8
+    .line 9
     const-string v6, ""
 
-    .line 9
     .line 10
+    .line 11
     move-object v7, v6
 
-    .line 11
+    .line 12
     move-object v8, v6
 
-    .line 12
+    .line 13
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
-    .line 13
     .line 14
     .line 15
+    .line 16
     move-result-object v5
 
-    .line 16
+    .line 17
     move-object v10, v6
 
-    .line 17
+    .line 18
     move-object v11, v6
 
-    .line 18
-    move-object v12, v6
-
     .line 19
-    move-object v13, v6
+    const v14, 0x3fd33333    # 1.65f
 
     .line 20
-    const/16 v16, 0x20
-
     .line 21
     .line 22
+    move-object v12, v6
+
+    .line 23
+    move-object v13, v6
+
+    .line 24
+    const/16 v17, 0x20
+
+    .line 25
+    .line 26
     :cond_0
     :try_start_0
     move-object/from16 v3, p1
 
-    .line 23
-    .line 24
-    invoke-virtual {v3}, LX/27m;->A0q()LX/270;
-
-    .line 25
-    .line 26
     .line 27
-    move-result-object v1
-
     .line 28
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    invoke-virtual {v3}, LX/3oD;->A0t()LX/3ns;
 
     .line 29
     .line 30
-    if-ne v1, v0, :cond_2
-
     .line 31
+    move-result-object v1
+
     .line 32
-    invoke-static {v3}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 33
     .line 34
-    .line 35
-    move-result-object v0
+    if-ne v1, v0, :cond_2
 
+    .line 35
     .line 36
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v3}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 37
     .line 38
     .line 39
-    move-result v1
+    move-result-object v0
 
     .line 40
-    move-object/from16 v2, p2
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 41
     .line 42
+    .line 43
+    move-result v1
+
+    .line 44
+    move-object/from16 v2, p2
+
+    .line 45
+    .line 46
     sparse-switch v1, :sswitch_data_0
 
-    .line 43
-    .line 44
-    .line 45
-    :cond_1
-    invoke-virtual {v3}, LX/27m;->A1B()LX/27m;
-
-    .line 46
     .line 47
     .line 48
-    :cond_2
-    :goto_0
-    invoke-static {v3}, LX/1Oj;->A00(LX/27m;)LX/270;
-
     .line 49
+    :cond_1
+    invoke-virtual {v3}, LX/3oD;->A1G()LX/3oD;
+
     .line 50
     .line 51
-    move-result-object v1
-
     .line 52
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    :cond_2
+    :goto_0
+    invoke-static {v3}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 53
     .line 54
-    if-ne v1, v0, :cond_0
-
     .line 55
+    move-result-object v1
+
     .line 56
-    goto/16 :goto_1
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 57
     .line 58
-    :sswitch_0
-    const-string v1, "asset_name"
+    if-ne v1, v0, :cond_0
 
     .line 59
     .line 60
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_1
 
     .line 61
     .line 62
+    :sswitch_0
+    const-string/jumbo v1, "asset_name"
+
     .line 63
-    move-result v0
-
     .line 64
-    if-eqz v0, :cond_1
-
     .line 65
-    .line 66
-    invoke-static {v3}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
-    .line 67
-    .line 68
-    .line 69
-    move-result-object v6
-
-    .line 70
-    const-string v0, "assetName"
-
-    .line 71
-    .line 72
-    invoke-static {v0, v6}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 73
-    .line 74
-    .line 75
-    goto :goto_0
-
-    .line 76
-    :sswitch_1
-    const-string/jumbo v1, "is_all_caps_font"
-
-    .line 77
-    .line 78
-    .line 79
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 80
-    .line 81
-    .line 82
+    .line 66
+    .line 67
+    .line 68
     move-result v0
 
-    .line 83
+    .line 69
     if-eqz v0, :cond_1
 
+    .line 70
+    .line 71
+    invoke-static {v3}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 72
+    .line 73
+    .line 74
+    move-result-object v6
+
+    .line 75
+    const-string/jumbo v0, "assetName"
+
+    .line 76
+    .line 77
+    .line 78
+    invoke-static {v6, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 79
+    .line 80
+    .line 81
+    goto :goto_0
+
+    .line 82
+    :sswitch_1
+    const-string/jumbo v1, "outline_ratio"
+
+    .line 83
     .line 84
     .line 85
-    invoke-virtual {v3}, LX/27m;->A15()Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 86
     .line 87
     .line 88
-    move-result v17
-
-    .line 89
-    goto :goto_0
-
-    .line 90
-    :sswitch_2
-    const-string/jumbo v1, "style_display_name"
-
-    .line 91
-    .line 92
-    .line 93
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 94
-    .line 95
-    .line 96
     move-result v0
 
-    .line 97
+    .line 89
     if-eqz v0, :cond_1
 
+    .line 90
+    .line 91
+    invoke-virtual {v3}, LX/3oD;->A0g()F
+
+    .line 92
+    .line 93
+    .line 94
+    move-result v14
+
+    .line 95
+    goto :goto_0
+
+    .line 96
+    :sswitch_2
+    const-string/jumbo v1, "is_all_caps_font"
+
+    .line 97
     .line 98
     .line 99
-    invoke-static {v3}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 100
     .line 101
     .line 102
-    move-result-object v13
+    move-result v0
 
     .line 103
-    const-string/jumbo v0, "styleDisplayName"
+    if-eqz v0, :cond_1
 
     .line 104
     .line 105
-    .line 106
-    invoke-static {v0, v13}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v3}, LX/3oD;->A19()Z
 
+    .line 106
     .line 107
     .line 108
+    move-result v18
+
     .line 109
     goto :goto_0
 
     .line 110
     :sswitch_3
-    const-string v1, "display_name"
+    const-string/jumbo v1, "style_display_name"
 
     .line 111
     .line 112
+    .line 113
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 113
     .line 114
     .line 115
+    .line 116
     move-result v0
 
-    .line 116
+    .line 117
     if-eqz v0, :cond_1
 
-    .line 117
     .line 118
-    invoke-static {v3}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 119
+    invoke-static {v3}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 120
     .line 121
-    move-result-object v8
-
     .line 122
-    const-string v0, "displayName"
+    move-result-object v13
 
     .line 123
-    .line 124
-    invoke-static {v0, v8}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string/jumbo v0, "styleDisplayName"
 
+    .line 124
     .line 125
     .line 126
+    invoke-static {v13, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 127
+    .line 128
+    .line 129
     goto :goto_0
 
-    .line 128
-    :sswitch_4
-    const-string v1, "asset_url"
-
-    .line 129
     .line 130
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_4
+    const-string/jumbo v1, "display_name"
 
     .line 131
     .line 132
     .line 133
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 134
-    if-eqz v0, :cond_1
-
     .line 135
     .line 136
-    invoke-static {v3}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    move-result v0
 
     .line 137
+    if-eqz v0, :cond_1
+
     .line 138
     .line 139
-    move-result-object v7
+    invoke-static {v3}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 140
-    const-string v0, "assetUrl"
-
     .line 141
     .line 142
-    invoke-static {v0, v7}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    move-result-object v8
 
     .line 143
+    const-string/jumbo v0, "displayName"
+
     .line 144
     .line 145
-    goto :goto_0
-
     .line 146
-    :sswitch_5
-    const-string/jumbo v1, "id"
+    invoke-static {v8, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 147
     .line 148
     .line 149
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
     .line 150
+    :sswitch_5
+    const-string/jumbo v1, "asset_url"
+
     .line 151
     .line 152
-    move-result v0
-
     .line 153
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 154
     .line 155
-    invoke-static {v3, v1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0K(LX/27m;Ljava/lang/String;)Ljava/lang/String;
-
     .line 156
-    .line 157
-    .line 158
-    move-result-object v11
+    move-result v0
 
+    .line 157
+    if-eqz v0, :cond_1
+
+    .line 158
     .line 159
-    goto :goto_0
+    invoke-static {v3}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 160
-    :sswitch_6
-    const-string/jumbo v1, "min_font_size"
-
     .line 161
     .line 162
+    move-result-object v7
+
     .line 163
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string/jumbo v0, "assetUrl"
 
     .line 164
     .line 165
     .line 166
-    move-result v0
+    invoke-static {v7, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 167
-    if-eqz v0, :cond_1
-
     .line 168
     .line 169
-    invoke-virtual {v3}, LX/27m;->A0i()I
-
-    .line 170
-    .line 171
-    .line 172
-    move-result v15
-
-    .line 173
     goto :goto_0
 
-    .line 174
-    :sswitch_7
-    const-string/jumbo v1, "post_script_name"
+    .line 170
+    :sswitch_6
+    const-string/jumbo v1, "id"
 
+    .line 171
+    .line 172
+    .line 173
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 174
     .line 175
     .line 176
+    move-result v0
+
     .line 177
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 178
     .line 179
+    invoke-static {v3, v1}, LX/1O4;->A06(LX/3oD;Ljava/lang/String;)Ljava/lang/String;
+
     .line 180
-    move-result v0
-
     .line 181
-    if-eqz v0, :cond_1
-
     .line 182
+    move-result-object v11
+
     .line 183
-    invoke-static {v3}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    goto/16 :goto_0
 
     .line 184
     .line 185
+    :sswitch_7
+    const-string/jumbo v1, "min_font_size"
+
     .line 186
-    move-result-object v12
-
     .line 187
-    const-string/jumbo v0, "postScriptName"
-
     .line 188
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 189
     .line 190
-    invoke-static {v0, v12}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
     .line 191
+    move-result v0
+
     .line 192
+    if-eqz v0, :cond_1
+
     .line 193
-    goto/16 :goto_0
-
     .line 194
-    .line 195
-    :sswitch_8
-    const-string/jumbo v1, "icon_url"
+    invoke-virtual {v3}, LX/3oD;->A0k()I
 
+    .line 195
     .line 196
     .line 197
+    move-result v16
+
     .line 198
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_0
 
     .line 199
     .line 200
+    :sswitch_8
+    const-string/jumbo v1, "post_script_name"
+
     .line 201
-    move-result v0
-
     .line 202
-    if-eqz v0, :cond_1
-
     .line 203
-    .line 204
-    invoke-static {v3}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 204
     .line 205
     .line 206
+    move-result v0
+
     .line 207
-    move-result-object v10
+    if-eqz v0, :cond_1
 
     .line 208
-    const-string/jumbo v0, "iconUrl"
-
     .line 209
+    invoke-static {v3}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 210
     .line 211
-    invoke-static {v0, v10}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
     .line 212
-    .line 213
-    .line 214
-    goto/16 :goto_0
+    move-result-object v12
 
+    .line 213
+    const-string/jumbo v0, "postScriptName"
+
+    .line 214
     .line 215
     .line 216
-    :sswitch_9
-    const-string v1, "expressive_text_decorations"
+    invoke-static {v12, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 217
     .line 218
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 219
+    goto/16 :goto_0
+
     .line 220
     .line 221
-    move-result v0
+    :sswitch_9
+    const-string/jumbo v1, "icon_url"
 
     .line 222
-    if-eqz v0, :cond_1
-
     .line 223
     .line 224
-    invoke-static {v3, v2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0D(LX/27m;LX/2DN;)Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 225
     .line 226
     .line 227
-    move-result-object v5
+    move-result v0
 
     .line 228
-    const-string v0, "expressiveTextDecorations"
+    if-eqz v0, :cond_1
 
     .line 229
     .line 230
-    invoke-static {v0, v5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v3}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 231
     .line 232
     .line 233
-    goto/16 :goto_0
+    move-result-object v10
 
     .line 234
-    .line 235
-    :sswitch_a
-    const-string/jumbo v1, "font_display_name"
+    const-string/jumbo v0, "iconUrl"
 
+    .line 235
     .line 236
     .line 237
-    .line 238
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v10, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 238
     .line 239
     .line 240
-    .line 241
-    move-result v0
+    goto/16 :goto_0
 
+    .line 241
     .line 242
-    if-eqz v0, :cond_1
+    :sswitch_a
+    const-string/jumbo v1, "expressive_text_decorations"
 
     .line 243
     .line 244
-    invoke-static {v3}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 245
-    .line 246
-    .line 247
-    move-result-object v9
-
-    .line 248
-    goto/16 :goto_0
-
-    .line 249
-    .line 250
-    :sswitch_b
-    const-string/jumbo v1, "text_format"
-
-    .line 251
-    .line 252
-    .line 253
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 254
-    .line 255
-    .line 256
+    .line 246
+    .line 247
+    .line 248
     move-result v0
 
-    .line 257
+    .line 249
     if-eqz v0, :cond_1
 
-    .line 258
-    .line 259
-    const-class v0, LX/0qG;
+    .line 250
+    .line 251
+    invoke-static {v3, v2}, LX/27L;->A06(LX/3oD;LX/6HS;)Lcom/google/common/collect/ImmutableList;
 
+    .line 252
+    .line 253
+    .line 254
+    move-result-object v5
+
+    .line 255
+    const-string/jumbo v0, "expressiveTextDecorations"
+
+    .line 256
+    .line 257
+    .line 258
+    invoke-static {v5, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 259
     .line 260
     .line 261
-    invoke-static {v3, v2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    goto/16 :goto_0
 
     .line 262
     .line 263
+    :sswitch_b
+    const-string/jumbo v1, "font_display_name"
+
     .line 264
-    move-result-object v4
-
     .line 265
-    check-cast v4, LX/0qG;
-
     .line 266
-    .line 267
-    goto/16 :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 267
     .line 268
     .line 269
-    :sswitch_c
-    const-string/jumbo v1, "is_default_font"
+    move-result v0
 
     .line 270
+    if-eqz v0, :cond_1
+
     .line 271
     .line 272
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v3}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 273
     .line 274
     .line 275
-    move-result v0
+    move-result-object v9
 
     .line 276
-    if-eqz v0, :cond_1
+    goto/16 :goto_0
 
     .line 277
     .line 278
-    invoke-virtual {v3}, LX/27m;->A15()Z
+    :sswitch_c
+    const-string/jumbo v1, "text_format"
 
     .line 279
     .line 280
     .line 281
-    move-result v18
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 282
-    goto/16 :goto_0
-
     .line 283
     .line 284
-    :sswitch_d
-    const-string/jumbo v1, "style_size_sp"
+    move-result v0
 
     .line 285
+    if-eqz v0, :cond_1
+
     .line 286
     .line 287
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-class v0, LX/13c;
 
     .line 288
     .line 289
+    invoke-static {v3, v2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
     .line 290
-    move-result v0
-
     .line 291
-    if-eqz v0, :cond_1
-
     .line 292
+    move-result-object v4
+
     .line 293
-    invoke-virtual {v3}, LX/27m;->A0i()I
+    check-cast v4, LX/13c;
 
     .line 294
     .line 295
-    .line 296
-    move-result v16
-
-    .line 297
     goto/16 :goto_0
+
+    .line 296
+    .line 297
+    :sswitch_d
+    const-string/jumbo v1, "is_default_font"
 
     .line 298
     .line 299
-    :sswitch_e
-    const-string/jumbo v1, "max_font_size"
-
     .line 300
-    .line 301
-    .line 302
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 301
+    .line 302
     .line 303
-    .line 304
-    .line 305
     move-result v0
 
-    .line 306
+    .line 304
     if-eqz v0, :cond_1
+
+    .line 305
+    .line 306
+    invoke-virtual {v3}, LX/3oD;->A19()Z
 
     .line 307
     .line 308
-    invoke-virtual {v3}, LX/27m;->A0i()I
-
     .line 309
-    .line 310
-    .line 311
-    move-result v14
+    move-result v19
 
+    .line 310
+    goto/16 :goto_0
+
+    .line 311
     .line 312
+    :sswitch_e
+    const-string/jumbo v1, "style_size_sp"
+
+    .line 313
+    .line 314
+    .line 315
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 316
+    .line 317
+    .line 318
+    move-result v0
+
+    .line 319
+    if-eqz v0, :cond_1
+
+    .line 320
+    .line 321
+    invoke-virtual {v3}, LX/3oD;->A0k()I
+
+    .line 322
+    .line 323
+    .line 324
+    move-result v17
+
+    .line 325
+    goto/16 :goto_0
+
+    .line 326
+    .line 327
+    :sswitch_f
+    const-string/jumbo v1, "max_font_size"
+
+    .line 328
+    .line 329
+    .line 330
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 331
+    .line 332
+    .line 333
+    move-result v0
+
+    .line 334
+    if-eqz v0, :cond_1
+
+    .line 335
+    .line 336
+    invoke-virtual {v3}, LX/3oD;->A0k()I
+
+    .line 337
+    .line 338
+    .line 339
+    move-result v15
+
+    .line 340
     goto/16 :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 313
-    .line 314
+    .line 341
+    .line 342
     :goto_1
     new-instance v3, Lcom/facebook/inspiration/model/fonts/InspirationFont;
 
-    .line 315
-    .line 316
-    invoke-direct/range {v3 .. v18}, Lcom/facebook/inspiration/model/fonts/InspirationFont;-><init>(LX/0qG;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIZZ)V
+    .line 343
+    .line 344
+    invoke-direct/range {v3 .. v19}, Lcom/facebook/inspiration/model/fonts/InspirationFont;-><init>(LX/13c;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FIIIZZ)V
 
-    .line 317
-    .line 318
-    .line 319
+    .line 345
+    .line 346
+    .line 347
     return-object v3
 
-    .line 320
+    .line 348
     :catch_0
     move-exception v1
 
-    .line 321
+    .line 349
     const-class v0, Lcom/facebook/inspiration/model/fonts/InspirationFont;
 
-    .line 322
-    .line 323
-    invoke-static {v3, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    .line 350
+    .line 351
+    invoke-static {v3, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
-    .line 324
-    .line 325
-    .line 326
-    const/4 v0, 0x0
+    .line 352
+    .line 353
+    .line 354
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
-    .line 327
+    .line 355
+    .line 356
+    .line 357
+    move-result-object v0
+
+    .line 358
     throw v0
 
-    .line 328
+    .line 359
+    nop
+
+    .line 360
     :sswitch_data_0
     .sparse-switch
-        -0x713ae72a -> :sswitch_e
-        -0x66817533 -> :sswitch_d
-        -0x5288bf7e -> :sswitch_c
-        -0x3f790cb7 -> :sswitch_b
-        -0x3667a628 -> :sswitch_a
-        -0x32814e58 -> :sswitch_9
-        -0x2bf6b357 -> :sswitch_8
-        -0x80ccfa0 -> :sswitch_7
-        -0x49cb7bc -> :sswitch_6
-        0xd1b -> :sswitch_5
-        0x4e6ae7a0 -> :sswitch_4
-        0x604443e8 -> :sswitch_3
-        0x606817b6 -> :sswitch_2
-        0x6b311b7a -> :sswitch_1
+        -0x713ae72a -> :sswitch_f
+        -0x66817533 -> :sswitch_e
+        -0x5288bf7e -> :sswitch_d
+        -0x3f790cb7 -> :sswitch_c
+        -0x3667a628 -> :sswitch_b
+        -0x32814e58 -> :sswitch_a
+        -0x2bf6b357 -> :sswitch_9
+        -0x80ccfa0 -> :sswitch_8
+        -0x49cb7bc -> :sswitch_7
+        0xd1b -> :sswitch_6
+        0x4e6ae7a0 -> :sswitch_5
+        0x604443e8 -> :sswitch_4
+        0x606817b6 -> :sswitch_3
+        0x6b311b7a -> :sswitch_2
+        0x6fd601ce -> :sswitch_1
         0x7eee9e7a -> :sswitch_0
     .end sparse-switch
 .end method

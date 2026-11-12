@@ -2,12 +2,15 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4ql;
+
+# instance fields
+.field public final A00:LX/3Nf;
+
+.field public final A01:LX/4r8;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/3Nf;LX/4r8;)V
     .locals 0
 
     .line 0
@@ -16,25 +19,13 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput-object p1, p0, LX/4rB;->A00:LX/3Nf;
 
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/4rB;->A01:LX/4r8;
 
-# virtual methods
-.method public final A5b(Ljava/lang/String;I)LX/4ql;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final A5c(Ljava/lang/Object;Ljava/lang/String;)LX/4ql;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final flush()V
-    .locals 0
-
+    .line 6
+    .line 7
     return-void
 .end method

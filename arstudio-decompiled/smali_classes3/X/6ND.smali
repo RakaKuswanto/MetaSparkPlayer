@@ -1,232 +1,389 @@
-.class public final LX/6ND;
-.super Landroid/widget/FrameLayout;
+.class public abstract LX/6ND;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:F
+# static fields
+.field public static final A00:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    const/high16 v0, 0x3f100000    # 0.5625f
-
-    .line 268435460
-    .line 268435461
-    iput v0, p0, LX/6ND;->A00:F
-
-    .line 268435462
-    .line 268435463
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 5
 
     .line 0
-    invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/16 v0, 0xe
 
     .line 1
     .line 2
+    new-array v2, v0, [LX/1Cm;
+
     .line 3
-    const/high16 v0, 0x3f100000    # 0.5625f
-
     .line 4
+    sget-object v4, LX/6NC;->ALLOW:LX/6NC;
+
     .line 5
-    iput v0, p0, LX/6ND;->A00:F
-
     .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onMeasure(II)V
-    .locals 9
-
-    .line 0
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
-
-    .line 1
-    .line 2
-    .line 3
-    iget v0, p0, LX/6ND;->A00:F
-
-    .line 4
-    .line 5
-    const/4 v8, 0x0
-
-    .line 6
-    cmpl-float v0, v0, v8
+    const-string v3, "allow"
 
     .line 7
     .line 8
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
     .line 9
-    .line 10
-    invoke-static {}, LX/1vZ;->A00()Z
+    new-instance v0, LX/5hq;
 
+    .line 10
     .line 11
+    invoke-direct {v0, v3}, LX/5hq;-><init>(Ljava/lang/String;)V
+
     .line 12
     .line 13
-    move-result v0
-
     .line 14
-    if-nez v0, :cond_0
+    invoke-static {v4, v0, v2, v1}, LX/1Cm;->A02(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;I)V
 
     .line 15
     .line 16
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
     .line 17
+    sget-object v3, LX/6NC;->DEFAULT_PURPOSES_OPERATIONAL:LX/6NC;
+
     .line 18
     .line 19
-    move-result v7
+    const-string v1, "default_purposes_operational"
 
     .line 20
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
     .line 21
+    new-instance v0, LX/5hq;
+
     .line 22
     .line 23
-    move-result v6
+    invoke-direct {v0, v1}, LX/5hq;-><init>(Ljava/lang/String;)V
 
     .line 24
-    int-to-float v5, v7
-
     .line 25
-    int-to-float v4, v6
-
     .line 26
-    div-float v0, v5, v4
+    invoke-static {v2, v3, v0}, LX/1Cm;->A04([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 27
     .line 28
-    iget v3, p0, LX/6ND;->A00:F
-
     .line 29
+    sget-object v1, LX/6NC;->INFRASTRUCTURE_ANALYTICS:LX/6NC;
+
     .line 30
-    div-float v2, v3, v0
-
     .line 31
+    const-string v0, "infrastructure_analytics"
+
     .line 32
-    const/high16 v0, 0x3f800000    # 1.0f
-
     .line 33
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
     .line 34
-    sub-float/2addr v2, v0
-
     .line 35
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
     .line 36
+    move-result-object v1
+
     .line 37
+    const/4 v0, 0x2
+
     .line 38
-    move-result v1
+    aput-object v1, v2, v0
 
     .line 39
-    const v0, 0x3c23d70a    # 0.01f
-
     .line 40
+    sget-object v3, LX/6NC;->MESSAGE_CONTENT_DATA_TYPE:LX/6NC;
+
     .line 41
     .line 42
-    cmpg-float v0, v1, v0
+    const-string v1, "message_content_data_type"
 
     .line 43
     .line 44
-    if-lez v0, :cond_0
+    new-instance v0, LX/5hq;
 
     .line 45
     .line 46
-    cmpl-float v0, v2, v8
+    invoke-direct {v0, v1}, LX/5hq;-><init>(Ljava/lang/String;)V
 
     .line 47
     .line 48
-    if-lez v0, :cond_1
-
     .line 49
+    invoke-static {v2, v3, v0}, LX/1Cm;->A05([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
     .line 50
-    div-float/2addr v5, v3
-
     .line 51
-    float-to-int v6, v5
-
     .line 52
-    :goto_0
-    const/high16 v0, 0x40000000    # 2.0f
+    sget-object v1, LX/6NC;->MESSAGING_ARMADILLO_METADATA:LX/6NC;
 
     .line 53
     .line 54
-    invoke-static {v7, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    const-string v0, "messaging_armadillo_metadata"
 
     .line 55
     .line 56
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
     .line 57
-    move-result v1
-
     .line 58
-    invoke-static {v6, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
     .line 59
+    move-result-object v1
+
     .line 60
+    const/4 v0, 0x4
+
     .line 61
-    move-result v0
+    aput-object v1, v2, v0
 
     .line 62
-    invoke-super {p0, v1, v0}, Landroid/widget/FrameLayout;->onMeasure(II)V
-
     .line 63
+    sget-object v1, LX/6NC;->MESSAGING_CONTENT:LX/6NC;
+
     .line 64
     .line 65
-    :cond_0
-    return-void
+    const-string v0, "messaging_content"
 
     .line 66
-    :cond_1
-    mul-float/2addr v4, v3
-
     .line 67
-    float-to-int v7, v4
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
 
     .line 68
-    goto :goto_0
+    .line 69
+    .line 70
+    move-result-object v1
+
+    .line 71
+    const/4 v0, 0x5
+
+    .line 72
+    aput-object v1, v2, v0
+
+    .line 73
+    .line 74
+    sget-object v1, LX/6NC;->MESSAGING_TRAFFIC_METADATA:LX/6NC;
+
+    .line 75
+    .line 76
+    const-string v0, "messaging_traffic_metadata"
+
+    .line 77
+    .line 78
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v1
+
+    .line 82
+    const/4 v0, 0x6
+
+    .line 83
+    aput-object v1, v2, v0
+
+    .line 84
+    .line 85
+    sget-object v1, LX/6NC;->MOBILE_ACCESS_TOKEN:LX/6NC;
+
+    .line 86
+    .line 87
+    const-string v0, "mobile_access_token"
+
+    .line 88
+    .line 89
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
+    .line 90
+    .line 91
+    .line 92
+    move-result-object v1
+
+    .line 93
+    const/4 v0, 0x7
+
+    .line 94
+    aput-object v1, v2, v0
+
+    .line 95
+    .line 96
+    sget-object v1, LX/6NC;->MOBILE_FAMILY_ACCOUNTING:LX/6NC;
+
+    .line 97
+    .line 98
+    const-string v0, "mobile_family_accounting"
+
+    .line 99
+    .line 100
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
+    .line 101
+    .line 102
+    .line 103
+    move-result-object v1
+
+    .line 104
+    const/16 v0, 0x8
+
+    .line 105
+    .line 106
+    aput-object v1, v2, v0
+
+    .line 107
+    .line 108
+    sget-object v1, LX/6NC;->MOBILE_LOCATION:LX/6NC;
+
+    .line 109
+    .line 110
+    const-string v0, "mobile_location"
+
+    .line 111
+    .line 112
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
+    .line 113
+    .line 114
+    .line 115
+    move-result-object v1
+
+    .line 116
+    const/16 v0, 0x9
+
+    .line 117
+    .line 118
+    aput-object v1, v2, v0
+
+    .line 119
+    .line 120
+    sget-object v1, LX/6NC;->MOBILE_MESSAGING_CONTENT_DEBUGGING:LX/6NC;
+
+    .line 121
+    .line 122
+    const-string v0, "mobile_messaging_content_debugging"
+
+    .line 123
+    .line 124
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
+    .line 125
+    .line 126
+    .line 127
+    move-result-object v1
+
+    .line 128
+    const/16 v0, 0xa
+
+    .line 129
+    .line 130
+    aput-object v1, v2, v0
+
+    .line 131
+    .line 132
+    sget-object v1, LX/6NC;->MOBILE_MESSAGING_CONTENT_E2EE:LX/6NC;
+
+    .line 133
+    .line 134
+    const-string v0, "mobile_messaging_content_e2ee"
+
+    .line 135
+    .line 136
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v1
+
+    .line 140
+    const/16 v0, 0xb
+
+    .line 141
+    .line 142
+    aput-object v1, v2, v0
+
+    .line 143
+    .line 144
+    sget-object v1, LX/6NC;->MOBILE_MESSAGING_CONTENT_OPEN:LX/6NC;
+
+    .line 145
+    .line 146
+    const-string v0, "mobile_messaging_content_open"
+
+    .line 147
+    .line 148
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
+    .line 149
+    .line 150
+    .line 151
+    move-result-object v1
+
+    .line 152
+    const/16 v0, 0xc
+
+    .line 153
+    .line 154
+    aput-object v1, v2, v0
+
+    .line 155
+    .line 156
+    sget-object v1, LX/6NC;->SENSITIVE_DATA_NO_ADS:LX/6NC;
+
+    .line 157
+    .line 158
+    const-string v0, "sensitive_data_no_ads"
+
+    .line 159
+    .line 160
+    invoke-static {v1, v0}, LX/6ND;->A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+
+    .line 161
+    .line 162
+    .line 163
+    move-result-object v1
+
+    .line 164
+    const/16 v0, 0xd
+
+    .line 165
+    .line 166
+    aput-object v1, v2, v0
+
+    .line 167
+    .line 168
+    invoke-static {v2}, LX/24f;->A00([LX/1Cm;)Ljava/util/LinkedHashMap;
+
+    .line 169
+    .line 170
+    .line 171
+    move-result-object v0
+
+    .line 172
+    sput-object v0, LX/6ND;->A00:Ljava/util/Map;
+
+    .line 173
+    .line 174
+    return-void
 .end method
 
-.method public setAspectRatio(F)V
-    .locals 1
+.method public static A00(Ljava/lang/Object;Ljava/lang/String;)LX/1Cm;
+    .locals 2
 
     .line 0
-    iget v0, p0, LX/6ND;->A00:F
+    new-instance v1, LX/5hq;
 
     .line 1
     .line 2
-    cmpl-float v0, v0, p1
+    invoke-direct {v1, p1}, LX/5hq;-><init>(Ljava/lang/String;)V
 
     .line 3
     .line 4
-    if-eqz v0, :cond_0
-
     .line 5
+    new-instance v0, LX/1Cm;
+
     .line 6
-    iput p1, p0, LX/6ND;->A00:F
-
     .line 7
-    .line 8
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    invoke-direct {v0, p0, v1}, LX/1Cm;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 8
     .line 9
     .line 10
-    .line 11
-    :cond_0
-    return-void
+    return-object v0
 .end method

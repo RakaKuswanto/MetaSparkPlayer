@@ -64,7 +64,7 @@
     .line 20
     .line 21
     .line 22
-    invoke-static {}, LX/0AO;->A00()LX/0AO;
+    invoke-static {}, LX/0Ao;->A00()LX/0Ao;
 
     .line 23
     .line 24
@@ -72,7 +72,7 @@
     move-result-object v0
 
     .line 26
-    invoke-virtual {v0}, LX/0AO;->A05()LX/01m;
+    invoke-virtual {v0}, LX/0Ao;->A06()LX/02I;
 
     .line 27
     .line 28
@@ -83,7 +83,7 @@
     const/4 v0, 0x0
 
     .line 31
-    invoke-virtual {v1, p0, v4, v0}, LX/03V;->A0D(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-virtual {v1, p0, v4, v0}, LX/042;->A0C(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 32
     .line 33

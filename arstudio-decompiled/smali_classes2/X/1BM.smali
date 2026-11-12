@@ -1,21 +1,31 @@
 .class public final LX/1BM;
-.super LX/1Bn;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/0yO;
+
+# instance fields
+.field public final synthetic A00:Lcom/facebook/models/DefaultVoltronModuleLoaderImpl;
+
+.field public final synthetic A01:Lcom/google/common/util/concurrent/SettableFuture;
 
 
 # direct methods
-.method public constructor <init>(I[I)V
+.method public constructor <init>(Lcom/facebook/models/DefaultVoltronModuleLoaderImpl;Lcom/google/common/util/concurrent/SettableFuture;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    iput-object p1, p0, LX/1BM;->A00:Lcom/facebook/models/DefaultVoltronModuleLoaderImpl;
 
     .line 1
     .line 2
+    iput-object p2, p0, LX/1BM;->A01:Lcom/google/common/util/concurrent/SettableFuture;
+
     .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method

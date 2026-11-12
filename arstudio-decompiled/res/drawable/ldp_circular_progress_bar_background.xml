@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="oval" android:useLevel="false"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke android:width="@dimen/abc_control_corner_material" android:color="@color/ldp_secure_loader_ring_color" />
-</shape>

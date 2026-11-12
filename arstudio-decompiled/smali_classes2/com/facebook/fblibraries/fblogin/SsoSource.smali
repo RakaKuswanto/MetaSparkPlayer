@@ -25,11 +25,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x3b
+    const/16 v0, 0x34
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -51,34 +51,35 @@
     const/4 v1, 0x0
 
     .line 536870913
-    const-string v0, "com.facebook.katana"
+    const-string/jumbo v0, "com.facebook.katana"
 
     .line 536870914
     .line 536870915
+    .line 536870916
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 536870916
     .line 536870917
     .line 536870918
+    .line 536870919
     iput v1, p0, Lcom/facebook/fblibraries/fblogin/SsoSource;->A01:I
 
-    .line 536870919
     .line 536870920
+    .line 536870921
     iput-object v0, p0, Lcom/facebook/fblibraries/fblogin/SsoSource;->A03:Ljava/lang/String;
 
-    .line 536870921
     .line 536870922
+    .line 536870923
     iput v1, p0, Lcom/facebook/fblibraries/fblogin/SsoSource;->A00:I
 
-    .line 536870923
     .line 536870924
+    .line 536870925
     const/4 v0, 0x0
 
-    .line 536870925
+    .line 536870926
     iput-object v0, p0, Lcom/facebook/fblibraries/fblogin/SsoSource;->A02:Ljava/lang/String;
 
-    .line 536870926
     .line 536870927
+    .line 536870928
     return-void
 .end method
 
@@ -190,7 +191,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -238,7 +239,7 @@
 
     .line 24
     .line 25
-    invoke-static {v3, v0}, LX/0Yf;->A1E(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {v3, v0}, LX/0X4;->A1D(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 26
     .line 27
@@ -259,7 +260,7 @@
 
     .line 35
     .line 36
-    invoke-static {v1, v2, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 37
     .line 38
@@ -273,7 +274,7 @@
     .line 41
     .line 42
     .line 43
-    invoke-static {v3}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v3}, LX/001;->A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 44
     .line 45

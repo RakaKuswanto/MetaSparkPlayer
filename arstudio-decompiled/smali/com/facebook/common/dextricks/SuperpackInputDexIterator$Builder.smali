@@ -4,13 +4,11 @@
 
 
 # instance fields
-.field public archiveExtension:LX/0Xu;
+.field public archiveExtension:LX/07O;
 
 .field public dexToArchive:[I
 
 .field public manifest:Lcom/facebook/common/dextricks/DexManifest;
-
-.field public patchingStrategy:LX/0QT;
 
 .field public qplCollector:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
@@ -27,11 +25,11 @@
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/0Xu;->NONE:LX/0Xu;
+    sget-object v0, LX/07O;->NONE:LX/07O;
 
     .line 4
     .line 5
-    iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->archiveExtension:LX/0Xu;
+    iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->archiveExtension:LX/07O;
 
     .line 6
     .line 7
@@ -63,7 +61,7 @@
 
     .line 20
     .line 21
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 22
     .line 23
@@ -75,21 +73,14 @@
 
     .line 26
     .line 27
-    const/4 v0, 0x0
+    iget-object v0, p1, Lcom/facebook/common/dextricks/DexManifest;->superpackExtension:LX/07O;
 
     .line 28
-    iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->patchingStrategy:LX/0QT;
-
     .line 29
+    iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->archiveExtension:LX/07O;
+
     .line 30
-    iget-object v0, p1, Lcom/facebook/common/dextricks/DexManifest;->superpackExtension:LX/0Xu;
-
     .line 31
-    .line 32
-    iput-object v0, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->archiveExtension:LX/0Xu;
-
-    .line 33
-    .line 34
     return-void
 .end method
 
@@ -210,15 +201,4 @@
     .line 19
     .line 20
     throw v0
-.end method
-
-.method public setPatchingStrategy(LX/0QT;)Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, Lcom/facebook/common/dextricks/SuperpackInputDexIterator$Builder;->patchingStrategy:LX/0QT;
-
-    .line 1
-    .line 2
-    return-object p0
 .end method

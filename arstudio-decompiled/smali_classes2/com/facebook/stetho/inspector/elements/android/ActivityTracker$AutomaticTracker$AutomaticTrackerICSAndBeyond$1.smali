@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field public final synthetic A00:LX/3cK;
+.field public final synthetic A00:LX/3bU;
 
 
 # direct methods
-.method public constructor <init>(LX/3cK;)V
+.method public constructor <init>(LX/3bU;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;->A00:LX/3cK;
+    iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;->A00:LX/3bU;
 
     .line 1
     .line 2
@@ -33,11 +33,11 @@
     .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;->A00:LX/3cK;
+    iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;->A00:LX/3bU;
 
     .line 1
     .line 2
-    iget-object v2, v0, LX/3cK;->A02:LX/3cI;
+    iget-object v2, v0, LX/3bU;->A02:LX/3bS;
 
     .line 3
     .line 4
@@ -66,11 +66,11 @@
 
     .line 16
     .line 17
-    iget-object v1, v2, LX/3cI;->A01:Ljava/util/ArrayList;
+    iget-object v1, v2, LX/3bS;->A01:Ljava/util/ArrayList;
 
     .line 18
     .line 19
-    invoke-static {p1}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {p1}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     .line 20
     .line 21
@@ -83,7 +83,7 @@
     .line 24
     .line 25
     .line 26
-    iget-object v0, v2, LX/3cI;->A02:Ljava/util/List;
+    iget-object v0, v2, LX/3bS;->A02:Ljava/util/List;
 
     .line 27
     .line 28
@@ -117,7 +117,7 @@
     .line 42
     .line 43
     .line 44
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 45
     .line 46
@@ -133,14 +133,15 @@
 
     .line 50
     :cond_1
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
     .line 51
     .line 52
-    .line 53
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
+    .line 53
     .line 54
+    .line 55
     throw v0
 .end method
 
@@ -148,11 +149,11 @@
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;->A00:LX/3cK;
+    iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;->A00:LX/3bU;
 
     .line 1
     .line 2
-    iget-object v4, v0, LX/3cK;->A02:LX/3cI;
+    iget-object v4, v0, LX/3bU;->A02:LX/3bS;
 
     .line 3
     .line 4
@@ -181,7 +182,7 @@
 
     .line 16
     .line 17
-    iget-object v3, v4, LX/3cI;->A01:Ljava/util/ArrayList;
+    iget-object v3, v4, LX/3bS;->A01:Ljava/util/ArrayList;
 
     .line 18
     .line 19
@@ -230,7 +231,7 @@
     .line 39
     .line 40
     .line 41
-    iget-object v0, v4, LX/3cI;->A02:Ljava/util/List;
+    iget-object v0, v4, LX/3bS;->A02:Ljava/util/List;
 
     .line 42
     .line 43
@@ -264,7 +265,7 @@
     .line 57
     .line 58
     .line 59
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 60
     .line 61
@@ -288,14 +289,15 @@
 
     .line 68
     :cond_2
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
     .line 69
     .line 70
-    .line 71
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
+    .line 71
     .line 72
+    .line 73
     throw v0
 .end method
 

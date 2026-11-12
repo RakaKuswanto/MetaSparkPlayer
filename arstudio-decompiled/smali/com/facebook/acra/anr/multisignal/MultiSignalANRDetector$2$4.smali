@@ -73,11 +73,11 @@
 
     .line 7
     .line 8
-    iget-object v0, v1, Lcom/facebook/acra/anr/multisignal/MultiSignalANRDetector;->mAnrDetectorConfig:LX/0M1;
+    iget-object v0, v1, Lcom/facebook/acra/anr/multisignal/MultiSignalANRDetector;->mAnrDetectorConfig:LX/0Kf;
 
     .line 9
     .line 10
-    iget-object v0, v0, LX/0M1;->A07:Lcom/facebook/acra/anrreport/ANRReport;
+    iget-object v0, v0, LX/0Kf;->A07:Lcom/facebook/acra/anrreport/ANRReport;
 
     .line 11
     .line 12

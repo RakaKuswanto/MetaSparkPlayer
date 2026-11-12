@@ -3,16 +3,22 @@
 .source ""
 
 # interfaces
-.implements LX/5Sk;
+.implements LX/0na;
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0lu;
+
+.field public final A01:LX/0lu;
+
+.field public final A02:LX/0lu;
+
+.field public final A03:Lcom/facebook/xanalytics/XAnalyticsAdapterHolder;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -20,72 +26,88 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    new-instance v1, LX/2rp;
 
     .line 4
     .line 5
+    invoke-direct {v1, p0}, LX/2rp;-><init>(LX/2kJ;)V
+
     .line 6
+    .line 7
+    .line 8
+    new-instance v0, Lcom/facebook/xanalytics/XAnalyticsAdapterHolder;
+
+    .line 9
+    .line 10
+    invoke-direct {v0, v1}, Lcom/facebook/xanalytics/XAnalyticsAdapterHolder;-><init>(Lcom/facebook/xanalytics/XAnalyticsAdapter;)V
+
+    .line 11
+    .line 12
+    .line 13
+    iput-object v0, p0, LX/2kJ;->A03:Lcom/facebook/xanalytics/XAnalyticsAdapterHolder;
+
+    .line 14
+    .line 15
+    sget v0, LX/2I6;->A47:I
+
+    .line 16
+    .line 17
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 18
+    .line 19
+    .line 20
     move-result-object v0
 
-    .line 7
-    iput-object v0, p0, LX/2kJ;->A00:LX/1zG;
+    .line 21
+    iput-object v0, p0, LX/2kJ;->A00:LX/0lu;
 
-    .line 8
-    .line 9
+    .line 22
+    .line 23
+    sget v0, LX/2I6;->A9q:I
+
+    .line 24
+    .line 25
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    iput-object v0, p0, LX/2kJ;->A02:LX/0lu;
+
+    .line 30
+    .line 31
+    sget v0, LX/2I6;->A9o:I
+
+    .line 32
+    .line 33
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    iput-object v0, p0, LX/2kJ;->A01:LX/0lu;
+
+    .line 38
+    .line 39
     return-void
 .end method
 
 
 # virtual methods
-.method public final A85()LX/0TT;
+.method public final AMu()Lcom/facebook/xanalytics/XAnalyticsHolder;
     .locals 1
 
     .line 0
-    sget v0, LX/2eq;->ANt:I
+    iget-object v0, p0, LX/2kJ;->A03:Lcom/facebook/xanalytics/XAnalyticsAdapterHolder;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/0TT;
-
-    .line 7
-    .line 8
     return-object v0
-.end method
-
-.method public final isEnabled()Z
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/1z6;->A0N()LX/35B;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    const-wide v0, 0x2081039d001627f3L    # 4.060705994344121E-152
-
-    .line 5
-    .line 6
-    .line 7
-    .line 8
-    .line 9
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
-
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
-
-    .line 13
-    return v0
 .end method

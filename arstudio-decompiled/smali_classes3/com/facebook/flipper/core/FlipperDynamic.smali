@@ -88,7 +88,7 @@
 
     .line 6
     :cond_0
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
 
     .line 7
     .line 8
@@ -147,7 +147,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1}, LX/002;->A01(Ljava/lang/Object;)J
+    invoke-static {v1}, LX/001;->A02(Ljava/lang/Object;)J
 
     .line 21
     .line 22
@@ -170,7 +170,7 @@
 
     .line 29
     .line 30
-    invoke-static {v1}, LX/0Yi;->A00(Ljava/lang/Object;)F
+    invoke-static {v1}, LX/0X6;->A00(Ljava/lang/Object;)F
 
     .line 31
     .line 32
@@ -193,7 +193,7 @@
 
     .line 39
     .line 40
-    invoke-static {v1}, LX/0Yj;->A00(Ljava/lang/Object;)D
+    invoke-static {v1}, LX/0X7;->A00(Ljava/lang/Object;)D
 
     .line 41
     .line 42
@@ -251,7 +251,7 @@
 
     .line 18
     .line 19
-    invoke-static {v1}, LX/002;->A01(Ljava/lang/Object;)J
+    invoke-static {v1}, LX/001;->A02(Ljava/lang/Object;)J
 
     .line 20
     .line 21
@@ -482,6 +482,17 @@
 
     .line 16
     .line 17
+    return-object v0
+.end method
+
+.method public asRaw()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/flipper/core/FlipperDynamic;->mObject:Ljava/lang/Object;
+
+    .line 1
+    .line 2
     return-object v0
 .end method
 

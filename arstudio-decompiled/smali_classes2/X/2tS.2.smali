@@ -2,54 +2,85 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "NamedThreadFactory$newThread$wrapperRunnable$1"
+
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final synthetic A00:LX/2tT;
 
-.field public final A01:LX/2vp;
+.field public final synthetic A01:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>(LX/2tT;Ljava/lang/Runnable;)V
+    .locals 0
+
+    iput-object p1, p0, LX/2tS;->A00:LX/2tT;
+
+    iput-object p2, p0, LX/2tS;->A01:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/0Km;->A00()V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AgP:I
+    :try_start_0
+    iget-object v0, p0, LX/2tS;->A00:LX/2tT;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
+    iget v0, v0, LX/2tT;->A00:I
 
     .line 6
     .line 7
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 8
-    move-result-object v0
-
     .line 9
-    check-cast v0, LX/2vp;
-
     .line 10
+    :catchall_0
+    iget-object v0, p0, LX/2tS;->A01:Ljava/lang/Runnable;
+
     .line 11
-    iput-object v0, p0, LX/2tS;->A01:LX/2vp;
-
     .line 12
-    .line 13
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    if-eqz v0, :cond_0
 
+    .line 13
     .line 14
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
     .line 15
     .line 16
-    move-result-object v0
-
     .line 17
-    iput-object v0, p0, LX/2tS;->A00:LX/1zG;
+    return-void
 
     .line 18
+    :cond_0
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
+
     .line 19
-    return-void
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    throw v0
 .end method

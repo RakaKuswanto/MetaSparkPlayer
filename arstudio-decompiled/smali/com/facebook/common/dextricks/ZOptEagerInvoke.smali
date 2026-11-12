@@ -62,50 +62,54 @@
     const/4 v3, 0x1
 
     .line 19
-    invoke-static {v6, v0, v2, v1, v3}, LX/002;->A0G(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
+    aput-object v0, v1, v3
 
     .line 20
     .line 21
+    invoke-virtual {v6, v2, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
     .line 22
+    .line 23
+    .line 24
     move-result-object v2
 
-    .line 23
-    new-array v1, v5, [Ljava/lang/Object;
-
-    .line 24
     .line 25
-    aput-object p0, v1, v4
+    new-array v1, v5, [Ljava/lang/Object;
 
     .line 26
     .line 27
-    const/4 v0, 0x0
+    aput-object p0, v1, v4
 
     .line 28
-    aput-object v0, v1, v3
-
     .line 29
+    const/4 v0, 0x0
+
     .line 30
-    invoke-virtual {v2, v0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    aput-object v0, v1, v3
 
     .line 31
     .line 32
+    invoke-virtual {v2, v0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 33
+    .line 34
+    .line 35
     return-void
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 34
+    .line 36
     :catch_0
     move-exception v0
 
-    .line 35
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    .line 36
     .line 37
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
     .line 38
+    .line 39
+    .line 40
     move-result-object v0
 
-    .line 39
+    .line 41
     throw v0
 .end method

@@ -1,10 +1,15 @@
-.class public final LX/6Jn;
-.super Ljava/lang/Object;
+.class public final LX/6JN;
+.super LX/6Hl;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/util/Map;
+# annotations
+.annotation runtime Lcom/fasterxml/jackson/databind/annotation/JacksonStdImpl;
+.end annotation
+
+
+# static fields
+.field public static final serialVersionUID:J = 0x1L
 
 
 # direct methods
@@ -12,23 +17,14 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Ljava/lang/Boolean;
 
     .line 1
     .line 2
-    .line 3
-    new-instance v0, LX/6NE;
+    invoke-direct {p0, v0}, LX/6Hl;-><init>(Ljava/lang/Class;)V
 
+    .line 3
     .line 4
     .line 5
-    invoke-direct {v0}, LX/6NE;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/6Jn;->A00:Ljava/util/Map;
-
-    .line 9
-    .line 10
     return-void
 .end method

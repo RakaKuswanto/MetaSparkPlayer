@@ -1,55 +1,45 @@
-.class public final enum LX/1JF;
+.class public final enum LX/1jF;
 .super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/1JF;
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-.field public static final Companion:LX/1JG;
+.field public static final synthetic $VALUES:[LX/1jF;
 
-.field public static final enum DATA_PRIVACY:LX/1JF;
+.field public static final Companion:LX/1jE;
 
-.field public static final enum ENCRYPTED_THREAD:LX/1JF;
+.field public static final enum FB_SHORTS:LX/1jF;
 
-.field public static final enum NONE:LX/1JF;
+.field public static final enum UNKOWN:LX/1jF;
 
-.field public static final enum UNSET:LX/1JF;
-
-
-# instance fields
-.field public final dbValue:Ljava/lang/Integer;
+.field public static final enum WATCH_FEED:LX/1jF;
 
 
 # direct methods
-.method public static final synthetic $values()[LX/1JF;
+.method public static final synthetic $values()[LX/1jF;
     .locals 3
 
-    const/4 v0, 0x4
+    const/4 v0, 0x3
 
-    new-array v2, v0, [LX/1JF;
+    new-array v2, v0, [LX/1jF;
 
-    sget-object v1, LX/1JF;->UNSET:LX/1JF;
+    sget-object v1, LX/1jF;->WATCH_FEED:LX/1jF;
 
     const/4 v0, 0x0
 
     aput-object v1, v2, v0
 
-    sget-object v1, LX/1JF;->NONE:LX/1JF;
+    sget-object v1, LX/1jF;->FB_SHORTS:LX/1jF;
 
     const/4 v0, 0x1
 
     aput-object v1, v2, v0
 
-    sget-object v1, LX/1JF;->DATA_PRIVACY:LX/1JF;
+    sget-object v1, LX/1jF;->UNKOWN:LX/1jF;
 
     const/4 v0, 0x2
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/1JF;->ENCRYPTED_THREAD:LX/1JF;
-
-    const/4 v0, 0x3
 
     aput-object v1, v2, v0
 
@@ -57,145 +47,110 @@
 .end method
 
 .method public static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     .line 0
-    const-string v3, "UNSET"
+    const-string v2, "WATCH_FEED"
 
     .line 1
     .line 2
-    const/4 v2, 0x0
-
-    .line 3
     const/4 v1, 0x0
 
+    .line 3
+    new-instance v0, LX/1jF;
+
     .line 4
-    new-instance v0, LX/1JF;
-
     .line 5
-    .line 6
-    invoke-direct {v0, v3, v2, v1}, LX/1JF;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+    invoke-direct {v0, v2, v1}, LX/1jF;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     .line 7
     .line 8
+    sput-object v0, LX/1jF;->WATCH_FEED:LX/1jF;
+
     .line 9
-    sput-object v0, LX/1JF;->UNSET:LX/1JF;
-
     .line 10
+    const-string v2, "FB_SHORTS"
+
     .line 11
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     .line 12
-    .line 13
-    .line 14
-    move-result-object v3
+    const/4 v1, 0x1
 
+    .line 13
+    new-instance v0, LX/1jF;
+
+    .line 14
     .line 15
-    const-string v2, "NONE"
+    invoke-direct {v0, v2, v1}, LX/1jF;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
-    const/4 v1, 0x1
-
     .line 18
-    new-instance v0, LX/1JF;
+    sput-object v0, LX/1jF;->FB_SHORTS:LX/1jF;
 
     .line 19
     .line 20
-    invoke-direct {v0, v2, v1, v3}, LX/1JF;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+    const-string v2, "UNKOWN"
 
     .line 21
     .line 22
+    const/4 v1, 0x2
+
     .line 23
-    sput-object v0, LX/1JF;->NONE:LX/1JF;
+    new-instance v0, LX/1jF;
 
     .line 24
     .line 25
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v0, v2, v1}, LX/1jF;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
     .line 28
-    move-result-object v3
+    sput-object v0, LX/1jF;->UNKOWN:LX/1jF;
 
     .line 29
-    const-string v2, "DATA_PRIVACY"
-
     .line 30
+    invoke-static {}, LX/1jF;->$values()[LX/1jF;
+
     .line 31
-    const/4 v1, 0x2
-
     .line 32
-    new-instance v0, LX/1JF;
-
     .line 33
+    move-result-object v0
+
     .line 34
-    invoke-direct {v0, v2, v1, v3}, LX/1JF;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+    sput-object v0, LX/1jF;->$VALUES:[LX/1jF;
 
     .line 35
     .line 36
-    .line 37
-    sput-object v0, LX/1JF;->DATA_PRIVACY:LX/1JF;
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
+    .line 37
     .line 38
     .line 39
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v3
-
-    .line 43
-    const-string v2, "ENCRYPTED_THREAD"
-
-    .line 44
-    .line 45
-    const/4 v1, 0x3
-
-    .line 46
-    new-instance v0, LX/1JF;
-
-    .line 47
-    .line 48
-    invoke-direct {v0, v2, v1, v3}, LX/1JF;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
-
-    .line 49
-    .line 50
-    .line 51
-    sput-object v0, LX/1JF;->ENCRYPTED_THREAD:LX/1JF;
-
-    .line 52
-    .line 53
-    invoke-static {}, LX/1JF;->$values()[LX/1JF;
-
-    .line 54
-    .line 55
-    .line 56
     move-result-object v0
 
-    .line 57
-    sput-object v0, LX/1JF;->$VALUES:[LX/1JF;
+    .line 40
+    sput-object v0, LX/1jF;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 58
-    .line 59
-    new-instance v0, LX/1JG;
+    .line 41
+    .line 42
+    new-instance v0, LX/1jE;
 
-    .line 60
-    .line 61
-    invoke-direct {v0}, LX/1JG;-><init>()V
+    .line 43
+    .line 44
+    invoke-direct {v0}, LX/1jE;-><init>()V
 
-    .line 62
-    .line 63
-    .line 64
-    sput-object v0, LX/1JF;->Companion:LX/1JG;
+    .line 45
+    .line 46
+    .line 47
+    sput-object v0, LX/1jF;->Companion:LX/1jE;
 
-    .line 65
-    .line 66
+    .line 48
+    .line 49
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     .line 0
@@ -204,113 +159,108 @@
     .line 1
     .line 2
     .line 3
-    iput-object p3, p0, LX/1JF;->dbValue:Ljava/lang/Integer;
-
-    .line 4
-    .line 5
     return-void
 .end method
 
-.method public static final fromDbValue(Ljava/lang/Integer;)LX/1JF;
-    .locals 5
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/1jF;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static final getFbProductsByPlayerOrigin(Ljava/lang/String;Ljava/lang/String;Z)LX/1jF;
+    .locals 0
+
+    invoke-static {p0, p1, p2}, LX/1jE;->A00(Ljava/lang/String;Ljava/lang/String;Z)LX/1jF;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final getPrefetchBehaviorFromProduct(LX/1jF;Z)LX/1jG;
+    .locals 0
 
     .line 0
-    invoke-static {}, LX/1JF;->values()[LX/1JF;
+    if-eqz p1, :cond_0
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v4
+    sget-object p0, LX/1jG;->URGENT_FRONT:LX/1jG;
 
+    .line 3
     .line 4
-    array-length v3, v4
+    return-object p0
 
     .line 5
-    const/4 v2, 0x0
+    :cond_0
+    if-eqz p0, :cond_1
 
     .line 6
-    :goto_0
-    if-ge v2, v3, :cond_0
-
     .line 7
-    .line 8
-    aget-object v1, v4, v2
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
+    .line 8
     .line 9
     .line 10
-    invoke-virtual {v1}, LX/1JF;->getDbValue()Ljava/lang/Integer;
+    move-result p1
 
     .line 11
-    .line 12
-    .line 13
-    move-result-object v0
+    const/4 p0, 0x0
 
+    .line 12
+    if-eq p1, p0, :cond_1
+
+    .line 13
     .line 14
-    invoke-static {v0, p0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 p0, 0x1
 
     .line 15
+    if-ne p1, p0, :cond_1
+
     .line 16
     .line 17
-    move-result v0
+    sget-object p0, LX/1jG;->URGENT:LX/1jG;
 
     .line 18
-    if-nez v0, :cond_1
-
     .line 19
+    return-object p0
+
     .line 20
-    add-int/lit8 v2, v2, 0x1
+    :cond_1
+    sget-object p0, LX/1jG;->UNSPECIFIED:LX/1jG;
 
     .line 21
     .line 22
-    goto :goto_0
-
-    .line 23
-    :cond_0
-    sget-object v1, LX/1JF;->UNSET:LX/1JF;
-
-    .line 24
-    .line 25
-    :cond_1
-    return-object v1
+    return-object p0
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/1JF;
+.method public static valueOf(Ljava/lang/String;)LX/1jF;
     .locals 1
 
-    const-class v0, LX/1JF;
+    const-class v0, LX/1jF;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    check-cast v0, LX/1JF;
+    check-cast v0, LX/1jF;
 
     return-object v0
 .end method
 
-.method public static values()[LX/1JF;
+.method public static values()[LX/1jF;
     .locals 1
 
-    sget-object v0, LX/1JF;->$VALUES:[LX/1JF;
+    sget-object v0, LX/1jF;->$VALUES:[LX/1jF;
 
     invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [LX/1JF;
+    check-cast v0, [LX/1jF;
 
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final getDbValue()Ljava/lang/Integer;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1JF;->dbValue:Ljava/lang/Integer;
-
-    .line 1
-    .line 2
     return-object v0
 .end method

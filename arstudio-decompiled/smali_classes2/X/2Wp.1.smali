@@ -4,45 +4,84 @@
 
 
 # instance fields
-.field public final A00:LX/48s;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/2Wj;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/0OY;
+.field public final A02:LX/0RP;
 
-.field public final A03:LX/2Wz;
+.field public final A03:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/0OY;LX/48s;LX/2Wj;LX/2Wz;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-static {p3, p4, p2}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, LX/2I6;->A74:I
 
     .line 4
     .line 5
-    .line 6
-    iput-object p3, p0, LX/2Wp;->A01:LX/2Wj;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
+    .line 6
     .line 7
     .line 8
-    iput-object p4, p0, LX/2Wp;->A03:LX/2Wz;
+    move-result-object v0
 
     .line 9
+    iput-object v0, p0, LX/2Wp;->A02:LX/0RP;
+
     .line 10
-    iput-object p2, p0, LX/2Wp;->A00:LX/48s;
-
     .line 11
-    .line 12
-    iput-object p1, p0, LX/2Wp;->A02:LX/0OY;
+    sget v0, LX/2I6;->ALT:I
 
+    .line 12
     .line 13
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
+
     .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    iput-object v0, p0, LX/2Wp;->A03:LX/0RP;
+
+    .line 18
+    .line 19
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    iput-object v0, p0, LX/2Wp;->A01:LX/0RP;
+
+    .line 24
+    .line 25
+    sget v0, LX/2I6;->ALU:I
+
+    .line 26
+    .line 27
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    iput-object v0, p0, LX/2Wp;->A00:LX/0RP;
+
+    .line 32
+    .line 33
     return-void
 .end method

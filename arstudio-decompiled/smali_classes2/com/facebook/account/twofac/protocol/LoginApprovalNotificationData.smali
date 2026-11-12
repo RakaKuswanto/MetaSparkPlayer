@@ -17,7 +17,7 @@
 
 .field public A02:Ljava/lang/String;
 
-.field public A03:LX/0Zd;
+.field public A03:LX/0wq;
 
 .field public A04:Ljava/lang/String;
 
@@ -33,11 +33,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x38
+    const/16 v0, 0x37
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -117,11 +117,11 @@
     move-result-object v0
 
     .line 31
-    check-cast v0, LX/0Zd;
+    check-cast v0, LX/0wq;
 
     .line 32
     .line 33
-    iput-object v0, p0, Lcom/facebook/account/twofac/protocol/LoginApprovalNotificationData;->A03:LX/0Zd;
+    iput-object v0, p0, Lcom/facebook/account/twofac/protocol/LoginApprovalNotificationData;->A03:LX/0wq;
 
     .line 34
     .line 35
@@ -214,7 +214,7 @@
     .line 18
     .line 19
     .line 20
-    iget-object v0, p0, Lcom/facebook/account/twofac/protocol/LoginApprovalNotificationData;->A03:LX/0Zd;
+    iget-object v0, p0, Lcom/facebook/account/twofac/protocol/LoginApprovalNotificationData;->A03:LX/0wq;
 
     .line 21
     .line 22

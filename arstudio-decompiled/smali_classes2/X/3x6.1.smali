@@ -1,77 +1,85 @@
-.class public final LX/3x6;
+.class public final synthetic LX/3x6;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$$ExternalSyntheticLambda1"
+
 
 # instance fields
-.field public final A00:LX/2rM;
+.field public final synthetic A00:LX/3wv;
 
-.field public final A01:LX/3xE;
+.field public final synthetic A01:LX/3kD;
 
 
 # direct methods
-.method public constructor <init>(LX/6NF;LX/37w;)V
-    .locals 2
+.method public synthetic constructor <init>(LX/3wv;LX/3kD;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/3x6;->A00:LX/3wv;
+
+    iput-object p2, p0, LX/3x6;->A01:LX/3kD;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, LX/3x6;->A00:LX/3wv;
 
     .line 1
     .line 2
+    iget-object v2, p0, LX/3x6;->A01:LX/3kD;
+
     .line 3
-    iget v0, p2, LX/37w;->A00:I
-
     .line 4
-    .line 5
-    invoke-static {v0}, LX/001;->A1N(I)Z
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
 
+    .line 5
     .line 6
     .line 7
+    move-result-object v1
+
     .line 8
-    move-result v0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 9
-    invoke-static {v0}, LX/3ap;->A02(Z)V
-
     .line 10
     .line 11
+    move-result v0
+
     .line 12
-    invoke-static {}, LX/45e;->A00()LX/45e;
+    if-eqz v0, :cond_0
 
     .line 13
     .line 14
+    invoke-static {v1}, LX/0X6;->A0X(Ljava/util/Iterator;)LX/3xA;
+
     .line 15
-    move-result-object v1
-
     .line 16
-    new-instance v0, LX/3xE;
-
     .line 17
+    move-result-object v0
+
     .line 18
-    invoke-direct {v0, p1, p2, v1}, LX/3xE;-><init>(LX/6NF;LX/37w;LX/2xo;)V
+    invoke-interface {v0, v2}, LX/3xA;->ATR(LX/3kD;)V
 
     .line 19
     .line 20
     .line 21
-    iput-object v0, p0, LX/3x6;->A01:LX/3xE;
+    goto :goto_0
 
     .line 22
-    .line 23
-    const/4 v1, 0x2
-
-    .line 24
-    new-instance v0, LX/1Sk;
-
-    .line 25
-    .line 26
-    invoke-direct {v0, p0, v1}, LX/1Sk;-><init>(Ljava/lang/Object;I)V
-
-    .line 27
-    .line 28
-    .line 29
-    iput-object v0, p0, LX/3x6;->A00:LX/2rM;
-
-    .line 30
-    .line 31
+    :cond_0
     return-void
 .end method

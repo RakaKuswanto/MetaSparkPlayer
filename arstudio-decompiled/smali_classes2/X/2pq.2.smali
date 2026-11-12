@@ -1,3 +1,20 @@
-.class public final LX/2pq;
-.super LX/3u5;
+.class public final LX/2pQ;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/47u;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method

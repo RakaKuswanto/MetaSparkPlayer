@@ -24,6 +24,12 @@
     .end annotation
 .end field
 
+.field public final emailId:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "emailId"
+    .end annotation
+.end field
+
 .field public final fulfillmentOptionId:Ljava/lang/String;
     .annotation runtime Lcom/google/gson/annotations/SerializedName;
         value = "fulfillmentOptionId"
@@ -55,6 +61,12 @@
             "Lcom/facebookpay/offsite/models/message/PaymentOffer;",
             ">;"
         }
+    .end annotation
+.end field
+
+.field public final phoneId:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "phoneId"
     .end annotation
 .end field
 
@@ -112,14 +124,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebookpay/offsite/models/message/PaymentItem;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Lcom/facebookpay/offsite/models/message/W3CShippingAddress;Lcom/facebookpay/offsite/models/message/W3CShippingAddress;Ljava/util/List;Lcom/facebookpay/offsite/models/message/PaymentPickupInfo;)V
+.method public constructor <init>(Lcom/facebookpay/offsite/models/message/PaymentItem;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Lcom/facebookpay/offsite/models/message/W3CShippingAddress;Lcom/facebookpay/offsite/models/message/W3CShippingAddress;Ljava/util/List;Lcom/facebookpay/offsite/models/message/PaymentPickupInfo;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     .line 0
     const/4 v0, 0x2
 
     .line 1
-    invoke-static {p2, p3, p4, v0}, LX/0Yc;->A0Q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-static {p2, p3, p4, v0}, LX/0X1;->A13(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -127,7 +139,7 @@
     const/4 v0, 0x5
 
     .line 5
-    invoke-static {p5, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p5, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 6
     .line 7
@@ -181,6 +193,14 @@
 
     .line 32
     .line 33
+    iput-object p12, p0, Lcom/facebookpay/offsite/models/message/PaymentDetails;->emailId:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    iput-object p13, p0, Lcom/facebookpay/offsite/models/message/PaymentDetails;->phoneId:Ljava/lang/String;
+
+    .line 36
+    .line 37
     return-void
 .end method
 
@@ -202,6 +222,17 @@
 
     .line 0
     iget-object v0, p0, Lcom/facebookpay/offsite/models/message/PaymentDetails;->displayItems:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final getEmailId()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/facebookpay/offsite/models/message/PaymentDetails;->emailId:Ljava/lang/String;
 
     .line 1
     .line 2
@@ -235,6 +266,17 @@
 
     .line 0
     iget-object v0, p0, Lcom/facebookpay/offsite/models/message/PaymentDetails;->offers:Ljava/util/List;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final getPhoneId()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/facebookpay/offsite/models/message/PaymentDetails;->phoneId:Ljava/lang/String;
 
     .line 1
     .line 2

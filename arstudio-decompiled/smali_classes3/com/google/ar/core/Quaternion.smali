@@ -208,10 +208,10 @@
 .end method
 
 .method public static i(Lcom/google/ar/core/Quaternion;[FI[FI)V
-    .locals 8
+    .locals 16
 
     .line 0
-    aget v7, p1, p2
+    add-int/lit8 v1, p2, 0x2
 
     .line 1
     .line 2
@@ -219,272 +219,314 @@
 
     .line 3
     .line 4
-    aget v2, p1, v0
+    aget v15, p1, p2
 
     .line 5
     .line 6
-    add-int/lit8 v0, p2, 0x2
+    aget v14, p1, v0
 
     .line 7
     .line 8
-    aget v4, p1, v0
+    aget v13, p1, v1
 
     .line 9
     .line 10
-    iget v5, p0, Lcom/google/ar/core/Quaternion;->x:F
+    move-object/from16 v0, p0
 
     .line 11
     .line 12
-    iget v3, p0, Lcom/google/ar/core/Quaternion;->y:F
+    iget v5, v0, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 13
     .line 14
-    iget v1, p0, Lcom/google/ar/core/Quaternion;->z:F
+    iget v12, v0, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 15
     .line 16
-    iget p2, p0, Lcom/google/ar/core/Quaternion;->w:F
+    iget v4, v0, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 17
     .line 18
-    mul-float v0, p2, v7
+    iget v6, v0, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 19
     .line 20
-    invoke-static {v3, v4, v0, v1, v2}, LX/4BE;->A03(FFFFF)F
+    mul-float v11, v6, v15
 
     .line 21
     .line 22
-    .line 23
-    move-result p1
+    mul-float v3, v12, v13
 
+    .line 23
     .line 24
-    mul-float v0, p2, v2
+    mul-float v1, v4, v14
 
     .line 25
     .line 26
-    invoke-static {v1, v7, v0, v5, v4}, LX/4BE;->A03(FFFFF)F
+    mul-float v10, v6, v14
 
     .line 27
     .line 28
-    .line 29
-    move-result p0
+    mul-float v9, v4, v15
 
+    .line 29
     .line 30
-    mul-float v0, p2, v4
+    mul-float v8, v5, v13
 
     .line 31
     .line 32
-    invoke-static {v5, v2, v0, v3, v7}, LX/4BE;->A03(FFFFF)F
+    mul-float v7, v6, v13
 
     .line 33
     .line 34
-    .line 35
-    move-result v6
+    mul-float v2, v5, v14
 
+    .line 35
     .line 36
-    neg-float v5, v5
+    mul-float v0, v12, v15
 
     .line 37
-    mul-float/2addr v7, v5
-
     .line 38
-    mul-float/2addr v2, v3
+    neg-float v5, v5
 
     .line 39
-    sub-float/2addr v7, v2
+    mul-float/2addr v15, v5
 
     .line 40
-    mul-float/2addr v4, v1
+    mul-float/2addr v14, v12
 
     .line 41
-    sub-float/2addr v7, v4
+    mul-float/2addr v13, v4
 
     .line 42
-    neg-float v4, v1
+    add-float/2addr v11, v3
 
     .line 43
-    neg-float v3, v3
+    sub-float/2addr v11, v1
 
     .line 44
-    mul-float v1, p1, p2
+    mul-float v1, v11, v6
 
     .line 45
     .line 46
-    mul-float v0, v7, v5
+    neg-float v4, v4
 
     .line 47
+    neg-float v3, v12
+
     .line 48
-    add-float/2addr v1, v0
+    add-float/2addr v7, v2
 
     .line 49
-    invoke-static {p0, v4, v1, v6, v3}, LX/4BE;->A03(FFFFF)F
+    sub-float/2addr v7, v0
 
     .line 50
+    add-float/2addr v10, v9
+
     .line 51
+    sub-float/2addr v10, v8
+
     .line 52
-    move-result v0
+    sub-float/2addr v15, v14
 
     .line 53
-    aput v0, p3, p4
+    sub-float/2addr v15, v13
 
     .line 54
-    .line 55
-    add-int/lit8 v2, p4, 0x1
+    mul-float v0, v15, v5
 
+    .line 55
     .line 56
+    add-float/2addr v1, v0
+
     .line 57
-    mul-float v1, p0, p2
+    mul-float v0, v10, v4
 
     .line 58
     .line 59
-    mul-float v0, v7, v3
-
-    .line 60
-    .line 61
     add-float/2addr v1, v0
 
+    .line 60
+    mul-float v0, v7, v3
+
+    .line 61
     .line 62
-    invoke-static {v6, v5, v1, p1, v4}, LX/4BE;->A03(FFFFF)F
+    sub-float/2addr v1, v0
 
     .line 63
+    aput v1, p3, p4
+
     .line 64
     .line 65
-    move-result v0
+    mul-float v2, v10, v6
 
     .line 66
-    aput v0, p3, v2
-
     .line 67
-    .line 68
-    add-int/lit8 v1, p4, 0x2
+    mul-float v0, v15, v3
 
+    .line 68
     .line 69
+    add-float/2addr v2, v0
+
     .line 70
-    mul-float/2addr v6, p2
+    mul-float v0, v7, v5
 
     .line 71
-    mul-float/2addr v7, v4
-
     .line 72
-    add-float/2addr v6, v7
+    add-float/2addr v2, v0
 
     .line 73
-    invoke-static {p1, v3, v6, p0, v5}, LX/4BE;->A03(FFFFF)F
+    mul-float v1, v11, v4
 
     .line 74
     .line 75
-    .line 76
-    move-result v0
+    add-int/lit8 v0, p4, 0x1
 
+    .line 76
     .line 77
-    aput v0, p3, v1
+    sub-float/2addr v2, v1
 
     .line 78
+    aput v2, p3, v0
+
     .line 79
+    .line 80
+    mul-float/2addr v7, v6
+
+    .line 81
+    mul-float/2addr v15, v4
+
+    .line 82
+    add-float/2addr v7, v15
+
+    .line 83
+    mul-float/2addr v11, v3
+
+    .line 84
+    add-float/2addr v7, v11
+
+    .line 85
+    mul-float/2addr v10, v5
+
+    .line 86
+    add-int/lit8 v0, p4, 0x2
+
+    .line 87
+    .line 88
+    sub-float/2addr v7, v10
+
+    .line 89
+    aput v7, p3, v0
+
+    .line 90
+    .line 91
     return-void
 .end method
 
 
 # virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     .line 0
-    const/4 v0, 0x4
+    sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
     .line 1
-    new-array v2, v0, [Ljava/lang/Object;
-
     .line 2
+    const/4 v0, 0x4
+
     .line 3
-    iget v0, p0, Lcom/google/ar/core/Quaternion;->x:F
+    new-array v2, v0, [Ljava/lang/Object;
 
     .line 4
     .line 5
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget v0, p0, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 6
     .line 7
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
     .line 8
+    .line 9
+    .line 10
     move-result-object v1
 
-    .line 9
+    .line 11
     const/4 v0, 0x0
 
-    .line 10
-    aput-object v1, v2, v0
-
-    .line 11
     .line 12
-    iget v0, p0, Lcom/google/ar/core/Quaternion;->y:F
+    aput-object v1, v2, v0
 
     .line 13
     .line 14
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget v0, p0, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 15
     .line 16
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
     .line 17
+    .line 18
+    .line 19
     move-result-object v1
 
-    .line 18
+    .line 20
     const/4 v0, 0x1
 
-    .line 19
-    aput-object v1, v2, v0
-
-    .line 20
     .line 21
-    iget v0, p0, Lcom/google/ar/core/Quaternion;->z:F
+    aput-object v1, v2, v0
 
     .line 22
     .line 23
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget v0, p0, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 24
     .line 25
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
     .line 26
+    .line 27
+    .line 28
     move-result-object v1
 
-    .line 27
+    .line 29
     const/4 v0, 0x2
 
-    .line 28
-    aput-object v1, v2, v0
-
-    .line 29
     .line 30
-    iget v0, p0, Lcom/google/ar/core/Quaternion;->w:F
+    aput-object v1, v2, v0
 
     .line 31
     .line 32
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget v0, p0, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 33
     .line 34
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
     .line 35
+    .line 36
+    .line 37
     move-result-object v1
 
-    .line 36
+    .line 38
     const/4 v0, 0x3
 
-    .line 37
-    aput-object v1, v2, v0
-
-    .line 38
     .line 39
-    const-string v0, "[%.3f, %.3f, %.3f, %.3f]"
+    aput-object v1, v2, v0
 
     .line 40
     .line 41
-    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    const-string v0, "[%.3f, %.3f, %.3f, %.3f]"
 
     .line 42
     .line 43
+    invoke-static {v3, v0, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
     .line 44
+    .line 45
+    .line 46
     move-result-object v0
 
-    .line 45
+    .line 47
     return-object v0
 .end method

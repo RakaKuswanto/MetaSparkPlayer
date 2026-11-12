@@ -4,17 +4,15 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/2SK;
 
-.field public final A01:LX/226;
+.field public final A01:Lcom/facebook/tigon/nativeservice/NativeTigonServiceHolder;
 
-.field public final A02:Lcom/facebook/tigon/nativeservice/NativeTigonServiceHolder;
-
-.field public final A03:LX/1tx;
+.field public final A02:LX/0na;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
@@ -23,80 +21,81 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AA6:I
+    sget v1, LX/2I6;->A6w:I
 
     .line 4
     .line 5
-    const/4 v1, 0x0
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 6
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
     .line 7
     .line 8
-    .line 9
     move-result-object v0
+
+    .line 9
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 10
-    check-cast v0, LX/226;
-
     .line 11
     .line 12
-    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsLowPriorityInit;->A01:LX/226;
+    move-result-object v0
 
     .line 13
+    check-cast v0, LX/2SK;
+
     .line 14
-    sget v0, LX/2eq;->AEB:I
-
     .line 15
-    .line 16
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsLowPriorityInit;->A00:LX/2SK;
 
+    .line 16
     .line 17
+    sget v0, LX/2I6;->AAn:I
+
     .line 18
     .line 19
-    move-result-object v0
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 20
-    check-cast v0, Lcom/facebook/tigon/nativeservice/NativeTigonServiceHolder;
-
     .line 21
     .line 22
-    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsLowPriorityInit;->A02:Lcom/facebook/tigon/nativeservice/NativeTigonServiceHolder;
+    move-result-object v0
 
     .line 23
+    check-cast v0, Lcom/facebook/tigon/nativeservice/NativeTigonServiceHolder;
+
     .line 24
-    sget v0, LX/2eq;->APK:I
-
     .line 25
-    .line 26
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsLowPriorityInit;->A01:Lcom/facebook/tigon/nativeservice/NativeTigonServiceHolder;
 
+    .line 26
     .line 27
+    sget v1, LX/2I6;->AJb:I
+
     .line 28
     .line 29
-    move-result-object v0
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 30
-    check-cast v0, LX/1tx;
-
     .line 31
     .line 32
-    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsLowPriorityInit;->A03:LX/1tx;
-
-    .line 33
-    .line 34
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 35
-    .line 36
-    .line 37
     move-result-object v0
 
-    .line 38
-    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsLowPriorityInit;->A00:LX/1zG;
+    .line 33
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    check-cast v0, LX/0na;
+
+    .line 38
     .line 39
+    iput-object v0, p0, Lcom/facebook/xanalytics/provider/NativeXAnalyticsLowPriorityInit;->A02:LX/0na;
+
     .line 40
+    .line 41
     return-void
 .end method

@@ -1,186 +1,176 @@
-.class public final LX/5zI;
-.super Lcom/google/android/exoplayer2/Timeline;
+.class public abstract LX/5zi;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/5zT;
+# static fields
+.field public static A00:Ljava/lang/Boolean;
+
+.field public static A01:Ljava/lang/Boolean;
+
+.field public static A02:Ljava/lang/Boolean;
+
+.field public static A03:Z
+
+.field public static final A04:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(LX/5zT;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/Timeline;-><init>()V
+    const/16 v0, 0xc
 
     .line 1
     .line 2
+    new-array v2, v0, [Ljava/lang/String;
+
     .line 3
-    iput-object p1, p0, LX/5zI;->A00:LX/5zT;
-
     .line 4
-    .line 5
-    return-void
-.end method
+    const-string v1, "Redmi Note 8 Pro"
 
-
-# virtual methods
-.method public final A0F(LX/60i;IZ)LX/60i;
-    .locals 9
-
-    .line 0
-    const/4 v8, 0x0
-
-    .line 1
-    if-eqz p3, :cond_0
-
-    .line 2
-    .line 3
-    invoke-static {}, LX/0Yi;->A0d()Ljava/lang/Integer;
-
-    .line 4
     .line 5
     .line 6
-    move-result-object v7
+    const/4 v0, 0x0
 
     .line 7
-    sget-object v8, LX/5zH;->A02:Ljava/lang/Object;
+    aput-object v1, v2, v0
 
     .line 8
     .line 9
-    :goto_0
-    sget-object v6, LX/60h;->A04:LX/60h;
+    const/4 v1, 0x1
 
     .line 10
-    .line 11
-    const/4 v5, 0x0
+    const-string v0, "Redmi Note 8"
 
+    .line 11
     .line 12
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+    aput-object v0, v2, v1
 
     .line 13
     .line 14
+    const/4 v1, 0x2
+
     .line 15
+    const-string v0, "Redmi Note 7"
+
     .line 16
     .line 17
-    const-wide/16 v1, 0x0
+    aput-object v0, v2, v1
 
     .line 18
     .line 19
-    const/4 v0, 0x1
+    const/4 v1, 0x3
 
     .line 20
-    iput-object v7, p1, LX/60i;->A04:Ljava/lang/Object;
+    const-string v0, "Redmi 7"
 
     .line 21
     .line 22
-    iput-object v8, p1, LX/60i;->A05:Ljava/lang/Object;
+    aput-object v0, v2, v1
 
     .line 23
     .line 24
-    iput v5, p1, LX/60i;->A00:I
+    const/4 v1, 0x4
 
     .line 25
+    const-string v0, "CPH1717"
+
     .line 26
-    iput-wide v3, p1, LX/60i;->A01:J
-
     .line 27
-    .line 28
-    iput-wide v1, p1, LX/60i;->A02:J
+    aput-object v0, v2, v1
 
+    .line 28
     .line 29
+    const/4 v1, 0x5
+
     .line 30
-    iput-object v6, p1, LX/60i;->A03:LX/60h;
+    const-string v0, "CPH1909"
 
     .line 31
     .line 32
-    iput-boolean v0, p1, LX/60i;->A06:Z
+    aput-object v0, v2, v1
 
     .line 33
     .line 34
-    return-object p1
+    const/4 v1, 0x6
 
     .line 35
-    :cond_0
-    move-object v7, v8
+    const-string v0, "Redmi Note 8T"
 
     .line 36
-    goto :goto_0
-.end method
+    .line 37
+    aput-object v0, v2, v1
 
-.method public final A0G(LX/5zN;IJ)LX/5zN;
-    .locals 21
+    .line 38
+    .line 39
+    const/4 v1, 0x7
 
-    .line 0
-    sget-object v4, LX/5zN;->A0H:Ljava/lang/Object;
+    .line 40
+    const-string v0, "vivo 1904"
 
-    .line 1
-    .line 2
-    move-object/from16 v0, p0
+    .line 41
+    .line 42
+    aput-object v0, v2, v1
 
-    .line 3
-    .line 4
-    iget-object v3, v0, LX/5zI;->A00:LX/5zT;
+    .line 43
+    .line 44
+    const/16 v1, 0x8
 
-    .line 5
-    .line 6
-    const/4 v2, 0x0
+    .line 45
+    .line 46
+    const-string v0, "POT-LX1"
 
-    .line 7
-    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
+    .line 47
+    .line 48
+    aput-object v0, v2, v1
 
-    .line 8
-    .line 9
-    .line 10
-    .line 11
-    .line 12
-    const/4 v6, 0x0
+    .line 49
+    .line 50
+    const/16 v1, 0x9
 
-    .line 13
-    const/4 v0, 0x1
+    .line 51
+    .line 52
+    const-string v0, "JKM-LX3"
 
-    .line 14
-    const-wide/16 v13, 0x0
+    .line 53
+    .line 54
+    aput-object v0, v2, v1
 
-    .line 15
-    .line 16
-    move-object/from16 v1, p1
+    .line 55
+    .line 56
+    const/16 v1, 0xa
 
-    .line 17
-    .line 18
-    move-object v5, v2
+    .line 57
+    .line 58
+    const-string v0, "Redmi Note 5"
 
-    .line 19
-    move-wide v9, v7
+    .line 59
+    .line 60
+    aput-object v0, v2, v1
 
-    .line 20
-    move-wide v11, v7
+    .line 61
+    .line 62
+    const/16 v1, 0xb
 
-    .line 21
-    move-wide v15, v7
+    .line 63
+    .line 64
+    const-string v0, "Redmi 6"
 
-    .line 22
-    move-wide/from16 v17, v13
+    .line 65
+    .line 66
+    invoke-static {v0, v2, v1}, LX/0X5;->A0r(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
 
-    .line 23
-    .line 24
-    move/from16 v19, v6
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v0
 
-    .line 25
-    .line 26
-    move/from16 v20, v0
+    .line 70
+    sput-object v0, LX/5zi;->A04:Ljava/util/List;
 
-    .line 27
-    .line 28
-    invoke-virtual/range {v1 .. v20}, LX/5zN;->A00(LX/5zO;LX/5zT;Ljava/lang/Object;Ljava/lang/Object;IJJJJJJZZ)V
-
-    .line 29
-    .line 30
-    .line 31
-    iput-boolean v0, v1, LX/5zN;->A0F:Z
-
-    .line 32
-    .line 33
-    return-object p1
+    .line 71
+    .line 72
+    return-void
 .end method

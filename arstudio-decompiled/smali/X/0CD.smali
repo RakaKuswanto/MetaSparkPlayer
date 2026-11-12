@@ -1,56 +1,46 @@
 .class public final LX/0CD;
-.super Ljava/lang/Object;
+.super LX/4vQ;
 .source ""
 
+# interfaces
+.implements LX/0Gw;
 
-# static fields
-.field public static final A00:Ljava/lang/String;
+
+# instance fields
+.field public final synthetic this$0:LX/00M;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(LX/00M;)V
+    .locals 1
+
+    iput-object p1, p0, LX/0CD;->this$0:LX/00M;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    const-string v0, "debug.bpf.fbsystrace_map"
+    iget-object v0, p0, LX/0CD;->this$0:LX/00M;
 
     .line 1
     .line 2
-    const-string v2, ""
+    invoke-static {v0}, LX/00M;->A01(LX/00M;)V
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/0Ao;->A02(Ljava/lang/String;)Ljava/lang/String;
-
     .line 5
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
+
     .line 6
     .line 7
-    move-result-object v1
-
-    .line 8
-    if-eqz v1, :cond_0
-
-    .line 9
-    .line 10
-    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    if-nez v0, :cond_0
-
-    .line 15
-    .line 16
-    move-object v2, v1
-
-    .line 17
-    :cond_0
-    sput-object v2, LX/0CD;->A00:Ljava/lang/String;
-
-    .line 18
-    .line 19
-    return-void
+    return-object v0
 .end method

@@ -3,124 +3,256 @@
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;
+
+
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 0
+    iput-object p1, p0, LX/0Mo;->A00:Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;
 
-    if-eq p0, v0, :cond_8
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x2
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
 
-    if-eq p0, v0, :cond_7
 
-    const/4 v0, 0x3
+# virtual methods
+.method public final A00()Ljava/util/HashMap;
+    .locals 7
 
-    if-eq p0, v0, :cond_6
+    .line 0
+    iget-object v4, p0, LX/0Mo;->A00:Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;
 
-    const/4 v0, 0x4
+    .line 1
+    .line 2
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
-    if-eq p0, v0, :cond_5
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v3
 
-    const/16 v0, 0x8
+    .line 6
+    const-string v1, "is_mqtt_direct"
 
-    if-eq p0, v0, :cond_4
+    .line 7
+    .line 8
+    const-string v0, "false"
 
-    const/16 v0, 0x9
+    .line 9
+    .line 10
+    invoke-virtual {v3, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq p0, v0, :cond_3
+    .line 11
+    .line 12
+    .line 13
+    iget-object v0, v4, Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;->A09:LX/0TS;
 
-    const/16 v0, 0xc
+    .line 14
+    .line 15
+    iget-wide v1, v0, LX/0TS;->A01:J
 
-    if-eq p0, v0, :cond_2
+    .line 16
+    .line 17
+    const-wide/16 v5, 0x0
 
-    const/16 v0, 0xd
+    .line 18
+    .line 19
+    cmp-long v0, v1, v5
 
-    if-eq p0, v0, :cond_1
+    .line 20
+    .line 21
+    if-lez v0, :cond_1
 
-    const/16 v0, 0xf
+    .line 22
+    .line 23
+    new-instance v0, Ljava/util/Date;
 
-    if-eq p0, v0, :cond_0
+    .line 24
+    .line 25
+    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
-    packed-switch p0, :pswitch_data_0
+    .line 26
+    .line 27
+    .line 28
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    const-string v0, "UNDEFINED_QPL_EVENT"
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v1
 
-    return-object v0
+    .line 32
+    :goto_0
+    const-string v0, "last_connection_time"
 
-    :pswitch_0
-    const-string v0, "MOVIES_MOVIES_NATIVE_CHECKOUT_ORDER_DETAILS_TTRC_ANDROID"
+    .line 33
+    .line 34
+    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v0
+    .line 35
+    .line 36
+    .line 37
+    iget-object v0, v4, Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;->A09:LX/0TS;
 
-    :pswitch_1
-    const-string v0, "MOVIES_MOVIES_NATIVE_CHECKOUT_CONFIRMATION_TTRC_ANDROID"
+    .line 38
+    .line 39
+    iget-wide v1, v0, LX/0TS;->A04:J
 
-    return-object v0
+    .line 40
+    .line 41
+    cmp-long v0, v1, v5
 
-    :pswitch_2
-    const-string v0, "MOVIES_MOVIES_NATIVE_CHECKOUT_PAYMENTS_TTRC_ANDROID"
+    .line 42
+    .line 43
+    if-lez v0, :cond_0
 
-    return-object v0
+    .line 44
+    .line 45
+    new-instance v0, Ljava/util/Date;
 
-    :pswitch_3
-    const-string v0, "MOVIES_MOVIES_NATIVE_CHECKOUT_SEATMAP_TTRC_ANDROID"
+    .line 46
+    .line 47
+    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
-    return-object v0
+    .line 48
+    .line 49
+    .line 50
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v1
+
+    .line 54
+    :goto_1
+    const-string v0, "last_network_changed_time"
+
+    .line 55
+    .line 56
+    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 57
+    .line 58
+    .line 59
+    iget-object v0, v4, Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;->A09:LX/0TS;
+
+    .line 60
+    .line 61
+    iget-object v2, v0, LX/0TS;->A0c:Ljava/util/Map;
+
+    .line 62
+    .line 63
+    monitor-enter v2
+
+    .line 64
+    goto :goto_2
+
+    .line 65
     :cond_0
-    const-string v0, "MOVIES_MOVIES_NATIVE_CHECKOUT_TICKETS_TTRC_ANDROID"
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    return-object v0
+    .line 66
+    .line 67
+    .line 68
+    move-result-object v1
 
+    .line 69
+    goto :goto_1
+
+    .line 70
     :cond_1
-    const-string v0, "MOVIES_MOVIES_HOME_THEATERS_TAB_TTI_FETCH_ANDROID"
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    return-object v0
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v1
 
-    :cond_2
-    const-string v0, "MOVIES_MOVIES_HOME_THEATERS_TAB_TTI_ANDROID"
+    .line 74
+    goto :goto_0
 
-    return-object v0
+    .line 75
+    :goto_2
+    :try_start_0
+    invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
-    :cond_3
-    const-string v0, "MOVIES_MOVIES_HOME_MOVIES_TAB_TTI_FETCH_ANDROID"
+    .line 76
+    .line 77
+    .line 78
+    move-result-object v1
 
-    return-object v0
+    .line 79
+    new-instance v0, Ljava/util/HashSet;
 
-    :cond_4
-    const-string v0, "MOVIES_MOVIES_HOME_MOVIES_TAB_TTI_ANDROID"
+    .line 80
+    .line 81
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    return-object v0
+    .line 82
+    .line 83
+    .line 84
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_5
-    const-string v0, "MOVIES_SHOWTIME_PICKER_FETCH_TTI"
+    .line 85
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    return-object v0
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v1
 
-    :cond_6
-    const-string v0, "MOVIES_SHOWTIME_PICKER_TTI"
+    .line 89
+    const-string v0, "subscribed_topics"
 
-    return-object v0
+    .line 90
+    .line 91
+    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_7
-    const-string v0, "Movies Permalink TTI"
+    .line 92
+    .line 93
+    .line 94
+    invoke-static {v4}, Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;->A08(Lcom/facebook/rti/mqtt/manager/MqttPushServiceDelegate;)Ljava/lang/String;
 
-    return-object v0
+    .line 95
+    .line 96
+    .line 97
+    move-result-object v1
 
-    :cond_8
-    const-string v0, "MOVIES_MOVIES_PERMALINK_HEADER_FETCH_TTI"
+    .line 98
+    const-string v0, "mqtt_health_stats"
 
-    return-object v0
+    .line 99
+    .line 100
+    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    nop
+    .line 101
+    .line 102
+    .line 103
+    return-object v3
 
-    :pswitch_data_0
-    .packed-switch 0x13
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    .line 104
+    :catchall_0
+    :try_start_1
+    move-exception v0
+
+    .line 105
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 106
+    throw v0
 .end method

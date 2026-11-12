@@ -1,306 +1,556 @@
-.class public final LX/1ke;
+.class public abstract LX/1ke;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/1oN;
-.implements Lcom/facebook/common/callercontext/CallerContextable;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "TessaServiceHandler"
-
-
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/1YZ;
-
-.field public final A02:LX/1YB;
-
-.field public final A03:LX/0Gd;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbtLoggerImpl$logStringImpression$1"
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public static A00(LX/1kf;Ljava/lang/String;II)V
     .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     .line 1
     .line 2
     .line 3
-    const/16 v0, 0x90
+    move-result-object v1
 
     .line 4
-    .line 5
-    invoke-static {p0, v0}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
+    sget-object v0, LX/1kf;->A04:[I
 
+    .line 5
     .line 6
+    invoke-static {p0, v1, p1, v0, p3}, LX/1ke;->A01(LX/1kf;Ljava/lang/String;Ljava/lang/String;[II)V
+
     .line 7
     .line 8
-    move-result-object v0
-
     .line 9
-    iput-object v0, p0, LX/1ke;->A03:LX/0Gd;
-
-    .line 10
-    .line 11
-    sget v0, LX/2eq;->AS1:I
-
-    .line 12
-    .line 13
-    const/4 v1, 0x0
-
-    .line 14
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    check-cast v0, LX/1YZ;
-
-    .line 19
-    .line 20
-    iput-object v0, p0, LX/1ke;->A01:LX/1YZ;
-
-    .line 21
-    .line 22
-    sget v0, LX/2eq;->AS2:I
-
-    .line 23
-    .line 24
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    check-cast v0, LX/1YB;
-
-    .line 29
-    .line 30
-    iput-object v0, p0, LX/1ke;->A02:LX/1YB;
-
-    .line 31
-    .line 32
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 33
-    .line 34
-    .line 35
-    move-result-object v0
-
-    .line 36
-    iput-object v0, p0, LX/1ke;->A00:LX/1zG;
-
-    .line 37
-    .line 38
     return-void
 .end method
 
-
-# virtual methods
-.method public final AOY(LX/1kB;)Lcom/facebook/fbservice/service/OperationResult;
-    .locals 6
+.method public static A01(LX/1kf;Ljava/lang/String;Ljava/lang/String;[II)V
+    .locals 14
 
     .line 0
-    const-class v5, LX/1ke;
+    iget-object v0, p0, LX/1kf;->A02:LX/0VC;
 
     .line 1
     .line 2
-    iget-object v1, p1, LX/1kB;->A02:Ljava/lang/String;
+    invoke-interface {v0}, LX/0VC;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
-    const-string/jumbo v0, "post_survey_events"
-
     .line 5
-    .line 6
-    .line 7
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
+    .line 6
+    check-cast v1, LX/0B4;
+
+    .line 7
     .line 8
+    const-string/jumbo v0, "intl_android_string_impressions"
+
     .line 9
     .line 10
-    move-result v0
-
     .line 11
-    if-eqz v0, :cond_0
+    invoke-interface {v1, v0}, LX/0B4;->A2Y(Ljava/lang/String;)LX/0B8;
 
     .line 12
     .line 13
-    iget-object v1, p1, LX/1kB;->A00:Landroid/os/Bundle;
-
     .line 14
+    move-result-object v2
+
     .line 15
-    const-string/jumbo v0, "surveyEventLoggingParam"
+    invoke-interface {v2}, LX/0B8;->isSampled()Z
 
     .line 16
     .line 17
     .line 18
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    move-result v0
 
     .line 19
+    if-eqz v0, :cond_b
+
     .line 20
     .line 21
-    move-result-object v4
+    iget-object v0, p0, LX/1kf;->A00:LX/1kY;
 
     .line 22
-    iget-object v0, p0, LX/1ke;->A03:LX/0Gd;
-
     .line 23
-    .line 24
-    invoke-interface {v0}, LX/0Gd;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, LX/1kY;->A03()Ljava/util/Locale;
 
+    .line 24
     .line 25
     .line 26
+    move-result-object v13
+
     .line 27
-    move-result-object v3
+    invoke-virtual {v0}, LX/1kY;->A04()Ljava/util/Locale;
 
     .line 28
-    check-cast v3, LX/1vp;
-
     .line 29
     .line 30
-    iget-object v2, p0, LX/1ke;->A01:LX/1YZ;
+    move-result-object v12
 
     .line 31
-    .line 32
-    :goto_0
-    invoke-static {v5}, Lcom/facebook/common/callercontext/CallerContext;->A00(Ljava/lang/Class;)Lcom/facebook/common/callercontext/CallerContext;
+    invoke-static {v13}, LX/0WV;->A07(Ljava/lang/Object;)V
 
+    .line 32
     .line 33
     .line 34
-    .line 35
-    move-result-object v1
+    move-object/from16 v7, p3
 
+    .line 35
     .line 36
-    const/4 v0, 0x0
+    array-length v6, v7
 
     .line 37
-    invoke-virtual {v3, v1, v2, v0, v4}, LX/1vp;->A0A(Lcom/facebook/common/callercontext/CallerContext;LX/21i;LX/1vX;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v5, 0x2
 
     .line 38
+    add-int/lit8 v0, v6, 0x2
+
     .line 39
     .line 40
-    sget-object v0, Lcom/facebook/fbservice/service/OperationResult;->A00:Lcom/facebook/fbservice/service/OperationResult;
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 41
     .line 42
-    return-object v0
-
     .line 43
-    :cond_0
-    const-string/jumbo v0, "post_survey_response"
+    move-result-object v3
 
     .line 44
+    const-wide/16 v0, 0x0
+
     .line 45
     .line 46
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 47
     .line 48
     .line 49
-    move-result v0
+    move-result-object v4
 
     .line 50
-    if-eqz v0, :cond_1
+    invoke-virtual {v3, v4}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 51
     .line 52
-    iget-object v1, p1, LX/1kB;->A00:Landroid/os/Bundle;
-
     .line 53
-    .line 54
-    const-string/jumbo v0, "surveyResponsePostingParam"
+    move/from16 v1, p4
 
+    .line 54
     .line 55
+    if-eqz p4, :cond_9
+
     .line 56
     .line 57
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    const/4 v0, 0x1
 
     .line 58
+    if-eq v1, v0, :cond_8
+
     .line 59
     .line 60
-    move-result-object v4
+    if-eq v1, v5, :cond_7
 
     .line 61
-    iget-object v0, p0, LX/1ke;->A03:LX/0Gd;
-
     .line 62
+    int-to-long v0, v1
+
     .line 63
-    invoke-interface {v0}, LX/0Gd;->get()Ljava/lang/Object;
+    :goto_0
+    invoke-static {v3, v0, v1}, LX/0X4;->A1F(Ljava/util/AbstractCollection;J)V
 
     .line 64
     .line 65
     .line 66
-    move-result-object v3
+    :goto_1
+    const/4 v8, 0x0
 
     .line 67
-    check-cast v3, LX/1vp;
+    :goto_2
+    if-ge v8, v6, :cond_a
 
     .line 68
     .line 69
-    iget-object v2, p0, LX/1ke;->A02:LX/1YB;
+    aget v9, p3, v8
 
     .line 70
     .line 71
-    goto :goto_0
+    int-to-long v0, v9
 
     .line 72
-    :cond_1
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {v3, v0, v1}, LX/0X4;->A1F(Ljava/util/AbstractCollection;J)V
 
     .line 73
     .line 74
     .line 75
-    move-result-object v2
+    add-int/lit8 v0, v8, 0x1
 
     .line 76
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
-
     .line 77
+    aget v10, p3, v0
+
     .line 78
     .line 79
-    move-result-object v0
+    if-eqz v9, :cond_3
 
     .line 80
-    invoke-static {v2, v0, v1}, LX/001;->A1G([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 81
+    const/4 v11, 0x1
+
     .line 82
+    if-ne v9, v11, :cond_1
+
     .line 83
-    const-string v1, "Survey Remix: "
-
     .line 84
-    .line 85
-    const-string v0, "%s: Unknown Operation Type: %s"
+    invoke-static {v13}, LX/0X3;->A0k(Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 85
     .line 86
     .line 87
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
     .line 88
+    invoke-static {v0}, LX/5T5;->A00(Ljava/lang/String;)LX/1kh;
+
     .line 89
     .line 90
-    sget-object v0, LX/1x7;->OTHER:LX/1x7;
-
     .line 91
+    move-result-object v0
+
     .line 92
-    invoke-static {v0}, Lcom/facebook/fbservice/service/OperationResult;->A01(LX/1x7;)Lcom/facebook/fbservice/service/OperationResult;
+    invoke-interface {v0, v10}, LX/1kh;->AHm(I)I
 
     .line 93
     .line 94
     .line 95
-    move-result-object v0
+    move-result v1
 
     .line 96
-    return-object v0
+    const/4 v9, 0x4
+
+    .line 97
+    const/4 v0, 0x3
+
+    .line 98
+    if-eqz v1, :cond_4
+
+    .line 99
+    .line 100
+    if-eq v1, v11, :cond_5
+
+    .line 101
+    .line 102
+    if-eq v1, v5, :cond_2
+
+    .line 103
+    .line 104
+    if-eq v1, v0, :cond_0
+
+    .line 105
+    .line 106
+    const/4 v0, 0x4
+
+    .line 107
+    const/4 v9, 0x5
+
+    .line 108
+    if-eq v1, v0, :cond_0
+
+    .line 109
+    .line 110
+    const/4 v9, 0x6
+
+    .line 111
+    :cond_0
+    :goto_3
+    move v10, v9
+
+    .line 112
+    :cond_1
+    int-to-long v0, v10
+
+    .line 113
+    invoke-static {v3, v0, v1}, LX/0X4;->A1F(Ljava/util/AbstractCollection;J)V
+
+    .line 114
+    .line 115
+    .line 116
+    add-int/lit8 v8, v8, 0x2
+
+    .line 117
+    .line 118
+    goto :goto_2
+
+    .line 119
+    :cond_2
+    const/4 v9, 0x3
+
+    .line 120
+    goto :goto_3
+
+    .line 121
+    :cond_3
+    const/4 v9, 0x2
+
+    .line 122
+    const/4 v0, 0x1
+
+    .line 123
+    if-eq v10, v0, :cond_0
+
+    .line 124
+    .line 125
+    if-eq v10, v5, :cond_6
+
+    .line 126
+    .line 127
+    :cond_4
+    const/4 v9, 0x0
+
+    .line 128
+    goto :goto_3
+
+    .line 129
+    :cond_5
+    const/4 v9, 0x2
+
+    .line 130
+    if-ne v10, v11, :cond_0
+
+    .line 131
+    .line 132
+    :cond_6
+    const/4 v9, 0x1
+
+    .line 133
+    goto :goto_3
+
+    .line 134
+    :cond_7
+    const-wide/16 v0, 0x2
+
+    .line 135
+    .line 136
+    goto :goto_0
+
+    .line 137
+    :cond_8
+    const-wide/16 v0, 0x1
+
+    .line 138
+    .line 139
+    goto :goto_0
+
+    .line 140
+    :cond_9
+    invoke-virtual {v3, v4}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 141
+    .line 142
+    .line 143
+    goto :goto_1
+
+    .line 144
+    :cond_a
+    invoke-virtual {v13}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 145
+    .line 146
+    .line 147
+    move-result-object v1
+
+    .line 148
+    const-string/jumbo v0, "app_locale"
+
+    .line 149
+    .line 150
+    .line 151
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 152
+    .line 153
+    .line 154
+    const-string/jumbo v0, "client_string_id"
+
+    .line 155
+    .line 156
+    .line 157
+    invoke-interface {v2, v0, p1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 158
+    .line 159
+    .line 160
+    invoke-static {}, LX/0X5;->A0s()Ljava/util/Locale;
+
+    .line 161
+    .line 162
+    .line 163
+    move-result-object v0
+
+    .line 164
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 165
+    .line 166
+    .line 167
+    move-result-object v1
+
+    .line 168
+    const-string/jumbo v0, "device_locale"
+
+    .line 169
+    .line 170
+    .line 171
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 172
+    .line 173
+    .line 174
+    invoke-virtual {v12}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 175
+    .line 176
+    .line 177
+    move-result-object v1
+
+    .line 178
+    const-string/jumbo v0, "requested_locale"
+
+    .line 179
+    .line 180
+    .line 181
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 182
+    .line 183
+    .line 184
+    invoke-static {v12}, LX/5T4;->A01(Ljava/util/Locale;)Ljava/lang/String;
+
+    .line 185
+    .line 186
+    .line 187
+    move-result-object v1
+
+    .line 188
+    const-string/jumbo v0, "requested_fb_locale"
+
+    .line 189
+    .line 190
+    .line 191
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 192
+    .line 193
+    .line 194
+    const-string/jumbo v0, "translation_bundle_type"
+
+    .line 195
+    .line 196
+    .line 197
+    move-object/from16 v1, p2
+
+    .line 198
+    .line 199
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 200
+    .line 201
+    .line 202
+    const-string/jumbo v0, "logger_version"
+
+    .line 203
+    .line 204
+    .line 205
+    invoke-interface {v2, v0, v4}, LX/0B8;->A34(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 206
+    .line 207
+    .line 208
+    const-string v1, "FbtLoggerImpl"
+
+    .line 209
+    .line 210
+    const-string/jumbo v0, "logger_name"
+
+    .line 211
+    .line 212
+    .line 213
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 214
+    .line 215
+    .line 216
+    const-string/jumbo v0, "requested_variations"
+
+    .line 217
+    .line 218
+    .line 219
+    invoke-interface {v2, v0, v3}, LX/0B8;->A3S(Ljava/lang/String;Ljava/util/List;)V
+
+    .line 220
+    .line 221
+    .line 222
+    iget-object v0, p0, LX/1kf;->A01:LX/0fu;
+
+    .line 223
+    .line 224
+    iget-object v0, v0, LX/0fu;->A00:Ljava/util/concurrent/atomic/AtomicReference;
+
+    .line 225
+    .line 226
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    .line 227
+    .line 228
+    .line 229
+    move-result-object v1
+
+    .line 230
+    if-eqz v1, :cond_c
+
+    .line 231
+    .line 232
+    check-cast v1, Ljava/lang/Boolean;
+
+    .line 233
+    .line 234
+    const-string/jumbo v0, "are_downloadable_strings_disabled"
+
+    .line 235
+    .line 236
+    .line 237
+    invoke-interface {v2, v0, v1}, LX/0B8;->A2l(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 238
+    .line 239
+    .line 240
+    invoke-interface {v2}, LX/0B8;->AQk()V
+
+    .line 241
+    .line 242
+    .line 243
+    :cond_b
+    return-void
+
+    .line 244
+    :cond_c
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
+
+    .line 245
+    .line 246
+    .line 247
+    move-result-object v0
+
+    .line 248
+    throw v0
 .end method

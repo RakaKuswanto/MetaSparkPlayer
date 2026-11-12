@@ -2,130 +2,211 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "WebViewSelectionChangeListener$1"
-
 
 # instance fields
-.field public final synthetic A00:LX/4FX;
+.field public final A00:I
 
-.field public final synthetic A01:Ljava/lang/String;
+.field public final A01:I
+
+.field public final A02:Ljava/lang/String;
+
+.field public final A03:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/4FX;Ljava/lang/String;)V
+.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4FW;->A00:LX/4FX;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/4FW;->A01:Ljava/lang/String;
-
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, LX/4FW;->A03:Ljava/lang/String;
 
+    .line 4
     .line 5
+    iput-object p4, p0, LX/4FW;->A02:Ljava/lang/String;
+
     .line 6
     .line 7
+    iput p1, p0, LX/4FW;->A00:I
+
+    .line 8
+    .line 9
+    iput p2, p0, LX/4FW;->A01:I
+
+    .line 10
+    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     .line 0
-    iget-object v3, p0, LX/4FW;->A00:LX/4FX;
+    const/4 v2, 0x1
 
     .line 1
+    if-eq p0, p1, :cond_2
+
     .line 2
-    iget-object v0, v3, LX/4FX;->A01:LX/4FY;
-
     .line 3
-    .line 4
-    if-nez v0, :cond_0
+    instance-of v1, p1, LX/4FW;
 
+    .line 4
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    iget-object v1, v3, LX/4FX;->A02:LX/4FV;
+    if-nez v1, :cond_0
 
     .line 7
     .line 8
-    invoke-virtual {v1}, LX/4FV;->A00()Z
+    return v0
+
+    .line 9
+    :cond_0
+    check-cast p1, LX/4FW;
+
+    .line 10
+    .line 11
+    iget v1, p0, LX/4FW;->A00:I
+
+    .line 12
+    .line 13
+    iget v0, p1, LX/4FW;->A00:I
+
+    .line 14
+    .line 15
+    if-ne v1, v0, :cond_1
+
+    .line 16
+    .line 17
+    iget v1, p0, LX/4FW;->A01:I
+
+    .line 18
+    .line 19
+    iget v0, p1, LX/4FW;->A01:I
+
+    .line 20
+    .line 21
+    if-ne v1, v0, :cond_1
+
+    .line 22
+    .line 23
+    iget-object v1, p0, LX/4FW;->A03:Ljava/lang/String;
+
+    .line 24
+    .line 25
+    iget-object v0, p1, LX/4FW;->A03:Ljava/lang/String;
+
+    .line 26
+    .line 27
+    invoke-static {v1, v0}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v0
+
+    .line 31
+    if-eqz v0, :cond_1
+
+    .line 32
+    .line 33
+    iget-object v1, p0, LX/4FW;->A02:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    iget-object v0, p1, LX/4FW;->A02:Ljava/lang/String;
+
+    .line 36
+    .line 37
+    invoke-static {v1, v0}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    if-eqz v0, :cond_1
+
+    .line 42
+    .line 43
+    return v2
+
+    .line 44
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 45
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x4
+
+    .line 1
+    new-array v2, v0, [Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/4FW;->A03:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    iget-object v1, p0, LX/4FW;->A02:Ljava/lang/String;
 
     .line 9
     .line 10
+    const/4 v0, 0x1
+
     .line 11
-    move-result v0
+    aput-object v1, v2, v0
 
     .line 12
-    if-eqz v0, :cond_1
-
     .line 13
+    iget v0, p0, LX/4FW;->A00:I
+
     .line 14
-    iget-object v0, v1, LX/4FV;->A00:LX/4FY;
-
     .line 15
-    .line 16
-    iput-object v0, v3, LX/4FX;->A01:LX/4FY;
+    invoke-static {v2, v0}, LX/0X2;->A1M([Ljava/lang/Object;I)V
 
+    .line 16
     .line 17
     .line 18
-    :cond_0
-    iget-object v2, p0, LX/4FW;->A01:Ljava/lang/String;
+    iget v0, p0, LX/4FW;->A01:I
 
     .line 19
     .line 20
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2, v0}, LX/0X1;->A1R([Ljava/lang/Object;I)V
 
     .line 21
     .line 22
     .line 23
-    move-result v0
+    invoke-static {v2}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     .line 24
-    iget-object v1, v3, LX/4FX;->A01:LX/4FY;
-
     .line 25
     .line 26
-    if-eqz v0, :cond_2
+    move-result v0
 
     .line 27
-    .line 28
-    const/16 v0, 0x8
-
-    .line 29
-    .line 30
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 31
-    .line 32
-    .line 33
-    :cond_1
-    return-void
-
-    .line 34
-    :cond_2
-    invoke-virtual {v1, v2}, LX/4FY;->setQuoteText(Ljava/lang/String;)V
-
-    .line 35
-    .line 36
-    .line 37
-    iget-object v1, v3, LX/4FX;->A01:LX/4FY;
-
-    .line 38
-    .line 39
-    const/4 v0, 0x0
-
-    .line 40
-    goto :goto_0
+    return v0
 .end method

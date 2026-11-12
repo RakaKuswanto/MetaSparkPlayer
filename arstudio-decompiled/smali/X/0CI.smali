@@ -2,129 +2,122 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "BrowserLiteJSBridgeProxy$2"
-
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/browser/lite/bridge/BrowserLiteJSBridgeProxy;
+.field public final A00:LX/0CM;
 
-.field public final synthetic A01:LX/20b;
+.field public final A01:LX/0Cc;
 
-.field public final synthetic A02:Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;
-
-.field public final synthetic A03:LX/4CY;
-
-.field public final synthetic A04:Ljava/lang/String;
+.field public final A02:Ljava/util/function/Function;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/browser/lite/bridge/BrowserLiteJSBridgeProxy;LX/20b;Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;LX/4CY;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(LX/0CM;)V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/0CI;->A00:Lcom/facebook/browser/lite/bridge/BrowserLiteJSBridgeProxy;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p4, p0, LX/0CI;->A03:LX/4CY;
-
     .line 3
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
     .line 4
-    iput-object p3, p0, LX/0CI;->A02:Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;
-
     .line 5
+    new-instance v0, LX/0Cc;
+
     .line 6
-    iput-object p5, p0, LX/0CI;->A04:Ljava/lang/String;
-
     .line 7
-    .line 8
-    iput-object p2, p0, LX/0CI;->A01:LX/20b;
+    invoke-direct {v0, v1}, LX/0Cc;-><init>(Ljava/util/concurrent/TimeUnit;)V
 
+    .line 8
     .line 9
     .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, LX/0CI;->A01:LX/0Cc;
 
     .line 11
     .line 12
+    new-instance v0, LX/0CL;
+
     .line 13
+    .line 14
+    invoke-direct {v0, p0}, LX/0CL;-><init>(LX/0CI;)V
+
+    .line 15
+    .line 16
+    .line 17
+    iput-object v0, p0, LX/0CI;->A02:Ljava/util/function/Function;
+
+    .line 18
+    .line 19
+    iput-object p1, p0, LX/0CI;->A00:LX/0CM;
+
+    .line 20
+    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final A00()LX/0Jc;
     .locals 3
 
     .line 0
-    iget-object v2, p0, LX/0CI;->A03:LX/4CY;
+    :try_start_0
+    iget-object v2, p0, LX/0CI;->A01:LX/0Cc;
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/0CI;->A02:Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;
+    new-instance v1, LX/0CJ;
 
     .line 3
     .line 4
-    iget-object v0, p0, LX/0CI;->A04:Ljava/lang/String;
+    invoke-direct {v1}, LX/0CJ;-><init>()V
 
     .line 5
     .line 6
-    invoke-static {v1, v2, v0}, Lcom/facebook/browser/lite/bridge/BrowserLiteJSBridgeProxy;->A02(Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;LX/4CY;Ljava/lang/String;)Z
-
     .line 7
+    iget-object v0, p0, LX/0CI;->A02:Ljava/util/function/Function;
+
     .line 8
     .line 9
-    move-result v0
+    invoke-virtual {v2, v1, v0}, LX/0Cc;->A00(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
 
     .line 10
-    if-eqz v0, :cond_0
-
     .line 11
     .line 12
-    iget-object v0, p0, LX/0CI;->A01:LX/20b;
-
-    .line 13
-    .line 14
-    invoke-virtual {v0}, LX/20b;->A00()Ljava/lang/String;
-
-    .line 15
-    .line 16
-    .line 17
     move-result-object v0
 
-    .line 18
-    invoke-virtual {v2, v0}, LX/4CY;->A0R(Ljava/lang/String;)V
+    .line 13
+    check-cast v0, LX/0Jc;
 
+    .line 14
+    .line 15
+    return-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 16
+    :catch_0
+    move-exception v2
+
+    .line 17
+    const-string v1, "CallerAppIdentity"
+
+    .line 18
     .line 19
+    const-string v0, "CallerAppIdentity#getCallerAppIdentity failed to get AppIdentity"
+
     .line 20
     .line 21
-    return-void
+    invoke-static {v1, v0, v2}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 22
-    :cond_0
-    const-string v2, "BrowserLiteJSBridgeProxy"
-
     .line 23
     .line 24
     const/4 v0, 0x0
 
     .line 25
-    new-array v1, v0, [Ljava/lang/Object;
-
-    .line 26
-    .line 27
-    const-string v0, "Could not invoke js callback due to domain change"
-
-    .line 28
-    .line 29
-    invoke-static {v2, v0, v1}, LX/4E2;->A01(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 30
-    .line 31
-    .line 32
-    return-void
+    return-object v0
 .end method

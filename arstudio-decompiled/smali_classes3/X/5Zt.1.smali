@@ -1,65 +1,21 @@
-.class public final LX/5Zt;
-.super Ljava/lang/Object;
+.class public abstract LX/5Zt;
+.super LX/5Zs;
 .source ""
 
-# interfaces
-.implements LX/5bo;
 
-
-# static fields
-.field public static final A00:LX/5Zt;
+# instance fields
+.field public A00:[Ljava/lang/Object;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/5Zt;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/5Zt;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/5Zt;->A00:LX/5Zt;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/5Zs;-><init>()V
 
     .line 1
     .line 2
     .line 3
     return-void
-.end method
-
-
-# virtual methods
-.method public final deliverOnRenderThread()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final getType()LX/5X9;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/5X9;->FRAME_RENDERED:LX/5X9;
-
-    .line 1
-    .line 2
-    return-object v0
 .end method

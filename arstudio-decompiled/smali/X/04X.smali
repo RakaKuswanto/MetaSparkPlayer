@@ -1,25 +1,39 @@
 .class public final LX/04X;
-.super Ljava/lang/Object;
+.super LX/0O5;
 .source ""
 
 
-# instance fields
-.field public A00:Ljava/lang/String;
-
-.field public A01:Ljava/lang/String;
-
-.field public A02:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lcom/facebook/rti/common/time/RealtimeSinceBootClock;LX/0OF;Ljava/lang/String;Z)V
+    .locals 7
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v5, "du"
 
     .line 1
     .line 2
+    move-object v0, p0
+
     .line 3
+    move-object v1, p1
+
+    .line 4
+    move-object v2, p2
+
+    .line 5
+    move-object v3, p3
+
+    .line 6
+    move-object v4, p4
+
+    .line 7
+    move v6, p5
+
+    .line 8
+    invoke-direct/range {v0 .. v6}, LX/0O5;-><init>(Landroid/content/Context;Lcom/facebook/rti/common/time/RealtimeSinceBootClock;LX/0OF;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    .line 9
+    .line 10
+    .line 11
     return-void
 .end method

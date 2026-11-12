@@ -1,94 +1,208 @@
-.class public final LX/0LE;
+.class public abstract LX/0LE;
 .super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static A00:Ljava/io/FileOutputStream;
+
+.field public static A01:Ljava/nio/channels/FileChannel;
+
+
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const/16 v0, 0x779
+    .line 0
+    const-string v2, "TraceDirect"
 
-    if-eq p0, v0, :cond_8
+    .line 1
+    .line 2
+    :try_start_0
+    const-string v1, "/sys/kernel/debug/tracing/trace_marker"
 
-    const/16 v0, 0x9d2
+    .line 3
+    .line 4
+    new-instance v0, Ljava/io/FileOutputStream;
 
-    if-eq p0, v0, :cond_7
+    .line 5
+    .line 6
+    invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    const/16 v0, 0xba8
+    .line 7
+    .line 8
+    .line 9
+    sput-object v0, LX/0LE;->A00:Ljava/io/FileOutputStream;
 
-    if-eq p0, v0, :cond_6
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
-    const/16 v0, 0xc54
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
 
-    if-eq p0, v0, :cond_5
+    .line 15
+    sput-object v0, LX/0LE;->A01:Ljava/nio/channels/FileChannel;
 
-    const/16 v0, 0xe0a
+    .line 16
+    .line 17
+    return-void
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eq p0, v0, :cond_4
+    .line 18
+    :catch_0
+    move-exception v1
 
-    const/16 v0, 0xfe0
+    .line 19
+    const-string v0, "Failed to open trace_marker file."
 
-    if-eq p0, v0, :cond_3
+    .line 20
+    .line 21
+    invoke-static {v2, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    const/16 v0, 0x141b
+    .line 22
+    .line 23
+    .line 24
+    const/4 v0, 0x0
 
-    if-eq p0, v0, :cond_2
+    .line 25
+    sput-object v0, LX/0LE;->A00:Ljava/io/FileOutputStream;
 
-    const/16 v0, 0x2b10
+    .line 26
+    .line 27
+    sput-object v0, LX/0LE;->A01:Ljava/nio/channels/FileChannel;
 
-    if-eq p0, v0, :cond_1
+    .line 28
+    .line 29
+    return-void
+.end method
 
-    const/16 v0, 0x374a
+.method public static A00(Ljava/lang/String;)V
+    .locals 4
 
-    if-eq p0, v0, :cond_0
+    .line 0
+    sget-object v3, LX/0LE;->A01:Ljava/nio/channels/FileChannel;
 
-    const-string v0, "UNDEFINED_QPL_EVENT"
+    .line 1
+    .line 2
+    if-eqz v3, :cond_1
 
-    return-object v0
+    .line 3
+    .line 4
+    :try_start_0
+    const-string v0, "UTF-8"
 
+    .line 5
+    .line 6
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v2
+
+    .line 14
+    array-length v1, v2
+
+    .line 15
+    const/4 v0, 0x1
+
+    .line 16
+    if-ge v1, v0, :cond_0
+
+    .line 17
+    .line 18
+    return-void
+
+    .line 19
     :cond_0
-    const-string v0, "MESSENGER_WELLBEING_HIDDEN_WORDS_UPSELL_NUX_TURN_ON_TRACING"
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    return-object v0
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
 
+    .line 23
+    invoke-virtual {v3, v0}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    if-eqz v0, :cond_0
+
+    .line 28
+    .line 29
+    if-eq v0, v1, :cond_1
+
+    .line 30
+    .line 31
+    const-string v1, "TraceDirect"
+
+    .line 32
+    .line 33
+    const-string v0, "Partial write of systrace line."
+
+    .line 34
+    .line 35
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 36
+    .line 37
+    .line 38
+    return-void
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 39
+    :catch_0
+    move-exception v2
+
+    .line 40
+    const-string v1, "TraceDirect"
+
+    .line 41
+    .line 42
+    const-string v0, "Failed to write systrace line."
+
+    .line 43
+    .line 44
+    goto :goto_0
+
+    .line 45
+    :catch_1
+    move-exception v2
+
+    .line 46
+    const-string v1, "TraceDirect"
+
+    .line 47
+    .line 48
+    const-string v0, "Failed to encode raw systrace line to UTF-8."
+
+    .line 49
+    .line 50
+    :goto_0
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 51
+    .line 52
+    .line 53
     :cond_1
-    const-string v0, "MESSENGER_WELLBEING_USER_UNBLOCK_TRACING"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "MESSENGER_WELLBEING_USER_BLOCK_TRACING"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "MESSENGER_WELLBEING_KINDNESS_REMINDER_IN_THREAD_BANNER_TRACING"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "MESSENGER_WELLBEING_HIDDEN_WORDS_UPSELL_NUX_TRACING"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "MESSENGER_WELLBEING_ACTION_ACCEPT_MESSAGE_REQUEST"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "MESSENGER_WELLBEING_ACTION_DELETE_MESSAGE_REQUEST"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "MESSENGER_WELLBEING_UPDATE_REACHABILITY_SETTING"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "MESSENGER_WELLBEING_HIDDEN_WORDS_UPSELL_POST_DELETE_TRACING"
-
-    return-object v0
+    return-void
 .end method

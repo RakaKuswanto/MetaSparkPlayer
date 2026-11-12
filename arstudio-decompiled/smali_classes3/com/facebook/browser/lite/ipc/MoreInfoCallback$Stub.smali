@@ -73,7 +73,7 @@
 
     .line 16
     .line 17
-    invoke-static {p2, v0}, LX/0Yd;->A0G(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+    invoke-static {p2, v0}, LX/0X2;->A0a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
 
     .line 18
     .line 19
@@ -85,7 +85,7 @@
 
     .line 22
     .line 23
-    invoke-interface {p0, v0}, Lcom/facebook/browser/lite/ipc/MoreInfoCallback;->AVd(Landroid/os/Bundle;)V
+    invoke-interface {p0, v0}, Lcom/facebook/browser/lite/ipc/MoreInfoCallback;->ATy(Landroid/os/Bundle;)V
 
     .line 24
     .line 25

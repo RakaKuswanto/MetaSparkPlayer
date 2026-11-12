@@ -7,6 +7,9 @@
 .method public abstract computeMd5([B)[B
 .end method
 
+.method public abstract computeMd5V2([B)[B
+.end method
+
 .method public abstract computeSHA256(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 .end method
 

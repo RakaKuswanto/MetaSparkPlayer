@@ -1,118 +1,81 @@
 .class public final LX/2Yn;
-.super Ljava/lang/Object;
+.super LX/2nP;
 .source ""
-
-# interfaces
-.implements Lcom/facebook/xanalytics/XAnalyticsNative$XAnalyticsPropertiesProvider;
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;
+.field public A00:LX/2nR;
+
+.field public final A01:LX/2bO;
+
+.field public final A02:LX/0VC;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/2Yn;->A00:Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final get()[Ljava/lang/String;
+.method public constructor <init>()V
     .locals 4
 
     .line 0
-    sget v0, LX/2eq;->A6E:I
+    invoke-direct {p0}, LX/2nP;-><init>()V
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
-
     .line 3
+    invoke-static {}, LX/2nP;->A00()LX/2bO;
+
     .line 4
     .line 5
-    move-result-object v0
-
     .line 6
-    check-cast v0, LX/1tK;
-
-    .line 7
-    .line 8
-    invoke-static {v0}, LX/1vu;->A04(LX/1tK;)LX/1vx;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    invoke-interface {v0}, LX/1vx;->AIG()Ljava/lang/String;
-
-    .line 13
-    .line 14
-    .line 15
     move-result-object v3
 
-    .line 16
-    invoke-static {}, LX/0Yi;->A1Y()[Ljava/lang/String;
+    .line 7
+    const/16 v0, 0x1d
 
-    .line 17
-    .line 18
-    .line 19
+    .line 8
+    .line 9
+    invoke-static {p0, v0}, LX/0Xe;->A00(Ljava/lang/Object;I)LX/0Xe;
+
+    .line 10
+    .line 11
+    .line 12
     move-result-object v2
 
-    .line 20
-    iget-object v1, p0, LX/2Yn;->A00:Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;
+    .line 13
+    sget v1, LX/2I6;->ACb:I
 
+    .line 14
+    .line 15
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
+
+    .line 20
     .line 21
     .line 22
-    iget-object v0, v1, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A02:LX/0Na;
+    move-result-object v0
 
     .line 23
-    .line 24
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    check-cast v0, LX/2nR;
 
+    .line 24
     .line 25
+    iput-object v3, p0, LX/2Yn;->A01:LX/2bO;
+
     .line 26
     .line 27
-    const-string v0, "175.0.0.28.488"
+    iput-object v2, p0, LX/2Yn;->A02:LX/0VC;
 
     .line 28
     .line 29
-    invoke-static {v2, v0, v3}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    iput-object v0, p0, LX/2Yn;->A00:LX/2nR;
 
     .line 30
     .line 31
-    .line 32
-    iget-object v0, v1, Lcom/facebook/xanalytics/provider/NativeXAnalyticsProvider;->A03:LX/0Na;
-
-    .line 33
-    .line 34
-    invoke-static {v0}, LX/1xU;->A01(LX/0Na;)Ljava/lang/String;
-
-    .line 35
-    .line 36
-    .line 37
-    move-result-object v1
-
-    .line 38
-    const/4 v0, 0x2
-
-    .line 39
-    aput-object v1, v2, v0
-
-    .line 40
-    .line 41
-    return-object v2
+    return-void
 .end method

@@ -4,52 +4,14 @@
 
 
 # instance fields
-.field public nativeHandle:J
+.field public A00:J
 
-.field public final nativeSymbolTableHandle:J
+.field public final A01:J
 
-.field public final session:Lcom/google/ar/core/Session;
+.field public final A02:Lcom/google/ar/core/Session;
 
 
 # direct methods
-.method public static bridge synthetic -$$Nest$fgetsession(Lcom/google/ar/core/ArImage;)Lcom/google/ar/core/Session;
-    .locals 0
-
-    iget-object p0, p0, Lcom/google/ar/core/ArImage;->session:Lcom/google/ar/core/Session;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic -$$Nest$mnativeGetBuffer(Lcom/google/ar/core/ArImage;JJI)Ljava/nio/ByteBuffer;
-    .locals 0
-
-    invoke-direct/range {p0 .. p5}, Lcom/google/ar/core/ArImage;->nativeGetBuffer(JJI)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic -$$Nest$mnativeGetPixelStride(Lcom/google/ar/core/ArImage;JJI)I
-    .locals 0
-
-    invoke-direct/range {p0 .. p5}, Lcom/google/ar/core/ArImage;->nativeGetPixelStride(JJI)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic -$$Nest$mnativeGetRowStride(Lcom/google/ar/core/ArImage;JJI)I
-    .locals 0
-
-    invoke-direct/range {p0 .. p5}, Lcom/google/ar/core/ArImage;->nativeGetRowStride(JJI)I
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public constructor <init>(Lcom/google/ar/core/Session;J)V
     .locals 2
 
@@ -59,11 +21,11 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/google/ar/core/ArImage;->session:Lcom/google/ar/core/Session;
+    iput-object p1, p0, Lcom/google/ar/core/ArImage;->A02:Lcom/google/ar/core/Session;
 
     .line 4
     .line 5
-    iput-wide p2, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iput-wide p2, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 6
     .line 7
@@ -71,11 +33,67 @@
 
     .line 8
     .line 9
-    iput-wide v0, p0, Lcom/google/ar/core/ArImage;->nativeSymbolTableHandle:J
+    iput-wide v0, p0, Lcom/google/ar/core/ArImage;->A01:J
 
     .line 10
     .line 11
     return-void
+.end method
+
+.method public static bridge synthetic A00(Lcom/google/ar/core/ArImage;IJJ)I
+    .locals 4
+
+    move-object v0, p0
+
+    move-wide v1, p2
+
+    move-wide v3, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/ar/core/ArImage;->nativeGetPixelStride(JJI)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static bridge synthetic A01(Lcom/google/ar/core/ArImage;IJJ)I
+    .locals 4
+
+    move-object v0, p0
+
+    move-wide v1, p2
+
+    move-wide v3, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/ar/core/ArImage;->nativeGetRowStride(JJI)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static bridge synthetic A02(Lcom/google/ar/core/ArImage;)Lcom/google/ar/core/Session;
+    .locals 0
+
+    iget-object p0, p0, Lcom/google/ar/core/ArImage;->A02:Lcom/google/ar/core/Session;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic A03(Lcom/google/ar/core/ArImage;IJJ)Ljava/nio/ByteBuffer;
+    .locals 4
+
+    move-object v0, p0
+
+    move-wide v1, p2
+
+    move-wide v3, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/ar/core/ArImage;->nativeGetBuffer(JJI)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method private native nativeClose(JJ)V
@@ -110,15 +128,15 @@
 
 
 # virtual methods
-.method public close()V
+.method public final close()V
     .locals 4
 
     .line 0
-    iget-wide v2, p0, Lcom/google/ar/core/ArImage;->nativeSymbolTableHandle:J
+    iget-wide v2, p0, Lcom/google/ar/core/ArImage;->A01:J
 
     .line 1
     .line 2
-    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 3
     .line 4
@@ -131,14 +149,14 @@
 
     .line 8
     .line 9
-    iput-wide v0, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iput-wide v0, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 10
     .line 11
     return-void
 .end method
 
-.method public getCropRect()Landroid/graphics/Rect;
+.method public final getCropRect()Landroid/graphics/Rect;
     .locals 4
 
     .line 0
@@ -173,11 +191,11 @@
     return-object v0
 .end method
 
-.method public getFormat()I
+.method public final getFormat()I
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ArImage;->session:Lcom/google/ar/core/Session;
+    iget-object v0, p0, Lcom/google/ar/core/ArImage;->A02:Lcom/google/ar/core/Session;
 
     .line 1
     .line 2
@@ -185,7 +203,7 @@
 
     .line 3
     .line 4
-    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 5
     .line 6
@@ -224,11 +242,11 @@
     throw v0
 .end method
 
-.method public getHeight()I
+.method public final getHeight()I
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ArImage;->session:Lcom/google/ar/core/Session;
+    iget-object v0, p0, Lcom/google/ar/core/ArImage;->A02:Lcom/google/ar/core/Session;
 
     .line 1
     .line 2
@@ -236,7 +254,7 @@
 
     .line 3
     .line 4
-    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 5
     .line 6
@@ -275,11 +293,11 @@
     throw v0
 .end method
 
-.method public getPlanes()[Landroid/media/Image$Plane;
+.method public final getPlanes()[Landroid/media/Image$Plane;
     .locals 6
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ArImage;->session:Lcom/google/ar/core/Session;
+    iget-object v0, p0, Lcom/google/ar/core/ArImage;->A02:Lcom/google/ar/core/Session;
 
     .line 1
     .line 2
@@ -287,7 +305,7 @@
 
     .line 3
     .line 4
-    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 5
     .line 6
@@ -306,7 +324,7 @@
 
     .line 12
     .line 13
-    new-array v4, v5, [LX/5Jp;
+    new-array v4, v5, [LX/5AH;
 
     .line 14
     .line 15
@@ -318,15 +336,15 @@
 
     .line 17
     .line 18
-    iget-wide v1, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iget-wide v1, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 19
     .line 20
-    new-instance v0, LX/5Jp;
+    new-instance v0, LX/5AH;
 
     .line 21
     .line 22
-    invoke-direct {v0, p0, v3, v1, v2}, LX/5Jp;-><init>(Lcom/google/ar/core/ArImage;IJ)V
+    invoke-direct {v0, p0, v3, v1, v2}, LX/5AH;-><init>(Lcom/google/ar/core/ArImage;IJ)V
 
     .line 23
     .line 24
@@ -363,11 +381,11 @@
     throw v0
 .end method
 
-.method public getTimestamp()J
+.method public final getTimestamp()J
     .locals 5
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ArImage;->session:Lcom/google/ar/core/Session;
+    iget-object v0, p0, Lcom/google/ar/core/ArImage;->A02:Lcom/google/ar/core/Session;
 
     .line 1
     .line 2
@@ -375,7 +393,7 @@
 
     .line 3
     .line 4
-    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 5
     .line 6
@@ -419,11 +437,11 @@
     throw v0
 .end method
 
-.method public getWidth()I
+.method public final getWidth()I
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/google/ar/core/ArImage;->session:Lcom/google/ar/core/Session;
+    iget-object v0, p0, Lcom/google/ar/core/ArImage;->A02:Lcom/google/ar/core/Session;
 
     .line 1
     .line 2
@@ -431,7 +449,7 @@
 
     .line 3
     .line 4
-    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->nativeHandle:J
+    iget-wide v0, p0, Lcom/google/ar/core/ArImage;->A00:J
 
     .line 5
     .line 6
@@ -470,7 +488,7 @@
     throw v0
 .end method
 
-.method public setCropRect(Landroid/graphics/Rect;)V
+.method public final setCropRect(Landroid/graphics/Rect;)V
     .locals 1
 
     .line 0
@@ -478,7 +496,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 3
     .line 4
@@ -489,7 +507,7 @@
     throw v0
 .end method
 
-.method public setTimestamp(J)V
+.method public final setTimestamp(J)V
     .locals 1
 
     .line 0
@@ -497,7 +515,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
     .line 3
     .line 4

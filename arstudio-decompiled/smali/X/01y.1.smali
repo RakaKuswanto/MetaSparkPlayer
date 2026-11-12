@@ -1,17 +1,21 @@
-.class public interface abstract LX/01y;
+.class public final LX/01y;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ADJ()Landroid/content/ClipData;
-.end method
+# static fields
+.field public static A00:Ljava/lang/Boolean;
 
-.method public abstract AFr()I
-.end method
 
-.method public abstract AMK()I
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AOJ()Landroid/view/ContentInfo;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

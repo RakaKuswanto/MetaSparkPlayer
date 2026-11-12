@@ -20,6 +20,16 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Predicate;Lcom/google/common/base/Function;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "p",
+            "f"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,15 +41,10 @@
 
     .line 4
     .line 5
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p2, p0, Lcom/google/common/base/Predicates$CompositionPredicate;->f:Lcom/google/common/base/Function;
 
     .line 6
     .line 7
-    .line 8
-    iput-object p2, p0, Lcom/google/common/base/Predicates$CompositionPredicate;->f:Lcom/google/common/base/Function;
-
-    .line 9
-    .line 10
     return-void
 .end method
 
@@ -47,6 +52,14 @@
 # virtual methods
 .method public apply(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "a"
+        }
+    .end annotation
 
     .line 0
     iget-object v1, p0, Lcom/google/common/base/Predicates$CompositionPredicate;->p:Lcom/google/common/base/Predicate;
@@ -78,6 +91,14 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "obj"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Lcom/google/common/base/Predicates$CompositionPredicate;
@@ -180,7 +201,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -210,7 +231,7 @@
 
     .line 15
     .line 16
-    invoke-static {v0, v1}, LX/0Yd;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, LX/0X2;->A0i(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 17
     .line 18

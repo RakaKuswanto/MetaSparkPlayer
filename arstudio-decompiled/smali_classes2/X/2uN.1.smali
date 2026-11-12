@@ -1,228 +1,232 @@
-.class public final LX/2uN;
+.class public final LX/2Un;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2Tb;
+
+
+# instance fields
+.field public final A00:LX/2UM;
+
+.field public final A01:LX/2UN;
+
 
 # direct methods
-.method public static A00(Landroid/content/Context;LX/2lA;)Ljava/lang/String;
-    .locals 4
+.method public constructor <init>(LX/2UM;)V
+    .locals 1
 
     .line 0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v2
+    new-instance v0, LX/2Ta;
 
     .line 4
-    const/4 v1, 0x0
-
     .line 5
-    const/16 v0, 0xf
+    invoke-direct {v0}, LX/2Ta;-><init>()V
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/000;->A00(I)Ljava/lang/String;
-
     .line 8
+    iput-object v0, p0, LX/2Un;->A01:LX/2UN;
+
     .line 9
     .line 10
-    move-result-object v0
+    iput-object p1, p0, LX/2Un;->A00:LX/2UM;
 
     .line 11
-    invoke-virtual {v2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    .line 12
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A9s(LX/0Py;J)LX/0Q6;
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/2Un;->A00:LX/2UM;
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    invoke-interface {v2, p1, v1}, LX/2UM;->AoY(LX/0Py;I)V
+
+    .line 4
+    .line 5
+    .line 6
+    :try_start_0
+    iget-object v0, p0, LX/2Un;->A01:LX/2UN;
+
+    .line 7
+    .line 8
+    invoke-interface {v0, p2, p3}, LX/2UN;->get(J)Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    check-cast v0, LX/0Q6;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 13
+    .line 14
+    invoke-interface {v2, p1, v1}, LX/2UM;->AoZ(LX/0Py;I)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
+
+    .line 18
+    :catchall_0
+    move-exception v0
+
+    .line 19
+    invoke-interface {v2, p1, v1}, LX/2UM;->AoZ(LX/0Py;I)V
+
+    .line 20
+    .line 21
+    .line 22
+    throw v0
+.end method
+
+.method public final AfP(LX/0Py;LX/0Q6;J)V
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/2Un;->A00:LX/2UM;
+
+    .line 1
+    .line 2
+    const/4 v1, 0x1
+
+    .line 3
+    invoke-interface {v2, p1, v1}, LX/2UM;->AoY(LX/0Py;I)V
+
+    .line 4
+    .line 5
+    .line 6
+    :try_start_0
+    iget-object v0, p0, LX/2Un;->A01:LX/2UN;
+
+    .line 7
+    .line 8
+    invoke-interface {v0, p3, p4, p2}, LX/2UN;->put(JLjava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-interface {v2, p1, v1}, LX/2UM;->AoZ(LX/0Py;I)V
 
     .line 12
     .line 13
     .line 14
-    move-result v0
+    return-void
 
     .line 15
-    const/4 v3, 0x0
+    :catchall_0
+    move-exception v0
 
     .line 16
-    if-eqz v0, :cond_3
+    invoke-interface {v2, p1, v1}, LX/2UM;->AoZ(LX/0Py;I)V
 
     .line 17
     .line 18
+    .line 19
+    throw v0
+.end method
+
+.method public final AhO(LX/0Py;J)LX/0Q6;
+    .locals 5
+
+    .line 0
+    iget-object v4, p0, LX/2Un;->A00:LX/2UM;
+
+    .line 1
+    .line 2
+    const/4 v3, 0x1
+
+    .line 3
+    invoke-interface {v4, p1, v3}, LX/2UM;->AoY(LX/0Py;I)V
+
+    .line 4
+    .line 5
+    .line 6
     :try_start_0
-    iget-object v0, p1, LX/3Bf;->A01:Landroid/content/pm/PackageManager;
+    iget-object v2, p0, LX/2Un;->A01:LX/2UN;
+
+    .line 7
+    .line 8
+    invoke-interface {v2, p2, p3}, LX/2UN;->indexOfKey(J)I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v1
+
+    .line 12
+    if-gez v1, :cond_0
+
+    .line 13
+    .line 14
+    goto :goto_0
+
+    .line 15
+    :cond_0
+    invoke-interface {v2, v1}, LX/2UN;->valueAt(I)Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
 
     .line 19
-    .line 20
-    invoke-virtual {v0, v2, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    check-cast v0, LX/0Q6;
 
+    .line 20
     .line 21
+    invoke-interface {v2, v1}, LX/2UN;->removeAt(I)V
+
     .line 22
     .line 23
-    move-result-object v3
-
     .line 24
-    goto :goto_0
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    goto :goto_1
 
     .line 25
-    :catch_0
-    move-exception v1
+    :goto_0
+    const/4 v0, 0x0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 26
-    invoke-static {v1}, LX/002;->A0R(Ljava/lang/Throwable;)Z
+    :goto_1
+    invoke-interface {v4, p1, v3}, LX/2UM;->AoZ(LX/0Py;I)V
 
     .line 27
     .line 28
     .line 29
-    move-result v0
+    return-object v0
 
     .line 30
-    if-eqz v0, :cond_5
+    :catchall_0
+    move-exception v0
 
     .line 31
-    .line 32
-    :catch_1
-    :goto_0
-    if-eqz v3, :cond_2
+    invoke-interface {v4, p1, v3}, LX/2UM;->AoZ(LX/0Py;I)V
 
+    .line 32
     .line 33
     .line 34
-    iget-object v0, p1, LX/3Bf;->A00:Landroid/content/pm/ApplicationInfo;
-
-    .line 35
-    .line 36
-    iget v2, v0, Landroid/content/pm/ApplicationInfo;->uid:I
-
-    .line 37
-    .line 38
-    iget v1, v3, Landroid/content/pm/ApplicationInfo;->uid:I
-
-    .line 39
-    .line 40
-    if-eq v2, v1, :cond_0
-
-    .line 41
-    .line 42
-    iget-object v0, p1, LX/3Bf;->A01:Landroid/content/pm/PackageManager;
-
-    .line 43
-    .line 44
-    invoke-virtual {v0, v2, v1}, Landroid/content/pm/PackageManager;->checkSignatures(II)I
-
-    .line 45
-    .line 46
-    .line 47
-    move-result v1
-
-    .line 48
-    const/4 v0, 0x0
-
-    .line 49
-    if-nez v1, :cond_1
-
-    .line 50
-    .line 51
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 52
-    :cond_1
-    if-eqz v0, :cond_2
-
-    .line 53
-    .line 54
-    goto :goto_1
-
-    .line 55
-    :cond_2
-    const/4 v3, 0x0
-
-    .line 56
-    goto :goto_1
-
-    .line 57
-    :cond_3
-    :try_start_1
-    iget-object v0, p1, LX/3Bf;->A01:Landroid/content/pm/PackageManager;
-
-    .line 58
-    .line 59
-    invoke-virtual {v0, v2, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-
-    .line 60
-    .line 61
-    .line 62
-    move-result-object v3
-
-    .line 63
-    goto :goto_1
-    :try_end_1
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_2
-
-    .line 64
-    :catch_2
-    move-exception v1
-
-    .line 65
-    invoke-static {v1}, LX/002;->A0R(Ljava/lang/Throwable;)Z
-
-    .line 66
-    .line 67
-    .line 68
-    move-result v0
-
-    .line 69
-    if-eqz v0, :cond_5
-
-    .line 70
-    .line 71
-    :catch_3
-    :goto_1
-    if-eqz v3, :cond_4
-
-    .line 72
-    .line 73
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    .line 74
-    .line 75
-    .line 76
-    move-result-object v0
-
-    .line 77
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 78
-    .line 79
-    .line 80
-    invoke-virtual {v0, v3}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v0
-
-    .line 84
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    .line 85
-    .line 86
-    .line 87
-    move-result-object v0
-
-    .line 88
-    return-object v0
-
-    .line 89
-    :cond_4
-    const-string v0, "(unknown)"
-
-    .line 90
-    .line 91
-    return-object v0
-
-    .line 92
-    :cond_5
-    throw v1
+    throw v0
 .end method

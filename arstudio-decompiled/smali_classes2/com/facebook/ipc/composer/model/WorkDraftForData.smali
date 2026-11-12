@@ -29,11 +29,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x10
+    const/16 v0, 0x35
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -57,39 +57,19 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A0L(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 4
     .line 5
     .line 6
-    move-result v0
+    move-result-object v0
 
     .line 7
-    if-nez v0, :cond_0
+    iput-object v0, p0, Lcom/facebook/ipc/composer/model/WorkDraftForData;->A00:Ljava/lang/String;
 
     .line 8
     .line 9
-    const/4 v0, 0x0
-
-    .line 10
-    :goto_0
-    iput-object v0, p0, Lcom/facebook/ipc/composer/model/WorkDraftForData;->A00:Ljava/lang/String;
-
-    .line 11
-    .line 12
     return-void
-
-    .line 13
-    :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    goto :goto_0
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
@@ -146,7 +126,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -174,7 +154,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -193,7 +173,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yc;->A0D(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0k(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 3
     .line 4

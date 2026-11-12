@@ -20,11 +20,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x35
+    const/16 v0, 0x25
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -72,7 +72,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    invoke-static {p1}, LX/0Yi;->A0e(Landroid/os/Parcel;)Ljava/lang/Long;
+    invoke-static {p1}, LX/0X5;->A0W(Landroid/os/Parcel;)Ljava/lang/Long;
 
     .line 268435460
     .line 268435461

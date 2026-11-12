@@ -80,7 +80,7 @@
 
     .line 6
     .line 7
-    invoke-static {p0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 8
     .line 9
@@ -98,7 +98,7 @@
     .line 15
     .line 16
     .line 17
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 18
     .line 19
@@ -148,7 +148,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -186,7 +186,7 @@
 
     .line 19
     .line 20
-    invoke-static {p0, v0, p1}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0, p1}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 21
     .line 22
@@ -194,11 +194,11 @@
     move-result-object v1
 
     .line 24
-    new-instance v0, LX/0Oh;
+    new-instance v0, LX/0WE;
 
     .line 25
     .line 26
-    invoke-direct {v0, v1, p3}, LX/0Oh;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, v1, p3}, LX/0WE;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 27
     .line 28
@@ -207,7 +207,7 @@
 
     .line 30
     .line 31
-    invoke-direct {v2, v0, p0, p2, p1}, Lcom/facebook/common/dextricks/DexTricksErrorReporter$1;-><init>(LX/0Oh;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v2, v0, p0, p2, p1}, Lcom/facebook/common/dextricks/DexTricksErrorReporter$1;-><init>(LX/0WE;Ljava/lang/String;ILjava/lang/String;)V
 
     .line 32
     .line 33

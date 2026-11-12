@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 # interfaces
@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final A00:LX/0vM;
+.field public final A00:LX/14G;
 
 .field public final A01:Ljava/lang/String;
 
@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0xa
+    const/16 v0, 0x9
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -40,24 +40,24 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/0vM;Ljava/lang/String;)V
+.method public constructor <init>(LX/14G;Ljava/lang/String;)V
     .locals 1
 
     .line 0
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 5
     .line 6
     .line 7
-    iput-object p1, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/0vM;
+    iput-object p1, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/14G;
 
     .line 8
     .line 9
@@ -93,9 +93,9 @@
 
     check-cast p1, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;
 
-    iget-object v1, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/0vM;
+    iget-object v1, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/14G;
 
-    iget-object v0, p1, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/0vM;
+    iget-object v0, p1, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/14G;
 
     if-ne v1, v0, :cond_0
 
@@ -103,7 +103,7 @@
 
     iget-object v0, p1, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A01:Ljava/lang/String;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -120,11 +120,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/0vM;
+    iget-object v0, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/14G;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A04(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X6;->A06(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -136,7 +136,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 9
     .line 10
@@ -157,16 +157,16 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/0vM;
+    iget-object v0, p0, Lcom/facebook/browser/lite/extensions/commercecheckout/constant/MetaCheckoutRequest;->A00:LX/14G;
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 7
     .line 8

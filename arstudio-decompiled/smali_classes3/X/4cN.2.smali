@@ -1,73 +1,66 @@
 .class public final LX/4cN;
-.super Landroid/database/DataSetObserver;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "RequestExecutor$ReplyRunnable$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/4b9;
+.field public final synthetic A00:LX/4cG;
+
+.field public final synthetic A01:LX/01m;
+
+.field public final synthetic A02:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/4b9;)V
+.method public constructor <init>(LX/4cG;LX/01m;Ljava/lang/Object;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4cN;->A00:LX/4b9;
+    iput-object p1, p0, LX/4cN;->A00:LX/4cG;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    iput-object p2, p0, LX/4cN;->A01:LX/01m;
 
     .line 3
     .line 4
+    iput-object p3, p0, LX/4cN;->A02:Ljava/lang/Object;
+
     .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged()V
+.method public final run()V
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/4cN;->A00:LX/4b9;
+    iget-object v1, p0, LX/4cN;->A01:LX/01m;
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    iget-object v0, p0, LX/4cN;->A02:Ljava/lang/Object;
 
     .line 3
-    iput-boolean v0, v1, LX/4b9;->A06:Z
-
     .line 4
-    .line 5
-    invoke-virtual {v1}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+    invoke-interface {v1, v0}, LX/01m;->accept(Ljava/lang/Object;)V
 
+    .line 5
     .line 6
     .line 7
-    .line 8
-    return-void
-.end method
-
-.method public final onInvalidated()V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/4cN;->A00:LX/4b9;
-
-    .line 1
-    .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    iput-boolean v0, v1, LX/4b9;->A06:Z
-
-    .line 4
-    .line 5
-    invoke-virtual {v1}, Landroid/widget/BaseAdapter;->notifyDataSetInvalidated()V
-
-    .line 6
-    .line 7
-    .line 8
     return-void
 .end method

@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract AVf(Landroid/os/Bundle;Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;I)V
+.method public abstract AU0(Landroid/os/Bundle;Lcom/facebook/browser/lite/ipc/BrowserLiteJSBridgeCall;I)V
 .end method

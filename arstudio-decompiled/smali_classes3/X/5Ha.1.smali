@@ -1,45 +1,14 @@
-.class public final LX/5Ha;
-.super LX/6Kx;
+.class public interface abstract LX/5Ha;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "Http2Connection$1"
+# virtual methods
+.method public abstract A8Y(LX/5HI;LX/5I8;LX/5Fy;Ljava/util/Map;[LX/5Fy;II)LX/5Hb;
+.end method
 
+.method public abstract APG()Z
+.end method
 
-# instance fields
-.field public final synthetic A00:I
-
-.field public final synthetic A01:LX/5HY;
-
-.field public final synthetic A02:LX/5HL;
-
-
-# direct methods
-.method public varargs constructor <init>(LX/5HY;LX/5HL;[Ljava/lang/Object;I)V
-    .locals 1
-
-    .line 0
-    const-string v0, "OkHttp %s stream %d"
-
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/5Ha;->A02:LX/5HL;
-
-    .line 3
-    .line 4
-    iput p4, p0, LX/5Ha;->A00:I
-
-    .line 5
-    .line 6
-    iput-object p1, p0, LX/5Ha;->A01:LX/5HY;
-
-    .line 7
-    .line 8
-    invoke-direct {p0, v0, p3}, LX/6Kx;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 9
-    .line 10
-    .line 11
-    return-void
+.method public abstract Amt()Z
 .end method

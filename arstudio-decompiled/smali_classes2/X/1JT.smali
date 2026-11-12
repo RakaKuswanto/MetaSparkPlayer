@@ -1,21 +1,6 @@
-.class public final LX/1JT;
-.super Ljava/util/HashMap;
+.class public final LX/1jT;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements LX/1JS;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/util/HashMap<",
-        "Ljava/lang/String;",
-        "Ljava/lang/Object;",
-        ">;",
-        "LX/1JS;"
-    }
-.end annotation
 
 
 # direct methods
@@ -23,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

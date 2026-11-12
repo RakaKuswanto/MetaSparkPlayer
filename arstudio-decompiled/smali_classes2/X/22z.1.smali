@@ -1,56 +1,33 @@
 .class public final LX/22z;
-.super Ljava/lang/Object;
+.super LX/230;
 .source ""
-
-# interfaces
-.implements LX/1tl;
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/login/LoginClient$Request;
-
-.field public final synthetic A01:Lcom/facebook/login/WebViewLoginMethodHandler;
+.field public final synthetic A00:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/login/LoginClient$Request;Lcom/facebook/login/WebViewLoginMethodHandler;)V
+.method public constructor <init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
-    iput-object p2, p0, LX/22z;->A01:Lcom/facebook/login/WebViewLoginMethodHandler;
+    iput-object p1, p0, LX/22z;->A00:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/22z;->A00:Lcom/facebook/login/LoginClient$Request;
+    invoke-direct {p0, p1}, LX/230;-><init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
 
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AWB(Landroid/os/Bundle;LX/1tj;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/22z;->A01:Lcom/facebook/login/WebViewLoginMethodHandler;
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/22z;->A00:Lcom/facebook/login/LoginClient$Request;
-
-    .line 3
-    .line 4
-    invoke-virtual {v1, p1, p2, v0}, Lcom/facebook/login/WebViewLoginMethodHandler;->A07(Landroid/os/Bundle;LX/1tj;Lcom/facebook/login/LoginClient$Request;)V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method

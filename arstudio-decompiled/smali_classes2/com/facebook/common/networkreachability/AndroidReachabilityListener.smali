@@ -1,4 +1,4 @@
-.class public Lcom/facebook/common/networkreachability/AndroidReachabilityListener;
+.class public abstract Lcom/facebook/common/networkreachability/AndroidReachabilityListener;
 .super Ljava/lang/Object;
 .source ""
 
@@ -14,15 +14,16 @@
     .locals 1
 
     .line 0
-    const-string v0, "android-reachability-announcer"
+    const-string/jumbo v0, "android-reachability-announcer"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 3
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 4
     .line 5
+    .line 6
     return-void
 .end method
 

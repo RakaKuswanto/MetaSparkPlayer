@@ -1,127 +1,218 @@
-.class public LX/4bq;
-.super Landroid/view/ViewGroup$MarginLayoutParams;
+.class public abstract LX/4bq;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 805306368
-    const/4 v0, -0x2
-
-    .line 805306369
-    invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
-
-    .line 805306370
-    .line 805306371
-    .line 805306372
-    const v0, 0x800013
-
-    .line 805306373
-    .line 805306374
-    .line 805306375
-    iput v0, p0, LX/4bq;->A00:I
-
-    .line 805306376
-    .line 805306377
-    return-void
-.end method
-
-.method public constructor <init>(LX/4bq;)V
-    .locals 1
-
-    .line 268435456
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    const/4 v0, 0x0
-
-    .line 268435460
-    iput v0, p0, LX/4bq;->A00:I
-
-    .line 268435461
-    .line 268435462
-    iget v0, p1, LX/4bq;->A00:I
-
-    .line 268435463
-    .line 268435464
-    iput v0, p0, LX/4bq;->A00:I
-
-    .line 268435465
-    .line 268435466
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public static final A00(LX/4V1;)I
     .locals 3
 
     .line 0
-    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 v2, 0x0
+
+    .line 1
+    invoke-static {p0}, LX/434;->A0I(Ljava/lang/Enum;)I
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v1
+
+    .line 5
+    const/4 v0, 0x1
+
+    .line 6
+    if-eq v1, v0, :cond_1
+
+    .line 7
+    .line 8
+    const/4 v0, 0x2
+
+    .line 9
+    if-eq v1, v0, :cond_0
+
+    .line 10
+    .line 11
+    if-eq v1, v2, :cond_2
+
+    .line 12
+    .line 13
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
+    const-string v0, "Unknown YogaDirection "
+
+    .line 18
+    .line 19
+    invoke-static {p0, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    throw v0
+
+    .line 24
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 25
+    return v0
+
+    .line 26
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 27
+    :cond_2
+    return v0
+.end method
+
+.method public static A01(LX/4jL;)I
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, LX/4jL;->getLayoutDirection()LX/4V1;
 
     .line 1
     .line 2
     .line 3
-    const/4 v2, 0x0
+    move-result-object p0
 
     .line 4
-    iput v2, p0, LX/4bq;->A00:I
+    invoke-static {p0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 5
     .line 6
-    sget-object v0, LX/4XG;->A01:[I
-
     .line 7
-    .line 8
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p0}, LX/4bq;->A00(LX/4V1;)I
 
+    .line 8
     .line 9
     .line 10
+    move-result p0
+
     .line 11
-    move-result-object v1
+    return p0
+.end method
+
+.method public static final A02(I)LX/4V1;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    if-ne p0, v0, :cond_0
+
+    .line 2
+    .line 3
+    sget-object v0, LX/4V1;->LTR:LX/4V1;
+
+    .line 4
+    .line 5
+    return-object v0
+
+    .line 6
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 7
+    if-ne p0, v0, :cond_1
+
+    .line 8
+    .line 9
+    sget-object v0, LX/4V1;->RTL:LX/4V1;
+
+    .line 10
+    .line 11
+    return-object v0
 
     .line 12
-    invoke-virtual {v1, v2, v2}, Landroid/content/res/TypedArray;->getInt(II)I
+    :cond_1
+    const/4 v0, 0x2
 
     .line 13
+    if-ne p0, v0, :cond_2
+
     .line 14
     .line 15
-    move-result v0
+    sget-object v0, LX/4V1;->INHERIT:LX/4V1;
 
     .line 16
-    iput v0, p0, LX/4bq;->A00:I
-
     .line 17
+    return-object v0
+
     .line 18
-    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+    :cond_2
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 19
     .line 20
     .line 21
-    return-void
-.end method
+    move-result-object v2
 
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 1
+    .line 22
+    const-string v0, "Unknown LayoutDirection "
 
-    .line 536870912
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 23
+    .line 24
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    const/4 v0, 0x0
+    .line 25
+    .line 26
+    .line 27
+    const-string v0, "LayoutDirection(value="
 
-    .line 536870916
-    iput v0, p0, LX/4bq;->A00:I
+    .line 28
+    .line 29
+    const/16 v1, 0x29
 
-    .line 536870917
-    .line 536870918
-    return-void
+    .line 30
+    .line 31
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
+
+    .line 35
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-static {v0, v1}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    invoke-static {v0, v2}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v0
+
+    .line 46
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
+    .line 50
+    throw v0
 .end method

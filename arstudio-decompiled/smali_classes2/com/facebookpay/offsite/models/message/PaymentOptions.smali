@@ -221,7 +221,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 474586
+    .line 236090
     iget-boolean v0, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->requestPayerName:Z
 
     move/from16 p1, v0
@@ -231,7 +231,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 474587
+    .line 236091
     iget-boolean v0, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->requestPayerPhone:Z
 
     move/from16 p2, v0
@@ -241,7 +241,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 474588
+    .line 236092
     iget-boolean v0, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->requestPayerEmail:Z
 
     move/from16 p3, v0
@@ -251,7 +251,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 474589
+    .line 236093
     iget-boolean v14, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->requestShipping:Z
 
     :cond_3
@@ -259,7 +259,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 474590
+    .line 236094
     iget-boolean v13, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->requestBillingAddress:Z
 
     :cond_4
@@ -267,7 +267,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 474591
+    .line 236095
     iget-object v12, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->billingAddressMode:Ljava/lang/String;
 
     :cond_5
@@ -275,7 +275,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 474592
+    .line 236096
     iget-object v11, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->shippingType:Ljava/lang/String;
 
     :cond_6
@@ -283,7 +283,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 474593
+    .line 236097
     iget-object v10, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->fulfillmentType:Ljava/lang/String;
 
     :cond_7
@@ -291,7 +291,7 @@
 
     if-eqz v0, :cond_8
 
-    .line 474594
+    .line 236098
     iget-boolean v9, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->allowOfferCodes:Z
 
     :cond_8
@@ -299,7 +299,7 @@
 
     if-eqz v0, :cond_9
 
-    .line 474595
+    .line 236099
     iget-boolean v8, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->proactive:Z
 
     :cond_9
@@ -307,7 +307,7 @@
 
     if-eqz v0, :cond_a
 
-    .line 474596
+    .line 236100
     iget-object v7, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->marketingPrivacyPolicyUrl:Ljava/lang/String;
 
     :cond_a
@@ -315,7 +315,7 @@
 
     if-eqz v0, :cond_b
 
-    .line 474597
+    .line 236101
     iget-object v6, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->defaultMarketingEmailOptOut:Ljava/lang/Boolean;
 
     :cond_b
@@ -323,7 +323,7 @@
 
     if-eqz v0, :cond_c
 
-    .line 474598
+    .line 236102
     iget-object v5, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->requestPickupName:Ljava/lang/Boolean;
 
     :cond_c
@@ -331,7 +331,7 @@
 
     if-eqz v0, :cond_d
 
-    .line 474599
+    .line 236103
     iget-object v4, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->requestPickupEmail:Ljava/lang/Boolean;
 
     :cond_d
@@ -339,7 +339,7 @@
 
     if-eqz v0, :cond_e
 
-    .line 474600
+    .line 236104
     iget-object v3, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->requestPickupPhone:Ljava/lang/Boolean;
 
     :cond_e
@@ -349,10 +349,10 @@
 
     if-eqz v1, :cond_f
 
-    .line 474601
+    .line 236105
     iget-object v2, p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;->ctaType:Ljava/lang/String;
 
-    .line 474602
+    .line 236106
     :cond_f
     new-instance p0, Lcom/facebookpay/offsite/models/message/PaymentOptions;
 
@@ -384,7 +384,7 @@
 
     invoke-direct/range {p0 .. p16}, Lcom/facebookpay/offsite/models/message/PaymentOptions;-><init>(ZZZZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;)V
 
-    .line 474603
+    .line 236107
     return-object p0
 .end method
 

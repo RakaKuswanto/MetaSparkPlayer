@@ -10,35 +10,35 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
-
 .field public final mAbortAllListeners:Ljava/util/ArrayList;
 
-.field public final mBackgroundExecutor:LX/0Na;
+.field public final mBackgroundExecutor:LX/0RP;
+
+.field public final mFbHttpRequestPreProcessor:LX/0RP;
 
 .field public mNativeObserver:Lcom/facebook/tigon/tigonobserver/TigonObservable;
 
-.field public final mRequestBuilder:LX/0Na;
+.field public final mRequestBuilder:LX/0RP;
 
-.field public final mRequestStates:LX/3Pv;
+.field public final mRequestStates:LX/37V;
 
-.field public final mResponseHandlerExecutor:LX/0Na;
+.field public final mResponseHandlerExecutor:LX/0RP;
 
 .field public final mRethrowGeneralExceptions:Z
 
 .field public mThrowOnStateFailures:Z
 
-.field public final mTigonFlowStateContoller:LX/0Na;
+.field public final mTigonFlowStateContoller:LX/0RP;
 
-.field public final mTigonLigerConfig:LX/0Na;
+.field public final mTigonLigerConfig:LX/0RP;
 
 .field public mTigonObservable:Lcom/facebook/tigon/tigonobserver/TigonObservable;
 
-.field public final mTigonService:LX/0Na;
+.field public final mTigonService:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 10
 
     .line 0
@@ -47,11 +47,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AJD:I
+    sget v0, LX/2I6;->AFA:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -59,15 +59,15 @@
     move-result-object v4
 
     .line 9
-    iput-object v4, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0Na;
+    iput-object v4, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0RP;
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->AJC:I
+    sget v0, LX/2I6;->AF9:I
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 14
     .line 15
@@ -75,393 +75,366 @@
     move-result-object v2
 
     .line 17
-    iput-object v2, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonFlowStateContoller:LX/0Na;
+    iput-object v2, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonFlowStateContoller:LX/0RP;
 
     .line 18
     .line 19
-    sget v1, LX/2eq;->AJB:I
+    sget v0, LX/2I6;->AF8:I
 
     .line 20
     .line 21
-    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->_UL_mInjectionContext:LX/1zG;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 22
     .line 23
-    invoke-static {v0, v1}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
     .line 24
-    .line 25
-    .line 26
     move-result-object v0
 
+    .line 25
+    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestBuilder:LX/0RP;
+
+    .line 26
     .line 27
-    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestBuilder:LX/0Na;
+    sget v0, LX/2I6;->AFC:I
 
     .line 28
     .line 29
-    sget v0, LX/2eq;->AJF:I
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 30
     .line 31
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 32
-    .line 33
-    .line 34
     move-result-object v3
 
+    .line 33
+    iput-object v3, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mBackgroundExecutor:LX/0RP;
+
+    .line 34
     .line 35
-    iput-object v3, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mBackgroundExecutor:LX/0Na;
+    sget v0, LX/2I6;->AF5:I
 
     .line 36
     .line 37
-    sget v0, LX/2eq;->AJ9:I
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 38
     .line 39
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 40
-    .line 41
-    .line 42
     move-result-object v0
 
+    .line 41
+    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mResponseHandlerExecutor:LX/0RP;
+
+    .line 42
     .line 43
-    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mResponseHandlerExecutor:LX/0Na;
+    sget v0, LX/2I6;->AF3:I
 
     .line 44
     .line 45
-    sget v1, LX/2eq;->AJ7:I
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 46
     .line 47
-    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->_UL_mInjectionContext:LX/1zG;
-
     .line 48
+    move-result-object v1
+
     .line 49
-    invoke-static {v0, v1}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    iput-object v1, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonLigerConfig:LX/0RP;
 
     .line 50
     .line 51
-    .line 52
-    move-result-object v1
+    sget v0, LX/2I6;->AF6:I
 
+    .line 52
     .line 53
-    iput-object v1, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonLigerConfig:LX/0Na;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 54
     .line 55
-    new-instance v0, LX/3Pv;
-
     .line 56
+    move-result-object v0
+
     .line 57
-    invoke-direct {v0}, LX/3Pv;-><init>()V
+    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mFbHttpRequestPreProcessor:LX/0RP;
 
     .line 58
     .line 59
-    .line 60
-    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
+    new-instance v0, LX/37V;
 
+    .line 60
     .line 61
+    invoke-direct {v0}, LX/37V;-><init>()V
+
     .line 62
+    .line 63
+    .line 64
+    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
+
+    .line 65
+    .line 66
     const/4 v5, 0x0
 
-    .line 63
+    .line 67
     iput-boolean v5, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mThrowOnStateFailures:Z
 
-    .line 64
-    .line 65
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 66
-    .line 67
     .line 68
-    move-result-object v0
-
     .line 69
-    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mAbortAllListeners:Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 70
     .line 71
-    invoke-static {p1, v5}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
-
     .line 72
-    .line 73
-    .line 74
     move-result-object v0
 
+    .line 73
+    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mAbortAllListeners:Ljava/util/ArrayList;
+
+    .line 74
     .line 75
-    iput-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->_UL_mInjectionContext:LX/1zG;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 76
     .line 77
-    invoke-static {}, LX/1z6;->A06()LX/0Gk;
-
     .line 78
-    .line 79
-    .line 80
     move-result-object v0
 
+    .line 79
+    invoke-static {v0, v5}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 80
     .line 81
-    sput-object v0, LX/3O4;->A0H:LX/0Gk;
-
     .line 82
-    .line 83
-    invoke-static {}, LX/1zI;->A03()LX/0PR;
+    invoke-static {v0}, LX/0DH;->A01(Landroid/content/Context;)LX/0Qq;
 
+    .line 83
     .line 84
     .line 85
-    .line 86
     move-result-object v0
 
-    .line 87
-    iget-boolean v0, v0, LX/0PR;->A3a:Z
+    .line 86
+    iget-boolean v0, v0, LX/0Qq;->A22:Z
 
+    .line 87
     .line 88
-    .line 89
     iput-boolean v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRethrowGeneralExceptions:Z
 
+    .line 89
     .line 90
-    .line 91
-    invoke-virtual {v4}, LX/0Zq;->get()Ljava/lang/Object;
+    invoke-virtual {v4}, LX/0lf;->get()Ljava/lang/Object;
 
+    .line 91
     .line 92
     .line 93
-    .line 94
     move-result-object v4
 
-    .line 95
+    .line 94
     check-cast v4, Lcom/facebook/tigon/TigonXplatService;
 
+    .line 95
     .line 96
-    .line 97
-    invoke-virtual {v3}, LX/0Zq;->get()Ljava/lang/Object;
+    invoke-virtual {v3}, LX/0lf;->get()Ljava/lang/Object;
 
+    .line 97
     .line 98
     .line 99
-    .line 100
     move-result-object v7
 
-    .line 101
+    .line 100
     check-cast v7, Ljava/util/concurrent/Executor;
 
+    .line 101
     .line 102
-    .line 103
     if-eqz v4, :cond_1
 
+    .line 103
     .line 104
-    .line 105
-    invoke-virtual {v4}, Lcom/facebook/tigon/TigonXplatService;->isAvailable()Z
+    invoke-interface {v4}, LX/37a;->isAvailable()Z
 
+    .line 105
     .line 106
     .line 107
-    .line 108
     move-result v0
+
+    .line 108
+    if-eqz v0, :cond_1
 
     .line 109
-    if-eqz v0, :cond_1
-
     .line 110
-    .line 111
     invoke-virtual {v4}, Lcom/facebook/tigon/TigonXplatService;->isObservable()Z
 
+    .line 111
     .line 112
     .line 113
-    .line 114
     move-result v0
 
-    .line 115
+    .line 114
     if-eqz v0, :cond_1
 
+    .line 115
     .line 116
-    .line 117
     const/4 v6, 0x1
 
+    .line 117
+    new-array v8, v6, [LX/37F;
+
     .line 118
-    new-array v8, v6, [LX/3Oa;
-
     .line 119
-    .line 120
-    invoke-virtual {v2}, LX/0Zq;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, LX/0lf;->get()Ljava/lang/Object;
 
+    .line 120
     .line 121
     .line 122
-    .line 123
     move-result-object v2
 
+    .line 123
+    check-cast v2, LX/36T;
+
     .line 124
-    check-cast v2, LX/3Ne;
-
     .line 125
-    .line 126
-    invoke-virtual {v1}, LX/1zT;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, LX/0lf;->get()Ljava/lang/Object;
 
+    .line 126
     .line 127
     .line 128
-    .line 129
     move-result-object v1
 
-    .line 130
+    .line 129
     check-cast v1, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;
 
+    .line 130
     .line 131
+    new-instance v0, LX/37F;
+
     .line 132
-    new-instance v0, LX/3Oa;
-
     .line 133
-    .line 134
-    invoke-direct {v0, v2, v1}, LX/3Oa;-><init>(LX/3Ne;Lcom/facebook/tigon/tigonliger/TigonLigerConfig;)V
+    invoke-direct {v0, v2, v1}, LX/37F;-><init>(LX/36T;Lcom/facebook/tigon/tigonliger/TigonLigerConfig;)V
 
+    .line 134
     .line 135
     .line 136
-    .line 137
     aput-object v0, v8, v5
 
+    .line 137
     .line 138
-    .line 139
     new-instance v3, Lcom/facebook/tigon/tigonobserver/TigonObservable;
 
+    .line 139
     .line 140
-    .line 141
     move-object v9, v8
 
-    .line 142
-    invoke-direct/range {v3 .. v9}, Lcom/facebook/tigon/tigonobserver/TigonObservable;-><init>(Lcom/facebook/tigon/TigonXplatService;ZZLjava/util/concurrent/Executor;[LX/3ik;[LX/3ij;)V
+    .line 141
+    invoke-direct/range {v3 .. v9}, Lcom/facebook/tigon/tigonobserver/TigonObservable;-><init>(Lcom/facebook/tigon/TigonXplatService;ZZLjava/util/concurrent/Executor;[LX/39x;[LX/39y;)V
 
+    .line 142
     .line 143
     .line 144
-    .line 145
     iput-object v3, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mNativeObserver:Lcom/facebook/tigon/tigonobserver/TigonObservable;
 
+    .line 145
     .line 146
+    sget v0, LX/2I6;->AFB:I
+
     .line 147
-    sget v0, LX/2eq;->AJE:I
-
     .line 148
-    .line 149
-    invoke-static {v0}, LX/1z6;->A0Z(I)Ljava/util/Set;
+    invoke-static {v0}, LX/3Fc;->A05(I)Ljava/util/Set;
 
+    .line 149
     .line 150
     .line 151
-    .line 152
     move-result-object v1
 
-    .line 153
+    .line 152
     invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
 
+    .line 153
     .line 154
     .line 155
-    .line 156
     move-result v0
 
-    .line 157
+    .line 156
     if-nez v0, :cond_0
 
+    .line 157
     .line 158
-    .line 159
-    new-array v0, v5, [LX/3ik;
+    new-array v0, v5, [LX/39x;
 
+    .line 159
     .line 160
-    .line 161
     invoke-interface {v1, v0}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
+    .line 161
     .line 162
     .line 163
-    .line 164
     move-result-object v8
 
+    .line 164
+    check-cast v8, [LX/39x;
+
     .line 165
-    check-cast v8, [LX/3ik;
-
     .line 166
-    .line 167
-    new-array v9, v5, [LX/3ij;
+    new-array v9, v5, [LX/39y;
 
+    .line 167
     .line 168
-    .line 169
     new-instance v3, Lcom/facebook/tigon/tigonobserver/TigonObservable;
 
+    .line 169
     .line 170
-    .line 171
     move v6, v5
 
-    .line 172
-    invoke-direct/range {v3 .. v9}, Lcom/facebook/tigon/tigonobserver/TigonObservable;-><init>(Lcom/facebook/tigon/TigonXplatService;ZZLjava/util/concurrent/Executor;[LX/3ik;[LX/3ij;)V
+    .line 171
+    invoke-direct/range {v3 .. v9}, Lcom/facebook/tigon/tigonobserver/TigonObservable;-><init>(Lcom/facebook/tigon/TigonXplatService;ZZLjava/util/concurrent/Executor;[LX/39x;[LX/39y;)V
 
+    .line 172
     .line 173
     .line 174
-    .line 175
     iput-object v3, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonObservable:Lcom/facebook/tigon/tigonobserver/TigonObservable;
 
+    .line 175
     .line 176
-    .line 177
     :cond_0
     return-void
 
-    .line 178
+    .line 177
     :cond_1
     sget-object v1, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->TAG:Ljava/lang/String;
 
+    .line 178
     .line 179
-    .line 180
     const-string/jumbo v0, "tigonLigerService is not an instance of TigonXplatService or not initialized. Native Observing disabled!"
 
+    .line 180
     .line 181
     .line 182
-    .line 183
-    invoke-static {v1, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 183
     .line 184
     .line 185
-    .line 186
     return-void
 .end method
 
-.method public static final _UL__ULSEP_com_facebook_http_internal_tigonengine_TigonHttpClientAdapterImpl_ULSEP_FACTORY_METHOD(ILX/1zC;Ljava/lang/Object;)Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;
-    .locals 1
-
-    .line 0
-    sget v0, LX/2eq;->AJG:I
-
-    .line 1
-    .line 2
-    if-eq p0, v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-static {p1, p2, v0}, LX/1z6;->A0V(LX/1zC;Ljava/lang/Object;I)Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    check-cast v0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;
-
-    .line 9
-    .line 10
-    return-object v0
-
-    .line 11
-    :cond_0
-    new-instance v0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;
-
-    .line 12
-    .line 13
-    invoke-direct {v0, p1}, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;-><init>(LX/1zC;)V
-
-    .line 14
-    .line 15
-    .line 16
-    return-object v0
-.end method
-
-.method public static synthetic access$100(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;)LX/3Pv;
+.method public static final _UL__ULSEP_com_facebook_http_internal_tigonengine_TigonHttpClientAdapterImpl_ULSEP_FACTORY_METHOD(ILX/3Ft;Ljava/lang/Object;)Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
+    new-instance p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;
+
+    .line 1
+    .line 2
+    invoke-direct {p0}, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object p0
+.end method
+
+.method public static synthetic access$100(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;)LX/37V;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
 
     .line 1
     .line 2
@@ -479,18 +452,18 @@
     return-object v0
 .end method
 
-.method public static synthetic access$300(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;)LX/0Na;
+.method public static synthetic access$300(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;)LX/0RP;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0Na;
+    iget-object p0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0RP;
 
     .line 1
     .line 2
     return-object p0
 .end method
 
-.method public static synthetic access$500(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;)Z
+.method public static synthetic access$400(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;)Z
     .locals 0
 
     .line 0
@@ -501,11 +474,11 @@
     return p0
 .end method
 
-.method public static synthetic access$600(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;)LX/0Na;
+.method public static synthetic access$500(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;)LX/0RP;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mResponseHandlerExecutor:LX/0Na;
+    iget-object p0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mResponseHandlerExecutor:LX/0RP;
 
     .line 1
     .line 2
@@ -552,20 +525,6 @@
     return v0
 .end method
 
-.method public static logSequence(ILjava/lang/String;)V
-    .locals 0
-
-    .line 0
-    return-void
-.end method
-
-.method public static logSequence(ILjava/lang/String;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 268435456
-    return-void
-.end method
-
 .method private declared-synchronized notifyAbortAllListeners()V
     .locals 2
 
@@ -607,15 +566,15 @@
     move-result-object v0
 
     .line 17
-    check-cast v0, LX/2aX;
+    check-cast v0, LX/2HG;
 
     .line 18
     .line 19
-    check-cast v0, LX/2a1;
+    check-cast v0, LX/2Go;
 
     .line 20
     .line 21
-    iget-object v0, v0, LX/2a1;->A00:Lcom/facebook/http/networkstatelogger/NetworkStateLogger;
+    iget-object v0, v0, LX/2Go;->A00:Lcom/facebook/http/networkstatelogger/NetworkStateLogger;
 
     .line 22
     .line 23
@@ -652,11 +611,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -681,7 +640,7 @@
     return-void
 .end method
 
-.method public declared-synchronized addAbortAllListener(LX/2aX;)V
+.method public declared-synchronized addAbortAllListener(LX/2HG;)V
     .locals 1
 
     .line 0
@@ -717,95 +676,92 @@
 .end method
 
 .method public cancel(I)V
-    .locals 3
+    .locals 1
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
+    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
 
     .line 1
     .line 2
-    monitor-enter v1
+    invoke-virtual {v0, p1}, LX/37V;->A00(I)LX/36k;
 
     .line 3
-    :try_start_0
-    iget-object v0, v1, LX/3Pv;->A01:Landroid/util/SparseArray;
-
     .line 4
     .line 5
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    move-result-object v0
 
     .line 6
+    if-eqz v0, :cond_0
+
     .line 7
     .line 8
-    move-result-object v2
+    iget-object v0, v0, LX/36k;->A04:Lcom/facebook/tigon/TigonRequestToken;
 
     .line 9
-    check-cast v2, LX/3O4;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 10
-    .line 11
-    monitor-exit v1
+    if-eqz v0, :cond_0
 
+    .line 11
     .line 12
-    if-eqz v2, :cond_1
+    invoke-interface {v0}, Lcom/facebook/tigon/TigonRequestToken;->cancel()V
 
     .line 13
     .line 14
-    iget-object v0, v2, LX/3O4;->A04:Lcom/facebook/tigon/TigonRequestToken;
-
     .line 15
-    .line 16
-    if-nez v0, :cond_0
-
-    .line 17
-    .line 18
-    const/4 v1, 0x0
-
-    .line 19
-    const-string v0, "Tokenless state"
-
-    .line 20
-    .line 21
-    invoke-static {v0, v1}, LX/3O4;->A03(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 22
-    .line 23
-    .line 24
     :cond_0
-    iget-object v0, v2, LX/3O4;->A04:Lcom/facebook/tigon/TigonRequestToken;
-
-    .line 25
-    .line 26
-    if-eqz v0, :cond_1
-
-    .line 27
-    .line 28
-    invoke-interface {v0}, Lcom/facebook/tigon/TigonRequestToken;->cancel()V
-
-    .line 29
-    .line 30
-    .line 31
-    :cond_1
     return-void
-
-    .line 32
-    :catchall_0
-    move-exception v0
-
-    .line 33
-    monitor-exit v1
-
-    .line 34
-    throw v0
 .end method
 
 .method public changeHttpPriority(ILcom/facebook/http/interfaces/RequestPriority;Z)V
-    .locals 3
+    .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
+    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/37V;->A00(I)LX/36k;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    iget-object v1, v0, LX/36k;->A04:Lcom/facebook/tigon/TigonRequestToken;
+
+    .line 9
+    .line 10
+    if-eqz v1, :cond_0
+
+    .line 11
+    .line 12
+    invoke-static {p2}, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->convertToHttpPriority(Lcom/facebook/http/interfaces/RequestPriority;)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    invoke-interface {v1, v0, p3}, Lcom/facebook/tigon/TigonRequestToken;->changeHttpPriority(IZ)V
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_0
+    return-void
+.end method
+
+.method public cleanup(I)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
 
     .line 1
     .line 2
@@ -813,1048 +769,1385 @@
 
     .line 3
     :try_start_0
-    iget-object v0, v1, LX/3Pv;->A01:Landroid/util/SparseArray;
+    invoke-virtual {v1, p1}, LX/37V;->A01(I)LX/36k;
 
     .line 4
     .line 5
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
     .line 6
-    .line 7
-    .line 8
-    move-result-object v2
+    move-result-object v0
 
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
     .line 9
-    check-cast v2, LX/3O4;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, v1, LX/37V;->A01:Landroid/util/SparseArray;
 
     .line 10
     .line 11
-    monitor-exit v1
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->delete(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 12
-    if-eqz v2, :cond_1
+    .line 13
+    .line 14
+    :cond_0
+    monitor-exit v1
+
+    .line 15
+    return-void
+
+    .line 16
+    :catchall_0
+    move-exception v0
+
+    .line 17
+    monitor-exit v1
+
+    .line 18
+    throw v0
+.end method
+
+.method public executeAsync(LX/36g;Lcom/google/common/util/concurrent/SettableFuture;)V
+    .locals 31
+
+    .line 0
+    move-object/from16 v10, p0
+
+    .line 1
+    .line 2
+    iget-object v0, v10, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mFbHttpRequestPreProcessor:LX/0RP;
+
+    .line 3
+    .line 4
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    check-cast v0, LX/2TA;
+
+    .line 9
+    .line 10
+    move-object/from16 v11, p1
+
+    .line 11
+    .line 12
+    invoke-virtual {v0, v11}, LX/2TA;->A00(LX/36g;)Lorg/apache/http/impl/client/RequestWrapper;
 
     .line 13
     .line 14
-    iget-object v0, v2, LX/3O4;->A04:Lcom/facebook/tigon/TigonRequestToken;
-
     .line 15
+    move-result-object v22
+
     .line 16
-    if-nez v0, :cond_0
+    iget v9, v11, LX/36g;->A05:I
 
     .line 17
     .line 18
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     .line 19
-    const-string v0, "Tokenless state"
+    iget-object v0, v11, LX/36g;->A0E:Ljava/lang/String;
 
     .line 20
     .line 21
-    invoke-static {v0, v1}, LX/3O4;->A03(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-object/from16 v27, v0
 
     .line 22
     .line 23
+    sget-boolean v0, LX/2VB;->A00:Z
+
     .line 24
-    :cond_0
-    iget-object v1, v2, LX/3O4;->A04:Lcom/facebook/tigon/TigonRequestToken;
-
     .line 25
+    if-eqz v0, :cond_0
+
     .line 26
-    if-eqz v1, :cond_1
-
     .line 27
-    .line 28
-    invoke-static {p2}, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->convertToHttpPriority(Lcom/facebook/http/interfaces/RequestPriority;)I
+    invoke-virtual/range {v22 .. v22}, Lorg/apache/http/impl/client/RequestWrapper;->getURI()Ljava/net/URI;
 
+    .line 28
     .line 29
     .line 30
-    .line 31
-    move-result v0
+    :cond_0
+    iget-object v0, v10, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestBuilder:LX/0RP;
 
+    .line 31
     .line 32
-    invoke-interface {v1, v0, p3}, Lcom/facebook/tigon/TigonRequestToken;->changeHttpPriority(IZ)V
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 33
     .line 34
     .line 35
-    :cond_1
-    return-void
+    move-result-object v8
 
     .line 36
-    :catchall_0
-    move-exception v0
+    check-cast v8, LX/36h;
 
     .line 37
-    monitor-exit v1
-
     .line 38
-    throw v0
-.end method
-
-.method public cleanup(I)V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
-
-    .line 1
-    .line 2
-    monitor-enter v2
-
-    .line 3
     :try_start_0
-    invoke-virtual {v2, p1}, LX/3Pv;->A00(I)LX/3O4;
+    move-object/from16 v26, p2
 
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
+    .line 39
+    .line 40
+    move-object/from16 v0, v22
 
-    .line 7
-    if-eqz v0, :cond_0
+    .line 41
+    .line 42
+    instance-of v3, v0, Lorg/apache/http/HttpEntityEnclosingRequest;
 
-    .line 8
-    .line 9
-    iget-object v1, v2, LX/3Pv;->A01:Landroid/util/SparseArray;
+    .line 43
+    .line 44
+    if-eqz v3, :cond_1
 
-    .line 10
-    .line 11
-    invoke-virtual {v1, p1}, Landroid/util/SparseArray;->delete(I)V
-
-    .line 12
-    .line 13
-    .line 14
-    sget-boolean v0, LX/2hj;->A01:Z
-
-    .line 15
-    .line 16
-    if-eqz v0, :cond_0
-
-    .line 17
-    .line 18
-    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 19
-    .line 20
-    .line 21
-    :cond_0
-    monitor-exit v2
-
-    .line 22
-    return-void
-
-    .line 23
-    :catchall_0
-    move-exception v0
-
-    .line 24
-    monitor-exit v2
-
-    .line 25
-    throw v0
-.end method
-
-.method public executeAsync(Lorg/apache/http/client/methods/HttpUriRequest;Ljava/lang/String;Lcom/facebook/common/callercontext/CallerContext;ILorg/apache/http/client/ResponseHandler;Lcom/facebook/http/interfaces/RequestPriority;IZZLX/3ig;ILX/3if;Ljava/lang/String;Ljava/lang/String;JLjava/util/Map;Ljava/util/Map;JLjava/lang/String;IIILX/3MV;Ljava/util/List;Lcom/google/common/util/concurrent/SettableFuture;)V
-    .locals 46
-
-    .line 453251
-    sget-boolean v0, LX/2hj;->A00:Z
-
-    move-object/from16 v22, p1
-
-    if-eqz v0, :cond_0
-
-    .line 453252
-    invoke-interface/range {v22 .. v22}, Lorg/apache/http/client/methods/HttpUriRequest;->getURI()Ljava/net/URI;
-
-    .line 453253
-    :cond_0
-    move-object/from16 v8, p0
-
-    iget-object v0, v8, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestBuilder:LX/0Na;
-
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, LX/3Nz;
-
-    const/4 v0, 0x0
-
-    .line 453254
-    :try_start_0
-    move-object/from16 v44, p27
-
-    move-object/from16 v21, p2
-
+    .line 45
+    .line 46
     move-object/from16 v1, v22
 
-    instance-of v5, v1, Lorg/apache/http/HttpEntityEnclosingRequest;
+    .line 47
+    .line 48
+    check-cast v1, Lorg/apache/http/HttpEntityEnclosingRequest;
 
-    const/4 v6, 0x0
+    .line 49
+    .line 50
+    invoke-interface {v1}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
 
-    if-eqz v5, :cond_4
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v0
 
-    .line 453255
-    move-object/from16 v2, v22
+    .line 54
+    if-nez v0, :cond_2
 
-    check-cast v2, Lorg/apache/http/HttpEntityEnclosingRequest;
+    .line 55
+    .line 56
+    :cond_1
+    move-object v1, v2
 
-    .line 453256
-    invoke-interface {v2}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
+    .line 57
+    :cond_2
+    const/4 v7, 0x0
 
-    move-result-object v1
+    .line 58
+    if-eqz v1, :cond_6
 
-    if-eqz v1, :cond_4
+    .line 59
+    .line 60
+    invoke-interface {v1}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
 
-    .line 453257
-    invoke-interface {v2}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v4
 
-    move-result-object v9
+    .line 64
+    const-wide/16 v12, 0x400
 
-    .line 453258
-    const-wide/16 v10, 0x400
+    .line 65
+    .line 66
+    invoke-interface {v4}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
-    .line 453259
-    invoke-interface {v9}, Lorg/apache/http/HttpEntity;->getContentLength()J
+    .line 67
+    .line 68
+    .line 69
+    move-result-wide v5
 
-    move-result-wide v2
+    .line 70
+    cmp-long v0, v5, v12
 
-    cmp-long v1, v2, v10
+    .line 71
+    .line 72
+    if-ltz v0, :cond_6
 
-    if-ltz v1, :cond_4
-
-    .line 453260
-    monitor-enter v7
+    .line 73
+    .line 74
+    monitor-enter v8
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 453261
+    .line 75
     :try_start_1
-    const-string v2, "Resumable-Upload"
+    const-string v1, "Resumable-Upload"
 
-    .line 453262
-    move-object/from16 v1, v21
+    .line 76
+    .line 77
+    move-object/from16 v0, v27
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    .line 78
+    .line 79
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    .line 80
+    .line 81
+    .line 82
+    move-result v0
 
-    if-eqz v1, :cond_2
+    .line 83
+    if-eqz v0, :cond_4
 
-    .line 453263
-    iget-object v2, v7, LX/3Nz;->A03:LX/0Na;
+    .line 84
+    .line 85
+    iget-object v1, v8, LX/36h;->A02:LX/0RP;
 
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
+    .line 86
+    .line 87
+    invoke-interface {v1}, LX/0RP;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    .line 88
+    .line 89
+    .line 90
+    move-result-object v0
 
-    if-eqz v1, :cond_2
+    .line 91
+    if-eqz v0, :cond_4
 
-    .line 453264
-    iget-object v4, v7, LX/3Nz;->A00:Ljava/util/concurrent/Executor;
+    .line 92
+    .line 93
+    iget-object v5, v8, LX/36h;->A00:Ljava/util/concurrent/Executor;
 
-    if-nez v4, :cond_3
+    .line 94
+    .line 95
+    if-nez v5, :cond_5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 453265
+    .line 96
+    .line 97
     :try_start_2
-    const-string v4, "VideoUploadEntityExecutor"
+    const-string v5, "VideoUploadEntityExecutor"
 
-    .line 453266
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
+    .line 98
+    .line 99
+    invoke-interface {v1}, LX/0RP;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    .line 100
+    .line 101
+    .line 102
+    move-result-object v0
 
-    if-eqz v1, :cond_1
+    .line 103
+    if-eqz v0, :cond_3
 
-    .line 453267
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
+    .line 104
+    .line 105
+    invoke-interface {v1}, LX/0RP;->get()Ljava/lang/Object;
 
+    .line 106
+    .line 107
+    .line 108
     move-result-object v3
 
-    check-cast v3, LX/5RG;
+    .line 109
+    check-cast v3, LX/5qq;
 
-    sget-object v2, LX/2hD;->BACKGROUND:LX/2hD;
+    .line 110
+    .line 111
+    sget-object v1, LX/2Tp;->BACKGROUND:LX/2Tp;
 
-    const/16 v1, 0xa
+    .line 112
+    .line 113
+    const/16 v0, 0xa
 
-    .line 453268
-    invoke-virtual {v3, v2, v6, v4, v1}, LX/5RG;->A02(LX/2hD;LX/1zl;Ljava/lang/String;I)LX/5RC;
+    .line 114
+    .line 115
+    invoke-virtual {v3, v1, v2, v5, v0}, LX/5qq;->A02(LX/2Tp;LX/1z2;Ljava/lang/String;I)LX/5qm;
 
-    move-result-object v4
+    .line 116
+    .line 117
+    .line 118
+    move-result-object v5
 
-    .line 453269
-    iput-object v4, v7, LX/3Nz;->A00:Ljava/util/concurrent/Executor;
+    .line 119
+    iput-object v5, v8, LX/36h;->A00:Ljava/util/concurrent/Executor;
 
+    .line 120
+    .line 121
     goto :goto_0
 
-    .line 453270
-    :cond_1
-    const-string/jumbo v2, "null combinedThreadPool"
+    .line 122
+    :cond_3
+    const-string/jumbo v1, "null combinedThreadPool"
 
-    const-string v1, "VideoUploadExecutor"
+    .line 123
+    .line 124
+    .line 125
+    const-string v0, "VideoUploadExecutor"
 
-    .line 453271
-    invoke-static {v1, v2}, LX/0Jt;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    .line 126
+    .line 127
+    invoke-static {v0, v1}, LX/0Il;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 453272
-    invoke-static {v2}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    .line 128
+    .line 129
+    .line 130
+    invoke-static {v1}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
-    move-result-object v1
+    .line 131
+    .line 132
+    .line 133
+    move-result-object v0
 
-    .line 453273
-    throw v1
+    .line 134
+    throw v0
     :try_end_2
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 453274
+    .line 135
     :catch_0
     :try_start_3
-    iget-object v1, v7, LX/3Nz;->A04:LX/0Na;
+    iget-object v0, v8, LX/36h;->A03:LX/0RP;
 
-    .line 453275
-    invoke-static {v1}, LX/0Yg;->A11(LX/0Na;)Ljava/util/concurrent/Executor;
+    .line 136
+    .line 137
+    invoke-static {v0}, LX/0X4;->A0w(LX/0RP;)Ljava/util/concurrent/Executor;
 
-    move-result-object v4
+    .line 138
+    .line 139
+    .line 140
+    move-result-object v5
 
-    .line 453276
-    iput-object v4, v7, LX/3Nz;->A00:Ljava/util/concurrent/Executor;
+    .line 141
+    iput-object v5, v8, LX/36h;->A00:Ljava/util/concurrent/Executor;
 
+    .line 142
+    .line 143
     goto :goto_0
 
-    .line 453277
-    :cond_2
-    iget-object v1, v7, LX/3Nz;->A04:LX/0Na;
+    .line 144
+    :cond_4
+    iget-object v0, v8, LX/36h;->A03:LX/0RP;
 
-    .line 453278
-    invoke-static {v1}, LX/0Yg;->A11(LX/0Na;)Ljava/util/concurrent/Executor;
+    .line 145
+    .line 146
+    invoke-static {v0}, LX/0X4;->A0w(LX/0RP;)Ljava/util/concurrent/Executor;
 
-    move-result-object v4
+    .line 147
+    .line 148
+    .line 149
+    move-result-object v5
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 453279
-    :cond_3
+    .line 150
+    :cond_5
     :try_start_4
-    monitor-exit v7
+    monitor-exit v8
 
+    .line 151
     goto :goto_1
 
-    .line 453280
+    .line 152
     :goto_0
-    monitor-exit v7
+    monitor-exit v8
 
-    .line 453281
+    .line 153
     :goto_1
-    iget-object v1, v7, LX/3Nz;->A05:LX/0Na;
+    iget-object v0, v8, LX/36h;->A04:LX/0RP;
 
-    .line 453282
-    invoke-interface {v1}, LX/0Na;->get()Ljava/lang/Object;
+    .line 154
+    .line 155
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    const-wide/16 v2, 0x1000
+    .line 156
+    .line 157
+    .line 158
+    const-wide/16 v0, 0x1000
 
-    long-to-int v1, v2
+    .line 159
+    .line 160
+    long-to-int v3, v0
 
-    new-instance v6, LX/3QS;
+    .line 161
+    new-instance v7, LX/37y;
 
-    invoke-direct {v6, v4, v9, v1}, LX/3QS;-><init>(Ljava/util/concurrent/Executor;Lorg/apache/http/HttpEntity;I)V
+    .line 162
+    .line 163
+    invoke-direct {v7, v5, v4, v3}, LX/37y;-><init>(Ljava/util/concurrent/Executor;Lorg/apache/http/HttpEntity;I)V
 
-    goto :goto_2
+    .line 164
+    .line 165
+    .line 166
+    goto :goto_4
 
-    .line 453283
+    .line 167
     :catchall_0
-    move-exception v1
+    move-exception v0
 
-    monitor-exit v7
+    .line 168
+    monitor-exit v8
 
-    .line 453284
-    throw v1
+    .line 169
+    throw v0
 
-    .line 453285
-    :cond_4
-    :goto_2
-    const/4 v15, 0x0
-
-    if-nez v6, :cond_8
-
-    .line 453286
-    if-eqz v5, :cond_5
-
-    .line 453287
-    move-object/from16 v2, v22
-
-    check-cast v2, Lorg/apache/http/HttpEntityEnclosingRequest;
-
-    .line 453288
-    invoke-interface {v2}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
-
-    move-result-object v1
-
-    if-nez v1, :cond_6
-
-    .line 453289
-    :cond_5
-    move-object v2, v15
-
-    .line 453290
+    .line 170
     :cond_6
-    const/4 v5, 0x0
+    if-eqz v3, :cond_7
 
-    if-eqz v2, :cond_9
+    .line 171
+    .line 172
+    move-object/from16 v1, v22
 
-    .line 453291
-    invoke-interface {v2}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
+    .line 173
+    .line 174
+    check-cast v1, Lorg/apache/http/HttpEntityEnclosingRequest;
 
-    move-result-object v11
+    .line 175
+    .line 176
+    invoke-interface {v1}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
 
-    .line 453292
-    invoke-interface {v11}, Lorg/apache/http/HttpEntity;->getContentLength()J
+    .line 177
+    .line 178
+    .line 179
+    move-result-object v0
+
+    .line 180
+    if-nez v0, :cond_8
+
+    .line 181
+    .line 182
+    :cond_7
+    move-object v1, v2
+
+    .line 183
+    :cond_8
+    const/4 v6, 0x0
+
+    .line 184
+    if-eqz v1, :cond_a
+
+    .line 185
+    .line 186
+    invoke-interface {v1}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-object v12
+
+    .line 190
+    invoke-interface {v12}, Lorg/apache/http/HttpEntity;->getContentLength()J
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    move-result-wide v1
+    .line 191
+    .line 192
+    .line 193
+    move-result-wide v0
 
-    const-wide/32 v9, 0x7fffffff
+    .line 194
+    const-wide/32 v4, 0x7fffffff
 
-    cmp-long v3, v1, v9
+    .line 195
+    .line 196
+    .line 197
+    cmp-long v3, v0, v4
 
-    .line 453293
-    invoke-static {v3}, LX/0Yf;->A1Q(I)Z
+    .line 198
+    .line 199
+    invoke-static {v3}, LX/0X4;->A1O(I)Z
 
+    .line 200
+    .line 201
+    .line 202
     move-result v4
 
-    .line 453294
+    .line 203
     :try_start_5
     const-string v3, "Unexpected request length while extracting body: %d"
 
-    .line 453295
-    invoke-static {v4, v3, v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
+    .line 204
+    .line 205
+    invoke-static {v4, v3, v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
-    const-wide/16 v9, 0x0
+    .line 206
+    .line 207
+    .line 208
+    const-wide/16 v4, 0x0
 
-    cmp-long v3, v1, v9
+    .line 209
+    .line 210
+    cmp-long v3, v0, v4
 
-    if-eqz v3, :cond_9
+    .line 211
+    .line 212
+    if-eqz v3, :cond_a
 
-    cmp-long v3, v1, v9
+    .line 213
+    .line 214
+    cmp-long v3, v0, v4
 
-    if-gez v3, :cond_7
+    .line 215
+    .line 216
+    if-gez v3, :cond_9
 
+    .line 217
+    .line 218
+    goto :goto_2
+
+    .line 219
+    :cond_9
+    long-to-int v3, v0
+
+    .line 220
+    new-instance v6, LX/36o;
+
+    .line 221
+    .line 222
+    invoke-direct {v6, v3}, LX/36o;-><init>(I)V
+
+    .line 223
+    .line 224
+    .line 225
     goto :goto_3
 
-    .line 453296
-    :cond_7
-    long-to-int v3, v1
+    .line 226
+    :goto_2
+    new-instance v6, LX/36o;
 
-    new-instance v5, LX/3OX;
+    .line 227
+    .line 228
+    invoke-direct {v6}, LX/36o;-><init>()V
 
-    invoke-direct {v5, v3}, LX/3OX;-><init>(I)V
-
-    goto :goto_4
-
-    .line 453297
+    .line 229
+    .line 230
+    .line 231
     :goto_3
-    new-instance v5, LX/3OX;
+    invoke-interface {v12, v6}, Lorg/apache/http/HttpEntity;->writeTo(Ljava/io/OutputStream;)V
 
-    invoke-direct {v5}, LX/3OX;-><init>()V
-
-    .line 453298
-    :goto_4
-    invoke-interface {v11, v5}, Lorg/apache/http/HttpEntity;->writeTo(Ljava/io/OutputStream;)V
-
+    .line 232
+    .line 233
+    .line 234
     goto :goto_5
 
-    .line 453299
-    :cond_8
-    move-object v5, v15
+    .line 235
+    :goto_4
+    move-object v6, v2
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 453300
-    :cond_9
+    .line 236
+    :cond_a
     :goto_5
-    iget-object v1, v8, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonFlowStateContoller:LX/0Na;
+    iget-object v0, v10, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonFlowStateContoller:LX/0RP;
 
-    .line 453301
-    invoke-interface {v1}, LX/0Na;->get()Ljava/lang/Object;
+    .line 237
+    .line 238
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    move-result-object v2
+    .line 239
+    .line 240
+    .line 241
+    move-result-object v3
 
-    check-cast v2, LX/3Ne;
+    .line 242
+    check-cast v3, LX/36T;
 
-    iget-object v1, v8, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonLigerConfig:LX/0Na;
+    .line 243
+    .line 244
+    iget-object v0, v10, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonLigerConfig:LX/0RP;
 
-    .line 453302
-    invoke-interface {v1}, LX/0Na;->get()Ljava/lang/Object;
+    .line 245
+    .line 246
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    .line 247
+    .line 248
+    .line 249
+    move-result-object v0
 
-    check-cast v1, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;
+    .line 250
+    check-cast v0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;
 
-    iget-object v1, v1, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->tigonSamplingPolicy:Lcom/facebook/tigon/iface/TigonSamplingPolicy;
+    .line 251
+    .line 252
+    iget-object v1, v0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->tigonSamplingPolicy:Lcom/facebook/tigon/iface/TigonSamplingPolicy;
 
-    new-instance v20, LX/3Na;
+    .line 253
+    .line 254
+    iget-object v0, v11, LX/36g;->A0C:Lcom/google/common/base/Optional;
 
-    move-object/from16 v3, p10
+    .line 255
+    .line 256
+    invoke-virtual {v0}, Lcom/google/common/base/Optional;->orNull()Ljava/lang/Object;
 
-    move-object/from16 v13, p26
+    .line 257
+    .line 258
+    .line 259
+    move-result-object v0
 
-    move-object/from16 v9, v20
+    .line 260
+    check-cast v0, Ljava/util/List;
 
-    move-object v10, v2
+    .line 261
+    .line 262
+    new-instance v21, Lcom/facebook/http/internal/tigonengine/FlowObserverRequestInfo;
 
-    move-object v11, v3
+    .line 263
+    .line 264
+    move-object/from16 v12, v21
 
-    move-object v12, v1
+    .line 265
+    .line 266
+    move-object v13, v3
 
+    .line 267
     move-object/from16 v14, v22
 
-    invoke-direct/range {v9 .. v14}, LX/3Na;-><init>(LX/3Ne;LX/3ig;Lcom/facebook/tigon/iface/TigonSamplingPolicy;Ljava/util/List;Lorg/apache/http/client/methods/HttpUriRequest;)V
+    .line 268
+    .line 269
+    move-object v15, v1
 
-    .line 453303
-    new-instance v19, LX/3O5;
+    .line 270
+    move-object/from16 v16, v2
 
-    .line 453304
-    move/from16 v45, p4
+    .line 271
+    .line 272
+    move-object/from16 v17, v0
 
-    move-object/from16 v2, v19
+    .line 273
+    .line 274
+    invoke-direct/range {v12 .. v17}, Lcom/facebook/http/internal/tigonengine/FlowObserverRequestInfo;-><init>(LX/36T;Lorg/apache/http/client/methods/HttpUriRequest;Lcom/facebook/tigon/iface/TigonSamplingPolicy;LX/39t;Ljava/util/List;)V
 
-    move/from16 v1, v45
+    .line 275
+    .line 276
+    .line 277
+    new-instance v20, LX/36l;
 
-    invoke-direct {v2, v8, v3, v1}, LX/3O5;-><init>(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;LX/3ig;I)V
+    .line 278
+    .line 279
+    move-object/from16 v0, v20
 
-    .line 453305
-    iget-object v1, v8, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0Na;
+    .line 280
+    .line 281
+    invoke-direct {v0, v10, v9}, LX/36l;-><init>(Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;I)V
 
-    invoke-interface {v1}, LX/0Na;->get()Ljava/lang/Object;
+    .line 282
+    .line 283
+    .line 284
+    iget-object v0, v10, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0RP;
 
-    move-result-object v18
+    .line 285
+    .line 286
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    move-object/from16 v1, v18
+    .line 287
+    .line 288
+    .line 289
+    move-result-object v12
 
-    check-cast v1, LX/3QK;
+    .line 290
+    check-cast v12, LX/37a;
 
-    move-object/from16 v18, v1
+    .line 291
+    .line 292
+    iget-object v5, v10, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
 
-    .line 453306
-    iget-object v10, v8, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
+    .line 293
+    .line 294
+    iget-object v0, v11, LX/36g;->A0H:Lorg/apache/http/client/ResponseHandler;
 
-    iget-boolean v1, v8, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mThrowOnStateFailures:Z
+    .line 295
+    .line 296
+    move-object/from16 v28, v0
 
-    move/from16 v30, v1
+    .line 297
+    .line 298
+    iget-boolean v0, v10, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mThrowOnStateFailures:Z
 
-    .line 453307
-    monitor-enter v10
+    .line 299
+    .line 300
+    move/from16 v30, v0
 
-    .line 453308
+    .line 301
+    .line 302
+    const/16 v19, 0x1
+
+    .line 303
+    .line 304
+    monitor-enter v5
+
+    .line 305
     :try_start_6
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
+    .line 306
+    .line 307
+    .line 308
     move-result-wide v3
 
-    .line 453309
-    sget-object v9, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    .line 309
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-wide v11, v10, LX/3Pv;->A00:J
+    .line 310
+    .line 311
+    iget-wide v13, v5, LX/37V;->A00:J
 
-    sub-long v1, v3, v11
+    .line 312
+    .line 313
+    sub-long v0, v3, v13
 
-    invoke-virtual {v9, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMinutes(J)J
+    .line 314
+    .line 315
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMinutes(J)J
 
-    move-result-wide v11
+    .line 316
+    .line 317
+    .line 318
+    move-result-wide v13
 
-    const-wide/16 v16, 0xa
+    .line 319
+    const-wide/16 v17, 0xa
 
-    cmp-long v1, v11, v16
+    .line 320
+    .line 321
+    cmp-long v0, v13, v17
 
-    if-ltz v1, :cond_c
+    .line 322
+    .line 323
+    if-ltz v0, :cond_c
 
-    .line 453310
-    iput-wide v3, v10, LX/3Pv;->A00:J
+    .line 324
+    .line 325
+    iput-wide v3, v5, LX/37V;->A00:J
 
-    .line 453311
-    const/4 v12, 0x0
+    .line 326
+    .line 327
+    const/4 v14, 0x0
 
-    .line 453312
+    .line 328
     :goto_6
-    iget-object v2, v10, LX/3Pv;->A01:Landroid/util/SparseArray;
+    iget-object v1, v5, LX/37V;->A01:Landroid/util/SparseArray;
 
-    invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
+    .line 329
+    .line 330
+    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
-    move-result v1
+    .line 331
+    .line 332
+    .line 333
+    move-result v0
 
-    if-ge v12, v1, :cond_c
+    .line 334
+    if-ge v14, v0, :cond_c
 
-    .line 453313
-    invoke-virtual {v2, v12}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+    .line 335
+    .line 336
+    invoke-virtual {v1, v14}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
-    move-result-object v11
+    .line 337
+    .line 338
+    .line 339
+    move-result-object v13
 
-    check-cast v11, LX/3O4;
+    .line 340
+    check-cast v13, LX/36k;
 
-    .line 453314
-    sget-boolean v1, LX/2hj;->A01:Z
+    .line 341
+    .line 342
+    iget-object v0, v13, LX/36k;->A0B:LX/36j;
 
-    if-eqz v1, :cond_a
-
-    .line 453315
-    iget-object v1, v11, LX/3O4;->A0B:LX/3O3;
-
-    monitor-enter v1
+    .line 343
+    .line 344
+    monitor-enter v0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 453316
+    .line 345
     :try_start_7
-    iget-wide v13, v1, LX/3O3;->A02:J
+    iget-wide v15, v0, LX/36j;->A02:J
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
+    .line 346
+    .line 347
     :try_start_8
-    monitor-exit v1
+    monitor-exit v0
 
-    .line 453317
-    sub-long v1, v3, v13
+    .line 348
+    sub-long v0, v3, v15
 
-    invoke-virtual {v9, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+    .line 349
+    .line 350
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMinutes(J)J
 
-    .line 453318
-    :cond_a
-    iget-object v1, v11, LX/3O4;->A0B:LX/3O3;
+    .line 351
+    .line 352
+    .line 353
+    move-result-wide v15
 
-    monitor-enter v1
+    .line 354
+    cmp-long v0, v15, v17
+
+    .line 355
+    .line 356
+    if-ltz v0, :cond_b
+
+    .line 357
+    .line 358
+    iget-object v0, v13, LX/36k;->A0B:LX/36j;
+
+    .line 359
+    .line 360
+    monitor-enter v0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
-    .line 453319
+    .line 361
     :try_start_9
-    iget-wide v13, v1, LX/3O3;->A02:J
+    iget-wide v15, v0, LX/36j;->A02:J
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
+    .line 362
+    .line 363
     :try_start_a
-    monitor-exit v1
+    monitor-exit v0
 
-    .line 453320
-    sub-long v1, v3, v13
+    .line 364
+    sub-long v0, v3, v15
 
-    invoke-virtual {v9, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMinutes(J)J
+    .line 365
+    .line 366
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
 
-    move-result-wide v13
+    .line 367
+    .line 368
+    .line 369
+    move-result-wide v0
 
-    cmp-long v1, v13, v16
+    .line 370
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-ltz v1, :cond_b
+    .line 371
+    .line 372
+    .line 373
+    move-result-object v1
 
-    .line 453321
-    iget-object v1, v11, LX/3O4;->A0B:LX/3O3;
+    .line 374
+    const-string v0, "Stale state (%d s)"
 
-    monitor-enter v1
+    .line 375
+    .line 376
+    invoke-static {v0, v1}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 377
+    .line 378
+    .line 379
+    move-result-object v1
+
+    .line 380
+    const/4 v0, 0x2
+
+    .line 381
+    invoke-virtual {v13, v0, v1}, LX/36k;->A03(ILjava/lang/String;)V
+
+    .line 382
+    .line 383
+    .line 384
+    :cond_b
+    add-int/lit8 v14, v14, 0x1
+
+    .line 385
+    .line 386
+    goto :goto_6
+
+    .line 387
+    :catchall_1
+    move-exception v1
+
+    .line 388
+    monitor-exit v0
+
+    .line 389
+    throw v1
+
+    .line 390
+    :cond_c
+    new-instance v2, LX/36k;
+
+    .line 391
+    .line 392
+    move-object/from16 v23, v2
+
+    .line 393
+    .line 394
+    move-object/from16 v24, v21
+
+    .line 395
+    .line 396
+    move-object/from16 v25, v12
+
+    .line 397
+    .line 398
+    move/from16 v29, v9
+
+    .line 399
+    .line 400
+    invoke-direct/range {v23 .. v30}, LX/36k;-><init>(Lcom/facebook/http/internal/tigonengine/FlowObserverRequestInfo;LX/39U;Lcom/google/common/util/concurrent/SettableFuture;Ljava/lang/String;Lorg/apache/http/client/ResponseHandler;IZ)V
+
+    .line 401
+    .line 402
+    .line 403
+    iget-object v0, v5, LX/37V;->A01:Landroid/util/SparseArray;
+
+    .line 404
+    .line 405
+    invoke-virtual {v0, v9, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 453322
+    .line 406
+    .line 407
+    .line 408
+    monitor-exit v5
+
+    .line 409
     :try_start_b
-    iget-wide v13, v1, LX/3O3;->A02:J
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_1
+    const/4 v1, -0x1
 
-    :try_start_c
-    monitor-exit v1
+    .line 410
+    new-instance v0, LX/387;
 
-    .line 453323
-    sub-long v1, v3, v13
+    .line 411
+    .line 412
+    invoke-direct {v0}, LX/387;-><init>()V
 
-    invoke-virtual {v9, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+    .line 413
+    .line 414
+    .line 415
+    invoke-virtual {v8, v11, v0, v1}, LX/36h;->A01(LX/36g;LX/387;I)Lcom/facebook/tigon/iface/TigonRequestBuilder$Impl;
 
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    const-string v1, "Stale state (%d s)"
-
-    .line 453324
-    invoke-static {v1, v2}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v1, 0x2
-
-    .line 453325
-    invoke-virtual {v11, v1, v2, v15}, LX/3O4;->A04(ILjava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_b
-    add-int/lit8 v12, v12, 0x1
-
-    goto :goto_6
-
-    .line 453326
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
-
-    .line 453327
-    :cond_c
-    new-instance v2, LX/3O4;
-
-    move-object/from16 v28, p5
-
-    move-object/from16 v23, v2
-
-    move-object/from16 v24, v20
-
-    move-object/from16 v25, v18
-
-    move-object/from16 v26, v44
-
-    move-object/from16 v27, v21
-
-    move/from16 v29, v45
-
-    invoke-direct/range {v23 .. v30}, LX/3O4;-><init>(LX/3Na;LX/3Vl;Lcom/google/common/util/concurrent/SettableFuture;Ljava/lang/String;Lorg/apache/http/client/ResponseHandler;IZ)V
-
-    .line 453328
-    iget-object v3, v10, LX/3Pv;->A01:Landroid/util/SparseArray;
-
-    move/from16 v1, v45
-
-    invoke-virtual {v3, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_3
-
-    .line 453329
-    monitor-exit v10
-
-    .line 453330
-    :try_start_d
-    const/16 v38, -0x1
-
-    new-instance v26, LX/3RG;
-
-    invoke-direct/range {v26 .. v26}, LX/3RG;-><init>()V
-
-    .line 453331
-    move/from16 v34, p11
-
-    move/from16 v43, p9
-
-    move/from16 v33, p7
-
-    move-object/from16 v25, p6
-
-    move-object/from16 v30, p17
-
-    move-object/from16 v24, p3
-
-    move-object/from16 v27, p25
-
-    move/from16 v37, p24
-
-    move/from16 v36, p23
-
-    move/from16 v35, p22
-
-    move-object/from16 v29, p21
-
-    move-wide/from16 v41, p19
-
-    move-object/from16 v31, p18
-
-    move-wide/from16 v39, p15
-
-    move-object/from16 v28, v21
-
-    move-object/from16 v32, v22
-
-    move-object/from16 v23, v7
-
-    invoke-virtual/range {v23 .. v43}, LX/3Nz;->A00(Lcom/facebook/common/callercontext/CallerContext;Lcom/facebook/http/interfaces/RequestPriority;LX/3RG;LX/3MV;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Lorg/apache/http/client/methods/HttpUriRequest;IIIIIIJJZ)Lcom/facebook/tigon/iface/TigonRequestBuilder$Impl;
-
+    .line 416
+    .line 417
+    .line 418
     move-result-object v4
 
-    .line 453332
-    move-object/from16 v1, v20
+    .line 419
+    move-object/from16 v0, v21
 
-    invoke-virtual {v1, v4}, LX/3Na;->A07(Lcom/facebook/tigon/iface/TigonRequest;)V
+    .line 420
+    .line 421
+    invoke-virtual {v0, v4, v9}, Lcom/facebook/http/internal/tigonengine/FlowObserverRequestInfo;->onAdded(Lcom/facebook/tigon/iface/TigonRequest;I)V
 
-    .line 453333
-    iget-object v1, v8, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mBackgroundExecutor:LX/0Na;
+    .line 422
+    .line 423
+    .line 424
+    iget-object v0, v10, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mBackgroundExecutor:LX/0RP;
 
-    .line 453334
-    invoke-static {v1}, LX/0Yi;->A15(LX/0Na;)Ljava/util/concurrent/ExecutorService;
+    .line 425
+    .line 426
+    invoke-static {v0}, LX/0X6;->A19(LX/0RP;)Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v7
+    .line 427
+    .line 428
+    .line 429
+    move-result-object v5
 
-    .line 453335
-    if-eqz v6, :cond_d
+    .line 430
+    if-eqz v7, :cond_d
 
-    .line 453336
-    move-object/from16 v1, v19
+    .line 431
+    .line 432
+    move-object/from16 v0, v20
 
-    move-object/from16 v0, v18
+    .line 433
+    .line 434
+    invoke-interface {v12, v4, v7, v0, v5}, LX/37a;->sendRequest(Lcom/facebook/tigon/iface/TigonRequest;Lcom/facebook/tigon/TigonBodyProvider;Lcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonRequestToken;
 
-    invoke-interface {v0, v4, v6, v1, v7}, LX/3QK;->sendRequest(Lcom/facebook/tigon/iface/TigonRequest;Lcom/facebook/tigon/TigonBodyProvider;Lcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonRequestToken;
-
+    .line 435
+    .line 436
+    .line 437
     move-result-object v0
 
-    .line 453337
-    :goto_7
+    .line 438
     monitor-enter v2
 
+    .line 439
     goto :goto_9
 
-    .line 453338
+    .line 440
     :cond_d
-    if-eqz v5, :cond_10
+    if-nez v6, :cond_e
 
-    .line 453339
-    iget-boolean v1, v5, LX/3OX;->A01:Z
-
-    if-eqz v1, :cond_f
-
-    .line 453340
-    iget-object v9, v5, LX/3OX;->A00:Ljava/util/ArrayList;
-
-    invoke-virtual {v9}, Ljava/util/AbstractCollection;->size()I
-    :try_end_d
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_1
-
-    move-result v6
-
+    .line 441
+    .line 442
     const/4 v3, 0x0
 
-    const/4 v1, 0x1
+    .line 443
+    const/4 v14, 0x0
 
-    .line 453341
-    invoke-static {v6, v1}, LX/001;->A1O(II)Z
-
-    move-result v1
-
-    .line 453342
-    :try_start_e
-    invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkState(Z)V
-
-    .line 453343
-    invoke-virtual {v9, v0}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/nio/Buffer;
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    if-nez v0, :cond_e
-
-    const/4 v3, 0x1
-
-    :cond_e
-    invoke-static {v3}, Lcom/google/common/base/Preconditions;->checkState(Z)V
-
-    .line 453344
-    :cond_f
-    iget-object v5, v5, LX/3OX;->A00:Ljava/util/ArrayList;
-
-    invoke-virtual {v5}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    new-array v0, v0, [Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v5, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v15
-
-    check-cast v15, [Ljava/nio/ByteBuffer;
-
-    .line 453345
-    const/4 v3, 0x0
-
-    const/4 v0, 0x0
-
-    .line 453346
-    :goto_8
-    invoke-virtual {v5}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v1
-
-    if-ge v3, v1, :cond_10
-
-    .line 453347
-    invoke-virtual {v5, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/nio/Buffer;
-
-    invoke-virtual {v1}, Ljava/nio/Buffer;->position()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    add-int/lit8 v3, v3, 0x1
-
+    .line 444
     goto :goto_8
 
-    .line 453348
-    :cond_10
-    move-object/from16 v9, v18
+    .line 445
+    :cond_e
+    iget-boolean v0, v6, LX/36o;->A01:Z
 
-    move-object v10, v4
+    .line 446
+    .line 447
+    if-eqz v0, :cond_10
 
-    move-object v11, v15
+    .line 448
+    .line 449
+    iget-object v7, v6, LX/36o;->A00:Ljava/util/ArrayList;
 
-    move v12, v0
+    .line 450
+    .line 451
+    invoke-virtual {v7}, Ljava/util/AbstractCollection;->size()I
+    :try_end_b
+    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_1
 
-    move-object/from16 v13, v19
+    .line 452
+    .line 453
+    .line 454
+    move-result v3
 
-    move-object v14, v7
+    .line 455
+    const/4 v1, 0x0
 
-    invoke-interface/range {v9 .. v14}, LX/3QK;->sendRequest(Lcom/facebook/tigon/iface/TigonRequest;[Ljava/nio/ByteBuffer;ILcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonRequestToken;
+    .line 456
+    move/from16 v0, v19
 
+    .line 457
+    .line 458
+    invoke-static {v3, v0}, LX/001;->A1N(II)Z
+
+    .line 459
+    .line 460
+    .line 461
+    move-result v0
+
+    .line 462
+    :try_start_c
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
+
+    .line 463
+    .line 464
+    .line 465
+    invoke-virtual {v7, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 466
+    .line 467
+    .line 468
     move-result-object v0
 
+    .line 469
+    check-cast v0, Ljava/nio/Buffer;
+
+    .line 470
+    .line 471
+    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+
+    .line 472
+    .line 473
+    .line 474
+    move-result v0
+
+    .line 475
+    if-nez v0, :cond_f
+
+    .line 476
+    .line 477
+    const/4 v1, 0x1
+
+    .line 478
+    :cond_f
+    invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkState(Z)V
+
+    .line 479
+    .line 480
+    .line 481
+    :cond_10
+    iget-object v6, v6, LX/36o;->A00:Ljava/util/ArrayList;
+
+    .line 482
+    .line 483
+    invoke-virtual {v6}, Ljava/util/AbstractCollection;->size()I
+
+    .line 484
+    .line 485
+    .line 486
+    move-result v0
+
+    .line 487
+    new-array v0, v0, [Ljava/nio/ByteBuffer;
+
+    .line 488
+    .line 489
+    invoke-virtual {v6, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 490
+    .line 491
+    .line 492
+    move-result-object v3
+
+    .line 493
+    check-cast v3, [Ljava/nio/ByteBuffer;
+
+    .line 494
+    .line 495
+    const/4 v1, 0x0
+
+    .line 496
+    const/4 v14, 0x0
+
+    .line 497
+    :goto_7
+    invoke-virtual {v6}, Ljava/util/AbstractCollection;->size()I
+
+    .line 498
+    .line 499
+    .line 500
+    move-result v0
+
+    .line 501
+    if-ge v1, v0, :cond_11
+
+    .line 502
+    .line 503
+    invoke-virtual {v6, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 504
+    .line 505
+    .line 506
+    move-result-object v0
+
+    .line 507
+    check-cast v0, Ljava/nio/Buffer;
+
+    .line 508
+    .line 509
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    .line 510
+    .line 511
+    .line 512
+    move-result v0
+
+    .line 513
+    add-int/2addr v14, v0
+
+    .line 514
+    add-int/lit8 v1, v1, 0x1
+
+    .line 515
+    .line 516
     goto :goto_7
+
+    .line 517
+    :cond_11
+    :goto_8
+    move-object v11, v12
+
+    .line 518
+    move-object v12, v4
+
+    .line 519
+    move-object v13, v3
+
+    .line 520
+    move-object/from16 v15, v20
+
+    .line 521
+    .line 522
+    move-object/from16 v16, v5
+
+    .line 523
+    .line 524
+    invoke-interface/range {v11 .. v16}, LX/37a;->sendRequest(Lcom/facebook/tigon/iface/TigonRequest;[Ljava/nio/ByteBuffer;ILcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonRequestToken;
+
+    .line 525
+    .line 526
+    .line 527
+    move-result-object v0
+
+    .line 528
+    monitor-enter v2
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_1
+
+    .line 529
+    :goto_9
+    :try_start_d
+    iput-object v0, v2, LX/36k;->A04:Lcom/facebook/tigon/TigonRequestToken;
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_2
+
+    .line 530
+    .line 531
+    :try_start_e
+    monitor-exit v2
+
+    .line 532
+    monitor-enter v2
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_1
 
-    .line 453349
-    :goto_9
+    .line 533
     :try_start_f
-    iput-object v0, v2, LX/3O4;->A04:Lcom/facebook/tigon/TigonRequestToken;
+    iget-object v1, v2, LX/36k;->A0B:LX/36j;
+
+    .line 534
+    .line 535
+    const/4 v0, 0x7
+
+    .line 536
+    invoke-static {v1, v0}, LX/36j;->A02(LX/36j;B)V
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_2
 
-    .line 453350
+    .line 537
+    .line 538
+    .line 539
     :try_start_10
     monitor-exit v2
 
-    .line 453351
-    monitor-enter v2
-    :try_end_10
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_1
-
-    .line 453352
-    :try_start_11
-    iget-object v1, v2, LX/3O4;->A0B:LX/3O3;
-
-    .line 453353
-    const/4 v0, 0x7
-
-    .line 453354
-    invoke-static {v1, v0}, LX/3O3;->A02(LX/3O3;B)V
-    :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_2
-
-    .line 453355
-    :try_start_12
-    monitor-exit v2
-
+    .line 540
     return-void
 
+    .line 541
     :catchall_2
     move-exception v0
 
+    .line 542
     monitor-exit v2
 
+    .line 543
     throw v0
-    :try_end_12
-    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_1
+    :try_end_10
+    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_1
 
-    .line 453356
+    .line 544
     :catch_1
-    move-exception v3
+    move-exception v1
 
-    .line 453357
-    move-object/from16 v0, v44
+    .line 545
+    move-object/from16 v0, v26
 
-    invoke-virtual {v0, v3}, LX/5QT;->setException(Ljava/lang/Throwable;)Z
+    .line 546
+    .line 547
+    invoke-virtual {v0, v1}, LX/5q5;->setException(Ljava/lang/Throwable;)Z
 
-    .line 453358
-    iget-object v0, v2, LX/3O4;->A04:Lcom/facebook/tigon/TigonRequestToken;
+    .line 548
+    .line 549
+    .line 550
+    iget-object v0, v2, LX/36k;->A04:Lcom/facebook/tigon/TigonRequestToken;
 
-    .line 453359
-    if-nez v0, :cond_11
+    .line 551
+    .line 552
+    if-nez v0, :cond_12
 
-    .line 453360
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    .line 553
+    .line 554
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
+    .line 555
+    .line 556
+    .line 557
     move-result-object v1
 
-    .line 453361
+    .line 558
     const-string v0, "Failed to send the request, url="
 
+    .line 559
+    .line 560
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface/range {v22 .. v22}, Lorg/apache/http/client/methods/HttpUriRequest;->getURI()Ljava/net/URI;
+    .line 561
+    .line 562
+    .line 563
+    invoke-virtual/range {v22 .. v22}, Lorg/apache/http/impl/client/RequestWrapper;->getURI()Ljava/net/URI;
 
+    .line 564
+    .line 565
+    .line 566
     move-result-object v0
 
-    .line 453362
-    invoke-static {v0, v1}, LX/001;->A0J(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 567
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 568
+    .line 569
+    .line 570
     move-result-object v1
 
-    .line 453363
-    const/4 v0, 0x1
+    .line 571
+    move/from16 v0, v19
 
-    invoke-virtual {v2, v0, v1, v3}, LX/3O4;->A04(ILjava/lang/String;Ljava/lang/Throwable;)V
+    .line 572
+    .line 573
+    invoke-virtual {v2, v0, v1}, LX/36k;->A03(ILjava/lang/String;)V
 
-    .line 453364
-    move/from16 v0, v45
+    .line 574
+    .line 575
+    .line 576
+    invoke-virtual {v10, v9}, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->cleanup(I)V
 
-    invoke-virtual {v8, v0}, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->cleanup(I)V
-
-    .line 453365
-    :cond_11
+    .line 577
+    .line 578
+    .line 579
+    :cond_12
     return-void
 
-    .line 453366
+    .line 580
     :catchall_3
     move-exception v0
 
-    monitor-exit v10
+    .line 581
+    monitor-exit v5
 
+    .line 582
     throw v0
 
-    .line 453367
+    .line 583
     :catch_2
     move-exception v3
 
+    .line 584
     const/4 v1, 0x1
 
-    .line 453368
+    .line 585
     sget-object v2, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->TAG:Ljava/lang/String;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    .line 586
+    .line 587
+    move-object/from16 v0, v27
 
-    aput-object p2, v1, v0
+    .line 588
+    .line 589
+    invoke-static {v0, v1}, LX/0X4;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
 
+    .line 590
+    .line 591
+    .line 592
+    move-result-object v1
+
+    .line 593
     const-string v0, "Invalid request body from \'%s\' request"
 
-    invoke-static {v2, v0, v3, v1}, LX/0Jt;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    .line 594
+    .line 595
+    invoke-static {v2, v0, v3, v1}, LX/0Il;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
-    .line 453369
-    move-object/from16 v0, v44
+    .line 596
+    .line 597
+    .line 598
+    move-object/from16 v0, v26
 
-    invoke-virtual {v0, v3}, LX/5QT;->setException(Ljava/lang/Throwable;)Z
+    .line 599
+    .line 600
+    invoke-virtual {v0, v3}, LX/5q5;->setException(Ljava/lang/Throwable;)Z
 
-    .line 453370
+    .line 601
+    .line 602
+    .line 603
     return-void
 .end method
 
@@ -1862,7 +2155,7 @@
     .locals 9
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
+    iget-object v3, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
 
     .line 1
     .line 2
@@ -1885,7 +2178,7 @@
     .line 9
     :goto_0
     :try_start_0
-    iget-object v6, v3, LX/3Pv;->A01:Landroid/util/SparseArray;
+    iget-object v6, v3, LX/37V;->A01:Landroid/util/SparseArray;
 
     .line 10
     .line 11
@@ -1909,7 +2202,7 @@
     move-result-object v0
 
     .line 21
-    check-cast v0, LX/3O4;
+    check-cast v0, LX/36k;
 
     .line 22
     .line 23
@@ -1939,7 +2232,7 @@
     move-result-object v0
 
     .line 34
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 35
     .line 36
@@ -1978,7 +2271,7 @@
     move-object v1, v7
 
     .line 51
-    check-cast v1, LX/3O4;
+    check-cast v1, LX/36k;
 
     .line 52
     .line 53
@@ -1986,13 +2279,13 @@
 
     .line 54
     :try_start_1
-    iget-byte v0, v1, LX/3O4;->A00:B
+    iget-byte v0, v1, LX/36k;->A00:B
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 55
     .line 56
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 57
     .line 58
@@ -2019,13 +2312,13 @@
 
     .line 67
     :try_start_2
-    iget-byte v0, v1, LX/3O4;->A00:B
+    iget-byte v0, v1, LX/36k;->A00:B
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 68
     .line 69
-    invoke-static {v0}, LX/0Ye;->A1V(I)Z
+    invoke-static {v0}, LX/0X3;->A1X(I)Z
 
     .line 70
     .line 71
@@ -2052,7 +2345,7 @@
 
     .line 80
     :try_start_3
-    iget-byte v2, v1, LX/3O4;->A00:B
+    iget-byte v2, v1, LX/36k;->A00:B
 
     .line 81
     .line 82
@@ -2109,7 +2402,7 @@
 
     .line 100
     .line 101
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/0X7;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 102
     .line 103
@@ -2209,7 +2502,7 @@
 
     .line 156
     .line 157
-    invoke-static {v0, v2}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 158
     .line 159
@@ -2233,11 +2526,11 @@
     throw v0
 .end method
 
-.method public getRequestStates()LX/3Pv;
+.method public getRequestStates()LX/37V;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
+    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
 
     .line 1
     .line 2
@@ -2254,11 +2547,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mTigonService:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -2266,11 +2559,11 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/3QK;
+    check-cast v0, LX/37a;
 
     .line 7
     .line 8
-    invoke-interface {v0}, LX/3QK;->isAvailable()Z
+    invoke-interface {v0}, LX/37a;->isAvailable()Z
 
     .line 9
     .line 10
@@ -2285,7 +2578,7 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/3Pv;
+    iget-object v1, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
 
     .line 1
     .line 2
@@ -2293,7 +2586,7 @@
 
     .line 3
     :try_start_0
-    iget-object v0, v1, LX/3Pv;->A01:Landroid/util/SparseArray;
+    iget-object v0, v1, LX/37V;->A01:Landroid/util/SparseArray;
 
     .line 4
     .line 5
@@ -2331,5 +2624,42 @@
 
     .line 1
     .line 2
+    return-void
+.end method
+
+.method public updateHttpPriorityContext(ILcom/facebook/tigon/iface/HttpPriorityContext;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->mRequestStates:LX/37V;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/37V;->A00(I)LX/36k;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    iget-object v0, v0, LX/36k;->A04:Lcom/facebook/tigon/TigonRequestToken;
+
+    .line 9
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-interface {v0, p2}, Lcom/facebook/tigon/TigonRequestToken;->updateHttpPriorityContext(Lcom/facebook/tigon/iface/HttpPriorityContext;)V
+
+    .line 13
+    .line 14
+    .line 15
+    :cond_0
     return-void
 .end method

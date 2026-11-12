@@ -2,47 +2,60 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/20s;
-
 
 # static fields
-.field public static final A01:J
+.field public static final A02:Lcom/google/common/base/Function;
+
+.field public static final A03:Lcom/google/common/base/Function;
 
 
 # instance fields
-.field public final A00:Landroid/app/ActivityManager;
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .line 0
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    const/4 v1, 0x2
 
     .line 1
+    new-instance v0, LX/0Y3;
+
     .line 2
-    const-wide/16 v0, 0x5
-
     .line 3
-    .line 4
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-direct {v0, v1}, LX/0Y3;-><init>(I)V
 
+    .line 4
     .line 5
     .line 6
-    .line 7
-    move-result-wide v0
+    sput-object v0, LX/36S;->A02:Lcom/google/common/base/Function;
 
+    .line 7
     .line 8
-    sput-wide v0, LX/36S;->A01:J
+    const/4 v1, 0x3
 
     .line 9
+    new-instance v0, LX/0Y3;
+
     .line 10
+    .line 11
+    invoke-direct {v0, v1}, LX/0Y3;-><init>(I)V
+
+    .line 12
+    .line 13
+    .line 14
+    sput-object v0, LX/36S;->A03:Lcom/google/common/base/Function;
+
+    .line 15
+    .line 16
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/ActivityManager;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .line 0
@@ -51,129 +64,157 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/36S;->A00:Landroid/app/ActivityManager;
+    iput-object p1, p0, LX/36S;->A00:Ljava/lang/String;
 
     .line 4
     .line 5
-    return-void
-.end method
-
-.method public static A00(LX/36S;)I
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/36S;->A00:Landroid/app/ActivityManager;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/app/ActivityManager;->getMemoryClass()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result p0
+    iput-object p2, p0, LX/36S;->A01:Ljava/lang/String;
 
     .line 6
-    const/high16 v0, 0x100000
-
     .line 7
-    .line 8
-    mul-int/2addr p0, v0
-
-    .line 9
-    const v0, 0x7fffffff
-
-    .line 10
-    .line 11
-    .line 12
-    invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result p0
-
-    .line 16
-    const/high16 v0, 0x2000000
-
-    .line 17
-    .line 18
-    if-ge p0, v0, :cond_0
-
-    .line 19
-    .line 20
-    const/high16 v0, 0x400000
-
-    .line 21
-    .line 22
-    return v0
-
-    .line 23
-    :cond_0
-    const/high16 v0, 0x4000000
-
-    .line 24
-    .line 25
-    if-ge p0, v0, :cond_1
-
-    .line 26
-    .line 27
-    const/high16 v0, 0x600000
-
-    .line 28
-    .line 29
-    return v0
-
-    .line 30
-    :cond_1
-    div-int/lit8 v0, p0, 0x4
-
-    .line 31
-    .line 32
-    return v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic get()Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     .line 0
-    invoke-static {p0}, LX/36S;->A00(LX/36S;)I
+    const/4 v3, 0x1
 
     .line 1
+    if-eq p0, p1, :cond_0
+
     .line 2
     .line 3
-    move-result v1
+    const/4 v2, 0x0
 
     .line 4
-    sget-wide v6, LX/36S;->A01:J
+    if-eqz p1, :cond_1
 
     .line 5
     .line 6
-    const/16 v2, 0x100
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
     .line 8
-    const v3, 0x7fffffff
+    .line 9
+    move-result-object v1
+
+    .line 10
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    if-ne v1, v0, :cond_1
+
+    .line 15
+    .line 16
+    check-cast p1, LX/36S;
+
+    .line 17
+    .line 18
+    iget-object v1, p0, LX/36S;->A00:Ljava/lang/String;
+
+    .line 19
+    .line 20
+    iget-object v0, p1, LX/36S;->A00:Ljava/lang/String;
+
+    .line 21
+    .line 22
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    if-eqz v0, :cond_1
+
+    .line 27
+    .line 28
+    iget-object v1, p0, LX/36S;->A01:Ljava/lang/String;
+
+    .line 29
+    .line 30
+    iget-object v0, p1, LX/36S;->A01:Ljava/lang/String;
+
+    .line 31
+    .line 32
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v0
+
+    .line 36
+    if-nez v0, :cond_0
+
+    .line 37
+    .line 38
+    const/4 v3, 0x0
+
+    .line 39
+    :cond_0
+    return v3
+
+    .line 40
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/36S;->A00:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    mul-int/lit8 v1, v0, 0x1f
+
+    .line 7
+    .line 8
+    iget-object v0, p0, LX/36S;->A01:Ljava/lang/String;
 
     .line 9
     .line 10
-    .line 11
-    new-instance v0, LX/37W;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
+    .line 11
     .line 12
     .line 13
-    move v4, v3
+    move-result v0
 
     .line 14
-    move v5, v3
+    add-int/2addr v1, v0
 
     .line 15
-    invoke-direct/range {v0 .. v7}, LX/37W;-><init>(IIIIIJ)V
+    return v1
+.end method
 
-    .line 16
-    .line 17
-    .line 18
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/36S;->A00:Ljava/lang/String;
+
+    .line 1
+    .line 2
     return-object v0
 .end method

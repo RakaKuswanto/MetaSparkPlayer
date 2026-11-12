@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLAdproLimitResetPeriodSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLAdproLimitResetPeriodSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0v()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A0z()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -56,22 +56,23 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "WEEK"
+    const-string/jumbo v0, "WEEK"
 
     .line 21
     .line 22
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 23
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 24
     .line 25
+    .line 26
     move-result-object v0
 
-    .line 26
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAdproLimitResetPeriodSet;->A00:Ljava/util/Set;
-
     .line 27
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAdproLimitResetPeriodSet;->A00:Ljava/util/HashSet;
+
     .line 28
+    .line 29
     return-void
 .end method
 
@@ -87,11 +88,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAdproLimitResetPeriodSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAdproLimitResetPeriodSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

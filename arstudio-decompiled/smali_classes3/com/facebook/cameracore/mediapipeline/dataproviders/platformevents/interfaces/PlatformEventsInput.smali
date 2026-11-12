@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public mListener:LX/5Vl;
+.field public mListener:LX/68z;
 
 .field public final mPendingEvents:Ljava/util/LinkedList;
 
@@ -19,7 +19,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
 
     .line 4
     .line 5
@@ -40,7 +40,7 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/5Vl;
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/68z;
 
     .line 1
     .line 2
@@ -63,7 +63,7 @@
 
     .line 10
     .line 11
-    invoke-interface {v1, p1}, LX/5Vl;->enqueueEvent(Lorg/json/JSONObject;)V
+    invoke-interface {v1, p1}, LX/68z;->enqueueEvent(Lorg/json/JSONObject;)V
 
     .line 12
     .line 13
@@ -84,11 +84,11 @@
     return-void
 .end method
 
-.method public setListener(LX/5Vl;)V
+.method public setListener(LX/68z;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/5Vl;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/68z;
 
     .line 1
     .line 2
@@ -99,7 +99,7 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/5Vl;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/68z;
 
     .line 1
     .line 2
@@ -136,7 +136,7 @@
 
     .line 17
     .line 18
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/5Vl;
+    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/68z;
 
     .line 19
     .line 20
@@ -156,7 +156,7 @@
 
     .line 27
     .line 28
-    invoke-interface {v1, v0}, LX/5Vl;->enqueueEvent(Lorg/json/JSONObject;)V
+    invoke-interface {v1, v0}, LX/68z;->enqueueEvent(Lorg/json/JSONObject;)V
 
     .line 29
     .line 30
@@ -172,7 +172,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/5Vl;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/platformevents/interfaces/PlatformEventsInput;->mListener:LX/68z;
 
     .line 1
     .line 2
@@ -180,7 +180,7 @@
 
     .line 3
     .line 4
-    invoke-interface {v0}, LX/5Vl;->stop()V
+    invoke-interface {v0}, LX/68z;->stop()V
 
     .line 5
     .line 6

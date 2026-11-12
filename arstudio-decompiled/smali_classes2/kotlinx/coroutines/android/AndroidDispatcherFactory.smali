@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public createDispatcher(Ljava/util/List;)LX/2Iz;
+.method public createDispatcher(Ljava/util/List;)LX/6dV;
     .locals 3
 
     .line 0
@@ -34,7 +34,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/2Iq;->A00(Landroid/os/Looper;)Landroid/os/Handler;
+    invoke-static {v0}, LX/1nR;->A00(Landroid/os/Looper;)Landroid/os/Handler;
 
     .line 7
     .line 8
@@ -45,11 +45,11 @@
     const/4 v1, 0x0
 
     .line 11
-    new-instance v0, LX/2Ix;
+    new-instance v0, LX/3lT;
 
     .line 12
     .line 13
-    invoke-direct {v0, v2, v1}, LX/2Ix;-><init>(Landroid/os/Handler;Z)V
+    invoke-direct {v0, v2, v1}, LX/3lT;-><init>(Landroid/os/Handler;Z)V
 
     .line 14
     .line 15
@@ -62,7 +62,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 20
     .line 21

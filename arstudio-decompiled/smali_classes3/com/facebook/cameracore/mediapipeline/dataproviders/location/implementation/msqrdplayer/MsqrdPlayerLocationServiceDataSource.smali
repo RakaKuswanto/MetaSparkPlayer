@@ -8,18 +8,18 @@
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>(LX/3Ft;)V
     .locals 4
 
     .line 0
-    sget v1, LX/2eq;->AIZ:I
+    sget v1, LX/2I6;->AEX:I
 
     .line 1
     .line 2
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v0, v0, v1}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    invoke-static {v0, v0, v1}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -27,15 +27,15 @@
     move-result-object v3
 
     .line 7
-    check-cast v3, LX/5BO;
+    check-cast v3, LX/54y;
 
     .line 8
     .line 9
-    sget v0, LX/2eq;->AIY:I
+    sget v0, LX/2I6;->AEW:I
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 12
     .line 13
@@ -43,43 +43,35 @@
     move-result-object v2
 
     .line 15
-    check-cast v2, LX/3Nc;
+    check-cast v2, LX/54P;
 
     .line 16
     .line 17
-    sget v0, LX/2eq;->A5D:I
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
     .line 20
-    .line 21
-    .line 22
     move-result-object v1
 
-    .line 23
-    check-cast v1, Landroid/content/Context;
-
-    .line 24
-    .line 25
+    .line 21
     const/4 v0, 0x1
 
-    .line 26
-    invoke-direct {p0, v3, v2, v1, v0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;-><init>(LX/5BO;LX/3Nc;Landroid/content/Context;Z)V
+    .line 22
+    invoke-direct {p0, v3, v2, v1, v0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;-><init>(LX/54y;LX/54P;Landroid/content/Context;Z)V
 
-    .line 27
-    .line 28
-    .line 29
+    .line 23
+    .line 24
+    .line 25
     invoke-virtual {p0}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataSource;->startLocationUpdates()V
 
-    .line 30
-    .line 31
-    .line 32
+    .line 26
+    .line 27
+    .line 28
     return-void
 .end method
 
-.method public static final _UL__ULSEP_com_facebook_cameracore_mediapipeline_dataproviders_location_implementation_msqrdplayer_MsqrdPlayerLocationServiceDataSource_ULSEP_FACTORY_METHOD(ILX/1zC;Ljava/lang/Object;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/implementation/msqrdplayer/MsqrdPlayerLocationServiceDataSource;
+.method public static final _UL__ULSEP_com_facebook_cameracore_mediapipeline_dataproviders_location_implementation_msqrdplayer_MsqrdPlayerLocationServiceDataSource_ULSEP_FACTORY_METHOD(ILX/3Ft;Ljava/lang/Object;)Lcom/facebook/cameracore/mediapipeline/dataproviders/location/implementation/msqrdplayer/MsqrdPlayerLocationServiceDataSource;
     .locals 0
 
     .line 0
@@ -87,7 +79,7 @@
 
     .line 1
     .line 2
-    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/implementation/msqrdplayer/MsqrdPlayerLocationServiceDataSource;-><init>(LX/1zC;)V
+    invoke-direct {p0, p1}, Lcom/facebook/cameracore/mediapipeline/dataproviders/location/implementation/msqrdplayer/MsqrdPlayerLocationServiceDataSource;-><init>(LX/3Ft;)V
 
     .line 3
     .line 4
@@ -128,7 +120,7 @@
 
     .line 7
     .line 8
-    const/16 v0, 0x14
+    const/16 v0, 0xc
 
     .line 9
     .line 10
@@ -156,7 +148,7 @@
 
     .line 21
     .line 22
-    const/16 v0, 0x13
+    const/16 v0, 0xb
 
     .line 23
     .line 24

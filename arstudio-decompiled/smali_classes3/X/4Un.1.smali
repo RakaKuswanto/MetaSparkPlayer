@@ -4,678 +4,848 @@
 
 
 # static fields
-.field public static final A00:Ljava/lang/ThreadLocal;
+.field public static A0A:Ljava/lang/Object;
+
+.field public static A0B:Ljava/lang/reflect/Constructor;
+
+.field public static A0C:Z
+
+.field public static final A0D:I
+
+
+# instance fields
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:I
+
+.field public A03:Landroid/text/Layout$Alignment;
+
+.field public A04:Landroid/text/TextUtils$TruncateAt;
+
+.field public A05:Ljava/lang/CharSequence;
+
+.field public A06:Z
+
+.field public A07:Z
+
+.field public final A08:I
+
+.field public final A09:Landroid/text/TextPaint;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     .line 0
-    new-instance v0, Ljava/lang/ThreadLocal;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    const/16 v0, 0x17
 
     .line 3
     .line 4
-    .line 5
-    sput-object v0, LX/4Un;->A00:Ljava/lang/ThreadLocal;
+    invoke-static {v1, v0}, LX/0X4;->A1P(II)Z
 
+    .line 5
     .line 6
     .line 7
+    move-result v0
+
+    .line 8
+    sput v0, LX/4Un;->A0D:I
+
+    .line 9
+    .line 10
     return-void
 .end method
 
-.method public static A00(DDD)I
-    .locals 11
+.method public constructor <init>(Landroid/text/TextPaint;Ljava/lang/CharSequence;I)V
+    .locals 1
 
     .line 0
-    const-wide v4, 0x4009ecbfb15b573fL    # 3.2406
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p2, p0, LX/4Un;->A05:Ljava/lang/CharSequence;
+
     .line 4
     .line 5
-    mul-double/2addr v4, p0
+    iput-object p1, p0, LX/4Un;->A09:Landroid/text/TextPaint;
 
     .line 6
-    const-wide v0, -0x400767a0f9096bbaL    # -1.5372
-
     .line 7
+    iput p3, p0, LX/4Un;->A08:I
+
     .line 8
     .line 9
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+
     .line 10
     .line 11
-    mul-double/2addr v0, p2
-
     .line 12
-    add-double/2addr v4, v0
+    move-result v0
 
     .line 13
-    const-wide v0, -0x402016f0068db8bbL    # -0.4986
+    iput v0, p0, LX/4Un;->A00:I
 
     .line 14
     .line 15
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+
     .line 16
     .line 17
-    .line 18
-    mul-double/2addr v0, p4
+    iput-object v0, p0, LX/4Un;->A03:Landroid/text/Layout$Alignment;
 
+    .line 18
     .line 19
-    add-double/2addr v4, v0
+    const v0, 0x7fffffff
 
     .line 20
-    const-wide/high16 v8, 0x4059000000000000L    # 100.0
+    .line 21
+    .line 22
+    iput v0, p0, LX/4Un;->A02:I
+
+    .line 23
+    .line 24
+    sget v0, LX/4Un;->A0D:I
+
+    .line 25
+    .line 26
+    iput v0, p0, LX/4Un;->A01:I
+
+    .line 27
+    .line 28
+    const/4 v0, 0x1
+
+    .line 29
+    iput-boolean v0, p0, LX/4Un;->A06:Z
+
+    .line 30
+    .line 31
+    const/4 v0, 0x0
+
+    .line 32
+    iput-object v0, p0, LX/4Un;->A04:Landroid/text/TextUtils$TruncateAt;
+
+    .line 33
+    .line 34
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()Landroid/text/StaticLayout;
+    .locals 11
+
+    .line 0
+    iget-object v9, p0, LX/4Un;->A05:Ljava/lang/CharSequence;
+
+    .line 1
+    .line 2
+    if-nez v9, :cond_0
+
+    .line 3
+    .line 4
+    const-string v9, ""
+
+    .line 5
+    .line 6
+    iput-object v9, p0, LX/4Un;->A05:Ljava/lang/CharSequence;
+
+    .line 7
+    .line 8
+    :cond_0
+    iget v0, p0, LX/4Un;->A08:I
+
+    .line 9
+    .line 10
+    const/4 v8, 0x0
+
+    .line 11
+    invoke-static {v8, v0}, Ljava/lang/Math;->max(II)I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v4
+
+    .line 15
+    iget v0, p0, LX/4Un;->A02:I
+
+    .line 16
+    .line 17
+    const/4 v7, 0x1
+
+    .line 18
+    if-ne v0, v7, :cond_1
+
+    .line 19
+    .line 20
+    iget-object v2, p0, LX/4Un;->A09:Landroid/text/TextPaint;
 
     .line 21
     .line 22
-    div-double/2addr v4, v8
+    int-to-float v1, v4
 
     .line 23
-    const-wide v2, -0x4010fec56d5cfaadL    # -0.9689
+    iget-object v0, p0, LX/4Un;->A04:Landroid/text/TextUtils$TruncateAt;
 
     .line 24
     .line 25
+    invoke-static {v9, v2, v1, v0}, Landroid/text/TextUtils;->ellipsize(Ljava/lang/CharSequence;Landroid/text/TextPaint;FLandroid/text/TextUtils$TruncateAt;)Ljava/lang/CharSequence;
+
     .line 26
     .line 27
     .line 28
-    mul-double/2addr v2, p0
+    move-result-object v9
 
     .line 29
-    const-wide v0, 0x3ffe0346dc5d6388L    # 1.8758
+    :cond_1
+    invoke-interface {v9}, Ljava/lang/CharSequence;->length()I
 
     .line 30
     .line 31
     .line 32
-    .line 33
-    .line 34
-    mul-double/2addr v0, p2
+    move-result v1
 
+    .line 33
+    iget v0, p0, LX/4Un;->A00:I
+
+    .line 34
     .line 35
-    add-double/2addr v2, v0
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
 
     .line 36
-    const-wide v0, 0x3fa53f7ced916873L    # 0.0415
-
     .line 37
     .line 38
+    move-result v2
+
     .line 39
+    iput v2, p0, LX/4Un;->A00:I
+
     .line 40
     .line 41
-    mul-double/2addr v0, p4
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 42
-    add-double/2addr v2, v0
-
     .line 43
-    div-double/2addr v2, v8
+    const/16 v0, 0x17
 
     .line 44
-    const-wide v0, 0x3fac84b5dcc63f14L    # 0.0557
-
     .line 45
+    const/high16 v6, 0x3f800000    # 1.0f
+
     .line 46
     .line 47
-    .line 48
-    .line 49
-    mul-double/2addr v0, p0
+    const/4 v5, 0x0
 
+    .line 48
+    if-lt v1, v0, :cond_6
+
+    .line 49
     .line 50
-    const-wide v6, -0x4035e353f7ced917L    # -0.204
+    iget-boolean v0, p0, LX/4Un;->A07:Z
 
     .line 51
     .line 52
+    if-eqz v0, :cond_2
+
     .line 53
     .line 54
-    .line 55
-    mul-double/2addr v6, p2
+    iget v0, p0, LX/4Un;->A02:I
 
+    .line 55
     .line 56
-    add-double/2addr v0, v6
+    if-ne v0, v7, :cond_2
 
     .line 57
-    const-wide v6, 0x3ff0e978d4fdf3b6L    # 1.057
-
     .line 58
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
+
     .line 59
     .line 60
+    iput-object v0, p0, LX/4Un;->A03:Landroid/text/Layout$Alignment;
+
     .line 61
     .line 62
-    mul-double/2addr v6, p4
+    :cond_2
+    iget-object v0, p0, LX/4Un;->A09:Landroid/text/TextPaint;
 
     .line 63
-    add-double/2addr v0, v6
-
     .line 64
-    div-double/2addr v0, v8
+    invoke-static {v9, v8, v2, v0, v4}, Landroid/text/StaticLayout$Builder;->obtain(Ljava/lang/CharSequence;IILandroid/text/TextPaint;I)Landroid/text/StaticLayout$Builder;
 
     .line 65
-    const-wide p4, 0x3fac28f5c28f5c29L    # 0.055
-
     .line 66
     .line 67
+    move-result-object v1
+
     .line 68
+    iget-object v0, p0, LX/4Un;->A03:Landroid/text/Layout$Alignment;
+
     .line 69
     .line 70
-    const-wide v7, 0x3fdaaaaaaaaaaaabL    # 0.4166666666666667
+    invoke-virtual {v1, v0}, Landroid/text/StaticLayout$Builder;->setAlignment(Landroid/text/Layout$Alignment;)Landroid/text/StaticLayout$Builder;
 
     .line 71
     .line 72
     .line 73
+    iget-boolean v0, p0, LX/4Un;->A06:Z
+
     .line 74
     .line 75
-    const-wide p2, 0x3ff0e147ae147ae1L    # 1.055
+    invoke-virtual {v1, v0}, Landroid/text/StaticLayout$Builder;->setIncludePad(Z)Landroid/text/StaticLayout$Builder;
 
     .line 76
     .line 77
     .line 78
+    iget-boolean v0, p0, LX/4Un;->A07:Z
+
     .line 79
     .line 80
-    const-wide p0, 0x4029d70a3d70a3d7L    # 12.92
+    if-eqz v0, :cond_5
 
     .line 81
     .line 82
+    sget-object v0, Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
+
     .line 83
     .line 84
-    .line 85
-    const-wide v9, 0x3f69a5c37387b719L    # 0.0031308
+    :goto_0
+    invoke-virtual {v1, v0}, Landroid/text/StaticLayout$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/StaticLayout$Builder;
 
+    .line 85
     .line 86
     .line 87
+    iget-object v0, p0, LX/4Un;->A04:Landroid/text/TextUtils$TruncateAt;
+
     .line 88
     .line 89
+    if-eqz v0, :cond_3
+
     .line 90
-    cmpl-double v6, v4, v9
-
     .line 91
-    .line 92
-    if-lez v6, :cond_5
+    invoke-virtual {v1, v0}, Landroid/text/StaticLayout$Builder;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)Landroid/text/StaticLayout$Builder;
 
+    .line 92
     .line 93
     .line 94
-    invoke-static {v4, v5, v7, v8}, Ljava/lang/Math;->pow(DD)D
+    :cond_3
+    iget v0, p0, LX/4Un;->A02:I
 
     .line 95
     .line 96
+    invoke-virtual {v1, v0}, Landroid/text/StaticLayout$Builder;->setMaxLines(I)Landroid/text/StaticLayout$Builder;
+
     .line 97
-    move-result-wide v4
-
     .line 98
-    mul-double/2addr v4, p2
-
     .line 99
-    sub-double/2addr v4, p4
+    iget v0, p0, LX/4Un;->A02:I
 
     .line 100
-    :goto_0
-    cmpl-double v6, v2, v9
-
     .line 101
+    if-le v0, v7, :cond_4
+
     .line 102
-    if-lez v6, :cond_4
-
     .line 103
-    .line 104
-    invoke-static {v2, v3, v7, v8}, Ljava/lang/Math;->pow(DD)D
+    iget v0, p0, LX/4Un;->A01:I
 
+    .line 104
     .line 105
+    invoke-virtual {v1, v0}, Landroid/text/StaticLayout$Builder;->setHyphenationFrequency(I)Landroid/text/StaticLayout$Builder;
+
     .line 106
     .line 107
-    move-result-wide v2
-
     .line 108
-    mul-double/2addr v2, p2
+    :cond_4
+    invoke-virtual {v1}, Landroid/text/StaticLayout$Builder;->build()Landroid/text/StaticLayout;
 
     .line 109
-    sub-double/2addr v2, p4
-
     .line 110
-    :goto_1
-    cmpl-double v6, v0, v9
-
     .line 111
+    move-result-object v0
+
     .line 112
-    if-lez v6, :cond_3
+    return-object v0
 
     .line 113
+    :cond_5
+    sget-object v0, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+
     .line 114
-    invoke-static {v0, v1, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
     .line 115
-    .line 116
-    .line 117
-    move-result-wide v0
+    goto :goto_0
 
+    .line 116
+    :cond_6
+    sget-boolean v0, LX/4Un;->A0C:Z
+
+    .line 117
     .line 118
-    mul-double/2addr v0, p2
+    if-nez v0, :cond_9
 
     .line 119
-    sub-double/2addr v0, p4
-
     .line 120
-    :goto_2
-    const-wide v7, 0x406fe00000000000L    # 255.0
+    const/16 v0, 0x12
 
     .line 121
     .line 122
+    if-lt v1, v0, :cond_7
+
     .line 123
     .line 124
+    goto :goto_2
+
     .line 125
-    mul-double/2addr v4, v7
+    :cond_7
+    :try_start_0
+    const-class v0, LX/4Un;
 
     .line 126
-    invoke-static {v4, v5}, Ljava/lang/Math;->round(D)J
-
     .line 127
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
     .line 128
     .line 129
-    move-result-wide v5
-
     .line 130
-    long-to-int v4, v5
+    move-result-object v1
 
     .line 131
-    const/4 v6, 0x0
+    iget-boolean v0, p0, LX/4Un;->A07:Z
 
     .line 132
-    const/16 v5, 0xff
-
     .line 133
+    if-eqz v0, :cond_8
+
     .line 134
-    if-lt v4, v6, :cond_0
-
     .line 135
-    .line 136
-    invoke-static {v4, v5}, Ljava/lang/Math;->min(II)I
+    const-string v2, "RTL"
 
+    .line 136
     .line 137
+    :goto_1
+    const-string v0, "android.text.TextDirectionHeuristic"
+
     .line 138
     .line 139
-    move-result v6
+    invoke-virtual {v1, v0}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     .line 140
-    :cond_0
-    mul-double/2addr v2, v7
-
     .line 141
-    invoke-static {v2, v3}, Ljava/lang/Math;->round(D)J
-
     .line 142
-    .line 143
-    .line 144
-    move-result-wide v3
+    move-result-object v10
 
+    .line 143
+    const-string v0, "android.text.TextDirectionHeuristics"
+
+    .line 144
     .line 145
-    long-to-int v2, v3
+    invoke-virtual {v1, v0}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     .line 146
-    const/4 v4, 0x0
-
     .line 147
-    if-lt v2, v4, :cond_1
-
     .line 148
+    move-result-object v1
+
     .line 149
-    invoke-static {v2, v5}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     .line 150
     .line 151
     .line 152
-    move-result v4
-
-    .line 153
-    :cond_1
-    mul-double/2addr v0, v7
-
-    .line 154
-    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
-
-    .line 155
-    .line 156
-    .line 157
-    move-result-wide v2
-
-    .line 158
-    long-to-int v1, v2
-
-    .line 159
-    const/4 v0, 0x0
-
-    .line 160
-    if-lt v1, v0, :cond_2
-
-    .line 161
-    .line 162
-    invoke-static {v1, v5}, Ljava/lang/Math;->min(II)I
-
-    .line 163
-    .line 164
-    .line 165
-    move-result v0
-
-    .line 166
-    :cond_2
-    invoke-static {v6, v4, v0}, Landroid/graphics/Color;->rgb(III)I
-
-    .line 167
-    .line 168
-    .line 169
-    move-result v0
-
-    .line 170
-    return v0
-
-    .line 171
-    :cond_3
-    mul-double/2addr v0, p0
-
-    .line 172
-    goto :goto_2
-
-    .line 173
-    :cond_4
-    mul-double/2addr v2, p0
-
-    .line 174
-    goto :goto_1
-
-    .line 175
-    :cond_5
-    mul-double/2addr v4, p0
-
-    .line 176
-    goto :goto_0
-.end method
-
-.method public static A01(IF)I
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    int-to-float v0, v0
-
-    .line 5
-    mul-float/2addr v0, p1
-
-    .line 6
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
-    invoke-static {p0, v0}, LX/4Un;->A03(II)I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v0
-
-    .line 14
-    return v0
-.end method
-
-.method public static A02(II)I
-    .locals 8
-
-    .line 0
-    invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v7
-
-    .line 4
-    invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v6
-
-    .line 8
-    rsub-int v0, v7, 0xff
-
-    .line 9
-    .line 10
-    rsub-int v5, v6, 0xff
-
-    .line 11
-    .line 12
-    mul-int/2addr v0, v5
-
-    .line 13
-    div-int/lit16 v0, v0, 0xff
-
-    .line 14
-    .line 15
-    rsub-int v4, v0, 0xff
-
-    .line 16
-    .line 17
-    invoke-static {p0}, Landroid/graphics/Color;->red(I)I
-
-    .line 18
-    .line 19
-    .line 20
-    move-result v1
-
-    .line 21
-    invoke-static {p1}, Landroid/graphics/Color;->red(I)I
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v0
-
-    .line 25
-    if-nez v4, :cond_2
-
-    .line 26
-    .line 27
-    const/4 v1, 0x0
-
-    .line 28
-    :goto_0
-    invoke-static {p0}, Landroid/graphics/Color;->green(I)I
-
-    .line 29
-    .line 30
-    .line 31
-    move-result v2
-
-    .line 32
-    invoke-static {p1}, Landroid/graphics/Color;->green(I)I
-
-    .line 33
-    .line 34
-    .line 35
-    move-result v0
-
-    .line 36
-    if-nez v4, :cond_1
-
-    .line 37
-    .line 38
-    const/4 v2, 0x0
-
-    .line 39
-    :goto_1
-    invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
-
-    .line 40
-    .line 41
-    .line 42
-    move-result v3
-
-    .line 43
-    invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
-
-    .line 44
-    .line 45
-    .line 46
-    move-result v0
-
-    .line 47
-    if-nez v4, :cond_0
-
-    .line 48
-    .line 49
-    const/4 v3, 0x0
-
-    .line 50
-    :goto_2
-    invoke-static {v4, v1, v2, v3}, Landroid/graphics/Color;->argb(IIII)I
-
-    .line 51
-    .line 52
-    .line 53
-    move-result v0
-
-    .line 54
-    return v0
-
-    .line 55
-    :cond_0
-    mul-int/lit16 v3, v3, 0xff
-
-    .line 56
-    .line 57
-    mul-int/2addr v3, v6
-
-    .line 58
-    mul-int/2addr v0, v7
-
-    .line 59
-    mul-int/2addr v0, v5
-
-    .line 60
-    add-int/2addr v3, v0
-
-    .line 61
-    mul-int/lit16 v0, v4, 0xff
-
-    .line 62
-    .line 63
-    div-int/2addr v3, v0
-
-    .line 64
-    goto :goto_2
-
-    .line 65
-    :cond_1
-    mul-int/lit16 v2, v2, 0xff
-
-    .line 66
-    .line 67
-    mul-int/2addr v2, v6
-
-    .line 68
-    mul-int/2addr v0, v7
-
-    .line 69
-    mul-int/2addr v0, v5
-
-    .line 70
-    add-int/2addr v2, v0
-
-    .line 71
-    mul-int/lit16 v0, v4, 0xff
-
-    .line 72
-    .line 73
-    div-int/2addr v2, v0
-
-    .line 74
-    goto :goto_1
-
-    .line 75
-    :cond_2
-    mul-int/lit16 v1, v1, 0xff
-
-    .line 76
-    .line 77
-    mul-int/2addr v1, v6
-
-    .line 78
-    mul-int/2addr v0, v7
-
-    .line 79
-    mul-int/2addr v0, v5
-
-    .line 80
-    add-int/2addr v1, v0
-
-    .line 81
-    mul-int/lit16 v0, v4, 0xff
-
-    .line 82
-    .line 83
-    div-int/2addr v1, v0
-
-    .line 84
-    goto :goto_0
-.end method
-
-.method public static A03(II)I
-    .locals 1
-
-    .line 0
-    if-ltz p1, :cond_0
-
-    .line 1
-    .line 2
-    const/16 v0, 0xff
-
-    .line 3
-    .line 4
-    if-gt p1, v0, :cond_0
-
-    .line 5
-    .line 6
-    const v0, 0xffffff
-
-    .line 7
-    .line 8
-    .line 9
-    and-int/2addr p0, v0
-
-    .line 10
-    shl-int/lit8 v0, p1, 0x18
-
-    .line 11
-    .line 12
-    or-int/2addr p0, v0
-
-    .line 13
-    return p0
-
-    .line 14
-    :cond_0
-    const-string v0, "alpha must be between 0 and 255."
-
-    .line 15
-    .line 16
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 17
-    .line 18
-    .line 19
     move-result-object v0
 
-    .line 20
+    .line 153
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 154
+    .line 155
+    .line 156
+    move-result-object v0
+
+    .line 157
+    goto :goto_3
+
+    .line 158
+    :cond_8
+    const-string v2, "LTR"
+
+    .line 159
+    .line 160
+    goto :goto_1
+
+    .line 161
+    :goto_2
+    const-class v10, Landroid/text/TextDirectionHeuristic;
+
+    .line 162
+    .line 163
+    sget-object v0, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+
+    .line 164
+    .line 165
+    :goto_3
+    sput-object v0, LX/4Un;->A0A:Ljava/lang/Object;
+
+    .line 166
+    .line 167
+    const/16 v0, 0xd
+
+    .line 168
+    .line 169
+    new-array v2, v0, [Ljava/lang/Class;
+
+    .line 170
+    .line 171
+    const-class v0, Ljava/lang/CharSequence;
+
+    .line 172
+    .line 173
+    aput-object v0, v2, v8
+
+    .line 174
+    .line 175
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    .line 176
+    .line 177
+    invoke-static {v2, v3, v3}, LX/0X4;->A1L([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 178
+    .line 179
+    .line 180
+    const/4 v1, 0x3
+
+    .line 181
+    const-class v0, Landroid/text/TextPaint;
+
+    .line 182
+    .line 183
+    aput-object v0, v2, v1
+
+    .line 184
+    .line 185
+    const/4 v0, 0x4
+
+    .line 186
+    aput-object v3, v2, v0
+
+    .line 187
+    .line 188
+    const/4 v1, 0x5
+
+    .line 189
+    const-class v0, Landroid/text/Layout$Alignment;
+
+    .line 190
+    .line 191
+    aput-object v0, v2, v1
+
+    .line 192
+    .line 193
+    const/4 v0, 0x6
+
+    .line 194
+    aput-object v10, v2, v0
+
+    .line 195
+    .line 196
+    const/4 v0, 0x7
+
+    .line 197
+    sget-object v1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+
+    .line 198
+    .line 199
+    aput-object v1, v2, v0
+
+    .line 200
+    .line 201
+    const/16 v0, 0x8
+
+    .line 202
+    .line 203
+    aput-object v1, v2, v0
+
+    .line 204
+    .line 205
+    const/16 v1, 0x9
+
+    .line 206
+    .line 207
+    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    .line 208
+    .line 209
+    aput-object v0, v2, v1
+
+    .line 210
+    .line 211
+    const/16 v1, 0xa
+
+    .line 212
+    .line 213
+    const-class v0, Landroid/text/TextUtils$TruncateAt;
+
+    .line 214
+    .line 215
+    aput-object v0, v2, v1
+
+    .line 216
+    .line 217
+    const/16 v0, 0xb
+
+    .line 218
+    .line 219
+    aput-object v3, v2, v0
+
+    .line 220
+    .line 221
+    const/16 v0, 0xc
+
+    .line 222
+    .line 223
+    aput-object v3, v2, v0
+
+    .line 224
+    .line 225
+    const-class v0, Landroid/text/StaticLayout;
+
+    .line 226
+    .line 227
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    .line 228
+    .line 229
+    .line 230
+    move-result-object v0
+
+    .line 231
+    sput-object v0, LX/4Un;->A0B:Ljava/lang/reflect/Constructor;
+
+    .line 232
+    .line 233
+    invoke-virtual {v0, v7}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 234
+    .line 235
+    .line 236
+    sput-boolean v7, LX/4Un;->A0C:Z
+
+    .line 237
+    .line 238
+    goto :goto_4
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 239
+    :catch_0
+    move-exception v1
+
+    .line 240
+    new-instance v0, LX/4Uo;
+
+    .line 241
+    .line 242
+    invoke-direct {v0, v1}, LX/4Uo;-><init>(Ljava/lang/Throwable;)V
+
+    .line 243
+    .line 244
+    .line 245
+    throw v0
+
+    .line 246
+    :cond_9
+    :goto_4
+    :try_start_1
+    sget-object v3, LX/4Un;->A0B:Ljava/lang/reflect/Constructor;
+
+    .line 247
+    .line 248
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 249
+    .line 250
+    .line 251
+    const/16 v0, 0xd
+
+    .line 252
+    .line 253
+    new-array v2, v0, [Ljava/lang/Object;
+
+    .line 254
+    .line 255
+    aput-object v9, v2, v8
+
+    .line 256
+    .line 257
+    invoke-static {v2, v8, v7}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 258
+    .line 259
+    .line 260
+    const/4 v1, 0x2
+
+    .line 261
+    iget v0, p0, LX/4Un;->A00:I
+
+    .line 262
+    .line 263
+    invoke-static {v2, v0, v1}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 264
+    .line 265
+    .line 266
+    const/4 v1, 0x3
+
+    .line 267
+    iget-object v0, p0, LX/4Un;->A09:Landroid/text/TextPaint;
+
+    .line 268
+    .line 269
+    aput-object v0, v2, v1
+
+    .line 270
+    .line 271
+    const/4 v0, 0x4
+
+    .line 272
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 273
+    .line 274
+    .line 275
+    move-result-object v4
+
+    .line 276
+    aput-object v4, v2, v0
+
+    .line 277
+    .line 278
+    const/4 v1, 0x5
+
+    .line 279
+    iget-object v0, p0, LX/4Un;->A03:Landroid/text/Layout$Alignment;
+
+    .line 280
+    .line 281
+    aput-object v0, v2, v1
+
+    .line 282
+    .line 283
+    const/4 v1, 0x6
+
+    .line 284
+    sget-object v0, LX/4Un;->A0A:Ljava/lang/Object;
+
+    .line 285
+    .line 286
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 287
+    .line 288
+    .line 289
+    aput-object v0, v2, v1
+
+    .line 290
+    .line 291
+    const/4 v0, 0x7
+
+    .line 292
+    invoke-static {v2, v6, v0}, LX/431;->A1S([Ljava/lang/Object;FI)V
+
+    .line 293
+    .line 294
+    .line 295
+    const/16 v0, 0x8
+
+    .line 296
+    .line 297
+    invoke-static {v2, v5, v0}, LX/431;->A1S([Ljava/lang/Object;FI)V
+
+    .line 298
+    .line 299
+    .line 300
+    const/16 v1, 0x9
+
+    .line 301
+    .line 302
+    iget-boolean v0, p0, LX/4Un;->A06:Z
+
+    .line 303
+    .line 304
+    invoke-static {v2, v1, v0}, LX/001;->A1C([Ljava/lang/Object;IZ)V
+
+    .line 305
+    .line 306
+    .line 307
+    const/16 v1, 0xa
+
+    .line 308
+    .line 309
+    const/4 v0, 0x0
+
+    .line 310
+    aput-object v0, v2, v1
+
+    .line 311
+    .line 312
+    const/16 v0, 0xb
+
+    .line 313
+    .line 314
+    aput-object v4, v2, v0
+
+    .line 315
+    .line 316
+    const/16 v1, 0xc
+
+    .line 317
+    .line 318
+    iget v0, p0, LX/4Un;->A02:I
+
+    .line 319
+    .line 320
+    invoke-static {v2, v0, v1}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 321
+    .line 322
+    .line 323
+    invoke-virtual {v3, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 324
+    .line 325
+    .line 326
+    move-result-object v0
+
+    .line 327
+    check-cast v0, Landroid/text/StaticLayout;
+
+    .line 328
+    .line 329
+    return-object v0
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 330
+    :catch_1
+    move-exception v1
+
+    .line 331
+    new-instance v0, LX/4Uo;
+
+    .line 332
+    .line 333
+    invoke-direct {v0, v1}, LX/4Uo;-><init>(Ljava/lang/Throwable;)V
+
+    .line 334
+    .line 335
+    .line 336
     throw v0
 .end method

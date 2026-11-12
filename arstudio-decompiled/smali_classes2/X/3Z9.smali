@@ -1,8 +1,3 @@
-.class public interface abstract LX/3Z9;
-.super Ljava/lang/Object;
+.class public abstract LX/3Z9;
+.super LX/3nV;
 .source ""
-
-
-# virtual methods
-.method public abstract ARs()Z
-.end method

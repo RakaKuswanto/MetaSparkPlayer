@@ -1,86 +1,64 @@
-.class public final LX/5Pb;
+.class public final synthetic LX/5PB;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3aS;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "VideoRendererEventListener$EventDispatcher$$ExternalSyntheticLambda5"
+
+
+# instance fields
+.field public final synthetic A00:LX/5Fy;
+
+.field public final synthetic A01:LX/5Ow;
+
+.field public final synthetic A02:LX/5Ox;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(LX/5Fy;LX/5Ow;LX/5Ox;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p3, p0, LX/5PB;->A02:LX/5Ox;
+
+    iput-object p1, p0, LX/5PB;->A00:LX/5Fy;
+
+    iput-object p2, p0, LX/5PB;->A01:LX/5Ow;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final AJH(I)I
+.method public final run()V
     .locals 3
 
     .line 0
-    const/4 v2, 0x4
+    iget-object v0, p0, LX/5PB;->A02:LX/5Ox;
 
     .line 1
-    const/4 v0, 0x1
-
     .line 2
-    if-ne p1, v0, :cond_1
+    iget-object v2, p0, LX/5PB;->A00:LX/5Fy;
 
     .line 3
     .line 4
-    const/4 v2, 0x1
+    iget-object v1, p0, LX/5PB;->A01:LX/5Ow;
 
     .line 5
-    :cond_0
-    return v2
-
     .line 6
-    :cond_1
-    rem-int/lit8 v1, p1, 0xa
+    iget-object v0, v0, LX/5Ox;->A01:LX/5PT;
 
     .line 7
     .line 8
-    const/4 v0, 0x2
+    invoke-interface {v0, v2, v1}, LX/5PT;->AdL(LX/5Fy;LX/5Ow;)V
 
     .line 9
-    if-lt v1, v0, :cond_0
-
     .line 10
     .line 11
-    if-gt v1, v2, :cond_0
-
-    .line 12
-    .line 13
-    rem-int/lit8 v1, p1, 0x64
-
-    .line 14
-    .line 15
-    const/16 v0, 0xc
-
-    .line 16
-    .line 17
-    if-lt v1, v0, :cond_2
-
-    .line 18
-    .line 19
-    const/16 v0, 0xe
-
-    .line 20
-    .line 21
-    if-le v1, v0, :cond_0
-
-    .line 22
-    .line 23
-    :cond_2
-    const/4 v2, 0x3
-
-    .line 24
-    return v2
+    return-void
 .end method

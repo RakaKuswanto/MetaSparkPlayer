@@ -1,171 +1,317 @@
-.class public final LX/2Bm;
+.class public abstract LX/2Bm;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2BS;
+.implements Ljava/io/Serializable;
+.implements Ljava/lang/Cloneable;
 
-# instance fields
-.field public final A00:Ljava/util/EnumMap;
+
+# static fields
+.field public static final A00:LX/2BQ;
+
+.field public static final A01:LX/2BQ;
+
+.field public static final A02:LX/2BQ;
+
+.field public static final A03:LX/2BQ;
+
+.field public static final A04:LX/2BQ;
+
+.field public static final A05:LX/2BQ;
+
+.field public static final A06:LX/2BQ;
+
+.field public static final A07:LX/2BQ;
+
+.field public static final A08:LX/2BQ;
+
+.field public static final A09:LX/2BQ;
+
+.field public static final A0A:LX/2BQ;
+
+.field public static final A0B:LX/2BN;
+
+.field public static final A0C:LX/2BQ;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Map;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 5
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "ConnectMessage"
 
     .line 1
     .line 2
-    .line 3
-    new-instance v0, Ljava/util/EnumMap;
+    new-instance v0, LX/2BN;
 
-    .line 4
-    .line 5
-    invoke-direct {v0, p1}, Ljava/util/EnumMap;-><init>(Ljava/util/Map;)V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/2Bm;->A00:Ljava/util/EnumMap;
-
-    .line 9
-    .line 10
-    return-void
-.end method
-
-.method public static A00(Ljava/lang/Class;)LX/2Bm;
-    .locals 7
-
-    .line 0
-    move-object v2, p0
-
-    .line 1
-    invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
-
-    .line 2
     .line 3
     .line 4
-    move-result-object v1
+    invoke-direct {v0, v1}, LX/2BN;-><init>(Ljava/lang/String;)V
 
     .line 5
-    const-class v0, Ljava/lang/Enum;
-
     .line 6
     .line 7
-    if-eq v1, v0, :cond_0
+    sput-object v0, LX/2Bm;->A0B:LX/2BN;
 
     .line 8
     .line 9
-    invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+    const-string/jumbo v0, "clientIdentifier"
 
     .line 10
     .line 11
     .line 12
-    move-result-object v2
+    const/16 v4, 0xb
 
     .line 13
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
-
     .line 14
+    invoke-static {v0, v4}, LX/0X6;->A0T(Ljava/lang/String;B)LX/2BQ;
+
     .line 15
     .line 16
-    move-result-object v6
-
     .line 17
-    check-cast v6, [Ljava/lang/Enum;
+    move-result-object v0
 
     .line 18
+    sput-object v0, LX/2Bm;->A01:LX/2BQ;
+
     .line 19
-    if-eqz v6, :cond_2
-
     .line 20
-    .line 21
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    const-string/jumbo v1, "willTopic"
 
+    .line 21
     .line 22
     .line 23
+    const/4 v0, 0x2
+
     .line 24
-    move-result-object v5
+    invoke-static {v1, v4, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
 
     .line 25
-    array-length v4, v6
-
     .line 26
-    const/4 v3, 0x0
-
     .line 27
-    :goto_0
-    if-ge v3, v4, :cond_1
+    move-result-object v0
 
     .line 28
+    sput-object v0, LX/2Bm;->A09:LX/2BQ;
+
     .line 29
-    aget-object v2, v6, v3
-
     .line 30
-    .line 31
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    const-string/jumbo v1, "willMessage"
 
+    .line 31
     .line 32
     .line 33
+    const/4 v0, 0x3
+
     .line 34
-    move-result-object v1
+    invoke-static {v1, v4, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
 
     .line 35
-    new-instance v0, LX/29U;
-
     .line 36
     .line 37
-    invoke-direct {v0, v1}, LX/29U;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     .line 38
+    sput-object v0, LX/2Bm;->A08:LX/2BQ;
+
     .line 39
     .line 40
-    invoke-virtual {v5, v2, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v1, "clientInfo"
 
     .line 41
     .line 42
     .line 43
-    add-int/lit8 v3, v3, 0x1
+    const/16 v3, 0xc
 
     .line 44
     .line 45
-    goto :goto_0
+    const/4 v0, 0x4
 
     .line 46
-    :cond_1
-    new-instance v0, LX/2Bm;
+    invoke-static {v1, v3, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
 
     .line 47
     .line 48
-    invoke-direct {v0, v5}, LX/2Bm;-><init>(Ljava/util/Map;)V
-
     .line 49
-    .line 50
-    .line 51
-    return-object v0
+    move-result-object v0
 
+    .line 50
+    sput-object v0, LX/2Bm;->A02:LX/2BQ;
+
+    .line 51
     .line 52
-    :cond_2
-    const-string v1, "Can not determine enum constants for Class "
+    const-string/jumbo v1, "password"
 
     .line 53
     .line 54
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
     .line 55
+    const/4 v0, 0x5
+
     .line 56
+    invoke-static {v1, v4, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
+
     .line 57
-    move-result-object v0
-
     .line 58
-    invoke-static {v1, v0}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
     .line 59
-    .line 60
-    .line 61
     move-result-object v0
 
+    .line 60
+    sput-object v0, LX/2Bm;->A05:LX/2BQ;
+
+    .line 61
     .line 62
-    throw v0
+    const-string/jumbo v1, "getDiffsRequests"
+
+    .line 63
+    .line 64
+    .line 65
+    const/16 v2, 0xf
+
+    .line 66
+    .line 67
+    const/4 v0, 0x6
+
+    .line 68
+    invoke-static {v1, v2, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v0
+
+    .line 72
+    sput-object v0, LX/2Bm;->A04:LX/2BQ;
+
+    .line 73
+    .line 74
+    const-string/jumbo v1, "proxygenInfo"
+
+    .line 75
+    .line 76
+    .line 77
+    const/4 v0, 0x7
+
+    .line 78
+    invoke-static {v1, v2, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v0
+
+    .line 82
+    sput-object v0, LX/2Bm;->A07:LX/2BQ;
+
+    .line 83
+    .line 84
+    const-string/jumbo v1, "combinedPublishes"
+
+    .line 85
+    .line 86
+    .line 87
+    const/16 v0, 0x8
+
+    .line 88
+    .line 89
+    invoke-static {v1, v2, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
+
+    .line 90
+    .line 91
+    .line 92
+    move-result-object v0
+
+    .line 93
+    sput-object v0, LX/2Bm;->A03:LX/2BQ;
+
+    .line 94
+    .line 95
+    const-string/jumbo v1, "zeroRatingTokenHash"
+
+    .line 96
+    .line 97
+    .line 98
+    const/16 v0, 0x9
+
+    .line 99
+    .line 100
+    invoke-static {v1, v4, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
+
+    .line 101
+    .line 102
+    .line 103
+    move-result-object v0
+
+    .line 104
+    sput-object v0, LX/2Bm;->A0A:LX/2BQ;
+
+    .line 105
+    .line 106
+    const-string/jumbo v2, "appSpecificInfo"
+
+    .line 107
+    .line 108
+    .line 109
+    const/16 v1, 0xd
+
+    .line 110
+    .line 111
+    const/16 v0, 0xa
+
+    .line 112
+    .line 113
+    invoke-static {v2, v1, v0}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object v0
+
+    .line 117
+    sput-object v0, LX/2Bm;->A00:LX/2BQ;
+
+    .line 118
+    .line 119
+    const-string/jumbo v0, "phpOverride"
+
+    .line 120
+    .line 121
+    .line 122
+    invoke-static {v0, v3, v4}, LX/0X7;->A0L(Ljava/lang/String;BS)LX/2BQ;
+
+    .line 123
+    .line 124
+    .line 125
+    move-result-object v0
+
+    .line 126
+    sput-object v0, LX/2Bm;->A06:LX/2BQ;
+
+    .line 127
+    .line 128
+    const-string/jumbo v2, "tokenBindingMessage"
+
+    .line 129
+    .line 130
+    .line 131
+    sget-object v1, LX/2BQ;->A04:Ljava/util/Map;
+
+    .line 132
+    .line 133
+    new-instance v0, LX/2BQ;
+
+    .line 134
+    .line 135
+    invoke-direct {v0, v2, v1, v3, v3}, LX/2BQ;-><init>(Ljava/lang/String;Ljava/util/Map;BS)V
+
+    .line 136
+    .line 137
+    .line 138
+    sput-object v0, LX/2Bm;->A0C:LX/2BQ;
+
+    .line 139
+    .line 140
+    return-void
 .end method

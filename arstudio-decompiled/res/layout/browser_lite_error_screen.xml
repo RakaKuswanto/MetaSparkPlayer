@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<X.4Cj android:gravity="center" android:orientation="vertical" android:background="@color/fds_gray_55" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<X.44k android:gravity="center" android:orientation="vertical" android:background="@color/fds_gray_55" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:orientation="vertical" android:id="@id/error_content_wrapper" android:paddingLeft="@dimen/abc_dialog_padding_material" android:paddingRight="@dimen/abc_dialog_padding_material" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:id="@id/browser_error_view_image_view" android:layout_width="@dimen/abc_action_bar_stacked_max_height" android:layout_height="@dimen/abc_action_bar_stacked_max_height" android:scaleType="fitCenter" />
+        <ImageView android:id="@id/browser_error_view_image_view" android:layout_width="@dimen/abc_action_button_min_height_material" android:layout_height="@dimen/abc_action_button_min_height_material" android:scaleType="fitCenter" />
         <TextView android:id="@id/browser_error_view_title_text_view" android:paddingTop="@dimen/arplayer_fps_pill_fps_font_size" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <TextView android:id="@id/browser_error_view_content_text_view" android:paddingTop="@dimen/autofill_payment_autofill_save_bottom_description_text_margin_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="2.0dip" />
         <TextView android:id="@id/browser_error_view_error_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <Button android:textColor="@drawable/browser_error_button_back_text_color" android:gravity="center" android:id="@id/browser_error_view_back_button" android:background="@drawable/browser_error_back_button_bg_drawable" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_button_min_width_overflow_material" android:layout_marginTop="@dimen/browser_error_view_back_button_top_margin" android:text="@string/__external__ssl_error_button_go_back" />
         <Button android:textColor="@drawable/browser_error_button_proceed_text_color" android:gravity="center" android:id="@id/browser_error_view_continue_button" android:background="@drawable/browser_error_proceed_button_bg_drawable" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_button_min_width_overflow_material" android:layout_marginTop="@dimen/browser_error_view_proceed_button_top_margin" android:text="@string/__external__ssl_error_button_continue" />
     </LinearLayout>
-</X.4Cj>
+</X.44k>

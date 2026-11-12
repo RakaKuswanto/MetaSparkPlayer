@@ -1,363 +1,369 @@
-.class public final enum LX/3Iu;
-.super Ljava/lang/Enum;
+.class public abstract LX/3Iu;
+.super LX/3Iv;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/3Iu;
-
-.field public static final enum DOWNLOAD_ABORTED:LX/3Iu;
-
-.field public static final enum DOWNLOAD_COMPLETED:LX/3Iu;
-
-.field public static final enum DOWNLOAD_IN_PROGRESS:LX/3Iu;
-
-.field public static final enum DOWNLOAD_NOT_REQUESTED:LX/3Iu;
-
-.field public static final enum DOWNLOAD_NOT_STARTED:LX/3Iu;
-
-.field public static final enum DOWNLOAD_PAUSED:LX/3Iu;
-
-.field public static final mReverseIndex:Ljava/util/Map;
-
-
 # instance fields
-.field public final mValue:I
+.field public A00:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 14
+.method public constructor <init>(Ljava/io/OutputStream;)V
+    .locals 2
 
     .line 0
-    const-string v0, "DOWNLOAD_IN_PROGRESS"
+    invoke-direct {p0, p1}, LX/3Iv;-><init>(Ljava/io/OutputStream;)V
 
     .line 1
     .line 2
-    const/4 v7, 0x0
-
     .line 3
-    new-instance v13, LX/3Iu;
+    const-wide/16 v0, 0x0
 
     .line 4
     .line 5
-    invoke-direct {v13, v0, v7, v7}, LX/3Iu;-><init>(Ljava/lang/String;II)V
+    iput-wide v0, p0, LX/3Iu;->A00:J
 
     .line 6
     .line 7
+    return-void
+.end method
+
+.method private final A00(Ljava/io/IOException;)V
+    .locals 4
+
+    .line 0
+    instance-of v0, p0, LX/3Il;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    move-object v0, p0
+
+    .line 5
+    check-cast v0, LX/3Il;
+
+    .line 6
+    .line 7
+    iget-object v3, v0, LX/3Il;->A00:LX/3Gq;
+
     .line 8
-    sput-object v13, LX/3Iu;->DOWNLOAD_IN_PROGRESS:LX/3Iu;
-
     .line 9
-    .line 10
-    const-string v0, "DOWNLOAD_PAUSED"
+    iget-wide v1, v0, LX/3Iu;->A00:J
 
+    .line 10
     .line 11
+    const/4 v0, 0x0
+
     .line 12
-    const/4 v12, 0x1
+    invoke-virtual {v3, v1, v2, v0}, LX/3Gq;->A00(JZ)V
 
     .line 13
-    new-instance v11, LX/3Iu;
-
     .line 14
     .line 15
-    invoke-direct {v11, v0, v12, v12}, LX/3Iu;-><init>(Ljava/lang/String;II)V
+    throw p1
 
     .line 16
-    .line 17
-    .line 18
-    sput-object v11, LX/3Iu;->DOWNLOAD_PAUSED:LX/3Iu;
+    :cond_0
+    move-object v1, p0
 
+    .line 17
+    check-cast v1, LX/3Ik;
+
+    .line 18
     .line 19
+    const/4 v0, 0x1
+
     .line 20
-    const-string v0, "DOWNLOAD_COMPLETED"
+    iput-boolean v0, v1, LX/3Ik;->A00:Z
 
     .line 21
     .line 22
-    const/4 v10, 0x2
+    iget-object v0, v1, LX/3Ik;->A02:LX/3I4;
 
     .line 23
-    new-instance v9, LX/3Iu;
-
     .line 24
-    .line 25
-    invoke-direct {v9, v0, v10, v10}, LX/3Iu;-><init>(Ljava/lang/String;II)V
+    iget-object v3, v0, LX/3I4;->A01:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
+    .line 25
     .line 26
+    iget v2, v1, LX/3Ik;->A01:I
+
     .line 27
     .line 28
-    sput-object v9, LX/3Iu;->DOWNLOAD_COMPLETED:LX/3Iu;
+    const v1, 0x290001e
 
     .line 29
     .line 30
-    const-string v0, "DOWNLOAD_NOT_STARTED"
-
     .line 31
+    const/4 v0, 0x3
+
     .line 32
-    const/4 v8, 0x3
+    invoke-interface {v3, v1, v2, v0}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IIS)V
 
     .line 33
-    new-instance v6, LX/3Iu;
-
     .line 34
     .line 35
-    invoke-direct {v6, v0, v8, v8}, LX/3Iu;-><init>(Ljava/lang/String;II)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v6, LX/3Iu;->DOWNLOAD_NOT_STARTED:LX/3Iu;
-
-    .line 39
-    .line 40
-    const-string v0, "DOWNLOAD_ABORTED"
-
-    .line 41
-    .line 42
-    const/4 v5, 0x4
-
-    .line 43
-    const/4 v4, 0x5
-
-    .line 44
-    new-instance v3, LX/3Iu;
-
-    .line 45
-    .line 46
-    invoke-direct {v3, v0, v5, v4}, LX/3Iu;-><init>(Ljava/lang/String;II)V
-
-    .line 47
-    .line 48
-    .line 49
-    sput-object v3, LX/3Iu;->DOWNLOAD_ABORTED:LX/3Iu;
-
-    .line 50
-    .line 51
-    const-string v2, "DOWNLOAD_NOT_REQUESTED"
-
-    .line 52
-    .line 53
-    const/4 v0, 0x6
-
-    .line 54
-    new-instance v1, LX/3Iu;
-
-    .line 55
-    .line 56
-    invoke-direct {v1, v2, v4, v0}, LX/3Iu;-><init>(Ljava/lang/String;II)V
-
-    .line 57
-    .line 58
-    .line 59
-    sput-object v1, LX/3Iu;->DOWNLOAD_NOT_REQUESTED:LX/3Iu;
-
-    .line 60
-    .line 61
-    new-array v0, v0, [LX/3Iu;
-
-    .line 62
-    .line 63
-    aput-object v13, v0, v7
-
-    .line 64
-    .line 65
-    aput-object v11, v0, v12
-
-    .line 66
-    .line 67
-    aput-object v9, v0, v10
-
-    .line 68
-    .line 69
-    aput-object v6, v0, v8
-
-    .line 70
-    .line 71
-    aput-object v3, v0, v5
-
-    .line 72
-    .line 73
-    aput-object v1, v0, v4
-
-    .line 74
-    .line 75
-    sput-object v0, LX/3Iu;->$VALUES:[LX/3Iu;
-
-    .line 76
-    .line 77
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 78
-    .line 79
-    .line 80
-    move-result-object v0
-
-    .line 81
-    sput-object v0, LX/3Iu;->mReverseIndex:Ljava/util/Map;
-
-    .line 82
-    .line 83
-    invoke-static {}, LX/3Iu;->values()[LX/3Iu;
-
-    .line 84
-    .line 85
-    .line 86
-    move-result-object v4
-
-    .line 87
-    array-length v3, v4
-
-    .line 88
-    :goto_0
-    if-ge v7, v3, :cond_0
-
-    .line 89
-    .line 90
-    aget-object v2, v4, v7
-
-    .line 91
-    .line 92
-    sget-object v1, LX/3Iu;->mReverseIndex:Ljava/util/Map;
-
-    .line 93
-    .line 94
-    iget v0, v2, LX/3Iu;->mValue:I
-
-    .line 95
-    .line 96
-    invoke-static {v2, v1, v0}, LX/0Yf;->A1A(Ljava/lang/Object;Ljava/util/Map;I)V
-
-    .line 97
-    .line 98
-    .line 99
-    add-int/lit8 v7, v7, 0x1
-
-    .line 100
-    .line 101
-    goto :goto_0
-
-    .line 102
-    :cond_0
-    return-void
+    throw p1
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+
+# virtual methods
+.method public close()V
+    .locals 4
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :try_start_0
+    invoke-super {p0}, LX/3Iv;->close()V
 
     .line 1
     .line 2
     .line 3
-    iput p3, p0, LX/3Iu;->mValue:I
+    move-object v1, p0
 
     .line 4
+    instance-of v0, p0, LX/3Il;
+
     .line 5
-    return-void
-.end method
-
-.method public static fromVal(I)LX/3Iu;
-    .locals 3
-
-    .line 0
-    sget-object v2, LX/3Iu;->mReverseIndex:Ljava/util/Map;
-
-    .line 1
-    .line 2
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v1
-
     .line 6
-    invoke-interface {v2, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
     .line 7
     .line 8
-    .line 9
-    move-result v0
+    check-cast v1, LX/3Il;
 
+    .line 9
     .line 10
-    if-eqz v0, :cond_0
+    iget-object v3, v1, LX/3Il;->A00:LX/3Gq;
 
     .line 11
     .line 12
-    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v1, v1, LX/3Iu;->A00:J
+
+    .line 13
+    .line 14
+    const/4 v0, 0x1
+
+    .line 15
+    invoke-virtual {v3, v1, v2, v0}, LX/3Gq;->A00(JZ)V
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_0
+    return-void
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 19
+    :catch_0
+    move-exception v0
+
+    .line 20
+    invoke-direct {p0, v0}, LX/3Iu;->A00(Ljava/io/IOException;)V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    throw v0
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    .line 0
+    :try_start_0
+    invoke-super {p0}, LX/3Iv;->flush()V
+
+    .line 1
+    .line 2
+    .line 3
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 4
+    :catch_0
+    move-exception v0
+
+    .line 5
+    invoke-direct {p0, v0}, LX/3Iu;->A00(Ljava/io/IOException;)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    throw v0
+
+    .line 13
+    :goto_0
+    return-void
+.end method
+
+.method public final write(I)V
+    .locals 4
+
+    .line 0
+    :try_start_0
+    invoke-super {p0, p1}, LX/3Iv;->write(I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-wide v2, p0, LX/3Iu;->A00:J
+
+    .line 4
+    .line 5
+    const-wide/16 v0, 0x1
+
+    .line 6
+    .line 7
+    add-long/2addr v2, v0
+
+    .line 8
+    iput-wide v2, p0, LX/3Iu;->A00:J
+
+    .line 9
+    .line 10
+    return-void
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 11
+    :catch_0
+    move-exception v0
+
+    .line 12
+    invoke-direct {p0, v0}, LX/3Iu;->A00(Ljava/io/IOException;)V
 
     .line 13
     .line 14
     .line 15
-    move-result-object v0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 16
-    check-cast v0, LX/3Iu;
-
     .line 17
     .line 18
-    return-object v0
-
-    .line 19
-    :cond_0
-    const-string v0, "Invalid download status value"
-
-    .line 20
-    .line 21
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 22
-    .line 23
-    .line 24
     move-result-object v0
 
-    .line 25
+    .line 19
     throw v0
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/3Iu;
-    .locals 1
+.method public final write([B)V
+    .locals 4
 
-    .line 0
-    const-class v0, LX/3Iu;
+    .line 268435456
+    :try_start_0
+    invoke-super {p0, p1}, LX/3Iv;->write([B)V
 
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iget-wide v2, p0, LX/3Iu;->A00:J
 
-    .line 3
-    .line 4
-    .line 5
+    .line 268435460
+    .line 268435461
+    array-length v0, p1
+
+    .line 268435462
+    int-to-long v0, v0
+
+    .line 268435463
+    add-long/2addr v2, v0
+
+    .line 268435464
+    iput-wide v2, p0, LX/3Iu;->A00:J
+
+    .line 268435465
+    .line 268435466
+    return-void
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 268435467
+    :catch_0
+    move-exception v0
+
+    .line 268435468
+    invoke-direct {p0, v0}, LX/3Iu;->A00(Ljava/io/IOException;)V
+
+    .line 268435469
+    .line 268435470
+    .line 268435471
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 268435472
+    .line 268435473
+    .line 268435474
     move-result-object v0
 
-    .line 6
-    check-cast v0, LX/3Iu;
-
-    .line 7
-    .line 8
-    return-object v0
+    .line 268435475
+    throw v0
 .end method
 
-.method public static values()[LX/3Iu;
-    .locals 1
+.method public final write([BII)V
+    .locals 4
 
-    .line 0
-    sget-object v0, LX/3Iu;->$VALUES:[LX/3Iu;
+    .line 536870912
+    :try_start_0
+    invoke-super {p0, p1, p2, p3}, LX/3Iv;->write([BII)V
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    iget-wide v2, p0, LX/3Iu;->A00:J
 
-    .line 3
-    .line 4
-    .line 5
+    .line 536870916
+    .line 536870917
+    int-to-long v0, p3
+
+    .line 536870918
+    add-long/2addr v2, v0
+
+    .line 536870919
+    iput-wide v2, p0, LX/3Iu;->A00:J
+
+    .line 536870920
+    .line 536870921
+    return-void
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 536870922
+    :catch_0
+    move-exception v0
+
+    .line 536870923
+    invoke-direct {p0, v0}, LX/3Iu;->A00(Ljava/io/IOException;)V
+
+    .line 536870924
+    .line 536870925
+    .line 536870926
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 536870927
+    .line 536870928
+    .line 536870929
     move-result-object v0
 
-    .line 6
-    check-cast v0, [LX/3Iu;
-
-    .line 7
-    .line 8
-    return-object v0
+    .line 536870930
+    throw v0
 .end method

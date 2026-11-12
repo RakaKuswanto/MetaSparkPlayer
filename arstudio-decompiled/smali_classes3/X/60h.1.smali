@@ -3,765 +3,753 @@
 .source ""
 
 # interfaces
-.implements LX/6Ly;
+.implements LX/6CH;
 
 
 # static fields
-.field public static final A03:LX/54Y;
-
-.field public static final A04:LX/60h;
-
-.field public static final A05:LX/60j;
-
-.field public static final A06:Ljava/lang/String;
-
-.field public static final A07:Ljava/lang/String;
-
-.field public static final A08:Ljava/lang/String;
-
-.field public static final A09:Ljava/lang/String;
+.field public static final A0E:LX/694;
 
 
 # instance fields
-.field public final A00:I
+.field public A00:LX/63h;
 
-.field public final A01:J
+.field public A01:[B
 
-.field public final A02:[LX/60j;
+.field public A02:[B
+
+.field public A03:LX/60i;
+
+.field public final A04:LX/6CK;
+
+.field public final A05:Ljava/lang/ref/WeakReference;
+
+.field public final A06:Ljava/util/WeakHashMap;
+
+.field public final A07:Landroid/os/Handler;
+
+.field public final A08:LX/69x;
+
+.field public final A09:LX/69d;
+
+.field public final A0A:LX/5xk;
+
+.field public volatile A0B:LX/5Us;
+
+.field public volatile A0C:LX/60r;
+
+.field public volatile A0D:LX/6Br;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 8
+    .locals 2
 
     .line 0
-    const/4 v7, 0x0
+    const/4 v1, 0x0
 
     .line 1
-    new-array v1, v7, [LX/60j;
+    new-instance v0, LX/5HJ;
 
     .line 2
     .line 3
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+    invoke-direct {v0, v1}, LX/5HJ;-><init>(I)V
 
     .line 4
     .line 5
     .line 6
+    sput-object v0, LX/60h;->A0E:LX/694;
+
     .line 7
     .line 8
-    new-instance v0, LX/60h;
+    return-void
+.end method
 
+.method public constructor <init>(Landroid/os/Handler;LX/69i;LX/5xk;LX/6CK;)V
+    .locals 2
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    const/16 v1, 0x1000
+
+    .line 4
+    .line 5
+    new-array v0, v1, [B
+
+    .line 6
+    .line 7
+    iput-object v0, p0, LX/60h;->A02:[B
+
+    .line 8
     .line 9
-    .line 10
-    invoke-direct {v0, v1}, LX/60h;-><init>([LX/60j;)V
+    new-instance v0, Ljava/util/WeakHashMap;
 
+    .line 10
     .line 11
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+
     .line 12
     .line 13
-    sput-object v0, LX/60h;->A04:LX/60h;
-
     .line 14
+    iput-object v0, p0, LX/60h;->A06:Ljava/util/WeakHashMap;
+
     .line 15
-    new-array v2, v7, [I
-
     .line 16
+    new-instance v0, LX/67q;
+
     .line 17
-    new-array v6, v7, [Landroid/net/Uri;
-
     .line 18
-    .line 19
-    new-array v1, v7, [J
+    invoke-direct {v0, p0}, LX/67q;-><init>(LX/60h;)V
 
+    .line 19
     .line 20
     .line 21
-    invoke-static {v7, v7}, Ljava/lang/Math;->max(II)I
+    iput-object v0, p0, LX/60h;->A09:LX/69d;
 
     .line 22
     .line 23
-    .line 24
-    move-result v0
+    new-instance v0, LX/60s;
 
+    .line 24
     .line 25
-    invoke-static {v2, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    invoke-direct {v0, p0}, LX/60s;-><init>(LX/60h;)V
 
     .line 26
     .line 27
     .line 28
-    move-result-object v3
+    iput-object v0, p0, LX/60h;->A08:LX/69x;
 
     .line 29
-    invoke-static {v3, v7, v0, v7}, Ljava/util/Arrays;->fill([IIII)V
-
     .line 30
+    iput-object p4, p0, LX/60h;->A04:LX/6CK;
+
     .line 31
     .line 32
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([JI)[J
+    iput-object p1, p0, LX/60h;->A07:Landroid/os/Handler;
+
+    .line 33
+    .line 34
+    new-array v0, v1, [B
+
+    .line 35
+    .line 36
+    iput-object v0, p0, LX/60h;->A01:[B
+
+    .line 37
+    .line 38
+    invoke-static {p2}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    iput-object v0, p0, LX/60h;->A05:Ljava/lang/ref/WeakReference;
+
+    .line 43
+    .line 44
+    iput-object p3, p0, LX/60h;->A0A:LX/5xk;
+
+    .line 45
+    .line 46
+    return-void
+.end method
+
+.method public static declared-synchronized A00(LX/60h;)Z
+    .locals 5
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, LX/60h;->A05:Ljava/lang/ref/WeakReference;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    check-cast v0, LX/69i;
+
+    .line 8
+    .line 9
+    const/4 v4, 0x0
+
+    .line 10
+    if-eqz v0, :cond_1
+
+    .line 11
+    .line 12
+    invoke-interface {v0}, LX/69i;->AAd()Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v3
+
+    .line 16
+    if-eqz v3, :cond_1
+
+    .line 17
+    .line 18
+    iget-object v2, p0, LX/60h;->A06:Ljava/util/WeakHashMap;
+
+    .line 19
+    .line 20
+    invoke-virtual {v2, v3}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v1
+
+    .line 24
+    check-cast v1, Ljava/lang/Boolean;
+
+    .line 25
+    .line 26
+    iget-object v0, p0, LX/60h;->A00:LX/63h;
+
+    .line 27
+    .line 28
+    if-eqz v0, :cond_1
+
+    .line 29
+    .line 30
+    if-eqz v1, :cond_0
+
+    .line 31
+    .line 32
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 33
     .line 34
     .line 35
-    move-result-object v2
+    move-result v0
 
     .line 36
-    invoke-static {v2, v7, v0, v4, v5}, Ljava/util/Arrays;->fill([JIIJ)V
+    if-nez v0, :cond_1
 
     .line 37
     .line 38
-    .line 39
-    invoke-static {v6, v7}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v3, v4}, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;->startRecording(Z)V
 
+    .line 39
     .line 40
     .line 41
-    .line 42
-    move-result-object v1
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
+    .line 42
     .line 43
-    check-cast v1, [Landroid/net/Uri;
+    invoke-virtual {v2, v3, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 44
     .line 45
-    new-instance v0, LX/60j;
-
     .line 46
-    .line 47
-    invoke-direct {v0, v3, v2, v1}, LX/60j;-><init>([I[J[Landroid/net/Uri;)V
-
-    .line 48
-    .line 49
-    .line 50
-    sput-object v0, LX/60h;->A05:LX/60j;
-
-    .line 51
-    .line 52
     const/4 v0, 0x1
 
+    .line 47
+    monitor-exit p0
+
+    .line 48
+    return v0
+
+    .line 49
+    :cond_1
+    monitor-exit p0
+
+    .line 50
+    return v4
+
+    .line 51
+    :catchall_0
+    move-exception v0
+
+    .line 52
+    monitor-exit p0
+
     .line 53
-    const/16 v1, 0x24
-
-    .line 54
-    .line 55
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 56
-    .line 57
-    .line 58
-    move-result-object v0
-
-    .line 59
-    sput-object v0, LX/60h;->A06:Ljava/lang/String;
-
-    .line 60
-    .line 61
-    const/4 v0, 0x2
-
-    .line 62
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    sput-object v0, LX/60h;->A07:Ljava/lang/String;
-
-    .line 67
-    .line 68
-    const/4 v0, 0x3
-
-    .line 69
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 70
-    .line 71
-    .line 72
-    move-result-object v0
-
-    .line 73
-    sput-object v0, LX/60h;->A08:Ljava/lang/String;
-
-    .line 74
-    .line 75
-    const/4 v0, 0x4
-
-    .line 76
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    .line 77
-    .line 78
-    .line 79
-    move-result-object v0
-
-    .line 80
-    sput-object v0, LX/60h;->A09:Ljava/lang/String;
-
-    .line 81
-    .line 82
-    const/16 v1, 0x8
-
-    .line 83
-    .line 84
-    new-instance v0, LX/6Pm;
-
-    .line 85
-    .line 86
-    invoke-direct {v0, v1}, LX/6Pm;-><init>(I)V
-
-    .line 87
-    .line 88
-    .line 89
-    sput-object v0, LX/60h;->A03:LX/54Y;
-
-    .line 90
-    .line 91
-    return-void
-.end method
-
-.method public constructor <init>([LX/60j;)V
-    .locals 2
-
-    .line 0
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    .line 1
-    .line 2
-    .line 3
-    .line 4
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-wide v0, p0, LX/60h;->A01:J
-
-    .line 9
-    .line 10
-    array-length v0, p1
-
-    .line 11
-    iput v0, p0, LX/60h;->A00:I
-
-    .line 12
-    .line 13
-    iput-object p1, p0, LX/60h;->A02:[LX/60j;
-
-    .line 14
-    .line 15
-    return-void
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final A00(I)LX/60j;
-    .locals 1
+.method public final A3G(Landroid/os/Handler;LX/5Us;LX/680;LX/694;LX/6Br;)V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x0
+    iput-object p5, p0, LX/60h;->A0D:LX/6Br;
 
     .line 1
-    if-ge p1, v0, :cond_0
-
     .line 2
+    iget-object v0, p0, LX/60h;->A08:LX/69x;
+
     .line 3
-    sget-object v0, LX/60h;->A05:LX/60j;
-
     .line 4
-    .line 5
-    return-object v0
-
-    .line 6
-    :cond_0
-    iget-object v0, p0, LX/60h;->A02:[LX/60j;
-
-    .line 7
-    .line 8
-    aget-object v0, v0, p1
-
-    .line 9
-    .line 10
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    .line 0
-    const/4 v3, 0x1
-
-    .line 1
-    if-eq p0, p1, :cond_0
-
-    .line 2
-    .line 3
-    const/4 v2, 0x0
-
-    .line 4
-    if-eqz p1, :cond_2
+    invoke-virtual {p5, v0}, LX/6Br;->A00(LX/69x;)V
 
     .line 5
     .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 7
+    if-eqz p2, :cond_0
+
     .line 8
     .line 9
-    move-result-object v1
+    invoke-virtual {p2}, LX/5Us;->A03()V
 
     .line 10
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 11
     .line 12
-    .line 13
-    move-result-object v0
+    :cond_0
+    iput-object p2, p0, LX/60h;->A0B:LX/5Us;
 
+    .line 13
     .line 14
-    if-ne v1, v0, :cond_2
+    if-eqz p3, :cond_1
 
     .line 15
     .line 16
-    check-cast p1, LX/60h;
+    new-instance v0, LX/60r;
 
     .line 17
     .line 18
-    iget v1, p0, LX/60h;->A00:I
+    invoke-direct {v0, p3}, LX/60r;-><init>(LX/680;)V
 
     .line 19
     .line 20
-    iget v0, p1, LX/60h;->A00:I
-
     .line 21
-    .line 22
-    if-ne v1, v0, :cond_1
+    invoke-virtual {v0}, LX/60r;->A00()V
 
+    .line 22
     .line 23
     .line 24
-    iget-object v1, p0, LX/60h;->A02:[LX/60j;
+    iput-object v0, p0, LX/60h;->A0C:LX/60r;
 
     .line 25
     .line 26
-    iget-object v0, p1, LX/60h;->A02:[LX/60j;
+    :cond_1
+    invoke-static {p0}, LX/60h;->A00(LX/60h;)Z
 
     .line 27
     .line 28
-    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
     .line 29
+    iget-object v0, p0, LX/60h;->A00:LX/63h;
+
     .line 30
     .line 31
-    move-result v0
+    if-eqz v0, :cond_2
 
     .line 32
-    if-eqz v0, :cond_1
-
     .line 33
+    invoke-virtual {v0, p4, p1}, LX/63h;->A04(LX/694;Landroid/os/Handler;)V
+
     .line 34
-    :cond_0
-    return v3
-
     .line 35
-    :cond_1
-    const/4 v3, 0x0
-
     .line 36
-    return v3
+    return-void
 
     .line 37
     :cond_2
-    return v2
-.end method
+    const-string v1, "mAudioRecorder is null while starting"
 
-.method public final hashCode()I
-    .locals 4
-
-    .line 0
-    iget v0, p0, LX/60h;->A00:I
-
-    .line 1
-    .line 2
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 3
-    .line 4
-    mul-int/lit8 v3, v0, 0x1f
-
-    .line 5
-    .line 6
-    const-wide/16 v1, 0x0
-
-    .line 7
-    .line 8
-    long-to-int v0, v1
-
-    .line 9
-    add-int/2addr v3, v0
-
-    .line 10
-    mul-int/lit8 v3, v3, 0x1f
-
-    .line 11
-    .line 12
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    .line 13
-    .line 14
-    .line 15
-    .line 16
-    .line 17
-    long-to-int v0, v1
-
-    .line 18
-    add-int/2addr v3, v0
-
-    .line 19
-    mul-int/lit8 v0, v3, 0x1f
-
-    .line 20
-    .line 21
-    mul-int/lit8 v1, v0, 0x1f
-
-    .line 22
-    .line 23
-    iget-object v0, p0, LX/60h;->A02:[LX/60j;
-
-    .line 24
-    .line 25
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    .line 26
-    .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    add-int/2addr v1, v0
-
-    .line 30
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 11
-
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v8
-
-    .line 4
-    const-string v0, "AdPlaybackState(adsId="
-
-    .line 5
-    .line 6
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 7
-    .line 8
-    .line 9
-    const/4 v0, 0x0
-
-    .line 10
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 11
-    .line 12
-    .line 13
-    const-string v0, ", adResumePositionUs="
-
-    .line 14
-    .line 15
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 16
-    .line 17
-    .line 18
-    const-wide/16 v0, 0x0
-
-    .line 19
-    .line 20
-    invoke-virtual {v8, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    .line 21
-    .line 22
-    .line 23
-    const-string v0, ", adGroups=["
-
-    .line 24
-    .line 25
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 26
-    .line 27
-    .line 28
-    const/4 v7, 0x0
-
-    .line 29
-    :goto_0
-    iget-object v6, p0, LX/60h;->A02:[LX/60j;
-
-    .line 30
-    .line 31
-    array-length v5, v6
-
-    .line 32
-    const-string v4, "])"
-
-    .line 33
-    .line 34
-    if-ge v7, v5, :cond_8
-
-    .line 35
-    .line 36
-    const-string v0, "adGroup(timeUs="
-
-    .line 37
     .line 38
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 39
+    new-instance v0, LX/5Vn;
+
     .line 40
     .line 41
-    const-wide/16 v0, 0x0
+    invoke-direct {v0, v1}, LX/5Vn;-><init>(Ljava/lang/String;)V
 
     .line 42
     .line 43
-    invoke-virtual {v8, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    .line 44
+    invoke-static {p1, v0, p4}, LX/6CS;->A00(Landroid/os/Handler;LX/5VZ;LX/694;)V
+
+    .line 45
+    .line 46
+    .line 47
+    return-void
+.end method
+
+.method public final AD0()Ljava/util/Map;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final Aep(Landroid/os/Handler;Landroid/os/Handler;LX/60U;LX/694;)V
+    .locals 10
+
+    .line 0
+    new-instance v6, LX/60i;
+
+    .line 1
+    .line 2
+    move-object v3, p1
+
+    .line 3
+    move-object v5, p3
+
+    .line 4
+    invoke-direct {v6, p1, p3, p0}, LX/60i;-><init>(Landroid/os/Handler;LX/60U;LX/60h;)V
+
+    .line 5
+    .line 6
+    .line 7
+    iput-object v6, p0, LX/60h;->A03:LX/60i;
+
+    .line 8
+    .line 9
+    iget-object v4, p0, LX/60h;->A09:LX/69d;
+
+    .line 10
+    .line 11
+    iget-object v1, p0, LX/60h;->A0A:LX/5xk;
+
+    .line 12
+    .line 13
+    const/16 v0, 0x3ec
+
+    .line 14
+    .line 15
+    invoke-interface {v1, v0}, LX/5xk;->ACN(I)I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v7
+
+    .line 19
+    const/16 v0, 0x15
+
+    .line 20
+    .line 21
+    invoke-interface {v1, v0}, LX/5xk;->AEK(I)J
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-wide v8
+
+    .line 25
+    new-instance v2, LX/63h;
+
+    .line 26
+    .line 27
+    invoke-direct/range {v2 .. v9}, LX/63h;-><init>(Landroid/os/Handler;LX/69d;LX/60U;LX/660;IJ)V
+
+    .line 28
+    .line 29
+    .line 30
+    iput-object v2, p0, LX/60h;->A00:LX/63h;
+
+    .line 31
+    .line 32
+    iget-object v0, p0, LX/60h;->A01:[B
+
+    .line 33
+    .line 34
+    array-length v1, v0
+
+    .line 35
+    iget v0, v2, LX/63h;->A00:I
+
+    .line 36
+    .line 37
+    if-ge v1, v0, :cond_0
+
+    .line 38
+    .line 39
+    new-array v0, v0, [B
+
+    .line 40
+    .line 41
+    iput-object v0, p0, LX/60h;->A01:[B
+
+    .line 42
+    .line 43
+    :cond_0
+    iget-object v1, v2, LX/63h;->A09:LX/5Im;
 
     .line 44
     .line 45
+    const-string v0, "pARc"
+
     .line 46
-    const-string v0, ", ads=["
-
     .line 47
-    .line 48
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, LX/5Im;->A02(Ljava/lang/String;)V
 
+    .line 48
     .line 49
     .line 50
+    invoke-static {p2, v2}, LX/63h;->A01(Landroid/os/Handler;LX/63h;)V
+
     .line 51
-    const/4 v10, 0x0
-
     .line 52
-    :goto_1
-    aget-object v0, v6, v7
-
     .line 53
+    iget-object v1, v2, LX/63h;->A06:Landroid/os/Handler;
+
     .line 54
-    iget-object v0, v0, LX/60j;->A01:[I
-
     .line 55
-    .line 56
-    array-length v0, v0
+    new-instance v0, LX/63i;
 
+    .line 56
     .line 57
-    const-string v9, ", "
+    invoke-direct {v0, p2, v2, p4}, LX/63i;-><init>(Landroid/os/Handler;LX/63h;LX/694;)V
 
     .line 58
     .line 59
-    const/4 v3, 0x1
-
     .line 60
-    if-ge v10, v0, :cond_6
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 61
     .line 62
-    const-string v0, "ad(state="
+    .line 63
+    return-void
+.end method
+
+.method public final Ahn(Landroid/os/Handler;LX/694;LX/6Br;)V
+    .locals 4
+
+    .line 0
+    move-object v1, p0
+
+    .line 1
+    monitor-enter v1
+
+    .line 2
+    :try_start_0
+    iget-object v0, p0, LX/60h;->A05:Ljava/lang/ref/WeakReference;
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    check-cast v0, LX/69i;
+
+    .line 9
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-interface {v0}, LX/69i;->AAd()Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    if-eqz v0, :cond_0
+
+    .line 17
+    .line 18
+    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;->stopRecording()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 19
+    .line 20
+    .line 21
+    :cond_0
+    monitor-exit v1
+
+    .line 22
+    iget-object v0, p0, LX/60h;->A0C:LX/60r;
+
+    .line 23
+    .line 24
+    if-eqz v0, :cond_1
+
+    .line 25
+    .line 26
+    iget-object v0, p0, LX/60h;->A0C:LX/60r;
+
+    .line 27
+    .line 28
+    iget-object v3, v0, LX/60r;->A02:LX/680;
+
+    .line 29
+    .line 30
+    const/4 v2, 0x0
+
+    .line 31
+    iput v2, v3, LX/680;->A03:I
+
+    .line 32
+    .line 33
+    iget-object v1, v0, LX/60r;->A00:LX/66k;
+
+    .line 34
+    .line 35
+    iget v0, v1, LX/66k;->A02:I
+
+    .line 36
+    .line 37
+    iput v0, v3, LX/680;->A03:I
+
+    .line 38
+    .line 39
+    iput v2, v3, LX/680;->A00:I
+
+    .line 40
+    .line 41
+    iget v0, v1, LX/66k;->A01:I
+
+    .line 42
+    .line 43
+    iput v0, v3, LX/680;->A00:I
+
+    .line 44
+    .line 45
+    :cond_1
+    iget-object v0, p0, LX/60h;->A00:LX/63h;
+
+    .line 46
+    .line 47
+    if-eqz v0, :cond_2
+
+    .line 48
+    .line 49
+    invoke-virtual {v0, p2, p1}, LX/63h;->A05(LX/694;Landroid/os/Handler;)V
+
+    .line 50
+    .line 51
+    .line 52
+    :goto_0
+    const/4 v0, 0x0
+
+    .line 53
+    iput-object v0, p0, LX/60h;->A0D:LX/6Br;
+
+    .line 54
+    .line 55
+    iput-object v0, p0, LX/60h;->A0B:LX/5Us;
+
+    .line 56
+    .line 57
+    iput-object v0, p0, LX/60h;->A0C:LX/60r;
+
+    .line 58
+    .line 59
+    return-void
+
+    .line 60
+    :cond_2
+    const-string v1, "mAudioRecorder is null while stopping"
+
+    .line 61
+    .line 62
+    new-instance v0, LX/5Vn;
 
     .line 63
     .line 64
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, LX/5Vn;-><init>(Ljava/lang/String;)V
 
     .line 65
     .line 66
     .line 67
-    aget-object v0, v6, v7
+    invoke-static {p1, v0, p2}, LX/6CS;->A00(Landroid/os/Handler;LX/5VZ;LX/694;)V
 
     .line 68
     .line 69
-    iget-object v0, v0, LX/60j;->A01:[I
-
     .line 70
-    .line 71
-    aget v2, v0, v10
-
-    .line 72
-    .line 73
-    if-eqz v2, :cond_5
-
-    .line 74
-    .line 75
-    if-eq v2, v3, :cond_4
-
-    .line 76
-    .line 77
-    const/4 v0, 0x2
-
-    .line 78
-    if-eq v2, v0, :cond_3
-
-    .line 79
-    .line 80
-    const/4 v0, 0x3
-
-    .line 81
-    if-eq v2, v0, :cond_2
-
-    .line 82
-    .line 83
-    const/4 v1, 0x4
-
-    .line 84
-    const/16 v0, 0x21
-
-    .line 85
-    .line 86
-    if-eq v2, v1, :cond_0
-
-    .line 87
-    .line 88
-    const/16 v0, 0x3f
-
-    .line 89
-    .line 90
-    :cond_0
-    :goto_2
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 91
-    .line 92
-    .line 93
-    const-string v0, ", durationUs="
-
-    .line 94
-    .line 95
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 96
-    .line 97
-    .line 98
-    aget-object v2, v6, v7
-
-    .line 99
-    .line 100
-    iget-object v0, v2, LX/60j;->A02:[J
-
-    .line 101
-    .line 102
-    aget-wide v0, v0, v10
-
-    .line 103
-    .line 104
-    invoke-virtual {v8, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    .line 105
-    .line 106
-    .line 107
-    const/16 v0, 0x29
-
-    .line 108
-    .line 109
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 110
-    .line 111
-    .line 112
-    iget-object v0, v2, LX/60j;->A01:[I
-
-    .line 113
-    .line 114
-    array-length v0, v0
-
-    .line 115
-    sub-int/2addr v0, v3
-
-    .line 116
-    if-ge v10, v0, :cond_1
-
-    .line 117
-    .line 118
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 119
-    .line 120
-    .line 121
-    :cond_1
-    add-int/lit8 v10, v10, 0x1
-
-    .line 122
-    .line 123
-    goto :goto_1
-
-    .line 124
-    :cond_2
-    const/16 v0, 0x50
-
-    .line 125
-    .line 126
-    goto :goto_2
-
-    .line 127
-    :cond_3
-    const/16 v0, 0x53
-
-    .line 128
-    .line 129
-    goto :goto_2
-
-    .line 130
-    :cond_4
-    const/16 v0, 0x52
-
-    .line 131
-    .line 132
-    goto :goto_2
-
-    .line 133
-    :cond_5
-    const/16 v0, 0x5f
-
-    .line 134
-    .line 135
-    goto :goto_2
-
-    .line 136
-    :cond_6
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 137
-    .line 138
-    .line 139
-    sub-int/2addr v5, v3
-
-    .line 140
-    if-ge v7, v5, :cond_7
-
-    .line 141
-    .line 142
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 143
-    .line 144
-    .line 145
-    :cond_7
-    add-int/lit8 v7, v7, 0x1
-
-    .line 146
-    .line 147
     goto :goto_0
 
-    .line 148
-    :cond_8
-    invoke-static {v4, v8}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 71
+    :catchall_0
+    move-exception v0
 
-    .line 149
-    .line 150
-    .line 151
-    move-result-object v0
+    .line 72
+    monitor-exit v1
 
-    .line 152
-    return-object v0
+    .line 73
+    throw v0
+.end method
+
+.method public final release()V
+    .locals 4
+
+    .line 0
+    iget-object v1, p0, LX/60h;->A03:LX/60i;
+
+    .line 1
+    .line 2
+    const/4 v3, 0x0
+
+    .line 3
+    if-eqz v1, :cond_0
+
+    .line 4
+    .line 5
+    const/4 v0, 0x1
+
+    .line 6
+    iput-boolean v0, v1, LX/60i;->A05:Z
+
+    .line 7
+    .line 8
+    iput-object v3, p0, LX/60h;->A03:LX/60i;
+
+    .line 9
+    .line 10
+    :cond_0
+    iget-object v2, p0, LX/60h;->A00:LX/63h;
+
+    .line 11
+    .line 12
+    if-eqz v2, :cond_1
+
+    .line 13
+    .line 14
+    sget-object v1, LX/60h;->A0E:LX/694;
+
+    .line 15
+    .line 16
+    iget-object v0, p0, LX/60h;->A07:Landroid/os/Handler;
+
+    .line 17
+    .line 18
+    invoke-virtual {v2, v1, v0}, LX/63h;->A05(LX/694;Landroid/os/Handler;)V
+
+    .line 19
+    .line 20
+    .line 21
+    iput-object v3, p0, LX/60h;->A00:LX/63h;
+
+    .line 22
+    .line 23
+    :cond_1
+    iget-object v0, p0, LX/60h;->A06:Ljava/util/WeakHashMap;
+
+    .line 24
+    .line 25
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
+
+    .line 26
+    .line 27
+    .line 28
+    return-void
 .end method

@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract AKI(Landroid/view/View;I)I
+.method public abstract AmV(Landroid/graphics/drawable/Drawable;)V
 .end method

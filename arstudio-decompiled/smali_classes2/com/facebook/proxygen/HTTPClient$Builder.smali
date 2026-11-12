@@ -24,6 +24,8 @@
 
 .field public mDNSResolverExecutor:Ljava/util/concurrent/Executor;
 
+.field public mDisableCircularLogSink:Z
+
 .field public mDnsCacheEnabled:Z
 
 .field public mDnsCacheTtlEnabledHosts:Ljava/lang/String;
@@ -277,122 +279,126 @@
 
     .line 58
     .line 59
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mTransactionIdleTimeoutDisabled:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mDisableCircularLogSink:Z
 
     .line 60
     .line 61
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableTransportCallbacks:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mTransactionIdleTimeoutDisabled:Z
 
     .line 62
     .line 63
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mLargerFlowControlWindow:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableTransportCallbacks:Z
 
     .line 64
     .line 65
-    const v0, 0xffff
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mLargerFlowControlWindow:Z
 
     .line 66
     .line 67
-    .line 68
-    iput v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mSessionFlowControlWindow:I
+    const v0, 0xffff
 
+    .line 68
     .line 69
     .line 70
-    iput v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mStreamFlowControlWindow:I
+    iput v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mSessionFlowControlWindow:I
 
     .line 71
     .line 72
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mUseLoadBalancing:Z
+    iput v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mStreamFlowControlWindow:I
 
     .line 73
     .line 74
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableLigerPreconnect:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mUseLoadBalancing:Z
 
     .line 75
     .line 76
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableSimplePreconnectForReinit:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableLigerPreconnect:Z
 
     .line 77
     .line 78
-    iput-boolean v4, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableHTTP2:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableSimplePreconnectForReinit:Z
 
     .line 79
     .line 80
-    const-wide/32 v0, -0x5314ffe
+    iput-boolean v4, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableHTTP2:Z
 
     .line 81
     .line 82
-    .line 83
-    iput-wide v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mQuicVersion:J
+    const-wide/32 v0, -0x5314ffe
 
+    .line 83
     .line 84
     .line 85
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mShouldOverrideTlsHTTP2:Z
+    iput-wide v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mQuicVersion:J
 
     .line 86
     .line 87
-    iput-boolean v4, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mTlsHTTP2Override:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mShouldOverrideTlsHTTP2:Z
 
     .line 88
     .line 89
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mShouldOverrideFizzHTTP2Static:Z
+    iput-boolean v4, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mTlsHTTP2Override:Z
 
     .line 90
     .line 91
-    iput-boolean v4, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mFizzHTTP2StaticOverride:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mShouldOverrideFizzHTTP2Static:Z
 
     .line 92
     .line 93
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mSupportH2PubSub:Z
+    iput-boolean v4, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mFizzHTTP2StaticOverride:Z
 
     .line 94
     .line 95
-    iput-object v2, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mH2PubSubHostnames:Ljava/lang/String;
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mSupportH2PubSub:Z
 
     .line 96
     .line 97
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mAttemptEarlyDataInQuicPreconnect:Z
+    iput-object v2, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mH2PubSubHostnames:Ljava/lang/String;
 
     .line 98
     .line 99
-    const/4 v0, 0x0
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mAttemptEarlyDataInQuicPreconnect:Z
 
     .line 100
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mCdnOverride:Ljava/lang/String;
-
     .line 101
+    const/4 v0, 0x0
+
     .line 102
-    iput-boolean v4, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mInlinePersistenceLoading:Z
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mCdnOverride:Ljava/lang/String;
 
     .line 103
     .line 104
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mResetDNSResolverAsynchronously:Z
+    iput-boolean v4, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mInlinePersistenceLoading:Z
 
     .line 105
     .line 106
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableZstd:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mResetDNSResolverAsynchronously:Z
 
     .line 107
     .line 108
-    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableDzCompression:Z
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableZstd:Z
 
     .line 109
     .line 110
-    const/4 v0, -0x1
+    iput-boolean v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableDzCompression:Z
 
     .line 111
-    iput v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mTcpNotsentLowat:I
-
     .line 112
+    const/4 v0, -0x1
+
     .line 113
-    iput v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mSessionManagerConnectTimeoutExtra:I
+    iput v0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mTcpNotsentLowat:I
 
     .line 114
     .line 115
-    iput-object p1, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mUnexpectedErrorReporter:Lcom/facebook/proxygen/HTTPClient$UnexpectedErrorReporter;
+    iput v3, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mSessionManagerConnectTimeoutExtra:I
 
     .line 116
     .line 117
+    iput-object p1, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mUnexpectedErrorReporter:Lcom/facebook/proxygen/HTTPClient$UnexpectedErrorReporter;
+
+    .line 118
+    .line 119
     return-void
 .end method
 
@@ -671,7 +677,18 @@
     return p0
 .end method
 
-.method public static synthetic access$3100(Lcom/facebook/proxygen/HTTPClient$Builder;)[[B
+.method public static synthetic access$3100(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mDisableCircularLogSink:Z
+
+    .line 1
+    .line 2
+    return p0
+.end method
+
+.method public static synthetic access$3200(Lcom/facebook/proxygen/HTTPClient$Builder;)[[B
     .locals 0
 
     .line 0
@@ -682,7 +699,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$3200(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$3300(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -693,7 +710,7 @@
     return p0
 .end method
 
-.method public static synthetic access$3300(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/NetworkStatusMonitor;
+.method public static synthetic access$3400(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/NetworkStatusMonitor;
     .locals 0
 
     .line 0
@@ -704,7 +721,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$3400(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$3500(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -715,7 +732,7 @@
     return p0
 .end method
 
-.method public static synthetic access$3500(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$3600(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -726,7 +743,7 @@
     return p0
 .end method
 
-.method public static synthetic access$3600(Lcom/facebook/proxygen/HTTPClient$Builder;)I
+.method public static synthetic access$3700(Lcom/facebook/proxygen/HTTPClient$Builder;)I
     .locals 0
 
     .line 0
@@ -737,7 +754,7 @@
     return p0
 .end method
 
-.method public static synthetic access$3700(Lcom/facebook/proxygen/HTTPClient$Builder;)I
+.method public static synthetic access$3800(Lcom/facebook/proxygen/HTTPClient$Builder;)I
     .locals 0
 
     .line 0
@@ -748,22 +765,11 @@
     return p0
 .end method
 
-.method public static synthetic access$3800(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
-    .locals 0
-
-    .line 0
-    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mUseLoadBalancing:Z
-
-    .line 1
-    .line 2
-    return p0
-.end method
-
 .method public static synthetic access$3900(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
-    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableLigerPreconnect:Z
+    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mUseLoadBalancing:Z
 
     .line 1
     .line 2
@@ -785,7 +791,7 @@
     .locals 0
 
     .line 0
-    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableSimplePreconnectForReinit:Z
+    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableLigerPreconnect:Z
 
     .line 1
     .line 2
@@ -796,6 +802,17 @@
     .locals 0
 
     .line 0
+    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableSimplePreconnectForReinit:Z
+
+    .line 1
+    .line 2
+    return p0
+.end method
+
+.method public static synthetic access$4200(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+    .locals 0
+
+    .line 0
     iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableHTTP2:Z
 
     .line 1
@@ -803,7 +820,7 @@
     return p0
 .end method
 
-.method public static synthetic access$4200(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/FizzSettings;
+.method public static synthetic access$4300(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/FizzSettings;
     .locals 0
 
     .line 0
@@ -814,7 +831,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$4300(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/FizzSettings;
+.method public static synthetic access$4400(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/FizzSettings;
     .locals 0
 
     .line 0
@@ -825,7 +842,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$4400(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/Boolean;
+.method public static synthetic access$4500(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/Boolean;
     .locals 0
 
     .line 0
@@ -836,7 +853,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$4500(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/QuicSettings;
+.method public static synthetic access$4600(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/QuicSettings;
     .locals 0
 
     .line 0
@@ -847,7 +864,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$4600(Lcom/facebook/proxygen/HTTPClient$Builder;)J
+.method public static synthetic access$4700(Lcom/facebook/proxygen/HTTPClient$Builder;)J
     .locals 1
 
     .line 0
@@ -858,7 +875,7 @@
     return-wide v0
 .end method
 
-.method public static synthetic access$4700(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$4800(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -869,22 +886,11 @@
     return p0
 .end method
 
-.method public static synthetic access$4800(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
-    .locals 0
-
-    .line 0
-    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mInitialized:Z
-
-    .line 1
-    .line 2
-    return p0
-.end method
-
 .method public static synthetic access$4900(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
-    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mClosed:Z
+    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mInitialized:Z
 
     .line 1
     .line 2
@@ -902,7 +908,18 @@
     return p0
 .end method
 
-.method public static synthetic access$5000(Lcom/facebook/proxygen/HTTPClient$Builder;)J
+.method public static synthetic access$5000(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mClosed:Z
+
+    .line 1
+    .line 2
+    return p0
+.end method
+
+.method public static synthetic access$5100(Lcom/facebook/proxygen/HTTPClient$Builder;)J
     .locals 1
 
     .line 0
@@ -913,7 +930,7 @@
     return-wide v0
 .end method
 
-.method public static synthetic access$5100(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$5200(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -924,7 +941,7 @@
     return p0
 .end method
 
-.method public static synthetic access$5200(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$5300(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -935,7 +952,7 @@
     return p0
 .end method
 
-.method public static synthetic access$5300(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$5400(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -946,7 +963,7 @@
     return p0
 .end method
 
-.method public static synthetic access$5400(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$5500(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -957,7 +974,7 @@
     return p0
 .end method
 
-.method public static synthetic access$5500(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/RootCACallbacks;
+.method public static synthetic access$5600(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/RootCACallbacks;
     .locals 0
 
     .line 0
@@ -968,7 +985,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$5600(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/SSLKeyMaterialCallback;
+.method public static synthetic access$5700(Lcom/facebook/proxygen/HTTPClient$Builder;)Lcom/facebook/proxygen/SSLKeyMaterialCallback;
     .locals 0
 
     .line 0
@@ -979,7 +996,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$5700(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$5800(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -990,7 +1007,7 @@
     return p0
 .end method
 
-.method public static synthetic access$5800(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/String;
+.method public static synthetic access$5900(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -999,17 +1016,6 @@
     .line 1
     .line 2
     return-object p0
-.end method
-
-.method public static synthetic access$5900(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
-    .locals 0
-
-    .line 0
-    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mAttemptEarlyDataInQuicPreconnect:Z
-
-    .line 1
-    .line 2
-    return p0
 .end method
 
 .method public static synthetic access$600(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/String;
@@ -1023,7 +1029,18 @@
     return-object p0
 .end method
 
-.method public static synthetic access$6000(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/String;
+.method public static synthetic access$6000(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+    .locals 0
+
+    .line 0
+    iget-boolean p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mAttemptEarlyDataInQuicPreconnect:Z
+
+    .line 1
+    .line 2
+    return p0
+.end method
+
+.method public static synthetic access$6100(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -1034,7 +1051,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$6100(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$6200(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -1045,7 +1062,7 @@
     return p0
 .end method
 
-.method public static synthetic access$6200(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/util/concurrent/Executor;
+.method public static synthetic access$6300(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/util/concurrent/Executor;
     .locals 0
 
     .line 0
@@ -1056,7 +1073,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$6300(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/util/concurrent/Executor;
+.method public static synthetic access$6400(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/util/concurrent/Executor;
     .locals 0
 
     .line 0
@@ -1067,7 +1084,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$6400(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$6500(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -1078,7 +1095,7 @@
     return p0
 .end method
 
-.method public static synthetic access$6500(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$6600(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -1089,7 +1106,7 @@
     return p0
 .end method
 
-.method public static synthetic access$6600(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$6700(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -1100,7 +1117,7 @@
     return p0
 .end method
 
-.method public static synthetic access$6700(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
+.method public static synthetic access$6800(Lcom/facebook/proxygen/HTTPClient$Builder;)Z
     .locals 0
 
     .line 0
@@ -1111,7 +1128,7 @@
     return p0
 .end method
 
-.method public static synthetic access$6800(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/String;
+.method public static synthetic access$6900(Lcom/facebook/proxygen/HTTPClient$Builder;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -1120,17 +1137,6 @@
     .line 1
     .line 2
     return-object p0
-.end method
-
-.method public static synthetic access$6900(Lcom/facebook/proxygen/HTTPClient$Builder;)I
-    .locals 0
-
-    .line 0
-    iget p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mTcpNotsentLowat:I
-
-    .line 1
-    .line 2
-    return p0
 .end method
 
 .method public static synthetic access$700(Lcom/facebook/proxygen/HTTPClient$Builder;)I
@@ -1145,6 +1151,17 @@
 .end method
 
 .method public static synthetic access$7000(Lcom/facebook/proxygen/HTTPClient$Builder;)I
+    .locals 0
+
+    .line 0
+    iget p0, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mTcpNotsentLowat:I
+
+    .line 1
+    .line 2
+    return p0
+.end method
+
+.method public static synthetic access$7100(Lcom/facebook/proxygen/HTTPClient$Builder;)I
     .locals 0
 
     .line 0
@@ -1212,7 +1229,7 @@
 
     .line 13
     .line 14
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 15
     .line 16
@@ -1271,7 +1288,7 @@
     .line 45
     .line 46
     .line 47
-    invoke-static {v1, p6, p7}, LX/0Yg;->A0s(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+    invoke-static {v1, p6, p7}, LX/0X5;->A0h(Ljava/lang/StringBuilder;J)Ljava/lang/String;
 
     .line 48
     .line 49
@@ -1322,18 +1339,19 @@
 
     .line 10
     :cond_0
-    const-string v0, "You must call setRootCACallbacks()."
+    const-string/jumbo v0, "You must call setRootCACallbacks()."
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
     .line 13
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
     .line 14
     .line 15
+    .line 16
     move-result-object v0
 
-    .line 16
+    .line 17
     throw v0
 .end method
 
@@ -1399,37 +1417,38 @@
     int-to-long v3, p1
 
     .line 1
-    const-string v2, "closeStaleSessionsDelayMs"
+    const-string/jumbo v2, "closeStaleSessionsDelayMs"
 
     .line 2
     .line 3
+    .line 4
     const-wide/16 v5, 0x0
 
-    .line 4
     .line 5
+    .line 6
     const-wide/16 v7, 0x7530
 
-    .line 6
     .line 7
+    .line 8
     move-object v1, p0
 
-    .line 8
+    .line 9
     invoke-direct/range {v1 .. v8}, Lcom/facebook/proxygen/HTTPClient$Builder;->isValidOrReportUnexpectedError(Ljava/lang/String;JJJ)Z
 
-    .line 9
     .line 10
     .line 11
+    .line 12
     move-result v0
 
-    .line 12
+    .line 13
     if-eqz v0, :cond_0
 
-    .line 13
     .line 14
+    .line 15
     iput p1, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mCloseStaleSessionsDelayMs:I
 
-    .line 15
     .line 16
+    .line 17
     :cond_0
     return-object p0
 .end method
@@ -1450,6 +1469,17 @@
 
     .line 0
     iput-object p1, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mDNSResolverExecutor:Ljava/util/concurrent/Executor;
+
+    .line 1
+    .line 2
+    return-object p0
+.end method
+
+.method public setDisableCircularLogSink(Z)Lcom/facebook/proxygen/HTTPClient$Builder;
+    .locals 0
+
+    .line 0
+    iput-boolean p1, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mDisableCircularLogSink:Z
 
     .line 1
     .line 2
@@ -1501,27 +1531,28 @@
     .line 7
     .line 8
     .line 9
-    const-string v2, "dnsCacheTtlSecs"
+    const-string/jumbo v2, "dnsCacheTtlSecs"
 
     .line 10
     .line 11
+    .line 12
     invoke-direct/range {v1 .. v8}, Lcom/facebook/proxygen/HTTPClient$Builder;->isValidOrReportUnexpectedError(Ljava/lang/String;JJJ)Z
 
-    .line 12
     .line 13
     .line 14
+    .line 15
     move-result v0
 
-    .line 15
+    .line 16
     if-eqz v0, :cond_1
 
-    .line 16
     .line 17
+    .line 18
     :cond_0
     iput p1, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mDnsCacheTtlSecs:I
 
-    .line 18
     .line 19
+    .line 20
     :cond_1
     return-object p0
 .end method
@@ -1533,37 +1564,38 @@
     int-to-long v3, p1
 
     .line 1
-    const-string v2, "dnsMaxRetries"
+    const-string/jumbo v2, "dnsMaxRetries"
 
     .line 2
     .line 3
+    .line 4
     const-wide/16 v5, 0x0
 
-    .line 4
     .line 5
+    .line 6
     const-wide/16 v7, 0x4
 
-    .line 6
     .line 7
+    .line 8
     move-object v1, p0
 
-    .line 8
+    .line 9
     invoke-direct/range {v1 .. v8}, Lcom/facebook/proxygen/HTTPClient$Builder;->isValidOrReportUnexpectedError(Ljava/lang/String;JJJ)Z
 
-    .line 9
     .line 10
     .line 11
+    .line 12
     move-result v0
 
-    .line 12
+    .line 13
     if-eqz v0, :cond_0
 
-    .line 13
     .line 14
+    .line 15
     iput p1, p0, Lcom/facebook/proxygen/HTTPClient$Builder;->mDnsMaxRetries:I
 
-    .line 15
     .line 16
+    .line 17
     :cond_0
     return-object p0
 .end method

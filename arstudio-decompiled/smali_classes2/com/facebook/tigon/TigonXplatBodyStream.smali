@@ -20,7 +20,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -77,56 +77,56 @@
     .locals 3
 
     .line 0
-    new-instance v2, LX/3Qt;
+    new-instance v2, LX/381;
 
     .line 1
     .line 2
-    invoke-direct {v2}, LX/3Qt;-><init>()V
+    invoke-direct {v2}, LX/381;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    iget v0, p1, Lcom/facebook/tigon/TigonError;->mCategory:I
+    iget v0, p1, Lcom/facebook/tigon/TigonError;->_category:I
 
     .line 6
     .line 7
-    invoke-static {v2, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {v2, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 8
     .line 9
     .line 10
-    iget-object v0, p1, Lcom/facebook/tigon/TigonError;->mErrorDomain:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/tigon/TigonError;->_errorDomain:Ljava/lang/String;
 
     .line 11
     .line 12
-    invoke-static {v2, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {v2, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 13
     .line 14
     .line 15
-    iget v0, p1, Lcom/facebook/tigon/TigonError;->mDomainErrorCode:I
+    iget v0, p1, Lcom/facebook/tigon/TigonError;->_domainErrorCode:I
 
     .line 16
     .line 17
-    invoke-static {v2, v0}, LX/3PN;->A00(LX/3Qt;I)V
+    invoke-static {v2, v0}, LX/37p;->A00(LX/381;I)V
 
     .line 18
     .line 19
     .line 20
-    iget-object v0, p1, Lcom/facebook/tigon/TigonError;->mAnalyticsDetail:Ljava/lang/String;
+    iget-object v0, p1, Lcom/facebook/tigon/TigonError;->_analyticsDetail:Ljava/lang/String;
 
     .line 21
     .line 22
-    invoke-static {v2, v0}, LX/3PN;->A02(LX/3Qt;Ljava/lang/String;)V
+    invoke-static {v2, v0}, LX/37p;->A02(LX/381;Ljava/lang/String;)V
 
     .line 23
     .line 24
     .line 25
-    iget-object v1, v2, LX/3Qt;->A01:[B
+    iget-object v1, v2, LX/381;->A01:[B
 
     .line 26
     .line 27
-    iget v0, v2, LX/3Qt;->A00:I
+    iget v0, v2, LX/381;->A00:I
 
     .line 28
     .line 29

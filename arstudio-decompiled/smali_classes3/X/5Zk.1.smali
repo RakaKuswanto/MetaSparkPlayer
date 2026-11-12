@@ -3,19 +3,19 @@
 .source ""
 
 # interfaces
-.implements LX/5rW;
+.implements Landroid/media/MediaPlayer$OnErrorListener;
 
 
 # instance fields
-.field public final synthetic A00:LX/5b7;
+.field public final synthetic A00:LX/5Z4;
 
 
 # direct methods
-.method public constructor <init>(LX/5b7;)V
+.method public constructor <init>(LX/5Z4;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5Zk;->A00:LX/5b7;
+    iput-object p1, p0, LX/5Zk;->A00:LX/5Z4;
 
     .line 1
     .line 2
@@ -29,56 +29,37 @@
 
 
 # virtual methods
-.method public final AC5()Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;
-    .locals 1
+.method public final onError(Landroid/media/MediaPlayer;II)Z
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5Zk;->A00:LX/5b7;
+    iget-object v1, p0, LX/5Zk;->A00:LX/5Z4;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/5a1;->A04()Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
+    iget-object v0, v1, LX/5Z4;->A00:Landroid/media/MediaPlayer;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
     if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
     .line 7
     .line 8
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;->mServicesHostConfiguration:LX/5UZ;
-
     .line 9
+    const/4 v0, 0x0
+
     .line 10
-    if-eqz v0, :cond_0
+    iput-object v0, v1, LX/5Z4;->A00:Landroid/media/MediaPlayer;
 
     .line 11
     .line 12
-    iget-object v0, v0, LX/5UZ;->A06:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;
+    :cond_0
+    const/4 v0, 0x1
 
     .line 13
-    .line 14
-    if-eqz v0, :cond_0
-
-    .line 15
-    .line 16
-    invoke-virtual {v0}, Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;->getAudioPlatformComponentHost()Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioPlatformComponentHost;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
-    return-object v0
-
-    .line 21
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 22
-    return-object v0
+    return v0
 .end method

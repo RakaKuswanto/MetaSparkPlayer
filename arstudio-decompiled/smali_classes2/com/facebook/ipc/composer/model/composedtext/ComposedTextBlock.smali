@@ -41,11 +41,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x12
+    const/16 v0, 0x37
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -69,7 +69,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -132,7 +132,7 @@
 
     .line 31
     .line 32
-    invoke-static {p1, v4, v1, v0}, LX/0Yf;->A04(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
+    invoke-static {p1, v4, v1, v0}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
     .line 33
     .line 34
@@ -200,7 +200,7 @@
 
     .line 62
     .line 63
-    invoke-static {p1, v4, v1, v0}, LX/0Yf;->A04(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
+    invoke-static {p1, v4, v1, v0}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
     .line 64
     .line 65
@@ -236,7 +236,7 @@
 
     .line 79
     .line 80
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 81
     .line 82
@@ -257,30 +257,31 @@
 
     .line 89
     .line 90
-    invoke-static {p1, v1, v3}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v1}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 91
     .line 92
     .line 93
-    move-result v3
+    add-int/lit8 v3, v3, 0x1
 
     .line 94
+    .line 95
     goto :goto_3
 
-    .line 95
+    .line 96
     :cond_3
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 96
     .line 97
     .line 98
+    .line 99
     move-result-object v0
 
-    .line 99
+    .line 100
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A05:Ljava/util/Set;
 
-    .line 100
     .line 101
+    .line 102
     return-void
 .end method
 
@@ -293,21 +294,21 @@
 
     iput p6, p0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A00:I
 
-    const-string v0, "entityRanges"
+    const-string/jumbo v0, "entityRanges"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A01:Lcom/google/common/collect/ImmutableList;
 
     const-string/jumbo v0, "inlineStyleRanges"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A02:Lcom/google/common/collect/ImmutableList;
 
     const-string/jumbo v0, "text"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A03:Ljava/lang/String;
 
@@ -330,83 +331,84 @@
 
     .line 1
     .line 2
-    const-string v0, "blockType"
+    const-string/jumbo v0, "blockType"
 
     .line 3
     .line 4
+    .line 5
     invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    .line 5
     .line 6
     .line 7
+    .line 8
     move-result v0
 
-    .line 8
+    .line 9
     if-eqz v0, :cond_0
 
-    .line 9
     .line 10
+    .line 11
     iget-object v0, p0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A04:Lcom/facebook/graphql/enums/GraphQLComposedBlockType;
 
-    .line 11
     .line 12
+    .line 13
     return-object v0
 
-    .line 13
+    .line 14
     :cond_0
     sget-object v0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A06:Lcom/facebook/graphql/enums/GraphQLComposedBlockType;
 
-    .line 14
     .line 15
+    .line 16
     if-nez v0, :cond_2
 
-    .line 16
     .line 17
+    .line 18
     monitor-enter p0
 
-    .line 18
+    .line 19
     :try_start_0
     sget-object v0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A06:Lcom/facebook/graphql/enums/GraphQLComposedBlockType;
 
-    .line 19
     .line 20
+    .line 21
     if-nez v0, :cond_1
 
-    .line 21
     .line 22
+    .line 23
     sget-object v0, Lcom/facebook/graphql/enums/GraphQLComposedBlockType;->UNSTYLED:Lcom/facebook/graphql/enums/GraphQLComposedBlockType;
 
-    .line 23
     .line 24
+    .line 25
     sput-object v0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A06:Lcom/facebook/graphql/enums/GraphQLComposedBlockType;
 
-    .line 25
     .line 26
+    .line 27
     :cond_1
     monitor-exit p0
 
-    .line 27
+    .line 28
     goto :goto_0
 
-    .line 28
+    .line 29
     :catchall_0
     move-exception v0
 
-    .line 29
+    .line 30
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 30
+    .line 31
     throw v0
 
-    .line 31
+    .line 32
     :cond_2
     :goto_0
     sget-object v0, Lcom/facebook/ipc/composer/model/composedtext/ComposedTextBlock;->A06:Lcom/facebook/graphql/enums/GraphQLComposedBlockType;
 
-    .line 32
     .line 33
+    .line 34
     return-object v0
 .end method
 
@@ -484,7 +486,7 @@
 
     .line 29
     .line 30
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 31
     .line 32
@@ -504,7 +506,7 @@
 
     .line 39
     .line 40
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 41
     .line 42
@@ -524,7 +526,7 @@
 
     .line 49
     .line 50
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 51
     .line 52
@@ -556,7 +558,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
     .line 5
     .line 6
@@ -587,7 +589,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -606,7 +608,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 29
     .line 30
@@ -625,7 +627,7 @@
 
     .line 36
     .line 37
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 38
     .line 39
@@ -647,7 +649,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yh;->A01(Landroid/os/Parcel;Ljava/lang/Enum;)I
+    invoke-static {p1, v0}, LX/0X1;->A00(Landroid/os/Parcel;Ljava/lang/Enum;)I
 
     .line 3
     .line 4
@@ -673,7 +675,7 @@
 
     .line 15
     .line 16
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 17
     .line 18
@@ -719,7 +721,7 @@
 
     .line 37
     .line 38
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 39
     .line 40
@@ -774,7 +776,7 @@
 
     .line 64
     .line 65
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
     .line 66
     .line 67
@@ -795,7 +797,7 @@
 
     .line 74
     .line 75
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 76
     .line 77

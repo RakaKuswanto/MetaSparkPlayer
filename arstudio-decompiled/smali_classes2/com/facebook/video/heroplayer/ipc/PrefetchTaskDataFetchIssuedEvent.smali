@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;
-.super LX/3Ub;
+.super LX/3kn;
 .source ""
 
 # interfaces
@@ -13,9 +13,11 @@
 
 
 # instance fields
-.field public final mPrefetchDataSource:Ljava/lang/String;
+.field public final mIsFollowupPrefetch:Ljava/lang/String;
 
-.field public final mRequest:Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
+.field public final mStreamType:Ljava/lang/String;
+
+.field public final mVideoId:Ljava/lang/String;
 
 
 # direct methods
@@ -23,11 +25,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x4f
+    const/16 v0, 0x3d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -46,71 +48,51 @@
     .locals 1
 
     .line 0
-    sget-object v0, LX/3TB;->PREFETCH_TASK_DATA_FETCH_ISSUED:LX/3TB;
+    sget-object v0, LX/3kk;->PREFETCH_TASK_DATA_FETCH_ISSUED:LX/3kk;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/3Ub;-><init>(LX/3TB;)V
+    invoke-direct {p0, v0}, LX/3kn;-><init>(LX/3kk;)V
 
     .line 3
     .line 4
     .line 5
-    const-class v0, Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
-
     .line 8
-    .line 9
-    .line 10
     move-result-object v0
 
+    .line 9
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mVideoId:Ljava/lang/String;
+
+    .line 10
     .line 11
-    check-cast v0, Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 12
     .line 13
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mRequest:Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
-
     .line 14
+    move-result-object v0
+
     .line 15
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mIsFollowupPrefetch:Ljava/lang/String;
 
     .line 16
     .line 17
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 18
+    .line 19
+    .line 20
     move-result-object v0
 
-    .line 19
-    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mPrefetchDataSource:Ljava/lang/String;
-
-    .line 20
     .line 21
-    return-void
-.end method
+    iput-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mStreamType:Ljava/lang/String;
 
-.method public constructor <init>(Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;Ljava/lang/String;)V
-    .locals 1
-
-    .line 268435456
-    sget-object v0, LX/3TB;->PREFETCH_TASK_DATA_FETCH_ISSUED:LX/3TB;
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {p0, v0}, LX/3Ub;-><init>(LX/3TB;)V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    iput-object p1, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mRequest:Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
-
-    .line 268435462
-    .line 268435463
-    iput-object p2, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mPrefetchDataSource:Ljava/lang/String;
-
-    .line 268435464
-    .line 268435465
+    .line 22
+    .line 23
     return-void
 .end method
 
@@ -128,16 +110,16 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mRequest:Lcom/facebook/video/heroplayer/ipc/VideoPrefetchRequest;
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mVideoId:Ljava/lang/String;
 
     .line 1
     .line 2
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mPrefetchDataSource:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mIsFollowupPrefetch:Ljava/lang/String;
 
     .line 6
     .line 7
@@ -146,5 +128,14 @@
     .line 8
     .line 9
     .line 10
+    iget-object v0, p0, Lcom/facebook/video/heroplayer/ipc/PrefetchTaskDataFetchIssuedEvent;->mStreamType:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 13
+    .line 14
+    .line 15
     return-void
 .end method

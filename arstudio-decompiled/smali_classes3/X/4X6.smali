@@ -1,433 +1,1008 @@
 .class public final LX/4X6;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Drawable;
 .source ""
+
+# interfaces
+.implements Landroid/graphics/drawable/Drawable$Callback;
+.implements LX/4eZ;
+.implements LX/4XM;
 
 
 # instance fields
-.field public A00:Landroid/content/res/ColorStateList;
+.field public A00:Landroid/graphics/drawable/Drawable;
 
-.field public A01:Landroid/graphics/PorterDuff$Mode;
+.field public A01:LX/4XL;
 
 .field public A02:Z
 
-.field public A03:Z
-
-.field public A04:Z
-
-.field public final A05:Landroid/widget/CompoundButton;
-
 
 # direct methods
-.method public constructor <init>(Landroid/widget/CompoundButton;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    iput-object v0, p0, LX/4X6;->A00:Landroid/content/res/ColorStateList;
-
-    .line 5
-    .line 6
-    iput-object v0, p0, LX/4X6;->A01:Landroid/graphics/PorterDuff$Mode;
-
-    .line 7
-    .line 8
-    const/4 v0, 0x0
-
-    .line 9
-    iput-boolean v0, p0, LX/4X6;->A02:Z
-
-    .line 10
-    .line 11
-    iput-boolean v0, p0, LX/4X6;->A03:Z
-
-    .line 12
-    .line 13
-    iput-object p1, p0, LX/4X6;->A05:Landroid/widget/CompoundButton;
-
-    .line 14
-    .line 15
     return-void
 .end method
 
-.method public static final A00(LX/4X6;)V
-    .locals 3
+.method public static final A00(LX/4X6;ZZ)V
+    .locals 1
 
     .line 0
-    iget-object v2, p0, LX/4X6;->A05:Landroid/widget/CompoundButton;
+    iget-object p0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
 
     .line 1
     .line 2
-    invoke-static {v2}, LX/4XD;->A01(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
+    if-nez p0, :cond_0
 
     .line 3
     .line 4
+    return-void
+
     .line 5
-    move-result-object v1
+    :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isVisible()Z
 
     .line 6
-    if-eqz v1, :cond_3
-
     .line 7
     .line 8
-    iget-boolean v0, p0, LX/4X6;->A02:Z
+    move-result v0
 
     .line 9
+    if-eq v0, p1, :cond_1
+
     .line 10
-    if-nez v0, :cond_0
-
     .line 11
-    .line 12
-    iget-boolean v0, p0, LX/4X6;->A03:Z
+    :try_start_0
+    invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 12
     .line 13
     .line 14
-    if-eqz v0, :cond_3
-
-    .line 15
-    .line 16
-    :cond_0
-    invoke-static {v1}, LX/4Z4;->A03(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v1
-
-    .line 20
-    iget-boolean v0, p0, LX/4X6;->A02:Z
-
-    .line 21
-    .line 22
-    if-eqz v0, :cond_1
-
-    .line 23
-    .line 24
-    iget-object v0, p0, LX/4X6;->A00:Landroid/content/res/ColorStateList;
-
-    .line 25
-    .line 26
-    invoke-static {v0, v1}, LX/4Z4;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
-
-    .line 27
-    .line 28
-    .line 29
+    :catch_0
     :cond_1
-    iget-boolean v0, p0, LX/4X6;->A03:Z
-
-    .line 30
-    .line 31
-    if-eqz v0, :cond_2
-
-    .line 32
-    .line 33
-    iget-object v0, p0, LX/4X6;->A01:Landroid/graphics/PorterDuff$Mode;
-
-    .line 34
-    .line 35
-    invoke-static {v0, v1}, LX/4Z4;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
-
-    .line 36
-    .line 37
-    .line 38
-    :cond_2
-    invoke-static {v1, v2}, LX/4BD;->A13(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
-
-    .line 39
-    .line 40
-    .line 41
-    invoke-virtual {v2, v1}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 42
-    .line 43
-    .line 44
-    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01(I)I
-    .locals 2
+.method public final AcK(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 5
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v4, 0x0
 
     .line 1
-    .line 2
-    const/16 v0, 0x11
+    invoke-static {p2, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    if-ge v1, v0, :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     .line 5
     .line 6
-    iget-object v0, p0, LX/4X6;->A05:Landroid/widget/CompoundButton;
-
     .line 7
-    .line 8
-    invoke-static {v0}, LX/4XD;->A01(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    if-eqz v0, :cond_0
-
-    .line 13
-    .line 14
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
-
-    .line 18
-    add-int/2addr p1, v0
-
-    .line 19
-    :cond_0
-    return p1
-.end method
-
-.method public final A02(Landroid/util/AttributeSet;I)V
-    .locals 10
-
-    .line 0
-    iget-object v7, p0, LX/4X6;->A05:Landroid/widget/CompoundButton;
-
-    .line 1
-    .line 2
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v4
-
-    .line 6
-    sget-object v8, LX/4XG;->A0C:[I
-
-    .line 7
-    .line 8
-    const/4 v3, 0x0
-
-    .line 9
-    move-object v6, p1
-
-    .line 10
-    move v9, p2
-
-    .line 11
-    invoke-static {v4, p1, v8, p2, v3}, LX/4WR;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[III)LX/4WR;
-
-    .line 12
-    .line 13
-    .line 14
     move-result-object v2
 
-    .line 15
-    iget-object v5, v2, LX/4WR;->A02:Landroid/content/res/TypedArray;
+    .line 8
+    invoke-static {v2}, LX/0WV;->A04(Ljava/lang/Object;)V
 
-    .line 16
-    .line 17
-    invoke-static/range {v4 .. v9}, LX/03G;->A0I(Landroid/content/Context;Landroid/content/res/TypedArray;Landroid/util/AttributeSet;Landroid/view/View;[II)V
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
-    .line 18
-    .line 19
-    .line 20
-    const/4 v1, 0x1
-
-    .line 21
-    :try_start_0
-    invoke-virtual {v5, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    .line 22
-    .line 23
-    .line 24
+    .line 12
+    .line 13
+    .line 14
     move-result v0
 
-    .line 25
-    if-eqz v0, :cond_0
+    .line 15
+    float-to-int v1, v0
 
+    .line 16
+    iget v0, v2, Landroid/graphics/Rect;->left:I
+
+    .line 17
+    .line 18
+    sub-int/2addr v1, v0
+
+    .line 19
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    float-to-int v3, v0
+
+    .line 24
+    iget v0, v2, Landroid/graphics/Rect;->top:I
+
+    .line 25
     .line 26
+    sub-int/2addr v3, v0
+
     .line 27
-    invoke-virtual {v5, v1, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    iget-object v2, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
 
     .line 28
     .line 29
-    .line 30
-    move-result v0
+    if-eqz v2, :cond_0
 
+    .line 30
     .line 31
-    if-eqz v0, :cond_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    int-to-float v1, v1
 
     .line 32
+    int-to-float v0, v3
+
     .line 33
-    :try_start_1
-    invoke-static {v4, v0}, LX/4Wb;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v1, v0}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
 
     .line 34
     .line 35
     .line 36
-    move-result-object v0
+    return v4
 
     .line 37
-    invoke-virtual {v7, v0}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+    :cond_0
+    const-string v0, "Required value was null."
 
     .line 38
     .line 39
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 40
-    goto :goto_0
-    :try_end_1
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .line 41
+    .line 42
+    move-result-object v0
+
+    .line 43
+    throw v0
+.end method
+
+.method public final Amk(Landroid/view/MotionEvent;)Z
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 5
+    .line 6
+    const/16 v0, 0x15
+
+    .line 7
+    .line 8
+    if-lt v1, v0, :cond_0
+
+    .line 9
+    .line 10
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 11
+    .line 12
+    instance-of v0, v0, Landroid/graphics/drawable/RippleDrawable;
+
+    .line 13
+    .line 14
+    if-eqz v0, :cond_0
+
+    .line 15
+    .line 16
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    if-nez v0, :cond_0
+
+    .line 21
+    .line 22
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v2
+
+    .line 26
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    float-to-int v1, v0
+
+    .line 31
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    .line 32
+    .line 33
+    .line 34
+    move-result v0
+
+    .line 35
+    float-to-int v0, v0
+
+    .line 36
+    invoke-virtual {v2, v1, v0}, Landroid/graphics/Rect;->contains(II)Z
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v1
+
+    .line 40
+    const/4 v0, 0x1
 
     .line 41
-    :catch_0
+    if-nez v1, :cond_1
+
+    .line 42
+    .line 43
     :cond_0
-    :try_start_2
-    invoke-virtual {v5, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    const/4 v0, 0x0
+
+    .line 44
+    :cond_1
+    return v0
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 6
+
+    .line 0
+    const/4 v5, 0x0
+
+    .line 1
+    invoke-static {p1, v5}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v4, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 5
+    .line 6
+    if-eqz v4, :cond_2
+
+    .line 7
+    .line 8
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v3
+
+    .line 12
+    invoke-static {v3}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v2
+
+    .line 19
+    invoke-static {p1, v3}, LX/433;->A11(Landroid/graphics/Canvas;Landroid/graphics/Rect;)V
+
+    .line 20
+    .line 21
+    .line 22
+    iget-boolean v0, p0, LX/4X6;->A02:Z
+
+    .line 23
+    .line 24
+    if-eqz v0, :cond_0
+
+    .line 25
+    .line 26
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v1
+
+    .line 30
+    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v0
+
+    .line 34
+    invoke-virtual {p1, v5, v5, v1, v0}, Landroid/graphics/Canvas;->clipRect(IIII)Z
+
+    .line 35
+    .line 36
+    .line 37
+    :cond_0
+    iget-object v0, p0, LX/4X6;->A01:LX/4XL;
+
+    .line 38
+    .line 39
+    if-eqz v0, :cond_1
+
+    .line 40
+    .line 41
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
     .line 42
     .line 43
     .line 44
-    move-result v0
+    :cond_1
+    invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     .line 45
-    if-eqz v0, :cond_1
-
     .line 46
     .line 47
-    invoke-virtual {v5, v3, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     .line 48
     .line 49
     .line 50
-    move-result v0
-
-    .line 51
-    if-eqz v0, :cond_1
-
-    .line 52
-    .line 53
-    invoke-static {v4, v0}, LX/4Wb;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    .line 54
-    .line 55
-    .line 56
-    move-result-object v0
-
-    .line 57
-    invoke-virtual {v7, v0}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 58
-    .line 59
-    .line 60
-    :cond_1
-    :goto_0
-    const/4 v1, 0x2
-
-    .line 61
-    invoke-virtual {v5, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    .line 62
-    .line 63
-    .line 64
-    move-result v0
-
-    .line 65
-    if-eqz v0, :cond_2
-
-    .line 66
-    .line 67
-    invoke-virtual {v2, v1}, LX/4WR;->A01(I)Landroid/content/res/ColorStateList;
-
-    .line 68
-    .line 69
-    .line 70
-    move-result-object v0
-
-    .line 71
-    invoke-static {v0, v7}, LX/4XD;->A02(Landroid/content/res/ColorStateList;Landroid/widget/CompoundButton;)V
-
-    .line 72
-    .line 73
-    .line 74
     :cond_2
-    const/4 v1, 0x3
+    return-void
+.end method
 
-    .line 75
-    invoke-virtual {v5, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+.method public final getChangingConfigurations()I
+    .locals 1
 
-    .line 76
-    .line 77
-    .line 78
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
+
+    .line 5
+    .line 6
+    .line 7
     move-result v0
 
-    .line 79
-    if-eqz v0, :cond_3
+    .line 8
+    return v0
 
-    .line 80
-    .line 81
+    .line 9
+    :cond_0
     const/4 v0, -0x1
 
-    .line 82
-    invoke-virtual {v5, v1, v0}, Landroid/content/res/TypedArray;->getInt(II)I
+    .line 10
+    return v0
+.end method
 
-    .line 83
-    .line 84
-    .line 85
-    move-result v1
+.method public final getCurrent()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    .line 86
-    const/4 v0, 0x0
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
 
-    .line 87
-    invoke-static {v0, v1}, LX/4Vd;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
 
-    .line 88
-    .line 89
-    .line 90
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
+
+    .line 5
+    .line 6
+    .line 7
     move-result-object v0
 
-    .line 91
-    invoke-static {v0, v7}, LX/4XD;->A03(Landroid/graphics/PorterDuff$Mode;Landroid/widget/CompoundButton;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    .line 8
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
-    .line 92
-    .line 93
-    .line 94
-    :cond_3
-    invoke-virtual {v5}, Landroid/content/res/TypedArray;->recycle()V
+    .line 9
+    .line 10
+    .line 11
+    return-object v0
 
-    .line 95
-    .line 96
-    .line 97
-    return-void
+    .line 12
+    :cond_0
+    const-string v0, "Required value was null."
 
-    .line 98
-    :catchall_0
-    move-exception v0
+    .line 13
+    .line 14
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
-    .line 99
-    invoke-virtual {v5}, Landroid/content/res/TypedArray;->recycle()V
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
 
-    .line 100
-    .line 101
-    .line 102
+    .line 18
     throw v0
+.end method
+
+.method public final getIntrinsicHeight()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+
+    .line 9
+    :cond_0
+    const/4 v0, -0x1
+
+    .line 10
+    return v0
+.end method
+
+.method public final getIntrinsicWidth()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+
+    .line 9
+    :cond_0
+    const/4 v0, -0x1
+
+    .line 10
+    return v0
+.end method
+
+.method public final getMinimumHeight()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getMinimumHeight()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+
+    .line 9
+    :cond_0
+    const/4 v0, -0x1
+
+    .line 10
+    return v0
+.end method
+
+.method public final getMinimumWidth()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+
+    .line 9
+    :cond_0
+    const/4 v0, -0x1
+
+    .line 10
+    return v0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getOpacity()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+
+    .line 9
+    :cond_0
+    const/4 v0, -0x1
+
+    .line 10
+    return v0
+.end method
+
+.method public final getPadding(Landroid/graphics/Rect;)Z
+    .locals 2
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 5
+    .line 6
+    const/4 v1, 0x1
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    if-ne v0, v1, :cond_0
+
+    .line 14
+    .line 15
+    return v1
+
+    .line 16
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 17
+    return v1
+.end method
+
+.method public final getState()[I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getState()[I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    if-nez v0, :cond_1
+
+    .line 9
+    .line 10
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 11
+    new-array v0, v0, [I
+
+    .line 12
+    .line 13
+    :cond_1
+    return-object v0
+.end method
+
+.method public final getTransparentRegion()Landroid/graphics/Region;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getTransparentRegion()Landroid/graphics/Region;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+
+    .line 9
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 10
+    return-object v0
+.end method
+
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final isStateful()Z
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    const/4 v1, 0x1
+
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    if-ne v0, v1, :cond_0
+
+    .line 10
+    .line 11
+    return v1
+
+    .line 12
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 13
+    return v1
+.end method
+
+.method public final onLevelChange(I)Z
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    const/4 v1, 0x1
+
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    if-ne v0, v1, :cond_0
+
+    .line 10
+    .line 11
+    return v1
+
+    .line 12
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 13
+    return v1
+.end method
+
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-virtual {p0, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public final setAlpha(I)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
+    return-void
+.end method
+
+.method public final setChangingConfigurations(I)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
+    return-void
+.end method
+
+.method public final setDither(Z)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
+    return-void
+.end method
+
+.method public final setFilterBitmap(Z)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
+    return-void
+.end method
+
+.method public final setState([I)Z
+    .locals 2
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4X6;->A00:Landroid/graphics/drawable/Drawable;
+
+    .line 5
+    .line 6
+    const/4 v1, 0x1
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    if-ne v0, v1, :cond_0
+
+    .line 14
+    .line 15
+    return v1
+
+    .line 16
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 17
+    return v1
+.end method
+
+.method public final setVisible(ZZ)Z
+    .locals 1
+
+    .line 0
+    invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    invoke-static {p0, p1, p2}, LX/4X6;->A00(LX/4X6;ZZ)V
+
+    .line 5
+    .line 6
+    .line 7
+    return v0
+.end method
+
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
 .end method

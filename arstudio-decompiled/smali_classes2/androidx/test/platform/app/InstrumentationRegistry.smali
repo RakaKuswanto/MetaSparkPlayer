@@ -1,4 +1,4 @@
-.class public final Landroidx/test/platform/app/InstrumentationRegistry;
+.class public abstract Landroidx/test/platform/app/InstrumentationRegistry;
 .super Ljava/lang/Object;
 .source ""
 
@@ -17,7 +17,7 @@
     const/4 v1, 0x0
 
     .line 1
-    invoke-static {v1}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v1}, LX/0X7;->A0p(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 2
     .line 3
@@ -29,7 +29,7 @@
 
     .line 6
     .line 7
-    invoke-static {v1}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v1}, LX/0X7;->A0p(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 8
     .line 9

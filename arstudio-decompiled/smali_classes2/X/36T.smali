@@ -1,233 +1,297 @@
-.class public final synthetic LX/36T;
+.class public final LX/36T;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3Yv;
-
 
 # instance fields
-.field public final synthetic A00:LX/5SE;
+.field public final A00:LX/0I5;
 
-.field public final synthetic A01:LX/36L;
+.field public final A01:LX/2pn;
+
+.field public final A02:LX/355;
+
+.field public final A03:LX/0RP;
+
+.field public final A04:LX/0RP;
+
+.field public final A05:LX/0RP;
+
+.field public final A06:LX/0RP;
+
+.field public final A07:LX/0RP;
+
+.field public final A08:LX/0RP;
+
+.field public final A09:Ljava/util/Map;
+
+.field public final A0A:LX/0VC;
+
+.field public final A0B:LX/0VC;
+
+.field public mAppNetSessionIdInfo:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public mClientPublicAddress:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public mServerCluster:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public mServerDatetime:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public mServerHostEnc:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5SE;LX/36L;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, LX/36T;->A01:LX/36L;
-
-    iput-object p1, p0, LX/36T;->A00:LX/5SE;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A8r(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 5
+.method public constructor <init>()V
+    .locals 3
 
     .line 0
-    iget-object v4, p0, LX/36T;->A00:LX/5SE;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    check-cast p1, LX/389;
-
     .line 3
+    const/4 v0, 0x6
+
     .line 4
-    check-cast p2, LX/389;
+    invoke-static {p0, v0}, LX/0Xe;->A00(Ljava/lang/Object;I)LX/0Xe;
 
     .line 5
     .line 6
-    if-eqz p1, :cond_0
-
     .line 7
+    move-result-object v0
+
     .line 8
-    invoke-virtual {v4}, LX/5SE;->AIk()LX/0TL;
+    iput-object v0, p0, LX/36T;->A0A:LX/0VC;
 
     .line 9
     .line 10
+    invoke-static {}, LX/0lf;->A07()LX/0lf;
+
     .line 11
-    move-result-object v3
-
     .line 12
-    iget-wide v0, p1, LX/389;->A03:J
-
     .line 13
+    move-result-object v0
+
     .line 14
-    const-string/jumbo v2, "pss_at_start"
+    iput-object v0, p0, LX/36T;->A04:LX/0RP;
 
     .line 15
     .line 16
-    .line 17
-    invoke-static {v3, v4, v2, v0, v1}, LX/0Yg;->A0O(LX/0TL;LX/5SE;Ljava/lang/String;J)LX/0TL;
+    sget v0, LX/2I6;->A5l:I
 
+    .line 17
     .line 18
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 19
     .line 20
-    move-result-object v3
-
     .line 21
-    iget-wide v0, p1, LX/389;->A04:J
+    move-result-object v0
 
     .line 22
-    .line 23
-    const-string/jumbo v2, "rss_at_start"
+    iput-object v0, p0, LX/36T;->A08:LX/0RP;
 
+    .line 23
     .line 24
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
+
     .line 25
     .line 26
-    invoke-static {v3, v4, v2, v0, v1}, LX/0Yg;->A0O(LX/0TL;LX/5SE;Ljava/lang/String;J)LX/0TL;
-
     .line 27
-    .line 28
-    .line 29
-    move-result-object v3
+    move-result-object v0
 
+    .line 28
+    iput-object v0, p0, LX/36T;->A03:LX/0RP;
+
+    .line 29
     .line 30
-    iget-wide v0, p1, LX/389;->A00:J
+    sget v0, LX/2I6;->AEi:I
 
     .line 31
     .line 32
-    const-string v2, "anonymous_rss_at_start"
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 33
     .line 34
-    invoke-static {v3, v4, v2, v0, v1}, LX/0Yg;->A0O(LX/0TL;LX/5SE;Ljava/lang/String;J)LX/0TL;
-
     .line 35
-    .line 36
-    .line 37
-    move-result-object v3
+    move-result-object v0
 
+    .line 36
+    iput-object v0, p0, LX/36T;->A06:LX/0RP;
+
+    .line 37
     .line 38
-    iget-wide v0, p1, LX/389;->A01:J
+    sget v0, LX/2I6;->AEj:I
 
     .line 39
     .line 40
-    const-string v2, "dirty_pss_at_start"
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 41
     .line 42
-    invoke-static {v3, v4, v2, v0, v1}, LX/0Yg;->A0O(LX/0TL;LX/5SE;Ljava/lang/String;J)LX/0TL;
-
     .line 43
-    .line 44
-    .line 45
-    move-result-object v3
+    move-result-object v0
 
+    .line 44
+    iput-object v0, p0, LX/36T;->A05:LX/0RP;
+
+    .line 45
     .line 46
-    iget-wide v1, p1, LX/389;->A02:J
+    sget v0, LX/2I6;->AF7:I
 
     .line 47
     .line 48
-    const-string/jumbo v0, "private_dirty_at_start"
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 49
     .line 50
     .line 51
-    invoke-virtual {v3, v0, v1, v2}, LX/0TL;->A02(Ljava/lang/String;J)V
+    move-result-object v0
 
     .line 52
+    iput-object v0, p0, LX/36T;->A07:LX/0RP;
+
     .line 53
     .line 54
-    :cond_0
-    if-eqz p2, :cond_1
+    const/4 v0, 0x7
 
     .line 55
-    .line 56
-    invoke-virtual {v4}, LX/5SE;->AIk()LX/0TL;
+    invoke-static {p0, v0}, LX/0Xe;->A00(Ljava/lang/Object;I)LX/0Xe;
 
+    .line 56
     .line 57
     .line 58
+    move-result-object v0
+
     .line 59
-    move-result-object v3
+    iput-object v0, p0, LX/36T;->A0B:LX/0VC;
 
     .line 60
-    iget-wide v1, p2, LX/389;->A03:J
-
     .line 61
-    .line 62
-    const-string/jumbo v0, "pss_used"
+    invoke-static {}, LX/0X7;->A0o()Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 62
     .line 63
     .line 64
+    move-result-object v0
+
     .line 65
-    invoke-static {v3, v4, v0, v1, v2}, LX/0Yg;->A0O(LX/0TL;LX/5SE;Ljava/lang/String;J)LX/0TL;
+    iput-object v0, p0, LX/36T;->mAppNetSessionIdInfo:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 66
     .line 67
+    invoke-static {}, LX/0X7;->A0o()Ljava/util/concurrent/atomic/AtomicReference;
+
     .line 68
-    move-result-object v3
-
     .line 69
-    iget-wide v1, p2, LX/389;->A04:J
-
     .line 70
+    move-result-object v0
+
     .line 71
-    const-string/jumbo v0, "rss_used"
+    iput-object v0, p0, LX/36T;->mClientPublicAddress:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 72
     .line 73
-    .line 74
-    invoke-static {v3, v4, v0, v1, v2}, LX/0Yg;->A0O(LX/0TL;LX/5SE;Ljava/lang/String;J)LX/0TL;
+    invoke-static {}, LX/0X7;->A0o()Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 74
     .line 75
     .line 76
+    move-result-object v0
+
     .line 77
-    move-result-object v3
+    iput-object v0, p0, LX/36T;->mServerCluster:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 78
-    iget-wide v1, p2, LX/389;->A00:J
-
     .line 79
-    .line 80
-    const-string v0, "anonymous_rss_used"
+    invoke-static {}, LX/0X7;->A0o()Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 80
     .line 81
     .line 82
-    invoke-static {v3, v4, v0, v1, v2}, LX/0Yg;->A0O(LX/0TL;LX/5SE;Ljava/lang/String;J)LX/0TL;
+    move-result-object v0
 
     .line 83
+    iput-object v0, p0, LX/36T;->mServerHostEnc:Ljava/util/concurrent/atomic/AtomicReference;
+
     .line 84
     .line 85
-    move-result-object v3
+    invoke-static {}, LX/0X7;->A0o()Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 86
-    iget-wide v1, p2, LX/389;->A01:J
-
     .line 87
     .line 88
-    const-string v0, "dirty_pss_used"
+    move-result-object v0
 
     .line 89
-    .line 90
-    invoke-static {v3, v4, v0, v1, v2}, LX/0Yg;->A0O(LX/0TL;LX/5SE;Ljava/lang/String;J)LX/0TL;
+    iput-object v0, p0, LX/36T;->mServerDatetime:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 90
     .line 91
+    new-instance v0, LX/37O;
+
     .line 92
     .line 93
-    move-result-object v3
+    invoke-direct {v0, p0}, LX/37O;-><init>(LX/36T;)V
 
     .line 94
-    iget-wide v1, p2, LX/389;->A02:J
-
     .line 95
     .line 96
-    const-string/jumbo v0, "private_dirty_used"
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
     .line 97
     .line 98
     .line 99
-    invoke-virtual {v3, v0, v1, v2}, LX/0TL;->A02(Ljava/lang/String;J)V
+    move-result-object v0
 
     .line 100
+    iput-object v0, p0, LX/36T;->A09:Ljava/util/Map;
+
     .line 101
     .line 102
-    :cond_1
+    sget v0, LX/2I6;->A5m:I
+
+    .line 103
+    .line 104
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 105
+    .line 106
+    .line 107
+    move-result-object v2
+
+    .line 108
+    check-cast v2, LX/2pn;
+
+    .line 109
+    .line 110
+    invoke-static {}, LX/2I6;->A0D()LX/0I5;
+
+    .line 111
+    .line 112
+    .line 113
+    move-result-object v1
+
+    .line 114
+    iput-object v2, p0, LX/36T;->A01:LX/2pn;
+
+    .line 115
+    .line 116
+    iput-object v1, p0, LX/36T;->A00:LX/0I5;
+
+    .line 117
+    .line 118
+    new-instance v0, LX/355;
+
+    .line 119
+    .line 120
+    invoke-direct {v0, v1, v2}, LX/355;-><init>(LX/0I5;LX/2pn;)V
+
+    .line 121
+    .line 122
+    .line 123
+    iput-object v0, p0, LX/36T;->A02:LX/355;
+
+    .line 124
+    .line 125
     return-void
 .end method

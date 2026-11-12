@@ -2,20 +2,13 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0JU;
-
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Na;
+# interfaces
+.implements LX/08E;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -23,275 +16,244 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A5B:I
-
-    .line 4
-    .line 5
-    invoke-static {v0}, LX/1zE;->A06(I)LX/1zT;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/0I4;->A02:LX/0Na;
-
-    .line 10
-    .line 11
-    sget v0, LX/2eq;->A6G:I
-
-    .line 12
-    .line 13
-    invoke-static {v0}, LX/1z6;->A0I(I)LX/0Zq;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, LX/0I4;->A03:LX/0Na;
-
-    .line 18
-    .line 19
-    sget v0, LX/2eq;->A7e:I
-
-    .line 20
-    .line 21
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    check-cast v0, LX/0JU;
-
-    .line 26
-    .line 27
-    iput-object v0, p0, LX/0I4;->A01:LX/0JU;
-
-    .line 28
-    .line 29
-    const/4 v1, 0x0
-
-    .line 30
-    new-instance v0, LX/1zG;
-
-    .line 31
-    .line 32
-    invoke-direct {v0, p1, v1}, LX/1zG;-><init>(LX/1zC;I)V
-
-    .line 33
-    .line 34
-    .line 35
-    iput-object v0, p0, LX/0I4;->A00:LX/1zG;
-
-    .line 36
-    .line 37
     return-void
 .end method
 
-.method public static final A00(LX/1zC;Ljava/lang/Object;I)LX/0I4;
-    .locals 1
+
+# virtual methods
+.method public final AgO(Ljava/lang/UnsatisfiedLinkError;[LX/0CG;)Z
+    .locals 8
 
     .line 0
-    sget v0, LX/2eq;->AVl:I
+    instance-of v0, p1, Lcom/facebook/soloader/SoLoaderULError;
 
     .line 1
     .line 2
-    if-eq p2, v0, :cond_0
+    const/4 v7, 0x0
 
     .line 3
-    .line 4
-    invoke-static {p0, p1, v0}, LX/1z6;->A0U(LX/1zC;Ljava/lang/Object;I)Ljava/lang/Object;
+    if-eqz v0, :cond_3
 
+    .line 4
     .line 5
+    instance-of v0, p1, Lcom/facebook/soloader/SoLoaderDSONotFoundError;
+
     .line 6
     .line 7
-    move-result-object v0
+    if-nez v0, :cond_3
 
     .line 8
-    check-cast v0, LX/0I4;
-
     .line 9
+    move-object v0, p1
+
     .line 10
-    return-object v0
+    check-cast v0, Lcom/facebook/soloader/SoLoaderULError;
 
     .line 11
-    :cond_0
-    new-instance v0, LX/0I4;
-
     .line 12
-    .line 13
-    invoke-direct {v0, p0}, LX/0I4;-><init>(LX/1zC;)V
+    iget-object v5, v0, Lcom/facebook/soloader/SoLoaderULError;->mSoName:Ljava/lang/String;
 
+    .line 13
     .line 14
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
     .line 15
     .line 16
-    return-object v0
-.end method
-
-.method public static A01(LX/0I4;)Ljava/lang/String;
-    .locals 2
-
-    .line 0
-    sget v1, LX/2eq;->A6E:I
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/0I4;->A00:LX/1zG;
-
-    .line 3
-    .line 4
-    invoke-static {v0, v1}, LX/1zE;->A0F(LX/1zG;I)Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    check-cast v0, LX/1tK;
-
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/1vu;->A04(LX/1tK;)LX/1vx;
-
-    .line 11
-    .line 12
-    .line 13
+    .line 17
     move-result-object v1
 
-    .line 14
-    invoke-interface {v1}, LX/1vx;->AQt()Z
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
-
     .line 18
-    if-eqz v0, :cond_0
+    const-string v0, "Reunpacking NonApk UnpackingSoSources due to "
 
     .line 19
     .line 20
-    const/4 v0, 0x0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 21
-    return-object v0
-
     .line 22
-    :cond_0
-    invoke-interface {v1}, LX/1vx;->AIG()Ljava/lang/String;
-
     .line 23
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     .line 24
     .line 25
-    move-result-object v0
-
     .line 26
-    return-object v0
-.end method
-
-.method private final A02()Z
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/0I4;->A03:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v2
-
-    .line 6
-    check-cast v2, LX/35B;
-
-    .line 7
-    .line 8
-    const-wide v0, 0x81022b0000186cL
-
-    .line 9
-    .line 10
-    .line 11
-    .line 12
-    .line 13
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    return v0
-.end method
-
-.method public static A03(LX/0I4;)Z
-    .locals 2
-
-    .line 0
-    invoke-direct {p0}, LX/0I4;->A02()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-nez v0, :cond_0
-
-    .line 5
-    .line 6
-    iget-object v0, p0, LX/0I4;->A03:LX/0Na;
-
-    .line 7
-    .line 8
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object p0
-
-    .line 12
-    check-cast p0, LX/35B;
-
-    .line 13
-    .line 14
-    const-wide v0, 0x2081022b0001186dL    # 4.059358539037795E-152
-
-    .line 15
-    .line 16
-    .line 17
-    .line 18
-    .line 19
-    invoke-interface {p0, v0, v1}, LX/35B;->ACd(J)Z
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v1
-
-    .line 23
-    const/4 v0, 0x1
-
-    .line 24
-    if-nez v1, :cond_1
-
-    .line 25
-    .line 26
-    :cond_0
-    const/4 v0, 0x0
+    if-nez v5, :cond_1
 
     .line 27
+    .line 28
+    const-string v0, ""
+
+    .line 29
+    .line 30
+    :goto_0
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    const-string v6, "SoLoader"
+
+    .line 35
+    .line 36
+    invoke-static {v6, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 37
+    .line 38
+    .line 39
+    array-length v4, p2
+
+    .line 40
+    const/4 v3, 0x0
+
+    .line 41
+    :goto_1
+    if-ge v3, v4, :cond_2
+
+    .line 42
+    .line 43
+    aget-object v2, p2, v3
+
+    .line 44
+    .line 45
+    instance-of v0, v2, LX/03h;
+
+    .line 46
+    .line 47
+    if-eqz v0, :cond_0
+
+    .line 48
+    .line 49
+    instance-of v0, v2, LX/01d;
+
+    .line 50
+    .line 51
+    if-nez v0, :cond_0
+
+    .line 52
+    .line 53
+    :try_start_0
+    const-string v0, "Runpacking "
+
+    .line 54
+    .line 55
+    invoke-virtual {v2}, LX/0CG;->A08()Ljava/lang/String;
+
+    .line 56
+    .line 57
+    .line 58
+    move-result-object v1
+
+    .line 59
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v0
+
+    .line 63
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object v0
+
+    .line 67
+    invoke-static {v6, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 68
+    .line 69
+    .line 70
+    const/4 v0, 0x2
+
+    .line 71
+    invoke-virtual {v2, v0}, LX/0CG;->A0A(I)V
+
+    .line 72
+    .line 73
+    .line 74
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    .line 75
+    .line 76
+    goto :goto_1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 77
     :cond_1
-    return v0
+    const-string v0, ", retrying for specific library "
+
+    .line 78
+    .line 79
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 80
+    .line 81
+    .line 82
+    move-result-object v0
+
+    .line 83
+    invoke-static {v5, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 84
+    .line 85
+    .line 86
+    move-result-object v0
+
+    .line 87
+    goto :goto_0
+
+    .line 88
+    :catch_0
+    move-exception v4
+
+    .line 89
+    const-string v3, "Encountered an exception while reunpacking "
+
+    .line 90
+    .line 91
+    invoke-virtual {v2}, LX/0CG;->A08()Ljava/lang/String;
+
+    .line 92
+    .line 93
+    .line 94
+    move-result-object v2
+
+    .line 95
+    const-string v1, " for library "
+
+    .line 96
+    .line 97
+    const-string v0, ": "
+
+    .line 98
+    .line 99
+    invoke-static {v3, v2, v1, v5, v0}, LX/004;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 100
+    .line 101
+    .line 102
+    move-result-object v0
+
+    .line 103
+    invoke-static {v6, v0, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 104
+    .line 105
+    .line 106
+    return v7
+
+    .line 107
+    :cond_2
+    const/4 v7, 0x1
+
+    .line 108
+    :cond_3
+    return v7
 .end method

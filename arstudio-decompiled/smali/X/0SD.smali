@@ -2,590 +2,180 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MqttClient$5"
+
+
+# instance fields
+.field public final synthetic A00:I
+
+.field public final synthetic A01:LX/0S2;
+
+.field public final synthetic A02:Ljava/util/List;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(LX/0S2;Ljava/util/List;I)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/0SD;->A01:LX/0S2;
+
+    .line 1
+    .line 2
+    iput-object p2, p0, LX/0SD;->A02:Ljava/util/List;
+
+    .line 3
+    .line 4
+    iput p3, p0, LX/0SD;->A00:I
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
 
-    const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_7
+# virtual methods
+.method public final run()V
+    .locals 5
 
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_6
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_5
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x9
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0xa
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x40
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x41
-
-    if-eq p0, v0, :cond_0
-
-    packed-switch p0, :pswitch_data_0
-
-    packed-switch p0, :pswitch_data_1
-
-    packed-switch p0, :pswitch_data_2
-
-    packed-switch p0, :pswitch_data_3
-
-    sparse-switch p0, :sswitch_data_0
-
-    packed-switch p0, :pswitch_data_4
-
-    packed-switch p0, :pswitch_data_5
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "VIDEO_FULLSCREEN_CHANNEL_LIVE_TRANSITION"
-
-    return-object v0
-
-    :pswitch_1
-    const-string v0, "VIDEO_LIVE_FULLSCREEN_ENTER_30S_RESPONSIVENESS"
-
-    return-object v0
-
-    :pswitch_2
-    const-string v0, "VIDEO_FULLSCREEN_LIVE_TRANSITION"
-
-    return-object v0
-
-    :pswitch_3
-    const-string v0, "VIDEO_WATCH_ARLTW_RELATED_VIDEO_SCROLL_PERF"
-
-    return-object v0
-
-    :pswitch_4
-    const-string v0, "VIDEO_GROOT_DECISION_EVENT"
-
-    return-object v0
-
-    :pswitch_5
-    const-string v0, "VIDEO_WARION_ARLTW_TTI"
-
-    return-object v0
-
-    :pswitch_6
-    const-string v0, "VIDEO_START_AD_BREAK_ANDROID"
-
-    return-object v0
-
-    :pswitch_7
-    const-string v0, "VIDEO_BIND_FEED_VIDEO"
-
-    return-object v0
-
-    :pswitch_8
-    const-string v0, "VIDEO_CHANNEL_FEED_UP_NEXT_TTI_ANDROID_VIDEO"
-
-    return-object v0
-
-    :pswitch_9
-    const-string v0, "VIDEO_HERO_LIVE_MODULE_DOWNLOAD"
-
-    return-object v0
-
-    :pswitch_a
-    const-string v0, "VIDEO_PARSE_SEGMENT_TIMELINE_ANDROID"
-
-    return-object v0
-
-    :pswitch_b
-    const-string v0, "VIDEO_STORY_VIDEO_PROFILER_START"
-
-    return-object v0
-
-    :pswitch_c
-    const-string v0, "VIDEO_SCURBBER"
-
-    return-object v0
-
-    :pswitch_d
-    const-string v0, "VIDEO_VIDEO_PROFILER_START"
-
-    return-object v0
-
-    :sswitch_0
-    const-string v0, "VIDEO_WWW_TEST_EVENT_FOR_CONNOR"
-
-    return-object v0
-
-    :sswitch_1
-    const-string v0, "VIDEO_ADAPTIVE_CHAINING_FUNNEL"
-
-    return-object v0
-
-    :sswitch_2
-    const-string v0, "VIDEO_COLD_START_WITH_VIDEO"
-
-    return-object v0
-
-    :sswitch_3
-    const-string v0, "VIDEO_VIDEO_SOUND_BTN_STATE"
-
-    return-object v0
-
-    :sswitch_4
-    const-string v0, "VIDEO_FS_SESSION_STEADY_STATE"
-
-    return-object v0
-
-    :sswitch_5
-    const-string v0, "VIDEO_MEDIA_PLAYLIST_CREATION_FLOW"
-
-    return-object v0
-
-    :sswitch_6
-    const-string v0, "VIDEO_PLUGIN_CONTAINER_MOUNT"
-
-    return-object v0
-
-    :sswitch_7
-    const-string v0, "VIDEO_PLAYER_PROFILE"
-
-    return-object v0
-
-    :sswitch_8
-    const-string v0, "VIDEO_HOT_START_WITH_VIDEO"
-
-    return-object v0
-
-    :sswitch_9
-    const-string v0, "VIDEO_RVP_USAGE_LOGGING"
-
-    return-object v0
-
-    :sswitch_a
-    const-string v0, "VIDEO_ANDROID_GROOT_COMPONENT_EVENT"
-
-    return-object v0
-
-    :sswitch_b
-    const-string v0, "VIDEO_ANDROID_VIDEO_STATE_LIFECYCLE"
-
-    return-object v0
-
-    :sswitch_c
-    const-string v0, "VIDEO_RVP_PLAYBACK_REASON"
-
-    return-object v0
-
-    :sswitch_d
-    const-string v0, "VIDEO_FBGROOT_PLAYER_ERROR"
-
-    return-object v0
-
-    :sswitch_e
-    const-string v0, "VIDEO_MEDIA_CODEC_LIFECYCLE"
-
-    return-object v0
-
-    :sswitch_f
-    const-string v0, "VIDEO_WARM_START_WITH_VIDEO"
-
-    return-object v0
-
-    :sswitch_10
-    const-string v0, "VIDEO_GROOT_RELIABILITY_EVENT"
-
-    return-object v0
-
-    :sswitch_11
-    const-string v0, "VIDEO_VIDEO_PLAYBACK_START_ANDROID_LOCAGG"
-
-    return-object v0
-
-    :sswitch_12
-    const-string v0, "VIDEO_VIDEO_PREFETCH"
-
-    return-object v0
-
-    :sswitch_13
-    const-string v0, "VIDEO_VIDEO_HOME_DATA_CONTROLLER_DEBUG"
-
-    return-object v0
-
-    :sswitch_14
-    const-string v0, "VIDEO_TURN_ON_CAPTIONS_FLOW"
-
-    return-object v0
-
-    :sswitch_15
-    const-string v0, "VIDEO_VIDEO_PLAYBACK_START"
-
-    return-object v0
-
-    :sswitch_16
-    const-string v0, "VIDEO_FBGROOT_PLAYER_WARNING"
-
-    return-object v0
-
-    :sswitch_17
-    const-string v0, "VIDEO_BACKGROUND_PLAYBACK_TRANSITION"
-
-    return-object v0
-
-    :sswitch_18
-    const-string v0, "VIDEO_STARTUP_WITH_VIDEO"
-
-    return-object v0
-
-    :sswitch_19
-    const-string v0, "VIDEO_ANDROID_VIDEO_BLACKSCREEN_EVENT"
-
-    return-object v0
-
-    :sswitch_1a
-    const-string v0, "VIDEO_GROOT_FS_DECISION_EVENT"
-
-    return-object v0
-
-    :sswitch_1b
-    const-string v0, "VIDEO_FBGROOT_PLAYER_STATE"
-
-    return-object v0
-
-    :sswitch_1c
-    const-string v0, "VIDEO_HERO_PLAYER_STATE"
-
-    return-object v0
-
-    :sswitch_1d
-    const-string v0, "VIDEO_VIDEO_COMPONENT_STATE"
-
-    return-object v0
-
-    :sswitch_1e
-    const-string v0, "VIDEO_FULLSCREEN_PLAYER_USER_ACTION_RESPONSIVENESS"
-
-    return-object v0
-
-    :sswitch_1f
-    const-string v0, "VIDEO_FULLSCREEN_PLAYER_ENTER_RESPONSIVENESS"
-
-    return-object v0
-
-    :sswitch_20
-    const-string v0, "Enter in-stream ads responsiveness measuring"
-
-    return-object v0
-
-    :sswitch_21
-    const-string v0, "VIDEO_RVP_PLUGIN_LOAD"
-
-    return-object v0
-
-    :sswitch_22
-    const-string v0, "VIDEO_HERO_MODULE_DOWNLOAD"
-
-    return-object v0
-
-    :sswitch_23
-    const-string v0, "VIDEO_HERO_MODULE_INIT"
-
-    return-object v0
-
-    :sswitch_24
-    const-string v0, "VIDEO_THUMBNAIL"
-
-    return-object v0
-
-    :sswitch_25
-    const-string v0, "VIDEO_VIDEO_FETCH_REQUEST_EVENT"
-
-    return-object v0
-
-    :sswitch_26
-    const-string v0, "VIDEO_VIDEO_PLAYBACK_STALL_DATA"
-
-    return-object v0
-
-    :sswitch_27
-    const-string v0, "VIDEO_PLAYER_ACTION"
-
-    return-object v0
-
-    :sswitch_28
-    const-string v0, "VIDEO_BIND_PLAYER_SERVICE"
-
-    return-object v0
-
-    :sswitch_29
-    const-string v0, "VIDEO_PLAYER_INIT"
-
-    return-object v0
-
-    :pswitch_e
-    const-string v0, "VIDEO_WATCH_TAB_SCROLL_PERF"
-
-    return-object v0
-
-    :pswitch_f
-    const-string v0, "VIDEO_VIDEO_QUALITIES"
-
-    return-object v0
-
-    :pswitch_10
-    const-string v0, "VIDEO_RICH_VIDEO_PLAYER_EVENTS_WATCH_FEED"
-
-    return-object v0
-
-    :pswitch_11
-    const-string v0, "VIDEO_ABR_DECISION"
-
-    return-object v0
-
-    :pswitch_12
-    const-string v0, "VIDEO_MOUNT_FEED_VIDEO"
-
-    return-object v0
-
-    :pswitch_13
-    const-string v0, "VIDEO_VIDEO_PLAYBACK_STATE"
-
-    return-object v0
-
-    :pswitch_14
-    const-string v0, "VIDEO_WATCH_TAB_E2E_TTI"
-
-    return-object v0
-
-    :pswitch_15
-    const-string v0, "VIDEO_HTTP_TRANSFER_EVENT"
-
-    return-object v0
-
-    :pswitch_16
-    const-string v0, "VIDEO_PREPARE_FEED_VIDEO"
-
-    return-object v0
-
-    :pswitch_17
-    const-string v0, "VIDEO_JEWEL_NOTIFICATION_TO_PLAYBACK"
-
-    return-object v0
-
-    :pswitch_18
-    const-string v0, "VIDEO_RICH_VIDEO_PLAYER_EVENTS"
-
-    return-object v0
-
-    :pswitch_19
-    const-string v0, "VIDEO_PLAYER_BACK_BTN_PRESSED"
-
-    return-object v0
-
-    :pswitch_1a
-    const-string v0, "VIDEO_DISMISS_VIDEO"
-
-    return-object v0
-
-    :pswitch_1b
-    const-string v0, "VIDEO_SOCIAL_PLAYER_TRANSITION"
-
-    return-object v0
-
-    :pswitch_1c
-    const-string v0, "VIDEO_EXOPLAYER_DO_SOME_WORK"
-
-    return-object v0
-
-    :pswitch_1d
-    const-string v0, "VIDEO_VIDEO_PLAYBACK_STALL"
-
-    return-object v0
-
-    :pswitch_1e
-    const-string v0, "VIDEO_QUALITY_SUMMARY_EVENT"
-
-    return-object v0
-
-    :pswitch_1f
-    const-string v0, "VIDEO_VIDEO_UNUSED_II"
-
-    return-object v0
-
-    :pswitch_20
-    const-string v0, "VIDEO_VIDEO_UNUSED"
-
-    return-object v0
-
-    :pswitch_21
-    const-string v0, "VIDEO_CHANNEL_TRANSITION"
-
-    return-object v0
-
-    :pswitch_22
-    const-string v0, "VIDEO_VIDEO_PLAYBACK_EVENT"
-
-    return-object v0
-
+    .line 0
+    iget-object v3, p0, LX/0SD;->A01:LX/0S2;
+
+    .line 1
+    .line 2
+    iget-object v4, p0, LX/0SD;->A02:Ljava/util/List;
+
+    .line 3
+    .line 4
+    iget v2, p0, LX/0SD;->A00:I
+
+    .line 5
+    .line 6
+    :try_start_0
+    iget-object v0, v3, LX/0S2;->A0I:LX/0Rv;
+
+    .line 7
+    .line 8
+    iget v0, v0, LX/0Rv;->A03:I
+
+    .line 9
+    .line 10
+    mul-int/lit16 v0, v0, 0x3e8
+
+    .line 11
+    .line 12
+    int-to-long v0, v0
+
+    .line 13
+    invoke-virtual {v3, v0, v1}, LX/0S2;->A04(J)V
+
+    .line 14
+    .line 15
+    .line 16
+    iget-object v1, v3, LX/0S2;->A0d:LX/0Sa;
+
+    .line 17
+    .line 18
+    sget-object v0, LX/0Sa;->CONNECTED:LX/0Sa;
+
+    .line 19
+    .line 20
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v0
+
+    .line 24
+    if-eqz v0, :cond_0
+
+    .line 25
+    .line 26
+    iget-object v0, v3, LX/0S2;->A0G:LX/0S0;
+
+    .line 27
+    .line 28
+    invoke-interface {v0, v4, v2}, LX/0S0;->AjQ(Ljava/util/List;I)V
+
+    .line 29
+    .line 30
+    .line 31
+    iget-object v0, v3, LX/0S2;->A0H:LX/0Ry;
+
+    .line 32
+    .line 33
+    invoke-interface {v0, v4, v2}, LX/0Ry;->AcE(Ljava/util/List;I)V
+
+    .line 34
+    .line 35
+    .line 36
+    iget-object v2, v3, LX/0S2;->A0c:LX/0NR;
+
+    .line 37
+    .line 38
+    if-eqz v2, :cond_0
+
+    .line 39
+    .line 40
+    iget-object v0, v2, LX/0NR;->A02:LX/0TS;
+
+    .line 41
+    .line 42
+    iget-object v1, v0, LX/0TS;->A08:Landroid/os/Handler;
+
+    .line 43
+    .line 44
+    new-instance v0, LX/0Tc;
+
+    .line 45
+    .line 46
+    invoke-direct {v0, v2}, LX/0Tc;-><init>(LX/0NR;)V
+
+    .line 47
+    .line 48
+    .line 49
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 50
+    .line 51
+    .line 52
+    return-void
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 53
+    :catchall_0
+    move-exception v2
+
+    .line 54
+    invoke-static {v2}, LX/0Rl;->getFromWriteException(Ljava/lang/Throwable;)LX/0Rl;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v1
+
+    .line 58
+    sget-object v0, LX/0Rr;->SUBSCRIBE:LX/0Rr;
+
+    .line 59
+    .line 60
+    invoke-static {v3, v0, v1, v2}, LX/0S2;->A03(LX/0S2;LX/0Rr;LX/0Rl;Ljava/lang/Throwable;)V
+
+    .line 61
+    .line 62
+    .line 63
     :cond_0
-    const-string v0, "VIDEO_GROOT_VIDEO_TRANSITION"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "VIDEO_MOUNT_GROOT_VIDEO_COMPONENT"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "VIDEO_VIDEO_HOME_FUNNEL"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "VIDEO_VIDEO_HOME_LOADING"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "VIDEO_PREFETCH_ITEM"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "VIDEO_FULLSCREEN_TRANSITION"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "VIDEO_CHANNEL_VIDEO_PLAYER"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "VIDEO_INITIALIZATION"
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0xd
-        :pswitch_22
-        :pswitch_21
-        :pswitch_20
-        :pswitch_1f
-        :pswitch_1e
-        :pswitch_1d
-        :pswitch_1c
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0x16
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-    .end packed-switch
-
-    :pswitch_data_2
-    .packed-switch 0x1a
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-    .end packed-switch
-
-    :pswitch_data_3
-    .packed-switch 0x20
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-    .end packed-switch
-
-    :sswitch_data_0
-    .sparse-switch
-        0x2a -> :sswitch_29
-        0x2b -> :sswitch_28
-        0x2c -> :sswitch_27
-        0x2d -> :sswitch_26
-        0x2e -> :sswitch_25
-        0x2f -> :sswitch_24
-        0x30 -> :sswitch_23
-        0x31 -> :sswitch_22
-        0x32 -> :sswitch_21
-        0x3d -> :sswitch_20
-        0x4b -> :sswitch_1f
-        0x4c -> :sswitch_1e
-        0x4f -> :sswitch_1d
-        0x50 -> :sswitch_1c
-        0x51 -> :sswitch_1b
-        0x52 -> :sswitch_1a
-        0x53 -> :sswitch_19
-        0x673 -> :sswitch_18
-        0xabb -> :sswitch_17
-        0x1018 -> :sswitch_16
-        0x111e -> :sswitch_15
-        0x111f -> :sswitch_14
-        0x169a -> :sswitch_13
-        0x171e -> :sswitch_12
-        0x183b -> :sswitch_11
-        0x1e99 -> :sswitch_10
-        0x20d8 -> :sswitch_f
-        0x210c -> :sswitch_e
-        0x2243 -> :sswitch_d
-        0x2696 -> :sswitch_c
-        0x2733 -> :sswitch_b
-        0x27d6 -> :sswitch_a
-        0x282f -> :sswitch_9
-        0x2a64 -> :sswitch_8
-        0x2aa7 -> :sswitch_7
-        0x2d87 -> :sswitch_6
-        0x31a5 -> :sswitch_5
-        0x32e8 -> :sswitch_4
-        0x37b0 -> :sswitch_3
-        0x3f22 -> :sswitch_2
-        0x3f42 -> :sswitch_1
-        0x4313 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_4
-    .packed-switch 0x34
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-    .end packed-switch
-
-    :pswitch_data_5
-    .packed-switch 0x43
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

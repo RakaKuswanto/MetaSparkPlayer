@@ -1,76 +1,142 @@
 .class public final LX/04k;
-.super Landroid/view/inputmethod/InputConnectionWrapper;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/0PO;
 
 
 # instance fields
-.field public final synthetic A00:LX/04n;
+.field public final A00:LX/0VC;
+
+.field public final A01:LX/0VC;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/inputmethod/InputConnection;LX/04n;)V
-    .locals 1
+.method public constructor <init>(LX/0VC;LX/0VC;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    iput-object p2, p0, LX/04k;->A00:LX/04n;
-
     .line 2
     .line 3
-    invoke-direct {p0, p1, v0}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
+    iput-object p1, p0, LX/04k;->A00:LX/0VC;
 
     .line 4
     .line 5
+    iput-object p2, p0, LX/04k;->A01:LX/0VC;
+
     .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
-    .locals 2
+.method public final declared-synchronized Ah6(IILjava/lang/String;I)V
+    .locals 0
 
     .line 0
-    iget-object v1, p0, LX/04k;->A00:LX/04n;
+    monitor-enter p0
 
     .line 1
+    monitor-exit p0
+
     .line 2
-    invoke-static {p1}, LX/04q;->A00(Ljava/lang/Object;)LX/04q;
+    return-void
+.end method
+
+.method public final declared-synchronized Ah7(IILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    monitor-exit p0
+
+    .line 2
+    return-void
+.end method
+
+.method public final Ah8(II)V
+    .locals 1
+
+    .line 0
+    move-object v0, p0
+
+    .line 1
+    monitor-enter v0
+
+    .line 2
+    monitor-exit v0
 
     .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    return-void
+.end method
 
-    .line 6
-    invoke-interface {v1, p3, v0, p2}, LX/04n;->AW8(Landroid/os/Bundle;LX/04q;I)Z
+.method public final declared-synchronized Ah9(II)V
+    .locals 0
 
-    .line 7
-    .line 8
-    .line 9
-    move-result v0
+    .line 0
+    monitor-enter p0
 
-    .line 10
-    if-eqz v0, :cond_0
+    .line 1
+    monitor-exit p0
 
-    .line 11
-    .line 12
-    const/4 v0, 0x1
+    .line 2
+    return-void
+.end method
 
-    .line 13
-    return v0
+.method public final AhA(IILjava/lang/String;)V
+    .locals 0
 
-    .line 14
-    :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/InputConnectionWrapper;->commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
+    return-void
+.end method
 
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
+.method public final declared-synchronized AhB(IIZ)V
+    .locals 0
 
-    .line 18
-    return v0
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    monitor-exit p0
+
+    .line 2
+    return-void
+.end method
+
+.method public final declared-synchronized AhC()V
+    .locals 0
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    monitor-exit p0
+
+    .line 2
+    return-void
+.end method
+
+.method public final declared-synchronized AhD(IIZ)V
+    .locals 0
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    monitor-exit p0
+
+    .line 2
+    return-void
+.end method
+
+.method public final Alc(Lcom/facebook/quicklog/QuickPerformanceLogger;)V
+    .locals 0
+
+    return-void
 .end method

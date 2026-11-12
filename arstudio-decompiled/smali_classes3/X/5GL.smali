@@ -1,264 +1,87 @@
-.class public final LX/5GL;
-.super Ljava/lang/Object;
+.class public abstract LX/5GL;
+.super LX/5GM;
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/util/logging/Logger;
+# instance fields
+.field public A00:LX/5Fm;
+
+.field public A01:[I
+
+.field public final A02:J
+
+.field public final A03:J
+
+.field public final A04:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/5Fy;LX/58n;LX/5Bk;Ljava/lang/Object;IJJJJJJ)V
+    .locals 14
 
     .line 0
-    const-class v0, LX/5GL;
+    move-object v2, p0
 
     .line 1
+    move-object v3, p1
+
     .line 2
-    invoke-static {v0}, LX/4BE;->A13(Ljava/lang/Class;)Ljava/util/logging/Logger;
+    move-wide/from16 v12, p14
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    move-object/from16 v4, p2
 
+    .line 5
     .line 6
-    sput-object v0, LX/5GL;->A00:Ljava/util/logging/Logger;
+    move-object/from16 v5, p3
 
     .line 7
     .line 8
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static A00(Ljava/net/Socket;)LX/5GH;
-    .locals 3
-
-    .line 0
-    if-eqz p0, :cond_2
-
-    .line 1
-    .line 2
-    invoke-virtual {p0}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    if-eqz v0, :cond_1
-
-    .line 7
-    .line 8
-    new-instance v2, LX/5GR;
+    move-object/from16 v6, p4
 
     .line 9
     .line 10
-    invoke-direct {v2, p0}, LX/5GR;-><init>(Ljava/net/Socket;)V
+    move/from16 v7, p5
 
     .line 11
     .line 12
-    .line 13
-    invoke-virtual {p0}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
+    move-wide/from16 v8, p6
 
+    .line 13
     .line 14
+    move-wide/from16 v10, p8
+
     .line 15
     .line 16
-    move-result-object v0
+    invoke-direct/range {v2 .. v13}, LX/5GM;-><init>(LX/5Fy;LX/58n;LX/5Bk;Ljava/lang/Object;IJJJ)V
 
     .line 17
-    if-eqz v0, :cond_0
-
     .line 18
     .line 19
-    new-instance v1, LX/5G6;
+    move-wide/from16 v0, p10
 
     .line 20
     .line 21
-    invoke-direct {v1, v0, v2}, LX/5G6;-><init>(Ljava/io/OutputStream;LX/5Gd;)V
+    iput-wide v0, p0, LX/5GL;->A03:J
 
     .line 22
     .line 23
+    move-wide/from16 v0, p12
+
     .line 24
-    new-instance v0, LX/5GH;
-
     .line 25
-    .line 26
-    invoke-direct {v0, v2, v1}, LX/5GH;-><init>(LX/5Gc;LX/5GN;)V
+    iput-wide v0, p0, LX/5GL;->A02:J
 
+    .line 26
     .line 27
+    move-wide/from16 v0, p16
+
     .line 28
     .line 29
-    return-object v0
+    iput-wide v0, p0, LX/5GL;->A04:J
 
     .line 30
-    :cond_0
-    const-string v0, "out == null"
-
     .line 31
-    .line 32
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 33
-    .line 34
-    .line 35
-    move-result-object v0
-
-    .line 36
-    throw v0
-
-    .line 37
-    :cond_1
-    const-string v0, "socket\'s output stream == null"
-
-    .line 38
-    .line 39
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v0
-
-    .line 43
-    throw v0
-
-    .line 44
-    :cond_2
-    const-string v0, "socket == null"
-
-    .line 45
-    .line 46
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    throw v0
-.end method
-
-.method public static A01(Ljava/net/Socket;)LX/5GK;
-    .locals 3
-
-    .line 0
-    if-eqz p0, :cond_2
-
-    .line 1
-    .line 2
-    invoke-virtual {p0}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    if-eqz v0, :cond_1
-
-    .line 7
-    .line 8
-    new-instance v2, LX/5GR;
-
-    .line 9
-    .line 10
-    invoke-direct {v2, p0}, LX/5GR;-><init>(Ljava/net/Socket;)V
-
-    .line 11
-    .line 12
-    .line 13
-    invoke-virtual {p0}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    if-eqz v0, :cond_0
-
-    .line 18
-    .line 19
-    new-instance v1, LX/5G7;
-
-    .line 20
-    .line 21
-    invoke-direct {v1, v0, v2}, LX/5G7;-><init>(Ljava/io/InputStream;LX/5Gd;)V
-
-    .line 22
-    .line 23
-    .line 24
-    new-instance v0, LX/5GK;
-
-    .line 25
-    .line 26
-    invoke-direct {v0, v2, v1}, LX/5GK;-><init>(LX/5Gc;LX/5GO;)V
-
-    .line 27
-    .line 28
-    .line 29
-    return-object v0
-
-    .line 30
-    :cond_0
-    const-string v0, "in == null"
-
-    .line 31
-    .line 32
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 33
-    .line 34
-    .line 35
-    move-result-object v0
-
-    .line 36
-    throw v0
-
-    .line 37
-    :cond_1
-    const-string v0, "socket\'s input stream == null"
-
-    .line 38
-    .line 39
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
-
-    .line 40
-    .line 41
-    .line 42
-    move-result-object v0
-
-    .line 43
-    throw v0
-
-    .line 44
-    :cond_2
-    const-string v0, "socket == null"
-
-    .line 45
-    .line 46
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    throw v0
+    return-void
 .end method

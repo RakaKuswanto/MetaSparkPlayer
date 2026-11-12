@@ -34,10 +34,6 @@
 
 .field public mEnableMixedModePgo:Z
 
-.field public mEnableOatmeal:Z
-
-.field public mEnableOatmealQuickening:Z
-
 .field public mEnableQuickening:Z
 
 .field public mHenosisFlags:I
@@ -65,7 +61,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    invoke-static {p0}, LX/001;->A0i(Lcom/facebook/common/dextricks/DexStore$Config$Builder;)V
+    invoke-static {p0}, LX/001;->A0o(Lcom/facebook/common/dextricks/DexStore$Config$Builder;)V
 
     .line 268435460
     .line 268435461
@@ -82,7 +78,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/001;->A0i(Lcom/facebook/common/dextricks/DexStore$Config$Builder;)V
+    invoke-static {p0}, LX/001;->A0o(Lcom/facebook/common/dextricks/DexStore$Config$Builder;)V
 
     .line 4
     .line 5
@@ -183,110 +179,94 @@
 
     .line 53
     .line 54
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmeal:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
 
     .line 55
     .line 56
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableOatmeal:Z
+    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableDex2OatQuickening:Z
 
     .line 57
     .line 58
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableDex2OatQuickening:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
 
     .line 59
     .line 60
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableDex2OatQuickening:Z
+    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableQuickening:Z
 
     .line 61
     .line 62
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableOatmealQuickening:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
 
     .line 63
     .line 64
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableOatmealQuickening:Z
+    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedMode:Z
 
     .line 65
     .line 66
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableQuickening:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
 
     .line 67
     .line 68
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableQuickening:Z
+    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModeClassPath:Z
 
     .line 69
     .line 70
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedMode:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
 
     .line 71
     .line 72
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedMode:Z
+    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModePgo:Z
 
     .line 73
     .line 74
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModeClassPath:Z
+    iget-byte v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
 
     .line 75
     .line 76
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModeClassPath:Z
+    iput-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mPgoCompilerFilter:B
 
     .line 77
     .line 78
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->enableMixedModePgo:Z
+    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
 
     .line 79
     .line 80
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModePgo:Z
+    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mDoPeriodicPgoCompilation:Z
 
     .line 81
     .line 82
-    iget-byte v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->pgoCompilerFilter:B
+    iget-wide v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
 
     .line 83
     .line 84
-    iput-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mPgoCompilerFilter:B
+    iput-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMinTimeBetweenPgoCompilationMs:J
 
     .line 85
     .line 86
-    iget-boolean v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->tryPeriodicPgoCompilation:Z
+    iget-byte v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
 
     .line 87
     .line 88
-    iput-boolean v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mDoPeriodicPgoCompilation:Z
+    iput-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMultidexCompilationStrategy:B
 
     .line 89
     .line 90
-    iget-wide v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->minTimeBetweenPgoCompilationMs:J
+    iget v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
 
     .line 91
     .line 92
-    iput-wide v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMinTimeBetweenPgoCompilationMs:J
+    iput v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mLegacyFlags:I
 
     .line 93
     .line 94
-    iget-byte v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->multidexCompilationStrategy:B
+    iget v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
 
     .line 95
     .line 96
-    iput-byte v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMultidexCompilationStrategy:B
+    iput v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mHenosisFlags:I
 
     .line 97
     .line 98
-    iget v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->legacyFlags:I
-
-    .line 99
-    .line 100
-    iput v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mLegacyFlags:I
-
-    .line 101
-    .line 102
-    iget v0, p1, Lcom/facebook/common/dextricks/DexStore$Config;->henosisFlags:I
-
-    .line 103
-    .line 104
-    iput v0, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mHenosisFlags:I
-
-    .line 105
-    .line 106
     return-void
 .end method
 
@@ -318,7 +298,7 @@
 
 # virtual methods
 .method public build()Lcom/facebook/common/dextricks/DexStore$Config;
-    .locals 47
+    .locals 43
 
     .line 0
     move-object/from16 v0, p0
@@ -329,7 +309,7 @@
 
     .line 3
     .line 4
-    move/from16 v46, v1
+    move/from16 v42, v1
 
     .line 5
     .line 6
@@ -337,7 +317,7 @@
 
     .line 7
     .line 8
-    move/from16 v45, v1
+    move/from16 v41, v1
 
     .line 9
     .line 10
@@ -345,7 +325,7 @@
 
     .line 11
     .line 12
-    move/from16 v44, v1
+    move/from16 v19, v1
 
     .line 13
     .line 14
@@ -353,7 +333,7 @@
 
     .line 15
     .line 16
-    move/from16 v43, v1
+    move/from16 v20, v1
 
     .line 17
     .line 18
@@ -377,7 +357,7 @@
 
     .line 27
     .line 28
-    move/from16 v20, v1
+    move/from16 v18, v1
 
     .line 29
     .line 30
@@ -385,187 +365,155 @@
 
     .line 31
     .line 32
-    move/from16 v19, v1
+    move/from16 v17, v1
 
     .line 33
     .line 34
-    iget v1, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mArtSmallMethodMax:I
+    iget v15, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mArtSmallMethodMax:I
 
     .line 35
     .line 36
-    move/from16 v18, v1
+    iget v14, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mArtTinyMethodMax:I
 
     .line 37
     .line 38
-    iget v1, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mArtTinyMethodMax:I
+    iget v13, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mArtTruncatedDexSize:I
 
     .line 39
     .line 40
-    move/from16 v17, v1
+    iget-boolean v12, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableArtVerifyNone:Z
 
     .line 41
     .line 42
-    iget v15, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mArtTruncatedDexSize:I
+    iget-boolean v11, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableDex2OatQuickening:Z
 
     .line 43
     .line 44
-    iget-boolean v14, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableArtVerifyNone:Z
+    iget-boolean v10, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableQuickening:Z
 
     .line 45
     .line 46
-    iget-boolean v13, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableOatmeal:Z
+    iget-boolean v9, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedMode:Z
 
     .line 47
     .line 48
-    iget-boolean v12, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableDex2OatQuickening:Z
+    iget-boolean v8, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModeClassPath:Z
 
     .line 49
     .line 50
-    iget-boolean v11, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableOatmealQuickening:Z
+    iget-boolean v7, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModePgo:Z
 
     .line 51
     .line 52
-    iget-boolean v10, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableQuickening:Z
+    iget-byte v6, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mPgoCompilerFilter:B
 
     .line 53
     .line 54
-    iget-boolean v9, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedMode:Z
+    iget-boolean v5, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mDoPeriodicPgoCompilation:Z
 
     .line 55
     .line 56
-    iget-boolean v8, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModeClassPath:Z
+    iget-wide v3, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMinTimeBetweenPgoCompilationMs:J
 
     .line 57
     .line 58
-    iget-boolean v7, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModePgo:Z
+    iget-byte v2, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMultidexCompilationStrategy:B
 
     .line 59
     .line 60
-    iget-byte v6, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mPgoCompilerFilter:B
+    iget v1, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mLegacyFlags:I
 
     .line 61
     .line 62
-    iget-boolean v5, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mDoPeriodicPgoCompilation:Z
+    iget v0, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mHenosisFlags:I
 
     .line 63
     .line 64
-    iget-wide v3, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMinTimeBetweenPgoCompilationMs:J
+    new-instance v16, Lcom/facebook/common/dextricks/DexStore$Config;
 
     .line 65
     .line 66
-    iget-byte v2, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mMultidexCompilationStrategy:B
+    move/from16 v32, v8
 
     .line 67
     .line 68
-    iget v1, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mLegacyFlags:I
+    move/from16 v33, v7
 
     .line 69
     .line 70
-    iget v0, v0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mHenosisFlags:I
+    move/from16 v34, v6
 
     .line 71
     .line 72
-    new-instance v16, Lcom/facebook/common/dextricks/DexStore$Config;
+    move/from16 v35, v5
 
     .line 73
     .line 74
-    move/from16 v32, v10
+    move-wide/from16 v36, v3
 
     .line 75
     .line 76
-    move/from16 v33, v9
+    move/from16 v38, v2
 
     .line 77
     .line 78
-    move/from16 v34, v8
+    move/from16 v39, v1
 
     .line 79
     .line 80
-    move/from16 v35, v7
+    move/from16 v40, v0
 
     .line 81
     .line 82
-    move/from16 v36, v6
+    move/from16 v23, v18
 
     .line 83
     .line 84
-    move/from16 v37, v5
+    move/from16 v24, v17
 
     .line 85
     .line 86
-    move-wide/from16 v38, v3
+    move/from16 v25, v15
 
     .line 87
     .line 88
-    move/from16 v40, v2
+    move/from16 v26, v14
 
     .line 89
     .line 90
-    move/from16 v41, v1
+    move/from16 v27, v13
 
     .line 91
     .line 92
-    move/from16 v42, v0
+    move/from16 v28, v12
 
     .line 93
     .line 94
-    move/from16 v23, v20
+    move/from16 v29, v11
 
     .line 95
     .line 96
-    move/from16 v24, v19
+    move/from16 v30, v10
 
     .line 97
     .line 98
-    move/from16 v25, v18
+    move/from16 v31, v9
 
     .line 99
     .line 100
-    move/from16 v26, v17
+    move/from16 v17, v42
 
     .line 101
     .line 102
-    move/from16 v27, v15
+    move/from16 v18, v41
 
     .line 103
     .line 104
-    move/from16 v28, v14
+    invoke-direct/range {v16 .. v40}, Lcom/facebook/common/dextricks/DexStore$Config;-><init>(BBBBBBIIIIIZZZZZZBZJBII)V
 
     .line 105
     .line 106
-    move/from16 v29, v13
-
     .line 107
-    .line 108
-    move/from16 v30, v12
-
-    .line 109
-    .line 110
-    move/from16 v31, v11
-
-    .line 111
-    .line 112
-    move/from16 v17, v46
-
-    .line 113
-    .line 114
-    move/from16 v18, v45
-
-    .line 115
-    .line 116
-    move/from16 v19, v44
-
-    .line 117
-    .line 118
-    move/from16 v20, v43
-
-    .line 119
-    .line 120
-    invoke-direct/range {v16 .. v42}, Lcom/facebook/common/dextricks/DexStore$Config;-><init>(BBBBBBIIIIIZZZZZZZZBZJBII)V
-
-    .line 121
-    .line 122
-    .line 123
     return-object v16
 .end method
 
@@ -728,28 +676,6 @@
 
     .line 0
     iput-boolean p1, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableMixedModePgo:Z
-
-    .line 1
-    .line 2
-    return-object p0
-.end method
-
-.method public setEnableOatmeal(Z)Lcom/facebook/common/dextricks/DexStore$Config$Builder;
-    .locals 0
-
-    .line 0
-    iput-boolean p1, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableOatmeal:Z
-
-    .line 1
-    .line 2
-    return-object p0
-.end method
-
-.method public setEnableOatmealQuickening(Z)Lcom/facebook/common/dextricks/DexStore$Config$Builder;
-    .locals 0
-
-    .line 0
-    iput-boolean p1, p0, Lcom/facebook/common/dextricks/DexStore$Config$Builder;->mEnableOatmealQuickening:Z
 
     .line 1
     .line 2

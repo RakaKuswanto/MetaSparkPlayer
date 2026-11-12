@@ -1,64 +1,63 @@
-.class public final synthetic LX/2yM;
-.super Ljava/lang/Object;
+.class public final LX/2Ym;
+.super LX/2nP;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "WarmUpPlayerListener$$ExternalSyntheticLambda4"
 
 
 # instance fields
-.field public final synthetic A00:LX/2yS;
+.field public final A00:LX/2bO;
 
-.field public final synthetic A01:Ljava/lang/String;
-
-.field public final synthetic A02:Ljava/lang/String;
+.field public final A01:LX/0VC;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/2yS;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/2yM;->A00:LX/2yS;
-
-    iput-object p2, p0, LX/2yM;->A01:Ljava/lang/String;
-
-    iput-object p3, p0, LX/2yM;->A02:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/2yM;->A00:LX/2yS;
+    invoke-direct {p0}, LX/2nP;-><init>()V
 
     .line 1
     .line 2
-    iget-object v2, p0, LX/2yM;->A01:Ljava/lang/String;
-
     .line 3
-    .line 4
-    iget-object v1, p0, LX/2yM;->A02:Ljava/lang/String;
+    sget v1, LX/2I6;->ACa:I
 
+    .line 4
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    iget-object v0, v0, LX/2yS;->A00:LX/47V;
+    invoke-static {v0, v0, v1}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
 
     .line 7
     .line 8
-    invoke-virtual {v0, v2, v1}, LX/47V;->Aak(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 9
+    const/16 v0, 0x19
+
     .line 10
     .line 11
+    invoke-static {p0, v0}, LX/0Xe;->A00(Ljava/lang/Object;I)LX/0Xe;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    invoke-static {}, LX/2nP;->A00()LX/2bO;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    iput-object v1, p0, LX/2Ym;->A01:LX/0VC;
+
+    .line 20
+    .line 21
+    iput-object v0, p0, LX/2Ym;->A00:LX/2bO;
+
+    .line 22
+    .line 23
     return-void
 .end method

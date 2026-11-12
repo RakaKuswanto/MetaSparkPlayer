@@ -1,115 +1,339 @@
 .class public final LX/4LV;
-.super LX/4Lh;
+.super LX/4SM;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FacebookSavePartialPaymentBottomSheetDialogFragment"
-
-
 # instance fields
-.field public final A00:Landroid/view/View$OnClickListener;
+.field public final A00:Landroid/graphics/Rect;
 
-.field public final A01:Landroid/view/View$OnClickListener;
+.field public final A01:Landroid/view/accessibility/AccessibilityManager;
+
+.field public final A02:LX/4LH;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, LX/4Lh;-><init>()V
+    const v2, 0x7f040071
 
     .line 1
     .line 2
     .line 3
-    const/16 v0, 0x39
+    const/4 v5, 0x0
 
     .line 4
-    .line 5
-    invoke-static {p0, v0}, LX/6PP;->A00(Ljava/lang/Object;I)LX/6PP;
+    invoke-static {p1, p2, v2, v5}, LX/4Hy;->A00(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
+    .line 5
     .line 6
     .line 7
-    .line 8
     move-result-object v0
 
-    .line 9
-    iput-object v0, p0, LX/4LV;->A01:Landroid/view/View$OnClickListener;
+    .line 8
+    invoke-direct {p0, v0, p2, v2}, LX/4SM;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 9
     .line 10
     .line 11
-    const/16 v0, 0x38
+    invoke-static {}, LX/434;->A0R()Landroid/graphics/Rect;
 
     .line 12
     .line 13
-    invoke-static {p0, v0}, LX/6PP;->A00(Ljava/lang/Object;I)LX/6PP;
-
     .line 14
-    .line 15
-    .line 16
     move-result-object v0
 
+    .line 15
+    iput-object v0, p0, LX/4LV;->A00:Landroid/graphics/Rect;
+
+    .line 16
     .line 17
-    iput-object v0, p0, LX/4LV;->A00:Landroid/view/View$OnClickListener;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     .line 18
     .line 19
+    .line 20
+    move-result-object v4
+
+    .line 21
+    sget-object v1, LX/4LY;->A06:[I
+
+    .line 22
+    .line 23
+    const v0, 0x7f12026a
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-static {v4, p2, v1, v2, v0}, LX/4Hp;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v3
+
+    .line 30
+    invoke-virtual {v3, v5}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v0
+
+    .line 34
+    if-eqz v0, :cond_0
+
+    .line 35
+    .line 36
+    invoke-virtual {v3, v5, v5}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v0
+
+    .line 40
+    if-nez v0, :cond_0
+
+    .line 41
+    .line 42
+    const/4 v0, 0x0
+
+    .line 43
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setKeyListener(Landroid/text/method/KeyListener;)V
+
+    .line 44
+    .line 45
+    .line 46
+    :cond_0
+    invoke-static {v4}, LX/432;->A0W(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
+    .line 50
+    iput-object v0, p0, LX/4LV;->A01:Landroid/view/accessibility/AccessibilityManager;
+
+    .line 51
+    .line 52
+    const/4 v1, 0x0
+
+    .line 53
+    const v0, 0x7f0405ef
+
+    .line 54
+    .line 55
+    .line 56
+    new-instance v2, LX/4LH;
+
+    .line 57
+    .line 58
+    invoke-direct {v2, v4, v1, v0, v5}, LX/4LH;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    .line 59
+    .line 60
+    .line 61
+    iput-object v2, p0, LX/4LV;->A02:LX/4LH;
+
+    .line 62
+    .line 63
+    const/4 v0, 0x1
+
+    .line 64
+    iput-boolean v0, v2, LX/4LH;->A0D:Z
+
+    .line 65
+    .line 66
+    iget-object v1, v2, LX/4LH;->A09:Landroid/widget/PopupWindow;
+
+    .line 67
+    .line 68
+    invoke-virtual {v1, v0}, Landroid/widget/PopupWindow;->setFocusable(Z)V
+
+    .line 69
+    .line 70
+    .line 71
+    iput-object p0, v2, LX/4LH;->A06:Landroid/view/View;
+
+    .line 72
+    .line 73
+    const/4 v0, 0x2
+
+    .line 74
+    invoke-virtual {v1, v0}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
+
+    .line 75
+    .line 76
+    .line 77
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v0
+
+    .line 81
+    invoke-virtual {v2, v0}, LX/4LH;->AjW(Landroid/widget/ListAdapter;)V
+
+    .line 82
+    .line 83
+    .line 84
+    const/4 v1, 0x3
+
+    .line 85
+    new-instance v0, LX/6fy;
+
+    .line 86
+    .line 87
+    invoke-direct {v0, p0, v1}, LX/6fy;-><init>(Ljava/lang/Object;I)V
+
+    .line 88
+    .line 89
+    .line 90
+    iput-object v0, v2, LX/4LH;->A07:Landroid/widget/AdapterView$OnItemClickListener;
+
+    .line 91
+    .line 92
+    invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 93
+    .line 94
+    .line 95
+    return-void
+.end method
+
+.method public static A00(LX/4LV;Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 1
+    .line 2
+    const/16 v0, 0x11
+
+    .line 3
+    .line 4
+    if-lt v1, v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {p0, p1}, Landroid/widget/AutoCompleteTextView;->convertSelectionToString(Ljava/lang/Object;)Ljava/lang/CharSequence;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
+    .line 10
+    const/4 v0, 0x0
+
+    .line 11
+    invoke-virtual {p0, v1, v0}, LX/4LV;->setText(Ljava/lang/CharSequence;Z)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+
+    .line 15
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v1
+
+    .line 19
+    const/4 v0, 0x0
+
+    .line 20
+    invoke-virtual {p0, v0}, Landroid/widget/AutoCompleteTextView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p0, p1}, Landroid/widget/AutoCompleteTextView;->convertSelectionToString(Ljava/lang/Object;)Ljava/lang/CharSequence;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {p0, v1}, Landroid/widget/AutoCompleteTextView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 31
+    .line 32
+    .line 33
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0J(Landroid/os/Bundle;)Landroid/app/Dialog;
-    .locals 10
+.method public getHint()Ljava/lang/CharSequence;
+    .locals 2
 
     .line 0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    move-result-object v1
 
     .line 4
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    :goto_0
+    if-eqz v1, :cond_1
 
     .line 5
     .line 6
-    .line 7
-    move-result-object v1
+    instance-of v0, v1, Lcom/google/android/material/textfield/TextInputLayout;
 
+    .line 7
     .line 8
-    const v0, 0x7f0d00c2
+    if-eqz v0, :cond_0
 
     .line 9
     .line 10
-    .line 11
-    const/4 v9, 0x0
+    check-cast v1, Lcom/google/android/material/textfield/TextInputLayout;
 
+    .line 11
     .line 12
-    invoke-virtual {v1, v0, v9}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    if-eqz v1, :cond_1
 
     .line 13
     .line 14
-    .line 15
-    move-result-object v6
+    iget-boolean v0, v1, Lcom/google/android/material/textfield/TextInputLayout;->A0V:Z
 
+    .line 15
     .line 16
-    invoke-static {p0}, LX/4BD;->A0S(Landroidx/fragment/app/Fragment;)Lcom/fbpay/w3c/CardDetails;
+    if-eqz v0, :cond_1
 
     .line 17
     .line 18
+    invoke-virtual {v1}, Lcom/google/android/material/textfield/TextInputLayout;->getHint()Ljava/lang/CharSequence;
+
     .line 19
-    move-result-object v5
-
     .line 20
-    invoke-static {v6}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 21
+    move-result-object v0
+
     .line 22
+    return-object v0
+
     .line 23
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+    :cond_0
+    invoke-interface {v1}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
     .line 24
     .line 25
@@ -117,436 +341,619 @@
     move-result-object v1
 
     .line 27
-    const v0, 0x7f0a00d0
+    goto :goto_0
+
+    .line 28
+    :cond_1
+    invoke-super {p0}, Landroid/widget/TextView;->getHint()Ljava/lang/CharSequence;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    return-object v0
+.end method
+
+.method public final onAttachedToWindow()V
+    .locals 2
+
+    .line 0
+    invoke-super {p0}, Landroid/widget/AutoCompleteTextView;->onAttachedToWindow()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    :goto_0
+    if-eqz v1, :cond_0
+
+    .line 8
+    .line 9
+    instance-of v0, v1, Lcom/google/android/material/textfield/TextInputLayout;
+
+    .line 10
+    .line 11
+    if-eqz v0, :cond_1
+
+    .line 12
+    .line 13
+    check-cast v1, Lcom/google/android/material/textfield/TextInputLayout;
+
+    .line 14
+    .line 15
+    if-eqz v1, :cond_0
+
+    .line 16
+    .line 17
+    iget-boolean v0, v1, Lcom/google/android/material/textfield/TextInputLayout;->A0V:Z
+
+    .line 18
+    .line 19
+    if-eqz v0, :cond_0
+
+    .line 20
+    .line 21
+    invoke-super {p0}, Landroid/widget/TextView;->getHint()Ljava/lang/CharSequence;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    if-nez v0, :cond_0
+
+    .line 26
+    .line 27
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     .line 28
     .line 29
-    .line 30
-    invoke-static {v6, v0}, LX/4BF;->A0l(Landroid/view/View;I)LX/4OG;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
+    .line 30
     .line 31
+    invoke-virtual {v1, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
     .line 32
     .line 33
-    move-result-object v3
+    .line 34
+    move-result-object v1
+
+    .line 35
+    const-string v0, "meizu"
+
+    .line 36
+    .line 37
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    if-eqz v0, :cond_0
+
+    .line 42
+    .line 43
+    const-string v0, ""
+
+    .line 44
+    .line 45
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
+
+    .line 46
+    .line 47
+    .line 48
+    :cond_0
+    return-void
+
+    .line 49
+    :cond_1
+    invoke-interface {v1}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v1
+
+    .line 53
+    goto :goto_0
+.end method
+
+.method public final onMeasure(II)V
+    .locals 14
+
+    .line 0
+    move/from16 v0, p2
+
+    .line 1
+    .line 2
+    invoke-super {p0, p1, v0}, Landroid/widget/TextView;->onMeasure(II)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v1
+
+    .line 9
+    const/high16 v0, -0x80000000
+
+    .line 10
+    .line 11
+    if-ne v1, v0, :cond_8
+
+    .line 12
+    .line 13
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v5
+
+    .line 17
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v11
+
+    .line 21
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v7
+
+    .line 25
+    :goto_0
+    if-eqz v7, :cond_4
+
+    .line 26
+    .line 27
+    instance-of v0, v7, Lcom/google/android/material/textfield/TextInputLayout;
+
+    .line 28
+    .line 29
+    if-eqz v0, :cond_3
+
+    .line 30
+    .line 31
+    check-cast v7, Lcom/google/android/material/textfield/TextInputLayout;
+
+    .line 32
+    .line 33
+    :goto_1
+    const/4 v10, 0x0
 
     .line 34
-    const/16 v0, 0x26
+    if-eqz v11, :cond_5
 
     .line 35
     .line 36
-    invoke-static {v3, v1, v0}, LX/6PP;->A01(Landroid/view/View;Ljava/lang/Object;I)V
+    if-eqz v7, :cond_5
 
     .line 37
     .line 38
-    .line 39
-    const v0, 0x7f0a00b4
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
+    .line 39
     .line 40
     .line 41
+    move-result v0
+
     .line 42
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {v0, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     .line 43
     .line 44
     .line 45
-    move-result-object v8
+    move-result v9
 
     .line 46
-    check-cast v8, Landroid/widget/TextView;
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     .line 47
     .line 48
-    const v0, 0x7f1200e0
-
     .line 49
-    .line 50
-    .line 51
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+    move-result v0
 
+    .line 50
+    invoke-static {v0, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    .line 51
     .line 52
     .line 53
+    move-result v8
+
     .line 54
-    move-result-object v4
+    iget-object v1, p0, LX/4LV;->A02:LX/4LH;
 
     .line 55
-    invoke-static {v4}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 56
+    iget-object v6, v1, LX/4LH;->A09:Landroid/widget/PopupWindow;
+
     .line 57
     .line 58
-    const v0, 0x7f0a00ca
+    invoke-virtual {v6}, Landroid/widget/PopupWindow;->isShowing()Z
 
     .line 59
     .line 60
     .line 61
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
+    move-result v0
 
     .line 62
+    if-nez v0, :cond_2
+
     .line 63
     .line 64
-    move-result-object v2
+    const/4 v0, -0x1
 
     .line 65
-    check-cast v2, Landroid/widget/TextView;
+    :goto_2
+    invoke-static {v10, v0}, Ljava/lang/Math;->max(II)I
 
     .line 66
     .line 67
-    const v0, 0x7f0a00c9
-
     .line 68
-    .line 69
-    .line 70
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
+    move-result v0
 
+    .line 69
+    invoke-interface {v11}, Landroid/widget/Adapter;->getCount()I
+
+    .line 70
     .line 71
     .line 72
+    move-result v1
+
     .line 73
-    move-result-object v1
+    add-int/lit8 v0, v0, 0xf
 
     .line 74
-    const v0, 0x7f1200ea
-
     .line 75
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
     .line 76
     .line 77
-    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(I)V
-
     .line 78
+    move-result v12
+
     .line 79
+    add-int/lit8 v0, v12, -0xf
+
     .line 80
-    const/16 v7, 0x8
-
     .line 81
-    .line 82
-    invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v10, v0}, Ljava/lang/Math;->max(II)I
 
+    .line 82
     .line 83
     .line 84
+    move-result v4
+
     .line 85
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    const/4 v13, 0x0
 
     .line 86
+    move-object v3, v13
+
     .line 87
+    const/4 v2, 0x0
+
     .line 88
-    move-result-object v2
+    :goto_3
+    if-ge v4, v12, :cond_6
 
     .line 89
-    iget-object v0, p0, LX/4Lh;->A01:LX/4L6;
-
     .line 90
+    invoke-interface {v11, v4}, Landroid/widget/Adapter;->getItemViewType(I)I
+
     .line 91
-    const/4 v1, 0x0
-
     .line 92
-    if-eqz v0, :cond_0
-
     .line 93
+    move-result v0
+
     .line 94
-    invoke-virtual {v0}, LX/4L6;->A0M()LX/4Ls;
+    if-eq v0, v10, :cond_0
 
     .line 95
     .line 96
+    move-object v3, v13
+
     .line 97
-    move-result-object v9
+    move v10, v0
 
     .line 98
     :cond_0
-    iget-object v0, p0, LX/4Lh;->A01:LX/4L6;
+    invoke-interface {v11, v4, v3, v7}, Landroid/widget/Adapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     .line 99
     .line 100
-    if-eqz v0, :cond_1
-
     .line 101
+    move-result-object v3
+
     .line 102
-    invoke-virtual {v0}, LX/4L6;->A0G()Landroid/os/Bundle;
+    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     .line 103
     .line 104
     .line 105
-    move-result-object v1
+    move-result-object v0
 
     .line 106
-    :cond_1
-    invoke-static {v2, v1, v8, v9, v4}, LX/4LS;->A06(Landroid/app/Activity;Landroid/os/Bundle;Landroid/widget/TextView;LX/4Ls;Ljava/lang/String;)V
+    if-nez v0, :cond_1
 
     .line 107
     .line 108
+    const/4 v1, -0x2
+
     .line 109
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
     .line 110
     .line 111
+    invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
     .line 112
-    move-result-object v0
-
     .line 113
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 114
+    invoke-virtual {v3, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
     .line 115
     .line 116
-    invoke-static {v0}, LX/4Jb;->A08(Landroid/app/Activity;)Z
-
     .line 117
+    :cond_1
+    invoke-virtual {v3, v9, v8}, Landroid/view/View;->measure(II)V
+
     .line 118
     .line 119
-    move-result v0
-
     .line 120
-    if-eqz v0, :cond_2
+    invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
 
     .line 121
     .line 122
-    invoke-static {p0}, LX/4Ln;->A0A(Landroidx/fragment/app/Fragment;)LX/4OJ;
-
     .line 123
+    move-result v0
+
     .line 124
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+
     .line 125
-    move-result-object v1
-
     .line 126
-    const v0, 0x7f0a00cf
-
     .line 127
+    move-result v2
+
     .line 128
+    add-int/lit8 v4, v4, 0x1
+
     .line 129
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
-
     .line 130
-    .line 131
-    .line 132
-    move-result-object v0
+    goto :goto_3
 
+    .line 131
+    :cond_2
+    iget-object v0, v1, LX/4LH;->A0A:LX/4OS;
+
+    .line 132
     .line 133
-    check-cast v0, LX/4OG;
+    invoke-virtual {v0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     .line 134
     .line 135
-    invoke-static {v0, v3, v1}, LX/4Nn;->A01(LX/4OG;LX/4OG;LX/4OJ;)V
-
     .line 136
+    move-result v0
+
     .line 137
+    goto :goto_2
+
     .line 138
-    :cond_2
-    if-nez v5, :cond_3
+    :cond_3
+    invoke-interface {v7}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
     .line 139
     .line 140
-    invoke-virtual {p0}, LX/02T;->A0E()V
-
     .line 141
+    move-result-object v7
+
     .line 142
+    goto :goto_0
+
     .line 143
-    :goto_0
-    const v0, 0x7f0a00b5
+    :cond_4
+    const/4 v7, 0x0
 
     .line 144
+    goto :goto_1
+
     .line 145
+    :cond_5
+    const/4 v2, 0x0
+
     .line 146
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
+    goto :goto_4
 
     .line 147
+    :cond_6
+    invoke-virtual {v6}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
+
     .line 148
     .line 149
+    .line 150
     move-result-object v1
 
-    .line 150
-    check-cast v1, LX/4LZ;
-
     .line 151
-    .line 152
-    const v0, 0x7f1200f0
+    if-eqz v1, :cond_7
 
+    .line 152
     .line 153
+    iget-object v0, p0, LX/4LV;->A00:Landroid/graphics/Rect;
+
     .line 154
     .line 155
-    invoke-virtual {v1, v0}, LX/4LZ;->setPositiveButtonText(I)V
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
     .line 156
     .line 157
     .line 158
-    const v0, 0x7f1200a0
+    iget v1, v0, Landroid/graphics/Rect;->left:I
 
     .line 159
     .line 160
-    .line 161
-    invoke-virtual {v1, v0}, LX/4LZ;->setNegativeButtonText(I)V
+    iget v0, v0, Landroid/graphics/Rect;->right:I
 
+    .line 161
     .line 162
+    add-int/2addr v1, v0
+
     .line 163
+    add-int/2addr v2, v1
+
     .line 164
-    iget-object v0, p0, LX/4LV;->A01:Landroid/view/View$OnClickListener;
+    :cond_7
+    iget-object v0, v7, Lcom/google/android/material/textfield/TextInputLayout;->A1D:Lcom/google/android/material/internal/CheckableImageButton;
 
     .line 165
     .line 166
-    invoke-virtual {v1, v0}, LX/4LZ;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
     .line 167
     .line 168
     .line 169
-    iget-object v0, p0, LX/4LV;->A00:Landroid/view/View$OnClickListener;
+    move-result v0
 
     .line 170
+    add-int/2addr v2, v0
+
     .line 171
-    invoke-virtual {v1, v0}, LX/4LZ;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    :goto_4
+    invoke-static {v5, v2}, Ljava/lang/Math;->max(II)I
 
     .line 172
     .line 173
     .line 174
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+    move-result v1
 
     .line 175
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
     .line 176
     .line 177
-    move-result-object v0
-
     .line 178
-    invoke-static {v0, v6}, LX/4BE;->A0P(Landroid/content/Context;Landroid/view/View;)Landroid/app/AlertDialog;
+    move-result v0
 
     .line 179
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
     .line 180
     .line 181
-    move-result-object v0
-
     .line 182
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    move-result v1
 
     .line 183
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
     .line 184
     .line 185
-    return-object v0
-
     .line 186
-    :cond_3
-    const v0, 0x7f0a00b8
+    move-result v0
 
     .line 187
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setMeasuredDimension(II)V
+
     .line 188
     .line 189
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
-
     .line 190
-    .line 191
-    .line 192
-    move-result-object v4
+    :cond_8
+    return-void
+.end method
 
-    .line 193
-    const v0, 0x7f0a00b7
+.method public setAdapter(Landroid/widget/ListAdapter;)V
+    .locals 2
 
-    .line 194
-    .line 195
-    .line 196
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
+    .line 0
+    invoke-super {p0, p1}, Landroid/widget/AutoCompleteTextView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 197
-    .line 198
-    .line 199
-    move-result-object v3
+    .line 1
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/4LV;->A02:LX/4LH;
 
-    .line 200
-    const v0, 0x7f0a00af
+    .line 4
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
 
-    .line 201
-    .line 202
-    .line 203
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
-
-    .line 204
-    .line 205
-    .line 206
-    move-result-object v2
-
-    .line 207
-    const v0, 0x7f0a00c7
-
-    .line 208
-    .line 209
-    .line 210
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
-
-    .line 211
-    .line 212
-    .line 213
-    move-result-object v1
-
-    .line 214
-    const v0, 0x7f0a00c6
-
-    .line 215
-    .line 216
-    .line 217
-    invoke-static {v6, v0}, LX/4Ln;->A09(Landroid/view/View;I)Landroid/view/View;
-
-    .line 218
-    .line 219
-    .line 220
+    .line 6
+    .line 7
+    .line 8
     move-result-object v0
 
-    .line 221
-    invoke-virtual {v3, v7}, Landroid/view/View;->setVisibility(I)V
+    .line 9
+    invoke-virtual {v1, v0}, LX/4LH;->AjW(Landroid/widget/ListAdapter;)V
 
-    .line 222
-    .line 223
-    .line 224
-    invoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
 
-    .line 225
-    .line 226
-    .line 227
-    invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
+.method public final showDropDown()V
+    .locals 1
 
-    .line 228
-    .line 229
-    .line 230
-    invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
+    .line 0
+    iget-object v0, p0, LX/4LV;->A01:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 231
-    .line 232
-    .line 233
-    invoke-virtual {v0, v7}, Landroid/view/View;->setVisibility(I)V
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
 
-    .line 234
-    .line 235
-    .line 236
-    const v0, 0x7f0a00a3
+    .line 3
+    .line 4
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
 
-    .line 237
-    .line 238
-    .line 239
-    invoke-static {v6, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
 
-    .line 240
-    .line 241
-    .line 242
-    move-result-object v1
+    .line 8
+    if-eqz v0, :cond_0
 
-    .line 243
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
+    .line 9
+    .line 10
+    iget-object v0, p0, LX/4LV;->A02:LX/4LH;
 
-    .line 244
-    .line 245
-    .line 246
-    const/4 v0, 0x0
+    .line 11
+    .line 12
+    invoke-virtual {v0}, LX/4LH;->Amz()V
 
-    .line 247
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    .line 13
+    .line 14
+    .line 15
+    return-void
 
-    .line 248
-    .line 249
-    .line 250
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+    .line 16
+    :cond_0
+    invoke-super {p0}, Landroid/widget/AutoCompleteTextView;->showDropDown()V
 
-    .line 251
-    .line 252
-    .line 253
-    move-result-object v0
-
-    .line 254
-    invoke-static {v0, v6, v5}, LX/4LS;->A09(Landroid/content/Context;Landroid/view/View;Lcom/fbpay/w3c/CardDetails;)V
-
-    .line 255
-    .line 256
-    .line 257
-    goto :goto_0
+    .line 17
+    .line 18
+    .line 19
+    return-void
 .end method

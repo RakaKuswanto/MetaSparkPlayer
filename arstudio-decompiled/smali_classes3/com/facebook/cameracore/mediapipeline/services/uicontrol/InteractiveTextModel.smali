@@ -6,7 +6,7 @@
 # instance fields
 .field public final mCursorStartIndex:I
 
-.field public final mInputTypeHint:LX/4gY;
+.field public final mInputTypeHint:LX/4mi;
 
 .field public final mText:Ljava/lang/String;
 
@@ -14,7 +14,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLX/4gY;I)V
+.method public constructor <init>(Ljava/lang/String;ZLX/4mi;I)V
     .locals 0
 
     .line 0
@@ -31,7 +31,7 @@
 
     .line 6
     .line 7
-    iput-object p3, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/InteractiveTextModel;->mInputTypeHint:LX/4gY;
+    iput-object p3, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/InteractiveTextModel;->mInputTypeHint:LX/4mi;
 
     .line 8
     .line 9
@@ -79,11 +79,11 @@
     return v1
 .end method
 
-.method public getInputTypeHint()LX/4gY;
+.method public getInputTypeHint()LX/4mi;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/InteractiveTextModel;->mInputTypeHint:LX/4gY;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/InteractiveTextModel;->mInputTypeHint:LX/4mi;
 
     .line 1
     .line 2

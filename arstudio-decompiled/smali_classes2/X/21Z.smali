@@ -1,254 +1,245 @@
 .class public final LX/21Z;
-.super Ljava/lang/Object;
+.super LX/1rm;
 .source ""
 
-# interfaces
-.implements LX/21f;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "LX/1rm<",
+        "TK;",
+        "Ljava/util/Collection<",
+        "TV;>;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic A00:LX/21Y;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/21Y;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$1"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/21Z;->A00:LX/21Y;
 
     .line 1
     .line 2
+    invoke-direct {p0}, LX/1rm;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AOa(LX/1wh;LX/1k7;LX/27m;)LX/21j;
-    .locals 3
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     .line 0
-    invoke-virtual {p3}, LX/27m;->A0q()LX/270;
+    iget-object v0, p0, LX/21Z;->A00:LX/21Y;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    iget-object v0, v0, LX/21Y;->A00:Ljava/util/Map;
 
+    .line 3
     .line 4
-    sget-object v0, LX/270;->VALUE_NULL:LX/270;
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     .line 5
     .line 6
-    if-ne v1, v0, :cond_0
-
     .line 7
+    move-result-object v0
+
     .line 8
-    sget-object v0, LX/21j;->A02:LX/21j;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 9
     .line 10
-    return-object v0
-
     .line 11
-    :cond_0
-    invoke-virtual {p3}, LX/27m;->A1H()LX/270;
+    :try_start_0
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     .line 12
     .line 13
     .line 14
-    invoke-virtual {p3}, LX/27m;->A1C()Ljava/lang/String;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v1
-
-    .line 18
-    const-string v0, "code"
-
-    .line 19
-    .line 20
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 21
-    .line 22
-    .line 23
     move-result v0
 
-    .line 24
-    if-eqz v0, :cond_3
+    .line 15
+    return v0
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 16
+    :catch_0
+    const/4 v0, 0x0
+
+    .line 17
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/21Z;->A00:LX/21Y;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/21b;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, v1}, LX/21b;-><init>(LX/21Y;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
+
+    .line 0
+    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return v0
+
+    .line 8
+    :cond_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    .line 9
+    .line 10
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 11
+    .line 12
+    .line 13
+    iget-object v0, p0, LX/21Z;->A00:LX/21Y;
+
+    .line 14
+    .line 15
+    iget-object v2, v0, LX/21Y;->A01:Lcom/google/common/collect/AbstractMapBasedMultimap;
+
+    .line 16
+    .line 17
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v1
+
+    .line 21
+    iget-object v0, v2, Lcom/google/common/collect/AbstractMapBasedMultimap;->A01:Ljava/util/Map;
+
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 24
     .line 25
     .line 26
-    const/4 v0, -0x1
+    :try_start_0
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 27
-    invoke-virtual {p3}, LX/27m;->A0k()I
-
     .line 28
     .line 29
+    move-result-object v0
+
     .line 30
-    move-result v2
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 31
-    if-eq v2, v0, :cond_2
+    :catch_0
+    const/4 v0, 0x0
 
     .line 32
-    .line 33
-    invoke-virtual {p3}, LX/27m;->A1H()LX/270;
+    :goto_0
+    check-cast v0, Ljava/util/Collection;
 
+    .line 33
     .line 34
+    if-eqz v0, :cond_1
+
     .line 35
     .line 36
-    invoke-virtual {p3}, LX/27m;->A1H()LX/270;
+    invoke-interface {v0}, Ljava/util/Collection;->size()I
 
     .line 37
     .line 38
     .line 39
-    invoke-virtual {p3}, LX/27m;->A1H()LX/270;
+    move-result v1
 
     .line 40
+    invoke-interface {v0}, Ljava/util/Collection;->clear()V
+
     .line 41
     .line 42
-    invoke-virtual {p3}, LX/27m;->A1C()Ljava/lang/String;
-
     .line 43
+    iget v0, v2, Lcom/google/common/collect/AbstractMapBasedMultimap;->A00:I
+
     .line 44
     .line 45
-    move-result-object v1
+    sub-int/2addr v0, v1
 
     .line 46
-    const-string v0, "body"
+    iput v0, v2, Lcom/google/common/collect/AbstractMapBasedMultimap;->A00:I
 
     .line 47
     .line 48
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_1
+    const/4 v0, 0x1
 
     .line 49
-    .line 50
-    .line 51
-    move-result v0
-
-    .line 52
-    if-eqz v0, :cond_1
-
-    .line 53
-    .line 54
-    invoke-virtual {p3}, LX/27m;->A1H()LX/270;
-
-    .line 55
-    .line 56
-    .line 57
-    new-instance v1, LX/21c;
-
-    .line 58
-    .line 59
-    invoke-direct {v1, p3}, LX/21c;-><init>(LX/27m;)V
-
-    .line 60
-    .line 61
-    .line 62
-    new-instance v0, LX/1wl;
-
-    .line 63
-    .line 64
-    invoke-direct {v0, p1, v1, v2}, LX/1wl;-><init>(LX/1wh;LX/27m;I)V
-
-    .line 65
-    .line 66
-    .line 67
-    invoke-static {v0, p1}, LX/1wh;->A01(LX/1wm;LX/1wh;)V
-
-    .line 68
-    .line 69
-    .line 70
-    new-instance v0, LX/21j;
-
-    .line 71
-    .line 72
-    invoke-direct {v0, v1, v2}, LX/21j;-><init>(LX/27m;I)V
-
-    .line 73
-    .line 74
-    .line 75
-    return-object v0
-
-    .line 76
-    :cond_1
-    invoke-virtual {p3}, LX/27m;->A0o()LX/1TA;
-
-    .line 77
-    .line 78
-    .line 79
-    move-result-object v2
-
-    .line 80
-    const-string v1, "Invalid format. \'body\' node not found."
-
-    .line 81
-    .line 82
-    new-instance v0, LX/28X;
-
-    .line 83
-    .line 84
-    invoke-direct {v0, v2, v1}, LX/28X;-><init>(LX/1TA;Ljava/lang/String;)V
-
-    .line 85
-    .line 86
-    .line 87
-    throw v0
-
-    .line 88
-    :cond_2
-    invoke-virtual {p3}, LX/27m;->A0o()LX/1TA;
-
-    .line 89
-    .line 90
-    .line 91
-    move-result-object v2
-
-    .line 92
-    const-string v1, "Invalid format. \'code\' value not found."
-
-    .line 93
-    .line 94
-    new-instance v0, LX/28X;
-
-    .line 95
-    .line 96
-    invoke-direct {v0, v2, v1}, LX/28X;-><init>(LX/1TA;Ljava/lang/String;)V
-
-    .line 97
-    .line 98
-    .line 99
-    throw v0
-
-    .line 100
-    :cond_3
-    invoke-virtual {p3}, LX/27m;->A0o()LX/1TA;
-
-    .line 101
-    .line 102
-    .line 103
-    move-result-object v2
-
-    .line 104
-    const-string v1, "Invalid format. \'code\' node not found."
-
-    .line 105
-    .line 106
-    new-instance v0, LX/28X;
-
-    .line 107
-    .line 108
-    invoke-direct {v0, v2, v1}, LX/28X;-><init>(LX/1TA;Ljava/lang/String;)V
-
-    .line 109
-    .line 110
-    .line 111
-    throw v0
-.end method
-
-.method public final Agf(LX/0OQ;)V
-    .locals 0
-
-    return-void
+    return v0
 .end method

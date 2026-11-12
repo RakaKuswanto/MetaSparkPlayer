@@ -1,5 +1,5 @@
 .class public Lcom/facebook/video/plugins/ClickToPlayAnimationPlugin;
-.super LX/3q1;
+.super LX/3sP;
 .source ""
 
 
@@ -17,7 +17,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1}, LX/3q1;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, LX/3sP;-><init>(Landroid/content/Context;)V
 
     .line 2
     .line 3
@@ -25,11 +25,11 @@
     const/4 v1, 0x1
 
     .line 5
-    new-instance v0, LX/1tN;
+    new-instance v0, LX/0ZI;
 
     .line 6
     .line 7
-    invoke-direct {v0, p0, v1}, LX/1tN;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/0ZI;-><init>(Ljava/lang/Object;I)V
 
     .line 8
     .line 9
@@ -38,12 +38,12 @@
 
     .line 11
     .line 12
-    const v0, 0x7f0a04ae
+    const v0, 0x7f0903f7
 
     .line 13
     .line 14
     .line 15
-    invoke-static {p0, v0}, LX/3Ff;->A01(Landroid/view/View;I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/3bM;->A00(Landroid/view/View;I)Landroid/view/View;
 
     .line 16
     .line 17
@@ -59,7 +59,7 @@
 
     .line 22
     .line 23
-    new-array v1, v1, [LX/3hn;
+    new-array v1, v1, [LX/3Z7;
 
     .line 24
     .line 25
@@ -67,7 +67,7 @@
 
     .line 26
     .line 27
-    invoke-static {p0, v1, v0, v2}, LX/3od;->A08(LX/3od;[LX/3hn;II)V
+    invoke-static {p0, v1, v0, v2}, LX/3pj;->A08(LX/3pj;[LX/3Z7;II)V
 
     .line 28
     .line 29
@@ -193,16 +193,16 @@
 
 
 # virtual methods
-.method public final A0U()V
+.method public final A0P()V
     .locals 1
 
     .line 0
-    invoke-super {p0}, LX/3q1;->A0U()V
+    invoke-super {p0}, LX/3sP;->A0P()V
 
     .line 1
     .line 2
     .line 3
-    const v0, 0x7f081617
+    const v0, 0x7f081711
 
     .line 4
     .line 5
@@ -215,16 +215,16 @@
     return-void
 .end method
 
-.method public final A0V()V
+.method public final A0Q()V
     .locals 1
 
     .line 0
-    invoke-super {p0}, LX/3q1;->A0V()V
+    invoke-super {p0}, LX/3sP;->A0Q()V
 
     .line 1
     .line 2
     .line 3
-    const v0, 0x7f081618
+    const v0, 0x7f081712
 
     .line 4
     .line 5
@@ -241,7 +241,7 @@
     .locals 1
 
     .line 0
-    const v0, 0x7f0d006c
+    const v0, 0x7f0c005d
 
     .line 1
     .line 2

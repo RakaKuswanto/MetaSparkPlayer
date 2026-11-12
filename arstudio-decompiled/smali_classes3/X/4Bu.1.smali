@@ -1,9 +1,9 @@
-.class public final LX/4Bu;
+.class public final LX/4bU;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+.implements LX/4aI;
 
 
 # direct methods
@@ -21,22 +21,95 @@
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 2
+.method public final A5I(LX/4D6;)Lcom/facebook/dsp/core/ColorData;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final A5t(LX/4aT;)Ljava/lang/Integer;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AIH()LX/6Vc;
+    .locals 1
 
     .line 0
-    const-string v1, "BrowserLiteFragment-executor"
+    sget-object v0, LX/6Vc;->DEFAULT:LX/6Vc;
 
     .line 1
     .line 2
-    new-instance v0, Ljava/lang/Thread;
+    return-object v0
+.end method
 
+.method public final Ama(LX/4aV;)LX/4aY;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final An3(LX/4aU;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AnK(LX/4aG;)Ljava/lang/Float;
+    .locals 2
+
+    .line 0
+    invoke-static {p1}, LX/431;->A0B(Ljava/lang/Enum;)I
+
+    .line 1
+    .line 2
     .line 3
+    move-result v1
+
     .line 4
-    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    const/16 v0, 0x26
 
     .line 5
     .line 6
+    if-ne v1, v0, :cond_0
+
     .line 7
+    .line 8
+    const/high16 v0, 0x41400000    # 12.0f
+
+    .line 9
+    .line 10
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+
+    .line 15
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 16
+    return-object v0
+.end method
+
+.method public final Aou(LX/4ah;)LX/4ak;
+    .locals 1
+
+    const/4 v0, 0x0
+
     return-object v0
 .end method

@@ -161,30 +161,35 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yf;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioInputRoute;->name:Ljava/lang/String;
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 7
     .line 8
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
     .line 9
-    .line 10
-    .line 11
-    move-result v0
+    move-result v1
 
+    .line 10
+    iget-object v0, p0, Lcom/facebook/rsys/audio/gen/AudioInputRoute;->name:Ljava/lang/String;
+
+    .line 11
     .line 12
-    add-int/2addr v1, v0
+    invoke-static {v0, v1}, LX/434;->A0K(Ljava/lang/String;I)I
 
     .line 13
-    return v1
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -211,7 +216,7 @@
 
     .line 9
     .line 10
-    invoke-static {v4, v3, v2, v1, v0}, LX/00I;->A0O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v3, v2, v1, v0}, LX/004;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 11
     .line 12

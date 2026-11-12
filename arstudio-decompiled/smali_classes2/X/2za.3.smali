@@ -1,35 +1,32 @@
-.class public final LX/2za;
+.class public interface abstract LX/2za;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:Ljava/util/Map;
+# virtual methods
+.method public abstract AA9()Lcom/google/common/collect/ImmutableList;
+.end method
 
-.field public final A01:Ljava/util/Map;
+.method public abstract ABo()Lcom/google/common/collect/ImmutableList;
+.end method
 
+.method public abstract ACA()Ljava/lang/String;
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public abstract ACx()Ljava/lang/String;
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract AJn()Ljava/lang/String;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+.method public abstract AJs()Z
+.end method
 
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
+.method public abstract AKh()Z
+.end method
 
-    .line 7
-    iput-object v0, p0, LX/2za;->A01:Ljava/util/Map;
+.method public abstract AOh()Ljava/lang/Boolean;
+.end method
 
-    .line 8
-    .line 9
-    return-void
+.method public abstract APT()Ljava/lang/Boolean;
 .end method

@@ -4,8 +4,17 @@
 
 
 # virtual methods
-.method public abstract AAd(LX/2kX;Ljava/lang/Object;)I
+.method public abstract ABH()I
 .end method
 
-.method public abstract APL(Ljava/nio/ByteBuffer;I)Ljava/lang/Object;
+.method public abstract ADf()Z
+.end method
+
+.method public abstract ADg()Z
+.end method
+
+.method public abstract AEz()I
+.end method
+
+.method public abstract AKr()I
 .end method

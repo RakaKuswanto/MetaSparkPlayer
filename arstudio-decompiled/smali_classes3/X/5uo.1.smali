@@ -1,148 +1,30 @@
-.class public final LX/5uo;
+.class public final LX/5Uo;
 .super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/6CE;
 
 
 # instance fields
 .field public A00:I
 
-.field public A01:Ljava/lang/String;
+.field public A01:Landroid/media/MediaMuxer;
 
-.field public A02:Ljava/lang/String;
+.field public volatile A02:Z
 
-.field public A03:Ljava/lang/String;
+.field public volatile A03:Z
 
-.field public A04:Ljava/lang/String;
+.field public volatile A04:Z
 
-.field public A05:Ljava/lang/String;
+.field public volatile A05:Z
 
-.field public A06:Ljava/lang/String;
-
-.field public A07:Z
-
-.field public A08:Z
-
-.field public A09:Z
-
-.field public A0A:Z
-
-.field public A0B:Z
-
-.field public A0C:Z
-
-.field public A0D:Z
-
-.field public A0E:Z
-
-.field public A0F:Z
-
-.field public A0G:Z
-
-.field public A0H:Z
-
-.field public A0I:Z
+.field public volatile A06:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
-
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    const/4 v0, 0x0
-
-    .line 268435460
-    iput-object v0, p0, LX/5uo;->A05:Ljava/lang/String;
-
-    .line 268435461
-    .line 268435462
-    const/4 v1, 0x0
-
-    .line 268435463
-    iput-boolean v1, p0, LX/5uo;->A0F:Z
-
-    .line 268435464
-    .line 268435465
-    iput-boolean v1, p0, LX/5uo;->A0G:Z
-
-    .line 268435466
-    .line 268435467
-    iput-boolean v1, p0, LX/5uo;->A0C:Z
-
-    .line 268435468
-    .line 268435469
-    iput-boolean v1, p0, LX/5uo;->A0B:Z
-
-    .line 268435470
-    .line 268435471
-    iput-boolean v1, p0, LX/5uo;->A0A:Z
-
-    .line 268435472
-    .line 268435473
-    iput-boolean v1, p0, LX/5uo;->A09:Z
-
-    .line 268435474
-    .line 268435475
-    iput-boolean v1, p0, LX/5uo;->A08:Z
-
-    .line 268435476
-    .line 268435477
-    iput-boolean v1, p0, LX/5uo;->A07:Z
-
-    .line 268435478
-    .line 268435479
-    iput-boolean v1, p0, LX/5uo;->A0H:Z
-
-    .line 268435480
-    .line 268435481
-    iput-object v0, p0, LX/5uo;->A03:Ljava/lang/String;
-
-    .line 268435482
-    .line 268435483
-    iput-object v0, p0, LX/5uo;->A04:Ljava/lang/String;
-
-    .line 268435484
-    .line 268435485
-    iput-object v0, p0, LX/5uo;->A02:Ljava/lang/String;
-
-    .line 268435486
-    .line 268435487
-    iput-object v0, p0, LX/5uo;->A06:Ljava/lang/String;
-
-    .line 268435488
-    .line 268435489
-    iput-object v0, p0, LX/5uo;->A01:Ljava/lang/String;
-
-    .line 268435490
-    .line 268435491
-    iput-boolean v1, p0, LX/5uo;->A0E:Z
-
-    .line 268435492
-    .line 268435493
-    const/4 v0, -0x1
-
-    .line 268435494
-    iput v0, p0, LX/5uo;->A00:I
-
-    .line 268435495
-    .line 268435496
-    iput-boolean v1, p0, LX/5uo;->A0D:Z
-
-    .line 268435497
-    .line 268435498
-    iput-boolean v1, p0, LX/5uo;->A0I:Z
-
-    .line 268435499
-    .line 268435500
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/google/android/exoplayer2/FbFormatExtension;)V
-    .locals 1
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -150,157 +32,418 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A06:Ljava/lang/String;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A5V(Ljava/lang/String;)V
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/5Uq;->MPEG_4:LX/5Uq;
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, v0, p1}, LX/5Uo;->A5W(LX/5Uq;Ljava/lang/String;)V
+
+    .line 3
     .line 4
     .line 5
-    iput-object v0, p0, LX/5uo;->A05:Ljava/lang/String;
+    return-void
+.end method
 
+.method public final A5W(LX/5Uq;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    invoke-virtual {p1}, LX/5Uq;->getVal()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
+
+    .line 4
+    new-instance v0, Landroid/media/MediaMuxer;
+
+    .line 5
     .line 6
-    .line 7
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0G:Z
+    invoke-direct {v0, p2, v1}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
 
+    .line 7
     .line 8
     .line 9
-    iput-boolean v0, p0, LX/5uo;->A0F:Z
+    iput-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
 
     .line 10
     .line 11
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0H:Z
+    const/4 v0, 0x0
+
+    .line 12
+    iput-boolean v0, p0, LX/5Uo;->A03:Z
+
+    .line 13
+    .line 14
+    iput-boolean v0, p0, LX/5Uo;->A04:Z
+
+    .line 15
+    .line 16
+    iput-boolean v0, p0, LX/5Uo;->A02:Z
+
+    .line 17
+    .line 18
+    iput-boolean v0, p0, LX/5Uo;->A06:Z
+
+    .line 19
+    .line 20
+    iput-boolean v0, p0, LX/5Uo;->A05:Z
+
+    .line 21
+    .line 22
+    return-void
+.end method
+
+.method public final A8V()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    :try_start_0
+    invoke-virtual {v0}, Landroid/media/MediaMuxer;->stop()V
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 10
+    .line 11
+    .line 12
+    :catch_0
+    :cond_0
+    return-void
+.end method
+
+.method public final Ajc(Landroid/media/MediaFormat;)V
+    .locals 1
+
+    .line 0
+    const-string v0, "VideoOnlyMuxer does not accept an audio format."
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
+.end method
+
+.method public final Al8(I)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Landroid/media/MediaMuxer;->setOrientationHint(I)V
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
+    return-void
+.end method
+
+.method public final AmL(Landroid/media/MediaFormat;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Landroid/media/MediaMuxer;->addTrack(Landroid/media/MediaFormat;)I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    iput v0, p0, LX/5Uo;->A00:I
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    iput-boolean v0, p0, LX/5Uo;->A04:Z
 
     .line 12
     .line 13
-    iput-boolean v0, p0, LX/5uo;->A0G:Z
+    :cond_0
+    return-void
+.end method
 
+.method public final Anm([I)I
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_4
+
+    .line 3
+    .line 4
+    iget-boolean v0, p0, LX/5Uo;->A04:Z
+
+    .line 5
+    .line 6
+    if-eqz v0, :cond_3
+
+    .line 7
+    .line 8
+    iget-boolean v0, p0, LX/5Uo;->A03:Z
+
+    .line 9
+    .line 10
+    if-nez v0, :cond_3
+
+    .line 11
+    .line 12
+    iget-boolean v0, p0, LX/5Uo;->A02:Z
+
+    .line 13
     .line 14
+    const/4 v2, 0x4
+
     .line 15
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0D:Z
+    if-eqz v0, :cond_0
 
     .line 16
     .line 17
-    iput-boolean v0, p0, LX/5uo;->A0C:Z
+    const/4 v2, 0x5
 
     .line 18
+    :cond_0
+    :goto_0
+    if-nez v2, :cond_1
+
     .line 19
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0C:Z
-
     .line 20
+    iget-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
     .line 21
-    iput-boolean v0, p0, LX/5uo;->A0B:Z
-
     .line 22
-    .line 23
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0B:Z
+    invoke-virtual {v0}, Landroid/media/MediaMuxer;->stop()V
 
+    .line 23
     .line 24
     .line 25
-    iput-boolean v0, p0, LX/5uo;->A0A:Z
+    iget-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
 
     .line 26
     .line 27
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0A:Z
+    invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
 
     .line 28
     .line 29
-    iput-boolean v0, p0, LX/5uo;->A09:Z
-
     .line 30
+    :cond_1
+    :goto_1
+    const/4 v1, 0x0
+
     .line 31
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A09:Z
+    iput-boolean v1, p0, LX/5Uo;->A03:Z
 
     .line 32
     .line 33
-    iput-boolean v0, p0, LX/5uo;->A08:Z
+    const/4 v0, 0x0
 
     .line 34
+    iput-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
     .line 35
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A08:Z
-
     .line 36
+    iput v1, p0, LX/5Uo;->A00:I
+
     .line 37
-    iput-boolean v0, p0, LX/5uo;->A07:Z
-
     .line 38
+    if-eqz v2, :cond_2
+
     .line 39
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0I:Z
-
     .line 40
+    iget-boolean v0, p0, LX/5Uo;->A05:Z
+
     .line 41
-    iput-boolean v0, p0, LX/5uo;->A0H:Z
-
     .line 42
+    if-nez v0, :cond_2
+
     .line 43
-    iget-object v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A04:Ljava/lang/String;
-
     .line 44
+    iget-boolean v0, p0, LX/5Uo;->A06:Z
+
     .line 45
-    iput-object v0, p0, LX/5uo;->A03:Ljava/lang/String;
-
     .line 46
+    if-eqz v0, :cond_5
+
     .line 47
-    iget-object v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A05:Ljava/lang/String;
-
     .line 48
-    .line 49
-    iput-object v0, p0, LX/5uo;->A04:Ljava/lang/String;
+    add-int/lit8 v2, v2, 0x14
 
+    .line 49
     .line 50
+    :cond_2
+    return v2
+
     .line 51
-    iget-object v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A03:Ljava/lang/String;
+    :cond_3
+    const/4 v2, 0x0
 
     .line 52
+    goto :goto_0
+
     .line 53
-    iput-object v0, p0, LX/5uo;->A02:Ljava/lang/String;
+    :cond_4
+    const/4 v2, 0x1
 
     .line 54
+    goto :goto_1
+
     .line 55
-    iget-object v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A07:Ljava/lang/String;
+    :cond_5
+    add-int/lit8 v2, v2, 0xa
 
     .line 56
     .line 57
-    iput-object v0, p0, LX/5uo;->A06:Ljava/lang/String;
+    return v2
+.end method
 
-    .line 58
-    .line 59
-    iget-object v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A02:Ljava/lang/String;
+.method public final AqJ(Landroid/media/MediaCodec$BufferInfo;Ljava/nio/ByteBuffer;)V
+    .locals 1
 
-    .line 60
-    .line 61
-    iput-object v0, p0, LX/5uo;->A01:Ljava/lang/String;
+    .line 0
+    const-string v0, "VideoOnlyMuxer does not have audio to write."
 
-    .line 62
-    .line 63
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0F:Z
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
-    .line 64
-    .line 65
-    iput-boolean v0, p0, LX/5uo;->A0E:Z
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 66
-    .line 67
-    iget v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A01:I
+    .line 6
+    throw v0
+.end method
 
-    .line 68
-    .line 69
-    iput v0, p0, LX/5uo;->A00:I
+.method public final Aqb(Landroid/media/MediaCodec$BufferInfo;Ljava/nio/ByteBuffer;)V
+    .locals 3
 
-    .line 70
-    .line 71
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0E:Z
+    .line 0
+    const/4 v2, 0x1
 
-    .line 72
-    .line 73
-    iput-boolean v0, p0, LX/5uo;->A0D:Z
+    .line 1
+    iput-boolean v2, p0, LX/5Uo;->A02:Z
 
-    .line 74
-    .line 75
-    iget-boolean v0, p1, Lcom/google/android/exoplayer2/FbFormatExtension;->A0J:Z
+    .line 2
+    .line 3
+    iget v0, p1, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
-    .line 76
-    .line 77
-    iput-boolean v0, p0, LX/5uo;->A0I:Z
+    .line 4
+    .line 5
+    and-int/lit8 v0, v0, 0x2
 
-    .line 78
-    .line 79
+    .line 6
+    .line 7
+    if-nez v0, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v1, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
+    .line 10
+    .line 11
+    if-eqz v1, :cond_0
+
+    .line 12
+    .line 13
+    iget v0, p0, LX/5Uo;->A00:I
+
+    .line 14
+    .line 15
+    invoke-virtual {v1, v0, p2, p1}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+
+    .line 16
+    .line 17
+    .line 18
+    iput-boolean v2, p0, LX/5Uo;->A03:Z
+
+    .line 19
+    .line 20
+    :cond_0
+    return-void
+.end method
+
+.method public final start()V
+    .locals 2
+
+    .line 0
+    const/4 v1, 0x1
+
+    .line 1
+    iput-boolean v1, p0, LX/5Uo;->A06:Z
+
+    .line 2
+    .line 3
+    iget-object v0, p0, LX/5Uo;->A01:Landroid/media/MediaMuxer;
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 6
+    .line 7
+    invoke-virtual {v0}, Landroid/media/MediaMuxer;->start()V
+
+    .line 8
+    .line 9
+    .line 10
+    iput-boolean v1, p0, LX/5Uo;->A05:Z
+
+    .line 11
+    .line 12
+    :cond_0
     return-void
 .end method

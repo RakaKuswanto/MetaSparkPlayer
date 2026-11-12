@@ -31,21 +31,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x3
+    const/16 v0, 0x4e
 
     .line 1
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
-
     .line 2
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/photos/creativeediting/model/StoryBackgroundGradientColor;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -70,7 +71,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5

@@ -1,33 +1,8 @@
-.class public final LX/3DT;
+.class public interface abstract LX/3DT;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
-
-
-# direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/3DT;->A00:LX/1zG;
-
-    .line 8
-    .line 9
-    return-void
+# virtual methods
+.method public abstract A6N(LX/2Xs;Ljava/lang/Runnable;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/Callable;I)Ljava/util/concurrent/Callable;
 .end method

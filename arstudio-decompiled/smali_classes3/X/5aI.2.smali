@@ -4,20 +4,16 @@
 
 
 # instance fields
-.field public A00:J
+.field public final A00:I
 
-.field public A01:J
+.field public final A01:I
 
-.field public A02:Landroid/os/Handler;
-
-.field public A03:LX/5aH;
-
-.field public final A04:Ljava/lang/Runnable;
+.field public final A02:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(II)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,92 +21,218 @@
     .line 1
     .line 2
     .line 3
-    const-wide/16 v0, 0x0
+    iput p1, p0, LX/5aI;->A02:I
 
     .line 4
     .line 5
-    iput-wide v0, p0, LX/5aI;->A00:J
+    iput p2, p0, LX/5aI;->A01:I
 
     .line 6
     .line 7
-    iput-wide v0, p0, LX/5aI;->A01:J
+    mul-int/2addr p1, p2
 
     .line 8
+    iput p1, p0, LX/5aI;->A00:I
+
     .line 9
-    new-instance v0, LX/5aJ;
-
     .line 10
-    .line 11
-    invoke-direct {v0, p0}, LX/5aJ;-><init>(LX/5aI;)V
-
-    .line 12
-    .line 13
-    .line 14
-    iput-object v0, p0, LX/5aI;->A04:Ljava/lang/Runnable;
-
-    .line 15
-    .line 16
     return-void
 .end method
 
-.method public static declared-synchronized A00(LX/5aI;)V
-    .locals 4
+.method public static A00(LX/5aI;Ljava/lang/StringBuilder;)V
+    .locals 2
 
     .line 0
-    monitor-enter p0
+    const/16 v1, 0x78
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, LX/5aI;->A02:Landroid/os/Handler;
-
     .line 2
-    .line 3
-    const/4 v3, 0x0
+    iget v0, p0, LX/5aI;->A02:I
 
+    .line 3
     .line 4
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 5
     .line 6
-    invoke-virtual {v0, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    .line 7
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 8
+    .line 9
+    .line 10
+    iget v0, p0, LX/5aI;->A01:I
+
+    .line 11
+    .line 12
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 13
+    .line 14
+    .line 15
+    return-void
+.end method
+
+.method public static A01(Ljava/util/AbstractCollection;Ljava/util/List;I)V
+    .locals 3
+
+    .line 0
+    invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    check-cast v0, Landroid/hardware/Camera$Size;
+
+    .line 5
+    .line 6
+    iget v2, v0, Landroid/hardware/Camera$Size;->width:I
+
+    .line 7
+    .line 8
+    iget v1, v0, Landroid/hardware/Camera$Size;->height:I
+
+    .line 9
+    .line 10
+    new-instance v0, LX/5aI;
+
+    .line 11
+    .line 12
+    invoke-direct {v0, v2, v1}, LX/5aI;-><init>(II)V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x0
+
+    .line 1
+    if-eqz p1, :cond_1
+
+    .line 2
+    .line 3
+    const/4 v0, 0x1
+
+    .line 4
+    if-ne p0, p1, :cond_0
+
+    .line 5
+    .line 6
+    return v0
+
+    .line 7
+    :cond_0
+    instance-of v0, p1, LX/5aI;
+
+    .line 8
+    .line 9
+    if-eqz v0, :cond_1
+
+    .line 10
+    .line 11
+    check-cast p1, LX/5aI;
+
+    .line 12
+    .line 13
+    iget v1, p0, LX/5aI;->A02:I
+
+    .line 14
+    .line 15
+    iget v0, p1, LX/5aI;->A02:I
+
+    .line 16
+    .line 17
+    if-ne v1, v0, :cond_1
+
+    .line 18
+    .line 19
+    iget v1, p0, LX/5aI;->A01:I
+
+    .line 20
+    .line 21
+    iget v0, p1, LX/5aI;->A01:I
+
+    .line 22
+    .line 23
+    if-ne v1, v0, :cond_1
+
+    .line 24
+    .line 25
+    const/4 v2, 0x1
+
+    .line 26
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    .line 0
+    iget v2, p0, LX/5aI;->A01:I
+
+    .line 1
+    .line 2
+    iget v0, p0, LX/5aI;->A02:I
+
+    .line 3
+    .line 4
+    shl-int/lit8 v1, v0, 0x10
+
+    .line 5
+    .line 6
+    ushr-int/lit8 v0, v0, 0x10
+
+    .line 7
+    .line 8
+    or-int/2addr v0, v1
+
+    .line 9
+    xor-int/2addr v2, v0
+
+    .line 10
+    return v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    iget v2, p0, LX/5aI;->A02:I
+
+    .line 1
+    .line 2
+    const-string v1, "x"
+
+    .line 3
+    .line 4
+    iget v0, p0, LX/5aI;->A01:I
+
+    .line 5
+    .line 6
+    invoke-static {v2, v0, v1}, LX/004;->A05(IILjava/lang/String;)Ljava/lang/String;
 
     .line 7
     .line 8
     .line 9
-    :cond_0
-    iget-object v2, p0, LX/5aI;->A02:Landroid/os/Handler;
+    move-result-object v0
 
     .line 10
-    .line 11
-    const/4 v1, 0x0
-
-    .line 12
-    const/4 v0, 0x1
-
-    .line 13
-    invoke-static {v2, v1, v0}, LX/54p;->A01(Landroid/os/Handler;ZZ)V
-
-    .line 14
-    .line 15
-    .line 16
-    iput-object v3, p0, LX/5aI;->A02:Landroid/os/Handler;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 17
-    .line 18
-    monitor-exit p0
-
-    .line 19
-    return-void
-
-    .line 20
-    :catchall_0
-    move-exception v0
-
-    .line 21
-    monitor-exit p0
-
-    .line 22
-    throw v0
+    return-object v0
 .end method

@@ -1,21 +1,29 @@
-.class public final LX/1Ce;
-.super LX/1Bn;
+.class public abstract synthetic LX/1ce;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/0yO;
 
 
 # direct methods
-.method public constructor <init>(I[I)V
+.method public static synthetic A00(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    if-eq p0, p1, :cond_0
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
 .end method

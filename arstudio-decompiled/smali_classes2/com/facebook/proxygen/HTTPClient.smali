@@ -27,6 +27,8 @@
 
 .field public final mDNSResolverExecutor:Ljava/util/concurrent/Executor;
 
+.field public final mDisableCircularLogSink:Z
+
 .field public final mDnsCacheEnabled:Z
 
 .field public final mDnsCacheTtlEnabledHosts:Ljava/lang/String;
@@ -412,346 +414,354 @@
 
     .line 126
     .line 127
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mUserInstalledCertificates:[[B
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mDisableCircularLogSink:Z
 
     .line 128
     .line 129
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mUserInstalledCertificates:[[B
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mDisableCircularLogSink:Z
 
     .line 130
     .line 131
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mTransactionIdleTimeoutDisabled:Z
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mUserInstalledCertificates:[[B
 
     .line 132
     .line 133
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mTransactionIdleTimeoutDisabled:Z
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mUserInstalledCertificates:[[B
 
     .line 134
     .line 135
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mPersistentDNSCacheSettings:Lcom/facebook/proxygen/PersistentSSLCacheSettings;
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mTransactionIdleTimeoutDisabled:Z
 
     .line 136
     .line 137
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mPersistentDNSCacheSettings:Lcom/facebook/proxygen/PersistentSSLCacheSettings;
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mTransactionIdleTimeoutDisabled:Z
 
     .line 138
     .line 139
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mNetworkStatusMonitor:Lcom/facebook/proxygen/NetworkStatusMonitor;
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mPersistentDNSCacheSettings:Lcom/facebook/proxygen/PersistentSSLCacheSettings;
 
     .line 140
     .line 141
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mNetworkStatusMonitor:Lcom/facebook/proxygen/NetworkStatusMonitor;
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mPersistentDNSCacheSettings:Lcom/facebook/proxygen/PersistentSSLCacheSettings;
 
     .line 142
     .line 143
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableTransportCallbacks:Z
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mNetworkStatusMonitor:Lcom/facebook/proxygen/NetworkStatusMonitor;
 
     .line 144
     .line 145
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableTransportCallbacks:Z
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mNetworkStatusMonitor:Lcom/facebook/proxygen/NetworkStatusMonitor;
 
     .line 146
     .line 147
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mLargerFlowControlWindow:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableTransportCallbacks:Z
 
     .line 148
     .line 149
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mLargerFlowControlWindow:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableTransportCallbacks:Z
 
     .line 150
     .line 151
-    iget v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSessionFlowControlWindow:I
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mLargerFlowControlWindow:Z
 
     .line 152
     .line 153
-    iput v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSessionFlowControlWindow:I
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mLargerFlowControlWindow:Z
 
     .line 154
     .line 155
-    iget v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mStreamFlowControlWindow:I
+    iget v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSessionFlowControlWindow:I
 
     .line 156
     .line 157
-    iput v0, p0, Lcom/facebook/proxygen/HTTPClient;->mStreamFlowControlWindow:I
+    iput v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSessionFlowControlWindow:I
 
     .line 158
     .line 159
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mUseLoadBalancing:Z
+    iget v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mStreamFlowControlWindow:I
 
     .line 160
     .line 161
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mUseLoadBalancing:Z
+    iput v0, p0, Lcom/facebook/proxygen/HTTPClient;->mStreamFlowControlWindow:I
 
     .line 162
     .line 163
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableLigerPreconnect:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mUseLoadBalancing:Z
 
     .line 164
     .line 165
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableLigerPreconnect:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mUseLoadBalancing:Z
 
     .line 166
     .line 167
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableSimplePreconnectForReinit:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableLigerPreconnect:Z
 
     .line 168
     .line 169
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableSimplePreconnectForReinit:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableLigerPreconnect:Z
 
     .line 170
     .line 171
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableHTTP2:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableSimplePreconnectForReinit:Z
 
     .line 172
     .line 173
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableHTTP2:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableSimplePreconnectForReinit:Z
 
     .line 174
     .line 175
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mFizzSettings:Lcom/facebook/proxygen/FizzSettings;
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableHTTP2:Z
 
     .line 176
     .line 177
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mFizzSettings:Lcom/facebook/proxygen/FizzSettings;
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableHTTP2:Z
 
     .line 178
     .line 179
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mQuicFizzSettings:Lcom/facebook/proxygen/FizzSettings;
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mFizzSettings:Lcom/facebook/proxygen/FizzSettings;
 
     .line 180
     .line 181
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mQuicFizzSettings:Lcom/facebook/proxygen/FizzSettings;
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mFizzSettings:Lcom/facebook/proxygen/FizzSettings;
 
     .line 182
     .line 183
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mUseMNSCertificateVerifier:Ljava/lang/Boolean;
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mQuicFizzSettings:Lcom/facebook/proxygen/FizzSettings;
 
     .line 184
     .line 185
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mQuicFizzSettings:Lcom/facebook/proxygen/FizzSettings;
 
     .line 186
     .line 187
-    .line 188
-    move-result v0
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mUseMNSCertificateVerifier:Ljava/lang/Boolean;
 
+    .line 188
     .line 189
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mUseMNSCertificateVerifier:Z
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 190
     .line 191
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mQuicSettings:Lcom/facebook/proxygen/QuicSettings;
-
     .line 192
+    move-result v0
+
     .line 193
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mQuicSettings:Lcom/facebook/proxygen/QuicSettings;
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mUseMNSCertificateVerifier:Z
 
     .line 194
     .line 195
-    iget-wide v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mQuicVersion:J
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mQuicSettings:Lcom/facebook/proxygen/QuicSettings;
 
     .line 196
     .line 197
-    iput-wide v0, p0, Lcom/facebook/proxygen/HTTPClient;->mQuicVersion:J
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mQuicSettings:Lcom/facebook/proxygen/QuicSettings;
 
     .line 198
     .line 199
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mReInitToRefreshSettings:Z
+    iget-wide v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mQuicVersion:J
 
     .line 200
     .line 201
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mReInitToRefreshSettings:Z
+    iput-wide v0, p0, Lcom/facebook/proxygen/HTTPClient;->mQuicVersion:J
 
     .line 202
     .line 203
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mInitialized:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mReInitToRefreshSettings:Z
 
     .line 204
     .line 205
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mInitialized:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mReInitToRefreshSettings:Z
 
     .line 206
     .line 207
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mClosed:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mInitialized:Z
 
     .line 208
     .line 209
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mClosed:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mInitialized:Z
 
     .line 210
     .line 211
-    iget-wide v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSettings:J
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mClosed:Z
 
     .line 212
     .line 213
-    iput-wide v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSettings:J
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mClosed:Z
 
     .line 214
     .line 215
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mShouldOverrideTlsHTTP2:Z
+    iget-wide v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSettings:J
 
     .line 216
     .line 217
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mShouldOverrideTlsHTTP2:Z
+    iput-wide v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSettings:J
 
     .line 218
     .line 219
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mTlsHTTP2Override:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mShouldOverrideTlsHTTP2:Z
 
     .line 220
     .line 221
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mTlsHTTP2Override:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mShouldOverrideTlsHTTP2:Z
 
     .line 222
     .line 223
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mShouldOverrideFizzHTTP2Static:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mTlsHTTP2Override:Z
 
     .line 224
     .line 225
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mShouldOverrideFizzHTTP2Static:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mTlsHTTP2Override:Z
 
     .line 226
     .line 227
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mFizzHTTP2StaticOverride:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mShouldOverrideFizzHTTP2Static:Z
 
     .line 228
     .line 229
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mFizzHTTP2StaticOverride:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mShouldOverrideFizzHTTP2Static:Z
 
     .line 230
     .line 231
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mRootCACallbacks:Lcom/facebook/proxygen/RootCACallbacks;
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mFizzHTTP2StaticOverride:Z
 
     .line 232
     .line 233
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mRootCACallbacks:Lcom/facebook/proxygen/RootCACallbacks;
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mFizzHTTP2StaticOverride:Z
 
     .line 234
     .line 235
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSSLKeyMaterialCallback:Lcom/facebook/proxygen/SSLKeyMaterialCallback;
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mRootCACallbacks:Lcom/facebook/proxygen/RootCACallbacks;
 
     .line 236
     .line 237
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSSLKeyMaterialCallback:Lcom/facebook/proxygen/SSLKeyMaterialCallback;
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mRootCACallbacks:Lcom/facebook/proxygen/RootCACallbacks;
 
     .line 238
     .line 239
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSupportH2PubSub:Z
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSSLKeyMaterialCallback:Lcom/facebook/proxygen/SSLKeyMaterialCallback;
 
     .line 240
     .line 241
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSupportH2PubSub:Z
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSSLKeyMaterialCallback:Lcom/facebook/proxygen/SSLKeyMaterialCallback;
 
     .line 242
     .line 243
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mH2PubSubHostnames:Ljava/lang/String;
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSupportH2PubSub:Z
 
     .line 244
     .line 245
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mH2PubSubHostnames:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSupportH2PubSub:Z
 
     .line 246
     .line 247
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mAttemptEarlyDataInQuicPreconnect:Z
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mH2PubSubHostnames:Ljava/lang/String;
 
     .line 248
     .line 249
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mAttemptEarlyDataInQuicPreconnect:Z
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mH2PubSubHostnames:Ljava/lang/String;
 
     .line 250
     .line 251
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mCdnOverride:Ljava/lang/String;
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mAttemptEarlyDataInQuicPreconnect:Z
 
     .line 252
     .line 253
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mCdnOverride:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mAttemptEarlyDataInQuicPreconnect:Z
 
     .line 254
     .line 255
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mInlinePersistenceLoading:Z
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mCdnOverride:Ljava/lang/String;
 
     .line 256
     .line 257
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mInlinePersistenceLoading:Z
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mCdnOverride:Ljava/lang/String;
 
     .line 258
     .line 259
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mPersistentCachesExecutor:Ljava/util/concurrent/Executor;
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mInlinePersistenceLoading:Z
 
     .line 260
     .line 261
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mPersistentCachesExecutor:Ljava/util/concurrent/Executor;
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mInlinePersistenceLoading:Z
 
     .line 262
     .line 263
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mDNSResolverExecutor:Ljava/util/concurrent/Executor;
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mPersistentCachesExecutor:Ljava/util/concurrent/Executor;
 
     .line 264
     .line 265
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mDNSResolverExecutor:Ljava/util/concurrent/Executor;
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mPersistentCachesExecutor:Ljava/util/concurrent/Executor;
 
     .line 266
     .line 267
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mResetDNSResolverAsynchronously:Z
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mDNSResolverExecutor:Ljava/util/concurrent/Executor;
 
     .line 268
     .line 269
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mResetDNSResolverAsynchronously:Z
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mDNSResolverExecutor:Ljava/util/concurrent/Executor;
 
     .line 270
     .line 271
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableZstd:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mResetDNSResolverAsynchronously:Z
 
     .line 272
     .line 273
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableZstd:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mResetDNSResolverAsynchronously:Z
 
     .line 274
     .line 275
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableDzCompression:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableZstd:Z
 
     .line 276
     .line 277
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableDzCompression:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableZstd:Z
 
     .line 278
     .line 279
-    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mBidirectionalStreamingEnabled:Z
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mEnableDzCompression:Z
 
     .line 280
     .line 281
-    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mBidirectionalStreamingEnabled:Z
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mEnableDzCompression:Z
 
     .line 282
     .line 283
-    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mInitialNetworkType:Ljava/lang/String;
+    iget-boolean v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mBidirectionalStreamingEnabled:Z
 
     .line 284
     .line 285
-    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mInitialNetworkType:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/facebook/proxygen/HTTPClient;->mBidirectionalStreamingEnabled:Z
 
     .line 286
     .line 287
-    iget v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mTcpNotsentLowat:I
+    iget-object v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mInitialNetworkType:Ljava/lang/String;
 
     .line 288
     .line 289
-    iput v0, p0, Lcom/facebook/proxygen/HTTPClient;->mTcpNotsentLowat:I
+    iput-object v0, p0, Lcom/facebook/proxygen/HTTPClient;->mInitialNetworkType:Ljava/lang/String;
 
     .line 290
     .line 291
-    iget v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSessionManagerConnectTimeoutExtra:I
+    iget v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mTcpNotsentLowat:I
 
     .line 292
     .line 293
-    iput v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSessionManagerConnectTimeoutExtra:I
+    iput v0, p0, Lcom/facebook/proxygen/HTTPClient;->mTcpNotsentLowat:I
 
     .line 294
     .line 295
+    iget v0, p1, Lcom/facebook/proxygen/HTTPClient$Builder;->mSessionManagerConnectTimeoutExtra:I
+
+    .line 296
+    .line 297
+    iput v0, p0, Lcom/facebook/proxygen/HTTPClient;->mSessionManagerConnectTimeoutExtra:I
+
+    .line 298
+    .line 299
     return-void
 .end method
 
-.method public static synthetic access$7100(Ljava/lang/String;Ljava/lang/String;)Z
+.method public static synthetic access$7200(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
     .line 0
@@ -772,7 +782,7 @@
 .method private native connect(Lcom/facebook/proxygen/EventBase;[Ljava/lang/String;)V
 .end method
 
-.method private native init(Lcom/facebook/proxygen/EventBase;ZZZLjava/lang/String;IZZLjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLcom/facebook/proxygen/PersistentSSLCacheSettings;JZ[[BZLcom/facebook/proxygen/PersistentSSLCacheSettings;ZZILjava/lang/String;IZZZIZLcom/facebook/proxygen/NetworkStatusMonitor;Ljava/lang/String;ZIIZZZZZZZZLcom/facebook/proxygen/FizzSettings;Lcom/facebook/proxygen/RootCACallbacks;Lcom/facebook/proxygen/SSLKeyMaterialCallback;Lcom/facebook/proxygen/FizzSettings;Lcom/facebook/proxygen/QuicSettings;JZLjava/lang/String;ZLjava/lang/String;ZLjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZZZLjava/lang/String;II)V
+.method private native init(Lcom/facebook/proxygen/EventBase;ZZZLjava/lang/String;IZZLjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLcom/facebook/proxygen/PersistentSSLCacheSettings;JZ[[BZLcom/facebook/proxygen/PersistentSSLCacheSettings;ZZILjava/lang/String;IZZZIZZLcom/facebook/proxygen/NetworkStatusMonitor;Ljava/lang/String;ZIIZZZZZZZZLcom/facebook/proxygen/FizzSettings;Lcom/facebook/proxygen/RootCACallbacks;Lcom/facebook/proxygen/SSLKeyMaterialCallback;Lcom/facebook/proxygen/FizzSettings;Lcom/facebook/proxygen/QuicSettings;JZLjava/lang/String;ZLjava/lang/String;ZLjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZZZLjava/lang/String;II)V
 .end method
 
 .method public static stringEquals(Ljava/lang/String;Ljava/lang/String;)Z
@@ -795,7 +805,7 @@
 
     .line 7
     :cond_0
-    invoke-static {p1}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {p1}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 8
     .line 9
@@ -810,26 +820,27 @@
     .locals 1
 
     .line 0
-    const-string v0, "[::1]"
+    const-string/jumbo v0, "[::1]"
 
     .line 1
     .line 2
+    .line 3
     invoke-static {p1, v0}, Lcom/facebook/proxygen/HTTPClient;->stringEquals(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3
     .line 4
     .line 5
+    .line 6
     move-result v0
 
-    .line 6
+    .line 7
     if-eqz v0, :cond_0
 
-    .line 7
     .line 8
+    .line 9
     const-string p1, "::1"
 
-    .line 9
     .line 10
+    .line 11
     :cond_0
     return-object p1
 .end method
@@ -837,7 +848,7 @@
 
 # virtual methods
 .method public declared-synchronized callNativeInit(ZZ)V
-    .locals 98
+    .locals 99
 
     .line 0
     move-object/from16 v1, p0
@@ -852,7 +863,7 @@
 
     .line 4
     .line 5
-    move-object/from16 v97, v0
+    move-object/from16 v98, v0
 
     .line 6
     .line 7
@@ -860,7 +871,7 @@
 
     .line 8
     .line 9
-    move/from16 v96, v0
+    move/from16 v97, v0
 
     .line 10
     .line 11
@@ -868,7 +879,7 @@
 
     .line 12
     .line 13
-    move-object/from16 v95, v0
+    move-object/from16 v96, v0
 
     .line 14
     .line 15
@@ -876,7 +887,7 @@
 
     .line 16
     .line 17
-    move/from16 v94, v0
+    move/from16 v95, v0
 
     .line 18
     .line 19
@@ -884,7 +895,7 @@
 
     .line 20
     .line 21
-    move/from16 v93, v0
+    move/from16 v94, v0
 
     .line 22
     .line 23
@@ -892,7 +903,7 @@
 
     .line 24
     .line 25
-    move/from16 v92, v0
+    move/from16 v93, v0
 
     .line 26
     .line 27
@@ -900,7 +911,7 @@
 
     .line 28
     .line 29
-    move-object/from16 v91, v0
+    move-object/from16 v92, v0
 
     .line 30
     .line 31
@@ -908,7 +919,7 @@
 
     .line 32
     .line 33
-    move/from16 v90, v0
+    move/from16 v91, v0
 
     .line 34
     .line 35
@@ -916,7 +927,7 @@
 
     .line 36
     .line 37
-    move-object/from16 v89, v0
+    move-object/from16 v90, v0
 
     .line 38
     .line 39
@@ -924,7 +935,7 @@
 
     .line 40
     .line 41
-    move-object/from16 v88, v0
+    move-object/from16 v89, v0
 
     .line 42
     .line 43
@@ -932,7 +943,7 @@
 
     .line 44
     .line 45
-    move-object/from16 v87, v0
+    move-object/from16 v88, v0
 
     .line 46
     .line 47
@@ -940,7 +951,7 @@
 
     .line 48
     .line 49
-    move/from16 v86, v0
+    move/from16 v87, v0
 
     .line 50
     .line 51
@@ -1116,15 +1127,15 @@
 
     .line 136
     .line 137
-    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mNetworkStatusMonitor:Lcom/facebook/proxygen/NetworkStatusMonitor;
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mDisableCircularLogSink:Z
 
     .line 138
     .line 139
-    move-object/from16 v52, v0
+    move/from16 v52, v0
 
     .line 140
     .line 141
-    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mUserAgent:Ljava/lang/String;
+    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mNetworkStatusMonitor:Lcom/facebook/proxygen/NetworkStatusMonitor;
 
     .line 142
     .line 143
@@ -1132,15 +1143,15 @@
 
     .line 144
     .line 145
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mLargerFlowControlWindow:Z
+    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mUserAgent:Ljava/lang/String;
 
     .line 146
     .line 147
-    move/from16 v54, v0
+    move-object/from16 v54, v0
 
     .line 148
     .line 149
-    iget v0, v1, Lcom/facebook/proxygen/HTTPClient;->mSessionFlowControlWindow:I
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mLargerFlowControlWindow:Z
 
     .line 150
     .line 151
@@ -1148,7 +1159,7 @@
 
     .line 152
     .line 153
-    iget v0, v1, Lcom/facebook/proxygen/HTTPClient;->mStreamFlowControlWindow:I
+    iget v0, v1, Lcom/facebook/proxygen/HTTPClient;->mSessionFlowControlWindow:I
 
     .line 154
     .line 155
@@ -1156,7 +1167,7 @@
 
     .line 156
     .line 157
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mUseLoadBalancing:Z
+    iget v0, v1, Lcom/facebook/proxygen/HTTPClient;->mStreamFlowControlWindow:I
 
     .line 158
     .line 159
@@ -1164,7 +1175,7 @@
 
     .line 160
     .line 161
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableLigerPreconnect:Z
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mUseLoadBalancing:Z
 
     .line 162
     .line 163
@@ -1172,7 +1183,7 @@
 
     .line 164
     .line 165
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableSimplePreconnectForReinit:Z
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableLigerPreconnect:Z
 
     .line 166
     .line 167
@@ -1180,7 +1191,7 @@
 
     .line 168
     .line 169
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableHTTP2:Z
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableSimplePreconnectForReinit:Z
 
     .line 170
     .line 171
@@ -1188,7 +1199,7 @@
 
     .line 172
     .line 173
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mShouldOverrideTlsHTTP2:Z
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableHTTP2:Z
 
     .line 174
     .line 175
@@ -1196,331 +1207,339 @@
 
     .line 176
     .line 177
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mTlsHTTP2Override:Z
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mShouldOverrideTlsHTTP2:Z
 
     .line 178
     .line 179
-    move/from16 v28, v0
+    move/from16 v62, v0
 
     .line 180
     .line 181
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mShouldOverrideFizzHTTP2Static:Z
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mTlsHTTP2Override:Z
 
     .line 182
     .line 183
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     .line 184
     .line 185
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mFizzHTTP2StaticOverride:Z
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mShouldOverrideFizzHTTP2Static:Z
 
     .line 186
     .line 187
-    move/from16 v26, v0
+    move/from16 v27, v0
 
     .line 188
     .line 189
-    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mFizzSettings:Lcom/facebook/proxygen/FizzSettings;
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mFizzHTTP2StaticOverride:Z
 
     .line 190
     .line 191
-    move-object/from16 v25, v0
+    move/from16 v26, v0
 
     .line 192
     .line 193
-    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mRootCACallbacks:Lcom/facebook/proxygen/RootCACallbacks;
+    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mFizzSettings:Lcom/facebook/proxygen/FizzSettings;
 
     .line 194
     .line 195
-    move-object/from16 v24, v0
+    move-object/from16 v25, v0
 
     .line 196
     .line 197
-    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mSSLKeyMaterialCallback:Lcom/facebook/proxygen/SSLKeyMaterialCallback;
+    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mRootCACallbacks:Lcom/facebook/proxygen/RootCACallbacks;
 
     .line 198
     .line 199
-    move-object/from16 v23, v0
+    move-object/from16 v24, v0
 
     .line 200
     .line 201
-    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mQuicFizzSettings:Lcom/facebook/proxygen/FizzSettings;
+    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mSSLKeyMaterialCallback:Lcom/facebook/proxygen/SSLKeyMaterialCallback;
 
     .line 202
     .line 203
-    move-object/from16 v22, v0
+    move-object/from16 v23, v0
 
     .line 204
     .line 205
-    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mQuicSettings:Lcom/facebook/proxygen/QuicSettings;
+    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mQuicFizzSettings:Lcom/facebook/proxygen/FizzSettings;
 
     .line 206
     .line 207
-    move-object/from16 v21, v0
+    move-object/from16 v22, v0
 
     .line 208
     .line 209
-    iget-wide v4, v1, Lcom/facebook/proxygen/HTTPClient;->mQuicVersion:J
+    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mQuicSettings:Lcom/facebook/proxygen/QuicSettings;
 
     .line 210
     .line 211
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mSupportH2PubSub:Z
+    move-object/from16 v21, v0
 
     .line 212
     .line 213
-    move/from16 v20, v0
+    iget-wide v4, v1, Lcom/facebook/proxygen/HTTPClient;->mQuicVersion:J
 
     .line 214
     .line 215
-    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mH2PubSubHostnames:Ljava/lang/String;
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mSupportH2PubSub:Z
 
     .line 216
     .line 217
-    move-object/from16 v19, v0
+    move/from16 v20, v0
 
     .line 218
     .line 219
-    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mAttemptEarlyDataInQuicPreconnect:Z
+    iget-object v0, v1, Lcom/facebook/proxygen/HTTPClient;->mH2PubSubHostnames:Ljava/lang/String;
 
     .line 220
     .line 221
-    move/from16 v18, v0
+    move-object/from16 v19, v0
 
     .line 222
     .line 223
-    iget-object v15, v1, Lcom/facebook/proxygen/HTTPClient;->mCdnOverride:Ljava/lang/String;
+    iget-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mAttemptEarlyDataInQuicPreconnect:Z
 
     .line 224
     .line 225
-    iget-boolean v14, v1, Lcom/facebook/proxygen/HTTPClient;->mInlinePersistenceLoading:Z
+    move/from16 v18, v0
 
     .line 226
     .line 227
-    iget-object v13, v1, Lcom/facebook/proxygen/HTTPClient;->mPersistentCachesExecutor:Ljava/util/concurrent/Executor;
+    iget-object v15, v1, Lcom/facebook/proxygen/HTTPClient;->mCdnOverride:Ljava/lang/String;
 
     .line 228
     .line 229
-    iget-object v12, v1, Lcom/facebook/proxygen/HTTPClient;->mDNSResolverExecutor:Ljava/util/concurrent/Executor;
+    iget-boolean v14, v1, Lcom/facebook/proxygen/HTTPClient;->mInlinePersistenceLoading:Z
 
     .line 230
     .line 231
-    iget-boolean v11, v1, Lcom/facebook/proxygen/HTTPClient;->mResetDNSResolverAsynchronously:Z
+    iget-object v13, v1, Lcom/facebook/proxygen/HTTPClient;->mPersistentCachesExecutor:Ljava/util/concurrent/Executor;
 
     .line 232
     .line 233
-    iget-boolean v10, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableZstd:Z
+    iget-object v12, v1, Lcom/facebook/proxygen/HTTPClient;->mDNSResolverExecutor:Ljava/util/concurrent/Executor;
 
     .line 234
     .line 235
-    iget-boolean v9, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableDzCompression:Z
+    iget-boolean v11, v1, Lcom/facebook/proxygen/HTTPClient;->mResetDNSResolverAsynchronously:Z
 
     .line 236
     .line 237
-    iget-boolean v8, v1, Lcom/facebook/proxygen/HTTPClient;->mBidirectionalStreamingEnabled:Z
+    iget-boolean v10, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableZstd:Z
 
     .line 238
     .line 239
-    iget-object v7, v1, Lcom/facebook/proxygen/HTTPClient;->mInitialNetworkType:Ljava/lang/String;
+    iget-boolean v9, v1, Lcom/facebook/proxygen/HTTPClient;->mEnableDzCompression:Z
 
     .line 240
     .line 241
-    iget v6, v1, Lcom/facebook/proxygen/HTTPClient;->mTcpNotsentLowat:I
+    iget-boolean v8, v1, Lcom/facebook/proxygen/HTTPClient;->mBidirectionalStreamingEnabled:Z
 
     .line 242
     .line 243
-    iget v0, v1, Lcom/facebook/proxygen/HTTPClient;->mSessionManagerConnectTimeoutExtra:I
+    iget-object v7, v1, Lcom/facebook/proxygen/HTTPClient;->mInitialNetworkType:Ljava/lang/String;
 
     .line 244
     .line 245
-    move/from16 v16, p1
+    iget v6, v1, Lcom/facebook/proxygen/HTTPClient;->mTcpNotsentLowat:I
 
     .line 246
     .line 247
-    move/from16 v17, p2
+    iget v0, v1, Lcom/facebook/proxygen/HTTPClient;->mSessionManagerConnectTimeoutExtra:I
 
     .line 248
     .line 249
-    move-wide/from16 v36, v2
+    move/from16 v16, p1
 
     .line 250
     .line 251
-    move/from16 v62, v28
+    move/from16 v17, p2
 
     .line 252
     .line 253
-    move/from16 v63, v27
+    move-wide/from16 v36, v2
 
     .line 254
     .line 255
-    move/from16 v64, v26
+    move/from16 v63, v28
 
     .line 256
     .line 257
-    move-object/from16 v65, v25
+    move/from16 v64, v27
 
     .line 258
     .line 259
-    move-object/from16 v66, v24
+    move/from16 v65, v26
 
     .line 260
     .line 261
-    move-object/from16 v67, v23
+    move-object/from16 v66, v25
 
     .line 262
     .line 263
-    move-object/from16 v68, v22
+    move-object/from16 v67, v24
 
     .line 264
     .line 265
-    move-object/from16 v69, v21
+    move-object/from16 v68, v23
 
     .line 266
     .line 267
-    move-wide/from16 v70, v4
+    move-object/from16 v69, v22
 
     .line 268
     .line 269
-    move/from16 v72, v20
+    move-object/from16 v70, v21
 
     .line 270
     .line 271
-    move-object/from16 v73, v19
+    move-wide/from16 v71, v4
 
     .line 272
     .line 273
-    move/from16 v74, v18
+    move/from16 v73, v20
 
     .line 274
     .line 275
-    move-object/from16 v75, v15
+    move-object/from16 v74, v19
 
     .line 276
     .line 277
-    move/from16 v76, v14
+    move/from16 v75, v18
 
     .line 278
     .line 279
-    move-object/from16 v77, v13
+    move-object/from16 v76, v15
 
     .line 280
     .line 281
-    move-object/from16 v78, v12
+    move/from16 v77, v14
 
     .line 282
     .line 283
-    move/from16 v79, v11
+    move-object/from16 v78, v13
 
     .line 284
     .line 285
-    move/from16 v80, v10
+    move-object/from16 v79, v12
 
     .line 286
     .line 287
-    move/from16 v81, v9
+    move/from16 v80, v11
 
     .line 288
     .line 289
-    move/from16 v82, v8
+    move/from16 v81, v10
 
     .line 290
     .line 291
-    move-object/from16 v83, v7
+    move/from16 v82, v9
 
     .line 292
     .line 293
-    move/from16 v84, v6
+    move/from16 v83, v8
 
     .line 294
     .line 295
-    move/from16 v85, v0
+    move-object/from16 v84, v7
 
     .line 296
     .line 297
-    move-object v14, v1
+    move/from16 v85, v6
 
     .line 298
-    move-object/from16 v15, v97
-
     .line 299
-    .line 300
-    move/from16 v18, v96
+    move/from16 v86, v0
 
+    .line 300
     .line 301
+    move-object v14, v1
+
     .line 302
-    move-object/from16 v19, v95
+    move-object/from16 v15, v98
 
     .line 303
     .line 304
-    move/from16 v20, v94
+    move/from16 v18, v97
 
     .line 305
     .line 306
-    move/from16 v21, v93
+    move-object/from16 v19, v96
 
     .line 307
     .line 308
-    move/from16 v22, v92
+    move/from16 v20, v95
 
     .line 309
     .line 310
-    move-object/from16 v23, v91
+    move/from16 v21, v94
 
     .line 311
     .line 312
-    move/from16 v24, v90
+    move/from16 v22, v93
 
     .line 313
     .line 314
-    move-object/from16 v25, v89
+    move-object/from16 v23, v92
 
     .line 315
     .line 316
-    move-object/from16 v26, v88
+    move/from16 v24, v91
 
     .line 317
     .line 318
-    move-object/from16 v27, v87
+    move-object/from16 v25, v90
 
     .line 319
     .line 320
-    move/from16 v28, v86
+    move-object/from16 v26, v89
 
     .line 321
     .line 322
-    invoke-direct/range {v14 .. v85}, Lcom/facebook/proxygen/HTTPClient;->init(Lcom/facebook/proxygen/EventBase;ZZZLjava/lang/String;IZZLjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLcom/facebook/proxygen/PersistentSSLCacheSettings;JZ[[BZLcom/facebook/proxygen/PersistentSSLCacheSettings;ZZILjava/lang/String;IZZZIZLcom/facebook/proxygen/NetworkStatusMonitor;Ljava/lang/String;ZIIZZZZZZZZLcom/facebook/proxygen/FizzSettings;Lcom/facebook/proxygen/RootCACallbacks;Lcom/facebook/proxygen/SSLKeyMaterialCallback;Lcom/facebook/proxygen/FizzSettings;Lcom/facebook/proxygen/QuicSettings;JZLjava/lang/String;ZLjava/lang/String;ZLjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZZZLjava/lang/String;II)V
+    move-object/from16 v27, v88
 
     .line 323
     .line 324
-    .line 325
-    const/4 v0, 0x1
+    move/from16 v28, v87
 
+    .line 325
     .line 326
-    iput-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mInitialized:Z
+    invoke-direct/range {v14 .. v86}, Lcom/facebook/proxygen/HTTPClient;->init(Lcom/facebook/proxygen/EventBase;ZZZLjava/lang/String;IZZLjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLcom/facebook/proxygen/PersistentSSLCacheSettings;JZ[[BZLcom/facebook/proxygen/PersistentSSLCacheSettings;ZZILjava/lang/String;IZZZIZZLcom/facebook/proxygen/NetworkStatusMonitor;Ljava/lang/String;ZIIZZZZZZZZLcom/facebook/proxygen/FizzSettings;Lcom/facebook/proxygen/RootCACallbacks;Lcom/facebook/proxygen/SSLKeyMaterialCallback;Lcom/facebook/proxygen/FizzSettings;Lcom/facebook/proxygen/QuicSettings;JZLjava/lang/String;ZLjava/lang/String;ZLjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZZZLjava/lang/String;II)V
 
     .line 327
     .line 328
+    .line 329
+    const/4 v0, 0x1
+
+    .line 330
+    iput-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mInitialized:Z
+
+    .line 331
+    .line 332
     const/4 v0, 0x0
 
-    .line 329
+    .line 333
     iput-boolean v0, v1, Lcom/facebook/proxygen/HTTPClient;->mReInitToRefreshSettings:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 330
-    .line 331
+    .line 334
+    .line 335
     monitor-exit v1
 
-    .line 332
+    .line 336
     return-void
 
-    .line 333
+    .line 337
     :catchall_0
     move-exception v0
 
-    .line 334
+    .line 338
     monitor-exit v1
 
-    .line 335
+    .line 339
     throw v0
 .end method
 
@@ -1641,19 +1660,23 @@
 
     .line 19
     .line 20
-    invoke-static {v2}, LX/0Yi;->A1b(Ljava/lang/String;)[Ljava/lang/String;
+    const-string v0, ","
 
     .line 21
     .line 22
+    invoke-virtual {v2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
     .line 23
+    .line 24
+    .line 25
     move-result-object v0
 
-    .line 24
+    .line 26
     invoke-direct {p0, v1, v0}, Lcom/facebook/proxygen/HTTPClient;->connect(Lcom/facebook/proxygen/EventBase;[Ljava/lang/String;)V
 
-    .line 25
-    .line 26
     .line 27
+    .line 28
+    .line 29
     :cond_0
     return-void
 .end method
@@ -1664,30 +1687,24 @@
     .line 0
     :try_start_0
     invoke-virtual {p0}, Lcom/facebook/proxygen/HTTPClient;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1
     .line 2
     .line 3
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 4
-    .line 5
-    .line 6
-    return-void
-
-    .line 7
     :catchall_0
     move-exception v0
 
-    .line 8
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 9
-    .line 10
-    .line 11
+    .line 5
     throw v0
+
+    .line 6
+    :goto_0
+    return-void
 .end method
 
 .method public getEventBase()Lcom/facebook/proxygen/EventBase;
@@ -1934,7 +1951,7 @@
     .line 10
     .line 11
     .line 12
-    invoke-static {v0, p1}, LX/00I;->A0R(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, p1}, LX/004;->A0O(Ljava/lang/String;Z)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -2067,7 +2084,7 @@
 
     .line 43
     .line 44
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 45
     .line 46
@@ -2108,7 +2125,7 @@
 
     .line 66
     .line 67
-    invoke-static {v0, p3, v1}, LX/0Yd;->A0Q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, p3, v1}, LX/0X1;->A0R(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 68
     .line 69
@@ -2198,7 +2215,7 @@
 
     .line 28
     .line 29
-    invoke-static {v1, p1, v0, p2}, LX/00I;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v0, p2}, LX/004;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 30
     .line 31
@@ -2319,7 +2336,7 @@
 
     .line 43
     .line 44
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 45
     .line 46
@@ -2360,7 +2377,7 @@
 
     .line 66
     .line 67
-    invoke-static {v0, p3, v1}, LX/0Yd;->A0Q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, p3, v1}, LX/0X1;->A0R(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 68
     .line 69

@@ -1,152 +1,396 @@
-.class public final enum LX/4YS;
-.super Ljava/lang/Enum;
+.class public final LX/4YS;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/4YS;
-
-.field public static final enum UI:LX/4YS;
-
-.field public static final enum USER_GENERATED:LX/4YS;
-
-
 # instance fields
-.field public final locale:LX/4Qn;
+.field public A00:F
+
+.field public A01:F
+
+.field public A02:F
+
+.field public A03:F
+
+.field public A04:I
+
+.field public A05:I
+
+.field public A06:I
+
+.field public A07:I
+
+.field public A08:Landroid/graphics/PathEffect;
+
+.field public A09:[F
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string v1, "USER_GENERATED"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/4 v5, 0x0
-
     .line 3
-    const/4 v0, 0x0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 0
+    const/4 v3, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_0
+
+    .line 2
+    .line 3
+    const/4 v2, 0x0
 
     .line 4
-    new-instance v4, LX/4YS;
+    if-eqz p1, :cond_2
 
     .line 5
     .line 6
-    invoke-direct {v4, v1, v5, v0}, LX/4YS;-><init>(Ljava/lang/String;ILX/4Qn;)V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
     .line 8
     .line 9
-    sput-object v4, LX/4YS;->USER_GENERATED:LX/4YS;
+    move-result-object v1
 
     .line 10
-    .line 11
-    sget-object v3, LX/4YN;->A03:LX/4Qn;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 11
     .line 12
     .line 13
-    const-string v0, "UI"
+    move-result-object v0
 
     .line 14
-    .line 15
-    const/4 v2, 0x1
+    if-ne v1, v0, :cond_2
 
+    .line 15
     .line 16
-    new-instance v1, LX/4YS;
+    check-cast p1, LX/4YS;
 
     .line 17
     .line 18
-    invoke-direct {v1, v0, v2, v3}, LX/4YS;-><init>(Ljava/lang/String;ILX/4Qn;)V
+    iget v1, p1, LX/4YS;->A01:F
 
     .line 19
     .line 20
+    iget v0, p0, LX/4YS;->A01:F
+
     .line 21
-    sput-object v1, LX/4YS;->UI:LX/4YS;
-
     .line 22
-    .line 23
-    const/4 v0, 0x2
+    cmpl-float v0, v1, v0
 
+    .line 23
     .line 24
-    new-array v0, v0, [LX/4YS;
+    if-nez v0, :cond_1
 
     .line 25
     .line 26
-    aput-object v4, v0, v5
+    iget v1, p1, LX/4YS;->A03:F
 
     .line 27
     .line 28
-    aput-object v1, v0, v2
+    iget v0, p0, LX/4YS;->A03:F
 
     .line 29
     .line 30
-    sput-object v0, LX/4YS;->$VALUES:[LX/4YS;
+    cmpl-float v0, v1, v0
 
     .line 31
     .line 32
-    return-void
+    if-nez v0, :cond_1
+
+    .line 33
+    .line 34
+    iget v1, p1, LX/4YS;->A02:F
+
+    .line 35
+    .line 36
+    iget v0, p0, LX/4YS;->A02:F
+
+    .line 37
+    .line 38
+    cmpl-float v0, v1, v0
+
+    .line 39
+    .line 40
+    if-nez v0, :cond_1
+
+    .line 41
+    .line 42
+    iget v1, p1, LX/4YS;->A00:F
+
+    .line 43
+    .line 44
+    iget v0, p0, LX/4YS;->A00:F
+
+    .line 45
+    .line 46
+    cmpl-float v0, v1, v0
+
+    .line 47
+    .line 48
+    if-nez v0, :cond_1
+
+    .line 49
+    .line 50
+    iget v1, p0, LX/4YS;->A05:I
+
+    .line 51
+    .line 52
+    iget v0, p1, LX/4YS;->A05:I
+
+    .line 53
+    .line 54
+    if-ne v1, v0, :cond_1
+
+    .line 55
+    .line 56
+    iget v1, p0, LX/4YS;->A07:I
+
+    .line 57
+    .line 58
+    iget v0, p1, LX/4YS;->A07:I
+
+    .line 59
+    .line 60
+    if-ne v1, v0, :cond_1
+
+    .line 61
+    .line 62
+    iget v1, p0, LX/4YS;->A06:I
+
+    .line 63
+    .line 64
+    iget v0, p1, LX/4YS;->A06:I
+
+    .line 65
+    .line 66
+    if-ne v1, v0, :cond_1
+
+    .line 67
+    .line 68
+    iget v1, p0, LX/4YS;->A04:I
+
+    .line 69
+    .line 70
+    iget v0, p1, LX/4YS;->A04:I
+
+    .line 71
+    .line 72
+    if-ne v1, v0, :cond_1
+
+    .line 73
+    .line 74
+    iget-object v1, p0, LX/4YS;->A08:Landroid/graphics/PathEffect;
+
+    .line 75
+    .line 76
+    iget-object v0, p1, LX/4YS;->A08:Landroid/graphics/PathEffect;
+
+    .line 77
+    .line 78
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 79
+    .line 80
+    .line 81
+    move-result v0
+
+    .line 82
+    if-eqz v0, :cond_1
+
+    .line 83
+    .line 84
+    iget-object v1, p0, LX/4YS;->A09:[F
+
+    .line 85
+    .line 86
+    iget-object v0, p1, LX/4YS;->A09:[F
+
+    .line 87
+    .line 88
+    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([F[F)Z
+
+    .line 89
+    .line 90
+    .line 91
+    move-result v0
+
+    .line 92
+    if-eqz v0, :cond_1
+
+    .line 93
+    .line 94
+    :cond_0
+    return v3
+
+    .line 95
+    :cond_1
+    const/4 v3, 0x0
+
+    .line 96
+    return v3
+
+    .line 97
+    :cond_2
+    return v2
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILX/4Qn;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget v0, p0, LX/4YS;->A01:F
 
     .line 1
     .line 2
-    .line 3
-    iput-object p3, p0, LX/4YS;->locale:LX/4Qn;
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/4YS;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/4YS;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    float-to-int v0, v0
 
     .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    const/4 v2, 0x0
 
+    .line 4
+    mul-int/lit8 v1, v0, 0x1f
+
+    .line 5
     .line 6
-    check-cast v0, LX/4YS;
+    iget v0, p0, LX/4YS;->A03:F
 
     .line 7
     .line 8
-    return-object v0
-.end method
+    float-to-int v0, v0
 
-.method public static values()[LX/4YS;
-    .locals 1
+    .line 9
+    add-int/2addr v1, v0
 
-    .line 0
-    sget-object v0, LX/4YS;->$VALUES:[LX/4YS;
+    .line 10
+    mul-int/lit8 v1, v1, 0x1f
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 11
+    .line 12
+    iget v0, p0, LX/4YS;->A02:F
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    .line 13
+    .line 14
+    float-to-int v0, v0
 
-    .line 6
-    check-cast v0, [LX/4YS;
+    .line 15
+    add-int/2addr v1, v0
 
-    .line 7
-    .line 8
-    return-object v0
+    .line 16
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 17
+    .line 18
+    iget v0, p0, LX/4YS;->A00:F
+
+    .line 19
+    .line 20
+    float-to-int v0, v0
+
+    .line 21
+    add-int/2addr v1, v0
+
+    .line 22
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 23
+    .line 24
+    iget v0, p0, LX/4YS;->A05:I
+
+    .line 25
+    .line 26
+    add-int/2addr v1, v0
+
+    .line 27
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 28
+    .line 29
+    iget v0, p0, LX/4YS;->A07:I
+
+    .line 30
+    .line 31
+    add-int/2addr v1, v0
+
+    .line 32
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 33
+    .line 34
+    iget v0, p0, LX/4YS;->A06:I
+
+    .line 35
+    .line 36
+    add-int/2addr v1, v0
+
+    .line 37
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 38
+    .line 39
+    iget v0, p0, LX/4YS;->A04:I
+
+    .line 40
+    .line 41
+    add-int/2addr v1, v0
+
+    .line 42
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 43
+    .line 44
+    iget-object v0, p0, LX/4YS;->A08:Landroid/graphics/PathEffect;
+
+    .line 45
+    .line 46
+    if-eqz v0, :cond_0
+
+    .line 47
+    .line 48
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    .line 49
+    .line 50
+    .line 51
+    move-result v2
+
+    .line 52
+    :cond_0
+    add-int/2addr v1, v2
+
+    .line 53
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 54
+    .line 55
+    iget-object v0, p0, LX/4YS;->A09:[F
+
+    .line 56
+    .line 57
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([F)I
+
+    .line 58
+    .line 59
+    .line 60
+    move-result v0
+
+    .line 61
+    add-int/2addr v1, v0
+
+    .line 62
+    return v1
 .end method

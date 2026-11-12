@@ -7,6 +7,8 @@
 
 
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum APPMANAGER_ACTION:Lcom/facebook/notifications/constants/push/NotificationType;
@@ -18,6 +20,8 @@
 .field public static final enum AUTO_UPDATE_AVAILABLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum AYMT_LWI_ASYNC_CREATION_FAILURE:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum AYMT_LWI_YESTERDAY_SUMMARY_TIP_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum AYMT_MAKE_PAGE_POST_TIP:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -36,6 +40,8 @@
 .field public static final enum BIZSUITE_IG_DIRECT_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum BIZSUITE_IG_PLATFORM:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum BIZSUITE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum BIZSUITE_MSGR_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -97,11 +103,13 @@
 
 .field public static final enum COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
+.field public static final enum COMMUNITY_MESSAGING_IN_BLUE_CHAT_SUMMARY:Lcom/facebook/notifications/constants/push/NotificationType;
+
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
 .field public static final enum CREATOR_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
-.field public static final Companion:LX/0u1;
+.field public static final Companion:LX/17Q;
 
 .field public static final enum DECRYPTION_FAIL_FALLBACK:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -150,6 +158,8 @@
 .field public static final enum FC_MESSENGER_ASYNC_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum FC_MESSENGER_ASYNC_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum FC_MESSENGER_DAILY_TIME_LIMIT_CHANGED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum FC_MESSENGER_GEN_AI_NOTICE_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -277,6 +287,10 @@
 
 .field public static final enum MESSAGING_IN_BLUE_SUBSEQUENT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
+.field public static final enum MESSENGER_AP_E2EE_BACKGROUND_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MESSENGER_BACKGROUND_ACCOUNT_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
+
 .field public static final enum MESSENGER_CHAT_ENCOURAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MESSENGER_COMMUNITY_ADMIN_DIRECT_INVITE_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
@@ -290,6 +304,10 @@
 .field public static final enum MESSENGER_COMMUNITY_CHAT_HOST_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED_BATCHED:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED_SINGLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -349,6 +367,8 @@
 
 .field public static final enum MESSENGER_LIVING_ROOM_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
+.field public static final enum MESSENGER_MEMORIES:Lcom/facebook/notifications/constants/push/NotificationType;
+
 .field public static final enum MESSENGER_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MESSENGER_MONTAGE_DAILY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
@@ -362,6 +382,8 @@
 .field public static final enum MESSENGER_MONTAGE_MESSAGE_VIEWING_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MESSENGER_MONTAGE_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MESSENGER_NOTE_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MESSENGER_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -395,9 +417,13 @@
 
 .field public static final enum MSGR_BC_FIRST_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
+.field public static final enum MSGR_BROADCAST_CHANNELS_MESSAGE_RECALL_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
 .field public static final enum MSGR_CM_AND_CHANNEL_INVITE_LINK_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MSGR_COMMUNITY_MEMBER_CHAT_SUGGESTIONS_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MSGR_E2EE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MSGR_PUBLIC_CHATS_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -415,7 +441,19 @@
 
 .field public static final enum MSNGR_AFS_LINKING_BOTH_SUBSCRIBED:Lcom/facebook/notifications/constants/push/NotificationType;
 
+.field public static final enum MSNGR_AFS_LINKING_MULTIPLE_SUBSCRIPTION_DEFERRED_DOWNGRADE:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MSNGR_AFS_LINKING_MULTIPLE_SUBSCRIPTION_DEFERRED_DOWNGRADE_NEXT_BILLING_CYCLE:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MSNGR_AFS_MULTIPLE_SUBSCRIPTION_VARIABLE_PRICING:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MSNGR_AFS_STANDARD_UNLINKING:Lcom/facebook/notifications/constants/push/NotificationType;
+
 .field public static final enum MSNGR_AFS_SUBSCRIPTION_CANCELED_DEVICE_SETTINGS:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MSNGR_AFS_UNLINKING_DEFERRED_DOWNGRADE_NEXT_BILLING_CYCLE:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum MSNGR_AFS_UPGRADE_DEVICE_SETTING:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum MSNGR_AFS_YOUTH_SHOULD_CANCEL_SUBSCRIPTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -444,8 +482,6 @@
 .field public static final enum NF_VIDEO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum NOW_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
-
-.field public static final enum OFFSITE_EMAIL_NEW_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum ONTHISDAY:Lcom/facebook/notifications/constants/push/NotificationType;
 
@@ -525,6 +561,8 @@
 
 .field public static final enum SHOWS_FOLLOWER_NEW_EPISODE:Lcom/facebook/notifications/constants/push/NotificationType;
 
+.field public static final enum SILENT_MPW_TRUSTED_DEVICE_FB:Lcom/facebook/notifications/constants/push/NotificationType;
+
 .field public static final SILENT_TYPES:Lcom/google/common/collect/ImmutableSet;
 
 .field public static final enum STALE_CONTACT_IMPORT:Lcom/facebook/notifications/constants/push/NotificationType;
@@ -563,6 +601,26 @@
 
 .field public static final enum WORK_STALE:Lcom/facebook/notifications/constants/push/NotificationType;
 
+.field public static final enum YOUTH_RS_MESSENGER_APPEAL_SUCCESS_OLD_PARENT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_APPEAL_SUCCESS_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_GS_INVITE_ACCEPT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_GS_INVITE_CREATE_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_GS_INVITE_DECLINE_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_GS_OPT_OUT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_INVITE_CREATE_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_OFFBOARDING_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_TEEN_MESSAGING_DATA_REQUEST_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+.field public static final enum YOUTH_RS_MESSENGER_TRANSITION_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
 .field public static final enum ZB_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
 .field public static final enum ZERO:Lcom/facebook/notifications/constants/push/NotificationType;
@@ -574,1669 +632,1837 @@
 .method public static final synthetic $values()[Lcom/facebook/notifications/constants/push/NotificationType;
     .locals 3
 
-    const/16 v0, 0x115
+    const/16 v0, 0x131
 
     new-array v2, v0, [Lcom/facebook/notifications/constants/push/NotificationType;
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->APP_DIRECT_INSTALL_OPEN_REMIND:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_BACKGROUND_ACCOUNT_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/4 v0, 0x0
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->APPMANAGER_ACTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_AP_E2EE_BACKGROUND_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/4 v0, 0x1
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AUTHENTICATION_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->APP_DIRECT_INSTALL_OPEN_REMIND:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/4 v0, 0x2
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AUTO_UPDATE_AVAILABLE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->APPMANAGER_ACTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/4 v0, 0x3
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_MAKE_PAGE_POST_TIP:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AUTHENTICATION_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/4 v0, 0x4
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_PAGE_RESPOND_MESSAGES_REMINDER_TIP_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AUTO_UPDATE_AVAILABLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/4 v0, 0x5
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_POST_CTX_BOOST_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_MAKE_PAGE_POST_TIP:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/4 v0, 0x6
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_POST_BOOST_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_PAGE_RESPOND_MESSAGES_REMINDER_TIP_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/4 v0, 0x7
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BADGE_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_LWI_YESTERDAY_SUMMARY_TIP_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x8
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIRTHDAY_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_POST_CTX_BOOST_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x9
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZ_COMPOSER_POST_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_POST_BOOST_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZ_INBOX_WHATSAPP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BADGE_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BROADCAST_CHANNELS_BATCHED_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIRTHDAY_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BOOTSTRAP_UPDATED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZ_COMPOSER_POST_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BROADCAST_CHANNELS_BATCHED_POLL_VOTES:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZ_INBOX_WHATSAPP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->C4G_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_CLOSE_FRIEND_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BROADCAST_CHANNELS_BATCHED_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x10
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BOOTSTRAP_UPDATED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x11
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BROADCAST_CHANNELS_BATCHED_POLL_VOTES:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x12
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FEED_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->C4G_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x13
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FRIEND:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_CLOSE_FRIEND_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x14
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FRIEND_CONFIRMED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x15
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_GROUP_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x16
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_MENTIONS_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FEED_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x17
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_STORY_HIGHLIGHT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FRIEND:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x18
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CBI_IG_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FRIEND_CONFIRMED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x19
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CMB_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_GROUP_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x1a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CREATOR_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_MENTIONS_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x1b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_ONBOARD_TEMPLATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_STORY_HIGHLIGHT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x1c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CBI_IG_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x1d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_PHOTO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CMB_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x1e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_VIDEO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CREATOR_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x1f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_PHOTO_ALBUM_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->COMMUNITY_MESSAGING_IN_BLUE_CHAT_SUMMARY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x20
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_PLATFORM:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_ONBOARD_TEMPLATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x21
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_DIRECT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x22
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_DIRECT_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_PHOTO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x23
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MSGR_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_VIDEO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x24
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MSGR_MESSAGE_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_PHOTO_ALBUM_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x25
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_ACTION_NEEDED_JEWEL_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_PLATFORM:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x26
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_WHATSAPP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_DIRECT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x27
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CLOSE_FRIEND_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_DIRECT_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x28
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CLOSE_FRIEND_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MSGR_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x29
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->COMMENT_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MSGR_MESSAGE_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x2a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_ACTION_NEEDED_JEWEL_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x2b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DECRYPTION_FAIL_FALLBACK:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_WHATSAPP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x2c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DEFAULT_PUSH_OF_JEWEL_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CLOSE_FRIEND_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x2d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DEFCON_LEVEL_UPDATED_SILENT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->CLOSE_FRIEND_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x2e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DEVICE_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->COMMENT_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x2f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_SEEN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x30
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_POSTED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DECRYPTION_FAIL_FALLBACK:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x31
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_SEEN_MILESTONE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DEFAULT_PUSH_OF_JEWEL_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x32
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DEFCON_LEVEL_UPDATED_SILENT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x33
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ERROR_CLIENT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DEVICE_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x34
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->EVENT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_SEEN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x35
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_MESSAGES_SYNC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_POSTED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x36
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_MOBILE_REQUESTS_COUNT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_SEEN_MILESTONE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x37
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_READ:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x38
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_SEEN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ERROR_CLIENT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x39
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_SYNC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->EVENT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x3a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FB_GROUP_CHAT_NEW_CHAT_CREATED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_MESSAGES_SYNC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x3b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_MOBILE_REQUESTS_COUNT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x3c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V2:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_READ:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x3d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V3:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_SEEN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x3e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V4:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_SYNC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x3f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V5:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FB_GROUP_CHAT_NEW_CHAT_CREATED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x40
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FB_STORIES_FALLBACK_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x41
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_BLOCKED_GUARDIAN_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V2:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x42
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_INVITE_UPDATED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V3:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x43
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_INVITE_UPDATED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V4:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x44
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_INVITE_EXPIRED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V5:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x45
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_INVITE_EXPIRED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FB_STORIES_FALLBACK_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x46
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_BLOCKED_GUARDIAN_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x47
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_INVITE_UPDATED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x48
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_NEW_CONTACT_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_INVITE_UPDATED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x49
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_CHANGED_SETTING_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_INVITE_EXPIRED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x4a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_REPORT_DETAILS_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_INVITE_EXPIRED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x4b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_REMOVED_SUPERVISION_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x4c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_GUARDIAN_REMOVED_SUPERVISION_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x4d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_ASYNC_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_NEW_CONTACT_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x4e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_ASYNC_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_CHANGED_SETTING_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x4f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_PRE_AGE_UP_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_REPORT_DETAILS_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x50
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_PRE_AGE_UP_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_REMOVED_SUPERVISION_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x51
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_COOLDOWN_ENDED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_GUARDIAN_REMOVED_SUPERVISION_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x52
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_REINSTATED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_ASYNC_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x53
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_AGE_UP_REMINDER_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_ASYNC_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x54
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_AGE_UP_REMINDER_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_PRE_AGE_UP_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x55
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_GEN_AI_NOTICE_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_PRE_AGE_UP_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x56
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_FIRST_GEN_AI_USE_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_COOLDOWN_ENDED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x57
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_RECONSENT_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_REINSTATED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x58
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_RECONSENT_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_AGE_UP_REMINDER_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x59
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_QUIET_TIME_CHANGED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_AGE_UP_REMINDER_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x5a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FEEDBACK_REACTION_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_GEN_AI_NOTICE_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x5b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_FIRST_GEN_AI_USE_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x5c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FLASH_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_RECONSENT_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x5d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FOLLOW_PROFILE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_RECONSENT_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x5e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_QUIET_TIME_CHANGED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x5f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND_CONFIRMED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_DAILY_TIME_LIMIT_CHANGED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x60
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND_REQUEST_REMOVER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FEEDBACK_REACTION_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x61
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GIFT_RECIPIENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x62
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GEMSTONE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FLASH_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x63
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GEMSTONE_VIDEO_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FOLLOW_PROFILE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x64
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GENERIC_TINCAN_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x65
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND_CONFIRMED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x66
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND_REQUEST_REMOVER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x67
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GIFT_RECIPIENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x68
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMUNITY_AWARD_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GEMSTONE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x69
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GEMSTONE_VIDEO_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x6a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_NF_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GENERIC_TINCAN_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x6b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_POST_AWARD:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x6c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_POST_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x6d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->HOTP_LOGIN_APPROVALS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x6e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->INTERNAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMUNITY_AWARD_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x6f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->IXC_MESSENGER_SUPPORT_INBOX:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x70
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LA_PUSH_AUTHENTICATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_NF_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x71
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LIKE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_POST_AWARD:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x72
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LIVE_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_POST_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x73
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LIVE_VIDEO_EXPLICIT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->HOTP_LOGIN_APPROVALS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x74
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WATCH_FOLLOWER_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->INTERNAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x75
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WATCH_FOLLOWER_VIDEO_EXPLICIT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->IXC_MESSENGER_SUPPORT_INBOX:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x76
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOCATION_SHARING_SILENT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LA_PUSH_AUTHENTICATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x77
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_BADGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LIKE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x78
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LIVE_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x79
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_PUSH_TRIGGER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LIVE_VIDEO_EXPLICIT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x7a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOGIN_APPROVALS_PUSH_AUTH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WATCH_FOLLOWER_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x7b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MARKETING_MESSAGES_UNREAD_OPTIN_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WATCH_FOLLOWER_VIDEO_EXPLICIT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x7c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOCATION_SHARING_SILENT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x7d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MENTIONS_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_BADGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x7e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGE_COUNTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x7f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGE_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_PUSH_TRIGGER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x80
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_DIRECT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->LOGIN_APPROVALS_PUSH_AUTH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x81
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MARKETING_MESSAGES_UNREAD_OPTIN_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x82
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x83
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_SUBSEQUENT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MENTIONS_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x84
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_DIRECT_INVITE_MEMBERSHIP_REQUEST_APPROVAL_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGE_COUNTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x85
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ENCRYPTED_BACKUPS_ONE_TIME_CODE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGE_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x86
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_EVENT_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_DIRECT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x87
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REFERRAL_EXPIRY_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x88
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REMOVE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x89
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_GROUP_JOIN_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_SUBSEQUENT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x8a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_GROUP_CALL_UPDATES:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_DIRECT_INVITE_MEMBERSHIP_REQUEST_APPROVAL_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x8b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_KIDS_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ENCRYPTED_BACKUPS_ONE_TIME_CODE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x8c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_LIVING_ROOM_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_EVENT_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x8d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REFERRAL_EXPIRY_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x8e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_DAILY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REMOVE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x8f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_FIRST_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_GROUP_JOIN_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x90
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_FIRST_POST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_GROUP_CALL_UPDATES:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x91
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_MESSAGE_EXPIRING:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_KIDS_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x92
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_MESSAGE_VIEWING_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_LIVING_ROOM_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x93
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_CHAT_ENCOURAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x94
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_DAILY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x95
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_FIRST_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x96
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOM_FRIEND_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_FIRST_POST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x97
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOM_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_MESSAGE_EXPIRING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x98
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_STALE_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_MESSAGE_VIEWING_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x99
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_STATUS_CHANGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_CHAT_ENCOURAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x9a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_TRY_AR_EFFECT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x9b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_NOTE_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x9c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_MENTIONS_AND_REPLIES:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MEMORIES:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x9d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_LEVEL_PARTICIPATION_CONTROL_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x9e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_PARTICIPATION_CONTROL_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOM_FRIEND_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x9f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_JOIN_REQUEST_APPROVAL_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOM_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa0
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_STALE_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa1
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_ADMIN_DIRECT_INVITE_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_STATUS_CHANGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa2
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHANNEL_CREATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_TRY_AR_EFFECT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa3
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_TRENDING:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa4
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DEFAULT_GENERAL_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_MENTIONS_AND_REPLIES:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa5
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DEFAULT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_LEVEL_PARTICIPATION_CONTROL_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa6
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_PARTICIPATION_CONTROL_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa7
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE_V2:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_JOIN_REQUEST_APPROVAL_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa8
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_ENGAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xa9
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_MEMBER_CHAT_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_ADMIN_DIRECT_INVITE_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xaa
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_BROADCAST_CHAT_FIRST_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHANNEL_CREATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xab
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_EPHEMERAL_STATUS_BADGE_EARNED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_TRENDING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xac
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_MEMBER_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DEFAULT_GENERAL_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xad
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_INCOMPLETE_ADMOD_SUGGESTED_ACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DEFAULT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xae
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_HOST_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xaf
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE_V2:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb0
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_PAGE_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_ENGAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb1
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_RECALL_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_MEMBER_CHAT_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb2
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_BROADCAST_CHAT_FIRST_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb3
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_EPHEMERAL_STATUS_BADGE_EARNED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb4
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_MEMBER_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb5
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COWATCH_VIDEO_STARTED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_INCOMPLETE_ADMOD_SUGGESTED_ACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb6
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_DEEP_SLEEP_MODE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_HOST_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb7
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PUBLIC_DISCOVERABLE_BROADCAST_CHAT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb8
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MK_BACKGROUND_ACTION_TRIGGER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_PAGE_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xb9
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MOBILE_ZERO_FREE_FACEBOOK_LAUNCH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_RECALL_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xba
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MONTAGE_MESSAGE_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xbb
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSG:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xbc
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_AI_AGENTS_USER_OFF_WAITLIST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED_SINGLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xbd
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_CREATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED_BATCHED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xbe
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_ADDITION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xbf
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_DELETION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COWATCH_VIDEO_STARTED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc0
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_REMOVAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_DEEP_SLEEP_MODE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc1
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PUBLIC_DISCOVERABLE_BROADCAST_CHAT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc2
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_BC_FIRST_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MK_BACKGROUND_ACTION_TRIGGER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc3
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_CM_AND_CHANNEL_INVITE_LINK_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MOBILE_ZERO_FREE_FACEBOOK_LAUNCH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc4
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_COMMUNITY_MEMBER_CHAT_SUGGESTIONS_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MONTAGE_MESSAGE_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc5
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_PUBLIC_CHATS_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSG:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc6
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_SUBSCRIPTION_CANCELED_DEVICE_SETTINGS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_AI_AGENTS_USER_OFF_WAITLIST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc7
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_LINKING_BOTH_SUBSCRIBED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_CREATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc8
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_CANCELATION_INCOMPLETE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_ADDITION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xc9
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_YOUTH_SHOULD_CANCEL_SUBSCRIPTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_DELETION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xca
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NEAR_SAVED_PLACE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_REMOVAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xcb
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NEKO_INSTALL_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xcc
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_CHECKIN_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_BC_FIRST_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xcd
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_COMMENT_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_BROADCAST_CHANNELS_MESSAGE_RECALL_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xce
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_NOTE_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_CM_AND_CHANNEL_INVITE_LINK_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xcf
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_PHOTO_ALBUM_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_COMMUNITY_MEMBER_CHAT_SUGGESTIONS_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd0
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_PHOTO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_PUBLIC_CHATS_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd1
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_SHARE_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_SUBSCRIPTION_CANCELED_DEVICE_SETTINGS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd2
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_STATUS_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_LINKING_BOTH_SUBSCRIBED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd3
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_VIDEO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_CANCELATION_INCOMPLETE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd4
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NOW_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_YOUTH_SHOULD_CANCEL_SUBSCRIPTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd5
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->N4M_TXN_P2P_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_UNLINKING_DEFERRED_DOWNGRADE_NEXT_BILLING_CYCLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd6
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->OFFSITE_EMAIL_NEW_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_LINKING_MULTIPLE_SUBSCRIPTION_DEFERRED_DOWNGRADE_NEXT_BILLING_CYCLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd7
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ONTHISDAY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_LINKING_MULTIPLE_SUBSCRIPTION_DEFERRED_DOWNGRADE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd8
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_FRIEND_MSG:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_STANDARD_UNLINKING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xd9
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_MULTIPLE_SUBSCRIPTION_VARIABLE_PRICING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xda
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_THREAD_READ:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_UPGRADE_DEVICE_SETTING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xdb
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->P2P_PAYMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NEAR_SAVED_PLACE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xdc
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_ADMIN_INCOMING_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NEKO_INSTALL_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xdd
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_CHECKIN_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xde
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_COMMENT_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xdf
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGES_INSTAGRAM_DIRECT_MESSAGE_ADMIN_ASSIGNMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_NOTE_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe0
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_INSTAGRAM_DIRECT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_PHOTO_ALBUM_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe1
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_PHOTO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe2
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_ADMIN_ASSIGNMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_SHARE_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe3
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_STATUS_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe4
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_AGGREGATED_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NF_VIDEO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe5
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MISSED_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->NOW_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe6
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_USER_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->N4M_TXN_P2P_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe7
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_WALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ONTHISDAY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe8
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_WHATS_APP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_FRIEND_MSG:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xe9
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAYMENTS_BANNER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xea
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PHOTO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_THREAD_READ:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xeb
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PHOTO_ALBUM_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->P2P_PAYMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xec
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PLACE_FEED_NEARBY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_ADMIN_INCOMING_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xed
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PLAN_USER_INVITED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xee
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PLATFORM_LOGIN_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xef
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->POST_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGES_INSTAGRAM_DIRECT_MESSAGE_ADMIN_ASSIGNMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf0
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PRE_REG_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_INSTAGRAM_DIRECT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf1
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PROFILE_PLUS_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf2
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PUBLIC_CHANNELS_NEW_CHANNEL_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_ADMIN_ASSIGNMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf3
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PUSH_REACHABILITY_CHECK:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf4
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PUSH_TO_SESSION_MESSENGER_LOGIN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_AGGREGATED_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf5
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PYMK_EMAIL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MISSED_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf6
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->REQUEST_LOCATION_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_USER_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf7
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOMS_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_WALL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf8
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->RETRACT_INVALID:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_WHATS_APP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xf9
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->RTC_VCWA_ATTEMPTED_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PAYMENTS_BANNER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xfa
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->RTC_VCWA_CREATOR_JOINED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PHOTO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xfb
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->SECURE_MESSAGE_OVER_WA:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PHOTO_ALBUM_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xfc
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->SESSION_LEVEL_SURVEY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PLACE_FEED_NEARBY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xfd
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->SHOWS_FOLLOWER_NEW_EPISODE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PLAN_USER_INVITED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xfe
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_CONTACT_IMPORT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PLATFORM_LOGIN_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0xff
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_EMAIL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->POST_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x100
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_FRIEND_CONFIRM:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PRE_REG_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x101
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_NOTIFICATIONS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PROFILE_PLUS_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x102
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STORY_RESHARE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PUBLIC_CHANNELS_NEW_CHANNEL_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x103
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->TINCAN_MESSAGE_RECEIVED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PUSH_REACHABILITY_CHECK:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x104
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->TOP_TRENDING_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PUSH_TO_SESSION_MESSENGER_LOGIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x105
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->TOR_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->PYMK_EMAIL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x106
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->UNKNOWN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->REQUEST_LOCATION_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x107
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->VIDEO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOMS_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x108
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->VOIP:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->RETRACT_INVALID:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x109
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WAKEUP_MQTT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->RTC_VCWA_ATTEMPTED_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x10a
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->RTC_VCWA_CREATOR_JOINED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x10b
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WEATHER_NOWCAST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->SECURE_MESSAGE_OVER_WA:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x10c
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WEBRTC_VOIP_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->SESSION_LEVEL_SURVEY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x10d
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WORK_STALE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->SHOWS_FOLLOWER_NEW_EPISODE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x10e
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ZB_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_CONTACT_IMPORT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x10f
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ZERO:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_EMAIL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x110
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MUSIC_RELEASE_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_FRIEND_CONFIRM:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x111
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ZP:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_NOTIFICATIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x112
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->STORY_RESHARE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x113
 
     aput-object v1, v2, v0
 
-    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_LWI_ASYNC_CREATION_FAILURE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->TINCAN_MESSAGE_RECEIVED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     const/16 v0, 0x114
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->TOP_TRENDING_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x115
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->TOR_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x116
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->UNKNOWN:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x117
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->VIDEO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x118
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->VOIP:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x119
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WAKEUP_MQTT:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x11a
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WALL:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x11b
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WEATHER_NOWCAST:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x11c
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WEBRTC_VOIP_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x11d
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->WORK_STALE:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x11e
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_TEEN_MESSAGING_DATA_REQUEST_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x11f
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_APPEAL_SUCCESS_OLD_PARENT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x120
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_APPEAL_SUCCESS_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x121
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_GS_INVITE_ACCEPT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x122
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_GS_INVITE_CREATE_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x123
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_GS_INVITE_DECLINE_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x124
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_GS_OPT_OUT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x125
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_INVITE_CREATE_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x126
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_OFFBOARDING_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x127
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_TRANSITION_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x128
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ZB_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x129
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ZERO:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x12a
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MUSIC_RELEASE_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x12b
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->ZP:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x12c
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x12d
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_LWI_ASYNC_CREATION_FAILURE:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x12e
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->SILENT_MPW_TRUSTED_DEVICE_FB:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x12f
+
+    aput-object v1, v2, v0
+
+    sget-object v1, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_E2EE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    const/16 v0, 0x130
 
     aput-object v1, v2, v0
 
@@ -2247,7 +2473,7 @@
     .locals 6
 
     .line 0
-    const-string v1, "APP_DIRECT_INSTALL_OPEN_REMIND"
+    const-string v1, "MESSENGER_BACKGROUND_ACCOUNT_GENERIC"
 
     .line 1
     .line 2
@@ -2262,11 +2488,11 @@
     move-result-object v0
 
     .line 7
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->APP_DIRECT_INSTALL_OPEN_REMIND:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_BACKGROUND_ACCOUNT_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 8
     .line 9
-    const-string v1, "APPMANAGER_ACTION"
+    const-string v1, "MESSENGER_AP_E2EE_BACKGROUND_GENERIC"
 
     .line 10
     .line 11
@@ -2281,11 +2507,11 @@
     move-result-object v0
 
     .line 16
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->APPMANAGER_ACTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_AP_E2EE_BACKGROUND_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 17
     .line 18
-    const-string v1, "AUTHENTICATION_FAILED"
+    const-string v1, "APP_DIRECT_INSTALL_OPEN_REMIND"
 
     .line 19
     .line 20
@@ -2300,11 +2526,11 @@
     move-result-object v0
 
     .line 25
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AUTHENTICATION_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->APP_DIRECT_INSTALL_OPEN_REMIND:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 26
     .line 27
-    const-string v1, "AUTO_UPDATE_AVAILABLE"
+    const-string v1, "APPMANAGER_ACTION"
 
     .line 28
     .line 29
@@ -2319,11 +2545,11 @@
     move-result-object v0
 
     .line 34
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AUTO_UPDATE_AVAILABLE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->APPMANAGER_ACTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 35
     .line 36
-    const-string v1, "AYMT_MAKE_PAGE_POST_TIP"
+    const-string v1, "AUTHENTICATION_FAILED"
 
     .line 37
     .line 38
@@ -2338,11 +2564,11 @@
     move-result-object v0
 
     .line 43
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_MAKE_PAGE_POST_TIP:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AUTHENTICATION_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 44
     .line 45
-    const-string v1, "AYMT_PAGE_RESPOND_MESSAGES_REMINDER_TIP_NOTIF"
+    const-string v1, "AUTO_UPDATE_AVAILABLE"
 
     .line 46
     .line 47
@@ -2357,11 +2583,11 @@
     move-result-object v0
 
     .line 52
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_PAGE_RESPOND_MESSAGES_REMINDER_TIP_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AUTO_UPDATE_AVAILABLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 53
     .line 54
-    const-string v1, "BIZSUITE_POST_CTX_BOOST_RECOMMENDATION"
+    const-string v1, "AYMT_MAKE_PAGE_POST_TIP"
 
     .line 55
     .line 56
@@ -2376,11 +2602,11 @@
     move-result-object v0
 
     .line 61
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_POST_CTX_BOOST_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_MAKE_PAGE_POST_TIP:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 62
     .line 63
-    const-string v1, "BIZSUITE_POST_BOOST_RECOMMENDATION"
+    const-string v1, "AYMT_PAGE_RESPOND_MESSAGES_REMINDER_TIP_NOTIF"
 
     .line 64
     .line 65
@@ -2395,11 +2621,11 @@
     move-result-object v0
 
     .line 70
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_POST_BOOST_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_PAGE_RESPOND_MESSAGES_REMINDER_TIP_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 71
     .line 72
-    const-string v1, "BADGE_UPDATE"
+    const-string v1, "AYMT_LWI_YESTERDAY_SUMMARY_TIP_NOTIF"
 
     .line 73
     .line 74
@@ -2415,11 +2641,11 @@
     move-result-object v0
 
     .line 80
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BADGE_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_LWI_YESTERDAY_SUMMARY_TIP_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 81
     .line 82
-    const-string v1, "BIRTHDAY_REMINDER"
+    const-string v1, "BIZSUITE_POST_CTX_BOOST_RECOMMENDATION"
 
     .line 83
     .line 84
@@ -2435,11 +2661,11 @@
     move-result-object v0
 
     .line 90
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIRTHDAY_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_POST_CTX_BOOST_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 91
     .line 92
-    const-string v1, "BIZ_COMPOSER_POST_CREATE"
+    const-string v1, "BIZSUITE_POST_BOOST_RECOMMENDATION"
 
     .line 93
     .line 94
@@ -2455,11 +2681,11 @@
     move-result-object v0
 
     .line 100
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZ_COMPOSER_POST_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_POST_BOOST_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 101
     .line 102
-    const-string v1, "BIZ_INBOX_WHATSAPP_MESSAGE"
+    const-string v1, "BADGE_UPDATE"
 
     .line 103
     .line 104
@@ -2475,11 +2701,11 @@
     move-result-object v0
 
     .line 110
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZ_INBOX_WHATSAPP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BADGE_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 111
     .line 112
-    const-string v1, "BROADCAST_CHANNELS_BATCHED_REACTIONS"
+    const-string v1, "BIRTHDAY_REMINDER"
 
     .line 113
     .line 114
@@ -2495,11 +2721,11 @@
     move-result-object v0
 
     .line 120
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BROADCAST_CHANNELS_BATCHED_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIRTHDAY_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 121
     .line 122
-    const-string v1, "BOOTSTRAP_UPDATED"
+    const-string v1, "BIZ_COMPOSER_POST_CREATE"
 
     .line 123
     .line 124
@@ -2515,11 +2741,11 @@
     move-result-object v0
 
     .line 130
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BOOTSTRAP_UPDATED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZ_COMPOSER_POST_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 131
     .line 132
-    const-string v1, "BROADCAST_CHANNELS_BATCHED_POLL_VOTES"
+    const-string v1, "BIZ_INBOX_WHATSAPP_MESSAGE"
 
     .line 133
     .line 134
@@ -2535,11 +2761,11 @@
     move-result-object v0
 
     .line 140
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BROADCAST_CHANNELS_BATCHED_POLL_VOTES:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZ_INBOX_WHATSAPP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 141
     .line 142
-    const-string v1, "C4G_INVITE"
+    const-string v1, "BIZSUITE_MESSAGE_REMINDER"
 
     .line 143
     .line 144
@@ -2555,11 +2781,11 @@
     move-result-object v0
 
     .line 150
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->C4G_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 151
     .line 152
-    const-string v1, "CAMPAIGN_CLOSE_FRIEND_ACTIVITY"
+    const-string v1, "BROADCAST_CHANNELS_BATCHED_REACTIONS"
 
     .line 153
     .line 154
@@ -2575,11 +2801,11 @@
     move-result-object v0
 
     .line 160
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_CLOSE_FRIEND_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BROADCAST_CHANNELS_BATCHED_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 161
     .line 162
-    const-string v1, "CAMPAIGN_COMMENT_MENTION"
+    const-string v1, "BOOTSTRAP_UPDATED"
 
     .line 163
     .line 164
@@ -2595,11 +2821,11 @@
     move-result-object v0
 
     .line 170
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BOOTSTRAP_UPDATED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 171
     .line 172
-    const-string v1, "CAMPAIGN_FEED_COMMENT"
+    const-string v1, "BROADCAST_CHANNELS_BATCHED_POLL_VOTES"
 
     .line 173
     .line 174
@@ -2615,11 +2841,11 @@
     move-result-object v0
 
     .line 180
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BROADCAST_CHANNELS_BATCHED_POLL_VOTES:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 181
     .line 182
-    const-string v1, "CAMPAIGN_FEED_COMMENT_REPLY"
+    const-string v1, "C4G_INVITE"
 
     .line 183
     .line 184
@@ -2635,11 +2861,11 @@
     move-result-object v0
 
     .line 190
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FEED_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->C4G_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 191
     .line 192
-    const-string v1, "CAMPAIGN_FRIEND"
+    const-string v1, "CAMPAIGN_CLOSE_FRIEND_ACTIVITY"
 
     .line 193
     .line 194
@@ -2655,11 +2881,11 @@
     move-result-object v0
 
     .line 200
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FRIEND:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_CLOSE_FRIEND_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 201
     .line 202
-    const-string v1, "CAMPAIGN_FRIEND_CONFIRMED"
+    const-string v1, "CAMPAIGN_COMMENT_MENTION"
 
     .line 203
     .line 204
@@ -2675,11 +2901,11 @@
     move-result-object v0
 
     .line 210
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FRIEND_CONFIRMED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 211
     .line 212
-    const-string v1, "CAMPAIGN_GROUP_COMMENT_REPLY"
+    const-string v1, "CAMPAIGN_FEED_COMMENT"
 
     .line 213
     .line 214
@@ -2695,11 +2921,11 @@
     move-result-object v0
 
     .line 220
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_GROUP_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 221
     .line 222
-    const-string v1, "CAMPAIGN_MENTIONS_COMMENT"
+    const-string v1, "CAMPAIGN_FEED_COMMENT_REPLY"
 
     .line 223
     .line 224
@@ -2715,11 +2941,11 @@
     move-result-object v0
 
     .line 230
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_MENTIONS_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FEED_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 231
     .line 232
-    const-string v1, "CAMPAIGN_STORY_HIGHLIGHT"
+    const-string v1, "CAMPAIGN_FRIEND"
 
     .line 233
     .line 234
@@ -2735,11 +2961,11 @@
     move-result-object v0
 
     .line 240
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_STORY_HIGHLIGHT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FRIEND:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 241
     .line 242
-    const-string v1, "CBI_IG_PUSH"
+    const-string v1, "CAMPAIGN_FRIEND_CONFIRMED"
 
     .line 243
     .line 244
@@ -2755,11 +2981,11 @@
     move-result-object v0
 
     .line 250
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CBI_IG_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_FRIEND_CONFIRMED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 251
     .line 252
-    const-string v1, "CMB_DIRECT_INVITE"
+    const-string v1, "CAMPAIGN_GROUP_COMMENT_REPLY"
 
     .line 253
     .line 254
@@ -2775,11 +3001,11 @@
     move-result-object v0
 
     .line 260
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CMB_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_GROUP_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 261
     .line 262
-    const-string v1, "CREATOR_HIGHLIGHTS"
+    const-string v1, "CAMPAIGN_MENTIONS_COMMENT"
 
     .line 263
     .line 264
@@ -2795,11 +3021,11 @@
     move-result-object v0
 
     .line 270
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CREATOR_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_MENTIONS_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 271
     .line 272
-    const-string v1, "BIZSUITE_ONBOARD_TEMPLATE"
+    const-string v1, "CAMPAIGN_STORY_HIGHLIGHT"
 
     .line 273
     .line 274
@@ -2815,11 +3041,11 @@
     move-result-object v0
 
     .line 280
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_ONBOARD_TEMPLATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CAMPAIGN_STORY_HIGHLIGHT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 281
     .line 282
-    const-string v1, "BIZSUITE_FEED_COMMENT"
+    const-string v1, "CBI_IG_PUSH"
 
     .line 283
     .line 284
@@ -2835,11 +3061,11 @@
     move-result-object v0
 
     .line 290
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CBI_IG_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 291
     .line 292
-    const-string v1, "BIZSUITE_PHOTO_COMMENT"
+    const-string v1, "CMB_DIRECT_INVITE"
 
     .line 293
     .line 294
@@ -2855,11 +3081,11 @@
     move-result-object v0
 
     .line 300
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_PHOTO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CMB_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 301
     .line 302
-    const-string v1, "BIZSUITE_VIDEO_COMMENT"
+    const-string v1, "CREATOR_HIGHLIGHTS"
 
     .line 303
     .line 304
@@ -2875,11 +3101,11 @@
     move-result-object v0
 
     .line 310
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_VIDEO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CREATOR_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 311
     .line 312
-    const-string v1, "BIZSUITE_PHOTO_ALBUM_COMMENT"
+    const-string v1, "COMMUNITY_MESSAGING_IN_BLUE_CHAT_SUMMARY"
 
     .line 313
     .line 314
@@ -2895,11 +3121,11 @@
     move-result-object v0
 
     .line 320
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_PHOTO_ALBUM_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->COMMUNITY_MESSAGING_IN_BLUE_CHAT_SUMMARY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 321
     .line 322
-    const-string v1, "BIZSUITE_IG_PLATFORM"
+    const-string v1, "BIZSUITE_ONBOARD_TEMPLATE"
 
     .line 323
     .line 324
@@ -2915,11 +3141,11 @@
     move-result-object v0
 
     .line 330
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_PLATFORM:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_ONBOARD_TEMPLATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 331
     .line 332
-    const-string v1, "BIZSUITE_IG_DIRECT"
+    const-string v1, "BIZSUITE_FEED_COMMENT"
 
     .line 333
     .line 334
@@ -2935,11 +3161,11 @@
     move-result-object v0
 
     .line 340
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_DIRECT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 341
     .line 342
-    const-string v1, "BIZSUITE_IG_DIRECT_EXPERIMENT"
+    const-string v1, "BIZSUITE_PHOTO_COMMENT"
 
     .line 343
     .line 344
@@ -2955,11 +3181,11 @@
     move-result-object v0
 
     .line 350
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_DIRECT_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_PHOTO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 351
     .line 352
-    const-string v1, "BIZSUITE_MSGR_MESSAGE"
+    const-string v1, "BIZSUITE_VIDEO_COMMENT"
 
     .line 353
     .line 354
@@ -2975,11 +3201,11 @@
     move-result-object v0
 
     .line 360
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MSGR_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_VIDEO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 361
     .line 362
-    const-string v1, "BIZSUITE_MSGR_MESSAGE_EXPERIMENT"
+    const-string v1, "BIZSUITE_PHOTO_ALBUM_COMMENT"
 
     .line 363
     .line 364
@@ -2995,11 +3221,11 @@
     move-result-object v0
 
     .line 370
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MSGR_MESSAGE_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_PHOTO_ALBUM_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 371
     .line 372
-    const-string v1, "BIZSUITE_ACTION_NEEDED_JEWEL_REMINDER"
+    const-string v1, "BIZSUITE_IG_PLATFORM"
 
     .line 373
     .line 374
@@ -3015,11 +3241,11 @@
     move-result-object v0
 
     .line 380
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_ACTION_NEEDED_JEWEL_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_PLATFORM:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 381
     .line 382
-    const-string v1, "BIZSUITE_WHATSAPP_MESSAGE"
+    const-string v1, "BIZSUITE_IG_DIRECT"
 
     .line 383
     .line 384
@@ -3035,11 +3261,11 @@
     move-result-object v0
 
     .line 390
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_WHATSAPP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_DIRECT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 391
     .line 392
-    const-string v1, "CLOSE_FRIEND_ACTIVITY"
+    const-string v1, "BIZSUITE_IG_DIRECT_EXPERIMENT"
 
     .line 393
     .line 394
@@ -3055,11 +3281,11 @@
     move-result-object v0
 
     .line 400
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CLOSE_FRIEND_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_IG_DIRECT_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 401
     .line 402
-    const-string v1, "CLOSE_FRIEND_COMMENT"
+    const-string v1, "BIZSUITE_MSGR_MESSAGE"
 
     .line 403
     .line 404
@@ -3075,11 +3301,11 @@
     move-result-object v0
 
     .line 410
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CLOSE_FRIEND_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MSGR_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 411
     .line 412
-    const-string v1, "COMMENT_FAILED"
+    const-string v1, "BIZSUITE_MSGR_MESSAGE_EXPERIMENT"
 
     .line 413
     .line 414
@@ -3095,11 +3321,11 @@
     move-result-object v0
 
     .line 420
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->COMMENT_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_MSGR_MESSAGE_EXPERIMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 421
     .line 422
-    const-string v1, "COMMENT_MENTION"
+    const-string v1, "BIZSUITE_ACTION_NEEDED_JEWEL_REMINDER"
 
     .line 423
     .line 424
@@ -3115,11 +3341,11 @@
     move-result-object v0
 
     .line 430
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_ACTION_NEEDED_JEWEL_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 431
     .line 432
-    const-string v1, "DECRYPTION_FAIL_FALLBACK"
+    const-string v1, "BIZSUITE_WHATSAPP_MESSAGE"
 
     .line 433
     .line 434
@@ -3135,11 +3361,11 @@
     move-result-object v0
 
     .line 440
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DECRYPTION_FAIL_FALLBACK:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->BIZSUITE_WHATSAPP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 441
     .line 442
-    const-string v1, "DEFAULT_PUSH_OF_JEWEL_NOTIF"
+    const-string v1, "CLOSE_FRIEND_ACTIVITY"
 
     .line 443
     .line 444
@@ -3155,11 +3381,11 @@
     move-result-object v0
 
     .line 450
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DEFAULT_PUSH_OF_JEWEL_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CLOSE_FRIEND_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 451
     .line 452
-    const-string v1, "DEFCON_LEVEL_UPDATED_SILENT_PUSH"
+    const-string v1, "CLOSE_FRIEND_COMMENT"
 
     .line 453
     .line 454
@@ -3175,11 +3401,11 @@
     move-result-object v0
 
     .line 460
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DEFCON_LEVEL_UPDATED_SILENT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CLOSE_FRIEND_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 461
     .line 462
-    const-string v1, "DEVICE_REQUEST"
+    const-string v1, "COMMENT_FAILED"
 
     .line 463
     .line 464
@@ -3195,11 +3421,11 @@
     move-result-object v0
 
     .line 470
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DEVICE_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->COMMENT_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 471
     .line 472
-    const-string v1, "DIRECT_MESSAGE_STORY_SEEN"
+    const-string v1, "COMMENT_MENTION"
 
     .line 473
     .line 474
@@ -3215,11 +3441,11 @@
     move-result-object v0
 
     .line 480
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_SEEN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 481
     .line 482
-    const-string v1, "DIRECT_MESSAGE_STORY_POSTED"
+    const-string v1, "DECRYPTION_FAIL_FALLBACK"
 
     .line 483
     .line 484
@@ -3235,11 +3461,11 @@
     move-result-object v0
 
     .line 490
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_POSTED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DECRYPTION_FAIL_FALLBACK:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 491
     .line 492
-    const-string v1, "DIRECT_MESSAGE_STORY_SEEN_MILESTONE"
+    const-string v1, "DEFAULT_PUSH_OF_JEWEL_NOTIF"
 
     .line 493
     .line 494
@@ -3255,11 +3481,11 @@
     move-result-object v0
 
     .line 500
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_SEEN_MILESTONE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DEFAULT_PUSH_OF_JEWEL_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 501
     .line 502
-    const-string v1, "EDIT_MESSAGE"
+    const-string v1, "DEFCON_LEVEL_UPDATED_SILENT_PUSH"
 
     .line 503
     .line 504
@@ -3275,11 +3501,11 @@
     move-result-object v0
 
     .line 510
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DEFCON_LEVEL_UPDATED_SILENT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 511
     .line 512
-    const-string v1, "ERROR_CLIENT_NOTIFICATION"
+    const-string v1, "DEVICE_REQUEST"
 
     .line 513
     .line 514
@@ -3295,11 +3521,11 @@
     move-result-object v0
 
     .line 520
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ERROR_CLIENT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DEVICE_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 521
     .line 522
-    const-string v1, "EVENT_INVITE"
+    const-string v1, "DIRECT_MESSAGE_STORY_SEEN"
 
     .line 523
     .line 524
@@ -3315,11 +3541,11 @@
     move-result-object v0
 
     .line 530
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->EVENT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_SEEN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 531
     .line 532
-    const-string v1, "FBNS_MESSAGES_SYNC"
+    const-string v1, "DIRECT_MESSAGE_STORY_POSTED"
 
     .line 533
     .line 534
@@ -3335,11 +3561,11 @@
     move-result-object v0
 
     .line 540
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_MESSAGES_SYNC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_POSTED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 541
     .line 542
-    const-string v1, "FBNS_MOBILE_REQUESTS_COUNT"
+    const-string v1, "DIRECT_MESSAGE_STORY_SEEN_MILESTONE"
 
     .line 543
     .line 544
@@ -3355,11 +3581,11 @@
     move-result-object v0
 
     .line 550
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_MOBILE_REQUESTS_COUNT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->DIRECT_MESSAGE_STORY_SEEN_MILESTONE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 551
     .line 552
-    const-string v1, "FBNS_NOTIFICATIONS_READ"
+    const-string v1, "EDIT_MESSAGE"
 
     .line 553
     .line 554
@@ -3375,11 +3601,11 @@
     move-result-object v0
 
     .line 560
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_READ:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 561
     .line 562
-    const-string v1, "FBNS_NOTIFICATIONS_SEEN"
+    const-string v1, "ERROR_CLIENT_NOTIFICATION"
 
     .line 563
     .line 564
@@ -3395,11 +3621,11 @@
     move-result-object v0
 
     .line 570
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_SEEN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ERROR_CLIENT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 571
     .line 572
-    const-string v1, "FBNS_NOTIFICATIONS_SYNC"
+    const-string v1, "EVENT_INVITE"
 
     .line 573
     .line 574
@@ -3415,11 +3641,11 @@
     move-result-object v0
 
     .line 580
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_SYNC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->EVENT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 581
     .line 582
-    const-string v1, "FB_GROUP_CHAT_NEW_CHAT_CREATED"
+    const-string v1, "FBNS_MESSAGES_SYNC"
 
     .line 583
     .line 584
@@ -3435,11 +3661,11 @@
     move-result-object v0
 
     .line 590
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FB_GROUP_CHAT_NEW_CHAT_CREATED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_MESSAGES_SYNC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 591
     .line 592
-    const-string v1, "FBM_PUSH_RETRACT"
+    const-string v1, "FBNS_MOBILE_REQUESTS_COUNT"
 
     .line 593
     .line 594
@@ -3455,11 +3681,11 @@
     move-result-object v0
 
     .line 600
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_MOBILE_REQUESTS_COUNT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 601
     .line 602
-    const-string v1, "FBM_PUSH_RETRACT_V2"
+    const-string v1, "FBNS_NOTIFICATIONS_READ"
 
     .line 603
     .line 604
@@ -3475,11 +3701,11 @@
     move-result-object v0
 
     .line 610
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V2:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_READ:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 611
     .line 612
-    const-string v1, "FBM_PUSH_RETRACT_V3"
+    const-string v1, "FBNS_NOTIFICATIONS_SEEN"
 
     .line 613
     .line 614
@@ -3495,11 +3721,11 @@
     move-result-object v0
 
     .line 620
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V3:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_SEEN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 621
     .line 622
-    const-string v1, "FBM_PUSH_RETRACT_V4"
+    const-string v1, "FBNS_NOTIFICATIONS_SYNC"
 
     .line 623
     .line 624
@@ -3515,11 +3741,11 @@
     move-result-object v0
 
     .line 630
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V4:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBNS_NOTIFICATIONS_SYNC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 631
     .line 632
-    const-string v1, "FBM_PUSH_RETRACT_V5"
+    const-string v1, "FB_GROUP_CHAT_NEW_CHAT_CREATED"
 
     .line 633
     .line 634
@@ -3535,11 +3761,11 @@
     move-result-object v0
 
     .line 640
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V5:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FB_GROUP_CHAT_NEW_CHAT_CREATED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 641
     .line 642
-    const-string v1, "FB_STORIES_FALLBACK_REPLY"
+    const-string v1, "FBM_PUSH_RETRACT"
 
     .line 643
     .line 644
@@ -3555,11 +3781,11 @@
     move-result-object v0
 
     .line 650
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FB_STORIES_FALLBACK_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 651
     .line 652
-    const-string v1, "FC_MESSENGER_TEEN_BLOCKED_GUARDIAN_TEEN_NOTIFICATION"
+    const-string v1, "FBM_PUSH_RETRACT_V2"
 
     .line 653
     .line 654
@@ -3575,11 +3801,11 @@
     move-result-object v0
 
     .line 660
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_BLOCKED_GUARDIAN_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V2:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 661
     .line 662
-    const-string v1, "FC_MESSENGER_SUPERVISION_INVITE_UPDATED_TEEN_NOTIFICATION"
+    const-string v1, "FBM_PUSH_RETRACT_V3"
 
     .line 663
     .line 664
@@ -3595,11 +3821,11 @@
     move-result-object v0
 
     .line 670
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_INVITE_UPDATED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V3:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 671
     .line 672
-    const-string v1, "FC_MESSENGER_SUPERVISION_INVITE_UPDATED_GUARDIAN_NOTIFICATION"
+    const-string v1, "FBM_PUSH_RETRACT_V4"
 
     .line 673
     .line 674
@@ -3615,11 +3841,11 @@
     move-result-object v0
 
     .line 680
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_INVITE_UPDATED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V4:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 681
     .line 682
-    const-string v1, "FC_MESSENGER_INVITE_EXPIRED_GUARDIAN_NOTIFICATION"
+    const-string v1, "FBM_PUSH_RETRACT_V5"
 
     .line 683
     .line 684
@@ -3635,11 +3861,11 @@
     move-result-object v0
 
     .line 690
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_INVITE_EXPIRED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FBM_PUSH_RETRACT_V5:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 691
     .line 692
-    const-string v1, "FC_MESSENGER_INVITE_EXPIRED_TEEN_NOTIFICATION"
+    const-string v1, "FB_STORIES_FALLBACK_REPLY"
 
     .line 693
     .line 694
@@ -3655,11 +3881,11 @@
     move-result-object v0
 
     .line 700
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_INVITE_EXPIRED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FB_STORIES_FALLBACK_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 701
     .line 702
-    const-string v1, "FC_MESSENGER_VERIFICATION_FAILED_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_TEEN_BLOCKED_GUARDIAN_TEEN_NOTIFICATION"
 
     .line 703
     .line 704
@@ -3675,11 +3901,11 @@
     move-result-object v0
 
     .line 710
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_BLOCKED_GUARDIAN_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 711
     .line 712
-    const-string v1, "FC_MESSENGER_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_SUPERVISION_INVITE_UPDATED_TEEN_NOTIFICATION"
 
     .line 713
     .line 714
@@ -3695,11 +3921,11 @@
     move-result-object v0
 
     .line 720
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_INVITE_UPDATED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 721
     .line 722
-    const-string v1, "FC_MESSENGER_NEW_CONTACT_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_SUPERVISION_INVITE_UPDATED_GUARDIAN_NOTIFICATION"
 
     .line 723
     .line 724
@@ -3715,11 +3941,11 @@
     move-result-object v0
 
     .line 730
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_NEW_CONTACT_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_INVITE_UPDATED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 731
     .line 732
-    const-string v1, "FC_MESSENGER_TEEN_CHANGED_SETTING_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_INVITE_EXPIRED_GUARDIAN_NOTIFICATION"
 
     .line 733
     .line 734
@@ -3735,11 +3961,11 @@
     move-result-object v0
 
     .line 740
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_CHANGED_SETTING_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_INVITE_EXPIRED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 741
     .line 742
-    const-string v1, "FC_MESSENGER_TEEN_REPORT_DETAILS_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_INVITE_EXPIRED_TEEN_NOTIFICATION"
 
     .line 743
     .line 744
@@ -3755,11 +3981,11 @@
     move-result-object v0
 
     .line 750
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_REPORT_DETAILS_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_INVITE_EXPIRED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 751
     .line 752
-    const-string v1, "FC_MESSENGER_TEEN_REMOVED_SUPERVISION_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_VERIFICATION_FAILED_TEEN_NOTIFICATION"
 
     .line 753
     .line 754
@@ -3775,11 +4001,11 @@
     move-result-object v0
 
     .line 760
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_REMOVED_SUPERVISION_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 761
     .line 762
-    const-string v1, "FC_MESSENGER_GUARDIAN_REMOVED_SUPERVISION_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION"
 
     .line 763
     .line 764
@@ -3795,11 +4021,11 @@
     move-result-object v0
 
     .line 770
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_GUARDIAN_REMOVED_SUPERVISION_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 771
     .line 772
-    const-string v1, "FC_MESSENGER_ASYNC_VERIFICATION_FAILED_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_NEW_CONTACT_GUARDIAN_NOTIFICATION"
 
     .line 773
     .line 774
@@ -3815,11 +4041,11 @@
     move-result-object v0
 
     .line 780
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_ASYNC_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_NEW_CONTACT_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 781
     .line 782
-    const-string v1, "FC_MESSENGER_ASYNC_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_TEEN_CHANGED_SETTING_GUARDIAN_NOTIFICATION"
 
     .line 783
     .line 784
@@ -3835,11 +4061,11 @@
     move-result-object v0
 
     .line 790
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_ASYNC_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_CHANGED_SETTING_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 791
     .line 792
-    const-string v1, "FC_MESSENGER_PRE_AGE_UP_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_TEEN_REPORT_DETAILS_GUARDIAN_NOTIFICATION"
 
     .line 793
     .line 794
@@ -3855,11 +4081,11 @@
     move-result-object v0
 
     .line 800
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_PRE_AGE_UP_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_REPORT_DETAILS_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 801
     .line 802
-    const-string v1, "FC_MESSENGER_PRE_AGE_UP_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_TEEN_REMOVED_SUPERVISION_GUARDIAN_NOTIFICATION"
 
     .line 803
     .line 804
@@ -3875,11 +4101,11 @@
     move-result-object v0
 
     .line 810
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_PRE_AGE_UP_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_REMOVED_SUPERVISION_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 811
     .line 812
-    const-string v1, "FC_MESSENGER_SUPERVISION_COOLDOWN_ENDED_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_GUARDIAN_REMOVED_SUPERVISION_TEEN_NOTIFICATION"
 
     .line 813
     .line 814
@@ -3895,11 +4121,11 @@
     move-result-object v0
 
     .line 820
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_COOLDOWN_ENDED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_GUARDIAN_REMOVED_SUPERVISION_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 821
     .line 822
-    const-string v1, "FC_MESSENGER_SUPERVISION_REINSTATED_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_ASYNC_VERIFICATION_FAILED_TEEN_NOTIFICATION"
 
     .line 823
     .line 824
@@ -3915,11 +4141,11 @@
     move-result-object v0
 
     .line 830
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_REINSTATED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_ASYNC_VERIFICATION_FAILED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 831
     .line 832
-    const-string v1, "FC_MESSENGER_TEEN_AGE_UP_REMINDER_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_ASYNC_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION"
 
     .line 833
     .line 834
@@ -3935,11 +4161,11 @@
     move-result-object v0
 
     .line 840
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_AGE_UP_REMINDER_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_ASYNC_VERIFICATION_FAILED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 841
     .line 842
-    const-string v1, "FC_MESSENGER_TEEN_AGE_UP_REMINDER_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_PRE_AGE_UP_TEEN_NOTIFICATION"
 
     .line 843
     .line 844
@@ -3955,11 +4181,11 @@
     move-result-object v0
 
     .line 850
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_AGE_UP_REMINDER_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_PRE_AGE_UP_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 851
     .line 852
-    const-string v1, "FC_MESSENGER_GEN_AI_NOTICE_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_PRE_AGE_UP_GUARDIAN_NOTIFICATION"
 
     .line 853
     .line 854
@@ -3975,11 +4201,11 @@
     move-result-object v0
 
     .line 860
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_GEN_AI_NOTICE_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_PRE_AGE_UP_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 861
     .line 862
-    const-string v1, "FC_MESSENGER_TEEN_FIRST_GEN_AI_USE_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_SUPERVISION_COOLDOWN_ENDED_TEEN_NOTIFICATION"
 
     .line 863
     .line 864
@@ -3995,11 +4221,11 @@
     move-result-object v0
 
     .line 870
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_FIRST_GEN_AI_USE_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_COOLDOWN_ENDED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 871
     .line 872
-    const-string v1, "FC_MESSENGER_RECONSENT_GUARDIAN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_SUPERVISION_REINSTATED_GUARDIAN_NOTIFICATION"
 
     .line 873
     .line 874
@@ -4015,11 +4241,11 @@
     move-result-object v0
 
     .line 880
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_RECONSENT_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_SUPERVISION_REINSTATED_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 881
     .line 882
-    const-string v1, "FC_MESSENGER_RECONSENT_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_TEEN_AGE_UP_REMINDER_TEEN_NOTIFICATION"
 
     .line 883
     .line 884
@@ -4035,11 +4261,11 @@
     move-result-object v0
 
     .line 890
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_RECONSENT_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_AGE_UP_REMINDER_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 891
     .line 892
-    const-string v1, "FC_MESSENGER_QUIET_TIME_CHANGED_TEEN_NOTIFICATION"
+    const-string v1, "FC_MESSENGER_TEEN_AGE_UP_REMINDER_GUARDIAN_NOTIFICATION"
 
     .line 893
     .line 894
@@ -4055,11 +4281,11 @@
     move-result-object v0
 
     .line 900
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_QUIET_TIME_CHANGED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_AGE_UP_REMINDER_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 901
     .line 902
-    const-string v1, "FEEDBACK_REACTION_GENERIC"
+    const-string v1, "FC_MESSENGER_GEN_AI_NOTICE_TEEN_NOTIFICATION"
 
     .line 903
     .line 904
@@ -4075,11 +4301,11 @@
     move-result-object v0
 
     .line 910
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FEEDBACK_REACTION_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_GEN_AI_NOTICE_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 911
     .line 912
-    const-string v1, "FEED_COMMENT"
+    const-string v1, "FC_MESSENGER_TEEN_FIRST_GEN_AI_USE_GUARDIAN_NOTIFICATION"
 
     .line 913
     .line 914
@@ -4095,11 +4321,11 @@
     move-result-object v0
 
     .line 920
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_TEEN_FIRST_GEN_AI_USE_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 921
     .line 922
-    const-string v1, "FLASH_INVITE"
+    const-string v1, "FC_MESSENGER_RECONSENT_GUARDIAN_NOTIFICATION"
 
     .line 923
     .line 924
@@ -4115,11 +4341,11 @@
     move-result-object v0
 
     .line 930
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FLASH_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_RECONSENT_GUARDIAN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 931
     .line 932
-    const-string v1, "FOLLOW_PROFILE"
+    const-string v1, "FC_MESSENGER_RECONSENT_TEEN_NOTIFICATION"
 
     .line 933
     .line 934
@@ -4135,11 +4361,11 @@
     move-result-object v0
 
     .line 940
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FOLLOW_PROFILE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_RECONSENT_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 941
     .line 942
-    const-string v1, "FRIEND"
+    const-string v1, "FC_MESSENGER_QUIET_TIME_CHANGED_TEEN_NOTIFICATION"
 
     .line 943
     .line 944
@@ -4155,11 +4381,11 @@
     move-result-object v0
 
     .line 950
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_QUIET_TIME_CHANGED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 951
     .line 952
-    const-string v1, "FRIEND_CONFIRMED"
+    const-string v1, "FC_MESSENGER_DAILY_TIME_LIMIT_CHANGED_TEEN_NOTIFICATION"
 
     .line 953
     .line 954
@@ -4175,11 +4401,11 @@
     move-result-object v0
 
     .line 960
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND_CONFIRMED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FC_MESSENGER_DAILY_TIME_LIMIT_CHANGED_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 961
     .line 962
-    const-string v1, "FRIEND_REQUEST_REMOVER"
+    const-string v1, "FEEDBACK_REACTION_GENERIC"
 
     .line 963
     .line 964
@@ -4195,11 +4421,11 @@
     move-result-object v0
 
     .line 970
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND_REQUEST_REMOVER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FEEDBACK_REACTION_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 971
     .line 972
-    const-string v1, "GIFT_RECIPIENT"
+    const-string v1, "FEED_COMMENT"
 
     .line 973
     .line 974
@@ -4215,11 +4441,11 @@
     move-result-object v0
 
     .line 980
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GIFT_RECIPIENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 981
     .line 982
-    const-string v1, "GEMSTONE_MESSAGE"
+    const-string v1, "FLASH_INVITE"
 
     .line 983
     .line 984
@@ -4235,11 +4461,11 @@
     move-result-object v0
 
     .line 990
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GEMSTONE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FLASH_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 991
     .line 992
-    const-string v1, "GEMSTONE_VIDEO_CALL"
+    const-string v1, "FOLLOW_PROFILE"
 
     .line 993
     .line 994
@@ -4255,11 +4481,11 @@
     move-result-object v0
 
     .line 1000
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GEMSTONE_VIDEO_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FOLLOW_PROFILE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1001
     .line 1002
-    const-string v1, "GENERIC_TINCAN_MESSAGE"
+    const-string v1, "FRIEND"
 
     .line 1003
     .line 1004
@@ -4275,11 +4501,11 @@
     move-result-object v0
 
     .line 1010
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GENERIC_TINCAN_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1011
     .line 1012
-    const-string v1, "GROUP_ACTIVITY"
+    const-string v1, "FRIEND_CONFIRMED"
 
     .line 1013
     .line 1014
@@ -4295,11 +4521,11 @@
     move-result-object v0
 
     .line 1020
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND_CONFIRMED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1021
     .line 1022
-    const-string v1, "GROUP_COMMENT"
+    const-string v1, "FRIEND_REQUEST_REMOVER"
 
     .line 1023
     .line 1024
@@ -4315,11 +4541,11 @@
     move-result-object v0
 
     .line 1030
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->FRIEND_REQUEST_REMOVER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1031
     .line 1032
-    const-string v1, "GROUP_COMMENT_REPLY"
+    const-string v1, "GIFT_RECIPIENT"
 
     .line 1033
     .line 1034
@@ -4335,11 +4561,11 @@
     move-result-object v0
 
     .line 1040
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GIFT_RECIPIENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1041
     .line 1042
-    const-string v1, "GROUP_COMMUNITY_AWARD_NOTIFICATION"
+    const-string v1, "GEMSTONE_MESSAGE"
 
     .line 1043
     .line 1044
@@ -4355,11 +4581,11 @@
     move-result-object v0
 
     .line 1050
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMUNITY_AWARD_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GEMSTONE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1051
     .line 1052
-    const-string v1, "GROUP_HIGHLIGHTS"
+    const-string v1, "GEMSTONE_VIDEO_CALL"
 
     .line 1053
     .line 1054
@@ -4375,11 +4601,11 @@
     move-result-object v0
 
     .line 1060
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GEMSTONE_VIDEO_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1061
     .line 1062
-    const-string v1, "GROUP_NF_HIGHLIGHTS"
+    const-string v1, "GENERIC_TINCAN_MESSAGE"
 
     .line 1063
     .line 1064
@@ -4395,11 +4621,11 @@
     move-result-object v0
 
     .line 1070
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_NF_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GENERIC_TINCAN_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1071
     .line 1072
-    const-string v1, "GROUP_POST_AWARD"
+    const-string v1, "GROUP_ACTIVITY"
 
     .line 1073
     .line 1074
@@ -4415,11 +4641,11 @@
     move-result-object v0
 
     .line 1080
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_POST_AWARD:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1081
     .line 1082
-    const-string v1, "GROUP_POST_MENTION"
+    const-string v1, "GROUP_COMMENT"
 
     .line 1083
     .line 1084
@@ -4435,11 +4661,11 @@
     move-result-object v0
 
     .line 1090
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_POST_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1091
     .line 1092
-    const-string v1, "HOTP_LOGIN_APPROVALS"
+    const-string v1, "GROUP_COMMENT_REPLY"
 
     .line 1093
     .line 1094
@@ -4455,11 +4681,11 @@
     move-result-object v0
 
     .line 1100
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->HOTP_LOGIN_APPROVALS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1101
     .line 1102
-    const-string v1, "INTERNAL"
+    const-string v1, "GROUP_COMMUNITY_AWARD_NOTIFICATION"
 
     .line 1103
     .line 1104
@@ -4475,11 +4701,11 @@
     move-result-object v0
 
     .line 1110
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->INTERNAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMUNITY_AWARD_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1111
     .line 1112
-    const-string v1, "IXC_MESSENGER_SUPPORT_INBOX"
+    const-string v1, "GROUP_HIGHLIGHTS"
 
     .line 1113
     .line 1114
@@ -4495,11 +4721,11 @@
     move-result-object v0
 
     .line 1120
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->IXC_MESSENGER_SUPPORT_INBOX:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1121
     .line 1122
-    const-string v1, "LA_PUSH_AUTHENTICATE"
+    const-string v1, "GROUP_NF_HIGHLIGHTS"
 
     .line 1123
     .line 1124
@@ -4515,11 +4741,11 @@
     move-result-object v0
 
     .line 1130
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LA_PUSH_AUTHENTICATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_NF_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1131
     .line 1132
-    const-string v1, "LIKE"
+    const-string v1, "GROUP_POST_AWARD"
 
     .line 1133
     .line 1134
@@ -4535,11 +4761,11 @@
     move-result-object v0
 
     .line 1140
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LIKE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_POST_AWARD:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1141
     .line 1142
-    const-string v1, "LIVE_VIDEO"
+    const-string v1, "GROUP_POST_MENTION"
 
     .line 1143
     .line 1144
@@ -4555,11 +4781,11 @@
     move-result-object v0
 
     .line 1150
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LIVE_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_POST_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1151
     .line 1152
-    const-string v1, "LIVE_VIDEO_EXPLICIT"
+    const-string v1, "HOTP_LOGIN_APPROVALS"
 
     .line 1153
     .line 1154
@@ -4575,11 +4801,11 @@
     move-result-object v0
 
     .line 1160
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LIVE_VIDEO_EXPLICIT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->HOTP_LOGIN_APPROVALS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1161
     .line 1162
-    const-string v1, "WATCH_FOLLOWER_VIDEO"
+    const-string v1, "INTERNAL"
 
     .line 1163
     .line 1164
@@ -4595,11 +4821,11 @@
     move-result-object v0
 
     .line 1170
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WATCH_FOLLOWER_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->INTERNAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1171
     .line 1172
-    const-string v1, "WATCH_FOLLOWER_VIDEO_EXPLICIT"
+    const-string v1, "IXC_MESSENGER_SUPPORT_INBOX"
 
     .line 1173
     .line 1174
@@ -4615,11 +4841,11 @@
     move-result-object v0
 
     .line 1180
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WATCH_FOLLOWER_VIDEO_EXPLICIT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->IXC_MESSENGER_SUPPORT_INBOX:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1181
     .line 1182
-    const-string v1, "LOCATION_SHARING_SILENT_PUSH"
+    const-string v1, "LA_PUSH_AUTHENTICATE"
 
     .line 1183
     .line 1184
@@ -4632,14 +4858,14 @@
     .line 1187
     .line 1188
     .line 1189
-    move-result-object v4
+    move-result-object v0
 
     .line 1190
-    sput-object v4, Lcom/facebook/notifications/constants/push/NotificationType;->LOCATION_SHARING_SILENT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LA_PUSH_AUTHENTICATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1191
     .line 1192
-    const-string v1, "LOGGED_OUT_BADGE"
+    const-string v1, "LIKE"
 
     .line 1193
     .line 1194
@@ -4655,11 +4881,11 @@
     move-result-object v0
 
     .line 1200
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_BADGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LIKE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1201
     .line 1202
-    const-string v1, "LOGGED_OUT_PUSH"
+    const-string v1, "LIVE_VIDEO"
 
     .line 1203
     .line 1204
@@ -4675,11 +4901,11 @@
     move-result-object v0
 
     .line 1210
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LIVE_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1211
     .line 1212
-    const-string v1, "LOGGED_OUT_PUSH_TRIGGER"
+    const-string v1, "LIVE_VIDEO_EXPLICIT"
 
     .line 1213
     .line 1214
@@ -4695,11 +4921,11 @@
     move-result-object v0
 
     .line 1220
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_PUSH_TRIGGER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LIVE_VIDEO_EXPLICIT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1221
     .line 1222
-    const-string v1, "LOGIN_APPROVALS_PUSH_AUTH"
+    const-string v1, "WATCH_FOLLOWER_VIDEO"
 
     .line 1223
     .line 1224
@@ -4715,11 +4941,11 @@
     move-result-object v0
 
     .line 1230
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LOGIN_APPROVALS_PUSH_AUTH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WATCH_FOLLOWER_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1231
     .line 1232
-    const-string v1, "MARKETING_MESSAGES_UNREAD_OPTIN_REMINDER"
+    const-string v1, "WATCH_FOLLOWER_VIDEO_EXPLICIT"
 
     .line 1233
     .line 1234
@@ -4735,11 +4961,11 @@
     move-result-object v0
 
     .line 1240
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MARKETING_MESSAGES_UNREAD_OPTIN_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WATCH_FOLLOWER_VIDEO_EXPLICIT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1241
     .line 1242
-    const-string v1, "MENTION"
+    const-string v1, "LOCATION_SHARING_SILENT_PUSH"
 
     .line 1243
     .line 1244
@@ -4752,14 +4978,14 @@
     .line 1247
     .line 1248
     .line 1249
-    move-result-object v0
+    move-result-object v5
 
     .line 1250
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v5, Lcom/facebook/notifications/constants/push/NotificationType;->LOCATION_SHARING_SILENT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1251
     .line 1252
-    const-string v1, "MENTIONS_COMMENT"
+    const-string v1, "LOGGED_OUT_BADGE"
 
     .line 1253
     .line 1254
@@ -4775,11 +5001,11 @@
     move-result-object v0
 
     .line 1260
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MENTIONS_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_BADGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1261
     .line 1262
-    const-string v1, "MESSAGE_COUNTS"
+    const-string v1, "LOGGED_OUT_PUSH"
 
     .line 1263
     .line 1264
@@ -4795,11 +5021,11 @@
     move-result-object v0
 
     .line 1270
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGE_COUNTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1271
     .line 1272
-    const-string v1, "MESSAGE_REQUEST"
+    const-string v1, "LOGGED_OUT_PUSH_TRIGGER"
 
     .line 1273
     .line 1274
@@ -4815,11 +5041,11 @@
     move-result-object v0
 
     .line 1280
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGE_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LOGGED_OUT_PUSH_TRIGGER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1281
     .line 1282
-    const-string v1, "MESSAGING_IN_BLUE_DIRECT_MESSAGE"
+    const-string v1, "LOGIN_APPROVALS_PUSH_AUTH"
 
     .line 1283
     .line 1284
@@ -4835,11 +5061,11 @@
     move-result-object v0
 
     .line 1290
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_DIRECT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->LOGIN_APPROVALS_PUSH_AUTH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1291
     .line 1292
-    const-string v1, "MESSAGING_IN_BLUE_EDIT_MESSAGE"
+    const-string v1, "MARKETING_MESSAGES_UNREAD_OPTIN_REMINDER"
 
     .line 1293
     .line 1294
@@ -4855,11 +5081,11 @@
     move-result-object v0
 
     .line 1300
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MARKETING_MESSAGES_UNREAD_OPTIN_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1301
     .line 1302
-    const-string v1, "MESSENGER_MONTAGE_REPLY"
+    const-string v1, "MENTION"
 
     .line 1303
     .line 1304
@@ -4875,11 +5101,11 @@
     move-result-object v0
 
     .line 1310
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1311
     .line 1312
-    const-string v1, "MESSAGING_IN_BLUE_SUBSEQUENT_MESSAGE"
+    const-string v1, "MENTIONS_COMMENT"
 
     .line 1313
     .line 1314
@@ -4895,11 +5121,11 @@
     move-result-object v0
 
     .line 1320
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_SUBSEQUENT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MENTIONS_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1321
     .line 1322
-    const-string v1, "MESSENGER_DIRECT_INVITE_MEMBERSHIP_REQUEST_APPROVAL_STATUS"
+    const-string v1, "MESSAGE_COUNTS"
 
     .line 1323
     .line 1324
@@ -4915,11 +5141,11 @@
     move-result-object v0
 
     .line 1330
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_DIRECT_INVITE_MEMBERSHIP_REQUEST_APPROVAL_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGE_COUNTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1331
     .line 1332
-    const-string v1, "MESSENGER_ENCRYPTED_BACKUPS_ONE_TIME_CODE"
+    const-string v1, "MESSAGE_REQUEST"
 
     .line 1333
     .line 1334
@@ -4935,11 +5161,11 @@
     move-result-object v0
 
     .line 1340
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ENCRYPTED_BACKUPS_ONE_TIME_CODE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGE_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1341
     .line 1342
-    const-string v1, "MESSENGER_EVENT_REMINDER"
+    const-string v1, "MESSAGING_IN_BLUE_DIRECT_MESSAGE"
 
     .line 1343
     .line 1344
@@ -4955,11 +5181,11 @@
     move-result-object v0
 
     .line 1350
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_EVENT_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_DIRECT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1351
     .line 1352
-    const-string v1, "MESSENGER_REFERRAL_EXPIRY_REMINDER"
+    const-string v1, "MESSAGING_IN_BLUE_EDIT_MESSAGE"
 
     .line 1353
     .line 1354
@@ -4975,11 +5201,11 @@
     move-result-object v0
 
     .line 1360
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REFERRAL_EXPIRY_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1361
     .line 1362
-    const-string v1, "MESSENGER_REMOVE_MESSAGE"
+    const-string v1, "MESSENGER_MONTAGE_REPLY"
 
     .line 1363
     .line 1364
@@ -4995,11 +5221,11 @@
     move-result-object v0
 
     .line 1370
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REMOVE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_REPLY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1371
     .line 1372
-    const-string v1, "MESSENGER_GROUP_JOIN_REQUEST"
+    const-string v1, "MESSAGING_IN_BLUE_SUBSEQUENT_MESSAGE"
 
     .line 1373
     .line 1374
@@ -5015,11 +5241,11 @@
     move-result-object v0
 
     .line 1380
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_GROUP_JOIN_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSAGING_IN_BLUE_SUBSEQUENT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1381
     .line 1382
-    const-string v1, "MESSENGER_GROUP_CALL_UPDATES"
+    const-string v1, "MESSENGER_DIRECT_INVITE_MEMBERSHIP_REQUEST_APPROVAL_STATUS"
 
     .line 1383
     .line 1384
@@ -5035,11 +5261,11 @@
     move-result-object v0
 
     .line 1390
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_GROUP_CALL_UPDATES:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_DIRECT_INVITE_MEMBERSHIP_REQUEST_APPROVAL_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1391
     .line 1392
-    const-string v1, "MESSENGER_KIDS_REMINDER"
+    const-string v1, "MESSENGER_ENCRYPTED_BACKUPS_ONE_TIME_CODE"
 
     .line 1393
     .line 1394
@@ -5055,11 +5281,11 @@
     move-result-object v0
 
     .line 1400
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_KIDS_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ENCRYPTED_BACKUPS_ONE_TIME_CODE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1401
     .line 1402
-    const-string v1, "MESSENGER_LIVING_ROOM_CREATE"
+    const-string v1, "MESSENGER_EVENT_REMINDER"
 
     .line 1403
     .line 1404
@@ -5075,11 +5301,11 @@
     move-result-object v0
 
     .line 1410
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_LIVING_ROOM_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_EVENT_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1411
     .line 1412
-    const-string v1, "MESSENGER_MESSAGE_REMINDER"
+    const-string v1, "MESSENGER_REFERRAL_EXPIRY_REMINDER"
 
     .line 1413
     .line 1414
@@ -5095,11 +5321,11 @@
     move-result-object v0
 
     .line 1420
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REFERRAL_EXPIRY_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1421
     .line 1422
-    const-string v1, "MESSENGER_MONTAGE_DAILY_DIGEST"
+    const-string v1, "MESSENGER_REMOVE_MESSAGE"
 
     .line 1423
     .line 1424
@@ -5115,11 +5341,11 @@
     move-result-object v0
 
     .line 1430
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_DAILY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REMOVE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1431
     .line 1432
-    const-string v1, "MESSENGER_MONTAGE_FIRST_MESSAGE"
+    const-string v1, "MESSENGER_GROUP_JOIN_REQUEST"
 
     .line 1433
     .line 1434
@@ -5135,11 +5361,11 @@
     move-result-object v0
 
     .line 1440
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_FIRST_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_GROUP_JOIN_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1441
     .line 1442
-    const-string v1, "MESSENGER_MONTAGE_FIRST_POST"
+    const-string v1, "MESSENGER_GROUP_CALL_UPDATES"
 
     .line 1443
     .line 1444
@@ -5155,11 +5381,11 @@
     move-result-object v0
 
     .line 1450
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_FIRST_POST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_GROUP_CALL_UPDATES:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1451
     .line 1452
-    const-string v1, "MESSENGER_MONTAGE_MESSAGE_EXPIRING"
+    const-string v1, "MESSENGER_KIDS_REMINDER"
 
     .line 1453
     .line 1454
@@ -5175,11 +5401,11 @@
     move-result-object v0
 
     .line 1460
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_MESSAGE_EXPIRING:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_KIDS_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1461
     .line 1462
-    const-string v1, "MESSENGER_MONTAGE_MESSAGE_VIEWING_STATUS"
+    const-string v1, "MESSENGER_LIVING_ROOM_CREATE"
 
     .line 1463
     .line 1464
@@ -5195,11 +5421,11 @@
     move-result-object v0
 
     .line 1470
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_MESSAGE_VIEWING_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_LIVING_ROOM_CREATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1471
     .line 1472
-    const-string v1, "MESSENGER_CHAT_ENCOURAGEMENT"
+    const-string v1, "MESSENGER_MESSAGE_REMINDER"
 
     .line 1473
     .line 1474
@@ -5215,11 +5441,11 @@
     move-result-object v0
 
     .line 1480
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_CHAT_ENCOURAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1481
     .line 1482
-    const-string v1, "MESSENGER_REACTIONS"
+    const-string v1, "MESSENGER_MONTAGE_DAILY_DIGEST"
 
     .line 1483
     .line 1484
@@ -5235,11 +5461,11 @@
     move-result-object v0
 
     .line 1490
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_DAILY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1491
     .line 1492
-    const-string v1, "MESSENGER_REMINDER"
+    const-string v1, "MESSENGER_MONTAGE_FIRST_MESSAGE"
 
     .line 1493
     .line 1494
@@ -5255,11 +5481,11 @@
     move-result-object v0
 
     .line 1500
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_FIRST_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1501
     .line 1502
-    const-string v1, "MESSENGER_ROOM_FRIEND_JOIN"
+    const-string v1, "MESSENGER_MONTAGE_FIRST_POST"
 
     .line 1503
     .line 1504
@@ -5275,11 +5501,11 @@
     move-result-object v0
 
     .line 1510
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOM_FRIEND_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_FIRST_POST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1511
     .line 1512
-    const-string v1, "MESSENGER_ROOM_INVITE"
+    const-string v1, "MESSENGER_MONTAGE_MESSAGE_EXPIRING"
 
     .line 1513
     .line 1514
@@ -5295,11 +5521,11 @@
     move-result-object v0
 
     .line 1520
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOM_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_MESSAGE_EXPIRING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1521
     .line 1522
-    const-string v1, "MESSENGER_STALE_PUSH"
+    const-string v1, "MESSENGER_MONTAGE_MESSAGE_VIEWING_STATUS"
 
     .line 1523
     .line 1524
@@ -5315,11 +5541,11 @@
     move-result-object v0
 
     .line 1530
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_STALE_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MONTAGE_MESSAGE_VIEWING_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1531
     .line 1532
-    const-string v1, "MESSENGER_STATUS_CHANGE"
+    const-string v1, "MESSENGER_CHAT_ENCOURAGEMENT"
 
     .line 1533
     .line 1534
@@ -5335,11 +5561,11 @@
     move-result-object v0
 
     .line 1540
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_STATUS_CHANGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_CHAT_ENCOURAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1541
     .line 1542
-    const-string v1, "MESSENGER_TRY_AR_EFFECT"
+    const-string v1, "MESSENGER_REACTIONS"
 
     .line 1543
     .line 1544
@@ -5355,11 +5581,11 @@
     move-result-object v0
 
     .line 1550
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_TRY_AR_EFFECT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1551
     .line 1552
-    const-string v1, "MESSENGER_COMMUNITY_CHAT"
+    const-string v1, "MESSENGER_NOTE_UPDATE"
 
     .line 1553
     .line 1554
@@ -5375,11 +5601,11 @@
     move-result-object v0
 
     .line 1560
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_NOTE_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1561
     .line 1562
-    const-string v1, "MESSENGER_COMMUNITY_CHAT_MENTIONS_AND_REPLIES"
+    const-string v1, "MESSENGER_MEMORIES"
 
     .line 1563
     .line 1564
@@ -5395,11 +5621,11 @@
     move-result-object v0
 
     .line 1570
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_MENTIONS_AND_REPLIES:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_MEMORIES:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1571
     .line 1572
-    const-string v1, "MESSENGER_COMMUNITY_CHAT_LEVEL_PARTICIPATION_CONTROL_APPROVAL"
+    const-string v1, "MESSENGER_REMINDER"
 
     .line 1573
     .line 1574
@@ -5415,11 +5641,11 @@
     move-result-object v0
 
     .line 1580
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_LEVEL_PARTICIPATION_CONTROL_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1581
     .line 1582
-    const-string v1, "MESSENGER_COMMUNITY_LEVEL_PARTICIPATION_CONTROL_APPROVAL"
+    const-string v1, "MESSENGER_ROOM_FRIEND_JOIN"
 
     .line 1583
     .line 1584
@@ -5435,11 +5661,11 @@
     move-result-object v0
 
     .line 1590
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_PARTICIPATION_CONTROL_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOM_FRIEND_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1591
     .line 1592
-    const-string v1, "MESSENGER_COMMUNITY_LEVEL_JOIN_REQUEST_APPROVAL_STATUS"
+    const-string v1, "MESSENGER_ROOM_INVITE"
 
     .line 1593
     .line 1594
@@ -5455,11 +5681,11 @@
     move-result-object v0
 
     .line 1600
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_JOIN_REQUEST_APPROVAL_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOM_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1601
     .line 1602
-    const-string v1, "MESSENGER_COMMUNITY_REACTION"
+    const-string v1, "MESSENGER_STALE_PUSH"
 
     .line 1603
     .line 1604
@@ -5475,11 +5701,11 @@
     move-result-object v0
 
     .line 1610
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_STALE_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1611
     .line 1612
-    const-string v1, "MESSENGER_COMMUNITY_ADMIN_DIRECT_INVITE_GENERIC"
+    const-string v1, "MESSENGER_STATUS_CHANGE"
 
     .line 1613
     .line 1614
@@ -5495,11 +5721,11 @@
     move-result-object v0
 
     .line 1620
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_ADMIN_DIRECT_INVITE_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_STATUS_CHANGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1621
     .line 1622
-    const-string v1, "MESSENGER_COMMUNITY_CHANNEL_CREATION"
+    const-string v1, "MESSENGER_TRY_AR_EFFECT"
 
     .line 1623
     .line 1624
@@ -5515,11 +5741,11 @@
     move-result-object v0
 
     .line 1630
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHANNEL_CREATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_TRY_AR_EFFECT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1631
     .line 1632
-    const-string v1, "MESSENGER_COMMUNITY_TRENDING"
+    const-string v1, "MESSENGER_COMMUNITY_CHAT"
 
     .line 1633
     .line 1634
@@ -5535,11 +5761,11 @@
     move-result-object v0
 
     .line 1640
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_TRENDING:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1641
     .line 1642
-    const-string v1, "MESSENGER_COMMUNITY_DEFAULT_GENERAL_CHAT"
+    const-string v1, "MESSENGER_COMMUNITY_CHAT_MENTIONS_AND_REPLIES"
 
     .line 1643
     .line 1644
@@ -5555,11 +5781,11 @@
     move-result-object v0
 
     .line 1650
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DEFAULT_GENERAL_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_MENTIONS_AND_REPLIES:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1651
     .line 1652
-    const-string v1, "MESSENGER_COMMUNITY_DEFAULT_NOTIFICATION"
+    const-string v1, "MESSENGER_COMMUNITY_CHAT_LEVEL_PARTICIPATION_CONTROL_APPROVAL"
 
     .line 1653
     .line 1654
@@ -5575,11 +5801,11 @@
     move-result-object v0
 
     .line 1660
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DEFAULT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_LEVEL_PARTICIPATION_CONTROL_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1661
     .line 1662
-    const-string v1, "MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE"
+    const-string v1, "MESSENGER_COMMUNITY_LEVEL_PARTICIPATION_CONTROL_APPROVAL"
 
     .line 1663
     .line 1664
@@ -5595,11 +5821,11 @@
     move-result-object v0
 
     .line 1670
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_PARTICIPATION_CONTROL_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1671
     .line 1672
-    const-string v1, "MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE_V2"
+    const-string v1, "MESSENGER_COMMUNITY_LEVEL_JOIN_REQUEST_APPROVAL_STATUS"
 
     .line 1673
     .line 1674
@@ -5615,11 +5841,11 @@
     move-result-object v0
 
     .line 1680
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE_V2:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_JOIN_REQUEST_APPROVAL_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1681
     .line 1682
-    const-string v1, "MESSENGER_COMMUNITY_LEVEL_ENGAGEMENT"
+    const-string v1, "MESSENGER_COMMUNITY_REACTION"
 
     .line 1683
     .line 1684
@@ -5635,11 +5861,11 @@
     move-result-object v0
 
     .line 1690
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_ENGAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1691
     .line 1692
-    const-string v1, "MESSENGER_COMMUNITY_MEMBER_CHAT_APPROVED"
+    const-string v1, "MESSENGER_COMMUNITY_ADMIN_DIRECT_INVITE_GENERIC"
 
     .line 1693
     .line 1694
@@ -5655,11 +5881,11 @@
     move-result-object v0
 
     .line 1700
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_MEMBER_CHAT_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_ADMIN_DIRECT_INVITE_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1701
     .line 1702
-    const-string v1, "MESSENGER_COMMUNITY_BROADCAST_CHAT_FIRST_MESSAGE"
+    const-string v1, "MESSENGER_COMMUNITY_CHANNEL_CREATION"
 
     .line 1703
     .line 1704
@@ -5675,11 +5901,11 @@
     move-result-object v0
 
     .line 1710
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_BROADCAST_CHAT_FIRST_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHANNEL_CREATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1711
     .line 1712
-    const-string v1, "MESSENGER_COMMUNITY_EPHEMERAL_STATUS_BADGE_EARNED"
+    const-string v1, "MESSENGER_COMMUNITY_TRENDING"
 
     .line 1713
     .line 1714
@@ -5695,11 +5921,11 @@
     move-result-object v0
 
     .line 1720
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_EPHEMERAL_STATUS_BADGE_EARNED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_TRENDING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1721
     .line 1722
-    const-string v1, "MESSENGER_COMMUNITY_MEMBER_REQUEST"
+    const-string v1, "MESSENGER_COMMUNITY_DEFAULT_GENERAL_CHAT"
 
     .line 1723
     .line 1724
@@ -5715,11 +5941,11 @@
     move-result-object v0
 
     .line 1730
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_MEMBER_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DEFAULT_GENERAL_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1731
     .line 1732
-    const-string v1, "MESSENGER_COMMUNITY_INCOMPLETE_ADMOD_SUGGESTED_ACTIONS"
+    const-string v1, "MESSENGER_COMMUNITY_DEFAULT_NOTIFICATION"
 
     .line 1733
     .line 1734
@@ -5735,11 +5961,11 @@
     move-result-object v0
 
     .line 1740
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_INCOMPLETE_ADMOD_SUGGESTED_ACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DEFAULT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1741
     .line 1742
-    const-string v1, "MESSENGER_COMMUNITY_CHAT_HOST_INVITE"
+    const-string v1, "MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE"
 
     .line 1743
     .line 1744
@@ -5755,11 +5981,11 @@
     move-result-object v0
 
     .line 1750
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_HOST_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1751
     .line 1752
-    const-string v1, "MESSENGER_COMMUNITY_DIGEST"
+    const-string v1, "MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE_V2"
 
     .line 1753
     .line 1754
@@ -5775,11 +6001,11 @@
     move-result-object v0
 
     .line 1760
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_DIRECT_INVITE_V2:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1761
     .line 1762
-    const-string v1, "MESSENGER_COMMUNITY_PAGE_CHAT"
+    const-string v1, "MESSENGER_COMMUNITY_LEVEL_ENGAGEMENT"
 
     .line 1763
     .line 1764
@@ -5795,11 +6021,11 @@
     move-result-object v0
 
     .line 1770
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_PAGE_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_LEVEL_ENGAGEMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1771
     .line 1772
-    const-string v1, "MESSENGER_COMMUNITY_RECALL_MESSAGE"
+    const-string v1, "MESSENGER_COMMUNITY_MEMBER_CHAT_APPROVED"
 
     .line 1773
     .line 1774
@@ -5815,11 +6041,11 @@
     move-result-object v0
 
     .line 1780
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_RECALL_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_MEMBER_CHAT_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1781
     .line 1782
-    const-string v1, "MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED"
+    const-string v1, "MESSENGER_COMMUNITY_BROADCAST_CHAT_FIRST_MESSAGE"
 
     .line 1783
     .line 1784
@@ -5835,11 +6061,11 @@
     move-result-object v0
 
     .line 1790
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_BROADCAST_CHAT_FIRST_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1791
     .line 1792
-    const-string v1, "MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_APPROVED"
+    const-string v1, "MESSENGER_COMMUNITY_EPHEMERAL_STATUS_BADGE_EARNED"
 
     .line 1793
     .line 1794
@@ -5855,11 +6081,11 @@
     move-result-object v0
 
     .line 1800
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_EPHEMERAL_STATUS_BADGE_EARNED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1801
     .line 1802
-    const-string v1, "MESSENGER_COMMUNITY_EDIT_MESSAGE"
+    const-string v1, "MESSENGER_COMMUNITY_MEMBER_REQUEST"
 
     .line 1803
     .line 1804
@@ -5875,11 +6101,11 @@
     move-result-object v0
 
     .line 1810
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_MEMBER_REQUEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1811
     .line 1812
-    const-string v1, "MESSENGER_COWATCH_VIDEO_STARTED"
+    const-string v1, "MESSENGER_COMMUNITY_INCOMPLETE_ADMOD_SUGGESTED_ACTIONS"
 
     .line 1813
     .line 1814
@@ -5895,11 +6121,11 @@
     move-result-object v0
 
     .line 1820
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COWATCH_VIDEO_STARTED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_INCOMPLETE_ADMOD_SUGGESTED_ACTIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1821
     .line 1822
-    const-string v1, "MESSENGER_DEEP_SLEEP_MODE"
+    const-string v1, "MESSENGER_COMMUNITY_CHAT_HOST_INVITE"
 
     .line 1823
     .line 1824
@@ -5915,11 +6141,11 @@
     move-result-object v0
 
     .line 1830
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_DEEP_SLEEP_MODE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_HOST_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1831
     .line 1832
-    const-string v1, "PUBLIC_DISCOVERABLE_BROADCAST_CHAT_NOTIFICATION"
+    const-string v1, "MESSENGER_COMMUNITY_DIGEST"
 
     .line 1833
     .line 1834
@@ -5935,11 +6161,11 @@
     move-result-object v0
 
     .line 1840
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PUBLIC_DISCOVERABLE_BROADCAST_CHAT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_DIGEST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1841
     .line 1842
-    const-string v1, "MK_BACKGROUND_ACTION_TRIGGER"
+    const-string v1, "MESSENGER_COMMUNITY_PAGE_CHAT"
 
     .line 1843
     .line 1844
@@ -5955,11 +6181,11 @@
     move-result-object v0
 
     .line 1850
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MK_BACKGROUND_ACTION_TRIGGER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_PAGE_CHAT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1851
     .line 1852
-    const-string v1, "MOBILE_ZERO_FREE_FACEBOOK_LAUNCH"
+    const-string v1, "MESSENGER_COMMUNITY_RECALL_MESSAGE"
 
     .line 1853
     .line 1854
@@ -5975,11 +6201,11 @@
     move-result-object v0
 
     .line 1860
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MOBILE_ZERO_FREE_FACEBOOK_LAUNCH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_RECALL_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1861
     .line 1862
-    const-string v1, "MONTAGE_MESSAGE_REACTION"
+    const-string v1, "MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED"
 
     .line 1863
     .line 1864
@@ -5995,11 +6221,11 @@
     move-result-object v0
 
     .line 1870
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MONTAGE_MESSAGE_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1871
     .line 1872
-    const-string v1, "MSG"
+    const-string v1, "MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_APPROVED"
 
     .line 1873
     .line 1874
@@ -6015,11 +6241,11 @@
     move-result-object v0
 
     .line 1880
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSG:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_APPROVED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1881
     .line 1882
-    const-string v1, "MSGR_AI_AGENTS_USER_OFF_WAITLIST"
+    const-string v1, "MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED_SINGLE"
 
     .line 1883
     .line 1884
@@ -6035,11 +6261,11 @@
     move-result-object v0
 
     .line 1890
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_AI_AGENTS_USER_OFF_WAITLIST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED_SINGLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1891
     .line 1892
-    const-string v1, "MSGR_SHARED_ALBUM_CREATION"
+    const-string v1, "MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED_BATCHED"
 
     .line 1893
     .line 1894
@@ -6055,11 +6281,11 @@
     move-result-object v0
 
     .line 1900
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_CREATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_CHAT_JOIN_REQUEST_ADDED_BATCHED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1901
     .line 1902
-    const-string v1, "MSGR_SHARED_ALBUM_ADDITION"
+    const-string v1, "MESSENGER_COMMUNITY_EDIT_MESSAGE"
 
     .line 1903
     .line 1904
@@ -6075,11 +6301,11 @@
     move-result-object v0
 
     .line 1910
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_ADDITION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COMMUNITY_EDIT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1911
     .line 1912
-    const-string v1, "MSGR_SHARED_ALBUM_DELETION"
+    const-string v1, "MESSENGER_COWATCH_VIDEO_STARTED"
 
     .line 1913
     .line 1914
@@ -6095,11 +6321,11 @@
     move-result-object v0
 
     .line 1920
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_DELETION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_COWATCH_VIDEO_STARTED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1921
     .line 1922
-    const-string v1, "MSGR_SHARED_ALBUM_REMOVAL"
+    const-string v1, "MESSENGER_DEEP_SLEEP_MODE"
 
     .line 1923
     .line 1924
@@ -6115,11 +6341,11 @@
     move-result-object v0
 
     .line 1930
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_REMOVAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_DEEP_SLEEP_MODE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1931
     .line 1932
-    const-string v1, "MSGR_SHARED_ALBUM_REACTION"
+    const-string v1, "PUBLIC_DISCOVERABLE_BROADCAST_CHAT_NOTIFICATION"
 
     .line 1933
     .line 1934
@@ -6135,11 +6361,11 @@
     move-result-object v0
 
     .line 1940
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PUBLIC_DISCOVERABLE_BROADCAST_CHAT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1941
     .line 1942
-    const-string v1, "MSGR_BC_FIRST_MESSAGE_REMINDER"
+    const-string v1, "MK_BACKGROUND_ACTION_TRIGGER"
 
     .line 1943
     .line 1944
@@ -6155,11 +6381,11 @@
     move-result-object v0
 
     .line 1950
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_BC_FIRST_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MK_BACKGROUND_ACTION_TRIGGER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1951
     .line 1952
-    const-string v1, "MSGR_CM_AND_CHANNEL_INVITE_LINK_JOIN"
+    const-string v1, "MOBILE_ZERO_FREE_FACEBOOK_LAUNCH"
 
     .line 1953
     .line 1954
@@ -6175,11 +6401,11 @@
     move-result-object v0
 
     .line 1960
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_CM_AND_CHANNEL_INVITE_LINK_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MOBILE_ZERO_FREE_FACEBOOK_LAUNCH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1961
     .line 1962
-    const-string v1, "MSGR_COMMUNITY_MEMBER_CHAT_SUGGESTIONS_NOTIF"
+    const-string v1, "MONTAGE_MESSAGE_REACTION"
 
     .line 1963
     .line 1964
@@ -6195,11 +6421,11 @@
     move-result-object v0
 
     .line 1970
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_COMMUNITY_MEMBER_CHAT_SUGGESTIONS_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MONTAGE_MESSAGE_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1971
     .line 1972
-    const-string v1, "MSGR_PUBLIC_CHATS_DIRECT_INVITE"
+    const-string v1, "MSG"
 
     .line 1973
     .line 1974
@@ -6215,11 +6441,11 @@
     move-result-object v0
 
     .line 1980
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_PUBLIC_CHATS_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSG:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1981
     .line 1982
-    const-string v1, "MSNGR_AFS_SUBSCRIPTION_CANCELED_DEVICE_SETTINGS"
+    const-string v1, "MSGR_AI_AGENTS_USER_OFF_WAITLIST"
 
     .line 1983
     .line 1984
@@ -6235,11 +6461,11 @@
     move-result-object v0
 
     .line 1990
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_SUBSCRIPTION_CANCELED_DEVICE_SETTINGS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_AI_AGENTS_USER_OFF_WAITLIST:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 1991
     .line 1992
-    const-string v1, "MSNGR_AFS_LINKING_BOTH_SUBSCRIBED"
+    const-string v1, "MSGR_SHARED_ALBUM_CREATION"
 
     .line 1993
     .line 1994
@@ -6255,11 +6481,11 @@
     move-result-object v0
 
     .line 2000
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_LINKING_BOTH_SUBSCRIBED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_CREATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2001
     .line 2002
-    const-string v1, "MSNGR_AFS_CANCELATION_INCOMPLETE"
+    const-string v1, "MSGR_SHARED_ALBUM_ADDITION"
 
     .line 2003
     .line 2004
@@ -6275,11 +6501,11 @@
     move-result-object v0
 
     .line 2010
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_CANCELATION_INCOMPLETE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_ADDITION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2011
     .line 2012
-    const-string v1, "MSNGR_AFS_YOUTH_SHOULD_CANCEL_SUBSCRIPTION"
+    const-string v1, "MSGR_SHARED_ALBUM_DELETION"
 
     .line 2013
     .line 2014
@@ -6295,11 +6521,11 @@
     move-result-object v0
 
     .line 2020
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_YOUTH_SHOULD_CANCEL_SUBSCRIPTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_DELETION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2021
     .line 2022
-    const-string v1, "NEAR_SAVED_PLACE"
+    const-string v1, "MSGR_SHARED_ALBUM_REMOVAL"
 
     .line 2023
     .line 2024
@@ -6315,11 +6541,11 @@
     move-result-object v0
 
     .line 2030
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NEAR_SAVED_PLACE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_REMOVAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2031
     .line 2032
-    const-string v1, "NEKO_INSTALL_REMINDER"
+    const-string v1, "MSGR_SHARED_ALBUM_REACTION"
 
     .line 2033
     .line 2034
@@ -6335,11 +6561,11 @@
     move-result-object v0
 
     .line 2040
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NEKO_INSTALL_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_SHARED_ALBUM_REACTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2041
     .line 2042
-    const-string v1, "NF_CHECKIN_STORY"
+    const-string v1, "MSGR_BC_FIRST_MESSAGE_REMINDER"
 
     .line 2043
     .line 2044
@@ -6355,11 +6581,11 @@
     move-result-object v0
 
     .line 2050
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_CHECKIN_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_BC_FIRST_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2051
     .line 2052
-    const-string v1, "NF_COMMENT_STORY"
+    const-string v1, "MSGR_BROADCAST_CHANNELS_MESSAGE_RECALL_NOTIFICATION"
 
     .line 2053
     .line 2054
@@ -6375,11 +6601,11 @@
     move-result-object v0
 
     .line 2060
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_COMMENT_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_BROADCAST_CHANNELS_MESSAGE_RECALL_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2061
     .line 2062
-    const-string v1, "NF_NOTE_STORY"
+    const-string v1, "MSGR_CM_AND_CHANNEL_INVITE_LINK_JOIN"
 
     .line 2063
     .line 2064
@@ -6395,11 +6621,11 @@
     move-result-object v0
 
     .line 2070
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_NOTE_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_CM_AND_CHANNEL_INVITE_LINK_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2071
     .line 2072
-    const-string v1, "NF_PHOTO_ALBUM_STORY"
+    const-string v1, "MSGR_COMMUNITY_MEMBER_CHAT_SUGGESTIONS_NOTIF"
 
     .line 2073
     .line 2074
@@ -6415,11 +6641,11 @@
     move-result-object v0
 
     .line 2080
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_PHOTO_ALBUM_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_COMMUNITY_MEMBER_CHAT_SUGGESTIONS_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2081
     .line 2082
-    const-string v1, "NF_PHOTO_STORY"
+    const-string v1, "MSGR_PUBLIC_CHATS_DIRECT_INVITE"
 
     .line 2083
     .line 2084
@@ -6435,11 +6661,11 @@
     move-result-object v0
 
     .line 2090
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_PHOTO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_PUBLIC_CHATS_DIRECT_INVITE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2091
     .line 2092
-    const-string v1, "NF_SHARE_STORY"
+    const-string v1, "MSNGR_AFS_SUBSCRIPTION_CANCELED_DEVICE_SETTINGS"
 
     .line 2093
     .line 2094
@@ -6455,11 +6681,11 @@
     move-result-object v0
 
     .line 2100
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_SHARE_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_SUBSCRIPTION_CANCELED_DEVICE_SETTINGS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2101
     .line 2102
-    const-string v1, "NF_STATUS_STORY"
+    const-string v1, "MSNGR_AFS_LINKING_BOTH_SUBSCRIBED"
 
     .line 2103
     .line 2104
@@ -6475,11 +6701,11 @@
     move-result-object v0
 
     .line 2110
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_STATUS_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_LINKING_BOTH_SUBSCRIBED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2111
     .line 2112
-    const-string v1, "NF_VIDEO_STORY"
+    const-string v1, "MSNGR_AFS_CANCELATION_INCOMPLETE"
 
     .line 2113
     .line 2114
@@ -6495,11 +6721,11 @@
     move-result-object v0
 
     .line 2120
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_VIDEO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_CANCELATION_INCOMPLETE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2121
     .line 2122
-    const-string v1, "NOW_UPDATE"
+    const-string v1, "MSNGR_AFS_YOUTH_SHOULD_CANCEL_SUBSCRIPTION"
 
     .line 2123
     .line 2124
@@ -6515,11 +6741,11 @@
     move-result-object v0
 
     .line 2130
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NOW_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_YOUTH_SHOULD_CANCEL_SUBSCRIPTION:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2131
     .line 2132
-    const-string v1, "N4M_TXN_P2P_UPDATE"
+    const-string v1, "MSNGR_AFS_UNLINKING_DEFERRED_DOWNGRADE_NEXT_BILLING_CYCLE"
 
     .line 2133
     .line 2134
@@ -6535,11 +6761,11 @@
     move-result-object v0
 
     .line 2140
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->N4M_TXN_P2P_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_UNLINKING_DEFERRED_DOWNGRADE_NEXT_BILLING_CYCLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2141
     .line 2142
-    const-string v1, "OFFSITE_EMAIL_NEW_MESSAGE"
+    const-string v1, "MSNGR_AFS_LINKING_MULTIPLE_SUBSCRIPTION_DEFERRED_DOWNGRADE_NEXT_BILLING_CYCLE"
 
     .line 2143
     .line 2144
@@ -6555,11 +6781,11 @@
     move-result-object v0
 
     .line 2150
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->OFFSITE_EMAIL_NEW_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_LINKING_MULTIPLE_SUBSCRIPTION_DEFERRED_DOWNGRADE_NEXT_BILLING_CYCLE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2151
     .line 2152
-    const-string v1, "ONTHISDAY"
+    const-string v1, "MSNGR_AFS_LINKING_MULTIPLE_SUBSCRIPTION_DEFERRED_DOWNGRADE"
 
     .line 2153
     .line 2154
@@ -6575,11 +6801,11 @@
     move-result-object v0
 
     .line 2160
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ONTHISDAY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_LINKING_MULTIPLE_SUBSCRIPTION_DEFERRED_DOWNGRADE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2161
     .line 2162
-    const-string v1, "ORCA_FRIEND_MSG"
+    const-string v1, "MSNGR_AFS_STANDARD_UNLINKING"
 
     .line 2163
     .line 2164
@@ -6595,11 +6821,11 @@
     move-result-object v0
 
     .line 2170
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_FRIEND_MSG:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_STANDARD_UNLINKING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2171
     .line 2172
-    const-string v1, "ORCA_MESSAGE"
+    const-string v1, "MSNGR_AFS_MULTIPLE_SUBSCRIPTION_VARIABLE_PRICING"
 
     .line 2173
     .line 2174
@@ -6615,11 +6841,11 @@
     move-result-object v0
 
     .line 2180
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_MULTIPLE_SUBSCRIPTION_VARIABLE_PRICING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2181
     .line 2182
-    const-string v1, "ORCA_THREAD_READ"
+    const-string v1, "MSNGR_AFS_UPGRADE_DEVICE_SETTING"
 
     .line 2183
     .line 2184
@@ -6635,11 +6861,11 @@
     move-result-object v0
 
     .line 2190
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_THREAD_READ:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSNGR_AFS_UPGRADE_DEVICE_SETTING:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2191
     .line 2192
-    const-string v1, "P2P_PAYMENT"
+    const-string v1, "NEAR_SAVED_PLACE"
 
     .line 2193
     .line 2194
@@ -6655,11 +6881,11 @@
     move-result-object v0
 
     .line 2200
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->P2P_PAYMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NEAR_SAVED_PLACE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2201
     .line 2202
-    const-string v1, "PAGE_ADMIN_INCOMING_CALL"
+    const-string v1, "NEKO_INSTALL_REMINDER"
 
     .line 2203
     .line 2204
@@ -6675,11 +6901,11 @@
     move-result-object v0
 
     .line 2210
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_ADMIN_INCOMING_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NEKO_INSTALL_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2211
     .line 2212
-    const-string v1, "PAGE_FEED_COMMENT"
+    const-string v1, "NF_CHECKIN_STORY"
 
     .line 2213
     .line 2214
@@ -6695,11 +6921,11 @@
     move-result-object v0
 
     .line 2220
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_CHECKIN_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2221
     .line 2222
-    const-string v1, "PAGE_HIGHLIGHTS"
+    const-string v1, "NF_COMMENT_STORY"
 
     .line 2223
     .line 2224
@@ -6715,11 +6941,11 @@
     move-result-object v0
 
     .line 2230
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_COMMENT_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2231
     .line 2232
-    const-string v1, "PAGES_INSTAGRAM_DIRECT_MESSAGE_ADMIN_ASSIGNMENT"
+    const-string v1, "NF_NOTE_STORY"
 
     .line 2233
     .line 2234
@@ -6735,11 +6961,11 @@
     move-result-object v0
 
     .line 2240
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGES_INSTAGRAM_DIRECT_MESSAGE_ADMIN_ASSIGNMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_NOTE_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2241
     .line 2242
-    const-string v1, "PAGE_INSTAGRAM_DIRECT_MESSAGE"
+    const-string v1, "NF_PHOTO_ALBUM_STORY"
 
     .line 2243
     .line 2244
@@ -6755,11 +6981,11 @@
     move-result-object v0
 
     .line 2250
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_INSTAGRAM_DIRECT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_PHOTO_ALBUM_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2251
     .line 2252
-    const-string v1, "PAGE_MESSAGE"
+    const-string v1, "NF_PHOTO_STORY"
 
     .line 2253
     .line 2254
@@ -6775,11 +7001,11 @@
     move-result-object v0
 
     .line 2260
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_PHOTO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2261
     .line 2262
-    const-string v1, "PAGE_MESSAGE_ADMIN_ASSIGNMENT"
+    const-string v1, "NF_SHARE_STORY"
 
     .line 2263
     .line 2264
@@ -6795,11 +7021,11 @@
     move-result-object v0
 
     .line 2270
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_ADMIN_ASSIGNMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_SHARE_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2271
     .line 2272
-    const-string v1, "PAGE_MESSAGE_REMINDER"
+    const-string v1, "NF_STATUS_STORY"
 
     .line 2273
     .line 2274
@@ -6815,11 +7041,11 @@
     move-result-object v0
 
     .line 2280
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_STATUS_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2281
     .line 2282
-    const-string v1, "PAGE_MESSAGE_AGGREGATED_REMINDER"
+    const-string v1, "NF_VIDEO_STORY"
 
     .line 2283
     .line 2284
@@ -6835,11 +7061,11 @@
     move-result-object v0
 
     .line 2290
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_AGGREGATED_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NF_VIDEO_STORY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2291
     .line 2292
-    const-string v1, "PAGE_MISSED_CALL"
+    const-string v1, "NOW_UPDATE"
 
     .line 2293
     .line 2294
@@ -6855,11 +7081,11 @@
     move-result-object v0
 
     .line 2300
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MISSED_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->NOW_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2301
     .line 2302
-    const-string v1, "PAGE_USER_ACTIVITY"
+    const-string v1, "N4M_TXN_P2P_UPDATE"
 
     .line 2303
     .line 2304
@@ -6875,11 +7101,11 @@
     move-result-object v0
 
     .line 2310
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_USER_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->N4M_TXN_P2P_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2311
     .line 2312
-    const-string v1, "PAGE_WALL"
+    const-string v1, "ONTHISDAY"
 
     .line 2313
     .line 2314
@@ -6895,11 +7121,11 @@
     move-result-object v0
 
     .line 2320
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_WALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ONTHISDAY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2321
     .line 2322
-    const-string v1, "PAGE_WHATS_APP_MESSAGE"
+    const-string v1, "ORCA_FRIEND_MSG"
 
     .line 2323
     .line 2324
@@ -6915,11 +7141,11 @@
     move-result-object v0
 
     .line 2330
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_WHATS_APP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_FRIEND_MSG:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2331
     .line 2332
-    const-string v1, "PAYMENTS_BANNER"
+    const-string v1, "ORCA_MESSAGE"
 
     .line 2333
     .line 2334
@@ -6932,14 +7158,14 @@
     .line 2337
     .line 2338
     .line 2339
-    move-result-object v3
+    move-result-object v0
 
     .line 2340
-    sput-object v3, Lcom/facebook/notifications/constants/push/NotificationType;->PAYMENTS_BANNER:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2341
     .line 2342
-    const-string v1, "PHOTO_COMMENT"
+    const-string v1, "ORCA_THREAD_READ"
 
     .line 2343
     .line 2344
@@ -6955,11 +7181,11 @@
     move-result-object v0
 
     .line 2350
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PHOTO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ORCA_THREAD_READ:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2351
     .line 2352
-    const-string v1, "PHOTO_ALBUM_COMMENT"
+    const-string v1, "P2P_PAYMENT"
 
     .line 2353
     .line 2354
@@ -6975,11 +7201,11 @@
     move-result-object v0
 
     .line 2360
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PHOTO_ALBUM_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->P2P_PAYMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2361
     .line 2362
-    const-string v1, "PLACE_FEED_NEARBY"
+    const-string v1, "PAGE_ADMIN_INCOMING_CALL"
 
     .line 2363
     .line 2364
@@ -6995,11 +7221,11 @@
     move-result-object v0
 
     .line 2370
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PLACE_FEED_NEARBY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_ADMIN_INCOMING_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2371
     .line 2372
-    const-string v1, "PLAN_USER_INVITED"
+    const-string v1, "PAGE_FEED_COMMENT"
 
     .line 2373
     .line 2374
@@ -7015,11 +7241,11 @@
     move-result-object v0
 
     .line 2380
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PLAN_USER_INVITED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_FEED_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2381
     .line 2382
-    const-string v1, "PLATFORM_LOGIN_APPROVAL"
+    const-string v1, "PAGE_HIGHLIGHTS"
 
     .line 2383
     .line 2384
@@ -7035,11 +7261,11 @@
     move-result-object v0
 
     .line 2390
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PLATFORM_LOGIN_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_HIGHLIGHTS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2391
     .line 2392
-    const-string v1, "POST_FAILED"
+    const-string v1, "PAGES_INSTAGRAM_DIRECT_MESSAGE_ADMIN_ASSIGNMENT"
 
     .line 2393
     .line 2394
@@ -7055,11 +7281,11 @@
     move-result-object v0
 
     .line 2400
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->POST_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGES_INSTAGRAM_DIRECT_MESSAGE_ADMIN_ASSIGNMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2401
     .line 2402
-    const-string v1, "PRE_REG_PUSH"
+    const-string v1, "PAGE_INSTAGRAM_DIRECT_MESSAGE"
 
     .line 2403
     .line 2404
@@ -7075,11 +7301,11 @@
     move-result-object v0
 
     .line 2410
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PRE_REG_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_INSTAGRAM_DIRECT_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2411
     .line 2412
-    const-string v1, "PROFILE_PLUS_MESSAGE"
+    const-string v1, "PAGE_MESSAGE"
 
     .line 2413
     .line 2414
@@ -7095,11 +7321,11 @@
     move-result-object v0
 
     .line 2420
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PROFILE_PLUS_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2421
     .line 2422
-    const-string v1, "PUBLIC_CHANNELS_NEW_CHANNEL_NOTIF"
+    const-string v1, "PAGE_MESSAGE_ADMIN_ASSIGNMENT"
 
     .line 2423
     .line 2424
@@ -7115,11 +7341,11 @@
     move-result-object v0
 
     .line 2430
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PUBLIC_CHANNELS_NEW_CHANNEL_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_ADMIN_ASSIGNMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2431
     .line 2432
-    const-string v1, "PUSH_REACHABILITY_CHECK"
+    const-string v1, "PAGE_MESSAGE_REMINDER"
 
     .line 2433
     .line 2434
@@ -7135,11 +7361,11 @@
     move-result-object v0
 
     .line 2440
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PUSH_REACHABILITY_CHECK:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2441
     .line 2442
-    const-string v1, "PUSH_TO_SESSION_MESSENGER_LOGIN"
+    const-string v1, "PAGE_MESSAGE_AGGREGATED_REMINDER"
 
     .line 2443
     .line 2444
@@ -7155,11 +7381,11 @@
     move-result-object v0
 
     .line 2450
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PUSH_TO_SESSION_MESSENGER_LOGIN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MESSAGE_AGGREGATED_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2451
     .line 2452
-    const-string v1, "PYMK_EMAIL"
+    const-string v1, "PAGE_MISSED_CALL"
 
     .line 2453
     .line 2454
@@ -7175,11 +7401,11 @@
     move-result-object v0
 
     .line 2460
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PYMK_EMAIL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_MISSED_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2461
     .line 2462
-    const-string v1, "REQUEST_LOCATION_UPDATE"
+    const-string v1, "PAGE_USER_ACTIVITY"
 
     .line 2463
     .line 2464
@@ -7195,11 +7421,11 @@
     move-result-object v0
 
     .line 2470
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->REQUEST_LOCATION_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_USER_ACTIVITY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2471
     .line 2472
-    const-string v1, "MESSENGER_ROOMS_GENERIC"
+    const-string v1, "PAGE_WALL"
 
     .line 2473
     .line 2474
@@ -7215,11 +7441,11 @@
     move-result-object v0
 
     .line 2480
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOMS_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_WALL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2481
     .line 2482
-    const-string v1, "RETRACT_INVALID"
+    const-string v1, "PAGE_WHATS_APP_MESSAGE"
 
     .line 2483
     .line 2484
@@ -7232,14 +7458,14 @@
     .line 2487
     .line 2488
     .line 2489
-    move-result-object v5
+    move-result-object v0
 
     .line 2490
-    sput-object v5, Lcom/facebook/notifications/constants/push/NotificationType;->RETRACT_INVALID:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PAGE_WHATS_APP_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2491
     .line 2492
-    const-string v1, "RTC_VCWA_ATTEMPTED_JOIN"
+    const-string v1, "PAYMENTS_BANNER"
 
     .line 2493
     .line 2494
@@ -7252,14 +7478,14 @@
     .line 2497
     .line 2498
     .line 2499
-    move-result-object v0
+    move-result-object v4
 
     .line 2500
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->RTC_VCWA_ATTEMPTED_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v4, Lcom/facebook/notifications/constants/push/NotificationType;->PAYMENTS_BANNER:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2501
     .line 2502
-    const-string v1, "RTC_VCWA_CREATOR_JOINED"
+    const-string v1, "PHOTO_COMMENT"
 
     .line 2503
     .line 2504
@@ -7275,11 +7501,11 @@
     move-result-object v0
 
     .line 2510
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->RTC_VCWA_CREATOR_JOINED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PHOTO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2511
     .line 2512
-    const-string v1, "SECURE_MESSAGE_OVER_WA"
+    const-string v1, "PHOTO_ALBUM_COMMENT"
 
     .line 2513
     .line 2514
@@ -7295,11 +7521,11 @@
     move-result-object v0
 
     .line 2520
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->SECURE_MESSAGE_OVER_WA:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PHOTO_ALBUM_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2521
     .line 2522
-    const-string v1, "SESSION_LEVEL_SURVEY"
+    const-string v1, "PLACE_FEED_NEARBY"
 
     .line 2523
     .line 2524
@@ -7315,11 +7541,11 @@
     move-result-object v0
 
     .line 2530
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->SESSION_LEVEL_SURVEY:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PLACE_FEED_NEARBY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2531
     .line 2532
-    const-string v1, "SHOWS_FOLLOWER_NEW_EPISODE"
+    const-string v1, "PLAN_USER_INVITED"
 
     .line 2533
     .line 2534
@@ -7335,11 +7561,11 @@
     move-result-object v0
 
     .line 2540
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->SHOWS_FOLLOWER_NEW_EPISODE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PLAN_USER_INVITED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2541
     .line 2542
-    const-string v1, "STALE_CONTACT_IMPORT"
+    const-string v1, "PLATFORM_LOGIN_APPROVAL"
 
     .line 2543
     .line 2544
@@ -7355,11 +7581,11 @@
     move-result-object v0
 
     .line 2550
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_CONTACT_IMPORT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PLATFORM_LOGIN_APPROVAL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2551
     .line 2552
-    const-string v1, "STALE_EMAIL"
+    const-string v1, "POST_FAILED"
 
     .line 2553
     .line 2554
@@ -7375,11 +7601,11 @@
     move-result-object v0
 
     .line 2560
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_EMAIL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->POST_FAILED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2561
     .line 2562
-    const-string v1, "STALE_FRIEND_CONFIRM"
+    const-string v1, "PRE_REG_PUSH"
 
     .line 2563
     .line 2564
@@ -7395,11 +7621,11 @@
     move-result-object v0
 
     .line 2570
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_FRIEND_CONFIRM:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PRE_REG_PUSH:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2571
     .line 2572
-    const-string v1, "STALE_NOTIFICATIONS"
+    const-string v1, "PROFILE_PLUS_MESSAGE"
 
     .line 2573
     .line 2574
@@ -7415,11 +7641,11 @@
     move-result-object v0
 
     .line 2580
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_NOTIFICATIONS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PROFILE_PLUS_MESSAGE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2581
     .line 2582
-    const-string v1, "STORY_RESHARE"
+    const-string v1, "PUBLIC_CHANNELS_NEW_CHANNEL_NOTIF"
 
     .line 2583
     .line 2584
@@ -7435,11 +7661,11 @@
     move-result-object v0
 
     .line 2590
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STORY_RESHARE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PUBLIC_CHANNELS_NEW_CHANNEL_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2591
     .line 2592
-    const-string v1, "TINCAN_MESSAGE_RECEIVED"
+    const-string v1, "PUSH_REACHABILITY_CHECK"
 
     .line 2593
     .line 2594
@@ -7455,11 +7681,11 @@
     move-result-object v0
 
     .line 2600
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->TINCAN_MESSAGE_RECEIVED:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PUSH_REACHABILITY_CHECK:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2601
     .line 2602
-    const-string v1, "TOP_TRENDING_VIDEO"
+    const-string v1, "PUSH_TO_SESSION_MESSENGER_LOGIN"
 
     .line 2603
     .line 2604
@@ -7475,11 +7701,11 @@
     move-result-object v0
 
     .line 2610
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->TOP_TRENDING_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PUSH_TO_SESSION_MESSENGER_LOGIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2611
     .line 2612
-    const-string v1, "TOR_STATUS"
+    const-string v1, "PYMK_EMAIL"
 
     .line 2613
     .line 2614
@@ -7495,11 +7721,11 @@
     move-result-object v0
 
     .line 2620
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->TOR_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->PYMK_EMAIL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2621
     .line 2622
-    const-string v1, "UNKNOWN"
+    const-string v1, "REQUEST_LOCATION_UPDATE"
 
     .line 2623
     .line 2624
@@ -7515,11 +7741,11 @@
     move-result-object v0
 
     .line 2630
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->UNKNOWN:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->REQUEST_LOCATION_UPDATE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2631
     .line 2632
-    const-string v1, "VIDEO_COMMENT"
+    const-string v1, "MESSENGER_ROOMS_GENERIC"
 
     .line 2633
     .line 2634
@@ -7535,11 +7761,11 @@
     move-result-object v0
 
     .line 2640
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->VIDEO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MESSENGER_ROOMS_GENERIC:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2641
     .line 2642
-    const-string v1, "VOIP"
+    const-string v1, "RETRACT_INVALID"
 
     .line 2643
     .line 2644
@@ -7552,14 +7778,14 @@
     .line 2647
     .line 2648
     .line 2649
-    move-result-object v0
+    move-result-object v3
 
     .line 2650
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->VOIP:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v3, Lcom/facebook/notifications/constants/push/NotificationType;->RETRACT_INVALID:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2651
     .line 2652
-    const-string v1, "WAKEUP_MQTT"
+    const-string v1, "RTC_VCWA_ATTEMPTED_JOIN"
 
     .line 2653
     .line 2654
@@ -7575,11 +7801,11 @@
     move-result-object v0
 
     .line 2660
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WAKEUP_MQTT:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->RTC_VCWA_ATTEMPTED_JOIN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2661
     .line 2662
-    const-string v1, "WALL"
+    const-string v1, "RTC_VCWA_CREATOR_JOINED"
 
     .line 2663
     .line 2664
@@ -7595,11 +7821,11 @@
     move-result-object v0
 
     .line 2670
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->RTC_VCWA_CREATOR_JOINED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2671
     .line 2672
-    const-string v1, "WEATHER_NOWCAST"
+    const-string v1, "SECURE_MESSAGE_OVER_WA"
 
     .line 2673
     .line 2674
@@ -7615,11 +7841,11 @@
     move-result-object v0
 
     .line 2680
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WEATHER_NOWCAST:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->SECURE_MESSAGE_OVER_WA:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2681
     .line 2682
-    const-string v1, "WEBRTC_VOIP_CALL"
+    const-string v1, "SESSION_LEVEL_SURVEY"
 
     .line 2683
     .line 2684
@@ -7635,11 +7861,11 @@
     move-result-object v0
 
     .line 2690
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WEBRTC_VOIP_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->SESSION_LEVEL_SURVEY:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2691
     .line 2692
-    const-string v1, "WORK_STALE"
+    const-string v1, "SHOWS_FOLLOWER_NEW_EPISODE"
 
     .line 2693
     .line 2694
@@ -7655,11 +7881,11 @@
     move-result-object v0
 
     .line 2700
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WORK_STALE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->SHOWS_FOLLOWER_NEW_EPISODE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2701
     .line 2702
-    const-string v1, "ZB_NOTIF"
+    const-string v1, "STALE_CONTACT_IMPORT"
 
     .line 2703
     .line 2704
@@ -7675,11 +7901,11 @@
     move-result-object v0
 
     .line 2710
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ZB_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_CONTACT_IMPORT:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2711
     .line 2712
-    const-string v1, "ZERO"
+    const-string v1, "STALE_EMAIL"
 
     .line 2713
     .line 2714
@@ -7695,11 +7921,11 @@
     move-result-object v0
 
     .line 2720
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ZERO:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_EMAIL:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2721
     .line 2722
-    const-string v1, "MUSIC_RELEASE_RECOMMENDATION"
+    const-string v1, "STALE_FRIEND_CONFIRM"
 
     .line 2723
     .line 2724
@@ -7715,11 +7941,11 @@
     move-result-object v0
 
     .line 2730
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MUSIC_RELEASE_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_FRIEND_CONFIRM:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2731
     .line 2732
-    const-string v1, "ZP"
+    const-string v1, "STALE_NOTIFICATIONS"
 
     .line 2733
     .line 2734
@@ -7735,11 +7961,11 @@
     move-result-object v0
 
     .line 2740
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ZP:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STALE_NOTIFICATIONS:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2741
     .line 2742
-    const-string v1, "GROUP_COMMENT_MENTION"
+    const-string v1, "STORY_RESHARE"
 
     .line 2743
     .line 2744
@@ -7755,11 +7981,11 @@
     move-result-object v0
 
     .line 2750
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->STORY_RESHARE:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2751
     .line 2752
-    const-string v1, "AYMT_LWI_ASYNC_CREATION_FAILURE"
+    const-string v1, "TINCAN_MESSAGE_RECEIVED"
 
     .line 2753
     .line 2754
@@ -7775,82 +8001,663 @@
     move-result-object v0
 
     .line 2760
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_LWI_ASYNC_CREATION_FAILURE:Lcom/facebook/notifications/constants/push/NotificationType;
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->TINCAN_MESSAGE_RECEIVED:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2761
     .line 2762
-    invoke-static {}, Lcom/facebook/notifications/constants/push/NotificationType;->$values()[Lcom/facebook/notifications/constants/push/NotificationType;
+    const-string v1, "TOP_TRENDING_VIDEO"
 
     .line 2763
     .line 2764
-    .line 2765
-    move-result-object v0
+    const/16 v0, 0x115
 
+    .line 2765
     .line 2766
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->$VALUES:[Lcom/facebook/notifications/constants/push/NotificationType;
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2767
     .line 2768
-    new-instance v0, LX/0u1;
-
     .line 2769
+    move-result-object v0
+
     .line 2770
-    invoke-direct {v0}, LX/0u1;-><init>()V
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->TOP_TRENDING_VIDEO:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2771
     .line 2772
+    const-string v1, "TOR_STATUS"
+
     .line 2773
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->Companion:LX/0u1;
-
     .line 2774
-    .line 2775
-    const/4 v2, 0x3
+    const/16 v0, 0x116
 
+    .line 2775
     .line 2776
-    new-array v1, v2, [Ljava/lang/Object;
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2777
     .line 2778
-    invoke-static {v1, v3, v4}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 2779
-    .line 2780
-    .line 2781
-    const/4 v0, 0x2
+    move-result-object v0
 
+    .line 2780
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->TOR_STATUS:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2781
     .line 2782
-    aput-object v5, v1, v0
+    const-string v1, "UNKNOWN"
 
     .line 2783
     .line 2784
-    invoke-static {v1, v2}, Lcom/google/common/collect/ImmutableSet;->A04([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableSet;
+    const/16 v0, 0x117
 
     .line 2785
     .line 2786
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
     .line 2787
+    .line 2788
+    .line 2789
     move-result-object v0
 
-    .line 2788
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->SILENT_TYPES:Lcom/google/common/collect/ImmutableSet;
-
-    .line 2789
     .line 2790
-    const/16 v0, 0x4a
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->UNKNOWN:Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2791
     .line 2792
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    const-string v1, "VIDEO_COMMENT"
 
     .line 2793
     .line 2794
-    .line 2795
-    move-result-object v0
+    const/16 v0, 0x118
 
+    .line 2795
     .line 2796
-    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
 
     .line 2797
     .line 2798
+    .line 2799
+    move-result-object v0
+
+    .line 2800
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->VIDEO_COMMENT:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2801
+    .line 2802
+    const-string v1, "VOIP"
+
+    .line 2803
+    .line 2804
+    const/16 v0, 0x119
+
+    .line 2805
+    .line 2806
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2807
+    .line 2808
+    .line 2809
+    move-result-object v0
+
+    .line 2810
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->VOIP:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2811
+    .line 2812
+    const-string v1, "WAKEUP_MQTT"
+
+    .line 2813
+    .line 2814
+    const/16 v0, 0x11a
+
+    .line 2815
+    .line 2816
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2817
+    .line 2818
+    .line 2819
+    move-result-object v0
+
+    .line 2820
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WAKEUP_MQTT:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2821
+    .line 2822
+    const-string v1, "WALL"
+
+    .line 2823
+    .line 2824
+    const/16 v0, 0x11b
+
+    .line 2825
+    .line 2826
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2827
+    .line 2828
+    .line 2829
+    move-result-object v0
+
+    .line 2830
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WALL:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2831
+    .line 2832
+    const-string/jumbo v1, "WEATHER_NOWCAST"
+
+    .line 2833
+    .line 2834
+    .line 2835
+    const/16 v0, 0x11c
+
+    .line 2836
+    .line 2837
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2838
+    .line 2839
+    .line 2840
+    move-result-object v0
+
+    .line 2841
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WEATHER_NOWCAST:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2842
+    .line 2843
+    const-string/jumbo v1, "WEBRTC_VOIP_CALL"
+
+    .line 2844
+    .line 2845
+    .line 2846
+    const/16 v0, 0x11d
+
+    .line 2847
+    .line 2848
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2849
+    .line 2850
+    .line 2851
+    move-result-object v0
+
+    .line 2852
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WEBRTC_VOIP_CALL:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2853
+    .line 2854
+    const-string/jumbo v1, "WORK_STALE"
+
+    .line 2855
+    .line 2856
+    .line 2857
+    const/16 v0, 0x11e
+
+    .line 2858
+    .line 2859
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2860
+    .line 2861
+    .line 2862
+    move-result-object v0
+
+    .line 2863
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->WORK_STALE:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2864
+    .line 2865
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_TEEN_MESSAGING_DATA_REQUEST_TEEN_NOTIFICATION"
+
+    .line 2866
+    .line 2867
+    .line 2868
+    const/16 v0, 0x11f
+
+    .line 2869
+    .line 2870
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2871
+    .line 2872
+    .line 2873
+    move-result-object v0
+
+    .line 2874
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_TEEN_MESSAGING_DATA_REQUEST_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2875
+    .line 2876
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_APPEAL_SUCCESS_OLD_PARENT_NOTIFICATION"
+
+    .line 2877
+    .line 2878
+    .line 2879
+    const/16 v0, 0x120
+
+    .line 2880
+    .line 2881
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2882
+    .line 2883
+    .line 2884
+    move-result-object v0
+
+    .line 2885
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_APPEAL_SUCCESS_OLD_PARENT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2886
+    .line 2887
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_APPEAL_SUCCESS_TEEN_NOTIFICATION"
+
+    .line 2888
+    .line 2889
+    .line 2890
+    const/16 v0, 0x121
+
+    .line 2891
+    .line 2892
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2893
+    .line 2894
+    .line 2895
+    move-result-object v0
+
+    .line 2896
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_APPEAL_SUCCESS_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2897
+    .line 2898
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_GS_INVITE_ACCEPT_NOTIFICATION"
+
+    .line 2899
+    .line 2900
+    .line 2901
+    const/16 v0, 0x122
+
+    .line 2902
+    .line 2903
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2904
+    .line 2905
+    .line 2906
+    move-result-object v0
+
+    .line 2907
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_GS_INVITE_ACCEPT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2908
+    .line 2909
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_GS_INVITE_CREATE_NOTIFICATION"
+
+    .line 2910
+    .line 2911
+    .line 2912
+    const/16 v0, 0x123
+
+    .line 2913
+    .line 2914
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2915
+    .line 2916
+    .line 2917
+    move-result-object v0
+
+    .line 2918
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_GS_INVITE_CREATE_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2919
+    .line 2920
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_GS_INVITE_DECLINE_NOTIFICATION"
+
+    .line 2921
+    .line 2922
+    .line 2923
+    const/16 v0, 0x124
+
+    .line 2924
+    .line 2925
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2926
+    .line 2927
+    .line 2928
+    move-result-object v0
+
+    .line 2929
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_GS_INVITE_DECLINE_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2930
+    .line 2931
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_GS_OPT_OUT_NOTIFICATION"
+
+    .line 2932
+    .line 2933
+    .line 2934
+    const/16 v0, 0x125
+
+    .line 2935
+    .line 2936
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2937
+    .line 2938
+    .line 2939
+    move-result-object v0
+
+    .line 2940
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_GS_OPT_OUT_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2941
+    .line 2942
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_INVITE_CREATE_TEEN_NOTIFICATION"
+
+    .line 2943
+    .line 2944
+    .line 2945
+    const/16 v0, 0x126
+
+    .line 2946
+    .line 2947
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2948
+    .line 2949
+    .line 2950
+    move-result-object v0
+
+    .line 2951
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_INVITE_CREATE_TEEN_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2952
+    .line 2953
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_OFFBOARDING_NOTIFICATION"
+
+    .line 2954
+    .line 2955
+    .line 2956
+    const/16 v0, 0x127
+
+    .line 2957
+    .line 2958
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2959
+    .line 2960
+    .line 2961
+    move-result-object v0
+
+    .line 2962
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_OFFBOARDING_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2963
+    .line 2964
+    const-string/jumbo v1, "YOUTH_RS_MESSENGER_TRANSITION_NOTIFICATION"
+
+    .line 2965
+    .line 2966
+    .line 2967
+    const/16 v0, 0x128
+
+    .line 2968
+    .line 2969
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2970
+    .line 2971
+    .line 2972
+    move-result-object v0
+
+    .line 2973
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->YOUTH_RS_MESSENGER_TRANSITION_NOTIFICATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2974
+    .line 2975
+    const-string/jumbo v1, "ZB_NOTIF"
+
+    .line 2976
+    .line 2977
+    .line 2978
+    const/16 v0, 0x129
+
+    .line 2979
+    .line 2980
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2981
+    .line 2982
+    .line 2983
+    move-result-object v0
+
+    .line 2984
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ZB_NOTIF:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2985
+    .line 2986
+    const-string/jumbo v1, "ZERO"
+
+    .line 2987
+    .line 2988
+    .line 2989
+    const/16 v0, 0x12a
+
+    .line 2990
+    .line 2991
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2992
+    .line 2993
+    .line 2994
+    move-result-object v0
+
+    .line 2995
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ZERO:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 2996
+    .line 2997
+    const-string v1, "MUSIC_RELEASE_RECOMMENDATION"
+
+    .line 2998
+    .line 2999
+    const/16 v0, 0x12b
+
+    .line 3000
+    .line 3001
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3002
+    .line 3003
+    .line 3004
+    move-result-object v0
+
+    .line 3005
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MUSIC_RELEASE_RECOMMENDATION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3006
+    .line 3007
+    const-string/jumbo v1, "ZP"
+
+    .line 3008
+    .line 3009
+    .line 3010
+    const/16 v0, 0x12c
+
+    .line 3011
+    .line 3012
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3013
+    .line 3014
+    .line 3015
+    move-result-object v0
+
+    .line 3016
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->ZP:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3017
+    .line 3018
+    const-string v1, "GROUP_COMMENT_MENTION"
+
+    .line 3019
+    .line 3020
+    const/16 v0, 0x12d
+
+    .line 3021
+    .line 3022
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3023
+    .line 3024
+    .line 3025
+    move-result-object v0
+
+    .line 3026
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->GROUP_COMMENT_MENTION:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3027
+    .line 3028
+    const-string v1, "AYMT_LWI_ASYNC_CREATION_FAILURE"
+
+    .line 3029
+    .line 3030
+    const/16 v0, 0x12e
+
+    .line 3031
+    .line 3032
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3033
+    .line 3034
+    .line 3035
+    move-result-object v0
+
+    .line 3036
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->AYMT_LWI_ASYNC_CREATION_FAILURE:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3037
+    .line 3038
+    const-string v1, "SILENT_MPW_TRUSTED_DEVICE_FB"
+
+    .line 3039
+    .line 3040
+    const/16 v0, 0x12f
+
+    .line 3041
+    .line 3042
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3043
+    .line 3044
+    .line 3045
+    move-result-object v2
+
+    .line 3046
+    sput-object v2, Lcom/facebook/notifications/constants/push/NotificationType;->SILENT_MPW_TRUSTED_DEVICE_FB:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3047
+    .line 3048
+    const-string v1, "MSGR_E2EE_MESSAGE_REMINDER"
+
+    .line 3049
+    .line 3050
+    const/16 v0, 0x130
+
+    .line 3051
+    .line 3052
+    invoke-static {v1, v0}, Lcom/facebook/notifications/constants/push/NotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3053
+    .line 3054
+    .line 3055
+    move-result-object v0
+
+    .line 3056
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->MSGR_E2EE_MESSAGE_REMINDER:Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3057
+    .line 3058
+    invoke-static {}, Lcom/facebook/notifications/constants/push/NotificationType;->$values()[Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3059
+    .line 3060
+    .line 3061
+    move-result-object v0
+
+    .line 3062
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->$VALUES:[Lcom/facebook/notifications/constants/push/NotificationType;
+
+    .line 3063
+    .line 3064
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 3065
+    .line 3066
+    .line 3067
+    move-result-object v0
+
+    .line 3068
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 3069
+    .line 3070
+    new-instance v0, LX/17Q;
+
+    .line 3071
+    .line 3072
+    invoke-direct {v0}, LX/17Q;-><init>()V
+
+    .line 3073
+    .line 3074
+    .line 3075
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->Companion:LX/17Q;
+
+    .line 3076
+    .line 3077
+    const/4 v1, 0x4
+
+    .line 3078
+    new-array v0, v1, [Ljava/lang/Object;
+
+    .line 3079
+    .line 3080
+    invoke-static {v4, v5, v3, v2, v0}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 3081
+    .line 3082
+    .line 3083
+    invoke-static {v0, v1}, Lcom/google/common/collect/ImmutableSet;->A04([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableSet;
+
+    .line 3084
+    .line 3085
+    .line 3086
+    move-result-object v0
+
+    .line 3087
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->SILENT_TYPES:Lcom/google/common/collect/ImmutableSet;
+
+    .line 3088
+    .line 3089
+    const/16 v0, 0x1f
+
+    .line 3090
+    .line 3091
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
+
+    .line 3092
+    .line 3093
+    .line 3094
+    move-result-object v0
+
+    .line 3095
+    sput-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 3096
+    .line 3097
     return-void
 .end method
 
@@ -7934,6 +8741,14 @@
     .line 20
     :cond_1
     return-object v1
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/facebook/notifications/constants/push/NotificationType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/notifications/constants/push/NotificationType;
@@ -8043,12 +8858,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-static {p1, p0}, LX/0Yh;->A0p(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, p0}, LX/0X3;->A12(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 5
     .line 6

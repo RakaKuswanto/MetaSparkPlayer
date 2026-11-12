@@ -1,10 +1,10 @@
 .class public Lcom/google/android/material/button/MaterialButton;
-.super LX/4Wt;
+.super LX/4SH;
 .source ""
 
 # interfaces
 .implements Landroid/widget/Checkable;
-.implements LX/4Tq;
+.implements LX/4Tz;
 
 
 # static fields
@@ -18,7 +18,7 @@
 
 .field public A01:Landroid/graphics/drawable/Drawable;
 
-.field public A02:LX/4Tt;
+.field public A02:LX/4U9;
 
 .field public A03:I
 
@@ -36,7 +36,7 @@
 
 .field public A0A:Z
 
-.field public final A0B:LX/4Th;
+.field public final A0B:LX/4Tl;
 
 .field public final A0C:Ljava/util/LinkedHashSet;
 
@@ -108,7 +108,7 @@
     .locals 1
 
     .line 268435456
-    const v0, 0x7f040639
+    const v0, 0x7f04065a
 
     .line 268435457
     .line 268435458
@@ -122,619 +122,609 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 12
+    .locals 10
 
     .line 0
-    const v11, 0x7f1302e2
+    const v1, 0x7f1202e5
 
     .line 1
     .line 2
     .line 3
-    move-object v7, p2
+    invoke-static {p1, p2, p3, v1}, LX/4Hy;->A00(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     .line 4
-    move v10, p3
-
     .line 5
-    invoke-static {p1, p2, p3, v11}, LX/4PK;->A00(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
-    .line 9
-    invoke-direct {p0, v0, p2, p3}, LX/4Wt;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 7
+    invoke-direct {p0, v0, p2, p3}, LX/4SH;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 8
+    .line 9
     .line 10
+    new-instance v0, Ljava/util/LinkedHashSet;
+
     .line 11
     .line 12
-    new-instance v0, Ljava/util/LinkedHashSet;
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
     .line 13
     .line 14
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
     .line 15
-    .line 16
-    .line 17
     iput-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0C:Ljava/util/LinkedHashSet;
 
-    .line 18
-    .line 19
-    const/4 v1, 0x0
+    .line 16
+    .line 17
+    const/4 v4, 0x0
 
+    .line 18
+    iput-boolean v4, p0, Lcom/google/android/material/button/MaterialButton;->A0A:Z
+
+    .line 19
     .line 20
-    iput-boolean v1, p0, Lcom/google/android/material/button/MaterialButton;->A0A:Z
+    iput-boolean v4, p0, Lcom/google/android/material/button/MaterialButton;->A09:Z
 
     .line 21
     .line 22
-    iput-boolean v1, p0, Lcom/google/android/material/button/MaterialButton;->A09:Z
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     .line 23
     .line 24
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
     .line 25
-    .line 26
-    .line 27
-    move-result-object v6
+    move-result-object v2
 
+    .line 26
+    sget-object v0, LX/4LY;->A07:[I
+
+    .line 27
     .line 28
-    sget-object v8, LX/4SH;->A07:[I
+    invoke-static {v2, p2, v0, p3, v1}, LX/4Hp;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     .line 29
     .line 30
-    new-array v9, v1, [I
-
     .line 31
+    move-result-object v6
+
     .line 32
-    invoke-static/range {v6 .. v11}, LX/4Ku;->A00(Landroid/content/Context;Landroid/util/AttributeSet;[I[III)Landroid/content/res/TypedArray;
+    const/16 v0, 0xc
 
     .line 33
     .line 34
+    invoke-virtual {v6, v0, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
     .line 35
-    move-result-object v4
-
     .line 36
-    const/16 v0, 0xc
-
     .line 37
+    move-result v0
+
     .line 38
-    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    iput v0, p0, Lcom/google/android/material/button/MaterialButton;->A04:I
 
     .line 39
     .line 40
-    .line 41
-    move-result v0
-
-    .line 42
-    iput v0, p0, Lcom/google/android/material/button/MaterialButton;->A04:I
-
-    .line 43
-    .line 44
     const/16 v0, 0xf
 
-    .line 45
-    .line 46
+    .line 41
+    .line 42
     const/4 v5, -0x1
 
+    .line 43
+    invoke-virtual {v6, v0, v5}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    .line 44
+    .line 45
+    .line 46
+    move-result v0
+
     .line 47
-    invoke-virtual {v4, v0, v5}, Landroid/content/res/TypedArray;->getInt(II)I
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     .line 48
     .line 49
+    invoke-static {v3, v0}, LX/4FA;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
+
     .line 50
-    move-result v0
-
     .line 51
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
     .line 52
+    move-result-object v0
+
     .line 53
-    invoke-static {v3, v0}, LX/4Ky;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
+    iput-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A08:Landroid/graphics/PorterDuff$Mode;
 
     .line 54
     .line 55
-    .line 56
-    move-result-object v0
+    const/16 v0, 0xe
 
+    .line 56
     .line 57
-    iput-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A08:Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v2, v6, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     .line 58
     .line 59
-    const/16 v0, 0xe
-
     .line 60
+    move-result-object v0
+
     .line 61
-    invoke-static {v6, v4, v0}, LX/4Px;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    iput-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A07:Landroid/content/res/ColorStateList;
 
     .line 62
     .line 63
-    .line 64
-    move-result-object v0
+    const/16 v0, 0xa
 
+    .line 64
     .line 65
-    iput-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A07:Landroid/content/res/ColorStateList;
+    invoke-static {v2, v6, v0}, LX/4Ph;->A01(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/graphics/drawable/Drawable;
 
     .line 66
     .line 67
-    const/16 v0, 0xa
-
     .line 68
+    move-result-object v0
+
     .line 69
-    invoke-static {v6, v4, v0}, LX/4Px;->A01(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A01:Landroid/graphics/drawable/Drawable;
 
     .line 70
     .line 71
-    .line 72
-    move-result-object v0
-
-    .line 73
-    iput-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A01:Landroid/graphics/drawable/Drawable;
-
-    .line 74
-    .line 75
     const/16 v0, 0xb
 
-    .line 76
-    .line 77
+    .line 72
+    .line 73
     const/4 v9, 0x1
 
+    .line 74
+    invoke-virtual {v6, v0, v9}, Landroid/content/res/TypedArray;->getInteger(II)I
+
+    .line 75
+    .line 76
+    .line 77
+    move-result v0
+
     .line 78
-    invoke-virtual {v4, v0, v9}, Landroid/content/res/TypedArray;->getInteger(II)I
+    iput v0, p0, Lcom/google/android/material/button/MaterialButton;->A00:I
 
     .line 79
     .line 80
-    .line 81
-    move-result v0
+    const/16 v0, 0xd
 
+    .line 81
     .line 82
-    iput v0, p0, Lcom/google/android/material/button/MaterialButton;->A00:I
+    invoke-virtual {v6, v0, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     .line 83
     .line 84
-    const/16 v0, 0xd
-
     .line 85
+    move-result v0
+
     .line 86
-    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    iput v0, p0, Lcom/google/android/material/button/MaterialButton;->A05:I
 
     .line 87
     .line 88
+    invoke-static {v2, p2, p3, v1}, LX/4Vd;->A01(Landroid/content/Context;Landroid/util/AttributeSet;II)LX/4Vi;
+
     .line 89
-    move-result v0
-
     .line 90
-    iput v0, p0, Lcom/google/android/material/button/MaterialButton;->A05:I
-
     .line 91
+    move-result-object v1
+
     .line 92
-    invoke-static {v6, p2, p3, v11}, LX/4Uw;->A01(Landroid/content/Context;Landroid/util/AttributeSet;II)LX/4V2;
+    new-instance v0, LX/4Vd;
 
     .line 93
     .line 94
+    invoke-direct {v0, v1}, LX/4Vd;-><init>(LX/4Vi;)V
+
     .line 95
-    move-result-object v2
-
     .line 96
-    new-instance v0, LX/4Uw;
-
     .line 97
-    .line 98
-    invoke-direct {v0, v2}, LX/4Uw;-><init>(LX/4V2;)V
+    new-instance v8, LX/4Tl;
 
+    .line 98
     .line 99
+    invoke-direct {v8, p0, v0}, LX/4Tl;-><init>(Lcom/google/android/material/button/MaterialButton;LX/4Vd;)V
+
     .line 100
     .line 101
-    new-instance v8, LX/4Th;
-
     .line 102
-    .line 103
-    invoke-direct {v8, p0, v0}, LX/4Th;-><init>(Lcom/google/android/material/button/MaterialButton;LX/4Uw;)V
+    iput-object v8, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
+    .line 103
     .line 104
+    invoke-virtual {v6, v9, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
     .line 105
     .line 106
-    iput-object v8, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
-
     .line 107
+    move-result v0
+
     .line 108
-    invoke-virtual {v4, v9, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+    iput v0, v8, LX/4Tl;->A03:I
 
     .line 109
     .line 110
-    .line 111
-    move-result v0
-
-    .line 112
-    iput v0, v8, LX/4Th;->A03:I
-
-    .line 113
-    .line 114
     const/4 v0, 0x2
 
+    .line 111
+    invoke-virtual {v6, v0, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    .line 112
+    .line 113
+    .line 114
+    move-result v0
+
     .line 115
-    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+    iput v0, v8, LX/4Tl;->A04:I
 
     .line 116
     .line 117
-    .line 118
-    move-result v0
-
-    .line 119
-    iput v0, v8, LX/4Th;->A04:I
-
-    .line 120
-    .line 121
     const/4 v0, 0x3
 
+    .line 118
+    invoke-virtual {v6, v0, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    .line 119
+    .line 120
+    .line 121
+    move-result v0
+
     .line 122
-    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+    iput v0, v8, LX/4Tl;->A05:I
 
     .line 123
     .line 124
-    .line 125
-    move-result v0
-
-    .line 126
-    iput v0, v8, LX/4Th;->A05:I
-
-    .line 127
-    .line 128
     const/4 v0, 0x4
 
+    .line 125
+    invoke-virtual {v6, v0, v4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    .line 126
+    .line 127
+    .line 128
+    move-result v0
+
     .line 129
-    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+    iput v0, v8, LX/4Tl;->A02:I
 
     .line 130
     .line 131
-    .line 132
-    move-result v0
+    const/16 v1, 0x8
 
+    .line 132
     .line 133
-    iput v0, v8, LX/4Th;->A02:I
+    invoke-virtual {v6, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     .line 134
     .line 135
-    const/16 v2, 0x8
-
     .line 136
+    move-result v0
+
     .line 137
-    invoke-virtual {v4, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    if-eqz v0, :cond_0
 
     .line 138
     .line 139
+    invoke-virtual {v6, v1, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
     .line 140
+    .line 141
+    .line 142
     move-result v0
 
-    .line 141
-    if-eqz v0, :cond_0
-
-    .line 142
     .line 143
-    invoke-virtual {v4, v2, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    iput v0, v8, LX/4Tl;->A00:I
 
     .line 144
     .line 145
+    iget-object v2, v8, LX/4Tl;->A0D:LX/4Vd;
+
     .line 146
-    move-result v0
-
     .line 147
-    iput v0, v8, LX/4Th;->A00:I
-
-    .line 148
-    .line 149
-    iget-object v6, v8, LX/4Th;->A0D:LX/4Uw;
-
-    .line 150
-    .line 151
     int-to-float v0, v0
 
+    .line 148
+    new-instance v1, LX/4Vi;
+
+    .line 149
+    .line 150
+    invoke-direct {v1, v2}, LX/4Vi;-><init>(LX/4Vd;)V
+
+    .line 151
     .line 152
-    new-instance v2, LX/4V2;
-
     .line 153
-    .line 154
-    invoke-direct {v2, v6}, LX/4V2;-><init>(LX/4Uw;)V
+    invoke-static {v1, v0}, LX/4Vi;->A00(LX/4Vi;F)V
 
+    .line 154
     .line 155
     .line 156
-    .line 157
-    invoke-static {v2, v0}, LX/4V2;->A00(LX/4V2;F)V
+    new-instance v0, LX/4Vd;
 
+    .line 157
     .line 158
+    invoke-direct {v0, v1}, LX/4Vd;-><init>(LX/4Vi;)V
+
     .line 159
     .line 160
-    new-instance v0, LX/4Uw;
-
     .line 161
-    .line 162
-    invoke-direct {v0, v2}, LX/4Uw;-><init>(LX/4V2;)V
+    invoke-virtual {v8, v0}, LX/4Tl;->A06(LX/4Vd;)V
 
+    .line 162
     .line 163
     .line 164
+    iput-boolean v9, v8, LX/4Tl;->A0G:Z
+
     .line 165
-    invoke-virtual {v8, v0}, LX/4Th;->A06(LX/4Uw;)V
-
     .line 166
-    .line 167
-    .line 168
-    iput-boolean v9, v8, LX/4Th;->A0G:Z
-
-    .line 169
-    .line 170
     :cond_0
     const/16 v0, 0x14
 
+    .line 167
+    .line 168
+    invoke-virtual {v6, v0, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    .line 169
+    .line 170
     .line 171
+    move-result v0
+
     .line 172
-    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    iput v0, v8, LX/4Tl;->A06:I
 
     .line 173
     .line 174
-    .line 175
-    move-result v0
-
-    .line 176
-    iput v0, v8, LX/4Th;->A06:I
-
-    .line 177
-    .line 178
     const/4 v0, 0x7
 
+    .line 175
+    invoke-virtual {v6, v0, v5}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    .line 176
+    .line 177
+    .line 178
+    move-result v0
+
     .line 179
-    invoke-virtual {v4, v0, v5}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-static {v3, v0}, LX/4FA;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
 
     .line 180
     .line 181
     .line 182
-    move-result v0
+    move-result-object v0
 
     .line 183
-    invoke-static {v3, v0}, LX/4Ky;->A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
+    iput-object v0, v8, LX/4Tl;->A0A:Landroid/graphics/PorterDuff$Mode;
 
     .line 184
     .line 185
-    .line 186
-    move-result-object v0
+    iget-object v7, v8, LX/4Tl;->A0I:Lcom/google/android/material/button/MaterialButton;
 
+    .line 186
     .line 187
-    iput-object v0, v8, LX/4Th;->A0A:Landroid/graphics/PorterDuff$Mode;
+    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     .line 188
     .line 189
-    iget-object v7, v8, LX/4Th;->A0I:Lcom/google/android/material/button/MaterialButton;
-
     .line 190
+    move-result-object v1
+
     .line 191
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 192
-    .line 193
-    .line 194
-    move-result-object v2
-
-    .line 195
     const/4 v0, 0x6
 
+    .line 192
+    invoke-static {v1, v6, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    .line 193
+    .line 194
+    .line 195
+    move-result-object v0
+
     .line 196
-    invoke-static {v2, v4, v0}, LX/4Px;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    iput-object v0, v8, LX/4Tl;->A07:Landroid/content/res/ColorStateList;
 
     .line 197
     .line 198
-    .line 199
-    move-result-object v0
+    const/16 v0, 0x13
 
+    .line 199
     .line 200
-    iput-object v0, v8, LX/4Th;->A07:Landroid/content/res/ColorStateList;
+    invoke-static {v1, v6, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     .line 201
     .line 202
-    const/16 v0, 0x13
-
     .line 203
+    move-result-object v0
+
     .line 204
-    invoke-static {v2, v4, v0}, LX/4Px;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    iput-object v0, v8, LX/4Tl;->A09:Landroid/content/res/ColorStateList;
 
     .line 205
     .line 206
-    .line 207
-    move-result-object v0
+    const/16 v0, 0x10
 
+    .line 207
     .line 208
-    iput-object v0, v8, LX/4Th;->A09:Landroid/content/res/ColorStateList;
+    invoke-static {v1, v6, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     .line 209
     .line 210
-    const/16 v0, 0x10
-
     .line 211
+    move-result-object v0
+
     .line 212
-    invoke-static {v2, v4, v0}, LX/4Px;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    iput-object v0, v8, LX/4Tl;->A08:Landroid/content/res/ColorStateList;
 
     .line 213
     .line 214
-    .line 215
-    move-result-object v0
-
-    .line 216
-    iput-object v0, v8, LX/4Th;->A08:Landroid/content/res/ColorStateList;
-
-    .line 217
-    .line 218
     const/4 v0, 0x5
 
+    .line 215
+    invoke-virtual {v6, v0, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    .line 216
+    .line 217
+    .line 218
+    move-result v0
+
     .line 219
-    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    iput-boolean v0, v8, LX/4Tl;->A0F:Z
 
     .line 220
     .line 221
-    .line 222
-    move-result v0
+    const/16 v0, 0x9
 
+    .line 222
     .line 223
-    iput-boolean v0, v8, LX/4Th;->A0F:Z
+    invoke-virtual {v6, v0, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     .line 224
     .line 225
-    const/16 v0, 0x9
-
     .line 226
+    move-result v0
+
     .line 227
-    invoke-virtual {v4, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+    iput v0, v8, LX/4Tl;->A01:I
 
     .line 228
     .line 229
+    invoke-static {v7}, LX/03U;->A06(Landroid/view/View;)I
+
     .line 230
-    move-result v0
-
     .line 231
-    iput v0, v8, LX/4Th;->A01:I
-
     .line 232
+    move-result v5
+
     .line 233
-    invoke-static {v7}, LX/03G;->A05(Landroid/view/View;)I
+    invoke-virtual {v7}, Landroid/view/View;->getPaddingTop()I
 
     .line 234
     .line 235
     .line 236
-    move-result v6
+    move-result v3
 
     .line 237
-    invoke-virtual {v7}, Landroid/view/View;->getPaddingTop()I
+    invoke-static {v7}, LX/03U;->A05(Landroid/view/View;)I
 
     .line 238
     .line 239
     .line 240
-    move-result v5
+    move-result v2
 
     .line 241
-    invoke-static {v7}, LX/03G;->A04(Landroid/view/View;)I
+    invoke-virtual {v7}, Landroid/view/View;->getPaddingBottom()I
 
     .line 242
     .line 243
     .line 244
-    move-result v3
+    move-result v1
 
     .line 245
-    invoke-virtual {v7}, Landroid/view/View;->getPaddingBottom()I
+    invoke-virtual {v6, v4}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     .line 246
     .line 247
     .line 248
-    move-result v2
+    move-result v0
 
     .line 249
-    invoke-virtual {v4, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    if-eqz v0, :cond_2
 
     .line 250
     .line 251
-    .line 252
-    move-result v0
+    iput-boolean v9, v8, LX/4Tl;->A0E:Z
 
+    .line 252
     .line 253
-    if-eqz v0, :cond_2
+    iget-object v0, v8, LX/4Tl;->A07:Landroid/content/res/ColorStateList;
 
     .line 254
     .line 255
-    iput-boolean v9, v8, LX/4Th;->A0E:Z
+    invoke-virtual {v7, v0}, LX/4SH;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
     .line 256
     .line 257
-    iget-object v0, v8, LX/4Th;->A07:Landroid/content/res/ColorStateList;
-
     .line 258
-    .line 259
-    invoke-virtual {v7, v0}, LX/4Wt;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    iget-object v0, v8, LX/4Tl;->A0A:Landroid/graphics/PorterDuff$Mode;
 
+    .line 259
     .line 260
+    invoke-virtual {v7, v0}, LX/4SH;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+
     .line 261
     .line 262
-    iget-object v0, v8, LX/4Th;->A0A:Landroid/graphics/PorterDuff$Mode;
-
     .line 263
-    .line 264
-    invoke-virtual {v7, v0}, LX/4Wt;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
-
-    .line 265
-    .line 266
-    .line 267
     :goto_0
-    iget v0, v8, LX/4Th;->A03:I
+    iget v0, v8, LX/4Tl;->A03:I
 
-    .line 268
-    .line 269
-    add-int/2addr v6, v0
-
-    .line 270
-    iget v0, v8, LX/4Th;->A05:I
-
-    .line 271
-    .line 272
+    .line 264
+    .line 265
     add-int/2addr v5, v0
 
-    .line 273
-    iget v0, v8, LX/4Th;->A04:I
+    .line 266
+    iget v0, v8, LX/4Tl;->A05:I
 
-    .line 274
-    .line 275
+    .line 267
+    .line 268
     add-int/2addr v3, v0
 
-    .line 276
-    iget v0, v8, LX/4Th;->A02:I
+    .line 269
+    iget v0, v8, LX/4Tl;->A04:I
 
-    .line 277
-    .line 278
+    .line 270
+    .line 271
     add-int/2addr v2, v0
 
-    .line 279
-    invoke-static {v7, v6, v5, v3, v2}, LX/03G;->A0Z(Landroid/view/View;IIII)V
+    .line 272
+    iget v0, v8, LX/4Tl;->A02:I
 
+    .line 273
+    .line 274
+    add-int/2addr v1, v0
+
+    .line 275
+    invoke-static {v7, v5, v3, v2, v1}, LX/03U;->A0d(Landroid/view/View;IIII)V
+
+    .line 276
+    .line 277
+    .line 278
+    invoke-virtual {v6}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 279
     .line 280
     .line 281
-    .line 282
-    invoke-virtual {v4}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 283
-    .line 284
-    .line 285
     iget v0, p0, Lcom/google/android/material/button/MaterialButton;->A04:I
 
-    .line 286
-    .line 287
+    .line 282
+    .line 283
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
-    .line 288
-    .line 289
-    .line 290
+    .line 284
+    .line 285
+    .line 286
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A01:Landroid/graphics/drawable/Drawable;
 
-    .line 291
-    .line 292
+    .line 287
+    .line 288
     if-eqz v0, :cond_1
 
+    .line 289
+    .line 290
+    const/4 v4, 0x1
+
+    .line 291
+    :cond_1
+    invoke-direct {p0, v4}, Lcom/google/android/material/button/MaterialButton;->A01(Z)V
+
+    .line 292
     .line 293
     .line 294
-    const/4 v1, 0x1
+    return-void
 
     .line 295
-    :cond_1
-    invoke-direct {p0, v1}, Lcom/google/android/material/button/MaterialButton;->A01(Z)V
+    :cond_2
+    invoke-static {v8}, LX/4Tl;->A02(LX/4Tl;)V
 
     .line 296
     .line 297
     .line 298
-    return-void
-
-    .line 299
-    :cond_2
-    invoke-static {v8}, LX/4Th;->A02(LX/4Th;)V
-
-    .line 300
-    .line 301
-    .line 302
     goto :goto_0
 .end method
 
@@ -898,7 +888,7 @@
     sub-int/2addr p2, v0
 
     .line 70
-    invoke-static {p0, p2}, LX/4BF;->A0D(Landroid/view/View;I)I
+    invoke-static {p0, p2}, LX/434;->A0D(Landroid/view/View;I)I
 
     .line 71
     .line 72
@@ -976,7 +966,7 @@
     sub-int/2addr p1, v0
 
     .line 106
-    invoke-static {p0}, LX/03G;->A04(Landroid/view/View;)I
+    invoke-static {p0}, LX/03U;->A05(Landroid/view/View;)I
 
     .line 107
     .line 108
@@ -997,7 +987,7 @@
     sub-int/2addr p1, v0
 
     .line 115
-    invoke-static {p0}, LX/03G;->A05(Landroid/view/View;)I
+    invoke-static {p0}, LX/03U;->A06(Landroid/view/View;)I
 
     .line 116
     .line 117
@@ -1012,7 +1002,7 @@
 
     .line 121
     .line 122
-    invoke-static {p0}, LX/4BE;->A1a(Landroid/view/View;)Z
+    invoke-static {p0}, LX/433;->A1W(Landroid/view/View;)Z
 
     .line 123
     .line 124
@@ -1078,7 +1068,7 @@
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/4Z4;->A03(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, LX/4XA;->A03(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     .line 5
     .line 6
@@ -1094,7 +1084,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0, v1}, LX/4Z4;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, LX/4XA;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
 
     .line 13
     .line 14
@@ -1111,7 +1101,7 @@
 
     .line 20
     .line 21
-    invoke-static {v1, v0}, LX/4Z4;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v1, v0}, LX/4XA;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
 
     .line 22
     .line 23
@@ -1187,7 +1177,7 @@
 
     .line 56
     .line 57
-    invoke-static {p0}, LX/4Wz;->A08(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+    invoke-static {p0}, LX/4SQ;->A08(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
 
     .line 58
     .line 59
@@ -1311,7 +1301,7 @@
 
     .line 111
     .line 112
-    invoke-static {v0, v1, v1, v1, p0}, LX/4Wz;->A04(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/widget/TextView;)V
+    invoke-static {v0, v1, v1, v1, p0}, LX/4SQ;->A04(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/widget/TextView;)V
 
     .line 113
     .line 114
@@ -1356,7 +1346,7 @@
 
     .line 131
     .line 132
-    invoke-static {v1, v0, v1, v1, p0}, LX/4Wz;->A04(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/widget/TextView;)V
+    invoke-static {v1, v0, v1, v1, p0}, LX/4SQ;->A04(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/widget/TextView;)V
 
     .line 133
     .line 134
@@ -1381,7 +1371,7 @@
 
     .line 142
     .line 143
-    invoke-static {v1, v1, v0, v1, p0}, LX/4Wz;->A04(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/widget/TextView;)V
+    invoke-static {v1, v1, v0, v1, p0}, LX/4SQ;->A04(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/widget/TextView;)V
 
     .line 144
     .line 145
@@ -1393,7 +1383,7 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 1
     .line 2
@@ -1401,7 +1391,7 @@
 
     .line 3
     .line 4
-    iget-boolean v1, v0, LX/4Th;->A0E:Z
+    iget-boolean v1, v0, LX/4Tl;->A0E:Z
 
     .line 5
     .line 6
@@ -1424,7 +1414,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 1
     .line 2
@@ -1432,7 +1422,7 @@
 
     .line 3
     .line 4
-    iget-boolean v0, v0, LX/4Th;->A0F:Z
+    iget-boolean v0, v0, LX/4Tl;->A0F:Z
 
     .line 5
     .line 6
@@ -1529,7 +1519,7 @@
 
     .line 30
     :cond_0
-    invoke-static {}, LX/4BF;->A0R()Landroid/graphics/Rect;
+    invoke-static {}, LX/434;->A0R()Landroid/graphics/Rect;
 
     .line 31
     .line 32
@@ -1697,7 +1687,7 @@
     .locals 1
 
     .line 0
-    invoke-virtual {p0}, LX/4Wt;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
+    invoke-virtual {p0}, LX/4SH;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
 
     .line 1
     .line 2
@@ -1712,7 +1702,7 @@
     .locals 1
 
     .line 0
-    invoke-virtual {p0}, LX/4Wt;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-virtual {p0}, LX/4SH;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
 
     .line 1
     .line 2
@@ -1739,11 +1729,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget v0, v0, LX/4Th;->A00:I
+    iget v0, v0, LX/4Tl;->A00:I
 
     .line 9
     .line 10
@@ -1827,11 +1817,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 1
     .line 2
-    iget v0, v0, LX/4Th;->A02:I
+    iget v0, v0, LX/4Tl;->A02:I
 
     .line 3
     .line 4
@@ -1842,11 +1832,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 1
     .line 2
-    iget v0, v0, LX/4Th;->A05:I
+    iget v0, v0, LX/4Tl;->A05:I
 
     .line 3
     .line 4
@@ -1869,11 +1859,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/4Th;->A08:Landroid/content/res/ColorStateList;
+    iget-object v0, v0, LX/4Tl;->A08:Landroid/content/res/ColorStateList;
 
     .line 9
     .line 10
@@ -1887,7 +1877,7 @@
     return-object v0
 .end method
 
-.method public getShapeAppearanceModel()LX/4Uw;
+.method public getShapeAppearanceModel()LX/4Vd;
     .locals 1
 
     .line 0
@@ -1903,11 +1893,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/4Th;->A0D:LX/4Uw;
+    iget-object v0, v0, LX/4Tl;->A0D:LX/4Vd;
 
     .line 9
     .line 10
@@ -1919,7 +1909,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 14
     .line 15
@@ -1946,11 +1936,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/4Th;->A09:Landroid/content/res/ColorStateList;
+    iget-object v0, v0, LX/4Tl;->A09:Landroid/content/res/ColorStateList;
 
     .line 9
     .line 10
@@ -1980,11 +1970,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget v0, v0, LX/4Th;->A06:I
+    iget v0, v0, LX/4Tl;->A06:I
 
     .line 9
     .line 10
@@ -2014,11 +2004,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/4Th;->A07:Landroid/content/res/ColorStateList;
+    iget-object v0, v0, LX/4Tl;->A07:Landroid/content/res/ColorStateList;
 
     .line 9
     .line 10
@@ -2026,7 +2016,7 @@
 
     .line 11
     :cond_0
-    invoke-super {p0}, LX/4Wt;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
+    invoke-super {p0}, LX/4SH;->getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
 
     .line 12
     .line 13
@@ -2053,11 +2043,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/4Th;->A0A:Landroid/graphics/PorterDuff$Mode;
+    iget-object v0, v0, LX/4Tl;->A0A:Landroid/graphics/PorterDuff$Mode;
 
     .line 9
     .line 10
@@ -2065,7 +2055,7 @@
 
     .line 11
     :cond_0
-    invoke-super {p0}, LX/4Wt;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-super {p0}, LX/4SH;->getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
 
     .line 12
     .line 13
@@ -2108,14 +2098,14 @@
 
     .line 8
     .line 9
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 10
     .line 11
     const/4 v0, 0x0
 
     .line 12
-    invoke-static {v1, v0}, LX/4Th;->A00(LX/4Th;Z)LX/4Uv;
+    invoke-static {v1, v0}, LX/4Tl;->A00(LX/4Tl;Z)LX/4VS;
 
     .line 13
     .line 14
@@ -2123,7 +2113,7 @@
     move-result-object v0
 
     .line 16
-    invoke-static {p0, v0}, LX/4U2;->A00(Landroid/view/View;LX/4Uv;)V
+    invoke-static {p0, v0}, LX/4To;->A00(Landroid/view/View;LX/4VS;)V
 
     .line 17
     .line 18
@@ -2148,7 +2138,7 @@
     move-result-object v1
 
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
@@ -2156,7 +2146,7 @@
 
     .line 9
     .line 10
-    iget-boolean v0, v0, LX/4Th;->A0F:Z
+    iget-boolean v0, v0, LX/4Tl;->A0F:Z
 
     .line 11
     .line 12
@@ -2203,7 +2193,7 @@
     .locals 1
 
     .line 0
-    invoke-super {p0, p1}, LX/4Wt;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1}, LX/4SH;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 1
     .line 2
@@ -2241,7 +2231,7 @@
     .locals 2
 
     .line 0
-    invoke-super {p0, p1}, LX/4Wt;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    invoke-super {p0, p1}, LX/4SH;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     .line 1
     .line 2
@@ -2259,7 +2249,7 @@
     .line 8
     .line 9
     .line 10
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 11
     .line 12
@@ -2267,7 +2257,7 @@
 
     .line 13
     .line 14
-    iget-boolean v1, v0, LX/4Th;->A0F:Z
+    iget-boolean v1, v0, LX/4Tl;->A0F:Z
 
     .line 15
     .line 16
@@ -2321,7 +2311,7 @@
     .locals 5
 
     .line 0
-    invoke-super/range {p0 .. p5}, LX/4Wt;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, LX/4SH;->onLayout(ZIIII)V
 
     .line 1
     .line 2
@@ -2338,7 +2328,7 @@
 
     .line 8
     .line 9
-    iget-object v4, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v4, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 10
     .line 11
@@ -2352,7 +2342,7 @@
     sub-int/2addr p4, p2
 
     .line 15
-    iget-object v3, v4, LX/4Th;->A0B:Landroid/graphics/drawable/Drawable;
+    iget-object v3, v4, LX/4Tl;->A0B:Landroid/graphics/drawable/Drawable;
 
     .line 16
     .line 17
@@ -2360,22 +2350,22 @@
 
     .line 18
     .line 19
-    iget v2, v4, LX/4Th;->A03:I
+    iget v2, v4, LX/4Tl;->A03:I
 
     .line 20
     .line 21
-    iget v1, v4, LX/4Th;->A05:I
+    iget v1, v4, LX/4Tl;->A05:I
 
     .line 22
     .line 23
-    iget v0, v4, LX/4Th;->A04:I
+    iget v0, v4, LX/4Tl;->A04:I
 
     .line 24
     .line 25
     sub-int/2addr p4, v0
 
     .line 26
-    iget v0, v4, LX/4Th;->A02:I
+    iget v0, v4, LX/4Tl;->A02:I
 
     .line 27
     .line 28
@@ -2490,7 +2480,7 @@
     .locals 2
 
     .line 0
-    invoke-super {p0, p1, p2, p3, p4}, LX/4Wt;->onTextChanged(Ljava/lang/CharSequence;III)V
+    invoke-super {p0, p1, p2, p3, p4}, LX/4SH;->onTextChanged(Ljava/lang/CharSequence;III)V
 
     .line 1
     .line 2
@@ -2567,14 +2557,14 @@
 
     .line 5
     .line 6
-    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
     const/4 v1, 0x0
 
     .line 9
-    invoke-static {v2, v1}, LX/4Th;->A00(LX/4Th;Z)LX/4Uv;
+    invoke-static {v2, v1}, LX/4Tl;->A00(LX/4Tl;Z)LX/4VS;
 
     .line 10
     .line 11
@@ -2586,7 +2576,7 @@
 
     .line 14
     .line 15
-    invoke-static {v2, v1}, LX/4Th;->A00(LX/4Th;Z)LX/4Uv;
+    invoke-static {v2, v1}, LX/4Tl;->A00(LX/4Tl;Z)LX/4VS;
 
     .line 16
     .line 17
@@ -2594,7 +2584,7 @@
     move-result-object v0
 
     .line 19
-    invoke-virtual {v0, p1}, LX/4Uv;->setTint(I)V
+    invoke-virtual {v0, p1}, LX/4VS;->setTint(I)V
 
     .line 20
     .line 21
@@ -2653,41 +2643,41 @@
     .line 17
     .line 18
     .line 19
-    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 20
     .line 21
     const/4 v0, 0x1
 
     .line 22
-    iput-boolean v0, v2, LX/4Th;->A0E:Z
+    iput-boolean v0, v2, LX/4Tl;->A0E:Z
 
     .line 23
     .line 24
-    iget-object v1, v2, LX/4Th;->A0I:Lcom/google/android/material/button/MaterialButton;
+    iget-object v1, v2, LX/4Tl;->A0I:Lcom/google/android/material/button/MaterialButton;
 
     .line 25
     .line 26
-    iget-object v0, v2, LX/4Th;->A07:Landroid/content/res/ColorStateList;
+    iget-object v0, v2, LX/4Tl;->A07:Landroid/content/res/ColorStateList;
 
     .line 27
     .line 28
-    invoke-virtual {v1, v0}, LX/4Wt;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v1, v0}, LX/4SH;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
     .line 29
     .line 30
     .line 31
-    iget-object v0, v2, LX/4Th;->A0A:Landroid/graphics/PorterDuff$Mode;
+    iget-object v0, v2, LX/4Tl;->A0A:Landroid/graphics/PorterDuff$Mode;
 
     .line 32
     .line 33
-    invoke-virtual {v1, v0}, LX/4Wt;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {v1, v0}, LX/4SH;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     .line 34
     .line 35
     .line 36
     :cond_0
-    invoke-super {p0, p1}, LX/4Wt;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, LX/4SH;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 37
     .line 38
@@ -2728,7 +2718,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, p1}, LX/4Wb;->A03(Landroid/view/View;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, p1}, LX/431;->A0I(Landroid/view/View;I)Landroid/graphics/drawable/Drawable;
 
     .line 3
     .line 4
@@ -2756,7 +2746,7 @@
     .locals 0
 
     .line 0
-    invoke-virtual {p0, p1}, LX/4Wt;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, p1}, LX/4SH;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
     .line 1
     .line 2
@@ -2768,7 +2758,7 @@
     .locals 0
 
     .line 0
-    invoke-virtual {p0, p1}, LX/4Wt;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {p0, p1}, LX/4SH;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     .line 1
     .line 2
@@ -2792,11 +2782,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iput-boolean p1, v0, LX/4Th;->A0F:Z
+    iput-boolean p1, v0, LX/4Tl;->A0F:Z
 
     .line 9
     .line 10
@@ -2808,7 +2798,7 @@
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 1
     .line 2
@@ -2816,7 +2806,7 @@
 
     .line 3
     .line 4
-    iget-boolean v0, v0, LX/4Th;->A0F:Z
+    iget-boolean v0, v0, LX/4Tl;->A0F:Z
 
     .line 5
     .line 6
@@ -2902,7 +2892,7 @@
     move-result-object v0
 
     .line 46
-    check-cast v0, LX/4Ts;
+    check-cast v0, LX/4U8;
 
     .line 47
     .line 48
@@ -2910,11 +2900,11 @@
 
     .line 49
     .line 50
-    check-cast v0, LX/4Tp;
+    check-cast v0, LX/4Ty;
 
     .line 51
     .line 52
-    iget-object v1, v0, LX/4Tp;->A00:Lcom/google/android/material/button/MaterialButtonToggleGroup;
+    iget-object v1, v0, LX/4Ty;->A00:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
     .line 53
     .line 54
@@ -3026,11 +3016,11 @@
 
     .line 5
     .line 6
-    iget-object v3, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v3, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-boolean v0, v3, LX/4Th;->A0G:Z
+    iget-boolean v0, v3, LX/4Tl;->A0G:Z
 
     .line 9
     .line 10
@@ -3038,7 +3028,7 @@
 
     .line 11
     .line 12
-    iget v0, v3, LX/4Th;->A00:I
+    iget v0, v3, LX/4Tl;->A00:I
 
     .line 13
     .line 14
@@ -3047,48 +3037,48 @@
     .line 15
     .line 16
     :cond_0
-    iput p1, v3, LX/4Th;->A00:I
+    iput p1, v3, LX/4Tl;->A00:I
 
     .line 17
     .line 18
     const/4 v0, 0x1
 
     .line 19
-    iput-boolean v0, v3, LX/4Th;->A0G:Z
+    iput-boolean v0, v3, LX/4Tl;->A0G:Z
 
     .line 20
     .line 21
-    iget-object v2, v3, LX/4Th;->A0D:LX/4Uw;
+    iget-object v2, v3, LX/4Tl;->A0D:LX/4Vd;
 
     .line 22
     .line 23
     int-to-float v0, p1
 
     .line 24
-    new-instance v1, LX/4V2;
+    new-instance v1, LX/4Vi;
 
     .line 25
     .line 26
-    invoke-direct {v1, v2}, LX/4V2;-><init>(LX/4Uw;)V
+    invoke-direct {v1, v2}, LX/4Vi;-><init>(LX/4Vd;)V
 
     .line 27
     .line 28
     .line 29
-    invoke-static {v1, v0}, LX/4V2;->A00(LX/4V2;F)V
+    invoke-static {v1, v0}, LX/4Vi;->A00(LX/4Vi;F)V
 
     .line 30
     .line 31
     .line 32
-    new-instance v0, LX/4Uw;
+    new-instance v0, LX/4Vd;
 
     .line 33
     .line 34
-    invoke-direct {v0, v1}, LX/4Uw;-><init>(LX/4V2;)V
+    invoke-direct {v0, v1}, LX/4Vd;-><init>(LX/4Vi;)V
 
     .line 35
     .line 36
     .line 37
-    invoke-virtual {v3, v0}, LX/4Th;->A06(LX/4Uw;)V
+    invoke-virtual {v3, v0}, LX/4Tl;->A06(LX/4Vd;)V
 
     .line 38
     .line 39
@@ -3142,7 +3132,7 @@
     .locals 2
 
     .line 0
-    invoke-super {p0, p1}, LX/4Wt;->setElevation(F)V
+    invoke-super {p0, p1}, LX/4SH;->setElevation(F)V
 
     .line 1
     .line 2
@@ -3159,14 +3149,14 @@
 
     .line 8
     .line 9
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 10
     .line 11
     const/4 v0, 0x0
 
     .line 12
-    invoke-static {v1, v0}, LX/4Th;->A00(LX/4Th;Z)LX/4Uv;
+    invoke-static {v1, v0}, LX/4Tl;->A00(LX/4Tl;Z)LX/4VS;
 
     .line 13
     .line 14
@@ -3174,7 +3164,7 @@
     move-result-object v0
 
     .line 16
-    invoke-virtual {v0, p1}, LX/4Uv;->A0F(F)V
+    invoke-virtual {v0, p1}, LX/4VS;->A0F(F)V
 
     .line 17
     .line 18
@@ -3306,7 +3296,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, p1}, LX/4Wb;->A03(Landroid/view/View;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, p1}, LX/431;->A0I(Landroid/view/View;I)Landroid/graphics/drawable/Drawable;
 
     .line 3
     .line 4
@@ -3367,7 +3357,7 @@
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 16
     .line 17
@@ -3446,7 +3436,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0, p1}, LX/01W;->A02(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, LX/01f;->A03(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     .line 5
     .line 6
@@ -3466,15 +3456,15 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 1
     .line 2
-    iget v0, v1, LX/4Th;->A05:I
+    iget v0, v1, LX/4Tl;->A05:I
 
     .line 3
     .line 4
-    invoke-static {v1, v0, p1}, LX/4Th;->A04(LX/4Th;II)V
+    invoke-static {v1, v0, p1}, LX/4Tl;->A04(LX/4Tl;II)V
 
     .line 5
     .line 6
@@ -3486,15 +3476,15 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 1
     .line 2
-    iget v0, v1, LX/4Th;->A02:I
+    iget v0, v1, LX/4Tl;->A02:I
 
     .line 3
     .line 4
-    invoke-static {v1, p1, v0}, LX/4Th;->A04(LX/4Th;II)V
+    invoke-static {v1, p1, v0}, LX/4Tl;->A04(LX/4Tl;II)V
 
     .line 5
     .line 6
@@ -3506,7 +3496,7 @@
     .locals 0
 
     .line 0
-    invoke-super {p0, p1}, LX/4Wt;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, LX/4SH;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 1
     .line 2
@@ -3514,11 +3504,11 @@
     return-void
 .end method
 
-.method public setOnPressedChangeListenerInternal(LX/4Tt;)V
+.method public setOnPressedChangeListenerInternal(LX/4U9;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/google/android/material/button/MaterialButton;->A02:LX/4Tt;
+    iput-object p1, p0, Lcom/google/android/material/button/MaterialButton;->A02:LX/4U9;
 
     .line 1
     .line 2
@@ -3529,7 +3519,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A02:LX/4Tt;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A02:LX/4U9;
 
     .line 1
     .line 2
@@ -3537,11 +3527,11 @@
 
     .line 3
     .line 4
-    check-cast v0, LX/4To;
+    check-cast v0, LX/4Tx;
 
     .line 5
     .line 6
-    iget-object v0, v0, LX/4To;->A00:Lcom/google/android/material/button/MaterialButtonToggleGroup;
+    iget-object v0, v0, LX/4Tx;->A00:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
     .line 7
     .line 8
@@ -3575,11 +3565,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    invoke-virtual {v0, p1}, LX/4Th;->A05(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, p1}, LX/4Tl;->A05(Landroid/content/res/ColorStateList;)V
 
     .line 9
     .line 10
@@ -3612,7 +3602,7 @@
     move-result-object v0
 
     .line 10
-    invoke-static {v0, p1}, LX/01W;->A02(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, LX/01f;->A03(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     .line 11
     .line 12
@@ -3629,7 +3619,7 @@
     return-void
 .end method
 
-.method public setShapeAppearanceModel(LX/4Uw;)V
+.method public setShapeAppearanceModel(LX/4Vd;)V
     .locals 1
 
     .line 0
@@ -3645,11 +3635,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    invoke-virtual {v0, p1}, LX/4Th;->A06(LX/4Uw;)V
+    invoke-virtual {v0, p1}, LX/4Tl;->A06(LX/4Vd;)V
 
     .line 9
     .line 10
@@ -3662,7 +3652,7 @@
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 15
     .line 16
@@ -3689,15 +3679,15 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iput-boolean p1, v0, LX/4Th;->A0H:Z
+    iput-boolean p1, v0, LX/4Tl;->A0H:Z
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/4Th;->A03(LX/4Th;)V
+    invoke-static {v0}, LX/4Tl;->A03(LX/4Tl;)V
 
     .line 11
     .line 12
@@ -3722,11 +3712,11 @@
 
     .line 5
     .line 6
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-object v0, v1, LX/4Th;->A09:Landroid/content/res/ColorStateList;
+    iget-object v0, v1, LX/4Tl;->A09:Landroid/content/res/ColorStateList;
 
     .line 9
     .line 10
@@ -3734,11 +3724,11 @@
 
     .line 11
     .line 12
-    iput-object p1, v1, LX/4Th;->A09:Landroid/content/res/ColorStateList;
+    iput-object p1, v1, LX/4Tl;->A09:Landroid/content/res/ColorStateList;
 
     .line 13
     .line 14
-    invoke-static {v1}, LX/4Th;->A03(LX/4Th;)V
+    invoke-static {v1}, LX/4Tl;->A03(LX/4Tl;)V
 
     .line 15
     .line 16
@@ -3771,7 +3761,7 @@
     move-result-object v0
 
     .line 10
-    invoke-static {v0, p1}, LX/01W;->A02(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, LX/01f;->A03(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     .line 11
     .line 12
@@ -3804,11 +3794,11 @@
 
     .line 5
     .line 6
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget v0, v1, LX/4Th;->A06:I
+    iget v0, v1, LX/4Tl;->A06:I
 
     .line 9
     .line 10
@@ -3816,11 +3806,11 @@
 
     .line 11
     .line 12
-    iput p1, v1, LX/4Th;->A06:I
+    iput p1, v1, LX/4Tl;->A06:I
 
     .line 13
     .line 14
-    invoke-static {v1}, LX/4Th;->A03(LX/4Th;)V
+    invoke-static {v1}, LX/4Tl;->A03(LX/4Tl;)V
 
     .line 15
     .line 16
@@ -3886,11 +3876,11 @@
 
     .line 5
     .line 6
-    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-object v0, v2, LX/4Th;->A07:Landroid/content/res/ColorStateList;
+    iget-object v0, v2, LX/4Tl;->A07:Landroid/content/res/ColorStateList;
 
     .line 9
     .line 10
@@ -3898,14 +3888,14 @@
 
     .line 11
     .line 12
-    iput-object p1, v2, LX/4Th;->A07:Landroid/content/res/ColorStateList;
+    iput-object p1, v2, LX/4Tl;->A07:Landroid/content/res/ColorStateList;
 
     .line 13
     .line 14
     const/4 v1, 0x0
 
     .line 15
-    invoke-static {v2, v1}, LX/4Th;->A00(LX/4Th;Z)LX/4Uv;
+    invoke-static {v2, v1}, LX/4Tl;->A00(LX/4Tl;Z)LX/4VS;
 
     .line 16
     .line 17
@@ -3917,7 +3907,7 @@
 
     .line 20
     .line 21
-    invoke-static {v2, v1}, LX/4Th;->A00(LX/4Th;Z)LX/4Uv;
+    invoke-static {v2, v1}, LX/4Tl;->A00(LX/4Tl;Z)LX/4VS;
 
     .line 22
     .line 23
@@ -3925,11 +3915,11 @@
     move-result-object v1
 
     .line 25
-    iget-object v0, v2, LX/4Th;->A07:Landroid/content/res/ColorStateList;
+    iget-object v0, v2, LX/4Tl;->A07:Landroid/content/res/ColorStateList;
 
     .line 26
     .line 27
-    invoke-static {v0, v1}, LX/4Z4;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, LX/4XA;->A05(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;)V
 
     .line 28
     .line 29
@@ -3939,7 +3929,7 @@
 
     .line 31
     :cond_1
-    invoke-super {p0, p1}, LX/4Wt;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    invoke-super {p0, p1}, LX/4SH;->setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
     .line 32
     .line 33
@@ -3963,11 +3953,11 @@
 
     .line 5
     .line 6
-    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Th;
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->A0B:LX/4Tl;
 
     .line 7
     .line 8
-    iget-object v0, v2, LX/4Th;->A0A:Landroid/graphics/PorterDuff$Mode;
+    iget-object v0, v2, LX/4Tl;->A0A:Landroid/graphics/PorterDuff$Mode;
 
     .line 9
     .line 10
@@ -3975,14 +3965,14 @@
 
     .line 11
     .line 12
-    iput-object p1, v2, LX/4Th;->A0A:Landroid/graphics/PorterDuff$Mode;
+    iput-object p1, v2, LX/4Tl;->A0A:Landroid/graphics/PorterDuff$Mode;
 
     .line 13
     .line 14
     const/4 v1, 0x0
 
     .line 15
-    invoke-static {v2, v1}, LX/4Th;->A00(LX/4Th;Z)LX/4Uv;
+    invoke-static {v2, v1}, LX/4Tl;->A00(LX/4Tl;Z)LX/4VS;
 
     .line 16
     .line 17
@@ -3994,7 +3984,7 @@
 
     .line 20
     .line 21
-    iget-object v0, v2, LX/4Th;->A0A:Landroid/graphics/PorterDuff$Mode;
+    iget-object v0, v2, LX/4Tl;->A0A:Landroid/graphics/PorterDuff$Mode;
 
     .line 22
     .line 23
@@ -4002,7 +3992,7 @@
 
     .line 24
     .line 25
-    invoke-static {v2, v1}, LX/4Th;->A00(LX/4Th;Z)LX/4Uv;
+    invoke-static {v2, v1}, LX/4Tl;->A00(LX/4Tl;Z)LX/4VS;
 
     .line 26
     .line 27
@@ -4010,11 +4000,11 @@
     move-result-object v1
 
     .line 29
-    iget-object v0, v2, LX/4Th;->A0A:Landroid/graphics/PorterDuff$Mode;
+    iget-object v0, v2, LX/4Tl;->A0A:Landroid/graphics/PorterDuff$Mode;
 
     .line 30
     .line 31
-    invoke-static {v0, v1}, LX/4Z4;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, LX/4XA;->A08(Landroid/graphics/PorterDuff$Mode;Landroid/graphics/drawable/Drawable;)V
 
     .line 32
     .line 33
@@ -4024,7 +4014,7 @@
 
     .line 35
     :cond_1
-    invoke-super {p0, p1}, LX/4Wt;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-super {p0, p1}, LX/4SH;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     .line 36
     .line 37

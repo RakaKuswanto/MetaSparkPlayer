@@ -1,57 +1,78 @@
-.class public abstract LX/5EQ;
+.class public final LX/5EQ;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/0e8;
 
-# static fields
-.field public static final A00:LX/5EQ;
+
+# instance fields
+.field public final A00:[I
+
+.field public final A01:Landroid/view/Choreographer$FrameCallback;
+
+.field public final A02:LX/2JB;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(LX/2JB;)V
+    .locals 4
 
     .line 0
-    new-instance v1, LX/5ER;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v1}, LX/5ER;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/5EQ;->A02:LX/2JB;
+
     .line 4
     .line 5
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    const/4 v3, 0x5
 
     .line 6
+    new-array v2, v3, [I
+
     .line 7
     .line 8
-    move-result-object v0
+    const/4 v1, 0x0
 
     .line 9
-    iput-object v0, v1, LX/5ER;->A01:Ljava/util/Map;
+    const/4 v0, 0x0
 
     .line 10
-    .line 11
-    invoke-virtual {v1}, LX/5EO;->A00()LX/5EP;
+    :cond_0
+    aput v1, v2, v0
 
+    .line 11
     .line 12
+    add-int/lit8 v0, v0, 0x1
+
     .line 13
     .line 14
-    move-result-object v0
+    if-lt v0, v3, :cond_0
 
     .line 15
-    sput-object v0, LX/5EQ;->A00:LX/5EQ;
-
     .line 16
+    iput-object v2, p0, LX/5EQ;->A00:[I
+
     .line 17
-    return-void
-.end method
+    .line 18
+    const/4 v1, 0x4
 
-.method public constructor <init>()V
-    .locals 0
+    .line 19
+    new-instance v0, LX/6gZ;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 20
+    .line 21
+    invoke-direct {v0, p0, v1}, LX/6gZ;-><init>(Ljava/lang/Object;I)V
 
+    .line 22
+    .line 23
+    .line 24
+    iput-object v0, p0, LX/5EQ;->A01:Landroid/view/Choreographer$FrameCallback;
+
+    .line 25
+    .line 26
     return-void
 .end method

@@ -1,24 +1,46 @@
-.class public final synthetic LX/5xk;
+.class public interface abstract LX/5xk;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5xj;
+.implements LX/5yn;
+
+
+# static fields
+.field public static final A00:LX/5ys;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    new-instance v0, LX/5ys;
 
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/5ys;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/5xk;->A00:LX/5ys;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final release()V
-    .locals 0
+.method public abstract ACN(I)I
+.end method
 
-    return-void
+.method public abstract ACO(I)Ljava/lang/String;
+.end method
+
+.method public abstract AEK(I)J
+.end method
+
+.method public abstract AP0(I)Z
 .end method

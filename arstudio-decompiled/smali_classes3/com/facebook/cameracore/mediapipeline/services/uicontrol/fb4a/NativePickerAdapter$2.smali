@@ -37,11 +37,11 @@
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;->mListener:LX/4Wa;
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;->mListener:LX/4Yv;
 
     .line 3
     .line 4
-    invoke-interface {v0}, LX/4Wa;->onGalleryClick()V
+    invoke-interface {v0}, LX/4Yv;->onGalleryClick()V
 
     .line 5
     .line 6

@@ -1,25 +1,17 @@
 .class public final LX/3Jh;
-.super Ljava/lang/Object;
+.super LX/3Jm;
 .source ""
 
 
-# instance fields
-.field public A00:LX/3Y9;
-
-
 # direct methods
-.method public constructor <init>(LX/3Y9;)V
+.method public constructor <init>(LX/302;Ljava/lang/Long;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/3Jm;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3Jh;->A00:LX/3Y9;
-
-    .line 4
-    .line 5
     return-void
 .end method

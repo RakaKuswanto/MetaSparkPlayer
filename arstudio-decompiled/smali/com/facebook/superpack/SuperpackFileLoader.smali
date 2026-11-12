@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0Uq;
+.implements LX/0Hc;
 
 
 # static fields
@@ -112,7 +112,7 @@
 
     .line 34
     .line 35
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 36
     .line 37
@@ -237,7 +237,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Vf;->A03()Ljava/lang/reflect/Method;
+    invoke-static {}, LX/0BQ;->A03()Ljava/lang/reflect/Method;
 
     .line 10
     .line 11
@@ -253,7 +253,7 @@
 
     .line 16
     .line 17
-    invoke-static {}, LX/0Vf;->A01()Ljava/lang/String;
+    invoke-static {}, LX/0BQ;->A01()Ljava/lang/String;
 
     .line 18
     .line 19
@@ -266,7 +266,7 @@
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/0Vf;->A02(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, LX/0BQ;->A02(Ljava/lang/String;)Ljava/lang/String;
 
     .line 24
     .line 25
@@ -363,7 +363,7 @@
     .line 25
     .line 26
     :goto_0
-    sget-object v0, Lcom/facebook/breakpad/BreakpadManager;->mNativeLibraryName:Ljava/lang/String;
+    sget-boolean v0, Lcom/facebook/breakpad/BreakpadManager;->initialized:Z
 
     .line 27
     .line 28
@@ -395,7 +395,7 @@
     move-result v0
 
     .line 42
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 43
     .line 44
@@ -407,7 +407,7 @@
 
     .line 47
     :try_start_1
-    invoke-static {v3}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v3}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 48
     .line 49
@@ -428,7 +428,7 @@
 
     .line 56
     .line 57
-    invoke-static {v1}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v1}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 58
     .line 59
@@ -532,7 +532,7 @@
 
     .line 106
     :catchall_0
-    move-exception v0
+    move-exception v7
 
     .line 107
     :try_start_2
@@ -541,7 +541,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 108
-    throw v0
+    throw v7
 
     .line 109
     :cond_1
@@ -615,10 +615,10 @@
 
     .line 139
     .line 140
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
     .line 141
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     .line 142
     if-ne v0, v1, :cond_5
@@ -648,7 +648,7 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_3 .. :try_end_3} :catch_2
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_6
 
     .line 152
     :try_start_4
@@ -667,11 +667,11 @@
 
     .line 158
     .line 159
-    aput-object p1, v1, v5
+    aput-object p1, v1, v6
 
     .line 160
     .line 161
-    const-class v0, LX/0VB;
+    const-class v0, LX/0FZ;
 
     .line 162
     .line 163
@@ -683,7 +683,7 @@
     move-result-object v0
 
     .line 167
-    aput-object v0, v1, v6
+    aput-object v0, v1, v5
 
     .line 168
     .line 169
@@ -765,7 +765,7 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_7 .. :try_end_7} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_7 .. :try_end_7} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_7 .. :try_end_7} :catch_1
-    .catchall {:try_start_7 .. :try_end_7} :catchall_4
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
     .line 195
     :catch_1
@@ -775,238 +775,250 @@
     goto :goto_6
 
     .line 197
-    :catchall_3
-    move-exception v0
-
-    .line 198
-    throw v0
-
-    .line 199
     :catch_2
     move-exception v1
 
-    .line 200
+    .line 198
     move-object v9, v7
 
-    .line 201
+    .line 199
     :goto_6
     :try_start_8
     const-string v0, "Error: Cannot load "
 
+    .line 200
+    .line 201
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 202
     .line 203
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 204
-    .line 205
-    .line 206
     move-result-object v0
 
-    .line 207
-    invoke-static {p1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 205
+    invoke-static {p1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 206
+    .line 207
     .line 208
-    .line 209
-    .line 210
     move-result-object v9
 
-    .line 211
+    .line 209
     new-instance v0, Ljava/lang/RuntimeException;
+
+    .line 210
+    .line 211
+    invoke-direct {v0, v9, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 212
     .line 213
-    invoke-direct {v0, v9, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
     .line 214
-    .line 215
-    .line 216
     throw v0
     :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
+
+    .line 215
+    :catchall_3
+    move-exception v7
+
+    .line 216
+    if-eqz v9, :cond_8
 
     .line 217
-    :catchall_4
-    move-exception v0
-
     .line 218
-    if-eqz v9, :cond_8
+    const-string v3, "SuperpackFileLoader"
 
     .line 219
     .line 220
-    const-string v4, "SuperpackFileLoader"
+    const-string v8, "Error when loading library: "
 
     .line 221
     .line 222
-    const-string v8, "Error when loading library: "
+    const-string v10, ", library hash is "
 
     .line 223
     .line 224
-    const-string v10, ", library hash is "
+    :try_start_9
+    invoke-static {p1}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 225
     .line 226
-    :try_start_9
-    invoke-static {p1}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
-
     .line 227
-    .line 228
-    .line 229
-    move-result-object v2
+    move-result-object v1
 
+    .line 228
+    const-string v0, "MD5"
+
+    .line 229
     .line 230
-    const-string v1, "MD5"
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     .line 231
     .line 232
-    invoke-static {v1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
-
     .line 233
+    move-result-object v6
+
     .line 234
+    invoke-static {v1}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
+
     .line 235
-    move-result-object v7
-
     .line 236
-    invoke-static {v2}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
-
     .line 237
-    .line 238
-    .line 239
-    move-result-object v5
+    move-result-object v4
 
-    .line 240
-    const/16 v1, 0x1000
+    .line 238
+    const/16 v0, 0x1000
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
     .catch Ljava/lang/SecurityException; {:try_start_9 .. :try_end_9} :catch_3
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_9 .. :try_end_9} :catch_3
 
+    .line 239
+    .line 240
+    :try_start_a
+    new-array v2, v0, [B
+
     .line 241
     .line 242
-    :try_start_a
-    new-array v3, v1, [B
+    :goto_7
+    invoke-virtual {v4, v2}, Ljava/io/InputStream;->read([B)I
 
     .line 243
     .line 244
-    :goto_7
-    invoke-virtual {v5, v3}, Ljava/io/InputStream;->read([B)I
-
     .line 245
-    .line 246
-    .line 247
-    move-result v2
+    move-result v1
 
+    .line 246
+    if-lez v1, :cond_7
+
+    .line 247
     .line 248
-    if-lez v2, :cond_7
+    const/4 v0, 0x0
 
     .line 249
+    invoke-virtual {v6, v2, v0, v1}, Ljava/security/MessageDigest;->update([BII)V
+
     .line 250
-    const/4 v1, 0x0
-
     .line 251
-    invoke-virtual {v7, v3, v1, v2}, Ljava/security/MessageDigest;->update([BII)V
-
     .line 252
-    .line 253
-    .line 254
     goto :goto_7
 
-    .line 255
+    .line 253
     :cond_7
-    const-string v3, "%32x"
+    const-string v2, "%32x"
+
+    .line 254
+    .line 255
+    invoke-virtual {v6}, Ljava/security/MessageDigest;->digest()[B
 
     .line 256
     .line 257
-    invoke-virtual {v7}, Ljava/security/MessageDigest;->digest()[B
-
     .line 258
-    .line 259
-    .line 260
-    move-result-object v2
+    move-result-object v1
 
+    .line 259
+    new-instance v0, Ljava/math/BigInteger;
+
+    .line 260
     .line 261
-    new-instance v1, Ljava/math/BigInteger;
+    invoke-direct {v0, v5, v1}, Ljava/math/BigInteger;-><init>(I[B)V
 
     .line 262
     .line 263
-    invoke-direct {v1, v6, v2}, Ljava/math/BigInteger;-><init>(I[B)V
-
     .line 264
+    invoke-static {v2, v0}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+
     .line 265
     .line 266
-    invoke-static {v3, v1}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
-
     .line 267
-    .line 268
-    .line 269
     move-result-object v11
     :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_5
+    .catchall {:try_start_a .. :try_end_a} :catchall_4
 
-    .line 270
+    .line 268
     :try_start_b
-    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/InputStream;->close()V
 
+    .line 269
+    .line 270
     .line 271
-    .line 272
-    .line 273
-    goto :goto_8
+    goto :goto_9
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_3
     .catch Ljava/lang/SecurityException; {:try_start_b .. :try_end_b} :catch_3
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_b .. :try_end_b} :catch_3
 
-    .line 274
-    :catchall_5
+    .line 272
+    :catchall_4
     move-exception v1
 
-    .line 275
+    .line 273
     :try_start_c
-    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_6
+    invoke-virtual {v4}, Ljava/io/InputStream;->close()V
 
+    .line 274
+    .line 275
     .line 276
+    goto :goto_8
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_5
+
     .line 277
+    :catchall_5
+    move-exception v0
+
     .line 278
-    :catchall_6
     :try_start_d
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 279
+    .line 280
+    .line 281
+    :goto_8
     throw v1
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_3
     .catch Ljava/lang/SecurityException; {:try_start_d .. :try_end_d} :catch_3
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_d .. :try_end_d} :catch_3
 
-    .line 279
-    :catch_3
-    move-exception v1
-
-    .line 280
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 281
     .line 282
+    :catch_3
+    move-exception v0
+
     .line 283
-    move-result-object v11
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 284
-    :goto_8
-    const-string v12, ", LD_LIBRARY_PATH is "
-
     .line 285
     .line 286
-    invoke-static/range {v8 .. v13}, LX/00I;->A0P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v11
 
     .line 287
+    :goto_9
+    const-string v12, ", LD_LIBRARY_PATH is "
+
     .line 288
     .line 289
-    move-result-object v1
+    invoke-static/range {v8 .. v13}, LX/004;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 290
-    invoke-static {v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 291
     .line 292
+    move-result-object v0
+
     .line 293
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 294
+    .line 295
+    .line 296
+    throw v7
+
+    .line 297
+    :catchall_6
+    move-exception v7
+
+    .line 298
     :cond_8
-    throw v0
+    throw v7
 .end method

@@ -3,43 +3,117 @@
 .source ""
 
 # interfaces
-.implements LX/5rV;
+.implements Ljava/util/Comparator;
 
 
-# instance fields
-.field public final synthetic A00:LX/5q4;
+# static fields
+.field public static A00:LX/5r9;
 
 
 # direct methods
-.method public constructor <init>(LX/5q4;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/5r9;->A00:LX/5q4;
+    new-instance v0, LX/5r9;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, LX/5r9;-><init>()V
 
     .line 3
     .line 4
     .line 5
+    sput-object v0, LX/5r9;->A00:LX/5r9;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final AB8()LX/5pd;
-    .locals 1
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 6
 
     .line 0
-    iget-object v0, p0, LX/5r9;->A00:LX/5q4;
+    check-cast p1, LX/5qp;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/5q4;->A0B:LX/5pd;
+    check-cast p2, LX/5qp;
 
     .line 3
     .line 4
-    return-object v0
+    invoke-virtual {p1}, LX/5qp;->AKD()J
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-wide v4
+
+    .line 8
+    invoke-virtual {p2}, LX/5qp;->AKD()J
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-wide v0
+
+    .line 12
+    sub-long/2addr v4, v0
+
+    .line 13
+    const-wide/16 v2, 0x0
+
+    .line 14
+    .line 15
+    cmp-long v0, v4, v2
+
+    .line 16
+    .line 17
+    if-eqz v0, :cond_1
+
+    .line 18
+    .line 19
+    cmp-long v1, v4, v2
+
+    .line 20
+    .line 21
+    const/4 v0, 0x1
+
+    .line 22
+    if-gez v1, :cond_0
+
+    .line 23
+    .line 24
+    const/4 v0, -0x1
+
+    .line 25
+    :cond_0
+    return v0
+
+    .line 26
+    :cond_1
+    invoke-static {p1, p2}, LX/5r2;->A00(LX/5r5;LX/5r5;)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    return v0
 .end method

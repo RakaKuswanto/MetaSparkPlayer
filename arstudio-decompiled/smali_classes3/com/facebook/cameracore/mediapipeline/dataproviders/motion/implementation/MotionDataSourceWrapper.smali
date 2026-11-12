@@ -3,11 +3,11 @@
 .source ""
 
 # interfaces
-.implements LX/5Wg;
+.implements LX/5p8;
 
 
 # instance fields
-.field public final mDataSource:LX/5WZ;
+.field public final mDataSource:LX/5pC;
 
 .field public final mHybridData:Lcom/facebook/jni/HybridData;
 
@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public constructor <init>(LX/5WZ;)V
+.method public constructor <init>(LX/5pC;)V
     .locals 1
 
     .line 0
@@ -24,7 +24,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5WZ;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5pC;
 
     .line 4
     .line 5
@@ -47,7 +47,7 @@
 
     .line 13
     .line 14
-    invoke-interface {p1, p0}, LX/5WZ;->setListener(LX/5Wg;)V
+    invoke-interface {p1, p0}, LX/5pC;->addListener(LX/5p8;)V
 
     .line 15
     .line 16
@@ -93,11 +93,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5WZ;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5pC;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5WZ;->getExecutionMode()Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataSource$ExecutionMode;
+    invoke-interface {v0}, LX/5pC;->getExecutionMode()Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataSource$ExecutionMode;
 
     .line 3
     .line 4
@@ -120,11 +120,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5WZ;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5pC;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5WZ;->hasRawData()Z
+    invoke-interface {v0}, LX/5pC;->hasRawData()Z
 
     .line 3
     .line 4
@@ -139,11 +139,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5WZ;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5pC;
 
     .line 1
     .line 2
-    invoke-interface {v0, p1}, LX/5WZ;->isSensorAvailable(I)Z
+    invoke-interface {v0, p1}, LX/5pC;->isSensorAvailable(I)Z
 
     .line 3
     .line 4
@@ -208,11 +208,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5WZ;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5pC;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5WZ;->start()V
+    invoke-interface {v0}, LX/5pC;->start()V
 
     .line 3
     .line 4
@@ -224,11 +224,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5WZ;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/implementation/MotionDataSourceWrapper;->mDataSource:LX/5pC;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/5WZ;->stop()V
+    invoke-interface {v0}, LX/5pC;->stop()V
 
     .line 3
     .line 4

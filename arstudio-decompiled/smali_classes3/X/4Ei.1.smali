@@ -1,18 +1,22 @@
 .class public final LX/4Ei;
-.super LX/4Em;
+.super LX/6Yz;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:LX/4Eh;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/4Eh;)V
+    .locals 0
 
     .line 0
-    const-string v0, "ACTION_GO_BACK"
+    iput-object p1, p0, LX/4Ei;->A00:LX/4Eh;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4Em;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, LX/6Yz;-><init>()V
 
     .line 3
     .line 4

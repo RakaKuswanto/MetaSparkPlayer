@@ -1,16 +1,6 @@
 .class public final LX/4Zh;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.super LX/4Zd;
 .source ""
-
-
-# instance fields
-.field public A00:Landroid/animation/AnimatorSet;
-
-.field public A01:LX/0YO;
-
-.field public A02:LX/4ZU;
-
-.field public A03:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -18,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+    invoke-direct {p0}, LX/4Zd;-><init>()V
 
     .line 1
     .line 2
@@ -28,50 +18,49 @@
 
 
 # virtual methods
-.method public final getChangingConfigurations()I
+.method public final A03(II)I
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
-.end method
-
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .line 268435456
-    const-string v0, "No constant state support for SDK < 24."
-
-    .line 268435457
-    .line 268435458
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    move-result-object v0
-
-    .line 268435462
-    throw v0
-.end method
-
-.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .line 0
-    const-string v0, "No constant state support for SDK < 24."
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
     .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
+    .line 4
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ThreadLocalRandom;->nextInt(II)I
+
+    .line 5
     .line 6
-    throw v0
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+.end method
+
+.method public final A04()Ljava/util/Random;
+    .locals 1
+
+    .line 0
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 5
+    .line 6
+    .line 7
+    check-cast v0, Ljava/util/Random;
+
+    .line 8
+    .line 9
+    return-object v0
 .end method

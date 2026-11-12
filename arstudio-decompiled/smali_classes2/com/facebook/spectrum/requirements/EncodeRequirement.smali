@@ -31,16 +31,16 @@
 .method public constructor <init>(Lcom/facebook/spectrum/image/EncodedImageFormat;I)V
     .locals 1
 
-    .line 805306368
+    .line 536870912
     sget-object v0, Lcom/facebook/spectrum/requirements/EncodeRequirement$Mode;->ANY:Lcom/facebook/spectrum/requirements/EncodeRequirement$Mode;
 
-    .line 805306369
-    .line 805306370
+    .line 536870913
+    .line 536870914
     invoke-direct {p0, p1, p2, v0}, Lcom/facebook/spectrum/requirements/EncodeRequirement;-><init>(Lcom/facebook/spectrum/image/EncodedImageFormat;ILcom/facebook/spectrum/requirements/EncodeRequirement$Mode;)V
 
-    .line 805306371
-    .line 805306372
-    .line 805306373
+    .line 536870915
+    .line 536870916
+    .line 536870917
     return-void
 .end method
 
@@ -71,15 +71,15 @@
 .method public constructor <init>(Lcom/facebook/spectrum/image/EncodedImageFormat;Lcom/facebook/spectrum/requirements/EncodeRequirement$Mode;)V
     .locals 1
 
-    .line 536870912
+    .line 805306368
     const/4 v0, 0x0
 
-    .line 536870913
+    .line 805306369
     invoke-direct {p0, p1, v0, p2}, Lcom/facebook/spectrum/requirements/EncodeRequirement;-><init>(Lcom/facebook/spectrum/image/EncodedImageFormat;ILcom/facebook/spectrum/requirements/EncodeRequirement$Mode;)V
 
-    .line 536870914
-    .line 536870915
-    .line 536870916
+    .line 805306370
+    .line 805306371
+    .line 805306372
     return-void
 .end method
 
@@ -174,7 +174,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -235,18 +235,13 @@
 
     .line 32
     .line 33
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, LX/0X1;->A0O(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 34
     .line 35
     .line 36
-    invoke-static {v1}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 37
-    .line 38
-    .line 39
     move-result-object v0
 
-    .line 40
+    .line 37
     return-object v0
 .end method

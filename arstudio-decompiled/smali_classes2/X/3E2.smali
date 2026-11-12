@@ -1,97 +1,101 @@
 .class public final LX/3E2;
-.super LX/3E1;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements LX/2aE;
 
 
 # instance fields
-.field public final A00:Ljava/util/concurrent/ScheduledFuture;
+.field public A00:I
+
+.field public A01:J
+
+.field public A02:J
+
+.field public A03:J
+
+.field public A04:J
+
+.field public A05:J
+
+.field public A06:J
+
+.field public A07:J
+
+.field public A08:LX/0Bx;
+
+.field public A09:LX/0C2;
+
+.field public A0A:Lcom/facebook/common/dextricks/stats/ClassLoadingStats$SnapshotStats;
+
+.field public A0B:LX/0Fc;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/util/concurrent/ScheduledFuture;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1}, LX/3E1;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;)V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p2, p0, LX/3E2;->A00:Ljava/util/concurrent/ScheduledFuture;
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final cancel(Z)Z
+.method public constructor <init>()V
     .locals 2
 
     .line 0
-    invoke-super {p0, p1}, LX/3E3;->cancel(Z)Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result v1
+    const/4 v0, -0x1
 
     .line 4
-    if-eqz v1, :cond_0
+    iput v0, p0, LX/3E2;->A00:I
 
     .line 5
     .line 6
-    iget-object v0, p0, LX/3E2;->A00:Ljava/util/concurrent/ScheduledFuture;
+    const-wide/16 v0, -0x1
 
     .line 7
     .line 8
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    iput-wide v0, p0, LX/3E2;->A05:J
 
     .line 9
     .line 10
+    iput-wide v0, p0, LX/3E2;->A06:J
+
     .line 11
-    :cond_0
-    return v1
-.end method
+    .line 12
+    iput-wide v0, p0, LX/3E2;->A07:J
 
-.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 1
+    .line 13
+    .line 14
+    iput-wide v0, p0, LX/3E2;->A01:J
 
-    .line 0
-    iget-object v0, p0, LX/3E2;->A00:Ljava/util/concurrent/ScheduledFuture;
+    .line 15
+    .line 16
+    iput-wide v0, p0, LX/3E2;->A03:J
 
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    .line 17
+    .line 18
+    iput-wide v0, p0, LX/3E2;->A04:J
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    .line 19
+    .line 20
+    iput-wide v0, p0, LX/3E2;->A02:J
 
-    .line 6
-    return v0
-.end method
+    .line 21
+    .line 22
+    const/4 v0, 0x0
 
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 2
+    .line 23
+    iput-object v0, p0, LX/3E2;->A09:LX/0C2;
 
-    .line 0
-    iget-object v0, p0, LX/3E2;->A00:Ljava/util/concurrent/ScheduledFuture;
+    .line 24
+    .line 25
+    iput-object v0, p0, LX/3E2;->A0A:Lcom/facebook/common/dextricks/stats/ClassLoadingStats$SnapshotStats;
 
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .line 26
+    .line 27
+    iput-object v0, p0, LX/3E2;->A08:LX/0Bx;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-wide v0
+    .line 28
+    .line 29
+    iput-object v0, p0, LX/3E2;->A0B:LX/0Fc;
 
-    .line 6
-    return-wide v0
+    .line 30
+    .line 31
+    return-void
 .end method

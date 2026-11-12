@@ -81,7 +81,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -148,11 +148,11 @@
 .method public native stop3DCapturing()V
 .end method
 
-.method public updateFrame(LX/5Wi;IZ)V
+.method public updateFrame(LX/5rO;IZ)V
     .locals 35
 
     .line 0
-    invoke-virtual/range {p1 .. p1}, LX/5Wi;->get()Ljava/lang/Object;
+    invoke-virtual/range {p1 .. p1}, LX/5rO;->get()Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -160,23 +160,23 @@
     move-result-object v15
 
     .line 4
-    check-cast v15, LX/5Uy;
+    check-cast v15, LX/5ut;
 
     .line 5
     .line 6
-    iget v13, v15, LX/5Uy;->A04:I
+    iget v13, v15, LX/5ut;->A04:I
 
     .line 7
     .line 8
-    iget v12, v15, LX/5Uy;->A02:I
+    iget v12, v15, LX/5ut;->A02:I
 
     .line 9
     .line 10
-    iget-object v2, v15, LX/5Uy;->A0C:[LX/5WI;
+    iget-object v2, v15, LX/5ut;->A0C:[LX/5v9;
 
     .line 11
     .line 12
-    iget-object v4, v15, LX/5Uy;->A0A:[B
+    iget-object v4, v15, LX/5ut;->A0A:[B
 
     .line 13
     .line 14
@@ -199,19 +199,19 @@
 
     .line 22
     .line 23
-    iget v3, v15, LX/5Uy;->A03:I
+    iget v3, v15, LX/5ut;->A03:I
 
     .line 24
     .line 25
-    iget-wide v0, v15, LX/5Uy;->A07:J
+    iget-wide v0, v15, LX/5ut;->A07:J
 
     .line 26
     .line 27
-    iget-boolean v2, v15, LX/5Uy;->A09:Z
+    iget-boolean v2, v15, LX/5ut;->A09:Z
 
     .line 28
     .line 29
-    invoke-virtual/range {p1 .. p1}, LX/5Wi;->A00()LX/5Wh;
+    invoke-virtual/range {p1 .. p1}, LX/5rO;->A00()LX/5rP;
 
     .line 30
     .line 31
@@ -293,7 +293,7 @@
 
     .line 64
     .line 65
-    iget v14, v5, LX/5WI;->A01:I
+    iget v14, v5, LX/5v9;->A01:I
 
     .line 66
     .line 67
@@ -305,7 +305,7 @@
 
     .line 70
     :cond_2
-    iget v11, v5, LX/5WI;->A00:I
+    iget v11, v5, LX/5v9;->A00:I
 
     .line 71
     .line 72
@@ -320,7 +320,7 @@
 
     .line 76
     .line 77
-    iget v10, v0, LX/5WI;->A01:I
+    iget v10, v0, LX/5v9;->A01:I
 
     .line 78
     .line 79
@@ -332,7 +332,7 @@
 
     .line 82
     :cond_3
-    iget v9, v0, LX/5WI;->A00:I
+    iget v9, v0, LX/5v9;->A00:I
 
     .line 83
     .line 84
@@ -348,7 +348,7 @@
 
     .line 88
     .line 89
-    iget v8, v3, LX/5WI;->A01:I
+    iget v8, v3, LX/5v9;->A01:I
 
     .line 90
     .line 91
@@ -360,16 +360,16 @@
 
     .line 94
     :cond_4
-    iget v7, v3, LX/5WI;->A00:I
+    iget v7, v3, LX/5v9;->A00:I
 
     .line 95
     .line 96
     :goto_1
-    iget v6, v15, LX/5Uy;->A03:I
+    iget v6, v15, LX/5ut;->A03:I
 
     .line 97
     .line 98
-    iget-object v5, v5, LX/5WI;->A02:Ljava/nio/ByteBuffer;
+    iget-object v5, v5, LX/5v9;->A02:Ljava/nio/ByteBuffer;
 
     .line 99
     .line 100
@@ -384,7 +384,7 @@
 
     .line 104
     .line 105
-    iget-object v4, v4, LX/5WI;->A02:Ljava/nio/ByteBuffer;
+    iget-object v4, v4, LX/5v9;->A02:Ljava/nio/ByteBuffer;
 
     .line 106
     .line 107
@@ -396,21 +396,21 @@
 
     .line 110
     .line 111
-    iget-object v3, v0, LX/5WI;->A02:Ljava/nio/ByteBuffer;
+    iget-object v3, v0, LX/5v9;->A02:Ljava/nio/ByteBuffer;
 
     .line 112
     .line 113
     :cond_5
     :goto_2
-    iget-wide v1, v15, LX/5Uy;->A07:J
+    iget-wide v1, v15, LX/5ut;->A07:J
 
     .line 114
     .line 115
-    iget-boolean v0, v15, LX/5Uy;->A09:Z
+    iget-boolean v0, v15, LX/5ut;->A09:Z
 
     .line 116
     .line 117
-    invoke-virtual/range {p1 .. p1}, LX/5Wi;->A00()LX/5Wh;
+    invoke-virtual/range {p1 .. p1}, LX/5rO;->A00()LX/5rP;
 
     .line 118
     .line 119

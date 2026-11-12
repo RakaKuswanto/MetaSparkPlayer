@@ -117,11 +117,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x45
+    const/16 v0, 0x3d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -245,7 +245,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 28
     .line 29
@@ -257,7 +257,7 @@
 
     .line 32
     .line 33
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 34
     .line 35
@@ -281,7 +281,7 @@
 
     .line 44
     .line 45
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 46
     .line 47
@@ -317,7 +317,7 @@
 
     .line 62
     .line 63
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 64
     .line 65
@@ -341,125 +341,162 @@
 
     .line 74
     .line 75
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {p1, v0, v1}, LX/0X5;->A13(Landroid/os/Parcel;Ljava/lang/Class;Ljava/util/Map;)V
 
     .line 76
     .line 77
     .line 78
-    move-result-object v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 79
-    invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->readMap(Ljava/util/Map;Ljava/lang/ClassLoader;)V
-
     .line 80
     .line 81
+    move-result-object v0
+
     .line 82
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/graphql/error/GraphQLError;->severity:Ljava/lang/String;
 
     .line 83
     .line 84
-    .line 85
-    move-result-object v0
-
-    .line 86
-    iput-object v0, p0, Lcom/facebook/graphql/error/GraphQLError;->severity:Ljava/lang/String;
-
-    .line 87
-    .line 88
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-wide v0
+
+    .line 88
+    iput-wide v0, p0, Lcom/facebook/graphql/error/GraphQLError;->helpCenterId:J
 
     .line 89
     .line 90
-    .line 91
-    move-result-wide v0
-
-    .line 92
-    iput-wide v0, p0, Lcom/facebook/graphql/error/GraphQLError;->helpCenterId:J
-
-    .line 93
-    .line 94
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/common/collect/ImmutableMap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJZZZ)V
     .locals 14
 
+    .line 268435456
     const/4 v6, 0x0
 
-    .line 268928713
-    sget-object v3, LX/1dO;->GRAPHQL_KERROR_DOMAIN:LX/1dO;
+    .line 268435457
+    sget-object v3, LX/1yl;->GRAPHQL_KERROR_DOMAIN:LX/1yl;
 
+    .line 268435458
+    .line 268435459
     const/4 v12, 0x0
 
+    .line 268435460
     move-object v2, p0
 
+    .line 268435461
     move-object/from16 v10, p2
 
+    .line 268435462
+    .line 268435463
     move-object/from16 v4, p3
 
+    .line 268435464
+    .line 268435465
     move-object/from16 v9, p4
 
+    .line 268435466
+    .line 268435467
     move-object/from16 v5, p5
 
+    .line 268435468
+    .line 268435469
     move/from16 v11, p7
 
+    .line 268435470
+    .line 268435471
     move/from16 v13, p12
 
+    .line 268435472
+    .line 268435473
     move-object v7, v6
 
+    .line 268435474
     move-object v8, v6
 
-    invoke-direct/range {v2 .. v13}, Lcom/facebook/http/protocol/ApiErrorResult;-><init>(LX/1dO;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZ)V
+    .line 268435475
+    invoke-direct/range {v2 .. v13}, Lcom/facebook/http/protocol/ApiErrorResult;-><init>(LX/1yl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZ)V
 
-    .line 268928714
+    .line 268435476
+    .line 268435477
+    .line 268435478
     iput v11, p0, Lcom/facebook/graphql/error/GraphQLError;->code:I
 
-    .line 268928715
+    .line 268435479
+    .line 268435480
     move/from16 v0, p8
 
+    .line 268435481
+    .line 268435482
     iput v0, p0, Lcom/facebook/graphql/error/GraphQLError;->apiErrorCode:I
 
-    .line 268928716
+    .line 268435483
+    .line 268435484
     iput-object v10, p0, Lcom/facebook/graphql/error/GraphQLError;->summary:Ljava/lang/String;
 
-    .line 268928717
+    .line 268435485
+    .line 268435486
     iput-object v4, p0, Lcom/facebook/graphql/error/GraphQLError;->description:Ljava/lang/String;
 
-    .line 268928718
+    .line 268435487
+    .line 268435488
     move/from16 v0, p11
 
+    .line 268435489
+    .line 268435490
     iput-boolean v0, p0, Lcom/facebook/graphql/error/GraphQLError;->isSilent:Z
 
-    .line 268928719
+    .line 268435491
+    .line 268435492
     iput-boolean v13, p0, Lcom/facebook/graphql/error/GraphQLError;->isTransient:Z
 
-    .line 268928720
+    .line 268435493
+    .line 268435494
     iput-object v9, p0, Lcom/facebook/graphql/error/GraphQLError;->fbRequestId:Ljava/lang/String;
 
-    .line 268928721
+    .line 268435495
+    .line 268435496
     move/from16 v0, p13
 
+    .line 268435497
+    .line 268435498
     iput-boolean v0, p0, Lcom/facebook/graphql/error/GraphQLError;->requiresReauth:Z
 
-    .line 268928722
+    .line 268435499
+    .line 268435500
     iput-object v5, p0, Lcom/facebook/graphql/error/GraphQLError;->debugInfo:Ljava/lang/String;
 
-    .line 268928723
+    .line 268435501
+    .line 268435502
     iput-object v6, p0, Lcom/facebook/graphql/error/GraphQLError;->queryPath:Ljava/lang/String;
 
-    .line 268928724
+    .line 268435503
+    .line 268435504
     iput-object p1, p0, Lcom/facebook/graphql/error/GraphQLError;->sentryBlockUserInfo:Lcom/google/common/collect/ImmutableMap;
 
-    .line 268928725
+    .line 268435505
+    .line 268435506
     move-object/from16 v0, p6
 
+    .line 268435507
+    .line 268435508
     iput-object v0, p0, Lcom/facebook/graphql/error/GraphQLError;->severity:Ljava/lang/String;
 
-    .line 268928726
+    .line 268435509
+    .line 268435510
     move-wide/from16 v0, p9
 
+    .line 268435511
+    .line 268435512
     iput-wide v0, p0, Lcom/facebook/graphql/error/GraphQLError;->helpCenterId:J
 
+    .line 268435513
+    .line 268435514
     return-void
 .end method
 
@@ -511,7 +548,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0, v1}, LX/0Ye;->A1X(ILjava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/0X2;->A1Q(ILjava/lang/Object;)Z
 
     .line 20
     .line 21
@@ -539,7 +576,7 @@
 
     .line 32
     .line 33
-    invoke-static {v0, v1}, LX/0Ye;->A1X(ILjava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/0X2;->A1Q(ILjava/lang/Object;)Z
 
     .line 34
     .line 35
@@ -607,7 +644,7 @@
 
     .line 66
     .line 67
-    invoke-static {v1, v0}, LX/0Ye;->A1b(Ljava/lang/Object;Z)Z
+    invoke-static {v1, v0}, LX/0X2;->A1Z(Ljava/lang/Object;Z)Z
 
     .line 68
     .line 69
@@ -635,7 +672,7 @@
 
     .line 80
     .line 81
-    invoke-static {v1, v0}, LX/0Ye;->A1b(Ljava/lang/Object;Z)Z
+    invoke-static {v1, v0}, LX/0X2;->A1Z(Ljava/lang/Object;Z)Z
 
     .line 82
     .line 83
@@ -683,7 +720,7 @@
 
     .line 104
     .line 105
-    invoke-static {v1, v0}, LX/0Ye;->A1b(Ljava/lang/Object;Z)Z
+    invoke-static {v1, v0}, LX/0X2;->A1Z(Ljava/lang/Object;Z)Z
 
     .line 106
     .line 107
@@ -799,7 +836,7 @@
     move-result-object v0
 
     .line 163
-    invoke-static {v2, v0}, LX/0Yf;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, LX/0X3;->A1Z(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 164
     .line 165
@@ -819,7 +856,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0R(Ljava/lang/Class;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-static {v0}, LX/0X4;->A0U(Ljava/lang/Class;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 3
     .line 4
@@ -831,160 +868,164 @@
 
     .line 7
     .line 8
-    const-string v0, "code"
+    const-string/jumbo v0, "code"
 
     .line 9
     .line 10
+    .line 11
     invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 11
     .line 12
     .line 13
+    .line 14
     iget v1, p0, Lcom/facebook/graphql/error/GraphQLError;->apiErrorCode:I
 
-    .line 14
     .line 15
-    const-string v0, "api_error_code"
-
     .line 16
-    .line 17
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "api_error_code"
 
+    .line 17
     .line 18
     .line 19
-    .line 20
-    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->summary:Ljava/lang/String;
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 20
     .line 21
     .line 22
-    const-string/jumbo v0, "summary"
+    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->summary:Ljava/lang/String;
 
     .line 23
     .line 24
-    .line 25
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "summary"
 
+    .line 25
     .line 26
     .line 27
-    .line 28
-    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->description:Ljava/lang/String;
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 28
     .line 29
     .line 30
-    const-string v0, "description"
+    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->description:Ljava/lang/String;
 
     .line 31
     .line 32
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "description"
 
     .line 33
     .line 34
     .line 35
-    iget-boolean v1, p0, Lcom/facebook/graphql/error/GraphQLError;->isSilent:Z
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 36
     .line 37
-    const-string/jumbo v0, "is_silent"
-
     .line 38
+    iget-boolean v1, p0, Lcom/facebook/graphql/error/GraphQLError;->isSilent:Z
+
     .line 39
     .line 40
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "is_silent"
 
     .line 41
     .line 42
     .line 43
-    iget-boolean v1, p0, Lcom/facebook/graphql/error/GraphQLError;->requiresReauth:Z
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 44
     .line 45
-    const-string/jumbo v0, "requires_reauth"
-
     .line 46
+    iget-boolean v1, p0, Lcom/facebook/graphql/error/GraphQLError;->requiresReauth:Z
+
     .line 47
     .line 48
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "requires_reauth"
 
     .line 49
     .line 50
     .line 51
-    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->debugInfo:Ljava/lang/String;
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 52
     .line 53
-    const-string v0, "debug_info"
-
     .line 54
-    .line 55
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->debugInfo:Ljava/lang/String;
 
+    .line 55
     .line 56
+    const-string/jumbo v0, "debug_info"
+
     .line 57
     .line 58
-    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->queryPath:Ljava/lang/String;
-
     .line 59
-    .line 60
-    const-string/jumbo v0, "query_path"
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 60
     .line 61
     .line 62
-    .line 63
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->queryPath:Ljava/lang/String;
 
+    .line 63
     .line 64
+    const-string/jumbo v0, "query_path"
+
     .line 65
     .line 66
-    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->sentryBlockUserInfo:Lcom/google/common/collect/ImmutableMap;
-
     .line 67
-    .line 68
-    const-string/jumbo v0, "sentry_block_user_info"
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 68
     .line 69
     .line 70
-    .line 71
-    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->sentryBlockUserInfo:Lcom/google/common/collect/ImmutableMap;
 
+    .line 71
     .line 72
+    const-string/jumbo v0, "sentry_block_user_info"
+
     .line 73
     .line 74
-    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->severity:Ljava/lang/String;
-
     .line 75
-    .line 76
-    const-string/jumbo v0, "severity"
-
-    .line 77
-    .line 78
-    .line 79
     invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 76
+    .line 77
+    .line 78
+    iget-object v1, p0, Lcom/facebook/graphql/error/GraphQLError;->severity:Ljava/lang/String;
+
+    .line 79
     .line 80
+    const-string/jumbo v0, "severity"
+
     .line 81
     .line 82
-    iget-wide v1, p0, Lcom/facebook/graphql/error/GraphQLError;->helpCenterId:J
-
     .line 83
-    .line 84
-    const-string/jumbo v0, "help_center_id"
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 84
     .line 85
     .line 86
-    .line 87
-    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-wide v1, p0, Lcom/facebook/graphql/error/GraphQLError;->helpCenterId:J
 
+    .line 87
     .line 88
+    const-string/jumbo v0, "help_center_id"
+
     .line 89
     .line 90
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
     .line 91
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
     .line 92
     .line 93
+    .line 94
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 95
+    .line 96
+    .line 97
     move-result-object v0
 
-    .line 94
+    .line 98
     return-object v0
 .end method
 

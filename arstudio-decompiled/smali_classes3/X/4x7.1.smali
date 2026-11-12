@@ -1,25 +1,8 @@
-.class public final LX/4x7;
+.class public interface abstract LX/4x7;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/4wt;
-
-
-# direct methods
-.method public constructor <init>(LX/4wt;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/4x7;->A00:LX/4wt;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+# virtual methods
+.method public abstract A2U(Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;
 .end method

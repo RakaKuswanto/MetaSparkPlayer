@@ -34,7 +34,7 @@
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/4XG;->A0J:[I
+    sget-object v0, LX/4M2;->A0J:[I
 
     .line 4
     .line 5

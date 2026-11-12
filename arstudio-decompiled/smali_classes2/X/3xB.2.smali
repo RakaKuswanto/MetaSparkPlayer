@@ -3,53 +3,91 @@
 .source ""
 
 # interfaces
-.implements LX/3xF;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$25"
+
+
+# instance fields
+.field public final synthetic A00:LX/3wv;
+
+.field public final synthetic A01:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/3wv;Ljava/util/List;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/3xB;->A00:LX/3wv;
 
     .line 1
     .line 2
+    iput-object p2, p0, LX/3xB;->A01:Ljava/util/List;
+
     .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final A7l(LX/20s;LX/6NF;LX/67S;LX/20r;ZZ)LX/31M;
-    .locals 2
+.method public final run()V
+    .locals 3
 
     .line 0
-    const/4 v0, 0x0
+    iget-object v0, p0, LX/3xB;->A00:LX/3wv;
 
     .line 1
-    new-instance v1, LX/1Ns;
-
     .line 2
-    .line 3
-    invoke-direct {v1, p0, v0}, LX/1Ns;-><init>(Ljava/lang/Object;I)V
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
 
+    .line 3
     .line 4
     .line 5
+    move-result-object v2
+
     .line 6
-    new-instance v0, LX/6La;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     .line 7
     .line 8
-    invoke-direct {v0, p1, p4, v1}, LX/6La;-><init>(LX/20s;LX/20r;LX/67N;)V
-
     .line 9
-    .line 10
-    .line 11
-    invoke-interface {p2, v0}, LX/6NF;->AiK(LX/3JL;)V
+    move-result v0
 
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
     .line 12
+    invoke-static {v2}, LX/0X6;->A0X(Ljava/util/Iterator;)LX/3xA;
+
     .line 13
     .line 14
-    return-object v0
+    .line 15
+    move-result-object v1
+
+    .line 16
+    iget-object v0, p0, LX/3xB;->A01:Ljava/util/List;
+
+    .line 17
+    .line 18
+    invoke-interface {v1, v0}, LX/3xA;->AcC(Ljava/util/List;)V
+
+    .line 19
+    .line 20
+    .line 21
+    goto :goto_0
+
+    .line 22
+    :cond_0
+    return-void
 .end method

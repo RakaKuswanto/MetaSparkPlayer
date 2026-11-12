@@ -21,7 +21,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    invoke-static {}, LX/4BF;->A0R()Landroid/graphics/Rect;
+    invoke-static {}, LX/434;->A0R()Landroid/graphics/Rect;
 
     .line 268435460
     .line 268435461
@@ -33,7 +33,7 @@
 
     .line 268435464
     .line 268435465
-    invoke-static {}, LX/4BF;->A0S()Landroid/graphics/RectF;
+    invoke-static {}, LX/435;->A04()Landroid/graphics/RectF;
 
     .line 268435466
     .line 268435467
@@ -45,7 +45,7 @@
 
     .line 268435470
     .line 268435471
-    invoke-static {}, LX/4BF;->A0S()Landroid/graphics/RectF;
+    invoke-static {}, LX/435;->A04()Landroid/graphics/RectF;
 
     .line 268435472
     .line 268435473
@@ -69,7 +69,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/4BF;->A0R()Landroid/graphics/Rect;
+    invoke-static {}, LX/434;->A0R()Landroid/graphics/Rect;
 
     .line 4
     .line 5
@@ -81,7 +81,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/4BF;->A0S()Landroid/graphics/RectF;
+    invoke-static {}, LX/435;->A04()Landroid/graphics/RectF;
 
     .line 10
     .line 11
@@ -93,7 +93,7 @@
 
     .line 14
     .line 15
-    invoke-static {}, LX/4BF;->A0S()Landroid/graphics/RectF;
+    invoke-static {}, LX/435;->A04()Landroid/graphics/RectF;
 
     .line 16
     .line 17
@@ -141,7 +141,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 13
     .line 14
@@ -152,11 +152,11 @@
     throw v0
 .end method
 
-.method public final onAttachedToLayoutParams(LX/4SB;)V
+.method public final onAttachedToLayoutParams(LX/4PO;)V
     .locals 1
 
     .line 0
-    iget v0, p1, LX/4SB;->A00:I
+    iget v0, p1, LX/4PO;->A01:I
 
     .line 1
     .line 2
@@ -168,7 +168,7 @@
 
     .line 5
     .line 6
-    iput v0, p1, LX/4SB;->A00:I
+    iput v0, p1, LX/4PO;->A01:I
 
     .line 7
     .line 8

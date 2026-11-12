@@ -33,11 +33,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5c
+    const/16 v0, 0x5b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -77,7 +77,7 @@
 
     .line 10
     .line 11
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 12
     .line 13
@@ -117,62 +117,54 @@
 
     .line 30
     .line 31
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {p1}, LX/0X6;->A0M(Landroid/os/Parcel;)Lcom/facebook/common/util/TriState;
 
     .line 32
     .line 33
     .line 34
-    move-result v0
+    move-result-object v0
 
     .line 35
-    invoke-static {v0}, Lcom/facebook/common/util/TriState;->fromDbValue(I)Lcom/facebook/common/util/TriState;
+    iput-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A03:Lcom/facebook/common/util/TriState;
 
     .line 36
     .line 37
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 38
+    .line 39
+    .line 40
     move-result-object v0
 
-    .line 39
-    iput-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A03:Lcom/facebook/common/util/TriState;
-
-    .line 40
     .line 41
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A06:Ljava/lang/String;
 
     .line 42
     .line 43
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 44
+    .line 45
+    .line 46
     move-result-object v0
 
-    .line 45
-    iput-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A06:Ljava/lang/String;
-
-    .line 46
     .line 47
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A07:Ljava/lang/String;
 
     .line 48
     .line 49
+    invoke-static {p1}, LX/0X3;->A0b(Landroid/os/Parcel;)Ljava/lang/Integer;
+
     .line 50
+    .line 51
+    .line 52
     move-result-object v0
 
-    .line 51
-    iput-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A07:Ljava/lang/String;
-
-    .line 52
     .line 53
-    invoke-static {p1}, LX/0Yf;->A0Y(Landroid/os/Parcel;)Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A04:Ljava/lang/Integer;
 
     .line 54
     .line 55
-    .line 56
-    move-result-object v0
-
-    .line 57
-    iput-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A04:Ljava/lang/Integer;
-
-    .line 58
-    .line 59
     return-void
 .end method
 
@@ -238,7 +230,7 @@
     .locals 9
 
     .line 536870912
-    invoke-static {}, LX/0Yi;->A0d()Ljava/lang/Integer;
+    invoke-static {}, LX/0X6;->A0e()Ljava/lang/Integer;
 
     .line 536870913
     .line 536870914
@@ -332,53 +324,45 @@
 
     .line 21
     .line 22
-    invoke-virtual {v0}, Lcom/facebook/common/util/TriState;->getDbValue()I
+    invoke-static {p1, v0}, LX/0X6;->A1F(Landroid/os/Parcel;Lcom/facebook/common/util/TriState;)V
 
     .line 23
     .line 24
     .line 25
-    move-result v0
-
-    .line 26
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 27
-    .line 28
-    .line 29
     iget-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A06:Ljava/lang/String;
 
-    .line 30
-    .line 31
+    .line 26
+    .line 27
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 32
-    .line 33
-    .line 34
+    .line 28
+    .line 29
+    .line 30
     iget-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A07:Ljava/lang/String;
 
-    .line 35
-    .line 36
+    .line 31
+    .line 32
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 37
-    .line 38
-    .line 39
+    .line 33
+    .line 34
+    .line 35
     iget-object v0, p0, Lcom/facebook/auth/protocol/AuthenticationResultImpl;->A04:Ljava/lang/Integer;
 
-    .line 40
-    .line 41
+    .line 36
+    .line 37
     invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 42
     .line 43
     .line 44
-    move-result v0
-
-    .line 45
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 46
-    .line 47
-    .line 48
     return-void
 .end method

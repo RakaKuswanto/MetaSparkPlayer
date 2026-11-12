@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/6Ly;
-
 
 # static fields
 .field public static final A00:Lcom/google/android/exoplayer2/Timeline;
@@ -15,11 +12,11 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5yg;
+    new-instance v0, LX/5KV;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5yg;-><init>()V
+    invoke-direct {v0}, LX/5KV;-><init>()V
 
     .line 3
     .line 4
@@ -47,7 +44,7 @@
     .locals 6
 
     .line 0
-    instance-of v0, p0, LX/5zJ;
+    instance-of v0, p0, LX/5M3;
 
     .line 1
     .line 2
@@ -58,11 +55,11 @@
     move-object v0, p0
 
     .line 5
-    check-cast v0, LX/5zJ;
+    check-cast v0, LX/5M3;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v0, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 8
     .line 9
@@ -79,7 +76,7 @@
 
     .line 14
     :cond_1
-    instance-of v0, p0, LX/5zY;
+    instance-of v0, p0, LX/5MM;
 
     .line 15
     .line 16
@@ -90,11 +87,11 @@
     move-object v5, p0
 
     .line 19
-    check-cast v5, LX/5zY;
+    check-cast v5, LX/5MM;
 
     .line 20
     .line 21
-    iget v0, v5, LX/5zY;->A00:I
+    iget v0, v5, LX/5MM;->A00:I
 
     .line 22
     .line 23
@@ -109,15 +106,15 @@
 
     .line 27
     .line 28
-    iget-object v0, v5, LX/5zY;->A01:LX/5zc;
+    iget-object v0, v5, LX/5MM;->A01:LX/5MQ;
 
     .line 29
     .line 30
-    check-cast v0, LX/5zb;
+    check-cast v0, LX/5MO;
 
     .line 31
     .line 32
-    iget-object v2, v0, LX/5zb;->A02:[I
+    iget-object v2, v0, LX/5MO;->A02:[I
 
     .line 33
     .line 34
@@ -141,11 +138,11 @@
     move-object v3, v5
 
     .line 42
-    check-cast v3, LX/5zZ;
+    check-cast v3, LX/5MN;
 
     .line 43
     .line 44
-    iget-object v0, v3, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v3, LX/5MN;->A05:[Lcom/google/android/exoplayer2/Timeline;
 
     .line 45
     .line 46
@@ -161,7 +158,7 @@
     move-result v0
 
     .line 52
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 53
     .line 54
@@ -173,7 +170,7 @@
 
     .line 57
     .line 58
-    invoke-static {v5, v4, p1}, LX/5zY;->A01(LX/5zY;IZ)I
+    invoke-static {v5, v4, p1}, LX/5MM;->A01(LX/5MM;IZ)I
 
     .line 59
     .line 60
@@ -204,7 +201,7 @@
 
     .line 70
     :cond_5
-    iget-object v0, v3, LX/5zZ;->A04:[I
+    iget-object v0, v3, LX/5MN;->A04:[I
 
     .line 71
     .line 72
@@ -235,7 +232,7 @@
     move-result v0
 
     .line 84
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 85
     .line 86
@@ -275,7 +272,7 @@
     .locals 1
 
     .line 0
-    instance-of v0, p0, LX/5y3;
+    instance-of v0, p0, LX/5Ji;
 
     .line 1
     .line 2
@@ -286,15 +283,15 @@
     move-object v0, p0
 
     .line 5
-    check-cast v0, LX/5y3;
+    check-cast v0, LX/5Ji;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/5y3;->A04:LX/6OB;
+    iget-object v0, v0, LX/5Ji;->A04:LX/5Fk;
 
     .line 8
     .line 9
-    iget-object v0, v0, LX/6OB;->A0Q:Ljava/util/List;
+    iget-object v0, v0, LX/5Fk;->A0R:Ljava/util/List;
 
     .line 10
     .line 11
@@ -310,7 +307,7 @@
 
     .line 16
     :cond_0
-    instance-of v0, p0, LX/5yK;
+    instance-of v0, p0, LX/5Jp;
 
     .line 17
     .line 18
@@ -318,7 +315,7 @@
 
     .line 19
     .line 20
-    instance-of v0, p0, LX/5zI;
+    instance-of v0, p0, LX/5M2;
 
     .line 21
     .line 22
@@ -326,7 +323,7 @@
 
     .line 23
     .line 24
-    instance-of v0, p0, LX/5zJ;
+    instance-of v0, p0, LX/5M3;
 
     .line 25
     .line 26
@@ -337,11 +334,11 @@
     move-object v0, p0
 
     .line 29
-    check-cast v0, LX/5zJ;
+    check-cast v0, LX/5M3;
 
     .line 30
     .line 31
-    iget-object v0, v0, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v0, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 32
     .line 33
@@ -357,7 +354,7 @@
 
     .line 38
     :cond_1
-    instance-of v0, p0, LX/5yg;
+    instance-of v0, p0, LX/5KV;
 
     .line 39
     .line 40
@@ -375,11 +372,11 @@
     move-object v0, p0
 
     .line 45
-    check-cast v0, LX/5zZ;
+    check-cast v0, LX/5MN;
 
     .line 46
     .line 47
-    iget v0, v0, LX/5zZ;->A00:I
+    iget v0, v0, LX/5MN;->A00:I
 
     .line 48
     .line 49
@@ -397,7 +394,7 @@
     .locals 1
 
     .line 0
-    instance-of v0, p0, LX/5y3;
+    instance-of v0, p0, LX/5Ji;
 
     .line 1
     .line 2
@@ -405,7 +402,7 @@
 
     .line 3
     .line 4
-    instance-of v0, p0, LX/5yK;
+    instance-of v0, p0, LX/5Jp;
 
     .line 5
     .line 6
@@ -413,7 +410,7 @@
 
     .line 7
     .line 8
-    instance-of v0, p0, LX/5zI;
+    instance-of v0, p0, LX/5M2;
 
     .line 9
     .line 10
@@ -421,7 +418,7 @@
 
     .line 11
     .line 12
-    instance-of v0, p0, LX/5zJ;
+    instance-of v0, p0, LX/5M3;
 
     .line 13
     .line 14
@@ -432,11 +429,11 @@
     move-object v0, p0
 
     .line 17
-    check-cast v0, LX/5zJ;
+    check-cast v0, LX/5M3;
 
     .line 18
     .line 19
-    iget-object v0, v0, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v0, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 20
     .line 21
@@ -452,7 +449,7 @@
 
     .line 26
     :cond_0
-    instance-of v0, p0, LX/5yg;
+    instance-of v0, p0, LX/5KV;
 
     .line 27
     .line 28
@@ -470,11 +467,11 @@
     move-object v0, p0
 
     .line 33
-    check-cast v0, LX/5zZ;
+    check-cast v0, LX/5MN;
 
     .line 34
     .line 35
-    iget v0, v0, LX/5zZ;->A01:I
+    iget v0, v0, LX/5MN;->A01:I
 
     .line 36
     .line 37
@@ -492,7 +489,7 @@
     .locals 9
 
     .line 0
-    instance-of v0, p0, LX/5zJ;
+    instance-of v0, p0, LX/5M3;
 
     .line 1
     .line 2
@@ -503,11 +500,11 @@
     move-object v0, p0
 
     .line 5
-    check-cast v0, LX/5zJ;
+    check-cast v0, LX/5M3;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v0, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 8
     .line 9
@@ -524,7 +521,7 @@
 
     .line 14
     :cond_1
-    instance-of v0, p0, LX/5zY;
+    instance-of v0, p0, LX/5MM;
 
     .line 15
     .line 16
@@ -535,7 +532,7 @@
     move-object v7, p0
 
     .line 19
-    check-cast v7, LX/5zY;
+    check-cast v7, LX/5MM;
 
     .line 20
     .line 21
@@ -548,11 +545,11 @@
     move-object v4, v7
 
     .line 24
-    check-cast v4, LX/5zZ;
+    check-cast v4, LX/5MN;
 
     .line 25
     .line 26
-    iget-object v5, v4, LX/5zZ;->A04:[I
+    iget-object v5, v4, LX/5MN;->A04:[I
 
     .line 27
     .line 28
@@ -584,7 +581,7 @@
 
     .line 40
     .line 41
-    iget-object v4, v4, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
+    iget-object v4, v4, LX/5MN;->A05:[Lcom/google/android/exoplayer2/Timeline;
 
     .line 42
     .line 43
@@ -647,7 +644,7 @@
 
     .line 68
     :cond_5
-    invoke-static {v7, v3, p3}, LX/5zY;->A00(LX/5zY;IZ)I
+    invoke-static {v7, v3, p3}, LX/5MM;->A00(LX/5MM;IZ)I
 
     .line 69
     .line 70
@@ -671,7 +668,7 @@
     move-result v0
 
     .line 80
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 81
     .line 82
@@ -765,7 +762,7 @@
 
     .line 122
     :cond_9
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
+    invoke-static {}, LX/434;->A0s()Ljava/lang/IllegalStateException;
 
     .line 123
     .line 124
@@ -807,7 +804,7 @@
     .locals 9
 
     .line 0
-    instance-of v0, p0, LX/5zJ;
+    instance-of v0, p0, LX/5M3;
 
     .line 1
     .line 2
@@ -818,11 +815,11 @@
     move-object v0, p0
 
     .line 5
-    check-cast v0, LX/5zJ;
+    check-cast v0, LX/5M3;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v0, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 8
     .line 9
@@ -839,7 +836,7 @@
 
     .line 14
     :cond_1
-    instance-of v0, p0, LX/5zY;
+    instance-of v0, p0, LX/5MM;
 
     .line 15
     .line 16
@@ -850,7 +847,7 @@
     move-object v7, p0
 
     .line 19
-    check-cast v7, LX/5zY;
+    check-cast v7, LX/5MM;
 
     .line 20
     .line 21
@@ -863,11 +860,11 @@
     move-object v4, v7
 
     .line 24
-    check-cast v4, LX/5zZ;
+    check-cast v4, LX/5MN;
 
     .line 25
     .line 26
-    iget-object v5, v4, LX/5zZ;->A04:[I
+    iget-object v5, v4, LX/5MN;->A04:[I
 
     .line 27
     .line 28
@@ -899,7 +896,7 @@
 
     .line 40
     .line 41
-    iget-object v4, v4, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
+    iget-object v4, v4, LX/5MN;->A05:[Lcom/google/android/exoplayer2/Timeline;
 
     .line 42
     .line 43
@@ -962,7 +959,7 @@
 
     .line 68
     :cond_5
-    invoke-static {v7, v3, p3}, LX/5zY;->A01(LX/5zY;IZ)I
+    invoke-static {v7, v3, p3}, LX/5MM;->A01(LX/5MM;IZ)I
 
     .line 69
     .line 70
@@ -986,7 +983,7 @@
     move-result v0
 
     .line 80
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 81
     .line 82
@@ -1080,7 +1077,7 @@
 
     .line 122
     :cond_9
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
+    invoke-static {}, LX/434;->A0s()Ljava/lang/IllegalStateException;
 
     .line 123
     .line 124
@@ -1117,11 +1114,11 @@
     return p1
 .end method
 
-.method public final A06(LX/60i;LX/5zN;IIZ)I
+.method public final A06(LX/5Qj;LX/5M1;IIZ)I
     .locals 4
 
     .line 0
-    invoke-static {p1, p0, p3}, LX/4BE;->A0I(LX/60i;Lcom/google/android/exoplayer2/Timeline;I)I
+    invoke-static {p1, p0, p3}, LX/5Qj;->A00(LX/5Qj;Lcom/google/android/exoplayer2/Timeline;I)I
 
     .line 1
     .line 2
@@ -1133,7 +1130,7 @@
 
     .line 5
     .line 6
-    invoke-virtual {p0, p2, v3, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->A0G(LX/5zN;IJ)LX/5zN;
+    invoke-virtual {p0, p2, v3, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/5M1;IJ)LX/5M1;
 
     .line 7
     .line 8
@@ -1141,7 +1138,7 @@
     move-result-object v2
 
     .line 10
-    iget v2, v2, LX/5zN;->A01:I
+    iget v2, v2, LX/5M1;->A01:I
 
     .line 11
     .line 12
@@ -1164,7 +1161,7 @@
 
     .line 20
     .line 21
-    invoke-virtual {p0, p2, v3, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->A0G(LX/5zN;IJ)LX/5zN;
+    invoke-virtual {p0, p2, v3, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/5M1;IJ)LX/5M1;
 
     .line 22
     .line 23
@@ -1172,7 +1169,7 @@
     move-result-object v0
 
     .line 25
-    iget v2, v0, LX/5zN;->A00:I
+    iget v2, v0, LX/5M1;->A00:I
 
     .line 26
     .line 27
@@ -1192,7 +1189,7 @@
     .locals 5
 
     .line 0
-    instance-of v0, p0, LX/5y3;
+    instance-of v0, p0, LX/5Ji;
 
     .line 1
     .line 2
@@ -1203,7 +1200,7 @@
     move-object v3, p0
 
     .line 5
-    check-cast v3, LX/5y3;
+    check-cast v3, LX/5Ji;
 
     .line 6
     .line 7
@@ -1226,7 +1223,7 @@
     move-result v2
 
     .line 16
-    iget v1, v3, LX/5y3;->A00:I
+    iget v1, v3, LX/5Ji;->A00:I
 
     .line 17
     .line 18
@@ -1254,7 +1251,7 @@
 
     .line 28
     :cond_1
-    instance-of v0, p0, LX/5yK;
+    instance-of v0, p0, LX/5Jp;
 
     .line 29
     .line 30
@@ -1262,7 +1259,7 @@
 
     .line 31
     .line 32
-    sget-object v0, LX/5yK;->A06:Ljava/lang/Object;
+    sget-object v0, LX/5Jp;->A08:Ljava/lang/Object;
 
     .line 33
     .line 34
@@ -1289,7 +1286,7 @@
 
     .line 43
     :cond_2
-    instance-of v0, p0, LX/5zI;
+    instance-of v0, p0, LX/5M2;
 
     .line 44
     .line 45
@@ -1297,7 +1294,7 @@
 
     .line 46
     .line 47
-    sget-object v1, LX/5zH;->A02:Ljava/lang/Object;
+    sget-object v1, LX/5Lm;->A02:Ljava/lang/Object;
 
     .line 48
     .line 49
@@ -1312,7 +1309,7 @@
 
     .line 53
     :cond_3
-    instance-of v0, p0, LX/5zJ;
+    instance-of v0, p0, LX/5M3;
 
     .line 54
     .line 55
@@ -1323,11 +1320,11 @@
     move-object v2, p0
 
     .line 58
-    check-cast v2, LX/5zJ;
+    check-cast v2, LX/5M3;
 
     .line 59
     .line 60
-    instance-of v0, v2, LX/5zH;
+    instance-of v0, v2, LX/5Lm;
 
     .line 61
     .line 62
@@ -1335,15 +1332,15 @@
 
     .line 63
     .line 64
-    check-cast v2, LX/5zH;
+    check-cast v2, LX/5Lm;
 
     .line 65
     .line 66
-    iget-object v1, v2, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v1, v2, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 67
     .line 68
-    sget-object v0, LX/5zH;->A02:Ljava/lang/Object;
+    sget-object v0, LX/5Lm;->A02:Ljava/lang/Object;
 
     .line 69
     .line 70
@@ -1359,7 +1356,7 @@
 
     .line 75
     .line 76
-    iget-object v0, v2, LX/5zH;->A00:Ljava/lang/Object;
+    iget-object v0, v2, LX/5Lm;->A00:Ljava/lang/Object;
 
     .line 77
     .line 78
@@ -1384,7 +1381,7 @@
 
     .line 86
     :cond_6
-    instance-of v0, p0, LX/5yg;
+    instance-of v0, p0, LX/5KV;
 
     .line 87
     .line 88
@@ -1402,7 +1399,7 @@
     move-object v4, p0
 
     .line 93
-    check-cast v4, LX/5zY;
+    check-cast v4, LX/5MM;
 
     .line 94
     .line 95
@@ -1429,15 +1426,15 @@
 
     .line 105
     .line 106
-    check-cast v4, LX/5zZ;
+    check-cast v4, LX/5MN;
 
     .line 107
     .line 108
-    iget-object v1, v4, LX/5zZ;->A02:Ljava/util/HashMap;
+    iget-object v1, v4, LX/5MN;->A02:Ljava/util/HashMap;
 
     .line 109
     .line 110
-    invoke-virtual {v1, v2}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v1}, LX/434;->A0w(Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/Number;
 
     .line 111
     .line 112
@@ -1445,73 +1442,69 @@
     move-result-object v1
 
     .line 114
-    check-cast v1, Ljava/lang/Number;
+    if-eqz v1, :cond_0
 
     .line 115
     .line 116
-    if-eqz v1, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
     .line 117
     .line 118
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
     .line 119
-    .line 120
-    .line 121
     move-result v2
 
-    .line 122
+    .line 120
     if-eq v2, v0, :cond_0
+
+    .line 121
+    .line 122
+    iget-object v1, v4, LX/5MN;->A05:[Lcom/google/android/exoplayer2/Timeline;
 
     .line 123
     .line 124
-    iget-object v1, v4, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
+    aget-object v1, v1, v2
 
     .line 125
     .line 126
-    aget-object v1, v1, v2
+    invoke-virtual {v1, v3}, Lcom/google/android/exoplayer2/Timeline;->A07(Ljava/lang/Object;)I
 
     .line 127
     .line 128
-    invoke-virtual {v1, v3}, Lcom/google/android/exoplayer2/Timeline;->A07(Ljava/lang/Object;)I
-
     .line 129
-    .line 130
-    .line 131
     move-result v1
 
-    .line 132
+    .line 130
     if-eq v1, v0, :cond_0
+
+    .line 131
+    .line 132
+    iget-object v0, v4, LX/5MN;->A03:[I
 
     .line 133
     .line 134
-    iget-object v0, v4, LX/5zZ;->A03:[I
+    aget v0, v0, v2
 
     .line 135
     .line 136
-    aget v0, v0, v2
-
-    .line 137
-    .line 138
     add-int/2addr v0, v1
 
-    .line 139
+    .line 137
     return v0
 
-    .line 140
+    .line 138
     :cond_8
-    iget-object v0, v2, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v2, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
+
+    .line 139
+    .line 140
+    invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/Timeline;->A07(Ljava/lang/Object;)I
 
     .line 141
     .line 142
-    invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/Timeline;->A07(Ljava/lang/Object;)I
-
     .line 143
-    .line 144
-    .line 145
     move-result v2
 
-    .line 146
+    .line 144
     return v2
 .end method
 
@@ -1519,7 +1512,7 @@
     .locals 6
 
     .line 0
-    instance-of v0, p0, LX/5zJ;
+    instance-of v0, p0, LX/5M3;
 
     .line 1
     .line 2
@@ -1530,11 +1523,11 @@
     move-object v0, p0
 
     .line 5
-    check-cast v0, LX/5zJ;
+    check-cast v0, LX/5M3;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v0, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 8
     .line 9
@@ -1551,7 +1544,7 @@
 
     .line 14
     :cond_1
-    instance-of v0, p0, LX/5zY;
+    instance-of v0, p0, LX/5MM;
 
     .line 15
     .line 16
@@ -1562,11 +1555,11 @@
     move-object v5, p0
 
     .line 19
-    check-cast v5, LX/5zY;
+    check-cast v5, LX/5MM;
 
     .line 20
     .line 21
-    iget v0, v5, LX/5zY;->A00:I
+    iget v0, v5, LX/5MM;->A00:I
 
     .line 22
     .line 23
@@ -1584,15 +1577,15 @@
 
     .line 28
     .line 29
-    iget-object v0, v5, LX/5zY;->A01:LX/5zc;
+    iget-object v0, v5, LX/5MM;->A01:LX/5MQ;
 
     .line 30
     .line 31
-    check-cast v0, LX/5zb;
+    check-cast v0, LX/5MO;
 
     .line 32
     .line 33
-    iget-object v1, v0, LX/5zb;->A02:[I
+    iget-object v1, v0, LX/5MO;->A02:[I
 
     .line 34
     .line 35
@@ -1612,11 +1605,11 @@
     move-object v1, v5
 
     .line 41
-    check-cast v1, LX/5zZ;
+    check-cast v1, LX/5MN;
 
     .line 42
     .line 43
-    iget-object v0, v1, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v1, LX/5MN;->A05:[Lcom/google/android/exoplayer2/Timeline;
 
     .line 44
     .line 45
@@ -1632,7 +1625,7 @@
     move-result v0
 
     .line 51
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 52
     .line 53
@@ -1644,7 +1637,7 @@
 
     .line 56
     .line 57
-    invoke-static {v5, v3, p1}, LX/5zY;->A00(LX/5zY;IZ)I
+    invoke-static {v5, v3, p1}, LX/5MM;->A00(LX/5MM;IZ)I
 
     .line 58
     .line 59
@@ -1680,7 +1673,7 @@
     move-result v0
 
     .line 71
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 72
     .line 73
@@ -1699,7 +1692,7 @@
 
     .line 79
     :cond_6
-    iget-object v0, v1, LX/5zZ;->A04:[I
+    iget-object v0, v1, LX/5MN;->A04:[I
 
     .line 80
     .line 81
@@ -1721,7 +1714,7 @@
     return v1
 .end method
 
-.method public final A0A(LX/60i;LX/5zN;IJ)Landroid/util/Pair;
+.method public final A0A(LX/5Qj;LX/5M1;IJ)Landroid/util/Pair;
     .locals 8
 
     .line 0
@@ -1744,7 +1737,7 @@
     move-wide v4, p4
 
     .line 7
-    invoke-virtual/range {v0 .. v7}, Lcom/google/android/exoplayer2/Timeline;->A0B(LX/60i;LX/5zN;IJJ)Landroid/util/Pair;
+    invoke-virtual/range {v0 .. v7}, Lcom/google/android/exoplayer2/Timeline;->A0B(LX/5Qj;LX/5M1;IJJ)Landroid/util/Pair;
 
     .line 8
     .line 9
@@ -1760,7 +1753,7 @@
     return-object v0
 .end method
 
-.method public final A0B(LX/60i;LX/5zN;IJJ)Landroid/util/Pair;
+.method public final A0B(LX/5Qj;LX/5M1;IJJ)Landroid/util/Pair;
     .locals 8
 
     .line 0
@@ -1775,12 +1768,12 @@
     const/4 v4, 0x0
 
     .line 5
-    invoke-static {p3, v0}, LX/5PE;->A03(II)V
+    invoke-static {p3, v0}, LX/55g;->A01(II)V
 
     .line 6
     .line 7
     .line 8
-    invoke-virtual {p0, p2, p3, p6, p7}, Lcom/google/android/exoplayer2/Timeline;->A0G(LX/5zN;IJ)LX/5zN;
+    invoke-virtual {p0, p2, p3, p6, p7}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/5M1;IJ)LX/5M1;
 
     .line 9
     .line 10
@@ -1800,7 +1793,7 @@
 
     .line 19
     .line 20
-    iget-wide p4, p2, LX/5zN;->A02:J
+    iget-wide p4, p2, LX/5M1;->A02:J
 
     .line 21
     .line 22
@@ -1819,17 +1812,17 @@
 
     .line 28
     :cond_0
-    iget v5, p2, LX/5zN;->A00:I
+    iget v5, p2, LX/5M1;->A00:I
 
     .line 29
     .line 30
-    invoke-virtual {p0, p1, v5, v4}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/60i;IZ)LX/60i;
+    invoke-virtual {p0, p1, v5, v4}, Lcom/google/android/exoplayer2/Timeline;->A0E(LX/5Qj;IZ)LX/5Qj;
 
     .line 31
     .line 32
     .line 33
     :goto_0
-    iget v0, p2, LX/5zN;->A01:I
+    iget v0, p2, LX/5M1;->A01:I
 
     .line 34
     .line 35
@@ -1837,7 +1830,7 @@
 
     .line 36
     .line 37
-    iget-wide v0, p1, LX/60i;->A02:J
+    iget-wide v0, p1, LX/5Qj;->A02:J
 
     .line 38
     .line 39
@@ -1853,7 +1846,7 @@
 
     .line 44
     .line 45
-    invoke-virtual {p0, p1, v3, v4}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/60i;IZ)LX/60i;
+    invoke-virtual {p0, p1, v3, v4}, Lcom/google/android/exoplayer2/Timeline;->A0E(LX/5Qj;IZ)LX/5Qj;
 
     .line 46
     .line 47
@@ -1861,7 +1854,7 @@
     move-result-object v0
 
     .line 49
-    iget-wide v1, v0, LX/60i;->A02:J
+    iget-wide v1, v0, LX/5Qj;->A02:J
 
     .line 50
     .line 51
@@ -1883,19 +1876,19 @@
     const/4 v0, 0x1
 
     .line 58
-    invoke-virtual {p0, p1, v5, v0}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/60i;IZ)LX/60i;
+    invoke-virtual {p0, p1, v5, v0}, Lcom/google/android/exoplayer2/Timeline;->A0E(LX/5Qj;IZ)LX/5Qj;
 
     .line 59
     .line 60
     .line 61
-    iget-wide v0, p1, LX/60i;->A02:J
+    iget-wide v0, p1, LX/5Qj;->A02:J
 
     .line 62
     .line 63
     sub-long/2addr p4, v0
 
     .line 64
-    iget-wide v2, p1, LX/60i;->A01:J
+    iget-wide v2, p1, LX/5Qj;->A01:J
 
     .line 65
     .line 66
@@ -1935,7 +1928,7 @@
     move-result-wide v2
 
     .line 83
-    iget-object v1, p1, LX/60i;->A05:Ljava/lang/Object;
+    iget-object v1, p1, LX/5Qj;->A05:Ljava/lang/Object;
 
     .line 84
     .line 85
@@ -1963,11 +1956,11 @@
     return-object v0
 .end method
 
-.method public final A0C(LX/60i;Ljava/lang/Object;)LX/60i;
+.method public final A0C(LX/5Qj;Ljava/lang/Object;)LX/5Qj;
     .locals 5
 
     .line 0
-    instance-of v0, p0, LX/5zY;
+    instance-of v0, p0, LX/5MM;
 
     .line 1
     .line 2
@@ -1978,7 +1971,7 @@
     move-object v4, p0
 
     .line 5
-    check-cast v4, LX/5zY;
+    check-cast v4, LX/5MM;
 
     .line 6
     .line 7
@@ -1997,15 +1990,15 @@
 
     .line 13
     .line 14
-    check-cast v4, LX/5zZ;
+    check-cast v4, LX/5MN;
 
     .line 15
     .line 16
-    iget-object v0, v4, LX/5zZ;->A02:Ljava/util/HashMap;
+    iget-object v0, v4, LX/5MN;->A02:Ljava/util/HashMap;
 
     .line 17
     .line 18
-    invoke-virtual {v0, v1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v0}, LX/434;->A0w(Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/Number;
 
     .line 19
     .line 20
@@ -2013,89 +2006,85 @@
     move-result-object v0
 
     .line 22
-    check-cast v0, Ljava/lang/Number;
+    if-nez v0, :cond_0
 
     .line 23
     .line 24
-    if-nez v0, :cond_0
-
-    .line 25
-    .line 26
     const/4 v2, -0x1
 
-    .line 27
+    .line 25
     :goto_0
-    iget-object v0, v4, LX/5zZ;->A04:[I
+    iget-object v0, v4, LX/5MN;->A04:[I
+
+    .line 26
+    .line 27
+    aget v1, v0, v2
 
     .line 28
     .line 29
-    aget v1, v0, v2
+    iget-object v0, v4, LX/5MN;->A05:[Lcom/google/android/exoplayer2/Timeline;
 
     .line 30
     .line 31
-    iget-object v0, v4, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
+    aget-object v0, v0, v2
 
     .line 32
     .line 33
-    aget-object v0, v0, v2
+    invoke-virtual {v0, p1, v3}, Lcom/google/android/exoplayer2/Timeline;->A0C(LX/5Qj;Ljava/lang/Object;)LX/5Qj;
 
     .line 34
     .line 35
-    invoke-virtual {v0, p1, v3}, Lcom/google/android/exoplayer2/Timeline;->A0C(LX/60i;Ljava/lang/Object;)LX/60i;
-
     .line 36
+    iget v0, p1, LX/5Qj;->A00:I
+
     .line 37
     .line 38
-    iget v0, p1, LX/60i;->A00:I
-
-    .line 39
-    .line 40
     add-int/2addr v0, v1
 
+    .line 39
+    iput v0, p1, LX/5Qj;->A00:I
+
+    .line 40
     .line 41
-    iput v0, p1, LX/60i;->A00:I
+    iput-object p2, p1, LX/5Qj;->A05:Ljava/lang/Object;
 
     .line 42
     .line 43
-    iput-object p2, p1, LX/60i;->A05:Ljava/lang/Object;
-
-    .line 44
-    .line 45
     return-object p1
 
-    .line 46
+    .line 44
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
+    .line 45
+    .line 46
     .line 47
-    .line 48
-    .line 49
     move-result v2
 
-    .line 50
+    .line 48
     goto :goto_0
 
-    .line 51
+    .line 49
     :cond_1
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/Timeline;->A07(Ljava/lang/Object;)I
 
+    .line 50
+    .line 51
     .line 52
-    .line 53
-    .line 54
     move-result v1
 
-    .line 55
+    .line 53
     const/4 v0, 0x1
 
-    .line 56
-    invoke-virtual {p0, p1, v1, v0}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/60i;IZ)LX/60i;
+    .line 54
+    invoke-virtual {p0, p1, v1, v0}, Lcom/google/android/exoplayer2/Timeline;->A0E(LX/5Qj;IZ)LX/5Qj;
 
+    .line 55
+    .line 56
     .line 57
-    .line 58
-    .line 59
     move-result-object v0
 
-    .line 60
+    .line 58
     return-object v0
 .end method
 
@@ -2103,7 +2092,7 @@
     .locals 5
 
     .line 0
-    instance-of v0, p0, LX/5y3;
+    instance-of v0, p0, LX/5Ji;
 
     .line 1
     .line 2
@@ -2114,7 +2103,7 @@
     move-object v1, p0
 
     .line 5
-    check-cast v1, LX/5y3;
+    check-cast v1, LX/5Ji;
 
     .line 6
     .line 7
@@ -2126,12 +2115,12 @@
     move-result v0
 
     .line 11
-    invoke-static {p1, v0}, LX/5PE;->A03(II)V
+    invoke-static {p1, v0}, LX/55g;->A01(II)V
 
     .line 12
     .line 13
     .line 14
-    iget v0, v1, LX/5y3;->A00:I
+    iget v0, v1, LX/5Ji;->A00:I
 
     .line 15
     .line 16
@@ -2151,7 +2140,7 @@
 
     .line 22
     :cond_1
-    instance-of v0, p0, LX/5yK;
+    instance-of v0, p0, LX/5Jp;
 
     .line 23
     .line 24
@@ -2162,12 +2151,12 @@
     const/4 v0, 0x1
 
     .line 27
-    invoke-static {p1, v0}, LX/5PE;->A03(II)V
+    invoke-static {p1, v0}, LX/55g;->A01(II)V
 
     .line 28
     .line 29
     .line 30
-    sget-object v1, LX/5yK;->A06:Ljava/lang/Object;
+    sget-object v1, LX/5Jp;->A08:Ljava/lang/Object;
 
     .line 31
     .line 32
@@ -2175,7 +2164,7 @@
 
     .line 33
     :cond_2
-    instance-of v0, p0, LX/5zI;
+    instance-of v0, p0, LX/5M2;
 
     .line 34
     .line 35
@@ -2183,7 +2172,7 @@
 
     .line 36
     .line 37
-    instance-of v0, p0, LX/5zJ;
+    instance-of v0, p0, LX/5M3;
 
     .line 38
     .line 39
@@ -2194,11 +2183,11 @@
     move-object v2, p0
 
     .line 42
-    check-cast v2, LX/5zJ;
+    check-cast v2, LX/5M3;
 
     .line 43
     .line 44
-    instance-of v0, v2, LX/5zH;
+    instance-of v0, v2, LX/5Lm;
 
     .line 45
     .line 46
@@ -2206,11 +2195,11 @@
 
     .line 47
     .line 48
-    check-cast v2, LX/5zH;
+    check-cast v2, LX/5Lm;
 
     .line 49
     .line 50
-    iget-object v0, v2, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v2, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 51
     .line 52
@@ -2222,11 +2211,11 @@
     move-result-object v1
 
     .line 56
-    iget-object v0, v2, LX/5zH;->A00:Ljava/lang/Object;
+    iget-object v0, v2, LX/5Lm;->A00:Ljava/lang/Object;
 
     .line 57
     .line 58
-    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0Q(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 59
     .line 60
@@ -2239,7 +2228,7 @@
     .line 63
     .line 64
     :cond_3
-    sget-object v1, LX/5zH;->A02:Ljava/lang/Object;
+    sget-object v1, LX/5Lm;->A02:Ljava/lang/Object;
 
     .line 65
     .line 66
@@ -2247,7 +2236,7 @@
 
     .line 67
     :cond_4
-    iget-object v0, v2, LX/5zJ;->A00:Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v2, LX/5M3;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 68
     .line 69
@@ -2263,7 +2252,7 @@
 
     .line 74
     :cond_5
-    instance-of v0, p0, LX/5yg;
+    instance-of v0, p0, LX/5KV;
 
     .line 75
     .line 76
@@ -2287,15 +2276,15 @@
     move-object v4, p0
 
     .line 85
-    check-cast v4, LX/5zY;
+    check-cast v4, LX/5MM;
 
     .line 86
     .line 87
-    check-cast v4, LX/5zZ;
+    check-cast v4, LX/5MN;
 
     .line 88
     .line 89
-    iget-object v3, v4, LX/5zZ;->A03:[I
+    iget-object v3, v4, LX/5MN;->A03:[I
 
     .line 90
     .line 91
@@ -2327,7 +2316,7 @@
 
     .line 103
     .line 104
-    iget-object v0, v4, LX/5zZ;->A05:[Lcom/google/android/exoplayer2/Timeline;
+    iget-object v0, v4, LX/5MN;->A05:[Lcom/google/android/exoplayer2/Timeline;
 
     .line 105
     .line 106
@@ -2346,7 +2335,7 @@
     move-result-object v1
 
     .line 113
-    iget-object v0, v4, LX/5zZ;->A06:[Ljava/lang/Object;
+    iget-object v0, v4, LX/5MN;->A06:[Ljava/lang/Object;
 
     .line 114
     .line 115
@@ -2386,33 +2375,10 @@
     goto :goto_0
 .end method
 
-.method public final A0E()Z
-    .locals 1
-
-    .line 0
-    invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->A03()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    invoke-static {v0}, LX/001;->A1M(I)Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
+.method public abstract A0E(LX/5Qj;IZ)LX/5Qj;
 .end method
 
-.method public abstract A0F(LX/60i;IZ)LX/60i;
-.end method
-
-.method public abstract A0G(LX/5zN;IJ)LX/5zN;
+.method public abstract A0F(LX/5M1;IJ)LX/5M1;
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
@@ -2481,38 +2447,38 @@
 
     .line 29
     .line 30
-    new-instance v9, LX/5zN;
+    new-instance v9, LX/5M1;
 
     .line 31
     .line 32
-    invoke-direct {v9}, LX/5zN;-><init>()V
+    invoke-direct {v9}, LX/5M1;-><init>()V
 
     .line 33
     .line 34
     .line 35
-    new-instance v6, LX/60i;
+    new-instance v6, LX/5Qj;
 
     .line 36
     .line 37
-    invoke-direct {v6}, LX/60i;-><init>()V
+    invoke-direct {v6}, LX/5Qj;-><init>()V
 
     .line 38
     .line 39
     .line 40
-    new-instance v8, LX/5zN;
+    new-instance v8, LX/5M1;
 
     .line 41
     .line 42
-    invoke-direct {v8}, LX/5zN;-><init>()V
+    invoke-direct {v8}, LX/5M1;-><init>()V
 
     .line 43
     .line 44
     .line 45
-    new-instance v3, LX/60i;
+    new-instance v3, LX/5Qj;
 
     .line 46
     .line 47
-    invoke-direct {v3}, LX/60i;-><init>()V
+    invoke-direct {v3}, LX/5Qj;-><init>()V
 
     .line 48
     .line 49
@@ -2529,7 +2495,7 @@
 
     .line 54
     .line 55
-    invoke-virtual {p0, v9, v7, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->A0G(LX/5zN;IJ)LX/5zN;
+    invoke-virtual {p0, v9, v7, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/5M1;IJ)LX/5M1;
 
     .line 56
     .line 57
@@ -2537,7 +2503,7 @@
     move-result-object v2
 
     .line 59
-    invoke-virtual {p1, v8, v7, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->A0G(LX/5zN;IJ)LX/5zN;
+    invoke-virtual {p1, v8, v7, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/5M1;IJ)LX/5M1;
 
     .line 60
     .line 61
@@ -2581,7 +2547,7 @@
 
     .line 78
     .line 79
-    invoke-virtual {p0, v6, v2, v5}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/60i;IZ)LX/60i;
+    invoke-virtual {p0, v6, v2, v5}, Lcom/google/android/exoplayer2/Timeline;->A0E(LX/5Qj;IZ)LX/5Qj;
 
     .line 80
     .line 81
@@ -2589,7 +2555,7 @@
     move-result-object v1
 
     .line 83
-    invoke-virtual {p1, v3, v2, v5}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/60i;IZ)LX/60i;
+    invoke-virtual {p1, v3, v2, v5}, Lcom/google/android/exoplayer2/Timeline;->A0E(LX/5Qj;IZ)LX/5Qj;
 
     .line 84
     .line 85
@@ -2704,20 +2670,20 @@
     .locals 7
 
     .line 0
-    new-instance v3, LX/5zN;
+    new-instance v3, LX/5M1;
 
     .line 1
     .line 2
-    invoke-direct {v3}, LX/5zN;-><init>()V
+    invoke-direct {v3}, LX/5M1;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    new-instance v6, LX/60i;
+    new-instance v6, LX/5Qj;
 
     .line 6
     .line 7
-    invoke-direct {v6}, LX/60i;-><init>()V
+    invoke-direct {v6}, LX/5Qj;-><init>()V
 
     .line 8
     .line 9
@@ -2752,7 +2718,7 @@
 
     .line 22
     .line 23
-    invoke-static {v3, p0, v1}, LX/4BD;->A0T(LX/5zN;Lcom/google/android/exoplayer2/Timeline;I)LX/5zN;
+    invoke-static {v3, p0, v1}, LX/431;->A0O(LX/5M1;Lcom/google/android/exoplayer2/Timeline;I)LX/5M1;
 
     .line 24
     .line 25
@@ -2760,7 +2726,7 @@
     move-result-object v0
 
     .line 27
-    invoke-static {v0, v4}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    invoke-static {v0, v4}, LX/0X5;->A02(Ljava/lang/Object;I)I
 
     .line 28
     .line 29
@@ -2810,7 +2776,7 @@
 
     .line 48
     .line 49
-    invoke-virtual {p0, v6, v3, v2}, Lcom/google/android/exoplayer2/Timeline;->A0F(LX/60i;IZ)LX/60i;
+    invoke-virtual {p0, v6, v3, v2}, Lcom/google/android/exoplayer2/Timeline;->A0E(LX/5Qj;IZ)LX/5Qj;
 
     .line 50
     .line 51
@@ -2818,7 +2784,7 @@
     move-result-object v0
 
     .line 53
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
 
     .line 54
     .line 55

@@ -1,97 +1,123 @@
 .class public final LX/2NG;
-.super LX/2I2;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/0Cf;
+.implements LX/2h2;
 
 
 # instance fields
-.field public final synthetic $contactData:Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;
-
-.field public final synthetic this$0:LX/2NQ;
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/2NQ;Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;)V
+.method public constructor <init>()V
     .locals 1
 
-    iput-object p1, p0, LX/2NG;->this$0:LX/2NQ;
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, LX/2NG;->$contactData:Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;
+    .line 1
+    .line 2
+    .line 3
+    sget v0, LX/2I6;->AOh:I
 
-    const/4 v0, 0x4
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
-    invoke-direct {p0, v0}, LX/2I2;-><init>(I)V
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
 
+    .line 9
+    iput-object v0, p0, LX/2NG;->A00:LX/0RP;
+
+    .line 10
+    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic APj(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final A6b()LX/2ht;
+    .locals 1
 
     .line 0
-    invoke-static {p1}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    iget-object v0, p0, LX/2NG;->A00:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/2ha;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, LX/2ha;->A6b()LX/2ht;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
+.end method
+
+.method public final isEnabled()Z
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/0X1;->A05()LX/0Qq;
 
     .line 1
     .line 2
     .line 3
-    move-result v3
+    move-result-object v0
 
     .line 4
-    invoke-static {p2}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    iget-boolean v0, v0, LX/0Qq;->A1h:Z
 
     .line 5
     .line 6
-    .line 7
-    move-result v2
+    if-eqz v0, :cond_0
 
+    .line 7
     .line 8
-    iget-object v0, p0, LX/2NG;->this$0:LX/2NQ;
+    iget-object v0, p0, LX/2NG;->A00:LX/0RP;
 
     .line 9
     .line 10
-    iget-object v1, v0, LX/2NQ;->A00:LX/2NF;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 11
     .line 12
-    iget-object v0, p0, LX/2NG;->$contactData:Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;
-
     .line 13
+    move-result-object v0
+
     .line 14
-    if-eqz v0, :cond_0
+    check-cast v0, LX/2ha;
 
     .line 15
     .line 16
-    const/4 v0, 0x1
+    iget-boolean v0, v0, LX/2ha;->A00:Z
 
     .line 17
-    invoke-static {v0}, LX/4BC;->A00(I)Ljava/lang/String;
-
     .line 18
+    return v0
+
     .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    :goto_0
-    invoke-interface {v1, v0, v3, v2}, LX/2NF;->AcP(Ljava/lang/String;ZZ)V
-
-    .line 22
-    .line 23
-    .line 24
+    :cond_0
     const/4 v0, 0x0
 
-    .line 25
-    return-object v0
-
-    .line 26
-    :cond_0
-    const-string v0, "PAYMENT_AUTOFILL"
-
-    .line 27
-    .line 28
-    goto :goto_0
+    .line 20
+    return v0
 .end method

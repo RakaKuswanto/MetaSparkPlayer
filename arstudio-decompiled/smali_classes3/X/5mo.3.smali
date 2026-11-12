@@ -1,148 +1,297 @@
-.class public final LX/5mo;
+.class public abstract LX/5mo;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
 
 # instance fields
-.field public final synthetic A00:LX/5mG;
-
-.field public final synthetic A01:Ljava/util/List;
-
-.field public final synthetic A02:Z
-
-.field public final synthetic A03:Z
+.field public final A00:LX/5mn;
 
 
 # direct methods
-.method public constructor <init>(LX/5mG;Ljava/util/List;ZZ)V
+.method public constructor <init>(LX/5mn;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5mo;->A00:LX/5mG;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-boolean p3, p0, LX/5mo;->A02:Z
-
     .line 3
-    .line 4
-    iput-object p2, p0, LX/5mo;->A01:Ljava/util/List;
+    invoke-static {}, LX/0L4;->A00()V
 
+    .line 4
     .line 5
     .line 6
-    iput-boolean p4, p0, LX/5mo;->A03:Z
+    iput-object p1, p0, LX/5mo;->A00:LX/5mn;
 
     .line 7
     .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic call()Ljava/lang/Object;
-    .locals 8
+.method public abstract A0A(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+.end method
+
+.method public abstract A0B(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+.end method
+
+.method public A0C(Landroid/net/Uri;[Landroid/content/ContentValues;)I
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/5mo;->A00:LX/5mG;
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
 
     .line 1
     .line 2
-    invoke-static {v1}, LX/5mG;->A00(LX/5mG;)Landroid/hardware/camera2/CameraDevice;
+    invoke-virtual {v0, p1, p2}, LX/5mn;->A02(Landroid/net/Uri;[Landroid/content/ContentValues;)I
 
     .line 3
     .line 4
     .line 5
-    move-result-object v2
+    move-result v0
 
     .line 6
-    const-string v0, "CameraDevice should not be null for createCaptureSession!"
+    return v0
+.end method
 
-    .line 7
-    .line 8
-    invoke-static {v2, v0}, LX/01k;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public A0D(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
+    .locals 1
 
-    .line 9
-    .line 10
-    .line 11
-    iget-object v4, v1, LX/5mG;->A09:LX/5mb;
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
 
-    .line 12
-    .line 13
-    const-string v0, "mPreviewSetupDelegate should not be null for createCaptureSession!"
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2}, LX/5mn;->A03(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
-    .line 14
-    .line 15
-    invoke-static {v4, v0}, LX/01k;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 16
-    .line 17
-    .line 18
-    iget-object v0, v1, LX/5mG;->A0O:LX/5jl;
+    .line 6
+    return-object v0
+.end method
 
-    .line 19
-    .line 20
-    iget-object v0, v0, LX/5jl;->A02:Landroid/os/Handler;
+.method public A0E(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/AssetFileDescriptor;
+    .locals 1
 
-    .line 21
-    .line 22
-    new-instance v6, LX/6IR;
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
 
-    .line 23
-    .line 24
-    invoke-direct {v6, v0}, LX/6IR;-><init>(Landroid/os/Handler;)V
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2, p3}, LX/5mn;->A04(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/AssetFileDescriptor;
 
-    .line 25
-    .line 26
-    .line 27
-    iget-boolean v0, p0, LX/5mo;->A02:Z
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 28
-    .line 29
-    if-eqz v0, :cond_0
+    .line 6
+    return-object v0
+.end method
 
-    .line 30
-    .line 31
-    iget-object v0, p0, LX/5mo;->A01:Ljava/util/List;
+.method public abstract A0F(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+.end method
 
-    .line 32
-    .line 33
-    iget-object v3, v1, LX/5mG;->A0L:LX/5mi;
+.method public A0G(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+    .locals 1
 
-    .line 34
-    .line 35
-    invoke-static {v2, v3, v0, v6}, LX/5mp;->A01(Landroid/hardware/camera2/CameraDevice;LX/5mi;Ljava/util/List;Ljava/util/concurrent/Executor;)V
+    .line 0
+    invoke-virtual/range {p0 .. p5}, LX/5mo;->A0F(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    .line 36
-    .line 37
-    .line 38
-    return-object v3
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
 
-    .line 39
-    :cond_0
-    iget-object v5, p0, LX/5mo;->A01:Ljava/util/List;
+    .line 4
+    return-object v0
+.end method
 
-    .line 40
-    .line 41
-    iget-boolean v7, p0, LX/5mo;->A03:Z
+.method public abstract A0H(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
+.end method
 
-    .line 42
-    .line 43
-    iget-object v3, v1, LX/5mG;->A0L:LX/5mi;
+.method public A0I(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 1
 
-    .line 44
-    .line 45
-    invoke-static/range {v2 .. v7}, LX/5mh;->A02(Landroid/hardware/camera2/CameraDevice;LX/5mi;LX/5mb;Ljava/util/List;Ljava/util/concurrent/Executor;Z)V
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
 
-    .line 46
-    .line 47
-    .line 48
-    return-object v3
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2, p3}, LX/5mn;->A05(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public A0J(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2}, LX/5mn;->A06(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public abstract A0K(Landroid/net/Uri;)Ljava/lang/String;
+.end method
+
+.method public A0L()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, LX/5mn;->A07()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public A0M()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, LX/5mn;->A08()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public A0N(I)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/5mn;->A09(I)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public A0O(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/5mn;->A0A(Landroid/content/res/Configuration;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public A0P()Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, LX/5mn;->A0B()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public A0Q(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/5mn;->A0C(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public A0R(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2}, LX/5mn;->A0D(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final getContext()Landroid/content/Context;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5mo;->A00:LX/5mn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
 .end method

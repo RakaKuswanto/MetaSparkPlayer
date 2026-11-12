@@ -40,14 +40,26 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yf;->A0R(J)Ljava/lang/IllegalArgumentException;
+    const-string v0, "Unknown feature id "
 
     .line 1
     .line 2
+    invoke-static {v0, p1, p2}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
+
     .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 4
+    .line 6
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
     throw v0
 .end method
 
@@ -66,14 +78,26 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yf;->A0R(J)Ljava/lang/IllegalArgumentException;
+    const-string v0, "Unknown feature id "
 
     .line 1
     .line 2
+    invoke-static {v0, p1, p2}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
+
     .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 4
+    .line 6
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
     throw v0
 .end method
 
@@ -100,14 +124,26 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yf;->A0R(J)Ljava/lang/IllegalArgumentException;
+    const-string v0, "Unknown feature id "
 
     .line 1
     .line 2
+    invoke-static {v0, p1, p2}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
+
     .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 4
+    .line 6
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
     throw v0
 .end method
 
@@ -126,14 +162,26 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yf;->A0R(J)Ljava/lang/IllegalArgumentException;
+    const-string v0, "Unknown feature id "
 
     .line 1
     .line 2
+    invoke-static {v0, p1, p2}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
+
     .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 4
+    .line 6
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
     throw v0
 .end method
 

@@ -1,283 +1,133 @@
-.class public abstract LX/2v2;
-.super Ljava/lang/Object;
+.class public final enum LX/2v2;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/03X;
 
+# static fields
+.field public static final synthetic $VALUES:[LX/2v2;
 
-# instance fields
-.field public A00:Ljava/util/Map;
-
-.field public A01:[LX/044;
-
-.field public A02:[LX/2v3;
-
-.field public final A03:Landroid/content/Context;
+.field public static final enum CHARGING:LX/2v2;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method public static synthetic $values()[LX/2v2;
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
     .line 1
+    new-array v2, v0, [LX/2v2;
+
     .line 2
     .line 3
-    iput-object p1, p0, LX/2v2;->A03:Landroid/content/Context;
+    sget-object v1, LX/2v2;->CHARGING:LX/2v2;
 
     .line 4
     .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "CHARGING"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/2v2;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/2v2;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/2v2;->CHARGING:LX/2v2;
+
+    .line 9
+    .line 10
+    invoke-static {}, LX/2v2;->$values()[LX/2v2;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    sput-object v0, LX/2v2;->$VALUES:[LX/2v2;
+
+    .line 15
+    .line 16
     return-void
 .end method
 
-
-# virtual methods
-.method public final declared-synchronized AEK()[LX/2v3;
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
     .line 0
-    monitor-enter p0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, LX/2v2;->A02:[LX/2v3;
-
     .line 2
     .line 3
-    if-nez v0, :cond_0
-
-    .line 4
-    .line 5
-    move-object v0, p0
-
-    .line 6
-    check-cast v0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;
-
-    .line 7
-    .line 8
-    iget-object v0, v0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A01:LX/0Na;
-
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v2
-
-    .line 14
-    const-wide v0, 0x83002400050020L
-
-    .line 15
-    .line 16
-    .line 17
-    .line 18
-    .line 19
-    invoke-interface {v2, v0, v1}, LX/35B;->AMY(J)Ljava/lang/String;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    invoke-static {v0}, LX/2v3;->A01(Ljava/lang/String;)[LX/2v3;
-
-    .line 24
-    .line 25
-    .line 26
-    move-result-object v0
-
-    .line 27
-    iput-object v0, p0, LX/2v2;->A02:[LX/2v3;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 28
-    .line 29
-    :cond_0
-    monitor-exit p0
-
-    .line 30
-    return-object v0
-
-    .line 31
-    :catchall_0
-    move-exception v0
-
-    .line 32
-    monitor-exit p0
-
-    .line 33
-    throw v0
+    return-void
 .end method
 
-.method public final declared-synchronized AEU()Ljava/util/Map;
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)LX/2v2;
+    .locals 1
 
     .line 0
-    monitor-enter p0
+    const-class v0, LX/2v2;
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, LX/2v2;->A00:Ljava/util/Map;
-
     .line 2
-    .line 3
-    if-nez v0, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
+    .line 3
     .line 4
     .line 5
-    move-object v0, p0
+    move-result-object v0
 
     .line 6
-    check-cast v0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;
+    check-cast v0, LX/2v2;
 
     .line 7
     .line 8
-    iget-object v0, v0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A01:LX/0Na;
-
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v2
-
-    .line 14
-    const-wide v0, 0x8300510006009dL
-
-    .line 15
-    .line 16
-    .line 17
-    .line 18
-    .line 19
-    invoke-interface {v2, v0, v1}, LX/35B;->AMY(J)Ljava/lang/String;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    invoke-static {v0}, LX/2so;->A00(Ljava/lang/String;)Ljava/util/HashMap;
-
-    .line 24
-    .line 25
-    .line 26
-    move-result-object v0
-
-    .line 27
-    iput-object v0, p0, LX/2v2;->A00:Ljava/util/Map;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 28
-    .line 29
-    :cond_0
-    monitor-exit p0
-
-    .line 30
     return-object v0
-
-    .line 31
-    :catchall_0
-    move-exception v0
-
-    .line 32
-    monitor-exit p0
-
-    .line 33
-    throw v0
 .end method
 
-.method public final declared-synchronized AHG()[LX/044;
-    .locals 3
+.method public static values()[LX/2v2;
+    .locals 1
 
     .line 0
-    monitor-enter p0
+    sget-object v0, LX/2v2;->$VALUES:[LX/2v2;
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, LX/2v2;->A01:[LX/044;
-
     .line 2
-    .line 3
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
+    .line 3
     .line 4
     .line 5
-    move-object v0, p0
+    move-result-object v0
 
     .line 6
-    check-cast v0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;
+    check-cast v0, [LX/2v2;
 
     .line 7
     .line 8
-    iget-object v0, v0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A01:LX/0Na;
-
-    .line 9
-    .line 10
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v2
-
-    .line 14
-    const-wide v0, 0x8300240002001fL
-
-    .line 15
-    .line 16
-    .line 17
-    .line 18
-    .line 19
-    invoke-interface {v2, v0, v1}, LX/35B;->AMY(J)Ljava/lang/String;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v1
-
-    .line 23
-    iget-object v0, p0, LX/2v2;->A03:Landroid/content/Context;
-
-    .line 24
-    .line 25
-    invoke-static {v0, v1}, LX/044;->A00(Landroid/content/Context;Ljava/lang/String;)[LX/044;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
-
-    .line 29
-    iput-object v0, p0, LX/2v2;->A01:[LX/044;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 30
-    .line 31
-    :cond_0
-    monitor-exit p0
-
-    .line 32
     return-object v0
-
-    .line 33
-    :catchall_0
-    move-exception v0
-
-    .line 34
-    monitor-exit p0
-
-    .line 35
-    throw v0
 .end method

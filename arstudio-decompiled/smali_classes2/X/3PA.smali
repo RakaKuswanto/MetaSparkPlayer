@@ -3,366 +3,232 @@
 .source ""
 
 # interfaces
-.implements LX/3YS;
+.implements LX/0GN;
 
 
 # instance fields
-.field public final synthetic A00:I
+.field public final A00:Ljava/util/List;
 
-.field public final synthetic A01:J
-
-.field public final synthetic A02:LX/3P9;
-
-.field public final synthetic A03:Ljava/lang/String;
-
-.field public final synthetic A04:Ljava/lang/String;
-
-.field public final synthetic A05:Ljava/lang/String;
-
-.field public final synthetic A06:Ljava/lang/String;
+.field public final synthetic A01:LX/3P5;
 
 
 # direct methods
-.method public constructor <init>(LX/3P9;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJ)V
-    .locals 0
+.method public constructor <init>(LX/3P5;)V
+    .locals 1
 
-    iput-object p1, p0, LX/3PA;->A02:LX/3P9;
+    .line 0
+    iput-object p1, p0, LX/3PA;->A01:LX/3P5;
 
-    iput-object p2, p0, LX/3PA;->A06:Ljava/lang/String;
-
-    iput-object p3, p0, LX/3PA;->A05:Ljava/lang/String;
-
-    iput-object p4, p0, LX/3PA;->A04:Ljava/lang/String;
-
-    iput-object p5, p0, LX/3PA;->A03:Ljava/lang/String;
-
-    iput p6, p0, LX/3PA;->A00:I
-
-    iput-wide p7, p0, LX/3PA;->A01:J
-
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/3PA;->A00:Ljava/util/List;
+
+    .line 10
+    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final AeU(Ljava/io/File;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Aeb(Ljava/io/File;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final Aq1(Ljava/io/File;)V
+    .locals 8
 
     .line 0
-    check-cast p1, Ljava/util/Set;
+    iget-object v7, p0, LX/3PA;->A01:LX/3P5;
 
     .line 1
     .line 2
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     .line 3
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 4
     .line 5
+    move-result-object v6
+
     .line 6
-    sget-object v0, LX/3Pc;->SUCCESS:LX/3Pc;
+    const/16 v5, 0x2e
 
     .line 7
     .line 8
-    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v5}, Ljava/lang/String;->lastIndexOf(I)I
 
     .line 9
     .line 10
     .line 11
-    move-result v9
+    move-result v2
 
     .line 12
-    sget-object v0, LX/3Pc;->HAS_AUDIO:LX/3Pc;
+    if-lez v2, :cond_2
 
     .line 13
     .line 14
-    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     .line 15
     .line 16
     .line 17
-    move-result v0
+    move-result-object v1
 
     .line 18
-    if-eqz v0, :cond_0
+    const-string v4, ".cnt"
 
     .line 19
     .line 20
-    sget-object v0, LX/3Pc;->SUCCESS_DASH_AUDIO:LX/3Pc;
+    move-object v3, v4
 
     .line 21
-    .line 22
-    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 22
     .line 23
     .line 24
-    .line 25
     move-result v0
 
-    .line 26
-    const/4 v8, 0x0
+    .line 25
+    if-nez v0, :cond_0
 
+    .line 26
     .line 27
-    if-eqz v0, :cond_1
+    const-string v4, ".tmp"
 
     .line 28
     .line 29
-    :cond_0
-    const/4 v8, 0x1
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 30
-    :cond_1
-    sget-object v0, LX/3Pc;->HAS_VIDEO:LX/3Pc;
-
     .line 31
     .line 32
-    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    .line 33
-    .line 34
-    .line 35
     move-result v0
 
-    .line 36
+    .line 33
     if-eqz v0, :cond_2
+
+    .line 34
+    .line 35
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 36
+    invoke-virtual {v6, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     .line 37
     .line 38
-    sget-object v0, LX/3Pc;->SUCCESS_DASH_VIDEO:LX/3Pc;
-
     .line 39
+    move-result-object v2
+
     .line 40
-    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    const-string v0, ".tmp"
 
     .line 41
     .line 42
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 43
+    .line 44
+    .line 45
     move-result v0
 
-    .line 44
-    const/4 v7, 0x0
-
-    .line 45
-    if-eqz v0, :cond_3
-
     .line 46
-    .line 47
-    :cond_2
-    const/4 v7, 0x1
+    if-eqz v0, :cond_1
 
+    .line 47
     .line 48
-    :cond_3
-    iget-object v5, p0, LX/3PA;->A02:LX/3P9;
+    invoke-virtual {v2, v5}, Ljava/lang/String;->lastIndexOf(I)I
 
     .line 49
     .line 50
-    iget-object v4, p0, LX/3PA;->A06:Ljava/lang/String;
-
     .line 51
+    move-result v0
+
     .line 52
-    iget-object v6, p0, LX/3PA;->A05:Ljava/lang/String;
+    if-lez v0, :cond_2
 
     .line 53
     .line 54
-    iget-object v1, p0, LX/3PA;->A04:Ljava/lang/String;
+    invoke-virtual {v2, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     .line 55
     .line 56
-    iget-object v0, p0, LX/3PA;->A03:Ljava/lang/String;
-
     .line 57
+    move-result-object v2
+
     .line 58
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    :cond_1
+    invoke-static {v7, v2}, LX/3P5;->A00(LX/3P5;Ljava/lang/String;)Ljava/io/File;
 
     .line 59
     .line 60
     .line 61
-    move-result-object v3
+    move-result-object v1
 
     .line 62
-    :try_start_0
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     .line 63
     .line 64
     .line 65
-    move-result v1
+    move-result-object v0
 
     .line 66
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 67
-    :catch_0
-    const/4 v1, -0x1
-
     .line 68
-    :goto_0
-    :try_start_1
-    invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
-
     .line 69
-    .line 70
-    .line 71
-    move-result v2
+    move-result v0
 
+    .line 70
+    if-eqz v0, :cond_2
+
+    .line 71
     .line 72
-    goto :goto_1
-    :try_end_1
-    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
+    if-ne v4, v3, :cond_2
 
     .line 73
-    :catch_1
-    const/4 v2, 0x0
-
     .line 74
-    :goto_1
-    if-nez v7, :cond_8
+    iget-object v1, p0, LX/3PA;->A00:Ljava/util/List;
 
     .line 75
     .line 76
-    if-nez v9, :cond_8
+    new-instance v0, LX/3PE;
 
     .line 77
     .line 78
-    if-eqz v8, :cond_4
+    invoke-direct {v0, v2, p1}, LX/3PE;-><init>(Ljava/lang/String;Ljava/io/File;)V
 
     .line 79
     .line 80
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     .line 81
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
     .line 82
     .line 83
-    move-result-object v1
-
     .line 84
-    const-string v0, "PREFETCH_BYTES_AUDIO"
-
-    .line 85
-    .line 86
-    :goto_2
-    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 87
-    .line 88
-    .line 89
-    :cond_4
-    iget-boolean v0, v5, LX/3P9;->A07:Z
-
-    .line 90
-    .line 91
-    if-eqz v0, :cond_5
-
-    .line 92
-    .line 93
-    iget-object v1, v5, LX/3P9;->A05:LX/3PW;
-
-    .line 94
-    .line 95
-    new-instance v0, LX/3Qs;
-
-    .line 96
-    .line 97
-    invoke-direct {v0, v1, v4, v3}, LX/3Qs;-><init>(LX/3PW;Ljava/lang/String;Ljava/util/Map;)V
-
-    .line 98
-    .line 99
-    .line 100
-    invoke-static {v1, v0}, LX/3PW;->A02(LX/3PW;Ljava/lang/Runnable;)V
-
-    .line 101
-    .line 102
-    .line 103
-    :cond_5
-    if-nez v9, :cond_6
-
-    .line 104
-    .line 105
-    if-eqz v8, :cond_7
-
-    .line 106
-    .line 107
-    if-eqz v7, :cond_7
-
-    .line 108
-    .line 109
-    :cond_6
-    iget-object v1, v5, LX/3P9;->A05:LX/3PW;
-
-    .line 110
-    .line 111
-    iget v2, p0, LX/3PA;->A00:I
-
-    .line 112
-    .line 113
-    iget-wide v3, p0, LX/3PA;->A01:J
-
-    .line 114
-    .line 115
-    const/4 v5, 0x2
-
-    .line 116
-    new-instance v0, LX/3S6;
-
-    .line 117
-    .line 118
-    invoke-direct/range {v0 .. v5}, LX/3S6;-><init>(LX/3PW;IJS)V
-
-    .line 119
-    .line 120
-    .line 121
-    invoke-static {v1, v0}, LX/3PW;->A02(LX/3PW;Ljava/lang/Runnable;)V
-
-    .line 122
-    .line 123
-    .line 124
-    :cond_7
+    :cond_2
     return-void
-
-    .line 125
-    :cond_8
-    const-string v0, "QUALITY_LABEL"
-
-    .line 126
-    .line 127
-    invoke-virtual {v3, v0, v6}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 128
-    .line 129
-    .line 130
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 131
-    .line 132
-    .line 133
-    move-result-object v1
-
-    .line 134
-    const-string v0, "PREFETCH_BYTES_VIDEO"
-
-    .line 135
-    .line 136
-    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 137
-    .line 138
-    .line 139
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 140
-    .line 141
-    .line 142
-    move-result-object v1
-
-    .line 143
-    const-string v0, "IS_FOLLOWUP_PREFETCH"
-
-    .line 144
-    .line 145
-    goto :goto_2
 .end method

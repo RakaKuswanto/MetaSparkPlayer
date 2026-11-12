@@ -1,26 +1,17 @@
-.class public interface abstract LX/3mj;
+.class public final LX/3mj;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract ATz()V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AU1()V
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract AU2(J)V
-.end method
-
-.method public abstract AU3([JII)V
-.end method
-
-.method public abstract AUA(Ljava/lang/String;)V
-.end method
-
-.method public abstract AmB(Ljava/lang/Object;)V
-.end method
-
-.method public abstract Apz()V
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

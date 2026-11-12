@@ -89,7 +89,7 @@
 
     .line 1
     .line 2
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 3
     .line 4
@@ -135,7 +135,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 25
     .line 26
@@ -155,7 +155,7 @@
 
     .line 31
     .line 32
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 33
     .line 34
@@ -174,7 +174,7 @@
 
     .line 1
     .line 2
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 3
     .line 4
@@ -228,7 +228,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 29
     .line 30
@@ -248,7 +248,7 @@
 
     .line 35
     .line 36
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 37
     .line 38
@@ -275,7 +275,7 @@
     move-result-object v0
 
     .line 6
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 7
     .line 8
@@ -312,7 +312,7 @@
 
 # virtual methods
 .method public copyDexes(Lcom/facebook/common/dextricks/DexManifest;Ljava/io/File;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)Ljava/util/List;
-    .locals 2
+    .locals 3
 
     .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/facebook/common/dextricks/DexUnpacker;->getCopyDexIterator(Lcom/facebook/common/dextricks/DexManifest;Ljava/io/File;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;
@@ -320,11 +320,11 @@
     .line 1
     .line 2
     .line 3
-    move-result-object v1
+    move-result-object v2
 
     .line 4
     :try_start_0
-    invoke-static {v1}, Lcom/facebook/common/dextricks/DexUnpacker;->copyAllDexes(Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;)Ljava/util/List;
+    invoke-static {v2}, Lcom/facebook/common/dextricks/DexUnpacker;->copyAllDexes(Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;)Ljava/util/List;
 
     .line 5
     .line 6
@@ -332,13 +332,13 @@
     move-result-object v0
 
     .line 8
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 9
     .line 10
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
 
     .line 11
     .line 12
@@ -348,28 +348,39 @@
 
     .line 14
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 15
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
     .line 16
     .line 17
     :try_start_1
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 18
     .line 19
     .line 20
+    throw v1
+
+    .line 21
     :catchall_1
+    move-exception v0
+
+    .line 22
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 23
+    .line 24
+    .line 25
     :cond_1
-    throw v0
+    throw v1
 .end method
 
 .method public copySecondaryDexes(Ljava/io/File;)Ljava/util/List;
-    .locals 2
+    .locals 3
 
     .line 0
     const/4 v0, 0x0
@@ -380,11 +391,11 @@
     .line 2
     .line 3
     .line 4
-    move-result-object v1
+    move-result-object v2
 
     .line 5
     :try_start_0
-    invoke-static {v1}, Lcom/facebook/common/dextricks/DexUnpacker;->copyAllDexes(Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;)Ljava/util/List;
+    invoke-static {v2}, Lcom/facebook/common/dextricks/DexUnpacker;->copyAllDexes(Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;)Ljava/util/List;
 
     .line 6
     .line 7
@@ -392,13 +403,13 @@
     move-result-object v0
 
     .line 9
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 10
     .line 11
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
 
     .line 12
     .line 13
@@ -408,28 +419,39 @@
 
     .line 15
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 16
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
     .line 17
     .line 18
     :try_start_1
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 19
     .line 20
     .line 21
+    throw v1
+
+    .line 22
     :catchall_1
+    move-exception v0
+
+    .line 23
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 24
+    .line 25
+    .line 26
     :cond_1
-    throw v0
+    throw v1
 .end method
 
 .method public copySecondaryDexes(Ljava/io/File;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)Ljava/util/List;
-    .locals 2
+    .locals 3
 
     .line 536870912
     invoke-virtual {p0, p1, p2}, Lcom/facebook/common/dextricks/DexUnpacker;->getCopySecondaryDexIterator(Ljava/io/File;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;
@@ -437,11 +459,11 @@
     .line 536870913
     .line 536870914
     .line 536870915
-    move-result-object v1
+    move-result-object v2
 
     .line 536870916
     :try_start_0
-    invoke-static {v1}, Lcom/facebook/common/dextricks/DexUnpacker;->copyAllDexes(Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;)Ljava/util/List;
+    invoke-static {v2}, Lcom/facebook/common/dextricks/DexUnpacker;->copyAllDexes(Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;)Ljava/util/List;
 
     .line 536870917
     .line 536870918
@@ -449,13 +471,13 @@
     move-result-object v0
 
     .line 536870920
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 536870921
     .line 536870922
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
 
     .line 536870923
     .line 536870924
@@ -465,28 +487,39 @@
 
     .line 536870926
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 536870927
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
     .line 536870928
     .line 536870929
     :try_start_1
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 536870930
     .line 536870931
     .line 536870932
+    throw v1
+
+    .line 536870933
     :catchall_1
+    move-exception v0
+
+    .line 536870934
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 536870935
+    .line 536870936
+    .line 536870937
     :cond_1
-    throw v0
+    throw v1
 .end method
 
 .method public copySecondaryDexes(Ljava/io/File;Ljava/io/File;)Ljava/util/List;
-    .locals 2
+    .locals 3
 
     .line 268435456
     const/4 v0, 0x0
@@ -497,11 +530,11 @@
     .line 268435458
     .line 268435459
     .line 268435460
-    move-result-object v1
+    move-result-object v2
 
     .line 268435461
     :try_start_0
-    invoke-static {p2, v1}, Lcom/facebook/common/dextricks/DexUnpacker;->copyAllDexesAndMove(Ljava/io/File;Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;)Ljava/util/List;
+    invoke-static {p2, v2}, Lcom/facebook/common/dextricks/DexUnpacker;->copyAllDexesAndMove(Ljava/io/File;Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;)Ljava/util/List;
 
     .line 268435462
     .line 268435463
@@ -509,13 +542,13 @@
     move-result-object v0
 
     .line 268435465
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 268435466
     .line 268435467
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
 
     .line 268435468
     .line 268435469
@@ -525,24 +558,35 @@
 
     .line 268435471
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 268435472
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
     .line 268435473
     .line 268435474
     :try_start_1
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 268435475
     .line 268435476
     .line 268435477
+    throw v1
+
+    .line 268435478
     :catchall_1
+    move-exception v0
+
+    .line 268435479
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 268435480
+    .line 268435481
+    .line 268435482
     :cond_1
-    throw v0
+    throw v1
 .end method
 
 .method public getCopyDexIterator(Lcom/facebook/common/dextricks/DexManifest;Ljava/io/File;Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;)Lcom/facebook/common/dextricks/DexUnpacker$CopyDexIterator;

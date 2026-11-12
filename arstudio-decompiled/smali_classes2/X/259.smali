@@ -1,90 +1,74 @@
-.class public final LX/259;
-.super LX/24p;
+.class public LX/259;
+.super LX/25N;
 .source ""
 
+# interfaces
+.implements LX/24w;
 
-# static fields
-.field public static final A00:Lcom/google/common/collect/ImmutableList;
+
+# instance fields
+.field public volatile A00:LX/252;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Object;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "hash"
+        }
+    .end annotation
 
     .line 0
-    sget-object v1, LX/25A;->A01:LX/24w;
+    invoke-direct {p0, p1, p2}, LX/25N;-><init>(Ljava/lang/Object;I)V
 
     .line 1
     .line 2
-    sget-object v0, LX/25A;->A00:LX/24w;
-
     .line 3
-    .line 4
-    invoke-static {v1, v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap;->A07:LX/252;
 
+    .line 4
     .line 5
+    iput-object v0, p0, LX/259;->A00:LX/252;
+
     .line 6
     .line 7
-    move-result-object v0
-
-    .line 8
-    sput-object v0, LX/259;->A00:Lcom/google/common/collect/ImmutableList;
-
-    .line 9
-    .line 10
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 3
+
+# virtual methods
+.method public final AMG()LX/252;
+    .locals 1
 
     .line 0
-    sget-object v2, LX/259;->A00:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p0, LX/259;->A00:LX/252;
 
     .line 1
     .line 2
-    sget-object v1, LX/25A;->A01:LX/24w;
+    return-object v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/259;->A00:LX/252;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/252;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
-    sget-object v0, LX/25A;->A00:LX/24w;
-
     .line 5
+    move-result-object v0
+
     .line 6
-    invoke-static {v1, v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
-    .line 10
-    new-instance v0, LX/24o;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, v1}, LX/24o;-><init>(Lcom/google/common/collect/ImmutableList;)V
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v1
-
-    .line 19
-    const-string/jumbo v0, "tags"
-
-    .line 20
-    .line 21
-    .line 22
-    invoke-direct {p0, v2, v1, v0}, LX/24p;-><init>(Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;)V
-
-    .line 23
-    .line 24
-    .line 25
-    return-void
+    return-object v0
 .end method

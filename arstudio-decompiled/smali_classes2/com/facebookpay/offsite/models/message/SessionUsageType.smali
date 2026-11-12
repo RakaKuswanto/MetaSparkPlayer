@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/facebookpay/offsite/models/message/SessionUsageType;
 
 .field public static final enum OFF_SESSION:Lcom/facebookpay/offsite/models/message/SessionUsageType;
@@ -90,6 +92,18 @@
 
     .line 25
     .line 26
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    sput-object v0, Lcom/facebookpay/offsite/models/message/SessionUsageType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 31
+    .line 32
     return-void
 .end method
 
@@ -103,6 +117,14 @@
     .line 2
     .line 3
     return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/facebookpay/offsite/models/message/SessionUsageType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebookpay/offsite/models/message/SessionUsageType;

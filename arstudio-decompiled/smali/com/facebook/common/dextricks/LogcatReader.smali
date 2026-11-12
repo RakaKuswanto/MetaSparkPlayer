@@ -29,25 +29,28 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 1
     .line 2
-    const/16 v0, 0x18
+    const/16 v1, 0x18
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/001;->A1P(II)Z
+    const/4 v0, 0x0
 
     .line 5
+    if-ge v2, v1, :cond_0
+
     .line 6
     .line 7
-    move-result v0
+    const/4 v0, 0x1
 
     .line 8
+    :cond_0
     sput-boolean v0, Lcom/facebook/common/dextricks/LogcatReader;->MUST_PARSE_PID:Z
 
     .line 9
@@ -202,7 +205,7 @@
 
     .line 48
     .line 49
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 50
     .line 51
@@ -210,7 +213,7 @@
     move-result-object v0
 
     .line 53
-    invoke-static {v6, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v6, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 54
     .line 55
@@ -431,10 +434,10 @@
 
     const-string v6, "LogcatReader"
 
-    .line 268494344
+    .line 268468992
     invoke-virtual {p0}, Lcom/facebook/common/dextricks/LogcatReader;->reset()V
 
-    .line 268494345
+    .line 268468993
     const/4 v0, 0x2
 
     new-array v1, v0, [Ljava/lang/String;
@@ -459,28 +462,28 @@
 
     const-string v0, "-d"
 
-    .line 268494346
+    .line 268468994
     invoke-virtual {v2, v0}, Lcom/facebook/forker/ProcessBuilder;->addArgument(Ljava/lang/String;)Lcom/facebook/forker/ProcessBuilder;
 
-    .line 268494347
+    .line 268468995
     sget-boolean v0, Lcom/facebook/common/dextricks/LogcatReader;->MUST_PARSE_PID:Z
 
     if-nez v0, :cond_0
 
-    .line 268494348
+    .line 268468996
     const-string v0, "--pid="
 
-    invoke-static {v0, p1}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     :goto_0
     invoke-virtual {v2, v0}, Lcom/facebook/forker/ProcessBuilder;->addArgument(Ljava/lang/String;)Lcom/facebook/forker/ProcessBuilder;
 
-    .line 268494349
+    .line 268468997
     new-array v1, v8, [Ljava/lang/Object;
 
-    .line 268494350
+    .line 268468998
     iget-object v0, p0, Lcom/facebook/common/dextricks/LogcatReader;->mTag:Ljava/lang/String;
 
     aput-object v0, v1, v9
@@ -497,13 +500,13 @@
 
     goto :goto_1
 
-    .line 268494351
+    .line 268468999
     :cond_0
     const-string v0, "-s"
 
     goto :goto_0
 
-    .line 268494352
+    .line 268469000
     :goto_1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/common/dextricks/LogcatReader;->mTmpDir:Ljava/io/File;
@@ -514,9 +517,9 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 268494353
+    .line 268469001
     :try_start_1
     invoke-virtual {v7}, Ljava/io/RandomAccessFile;->getFD()Ljava/io/FileDescriptor;
 
@@ -526,29 +529,29 @@
 
     move-result v1
 
-    .line 268494354
+    .line 268469002
     iget-object v0, v2, Lcom/facebook/forker/ProcessBuilder;->mStreamDispositions:[I
 
     aput v1, v0, v8
 
-    .line 268494355
+    .line 268469003
     invoke-virtual {v2}, Lcom/facebook/forker/ProcessBuilder;->create()Lcom/facebook/forker/Process;
 
     move-result-object v5
 
-    .line 268494356
+    .line 268469004
     const/4 v0, 0x4
 
     if-lez p2, :cond_1
 
-    .line 268494357
+    .line 268469005
     invoke-virtual {v5, p2, v0}, Lcom/facebook/forker/Process;->waitFor(II)I
 
     move-result v1
 
     goto :goto_2
 
-    .line 268494358
+    .line 268469006
     :cond_1
     invoke-virtual {v5}, Ljava/lang/Process;->waitFor()I
 
@@ -556,37 +559,40 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     :goto_2
     const/high16 v0, -0x80000000
 
-    .line 268494359
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    .line 268469007
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     move-result v0
 
-    .line 268494360
+    .line 268469008
     :try_start_2
     iget-object v2, p0, Lcom/facebook/common/dextricks/LogcatReader;->mTag:Ljava/lang/String;
 
-    .line 268494361
+    .line 268469009
     if-eqz v0, :cond_2
 
-    .line 268494362
+    .line 268469010
     const-string v1, "Failed to run logcat for %s because we timed out"
 
     new-array v0, v8, [Ljava/lang/Object;
 
-    .line 268494363
+    .line 268469011
     aput-object v2, v0, v9
 
-    .line 268494364
-    invoke-static {v1, v6, v0}, LX/001;->A0z(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 268494365
+    .line 268469012
     :cond_2
     invoke-direct {p0, p1, v7}, Lcom/facebook/common/dextricks/LogcatReader;->readAndParseProcessFile(ILjava/io/RandomAccessFile;)Z
 
@@ -596,31 +602,29 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 268494366
-    :catchall_0
-    move-exception v0
-
-    move-object v4, v5
-
-    move-object v5, v7
-
-    goto :goto_5
-
+    .line 268469013
     :catch_0
-    move-exception v3
+    move-exception v4
 
-    move-object v4, v5
+    move-object v3, v5
 
     move-object v5, v7
 
     goto :goto_3
 
-    :catch_1
-    move-exception v3
+    :catchall_0
+    move-exception v0
 
-    move-object v4, v5
+    move-object v3, v5
+
+    goto :goto_5
+
+    :catch_1
+    move-exception v4
+
+    move-object v3, v5
 
     :goto_3
     :try_start_3
@@ -628,7 +632,7 @@
 
     new-array v1, v8, [Ljava/lang/Object;
 
-    .line 268494367
+    .line 268469014
     iget-object v0, p0, Lcom/facebook/common/dextricks/LogcatReader;->mTag:Ljava/lang/String;
 
     aput-object v0, v1, v9
@@ -637,25 +641,25 @@
 
     move-result-object v0
 
-    invoke-static {v6, v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v6, v0, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 268494368
+    .line 268469015
     invoke-static {v5}, Lcom/facebook/common/dextricks/Fs;->safeClose(Ljava/io/Closeable;)V
 
-    if-eqz v4, :cond_3
+    if-eqz v3, :cond_3
 
-    .line 268494369
-    invoke-virtual {v4}, Ljava/lang/Process;->destroy()V
+    .line 268469016
+    invoke-virtual {v3}, Ljava/lang/Process;->destroy()V
 
     return v9
 
-    .line 268494370
+    .line 268469017
     :goto_4
     invoke-static {v7}, Lcom/facebook/common/dextricks/Fs;->safeClose(Ljava/io/Closeable;)V
 
-    .line 268494371
+    .line 268469018
     invoke-virtual {v5}, Ljava/lang/Process;->destroy()V
 
     :cond_3
@@ -669,18 +673,20 @@
     :catchall_2
     move-exception v0
 
-    move-object v4, v5
+    move-object v3, v5
 
-    .line 268494372
+    move-object v5, v7
+
+    .line 268469019
     :goto_5
     invoke-static {v5}, Lcom/facebook/common/dextricks/Fs;->safeClose(Ljava/io/Closeable;)V
 
-    if-eqz v4, :cond_4
+    if-eqz v3, :cond_4
 
-    .line 268494373
-    invoke-virtual {v4}, Ljava/lang/Process;->destroy()V
+    .line 268469020
+    invoke-virtual {v3}, Ljava/lang/Process;->destroy()V
 
-    .line 268494374
+    .line 268469021
     :cond_4
     throw v0
 .end method

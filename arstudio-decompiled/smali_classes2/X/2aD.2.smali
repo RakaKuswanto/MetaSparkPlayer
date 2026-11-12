@@ -1,50 +1,60 @@
-.class public final synthetic LX/2aD;
+.class public final LX/2ad;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MessagingStateChangePerformanceLogger$$ExternalSyntheticLambda4"
-
-
-# instance fields
-.field public final synthetic A00:I
-
-.field public final synthetic A01:Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;
-
-.field public final synthetic A02:S
+.implements LX/18h;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;IS)V
+.method public constructor <init>()V
     .locals 0
 
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/2aD;->A01:Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;
-
-    iput p2, p0, LX/2aD;->A00:I
-
-    iput-short p3, p0, LX/2aD;->A02:S
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final ACC()I
+    .locals 1
 
-    iget-object v2, p0, LX/2aD;->A01:Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;
+    const v0, 0x10a1c
 
-    iget v1, p0, LX/2aD;->A00:I
+    return v0
+.end method
 
-    iget-short v0, p0, LX/2aD;->A02:S
+.method public final AUc(I)V
+    .locals 2
 
-    invoke-virtual {v2, v1, v0}, Lcom/facebook/messaging/analytics/perf/efficiency/MessagingStateChangePerformanceLogger;->A06(IS)V
+    .line 0
+    const-class v0, LX/6S9;
 
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X3;->A0g(Ljava/lang/Class;)Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    check-cast v1, LX/6SA;
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    iput-boolean v0, v1, LX/6SA;->A0k:Z
+
+    .line 10
+    .line 11
     return-void
 .end method

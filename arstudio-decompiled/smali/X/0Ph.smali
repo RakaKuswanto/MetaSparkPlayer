@@ -1,28 +1,45 @@
-.class public abstract LX/0Ph;
-.super Ljava/lang/Object;
+.class public final LX/0PH;
+.super Ljava/lang/Exception;
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/util/List;
-
-
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
+    .locals 0
+
+    .line 536870912
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Exception;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    const-string v0, "Failed to generate CallerInfo metadata."
 
     .line 1
     .line 2
+    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
     .line 3
-    move-result-object v0
-
     .line 4
-    sput-object v0, LX/0Ph;->A00:Ljava/util/List;
-
     .line 5
-    .line 6
     return-void
 .end method

@@ -1,14 +1,17 @@
 .class public final LX/5Nz;
-.super LX/5O0;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/5Ny;
 
 
 # direct methods
-.method public constructor <init>(LX/5Nw;LX/5Nw;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/5O0;-><init>(LX/5Nw;LX/5Nw;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

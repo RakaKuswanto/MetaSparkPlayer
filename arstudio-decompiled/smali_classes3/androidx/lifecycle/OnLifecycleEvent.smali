@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract value()LX/06e;
+.method public abstract value()LX/075;
 .end method

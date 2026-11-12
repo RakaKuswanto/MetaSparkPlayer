@@ -1,21 +1,28 @@
-.class public final LX/697;
-.super LX/5f7;
+.class public abstract LX/697;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/63Z;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const/16 v0, 0x501
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, v0, p1}, LX/5f7;-><init>(ILjava/lang/String;)V
-
     .line 3
-    .line 4
-    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final Abw(Landroid/graphics/RectF;)V
+    .locals 0
+
     return-void
 .end method

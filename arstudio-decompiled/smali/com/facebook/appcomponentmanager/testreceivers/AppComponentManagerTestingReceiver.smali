@@ -35,11 +35,11 @@
 
     .line 5
     .line 6
-    iget-object v2, v6, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+    iget-object v2, v6, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     .line 7
     .line 8
-    iget-object v1, v6, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+    iget-object v1, v6, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     .line 9
     .line 10
@@ -89,7 +89,7 @@
 
     .line 31
     .line 32
-    iget-object v0, v6, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
+    iget-object v0, v6, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     .line 33
     .line 34
@@ -106,7 +106,7 @@
 
     .line 40
     .line 41
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 42
     .line 43
@@ -150,7 +150,7 @@
     .line 9
     .line 10
     :goto_0
-    invoke-static {v4, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -203,7 +203,7 @@
 
     .line 35
     .line 36
-    invoke-static {v4, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 37
     .line 38
@@ -228,7 +228,7 @@
 
     .line 47
     .line 48
-    invoke-static {v4, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
     .line 50
@@ -376,7 +376,7 @@
 
     .line 118
     .line 119
-    invoke-static {v4, v0, v1}, LX/0Jt;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v4, v0, v1}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 120
     .line 121

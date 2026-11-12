@@ -1,118 +1,176 @@
-.class public final LX/4V9;
-.super Ljava/lang/Object;
+.class public final enum LX/4V9;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/4Vv;
 
+# static fields
+.field public static final synthetic $VALUES:[LX/4V9;
 
-# instance fields
-.field public final synthetic A00:LX/4Uu;
+.field public static final enum LAYOUT:LX/4V9;
+
+.field public static final enum NONE:LX/4V9;
+
+.field public static final enum VIEW:LX/4V9;
 
 
 # direct methods
-.method public constructor <init>(LX/4Uu;)V
-    .locals 0
+.method public static synthetic $values()[LX/4V9;
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/4V9;->A00:LX/4Uu;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AXQ(Lcom/google/android/material/textfield/TextInputLayout;I)V
-    .locals 4
-
-    .line 0
-    iget-object v3, p1, Lcom/google/android/material/textfield/TextInputLayout;->A0G:Landroid/widget/EditText;
-
-    .line 1
-    .line 2
-    check-cast v3, Landroid/widget/AutoCompleteTextView;
-
-    .line 3
-    .line 4
-    if-eqz v3, :cond_1
-
-    .line 5
-    .line 6
     const/4 v0, 0x3
 
+    .line 1
+    new-array v2, v0, [LX/4V9;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/4V9;->VIEW:LX/4V9;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
     .line 7
-    if-ne p2, v0, :cond_1
-
     .line 8
-    .line 9
-    new-instance v0, LX/4VR;
+    sget-object v1, LX/4V9;->LAYOUT:LX/4V9;
 
+    .line 9
     .line 10
+    const/4 v0, 0x1
+
     .line 11
-    invoke-direct {v0, v3, p0}, LX/4VR;-><init>(Landroid/widget/AutoCompleteTextView;LX/4V9;)V
+    aput-object v1, v2, v0
 
     .line 12
     .line 13
-    .line 14
-    invoke-virtual {v3, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    sget-object v1, LX/4V9;->NONE:LX/4V9;
 
+    .line 14
     .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "VIEW"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/4V9;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/4V9;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/4V9;->VIEW:LX/4V9;
+
+    .line 9
+    .line 10
+    const-string v2, "LAYOUT"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/4V9;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/4V9;-><init>(Ljava/lang/String;I)V
+
     .line 16
     .line 17
-    invoke-virtual {v3}, Landroid/view/View;->getOnFocusChangeListener()Landroid/view/View$OnFocusChangeListener;
-
     .line 18
+    sput-object v0, LX/4V9;->LAYOUT:LX/4V9;
+
     .line 19
     .line 20
-    move-result-object v2
+    const-string v2, "NONE"
 
     .line 21
-    iget-object v0, p0, LX/4V9;->A00:LX/4Uu;
-
     .line 22
+    const/4 v1, 0x2
+
     .line 23
-    iget-object v0, v0, LX/4Uu;->A09:Landroid/view/View$OnFocusChangeListener;
+    new-instance v0, LX/4V9;
 
     .line 24
     .line 25
-    const/4 v1, 0x0
+    invoke-direct {v0, v2, v1}, LX/4V9;-><init>(Ljava/lang/String;I)V
 
     .line 26
-    if-ne v2, v0, :cond_0
-
     .line 27
     .line 28
-    invoke-virtual {v3, v1}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+    sput-object v0, LX/4V9;->NONE:LX/4V9;
 
     .line 29
     .line 30
-    .line 31
-    :cond_0
-    invoke-virtual {v3, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-static {}, LX/4V9;->$values()[LX/4V9;
 
+    .line 31
     .line 32
     .line 33
+    move-result-object v0
+
     .line 34
-    sget-boolean v0, LX/4Uu;->A0D:Z
+    sput-object v0, LX/4V9;->$VALUES:[LX/4V9;
 
     .line 35
     .line 36
-    if-eqz v0, :cond_1
-
-    .line 37
-    .line 38
-    invoke-virtual {v3, v1}, Landroid/widget/AutoCompleteTextView;->setOnDismissListener(Landroid/widget/AutoCompleteTextView$OnDismissListener;)V
-
-    .line 39
-    .line 40
-    .line 41
-    :cond_1
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static values()[LX/4V9;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/4V9;->$VALUES:[LX/4V9;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/4V9;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

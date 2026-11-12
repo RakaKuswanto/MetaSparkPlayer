@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/65w;->A00()V
+    invoke-static {}, LX/4Gp;->A00()V
 
     .line 1
     .line 2

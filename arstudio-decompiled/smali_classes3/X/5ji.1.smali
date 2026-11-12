@@ -1,80 +1,676 @@
-.class public final LX/5ji;
-.super Ljava/lang/Object;
+.class public final LX/5Ji;
+.super Lcom/google/android/exoplayer2/Timeline;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "VSyncRenderController$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/5jg;
+.field public final A00:I
+
+.field public final A01:J
+
+.field public final A02:J
+
+.field public final A03:J
+
+.field public final A04:LX/5Fk;
+
+.field public final A05:J
+
+.field public final A06:J
+
+.field public final A07:J
+
+.field public final A08:LX/5La;
+
+.field public final A09:LX/5R3;
 
 
 # direct methods
-.method public constructor <init>(LX/5jg;)V
-    .locals 0
+.method public constructor <init>(LX/5La;LX/5R3;LX/5Fk;IJJJJJJ)V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/5ji;->A00:LX/5jg;
+    invoke-direct {p0}, Lcom/google/android/exoplayer2/Timeline;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iget-boolean v2, p3, LX/5Fk;->A0S:Z
+
     .line 4
     .line 5
+    const/4 v1, 0x1
+
+    .line 6
+    invoke-static {p1}, LX/001;->A1Q(Ljava/lang/Object;)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-eq v2, v0, :cond_0
+
+    .line 11
+    .line 12
+    const/4 v1, 0x0
+
+    .line 13
+    :cond_0
+    invoke-static {v1}, LX/55g;->A05(Z)V
+
+    .line 14
+    .line 15
+    .line 16
+    iput-wide p5, p0, LX/5Ji;->A06:J
+
+    .line 17
+    .line 18
+    iput-wide p7, p0, LX/5Ji;->A07:J
+
+    .line 19
+    .line 20
+    iput-wide p9, p0, LX/5Ji;->A05:J
+
+    .line 21
+    .line 22
+    iput p4, p0, LX/5Ji;->A00:I
+
+    .line 23
+    .line 24
+    iput-wide p11, p0, LX/5Ji;->A01:J
+
+    .line 25
+    .line 26
+    move-wide/from16 v0, p13
+
+    .line 27
+    .line 28
+    iput-wide v0, p0, LX/5Ji;->A03:J
+
+    .line 29
+    .line 30
+    move-wide/from16 v0, p15
+
+    .line 31
+    .line 32
+    iput-wide v0, p0, LX/5Ji;->A02:J
+
+    .line 33
+    .line 34
+    iput-object p3, p0, LX/5Ji;->A04:LX/5Fk;
+
+    .line 35
+    .line 36
+    iput-object p2, p0, LX/5Ji;->A09:LX/5R3;
+
+    .line 37
+    .line 38
+    iput-object p1, p0, LX/5Ji;->A08:LX/5La;
+
+    .line 39
+    .line 40
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final A0E(LX/5Qj;IZ)LX/5Qj;
+    .locals 10
 
     .line 0
-    iget-object v0, p0, LX/5ji;->A00:LX/5jg;
+    invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->A02()I
 
     .line 1
     .line 2
-    iget-object v1, v0, LX/5jg;->A04:Landroid/view/Choreographer;
-
     .line 3
+    move-result v0
+
     .line 4
-    if-nez v1, :cond_0
+    invoke-static {p2, v0}, LX/55g;->A01(II)V
 
     .line 5
     .line 6
-    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
-
     .line 7
-    .line 8
-    .line 9
-    move-result-object v1
+    const/4 v5, 0x0
 
+    .line 8
+    if-eqz p3, :cond_0
+
+    .line 9
     .line 10
-    iput-object v1, v0, LX/5jg;->A04:Landroid/view/Choreographer;
+    iget-object v0, p0, LX/5Ji;->A04:LX/5Fk;
 
     .line 11
     .line 12
-    :cond_0
-    iget-object v0, v0, LX/5jg;->A01:LX/5jh;
+    invoke-static {v0, p2}, LX/5Fk;->A00(LX/5Fk;I)LX/5F5;
 
     .line 13
     .line 14
-    invoke-virtual {v1, v0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
-
     .line 15
+    move-result-object v0
+
+    .line 16
+    iget-object v4, v0, LX/5F5;->A02:Ljava/lang/String;
+
+    .line 17
+    .line 18
+    iget v1, p0, LX/5Ji;->A00:I
+
+    .line 19
+    .line 20
+    invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->A02()I
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v0
+
+    .line 24
+    invoke-static {p2, v0}, LX/55g;->A01(II)V
+
+    .line 25
+    .line 26
+    .line 27
+    add-int/2addr v1, p2
+
+    .line 28
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v5
+
+    .line 32
+    :goto_0
+    iget-object v0, p0, LX/5Ji;->A04:LX/5Fk;
+
+    .line 33
+    .line 34
+    invoke-virtual {v0, p2}, LX/5Fk;->A01(I)J
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-wide v6
+
+    .line 38
+    iget-object v1, v0, LX/5Fk;->A0R:Ljava/util/List;
+
+    .line 39
+    .line 40
+    invoke-interface {v1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    check-cast v0, LX/5F5;
+
+    .line 45
+    .line 46
+    iget-wide v2, v0, LX/5F5;->A00:J
+
+    .line 47
+    .line 48
+    invoke-static {v1}, LX/0X4;->A0f(Ljava/util/List;)Ljava/lang/Object;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    check-cast v0, LX/5F5;
+
+    .line 53
+    .line 54
+    iget-wide v0, v0, LX/5F5;->A00:J
+
+    .line 55
+    .line 56
+    sub-long/2addr v2, v0
+
+    .line 57
+    invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->A0A(J)J
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-wide v8
+
+    .line 61
+    iget-wide v0, p0, LX/5Ji;->A01:J
+
+    .line 62
+    .line 63
+    sub-long/2addr v8, v0
+
+    .line 64
+    move-object v3, p1
+
+    .line 65
+    invoke-virtual/range {v3 .. v9}, LX/5Qj;->A03(Ljava/lang/Object;Ljava/lang/Object;JJ)V
+
+    .line 66
+    .line 67
+    .line 68
+    return-object p1
+
+    .line 69
+    :cond_0
+    move-object v4, v5
+
+    .line 70
+    goto :goto_0
+.end method
+
+.method public final A0F(LX/5M1;IJ)LX/5M1;
+    .locals 36
+
+    .line 0
+    const/4 v6, 0x0
+
+    .line 1
+    const/4 v15, 0x1
+
+    .line 2
+    move/from16 v0, p2
+
+    .line 3
+    .line 4
+    invoke-static {v0, v15}, LX/55g;->A01(II)V
+
+    .line 5
+    .line 6
+    .line 7
+    move-object/from16 v9, p0
+
+    .line 8
+    .line 9
+    iget-wide v0, v9, LX/5Ji;->A02:J
+
+    .line 10
+    .line 11
+    iget-object v8, v9, LX/5Ji;->A04:LX/5Fk;
+
+    .line 12
+    .line 13
+    iget-boolean v10, v8, LX/5Fk;->A0S:Z
+
+    .line 14
+    .line 15
+    if-eqz v10, :cond_0
+
     .line 16
     .line 17
-    invoke-virtual {v1, v0}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+    iget-wide v2, v8, LX/5Fk;->A0B:J
 
     .line 18
     .line 19
+    const-wide v11, -0x7fffffffffffffffL    # -4.9E-324
+
     .line 20
-    return-void
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    cmp-long v4, v2, v11
+
+    .line 25
+    .line 26
+    if-eqz v4, :cond_0
+
+    .line 27
+    .line 28
+    iget-wide v2, v8, LX/5Fk;->A07:J
+
+    .line 29
+    .line 30
+    cmp-long v4, v2, v11
+
+    .line 31
+    .line 32
+    if-nez v4, :cond_0
+
+    .line 33
+    .line 34
+    const-wide/16 v13, 0x0
+
+    .line 35
+    .line 36
+    cmp-long v2, p3, v13
+
+    .line 37
+    .line 38
+    if-lez v2, :cond_3
+
+    .line 39
+    .line 40
+    add-long v0, v0, p3
+
+    .line 41
+    .line 42
+    iget-wide v2, v9, LX/5Ji;->A03:J
+
+    .line 43
+    .line 44
+    cmp-long v4, v0, v2
+
+    .line 45
+    .line 46
+    if-lez v4, :cond_3
+
+    .line 47
+    .line 48
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    :cond_0
+    :goto_0
+    sget-object v19, LX/5M1;->A0H:Ljava/lang/Object;
+
+    .line 54
+    .line 55
+    iget-object v2, v9, LX/5Ji;->A09:LX/5R3;
+
+    .line 56
+    .line 57
+    move-object/from16 v18, v2
+
+    .line 58
+    .line 59
+    iget-wide v13, v9, LX/5Ji;->A06:J
+
+    .line 60
+    .line 61
+    iget-wide v11, v9, LX/5Ji;->A07:J
+
+    .line 62
+    .line 63
+    iget-wide v6, v9, LX/5Ji;->A05:J
+
+    .line 64
+    .line 65
+    if-eqz v10, :cond_1
+
+    .line 66
+    .line 67
+    iget-wide v2, v8, LX/5Fk;->A0B:J
+
+    .line 68
+    .line 69
+    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
+
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+    cmp-long v4, v2, v16
+
+    .line 75
+    .line 76
+    if-eqz v4, :cond_1
+
+    .line 77
+    .line 78
+    iget-wide v2, v8, LX/5Fk;->A07:J
+
+    .line 79
+    .line 80
+    cmp-long v4, v2, v16
+
+    .line 81
+    .line 82
+    const/16 v35, 0x1
+
+    .line 83
+    .line 84
+    if-eqz v4, :cond_2
+
+    .line 85
+    .line 86
+    :cond_1
+    const/16 v35, 0x0
+
+    .line 87
+    .line 88
+    :cond_2
+    iget-object v10, v9, LX/5Ji;->A08:LX/5La;
+
+    .line 89
+    .line 90
+    iget-wide v4, v9, LX/5Ji;->A03:J
+
+    .line 91
+    .line 92
+    invoke-virtual {v9}, Lcom/google/android/exoplayer2/Timeline;->A02()I
+
+    .line 93
+    .line 94
+    .line 95
+    move-result v2
+
+    .line 96
+    add-int/lit8 v21, v2, -0x1
+
+    .line 97
+    .line 98
+    iget-wide v2, v9, LX/5Ji;->A01:J
+
+    .line 99
+    .line 100
+    move-object/from16 v16, p1
+
+    .line 101
+    .line 102
+    move-wide/from16 v22, v13
+
+    .line 103
+    .line 104
+    move-wide/from16 v24, v11
+
+    .line 105
+    .line 106
+    move-wide/from16 v26, v6
+
+    .line 107
+    .line 108
+    move-wide/from16 v28, v0
+
+    .line 109
+    .line 110
+    move-wide/from16 v30, v4
+
+    .line 111
+    .line 112
+    move-wide/from16 v32, v2
+
+    .line 113
+    .line 114
+    move/from16 v34, v15
+
+    .line 115
+    .line 116
+    move-object/from16 v17, v10
+
+    .line 117
+    .line 118
+    move-object/from16 v20, v8
+
+    .line 119
+    .line 120
+    invoke-virtual/range {v16 .. v35}, LX/5M1;->A00(LX/5La;LX/5R3;Ljava/lang/Object;Ljava/lang/Object;IJJJJJJZZ)V
+
+    .line 121
+    .line 122
+    .line 123
+    return-object p1
+
+    .line 124
+    :cond_3
+    iget-wide v4, v9, LX/5Ji;->A01:J
+
+    .line 125
+    .line 126
+    add-long/2addr v4, v0
+
+    .line 127
+    invoke-virtual {v8, v6}, LX/5Fk;->A01(I)J
+
+    .line 128
+    .line 129
+    .line 130
+    move-result-wide v2
+
+    .line 131
+    const/4 v11, 0x0
+
+    .line 132
+    :goto_1
+    iget-object v7, v8, LX/5Fk;->A0R:Ljava/util/List;
+
+    .line 133
+    .line 134
+    invoke-static {v7}, LX/0X6;->A08(Ljava/util/List;)I
+
+    .line 135
+    .line 136
+    .line 137
+    move-result v6
+
+    .line 138
+    if-ge v11, v6, :cond_4
+
+    .line 139
+    .line 140
+    cmp-long v6, v4, v2
+
+    .line 141
+    .line 142
+    if-ltz v6, :cond_4
+
+    .line 143
+    .line 144
+    sub-long/2addr v4, v2
+
+    .line 145
+    add-int/lit8 v11, v11, 0x1
+
+    .line 146
+    .line 147
+    invoke-virtual {v8, v11}, LX/5Fk;->A01(I)J
+
+    .line 148
+    .line 149
+    .line 150
+    move-result-wide v2
+
+    .line 151
+    goto :goto_1
+
+    .line 152
+    :cond_4
+    invoke-interface {v7, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 153
+    .line 154
+    .line 155
+    move-result-object v11
+
+    .line 156
+    check-cast v11, LX/5F5;
+
+    .line 157
+    .line 158
+    const/4 v6, 0x2
+
+    .line 159
+    invoke-virtual {v11, v6}, LX/5F5;->A02(I)I
+
+    .line 160
+    .line 161
+    .line 162
+    move-result v7
+
+    .line 163
+    const/4 v6, -0x1
+
+    .line 164
+    if-eq v7, v6, :cond_0
+
+    .line 165
+    .line 166
+    iget-object v6, v11, LX/5F5;->A03:Ljava/util/List;
+
+    .line 167
+    .line 168
+    invoke-static {v6, v7}, LX/5FK;->A01(Ljava/util/List;I)Ljava/util/List;
+
+    .line 169
+    .line 170
+    .line 171
+    move-result-object v6
+
+    .line 172
+    invoke-static {v6}, LX/5F3;->A01(Ljava/util/List;)LX/5Il;
+
+    .line 173
+    .line 174
+    .line 175
+    move-result-object v7
+
+    .line 176
+    if-eqz v7, :cond_0
+
+    .line 177
+    .line 178
+    invoke-interface {v7, v2, v3}, LX/5Il;->AKQ(J)J
+
+    .line 179
+    .line 180
+    .line 181
+    move-result-wide v11
+
+    .line 182
+    cmp-long v6, v11, v13
+
+    .line 183
+    .line 184
+    if-eqz v6, :cond_0
+
+    .line 185
+    .line 186
+    invoke-interface {v7, v4, v5, v2, v3}, LX/5Il;->AKR(JJ)J
+
+    .line 187
+    .line 188
+    .line 189
+    move-result-wide v2
+
+    .line 190
+    invoke-interface {v7, v2, v3}, LX/5Il;->ALb(J)J
+
+    .line 191
+    .line 192
+    .line 193
+    move-result-wide v2
+
+    .line 194
+    add-long/2addr v0, v2
+
+    .line 195
+    sub-long/2addr v0, v4
+
+    .line 196
+    goto/16 :goto_0
 .end method

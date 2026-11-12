@@ -1,17 +1,75 @@
-.class public interface abstract LX/5Yj;
+.class public abstract LX/5YJ;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract getBool(Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;Z)Z
-.end method
+# direct methods
+.method public static final A0A(Ljava/util/Set;)LX/5YM;
+    .locals 2
 
-.method public abstract getDouble(Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$DoubleParameter;D)D
-.end method
+    .line 0
+    check-cast p0, LX/5YM;
 
-.method public abstract getLong(Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;J)J
-.end method
+    .line 1
+    .line 2
+    iget-object v1, p0, LX/5YM;->backing:LX/5YL;
 
-.method public abstract getString(Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;Ljava/lang/String;)Ljava/lang/String;
+    .line 3
+    .line 4
+    invoke-virtual {v1}, LX/5YL;->A05()V
+
+    .line 5
+    .line 6
+    .line 7
+    const/4 v0, 0x1
+
+    .line 8
+    iput-boolean v0, v1, LX/5YL;->isReadOnly:Z
+
+    .line 9
+    .line 10
+    invoke-virtual {v1}, LX/5YL;->size()I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    if-gtz v0, :cond_0
+
+    .line 15
+    .line 16
+    sget-object v1, LX/5YL;->A00:LX/5YL;
+
+    .line 17
+    .line 18
+    const-string v0, "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.builders.MapBuilder, V of kotlin.collections.builders.MapBuilder>"
+
+    .line 19
+    .line 20
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 21
+    .line 22
+    .line 23
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    if-gtz v0, :cond_1
+
+    .line 28
+    .line 29
+    sget-object p0, LX/5YM;->A00:LX/5YM;
+
+    .line 30
+    .line 31
+    :cond_1
+    return-object p0
 .end method

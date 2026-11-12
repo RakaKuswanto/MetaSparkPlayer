@@ -1,33 +1,29 @@
-.class public final LX/4tB;
-.super LX/4t5;
+.class public final synthetic LX/4tB;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:I
-
-.field public A02:LX/3xw;
-
-.field public final A03:LX/3xa;
-
-.field public volatile A04:LX/3zw;
+# static fields
+.field public static final synthetic A00:LX/4tB;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Paint;LX/3xa;Ljava/util/concurrent/Executor;I)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/4tB;
+
+    invoke-direct {v0}, LX/4tB;-><init>()V
+
+    sput-object v0, LX/4tB;->A00:LX/4tB;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
-    .line 0
-    invoke-direct {p0, p1, p3, p4}, LX/4t5;-><init>(Landroid/graphics/Paint;Ljava/util/concurrent/Executor;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p2, p0, LX/4tB;->A03:LX/3xa;
-
-    .line 4
-    .line 5
     return-void
 .end method

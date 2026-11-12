@@ -1,83 +1,85 @@
 .class public final LX/3hs;
-.super Ljava/lang/Object;
+.super LX/4vQ;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "HDMIConnectionListener$2"
+.implements LX/0GZ;
 
 
 # instance fields
-.field public final synthetic A00:LX/3pu;
+.field public A00:Ljava/lang/String;
+
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>(LX/3pu;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/3hs;->A00:LX/3pu;
+    iput p2, p0, LX/3hs;->A01:I
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/3hs;->A00:Ljava/lang/String;
 
     .line 3
     .line 4
+    const/4 v0, 0x1
+
     .line 5
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
+
+    .line 6
+    .line 7
+    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
     .line 0
-    invoke-static {}, LX/3hv;->A00()LX/3hv;
+    iget v0, p0, LX/3hs;->A01:I
 
     .line 1
     .line 2
+    packed-switch v0, :pswitch_data_0
+
     .line 3
-    move-result-object v6
-
     .line 4
-    const-string v5, "HDMIConnectionListener"
-
     .line 5
-    .line 6
-    const-string v0, "HDMIConnectionListenerImpl.isHDMIConnected"
+    :pswitch_0
+    check-cast p1, Ljava/util/Map;
 
+    .line 6
     .line 7
+    const/4 v0, 0x0
+
     .line 8
-    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 9
     .line 10
     .line 11
-    const/4 v4, 0x1
+    iget-object v1, p0, LX/3hs;->A00:Ljava/lang/String;
 
     .line 12
-    const/4 v3, 0x0
-
     .line 13
-    :try_start_0
-    const-string v0, "/sys/devices/virtual/switch/hdmi/state"
+    const-string/jumbo v0, "name"
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
-
     .line 16
+    :goto_0
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 17
     .line 18
-    move-result-object v2
-
     .line 19
-    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+    invoke-static {}, Landroid/os/Process;->myTid()I
 
     .line 20
     .line 21
@@ -85,157 +87,272 @@
     move-result v0
 
     .line 23
-    if-nez v0, :cond_0
+    invoke-static {v0}, Landroid/os/Process;->getThreadPriority(I)I
 
     .line 24
     .line 25
-    const-string v0, "/sys/class/switch/hdmi/state"
-
     .line 26
+    move-result v0
+
     .line 27
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 28
     .line 29
     .line 30
-    move-result-object v2
+    move-result-object v1
 
     .line 31
-    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+    const-string/jumbo v0, "threadPriority"
 
     .line 32
     .line 33
     .line 34
-    move-result v0
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 35
-    if-nez v0, :cond_0
-
     .line 36
     .line 37
-    goto :goto_0
+    :goto_1
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
 
     .line 38
-    :cond_0
-    new-instance v1, Ljava/util/Scanner;
-
     .line 39
+    return-object v0
+
     .line 40
-    invoke-direct {v1, v2}, Ljava/util/Scanner;-><init>(Ljava/io/File;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    :pswitch_1
+    check-cast p1, Ljava/util/Map;
 
     .line 41
     .line 42
+    const/4 v2, 0x0
+
     .line 43
-    :try_start_1
-    invoke-virtual {v1}, Ljava/util/Scanner;->nextInt()I
+    invoke-static {p1, v2}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 44
     .line 45
     .line 46
-    move-result v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v1, p0, LX/3hs;->A00:Ljava/lang/String;
 
     .line 47
-    :try_start_2
-    invoke-virtual {v1}, Ljava/util/Scanner;->close()V
-
     .line 48
+    const-string/jumbo v0, "name"
+
     .line 49
     .line 50
-    if-gtz v0, :cond_1
-
     .line 51
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 52
-    const/4 v4, 0x0
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
     .line 53
-    :cond_1
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
     .line 54
-    .line 55
-    .line 56
-    goto :goto_1
+    goto :goto_2
 
+    .line 55
+    :pswitch_2
+    check-cast p1, Ljava/util/Map;
+
+    .line 56
     .line 57
-    :catchall_0
-    move-exception v0
+    const/4 v0, 0x0
 
     .line 58
-    :try_start_3
-    invoke-virtual {v1}, Ljava/util/Scanner;->close()V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 59
     .line 60
     .line 61
-    throw v0
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    iget-object v1, p0, LX/3hs;->A00:Ljava/lang/String;
 
     .line 62
-    :catch_0
-    move-exception v2
-
     .line 63
-    :try_start_4
-    const-string v1, "Failed to get HDMI status. Exception : %s"
+    const-string/jumbo v0, "name"
 
     .line 64
     .line 65
-    new-array v0, v4, [Ljava/lang/Object;
-
     .line 66
-    .line 67
-    invoke-static {v2, v0, v3}, LX/0Yf;->A1B(Ljava/lang/Object;[Ljava/lang/Object;I)V
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 67
     .line 68
     .line 69
+    const/4 v2, 0x1
+
     .line 70
-    invoke-static {v5, v1, v0}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    :goto_2
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 71
     .line 72
     .line 73
-    :goto_0
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+    move-result-object v1
 
     .line 74
+    const-string/jumbo v0, "wasInterrupted"
+
     .line 75
     .line 76
-    const/4 v4, 0x0
-
     .line 77
-    :goto_1
-    iget-object v0, v6, LX/3hv;->A00:Ljava/util/concurrent/atomic/AtomicBoolean;
+    goto :goto_0
 
     .line 78
-    .line 79
-    invoke-virtual {v0, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    :pswitch_3
+    invoke-static {p1}, LX/0X3;->A0O(Ljava/lang/Object;)LX/3hr;
 
+    .line 79
     .line 80
     .line 81
+    move-result-object v1
+
     .line 82
-    return-void
+    iget-object v0, p0, LX/3hs;->A00:Ljava/lang/String;
 
     .line 83
-    :catchall_1
-    move-exception v0
-
     .line 84
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+    invoke-interface {v1, v0}, LX/3hr;->AT1(Ljava/lang/String;)V
 
     .line 85
     .line 86
     .line 87
-    throw v0
+    goto :goto_1
+
+    .line 88
+    :pswitch_4
+    invoke-static {p1}, LX/0X3;->A0O(Ljava/lang/Object;)LX/3hr;
+
+    .line 89
+    .line 90
+    .line 91
+    move-result-object v1
+
+    .line 92
+    iget-object v0, p0, LX/3hs;->A00:Ljava/lang/String;
+
+    .line 93
+    .line 94
+    invoke-interface {v1, v0}, LX/3hr;->ATQ(Ljava/lang/String;)V
+
+    .line 95
+    .line 96
+    .line 97
+    goto :goto_1
+
+    .line 98
+    :pswitch_5
+    invoke-static {p1}, LX/0X3;->A0O(Ljava/lang/Object;)LX/3hr;
+
+    .line 99
+    .line 100
+    .line 101
+    move-result-object v1
+
+    .line 102
+    iget-object v0, p0, LX/3hs;->A00:Ljava/lang/String;
+
+    .line 103
+    .line 104
+    invoke-interface {v1, v0}, LX/3hr;->AZG(Ljava/lang/String;)V
+
+    .line 105
+    .line 106
+    .line 107
+    goto :goto_1
+
+    .line 108
+    :pswitch_6
+    invoke-static {p1}, LX/0X3;->A0O(Ljava/lang/Object;)LX/3hr;
+
+    .line 109
+    .line 110
+    .line 111
+    move-result-object v1
+
+    .line 112
+    iget-object v0, p0, LX/3hs;->A00:Ljava/lang/String;
+
+    .line 113
+    .line 114
+    invoke-interface {v1, v0}, LX/3hr;->Abb(Ljava/lang/String;)V
+
+    .line 115
+    .line 116
+    .line 117
+    goto :goto_1
+
+    .line 118
+    :pswitch_7
+    invoke-static {p1}, LX/0X3;->A0O(Ljava/lang/Object;)LX/3hr;
+
+    .line 119
+    .line 120
+    .line 121
+    move-result-object v1
+
+    .line 122
+    iget-object v0, p0, LX/3hs;->A00:Ljava/lang/String;
+
+    .line 123
+    .line 124
+    invoke-interface {v1, v0}, LX/3hr;->Abq(Ljava/lang/String;)V
+
+    .line 125
+    .line 126
+    .line 127
+    goto :goto_1
+
+    .line 128
+    :pswitch_8
+    check-cast p1, Ljava/lang/String;
+
+    .line 129
+    .line 130
+    const/4 v0, 0x0
+
+    .line 131
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 132
+    .line 133
+    .line 134
+    iget-object v0, p0, LX/3hs;->A00:Ljava/lang/String;
+
+    .line 135
+    .line 136
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v0
+
+    .line 140
+    invoke-static {p1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 141
+    .line 142
+    .line 143
+    move-result-object v0
+
+    .line 144
+    return-object v0
+
+    .line 145
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+    .end packed-switch
 .end method

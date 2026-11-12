@@ -22,11 +22,11 @@
     const/4 v1, 0x7
 
     .line 1
-    new-instance v0, LX/04O;
+    new-instance v0, LX/0Wv;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/04O;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Wv;-><init>(I)V
 
     .line 4
     .line 5
@@ -88,7 +88,7 @@
     move-result-object v1
 
     .line 7
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 8
     .line 9
@@ -110,7 +110,7 @@
     move-result-object v0
 
     .line 18
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 19
     .line 20
@@ -158,7 +158,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

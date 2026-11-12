@@ -88,15 +88,15 @@
     .locals 9
 
     .line 0
-    sget-object v4, LX/2Au;->A02:LX/2Au;
+    sget-object v4, LX/56G;->A02:LX/56G;
 
     .line 1
     .line 2
-    sget-object v1, LX/69h;->IDENTITY:LX/69h;
+    sget-object v1, LX/6MG;->IDENTITY:LX/6MG;
 
     .line 3
     .line 4
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 5
     .line 6
@@ -104,7 +104,7 @@
     move-result-object v8
 
     .line 8
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 9
     .line 10
@@ -112,7 +112,7 @@
     move-result-object v6
 
     .line 12
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 13
     .line 14
@@ -120,15 +120,15 @@
     move-result-object v7
 
     .line 16
-    sget-object v3, Lcom/google/gson/Gson;->A0G:LX/1WS;
+    sget-object v3, Lcom/google/gson/Gson;->A0G:LX/571;
 
     .line 17
     .line 18
-    sget-object v2, Lcom/google/gson/Gson;->A0F:LX/1WS;
+    sget-object v2, Lcom/google/gson/Gson;->A0F:LX/571;
 
     .line 19
     .line 20
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
 
     .line 21
     .line 22
@@ -150,7 +150,7 @@
     .line 30
     .line 31
     .line 32
-    invoke-static/range {v1 .. v8}, LX/1VV;->A00(LX/1WE;LX/1WS;LX/1WS;LX/2Au;Ljava/util/LinkedList;Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Lcom/google/gson/Gson;
+    invoke-static/range {v1 .. v8}, LX/297;->A00(LX/56L;LX/571;LX/571;LX/56G;Ljava/util/LinkedList;Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Lcom/google/gson/Gson;
 
     .line 33
     .line 34
@@ -168,7 +168,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -201,13 +201,13 @@
 .end method
 
 .method public final getToJson(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 2
+    .locals 1
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -240,7 +240,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 19
     .line 20
@@ -252,11 +252,11 @@
 
     .line 23
     :cond_0
-    sget-object v1, Lcom/facebookpay/offsite/models/message/GsonUtils;->defaultGson:Lcom/google/gson/Gson;
+    sget-object v0, Lcom/facebookpay/offsite/models/message/GsonUtils;->defaultGson:Lcom/google/gson/Gson;
 
     .line 24
     .line 25
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, p1}, Lcom/google/gson/Gson;->A04(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 26
     .line 27
@@ -264,38 +264,30 @@
     move-result-object v0
 
     .line 29
-    invoke-virtual {v1, p1, v0}, Lcom/google/gson/Gson;->A04(Ljava/lang/Object;Ljava/lang/reflect/Type;)Ljava/lang/String;
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 30
     .line 31
     .line 32
-    move-result-object v0
-
-    .line 33
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 34
-    .line 35
-    .line 36
     return-object v0
 .end method
 
 .method public final getToOffsiteAvailabilityResponse(Ljava/lang/String;)Lcom/facebookpay/expresscheckout/models/CheckoutAvailability;
-    .locals 2
+    .locals 3
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/facebookpay/offsite/models/message/GsonUtils;->deserializerGson(Ljava/lang/String;)Lcom/google/gson/Gson;
+    invoke-virtual {p0, v2}, Lcom/facebookpay/offsite/models/message/GsonUtils;->deserializerGson(Ljava/lang/String;)Lcom/google/gson/Gson;
 
     .line 6
     .line 7
@@ -315,16 +307,12 @@
     move-result-object v0
 
     .line 15
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 16
     .line 17
     .line 18
-    check-cast v0, Lcom/facebookpay/expresscheckout/models/CheckoutAvailability;
-
-    .line 19
-    .line 20
-    return-object v0
+    return-object v2
 .end method
 
 .method public final getToOffsitePaymentHandledMsg(Ljava/lang/String;)Lcom/facebookpay/offsite/models/message/PaymentHandledRequest;
@@ -334,7 +322,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -362,7 +350,7 @@
     move-result-object v0
 
     .line 15
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 16
     .line 17
@@ -381,7 +369,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -409,12 +397,59 @@
     move-result-object v0
 
     .line 15
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 16
     .line 17
     .line 18
     check-cast v0, Lcom/facebookpay/offsite/models/message/PaymentRequest;
+
+    .line 19
+    .line 20
+    return-object v0
+.end method
+
+.method public final getToOffsiteStartCheckoutRequest(Ljava/lang/String;)Lcom/facebookpay/offsite/models/message/StartCheckoutRequest;
+    .locals 2
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    invoke-virtual {p0, v0}, Lcom/facebookpay/offsite/models/message/GsonUtils;->deserializerGson(Ljava/lang/String;)Lcom/google/gson/Gson;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
+
+    .line 9
+    const-class v0, Lcom/facebookpay/offsite/models/message/StartCheckoutRequest;
+
+    .line 10
+    .line 11
+    invoke-virtual {v1, p1, v0}, Lcom/google/gson/Gson;->A03(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 16
+    .line 17
+    .line 18
+    check-cast v0, Lcom/facebookpay/offsite/models/message/StartCheckoutRequest;
 
     .line 19
     .line 20
@@ -428,7 +463,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -467,7 +502,7 @@
     move-result-object v0
 
     .line 22
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 23
     .line 24
@@ -486,7 +521,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -511,7 +546,7 @@
     move-result-object v0
 
     .line 14
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 15
     .line 16

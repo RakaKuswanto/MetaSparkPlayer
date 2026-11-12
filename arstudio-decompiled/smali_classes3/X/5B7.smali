@@ -1,43 +1,41 @@
-.class public LX/5B7;
+.class public interface abstract LX/5B7;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
 # virtual methods
-.method public A00()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
+.method public abstract A33(Ljava/lang/String;)V
 .end method
 
-.method public A01()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract A5N(Ljava/io/File;J)V
 .end method
 
-.method public A02()Z
-    .locals 1
+.method public abstract ABR()J
+.end method
 
-    const/4 v0, 0x0
+.method public abstract ABU(Ljava/lang/String;)Ljava/util/NavigableSet;
+.end method
 
-    return v0
+.method public abstract AG6()Ljava/util/Set;
+.end method
+
+.method public abstract AOY(Ljava/lang/String;JJ)Z
+.end method
+
+.method public abstract APQ(Ljava/lang/String;)Z
+.end method
+
+.method public abstract Ags(LX/598;)V
+.end method
+
+.method public abstract Ahq(LX/598;)V
+.end method
+
+.method public abstract AnV(Ljava/lang/String;JJ)Ljava/io/File;
+.end method
+
+.method public abstract Anb(LX/5Ay;Ljava/lang/String;JJ)LX/598;
+.end method
+
+.method public abstract And(LX/5Ay;Ljava/lang/String;JJ)LX/598;
 .end method

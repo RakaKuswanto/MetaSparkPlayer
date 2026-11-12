@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xf67f
 
-.field public static final __CONFIG__:I = 0x41f
+.field public static final __CONFIG__:I = 0x3d1
 
-.field public static final gk_det_usercalibration_enabled:J = 0x81041f00002b19L
+.field public static final gk_det_usercalibration_enabled:J = 0x8103d100002672L
 
 
 # direct methods

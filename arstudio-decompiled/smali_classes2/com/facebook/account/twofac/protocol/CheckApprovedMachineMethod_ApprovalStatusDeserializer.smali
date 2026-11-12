@@ -23,3 +23,20 @@
     .line 7
     return-void
 .end method
+
+
+# virtual methods
+.method public final A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-static {p1}, LX/2OX;->A00(LX/3oD;)Lcom/facebook/account/twofac/protocol/CheckApprovedMachineMethod$ApprovalStatus;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method

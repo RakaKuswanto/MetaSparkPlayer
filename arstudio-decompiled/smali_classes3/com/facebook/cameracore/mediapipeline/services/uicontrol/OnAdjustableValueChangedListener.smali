@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4pK;
+
 
 # instance fields
 .field public mHybridData:Lcom/facebook/jni/HybridData;

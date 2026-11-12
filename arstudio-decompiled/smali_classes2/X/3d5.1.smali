@@ -1,139 +1,83 @@
 .class public final LX/3d5;
-.super LX/3dA;
+.super LX/3eK;
 .source ""
 
 
-# static fields
-.field public static final serialVersionUID:J = 0x7144dad94f7d7ab1L
-
-
-# instance fields
-.field public missingOptions:Ljava/util/List;
-
-
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string v0, "Missing required option"
+    invoke-direct {p0}, LX/3eK;-><init>()V
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 3
-    .line 4
-    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AaC(Landroid/content/Context;Landroid/content/Intent;LX/0QS;)V
+    .locals 3
+
+    .line 0
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
     move-result-object v2
 
-    .line 6
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    .line 4
+    const/4 v1, 0x0
 
+    .line 5
+    invoke-static {}, LX/6Dp;->A00()Ljava/util/Map;
+
+    .line 6
     .line 7
     .line 8
+    move-result-object v0
+
     .line 9
-    move-result v1
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     .line 10
-    const/4 v0, 0x1
-
     .line 11
-    if-ne v1, v0, :cond_1
-
     .line 12
+    move-result-object v0
+
     .line 13
-    const-string v0, ""
+    aput-object v0, v2, v1
 
     .line 14
     .line 15
-    :goto_0
-    invoke-static {v2, v0}, LX/0Yh;->A1S(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    const-string/jumbo v0, "opengl-capabilities:%s"
 
     .line 16
     .line 17
     .line 18
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, v2}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 19
     .line 20
     .line 21
-    move-result-object v1
+    move-result-object v2
 
     .line 22
-    :cond_0
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v1, 0x4
 
     .line 23
+    const-string/jumbo v0, "ar-player-response"
+
     .line 24
     .line 25
-    move-result v0
-
     .line 26
-    if-eqz v0, :cond_2
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
     .line 27
     .line 28
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 33
-    .line 34
-    .line 35
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 36
-    .line 37
-    .line 38
-    move-result v0
-
-    .line 39
-    if-eqz v0, :cond_0
-
-    .line 40
-    .line 41
-    invoke-static {v2}, LX/0Yg;->A1E(Ljava/lang/StringBuilder;)V
-
-    .line 42
-    .line 43
-    .line 44
-    goto :goto_1
-
-    .line 45
-    :cond_1
-    const-string/jumbo v0, "s"
-
-    .line 46
-    .line 47
-    .line 48
-    goto :goto_0
-
-    .line 49
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v0
-
-    .line 53
-    invoke-direct {p0, v0}, LX/3dA;-><init>(Ljava/lang/String;)V
-
-    .line 54
-    .line 55
-    .line 56
-    iput-object p1, p0, LX/3d5;->missingOptions:Ljava/util/List;
-
-    .line 57
-    .line 58
     return-void
 .end method

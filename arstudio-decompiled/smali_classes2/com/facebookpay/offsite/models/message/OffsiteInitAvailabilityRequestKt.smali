@@ -1,4 +1,4 @@
-.class public final Lcom/facebookpay/offsite/models/message/OffsiteInitAvailabilityRequestKt;
+.class public abstract Lcom/facebookpay/offsite/models/message/OffsiteInitAvailabilityRequestKt;
 .super Ljava/lang/Object;
 .source ""
 
@@ -15,7 +15,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -36,7 +36,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0, v1}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 13
     .line 14
@@ -52,7 +52,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0, v1}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22

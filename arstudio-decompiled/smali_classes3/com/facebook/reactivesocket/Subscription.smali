@@ -12,11 +12,11 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/6FD;
+    new-instance v0, LX/6UK;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/6FD;-><init>()V
+    invoke-direct {v0}, LX/6UK;-><init>()V
 
     .line 3
     .line 4

@@ -1,61 +1,69 @@
-.class public final LX/2x3;
-.super Ljava/lang/Object;
+.class public final LX/2X3;
+.super LX/3AH;
 .source ""
 
-
-# instance fields
-.field public final A00:LX/1Nw;
-
-.field public final A01:LX/1Nm;
-
-.field public final A02:LX/1Nm;
+# interfaces
+.implements LX/2jL;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v2, Ljava/util/concurrent/LinkedBlockingQueue;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/2x3;->A00:LX/1Nw;
+    invoke-direct {v2}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    sget v0, LX/2eq;->AVB:I
+    const-string v1, "SerialExecutor"
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    const/4 v0, 0x1
 
     .line 8
+    invoke-direct {p0, v1, v2, p1, v0}, LX/3AH;-><init>(Ljava/lang/String;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/Executor;I)V
+
     .line 9
     .line 10
-    move-result-object v0
-
     .line 11
-    iput-object v0, p0, LX/2x3;->A01:LX/1Nm;
-
-    .line 12
-    .line 13
-    sget v0, LX/2eq;->AVA:I
-
-    .line 14
-    .line 15
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, LX/2x3;->A02:LX/1Nm;
-
-    .line 20
-    .line 21
     return-void
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized execute(Ljava/lang/Runnable;)V
+    .locals 1
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-super {p0, p1}, LX/3AH;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    .line 3
+    .line 4
+    monitor-exit p0
+
+    .line 5
+    return-void
+
+    .line 6
+    :catchall_0
+    move-exception v0
+
+    .line 7
+    monitor-exit p0
+
+    .line 8
+    throw v0
 .end method

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5X0;
+.field public static final Companion:LX/5OK;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5X0;
+    new-instance v0, LX/5OK;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5X0;-><init>()V
+    invoke-direct {v0}, LX/5OK;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/ardelivery/networkconsentmanager/impl/NetworkConsentManagerJNI;->Companion:LX/5X0;
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/networkconsentmanager/impl/NetworkConsentManagerJNI;->Companion:LX/5OK;
 
     .line 6
     .line 7
@@ -33,7 +33,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -45,7 +45,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yc;->A0M(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
@@ -102,16 +102,16 @@
 .method public native hasUserAllowedNetworking(Ljava/lang/String;)Lcom/facebook/common/util/TriState;
 .end method
 
-.method public setUserConsent(Ljava/lang/String;ZLX/5Wz;)V
+.method public setUserConsent(Ljava/lang/String;ZLX/5OI;)V
     .locals 1
 
     .line 0
-    invoke-static {p1, p3}, LX/0Yc;->A0L(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p3}, LX/431;->A1F(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p3}, LX/5Wz;->getValue()I
+    invoke-virtual {p3}, LX/5OI;->getValue()I
 
     .line 4
     .line 5

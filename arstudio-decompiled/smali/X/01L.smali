@@ -1,944 +1,178 @@
 .class public abstract LX/01L;
-.super Landroid/app/Service;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final DEBUG:Z = false
+.field public static final A00:[I
 
-.field public static final NO_LONGER_RUNNING_MESSAGE:Ljava/lang/String; = "Caller no longer running"
+.field public static final A01:[I
 
-.field public static final TAG:Ljava/lang/String; = "JobIntentService"
+.field public static final A02:[I
 
-.field public static final sClassWorkEnqueuer:Ljava/util/HashMap;
+.field public static final A03:[I
 
-.field public static final sLock:Ljava/lang/Object;
-
-
-# instance fields
-.field public final mCompatQueue:Ljava/util/ArrayList;
-
-.field public mCompatWorkEnqueuer:LX/01K;
-
-.field public mCurProcessor:LX/01H;
-
-.field public mDestroyed:Z
-
-.field public mInterruptIfStopped:Z
-
-.field public mJobImpl:LX/01I;
-
-.field public mStopped:Z
+.field public static final A04:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/01L;->sLock:Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    sput-object v0, LX/01L;->sClassWorkEnqueuer:Ljava/util/HashMap;
-
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public constructor <init>()V
     .locals 2
 
     .line 0
-    invoke-direct {p0}, Landroid/app/Service;-><init>()V
+    const/4 v1, 0x2
 
     .line 1
+    const/4 v0, 0x5
+
     .line 2
-    .line 3
-    const/4 v0, 0x0
-
-    .line 4
-    iput-boolean v0, p0, LX/01L;->mInterruptIfStopped:Z
-
-    .line 5
-    .line 6
-    iput-boolean v0, p0, LX/01L;->mStopped:Z
-
-    .line 7
-    .line 8
-    iput-boolean v0, p0, LX/01L;->mDestroyed:Z
-
-    .line 9
-    .line 10
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 11
-    .line 12
-    const/16 v0, 0x1a
-
-    .line 13
-    .line 14
-    if-lt v1, v0, :cond_0
-
-    .line 15
-    .line 16
-    const/4 v0, 0x0
-
-    .line 17
-    :goto_0
-    iput-object v0, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 18
-    .line 19
-    return-void
-
-    .line 20
-    :cond_0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    goto :goto_0
-.end method
-
-.method public static enqueueWork(Landroid/content/Context;Landroid/content/ComponentName;ILandroid/content/Intent;)V
-    .locals 2
-
-    .line 0
-    if-eqz p3, :cond_0
-
-    .line 1
-    .line 2
-    sget-object v1, LX/01L;->sLock:Ljava/lang/Object;
+    new-array v0, v0, [I
 
     .line 3
     .line 4
-    monitor-enter v1
+    fill-array-data v0, :array_0
 
     .line 5
-    const/4 v0, 0x1
-
     .line 6
-    :try_start_0
-    invoke-static {p0, p1, v0, p2}, LX/01L;->getWorkEnqueuer(Landroid/content/Context;Landroid/content/ComponentName;ZI)LX/01K;
-
     .line 7
+    sput-object v0, LX/01L;->A00:[I
+
     .line 8
     .line 9
-    move-result-object v0
+    const/4 v0, 0x7
 
     .line 10
-    invoke-virtual {v0, p2}, LX/01K;->A03(I)V
+    new-array v0, v0, [I
 
     .line 11
     .line 12
-    .line 13
-    invoke-virtual {v0, p3}, LX/01K;->A04(Landroid/content/Intent;)V
+    fill-array-data v0, :array_1
 
+    .line 13
     .line 14
     .line 15
-    .line 16
-    monitor-exit v1
+    sput-object v0, LX/01L;->A01:[I
 
+    .line 16
     .line 17
-    return-void
+    const/16 v0, 0xa
 
     .line 18
-    :catchall_0
-    move-exception v0
-
     .line 19
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-array v0, v0, [I
 
     .line 20
-    throw v0
-
     .line 21
-    :cond_0
-    const-string v0, "work must not be null"
+    fill-array-data v0, :array_2
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
     .line 24
+    sput-object v0, LX/01L;->A02:[I
+
     .line 25
     .line 26
-    move-result-object v0
+    const/16 v0, 0xc
 
     .line 27
-    throw v0
-.end method
-
-.method public static enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
-    .locals 1
-
-    .line 268435456
-    new-instance v0, Landroid/content/ComponentName;
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {v0, p0, p1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    invoke-static {p0, v0, p2, p3}, LX/01L;->enqueueWork(Landroid/content/Context;Landroid/content/ComponentName;ILandroid/content/Intent;)V
-
-    .line 268435462
-    .line 268435463
-    .line 268435464
-    return-void
-.end method
-
-.method public static getWorkEnqueuer(Landroid/content/Context;Landroid/content/ComponentName;ZI)LX/01K;
-    .locals 3
-
-    .line 0
-    sget-object v2, LX/01L;->sClassWorkEnqueuer:Ljava/util/HashMap;
-
-    .line 1
-    .line 2
-    invoke-virtual {v2, p1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/01K;
-
-    .line 7
-    .line 8
-    if-nez v0, :cond_0
-
-    .line 9
-    .line 10
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 11
-    .line 12
-    const/16 v0, 0x1a
-
-    .line 13
-    .line 14
-    if-lt v1, v0, :cond_1
-
-    .line 15
-    .line 16
-    if-eqz p2, :cond_2
-
-    .line 17
-    .line 18
-    new-instance v0, LX/0XN;
-
-    .line 19
-    .line 20
-    invoke-direct {v0, p1, p0, p3}, LX/0XN;-><init>(Landroid/content/ComponentName;Landroid/content/Context;I)V
-
-    .line 21
-    .line 22
-    .line 23
-    :goto_0
-    invoke-virtual {v2, p1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 24
-    .line 25
-    .line 26
-    :cond_0
-    return-object v0
-
-    .line 27
-    :cond_1
-    new-instance v0, LX/0Xz;
-
     .line 28
-    .line 29
-    invoke-direct {v0, p1, p0}, LX/0Xz;-><init>(Landroid/content/ComponentName;Landroid/content/Context;)V
+    new-array v0, v0, [I
 
+    .line 29
     .line 30
+    fill-array-data v0, :array_3
+
     .line 31
     .line 32
-    goto :goto_0
-
     .line 33
-    :cond_2
-    const-string v0, "Can\'t be here without a job id"
+    sput-object v0, LX/01L;->A03:[I
 
     .line 34
     .line 35
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    new-array v0, v1, [I
 
     .line 36
     .line 37
+    fill-array-data v0, :array_4
+
     .line 38
-    move-result-object v0
-
-    .line 39
-    throw v0
-.end method
-
-
-# virtual methods
-.method public dequeueWork()LX/01J;
-    .locals 5
-
-    .line 0
-    iget-object v0, p0, LX/01L;->mJobImpl:LX/01I;
-
-    .line 1
-    .line 2
-    const/4 v3, 0x0
-
-    .line 3
-    if-eqz v0, :cond_0
-
-    .line 4
-    .line 5
-    :try_start_0
-    invoke-interface {v0}, LX/01I;->A95()LX/0Xp;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    return-object v0
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 10
-    :catch_0
-    move-exception v2
-
-    .line 11
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v1
-
-    .line 15
-    if-eqz v1, :cond_2
-
-    .line 16
-    .line 17
-    const-string v0, "Caller no longer running"
-
-    .line 18
-    .line 19
-    invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    .line 20
-    .line 21
-    .line 22
-    move-result v0
-
-    .line 23
-    if-eqz v0, :cond_2
-
-    .line 24
-    .line 25
-    const-string v1, "JobIntentService"
-
-    .line 26
-    .line 27
-    const-string v0, "Captured a \"Caller no longer running\""
-
-    .line 28
-    .line 29
-    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 30
-    .line 31
-    .line 32
-    return-object v3
-
-    .line 33
-    :cond_0
-    iget-object v4, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 34
-    .line 35
-    monitor-enter v4
-
-    .line 36
-    :try_start_1
-    iget-object v1, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 37
-    .line 38
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
-
     .line 39
     .line 40
-    .line 41
-    move-result v0
+    sput-object v0, LX/01L;->A04:[I
 
+    .line 41
     .line 42
-    if-lez v0, :cond_1
+    return-void
 
     .line 43
+    nop
+
     .line 44
-    const/4 v0, 0x0
+    :array_0
+    .array-data 4
+        0x10101a5
+        0x101031f
+        0x1010647
+        0x7f040059
+        0x7f04057b
+    .end array-data
 
     .line 45
-    invoke-virtual {v1, v0}, Ljava/util/AbstractList;->remove(I)Ljava/lang/Object;
-
     .line 46
     .line 47
     .line 48
-    move-result-object v3
-
     .line 49
-    check-cast v3, LX/01J;
-
     .line 50
     .line 51
-    :cond_1
-    monitor-exit v4
-
     .line 52
-    return-object v3
-
     .line 53
-    :catchall_0
-    move-exception v2
-
     .line 54
-    monitor-exit v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
     .line 55
-    :cond_2
-    throw v2
-.end method
-
-.method public doStopCurrentWork()Z
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/01L;->mCurProcessor:LX/01H;
-
-    .line 1
-    .line 2
-    if-eqz v1, :cond_0
-
-    .line 3
-    .line 4
-    iget-boolean v0, p0, LX/01L;->mInterruptIfStopped:Z
-
-    .line 5
-    .line 6
-    invoke-virtual {v1, v0}, Landroid/os/AsyncTask;->cancel(Z)Z
-
-    .line 7
-    .line 8
-    .line 9
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 10
-    iput-boolean v0, p0, LX/01L;->mStopped:Z
-
-    .line 11
-    .line 12
-    return v0
-.end method
-
-.method public ensureProcessorRunningLocked(Z)V
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/01L;->mCurProcessor:LX/01H;
-
-    .line 1
-    .line 2
-    if-nez v0, :cond_1
-
-    .line 3
-    .line 4
-    new-instance v0, LX/01H;
-
-    .line 5
-    .line 6
-    invoke-direct {v0, p0}, LX/01H;-><init>(LX/01L;)V
-
-    .line 7
-    .line 8
-    .line 9
-    iput-object v0, p0, LX/01L;->mCurProcessor:LX/01H;
-
-    .line 10
-    .line 11
-    iget-object v0, p0, LX/01L;->mCompatWorkEnqueuer:LX/01K;
-
-    .line 12
-    .line 13
-    if-eqz v0, :cond_0
-
-    .line 14
-    .line 15
-    if-eqz p1, :cond_0
-
-    .line 16
-    .line 17
-    invoke-virtual {v0}, LX/01K;->A01()V
-
-    .line 18
-    .line 19
-    .line 20
-    :cond_0
-    iget-object v2, p0, LX/01L;->mCurProcessor:LX/01H;
-
-    .line 21
-    .line 22
-    sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
-
-    .line 23
-    .line 24
-    const/4 v0, 0x0
-
-    .line 25
-    new-array v0, v0, [Ljava/lang/Void;
-
-    .line 26
-    .line 27
-    invoke-virtual {v2, v1, v0}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    .line 28
-    .line 29
-    .line 30
-    :cond_1
-    return-void
-.end method
-
-.method public isStopped()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/01L;->mStopped:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/01L;->mJobImpl:LX/01I;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-interface {v0}, LX/01I;->A78()Landroid/os/IBinder;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    return-object v0
-
-    .line 9
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 10
-    return-object v0
-.end method
-
-.method public onCreate()V
-    .locals 3
-
-    .line 0
-    invoke-super {p0}, Landroid/app/Service;->onCreate()V
-
-    .line 1
-    .line 2
-    .line 3
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 4
-    .line 5
-    const/4 v1, 0x0
-
-    .line 6
-    const/16 v0, 0x1a
-
-    .line 7
-    .line 8
-    if-lt v2, v0, :cond_0
-
-    .line 9
-    .line 10
-    new-instance v0, LX/0Xn;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, p0}, LX/0Xn;-><init>(LX/01L;)V
-
-    .line 13
-    .line 14
-    .line 15
-    iput-object v0, p0, LX/01L;->mJobImpl:LX/01I;
-
-    .line 16
-    .line 17
-    iput-object v1, p0, LX/01L;->mCompatWorkEnqueuer:LX/01K;
-
-    .line 18
-    .line 19
-    return-void
-
-    .line 20
-    :cond_0
-    iput-object v1, p0, LX/01L;->mJobImpl:LX/01I;
-
-    .line 21
-    .line 22
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    new-instance v1, Landroid/content/ComponentName;
-
-    .line 27
-    .line 28
-    invoke-direct {v1, p0, v0}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 29
-    .line 30
-    .line 31
-    const/4 v0, 0x0
-
-    .line 32
-    invoke-static {p0, v1, v0, v0}, LX/01L;->getWorkEnqueuer(Landroid/content/Context;Landroid/content/ComponentName;ZI)LX/01K;
-
-    .line 33
-    .line 34
-    .line 35
-    move-result-object v0
-
-    .line 36
-    iput-object v0, p0, LX/01L;->mCompatWorkEnqueuer:LX/01K;
-
-    .line 37
-    .line 38
-    return-void
-.end method
-
-.method public onDestroy()V
-    .locals 2
-
-    .line 0
-    invoke-super {p0}, Landroid/app/Service;->onDestroy()V
-
-    .line 1
-    .line 2
-    .line 3
-    iget-object v1, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 4
-    .line 5
-    if-eqz v1, :cond_0
-
-    .line 6
-    .line 7
-    monitor-enter v1
-
-    .line 8
-    const/4 v0, 0x1
-
-    .line 9
-    :try_start_0
-    iput-boolean v0, p0, LX/01L;->mDestroyed:Z
-
-    .line 10
-    .line 11
-    iget-object v0, p0, LX/01L;->mCompatWorkEnqueuer:LX/01K;
-
-    .line 12
-    .line 13
-    invoke-virtual {v0}, LX/01K;->A00()V
-
-    .line 14
-    .line 15
-    .line 16
-    monitor-exit v1
-
-    .line 17
-    return-void
-
-    .line 18
-    :catchall_0
-    move-exception v0
-
-    .line 19
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 20
-    throw v0
-
-    .line 21
-    :cond_0
-    return-void
-.end method
-
-.method public abstract onHandleWork(Landroid/content/Intent;)V
-.end method
-
-.method public onStartCommand(Landroid/content/Intent;II)I
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_1
-
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/01L;->mCompatWorkEnqueuer:LX/01K;
-
-    .line 5
-    .line 6
-    invoke-virtual {v0}, LX/01K;->A02()V
-
-    .line 7
-    .line 8
-    .line 9
-    iget-object v2, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 10
-    .line 11
-    monitor-enter v2
-
-    .line 12
-    :try_start_0
-    iget-object v1, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 13
-    .line 14
-    if-nez p1, :cond_0
-
-    .line 15
-    .line 16
-    new-instance p1, Landroid/content/Intent;
-
-    .line 17
-    .line 18
-    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
-
-    .line 19
-    .line 20
-    .line 21
-    :cond_0
-    new-instance v0, LX/0Xq;
-
-    .line 22
-    .line 23
-    invoke-direct {v0, p1, p0, p3}, LX/0Xq;-><init>(Landroid/content/Intent;LX/01L;I)V
-
-    .line 24
-    .line 25
-    .line 26
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 27
-    .line 28
-    .line 29
-    const/4 v0, 0x1
-
-    .line 30
-    invoke-virtual {p0, v0}, LX/01L;->ensureProcessorRunningLocked(Z)V
-
-    .line 31
-    .line 32
-    .line 33
-    monitor-exit v2
-
-    .line 34
-    const/4 v0, 0x3
-
-    .line 35
-    return v0
-
-    .line 36
-    :catchall_0
-    move-exception v0
-
-    .line 37
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 38
-    throw v0
-
-    .line 39
-    :cond_1
-    const/4 v0, 0x2
-
-    .line 40
-    return v0
-.end method
-
-.method public onStopCurrentWork()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public processorFinished()V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 1
-    .line 2
-    if-eqz v1, :cond_2
-
-    .line 3
-    .line 4
-    monitor-enter v1
-
-    .line 5
-    const/4 v0, 0x0
-
-    .line 6
-    :try_start_0
-    iput-object v0, p0, LX/01L;->mCurProcessor:LX/01H;
-
-    .line 7
-    .line 8
-    iget-object v0, p0, LX/01L;->mCompatQueue:Ljava/util/ArrayList;
-
-    .line 9
-    .line 10
-    if-eqz v0, :cond_1
-
-    .line 11
-    .line 12
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
-    if-lez v0, :cond_1
-
-    .line 17
-    .line 18
-    const/4 v0, 0x0
-
-    .line 19
-    invoke-virtual {p0, v0}, LX/01L;->ensureProcessorRunningLocked(Z)V
-
-    .line 20
-    .line 21
-    .line 22
-    :cond_0
-    :goto_0
-    monitor-exit v1
-
-    .line 23
-    goto :goto_1
-
-    .line 24
-    :cond_1
-    iget-boolean v0, p0, LX/01L;->mDestroyed:Z
-
-    .line 25
-    .line 26
-    if-nez v0, :cond_0
-
-    .line 27
-    .line 28
-    iget-object v0, p0, LX/01L;->mCompatWorkEnqueuer:LX/01K;
-
-    .line 29
-    .line 30
-    invoke-virtual {v0}, LX/01K;->A00()V
-
-    .line 31
-    .line 32
-    .line 33
-    goto :goto_0
-
-    .line 34
-    :goto_1
-    return-void
-
-    .line 35
-    :catchall_0
-    move-exception v0
-
-    .line 36
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 37
-    throw v0
-
-    .line 38
-    :cond_2
-    return-void
-.end method
-
-.method public setInterruptIfStopped(Z)V
-    .locals 0
-
-    .line 0
-    iput-boolean p1, p0, LX/01L;->mInterruptIfStopped:Z
-
-    .line 1
-    .line 2
-    return-void
+    .line 56
+    :array_1
+    .array-data 4
+        0x7f0404b1
+        0x7f0404b2
+        0x7f0404b3
+        0x7f0404b4
+        0x7f0404b5
+        0x7f0404b6
+        0x7f0404b7
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x1010532
+        0x1010533
+        0x101053f
+        0x101056f
+        0x1010570
+        0x7f0404af
+        0x7f0404b8
+        0x7f0404b9
+        0x7f0404ba
+        0x7f040965
+    .end array-data
+
+    :array_3
+    .array-data 4
+        0x101019d
+        0x101019e
+        0x10101a1
+        0x10101a2
+        0x10101a3
+        0x10101a4
+        0x1010201
+        0x101020b
+        0x1010510
+        0x1010511
+        0x1010512
+        0x1010513
+    .end array-data
+
+    :array_4
+    .array-data 4
+        0x10101a5
+        0x1010514
+    .end array-data
 .end method

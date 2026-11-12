@@ -1,39 +1,30 @@
 .class public final LX/6Ka;
-.super Ljava/lang/Object;
+.super LX/6Hl;
 .source ""
 
 
+# annotations
+.annotation runtime Lcom/fasterxml/jackson/databind/annotation/JacksonStdImpl;
+.end annotation
+
+
+# static fields
+.field public static final serialVersionUID:J = 0x1L
+
+
 # direct methods
-.method public static final A00(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkCapabilities;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    return-object p0
-.end method
-
-.method public static final A01(Landroid/net/NetworkCapabilities;)Z
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    const/16 v0, 0x10
+    const-class v0, Ljava/util/UUID;
 
     .line 1
     .line 2
-    invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+    invoke-direct {p0, v0}, LX/6Hl;-><init>(Ljava/lang/Class;)V
 
     .line 3
     .line 4
     .line 5
-    move-result v0
-
-    .line 6
-    return v0
+    return-void
 .end method

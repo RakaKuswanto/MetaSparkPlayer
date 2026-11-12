@@ -14,9 +14,9 @@
 
 .field public mCurrentObjectCountBufferSize:I
 
-.field public final mDeallocationListener:LX/0R0;
+.field public final mDeallocationListener:LX/0NL;
 
-.field public final mDeallocationMonitor:LX/0NR;
+.field public final mDeallocationMonitor:LX/0QT;
 
 .field public final mGcStats:[J
 
@@ -26,7 +26,7 @@
 
 .field public final mObjectCountStats:Lcom/facebook/memory/javamemtracker/ObjectCountStats;
 
-.field public final mPhantomReferenceProcessor:LX/0R2;
+.field public final mPhantomReferenceProcessor:LX/0NN;
 
 .field public final mTrackObjectCount:Z
 
@@ -40,7 +40,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -60,33 +60,33 @@
     .line 2
     .line 3
     .line 4
-    new-instance v2, LX/5HE;
+    new-instance v2, LX/4AO;
 
     .line 5
     .line 6
-    invoke-direct {v2, p0}, LX/5HE;-><init>(Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;)V
+    invoke-direct {v2, p0}, LX/4AO;-><init>(Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;)V
 
     .line 7
     .line 8
     .line 9
-    iput-object v2, p0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mDeallocationListener:LX/0R0;
+    iput-object v2, p0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mDeallocationListener:LX/0NL;
 
     .line 10
     .line 11
-    new-instance v1, LX/5HF;
+    new-instance v1, LX/4AP;
 
     .line 12
     .line 13
-    invoke-direct {v1, p0}, LX/5HF;-><init>(Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;)V
+    invoke-direct {v1, p0}, LX/4AP;-><init>(Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;)V
 
     .line 14
     .line 15
     .line 16
-    iput-object v1, p0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mPhantomReferenceProcessor:LX/0R2;
+    iput-object v1, p0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mPhantomReferenceProcessor:LX/0NN;
 
     .line 17
     .line 18
-    invoke-static {}, LX/2gM;->A00()I
+    invoke-static {}, LX/2uJ;->A00()I
 
     .line 19
     .line 20
@@ -102,16 +102,16 @@
 
     .line 25
     .line 26
-    new-instance v0, LX/0NR;
+    new-instance v0, LX/0QT;
 
     .line 27
     .line 28
-    invoke-direct {v0, v2, v1, p2}, LX/0NR;-><init>(LX/0R0;LX/0R2;Z)V
+    invoke-direct {v0, v2, v1, p2}, LX/0QT;-><init>(LX/0NL;LX/0NN;Z)V
 
     .line 29
     .line 30
     .line 31
-    iput-object v0, p0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mDeallocationMonitor:LX/0NR;
+    iput-object v0, p0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mDeallocationMonitor:LX/0QT;
 
     .line 32
     .line 33
@@ -169,11 +169,11 @@
     .line 59
     .line 60
     .line 61
-    new-instance v0, LX/5HG;
+    new-instance v0, LX/4AQ;
 
     .line 62
     .line 63
-    invoke-direct {v0, p0}, LX/5HG;-><init>(Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;)V
+    invoke-direct {v0, p0}, LX/4AQ;-><init>(Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;)V
 
     .line 64
     .line 65

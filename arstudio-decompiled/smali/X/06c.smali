@@ -1,6 +1,9 @@
-.class public final LX/06c;
+.class public final LX/06C;
 .super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/4sb;
 
 
 # direct methods
@@ -16,73 +19,33 @@
     return-void
 .end method
 
-.method public static final A00(LX/06f;)LX/06e;
-    .locals 1
+
+# virtual methods
+.method public final A5x(Ljava/lang/Class;)LX/4C3;
+    .locals 2
 
     .line 0
-    const/4 v0, 0x0
+    const/4 v1, 0x1
 
     .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    new-instance v0, LX/06D;
 
     .line 2
     .line 3
-    .line 4
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-direct {v0, v1}, LX/06D;-><init>(Z)V
 
+    .line 4
     .line 5
     .line 6
-    .line 7
-    move-result p0
-
-    .line 8
-    const/4 v0, 0x2
-
-    .line 9
-    if-eq p0, v0, :cond_2
-
-    .line 10
-    .line 11
-    const/4 v0, 0x3
-
-    .line 12
-    if-eq p0, v0, :cond_1
-
-    .line 13
-    .line 14
-    const/4 v0, 0x1
-
-    .line 15
-    if-eq p0, v0, :cond_0
-
-    .line 16
-    .line 17
-    const/4 v0, 0x0
-
-    .line 18
     return-object v0
+.end method
 
-    .line 19
-    :cond_0
-    sget-object v0, LX/06e;->ON_CREATE:LX/06e;
+.method public final synthetic A64(LX/4sa;Ljava/lang/Class;)LX/4C3;
+    .locals 1
 
-    .line 20
-    .line 21
-    return-object v0
+    invoke-static {p0, p2}, LX/5C0;->A00(LX/4sb;Ljava/lang/Class;)LX/4C3;
 
-    .line 22
-    :cond_1
-    sget-object v0, LX/06e;->ON_RESUME:LX/06e;
+    move-result-object v0
 
-    .line 23
-    .line 24
-    return-object v0
-
-    .line 25
-    :cond_2
-    sget-object v0, LX/06e;->ON_START:LX/06e;
-
-    .line 26
-    .line 27
     return-object v0
 .end method

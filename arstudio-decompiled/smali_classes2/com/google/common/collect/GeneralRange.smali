@@ -25,6 +25,26 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/BoundType;Lcom/google/common/collect/BoundType;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;ZZ)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "comparator",
+            "hasLowerBound",
+            "lowerEndpoint",
+            "lowerBoundType",
+            "hasUpperBound",
+            "upperEndpoint",
+            "upperBoundType"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -114,7 +134,7 @@
     const/4 v2, 0x1
 
     .line 45
-    invoke-static {v3}, LX/0Yf;->A1Q(I)Z
+    invoke-static {v3}, LX/0X4;->A1O(I)Z
 
     .line 46
     .line 47
@@ -136,34 +156,27 @@
 
     .line 56
     .line 57
-    sget-object v1, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
+    sget-object v0, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
 
     .line 58
     .line 59
-    invoke-static {p1, v1}, LX/0Yf;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne p1, v0, :cond_2
 
     .line 60
     .line 61
+    if-ne p2, v0, :cond_2
+
     .line 62
-    move-result v0
-
     .line 63
-    if-ne p2, v1, :cond_2
-
-    .line 64
-    .line 65
     const/4 v2, 0x0
 
-    .line 66
+    .line 64
     :cond_2
-    or-int/2addr v0, v2
+    invoke-static {v2}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 65
+    .line 66
     .line 67
-    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
-
-    .line 68
-    .line 69
-    .line 70
     :cond_3
     return-void
 .end method
@@ -172,258 +185,279 @@
 # virtual methods
 .method public final A00(Lcom/google/common/collect/GeneralRange;)Lcom/google/common/collect/GeneralRange;
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "other"
+        }
+    .end annotation
 
     .line 0
-    iget-object v1, p0, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 1
     .line 2
+    .line 3
+    iget-object v1, p0, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
+
+    .line 4
+    .line 5
     iget-object v0, p1, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
 
-    .line 3
-    .line 4
-    invoke-interface {v1, v0}, Ljava/util/Comparator;->equals(Ljava/lang/Object;)Z
-
-    .line 5
     .line 6
     .line 7
-    move-result v0
+    invoke-interface {v1, v0}, Ljava/util/Comparator;->equals(Ljava/lang/Object;)Z
 
     .line 8
-    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
-
     .line 9
     .line 10
+    move-result v0
+
     .line 11
-    iget-boolean v7, p0, Lcom/google/common/collect/GeneralRange;->hasLowerBound:Z
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
     .line 12
     .line 13
+    .line 14
+    iget-boolean v7, p0, Lcom/google/common/collect/GeneralRange;->hasLowerBound:Z
+
+    .line 15
+    .line 16
     iget-object v4, p0, Lcom/google/common/collect/GeneralRange;->lowerEndpoint:Ljava/lang/Object;
 
-    .line 14
-    .line 15
+    .line 17
+    .line 18
     iget-object v2, p0, Lcom/google/common/collect/GeneralRange;->lowerBoundType:Lcom/google/common/collect/BoundType;
 
-    .line 16
-    .line 17
+    .line 19
+    .line 20
     if-nez v7, :cond_7
 
-    .line 18
-    .line 19
+    .line 21
+    .line 22
     iget-boolean v7, p1, Lcom/google/common/collect/GeneralRange;->hasLowerBound:Z
 
-    .line 20
-    .line 21
+    .line 23
+    .line 24
     :cond_0
     :goto_0
     iget-object v4, p1, Lcom/google/common/collect/GeneralRange;->lowerEndpoint:Ljava/lang/Object;
 
-    .line 22
-    .line 23
+    .line 25
+    .line 26
     iget-object v2, p1, Lcom/google/common/collect/GeneralRange;->lowerBoundType:Lcom/google/common/collect/BoundType;
 
-    .line 24
-    .line 25
+    .line 27
+    .line 28
     :cond_1
     iget-boolean v8, p0, Lcom/google/common/collect/GeneralRange;->hasUpperBound:Z
 
-    .line 26
-    .line 27
+    .line 29
+    .line 30
     iget-object v5, p0, Lcom/google/common/collect/GeneralRange;->upperEndpoint:Ljava/lang/Object;
 
-    .line 28
-    .line 29
+    .line 31
+    .line 32
     iget-object v3, p0, Lcom/google/common/collect/GeneralRange;->upperBoundType:Lcom/google/common/collect/BoundType;
 
-    .line 30
-    .line 31
+    .line 33
+    .line 34
     if-nez v8, :cond_6
 
-    .line 32
-    .line 33
+    .line 35
+    .line 36
     iget-boolean v8, p1, Lcom/google/common/collect/GeneralRange;->hasUpperBound:Z
 
-    .line 34
-    .line 35
+    .line 37
+    .line 38
     :cond_2
     :goto_1
     iget-object v5, p1, Lcom/google/common/collect/GeneralRange;->upperEndpoint:Ljava/lang/Object;
 
-    .line 36
-    .line 37
+    .line 39
+    .line 40
     iget-object v3, p1, Lcom/google/common/collect/GeneralRange;->upperBoundType:Lcom/google/common/collect/BoundType;
 
-    .line 38
-    .line 39
+    .line 41
+    .line 42
     :cond_3
     if-eqz v7, :cond_5
 
-    .line 40
-    .line 41
+    .line 43
+    .line 44
     if-eqz v8, :cond_5
 
-    .line 42
-    .line 43
+    .line 45
+    .line 46
     iget-object v0, p0, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
 
-    .line 44
-    .line 45
-    invoke-interface {v0, v4, v5}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    .line 46
     .line 47
     .line 48
-    move-result v0
+    invoke-interface {v0, v4, v5}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 49
-    if-gtz v0, :cond_4
-
     .line 50
     .line 51
-    if-nez v0, :cond_5
+    move-result v0
 
     .line 52
+    if-gtz v0, :cond_4
+
     .line 53
+    .line 54
+    if-nez v0, :cond_5
+
+    .line 55
+    .line 56
     sget-object v0, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
 
-    .line 54
-    .line 55
+    .line 57
+    .line 58
     if-ne v2, v0, :cond_5
 
-    .line 56
-    .line 57
+    .line 59
+    .line 60
     if-ne v3, v0, :cond_5
 
-    .line 58
-    .line 59
+    .line 61
+    .line 62
     :cond_4
     sget-object v2, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
 
-    .line 60
-    .line 61
-    sget-object v3, Lcom/google/common/collect/BoundType;->CLOSED:Lcom/google/common/collect/BoundType;
-
-    .line 62
     .line 63
-    move-object v4, v5
-
     .line 64
-    :cond_5
-    iget-object v6, p0, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
+    sget-object v3, Lcom/google/common/collect/BoundType;->CLOSED:Lcom/google/common/collect/BoundType;
 
     .line 65
     .line 66
-    new-instance v1, Lcom/google/common/collect/GeneralRange;
+    move-object v4, v5
 
     .line 67
-    .line 68
-    invoke-direct/range {v1 .. v8}, Lcom/google/common/collect/GeneralRange;-><init>(Lcom/google/common/collect/BoundType;Lcom/google/common/collect/BoundType;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;ZZ)V
+    :cond_5
+    iget-object v6, p0, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
 
+    .line 68
     .line 69
+    new-instance v1, Lcom/google/common/collect/GeneralRange;
+
     .line 70
     .line 71
-    return-object v1
+    invoke-direct/range {v1 .. v8}, Lcom/google/common/collect/GeneralRange;-><init>(Lcom/google/common/collect/BoundType;Lcom/google/common/collect/BoundType;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;ZZ)V
 
     .line 72
+    .line 73
+    .line 74
+    return-object v1
+
+    .line 75
     :cond_6
     iget-boolean v0, p1, Lcom/google/common/collect/GeneralRange;->hasUpperBound:Z
 
-    .line 73
-    .line 74
+    .line 76
+    .line 77
     if-eqz v0, :cond_3
 
-    .line 75
-    .line 76
+    .line 78
+    .line 79
     iget-object v1, p0, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
 
-    .line 77
-    .line 78
+    .line 80
+    .line 81
     iget-object v0, p1, Lcom/google/common/collect/GeneralRange;->upperEndpoint:Ljava/lang/Object;
 
-    .line 79
-    .line 80
-    invoke-interface {v1, v5, v0}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    .line 81
     .line 82
     .line 83
-    move-result v0
+    invoke-interface {v1, v5, v0}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 84
-    if-gtz v0, :cond_2
-
     .line 85
     .line 86
-    if-nez v0, :cond_3
+    move-result v0
 
     .line 87
+    if-gtz v0, :cond_2
+
     .line 88
+    .line 89
+    if-nez v0, :cond_3
+
+    .line 90
+    .line 91
     iget-object v1, p1, Lcom/google/common/collect/GeneralRange;->upperBoundType:Lcom/google/common/collect/BoundType;
 
-    .line 89
-    .line 90
+    .line 92
+    .line 93
     sget-object v0, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
 
-    .line 91
-    .line 92
-    if-ne v1, v0, :cond_3
-
-    .line 93
     .line 94
-    goto :goto_1
-
     .line 95
-    :cond_7
-    iget-boolean v0, p1, Lcom/google/common/collect/GeneralRange;->hasLowerBound:Z
+    if-ne v1, v0, :cond_3
 
     .line 96
     .line 97
-    if-eqz v0, :cond_1
+    goto :goto_1
 
     .line 98
+    :cond_7
+    iget-boolean v0, p1, Lcom/google/common/collect/GeneralRange;->hasLowerBound:Z
+
     .line 99
+    .line 100
+    if-eqz v0, :cond_1
+
+    .line 101
+    .line 102
     iget-object v1, p0, Lcom/google/common/collect/GeneralRange;->comparator:Ljava/util/Comparator;
 
-    .line 100
-    .line 101
+    .line 103
+    .line 104
     iget-object v0, p1, Lcom/google/common/collect/GeneralRange;->lowerEndpoint:Ljava/lang/Object;
 
-    .line 102
-    .line 103
-    invoke-interface {v1, v4, v0}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    .line 104
     .line 105
     .line 106
-    move-result v0
+    invoke-interface {v1, v4, v0}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 107
-    if-ltz v0, :cond_0
-
     .line 108
     .line 109
-    if-nez v0, :cond_1
+    move-result v0
 
     .line 110
+    if-ltz v0, :cond_0
+
     .line 111
+    .line 112
+    if-nez v0, :cond_1
+
+    .line 113
+    .line 114
     iget-object v1, p1, Lcom/google/common/collect/GeneralRange;->lowerBoundType:Lcom/google/common/collect/BoundType;
 
-    .line 112
-    .line 113
+    .line 115
+    .line 116
     sget-object v0, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
 
-    .line 114
-    .line 115
+    .line 117
+    .line 118
     if-ne v1, v0, :cond_1
 
-    .line 116
-    .line 117
+    .line 119
+    .line 120
     goto :goto_0
 .end method
 
 .method public final A01(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "t"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0, p1}, Lcom/google/common/collect/GeneralRange;->A03(Ljava/lang/Object;)Z
@@ -463,6 +497,14 @@
 
 .method public final A02(Ljava/lang/Object;)Z
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "t"
+        }
+    .end annotation
 
     .line 0
     iget-boolean v0, p0, Lcom/google/common/collect/GeneralRange;->hasUpperBound:Z
@@ -545,6 +587,14 @@
 
 .method public final A03(Ljava/lang/Object;)Z
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "t"
+        }
+    .end annotation
 
     .line 0
     iget-boolean v0, p0, Lcom/google/common/collect/GeneralRange;->hasLowerBound:Z
@@ -627,6 +677,14 @@
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "obj"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Lcom/google/common/collect/GeneralRange;
@@ -756,7 +814,7 @@
 
     .line 62
     .line 63
-    invoke-static {v1, v0}, LX/0Yf;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0X3;->A1Z(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 64
     .line 65
@@ -830,7 +888,7 @@
     const/4 v0, 0x4
 
     .line 26
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
+    invoke-static {v1, v2, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
 
     .line 27
     .line 28
@@ -845,7 +903,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -959,7 +1017,7 @@
     .line 57
     .line 58
     :cond_1
-    invoke-static {v3, v0}, LX/0Yh;->A0b(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+    invoke-static {v3, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
 
     .line 59
     .line 60

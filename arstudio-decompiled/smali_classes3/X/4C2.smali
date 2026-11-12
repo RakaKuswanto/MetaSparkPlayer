@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/2rE;
+.implements Ljava/util/concurrent/Executor;
 
 
 # direct methods
@@ -21,8 +21,23 @@
 
 
 # virtual methods
-.method public final Aqu(Ljava/lang/Object;Z)V
-    .locals 0
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
+    .line 0
+    new-instance v0, Ljava/lang/Thread;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    .line 6
+    .line 7
+    .line 8
     return-void
 .end method

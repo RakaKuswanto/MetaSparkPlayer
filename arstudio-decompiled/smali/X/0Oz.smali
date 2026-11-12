@@ -1,207 +1,70 @@
-.class public final LX/0Oz;
-.super Ljava/lang/Object;
+.class public final LX/0OZ;
+.super LX/00w;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:LX/00s;
+
+
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public constructor <init>(LX/00s;)V
     .locals 1
 
-    const/4 v0, 0x1
+    .line 0
+    iput-object p1, p0, LX/0OZ;->A00:LX/00s;
 
-    if-eq p0, v0, :cond_1
+    .line 1
+    .line 2
+    invoke-virtual {p1}, LX/00s;->A02()I
 
-    const/4 v0, 0x4
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
 
-    if-eq p0, v0, :cond_0
+    .line 6
+    invoke-direct {p0, v0}, LX/00w;-><init>(I)V
 
-    sparse-switch p0, :sswitch_data_0
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
 
-    packed-switch p0, :pswitch_data_0
 
-    const-string v0, "UNDEFINED_QPL_EVENT"
+# virtual methods
+.method public final A00(I)Ljava/lang/Object;
+    .locals 1
 
+    .line 0
+    iget-object v0, p0, LX/0OZ;->A00:LX/00s;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/00s;->A03(I)Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
     return-object v0
+.end method
 
-    :pswitch_0
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_LIVE_SHOPPING_SCREEN"
+.method public final A01(I)V
+    .locals 1
 
-    return-object v0
+    .line 0
+    iget-object v0, p0, LX/0OZ;->A00:LX/00s;
 
-    :pswitch_1
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_EXAMPLE_CUSTOM_TTRC"
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/00s;->A04(I)V
 
-    return-object v0
-
-    :pswitch_2
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_CORONAVIRUS_HUB_TTRC"
-
-    return-object v0
-
-    :pswitch_3
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_MENTORSHIP_SEARCH_ANDROID_AND_IOS_HUB"
-
-    return-object v0
-
-    :pswitch_4
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_MENTORSHIP_HUB_HOME_TTRC"
-
-    return-object v0
-
-    :pswitch_5
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_APPROVALS_ON_WORKPLACE_TTRC"
-
-    return-object v0
-
-    :pswitch_6
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_TTRC"
-
-    return-object v0
-
-    :pswitch_7
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_GAMING_SCREEN"
-
-    return-object v0
-
-    :pswitch_8
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_GROUPS_MEMBERSHIP_QUESTIONNAIRE_TTRC"
-
-    return-object v0
-
-    :sswitch_0
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_VIDEO_HOME_NOTIF_HUB_UPDATES_SURFACE_TTRC"
-
-    return-object v0
-
-    :sswitch_1
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_RACIAL_JUSTICE_HUB_TTRC"
-
-    return-object v0
-
-    :sswitch_2
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_ITEM_DETAILS_SCREEN_TTRC"
-
-    return-object v0
-
-    :sswitch_3
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_WHATSAPP_AFTER_PARTY_TTRC"
-
-    return-object v0
-
-    :sswitch_4
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_NBA_HUB_TTRC"
-
-    return-object v0
-
-    :sswitch_5
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_COVAX_FINDER_SCREEN"
-
-    return-object v0
-
-    :sswitch_6
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_MENU_TTRC"
-
-    return-object v0
-
-    :sswitch_7
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_FUNDRAISER_DONATION"
-
-    return-object v0
-
-    :sswitch_8
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_WHATSAPP_BUSINESS_WELCOME_PAGELESS_TTRC"
-
-    return-object v0
-
-    :sswitch_9
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NDX_MONITOR"
-
-    return-object v0
-
-    :sswitch_a
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_OFFERS_TTRC"
-
-    return-object v0
-
-    :sswitch_b
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_GROUPS_TAB_INTEREST_LANDING_TTRC"
-
-    return-object v0
-
-    :sswitch_c
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_FUNDRAISER_ECP_DONATION_CONTINUE_TTRC"
-
-    return-object v0
-
-    :sswitch_d
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_VIC_TTRC"
-
-    return-object v0
-
-    :sswitch_e
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_CSIC_TTRC"
-
-    return-object v0
-
-    :sswitch_f
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_FB_ROOM_BOOKMARK_TTRC"
-
-    return-object v0
-
-    :sswitch_10
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_FUNDRAISER_HUB_TTRC"
-
-    return-object v0
-
-    :sswitch_11
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_PORTAL_HUB_SCREEN_TTRC"
-
-    return-object v0
-
-    :cond_0
-    :sswitch_12
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_PENDING_PAGE_INVITE_SCREEN_TTRC"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "NATIVE_TEMPLATES_SCREENS_NT_SCREEN_BIRTHDAY_CENTER_TTRC"
-
-    return-object v0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x4 -> :sswitch_12
-        0xf5c -> :sswitch_11
-        0x10d0 -> :sswitch_10
-        0x11a8 -> :sswitch_f
-        0x11ba -> :sswitch_e
-        0x1566 -> :sswitch_d
-        0x1731 -> :sswitch_c
-        0x2957 -> :sswitch_b
-        0x2ff4 -> :sswitch_a
-        0x327e -> :sswitch_9
-        0x3292 -> :sswitch_8
-        0x371b -> :sswitch_7
-        0x3846 -> :sswitch_6
-        0x3a19 -> :sswitch_5
-        0x3c31 -> :sswitch_4
-        0x3d66 -> :sswitch_3
-        0x3f09 -> :sswitch_2
-        0x42fb -> :sswitch_1
-        0x702b -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x6
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method

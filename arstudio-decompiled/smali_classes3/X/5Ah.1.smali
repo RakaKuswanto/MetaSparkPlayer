@@ -1,387 +1,329 @@
-.class public final LX/5Ah;
-.super LX/6Bw;
+.class public final LX/5aH;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "PhotoCaptureControllerImpl$4"
+
+
+# instance fields
+.field public final synthetic A00:LX/5yk;
+
+.field public final synthetic A01:LX/5xd;
+
+.field public final synthetic A02:LX/5aI;
+
+.field public final synthetic A03:Ljava/io/File;
+
+.field public final synthetic A04:Z
+
+.field public final synthetic A05:Z
+
+.field public final synthetic A06:[B
 
 
 # direct methods
-.method public static final A00()LX/3BJ;
-    .locals 5
+.method public constructor <init>(LX/5yk;LX/5xd;LX/5aI;Ljava/io/File;[BZZ)V
+    .locals 0
 
     .line 0
-    const-class v4, LX/5B9;
+    iput-object p2, p0, LX/5aH;->A01:LX/5xd;
 
     .line 1
     .line 2
-    monitor-enter v4
+    iput-boolean p6, p0, LX/5aH;->A04:Z
 
     .line 3
-    :try_start_0
-    sget-object v0, LX/5B9;->A01:LX/5B9;
-
     .line 4
+    iput-object p5, p0, LX/5aH;->A06:[B
+
     .line 5
-    if-nez v0, :cond_1
-
     .line 6
-    .line 7
-    invoke-static {}, LX/0Ba;->A00()Landroid/app/Application;
+    iput-object p4, p0, LX/5aH;->A03:Ljava/io/File;
 
+    .line 7
     .line 8
+    iput-object p3, p0, LX/5aH;->A02:LX/5aI;
+
     .line 9
     .line 10
-    move-result-object v2
+    iput-boolean p7, p0, LX/5aH;->A05:Z
 
     .line 11
-    new-instance v3, LX/010;
-
     .line 12
-    .line 13
-    invoke-direct {v3}, LX/010;-><init>()V
+    iput-object p1, p0, LX/5aH;->A00:LX/5yk;
 
+    .line 13
     .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 15
     .line 16
-    const-class v1, LX/52b;
+    .line 17
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 6
+
+    .line 0
+    iget-boolean v0, p0, LX/5aH;->A04:Z
+
+    .line 1
+    .line 2
+    iget-object v5, p0, LX/5aH;->A06:[B
+
+    .line 3
+    .line 4
+    if-eqz v0, :cond_1
+
+    .line 5
+    .line 6
+    iget-object v4, p0, LX/5aH;->A03:Ljava/io/File;
+
+    .line 7
+    .line 8
+    invoke-static {}, LX/0X5;->A0m()Ljava/lang/Thread;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 17
     .line 18
-    sget-object v0, LX/0C5;->A00:LX/5B5;
-
     .line 19
+    move-result v0
+
     .line 20
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v0, :cond_0
 
     .line 21
     .line 22
+    const/4 v3, 0x0
+
     .line 23
-    const-class v1, LX/52e;
+    :try_start_0
+    new-instance v2, Ljava/io/FileOutputStream;
 
     .line 24
     .line 25
-    sget-object v0, LX/0C7;->A00:LX/5B4;
+    invoke-direct {v2, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 26
     .line 27
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 28
+    const/4 v1, 0x0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
     .line 29
+    :try_start_1
+    array-length v0, v5
+
     .line 30
-    const-class v1, LX/6OQ;
+    invoke-virtual {v2, v5, v1, v0}, Ljava/io/OutputStream;->write([BII)V
 
     .line 31
     .line 32
-    new-instance v0, LX/5Ar;
-
     .line 33
+    goto :goto_0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     .line 34
-    invoke-direct {v0}, LX/5Ar;-><init>()V
+    :catchall_0
+    move-exception v0
 
     .line 35
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+
     .line 36
     .line 37
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 38
+    throw v0
+
     .line 39
+    :catch_0
+    move-exception v3
+
     .line 40
-    const-class v1, LX/3i3;
+    :goto_0
+    :try_start_3
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
 
     .line 41
     .line 42
-    new-instance v0, LX/5BE;
-
     .line 43
+    goto :goto_1
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+
     .line 44
-    invoke-direct {v0}, LX/5BE;-><init>()V
+    :catchall_1
+    move-exception v0
 
     .line 45
-    .line 46
-    .line 47
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :catch_1
+    throw v0
 
+    .line 46
+    :cond_0
+    const-string v0, "Method processJpegToJpegFile must be invoked on a background thread"
+
+    .line 47
     .line 48
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
     .line 49
     .line 50
-    const-class v1, LX/52X;
-
     .line 51
+    move-result-object v0
+
     .line 52
-    new-instance v0, LX/5Fa;
+    throw v0
 
     .line 53
-    .line 54
-    invoke-direct {v0, v2}, LX/5Fa;-><init>(Landroid/content/Context;)V
+    :cond_1
+    iget-object v3, p0, LX/5aH;->A02:LX/5aI;
 
+    .line 54
     .line 55
+    iget-boolean v2, p0, LX/5aH;->A05:Z
+
     .line 56
     .line 57
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v4, p0, LX/5aH;->A03:Ljava/io/File;
 
     .line 58
     .line 59
-    .line 60
-    const-class v1, LX/6MI;
+    invoke-static {}, LX/0X5;->A0m()Ljava/lang/Thread;
 
+    .line 60
     .line 61
     .line 62
-    new-instance v0, LX/5Aq;
+    move-result-object v1
 
     .line 63
-    .line 64
-    invoke-direct {v0}, LX/5Aq;-><init>()V
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
+    .line 64
     .line 65
     .line 66
+    move-result-object v0
+
     .line 67
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 68
     .line 69
     .line 70
-    const-class v1, LX/52V;
+    move-result v0
 
     .line 71
-    .line 72
-    new-instance v0, LX/5AX;
+    if-nez v0, :cond_3
 
+    .line 72
     .line 73
+    const/4 v0, 0x0
+
     .line 74
-    invoke-direct {v0}, LX/5AX;-><init>()V
+    invoke-static {v0, v3, v5, v2}, LX/5aE;->A01(LX/5aI;LX/5aI;[BZ)Landroid/graphics/Bitmap;
 
     .line 75
     .line 76
     .line 77
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
     .line 78
+    if-nez v0, :cond_2
+
     .line 79
     .line 80
-    const-class v1, LX/52d;
+    const-string v0, "Failed to generate bitmap."
 
     .line 81
     .line 82
-    new-instance v0, LX/5BD;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 83
     .line 84
-    invoke-direct {v0, v2}, LX/5BD;-><init>(Landroid/content/Context;)V
-
     .line 85
+    move-result-object v3
+
     .line 86
+    goto :goto_1
+
     .line 87
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_2
+    invoke-static {v0, v4}, LX/5aE;->A02(Landroid/graphics/Bitmap;Ljava/io/File;)Ljava/io/IOException;
 
     .line 88
     .line 89
     .line 90
-    const-class v1, LX/52c;
+    move-result-object v3
 
     .line 91
+    goto :goto_1
+
     .line 92
-    new-instance v0, LX/5BC;
+    :catch_2
+    move-exception v3
 
     .line 93
-    .line 94
-    invoke-direct {v0}, LX/5BC;-><init>()V
+    :catch_3
+    :goto_1
+    iget-object v0, p0, LX/5aH;->A00:LX/5yk;
 
+    .line 94
     .line 95
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     .line 96
     .line 97
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 98
+    invoke-static {v0, v4, v3}, LX/5y6;->A05(LX/5yk;Ljava/io/File;Ljava/lang/Exception;)V
+
     .line 99
     .line 100
-    const-class v1, LX/3mE;
-
     .line 101
+    return-void
+
     .line 102
-    sget-object v0, LX/0CA;->A00:LX/5Ag;
+    :cond_3
+    const-string v0, "Method processJpegToBitmapFile must be invoked on a background thread"
 
     .line 103
     .line 104
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 105
     .line 106
     .line 107
-    const-class v1, LX/52Z;
+    move-result-object v0
 
     .line 108
-    .line 109
-    sget-object v0, LX/0C8;->A00:LX/5BJ;
-
-    .line 110
-    .line 111
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 112
-    .line 113
-    .line 114
-    const-class v2, LX/52Y;
-
-    .line 115
-    .line 116
-    const-class v1, LX/5An;
-
-    .line 117
-    .line 118
-    monitor-enter v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 119
-    :try_start_1
-    sget-object v0, LX/5An;->A01:LX/5An;
-
-    .line 120
-    .line 121
-    if-nez v0, :cond_0
-
-    .line 122
-    .line 123
-    new-instance v0, LX/5An;
-
-    .line 124
-    .line 125
-    invoke-direct {v0}, LX/5An;-><init>()V
-
-    .line 126
-    .line 127
-    .line 128
-    sput-object v0, LX/5An;->A01:LX/5An;
-
-    .line 129
-    .line 130
-    goto :goto_0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 131
-    :catchall_0
-    :try_start_2
-    move-exception v0
-
-    .line 132
-    monitor-exit v1
-
-    .line 133
-    throw v0
-
-    .line 134
-    :cond_0
-    :goto_0
-    monitor-exit v1
-
-    .line 135
-    invoke-virtual {v3, v2, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 136
-    .line 137
-    .line 138
-    const-class v1, LX/6Na;
-
-    .line 139
-    .line 140
-    sget-object v0, LX/0C9;->A00:LX/6Lv;
-
-    .line 141
-    .line 142
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 143
-    .line 144
-    .line 145
-    const-class v1, LX/52f;
-
-    .line 146
-    .line 147
-    new-instance v0, LX/5Ai;
-
-    .line 148
-    .line 149
-    invoke-direct {v0}, LX/5Ai;-><init>()V
-
-    .line 150
-    .line 151
-    .line 152
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 153
-    .line 154
-    .line 155
-    const-class v1, LX/52W;
-
-    .line 156
-    .line 157
-    sget-object v0, LX/5BG;->A00:LX/5BG;
-
-    .line 158
-    .line 159
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 160
-    .line 161
-    .line 162
-    const-class v1, LX/52a;
-
-    .line 163
-    .line 164
-    sget-object v0, LX/5BH;->A01:LX/5BH;
-
-    .line 165
-    .line 166
-    invoke-virtual {v3, v1, v0}, LX/010;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 167
-    .line 168
-    .line 169
-    new-instance v1, LX/3BJ;
-
-    .line 170
-    .line 171
-    invoke-direct {v1, v3}, LX/3BJ;-><init>(LX/010;)V
-
-    .line 172
-    .line 173
-    .line 174
-    new-instance v0, LX/5B9;
-
-    .line 175
-    .line 176
-    invoke-direct {v0, v1}, LX/5B9;-><init>(LX/3BJ;)V
-
-    .line 177
-    .line 178
-    .line 179
-    sput-object v0, LX/5B9;->A01:LX/5B9;
-
-    .line 180
-    .line 181
-    :cond_1
-    sget-object v0, LX/5B9;->A01:LX/5B9;
-
-    .line 182
-    .line 183
-    iget-object v0, v0, LX/5B9;->A00:LX/3BJ;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 184
-    .line 185
-    monitor-exit v4
-
-    .line 186
-    return-object v0
-
-    .line 187
-    :catchall_1
-    move-exception v0
-
-    .line 188
-    monitor-exit v4
-
-    .line 189
     throw v0
 .end method

@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 5
 
     .line 0
@@ -31,7 +31,7 @@
     .line 3
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 4
     .line 5
@@ -39,7 +39,7 @@
     move-result-object v1
 
     .line 7
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 8
     .line 9
@@ -47,7 +47,7 @@
 
     .line 10
     .line 11
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 12
     .line 13
@@ -81,132 +81,141 @@
 
     .line 28
     .line 29
-    const-string/jumbo v1, "uri"
-
-    .line 30
-    .line 31
-    .line 32
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 33
-    .line 34
-    .line 35
-    move-result v0
-
-    .line 36
-    if-eqz v0, :cond_3
-
-    .line 37
-    .line 38
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-
-    .line 42
-    move-object v3, v0
-
-    .line 43
     goto :goto_0
 
-    .line 44
+    .line 30
     :cond_1
     const-string/jumbo v1, "prompt"
 
-    .line 45
-    .line 46
-    .line 47
+    .line 31
+    .line 32
+    .line 33
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 48
-    .line 49
-    .line 50
+    .line 34
+    .line 35
+    .line 36
     move-result v0
 
-    .line 51
+    .line 37
     if-eqz v0, :cond_3
 
-    .line 52
-    .line 53
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    .line 38
+    .line 39
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
-    .line 54
-    .line 55
-    .line 56
+    .line 40
+    .line 41
+    .line 42
     move-result-object v0
 
-    .line 57
+    .line 43
     move-object v4, v0
 
-    .line 58
+    .line 44
+    goto :goto_1
+
+    .line 45
     :goto_0
-    invoke-static {v1, v0}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string/jumbo v1, "uri"
+
+    .line 46
+    .line 47
+    .line 48
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 49
+    .line 50
+    .line 51
+    move-result v0
+
+    .line 52
+    if-eqz v0, :cond_3
+
+    .line 53
+    .line 54
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    move-object v3, v0
 
     .line 59
+    :goto_1
+    invoke-static {v0, v1}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 60
     .line 61
-    :cond_2
-    :goto_1
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
-
     .line 62
+    :cond_2
+    :goto_2
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
+
     .line 63
     .line 64
+    .line 65
     move-result-object v1
 
-    .line 65
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
-
     .line 66
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
+
     .line 67
+    .line 68
     if-ne v1, v0, :cond_0
 
-    .line 68
     .line 69
-    goto :goto_2
-
     .line 70
-    :cond_3
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    goto :goto_3
 
     .line 71
+    :cond_3
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
+
     .line 72
     .line 73
-    goto :goto_1
+    .line 74
+    goto :goto_2
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 74
-    :goto_2
+    .line 75
+    :goto_3
     new-instance v0, Lcom/facebook/inspiration/magicmod/model/MagicModImage;
 
-    .line 75
     .line 76
+    .line 77
     invoke-direct {v0, v4, v3}, Lcom/facebook/inspiration/magicmod/model/MagicModImage;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 77
     .line 78
     .line 79
+    .line 80
     return-object v0
 
-    .line 80
+    .line 81
     :catch_0
     move-exception v1
 
-    .line 81
+    .line 82
     const-class v0, Lcom/facebook/inspiration/magicmod/model/MagicModImage;
 
-    .line 82
     .line 83
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 84
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 85
     .line 86
-    const/4 v0, 0x0
-
     .line 87
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 88
+    .line 89
+    .line 90
+    move-result-object v0
+
+    .line 91
     throw v0
 .end method

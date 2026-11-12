@@ -3,97 +3,116 @@
 .source ""
 
 # interfaces
-.implements LX/5oX;
+.implements LX/5Ty;
 
 
 # instance fields
-.field public final synthetic A00:LX/5ZF;
+.field public A00:B
 
-.field public final synthetic A01:LX/5b7;
+.field public A01:B
+
+.field public A02:I
+
+.field public A03:I
+
+.field public A04:LX/5a4;
+
+.field public A05:LX/5a3;
+
+.field public A06:LX/5ZI;
+
+.field public A07:LX/5ZI;
+
+.field public A08:LX/5ZI;
+
+.field public A09:LX/5ZI;
+
+.field public A0A:LX/5ZI;
+
+.field public A0B:[B
+
+.field public A0C:[B
+
+.field public A0D:[LX/5ZI;
+
+.field public A0E:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/5ZF;LX/5b7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p2, p0, LX/5ZC;->A01:LX/5b7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/5ZC;->A00:LX/5ZF;
-
     .line 3
+    const/4 v0, -0x1
+
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, LX/5ZC;->A02:I
 
     .line 5
     .line 6
+    iput v0, p0, LX/5ZC;->A03:I
+
     .line 7
+    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final AVq(LX/5oR;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5ZC;->A00:LX/5ZF;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/5ZF;->AVp(LX/5e7;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final AVs()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5ZC;->A00:LX/5ZF;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/5ZF;->AVs()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final AVv(J)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5ZC;->A00:LX/5ZF;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/5ZF;->AVu()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final now()J
+.method public final A6h(Ljava/nio/ByteBuffer;I)V
     .locals 2
 
     .line 0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    .line 3
-    move-result-wide v0
+    const/4 v1, 0x0
 
+    .line 2
+    invoke-static {p1, p2, v0}, LX/5Tw;->A02(Ljava/nio/ByteBuffer;II)I
+
+    .line 3
     .line 4
-    return-wide v0
+    .line 5
+    move-result v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v1
+
+    .line 12
+    :cond_0
+    iput v1, p0, LX/5ZC;->A02:I
+
+    .line 13
+    .line 14
+    const/4 v0, 0x1
+
+    .line 15
+    invoke-static {p1, p2, v0}, LX/5Tw;->A06(Ljava/nio/ByteBuffer;II)[B
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    iput-object v0, p0, LX/5ZC;->A0B:[B
+
+    .line 20
+    .line 21
+    return-void
 .end method

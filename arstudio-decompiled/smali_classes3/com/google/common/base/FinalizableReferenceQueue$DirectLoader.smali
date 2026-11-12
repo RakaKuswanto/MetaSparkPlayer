@@ -47,7 +47,7 @@
     move-exception v0
 
     .line 8
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
+    invoke-static {v0}, LX/0X7;->A0R(Ljava/lang/Object;)Ljava/lang/AssertionError;
 
     .line 9
     .line 10

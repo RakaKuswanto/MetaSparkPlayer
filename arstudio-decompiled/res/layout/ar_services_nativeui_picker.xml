@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<X.4KI android:id="@id/native_picker_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<X.3vZ android:id="@id/native_picker_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:orientation="vertical" android:id="@id/native_picker_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <View android:layout_gravity="center" android:id="@id/native_picker_ring" android:background="@drawable/ar_services_nativeui_picker_ring" android:layout_width="@dimen/abc_action_bar_stacked_max_height" android:layout_height="@dimen/abc_action_bar_stacked_max_height" />
-</X.4KI>
+    <View android:layout_gravity="center" android:id="@id/native_picker_ring" android:background="@drawable/ar_services_nativeui_picker_ring" android:layout_width="@dimen/abc_action_button_min_height_material" android:layout_height="@dimen/abc_action_button_min_height_material" />
+</X.3vZ>

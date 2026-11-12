@@ -1,165 +1,118 @@
-.class public final LX/4QY;
-.super Landroid/graphics/drawable/Drawable;
+.class public abstract LX/4QY;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Landroidx/appcompat/widget/ActionBarContainer;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ActionBarContainer;)V
+.method public static A00(FII)I
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    invoke-static {p2, p0}, LX/431;->A03(IF)I
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4QY;->A00:Landroidx/appcompat/widget/ActionBarContainer;
+    move-result p0
 
     .line 4
+    invoke-static {p0, p1}, LX/4QX;->A01(II)I
+
     .line 5
-    return-void
+    .line 6
+    .line 7
+    move-result p0
+
+    .line 8
+    return p0
 .end method
 
-
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
+.method public static A01([I[[IIII)Landroid/content/res/ColorStateList;
     .locals 3
 
     .line 0
-    iget-object v2, p0, LX/4QY;->A00:Landroidx/appcompat/widget/ActionBarContainer;
+    const/4 v1, 0x0
 
     .line 1
+    const/high16 v0, 0x3f800000    # 1.0f
+
     .line 2
-    iget-boolean v0, v2, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
-
     .line 3
-    .line 4
-    if-eqz v0, :cond_1
+    invoke-static {v0, p2, p3}, LX/4QY;->A00(FII)I
 
+    .line 4
     .line 5
     .line 6
-    iget-object v1, v2, Landroidx/appcompat/widget/ActionBarContainer;->A01:Landroid/graphics/drawable/Drawable;
+    move-result v0
 
     .line 7
-    .line 8
-    if-eqz v1, :cond_0
+    aput v0, p0, v1
 
+    .line 8
     .line 9
+    const/4 v1, 0x1
+
     .line 10
-    :goto_0
-    invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    const v0, 0x3f0a3d71    # 0.54f
 
     .line 11
     .line 12
     .line 13
-    :cond_0
-    return-void
+    invoke-static {v0, p2, p4}, LX/4QY;->A00(FII)I
 
     .line 14
-    :cond_1
-    iget-object v0, v2, Landroidx/appcompat/widget/ActionBarContainer;->A00:Landroid/graphics/drawable/Drawable;
-
     .line 15
     .line 16
-    if-eqz v0, :cond_2
+    move-result v0
 
     .line 17
+    aput v0, p0, v1
+
     .line 18
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
     .line 19
-    .line 20
-    .line 21
-    :cond_2
-    iget-object v1, v2, Landroidx/appcompat/widget/ActionBarContainer;->A02:Landroid/graphics/drawable/Drawable;
+    const/4 v1, 0x2
 
+    .line 20
+    const v2, 0x3ec28f5c    # 0.38f
+
+    .line 21
     .line 22
     .line 23
-    if-eqz v1, :cond_0
+    invoke-static {v2, p2, p4}, LX/4QY;->A00(FII)I
 
     .line 24
     .line 25
-    iget-boolean v0, v2, Landroidx/appcompat/widget/ActionBarContainer;->A04:Z
-
     .line 26
+    move-result v0
+
     .line 27
-    if-eqz v0, :cond_0
+    aput v0, p0, v1
 
     .line 28
     .line 29
-    goto :goto_0
-.end method
+    const/4 v1, 0x3
 
-.method public final getOpacity()I
-    .locals 1
+    .line 30
+    invoke-static {v2, p2, p4}, LX/4QY;->A00(FII)I
 
-    const/4 v0, 0x0
+    .line 31
+    .line 32
+    .line 33
+    move-result v0
 
-    return v0
-.end method
+    .line 34
+    aput v0, p0, v1
 
-.method public final getOutline(Landroid/graphics/Outline;)V
-    .locals 2
+    .line 35
+    .line 36
+    new-instance v0, Landroid/content/res/ColorStateList;
 
-    .line 0
-    iget-object v1, p0, LX/4QY;->A00:Landroidx/appcompat/widget/ActionBarContainer;
+    .line 37
+    .line 38
+    invoke-direct {v0, p1, p0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
-    .line 1
-    .line 2
-    iget-boolean v0, v1, Landroidx/appcompat/widget/ActionBarContainer;->A03:Z
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_1
-
-    .line 5
-    .line 6
-    iget-object v0, v1, Landroidx/appcompat/widget/ActionBarContainer;->A01:Landroid/graphics/drawable/Drawable;
-
-    .line 7
-    .line 8
-    if-eqz v0, :cond_0
-
-    .line 9
-    .line 10
-    iget-object v0, v1, Landroidx/appcompat/widget/ActionBarContainer;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 11
-    .line 12
-    :goto_0
-    invoke-static {p1, v0}, LX/4QZ;->A00(Landroid/graphics/Outline;Landroid/graphics/drawable/Drawable;)V
-
-    .line 13
-    .line 14
-    .line 15
-    :cond_0
-    return-void
-
-    .line 16
-    :cond_1
-    iget-object v0, v1, Landroidx/appcompat/widget/ActionBarContainer;->A00:Landroid/graphics/drawable/Drawable;
-
-    .line 17
-    .line 18
-    if-eqz v0, :cond_0
-
-    .line 19
-    .line 20
-    goto :goto_0
-.end method
-
-.method public final setAlpha(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 0
-
-    return-void
+    .line 39
+    .line 40
+    .line 41
+    return-object v0
 .end method

@@ -38,6 +38,12 @@
 .method public abstract flowAnnotate(JLjava/lang/String;ZLjava/lang/String;)V
 .end method
 
+.method public abstract flowAnnotateWithCrucialData(JLjava/lang/String;I)V
+.end method
+
+.method public abstract flowAnnotateWithCrucialData(JLjava/lang/String;ILjava/lang/String;)V
+.end method
+
 .method public abstract flowAnnotateWithCrucialData(JLjava/lang/String;Ljava/lang/String;)V
 .end method
 
@@ -81,6 +87,9 @@
 .end method
 
 .method public abstract flowMarkPoint(JLjava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method public abstract flowMarkPoint(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method public abstract flowStart(JLcom/facebook/quicklog/reliability/UserFlowConfig;)V

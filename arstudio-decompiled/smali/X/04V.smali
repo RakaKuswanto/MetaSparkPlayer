@@ -1,86 +1,17 @@
-.class public LX/04V;
+.class public final LX/04V;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener;
+
 
 # instance fields
-.field public final A00:Ljava/lang/Object;
+.field public A00:LX/04U;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 268435460
-    .line 268435461
-    const/16 v0, 0x1a
-
-    .line 268435462
-    .line 268435463
-    if-lt v1, v0, :cond_0
-
-    .line 268435464
-    .line 268435465
-    new-instance v0, LX/0BR;
-
-    .line 268435466
-    .line 268435467
-    invoke-direct {v0, p0}, LX/0BR;-><init>(LX/04V;)V
-
-    .line 268435468
-    .line 268435469
-    .line 268435470
-    :goto_0
-    iput-object v0, p0, LX/04V;->A00:Ljava/lang/Object;
-
-    .line 268435471
-    .line 268435472
-    return-void
-
-    .line 268435473
-    :cond_0
-    const/16 v0, 0x13
-
-    .line 268435474
-    .line 268435475
-    if-lt v1, v0, :cond_1
-
-    .line 268435476
-    .line 268435477
-    new-instance v0, LX/0Uy;
-
-    .line 268435478
-    .line 268435479
-    invoke-direct {v0, p0}, LX/0Uy;-><init>(LX/04V;)V
-
-    .line 268435480
-    .line 268435481
-    .line 268435482
-    goto :goto_0
-
-    .line 268435483
-    :cond_1
-    new-instance v0, LX/04U;
-
-    .line 268435484
-    .line 268435485
-    invoke-direct {v0, p0}, LX/04U;-><init>(LX/04V;)V
-
-    .line 268435486
-    .line 268435487
-    .line 268435488
-    goto :goto_0
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(LX/04U;)V
     .locals 0
 
     .line 0
@@ -89,7 +20,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/04V;->A00:Ljava/lang/Object;
+    iput-object p1, p0, LX/04V;->A00:LX/04U;
 
     .line 4
     .line 5
@@ -98,26 +29,90 @@
 
 
 # virtual methods
-.method public A00(I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    const/4 v0, 0x0
+    .line 0
+    if-ne p0, p1, :cond_0
 
-    return-object v0
-.end method
+    .line 1
+    .line 2
+    const/4 v0, 0x1
 
-.method public A01(I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public A02(IILandroid/os/Bundle;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
+    .line 3
     return v0
+
+    .line 4
+    :cond_0
+    instance-of v0, p1, LX/04V;
+
+    .line 5
+    .line 6
+    if-nez v0, :cond_1
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    return v0
+
+    .line 10
+    :cond_1
+    check-cast p1, LX/04V;
+
+    .line 11
+    .line 12
+    iget-object v1, p0, LX/04V;->A00:LX/04U;
+
+    .line 13
+    .line 14
+    iget-object v0, p1, LX/04V;->A00:LX/04U;
+
+    .line 15
+    .line 16
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/04V;->A00:LX/04U;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final onAccessibilityStateChanged(Z)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/04V;->A00:LX/04U;
+
+    .line 1
+    .line 2
+    invoke-interface {v0, p1}, LX/04U;->onAccessibilityStateChanged(Z)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method

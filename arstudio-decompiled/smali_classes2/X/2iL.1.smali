@@ -1,90 +1,69 @@
-.class public final LX/2iL;
-.super LX/2iI;
+.class public final LX/2Il;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public A00:LX/0VD;
+
+.field public A01:Ljava/util/Set;
+
+.field public A02:Ljava/util/Set;
+
+
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/NinePatchDrawable;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0, p1}, LX/2iI;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/43x;->A04()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
+    sget v0, LX/2I6;->A2d:I
 
     .line 4
-    if-eqz v0, :cond_0
-
     .line 5
-    .line 6
-    const-string v0, "RoundedNinePatchDrawable#draw"
+    invoke-static {v0}, LX/3Fa;->A09(I)Ljava/util/Set;
 
+    .line 6
     .line 7
     .line 8
-    invoke-static {v0}, LX/43x;->A03(Ljava/lang/String;)V
+    move-result-object v2
 
     .line 9
+    invoke-static {}, LX/2I6;->A0E()LX/0VD;
+
     .line 10
     .line 11
-    :cond_0
-    invoke-virtual {p0}, LX/2iI;->A02()Z
-
     .line 12
-    .line 13
-    .line 14
-    move-result v0
+    move-result-object v1
 
+    .line 13
+    sget v0, LX/2I6;->A2e:I
+
+    .line 14
     .line 15
-    if-eqz v0, :cond_1
+    invoke-static {v0}, LX/3Fa;->A09(I)Ljava/util/Set;
 
     .line 16
     .line 17
-    invoke-virtual {p0}, LX/2iI;->A00()V
-
     .line 18
-    .line 19
-    .line 20
-    invoke-virtual {p0}, LX/2iI;->A01()V
+    move-result-object v0
 
+    .line 19
+    iput-object v2, p0, LX/2Il;->A01:Ljava/util/Set;
+
+    .line 20
     .line 21
+    iput-object v1, p0, LX/2Il;->A00:LX/0VD;
+
     .line 22
     .line 23
-    iget-object v0, p0, LX/2iI;->A0S:Landroid/graphics/Path;
+    iput-object v0, p0, LX/2Il;->A02:Ljava/util/Set;
 
     .line 24
     .line 25
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
-
-    .line 26
-    .line 27
-    .line 28
-    :cond_1
-    invoke-super {p0, p1}, LX/2iI;->draw(Landroid/graphics/Canvas;)V
-
-    .line 29
-    .line 30
-    .line 31
-    invoke-static {}, LX/43x;->A01()V
-
-    .line 32
-    .line 33
-    .line 34
     return-void
 .end method

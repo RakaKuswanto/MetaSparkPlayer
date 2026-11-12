@@ -1,409 +1,338 @@
-.class public abstract LX/2Fp;
-.super Ljava/lang/Object;
+.class public final enum LX/2Fp;
+.super Ljava/lang/Enum;
 .source ""
 
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/2Fp;
+
+.field public static final Companion:LX/2HA;
+
+.field public static final enum FLOAT:LX/2Fp;
+
+.field public static final enum INTEGER:LX/2Fp;
+
+.field public static final enum STRING:LX/2Fp;
+
+
+# instance fields
+.field public final value:I
+
+
 # direct methods
-.method public constructor <init>()V
+.method public static final synthetic $values()[LX/2Fp;
+    .locals 3
+
+    const/4 v0, 0x3
+
+    new-array v2, v0, [LX/2Fp;
+
+    sget-object v1, LX/2Fp;->STRING:LX/2Fp;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2Fp;->INTEGER:LX/2Fp;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2Fp;->FLOAT:LX/2Fp;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "STRING"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/2Fp;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1, v1}, LX/2Fp;-><init>(Ljava/lang/String;II)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/2Fp;->STRING:LX/2Fp;
+
+    .line 9
+    .line 10
+    const-string v2, "INTEGER"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/2Fp;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1, v1}, LX/2Fp;-><init>(Ljava/lang/String;II)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/2Fp;->INTEGER:LX/2Fp;
+
+    .line 19
+    .line 20
+    const-string v2, "FLOAT"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/2Fp;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1, v1}, LX/2Fp;-><init>(Ljava/lang/String;II)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/2Fp;->FLOAT:LX/2Fp;
+
+    .line 29
+    .line 30
+    invoke-static {}, LX/2Fp;->$values()[LX/2Fp;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    sput-object v0, LX/2Fp;->$VALUES:[LX/2Fp;
+
+    .line 35
+    .line 36
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    sput-object v0, LX/2Fp;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 41
+    .line 42
+    new-instance v0, LX/2HA;
+
+    .line 43
+    .line 44
+    invoke-direct {v0}, LX/2HA;-><init>()V
+
+    .line 45
+    .line 46
+    .line 47
+    sput-object v0, LX/2Fp;->Companion:LX/2HA;
+
+    .line 48
+    .line 49
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
+    iput p3, p0, LX/2Fp;->value:I
+
+    .line 4
+    .line 5
     return-void
+.end method
+
+.method public static final fromInt(I)LX/2Fp;
+    .locals 1
+
+    .line 0
+    if-eqz p0, :cond_2
+
+    .line 1
+    .line 2
+    const/4 v0, 0x1
+
+    .line 3
+    if-eq p0, v0, :cond_1
+
+    .line 4
+    .line 5
+    const/4 v0, 0x2
+
+    .line 6
+    if-ne p0, v0, :cond_0
+
+    .line 7
+    .line 8
+    sget-object v0, LX/2Fp;->FLOAT:LX/2Fp;
+
+    .line 9
+    .line 10
+    return-object v0
+
+    .line 11
+    :cond_0
+    const-string v0, "Unsupported data type "
+
+    .line 12
+    .line 13
+    invoke-static {v0, p0}, LX/004;->A02(Ljava/lang/String;I)Ljava/lang/IllegalArgumentException;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    throw v0
+
+    .line 18
+    :cond_1
+    sget-object v0, LX/2Fp;->INTEGER:LX/2Fp;
+
+    .line 19
+    .line 20
+    return-object v0
+
+    .line 21
+    :cond_2
+    sget-object v0, LX/2Fp;->STRING:LX/2Fp;
+
+    .line 22
+    .line 23
+    return-object v0
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/2Fp;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/2Fp;
+    .locals 1
+
+    const-class v0, LX/2Fp;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/2Fp;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/2Fp;
+    .locals 1
+
+    sget-object v0, LX/2Fp;->$VALUES:[LX/2Fp;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/2Fp;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final A00(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JsonSerializer;
-    .locals 5
+.method public final getValue()I
+    .locals 1
 
     .line 0
-    instance-of v0, p0, LX/2H6;
+    iget v0, p0, LX/2Fp;->value:I
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    move-object v1, p0
-
-    .line 5
-    check-cast v1, LX/2H6;
-
-    .line 6
-    .line 7
-    iget-object v0, v1, LX/2H6;->A01:Ljava/lang/Class;
-
-    .line 8
-    .line 9
-    if-ne p1, v0, :cond_4
-
-    .line 10
-    .line 11
-    iget-object v0, v1, LX/2H6;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
-    .line 12
-    .line 13
-    return-object v0
-
-    .line 14
-    :cond_0
-    instance-of v0, p0, LX/2H8;
-
-    .line 15
-    .line 16
-    if-eqz v0, :cond_2
-
-    .line 17
-    .line 18
-    move-object v0, p0
-
-    .line 19
-    check-cast v0, LX/2H8;
-
-    .line 20
-    .line 21
-    iget-object v4, v0, LX/2H8;->A00:[LX/2HD;
-
-    .line 22
-    .line 23
-    array-length v3, v4
-
-    .line 24
-    const/4 v2, 0x0
-
-    .line 25
-    :goto_0
-    if-ge v2, v3, :cond_4
-
-    .line 26
-    .line 27
-    aget-object v1, v4, v2
-
-    .line 28
-    .line 29
-    iget-object v0, v1, LX/2HD;->A01:Ljava/lang/Class;
-
-    .line 30
-    .line 31
-    if-ne v0, p1, :cond_1
-
-    .line 32
-    .line 33
-    iget-object v0, v1, LX/2HD;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
-    .line 34
-    .line 35
-    return-object v0
-
-    .line 36
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    .line 37
-    .line 38
-    goto :goto_0
-
-    .line 39
-    :cond_2
-    instance-of v0, p0, LX/2H5;
-
-    .line 40
-    .line 41
-    if-nez v0, :cond_4
-
-    .line 42
-    .line 43
-    move-object v1, p0
-
-    .line 44
-    check-cast v1, LX/2H7;
-
-    .line 45
-    .line 46
-    iget-object v0, v1, LX/2H7;->A02:Ljava/lang/Class;
-
-    .line 47
-    .line 48
-    if-ne p1, v0, :cond_3
-
-    .line 49
-    .line 50
-    iget-object v0, v1, LX/2H7;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
-    .line 51
-    .line 52
-    return-object v0
-
-    .line 53
-    :cond_3
-    iget-object v0, v1, LX/2H7;->A03:Ljava/lang/Class;
-
-    .line 54
-    .line 55
-    if-ne p1, v0, :cond_4
-
-    .line 56
-    .line 57
-    iget-object v0, v1, LX/2H7;->A01:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
-    .line 58
-    .line 59
-    return-object v0
-
-    .line 60
-    :cond_4
-    const/4 v0, 0x0
-
-    .line 61
-    return-object v0
+    return v0
 .end method
 
-.method public final A01(LX/2Bn;LX/2EI;LX/2Cw;)LX/2Go;
-    .locals 3
+.method public toString()Ljava/lang/String;
+    .locals 2
 
     .line 0
-    invoke-virtual {p3, p1, p2}, LX/2Cw;->A08(LX/2Bn;LX/2EI;)Lcom/fasterxml/jackson/databind/JsonSerializer;
+    iget v1, p0, LX/2Fp;->value:I
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v2
-
-    .line 4
-    iget-object v0, p2, LX/2EI;->_class:Ljava/lang/Class;
-
-    .line 5
-    .line 6
-    invoke-virtual {p0, v2, v0}, LX/2Fp;->A02(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)LX/2Fp;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
-    .line 10
-    new-instance v0, LX/2Go;
-
-    .line 11
-    .line 12
-    invoke-direct {v0, v2, v1}, LX/2Go;-><init>(Lcom/fasterxml/jackson/databind/JsonSerializer;LX/2Fp;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-object v0
-.end method
-
-.method public final A02(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)LX/2Fp;
-    .locals 5
-
-    .line 0
-    instance-of v0, p0, LX/2H6;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_2
 
     .line 3
     .line 4
-    move-object v0, p0
-
-    .line 5
-    check-cast v0, LX/2H6;
-
-    .line 6
-    .line 7
-    iget-object v1, v0, LX/2H6;->A01:Ljava/lang/Class;
-
-    .line 8
-    .line 9
-    iget-object v0, v0, LX/2H6;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
-    .line 10
-    .line 11
-    new-instance v4, LX/2H7;
-
-    .line 12
-    .line 13
-    invoke-direct {v4, v0, p1, v1, p2}, LX/2H7;-><init>(Lcom/fasterxml/jackson/databind/JsonSerializer;Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;Ljava/lang/Class;)V
-
-    .line 14
-    .line 15
-    .line 16
-    :cond_0
-    return-object v4
-
-    .line 17
-    :cond_1
-    instance-of v0, p0, LX/2H8;
-
-    .line 18
-    .line 19
-    if-eqz v0, :cond_2
-
-    .line 20
-    .line 21
-    move-object v4, p0
-
-    .line 22
-    check-cast v4, LX/2H8;
-
-    .line 23
-    .line 24
-    iget-object v3, v4, LX/2H8;->A00:[LX/2HD;
-
-    .line 25
-    .line 26
-    array-length v2, v3
-
-    .line 27
-    const/16 v0, 0x8
-
-    .line 28
-    .line 29
-    if-eq v2, v0, :cond_0
-
-    .line 30
-    .line 31
-    add-int/lit8 v0, v2, 0x1
-
-    .line 32
-    .line 33
-    new-array v1, v0, [LX/2HD;
-
-    .line 34
-    .line 35
-    const/4 v0, 0x0
-
-    .line 36
-    invoke-static {v3, v0, v1, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 37
-    .line 38
-    .line 39
-    new-instance v0, LX/2HD;
-
-    .line 40
-    .line 41
-    invoke-direct {v0, p1, p2}, LX/2HD;-><init>(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)V
-
-    .line 42
-    .line 43
-    .line 44
-    aput-object v0, v1, v2
-
-    .line 45
-    .line 46
-    new-instance v4, LX/2H8;
-
-    .line 47
-    .line 48
-    invoke-direct {v4, v1}, LX/2H8;-><init>([LX/2HD;)V
-
-    .line 49
-    .line 50
-    .line 51
-    return-object v4
-
-    .line 52
-    :cond_2
-    instance-of v0, p0, LX/2H5;
-
-    .line 53
-    .line 54
-    if-eqz v0, :cond_3
-
-    .line 55
-    .line 56
-    new-instance v4, LX/2H6;
-
-    .line 57
-    .line 58
-    invoke-direct {v4, p1, p2}, LX/2H6;-><init>(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)V
-
-    .line 59
-    .line 60
-    .line 61
-    return-object v4
-
-    .line 62
-    :cond_3
-    move-object v4, p0
-
-    .line 63
-    check-cast v4, LX/2H7;
-
-    .line 64
-    .line 65
-    const/4 v0, 0x2
-
-    .line 66
-    new-array v3, v0, [LX/2HD;
-
-    .line 67
-    .line 68
-    iget-object v2, v4, LX/2H7;->A02:Ljava/lang/Class;
-
-    .line 69
-    .line 70
-    iget-object v0, v4, LX/2H7;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
-    .line 71
-    .line 72
-    new-instance v1, LX/2HD;
-
-    .line 73
-    .line 74
-    invoke-direct {v1, v0, v2}, LX/2HD;-><init>(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)V
-
-    .line 75
-    .line 76
-    .line 77
-    const/4 v0, 0x0
-
-    .line 78
-    aput-object v1, v3, v0
-
-    .line 79
-    .line 80
-    iget-object v2, v4, LX/2H7;->A03:Ljava/lang/Class;
-
-    .line 81
-    .line 82
-    iget-object v0, v4, LX/2H7;->A01:Lcom/fasterxml/jackson/databind/JsonSerializer;
-
-    .line 83
-    .line 84
-    new-instance v1, LX/2HD;
-
-    .line 85
-    .line 86
-    invoke-direct {v1, v0, v2}, LX/2HD;-><init>(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)V
-
-    .line 87
-    .line 88
-    .line 89
     const/4 v0, 0x1
 
-    .line 90
-    aput-object v1, v3, v0
+    .line 5
+    if-eq v1, v0, :cond_1
 
-    .line 91
-    .line 92
-    new-instance v4, LX/2H8;
+    .line 6
+    .line 7
+    const/4 v0, 0x2
 
-    .line 93
-    .line 94
-    invoke-direct {v4, v3}, LX/2H8;-><init>([LX/2HD;)V
+    .line 8
+    if-eq v1, v0, :cond_0
 
-    .line 95
-    .line 96
-    .line 97
-    return-object v4
+    .line 9
+    .line 10
+    const-string v0, "Unknown"
+
+    .line 11
+    .line 12
+    return-object v0
+
+    .line 13
+    :cond_0
+    const-string v0, "Float"
+
+    .line 14
+    .line 15
+    return-object v0
+
+    .line 16
+    :cond_1
+    const-string v0, "Integer"
+
+    .line 17
+    .line 18
+    return-object v0
+
+    .line 19
+    :cond_2
+    const-string v0, "String"
+
+    .line 20
+    .line 21
+    return-object v0
 .end method

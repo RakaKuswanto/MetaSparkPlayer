@@ -1,4 +1,4 @@
-.class public synthetic Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl$1;
+.class public abstract synthetic Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl$1;
 .super Ljava/lang/Object;
 .source ""
 
@@ -12,7 +12,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/5c8;->values()[LX/5c8;
+    invoke-static {}, LX/5D0;->values()[LX/5D0;
 
     .line 1
     .line 2
@@ -32,11 +32,11 @@
     .line 8
     .line 9
     :try_start_0
-    sget-object v0, LX/5c8;->PRECAPTURE:LX/5c8;
+    sget-object v0, LX/5D0;->PRECAPTURE:LX/5D0;
 
     .line 10
     .line 11
-    invoke-static {v0, v1}, LX/4BD;->A1D(Ljava/lang/Enum;[I)V
+    invoke-static {v0, v1}, LX/431;->A1A(Ljava/lang/Enum;[I)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -45,11 +45,11 @@
     .line 14
     :catch_0
     :try_start_1
-    sget-object v0, LX/5c8;->POSTCAPTURE:LX/5c8;
+    sget-object v0, LX/5D0;->POSTCAPTURE:LX/5D0;
 
     .line 15
     .line 16
-    invoke-static {v0, v1}, LX/4BD;->A1E(Ljava/lang/Enum;[I)V
+    invoke-static {v0, v1}, LX/431;->A1B(Ljava/lang/Enum;[I)V
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -58,11 +58,11 @@
     .line 19
     :catch_1
     :try_start_2
-    sget-object v0, LX/5c8;->UNSPECIFIED:LX/5c8;
+    sget-object v0, LX/5D0;->UNSPECIFIED:LX/5D0;
 
     .line 20
     .line 21
-    invoke-static {v0, v1}, LX/4BD;->A1F(Ljava/lang/Enum;[I)V
+    invoke-static {v0, v1}, LX/431;->A1C(Ljava/lang/Enum;[I)V
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 

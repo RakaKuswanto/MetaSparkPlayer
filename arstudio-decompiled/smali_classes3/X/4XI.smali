@@ -2,88 +2,43 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DrawableWrapper$invalidateDrawable$1"
+
+
+# instance fields
+.field public final synthetic A00:LX/4X5;
+
 
 # direct methods
-.method public static A00(Landroid/view/View;)I
+.method public constructor <init>(LX/4X5;)V
     .locals 0
 
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
+    iput-object p1, p0, LX/4XI;->A00:LX/4X5;
 
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    return p0
-.end method
-
-.method public static A01(Landroid/view/View;)I
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/view/View;->getTextDirection()I
-
-    .line 1
-    .line 2
-    .line 3
-    move-result p0
-
-    .line 4
-    return p0
-.end method
-
-.method public static A02(Landroid/widget/TextView;)Ljava/util/Locale;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextLocale()Ljava/util/Locale;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    return-object p0
-.end method
-
-.method public static A03(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/widget/TextView;)V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p4, p0, p1, p2, p3}, Landroid/widget/TextView;->setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    .line 1
-    .line 2
-    .line 3
     return-void
 .end method
 
-.method public static A04(Landroid/view/View;I)V
-    .locals 0
+
+# virtual methods
+.method public final run()V
+    .locals 1
 
     .line 0
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTextDirection(I)V
+    iget-object v0, p0, LX/4XI;->A00:LX/4X5;
 
     .line 1
     .line 2
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
     .line 3
-    return-void
-.end method
-
-.method public static A05(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
     .line 4
-    return-object p0
+    .line 5
+    return-void
 .end method

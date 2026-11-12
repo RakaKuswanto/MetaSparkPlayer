@@ -25,6 +25,8 @@
 
 
 # instance fields
+.field public _UL_mInjectionContext:LX/1rU;
+
 .field public final mClock:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
 
 .field public final mContextFactory:Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
@@ -40,6 +42,8 @@
 .field public mGlClearRed:F
 
 .field public final mLastRedrawTime:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public final mMobileConfig:LX/0RP;
 
 .field public mNativeSnapshotHelper:Lcom/facebook/rtc/photosnapshots/jni/NativeSnapshotHelper;
 
@@ -60,6 +64,8 @@
 .field public mScaleType:I
 
 .field public mSnapshotSourceUserID:J
+
+.field public mSupportedOpenGLESVersion:D
 
 .field public mSurfaceHeight:I
 
@@ -90,155 +96,175 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    const/4 v4, 0x0
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 268435460
-    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->surfaceCreated:Z
-
     .line 268435461
     .line 268435462
-    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRendererSetupDone:Z
+    move-result-object v0
 
     .line 268435463
-    .line 268435464
-    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeFunctionsRegisted:Z
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mMobileConfig:LX/0RP;
 
+    .line 268435464
     .line 268435465
+    const/4 v4, 0x0
+
     .line 268435466
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->surfaceCreated:Z
 
     .line 268435467
     .line 268435468
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRendererSetupDone:Z
 
     .line 268435469
     .line 268435470
+    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeFunctionsRegisted:Z
+
     .line 268435471
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeFunctionLock:Ljava/util/concurrent/locks/ReentrantLock;
-
     .line 268435472
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+
     .line 268435473
-    const-wide/16 v1, 0x0
-
     .line 268435474
-    .line 268435475
-    iput-wide v1, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeObject:J
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
+    .line 268435475
     .line 268435476
     .line 268435477
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoWidth:I
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeFunctionLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 268435478
     .line 268435479
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoHeight:I
+    const-wide/16 v1, 0x0
 
     .line 268435480
     .line 268435481
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRawVideoWidth:I
+    iput-wide v1, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeObject:J
 
     .line 268435482
     .line 268435483
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRawVideoHeight:I
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoWidth:I
 
     .line 268435484
     .line 268435485
-    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mCustomVideoSize:Z
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoHeight:I
 
     .line 268435486
     .line 268435487
-    sget-object v0, Lcom/facebook/common/time/AwakeTimeSinceBootClock;->INSTANCE:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRawVideoWidth:I
 
     .line 268435488
     .line 268435489
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mClock:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRawVideoHeight:I
 
     .line 268435490
     .line 268435491
-    const/4 v3, 0x0
+    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mCustomVideoSize:Z
 
     .line 268435492
-    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mOneShotDrawListener:Lorg/webrtc/legacy/videoengine/OneShotDrawListener;
-
     .line 268435493
+    sget-object v0, Lcom/facebook/common/time/AwakeTimeSinceBootClock;->INSTANCE:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
+
     .line 268435494
-    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mOneShotReDrawListener:Lorg/webrtc/legacy/videoengine/OneShotReDrawListener;
-
     .line 268435495
-    .line 268435496
-    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoSizeChangedListener:Lorg/webrtc/legacy/videoengine/VideoSizeChangedListener;
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mClock:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
 
+    .line 268435496
     .line 268435497
+    const/4 v3, 0x0
+
     .line 268435498
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mScaleType:I
+    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mOneShotDrawListener:Lorg/webrtc/legacy/videoengine/OneShotDrawListener;
 
     .line 268435499
     .line 268435500
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mOneShotReDrawListener:Lorg/webrtc/legacy/videoengine/OneShotReDrawListener;
 
     .line 268435501
     .line 268435502
-    .line 268435503
-    move-result-object v0
+    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoSizeChangedListener:Lorg/webrtc/legacy/videoengine/VideoSizeChangedListener;
 
+    .line 268435503
     .line 268435504
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mNativeSnapshotHelperLock:Ljava/lang/Object;
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mScaleType:I
 
     .line 268435505
     .line 268435506
-    new-instance v0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 268435507
     .line 268435508
+    .line 268435509
+    move-result-object v0
+
+    .line 268435510
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mNativeSnapshotHelperLock:Ljava/lang/Object;
+
+    .line 268435511
+    .line 268435512
+    new-instance v0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
+
+    .line 268435513
+    .line 268435514
     invoke-direct {v0, v3}, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;-><init>(Lorg/webrtc/legacy/EglBase$Context;)V
 
-    .line 268435509
-    .line 268435510
-    .line 268435511
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mContextFactory:Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
-
-    .line 268435512
-    .line 268435513
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
-
-    .line 268435514
     .line 268435515
-    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
-
     .line 268435516
     .line 268435517
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mContextFactory:Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
+
     .line 268435518
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mLastRedrawTime:Ljava/util/concurrent/atomic/AtomicLong;
-
     .line 268435519
-    .line 268435520
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
+    .line 268435520
     .line 268435521
-    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearRed:F
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
 
     .line 268435522
     .line 268435523
-    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearGreen:F
-
     .line 268435524
-    .line 268435525
-    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearBlue:F
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mLastRedrawTime:Ljava/util/concurrent/atomic/AtomicLong;
 
+    .line 268435525
     .line 268435526
+    const/4 v0, 0x0
+
     .line 268435527
-    const/high16 v0, 0x3f800000    # 1.0f
+    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearRed:F
 
     .line 268435528
     .line 268435529
-    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearAlpha:F
+    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearGreen:F
 
     .line 268435530
     .line 268435531
-    invoke-direct {p0, p1, v3}, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearBlue:F
 
     .line 268435532
     .line 268435533
+    const/high16 v0, 0x3f800000    # 1.0f
+
     .line 268435534
+    .line 268435535
+    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearAlpha:F
+
+    .line 268435536
+    .line 268435537
+    const-wide/16 v0, 0x0
+
+    .line 268435538
+    .line 268435539
+    iput-wide v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mSupportedOpenGLESVersion:D
+
+    .line 268435540
+    .line 268435541
+    invoke-direct {p0, p1, v3}, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 268435542
+    .line 268435543
+    .line 268435544
     return-void
 .end method
 
@@ -251,155 +277,175 @@
     .line 1
     .line 2
     .line 3
-    const/4 v4, 0x0
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 4
-    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->surfaceCreated:Z
-
     .line 5
     .line 6
-    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRendererSetupDone:Z
+    move-result-object v0
 
     .line 7
-    .line 8
-    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeFunctionsRegisted:Z
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mMobileConfig:LX/0RP;
 
+    .line 8
     .line 9
+    const/4 v4, 0x0
+
     .line 10
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->surfaceCreated:Z
 
     .line 11
     .line 12
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRendererSetupDone:Z
 
     .line 13
     .line 14
+    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeFunctionsRegisted:Z
+
     .line 15
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeFunctionLock:Ljava/util/concurrent/locks/ReentrantLock;
-
     .line 16
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+
     .line 17
-    const-wide/16 v1, 0x0
-
     .line 18
-    .line 19
-    iput-wide v1, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeObject:J
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
+    .line 19
     .line 20
     .line 21
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoWidth:I
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeFunctionLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 22
     .line 23
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoHeight:I
+    const-wide/16 v1, 0x0
 
     .line 24
     .line 25
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRawVideoWidth:I
+    iput-wide v1, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->nativeObject:J
 
     .line 26
     .line 27
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRawVideoHeight:I
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoWidth:I
 
     .line 28
     .line 29
-    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mCustomVideoSize:Z
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoHeight:I
 
     .line 30
     .line 31
-    sget-object v0, Lcom/facebook/common/time/AwakeTimeSinceBootClock;->INSTANCE:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRawVideoWidth:I
 
     .line 32
     .line 33
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mClock:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mRawVideoHeight:I
 
     .line 34
     .line 35
-    const/4 v3, 0x0
+    iput-boolean v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mCustomVideoSize:Z
 
     .line 36
-    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mOneShotDrawListener:Lorg/webrtc/legacy/videoengine/OneShotDrawListener;
-
     .line 37
+    sget-object v0, Lcom/facebook/common/time/AwakeTimeSinceBootClock;->INSTANCE:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
+
     .line 38
-    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mOneShotReDrawListener:Lorg/webrtc/legacy/videoengine/OneShotReDrawListener;
-
     .line 39
-    .line 40
-    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoSizeChangedListener:Lorg/webrtc/legacy/videoengine/VideoSizeChangedListener;
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mClock:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
 
+    .line 40
     .line 41
+    const/4 v3, 0x0
+
     .line 42
-    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mScaleType:I
+    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mOneShotDrawListener:Lorg/webrtc/legacy/videoengine/OneShotDrawListener;
 
     .line 43
     .line 44
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mOneShotReDrawListener:Lorg/webrtc/legacy/videoengine/OneShotReDrawListener;
 
     .line 45
     .line 46
-    .line 47
-    move-result-object v0
+    iput-object v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mVideoSizeChangedListener:Lorg/webrtc/legacy/videoengine/VideoSizeChangedListener;
 
+    .line 47
     .line 48
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mNativeSnapshotHelperLock:Ljava/lang/Object;
+    iput v4, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mScaleType:I
 
     .line 49
     .line 50
-    new-instance v0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 51
     .line 52
+    .line 53
+    move-result-object v0
+
+    .line 54
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mNativeSnapshotHelperLock:Ljava/lang/Object;
+
+    .line 55
+    .line 56
+    new-instance v0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
+
+    .line 57
+    .line 58
     invoke-direct {v0, v3}, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;-><init>(Lorg/webrtc/legacy/EglBase$Context;)V
 
-    .line 53
-    .line 54
-    .line 55
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mContextFactory:Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
-
-    .line 56
-    .line 57
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
-
-    .line 58
     .line 59
-    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
-
     .line 60
     .line 61
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mContextFactory:Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView$ContextFactory;
+
     .line 62
-    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mLastRedrawTime:Ljava/util/concurrent/atomic/AtomicLong;
-
     .line 63
-    .line 64
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
+    .line 64
     .line 65
-    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearRed:F
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
 
     .line 66
     .line 67
-    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearGreen:F
-
     .line 68
-    .line 69
-    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearBlue:F
+    iput-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mLastRedrawTime:Ljava/util/concurrent/atomic/AtomicLong;
 
+    .line 69
     .line 70
+    const/4 v0, 0x0
+
     .line 71
-    const/high16 v0, 0x3f800000    # 1.0f
+    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearRed:F
 
     .line 72
     .line 73
-    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearAlpha:F
+    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearGreen:F
 
     .line 74
     .line 75
-    invoke-direct {p0, p1, p2}, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearBlue:F
 
     .line 76
     .line 77
+    const/high16 v0, 0x3f800000    # 1.0f
+
     .line 78
+    .line 79
+    iput v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mGlClearAlpha:F
+
+    .line 80
+    .line 81
+    const-wide/16 v0, 0x0
+
+    .line 82
+    .line 83
+    iput-wide v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mSupportedOpenGLESVersion:D
+
+    .line 84
+    .line 85
+    invoke-direct {p0, p1, p2}, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 86
+    .line 87
+    .line 88
     return-void
 .end method
 
@@ -519,11 +565,11 @@
     const/4 v1, 0x0
 
     .line 1
-    new-instance v0, LX/62s;
+    new-instance v0, LX/6E2;
 
     .line 2
     .line 3
-    invoke-direct {v0}, LX/62s;-><init>()V
+    invoke-direct {v0}, LX/6E2;-><init>()V
 
     .line 4
     .line 5
@@ -552,19 +598,68 @@
     .line 18
     .line 19
     .line 20
-    iget-object v2, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mLastRedrawTime:Ljava/util/concurrent/atomic/AtomicLong;
+    const-string v0, "activity"
 
     .line 21
     .line 22
-    const-wide/16 v0, 0x0
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     .line 23
     .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    check-cast v0, Landroid/app/ActivityManager;
+
+    .line 27
+    .line 28
+    invoke-virtual {v0}, Landroid/app/ActivityManager;->getDeviceConfigurationInfo()Landroid/content/pm/ConfigurationInfo;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    invoke-virtual {v0}, Landroid/content/pm/ConfigurationInfo;->getGlEsVersion()Ljava/lang/String;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
+
+    .line 36
+    if-eqz v0, :cond_0
+
+    .line 37
+    .line 38
+    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-wide v0
+
+    .line 42
+    iput-wide v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mSupportedOpenGLESVersion:D
+
+    .line 43
+    .line 44
+    :cond_0
+    iget-object v2, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mLastRedrawTime:Ljava/util/concurrent/atomic/AtomicLong;
+
+    .line 45
+    .line 46
+    const-wide/16 v0, 0x0
+
+    .line 47
+    .line 48
     invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    .line 25
-    .line 26
-    .line 27
+    .line 49
+    .line 50
+    .line 51
     return-void
 .end method
 
@@ -784,6 +879,111 @@
     .line 47
     .line 48
     throw v1
+.end method
+
+.method public GetMaxScalingRatio()F
+    .locals 5
+
+    .line 0
+    iget-wide v3, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mSupportedOpenGLESVersion:D
+
+    .line 1
+    .line 2
+    const-wide/high16 v1, 0x4008000000000000L    # 3.0
+
+    .line 3
+    .line 4
+    cmpl-double v0, v3, v1
+
+    .line 5
+    .line 6
+    if-ltz v0, :cond_0
+
+    .line 7
+    .line 8
+    iget-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mMobileConfig:LX/0RP;
+
+    .line 9
+    .line 10
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v2
+
+    .line 14
+    check-cast v2, LX/30K;
+
+    .line 15
+    .line 16
+    sget-wide v0, Lorg/webrtc/legacy/videoengine/MC$m4a_rtc_video_upscaling;->lanczos_enabled:J
+
+    .line 17
+    .line 18
+    invoke-interface {v2, v0, v1}, LX/30K;->AB9(J)Z
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    if-eqz v0, :cond_0
+
+    .line 23
+    .line 24
+    iget-object v0, p0, Lorg/webrtc/legacy/videoengine/ViEAndroidGLES20SurfaceView;->mMobileConfig:LX/0RP;
+
+    .line 25
+    .line 26
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v2
+
+    .line 30
+    check-cast v2, LX/30K;
+
+    .line 31
+    .line 32
+    sget-wide v0, Lorg/webrtc/legacy/videoengine/MC$m4a_rtc_video_upscaling;->max_scaling_ratio:J
+
+    .line 33
+    .line 34
+    check-cast v2, LX/302;
+
+    .line 35
+    .line 36
+    invoke-static {v2, v0, v1}, LX/302;->A02(LX/302;J)J
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-wide v2
+
+    .line 40
+    long-to-float v1, v2
+
+    .line 41
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    .line 42
+    .line 43
+    div-float/2addr v1, v0
+
+    .line 44
+    return v1
+
+    .line 45
+    :cond_0
+    const/high16 v1, -0x40800000    # -1.0f
+
+    .line 46
+    .line 47
+    return v1
 .end method
 
 .method public ReDraw(II)V
@@ -1011,24 +1211,24 @@
 
     .line 9
     .line 10
-    sget-object v1, LX/6O0;->NATIVE_PHOTOSNAPSHOT_SOURCE_ERROR:LX/6O0;
+    sget-object v1, LX/6cZ;->NATIVE_PHOTOSNAPSHOT_SOURCE_ERROR:LX/6cZ;
 
     .line 11
     .line 12
-    new-instance v0, LX/6L3;
+    new-instance v0, LX/6aA;
 
     .line 13
     .line 14
-    invoke-direct {v0, v1, v2}, LX/6L3;-><init>(LX/6O0;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, LX/6aA;-><init>(LX/6cZ;Ljava/lang/String;)V
 
     .line 15
     .line 16
     .line 17
-    new-instance v2, LX/1xE;
+    new-instance v2, LX/26U;
 
     .line 18
     .line 19
-    invoke-direct {v2, v0}, LX/1xE;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v2, v0}, LX/26U;-><init>(Ljava/lang/Throwable;)V
 
     .line 20
     .line 21

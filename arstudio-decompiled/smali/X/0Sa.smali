@@ -1,64 +1,55 @@
-.class public final LX/0Sa;
-.super LX/06a;
+.class public final LX/0SA;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final previousFragmentId:Ljava/lang/String;
+.field public final A00:LX/0Ri;
+
+.field public final A01:Ljava/lang/ThreadLocal;
+
+.field public final A02:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(LX/0Ri;)V
+    .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v1
+    new-instance v0, Ljava/lang/ThreadLocal;
 
     .line 4
-    const-string v0, "Attempting to reuse fragment "
-
     .line 5
-    .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
+    .line 6
     .line 7
     .line 8
-    .line 9
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, LX/0SA;->A01:Ljava/lang/ThreadLocal;
 
+    .line 9
     .line 10
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 11
     .line 12
-    const-string v0, " with previous ID "
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     .line 13
     .line 14
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 15
+    iput-object v0, p0, LX/0SA;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 16
     .line 17
-    invoke-static {p2, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    iput-object p1, p0, LX/0SA;->A00:LX/0Ri;
 
     .line 18
     .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    invoke-direct {p0, p1, v0}, LX/06a;-><init>(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
-
-    .line 22
-    .line 23
-    .line 24
-    iput-object p2, p0, LX/0Sa;->previousFragmentId:Ljava/lang/String;
-
-    .line 25
-    .line 26
     return-void
 .end method

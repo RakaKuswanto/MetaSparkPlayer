@@ -21,7 +21,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p2}, LX/0Yd;->A0l(Ljava/lang/Object;I)V
+    invoke-static {p1, p2}, LX/0X2;->A1D(Ljava/lang/Object;I)V
 
     .line 4
     .line 5
@@ -159,40 +159,48 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yf;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget v0, p0, Lcom/facebook/rsys/audio/gen/PlaybackVolumeParametersDeprecated;->streamType:I
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 7
     .line 8
-    add-int/2addr v1, v0
-
     .line 9
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v1
 
     .line 10
-    .line 11
-    iget v0, p0, Lcom/facebook/rsys/audio/gen/PlaybackVolumeParametersDeprecated;->volume:F
+    iget v0, p0, Lcom/facebook/rsys/audio/gen/PlaybackVolumeParametersDeprecated;->streamType:I
 
+    .line 11
     .line 12
+    add-int/2addr v1, v0
+
     .line 13
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 14
     .line 15
-    .line 16
-    move-result v0
+    iget v0, p0, Lcom/facebook/rsys/audio/gen/PlaybackVolumeParametersDeprecated;->volume:F
 
+    .line 16
     .line 17
-    add-int/2addr v1, v0
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    add-int/2addr v1, v0
+
+    .line 22
     return v1
 .end method
 
@@ -200,7 +208,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -262,13 +270,18 @@
     .line 32
     .line 33
     .line 34
-    invoke-static {v1}, LX/0Ye;->A0X(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const-string/jumbo v0, "}"
 
     .line 35
     .line 36
     .line 37
-    move-result-object v0
+    invoke-static {v0, v1}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
     return-object v0
 .end method

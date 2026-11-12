@@ -1,29 +1,56 @@
 .class public final LX/1Y4;
-.super Ljava/lang/Object;
+.super LX/1gb;
 .source ""
 
-
-# static fields
-.field public static final A00:Ljava/util/concurrent/Executor;
+# interfaces
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1Y5;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I[I)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/1Y3;
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1Y3;-><init>()V
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A3n()LX/1Y8;
+    .locals 3
+
+    .line 0
+    sget-object v2, LX/1V2;->A00:LX/1V2;
+
+    .line 1
+    .line 2
+    const v1, 0x5d5cf356
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, LX/1Y4;->A00:Ljava/util/concurrent/Executor;
+    const v0, 0x52c3571d
 
     .line 6
     .line 7
-    return-void
+    .line 8
+    invoke-virtual {p0, v1, v2, v0}, LX/1gb;->getCachedNullableTypeProviderReinterpret(ILX/1Y6;I)Lcom/facebook/graphservice/tree/TreeJNI;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    check-cast v0, LX/1Y8;
+
+    .line 13
+    .line 14
+    return-object v0
 .end method

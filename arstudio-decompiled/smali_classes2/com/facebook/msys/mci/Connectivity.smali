@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/1Wd;->A00()V
+    invoke-static {}, LX/3hX;->A00()V
 
     .line 1
     .line 2
@@ -44,7 +44,7 @@
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 6
     .line 7
@@ -67,15 +67,15 @@
     throw v0
 .end method
 
-.method public static declared-synchronized getDgwState()I
-    .locals 2
+.method public static declared-synchronized getDgwState(Ljava/lang/String;)I
+    .locals 1
 
     .line 0
-    const-class v1, Lcom/facebook/msys/mci/Connectivity;
+    const-class p0, Lcom/facebook/msys/mci/Connectivity;
 
     .line 1
     .line 2
-    monitor-enter v1
+    monitor-enter p0
 
     .line 3
     :try_start_0
@@ -84,21 +84,26 @@
     .line 4
     .line 5
     .line 6
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
     throw v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
+    .line 11
     :catchall_0
     move-exception v0
 
-    .line 9
-    monitor-exit v1
+    .line 12
+    monitor-exit p0
 
-    .line 10
+    .line 13
     throw v0
 .end method
 
@@ -119,21 +124,26 @@
     .line 4
     .line 5
     .line 6
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
     throw v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
+    .line 11
     :catchall_0
     move-exception v0
 
-    .line 9
+    .line 12
     monitor-exit v1
 
-    .line 10
+    .line 13
     throw v0
 .end method
 
@@ -154,21 +164,26 @@
     .line 4
     .line 5
     .line 6
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
     throw v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
+    .line 11
     :catchall_0
     move-exception v0
 
-    .line 9
+    .line 12
     monitor-exit v1
 
-    .line 10
+    .line 13
     throw v0
 .end method
 

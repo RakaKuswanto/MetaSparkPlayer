@@ -1,29 +1,27 @@
-.class public final LX/1dM;
+.class public final LX/1DM;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/1dN;
+.field public A00:J
 
-.field public final A01:LX/1Nm;
+.field public A01:J
 
-.field public final A02:LX/1Nm;
+.field public final A02:LX/0I5;
 
-.field public final A03:LX/1Nm;
-
-.field public final A04:LX/1Nw;
+.field public final A03:J
 
 
 # direct methods
-.method public constructor <init>(LX/1dN;LX/1Nw;)V
-    .locals 1
+.method public constructor <init>(LX/0I5;J)V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -33,57 +31,103 @@
     .line 5
     .line 6
     .line 7
-    iput-object p2, p0, LX/1dM;->A04:LX/1Nw;
+    iput-object p1, p0, LX/1DM;->A02:LX/0I5;
 
     .line 8
     .line 9
-    iput-object p1, p0, LX/1dM;->A00:LX/1dN;
+    iput-wide p2, p0, LX/1DM;->A03:J
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->A6A:I
+    const-wide/16 v0, 0x0
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    iput-wide v0, p0, LX/1DM;->A00:J
 
     .line 14
     .line 15
-    .line 16
-    move-result-object v0
+    const-wide/16 v0, -0x1
 
+    .line 16
     .line 17
-    iput-object v0, p0, LX/1dM;->A01:LX/1Nm;
+    iput-wide v0, p0, LX/1DM;->A01:J
 
     .line 18
     .line 19
-    invoke-static {}, LX/1Nl;->A07()LX/1Nm;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A00()V
+    .locals 7
+
+    .line 0
+    iget-object v0, p0, LX/1DM;->A02:LX/0I5;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/0I5;->now()J
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-wide v5
+
+    .line 6
+    iget-wide v1, p0, LX/1DM;->A01:J
+
+    .line 7
+    .line 8
+    const-wide/16 v3, 0x0
+
+    .line 9
+    .line 10
+    cmp-long v0, v1, v3
+
+    .line 11
+    .line 12
+    if-ltz v0, :cond_0
+
+    .line 13
+    .line 14
+    sub-long v3, v5, v1
+
+    .line 15
+    .line 16
+    :cond_0
+    iget-wide v1, p0, LX/1DM;->A03:J
+
+    .line 17
+    .line 18
+    cmp-long v0, v3, v1
+
+    .line 19
     .line 20
+    if-lez v0, :cond_1
+
     .line 21
     .line 22
-    move-result-object v0
+    iget-wide v0, p0, LX/1DM;->A00:J
 
     .line 23
-    iput-object v0, p0, LX/1dM;->A02:LX/1Nm;
-
     .line 24
+    add-long/2addr v0, v3
+
     .line 25
-    sget v0, LX/2eq;->A7h:I
+    iput-wide v0, p0, LX/1DM;->A00:J
 
     .line 26
     .line 27
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    :cond_1
+    const-wide/16 v0, -0x1
 
     .line 28
     .line 29
+    iput-wide v0, p0, LX/1DM;->A01:J
+
     .line 30
-    move-result-object v0
-
     .line 31
-    iput-object v0, p0, LX/1dM;->A03:LX/1Nm;
-
-    .line 32
-    .line 33
     return-void
 .end method

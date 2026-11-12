@@ -1,25 +1,30 @@
 .class public final LX/3Jq;
-.super Ljava/lang/Object;
+.super LX/3Ma;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/1Nw;
+.field public final A00:Landroid/content/res/Resources;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>(Landroid/content/res/Resources;LX/3Mb;Ljava/util/concurrent/Executor;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p3, p2, p1}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3Jq;->A00:LX/1Nw;
+    invoke-direct {p0, p2, p3}, LX/3Ma;-><init>(LX/3Mb;Ljava/util/concurrent/Executor;)V
 
     .line 4
     .line 5
+    .line 6
+    iput-object p1, p0, LX/3Jq;->A00:Landroid/content/res/Resources;
+
+    .line 7
+    .line 8
     return-void
 .end method

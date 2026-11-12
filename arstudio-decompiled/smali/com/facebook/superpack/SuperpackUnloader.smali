@@ -52,35 +52,35 @@
 
     .line 17
     .line 18
-    const-string v36, "libcoldstart.so"
+    const-string v9, "libcoldstart.so"
 
     .line 19
     .line 20
-    aput-object v36, v1, v37
+    aput-object v9, v1, v37
 
     .line 21
     .line 22
-    const/16 v35, 0x3
+    const/16 v36, 0x3
 
     .line 23
     .line 24
-    const-string v34, "libdexload.so"
+    const-string v35, "libdexload.so"
 
     .line 25
     .line 26
-    aput-object v34, v1, v35
+    aput-object v35, v1, v36
 
     .line 27
     .line 28
-    const/16 v33, 0x4
+    const/16 v34, 0x4
 
     .line 29
     .line 30
-    const-string v11, "libreliabilitymerged.so"
+    const-string v33, "libreliabilitymerged.so"
 
     .line 31
     .line 32
-    aput-object v11, v1, v33
+    aput-object v33, v1, v34
 
     .line 33
     .line 34
@@ -88,11 +88,11 @@
 
     .line 35
     .line 36
-    const-string v10, "libsigquit.so"
+    const-string v8, "libsigquit.so"
 
     .line 37
     .line 38
-    aput-object v10, v1, v32
+    aput-object v8, v1, v32
 
     .line 39
     .line 40
@@ -148,35 +148,35 @@
 
     .line 65
     .line 66
-    const-string v9, "libfb_mboost.so"
+    const-string v25, "libfb_mboost.so"
 
     .line 67
     .line 68
-    aput-object v9, v1, v26
+    aput-object v25, v1, v26
 
     .line 69
     .line 70
-    const/16 v25, 0xb
+    const/16 v24, 0xb
 
     .line 71
     .line 72
-    const-string v12, "libplthooks.so"
+    const-string v23, "libplthooks.so"
 
     .line 73
     .line 74
-    aput-object v12, v1, v25
+    aput-object v23, v1, v24
 
     .line 75
     .line 76
-    const-string v24, "libfbandroid_native_cppdistract_cppdistract.so"
+    const-string v22, "libfbandroid_native_cppdistract_cppdistract.so"
 
     .line 77
     .line 78
-    const/16 v23, 0xc
+    const/16 v21, 0xc
 
     .line 79
     .line 80
-    aput-object v24, v1, v23
+    aput-object v22, v1, v21
 
     .line 81
     .line 82
@@ -196,11 +196,11 @@
 
     .line 89
     .line 90
-    const-string v22, "libbreakpad_extra.so"
+    const-string v20, "libbreakpad_extra.so"
 
     .line 91
     .line 92
-    aput-object v22, v1, v0
+    aput-object v20, v1, v0
 
     .line 93
     .line 94
@@ -208,11 +208,11 @@
 
     .line 95
     .line 96
-    const-string v21, "libfbandroid_native_sigmuxutils_sigmuxutils.so"
+    const-string v19, "libfbandroid_native_sigmuxutils_sigmuxutils.so"
 
     .line 97
     .line 98
-    aput-object v21, v1, v0
+    aput-object v19, v1, v0
 
     .line 99
     .line 100
@@ -280,11 +280,11 @@
 
     .line 131
     .line 132
-    const-string v20, "libfbandroid_native_museum_museum.so"
+    const-string v18, "libfbandroid_native_museum_museum.so"
 
     .line 133
     .line 134
-    aput-object v20, v1, v0
+    aput-object v18, v1, v0
 
     .line 135
     .line 136
@@ -292,11 +292,11 @@
 
     .line 137
     .line 138
-    const-string v19, "libglog.so"
+    const-string v17, "libglog.so"
 
     .line 139
     .line 140
-    aput-object v19, v1, v0
+    aput-object v17, v1, v0
 
     .line 141
     .line 142
@@ -328,11 +328,11 @@
 
     .line 155
     .line 156
-    const-string v18, "libxplat_third-party_jsoncpp_jsoncppAndroid.so"
+    const-string v16, "libxplat_third-party_jsoncpp_jsoncppAndroid.so"
 
     .line 157
     .line 158
-    aput-object v18, v1, v0
+    aput-object v16, v1, v0
 
     .line 159
     .line 160
@@ -340,11 +340,11 @@
 
     .line 161
     .line 162
-    const-string v17, "libxplat_mobilenetwork_fbdomainsAndroid.so"
+    const-string v15, "libxplat_mobilenetwork_fbdomainsAndroid.so"
 
     .line 163
     .line 164
-    aput-object v17, v1, v0
+    aput-object v15, v1, v0
 
     .line 165
     .line 166
@@ -352,11 +352,11 @@
 
     .line 167
     .line 168
-    const-string v16, "libfmt.so"
+    const-string v14, "libfmt.so"
 
     .line 169
     .line 170
-    aput-object v16, v1, v0
+    aput-object v14, v1, v0
 
     .line 171
     .line 172
@@ -364,11 +364,11 @@
 
     .line 173
     .line 174
-    const-string v15, "libthird-party_boost_boost_contextAndroid.so"
+    const-string v13, "libthird-party_boost_boost_contextAndroid.so"
 
     .line 175
     .line 176
-    aput-object v15, v1, v0
+    aput-object v13, v1, v0
 
     .line 177
     .line 178
@@ -376,11 +376,11 @@
 
     .line 179
     .line 180
-    const-string v14, "libthird-party_boost_boostAndroid.so"
+    const-string v12, "libthird-party_boost_boostAndroid.so"
 
     .line 181
     .line 182
-    aput-object v14, v1, v0
+    aput-object v12, v1, v0
 
     .line 183
     .line 184
@@ -388,11 +388,11 @@
 
     .line 185
     .line 186
-    const-string v13, "liblinkerutils.so"
+    const-string v11, "liblinkerutils.so"
 
     .line 187
     .line 188
-    aput-object v13, v1, v0
+    aput-object v11, v1, v0
 
     .line 189
     .line 190
@@ -400,11 +400,11 @@
 
     .line 191
     .line 192
-    const-string v8, "libmem_alloc_marker.so"
+    const-string v10, "libmem_alloc_marker.so"
 
     .line 193
     .line 194
-    aput-object v8, v1, v0
+    aput-object v10, v1, v0
 
     .line 195
     .line 196
@@ -469,31 +469,31 @@
 
     .line 226
     .line 227
-    aput-object v24, v2, v40
+    aput-object v22, v2, v40
 
     .line 228
     .line 229
-    aput-object v20, v2, v38
+    aput-object v18, v2, v38
 
     .line 230
     .line 231
-    aput-object v19, v2, v37
+    aput-object v17, v2, v37
 
     .line 232
     .line 233
-    aput-object v21, v2, v35
+    aput-object v19, v2, v36
 
     .line 234
     .line 235
-    aput-object v39, v2, v33
+    aput-object v39, v2, v34
 
     .line 236
     .line 237
-    aput-object v34, v2, v32
+    aput-object v35, v2, v32
 
     .line 238
     .line 239
-    aput-object v18, v2, v31
+    aput-object v16, v2, v31
 
     .line 240
     .line 241
@@ -509,19 +509,19 @@
 
     .line 246
     .line 247
-    aput-object v17, v2, v27
+    aput-object v15, v2, v27
 
     .line 248
     .line 249
-    aput-object v16, v2, v26
+    aput-object v14, v2, v26
 
     .line 250
     .line 251
-    aput-object v15, v2, v25
+    aput-object v13, v2, v24
 
     .line 252
     .line 253
-    aput-object v14, v2, v23
+    aput-object v12, v2, v21
 
     .line 254
     .line 255
@@ -529,201 +529,236 @@
 
     .line 256
     .line 257
-    aput-object v13, v2, v0
+    aput-object v11, v2, v0
 
     .line 258
     .line 259
-    invoke-static {v12, v8, v7, v5, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    const/16 v0, 0xe
 
     .line 260
     .line 261
+    aput-object v23, v2, v0
+
     .line 262
-    const/16 v0, 0x12
-
     .line 263
+    const/16 v0, 0xf
+
     .line 264
-    aput-object v36, v2, v0
-
     .line 265
-    .line 266
-    invoke-static {v3, v10, v11, v9, v2}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    aput-object v10, v2, v0
 
+    .line 266
     .line 267
+    const/16 v0, 0x10
+
     .line 268
     .line 269
-    const/16 v1, 0x17
+    aput-object v7, v2, v0
 
     .line 270
     .line 271
-    const-string v0, "libtigonnativeauthedservice.so"
+    const/16 v0, 0x11
 
     .line 272
     .line 273
-    aput-object v0, v2, v1
+    aput-object v5, v2, v0
 
     .line 274
     .line 275
-    const/16 v1, 0x18
+    invoke-static {v9, v3, v8, v2}, LX/001;->A0v(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 276
     .line 277
+    .line 278
+    const/16 v0, 0x15
+
+    .line 279
+    .line 280
+    aput-object v33, v2, v0
+
+    .line 281
+    .line 282
+    const/16 v0, 0x16
+
+    .line 283
+    .line 284
+    aput-object v25, v2, v0
+
+    .line 285
+    .line 286
+    const/16 v1, 0x17
+
+    .line 287
+    .line 288
+    const-string v0, "libtigonnativeauthedservice.so"
+
+    .line 289
+    .line 290
+    aput-object v0, v2, v1
+
+    .line 291
+    .line 292
+    const/16 v1, 0x18
+
+    .line 293
+    .line 294
     const-string v0, "libimagepipeline.so"
 
-    .line 278
-    .line 279
+    .line 295
+    .line 296
     aput-object v0, v2, v1
 
-    .line 280
-    .line 281
+    .line 297
+    .line 298
     const/16 v1, 0x19
 
-    .line 282
-    .line 283
+    .line 299
+    .line 300
     const-string v0, "libxplat_arfx_versioning_sdk_version_constants_constantsAndroid.so"
 
-    .line 284
-    .line 285
+    .line 301
+    .line 302
     aput-object v0, v2, v1
 
-    .line 286
-    .line 287
+    .line 303
+    .line 304
     const/16 v1, 0x1a
 
-    .line 288
-    .line 289
+    .line 305
+    .line 306
     const-string v0, "libard-upload.so"
 
-    .line 290
-    .line 291
+    .line 307
+    .line 308
     aput-object v0, v2, v1
 
-    .line 292
-    .line 293
+    .line 309
+    .line 310
     const/16 v1, 0x1b
 
-    .line 294
-    .line 295
+    .line 311
+    .line 312
     const-string v0, "libIGL.so"
 
-    .line 296
-    .line 297
+    .line 313
+    .line 314
     aput-object v0, v2, v1
 
-    .line 298
-    .line 299
+    .line 315
+    .line 316
     const/16 v1, 0x1c
 
-    .line 300
-    .line 301
+    .line 317
+    .line 318
     const-string v0, "libimagesmerged.so"
 
-    .line 302
-    .line 303
+    .line 319
+    .line 320
     aput-object v0, v2, v1
 
-    .line 304
-    .line 305
+    .line 321
+    .line 322
     const/16 v1, 0x1d
 
-    .line 306
-    .line 307
+    .line 323
+    .line 324
     const-string v0, "libthreadutils-jni.so"
 
-    .line 308
-    .line 309
+    .line 325
+    .line 326
     aput-object v0, v2, v1
 
-    .line 310
-    .line 311
+    .line 327
+    .line 328
     const/16 v1, 0x1e
 
-    .line 312
-    .line 313
+    .line 329
+    .line 330
     const-string v0, "libclasstracing.so"
 
-    .line 314
-    .line 315
+    .line 331
+    .line 332
     aput-object v0, v2, v1
 
-    .line 316
-    .line 317
+    .line 333
+    .line 334
     const/16 v1, 0x1f
 
-    .line 318
-    .line 319
+    .line 335
+    .line 336
     const-string v0, "libunwindstack_stream.so"
 
-    .line 320
-    .line 321
-    aput-object v0, v2, v1
-
-    .line 322
-    .line 323
-    const/16 v0, 0x20
-
-    .line 324
-    .line 325
-    aput-object v22, v2, v0
-
-    .line 326
-    .line 327
-    const-string v0, "libfbnightwatch.so"
-
-    .line 328
-    .line 329
-    aput-object v0, v2, v6
-
-    .line 330
-    .line 331
-    const-string v0, "libreliablemediamonitor.so"
-
-    .line 332
-    .line 333
-    aput-object v0, v2, v4
-
-    .line 334
-    .line 335
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    .line 336
     .line 337
     .line 338
-    move-result-object v1
+    aput-object v0, v2, v1
 
     .line 339
-    new-instance v0, Ljava/util/HashSet;
-
     .line 340
-    .line 341
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    const/16 v0, 0x20
 
+    .line 341
     .line 342
+    aput-object v20, v2, v0
+
     .line 343
     .line 344
-    sput-object v0, Lcom/facebook/superpack/SuperpackUnloader;->COLD_START_LIBS:Ljava/util/Set;
+    const-string v0, "libfbnightwatch.so"
 
     .line 345
     .line 346
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    aput-object v0, v2, v6
 
     .line 347
     .line 348
-    .line 349
-    move-result-object v0
+    const-string v0, "libreliablemediamonitor.so"
 
+    .line 349
     .line 350
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
+    aput-object v0, v2, v4
 
     .line 351
     .line 352
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
     .line 353
+    .line 354
+    .line 355
+    move-result-object v1
+
+    .line 356
+    new-instance v0, Ljava/util/HashSet;
+
+    .line 357
+    .line 358
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    .line 359
+    .line 360
+    .line 361
+    sput-object v0, Lcom/facebook/superpack/SuperpackUnloader;->COLD_START_LIBS:Ljava/util/Set;
+
+    .line 362
+    .line 363
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 364
+    .line 365
+    .line 366
     move-result-object v0
 
-    .line 354
+    .line 367
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
+
+    .line 368
+    .line 369
+    .line 370
+    move-result-object v0
+
+    .line 371
     sput-object v0, Lcom/facebook/superpack/SuperpackUnloader;->sInMemoryLibraries:Ljava/util/List;
 
-    .line 355
-    .line 356
+    .line 372
+    .line 373
     return-void
 .end method
 

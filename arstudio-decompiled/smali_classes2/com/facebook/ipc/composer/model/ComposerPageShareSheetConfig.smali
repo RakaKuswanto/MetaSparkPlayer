@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/13Q;
 
 
 # annotations
@@ -38,11 +37,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x3d
+    const/16 v0, 0x5b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
 
     .line 3
     .line 4
@@ -66,7 +65,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yd;->A0K(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X1;->A0M(Landroid/os/Parcel;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 4
     .line 5
@@ -89,7 +88,7 @@
     const/4 v0, 0x1
 
     .line 14
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 15
     .line 16
@@ -101,7 +100,7 @@
 
     .line 19
     .line 20
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 21
     .line 22
@@ -113,7 +112,7 @@
 
     .line 25
     .line 26
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 27
     .line 28
@@ -145,9 +144,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "configOption"
+    const-string/jumbo v0, "configOption"
 
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;->A01:Ljava/lang/String;
 
@@ -206,7 +205,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -275,14 +274,14 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
     .line 0
     iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;->A01:Ljava/lang/String;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -294,49 +293,70 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 11
-    move-result v1
-
     .line 12
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;->A03:Z
-
     .line 13
-    .line 14
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v1
-
-    .line 18
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;->A04:Z
-
-    .line 19
-    .line 20
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
-
-    .line 21
-    .line 22
-    .line 23
     move-result v0
 
+    .line 14
+    add-int/2addr v1, v0
+
+    .line 15
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;->A03:Z
+
+    .line 16
+    .line 17
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 18
+    .line 19
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    add-int/2addr v1, v0
+
     .line 24
-    iget v1, p0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;->A00:I
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;->A04:Z
 
     .line 25
     .line 26
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v2, v1, 0x1f
 
     .line 27
     .line 28
-    add-int/2addr v0, v1
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 29
+    .line 30
+    .line 31
+    move-result v0
+
+    .line 32
+    add-int/2addr v2, v0
+
+    .line 33
+    iget v1, p0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;->A00:I
+
+    .line 34
+    .line 35
+    mul-int/lit8 v0, v2, 0x1f
+
+    .line 36
+    .line 37
+    add-int/2addr v0, v1
+
+    .line 38
     return v0
 .end method
 

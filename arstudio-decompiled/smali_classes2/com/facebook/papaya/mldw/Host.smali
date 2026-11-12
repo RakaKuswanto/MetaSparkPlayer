@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -50,6 +50,9 @@
 .method private native nativeReadFeatures(Lcom/google/common/collect/ImmutableMap;Ljava/util/Set;)Lcom/google/common/util/concurrent/SettableFuture;
 .end method
 
+.method private native nativeReadFeatures(Ljava/util/List;)Lcom/google/common/util/concurrent/SettableFuture;
+.end method
+
 .method private native nativeRegisterFeatures(Ljava/lang/String;I)Lcom/google/common/util/concurrent/SettableFuture;
 .end method
 
@@ -58,11 +61,11 @@
 
 
 # virtual methods
-.method public readFeatures(Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableSet;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public readFeatures(Lcom/google/common/collect/ImmutableList;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, Lcom/facebook/papaya/mldw/Host;->nativeReadFeatures(Lcom/google/common/collect/ImmutableMap;Ljava/util/Set;)Lcom/google/common/util/concurrent/SettableFuture;
+    invoke-direct {p0, p1}, Lcom/facebook/papaya/mldw/Host;->nativeReadFeatures(Ljava/util/List;)Lcom/google/common/util/concurrent/SettableFuture;
 
     .line 1
     .line 2
@@ -70,6 +73,21 @@
     move-result-object v0
 
     .line 4
+    return-object v0
+.end method
+
+.method public readFeatures(Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableSet;)Lcom/google/common/util/concurrent/ListenableFuture;
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0, p1, p2}, Lcom/facebook/papaya/mldw/Host;->nativeReadFeatures(Lcom/google/common/collect/ImmutableMap;Ljava/util/Set;)Lcom/google/common/util/concurrent/SettableFuture;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
     return-object v0
 .end method
 

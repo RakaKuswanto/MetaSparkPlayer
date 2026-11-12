@@ -1,101 +1,74 @@
 .class public final LX/2KP;
-.super Ljava/lang/Object;
+.super LX/26h;
 .source ""
+
+# interfaces
+.implements Lcom/google/common/util/concurrent/ListenableFuture;
+
+
+# instance fields
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public static final A00(LX/2Kr;II)V
-    .locals 5
+.method public constructor <init>()V
+    .locals 4
 
     .line 0
-    const/4 v0, 0x2
+    invoke-direct {p0}, LX/26h;-><init>()V
 
     .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
-    .line 4
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    sget v0, LX/2I6;->AC4:I
 
+    .line 4
     .line 5
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 6
     .line 7
-    move-result-object v4
-
     .line 8
-    xor-int/lit8 v3, p1, -0x1
+    move-result-object v3
 
     .line 9
-    .line 10
-    and-int/2addr v3, p2
+    sget v0, LX/2I6;->A2c:I
 
+    .line 10
     .line 11
-    const/4 v2, 0x0
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 12
-    :goto_0
-    add-int/lit8 v1, v2, 0x1
-
     .line 13
     .line 14
-    and-int/lit8 v0, v3, 0x1
-
-    .line 15
-    .line 16
-    if-eqz v0, :cond_0
-
-    .line 17
-    .line 18
-    invoke-interface {p0, v2}, LX/2Kr;->AEx(I)Ljava/lang/String;
-
-    .line 19
-    .line 20
-    .line 21
     move-result-object v0
 
+    .line 15
+    new-instance v2, LX/2KU;
+
+    .line 16
+    .line 17
+    invoke-direct {v2, p0, v0}, LX/2KU;-><init>(LX/2KP;LX/0RP;)V
+
+    .line 18
+    .line 19
+    .line 20
+    sget-object v1, LX/0XB;->INSTANCE:LX/0XB;
+
+    .line 21
     .line 22
-    invoke-virtual {v4, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    new-instance v0, LX/2KQ;
 
     .line 23
     .line 24
-    .line 25
-    :cond_0
-    ushr-int/lit8 v3, v3, 0x1
+    invoke-direct {v0, v3, v2, v1}, LX/2KQ;-><init>(LX/0RP;Lcom/google/common/base/Function;Ljava/util/concurrent/Executor;)V
 
+    .line 25
     .line 26
     .line 27
-    const/16 v0, 0x20
+    iput-object v0, p0, LX/2KP;->A00:LX/0RP;
 
     .line 28
     .line 29
-    if-ge v1, v0, :cond_1
-
-    .line 30
-    .line 31
-    move v2, v1
-
-    .line 32
-    goto :goto_0
-
-    .line 33
-    :cond_1
-    invoke-interface {p0}, LX/2Kr;->AM3()Ljava/lang/String;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v1
-
-    .line 37
-    new-instance v0, LX/2Jz;
-
-    .line 38
-    .line 39
-    invoke-direct {v0, v1, v4}, LX/2Jz;-><init>(Ljava/lang/String;Ljava/util/List;)V
-
-    .line 40
-    .line 41
-    .line 42
-    throw v0
+    return-void
 .end method

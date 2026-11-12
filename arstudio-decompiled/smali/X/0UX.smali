@@ -1,242 +1,179 @@
-.class public final synthetic LX/0UX;
-.super Ljava/lang/Object;
+.class public final LX/0UX;
+.super Landroid/content/BroadcastReceiver;
 .source ""
-
-# interfaces
-.implements LX/04n;
 
 
 # instance fields
-.field public final synthetic A00:Landroid/view/View;
+.field public final synthetic A00:Lcom/facebook/rti/common/time/RealtimeSinceBootClock;
+
+.field public final synthetic A01:LX/0UW;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Lcom/facebook/rti/common/time/RealtimeSinceBootClock;LX/0UW;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    iput-object p2, p0, LX/0UX;->A01:LX/0UW;
 
-    iput-object p1, p0, LX/0UX;->A00:Landroid/view/View;
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/0UX;->A00:Lcom/facebook/rti/common/time/RealtimeSinceBootClock;
 
+    .line 3
+    .line 4
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final AW8(Landroid/os/Bundle;LX/04q;I)Z
-    .locals 7
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
     .line 0
-    iget-object v5, p0, LX/0UX;->A00:Landroid/view/View;
+    if-eqz p2, :cond_0
 
     .line 1
     .line 2
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     .line 3
     .line 4
-    const/4 v6, 0x0
-
     .line 5
-    const/16 v0, 0x19
+    move-result-object v0
 
     .line 6
+    const-string v2, "android.intent.action.SCREEN_ON"
+
     .line 7
-    if-lt v1, v0, :cond_0
-
     .line 8
-    .line 9
-    and-int/lit8 v0, p3, 0x1
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 9
     .line 10
     .line 11
-    if-eqz v0, :cond_0
+    move-result v0
 
     .line 12
+    if-nez v0, :cond_1
+
     .line 13
-    :try_start_0
-    iget-object v0, p2, LX/04q;->A00:LX/04p;
-
     .line 14
-    .line 15
-    invoke-interface {v0}, LX/04p;->Ajq()V
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
+    .line 15
     .line 16
     .line 17
+    move-result-object v1
+
     .line 18
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v0, "android.intent.action.SCREEN_OFF"
 
     .line 19
-    :catch_0
-    move-exception v2
-
     .line 20
-    const-string v1, "InputConnectionCompat"
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 21
     .line 22
-    const-string v0, "Can\'t insert content from IME; requestPermission() failed"
-
     .line 23
+    move-result v0
+
     .line 24
-    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    if-nez v0, :cond_1
 
     .line 25
     .line 26
+    :cond_0
+    return-void
+
     .line 27
-    return v6
+    :cond_1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     .line 28
-    :goto_0
-    invoke-interface {v0}, LX/04p;->AH7()Ljava/lang/Object;
-
     .line 29
     .line 30
+    move-result-object v0
+
     .line 31
-    move-result-object v1
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 32
-    check-cast v1, Landroid/view/inputmethod/InputContentInfo;
-
     .line 33
     .line 34
-    if-nez p1, :cond_2
+    move-result v4
 
     .line 35
-    .line 36
-    new-instance p1, Landroid/os/Bundle;
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 36
     .line 37
     .line 38
-    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
+    move-result-object v1
 
     .line 39
+    iget-object v3, p0, LX/0UX;->A01:LX/0UW;
+
     .line 40
     .line 41
-    :goto_1
-    const-string v0, "androidx.core.view.extra.INPUT_CONTENT_INFO"
+    iget-object v0, v3, LX/0UW;->A05:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 42
     .line 43
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 44
     .line 45
     .line 46
-    :cond_0
-    iget-object v4, p2, LX/04q;->A00:LX/04p;
+    move-result-object v0
 
     .line 47
-    .line 48
-    invoke-interface {v4}, LX/04p;->AEX()Landroid/content/ClipDescription;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
+    .line 48
     .line 49
     .line 50
+    move-result v0
+
     .line 51
-    move-result-object v3
+    if-nez v0, :cond_0
 
     .line 52
-    invoke-interface {v4}, LX/04p;->ADj()Landroid/net/Uri;
-
     .line 53
+    iget-object v2, v3, LX/0UW;->A04:Ljava/util/concurrent/atomic/AtomicLong;
+
     .line 54
     .line 55
-    move-result-object v1
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     .line 56
-    new-instance v0, Landroid/content/ClipData$Item;
-
     .line 57
     .line 58
-    invoke-direct {v0, v1}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
+    move-result-wide v0
 
     .line 59
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
     .line 60
     .line 61
-    new-instance v2, Landroid/content/ClipData;
-
     .line 62
-    .line 63
-    invoke-direct {v2, v3, v0}, Landroid/content/ClipData;-><init>(Landroid/content/ClipDescription;Landroid/content/ClipData$Item;)V
+    iget-object v0, v3, LX/0UW;->A00:LX/0US;
 
+    .line 63
     .line 64
+    if-eqz v0, :cond_0
+
     .line 65
     .line 66
-    const/4 v1, 0x2
+    invoke-interface {v0, v4}, LX/0US;->ASM(Z)V
 
     .line 67
-    new-instance v0, LX/01w;
-
     .line 68
     .line 69
-    invoke-direct {v0, v2, v1}, LX/01w;-><init>(Landroid/content/ClipData;I)V
-
-    .line 70
-    .line 71
-    .line 72
-    invoke-interface {v4}, LX/04p;->AHv()Landroid/net/Uri;
-
-    .line 73
-    .line 74
-    .line 75
-    move-result-object v1
-
-    .line 76
-    iget-object v0, v0, LX/01w;->A00:LX/01x;
-
-    .line 77
-    .line 78
-    invoke-interface {v0, v1}, LX/01x;->AmD(Landroid/net/Uri;)V
-
-    .line 79
-    .line 80
-    .line 81
-    invoke-interface {v0, p1}, LX/01x;->setExtras(Landroid/os/Bundle;)V
-
-    .line 82
-    .line 83
-    .line 84
-    invoke-interface {v0}, LX/01x;->A6G()LX/01z;
-
-    .line 85
-    .line 86
-    .line 87
-    move-result-object v0
-
-    .line 88
-    invoke-static {v5, v0}, LX/03G;->A0C(Landroid/view/View;LX/01z;)LX/01z;
-
-    .line 89
-    .line 90
-    .line 91
-    move-result-object v0
-
-    .line 92
-    if-nez v0, :cond_1
-
-    .line 93
-    .line 94
-    const/4 v6, 0x1
-
-    .line 95
-    :cond_1
-    return v6
-
-    .line 96
-    :cond_2
-    new-instance v0, Landroid/os/Bundle;
-
-    .line 97
-    .line 98
-    invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    .line 99
-    .line 100
-    .line 101
-    move-object p1, v0
-
-    .line 102
-    goto :goto_1
+    return-void
 .end method

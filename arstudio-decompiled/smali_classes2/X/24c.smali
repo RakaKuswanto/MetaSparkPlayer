@@ -1,237 +1,553 @@
-.class public final LX/24c;
-.super Ljava/lang/Object;
+.class public final LX/24C;
+.super LX/248;
 .source ""
 
+# interfaces
+.implements Ljava/util/NavigableSet;
 
-# instance fields
-.field public A00:Landroid/os/Handler;
 
-.field public final A01:Ljava/util/Map;
-
-.field public final synthetic A02:LX/2xZ;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<E:",
+        "Ljava/lang/Object;",
+        ">",
+        "LX/248<",
+        "TE;>;",
+        "Ljava/util/NavigableSet<",
+        "TE;>;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(LX/2xZ;)V
-    .locals 1
-
-    .line 0
-    iput-object p1, p0, LX/24c;->A02:LX/2xZ;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/24c;->A01:Ljava/util/Map;
-
-    .line 10
-    .line 11
-    return-void
-.end method
-
-.method public static A00(LX/0Na;)LX/24c;
-    .locals 1
-
-    .line 0
-    invoke-interface {p0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    check-cast p0, LX/1mT;
-
-    .line 5
-    .line 6
-    check-cast p0, LX/2xZ;
-
-    .line 7
-    .line 8
-    new-instance v0, LX/24c;
-
-    .line 9
-    .line 10
-    invoke-direct {v0, p0}, LX/24c;-><init>(LX/2xZ;)V
-
-    .line 11
-    .line 12
-    .line 13
-    return-object v0
-.end method
-
-.method public static A01(LX/24c;)V
+.method public constructor <init>(LX/24D;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "multiset"
+        }
+    .end annotation
 
     .line 0
-    invoke-virtual {p0}, LX/24c;->A02()LX/2xa;
+    invoke-direct {p0, p1}, LX/248;-><init>(LX/24D;)V
 
     .line 1
     .line 2
     .line 3
-    move-result-object p0
-
-    .line 4
-    invoke-virtual {p0}, LX/2xa;->A00()V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized A02()LX/2xa;
-    .locals 4
+.method public final ceiling(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
 
     .line 0
-    monitor-enter p0
+    iget-object v1, p0, LX/248;->A00:LX/24D;
 
     .line 1
-    :try_start_0
-    iget-object v3, p0, LX/24c;->A02:LX/2xZ;
-
     .line 2
+    sget-object v0, Lcom/google/common/collect/BoundType;->CLOSED:Lcom/google/common/collect/BoundType;
+
     .line 3
-    iget-object v1, p0, LX/24c;->A01:Ljava/util/Map;
-
     .line 4
-    .line 5
-    iget-object v0, p0, LX/24c;->A00:Landroid/os/Handler;
+    invoke-interface {v1, v0, p1}, LX/24D;->AoN(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/24D;
 
+    .line 5
     .line 6
     .line 7
-    new-instance v2, LX/2xa;
+    move-result-object v0
 
     .line 8
-    .line 9
-    invoke-direct {v2, v0, v3, v1}, LX/2xa;-><init>(Landroid/os/Handler;LX/2xZ;Ljava/util/Map;)V
+    invoke-interface {v0}, LX/24D;->A94()LX/22t;
 
+    .line 9
     .line 10
     .line 11
+    move-result-object v0
+
     .line 12
-    invoke-static {v1}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
+    if-nez v0, :cond_0
 
     .line 13
     .line 14
+    const/4 v0, 0x0
+
     .line 15
-    move-result-object v1
+    return-object v0
 
     .line 16
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    :cond_0
+    invoke-virtual {v0}, LX/22t;->A01()Ljava/lang/Object;
 
     .line 17
     .line 18
     .line 19
-    move-result v0
+    move-result-object v0
 
     .line 20
-    if-eqz v0, :cond_0
-
-    .line 21
-    .line 22
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 23
-    .line 24
-    .line 25
-    goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 26
-    :cond_0
-    monitor-exit p0
-
-    .line 27
-    return-object v2
-
-    .line 28
-    :catchall_0
-    move-exception v0
-
-    .line 29
-    monitor-exit p0
-
-    .line 30
-    throw v0
+    return-object v0
 .end method
 
-.method public final declared-synchronized A03(Landroid/os/Handler;)V
+.method public final descendingIterator()Ljava/util/Iterator;
     .locals 1
 
     .line 0
-    monitor-enter p0
+    invoke-virtual {p0}, LX/24C;->descendingSet()Ljava/util/NavigableSet;
 
     .line 1
-    :try_start_0
-    iput-object p1, p0, LX/24c;->A00:Landroid/os/Handler;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 2
     .line 3
-    monitor-exit p0
+    move-result-object v0
 
     .line 4
-    return-void
+    invoke-interface {v0}, Ljava/util/NavigableSet;->iterator()Ljava/util/Iterator;
 
     .line 5
-    :catchall_0
-    move-exception v0
-
     .line 6
-    monitor-exit p0
-
     .line 7
-    throw v0
-.end method
-
-.method public final declared-synchronized A04(LX/05i;Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, LX/24c;->A01:Ljava/util/Map;
-
-    .line 2
-    .line 3
-    invoke-interface {v0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    .line 5
-    .line 6
-    monitor-exit p0
-
-    .line 7
-    return-void
+    move-result-object v0
 
     .line 8
-    :catchall_0
-    move-exception v0
+    return-object v0
+.end method
+
+.method public final descendingSet()Ljava/util/NavigableSet;
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/24D;->A7H()LX/24D;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    new-instance v0, LX/24C;
+
+    .line 7
+    .line 8
+    invoke-direct {v0, v1}, LX/24C;-><init>(LX/24D;)V
 
     .line 9
-    monitor-exit p0
+    .line 10
+    .line 11
+    return-object v0
+.end method
+
+.method public final floor(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v1, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    sget-object v0, Lcom/google/common/collect/BoundType;->CLOSED:Lcom/google/common/collect/BoundType;
+
+    .line 3
+    .line 4
+    invoke-interface {v1, v0, p1}, LX/24D;->ANV(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/24D;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v0}, LX/24D;->AQY()LX/22t;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    return-object v0
+
+    .line 16
+    :cond_0
+    invoke-virtual {v0}, LX/22t;->A01()Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    return-object v0
+.end method
+
+.method public final headSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "toElement",
+            "inclusive"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v1, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    invoke-static {p2}, Lcom/google/common/collect/BoundType;->forBoolean(Z)Lcom/google/common/collect/BoundType;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-interface {v1, v0, p1}, LX/24D;->ANV(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/24D;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
 
     .line 10
-    throw v0
+    new-instance v0, LX/24C;
+
+    .line 11
+    .line 12
+    invoke-direct {v0, v1}, LX/24C;-><init>(LX/24D;)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-object v0
+.end method
+
+.method public final higher(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v1, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    sget-object v0, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
+
+    .line 3
+    .line 4
+    invoke-interface {v1, v0, p1}, LX/24D;->AoN(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/24D;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v0}, LX/24D;->A94()LX/22t;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    return-object v0
+
+    .line 16
+    :cond_0
+    invoke-virtual {v0}, LX/22t;->A01()Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    return-object v0
+.end method
+
+.method public final lower(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v1, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    sget-object v0, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
+
+    .line 3
+    .line 4
+    invoke-interface {v1, v0, p1}, LX/24D;->ANV(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/24D;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v0}, LX/24D;->AQY()LX/22t;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    return-object v0
+
+    .line 16
+    :cond_0
+    invoke-virtual {v0}, LX/22t;->A01()Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    return-object v0
+.end method
+
+.method public final pollFirst()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/24D;->AeL()LX/22t;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    return-object v0
+
+    .line 10
+    :cond_0
+    invoke-virtual {v0}, LX/22t;->A01()Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+.end method
+
+.method public final pollLast()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/24D;->AeM()LX/22t;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    return-object v0
+
+    .line 10
+    :cond_0
+    invoke-virtual {v0}, LX/22t;->A01()Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+.end method
+
+.method public final subSet(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableSet;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "fromElement",
+            "fromInclusive",
+            "toElement",
+            "toInclusive"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v2, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    invoke-static {p2}, Lcom/google/common/collect/BoundType;->forBoolean(Z)Lcom/google/common/collect/BoundType;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    invoke-static {p4}, Lcom/google/common/collect/BoundType;->forBoolean(Z)Lcom/google/common/collect/BoundType;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-interface {v2, v1, v0, p1, p3}, LX/24D;->Ao3(Lcom/google/common/collect/BoundType;Lcom/google/common/collect/BoundType;Ljava/lang/Object;Ljava/lang/Object;)LX/24D;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v1
+
+    .line 14
+    new-instance v0, LX/24C;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v1}, LX/24C;-><init>(LX/24D;)V
+
+    .line 17
+    .line 18
+    .line 19
+    return-object v0
+.end method
+
+.method public final tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "fromElement",
+            "inclusive"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v1, p0, LX/248;->A00:LX/24D;
+
+    .line 1
+    .line 2
+    invoke-static {p2}, Lcom/google/common/collect/BoundType;->forBoolean(Z)Lcom/google/common/collect/BoundType;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-interface {v1, v0, p1}, LX/24D;->AoN(Lcom/google/common/collect/BoundType;Ljava/lang/Object;)LX/24D;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
+    .line 10
+    new-instance v0, LX/24C;
+
+    .line 11
+    .line 12
+    invoke-direct {v0, v1}, LX/24C;-><init>(LX/24D;)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-object v0
 .end method

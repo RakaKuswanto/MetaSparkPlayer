@@ -3,26 +3,30 @@
 .source ""
 
 # interfaces
-.implements LX/45i;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$20"
 
 
 # instance fields
-.field public final A00:Ljava/util/Deque;
+.field public final synthetic A00:LX/3wv;
 
-.field public final A01:Ljava/util/concurrent/Executor;
+.field public final synthetic A01:LX/3v7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 1
+.method public constructor <init>(LX/3wv;LX/3v7;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    iput-object p1, p0, LX/3x9;->A00:LX/3wv;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    iput-object p2, p0, LX/3x9;->A01:LX/3v7;
+
     .line 3
     .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -30,110 +34,60 @@
     .line 5
     .line 6
     .line 7
-    iput-object p1, p0, LX/3x9;->A01:Ljava/util/concurrent/Executor;
-
-    .line 8
-    .line 9
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    .line 10
-    .line 11
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    .line 12
-    .line 13
-    .line 14
-    iput-object v0, p0, LX/3x9;->A00:Ljava/util/Deque;
-
-    .line 15
-    .line 16
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized A5K(Ljava/lang/Runnable;)V
-    .locals 1
+.method public final run()V
+    .locals 3
 
     .line 0
-    monitor-enter p0
+    iget-object v0, p0, LX/3x9;->A00:LX/3wv;
 
     .line 1
-    :try_start_0
-    const/4 v0, 0x0
-
     .line 2
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
 
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, LX/3x9;->A01:Ljava/util/concurrent/Executor;
+    move-result-object v2
 
     .line 6
-    .line 7
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 7
     .line 8
     .line 9
+    move-result v0
+
     .line 10
-    monitor-exit p0
+    if-eqz v0, :cond_0
 
     .line 11
-    return-void
-
     .line 12
-    :catchall_0
-    move-exception v0
+    invoke-static {v2}, LX/0X6;->A0X(Ljava/util/Iterator;)LX/3xA;
 
     .line 13
-    monitor-exit p0
-
     .line 14
-    throw v0
-.end method
+    .line 15
+    move-result-object v1
 
-.method public final declared-synchronized Aiu(Ljava/lang/Runnable;)V
-    .locals 1
+    .line 16
+    iget-object v0, p0, LX/3x9;->A01:LX/3v7;
 
-    .line 0
-    monitor-enter p0
+    .line 17
+    .line 18
+    invoke-interface {v1, v0}, LX/3xA;->Adh(LX/3v7;)V
 
-    .line 1
-    :try_start_0
-    const/4 v0, 0x0
+    .line 19
+    .line 20
+    .line 21
+    goto :goto_0
 
-    .line 2
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 3
-    .line 4
-    .line 5
-    iget-object v0, p0, LX/3x9;->A00:Ljava/util/Deque;
-
-    .line 6
-    .line 7
-    invoke-interface {v0, p1}, Ljava/util/Deque;->remove(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 8
-    .line 9
-    .line 10
-    monitor-exit p0
-
-    .line 11
+    .line 22
+    :cond_0
     return-void
-
-    .line 12
-    :catchall_0
-    move-exception v0
-
-    .line 13
-    monitor-exit p0
-
-    .line 14
-    throw v0
 .end method

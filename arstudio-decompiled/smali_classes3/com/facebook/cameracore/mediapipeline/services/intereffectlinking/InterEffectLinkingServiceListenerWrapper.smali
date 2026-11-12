@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public final mListener:LX/5WF;
+.field public final mListener:LX/6BD;
 
 .field public final mUIHandler:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(LX/5WF;)V
+.method public constructor <init>(LX/6BD;)V
     .locals 1
 
     .line 0
@@ -19,7 +19,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+    invoke-static {}, LX/0X2;->A0H()Landroid/os/Handler;
 
     .line 4
     .line 5
@@ -31,14 +31,14 @@
 
     .line 8
     .line 9
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/intereffectlinking/InterEffectLinkingServiceListenerWrapper;->mListener:LX/5WF;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/intereffectlinking/InterEffectLinkingServiceListenerWrapper;->mListener:LX/6BD;
 
     .line 10
     .line 11
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/services/intereffectlinking/InterEffectLinkingServiceListenerWrapper;)LX/5WF;
+.method public static synthetic access$000(Lcom/facebook/cameracore/mediapipeline/services/intereffectlinking/InterEffectLinkingServiceListenerWrapper;)LX/6BD;
     .locals 0
 
     .line 0

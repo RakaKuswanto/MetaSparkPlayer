@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5UU;
+.field public static final Companion:LX/6AO;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5UU;
+    new-instance v0, LX/6AO;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5UU;-><init>()V
+    invoke-direct {v0}, LX/6AO;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceConfigurationHybrid;->Companion:LX/5UU;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceConfigurationHybrid;->Companion:LX/6AO;
 
     .line 6
     .line 7
@@ -39,12 +39,12 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/multipeer/interfaces/MultipeerServiceConfiguration;->mDelegate:LX/5UV;
+    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/multipeer/interfaces/MultipeerServiceConfiguration;->mDelegate:LX/6BB;
 
     .line 5
     .line 6
@@ -52,7 +52,7 @@
 
     .line 7
     .line 8
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;-><init>(LX/5UV;)V
+    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceDelegateBridge;-><init>(LX/6BB;)V
 
     .line 9
     .line 10
@@ -65,20 +65,15 @@
     move-result-object v0
 
     .line 15
-    invoke-static {v0}, LX/0PS;->A07(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;-><init>(Lcom/facebook/jni/HybridData;)V
 
     .line 16
     .line 17
     .line 18
-    invoke-direct {p0, v0}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/ServiceConfiguration;-><init>(Lcom/facebook/jni/HybridData;)V
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceConfigurationHybrid;->configuration:Lcom/facebook/cameracore/mediapipeline/services/multipeer/interfaces/MultipeerServiceConfiguration;
 
     .line 19
     .line 20
-    .line 21
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/multipeer/implementation/MultipeerServiceConfigurationHybrid;->configuration:Lcom/facebook/cameracore/mediapipeline/services/multipeer/interfaces/MultipeerServiceConfiguration;
-
-    .line 22
-    .line 23
     return-void
 .end method
 

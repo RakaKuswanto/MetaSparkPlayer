@@ -30,260 +30,350 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 15
+.method public static synthetic $values()[Lcom/facebook/common/networkreachability/NetworkState;
+    .locals 3
 
     .line 0
-    const-string v1, "NONE"
+    const/16 v0, 0x9
 
     .line 1
     .line 2
-    const/4 v13, 0x0
+    new-array v2, v0, [Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 3
-    const/4 v0, -0x1
-
     .line 4
-    new-instance v12, Lcom/facebook/common/networkreachability/NetworkState;
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->NONE:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 5
     .line 6
-    invoke-direct {v12, v1, v13, v0}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->UNKNOWN:Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    aput-object v1, v2, v0
+
+    .line 13
+    .line 14
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->CELL_UNKNOWN:Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 15
+    .line 16
+    const/4 v0, 0x2
+
+    .line 17
+    aput-object v1, v2, v0
+
+    .line 18
+    .line 19
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->CELL_2G:Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 20
+    .line 21
+    const/4 v0, 0x3
+
+    .line 22
+    aput-object v1, v2, v0
+
+    .line 23
+    .line 24
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->CELL_3G:Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 25
+    .line 26
+    const/4 v0, 0x4
+
+    .line 27
+    aput-object v1, v2, v0
+
+    .line 28
+    .line 29
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->CELL_3G_HSPAP:Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 30
+    .line 31
+    const/4 v0, 0x5
+
+    .line 32
+    aput-object v1, v2, v0
+
+    .line 33
+    .line 34
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->CELL_4G:Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 35
+    .line 36
+    const/4 v0, 0x6
+
+    .line 37
+    aput-object v1, v2, v0
+
+    .line 38
+    .line 39
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->CELL_5G:Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 40
+    .line 41
+    const/4 v0, 0x7
+
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
+    .line 44
+    sget-object v1, Lcom/facebook/common/networkreachability/NetworkState;->WIFI:Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 45
+    .line 46
+    const/16 v0, 0x8
+
+    .line 47
+    .line 48
+    aput-object v1, v2, v0
+
+    .line 49
+    .line 50
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v3, "NONE"
+
+    .line 1
+    .line 2
+    const/4 v2, 0x0
+
+    .line 3
+    const/4 v1, -0x1
+
+    .line 4
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
 
     .line 7
     .line 8
     .line 9
-    sput-object v12, Lcom/facebook/common/networkreachability/NetworkState;->NONE:Lcom/facebook/common/networkreachability/NetworkState;
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->NONE:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 10
     .line 11
-    const-string v0, "UNKNOWN"
+    const-string v2, "UNKNOWN"
 
     .line 12
     .line 13
-    const/4 v11, 0x1
+    const/4 v1, 0x1
 
     .line 14
-    new-instance v10, Lcom/facebook/common/networkreachability/NetworkState;
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 15
     .line 16
-    invoke-direct {v10, v0, v11, v11}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
 
     .line 17
     .line 18
     .line 19
-    sput-object v10, Lcom/facebook/common/networkreachability/NetworkState;->UNKNOWN:Lcom/facebook/common/networkreachability/NetworkState;
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->UNKNOWN:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 20
     .line 21
-    const-string v1, "CELL_UNKNOWN"
+    const-string v3, "CELL_UNKNOWN"
 
     .line 22
     .line 23
-    const/4 v9, 0x2
+    const/4 v2, 0x2
 
     .line 24
-    const/16 v0, 0x64
+    const/16 v1, 0x64
 
     .line 25
     .line 26
-    new-instance v8, Lcom/facebook/common/networkreachability/NetworkState;
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 27
     .line 28
-    invoke-direct {v8, v1, v9, v0}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
 
     .line 29
     .line 30
     .line 31
-    sput-object v8, Lcom/facebook/common/networkreachability/NetworkState;->CELL_UNKNOWN:Lcom/facebook/common/networkreachability/NetworkState;
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->CELL_UNKNOWN:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 32
     .line 33
-    const-string v2, "CELL_2G"
+    const-string v3, "CELL_2G"
 
     .line 34
     .line 35
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
     .line 36
-    const/16 v0, 0xc8
+    const/16 v1, 0xc8
 
     .line 37
     .line 38
-    new-instance v7, Lcom/facebook/common/networkreachability/NetworkState;
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 39
     .line 40
-    invoke-direct {v7, v2, v1, v0}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
 
     .line 41
     .line 42
     .line 43
-    sput-object v7, Lcom/facebook/common/networkreachability/NetworkState;->CELL_2G:Lcom/facebook/common/networkreachability/NetworkState;
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->CELL_2G:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 44
     .line 45
-    const-string v2, "CELL_3G"
+    const-string v3, "CELL_3G"
 
     .line 46
     .line 47
-    const/4 v1, 0x4
+    const/4 v2, 0x4
 
     .line 48
-    const/16 v0, 0x12c
+    const/16 v1, 0x12c
 
     .line 49
     .line 50
-    new-instance v6, Lcom/facebook/common/networkreachability/NetworkState;
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 51
     .line 52
-    invoke-direct {v6, v2, v1, v0}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
 
     .line 53
     .line 54
     .line 55
-    sput-object v6, Lcom/facebook/common/networkreachability/NetworkState;->CELL_3G:Lcom/facebook/common/networkreachability/NetworkState;
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->CELL_3G:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 56
     .line 57
-    const-string v2, "CELL_3G_HSPAP"
+    const-string v3, "CELL_3G_HSPAP"
 
     .line 58
     .line 59
-    const/4 v1, 0x5
+    const/4 v2, 0x5
 
     .line 60
-    const/16 v0, 0x15e
+    const/16 v1, 0x15e
 
     .line 61
     .line 62
-    new-instance v5, Lcom/facebook/common/networkreachability/NetworkState;
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 63
     .line 64
-    invoke-direct {v5, v2, v1, v0}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
 
     .line 65
     .line 66
     .line 67
-    sput-object v5, Lcom/facebook/common/networkreachability/NetworkState;->CELL_3G_HSPAP:Lcom/facebook/common/networkreachability/NetworkState;
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->CELL_3G_HSPAP:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 68
     .line 69
-    const-string v2, "CELL_4G"
+    const-string v3, "CELL_4G"
 
     .line 70
     .line 71
-    const/4 v1, 0x6
+    const/4 v2, 0x6
 
     .line 72
-    const/16 v0, 0x190
+    const/16 v1, 0x190
 
     .line 73
     .line 74
-    new-instance v4, Lcom/facebook/common/networkreachability/NetworkState;
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 75
     .line 76
-    invoke-direct {v4, v2, v1, v0}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
 
     .line 77
     .line 78
     .line 79
-    sput-object v4, Lcom/facebook/common/networkreachability/NetworkState;->CELL_4G:Lcom/facebook/common/networkreachability/NetworkState;
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->CELL_4G:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 80
     .line 81
-    const-string v2, "CELL_5G"
+    const-string v3, "CELL_5G"
 
     .line 82
     .line 83
-    const/4 v1, 0x7
+    const/4 v2, 0x7
 
     .line 84
-    const/16 v0, 0x1f4
+    const/16 v1, 0x1f4
 
     .line 85
     .line 86
-    new-instance v3, Lcom/facebook/common/networkreachability/NetworkState;
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 87
     .line 88
-    invoke-direct {v3, v2, v1, v0}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
 
     .line 89
     .line 90
     .line 91
-    sput-object v3, Lcom/facebook/common/networkreachability/NetworkState;->CELL_5G:Lcom/facebook/common/networkreachability/NetworkState;
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->CELL_5G:Lcom/facebook/common/networkreachability/NetworkState;
 
     .line 92
     .line 93
-    const-string v14, "WIFI"
+    const-string/jumbo v3, "WIFI"
 
     .line 94
     .line 95
+    .line 96
     const/16 v2, 0x8
 
-    .line 96
     .line 97
-    const/16 v0, 0x3e8
-
     .line 98
+    const/16 v1, 0x3e8
+
     .line 99
-    new-instance v1, Lcom/facebook/common/networkreachability/NetworkState;
-
     .line 100
-    .line 101
-    invoke-direct {v1, v14, v2, v0}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+    new-instance v0, Lcom/facebook/common/networkreachability/NetworkState;
 
+    .line 101
     .line 102
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/common/networkreachability/NetworkState;-><init>(Ljava/lang/String;II)V
+
     .line 103
     .line 104
-    sput-object v1, Lcom/facebook/common/networkreachability/NetworkState;->WIFI:Lcom/facebook/common/networkreachability/NetworkState;
-
     .line 105
+    sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->WIFI:Lcom/facebook/common/networkreachability/NetworkState;
+
     .line 106
-    const/16 v0, 0x9
-
     .line 107
-    .line 108
-    new-array v0, v0, [Lcom/facebook/common/networkreachability/NetworkState;
+    invoke-static {}, Lcom/facebook/common/networkreachability/NetworkState;->$values()[Lcom/facebook/common/networkreachability/NetworkState;
 
+    .line 108
     .line 109
     .line 110
-    aput-object v12, v0, v13
+    move-result-object v0
 
     .line 111
-    .line 112
-    aput-object v10, v0, v11
-
-    .line 113
-    .line 114
-    aput-object v8, v0, v9
-
-    .line 115
-    .line 116
-    invoke-static {v0, v7, v6}, LX/0Ye;->A1T([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 117
-    .line 118
-    .line 119
-    invoke-static {v5, v4, v3, v0}, LX/0Yc;->A1O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 120
-    .line 121
-    .line 122
-    aput-object v1, v0, v2
-
-    .line 123
-    .line 124
     sput-object v0, Lcom/facebook/common/networkreachability/NetworkState;->$VALUES:[Lcom/facebook/common/networkreachability/NetworkState;
 
-    .line 125
-    .line 126
+    .line 112
+    .line 113
     return-void
 .end method
 

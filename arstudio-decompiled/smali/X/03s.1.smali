@@ -1,39 +1,96 @@
 .class public final LX/03s;
-.super LX/0Lm;
+.super LX/0Jy;
 .source ""
 
 
+# instance fields
+.field public final A00:Ljava/util/List;
+
+
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/facebook/rti/common/time/RealtimeSinceBootClock;LX/0Lx;Ljava/lang/String;Z)V
-    .locals 7
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    const-string v5, "tp"
+    invoke-direct {p0}, LX/0Jy;-><init>()V
 
     .line 1
     .line 2
-    move-object v0, p0
-
     .line 3
-    move-object v1, p1
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
-    move-object v2, p2
-
     .line 5
-    move-object v3, p3
-
     .line 6
-    move-object v4, p4
+    move-result-object v0
 
     .line 7
-    move v6, p5
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
 
     .line 8
-    invoke-direct/range {v0 .. v6}, LX/0Lm;-><init>(Landroid/content/Context;Lcom/facebook/rti/common/time/RealtimeSinceBootClock;LX/0Lx;Ljava/lang/String;Ljava/lang/String;Z)V
-
     .line 9
     .line 10
+    move-result-object v0
+
     .line 11
+    iput-object v0, p0, LX/03s;->A00:Ljava/util/List;
+
+    .line 12
+    .line 13
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/03s;->A00:Ljava/util/List;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    check-cast v0, LX/0Jy;
+
+    .line 17
+    .line 18
+    invoke-virtual {v0, p1, p2, p3, p4}, LX/0Jy;->A00(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 19
+    .line 20
+    .line 21
+    goto :goto_0
+
+    .line 22
+    :cond_0
     return-void
 .end method

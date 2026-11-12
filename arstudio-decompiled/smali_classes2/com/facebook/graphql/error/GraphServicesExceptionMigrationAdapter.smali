@@ -24,7 +24,7 @@
     .locals 1
 
     .line 0
-    instance-of v0, p0, LX/1pw;
+    instance-of v0, p0, LX/1ya;
 
     .line 1
     .line 2
@@ -32,11 +32,11 @@
 
     .line 3
     .line 4
-    check-cast p0, LX/1pw;
+    check-cast p0, LX/1ya;
 
     .line 5
     .line 6
-    iget-object v0, p0, LX/1pw;->error:Lcom/facebook/graphql/error/GraphQLError;
+    iget-object v0, p0, LX/1ya;->error:Lcom/facebook/graphql/error/GraphQLError;
 
     .line 7
     .line 8
@@ -74,7 +74,7 @@
     .locals 1
 
     .line 0
-    instance-of v0, p0, LX/1pw;
+    instance-of v0, p0, LX/1ya;
 
     .line 1
     .line 2
@@ -82,11 +82,11 @@
 
     .line 3
     .line 4
-    check-cast p0, LX/1pw;
+    check-cast p0, LX/1ya;
 
     .line 5
     .line 6
-    iget-object v0, p0, LX/1pw;->summary:Lcom/facebook/graphservice/interfaces/Summary;
+    iget-object v0, p0, LX/1ya;->summary:Lcom/facebook/graphservice/interfaces/Summary;
 
     .line 7
     .line 8
@@ -114,7 +114,7 @@
 
     .line 18
     :cond_1
-    instance-of v0, p0, LX/1pA;
+    instance-of v0, p0, LX/1v5;
 
     .line 19
     .line 20
@@ -122,11 +122,11 @@
 
     .line 21
     .line 22
-    check-cast p0, LX/1pA;
+    check-cast p0, LX/1v5;
 
     .line 23
     .line 24
-    iget-object v0, p0, LX/1pA;->summary:Lcom/facebook/graphservice/interfaces/Summary;
+    iget-object v0, p0, LX/1v5;->summary:Lcom/facebook/graphservice/interfaces/Summary;
 
     .line 25
     .line 26
@@ -152,7 +152,7 @@
 
     .line 3
     .line 4
-    instance-of v0, p0, LX/1pA;
+    instance-of v0, p0, LX/1v5;
 
     .line 5
     .line 6
@@ -198,76 +198,6 @@
     return-object v0
 .end method
 
-.method public static hasTigonError(Ljava/lang/Throwable;)Z
-    .locals 3
-
-    .line 0
-    instance-of v0, p0, Lcom/facebook/graphql/error/GraphServicesException;
-
-    .line 1
-    .line 2
-    const/4 v2, 0x1
-
-    .line 3
-    const/4 v1, 0x0
-
-    .line 4
-    if-eqz v0, :cond_1
-
-    .line 5
-    .line 6
-    check-cast p0, Lcom/facebook/graphql/error/GraphServicesException;
-
-    .line 7
-    .line 8
-    iget-object v0, p0, Lcom/facebook/graphql/error/GraphServicesException;->mTigonError:Lcom/facebook/tigon/TigonError;
-
-    .line 9
-    .line 10
-    :goto_0
-    if-nez v0, :cond_0
-
-    .line 11
-    .line 12
-    const/4 v2, 0x0
-
-    .line 13
-    :cond_0
-    return v2
-
-    .line 14
-    :cond_1
-    instance-of v0, p0, Lcom/facebook/tigon/TigonErrorException;
-
-    .line 15
-    .line 16
-    if-nez v0, :cond_2
-
-    .line 17
-    .line 18
-    instance-of v0, p0, LX/1pA;
-
-    .line 19
-    .line 20
-    if-nez v0, :cond_2
-
-    .line 21
-    .line 22
-    return v1
-
-    .line 23
-    :cond_2
-    check-cast p0, Lcom/facebook/tigon/TigonErrorException;
-
-    .line 24
-    .line 25
-    iget-object v0, p0, Lcom/facebook/tigon/TigonErrorException;->tigonError:Lcom/facebook/tigon/TigonError;
-
-    .line 26
-    .line 27
-    goto :goto_0
-.end method
-
 .method public static isGraphServicesError(Ljava/lang/Throwable;)Z
     .locals 1
 
@@ -280,7 +210,7 @@
 
     .line 3
     .line 4
-    instance-of p0, p0, LX/1pw;
+    instance-of p0, p0, LX/1ya;
 
     .line 5
     .line 6

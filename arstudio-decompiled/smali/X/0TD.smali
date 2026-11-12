@@ -1,23 +1,25 @@
-.class public interface abstract LX/0TD;
+.class public final LX/0TD;
 .super Ljava/lang/Object;
 .source ""
 
 
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract ATT(I)LX/0TE;
-.end method
+.method public final A00()V
+    .locals 0
 
-.method public abstract Ajj(LX/0TE;)V
-.end method
-
-.method public abstract Ajk(LX/0TE;)V
-.end method
-
-.method public abstract Ajl(LX/0TE;)V
-.end method
-
-.method public abstract Ajm(LX/0TE;J)V
-.end method
-
-.method public abstract Aob(Ljava/lang/Throwable;)V
+    return-void
 .end method

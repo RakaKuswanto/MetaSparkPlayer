@@ -1,380 +1,465 @@
-.class public final LX/5yJ;
-.super Ljava/lang/Object;
+.class public final enum LX/5Yj;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/2wZ;
+
+# static fields
+.field public static final synthetic $VALUES:[LX/5Yj;
+
+.field public static final enum BACK:LX/5Yj;
+
+.field public static final EMPTY_CAMERA_INFO:Landroid/hardware/Camera$CameraInfo;
+
+.field public static final enum FRONT:LX/5Yj;
 
 
 # instance fields
-.field public A00:LX/2wY;
+.field public final infoId:I
 
-.field public A01:LX/5y0;
+.field public mCameraId:I
 
-.field public A02:LX/3Uw;
+.field public mCameraInfo:Landroid/hardware/Camera$CameraInfo;
+
+.field public mIsPresent:Z
 
 
 # direct methods
-.method public constructor <init>(LX/2wY;LX/5y0;LX/3Uw;)V
+.method public static synthetic $values()[LX/5Yj;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x2
+
+    .line 1
+    new-array v2, v0, [LX/5Yj;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/5Yj;->FRONT:LX/5Yj;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/5Yj;->BACK:LX/5Yj;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v1, "FRONT"
+
+    .line 1
+    .line 2
+    const/4 v3, 0x0
+
+    .line 3
+    const/4 v2, 0x1
+
+    .line 4
+    new-instance v0, LX/5Yj;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v1, v3, v2}, LX/5Yj;-><init>(Ljava/lang/String;II)V
+
+    .line 7
+    .line 8
+    .line 9
+    sput-object v0, LX/5Yj;->FRONT:LX/5Yj;
+
+    .line 10
+    .line 11
+    const-string v1, "BACK"
+
+    .line 12
+    .line 13
+    new-instance v0, LX/5Yj;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v1, v2, v3}, LX/5Yj;-><init>(Ljava/lang/String;II)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/5Yj;->BACK:LX/5Yj;
+
+    .line 19
+    .line 20
+    invoke-static {}, LX/5Yj;->$values()[LX/5Yj;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    sput-object v0, LX/5Yj;->$VALUES:[LX/5Yj;
+
+    .line 25
+    .line 26
+    new-instance v0, Landroid/hardware/Camera$CameraInfo;
+
+    .line 27
+    .line 28
+    invoke-direct {v0}, Landroid/hardware/Camera$CameraInfo;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    sput-object v0, LX/5Yj;->EMPTY_CAMERA_INFO:Landroid/hardware/Camera$CameraInfo;
+
+    .line 32
+    .line 33
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p3, p0, LX/5yJ;->A02:LX/3Uw;
+    iput p3, p0, LX/5Yj;->infoId:I
 
     .line 4
     .line 5
-    iput-object p1, p0, LX/5yJ;->A00:LX/2wY;
+    return-void
+.end method
 
+.method private checkCameraInfo()V
+    .locals 5
+
+    .line 0
+    iget-object v0, p0, LX/5Yj;->mCameraInfo:Landroid/hardware/Camera$CameraInfo;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
+    .line 4
+    :try_start_0
+    invoke-static {}, Landroid/hardware/Camera;->getNumberOfCameras()I
+
+    .line 5
     .line 6
     .line 7
-    iput-object p2, p0, LX/5yJ;->A01:LX/5y0;
+    move-result v4
 
     .line 8
+    new-instance v3, Landroid/hardware/Camera$CameraInfo;
+
     .line 9
+    .line 10
+    invoke-direct {v3}, Landroid/hardware/Camera$CameraInfo;-><init>()V
+
+    .line 11
+    .line 12
+    .line 13
+    const/4 v2, 0x0
+
+    .line 14
+    :goto_0
+    if-ge v2, v4, :cond_1
+
+    .line 15
+    .line 16
+    invoke-static {v2, v3}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
+
+    .line 17
+    .line 18
+    .line 19
+    iget v1, v3, Landroid/hardware/Camera$CameraInfo;->facing:I
+
+    .line 20
+    .line 21
+    iget v0, p0, LX/5Yj;->infoId:I
+
+    .line 22
+    .line 23
+    if-ne v1, v0, :cond_0
+
+    .line 24
+    .line 25
+    iput-object v3, p0, LX/5Yj;->mCameraInfo:Landroid/hardware/Camera$CameraInfo;
+
+    .line 26
+    .line 27
+    iput v2, p0, LX/5Yj;->mCameraId:I
+
+    .line 28
+    .line 29
+    const/4 v0, 0x1
+
+    .line 30
+    iput-boolean v0, p0, LX/5Yj;->mIsPresent:Z
+
+    .line 31
+    .line 32
+    goto :goto_1
+
+    .line 33
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    .line 34
+    .line 35
+    goto :goto_0
+
+    .line 36
+    :goto_1
     return-void
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 37
+    :catch_0
+    const-string v1, "CameraDevice"
+
+    .line 38
+    .line 39
+    const-string v0, "CameraFacing failed to determine the correct camera id and camera info"
+
+    .line 40
+    .line 41
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 42
+    .line 43
+    .line 44
+    :cond_1
+    return-void
+.end method
+
+.method public static fromCameraId(I)LX/5Yj;
+    .locals 5
+
+    .line 0
+    invoke-static {}, LX/5Yj;->values()[LX/5Yj;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v4
+
+    .line 4
+    array-length v3, v4
+
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    :goto_0
+    if-ge v2, v3, :cond_0
+
+    .line 7
+    .line 8
+    aget-object v1, v4, v2
+
+    .line 9
+    .line 10
+    invoke-virtual {v1}, LX/5Yj;->getCameraId()I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    if-eq v0, p0, :cond_1
+
+    .line 15
+    .line 16
+    add-int/lit8 v2, v2, 0x1
+
+    .line 17
+    .line 18
+    goto :goto_0
+
+    .line 19
+    :cond_0
+    sget-object v1, LX/5Yj;->BACK:LX/5Yj;
+
+    .line 20
+    .line 21
+    :cond_1
+    return-object v1
+.end method
+
+.method public static fromInfoId(I)LX/5Yj;
+    .locals 5
+
+    .line 0
+    invoke-static {}, LX/5Yj;->values()[LX/5Yj;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v4
+
+    .line 4
+    array-length v3, v4
+
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    :goto_0
+    if-ge v2, v3, :cond_0
+
+    .line 7
+    .line 8
+    aget-object v1, v4, v2
+
+    .line 9
+    .line 10
+    iget v0, v1, LX/5Yj;->infoId:I
+
+    .line 11
+    .line 12
+    if-eq v0, p0, :cond_1
+
+    .line 13
+    .line 14
+    add-int/lit8 v2, v2, 0x1
+
+    .line 15
+    .line 16
+    goto :goto_0
+
+    .line 17
+    :cond_0
+    sget-object v1, LX/5Yj;->BACK:LX/5Yj;
+
+    .line 18
+    .line 19
+    :cond_1
+    return-object v1
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/5Yj;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/5Yj;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/5Yj;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/5Yj;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/5Yj;->$VALUES:[LX/5Yj;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/5Yj;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final AIt(LX/2ri;LX/5yU;JJJJJJJJJZZZ)J
-    .locals 16
+.method public getCameraId()I
+    .locals 1
 
     .line 0
-    move-object/from16 v8, p2
+    invoke-direct {p0}, LX/5Yj;->checkCameraInfo()V
 
     .line 1
     .line 2
-    const-wide v14, -0x7fffffffffffffffL    # -4.9E-324
-
     .line 3
+    iget v0, p0, LX/5Yj;->mCameraId:I
+
     .line 4
     .line 5
+    return v0
+.end method
+
+.method public getCameraInfo()Landroid/hardware/Camera$CameraInfo;
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/5Yj;->checkCameraInfo()V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v0, p0, LX/5Yj;->mCameraInfo:Landroid/hardware/Camera$CameraInfo;
+
+    .line 4
+    .line 5
+    if-nez v0, :cond_0
+
     .line 6
     .line 7
-    cmp-long v0, p15, v14
+    sget-object v0, LX/5Yj;->EMPTY_CAMERA_INFO:Landroid/hardware/Camera$CameraInfo;
 
     .line 8
     .line 9
-    move-object/from16 v2, p0
-
-    .line 10
-    .line 11
-    if-nez v0, :cond_0
-
-    .line 12
-    .line 13
-    cmp-long v0, p17, v14
-
-    .line 14
-    .line 15
-    if-nez v0, :cond_0
-
-    .line 16
-    .line 17
-    cmp-long v0, p19, v14
-
-    .line 18
-    .line 19
-    if-nez v0, :cond_0
-
-    .line 20
-    .line 21
-    iget-object v0, v2, LX/5yJ;->A01:LX/5y0;
-
-    .line 22
-    .line 23
-    iget-boolean v1, v0, LX/5y0;->A15:Z
-
-    .line 24
-    .line 25
-    if-eqz v1, :cond_6
-
-    .line 26
-    .line 27
-    iget v1, v0, LX/5y0;->A01:I
-
-    .line 28
-    .line 29
-    if-gtz v1, :cond_0
-
-    .line 30
-    .line 31
-    iget v0, v0, LX/5y0;->A02:I
-
-    .line 32
-    .line 33
-    if-lez v0, :cond_6
-
-    .line 34
-    .line 35
     :cond_0
-    if-eqz p21, :cond_6
-
-    .line 36
-    .line 37
-    iget-object v0, v2, LX/5yJ;->A01:LX/5y0;
-
-    .line 38
-    .line 39
-    iget-boolean v1, v0, LX/5y0;->A11:Z
-
-    .line 40
-    .line 41
-    if-eqz v1, :cond_1
-
-    .line 42
-    .line 43
-    if-nez p22, :cond_6
-
-    .line 44
-    .line 45
-    :cond_1
-    move-object/from16 v1, p1
-
-    .line 46
-    .line 47
-    if-eqz p1, :cond_6
-
-    .line 48
-    .line 49
-    iget-boolean v1, v1, LX/2ri;->A00:Z
-
-    .line 50
-    .line 51
-    if-eqz v1, :cond_6
-
-    .line 52
-    .line 53
-    const/4 v1, 0x0
-
-    .line 54
-    int-to-long v4, v1
-
-    .line 55
-    iget v1, v0, LX/5y0;->A01:I
-
-    .line 56
-    .line 57
-    int-to-long v2, v1
-
-    .line 58
-    iget v0, v0, LX/5y0;->A02:I
-
-    .line 59
-    .line 60
-    int-to-long v0, v0
-
-    .line 61
-    const-wide/16 v12, 0x0
-
-    .line 62
-    .line 63
-    cmp-long v6, p15, v14
-
-    .line 64
-    .line 65
-    if-eqz v6, :cond_2
-
-    .line 66
-    .line 67
-    cmp-long v6, p15, v12
-
-    .line 68
-    .line 69
-    if-lez v6, :cond_2
-
-    .line 70
-    .line 71
-    move-wide/from16 v4, p15
-
-    .line 72
-    .line 73
-    :cond_2
-    cmp-long v6, p17, v14
-
-    .line 74
-    .line 75
-    if-eqz v6, :cond_3
-
-    .line 76
-    .line 77
-    cmp-long v6, p17, v12
-
-    .line 78
-    .line 79
-    if-lez v6, :cond_3
-
-    .line 80
-    .line 81
-    move-wide/from16 v2, p17
-
-    .line 82
-    .line 83
-    :cond_3
-    cmp-long v6, p19, v14
-
-    .line 84
-    .line 85
-    if-eqz v6, :cond_4
-
-    .line 86
-    .line 87
-    cmp-long v6, p19, v12
-
-    .line 88
-    .line 89
-    if-lez v6, :cond_4
-
-    .line 90
-    .line 91
-    move-wide/from16 v0, p19
-
-    .line 92
-    .line 93
-    :cond_4
-    const-wide/16 v10, 0x3e8
-
-    .line 94
-    .line 95
-    cmp-long v9, v4, v12
-
-    .line 96
-    .line 97
-    move-wide/from16 v6, p11
-
-    .line 98
-    .line 99
-    if-lez v9, :cond_7
-
-    .line 100
-    .line 101
-    cmp-long v9, p5, p11
-
-    .line 102
-    .line 103
-    if-ltz v9, :cond_5
-
-    .line 104
-    .line 105
-    cmp-long v9, p3, p7
-
-    .line 106
-    .line 107
-    if-gez v9, :cond_7
-
-    .line 108
-    .line 109
-    :cond_5
-    if-eqz p23, :cond_6
-
-    .line 110
-    .line 111
-    mul-long/2addr v4, v10
-
-    .line 112
-    sub-long v14, p9, v4
-
-    .line 113
-    .line 114
-    :cond_6
-    return-wide v14
-
-    .line 115
-    :cond_7
-    cmp-long v4, v2, v12
-
-    .line 116
-    .line 117
-    if-lez v4, :cond_6
-
-    .line 118
-    .line 119
-    cmp-long v4, v0, v12
-
-    .line 120
-    .line 121
-    if-lez v4, :cond_6
-
-    .line 122
-    .line 123
-    mul-long/2addr v2, v10
-
-    .line 124
-    sub-long p9, p9, v2
-
-    .line 125
-    .line 126
-    mul-long/2addr v0, v10
-
-    .line 127
-    sub-long v2, p9, v0
-
-    .line 128
-    .line 129
-    check-cast v8, LX/5y1;
-
-    .line 130
-    .line 131
-    iget-object v1, v8, LX/5y1;->A0l:[LX/5y4;
-
-    .line 132
-    .line 133
-    iget-object v0, v8, LX/5y1;->A0K:LX/5yO;
-
-    .line 134
-    .line 135
-    invoke-interface {v0}, LX/5yO;->ALz()I
-
-    .line 136
-    .line 137
-    .line 138
-    move-result v0
-
-    .line 139
-    aget-object v0, v1, v0
-
-    .line 140
-    .line 141
-    invoke-virtual {v0, v2, v3}, LX/5y4;->A05(J)J
-
-    .line 142
-    .line 143
-    .line 144
-    move-result-wide v0
-
-    .line 145
-    move-wide/from16 v2, p13
-
-    .line 146
-    .line 147
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    .line 148
-    .line 149
-    .line 150
-    move-result-wide v0
-
-    .line 151
-    invoke-static {v6, v7, v0, v1}, Ljava/lang/Math;->max(JJ)J
-
-    .line 152
-    .line 153
-    .line 154
-    move-result-wide v1
-
-    .line 155
-    cmp-long v0, p5, v1
-
-    .line 156
-    .line 157
-    if-gez v0, :cond_6
-
-    .line 158
-    .line 159
-    return-wide p9
+    return-object v0
+.end method
+
+.method public isPresent()Z
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, LX/5Yj;->checkCameraInfo()V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-boolean v0, p0, LX/5Yj;->mIsPresent:Z
+
+    .line 4
+    .line 5
+    return v0
 .end method

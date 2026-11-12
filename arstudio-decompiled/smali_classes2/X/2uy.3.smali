@@ -1,203 +1,199 @@
-.class public final LX/2uy;
-.super Ljava/lang/Object;
+.class public final enum LX/2uy;
+.super Ljava/lang/Enum;
 .source ""
-
-# interfaces
-.implements LX/2mI;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CleanVideoCacheConditionalWorkerInfo"
+.field public static final synthetic $VALUES:[LX/2uy;
 
+.field public static final enum BACKGROUND:LX/2uy;
 
-# instance fields
-.field public A00:LX/1zG;
+.field public static final enum FOREGROUND:LX/2uy;
 
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Gd;
+.field public static final enum FOREGROUND_OR_BACKGROUND:LX/2uy;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/2uy;->A01:LX/0Na;
-
-    .line 8
-    .line 9
-    const/16 v0, 0x98
-
-    .line 10
-    .line 11
-    invoke-static {p0, v0}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/2uy;->A02:LX/0Gd;
-
-    .line 16
-    .line 17
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    iput-object v0, p0, LX/2uy;->A00:LX/1zG;
-
-    .line 22
-    .line 23
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ADV()LX/0Gd;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2uy;->A02:LX/0Gd;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final AHL()J
-    .locals 2
-
-    const-wide/32 v0, 0x2932e00
-
-    return-wide v0
-.end method
-
-.method public final AKa()LX/37j;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/37j;->A02()LX/37j;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    return-object v0
-.end method
-
-.method public final ALN()LX/3DW;
-    .locals 2
-
-    .line 0
-    new-instance v1, LX/2uu;
-
-    .line 1
-    .line 2
-    invoke-direct {v1}, LX/2uu;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sget-object v0, LX/2vR;->BACKGROUND:LX/2vR;
-
-    .line 6
-    .line 7
-    invoke-static {v1, v0}, LX/2uu;->A00(LX/2uu;Ljava/lang/Enum;)V
-
-    .line 8
-    .line 9
-    .line 10
-    sget-object v0, LX/3BG;->NOT_LOW:LX/3BG;
-
-    .line 11
-    .line 12
-    invoke-static {v1, v0}, LX/2uu;->A00(LX/2uu;Ljava/lang/Enum;)V
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-virtual {v1}, LX/2uu;->A01()LX/3DW;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    return-object v0
-.end method
-
-.method public final ANL()LX/2vF;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/2vF;->INTERVAL:LX/2vF;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final Ao3()Z
+.method public static synthetic $values()[LX/2uy;
     .locals 3
 
     .line 0
-    iget-object v0, p0, LX/2uy;->A01:LX/0Na;
+    const/4 v0, 0x3
+
+    .line 1
+    new-array v2, v0, [LX/2uy;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/2uy;->FOREGROUND:LX/2uy;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/2uy;->BACKGROUND:LX/2uy;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/2uy;->FOREGROUND_OR_BACKGROUND:LX/2uy;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "FOREGROUND"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/2uy;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/2uy;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/2uy;->FOREGROUND:LX/2uy;
+
+    .line 9
+    .line 10
+    const-string v2, "BACKGROUND"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/2uy;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/2uy;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/2uy;->BACKGROUND:LX/2uy;
+
+    .line 19
+    .line 20
+    const-string v2, "FOREGROUND_OR_BACKGROUND"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/2uy;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/2uy;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/2uy;->FOREGROUND_OR_BACKGROUND:LX/2uy;
+
+    .line 29
+    .line 30
+    invoke-static {}, LX/2uy;->$values()[LX/2uy;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    sput-object v0, LX/2uy;->$VALUES:[LX/2uy;
+
+    .line 35
+    .line 36
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/2uy;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/2uy;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4
     .line 5
-    move-result-object v2
+    move-result-object v0
 
     .line 6
-    const-wide v0, 0x8100c400060b1aL    # 3.0266328141243E-306
+    check-cast v0, LX/2uy;
 
     .line 7
     .line 8
-    .line 9
-    .line 10
-    .line 11
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
-
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
-
-    .line 15
-    return v0
+    return-object v0
 .end method
 
-.method public final getFriendlyName()Ljava/lang/String;
+.method public static values()[LX/2uy;
     .locals 1
 
-    const-string v0, "CleanVideoCacheConditionalWorkerInfo"
+    .line 0
+    sget-object v0, LX/2uy;->$VALUES:[LX/2uy;
 
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/2uy;
+
+    .line 7
+    .line 8
     return-object v0
 .end method

@@ -88,7 +88,7 @@
 
     .line 27
     .line 28
-    invoke-static {v1, v0, v2}, LX/0I5;->A09(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0HP;->A09(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 29
     .line 30

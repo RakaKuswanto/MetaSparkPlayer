@@ -1,5 +1,5 @@
 .class public Lcom/facebook/base/fragment/AbstractNavigableFragment;
-.super LX/3e4;
+.super LX/3FR;
 .source ""
 
 # interfaces
@@ -11,15 +11,15 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public final errorReporter:LX/0Na;
+.field public final errorReporter:LX/0RP;
 
 .field public finished:Z
 
 .field public intentWaitingToFinish:Landroid/content/Intent;
 
-.field public listener:LX/3CC;
+.field public listener:LX/2vx;
 
 .field public savedFinishIntent:Landroid/content/Intent;
 
@@ -29,12 +29,12 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/3e4;-><init>()V
+    invoke-direct {p0}, LX/3FR;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
 
     .line 4
     .line 5
@@ -42,7 +42,7 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->errorReporter:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->errorReporter:LX/0RP;
 
     .line 8
     .line 9
@@ -101,7 +101,7 @@
 
     .line 8
     .line 9
-    invoke-static {p0}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 10
     .line 11
@@ -113,7 +113,7 @@
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 16
     .line 17
@@ -121,7 +121,7 @@
     move-result-object v0
 
     .line 19
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 20
     .line 21
@@ -137,7 +137,7 @@
 
     .line 26
     .line 27
-    invoke-static {v1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 28
     .line 29
@@ -149,7 +149,7 @@
 
     .line 32
     .line 33
-    invoke-static {v2, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 34
     .line 35
@@ -162,16 +162,16 @@
 
     .line 38
     .line 39
-    invoke-static {v0, v1}, LX/0Jt;->A00(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {v0, v1}, LX/0Il;->A00(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 40
     .line 41
     .line 42
-    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->errorReporter:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->errorReporter:LX/0RP;
 
     .line 43
     .line 44
-    invoke-static {v0}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
 
     .line 45
     .line 46
@@ -179,7 +179,7 @@
     move-result-object v0
 
     .line 48
-    invoke-interface {v0, v3, v1}, LX/0Gk;->AoW(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v3, v1}, LX/0Ft;->AnC(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
     .line 50
@@ -188,7 +188,7 @@
 
     .line 52
     :cond_1
-    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/3CC;
+    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/2vx;
 
     .line 53
     .line 54
@@ -196,7 +196,7 @@
 
     .line 55
     .line 56
-    invoke-static {p0}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 57
     .line 58
@@ -208,7 +208,7 @@
 
     .line 61
     .line 62
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 63
     .line 64
@@ -216,7 +216,7 @@
     move-result-object v0
 
     .line 66
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 67
     .line 68
@@ -237,16 +237,16 @@
     .line 75
     .line 76
     .line 77
-    invoke-static {v1, v2, v0}, LX/0Jt;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 78
     .line 79
     .line 80
-    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->errorReporter:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->errorReporter:LX/0RP;
 
     .line 81
     .line 82
-    invoke-static {v0}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
 
     .line 83
     .line 84
@@ -254,7 +254,7 @@
     move-result-object v0
 
     .line 86
-    invoke-interface {v0, v3, v2}, LX/0Gk;->AoW(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v3, v2}, LX/0Ft;->AnC(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 87
     .line 88
@@ -275,7 +275,7 @@
 
     .line 95
     :cond_2
-    invoke-interface {v0, p0, p1}, LX/3CC;->AY9(Lcom/facebook/base/fragment/NavigableFragment;Landroid/content/Intent;)V
+    invoke-interface {v0, p0, p1}, LX/2vx;->AWZ(Lcom/facebook/base/fragment/NavigableFragment;Landroid/content/Intent;)V
 
     .line 96
     .line 97
@@ -321,16 +321,16 @@
     .locals 1
 
     .line 268435456
-    new-instance v0, LX/3FR;
+    new-instance v0, LX/333;
 
     .line 268435457
     .line 268435458
-    invoke-direct {v0, p1}, LX/3FR;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v0, p1}, LX/333;-><init>(Ljava/lang/Class;)V
 
     .line 268435459
     .line 268435460
     .line 268435461
-    iget-object v0, v0, LX/3FR;->A00:Landroid/content/Intent;
+    iget-object v0, v0, LX/333;->A00:Landroid/content/Intent;
 
     .line 268435462
     .line 268435463
@@ -342,7 +342,7 @@
     return-void
 .end method
 
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 3
 
     .line 0
@@ -353,11 +353,11 @@
     .line 3
     .line 4
     .line 5
-    new-instance v0, LX/37j;
+    new-instance v0, LX/2uz;
 
     .line 6
     .line 7
-    invoke-direct {v0, v1, v2}, LX/37j;-><init>(J)V
+    invoke-direct {v0, v1, v2}, LX/2uz;-><init>(J)V
 
     .line 8
     .line 9
@@ -459,11 +459,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/3CC;
+    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/2vx;
 
     .line 1
     .line 2
-    invoke-interface {v0, p0}, LX/3CC;->Abm(Lcom/facebook/base/fragment/NavigableFragment;)Z
+    invoke-interface {v0, p0}, LX/2vx;->AaG(Lcom/facebook/base/fragment/NavigableFragment;)Z
 
     .line 3
     .line 4
@@ -474,11 +474,11 @@
     return v0
 .end method
 
-.method public setNavigationListener(LX/3CC;)V
+.method public setNavigationListener(LX/2vx;)V
     .locals 3
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/3CC;
+    iput-object p1, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/2vx;
 
     .line 1
     .line 2
@@ -494,7 +494,7 @@
 
     .line 7
     .line 8
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 9
     .line 10
@@ -502,7 +502,7 @@
     move-result-object v1
 
     .line 12
-    invoke-static {p0}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -519,7 +519,7 @@
 
     .line 20
     .line 21
-    invoke-static {v2, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 22
     .line 23
@@ -540,16 +540,16 @@
     .line 30
     .line 31
     .line 32
-    invoke-static {v1, v2, v0}, LX/0Jt;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 33
     .line 34
     .line 35
-    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->errorReporter:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->errorReporter:LX/0RP;
 
     .line 36
     .line 37
-    invoke-static {v0}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
 
     .line 38
     .line 39
@@ -561,7 +561,7 @@
 
     .line 42
     .line 43
-    invoke-interface {v1, v0, v2}, LX/0Gk;->AoW(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, v2}, LX/0Ft;->AnC(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
     .line 45
@@ -575,11 +575,11 @@
     .line 49
     .line 50
     .line 51
-    new-instance v0, LX/3FT;
+    new-instance v0, LX/2vm;
 
     .line 52
     .line 53
-    invoke-direct {v0, p0, p1}, LX/3FT;-><init>(Lcom/facebook/base/fragment/AbstractNavigableFragment;LX/3CC;)V
+    invoke-direct {v0, p0, p1}, LX/2vm;-><init>(Lcom/facebook/base/fragment/AbstractNavigableFragment;LX/2vx;)V
 
     .line 54
     .line 55

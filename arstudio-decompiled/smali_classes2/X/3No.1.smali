@@ -2,24 +2,19 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2M7;
+
 
 # instance fields
-.field public A00:J
+.field public final A00:Landroid/content/res/Resources;
 
-.field public A01:J
-
-.field public A02:J
-
-.field public A03:J
-
-.field public final A04:LX/0JA;
-
-.field public final A05:LX/2i7;
+.field public final A01:LX/2M7;
 
 
 # direct methods
-.method public constructor <init>(LX/0JA;LX/2i7;)V
-    .locals 4
+.method public constructor <init>(Landroid/content/res/Resources;LX/2M7;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,256 +22,220 @@
     .line 1
     .line 2
     .line 3
-    const-wide/16 v2, 0x0
+    iput-object p1, p0, LX/3No;->A00:Landroid/content/res/Resources;
 
     .line 4
     .line 5
-    iput-wide v2, p0, LX/3No;->A03:J
+    iput-object p2, p0, LX/3No;->A01:LX/2M7;
 
     .line 6
     .line 7
-    const-wide/16 v0, -0x1
-
-    .line 8
-    .line 9
-    iput-wide v0, p0, LX/3No;->A00:J
-
-    .line 10
-    .line 11
-    iput-wide v0, p0, LX/3No;->A01:J
-
-    .line 12
-    .line 13
-    iput-wide v2, p0, LX/3No;->A02:J
-
-    .line 14
-    .line 15
-    iput-object p2, p0, LX/3No;->A05:LX/2i7;
-
-    .line 16
-    .line 17
-    iput-object p1, p0, LX/3No;->A04:LX/0JA;
-
-    .line 18
-    .line 19
     return-void
-.end method
-
-.method public static A00(LX/3No;JJ)Z
-    .locals 3
-
-    .line 0
-    const-wide/16 v1, 0x2710
-
-    .line 1
-    .line 2
-    cmp-long v0, p1, v1
-
-    .line 3
-    .line 4
-    if-ltz v0, :cond_0
-
-    .line 5
-    .line 6
-    const-wide/16 v1, 0xa
-
-    .line 7
-    .line 8
-    cmp-long v0, p3, v1
-
-    .line 9
-    .line 10
-    if-gez v0, :cond_1
-
-    .line 11
-    .line 12
-    :cond_0
-    const-wide/32 v1, 0xc350
-
-    .line 13
-    .line 14
-    .line 15
-    cmp-long v0, p1, v1
-
-    .line 16
-    .line 17
-    if-ltz v0, :cond_2
-
-    .line 18
-    .line 19
-    const-wide/16 v1, 0x0
-
-    .line 20
-    .line 21
-    cmp-long v0, p3, v1
-
-    .line 22
-    .line 23
-    if-lez v0, :cond_2
-
-    .line 24
-    .line 25
-    :cond_1
-    iget-object v0, p0, LX/3No;->A05:LX/2i7;
-
-    .line 26
-    .line 27
-    invoke-virtual {v0, p1, p2, p3, p4}, LX/2i7;->A05(JJ)V
-
-    .line 28
-    .line 29
-    .line 30
-    const/4 v0, 0x1
-
-    .line 31
-    return v0
-
-    .line 32
-    :cond_2
-    const/4 v0, 0x0
-
-    .line 33
-    return v0
 .end method
 
 
 # virtual methods
-.method public final A01(JJ)V
-    .locals 5
+.method public final A6J(LX/3OQ;)Landroid/graphics/drawable/Drawable;
+    .locals 4
 
     .line 0
-    const-wide/16 v1, 0x4e20
+    :try_start_0
+    invoke-static {}, LX/3Ze;->A04()Z
 
     .line 1
     .line 2
-    cmp-long v0, p1, v1
-
     .line 3
+    move-result v0
+
     .line 4
-    if-ltz v0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 5
     .line 6
-    const-wide/16 v1, 0x14
+    const-string v0, "DefaultDrawableFactory#createDrawable"
 
     .line 7
     .line 8
-    cmp-long v0, p3, v1
+    invoke-static {v0}, LX/3Ze;->A03(Ljava/lang/String;)V
 
     .line 9
     .line 10
-    if-ltz v0, :cond_0
-
     .line 11
+    :cond_0
+    instance-of v0, p1, LX/3NY;
+
     .line 12
-    const-wide/16 v0, 0x2710
-
     .line 13
+    if-eqz v0, :cond_5
+
     .line 14
-    div-long v2, p1, v0
-
     .line 15
+    check-cast p1, LX/3NY;
+
     .line 16
-    const-wide/16 v0, 0xa
-
     .line 17
+    iget-object v1, p0, LX/3No;->A00:Landroid/content/res/Resources;
+
     .line 18
-    div-long v0, p3, v0
-
     .line 19
-    .line 20
-    invoke-static {v2, v3, v0, v1}, LX/0Yj;->A03(JJ)I
+    iget-object v0, p1, LX/3NY;->A04:Landroid/graphics/Bitmap;
 
+    .line 20
     .line 21
+    new-instance v3, Landroid/graphics/drawable/BitmapDrawable;
+
     .line 22
     .line 23
-    move-result v4
+    invoke-direct {v3, v1, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     .line 24
-    int-to-long v0, v4
-
     .line 25
-    div-long v2, p1, v0
-
     .line 26
+    iget v2, p1, LX/3NY;->A02:I
+
     .line 27
-    div-long v0, p3, v0
-
     .line 28
-    .line 29
-    add-int/lit8 v4, v4, -0x1
+    if-eqz v2, :cond_1
 
+    .line 29
     .line 30
+    const/4 v1, -0x1
+
     .line 31
-    :goto_0
-    if-lez v4, :cond_0
+    const/4 v0, 0x1
 
     .line 32
+    if-ne v2, v1, :cond_2
+
     .line 33
-    invoke-static {p0, v2, v3, v0, v1}, LX/3No;->A00(LX/3No;JJ)Z
-
     .line 34
+    :cond_1
+    const/4 v0, 0x0
+
     .line 35
+    :cond_2
+    if-nez v0, :cond_4
+
     .line 36
-    add-int/lit8 v4, v4, -0x1
-
     .line 37
-    .line 38
-    sub-long/2addr p1, v2
+    iget v1, p1, LX/3NY;->A01:I
 
+    .line 38
     .line 39
-    sub-long/2addr p3, v0
+    const/4 v0, 0x1
 
     .line 40
-    goto :goto_0
+    if-eq v1, v0, :cond_3
 
     .line 41
-    :cond_0
-    invoke-static {p0, p1, p2, p3, p4}, LX/3No;->A00(LX/3No;JJ)Z
-
     .line 42
+    if-eqz v1, :cond_3
+
     .line 43
     .line 44
-    move-result v0
+    goto :goto_0
 
     .line 45
-    if-nez v0, :cond_1
+    :cond_3
+    const/4 v0, 0x0
 
     .line 46
+    :goto_0
+    if-nez v0, :cond_4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 47
-    const-wide/16 v1, 0x2710
-
     .line 48
-    .line 49
-    cmp-long v0, p1, v1
+    invoke-static {}, LX/3Ze;->A01()V
 
+    .line 49
     .line 50
     .line 51
-    if-ltz v0, :cond_1
+    return-object v3
 
     .line 52
+    :cond_4
+    :try_start_1
+    iget v1, p1, LX/3NY;->A01:I
+
     .line 53
-    const-wide/16 v1, 0x0
-
     .line 54
+    new-instance v0, LX/3ZS;
+
     .line 55
-    cmp-long v0, p3, v1
-
     .line 56
-    .line 57
-    if-lez v0, :cond_1
+    invoke-direct {v0, v3, v2, v1}, LX/3ZS;-><init>(Landroid/graphics/drawable/Drawable;II)V
 
+    .line 57
     .line 58
     .line 59
-    iget-object v0, p0, LX/3No;->A05:LX/2i7;
+    goto :goto_1
 
     .line 60
-    .line 61
-    invoke-virtual {v0, p1, p2, p3, p4}, LX/2i7;->A05(JJ)V
+    :cond_5
+    iget-object v1, p0, LX/3No;->A01:LX/2M7;
 
+    .line 61
     .line 62
+    if-eqz v1, :cond_6
+
     .line 63
     .line 64
-    :cond_1
-    return-void
+    invoke-interface {v1, p1}, LX/2M7;->AoG(LX/3OQ;)Z
+
+    .line 65
+    .line 66
+    .line 67
+    move-result v0
+
+    .line 68
+    if-eqz v0, :cond_6
+
+    .line 69
+    .line 70
+    invoke-interface {v1, p1}, LX/2M7;->A6J(LX/3OQ;)Landroid/graphics/drawable/Drawable;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v0
+
+    .line 74
+    goto :goto_1
+
+    .line 75
+    :cond_6
+    const/4 v0, 0x0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 76
+    :goto_1
+    invoke-static {}, LX/3Ze;->A01()V
+
+    .line 77
+    .line 78
+    .line 79
+    return-object v0
+
+    .line 80
+    :catchall_0
+    move-exception v0
+
+    .line 81
+    invoke-static {}, LX/3Ze;->A01()V
+
+    .line 82
+    .line 83
+    .line 84
+    throw v0
+.end method
+
+.method public final AoG(LX/3OQ;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

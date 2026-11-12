@@ -116,7 +116,7 @@
 
     .line 8
     .line 9
-    invoke-static {p1, v5, v0}, LX/0HL;->A04(Ljava/io/InputStream;[BI)I
+    invoke-static {p1, v5, v0}, LX/0GR;->A04(Ljava/io/InputStream;[BI)I
 
     .line 10
     .line 11

@@ -2,17 +2,111 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/text/method/TransformationMethod;
+
+# static fields
+.field public static final A08:[F
+
+.field public static final A09:[F
+
+.field public static final A0A:[I
+
+.field public static final A0B:[I
 
 
 # instance fields
-.field public final A00:Landroid/text/method/TransformationMethod;
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:I
+
+.field public A03:Landroid/graphics/Paint;
+
+.field public final A04:Landroid/graphics/Paint;
+
+.field public final A05:Landroid/graphics/Paint;
+
+.field public final A06:Landroid/graphics/Paint;
+
+.field public final A07:Landroid/graphics/Path;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/method/TransformationMethod;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
+
+    .line 0
+    const/4 v1, 0x3
+
+    .line 1
+    new-array v0, v1, [I
+
+    .line 2
+    .line 3
+    sput-object v0, LX/4WJ;->A0B:[I
+
+    .line 4
+    .line 5
+    new-array v0, v1, [F
+
+    .line 6
+    .line 7
+    fill-array-data v0, :array_0
+
+    .line 8
+    .line 9
+    .line 10
+    sput-object v0, LX/4WJ;->A09:[F
+
+    .line 11
+    .line 12
+    const/4 v1, 0x4
+
+    .line 13
+    new-array v0, v1, [I
+
+    .line 14
+    .line 15
+    sput-object v0, LX/4WJ;->A0A:[I
+
+    .line 16
+    .line 17
+    new-array v0, v1, [F
+
+    .line 18
+    .line 19
+    fill-array-data v0, :array_1
+
+    .line 20
+    .line 21
+    .line 22
+    sput-object v0, LX/4WJ;->A08:[F
+
+    .line 23
+    .line 24
+    return-void
+
+    .line 25
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f000000    # 0.5f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x0
+        0x3f000000    # 0.5f
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .locals 4
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -20,138 +114,112 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4WJ;->A00:Landroid/text/method/TransformationMethod;
+    invoke-static {}, LX/435;->A03()Landroid/graphics/Path;
 
     .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-    .locals 3
-
-    .line 0
-    invoke-virtual {p2}, Landroid/view/View;->isInEditMode()Z
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    if-nez v0, :cond_1
-
     .line 5
     .line 6
-    iget-object v0, p0, LX/4WJ;->A00:Landroid/text/method/TransformationMethod;
-
-    .line 7
-    .line 8
-    if-eqz v0, :cond_0
-
-    .line 9
-    .line 10
-    invoke-interface {v0, p1, p2}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object p1
-
-    .line 14
-    :cond_0
-    if-eqz p1, :cond_1
-
-    .line 15
-    .line 16
-    invoke-static {}, LX/4dz;->A00()LX/4dz;
-
-    .line 17
-    .line 18
-    .line 19
     move-result-object v0
 
-    .line 20
-    invoke-virtual {v0}, LX/4dz;->A03()I
+    .line 7
+    iput-object v0, p0, LX/4WJ;->A07:Landroid/graphics/Path;
 
+    .line 8
+    .line 9
+    invoke-static {}, LX/435;->A02()Landroid/graphics/Paint;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/4WJ;->A03:Landroid/graphics/Paint;
+
+    .line 14
+    .line 15
+    invoke-static {}, LX/435;->A02()Landroid/graphics/Paint;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v3
+
+    .line 19
+    iput-object v3, p0, LX/4WJ;->A06:Landroid/graphics/Paint;
+
+    .line 20
     .line 21
+    const/high16 v2, 0x44000000    # 512.0f
+
     .line 22
     .line 23
-    move-result v1
+    iput v2, p0, LX/4WJ;->A02:I
 
     .line 24
-    const/4 v0, 0x1
-
     .line 25
-    if-ne v1, v0, :cond_1
+    const/high16 v0, 0x14000000
 
     .line 26
     .line 27
-    invoke-static {}, LX/4dz;->A00()LX/4dz;
+    iput v0, p0, LX/4WJ;->A01:I
 
     .line 28
     .line 29
+    const/4 v1, 0x0
+
     .line 30
-    move-result-object v2
+    iput v1, p0, LX/4WJ;->A00:I
 
     .line 31
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
     .line 32
+    invoke-virtual {v3, v2}, Landroid/graphics/Paint;->setColor(I)V
+
     .line 33
     .line 34
-    move-result v1
-
     .line 35
-    const/4 v0, 0x0
+    iget-object v0, p0, LX/4WJ;->A03:Landroid/graphics/Paint;
 
     .line 36
-    invoke-virtual {v2, p1, v0, v1}, LX/4dz;->A04(Ljava/lang/CharSequence;II)Ljava/lang/CharSequence;
-
     .line 37
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
     .line 38
     .line 39
-    move-result-object p1
-
     .line 40
-    :cond_1
-    return-object p1
-.end method
+    const/4 v0, 0x4
 
-.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-    .locals 6
+    .line 41
+    new-instance v1, Landroid/graphics/Paint;
 
-    .line 0
-    iget-object v0, p0, LX/4WJ;->A00:Landroid/text/method/TransformationMethod;
+    .line 42
+    .line 43
+    invoke-direct {v1, v0}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
+    .line 44
+    .line 45
+    .line 46
+    iput-object v1, p0, LX/4WJ;->A04:Landroid/graphics/Paint;
 
-    .line 3
-    .line 4
-    move-object v1, p1
+    .line 47
+    .line 48
+    invoke-static {v1}, LX/434;->A1O(Landroid/graphics/Paint;)V
 
-    .line 5
-    move-object v2, p2
+    .line 49
+    .line 50
+    .line 51
+    new-instance v0, Landroid/graphics/Paint;
 
-    .line 6
-    move v3, p3
+    .line 52
+    .line 53
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
 
-    .line 7
-    move v4, p4
+    .line 54
+    .line 55
+    .line 56
+    iput-object v0, p0, LX/4WJ;->A05:Landroid/graphics/Paint;
 
-    .line 8
-    move-object v5, p5
-
-    .line 9
-    invoke-interface/range {v0 .. v5}, Landroid/text/method/TransformationMethod;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-
-    .line 10
-    .line 11
-    .line 12
-    :cond_0
+    .line 57
+    .line 58
     return-void
 .end method

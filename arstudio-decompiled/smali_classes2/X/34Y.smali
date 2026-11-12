@@ -1,443 +1,246 @@
 .class public final LX/34Y;
-.super LX/3In;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Landroid/preference/Preference$OnPreferenceChangeListener;
 
 
 # instance fields
-.field public A00:LX/0ZF;
-
-.field public volatile A01:LX/34v;
+.field public final synthetic A00:Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3In;-><init>()V
+    iput-object p1, p0, LX/34Y;->A00:Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
-    const/4 v0, 0x0
-
     .line 4
-    iput-object v0, p0, LX/34Y;->A00:LX/0ZF;
-
     .line 5
-    .line 6
-    new-instance v0, LX/35Y;
-
-    .line 7
-    .line 8
-    invoke-direct {v0}, LX/35Y;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
-    iput-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 12
-    .line 13
     return-void
-.end method
-
-.method public static A00(LX/34v;)Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;
-    .locals 3
-
-    .line 0
-    const-class v2, Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;
-
-    .line 1
-    .line 2
-    :goto_0
-    instance-of v0, p0, LX/34Y;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    check-cast p0, LX/34Y;
-
-    .line 7
-    .line 8
-    move-object v1, p0
-
-    .line 9
-    monitor-enter v1
-
-    .line 10
-    :try_start_0
-    iget-object p0, p0, LX/34Y;->A01:LX/34v;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 11
-    .line 12
-    monitor-exit v1
-
-    .line 13
-    goto :goto_0
-
-    .line 14
-    :catchall_0
-    move-exception v0
-
-    .line 15
-    monitor-exit v1
-
-    .line 16
-    throw v0
-
-    .line 17
-    :cond_0
-    invoke-virtual {v2, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    .line 18
-    .line 19
-    .line 20
-    move-result v0
-
-    .line 21
-    if-nez v0, :cond_1
-
-    .line 22
-    .line 23
-    const/4 p0, 0x0
-
-    .line 24
-    :cond_1
-    check-cast p0, Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;
-
-    .line 25
-    .line 26
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final clearCurrentUserData()V
-    .locals 1
+.method public final onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
+    invoke-static {p2}, LX/001;->A1S(Ljava/lang/Object;)Z
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/34v;->clearCurrentUserData()V
-
     .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final clearOverrides()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->clearOverrides()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final deleteOldUserData(I)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/34v;->deleteOldUserData(I)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final getConsistencyLoggingFlagsJSON()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->getConsistencyLoggingFlagsJSON()Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final getDataDirPath()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->getDataDirPath()Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final getLatestHandle()LX/3Ig;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->getLatestHandle()LX/3Ig;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final getOrCreateOverridesTable()LX/0RW;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->getOrCreateOverridesTable()LX/0RW;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final getSchemaString()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->getSchemaString()Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final isConsistencyLoggingNeeded(LX/0rp;)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/34v;->isConsistencyLoggingNeeded(LX/0rp;)Z
-
-    .line 3
-    .line 4
-    .line 5
     move-result v0
 
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
     .line 6
+    const/4 v0, 0x0
+
+    .line 7
     return v0
-.end method
 
-.method public final isFetchNeeded()Z
-    .locals 1
+    .line 8
+    :cond_0
+    invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
 
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->isFetchNeeded()Z
+    .line 12
+    sget-object v0, LX/1og;->A05:LX/28F;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    .line 13
+    .line 14
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 6
-    return v0
-.end method
-
-.method public final isValid()Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->isValid()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final logAccessWithoutExposure(Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/34v;->logAccessWithoutExposure(Ljava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final logConfigs(Ljava/lang/String;LX/0rp;Ljava/util/Map;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2, p3}, LX/34v;->logConfigs(Ljava/lang/String;LX/0rp;Ljava/util/Map;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final logExposure(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1, p2}, LX/34v;->logExposure(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final syncFetchReason()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->syncFetchReason()Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
+    .line 15
+    .line 16
+    .line 17
     move-result-object v0
 
-    .line 6
-    return-object v0
-.end method
+    .line 18
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public final tryUpdateConfigsSynchronously(I)Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/34v;->tryUpdateConfigsSynchronously(I)Z
-
-    .line 3
-    .line 4
-    .line 5
+    .line 19
+    .line 20
+    .line 21
     move-result v0
 
-    .line 6
+    .line 22
+    if-eqz v0, :cond_2
+
+    .line 23
+    .line 24
+    iget-object v1, p0, LX/34Y;->A00:Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;
+
+    .line 25
+    .line 26
+    sget-object v0, LX/1of;->ON:LX/1of;
+
+    .line 27
+    .line 28
+    invoke-virtual {v1, v0}, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03(LX/1of;)V
+
+    .line 29
+    .line 30
+    .line 31
+    iget-object v0, v1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/3GU;
+
+    .line 32
+    .line 33
+    :goto_0
+    invoke-static {v0, v1}, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A02(Landroid/preference/Preference;Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
+
+    .line 34
+    .line 35
+    .line 36
+    :cond_1
+    iget-object v1, p0, LX/34Y;->A00:Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;
+
+    .line 37
+    .line 38
+    iget-object v0, v1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A01:LX/0RP;
+
+    .line 39
+    .line 40
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v2
+
+    .line 44
+    check-cast v2, LX/2bl;
+
+    .line 45
+    .line 46
+    const v0, 0x7f1102d9
+
+    .line 47
+    .line 48
+    .line 49
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v1
+
+    .line 53
+    const/4 v0, 0x0
+
+    .line 54
+    invoke-static {v2, v1, v0, v0}, LX/2bl;->A00(LX/2bl;Ljava/lang/CharSequence;IZ)V
+
+    .line 55
+    .line 56
+    .line 57
+    const/4 v0, 0x1
+
+    .line 58
     return v0
-.end method
 
-.method public final updateConfigs(LX/2xB;)Z
-    .locals 1
+    .line 59
+    :cond_2
+    sget-object v0, LX/1og;->A0A:LX/28F;
 
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
+    .line 60
+    .line 61
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/34v;->updateConfigs(LX/2xB;)Z
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v0
 
-    .line 3
-    .line 4
-    .line 5
+    .line 65
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 66
+    .line 67
+    .line 68
     move-result v0
 
-    .line 6
-    return v0
-.end method
+    .line 69
+    if-eqz v0, :cond_3
 
-.method public final updateEmergencyPushConfigs()Z
-    .locals 1
+    .line 70
+    .line 71
+    iget-object v1, p0, LX/34Y;->A00:Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;
 
-    .line 0
-    iget-object v0, p0, LX/34Y;->A01:LX/34v;
+    .line 72
+    .line 73
+    sget-object v0, LX/1of;->WIFI_ONLY:LX/1of;
 
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/34v;->updateEmergencyPushConfigs()Z
+    .line 74
+    .line 75
+    invoke-virtual {v1, v0}, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03(LX/1of;)V
 
-    .line 3
-    .line 4
-    .line 5
+    .line 76
+    .line 77
+    .line 78
+    iget-object v0, v1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/3GU;
+
+    .line 79
+    .line 80
+    goto :goto_0
+
+    .line 81
+    :cond_3
+    sget-object v0, LX/1og;->A08:LX/28F;
+
+    .line 82
+    .line 83
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 84
+    .line 85
+    .line 86
+    move-result-object v0
+
+    .line 87
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 88
+    .line 89
+    .line 90
     move-result v0
 
-    .line 6
-    return v0
+    .line 91
+    if-eqz v0, :cond_1
+
+    .line 92
+    .line 93
+    iget-object v1, p0, LX/34Y;->A00:Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;
+
+    .line 94
+    .line 95
+    sget-object v0, LX/1of;->OFF:LX/1of;
+
+    .line 96
+    .line 97
+    invoke-virtual {v1, v0}, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03(LX/1of;)V
+
+    .line 98
+    .line 99
+    .line 100
+    iget-object v0, v1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/3GU;
+
+    .line 101
+    .line 102
+    goto :goto_0
 .end method

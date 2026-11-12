@@ -1,18 +1,21 @@
-.class public final LX/1Ii;
-.super LX/1Bn;
+.class public final LX/1iI;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/21P;
+.implements LX/2SR;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CheckApprovedMachineMethod"
 
 
 # direct methods
-.method public constructor <init>(I[I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
@@ -22,238 +25,152 @@
 
 
 # virtual methods
-.method public final ACD()Lcom/facebook/graphql/enums/GraphQLAutofillQRTTestGroup;
-    .locals 2
+.method public final bridge synthetic AJo(Ljava/lang/Object;)LX/2SB;
+    .locals 3
 
     .line 0
-    sget-object v1, Lcom/facebook/graphql/enums/GraphQLAutofillQRTTestGroup;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLAutofillQRTTestGroup;
+    check-cast p1, Lcom/facebook/account/twofac/protocol/CheckApprovedMachineParams;
 
     .line 1
     .line 2
-    const v0, -0x5ee15ca9
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 3
     .line 4
     .line 5
-    invoke-virtual {p0, v0, v1}, LX/1Bn;->getCachedEnum(ILjava/lang/Enum;)Ljava/lang/Enum;
+    move-result-object v2
 
     .line 6
+    iget-wide v0, p1, Lcom/facebook/account/twofac/protocol/CheckApprovedMachineParams;->A00:J
+
     .line 7
     .line 8
-    move-result-object v0
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     .line 9
-    check-cast v0, Lcom/facebook/graphql/enums/GraphQLAutofillQRTTestGroup;
-
     .line 10
     .line 11
+    move-result-object v1
+
+    .line 12
+    const-string/jumbo v0, "u"
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-static {v0, v1, v2}, LX/0X1;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
+
+    .line 16
+    .line 17
+    .line 18
+    iget-object v1, p1, Lcom/facebook/account/twofac/protocol/CheckApprovedMachineParams;->A01:Ljava/lang/String;
+
+    .line 19
+    .line 20
+    const-string/jumbo v0, "m"
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-static {v0, v1, v2}, LX/0X1;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-static {}, LX/2SA;->A05()LX/2SA;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v1
+
+    .line 30
+    const-string/jumbo v0, "checkApprovedMachine"
+
+    .line 31
+    .line 32
+    .line 33
+    iput-object v0, v1, LX/2SA;->A0C:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    const-string v0, "GET"
+
+    .line 36
+    .line 37
+    iput-object v0, v1, LX/2SA;->A0D:Ljava/lang/String;
+
+    .line 38
+    .line 39
+    const-string/jumbo v0, "check_approved_machine"
+
+    .line 40
+    .line 41
+    .line 42
+    iput-object v0, v1, LX/2SA;->A0E:Ljava/lang/String;
+
+    .line 43
+    .line 44
+    iput-object v2, v1, LX/2SA;->A0I:Ljava/util/List;
+
+    .line 45
+    .line 46
+    sget-object v0, Lcom/facebook/http/interfaces/RequestPriority;->INTERACTIVE:Lcom/facebook/http/interfaces/RequestPriority;
+
+    .line 47
+    .line 48
+    invoke-virtual {v1, v0}, LX/2SA;->A07(Lcom/facebook/http/interfaces/RequestPriority;)V
+
+    .line 49
+    .line 50
+    .line 51
+    sget-object v0, LX/1sv;->JSONPARSER:LX/1sv;
+
+    .line 52
+    .line 53
+    iput-object v0, v1, LX/2SA;->A06:LX/1sv;
+
+    .line 54
+    .line 55
+    invoke-static {v1}, LX/2SA;->A01(LX/2SA;)LX/2SB;
+
+    .line 56
+    .line 57
+    .line 58
+    move-result-object v0
+
+    .line 59
     return-object v0
 .end method
 
-.method public final ACE()Z
-    .locals 1
-
-    .line 0
-    const v0, 0x7a0c2719
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final ACF()I
-    .locals 1
-
-    .line 0
-    const v0, -0x2a520ec5
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getIntValue(I)I
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final ADh()I
-    .locals 1
-
-    .line 0
-    const v0, 0x722bff4e
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getIntValue(I)I
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final AGP()Z
-    .locals 1
-
-    .line 0
-    const v0, -0x115b74f9
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final AHQ()Z
-    .locals 1
-
-    .line 0
-    const v0, -0x5ffedd55
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final AHR()Z
-    .locals 1
-
-    .line 0
-    const v0, 0x3a69fdc2
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final AHS()Z
-    .locals 1
-
-    .line 0
-    const v0, -0x19a409c0
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final AHT()Z
-    .locals 1
-
-    .line 0
-    const v0, -0x7dc4c0f0
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getBooleanValue(I)Z
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final AJo()I
-    .locals 1
-
-    .line 0
-    const v0, 0x5323b6da
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getIntValue(I)I
-
-    .line 4
-    .line 5
-    .line 6
-    move-result v0
-
-    .line 7
-    return v0
-.end method
-
-.method public final AMq()Lcom/facebook/graphql/enums/GraphQLSystemAutofillQRTTestGroup;
+.method public final bridge synthetic AK1(LX/2NB;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
     .line 0
-    sget-object v1, Lcom/facebook/graphql/enums/GraphQLSystemAutofillQRTTestGroup;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLSystemAutofillQRTTestGroup;
+    invoke-virtual {p1}, LX/2NB;->A04()V
 
     .line 1
     .line 2
-    const v0, 0x7bf01bfb
-
     .line 3
+    invoke-virtual {p1}, LX/2NB;->A01()LX/3oD;
+
     .line 4
     .line 5
-    invoke-virtual {p0, v0, v1}, LX/1Bn;->getCachedEnum(ILjava/lang/Enum;)Ljava/lang/Enum;
-
     .line 6
-    .line 7
-    .line 8
-    move-result-object v0
+    move-result-object v1
 
+    .line 7
+    const-class v0, Lcom/facebook/account/twofac/protocol/CheckApprovedMachineMethod$Result;
+
+    .line 8
     .line 9
-    check-cast v0, Lcom/facebook/graphql/enums/GraphQLSystemAutofillQRTTestGroup;
+    invoke-virtual {v1, v0}, LX/3oD;->A11(Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 10
     .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
     return-object v0
 .end method

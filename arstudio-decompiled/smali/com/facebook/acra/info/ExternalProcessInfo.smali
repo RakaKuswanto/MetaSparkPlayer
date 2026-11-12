@@ -1,4 +1,4 @@
-.class public Lcom/facebook/acra/info/ExternalProcessInfo;
+.class public final Lcom/facebook/acra/info/ExternalProcessInfo;
 .super Ljava/lang/Object;
 .source ""
 
@@ -6,7 +6,7 @@
 # instance fields
 .field public final acraFields:Ljava/util/LinkedHashMap;
 
-.field public mMessage:Ljava/lang/String;
+.field public message:Ljava/lang/String;
 
 .field public pid:Ljava/lang/Integer;
 
@@ -39,30 +39,38 @@
 
 
 # virtual methods
-.method public getAcraField(Ljava/lang/String;)Ljava/lang/String;
+.method public final getAcraField(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/acra/info/ExternalProcessInfo;->acraFields:Ljava/util/LinkedHashMap;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-virtual {v0, p1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iget-object v0, p0, Lcom/facebook/acra/info/ExternalProcessInfo;->acraFields:Ljava/util/LinkedHashMap;
 
+    .line 5
     .line 6
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 7
     .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    check-cast v0, Ljava/lang/String;
+
+    .line 11
+    .line 12
     return-object v0
 .end method
 
-.method public getAcraFields()Ljava/util/Map;
+.method public final getAcraFields()Ljava/util/Map;
     .locals 1
 
     .line 0
@@ -78,21 +86,26 @@
     move-result-object v0
 
     .line 6
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 7
+    .line 8
+    .line 9
     return-object v0
 .end method
 
-.method public getMessage()Ljava/lang/String;
+.method public final getMessage()Ljava/lang/String;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/acra/info/ExternalProcessInfo;->mMessage:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/acra/info/ExternalProcessInfo;->message:Ljava/lang/String;
 
     .line 1
     .line 2
     return-object v0
 .end method
 
-.method public getPid()Ljava/lang/Integer;
+.method public final getPid()Ljava/lang/Integer;
     .locals 1
 
     .line 0
@@ -103,34 +116,39 @@
     return-object v0
 .end method
 
-.method public setAcraField(Ljava/lang/String;Ljava/lang/String;)V
+.method public final setAcraField(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/acra/info/ExternalProcessInfo;->acraFields:Ljava/util/LinkedHashMap;
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 3
+    iget-object v0, p0, Lcom/facebook/acra/info/ExternalProcessInfo;->acraFields:Ljava/util/LinkedHashMap;
+
     .line 4
     .line 5
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
     return-void
 .end method
 
-.method public setMessage(Ljava/lang/String;)V
+.method public final setMessage(Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/acra/info/ExternalProcessInfo;->mMessage:Ljava/lang/String;
+    iput-object p1, p0, Lcom/facebook/acra/info/ExternalProcessInfo;->message:Ljava/lang/String;
 
     .line 1
     .line 2
     return-void
 .end method
 
-.method public setPid(Ljava/lang/Integer;)V
+.method public final setPid(Ljava/lang/Integer;)V
     .locals 0
 
     .line 0

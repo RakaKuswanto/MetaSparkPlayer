@@ -1,9 +1,9 @@
-.class public final LX/5uq;
+.class public final LX/5uQ;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5vW;
+.implements LX/5uA;
 
 
 # direct methods
@@ -21,176 +21,92 @@
 
 
 # virtual methods
-.method public final A73([B)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final A7t([B)LX/5ux;
+.method public final A31(LX/5tG;)Z
     .locals 1
 
-    .line 0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final ADy()I
-    .locals 1
-
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final AHZ(Ljava/util/HashMap;Ljava/util/List;[BI)LX/6LE;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final AKi()LX/2tv;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final Afa()[B
-    .locals 2
-
-    .line 0
-    const-string v1, "Attempting to open a session using a dummy ExoMediaDrm."
-
-    .line 1
-    .line 2
-    new-instance v0, Landroid/media/MediaDrmException;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, Landroid/media/MediaDrmException;-><init>(Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    throw v0
-.end method
-
-.method public final Agp([B[B)[B
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final Agq([B)V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final AhQ([B)Ljava/util/Map;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final Ajx(Ljava/lang/String;[B)Z
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final Ak6([B[B)V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final AmN(LX/5uw;)V
+.method public final A32(Ljava/util/List;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final synthetic Amf(LX/5zd;[B)V
+.method public final A54()V
     .locals 0
 
     return-void
 .end method
 
-.method public final Amt(Ljava/lang/String;Ljava/lang/String;)V
+.method public final AEg()LX/5va;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AGS()Ljava/util/List;
+    .locals 1
+
+    .line 0
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final ANJ()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ANs(LX/5to;LX/5tk;LX/5td;LX/5aI;LX/5rb;I)V
     .locals 0
 
     return-void
+.end method
+
+.method public final AQF()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final Ahd(LX/5tG;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getSurface()Landroid/view/Surface;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/434;->A0s()Ljava/lang/IllegalStateException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
 .method public final release()V

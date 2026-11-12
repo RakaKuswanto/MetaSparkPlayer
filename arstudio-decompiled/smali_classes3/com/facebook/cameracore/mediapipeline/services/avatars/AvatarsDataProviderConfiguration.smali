@@ -1,10 +1,10 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;
-.super LX/5Vj;
+.super LX/68F;
 .source ""
 
 
 # static fields
-.field public static final AVATAR_DATA_PROVIDER_TYPE_KEY:LX/5TT;
+.field public static final AVATAR_DATA_PROVIDER_TYPE_KEY:LX/67w;
 
 
 # instance fields
@@ -12,9 +12,9 @@
 
 .field public final mAvatarsNativeInputDelegateBridge:Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsNativeInputDelegate;
 
-.field public final mDelegate:LX/5WG;
+.field public final mDelegate:LX/6BE;
 
-.field public final mTokenType:LX/6Hw;
+.field public final mTokenType:LX/6Wa;
 
 .field public final mUserId:Ljava/lang/String;
 
@@ -24,27 +24,27 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/5Tk;->AvatarsDataProvider:LX/5Tk;
+    sget-object v1, LX/63t;->AvatarsDataProvider:LX/63t;
 
     .line 1
     .line 2
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/5TT;-><init>(LX/5Tk;)V
+    invoke-direct {v0, v1}, LX/67w;-><init>(LX/63t;)V
 
     .line 5
     .line 6
     .line 7
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->AVATAR_DATA_PROVIDER_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->AVATAR_DATA_PROVIDER_TYPE_KEY:LX/67w;
 
     .line 8
     .line 9
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;LX/6Hw;LX/5WG;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;LX/6Wa;LX/6BE;)V
     .locals 6
 
     .line 268435456
@@ -66,7 +66,7 @@
     move-object v4, p4
 
     .line 268435462
-    invoke-direct/range {v0 .. v5}, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;-><init>(Ljava/lang/String;Ljava/lang/String;LX/6Hw;LX/5WG;Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsNativeInputDelegate;)V
+    invoke-direct/range {v0 .. v5}, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;-><init>(Ljava/lang/String;Ljava/lang/String;LX/6Wa;LX/6BE;Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsNativeInputDelegate;)V
 
     .line 268435463
     .line 268435464
@@ -74,11 +74,11 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;LX/6Hw;LX/5WG;Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsNativeInputDelegate;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;LX/6Wa;LX/6BE;Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsNativeInputDelegate;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5Vj;-><init>()V
+    invoke-direct {p0}, LX/68F;-><init>()V
 
     .line 1
     .line 2
@@ -91,11 +91,11 @@
 
     .line 6
     .line 7
-    iput-object p3, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->mTokenType:LX/6Hw;
+    iput-object p3, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->mTokenType:LX/6Wa;
 
     .line 8
     .line 9
-    iput-object p4, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->mDelegate:LX/5WG;
+    iput-object p4, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->mDelegate:LX/6BE;
 
     .line 10
     .line 11
@@ -146,22 +146,21 @@
     return-object v0
 .end method
 
-.method public getDelegate()LX/5WG;
+.method public getDelegate()LX/6BE;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->mDelegate:LX/5WG;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
     return-object v0
 .end method
 
-.method public getTokenType()LX/6Hw;
+.method public getTokenType()LX/6Wa;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->mTokenType:LX/6Hw;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderConfiguration;->mTokenType:LX/6Wa;
 
     .line 1
     .line 2

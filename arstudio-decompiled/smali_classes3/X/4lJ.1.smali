@@ -1,21 +1,35 @@
-.class public final LX/4lJ;
+.class public abstract LX/4Lj;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:Landroid/view/View;
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static A00(Landroid/widget/PopupWindow;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
     .line 1
+    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setEnterTransition(Landroid/transition/Transition;)V
+
     .line 2
     .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static A01(Landroid/widget/PopupWindow;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setExitTransition(Landroid/transition/Transition;)V
+
+    .line 2
+    .line 3
+    .line 4
     return-void
 .end method

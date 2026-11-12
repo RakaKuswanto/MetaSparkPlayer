@@ -1,5 +1,5 @@
-.class public Lcom/facebook/flipper/android/FlipperSocketImpl;
-.super LX/522;
+.class public abstract Lcom/facebook/flipper/android/FlipperSocketImpl;
+.super LX/5pY;
 .source ""
 
 # interfaces

@@ -12,7 +12,7 @@
     .locals 7
 
     .line 0
-    sget-object v1, LX/1QX;->IAB_OPEN_SECURE_INFO_POPUP:LX/1QX;
+    sget-object v1, LX/1bd;->IAB_OPEN_SECURE_INFO_POPUP:LX/1bd;
 
     .line 1
     .line 2
@@ -28,7 +28,7 @@
     move-wide v5, p5
 
     .line 6
-    invoke-direct/range {v0 .. v6}, Lcom/facebook/iabeventlogging/model/IABEvent;-><init>(LX/1QX;Ljava/lang/String;JJ)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/iabeventlogging/model/IABEvent;-><init>(LX/1bd;Ljava/lang/String;JJ)V
 
     .line 7
     .line 8
@@ -50,7 +50,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/0X7;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 3
     .line 4
@@ -63,51 +63,55 @@
     .line 7
     .line 8
     .line 9
-    invoke-static {p0, v0, v2}, Lcom/facebook/iabeventlogging/model/IABEvent;->A01(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {p0, v0, v2}, Lcom/facebook/iabeventlogging/model/IABEvent;->A00(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 10
     .line 11
     .line 12
-    invoke-static {p0, v2}, Lcom/facebook/iabeventlogging/model/IABEvent;->A03(Lcom/facebook/iabeventlogging/model/IABEvent;Ljava/lang/StringBuilder;)V
+    iget-wide v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A01:J
 
     .line 13
     .line 14
-    .line 15
-    iget-wide v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A00:J
+    invoke-static {v2, v0, v1}, Lcom/facebook/iabeventlogging/model/IABEvent;->A03(Ljava/lang/StringBuilder;J)V
 
+    .line 15
     .line 16
     .line 17
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lcom/facebook/iabeventlogging/model/IABEvent;->A00:J
 
     .line 18
     .line 19
-    .line 20
-    const-string v0, ", isSecure="
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 20
     .line 21
     .line 22
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ", isSecure="
 
     .line 23
     .line 24
-    .line 25
-    iget-boolean v0, p0, Lcom/facebook/iabeventlogging/model/IABOpenSecureInfoPopupEvent;->A00:Z
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 25
     .line 26
     .line 27
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, Lcom/facebook/iabeventlogging/model/IABOpenSecureInfoPopupEvent;->A00:Z
 
     .line 28
     .line 29
-    .line 30
-    invoke-static {v2}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    .line 30
     .line 31
     .line 32
+    invoke-static {v2}, LX/001;->A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 33
+    .line 34
+    .line 35
     move-result-object v0
 
-    .line 34
+    .line 36
     return-object v0
 .end method
 

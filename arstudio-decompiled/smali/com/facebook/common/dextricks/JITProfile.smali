@@ -61,7 +61,7 @@
     .locals 7
 
     .line 0
-    invoke-static {p0}, LX/002;->A04(Ljava/io/File;)Ljava/io/FileInputStream;
+    invoke-static {p0}, LX/002;->A02(Ljava/io/File;)Ljava/io/FileInputStream;
 
     .line 1
     .line 2
@@ -137,7 +137,7 @@
     const/4 v0, 0x1
 
     .line 34
-    invoke-static {p0, v2, v0}, LX/002;->A0O(Ljava/io/File;[Ljava/lang/Object;I)V
+    invoke-static {p0, v2, v0}, LX/001;->A0q(Ljava/io/File;[Ljava/lang/Object;I)V
 
     .line 35
     .line 36
@@ -213,7 +213,7 @@
 
     .line 7
     .line 8
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 9
     .line 10
@@ -315,7 +315,7 @@
 
     .line 9
     .line 10
-    invoke-static {v1, v0, v2}, LX/00I;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
+    invoke-static {v1, v0, v2}, LX/004;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     .line 11
     .line 12
@@ -335,7 +335,7 @@
 
     .line 19
     .line 20
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 21
     .line 22
@@ -357,7 +357,7 @@
     const/4 v0, 0x1
 
     .line 30
-    invoke-static {p0, v2, v0}, LX/002;->A0O(Ljava/io/File;[Ljava/lang/Object;I)V
+    invoke-static {p0, v2, v0}, LX/001;->A0q(Ljava/io/File;[Ljava/lang/Object;I)V
 
     .line 31
     .line 32
@@ -771,7 +771,7 @@
     if-eqz p3, :cond_0
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 35
     .line 36
@@ -800,7 +800,7 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 47
     :catch_0
@@ -824,7 +824,7 @@
 
     .line 55
     .line 56
-    invoke-static {p2, v1, v6}, LX/002;->A0O(Ljava/io/File;[Ljava/lang/Object;I)V
+    invoke-static {p2, v1, v6}, LX/001;->A0q(Ljava/io/File;[Ljava/lang/Object;I)V
 
     .line 57
     .line 58
@@ -847,7 +847,7 @@
 
     .line 67
     .line 68
-    invoke-static {p2, v1, v4}, LX/002;->A0O(Ljava/io/File;[Ljava/lang/Object;I)V
+    invoke-static {p2, v1, v4}, LX/001;->A0q(Ljava/io/File;[Ljava/lang/Object;I)V
 
     .line 69
     .line 70
@@ -890,7 +890,7 @@
 
     .line 89
     .line 90
-    invoke-static {p2, v1, v4}, LX/002;->A0O(Ljava/io/File;[Ljava/lang/Object;I)V
+    invoke-static {p2, v1, v4}, LX/001;->A0q(Ljava/io/File;[Ljava/lang/Object;I)V
 
     .line 91
     .line 92
@@ -904,7 +904,7 @@
     if-eqz v8, :cond_2
     :try_end_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     .line 97
     .line 98
@@ -929,95 +929,95 @@
     goto :goto_1
 
     .line 107
+    :catchall_0
+    move-exception v0
+
+    .line 108
+    throw v0
+
+    .line 109
     :catch_2
     move-exception v2
 
-    .line 108
+    .line 110
     move-object v3, v8
 
-    .line 109
+    .line 111
     :goto_1
     :try_start_3
     new-array v1, v7, [Ljava/lang/Object;
 
-    .line 110
-    .line 111
-    const-string v0, "cannot find profile file %s, exception %s"
-
     .line 112
     .line 113
-    aput-object v0, v1, v9
+    const-string v0, "cannot find profile file %s, exception %s"
 
     .line 114
     .line 115
-    invoke-static {p2, v1, v4}, LX/002;->A0O(Ljava/io/File;[Ljava/lang/Object;I)V
+    aput-object v0, v1, v9
 
     .line 116
     .line 117
-    .line 118
-    aput-object v2, v1, v6
+    invoke-static {p2, v1, v4}, LX/001;->A0q(Ljava/io/File;[Ljava/lang/Object;I)V
 
+    .line 118
     .line 119
     .line 120
-    invoke-static {v5, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
+    aput-object v2, v1, v6
 
     .line 121
     .line 122
-    .line 123
-    if-eqz v8, :cond_3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-static {v5, v1}, Lcom/facebook/common/dextricks/Mlog;->w(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 123
     .line 124
     .line 125
-    invoke-virtual {v8}, Ljava/nio/channels/FileLock;->release()V
+    if-eqz v8, :cond_3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 126
     .line 127
+    invoke-virtual {v8}, Ljava/nio/channels/FileLock;->release()V
+
     .line 128
+    .line 129
+    .line 130
     :cond_3
     if-eqz v3, :cond_6
 
-    .line 129
-    .line 130
+    .line 131
+    .line 132
     :goto_2
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
-    .line 131
-    .line 132
     .line 133
+    .line 134
+    .line 135
     return v9
 
-    .line 134
-    :catchall_0
-    move-exception v0
-
-    .line 135
-    if-eqz v8, :cond_4
-
     .line 136
-    .line 137
-    invoke-virtual {v8}, Ljava/nio/channels/FileLock;->release()V
-
-    .line 138
-    .line 139
-    .line 140
-    :cond_4
-    if-eqz v3, :cond_5
-
-    .line 141
-    .line 142
-    invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
-
-    .line 143
-    .line 144
-    .line 145
-    throw v0
-
-    .line 146
     :catchall_1
     move-exception v0
 
+    .line 137
+    if-eqz v8, :cond_4
+
+    .line 138
+    .line 139
+    invoke-virtual {v8}, Ljava/nio/channels/FileLock;->release()V
+
+    .line 140
+    .line 141
+    .line 142
+    :cond_4
+    if-eqz v3, :cond_5
+
+    .line 143
+    .line 144
+    invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
+
+    .line 145
+    .line 146
     .line 147
     :cond_5
     throw v0

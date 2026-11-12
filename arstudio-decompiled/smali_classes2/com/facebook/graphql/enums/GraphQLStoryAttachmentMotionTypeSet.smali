@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLStoryAttachmentMotionTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLStoryAttachmentMotionTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0w()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A10()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -56,33 +56,35 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "ZOOM_IN"
+    const-string/jumbo v0, "ZOOM_IN"
 
     .line 21
     .line 22
+    .line 23
     aput-object v0, v2, v1
 
-    .line 23
     .line 24
+    .line 25
     const/4 v1, 0x4
 
-    .line 25
-    const-string v0, "ZOOM_OUT"
-
     .line 26
-    .line 27
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "ZOOM_OUT"
 
+    .line 27
     .line 28
     .line 29
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 30
+    .line 31
+    .line 32
     move-result-object v0
 
-    .line 31
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLStoryAttachmentMotionTypeSet;->A00:Ljava/util/Set;
-
-    .line 32
     .line 33
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLStoryAttachmentMotionTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 34
+    .line 35
     return-void
 .end method
 
@@ -98,11 +100,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLStoryAttachmentMotionTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLStoryAttachmentMotionTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

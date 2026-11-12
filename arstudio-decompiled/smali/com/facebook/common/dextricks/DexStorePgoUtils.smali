@@ -66,7 +66,7 @@
 
     .line 18
     .line 19
-    invoke-static {p0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 20
     .line 21
@@ -122,19 +122,27 @@
 
     .line 45
     .line 46
-    invoke-static {v0, v5, v1}, LX/001;->A0z(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 47
     .line 48
     .line 49
-    goto :goto_1
+    move-result-object v0
 
     .line 50
-    :cond_2
-    const-string v0, "Cannot get pgo methods since no dex files were given"
+    invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 51
     .line 52
+    .line 53
+    goto :goto_1
+
+    .line 54
+    :cond_2
+    const-string v0, "Cannot get pgo methods since no dex files were given"
+
+    .line 55
+    .line 56
     goto :goto_0
 .end method
 
@@ -218,7 +226,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {p0}, LX/0I1;->A00(Landroid/content/Context;)LX/0I1;
+    invoke-static {p0}, LX/0HL;->A00(Landroid/content/Context;)LX/0HL;
 
     .line 5
     .line 6
@@ -226,7 +234,7 @@
     move-result-object v0
 
     .line 8
-    invoke-virtual {v0, v1}, LX/0I1;->A06(Ljava/io/File;)Ljava/io/File;
+    invoke-virtual {v0, v1}, LX/0HL;->A06(Ljava/io/File;)Ljava/io/File;
 
     .line 9
     .line 10
@@ -249,7 +257,7 @@
     move-result-object v2
 
     .line 4
-    invoke-static {p0}, LX/0I1;->A00(Landroid/content/Context;)LX/0I1;
+    invoke-static {p0}, LX/0HL;->A00(Landroid/content/Context;)LX/0HL;
 
     .line 5
     .line 6
@@ -257,7 +265,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v0}, LX/0I1;->A01(LX/0I1;)Ljava/lang/String;
+    invoke-static {v0}, LX/0HL;->A01(LX/0HL;)Ljava/lang/String;
 
     .line 9
     .line 10
@@ -265,7 +273,7 @@
     move-result-object v1
 
     .line 12
-    iget-object v0, v0, LX/0I1;->A02:Landroid/content/Context;
+    iget-object v0, v0, LX/0HL;->A02:Landroid/content/Context;
 
     .line 13
     .line 14
@@ -296,7 +304,7 @@
 
     .line 28
     .line 29
-    invoke-static {v2, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v2, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 30
     .line 31
@@ -346,7 +354,7 @@
 
     .line 9
     .line 10
-    invoke-static {p0}, LX/0I1;->A00(Landroid/content/Context;)LX/0I1;
+    invoke-static {p0}, LX/0HL;->A00(Landroid/content/Context;)LX/0HL;
 
     .line 11
     .line 12
@@ -354,7 +362,7 @@
     move-result-object v0
 
     .line 14
-    invoke-virtual {v0}, LX/0I1;->A05()Ljava/io/File;
+    invoke-virtual {v0}, LX/0HL;->A05()Ljava/io/File;
 
     .line 15
     .line 16
@@ -409,7 +417,7 @@
     .line 5
     .line 6
     :goto_0
-    invoke-static {p0}, LX/0I1;->A00(Landroid/content/Context;)LX/0I1;
+    invoke-static {p0}, LX/0HL;->A00(Landroid/content/Context;)LX/0HL;
 
     .line 7
     .line 8
@@ -421,7 +429,7 @@
 
     .line 11
     .line 12
-    invoke-static {p0}, LX/0I1;->A01(LX/0I1;)Ljava/lang/String;
+    invoke-static {p0}, LX/0HL;->A01(LX/0HL;)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -462,7 +470,7 @@
     move-result-object v0
 
     .line 31
-    invoke-static {v3, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v3, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 32
     .line 33
@@ -495,11 +503,11 @@
 
     .line 46
     :cond_1
-    iget-object v0, p0, LX/0I1;->A02:Landroid/content/Context;
+    iget-object v0, p0, LX/0HL;->A02:Landroid/content/Context;
 
     .line 47
     .line 48
-    invoke-static {v0, v3}, LX/0I1;->A03(Landroid/content/Context;Ljava/io/File;)Z
+    invoke-static {v0, v3}, LX/0HL;->A03(Landroid/content/Context;Ljava/io/File;)Z
 
     .line 49
     .line 50
@@ -543,7 +551,7 @@
     move-result-object v0
 
     .line 70
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/IOException;
 
     .line 71
     .line 72
@@ -590,7 +598,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {p0}, LX/0I1;->A00(Landroid/content/Context;)LX/0I1;
+    invoke-static {p0}, LX/0HL;->A00(Landroid/content/Context;)LX/0HL;
 
     .line 5
     .line 6
@@ -599,7 +607,7 @@
 
     .line 8
     .line 9
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 10
     .line 11
@@ -633,7 +641,7 @@
     return-object p0
 .end method
 
-.method public static getPgoDataForMainDexStore(Landroid/content/Context;Z)LX/0Hs;
+.method public static getPgoDataForMainDexStore(Landroid/content/Context;Z)LX/0HC;
     .locals 0
 
     .line 0
@@ -668,7 +676,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {p0}, LX/0I1;->A00(Landroid/content/Context;)LX/0I1;
+    invoke-static {p0}, LX/0HL;->A00(Landroid/content/Context;)LX/0HL;
 
     .line 5
     .line 6
@@ -676,7 +684,7 @@
     move-result-object v0
 
     .line 8
-    invoke-virtual {v0}, LX/0I1;->A05()Ljava/io/File;
+    invoke-virtual {v0}, LX/0HL;->A05()Ljava/io/File;
 
     .line 9
     .line 10

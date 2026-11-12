@@ -1,423 +1,150 @@
-.class public final LX/2bB;
+.class public final LX/2Bb;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "XplatServiceDelegate$notifyConfigChanged$1"
+
 
 # instance fields
-.field public A00:LX/0He;
-
-.field public A01:LX/2bA;
-
-.field public A02:LX/2c8;
-
-.field public A03:LX/2b1;
-
-.field public A04:LX/2bU;
+.field public final synthetic A00:Lcom/facebook/mqtt/service/XplatServiceDelegate;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 7
+.method public constructor <init>(Lcom/facebook/mqtt/service/XplatServiceDelegate;)V
+    .locals 0
+
+    iput-object p1, p0, LX/2Bb;->A00:Lcom/facebook/mqtt/service/XplatServiceDelegate;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v5, p0, LX/2Bb;->A00:Lcom/facebook/mqtt/service/XplatServiceDelegate;
 
     .line 1
     .line 2
+    const/4 v0, 0x0
+
     .line 3
-    new-instance v0, LX/2bU;
+    invoke-virtual {v5, v0}, Lcom/facebook/mqtt/service/XplatServiceDelegate;->A0L(Z)Lcom/facebook/mqtt/service/ConnectionConfig;
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/2bU;-><init>()V
-
     .line 6
+    move-result-object v4
+
     .line 7
+    sget-object v3, Lcom/facebook/mqtt/service/XplatServiceDelegate;->A04:LX/2Ba;
+
     .line 8
-    iput-object v0, p0, LX/2bB;->A04:LX/2bU;
-
     .line 9
+    iget-object v0, v3, LX/2Ba;->A00:Lcom/facebook/mqtt/service/ConnectionConfig;
+
     .line 10
-    new-instance v0, LX/2bA;
-
     .line 11
-    .line 12
-    invoke-direct {v0}, LX/2bA;-><init>()V
+    invoke-static {v4, v0}, LX/2AO;->A00(Lcom/facebook/mqtt/service/ConnectionConfig;Lcom/facebook/mqtt/service/ConnectionConfig;)Z
 
+    .line 12
     .line 13
     .line 14
+    move-result v0
+
     .line 15
-    iput-object v0, p0, LX/2bB;->A01:LX/2bA;
+    const-string v2, "MqttXplatService"
 
     .line 16
     .line 17
-    sget-object v1, LX/2bK;->A01:Ljava/util/List;
+    if-nez v0, :cond_0
 
     .line 18
     .line 19
-    const/16 v6, 0xa
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 20
     .line 21
-    invoke-static {v1, v6}, LX/02b;->A0F(Ljava/lang/Iterable;I)I
-
     .line 22
-    .line 23
-    .line 24
-    move-result v0
+    move-result-object v1
 
+    .line 23
+    const-string v0, "Config changed to "
+
+    .line 24
     .line 25
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 26
     .line 27
     .line 28
-    move-result-object v3
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 29
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
     .line 30
     .line 31
-    .line 32
-    move-result-object v2
+    const-string v0, " from "
 
+    .line 32
     .line 33
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 34
     .line 35
     .line 36
-    move-result v0
+    iget-object v0, v3, LX/2Ba;->A00:Lcom/facebook/mqtt/service/ConnectionConfig;
 
     .line 37
-    if-eqz v0, :cond_0
-
     .line 38
-    .line 39
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 39
     .line 40
     .line 41
-    .line 42
     move-result-object v0
 
-    .line 43
-    check-cast v0, LX/2bb;
+    .line 42
+    invoke-static {v2, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 43
     .line 44
     .line 45
-    iget-object v1, v0, LX/2bb;->A01:LX/0Hd;
+    iput-object v4, v3, LX/2Ba;->A00:Lcom/facebook/mqtt/service/ConnectionConfig;
 
     .line 46
     .line 47
-    iget-object v0, v0, LX/2bb;->A02:Ljava/lang/String;
+    invoke-static {v5}, Lcom/facebook/mqtt/service/XplatServiceDelegate;->A01(Lcom/facebook/mqtt/service/XplatServiceDelegate;)V
 
     .line 48
     .line 49
-    invoke-static {v1, v0}, LX/1T6;->A01(Ljava/lang/Object;Ljava/lang/Object;)LX/1T6;
-
     .line 50
+    sget-object v1, Lcom/facebook/mqtt/service/XplatServiceDelegate;->A01:LX/2kr;
+
     .line 51
     .line 52
-    move-result-object v0
+    new-instance v0, LX/2kg;
 
     .line 53
-    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 54
+    invoke-direct {v0, v4, v5}, LX/2kg;-><init>(Lcom/facebook/mqtt/service/ConnectionConfig;Lcom/facebook/mqtt/service/XplatServiceDelegate;)V
+
     .line 55
     .line 56
-    goto :goto_0
-
     .line 57
-    :cond_0
-    invoke-static {}, LX/0Yj;->A0b()Ljava/util/LinkedHashMap;
+    invoke-virtual {v1, v0}, LX/2kr;->A01(Ljava/lang/Runnable;)Z
 
     .line 58
     .line 59
     .line 60
-    move-result-object v4
-
-    .line 61
-    invoke-virtual {v3}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
-    .line 62
-    .line 63
-    .line 64
-    move-result-object v3
-
-    .line 65
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 66
-    .line 67
-    .line 68
-    move-result v0
-
-    .line 69
-    if-eqz v0, :cond_2
-
-    .line 70
-    .line 71
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 72
-    .line 73
-    .line 74
-    move-result-object v2
-
-    .line 75
-    move-object v0, v2
-
-    .line 76
-    check-cast v0, LX/1T6;
-
-    .line 77
-    .line 78
-    iget-object v1, v0, LX/1T6;->first:Ljava/lang/Object;
-
-    .line 79
-    .line 80
-    invoke-virtual {v4, v1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 81
-    .line 82
-    .line 83
-    move-result-object v0
-
-    .line 84
-    if-nez v0, :cond_1
-
-    .line 85
-    .line 86
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 87
-    .line 88
-    .line 89
-    move-result-object v0
-
-    .line 90
-    invoke-virtual {v4, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 91
-    .line 92
-    .line 93
-    :cond_1
-    check-cast v0, Ljava/util/List;
-
-    .line 94
-    .line 95
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 96
-    .line 97
-    .line 98
-    goto :goto_1
-
-    .line 99
-    :cond_2
-    invoke-virtual {v4}, Ljava/util/AbstractMap;->size()I
-
-    .line 100
-    .line 101
-    .line 102
-    move-result v0
-
-    .line 103
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 104
-    .line 105
-    .line 106
-    move-result-object v5
-
-    .line 107
-    invoke-static {v4}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
-
-    .line 108
-    .line 109
-    .line 110
-    move-result-object v4
-
-    .line 111
-    :goto_2
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 112
-    .line 113
-    .line 114
-    move-result v0
-
-    .line 115
-    if-eqz v0, :cond_4
-
-    .line 116
-    .line 117
-    invoke-static {v4}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
-
-    .line 118
-    .line 119
-    .line 120
-    move-result-object v0
-
-    .line 121
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    .line 122
-    .line 123
-    .line 124
-    move-result-object v3
-
-    .line 125
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    .line 126
-    .line 127
-    .line 128
-    move-result-object v1
-
-    .line 129
-    check-cast v1, Ljava/lang/Iterable;
-
-    .line 130
-    .line 131
-    invoke-static {v1, v6}, LX/02b;->A0F(Ljava/lang/Iterable;I)I
-
-    .line 132
-    .line 133
-    .line 134
-    move-result v0
-
-    .line 135
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 136
-    .line 137
-    .line 138
-    move-result-object v2
-
-    .line 139
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 140
-    .line 141
-    .line 142
-    move-result-object v1
-
-    .line 143
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 144
-    .line 145
-    .line 146
-    move-result v0
-
-    .line 147
-    if-eqz v0, :cond_3
-
-    .line 148
-    .line 149
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 150
-    .line 151
-    .line 152
-    move-result-object v0
-
-    .line 153
-    check-cast v0, LX/1T6;
-
-    .line 154
-    .line 155
-    iget-object v0, v0, LX/1T6;->second:Ljava/lang/Object;
-
-    .line 156
-    .line 157
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 158
-    .line 159
-    .line 160
-    goto :goto_3
-
-    .line 161
-    :cond_3
-    invoke-static {v2}, LX/00L;->A0A(Ljava/lang/Iterable;)Ljava/util/Set;
-
-    .line 162
-    .line 163
-    .line 164
-    move-result-object v0
-
-    .line 165
-    invoke-static {v3, v0}, LX/1T6;->A01(Ljava/lang/Object;Ljava/lang/Object;)LX/1T6;
-
-    .line 166
-    .line 167
-    .line 168
-    move-result-object v0
-
-    .line 169
-    invoke-virtual {v5, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 170
-    .line 171
-    .line 172
-    goto :goto_2
-
-    .line 173
-    :cond_4
-    invoke-static {v5}, LX/1Tp;->A02(Ljava/lang/Iterable;)Ljava/util/Map;
-
-    .line 174
-    .line 175
-    .line 176
-    move-result-object v1
-
-    .line 177
-    new-instance v0, LX/0He;
-
-    .line 178
-    .line 179
-    invoke-direct {v0, v1}, LX/0He;-><init>(Ljava/util/Map;)V
-
-    .line 180
-    .line 181
-    .line 182
-    iput-object v0, p0, LX/2bB;->A00:LX/0He;
-
-    .line 183
-    .line 184
-    new-instance v0, LX/2c7;
-
-    .line 185
-    .line 186
-    invoke-direct {v0}, LX/2c7;-><init>()V
-
-    .line 187
-    .line 188
-    .line 189
-    iput-object v0, p0, LX/2bB;->A02:LX/2c8;
-
-    .line 190
-    .line 191
-    new-instance v0, LX/2c3;
-
-    .line 192
-    .line 193
-    invoke-direct {v0}, LX/2c3;-><init>()V
-
-    .line 194
-    .line 195
-    .line 196
-    iput-object v0, p0, LX/2bB;->A03:LX/2b1;
-
-    .line 197
-    .line 198
+    :cond_0
     return-void
 .end method

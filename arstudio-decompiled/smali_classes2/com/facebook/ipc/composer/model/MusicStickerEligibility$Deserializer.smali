@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 5
 
     .line 0
@@ -30,7 +30,7 @@
     .line 2
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 3
     .line 4
@@ -38,7 +38,7 @@
     move-result-object v3
 
     .line 6
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 7
     .line 8
@@ -46,7 +46,7 @@
 
     .line 9
     .line 10
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 11
     .line 12
@@ -101,7 +101,7 @@
 
     .line 37
     .line 38
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    invoke-virtual {p1}, LX/3oD;->A19()Z
 
     .line 39
     .line 40
@@ -113,90 +113,96 @@
 
     .line 43
     :goto_0
-    const-string v0, "can_use_music_sticker"
+    const-string/jumbo v0, "can_use_music_sticker"
 
     .line 44
     .line 45
+    .line 46
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 46
     .line 47
     .line 48
+    .line 49
     move-result v0
 
-    .line 49
+    .line 50
     if-eqz v0, :cond_3
 
-    .line 50
     .line 51
-    invoke-virtual {p1}, LX/27m;->A15()Z
-
     .line 52
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
     .line 53
     .line 54
+    .line 55
     move-result v2
 
-    .line 55
+    .line 56
     :cond_2
     :goto_1
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
-    .line 56
     .line 57
     .line 58
+    .line 59
     move-result-object v3
 
-    .line 59
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
-
     .line 60
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
+
     .line 61
+    .line 62
     if-ne v3, v0, :cond_0
 
-    .line 62
     .line 63
+    .line 64
     goto :goto_2
 
-    .line 64
-    :cond_3
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
-
     .line 65
+    :cond_3
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
+
     .line 66
     .line 67
+    .line 68
     goto :goto_1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 68
+    .line 69
     :goto_2
     new-instance v0, Lcom/facebook/ipc/composer/model/MusicStickerEligibility;
 
-    .line 69
     .line 70
+    .line 71
     invoke-direct {v0, v2, v1}, Lcom/facebook/ipc/composer/model/MusicStickerEligibility;-><init>(ZZ)V
 
-    .line 71
     .line 72
     .line 73
+    .line 74
     return-object v0
 
-    .line 74
+    .line 75
     :catch_0
     move-exception v1
 
-    .line 75
+    .line 76
     const-class v0, Lcom/facebook/ipc/composer/model/MusicStickerEligibility;
 
-    .line 76
     .line 77
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
     .line 78
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 79
     .line 80
-    const/4 v0, 0x0
-
     .line 81
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v0
+
+    .line 85
     throw v0
 .end method

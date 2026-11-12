@@ -1,92 +1,310 @@
 .class public final LX/22C;
-.super Ljava/lang/Object;
+.super LX/22E;
 .source ""
 
 # interfaces
-.implements Lorg/apache/http/HttpEntity;
-.implements LX/22G;
+.implements Ljava/util/NavigableMap;
 
 
-# static fields
-.field public static final A01:Lorg/apache/http/message/BasicHeader;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/common/collect/AbstractMapBasedMultimap<",
+        "TK;TV;>.SortedAsMap;",
+        "Ljava/util/NavigableMap<",
+        "TK;",
+        "Ljava/util/Collection<",
+        "TV;>;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field public final A00:LX/0OQ;
+.field public final synthetic A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "submap"
+        }
+    .end annotation
 
     .line 0
-    const-string v2, "Content-Type"
+    iput-object p1, p0, LX/22C;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
     .line 1
     .line 2
-    const-string v1, "application/x-www-form-urlencoded"
+    invoke-direct {p0, p1, p2}, LX/22E;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/SortedMap;)V
 
     .line 3
     .line 4
-    new-instance v0, Lorg/apache/http/message/BasicHeader;
-
     .line 5
-    .line 6
-    invoke-direct {v0, v2, v1}, Lorg/apache/http/message/BasicHeader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 7
-    .line 8
-    .line 9
-    sput-object v0, LX/22C;->A01:Lorg/apache/http/message/BasicHeader;
-
-    .line 10
-    .line 11
     return-void
 .end method
 
-.method public constructor <init>(LX/0OQ;)V
-    .locals 0
+.method private final A00(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableEntry;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entryIterator"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/22C;->A00:LX/0OQ;
+    move-result v0
 
     .line 4
+    if-nez v0, :cond_0
+
     .line 5
-    return-void
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return-object v0
+
+    .line 8
+    :cond_0
+    invoke-static {p1}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v2
+
+    .line 12
+    iget-object v0, p0, LX/22C;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
+
+    .line 13
+    .line 14
+    invoke-virtual {v0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->A04()Ljava/util/Collection;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v1
+
+    .line 18
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    check-cast v0, Ljava/util/Collection;
+
+    .line 23
+    .line 24
+    invoke-interface {v1, v0}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v2
+
+    .line 34
+    check-cast v1, Ljava/util/List;
+
+    .line 35
+    .line 36
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v1
+
+    .line 40
+    new-instance v0, Lcom/google/common/collect/ImmutableEntry;
+
+    .line 41
+    .line 42
+    invoke-direct {v0, v2, v1}, Lcom/google/common/collect/ImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 43
+    .line 44
+    .line 45
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final consumeContent()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final getContent()Ljava/io/InputStream;
-    .locals 2
+.method public final bridge synthetic A02()Ljava/util/SortedSet;
+    .locals 1
 
     .line 0
-    new-instance v0, Ljava/io/ByteArrayOutputStream;
+    invoke-super {p0}, LX/22E;->A02()Ljava/util/SortedSet;
 
     .line 1
     .line 2
-    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final ceilingEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
 
     .line 3
     .line 4
-    .line 5
-    invoke-virtual {p0, v0}, LX/22C;->writeTo(Ljava/io/OutputStream;)V
+    check-cast v0, Ljava/util/NavigableMap;
 
+    .line 5
     .line 6
+    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->ceilingEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+
     .line 7
     .line 8
-    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    .line 9
+    move-result-object v0
+
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    return-object v0
+
+    .line 14
+    :cond_0
+    invoke-virtual {p0, v0}, LX/21Y;->A01(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableEntry;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    return-object v0
+.end method
+
+.method public final ceilingKey(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->ceilingKey(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+.end method
+
+.method public final descendingKeySet()Ljava/util/NavigableSet;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/22C;->descendingMap()Ljava/util/NavigableMap;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, Ljava/util/NavigableMap;->navigableKeySet()Ljava/util/NavigableSet;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final descendingMap()Ljava/util/NavigableMap;
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/22C;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 5
+    .line 6
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 7
+    .line 8
+    invoke-interface {v0}, Ljava/util/NavigableMap;->descendingMap()Ljava/util/NavigableMap;
 
     .line 9
     .line 10
@@ -94,11 +312,11 @@
     move-result-object v1
 
     .line 12
-    new-instance v0, Ljava/io/ByteArrayInputStream;
+    new-instance v0, LX/22C;
 
     .line 13
     .line 14
-    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    invoke-direct {v0, v2, v1}, LX/22C;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
 
     .line 15
     .line 16
@@ -106,164 +324,611 @@
     return-object v0
 .end method
 
-.method public final getContentEncoding()Lorg/apache/http/Header;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getContentLength()J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public final getContentType()Lorg/apache/http/Header;
+.method public final firstEntry()Ljava/util/Map$Entry;
     .locals 1
 
     .line 0
-    sget-object v0, LX/22C;->A01:Lorg/apache/http/message/BasicHeader;
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
 
     .line 1
     .line 2
-    return-object v0
-.end method
-
-.method public final isChunked()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final isRepeatable()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final isStreaming()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final release()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/22C;->A00:LX/0OQ;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/0Ji;->A01()V
+    check-cast v0, Ljava/util/SortedMap;
 
     .line 3
     .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
     .line 5
-    return-void
-.end method
-
-.method public final writeTo(Ljava/io/OutputStream;)V
-    .locals 4
-
-    .line 0
-    new-instance v2, LX/23C;
-
-    .line 1
-    .line 2
-    invoke-direct {v2, p1}, LX/23C;-><init>(Ljava/io/OutputStream;)V
-
-    .line 3
-    .line 4
-    .line 5
-    instance-of v0, p1, Ljava/io/ByteArrayOutputStream;
-
     .line 6
-    .line 7
-    if-nez v0, :cond_1
+    invoke-interface {v0}, Ljava/util/NavigableMap;->firstEntry()Ljava/util/Map$Entry;
 
+    .line 7
     .line 8
     .line 9
-    instance-of v0, p1, Ljava/io/BufferedOutputStream;
+    move-result-object v0
 
     .line 10
+    if-nez v0, :cond_0
+
     .line 11
-    if-nez v0, :cond_1
-
     .line 12
-    .line 13
-    const/16 v0, 0x800
-
-    .line 14
-    .line 15
-    new-instance v1, Ljava/io/BufferedOutputStream;
-
-    .line 16
-    .line 17
-    invoke-direct {v1, v2, v0}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
-
-    .line 18
-    .line 19
-    .line 20
-    move-object v0, v1
-
-    .line 21
-    :goto_0
-    new-instance v3, LX/23O;
-
-    .line 22
-    .line 23
-    invoke-direct {v3, v1}, LX/23O;-><init>(Ljava/io/OutputStream;)V
-
-    .line 24
-    .line 25
-    .line 26
-    invoke-static {}, LX/0OP;->A00()LX/0OP;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v2
-
-    .line 30
-    iget-object v1, p0, LX/22C;->A00:LX/0OQ;
-
-    .line 31
-    .line 32
-    invoke-virtual {v2, v1, v3}, LX/0OP;->A9r(LX/0Ji;Ljava/io/Writer;)V
-
-    .line 33
-    .line 34
-    .line 35
-    if-eqz v0, :cond_0
-
-    .line 36
-    .line 37
-    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
-
-    .line 38
-    .line 39
-    .line 40
-    :cond_0
-    return-void
-
-    .line 41
-    :cond_1
     const/4 v0, 0x0
 
-    .line 42
-    move-object v1, v2
+    .line 13
+    return-object v0
 
-    .line 43
-    goto :goto_0
+    .line 14
+    :cond_0
+    invoke-virtual {p0, v0}, LX/21Y;->A01(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableEntry;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    return-object v0
+.end method
+
+.method public final floorEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->floorEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    return-object v0
+
+    .line 14
+    :cond_0
+    invoke-virtual {p0, v0}, LX/21Y;->A01(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableEntry;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    return-object v0
+.end method
+
+.method public final floorKey(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->floorKey(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+.end method
+
+.method public final headMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "toKey",
+            "inclusive"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v2, p0, LX/22C;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 5
+    .line 6
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 7
+    .line 8
+    invoke-interface {v0, p1, p2}, Ljava/util/NavigableMap;->headMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    new-instance v0, LX/22C;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, v2, v1}, LX/22C;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
+.end method
+
+.method public final higherEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->higherEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    return-object v0
+
+    .line 14
+    :cond_0
+    invoke-virtual {p0, v0}, LX/21Y;->A01(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableEntry;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    return-object v0
+.end method
+
+.method public final higherKey(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->higherKey(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+.end method
+
+.method public final bridge synthetic keySet()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, LX/22E;->A02()Ljava/util/SortedSet;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final lastEntry()Ljava/util/Map$Entry;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 5
+    .line 6
+    invoke-interface {v0}, Ljava/util/NavigableMap;->lastEntry()Ljava/util/Map$Entry;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    return-object v0
+
+    .line 14
+    :cond_0
+    invoke-virtual {p0, v0}, LX/21Y;->A01(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableEntry;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    return-object v0
+.end method
+
+.method public final lowerEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->lowerEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    return-object v0
+
+    .line 14
+    :cond_0
+    invoke-virtual {p0, v0}, LX/21Y;->A01(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableEntry;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    return-object v0
+.end method
+
+.method public final lowerKey(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 5
+    .line 6
+    invoke-interface {v0, p1}, Ljava/util/NavigableMap;->lowerKey(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+.end method
+
+.method public final navigableKeySet()Ljava/util/NavigableSet;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, LX/22E;->A02()Ljava/util/SortedSet;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    check-cast v0, Ljava/util/NavigableSet;
+
+    .line 5
+    .line 6
+    return-object v0
+.end method
+
+.method public final pollFirstEntry()Ljava/util/Map$Entry;
+    .locals 1
+
+    .line 0
+    invoke-static {p0}, LX/001;->A0d(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-direct {p0, v0}, LX/22C;->A00(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableEntry;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final pollLastEntry()Ljava/util/Map$Entry;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/22C;->descendingMap()Ljava/util/NavigableMap;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, Ljava/util/NavigableMap;->entrySet()Ljava/util/Set;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    invoke-direct {p0, v0}, LX/22C;->A00(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableEntry;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    return-object v0
+.end method
+
+.method public final subMap(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableMap;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "fromKey",
+            "fromInclusive",
+            "toKey",
+            "toInclusive"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v2, p0, LX/22C;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 5
+    .line 6
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 7
+    .line 8
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/NavigableMap;->subMap(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableMap;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    new-instance v0, LX/22C;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, v2, v1}, LX/22C;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
+.end method
+
+.method public final tailMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "fromKey",
+            "inclusive"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v2, p0, LX/22C;->A00:Lcom/google/common/collect/AbstractMapBasedMultimap;
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/21Y;->A00:Ljava/util/Map;
+
+    .line 3
+    .line 4
+    check-cast v0, Ljava/util/SortedMap;
+
+    .line 5
+    .line 6
+    check-cast v0, Ljava/util/NavigableMap;
+
+    .line 7
+    .line 8
+    invoke-interface {v0, p1, p2}, Ljava/util/NavigableMap;->tailMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
+    new-instance v0, LX/22C;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, v2, v1}, LX/22C;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/NavigableMap;)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
 .end method

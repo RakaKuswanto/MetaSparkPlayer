@@ -1,14 +1,21 @@
 .class public final LX/01F;
-.super LX/02e;
+.super LX/02U;
 .source ""
+
+# interfaces
+.implements Ljava/util/concurrent/RunnableFuture;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "HandlerExecutorServiceImpl$ListenableScheduledRunnableFuture"
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/os/Handler;Ljava/lang/Object;Ljava/lang/Runnable;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/02e;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, LX/02U;-><init>(Landroid/os/Handler;Ljava/lang/Object;Ljava/lang/Runnable;)V
 
     .line 1
     .line 2
@@ -16,12 +23,14 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;)V
+    .locals 0
 
-# virtual methods
-.method public final A00(Landroid/content/Context;Landroid/content/Intent;LX/06M;Ljava/lang/Object;)Z
-    .locals 1
+    .line 268435456
+    invoke-direct {p0, p1, p2}, LX/02U;-><init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;)V
 
-    const/4 v0, 0x1
-
-    return v0
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
 .end method

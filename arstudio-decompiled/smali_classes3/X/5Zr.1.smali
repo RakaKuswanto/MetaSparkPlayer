@@ -1,11 +1,21 @@
-.class public interface abstract LX/5Zr;
-.super Ljava/lang/Object;
+.class public abstract LX/5Zr;
+.super LX/5Zs;
 .source ""
 
 
-# virtual methods
-.method public abstract Apc(Landroid/view/Surface;LX/5ar;)V
-.end method
+# instance fields
+.field public A00:[F
 
-.method public abstract Apd(LX/5ar;)V
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, LX/5Zs;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

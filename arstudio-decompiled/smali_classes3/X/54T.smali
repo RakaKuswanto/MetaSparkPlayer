@@ -2,111 +2,97 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Comparable;
-
 
 # instance fields
-.field public final A00:J
-
-.field public final A01:LX/54G;
+.field public final A00:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/54G;J)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/54T;->A01:LX/54G;
+    iput-object p1, p0, LX/54T;->A00:Ljava/lang/Object;
 
-    .line 4
-    .line 5
-    iput-wide p2, p0, LX/54T;->A00:J
-
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     .line 0
+    const/4 v3, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_0
+
+    .line 2
+    .line 3
+    instance-of v0, p1, LX/54T;
+
+    .line 4
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    if-eqz v0, :cond_1
+
+    .line 7
+    .line 8
     check-cast p1, LX/54T;
+
+    .line 9
+    .line 10
+    iget-object v1, p0, LX/54T;->A00:Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    iget-object v0, p1, LX/54T;->A00:Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    if-ne v1, v0, :cond_1
+
+    .line 15
+    .line 16
+    :cond_0
+    return v3
+
+    .line 17
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/54T;->A00:Ljava/lang/Object;
 
     .line 1
     .line 2
-    iget-wide v3, p0, LX/54T;->A00:J
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     .line 3
     .line 4
-    iget-wide v0, p1, LX/54T;->A00:J
-
     .line 5
-    .line 6
-    sub-long/2addr v3, v0
-
-    .line 7
-    const-wide/16 v1, 0x0
-
-    .line 8
-    .line 9
-    cmp-long v0, v3, v1
-
-    .line 10
-    .line 11
-    if-ltz v0, :cond_1
-
-    .line 12
-    .line 13
-    cmp-long v0, v3, v1
-
-    .line 14
-    .line 15
-    if-lez v0, :cond_0
-
-    .line 16
-    .line 17
-    const/4 v0, 0x1
-
-    .line 18
-    return v0
-
-    .line 19
-    :cond_0
-    iget-object v0, p0, LX/54T;->A01:LX/54G;
-
-    .line 20
-    .line 21
-    if-eqz v0, :cond_1
-
-    .line 22
-    .line 23
-    iget-object v0, p1, LX/54T;->A01:LX/54G;
-
-    .line 24
-    .line 25
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
-
-    .line 26
-    .line 27
-    .line 28
     move-result v0
 
-    .line 29
-    return v0
+    .line 6
+    mul-int/lit8 v1, v0, 0x1f
 
-    .line 30
-    :cond_1
-    const/4 v0, -0x1
+    .line 7
+    .line 8
+    const v0, 0x297e87a9
 
-    .line 31
-    return v0
+    .line 9
+    .line 10
+    .line 11
+    add-int/2addr v1, v0
+
+    .line 12
+    return v1
 .end method

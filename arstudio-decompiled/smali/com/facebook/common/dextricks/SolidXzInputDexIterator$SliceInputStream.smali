@@ -147,7 +147,7 @@
 
     .line 268435482
     .line 268435483
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 268435484
     .line 268435485

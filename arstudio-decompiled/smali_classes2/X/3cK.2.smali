@@ -1,46 +1,73 @@
-.class public final LX/3cK;
-.super LX/3dv;
+.class public abstract LX/3ck;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Landroid/app/Application$ActivityLifecycleCallbacks;
-
-.field public final A01:Landroid/app/Application;
-
-.field public final A02:LX/3cI;
-
-
 # direct methods
-.method public constructor <init>(Landroid/app/Application;LX/3cI;)V
-    .locals 1
+.method public static A00(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, LX/3dv;-><init>()V
+    const-string/jumbo v3, "stetho"
 
     .line 1
     .line 2
     .line 3
-    new-instance v0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;
+    const-string v2, "\n"
 
     .line 4
     .line 5
-    invoke-direct {v0, p0}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;-><init>(LX/3cK;)V
+    new-instance v1, Ljava/io/StringWriter;
 
     .line 6
     .line 7
-    .line 8
-    iput-object v0, p0, LX/3cK;->A00:Landroid/app/Application$ActivityLifecycleCallbacks;
+    invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
+    .line 8
     .line 9
     .line 10
-    iput-object p1, p0, LX/3cK;->A01:Landroid/app/Application;
+    new-instance v0, Ljava/io/PrintWriter;
 
     .line 11
     .line 12
-    iput-object p2, p0, LX/3cK;->A02:LX/3cI;
+    invoke-direct {v0, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
     .line 13
     .line 14
+    .line 15
+    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {v0}, Ljava/io/Writer;->flush()V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    invoke-static {p0, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v1
+
+    .line 29
+    const/4 v0, 0x5
+
+    .line 30
+    invoke-static {v0, v3, v1}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    .line 31
+    .line 32
+    .line 33
     return-void
 .end method

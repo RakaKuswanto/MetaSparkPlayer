@@ -1,25 +1,21 @@
-.class public final LX/4kl;
-.super Ljava/lang/Object;
+.class public final LX/4kL;
+.super LX/4kd;
 .source ""
 
 
 # instance fields
-.field public final A00:F
+.field public A00:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/4kd;-><init>(Landroid/view/View;)V
 
     .line 1
     .line 2
     .line 3
-    iput p1, p0, LX/4kl;->A00:F
-
-    .line 4
-    .line 5
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1oR;
+.implements LX/1vr;
 
 
 # instance fields
@@ -23,7 +23,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 5
     .line 6
@@ -59,29 +59,25 @@
     .line 1
     .line 2
     .line 3
-    sget-boolean v0, LX/24E;->A00:Z
+    invoke-static {p1}, Lcom/facebook/graphservice/factory/GraphQLServiceFactory;->initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;)Lcom/facebook/jni/HybridData;
 
     .line 4
     .line 5
-    invoke-static {p1, v0}, Lcom/facebook/graphservice/factory/GraphQLServiceFactory;->initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;Z)Lcom/facebook/jni/HybridData;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
-    .line 9
+    .line 7
     iput-object v0, p0, Lcom/facebook/graphservice/factory/GraphQLServiceFactory;->mHybridData:Lcom/facebook/jni/HybridData;
 
-    .line 10
-    .line 11
+    .line 8
+    .line 9
     return-void
 .end method
 
 .method private native clientDocIdForQueryNameHash(J)Ljava/lang/String;
 .end method
 
-.method public static native initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;Z)Lcom/facebook/jni/HybridData;
+.method public static native initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;)Lcom/facebook/jni/HybridData;
 .end method
 
 .method private native legacyPersistIdForQueryNameHash(J)J
@@ -114,7 +110,7 @@
     .locals 3
 
     .line 0
-    invoke-static {p1}, LX/0JH;->A00(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, LX/0IA;->A00(Ljava/lang/String;)Ljava/lang/String;
 
     .line 1
     .line 2
@@ -205,11 +201,11 @@
     return-object v0
 .end method
 
-.method public newTreeBuilder(Ljava/lang/String;Ljava/lang/Class;I)LX/19O;
+.method public newTreeBuilder(Ljava/lang/String;Ljava/lang/Class;I)LX/1gF;
     .locals 1
 
     .line 536870912
-    const-class v0, LX/1JI;
+    const-class v0, LX/1hB;
 
     .line 536870913
     .line 536870914
@@ -224,7 +220,7 @@
     return-object v0
 .end method
 
-.method public newTreeBuilder(Ljava/lang/String;Ljava/lang/Class;ILcom/facebook/graphservice/interfaces/Tree;)LX/19O;
+.method public newTreeBuilder(Ljava/lang/String;Ljava/lang/Class;ILcom/facebook/graphservice/interfaces/Tree;)LX/1gF;
     .locals 4
 
     .line 268435456
@@ -306,7 +302,7 @@
     .locals 3
 
     .line 0
-    invoke-static {p1}, LX/0JH;->A00(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, LX/0IA;->A00(Ljava/lang/String;)Ljava/lang/String;
 
     .line 1
     .line 2

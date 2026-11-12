@@ -1,17 +1,8 @@
-.class public final LX/3HC;
-.super LX/2uf;
+.class public interface abstract LX/3HC;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/2uf;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract AQW(I)V
 .end method

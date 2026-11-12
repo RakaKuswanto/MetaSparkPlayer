@@ -2,387 +2,452 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/00T;
+
 
 # instance fields
-.field public A00:Ljava/lang/String;
+.field public A00:Ljava/lang/Object;
 
-.field public A01:Ljava/lang/String;
-
-.field public final A02:I
-
-.field public final A03:I
-
-.field public final A04:I
-
-.field public final A05:I
-
-.field public final A06:I
-
-.field public final A07:I
-
-.field public final A08:I
-
-.field public final A09:I
-
-.field public final A0A:I
-
-.field public final A0B:LX/0V7;
-
-.field public final A0C:LX/0Ux;
-
-.field public final A0D:LX/0Tj;
-
-.field public final A0E:LX/0La;
-
-.field public final A0F:LX/0PX;
-
-.field public final A0G:Ljava/lang/String;
-
-.field public final A0H:Ljava/lang/String;
-
-.field public final A0I:Ljava/lang/String;
-
-.field public final A0J:Ljava/util/List;
-
-.field public final A0K:Ljava/util/Map;
-
-.field public final A0L:Ljava/util/Map;
-
-.field public final A0M:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final A0N:Z
-
-.field public final A0O:Z
-
-.field public final A0P:Z
-
-.field public final A0Q:Z
-
-.field public final A0R:Z
-
-.field public final A0S:Z
-
-.field public final A0T:Z
-
-.field public final A0U:Z
-
-.field public final A0V:Z
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>(LX/0V7;LX/0Ux;LX/0Tj;LX/0PX;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/Map;Ljava/util/Map;Ljava/util/concurrent/atomic/AtomicInteger;IIIIIIIIIZZZZZZZZZ)V
-    .locals 9
+.method public constructor <init>(LX/0VG;I)V
+    .locals 0
 
-    const-string v4, " "
+    .line 0
+    iput p2, p0, LX/0Mk;->A01:I
 
-    .line 29714
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/0Mk;->A00:Ljava/lang/Object;
+
+    .line 3
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29715
-    iput-object p5, p0, LX/0Mk;->A00:Ljava/lang/String;
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
 
-    .line 29716
-    iput-object p6, p0, LX/0Mk;->A01:Ljava/lang/String;
 
-    .line 29717
-    move/from16 v0, p15
+# virtual methods
+.method public final bridge synthetic ASr(Ljava/lang/Object;)V
+    .locals 6
 
-    iput v0, p0, LX/0Mk;->A07:I
+    .line 0
+    iget v0, p0, LX/0Mk;->A01:I
 
-    .line 29718
-    move/from16 v0, p16
+    .line 1
+    .line 2
+    packed-switch v0, :pswitch_data_0
 
-    iput v0, p0, LX/0Mk;->A02:I
+    .line 3
+    .line 4
+    .line 5
+    check-cast p1, Landroidx/activity/result/ActivityResult;
 
-    .line 29719
-    move/from16 v0, p24
+    .line 6
+    .line 7
+    iget-object v1, p0, LX/0Mk;->A00:Ljava/lang/Object;
 
-    iput-boolean v0, p0, LX/0Mk;->A0V:Z
+    .line 8
+    .line 9
+    check-cast v1, LX/0VG;
 
-    .line 29720
-    iput-object p3, p0, LX/0Mk;->A0D:LX/0Tj;
+    .line 10
+    .line 11
+    iget-object v0, v1, LX/0VG;->A07:Ljava/util/ArrayDeque;
 
-    .line 29721
-    const-wide v0, 0x7fffffffffffffffL
+    .line 12
+    .line 13
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
 
-    new-instance v2, LX/0La;
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
 
-    move-object/from16 v3, p8
+    .line 17
+    check-cast v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
 
-    move-object/from16 v7, p7
+    .line 18
+    .line 19
+    const-string v5, "FragmentManager"
 
-    invoke-direct {v2, v7, v3, v0, v1}, LX/0La;-><init>(Ljava/lang/String;Ljava/lang/String;J)V
+    .line 20
+    .line 21
+    if-nez v0, :cond_1
 
-    iput-object v2, p0, LX/0Mk;->A0E:LX/0La;
+    .line 22
+    .line 23
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-    .line 29722
-    move-object/from16 v0, p9
-
-    iput-object v0, p0, LX/0Mk;->A0G:Ljava/lang/String;
-
-    .line 29723
-    iput-object p2, p0, LX/0Mk;->A0C:LX/0Ux;
-
-    .line 29724
-    move-object/from16 v0, p14
-
-    iput-object v0, p0, LX/0Mk;->A0M:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 29725
-    move/from16 v0, p17
-
-    iput v0, p0, LX/0Mk;->A03:I
-
-    .line 29726
-    move/from16 v0, p18
-
-    iput v0, p0, LX/0Mk;->A09:I
-
-    .line 29727
-    move/from16 v0, p19
-
-    iput v0, p0, LX/0Mk;->A05:I
-
-    .line 29728
-    move/from16 v0, p20
-
-    iput v0, p0, LX/0Mk;->A08:I
-
-    .line 29729
-    move/from16 v0, p21
-
-    iput v0, p0, LX/0Mk;->A06:I
-
-    .line 29730
-    move/from16 v0, p22
-
-    iput v0, p0, LX/0Mk;->A0A:I
-
-    .line 29731
-    iput-object p1, p0, LX/0Mk;->A0B:LX/0V7;
-
-    .line 29732
-    move-object/from16 v0, p11
-
-    iput-object v0, p0, LX/0Mk;->A0J:Ljava/util/List;
-
-    .line 29733
-    move/from16 v0, p25
-
-    iput-boolean v0, p0, LX/0Mk;->A0S:Z
-
-    .line 29734
-    move/from16 v0, p26
-
-    iput-boolean v0, p0, LX/0Mk;->A0R:Z
-
-    .line 29735
-    move-object/from16 v0, p13
-
-    iput-object v0, p0, LX/0Mk;->A0L:Ljava/util/Map;
-
-    .line 29736
-    :try_start_0
-    invoke-virtual {p2}, LX/0Ux;->A01()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 29737
-    iget-object v5, p3, LX/0Tj;->second:Ljava/lang/Object;
-
-    check-cast v5, Ljava/lang/String;
-
-    .line 29738
-    move-object v6, v4
-
-    move-object v8, v4
-
-    invoke-static/range {v3 .. v8}, LX/00I;->A0P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
+    .line 24
+    .line 25
+    .line 26
     move-result-object v1
-    :try_end_0
-    .catch LX/0Ml; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 29739
-    :try_start_1
-    const-string v0, "utf-8"
+    .line 27
+    const-string v0, "No IntentSenders were started for "
 
-    .line 29740
-    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+    .line 28
+    .line 29
+    :goto_0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
-    :try_end_1
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch LX/0Ml; {:try_start_1 .. :try_end_1} :catch_2
+    .line 30
+    .line 31
+    .line 32
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 29741
-    :try_start_2
-    const-string v0, "MD5"
+    .line 33
+    .line 34
+    .line 35
+    :goto_1
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 29742
-    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v0
 
+    .line 39
+    invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 40
+    .line 41
+    .line 42
+    :cond_0
+    return-void
+
+    .line 43
+    :cond_1
+    iget-object v4, v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->A01:Ljava/lang/String;
+
+    .line 44
+    .line 45
+    iget v3, v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->A00:I
+
+    .line 46
+    .line 47
+    iget-object v0, v1, LX/0VG;->A0R:LX/06K;
+
+    .line 48
+    .line 49
+    invoke-virtual {v0, v4}, LX/06K;->A05(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+
+    .line 50
+    .line 51
+    .line 52
     move-result-object v2
 
-    const/4 v1, 0x0
+    .line 53
+    if-nez v2, :cond_5
 
-    .line 29743
-    array-length v0, v3
+    .line 54
+    .line 55
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3, v1, v0}, Ljava/security/MessageDigest;->update([BII)V
+    .line 56
+    .line 57
+    .line 58
+    move-result-object v1
 
-    .line 29744
-    invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
+    .line 59
+    const-string v0, "Intent Sender result delivered for unknown Fragment "
 
-    move-result-object v8
+    .line 60
+    .line 61
+    goto :goto_3
 
-    .line 29745
-    if-eqz v8, :cond_1
+    .line 62
+    :pswitch_0
+    check-cast p1, Landroidx/activity/result/ActivityResult;
 
-    .line 29746
-    array-length v7, v8
+    .line 63
+    .line 64
+    iget-object v1, p0, LX/0Mk;->A00:Ljava/lang/Object;
 
-    if-eqz v7, :cond_1
+    .line 65
+    .line 66
+    check-cast v1, LX/0VG;
 
-    .line 29747
-    mul-int/lit8 v0, v7, 0x2
+    .line 67
+    .line 68
+    iget-object v0, v1, LX/0VG;->A07:Ljava/util/ArrayDeque;
 
-    .line 29748
-    new-array v6, v0, [C
+    .line 69
+    .line 70
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pollLast()Ljava/lang/Object;
 
-    .line 29749
-    const/4 v5, 0x0
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v0
 
-    const/4 v4, 0x0
+    .line 74
+    check-cast v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
 
-    :cond_0
-    aget-byte v3, v8, v5
+    .line 75
+    .line 76
+    const-string v5, "FragmentManager"
 
-    add-int/lit8 v2, v4, 0x1
+    .line 77
+    .line 78
+    if-nez v0, :cond_2
 
-    .line 29750
-    sget-object v1, LX/0Tk;->A00:[C
+    .line 79
+    .line 80
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-    and-int/lit16 v0, v3, 0xf0
+    .line 81
+    .line 82
+    .line 83
+    move-result-object v1
 
-    ushr-int/lit8 v0, v0, 0x4
+    .line 84
+    const-string v0, "No Activities were started for result for "
 
-    aget-char v0, v1, v0
-
-    aput-char v0, v6, v4
-
-    add-int/lit8 v4, v2, 0x1
-
-    and-int/lit8 v0, v3, 0xf
-
-    .line 29751
-    aget-char v0, v1, v0
-
-    aput-char v0, v6, v2
-
-    add-int/lit8 v5, v5, 0x1
-
-    .line 29752
-    if-lt v5, v7, :cond_0
-
-    .line 29753
-    new-instance v0, Ljava/lang/String;
-
-    invoke-direct {v0, v6}, Ljava/lang/String;-><init>([C)V
-
+    .line 85
+    .line 86
     goto :goto_0
 
-    :cond_1
-    const-string v0, ""
+    .line 87
+    :cond_2
+    iget-object v4, v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->A01:Ljava/lang/String;
 
-    goto :goto_0
-    :try_end_2
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch LX/0Ml; {:try_start_2 .. :try_end_2} :catch_2
+    .line 88
+    .line 89
+    iget v3, v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->A00:I
 
-    .line 29754
-    :catch_0
-    :try_start_3
-    new-instance v0, LX/0Ml;
+    .line 90
+    .line 91
+    iget-object v0, v1, LX/0VG;->A0R:LX/06K;
 
-    .line 29755
-    invoke-direct {v0}, LX/0Ml;-><init>()V
+    .line 92
+    .line 93
+    invoke-virtual {v0, v4}, LX/06K;->A05(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
-    .line 29756
-    throw v0
-    :try_end_3
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch LX/0Ml; {:try_start_3 .. :try_end_3} :catch_2
+    .line 94
+    .line 95
+    .line 96
+    move-result-object v2
 
-    .line 29757
-    :catch_1
-    :try_start_4
-    new-instance v0, LX/0Ml;
+    .line 97
+    if-nez v2, :cond_5
 
-    .line 29758
-    invoke-direct {v0}, LX/0Ml;-><init>()V
+    .line 98
+    .line 99
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
-    .line 29759
-    throw v0
-    :try_end_4
-    .catch LX/0Ml; {:try_start_4 .. :try_end_4} :catch_2
+    .line 100
+    .line 101
+    .line 102
+    move-result-object v1
 
-    .line 29760
-    :catch_2
+    .line 103
+    const-string v0, "Activity result delivered for unknown Fragment "
+
+    .line 104
+    .line 105
+    goto :goto_3
+
+    .line 106
+    :pswitch_1
+    check-cast p1, Ljava/util/Map;
+
+    .line 107
+    .line 108
+    invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    .line 109
+    .line 110
+    .line 111
+    move-result-object v1
+
+    .line 112
     const/4 v0, 0x0
 
-    .line 29761
-    :goto_0
-    iput-object v0, p0, LX/0Mk;->A0H:Ljava/lang/String;
+    .line 113
+    new-array v0, v0, [Ljava/lang/String;
 
-    .line 29762
-    move/from16 v0, p27
+    .line 114
+    .line 115
+    invoke-interface {v1, v0}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    iput-boolean v0, p0, LX/0Mk;->A0T:Z
+    .line 116
+    .line 117
+    .line 118
+    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
-    .line 29763
-    move-object/from16 v0, p12
+    .line 119
+    .line 120
+    .line 121
+    move-result-object v0
 
-    iput-object v0, p0, LX/0Mk;->A0K:Ljava/util/Map;
+    .line 122
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
-    .line 29764
-    move/from16 v0, p28
+    .line 123
+    .line 124
+    .line 125
+    move-result-object v2
 
-    iput-boolean v0, p0, LX/0Mk;->A0Q:Z
+    .line 126
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
 
-    .line 29765
-    move-object/from16 v0, p10
+    .line 127
+    .line 128
+    .line 129
+    const/4 v1, 0x0
 
-    iput-object v0, p0, LX/0Mk;->A0I:Ljava/lang/String;
+    .line 130
+    :goto_2
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
 
-    .line 29766
-    move/from16 v0, p29
+    .line 131
+    .line 132
+    .line 133
+    move-result v0
 
-    iput-boolean v0, p0, LX/0Mk;->A0N:Z
+    .line 134
+    if-ge v1, v0, :cond_3
 
-    .line 29767
-    move/from16 v0, p23
+    .line 135
+    .line 136
+    invoke-virtual {v2, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
-    iput v0, p0, LX/0Mk;->A04:I
+    .line 137
+    .line 138
+    .line 139
+    add-int/lit8 v1, v1, 0x1
 
-    .line 29768
-    move/from16 v0, p30
+    .line 140
+    .line 141
+    goto :goto_2
 
-    iput-boolean v0, p0, LX/0Mk;->A0O:Z
+    .line 142
+    :cond_3
+    iget-object v1, p0, LX/0Mk;->A00:Ljava/lang/Object;
 
-    .line 29769
-    move/from16 v0, p32
+    .line 143
+    .line 144
+    check-cast v1, LX/0VG;
 
-    iput-boolean v0, p0, LX/0Mk;->A0P:Z
+    .line 145
+    .line 146
+    iget-object v0, v1, LX/0VG;->A07:Ljava/util/ArrayDeque;
 
-    .line 29770
-    move/from16 v0, p31
+    .line 147
+    .line 148
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
 
-    iput-boolean v0, p0, LX/0Mk;->A0U:Z
+    .line 149
+    .line 150
+    .line 151
+    move-result-object v0
 
-    .line 29771
-    iput-object p4, p0, LX/0Mk;->A0F:LX/0PX;
+    .line 152
+    check-cast v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
 
+    .line 153
+    .line 154
+    const-string v5, "FragmentManager"
+
+    .line 155
+    .line 156
+    if-nez v0, :cond_4
+
+    .line 157
+    .line 158
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 159
+    .line 160
+    .line 161
+    move-result-object v1
+
+    .line 162
+    const-string v0, "No permissions were requested for "
+
+    .line 163
+    .line 164
+    goto/16 :goto_0
+
+    .line 165
+    .line 166
+    :cond_4
+    iget-object v4, v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->A01:Ljava/lang/String;
+
+    .line 167
+    .line 168
+    iget-object v0, v1, LX/0VG;->A0R:LX/06K;
+
+    .line 169
+    .line 170
+    invoke-virtual {v0, v4}, LX/06K;->A05(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+
+    .line 171
+    .line 172
+    .line 173
+    move-result-object v0
+
+    .line 174
+    if-nez v0, :cond_0
+
+    .line 175
+    .line 176
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 177
+    .line 178
+    .line 179
+    move-result-object v1
+
+    .line 180
+    const-string v0, "Permission request result delivered for unknown Fragment "
+
+    .line 181
+    .line 182
+    :goto_3
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 183
+    .line 184
+    .line 185
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 186
+    .line 187
+    .line 188
+    goto/16 :goto_1
+
+    .line 189
+    .line 190
+    :cond_5
+    iget v1, p1, Landroidx/activity/result/ActivityResult;->A00:I
+
+    .line 191
+    .line 192
+    iget-object v0, p1, Landroidx/activity/result/ActivityResult;->A01:Landroid/content/Intent;
+
+    .line 193
+    .line 194
+    invoke-virtual {v2, v3, v1, v0}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
+
+    .line 195
+    .line 196
+    .line 197
     return-void
+
+    .line 198
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

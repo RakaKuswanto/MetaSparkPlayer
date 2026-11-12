@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/1SE;
+.implements LX/1es;
 
 
 # annotations
@@ -82,11 +82,11 @@
 
     .line 16
     .line 17
-    const/16 v0, 0x4e
+    const/16 v0, 0x26
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 20
     .line 21
@@ -233,7 +233,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic Ag8()Ljava/lang/Object;
+.method public final bridge synthetic AeW()Ljava/lang/Object;
     .locals 1
 
     .line 0
@@ -281,50 +281,52 @@
 
     .line 5
     .line 6
-    const-string v0, "currency"
+    const-string/jumbo v0, "currency"
 
     .line 7
     .line 8
+    .line 9
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 9
     .line 10
     .line 11
+    .line 12
     iget v1, p0, Lcom/facebook/payments/p2p/model/Amount;->mOffset:I
 
-    .line 12
     .line 13
+    .line 14
     const-string/jumbo v0, "offset"
 
-    .line 14
     .line 15
     .line 16
+    .line 17
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     iget v1, p0, Lcom/facebook/payments/p2p/model/Amount;->mAmountWithOffset:I
 
-    .line 20
     .line 21
-    const-string v0, "amount_with_offset"
-
     .line 22
-    .line 23
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "amount_with_offset"
 
+    .line 23
     .line 24
     .line 25
-    .line 26
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 26
     .line 27
     .line 28
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
     .line 29
+    .line 30
+    .line 31
     move-result-object v0
 
-    .line 30
+    .line 32
     return-object v0
 .end method
 

@@ -1,126 +1,225 @@
-.class public final LX/3RF;
+.class public abstract LX/3RF;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public final A01:I
-
-.field public final A02:I
-
-.field public final A03:J
-
-.field public final A04:J
-
-.field public final A05:J
-
-.field public final A06:J
-
-.field public final A07:J
-
-.field public final A08:J
-
-.field public final A09:J
-
-.field public final A0A:J
-
-.field public final A0B:Z
-
-.field public final A0C:Z
-
-.field public final A0D:Z
-
-
 # direct methods
-.method public constructor <init>(IIIIJJJJJJJZZZ)V
-    .locals 2
+.method public static A00(Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v5, ""
 
     .line 1
     .line 2
+    if-eqz p0, :cond_3
+
     .line 3
-    iput-wide p5, p0, LX/3RF;->A06:J
-
     .line 4
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
     .line 5
-    int-to-long v0, p1
-
     .line 6
-    iput-wide v0, p0, LX/3RF;->A05:J
-
     .line 7
+    move-result v0
+
     .line 8
-    iput p2, p0, LX/3RF;->A00:I
+    if-nez v0, :cond_3
 
     .line 9
     .line 10
-    iput p3, p0, LX/3RF;->A01:I
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     .line 11
     .line 12
-    iput p4, p0, LX/3RF;->A02:I
-
     .line 13
+    move-result v0
+
     .line 14
-    iput-wide p7, p0, LX/3RF;->A03:J
+    if-nez v0, :cond_3
 
     .line 15
     .line 16
-    iput-wide p9, p0, LX/3RF;->A0A:J
+    invoke-static {p0}, LX/6VP;->A00(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 17
     .line 18
-    move/from16 v0, p19
-
     .line 19
+    move-result-object v0
+
     .line 20
-    iput-boolean v0, p0, LX/3RF;->A0C:Z
+    if-eqz v0, :cond_3
 
     .line 21
     .line 22
-    move/from16 v0, p20
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 23
     .line 24
-    iput-boolean v0, p0, LX/3RF;->A0B:Z
-
     .line 25
+    move-result-object v0
+
     .line 26
-    move/from16 v0, p21
+    invoke-static {v0}, LX/0Lt;->A01(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 27
     .line 28
-    iput-boolean v0, p0, LX/3RF;->A0D:Z
-
     .line 29
+    move-result-object v4
+
     .line 30
-    iput-wide p11, p0, LX/3RF;->A04:J
+    const v3, 0x7fffffff
 
     .line 31
     .line 32
-    iput-wide p13, p0, LX/3RF;->A08:J
-
     .line 33
-    .line 34
-    move-wide/from16 v0, p15
+    invoke-static {v4}, LX/3RD;->A01(Landroid/net/Uri;)Z
 
+    .line 34
     .line 35
     .line 36
-    iput-wide v0, p0, LX/3RF;->A09:J
+    move-result v0
 
     .line 37
-    .line 38
-    move-wide/from16 v0, p17
+    if-eqz v0, :cond_0
 
+    .line 38
     .line 39
+    const/4 v2, 0x0
+
     .line 40
-    iput-wide v0, p0, LX/3RF;->A07:J
+    :goto_0
+    invoke-static {v4}, LX/3RE;->A00(Landroid/net/Uri;)Landroid/net/Uri;
 
     .line 41
     .line 42
-    return-void
+    .line 43
+    move-result-object v1
+
+    .line 44
+    invoke-static {v1}, LX/3RD;->A01(Landroid/net/Uri;)Z
+
+    .line 45
+    .line 46
+    .line 47
+    move-result v0
+
+    .line 48
+    if-eqz v0, :cond_0
+
+    .line 49
+    .line 50
+    invoke-virtual {v4, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 51
+    .line 52
+    .line 53
+    move-result v0
+
+    .line 54
+    if-nez v0, :cond_0
+
+    .line 55
+    .line 56
+    add-int/lit8 v2, v2, 0x1
+
+    .line 57
+    .line 58
+    if-ge v2, v3, :cond_0
+
+    .line 59
+    .line 60
+    move-object v4, v1
+
+    .line 61
+    goto :goto_0
+
+    .line 62
+    :cond_0
+    invoke-static {v4}, LX/3RD;->A01(Landroid/net/Uri;)Z
+
+    .line 63
+    .line 64
+    .line 65
+    move-result v0
+
+    .line 66
+    if-eqz v0, :cond_1
+
+    .line 67
+    .line 68
+    invoke-static {v4}, LX/3RE;->A00(Landroid/net/Uri;)Landroid/net/Uri;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v4
+
+    .line 72
+    :cond_1
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v1
+
+    .line 76
+    invoke-static {v1}, Landroid/webkit/URLUtil;->isHttpsUrl(Ljava/lang/String;)Z
+
+    .line 77
+    .line 78
+    .line 79
+    move-result v0
+
+    .line 80
+    if-eqz v0, :cond_3
+
+    .line 81
+    .line 82
+    invoke-static {v1}, LX/6VP;->A00(Ljava/lang/String;)Landroid/net/Uri;
+
+    .line 83
+    .line 84
+    .line 85
+    move-result-object v0
+
+    .line 86
+    if-eqz v0, :cond_2
+
+    .line 87
+    .line 88
+    invoke-virtual {v0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+
+    .line 89
+    .line 90
+    .line 91
+    move-result-object v0
+
+    .line 92
+    :goto_1
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 93
+    .line 94
+    .line 95
+    move-result v0
+
+    .line 96
+    if-nez v0, :cond_3
+
+    .line 97
+    .line 98
+    return-object v1
+
+    .line 99
+    :cond_2
+    move-object v0, v5
+
+    .line 100
+    goto :goto_1
+
+    .line 101
+    :cond_3
+    return-object v5
 .end method

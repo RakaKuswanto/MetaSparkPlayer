@@ -1,89 +1,113 @@
-.class public final LX/1uu;
+.class public abstract LX/1uu;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
+# static fields
+.field public static final A00:LX/28F;
 
-.field public final A01:Landroid/content/Context;
+.field public static final A01:LX/28F;
 
-.field public final A02:LX/0Na;
+.field public static final A02:LX/28F;
 
-.field public final A03:LX/0Na;
+.field public static final A03:LX/28F;
 
-.field public final A04:LX/0Na;
+.field public static final A04:LX/28F;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, LX/1GN;->A04:LX/28F;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/0Zq;->A05()LX/0Zq;
+    const-string/jumbo v0, "tosacceptance/"
 
+    .line 3
     .line 4
     .line 5
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 6
-    move-result-object v0
-
     .line 7
-    iput-object v0, p0, LX/1uu;->A02:LX/0Na;
-
     .line 8
+    move-result-object v1
+
     .line 9
-    invoke-static {}, LX/0Zq;->A07()LX/0Zq;
+    sput-object v1, LX/1uu;->A04:LX/28F;
 
     .line 10
     .line 11
+    const-string/jumbo v0, "dialog_enabled"
+
     .line 12
-    move-result-object v0
-
     .line 13
-    iput-object v0, p0, LX/1uu;->A04:LX/0Na;
-
     .line 14
-    .line 15
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
 
+    .line 15
     .line 16
     .line 17
-    .line 18
     move-result-object v0
+
+    .line 18
+    sput-object v0, LX/1uu;->A00:LX/28F;
 
     .line 19
-    iput-object v0, p0, LX/1uu;->A03:LX/0Na;
-
     .line 20
-    .line 21
-    invoke-static {}, LX/1z6;->A01()Landroid/content/Context;
+    const-string/jumbo v0, "state"
 
+    .line 21
     .line 22
     .line 23
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 24
+    .line 25
+    .line 26
     move-result-object v0
 
-    .line 25
-    iput-object v0, p0, LX/1uu;->A01:Landroid/content/Context;
-
-    .line 26
     .line 27
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    sput-object v0, LX/1uu;->A02:LX/28F;
 
     .line 28
     .line 29
+    const-string/jumbo v0, "send_tos_accept"
+
     .line 30
+    .line 31
+    .line 32
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 33
+    .line 34
+    .line 35
     move-result-object v0
 
-    .line 31
-    iput-object v0, p0, LX/1uu;->A00:LX/1zG;
+    .line 36
+    sput-object v0, LX/1uu;->A03:LX/28F;
 
-    .line 32
-    .line 33
+    .line 37
+    .line 38
+    const-string/jumbo v0, "reason"
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v0
+
+    .line 45
+    sput-object v0, LX/1uu;->A01:LX/28F;
+
+    .line 46
+    .line 47
     return-void
 .end method

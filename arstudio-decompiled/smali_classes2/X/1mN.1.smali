@@ -1,256 +1,101 @@
-.class public final LX/1mN;
+.class public final LX/1mn;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A05:LX/1mN;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "QTExposureLogger$logPluralExposure$1"
 
 
 # instance fields
-.field public final A00:LX/1mS;
+.field public final synthetic A00:I
 
-.field public final A01:LX/1mP;
+.field public final synthetic A01:I
 
-.field public final A02:LX/1mP;
+.field public final synthetic A02:LX/1mg;
 
-.field public final A03:LX/1mP;
+.field public final synthetic A03:LX/1mp;
 
-.field public final A04:LX/1mO;
+.field public final synthetic A04:LX/1mu;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/1mg;LX/1mp;LX/1mu;II)V
+    .locals 0
 
-    .line 0
-    new-instance v0, LX/1mN;
+    iput-object p2, p0, LX/1mn;->A03:LX/1mp;
 
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/1mN;-><init>()V
+    iput p4, p0, LX/1mn;->A01:I
 
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/1mN;->A05:LX/1mN;
+    iput p5, p0, LX/1mn;->A00:I
 
-    .line 6
-    .line 7
-    return-void
-.end method
+    iput-object p1, p0, LX/1mn;->A02:LX/1mg;
 
-.method public constructor <init>()V
-    .locals 1
+    iput-object p3, p0, LX/1mn;->A04:LX/1mu;
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    new-instance v0, LX/1mO;
-
-    .line 4
-    .line 5
-    invoke-direct {v0}, LX/1mO;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/1mN;->A04:LX/1mO;
-
-    .line 9
-    .line 10
-    new-instance v0, LX/1mP;
-
-    .line 11
-    .line 12
-    invoke-direct {v0}, LX/1mP;-><init>()V
-
-    .line 13
-    .line 14
-    .line 15
-    iput-object v0, p0, LX/1mN;->A02:LX/1mP;
-
-    .line 16
-    .line 17
-    new-instance v0, LX/1mP;
-
-    .line 18
-    .line 19
-    invoke-direct {v0}, LX/1mP;-><init>()V
-
-    .line 20
-    .line 21
-    .line 22
-    iput-object v0, p0, LX/1mN;->A01:LX/1mP;
-
-    .line 23
-    .line 24
-    sget-object v0, LX/1mS;->A01:LX/1mS;
-
-    .line 25
-    .line 26
-    iput-object v0, p0, LX/1mN;->A00:LX/1mS;
-
-    .line 27
-    .line 28
-    new-instance v0, LX/1mP;
-
-    .line 29
-    .line 30
-    invoke-direct {v0}, LX/1mP;-><init>()V
-
-    .line 31
-    .line 32
-    .line 33
-    iput-object v0, p0, LX/1mN;->A03:LX/1mP;
-
-    .line 34
-    .line 35
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final run()V
+    .locals 8
 
     .line 0
-    const/4 v2, 0x0
+    iget-object v1, p0, LX/1mn;->A03:LX/1mp;
 
     .line 1
-    if-eqz p1, :cond_1
-
     .line 2
-    .line 3
-    const/4 v0, 0x1
+    iget v4, p0, LX/1mn;->A01:I
 
+    .line 3
     .line 4
-    if-ne p1, p0, :cond_0
+    iget v5, p0, LX/1mn;->A00:I
 
     .line 5
     .line 6
-    return v0
+    iget-object v0, p0, LX/1mn;->A02:LX/1mg;
 
     .line 7
-    :cond_0
-    instance-of v0, p1, LX/1mN;
-
     .line 8
-    .line 9
-    if-eqz v0, :cond_1
+    invoke-static {v0}, LX/0X3;->A0R(Ljava/lang/Object;)Lcom/google/common/base/Present;
 
+    .line 9
     .line 10
     .line 11
-    check-cast p1, LX/1mN;
+    move-result-object v3
 
     .line 12
-    .line 13
-    iget-object v1, p0, LX/1mN;->A04:LX/1mO;
+    invoke-static {v3}, LX/0WV;->A04(Ljava/lang/Object;)V
 
+    .line 13
     .line 14
     .line 15
-    iget-object v0, p1, LX/1mN;->A04:LX/1mO;
+    iget-object v2, p0, LX/1mn;->A04:LX/1mu;
 
     .line 16
     .line 17
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v0, v1, LX/1mp;->A00:LX/0I2;
 
     .line 18
     .line 19
+    invoke-interface {v0}, LX/0I2;->now()J
+
     .line 20
-    move-result v0
-
     .line 21
-    if-eqz v0, :cond_1
-
     .line 22
+    move-result-wide v6
+
     .line 23
-    iget-object v1, p0, LX/1mN;->A02:LX/1mP;
+    invoke-static/range {v1 .. v7}, LX/1mp;->A00(LX/1mp;LX/1mu;Lcom/google/common/base/Optional;IIJ)V
 
     .line 24
     .line 25
-    iget-object v0, p1, LX/1mN;->A02:LX/1mP;
-
     .line 26
-    .line 27
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 28
-    .line 29
-    .line 30
-    move-result v0
-
-    .line 31
-    if-eqz v0, :cond_1
-
-    .line 32
-    .line 33
-    iget-object v1, p0, LX/1mN;->A01:LX/1mP;
-
-    .line 34
-    .line 35
-    iget-object v0, p1, LX/1mN;->A01:LX/1mP;
-
-    .line 36
-    .line 37
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 38
-    .line 39
-    .line 40
-    move-result v0
-
-    .line 41
-    if-eqz v0, :cond_1
-
-    .line 42
-    .line 43
-    iget-object v1, p0, LX/1mN;->A00:LX/1mS;
-
-    .line 44
-    .line 45
-    iget-object v0, p1, LX/1mN;->A00:LX/1mS;
-
-    .line 46
-    .line 47
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 48
-    .line 49
-    .line 50
-    move-result v0
-
-    .line 51
-    if-eqz v0, :cond_1
-
-    .line 52
-    .line 53
-    iget-object v1, p0, LX/1mN;->A03:LX/1mP;
-
-    .line 54
-    .line 55
-    iget-object v0, p1, LX/1mN;->A03:LX/1mP;
-
-    .line 56
-    .line 57
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 58
-    .line 59
-    .line 60
-    move-result v0
-
-    .line 61
-    if-eqz v0, :cond_1
-
-    .line 62
-    .line 63
-    const/4 v2, 0x1
-
-    .line 64
-    :cond_1
-    return v2
+    return-void
 .end method

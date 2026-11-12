@@ -1,62 +1,84 @@
 .class public final LX/3d7;
-.super LX/3dA;
+.super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final serialVersionUID:J = -0x6283133c9c298199L
+# interfaces
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field public option:LX/3d0;
+.field public final synthetic A00:Landroid/content/Context;
+
+.field public final synthetic A01:LX/3dS;
+
+.field public final synthetic A02:LX/3ci;
+
+.field public final synthetic A03:Lcom/facebook/arstudio/player/model/EffectFile;
 
 
 # direct methods
-.method public constructor <init>(LX/3d0;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;LX/3dS;LX/3ci;Lcom/facebook/arstudio/player/model/EffectFile;)V
+    .locals 0
 
     .line 0
-    const-string v0, "Missing argument for option: "
+    iput-object p3, p0, LX/3d7;->A02:LX/3ci;
 
     .line 1
     .line 2
-    iget-object v1, p1, LX/3d0;->opt:Ljava/lang/String;
+    iput-object p1, p0, LX/3d7;->A00:Landroid/content/Context;
 
     .line 3
     .line 4
-    if-nez v1, :cond_0
+    iput-object p2, p0, LX/3d7;->A01:LX/3dS;
 
     .line 5
     .line 6
-    iget-object v1, p1, LX/3d0;->longOpt:Ljava/lang/String;
+    iput-object p4, p0, LX/3d7;->A03:Lcom/facebook/arstudio/player/model/EffectFile;
 
     .line 7
     .line 8
-    :cond_0
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 9
     .line 10
     .line 11
-    move-result-object v0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/3d7;->A02:LX/3ci;
+
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/3d7;->A01:LX/3dS;
+
+    .line 3
+    .line 4
+    iget-object v1, p0, LX/3d7;->A03:Lcom/facebook/arstudio/player/model/EffectFile;
+
+    .line 5
+    .line 6
+    new-instance v0, LX/3cP;
+
+    .line 7
+    .line 8
+    invoke-direct {v0, v2, v3, v1}, LX/3cP;-><init>(LX/3dS;LX/3ci;Lcom/facebook/arstudio/player/model/EffectFile;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {v0}, LX/0X6;->A1J(LX/3hA;)V
 
     .line 12
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 13
     .line 14
+    const/4 v0, 0x1
+
     .line 15
-    move-result-object v0
-
-    .line 16
-    invoke-direct {p0, v0}, LX/3dA;-><init>(Ljava/lang/String;)V
-
-    .line 17
-    .line 18
-    .line 19
-    iput-object p1, p0, LX/3d7;->option:LX/3d0;
-
-    .line 20
-    .line 21
-    return-void
+    return v0
 .end method

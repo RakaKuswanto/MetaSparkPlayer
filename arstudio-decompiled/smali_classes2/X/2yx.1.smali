@@ -1,510 +1,457 @@
-.class public final LX/2yx;
+.class public final LX/2Yx;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "PreferenceStorageWriter$schedulePendingSyncWithStorage$1"
+
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:I
-
-.field public final A02:[B
+.field public final synthetic A00:LX/2Z3;
 
 
 # direct methods
-.method public constructor <init>([BII)V
+.method public constructor <init>(LX/2Z3;)V
     .locals 0
 
-    .line 0
+    iput-object p1, p0, LX/2Yx;->A00:LX/2Z3;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    iput p2, p0, LX/2yx;->A00:I
-
-    .line 4
-    .line 5
-    iput p3, p0, LX/2yx;->A01:I
-
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/2yx;->A02:[B
-
-    .line 8
-    .line 9
     return-void
 .end method
 
-.method public static A00(LX/2yx;Ljava/nio/ByteOrder;)Ljava/lang/Object;
-    .locals 23
+
+# virtual methods
+.method public final run()V
+    .locals 27
 
     .line 0
-    const-string v22, "IOException occurred while closing InputStream"
+    move-object/from16 v0, p0
 
     .line 1
     .line 2
-    const/16 v21, 0x0
+    iget-object v3, v0, LX/2Yx;->A00:LX/2Z3;
 
     .line 3
     .line 4
-    :try_start_0
-    move-object/from16 v1, p0
+    iget-boolean v0, v3, LX/2Z3;->A0E:Z
 
     .line 5
     .line 6
-    iget-object v7, v1, LX/2yx;->A02:[B
+    if-eqz v0, :cond_1a
 
     .line 7
     .line 8
-    new-instance v0, Ljava/io/ByteArrayInputStream;
+    :try_start_0
+    const-string v0, "PreferenceStorageWriter.syncWithStorage"
 
     .line 9
     .line 10
-    invoke-direct {v0, v7}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_5
 
     .line 11
     .line 12
     .line 13
-    new-instance v5, LX/2yu;
+    :try_start_1
+    iget-object v6, v3, LX/2Z3;->A0C:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 14
     .line 15
-    invoke-direct {v5, v0}, LX/2yu;-><init>(Ljava/io/InputStream;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_c
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v6}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
     .line 16
     .line 17
     .line 18
-    :try_start_1
-    move-object/from16 v0, p1
+    :try_start_2
+    iget v5, v3, LX/2Z3;->A00:I
 
     .line 19
     .line 20
-    iput-object v0, v5, LX/2yu;->A02:Ljava/nio/ByteOrder;
+    add-int/lit8 v0, v5, 0x1
 
     .line 21
     .line 22
-    iget v0, v1, LX/2yx;->A00:I
+    iput v0, v3, LX/2Z3;->A00:I
 
     .line 23
     .line 24
-    const/4 v9, 0x1
+    iget-object v0, v3, LX/2Z3;->A03:Ljava/util/Map;
 
     .line 25
-    const/4 v4, 0x0
-
     .line 26
-    packed-switch v0, :pswitch_data_0
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_b
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    move-object/from16 v26, v0
 
     .line 27
     .line 28
-    .line 29
-    :try_start_2
-    invoke-virtual {v5}, LX/2yu;->close()V
+    iget-object v4, v3, LX/2Z3;->A02:Ljava/util/Map;
 
+    .line 29
     .line 30
+    iget-object v2, v3, LX/2Z3;->A01:Ljava/util/Collection;
+
     .line 31
     .line 32
-    goto :goto_0
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    const/16 v1, 0x10
 
     .line 33
-    :catch_0
-    move-exception v0
-
     .line 34
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
+    invoke-static {v1}, LX/0X7;->A0b(I)Ljava/util/HashMap;
 
     .line 35
     .line 36
     .line 37
-    return-object v21
+    move-result-object v0
 
     .line 38
-    :goto_0
-    return-object v21
+    iput-object v0, v3, LX/2Z3;->A03:Ljava/util/Map;
 
     .line 39
-    :pswitch_0
-    :try_start_3
-    iget v15, v1, LX/2yx;->A01:I
-
     .line 40
-    .line 41
-    new-array v14, v15, [D
+    invoke-static {v1}, LX/0X7;->A0b(I)Ljava/util/HashMap;
 
+    .line 41
     .line 42
     .line 43
-    :goto_1
-    if-ge v4, v15, :cond_4
+    move-result-object v0
 
     .line 44
+    iput-object v0, v3, LX/2Z3;->A02:Ljava/util/Map;
+
     .line 45
-    iget v0, v5, LX/2yu;->A00:I
-
     .line 46
+    const/16 v24, 0x4
+
     .line 47
-    add-int/lit8 v1, v0, 0x8
-
     .line 48
+    new-instance v1, LX/00s;
+
     .line 49
-    iput v1, v5, LX/2yu;->A00:I
-
     .line 50
+    move/from16 v0, v24
+
     .line 51
-    iget v0, v5, LX/2yu;->A03:I
-
     .line 52
-    .line 53
-    if-gt v1, v0, :cond_2
+    invoke-direct {v1, v0}, LX/00s;-><init>(I)V
 
+    .line 53
     .line 54
     .line 55
-    iget-object v0, v5, LX/2yu;->A01:Ljava/io/DataInputStream;
+    iput-object v1, v3, LX/2Z3;->A01:Ljava/util/Collection;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 56
     .line 57
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+    :try_start_3
+    invoke-virtual {v6}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     .line 58
     .line 59
     .line 60
-    move-result v11
+    invoke-interface/range {v26 .. v26}, Ljava/util/Map;->isEmpty()Z
 
     .line 61
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
     .line 62
     .line 63
+    move-result v0
+
     .line 64
-    move-result v10
+    if-eqz v0, :cond_0
 
     .line 65
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
     .line 66
+    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
+
     .line 67
     .line 68
-    move-result v13
-
     .line 69
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+    move-result v0
 
     .line 70
+    if-eqz v0, :cond_0
+
     .line 71
     .line 72
-    move-result v12
+    goto/16 :goto_b
 
     .line 73
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
     .line 74
+    :cond_0
+    iget-object v0, v3, LX/2Z3;->A07:LX/0lu;
+
     .line 75
     .line 76
-    move-result v7
+    iget-object v0, v0, LX/0lu;->A00:LX/0RP;
 
     .line 77
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
     .line 78
+    move-object/from16 v25, v0
+
     .line 79
     .line 80
-    move-result v6
+    invoke-interface/range {v25 .. v25}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 81
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
     .line 82
     .line 83
+    move-result-object v0
+
     .line 84
-    move-result v9
+    check-cast v0, LX/2Yz;
 
     .line 85
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
     .line 86
+    invoke-virtual {v0, v5, v4}, LX/2Yz;->A03(ILjava/util/Map;)V
+
     .line 87
     .line 88
-    move-result v8
-
     .line 89
-    or-int v0, v11, v10
+    iget-object v0, v3, LX/2Z3;->A09:LX/0lu;
 
     .line 90
     .line 91
-    or-int/2addr v0, v13
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 92
-    or-int/2addr v0, v12
-
     .line 93
-    or-int/2addr v0, v7
-
     .line 94
-    or-int/2addr v0, v6
+    move-result-object v6
 
     .line 95
-    or-int/2addr v0, v9
+    check-cast v6, LX/2qo;
 
     .line 96
-    or-int/2addr v0, v8
-
     .line 97
-    if-ltz v0, :cond_1
+    check-cast v6, LX/2Wf;
 
     .line 98
     .line 99
-    iget-object v2, v5, LX/2yu;->A02:Ljava/nio/ByteOrder;
+    const/16 v23, 0x0
 
     .line 100
     .line 101
-    sget-object v0, LX/2yu;->A05:Ljava/nio/ByteOrder;
+    const/4 v4, 0x1
 
     .line 102
-    .line 103
-    const/16 v20, 0x10
+    invoke-static {v2, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 103
     .line 104
     .line 105
-    const/16 v19, 0x18
+    const-string v0, "FbSharedPreferencesDbStorage.writePrefChanges"
 
     .line 106
     .line 107
-    const/16 v18, 0x20
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
     .line 108
     .line 109
-    const/16 v17, 0x28
-
     .line 110
-    .line 111
-    const/16 v16, 0x30
+    :try_start_4
+    invoke-interface/range {v26 .. v26}, Ljava/util/Map;->isEmpty()Z
 
+    .line 111
     .line 112
     .line 113
-    const/16 v1, 0x38
+    move-result v0
 
     .line 114
+    if-eqz v0, :cond_1
+
     .line 115
-    if-ne v2, v0, :cond_0
-
     .line 116
+    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
+
     .line 117
-    int-to-long v2, v8
-
     .line 118
-    shl-long/2addr v2, v1
-
     .line 119
-    int-to-long v0, v9
+    move-result v0
 
     .line 120
-    shl-long v0, v0, v16
+    if-eqz v0, :cond_1
 
     .line 121
     .line 122
-    add-long/2addr v2, v0
+    goto/16 :goto_7
 
     .line 123
-    int-to-long v0, v6
-
     .line 124
-    shl-long v0, v0, v17
+    :cond_1
+    iget-object v0, v6, LX/2Wf;->A03:LX/0lu;
 
     .line 125
     .line 126
-    add-long/2addr v2, v0
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 127
-    int-to-long v0, v7
-
     .line 128
-    shl-long v0, v0, v18
-
     .line 129
+    move-result-object v1
+
     .line 130
-    add-long/2addr v2, v0
+    check-cast v1, Ljava/util/Random;
 
     .line 131
-    int-to-long v0, v12
-
     .line 132
-    shl-long v0, v0, v19
+    const/16 v0, 0x3e8
 
     .line 133
     .line 134
-    add-long/2addr v2, v0
+    invoke-virtual {v1, v0}, Ljava/util/Random;->nextInt(I)I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
     .line 135
-    int-to-long v0, v13
-
     .line 136
-    shl-long v0, v0, v20
-
     .line 137
+    move-result v0
+
     .line 138
-    add-long/2addr v2, v0
+    const/4 v5, 0x0
 
     .line 139
-    int-to-long v0, v10
+    invoke-static {v0, v4}, LX/0X3;->A1Y(II)Z
 
     .line 140
-    const/16 v6, 0x8
-
     .line 141
     .line 142
-    shl-long/2addr v0, v6
+    move-result v22
 
     .line 143
-    add-long/2addr v2, v0
+    :try_start_5
+    iget-object v0, v6, LX/2Wf;->A01:LX/0lu;
 
     .line 144
-    int-to-long v0, v11
-
     .line 145
-    goto :goto_2
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 146
-    :cond_0
-    sget-object v0, LX/2yu;->A04:Ljava/nio/ByteOrder;
-
     .line 147
     .line 148
-    if-ne v2, v0, :cond_3
+    move-result-object v0
 
     .line 149
-    .line 150
-    int-to-long v2, v11
+    check-cast v0, LX/2VG;
 
+    .line 150
     .line 151
-    shl-long/2addr v2, v1
+    invoke-virtual {v0}, LX/3II;->A9a()Landroid/database/sqlite/SQLiteDatabase;
 
     .line 152
-    int-to-long v0, v10
-
     .line 153
-    shl-long v0, v0, v16
-
     .line 154
+    move-result-object v21
+
     .line 155
-    add-long/2addr v2, v0
+    invoke-static/range {v21 .. v21}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 156
-    int-to-long v0, v13
-
     .line 157
-    shl-long v0, v0, v17
-
     .line 158
-    .line 159
-    add-long/2addr v2, v0
+    const/16 v20, 0x0
 
+    .line 159
     .line 160
-    int-to-long v0, v12
+    :cond_2
+    const-string v0, "FbSharedPreferencesDbStorage.writePrefChangesAttempt"
 
     .line 161
-    shl-long v0, v0, v18
-
     .line 162
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+
     .line 163
-    add-long/2addr v2, v0
-
     .line 164
-    int-to-long v0, v7
-
     .line 165
-    shl-long v0, v0, v19
+    invoke-virtual/range {v21 .. v21}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
     .line 166
     .line 167
-    add-long/2addr v2, v0
-
     .line 168
-    int-to-long v0, v6
+    if-nez v20, :cond_e
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
     .line 169
-    shl-long v0, v0, v20
-
     .line 170
+    :try_start_6
+    invoke-interface/range {v26 .. v26}, Ljava/util/Map;->isEmpty()Z
+
     .line 171
-    add-long/2addr v2, v0
-
     .line 172
-    int-to-long v0, v9
-
     .line 173
-    const/16 v6, 0x8
+    move-result v0
 
     .line 174
-    .line 175
-    shl-long/2addr v0, v6
+    if-nez v0, :cond_d
+    :try_end_6
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_6 .. :try_end_6} :catch_3
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
+    .line 175
     .line 176
-    add-long/2addr v2, v0
+    :try_start_7
+    new-instance v8, Landroid/content/ContentValues;
 
     .line 177
-    int-to-long v0, v8
-
     .line 178
-    :goto_2
-    add-long/2addr v2, v0
+    invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
     .line 179
-    invoke-static {v2, v3}, Ljava/lang/Double;->longBitsToDouble(J)D
-
     .line 180
     .line 181
+    invoke-static/range {v26 .. v26}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
+
     .line 182
-    move-result-wide v0
-
     .line 183
-    aput-wide v0, v14, v4
-
     .line 184
+    move-result-object v19
+
     .line 185
-    add-int/lit8 v4, v4, 0x1
+    :goto_0
+    invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->hasNext()Z
 
     .line 186
     .line 187
-    goto/16 :goto_1
-
     .line 188
+    move-result v0
+
     .line 189
-    :cond_1
-    new-instance v0, Ljava/io/EOFException;
+    if-eqz v0, :cond_d
 
     .line 190
     .line 191
-    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
+    invoke-static/range {v19 .. v19}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 192
     .line 193
     .line 194
-    goto :goto_3
+    move-result-object v0
 
     .line 195
-    :cond_2
-    new-instance v0, Ljava/io/EOFException;
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     .line 196
     .line 197
-    invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
-
     .line 198
-    .line 199
-    .line 200
-    goto :goto_3
+    move-result-object v7
 
+    .line 199
+    check-cast v7, LX/28F;
+
+    .line 200
     .line 201
-    :cond_3
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     .line 202
     .line 203
@@ -512,1025 +459,1406 @@
     move-result-object v1
 
     .line 205
-    const-string v0, "Invalid byte order: "
+    iget-object v0, v6, LX/2Wf;->A00:LX/0lu;
 
     .line 206
     .line 207
-    invoke-static {v2, v0, v1}, LX/0Yc;->A02(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/io/IOException;
+    iget-object v0, v0, LX/0lu;->A00:LX/0RP;
 
     .line 208
     .line 209
+    invoke-static {v0}, LX/0lu;->A00(LX/0RP;)I
+
     .line 210
-    move-result-object v0
-
     .line 211
-    :goto_3
-    throw v0
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_b
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
     .line 212
-    :cond_4
-    :try_start_4
-    invoke-virtual {v5}, LX/2yu;->close()V
+    move-result v0
 
     .line 213
-    .line 214
-    .line 215
-    goto :goto_4
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+    const/4 v10, 0x1
 
+    .line 214
+    if-eq v0, v4, :cond_3
+
+    .line 215
     .line 216
-    :catch_1
-    move-exception v0
+    const/4 v10, 0x0
 
     .line 217
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
+    :cond_3
+    const-string v13, "Preference value too large for key %s"
 
     .line 218
     .line 219
-    .line 220
-    return-object v14
+    const-string v12, "FbSharedPreferencesContract"
 
+    .line 220
     .line 221
-    :goto_4
-    return-object v14
+    invoke-static {v7, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 222
-    :pswitch_1
-    :try_start_5
-    iget v3, v1, LX/2yx;->A01:I
-
     .line 223
     .line 224
-    new-array v2, v3, [D
+    const-string/jumbo v9, "value"
 
     .line 225
     .line 226
-    :goto_5
-    if-ge v4, v3, :cond_5
-
     .line 227
+    const/4 v11, 0x2
+
     .line 228
-    invoke-virtual {v5}, LX/2yu;->A01()I
+    invoke-static {v1, v11}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 229
     .line 230
     .line 231
-    move-result v0
+    invoke-static {v7}, LX/28G;->A08(LX/28G;)Ljava/lang/String;
 
     .line 232
-    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
-
     .line 233
     .line 234
+    move-result-object v14
+
     .line 235
-    move-result v0
+    const-string/jumbo v0, "key"
 
     .line 236
-    float-to-double v0, v0
-
     .line 237
-    aput-wide v0, v2, v4
-
     .line 238
-    .line 239
-    add-int/lit8 v4, v4, 0x1
+    invoke-virtual {v8, v0, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 239
     .line 240
     .line 241
-    goto :goto_5
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_b
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+    instance-of v0, v1, Ljava/lang/String;
 
     .line 242
-    :cond_5
-    :try_start_6
-    invoke-virtual {v5}, LX/2yu;->close()V
-
     .line 243
+    const-string/jumbo v7, "type"
+
     .line 244
     .line 245
-    goto :goto_6
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
-
     .line 246
-    :catch_2
-    move-exception v0
+    if-eqz v0, :cond_8
 
     .line 247
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
-
     .line 248
+    const-string/jumbo v0, "__x"
+
     .line 249
     .line 250
-    return-object v2
-
     .line 251
-    :goto_6
-    return-object v2
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 252
-    :pswitch_2
-    :try_start_7
-    iget v8, v1, LX/2yx;->A01:I
-
     .line 253
     .line 254
-    new-array v3, v8, [LX/2ya;
+    move-result v0
 
     .line 255
+    if-eqz v0, :cond_5
+
     .line 256
-    :goto_7
-    if-ge v4, v8, :cond_6
-
     .line 257
-    .line 258
-    invoke-virtual {v5}, LX/2yu;->A01()I
+    const/16 v0, 0x8
 
+    .line 258
     .line 259
+    invoke-static {v8, v7, v0}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
+
     .line 260
     .line 261
-    move-result v0
-
     .line 262
-    int-to-long v6, v0
+    const-string v1, ""
 
     .line 263
-    invoke-virtual {v5}, LX/2yu;->A01()I
-
     .line 264
+    :goto_1
+    invoke-virtual {v8, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 265
     .line 266
-    move-result v0
-
     .line 267
-    int-to-long v1, v0
+    :cond_4
+    :goto_2
+    const-string/jumbo v7, "preferences"
 
     .line 268
-    new-instance v0, LX/2ya;
-
     .line 269
     .line 270
-    invoke-direct {v0, v6, v7, v1, v2}, LX/2ya;-><init>(JJ)V
+    const/4 v1, 0x0
 
     .line 271
+    move-object/from16 v0, v21
+
     .line 272
     .line 273
-    aput-object v0, v3, v4
+    invoke-virtual {v0, v7, v1, v8}, Landroid/database/sqlite/SQLiteDatabase;->replaceOrThrow(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     .line 274
     .line 275
-    add-int/lit8 v4, v4, 0x1
-
     .line 276
+    goto :goto_0
+
     .line 277
-    goto :goto_7
-    :try_end_7
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_b
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+    :cond_5
+    if-eqz v10, :cond_7
 
     .line 278
-    :cond_6
-    :try_start_8
-    invoke-virtual {v5}, LX/2yu;->close()V
-
     .line 279
-    .line 280
-    .line 281
-    goto :goto_8
-    :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
+    move-object v10, v1
 
+    .line 280
+    check-cast v10, Ljava/lang/String;
+
+    .line 281
     .line 282
-    :catch_3
-    move-exception v0
+    invoke-virtual {v10}, Ljava/lang/String;->length()I
 
     .line 283
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
-
     .line 284
     .line 285
+    move-result v15
+
     .line 286
-    return-object v3
+    const v0, 0x186a0
 
     .line 287
-    :goto_8
-    return-object v3
-
     .line 288
-    :pswitch_3
-    :try_start_9
-    iget v2, v1, LX/2yx;->A01:I
-
     .line 289
+    if-lt v15, v0, :cond_7
+    :try_end_7
+    .catch Landroid/database/sqlite/SQLiteReadOnlyDatabaseException; {:try_start_7 .. :try_end_7} :catch_1
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_7 .. :try_end_7} :catch_3
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
     .line 290
-    new-array v1, v2, [I
-
     .line 291
+    :try_start_8
+    const-string v1, "Large string value for pref key %s, will zip"
+
     .line 292
-    :goto_9
-    if-ge v4, v2, :cond_7
-
     .line 293
-    .line 294
-    invoke-virtual {v5}, LX/2yu;->A01()I
+    new-array v0, v4, [Ljava/lang/Object;
 
+    .line 294
     .line 295
+    aput-object v14, v0, v23
+
     .line 296
     .line 297
-    move-result v0
+    invoke-static {v12, v1, v0}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 298
-    aput v0, v1, v4
-
     .line 299
     .line 300
-    add-int/lit8 v4, v4, 0x1
+    new-instance v15, Ljava/io/ByteArrayOutputStream;
 
     .line 301
     .line 302
-    goto :goto_9
-    :try_end_9
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_b
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+    invoke-direct {v15}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 303
-    :cond_7
-    :try_start_a
-    invoke-virtual {v5}, LX/2yu;->close()V
-
     .line 304
     .line 305
-    .line 306
-    goto :goto_a
-    :try_end_a
-    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_4
+    new-instance v1, Ljava/util/zip/GZIPOutputStream;
 
+    .line 306
     .line 307
-    :catch_4
-    move-exception v0
+    invoke-direct {v1, v15}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 308
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
-
     .line 309
     .line 310
-    .line 311
-    return-object v1
+    const-string v0, "UTF-8"
 
+    .line 311
     .line 312
-    :goto_a
-    return-object v1
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     .line 313
-    :pswitch_4
-    :try_start_b
-    iget v2, v1, LX/2yx;->A01:I
-
     .line 314
     .line 315
-    new-array v1, v2, [I
+    move-result-object v0
 
     .line 316
-    .line 317
-    :goto_b
-    if-ge v4, v2, :cond_8
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
+    .line 317
     .line 318
     .line 319
-    invoke-virtual {v5}, LX/2yu;->A04()S
+    invoke-virtual {v10, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     .line 320
     .line 321
     .line 322
-    move-result v0
+    move-result-object v0
 
     .line 323
-    aput v0, v1, v4
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 324
     .line 325
-    add-int/lit8 v4, v4, 0x1
-
     .line 326
+    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write([B)V
+
     .line 327
-    goto :goto_b
-    :try_end_b
-    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_1
-
     .line 328
-    :cond_8
-    :try_start_c
-    invoke-virtual {v5}, LX/2yu;->close()V
-
     .line 329
+    invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
+
     .line 330
     .line 331
-    goto :goto_c
-    :try_end_c
-    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_5
-
     .line 332
-    :catch_5
-    move-exception v0
+    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
 
     .line 333
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
-
     .line 334
     .line 335
+    invoke-virtual {v15}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
     .line 336
-    return-object v1
-
     .line 337
-    :goto_c
-    return-object v1
-
     .line 338
-    :pswitch_5
-    :try_start_d
-    iget v10, v1, LX/2yx;->A01:I
+    move-result-object v15
 
     .line 339
-    .line 340
-    new-array v3, v10, [LX/2ya;
+    if-eqz v15, :cond_6
 
+    .line 340
     .line 341
+    array-length v0, v15
+
     .line 342
-    :goto_d
-    if-ge v4, v10, :cond_9
+    int-to-long v0, v0
 
     .line 343
-    .line 344
-    invoke-virtual {v5}, LX/2yu;->A01()I
+    const-wide/32 v17, 0x5f5e100
 
+    .line 344
     .line 345
     .line 346
-    .line 347
-    move-result v0
+    cmp-long v16, v0, v17
 
+    .line 347
     .line 348
-    int-to-long v6, v0
+    if-lez v16, :cond_6
 
     .line 349
-    const-wide v8, 0xffffffffL
-
     .line 350
+    new-array v0, v4, [Ljava/lang/Object;
+
     .line 351
     .line 352
+    aput-object v14, v0, v23
+
     .line 353
     .line 354
-    and-long/2addr v6, v8
+    invoke-static {v12, v13, v0}, LX/0Il;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 355
-    invoke-virtual {v5}, LX/2yu;->A01()I
-
     .line 356
     .line 357
+    :cond_6
+    const/4 v0, 0x7
+
     .line 358
-    move-result v0
+    invoke-static {v8, v7, v0}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
 
     .line 359
-    int-to-long v1, v0
-
     .line 360
-    and-long/2addr v1, v8
-
     .line 361
-    new-instance v0, LX/2ya;
+    invoke-virtual {v8, v9, v15}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
     .line 362
     .line 363
-    invoke-direct {v0, v6, v7, v1, v2}, LX/2ya;-><init>(JJ)V
-
     .line 364
+    goto :goto_2
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_0
+    .catch Landroid/database/sqlite/SQLiteReadOnlyDatabaseException; {:try_start_8 .. :try_end_8} :catch_1
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_8 .. :try_end_8} :catch_3
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
     .line 365
+    :catch_0
+    :try_start_9
+    move-exception v0
+
     .line 366
-    aput-object v0, v3, v4
+    invoke-static {v14, v0, v11}, LX/002;->A0H(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 367
     .line 368
-    add-int/lit8 v4, v4, 0x1
-
     .line 369
+    move-result-object v0
+
     .line 370
-    goto :goto_d
-    :try_end_d
-    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_b
-    .catchall {:try_start_d .. :try_end_d} :catchall_1
+    invoke-static {v12, v13, v0}, LX/0Il;->A0Q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 371
-    :cond_9
-    :try_start_e
-    invoke-virtual {v5}, LX/2yu;->close()V
-
     .line 372
     .line 373
+    invoke-static {v8, v7, v4}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
+
     .line 374
-    goto :goto_e
-    :try_end_e
-    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_6
-
     .line 375
-    :catch_6
-    move-exception v0
-
     .line 376
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
+    invoke-virtual {v8, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 377
     .line 378
     .line 379
-    return-object v3
+    goto :goto_2
 
     .line 380
-    :goto_e
-    return-object v3
+    :cond_7
+    invoke-static {v8, v7, v4}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
 
     .line 381
-    :pswitch_6
-    :try_start_f
-    iget v3, v1, LX/2yx;->A01:I
-
     .line 382
     .line 383
-    new-array v2, v3, [J
+    check-cast v1, Ljava/lang/String;
 
     .line 384
     .line 385
-    :goto_f
-    if-ge v4, v3, :cond_a
+    goto :goto_1
 
     .line 386
-    .line 387
-    invoke-virtual {v5}, LX/2yu;->A01()I
+    :cond_8
+    instance-of v0, v1, Ljava/lang/Boolean;
 
+    .line 387
     .line 388
+    if-eqz v0, :cond_9
+
     .line 389
     .line 390
-    move-result v0
+    invoke-static {v8, v7, v11}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
 
     .line 391
-    invoke-static {v0}, LX/0Yi;->A0A(I)J
-
     .line 392
     .line 393
+    invoke-static {v1}, LX/001;->A1S(Ljava/lang/Object;)Z
+
     .line 394
-    move-result-wide v0
-
     .line 395
-    aput-wide v0, v2, v4
-
     .line 396
+    move-result v0
+
     .line 397
-    add-int/lit8 v4, v4, 0x1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 398
     .line 399
-    goto :goto_f
-    :try_end_f
-    .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_b
-    .catchall {:try_start_f .. :try_end_f} :catchall_1
-
     .line 400
-    :cond_a
-    :try_start_10
-    invoke-virtual {v5}, LX/2yu;->close()V
+    move-result-object v1
 
     .line 401
+    :goto_3
+    invoke-virtual {v8, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
     .line 402
     .line 403
-    goto :goto_10
-    :try_end_10
-    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_7
-
     .line 404
-    :catch_7
-    move-exception v0
+    goto/16 :goto_2
 
     .line 405
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
-
     .line 406
+    :cond_9
+    instance-of v0, v1, Ljava/lang/Integer;
+
     .line 407
     .line 408
-    return-object v2
+    if-eqz v0, :cond_a
 
     .line 409
-    :goto_10
-    return-object v2
-
     .line 410
-    :pswitch_7
-    :try_start_11
-    iget v2, v1, LX/2yx;->A01:I
+    const/4 v0, 0x3
 
     .line 411
-    .line 412
-    new-array v1, v2, [I
+    invoke-static {v8, v7, v0}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
 
+    .line 412
     .line 413
     .line 414
-    :goto_11
-    if-ge v4, v2, :cond_b
+    check-cast v1, Ljava/lang/Integer;
 
     .line 415
     .line 416
-    invoke-virtual {v5}, LX/2yu;->A02()I
+    goto :goto_3
 
     .line 417
+    :cond_a
+    instance-of v0, v1, Ljava/lang/Long;
+
     .line 418
     .line 419
-    move-result v0
+    if-eqz v0, :cond_b
 
     .line 420
-    aput v0, v1, v4
-
     .line 421
+    move/from16 v0, v24
+
     .line 422
-    add-int/lit8 v4, v4, 0x1
-
     .line 423
+    invoke-static {v8, v7, v0}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
+
     .line 424
-    goto :goto_11
-    :try_end_11
-    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_b
-    .catchall {:try_start_11 .. :try_end_11} :catchall_1
-
     .line 425
-    :cond_b
-    :try_start_12
-    invoke-virtual {v5}, LX/2yu;->close()V
-
     .line 426
+    check-cast v1, Ljava/lang/Long;
+
     .line 427
     .line 428
-    goto :goto_12
-    :try_end_12
-    .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_8
+    invoke-virtual {v8, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 429
-    :catch_8
-    move-exception v0
-
     .line 430
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
-
     .line 431
+    goto/16 :goto_2
+
     .line 432
     .line 433
-    return-object v1
+    :cond_b
+    instance-of v0, v1, Ljava/lang/Float;
 
     .line 434
-    :goto_12
-    return-object v1
-
     .line 435
-    :pswitch_8
-    :try_start_13
-    iget v8, v1, LX/2yx;->A01:I
+    if-eqz v0, :cond_c
 
     .line 436
     .line 437
-    sget-object v6, LX/2z3;->A07:[B
+    const/4 v0, 0x5
 
     .line 438
+    invoke-static {v8, v7, v0}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
+
     .line 439
-    array-length v3, v6
-
     .line 440
-    if-lt v8, v3, :cond_e
-
     .line 441
-    .line 442
-    const/4 v2, 0x0
+    check-cast v1, Ljava/lang/Float;
 
+    .line 442
     .line 443
-    :goto_13
-    if-ge v2, v3, :cond_d
+    invoke-virtual {v8, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Float;)V
 
     .line 444
     .line 445
-    aget-byte v1, v7, v2
-
     .line 446
+    goto/16 :goto_2
+
     .line 447
-    aget-byte v0, v6, v2
-
     .line 448
-    .line 449
-    if-eq v1, v0, :cond_c
-
-    .line 450
-    .line 451
-    goto :goto_14
-
-    .line 452
     :cond_c
-    add-int/lit8 v2, v2, 0x1
+    instance-of v0, v1, Ljava/lang/Double;
+
+    .line 449
+    .line 450
+    if-eqz v0, :cond_4
+
+    .line 451
+    .line 452
+    const/4 v0, 0x6
 
     .line 453
+    invoke-static {v8, v7, v0}, LX/0X3;->A0w(Landroid/content/ContentValues;Ljava/lang/String;I)V
+
     .line 454
-    goto :goto_13
-
     .line 455
-    :goto_14
-    const/4 v9, 0x0
-
     .line 456
-    :cond_d
-    if-eqz v9, :cond_e
+    check-cast v1, Ljava/lang/Double;
 
     .line 457
     .line 458
-    move v4, v3
+    invoke-virtual {v8, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
     .line 459
-    :cond_e
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
     .line 460
     .line 461
-    .line 462
-    move-result-object v3
+    goto/16 :goto_2
+    :try_end_9
+    .catch Landroid/database/sqlite/SQLiteReadOnlyDatabaseException; {:try_start_9 .. :try_end_9} :catch_1
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_9 .. :try_end_9} :catch_3
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
+    .line 462
     .line 463
-    :goto_15
-    if-ge v4, v8, :cond_10
+    :catch_1
+    :try_start_a
+    move-exception v8
 
     .line 464
+    iget-object v0, v6, LX/2Wf;->A02:LX/0lu;
+
     .line 465
-    aget-byte v2, v7, v4
-
     .line 466
-    .line 467
-    if-eqz v2, :cond_10
+    invoke-static {v0}, LX/0lu;->A04(LX/0lu;)LX/0Ft;
 
+    .line 467
     .line 468
     .line 469
-    const/16 v1, 0x20
+    move-result-object v7
 
     .line 470
+    const-string v1, "FbSharedPreferencesDbStorage"
+
     .line 471
-    const/16 v0, 0x3f
-
     .line 472
+    const-string v0, "Failed to write to preferences"
+
     .line 473
-    if-lt v2, v1, :cond_f
-
     .line 474
+    invoke-interface {v7, v1, v0, v8}, LX/0Ft;->AnI(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 475
-    int-to-char v0, v2
-
     .line 476
-    :cond_f
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
     .line 477
+    :cond_d
+    const/16 v20, 0x1
+
     .line 478
     .line 479
-    add-int/lit8 v4, v4, 0x1
+    :cond_e
+    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
 
     .line 480
     .line 481
-    goto :goto_15
-
     .line 482
-    :cond_10
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result v0
 
     .line 483
+    if-nez v0, :cond_f
+    :try_end_a
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_a .. :try_end_a} :catch_3
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
+
     .line 484
     .line 485
-    move-result-object v3
+    :try_start_b
+    new-array v9, v4, [Ljava/lang/String;
 
     .line 486
-    goto :goto_17
-
     .line 487
-    :pswitch_9
-    array-length v0, v7
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     .line 488
-    if-ne v0, v9, :cond_11
-
     .line 489
     .line 490
-    aget-byte v0, v7, v4
+    move-result-object v8
 
     .line 491
-    .line 492
-    if-ltz v0, :cond_11
+    :goto_4
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 492
     .line 493
     .line 494
-    if-gt v0, v9, :cond_11
+    move-result v0
 
     .line 495
+    if-eqz v0, :cond_f
+
     .line 496
-    new-array v2, v9, [C
-
     .line 497
-    .line 498
-    add-int/lit8 v0, v0, 0x30
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 498
     .line 499
     .line 500
-    int-to-char v0, v0
+    move-result-object v0
 
     .line 501
-    aput-char v0, v2, v4
+    check-cast v0, LX/28G;
 
     .line 502
     .line 503
-    new-instance v1, Ljava/lang/String;
+    invoke-virtual {v0}, LX/28G;->A0B()Ljava/lang/String;
 
     .line 504
     .line 505
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([C)V
-    :try_end_13
-    .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_b
-    .catchall {:try_start_13 .. :try_end_13} :catchall_1
-
     .line 506
-    .line 507
-    .line 508
-    :try_start_14
-    invoke-virtual {v5}, LX/2yu;->close()V
+    move-result-object v0
 
+    .line 507
+    aput-object v0, v9, v23
+
+    .line 508
     .line 509
+    const-string/jumbo v7, "preferences"
+
     .line 510
     .line 511
-    goto :goto_16
-    :try_end_14
-    .catch Ljava/io/IOException; {:try_start_14 .. :try_end_14} :catch_9
-
     .line 512
-    :catch_9
-    move-exception v0
+    const-string/jumbo v1, "key = ?"
 
     .line 513
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
-
     .line 514
     .line 515
-    .line 516
-    return-object v1
+    move-object/from16 v0, v21
 
+    .line 516
     .line 517
-    :goto_16
-    return-object v1
+    invoke-virtual {v0, v7, v1, v9}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     .line 518
-    :cond_11
-    :try_start_15
-    sget-object v0, LX/2z3;->A06:Ljava/nio/charset/Charset;
-
     .line 519
     .line 520
-    new-instance v3, Ljava/lang/String;
+    goto :goto_4
+    :try_end_b
+    .catch Landroid/database/sqlite/SQLiteReadOnlyDatabaseException; {:try_start_b .. :try_end_b} :catch_2
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_b .. :try_end_b} :catch_3
+    .catchall {:try_start_b .. :try_end_b} :catchall_1
 
     .line 521
+    :catch_2
+    :try_start_c
+    move-exception v8
+
     .line 522
-    invoke-direct {v3, v7, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-    :try_end_15
-    .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_b
-    .catchall {:try_start_15 .. :try_end_15} :catchall_1
+    iget-object v0, v6, LX/2Wf;->A02:LX/0lu;
 
     .line 523
     .line 524
-    .line 525
-    :goto_17
-    :try_start_16
-    invoke-virtual {v5}, LX/2yu;->close()V
+    invoke-static {v0}, LX/0lu;->A04(LX/0lu;)LX/0Ft;
 
+    .line 525
     .line 526
     .line 527
+    move-result-object v7
+
     .line 528
-    goto :goto_18
-    :try_end_16
-    .catch Ljava/io/IOException; {:try_start_16 .. :try_end_16} :catch_a
+    const-string v1, "FbSharedPreferencesDbStorage"
 
     .line 529
-    :catch_a
-    move-exception v2
-
     .line 530
-    const-string v1, "ExifReader"
+    const-string v0, "Failed to write to preferences"
 
     .line 531
     .line 532
-    move-object/from16 v0, v22
+    invoke-interface {v7, v1, v0, v8}, LX/0Ft;->AnI(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 533
     .line 534
-    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 535
+    :cond_f
+    invoke-virtual/range {v21 .. v21}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+
     .line 536
     .line 537
-    return-object v3
-
     .line 538
-    :goto_18
-    return-object v3
+    goto :goto_6
+    :try_end_c
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_c .. :try_end_c} :catch_3
+    .catchall {:try_start_c .. :try_end_c} :catchall_1
 
     .line 539
-    :catch_b
-    move-exception v1
+    :catch_3
+    move-exception v7
 
     .line 540
-    goto :goto_19
+    if-eqz v22, :cond_10
 
     .line 541
-    :catchall_0
-    move-exception v1
-
     .line 542
-    goto :goto_1a
+    :try_start_d
+    const-string/jumbo v9, "Writing preferences failed."
 
     .line 543
-    :catch_c
-    move-exception v1
-
     .line 544
-    move-object/from16 v5, v21
-
     .line 545
+    const-string v8, "FbSharedPreferencesDbStorage_PROVIDER_SQLITE_EXCEPTION"
+
     .line 546
-    :goto_19
-    :try_start_17
-    const-string v2, "ExifReader"
-
     .line 547
-    .line 548
-    const-string v0, "IOException occurred during reading a value"
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    .line 548
     .line 549
     .line 550
-    invoke-static {v2, v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    move-result-object v1
 
     .line 551
+    const-string v0, "Attempt #%d. %s."
+
     .line 552
     .line 553
-    if-eqz v5, :cond_12
-    :try_end_17
-    .catchall {:try_start_17 .. :try_end_17} :catchall_1
+    invoke-static {v0, v1, v9}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String;
 
     .line 554
     .line 555
-    :try_start_18
-    invoke-virtual {v5}, LX/2yu;->close()V
-
     .line 556
+    move-result-object v0
+
     .line 557
+    invoke-static {v8, v0}, LX/0G0;->A02(Ljava/lang/String;Ljava/lang/String;)LX/0G2;
+
     .line 558
-    return-object v21
-    :try_end_18
-    .catch Ljava/io/IOException; {:try_start_18 .. :try_end_18} :catch_d
-
     .line 559
-    :catch_d
-    move-exception v1
-
     .line 560
-    move-object/from16 v0, v22
+    move-result-object v0
 
     .line 561
-    .line 562
-    invoke-static {v2, v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    iput v4, v0, LX/0G2;->A00:I
 
+    .line 562
     .line 563
+    iput-object v7, v0, LX/0G2;->A04:Ljava/lang/Throwable;
+
     .line 564
     .line 565
-    :cond_12
-    return-object v21
+    new-instance v1, LX/0G0;
 
     .line 566
-    :catchall_1
-    move-exception v1
-
     .line 567
-    move-object/from16 v21, v5
+    invoke-direct {v1, v0}, LX/0G0;-><init>(LX/0G2;)V
 
     .line 568
     .line 569
-    :goto_1a
-    if-eqz v21, :cond_13
-
     .line 570
-    .line 571
-    :try_start_19
-    invoke-virtual/range {v21 .. v21}, LX/2yu;->close()V
-    :try_end_19
-    .catch Ljava/io/IOException; {:try_start_19 .. :try_end_19} :catch_e
+    iget-object v0, v6, LX/2Wf;->A02:LX/0lu;
 
+    .line 571
     .line 572
+    invoke-static {v0}, LX/0lu;->A04(LX/0lu;)LX/0Ft;
+
     .line 573
     .line 574
-    throw v1
-
     .line 575
-    :catch_e
-    move-exception v0
+    move-result-object v0
 
     .line 576
-    invoke-static {v0}, LX/2yx;->A01(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, LX/0Ft;->AnB(LX/0G0;)V
 
     .line 577
     .line 578
     .line 579
-    :cond_13
-    throw v1
+    :cond_10
+    const-wide/16 v0, 0x1e
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_1
 
     .line 580
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_9
-        :pswitch_8
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    .line 581
+    :try_start_e
+    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-.method public static A01(Ljava/lang/Throwable;)V
-    .locals 2
+    .line 582
+    .line 583
+    .line 584
+    goto :goto_5
+    :try_end_e
+    .catch Ljava/lang/InterruptedException; {:try_start_e .. :try_end_e} :catch_4
+    .catchall {:try_start_e .. :try_end_e} :catchall_1
 
-    .line 0
-    const-string v1, "IOException occurred while closing InputStream"
+    .line 585
+    :catch_4
+    :try_start_f
+    invoke-static {}, LX/0X3;->A0u()V
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_1
 
-    .line 1
-    .line 2
-    const-string v0, "ExifReader"
+    .line 586
+    .line 587
+    .line 588
+    :goto_5
+    :try_start_10
+    invoke-virtual/range {v21 .. v21}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
 
-    .line 3
-    .line 4
-    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 589
+    .line 590
+    .line 591
+    move-result v0
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
+    .line 592
+    if-eqz v0, :cond_11
 
+    .line 593
+    .line 594
+    invoke-virtual/range {v21 .. v21}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    .line 595
+    .line 596
+    .line 597
+    :cond_11
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
 
-    .line 0
-    const-string v4, "("
+    .line 598
+    .line 599
+    .line 600
+    add-int/lit8 v5, v5, 0x1
 
-    .line 1
-    .line 2
-    sget-object v1, LX/2z3;->A05:[Ljava/lang/String;
+    .line 601
+    .line 602
+    const/16 v0, 0xa
 
-    .line 3
-    .line 4
-    iget v0, p0, LX/2yx;->A00:I
+    .line 603
+    .line 604
+    if-lt v5, v0, :cond_2
 
-    .line 5
-    .line 6
-    aget-object v3, v1, v0
+    .line 605
+    .line 606
+    goto/16 :goto_c
 
-    .line 7
-    .line 8
-    const-string v2, ", data length:"
+    .line 607
+    .line 608
+    :goto_6
+    invoke-virtual/range {v21 .. v21}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
 
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/2yx;->A02:[B
+    .line 609
+    .line 610
+    .line 611
+    move-result v0
 
-    .line 11
-    .line 12
-    array-length v1, v0
+    .line 612
+    if-eqz v0, :cond_12
 
-    .line 13
-    const-string v0, ")"
+    .line 613
+    .line 614
+    invoke-virtual/range {v21 .. v21}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 14
-    .line 15
-    invoke-static {v1, v4, v3, v2, v0}, LX/00I;->A09(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 615
+    .line 616
+    .line 617
+    :cond_12
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_3
 
-    .line 16
-    .line 17
-    .line 18
+    .line 618
+    .line 619
+    .line 620
+    :goto_7
+    :try_start_11
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 621
+    .line 622
+    .line 623
+    iget-object v0, v3, LX/2Z3;->A05:LX/0lu;
+
+    .line 624
+    .line 625
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
+
+    .line 626
+    .line 627
+    .line 628
     move-result-object v0
 
-    .line 19
-    return-object v0
+    .line 629
+    check-cast v0, LX/2Fk;
+
+    .line 630
+    .line 631
+    invoke-virtual {v0}, LX/2Fk;->A01()Z
+
+    .line 632
+    .line 633
+    .line 634
+    move-result v0
+
+    .line 635
+    if-eqz v0, :cond_13
+
+    .line 636
+    .line 637
+    iget-object v0, v3, LX/2Z3;->A08:LX/0lu;
+
+    .line 638
+    .line 639
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
+
+    .line 640
+    .line 641
+    .line 642
+    move-result-object v1
+
+    .line 643
+    check-cast v1, LX/2Ll;
+
+    .line 644
+    .line 645
+    move-object/from16 v0, v26
+
+    .line 646
+    .line 647
+    invoke-virtual {v1, v2, v0, v4}, LX/2Ll;->A02(Ljava/util/Collection;Ljava/util/Map;Z)V
+
+    .line 648
+    .line 649
+    .line 650
+    :cond_13
+    invoke-interface/range {v25 .. v25}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 651
+    .line 652
+    .line 653
+    move-result-object v6
+
+    .line 654
+    check-cast v6, LX/2Yz;
+
+    .line 655
+    .line 656
+    const-string v0, "PrefsExternalValueStorage.cleanUpIrrelevantExternalValues"
+
+    .line 657
+    .line 658
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_4
+
+    .line 659
+    .line 660
+    .line 661
+    :try_start_12
+    iget-boolean v0, v6, LX/2Yz;->A08:Z
+
+    .line 662
+    .line 663
+    if-eqz v0, :cond_17
+
+    .line 664
+    .line 665
+    iget-object v4, v6, LX/2Yz;->A05:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 666
+    .line 667
+    invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_3
+
+    .line 668
+    .line 669
+    .line 670
+    :try_start_13
+    invoke-static {v6}, LX/2Yz;->A00(LX/2Yz;)Ljava/util/Set;
+
+    .line 671
+    .line 672
+    .line 673
+    move-result-object v0
+
+    .line 674
+    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
+
+    .line 675
+    .line 676
+    .line 677
+    move-result v0
+
+    .line 678
+    if-eqz v0, :cond_14
+    :try_end_13
+    .catchall {:try_start_13 .. :try_end_13} :catchall_0
+
+    .line 679
+    .line 680
+    :try_start_14
+    invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 681
+    .line 682
+    .line 683
+    goto :goto_a
+
+    .line 684
+    :cond_14
+    invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 685
+    .line 686
+    .line 687
+    invoke-static/range {v26 .. v26}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
+
+    .line 688
+    .line 689
+    .line 690
+    move-result-object v5
+
+    .line 691
+    :cond_15
+    :goto_8
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 692
+    .line 693
+    .line 694
+    move-result v0
+
+    .line 695
+    if-eqz v0, :cond_16
+
+    .line 696
+    .line 697
+    invoke-static {v5}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+
+    .line 698
+    .line 699
+    .line 700
+    move-result-object v4
+
+    .line 701
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    .line 702
+    .line 703
+    .line 704
+    move-result-object v1
+
+    .line 705
+    const-string/jumbo v0, "__x"
+
+    .line 706
+    .line 707
+    .line 708
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 709
+    .line 710
+    .line 711
+    move-result v0
+
+    .line 712
+    if-nez v0, :cond_15
+
+    .line 713
+    .line 714
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    .line 715
+    .line 716
+    .line 717
+    move-result-object v0
+
+    .line 718
+    check-cast v0, LX/28F;
+
+    .line 719
+    .line 720
+    invoke-static {v0}, LX/28G;->A08(LX/28G;)Ljava/lang/String;
+
+    .line 721
+    .line 722
+    .line 723
+    move-result-object v0
+
+    .line 724
+    invoke-static {v6, v0}, LX/2Yz;->A01(LX/2Yz;Ljava/lang/String;)V
+
+    .line 725
+    .line 726
+    .line 727
+    goto :goto_8
+
+    .line 728
+    :cond_16
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    .line 729
+    .line 730
+    .line 731
+    move-result-object v1
+
+    .line 732
+    :goto_9
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 733
+    .line 734
+    .line 735
+    move-result v0
+
+    .line 736
+    if-eqz v0, :cond_17
+
+    .line 737
+    .line 738
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 739
+    .line 740
+    .line 741
+    move-result-object v0
+
+    .line 742
+    check-cast v0, LX/28F;
+
+    .line 743
+    .line 744
+    invoke-static {v0}, LX/28G;->A08(LX/28G;)Ljava/lang/String;
+
+    .line 745
+    .line 746
+    .line 747
+    move-result-object v0
+
+    .line 748
+    invoke-static {v6, v0}, LX/2Yz;->A01(LX/2Yz;Ljava/lang/String;)V
+
+    .line 749
+    .line 750
+    .line 751
+    goto :goto_9
+    :try_end_14
+    .catchall {:try_start_14 .. :try_end_14} :catchall_3
+
+    .line 752
+    :catchall_0
+    move-exception v1
+
+    .line 753
+    goto :goto_d
+
+    .line 754
+    :cond_17
+    :goto_a
+    :try_start_15
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 755
+    .line 756
+    .line 757
+    invoke-interface/range {v26 .. v26}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    .line 758
+    .line 759
+    .line 760
+    move-result-object v0
+
+    .line 761
+    invoke-static {v2, v0}, LX/1ti;->A08(Ljava/lang/Iterable;Ljava/util/Set;)Ljava/util/LinkedHashSet;
+
+    .line 762
+    .line 763
+    .line 764
+    move-result-object v1
+
+    .line 765
+    iget-object v0, v3, LX/2Z3;->A04:LX/0GZ;
+
+    .line 766
+    .line 767
+    if-eqz v0, :cond_18
+
+    .line 768
+    .line 769
+    invoke-interface {v0, v1}, LX/0GZ;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_4
+
+    .line 770
+    .line 771
+    .line 772
+    :cond_18
+    :goto_b
+    :try_start_16
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 773
+    .line 774
+    .line 775
+    goto :goto_10
+    :try_end_16
+    .catchall {:try_start_16 .. :try_end_16} :catchall_5
+
+    .line 776
+    :goto_c
+    :try_start_17
+    invoke-static {v7}, Lcom/google/common/base/Throwables;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    :try_end_17
+    .catchall {:try_start_17 .. :try_end_17} :catchall_3
+
+    .line 777
+    .line 778
+    .line 779
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 780
+    .line 781
+    .line 782
+    move-result-object v1
+
+    .line 783
+    goto :goto_e
+
+    .line 784
+    :catchall_1
+    move-exception v1
+
+    .line 785
+    :try_start_18
+    invoke-virtual/range {v21 .. v21}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+
+    .line 786
+    .line 787
+    .line 788
+    move-result v0
+
+    .line 789
+    if-eqz v0, :cond_19
+
+    .line 790
+    .line 791
+    invoke-virtual/range {v21 .. v21}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    .line 792
+    .line 793
+    .line 794
+    :cond_19
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 795
+    .line 796
+    .line 797
+    goto :goto_e
+
+    .line 798
+    :goto_d
+    invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 799
+    .line 800
+    .line 801
+    :goto_e
+    throw v1
+    :try_end_18
+    .catchall {:try_start_18 .. :try_end_18} :catchall_3
+
+    .line 802
+    :catchall_2
+    move-exception v0
+
+    .line 803
+    :try_start_19
+    invoke-virtual {v6}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 804
+    .line 805
+    .line 806
+    goto :goto_f
+
+    .line 807
+    :catchall_3
+    move-exception v0
+
+    .line 808
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 809
+    .line 810
+    .line 811
+    :goto_f
+    throw v0
+    :try_end_19
+    .catchall {:try_start_19 .. :try_end_19} :catchall_4
+
+    .line 812
+    :catchall_4
+    :try_start_1a
+    move-exception v0
+
+    .line 813
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 814
+    .line 815
+    .line 816
+    throw v0
+    :try_end_1a
+    .catchall {:try_start_1a .. :try_end_1a} :catchall_5
+
+    .line 817
+    :catchall_5
+    move-exception v4
+
+    .line 818
+    :try_start_1b
+    const-string v1, "PreferenceStorageWriter"
+
+    .line 819
+    .line 820
+    const-string v0, "FbSharedPreferences storage sync failed!"
+
+    .line 821
+    .line 822
+    invoke-static {v1, v0, v4}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 823
+    .line 824
+    .line 825
+    iget-object v0, v3, LX/2Z3;->A0A:LX/0lu;
+
+    .line 826
+    .line 827
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
+
+    .line 828
+    .line 829
+    .line 830
+    move-result-object v2
+
+    .line 831
+    check-cast v2, LX/0PP;
+
+    .line 832
+    .line 833
+    const v1, 0x30c00bc1
+
+    .line 834
+    .line 835
+    .line 836
+    const-string/jumbo v0, "fail"
+
+    .line 837
+    .line 838
+    .line 839
+    invoke-interface {v2, v0, v1}, LX/0PP;->A4T(Ljava/lang/String;I)LX/0P1;
+
+    .line 840
+    .line 841
+    .line 842
+    move-result-object v0
+
+    .line 843
+    invoke-interface {v0, v4}, LX/0P1;->Aju(Ljava/lang/Throwable;)LX/0P1;
+
+    .line 844
+    .line 845
+    .line 846
+    invoke-interface {v0}, LX/0P1;->report()V
+
+    .line 847
+    .line 848
+    .line 849
+    throw v4
+    :try_end_1b
+    .catchall {:try_start_1b .. :try_end_1b} :catchall_6
+
+    .line 850
+    :catchall_6
+    move-exception v1
+
+    .line 851
+    const/4 v0, 0x0
+
+    .line 852
+    iput-boolean v0, v3, LX/2Z3;->A0D:Z
+
+    .line 853
+    .line 854
+    throw v1
+
+    .line 855
+    :goto_10
+    const/4 v0, 0x0
+
+    .line 856
+    iput-boolean v0, v3, LX/2Z3;->A0D:Z
+
+    .line 857
+    .line 858
+    :cond_1a
+    return-void
 .end method

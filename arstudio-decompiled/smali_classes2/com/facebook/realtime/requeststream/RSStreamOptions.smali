@@ -16,7 +16,7 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,71 +24,79 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1z6;->A0N()LX/35B;
+    invoke-static {}, LX/2I6;->A0T()LX/30K;
 
     .line 4
     .line 5
     .line 6
-    move-result-object v2
+    move-result-object v3
 
     .line 7
-    const-wide v0, 0x83017e000c019bL
+    const-wide v0, 0x830163000c0194L
 
     .line 8
     .line 9
     .line 10
     .line 11
     .line 12
-    invoke-interface {v2, v0, v1}, LX/35B;->AMY(J)Ljava/lang/String;
+    check-cast v3, LX/302;
 
     .line 13
     .line 14
-    .line 15
-    move-result-object v0
+    sget-object v2, LX/30J;->A05:LX/30J;
 
+    .line 15
     .line 16
-    iput-object v0, p0, Lcom/facebook/realtime/requeststream/RSStreamOptions;->A01:Ljava/lang/String;
+    invoke-virtual {v3, v2, v0, v1}, LX/302;->ALF(LX/30J;J)Ljava/lang/String;
 
     .line 17
     .line 18
-    const-wide v0, 0x82017e000d05b8L
-
     .line 19
+    move-result-object v0
+
     .line 20
+    iput-object v0, p0, Lcom/facebook/realtime/requeststream/RSStreamOptions;->A01:Ljava/lang/String;
+
     .line 21
     .line 22
-    .line 23
-    invoke-interface {v2, v0, v1}, LX/35B;->AIM(J)J
+    const-wide v0, 0x820163000d04feL
 
+    .line 23
     .line 24
     .line 25
     .line 26
-    move-result-wide v0
-
     .line 27
-    iput-wide v0, p0, Lcom/facebook/realtime/requeststream/RSStreamOptions;->A00:J
+    invoke-virtual {v3, v2, v0, v1}, LX/302;->AGt(LX/30J;J)J
 
     .line 28
     .line 29
-    const-wide v0, 0x81017e001e1357L
-
     .line 30
+    move-result-wide v0
+
     .line 31
+    iput-wide v0, p0, Lcom/facebook/realtime/requeststream/RSStreamOptions;->A00:J
+
     .line 32
     .line 33
-    .line 34
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    const-wide v0, 0x810163001e10d7L
 
+    .line 34
     .line 35
     .line 36
     .line 37
-    move-result v0
-
     .line 38
-    iput-boolean v0, p0, Lcom/facebook/realtime/requeststream/RSStreamOptions;->A02:Z
+    invoke-virtual {v3, v2, v0, v1}, LX/302;->ABE(LX/30J;J)Z
 
     .line 39
     .line 40
+    .line 41
+    move-result v0
+
+    .line 42
+    iput-boolean v0, p0, Lcom/facebook/realtime/requeststream/RSStreamOptions;->A02:Z
+
+    .line 43
+    .line 44
     return-void
 .end method
 

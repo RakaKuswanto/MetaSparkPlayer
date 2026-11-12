@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLInstantShoppingPresentationStyleSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLInstantShoppingPresentationStyleSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -344,7 +344,7 @@
 
     .line 161
     .line 162
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 163
     .line 164
@@ -352,7 +352,7 @@
     move-result-object v0
 
     .line 166
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLInstantShoppingPresentationStyleSet;->A00:Ljava/util/Set;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLInstantShoppingPresentationStyleSet;->A00:Ljava/util/HashSet;
 
     .line 167
     .line 168
@@ -371,11 +371,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLInstantShoppingPresentationStyleSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLInstantShoppingPresentationStyleSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

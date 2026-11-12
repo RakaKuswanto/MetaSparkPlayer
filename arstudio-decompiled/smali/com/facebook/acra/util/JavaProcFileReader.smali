@@ -26,62 +26,60 @@
     .locals 2
 
     .line 0
-    const/4 v0, 0x1
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 1
-    new-array v1, v0, [Ljava/lang/Object;
-
     .line 2
     .line 3
-    invoke-static {}, Landroid/os/Process;->myPid()I
+    move-result-object v1
 
     .line 4
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
     .line 5
     .line 6
+    .line 7
     move-result v0
 
-    .line 7
+    .line 8
     invoke-static {v1, v0}, LX/001;->A18([Ljava/lang/Object;I)V
 
-    .line 8
     .line 9
     .line 10
+    .line 11
     const-string v0, "/proc/%s/fd"
 
-    .line 11
     .line 12
+    .line 13
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 13
     .line 14
     .line 15
+    .line 16
     move-result-object v0
 
-    .line 16
+    .line 17
     sput-object v0, Lcom/facebook/acra/util/JavaProcFileReader;->FD_DIR:Ljava/lang/String;
 
-    .line 17
     .line 18
+    .line 19
     const/4 v0, 0x6
 
-    .line 19
+    .line 20
     new-array v0, v0, [I
 
-    .line 20
     .line 21
+    .line 22
     fill-array-data v0, :array_0
 
-    .line 22
     .line 23
     .line 24
+    .line 25
     sput-object v0, Lcom/facebook/acra/util/JavaProcFileReader;->PROC_OPEN_FD_LIMITS_FORMAT:[I
 
-    .line 25
     .line 26
-    return-void
-
     .line 27
-    nop
+    return-void
 
     .line 28
     :array_0
@@ -147,18 +145,14 @@
 
     .line 14
     .line 15
-    aget-byte v0, p0, p1
+    if-eqz v1, :cond_0
 
     .line 16
     .line 17
-    if-eqz v0, :cond_0
+    add-int/lit8 p1, p1, 0x1
 
     .line 18
     .line 19
-    add-int/lit8 p1, p1, 0x1
-
-    .line 20
-    .line 21
     goto :goto_0
 .end method
 
@@ -284,7 +278,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -335,7 +329,7 @@
     move-result-object v0
 
     .line 23
-    invoke-static {v1, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     .line 25
@@ -385,11 +379,11 @@
 
     .line 15
     .line 16
-    new-instance v1, Ljava/io/FileInputStream;
+    new-instance v2, Ljava/io/FileInputStream;
 
     .line 17
     .line 18
-    invoke-direct {v1, v0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
     .line 19
     .line 20
@@ -404,7 +398,7 @@
 
     .line 24
     :try_start_1
-    invoke-virtual {v1, v6, v4, v0}, Ljava/io/InputStream;->read([BII)I
+    invoke-virtual {v2, v6, v4, v0}, Ljava/io/InputStream;->read([BII)I
 
     .line 25
     .line 26
@@ -419,7 +413,7 @@
     .line 29
     .line 30
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
     .line 31
     .line 32
@@ -471,14 +465,14 @@
 
     .line 52
     .line 53
-    sget-object v5, LX/0J0;->A00:LX/0Iz;
+    sget-object v5, LX/0Ht;->A00:LX/0Hs;
 
     .line 54
     .line 55
     move-object v9, v7
 
     .line 56
-    invoke-interface/range {v5 .. v12}, LX/0Iz;->Aff([B[F[I[J[Ljava/lang/String;II)Z
+    invoke-interface/range {v5 .. v12}, LX/0Hs;->Ae3([B[F[I[J[Ljava/lang/String;II)Z
 
     .line 57
     .line 58
@@ -536,41 +530,53 @@
 
     .line 83
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 84
     :try_start_3
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
     .line 85
     .line 86
     .line 87
-    :catchall_1
-    :try_start_4
-    throw v0
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+    goto :goto_1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 88
-    :catch_0
-    move-exception v2
+    :catchall_1
+    move-exception v0
 
     .line 89
-    sget-object v1, Lcom/facebook/acra/util/JavaProcFileReader;->TAG:Ljava/lang/String;
+    :try_start_4
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 90
     .line 91
-    const-string v0, "Failed to read /proc/self/limits"
-
     .line 92
+    :goto_1
+    throw v1
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
     .line 93
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0I(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :catch_0
+    move-exception v2
 
     .line 94
+    sget-object v1, Lcom/facebook/acra/util/JavaProcFileReader;->TAG:Ljava/lang/String;
+
     .line 95
     .line 96
+    const-string v0, "Failed to read /proc/self/limits"
+
+    .line 97
+    .line 98
+    invoke-static {v1, v0, v2}, LX/0Il;->A0I(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 99
+    .line 100
+    .line 101
     return-object v7
 .end method
 
@@ -586,7 +592,7 @@
 
     .line 3
     .line 4
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 5
     .line 6
@@ -824,7 +830,7 @@
     .line 110
     .line 111
     .line 112
-    invoke-virtual {v6, v9, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v6, v9, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 113
     .line 114
@@ -851,7 +857,7 @@
 
     .line 124
     :cond_5
-    invoke-static {v6}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v6}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 125
     .line 126
@@ -872,7 +878,7 @@
 
     .line 133
     .line 134
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 135
     .line 136
@@ -880,7 +886,7 @@
     move-result-object v1
 
     .line 138
-    invoke-static {v1}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v1}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 139
     .line 140
@@ -959,7 +965,7 @@
 
     .line 174
     .line 175
-    invoke-static {v0, v2, v1}, LX/0Jt;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v2, v1}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 176
     .line 177

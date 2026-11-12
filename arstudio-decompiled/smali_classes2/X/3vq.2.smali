@@ -1,31 +1,29 @@
-.class public final LX/3vq;
+.class public interface abstract LX/3vQ;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:Lcom/facebook/video/engine/api/VideoPlayerParams;
+# virtual methods
+.method public abstract A4k()Z
+.end method
 
-.field public final synthetic A01:LX/3oP;
+.method public abstract A4m()Z
+.end method
 
+.method public abstract Aee()Z
+.end method
 
-# direct methods
-.method public constructor <init>(Lcom/facebook/video/engine/api/VideoPlayerParams;LX/3oP;)V
-    .locals 0
+.method public abstract Aef()LX/3Ti;
+.end method
 
-    .line 0
-    iput-object p2, p0, LX/3vq;->A01:LX/3oP;
+.method public abstract Aeg()LX/3Ti;
+.end method
 
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract Aei()Z
+.end method
 
-    .line 3
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/3vq;->A00:Lcom/facebook/video/engine/api/VideoPlayerParams;
+.method public abstract Aej()I
+.end method
 
-    .line 6
-    .line 7
-    return-void
+.method public abstract Aew()Z
 .end method

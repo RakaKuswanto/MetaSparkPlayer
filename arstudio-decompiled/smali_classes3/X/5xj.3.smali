@@ -2,9 +2,12 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5yn;
+
 
 # static fields
-.field public static final A00:LX/5xj;
+.field public static final A00:LX/5ys;
 
 
 # direct methods
@@ -12,16 +15,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5xk;
+    new-instance v0, LX/5ys;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5xk;-><init>()V
+    invoke-direct {v0}, LX/5ys;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, LX/5xj;->A00:LX/5xj;
+    sput-object v0, LX/5xj;->A00:LX/5ys;
 
     .line 6
     .line 7
@@ -30,5 +33,5 @@
 
 
 # virtual methods
-.method public abstract release()V
+.method public abstract AEx(Ljava/lang/String;)Landroid/os/Handler;
 .end method

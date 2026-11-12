@@ -8,7 +8,7 @@
     </item>
     <item>
         <shape android:shape="rectangle">
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="@color/browser_more_menu_divider_color" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="@color/browser_more_menu_divider_color" />
             <solid android:color="@color/abc_decor_view_status_guard_light" />
         </shape>
     </item>

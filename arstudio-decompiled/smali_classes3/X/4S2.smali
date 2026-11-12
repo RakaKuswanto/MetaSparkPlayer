@@ -1,53 +1,33 @@
 .class public final LX/4S2;
-.super Ljava/lang/Object;
+.super LX/4Ta;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ViewDragHelper$2"
 
 
 # instance fields
-.field public final synthetic A00:LX/4S0;
+.field public final A00:Ljava/lang/ref/Reference;
 
 
 # direct methods
-.method public constructor <init>(LX/4S0;)V
-    .locals 0
+.method public constructor <init>(Landroidx/appcompat/widget/SwitchCompat;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/4S2;->A00:LX/4S0;
+    invoke-direct {p0}, LX/4Ta;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/4S2;->A00:LX/4S0;
-
-    .line 1
-    .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    invoke-virtual {v1, v0}, LX/4S0;->A0B(I)V
+    invoke-static {p1}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     .line 4
     .line 5
     .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/4S2;->A00:Ljava/lang/ref/Reference;
+
+    .line 8
+    .line 9
     return-void
 .end method

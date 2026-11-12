@@ -1,193 +1,198 @@
 .class public final LX/0J0;
-.super Ljava/lang/Object;
+.super LX/0BC;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Comparable;
 
-# static fields
-.field public static A00:LX/0Iz;
 
-.field public static final A01:[I
+# instance fields
+.field public final A00:I
+
+.field public final A01:Ljava/util/zip/ZipEntry;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/util/zip/ZipEntry;I)V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x1
+    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getCrc()J
 
     .line 1
-    new-array v2, v0, [I
-
     .line 2
     .line 3
-    const/4 v1, 0x0
+    move-result-wide v0
 
     .line 4
-    const/16 v0, 0x1000
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     .line 5
     .line 6
-    aput v0, v2, v1
-
     .line 7
+    move-result-object v0
+
     .line 8
-    sput-object v2, LX/0J0;->A01:[I
+    invoke-direct {p0, p1, v0}, LX/0BC;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     .line 10
-    invoke-static {}, LX/0Ob;->A00()LX/0Ob;
-
     .line 11
+    iput-object p2, p0, LX/0J0;->A01:Ljava/util/zip/ZipEntry;
+
     .line 12
     .line 13
-    move-result-object v0
+    iput p3, p0, LX/0J0;->A00:I
 
     .line 14
-    if-nez v0, :cond_0
-
     .line 15
-    .line 16
-    invoke-static {}, LX/0Oc;->A01()LX/0Oc;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v0
-
-    .line 20
-    :cond_0
-    sput-object v0, LX/0J0;->A00:LX/0Iz;
-
-    .line 21
-    .line 22
     return-void
 .end method
 
-.method public static A00(Ljava/lang/String;)Landroid/util/Pair;
-    .locals 8
+
+# virtual methods
+.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
+    .locals 2
 
     .line 0
-    const/4 v0, 0x1
+    check-cast p1, LX/0BC;
 
     .line 1
-    new-array v7, v0, [Ljava/lang/String;
+    .line 2
+    iget-object v1, p0, LX/0BC;->A01:Ljava/lang/String;
+
+    .line 3
+    .line 4
+    iget-object v0, p1, LX/0BC;->A01:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 0
+    const/4 v3, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_0
 
     .line 2
     .line 3
-    const/4 v1, 0x0
-
-    .line 4
-    const/4 v4, 0x0
-
-    .line 5
-    aput-object v4, v7, v1
-
-    .line 6
-    .line 7
-    sget-object v5, LX/0J0;->A01:[I
-
-    .line 8
-    .line 9
-    sget-object v2, LX/0J0;->A00:LX/0Iz;
-
-    .line 10
-    .line 11
-    move-object v3, p0
-
-    .line 12
-    move-object v6, v4
-
-    .line 13
-    invoke-interface/range {v2 .. v7}, LX/0Iz;->Ahm(Ljava/lang/String;[F[I[J[Ljava/lang/String;)I
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    aget-object v2, v7, v1
-
-    .line 18
-    .line 19
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v1
-
-    .line 23
-    new-instance v0, Landroid/util/Pair;
-
-    .line 24
-    .line 25
-    invoke-direct {v0, v2, v1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 26
-    .line 27
-    .line 28
-    return-object v0
-.end method
-
-.method public static A01(Ljava/lang/String;[I[J)Z
-    .locals 3
-
-    .line 0
     const/4 v2, 0x0
 
-    .line 1
-    sget-object v0, LX/0J0;->A00:LX/0Iz;
-
-    .line 2
-    .line 3
-    move-object v1, p0
-
     .line 4
-    move-object p0, p1
+    if-eqz p1, :cond_2
 
     .line 5
-    move-object p1, p2
-
     .line 6
-    move-object p2, v2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
-    invoke-interface/range {v0 .. v5}, LX/0Iz;->Ahm(Ljava/lang/String;[F[I[J[Ljava/lang/String;)I
-
     .line 8
     .line 9
+    move-result-object v1
+
     .line 10
-    move-result v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 11
-    invoke-static {v0}, LX/001;->A1M(I)Z
-
     .line 12
     .line 13
+    move-result-object v0
+
     .line 14
-    move-result v0
+    if-ne v1, v0, :cond_2
 
     .line 15
-    return v0
+    .line 16
+    check-cast p1, LX/0J0;
+
+    .line 17
+    .line 18
+    iget-object v1, p0, LX/0J0;->A01:Ljava/util/zip/ZipEntry;
+
+    .line 19
+    .line 20
+    iget-object v0, p1, LX/0J0;->A01:Ljava/util/zip/ZipEntry;
+
+    .line 21
+    .line 22
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    if-eqz v0, :cond_1
+
+    .line 27
+    .line 28
+    iget v1, p0, LX/0J0;->A00:I
+
+    .line 29
+    .line 30
+    iget v0, p1, LX/0J0;->A00:I
+
+    .line 31
+    .line 32
+    if-ne v1, v0, :cond_1
+
+    .line 33
+    .line 34
+    :cond_0
+    return v3
+
+    .line 35
+    :cond_1
+    const/4 v3, 0x0
+
+    .line 36
+    return v3
+
+    .line 37
+    :cond_2
+    return v2
 .end method
 
-.method public static A02(Ljava/lang/String;[J[Ljava/lang/String;)Z
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
     .line 0
-    sget-object v0, LX/0J0;->A00:LX/0Iz;
+    iget v0, p0, LX/0J0;->A00:I
 
     .line 1
     .line 2
-    invoke-interface {v0, p0, p1, p2}, LX/0Iz;->Ahn(Ljava/lang/String;[J[Ljava/lang/String;)Z
+    mul-int/lit8 v1, v0, 0x1f
 
     .line 3
     .line 4
+    iget-object v0, p0, LX/0J0;->A01:Ljava/util/zip/ZipEntry;
+
     .line 5
+    .line 6
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    .line 7
+    .line 8
+    .line 9
     move-result v0
 
-    .line 6
-    return v0
+    .line 10
+    add-int/2addr v1, v0
+
+    .line 11
+    return v1
 .end method

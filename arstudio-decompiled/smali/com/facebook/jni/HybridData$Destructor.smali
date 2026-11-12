@@ -1,5 +1,5 @@
 .class public Lcom/facebook/jni/HybridData$Destructor;
-.super LX/0Qk;
+.super LX/0N1;
 .source ""
 
 
@@ -12,7 +12,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/0Qk;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p1}, LX/0N1;-><init>(Ljava/lang/Object;)V
 
     .line 1
     .line 2

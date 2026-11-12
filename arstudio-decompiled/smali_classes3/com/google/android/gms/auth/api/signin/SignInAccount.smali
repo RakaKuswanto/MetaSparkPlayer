@@ -11,11 +11,11 @@
 
 
 # instance fields
-.field public zba:Ljava/lang/String;
+.field public final zba:Ljava/lang/String;
 
-.field public zbb:Ljava/lang/String;
+.field public final zbb:Ljava/lang/String;
 
-.field public zbc:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+.field public final zbc:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
 
 # direct methods
@@ -23,11 +23,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x61
+    const/16 v0, 0x3e
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
 
     .line 3
     .line 4
@@ -59,7 +59,7 @@
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/51D;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/4va;->A07(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 8
     .line 9
@@ -72,7 +72,7 @@
 
     .line 13
     .line 14
-    invoke-static {p3, v0}, LX/51D;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/4va;->A07(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 15
     .line 16
@@ -90,7 +90,7 @@
     .locals 3
 
     .line 0
-    invoke-static {p1}, LX/57v;->A00(Landroid/os/Parcel;)I
+    invoke-static {p1}, LX/51b;->A00(Landroid/os/Parcel;)I
 
     .line 1
     .line 2
@@ -105,7 +105,7 @@
     const/4 v0, 0x4
 
     .line 7
-    invoke-static {p1, v1, v0}, LX/57v;->A08(Landroid/os/Parcel;Ljava/lang/String;I)V
+    invoke-static {p1, v1, v0}, LX/51b;->A06(Landroid/os/Parcel;Ljava/lang/String;I)V
 
     .line 8
     .line 9
@@ -117,7 +117,7 @@
     const/4 v0, 0x7
 
     .line 13
-    invoke-static {p1, v1, v0, p2}, LX/57v;->A07(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
+    invoke-static {p1, v1, v0, p2}, LX/51b;->A05(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
 
     .line 14
     .line 15
@@ -130,12 +130,12 @@
 
     .line 19
     .line 20
-    invoke-static {p1, v1, v0}, LX/57v;->A08(Landroid/os/Parcel;Ljava/lang/String;I)V
+    invoke-static {p1, v1, v0}, LX/51b;->A06(Landroid/os/Parcel;Ljava/lang/String;I)V
 
     .line 21
     .line 22
     .line 23
-    invoke-static {p1, v2}, LX/57v;->A03(Landroid/os/Parcel;I)V
+    invoke-static {p1, v2}, LX/51b;->A02(Landroid/os/Parcel;I)V
 
     .line 24
     .line 25

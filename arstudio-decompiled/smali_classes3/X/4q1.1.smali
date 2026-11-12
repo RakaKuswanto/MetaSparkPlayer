@@ -1,41 +1,52 @@
 .class public final LX/4q1;
-.super LX/4on;
+.super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentTree$UpdateStateSyncRunnable"
+# interfaces
+.implements LX/4q9;
 
 
 # instance fields
-.field public final A00:Ljava/lang/String;
+.field public final synthetic A00:Landroidx/transition/FragmentTransitionSupport;
 
-.field public final A01:Z
-
-.field public final synthetic A02:Lcom/facebook/litho/ComponentTree;
+.field public final synthetic A01:LX/4pn;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
+.method public constructor <init>(Landroidx/transition/FragmentTransitionSupport;LX/4pn;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4q1;->A02:Lcom/facebook/litho/ComponentTree;
+    iput-object p1, p0, LX/4q1;->A00:Landroidx/transition/FragmentTransitionSupport;
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/4on;-><init>()V
+    iput-object p2, p0, LX/4q1;->A01:LX/4pn;
+
+    .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AU3()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4q1;->A01:LX/4pn;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, LX/4pn;->A0G()V
 
     .line 3
     .line 4
     .line 5
-    iput-object p2, p0, LX/4q1;->A00:Ljava/lang/String;
-
-    .line 6
-    .line 7
-    iput-boolean p3, p0, LX/4q1;->A01:Z
-
-    .line 8
-    .line 9
     return-void
 .end method

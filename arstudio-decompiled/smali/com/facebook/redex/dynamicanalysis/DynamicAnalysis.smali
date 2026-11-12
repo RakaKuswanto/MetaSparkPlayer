@@ -12,8 +12,6 @@
 
 .field public static sCheck:I = 0x2a
 
-.field public static sCheckHit:I = 0x2a
-
 .field public static sHitStats:[S
 
 .field public static sMethodStats:[S
@@ -96,7 +94,7 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 16
+    .locals 17
 
     .line 0
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -104,7 +102,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Ix;->A00()LX/0Ix;
+    invoke-static {}, LX/0Hq;->A00()LX/0Hq;
 
     .line 4
     .line 5
@@ -112,7 +110,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, LX/0Ix;->A03()Z
+    invoke-virtual {v0}, LX/0Hq;->A03()Z
 
     .line 8
     .line 9
@@ -120,22 +118,22 @@
     move-result v0
 
     .line 11
-    const/4 v6, 0x0
+    const/4 v8, 0x0
 
     .line 12
     if-nez v0, :cond_0
 
     .line 13
     .line 14
-    sput-boolean v6, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->A00:Z
+    sput-boolean v8, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->A00:Z
 
     .line 15
     .line 16
-    sput v6, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sNumStaticallyInstrumented:I
+    sput v8, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sNumStaticallyInstrumented:I
 
     .line 17
     .line 18
-    sput v6, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sProfileType:I
+    sput v8, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sProfileType:I
 
     .line 19
     .line 20
@@ -154,7 +152,7 @@
 
     .line 25
     .line 26
-    new-array v0, v6, [S
+    new-array v0, v8, [S
 
     .line 27
     .line 28
@@ -225,18 +223,18 @@
 
     .line 60
     .line 61
-    const/16 v8, 0xf
+    const/16 v9, 0xf
 
     .line 62
     .line 63
-    const/4 v4, 0x7
+    const/4 v5, 0x7
 
     .line 64
-    if-eq v2, v4, :cond_3
+    if-eq v2, v5, :cond_3
 
     .line 65
     .line 66
-    if-eq v2, v8, :cond_3
+    if-eq v2, v9, :cond_3
 
     .line 67
     .line 68
@@ -249,34 +247,34 @@
 
     .line 70
     .line 71
-    aget-object v15, v0, v6
+    aget-object v16, v0, v8
 
     .line 72
     .line 73
-    const/16 v14, -0x2117
+    const/16 v15, -0x2117
 
     .line 74
     .line 75
-    aput-short v14, v15, v6
+    aput-short v15, v16, v8
 
     .line 76
     .line 77
-    const/4 v13, 0x1
+    const/4 v14, 0x1
 
     .line 78
-    const/16 v12, -0x2586
+    const/16 v13, -0x2586
 
     .line 79
     .line 80
-    aput-short v12, v15, v13
+    aput-short v13, v16, v14
 
     .line 81
     .line 82
-    const/high16 v11, -0x10000
+    const/high16 v12, -0x10000
 
     .line 83
     .line 84
-    and-int v0, v2, v11
+    and-int v0, v2, v12
 
     .line 85
     .line 86
@@ -287,40 +285,40 @@
     int-to-short v0, v0
 
     .line 89
-    const/4 v10, 0x2
+    const/4 v11, 0x2
 
     .line 90
-    aput-short v0, v15, v10
+    aput-short v0, v16, v11
 
     .line 91
     .line 92
-    const v9, 0xffff
+    const v10, 0xffff
 
     .line 93
     .line 94
     .line 95
-    and-int v0, v2, v9
+    and-int v0, v2, v10
 
     .line 96
     .line 97
     int-to-short v0, v0
 
     .line 98
-    const/4 v5, 0x3
+    const/4 v6, 0x3
 
     .line 99
-    aput-short v0, v15, v5
+    aput-short v0, v16, v6
 
     .line 100
     .line 101
-    aput-short v7, v15, v7
+    aput-short v7, v16, v7
 
     .line 102
     .line 103
-    const/4 v0, 0x5
+    const/4 v4, 0x5
 
     .line 104
-    aput-short v6, v15, v0
+    aput-short v8, v16, v4
 
     .line 105
     .line 106
@@ -328,7 +326,7 @@
 
     .line 107
     .line 108
-    and-int v0, v1, v11
+    and-int v0, v1, v12
 
     .line 109
     .line 110
@@ -342,21 +340,21 @@
     const/4 v3, 0x6
 
     .line 114
-    aput-short v0, v15, v3
+    aput-short v0, v16, v3
 
     .line 115
     .line 116
-    and-int/2addr v1, v9
+    and-int/2addr v1, v10
 
     .line 117
     int-to-short v0, v1
 
     .line 118
-    aput-short v0, v15, v4
+    aput-short v0, v16, v5
 
     .line 119
     .line 120
-    if-ne v2, v8, :cond_2
+    if-ne v2, v9, :cond_2
 
     .line 121
     .line 122
@@ -364,25 +362,25 @@
 
     .line 123
     .line 124
-    aput-short v14, v2, v6
+    aput-short v15, v2, v8
 
     .line 125
     .line 126
-    aput-short v12, v2, v13
+    aput-short v13, v2, v14
 
     .line 127
     .line 128
-    int-to-short v0, v6
+    int-to-short v0, v8
 
     .line 129
-    aput-short v0, v2, v10
+    aput-short v0, v2, v11
 
     .line 130
     .line 131
-    int-to-short v0, v8
+    int-to-short v0, v9
 
     .line 132
-    aput-short v0, v2, v5
+    aput-short v0, v2, v6
 
     .line 133
     .line 134
@@ -390,50 +388,47 @@
 
     .line 135
     .line 136
-    const/4 v0, 0x5
+    aput-short v8, v2, v4
 
     .line 137
-    aput-short v6, v2, v0
-
     .line 138
-    .line 139
     sget v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sNumStaticallyHitsInstrumented:I
 
+    .line 139
     .line 140
-    .line 141
-    and-int v0, v1, v11
+    and-int v0, v1, v12
 
+    .line 141
     .line 142
-    .line 143
     shr-int/lit8 v0, v0, 0x10
 
+    .line 143
     .line 144
-    .line 145
     int-to-short v0, v0
 
-    .line 146
+    .line 145
     aput-short v0, v2, v3
 
+    .line 146
     .line 147
-    .line 148
-    and-int/2addr v1, v9
+    and-int/2addr v1, v10
 
-    .line 149
+    .line 148
     int-to-short v0, v1
 
-    .line 150
-    aput-short v0, v2, v4
+    .line 149
+    aput-short v0, v2, v5
 
+    .line 150
     .line 151
-    .line 152
     return-void
 
-    .line 153
+    .line 152
     :cond_4
-    sput-boolean v6, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->A00:Z
+    sput-boolean v8, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->A00:Z
 
+    .line 153
     .line 154
-    .line 155
     return-void
 .end method
 
@@ -477,7 +472,7 @@
 
     .line 17
     .line 18
-    invoke-static {v1, p0}, LX/001;->A1H([SI)V
+    invoke-static {v1, p0}, LX/001;->A1G([SI)V
 
     .line 19
     .line 20
@@ -495,7 +490,7 @@
 
     .line 26
     .line 27
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 28
     .line 29
@@ -521,7 +516,7 @@
 
     .line 39
     .line 40
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 41
     .line 42
@@ -539,7 +534,7 @@
 
     .line 48
     .line 49
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 50
     .line 51
@@ -573,7 +568,7 @@
 
     .line 65
     .line 66
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 67
     .line 68
@@ -591,7 +586,7 @@
 
     .line 74
     .line 75
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 76
     .line 77
@@ -617,7 +612,7 @@
 
     .line 87
     .line 88
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 89
     .line 90
@@ -635,7 +630,7 @@
 
     .line 96
     .line 97
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 98
     .line 99
@@ -681,7 +676,7 @@
 
     .line 119
     .line 120
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 121
     .line 122
@@ -699,7 +694,7 @@
 
     .line 128
     .line 129
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 130
     .line 131
@@ -725,7 +720,7 @@
 
     .line 141
     .line 142
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 143
     .line 144
@@ -743,7 +738,7 @@
 
     .line 150
     .line 151
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 152
     .line 153
@@ -781,7 +776,7 @@
 
     .line 169
     .line 170
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 171
     .line 172
@@ -799,7 +794,7 @@
 
     .line 178
     .line 179
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 180
     .line 181
@@ -829,7 +824,7 @@
 
     .line 193
     .line 194
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 195
     .line 196
@@ -851,7 +846,7 @@
 
     .line 204
     .line 205
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 206
     .line 207
@@ -876,7 +871,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0, p0}, LX/001;->A1H([SI)V
+    invoke-static {v0, p0}, LX/001;->A1G([SI)V
 
     .line 7
     .line 8
@@ -901,7 +896,7 @@
 
     .line 5
     .line 6
-    invoke-static {v2, p0}, LX/001;->A1H([SI)V
+    invoke-static {v2, p0}, LX/001;->A1G([SI)V
 
     .line 7
     .line 8
@@ -1026,7 +1021,7 @@
 
     .line 1610612751
     .line 1610612752
-    invoke-static {v2, v0, p2}, LX/001;->A1I([SII)V
+    invoke-static {v2, v0, p2}, LX/001;->A1H([SII)V
 
     .line 1610612753
     .line 1610612754
@@ -1060,7 +1055,7 @@
 
     .line 1342177285
     .line 1342177286
-    invoke-static {v0, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v0, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 1342177287
     .line 1342177288
@@ -1094,7 +1089,7 @@
 
     .line 5
     .line 6
-    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 7
     .line 8
@@ -1103,7 +1098,7 @@
 
     .line 10
     .line 11
-    invoke-static {v1, v0, p4}, LX/001;->A1I([SII)V
+    invoke-static {v1, v0, p4}, LX/001;->A1H([SII)V
 
     .line 12
     .line 13
@@ -1137,12 +1132,12 @@
 
     .line 805306373
     .line 805306374
-    invoke-static {v0, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v0, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 805306375
     .line 805306376
     .line 805306377
-    invoke-static {v0, p0, p4, p5}, LX/001;->A1J([SIII)V
+    invoke-static {v0, p0, p4, p5}, LX/001;->A1I([SIII)V
 
     .line 805306378
     .line 805306379
@@ -1176,12 +1171,12 @@
 
     .line 536870917
     .line 536870918
-    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 536870919
     .line 536870920
     .line 536870921
-    invoke-static {v1, p0, p4, p5}, LX/001;->A1J([SIII)V
+    invoke-static {v1, p0, p4, p5}, LX/001;->A1I([SIII)V
 
     .line 536870922
     .line 536870923
@@ -1190,7 +1185,7 @@
 
     .line 536870925
     .line 536870926
-    invoke-static {v1, v0, p6}, LX/001;->A1I([SII)V
+    invoke-static {v1, v0, p6}, LX/001;->A1H([SII)V
 
     .line 536870927
     .line 536870928
@@ -1224,12 +1219,12 @@
 
     .line 268435461
     .line 268435462
-    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 268435463
     .line 268435464
     .line 268435465
-    invoke-static {v1, p0, p4, p5}, LX/001;->A1J([SIII)V
+    invoke-static {v1, p0, p4, p5}, LX/001;->A1I([SIII)V
 
     .line 268435466
     .line 268435467
@@ -1238,7 +1233,7 @@
 
     .line 268435469
     .line 268435470
-    invoke-static {v1, v0, p6}, LX/001;->A1I([SII)V
+    invoke-static {v1, v0, p6}, LX/001;->A1H([SII)V
 
     .line 268435471
     .line 268435472
@@ -1247,7 +1242,7 @@
 
     .line 268435474
     .line 268435475
-    invoke-static {v1, v0, p7}, LX/001;->A1I([SII)V
+    invoke-static {v1, v0, p7}, LX/001;->A1H([SII)V
 
     .line 268435476
     .line 268435477
@@ -1324,7 +1319,7 @@
 
     .line 1610612747
     .line 1610612748
-    invoke-static {v2, v0, p2}, LX/001;->A1I([SII)V
+    invoke-static {v2, v0, p2}, LX/001;->A1H([SII)V
 
     .line 1610612749
     .line 1610612750
@@ -1340,7 +1335,7 @@
 
     .line 1342177281
     .line 1342177282
-    invoke-static {v0, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v0, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 1342177283
     .line 1342177284
@@ -1356,7 +1351,7 @@
 
     .line 1
     .line 2
-    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 3
     .line 4
@@ -1365,7 +1360,7 @@
 
     .line 6
     .line 7
-    invoke-static {v1, v0, p4}, LX/001;->A1I([SII)V
+    invoke-static {v1, v0, p4}, LX/001;->A1H([SII)V
 
     .line 8
     .line 9
@@ -1381,12 +1376,12 @@
 
     .line 805306369
     .line 805306370
-    invoke-static {v0, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v0, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 805306371
     .line 805306372
     .line 805306373
-    invoke-static {v0, p0, p4, p5}, LX/001;->A1J([SIII)V
+    invoke-static {v0, p0, p4, p5}, LX/001;->A1I([SIII)V
 
     .line 805306374
     .line 805306375
@@ -1402,12 +1397,12 @@
 
     .line 536870913
     .line 536870914
-    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 536870915
     .line 536870916
     .line 536870917
-    invoke-static {v1, p0, p4, p5}, LX/001;->A1J([SIII)V
+    invoke-static {v1, p0, p4, p5}, LX/001;->A1I([SIII)V
 
     .line 536870918
     .line 536870919
@@ -1416,7 +1411,7 @@
 
     .line 536870921
     .line 536870922
-    invoke-static {v1, v0, p6}, LX/001;->A1I([SII)V
+    invoke-static {v1, v0, p6}, LX/001;->A1H([SII)V
 
     .line 536870923
     .line 536870924
@@ -1432,12 +1427,12 @@
 
     .line 268435457
     .line 268435458
-    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1K([SIIII)V
+    invoke-static {v1, p0, p1, p2, p3}, LX/001;->A1J([SIIII)V
 
     .line 268435459
     .line 268435460
     .line 268435461
-    invoke-static {v1, p0, p4, p5}, LX/001;->A1J([SIII)V
+    invoke-static {v1, p0, p4, p5}, LX/001;->A1I([SIII)V
 
     .line 268435462
     .line 268435463
@@ -1446,7 +1441,7 @@
 
     .line 268435465
     .line 268435466
-    invoke-static {v1, v0, p6}, LX/001;->A1I([SII)V
+    invoke-static {v1, v0, p6}, LX/001;->A1H([SII)V
 
     .line 268435467
     .line 268435468
@@ -1455,7 +1450,7 @@
 
     .line 268435470
     .line 268435471
-    invoke-static {v1, v0, p7}, LX/001;->A1I([SII)V
+    invoke-static {v1, v0, p7}, LX/001;->A1H([SII)V
 
     .line 268435472
     .line 268435473
@@ -1483,7 +1478,7 @@
 
     .line 1073741830
     .line 1073741831
-    invoke-static {p1, p0, v1}, LX/001;->A0d(III)V
+    invoke-static {p1, p0, v1}, LX/001;->A0j(III)V
 
     .line 1073741832
     .line 1073741833
@@ -1542,7 +1537,7 @@
 
     .line 1610612747
     .line 1610612748
-    invoke-static {p1, p0, v1}, LX/001;->A0d(III)V
+    invoke-static {p1, p0, v1}, LX/001;->A0j(III)V
 
     .line 1610612749
     .line 1610612750
@@ -1564,7 +1559,7 @@
 
     .line 1610612757
     .line 1610612758
-    invoke-static {p2, p0, v2}, LX/001;->A0c(III)V
+    invoke-static {p2, p0, v2}, LX/001;->A0i(III)V
 
     .line 1610612759
     .line 1610612760
@@ -1591,7 +1586,7 @@
 .method public static onNonLoopBlockHit(ISSS)V
     .locals 4
 
-    .line 1342237346
+    .line 1342230636
     sget-boolean v0, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->A00:Z
 
     if-eqz v0, :cond_3
@@ -1607,10 +1602,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1342237347
-    invoke-static {p1, p0, v0}, LX/001;->A0d(III)V
+    .line 1342230637
+    invoke-static {p1, p0, v0}, LX/001;->A0j(III)V
 
-    .line 1342237348
+    .line 1342230638
     shr-int/lit8 p1, p1, 0x1
 
     add-int/lit8 v0, v0, 0x1
@@ -1623,20 +1618,20 @@
     :goto_1
     if-eqz p2, :cond_1
 
-    .line 1342237349
-    invoke-static {p2, p0, v0}, LX/001;->A0c(III)V
+    .line 1342230639
+    invoke-static {p2, p0, v0}, LX/001;->A0i(III)V
 
-    .line 1342237350
+    .line 1342230640
     shr-int/lit8 p2, p2, 0x1
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 1342237351
+    .line 1342230641
     if-ge v0, v2, :cond_1
 
     goto :goto_1
 
-    .line 1342237352
+    .line 1342230642
     :cond_1
     :goto_2
     if-eqz p3, :cond_3
@@ -1645,28 +1640,28 @@
 
     if-eqz v0, :cond_2
 
-    .line 1342237353
+    .line 1342230643
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v3
 
     add-int/lit8 v0, v0, 0x20
 
-    .line 1342237354
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 1342230644
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 1342237355
+    .line 1342230645
     :cond_2
     shr-int/lit8 p3, p3, 0x1
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 1342237356
+    .line 1342230646
     if-ge v3, v2, :cond_3
 
     goto :goto_2
 
-    .line 1342237357
+    .line 1342230647
     :cond_3
     return-void
 .end method
@@ -1702,7 +1697,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1, p0, v0}, LX/001;->A0d(III)V
+    invoke-static {p1, p0, v0}, LX/001;->A0j(III)V
 
     .line 13
     .line 14
@@ -1727,7 +1722,7 @@
 
     .line 22
     .line 23
-    invoke-static {p2, p0, v0}, LX/001;->A0c(III)V
+    invoke-static {p2, p0, v0}, LX/001;->A0i(III)V
 
     .line 24
     .line 25
@@ -1776,7 +1771,7 @@
 
     .line 45
     .line 46
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 47
     .line 48
@@ -1823,7 +1818,7 @@
 
     .line 67
     .line 68
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
     .line 69
     .line 70
@@ -1851,7 +1846,7 @@
 .method public static onNonLoopBlockHit(ISSSSS)V
     .locals 5
 
-    .line 805366250
+    .line 805359736
     sget-boolean v0, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->A00:Z
 
     if-eqz v0, :cond_7
@@ -1867,10 +1862,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 805366251
-    invoke-static {p1, p0, v0}, LX/001;->A0d(III)V
+    .line 805359737
+    invoke-static {p1, p0, v0}, LX/001;->A0j(III)V
 
-    .line 805366252
+    .line 805359738
     shr-int/lit8 p1, p1, 0x1
 
     add-int/lit8 v0, v0, 0x1
@@ -1883,20 +1878,20 @@
     :goto_1
     if-eqz p2, :cond_1
 
-    .line 805366253
-    invoke-static {p2, p0, v0}, LX/001;->A0c(III)V
+    .line 805359739
+    invoke-static {p2, p0, v0}, LX/001;->A0i(III)V
 
-    .line 805366254
+    .line 805359740
     shr-int/lit8 p2, p2, 0x1
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 805366255
+    .line 805359741
     if-ge v0, v2, :cond_1
 
     goto :goto_1
 
-    .line 805366256
+    .line 805359742
     :cond_1
     const/4 v4, 0x0
 
@@ -1907,28 +1902,28 @@
 
     if-eqz v0, :cond_2
 
-    .line 805366257
+    .line 805359743
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x20
 
-    .line 805366258
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 805359744
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 805366259
+    .line 805359745
     :cond_2
     shr-int/lit8 p3, p3, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 805366260
+    .line 805359746
     if-ge v4, v2, :cond_3
 
     goto :goto_2
 
-    .line 805366261
+    .line 805359747
     :cond_3
     const/4 v4, 0x0
 
@@ -1939,28 +1934,28 @@
 
     if-eqz v0, :cond_4
 
-    .line 805366262
+    .line 805359748
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x30
 
-    .line 805366263
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 805359749
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 805366264
+    .line 805359750
     :cond_4
     shr-int/lit8 p4, p4, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 805366265
+    .line 805359751
     if-ge v4, v2, :cond_5
 
     goto :goto_3
 
-    .line 805366266
+    .line 805359752
     :cond_5
     :goto_4
     if-eqz p5, :cond_7
@@ -1969,28 +1964,28 @@
 
     if-eqz v0, :cond_6
 
-    .line 805366267
+    .line 805359753
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v3
 
     add-int/lit8 v0, v0, 0x40
 
-    .line 805366268
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 805359754
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 805366269
+    .line 805359755
     :cond_6
     shr-int/lit8 p5, p5, 0x1
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 805366270
+    .line 805359756
     if-ge v3, v2, :cond_7
 
     goto :goto_4
 
-    .line 805366271
+    .line 805359757
     :cond_7
     return-void
 .end method
@@ -1998,7 +1993,7 @@
 .method public static onNonLoopBlockHit(ISSSSSS)V
     .locals 5
 
-    .line 536930581
+    .line 536924302
     sget-boolean v0, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->A00:Z
 
     if-eqz v0, :cond_9
@@ -2014,10 +2009,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 536930582
-    invoke-static {p1, p0, v0}, LX/001;->A0d(III)V
+    .line 536924303
+    invoke-static {p1, p0, v0}, LX/001;->A0j(III)V
 
-    .line 536930583
+    .line 536924304
     shr-int/lit8 p1, p1, 0x1
 
     add-int/lit8 v0, v0, 0x1
@@ -2030,20 +2025,20 @@
     :goto_1
     if-eqz p2, :cond_1
 
-    .line 536930584
-    invoke-static {p2, p0, v0}, LX/001;->A0c(III)V
+    .line 536924305
+    invoke-static {p2, p0, v0}, LX/001;->A0i(III)V
 
-    .line 536930585
+    .line 536924306
     shr-int/lit8 p2, p2, 0x1
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 536930586
+    .line 536924307
     if-ge v0, v2, :cond_1
 
     goto :goto_1
 
-    .line 536930587
+    .line 536924308
     :cond_1
     const/4 v4, 0x0
 
@@ -2054,28 +2049,28 @@
 
     if-eqz v0, :cond_2
 
-    .line 536930588
+    .line 536924309
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x20
 
-    .line 536930589
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 536924310
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 536930590
+    .line 536924311
     :cond_2
     shr-int/lit8 p3, p3, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 536930591
+    .line 536924312
     if-ge v4, v2, :cond_3
 
     goto :goto_2
 
-    .line 536930592
+    .line 536924313
     :cond_3
     const/4 v4, 0x0
 
@@ -2086,28 +2081,28 @@
 
     if-eqz v0, :cond_4
 
-    .line 536930593
+    .line 536924314
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x30
 
-    .line 536930594
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 536924315
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 536930595
+    .line 536924316
     :cond_4
     shr-int/lit8 p4, p4, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 536930596
+    .line 536924317
     if-ge v4, v2, :cond_5
 
     goto :goto_3
 
-    .line 536930597
+    .line 536924318
     :cond_5
     const/4 v4, 0x0
 
@@ -2118,28 +2113,28 @@
 
     if-eqz v0, :cond_6
 
-    .line 536930598
+    .line 536924319
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x40
 
-    .line 536930599
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 536924320
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 536930600
+    .line 536924321
     :cond_6
     shr-int/lit8 p5, p5, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 536930601
+    .line 536924322
     if-ge v4, v2, :cond_7
 
     goto :goto_4
 
-    .line 536930602
+    .line 536924323
     :cond_7
     :goto_5
     if-eqz p6, :cond_9
@@ -2148,28 +2143,28 @@
 
     if-eqz v0, :cond_8
 
-    .line 536930603
+    .line 536924324
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v3
 
     add-int/lit8 v0, v0, 0x50
 
-    .line 536930604
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 536924325
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 536930605
+    .line 536924326
     :cond_8
     shr-int/lit8 p6, p6, 0x1
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 536930606
+    .line 536924327
     if-ge v3, v2, :cond_9
 
     goto :goto_5
 
-    .line 536930607
+    .line 536924328
     :cond_9
     return-void
 .end method
@@ -2177,7 +2172,7 @@
 .method public static onNonLoopBlockHit(ISSSSSSS)V
     .locals 5
 
-    .line 268494611
+    .line 268488873
     sget-boolean v0, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->A00:Z
 
     if-eqz v0, :cond_b
@@ -2193,10 +2188,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 268494612
-    invoke-static {p1, p0, v0}, LX/001;->A0d(III)V
+    .line 268488874
+    invoke-static {p1, p0, v0}, LX/001;->A0j(III)V
 
-    .line 268494613
+    .line 268488875
     shr-int/lit8 p1, p1, 0x1
 
     add-int/lit8 v0, v0, 0x1
@@ -2209,20 +2204,20 @@
     :goto_1
     if-eqz p2, :cond_1
 
-    .line 268494614
-    invoke-static {p2, p0, v0}, LX/001;->A0c(III)V
+    .line 268488876
+    invoke-static {p2, p0, v0}, LX/001;->A0i(III)V
 
-    .line 268494615
+    .line 268488877
     shr-int/lit8 p2, p2, 0x1
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 268494616
+    .line 268488878
     if-ge v0, v2, :cond_1
 
     goto :goto_1
 
-    .line 268494617
+    .line 268488879
     :cond_1
     const/4 v4, 0x0
 
@@ -2233,28 +2228,28 @@
 
     if-eqz v0, :cond_2
 
-    .line 268494618
+    .line 268488880
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x20
 
-    .line 268494619
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 268488881
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 268494620
+    .line 268488882
     :cond_2
     shr-int/lit8 p3, p3, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 268494621
+    .line 268488883
     if-ge v4, v2, :cond_3
 
     goto :goto_2
 
-    .line 268494622
+    .line 268488884
     :cond_3
     const/4 v4, 0x0
 
@@ -2265,28 +2260,28 @@
 
     if-eqz v0, :cond_4
 
-    .line 268494623
+    .line 268488885
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x30
 
-    .line 268494624
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 268488886
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 268494625
+    .line 268488887
     :cond_4
     shr-int/lit8 p4, p4, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 268494626
+    .line 268488888
     if-ge v4, v2, :cond_5
 
     goto :goto_3
 
-    .line 268494627
+    .line 268488889
     :cond_5
     const/4 v4, 0x0
 
@@ -2297,28 +2292,28 @@
 
     if-eqz v0, :cond_6
 
-    .line 268494628
+    .line 268488890
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x40
 
-    .line 268494629
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 268488891
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 268494630
+    .line 268488892
     :cond_6
     shr-int/lit8 p5, p5, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 268494631
+    .line 268488893
     if-ge v4, v2, :cond_7
 
     goto :goto_4
 
-    .line 268494632
+    .line 268488894
     :cond_7
     const/4 v4, 0x0
 
@@ -2329,28 +2324,28 @@
 
     if-eqz v0, :cond_8
 
-    .line 268494633
+    .line 268488895
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v4
 
     add-int/lit8 v0, v0, 0x50
 
-    .line 268494634
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 268488896
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 268494635
+    .line 268488897
     :cond_8
     shr-int/lit8 p6, p6, 0x1
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 268494636
+    .line 268488898
     if-ge v4, v2, :cond_9
 
     goto :goto_5
 
-    .line 268494637
+    .line 268488899
     :cond_9
     :goto_6
     if-eqz p7, :cond_b
@@ -2359,28 +2354,28 @@
 
     if-eqz v0, :cond_a
 
-    .line 268494638
+    .line 268488900
     sget-object v1, Lcom/facebook/redex/dynamicanalysis/DynamicAnalysis;->sHitStats:[S
 
     add-int v0, p0, v3
 
     add-int/lit8 v0, v0, 0x60
 
-    .line 268494639
-    invoke-static {v1, v0}, LX/001;->A1H([SI)V
+    .line 268488901
+    invoke-static {v1, v0}, LX/001;->A1G([SI)V
 
-    .line 268494640
+    .line 268488902
     :cond_a
     shr-int/lit8 p7, p7, 0x1
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 268494641
+    .line 268488903
     if-ge v3, v2, :cond_b
 
     goto :goto_6
 
-    .line 268494642
+    .line 268488904
     :cond_b
     return-void
 .end method
@@ -2569,7 +2564,7 @@
 
     .line 24
     .line 25
-    invoke-static {p0, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 26
     .line 27

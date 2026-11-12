@@ -1,33 +1,31 @@
 .class public final LX/5MI;
-.super LX/5N7;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/5MI;
+# instance fields
+.field public A00:Landroid/os/Handler;
+
+.field public A01:LX/5Lx;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, LX/5MI;
-
-    invoke-direct {v0}, LX/5MI;-><init>()V
-
-    sput-object v0, LX/5MI;->A00:LX/5MI;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/os/Handler;LX/5Lx;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5N7;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/5MI;->A00:Landroid/os/Handler;
+
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/5MI;->A01:LX/5Lx;
+
+    .line 6
+    .line 7
     return-void
 .end method

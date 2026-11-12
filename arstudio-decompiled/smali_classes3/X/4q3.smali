@@ -1,4 +1,4 @@
-.class public final LX/4q3;
+.class public final LX/4Q3;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,50 +7,47 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RecyclerBinder$15"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ViewDragHelper$2"
 
 
 # instance fields
-.field public final synthetic A00:LX/4ni;
-
-.field public final synthetic A01:LX/4nk;
+.field public final synthetic A00:LX/4Q1;
 
 
 # direct methods
-.method public constructor <init>(LX/4ni;LX/4nk;)V
+.method public constructor <init>(LX/4Q1;)V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/4q3;->A01:LX/4nk;
+    iput-object p1, p0, LX/4Q3;->A00:LX/4Q1;
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/4q3;->A00:LX/4ni;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/4q3;->A00:LX/4ni;
+    iget-object v1, p0, LX/4Q3;->A00:LX/4Q1;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/4ni;->A03()V
+    const/4 v0, 0x0
 
     .line 3
+    invoke-virtual {v1, v0}, LX/4Q1;->A0B(I)V
+
     .line 4
     .line 5
+    .line 6
     return-void
 .end method

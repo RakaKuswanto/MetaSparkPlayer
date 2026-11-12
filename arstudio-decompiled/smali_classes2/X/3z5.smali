@@ -1,130 +1,108 @@
-.class public final LX/3z5;
+.class public final LX/3Z5;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A00:Ljava/util/logging/Logger;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "RichVideoPlayerEventBus$3"
+
+
+# instance fields
+.field public final synthetic A00:LX/3nV;
+
+.field public final synthetic A01:LX/3Z4;
+
+.field public final synthetic A02:Ljava/util/List;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/3nV;LX/3Z4;Ljava/util/List;)V
+    .locals 0
 
     .line 0
-    const-class v0, LX/3z5;
+    iput-object p2, p0, LX/3Z5;->A01:LX/3Z4;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object p3, p0, LX/3Z5;->A02:Ljava/util/List;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v0
+    iput-object p1, p0, LX/3Z5;->A00:LX/3nV;
 
+    .line 5
     .line 6
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
-
-    .line 10
-    sput-object v0, LX/3z5;->A00:Ljava/util/logging/Logger;
-
-    .line 11
-    .line 12
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static A00(Ljava/io/Closeable;)V
+# virtual methods
+.method public final run()V
     .locals 3
 
     .line 0
-    if-eqz p0, :cond_0
+    iget-object v0, p0, LX/3Z5;->A02:Ljava/util/List;
 
     .line 1
     .line 2
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 3
     .line 4
     .line 5
-    return-void
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v2
 
     .line 6
-    :catch_0
-    move-exception p0
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     .line 7
-    sget-object v2, LX/3z5;->A00:Ljava/util/logging/Logger;
-
     .line 8
     .line 9
-    sget-object v1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+    move-result v0
 
     .line 10
+    if-eqz v0, :cond_1
+
     .line 11
-    const-string v0, "IOException thrown while closing Closeable."
-
     .line 12
-    .line 13
-    invoke-virtual {v2, v1, v0, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2}, LX/0X2;->A0b(Ljava/util/Iterator;)Ljava/lang/Object;
 
+    .line 13
     .line 14
     .line 15
+    move-result-object v1
+
     .line 16
-    :cond_0
-    return-void
-.end method
+    check-cast v1, LX/3Z7;
 
-.method public static A01(Ljava/io/InputStream;)V
-    .locals 0
+    .line 17
+    .line 18
+    if-eqz v1, :cond_0
 
-    .line 0
-    :try_start_0
-    invoke-static {p0}, LX/3z5;->A00(Ljava/io/Closeable;)V
+    .line 19
+    .line 20
+    iget-object v0, p0, LX/3Z5;->A00:LX/3nV;
 
-    .line 1
-    .line 2
-    .line 3
+    .line 21
+    .line 22
+    invoke-static {v0, v1}, LX/3Z4;->A01(LX/3nV;LX/3Z7;)V
+
+    .line 23
+    .line 24
+    .line 25
     goto :goto_0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4
-    :catch_0
-    move-exception p0
-
-    .line 5
-    invoke-static {p0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object p0
-
-    .line 9
-    throw p0
-
-    .line 10
-    :goto_0
+    .line 26
+    :cond_1
     return-void
 .end method

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/1oo;
+.field public static final Companion:LX/1y1;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/1oo;
+    new-instance v0, LX/1y1;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1oo;-><init>()V
+    invoke-direct {v0}, LX/1y1;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/pando/TreeUtils;->Companion:LX/1oo;
+    sput-object v0, Lcom/facebook/pando/TreeUtils;->Companion:LX/1y1;
 
     .line 6
     .line 7
@@ -30,7 +30,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -54,6 +54,9 @@
 .end method
 
 .method public static final native appendWeakRecordPath(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.end method
+
+.method public static final native canonicalNameFromTemplate(Ljava/lang/String;Lcom/facebook/pando/TreeJNI;)Ljava/lang/String;
 .end method
 
 .method public static final native makeStrongConcatenatedKey(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

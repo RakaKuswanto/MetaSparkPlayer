@@ -1,326 +1,302 @@
 .class public final LX/4nr;
-.super Ljava/lang/Object;
+.super LX/4oH;
 .source ""
-
-# interfaces
-.implements LX/4rl;
 
 
 # instance fields
-.field public final synthetic A00:I
-
-.field public final synthetic A01:I
-
-.field public final synthetic A02:I
-
-.field public final synthetic A03:LX/4nk;
-
-.field public final synthetic A04:Z
+.field public final synthetic A00:LX/4nV;
 
 
 # direct methods
-.method public constructor <init>(LX/4nk;IIIZ)V
+.method public constructor <init>(LX/4nV;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4nr;->A03:LX/4nk;
+    iput-object p1, p0, LX/4nr;->A00:LX/4nV;
 
     .line 1
     .line 2
-    iput p2, p0, LX/4nr;->A01:I
+    invoke-direct {p0}, LX/4oH;-><init>()V
 
     .line 3
     .line 4
-    iput p3, p0, LX/4nr;->A00:I
-
     .line 5
-    .line 6
-    iput p4, p0, LX/4nr;->A02:I
-
-    .line 7
-    .line 8
-    iput-boolean p5, p0, LX/4nr;->A04:Z
-
-    .line 9
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 11
-    .line 12
-    .line 13
     return-void
 .end method
 
 
 # virtual methods
-.method public final Agc(I)Z
-    .locals 9
+.method public final onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 12
 
     .line 0
-    iget-object v4, p0, LX/4nr;->A03:LX/4nk;
+    iget-object v4, p0, LX/4nr;->A00:LX/4nV;
 
     .line 1
     .line 2
-    iget v8, p0, LX/4nr;->A01:I
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeHorizontalScrollOffset()I
 
     .line 3
     .line 4
-    iget v7, p0, LX/4nr;->A00:I
-
     .line 5
+    move-result v10
+
     .line 6
-    iget v2, p0, LX/4nr;->A02:I
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
 
     .line 7
     .line 8
-    iget-boolean v6, p0, LX/4nr;->A04:Z
-
     .line 9
+    move-result v2
+
     .line 10
-    monitor-enter v4
+    iget-object v6, v4, LX/4nV;->A0B:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 11
-    :try_start_0
-    iget-object v1, v4, LX/4nk;->A0c:Ljava/util/List;
-
     .line 12
-    .line 13
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-virtual {v6}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
 
+    .line 13
     .line 14
     .line 15
+    move-result v11
+
     .line 16
-    move-result v0
+    iget v9, v4, LX/4nV;->A06:I
 
     .line 17
-    const/4 v5, 0x0
-
     .line 18
-    if-eq v2, v0, :cond_0
+    sub-int v0, v11, v9
 
     .line 19
     .line 20
-    monitor-exit v4
+    const/4 v1, 0x0
 
     .line 21
-    const/4 v0, 0x0
+    const/4 v3, 0x1
 
     .line 22
-    return v0
+    if-lez v0, :cond_0
 
     .line 23
-    :cond_0
-    invoke-static {v1, p1}, LX/4BF;->A0m(Ljava/util/List;I)LX/4ni;
-
     .line 24
+    iget v5, v4, LX/4nV;->A0H:I
+
     .line 25
     .line 26
-    move-result-object v3
+    const/4 v0, 0x1
 
     .line 27
-    invoke-virtual {v3}, LX/4ni;->A02()LX/4o2;
+    if-ge v9, v5, :cond_1
 
     .line 28
     .line 29
+    :cond_0
+    const/4 v0, 0x0
+
     .line 30
-    move-result-object v0
+    :cond_1
+    iput-boolean v0, v4, LX/4nV;->A0D:Z
 
     .line 31
-    invoke-interface {v0}, LX/4o2;->AjU()Z
-
     .line 32
+    invoke-virtual {v6}, Landroidx/recyclerview/widget/RecyclerView;->computeHorizontalScrollRange()I
+
     .line 33
     .line 34
-    move-result v0
-
     .line 35
-    if-eqz v0, :cond_1
+    move-result v6
 
     .line 36
-    .line 37
-    monitor-exit v4
+    iget v5, v4, LX/4nV;->A07:I
 
+    .line 37
     .line 38
-    goto :goto_2
+    sub-int v0, v6, v5
 
     .line 39
-    :cond_1
-    if-ge p1, v8, :cond_2
-
     .line 40
-    .line 41
-    invoke-virtual {v3}, LX/4ni;->A02()LX/4o2;
+    if-lez v0, :cond_2
 
+    .line 41
     .line 42
+    iget v0, v4, LX/4nV;->A0H:I
+
     .line 43
     .line 44
-    move-result-object v0
+    const/4 v8, 0x1
 
     .line 45
-    invoke-interface {v0}, LX/4o2;->ARe()Z
+    if-ge v5, v0, :cond_3
 
     .line 46
     .line 47
+    :cond_2
+    const/4 v8, 0x0
+
     .line 48
-    move-result v0
+    :cond_3
+    iput-boolean v8, v4, LX/4nV;->A0C:Z
 
     .line 49
-    if-eqz v0, :cond_3
-
     .line 50
-    .line 51
-    :cond_2
-    const/4 v0, 0x1
+    iget-boolean v0, v4, LX/4nV;->A0D:Z
 
+    .line 51
     .line 52
-    if-gt p1, v7, :cond_3
+    if-nez v0, :cond_5
 
     .line 53
     .line 54
-    goto :goto_0
+    if-nez v8, :cond_5
 
     .line 55
-    :cond_3
-    const/4 v0, 0x0
-
     .line 56
-    const/4 v2, 0x0
+    iget v0, v4, LX/4nV;->A08:I
 
     .line 57
-    goto :goto_1
-
     .line 58
-    :goto_0
-    invoke-static {v3, v4}, LX/4nk;->A01(LX/4ni;LX/4nk;)I
+    if-eqz v0, :cond_4
 
     .line 59
     .line 60
+    invoke-virtual {v4, v1}, LX/4nV;->A02(I)V
+
     .line 61
-    move-result v5
-
     .line 62
-    invoke-static {v3, v4}, LX/4nk;->A00(LX/4ni;LX/4nk;)I
-
     .line 63
-    .line 64
-    .line 65
-    move-result v2
-
-    .line 66
-    :goto_1
-    monitor-exit v4
-
-    .line 67
-    if-eqz v0, :cond_5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 68
-    .line 69
-    invoke-virtual {v3, v5, v2}, LX/4ni;->A09(II)Z
-
-    .line 70
-    .line 71
-    .line 72
-    move-result v0
-
-    .line 73
-    if-nez v0, :cond_4
-
-    .line 74
-    .line 75
-    iget-object v1, v4, LX/4nk;->A0K:LX/4mm;
-
-    .line 76
-    .line 77
-    const/4 v0, 0x0
-
-    .line 78
-    invoke-virtual {v3, v1, v0, v5, v2}, LX/4ni;->A04(LX/4mm;LX/4rj;II)V
-
-    .line 79
-    .line 80
-    .line 81
     :cond_4
-    :goto_2
-    const/4 v0, 0x1
+    return-void
 
-    .line 82
-    return v0
-
-    .line 83
+    .line 64
     :cond_5
-    if-eqz v6, :cond_4
+    const/high16 v7, 0x40000000    # 2.0f
 
-    .line 84
-    .line 85
-    invoke-static {v3}, LX/4nk;->A0F(LX/4ni;)Z
-
-    .line 86
-    .line 87
-    .line 88
-    move-result v0
-
-    .line 89
-    if-eqz v0, :cond_4
-
-    .line 90
-    .line 91
-    invoke-static {}, LX/4oe;->A01()Z
-
-    .line 92
-    .line 93
-    .line 94
-    move-result v0
-
-    .line 95
+    .line 65
+    .line 66
     if-eqz v0, :cond_6
 
+    .line 67
+    .line 68
+    int-to-float v2, v2
+
+    .line 69
+    int-to-float v1, v9
+
+    .line 70
+    div-float v0, v1, v7
+
+    .line 71
+    .line 72
+    add-float/2addr v2, v0
+
+    .line 73
+    mul-float/2addr v1, v2
+
+    .line 74
+    int-to-float v0, v11
+
+    .line 75
+    div-float/2addr v1, v0
+
+    .line 76
+    float-to-int v0, v1
+
+    .line 77
+    iput v0, v4, LX/4nV;->A09:I
+
+    .line 78
+    .line 79
+    mul-int v0, v9, v9
+
+    .line 80
+    .line 81
+    div-int/2addr v0, v11
+
+    .line 82
+    invoke-static {v9, v0}, Ljava/lang/Math;->min(II)I
+
+    .line 83
+    .line 84
+    .line 85
+    move-result v0
+
+    .line 86
+    iput v0, v4, LX/4nV;->A0A:I
+
+    .line 87
+    .line 88
+    :cond_6
+    if-eqz v8, :cond_7
+
+    .line 89
+    .line 90
+    int-to-float v2, v10
+
+    .line 91
+    int-to-float v1, v5
+
+    .line 92
+    div-float v0, v1, v7
+
+    .line 93
+    .line 94
+    add-float/2addr v2, v0
+
+    .line 95
+    mul-float/2addr v1, v2
+
     .line 96
+    int-to-float v0, v6
+
     .line 97
-    iget-boolean v0, v4, LX/4nk;->A0h:Z
+    div-float/2addr v1, v0
 
     .line 98
+    float-to-int v0, v1
+
     .line 99
-    invoke-static {v3, v0}, LX/4nk;->A08(LX/4ni;Z)V
+    iput v0, v4, LX/4nV;->A04:I
 
     .line 100
     .line 101
-    .line 102
-    goto :goto_2
+    mul-int v0, v5, v5
 
+    .line 102
     .line 103
-    :cond_6
-    iget-object v1, v4, LX/4nk;->A0G:Landroid/os/Handler;
+    div-int/2addr v0, v6
 
     .line 104
-    .line 105
-    new-instance v0, LX/4pm;
+    invoke-static {v5, v0}, Ljava/lang/Math;->min(II)I
 
+    .line 105
     .line 106
     .line 107
-    invoke-direct {v0, v3, v4}, LX/4pm;-><init>(LX/4ni;LX/4nk;)V
+    move-result v0
 
     .line 108
+    iput v0, v4, LX/4nV;->A05:I
+
     .line 109
     .line 110
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :cond_7
+    iget v0, v4, LX/4nV;->A08:I
 
     .line 111
     .line 112
-    .line 113
-    goto :goto_2
+    if-eqz v0, :cond_8
 
+    .line 113
     .line 114
-    :catchall_0
-    move-exception v0
+    if-ne v0, v3, :cond_4
 
     .line 115
-    :try_start_1
-    monitor-exit v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
     .line 116
-    throw v0
+    :cond_8
+    invoke-virtual {v4, v3}, LX/4nV;->A02(I)V
+
+    .line 117
+    .line 118
+    .line 119
+    return-void
 .end method

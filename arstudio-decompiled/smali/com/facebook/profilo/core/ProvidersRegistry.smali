@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final A00:LX/0SV;
+.field public static final A00:LX/0P0;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/0SV;
+    new-instance v0, LX/0P0;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/0SV;-><init>()V
+    invoke-direct {v0}, LX/0P0;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/profilo/core/ProvidersRegistry;->A00:LX/0SV;
+    sput-object v0, Lcom/facebook/profilo/core/ProvidersRegistry;->A00:LX/0P0;
 
     .line 6
     .line 7
@@ -44,11 +44,11 @@
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/profilo/core/ProvidersRegistry;->A00:LX/0SV;
+    sget-object v0, Lcom/facebook/profilo/core/ProvidersRegistry;->A00:LX/0P0;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p0}, LX/0SV;->A00(Ljava/lang/Object;)I
+    invoke-virtual {v0, p0}, LX/0P0;->A00(Ljava/lang/Object;)I
 
     .line 3
     .line 4

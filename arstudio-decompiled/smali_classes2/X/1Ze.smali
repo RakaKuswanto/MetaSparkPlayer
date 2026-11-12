@@ -1,124 +1,205 @@
-.class public final LX/1Ze;
+.class public final LX/1zE;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/1Zg;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AuthOperations$NonceAuthOperation"
-
 
 # instance fields
-.field public final A00:Lcom/facebook/auth/credentials/NonceCredentials;
+.field public final A00:LX/0Ft;
 
-.field public final synthetic A01:LX/1v6;
+.field public final A01:LX/2JI;
+
+.field public final A02:LX/0VC;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/auth/credentials/NonceCredentials;LX/1v6;)V
+.method public constructor <init>(LX/0Ft;LX/2JI;LX/0VC;)V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/1Ze;->A01:LX/1v6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p3, p0, LX/1zE;->A02:LX/0VC;
+
     .line 4
     .line 5
-    iput-object p1, p0, LX/1Ze;->A00:Lcom/facebook/auth/credentials/NonceCredentials;
+    iput-object p1, p0, LX/1zE;->A00:LX/0Ft;
 
     .line 6
     .line 7
+    iput-object p2, p0, LX/1zE;->A01:LX/2JI;
+
+    .line 8
+    .line 9
     return-void
 .end method
 
-
-# virtual methods
-.method public final bridge synthetic call()Ljava/lang/Object;
-    .locals 6
+.method public static A00(LX/3oD;)[Ljava/lang/String;
+    .locals 4
 
     .line 0
-    iget-object v5, p0, LX/1Ze;->A01:LX/1v6;
+    invoke-virtual {p0}, LX/3oD;->A1H()LX/3ns;
 
     .line 1
     .line 2
-    iget-object v0, v5, LX/1v6;->A0Z:LX/0Na;
-
     .line 3
+    move-result-object v1
+
     .line 4
-    invoke-static {v0}, LX/0Yd;->A0L(LX/0Na;)Ljava/lang/String;
+    sget-object v0, LX/3ns;->START_ARRAY:LX/3ns;
 
     .line 5
     .line 6
-    .line 7
-    move-result-object v4
+    if-ne v1, v0, :cond_4
 
+    .line 7
     .line 8
-    invoke-static {v0}, LX/0Ye;->A0T(LX/0Na;)Ljava/lang/String;
+    const/4 v3, 0x0
 
     .line 9
+    move-object v2, v3
+
     .line 10
+    :goto_0
+    invoke-virtual {p0}, LX/3oD;->A1H()LX/3ns;
+
     .line 11
-    move-result-object v3
-
     .line 12
-    iget-object v1, p0, LX/1Ze;->A00:Lcom/facebook/auth/credentials/NonceCredentials;
-
     .line 13
+    move-result-object v1
+
     .line 14
-    iget-object v0, v5, LX/1v6;->A0p:LX/0Gd;
+    sget-object v0, LX/3ns;->END_ARRAY:LX/3ns;
 
     .line 15
     .line 16
-    invoke-static {v0}, LX/0Yd;->A1a(LX/0Gd;)Z
+    if-eq v1, v0, :cond_2
 
     .line 17
     .line 18
+    invoke-virtual {p0}, LX/3oD;->A0t()LX/3ns;
+
     .line 19
-    move-result v0
-
     .line 20
-    new-instance v2, LX/1ZA;
-
     .line 21
+    move-result-object v1
+
     .line 22
-    invoke-direct {v2, v1, v4, v3, v0}, LX/1ZA;-><init>(Lcom/facebook/auth/credentials/NonceCredentials;Ljava/lang/String;Ljava/lang/String;Z)V
+    sget-object v0, LX/3ns;->VALUE_STRING:LX/3ns;
 
     .line 23
     .line 24
-    .line 25
-    invoke-static {v5}, LX/1v6;->A06(LX/1v6;)LX/1vp;
+    if-ne v1, v0, :cond_1
 
+    .line 25
     .line 26
+    invoke-virtual {p0}, LX/3oD;->A1I()Ljava/lang/String;
+
     .line 27
     .line 28
-    move-result-object v1
-
     .line 29
-    iget-object v0, v5, LX/1v6;->A0S:LX/0Na;
+    move-result-object v0
 
     .line 30
-    .line 31
-    invoke-static {v0}, LX/0Yi;->A0R(LX/0Na;)LX/21i;
+    if-nez v2, :cond_0
 
+    .line 31
     .line 32
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
     .line 33
     .line 34
-    move-result-object v0
-
     .line 35
-    invoke-static {v1, v0, p0, v2}, LX/1vp;->A01(LX/1vp;LX/21i;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v2
 
     .line 36
+    :cond_0
+    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
     .line 37
     .line 38
+    .line 39
+    goto :goto_0
+
+    .line 40
+    :cond_1
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v1
+
+    .line 44
+    const-string/jumbo v0, "expecting array of strings at "
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-static {p0, v0, v1}, LX/3oD;->A06(LX/3oD;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+
+    .line 48
+    .line 49
+    .line 50
     move-result-object v0
 
-    .line 39
+    .line 51
+    throw v0
+
+    .line 52
+    :cond_2
+    if-nez v2, :cond_3
+
+    .line 53
+    .line 54
+    return-object v3
+
+    .line 55
+    :cond_3
+    const/4 v0, 0x0
+
+    .line 56
+    new-array v0, v0, [Ljava/lang/String;
+
+    .line 57
+    .line 58
+    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 59
+    .line 60
+    .line 61
+    move-result-object v0
+
+    .line 62
+    check-cast v0, [Ljava/lang/String;
+
+    .line 63
+    .line 64
     return-object v0
+
+    .line 65
+    :cond_4
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 66
+    .line 67
+    .line 68
+    move-result-object v1
+
+    .line 69
+    const-string v0, "Unsupported format: expecting array of strings at "
+
+    .line 70
+    .line 71
+    invoke-static {p0, v0, v1}, LX/3oD;->A06(LX/3oD;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+
+    .line 72
+    .line 73
+    .line 74
+    move-result-object v0
+
+    .line 75
+    throw v0
 .end method

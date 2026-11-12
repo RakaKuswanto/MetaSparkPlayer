@@ -1,50 +1,66 @@
-.class public final LX/5Th;
-.super LX/5Ti;
+.class public final LX/5TH;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/1kh;
 
 
 # direct methods
-.method public constructor <init>(LX/5Tk;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string v0, "com.facebook.cameracore.mediapipeline.services.audio.implementation.AudioServiceModule"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, p1, v0}, LX/5Ti;-><init>(LX/5Tk;Ljava/lang/String;)V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AQa(LX/5UZ;)Z
-    .locals 2
+.method public final AHm(I)I
+    .locals 3
 
-    .line 0
-    if-eqz p1, :cond_0
+    const/4 v2, 0x3
 
-    .line 1
-    .line 2
-    iget-object v1, p1, LX/5UZ;->A06:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;
+    const/4 v1, 0x2
 
-    .line 3
-    .line 4
     const/4 v0, 0x1
 
-    .line 5
-    if-nez v1, :cond_1
+    if-eqz p1, :cond_3
 
-    .line 6
-    .line 7
+    if-eq p1, v0, :cond_2
+
+    if-eq p1, v1, :cond_1
+
+    if-eq p1, v2, :cond_0
+
+    const/4 v0, 0x6
+
+    const/4 v2, 0x4
+
+    if-eq p1, v0, :cond_0
+
+    const/4 v2, 0x5
+
     :cond_0
-    const/4 v0, 0x0
+    return v2
 
-    .line 8
     :cond_1
-    return v0
+    const/4 v2, 0x2
+
+    return v2
+
+    :cond_2
+    const/4 v2, 0x1
+
+    return v2
+
+    :cond_3
+    const/4 v2, 0x0
+
+    return v2
 .end method

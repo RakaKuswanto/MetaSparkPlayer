@@ -1,42 +1,37 @@
 .class public final LX/3VY;
-.super Ljava/io/ByteArrayOutputStream;
+.super LX/3VF;
 .source ""
+
+# interfaces
+.implements LX/1H2;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    .line 268435456
+    const v0, -0xfb1cfc0
 
-    .line 1
-    .line 2
-    .line 3
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-direct {p0, v0}, LX/3VF;-><init>(I)V
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
     return-void
 .end method
 
-
-# virtual methods
-.method public final A00([BI)V
-    .locals 3
+.method public constructor <init>(I)V
+    .locals 0
 
     .line 0
-    iget-object v2, p0, LX/3VY;->buf:[B
+    invoke-direct {p0, p1}, LX/3VF;-><init>(I)V
 
     .line 1
     .line 2
-    iget v1, p0, LX/3VY;->count:I
-
     .line 3
-    .line 4
-    const/4 v0, 0x0
-
-    .line 5
-    invoke-static {v2, v0, p1, p2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 6
-    .line 7
-    .line 8
     return-void
 .end method

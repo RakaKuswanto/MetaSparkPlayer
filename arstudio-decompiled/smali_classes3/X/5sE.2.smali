@@ -1,82 +1,98 @@
-.class public final LX/5sE;
+.class public final synthetic LX/5sE;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/hardware/Camera$PictureCallback;
+
 
 # instance fields
-.field public A00:I
+.field public final synthetic A00:LX/5sm;
 
-.field public A01:I
+.field public final synthetic A01:LX/5sU;
 
-.field public A02:I
+.field public final synthetic A02:LX/5sb;
 
-.field public A03:[Ljava/lang/Object;
+.field public final synthetic A03:LX/5sp;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public synthetic constructor <init>(LX/5sm;LX/5sU;LX/5sb;LX/5sp;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/5sE;->A00:LX/5sm;
+
+    iput-object p4, p0, LX/5sE;->A03:LX/5sp;
+
+    iput-object p3, p0, LX/5sE;->A02:LX/5sb;
+
+    iput-object p2, p0, LX/5sE;->A01:LX/5sU;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onPictureTaken([BLandroid/hardware/Camera;)V
+    .locals 7
 
     .line 0
-    const/high16 v2, 0x3f400000    # 0.75f
+    iget-object v1, p0, LX/5sE;->A00:LX/5sm;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v5, p0, LX/5sE;->A03:LX/5sp;
 
     .line 3
     .line 4
-    .line 5
-    const/4 v1, 0x1
+    iget-object v4, p0, LX/5sE;->A02:LX/5sb;
 
+    .line 5
     .line 6
-    const/16 v0, 0xf
+    iget-object v3, p0, LX/5sE;->A01:LX/5sU;
 
     .line 7
     .line 8
-    invoke-static {v0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
+    sget-object v0, LX/5so;->A0b:LX/5tJ;
 
     .line 9
     .line 10
+    invoke-virtual {v5, v0, p1}, LX/5sp;->A01(LX/5tJ;Ljava/lang/Object;)V
+
     .line 11
-    move-result v0
-
     .line 12
-    rsub-int/lit8 v0, v0, 0x20
-
     .line 13
-    .line 14
-    shl-int/2addr v1, v0
+    iget-object v2, v1, LX/5sm;->A07:LX/5to;
 
+    .line 14
     .line 15
-    add-int/lit8 v0, v1, -0x1
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 16
     .line 17
-    iput v0, p0, LX/5sE;->A00:I
-
     .line 18
+    const/4 v6, 0x0
+
     .line 19
-    int-to-float v0, v1
+    invoke-static/range {v1 .. v6}, LX/5sm;->A09(LX/5sm;LX/5to;LX/5sU;LX/5sb;LX/5sp;LX/5so;)V
 
     .line 20
-    mul-float/2addr v2, v0
-
     .line 21
-    float-to-int v0, v2
-
     .line 22
-    iput v0, p0, LX/5sE;->A01:I
+    iget-object v0, v1, LX/5sm;->A0L:LX/5q3;
 
     .line 23
     .line 24
-    new-array v0, v1, [Ljava/lang/Object;
+    iget-object v0, v0, LX/5q3;->A00:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 25
     .line 26
-    iput-object v0, p0, LX/5sE;->A03:[Ljava/lang/Object;
+    invoke-static {v0}, LX/432;->A1T(Ljava/util/concurrent/atomic/AtomicReference;)V
 
     .line 27
     .line 28
+    .line 29
     return-void
 .end method

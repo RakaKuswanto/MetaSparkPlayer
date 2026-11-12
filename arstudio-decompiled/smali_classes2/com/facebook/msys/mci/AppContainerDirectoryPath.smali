@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/1Wd;->A00()V
+    invoke-static {}, LX/3hX;->A00()V
 
     .line 1
     .line 2
@@ -32,9 +32,19 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    const-class v0, LX/3hj;
 
     .line 1
+    .line 2
+    monitor-enter v0
+
+    .line 3
+    monitor-exit v0
+
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
     return v0
 .end method
 

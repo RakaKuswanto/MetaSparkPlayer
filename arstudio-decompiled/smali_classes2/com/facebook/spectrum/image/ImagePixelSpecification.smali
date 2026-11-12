@@ -36,378 +36,389 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 43
+.method public static synthetic $values()[Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    .locals 3
 
     .line 0
-    sget-object v9, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->RGB:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    const/16 v0, 0x9
 
     .line 1
     .line 2
-    sget-object v11, Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;->NONE:Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;
+    new-array v2, v0, [Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 3
     .line 4
-    sget-object v12, Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;->NATURAL:Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->RGB:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 5
     .line 6
-    const-string v7, "RGB"
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->RGBA:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    aput-object v1, v2, v0
+
+    .line 13
+    .line 14
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
+    .line 15
+    .line 16
+    const/4 v0, 0x2
+
+    .line 17
+    aput-object v1, v2, v0
+
+    .line 18
+    .line 19
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->GRAY_A:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
+    .line 20
+    .line 21
+    const/4 v0, 0x3
+
+    .line 22
+    aput-object v1, v2, v0
+
+    .line 23
+    .line 24
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->A_GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
+    .line 25
+    .line 26
+    const/4 v0, 0x4
+
+    .line 27
+    aput-object v1, v2, v0
+
+    .line 28
+    .line 29
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->ARGB:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
+    .line 30
+    .line 31
+    const/4 v0, 0x5
+
+    .line 32
+    aput-object v1, v2, v0
+
+    .line 33
+    .line 34
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->BGR:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
+    .line 35
+    .line 36
+    const/4 v0, 0x6
+
+    .line 37
+    aput-object v1, v2, v0
+
+    .line 38
+    .line 39
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->BGRA:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
+    .line 40
+    .line 41
+    const/4 v0, 0x7
+
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
+    .line 44
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->ABGR:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
+    .line 45
+    .line 46
+    const/16 v0, 0x8
+
+    .line 47
+    .line 48
+    aput-object v1, v2, v0
+
+    .line 49
+    .line 50
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 20
+
+    .line 0
+    sget-object v3, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->RGB:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
+    .line 1
+    .line 2
+    sget-object v5, Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;->NONE:Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;
+
+    .line 3
+    .line 4
+    sget-object v6, Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;->NATURAL:Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;
+
+    .line 5
+    .line 6
+    const-string v1, "RGB"
 
     .line 7
     .line 8
-    const/4 v8, 0x0
+    const/4 v2, 0x0
 
     .line 9
-    const/4 v10, 0x3
+    const/4 v4, 0x3
 
     .line 10
-    new-instance v6, Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    new-instance v0, Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 11
     .line 12
-    invoke-direct/range {v6 .. v12}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
     .line 13
     .line 14
     .line 15
-    sput-object v6, Lcom/facebook/spectrum/image/ImagePixelSpecification;->RGB:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    sput-object v0, Lcom/facebook/spectrum/image/ImagePixelSpecification;->RGB:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 16
     .line 17
-    sget-object v18, Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;->LAST:Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;
+    sget-object v12, Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;->LAST:Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;
 
     .line 18
     .line 19
-    const-string v14, "RGBA"
+    const-string v8, "RGBA"
 
     .line 20
     .line 21
-    const/4 v15, 0x1
+    const/4 v9, 0x1
 
     .line 22
-    const/16 v17, 0x4
+    const/4 v11, 0x4
 
     .line 23
-    .line 24
-    new-instance v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    new-instance v7, Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
+    .line 24
     .line 25
+    move-object v10, v3
+
     .line 26
-    move-object/from16 v16, v9
+    move-object v13, v6
 
     .line 27
-    .line 28
-    move-object/from16 v19, v12
+    invoke-direct/range {v7 .. v13}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
+    .line 28
     .line 29
     .line 30
-    invoke-direct/range {v13 .. v19}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
+    sput-object v7, Lcom/facebook/spectrum/image/ImagePixelSpecification;->RGBA:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 31
     .line 32
+    sget-object v16, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
     .line 33
-    sput-object v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;->RGBA:Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
     .line 34
-    .line 35
-    sget-object v22, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    const-string v14, "GRAY"
 
+    .line 35
     .line 36
+    const/4 v15, 0x2
+
     .line 37
-    const-string v20, "GRAY"
+    new-instance v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 38
     .line 39
-    const/16 v21, 0x2
+    move/from16 v17, v9
 
     .line 40
     .line 41
-    new-instance v3, Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    move-object/from16 v18, v5
 
     .line 42
     .line 43
-    move/from16 v23, v15
+    move-object/from16 v19, v6
 
     .line 44
     .line 45
-    move-object/from16 v24, v11
+    invoke-direct/range {v13 .. v19}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
     .line 46
     .line 47
-    move-object/from16 v25, v12
-
     .line 48
+    sput-object v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;->GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
     .line 49
-    move-object/from16 v19, v3
-
     .line 50
+    const-string v14, "GRAY_A"
+
     .line 51
-    invoke-direct/range {v19 .. v25}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
-
     .line 52
+    const/4 v15, 0x3
+
     .line 53
+    new-instance v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
     .line 54
-    sput-object v3, Lcom/facebook/spectrum/image/ImagePixelSpecification;->GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
     .line 55
+    move-object/from16 v18, v12
+
     .line 56
-    const-string v20, "GRAY_A"
-
     .line 57
-    .line 58
-    new-instance v19, Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    invoke-direct/range {v13 .. v19}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
+    .line 58
     .line 59
     .line 60
-    move/from16 v21, v10
+    sput-object v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;->GRAY_A:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 61
     .line 62
-    move-object/from16 v24, v18
+    sget-object v18, Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;->FIRST:Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;
 
     .line 63
     .line 64
-    invoke-direct/range {v19 .. v25}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
+    const-string v14, "A_GRAY"
 
     .line 65
     .line 66
-    .line 67
-    sput-object v19, Lcom/facebook/spectrum/image/ImagePixelSpecification;->GRAY_A:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    new-instance v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
+    .line 67
     .line 68
+    move v15, v11
+
     .line 69
-    sget-object v28, Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;->FIRST:Lcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;
+    invoke-direct/range {v13 .. v19}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
     .line 70
     .line 71
-    const-string v24, "A_GRAY"
-
     .line 72
+    sput-object v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;->A_GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
     .line 73
-    new-instance v23, Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
     .line 74
-    .line 75
-    move/from16 v25, v17
+    const-string v14, "ARGB"
 
+    .line 75
     .line 76
+    const/4 v15, 0x5
+
     .line 77
-    move-object/from16 v26, v22
+    new-instance v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 78
     .line 79
-    move/from16 v27, v15
+    move-object/from16 v16, v3
 
     .line 80
     .line 81
-    move-object/from16 v29, v12
+    move/from16 v17, v11
 
     .line 82
     .line 83
-    invoke-direct/range {v23 .. v29}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
+    invoke-direct/range {v13 .. v19}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
     .line 84
     .line 85
     .line 86
-    sput-object v23, Lcom/facebook/spectrum/image/ImagePixelSpecification;->A_GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    sput-object v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;->ARGB:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 87
     .line 88
-    const-string v30, "ARGB"
+    sget-object v6, Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;->REVERSED:Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;
 
     .line 89
     .line 90
-    const/16 v31, 0x5
+    const-string v1, "BGR"
 
     .line 91
     .line 92
-    new-instance v2, Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    const/4 v2, 0x6
 
     .line 93
+    new-instance v0, Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
     .line 94
-    move-object/from16 v29, v2
-
     .line 95
-    .line 96
-    move-object/from16 v32, v9
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
+    .line 96
     .line 97
     .line 98
-    move/from16 v33, v17
+    sput-object v0, Lcom/facebook/spectrum/image/ImagePixelSpecification;->BGR:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 99
     .line 100
-    move-object/from16 v34, v28
+    const-string v14, "BGRA"
 
     .line 101
     .line 102
-    move-object/from16 v35, v12
+    const/4 v15, 0x7
 
     .line 103
-    .line 104
-    invoke-direct/range {v29 .. v35}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
+    new-instance v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
+    .line 104
     .line 105
+    move-object/from16 v19, v6
+
     .line 106
     .line 107
-    sput-object v2, Lcom/facebook/spectrum/image/ImagePixelSpecification;->ARGB:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    invoke-direct/range {v13 .. v19}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
     .line 108
     .line 109
-    sget-object v35, Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;->REVERSED:Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;
-
     .line 110
+    sput-object v13, Lcom/facebook/spectrum/image/ImagePixelSpecification;->BGRA:Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
     .line 111
-    const-string v30, "BGR"
-
     .line 112
+    const-string v8, "ABGR"
+
     .line 113
-    const/16 v31, 0x6
-
     .line 114
+    const/16 v9, 0x8
+
     .line 115
-    const/16 v33, 0x3
-
     .line 116
-    .line 117
-    new-instance v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;
+    new-instance v7, Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
+    .line 117
     .line 118
+    move-object v13, v6
+
     .line 119
-    move-object/from16 v29, v1
+    invoke-direct/range {v7 .. v13}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
 
     .line 120
     .line 121
-    move-object/from16 v34, v11
-
     .line 122
-    .line 123
-    invoke-direct/range {v29 .. v35}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
+    sput-object v7, Lcom/facebook/spectrum/image/ImagePixelSpecification;->ABGR:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
+    .line 123
     .line 124
+    invoke-static {}, Lcom/facebook/spectrum/image/ImagePixelSpecification;->$values()[Lcom/facebook/spectrum/image/ImagePixelSpecification;
+
     .line 125
     .line 126
-    sput-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification;->BGR:Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
     .line 127
+    move-result-object v0
+
     .line 128
-    const-string v37, "BGRA"
+    sput-object v0, Lcom/facebook/spectrum/image/ImagePixelSpecification;->$VALUES:[Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 129
     .line 130
-    const/16 v38, 0x7
-
-    .line 131
-    .line 132
-    new-instance v0, Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
-    .line 133
-    .line 134
-    move-object/from16 v36, v0
-
-    .line 135
-    .line 136
-    move-object/from16 v39, v9
-
-    .line 137
-    .line 138
-    move/from16 v40, v17
-
-    .line 139
-    .line 140
-    move-object/from16 v41, v28
-
-    .line 141
-    .line 142
-    move-object/from16 v42, v35
-
-    .line 143
-    .line 144
-    invoke-direct/range {v36 .. v42}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
-
-    .line 145
-    .line 146
-    .line 147
-    sput-object v0, Lcom/facebook/spectrum/image/ImagePixelSpecification;->BGRA:Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
-    .line 148
-    .line 149
-    const-string v25, "ABGR"
-
-    .line 150
-    .line 151
-    const/16 v26, 0x8
-
-    .line 152
-    .line 153
-    new-instance v24, Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
-    .line 154
-    .line 155
-    move-object/from16 v27, v9
-
-    .line 156
-    .line 157
-    move/from16 v28, v17
-
-    .line 158
-    .line 159
-    move-object/from16 v29, v18
-
-    .line 160
-    .line 161
-    move-object/from16 v30, v35
-
-    .line 162
-    .line 163
-    invoke-direct/range {v24 .. v30}, Lcom/facebook/spectrum/image/ImagePixelSpecification;-><init>(Ljava/lang/String;ILcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;ILcom/facebook/spectrum/image/ImagePixelSpecification$AlphaInfo;Lcom/facebook/spectrum/image/ImagePixelSpecification$ComponentsOrder;)V
-
-    .line 164
-    .line 165
-    .line 166
-    sput-object v24, Lcom/facebook/spectrum/image/ImagePixelSpecification;->ABGR:Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
-    .line 167
-    .line 168
-    const/16 v4, 0x9
-
-    .line 169
-    .line 170
-    new-array v5, v4, [Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
-    .line 171
-    .line 172
-    aput-object v6, v5, v8
-
-    .line 173
-    .line 174
-    invoke-static {v5, v13, v3}, LX/0Yf;->A1P([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 175
-    .line 176
-    .line 177
-    aput-object v19, v5, v10
-
-    .line 178
-    .line 179
-    aput-object v23, v5, v17
-
-    .line 180
-    .line 181
-    invoke-static {v2, v1, v0, v5}, LX/0Yc;->A1O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 182
-    .line 183
-    .line 184
-    aput-object v24, v5, v26
-
-    .line 185
-    .line 186
-    sput-object v5, Lcom/facebook/spectrum/image/ImagePixelSpecification;->$VALUES:[Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
-    .line 187
-    .line 188
     return-void
 .end method
 
@@ -443,7 +454,7 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/3VZ;->A00:[I
+    sget-object v1, LX/3A4;->A00:[I
 
     .line 1
     .line 2
@@ -481,7 +492,7 @@
 
     .line 17
     :cond_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 18
     .line 19
@@ -493,7 +504,7 @@
 
     .line 22
     .line 23
-    invoke-static {p0, v0, v1}, LX/0Yc;->A03(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+    invoke-static {p0, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
     .line 24
     .line 25
@@ -587,7 +598,7 @@
 
     .line 268435487
     .line 268435488
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 268435489
     .line 268435490
@@ -650,7 +661,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -725,18 +736,13 @@
 
     .line 40
     .line 41
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, LX/0X1;->A0O(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 42
     .line 43
     .line 44
-    invoke-static {v1}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 45
-    .line 46
-    .line 47
     move-result-object v0
 
-    .line 48
+    .line 45
     return-object v0
 .end method

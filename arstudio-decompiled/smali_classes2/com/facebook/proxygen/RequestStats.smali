@@ -144,7 +144,7 @@
 
     .line 11
     .line 12
-    invoke-static {p2, p1}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {p2, p1}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -156,7 +156,7 @@
 
     .line 17
     .line 18
-    invoke-static {p2, p0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {p2, p0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 19
     .line 20
@@ -164,7 +164,7 @@
     move-result-object v0
 
     .line 22
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 23
     .line 24
@@ -210,7 +210,7 @@
 
     .line 5
     .line 6
-    invoke-static {p1, p0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 7
     .line 8
@@ -233,7 +233,7 @@
 
     .line 16
     .line 17
-    invoke-static {p1, p0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 18
     .line 19
@@ -281,23 +281,31 @@
     .line 5
     .line 6
     :try_start_0
-    invoke-static {p1, p0}, LX/0Ye;->A07(Ljava/lang/Object;Ljava/util/Map;)I
+    invoke-static {p1, p0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 7
     .line 8
     .line 9
-    move-result p2
+    move-result-object v0
 
     .line 10
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result p2
+
+    .line 14
     return p2
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
+    .line 15
     :catch_0
     return p2
 
-    .line 12
+    .line 16
     :cond_0
     return p2
 .end method
@@ -319,7 +327,7 @@
     .line 5
     .line 6
     :try_start_0
-    invoke-static {p1, p0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 7
     .line 8
@@ -364,7 +372,7 @@
 
     .line 5
     .line 6
-    invoke-static {p1, p0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {p1, p0}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
 
     .line 7
     .line 8
@@ -382,7 +390,7 @@
     .locals 15
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
@@ -419,173 +427,168 @@
 
     .line 15
     .line 16
-    const-string v0, "cert_verification"
+    const-string/jumbo v0, "cert_verification"
 
     .line 17
     .line 18
+    .line 19
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 19
     .line 20
     .line 21
+    .line 22
     move-result v0
 
-    .line 22
-    if-eqz v0, :cond_1
-
     .line 23
+    if-eqz v0, :cond_0
+
     .line 24
+    .line 25
     invoke-virtual {v2}, Lcom/facebook/proxygen/TraceEvent;->getMetaData()Ljava/util/Map;
 
-    .line 25
     .line 26
     .line 27
+    .line 28
     move-result-object v0
 
-    .line 28
-    invoke-static {v0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
-
     .line 29
+    invoke-static {v0}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
+
     .line 30
     .line 31
+    .line 32
     move-result-object v1
 
-    .line 32
+    .line 33
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 33
     .line 34
     .line 35
-    move-result v0
-
     .line 36
-    if-eqz v0, :cond_0
+    move-result v0
 
     .line 37
-    .line 38
-    invoke-static {v1}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    if-eqz v0, :cond_5
 
+    .line 38
     .line 39
+    invoke-static {v1}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+
     .line 40
     .line 41
-    move-result-object v0
-
     .line 42
-    invoke-static {v7, v0}, LX/0Yf;->A1G(Ljava/util/AbstractMap;Ljava/util/Map$Entry;)V
+    move-result-object v0
 
     .line 43
+    invoke-static {v7, v0}, LX/0X5;->A1Q(Ljava/util/AbstractMap;Ljava/util/Map$Entry;)V
+
     .line 44
     .line 45
+    .line 46
     goto :goto_1
 
-    .line 46
-    :cond_0
-    const/4 v14, 0x1
-
     .line 47
-    goto :goto_2
+    :cond_0
+    iget-object v1, v2, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
 
     .line 48
-    :cond_1
-    iget-object v1, v2, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
-
     .line 49
-    .line 50
     const-string v0, "QuicConnect"
 
+    .line 50
     .line 51
-    .line 52
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 52
     .line 53
     .line 54
-    .line 55
     move-result v0
 
-    .line 56
+    .line 55
     const-string v9, ":"
 
+    .line 56
     .line 57
-    .line 58
     const-string v8, ""
 
+    .line 58
     .line 59
-    .line 60
-    if-nez v0, :cond_5
+    if-nez v0, :cond_3
 
+    .line 60
     .line 61
-    .line 62
     iget-object v1, v2, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
 
+    .line 62
     .line 63
-    .line 64
     const-string v0, "TCPConnect"
 
+    .line 64
     .line 65
-    .line 66
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 66
     .line 67
     .line 68
-    .line 69
     move-result v0
+
+    .line 69
+    if-nez v0, :cond_3
 
     .line 70
-    if-nez v0, :cond_5
-
     .line 71
-    .line 72
     iget-object v1, v2, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
 
+    .line 72
     .line 73
-    .line 74
     const-string v0, "PostConnect"
 
+    .line 74
     .line 75
-    .line 76
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 76
     .line 77
     .line 78
-    .line 79
     move-result v0
+
+    .line 79
+    if-nez v0, :cond_3
 
     .line 80
-    if-nez v0, :cond_5
-
     .line 81
-    .line 82
     iget-object v1, v2, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
 
+    .line 82
     .line 83
-    .line 84
     const-string v0, "TLSSetup"
 
+    .line 84
     .line 85
-    .line 86
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 86
     .line 87
     .line 88
-    .line 89
     move-result v0
 
-    .line 90
-    if-eqz v0, :cond_6
+    .line 89
+    if-eqz v0, :cond_4
 
+    .line 90
     .line 91
-    .line 92
     invoke-virtual {v2}, Lcom/facebook/proxygen/TraceEvent;->getMetaData()Ljava/util/Map;
 
+    .line 92
     .line 93
     .line 94
-    .line 95
     move-result-object v0
 
-    .line 96
-    const-string v13, "cipher_name"
+    .line 95
+    const-string/jumbo v13, "cipher_name"
 
+    .line 96
     .line 97
     .line 98
     invoke-static {v0, v13, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -633,7 +636,7 @@
     move-result v2
 
     .line 121
-    if-nez v2, :cond_2
+    if-nez v2, :cond_1
 
     .line 122
     .line 123
@@ -642,8 +645,8 @@
     .line 124
     .line 125
     .line 126
-    :cond_2
-    if-eqz v9, :cond_3
+    :cond_1
+    if-eqz v9, :cond_2
 
     .line 127
     .line 128
@@ -660,7 +663,7 @@
     .line 133
     .line 134
     .line 135
-    :cond_3
+    :cond_2
     const-wide/16 v8, 0x0
 
     .line 136
@@ -669,7 +672,7 @@
 
     .line 138
     .line 139
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_6
 
     .line 140
     .line 141
@@ -686,206 +689,213 @@
     .line 146
     .line 147
     .line 148
-    :cond_4
-    :goto_2
-    add-int/lit8 v3, v3, 0x1
+    goto :goto_3
 
     .line 149
-    .line 150
-    goto/16 :goto_0
-
-    .line 151
-    .line 152
-    :cond_5
+    :cond_3
     invoke-virtual {v2}, Lcom/facebook/proxygen/TraceEvent;->getMetaData()Ljava/util/Map;
 
-    .line 153
-    .line 154
-    .line 155
+    .line 150
+    .line 151
+    .line 152
     move-result-object v1
 
-    .line 156
+    .line 153
     const-string/jumbo v0, "server_address"
+
+    .line 154
+    .line 155
+    .line 156
+    invoke-static {v1, v0, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 157
     .line 158
     .line 159
-    invoke-static {v1, v0, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 160
-    .line 161
-    .line 162
     move-result-object v2
 
-    .line 163
+    .line 160
     const-string/jumbo v0, "server_port"
+
+    .line 161
+    .line 162
+    .line 163
+    invoke-static {v1, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
     .line 164
     .line 165
     .line 166
-    invoke-static {v1, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
-
-    .line 167
-    .line 168
-    .line 169
     move-result v1
 
-    .line 170
+    .line 167
     invoke-virtual {v2, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 171
-    .line 172
-    .line 173
+    .line 168
+    .line 169
+    .line 170
     move-result v0
 
+    .line 171
+    if-nez v0, :cond_6
+
+    .line 172
+    .line 173
+    if-lez v1, :cond_6
+
     .line 174
-    if-nez v0, :cond_4
-
     .line 175
-    .line 176
-    if-lez v1, :cond_4
-
-    .line 177
-    .line 178
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    .line 179
-    .line 180
-    .line 181
+    .line 176
+    .line 177
+    .line 178
     move-result-object v0
 
-    .line 182
-    invoke-static {v2, v9, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 179
+    invoke-static {v2, v9, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 183
-    .line 184
-    .line 185
+    .line 180
+    .line 181
+    .line 182
     move-result-object v1
 
-    .line 186
+    .line 183
     const-string/jumbo v0, "verified_server_address"
 
-    .line 187
-    .line 188
-    .line 189
-    goto :goto_3
+    .line 184
+    .line 185
+    .line 186
+    goto :goto_2
 
-    .line 190
-    :cond_6
+    .line 187
+    :cond_4
     iget-object v1, v2, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
 
+    .line 188
+    .line 189
+    const-string/jumbo v0, "proxy_connect"
+
+    .line 190
     .line 191
     .line 192
-    const-string/jumbo v0, "proxy_connect"
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 193
     .line 194
     .line 195
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 196
-    .line 197
-    .line 198
     move-result v0
 
-    .line 199
-    if-eqz v0, :cond_4
+    .line 196
+    if-eqz v0, :cond_6
 
-    .line 200
-    .line 201
+    .line 197
+    .line 198
     invoke-virtual {v2}, Lcom/facebook/proxygen/TraceEvent;->getMetaData()Ljava/util/Map;
 
-    .line 202
-    .line 203
-    .line 204
+    .line 199
+    .line 200
+    .line 201
     move-result-object v1
 
-    .line 205
+    .line 202
     const-string/jumbo v0, "proxy_host"
+
+    .line 203
+    .line 204
+    .line 205
+    invoke-static {v1, v0, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 206
     .line 207
     .line 208
-    invoke-static {v1, v0, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 209
-    .line 210
-    .line 211
     move-result-object v2
 
-    .line 212
+    .line 209
     const-string/jumbo v0, "proxy_port"
+
+    .line 210
+    .line 211
+    .line 212
+    invoke-static {v1, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
     .line 213
     .line 214
     .line 215
-    invoke-static {v1, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
-
-    .line 216
-    .line 217
-    .line 218
     move-result v1
 
-    .line 219
+    .line 216
     invoke-virtual {v2, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 220
-    .line 221
-    .line 222
+    .line 217
+    .line 218
+    .line 219
     move-result v0
 
+    .line 220
+    if-nez v0, :cond_6
+
+    .line 221
+    .line 222
+    if-lez v1, :cond_6
+
     .line 223
-    if-nez v0, :cond_4
-
     .line 224
-    .line 225
-    if-lez v1, :cond_4
-
-    .line 226
-    .line 227
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    .line 228
-    .line 229
-    .line 230
+    .line 225
+    .line 226
+    .line 227
     move-result-object v0
 
-    .line 231
-    invoke-static {v2, v9, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 228
+    invoke-static {v2, v9, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 232
-    .line 233
-    .line 234
+    .line 229
+    .line 230
+    .line 231
     move-result-object v1
 
-    .line 235
+    .line 232
     const-string/jumbo v0, "verified_proxy_address"
+
+    .line 233
+    .line 234
+    .line 235
+    :goto_2
+    invoke-virtual {v7, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 236
     .line 237
     .line 238
-    :goto_3
-    invoke-virtual {v7, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_3
 
     .line 239
-    .line 240
-    .line 241
-    goto :goto_2
+    :cond_5
+    const/4 v14, 0x1
 
+    .line 240
+    :cond_6
+    :goto_3
+    add-int/lit8 v3, v3, 0x1
+
+    .line 241
     .line 242
-    :cond_7
-    if-nez v14, :cond_8
+    goto/16 :goto_0
 
     .line 243
     .line 244
-    invoke-static {v4}, LX/0Yj;->A0X(I)Ljava/util/HashMap;
+    :cond_7
+    if-nez v14, :cond_8
 
     .line 245
     .line 246
+    invoke-static {v4}, LX/0X7;->A0b(I)Ljava/util/HashMap;
+
     .line 247
+    .line 248
+    .line 249
     move-result-object v7
 
-    .line 248
+    .line 250
     :cond_8
     return-object v7
 .end method
@@ -1235,1490 +1245,1495 @@
     move-result v87
 
     .line 168
-    const-string v0, "client_public_address"
+    const-string/jumbo v0, "client_public_address"
 
     .line 169
     .line 170
+    .line 171
     invoke-static {v2, v0, v7}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 171
     .line 172
     .line 173
+    .line 174
     move-result-object v83
 
-    .line 174
+    .line 175
     const-string/jumbo v0, "server_cluster"
 
-    .line 175
     .line 176
     .line 177
+    .line 178
     invoke-static {v2, v0, v7}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 178
     .line 179
     .line 180
+    .line 181
     move-result-object v81
 
-    .line 181
+    .line 182
     const-string/jumbo v0, "server_host_enc"
 
-    .line 182
     .line 183
     .line 184
+    .line 185
     invoke-static {v2, v0, v7}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 185
     .line 186
     .line 187
+    .line 188
     move-result-object v82
 
-    .line 188
+    .line 189
     const-string/jumbo v0, "server_datetime"
 
-    .line 189
     .line 190
     .line 191
+    .line 192
     invoke-static {v2, v0, v7}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 192
     .line 193
     .line 194
+    .line 195
     move-result-object v84
 
-    .line 195
+    .line 196
     const-string/jumbo v0, "local_port"
 
-    .line 196
     .line 197
     .line 198
+    .line 199
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 199
     .line 200
     .line 201
+    .line 202
     move-result v86
 
-    .line 202
+    .line 203
     const-string/jumbo v0, "request_header_size"
 
-    .line 203
     .line 204
     .line 205
+    .line 206
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 206
     .line 207
     .line 208
+    .line 209
     move-result v94
 
-    .line 209
+    .line 210
     const-string/jumbo v0, "request_header_compressed_size"
 
-    .line 210
     .line 211
     .line 212
+    .line 213
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 213
     .line 214
     .line 215
+    .line 216
     move-result v95
 
-    .line 216
-    invoke-static/range {v94 .. v94}, LX/001;->A1L(I)Z
-
     .line 217
+    invoke-static/range {v94 .. v94}, LX/001;->A1K(I)Z
+
     .line 218
     .line 219
+    .line 220
     move-result v89
 
-    .line 220
+    .line 221
     const-string/jumbo v0, "request_body_size"
 
-    .line 221
     .line 222
     .line 223
+    .line 224
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 224
     .line 225
     .line 226
+    .line 227
     move-result v96
 
-    .line 227
+    .line 228
     const-string/jumbo v0, "response_header_size"
 
-    .line 228
     .line 229
     .line 230
+    .line 231
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 231
     .line 232
     .line 233
+    .line 234
     move-result v97
 
-    .line 234
+    .line 235
     const-string/jumbo v0, "response_header_compressed_size"
 
-    .line 235
     .line 236
     .line 237
+    .line 238
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 238
     .line 239
     .line 240
+    .line 241
     move-result v98
 
-    .line 241
-    invoke-static/range {v97 .. v97}, LX/001;->A1L(I)Z
-
     .line 242
+    invoke-static/range {v97 .. v97}, LX/001;->A1K(I)Z
+
     .line 243
     .line 244
+    .line 245
     move-result v90
 
-    .line 245
-    const-string/jumbo v3, "wire request time in liger epoch"
-
     .line 246
+    const-string/jumbo v3, "request_send_time"
+
     .line 247
     .line 248
+    .line 249
     const-wide/16 v0, 0x0
 
-    .line 249
     .line 250
+    .line 251
     invoke-static {v2, v3, v0, v1}, Lcom/facebook/proxygen/RequestStats;->readLongMeta(Ljava/util/Map;Ljava/lang/String;J)J
 
-    .line 251
     .line 252
     .line 253
+    .line 254
     move-result-wide v147
 
-    .line 254
+    .line 255
     const-string/jumbo v3, "request creation time based of system clock"
 
-    .line 255
     .line 256
     .line 257
+    .line 258
     invoke-static {v2, v3, v0, v1}, Lcom/facebook/proxygen/RequestStats;->readLongMeta(Ljava/util/Map;Ljava/lang/String;J)J
 
-    .line 258
     .line 259
     .line 260
+    .line 261
     move-result-wide v149
 
-    .line 261
+    .line 262
     const-string/jumbo v0, "first_byte_flushed"
 
-    .line 262
     .line 263
     .line 264
+    .line 265
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 265
     .line 266
     .line 267
-    move-result v0
-
     .line 268
-    int-to-long v0, v0
+    move-result v0
 
     .line 269
-    move-wide/from16 v33, v0
-
-    .line 270
-    .line 271
-    const-string/jumbo v0, "last_byte_flushed"
-
-    .line 272
-    .line 273
-    .line 274
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
-
-    .line 275
-    .line 276
-    .line 277
-    move-result v0
-
-    .line 278
     int-to-long v0, v0
 
+    .line 270
+    move-wide/from16 v33, v0
+
+    .line 271
+    .line 272
+    const-string/jumbo v0, "last_byte_flushed"
+
+    .line 273
+    .line 274
+    .line 275
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
+
+    .line 276
+    .line 277
+    .line 278
+    move-result v0
+
     .line 279
-    move-wide/from16 v29, v0
+    int-to-long v0, v0
 
     .line 280
+    move-wide/from16 v29, v0
+
     .line 281
+    .line 282
     const-string/jumbo v0, "status_code"
 
-    .line 282
     .line 283
     .line 284
+    .line 285
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 285
     .line 286
     .line 287
+    .line 288
     move-result v156
 
-    .line 288
+    .line 289
     const-string/jumbo v0, "http_stream_id"
 
-    .line 289
     .line 290
     .line 291
+    .line 292
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 292
     .line 293
     .line 294
+    .line 295
     move-result v157
 
-    .line 295
+    .line 296
     :cond_0
     :goto_1
     add-int/lit8 v12, v12, 0x1
 
-    .line 296
     .line 297
+    .line 298
     goto/16 :goto_0
 
-    .line 298
     .line 299
+    .line 300
     :cond_1
     const-string v1, "PostConnect"
 
-    .line 300
     .line 301
+    .line 302
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 302
     .line 303
     .line 304
+    .line 305
     move-result v1
 
-    .line 305
+    .line 306
     const-string/jumbo v5, "server_address"
 
-    .line 306
     .line 307
     .line 308
+    .line 309
     if-eqz v1, :cond_2
 
-    .line 309
     .line 310
+    .line 311
     const-string/jumbo v0, "new_session"
 
-    .line 311
     .line 312
     .line 313
+    .line 314
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readBooleanMeta(Ljava/util/Map;Ljava/lang/String;Z)Z
 
-    .line 314
     .line 315
     .line 316
+    .line 317
     move-result v88
 
-    .line 317
+    .line 318
     :goto_2
     invoke-static {v2, v5, v9}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 318
     .line 319
     .line 320
+    .line 321
     move-result-object v9
 
-    .line 321
+    .line 322
     goto :goto_1
 
-    .line 322
+    .line 323
     :cond_2
     const-string v1, "HTTPResponseBodyRead"
 
-    .line 323
     .line 324
+    .line 325
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 325
     .line 326
     .line 327
+    .line 328
     move-result v1
 
-    .line 328
+    .line 329
     if-eqz v1, :cond_3
 
-    .line 329
     .line 330
+    .line 331
     iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
 
-    .line 331
     .line 332
+    .line 333
     move-wide/from16 v19, v0
 
-    .line 333
     .line 334
+    .line 335
     iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
 
-    .line 335
     .line 336
+    .line 337
     sub-long v19, v19, v0
 
-    .line 337
     .line 338
+    .line 339
     const-string/jumbo v0, "response_server_quality"
 
-    .line 339
     .line 340
     .line 341
+    .line 342
     invoke-static {v2, v0, v7}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 342
     .line 343
     .line 344
+    .line 345
     move-result-object v125
 
-    .line 345
+    .line 346
     const-string/jumbo v0, "server_rtt"
 
-    .line 346
     .line 347
     .line 348
+    .line 349
     const/4 v3, -0x1
 
-    .line 349
+    .line 350
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 350
     .line 351
     .line 352
-    move-result v0
-
     .line 353
-    int-to-long v0, v0
+    move-result v0
 
     .line 354
-    move-wide/from16 v45, v0
+    int-to-long v0, v0
 
     .line 355
+    move-wide/from16 v45, v0
+
     .line 356
+    .line 357
     const-string/jumbo v0, "server_rtx"
 
-    .line 357
     .line 358
     .line 359
+    .line 360
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 360
     .line 361
     .line 362
-    move-result v0
-
     .line 363
-    int-to-long v0, v0
+    move-result v0
 
     .line 364
-    move-wide/from16 v39, v0
+    int-to-long v0, v0
 
     .line 365
+    move-wide/from16 v39, v0
+
     .line 366
+    .line 367
     const-string/jumbo v0, "server_cwnd"
 
-    .line 367
     .line 368
     .line 369
+    .line 370
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 370
     .line 371
     .line 372
-    move-result v0
-
     .line 373
-    int-to-long v0, v0
+    move-result v0
 
     .line 374
-    move-wide/from16 v37, v0
+    int-to-long v0, v0
 
     .line 375
+    move-wide/from16 v37, v0
+
     .line 376
+    .line 377
     const-string/jumbo v0, "server_mss"
 
-    .line 377
     .line 378
     .line 379
+    .line 380
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 380
     .line 381
     .line 382
-    move-result v0
-
     .line 383
-    int-to-long v0, v0
+    move-result v0
 
     .line 384
-    move-wide/from16 v35, v0
+    int-to-long v0, v0
 
     .line 385
+    move-wide/from16 v35, v0
+
     .line 386
+    .line 387
     const-string/jumbo v0, "server_tbw"
 
-    .line 387
     .line 388
     .line 389
+    .line 390
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 390
     .line 391
     .line 392
-    move-result v0
-
     .line 393
-    int-to-long v0, v0
+    move-result v0
 
     .line 394
-    move-wide/from16 v31, v0
+    int-to-long v0, v0
 
     .line 395
+    move-wide/from16 v31, v0
+
     .line 396
+    .line 397
     const-string/jumbo v0, "server_total_packets"
 
-    .line 397
     .line 398
     .line 399
+    .line 400
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 400
     .line 401
     .line 402
-    move-result v0
-
     .line 403
-    int-to-long v0, v0
+    move-result v0
 
     .line 404
-    move-wide/from16 v27, v0
+    int-to-long v0, v0
 
     .line 405
+    move-wide/from16 v27, v0
+
     .line 406
+    .line 407
     const-string/jumbo v0, "server_total_packets_lost"
 
-    .line 407
     .line 408
     .line 409
+    .line 410
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 410
     .line 411
     .line 412
-    move-result v0
-
     .line 413
-    int-to-long v0, v0
+    move-result v0
 
     .line 414
-    move-wide/from16 v25, v0
+    int-to-long v0, v0
 
     .line 415
+    move-wide/from16 v25, v0
+
     .line 416
+    .line 417
     const-string/jumbo v0, "upstream_latency"
 
-    .line 417
     .line 418
     .line 419
+    .line 420
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 420
     .line 421
     .line 422
-    move-result v0
-
     .line 423
-    int-to-long v0, v0
+    move-result v0
 
     .line 424
-    move-wide/from16 v23, v0
-
-    .line 425
-    .line 426
-    const-string/jumbo v0, "upload_latency"
-
-    .line 427
-    .line 428
-    .line 429
-    invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
-
-    .line 430
-    .line 431
-    .line 432
-    move-result v0
-
-    .line 433
     int-to-long v0, v0
 
+    .line 425
+    move-wide/from16 v23, v0
+
+    .line 426
+    .line 427
+    const-string/jumbo v0, "upload_latency"
+
+    .line 428
+    .line 429
+    .line 430
+    invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
+
+    .line 431
+    .line 432
+    .line 433
+    move-result v0
+
     .line 434
-    move-wide/from16 v21, v0
+    int-to-long v0, v0
 
     .line 435
+    move-wide/from16 v21, v0
+
     .line 436
+    .line 437
     goto/16 :goto_1
 
-    .line 437
     .line 438
+    .line 439
     :cond_3
     const-string v1, "TCPConnect"
 
-    .line 439
     .line 440
+    .line 441
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 441
     .line 442
     .line 443
+    .line 444
     move-result v1
 
-    .line 444
+    .line 445
     if-eqz v1, :cond_4
 
-    .line 445
     .line 446
+    .line 447
     iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
 
-    .line 447
     .line 448
+    .line 449
     move-wide/from16 v72, v0
 
-    .line 449
     .line 450
+    .line 451
     iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
 
-    .line 451
     .line 452
+    .line 453
     move-wide/from16 v66, v0
 
-    .line 453
     .line 454
+    .line 455
     invoke-static {v2, v5, v9}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 455
     .line 456
     .line 457
+    .line 458
     move-result-object v9
 
-    .line 458
+    .line 459
     iget-wide v10, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
 
-    .line 459
     .line 460
+    .line 461
     iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
 
-    .line 461
     .line 462
+    .line 463
     sub-long/2addr v10, v0
 
-    .line 463
+    .line 464
     goto/16 :goto_1
 
-    .line 464
     .line 465
+    .line 466
     :cond_4
     const-string v1, "QuicConnect"
 
-    .line 466
     .line 467
+    .line 468
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 468
     .line 469
     .line 470
+    .line 471
     move-result v1
 
-    .line 471
+    .line 472
     if-eqz v1, :cond_5
 
-    .line 472
     .line 473
+    .line 474
     iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
 
-    .line 474
     .line 475
+    .line 476
     move-wide/from16 v70, v0
 
-    .line 476
     .line 477
+    .line 478
     iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
 
-    .line 478
     .line 479
+    .line 480
     move-wide/from16 v63, v0
 
-    .line 480
     .line 481
+    .line 482
     invoke-static {v2, v5, v9}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 482
     .line 483
     .line 484
+    .line 485
     move-result-object v9
 
-    .line 485
-    const-string v1, "error_description"
-
     .line 486
-    .line 487
-    move-object/from16 v0, v75
+    const-string/jumbo v1, "error_description"
 
+    .line 487
     .line 488
     .line 489
-    invoke-static {v2, v1, v0}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-object/from16 v0, v75
 
     .line 490
     .line 491
+    invoke-static {v2, v1, v0}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     .line 492
+    .line 493
+    .line 494
     move-result-object v75
 
-    .line 493
-    goto/16 :goto_1
-
-    .line 494
     .line 495
-    :cond_5
-    const-string v1, "PreConnect"
+    goto/16 :goto_1
 
     .line 496
     .line 497
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_5
+    const-string v1, "PreConnect"
 
     .line 498
     .line 499
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 500
+    .line 501
+    .line 502
     move-result v6
 
-    .line 501
+    .line 503
     const-string/jumbo v1, "host_name"
 
-    .line 502
-    .line 503
     .line 504
-    if-eqz v6, :cond_6
-
     .line 505
     .line 506
-    invoke-static {v2, v1, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v6, :cond_6
 
     .line 507
     .line 508
+    invoke-static {v2, v1, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     .line 509
+    .line 510
+    .line 511
     move-result-object v8
 
-    .line 510
-    goto/16 :goto_1
-
-    .line 511
     .line 512
-    :cond_6
-    const-string v6, "ConnSelector"
+    goto/16 :goto_1
 
     .line 513
     .line 514
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_6
+    const-string v6, "ConnSelector"
 
     .line 515
     .line 516
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 517
+    .line 518
+    .line 519
     move-result v6
 
-    .line 518
-    if-eqz v6, :cond_7
-
-    .line 519
     .line 520
-    const-string/jumbo v1, "quic_result"
+    if-eqz v6, :cond_7
 
     .line 521
     .line 522
-    .line 523
-    move-object/from16 v0, v76
+    const-string/jumbo v1, "quic_result"
 
+    .line 523
     .line 524
     .line 525
-    invoke-static {v2, v1, v0}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-object/from16 v0, v76
 
     .line 526
     .line 527
+    invoke-static {v2, v1, v0}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     .line 528
+    .line 529
+    .line 530
     move-result-object v76
 
-    .line 529
-    goto/16 :goto_1
-
-    .line 530
     .line 531
-    :cond_7
-    const-string v6, "DNSCache"
+    goto/16 :goto_1
 
     .line 532
     .line 533
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_7
+    const-string v6, "DNSCache"
 
     .line 534
     .line 535
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 536
+    .line 537
+    .line 538
     move-result v6
 
-    .line 537
-    if-eqz v6, :cond_8
-
-    .line 538
     .line 539
-    invoke-static {v2, v1, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v6, :cond_8
 
     .line 540
     .line 541
+    invoke-static {v2, v1, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     .line 542
+    .line 543
+    .line 544
     move-result-object v8
 
-    .line 543
-    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
-
-    .line 544
     .line 545
-    move-wide/from16 v68, v0
+    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
 
     .line 546
     .line 547
-    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
+    move-wide/from16 v68, v0
 
     .line 548
     .line 549
-    move-wide/from16 v61, v0
+    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
 
     .line 550
     .line 551
-    const-string v0, "dns_cache_hit"
+    move-wide/from16 v61, v0
 
     .line 552
     .line 553
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readBooleanMeta(Ljava/util/Map;Ljava/lang/String;Z)Z
+    const-string/jumbo v0, "dns_cache_hit"
 
     .line 554
     .line 555
     .line 556
-    move-result v91
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readBooleanMeta(Ljava/util/Map;Ljava/lang/String;Z)Z
 
     .line 557
-    goto/16 :goto_1
-
     .line 558
     .line 559
+    move-result v91
+
+    .line 560
+    goto/16 :goto_1
+
+    .line 561
+    .line 562
     :cond_8
     const-string v6, "DNSResolution"
 
-    .line 560
-    .line 561
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 562
     .line 563
     .line 564
-    move-result v6
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 565
-    if-eqz v6, :cond_9
-
     .line 566
     .line 567
-    invoke-static {v2, v1, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result v6
 
     .line 568
+    if-eqz v6, :cond_9
+
     .line 569
     .line 570
-    move-result-object v8
+    invoke-static {v2, v1, v8}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 571
-    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
-
     .line 572
     .line 573
-    move-wide/from16 v17, v0
+    move-result-object v8
 
     .line 574
+    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
+
     .line 575
+    .line 576
+    move-wide/from16 v17, v0
+
+    .line 577
+    .line 578
     iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
 
-    .line 576
-    .line 577
+    .line 579
+    .line 580
     sub-long v17, v17, v0
 
-    .line 578
-    .line 579
+    .line 581
+    .line 582
     goto/16 :goto_2
 
-    .line 580
-    .line 581
+    .line 583
+    .line 584
     :cond_9
     const-string v1, "TLSSetup"
 
-    .line 582
-    .line 583
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 584
     .line 585
     .line 586
-    move-result v1
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 587
-    if-eqz v1, :cond_a
-
     .line 588
     .line 589
-    iget-wide v15, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
+    move-result v1
 
     .line 590
+    if-eqz v1, :cond_a
+
     .line 591
-    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
-
     .line 592
-    .line 593
-    sub-long/2addr v15, v0
+    iget-wide v15, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
 
+    .line 593
     .line 594
-    goto/16 :goto_2
+    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
 
     .line 595
     .line 596
-    :cond_a
-    const-string v1, "decompression_filter"
+    sub-long/2addr v15, v0
 
     .line 597
-    .line 598
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_2
 
+    .line 598
     .line 599
+    :cond_a
+    const-string/jumbo v1, "decompression_filter"
+
     .line 600
     .line 601
-    move-result v1
-
     .line 602
-    if-eqz v1, :cond_c
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 603
     .line 604
+    .line 605
+    move-result v1
+
+    .line 606
+    if-eqz v1, :cond_c
+
+    .line 607
+    .line 608
     const-string/jumbo v0, "response_body_size"
 
-    .line 605
-    .line 606
-    .line 607
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
-
-    .line 608
     .line 609
     .line 610
-    move-result v99
-
     .line 611
-    const-string/jumbo v0, "response_body_compressed_size"
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
     .line 612
     .line 613
     .line 614
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
+    move-result v99
 
     .line 615
+    const-string/jumbo v0, "response_body_compressed_size"
+
     .line 616
     .line 617
-    move-result v1
-
     .line 618
-    if-eqz v1, :cond_0
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
     .line 619
     .line 620
-    if-eqz v65, :cond_b
-
     .line 621
+    move-result v1
+
     .line 622
-    move/from16 v0, v65
+    if-eqz v1, :cond_0
 
     .line 623
     .line 624
-    if-ge v1, v0, :cond_0
+    if-eqz v65, :cond_b
 
     .line 625
     .line 626
-    :cond_b
-    move/from16 v65, v1
+    move/from16 v0, v65
 
     .line 627
     .line 628
-    goto/16 :goto_1
+    if-ge v1, v0, :cond_0
 
     .line 629
     .line 630
-    :cond_c
-    const-string v1, "PostTransactionTransportInfo"
+    :cond_b
+    move/from16 v65, v1
 
     .line 631
     .line 632
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_1
 
     .line 633
     .line 634
-    .line 635
-    move-result v1
+    :cond_c
+    const-string v1, "PostTransactionTransportInfo"
 
+    .line 635
     .line 636
-    if-eqz v1, :cond_d
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 637
     .line 638
+    .line 639
+    move-result v1
+
+    .line 640
+    if-eqz v1, :cond_d
+
+    .line 641
+    .line 642
     const-string/jumbo v0, "rtt"
 
-    .line 639
-    .line 640
-    .line 641
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
-
-    .line 642
     .line 643
     .line 644
-    move-result v0
-
     .line 645
-    int-to-long v0, v0
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
     .line 646
-    move-wide/from16 v59, v0
-
     .line 647
     .line 648
-    const-string/jumbo v0, "rtt_variance"
+    move-result v0
 
     .line 649
-    .line 650
-    .line 651
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
+    int-to-long v0, v0
 
+    .line 650
+    move-wide/from16 v59, v0
+
+    .line 651
     .line 652
+    const-string/jumbo v0, "rtt_variance"
+
     .line 653
     .line 654
-    move-result v0
-
     .line 655
-    int-to-long v0, v0
-
-    .line 656
-    move-wide/from16 v49, v0
-
-    .line 657
-    .line 658
-    const-string/jumbo v0, "stream_loss_count"
-
-    .line 659
-    .line 660
-    .line 661
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 662
-    .line 663
-    .line 664
+    .line 656
+    .line 657
+    .line 658
     move-result v0
 
-    .line 665
+    .line 659
     int-to-long v0, v0
 
-    .line 666
-    move-wide/from16 v41, v0
+    .line 660
+    move-wide/from16 v49, v0
 
+    .line 661
+    .line 662
+    const-string/jumbo v0, "stream_loss_count"
+
+    .line 663
+    .line 664
+    .line 665
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
+
+    .line 666
     .line 667
     .line 668
-    const-string/jumbo v3, "stream_bytes_sent"
+    move-result v0
 
     .line 669
+    int-to-long v0, v0
+
     .line 670
+    move-wide/from16 v41, v0
+
     .line 671
-    const-wide/16 v0, -0x1
-
     .line 672
-    .line 673
-    invoke-static {v2, v3, v0, v1}, Lcom/facebook/proxygen/RequestStats;->readLongMeta(Ljava/util/Map;Ljava/lang/String;J)J
+    const-string/jumbo v3, "stream_bytes_sent"
 
+    .line 673
     .line 674
     .line 675
-    .line 676
-    move-result-wide v113
+    const-wide/16 v0, -0x1
 
+    .line 676
     .line 677
-    const-string/jumbo v3, "stream_bytes_received"
+    invoke-static {v2, v3, v0, v1}, Lcom/facebook/proxygen/RequestStats;->readLongMeta(Ljava/util/Map;Ljava/lang/String;J)J
 
     .line 678
     .line 679
     .line 680
-    invoke-static {v2, v3, v0, v1}, Lcom/facebook/proxygen/RequestStats;->readLongMeta(Ljava/util/Map;Ljava/lang/String;J)J
+    move-result-wide v113
 
     .line 681
+    const-string/jumbo v3, "stream_bytes_received"
+
     .line 682
     .line 683
-    move-result-wide v115
-
     .line 684
-    goto/16 :goto_1
+    invoke-static {v2, v3, v0, v1}, Lcom/facebook/proxygen/RequestStats;->readLongMeta(Ljava/util/Map;Ljava/lang/String;J)J
 
     .line 685
     .line 686
-    :cond_d
-    const-string v1, "TotalRequest"
-
     .line 687
+    move-result-wide v115
+
     .line 688
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_1
 
     .line 689
     .line 690
-    .line 691
-    move-result v1
+    :cond_d
+    const-string v1, "TotalRequest"
 
+    .line 691
     .line 692
-    if-eqz v1, :cond_e
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 693
     .line 694
+    .line 695
+    move-result v1
+
+    .line 696
+    if-eqz v1, :cond_e
+
+    .line 697
+    .line 698
     const-string/jumbo v0, "ttfb"
 
-    .line 695
-    .line 696
-    .line 697
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
-
-    .line 698
     .line 699
     .line 700
-    move-result v0
-
     .line 701
-    int-to-long v0, v0
-
-    .line 702
-    move-wide/from16 v57, v0
-
-    .line 703
-    .line 704
-    const-string/jumbo v0, "ttlb"
-
-    .line 705
-    .line 706
-    .line 707
     invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 708
-    .line 709
-    .line 710
+    .line 702
+    .line 703
+    .line 704
     move-result v0
 
-    .line 711
+    .line 705
     int-to-long v0, v0
 
-    .line 712
-    move-wide/from16 v47, v0
+    .line 706
+    move-wide/from16 v57, v0
 
+    .line 707
+    .line 708
+    const-string/jumbo v0, "ttlb"
+
+    .line 709
+    .line 710
+    .line 711
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
+
+    .line 712
     .line 713
     .line 714
-    goto/16 :goto_1
+    move-result v0
 
     .line 715
+    int-to-long v0, v0
+
     .line 716
-    :cond_e
-    const-string v1, "TotalConnect"
+    move-wide/from16 v47, v0
 
     .line 717
     .line 718
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_1
 
     .line 719
     .line 720
-    .line 721
-    move-result v1
+    :cond_e
+    const-string v1, "TotalConnect"
 
+    .line 721
     .line 722
-    if-eqz v1, :cond_f
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 723
     .line 724
-    iget-wide v13, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
-
     .line 725
+    move-result v1
+
     .line 726
-    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
+    if-eqz v1, :cond_f
 
     .line 727
     .line 728
-    sub-long/2addr v13, v0
+    iget-wide v13, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
 
     .line 729
+    .line 730
+    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
+
+    .line 731
+    .line 732
+    sub-long/2addr v13, v0
+
+    .line 733
     goto/16 :goto_1
 
-    .line 730
-    .line 731
+    .line 734
+    .line 735
     :cond_f
     const-string/jumbo v1, "push"
 
-    .line 732
-    .line 733
-    .line 734
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 735
     .line 736
     .line 737
-    move-result v1
-
     .line 738
-    if-eqz v1, :cond_10
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 739
     .line 740
+    .line 741
+    move-result v1
+
+    .line 742
+    if-eqz v1, :cond_10
+
+    .line 743
+    .line 744
     const-string/jumbo v0, "is_push_request"
 
-    .line 741
-    .line 742
-    .line 743
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readBooleanMeta(Ljava/util/Map;Ljava/lang/String;Z)Z
-
-    .line 744
     .line 745
     .line 746
-    move-result v151
-
     .line 747
-    goto/16 :goto_1
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readBooleanMeta(Ljava/util/Map;Ljava/lang/String;Z)Z
 
     .line 748
     .line 749
-    :cond_10
-    const-string v1, "TransportInfo"
-
     .line 750
+    move-result v151
+
     .line 751
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_1
 
     .line 752
     .line 753
-    .line 754
-    move-result v1
+    :cond_10
+    const-string v1, "TransportInfo"
 
+    .line 754
     .line 755
-    if-eqz v1, :cond_11
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 756
     .line 757
-    const-string/jumbo v0, "total_packets"
-
     .line 758
-    .line 759
-    .line 760
-    const/4 v3, -0x1
+    move-result v1
 
+    .line 759
+    if-eqz v1, :cond_11
+
+    .line 760
     .line 761
-    invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
+    const-string/jumbo v0, "total_packets"
 
     .line 762
     .line 763
     .line 764
-    move-result v0
+    const/4 v3, -0x1
 
     .line 765
-    int-to-long v0, v0
-
-    .line 766
-    move-wide/from16 v55, v0
-
-    .line 767
-    .line 768
-    const-string/jumbo v0, "total_packets_lost"
-
-    .line 769
-    .line 770
-    .line 771
     invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
 
-    .line 772
-    .line 773
-    .line 774
+    .line 766
+    .line 767
+    .line 768
     move-result v0
 
-    .line 775
+    .line 769
     int-to-long v0, v0
 
-    .line 776
-    move-wide/from16 v43, v0
+    .line 770
+    move-wide/from16 v55, v0
 
+    .line 771
+    .line 772
+    const-string/jumbo v0, "total_packets_lost"
+
+    .line 773
+    .line 774
+    .line 775
+    invoke-static {v2, v0, v3}, Lcom/facebook/proxygen/RequestStats;->readIntMeta(Ljava/util/Map;Ljava/lang/String;I)I
+
+    .line 776
     .line 777
     .line 778
-    goto/16 :goto_1
+    move-result v0
 
     .line 779
+    int-to-long v0, v0
+
     .line 780
-    :cond_11
-    const-string v1, "cert_verification"
+    move-wide/from16 v43, v0
 
     .line 781
     .line 782
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_1
 
     .line 783
     .line 784
+    :cond_11
+    const-string/jumbo v1, "cert_verification"
+
     .line 785
-    move-result v1
-
     .line 786
-    if-eqz v1, :cond_12
-
     .line 787
-    .line 788
-    const-string/jumbo v1, "verification_impl"
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 788
     .line 789
     .line 790
+    move-result v1
+
     .line 791
-    move-object/from16 v0, v77
+    if-eqz v1, :cond_12
 
     .line 792
     .line 793
-    invoke-static {v2, v1, v0}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v1, "verification_impl"
 
     .line 794
     .line 795
     .line 796
-    move-result-object v77
+    move-object/from16 v0, v77
 
     .line 797
-    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
-
     .line 798
-    .line 799
-    move-wide/from16 v53, v0
+    invoke-static {v2, v1, v0}, Lcom/facebook/proxygen/RequestStats;->readStrMeta(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 799
     .line 800
     .line 801
-    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
+    move-result-object v77
 
     .line 802
+    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mStart:J
+
     .line 803
+    .line 804
+    move-wide/from16 v53, v0
+
+    .line 805
+    .line 806
+    iget-wide v0, v3, Lcom/facebook/proxygen/TraceEvent;->mEnd:J
+
+    .line 807
+    .line 808
     move-wide/from16 v51, v0
 
-    .line 804
-    .line 805
+    .line 809
+    .line 810
     goto/16 :goto_1
 
-    .line 806
-    .line 807
+    .line 811
+    .line 812
     :cond_12
     const-string v1, "ConnInfo"
 
-    .line 808
-    .line 809
+    .line 813
+    .line 814
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 810
-    .line 811
-    .line 812
-    move-result v0
-
-    .line 813
-    if-eqz v0, :cond_0
-
-    .line 814
     .line 815
-    const-string/jumbo v0, "is_connection_preconnected"
-
     .line 816
     .line 817
+    move-result v0
+
     .line 818
-    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readBooleanMeta(Ljava/util/Map;Ljava/lang/String;Z)Z
+    if-eqz v0, :cond_0
 
     .line 819
     .line 820
+    const-string/jumbo v0, "is_connection_preconnected"
+
     .line 821
+    .line 822
+    .line 823
+    invoke-static {v2, v0, v4}, Lcom/facebook/proxygen/RequestStats;->readBooleanMeta(Ljava/util/Map;Ljava/lang/String;Z)Z
+
+    .line 824
+    .line 825
+    .line 826
     move-result v158
 
-    .line 822
+    .line 827
     goto/16 :goto_1
 
-    .line 823
-    .line 824
+    .line 828
+    .line 829
     :cond_13
     new-instance v126, Lcom/facebook/proxygen/ConnQuality;
 
-    .line 825
-    .line 826
+    .line 830
+    .line 831
     move-wide/from16 v127, v45
 
-    .line 827
-    .line 828
+    .line 832
+    .line 833
     move-wide/from16 v129, v39
 
-    .line 829
-    .line 830
+    .line 834
+    .line 835
     move-wide/from16 v131, v37
 
-    .line 831
-    .line 832
+    .line 836
+    .line 837
     move-wide/from16 v133, v35
 
-    .line 833
-    .line 834
+    .line 838
+    .line 839
     move-wide/from16 v135, v31
 
-    .line 835
-    .line 836
+    .line 840
+    .line 841
     move-wide/from16 v137, v27
 
-    .line 837
-    .line 838
+    .line 842
+    .line 843
     move-wide/from16 v139, v25
 
-    .line 839
-    .line 840
+    .line 844
+    .line 845
     move-wide/from16 v141, v23
 
-    .line 841
-    .line 842
-    move-wide/from16 v143, v21
-
-    .line 843
-    .line 844
-    invoke-direct/range {v126 .. v144}, Lcom/facebook/proxygen/ConnQuality;-><init>(JJJJJJJJJ)V
-
-    .line 845
     .line 846
     .line 847
-    new-instance v78, Lcom/facebook/proxygen/HTTPFlowStats;
+    move-wide/from16 v143, v21
 
     .line 848
     .line 849
-    move-object/from16 v85, v77
+    invoke-direct/range {v126 .. v144}, Lcom/facebook/proxygen/ConnQuality;-><init>(JJJJJJJJJ)V
 
     .line 850
     .line 851
+    .line 852
+    new-instance v78, Lcom/facebook/proxygen/HTTPFlowStats;
+
+    .line 853
+    .line 854
+    move-object/from16 v85, v77
+
+    .line 855
+    .line 856
     move/from16 v92, v4
 
-    .line 852
-    .line 853
+    .line 857
+    .line 858
     move/from16 v100, v65
 
-    .line 854
-    .line 855
+    .line 859
+    .line 860
     move-wide/from16 v101, v17
 
-    .line 856
-    .line 857
+    .line 861
+    .line 862
     move-wide/from16 v103, v10
 
-    .line 858
-    .line 859
+    .line 863
+    .line 864
     move-wide/from16 v105, v15
 
-    .line 860
-    .line 861
+    .line 865
+    .line 866
     move-wide/from16 v107, v59
 
-    .line 862
-    .line 863
+    .line 867
+    .line 868
     move-wide/from16 v109, v49
 
-    .line 864
-    .line 865
+    .line 869
+    .line 870
     move-wide/from16 v111, v41
 
-    .line 866
-    .line 867
+    .line 871
+    .line 872
     move-wide/from16 v117, v57
 
-    .line 868
-    .line 869
+    .line 873
+    .line 874
     move-wide/from16 v119, v47
 
-    .line 870
-    .line 871
+    .line 875
+    .line 876
     move-wide/from16 v121, v13
 
-    .line 872
-    .line 873
+    .line 877
+    .line 878
     move-wide/from16 v123, v19
 
-    .line 874
-    .line 875
+    .line 879
+    .line 880
     move-wide/from16 v127, v55
 
-    .line 876
-    .line 877
+    .line 881
+    .line 882
     move-wide/from16 v129, v43
 
-    .line 878
-    .line 879
+    .line 883
+    .line 884
     move-wide/from16 v131, v68
 
-    .line 880
-    .line 881
+    .line 885
+    .line 886
     move-wide/from16 v133, v61
 
-    .line 882
-    .line 883
+    .line 887
+    .line 888
     move-wide/from16 v135, v72
 
-    .line 884
-    .line 885
+    .line 889
+    .line 890
     move-wide/from16 v137, v66
 
-    .line 886
-    .line 887
+    .line 891
+    .line 892
     move-wide/from16 v139, v70
 
-    .line 888
-    .line 889
+    .line 893
+    .line 894
     move-wide/from16 v141, v63
 
-    .line 890
-    .line 891
+    .line 895
+    .line 896
     move-wide/from16 v143, v53
 
-    .line 892
-    .line 893
+    .line 897
+    .line 898
     move-wide/from16 v145, v51
 
-    .line 894
-    .line 895
+    .line 899
+    .line 900
     move-wide/from16 v152, v33
 
-    .line 896
-    .line 897
+    .line 901
+    .line 902
     move-wide/from16 v154, v29
 
-    .line 898
-    .line 899
+    .line 903
+    .line 904
     move-object/from16 v159, v76
 
-    .line 900
-    .line 901
+    .line 905
+    .line 906
     move-object/from16 v160, v75
 
-    .line 902
-    .line 903
+    .line 907
+    .line 908
     move-object/from16 v79, v8
 
-    .line 904
-    .line 905
-    move-object/from16 v80, v9
-
-    .line 906
-    .line 907
-    invoke-direct/range {v78 .. v160}, Lcom/facebook/proxygen/HTTPFlowStats;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZZZZZZLjava/lang/String;IIIIIIIJJJJJJJJJJJJLjava/lang/String;Lcom/facebook/proxygen/ConnQuality;JJJJJJJJJJJJZJJIIZLjava/lang/String;Ljava/lang/String;)V
-
-    .line 908
     .line 909
     .line 910
+    move-object/from16 v80, v9
+
+    .line 911
+    .line 912
+    invoke-direct/range {v78 .. v160}, Lcom/facebook/proxygen/HTTPFlowStats;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZZZZZZLjava/lang/String;IIIIIIIJJJJJJJJJJJJLjava/lang/String;Lcom/facebook/proxygen/ConnQuality;JJJJJJJJJJJJZJJIIZLjava/lang/String;Ljava/lang/String;)V
+
+    .line 913
+    .line 914
+    .line 915
     return-object v78
 .end method
 
@@ -2726,7 +2741,7 @@
     .locals 14
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
@@ -2842,7 +2857,7 @@
 
     .line 55
     .line 56
-    invoke-static {v0, v11}, LX/0Yh;->A0i(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
+    invoke-static {v0, v11}, LX/0X6;->A14(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
 
     .line 57
     .line 58
@@ -2958,118 +2973,122 @@
     .line 113
     .line 114
     :cond_3
-    const-string v10, "error_description"
+    const-string/jumbo v10, "error_description"
 
     .line 115
     .line 116
+    .line 117
     invoke-interface {v4, v10}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 117
     .line 118
     .line 119
-    move-result v0
-
     .line 120
-    if-eqz v0, :cond_4
+    move-result v0
 
     .line 121
+    if-eqz v0, :cond_4
+
     .line 122
-    const-string v3, "error_stage"
-
     .line 123
-    .line 124
-    invoke-virtual {v8, v3}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+    const-string/jumbo v3, "error_stage"
 
+    .line 124
     .line 125
     .line 126
+    invoke-virtual {v8, v3}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+
     .line 127
+    .line 128
+    .line 129
     move-result v0
 
-    .line 128
-    if-eqz v0, :cond_5
-
-    .line 129
     .line 130
-    invoke-static {v3, v8}, LX/0Yi;->A0o(Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/String;
+    if-eqz v0, :cond_5
 
     .line 131
     .line 132
+    invoke-static {v3, v8}, LX/0X6;->A0t(Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/String;
+
     .line 133
+    .line 134
+    .line 135
     move-result-object v2
 
-    .line 134
-    const-string v1, ";"
-
-    .line 135
     .line 136
-    iget-object v0, v9, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
+    const-string v1, ";"
 
     .line 137
     .line 138
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, v9, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
 
     .line 139
     .line 140
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
     .line 141
+    .line 142
+    .line 143
     move-result-object v0
 
-    .line 142
+    .line 144
     :goto_2
     invoke-virtual {v8, v3, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 143
-    .line 144
     .line 145
-    invoke-static {v4, v8, v10}, Lcom/facebook/proxygen/RequestStats;->joinMetaFields(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
-
     .line 146
     .line 147
-    .line 148
-    const-string v0, "error_direction"
+    invoke-static {v4, v8, v10}, Lcom/facebook/proxygen/RequestStats;->joinMetaFields(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
 
+    .line 148
     .line 149
     .line 150
-    invoke-static {v4, v8, v0}, Lcom/facebook/proxygen/RequestStats;->joinMetaFields(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
+    const-string/jumbo v0, "error_direction"
 
     .line 151
     .line 152
     .line 153
-    const-string/jumbo v0, "proxygen_error"
+    invoke-static {v4, v8, v0}, Lcom/facebook/proxygen/RequestStats;->joinMetaFields(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
 
     .line 154
     .line 155
     .line 156
-    invoke-static {v4, v8, v0}, Lcom/facebook/proxygen/RequestStats;->joinMetaFields(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
+    const-string/jumbo v0, "proxygen_error"
 
     .line 157
     .line 158
     .line 159
-    const-string v0, "codec_error"
+    invoke-static {v4, v8, v0}, Lcom/facebook/proxygen/RequestStats;->joinMetaFields(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
 
     .line 160
     .line 161
-    invoke-static {v4, v8, v0}, Lcom/facebook/proxygen/RequestStats;->joinMetaFields(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
-
     .line 162
+    const-string/jumbo v0, "codec_error"
+
     .line 163
     .line 164
+    .line 165
+    invoke-static {v4, v8, v0}, Lcom/facebook/proxygen/RequestStats;->joinMetaFields(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V
+
+    .line 166
+    .line 167
+    .line 168
     :cond_4
     add-int/lit8 v5, v5, 0x1
 
-    .line 165
-    .line 166
+    .line 169
+    .line 170
     goto/16 :goto_0
 
-    .line 167
-    .line 168
+    .line 171
+    .line 172
     :cond_5
     iget-object v0, v9, Lcom/facebook/proxygen/TraceEvent;->mName:Ljava/lang/String;
 
-    .line 169
-    .line 170
+    .line 173
+    .line 174
     goto :goto_2
 
-    .line 171
+    .line 175
     :cond_6
     return-object v8
 .end method

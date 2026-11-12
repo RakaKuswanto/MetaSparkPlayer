@@ -1,25 +1,37 @@
-.class public final LX/3vO;
-.super LX/3u5;
+.class public final LX/3Vo;
+.super LX/3VF;
 .source ""
+
+# interfaces
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(LX/3vN;)V
+.method public constructor <init>()V
     .locals 1
 
+    .line 268435456
+    const v0, 0x1bd43219
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-direct {p0, v0}, LX/3VF;-><init>(I)V
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
+
     .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0, p1}, LX/3VF;-><init>(I)V
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
-    .line 4
-    invoke-direct {p0}, LX/3u5;-><init>()V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method

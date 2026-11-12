@@ -7,8 +7,8 @@
 
 
 # virtual methods
-.method public abstract AsK(Landroid/os/Bundle;)V
+.method public abstract Ar5(Landroid/os/Bundle;)V
 .end method
 
-.method public abstract AsL(Landroid/os/Bundle;)V
+.method public abstract Ar6(Landroid/os/Bundle;)V
 .end method

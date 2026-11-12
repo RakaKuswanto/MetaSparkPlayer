@@ -4,21 +4,21 @@
 
 
 # instance fields
-.field public A00:LX/0Na;
+.field public A00:LX/0RP;
 
-.field public A01:LX/0Na;
+.field public A01:LX/0RP;
 
-.field public A02:LX/1qJ;
+.field public A02:LX/1of;
 
-.field public A03:LX/2Ua;
+.field public A03:LX/3GU;
 
-.field public A04:LX/2Ua;
+.field public A04:LX/3GU;
 
-.field public A05:LX/2Ua;
+.field public A05:LX/3GU;
 
-.field public final A06:LX/0Na;
+.field public final A06:LX/0RP;
 
-.field public final A07:LX/0ZF;
+.field public final A07:LX/302;
 
 .field public final A08:Lcom/facebook/video/settings/VideoAutoplaySettingsServerMigrationHelper;
 
@@ -33,11 +33,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AdU:I
+    sget v0, LX/2I6;->AVH:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -53,7 +53,7 @@
 
     .line 12
     .line 13
-    invoke-static {}, LX/1z6;->A0M()LX/0ZF;
+    invoke-static {}, LX/2I6;->A0X()LX/302;
 
     .line 14
     .line 15
@@ -61,15 +61,15 @@
     move-result-object v0
 
     .line 17
-    iput-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A07:LX/0ZF;
+    iput-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A07:LX/302;
 
     .line 18
     .line 19
-    sget v0, LX/2eq;->AdV:I
+    sget v0, LX/2I6;->AVI:I
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 22
     .line 23
@@ -77,18 +77,18 @@
     move-result-object v0
 
     .line 25
-    iput-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A06:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A06:LX/0RP;
 
     .line 26
     .line 27
     return-void
 .end method
 
-.method public static A00(Landroid/preference/Preference;Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
+.method public static A02(Landroid/preference/Preference;Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
     .locals 3
 
     .line 0
-    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/2Ua;
+    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/3GU;
 
     .line 1
     .line 2
@@ -107,7 +107,7 @@
     .line 7
     .line 8
     .line 9
-    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/2Ua;
+    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/3GU;
 
     .line 10
     .line 11
@@ -117,7 +117,7 @@
     .line 12
     .line 13
     .line 14
-    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/2Ua;
+    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/3GU;
 
     .line 15
     .line 16
@@ -132,7 +132,7 @@
 
     .line 20
     :cond_1
-    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/2Ua;
+    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/3GU;
 
     .line 21
     .line 22
@@ -145,7 +145,7 @@
     .line 25
     .line 26
     .line 27
-    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/2Ua;
+    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/3GU;
 
     .line 28
     .line 29
@@ -153,7 +153,7 @@
 
     .line 30
     :cond_2
-    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/2Ua;
+    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/3GU;
 
     .line 31
     .line 32
@@ -166,7 +166,7 @@
     .line 35
     .line 36
     .line 37
-    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/2Ua;
+    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/3GU;
 
     .line 38
     .line 39
@@ -175,7 +175,7 @@
     .line 40
     .line 41
     .line 42
-    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/2Ua;
+    iget-object v0, p1, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/3GU;
 
     .line 43
     .line 44
@@ -184,15 +184,15 @@
 
 
 # virtual methods
-.method public final A01(LX/1qJ;)V
+.method public final A03(LX/1of;)V
     .locals 4
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 3
     .line 4
@@ -200,11 +200,11 @@
     move-result-object v1
 
     .line 6
-    iget-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A06:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A06:LX/0RP;
 
     .line 7
     .line 8
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 9
     .line 10
@@ -212,11 +212,11 @@
     move-result-object v0
 
     .line 12
-    check-cast v0, LX/0ty;
+    check-cast v0, LX/0jY;
 
     .line 13
     .line 14
-    invoke-static {v1, v0, p1}, LX/1qI;->A02(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/0ty;LX/1qJ;)V
+    invoke-static {v1, v0, p1}, LX/1od;->A02(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/0jY;LX/1of;)V
 
     .line 15
     .line 16
@@ -225,11 +225,11 @@
 
     .line 18
     .line 19
-    iget-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0RP;
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 22
     .line 23
@@ -245,7 +245,7 @@
     move-result-object v0
 
     .line 29
-    invoke-static {v0}, LX/1qJ;->valueOf(Ljava/lang/String;)LX/1qJ;
+    invoke-static {v0}, LX/1of;->valueOf(Ljava/lang/String;)LX/1of;
 
     .line 30
     .line 31
@@ -257,7 +257,7 @@
 
     .line 34
     .line 35
-    invoke-virtual {v3, v2, v1, v0}, Lcom/facebook/video/settings/VideoAutoplaySettingsServerMigrationHelper;->A02(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/1qJ;Ljava/lang/String;)V
+    invoke-static {v2, v3, v1, v0}, Lcom/facebook/video/settings/VideoAutoplaySettingsServerMigrationHelper;->A02(Lcom/facebook/prefs/shared/FbSharedPreferences;Lcom/facebook/video/settings/VideoAutoplaySettingsServerMigrationHelper;LX/1of;Ljava/lang/String;)V
 
     .line 36
     .line 37

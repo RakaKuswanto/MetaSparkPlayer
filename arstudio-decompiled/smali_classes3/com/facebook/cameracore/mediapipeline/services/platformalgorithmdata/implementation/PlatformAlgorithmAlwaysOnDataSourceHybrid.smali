@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5Jf;
+.field public static final Companion:LX/5Ao;
 
 
 # instance fields
@@ -21,16 +21,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5Jf;
+    new-instance v0, LX/5Ao;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5Jf;-><init>()V
+    invoke-direct {v0}, LX/5Ao;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmAlwaysOnDataSourceHybrid;->Companion:LX/5Jf;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmAlwaysOnDataSourceHybrid;->Companion:LX/5Ao;
 
     .line 6
     .line 7

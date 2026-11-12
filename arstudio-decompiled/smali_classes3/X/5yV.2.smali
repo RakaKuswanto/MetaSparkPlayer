@@ -2,25 +2,31 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5yq;
 
-# virtual methods
-.method public abstract AG0(I)Lcom/google/android/exoplayer2/Format;
-.end method
 
-.method public abstract AH1(I)I
-.end method
+# static fields
+.field public static final A00:LX/6Aw;
 
-.method public abstract AIt(LX/2ri;LX/5yU;JJJJJJJJJZZZ)J
-.end method
 
-.method public abstract ANB()Lcom/google/android/exoplayer2/source/TrackGroup;
-.end method
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
 
-.method public abstract AP7(I)I
-.end method
+    .line 0
+    new-instance v0, LX/6Aw;
 
-.method public abstract AP8(Lcom/google/android/exoplayer2/Format;)I
-.end method
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/6Aw;-><init>()V
 
-.method public abstract length()I
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/5yV;->A00:LX/6Aw;
+
+    .line 6
+    .line 7
+    return-void
 .end method

@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMessengerThreadThemeTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMessengerThreadThemeTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0x()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A12()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "COLOR_GRADIENT"
+    const-string v0, "AI_GENERATED_THEME"
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "IGD_CHANNEL_CUSTOMIZED_THEME"
+    const-string v0, "COLOR_GRADIENT"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "INTERACTIVE"
+    const-string v0, "IGD_CHANNEL_CUSTOMIZED_THEME"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "THEME"
+    const-string v0, "INTERACTIVE"
 
     .line 26
     .line 27
@@ -78,22 +78,33 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "THIRD_PARTY"
+    const-string v0, "THEME"
 
     .line 31
     .line 32
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 33
     .line 34
+    const/4 v1, 0x6
+
     .line 35
-    move-result-object v0
+    const-string v0, "THIRD_PARTY"
 
     .line 36
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerThreadThemeTypeSet;->A00:Ljava/util/Set;
-
     .line 37
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerThreadThemeTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 42
+    .line 43
     return-void
 .end method
 
@@ -109,11 +120,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerThreadThemeTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerThreadThemeTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

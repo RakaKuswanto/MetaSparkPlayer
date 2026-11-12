@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<X.4KI android:background="@color/fds_gray_30" android:layout_width="@dimen/browser_ad_image_max_width" android:layout_height="@dimen/arplayer_instructions_image_size"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
-    <X.41N android:layout_gravity="center" android:id="@id/browser_ad_image" android:layout_width="@dimen/browser_ad_image_max_width" android:layout_height="@dimen/arplayer_instructions_image_size" fb:actualImageScaleType="centerCrop" />
-</X.4KI>

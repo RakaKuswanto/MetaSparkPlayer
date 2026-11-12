@@ -1,84 +1,69 @@
-.class public final LX/4xm;
-.super LX/4xk;
+.class public final LX/4xM;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4zq;
+
+# instance fields
+.field public A00:Landroid/content/Context;
+
+.field public A01:Lcom/google/ar/core/dependencies/h;
+
+.field public final A02:Landroid/content/ServiceConnection;
+
+.field public final A03:Ljava/util/Queue;
+
+.field public volatile A04:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, LX/4xk;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
     return-void
 .end method
 
-
-# virtual methods
-.method public final A8O(Ljava/nio/ByteBuffer;I)V
+.method public constructor <init>([B)V
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
-    .line 4
-    invoke-static {p1, p2, v0}, LX/4zo;->A01(Ljava/nio/ByteBuffer;II)F
+    invoke-static {}, LX/434;->A1H()Ljava/util/ArrayDeque;
 
+    .line 4
     .line 5
     .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    iput v0, p0, LX/4xk;->A00:F
-
-    .line 9
-    .line 10
-    const/4 v0, 0x1
-
-    .line 11
-    invoke-static {p1, p2, v0}, LX/4zo;->A08(Ljava/nio/ByteBuffer;II)[I
-
-    .line 12
-    .line 13
-    .line 14
     move-result-object v0
 
-    .line 15
-    if-eqz v0, :cond_0
+    .line 7
+    iput-object v0, p0, LX/4xM;->A03:Ljava/util/Queue;
 
+    .line 8
+    .line 9
+    const/4 v0, 0x1
+
+    .line 10
+    iput v0, p0, LX/4xM;->A04:I
+
+    .line 11
+    .line 12
+    new-instance v0, LX/4xL;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, p0}, LX/4xL;-><init>(LX/4xM;)V
+
+    .line 15
     .line 16
     .line 17
-    iput-object v0, p0, LX/4xk;->A01:[I
+    iput-object v0, p0, LX/4xM;->A02:Landroid/content/ServiceConnection;
 
     .line 18
     .line 19
     return-void
-
-    .line 20
-    :cond_0
-    const-string v0, "bitmap indices cannot be null"
-
-    .line 21
-    .line 22
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    throw v0
 .end method

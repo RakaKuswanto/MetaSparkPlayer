@@ -1,180 +1,122 @@
-.class public final LX/3sX;
-.super LX/3vT;
+.class public final synthetic LX/3sX;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbHeroPlayerLogger$$ExternalSyntheticLambda0"
 
 
 # instance fields
-.field public final synthetic A00:LX/4lB;
-
-.field public final synthetic A01:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-.field public final synthetic A02:LX/3Wi;
-
-.field public final synthetic A03:Ljava/lang/String;
-
-.field public final synthetic A04:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final synthetic A05:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final synthetic A06:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic A00:LX/3qM;
 
 
 # direct methods
-.method public constructor <init>(LX/4lB;Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3Wi;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicReference;)V
+.method public synthetic constructor <init>(LX/3qM;)V
     .locals 0
 
-    .line 0
-    iput-object p5, p0, LX/3sX;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    iput-object p7, p0, LX/3sX;->A06:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, LX/3sX;->A00:LX/3qM;
 
-    .line 3
-    .line 4
-    iput-object p1, p0, LX/3sX;->A00:LX/4lB;
-
-    .line 5
-    .line 6
-    iput-object p6, p0, LX/3sX;->A05:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 7
-    .line 8
-    iput-object p3, p0, LX/3sX;->A02:LX/3Wi;
-
-    .line 9
-    .line 10
-    iput-object p4, p0, LX/3sX;->A03:Ljava/lang/String;
-
-    .line 11
-    .line 12
-    iput-object p2, p0, LX/3sX;->A01:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 13
-    .line 14
-    invoke-direct {p0}, LX/3vT;-><init>()V
-
-    .line 15
-    .line 16
-    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A0H(LX/0tw;)V
-    .locals 4
+.method public final run()V
+    .locals 8
 
     .line 0
-    sget v0, LX/2eq;->AZO:I
+    iget-object v7, p0, LX/3sX;->A00:LX/3qM;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iget-object v6, v7, LX/3qM;->A0c:LX/3jM;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v2
+    iget-object v0, v7, LX/3qM;->A0b:Lcom/facebook/video/engine/api/VideoPlayerParams;
 
+    .line 5
     .line 6
-    check-cast v2, LX/3vI;
+    iget-object v5, v0, Lcom/facebook/video/engine/api/VideoPlayerParams;->A0j:Ljava/lang/String;
 
     .line 7
     .line 8
-    iget-object v1, p0, LX/3sX;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v4, LX/6VM;->PLAYER_WARNING:LX/6VM;
 
     .line 9
     .line 10
-    const/4 v0, 0x1
+    sget-object v3, LX/3tH;->PLAYER_RELEASED_WHILE_PLAYING:LX/3tH;
 
     .line 11
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
     .line 12
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
     .line 13
     .line 14
-    invoke-virtual {v2}, LX/3vI;->A05()Z
-
     .line 15
-    .line 16
-    .line 17
-    move-result v0
+    move-result-object v2
 
+    .line 16
+    const-string v1, "Video was released while playing. playerOrigin="
+
+    .line 17
     .line 18
-    if-eqz v0, :cond_0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 19
     .line 20
-    iget-object v0, p0, LX/3sX;->A06:Ljava/util/concurrent/atomic/AtomicReference;
-
     .line 21
+    iget-object v0, v7, LX/3qM;->A0H:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
+
     .line 22
-    iget-object v2, p0, LX/3sX;->A00:LX/4lB;
-
     .line 23
-    .line 24
-    sget-object v1, LX/3qu;->PLAYING:LX/3qu;
+    invoke-static {v0, v2}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 24
     .line 25
     .line 26
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 27
-    .line 28
-    .line 29
     move-result-object v0
 
+    .line 27
+    invoke-virtual {v6, v3, v4, v5, v0}, LX/3jM;->A0l(LX/3tH;LX/6VM;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 28
+    .line 29
     .line 30
-    if-ne v1, v0, :cond_0
+    iget-object v2, v7, LX/3qM;->A0f:LX/3nJ;
 
     .line 31
     .line 32
-    const/4 v0, 0x0
+    invoke-static {v1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 33
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
     .line 34
     .line 35
+    move-result-object v1
+
     .line 36
-    move-result-object v0
+    iget-object v0, v7, LX/3qM;->A0H:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
 
     .line 37
-    invoke-virtual {v2, v0}, LX/4lB;->A00(Ljava/lang/Object;)V
-
     .line 38
+    invoke-static {v0, v1}, LX/001;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 39
     .line 40
-    iget-object v0, p0, LX/3sX;->A05:Ljava/util/concurrent/atomic/AtomicBoolean;
-
     .line 41
+    move-result-object v0
+
     .line 42
-    const/4 v3, 0x0
+    invoke-virtual {v2, v3, v4, v5, v0}, LX/3nJ;->A04(LX/3tH;LX/6VM;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 43
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
     .line 44
     .line 45
-    .line 46
-    iget-object v2, p0, LX/3sX;->A02:LX/3Wi;
-
-    .line 47
-    .line 48
-    iget-object v1, p0, LX/3sX;->A03:Ljava/lang/String;
-
-    .line 49
-    .line 50
-    iget-object v0, p0, LX/3sX;->A01:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
-
-    .line 51
-    .line 52
-    invoke-static {v0, v2, v1, v3}, LX/3rT;->A00(Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3Wi;Ljava/lang/String;Z)V
-
-    .line 53
-    .line 54
-    .line 55
-    :cond_0
     return-void
 .end method

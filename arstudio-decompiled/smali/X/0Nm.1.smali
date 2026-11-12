@@ -3,36 +3,16 @@
 .source ""
 
 # interfaces
-.implements LX/0QB;
+.implements LX/0U8;
 
 
-# static fields
-.field public static final A00:LX/0QB;
+# instance fields
+.field public final A00:Ljava/util/Set;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/0Nm;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/0Nm;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/0Nm;->A00:LX/0QB;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,83 +20,81 @@
     .line 1
     .line 2
     .line 3
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/0Nm;->A00:Ljava/util/Set;
+
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final AE9()I
-    .locals 1
-
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final AED()J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public final AJj()I
-    .locals 1
-
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final AJl()J
-    .locals 2
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public final AMs()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, ""
-
-    return-object v0
-.end method
-
-.method public final ANO()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final AOO()Ljava/util/Iterator;
-    .locals 1
+.method public final Amb(Ljava/util/Map;)Z
+    .locals 3
 
     .line 0
-    sget-object v0, LX/0Q8;->A00:LX/0Q8;
+    iget-object v0, p0, LX/0Nm;->A00:Ljava/util/Set;
 
     .line 1
     .line 2
-    return-object v0
-.end method
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-.method public final AS5()Ljava/util/Iterator;
-    .locals 1
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
 
-    .line 0
-    sget-object v0, LX/0Q8;->A00:LX/0Q8;
+    .line 6
+    const/4 v1, 0x1
 
-    .line 1
-    .line 2
-    return-object v0
-.end method
+    .line 7
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-.method public final close()V
-    .locals 0
+    .line 8
+    .line 9
+    .line 10
+    move-result v0
 
-    return-void
+    .line 11
+    if-eqz v0, :cond_0
+
+    .line 12
+    .line 13
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    check-cast v0, LX/0U8;
+
+    .line 18
+    .line 19
+    invoke-interface {v0, p1}, LX/0U8;->Amb(Ljava/util/Map;)Z
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    and-int/2addr v1, v0
+
+    .line 24
+    goto :goto_0
+
+    .line 25
+    :cond_0
+    return v1
 .end method

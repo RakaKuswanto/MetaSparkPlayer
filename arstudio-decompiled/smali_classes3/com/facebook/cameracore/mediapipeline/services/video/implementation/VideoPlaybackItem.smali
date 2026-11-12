@@ -38,7 +38,7 @@
 
 .field public mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-.field public mTexture:LX/554;
+.field public mTexture:LX/5a7;
 
 .field public final mVideoFrame:Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoFrame;
 
@@ -111,7 +111,7 @@
 
     .line 30
     .line 31
-    invoke-static {v1}, LX/0Yj;->A0j(I)Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {v1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 32
     .line 33
@@ -123,7 +123,7 @@
 
     .line 36
     .line 37
-    invoke-static {v1}, LX/0Yi;->A16(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v1}, LX/0X7;->A0l(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 38
     .line 39
@@ -297,22 +297,22 @@
     return-object p1
 .end method
 
-.method public static synthetic access$900(Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;)LX/554;
+.method public static synthetic access$900(Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;)LX/5a7;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/554;
+    iget-object p0, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/5a7;
 
     .line 1
     .line 2
     return-object p0
 .end method
 
-.method public static synthetic access$902(Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;LX/554;)LX/554;
+.method public static synthetic access$902(Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;LX/5a7;)LX/5a7;
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/554;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/5a7;
 
     .line 1
     .line 2
@@ -464,7 +464,7 @@
 
     .line 12
     .line 13
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/554;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/5a7;
 
     .line 14
     .line 15
@@ -515,15 +515,15 @@
 
     .line 38
     .line 39
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/554;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/5a7;
 
     .line 40
     .line 41
-    iget v2, v0, LX/554;->A00:I
+    iget v2, v0, LX/5a7;->A00:I
 
     .line 42
     .line 43
-    iget v3, v0, LX/554;->A01:I
+    iget v3, v0, LX/5a7;->A01:I
 
     .line 44
     .line 45
@@ -531,15 +531,15 @@
 
     .line 46
     .line 47
-    iget-object v0, v0, LX/554;->A02:LX/551;
+    iget-object v0, v0, LX/5a7;->A02:LX/5a6;
 
     .line 48
     .line 49
-    iget v5, v0, LX/551;->A01:I
+    iget v5, v0, LX/5a6;->A01:I
 
     .line 50
     .line 51
-    iget v6, v0, LX/551;->A00:I
+    iget v6, v0, LX/5a6;->A00:I
 
     .line 52
     .line 53
@@ -706,11 +706,11 @@
 
     .line 7
     .line 8
-    new-instance v1, LX/552;
+    new-instance v1, LX/5Zo;
 
     .line 9
     .line 10
-    invoke-direct {v1, v0}, LX/552;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, LX/5Zo;-><init>(Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -720,7 +720,7 @@
     .line 14
     .line 15
     .line 16
-    iput v0, v1, LX/552;->A01:I
+    iput v0, v1, LX/5Zo;->A01:I
 
     .line 17
     .line 18
@@ -736,7 +736,7 @@
     move-result v0
 
     .line 24
-    iput v0, v1, LX/552;->A02:I
+    iput v0, v1, LX/5Zo;->A02:I
 
     .line 25
     .line 26
@@ -752,24 +752,24 @@
     move-result v0
 
     .line 32
-    iput v0, v1, LX/552;->A00:I
+    iput v0, v1, LX/5Zo;->A00:I
 
     .line 33
     .line 34
-    new-instance v0, LX/554;
+    new-instance v0, LX/5a7;
 
     .line 35
     .line 36
-    invoke-direct {v0, v1}, LX/554;-><init>(LX/552;)V
+    invoke-direct {v0, v1}, LX/5a7;-><init>(LX/5Zo;)V
 
     .line 37
     .line 38
     .line 39
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/554;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/5a7;
 
     .line 40
     .line 41
-    iget v1, v0, LX/554;->A00:I
+    iget v1, v0, LX/5a7;->A00:I
 
     .line 42
     .line 43

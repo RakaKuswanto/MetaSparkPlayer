@@ -1,308 +1,76 @@
-.class public final LX/3lM;
-.super Ljava/lang/Object;
+.class public final LX/3lm;
+.super LX/0Ny;
 .source ""
-
-# interfaces
-.implements LX/22Y;
-
-
-# instance fields
-.field public final A00:LX/22Y;
-
-.field public final A01:LX/3n5;
 
 
 # direct methods
-.method public constructor <init>(LX/22Y;LX/3n5;)V
-    .locals 0
+.method public constructor <init>(JZ)V
+    .locals 5
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v4, 0x0
 
     .line 1
+    invoke-direct {p0, p1, p2, v4}, LX/0Ny;-><init>(JZ)V
+
     .line 2
     .line 3
-    iput-object p1, p0, LX/3lM;->A00:LX/22Y;
-
     .line 4
-    .line 5
-    iput-object p2, p0, LX/3lM;->A01:LX/3n5;
+    if-eqz p3, :cond_0
 
+    .line 5
     .line 6
+    iget-object v3, p0, LX/0Ny;->A00:[Ljavax/net/ssl/X509TrustManager;
+
     .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AFg()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3lM;->A00:LX/22Y;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/22R;->AFg()Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final AOm()Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3lM;->A00:LX/22Y;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/22Y;->AOm()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final AR0()Z
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3lM;->A00:LX/22Y;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/22R;->AR0()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final ATM()V
-    .locals 7
-
-    .line 0
-    iget-object v0, p0, LX/3lM;->A00:LX/22Y;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/22R;->ATM()V
-
-    .line 3
-    .line 4
-    .line 5
-    iget-object v4, p0, LX/3lM;->A01:LX/3n5;
-
-    .line 6
-    .line 7
-    invoke-static {}, LX/3m8;->A00()J
-
     .line 8
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
     .line 9
     .line 10
-    move-result-wide v2
+    const/16 v0, 0x11
 
     .line 11
-    sget-wide v0, LX/3m8;->A00:J
-
     .line 12
-    .line 13
-    div-long/2addr v2, v0
+    aget-object v1, v3, v4
 
+    .line 13
     .line 14
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    if-lt v2, v0, :cond_1
 
     .line 15
     .line 16
-    .line 17
-    move-result-object v6
+    check-cast v1, LX/0Nz;
 
+    .line 17
     .line 18
-    invoke-static {}, LX/3m8;->A00()J
+    new-instance v0, LX/3ll;
 
     .line 19
     .line 20
+    invoke-direct {v0, v1}, LX/3ll;-><init>(LX/0Nz;)V
+
     .line 21
-    move-result-wide v2
-
     .line 22
-    sget-wide v0, LX/3m8;->A01:J
-
     .line 23
-    .line 24
-    div-long/2addr v2, v0
+    :goto_0
+    aput-object v0, v3, v4
 
+    .line 24
     .line 25
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    :cond_0
+    return-void
 
     .line 26
+    :cond_1
+    new-instance v0, LX/3la;
+
     .line 27
     .line 28
-    move-result-object v5
+    invoke-direct {v0, v1}, LX/3la;-><init>(Ljavax/net/ssl/X509TrustManager;)V
 
     .line 29
-    iget-object v4, v4, LX/3n5;->A00:Ljava/util/ArrayList;
-
     .line 30
     .line 31
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
-
-    .line 32
-    .line 33
-    .line 34
-    move-result v3
-
-    .line 35
-    const/4 v2, 0x0
-
-    .line 36
-    :goto_0
-    if-ge v2, v3, :cond_3
-
-    .line 37
-    .line 38
-    invoke-virtual {v4, v2}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v1
-
-    .line 42
-    check-cast v1, LX/3nM;
-
-    .line 43
-    .line 44
-    instance-of v0, v1, LX/3nJ;
-
-    .line 45
-    .line 46
-    if-eqz v0, :cond_2
-
-    .line 47
-    .line 48
-    iget-object v1, v1, LX/3nM;->A00:Ljava/io/File;
-
-    .line 49
-    .line 50
-    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    .line 51
-    .line 52
-    .line 53
-    move-result-object v0
-
-    .line 54
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 55
-    .line 56
-    .line 57
-    move-result v0
-
-    .line 58
-    :goto_1
-    if-nez v0, :cond_1
-
-    .line 59
-    .line 60
-    :cond_0
-    invoke-static {v1}, LX/3lN;->A00(Ljava/io/File;)V
-
-    .line 61
-    .line 62
-    .line 63
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    .line 64
-    .line 65
     goto :goto_0
-
-    .line 66
-    :cond_2
-    instance-of v0, v1, LX/3nI;
-
-    .line 67
-    .line 68
-    iget-object v1, v1, LX/3nM;->A00:Ljava/io/File;
-
-    .line 69
-    .line 70
-    if-eqz v0, :cond_0
-
-    .line 71
-    .line 72
-    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    .line 73
-    .line 74
-    .line 75
-    move-result-object v0
-
-    .line 76
-    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 77
-    .line 78
-    .line 79
-    move-result v0
-
-    .line 80
-    goto :goto_1
-
-    .line 81
-    :cond_3
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->clear()V
-
-    .line 82
-    .line 83
-    .line 84
-    return-void
-.end method
-
-.method public final Are(Ljava/io/Writer;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3lM;->A00:LX/22Y;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/22R;->Are(Ljava/io/Writer;)V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final unlock()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/3lM;->A00:LX/22Y;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/22Y;->unlock()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
 .end method

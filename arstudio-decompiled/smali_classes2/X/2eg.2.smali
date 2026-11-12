@@ -4,27 +4,23 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final A01:Landroid/content/Context;
+.field public final A01:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final A02:LX/0Na;
+.field public final A02:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final A03:LX/0Na;
+.field public final A03:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final A04:LX/0Na;
+.field public final A04:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final A05:LX/0Na;
+.field public final A05:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final A06:LX/2ek;
-
-.field public final A07:LX/2ed;
-
-.field public final A08:LX/28I;
+.field public final A06:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
@@ -33,34 +29,34 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A5B:I
-
-    .line 4
-    .line 5
     const/4 v1, 0x0
 
-    .line 6
-    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    .line 4
+    invoke-static {v1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 5
+    .line 6
     .line 7
-    .line 8
-    .line 9
     move-result-object v0
 
+    .line 8
+    iput-object v0, p0, LX/2eg;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 9
     .line 10
-    check-cast v0, Landroid/content/Context;
+    invoke-static {v1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 11
     .line 12
-    iput-object v0, p0, LX/2eg;->A01:Landroid/content/Context;
-
     .line 13
+    move-result-object v0
+
     .line 14
-    sget v0, LX/2eq;->A5b:I
+    iput-object v0, p0, LX/2eg;->A01:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 15
     .line 16
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 17
     .line 18
@@ -68,129 +64,57 @@
     move-result-object v0
 
     .line 20
-    check-cast v0, LX/28I;
+    iput-object v0, p0, LX/2eg;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 21
     .line 22
-    iput-object v0, p0, LX/2eg;->A08:LX/28I;
+    invoke-static {v1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 23
     .line 24
-    sget v0, LX/2eq;->AVr:I
-
     .line 25
+    move-result-object v0
+
     .line 26
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iput-object v0, p0, LX/2eg;->A06:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 27
     .line 28
+    invoke-static {v1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 29
+    .line 30
+    .line 31
     move-result-object v0
 
-    .line 30
-    check-cast v0, LX/2ed;
-
-    .line 31
     .line 32
-    iput-object v0, p0, LX/2eg;->A07:LX/2ed;
+    iput-object v0, p0, LX/2eg;->A04:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 33
     .line 34
-    sget v0, LX/2eq;->AWA:I
+    invoke-static {v1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 35
     .line 36
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
     .line 37
-    .line 38
-    .line 39
     move-result-object v0
 
+    .line 38
+    iput-object v0, p0, LX/2eg;->A05:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 39
     .line 40
-    check-cast v0, LX/2ek;
+    invoke-static {v1}, LX/0X7;->A0n(I)Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 41
     .line 42
-    iput-object v0, p0, LX/2eg;->A06:LX/2ek;
-
     .line 43
+    move-result-object v0
+
     .line 44
-    sget v0, LX/2eq;->AVy:I
+    iput-object v0, p0, LX/2eg;->A03:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 45
     .line 46
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
-    .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
-    iput-object v0, p0, LX/2eg;->A04:LX/0Na;
-
-    .line 51
-    .line 52
-    sget v0, LX/2eq;->AWB:I
-
-    .line 53
-    .line 54
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 55
-    .line 56
-    .line 57
-    move-result-object v0
-
-    .line 58
-    iput-object v0, p0, LX/2eg;->A03:LX/0Na;
-
-    .line 59
-    .line 60
-    sget v0, LX/2eq;->AWC:I
-
-    .line 61
-    .line 62
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    iput-object v0, p0, LX/2eg;->A02:LX/0Na;
-
-    .line 67
-    .line 68
-    sget v0, LX/2eq;->AW9:I
-
-    .line 69
-    .line 70
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 71
-    .line 72
-    .line 73
-    move-result-object v0
-
-    .line 74
-    iput-object v0, p0, LX/2eg;->A05:LX/0Na;
-
-    .line 75
-    .line 76
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 77
-    .line 78
-    .line 79
-    move-result-object v0
-
-    .line 80
-    iput-object v0, p0, LX/2eg;->A00:LX/1zG;
-
-    .line 81
-    .line 82
     return-void
 .end method

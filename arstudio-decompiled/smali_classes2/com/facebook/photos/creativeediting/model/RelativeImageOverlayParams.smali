@@ -51,25 +51,26 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    const/16 v0, 0x4b
 
     .line 1
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
-
     .line 2
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
-.method public constructor <init>(LX/18w;)V
+.method public constructor <init>(LX/1Sw;)V
     .locals 1
 
     .line 268435456
@@ -78,7 +79,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    iget-object v0, p1, LX/18w;->A05:Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
+    iget-object v0, p1, LX/1Sw;->A05:Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;
 
     .line 268435460
     .line 268435461
@@ -86,7 +87,7 @@
 
     .line 268435462
     .line 268435463
-    iget-boolean v0, p1, LX/18w;->A0B:Z
+    iget-boolean v0, p1, LX/1Sw;->A0B:Z
 
     .line 268435464
     .line 268435465
@@ -94,7 +95,7 @@
 
     .line 268435466
     .line 268435467
-    iget v0, p1, LX/18w;->A00:F
+    iget v0, p1, LX/1Sw;->A00:F
 
     .line 268435468
     .line 268435469
@@ -102,7 +103,7 @@
 
     .line 268435470
     .line 268435471
-    iget v0, p1, LX/18w;->A01:F
+    iget v0, p1, LX/1Sw;->A01:F
 
     .line 268435472
     .line 268435473
@@ -110,7 +111,7 @@
 
     .line 268435474
     .line 268435475
-    iget-object v0, p1, LX/18w;->A06:Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;
+    iget-object v0, p1, LX/1Sw;->A06:Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;
 
     .line 268435476
     .line 268435477
@@ -118,7 +119,7 @@
 
     .line 268435478
     .line 268435479
-    iget v0, p1, LX/18w;->A02:F
+    iget v0, p1, LX/1Sw;->A02:F
 
     .line 268435480
     .line 268435481
@@ -126,7 +127,7 @@
 
     .line 268435482
     .line 268435483
-    iget-object v0, p1, LX/18w;->A08:Ljava/lang/String;
+    iget-object v0, p1, LX/1Sw;->A08:Ljava/lang/String;
 
     .line 268435484
     .line 268435485
@@ -134,7 +135,7 @@
 
     .line 268435486
     .line 268435487
-    iget-object v0, p1, LX/18w;->A07:Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;
+    iget-object v0, p1, LX/1Sw;->A07:Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;
 
     .line 268435488
     .line 268435489
@@ -142,7 +143,7 @@
 
     .line 268435490
     .line 268435491
-    iget v0, p1, LX/18w;->A03:F
+    iget v0, p1, LX/1Sw;->A03:F
 
     .line 268435492
     .line 268435493
@@ -150,7 +151,7 @@
 
     .line 268435494
     .line 268435495
-    iget-object v0, p1, LX/18w;->A09:Ljava/lang/String;
+    iget-object v0, p1, LX/1Sw;->A09:Ljava/lang/String;
 
     .line 268435496
     .line 268435497
@@ -158,7 +159,7 @@
 
     .line 268435498
     .line 268435499
-    iget-object v0, p1, LX/18w;->A0A:Ljava/lang/String;
+    iget-object v0, p1, LX/1Sw;->A0A:Ljava/lang/String;
 
     .line 268435500
     .line 268435501
@@ -166,7 +167,7 @@
 
     .line 268435502
     .line 268435503
-    iget v0, p1, LX/18w;->A04:F
+    iget v0, p1, LX/1Sw;->A04:F
 
     .line 268435504
     .line 268435505
@@ -186,7 +187,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -206,7 +207,7 @@
     .line 11
     .line 12
     :goto_0
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 13
     .line 14
@@ -342,7 +343,7 @@
 
     .line 77
     .line 78
-    invoke-static {p1}, LX/0Yd;->A0I(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X1;->A0K(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 79
     .line 80
@@ -457,92 +458,6 @@
     goto :goto_0
 .end method
 
-.method public static A00(Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;II)I
-    .locals 2
-
-    .line 0
-    add-int/2addr p1, p2
-
-    .line 1
-    mul-int/lit8 v1, p1, 0x1f
-
-    .line 2
-    .line 3
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A03:F
-
-    .line 4
-    .line 5
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    .line 6
-    .line 7
-    .line 8
-    move-result v0
-
-    .line 9
-    add-int/2addr v1, v0
-
-    .line 10
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 11
-    .line 12
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A04:F
-
-    .line 13
-    .line 14
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
-
-    .line 18
-    add-int/2addr v1, v0
-
-    .line 19
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 20
-    .line 21
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A00:F
-
-    .line 22
-    .line 23
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    .line 24
-    .line 25
-    .line 26
-    move-result v0
-
-    .line 27
-    add-int/2addr v1, v0
-
-    .line 28
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 29
-    .line 30
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A02:F
-
-    .line 31
-    .line 32
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    .line 33
-    .line 34
-    .line 35
-    move-result v0
-
-    .line 36
-    add-int/2addr v1, v0
-
-    .line 37
-    return v1
-.end method
-
 
 # virtual methods
 .method public final describeContents()I
@@ -587,7 +502,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -651,7 +566,7 @@
 
     .line 45
     .line 46
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 47
     .line 48
@@ -687,7 +602,7 @@
 
     .line 63
     .line 64
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 65
     .line 66
@@ -707,7 +622,7 @@
 
     .line 73
     .line 74
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 75
     .line 76
@@ -743,7 +658,7 @@
 
     .line 91
     .line 92
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 93
     .line 94
@@ -763,7 +678,7 @@
 
     .line 101
     .line 102
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 103
     .line 104
@@ -807,7 +722,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -819,169 +734,176 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 11
-    move-result v1
-
     .line 12
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A00:F
-
     .line 13
+    move-result v0
+
     .line 14
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    add-int/2addr v1, v0
 
     .line 15
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A00:F
+
     .line 16
     .line 17
-    move-result v1
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 18
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A01:F
-
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    move-result v1
 
     .line 21
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A01:F
+
     .line 22
     .line 23
-    move-result v1
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 24
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A06:Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;
-
     .line 25
     .line 26
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v1
 
     .line 27
-    .line 28
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A06:Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;
 
+    .line 28
     .line 29
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 30
     .line 31
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 32
-    add-int/2addr v1, v0
-
     .line 33
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A02:F
-
     .line 34
+    move-result v0
+
     .line 35
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    add-int/2addr v1, v0
 
     .line 36
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A02:F
+
     .line 37
     .line 38
-    move-result v1
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 39
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A08:Ljava/lang/String;
-
     .line 40
     .line 41
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 42
-    .line 43
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 44
-    .line 45
-    .line 46
-    move-result v0
-
-    .line 47
-    add-int/2addr v1, v0
-
-    .line 48
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A07:Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;
-
-    .line 49
-    .line 50
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 51
-    .line 52
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 53
-    .line 54
-    .line 55
-    move-result v0
-
-    .line 56
-    add-int/2addr v1, v0
-
-    .line 57
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A03:F
-
-    .line 58
-    .line 59
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
-
-    .line 60
-    .line 61
-    .line 62
     move-result v1
 
-    .line 63
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A09:Ljava/lang/String;
+    .line 42
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A08:Ljava/lang/String;
 
+    .line 43
+    .line 44
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 45
+    .line 46
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 47
+    .line 48
+    .line 49
+    move-result v0
+
+    .line 50
+    add-int/2addr v1, v0
+
+    .line 51
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A07:Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;
+
+    .line 52
+    .line 53
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 54
+    .line 55
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 56
+    .line 57
+    .line 58
+    move-result v0
+
+    .line 59
+    add-int/2addr v1, v0
+
+    .line 60
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A03:F
+
+    .line 61
+    .line 62
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 63
     .line 64
     .line 65
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v1
 
     .line 66
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A09:Ljava/lang/String;
+
     .line 67
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 68
-    .line 69
-    .line 70
-    move-result v0
-
-    .line 71
-    add-int/2addr v1, v0
-
-    .line 72
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A0A:Ljava/lang/String;
-
-    .line 73
-    .line 74
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 75
-    .line 76
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    .line 69
+    .line 70
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
-    .line 77
-    .line 78
-    .line 79
+    .line 71
+    .line 72
+    .line 73
     move-result v0
 
-    .line 80
+    .line 74
     add-int/2addr v1, v0
 
+    .line 75
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A0A:Ljava/lang/String;
+
+    .line 76
+    .line 77
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 78
+    .line 79
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 80
     .line 81
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A04:F
-
     .line 82
-    .line 83
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
-
-    .line 84
-    .line 85
-    .line 86
     move-result v0
 
+    .line 83
+    add-int/2addr v1, v0
+
+    .line 84
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A04:F
+
+    .line 85
+    .line 86
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
     .line 87
+    .line 88
+    .line 89
+    move-result v0
+
+    .line 90
     return v0
 .end method
 
@@ -999,7 +921,7 @@
     const/4 v1, 0x1
 
     .line 4
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     .line 5
     .line 6
@@ -1040,7 +962,7 @@
 
     .line 25
     .line 26
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     .line 27
     .line 28
@@ -1063,7 +985,7 @@
 
     .line 37
     .line 38
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 39
     .line 40
@@ -1072,93 +994,74 @@
 
     .line 42
     .line 43
-    if-nez v0, :cond_0
+    invoke-static {p1, v0, p2}, LX/0X5;->A12(Landroid/os/Parcel;Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;I)V
 
     .line 44
     .line 45
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
-
     .line 46
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A03:F
+
     .line 47
     .line 48
-    :goto_2
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A03:F
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
     .line 49
     .line 50
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
     .line 51
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A09:Ljava/lang/String;
+
     .line 52
     .line 53
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A09:Ljava/lang/String;
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 54
     .line 55
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
-
     .line 56
+    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A0A:Ljava/lang/String;
+
     .line 57
     .line 58
-    iget-object v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A0A:Ljava/lang/String;
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 59
     .line 60
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
-
     .line 61
+    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A04:F
+
     .line 62
     .line 63
-    iget v0, p0, Lcom/facebook/photos/creativeediting/model/RelativeImageOverlayParams;->A04:F
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
     .line 64
     .line 65
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
     .line 66
-    .line 67
-    .line 68
     return-void
 
-    .line 69
+    .line 67
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 68
+    .line 69
     .line 70
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;->writeToParcel(Landroid/os/Parcel;I)V
+
     .line 71
     .line 72
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/inspiration/model/movableoverlay/timedelements/InspirationTimedElementParams;->writeToParcel(Landroid/os/Parcel;I)V
-
     .line 73
-    .line 74
-    .line 75
-    goto :goto_2
+    goto :goto_1
 
-    .line 76
+    .line 74
     :cond_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 75
+    .line 76
     .line 77
-    .line 78
-    .line 79
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/inspiration/model/movableoverlay/music/InspirationMusicStickerInfo;->writeToParcel(Landroid/os/Parcel;I)V
-
-    .line 80
-    .line 81
-    .line 82
-    goto :goto_1
-
-    .line 83
-    :cond_2
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 84
-    .line 85
-    .line 86
     invoke-virtual {v0, p1, p2}, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 87
-    .line 88
-    .line 89
+    .line 78
+    .line 79
+    .line 80
     goto :goto_0
 .end method

@@ -7,8 +7,8 @@
     <dimen name="abc_action_bar_elevation_material">4.0dip</dimen>
     <dimen name="abc_action_bar_overflow_padding_end_material">10.0dip</dimen>
     <dimen name="abc_action_bar_overflow_padding_start_material">6.0dip</dimen>
-    <dimen name="abc_action_bar_stacked_max_height">48.0dip</dimen>
     <dimen name="abc_action_bar_subtitle_top_margin_material">-3.0dip</dimen>
+    <dimen name="abc_action_button_min_height_material">48.0dip</dimen>
     <dimen name="abc_action_button_min_width_overflow_material">36.0dip</dimen>
     <dimen name="abc_alert_dialog_button_bar_height">48.0dip</dimen>
     <item type="dimen" name="abc_button_inset_horizontal_material">@dimen/abc_action_bar_elevation_material</item>
@@ -61,13 +61,10 @@
     <dimen name="autofill_missing_payment_info_button_top_margin">3.0dip</dimen>
     <dimen name="autofill_payment_autofill_save_bottom_description_text_margin_top">9.0dip</dimen>
     <dimen name="autofill_payment_autofill_save_description_text_padding_top">0.39999998dip</dimen>
-    <dimen name="autofill_payment_autofill_save_design_variant_action_button_top_margin">15.0dip</dimen>
-    <dimen name="autofill_payment_autofill_save_illustration_height">144.0dip</dimen>
-    <dimen name="autofill_payment_autofill_save_illustration_width">360.0dip</dimen>
     <dimen name="autofill_payment_autofill_save_subtitle2_line_spacing_extra">3.0sp</dimen>
     <dimen name="autofill_payment_autofill_save_subtitle2_text_size">17.0sp</dimen>
     <dimen name="autofill_payment_autofill_save_value_prop_line_spacing_extra">2.0sp</dimen>
-    <dimen name="awareness_footer_divider_height">1.0dip</dimen>
+    <dimen name="autofill_single_payment_entry_margin_top">15.0dip</dimen>
     <dimen name="bondi_bl_business_logo_fb_icon_background_margin_left">25.0dip</dimen>
     <dimen name="bondi_bl_business_logo_fb_icon_background_margin_top">27.0dip</dimen>
     <dimen name="bondi_bl_business_logo_icon_margin_right">17.0dip</dimen>
@@ -83,14 +80,12 @@
     <dimen name="bondi_personalized_footer_height">61.0dip</dimen>
     <dimen name="bondi_personalized_footer_left_relative_layout_right_margin">160.0dip</dimen>
     <dimen name="bondi_personalized_footer_padding_above_review_text">27.5dip</dimen>
-    <dimen name="bondi_personalized_footer_reward_actiavtion_bottom_text_padding">30.0dip</dimen>
     <dimen name="bondi_personalized_footer_right_buttons_width">134.0dip</dimen>
     <dimen name="bondi_security_icon_padding_right">5.0dip</dimen>
-    <dimen name="browser_ad_image_max_width">130.0dip</dimen>
     <dimen name="browser_bondi_height">52.0dip</dimen>
     <dimen name="browser_error_view_back_button_top_margin">22.0dip</dimen>
     <dimen name="browser_error_view_proceed_button_top_margin">11.0dip</dimen>
-    <dimen name="browser_lite_header_loading_screen_metadata_width">256.0dip</dimen>
+    <dimen name="browser_menu_divider_height">1.0dip</dimen>
     <dimen name="browser_progress_overlay_height">2.0px</dimen>
     <dimen name="browser_renderer_error_view_image_icon_dimen">112.0dip</dimen>
     <dimen name="call_extension_browser_bar_body_height">93.0dip</dimen>
@@ -123,6 +118,7 @@
     <dimen name="fbui_text_size_xxxlarge_1">24.0sp</dimen>
     <dimen name="fbui_text_size_xxxlarge_2">26.0sp</dimen>
     <dimen name="fbui_text_size_xxxlarge_5">32.0sp</dimen>
+    <dimen name="fds_tooltip_arrow_inset_threshold">30.0dip</dimen>
     <dimen name="fds_tooltip_max_width">288.0dip</dimen>
     <dimen name="feed_attachment_image_size">72.0dip</dimen>
     <dimen name="guide_nux_y_offset">-5.0dip</dimen>
@@ -134,33 +130,17 @@
     <dimen name="image_picker_thumbnail_height">300.0dip</dimen>
     <dimen name="large_unread_count_offset_x">13.0dip</dimen>
     <dimen name="large_unread_count_offset_y">-8.0dip</dimen>
-    <dimen name="ldp_chrome_business_info_section_height">62.0dip</dimen>
     <dimen name="material_clock_period_toggle_height">96.0dip</dimen>
-    <item type="dimen" name="material_emphasis_high_type">0.87</item>
+    <dimen name="material_clock_size">256.0dip</dimen>
     <dimen name="material_time_picker_minimum_screen_height">560.0dip</dimen>
     <dimen name="material_time_picker_minimum_screen_width">340.0dip</dimen>
     <item type="dimen" name="mds_alert_dialog_body_letter_spacing_material3">0.003</item>
     <item type="dimen" name="mds_alert_dialog_button_font_weight_material3">500.0</item>
     <item type="dimen" name="mds_alert_dialog_button_letter_spacing_material3">0.006</item>
-    <dimen name="mtrl_calendar_bottom_padding">0.0dip</dimen>
-    <dimen name="mtrl_calendar_day_corner">15.0dip</dimen>
     <dimen name="mtrl_calendar_day_height">32.0dip</dimen>
-    <dimen name="mtrl_calendar_day_horizontal_padding">3.0dip</dimen>
-    <dimen name="mtrl_calendar_day_vertical_padding">1.0dip</dimen>
     <dimen name="mtrl_calendar_day_width">36.0dip</dimen>
     <dimen name="mtrl_calendar_days_of_week_height">24.0dip</dimen>
-    <dimen name="mtrl_calendar_header_content_padding">12.0dip</dimen>
-    <dimen name="mtrl_calendar_header_height">120.0dip</dimen>
-    <dimen name="mtrl_calendar_header_height_fullscreen">128.0dip</dimen>
-    <dimen name="mtrl_calendar_header_toggle_margin_bottom">8.0dip</dimen>
-    <dimen name="mtrl_calendar_header_toggle_margin_top">24.0dip</dimen>
-    <dimen name="mtrl_calendar_landscape_header_width">0.0dip</dimen>
     <dimen name="mtrl_calendar_month_horizontal_padding">2.0dip</dimen>
-    <dimen name="mtrl_calendar_pre_l_text_clip_padding">8.0dip</dimen>
-    <dimen name="mtrl_calendar_selection_baseline_to_top_fullscreen">104.0dip</dimen>
-    <dimen name="mtrl_calendar_selection_text_baseline_to_top">100.0dip</dimen>
-    <dimen name="mtrl_calendar_title_baseline_to_top">28.0dip</dimen>
-    <dimen name="mtrl_calendar_title_baseline_to_top_fullscreen">68.0dip</dimen>
     <dimen name="mtrl_calendar_year_width">88.0dip</dimen>
     <item type="dimen" name="mtrl_high_ripple_default_alpha">0.0</item>
     <item type="dimen" name="mtrl_high_ripple_focused_alpha">0.24</item>
@@ -172,15 +152,11 @@
     <item type="dimen" name="mtrl_low_ripple_pressed_alpha">0.12</item>
     <item type="dimen" name="neue_login_title_text_size">@dimen/fbui_text_size_xxxlarge_5</item>
     <item type="dimen" name="neue_login_title_text_size_small">@dimen/fbui_text_size_large</item>
-    <dimen name="offer_browser_bar_card_save_icon_size">26.0dip</dimen>
-    <dimen name="offer_browser_bar_card_thumbnail_width">92.0dip</dimen>
     <item type="dimen" name="orca_reg_secondary_text_size">@dimen/abc_text_size_body_1_material</item>
     <item type="dimen" name="orca_reg_secondary_title_text_size">@dimen/fbui_text_size_xxxlarge_1</item>
     <item type="dimen" name="orca_reg_text_size_small">@dimen/abc_text_size_caption_material</item>
     <dimen name="safe_browsing_bullet_max_width">448.0dip</dimen>
     <dimen name="safe_browsing_warning_image_size">124.0dip</dimen>
-    <dimen name="shimmer_image_block_height">200.0dip</dimen>
-    <dimen name="shimmer_text_blocks_width">213.0dip</dimen>
     <dimen name="tab_bar_height">48.0dip</dimen>
     <dimen name="tabbar_dot_topright_badge_stroke_width">1.5dip</dimen>
     <dimen name="tooltip_vertical_padding">6.5dip</dimen>

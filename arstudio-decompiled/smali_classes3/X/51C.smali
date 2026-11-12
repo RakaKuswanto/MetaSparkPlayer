@@ -1,50 +1,21 @@
-.class public final LX/51C;
+.class public abstract LX/51C;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "zzb"
-
-
-# instance fields
-.field public final synthetic A00:LX/518;
+.field public static final A00:LX/51H;
 
 
 # direct methods
-.method public constructor <init>(LX/518;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/51C;->A00:LX/518;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/51C;->A00:LX/518;
+    new-instance v0, LX/51D;
 
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/518;->A01(LX/518;)V
+    invoke-direct {v0}, LX/51D;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
+    sput-object v0, LX/51C;->A00:LX/51H;
+
     return-void
 .end method

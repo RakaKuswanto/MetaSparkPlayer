@@ -1,28 +1,24 @@
 .class public final LX/3d9;
-.super LX/3dA;
+.super LX/3fH;
 .source ""
 
 
-# static fields
-.field public static final serialVersionUID:J = -0x38113ad9088fed7L
-
-
 # instance fields
-.field public option:Ljava/lang/String;
+.field public final synthetic A00:Lcom/facebook/arstudio/player/EffectInfoActivity;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/facebook/arstudio/player/EffectInfoActivity;I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/3dA;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, LX/3d9;->A00:Lcom/facebook/arstudio/player/EffectInfoActivity;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p2, p0, LX/3d9;->option:Ljava/lang/String;
+    invoke-direct {p0, p2}, LX/3fH;-><init>(I)V
 
+    .line 3
     .line 4
     .line 5
     return-void

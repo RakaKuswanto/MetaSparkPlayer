@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/graphservice/loggedoutservice/LoggedOutGraphQLServiceJNI;
-.super LX/1ta;
+.super LX/1wv;
 .source ""
 
 # interfaces
@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final Companion:LX/1td;
+.field public static final Companion:LX/1ww;
 
 
 # instance fields
@@ -19,16 +19,16 @@
     .locals 2
 
     .line 0
-    new-instance v0, LX/1td;
+    new-instance v0, LX/1ww;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1td;-><init>()V
+    invoke-direct {v0}, LX/1ww;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/graphservice/loggedoutservice/LoggedOutGraphQLServiceJNI;->Companion:LX/1td;
+    sput-object v0, Lcom/facebook/graphservice/loggedoutservice/LoggedOutGraphQLServiceJNI;->Companion:LX/1ww;
 
     .line 6
     .line 7
@@ -40,7 +40,7 @@
     const/4 v0, 0x0
 
     .line 11
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 12
     .line 13
@@ -48,21 +48,21 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/graphservice/asset/GraphServiceAsset;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/ScheduledExecutorService;Z)V
+.method public constructor <init>(Lcom/facebook/graphservice/asset/GraphServiceAsset;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 1
 
     .line 0
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2, p3}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-direct {p0}, LX/1ta;-><init>()V
+    invoke-direct {p0}, LX/1wv;-><init>()V
 
     .line 4
     .line 5
     .line 6
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/facebook/graphservice/loggedoutservice/LoggedOutGraphQLServiceJNI;->initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/ScheduledExecutorService;Z)Lcom/facebook/jni/HybridData;
+    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/graphservice/loggedoutservice/LoggedOutGraphQLServiceJNI;->initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/ScheduledExecutorService;)Lcom/facebook/jni/HybridData;
 
     .line 7
     .line 8
@@ -80,7 +80,7 @@
 .method private final native handleQueryJNI(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
 .end method
 
-.method private final native initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/ScheduledExecutorService;Z)Lcom/facebook/jni/HybridData;
+.method private final native initHybridData(Lcom/facebook/graphservice/asset/GraphServiceAsset;Lcom/facebook/tigon/iface/TigonServiceHolder;Ljava/util/concurrent/ScheduledExecutorService;)Lcom/facebook/jni/HybridData;
 .end method
 
 
@@ -89,16 +89,16 @@
     .locals 1
 
     .line 268435456
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0N(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2, p3}, LX/0X1;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 268435457
     .line 268435458
     .line 268435459
-    new-instance v0, LX/1th;
+    new-instance v0, LX/1yS;
 
     .line 268435460
     .line 268435461
-    invoke-direct {v0, p1, p2}, LX/1th;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;)V
+    invoke-direct {v0, p1, p2}, LX/1yS;-><init>(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;)V
 
     .line 268435462
     .line 268435463
@@ -118,12 +118,12 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0N(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2, p3}, LX/0X1;->A11(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0, p1, p2, p3}, LX/1ta;->handleQuery(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/facebook/graphservice/loggedoutservice/LoggedOutGraphQLServiceJNI;->handleQuery(Lcom/facebook/graphservice/interfaces/GraphQLQuery;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;
 
     .line 4
     .line 5

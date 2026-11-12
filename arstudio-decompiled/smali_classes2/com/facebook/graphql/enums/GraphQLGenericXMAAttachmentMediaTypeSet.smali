@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLGenericXMAAttachmentMediaTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLGenericXMAAttachmentMediaTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x9
+    const/16 v0, 0xc
 
     .line 1
     .line 2
@@ -23,7 +23,7 @@
     const/4 v1, 0x0
 
     .line 5
-    const-string v0, "INSTAGRAM_ICON"
+    const-string v0, "BLUR"
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "LIVE"
+    const-string v0, "INSTAGRAM_ICON"
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v1, 0x2
 
     .line 15
-    const-string v0, "MESSENGER_ICON"
+    const-string v0, "LIVE"
 
     .line 16
     .line 17
@@ -56,7 +56,7 @@
     const/4 v1, 0x3
 
     .line 20
-    const-string v0, "MULTI_PHOTO"
+    const-string v0, "MESSENGER_CHANNEL_IMAGE"
 
     .line 21
     .line 22
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "PHOTO"
+    const-string v0, "MESSENGER_ICON"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "REELS_ICON"
+    const-string v0, "MULTI_PHOTO"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "VIDEO"
+    const-string v0, "PHOTO"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "YOUTUBE_SHORTS"
+    const-string v0, "PILL"
 
     .line 41
     .line 42
@@ -112,22 +112,60 @@
 
     .line 45
     .line 46
-    const-string v0, "YOUTUBE_VIDEO"
+    const-string v0, "REELS_ICON"
 
     .line 47
     .line 48
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 49
     .line 50
-    .line 51
-    move-result-object v0
+    const/16 v1, 0x9
 
+    .line 51
     .line 52
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLGenericXMAAttachmentMediaTypeSet;->A00:Ljava/util/Set;
+    const-string v0, "VIDEO"
 
     .line 53
     .line 54
+    aput-object v0, v2, v1
+
+    .line 55
+    .line 56
+    const/16 v1, 0xa
+
+    .line 57
+    .line 58
+    const-string/jumbo v0, "YOUTUBE_SHORTS"
+
+    .line 59
+    .line 60
+    .line 61
+    aput-object v0, v2, v1
+
+    .line 62
+    .line 63
+    const/16 v1, 0xb
+
+    .line 64
+    .line 65
+    const-string/jumbo v0, "YOUTUBE_VIDEO"
+
+    .line 66
+    .line 67
+    .line 68
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v0
+
+    .line 72
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLGenericXMAAttachmentMediaTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 73
+    .line 74
     return-void
 .end method
 
@@ -143,11 +181,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLGenericXMAAttachmentMediaTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLGenericXMAAttachmentMediaTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

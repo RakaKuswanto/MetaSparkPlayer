@@ -1,16 +1,8 @@
-.class public final LX/519;
+.class public interface abstract LX/519;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/51B;
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract AL1()Lcom/google/android/gms/common/api/Status;
 .end method

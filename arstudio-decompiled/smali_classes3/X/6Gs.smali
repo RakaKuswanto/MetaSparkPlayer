@@ -1,77 +1,106 @@
-.class public final LX/6Gs;
-.super LX/6MV;
+.class public final LX/6GS;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultChoreographerWrapper_API16$3"
 
 
 # instance fields
-.field public A00:Ljava/lang/String;
+.field public final synthetic A00:Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;
 
-.field public A01:Z
+.field public final synthetic A01:LX/2vv;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;LX/2vv;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/6MV;-><init>()V
+    iput-object p1, p0, LX/6GS;->A00:Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;
 
     .line 1
     .line 2
+    iput-object p2, p0, LX/6GS;->A01:LX/2vv;
+
     .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final run()V
+    .locals 4
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iget-object v0, p0, LX/6GS;->A00:Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v2
+    iget-object v3, v0, Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;->A00:Landroid/view/Choreographer;
 
+    .line 3
     .line 4
-    iget-object v1, p0, LX/6Gs;->A00:Ljava/lang/String;
+    if-nez v3, :cond_0
 
     .line 5
     .line 6
-    const-string v0, "description"
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     .line 7
     .line 8
-    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 9
+    move-result-object v3
+
     .line 10
+    iput-object v3, v0, Lcom/facebook/ui/choreographer/DefaultChoreographerWrapper_API16;->A00:Landroid/view/Choreographer;
+
     .line 11
-    iget-boolean v0, p0, LX/6Gs;->A01:Z
-
     .line 12
-    .line 13
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    :cond_0
+    iget-object v2, p0, LX/6GS;->A01:LX/2vv;
 
+    .line 13
     .line 14
+    iget-object v1, v2, LX/2vv;->A00:Landroid/view/Choreographer$FrameCallback;
+
     .line 15
     .line 16
-    move-result-object v1
+    if-nez v1, :cond_1
 
     .line 17
-    const-string v0, "fatal"
-
     .line 18
+    const/4 v0, 0x6
+
     .line 19
-    invoke-static {v0, v1, v2}, LX/6MV;->A01(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/String;
+    new-instance v1, LX/6gZ;
 
     .line 20
     .line 21
-    .line 22
-    move-result-object v0
+    invoke-direct {v1, v2, v0}, LX/6gZ;-><init>(Ljava/lang/Object;I)V
 
+    .line 22
     .line 23
-    return-object v0
+    .line 24
+    iput-object v1, v2, LX/2vv;->A00:Landroid/view/Choreographer$FrameCallback;
+
+    .line 25
+    .line 26
+    :cond_1
+    invoke-virtual {v3, v1}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+
+    .line 27
+    .line 28
+    .line 29
+    return-void
 .end method

@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public A00:Landroid/content/ServiceConnection;
+.field public final A00:Landroid/content/ServiceConnection;
 
-.field public A01:LX/4Mj;
+.field public final A01:LX/4F7;
 
-.field public final synthetic A02:LX/4MR;
+.field public final synthetic A02:LX/4Eh;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/ServiceConnection;LX/4Mj;LX/4MR;)V
+.method public constructor <init>(Landroid/content/ServiceConnection;LX/4F7;LX/4Eh;)V
     .locals 0
 
     .line 0
-    iput-object p3, p0, Lcom/fbpay/w3c/client/W3CClient$IsReadyToPayCallbackWithConnection;->A02:LX/4MR;
+    iput-object p3, p0, Lcom/fbpay/w3c/client/W3CClient$IsReadyToPayCallbackWithConnection;->A02:LX/4Eh;
 
     .line 1
     .line 2
@@ -25,7 +25,7 @@
     .line 3
     .line 4
     .line 5
-    iput-object p2, p0, Lcom/fbpay/w3c/client/W3CClient$IsReadyToPayCallbackWithConnection;->A01:LX/4Mj;
+    iput-object p2, p0, Lcom/fbpay/w3c/client/W3CClient$IsReadyToPayCallbackWithConnection;->A01:LX/4F7;
 
     .line 6
     .line 7

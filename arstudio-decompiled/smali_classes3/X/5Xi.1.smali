@@ -1,45 +1,39 @@
 .class public final LX/5Xi;
-.super Ljava/lang/Object;
+.super LX/6Zy;
 .source ""
 
-# interfaces
-.implements LX/5bo;
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "Http2Connection$7"
 
 
 # instance fields
-.field public A00:LX/5Xw;
+.field public final synthetic A00:I
+
+.field public final synthetic A01:LX/5Wy;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public varargs constructor <init>(LX/5Wy;[Ljava/lang/Object;I)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "OkHttp %s Push Reset[%s]"
 
     .line 1
     .line 2
+    iput-object p1, p0, LX/5Xi;->A01:LX/5Wy;
+
     .line 3
+    .line 4
+    iput p3, p0, LX/5Xi;->A00:I
+
+    .line 5
+    .line 6
+    invoke-direct {p0, v0, p2}, LX/6Zy;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
-.end method
-
-
-# virtual methods
-.method public final deliverOnRenderThread()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getType()LX/5X9;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/5X9;->EXTERNAL_WORLD_TRACKING_EVENT:LX/5X9;
-
-    .line 1
-    .line 2
-    return-object v0
 .end method

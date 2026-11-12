@@ -1,38 +1,40 @@
-.class public final synthetic LX/5nj;
+.class public abstract LX/5nj;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "Camera1Device$$ExternalSyntheticLambda10"
-
-
-# instance fields
-.field public final synthetic A00:LX/5fb;
-
 
 # direct methods
-.method public synthetic constructor <init>(LX/5fb;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/5nj;->A00:LX/5fb;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method public static A00(Ljava/lang/Throwable;)V
     .locals 1
 
-    iget-object v0, p0, LX/5nj;->A00:LX/5fb;
+    .line 0
+    instance-of v0, p0, Ljava/lang/VirtualMachineError;
 
-    invoke-interface {v0}, LX/5fb;->AVu()V
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
 
+    .line 3
+    .line 4
+    instance-of v0, p0, Ljava/lang/ThreadDeath;
+
+    .line 5
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    .line 8
+    instance-of v0, p0, Ljava/lang/LinkageError;
+
+    .line 9
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
     return-void
+
+    .line 13
+    :cond_0
+    throw p0
 .end method

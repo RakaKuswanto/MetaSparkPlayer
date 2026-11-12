@@ -1,17 +1,31 @@
-.class public interface abstract LX/1JC;
+.class public final LX/1jc;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0yO;
+
+# instance fields
+.field public final A00:Ljava/lang/Throwable;
+
+.field public final A01:Z
 
 
-# virtual methods
-.method public abstract AGn()LX/1AH;
-.end method
+# direct methods
+.method public constructor <init>(ZLjava/lang/Throwable;)V
+    .locals 0
 
-.method public abstract AHq()Ljava/lang/String;
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract getName()Ljava/lang/String;
+    .line 1
+    .line 2
+    .line 3
+    iput-boolean p1, p0, LX/1jc;->A01:Z
+
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/1jc;->A00:Ljava/lang/Throwable;
+
+    .line 6
+    .line 7
+    return-void
 .end method

@@ -1,426 +1,53 @@
-.class public final LX/1iA;
-.super Ljava/lang/Object;
+.class public final LX/1ia;
+.super Ljava/lang/RuntimeException;
 .source ""
-
-# interfaces
-.implements LX/46D;
-
-
-# instance fields
-.field public final A00:LX/1i9;
-
-.field public final A01:Ljava/lang/Class;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1i9;Ljava/lang/Class;Ljava/lang/String;Z)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/util/regex/Pattern;)V
+    .locals 3
 
     .line 0
-    const/4 v0, 0x1
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     .line 1
-    invoke-static {p3, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
-    .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x2
 
+    .line 3
+    new-array v0, v1, [Ljava/lang/Object;
+
+    .line 4
     .line 5
+    invoke-static {v0, p1, p2}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
     .line 6
     .line 7
-    iput-object p3, p0, LX/1iA;->A02:Ljava/lang/String;
-
     .line 8
-    .line 9
-    iput-object p1, p0, LX/1iA;->A00:LX/1i9;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
+    .line 9
     .line 10
     .line 11
-    iput-object p2, p0, LX/1iA;->A01:Ljava/lang/Class;
+    move-result-object v1
 
     .line 12
+    const-string v0, "QT filename %s did not match the expected pattern %s"
+
     .line 13
-    iput-boolean p4, p0, LX/1iA;->A03:Z
-
     .line 14
+    invoke-static {v2, v0, v1}, LX/0X5;->A0j(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
     .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    .line 19
+    .line 20
+    .line 21
     return-void
-.end method
-
-
-# virtual methods
-.method public final getAdaptiveFetchClientParams()Ljava/util/Map;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getAdditionalHttpHeaders()Ljava/util/Map;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getAnalyticTags()Ljava/util/List;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getCallName()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1iA;->A02:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final getClientTraceId()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getEnableAsyncQuery()Z
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getEnableOfflineCaching()Z
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getEnsureCacheWrite()Z
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getFreshCacheAgeMs()J
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getFriendlyName()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getIgnoreNonCriticalErrors()Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
-.end method
-
-.method public final getMarkHttpRequestAsReplaySafe()Z
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getMaxToleratedCacheAgeMs()J
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getNetworkTimeoutSeconds()I
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getOnlyCacheInitialNetworkResponse()Z
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getOverrideRequestURL()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getParseOnClientExecutor()Z
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getQuery()LX/1cc;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getQueryParams()LX/1jN;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1iA;->A00:LX/1i9;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final getRequestPurpose()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getRetryPolicy()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getSubscriptionTargetId()I
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getTerminateAfterFreshResponse()Z
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final getTreeModelType()Ljava/lang/Class;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/1iA;->A01:Ljava/lang/Class;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final isMutation()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/1iA;->A03:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final bridge synthetic setEnsureCacheWrite(Z)LX/46D;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
-.end method
-
-.method public final bridge synthetic setMaxToleratedCacheAgeMs(J)LX/46D;
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    throw v0
 .end method

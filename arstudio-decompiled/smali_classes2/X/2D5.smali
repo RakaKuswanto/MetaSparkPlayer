@@ -1,34 +1,50 @@
 .class public final LX/2D5;
-.super Ljava/lang/Object;
+.super LX/2DY;
 .source ""
 
 
-# instance fields
-.field public A00:LX/2Cx;
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$11"
 
-.field public final A01:LX/2Cy;
+
+# instance fields
+.field public final synthetic A00:Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;
+
+.field public final synthetic A01:LX/2D1;
+
+.field public final synthetic A02:LX/2Py;
 
 
 # direct methods
-.method public constructor <init>(LX/2Cy;)V
-    .locals 1
+.method public constructor <init>(Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;LX/2D1;LX/2Py;Ljava/lang/Class;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "FbQPLAuthListener"
 
     .line 1
     .line 2
+    const-string/jumbo v0, "onUserAuthenticated"
+
     .line 3
-    const/4 v0, 0x0
-
     .line 4
-    iput-object v0, p0, LX/2D5;->A00:LX/2Cx;
-
     .line 5
-    .line 6
-    iput-object p1, p0, LX/2D5;->A01:LX/2Cy;
+    iput-object p2, p0, LX/2D5;->A01:LX/2D1;
 
+    .line 6
     .line 7
+    iput-object p1, p0, LX/2D5;->A00:Lcom/facebook/auth/component/listener/interfaces/AuthenticationResult;
+
     .line 8
+    .line 9
+    iput-object p3, p0, LX/2D5;->A02:LX/2Py;
+
+    .line 10
+    .line 11
+    invoke-direct {p0, p4, v1, v0}, LX/2DY;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 12
+    .line 13
+    .line 14
     return-void
 .end method

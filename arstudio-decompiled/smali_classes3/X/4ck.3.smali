@@ -1,11 +1,17 @@
-.class public interface abstract LX/4ck;
+.class public abstract LX/4ck;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AZo(Landroid/view/MenuItem;LX/4ay;)Z
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AZp(LX/4ay;)V
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

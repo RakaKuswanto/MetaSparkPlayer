@@ -1,54 +1,949 @@
-.class public final LX/4cQ;
+.class public abstract LX/4cQ;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/07T;
 
-
-# instance fields
-.field public final synthetic A00:Landroidx/appcompat/app/AppCompatActivity;
+# static fields
+.field public static final A00:Ljava/util/Comparator;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatActivity;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/4cQ;->A00:Landroidx/appcompat/app/AppCompatActivity;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AkV()Landroid/os/Bundle;
+.method public static constructor <clinit>()V
     .locals 2
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    const/4 v1, 0x0
 
     .line 1
+    new-instance v0, LX/6gL;
+
     .line 2
     .line 3
-    move-result-object v1
+    invoke-direct {v0, v1}, LX/6gL;-><init>(I)V
 
     .line 4
-    iget-object v0, p0, LX/4cQ;->A00:Landroidx/appcompat/app/AppCompatActivity;
-
     .line 5
     .line 6
-    invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatActivity;->A0J()LX/4bY;
+    sput-object v0, LX/4cQ;->A00:Ljava/util/Comparator;
 
     .line 7
     .line 8
+    return-void
+.end method
+
+.method public static A00(Landroid/content/Context;LX/4cR;)LX/4cW;
+    .locals 21
+
+    .line 0
+    const/4 v2, 0x0
+
+    .line 1
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v5
+
+    .line 5
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v11
+
     .line 9
-    return-object v1
+    move-object/from16 v8, p1
+
+    .line 10
+    .line 11
+    iget-object v4, v8, LX/4cR;->A01:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    const/4 v10, 0x0
+
+    .line 14
+    invoke-virtual {v5, v4, v10}, Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v9
+
+    .line 18
+    if-eqz v9, :cond_f
+
+    .line 19
+    .line 20
+    iget-object v1, v9, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
+
+    .line 21
+    .line 22
+    iget-object v3, v8, LX/4cR;->A02:Ljava/lang/String;
+
+    .line 23
+    .line 24
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v0
+
+    .line 28
+    if-eqz v0, :cond_e
+
+    .line 29
+    .line 30
+    const/16 v0, 0x40
+
+    .line 31
+    .line 32
+    invoke-virtual {v5, v1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
+
+    .line 36
+    iget-object v4, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    .line 37
+    .line 38
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v7
+
+    .line 42
+    array-length v3, v4
+
+    .line 43
+    const/4 v1, 0x0
+
+    .line 44
+    :goto_0
+    if-ge v1, v3, :cond_0
+
+    .line 45
+    .line 46
+    aget-object v0, v4, v1
+
+    .line 47
+    .line 48
+    invoke-virtual {v0}, Landroid/content/pm/Signature;->toByteArray()[B
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    invoke-virtual {v7, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 53
+    .line 54
+    .line 55
+    add-int/lit8 v1, v1, 0x1
+
+    .line 56
+    .line 57
+    goto :goto_0
+
+    .line 58
+    :cond_0
+    sget-object v6, LX/4cQ;->A00:Ljava/util/Comparator;
+
+    .line 59
+    .line 60
+    invoke-static {v7, v6}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    .line 61
+    .line 62
+    .line 63
+    iget-object v5, v8, LX/4cR;->A04:Ljava/util/List;
+
+    .line 64
+    .line 65
+    if-nez v5, :cond_1
+
+    .line 66
+    .line 67
+    invoke-static {v11, v10}, LX/4XX;->A00(Landroid/content/res/Resources;I)Ljava/util/List;
+
+    .line 68
+    .line 69
+    .line 70
+    move-result-object v5
+
+    .line 71
+    :cond_1
+    :goto_1
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    .line 72
+    .line 73
+    .line 74
+    move-result v0
+
+    .line 75
+    if-ge v10, v0, :cond_d
+
+    .line 76
+    .line 77
+    invoke-interface {v5, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v0
+
+    .line 81
+    check-cast v0, Ljava/util/Collection;
+
+    .line 82
+    .line 83
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
+
+    .line 84
+    .line 85
+    .line 86
+    move-result-object v4
+
+    .line 87
+    invoke-static {v4, v6}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    .line 88
+    .line 89
+    .line 90
+    invoke-virtual {v7}, Ljava/util/AbstractCollection;->size()I
+
+    .line 91
+    .line 92
+    .line 93
+    move-result v1
+
+    .line 94
+    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
+
+    .line 95
+    .line 96
+    .line 97
+    move-result v0
+
+    .line 98
+    if-ne v1, v0, :cond_2
+
+    .line 99
+    .line 100
+    const/4 v3, 0x0
+
+    .line 101
+    :goto_2
+    invoke-virtual {v7}, Ljava/util/AbstractCollection;->size()I
+
+    .line 102
+    .line 103
+    .line 104
+    move-result v0
+
+    .line 105
+    if-ge v3, v0, :cond_3
+
+    .line 106
+    .line 107
+    invoke-virtual {v7, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 108
+    .line 109
+    .line 110
+    move-result-object v1
+
+    .line 111
+    check-cast v1, [B
+
+    .line 112
+    .line 113
+    invoke-virtual {v4, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object v0
+
+    .line 117
+    check-cast v0, [B
+
+    .line 118
+    .line 119
+    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([B[B)Z
+
+    .line 120
+    .line 121
+    .line 122
+    move-result v0
+
+    .line 123
+    if-eqz v0, :cond_2
+
+    .line 124
+    .line 125
+    add-int/lit8 v3, v3, 0x1
+
+    .line 126
+    .line 127
+    goto :goto_2
+
+    .line 128
+    :cond_2
+    add-int/lit8 v10, v10, 0x1
+
+    .line 129
+    .line 130
+    goto :goto_1
+
+    .line 131
+    :cond_3
+    iget-object v11, v9, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+
+    .line 132
+    .line 133
+    const-string v10, "result_code"
+
+    .line 134
+    .line 135
+    const-string v1, "font_italic"
+
+    .line 136
+    .line 137
+    const-string v3, "font_weight"
+
+    .line 138
+    .line 139
+    const-string v6, "font_ttc_index"
+
+    .line 140
+    .line 141
+    const-string v7, "file_id"
+
+    .line 142
+    .line 143
+    const-string v9, "_id"
+
+    .line 144
+    .line 145
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 146
+    .line 147
+    .line 148
+    move-result-object v5
+
+    .line 149
+    new-instance v0, Landroid/net/Uri$Builder;
+
+    .line 150
+    .line 151
+    invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
+
+    .line 152
+    .line 153
+    .line 154
+    const-string v4, "content"
+
+    .line 155
+    .line 156
+    invoke-virtual {v0, v4}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 157
+    .line 158
+    .line 159
+    move-result-object v0
+
+    .line 160
+    invoke-virtual {v0, v11}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 161
+    .line 162
+    .line 163
+    move-result-object v0
+
+    .line 164
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    .line 165
+    .line 166
+    .line 167
+    move-result-object v13
+
+    .line 168
+    new-instance v0, Landroid/net/Uri$Builder;
+
+    .line 169
+    .line 170
+    invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
+
+    .line 171
+    .line 172
+    .line 173
+    invoke-virtual {v0, v4}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 174
+    .line 175
+    .line 176
+    move-result-object v0
+
+    .line 177
+    invoke-virtual {v0, v11}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 178
+    .line 179
+    .line 180
+    move-result-object v4
+
+    .line 181
+    const-string v0, "file"
+
+    .line 182
+    .line 183
+    invoke-virtual {v4, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 184
+    .line 185
+    .line 186
+    move-result-object v0
+
+    .line 187
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    .line 188
+    .line 189
+    .line 190
+    move-result-object v12
+
+    .line 191
+    const/4 v0, 0x7
+
+    .line 192
+    :try_start_0
+    new-array v0, v0, [Ljava/lang/String;
+
+    .line 193
+    .line 194
+    const/4 v15, 0x0
+
+    .line 195
+    aput-object v9, v0, v15
+
+    .line 196
+    .line 197
+    const/4 v4, 0x1
+
+    .line 198
+    invoke-static {v0, v7, v6}, LX/0X4;->A1L([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 199
+    .line 200
+    .line 201
+    const/4 v14, 0x3
+
+    .line 202
+    const-string v11, "font_variation_settings"
+
+    .line 203
+    .line 204
+    aput-object v11, v0, v14
+
+    .line 205
+    .line 206
+    invoke-static {v3, v1, v10, v0}, LX/0X1;->A1K(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 207
+    .line 208
+    .line 209
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    .line 210
+    .line 211
+    .line 212
+    move-result-object v16
+
+    .line 213
+    sget v14, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 214
+    .line 215
+    const/16 v11, 0x10
+
+    .line 216
+    .line 217
+    if-le v14, v11, :cond_4
+
+    .line 218
+    .line 219
+    const-string v19, "query = ?"
+
+    .line 220
+    .line 221
+    new-array v11, v4, [Ljava/lang/String;
+
+    .line 222
+    .line 223
+    iget-object v8, v8, LX/4cR;->A03:Ljava/lang/String;
+
+    .line 224
+    .line 225
+    aput-object v8, v11, v15
+
+    .line 226
+    .line 227
+    move-object/from16 v20, v11
+
+    .line 228
+    .line 229
+    move-object/from16 p0, v2
+
+    .line 230
+    .line 231
+    move-object/from16 p1, v2
+
+    .line 232
+    .line 233
+    move-object/from16 v18, v0
+
+    .line 234
+    .line 235
+    move-object/from16 v17, v13
+
+    .line 236
+    .line 237
+    invoke-virtual/range {v16 .. v22}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+
+    .line 238
+    .line 239
+    .line 240
+    move-result-object v8
+
+    .line 241
+    goto :goto_3
+
+    .line 242
+    :cond_4
+    const-string v19, "query = ?"
+
+    .line 243
+    .line 244
+    new-array v11, v4, [Ljava/lang/String;
+
+    .line 245
+    .line 246
+    iget-object v8, v8, LX/4cR;->A03:Ljava/lang/String;
+
+    .line 247
+    .line 248
+    aput-object v8, v11, v15
+
+    .line 249
+    .line 250
+    move-object/from16 v20, v11
+
+    .line 251
+    .line 252
+    move-object/from16 p0, v2
+
+    .line 253
+    .line 254
+    move-object/from16 v18, v0
+
+    .line 255
+    .line 256
+    move-object/from16 v17, v13
+
+    .line 257
+    .line 258
+    invoke-virtual/range {v16 .. v21}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    .line 259
+    .line 260
+    .line 261
+    move-result-object v8
+
+    .line 262
+    :goto_3
+    if-eqz v8, :cond_c
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 263
+    .line 264
+    :try_start_1
+    invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
+
+    .line 265
+    .line 266
+    .line 267
+    move-result v0
+
+    .line 268
+    if-lez v0, :cond_b
+
+    .line 269
+    .line 270
+    invoke-interface {v8, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    .line 271
+    .line 272
+    .line 273
+    move-result v10
+
+    .line 274
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 275
+    .line 276
+    .line 277
+    move-result-object v5
+
+    .line 278
+    invoke-interface {v8, v9}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    .line 279
+    .line 280
+    .line 281
+    move-result v11
+
+    .line 282
+    invoke-interface {v8, v7}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    .line 283
+    .line 284
+    .line 285
+    move-result v7
+
+    .line 286
+    invoke-interface {v8, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    .line 287
+    .line 288
+    .line 289
+    move-result v6
+
+    .line 290
+    invoke-interface {v8, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    .line 291
+    .line 292
+    .line 293
+    move-result v3
+
+    .line 294
+    invoke-interface {v8, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    .line 295
+    .line 296
+    .line 297
+    move-result v2
+
+    .line 298
+    :goto_4
+    invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
+
+    .line 299
+    .line 300
+    .line 301
+    move-result v0
+
+    .line 302
+    if-eqz v0, :cond_b
+
+    .line 303
+    .line 304
+    const/4 v9, -0x1
+
+    .line 305
+    if-eq v10, v9, :cond_5
+
+    .line 306
+    .line 307
+    invoke-interface {v8, v10}, Landroid/database/Cursor;->getInt(I)I
+
+    .line 308
+    .line 309
+    .line 310
+    move-result v18
+
+    .line 311
+    goto :goto_5
+
+    .line 312
+    :cond_5
+    const/16 v18, 0x0
+
+    .line 313
+    .line 314
+    :goto_5
+    if-eq v6, v9, :cond_6
+
+    .line 315
+    .line 316
+    invoke-interface {v8, v6}, Landroid/database/Cursor;->getInt(I)I
+
+    .line 317
+    .line 318
+    .line 319
+    move-result v16
+
+    .line 320
+    goto :goto_6
+
+    .line 321
+    :cond_6
+    const/16 v16, 0x0
+
+    .line 322
+    .line 323
+    :goto_6
+    if-ne v7, v9, :cond_7
+
+    .line 324
+    .line 325
+    invoke-interface {v8, v11}, Landroid/database/Cursor;->getLong(I)J
+
+    .line 326
+    .line 327
+    .line 328
+    move-result-wide v0
+
+    .line 329
+    invoke-static {v13, v0, v1}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
+
+    .line 330
+    .line 331
+    .line 332
+    move-result-object v15
+
+    .line 333
+    goto :goto_7
+
+    .line 334
+    :cond_7
+    invoke-interface {v8, v7}, Landroid/database/Cursor;->getLong(I)J
+
+    .line 335
+    .line 336
+    .line 337
+    move-result-wide v0
+
+    .line 338
+    invoke-static {v12, v0, v1}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
+
+    .line 339
+    .line 340
+    .line 341
+    move-result-object v15
+
+    .line 342
+    :goto_7
+    if-eq v3, v9, :cond_8
+
+    .line 343
+    .line 344
+    invoke-interface {v8, v3}, Landroid/database/Cursor;->getInt(I)I
+
+    .line 345
+    .line 346
+    .line 347
+    move-result v17
+
+    .line 348
+    goto :goto_8
+
+    .line 349
+    :cond_8
+    const/16 v17, 0x190
+
+    .line 350
+    .line 351
+    :goto_8
+    if-eq v2, v9, :cond_9
+
+    .line 352
+    .line 353
+    invoke-interface {v8, v2}, Landroid/database/Cursor;->getInt(I)I
+
+    .line 354
+    .line 355
+    .line 356
+    move-result v0
+
+    .line 357
+    const/16 v19, 0x1
+
+    .line 358
+    .line 359
+    if-eq v0, v4, :cond_a
+
+    .line 360
+    .line 361
+    :cond_9
+    const/16 v19, 0x0
+
+    .line 362
+    .line 363
+    :cond_a
+    new-instance v0, LX/4cv;
+
+    .line 364
+    .line 365
+    move-object v14, v0
+
+    .line 366
+    invoke-direct/range {v14 .. v19}, LX/4cv;-><init>(Landroid/net/Uri;IIIZ)V
+
+    .line 367
+    .line 368
+    .line 369
+    invoke-virtual {v5, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 370
+    .line 371
+    .line 372
+    goto :goto_4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 373
+    :catchall_0
+    move-exception v0
+
+    .line 374
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
+    .line 375
+    .line 376
+    .line 377
+    throw v0
+
+    .line 378
+    :cond_b
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
+    .line 379
+    .line 380
+    .line 381
+    :cond_c
+    const/4 v0, 0x0
+
+    .line 382
+    new-array v0, v0, [LX/4cv;
+
+    .line 383
+    .line 384
+    invoke-virtual {v5, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 385
+    .line 386
+    .line 387
+    move-result-object v2
+
+    .line 388
+    check-cast v2, [LX/4cv;
+
+    .line 389
+    .line 390
+    const/4 v1, 0x0
+
+    .line 391
+    goto :goto_9
+
+    .line 392
+    :catchall_1
+    move-exception v0
+
+    .line 393
+    throw v0
+
+    .line 394
+    :cond_d
+    const/4 v1, 0x1
+
+    .line 395
+    :goto_9
+    new-instance v0, LX/4cW;
+
+    .line 396
+    .line 397
+    invoke-direct {v0, v2, v1}, LX/4cW;-><init>([LX/4cv;I)V
+
+    .line 398
+    .line 399
+    .line 400
+    return-object v0
+
+    .line 401
+    :cond_e
+    const-string v1, "Found content provider "
+
+    .line 402
+    .line 403
+    const-string v0, ", but package was not "
+
+    .line 404
+    .line 405
+    invoke-static {v1, v4, v0, v3}, LX/004;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 406
+    .line 407
+    .line 408
+    move-result-object v1
+
+    .line 409
+    new-instance v0, Landroid/content/pm/PackageManager$NameNotFoundException;
+
+    .line 410
+    .line 411
+    invoke-direct {v0, v1}, Landroid/content/pm/PackageManager$NameNotFoundException;-><init>(Ljava/lang/String;)V
+
+    .line 412
+    .line 413
+    .line 414
+    throw v0
+
+    .line 415
+    :cond_f
+    const-string v0, "No package found for authority: "
+
+    .line 416
+    .line 417
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 418
+    .line 419
+    .line 420
+    move-result-object v0
+
+    .line 421
+    invoke-static {v4, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 422
+    .line 423
+    .line 424
+    move-result-object v1
+
+    .line 425
+    new-instance v0, Landroid/content/pm/PackageManager$NameNotFoundException;
+
+    .line 426
+    .line 427
+    invoke-direct {v0, v1}, Landroid/content/pm/PackageManager$NameNotFoundException;-><init>(Ljava/lang/String;)V
+
+    .line 428
+    .line 429
+    .line 430
+    throw v0
 .end method

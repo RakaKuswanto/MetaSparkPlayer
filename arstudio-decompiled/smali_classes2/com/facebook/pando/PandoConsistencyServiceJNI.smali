@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/1om;
+.field public static final Companion:LX/1wV;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/1om;
+    new-instance v0, LX/1wV;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1om;-><init>()V
+    invoke-direct {v0}, LX/1wV;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/pando/PandoConsistencyServiceJNI;->Companion:LX/1om;
+    sput-object v0, Lcom/facebook/pando/PandoConsistencyServiceJNI;->Companion:LX/1wV;
 
     .line 6
     .line 7
@@ -30,7 +30,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public static final native create(Lcom/facebook/pando/PandoConsistencyStackJNI;Ljava/util/concurrent/Executor;I)Lcom/facebook/pando/PandoConsistencyServiceJNI;
+.method public static final native create(Lcom/facebook/pando/PandoConsistencyStackJNI;Ljava/util/concurrent/Executor;IZJ)Lcom/facebook/pando/PandoConsistencyServiceJNI;
 .end method
 
 

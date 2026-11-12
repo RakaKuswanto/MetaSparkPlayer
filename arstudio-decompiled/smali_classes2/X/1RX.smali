@@ -1,515 +1,663 @@
-.class public final LX/1RX;
+.class public final LX/1rX;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/1tL;
+
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final synthetic A00:Landroid/os/Bundle;
 
-.field public final A01:LX/1Sp;
+.field public final synthetic A01:Landroidx/fragment/app/FragmentActivity;
 
-.field public final A02:LX/0Na;
+.field public final synthetic A02:LX/0B4;
+
+.field public final synthetic A03:LX/0gT;
+
+.field public final synthetic A04:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>(Landroid/os/Bundle;Landroidx/fragment/app/FragmentActivity;LX/0B4;LX/0gT;Z)V
+    .locals 0
 
     .line 0
+    iput-object p2, p0, LX/1rX;->A01:Landroidx/fragment/app/FragmentActivity;
+
+    .line 1
+    .line 2
+    iput-object p3, p0, LX/1rX;->A02:LX/0B4;
+
+    .line 3
+    .line 4
+    iput-object p1, p0, LX/1rX;->A00:Landroid/os/Bundle;
+
+    .line 5
+    .line 6
+    iput-boolean p5, p0, LX/1rX;->A04:Z
+
+    .line 7
+    .line 8
+    iput-object p4, p0, LX/1rX;->A03:LX/0gT;
+
+    .line 9
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/1RX;->A02:LX/0Na;
-
-    .line 8
-    .line 9
-    sget v0, LX/2eq;->AUg:I
-
-    .line 10
     .line 11
-    invoke-static {v0}, LX/1zE;->A07(I)Ljava/lang/Object;
-
     .line 12
     .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    check-cast v0, LX/1Sp;
-
-    .line 16
-    .line 17
-    iput-object v0, p0, LX/1RX;->A01:LX/1Sp;
-
-    .line 18
-    .line 19
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    iput-object v0, p0, LX/1RX;->A00:LX/1zG;
-
-    .line 24
-    .line 25
     return-void
-.end method
-
-.method public static final A00(Lcom/facebook/fbtrace/FbTraceNode;)Lcom/facebook/fbtrace/FbTraceNode;
-    .locals 6
-
-    .line 0
-    sget-object v2, Lcom/facebook/fbtrace/FbTraceNode;->A03:Lcom/facebook/fbtrace/FbTraceNode;
-
-    .line 1
-    .line 2
-    if-eq p0, v2, :cond_1
-
-    .line 3
-    .line 4
-    if-eq p0, v2, :cond_1
-
-    .line 5
-    .line 6
-    iget-object v5, p0, Lcom/facebook/fbtrace/FbTraceNode;->A02:Ljava/lang/String;
-
-    .line 7
-    .line 8
-    :cond_0
-    sget-object v0, LX/0Po;->A00:Ljava/util/Random;
-
-    .line 9
-    .line 10
-    invoke-virtual {v0}, Ljava/util/Random;->nextLong()J
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-wide v0
-
-    .line 14
-    invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-wide v3
-
-    .line 18
-    const-wide/16 v1, 0x0
-
-    .line 19
-    .line 20
-    cmp-long v0, v3, v1
-
-    .line 21
-    .line 22
-    if-lez v0, :cond_0
-
-    .line 23
-    .line 24
-    invoke-static {v3, v4}, LX/0Po;->A00(J)Ljava/lang/String;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v1
-
-    .line 28
-    iget-object v0, p0, Lcom/facebook/fbtrace/FbTraceNode;->A01:Ljava/lang/String;
-
-    .line 29
-    .line 30
-    new-instance v2, Lcom/facebook/fbtrace/FbTraceNode;
-
-    .line 31
-    .line 32
-    invoke-direct {v2, v5, v1, v0}, Lcom/facebook/fbtrace/FbTraceNode;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 33
-    .line 34
-    .line 35
-    :cond_1
-    return-object v2
 .end method
 
 
 # virtual methods
-.method public final A01(Ljava/lang/String;)Lcom/facebook/fbtrace/FbTraceNode;
-    .locals 13
+.method public final onFailure(Ljava/lang/Throwable;)V
+    .locals 9
 
     .line 0
-    const-string/jumbo v6, "invalid FbTrace metadata: %s"
-
-    .line 1
-    .line 2
-    .line 3
-    const/4 v5, 0x1
-
-    .line 4
     const/4 v4, 0x0
 
-    .line 5
-    :try_start_0
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    .line 1
+    invoke-static {p1, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
+    .line 3
+    .line 4
+    iget-object v3, p0, LX/1rX;->A01:Landroidx/fragment/app/FragmentActivity;
+
+    .line 5
     .line 6
+    invoke-static {}, LX/0X7;->A07()Landroid/content/Intent;
+
     .line 7
     .line 8
-    move-result v0
-
     .line 9
-    const/16 v10, 0x16
+    move-result-object v2
 
     .line 10
-    .line 11
-    if-ne v0, v10, :cond_4
+    const-string/jumbo v1, "result_type"
 
+    .line 11
     .line 12
     .line 13
-    const/4 v0, 0x2
+    const-string/jumbo v0, "new_token"
 
     .line 14
-    new-array v3, v0, [J
-
     .line 15
     .line 16
-    const/16 v9, 0xb
+    invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 17
     .line 18
-    invoke-static {v4, v9, p1}, LX/0Yg;->A0g(IILjava/lang/String;)Ljava/lang/String;
-
     .line 19
+    move-result-object v2
+
     .line 20
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
     .line 21
-    move-result-object v8
-
     .line 22
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
-
     .line 23
+    move-result-object v1
+
     .line 24
+    const-string/jumbo v0, "error"
+
     .line 25
-    move-result v7
-
     .line 26
-    const-wide/16 v11, 0x0
-
     .line 27
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
     .line 28
-    const/4 v2, 0x0
-
     .line 29
-    :goto_0
-    if-ge v2, v7, :cond_1
-
     .line 30
+    move-result-object v0
+
     .line 31
-    invoke-virtual {v8, v2}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v3, v4, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 32
     .line 33
     .line 34
-    move-result v1
+    iget-boolean v0, p0, LX/1rX;->A04:Z
 
     .line 35
-    const/4 v0, 0x6
-
     .line 36
-    shl-long/2addr v11, v0
+    if-eqz v0, :cond_0
 
     .line 37
-    const-string v0, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
-
     .line 38
-    .line 39
-    invoke-static {v0, v1, v4}, LX/1rq;->A07(Ljava/lang/CharSequence;CI)I
+    sget-object v0, LX/1rZ;->AUTH_ERROR:LX/1rZ;
 
+    .line 39
     .line 40
+    invoke-static {v3, v0}, LX/1rV;->A01(Landroid/app/Activity;LX/1rZ;)V
+
     .line 41
     .line 42
-    move-result v0
-
     .line 43
-    if-ltz v0, :cond_0
+    :cond_0
+    invoke-virtual {v3}, Landroid/app/Activity;->finish()V
 
     .line 44
     .line 45
-    int-to-long v0, v0
-
     .line 46
-    add-long/2addr v11, v0
+    sget-object v2, LX/1rV;->A00:LX/1rV;
 
     .line 47
-    add-int/lit8 v2, v2, 0x1
-
     .line 48
-    .line 49
-    goto :goto_0
+    iget-object v4, p0, LX/1rX;->A02:LX/0B4;
 
+    .line 49
     .line 50
-    :cond_0
-    const-string v0, "Invalid encoded integer "
+    sget-object v5, LX/1rY;->LOGIN_INTERNAL_ERROR:LX/1rY;
 
     .line 51
     .line 52
-    invoke-static {v0, v8}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    iget-object v3, p0, LX/1rX;->A00:Landroid/os/Bundle;
 
     .line 53
     .line 54
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
     .line 55
-    move-result-object v0
-
     .line 56
-    throw v0
-
     .line 57
-    :cond_1
-    aput-wide v11, v3, v4
+    move-result-object v6
 
     .line 58
-    .line 59
-    invoke-static {v9, v10, p1}, LX/0Yg;->A0g(IILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 59
     .line 60
     .line 61
+    move-result-object v1
+
     .line 62
-    move-result-object v8
+    const/4 v0, 0x1
 
     .line 63
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
+    invoke-static {v1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 64
     .line 65
     .line 66
-    move-result v7
+    invoke-static {v1}, LX/6Zp;->A00(Ljava/lang/Class;)Ljava/lang/String;
 
     .line 67
-    const-wide/16 v9, 0x0
-
     .line 68
     .line 69
-    const/4 v2, 0x0
+    move-result-object v7
 
     .line 70
-    :goto_1
-    if-ge v2, v7, :cond_3
+    new-instance v1, Ljava/io/StringWriter;
 
     .line 71
     .line 72
-    invoke-virtual {v8, v2}, Ljava/lang/String;->charAt(I)C
+    invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
     .line 73
     .line 74
     .line 75
-    move-result v1
+    new-instance v0, Ljava/io/PrintWriter;
 
     .line 76
-    const/4 v0, 0x6
-
     .line 77
-    shl-long/2addr v9, v0
+    invoke-direct {v0, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
     .line 78
-    const-string v0, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
-
     .line 79
     .line 80
-    invoke-static {v0, v1, v4}, LX/1rq;->A07(Ljava/lang/CharSequence;CI)I
+    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
 
     .line 81
     .line 82
     .line 83
-    move-result v0
+    invoke-virtual {v0}, Ljava/io/Writer;->flush()V
 
     .line 84
-    if-ltz v0, :cond_2
-
     .line 85
     .line 86
-    int-to-long v0, v0
+    invoke-static {v1}, LX/0X3;->A0k(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 87
-    add-long/2addr v9, v0
-
     .line 88
-    add-int/lit8 v2, v2, 0x1
-
     .line 89
+    move-result-object v8
+
     .line 90
-    goto :goto_1
+    invoke-virtual/range {v2 .. v8}, LX/1rV;->A02(Landroid/os/Bundle;LX/0B4;LX/1rY;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 91
-    :cond_2
-    const-string v0, "Invalid encoded integer "
-
     .line 92
     .line 93
-    invoke-static {v0, v8}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    return-void
+.end method
 
-    .line 94
-    .line 95
-    .line 96
+.method public final bridge synthetic onSuccess(Ljava/lang/Object;)V
+    .locals 11
+
+    .line 0
+    check-cast p1, LX/1p1;
+
+    .line 1
+    .line 2
+    const/4 v6, 0x0
+
+    .line 3
+    if-eqz p1, :cond_4
+
+    .line 4
+    .line 5
+    invoke-interface {p1}, LX/1p1;->AK3()Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v3
+
+    .line 9
+    check-cast v3, LX/1gb;
+
+    .line 10
+    .line 11
+    if-eqz v3, :cond_4
+
+    .line 12
+    .line 13
+    const-class v2, LX/1kJ;
+
+    .line 14
+    .line 15
+    const v1, 0x67e9337b
+
+    .line 16
+    .line 17
+    .line 18
+    const v0, -0xf54e914
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-static {v3, v2, v1, v0}, LX/0X5;->A0F(LX/1gb;Ljava/lang/Class;II)LX/1gb;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v2
+
+    .line 25
+    if-eqz v2, :cond_5
+
+    .line 26
+    .line 27
+    const v0, -0x7391c8a2
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {v2, v0}, LX/1gb;->getCachedNullableString(I)Ljava/lang/String;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v4
+
+    .line 34
+    const v0, 0x1c655659
+
+    .line 35
+    .line 36
+    .line 37
+    invoke-virtual {v2, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getIntValue(I)I
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v6
+
+    .line 45
+    :goto_0
+    const-string/jumbo v5, "new_token"
+
+    .line 46
+    .line 47
+    .line 48
+    const-string/jumbo v1, "result_type"
+
+    .line 49
+    .line 50
+    .line 51
+    if-eqz v2, :cond_6
+
+    .line 52
+    .line 53
+    if-eqz v4, :cond_6
+
+    .line 54
+    .line 55
+    if-eqz v6, :cond_6
+
+    .line 56
+    .line 57
+    invoke-virtual {v6}, Ljava/lang/Number;->intValue()I
+
+    .line 58
+    .line 59
+    .line 60
+    move-result v3
+
+    .line 61
+    if-eqz v3, :cond_6
+
+    .line 62
+    .line 63
+    invoke-static {}, LX/0X7;->A07()Landroid/content/Intent;
+
+    .line 64
+    .line 65
+    .line 66
     move-result-object v0
 
-    .line 97
-    throw v0
+    .line 67
+    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 68
+    .line 69
+    .line 70
+    move-result-object v1
+
+    .line 71
+    const-string/jumbo v0, "access_token"
+
+    .line 72
+    .line 73
+    .line 74
+    invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 75
+    .line 76
+    .line 77
+    move-result-object v1
+
+    .line 78
+    const-string/jumbo v0, "expiry_time"
+
+    .line 79
+    .line 80
+    .line 81
+    invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v2
+
+    .line 85
+    iget-object v5, p0, LX/1rX;->A00:Landroid/os/Bundle;
+
+    .line 86
+    .line 87
+    const-string/jumbo v1, "iab_session_id"
+
+    .line 88
+    .line 89
+    .line 90
+    invoke-virtual {v5, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v0
+
+    .line 94
+    if-nez v0, :cond_0
+
+    .line 95
+    .line 96
+    const-string v0, ""
+
+    .line 97
     .line 98
-    :cond_3
-    aput-wide v9, v3, v5
+    :cond_0
+    invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 99
     .line 100
-    aget-wide v0, v3, v4
-
     .line 101
+    move-result-object v1
+
     .line 102
-    invoke-static {v0, v1}, LX/0Po;->A00(J)Ljava/lang/String;
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 103
     .line 104
     .line 105
-    move-result-object v2
+    iget-object v2, p0, LX/1rX;->A01:Landroidx/fragment/app/FragmentActivity;
 
     .line 106
-    aget-wide v0, v3, v5
-
     .line 107
+    const/4 v0, -0x1
+
     .line 108
-    invoke-static {v0, v1}, LX/0Po;->A00(J)Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 109
     .line 110
     .line 111
-    move-result-object v1
+    iget-object v1, p0, LX/1rX;->A03:LX/0gT;
 
     .line 112
-    const/4 v0, 0x0
-
     .line 113
-    new-instance v3, Lcom/facebook/fbtrace/FbTraceNode;
+    if-eqz v1, :cond_2
 
     .line 114
     .line 115
-    invoke-direct {v3, v2, v1, v0}, Lcom/facebook/fbtrace/FbTraceNode;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     .line 116
     .line 117
     .line 118
-    goto :goto_2
+    move-result v0
 
     .line 119
-    :cond_4
-    const-string v0, "Invalid Metadata"
+    if-lez v0, :cond_2
 
     .line 120
     .line 121
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    const/4 v0, 0x0
 
     .line 122
+    if-ge v3, v0, :cond_1
+
     .line 123
     .line 124
-    move-result-object v0
+    const/4 v3, 0x0
 
     .line 125
-    throw v0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_1
+    iget v0, v1, LX/0gT;->A00:I
 
     .line 126
-    :catch_0
-    move-exception v2
-
     .line 127
-    const-class v1, Lcom/facebook/fbtrace/FbTraceNode;
+    if-le v3, v0, :cond_2
 
     .line 128
     .line 129
-    new-array v0, v5, [Ljava/lang/Object;
+    iput v3, v1, LX/0gT;->A00:I
 
     .line 130
     .line 131
-    aput-object p1, v0, v4
+    :cond_2
+    iget-boolean v0, p0, LX/1rX;->A04:Z
 
     .line 132
     .line 133
-    invoke-static {v1, v6, v2, v0}, LX/0Jt;->A07(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    if-eqz v0, :cond_3
 
     .line 134
     .line 135
+    sget-object v0, LX/1rZ;->AUTH_SUCCESS:LX/1rZ;
+
     .line 136
-    sget-object v3, Lcom/facebook/fbtrace/FbTraceNode;->A03:Lcom/facebook/fbtrace/FbTraceNode;
-
     .line 137
-    .line 138
-    :goto_2
-    sget-object v0, Lcom/facebook/fbtrace/FbTraceNode;->A03:Lcom/facebook/fbtrace/FbTraceNode;
+    invoke-static {v2, v0}, LX/1rV;->A01(Landroid/app/Activity;LX/1rZ;)V
 
+    .line 138
     .line 139
     .line 140
-    if-ne v3, v0, :cond_5
+    :cond_3
+    invoke-virtual {v2}, Landroid/app/Activity;->finish()V
 
     .line 141
     .line 142
-    iget-object v0, p0, LX/1RX;->A02:LX/0Na;
-
     .line 143
-    .line 144
-    invoke-static {v0}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
+    sget-object v4, LX/1rV;->A00:LX/1rV;
 
+    .line 144
     .line 145
+    iget-object v6, p0, LX/1rX;->A02:LX/0B4;
+
     .line 146
     .line 147
-    move-result-object v2
+    sget-object v7, LX/1rY;->LOGIN_ACCESS_TOKEN_RECEIVED:LX/1rY;
 
     .line 148
-    const-string/jumbo v0, "invalide fbtrace metadata: "
-
     .line 149
+    const/4 v8, 0x0
+
     .line 150
+    move-object v9, v8
+
     .line 151
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v10, v8
 
     .line 152
+    invoke-virtual/range {v4 .. v10}, LX/1rV;->A02(Landroid/os/Bundle;LX/0B4;LX/1rY;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
     .line 153
     .line 154
-    move-result-object v0
-
     .line 155
-    invoke-static {p1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    return-void
 
     .line 156
+    :cond_4
+    move-object v2, v6
+
     .line 157
+    :cond_5
+    move-object v4, v6
+
     .line 158
-    move-result-object v1
+    goto :goto_0
 
     .line 159
-    const-string/jumbo v0, "invalid_fbtrace_metadata"
+    :cond_6
+    iget-object v3, p0, LX/1rX;->A01:Landroidx/fragment/app/FragmentActivity;
 
     .line 160
     .line 161
+    const/4 v2, 0x0
+
     .line 162
-    invoke-interface {v2, v0, v1}, LX/0Gk;->AoW(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {}, LX/0X7;->A07()Landroid/content/Intent;
 
     .line 163
     .line 164
     .line 165
-    :cond_5
-    return-object v3
+    move-result-object v0
+
+    .line 166
+    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 167
+    .line 168
+    .line 169
+    move-result-object v1
+
+    .line 170
+    const-string/jumbo v0, "error"
+
+    .line 171
+    .line 172
+    .line 173
+    const-string/jumbo v8, "null access token or expiry time"
+
+    .line 174
+    .line 175
+    .line 176
+    invoke-virtual {v1, v0, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 177
+    .line 178
+    .line 179
+    move-result-object v0
+
+    .line 180
+    invoke-virtual {v3, v2, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
+
+    .line 181
+    .line 182
+    .line 183
+    sget-object v4, LX/1rV;->A00:LX/1rV;
+
+    .line 184
+    .line 185
+    iget-object v6, p0, LX/1rX;->A02:LX/0B4;
+
+    .line 186
+    .line 187
+    sget-object v7, LX/1rY;->LOGIN_INTERNAL_ERROR:LX/1rY;
+
+    .line 188
+    .line 189
+    iget-object v5, p0, LX/1rX;->A00:Landroid/os/Bundle;
+
+    .line 190
+    .line 191
+    const/4 v9, 0x0
+
+    .line 192
+    move-object v10, v9
+
+    .line 193
+    invoke-virtual/range {v4 .. v10}, LX/1rV;->A02(Landroid/os/Bundle;LX/0B4;LX/1rY;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 194
+    .line 195
+    .line 196
+    iget-boolean v0, p0, LX/1rX;->A04:Z
+
+    .line 197
+    .line 198
+    if-eqz v0, :cond_7
+
+    .line 199
+    .line 200
+    sget-object v0, LX/1rZ;->AUTH_ERROR:LX/1rZ;
+
+    .line 201
+    .line 202
+    invoke-static {v3, v0}, LX/1rV;->A01(Landroid/app/Activity;LX/1rZ;)V
+
+    .line 203
+    .line 204
+    .line 205
+    :cond_7
+    invoke-virtual {v3}, Landroid/app/Activity;->finish()V
+
+    .line 206
+    .line 207
+    .line 208
+    return-void
 .end method

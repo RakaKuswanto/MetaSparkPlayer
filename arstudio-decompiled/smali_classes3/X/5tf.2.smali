@@ -1,11 +1,17 @@
-.class public interface abstract LX/5tf;
-.super Ljava/lang/Object;
+.class public final LX/5tF;
+.super Ljava/lang/UnsupportedOperationException;
 .source ""
 
-# interfaces
-.implements LX/5tc;
 
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public abstract requestFusion(I)I
+    .line 0
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

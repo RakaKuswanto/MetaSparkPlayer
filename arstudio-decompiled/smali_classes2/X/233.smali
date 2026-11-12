@@ -1,34 +1,30 @@
 .class public final LX/233;
-.super Ljava/io/IOException;
+.super LX/230;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:Lcom/google/common/collect/AbstractMapBasedMultiset;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 268435456
-    const-string v0, "Network request was canceled."
-
-    .line 268435457
-    .line 268435458
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 1
+.method public constructor <init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
-    const-string v0, "Network request was canceled."
+    iput-object p1, p0, LX/233;->A00:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1}, LX/230;-><init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
 
     .line 3
     .line 4

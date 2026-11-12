@@ -18,11 +18,13 @@
 # static fields
 .field public static final A05:Lcom/google/common/collect/RegularImmutableSet;
 
+.field public static final A06:[Ljava/lang/Object;
+
 
 # instance fields
-.field public final transient A00:[Ljava/lang/Object;
+.field public final transient A00:I
 
-.field public final transient A01:I
+.field public final transient A01:[Ljava/lang/Object;
 
 .field public final transient A02:[Ljava/lang/Object;
 
@@ -43,33 +45,53 @@
 
     .line 2
     .line 3
-    const/4 v2, 0x0
+    sput-object v1, Lcom/google/common/collect/RegularImmutableSet;->A06:[Ljava/lang/Object;
 
     .line 4
+    .line 5
     new-instance v0, Lcom/google/common/collect/RegularImmutableSet;
 
-    .line 5
     .line 6
-    move v4, v3
-
     .line 7
-    move v5, v3
+    move-object v2, v1
 
     .line 8
-    invoke-direct/range {v0 .. v5}, Lcom/google/common/collect/RegularImmutableSet;-><init>([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    move v4, v3
 
     .line 9
-    .line 10
-    .line 11
-    sput-object v0, Lcom/google/common/collect/RegularImmutableSet;->A05:Lcom/google/common/collect/RegularImmutableSet;
+    move v5, v3
 
+    .line 10
+    invoke-direct/range {v0 .. v5}, Lcom/google/common/collect/RegularImmutableSet;-><init>([Ljava/lang/Object;[Ljava/lang/Object;III)V
+
+    .line 11
     .line 12
     .line 13
+    sput-object v0, Lcom/google/common/collect/RegularImmutableSet;->A05:Lcom/google/common/collect/RegularImmutableSet;
+
+    .line 14
+    .line 15
     return-void
 .end method
 
 .method public constructor <init>([Ljava/lang/Object;[Ljava/lang/Object;III)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "elements",
+            "hashCode",
+            "table",
+            "mask",
+            "size"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
@@ -77,23 +99,23 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/google/common/collect/RegularImmutableSet;->A02:[Ljava/lang/Object;
+    iput-object p1, p0, Lcom/google/common/collect/RegularImmutableSet;->A01:[Ljava/lang/Object;
 
     .line 4
     .line 5
-    iput-object p2, p0, Lcom/google/common/collect/RegularImmutableSet;->A00:[Ljava/lang/Object;
+    iput p3, p0, Lcom/google/common/collect/RegularImmutableSet;->A03:I
 
     .line 6
     .line 7
-    iput p4, p0, Lcom/google/common/collect/RegularImmutableSet;->A04:I
+    iput-object p2, p0, Lcom/google/common/collect/RegularImmutableSet;->A02:[Ljava/lang/Object;
 
     .line 8
     .line 9
-    iput p3, p0, Lcom/google/common/collect/RegularImmutableSet;->A03:I
+    iput p4, p0, Lcom/google/common/collect/RegularImmutableSet;->A04:I
 
     .line 10
     .line 11
-    iput p5, p0, Lcom/google/common/collect/RegularImmutableSet;->A01:I
+    iput p5, p0, Lcom/google/common/collect/RegularImmutableSet;->A00:I
 
     .line 12
     .line 13
@@ -104,9 +126,17 @@
 # virtual methods
 .method public final contains(Ljava/lang/Object;)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "target"
+        }
+    .end annotation
 
     .line 0
-    iget-object v3, p0, Lcom/google/common/collect/RegularImmutableSet;->A00:[Ljava/lang/Object;
+    iget-object v3, p0, Lcom/google/common/collect/RegularImmutableSet;->A02:[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -117,78 +147,91 @@
 
     .line 4
     .line 5
-    if-eqz v3, :cond_0
+    array-length v0, v3
 
     .line 6
+    if-eqz v0, :cond_0
+
     .line 7
+    .line 8
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
-    .line 8
     .line 9
     .line 10
+    .line 11
     move-result v0
 
-    .line 11
-    invoke-static {v0}, LX/1d4;->A00(I)I
-
     .line 12
+    invoke-static {v0}, LX/21w;->A00(I)I
+
     .line 13
     .line 14
+    .line 15
     move-result v1
 
-    .line 15
+    .line 16
     :goto_0
     iget v0, p0, Lcom/google/common/collect/RegularImmutableSet;->A04:I
 
-    .line 16
     .line 17
+    .line 18
     and-int/2addr v1, v0
 
-    .line 18
+    .line 19
     aget-object v0, v3, v1
 
-    .line 19
     .line 20
+    .line 21
     if-eqz v0, :cond_0
 
-    .line 21
     .line 22
+    .line 23
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 23
     .line 24
     .line 25
+    .line 26
     move-result v0
 
-    .line 26
+    .line 27
     if-eqz v0, :cond_1
 
-    .line 27
     .line 28
+    .line 29
     const/4 v2, 0x1
 
-    .line 29
+    .line 30
     :cond_0
     return v2
 
-    .line 30
+    .line 31
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
-    .line 31
     .line 32
+    .line 33
     goto :goto_0
 .end method
 
 .method public final copyIntoArray([Ljava/lang/Object;I)I
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dst",
+            "offset"
+        }
+    .end annotation
 
     .line 0
-    iget-object v2, p0, Lcom/google/common/collect/RegularImmutableSet;->A02:[Ljava/lang/Object;
+    iget-object v2, p0, Lcom/google/common/collect/RegularImmutableSet;->A01:[Ljava/lang/Object;
 
     .line 1
     .line 2
-    iget v1, p0, Lcom/google/common/collect/RegularImmutableSet;->A01:I
+    iget v1, p0, Lcom/google/common/collect/RegularImmutableSet;->A00:I
 
     .line 3
     .line 4
@@ -217,7 +260,7 @@
     return v0
 .end method
 
-.method public final iterator()LX/1bX;
+.method public final iterator()LX/1tw;
     .locals 1
 
     .line 0
@@ -229,7 +272,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 5
     .line 6
@@ -252,7 +295,7 @@
     move-result-object v0
 
     .line 268435460
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 268435461
     .line 268435462
@@ -267,9 +310,24 @@
     .locals 1
 
     .line 0
-    iget v0, p0, Lcom/google/common/collect/RegularImmutableSet;->A01:I
+    iget v0, p0, Lcom/google/common/collect/RegularImmutableSet;->A00:I
 
     .line 1
     .line 2
     return v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableSet;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

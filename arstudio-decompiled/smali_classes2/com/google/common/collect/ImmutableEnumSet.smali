@@ -24,6 +24,14 @@
 # direct methods
 .method public constructor <init>(Ljava/util/EnumSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "delegate"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
@@ -38,10 +46,41 @@
     return-void
 .end method
 
+.method private readObject(Ljava/io/ObjectInputStream;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {}, LX/0X6;->A0d()Ljava/io/InvalidObjectException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
 
 # virtual methods
 .method public final contains(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/ImmutableEnumSet;->A01:Ljava/util/EnumSet;
@@ -61,6 +100,14 @@
 
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "collection"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Lcom/google/common/collect/ImmutableEnumSet;
@@ -97,6 +144,14 @@
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     if-ne p1, p0, :cond_0
@@ -193,7 +248,7 @@
     return v0
 .end method
 
-.method public final iterator()LX/1bX;
+.method public final iterator()LX/1tw;
     .locals 2
 
     .line 0
@@ -214,7 +269,7 @@
     .line 7
     .line 8
     .line 9
-    instance-of v0, v1, LX/1bX;
+    instance-of v0, v1, LX/1tw;
 
     .line 10
     .line 11
@@ -225,7 +280,7 @@
     move-object v0, v1
 
     .line 14
-    check-cast v0, LX/1bX;
+    check-cast v0, LX/1tw;
 
     .line 15
     .line 16
@@ -233,15 +288,30 @@
 
     .line 17
     :cond_0
-    new-instance v0, LX/1KB;
+    new-instance v0, LX/1ty;
 
     .line 18
     .line 19
-    invoke-direct {v0, v1}, LX/1KB;-><init>(Ljava/util/Iterator;)V
+    invoke-direct {v0, v1}, LX/1ty;-><init>(Ljava/util/Iterator;)V
 
     .line 20
     .line 21
     .line 22
+    return-object v0
+.end method
+
+.method public final bridge synthetic iterator()Ljava/util/Iterator;
+    .locals 1
+
+    .line 268435456
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
     return-object v0
 .end method
 

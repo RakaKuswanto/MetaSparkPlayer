@@ -2,72 +2,147 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/util/ListIterator;
+.implements LX/0Wm;
+
+
+# static fields
+.field public static final A00:LX/0Gy;
+
 
 # direct methods
-.method public static A00()Z
-    .locals 5
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/0Gy;
+
+    invoke-direct {v0}, LX/0Gy;-><init>()V
+
+    sput-object v0, LX/0Gy;->A00:LX/0Gy;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    sget-wide v3, LX/0Aq;->A00:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    sget-boolean v0, LX/0Aq;->A03:Z
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic add(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final hasNext()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final hasPrevious()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     .line 3
     .line 4
-    const/4 v2, 0x0
-
     .line 5
-    if-eqz v0, :cond_0
+    throw v0
+.end method
 
-    .line 6
-    .line 7
-    sget-object v1, LX/0Aq;->A01:Ljava/lang/reflect/Method;
+.method public final nextIndex()I
+    .locals 1
 
-    .line 8
-    .line 9
-    invoke-static {v1}, LX/0Qb;->A00(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    .line 10
-    .line 11
-    .line 12
-    const/4 v0, 0x1
+    return v0
+.end method
 
-    .line 13
-    new-array v0, v0, [Ljava/lang/Object;
+.method public final bridge synthetic previous()Ljava/lang/Object;
+    .locals 1
 
-    .line 14
-    .line 15
-    invoke-static {v0, v2, v3, v4}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+    .line 0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    .line 16
-    .line 17
-    .line 18
-    invoke-static {v1, v0}, LX/0Aq;->A00(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 1
+    .line 2
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    .line 19
-    .line 20
-    .line 21
+    .line 3
+    .line 4
+    .line 5
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
     move-result-object v0
 
-    .line 22
-    check-cast v0, Ljava/lang/Boolean;
+    .line 4
+    throw v0
+.end method
 
-    .line 23
-    .line 24
-    if-eqz v0, :cond_0
+.method public final bridge synthetic set(Ljava/lang/Object;)V
+    .locals 1
 
-    .line 25
-    .line 26
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 0
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
-    .line 27
-    .line 28
-    .line 29
-    move-result v2
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
 
-    .line 30
-    :cond_0
-    return v2
+    .line 4
+    throw v0
 .end method

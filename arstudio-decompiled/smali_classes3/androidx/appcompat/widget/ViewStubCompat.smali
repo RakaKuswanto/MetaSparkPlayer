@@ -10,7 +10,7 @@
 
 .field public A02:I
 
-.field public A03:LX/4OU;
+.field public A03:LX/4J0;
 
 .field public A04:Ljava/lang/ref/WeakReference;
 
@@ -47,7 +47,7 @@
 
     .line 5
     .line 6
-    sget-object v0, LX/4XG;->A0R:[I
+    sget-object v0, LX/4M2;->A0R:[I
 
     .line 7
     .line 8
@@ -169,7 +169,7 @@
 
     .line 17
     .line 18
-    invoke-static {p0}, LX/4BD;->A0R(Landroid/view/View;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, LX/0X6;->A0G(Landroid/view/View;)Landroid/view/LayoutInflater;
 
     .line 19
     .line 20
@@ -182,7 +182,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v3, v0}, LX/4BE;->A0W(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;I)Landroid/view/View;
+    invoke-static {v1, v3, v0}, LX/434;->A0T(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;I)Landroid/view/View;
 
     .line 25
     .line 26
@@ -238,7 +238,7 @@
     .line 51
     .line 52
     :goto_0
-    invoke-static {v2}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {v2}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     .line 53
     .line 54
@@ -267,7 +267,7 @@
 
     .line 64
     .line 65
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 66
     .line 67
@@ -283,7 +283,7 @@
 
     .line 71
     .line 72
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 73
     .line 74
@@ -387,11 +387,11 @@
     return-void
 .end method
 
-.method public setOnInflateListener(LX/4OU;)V
+.method public setOnInflateListener(LX/4J0;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Landroidx/appcompat/widget/ViewStubCompat;->A03:LX/4OU;
+    iput-object p1, p0, Landroidx/appcompat/widget/ViewStubCompat;->A03:LX/4J0;
 
     .line 1
     .line 2
@@ -410,7 +410,7 @@
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/4BF;->A0a(Ljava/lang/ref/Reference;)Landroid/view/View;
+    invoke-static {v0}, LX/434;->A0W(Ljava/lang/ref/Reference;)Landroid/view/View;
 
     .line 5
     .line 6
@@ -462,7 +462,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 29
     .line 30

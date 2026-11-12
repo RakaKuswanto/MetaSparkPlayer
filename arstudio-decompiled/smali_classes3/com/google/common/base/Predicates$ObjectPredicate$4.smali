@@ -6,6 +6,16 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
+        }
+    .end annotation
 
     .line 0
     const/4 v0, 0x0
@@ -23,9 +33,17 @@
 # virtual methods
 .method public apply(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     .line 0
-    invoke-static {p1}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {p1}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 1
     .line 2

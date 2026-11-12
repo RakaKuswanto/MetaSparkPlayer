@@ -1,31 +1,25 @@
 .class public final LX/5nv;
-.super Ljava/lang/Object;
+.super Ljava/lang/IllegalStateException;
 .source ""
 
 
-# instance fields
-.field public A00:Z
-
-.field public A01:Z
+# static fields
+.field public static final serialVersionUID:J = 0x16d353715d40a41aL
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "Disposable already set!"
 
     .line 1
     .line 2
-    .line 3
-    iput-boolean p1, p0, LX/5nv;->A00:Z
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
+    .line 3
     .line 4
     .line 5
-    iput-boolean p2, p0, LX/5nv;->A01:Z
-
-    .line 6
-    .line 7
     return-void
 .end method

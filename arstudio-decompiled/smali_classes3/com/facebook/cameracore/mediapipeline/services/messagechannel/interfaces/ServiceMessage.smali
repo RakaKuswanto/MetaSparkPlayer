@@ -30,6 +30,26 @@
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/Class;Ljava/nio/ByteBuffer;)V
+    .locals 1
+
+    .line 268435456
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result v0
+
+    .line 268435460
+    invoke-direct {p0, v0, p2}, Lcom/facebook/cameracore/mediapipeline/services/messagechannel/interfaces/ServiceMessage;-><init>(ILjava/nio/ByteBuffer;)V
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    return-void
+.end method
+
 
 # virtual methods
 .method public getBuffer()Ljava/nio/ByteBuffer;

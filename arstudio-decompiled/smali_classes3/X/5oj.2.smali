@@ -1,172 +1,159 @@
 .class public final LX/5oj;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source ""
 
 
-# instance fields
-.field public final synthetic A00:LX/5oe;
-
-.field public final synthetic A01:LX/5og;
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DestructorThread$1"
 
 
 # direct methods
-.method public constructor <init>(LX/5oe;LX/5og;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p2, p0, LX/5oj;->A01:LX/5og;
+    const-string v0, "DestructorThread"
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/5oj;->A00:LX/5oe;
+    invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()V
-    .locals 6
+.method public final run()V
+    .locals 5
 
     .line 0
-    iget-object v5, p0, LX/5oj;->A01:LX/5og;
+    :catch_0
+    :goto_0
+    :try_start_0
+    sget-object v0, LX/5ok;->A02:Ljava/lang/ref/ReferenceQueue;
 
     .line 1
     .line 2
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-virtual {v0}, Ljava/lang/ref/ReferenceQueue;->remove()Ljava/lang/ref/Reference;
 
     .line 3
     .line 4
     .line 5
-    move-result-wide v0
+    move-result-object v4
 
     .line 6
-    iput-wide v0, v5, LX/5og;->A01:J
+    check-cast v4, LX/5oi;
 
     .line 7
     .line 8
-    sget-object v0, LX/014;->A0X:Ljava/lang/Integer;
+    invoke-virtual {v4}, LX/5oi;->destruct()V
 
     .line 9
     .line 10
-    invoke-static {v5, v0}, LX/5og;->A01(LX/5og;Ljava/lang/Integer;)V
-
     .line 11
+    iget-object v0, v4, LX/5oi;->A01:LX/5oi;
+
     .line 12
     .line 13
-    iget-object v2, v5, LX/5og;->A08:LX/5or;
+    if-nez v0, :cond_0
 
     .line 14
     .line 15
-    const/16 v1, 0x13
+    sget-object v0, LX/5ok;->A01:LX/5on;
 
     .line 16
     .line 17
-    const-string v0, "recording_start_finished"
+    iget-object v1, v0, LX/5on;->A00:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 18
     .line 19
-    invoke-interface {v2, v1, v0}, LX/5or;->ASl(ILjava/lang/String;)V
+    const/4 v0, 0x0
 
     .line 20
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 21
     .line 22
-    iget-object v4, v5, LX/5og;->A0A:LX/5oX;
-
     .line 23
+    move-result-object v3
+
     .line 24
-    if-eqz v4, :cond_0
+    check-cast v3, LX/5oi;
 
     .line 25
     .line 26
-    invoke-interface {v4}, LX/5oX;->now()J
+    :goto_1
+    if-eqz v3, :cond_0
 
     .line 27
     .line 28
-    .line 29
-    move-result-wide v2
+    iget-object v2, v3, LX/5oi;->A00:LX/5oi;
 
+    .line 29
     .line 30
-    iget-object v1, v5, LX/5og;->A06:Landroid/os/Handler;
+    sget-object v0, LX/5ok;->A00:LX/5ol;
 
     .line 31
     .line 32
-    new-instance v0, LX/5oc;
+    iget-object v1, v0, LX/5ol;->A00:LX/5oi;
 
     .line 33
     .line 34
-    invoke-direct {v0, v4, v5, v2, v3}, LX/5oc;-><init>(LX/5oX;LX/5og;J)V
+    iget-object v0, v1, LX/5oi;->A00:LX/5oi;
 
     .line 35
     .line 36
-    .line 37
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iput-object v0, v3, LX/5oi;->A00:LX/5oi;
 
+    .line 37
     .line 38
+    iput-object v3, v1, LX/5oi;->A00:LX/5oi;
+
     .line 39
     .line 40
-    :cond_0
-    iget-object v1, v5, LX/5og;->A07:LX/5dv;
+    iget-object v0, v3, LX/5oi;->A00:LX/5oi;
 
     .line 41
     .line 42
-    const/16 v0, 0x69
+    iput-object v3, v0, LX/5oi;->A01:LX/5oi;
 
     .line 43
     .line 44
-    invoke-interface {v1, v0}, LX/5dv;->AQO(I)Z
+    iput-object v1, v3, LX/5oi;->A01:LX/5oi;
 
     .line 45
     .line 46
+    move-object v3, v2
+
     .line 47
-    move-result v0
+    goto :goto_1
 
     .line 48
-    if-nez v0, :cond_1
+    :cond_0
+    iget-object v1, v4, LX/5oi;->A00:LX/5oi;
 
     .line 49
     .line 50
-    iget-object v0, p0, LX/5oj;->A00:LX/5oe;
+    iget-object v0, v4, LX/5oi;->A01:LX/5oi;
 
     .line 51
     .line 52
-    invoke-interface {v0}, LX/5oe;->AYC()V
+    iput-object v0, v1, LX/5oi;->A01:LX/5oi;
 
     .line 53
     .line 54
+    iget-object v0, v4, LX/5oi;->A01:LX/5oi;
+
     .line 55
-    :cond_1
-    return-void
-.end method
+    .line 56
+    iput-object v1, v0, LX/5oi;->A00:LX/5oi;
 
-.method public final A01(LX/5oR;)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/5oj;->A01:LX/5og;
-
-    .line 1
-    .line 2
-    invoke-virtual {v1, p1}, LX/5og;->A04(LX/5e7;)V
-
-    .line 3
-    .line 4
-    .line 5
-    iget-object v0, p0, LX/5oj;->A00:LX/5oe;
-
-    .line 6
-    .line 7
-    invoke-virtual {v1, v0}, LX/5og;->A06(LX/5oe;)V
-
-    .line 8
-    .line 9
-    .line 10
-    return-void
+    .line 57
+    .line 58
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 .end method

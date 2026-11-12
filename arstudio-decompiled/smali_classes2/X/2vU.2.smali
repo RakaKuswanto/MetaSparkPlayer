@@ -1,25 +1,58 @@
-.class public LX/2vU;
-.super LX/3QT;
+.class public final LX/2vu;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FrameCallbackWrapper$2"
 
 
 # instance fields
-.field public final A00:LX/1zl;
+.field public final synthetic A00:LX/2vv;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;LX/1zl;)V
+.method public constructor <init>(LX/2vv;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1}, LX/3QT;-><init>(Landroid/os/Handler;)V
+    iput-object p1, p0, LX/2vu;->A00:LX/2vv;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p2, p0, LX/2vU;->A00:LX/1zl;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/2vu;->A00:LX/2vv;
+
+    .line 1
+    .line 2
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-wide v0
+
+    .line 6
+    invoke-virtual {v2, v0, v1}, LX/2vv;->A02(J)V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method

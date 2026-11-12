@@ -2,69 +2,78 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CallbackWithHandler$1"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/graphics/Typeface;
+
+.field public final synthetic A01:LX/4cF;
+
+.field public final synthetic A02:LX/4ck;
+
 
 # direct methods
-.method public static A00(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
+.method public constructor <init>(Landroid/graphics/Typeface;LX/4cF;LX/4ck;)V
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/app/Activity;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
+    iput-object p2, p0, LX/4cI;->A01:LX/4cF;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object p0
+    iput-object p3, p0, LX/4cI;->A02:LX/4ck;
 
+    .line 3
     .line 4
-    return-object p0
+    iput-object p1, p0, LX/4cI;->A00:Landroid/graphics/Typeface;
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
 .end method
 
-.method public static A01(LX/4bP;Ljava/lang/Object;)LX/4ci;
+
+# virtual methods
+.method public final run()V
     .locals 2
 
     .line 0
-    new-instance v1, LX/4ci;
+    iget-object v0, p0, LX/4cI;->A02:LX/4ck;
 
     .line 1
     .line 2
-    invoke-direct {v1, p0}, LX/4ci;-><init>(LX/4bP;)V
+    iget-object v1, p0, LX/4cI;->A00:Landroid/graphics/Typeface;
 
     .line 3
     .line 4
+    check-cast v0, LX/4cV;
+
     .line 5
-    check-cast p1, Landroid/window/OnBackInvokedDispatcher;
-
     .line 6
-    .line 7
-    const v0, 0xf4240
+    iget-object v0, v0, LX/4cV;->A00:LX/4cJ;
 
+    .line 7
     .line 8
+    if-eqz v0, :cond_0
+
     .line 9
     .line 10
-    invoke-interface {p1, v0, v1}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
+    invoke-virtual {v0, v1}, LX/4cJ;->A01(Landroid/graphics/Typeface;)V
 
     .line 11
     .line 12
     .line 13
-    return-object v1
-.end method
-
-.method public static A02(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    check-cast p1, Landroid/window/OnBackInvokedCallback;
-
-    .line 1
-    .line 2
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
-
-    .line 3
-    .line 4
-    invoke-interface {p0, p1}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
-
-    .line 5
-    .line 6
-    .line 7
+    :cond_0
     return-void
 .end method

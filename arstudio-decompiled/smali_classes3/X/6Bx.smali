@@ -1,20 +1,17 @@
-.class public abstract LX/6Bx;
+.class public interface abstract LX/6BX;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/6By;
 
+# virtual methods
+.method public abstract getBool(Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$BoolParameter;Z)Z
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public abstract getDouble(Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$DoubleParameter;D)D
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract getLong(Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$Int64Parameter;J)J
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract getString(Lcom/facebook/cameracore/mediapipeline/services/experimentconfig/interfaces/gen/ExperimentsEnums$StringParameter;Ljava/lang/String;)Ljava/lang/String;
 .end method

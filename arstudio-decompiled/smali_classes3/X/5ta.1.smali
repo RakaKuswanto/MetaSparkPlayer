@@ -1,9 +1,9 @@
-.class public abstract LX/5ta;
+.class public final LX/5Ta;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5te;
+.implements LX/1kh;
 
 
 # direct methods
@@ -21,21 +21,39 @@
 
 
 # virtual methods
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 1
+.method public final AHm(I)I
+    .locals 3
 
     .line 0
-    const-string v0, "Should not be called"
+    rem-int/lit8 v0, p1, 0xa
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    const/4 v2, 0x1
 
     .line 3
+    if-ne v0, v2, :cond_0
+
     .line 4
     .line 5
-    move-result-object v0
+    rem-int/lit8 v1, p1, 0x64
 
     .line 6
-    throw v0
+    .line 7
+    const/16 v0, 0xb
+
+    .line 8
+    .line 9
+    if-eq v1, v0, :cond_0
+
+    .line 10
+    .line 11
+    return v2
+
+    .line 12
+    :cond_0
+    const/4 v2, 0x5
+
+    .line 13
+    return v2
 .end method

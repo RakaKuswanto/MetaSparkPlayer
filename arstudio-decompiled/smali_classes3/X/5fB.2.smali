@@ -1,32 +1,36 @@
-.class public interface abstract LX/5fB;
-.super Ljava/lang/Object;
+.class public final LX/5fB;
+.super LX/5fH;
 .source ""
 
-# interfaces
-.implements LX/5gT;
 
-
-# static fields
-.field public static final A00:LX/5gS;
+# instance fields
+.field public final A00:LX/5bD;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(LX/3Tc;LX/0GL;)V
     .locals 1
 
     .line 0
-    new-instance v0, LX/5gS;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-direct {v0}, LX/5gS;-><init>()V
+    invoke-direct {p0, p1, v0}, LX/5fH;-><init>(LX/3Tc;Z)V
 
+    .line 2
     .line 3
     .line 4
-    .line 5
-    sput-object v0, LX/5fB;->A00:LX/5gS;
+    invoke-static {p0, p0, p2}, LX/5bn;->A02(Ljava/lang/Object;LX/5bD;LX/0GL;)LX/5bD;
 
+    .line 5
     .line 6
     .line 7
+    move-result-object v0
+
+    .line 8
+    iput-object v0, p0, LX/5fB;->A00:LX/5bD;
+
+    .line 9
+    .line 10
     return-void
 .end method

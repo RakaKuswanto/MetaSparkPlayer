@@ -1,5 +1,5 @@
-.class public final LX/3Zq;
-.super Ljava/lang/Object;
+.class public final LX/3zQ;
+.super LX/3l0;
 .source ""
 
 
@@ -7,7 +7,11 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct {p0}, LX/3l0;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

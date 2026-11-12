@@ -12,11 +12,11 @@
 # instance fields
 .field public A00:Z
 
-.field public final A01:LX/62Q;
+.field public final A01:LX/5Tp;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/SurfaceTexture;LX/62Q;)V
+.method public constructor <init>(Landroid/graphics/SurfaceTexture;LX/5Tp;)V
     .locals 0
 
     .line 0
@@ -25,7 +25,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, Lcom/google/android/exoplayer2/video/DummySurface;->A01:LX/62Q;
+    iput-object p2, p0, Lcom/google/android/exoplayer2/video/DummySurface;->A01:LX/5Tp;
 
     .line 4
     .line 5
@@ -172,7 +172,7 @@
     move-result v0
 
     .line 66
-    invoke-static {v0}, LX/4BE;->A09(I)I
+    invoke-static {v0}, LX/0X6;->A01(I)I
 
     .line 67
     .line 68
@@ -226,16 +226,16 @@
 
     .line 17
     :cond_1
-    invoke-static {v0}, LX/5PE;->A06(Z)V
+    invoke-static {v0}, LX/55g;->A05(Z)V
 
     .line 18
     .line 19
     .line 20
-    new-instance v3, LX/62Q;
+    new-instance v3, LX/5Tp;
 
     .line 21
     .line 22
-    invoke-direct {v3}, LX/62Q;-><init>()V
+    invoke-direct {v3}, LX/5Tp;-><init>()V
 
     .line 23
     .line 24
@@ -249,7 +249,7 @@
     .line 28
     .line 29
     :cond_2
-    invoke-static {v3}, LX/4BF;->A0U(Landroid/os/HandlerThread;)Landroid/os/Looper;
+    invoke-static {v3}, LX/433;->A0N(Landroid/os/HandlerThread;)Landroid/os/Looper;
 
     .line 30
     .line 31
@@ -257,176 +257,175 @@
     move-result-object v0
 
     .line 33
-    new-instance v1, Landroid/os/Handler;
+    invoke-static {v3, v0}, LX/435;->A05(Landroid/os/Handler$Callback;Landroid/os/Looper;)Landroid/os/Handler;
 
     .line 34
     .line 35
-    invoke-direct {v1, v0, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
-
     .line 36
+    move-result-object v1
+
     .line 37
+    iput-object v1, v3, LX/5Tp;->A00:Landroid/os/Handler;
+
     .line 38
-    iput-object v1, v3, LX/62Q;->A00:Landroid/os/Handler;
-
     .line 39
+    new-instance v0, LX/6Bb;
+
     .line 40
-    new-instance v0, LX/62H;
-
     .line 41
-    .line 42
-    invoke-direct {v0, v1}, LX/62H;-><init>(Landroid/os/Handler;)V
+    invoke-direct {v0, v1}, LX/6Bb;-><init>(Landroid/os/Handler;)V
 
+    .line 42
     .line 43
     .line 44
-    .line 45
-    iput-object v0, v3, LX/62Q;->A01:LX/62H;
+    iput-object v0, v3, LX/5Tp;->A01:LX/6Bb;
 
+    .line 45
     .line 46
-    .line 47
     monitor-enter v3
 
-    .line 48
+    .line 47
     :try_start_0
-    iget-object v2, v3, LX/62Q;->A00:Landroid/os/Handler;
+    iget-object v2, v3, LX/5Tp;->A00:Landroid/os/Handler;
 
+    .line 48
     .line 49
-    .line 50
     const/4 v0, 0x1
 
-    .line 51
+    .line 50
     const/4 v1, 0x0
 
-    .line 52
+    .line 51
     invoke-virtual {v2, v0, v4, v1}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
+    .line 52
     .line 53
     .line 54
-    .line 55
     move-result-object v0
 
-    .line 56
+    .line 55
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 56
     .line 57
     .line 58
-    .line 59
     :goto_0
-    iget-object v0, v3, LX/62Q;->A02:Lcom/google/android/exoplayer2/video/DummySurface;
+    iget-object v0, v3, LX/5Tp;->A02:Lcom/google/android/exoplayer2/video/DummySurface;
 
+    .line 59
     .line 60
+    if-nez v0, :cond_3
+
     .line 61
-    if-nez v0, :cond_3
-
     .line 62
-    .line 63
-    iget-object v0, v3, LX/62Q;->A04:Ljava/lang/RuntimeException;
+    iget-object v0, v3, LX/5Tp;->A04:Ljava/lang/RuntimeException;
 
+    .line 63
     .line 64
-    .line 65
     if-nez v0, :cond_3
 
+    .line 65
     .line 66
-    .line 67
-    iget-object v0, v3, LX/62Q;->A03:Ljava/lang/Error;
+    iget-object v0, v3, LX/5Tp;->A03:Ljava/lang/Error;
 
+    .line 67
     .line 68
-    .line 69
     if-nez v0, :cond_3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 69
     .line 70
-    .line 71
     :try_start_1
     invoke-virtual {v3}, Ljava/lang/Object;->wait()V
 
+    .line 71
     .line 72
     .line 73
-    .line 74
     goto :goto_0
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 75
+    .line 74
     :catch_0
     const/4 v1, 0x1
 
-    .line 76
+    .line 75
     goto :goto_0
 
-    .line 77
+    .line 76
     :cond_3
     :try_start_2
     monitor-exit v3
 
-    .line 78
+    .line 77
     if-eqz v1, :cond_4
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 78
     .line 79
-    .line 80
-    invoke-static {}, LX/0Yf;->A0s()V
+    invoke-static {}, LX/0X3;->A0u()V
 
+    .line 80
     .line 81
     .line 82
-    .line 83
     :cond_4
-    iget-object v0, v3, LX/62Q;->A04:Ljava/lang/RuntimeException;
+    iget-object v0, v3, LX/5Tp;->A04:Ljava/lang/RuntimeException;
 
+    .line 83
     .line 84
+    if-nez v0, :cond_6
+
     .line 85
-    if-nez v0, :cond_6
-
     .line 86
-    .line 87
-    iget-object v0, v3, LX/62Q;->A03:Ljava/lang/Error;
+    iget-object v0, v3, LX/5Tp;->A03:Ljava/lang/Error;
 
+    .line 87
     .line 88
-    .line 89
     if-nez v0, :cond_6
 
+    .line 89
     .line 90
-    .line 91
-    iget-object v0, v3, LX/62Q;->A02:Lcom/google/android/exoplayer2/video/DummySurface;
+    iget-object v0, v3, LX/5Tp;->A02:Lcom/google/android/exoplayer2/video/DummySurface;
 
+    .line 91
     .line 92
-    .line 93
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 93
     .line 94
     .line 95
-    .line 96
     return-object v0
 
-    .line 97
+    .line 96
     :catchall_0
     move-exception v0
 
-    .line 98
+    .line 97
     :try_start_3
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 99
+    .line 98
     throw v0
 
-    .line 100
+    .line 99
     :cond_5
     const-string v0, "Unsupported prior to API level 17"
 
+    .line 100
     .line 101
-    .line 102
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
+    .line 102
     .line 103
     .line 104
-    .line 105
     move-result-object v0
 
-    .line 106
+    .line 105
     :cond_6
     throw v0
 .end method
@@ -532,7 +531,7 @@
     .line 1
     .line 2
     .line 3
-    iget-object v2, p0, Lcom/google/android/exoplayer2/video/DummySurface;->A01:LX/62Q;
+    iget-object v2, p0, Lcom/google/android/exoplayer2/video/DummySurface;->A01:LX/5Tp;
 
     .line 4
     .line 5
@@ -548,7 +547,7 @@
 
     .line 9
     .line 10
-    iget-object v0, v2, LX/62Q;->A00:Landroid/os/Handler;
+    iget-object v0, v2, LX/5Tp;->A00:Landroid/os/Handler;
 
     .line 11
     .line 12
@@ -557,7 +556,7 @@
     .line 13
     .line 14
     .line 15
-    iget-object v1, v2, LX/62Q;->A00:Landroid/os/Handler;
+    iget-object v1, v2, LX/5Tp;->A00:Landroid/os/Handler;
 
     .line 16
     .line 17

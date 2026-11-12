@@ -19,6 +19,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/RegularImmutableMultiset;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;->this$0:Lcom/google/common/collect/RegularImmutableMultiset;
@@ -37,6 +45,14 @@
 # virtual methods
 .method public final contains(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;->this$0:Lcom/google/common/collect/RegularImmutableMultiset;
@@ -62,13 +78,28 @@
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/1g5;
+    iget-object v0, v0, Lcom/google/common/collect/RegularImmutableMultiset;->A01:LX/231;
 
     .line 3
     .line 4
-    iget v0, v0, LX/1g5;->A02:I
+    iget v0, v0, LX/231;->A02:I
 
     .line 5
     .line 6
     return v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/IndexedImmutableSet;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

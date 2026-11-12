@@ -19,46 +19,8 @@
         }
     .end annotation
 
-    .line 536870912
-    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    const/4 v0, 0x1
-
-    .line 536870916
-    iput-boolean v0, p0, Landroidx/constraintlayout/widget/Guideline;->A00:Z
-
-    .line 536870917
-    .line 536870918
-    const/16 v0, 0x8
-
-    .line 536870919
-    .line 536870920
-    invoke-super {p0, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 536870921
-    .line 536870922
-    .line 536870923
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "context",
-            "attrs"
-        }
-    .end annotation
-
     .line 805306368
-    invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 805306369
     .line 805306370
@@ -79,6 +41,44 @@
     .line 805306377
     .line 805306378
     .line 805306379
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
+
+    .line 536870912
+    invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    const/4 v0, 0x1
+
+    .line 536870916
+    iput-boolean v0, p0, Landroidx/constraintlayout/widget/Guideline;->A00:Z
+
+    .line 536870917
+    .line 536870918
+    const/16 v0, 0x8
+
+    .line 536870919
+    .line 536870920
+    invoke-super {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 536870921
+    .line 536870922
+    .line 536870923
     return-void
 .end method
 
@@ -244,7 +244,7 @@
     move-result-object v1
 
     .line 4
-    check-cast v1, LX/533;
+    check-cast v1, LX/4vs;
 
     .line 5
     .line 6
@@ -256,7 +256,7 @@
 
     .line 9
     .line 10
-    iget v0, v1, LX/533;->A0T:I
+    iget v0, v1, LX/4vs;->A0T:I
 
     .line 11
     .line 12
@@ -268,7 +268,7 @@
 
     .line 15
     :cond_0
-    iput p1, v1, LX/533;->A0T:I
+    iput p1, v1, LX/4vs;->A0T:I
 
     .line 16
     .line 17
@@ -300,7 +300,7 @@
     move-result-object v1
 
     .line 4
-    check-cast v1, LX/533;
+    check-cast v1, LX/4vs;
 
     .line 5
     .line 6
@@ -312,7 +312,7 @@
 
     .line 9
     .line 10
-    iget v0, v1, LX/533;->A0U:I
+    iget v0, v1, LX/4vs;->A0U:I
 
     .line 11
     .line 12
@@ -324,7 +324,7 @@
 
     .line 15
     :cond_0
-    iput p1, v1, LX/533;->A0U:I
+    iput p1, v1, LX/4vs;->A0U:I
 
     .line 16
     .line 17
@@ -356,7 +356,7 @@
     move-result-object v1
 
     .line 4
-    check-cast v1, LX/533;
+    check-cast v1, LX/4vs;
 
     .line 5
     .line 6
@@ -368,7 +368,7 @@
 
     .line 9
     .line 10
-    iget v0, v1, LX/533;->A01:F
+    iget v0, v1, LX/4vs;->A01:F
 
     .line 11
     .line 12
@@ -384,7 +384,7 @@
 
     .line 17
     :cond_0
-    iput p1, v1, LX/533;->A01:F
+    iput p1, v1, LX/4vs;->A01:F
 
     .line 18
     .line 19

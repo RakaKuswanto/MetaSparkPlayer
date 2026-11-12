@@ -381,39 +381,34 @@
 
     .line 170
     .line 171
-    invoke-static {v15, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v1, v0, v14, v13, v15}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 172
     .line 173
     .line 174
-    invoke-static {v14, v13, v12, v11, v15}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v12, v11, v10, v9, v15}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 175
     .line 176
     .line 177
-    invoke-static {v15, v10, v9}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v8, v7, v6, v5, v15}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 178
     .line 179
     .line 180
-    invoke-static {v8, v7, v6, v5, v15}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v15, v4, v3}, LX/0X3;->A1U([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 181
     .line 182
     .line 183
-    invoke-static {v15, v4, v3}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    aput-object v2, v15, v16
 
     .line 184
     .line 185
-    .line 186
-    aput-object v2, v15, v16
-
-    .line 187
-    .line 188
     sput-object v15, Lcom/facebook/graphql/enums/GraphQLXFBMomentOfGratitudeStories;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLXFBMomentOfGratitudeStories;
 
-    .line 189
-    .line 190
+    .line 186
+    .line 187
     return-void
 .end method
 
@@ -441,7 +436,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

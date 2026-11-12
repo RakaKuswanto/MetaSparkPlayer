@@ -4,23 +4,21 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/0Na;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/0Na;
+.field public final A02:LX/0RP;
 
-.field public final A03:LX/0Na;
+.field public final A03:LX/0RP;
 
-.field public final A04:LX/0Na;
+.field public final A04:LX/0RP;
 
-.field public final A05:LX/0Na;
-
-.field public final A06:LX/0Na;
+.field public final A05:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -29,7 +27,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A0F()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0C()LX/0lf;
 
     .line 4
     .line 5
@@ -37,11 +35,11 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A00:LX/0RP;
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 10
     .line 11
@@ -49,11 +47,11 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A04:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A03:LX/0RP;
 
     .line 14
     .line 15
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 16
     .line 17
@@ -61,15 +59,15 @@
     move-result-object v0
 
     .line 19
-    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A03:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A02:LX/0RP;
 
     .line 20
     .line 21
-    sget v0, LX/2eq;->AFH:I
+    sget v0, LX/2I6;->ABi:I
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 24
     .line 25
@@ -77,15 +75,15 @@
     move-result-object v0
 
     .line 27
-    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A05:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A04:LX/0RP;
 
     .line 28
     .line 29
-    sget v0, LX/2eq;->AFD:I
+    sget v0, LX/2I6;->ABb:I
 
     .line 30
     .line 31
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 32
     .line 33
@@ -93,15 +91,15 @@
     move-result-object v0
 
     .line 35
-    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A06:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A05:LX/0RP;
 
     .line 36
     .line 37
-    sget v0, LX/2eq;->AFI:I
+    sget v0, LX/2I6;->ABj:I
 
     .line 38
     .line 39
-    invoke-static {v0}, LX/1zT;->A00(I)LX/1zT;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 40
     .line 41
@@ -109,21 +107,9 @@
     move-result-object v0
 
     .line 43
-    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A01:LX/0RP;
 
     .line 44
     .line 45
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 46
-    .line 47
-    .line 48
-    move-result-object v0
-
-    .line 49
-    iput-object v0, p0, Lcom/facebook/device_id/UniqueFamilyDeviceIdBroadcastSender;->A00:LX/1zG;
-
-    .line 50
-    .line 51
     return-void
 .end method

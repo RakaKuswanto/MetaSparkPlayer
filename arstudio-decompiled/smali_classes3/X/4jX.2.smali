@@ -1,102 +1,62 @@
-.class public abstract LX/4jX;
-.super Ljava/lang/Object;
+.class public final LX/4jx;
+.super LX/4jh;
 .source ""
 
 
 # direct methods
-.method public static A00(Ljava/util/BitSet;[Ljava/lang/String;I)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const/4 v1, 0x0
+    invoke-direct {p0}, LX/4jh;-><init>()V
 
     .line 1
-    invoke-virtual {p0, v1}, Ljava/util/BitSet;->nextClearBit(I)I
-
     .line 2
     .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final finalize()V
+    .locals 5
+
+    .line 0
+    :try_start_0
+    iget-wide v3, p0, LX/4jh;->A00:J
+
+    .line 1
+    .line 2
+    const-wide/16 v1, 0x0
+
+    .line 3
     .line 4
-    move-result v0
+    cmp-long v0, v3, v1
 
     .line 5
-    if-ge v0, p2, :cond_2
-
     .line 6
-    .line 7
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    if-eqz v0, :cond_0
 
+    .line 7
     .line 8
+    iput-wide v1, p0, LX/4jh;->A00:J
+
     .line 9
     .line 10
-    move-result-object v2
+    invoke-static {v3, v4}, Lcom/facebook/yoga/YogaNative;->jni_YGConfigFreeJNI(J)V
 
     .line 11
-    :goto_0
-    if-ge v1, p2, :cond_1
-
     .line 12
     .line 13
-    invoke-virtual {p0, v1}, Ljava/util/BitSet;->get(I)Z
+    :cond_0
+    return-void
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 14
+    :catchall_0
+    move-exception v0
+
     .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    if-nez v0, :cond_0
-
-    .line 18
-    .line 19
-    aget-object v0, p1, v1
-
-    .line 20
-    .line 21
-    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 22
-    .line 23
-    .line 24
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    .line 25
-    .line 26
-    goto :goto_0
-
-    .line 27
-    :cond_1
-    const-string v1, "The following props are not marked as optional and were not supplied: "
-
-    .line 28
-    .line 29
-    invoke-virtual {v2}, Ljava/util/AbstractCollection;->toArray()[Ljava/lang/Object;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v0
-
-    .line 33
-    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v0
-
-    .line 37
-    invoke-static {v1, v0}, LX/0Yf;->A0W(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-object v0
-
-    .line 41
     throw v0
-
-    .line 42
-    :cond_2
-    return-void
 .end method

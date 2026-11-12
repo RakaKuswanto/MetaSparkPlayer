@@ -1,43 +1,212 @@
-.class public final LX/2zu;
-.super Ljava/lang/Object;
+.class public final enum LX/2zU;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nm;
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-.field public final A01:LX/1Nw;
+.field public static final synthetic $VALUES:[LX/2zU;
+
+.field public static final enum G2:LX/2zU;
+
+.field public static final enum G3:LX/2zU;
+
+.field public static final enum G4:LX/2zU;
+
+.field public static final enum OtherMobile:LX/2zU;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public static final synthetic $values()[LX/2zU;
+    .locals 3
+
+    const/4 v0, 0x4
+
+    new-array v2, v0, [LX/2zU;
+
+    sget-object v1, LX/2zU;->G2:LX/2zU;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2zU;->G3:LX/2zU;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2zU;->G4:LX/2zU;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/2zU;->OtherMobile:LX/2zU;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "G2"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/2zU;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/2zU;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/2zU;->G2:LX/2zU;
+
+    .line 9
+    .line 10
+    const-string v2, "G3"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/2zU;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/2zU;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/2zU;->G3:LX/2zU;
+
+    .line 19
+    .line 20
+    const-string v2, "G4"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/2zU;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/2zU;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/2zU;->G4:LX/2zU;
+
+    .line 29
+    .line 30
+    const-string v2, "OtherMobile"
+
+    .line 31
+    .line 32
+    const/4 v1, 0x3
+
+    .line 33
+    new-instance v0, LX/2zU;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1}, LX/2zU;-><init>(Ljava/lang/String;I)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, LX/2zU;->OtherMobile:LX/2zU;
+
+    .line 39
+    .line 40
+    invoke-static {}, LX/2zU;->$values()[LX/2zU;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    sput-object v0, LX/2zU;->$VALUES:[LX/2zU;
+
+    .line 45
+    .line 46
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
+    .line 50
+    sput-object v0, LX/2zU;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 51
+    .line 52
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2zu;->A01:LX/1Nw;
+    return-void
+.end method
 
-    .line 4
-    .line 5
-    sget v0, LX/2eq;->A6g:I
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
 
-    .line 6
-    .line 7
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
+    sget-object v0, LX/2zU;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 8
-    .line 9
-    .line 10
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/2zU;
+    .locals 1
+
+    const-class v0, LX/2zU;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
     move-result-object v0
 
-    .line 11
-    iput-object v0, p0, LX/2zu;->A00:LX/1Nm;
+    check-cast v0, LX/2zU;
 
-    .line 12
-    .line 13
-    return-void
+    return-object v0
+.end method
+
+.method public static values()[LX/2zU;
+    .locals 1
+
+    sget-object v0, LX/2zU;->$VALUES:[LX/2zU;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/2zU;
+
+    return-object v0
 .end method

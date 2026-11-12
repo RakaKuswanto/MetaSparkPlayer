@@ -1,14 +1,33 @@
-.class public interface abstract LX/3Rg;
-.super Ljava/lang/Object;
+.class public final LX/3Rg;
+.super LX/3Rh;
 .source ""
 
 
-# virtual methods
-.method public abstract addSample(JJJJJZZ)V
+# static fields
+.field public static final A00:LX/3Rg;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/3Rg;
+
+    invoke-direct {v0}, LX/3Rg;-><init>()V
+
+    sput-object v0, LX/3Rg;->A00:LX/3Rg;
+
+    return-void
 .end method
 
-.method public abstract getBandwidthEstimate(Lcom/facebook/exoplayer/formatevaluator/configuration/AbrContextAwareConfiguration;)Lcom/facebook/exoplayer/bandwidthestimator/estimate/VideoBandwidthEstimate;
-.end method
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract reset(LX/0Yn;)V
+    .line 0
+    invoke-direct {p0}, LX/3Rh;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

@@ -3,8 +3,8 @@
 .source ""
 
 # interfaces
-.implements LX/1yF;
-.implements LX/1t0;
+.implements LX/206;
+.implements Lcom/facebook/graphservice/interfaces/GraphQLConsistency;
 
 
 # direct methods
@@ -20,7 +20,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 5
     .line 6
@@ -151,7 +151,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 19
     .line 20
@@ -167,7 +167,7 @@
 
     .line 24
     .line 25
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 26
     .line 27
@@ -199,7 +199,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -223,11 +223,11 @@
     return-object v0
 .end method
 
-.method public applyOptimisticBuilder(LX/19O;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public applyOptimisticBuilder(LX/1gF;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -255,7 +255,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -303,7 +303,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -326,11 +326,11 @@
     return-object v0
 .end method
 
-.method public publishBuilder(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public publishBuilder(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -353,11 +353,11 @@
     return-object v0
 .end method
 
-.method public publishBuilderWithFullConsistency(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public publishBuilderWithFullConsistency(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -384,7 +384,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -411,7 +411,7 @@
     .locals 7
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2
@@ -471,7 +471,7 @@
     .locals 7
 
     .line 0
-    invoke-static {}, LX/0VO;->A00()V
+    invoke-static {}, LX/0PQ;->A00()Z
 
     .line 1
     .line 2

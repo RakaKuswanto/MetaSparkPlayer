@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public mCallback:LX/5qC;
+.field public mCallback:LX/60o;
 
 .field public final mDestroyed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -20,7 +20,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -37,7 +37,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Ye;->A0d()Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {}, LX/0X2;->A0r()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 4
     .line 5
@@ -91,7 +91,7 @@
     .locals 10
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/CameraAudioManager;->mCallback:LX/5qC;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/CameraAudioManager;->mCallback:LX/60o;
 
     .line 1
     .line 2
@@ -126,7 +126,7 @@
     move-wide v6, p2
 
     .line 15
-    invoke-virtual/range {v1 .. v9}, LX/5qC;->A01([BIIIJJ)V
+    invoke-virtual/range {v1 .. v9}, LX/60o;->A01([BIIIJJ)V
 
     .line 16
     .line 17

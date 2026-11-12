@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public mLoadToken:LX/1RI;
+.field public mLoadToken:LX/1cE;
 
 
 # direct methods
-.method public constructor <init>(LX/1RI;)V
+.method public constructor <init>(LX/1cE;)V
     .locals 0
 
     .line 0
@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/ardelivery/effectasyncassetfetcher/CancelableLoadToken;->mLoadToken:LX/1RI;
+    iput-object p1, p0, Lcom/facebook/cameracore/ardelivery/effectasyncassetfetcher/CancelableLoadToken;->mLoadToken:LX/1cE;
 
     .line 4
     .line 5

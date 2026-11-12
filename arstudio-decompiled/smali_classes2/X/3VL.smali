@@ -1,118 +1,62 @@
 .class public final LX/3VL;
-.super Ljava/lang/Object;
+.super LX/3VF;
 .source ""
+
+# interfaces
+.implements LX/1gy;
 
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public constructor <init>()V
     .locals 1
 
-    const/16 v0, 0x14
+    .line 268435456
+    const v0, 0x53b412f6
 
-    if-eq p0, v0, :cond_0
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-direct {p0, v0}, LX/3VF;-><init>(I)V
 
-    packed-switch p0, :pswitch_data_0
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    return-void
+.end method
 
-    const-string v0, "UNKNOWN"
+.method public constructor <init>(I)V
+    .locals 0
 
+    .line 0
+    invoke-direct {p0, p1}, LX/3VF;-><init>(I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A3p()LX/3i2;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/3Vl;
+
+    .line 1
+    .line 2
+    invoke-virtual {p0, v0}, LX/3VF;->A0R(Ljava/lang/Class;)LX/3VF;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/3i2;
+
+    .line 7
+    .line 8
     return-object v0
-
-    :pswitch_0
-    const-string v0, "HSPAP"
-
-    return-object v0
-
-    :pswitch_1
-    const-string v0, "EHRPD"
-
-    return-object v0
-
-    :pswitch_2
-    const-string v0, "LTE"
-
-    return-object v0
-
-    :pswitch_3
-    const-string v0, "EVDO_B"
-
-    return-object v0
-
-    :pswitch_4
-    const-string v0, "IDEN"
-
-    return-object v0
-
-    :pswitch_5
-    const-string v0, "HSPA"
-
-    return-object v0
-
-    :pswitch_6
-    const-string v0, "HSUPA"
-
-    return-object v0
-
-    :pswitch_7
-    const-string v0, "HSDPA"
-
-    return-object v0
-
-    :pswitch_8
-    const-string v0, "1xRTT"
-
-    return-object v0
-
-    :pswitch_9
-    const-string v0, "EVDO_A"
-
-    return-object v0
-
-    :pswitch_a
-    const-string v0, "EVDO_0"
-
-    return-object v0
-
-    :pswitch_b
-    const-string v0, "CDMA"
-
-    return-object v0
-
-    :pswitch_c
-    const-string v0, "UMTS"
-
-    return-object v0
-
-    :pswitch_d
-    const-string v0, "EDGE"
-
-    return-object v0
-
-    :pswitch_e
-    const-string v0, "GPRS"
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "NR"
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

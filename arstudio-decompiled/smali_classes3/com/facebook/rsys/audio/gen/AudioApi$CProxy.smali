@@ -89,6 +89,9 @@
     return v0
 .end method
 
+.method public native getAudioFrame(Ljava/lang/String;III)Lcom/facebook/rsys/audio/gen/AudioFrame;
+.end method
+
 .method public native handleEncodedPacket(Lcom/facebook/rsys/audio/gen/AudioEncodedPacket;)V
 .end method
 
@@ -99,6 +102,9 @@
 .end method
 
 .method public native removeSink(Ljava/lang/String;ILcom/facebook/rsys/audio/gen/AudioSourceSink;)V
+.end method
+
+.method public native resetNsAecAlgorithms()V
 .end method
 
 .method public native setAudioActivationState(I)V

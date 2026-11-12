@@ -3,95 +3,77 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultMaxSizePluginController$1"
-
-
-# instance fields
-.field public final synthetic A00:LX/2RD;
-
-.field public final synthetic A01:LX/2RC;
-
-.field public final synthetic A02:LX/2RM;
-
-.field public final synthetic A03:Ljava/io/File;
+.implements LX/2QB;
 
 
 # direct methods
-.method public constructor <init>(LX/2RD;LX/2RC;LX/2RM;Ljava/io/File;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p2, p0, LX/2RZ;->A01:LX/2RC;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p4, p0, LX/2RZ;->A03:Ljava/io/File;
-
     .line 3
-    .line 4
-    iput-object p1, p0, LX/2RZ;->A00:LX/2RD;
-
-    .line 5
-    .line 6
-    iput-object p3, p0, LX/2RZ;->A02:LX/2RM;
-
-    .line 7
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final AJI(Ljava/lang/String;)Ljava/lang/Class;
+    .locals 1
 
     .line 0
-    iget-object v4, p0, LX/2RZ;->A01:LX/2RC;
+    const-string v0, "Unknown operation "
 
     .line 1
     .line 2
-    iget-object v3, p0, LX/2RZ;->A03:Ljava/io/File;
+    invoke-static {v0, p1}, LX/004;->A03(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 3
     .line 4
-    iget-object v0, p0, LX/2RZ;->A00:LX/2RD;
-
     .line 5
+    move-result-object v0
+
     .line 6
-    iget-object v1, v0, LX/2RD;->A02:Ljava/lang/String;
+    throw v0
+.end method
 
-    .line 7
-    .line 8
-    iget-object v0, p0, LX/2RZ;->A02:LX/2RM;
+.method public final AKb(Lcom/facebook/auth/usersession/FbUserSession;Ljava/lang/String;)LX/19P;
+    .locals 1
 
-    .line 9
-    .line 10
-    new-instance v2, LX/2QJ;
+    .line 0
+    const-string v0, "Unknown operation "
 
-    .line 11
-    .line 12
-    invoke-direct {v2, v0, v1}, LX/2QJ;-><init>(LX/2QU;Ljava/lang/String;)V
+    .line 1
+    .line 2
+    invoke-static {v0, p2}, LX/004;->A03(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
-    .line 13
-    .line 14
-    .line 15
-    const-wide/16 v0, -0x1
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 16
-    .line 17
-    invoke-virtual {v4, v2, v3, v0, v1}, LX/2RC;->A00(LX/2QJ;Ljava/io/File;J)V
+    .line 6
+    throw v0
+.end method
 
-    .line 18
-    .line 19
-    .line 20
-    return-void
+.method public final ALZ(Ljava/lang/String;)LX/2Tq;
+    .locals 1
+
+    .line 0
+    const-string v0, "Unknown operation "
+
+    .line 1
+    .line 2
+    invoke-static {v0, p1}, LX/004;->A03(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
 .end method

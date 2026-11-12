@@ -1,27 +1,25 @@
-.class public final LX/2uq;
+.class public final LX/2uQ;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/2mI;
-.implements LX/3JN;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MobileConfigEmergencyPushConditionalWorker"
-
 
 # instance fields
-.field public A00:LX/1zG;
+.field public A00:J
 
-.field public final A01:LX/0Na;
+.field public A01:J
 
-.field public final A02:LX/0Na;
+.field public final A02:Landroid/os/MessageQueue$IdleHandler;
+
+.field public final A03:LX/0RP;
+
+.field public final A04:LX/0RP;
+
+.field public final A05:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,265 +27,184 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AOr:I
+    invoke-static {}, LX/0lf;->A02()LX/0lf;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
+    .line 7
+    iput-object v0, p0, LX/2uQ;->A03:LX/0RP;
+
+    .line 8
     .line 9
-    iput-object v0, p0, LX/2uq;->A02:LX/0Na;
+    invoke-static {}, LX/0lf;->A0A()LX/0lf;
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->A4S:I
-
     .line 12
+    move-result-object v0
+
     .line 13
-    invoke-static {v0}, LX/1zT;->A00(I)LX/1zT;
+    iput-object v0, p0, LX/2uQ;->A04:LX/0RP;
 
     .line 14
     .line 15
-    .line 16
-    move-result-object v0
+    const-wide/16 v0, -0x1
 
+    .line 16
     .line 17
-    iput-object v0, p0, LX/2uq;->A01:LX/0Na;
+    iput-wide v0, p0, LX/2uQ;->A00:J
 
     .line 18
     .line 19
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    iput-wide v0, p0, LX/2uQ;->A01:J
 
     .line 20
     .line 21
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
     .line 22
+    .line 23
+    .line 24
     move-result-object v0
 
-    .line 23
-    iput-object v0, p0, LX/2uq;->A00:LX/1zG;
-
-    .line 24
     .line 25
+    iput-object v0, p0, LX/2uQ;->A05:Ljava/util/Set;
+
+    .line 26
+    .line 27
+    new-instance v0, LX/2uU;
+
+    .line 28
+    .line 29
+    invoke-direct {v0, p0}, LX/2uU;-><init>(LX/2uQ;)V
+
+    .line 30
+    .line 31
+    .line 32
+    iput-object v0, p0, LX/2uQ;->A02:Landroid/os/MessageQueue$IdleHandler;
+
+    .line 33
+    .line 34
     return-void
 .end method
 
-
-# virtual methods
-.method public final ADV()LX/0Gd;
-    .locals 1
+.method public static A00(LX/2uQ;)V
+    .locals 14
 
     .line 0
-    const/16 v0, 0x65
+    iget-object v3, p0, LX/2uQ;->A05:Ljava/util/Set;
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     .line 3
     .line 4
     .line 5
-    move-result-object v0
+    move-result-object v6
 
     .line 6
-    return-object v0
-.end method
+    :cond_0
+    :goto_0
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
-.method public final AHL()J
-    .locals 2
-
-    const-wide/32 v0, 0x36ee80
-
-    return-wide v0
-.end method
-
-.method public final AKa()LX/37j;
-    .locals 3
-
-    .line 0
-    const-wide v1, 0x14572b4cc159eL
-
-    .line 1
-    .line 2
-    .line 3
-    .line 4
-    .line 5
-    new-instance v0, LX/37j;
-
-    .line 6
     .line 7
-    invoke-direct {v0, v1, v2}, LX/37j;-><init>(J)V
-
     .line 8
     .line 9
+    move-result v0
+
     .line 10
-    return-object v0
-.end method
-
-.method public final ALN()LX/3DW;
-    .locals 2
-
-    .line 0
-    new-instance v1, LX/2uu;
-
-    .line 1
-    .line 2
-    invoke-direct {v1}, LX/2uu;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sget-object v0, LX/3BH;->LOGGED_IN:LX/3BH;
-
-    .line 6
-    .line 7
-    invoke-static {v1, v0}, LX/2uu;->A00(LX/2uu;Ljava/lang/Enum;)V
-
-    .line 8
-    .line 9
-    .line 10
-    sget-object v0, LX/2af;->CONNECTED:LX/2af;
+    if-eqz v0, :cond_2
 
     .line 11
     .line 12
-    invoke-static {v1, v0}, LX/2uu;->A00(LX/2uu;Ljava/lang/Enum;)V
+    invoke-static {v6}, LX/0X3;->A0B(Ljava/util/Iterator;)J
 
     .line 13
     .line 14
     .line 15
-    invoke-virtual {v1}, LX/2uu;->A01()LX/3DW;
+    move-result-wide v4
 
     .line 16
+    const/16 v0, 0x20
+
     .line 17
     .line 18
-    move-result-object v0
-
-    .line 19
-    return-object v0
-.end method
-
-.method public final ANL()LX/2vF;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/2vF;->INTERVAL:LX/2vF;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final AkG(LX/2kn;)Z
-    .locals 2
-
-    .line 0
-    sget v0, LX/2eq;->AE5:I
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/3Fv;
-
-    .line 7
-    .line 8
-    invoke-interface {v0}, LX/3Fv;->AIb()LX/34v;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v1
-
-    .line 12
-    iget-object v0, p0, LX/2uq;->A01:LX/0Na;
-
-    .line 13
-    .line 14
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    check-cast v0, LX/2u6;
+    shr-long v0, v4, v0
 
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/2u6;->A00(LX/34v;LX/2u6;)V
+    long-to-int v8, v0
 
     .line 21
-    .line 22
-    .line 23
-    invoke-interface {v1}, LX/34v;->updateEmergencyPushConfigs()Z
+    long-to-int v9, v4
 
+    .line 22
+    iget-object v0, p0, LX/2uQ;->A04:LX/0RP;
+
+    .line 23
     .line 24
+    invoke-static {v0}, LX/0X5;->A0L(LX/0RP;)Lcom/facebook/quicklog/QuickPerformanceLogger;
+
     .line 25
     .line 26
-    iget-object v0, p0, LX/2uq;->A02:LX/0Na;
-
     .line 27
+    move-result-object v7
+
     .line 28
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    iget-wide v11, p0, LX/2uQ;->A00:J
 
     .line 29
     .line 30
+    const-wide/16 v1, -0x1
+
     .line 31
-    const/4 v0, 0x1
-
     .line 32
-    return v0
-.end method
+    cmp-long v0, v11, v1
 
-.method public final Ao3()Z
-    .locals 4
+    .line 33
+    .line 34
+    if-nez v0, :cond_1
 
-    .line 0
-    invoke-static {}, LX/1z6;->A0N()LX/35B;
+    .line 35
+    .line 36
+    iget-wide v11, p0, LX/2uQ;->A01:J
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v3
+    .line 37
+    .line 38
+    cmp-long v0, v11, v1
 
-    .line 4
-    const-wide v1, 0x8100aa00010a24L
+    .line 39
+    .line 40
+    if-eqz v0, :cond_0
 
-    .line 5
-    .line 6
-    .line 7
-    .line 8
-    .line 9
-    sget-object v0, LX/1Us;->A04:LX/1Us;
+    .line 41
+    .line 42
+    :cond_1
+    sget-object v13, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 10
-    .line 11
-    invoke-interface {v3, v0, v1, v2}, LX/35B;->ACi(LX/1Us;J)Z
+    .line 43
+    .line 44
+    const-string v10, "TTRC_TTST"
 
-    .line 12
-    .line 13
-    .line 14
-    move-result v0
+    .line 45
+    .line 46
+    invoke-interface/range {v7 .. v13}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerPoint(IILjava/lang/String;JLjava/util/concurrent/TimeUnit;)V
 
-    .line 15
-    return v0
-.end method
+    .line 47
+    .line 48
+    .line 49
+    goto :goto_0
 
-.method public final getFriendlyName()Ljava/lang/String;
-    .locals 1
+    .line 50
+    :cond_2
+    invoke-interface {v3}, Ljava/util/Set;->clear()V
 
-    const-string v0, "MobileConfigEmergencyPushConditionalWorker"
-
-    return-object v0
+    .line 51
+    .line 52
+    .line 53
+    return-void
 .end method

@@ -3,30 +3,29 @@
 .source ""
 
 
+# instance fields
+.field public A00:Ljava/util/List;
+
+.field public A01:Lorg/json/JSONObject;
+
+
 # direct methods
-.method public static A00(Landroid/view/View;)Ljava/lang/CharSequence;
+.method public constructor <init>(Ljava/util/List;Lorg/json/JSONObject;)V
     .locals 0
 
     .line 0
-    invoke-virtual {p0}, Landroid/view/View;->getStateDescription()Ljava/lang/CharSequence;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object p0
+    iput-object p2, p0, LX/03C;->A01:Lorg/json/JSONObject;
 
     .line 4
-    return-object p0
-.end method
+    .line 5
+    iput-object p1, p0, LX/03C;->A00:Ljava/util/List;
 
-.method public static A01(Landroid/view/View;Ljava/lang/CharSequence;)V
-    .locals 0
-
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/view/View;->setStateDescription(Ljava/lang/CharSequence;)V
-
-    .line 1
-    .line 2
-    .line 3
+    .line 6
+    .line 7
     return-void
 .end method

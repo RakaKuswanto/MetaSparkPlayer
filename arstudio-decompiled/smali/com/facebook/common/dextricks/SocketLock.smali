@@ -176,7 +176,7 @@
     .line 42
     :cond_1
     :try_start_2
-    invoke-static {v2}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v2}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 43
     .line 44

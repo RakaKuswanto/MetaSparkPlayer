@@ -1,4 +1,4 @@
-.class public final Lcom/google/common/base/Objects;
+.class public abstract Lcom/google/common/base/Objects;
 .super Lcom/google/common/base/ExtraObjectsMethodsForWeb;
 .source ""
 
@@ -6,6 +6,16 @@
 # direct methods
 .method public static equal(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "a",
+            "b"
+        }
+    .end annotation
 
     .line 0
     if-eq p0, p1, :cond_0

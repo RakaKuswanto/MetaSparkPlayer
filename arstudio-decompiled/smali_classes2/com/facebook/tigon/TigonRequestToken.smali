@@ -9,3 +9,6 @@
 
 .method public abstract changeHttpPriority(IZ)V
 .end method
+
+.method public abstract updateHttpPriorityContext(Lcom/facebook/tigon/iface/HttpPriorityContext;)V
+.end method

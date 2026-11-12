@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 7
 
     .line 0
@@ -40,7 +40,7 @@
     .line 6
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 7
     .line 8
@@ -48,7 +48,7 @@
     move-result-object v1
 
     .line 10
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 11
     .line 12
@@ -56,7 +56,7 @@
 
     .line 13
     .line 14
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 15
     .line 16
@@ -78,14 +78,14 @@
     .line 24
     .line 25
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 26
     .line 27
     .line 28
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 29
     .line 30
@@ -93,7 +93,7 @@
     move-result-object v1
 
     .line 32
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 33
     .line 34
@@ -105,7 +105,7 @@
 
     .line 37
     :sswitch_0
-    const-string/jumbo v0, "is_available"
+    const-string/jumbo v0, "is_enforced"
 
     .line 38
     .line 39
@@ -122,184 +122,188 @@
 
     .line 45
     .line 46
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    invoke-virtual {p1}, LX/3oD;->A19()Z
 
     .line 47
     .line 48
     .line 49
-    move-result v4
+    move-result v5
 
     .line 50
     goto :goto_0
 
     .line 51
     :sswitch_1
-    const-string v0, "config_option"
+    const-string/jumbo v0, "is_selected"
 
     .line 52
     .line 53
+    .line 54
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 54
     .line 55
     .line 56
+    .line 57
     move-result v0
 
-    .line 57
+    .line 58
     if-eqz v0, :cond_1
 
-    .line 58
     .line 59
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 60
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
     .line 61
     .line 62
-    move-result-object v2
-
     .line 63
-    const-string v0, "configOption"
+    move-result v6
 
     .line 64
+    goto :goto_0
+
     .line 65
-    invoke-static {v0, v2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    :sswitch_2
+    const-string/jumbo v0, "order"
 
     .line 66
     .line 67
     .line 68
-    goto :goto_0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 69
-    :sswitch_2
-    const-string/jumbo v0, "order"
-
     .line 70
     .line 71
+    move-result v0
+
     .line 72
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 73
     .line 74
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 75
-    move-result v0
-
     .line 76
-    if-eqz v0, :cond_1
-
     .line 77
-    .line 78
-    invoke-virtual {p1}, LX/27m;->A0i()I
-
-    .line 79
-    .line 80
-    .line 81
     move-result v3
 
-    .line 82
+    .line 78
     goto :goto_0
 
-    .line 83
+    .line 79
     :sswitch_3
-    const-string/jumbo v0, "is_selected"
+    const-string/jumbo v0, "config_option"
 
+    .line 80
+    .line 81
+    .line 82
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 83
     .line 84
     .line 85
+    move-result v0
+
     .line 86
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
     .line 87
     .line 88
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 89
-    move-result v0
-
     .line 90
-    if-eqz v0, :cond_1
-
     .line 91
+    move-result-object v2
+
     .line 92
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    const-string/jumbo v0, "configOption"
 
     .line 93
     .line 94
     .line 95
-    move-result v6
+    invoke-static {v2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 96
+    .line 97
+    .line 98
     goto :goto_0
 
-    .line 97
-    :sswitch_4
-    const-string/jumbo v0, "is_enforced"
-
-    .line 98
     .line 99
-    .line 100
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_4
+    const-string/jumbo v0, "is_available"
 
+    .line 100
     .line 101
     .line 102
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 103
+    .line 104
+    .line 105
     move-result v0
 
-    .line 104
-    if-eqz v0, :cond_1
-
-    .line 105
     .line 106
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    if-eqz v0, :cond_1
 
     .line 107
     .line 108
-    .line 109
-    move-result v5
+    invoke-virtual {p1}, LX/3oD;->A19()Z
 
+    .line 109
     .line 110
+    .line 111
+    move-result v4
+
+    .line 112
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
+    .line 113
     :goto_1
     new-instance v1, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;
 
-    .line 112
-    .line 113
-    invoke-direct/range {v1 .. v6}, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;-><init>(Ljava/lang/String;IZZZ)V
-
     .line 114
     .line 115
+    invoke-direct/range {v1 .. v6}, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;-><init>(Ljava/lang/String;IZZZ)V
+
     .line 116
+    .line 117
+    .line 118
     return-object v1
 
-    .line 117
+    .line 119
     :catch_0
     move-exception v1
 
-    .line 118
-    const-class v0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;
-
-    .line 119
     .line 120
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    const-class v0, Lcom/facebook/ipc/composer/model/ComposerPageShareSheetConfig;
 
     .line 121
     .line 122
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
+
     .line 123
-    const/4 v0, 0x0
-
     .line 124
-    throw v0
-
     .line 125
-    nop
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 126
+    .line 127
+    .line 128
+    move-result-object v0
+
+    .line 129
+    throw v0
+
+    .line 130
     :sswitch_data_0
     .sparse-switch
-        -0x79e45a0c -> :sswitch_0
-        -0x1ce0cbee -> :sswitch_1
+        -0x79e45a0c -> :sswitch_4
+        -0x1ce0cbee -> :sswitch_3
         0x651874e -> :sswitch_2
-        0x1b364610 -> :sswitch_3
-        0x3f545037 -> :sswitch_4
+        0x1b364610 -> :sswitch_1
+        0x3f545037 -> :sswitch_0
     .end sparse-switch
 .end method

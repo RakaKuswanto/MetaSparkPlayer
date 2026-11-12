@@ -1,317 +1,129 @@
-.class public final LX/0Wi;
+.class public abstract LX/0Wi;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-
-.field public A01:J
-
-.field public A02:LX/0V7;
-
-.field public A03:Ljava/lang/String;
-
-.field public A04:Ljava/lang/String;
-
-.field public A05:Ljava/lang/String;
-
-.field public A06:Ljava/lang/String;
-
-.field public A07:Ljava/util/List;
-
-.field public A08:Ljava/util/UUID;
+# static fields
+.field public static final A00:LX/0Vy;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 11
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v9, LX/0Wf;->A04:Ljava/util/Set;
 
     .line 1
     .line 2
+    sget-object v6, LX/0Wf;->A02:Ljava/util/Map;
+
     .line 3
-    const/16 v0, 0x32
-
     .line 4
-    .line 5
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/0Wi;->A07:Ljava/util/List;
-
-    .line 10
-    .line 11
-    const/4 v0, 0x0
-
-    .line 12
-    iput v0, p0, LX/0Wi;->A00:I
-
-    .line 13
-    .line 14
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    .line 0
-    invoke-static {}, LX/002;->A0M()Lorg/json/JSONObject;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v3
-
-    .line 4
-    :try_start_0
-    const-string v1, "seq"
+    sget-object v8, LX/0Wf;->A06:Ljava/util/Set;
 
     .line 5
     .line 6
-    iget v0, p0, LX/0Wi;->A00:I
+    sget-object v7, LX/0Wf;->A03:Ljava/util/Map;
 
     .line 7
     .line 8
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    sget-object v0, LX/0Wf;->A00:LX/0Ox;
 
     .line 9
     .line 10
+    new-instance v1, LX/0W5;
+
     .line 11
-    const-string v2, "time"
-
     .line 12
-    .line 13
-    iget-wide v0, p0, LX/0Wi;->A01:J
+    invoke-direct {v1, v0}, LX/0W5;-><init>(Ljava/lang/Object;)V
 
+    .line 13
     .line 14
     .line 15
-    invoke-static {v0, v1}, LX/0Wr;->A00(J)Ljava/lang/String;
+    new-instance v0, LX/0Ou;
 
     .line 16
     .line 17
+    invoke-direct {v0}, LX/0Ou;-><init>()V
+
     .line 18
-    move-result-object v0
-
     .line 19
-    invoke-virtual {v3, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
     .line 20
+    new-instance v5, LX/0W5;
+
     .line 21
     .line 22
-    const-string v1, "app_id"
+    invoke-direct {v5, v0}, LX/0W5;-><init>(Ljava/lang/Object;)V
 
     .line 23
     .line 24
-    iget-object v0, p0, LX/0Wi;->A03:Ljava/lang/String;
-
     .line 25
-    .line 26
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    new-instance v0, LX/0OQ;
 
+    .line 26
     .line 27
+    invoke-direct {v0}, LX/0OQ;-><init>()V
+
     .line 28
     .line 29
-    const-string v1, "app_ver"
-
     .line 30
+    new-instance v4, LX/0W5;
+
     .line 31
-    iget-object v0, p0, LX/0Wi;->A04:Ljava/lang/String;
-
     .line 32
-    .line 33
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-direct {v4, v0}, LX/0W5;-><init>(Ljava/lang/Object;)V
 
+    .line 33
     .line 34
     .line 35
+    new-instance v0, LX/0Ov;
+
     .line 36
-    const-string v1, "build_num"
-
     .line 37
-    .line 38
-    iget-object v0, p0, LX/0Wi;->A05:Ljava/lang/String;
+    invoke-direct {v0}, LX/0Ov;-><init>()V
 
+    .line 38
     .line 39
     .line 40
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    new-instance v2, LX/0W5;
 
     .line 41
     .line 42
-    .line 43
-    const-string v1, "device_id"
+    invoke-direct {v2, v0}, LX/0W5;-><init>(Ljava/lang/Object;)V
 
+    .line 43
     .line 44
     .line 45
-    iget-object v0, p0, LX/0Wi;->A02:LX/0V7;
+    sget-object v0, LX/0Wf;->A01:LX/0Oc;
 
     .line 46
     .line 47
-    invoke-interface {v0}, LX/0V7;->get()Ljava/lang/Object;
+    new-instance v3, LX/0W5;
 
     .line 48
     .line 49
+    invoke-direct {v3, v0}, LX/0W5;-><init>(Ljava/lang/Object;)V
+
     .line 50
-    move-result-object v0
-
     .line 51
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
     .line 52
+    sget-object v10, LX/0Wf;->A05:Ljava/util/Set;
+
     .line 53
     .line 54
-    const-string v1, "session_id"
+    new-instance v0, LX/0Ow;
 
     .line 55
     .line 56
-    iget-object v0, p0, LX/0Wi;->A08:Ljava/util/UUID;
+    invoke-direct/range {v0 .. v10}, LX/0Ow;-><init>(LX/0W5;LX/0W5;LX/0W5;LX/0W5;LX/0W5;Ljava/util/Map;Ljava/util/Map;Ljava/util/Set;Ljava/util/Set;Ljava/util/Set;)V
 
     .line 57
     .line 58
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
     .line 59
+    sput-object v0, LX/0Wi;->A00:LX/0Vy;
+
     .line 60
     .line 61
-    const-string v1, "uid"
-
-    .line 62
-    .line 63
-    iget-object v0, p0, LX/0Wi;->A06:Ljava/lang/String;
-
-    .line 64
-    .line 65
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 66
-    .line 67
-    .line 68
-    iget-object v0, p0, LX/0Wi;->A07:Ljava/util/List;
-
-    .line 69
-    .line 70
-    new-instance v2, Lorg/json/JSONArray;
-
-    .line 71
-    .line 72
-    invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
-
-    .line 73
-    .line 74
-    .line 75
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 76
-    .line 77
-    .line 78
-    move-result-object v1
-
-    .line 79
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 80
-    .line 81
-    .line 82
-    move-result v0
-
-    .line 83
-    if-eqz v0, :cond_0
-
-    .line 84
-    .line 85
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 86
-    .line 87
-    .line 88
-    move-result-object v0
-
-    .line 89
-    check-cast v0, LX/0Wt;
-
-    .line 90
-    .line 91
-    invoke-virtual {v0}, LX/0Wt;->A03()Lorg/json/JSONObject;
-
-    .line 92
-    .line 93
-    .line 94
-    move-result-object v0
-
-    .line 95
-    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    .line 96
-    .line 97
-    .line 98
-    goto :goto_0
-
-    .line 99
-    :cond_0
-    const-string v0, "data"
-
-    .line 100
-    .line 101
-    invoke-virtual {v3, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 102
-    .line 103
-    .line 104
-    const-string v1, "log_type"
-
-    .line 105
-    .line 106
-    const-string v0, "client_event"
-
-    .line 107
-    .line 108
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 109
-    .line 110
-    .line 111
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 112
-    .line 113
-    .line 114
-    move-result-object v0
-
-    .line 115
-    return-object v0
-
-    .line 116
-    :catch_0
-    move-exception v2
-
-    .line 117
-    const-string v1, "AnalyticsSession"
-
-    .line 118
-    .line 119
-    const-string v0, "Failed to serialize"
-
-    .line 120
-    .line 121
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0I(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 122
-    .line 123
-    .line 124
-    const-string v0, ""
-
-    .line 125
-    .line 126
-    return-object v0
+    return-void
 .end method

@@ -1,26 +1,6 @@
-.class public final LX/3rm;
-.super LX/6MF;
+.class public final LX/3rM;
+.super LX/3tq;
 .source ""
-
-
-# instance fields
-.field public A00:LX/3re;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
-
-.field public A01:Ljava/util/concurrent/atomic/AtomicInteger;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
-
-.field public A02:LX/3qu;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-.end field
 
 
 # direct methods
@@ -28,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/6MF;-><init>()V
+    invoke-direct {p0}, LX/3tq;-><init>()V
 
     .line 1
     .line 2
@@ -38,58 +18,29 @@
 
 
 # virtual methods
-.method public final A01(LX/2VA;)V
-    .locals 4
+.method public final AAH()LX/3vL;
+    .locals 1
 
     .line 0
-    iget-object v3, p1, LX/2VA;->A01:[Ljava/lang/Object;
+    sget-object v0, LX/3vL;->CENTER:LX/3vL;
 
     .line 1
     .line 2
-    iget v2, p1, LX/2VA;->A00:I
+    return-object v0
+.end method
 
-    .line 3
-    .line 4
-    const/high16 v1, -0x80000000
+.method public final AGe()Ljava/lang/String;
+    .locals 1
 
-    .line 5
-    .line 6
-    const/4 v0, 0x0
+    const-string v0, "FallbackPlayIconDescriptor"
 
-    .line 7
-    if-eq v2, v1, :cond_1
+    return-object v0
+.end method
 
-    .line 8
-    .line 9
-    if-nez v2, :cond_0
+.method public final APc(LX/28V;Lcom/facebook/video/common/playerorigin/PlayerOrigin;LX/3q1;LX/3m2;)Z
+    .locals 1
 
-    .line 10
-    .line 11
-    aget-object v0, v3, v0
+    const/4 v0, 0x1
 
-    .line 12
-    .line 13
-    check-cast v0, LX/3qu;
-
-    .line 14
-    .line 15
-    :goto_0
-    check-cast v0, LX/3qu;
-
-    .line 16
-    .line 17
-    iput-object v0, p0, LX/3rm;->A02:LX/3qu;
-
-    .line 18
-    .line 19
-    :cond_0
-    return-void
-
-    .line 20
-    :cond_1
-    aget-object v0, v3, v0
-
-    .line 21
-    .line 22
-    goto :goto_0
+    return v0
 .end method

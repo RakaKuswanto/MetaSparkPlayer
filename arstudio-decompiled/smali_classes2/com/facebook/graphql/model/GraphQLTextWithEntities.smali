@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/19i;
+.implements LX/1gn;
 
 
 # direct methods
@@ -21,86 +21,6 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0B()Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-    .locals 4
-
-    .line 0
-    invoke-static {p0}, LX/191;->A07(Lcom/facebook/graphql/model/GraphQLTextWithEntities;)LX/191;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v3
-
-    .line 4
-    const-class v2, Lcom/facebook/graphql/model/GraphQLTextWithEntities;
-
-    .line 5
-    .line 6
-    const-string v1, "TextWithEntities"
-
-    .line 7
-    .line 8
-    const v0, -0x24e276fc
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-virtual {v3, v2, v1, v0}, LX/197;->A43(Ljava/lang/Class;Ljava/lang/String;I)Lcom/facebook/graphservice/interfaces/Tree;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    check-cast v0, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-
-    .line 16
-    .line 17
-    return-object v0
-.end method
-
-.method public final bridge synthetic A0C()Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-    .locals 4
-
-    .line 0
-    invoke-static {p0}, LX/191;->A07(Lcom/facebook/graphql/model/GraphQLTextWithEntities;)LX/191;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v3
-
-    .line 4
-    const-class v2, Lcom/facebook/graphql/model/GraphQLTextWithEntities;
-
-    .line 5
-    .line 6
-    const-string v1, "TextWithEntities"
-
-    .line 7
-    .line 8
-    const v0, -0x24e276fc
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-virtual {v3, v2, v1, v0}, LX/197;->A42(Ljava/lang/Class;Ljava/lang/String;I)Lcom/facebook/graphservice/interfaces/Tree;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    check-cast v0, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-
-    .line 16
-    .line 17
-    return-object v0
-.end method
-
 .method public final getTypeName()Ljava/lang/String;
     .locals 1
 

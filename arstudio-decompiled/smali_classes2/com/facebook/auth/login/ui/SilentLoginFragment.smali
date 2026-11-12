@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/3Ic;
+.implements LX/2iy;
 
 
 # static fields
@@ -11,23 +11,23 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public loginOperation:LX/3Ey;
+.field public loginOperation:LX/2FE;
 
-.field public mAuthStateMachineMonitor:LX/2Uk;
+.field public mAuthStateMachineMonitor:LX/1ou;
 
-.field public final mBusySignalHandler:LX/0Na;
+.field public final mBusySignalHandler:LX/0RP;
 
-.field public final mLoggedInUserSessionManager:LX/1vc;
+.field public final mLoggedInUserSessionManager:LX/2Pc;
 
 .field public mLoginSignalKey:Ljava/lang/Object;
 
-.field public mLoginTracer:LX/0K1;
+.field public mLoginTracer:LX/0Iz;
 
 .field public mQuickPerformanceLogger:Lcom/facebook/quicklog/QuickPerformanceLogger;
 
-.field public mViewControl:LX/3LB;
+.field public mViewControl:LX/2w3;
 
 
 # direct methods
@@ -40,42 +40,34 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A7h:I
+    invoke-static {}, LX/2I6;->A05()LX/2Pc;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
     .line 6
-    .line 7
-    .line 8
     move-result-object v0
 
+    .line 7
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/2Pc;
+
+    .line 8
     .line 9
-    check-cast v0, LX/1vc;
+    sget v0, LX/2I6;->A1O:I
 
     .line 10
     .line 11
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/1vc;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 12
     .line 13
-    sget v0, LX/2eq;->A3C:I
-
     .line 14
+    move-result-object v0
+
     .line 15
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mBusySignalHandler:LX/0RP;
 
     .line 16
     .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mBusySignalHandler:LX/0Na;
-
-    .line 20
-    .line 21
     return-void
 .end method
 
@@ -91,18 +83,18 @@
     return-void
 .end method
 
-.method public static getAuthAnalyticsLoggerProps()LX/2Js;
+.method public static getAuthAnalyticsLoggerProps()LX/1zT;
     .locals 2
 
     .line 0
     const/4 v1, 0x3
 
     .line 1
-    new-instance v0, LX/1U7;
+    new-instance v0, LX/0Xj;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/1U7;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Xj;-><init>(I)V
 
     .line 4
     .line 5
@@ -110,7 +102,7 @@
     return-object v0
 .end method
 
-.method private getIAuthAnalyticsLoggerSocket()LX/2Jq;
+.method private getIAuthAnalyticsLoggerSocket()LX/1zS;
     .locals 2
 
     .line 0
@@ -122,11 +114,11 @@
     move-result-object v1
 
     .line 4
-    new-instance v0, LX/2Jq;
+    new-instance v0, LX/1zS;
 
     .line 5
     .line 6
-    invoke-direct {v0, v1}, LX/2Jq;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, LX/1zS;-><init>(Landroid/content/Context;)V
 
     .line 7
     .line 8
@@ -149,19 +141,19 @@
 
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/1vc;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/2Pc;
 
     .line 6
     .line 7
-    check-cast v0, LX/1v5;
+    check-cast v0, LX/2Ol;
 
     .line 8
     .line 9
-    iget-object v0, v0, LX/1v5;->A06:LX/1Nm;
+    iget-object v0, v0, LX/2Ol;->A05:LX/0lu;
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/1Nm;->A0B(LX/1Nm;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {v0}, LX/0lu;->A07(LX/0lu;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 12
     .line 13
@@ -169,11 +161,11 @@
     move-result-object v1
 
     .line 15
-    sget-object v0, LX/1vN;->A0Y:LX/1b2;
+    sget-object v0, LX/2PN;->A0T:LX/28F;
 
     .line 16
     .line 17
-    invoke-static {v1, v0}, LX/0Yg;->A1T(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/1b2;)Z
+    invoke-static {v1, v0}, LX/0X5;->A1W(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/28F;)Z
 
     .line 18
     .line 19
@@ -185,11 +177,11 @@
 
     .line 22
     .line 23
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/1vc;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/2Pc;
 
     .line 24
     .line 25
-    invoke-interface {v0}, LX/1vj;->AQs()Z
+    invoke-interface {v0}, LX/1ur;->APS()Z
 
     .line 26
     .line 27
@@ -221,11 +213,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mBusySignalHandler:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mBusySignalHandler:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -233,7 +225,7 @@
     move-result-object v1
 
     .line 6
-    check-cast v1, LX/3Qg;
+    check-cast v1, LX/3Di;
 
     .line 7
     .line 8
@@ -241,24 +233,24 @@
 
     .line 9
     .line 10
-    invoke-virtual {v1, v0}, LX/3Qg;->A00(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, LX/3Di;->A00(Ljava/lang/Object;)V
 
     .line 11
     .line 12
     .line 13
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/1vc;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/2Pc;
 
     .line 14
     .line 15
-    check-cast v0, LX/1v5;
+    check-cast v0, LX/2Ol;
 
     .line 16
     .line 17
-    iget-object v0, v0, LX/1v5;->A06:LX/1Nm;
+    iget-object v0, v0, LX/2Ol;->A05:LX/0lu;
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/1Nm;->A0A(LX/1Nm;)LX/1hU;
+    invoke-static {v0}, LX/0lu;->A06(LX/0lu;)LX/1D7;
 
     .line 20
     .line 21
@@ -266,16 +258,16 @@
     move-result-object v1
 
     .line 23
-    sget-object v0, LX/1vN;->A0Y:LX/1b2;
+    sget-object v0, LX/2PN;->A0T:LX/28F;
 
     .line 24
     .line 25
-    invoke-interface {v1, v0}, LX/1hU;->Aiq(LX/1b2;)LX/2O0;
+    invoke-interface {v1, v0}, LX/1D7;->AhI(LX/28F;)LX/2Cv;
 
     .line 26
     .line 27
     .line 28
-    invoke-interface {v1}, LX/1hU;->commit()V
+    invoke-interface {v1}, LX/1D7;->commit()V
 
     .line 29
     .line 30
@@ -295,7 +287,7 @@
     const/4 v9, 0x0
 
     .line 4
-    sget-object v0, LX/0K6;->A04:Ljava/lang/ThreadLocal;
+    sget-object v0, LX/0J4;->A04:Ljava/lang/ThreadLocal;
 
     .line 5
     .line 6
@@ -307,7 +299,7 @@
     move-result-object v8
 
     .line 10
-    check-cast v8, LX/0K6;
+    check-cast v8, LX/0J4;
 
     .line 11
     .line 12
@@ -315,11 +307,11 @@
 
     .line 13
     .line 14
-    iget v5, v8, LX/0K6;->A00:I
+    iget v5, v8, LX/0J4;->A00:I
 
     .line 15
     .line 16
-    iget v3, v8, LX/0K6;->A01:I
+    iget v3, v8, LX/0J4;->A01:I
 
     .line 17
     .line 18
@@ -331,7 +323,7 @@
 
     .line 21
     .line 22
-    if-le v0, v11, :cond_1c
+    if-le v0, v11, :cond_1d
 
     .line 23
     .line 24
@@ -378,7 +370,7 @@
 
     .line 42
     .line 43
-    iget-object v0, v8, LX/0K6;->A02:[LX/0KA;
+    iget-object v0, v8, LX/0J4;->A02:[LX/0J8;
 
     .line 44
     .line 45
@@ -390,11 +382,11 @@
 
     .line 48
     .line 49
-    iget-object v1, v6, LX/0KA;->A04:LX/0K8;
+    iget-object v1, v6, LX/0J8;->A04:LX/0J6;
 
     .line 50
     .line 51
-    sget-object v0, LX/0K8;->START:LX/0K8;
+    sget-object v0, LX/0J6;->START:LX/0J6;
 
     .line 52
     .line 53
@@ -410,7 +402,7 @@
 
     .line 58
     :cond_0
-    sget-object v0, LX/0K8;->STOP:LX/0K8;
+    sget-object v0, LX/0J6;->STOP:LX/0J6;
 
     .line 59
     .line 60
@@ -424,7 +416,7 @@
     .line 64
     :cond_1
     :goto_1
-    iget-wide v0, v6, LX/0KA;->A01:J
+    iget-wide v0, v6, LX/0J8;->A01:J
 
     .line 65
     .line 66
@@ -479,7 +471,7 @@
 
     .line 89
     .line 90
-    iget-object v0, v8, LX/0K6;->A02:[LX/0KA;
+    iget-object v0, v8, LX/0J4;->A02:[LX/0J8;
 
     .line 91
     .line 92
@@ -491,16 +483,16 @@
 
     .line 95
     .line 96
-    sget-object v0, LX/0KA;->A07:LX/0Ir;
+    sget-object v0, LX/0J8;->A07:LX/0Hl;
 
     .line 97
     .line 98
-    invoke-virtual {v0, v1}, LX/0Ir;->A02(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, LX/0Hl;->A02(Ljava/lang/Object;)V
 
     .line 99
     .line 100
     .line 101
-    iget-object v0, v8, LX/0K6;->A02:[LX/0KA;
+    iget-object v0, v8, LX/0J4;->A02:[LX/0J8;
 
     .line 102
     .line 103
@@ -508,7 +500,7 @@
 
     .line 104
     .line 105
-    iget v0, v8, LX/0K6;->A01:I
+    iget v0, v8, LX/0J4;->A01:I
 
     .line 106
     .line 107
@@ -516,7 +508,7 @@
 
     .line 108
     .line 109
-    iput v3, v8, LX/0K6;->A01:I
+    iput v3, v8, LX/0J4;->A01:I
 
     .line 110
     .line 111
@@ -545,7 +537,7 @@
 
     .line 120
     .line 121
-    iget v1, v8, LX/0K6;->A00:I
+    iget v1, v8, LX/0J4;->A00:I
 
     .line 122
     .line 123
@@ -561,7 +553,7 @@
 
     .line 128
     .line 129
-    sget-object v0, LX/0K6;->A05:Ljava/util/Comparator;
+    sget-object v0, LX/0J4;->A05:Ljava/util/Comparator;
 
     .line 130
     .line 131
@@ -577,7 +569,7 @@
     const/4 v4, 0x0
 
     .line 137
-    iget v3, v8, LX/0K6;->A00:I
+    iget v3, v8, LX/0J4;->A00:I
 
     .line 138
     .line 139
@@ -586,7 +578,7 @@
 
     .line 140
     .line 141
-    iget-object v0, v8, LX/0K6;->A02:[LX/0KA;
+    iget-object v0, v8, LX/0J4;->A02:[LX/0J8;
 
     .line 142
     .line 143
@@ -598,11 +590,11 @@
 
     .line 146
     .line 147
-    iget-object v1, v2, LX/0KA;->A04:LX/0K8;
+    iget-object v1, v2, LX/0J8;->A04:LX/0J6;
 
     .line 148
     .line 149
-    sget-object v0, LX/0K8;->STOP:LX/0K8;
+    sget-object v0, LX/0J6;->STOP:LX/0J6;
 
     .line 150
     .line 151
@@ -624,11 +616,11 @@
 
     .line 159
     :cond_8
-    iget v3, v8, LX/0K6;->A00:I
+    iget v3, v8, LX/0J4;->A00:I
 
     .line 160
     .line 161
-    iget v0, v8, LX/0K6;->A01:I
+    iget v0, v8, LX/0J4;->A01:I
 
     .line 162
     .line 163
@@ -646,7 +638,7 @@
     move-result-object v2
 
     .line 169
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v2}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 170
     .line 171
@@ -680,15 +672,15 @@
     move-result-object v0
 
     .line 186
-    check-cast v0, LX/0KA;
+    check-cast v0, LX/0J8;
 
     .line 187
     .line 188
-    iget-wide v5, v0, LX/0KA;->A01:J
+    iget-wide v5, v0, LX/0J8;->A01:J
 
     .line 189
     .line 190
-    iget-wide v0, v0, LX/0KA;->A02:J
+    iget-wide v0, v0, LX/0J8;->A02:J
 
     .line 191
     .line 192
@@ -735,7 +727,7 @@
 
     .line 211
     .line 212
-    goto :goto_8
+    goto :goto_9
 
     .line 213
     :cond_c
@@ -748,7 +740,7 @@
 
     .line 216
     .line 217
-    iget v0, v8, LX/0K6;->A00:I
+    iget v0, v8, LX/0J4;->A00:I
 
     .line 218
     .line 219
@@ -775,7 +767,7 @@
 
     .line 228
     .line 229
-    iget-object v4, v8, LX/0K6;->A02:[LX/0KA;
+    iget-object v4, v8, LX/0J4;->A02:[LX/0J8;
 
     .line 230
     .line 231
@@ -787,11 +779,11 @@
 
     .line 234
     .line 235
-    iget-object v1, v3, LX/0KA;->A04:LX/0K8;
+    iget-object v1, v3, LX/0J8;->A04:LX/0J6;
 
     .line 236
     .line 237
-    sget-object v0, LX/0K8;->START:LX/0K8;
+    sget-object v0, LX/0J6;->START:LX/0J6;
 
     .line 238
     .line 239
@@ -829,7 +821,7 @@
     move-result-object v13
 
     .line 255
-    invoke-static {v13}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v13}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 256
     .line 257
@@ -839,668 +831,682 @@
 
     .line 259
     .line 260
-    add-int/lit8 v2, v2, 0x1
-
-    .line 261
-    .line 262
     goto :goto_7
 
-    .line 263
+    .line 261
     :cond_e
-    iget-object v1, v3, LX/0KA;->A04:LX/0K8;
+    iget-object v1, v3, LX/0J8;->A04:LX/0J6;
+
+    .line 262
+    .line 263
+    sget-object v0, LX/0J6;->STOP:LX/0J6;
 
     .line 264
     .line 265
-    sget-object v0, LX/0K8;->STOP:LX/0K8;
+    if-ne v1, v0, :cond_f
 
     .line 266
     .line 267
-    if-ne v1, v0, :cond_f
+    add-int/lit8 v2, v2, -0x1
 
     .line 268
     .line 269
-    add-int/lit8 v2, v2, -0x1
+    aget v16, v13, v2
 
     .line 270
     .line 271
-    aget v16, v13, v2
+    iget-wide v0, v3, LX/0J8;->A01:J
 
     .line 272
     .line 273
-    iget-wide v0, v3, LX/0KA;->A01:J
+    iget-wide v14, v3, LX/0J8;->A02:J
 
     .line 274
     .line 275
-    iget-wide v14, v3, LX/0KA;->A02:J
-
-    .line 276
-    .line 277
     sub-long/2addr v0, v14
 
-    .line 278
+    .line 276
     cmp-long v14, v0, v5
+
+    .line 277
+    .line 278
+    if-gtz v14, :cond_f
 
     .line 279
     .line 280
-    if-gtz v14, :cond_f
+    aget-object v1, v4, v16
 
     .line 281
     .line 282
-    aget-object v1, v4, v16
+    sget-object v0, LX/0J8;->A07:LX/0Hl;
 
     .line 283
     .line 284
-    sget-object v0, LX/0KA;->A07:LX/0Ir;
+    invoke-virtual {v0, v3}, LX/0Hl;->A02(Ljava/lang/Object;)V
 
     .line 285
     .line 286
-    invoke-virtual {v0, v3}, LX/0Ir;->A02(Ljava/lang/Object;)V
-
     .line 287
+    if-eqz v1, :cond_10
+
     .line 288
     .line 289
-    if-eqz v1, :cond_10
+    invoke-virtual {v0, v1}, LX/0Hl;->A02(Ljava/lang/Object;)V
 
     .line 290
     .line 291
-    invoke-virtual {v0, v1}, LX/0Ir;->A02(Ljava/lang/Object;)V
-
     .line 292
+    iget-object v0, v8, LX/0J4;->A02:[LX/0J8;
+
     .line 293
     .line 294
-    iget-object v0, v8, LX/0K6;->A02:[LX/0KA;
+    aput-object v9, v0, v7
 
     .line 295
     .line 296
-    aput-object v9, v0, v7
+    aput-object v9, v0, v16
 
     .line 297
     .line 298
-    aput-object v9, v0, v16
+    iget v0, v8, LX/0J4;->A01:I
 
     .line 299
     .line 300
-    iget v0, v8, LX/0K6;->A01:I
+    add-int/lit8 v0, v0, 0x2
 
     .line 301
     .line 302
-    add-int/lit8 v0, v0, 0x2
+    iput v0, v8, LX/0J4;->A01:I
 
     .line 303
     .line 304
-    iput v0, v8, LX/0K6;->A01:I
+    add-int/lit8 v17, v17, 0x2
 
     .line 305
     .line 306
-    add-int/lit8 v17, v17, 0x2
+    goto :goto_8
 
     .line 307
-    .line 308
-    :cond_f
     :goto_7
+    add-int/lit8 v2, v2, 0x1
+
+    .line 308
+    .line 309
+    :cond_f
+    :goto_8
     add-int/lit8 v7, v7, 0x1
 
-    .line 309
     .line 310
+    .line 311
     goto :goto_6
 
-    .line 311
-    :cond_10
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
-
     .line 312
+    :cond_10
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
+
     .line 313
     .line 314
+    .line 315
     move-result-object v0
 
-    .line 315
+    .line 316
     throw v0
 
-    .line 316
+    .line 317
     :cond_11
-    :goto_8
+    :goto_9
     add-int v22, v22, v17
 
-    .line 317
     .line 318
-    iget v5, v8, LX/0K6;->A00:I
-
     .line 319
-    .line 320
-    iget v7, v8, LX/0K6;->A01:I
+    iget v5, v8, LX/0J4;->A00:I
 
+    .line 320
     .line 321
+    iget v7, v8, LX/0J4;->A01:I
+
     .line 322
+    .line 323
     sub-int v4, v5, v7
 
-    .line 323
     .line 324
+    .line 325
     if-le v4, v10, :cond_14
 
-    .line 325
     .line 326
+    .line 327
     sub-int/2addr v4, v10
 
-    .line 327
+    .line 328
     const/4 v3, 0x0
 
-    .line 328
+    .line 329
     const/4 v6, 0x0
 
-    .line 329
-    :goto_9
+    .line 330
+    :goto_a
     if-ge v3, v5, :cond_13
 
-    .line 330
     .line 331
+    .line 332
     if-lez v4, :cond_13
 
-    .line 332
     .line 333
-    iget-object v0, v8, LX/0K6;->A02:[LX/0KA;
-
     .line 334
+    iget-object v0, v8, LX/0J4;->A02:[LX/0J8;
+
     .line 335
+    .line 336
     aget-object v2, v0, v3
 
-    .line 336
     .line 337
+    .line 338
     if-eqz v2, :cond_12
 
-    .line 338
     .line 339
-    iget-object v1, v2, LX/0KA;->A04:LX/0K8;
-
     .line 340
-    .line 341
-    sget-object v0, LX/0K8;->COMMENT:LX/0K8;
+    iget-object v1, v2, LX/0J8;->A04:LX/0J6;
 
+    .line 341
     .line 342
+    sget-object v0, LX/0J6;->COMMENT:LX/0J6;
+
     .line 343
+    .line 344
     if-ne v1, v0, :cond_12
 
-    .line 344
     .line 345
-    sget-object v0, LX/0KA;->A07:LX/0Ir;
-
     .line 346
-    .line 347
-    invoke-virtual {v0, v2}, LX/0Ir;->A02(Ljava/lang/Object;)V
+    sget-object v0, LX/0J8;->A07:LX/0Hl;
 
+    .line 347
     .line 348
+    invoke-virtual {v0, v2}, LX/0Hl;->A02(Ljava/lang/Object;)V
+
     .line 349
     .line 350
-    iget-object v0, v8, LX/0K6;->A02:[LX/0KA;
-
     .line 351
+    iget-object v0, v8, LX/0J4;->A02:[LX/0J8;
+
     .line 352
+    .line 353
     aput-object v9, v0, v3
 
-    .line 353
     .line 354
-    iget v0, v8, LX/0K6;->A01:I
-
     .line 355
+    iget v0, v8, LX/0J4;->A01:I
+
     .line 356
+    .line 357
     add-int/lit8 v7, v0, 0x1
 
-    .line 357
     .line 358
-    iput v7, v8, LX/0K6;->A01:I
-
     .line 359
+    iput v7, v8, LX/0J4;->A01:I
+
     .line 360
+    .line 361
     add-int/lit8 v6, v6, 0x1
 
-    .line 361
     .line 362
+    .line 363
     add-int/lit8 v4, v4, -0x1
 
-    .line 363
     .line 364
+    .line 365
     :cond_12
     add-int/lit8 v3, v3, 0x1
 
-    .line 365
     .line 366
-    goto :goto_9
-
     .line 367
+    goto :goto_a
+
+    .line 368
     :cond_13
     add-int v22, v22, v6
 
-    .line 368
     .line 369
-    :cond_14
-    iget v0, v8, LX/0K6;->A00:I
-
     .line 370
+    :cond_14
+    iget v0, v8, LX/0J4;->A00:I
+
     .line 371
+    .line 372
     sub-int/2addr v0, v7
 
-    .line 372
+    .line 373
     if-le v0, v11, :cond_18
 
-    .line 373
     .line 374
+    .line 375
     const-string v0, "Resetting because hit couldn\'t get under hard limit after normal pruning"
 
-    .line 375
     .line 376
-    invoke-static {v12, v0}, LX/0Jt;->A0E(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 377
+    invoke-static {v12, v0}, LX/0Il;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 378
     .line 379
-    iget v5, v8, LX/0K6;->A00:I
-
     .line 380
+    iget v5, v8, LX/0J4;->A00:I
+
     .line 381
+    .line 382
     const/4 v4, 0x0
 
-    .line 382
+    .line 383
     const/4 v3, 0x0
 
-    .line 383
-    :goto_a
+    .line 384
+    :goto_b
     if-ge v3, v5, :cond_17
 
-    .line 384
     .line 385
-    iget-object v0, v8, LX/0K6;->A02:[LX/0KA;
-
     .line 386
+    iget-object v0, v8, LX/0J4;->A02:[LX/0J8;
+
     .line 387
+    .line 388
     aget-object v2, v0, v3
 
-    .line 388
     .line 389
+    .line 390
     if-eqz v2, :cond_16
 
-    .line 390
     .line 391
-    iget-object v1, v2, LX/0KA;->A04:LX/0K8;
-
     .line 392
-    .line 393
-    sget-object v0, LX/0K8;->START:LX/0K8;
+    iget-object v1, v2, LX/0J8;->A04:LX/0J6;
 
+    .line 393
     .line 394
+    sget-object v0, LX/0J6;->START:LX/0J6;
+
     .line 395
+    .line 396
     if-ne v1, v0, :cond_15
 
-    .line 396
     .line 397
-    iget-object v1, v8, LX/0K6;->A03:Landroid/util/SparseArray;
-
     .line 398
-    .line 399
-    iget v0, v2, LX/0KA;->A00:I
+    iget-object v1, v8, LX/0J4;->A03:Landroid/util/SparseArray;
 
+    .line 399
     .line 400
+    iget v0, v2, LX/0J8;->A00:I
+
     .line 401
+    .line 402
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 402
     .line 403
     .line 404
-    :cond_15
-    sget-object v0, LX/0KA;->A07:LX/0Ir;
-
     .line 405
-    .line 406
-    invoke-virtual {v0, v2}, LX/0Ir;->A02(Ljava/lang/Object;)V
+    :cond_15
+    sget-object v0, LX/0J8;->A07:LX/0Hl;
 
+    .line 406
     .line 407
+    invoke-virtual {v0, v2}, LX/0Hl;->A02(Ljava/lang/Object;)V
+
     .line 408
     .line 409
+    .line 410
     :cond_16
     add-int/lit8 v3, v3, 0x1
 
-    .line 410
     .line 411
-    goto :goto_a
-
     .line 412
-    :cond_17
-    iput v4, v8, LX/0K6;->A00:I
+    goto :goto_b
 
     .line 413
+    :cond_17
+    iput v4, v8, LX/0J4;->A00:I
+
     .line 414
-    iput v4, v8, LX/0K6;->A01:I
-
     .line 415
-    .line 416
-    iget-object v0, v8, LX/0K6;->A03:Landroid/util/SparseArray;
+    iput v4, v8, LX/0J4;->A01:I
 
+    .line 416
     .line 417
+    iget-object v0, v8, LX/0J4;->A03:Landroid/util/SparseArray;
+
     .line 418
+    .line 419
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 419
     .line 420
     .line 421
-    goto :goto_b
-
     .line 422
-    :cond_18
-    if-le v0, v10, :cond_1a
+    goto :goto_c
 
     .line 423
+    :cond_18
+    if-le v0, v10, :cond_1b
+
     .line 424
+    .line 425
     const-string v0, "Couldn\'t get under soft limit after normal pruning"
 
-    .line 425
     .line 426
-    invoke-static {v12, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 427
+    invoke-static {v12, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 428
     .line 429
-    goto :goto_b
+    .line 430
+    goto :goto_c
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 430
+    .line 431
     :catchall_0
     move-exception v3
 
-    .line 431
+    .line 432
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    .line 432
     .line 433
     .line 434
+    .line 435
     move-result-wide v1
 
-    .line 435
+    .line 436
     sub-long v1, v1, v20
 
-    .line 436
     .line 437
+    .line 438
     cmp-long v0, v1, v18
 
-    .line 438
     .line 439
+    .line 440
     if-gtz v0, :cond_19
 
-    .line 440
     .line 441
-    if-lez v22, :cond_1e
-
     .line 442
+    if-lez v22, :cond_1a
+
     .line 443
+    .line 444
     :cond_19
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    .line 444
     .line 445
     .line 446
-    move-result-object v0
-
     .line 447
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
+    move-result-object v0
 
     .line 448
-    .line 449
-    .line 450
-    throw v3
-
-    .line 451
-    :cond_1a
-    :goto_b
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    .line 452
-    .line 453
-    .line 454
-    move-result-wide v1
-
-    .line 455
-    sub-long v1, v1, v20
-
-    .line 456
-    .line 457
-    cmp-long v0, v1, v18
-
-    .line 458
-    .line 459
-    if-gtz v0, :cond_1b
-
-    .line 460
-    .line 461
-    if-lez v22, :cond_1c
-
-    .line 462
-    .line 463
-    :cond_1b
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    .line 464
-    .line 465
-    .line 466
-    move-result-object v0
-
-    .line 467
     invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
 
-    .line 468
-    .line 469
-    .line 470
-    :cond_1c
-    sget-object v0, LX/0K6;->A06:Ljava/util/concurrent/atomic/AtomicInteger;
+    .line 449
+    .line 450
+    .line 451
+    :cond_1a
+    throw v3
 
-    .line 471
-    .line 472
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    .line 473
-    .line 474
-    .line 475
-    move-result v2
-
-    .line 476
-    const/4 v0, -0x1
-
-    .line 477
-    if-eq v2, v0, :cond_1c
-
-    .line 478
-    .line 479
-    if-eqz v2, :cond_1c
-
-    .line 480
-    .line 481
-    sget-object v22, LX/0K8;->START_ASYNC:LX/0K8;
-
-    .line 482
-    .line 483
-    const-wide/16 v26, -0x1
-
-    .line 484
-    .line 485
-    move-object/from16 v24, v9
-
-    .line 486
-    .line 487
-    move/from16 v25, v2
-
-    .line 488
-    .line 489
-    invoke-static/range {v22 .. v27}, LX/0K7;->A00(LX/0K8;Ljava/lang/String;[Ljava/lang/Object;IJ)LX/0KA;
-
-    .line 490
-    .line 491
-    .line 492
-    move-result-object v1
-
-    .line 493
-    invoke-static {v8, v1}, LX/0K6;->A00(LX/0K6;LX/0KA;)V
-
-    .line 494
-    .line 495
-    .line 496
-    iget-object v0, v8, LX/0K6;->A03:Landroid/util/SparseArray;
-
-    .line 497
-    .line 498
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
-
-    .line 499
-    .line 500
-    .line 501
-    iget v1, v1, LX/0KA;->A00:I
-
-    .line 502
-    .line 503
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    .line 504
-    .line 505
-    .line 506
-    move-result-object v0
-
-    .line 507
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 508
-    .line 509
-    .line 510
-    check-cast v0, LX/0KA;
-
-    .line 511
-    .line 512
-    invoke-virtual {v0}, LX/0KA;->A00()Ljava/lang/String;
-
-    .line 513
-    .line 514
-    .line 515
-    move-result-object v4
-
-    .line 516
-    if-eqz v4, :cond_1d
-
-    .line 517
-    .line 518
+    .line 452
+    :cond_1b
+    :goto_c
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    .line 519
-    .line 520
-    .line 521
-    new-instance v3, LX/0K1;
+    .line 453
+    .line 454
+    .line 455
+    move-result-wide v1
 
-    .line 522
-    .line 523
-    invoke-direct {v3, v8, v4, v1}, LX/0K1;-><init>(LX/0K6;Ljava/lang/String;I)V
+    .line 456
+    sub-long v1, v1, v20
 
-    .line 524
-    .line 525
-    .line 526
-    const-wide/16 v1, 0x20
+    .line 457
+    .line 458
+    cmp-long v0, v1, v18
 
-    .line 527
-    .line 528
-    iget v0, v3, LX/0K1;->A00:I
+    .line 459
+    .line 460
+    if-gtz v0, :cond_1c
 
-    .line 529
-    .line 530
-    invoke-static {v1, v2, v4, v0}, Lcom/facebook/systrace/Systrace;->A03(JLjava/lang/String;I)V
+    .line 461
+    .line 462
+    if-lez v22, :cond_1d
 
-    .line 531
-    .line 532
-    .line 533
-    move-object/from16 v4, p0
+    .line 463
+    .line 464
+    :cond_1c
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    .line 534
-    .line 535
-    iput-object v3, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0K1;
+    .line 465
+    .line 466
+    .line 467
+    move-result-object v0
 
-    .line 536
-    .line 537
-    iget-object v1, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mQuickPerformanceLogger:Lcom/facebook/quicklog/QuickPerformanceLogger;
+    .line 468
+    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
 
-    .line 538
-    .line 539
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 469
+    .line 470
+    .line 471
+    :cond_1d
+    sget-object v0, LX/0J4;->A06:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 540
-    .line 541
-    .line 542
-    const v0, 0x23000d
+    .line 472
+    .line 473
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    .line 543
-    .line 544
-    .line 545
-    invoke-interface {v1, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerStart(I)V
+    .line 474
+    .line 475
+    .line 476
+    move-result v2
 
-    .line 546
-    .line 547
-    .line 548
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    .line 477
+    const/4 v0, -0x1
 
-    .line 549
-    .line 550
-    .line 551
-    move-result-object v2
+    .line 478
+    if-eq v2, v0, :cond_1d
 
-    .line 552
-    iget-object v0, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mBusySignalHandler:LX/0Na;
+    .line 479
+    .line 480
+    if-eqz v2, :cond_1d
 
-    .line 553
-    .line 554
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    .line 481
+    .line 482
+    sget-object v22, LX/0J6;->START_ASYNC:LX/0J6;
 
-    .line 555
-    .line 556
-    .line 557
+    .line 483
+    .line 484
+    const-wide/16 v26, -0x1
+
+    .line 485
+    .line 486
+    move-object/from16 v24, v9
+
+    .line 487
+    .line 488
+    move/from16 v25, v2
+
+    .line 489
+    .line 490
+    invoke-static/range {v22 .. v27}, LX/0J5;->A00(LX/0J6;Ljava/lang/String;[Ljava/lang/Object;IJ)LX/0J8;
+
+    .line 491
+    .line 492
+    .line 493
     move-result-object v1
 
+    .line 494
+    invoke-static {v8, v1}, LX/0J4;->A00(LX/0J4;LX/0J8;)V
+
+    .line 495
+    .line 496
+    .line 497
+    iget-object v0, v8, LX/0J4;->A03:Landroid/util/SparseArray;
+
+    .line 498
+    .line 499
+    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    .line 500
+    .line 501
+    .line 502
+    iget v1, v1, LX/0J8;->A00:I
+
+    .line 503
+    .line 504
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    .line 505
+    .line 506
+    .line 507
+    move-result-object v0
+
+    .line 508
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 509
+    .line 510
+    .line 511
+    check-cast v0, LX/0J8;
+
+    .line 512
+    .line 513
+    invoke-virtual {v0}, LX/0J8;->A00()Ljava/lang/String;
+
+    .line 514
+    .line 515
+    .line 516
+    move-result-object v4
+
+    .line 517
+    if-eqz v4, :cond_1e
+
+    .line 518
+    .line 519
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    .line 520
+    .line 521
+    .line 522
+    new-instance v3, LX/0Iz;
+
+    .line 523
+    .line 524
+    invoke-direct {v3, v8, v4, v1}, LX/0Iz;-><init>(LX/0J4;Ljava/lang/String;I)V
+
+    .line 525
+    .line 526
+    .line 527
+    const-wide/16 v1, 0x20
+
+    .line 528
+    .line 529
+    iget v0, v3, LX/0Iz;->A00:I
+
+    .line 530
+    .line 531
+    invoke-static {v1, v2, v4, v0}, Lcom/facebook/systrace/Systrace;->A03(JLjava/lang/String;I)V
+
+    .line 532
+    .line 533
+    .line 534
+    move-object/from16 v4, p0
+
+    .line 535
+    .line 536
+    iput-object v3, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0Iz;
+
+    .line 537
+    .line 538
+    iget-object v1, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mQuickPerformanceLogger:Lcom/facebook/quicklog/QuickPerformanceLogger;
+
+    .line 539
+    .line 540
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 541
+    .line 542
+    .line 543
+    const v0, 0x23000d
+
+    .line 544
+    .line 545
+    .line 546
+    invoke-interface {v1, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerStart(I)V
+
+    .line 547
+    .line 548
+    .line 549
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
+
+    .line 550
+    .line 551
+    .line 552
+    move-result-object v2
+
+    .line 553
+    iget-object v0, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mBusySignalHandler:LX/0RP;
+
+    .line 554
+    .line 555
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 556
+    .line 557
     .line 558
-    check-cast v1, LX/3Qg;
+    move-result-object v1
 
     .line 559
+    check-cast v1, LX/3Di;
+
     .line 560
+    .line 561
     iget-object v0, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginSignalKey:Ljava/lang/Object;
 
-    .line 561
     .line 562
-    invoke-virtual {v1, v0}, LX/3Qg;->A01(Ljava/lang/Object;)V
-
     .line 563
+    invoke-virtual {v1, v0}, LX/3Di;->A02(Ljava/lang/Object;)V
+
     .line 564
     .line 565
-    iget-object v1, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->loginOperation:LX/3Ey;
-
     .line 566
+    iget-object v1, v4, Lcom/facebook/auth/login/ui/SilentLoginFragment;->loginOperation:LX/2FE;
+
     .line 567
+    .line 568
     const-string/jumbo v0, "login"
 
-    .line 568
     .line 569
     .line 570
-    invoke-virtual {v1, v2, v9, v0}, LX/3Ey;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
-
     .line 571
+    invoke-virtual {v1, v2, v9, v0}, LX/2FE;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
+
     .line 572
     .line 573
+    .line 574
     return-void
 
-    .line 574
-    :cond_1d
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
-
     .line 575
+    :cond_1e
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
+
     .line 576
     .line 577
+    .line 578
     move-result-object v3
 
-    .line 578
-    :cond_1e
+    .line 579
     throw v3
 .end method
 
 
 # virtual methods
+.method public synthetic analyticsProviderEnabled()Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    return v0
+.end method
+
 .method public getAnalyticsName()Ljava/lang/String;
     .locals 1
 
@@ -1509,11 +1515,11 @@
     return-object v0
 .end method
 
-.method public getAuthStateMonitor()LX/2Uk;
+.method public getAuthStateMonitor()LX/1ou;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mAuthStateMachineMonitor:LX/2Uk;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mAuthStateMachineMonitor:LX/1ou;
 
     .line 1
     .line 2
@@ -1551,26 +1557,27 @@
     .locals 1
 
     .line 0
-    const-string v0, "com.facebook.orca.login.AuthStateMachineMonitor.LOGIN_COMPLETE"
+    const-string/jumbo v0, "com.facebook.orca.login.AuthStateMachineMonitor.LOGIN_COMPLETE"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A09(Ljava/lang/String;)Landroid/content/Intent;
-
     .line 3
+    invoke-static {v0}, LX/0X7;->A09(Ljava/lang/String;)Landroid/content/Intent;
+
     .line 4
     .line 5
+    .line 6
     move-result-object v0
 
-    .line 6
+    .line 7
     return-object v0
 .end method
 
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/37j;->A00()LX/37j;
+    invoke-static {}, LX/2uz;->A00()LX/2uz;
 
     .line 1
     .line 2
@@ -1585,7 +1592,7 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mAuthStateMachineMonitor:LX/2Uk;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mAuthStateMachineMonitor:LX/1ou;
 
     .line 1
     .line 2
@@ -1594,32 +1601,33 @@
     .line 3
     .line 4
     .line 5
-    iget-object v1, v0, LX/2Uk;->A00:LX/34m;
+    iget-object v1, v0, LX/1ou;->A01:LX/25W;
 
     .line 6
     .line 7
-    const-string v0, "com.facebook.orca.login.AuthStateMachineMonitor.LOGIN_COMPLETE"
+    const-string/jumbo v0, "com.facebook.orca.login.AuthStateMachineMonitor.LOGIN_COMPLETE"
 
     .line 8
     .line 9
-    invoke-static {v1, v0}, LX/34m;->A00(LX/34m;Ljava/lang/String;)V
-
     .line 10
+    invoke-static {v1, v0}, LX/0X6;->A1I(LX/25W;Ljava/lang/String;)V
+
     .line 11
     .line 12
-    invoke-static {v0}, LX/0Yj;->A09(Ljava/lang/String;)Landroid/content/Intent;
-
     .line 13
+    invoke-static {v0}, LX/0X7;->A09(Ljava/lang/String;)Landroid/content/Intent;
+
     .line 14
     .line 15
+    .line 16
     move-result-object v0
 
-    .line 16
+    .line 17
     invoke-virtual {p0, v0}, Lcom/facebook/base/fragment/AbstractNavigableFragment;->finish(Landroid/content/Intent;)V
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     return-void
 .end method
 
@@ -1662,7 +1670,7 @@
 
     .line 6
     :cond_1
-    const-class v0, LX/3H4;
+    const-class v0, LX/32w;
 
     .line 7
     .line 8
@@ -1674,7 +1682,7 @@
     move-result-object v1
 
     .line 12
-    instance-of v0, v1, LX/3LB;
+    instance-of v0, v1, LX/2w3;
 
     .line 13
     .line 14
@@ -1685,11 +1693,11 @@
     move-object v0, v1
 
     .line 17
-    check-cast v0, LX/3LB;
+    check-cast v0, LX/2w3;
 
     .line 18
     .line 19
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mViewControl:LX/3LB;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mViewControl:LX/2w3;
 
     .line 20
     .line 21
@@ -1705,11 +1713,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AJz:I
+    sget v0, LX/2I6;->AJz:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -1717,19 +1725,19 @@
     move-result-object v0
 
     .line 9
-    check-cast v0, LX/2Uk;
+    check-cast v0, LX/1ou;
 
     .line 10
     .line 11
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mAuthStateMachineMonitor:LX/2Uk;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mAuthStateMachineMonitor:LX/1ou;
 
     .line 12
     .line 13
-    sget v0, LX/2eq;->ADi:I
+    sget v0, LX/2I6;->AAE:I
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 16
     .line 17
@@ -1745,7 +1753,7 @@
 
     .line 22
     .line 23
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 24
     .line 25
@@ -1762,7 +1770,7 @@
     .line 30
     .line 31
     .line 32
-    invoke-static {p0, v0}, LX/3Ey;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/3Ey;
+    invoke-static {p0, v0}, LX/2FE;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/2FE;
 
     .line 33
     .line 34
@@ -1770,27 +1778,27 @@
     move-result-object v2
 
     .line 36
-    iput-object v2, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->loginOperation:LX/3Ey;
+    iput-object v2, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->loginOperation:LX/2FE;
 
     .line 37
     .line 38
     const/4 v1, 0x5
 
     .line 39
-    new-instance v0, LX/1sy;
+    new-instance v0, LX/0ZD;
 
     .line 40
     .line 41
-    invoke-direct {v0, p0, v1}, LX/1sy;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/0ZD;-><init>(Ljava/lang/Object;I)V
 
     .line 42
     .line 43
     .line 44
-    iput-object v0, v2, LX/3Ey;->A02:LX/3FZ;
+    iput-object v0, v2, LX/2FE;->A02:LX/2Ei;
 
     .line 45
     .line 46
-    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/3CC;
+    iget-object v0, p0, Lcom/facebook/base/fragment/AbstractNavigableFragment;->listener:LX/2vx;
 
     .line 47
     .line 48
@@ -1833,7 +1841,7 @@
     .line 10
     .line 11
     .line 12
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0K1;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0Iz;
 
     .line 13
     .line 14
@@ -1841,7 +1849,7 @@
 
     .line 15
     .line 16
-    invoke-virtual {v0}, LX/0K1;->A00()V
+    invoke-virtual {v0}, LX/0Iz;->A00()V
 
     .line 17
     .line 18
@@ -1849,12 +1857,12 @@
     const/4 v0, 0x0
 
     .line 20
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0K1;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0Iz;
 
     .line 21
     .line 22
     :cond_0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mViewControl:LX/3LB;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mViewControl:LX/2w3;
 
     .line 23
     .line 24
@@ -1862,25 +1870,25 @@
 
     .line 25
     .line 26
-    invoke-interface {v0, p1}, LX/3LB;->onLoginFailure(Lcom/facebook/fbservice/service/ServiceException;)V
+    invoke-interface {v0, p1}, LX/2w3;->onLoginFailure(Lcom/facebook/fbservice/service/ServiceException;)V
 
     .line 27
     .line 28
     .line 29
     :cond_1
-    iget-object v4, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/1vc;
+    iget-object v4, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/2Pc;
 
     .line 30
     .line 31
-    check-cast v4, LX/1v5;
+    check-cast v4, LX/2Ol;
 
     .line 32
     .line 33
-    iget-object v0, v4, LX/1v5;->A08:LX/1Nm;
+    iget-object v0, v4, LX/2Ol;->A07:LX/0lu;
 
     .line 34
     .line 35
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 36
     .line 37
@@ -1888,23 +1896,23 @@
     move-result-object v0
 
     .line 39
-    check-cast v0, LX/0bE;
+    check-cast v0, LX/1hZ;
 
     .line 40
     .line 41
     const/4 v3, 0x0
 
     .line 42
-    iget-object v0, v0, LX/0bE;->A01:LX/0Na;
+    iget-object v0, v0, LX/1hZ;->A00:LX/0RP;
 
     .line 43
     .line 44
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 45
     .line 46
     .line 47
-    iget-object v1, v4, LX/1v5;->A0E:Ljava/lang/Object;
+    iget-object v1, v4, LX/2Ol;->A0D:Ljava/lang/Object;
 
     .line 48
     .line 49
@@ -1912,39 +1920,39 @@
 
     .line 50
     :try_start_0
-    iget-object v0, v4, LX/1v5;->A0J:LX/1vb;
+    iget-object v0, v4, LX/2Ol;->A0I:LX/2Pf;
 
     .line 51
     .line 52
     const/4 v10, 0x1
 
     .line 53
-    iget-object v9, v0, LX/1vb;->A03:Lcom/facebook/user/model/User;
+    iget-object v9, v0, LX/2Pf;->A03:Lcom/facebook/user/model/User;
 
     .line 54
     .line 55
-    iget-object v6, v0, LX/1vb;->A00:Lcom/facebook/auth/viewercontext/ViewerContext;
+    iget-object v6, v0, LX/2Pf;->A00:Lcom/facebook/auth/viewercontext/ViewerContext;
 
     .line 56
     .line 57
-    iget-object v7, v0, LX/1vb;->A02:Lcom/facebook/auth/viewercontext/ViewerContext;
+    iget-object v7, v0, LX/2Pf;->A02:Lcom/facebook/auth/viewercontext/ViewerContext;
 
     .line 58
     .line 59
-    iget-object v8, v0, LX/1vb;->A01:Lcom/facebook/auth/viewercontext/ViewerContext;
+    iget-object v8, v0, LX/2Pf;->A01:Lcom/facebook/auth/viewercontext/ViewerContext;
 
     .line 60
     .line 61
-    new-instance v5, LX/1vb;
+    new-instance v5, LX/2Pf;
 
     .line 62
     .line 63
-    invoke-direct/range {v5 .. v10}, LX/1vb;-><init>(Lcom/facebook/auth/viewercontext/ViewerContext;Lcom/facebook/auth/viewercontext/ViewerContext;Lcom/facebook/auth/viewercontext/ViewerContext;Lcom/facebook/user/model/User;Z)V
+    invoke-direct/range {v5 .. v10}, LX/2Pf;-><init>(Lcom/facebook/auth/viewercontext/ViewerContext;Lcom/facebook/auth/viewercontext/ViewerContext;Lcom/facebook/auth/viewercontext/ViewerContext;Lcom/facebook/user/model/User;Z)V
 
     .line 64
     .line 65
     .line 66
-    iput-object v5, v4, LX/1v5;->A0J:LX/1vb;
+    iput-object v5, v4, LX/2Ol;->A0I:LX/2Pf;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1953,11 +1961,11 @@
     monitor-exit v1
 
     .line 69
-    iget-object v1, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/1x7;
+    iget-object v1, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/26P;
 
     .line 70
     .line 71
-    sget-object v0, LX/1x7;->API_ERROR:LX/1x7;
+    sget-object v0, LX/26P;->API_ERROR:LX/26P;
 
     .line 72
     .line 73
@@ -1975,7 +1983,7 @@
     .line 79
     .line 80
     :cond_2
-    invoke-direct {p0}, Lcom/facebook/auth/login/ui/SilentLoginFragment;->getIAuthAnalyticsLoggerSocket()LX/2Jq;
+    invoke-direct {p0}, Lcom/facebook/auth/login/ui/SilentLoginFragment;->getIAuthAnalyticsLoggerSocket()LX/1zS;
 
     .line 81
     .line 82
@@ -1983,11 +1991,11 @@
     move-result-object v0
 
     .line 84
-    iput v3, v0, LX/2Jm;->A00:I
+    iput v3, v0, LX/1zR;->A00:I
 
     .line 85
     .line 86
-    invoke-virtual {v0}, LX/2Jm;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 87
     .line 88
@@ -2015,63 +2023,69 @@
     move-result-object v0
 
     .line 100
-    check-cast v0, LX/2Jq;
+    check-cast v0, LX/1zS;
 
     .line 101
     .line 102
-    invoke-static {v0, v2}, LX/3e4;->A03(LX/2Jq;I)V
+    invoke-static {v0, v2}, LX/3FR;->A02(LX/1zS;I)V
 
     .line 103
     .line 104
     .line 105
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 106
+    .line 107
+    .line 108
+    move-result-object v0
+
+    .line 109
     throw v0
 
-    .line 107
+    .line 110
     :cond_3
     const-class v1, Lcom/facebook/auth/login/ui/LogoutFragment;
 
-    .line 108
-    .line 109
-    new-instance v0, LX/3FR;
-
-    .line 110
     .line 111
-    invoke-direct {v0, v1}, LX/3FR;-><init>(Ljava/lang/Class;)V
-
     .line 112
+    new-instance v0, LX/333;
+
     .line 113
     .line 114
-    iget-object v1, v0, LX/3FR;->A00:Landroid/content/Intent;
+    invoke-direct {v0, v1}, LX/333;-><init>(Ljava/lang/Class;)V
 
     .line 115
     .line 116
-    const-string v0, "com.facebook.fragment.CLEAR_BACK_STACK"
-
     .line 117
-    .line 118
-    invoke-virtual {v1, v0, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    iget-object v1, v0, LX/333;->A00:Landroid/content/Intent;
 
+    .line 118
     .line 119
+    const-string/jumbo v0, "com.facebook.fragment.CLEAR_BACK_STACK"
+
     .line 120
     .line 121
-    invoke-virtual {p0, v1}, Lcom/facebook/base/fragment/AbstractNavigableFragment;->finish(Landroid/content/Intent;)V
-
     .line 122
+    invoke-virtual {v1, v0, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     .line 123
     .line 124
+    .line 125
+    invoke-virtual {p0, v1}, Lcom/facebook/base/fragment/AbstractNavigableFragment;->finish(Landroid/content/Intent;)V
+
+    .line 126
+    .line 127
+    .line 128
     return-void
 
-    .line 125
+    .line 129
     :catchall_0
     move-exception v0
 
-    .line 126
+    .line 130
     monitor-exit v1
 
-    .line 127
+    .line 131
     throw v0
 .end method
 
@@ -2101,7 +2115,7 @@
     .line 10
     .line 11
     .line 12
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0K1;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0Iz;
 
     .line 13
     .line 14
@@ -2109,7 +2123,7 @@
 
     .line 15
     .line 16
-    invoke-virtual {v0}, LX/0K1;->A00()V
+    invoke-virtual {v0}, LX/0Iz;->A00()V
 
     .line 17
     .line 18
@@ -2117,12 +2131,12 @@
     const/4 v0, 0x0
 
     .line 20
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0K1;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoginTracer:LX/0Iz;
 
     .line 21
     .line 22
     :cond_0
-    invoke-direct {p0}, Lcom/facebook/auth/login/ui/SilentLoginFragment;->getIAuthAnalyticsLoggerSocket()LX/2Jq;
+    invoke-direct {p0}, Lcom/facebook/auth/login/ui/SilentLoginFragment;->getIAuthAnalyticsLoggerSocket()LX/1zS;
 
     .line 23
     .line 24
@@ -2133,11 +2147,11 @@
     const/4 v0, 0x0
 
     .line 27
-    iput v0, v1, LX/2Jm;->A00:I
+    iput v0, v1, LX/1zR;->A00:I
 
     .line 28
     .line 29
-    invoke-virtual {v1}, LX/2Jm;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 30
     .line 31
@@ -2165,30 +2179,35 @@
     move-result-object v1
 
     .line 43
-    check-cast v1, LX/2Jq;
+    check-cast v1, LX/1zS;
 
     .line 44
     .line 45
     const/4 v0, 0x3
 
     .line 46
-    invoke-static {v1, v0}, LX/3e4;->A03(LX/2Jq;I)V
+    invoke-static {v1, v0}, LX/3FR;->A02(LX/1zS;I)V
 
     .line 47
     .line 48
     .line 49
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 50
+    .line 51
+    .line 52
+    move-result-object v0
+
+    .line 53
     throw v0
 
-    .line 51
+    .line 54
     :cond_1
     invoke-virtual {p0}, Lcom/facebook/auth/login/ui/SilentLoginFragment;->notifyLoginSuccess()V
 
-    .line 52
-    .line 53
-    .line 54
+    .line 55
+    .line 56
+    .line 57
     return-void
 .end method
 
@@ -2208,11 +2227,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->loginOperation:LX/3Ey;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->loginOperation:LX/2FE;
 
     .line 7
     .line 8
-    invoke-virtual {v0}, LX/3Ey;->A03()Z
+    invoke-virtual {v0}, LX/2FE;->A03()Z
 
     .line 9
     .line 10
@@ -2224,11 +2243,11 @@
 
     .line 13
     .line 14
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/1vc;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/SilentLoginFragment;->mLoggedInUserSessionManager:LX/2Pc;
 
     .line 15
     .line 16
-    invoke-interface {v0}, LX/1dJ;->AIH()Lcom/facebook/auth/viewercontext/ViewerContext;
+    invoke-interface {v0}, LX/1uc;->AGh()Lcom/facebook/auth/viewercontext/ViewerContext;
 
     .line 17
     .line 18

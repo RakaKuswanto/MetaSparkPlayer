@@ -1,52 +1,61 @@
-.class public final LX/3xl;
-.super LX/3xk;
+.class public final synthetic LX/3xl;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final A00:LX/3xl;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "PlayerWarmupScheduler$$ExternalSyntheticLambda7"
+
+
+# instance fields
+.field public final synthetic A00:LX/3xp;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public synthetic constructor <init>(LX/3xp;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/3xl;->A00:LX/3xp;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 3
 
     .line 0
-    new-instance v2, LX/3xl;
+    iget-object v2, p0, LX/3xl;->A00:LX/3xp;
 
     .line 1
     .line 2
-    invoke-direct {v2}, LX/3xl;-><init>()V
+    invoke-static {}, Landroid/os/Looper;->myQueue()Landroid/os/MessageQueue;
 
     .line 3
     .line 4
     .line 5
-    sput-object v2, LX/3xl;->A00:LX/3xl;
+    move-result-object v1
 
     .line 6
-    .line 7
-    const/4 v1, 0x0
+    new-instance v0, LX/3xm;
 
+    .line 7
     .line 8
-    const/4 v0, 0x1
+    invoke-direct {v0, v2}, LX/3xm;-><init>(LX/3xp;)V
 
     .line 9
-    invoke-virtual {v2, v1, v1, v0}, LX/3xk;->A0F(Ljava/lang/Object;Ljava/util/Map;Z)Z
-
     .line 10
     .line 11
+    invoke-virtual {v1, v0}, Landroid/os/MessageQueue;->addIdleHandler(Landroid/os/MessageQueue$IdleHandler;)V
+
     .line 12
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/3xk;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
+    .line 13
+    .line 14
     return-void
 .end method

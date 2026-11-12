@@ -1,11 +1,13 @@
-.class public interface abstract LX/4PB;
+.class public abstract LX/4PB;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract getBorderColor()LX/4Nn;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract getReleasedElevationDip()F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

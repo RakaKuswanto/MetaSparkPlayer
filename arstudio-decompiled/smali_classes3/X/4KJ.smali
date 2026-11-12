@@ -1,104 +1,105 @@
-.class public LX/4KJ;
-.super Landroid/widget/LinearLayout;
+.class public abstract LX/4KJ;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
-
-    .line 536870912
-    invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    .line 536870913
-    .line 536870914
-    .line 536870915
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    .line 805306368
-    invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 805306369
-    .line 805306370
-    .line 805306371
-    sget-object v0, LX/4OX;->A0S:[I
-
-    .line 805306372
-    .line 805306373
-    invoke-static {p1, p2, p0, v0}, LX/4BD;->A0L(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/view/View;[I)Landroid/content/res/TypedArray;
-
-    .line 805306374
-    .line 805306375
-    .line 805306376
-    move-result-object v0
-
-    .line 805306377
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 805306378
-    .line 805306379
-    .line 805306380
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 1
+.method public static final A00(LX/4gE;I)I
+    .locals 4
 
     .line 0
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    const/4 v3, 0x0
 
     .line 1
+    invoke-static {p0, v3}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 2
     .line 3
-    sget-object v0, LX/4OX;->A0S:[I
-
     .line 4
-    .line 5
-    invoke-static {p1, p2, p0, v0}, LX/4BD;->A0L(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/view/View;[I)Landroid/content/res/TypedArray;
+    iget-boolean v0, p0, LX/4gE;->A0L:Z
 
+    .line 5
     .line 6
+    if-eqz v0, :cond_2
+
     .line 7
     .line 8
-    move-result-object v0
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     .line 9
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
     .line 10
     .line 11
+    move-result v0
+
     .line 12
-    return-void
-.end method
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 1
+    .line 13
+    .line 14
+    .line 15
+    move-result v2
 
-    .line 268435456
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    .line 16
+    const/high16 v1, -0x80000000
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    sget-object v0, LX/4OX;->A0S:[I
+    .line 17
+    .line 18
+    if-eq v2, v1, :cond_1
 
-    .line 268435460
-    .line 268435461
-    invoke-static {p1, p2, p0, v0}, LX/4BD;->A0L(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/view/View;[I)Landroid/content/res/TypedArray;
+    .line 19
+    .line 20
+    if-eqz v2, :cond_0
 
-    .line 268435462
-    .line 268435463
-    .line 268435464
+    .line 21
+    .line 22
+    const/high16 v1, 0x40000000    # 2.0f
+
+    .line 23
+    .line 24
+    if-eq v2, v1, :cond_1
+
+    .line 25
+    .line 26
+    const-string v0, "Invalid spec mode: "
+
+    .line 27
+    .line 28
+    invoke-static {v0, v2}, LX/0X3;->A0X(Ljava/lang/String;I)Ljava/lang/IllegalStateException;
+
+    .line 29
+    .line 30
+    .line 31
     move-result-object v0
 
-    .line 268435465
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+    .line 32
+    throw v0
 
-    .line 268435466
-    .line 268435467
-    .line 268435468
-    return-void
+    .line 33
+    :cond_0
+    sget p1, LX/4KG;->A00:I
+
+    .line 34
+    .line 35
+    return p1
+
+    .line 36
+    :cond_1
+    invoke-static {v3, v0}, Ljava/lang/Math;->max(II)I
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v0
+
+    .line 40
+    invoke-static {v0, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    .line 41
+    .line 42
+    .line 43
+    move-result p1
+
+    .line 44
+    :cond_2
+    return p1
 .end method

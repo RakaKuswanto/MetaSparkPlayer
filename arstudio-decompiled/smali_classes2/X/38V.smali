@@ -1,27 +1,63 @@
 .class public final LX/38V;
-.super LX/38O;
+.super LX/38W;
 .source ""
 
 
-# static fields
-.field public static A01:LX/38N;
-
-.field public static A02:LX/38V;
-
-
 # instance fields
-.field public A00:LX/0OQ;
+.field public final A00:LX/38S;
+
+.field public final A01:Ljava/lang/String;
+
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, LX/38O;-><init>()V
+    const-string/jumbo v2, "ras_blobs"
 
     .line 1
     .line 2
     .line 3
+    new-instance v1, LX/38S;
+
+    .line 4
+    .line 5
+    invoke-direct {v1, p1, p2, p3}, LX/38S;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-direct {p0}, LX/38W;-><init>()V
+
+    .line 9
+    .line 10
+    .line 11
+    iput-object p1, p0, LX/38V;->A01:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    const-string v0, "/"
+
+    .line 14
+    .line 15
+    invoke-static {v2, v0, p1}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    iput-object v0, p0, LX/38V;->A02:Ljava/lang/String;
+
+    .line 20
+    .line 21
+    iput-object v1, p0, LX/38V;->A00:LX/38S;
+
+    .line 22
+    .line 23
     return-void
 .end method

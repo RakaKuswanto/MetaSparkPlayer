@@ -14,9 +14,17 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Splitter$Strategy;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "strategy"
+        }
+    .end annotation
 
     .line 0
-    sget-object v1, Lcom/google/common/base/CharMatcher$None;->INSTANCE:Lcom/google/common/base/CharMatcher$None;
+    sget-object v1, Lcom/google/common/base/CharMatcher$None;->INSTANCE:Lcom/google/common/base/CharMatcher;
 
     .line 1
     .line 2

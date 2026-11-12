@@ -1,47 +1,68 @@
-.class public final LX/210;
-.super Ljava/lang/Object;
+.class public abstract LX/210;
+.super LX/1tw;
 .source ""
 
-
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
+# interfaces
+.implements Ljava/util/ListIterator;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/1tw;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A0C()LX/0Zq;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final add(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
 
     .line 4
-    .line 5
-    .line 6
+    throw v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
     move-result-object v0
 
-    .line 7
-    iput-object v0, p0, LX/210;->A01:LX/0Na;
-
-    .line 8
-    .line 9
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/210;->A00:LX/1zG;
-
-    .line 14
-    .line 15
-    return-void
+    .line 4
+    throw v0
 .end method

@@ -1,162 +1,326 @@
-.class public final enum LX/5rp;
-.super Ljava/lang/Enum;
+.class public LX/5rp;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/5rp;
+# instance fields
+.field public A00:LX/5rr;
 
-.field public static final enum ABOVE_THRESHOLD:LX/5rp;
+.field public A01:J
 
-.field public static final enum BELOW_THRESHOLD:LX/5rp;
+.field public A02:Ljava/util/concurrent/locks/Condition;
 
-.field public static final enum INSIGNIFICANT:LX/5rp;
+.field public final A03:Ljava/util/concurrent/locks/ReentrantLock;
 
 
 # direct methods
-.method public static final synthetic $values()[LX/5rp;
-    .locals 3
-
-    const/4 v0, 0x3
-
-    new-array v2, v0, [LX/5rp;
-
-    sget-object v1, LX/5rp;->INSIGNIFICANT:LX/5rp;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/5rp;->ABOVE_THRESHOLD:LX/5rp;
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/5rp;->BELOW_THRESHOLD:LX/5rp;
-
-    const/4 v0, 0x2
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    const-string v2, "INSIGNIFICANT"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/4 v1, 0x0
-
     .line 3
-    new-instance v0, LX/5rp;
+    const-wide/16 v0, 0x1388
 
     .line 4
     .line 5
-    invoke-direct {v0, v2, v1}, LX/5rp;-><init>(Ljava/lang/String;I)V
+    iput-wide v0, p0, LX/5rp;->A01:J
 
     .line 6
     .line 7
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+
     .line 8
-    sput-object v0, LX/5rp;->INSIGNIFICANT:LX/5rp;
+    .line 9
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    iput-object v0, p0, LX/5rp;->A03:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 13
+    .line 14
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()V
+    .locals 6
+
+    .line 0
+    iget-object v5, p0, LX/5rp;->A03:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 1
+    .line 2
+    invoke-virtual {v5}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 3
+    .line 4
+    .line 5
+    const/4 v4, 0x0
+
+    .line 6
+    :try_start_0
+    iget-object v3, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
+
+    .line 7
+    .line 8
+    if-eqz v3, :cond_0
 
     .line 9
     .line 10
-    const-string v2, "ABOVE_THRESHOLD"
+    iget-wide v1, p0, LX/5rp;->A01:J
 
     .line 11
     .line 12
-    const/4 v1, 0x1
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     .line 13
-    new-instance v0, LX/5rp;
-
     .line 14
-    .line 15
-    invoke-direct {v0, v2, v1}, LX/5rp;-><init>(Ljava/lang/String;I)V
+    invoke-interface {v3, v1, v2, v0}, Ljava/util/concurrent/locks/Condition;->await(JLjava/util/concurrent/TimeUnit;)Z
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 15
     .line 16
     .line 17
+    :cond_0
+    iget-object v0, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
+
     .line 18
-    sput-object v0, LX/5rp;->ABOVE_THRESHOLD:LX/5rp;
-
     .line 19
+    if-eqz v0, :cond_1
+
     .line 20
-    const-string v2, "BELOW_THRESHOLD"
-
     .line 21
-    .line 22
-    const/4 v1, 0x2
+    iput-object v4, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
 
+    .line 22
     .line 23
-    new-instance v0, LX/5rp;
+    iget-object v0, p0, LX/5rp;->A00:LX/5rr;
 
     .line 24
     .line 25
-    invoke-direct {v0, v2, v1}, LX/5rp;-><init>(Ljava/lang/String;I)V
+    if-eqz v0, :cond_1
 
     .line 26
     .line 27
-    .line 28
-    sput-object v0, LX/5rp;->BELOW_THRESHOLD:LX/5rp;
+    invoke-interface {v0}, LX/5rr;->AcB()V
 
+    .line 28
     .line 29
     .line 30
-    invoke-static {}, LX/5rp;->$values()[LX/5rp;
+    :cond_1
+    invoke-virtual {v5}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     .line 31
     .line 32
     .line 33
-    move-result-object v0
+    return-void
 
     .line 34
-    sput-object v0, LX/5rp;->$VALUES:[LX/5rp;
+    :catch_0
+    move-exception v2
 
     .line 35
+    :try_start_1
+    const-string v1, "Operation blocker interrupted. "
+
     .line 36
-    return-void
+    .line 37
+    new-instance v0, LX/5rm;
+
+    .line 38
+    .line 39
+    invoke-direct {v0, v1, v2}, LX/5rm;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 40
+    .line 41
+    .line 42
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 43
+    :catchall_0
+    move-exception v1
+
+    .line 44
+    iget-object v0, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
+
+    .line 45
+    .line 46
+    if-eqz v0, :cond_2
+
+    .line 47
+    .line 48
+    iput-object v4, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
+
+    .line 49
+    .line 50
+    iget-object v0, p0, LX/5rp;->A00:LX/5rr;
+
+    .line 51
+    .line 52
+    if-eqz v0, :cond_2
+
+    .line 53
+    .line 54
+    invoke-interface {v0}, LX/5rr;->AcB()V
+
+    .line 55
+    .line 56
+    .line 57
+    :cond_2
+    invoke-virtual {v5}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 58
+    .line 59
+    .line 60
+    throw v1
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public final A01()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v2, p0, LX/5rp;->A03:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 1
     .line 2
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
     .line 3
+    .line 4
+    .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    :try_start_0
+    iget-object v0, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
+
+    .line 7
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    .line 10
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->signal()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 11
+    .line 12
+    .line 13
+    :cond_0
+    iput-object v1, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
+
+    .line 14
+    .line 15
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 16
+    .line 17
+    .line 18
     return-void
+
+    .line 19
+    :catchall_0
+    move-exception v0
+
+    .line 20
+    iput-object v1, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
+
+    .line 21
+    .line 22
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 23
+    .line 24
+    .line 25
+    throw v0
 .end method
 
-.method public static valueOf(Ljava/lang/String;)LX/5rp;
-    .locals 1
+.method public final A02(J)V
+    .locals 4
 
-    const-class v0, LX/5rp;
+    .line 0
+    iget-object v3, p0, LX/5rp;->A03:Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 1
+    .line 2
+    invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
+
+    .line 6
+    .line 7
+    if-nez v0, :cond_1
+
+    .line 8
+    .line 9
+    invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
+
+    .line 10
+    .line 11
+    .line 12
     move-result-object v0
 
-    check-cast v0, LX/5rp;
+    .line 13
+    iput-object v0, p0, LX/5rp;->A02:Ljava/util/concurrent/locks/Condition;
 
-    return-object v0
-.end method
+    .line 14
+    .line 15
+    const-wide/16 v1, 0x0
 
-.method public static values()[LX/5rp;
-    .locals 1
+    .line 16
+    .line 17
+    cmp-long v0, p1, v1
 
-    sget-object v0, LX/5rp;->$VALUES:[LX/5rp;
+    .line 18
+    .line 19
+    if-gtz v0, :cond_0
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 20
+    .line 21
+    const-wide/16 p1, 0x1388
 
+    .line 22
+    .line 23
+    :cond_0
+    iput-wide p1, p0, LX/5rp;->A01:J
+
+    .line 24
+    .line 25
+    invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 26
+    .line 27
+    .line 28
+    return-void
+
+    .line 29
+    :cond_1
+    const-string v0, "There is already a block condition being used."
+
+    .line 30
+    .line 31
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 32
+    .line 33
+    .line 34
     move-result-object v0
 
-    check-cast v0, [LX/5rp;
-
-    return-object v0
+    .line 35
+    throw v0
 .end method

@@ -1,230 +1,281 @@
-.class public final LX/6DN;
-.super LX/6DS;
+.class public final enum LX/6dn;
+.super Ljava/lang/Enum;
 .source ""
 
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/6dn;
+
+.field public static final enum ADDRESS_FORM_FIELD_REQUEST:LX/6dn;
+
+.field public static final enum EMAIL_FORM_FIELD_REQUEST:LX/6dn;
+
+.field public static final enum EMPTY:LX/6dn;
+
+.field public static final enum NAME_FORM_FIELD_REQUEST:LX/6dn;
+
+.field public static final enum TEL_FORM_FIELD_REQUEST:LX/6dn;
+
+
 # instance fields
-.field public A00:D
-
-.field public A01:Z
-
-.field public A02:Z
-
-.field public A03:Z
-
-.field public A04:Z
-
-.field public A05:Z
-
-.field public A06:Z
-
-.field public A07:Z
-
-.field public A08:Z
-
-.field public A09:Z
-
-.field public A0A:Z
-
-.field public A0B:Z
-
-.field public A0C:Z
-
-.field public A0D:Z
-
-.field public A0E:Z
-
-.field public A0F:Z
-
-.field public A0G:Z
-
-.field public A0H:Z
-
-.field public A0I:Z
-
-.field public A0J:Z
-
-.field public A0K:Z
-
-.field public A0L:Z
-
-.field public A0M:Z
-
-.field public A0N:Z
-
-.field public A0O:Z
-
-.field public A0P:Z
-
-.field public A0Q:Z
-
-.field public A0R:Z
-
-.field public A0S:Z
-
-.field public A0T:Z
-
-.field public A0U:Z
-
-.field public A0V:Z
-
-.field public A0W:Z
-
-.field public A0X:Z
-
-.field public A0Y:Z
-
-.field public A0Z:Z
-
-.field public A0a:Z
-
-.field public A0b:Z
-
-.field public A0c:Z
-
-.field public A0d:Z
-
-.field public A0e:Z
-
-.field public A0f:Z
-
-.field public final A0g:LX/0ZF;
+.field public final value:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static final synthetic $values()[LX/6dn;
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, LX/6DS;-><init>()V
+    const/4 v0, 0x5
 
-    .line 1
-    .line 2
-    .line 3
+    new-array v2, v0, [LX/6dn;
+
+    sget-object v1, LX/6dn;->EMAIL_FORM_FIELD_REQUEST:LX/6dn;
+
     const/4 v0, 0x0
 
-    .line 4
-    invoke-static {p0}, LX/6DN;->A00(LX/6DN;)V
+    aput-object v1, v2, v0
 
-    .line 5
-    .line 6
-    .line 7
-    iput-boolean v0, p0, LX/6DN;->A0f:Z
+    sget-object v1, LX/6dn;->ADDRESS_FORM_FIELD_REQUEST:LX/6dn;
 
-    .line 8
-    .line 9
-    iput-boolean v0, p0, LX/6DN;->A04:Z
+    const/4 v0, 0x1
 
-    .line 10
-    .line 11
-    const-class v1, LX/0ZF;
+    aput-object v1, v2, v0
 
-    .line 12
-    .line 13
-    const/4 v0, 0x0
+    sget-object v1, LX/6dn;->TEL_FORM_FIELD_REQUEST:LX/6dn;
 
-    .line 14
-    invoke-static {v1, v0}, LX/1z6;->A0X(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
+    aput-object v1, v2, v0
 
-    .line 18
-    check-cast v0, LX/0ZF;
+    sget-object v1, LX/6dn;->NAME_FORM_FIELD_REQUEST:LX/6dn;
 
-    .line 19
-    .line 20
-    iput-object v0, p0, LX/6DN;->A0g:LX/0ZF;
+    const/4 v0, 0x3
 
-    .line 21
-    .line 22
-    return-void
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/6dn;->EMPTY:LX/6dn;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-.method public static A00(LX/6DN;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 0
-    const/4 v0, 0x0
+    const-string v3, "EMAIL_FORM_FIELD_REQUEST"
 
     .line 1
-    iput-boolean v0, p0, LX/6DN;->A0V:Z
-
     .line 2
+    const/4 v2, 0x0
+
     .line 3
-    iput-boolean v0, p0, LX/6DN;->A0b:Z
+    const-string v1, "email"
 
     .line 4
     .line 5
-    iput-boolean v0, p0, LX/6DN;->A0Z:Z
+    new-instance v0, LX/6dn;
 
     .line 6
     .line 7
-    iput-boolean v0, p0, LX/6DN;->A0R:Z
+    invoke-direct {v0, v3, v2, v1}, LX/6dn;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 8
     .line 9
-    iput-boolean v0, p0, LX/6DN;->A0T:Z
-
     .line 10
+    sput-object v0, LX/6dn;->EMAIL_FORM_FIELD_REQUEST:LX/6dn;
+
     .line 11
-    iput-boolean v0, p0, LX/6DN;->A0X:Z
-
     .line 12
-    .line 13
-    iput-boolean v0, p0, LX/6DN;->A05:Z
+    const-string v3, "ADDRESS_FORM_FIELD_REQUEST"
 
+    .line 13
     .line 14
+    const/4 v2, 0x1
+
     .line 15
-    iput-boolean v0, p0, LX/6DN;->A07:Z
+    const-string v1, "address"
 
     .line 16
     .line 17
-    iput-boolean v0, p0, LX/6DN;->A09:Z
+    new-instance v0, LX/6dn;
 
     .line 18
     .line 19
-    iput-boolean v0, p0, LX/6DN;->A0B:Z
+    invoke-direct {v0, v3, v2, v1}, LX/6dn;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 20
     .line 21
-    iput-boolean v0, p0, LX/6DN;->A0D:Z
-
     .line 22
+    sput-object v0, LX/6dn;->ADDRESS_FORM_FIELD_REQUEST:LX/6dn;
+
     .line 23
-    iput-boolean v0, p0, LX/6DN;->A0H:Z
-
     .line 24
-    .line 25
-    iput-boolean v0, p0, LX/6DN;->A0G:Z
+    const-string v3, "TEL_FORM_FIELD_REQUEST"
 
+    .line 25
     .line 26
+    const/4 v2, 0x2
+
     .line 27
-    iput-boolean v0, p0, LX/6DN;->A0J:Z
+    const-string v1, "tel"
 
     .line 28
     .line 29
-    iput-boolean v0, p0, LX/6DN;->A0L:Z
+    new-instance v0, LX/6dn;
 
     .line 30
     .line 31
-    iput-boolean v0, p0, LX/6DN;->A0N:Z
+    invoke-direct {v0, v3, v2, v1}, LX/6dn;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 32
     .line 33
-    iput-boolean v0, p0, LX/6DN;->A0P:Z
-
     .line 34
+    sput-object v0, LX/6dn;->TEL_FORM_FIELD_REQUEST:LX/6dn;
+
     .line 35
-    iput-boolean v0, p0, LX/6DN;->A0d:Z
-
     .line 36
-    .line 37
-    iput-boolean v0, p0, LX/6DN;->A02:Z
+    const-string v3, "NAME_FORM_FIELD_REQUEST"
 
+    .line 37
     .line 38
+    const/4 v2, 0x3
+
     .line 39
+    const-string v1, "name"
+
+    .line 40
+    .line 41
+    new-instance v0, LX/6dn;
+
+    .line 42
+    .line 43
+    invoke-direct {v0, v3, v2, v1}, LX/6dn;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 44
+    .line 45
+    .line 46
+    sput-object v0, LX/6dn;->NAME_FORM_FIELD_REQUEST:LX/6dn;
+
+    .line 47
+    .line 48
+    const-string v3, "EMPTY"
+
+    .line 49
+    .line 50
+    const/4 v2, 0x4
+
+    .line 51
+    const-string v1, ""
+
+    .line 52
+    .line 53
+    new-instance v0, LX/6dn;
+
+    .line 54
+    .line 55
+    invoke-direct {v0, v3, v2, v1}, LX/6dn;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 56
+    .line 57
+    .line 58
+    sput-object v0, LX/6dn;->EMPTY:LX/6dn;
+
+    .line 59
+    .line 60
+    invoke-static {}, LX/6dn;->$values()[LX/6dn;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v0
+
+    .line 64
+    sput-object v0, LX/6dn;->$VALUES:[LX/6dn;
+
+    .line 65
+    .line 66
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-object v0
+
+    .line 70
+    sput-object v0, LX/6dn;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 71
+    .line 72
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/6dn;->value:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/6dn;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/6dn;
+    .locals 1
+
+    const-class v0, LX/6dn;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/6dn;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/6dn;
+    .locals 1
+
+    sget-object v0, LX/6dn;->$VALUES:[LX/6dn;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/6dn;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getValue()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/6dn;->value:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

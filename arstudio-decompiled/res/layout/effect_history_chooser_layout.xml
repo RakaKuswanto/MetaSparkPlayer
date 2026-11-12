@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<X.4QO android:id="@id/effect_history_chooser" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:layout_constraintBottom_toBottomOf="parent"
+<X.3vX android:id="@id/effect_history_chooser" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:layout_constraintBottom_toBottomOf="parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
     <com.instagram.common.ui.widget.reboundhorizontalscrollview.ReboundHorizontalScrollView android:gravity="bottom" android:id="@id/scroll_view" android:paddingTop="16.0dip" android:paddingBottom="@dimen/action_button_optional_padding_right" android:layout_width="fill_parent" android:layout_height="48.0dip" />
-    <X.4OH android:layout_gravity="center|bottom" android:id="@id/selected_image_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-8.0dip" android:src="@drawable/fb_ic_triangle_up_outline_24" fb:glyphColor="@color/abc_decor_view_status_guard_light" />
-</X.4QO>
+    <X.6cR android:layout_gravity="center|bottom" android:id="@id/selected_image_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-8.0dip" android:src="@drawable/fb_ic_triangle_up_outline_24" fb:glyphColor="@color/abc_decor_view_status_guard_light" />
+</X.3vX>

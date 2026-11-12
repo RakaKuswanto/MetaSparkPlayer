@@ -3,27 +3,18 @@
 .source ""
 
 # interfaces
-.implements LX/5cz;
+.implements Ljava/util/Iterator;
+.implements LX/0Wm;
 
 
 # instance fields
 .field public A00:I
 
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:J
-
-.field public A04:LX/554;
-
-.field public A05:LX/5eS;
-
-.field public A06:Z
+.field public final A01:[J
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>([J)V
     .locals 0
 
     .line 0
@@ -32,104 +23,116 @@
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/5cr;->A01:[J
+
+    .line 4
+    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final ADO()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/5cr;->A00:I
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final AEa()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/5cr;->A01:I
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final AGQ()LX/5gg;
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return-object v0
-.end method
-
-.method public final AJY()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/5cr;->A02:I
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final AMw()LX/554;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5cr;->A04:LX/554;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final AN2()J
+.method public final hasNext()Z
     .locals 2
 
     .line 0
-    iget-wide v0, p0, LX/5cr;->A03:J
+    iget v1, p0, LX/5cr;->A00:I
 
     .line 1
     .line 2
-    return-wide v0
+    iget-object v0, p0, LX/5cr;->A01:[J
+
+    .line 3
+    .line 4
+    array-length v0, v0
+
+    .line 5
+    invoke-static {v1, v0}, LX/0X3;->A1Y(II)Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    return v0
 .end method
 
-.method public final AO9()LX/5eS;
-    .locals 1
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/5cr;->A05:LX/5eS;
+    iget v2, p0, LX/5cr;->A00:I
 
     .line 1
     .line 2
+    iget-object v1, p0, LX/5cr;->A01:[J
+
+    .line 3
+    .line 4
+    array-length v0, v1
+
+    .line 5
+    if-ge v2, v0, :cond_0
+
+    .line 6
+    .line 7
+    add-int/lit8 v0, v2, 0x1
+
+    .line 8
+    .line 9
+    iput v0, p0, LX/5cr;->A00:I
+
+    .line 10
+    .line 11
+    aget-wide v1, v1, v2
+
+    .line 12
+    .line 13
+    new-instance v0, LX/5cN;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v1, v2}, LX/5cN;-><init>(J)V
+
+    .line 16
+    .line 17
+    .line 18
     return-object v0
+
+    .line 19
+    :cond_0
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    .line 26
+    .line 27
+    .line 28
+    throw v0
 .end method
 
-.method public final AQX()Z
+.method public final remove()V
     .locals 1
 
     .line 0
-    iget-boolean v0, p0, LX/5cr;->A06:Z
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
-    return v0
-.end method
+    .line 3
+    move-result-object v0
 
-.method public final ARX()Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
+    .line 4
+    throw v0
 .end method

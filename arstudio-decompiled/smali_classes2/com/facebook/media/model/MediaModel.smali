@@ -51,11 +51,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x2d
+    const/16 v0, 0x5a
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -70,116 +70,6 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/18R;)V
-    .locals 2
-
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iget v0, p1, LX/18R;->A00:I
-
-    .line 268435460
-    .line 268435461
-    iput v0, p0, Lcom/facebook/media/model/MediaModel;->A00:I
-
-    .line 268435462
-    .line 268435463
-    iget-object v0, p1, LX/18R;->A06:Ljava/lang/String;
-
-    .line 268435464
-    .line 268435465
-    iput-object v0, p0, Lcom/facebook/media/model/MediaModel;->A05:Ljava/lang/String;
-
-    .line 268435466
-    .line 268435467
-    iget v0, p1, LX/18R;->A01:I
-
-    .line 268435468
-    .line 268435469
-    iput v0, p0, Lcom/facebook/media/model/MediaModel;->A01:I
-
-    .line 268435470
-    .line 268435471
-    iget-object v1, p1, LX/18R;->A07:Ljava/lang/String;
-
-    .line 268435472
-    .line 268435473
-    const-string/jumbo v0, "id"
-
-    .line 268435474
-    .line 268435475
-    .line 268435476
-    invoke-static {v0, v1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 268435477
-    .line 268435478
-    .line 268435479
-    iput-object v1, p0, Lcom/facebook/media/model/MediaModel;->A06:Ljava/lang/String;
-
-    .line 268435480
-    .line 268435481
-    iget-object v0, p1, LX/18R;->A08:Ljava/lang/String;
-
-    .line 268435482
-    .line 268435483
-    iput-object v0, p0, Lcom/facebook/media/model/MediaModel;->A08:Ljava/lang/String;
-
-    .line 268435484
-    .line 268435485
-    iget-object v0, p1, LX/18R;->A05:Lcom/facebook/ipc/media/data/MimeType;
-
-    .line 268435486
-    .line 268435487
-    iput-object v0, p0, Lcom/facebook/media/model/MediaModel;->A07:Lcom/facebook/ipc/media/data/MimeType;
-
-    .line 268435488
-    .line 268435489
-    iget v0, p1, LX/18R;->A02:I
-
-    .line 268435490
-    .line 268435491
-    iput v0, p0, Lcom/facebook/media/model/MediaModel;->A02:I
-
-    .line 268435492
-    .line 268435493
-    iget-wide v0, p1, LX/18R;->A04:J
-
-    .line 268435494
-    .line 268435495
-    iput-wide v0, p0, Lcom/facebook/media/model/MediaModel;->A04:J
-
-    .line 268435496
-    .line 268435497
-    iget v0, p1, LX/18R;->A03:I
-
-    .line 268435498
-    .line 268435499
-    iput v0, p0, Lcom/facebook/media/model/MediaModel;->A03:I
-
-    .line 268435500
-    .line 268435501
-    iget-object v0, p1, LX/18R;->A09:Ljava/util/Set;
-
-    .line 268435502
-    .line 268435503
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    .line 268435504
-    .line 268435505
-    .line 268435506
-    move-result-object v0
-
-    .line 268435507
-    iput-object v0, p0, Lcom/facebook/media/model/MediaModel;->A09:Ljava/util/Set;
-
-    .line 268435508
-    .line 268435509
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
@@ -189,7 +79,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -331,7 +221,7 @@
 
     .line 71
     .line 72
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 73
     .line 74
@@ -355,62 +245,128 @@
 
     .line 82
     .line 83
-    invoke-static {p1, v2, v0}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v2}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 84
     .line 85
     .line 86
-    move-result v0
+    add-int/lit8 v0, v0, 0x1
 
     .line 87
+    .line 88
     goto :goto_2
 
-    .line 88
+    .line 89
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 89
     .line 90
     .line 91
+    .line 92
     move-result-object v0
 
-    .line 92
+    .line 93
     iput-object v0, p0, Lcom/facebook/media/model/MediaModel;->A08:Ljava/lang/String;
 
-    .line 93
     .line 94
+    .line 95
     goto :goto_1
 
-    .line 95
+    .line 96
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 96
     .line 97
     .line 98
+    .line 99
     move-result-object v0
 
-    .line 99
+    .line 100
     iput-object v0, p0, Lcom/facebook/media/model/MediaModel;->A05:Ljava/lang/String;
 
-    .line 100
     .line 101
+    .line 102
     goto :goto_0
 
-    .line 102
+    .line 103
     :cond_3
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 103
     .line 104
     .line 105
+    .line 106
     move-result-object v0
 
-    .line 106
+    .line 107
     iput-object v0, p0, Lcom/facebook/media/model/MediaModel;->A09:Ljava/util/Set;
 
-    .line 107
     .line 108
+    .line 109
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/facebook/ipc/media/data/MimeType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;IIIIJ)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput p6, p0, Lcom/facebook/media/model/MediaModel;->A00:I
+
+    .line 268435460
+    .line 268435461
+    iput-object p2, p0, Lcom/facebook/media/model/MediaModel;->A05:Ljava/lang/String;
+
+    .line 268435462
+    .line 268435463
+    iput p7, p0, Lcom/facebook/media/model/MediaModel;->A01:I
+
+    .line 268435464
+    .line 268435465
+    invoke-static {p3}, LX/1O4;->A09(Ljava/lang/Object;)V
+
+    .line 268435466
+    .line 268435467
+    .line 268435468
+    iput-object p3, p0, Lcom/facebook/media/model/MediaModel;->A06:Ljava/lang/String;
+
+    .line 268435469
+    .line 268435470
+    iput-object p4, p0, Lcom/facebook/media/model/MediaModel;->A08:Ljava/lang/String;
+
+    .line 268435471
+    .line 268435472
+    iput-object p1, p0, Lcom/facebook/media/model/MediaModel;->A07:Lcom/facebook/ipc/media/data/MimeType;
+
+    .line 268435473
+    .line 268435474
+    iput p8, p0, Lcom/facebook/media/model/MediaModel;->A02:I
+
+    .line 268435475
+    .line 268435476
+    iput-wide p10, p0, Lcom/facebook/media/model/MediaModel;->A04:J
+
+    .line 268435477
+    .line 268435478
+    iput p9, p0, Lcom/facebook/media/model/MediaModel;->A03:I
+
+    .line 268435479
+    .line 268435480
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    .line 268435481
+    .line 268435482
+    .line 268435483
+    move-result-object v0
+
+    .line 268435484
+    iput-object v0, p0, Lcom/facebook/media/model/MediaModel;->A09:Ljava/util/Set;
+
+    .line 268435485
+    .line 268435486
     return-void
 .end method
 
@@ -473,35 +429,40 @@
 
     .line 24
     .line 25
-    sput-object v0, Lcom/facebook/media/model/MediaModel;->A0A:Lcom/facebook/ipc/media/data/MimeType;
+    invoke-static {v0}, LX/0WV;->A05(Ljava/lang/Object;)V
 
     .line 26
     .line 27
+    .line 28
+    sput-object v0, Lcom/facebook/media/model/MediaModel;->A0A:Lcom/facebook/ipc/media/data/MimeType;
+
+    .line 29
+    .line 30
     :cond_1
     monitor-exit p0
 
-    .line 28
+    .line 31
     goto :goto_0
 
-    .line 29
+    .line 32
     :catchall_0
     move-exception v0
 
-    .line 30
+    .line 33
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 31
+    .line 34
     throw v0
 
-    .line 32
+    .line 35
     :cond_2
     :goto_0
     sget-object v0, Lcom/facebook/media/model/MediaModel;->A0A:Lcom/facebook/ipc/media/data/MimeType;
 
-    .line 33
-    .line 34
+    .line 36
+    .line 37
     return-object v0
 .end method
 
@@ -648,7 +609,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22
@@ -680,7 +641,7 @@
 
     .line 35
     .line 36
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 37
     .line 38
@@ -708,7 +669,7 @@
     move-result-object v0
 
     .line 50
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 51
     .line 52
@@ -736,7 +697,7 @@
     move-result-object v0
 
     .line 64
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 65
     .line 66
@@ -816,7 +777,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 9
     .line 10
@@ -846,7 +807,7 @@
 
     .line 21
     .line 22
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 23
     .line 24
@@ -869,7 +830,7 @@
 
     .line 32
     .line 33
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 34
     .line 35
@@ -892,7 +853,7 @@
 
     .line 43
     .line 44
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 45
     .line 46
@@ -918,7 +879,7 @@
 
     .line 55
     .line 56
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 57
     .line 58
@@ -963,7 +924,7 @@
     const/4 v1, 0x1
 
     .line 9
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -990,7 +951,7 @@
 
     .line 23
     .line 24
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 25
     .line 26
@@ -1040,7 +1001,7 @@
 
     .line 50
     .line 51
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
     .line 52
     .line 53
@@ -1061,7 +1022,7 @@
 
     .line 60
     .line 61
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 62
     .line 63

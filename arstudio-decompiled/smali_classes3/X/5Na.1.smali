@@ -1,81 +1,64 @@
-.class public final LX/5Na;
-.super LX/5NT;
+.class public final synthetic LX/5Na;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "WarmUpPlayerListener$$ExternalSyntheticLambda3"
+
+
+# instance fields
+.field public final synthetic A00:LX/6Za;
+
+.field public final synthetic A01:LX/5Nb;
+
+.field public final synthetic A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/5NR;)V
+.method public synthetic constructor <init>(LX/6Za;LX/5Nb;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0, p1}, LX/5NT;-><init>(LX/5NR;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p2, p0, LX/5Na;->A01:LX/5Nb;
+
+    iput-object p1, p0, LX/5Na;->A00:LX/6Za;
+
+    iput-object p3, p0, LX/5Na;->A02:Ljava/lang/String;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01(LX/5Lq;)Z
+.method public final run()V
     .locals 3
 
     .line 0
-    const/4 v0, 0x0
+    iget-object v0, p0, LX/5Na;->A01:LX/5Nb;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    iget-object v2, p0, LX/5Na;->A00:LX/6Za;
+
     .line 3
     .line 4
-    iget-object v0, p1, LX/5Lq;->A0A:LX/5L0;
+    iget-object v1, p0, LX/5Na;->A02:Ljava/lang/String;
 
     .line 5
     .line 6
-    iget-object v2, v0, LX/5L0;->A02:LX/5MR;
+    iget-object v0, v0, LX/5Nb;->A00:LX/5Mc;
 
     .line 7
     .line 8
-    sget-object v0, LX/5MR;->UNMETERED:LX/5MR;
+    invoke-virtual {v0, v2, v1}, LX/5Mc;->AZg(LX/6Za;Ljava/lang/String;)V
 
     .line 9
     .line 10
-    if-eq v2, v0, :cond_0
-
     .line 11
-    .line 12
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 13
-    .line 14
-    const/16 v0, 0x1e
-
-    .line 15
-    .line 16
-    if-lt v1, v0, :cond_1
-
-    .line 17
-    .line 18
-    sget-object v0, LX/5MR;->TEMPORARILY_UNMETERED:LX/5MR;
-
-    .line 19
-    .line 20
-    if-ne v2, v0, :cond_1
-
-    .line 21
-    .line 22
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 23
-    return v0
-
-    .line 24
-    :cond_1
-    const/4 v0, 0x0
-
-    .line 25
-    return v0
+    return-void
 .end method

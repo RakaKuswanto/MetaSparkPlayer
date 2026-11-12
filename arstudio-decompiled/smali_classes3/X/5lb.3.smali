@@ -1,29 +1,37 @@
-.class public final LX/5lb;
-.super Ljava/lang/RuntimeException;
+.class public abstract LX/5lb;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final synthetic this$0:LX/5ks;
-
-
 # direct methods
-.method public constructor <init>(LX/5ks;)V
-    .locals 1
+.method public static final A00(LX/5i4;)LX/5ky;
+    .locals 3
 
     .line 0
-    const-string v0, "HDR is not supported on this camera device"
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    iput-object p1, p0, LX/5lb;->this$0:LX/5ks;
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, LX/5i4;->A0M:Ljava/lang/String;
 
     .line 5
     .line 6
+    iget v1, p0, LX/5i4;->A0K:I
+
     .line 7
-    return-void
+    .line 8
+    new-instance v0, LX/5ky;
+
+    .line 9
+    .line 10
+    invoke-direct {v0, v2, v1}, LX/5ky;-><init>(Ljava/lang/String;I)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-object v0
 .end method

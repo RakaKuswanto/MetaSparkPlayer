@@ -1,207 +1,252 @@
-.class public final LX/37Y;
-.super LX/3Kd;
+.class public final enum LX/37Y;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/1ne;
+
+# static fields
+.field public static final synthetic $VALUES:[LX/37Y;
+
+.field public static final enum CDMA:LX/37Y;
+
+.field public static final enum GSM:LX/37Y;
+
+.field public static final enum LTE:LX/37Y;
+
+.field public static final enum NR:LX/37Y;
+
+.field public static final enum UNKNOWN:LX/37Y;
+
+.field public static final enum WCDMA:LX/37Y;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/3Kd;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AHK()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "4320"
-
-    return-object v0
-.end method
-
-.method public final AMR(Lcom/facebook/interstitial/triggers/InterstitialTrigger;)LX/1nc;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/1nc;->ELIGIBLE:LX/1nc;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final ANM()Lcom/google/common/collect/ImmutableList;
+.method public static synthetic $values()[LX/37Y;
     .locals 3
 
     .line 0
-    const/16 v2, 0x16e
+    const/4 v0, 0x6
+
+    .line 1
+    new-array v2, v0, [LX/37Y;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/37Y;->CDMA:LX/37Y;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/37Y;->GSM:LX/37Y;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, LX/37Y;->LTE:LX/37Y;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, LX/37Y;->WCDMA:LX/37Y;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    sget-object v1, LX/37Y;->NR:LX/37Y;
+
+    .line 24
+    .line 25
+    const/4 v0, 0x4
+
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
+    .line 28
+    sget-object v1, LX/37Y;->UNKNOWN:LX/37Y;
+
+    .line 29
+    .line 30
+    const/4 v0, 0x5
+
+    .line 31
+    aput-object v1, v2, v0
+
+    .line 32
+    .line 33
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "CDMA"
 
     .line 1
     .line 2
     const/4 v1, 0x0
 
     .line 3
-    new-instance v0, Lcom/facebook/interstitial/triggers/InterstitialTrigger;
+    new-instance v0, LX/37Y;
 
     .line 4
     .line 5
-    invoke-direct {v0, v2, v1}, Lcom/facebook/interstitial/triggers/InterstitialTrigger;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v2, v1}, LX/37Y;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    sput-object v0, LX/37Y;->CDMA:LX/37Y;
 
     .line 9
     .line 10
+    const-string v2, "GSM"
+
     .line 11
-    move-result-object v0
-
     .line 12
-    return-object v0
-.end method
-
-.method public final Afn(Landroid/content/Context;Lcom/facebook/interstitial/triggers/InterstitialTrigger;Ljava/lang/Object;)V
-    .locals 3
-
-    .line 0
-    if-eqz p3, :cond_0
-
-    .line 1
-    .line 2
-    instance-of v0, p3, Landroid/view/View;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    check-cast p3, Landroid/view/View;
-
-    .line 7
-    .line 8
-    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    new-instance v2, LX/4JE;
+    const/4 v1, 0x1
 
     .line 13
-    .line 14
-    invoke-direct {v2, v0}, LX/4JE;-><init>(Landroid/content/Context;)V
+    new-instance v0, LX/37Y;
 
+    .line 14
     .line 15
+    invoke-direct {v0, v2, v1}, LX/37Y;-><init>(Ljava/lang/String;I)V
+
     .line 16
     .line 17
-    sget-object v0, LX/4JB;->CALLOUT:LX/4JB;
-
     .line 18
+    sput-object v0, LX/37Y;->GSM:LX/37Y;
+
     .line 19
-    iget-object v1, v2, LX/4JE;->A00:LX/4J6;
-
     .line 20
-    .line 21
-    iput-object v0, v1, LX/4J6;->A03:LX/4JB;
+    const-string v2, "LTE"
 
+    .line 21
     .line 22
+    const/4 v1, 0x2
+
     .line 23
-    sget-object v0, LX/37Z;->NEVER:LX/37Z;
+    new-instance v0, LX/37Y;
 
     .line 24
     .line 25
-    invoke-static {v0}, LX/37Z;->access$100(LX/37Z;)I
+    invoke-direct {v0, v2, v1}, LX/37Y;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
     .line 28
-    move-result v0
+    sput-object v0, LX/37Y;->LTE:LX/37Y;
 
     .line 29
-    iput v0, v1, LX/4J6;->A01:I
-
     .line 30
+    const-string v2, "WCDMA"
+
     .line 31
-    const v0, 0x7f1202d5
-
     .line 32
-    .line 33
-    .line 34
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    const/4 v1, 0x3
 
+    .line 33
+    new-instance v0, LX/37Y;
+
+    .line 34
     .line 35
+    invoke-direct {v0, v2, v1}, LX/37Y;-><init>(Ljava/lang/String;I)V
+
     .line 36
     .line 37
-    move-result-object v0
-
     .line 38
-    iput-object v0, v1, LX/4J6;->A04:Ljava/lang/CharSequence;
+    sput-object v0, LX/37Y;->WCDMA:LX/37Y;
 
     .line 39
     .line 40
-    const-string v0, "HeadingIndicatorGuideInterstitialController"
+    const-string v2, "NR"
 
     .line 41
     .line 42
-    invoke-static {v0}, Lcom/facebook/common/callercontext/CallerContext;->A02(Ljava/lang/String;)Lcom/facebook/common/callercontext/CallerContext;
+    const/4 v1, 0x4
 
     .line 43
+    new-instance v0, LX/37Y;
+
     .line 44
     .line 45
-    move-result-object v0
+    invoke-direct {v0, v2, v1}, LX/37Y;-><init>(Ljava/lang/String;I)V
 
     .line 46
-    invoke-virtual {v2, v0}, LX/4JE;->A01(Lcom/facebook/common/callercontext/CallerContext;)LX/6J0;
-
     .line 47
     .line 48
-    .line 49
-    move-result-object v2
+    sput-object v0, LX/37Y;->NR:LX/37Y;
 
+    .line 49
     .line 50
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const-string v2, "UNKNOWN"
 
     .line 51
     .line 52
+    const/4 v1, 0x5
+
     .line 53
-    move-result-object v1
+    new-instance v0, LX/37Y;
 
     .line 54
-    const v0, 0x7f07008d
-
     .line 55
+    invoke-direct {v0, v2, v1}, LX/37Y;-><init>(Ljava/lang/String;I)V
+
     .line 56
     .line 57
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getDimension(I)F
-
     .line 58
+    sput-object v0, LX/37Y;->UNKNOWN:LX/37Y;
+
     .line 59
     .line 60
-    move-result v0
+    invoke-static {}, LX/37Y;->$values()[LX/37Y;
 
     .line 61
-    float-to-int v0, v0
-
     .line 62
-    invoke-virtual {v2, p3, v0}, LX/6J0;->A01(Landroid/view/View;I)V
-
     .line 63
+    move-result-object v0
+
     .line 64
+    sput-object v0, LX/37Y;->$VALUES:[LX/37Y;
+
     .line 65
-    :cond_0
+    .line 66
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

@@ -3,19 +3,15 @@
 .source ""
 
 # interfaces
-.implements LX/0Ad;
+.implements LX/0B2;
 
 
 # static fields
 .field public static final synthetic $VALUES:[LX/3jq;
 
-.field public static final enum CLICK:LX/3jq;
+.field public static final enum DASH:LX/3jq;
 
-.field public static final enum ERROR:LX/3jq;
-
-.field public static final enum PAGE_LOAD:LX/3jq;
-
-.field public static final enum SUCCESS:LX/3jq;
+.field public static final enum PROGRESSIVE:LX/3jq;
 
 
 # instance fields
@@ -24,134 +20,78 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 10
+    .locals 6
 
     .line 0
-    const-string v1, "CLICK"
+    const-string v1, "DASH"
 
     .line 1
     .line 2
-    const/4 v9, 0x0
+    const/4 v5, 0x0
 
     .line 3
-    const-string v0, "click"
+    const-string/jumbo v0, "dash"
 
     .line 4
     .line 5
-    new-instance v8, LX/3jq;
-
     .line 6
-    .line 7
-    invoke-direct {v8, v1, v9, v0}, LX/3jq;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v4, LX/3jq;
 
+    .line 7
     .line 8
+    invoke-direct {v4, v1, v5, v0}, LX/3jq;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 9
     .line 10
-    sput-object v8, LX/3jq;->CLICK:LX/3jq;
-
     .line 11
+    sput-object v4, LX/3jq;->DASH:LX/3jq;
+
     .line 12
-    const-string v1, "ERROR"
-
     .line 13
-    .line 14
-    const/4 v7, 0x1
+    const-string v3, "PROGRESSIVE"
 
+    .line 14
     .line 15
-    const-string v0, "error"
+    const/4 v2, 0x1
 
     .line 16
-    .line 17
-    new-instance v6, LX/3jq;
+    const-string/jumbo v0, "progressive"
 
+    .line 17
     .line 18
     .line 19
-    invoke-direct {v6, v1, v7, v0}, LX/3jq;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v1, LX/3jq;
 
     .line 20
     .line 21
-    .line 22
-    sput-object v6, LX/3jq;->ERROR:LX/3jq;
+    invoke-direct {v1, v3, v2, v0}, LX/3jq;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 22
     .line 23
     .line 24
-    const-string v1, "PAGE_LOAD"
+    sput-object v1, LX/3jq;->PROGRESSIVE:LX/3jq;
 
     .line 25
     .line 26
-    const/4 v5, 0x2
+    const/4 v0, 0x2
 
     .line 27
-    const-string/jumbo v0, "page_load"
+    new-array v0, v0, [LX/3jq;
 
     .line 28
     .line 29
-    .line 30
-    new-instance v4, LX/3jq;
-
-    .line 31
-    .line 32
-    invoke-direct {v4, v1, v5, v0}, LX/3jq;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 33
-    .line 34
-    .line 35
-    sput-object v4, LX/3jq;->PAGE_LOAD:LX/3jq;
-
-    .line 36
-    .line 37
-    const-string v3, "SUCCESS"
-
-    .line 38
-    .line 39
-    const/4 v2, 0x3
-
-    .line 40
-    const-string/jumbo v0, "success"
-
-    .line 41
-    .line 42
-    .line 43
-    new-instance v1, LX/3jq;
-
-    .line 44
-    .line 45
-    invoke-direct {v1, v3, v2, v0}, LX/3jq;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 46
-    .line 47
-    .line 48
-    sput-object v1, LX/3jq;->SUCCESS:LX/3jq;
-
-    .line 49
-    .line 50
-    const/4 v0, 0x4
-
-    .line 51
-    new-array v0, v0, [LX/3jq;
-
-    .line 52
-    .line 53
-    aput-object v8, v0, v9
-
-    .line 54
-    .line 55
-    aput-object v6, v0, v7
-
-    .line 56
-    .line 57
     aput-object v4, v0, v5
 
-    .line 58
-    .line 59
+    .line 30
+    .line 31
     aput-object v1, v0, v2
 
-    .line 60
-    .line 61
+    .line 32
+    .line 33
     sput-object v0, LX/3jq;->$VALUES:[LX/3jq;
 
-    .line 62
-    .line 63
+    .line 34
+    .line 35
     return-void
 .end method
 

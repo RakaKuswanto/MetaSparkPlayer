@@ -3,8 +3,8 @@
 .source ""
 
 # interfaces
-.implements Landroid/os/Parcelable;
 .implements Ljava/lang/Comparable;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
@@ -22,9 +22,7 @@
 
 .field public final A04:I
 
-.field public final A05:J
-
-.field public final A06:Ljava/util/Calendar;
+.field public final A05:Ljava/util/Calendar;
 
 
 # direct methods
@@ -32,11 +30,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1d
+    const/16 v0, 0x56
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/58O;->A02(I)LX/58O;
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
 
     .line 3
     .line 4
@@ -71,7 +69,7 @@
     .line 6
     .line 7
     .line 8
-    invoke-static {p1}, LX/4Pl;->A03(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-static {p1}, LX/4eD;->A03(Ljava/util/Calendar;)Ljava/util/Calendar;
 
     .line 9
     .line 10
@@ -79,7 +77,7 @@
     move-result-object v1
 
     .line 12
-    iput-object v1, p0, Lcom/google/android/material/datepicker/Month;->A06:Ljava/util/Calendar;
+    iput-object v1, p0, Lcom/google/android/material/datepicker/Month;->A05:Ljava/util/Calendar;
 
     .line 13
     .line 14
@@ -142,13 +140,6 @@
     .line 41
     .line 42
     .line 43
-    move-result-wide v0
-
-    .line 44
-    iput-wide v0, p0, Lcom/google/android/material/datepicker/Month;->A05:J
-
-    .line 45
-    .line 46
     return-void
 .end method
 
@@ -158,7 +149,7 @@
     .locals 3
 
     .line 0
-    iget-object v2, p0, Lcom/google/android/material/datepicker/Month;->A06:Ljava/util/Calendar;
+    iget-object v2, p0, Lcom/google/android/material/datepicker/Month;->A05:Ljava/util/Calendar;
 
     .line 1
     .line 2
@@ -211,7 +202,7 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->A06:Ljava/util/Calendar;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->A05:Ljava/util/Calendar;
 
     .line 5
     .line 6
@@ -273,11 +264,11 @@
 
     .line 1
     .line 2
-    iget-object v1, p0, Lcom/google/android/material/datepicker/Month;->A06:Ljava/util/Calendar;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/Month;->A05:Ljava/util/Calendar;
 
     .line 3
     .line 4
-    iget-object v0, p1, Lcom/google/android/material/datepicker/Month;->A06:Ljava/util/Calendar;
+    iget-object v0, p1, Lcom/google/android/material/datepicker/Month;->A05:Ljava/util/Calendar;
 
     .line 5
     .line 6
@@ -369,7 +360,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2

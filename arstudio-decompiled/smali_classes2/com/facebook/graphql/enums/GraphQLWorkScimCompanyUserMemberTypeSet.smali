@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLWorkScimCompanyUserMemberTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLWorkScimCompanyUserMemberTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0w()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A11()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -67,22 +67,34 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "WORKROOMS_STANDALONE"
+    const-string v0, "MMA_LINKED"
 
     .line 26
     .line 27
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 28
     .line 29
+    const/4 v1, 0x5
+
     .line 30
-    move-result-object v0
+    const-string/jumbo v0, "WORKROOMS_STANDALONE"
 
     .line 31
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLWorkScimCompanyUserMemberTypeSet;->A00:Ljava/util/Set;
-
     .line 32
     .line 33
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLWorkScimCompanyUserMemberTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 38
+    .line 39
     return-void
 .end method
 
@@ -98,11 +110,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLWorkScimCompanyUserMemberTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLWorkScimCompanyUserMemberTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

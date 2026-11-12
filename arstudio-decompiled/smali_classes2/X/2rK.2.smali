@@ -1,64 +1,133 @@
 .class public final LX/2rK;
-.super LX/3bB;
+.super Ljava/io/FilterOutputStream;
 .source ""
-
-# interfaces
-.implements LX/1iJ;
 
 
 # instance fields
-.field public final A00:LX/3Qf;
-
-.field public final A01:Ljava/util/concurrent/ExecutorService;
+.field public A00:J
 
 
 # direct methods
-.method public constructor <init>(LX/3Qf;Ljava/util/concurrent/ExecutorService;)V
+.method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "out"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/3bB;-><init>()V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/2rK;->A00:LX/3Qf;
+    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 4
     .line 5
-    iput-object p2, p0, LX/2rK;->A01:Ljava/util/concurrent/ExecutorService;
-
     .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 4
+.method public final close()V
+    .locals 1
 
     .line 0
-    iget-object v3, p0, LX/2rK;->A00:LX/3Qf;
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     .line 1
     .line 2
-    const-string v2, "DefaultProcessIdleExecutor"
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
     .line 3
     .line 4
-    sget-object v1, LX/3Qv;->APPLICATION_LOADED_UI_IDLE:LX/3Qv;
-
     .line 5
+    return-void
+.end method
+
+.method public final write(I)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "b"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-wide v2, p0, LX/2rK;->A00:J
+
     .line 6
-    iget-object v0, p0, LX/2rK;->A01:Ljava/util/concurrent/ExecutorService;
-
     .line 7
-    .line 8
-    invoke-interface {v3, v1, p1, v2, v0}, LX/3Qf;->ApN(LX/3Qv;Ljava/lang/Runnable;Ljava/lang/String;Ljava/util/concurrent/ExecutorService;)LX/3QZ;
+    const-wide/16 v0, 0x1
 
+    .line 8
     .line 9
+    add-long/2addr v2, v0
+
     .line 10
+    iput-wide v2, p0, LX/2rK;->A00:J
+
     .line 11
+    .line 12
+    return-void
+.end method
+
+.method public final write([BII)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "b",
+            "off",
+            "len"
+        }
+    .end annotation
+
+    .line 268435456
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    .line 268435457
+    .line 268435458
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    iget-wide v2, p0, LX/2rK;->A00:J
+
+    .line 268435462
+    .line 268435463
+    int-to-long v0, p3
+
+    .line 268435464
+    add-long/2addr v2, v0
+
+    .line 268435465
+    iput-wide v2, p0, LX/2rK;->A00:J
+
+    .line 268435466
+    .line 268435467
     return-void
 .end method

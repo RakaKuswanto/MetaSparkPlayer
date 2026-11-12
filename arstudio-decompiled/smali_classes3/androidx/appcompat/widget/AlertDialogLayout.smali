@@ -118,7 +118,7 @@
 
     .line 5
     .line 6
-    invoke-static {p0, v0}, LX/4BF;->A0A(Landroid/view/View;I)I
+    invoke-static {p0, v0}, LX/434;->A0A(Landroid/view/View;I)I
 
     .line 7
     .line 8
@@ -129,7 +129,7 @@
     sub-int/2addr v0, v13
 
     .line 11
-    invoke-static {p0, v0}, LX/4BF;->A0A(Landroid/view/View;I)I
+    invoke-static {p0, v0}, LX/434;->A0A(Landroid/view/View;I)I
 
     .line 12
     .line 13
@@ -266,11 +266,11 @@
     move-result-object v4
 
     .line 77
-    check-cast v4, LX/4Yp;
+    check-cast v4, Landroid/widget/LinearLayout$LayoutParams;
 
     .line 78
     .line 79
-    iget v2, v4, LX/4Yp;->gravity:I
+    iget v2, v4, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     .line 80
     .line 81
@@ -282,7 +282,7 @@
 
     .line 84
     :cond_0
-    invoke-static {p0, v2}, LX/4BF;->A0B(Landroid/view/View;I)I
+    invoke-static {p0, v2}, LX/434;->A0B(Landroid/view/View;I)I
 
     .line 85
     .line 86
@@ -308,7 +308,7 @@
 
     .line 95
     .line 96
-    iget v3, v4, LX/4Yp;->leftMargin:I
+    iget v3, v4, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     .line 97
     .line 98
@@ -332,19 +332,19 @@
 
     .line 106
     :cond_1
-    iget v2, v4, LX/4Yp;->topMargin:I
+    iget v2, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     .line 107
     .line 108
     add-int/2addr v1, v2
 
     .line 109
-    invoke-static {v8, v3, v7, v1, v10}, LX/4BE;->A16(IIIILandroid/view/View;)V
+    invoke-static {v8, v3, v7, v1, v10}, LX/434;->A1L(IIIILandroid/view/View;)V
 
     .line 110
     .line 111
     .line 112
-    iget v2, v4, LX/4Yp;->bottomMargin:I
+    iget v2, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     .line 113
     .line 114
@@ -374,7 +374,7 @@
     add-int/2addr v3, v13
 
     .line 124
-    iget v2, v4, LX/4Yp;->leftMargin:I
+    iget v2, v4, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     .line 125
     .line 126
@@ -390,7 +390,7 @@
     .line 129
     .line 130
     :goto_4
-    iget v2, v4, LX/4Yp;->rightMargin:I
+    iget v2, v4, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     .line 131
     .line 132
@@ -542,7 +542,7 @@
     move-result v2
 
     .line 33
-    const v0, 0x7f0a05ea
+    const v0, 0x7f09051b
 
     .line 34
     .line 35
@@ -564,7 +564,7 @@
 
     .line 42
     :cond_1
-    const v0, 0x7f0a01b2
+    const v0, 0x7f09018b
 
     .line 43
     .line 44
@@ -580,7 +580,7 @@
 
     .line 49
     :cond_2
-    const v0, 0x7f0a0211
+    const v0, 0x7f0901eb
 
     .line 50
     .line 51
@@ -589,7 +589,7 @@
 
     .line 53
     .line 54
-    const v0, 0x7f0a0220
+    const v0, 0x7f0901f9
 
     .line 55
     .line 56
@@ -634,7 +634,7 @@
     move-result v8
 
     .line 75
-    invoke-static {v5}, LX/4BD;->A0A(Landroid/view/View;)I
+    invoke-static {v5}, LX/431;->A05(Landroid/view/View;)I
 
     .line 76
     .line 77
@@ -662,7 +662,7 @@
     add-int/2addr v10, v0
 
     .line 89
-    invoke-static {v1, v4}, LX/4BE;->A0G(Landroid/view/View;I)I
+    invoke-static {v1, v4}, LX/432;->A08(Landroid/view/View;I)I
 
     .line 90
     .line 91
@@ -702,7 +702,7 @@
     add-int/2addr v10, v2
 
     .line 108
-    invoke-static {v13, v12}, LX/4BE;->A0G(Landroid/view/View;I)I
+    invoke-static {v13, v12}, LX/432;->A08(Landroid/view/View;I)I
 
     .line 109
     .line 110
@@ -739,7 +739,7 @@
     add-int/2addr v10, v0
 
     .line 125
-    invoke-static {v11, v12}, LX/4BE;->A0G(Landroid/view/View;I)I
+    invoke-static {v11, v12}, LX/432;->A08(Landroid/view/View;I)I
 
     .line 126
     .line 127
@@ -781,7 +781,7 @@
 
     .line 143
     :cond_5
-    invoke-static {v13, v2, v3, v9}, LX/4BD;->A1C(Landroid/view/View;III)V
+    invoke-static {v13, v2, v3, v9}, LX/432;->A1A(Landroid/view/View;III)V
 
     .line 144
     .line 145
@@ -797,7 +797,7 @@
     add-int/2addr v10, v1
 
     .line 151
-    invoke-static {v13, v12}, LX/4BE;->A0G(Landroid/view/View;I)I
+    invoke-static {v13, v12}, LX/432;->A08(Landroid/view/View;I)I
 
     .line 152
     .line 153
@@ -820,7 +820,7 @@
     add-int/2addr v0, v14
 
     .line 161
-    invoke-static {v11, v0, v15, v9}, LX/4BD;->A1C(Landroid/view/View;III)V
+    invoke-static {v11, v0, v15, v9}, LX/432;->A1A(Landroid/view/View;III)V
 
     .line 162
     .line 163
@@ -836,7 +836,7 @@
     add-int/2addr v10, v0
 
     .line 169
-    invoke-static {v11, v12}, LX/4BE;->A0G(Landroid/view/View;I)I
+    invoke-static {v11, v12}, LX/432;->A08(Landroid/view/View;I)I
 
     .line 170
     .line 171
@@ -901,7 +901,7 @@
 
     .line 198
     :cond_9
-    invoke-static {v14, v10, v4}, LX/4BE;->A0B(III)I
+    invoke-static {v14, v10, v4}, LX/433;->A09(III)I
 
     .line 199
     .line 200
@@ -945,7 +945,7 @@
 
     .line 214
     :cond_d
-    invoke-static {v5}, LX/4BD;->A07(Landroid/view/View;)I
+    invoke-static {v5}, LX/431;->A04(Landroid/view/View;)I
 
     .line 215
     .line 216
@@ -1037,77 +1037,73 @@
     move-result-object v2
 
     .line 259
-    check-cast v2, LX/4Yp;
+    iget v1, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 260
     .line 261
-    iget v1, v2, LX/4Yp;->width:I
-
-    .line 262
-    .line 263
     const/4 v0, -0x1
 
-    .line 264
+    .line 262
     if-ne v1, v0, :cond_e
+
+    .line 263
+    .line 264
+    iget v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 265
     .line 266
-    iget v1, v2, LX/4Yp;->height:I
+    invoke-virtual {v9}, Landroid/view/View;->getMeasuredHeight()I
 
     .line 267
     .line 268
-    invoke-virtual {v9}, Landroid/view/View;->getMeasuredHeight()I
-
     .line 269
-    .line 270
-    .line 271
     move-result v0
 
-    .line 272
-    iput v0, v2, LX/4Yp;->height:I
+    .line 270
+    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 273
-    .line 274
+    .line 271
+    .line 272
     move v11, v4
 
-    .line 275
+    .line 273
     move/from16 v12, v16
 
-    .line 276
-    .line 277
+    .line 274
+    .line 275
     move v13, v4
 
-    .line 278
+    .line 276
     move-object v8, v5
 
-    .line 279
+    .line 277
     invoke-virtual/range {v8 .. v13}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
 
+    .line 278
+    .line 279
     .line 280
+    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
     .line 281
     .line 282
-    iput v1, v2, LX/4Yp;->height:I
-
-    .line 283
-    .line 284
     :cond_e
     add-int/lit8 v3, v3, 0x1
 
-    .line 285
-    .line 286
+    .line 283
+    .line 284
     goto :goto_7
 
-    .line 287
+    .line 285
     :cond_f
     move/from16 v0, v16
 
-    .line 288
-    .line 289
+    .line 286
+    .line 287
     invoke-super {v5, v9, v0}, Landroidx/appcompat/widget/LinearLayoutCompat;->onMeasure(II)V
 
+    .line 288
+    .line 289
     .line 290
-    .line 291
-    .line 292
     :cond_10
     return-void
 .end method

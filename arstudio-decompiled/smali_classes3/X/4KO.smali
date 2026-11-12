@@ -1,422 +1,594 @@
-.class public final LX/4KO;
-.super Ljava/lang/Object;
+.class public final enum LX/4KO;
+.super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/lang/reflect/Method;
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-.field public static A01:Ljava/lang/reflect/Method;
+.field public static final synthetic $VALUES:[LX/4KO;
+
+.field public static final enum AMEX:LX/4KO;
+
+.field public static final enum DISCOVER:LX/4KO;
+
+.field public static final enum JCB:LX/4KO;
+
+.field public static final enum MASTER_CARD:LX/4KO;
+
+.field public static final enum RUPAY:LX/4KO;
+
+.field public static final enum UNKNOWN:LX/4KO;
+
+.field public static final enum VISA:LX/4KO;
+
+
+# instance fields
+.field public final association:Ljava/lang/String;
+
+.field public final cardLength:I
+
+.field public final humanReadableName:Ljava/lang/String;
+
+.field public final prefixMatchRegexPattern:Ljava/util/regex/Pattern;
+
+.field public final typeName:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public static final synthetic $values()[LX/4KO;
+    .locals 3
 
-    .line 0
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v0, 0x7
 
-    .line 1
-    .line 2
-    const-string v6, "addLikelySubtags"
+    new-array v2, v0, [LX/4KO;
 
-    .line 3
-    .line 4
-    const-string v1, "libcore.icu.ICU"
+    sget-object v1, LX/4KO;->UNKNOWN:LX/4KO;
 
-    .line 5
-    .line 6
-    const/4 v5, 0x0
-
-    .line 7
-    const/4 v4, 0x1
-
-    .line 8
-    const/16 v0, 0x15
-
-    .line 9
-    .line 10
-    if-ge v2, v0, :cond_0
-
-    .line 11
-    .line 12
-    :try_start_0
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v3
-
-    .line 16
-    const-string v2, "getScript"
-
-    .line 17
-    .line 18
-    new-array v0, v4, [Ljava/lang/Class;
-
-    .line 19
-    .line 20
-    const-class v1, Ljava/lang/String;
-
-    .line 21
-    .line 22
-    invoke-static {v3, v1, v2, v0, v5}, LX/002;->A0G(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    sput-object v0, LX/4KO;->A01:Ljava/lang/reflect/Method;
-
-    .line 27
-    .line 28
-    new-array v0, v4, [Ljava/lang/Class;
-
-    .line 29
-    .line 30
-    invoke-static {v3, v1, v6, v0, v5}, LX/002;->A0G(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
-
-    .line 31
-    .line 32
-    .line 33
-    move-result-object v0
-
-    .line 34
-    sput-object v0, LX/4KO;->A00:Ljava/lang/reflect/Method;
-
-    .line 35
-    .line 36
-    return-void
-
-    .line 37
-    :cond_0
-    const/16 v0, 0x18
-
-    .line 38
-    .line 39
-    if-ge v2, v0, :cond_1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-
-    .line 40
-    .line 41
-    :try_start_1
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    .line 42
-    .line 43
-    .line 44
-    move-result-object v2
-
-    .line 45
-    new-array v1, v4, [Ljava/lang/Class;
-
-    .line 46
-    .line 47
-    const-class v0, Ljava/util/Locale;
-
-    .line 48
-    .line 49
-    invoke-static {v2, v0, v6, v1, v5}, LX/002;->A0G(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v0
-
-    .line 53
-    sput-object v0, LX/4KO;->A00:Ljava/lang/reflect/Method;
-
-    .line 54
-    .line 55
-    return-void
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 56
-    :catch_0
-    move-exception v1
-
-    .line 57
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    .line 58
-    .line 59
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    .line 60
-    .line 61
-    .line 62
-    throw v0
-
-    .line 63
-    :catch_1
-    move-exception v1
-
-    .line 64
     const/4 v0, 0x0
 
-    .line 65
-    sput-object v0, LX/4KO;->A01:Ljava/lang/reflect/Method;
+    aput-object v1, v2, v0
 
-    .line 66
-    .line 67
-    sput-object v0, LX/4KO;->A00:Ljava/lang/reflect/Method;
+    sget-object v1, LX/4KO;->AMEX:LX/4KO;
 
-    .line 68
-    .line 69
-    const-string v0, "ICUCompat"
+    const/4 v0, 0x1
 
-    .line 70
-    .line 71
-    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
+    aput-object v1, v2, v0
 
-    .line 72
-    .line 73
-    .line 74
-    :cond_1
-    return-void
+    sget-object v1, LX/4KO;->DISCOVER:LX/4KO;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4KO;->JCB:LX/4KO;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4KO;->MASTER_CARD:LX/4KO;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4KO;->RUPAY:LX/4KO;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4KO;->VISA:LX/4KO;
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-.method public static A00(Ljava/util/Locale;)Ljava/lang/String;
-    .locals 5
+.method public static constructor <clinit>()V
+    .locals 8
 
     .line 0
-    const-string v3, "ICUCompat"
+    const-string v0, ""
 
     .line 1
     .line 2
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     .line 3
     .line 4
-    const/16 v0, 0x18
-
     .line 5
+    move-result-object v4
+
     .line 6
-    if-lt v1, v0, :cond_0
+    invoke-static {v4}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 7
     .line 8
-    invoke-static {p0}, LX/4KP;->A01(Ljava/util/Locale;)Landroid/icu/util/ULocale;
-
     .line 9
+    const-string v1, "UNKNOWN"
+
     .line 10
     .line 11
-    move-result-object v0
+    const/4 v2, 0x0
 
     .line 12
-    invoke-static {v0}, LX/4KP;->A00(Ljava/lang/Object;)Landroid/icu/util/ULocale;
+    const-string v5, "Unknown card type"
 
     .line 13
     .line 14
-    .line 15
-    move-result-object v0
+    const/16 v6, 0x10
 
+    .line 15
     .line 16
-    invoke-static {v0}, LX/4KP;->A02(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v7, "unknown"
 
     .line 17
     .line 18
-    .line 19
-    move-result-object v0
+    new-instance v0, LX/4KO;
 
+    .line 19
     .line 20
-    return-object v0
+    move-object v3, v1
 
     .line 21
-    :cond_0
-    const/16 v0, 0x15
+    invoke-direct/range {v0 .. v7}, LX/4KO;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;ILjava/lang/String;)V
 
     .line 22
     .line 23
-    const/4 v4, 0x0
-
     .line 24
-    if-lt v1, v0, :cond_1
+    sput-object v0, LX/4KO;->UNKNOWN:LX/4KO;
 
     .line 25
     .line 26
-    const/4 v0, 0x1
+    const-string v0, "^3[47]"
 
     .line 27
-    :try_start_0
-    invoke-static {p0, v0}, LX/0Yg;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
-
     .line 28
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
     .line 29
     .line 30
-    move-result-object v1
-
     .line 31
-    sget-object v0, LX/4KO;->A00:Ljava/lang/reflect/Method;
+    move-result-object v4
 
     .line 32
-    .line 33
-    invoke-virtual {v0, v4, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v4}, LX/0WV;->A04(Ljava/lang/Object;)V
 
+    .line 33
     .line 34
     .line 35
-    .line 36
-    move-result-object v0
+    const-string v1, "AMEX"
 
+    .line 36
     .line 37
-    check-cast v0, Ljava/util/Locale;
+    const/4 v2, 0x1
 
     .line 38
-    .line 39
-    invoke-static {v0}, LX/4KQ;->A00(Ljava/util/Locale;)Ljava/lang/String;
+    const-string v3, "AMERICAN_EXPRESS"
 
+    .line 39
     .line 40
+    const-string v5, "American Express"
+
     .line 41
     .line 42
-    move-result-object v0
+    const/16 v6, 0xf
 
     .line 43
-    return-object v0
-    :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 44
-    :catch_0
-    move-exception v0
+    const-string v7, "american_express"
 
     .line 45
-    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 46
+    new-instance v0, LX/4KO;
+
     .line 47
     .line 48
-    invoke-static {p0}, LX/4KQ;->A00(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-direct/range {v0 .. v7}, LX/4KO;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;ILjava/lang/String;)V
 
     .line 49
     .line 50
     .line 51
-    move-result-object v0
+    sput-object v0, LX/4KO;->AMEX:LX/4KO;
 
     .line 52
-    return-object v0
-
     .line 53
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v0, "^(6011|6520|6521[0-4]|6531[5-9]|653[2-9]|64[4-9]|622([2-8]|1[3-9]|12[6-9]|9[0-1]|92[0-5]))"
 
     .line 54
     .line 55
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
     .line 56
-    move-result-object v2
-
     .line 57
-    :try_start_1
-    sget-object v1, LX/4KO;->A00:Ljava/lang/reflect/Method;
-
     .line 58
+    move-result-object v4
+
     .line 59
-    if-eqz v1, :cond_2
+    invoke-static {v4}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 60
     .line 61
-    invoke-static {v2}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
-
     .line 62
+    const-string v1, "DISCOVER"
+
     .line 63
     .line 64
-    move-result-object v0
+    const/4 v2, 0x2
 
     .line 65
-    invoke-virtual {v1, v4, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v5, "Discover"
 
     .line 66
     .line 67
-    .line 68
-    move-result-object v2
+    const/16 v6, 0x10
 
+    .line 68
     .line 69
-    goto :goto_0
-    :try_end_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
+    const-string v7, "discover"
 
     .line 70
-    :catch_1
-    move-exception v0
-
     .line 71
-    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
+    new-instance v0, LX/4KO;
 
     .line 72
     .line 73
+    move-object v3, v1
+
     .line 74
-    :cond_2
-    :goto_0
-    if-eqz v2, :cond_4
+    invoke-direct/range {v0 .. v7}, LX/4KO;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;ILjava/lang/String;)V
 
     .line 75
     .line 76
-    :try_start_2
-    sget-object v1, LX/4KO;->A01:Ljava/lang/reflect/Method;
-
     .line 77
+    sput-object v0, LX/4KO;->DISCOVER:LX/4KO;
+
     .line 78
-    if-eqz v1, :cond_3
-
     .line 79
-    .line 80
-    invoke-static {v2}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
+    const-string v0, "^35(2[8-9]|[3-8])"
 
+    .line 80
     .line 81
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
     .line 82
     .line 83
-    move-result-object v0
-
     .line 84
-    invoke-virtual {v1, v4, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v4
 
     .line 85
+    invoke-static {v4}, LX/0WV;->A04(Ljava/lang/Object;)V
+
     .line 86
     .line 87
-    move-result-object v0
-
     .line 88
-    check-cast v0, Ljava/lang/String;
+    const-string v1, "JCB"
 
     .line 89
     .line 90
-    return-object v0
-    :try_end_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_3
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_2 .. :try_end_2} :catch_2
+    const/4 v2, 0x3
 
     .line 91
-    :catch_2
-    move-exception v0
+    const-string v7, "jcb"
 
     .line 92
-    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 93
+    new-instance v0, LX/4KO;
+
     .line 94
     .line 95
-    :cond_3
-    return-object v4
+    move-object v3, v1
 
     .line 96
-    :catch_3
-    move-exception v0
+    move-object v5, v1
 
     .line 97
-    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-direct/range {v0 .. v7}, LX/4KO;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;ILjava/lang/String;)V
 
     .line 98
     .line 99
     .line 100
-    return-object v4
+    sput-object v0, LX/4KO;->JCB:LX/4KO;
 
     .line 101
-    :cond_4
-    return-object v4
+    .line 102
+    const-string v0, "((^5[1-5])|(^2(?:2(?:2[1-9]|[3-9])|[3-6]|7(?:[01]|20))))"
+
+    .line 103
+    .line 104
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 105
+    .line 106
+    .line 107
+    move-result-object v4
+
+    .line 108
+    invoke-static {v4}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 109
+    .line 110
+    .line 111
+    const-string v1, "MASTER_CARD"
+
+    .line 112
+    .line 113
+    const/4 v2, 0x4
+
+    .line 114
+    const-string v3, "MASTERCARD"
+
+    .line 115
+    .line 116
+    const-string v5, "MasterCard"
+
+    .line 117
+    .line 118
+    const-string v7, "master_card"
+
+    .line 119
+    .line 120
+    new-instance v0, LX/4KO;
+
+    .line 121
+    .line 122
+    invoke-direct/range {v0 .. v7}, LX/4KO;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 123
+    .line 124
+    .line 125
+    sput-object v0, LX/4KO;->MASTER_CARD:LX/4KO;
+
+    .line 126
+    .line 127
+    const-string v0, "^(508[5-9]|6521[5-9]|652[2-9]|6530|6531[0-4]|60[6-8])"
+
+    .line 128
+    .line 129
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 130
+    .line 131
+    .line 132
+    move-result-object v4
+
+    .line 133
+    invoke-static {v4}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 134
+    .line 135
+    .line 136
+    const-string v1, "RUPAY"
+
+    .line 137
+    .line 138
+    const/4 v2, 0x5
+
+    .line 139
+    const-string v5, "Rupay"
+
+    .line 140
+    .line 141
+    const-string v7, "rupay"
+
+    .line 142
+    .line 143
+    new-instance v0, LX/4KO;
+
+    .line 144
+    .line 145
+    move-object v3, v1
+
+    .line 146
+    invoke-direct/range {v0 .. v7}, LX/4KO;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 147
+    .line 148
+    .line 149
+    sput-object v0, LX/4KO;->RUPAY:LX/4KO;
+
+    .line 150
+    .line 151
+    const-string v0, "^4"
+
+    .line 152
+    .line 153
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 154
+    .line 155
+    .line 156
+    move-result-object v4
+
+    .line 157
+    invoke-static {v4}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 158
+    .line 159
+    .line 160
+    const-string v1, "VISA"
+
+    .line 161
+    .line 162
+    const/4 v2, 0x6
+
+    .line 163
+    const-string v5, "Visa"
+
+    .line 164
+    .line 165
+    const-string v7, "visa"
+
+    .line 166
+    .line 167
+    new-instance v0, LX/4KO;
+
+    .line 168
+    .line 169
+    move-object v3, v1
+
+    .line 170
+    invoke-direct/range {v0 .. v7}, LX/4KO;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 171
+    .line 172
+    .line 173
+    sput-object v0, LX/4KO;->VISA:LX/4KO;
+
+    .line 174
+    .line 175
+    invoke-static {}, LX/4KO;->$values()[LX/4KO;
+
+    .line 176
+    .line 177
+    .line 178
+    move-result-object v0
+
+    .line 179
+    sput-object v0, LX/4KO;->$VALUES:[LX/4KO;
+
+    .line 180
+    .line 181
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 182
+    .line 183
+    .line 184
+    move-result-object v0
+
+    .line 185
+    sput-object v0, LX/4KO;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 186
+    .line 187
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/4KO;->association:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    iput-object p4, p0, LX/4KO;->prefixMatchRegexPattern:Ljava/util/regex/Pattern;
+
+    .line 6
+    .line 7
+    iput-object p5, p0, LX/4KO;->humanReadableName:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    iput p6, p0, LX/4KO;->cardLength:I
+
+    .line 10
+    .line 11
+    iput-object p7, p0, LX/4KO;->typeName:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/4KO;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/4KO;
+    .locals 1
+
+    const-class v0, LX/4KO;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/4KO;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/4KO;
+    .locals 1
+
+    sget-object v0, LX/4KO;->$VALUES:[LX/4KO;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/4KO;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getAssociation()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4KO;->association:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final getCardLength()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/4KO;->cardLength:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final getHumanReadableName()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4KO;->humanReadableName:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final getPrefixMatchRegexPattern()Ljava/util/regex/Pattern;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4KO;->prefixMatchRegexPattern:Ljava/util/regex/Pattern;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final getTypeName()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4KO;->typeName:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

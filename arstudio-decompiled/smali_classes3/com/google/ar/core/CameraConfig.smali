@@ -118,11 +118,6 @@
     .line 14
     .line 15
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 16
-    .line 17
-    .line 18
     return-void
 .end method
 
@@ -227,7 +222,7 @@
     .locals 7
 
     .line 0
-    invoke-static {}, LX/4BF;->A1R()[I
+    invoke-static {}, LX/434;->A1a()[I
 
     .line 1
     .line 2
@@ -301,7 +296,7 @@
     .locals 7
 
     .line 0
-    invoke-static {}, LX/4BF;->A1R()[I
+    invoke-static {}, LX/434;->A1a()[I
 
     .line 1
     .line 2
@@ -394,7 +389,7 @@
     .locals 7
 
     .line 0
-    invoke-static {}, LX/4BF;->A1R()[I
+    invoke-static {}, LX/434;->A1a()[I
 
     .line 1
     .line 2

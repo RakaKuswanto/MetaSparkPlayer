@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5OJ;
+.implements LX/4s1;
 
 
 # direct methods
@@ -11,7 +11,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/5OU;->A00()V
+    invoke-static {}, LX/4rv;->A00()V
 
     .line 1
     .line 2
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public pushArray(LX/5OJ;)V
+.method public pushArray(LX/4s1;)V
     .locals 2
 
     .line 0
@@ -95,7 +95,7 @@
 
     .line 18
     :cond_2
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
+    invoke-static {v0}, LX/0X7;->A0R(Ljava/lang/Object;)Ljava/lang/AssertionError;
 
     .line 19
     .line 20
@@ -115,7 +115,10 @@
 .method public native pushInt(I)V
 .end method
 
-.method public pushMap(LX/4xW;)V
+.method public native pushLong(J)V
+.end method
+
+.method public pushMap(LX/4s9;)V
     .locals 2
 
     .line 0
@@ -160,7 +163,7 @@
 
     .line 18
     :cond_2
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
+    invoke-static {v0}, LX/0X7;->A0R(Ljava/lang/Object;)Ljava/lang/AssertionError;
 
     .line 19
     .line 20

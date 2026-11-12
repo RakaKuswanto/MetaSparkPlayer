@@ -1,32 +1,58 @@
-.class public final LX/4iE;
+.class public final LX/4IE;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A00:Lcom/facebook/common/callercontext/CallerContext;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FDSPopoverView$3"
+
+
+# instance fields
+.field public final synthetic A00:LX/4IC;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/4IC;)V
+    .locals 0
 
     .line 0
-    const-string v0, "LeadFormContinueFlowToastView"
+    iput-object p1, p0, LX/4IE;->A00:LX/4IC;
 
     .line 1
     .line 2
-    invoke-static {v0}, Lcom/facebook/common/callercontext/CallerContext;->A02(Ljava/lang/String;)Lcom/facebook/common/callercontext/CallerContext;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    move-result-object v0
+    return-void
+.end method
 
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/4IE;->A00:LX/4IC;
+
+    .line 1
+    .line 2
+    iget-object v0, v1, LX/4IC;->A03:LX/4AL;
+
+    .line 3
+    .line 4
+    iget v0, v0, LX/4AL;->value:I
+
+    .line 5
     .line 6
-    sput-object v0, LX/4iE;->A00:Lcom/facebook/common/callercontext/CallerContext;
+    invoke-virtual {v1, v0}, LX/4IC;->A03(I)V
 
     .line 7
     .line 8
+    .line 9
     return-void
 .end method

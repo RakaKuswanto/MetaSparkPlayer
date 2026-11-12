@@ -1,14 +1,13 @@
 .class public final LX/6Gw;
-.super LX/6MV;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Iterable;
 
 
 # instance fields
-.field public A00:Ljava/lang/String;
-
-.field public A01:Ljava/lang/String;
-
-.field public A02:Ljava/lang/String;
+.field public A00:Ljava/util/LinkedHashMap;
 
 
 # direct methods
@@ -16,7 +15,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/6MV;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
@@ -26,59 +25,91 @@
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final A00(LX/6Gr;)V
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iget-object v2, p0, LX/6Gw;->A00:Ljava/util/LinkedHashMap;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v2
+    if-nez v2, :cond_0
 
+    .line 3
     .line 4
-    iget-object v1, p0, LX/6Gw;->A00:Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A0f()Ljava/util/LinkedHashMap;
 
     .line 5
     .line 6
-    const-string v0, "network"
-
     .line 7
+    move-result-object v2
+
     .line 8
-    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v2, p0, LX/6Gw;->A00:Ljava/util/LinkedHashMap;
 
     .line 9
     .line 10
-    .line 11
-    iget-object v1, p0, LX/6Gw;->A01:Ljava/lang/String;
+    :cond_0
+    iget-object v1, p1, LX/6Gr;->A00:Ljava/lang/reflect/Method;
 
+    .line 11
     .line 12
+    new-instance v0, LX/4vb;
+
     .line 13
-    const-string v0, "action"
+    .line 14
+    invoke-direct {v0, v1}, LX/4vb;-><init>(Ljava/lang/reflect/Method;)V
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-virtual {v2, v0, p1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    .line 20
+    return-void
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/6Gw;->A00:Ljava/util/LinkedHashMap;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-static {v0}, LX/001;->A0e(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+
+    .line 9
+    :cond_0
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 14
     .line 15
-    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 16
-    .line 17
-    .line 18
-    iget-object v1, p0, LX/6Gw;->A02:Ljava/lang/String;
-
-    .line 19
-    .line 20
-    const-string v0, "target"
-
-    .line 21
-    .line 22
-    invoke-static {v0, v1, v2}, LX/6MV;->A01(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/String;
-
-    .line 23
-    .line 24
-    .line 25
     move-result-object v0
 
-    .line 26
+    .line 17
     return-object v0
 .end method

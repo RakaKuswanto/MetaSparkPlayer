@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final mDelegate:LX/5WG;
+.field public final mDelegate:LX/6BE;
 
 
 # direct methods
-.method public constructor <init>(LX/5WG;)V
+.method public constructor <init>(LX/6BE;)V
     .locals 0
 
     .line 0
@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderDelegateBridge;->mDelegate:LX/5WG;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/avatars/AvatarsDataProviderDelegateBridge;->mDelegate:LX/6BE;
 
     .line 4
     .line 5
@@ -26,6 +26,25 @@
 
 
 # virtual methods
+.method public consumeAvatarFrame(Ljava/lang/String;)[B
+    .locals 1
+
+    .line 0
+    const-string v0, "consumeAvatarFrame"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
+.end method
+
 .method public getDefaultAvatarResourcePath(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
@@ -34,7 +53,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4
@@ -53,7 +72,26 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
+.end method
+
+.method public onAvatarRendered()V
+    .locals 1
+
+    .line 0
+    const-string v0, "onAvatarRendered"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4
@@ -72,7 +110,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4
@@ -91,7 +129,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4
@@ -110,7 +148,26 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    throw v0
+.end method
+
+.method public sendAvatarFrame(Ljava/lang/String;[B)V
+    .locals 1
+
+    .line 0
+    const-string v0, "sendAvatarFrame"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4
@@ -129,7 +186,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4
@@ -148,7 +205,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4
@@ -167,7 +224,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 3
     .line 4

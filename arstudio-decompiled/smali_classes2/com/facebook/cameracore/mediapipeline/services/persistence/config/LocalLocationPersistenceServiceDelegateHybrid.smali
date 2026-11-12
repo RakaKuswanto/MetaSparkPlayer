@@ -8,15 +8,16 @@
     .locals 1
 
     .line 0
-    const-string v0, "arpersistenceserviceconfig"
+    const-string/jumbo v0, "arpersistenceserviceconfig"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 3
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 4
     .line 5
+    .line 6
     return-void
 .end method
 

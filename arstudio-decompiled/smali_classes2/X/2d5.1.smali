@@ -1,32 +1,33 @@
-.class public interface abstract LX/2d5;
-.super Ljava/lang/Object;
+.class public final LX/2d5;
+.super LX/2d6;
 .source ""
 
-# interfaces
-.implements LX/2by;
+
+# instance fields
+.field public final A00:LX/302;
 
 
-# virtual methods
-.method public abstract A9U(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;I)Z
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.method public abstract AHM()I
-.end method
+    .line 0
+    invoke-direct {p0}, LX/2d6;-><init>()V
 
-.method public abstract AHN()I
-.end method
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {}, LX/0X1;->A0B()LX/302;
 
-.method public abstract Al2(I)V
-.end method
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
 
-.method public abstract Al3(LX/2bo;)V
-.end method
+    .line 7
+    iput-object v0, p0, LX/2d5;->A00:LX/302;
 
-.method public abstract AlH(Landroid/graphics/Rect;)V
-.end method
-
-.method public abstract AlR(Landroid/graphics/ColorFilter;)V
-.end method
-
-.method public abstract clear()V
+    .line 8
+    .line 9
+    return-void
 .end method

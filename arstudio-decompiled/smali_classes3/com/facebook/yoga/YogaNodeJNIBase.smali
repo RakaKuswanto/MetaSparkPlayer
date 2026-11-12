@@ -1,5 +1,5 @@
 .class public abstract Lcom/facebook/yoga/YogaNodeJNIBase;
-.super LX/4pO;
+.super LX/4jL;
 .source ""
 
 # interfaces
@@ -9,7 +9,7 @@
 # instance fields
 .field public arr:[F
 
-.field public mBaselineFunction:LX/4rZ;
+.field public mBaselineFunction:LX/4lk;
 
 .field public mChildren:Ljava/util/List;
 
@@ -19,7 +19,7 @@
 
 .field public mLayoutDirection:I
 
-.field public mMeasureFunction:LX/4ra;
+.field public mMeasureFunction:LX/4lg;
 
 .field public mNativePointer:J
 
@@ -51,7 +51,7 @@
     .locals 3
 
     .line 0
-    invoke-direct {p0}, LX/4pO;-><init>()V
+    invoke-direct {p0}, LX/4jL;-><init>()V
 
     .line 1
     .line 2
@@ -101,7 +101,7 @@
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 24
     .line 25
@@ -154,7 +154,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 20
     .line 21
@@ -199,7 +199,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 11
     .line 12
@@ -346,7 +346,7 @@
 
     .line 78
     .line 79
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 80
     .line 81
@@ -367,7 +367,7 @@
     move-exception v0
 
     .line 86
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 87
     .line 88
@@ -378,7 +378,7 @@
     throw v0
 .end method
 
-.method public bridge synthetic cloneWithoutChildren()LX/4pO;
+.method public bridge synthetic cloneWithoutChildren()LX/4jL;
     .locals 4
 
     .line 0
@@ -436,7 +436,7 @@
     move-exception v0
 
     .line 24
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 25
     .line 26
@@ -447,7 +447,7 @@
     throw v0
 .end method
 
-.method public getLayoutBorder(LX/4jM;)F
+.method public getLayoutBorder(LX/6dQ;)F
     .locals 6
 
     .line 0
@@ -537,7 +537,7 @@
 
     .line 37
     .line 38
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 39
     .line 40
@@ -549,72 +549,72 @@
 
     .line 43
     :pswitch_0
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {p0}, LX/4jL;->getLayoutDirection()LX/4V1;
 
     .line 44
     .line 45
-    goto :goto_0
-
     .line 46
-    :pswitch_1
-    add-int/lit8 v2, v2, 0x3
+    move-result-object v1
 
     .line 47
-    .line 48
-    goto :goto_0
+    sget-object v0, LX/4V1;->RTL:LX/4V1;
 
+    .line 48
     .line 49
-    :pswitch_2
-    invoke-virtual {p0}, LX/4pO;->getLayoutDirection()LX/4fE;
+    if-ne v1, v0, :cond_2
 
     .line 50
     .line 51
+    goto :goto_0
+
     .line 52
-    move-result-object v1
+    :pswitch_1
+    invoke-virtual {p0}, LX/4jL;->getLayoutDirection()LX/4V1;
 
     .line 53
-    sget-object v0, LX/4fE;->RTL:LX/4fE;
-
     .line 54
     .line 55
-    if-ne v1, v0, :cond_3
+    move-result-object v1
 
     .line 56
+    sget-object v0, LX/4V1;->RTL:LX/4V1;
+
     .line 57
-    :cond_2
-    :goto_0
-    :pswitch_3
-    aget v0, v4, v2
-
     .line 58
-    .line 59
-    return v0
+    if-ne v1, v0, :cond_3
 
+    .line 59
     .line 60
-    :pswitch_4
-    invoke-virtual {p0}, LX/4pO;->getLayoutDirection()LX/4fE;
+    :cond_2
+    :pswitch_2
+    add-int/lit8 v2, v2, 0x2
 
     .line 61
     .line 62
+    goto :goto_0
+
     .line 63
-    move-result-object v1
+    :pswitch_3
+    add-int/lit8 v2, v2, 0x3
 
     .line 64
-    sget-object v0, LX/4fE;->RTL:LX/4fE;
-
     .line 65
+    goto :goto_0
+
     .line 66
-    if-ne v1, v0, :cond_2
+    :pswitch_4
+    add-int/lit8 v2, v2, 0x1
 
     .line 67
     .line 68
     :cond_3
+    :goto_0
     :pswitch_5
-    add-int/lit8 v2, v2, 0x2
+    aget v0, v4, v2
 
     .line 69
     .line 70
-    goto :goto_0
+    return v0
 
     .line 71
     :cond_4
@@ -629,16 +629,16 @@
     .line 74
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
-        :pswitch_0
         :pswitch_5
-        :pswitch_1
         :pswitch_4
         :pswitch_2
+        :pswitch_3
+        :pswitch_1
+        :pswitch_0
     .end packed-switch
 .end method
 
-.method public getLayoutDirection()LX/4fE;
+.method public getLayoutDirection()LX/4V1;
     .locals 2
 
     .line 0
@@ -661,7 +661,7 @@
 
     .line 8
     :goto_0
-    invoke-static {v0}, LX/4fE;->fromInt(I)LX/4fE;
+    invoke-static {v0}, LX/4V1;->fromInt(I)LX/4V1;
 
     .line 9
     .line 10
@@ -680,7 +680,7 @@
     goto :goto_0
 .end method
 
-.method public getLayoutPadding(LX/4jM;)F
+.method public getLayoutPadding(LX/6dQ;)F
     .locals 5
 
     .line 0
@@ -749,7 +749,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 31
     .line 32
@@ -761,72 +761,72 @@
 
     .line 35
     :pswitch_0
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {p0}, LX/4jL;->getLayoutDirection()LX/4V1;
 
     .line 36
     .line 37
-    goto :goto_0
-
     .line 38
-    :pswitch_1
-    add-int/lit8 v2, v2, 0x3
+    move-result-object v1
 
     .line 39
-    .line 40
-    goto :goto_0
+    sget-object v0, LX/4V1;->RTL:LX/4V1;
 
+    .line 40
     .line 41
-    :pswitch_2
-    invoke-virtual {p0}, LX/4pO;->getLayoutDirection()LX/4fE;
+    if-ne v1, v0, :cond_1
 
     .line 42
     .line 43
+    goto :goto_0
+
     .line 44
-    move-result-object v1
+    :pswitch_1
+    invoke-virtual {p0}, LX/4jL;->getLayoutDirection()LX/4V1;
 
     .line 45
-    sget-object v0, LX/4fE;->RTL:LX/4fE;
-
     .line 46
     .line 47
-    if-ne v1, v0, :cond_2
+    move-result-object v1
 
     .line 48
+    sget-object v0, LX/4V1;->RTL:LX/4V1;
+
     .line 49
-    :cond_1
-    :goto_0
-    :pswitch_3
-    aget v0, v4, v2
-
     .line 50
-    .line 51
-    return v0
+    if-ne v1, v0, :cond_2
 
+    .line 51
     .line 52
-    :pswitch_4
-    invoke-virtual {p0}, LX/4pO;->getLayoutDirection()LX/4fE;
+    :cond_1
+    :pswitch_2
+    add-int/lit8 v2, v2, 0x2
 
     .line 53
     .line 54
+    goto :goto_0
+
     .line 55
-    move-result-object v1
+    :pswitch_3
+    add-int/lit8 v2, v2, 0x3
 
     .line 56
-    sget-object v0, LX/4fE;->RTL:LX/4fE;
-
     .line 57
+    goto :goto_0
+
     .line 58
-    if-ne v1, v0, :cond_1
+    :pswitch_4
+    add-int/lit8 v2, v2, 0x1
 
     .line 59
     .line 60
     :cond_2
+    :goto_0
     :pswitch_5
-    add-int/lit8 v2, v2, 0x2
+    aget v0, v4, v2
 
     .line 61
     .line 62
-    goto :goto_0
+    return v0
 
     .line 63
     :cond_3
@@ -841,20 +841,20 @@
     .line 66
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
-        :pswitch_0
         :pswitch_5
-        :pswitch_1
         :pswitch_4
         :pswitch_2
+        :pswitch_3
+        :pswitch_1
+        :pswitch_0
     .end packed-switch
 .end method
 
 .method public final measure(FIFI)J
-    .locals 6
+    .locals 7
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/yoga/YogaNodeJNIBase;->mMeasureFunction:LX/4ra;
+    iget-object v0, p0, Lcom/facebook/yoga/YogaNodeJNIBase;->mMeasureFunction:LX/4lg;
 
     .line 1
     .line 2
@@ -862,171 +862,175 @@
 
     .line 3
     .line 4
-    invoke-static {p2}, LX/6MQ;->fromInt(I)LX/6MQ;
+    invoke-static {p2}, LX/4KF;->fromInt(I)LX/4KF;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v5
+    move-result-object v6
 
     .line 8
-    invoke-static {p4}, LX/6MQ;->fromInt(I)LX/6MQ;
+    invoke-static {p4}, LX/4KF;->fromInt(I)LX/4KF;
 
     .line 9
     .line 10
     .line 11
-    move-result-object v4
+    move-result-object v5
 
     .line 12
-    iget-object v0, p0, Lcom/facebook/yoga/YogaNodeJNIBase;->mData:Ljava/lang/Object;
+    sget-object v4, LX/4fZ;->A00:LX/4fZ;
 
     .line 13
     .line 14
-    const-string v1, "null cannot be cast to non-null type android.util.Pair<*, *>"
+    iget-object v0, p0, Lcom/facebook/yoga/YogaNodeJNIBase;->mData:Ljava/lang/Object;
 
     .line 15
     .line 16
-    invoke-static {v0, v1}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v1, "null cannot be cast to non-null type android.util.Pair<*, *>"
 
     .line 17
     .line 18
-    .line 19
-    check-cast v0, Landroid/util/Pair;
+    invoke-static {v0, v1}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 19
     .line 20
     .line 21
-    iget-object v3, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
+    check-cast v0, Landroid/util/Pair;
 
     .line 22
     .line 23
-    const-string v0, "null cannot be cast to non-null type com.facebook.rendercore.LayoutContext<*>"
+    iget-object v3, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     .line 24
     .line 25
-    invoke-static {v3, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "null cannot be cast to non-null type com.facebook.rendercore.LayoutContext<com.facebook.litho.LithoLayoutContext>"
 
     .line 26
     .line 27
-    .line 28
-    check-cast v3, LX/4qC;
+    invoke-static {v3, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 28
     .line 29
     .line 30
-    iget-object v0, p0, Lcom/facebook/yoga/YogaNodeJNIBase;->mData:Ljava/lang/Object;
+    check-cast v3, LX/4hQ;
 
     .line 31
     .line 32
-    invoke-static {v0, v1}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v0, p0, Lcom/facebook/yoga/YogaNodeJNIBase;->mData:Ljava/lang/Object;
 
     .line 33
     .line 34
-    .line 35
-    check-cast v0, Landroid/util/Pair;
+    invoke-static {v0, v1}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 35
     .line 36
     .line 37
-    iget-object v2, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+    check-cast v0, Landroid/util/Pair;
 
     .line 38
     .line 39
-    const-string v0, "null cannot be cast to non-null type com.facebook.litho.LithoLayoutResult"
+    iget-object v2, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     .line 40
     .line 41
-    invoke-static {v2, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "null cannot be cast to non-null type com.facebook.litho.LithoLayoutResult"
 
     .line 42
     .line 43
-    .line 44
-    check-cast v2, LX/4ml;
+    invoke-static {v2, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 44
     .line 45
     .line 46
-    invoke-static {v5, p1}, LX/4fr;->A01(LX/6MQ;F)I
+    check-cast v2, LX/4fo;
 
     .line 47
     .line 48
+    invoke-static {v6, p1}, LX/4KE;->A01(LX/4KF;F)I
+
     .line 49
+    .line 50
+    .line 51
     move-result v1
 
-    .line 50
-    invoke-static {v4, p3}, LX/4fr;->A01(LX/6MQ;F)I
-
-    .line 51
     .line 52
+    invoke-static {v5, p3}, LX/4KE;->A01(LX/4KF;F)I
+
     .line 53
+    .line 54
+    .line 55
     move-result v0
 
-    .line 54
-    invoke-virtual {v2, v3, v1, v0}, LX/4ml;->A06(LX/4qC;II)LX/4ot;
-
-    .line 55
     .line 56
+    invoke-virtual {v4, v2, v3, v1, v0}, LX/4fZ;->A07(LX/4fo;LX/4hQ;II)LX/4iB;
+
     .line 57
+    .line 58
+    .line 59
     move-result-object v1
 
-    .line 58
-    iget v0, v1, LX/4ot;->A01:I
-
-    .line 59
     .line 60
-    iget v1, v1, LX/4ot;->A00:I
+    iget v0, v1, LX/4iB;->A01:I
 
     .line 61
     .line 62
-    int-to-float v0, v0
+    iget v1, v1, LX/4iB;->A00:I
 
     .line 63
-    int-to-float v1, v1
-
     .line 64
-    invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
+    int-to-float v0, v0
 
     .line 65
+    int-to-float v1, v1
+
     .line 66
+    invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
     .line 67
+    .line 68
+    .line 69
     move-result v0
 
-    .line 68
+    .line 70
     invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
-    .line 69
-    .line 70
     .line 71
+    .line 72
+    .line 73
     move-result v1
 
-    .line 72
+    .line 74
     int-to-long v2, v0
 
-    .line 73
+    .line 75
     const/16 v0, 0x20
 
-    .line 74
-    .line 75
+    .line 76
+    .line 77
     shl-long/2addr v2, v0
 
-    .line 76
+    .line 78
     int-to-long v0, v1
 
-    .line 77
+    .line 79
     or-long/2addr v0, v2
 
-    .line 78
+    .line 80
     return-wide v0
 
-    .line 79
+    .line 81
     :cond_0
     const-string v0, "Measure function isn\'t defined!"
 
-    .line 80
-    .line 81
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
     .line 82
     .line 83
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
     .line 84
+    .line 85
+    .line 86
     move-result-object v0
 
-    .line 85
+    .line 87
     throw v0
 .end method

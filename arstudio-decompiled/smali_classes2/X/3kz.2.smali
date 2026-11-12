@@ -1,16 +1,17 @@
-.class public final LX/3kz;
+.class public final LX/3kZ;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3l3;
+
 
 # instance fields
-.field public final A00:Landroid/os/Bundle;
-
-.field public final A01:Ljava/lang/String;
+.field public final A00:LX/3kS;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Landroid/os/Bundle;)V
+.method public constructor <init>(LX/3kS;)V
     .locals 0
 
     .line 0
@@ -19,13 +20,22 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3kz;->A01:Ljava/lang/String;
+    iput-object p1, p0, LX/3kZ;->A00:LX/3kS;
 
     .line 4
     .line 5
-    iput-object p2, p0, LX/3kz;->A00:Landroid/os/Bundle;
-
-    .line 6
-    .line 7
     return-void
+.end method
+
+
+# virtual methods
+.method public final A9U()I
+    .locals 1
+
+    .line 0
+    const/16 v0, 0x9
+
+    .line 1
+    .line 2
+    return v0
 .end method

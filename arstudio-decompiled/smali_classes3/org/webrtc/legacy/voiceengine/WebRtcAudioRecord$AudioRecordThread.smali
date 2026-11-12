@@ -185,11 +185,11 @@
 
     .line 51
     .line 52
-    iget-object v0, v0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecordMultiplexer:LX/0Na;
+    iget-object v0, v0, Lorg/webrtc/legacy/voiceengine/WebRtcAudioRecord;->mAudioRecordMultiplexer:LX/0RP;
 
     .line 53
     .line 54
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 55
     .line 56
@@ -398,7 +398,7 @@
     move-result v0
 
     .line 153
-    invoke-static {v0, v5}, LX/001;->A1O(II)Z
+    invoke-static {v0, v5}, LX/001;->A1N(II)Z
 
     .line 154
     .line 155

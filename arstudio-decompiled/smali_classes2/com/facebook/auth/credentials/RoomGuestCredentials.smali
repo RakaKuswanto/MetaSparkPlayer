@@ -18,11 +18,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x51
+    const/16 v0, 0x50
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -77,7 +77,7 @@
     .locals 2
 
     .line 268435456
-    sget-object v1, LX/1ZJ;->ROOM_GUEST_USER_LOGIN:LX/1ZJ;
+    sget-object v1, LX/2PV;->ROOM_GUEST_USER_LOGIN:LX/2PV;
 
     .line 268435457
     .line 268435458
@@ -85,7 +85,7 @@
 
     .line 268435459
     .line 268435460
-    invoke-direct {p0, v1, v0, v0}, Lcom/facebook/auth/credentials/PasswordCredentials;-><init>(LX/1ZJ;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v1, v0, v0}, Lcom/facebook/auth/credentials/PasswordCredentials;-><init>(LX/2PV;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 268435461
     .line 268435462

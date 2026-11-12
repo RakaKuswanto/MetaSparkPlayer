@@ -293,7 +293,7 @@
 
     .line 5
     .line 6
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 7
     .line 8
@@ -305,24 +305,24 @@
 .end method
 
 .method public static makeDummyZip(Ljava/io/File;)V
-    .locals 4
+    .locals 5
 
     .line 0
-    new-instance v3, Ljava/io/FileOutputStream;
+    new-instance v4, Ljava/io/FileOutputStream;
 
     .line 1
     .line 2
-    invoke-direct {v3, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v4, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 3
     .line 4
     .line 5
     :try_start_0
-    new-instance v2, Ljava/util/zip/ZipOutputStream;
+    new-instance v3, Ljava/util/zip/ZipOutputStream;
 
     .line 6
     .line 7
-    invoke-direct {v2, v3}, Ljava/util/zip/ZipOutputStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v3, v4}, Ljava/util/zip/ZipOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
@@ -343,16 +343,16 @@
     .line 15
     .line 16
     .line 17
-    invoke-virtual {v2, v0}, Ljava/util/zip/ZipOutputStream;->putNextEntry(Ljava/util/zip/ZipEntry;)V
+    invoke-virtual {v3, v0}, Ljava/util/zip/ZipOutputStream;->putNextEntry(Ljava/util/zip/ZipEntry;)V
 
     .line 18
     .line 19
     .line 20
-    new-instance v1, Ljava/io/PrintStream;
+    new-instance v2, Ljava/io/PrintStream;
 
     .line 21
     .line 22
-    invoke-direct {v1, v2}, Ljava/io/PrintStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v2, v3}, Ljava/io/PrintStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
@@ -364,7 +364,7 @@
 
     .line 26
     .line 27
-    invoke-virtual {v1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     .line 28
     .line 29
@@ -373,17 +373,17 @@
 
     .line 31
     .line 32
-    invoke-virtual {v1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     .line 33
     .line 34
     .line 35
-    invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual {v2}, Ljava/io/OutputStream;->flush()V
 
     .line 36
     .line 37
     .line 38
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -391,7 +391,7 @@
     .line 40
     .line 41
     :try_start_3
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -399,14 +399,14 @@
     .line 43
     .line 44
     :try_start_4
-    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
     .line 45
     .line 46
     .line 47
-    invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
 
     .line 48
     .line 49
@@ -415,57 +415,92 @@
 
     .line 51
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 52
     :try_start_5
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
 
     .line 53
     .line 54
     .line 55
-    :catchall_1
-    :try_start_6
-    throw v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    goto :goto_0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 56
-    :catchall_2
+    :catchall_1
     move-exception v0
 
     .line 57
-    :try_start_7
-    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+    :try_start_6
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 58
     .line 59
     .line 60
-    :catchall_3
-    :try_start_8
-    throw v0
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+    :goto_0
+    throw v1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
     .line 61
-    :catchall_4
-    move-exception v0
+    :catchall_2
+    move-exception v1
 
     .line 62
-    :try_start_9
+    :try_start_7
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_5
 
     .line 63
     .line 64
     .line 65
+    goto :goto_1
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+
+    .line 66
+    :catchall_3
+    move-exception v0
+
+    .line 67
+    :try_start_8
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 68
+    .line 69
+    .line 70
+    :goto_1
+    throw v1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+
+    .line 71
+    :catchall_4
+    move-exception v1
+
+    .line 72
+    :try_start_9
+    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_5
+
+    .line 73
+    .line 74
+    .line 75
+    throw v1
+
+    .line 76
     :catchall_5
-    throw v0
+    move-exception v0
+
+    .line 77
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 78
+    .line 79
+    .line 80
+    throw v1
 .end method
 
 .method public static makeExpectedFileList([Lcom/facebook/common/dextricks/DexManifest$Dex;)[Ljava/lang/String;
@@ -554,7 +589,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
@@ -562,7 +597,7 @@
     move-result-object v0
 
     .line 10
-    invoke-static {p0, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 11
     .line 12
@@ -575,7 +610,7 @@
 
 
 # virtual methods
-.method public final configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+.method public final configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
     .locals 4
 
     .line 0
@@ -598,7 +633,7 @@
 
     .line 7
     .line 8
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 9
     .line 10
@@ -618,7 +653,7 @@
 
     .line 17
     .line 18
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 19
     .line 20
@@ -626,7 +661,7 @@
     move-result-object v0
 
     .line 22
-    invoke-virtual {p2, v2, v0}, Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;->addDex(Ljava/io/File;Ljava/io/File;)V
+    invoke-virtual {p2, v2, v0}, Lcom/facebook/common/dextricks/ClassLoaderConfiguration;->addDex(Ljava/io/File;Ljava/io/File;)V
 
     .line 23
     .line 24

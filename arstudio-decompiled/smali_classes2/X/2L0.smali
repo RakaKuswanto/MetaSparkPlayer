@@ -2,147 +2,95 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MobileConfigSessionlessInit$1"
+
+
+# instance fields
+.field public final synthetic A00:Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;
+
+.field public final synthetic A01:Lcom/facebook/mobileconfig/init/MobileConfigSessionlessInit;
+
 
 # direct methods
-.method public static final A00(LX/2LY;)LX/2LY;
-    .locals 1
+.method public constructor <init>(Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;Lcom/facebook/mobileconfig/init/MobileConfigSessionlessInit;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x0
+    iput-object p2, p0, LX/2L0;->A01:Lcom/facebook/mobileconfig/init/MobileConfigSessionlessInit;
 
     .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    iput-object p1, p0, LX/2L0;->A00:Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;
+
     .line 3
     .line 4
-    invoke-interface {p0}, LX/2LY;->AEY()LX/2Kr;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5
     .line 6
     .line 7
-    move-result-object v0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/2L0;->A00:Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;
+
+    .line 1
+    .line 2
+    const/16 v0, 0xbb8
+
+    .line 3
+    .line 4
+    invoke-virtual {v1, v0}, Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;->tryUpdateConfigsSynchronously(I)Z
+
+    .line 5
+    .line 6
+    .line 7
+    const-class v1, LX/2L2;
 
     .line 8
-    invoke-interface {v0}, LX/2Kr;->AR4()Z
-
     .line 9
-    .line 10
-    .line 11
-    move-result v0
+    monitor-enter v1
 
+    .line 10
+    :try_start_0
+    sget-object v0, LX/2L3;->A00:LX/2L2;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 11
     .line 12
-    if-nez v0, :cond_0
+    monitor-exit v1
 
     .line 13
+    iget-object v0, v0, LX/2L2;->A00:Ljava/util/concurrent/CountDownLatch;
+
     .line 14
-    new-instance v0, LX/2Kz;
-
     .line 15
-    .line 16
-    invoke-direct {v0, p0}, LX/2Kz;-><init>(LX/2LY;)V
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
+    .line 16
     .line 17
     .line 18
+    return-void
+
     .line 19
-    return-object v0
+    :catchall_0
+    move-exception v0
 
     .line 20
-    :cond_0
-    return-object p0
-.end method
+    monitor-exit v1
 
-.method public static A01(Ljava/lang/Object;LX/2LY;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x3
-
-    .line 1
-    aput-object p0, p2, v0
-
-    .line 2
-    .line 3
-    invoke-static {p1}, LX/2L0;->A00(LX/2LY;)LX/2LY;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object p0
-
-    .line 7
-    const/4 v0, 0x4
-
-    .line 8
-    aput-object p0, p2, v0
-
-    .line 9
-    .line 10
-    return-void
-.end method
-
-.method public static A02(LX/2LY;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, LX/2L0;->A00(LX/2LY;)LX/2LY;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    const/4 v0, 0x0
-
-    .line 5
-    aput-object p0, p1, v0
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public static A03(LX/2LY;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, LX/2L0;->A00(LX/2LY;)LX/2LY;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    const/4 v0, 0x1
-
-    .line 5
-    aput-object p0, p1, v0
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public static A04(LX/2LY;[Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    invoke-static {p0}, LX/2L0;->A00(LX/2LY;)LX/2LY;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
-
-    .line 4
-    const/4 v0, 0x2
-
-    .line 5
-    aput-object p0, p1, v0
-
-    .line 6
-    .line 7
-    return-void
+    .line 21
+    throw v0
 .end method

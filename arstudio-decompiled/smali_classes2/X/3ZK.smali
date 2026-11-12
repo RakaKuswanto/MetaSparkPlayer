@@ -1,33 +1,32 @@
-.class public final LX/3ZK;
-.super LX/3ZI;
+.class public interface abstract LX/3ZK;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3ZM;
 
-# instance fields
-.field public final A00:LX/0ZF;
 
+# virtual methods
+.method public abstract A7m(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;I)Z
+.end method
 
-# direct methods
-.method public constructor <init>(LX/0ZF;)V
-    .locals 1
+.method public abstract AFu()I
+.end method
 
-    .line 0
-    const/4 v0, 0x1
+.method public abstract AFv()I
+.end method
 
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+.method public abstract AjX(I)V
+.end method
 
-    .line 2
-    .line 3
-    .line 4
-    invoke-direct {p0}, LX/3ZI;-><init>()V
+.method public abstract AjY(LX/3ZN;)V
+.end method
 
-    .line 5
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/3ZK;->A00:LX/0ZF;
+.method public abstract Ajm(Landroid/graphics/Rect;)V
+.end method
 
-    .line 8
-    .line 9
-    return-void
+.method public abstract Ajx(Landroid/graphics/ColorFilter;)V
+.end method
+
+.method public abstract clear()V
 .end method

@@ -1,14 +1,202 @@
-.class public interface abstract LX/5bk;
-.super Ljava/lang/Object;
+.class public abstract LX/5bK;
+.super LX/5bJ;
 .source ""
 
-# interfaces
-.implements LX/5ar;
+
+# instance fields
+.field public final A00:Landroid/content/BroadcastReceiver;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;LX/5Bp;)V
+    .locals 2
+
+    .line 0
+    invoke-direct {p0, p1, p2}, LX/5bJ;-><init>(Landroid/content/Context;LX/5Bp;)V
+
+    .line 1
+    .line 2
+    .line 3
+    const/4 v1, 0x4
+
+    .line 4
+    new-instance v0, LX/6fK;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0, v1}, LX/6fK;-><init>(Ljava/lang/Object;I)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/5bK;->A00:Landroid/content/BroadcastReceiver;
+
+    .line 10
+    .line 11
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract AG2()Ljava/lang/Integer;
+.method public A05()Landroid/content/IntentFilter;
+    .locals 2
+
+    .line 0
+    new-instance v1, Landroid/content/IntentFilter;
+
+    .line 1
+    .line 2
+    invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    const-string v0, "android.intent.action.DEVICE_STORAGE_OK"
+
+    .line 6
+    .line 7
+    invoke-virtual {v1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    const-string v0, "android.intent.action.DEVICE_STORAGE_LOW"
+
+    .line 11
+    .line 12
+    invoke-virtual {v1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-object v1
 .end method
 
-.method public abstract ALe()I
+.method public A06(Landroid/content/Intent;)V
+    .locals 4
+
+    .line 0
+    const/4 v3, 0x0
+
+    .line 1
+    invoke-static {p1, v3}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    if-eqz v0, :cond_1
+
+    .line 9
+    .line 10
+    invoke-static {}, LX/5kg;->A00()LX/5kg;
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v2
+
+    .line 20
+    if-eqz v2, :cond_1
+
+    .line 21
+    .line 22
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v1
+
+    .line 26
+    const v0, -0x46671f94
+
+    .line 27
+    .line 28
+    .line 29
+    if-eq v1, v0, :cond_2
+
+    .line 30
+    .line 31
+    const v0, -0x2b8fb65c
+
+    .line 32
+    .line 33
+    .line 34
+    if-ne v1, v0, :cond_1
+
+    .line 35
+    .line 36
+    const-string v0, "android.intent.action.DEVICE_STORAGE_OK"
+
+    .line 37
+    .line 38
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v0
+
+    .line 42
+    if-eqz v0, :cond_1
+
+    .line 43
+    .line 44
+    const/4 v3, 0x1
+
+    .line 45
+    :cond_0
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 46
+    .line 47
+    .line 48
+    move-result-object v0
+
+    .line 49
+    invoke-virtual {p0, v0}, LX/5bJ;->A01(Ljava/lang/Object;)V
+
+    .line 50
+    .line 51
+    .line 52
+    :cond_1
+    return-void
+
+    .line 53
+    :cond_2
+    const-string v0, "android.intent.action.DEVICE_STORAGE_LOW"
+
+    .line 54
+    .line 55
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 56
+    .line 57
+    .line 58
+    move-result v0
+
+    .line 59
+    if-nez v0, :cond_0
+
+    .line 60
+    .line 61
+    return-void
 .end method

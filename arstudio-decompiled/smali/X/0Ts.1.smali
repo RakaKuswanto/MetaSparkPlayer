@@ -2,37 +2,56 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static A02:LX/0Ts;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbnsConnectionManager$2"
 
 
 # instance fields
-.field public A00:Z
-
-.field public final A01:Ljava/util/List;
+.field public final synthetic A00:LX/0TS;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/0TS;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/0Ts;->A00:LX/0TS;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/0Ts;->A00:LX/0TS;
+
+    .line 1
+    .line 2
+    iget-object v0, v1, LX/0TS;->A0G:LX/0Uz;
+
+    .line 3
+    .line 4
+    iget-object v0, v0, LX/0Uz;->A0F:LX/0VF;
+
+    .line 5
     .line 6
-    move-result-object v0
+    invoke-virtual {v1, v0}, LX/0TS;->A0H(LX/0VF;)V
 
     .line 7
-    iput-object v0, p0, LX/0Ts;->A01:Ljava/util/List;
-
     .line 8
     .line 9
     return-void

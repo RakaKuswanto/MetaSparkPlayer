@@ -1,25 +1,29 @@
-.class public final LX/54W;
-.super LX/52r;
+.class public abstract LX/54w;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/54g;
+# static fields
+.field public static final A00:Ljava/security/SecureRandom;
 
 
 # direct methods
-.method public constructor <init>(LX/54g;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/52r;-><init>()V
+    new-instance v0, Ljava/security/SecureRandom;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/54W;->A00:LX/54g;
+    invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    sput-object v0, LX/54w;->A00:Ljava/security/SecureRandom;
+
+    .line 6
+    .line 7
     return-void
 .end method

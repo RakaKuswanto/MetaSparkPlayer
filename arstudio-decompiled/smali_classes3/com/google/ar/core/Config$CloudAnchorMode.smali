@@ -160,30 +160,18 @@
 
     .line 18
     :cond_1
-    const/16 v0, 0x40
+    const-string v0, "Unexpected value for native AnchorHostingMode, value="
 
     .line 19
     .line 20
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
+    invoke-static {v0, p0}, LX/431;->A0P(Ljava/lang/String;I)Lcom/google/ar/core/exceptions/FatalException;
 
     .line 21
     .line 22
     .line 23
-    move-result-object v1
-
-    .line 24
-    const-string v0, "Unexpected value for native AnchorHostingMode, value="
-
-    .line 25
-    .line 26
-    invoke-static {v0, v1, p0}, LX/4BD;->A0V(Ljava/lang/String;Ljava/lang/StringBuilder;I)Lcom/google/ar/core/exceptions/FatalException;
-
-    .line 27
-    .line 28
-    .line 29
     move-result-object v0
 
-    .line 30
+    .line 24
     throw v0
 .end method
 

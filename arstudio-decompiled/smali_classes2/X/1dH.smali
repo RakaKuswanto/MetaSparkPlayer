@@ -1,365 +1,323 @@
-.class public final LX/1dH;
-.super LX/1j0;
+.class public final LX/1DH;
+.super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final A00:LX/0RP;
+
+.field public final A01:LX/0RP;
+
+.field public final A02:LX/0RP;
+
+.field public final A03:LX/6QP;
+
+
 # direct methods
-.method public constructor <init>(I)V
-    .locals 14
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    const-class v1, LX/1J7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    packed-switch p1, :pswitch_data_0
+    .line 3
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/1DH;->A01:LX/0RP;
+
+    .line 8
+    .line 9
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/1DH;->A02:LX/0RP;
+
+    .line 14
+    .line 15
+    invoke-static {}, LX/0lf;->A0C()LX/0lf;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    iput-object v0, p0, LX/1DH;->A00:LX/0RP;
+
+    .line 20
+    .line 21
+    new-instance v0, LX/6QP;
+
+    .line 22
+    .line 23
+    invoke-direct {v0, p0}, LX/6QP;-><init>(LX/1DH;)V
+
+    .line 24
+    .line 25
+    .line 26
+    iput-object v0, p0, LX/1DH;->A03:LX/6QP;
+
+    .line 27
+    .line 28
+    return-void
+.end method
+
+.method public static A00(LX/1DH;)Z
+    .locals 9
+
+    .line 0
+    sget v3, LX/2I6;->ACe:I
+
+    .line 1
+    .line 2
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 3
     .line 4
     .line 5
-    const-string v3, "ViewerQuery"
+    move-result-object v0
 
     .line 6
-    .line 7
-    const-string/jumbo v4, "viewer"
+    invoke-static {v0, v3}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
+    .line 7
     .line 8
     .line 9
+    move-result-object v8
+
     .line 10
-    const-string v5, "fbandroid"
+    check-cast v8, LX/1pX;
 
     .line 11
     .line 12
-    const/4 v2, 0x0
+    iget-object v6, p0, LX/1DH;->A01:LX/0RP;
 
     .line 13
-    const v6, 0x1ae14a94
-
     .line 14
+    invoke-static {v6}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+
     .line 15
     .line 16
-    const-wide/32 v8, 0x1ae14a94
-
     .line 17
-    .line 18
-    .line 19
-    :goto_0
-    const/4 v7, 0x0
+    move-result-object v1
 
+    .line 18
+    iget-object v0, v8, LX/1pX;->A0C:LX/3gS;
+
+    .line 19
     .line 20
-    const/4 v13, 0x1
+    invoke-static {v0}, LX/0X5;->A0J(LX/3gS;)LX/28F;
 
     .line 21
-    :goto_1
-    move-object v0, p0
-
     .line 22
-    move-wide v10, v8
-
     .line 23
-    move v12, v7
+    move-result-object v0
 
     .line 24
-    invoke-direct/range {v0 .. v13}, LX/1j0;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJZZ)V
+    invoke-static {v1, v0}, LX/0X3;->A0A(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/28F;)J
 
     .line 25
     .line 26
     .line 27
-    return-void
+    move-result-wide v4
 
     .line 28
-    :pswitch_0
-    const-string v3, "VideoDetailFromVideoIdQuery"
+    iget-object v0, p0, LX/1DH;->A00:LX/0RP;
 
     .line 29
     .line 30
-    const-string/jumbo v4, "video"
+    invoke-static {v0}, LX/0X1;->A03(LX/0RP;)J
 
     .line 31
     .line 32
     .line 33
-    const-string v5, "fbandroid"
+    move-result-wide v1
 
     .line 34
+    const/4 v7, 0x0
+
     .line 35
-    const/4 v2, 0x0
+    cmp-long v0, v4, v1
 
     .line 36
-    const v6, 0xe809495
-
     .line 37
+    if-gtz v0, :cond_1
+
     .line 38
     .line 39
-    const-wide/32 v8, 0x36002787
+    invoke-static {v6}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 40
     .line 41
     .line 42
-    goto :goto_2
+    move-result-object v1
 
     .line 43
-    :pswitch_1
-    const-string v3, "VideoLicenseProvisioningQuery"
+    iget-object v0, v8, LX/1pX;->A0D:LX/3gS;
 
     .line 44
     .line 45
-    const-string/jumbo v4, "video_license"
+    invoke-static {v0}, LX/0X5;->A0J(LX/3gS;)LX/28F;
 
     .line 46
     .line 47
     .line 48
-    const-string v5, "fbandroid"
+    move-result-object v0
 
     .line 49
+    invoke-interface {v1, v0, v7}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AFn(LX/28F;I)I
+
     .line 50
-    const/4 v2, 0x0
-
     .line 51
-    const v6, 0x2dca16b0
-
     .line 52
+    move-result v1
+
     .line 53
+    const/4 v0, 0x3
+
     .line 54
-    const-wide/32 v8, 0x2dca16b0
+    if-lt v1, v0, :cond_0
 
     .line 55
     .line 56
-    .line 57
-    goto :goto_2
+    iget-object v6, p0, LX/1DH;->A03:LX/6QP;
 
+    .line 57
     .line 58
-    :pswitch_2
-    const-string v3, "FBVideoLicenseQuery"
+    monitor-enter v6
 
     .line 59
-    .line 60
-    const-string/jumbo v4, "video_license"
+    :try_start_0
+    iget-object v2, v6, LX/6QP;->A01:LX/1DH;
 
+    .line 60
     .line 61
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
     .line 62
     .line 63
-    const-string v5, "fbandroid"
-
     .line 64
+    move-result-object v0
+
     .line 65
-    const/4 v2, 0x0
+    invoke-static {v0, v3}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 66
-    const v6, 0xb27e18b
-
     .line 67
     .line 68
+    move-result-object v1
+
     .line 69
-    const-wide/32 v8, 0xb27e18b
+    check-cast v1, LX/1pX;
 
     .line 70
     .line 71
-    .line 72
-    goto :goto_2
+    iget-object v0, v2, LX/1DH;->A01:LX/0RP;
 
+    .line 72
     .line 73
-    :pswitch_3
-    const-string v3, "SurveyIntegrationPointQuery"
+    invoke-static {v0}, LX/0X1;->A0C(LX/0RP;)LX/1D7;
 
     .line 74
     .line 75
-    const-string/jumbo v4, "node"
-
     .line 76
+    move-result-object v5
+
     .line 77
+    iget-object v0, v1, LX/1pX;->A0D:LX/3gS;
+
     .line 78
-    const-string v5, "fbandroid"
-
     .line 79
+    invoke-static {v0}, LX/0X5;->A0J(LX/3gS;)LX/28F;
+
     .line 80
-    const/4 v2, 0x0
-
     .line 81
-    const v6, 0x1cc69b33
-
     .line 82
-    .line 83
-    .line 84
-    const-wide/32 v8, 0x1cc69b33
+    move-result-object v0
 
+    .line 83
+    invoke-interface {v5, v0, v7}, LX/1D7;->AfX(LX/28F;I)LX/2Cv;
+
+    .line 84
     .line 85
     .line 86
-    .line 87
-    goto :goto_0
+    iget-object v0, v1, LX/1pX;->A0C:LX/3gS;
 
+    .line 87
     .line 88
-    :pswitch_4
-    const-string v3, "NativeMLModelFBLegacyQuery"
+    invoke-static {v0}, LX/0X5;->A0J(LX/3gS;)LX/28F;
 
     .line 89
     .line 90
-    const-string v4, "aim_model_manifest"
-
     .line 91
+    move-result-object v4
+
     .line 92
-    const-string v5, "fbandroid"
+    iget-object v0, v2, LX/1DH;->A00:LX/0RP;
 
     .line 93
     .line 94
-    const/4 v2, 0x0
+    invoke-static {v0}, LX/0X1;->A03(LX/0RP;)J
 
     .line 95
-    const v6, 0x6db3a78
-
     .line 96
     .line 97
+    move-result-wide v2
+
     .line 98
-    const-wide/32 v8, 0x6db3a78
+    const-wide/32 v0, 0x1499700
 
     .line 99
     .line 100
     .line 101
-    goto :goto_0
+    add-long/2addr v2, v0
 
     .line 102
-    :pswitch_5
-    const-string v3, "FetchInterstitials"
+    invoke-interface {v5, v4, v2, v3}, LX/1D7;->Afb(LX/28F;J)LX/2Cv;
 
     .line 103
     .line 104
-    const-string/jumbo v4, "viewer"
-
     .line 105
+    invoke-interface {v5}, LX/1D7;->commit()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     .line 106
     .line 107
-    const-string v5, "fbandroid"
-
     .line 108
+    monitor-exit v6
+
     .line 109
-    const/4 v2, 0x0
+    return v7
 
     .line 110
-    const v6, 0x39326f2a
+    :catchall_0
+    move-exception v0
 
     .line 111
+    monitor-exit v6
+
     .line 112
+    throw v0
+
     .line 113
-    const-wide/32 v8, 0x39326f2a
+    :cond_0
+    const/4 v7, 0x1
 
     .line 114
-    .line 115
-    .line 116
-    goto :goto_0
-
-    .line 117
-    :pswitch_6
-    const-string v3, "GetLoggedInUserQuery"
-
-    .line 118
-    .line 119
-    const-string/jumbo v4, "viewer"
-
-    .line 120
-    .line 121
-    .line 122
-    const-string v5, "fbandroid"
-
-    .line 123
-    .line 124
-    const/4 v2, 0x0
-
-    .line 125
-    const v6, 0x21807552
-
-    .line 126
-    .line 127
-    .line 128
-    const-wide/32 v8, 0x21807552
-
-    .line 129
-    .line 130
-    .line 131
-    goto :goto_0
-
-    .line 132
-    :pswitch_7
-    const-string v3, "FetchFacebookEmployeeStatusQuery"
-
-    .line 133
-    .line 134
-    const-string/jumbo v4, "viewer"
-
-    .line 135
-    .line 136
-    .line 137
-    const-string v5, "fbandroid"
-
-    .line 138
-    .line 139
-    const/4 v2, 0x0
-
-    .line 140
-    const v6, 0x4b1205d2    # 9569746.0f
-
-    .line 141
-    .line 142
-    .line 143
-    const-wide/32 v8, 0x4b1205d2
-
-    .line 144
-    .line 145
-    .line 146
-    goto :goto_0
-
-    .line 147
-    :pswitch_8
-    const-string v3, "ViewerConfigurationQuery"
-
-    .line 148
-    .line 149
-    const-string/jumbo v4, "viewer"
-
-    .line 150
-    .line 151
-    .line 152
-    const-string v5, "fbandroid"
-
-    .line 153
-    .line 154
-    const/4 v2, 0x0
-
-    .line 155
-    const v6, -0x339becb7    # -5.978858E7f
-
-    .line 156
-    .line 157
-    .line 158
-    const-wide v8, 0x87670d3bL
-
-    .line 159
-    .line 160
-    .line 161
-    .line 162
-    .line 163
-    :goto_2
-    const/4 v7, 0x0
-
-    .line 164
-    const/4 v13, 0x0
-
-    .line 165
-    goto/16 :goto_1
-
-    .line 166
-    .line 167
-    nop
-
-    .line 168
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return v7
 .end method

@@ -5,15 +5,94 @@
         <item quantity="one">%1$s позначка «Подобається» сторінки</item>
         <item quantity="few">%1$s позначки «Подобається» сторінки</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s позначок «Подобається»</item>
-        <item quantity="one">%1$s позначка «Подобається»</item>
-        <item quantity="few">%1$s позначки «Подобається»</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d днів тому</item>
+        <item quantity="one">%1$d день тому</item>
+        <item quantity="few">%1$d дні тому</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d днів</item>
+        <item quantity="one">%1$d день</item>
+        <item quantity="few">%1$d дні</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d днів</item>
+        <item quantity="one">%1$d день</item>
+        <item quantity="few">%1$d дні</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d годин</item>
+        <item quantity="one">%1$d година</item>
+        <item quantity="few">%1$d години</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d хвилин</item>
+        <item quantity="one">%1$d хвилина</item>
+        <item quantity="few">%1$d хвилини</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d місяців</item>
+        <item quantity="one">%1$d місяць</item>
+        <item quantity="few">%1$d місяці</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d с</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d тижнів</item>
+        <item quantity="one">%1$d тиждень</item>
+        <item quantity="few">%1$d тижні</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Ще %1$d днів</item>
+        <item quantity="one">Ще %1$d день</item>
+        <item quantity="few">Ще %1$d дні</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">Ще %1$d год</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">Іще %1$d хв</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">ще %1$d місяців</item>
+        <item quantity="one">ще %1$d місяць</item>
+        <item quantity="few">ще %1$d місяці</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">Ще %1$d секунд</item>
+        <item quantity="one">Ще %1$d секунда</item>
+        <item quantity="few">Ще %1$d секунди</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">ще %1$d тижнів</item>
+        <item quantity="one">ще %1$d тиждень</item>
+        <item quantity="few">ще %1$d тижні</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">Ще %1$d р.</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d років</item>
+        <item quantity="one">%1$d рік</item>
+        <item quantity="few">%1$d роки</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">%1$d годин тому</item>
         <item quantity="one">%1$d годину тому</item>
         <item quantity="few">%1$d години тому</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d год</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d год</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d год</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">%1$d год тому</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">Через %1$d годин</item>
@@ -25,9 +104,74 @@
         <item quantity="one">Через %1$d хвилину</item>
         <item quantity="few">Через %1$d хвилини</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d хв тому</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d хвилин тому</item>
         <item quantity="one">%1$d хвилину тому</item>
         <item quantity="few">%1$d хвилини тому</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d хв</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d хв</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d місяців тому</item>
+        <item quantity="one">%1$d місяць тому</item>
+        <item quantity="few">%1$d місяці тому</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d с тому</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d тижнів тому</item>
+        <item quantity="one">%1$d тиждень тому</item>
+        <item quantity="few">%1$d тижні тому</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">Залишилося %1$d годин</item>
+        <item quantity="one">Залишилася %1$d година</item>
+        <item quantity="few">Залишилося %1$d години</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">Залишилося %1$d хвилин</item>
+        <item quantity="one">Залишилася %1$d хвилина</item>
+        <item quantity="few">Залишилося %1$d хвилини</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d років тому</item>
+        <item quantity="one">%1$d рік тому</item>
+        <item quantity="few">%1$d роки тому</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Ви відвідали %1$d днів тому</item>
+        <item quantity="one">Ви відвідали %1$d день тому</item>
+        <item quantity="few">Ви відвідали %1$d дні тому</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Ви були тут %1$d годин тому</item>
+        <item quantity="one">Ви були тут %1$d годину тому</item>
+        <item quantity="few">Ви були тут %1$d години тому</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Ви відвідували %1$d хв тому</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Ви відвідували %1$d місяців тому</item>
+        <item quantity="one">Ви відвідували %1$d місяць тому</item>
+        <item quantity="few">Ви відвідували %1$d місяці тому</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Ви відвідували %1$d тижнів тому</item>
+        <item quantity="one">Ви відвідували %1$d тиждень тому</item>
+        <item quantity="few">Ви відвідували %1$d тижні тому</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Ви відвідували %1$d років тому</item>
+        <item quantity="one">Ви відвідували %1$d рік тому</item>
+        <item quantity="few">Ви відвідували %1$d роки тому</item>
     </plurals>
 </resources>

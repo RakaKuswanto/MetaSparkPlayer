@@ -16,22 +16,13 @@
     return-void
 .end method
 
-.method public static native libaborthooks_so()I
-.end method
-
 .method public static native libachilles_jni_so()I
-.end method
-
-.method public static native libaddressspace_so()I
 .end method
 
 .method public static native libanalyticsutil_jni_so()I
 .end method
 
 .method public static native libandroid_aware_dlopen_so()I
-.end method
-
-.method public static native libandroid_reachability_announcer_so()I
 .end method
 
 .method public static native libappnetsessionid_so()I
@@ -76,6 +67,9 @@
 .method public static native libarfx_engine_plugin_physics_so()I
 .end method
 
+.method public static native libarfx_engine_plugin_runtime_settings_so()I
+.end method
+
 .method public static native libarfx_engine_plugin_touch_gestures_so()I
 .end method
 
@@ -100,13 +94,7 @@
 .method public static native libbatch_box_cox_ops_xplat_so()I
 .end method
 
-.method public static native libbinderhookerjni_so()I
-.end method
-
 .method public static native libbundled_input_image_decoder_ops_xplat_so()I
-.end method
-
-.method public static native libcancalljavautils_so()I
 .end method
 
 .method public static native libclassid1000_so()I
@@ -202,7 +190,7 @@
 .method public static native libfbgloginit_so()I
 .end method
 
-.method public static native libfbjitdalvikutils_so()I
+.method public static native libfbhttpprioritycontext_so()I
 .end method
 
 .method public static native libfbjitoptionsjni_so()I
@@ -316,9 +304,6 @@
 .method public static native libjsimodulejni_so()I
 .end method
 
-.method public static native liblacrimamobileconfig_jni_so()I
-.end method
-
 .method public static native libliger_multiconnector_so()I
 .end method
 
@@ -334,13 +319,7 @@
 .method public static native liblocationdataprovider_so()I
 .end method
 
-.method public static native liblyramanager_so()I
-.end method
-
 .method public static native libmailboxmplwaisyncmonitorjni_so()I
-.end method
-
-.method public static native libmapbufferjni_so()I
 .end method
 
 .method public static native libmaskrcnn_ops_xplat_so()I
@@ -409,10 +388,40 @@
 .method public static native libpando_analytics_data_so()I
 .end method
 
+.method public static native libpando_client_analytics_jni_so()I
+.end method
+
+.method public static native libpando_client_cache_jni_so()I
+.end method
+
+.method public static native libpando_client_cancelledcallbacks_jni_so()I
+.end method
+
+.method public static native libpando_client_livequery_jni_so()I
+.end method
+
+.method public static native libpando_client_networksequencing_jni_so()I
+.end method
+
+.method public static native libpando_client_runtimedefaults_jni_so()I
+.end method
+
+.method public static native libpando_client_tigon_jni_so()I
+.end method
+
+.method public static native libpando_connection_jni_so()I
+.end method
+
+.method public static native libpando_connection_so()I
+.end method
+
 .method public static native libpando_core_so()I
 .end method
 
 .method public static native libpando_data_so()I
+.end method
+
+.method public static native libpando_disk_cache_so()I
 .end method
 
 .method public static native libpando_engine_so()I
@@ -428,6 +437,9 @@
 .end method
 
 .method public static native libpando_graphql_network_so()I
+.end method
+
+.method public static native libpando_graphql_pagination_service_so()I
 .end method
 
 .method public static native libpando_graphql_params_so()I
@@ -460,7 +472,7 @@
 .method public static native libpando_tigon_request_so()I
 .end method
 
-.method public static native libpapaya_fb_store_generic_hash_so()I
+.method public static native libpando_tree_updater_utils_so()I
 .end method
 
 .method public static native libpgo_native_500_so()I
@@ -544,16 +556,10 @@
 .method public static native librealtimeconfig_so()I
 .end method
 
-.method public static native librelocalizer_configuration_native_so()I
-.end method
-
 .method public static native librequeststream_jni_so()I
 .end method
 
 .method public static native librestricks_so()I
-.end method
-
-.method public static native librewritenativeinterceptor_so()I
 .end method
 
 .method public static native libroi_align_ops_xplat_so()I
@@ -590,9 +596,6 @@
 .end method
 
 .method public static native libsigmux_so()I
-.end method
-
-.method public static native libsigquit_so()I
 .end method
 
 .method public static native libsingle_model_cache_native_android_so()I
@@ -655,12 +658,6 @@
 .method public static native libunet_106_ops_xplat_so()I
 .end method
 
-.method public static native libverifier1000_so()I
-.end method
-
-.method public static native libverifier1100_so()I
-.end method
-
 .method public static native libverifier601_so()I
 .end method
 
@@ -674,9 +671,6 @@
 .end method
 
 .method public static native libverifier810_so()I
-.end method
-
-.method public static native libverifier900_so()I
 .end method
 
 .method public static native libverifier_so()I
@@ -700,6 +694,9 @@
 .method public static native libxanalyticsnative_jni_so()I
 .end method
 
+.method public static native libxplat_ecos_ecosAndroid_so()I
+.end method
+
 .method public static native libxplat_hermes_lib_Platform_Unicode_UnicodeAndroid_so()I
 .end method
 
@@ -707,4 +704,7 @@
 .end method
 
 .method public static native libyoga_so()I
+.end method
+
+.method public static native libyogacore_so()I
 .end method

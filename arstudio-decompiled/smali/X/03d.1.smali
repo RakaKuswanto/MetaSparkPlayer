@@ -1,166 +1,204 @@
-.class public final LX/03d;
-.super LX/0Ic;
+.class public abstract LX/03d;
+.super LX/05r;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/0Ic;
+.field public final A00:Landroid/app/Activity;
+
+.field public final A01:Landroid/content/Context;
+
+.field public final A02:Landroid/os/Handler;
+
+.field public final A03:LX/0VG;
 
 
 # direct methods
-.method public constructor <init>(LX/0Ic;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
+    .locals 2
+
+    .line 268435456
+    instance-of v0, p1, Landroid/app/Activity;
+
+    .line 268435457
+    .line 268435458
+    if-eqz v0, :cond_0
+
+    .line 268435459
+    .line 268435460
+    move-object v1, p1
+
+    .line 268435461
+    check-cast v1, Landroid/app/Activity;
+
+    .line 268435462
+    .line 268435463
+    :goto_0
+    invoke-direct {p0}, LX/05r;-><init>()V
+
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    new-instance v0, LX/0BP;
+
+    .line 268435467
+    .line 268435468
+    invoke-direct {v0}, LX/0BP;-><init>()V
+
+    .line 268435469
+    .line 268435470
+    .line 268435471
+    iput-object v0, p0, LX/03d;->A03:LX/0VG;
+
+    .line 268435472
+    .line 268435473
+    iput-object v1, p0, LX/03d;->A00:Landroid/app/Activity;
+
+    .line 268435474
+    .line 268435475
+    iput-object p1, p0, LX/03d;->A01:Landroid/content/Context;
+
+    .line 268435476
+    .line 268435477
+    iput-object p2, p0, LX/03d;->A02:Landroid/os/Handler;
+
+    .line 268435478
+    .line 268435479
+    return-void
+
+    .line 268435480
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 268435481
+    goto :goto_0
+.end method
+
+.method public constructor <init>(Landroidx/fragment/app/FragmentActivity;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/0Ic;-><init>()V
+    new-instance v1, Landroid/os/Handler;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/03d;->A00:LX/0Ic;
+    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    invoke-direct {p0}, LX/05r;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    new-instance v0, LX/0BP;
+
+    .line 9
+    .line 10
+    invoke-direct {v0}, LX/0BP;-><init>()V
+
+    .line 11
+    .line 12
+    .line 13
+    iput-object v0, p0, LX/03d;->A03:LX/0VG;
+
+    .line 14
+    .line 15
+    iput-object p1, p0, LX/03d;->A00:Landroid/app/Activity;
+
+    .line 16
+    .line 17
+    iput-object p1, p0, LX/03d;->A01:Landroid/content/Context;
+
+    .line 18
+    .line 19
+    iput-object v1, p0, LX/03d;->A02:Landroid/os/Handler;
+
+    .line 20
+    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final A04(Landroid/app/Activity;Landroid/content/Intent;I)Z
-    .locals 2
+.method public A04()Landroid/view/LayoutInflater;
+    .locals 1
 
     .line 0
-    const-string v1, "Intent"
+    iget-object v0, p0, LX/03d;->A01:Landroid/content/Context;
 
     .line 1
     .line 2
-    if-eqz p2, :cond_1
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     .line 3
     .line 4
-    const-string v1, "Activity"
-
     .line 5
-    .line 6
-    if-eqz p1, :cond_0
+    move-result-object v0
 
+    .line 6
+    return-object v0
+.end method
+
+.method public abstract A05()Ljava/lang/Object;
+.end method
+
+.method public A06()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public A07(Landroid/content/Intent;Landroid/os/Bundle;Landroidx/fragment/app/Fragment;I)V
+    .locals 1
+
+    .line 0
+    const/4 v0, -0x1
+
+    .line 1
+    if-ne p4, v0, :cond_0
+
+    .line 2
+    .line 3
+    iget-object v0, p0, LX/03d;->A01:Landroid/content/Context;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
+
+    .line 6
     .line 7
     .line 8
-    iget-object v0, p0, LX/03d;->A00:LX/0Ic;
+    return-void
 
     .line 9
-    .line 10
-    invoke-virtual {v0, p1, p2, p3}, LX/0Ic;->A04(Landroid/app/Activity;Landroid/content/Intent;I)Z
+    :cond_0
+    const-string v0, "Starting activity with a requestCode requires a FragmentActivity host"
 
+    .line 10
     .line 11
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
     .line 12
     .line 13
-    move-result v0
-
     .line 14
-    return v0
+    move-result-object v0
 
     .line 15
-    :cond_0
-    const-string v0, " cannot be null"
-
-    .line 16
-    .line 17
-    invoke-static {v1, v0}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    throw v0
-
-    .line 22
-    :cond_1
-    const-string v0, " cannot be null"
-
-    .line 23
-    .line 24
-    invoke-static {v1, v0}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
     throw v0
 .end method
 
-.method public final A05(Landroid/content/Context;Landroid/content/Intent;)Z
-    .locals 2
+.method public A08(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .locals 0
 
-    .line 0
-    const-string v1, "Intent"
+    return-void
+.end method
 
-    .line 1
-    .line 2
-    if-eqz p2, :cond_1
+.method public A09(Ljava/lang/String;)Z
+    .locals 1
 
-    .line 3
-    .line 4
-    const-string v1, "Context"
+    const/4 v0, 0x0
 
-    .line 5
-    .line 6
-    if-eqz p1, :cond_0
-
-    .line 7
-    .line 8
-    invoke-static {p1, p2}, LX/0Ic;->A02(Landroid/content/Context;Landroid/content/Intent;)Z
-
-    .line 9
-    .line 10
-    .line 11
-    iget-object v0, p0, LX/03d;->A00:LX/0Ic;
-
-    .line 12
-    .line 13
-    invoke-virtual {v0, p1, p2}, LX/0Ic;->A05(Landroid/content/Context;Landroid/content/Intent;)Z
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
     return v0
-
-    .line 18
-    :cond_0
-    const-string v0, " cannot be null"
-
-    .line 19
-    .line 20
-    invoke-static {v1, v0}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    throw v0
-
-    .line 25
-    :cond_1
-    const-string v0, " cannot be null"
-
-    .line 26
-    .line 27
-    invoke-static {v1, v0}, LX/00I;->A04(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    throw v0
 .end method

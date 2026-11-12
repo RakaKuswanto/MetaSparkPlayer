@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/material/textview/MaterialTextView;
-.super LX/4X0;
+.super LX/4SL;
 .source ""
 
 
@@ -16,7 +16,7 @@
     const/4 v5, 0x0
 
     .line 4
-    invoke-static {p1, p2, v6, v5}, LX/4PK;->A00(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    invoke-static {p1, p2, v6, v5}, LX/4Hy;->A00(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     .line 5
     .line 6
@@ -24,7 +24,7 @@
     move-result-object v0
 
     .line 8
-    invoke-direct {p0, v0, p2, v6}, LX/4X0;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, v0, p2, v6}, LX/4SL;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 9
     .line 10
@@ -37,7 +37,7 @@
     move-result-object v8
 
     .line 15
-    const v1, 0x7f040893
+    const v1, 0x7f0408b9
 
     .line 16
     .line 17
@@ -45,7 +45,7 @@
     const/4 v7, 0x1
 
     .line 19
-    invoke-static {}, LX/4BF;->A0W()Landroid/util/TypedValue;
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
 
     .line 20
     .line 21
@@ -102,7 +102,7 @@
     move-result-object v4
 
     .line 47
-    sget-object v3, LX/4SH;->A0F:[I
+    sget-object v3, LX/4LY;->A0F:[I
 
     .line 48
     .line 49
@@ -190,127 +190,124 @@
     const/4 v6, 0x0
 
     .line 1
-    const/4 v1, -0x1
-
-    .line 2
     :goto_0
-    array-length v0, p2
-
-    .line 3
-    if-ge v6, v0, :cond_1
-
-    .line 4
-    .line 5
-    if-gez v1, :cond_1
-
-    .line 6
-    .line 7
     aget v2, p2, v6
 
-    .line 8
-    .line 9
+    .line 2
+    .line 3
     const/4 v5, -0x1
 
-    .line 10
-    invoke-static {}, LX/4BF;->A0W()Landroid/util/TypedValue;
+    .line 4
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
 
-    .line 11
-    .line 12
-    .line 13
+    .line 5
+    .line 6
+    .line 7
     move-result-object v4
 
-    .line 14
+    .line 8
     invoke-virtual {p1, v2, v4}, Landroid/content/res/TypedArray;->getValue(ILandroid/util/TypedValue;)Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    if-eqz v0, :cond_0
+
+    .line 13
+    .line 14
+    iget v1, v4, Landroid/util/TypedValue;->type:I
 
     .line 15
     .line 16
-    .line 17
-    move-result v0
-
-    .line 18
-    if-eqz v0, :cond_0
-
-    .line 19
-    .line 20
-    iget v1, v4, Landroid/util/TypedValue;->type:I
-
-    .line 21
-    .line 22
     const/4 v0, 0x2
 
-    .line 23
+    .line 17
     if-ne v1, v0, :cond_0
+
+    .line 18
+    .line 19
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v3
+
+    .line 23
+    invoke-static {}, LX/434;->A1Z()[I
 
     .line 24
     .line 25
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
     .line 26
-    .line 27
-    .line 28
-    move-result-object v3
-
-    .line 29
-    invoke-static {}, LX/4BF;->A1Q()[I
-
-    .line 30
-    .line 31
-    .line 32
     move-result-object v2
 
-    .line 33
+    .line 27
     iget v0, v4, Landroid/util/TypedValue;->data:I
 
-    .line 34
-    .line 35
+    .line 28
+    .line 29
     const/4 v1, 0x0
 
-    .line 36
+    .line 30
     aput v0, v2, v1
+
+    .line 31
+    .line 32
+    invoke-virtual {v3, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
+
+    .line 36
+    invoke-virtual {v0, v1, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     .line 37
     .line 38
-    invoke-virtual {v3, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
-
     .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-
-    .line 42
-    invoke-virtual {v0, v1, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    .line 43
-    .line 44
-    .line 45
     move-result v1
 
-    .line 46
+    .line 40
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 47
-    .line 48
-    .line 49
+    .line 41
+    .line 42
+    .line 43
     :goto_1
     add-int/lit8 v6, v6, 0x1
 
+    .line 44
+    .line 45
+    const/4 v0, 0x2
+
+    .line 46
+    if-ge v6, v0, :cond_1
+
+    .line 47
+    .line 48
+    if-gez v1, :cond_1
+
+    .line 49
     .line 50
-    .line 51
     goto :goto_0
 
-    .line 52
+    .line 51
     :cond_0
     invoke-virtual {p1, v2, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
+    .line 52
     .line 53
     .line 54
-    .line 55
     move-result v1
 
-    .line 56
+    .line 55
     goto :goto_1
 
-    .line 57
+    .line 56
     :cond_1
     return v1
 .end method
@@ -319,7 +316,7 @@
     .locals 6
 
     .line 0
-    sget-object v0, LX/4SH;->A0E:[I
+    sget-object v0, LX/4LY;->A0E:[I
 
     .line 1
     .line 2
@@ -377,7 +374,7 @@
 
     .line 27
     .line 28
-    invoke-virtual {p0, v0}, LX/4X0;->setLineHeight(I)V
+    invoke-virtual {p0, v0}, LX/4SL;->setLineHeight(I)V
 
     .line 29
     .line 30
@@ -392,12 +389,12 @@
     .locals 4
 
     .line 0
-    invoke-super {p0, p1, p2}, LX/4X0;->setTextAppearance(Landroid/content/Context;I)V
+    invoke-super {p0, p1, p2}, LX/4SL;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 1
     .line 2
     .line 3
-    const v3, 0x7f040893
+    const v3, 0x7f0408b9
 
     .line 4
     .line 5
@@ -405,7 +402,7 @@
     const/4 v1, 0x1
 
     .line 7
-    invoke-static {}, LX/4BF;->A0W()Landroid/util/TypedValue;
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
 
     .line 8
     .line 9

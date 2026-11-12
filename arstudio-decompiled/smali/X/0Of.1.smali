@@ -1,110 +1,273 @@
 .class public final LX/0Of;
-.super Ljava/lang/Object;
+.super LX/012;
 .source ""
 
 # interfaces
-.implements LX/0I6;
+.implements Ljava/util/Map;
 
 
-# static fields
-.field public static final A01:LX/0Of;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "LX/012<",
+        "TK;TV;>;",
+        "Ljava/util/Map<",
+        "TK;TV;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field public A00:I
+.field public A00:LX/00n;
+
+.field public A01:LX/00o;
+
+.field public A02:LX/00q;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/0Of;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/0Of;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/0Of;->A01:LX/0Of;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 536870912
+    const/4 v0, 0x0
 
-    .line 1
-    .line 2
-    .line 3
-    const/4 v0, 0x5
+    .line 536870913
+    invoke-direct {p0, v0}, LX/012;-><init>(I)V
 
-    .line 4
-    iput v0, p0, LX/0Of;->A00:I
-
-    .line 5
-    .line 6
+    .line 536870914
+    .line 536870915
+    .line 536870916
     return-void
 .end method
 
-.method private A00(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V
-    .locals 3
+.method public constructor <init>(I)V
+    .locals 1
+
+    .line 268435456
+    const/4 v0, 0x1
+
+    .line 268435457
+    invoke-direct {p0, v0}, LX/012;-><init>(I)V
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    return-void
+.end method
+
+.method public constructor <init>(LX/012;)V
+    .locals 1
 
     .line 0
-    const-string v1, "unknown"
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    const-string v0, ":"
+    invoke-direct {p0, v0}, LX/012;-><init>(I)V
 
+    .line 2
     .line 3
     .line 4
-    invoke-static {v1, v0, p1}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, LX/012;->A08(LX/012;)V
 
     .line 5
     .line 6
     .line 7
-    move-result-object v2
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A09(Ljava/util/Collection;)Z
+    .locals 4
+
+    .line 0
+    invoke-virtual {p0}, LX/012;->size()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v3
+
+    .line 4
+    const/4 v2, 0x1
+
+    .line 5
+    sub-int v1, v3, v2
+
+    .line 6
+    .line 7
+    :goto_0
+    if-ltz v1, :cond_1
 
     .line 8
-    const/16 v1, 0xa
-
     .line 9
-    .line 10
-    if-nez p4, :cond_0
+    invoke-virtual {p0, v1}, LX/012;->A04(I)Ljava/lang/Object;
 
+    .line 10
     .line 11
     .line 12
-    const-string v0, ""
+    move-result-object v0
+
+    .line 13
+    invoke-interface {p1, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v0
+
+    .line 17
+    if-nez v0, :cond_0
+
+    .line 18
+    .line 19
+    invoke-virtual {p0, v1}, LX/012;->A05(I)Ljava/lang/Object;
+
+    .line 20
+    .line 21
+    .line 22
+    :cond_0
+    add-int/lit8 v1, v1, -0x1
+
+    .line 23
+    .line 24
+    goto :goto_0
+
+    .line 25
+    :cond_1
+    invoke-virtual {p0}, LX/012;->size()I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
+
+    .line 29
+    if-ne v3, v0, :cond_2
+
+    .line 30
+    .line 31
+    const/4 v2, 0x0
+
+    .line 32
+    :cond_2
+    return v2
+.end method
+
+.method public final entrySet()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0Of;->A00:LX/00n;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    new-instance v0, LX/00n;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0}, LX/00n;-><init>(LX/0Of;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/0Of;->A00:LX/00n;
+
+    .line 10
+    .line 11
+    :cond_0
+    return-object v0
+.end method
+
+.method public final keySet()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0Of;->A01:LX/00o;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    new-instance v0, LX/00o;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0}, LX/00o;-><init>(LX/0Of;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/0Of;->A01:LX/00o;
+
+    .line 10
+    .line 11
+    :cond_0
+    return-object v0
+.end method
+
+.method public final putAll(Ljava/util/Map;)V
+    .locals 3
+
+    .line 0
+    invoke-virtual {p0}, LX/012;->size()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
+
+    .line 4
+    invoke-interface {p1}, Ljava/util/Map;->size()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    add-int/2addr v1, v0
+
+    .line 9
+    invoke-virtual {p0, v1}, LX/012;->A07(I)V
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-static {p1}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 13
     .line 14
-    :goto_0
-    invoke-static {p2, v0, v1}, LX/00I;->A0G(Ljava/lang/String;Ljava/lang/String;C)Ljava/lang/String;
-
     .line 15
+    move-result-object v2
+
     .line 16
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
     .line 17
-    move-result-object v0
-
     .line 18
-    invoke-static {p3, v2, v0}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
-
     .line 19
-    .line 20
-    .line 21
-    return-void
+    move-result v0
 
+    .line 20
+    if-eqz v0, :cond_0
+
+    .line 21
     .line 22
-    :cond_0
-    invoke-static {p4}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 23
     .line 24
@@ -112,217 +275,59 @@
     move-result-object v0
 
     .line 26
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v1
+
+    .line 30
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    invoke-virtual {p0, v1, v0}, LX/012;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 35
+    .line 36
+    .line 37
     goto :goto_0
-.end method
 
-
-# virtual methods
-.method public final A9a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    .line 0
-    const/4 v2, 0x6
-
-    .line 1
-    const-string v1, "unknown"
-
-    .line 2
-    .line 3
-    const-string v0, ":"
-
-    .line 4
-    .line 5
-    invoke-static {v1, v0, p1}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    invoke-static {v2, v0, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public final A9b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x6
-
-    .line 1
-    invoke-direct {p0, p1, p2, v0, p3}, LX/0Of;->A00(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V
-
-    .line 2
-    .line 3
-    .line 4
-    return-void
-.end method
-
-.method public final AIu()I
-    .locals 1
-
-    .line 0
-    iget v0, p0, LX/0Of;->A00:I
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final AQr(I)Z
-    .locals 2
-
-    .line 0
-    iget v1, p0, LX/0Of;->A00:I
-
-    .line 1
-    .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    if-gt v1, p1, :cond_0
-
-    .line 4
-    .line 5
-    const/4 v0, 0x1
-
-    .line 6
+    .line 38
     :cond_0
-    return v0
-.end method
-
-.method public final ASA(ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    .line 0
-    const-string v1, "unknown"
-
-    .line 1
-    .line 2
-    const-string v0, ":"
-
-    .line 3
-    .line 4
-    invoke-static {v1, v0, p2}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    invoke-static {p1, v0, p3}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
-
-    .line 9
-    .line 10
-    .line 11
     return-void
 .end method
 
-.method public final AmI(I)V
-    .locals 0
-
-    .line 0
-    iput p1, p0, LX/0Of;->A00:I
-
-    .line 1
-    .line 2
-    return-void
-.end method
-
-.method public final ArC(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    .line 0
-    const/4 v2, 0x5
-
-    .line 1
-    const-string v1, "unknown"
-
-    .line 2
-    .line 3
-    const-string v0, ":"
-
-    .line 4
-    .line 5
-    invoke-static {v1, v0, p1}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    invoke-static {v2, v0, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
-
-    .line 10
-    .line 11
-    .line 12
-    return-void
-.end method
-
-.method public final ArD(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final values()Ljava/util/Collection;
     .locals 1
 
     .line 0
-    const/4 v0, 0x5
+    iget-object v0, p0, LX/0Of;->A02:LX/00q;
 
     .line 1
-    invoke-direct {p0, p1, p2, v0, p3}, LX/0Of;->A00(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V
-
     .line 2
+    if-nez v0, :cond_0
+
     .line 3
     .line 4
-    return-void
-.end method
+    new-instance v0, LX/00q;
 
-.method public final Arn(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    .line 0
-    const/4 v2, 0x6
-
-    .line 1
-    const-string v1, "unknown"
-
-    .line 2
-    .line 3
-    const-string v0, ":"
-
-    .line 4
     .line 5
-    invoke-static {v1, v0, p1}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 6
+    invoke-direct {v0, p0}, LX/00q;-><init>(LX/0Of;)V
+
     .line 7
     .line 8
-    move-result-object v0
-
     .line 9
-    invoke-static {v2, v0, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+    iput-object v0, p0, LX/0Of;->A02:LX/00q;
 
     .line 10
     .line 11
-    .line 12
-    return-void
-.end method
-
-.method public final Aro(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x6
-
-    .line 1
-    invoke-direct {p0, p1, p2, v0, p3}, LX/0Of;->A00(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V
-
-    .line 2
-    .line 3
-    .line 4
-    return-void
+    :cond_0
+    return-object v0
 .end method

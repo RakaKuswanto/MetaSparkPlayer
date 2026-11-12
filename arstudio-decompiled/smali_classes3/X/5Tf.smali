@@ -1,52 +1,35 @@
-.class public final LX/5Tf;
+.class public final LX/5TF;
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final A00:LX/5Ti;
-
-.field public static final A01:LX/5Ti;
+# interfaces
+.implements LX/1kh;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    sget-object v1, LX/5Tk;->LocationProvider:LX/5Tk;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    new-instance v0, LX/5Tg;
-
     .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/5Tg;-><init>(LX/5Tk;)V
-
-    .line 5
-    .line 6
-    .line 7
-    sput-object v0, LX/5Tf;->A01:LX/5Ti;
-
-    .line 8
-    .line 9
-    sget-object v1, LX/5Tk;->AudioService:LX/5Tk;
-
-    .line 10
-    .line 11
-    new-instance v0, LX/5Th;
-
-    .line 12
-    .line 13
-    invoke-direct {v0, v1}, LX/5Th;-><init>(LX/5Tk;)V
-
-    .line 14
-    .line 15
-    .line 16
-    sput-object v0, LX/5Tf;->A00:LX/5Ti;
-
-    .line 17
-    .line 18
     return-void
+.end method
+
+
+# virtual methods
+.method public final AHm(I)I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_0
+
+    const/4 v0, 0x5
+
+    :cond_0
+    return v0
 .end method

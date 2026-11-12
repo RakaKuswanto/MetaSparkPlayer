@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLConstituentBadgeUpsellTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLConstituentBadgeUpsellTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0x()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A11()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -82,7 +82,7 @@
 
     .line 31
     .line 32
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
 
     .line 33
     .line 34
@@ -90,7 +90,7 @@
     move-result-object v0
 
     .line 36
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLConstituentBadgeUpsellTypeSet;->A00:Ljava/util/Set;
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLConstituentBadgeUpsellTypeSet;->A00:Ljava/util/HashSet;
 
     .line 37
     .line 38
@@ -109,11 +109,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLConstituentBadgeUpsellTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLConstituentBadgeUpsellTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

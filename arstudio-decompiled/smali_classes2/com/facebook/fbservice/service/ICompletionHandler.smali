@@ -7,8 +7,8 @@
 
 
 # virtual methods
-.method public abstract AaP(Lcom/facebook/fbservice/service/OperationResult;)V
+.method public abstract AYp(Lcom/facebook/fbservice/service/OperationResult;)V
 .end method
 
-.method public abstract AaR(Lcom/facebook/fbservice/service/OperationResult;)V
+.method public abstract AYr(Lcom/facebook/fbservice/service/OperationResult;)V
 .end method

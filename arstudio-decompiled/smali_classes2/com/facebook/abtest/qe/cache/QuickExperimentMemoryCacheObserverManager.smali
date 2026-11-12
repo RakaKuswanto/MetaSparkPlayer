@@ -4,19 +4,17 @@
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public A00:Z
 
 .field public A01:Z
 
-.field public A02:Z
+.field public final A02:Ljava/util/Map;
 
-.field public final A03:Ljava/util/Map;
-
-.field public final A04:LX/0Gd;
+.field public final A03:LX/0VC;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
@@ -28,7 +26,7 @@
     const/4 v1, 0x0
 
     .line 4
-    invoke-static {p0, v1}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
+    invoke-static {p0, v1}, LX/0Xf;->A00(Ljava/lang/Object;I)LX/0Xf;
 
     .line 5
     .line 6
@@ -36,11 +34,11 @@
     move-result-object v0
 
     .line 8
-    iput-object v0, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A04:LX/0Gd;
+    iput-object v0, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A03:LX/0VC;
 
     .line 9
     .line 10
-    invoke-static {p1, v1}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
+    invoke-static {}, LX/25H;->A00()Lcom/google/common/collect/MapMakerInternalMap;
 
     .line 11
     .line 12
@@ -48,33 +46,17 @@
     move-result-object v0
 
     .line 14
-    iput-object v0, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A00:LX/1zG;
+    iput-object v0, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A02:Ljava/util/Map;
 
     .line 15
     .line 16
-    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+    iput-boolean v1, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A00:Z
 
     .line 17
     .line 18
-    invoke-static {v0}, LX/0Yh;->A0L(Lcom/google/common/collect/MapMakerInternalMap$Strength;)Lcom/google/common/collect/MapMakerInternalMap;
+    iput-boolean v1, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A01:Z
 
     .line 19
     .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    iput-object v0, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A03:Ljava/util/Map;
-
-    .line 23
-    .line 24
-    iput-boolean v1, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A01:Z
-
-    .line 25
-    .line 26
-    iput-boolean v1, p0, Lcom/facebook/abtest/qe/cache/QuickExperimentMemoryCacheObserverManager;->A02:Z
-
-    .line 27
-    .line 28
     return-void
 .end method

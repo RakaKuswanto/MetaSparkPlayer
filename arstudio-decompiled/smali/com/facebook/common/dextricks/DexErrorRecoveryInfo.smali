@@ -284,7 +284,7 @@
 
     .line 7
     :cond_0
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 8
     .line 9
@@ -681,52 +681,76 @@
 
     .line 178
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 179
     :try_start_5
     invoke-virtual {v4}, Ljava/io/Writer;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 180
     .line 181
     .line 182
-    :catchall_1
-    :try_start_6
-    throw v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    goto :goto_0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 183
-    :catchall_2
+    :catchall_1
     move-exception v0
 
     .line 184
-    :try_start_7
-    invoke-virtual {v3}, Ljava/io/Writer;->close()V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+    :try_start_6
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 185
     .line 186
     .line 187
+    :goto_0
+    throw v1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    .line 188
+    :catchall_2
+    move-exception v1
+
+    .line 189
+    :try_start_7
+    invoke-virtual {v3}, Ljava/io/Writer;->close()V
+
+    .line 190
+    .line 191
+    .line 192
+    goto :goto_1
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+
+    .line 193
     :catchall_3
+    move-exception v0
+
+    .line 194
     :try_start_8
-    throw v0
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 195
+    .line 196
+    .line 197
+    :goto_1
+    throw v1
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_0
 
-    .line 188
+    .line 198
     :catch_0
     new-instance v0, Ljava/lang/AssertionError;
 
-    .line 189
-    .line 190
+    .line 199
+    .line 200
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
-    .line 191
-    .line 192
-    .line 193
+    .line 201
+    .line 202
+    .line 203
     throw v0
 .end method

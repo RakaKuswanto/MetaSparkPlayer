@@ -3,23 +3,23 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="@color/fds_blue_60" />
+            <solid android:color="@color/experimental_fds_color_FF3E93F8" />
             <corners android:radius="@dimen/abc_action_bar_elevation_material" />
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="@color/fds_blue_45" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="@color/experimental_fds_color_FF0866FF" />
         </shape>
     </item>
     <item android:state_enabled="false">
         <shape>
             <solid android:color="@color/fbui_transparent" />
             <corners android:radius="@dimen/abc_action_bar_elevation_material" />
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="@color/fds_gray_90" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="@color/fds_gray_90" />
         </shape>
     </item>
     <item>
         <shape>
             <solid android:color="@color/fbui_transparent" />
             <corners android:radius="@dimen/abc_action_bar_elevation_material" />
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="@color/fds_blue_45" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="@color/experimental_fds_color_FF0866FF" />
         </shape>
     </item>
 </selector>

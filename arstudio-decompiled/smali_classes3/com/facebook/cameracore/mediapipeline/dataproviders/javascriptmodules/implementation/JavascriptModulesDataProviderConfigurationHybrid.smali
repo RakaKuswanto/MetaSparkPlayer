@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/5W3;
+.field public static final Companion:LX/6Al;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/5W3;
+    new-instance v0, LX/6Al;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/5W3;-><init>()V
+    invoke-direct {v0}, LX/6Al;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/javascriptmodules/implementation/JavascriptModulesDataProviderConfigurationHybrid;->Companion:LX/5W3;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/javascriptmodules/implementation/JavascriptModulesDataProviderConfigurationHybrid;->Companion:LX/6Al;
 
     .line 6
     .line 7
@@ -39,7 +39,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -64,7 +64,7 @@
     move-result-object v0
 
     .line 14
-    invoke-static {v0}, LX/0PS;->A07(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 15
     .line 16

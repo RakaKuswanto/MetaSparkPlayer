@@ -2,22 +2,19 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3Gg;
+
 
 # instance fields
-.field public A00:LX/3IB;
+.field public final A00:LX/2ic;
 
-.field public A01:LX/1zG;
-
-.field public final A02:LX/0JU;
-
-.field public final A03:LX/0Na;
-
-.field public final A04:LX/3IA;
+.field public final A01:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 4
+.method public constructor <init>(LX/2ic;Ljava/io/File;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,110 +22,172 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1z6;->A0D()LX/0JU;
+    iput-object p1, p0, LX/3I8;->A00:LX/2ic;
 
     .line 4
     .line 5
+    iput-object p2, p0, LX/3I8;->A01:Ljava/io/File;
+
     .line 6
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AAB()Ljava/util/Collection;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/3I8;->A01:Ljava/io/File;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/io/File;->list()[Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
+    .line 6
+    if-nez v0, :cond_0
+
     .line 7
-    iput-object v0, p0, LX/3I8;->A02:LX/0JU;
+    .line 8
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
+
+    .line 13
+    :cond_0
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    return-object v0
+.end method
+
+.method public final AQO(Ljava/lang/String;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AQU(Ljava/lang/String;)J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final getItemInformation(Ljava/lang/String;)[J
+    .locals 5
+
+    .line 0
+    iget-object v0, p0, LX/3I8;->A01:Ljava/io/File;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p1}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v4
+
+    .line 6
+    const/4 v0, 0x3
+
+    .line 7
+    new-array v3, v0, [J
 
     .line 8
     .line 9
-    sget v0, LX/2eq;->ASW:I
+    const-wide/16 v1, 0x0
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    const/4 v0, 0x0
 
     .line 12
+    aput-wide v1, v3, v0
+
     .line 13
     .line 14
-    move-result-object v0
+    invoke-virtual {v4}, Ljava/io/File;->lastModified()J
 
     .line 15
-    check-cast v0, LX/3IA;
-
     .line 16
     .line 17
-    iput-object v0, p0, LX/3I8;->A04:LX/3IA;
+    move-result-wide v1
 
     .line 18
+    const/4 v0, 0x1
+
     .line 19
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    aput-wide v1, v3, v0
 
     .line 20
     .line 21
+    invoke-static {v4}, LX/3Hm;->A00(Ljava/io/File;)J
+
     .line 22
-    move-result-object v0
-
     .line 23
-    iput-object v0, p0, LX/3I8;->A03:LX/0Na;
-
     .line 24
+    move-result-wide v1
+
     .line 25
-    new-instance v0, LX/3IB;
+    const/4 v0, 0x2
 
     .line 26
+    aput-wide v1, v3, v0
+
     .line 27
-    invoke-direct {v0}, LX/3IB;-><init>()V
-
     .line 28
-    .line 29
-    .line 30
-    iput-object v0, p0, LX/3I8;->A00:LX/3IB;
+    return-object v3
+.end method
 
-    .line 31
-    .line 32
-    const/4 v3, 0x0
+.method public final remove(Ljava/lang/String;)Z
+    .locals 2
 
-    .line 33
-    invoke-static {p1, v3}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
+    .line 0
+    iget-object v1, p0, LX/3I8;->A00:LX/2ic;
 
-    .line 34
-    .line 35
-    .line 36
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/3I8;->A01:Ljava/io/File;
+
+    .line 3
+    .line 4
+    invoke-static {v0, p1}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    .line 5
+    .line 6
+    .line 7
     move-result-object v0
 
-    .line 37
-    iput-object v0, p0, LX/3I8;->A01:LX/1zG;
+    .line 8
+    invoke-virtual {v1, v0}, LX/2ic;->A04(Ljava/io/File;)Z
 
-    .line 38
-    .line 39
-    iget-object v2, p0, LX/3I8;->A00:LX/3IB;
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
 
-    .line 40
-    .line 41
-    iget-object v0, p0, LX/3I8;->A02:LX/0JU;
-
-    .line 42
-    .line 43
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    .line 44
-    .line 45
-    .line 46
-    move-result v1
-
-    .line 47
-    const v0, 0x7f130242
-
-    .line 48
-    .line 49
-    .line 50
-    if-eq v1, v3, :cond_0
-
-    .line 51
-    .line 52
-    const/4 v0, 0x0
-
-    .line 53
-    :cond_0
-    iput v0, v2, LX/3IB;->A00:I
-
-    .line 54
-    .line 55
-    return-void
+    .line 12
+    return v0
 .end method

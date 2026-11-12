@@ -1,65 +1,79 @@
-.class public interface abstract LX/1mC;
+.class public final LX/1mC;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/1mM;
 
-# virtual methods
-.method public abstract ACP()Ljava/lang/String;
-.end method
 
-.method public abstract AD7()Ljava/lang/String;
-.end method
+# instance fields
+.field public A00:Ljava/lang/String;
 
-.method public abstract AD9(LX/1lm;)Ljava/lang/String;
-.end method
 
-.method public abstract AF0(LX/1lm;)Ljava/lang/String;
-.end method
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 3
 
-.method public abstract AF7(LX/1lm;)LX/1lk;
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract AHl()J
-.end method
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {p2}, LX/3ED;->A02(Ljava/lang/CharSequence;)Z
 
-.method public abstract AKw(LX/1lm;Ljava/lang/String;)Ljava/lang/String;
-.end method
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
 
-.method public abstract ALW()Ljava/lang/String;
-.end method
+    .line 7
+    if-eqz v0, :cond_0
 
-.method public abstract AMT()Ljava/lang/String;
-.end method
+    .line 8
+    .line 9
+    const v0, 0x7f110273
 
-.method public abstract AMU(LX/1lm;Ljava/lang/String;)Ljava/lang/String;
-.end method
+    .line 10
+    .line 11
+    .line 12
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-.method public abstract AN4(LX/1lm;)Ljava/lang/String;
-.end method
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v2
 
-.method public abstract AN5(LX/1lm;)Ljava/lang/String;
-.end method
+    .line 16
+    const v0, 0x7f110271
 
-.method public abstract AN6(I)J
-.end method
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-.method public abstract ANS(LX/1lm;)Ljava/lang/String;
-.end method
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
 
-.method public abstract ANc(LX/1lm;Ljava/lang/String;)Ljava/lang/String;
-.end method
+    .line 23
+    const-string v0, "%s. %s"
 
-.method public abstract AOe()Z
-.end method
+    .line 24
+    .line 25
+    invoke-static {v0, v2, v1}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String;
 
-.method public abstract AOf(LX/1lm;)Z
-.end method
+    .line 26
+    .line 27
+    .line 28
+    move-result-object p2
 
-.method public abstract AqS(Lcom/facebook/zero/common/ZeroToken;LX/1lm;)V
-.end method
+    .line 29
+    :cond_0
+    iput-object p2, p0, LX/1mC;->A00:Ljava/lang/String;
 
-.method public abstract AqX(LX/1lm;)V
-.end method
-
-.method public abstract Aqe(LX/1lm;Ljava/lang/String;)V
+    .line 30
+    .line 31
+    return-void
 .end method

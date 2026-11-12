@@ -1,73 +1,75 @@
-.class public final LX/2OF;
-.super LX/1wb;
+.class public abstract LX/2OF;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$24"
+.field public static final A00:LX/28F;
 
+.field public static final A01:LX/28F;
 
-# instance fields
-.field public final synthetic A00:LX/2OB;
-
-.field public final synthetic A01:Z
+.field public static final A02:LX/28F;
 
 
 # direct methods
-.method public constructor <init>(LX/2OB;Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/util/concurrent/atomic/AtomicInteger;Z)V
-    .locals 10
+.method public static constructor <clinit>()V
+    .locals 2
 
     .line 0
-    const-string v3, "AfterLogout"
+    sget-object v1, LX/1GN;->A00:LX/28F;
 
     .line 1
     .line 2
-    const-string v4, "AccountSwitchPerfLogger"
+    const-string/jumbo v0, "sessionlessqe/"
 
     .line 3
     .line 4
-    const-string/jumbo v5, "onAfterLogout"
-
     .line 5
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 6
     .line 7
-    const v8, 0x940009
-
     .line 8
-    .line 9
-    .line 10
-    const-string/jumbo v6, "type"
+    move-result-object v1
 
+    .line 9
+    sput-object v1, LX/2OF;->A02:LX/28F;
+
+    .line 10
     .line 11
+    const-string/jumbo v0, "last_fetch_time_ms"
+
     .line 12
     .line 13
-    const/4 v9, 0x1
-
     .line 14
-    move-object v0, p0
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
 
     .line 15
-    iput-object p1, p0, LX/2OF;->A00:LX/2OB;
-
     .line 16
     .line 17
-    iput-boolean p5, p0, LX/2OF;->A01:Z
+    move-result-object v0
 
     .line 18
-    .line 19
-    move-object v1, p2
+    sput-object v0, LX/2OF;->A01:LX/28F;
 
+    .line 19
     .line 20
-    move-object v2, p3
+    const-string/jumbo v0, "last_fetch_locale"
 
     .line 21
-    move-object v7, p4
-
     .line 22
-    invoke-direct/range {v0 .. v9}, LX/1wb;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;IZ)V
-
     .line 23
+    invoke-static {v1, v0}, LX/28G;->A07(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 24
     .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    sput-object v0, LX/2OF;->A00:LX/28F;
+
+    .line 28
+    .line 29
     return-void
 .end method

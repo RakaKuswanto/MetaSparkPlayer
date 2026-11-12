@@ -7,52 +7,50 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbnsConnectionManager$2"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "NotificationDeliveryStoreSharedPreferences$1"
 
 
 # instance fields
-.field public final synthetic A00:LX/0Rq;
+.field public final synthetic A00:Landroid/content/SharedPreferences$Editor;
+
+.field public final synthetic A01:LX/0Md;
 
 
 # direct methods
-.method public constructor <init>(LX/0Rq;)V
+.method public constructor <init>(Landroid/content/SharedPreferences$Editor;LX/0Md;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/0Sr;->A00:LX/0Rq;
+    iput-object p2, p0, LX/0Sr;->A01:LX/0Md;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/0Sr;->A00:Landroid/content/SharedPreferences$Editor;
 
     .line 3
     .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/0Sr;->A00:LX/0Rq;
+    iget-object v0, p0, LX/0Sr;->A00:Landroid/content/SharedPreferences$Editor;
 
     .line 1
     .line 2
-    iget-object v0, v1, LX/0Rq;->A0G:LX/0Ua;
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/0Ua;->A0F:Ljava/lang/Integer;
-
     .line 5
-    .line 6
-    invoke-virtual {v1, v0}, LX/0Rq;->A0H(Ljava/lang/Integer;)V
-
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method

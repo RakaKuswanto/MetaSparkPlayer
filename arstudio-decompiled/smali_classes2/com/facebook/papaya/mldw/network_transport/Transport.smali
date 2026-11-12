@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final Companion:LX/1yp;
+.field public static final Companion:LX/19J;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/1yp;
+    new-instance v0, LX/19J;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1yp;-><init>()V
+    invoke-direct {v0}, LX/19J;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/papaya/mldw/network_transport/Transport;->Companion:LX/1yp;
+    sput-object v0, Lcom/facebook/papaya/mldw/network_transport/Transport;->Companion:LX/19J;
 
     .line 6
     .line 7
@@ -30,7 +30,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 11
     .line 12
@@ -45,7 +45,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -80,7 +80,7 @@
     .line 17
     .line 18
     .line 19
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 20
     .line 21

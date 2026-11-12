@@ -1,25 +1,37 @@
 .class public final LX/4k7;
-.super LX/6MF;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:Ljava/util/List;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x5
-    .end annotation
-.end field
+.field public final A00:LX/4fz;
+
+.field public final A01:LX/4lN;
+
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/4fz;LX/4lN;Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/6MF;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p3, p0, LX/4k7;->A02:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/4k7;->A01:LX/4lN;
+
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/4k7;->A00:LX/4fz;
+
+    .line 8
+    .line 9
     return-void
 .end method

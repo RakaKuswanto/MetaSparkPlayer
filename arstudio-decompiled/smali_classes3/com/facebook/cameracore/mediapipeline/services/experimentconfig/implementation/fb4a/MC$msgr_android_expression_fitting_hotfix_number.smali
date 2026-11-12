@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xe376
 
-.field public static final __CONFIG__:I = 0x3e4
+.field public static final __CONFIG__:I = 0x396
 
-.field public static final hotfix_number:J = 0x8203e400000a12L
+.field public static final hotfix_number:J = 0x82039600000921L
 
 
 # direct methods

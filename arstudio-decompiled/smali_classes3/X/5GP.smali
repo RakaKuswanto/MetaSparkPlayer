@@ -1,51 +1,43 @@
-.class public final LX/5GP;
-.super Ljava/lang/IllegalStateException;
+.class public final LX/5Gp;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final currentCapacity:I
+.field public final A00:J
 
-.field public final requiredCapacity:I
+.field public final A01:J
+
+.field public final A02:Ljava/lang/String;
+
+.field public final A03:[B
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;[BJJ)V
+    .locals 0
 
     .line 0
-    const-string v2, "Buffer too small ("
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const-string v1, " < "
-
     .line 3
+    iput-object p1, p0, LX/5Gp;->A02:Ljava/lang/String;
+
     .line 4
-    const-string v0, ")"
-
     .line 5
-    .line 6
-    invoke-static {v2, v1, v0, p1, p2}, LX/00I;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
+    iput-object p2, p0, LX/5Gp;->A03:[B
 
+    .line 6
     .line 7
+    iput-wide p3, p0, LX/5Gp;->A00:J
+
     .line 8
     .line 9
-    move-result-object v0
+    iput-wide p5, p0, LX/5Gp;->A01:J
 
     .line 10
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
     .line 11
-    .line 12
-    .line 13
-    iput p1, p0, LX/5GP;->currentCapacity:I
-
-    .line 14
-    .line 15
-    iput p2, p0, LX/5GP;->requiredCapacity:I
-
-    .line 16
-    .line 17
     return-void
 .end method

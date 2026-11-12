@@ -1,37 +1,26 @@
-.class public final LX/5LA;
+.class public interface abstract LX/5LA;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public static final A00(LX/5Lq;)LX/5Kk;
-    .locals 3
+# virtual methods
+.method public abstract ACc()Landroid/util/Pair;
+.end method
 
-    .line 0
-    const/4 v0, 0x0
+.method public abstract ALl(I)J
+.end method
 
-    .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+.method public abstract APH()Z
+.end method
 
-    .line 2
-    .line 3
-    .line 4
-    iget-object v2, p0, LX/5Lq;->A0J:Ljava/lang/String;
+.method public abstract APv()Z
+.end method
 
-    .line 5
-    .line 6
-    iget v1, p0, LX/5Lq;->A0I:I
+.method public abstract ARn()V
+.end method
 
-    .line 7
-    .line 8
-    new-instance v0, LX/5Kk;
+.method public abstract Ag0(LX/5KY;LX/5Jq;I)I
+.end method
 
-    .line 9
-    .line 10
-    invoke-direct {v0, v2, v1}, LX/5Kk;-><init>(Ljava/lang/String;I)V
-
-    .line 11
-    .line 12
-    .line 13
-    return-object v0
+.method public abstract An5(J)I
 .end method

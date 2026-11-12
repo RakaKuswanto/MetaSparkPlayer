@@ -6,12 +6,22 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
+        }
+    .end annotation
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/common/collect/Maps$EntryFunction;-><init>(Ljava/lang/String;ILX/1qd;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/common/collect/Maps$EntryFunction;-><init>(Ljava/lang/String;ILX/0Z5;)V
 
     .line 2
     .line 3
@@ -23,6 +33,14 @@
 # virtual methods
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "entry"
+        }
+    .end annotation
 
     .line 0
     check-cast p1, Ljava/util/Map$Entry;
@@ -42,6 +60,14 @@
 
 .method public apply(Ljava/util/Map$Entry;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entry"
+        }
+    .end annotation
 
     .line 268435456
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;

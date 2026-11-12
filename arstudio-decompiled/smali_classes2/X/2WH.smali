@@ -1,589 +1,474 @@
-.class public final LX/2WH;
+.class public abstract LX/2WH;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:Landroid/app/NotificationChannel;
+# static fields
+.field public static A00:LX/28F;
 
-.field public final A01:Ljava/lang/String;
+.field public static A01:LX/28F;
+
+.field public static A02:LX/28F;
+
+.field public static A03:LX/28F;
+
+.field public static final A04:LX/28F;
+
+.field public static final A05:LX/28F;
+
+.field public static final A06:LX/28F;
+
+.field public static final A07:LX/28F;
+
+.field public static final A08:LX/28F;
+
+.field public static final A09:LX/28F;
+
+.field public static final A0A:LX/28F;
+
+.field public static final A0B:LX/28F;
+
+.field public static final A0C:LX/28F;
+
+.field public static final A0D:LX/28F;
+
+.field public static final A0E:LX/28F;
+
+.field public static final A0F:LX/28F;
+
+.field public static final A0G:LX/28F;
+
+.field public static final A0H:LX/28F;
+
+.field public static final A0I:LX/28F;
+
+.field public static final A0J:LX/28F;
+
+.field public static final A0K:LX/28F;
+
+.field public static final A0L:LX/28F;
+
+.field public static final A0M:LX/28F;
+
+.field public static final A0N:LX/28F;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/app/NotificationChannel;)V
+.method public static constructor <clinit>()V
     .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v2, LX/1GN;->A05:LX/28F;
 
     .line 1
     .line 2
-    .line 3
-    invoke-virtual {p1}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
+    const-string/jumbo v0, "analytics"
 
+    .line 3
     .line 4
     .line 5
+    invoke-static {v2, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 6
-    move-result-object v2
-
     .line 7
-    if-eqz v2, :cond_0
-
     .line 8
+    move-result-object v1
+
     .line 9
-    const-string v1, "%#$"
+    sput-object v1, LX/2WH;->A0G:LX/28F;
 
     .line 10
     .line 11
-    new-instance v0, Ljava/util/StringTokenizer;
+    const-string/jumbo v0, "process_stat_interval"
 
     .line 12
     .line 13
-    invoke-direct {v0, v2, v1}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 14
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 15
     .line 16
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
-
     .line 17
-    .line 18
-    .line 19
-    invoke-virtual {v0}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
-
-    .line 20
-    .line 21
-    .line 22
     move-result-object v0
 
+    .line 18
+    sput-object v0, LX/2WH;->A0H:LX/28F;
+
+    .line 19
+    .line 20
+    const-string/jumbo v0, "batch_size"
+
+    .line 21
+    .line 22
     .line 23
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
 
     .line 24
     .line 25
     .line 26
-    move-object v2, v0
-    :try_end_0
-    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
     .line 27
-    :catch_0
-    iput-object v2, p0, LX/2WH;->A01:Ljava/lang/String;
+    sput-object v0, LX/2WH;->A04:LX/28F;
 
     .line 28
     .line 29
-    iput-object p1, p0, LX/2WH;->A00:Landroid/app/NotificationChannel;
+    const-string/jumbo v0, "contacts_upload_interval"
 
     .line 30
     .line 31
-    return-void
-
     .line 32
-    :cond_0
-    const-string v0, "Channel id of systemChannel is null"
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
 
     .line 33
     .line 34
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
     .line 35
-    .line 36
-    .line 37
     move-result-object v0
 
-    .line 38
-    throw v0
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
-
-    .line 268926993
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268926994
-    iput-object p2, p0, LX/2WH;->A01:Ljava/lang/String;
-
-    .line 268926995
-    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v0, "%02d"
-
-    invoke-static {v0, v1}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v0, "%#$"
-
-    .line 268926996
-    invoke-static {v1, v0, p2, v0, p1}, LX/00I;->A0O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 268926997
-    invoke-virtual {p6}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/4 v1, 0x3
-
-    sparse-switch v0, :sswitch_data_0
-
-    .line 268926998
-    :cond_0
-    :goto_0
-    new-instance v3, Landroid/app/NotificationChannel;
-
-    invoke-direct {v3, v2, p3, v1}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
-
-    iput-object v3, p0, LX/2WH;->A00:Landroid/app/NotificationChannel;
-
-    const-string/jumbo v0, "no_group"
-
-    .line 268926999
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    .line 268927000
-    if-nez v0, :cond_1
-
-    .line 268927001
-    invoke-virtual {v3, p1}, Landroid/app/NotificationChannel;->setGroup(Ljava/lang/String;)V
-
-    .line 268927002
-    :cond_1
-    if-eqz p5, :cond_2
-
-    invoke-virtual {p5}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 268927003
-    invoke-virtual {v3, p5}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
-
-    .line 268927004
-    :cond_2
-    if-eqz p7, :cond_3
-
-    invoke-virtual {p7}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 268927005
-    invoke-static {p7}, LX/0GQ;->A01(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    .line 268927006
-    sget-object v0, Landroid/app/Notification;->AUDIO_ATTRIBUTES_DEFAULT:Landroid/media/AudioAttributes;
-
-    .line 268927007
-    invoke-virtual {v3, v1, v0}, Landroid/app/NotificationChannel;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)V
-
-    :cond_3
-    return-void
-
-    .line 268927008
-    :sswitch_0
-    const-string/jumbo v0, "unspecified"
-
-    invoke-virtual {p6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v1, -0x3e8
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string/jumbo v0, "medium"
-
-    goto :goto_1
-
-    :sswitch_2
-    const-string/jumbo v0, "urgent"
-
-    goto :goto_2
-
-    :sswitch_3
-    const-string/jumbo v0, "l"
-
-    goto :goto_3
-
-    :sswitch_4
-    const-string/jumbo v0, "m"
-
-    :goto_1
-    invoke-virtual {p6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_5
-    const-string/jumbo v0, "n"
-
-    goto :goto_4
-
-    :sswitch_6
-    const-string/jumbo v0, "u"
-
-    :goto_2
-    invoke-virtual {p6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x4
-
-    goto :goto_0
-
-    :sswitch_7
-    const-string/jumbo v0, "low"
-
-    :goto_3
-    invoke-virtual {p6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_8
-    const-string/jumbo v0, "none"
-
-    :goto_4
-    invoke-virtual {p6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x60ed74c9 -> :sswitch_0
-        -0x4041708b -> :sswitch_1
-        -0x31e22cbf -> :sswitch_2
-        0x6c -> :sswitch_3
-        0x6d -> :sswitch_4
-        0x6e -> :sswitch_5
-        0x75 -> :sswitch_6
-        0x1a354 -> :sswitch_7
-        0x33af38 -> :sswitch_8
-    .end sparse-switch
-.end method
-
-
-# virtual methods
-.method public final A00()I
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2WH;->A00:Landroid/app/NotificationChannel;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/app/NotificationChannel;->getImportance()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
-.end method
-
-.method public final A01()Landroid/app/NotificationChannel;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2WH;->A00:Landroid/app/NotificationChannel;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
-.method public final A02()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2WH;->A00:Landroid/app/NotificationChannel;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/app/NotificationChannel;->getGroup()Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final A03()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/2WH;->A00:Landroid/app/NotificationChannel;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/app/NotificationChannel;->getImportance()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v2
-
-    .line 6
-    const/16 v0, -0x3e8
-
-    .line 7
-    .line 8
-    const-string/jumbo v1, "high"
-
-    .line 9
-    .line 10
-    .line 11
-    if-eq v2, v0, :cond_4
-
-    .line 12
-    .line 13
-    if-eqz v2, :cond_3
-
-    .line 14
-    .line 15
-    const/4 v0, 0x1
-
-    .line 16
-    if-eq v2, v0, :cond_2
-
-    .line 17
-    .line 18
-    const/4 v0, 0x2
-
-    .line 19
-    if-eq v2, v0, :cond_1
-
-    .line 20
-    .line 21
-    const/4 v0, 0x3
-
-    .line 22
-    if-eq v2, v0, :cond_0
-
-    .line 23
-    .line 24
-    const/4 v0, 0x4
-
-    .line 25
-    if-ne v2, v0, :cond_0
-
-    .line 26
-    .line 27
-    const-string/jumbo v1, "urgent"
-
-    .line 28
-    .line 29
-    .line 30
-    :cond_0
-    return-object v1
-
-    .line 31
-    :cond_1
-    const-string/jumbo v1, "medium"
-
-    .line 32
-    .line 33
-    .line 34
-    return-object v1
-
-    .line 35
-    :cond_2
-    const-string/jumbo v1, "low"
-
     .line 36
+    sput-object v0, LX/2WH;->A05:LX/28F;
+
     .line 37
     .line 38
-    return-object v1
+    const-string/jumbo v0, "cold_start"
 
     .line 39
-    :cond_3
-    const-string/jumbo v1, "none"
-
     .line 40
     .line 41
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
     .line 42
-    return-object v1
-
     .line 43
-    :cond_4
-    const-string/jumbo v1, "unspecified"
-
     .line 44
+    move-result-object v0
+
     .line 45
+    sput-object v0, LX/2WH;->A06:LX/28F;
+
     .line 46
-    return-object v1
-.end method
+    .line 47
+    const-string/jumbo v0, "device_info_interval"
 
-.method public final A04()Ljava/lang/String;
-    .locals 1
+    .line 48
+    .line 49
+    .line 50
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
 
-    .line 0
-    iget-object v0, p0, LX/2WH;->A00:Landroid/app/NotificationChannel;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
+    .line 51
+    .line 52
+    .line 53
     move-result-object v0
 
-    .line 6
-    if-eqz v0, :cond_0
+    .line 54
+    sput-object v0, LX/2WH;->A07:LX/28F;
 
-    .line 7
-    .line 8
-    return-object v0
+    .line 55
+    .line 56
+    const-string/jumbo v0, "metainf_fbmeta"
 
-    .line 9
-    :cond_0
-    const-string v0, "We assigned this, it should not be null"
+    .line 57
+    .line 58
+    .line 59
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
 
-    .line 10
-    .line 11
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 12
-    .line 13
-    .line 14
+    .line 60
+    .line 61
+    .line 62
     move-result-object v0
 
-    .line 15
-    throw v0
-.end method
+    .line 63
+    sput-object v0, LX/2WH;->A08:LX/28F;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .line 64
+    .line 65
+    const-string/jumbo v0, "metainf_fbmeta_version_code"
 
-    .line 0
-    if-ne p1, p0, :cond_0
+    .line 66
+    .line 67
+    .line 68
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
 
-    .line 1
-    .line 2
-    const/4 v0, 0x1
-
-    .line 3
-    return v0
-
-    .line 4
-    :cond_0
-    instance-of v0, p1, LX/2WH;
-
-    .line 5
-    .line 6
-    if-nez v0, :cond_1
-
-    .line 7
-    .line 8
-    const/4 v0, 0x0
-
-    .line 9
-    return v0
-
-    .line 10
-    :cond_1
-    invoke-virtual {p0}, LX/2WH;->A04()Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v1
-
-    .line 14
-    check-cast p1, LX/2WH;
-
-    .line 15
-    .line 16
-    invoke-virtual {p1}, LX/2WH;->A04()Ljava/lang/String;
-
-    .line 17
-    .line 18
-    .line 19
+    .line 69
+    .line 70
+    .line 71
     move-result-object v0
 
-    .line 20
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 72
+    sput-object v0, LX/2WH;->A09:LX/28F;
 
-    .line 21
-    .line 22
-    .line 23
-    move-result v0
+    .line 73
+    .line 74
+    const-string/jumbo v0, "device_stat_interval"
 
-    .line 24
-    return v0
-.end method
+    .line 75
+    .line 76
+    .line 77
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
 
-.method public final hashCode()I
-    .locals 3
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v0
 
-    .line 0
-    invoke-static {}, LX/0Yi;->A1X()[Ljava/lang/Object;
+    .line 81
+    sput-object v0, LX/2WH;->A0B:LX/28F;
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
+    .line 82
+    .line 83
+    const-string/jumbo v0, "sampling_config"
 
-    .line 4
-    invoke-virtual {p0}, LX/2WH;->A04()Ljava/lang/String;
+    .line 84
+    .line 85
+    .line 86
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
 
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v1
+    .line 87
+    .line 88
+    .line 89
+    move-result-object v0
 
-    .line 8
-    const/4 v0, 0x0
+    .line 90
+    sput-object v0, LX/2WH;->A0I:LX/28F;
 
-    .line 9
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
+    .line 91
+    .line 92
+    const-string/jumbo v0, "sampling_config_checksum"
 
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
+    .line 93
+    .line 94
+    .line 95
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
 
-    .line 13
-    return v0
+    .line 96
+    .line 97
+    .line 98
+    move-result-object v0
+
+    .line 99
+    sput-object v0, LX/2WH;->A0J:LX/28F;
+
+    .line 100
+    .line 101
+    const-string/jumbo v0, "sampling_config_owner_id"
+
+    .line 102
+    .line 103
+    .line 104
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 105
+    .line 106
+    .line 107
+    move-result-object v0
+
+    .line 108
+    sput-object v0, LX/2WH;->A0K:LX/28F;
+
+    .line 109
+    .line 110
+    const-string/jumbo v0, "periodic_events_last_sent"
+
+    .line 111
+    .line 112
+    .line 113
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 114
+    .line 115
+    .line 116
+    move-result-object v0
+
+    .line 117
+    sput-object v0, LX/2WH;->A0F:LX/28F;
+
+    .line 118
+    .line 119
+    const-string/jumbo v0, "device_info_need_upload_phone/"
+
+    .line 120
+    .line 121
+    .line 122
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 123
+    .line 124
+    .line 125
+    move-result-object v0
+
+    .line 126
+    sput-object v0, LX/2WH;->A0N:LX/28F;
+
+    .line 127
+    .line 128
+    const-string/jumbo v0, "device_info_oldest_known_installer"
+
+    .line 129
+    .line 130
+    .line 131
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 132
+    .line 133
+    .line 134
+    move-result-object v0
+
+    .line 135
+    sput-object v0, LX/2WH;->A0A:LX/28F;
+
+    .line 136
+    .line 137
+    const-string/jumbo v0, "apk_install_source_list"
+
+    .line 138
+    .line 139
+    .line 140
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 141
+    .line 142
+    .line 143
+    move-result-object v0
+
+    .line 144
+    sput-object v0, LX/2WH;->A0L:LX/28F;
+
+    .line 145
+    .line 146
+    const-string/jumbo v0, "previous_apk_install_source"
+
+    .line 147
+    .line 148
+    .line 149
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 150
+    .line 151
+    .line 152
+    move-result-object v0
+
+    .line 153
+    sput-object v0, LX/2WH;->A0M:LX/28F;
+
+    .line 154
+    .line 155
+    const-string/jumbo v0, "show_navigation_events"
+
+    .line 156
+    .line 157
+    .line 158
+    invoke-static {v2, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 159
+    .line 160
+    .line 161
+    move-result-object v0
+
+    .line 162
+    sput-object v0, LX/2WH;->A0D:LX/28F;
+
+    .line 163
+    .line 164
+    const-string/jumbo v0, "show_navigation_v2_debug"
+
+    .line 165
+    .line 166
+    .line 167
+    invoke-static {v2, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 168
+    .line 169
+    .line 170
+    move-result-object v0
+
+    .line 171
+    sput-object v0, LX/2WH;->A0E:LX/28F;
+
+    .line 172
+    .line 173
+    const-string/jumbo v0, "enable_notifications_debug_mode"
+
+    .line 174
+    .line 175
+    .line 176
+    invoke-static {v2, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 177
+    .line 178
+    .line 179
+    move-result-object v0
+
+    .line 180
+    sput-object v0, LX/2WH;->A0C:LX/28F;
+
+    .line 181
+    .line 182
+    const-string/jumbo v0, "build_flavor_last_report_time_stamp"
+
+    .line 183
+    .line 184
+    .line 185
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 186
+    .line 187
+    .line 188
+    move-result-object v0
+
+    .line 189
+    sput-object v0, LX/2WH;->A01:LX/28F;
+
+    .line 190
+    .line 191
+    const-string/jumbo v0, "build_flavor_last_report_build_id"
+
+    .line 192
+    .line 193
+    .line 194
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 195
+    .line 196
+    .line 197
+    move-result-object v0
+
+    .line 198
+    sput-object v0, LX/2WH;->A00:LX/28F;
+
+    .line 199
+    .line 200
+    const-string/jumbo v0, "detection_front_camera_size"
+
+    .line 201
+    .line 202
+    .line 203
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 204
+    .line 205
+    .line 206
+    move-result-object v0
+
+    .line 207
+    sput-object v0, LX/2WH;->A03:LX/28F;
+
+    .line 208
+    .line 209
+    const-string/jumbo v0, "detection_back_camera_size"
+
+    .line 210
+    .line 211
+    .line 212
+    invoke-static {v1, v0}, LX/28G;->A06(LX/28G;Ljava/lang/String;)LX/28F;
+
+    .line 213
+    .line 214
+    .line 215
+    move-result-object v0
+
+    .line 216
+    sput-object v0, LX/2WH;->A02:LX/28F;
+
+    .line 217
+    .line 218
+    return-void
 .end method

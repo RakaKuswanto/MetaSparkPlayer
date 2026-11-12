@@ -3,18 +3,12 @@
 .source ""
 
 # interfaces
-.implements Lcom/facebook/cameracore/mediapipeline/services/gallerypicker/GalleryPickerServiceDataSource;
-
-
-# instance fields
-.field public A00:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;
-
-.field public final A01:Ljava/util/List;
+.implements LX/4sb;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -22,60 +16,42 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object v0
-
-    .line 7
-    iput-object v0, p0, LX/3gK;->A01:Ljava/util/List;
-
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized getContent()Ljava/util/List;
+.method public final synthetic A5x(Ljava/lang/Class;)LX/4C3;
     .locals 1
 
     .line 0
-    monitor-enter p0
+    const-string v0, "Factory.create(String) is unsupported.  This Factory requires `CreationExtras` to be passed into `create` method."
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, LX/3gK;->A01:Ljava/util/List;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+
     .line 3
-    monitor-exit p0
-
     .line 4
-    return-object v0
-
     .line 5
-    :catchall_0
-    move-exception v0
+    move-result-object v0
 
     .line 6
-    monitor-exit p0
-
-    .line 7
     throw v0
 .end method
 
-.method public final setGalleryPickerServiceListener(Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;)V
-    .locals 0
+.method public final A64(LX/4sa;Ljava/lang/Class;)LX/4C3;
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/3gK;->A00:Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativePickerAdapter;
+    new-instance v0, LX/3gL;
 
     .line 1
     .line 2
-    return-void
+    invoke-direct {v0}, LX/3gL;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-object v0
 .end method

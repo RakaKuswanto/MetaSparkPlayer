@@ -1,84 +1,17 @@
-.class public final LX/5C1;
-.super LX/5C0;
+.class public LX/5C1;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static A03:LX/5C1;
-
-
-# instance fields
-.field public final A00:LX/5CD;
-
-.field public final A01:Ljava/util/Set;
-
-.field public final A02:Landroid/os/Handler;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/5CD;)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string v0, "SplitInstallListenerRegistry"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    new-instance v2, LX/6H1;
-
     .line 3
-    .line 4
-    invoke-direct {v2, v0}, LX/6H1;-><init>(Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    const-string v1, "com.google.android.play.core.splitinstall.receiver.SplitInstallUpdateIntentService"
-
-    .line 8
-    .line 9
-    new-instance v0, Landroid/content/IntentFilter;
-
-    .line 10
-    .line 11
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    .line 12
-    .line 13
-    .line 14
-    invoke-direct {p0, p1, v0, v2}, LX/5C0;-><init>(Landroid/content/Context;Landroid/content/IntentFilter;LX/6H1;)V
-
-    .line 15
-    .line 16
-    .line 17
-    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    iput-object v0, p0, LX/5C1;->A02:Landroid/os/Handler;
-
-    .line 22
-    .line 23
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    .line 24
-    .line 25
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    .line 26
-    .line 27
-    .line 28
-    iput-object v0, p0, LX/5C1;->A01:Ljava/util/Set;
-
-    .line 29
-    .line 30
-    iput-object p2, p0, LX/5C1;->A00:LX/5CD;
-
-    .line 31
-    .line 32
     return-void
 .end method

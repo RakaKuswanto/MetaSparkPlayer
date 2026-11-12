@@ -1,14 +1,26 @@
-.class public final LX/5o4;
+.class public final LX/5O4;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:I
+# static fields
+.field public static final synthetic A00:LX/5O4;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/5O4;
+
+    invoke-direct {v0}, LX/5O4;-><init>()V
+
+    sput-object v0, LX/5O4;->A00:LX/5O4;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -17,9 +29,5 @@
     .line 1
     .line 2
     .line 3
-    iput p1, p0, LX/5o4;->A00:I
-
-    .line 4
-    .line 5
     return-void
 .end method

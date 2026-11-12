@@ -1,47 +1,92 @@
-.class public interface abstract LX/63U;
+.class public final LX/63U;
 .super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final synthetic A00:LX/61w;
+
+
+# direct methods
+.method public constructor <init>(LX/61w;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/63U;->A00:LX/61w;
+
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract AUx(Ljava/lang/Exception;)V
-.end method
+.method public final A00(II)V
+    .locals 8
 
-.method public abstract AUy(Ljava/lang/String;)V
-.end method
+    .line 0
+    iget-object v0, p0, LX/63U;->A00:LX/61w;
 
-.method public abstract AUz(I)V
-.end method
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/61w;->A01:LX/61x;
 
-.method public abstract AV0(Ljava/lang/String;JJ)V
-.end method
+    .line 3
+    .line 4
+    iget-object v1, v0, LX/61x;->A04:LX/61t;
 
-.method public abstract AV1(Ljava/lang/String;)V
-.end method
+    .line 5
+    .line 6
+    monitor-enter v1
 
-.method public abstract AV2(LX/62Y;)V
-.end method
+    .line 7
+    :try_start_0
+    iget v2, v1, LX/61t;->A00:F
 
-.method public abstract AV3(LX/62Y;)V
-.end method
+    .line 8
+    .line 9
+    iget v3, v1, LX/61t;->A03:F
 
-.method public abstract AV7(Lcom/google/android/exoplayer2/Format;)V
-.end method
+    .line 10
+    .line 11
+    iget v4, v1, LX/61t;->A02:F
 
-.method public abstract AV8(Lcom/google/android/exoplayer2/Format;LX/5PF;)V
-.end method
+    .line 12
+    .line 13
+    iget v5, v1, LX/61t;->A01:F
 
-.method public abstract AV9(J)V
-.end method
+    .line 14
+    .line 15
+    move v6, p1
 
-.method public abstract AVB(Ljava/lang/Exception;)V
-.end method
+    .line 16
+    move v7, p2
 
-.method public abstract AVD(JJI)V
-.end method
+    .line 17
+    invoke-virtual/range {v1 .. v7}, LX/61t;->A07(FFFFII)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public abstract AaD([BJ)V
-.end method
+    .line 18
+    .line 19
+    .line 20
+    monitor-exit v1
 
-.method public abstract Acf(Z)V
+    .line 21
+    return-void
+
+    .line 22
+    :catchall_0
+    move-exception v0
+
+    .line 23
+    monitor-exit v1
+
+    .line 24
+    throw v0
 .end method

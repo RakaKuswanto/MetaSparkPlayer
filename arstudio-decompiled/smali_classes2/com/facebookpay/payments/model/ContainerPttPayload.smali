@@ -31,7 +31,7 @@
     const/4 v0, 0x1
 
     .line 268435457
-    invoke-static {p1, p3, p4, v0}, LX/0Yc;->A0Q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-static {p1, p3, p4, v0}, LX/0X1;->A13(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     .line 268435458
     .line 268435459
@@ -39,7 +39,7 @@
     const/4 v0, 0x5
 
     .line 268435461
-    invoke-static {p5, v0, p6}, LX/0Yd;->A0o(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {p5, v0, p6}, LX/0X5;->A1G(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 268435462
     .line 268435463

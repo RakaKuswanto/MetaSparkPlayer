@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field public final faceCache:LX/6Jn;
+.field public final faceCache:LX/59j;
 
 .field public final nativeSymbolTableHandle:J
 
@@ -21,25 +21,44 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 806090043
+    .line 805306368
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, LX/6Jn;
+    .line 805306369
+    .line 805306370
+    .line 805306371
+    new-instance v0, LX/59j;
 
-    invoke-direct {v0}, LX/6Jn;-><init>()V
+    .line 805306372
+    .line 805306373
+    invoke-direct {v0}, LX/59j;-><init>()V
 
-    iput-object v0, p0, Lcom/google/ar/core/Session;->faceCache:LX/6Jn;
+    .line 805306374
+    .line 805306375
+    .line 805306376
+    iput-object v0, p0, Lcom/google/ar/core/Session;->faceCache:LX/59j;
 
+    .line 805306377
+    .line 805306378
     const/4 v0, 0x0
 
+    .line 805306379
     iput-object v0, p0, Lcom/google/ar/core/Session;->sharedCamera:Lcom/google/ar/core/SharedCamera;
 
+    .line 805306380
+    .line 805306381
     const-wide/16 v0, 0x0
 
+    .line 805306382
+    .line 805306383
     iput-wide v0, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
+    .line 805306384
+    .line 805306385
     iput-wide v0, p0, Lcom/google/ar/core/Session;->nativeSymbolTableHandle:J
 
+    .line 805306386
+    .line 805306387
     return-void
 .end method
 
@@ -52,16 +71,16 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    new-instance v0, LX/6Jn;
+    new-instance v0, LX/59j;
 
     .line 268435460
     .line 268435461
-    invoke-direct {v0}, LX/6Jn;-><init>()V
+    invoke-direct {v0}, LX/59j;-><init>()V
 
     .line 268435462
     .line 268435463
     .line 268435464
-    iput-object v0, p0, Lcom/google/ar/core/Session;->faceCache:LX/6Jn;
+    iput-object v0, p0, Lcom/google/ar/core/Session;->faceCache:LX/59j;
 
     .line 268435465
     .line 268435466
@@ -124,16 +143,16 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/6Jn;
+    new-instance v0, LX/59j;
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/6Jn;-><init>()V
+    invoke-direct {v0}, LX/59j;-><init>()V
 
     .line 6
     .line 7
     .line 8
-    iput-object v0, p0, Lcom/google/ar/core/Session;->faceCache:LX/6Jn;
+    iput-object v0, p0, Lcom/google/ar/core/Session;->faceCache:LX/59j;
 
     .line 9
     .line 10
@@ -358,36 +377,26 @@
 .end method
 
 .method public static loadDynamicSymbolsAfterSessionCreate()V
-    .locals 2
+    .locals 0
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-static {}, Lcom/google/ar/core/ArImage;->nativeLoadSymbols()V
 
     .line 1
     .line 2
-    const/16 v0, 0x18
-
     .line 3
-    .line 4
-    if-lt v1, v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-static {}, Lcom/google/ar/core/ArImage;->nativeLoadSymbols()V
-
-    .line 7
-    .line 8
-    .line 9
     invoke-static {}, Lcom/google/ar/core/ImageMetadata;->nativeLoadSymbols()V
 
-    .line 10
-    .line 11
-    .line 12
-    :cond_0
+    .line 4
+    .line 5
+    .line 6
     return-void
 .end method
 
 .method private native nativeAcquireAllAnchors(J)[J
+.end method
+
+.method private native nativeAcquireEarth(J)J
 .end method
 
 .method private native nativeCheckModuleAvailability(JI)I
@@ -526,7 +535,7 @@
     .locals 10
 
     .line 268435456
-    invoke-static {}, LX/55a;->values()[LX/55a;
+    invoke-static {}, LX/4xj;->values()[LX/4xj;
 
     .line 268435457
     .line 268435458
@@ -537,7 +546,7 @@
     array-length v3, v4
 
     .line 268435461
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
     .line 268435462
     const/4 v2, 0x0
@@ -552,7 +561,7 @@
 
     .line 268435466
     .line 268435467
-    iget v0, v1, LX/55a;->E:I
+    iget v0, v1, LX/4xj;->G:I
 
     .line 268435468
     .line 268435469
@@ -560,7 +569,7 @@
 
     .line 268435470
     .line 268435471
-    iget-object v3, v1, LX/55a;->F:Ljava/lang/Class;
+    iget-object v3, v1, LX/4xj;->H:Ljava/lang/Class;
 
     .line 268435472
     .line 268435473
@@ -603,7 +612,7 @@
 
     .line 268435488
     :cond_3
-    iget-object v0, v1, LX/55a;->G:Ljava/lang/String;
+    iget-object v0, v1, LX/4xj;->I:Ljava/lang/String;
 
     .line 268435489
     .line 268435490
@@ -615,245 +624,289 @@
 
     .line 268435493
     .line 268435494
-    new-array v0, v6, [Ljava/lang/Class;
+    invoke-static {v3}, LX/434;->A0z(Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 268435495
     .line 268435496
-    invoke-virtual {v3, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
     .line 268435497
-    .line 268435498
-    .line 268435499
-    move-result-object v1
-
-    .line 268435500
-    new-array v0, v6, [Ljava/lang/Object;
-
-    .line 268435501
-    .line 268435502
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 268435503
-    .line 268435504
-    .line 268435505
     move-result-object p1
 
-    .line 268435506
+    .line 268435498
     check-cast p1, Ljava/lang/Throwable;
 
-    .line 268435507
-    .line 268435508
+    .line 268435499
+    .line 268435500
     throw p1
 
-    .line 268435509
+    .line 268435501
     :cond_4
     if-nez p0, :cond_6
 
-    .line 268435510
-    .line 268435511
+    .line 268435502
+    .line 268435503
     move-object p0, v0
 
-    .line 268435512
+    .line 268435504
     :cond_5
     :goto_1
+    const-class v1, Ljava/lang/String;
+
+    .line 268435505
+    .line 268435506
     const/4 v2, 0x1
 
-    .line 268435513
-    new-array v1, v2, [Ljava/lang/Class;
+    .line 268435507
+    new-array v0, v2, [Ljava/lang/Class;
 
+    .line 268435508
+    .line 268435509
+    aput-object v1, v0, v7
+
+    .line 268435510
+    .line 268435511
+    invoke-virtual {v3, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    .line 268435512
+    .line 268435513
     .line 268435514
+    move-result-object v1
+
     .line 268435515
-    const-class v0, Ljava/lang/String;
+    new-array v0, v2, [Ljava/lang/Object;
 
     .line 268435516
     .line 268435517
-    aput-object v0, v1, v6
+    aput-object p0, v0, v7
 
     .line 268435518
     .line 268435519
-    invoke-virtual {v3, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 268435520
     .line 268435521
     .line 268435522
-    move-result-object v1
+    move-result-object p1
 
     .line 268435523
-    new-array v0, v2, [Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Throwable;
 
     .line 268435524
     .line 268435525
-    aput-object p0, v0, v6
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     .line 268435526
     .line 268435527
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 268435528
-    .line 268435529
-    .line 268435530
-    move-result-object p1
-
-    .line 268435531
-    check-cast p1, Ljava/lang/Throwable;
-
-    .line 268435532
-    .line 268435533
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    .line 268435534
-    .line 268435535
-    .line 268435536
     move-result-object p0
 
-    .line 268435537
+    .line 268435529
     array-length v8, p0
 
-    .line 268435538
+    .line 268435530
     add-int v0, v8, v9
 
-    .line 268435539
-    .line 268435540
-    new-array v7, v0, [Ljava/lang/StackTraceElement;
+    .line 268435531
+    .line 268435532
+    new-array v6, v0, [Ljava/lang/StackTraceElement;
 
-    .line 268435541
-    .line 268435542
+    .line 268435533
+    .line 268435534
     const/4 v5, 0x0
 
-    .line 268435543
+    .line 268435535
     :goto_2
     if-ge v5, v9, :cond_7
 
+    .line 268435536
+    .line 268435537
+    aget-object v4, p2, v5
+
+    .line 268435538
+    .line 268435539
+    aget v3, p3, v5
+
+    .line 268435540
+    .line 268435541
+    const-string v2, "ARCore"
+
+    .line 268435542
+    .line 268435543
+    const-string v1, "native"
+
     .line 268435544
     .line 268435545
-    aget-object v4, p2, v5
+    new-instance v0, Ljava/lang/StackTraceElement;
 
     .line 268435546
     .line 268435547
-    aget v3, p3, v5
+    invoke-direct {v0, v2, v1, v4, v3}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 268435548
     .line 268435549
-    const-string v2, "ARCore"
-
     .line 268435550
+    aput-object v0, v6, v5
+
     .line 268435551
-    const-string v1, "native"
-
     .line 268435552
-    .line 268435553
-    new-instance v0, Ljava/lang/StackTraceElement;
+    add-int/lit8 v5, v5, 0x1
 
+    .line 268435553
     .line 268435554
+    goto :goto_2
+
     .line 268435555
-    invoke-direct {v0, v2, v1, v4, v3}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    :cond_6
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 268435556
     .line 268435557
     .line 268435558
-    aput-object v0, v7, v5
+    move-result-object v1
 
     .line 268435559
-    .line 268435560
-    add-int/lit8 v5, v5, 0x1
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 268435560
     .line 268435561
     .line 268435562
-    goto :goto_2
+    move-result-object v0
 
     .line 268435563
-    :cond_6
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     .line 268435564
     .line 268435565
     .line 268435566
-    move-result-object v1
-
-    .line 268435567
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 268435568
-    .line 268435569
-    .line 268435570
-    move-result-object v0
-
-    .line 268435571
-    invoke-static {v0, v1}, LX/4BD;->A0h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 268435572
-    .line 268435573
-    .line 268435574
     move-result-object p0
 
-    .line 268435575
+    .line 268435567
     goto :goto_1
 
-    .line 268435576
+    .line 268435568
     :cond_7
     :goto_3
-    if-ge v6, v8, :cond_8
+    if-ge v7, v8, :cond_8
+
+    .line 268435569
+    .line 268435570
+    aget-object v0, p0, v7
+
+    .line 268435571
+    .line 268435572
+    aput-object v0, v6, v5
+
+    .line 268435573
+    .line 268435574
+    add-int/lit8 v5, v5, 0x1
+
+    .line 268435575
+    .line 268435576
+    add-int/lit8 v7, v7, 0x1
 
     .line 268435577
     .line 268435578
-    aget-object v0, p0, v6
-
-    .line 268435579
-    .line 268435580
-    aput-object v0, v7, v5
-
-    .line 268435581
-    .line 268435582
-    add-int/lit8 v5, v5, 0x1
-
-    .line 268435583
-    .line 268435584
-    add-int/lit8 v6, v6, 0x1
-
-    .line 268435585
-    .line 268435586
     goto :goto_3
 
-    .line 268435587
+    .line 268435579
     :cond_8
-    invoke-virtual {p1, v7}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+    invoke-virtual {p1, v6}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
-    .line 268435588
-    .line 268435589
-    .line 268435590
+    .line 268435580
+    .line 268435581
+    .line 268435582
     throw p1
 
-    .line 268435591
+    .line 268435583
     :cond_9
-    const/16 v0, 0x22
-
-    .line 268435592
-    .line 268435593
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
-    .line 268435594
-    .line 268435595
-    .line 268435596
-    move-result-object v1
-
-    .line 268435597
     const-string v0, "Unexpected error code: "
 
-    .line 268435598
-    .line 268435599
-    invoke-static {v0, v1, p1}, LX/4BD;->A0V(Ljava/lang/String;Ljava/lang/StringBuilder;I)Lcom/google/ar/core/exceptions/FatalException;
+    .line 268435584
+    .line 268435585
+    invoke-static {v0, p1}, LX/431;->A0P(Ljava/lang/String;I)Lcom/google/ar/core/exceptions/FatalException;
 
-    .line 268435600
-    .line 268435601
-    .line 268435602
+    .line 268435586
+    .line 268435587
+    .line 268435588
     move-result-object p1
 
-    .line 268435603
+    .line 268435589
     throw p1
 .end method
 
 
 # virtual methods
+.method public checkVpsAvailabilityAsync(DDLjava/util/function/Consumer;)Lcom/google/ar/core/VpsAvailabilityFuture;
+    .locals 10
+
+    .line 0
+    if-eqz p5, :cond_0
+
+    .line 1
+    .line 2
+    new-instance v9, Lcom/google/ar/core/VpsAvailabilityFuture$CallbackWrapper;
+
+    .line 3
+    .line 4
+    invoke-direct {v9, p5}, Lcom/google/ar/core/VpsAvailabilityFuture$CallbackWrapper;-><init>(Ljava/util/function/Consumer;)V
+
+    .line 5
+    .line 6
+    .line 7
+    :goto_0
+    move-object v2, p0
+
+    .line 8
+    iget-wide v3, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 9
+    .line 10
+    move-wide v5, p1
+
+    .line 11
+    move-wide v7, p3
+
+    .line 12
+    invoke-virtual/range {v2 .. v9}, Lcom/google/ar/core/Session;->nativeCheckVpsAvailabilityAsync(JDDLcom/google/ar/core/VpsAvailabilityFuture$CallbackWrapper;)[J
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v1
+
+    .line 16
+    const/4 v0, 0x0
+
+    .line 17
+    aget-wide v3, v1, v0
+
+    .line 18
+    .line 19
+    const/4 v0, 0x1
+
+    .line 20
+    aget-wide v5, v1, v0
+
+    .line 21
+    .line 22
+    new-instance v1, Lcom/google/ar/core/VpsAvailabilityFuture;
+
+    .line 23
+    .line 24
+    invoke-direct/range {v1 .. v6}, Lcom/google/ar/core/VpsAvailabilityFuture;-><init>(Lcom/google/ar/core/Session;JJ)V
+
+    .line 25
+    .line 26
+    .line 27
+    return-object v1
+
+    .line 28
+    :cond_0
+    const/4 v9, 0x0
+
+    .line 29
+    goto :goto_0
+.end method
+
 .method public close()V
     .locals 2
 
@@ -897,7 +950,7 @@
     array-length v5, p1
 
     .line 1
-    invoke-static {v5}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v5}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 2
     .line 3
@@ -957,7 +1010,7 @@
     array-length v5, p1
 
     .line 1
-    invoke-static {v5}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v5}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 2
     .line 3
@@ -1017,7 +1070,7 @@
     array-length v5, p1
 
     .line 1
-    invoke-static {v5}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v5}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 2
     .line 3
@@ -1077,7 +1130,7 @@
     array-length v4, p2
 
     .line 1
-    invoke-static {v4}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v4}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 2
     .line 3
@@ -1186,7 +1239,7 @@
     move-result v6
 
     .line 6
-    invoke-static {}, LX/5Ix;->values()[LX/5Ix;
+    invoke-static {}, LX/59f;->values()[LX/59f;
 
     .line 7
     .line 8
@@ -1212,7 +1265,7 @@
 
     .line 16
     .line 17
-    iget v0, v1, LX/5Ix;->i:I
+    iget v0, v1, LX/59f;->j:I
 
     .line 18
     .line 19
@@ -1245,11 +1298,11 @@
 
     .line 32
     :pswitch_0
-    new-instance v2, Lcom/google/ar/core/Plane;
+    new-instance v2, Lcom/google/ar/core/InstantPlacementPoint;
 
     .line 33
     .line 34
-    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/Plane;-><init>(JLcom/google/ar/core/Session;)V
+    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/InstantPlacementPoint;-><init>(JLcom/google/ar/core/Session;)V
 
     .line 35
     .line 36
@@ -1259,11 +1312,11 @@
 
     .line 38
     :pswitch_2
-    new-instance v2, Lcom/google/ar/core/Point;
+    new-instance v2, Lcom/google/ar/core/DepthPoint;
 
     .line 39
     .line 40
-    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/Point;-><init>(JLcom/google/ar/core/Session;)V
+    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/DepthPoint;-><init>(JLcom/google/ar/core/Session;)V
 
     .line 41
     .line 42
@@ -1272,137 +1325,153 @@
 
     .line 44
     :pswitch_3
-    new-instance v2, Lcom/google/ar/core/AugmentedImage;
+    invoke-virtual {p0}, Lcom/google/ar/core/Session;->getEarth()Lcom/google/ar/core/Earth;
 
     .line 45
     .line 46
-    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/AugmentedImage;-><init>(JLcom/google/ar/core/Session;)V
-
     .line 47
-    .line 48
-    .line 49
-    return-object v2
-
-    .line 50
-    :pswitch_4
-    iget-object v3, p0, Lcom/google/ar/core/Session;->faceCache:LX/6Jn;
-
-    .line 51
-    .line 52
-    monitor-enter v3
-
-    .line 53
-    :try_start_0
-    iget-object v1, v3, LX/6Jn;->A00:Ljava/util/Map;
-
-    .line 54
-    .line 55
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 56
-    .line 57
-    .line 58
-    move-result-object v0
-
-    .line 59
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 60
-    .line 61
-    .line 62
     move-result-object v2
 
-    .line 63
+    .line 48
+    return-object v2
+
+    .line 49
+    :pswitch_4
+    iget-object v3, p0, Lcom/google/ar/core/Session;->faceCache:LX/59j;
+
+    .line 50
+    .line 51
+    monitor-enter v3
+
+    .line 52
+    :try_start_0
+    iget-object v1, v3, LX/59j;->A00:Ljava/util/Map;
+
+    .line 53
+    .line 54
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 59
+    .line 60
+    .line 61
+    move-result-object v2
+
+    .line 62
     check-cast v2, Lcom/google/ar/core/AugmentedFace;
 
+    .line 63
     .line 64
-    .line 65
     if-nez v2, :cond_1
 
+    .line 65
     .line 66
-    .line 67
     new-instance v2, Lcom/google/ar/core/AugmentedFace;
 
+    .line 67
     .line 68
-    .line 69
     invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/AugmentedFace;-><init>(JLcom/google/ar/core/Session;)V
 
+    .line 69
     .line 70
     .line 71
-    .line 72
     invoke-interface {v1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 72
     .line 73
     .line 74
-    .line 75
     :cond_1
     monitor-exit v3
 
-    .line 76
+    .line 75
     return-object v2
 
-    .line 77
+    .line 76
     :catchall_0
     move-exception v0
 
-    .line 78
+    .line 77
     monitor-exit v3
 
-    .line 79
+    .line 78
     throw v0
 
-    .line 80
+    .line 79
     :pswitch_5
-    new-instance v2, Lcom/google/ar/core/DepthPoint;
+    new-instance v2, Lcom/google/ar/core/AugmentedImage;
 
+    .line 80
     .line 81
-    .line 82
-    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/DepthPoint;-><init>(JLcom/google/ar/core/Session;)V
+    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/AugmentedImage;-><init>(JLcom/google/ar/core/Session;)V
 
+    .line 82
     .line 83
     .line 84
-    .line 85
     return-object v2
+
+    .line 85
+    :pswitch_6
+    new-instance v2, Lcom/google/ar/core/Point;
 
     .line 86
-    :pswitch_6
-    new-instance v2, Lcom/google/ar/core/InstantPlacementPoint;
-
     .line 87
-    .line 88
-    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/InstantPlacementPoint;-><init>(JLcom/google/ar/core/Session;)V
+    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/Point;-><init>(JLcom/google/ar/core/Session;)V
 
+    .line 88
     .line 89
     .line 90
-    .line 91
     return-object v2
 
+    .line 91
+    :pswitch_7
+    new-instance v2, Lcom/google/ar/core/Plane;
+
     .line 92
+    .line 93
+    invoke-direct {v2, p1, p2, p0}, Lcom/google/ar/core/Plane;-><init>(JLcom/google/ar/core/Session;)V
+
+    .line 94
+    .line 95
+    .line 96
+    return-object v2
+
+    .line 97
     :cond_2
     iget-wide v0, p0, Lcom/google/ar/core/Session;->nativeSymbolTableHandle:J
 
-    .line 93
-    .line 94
+    .line 98
+    .line 99
     invoke-static {v0, v1, p1, p2}, Lcom/google/ar/core/TrackableBase;->nativeReleaseTrackable(JJ)V
 
-    .line 95
-    .line 96
-    .line 97
+    .line 100
+    .line 101
+    .line 102
     return-object v2
 
-    .line 98
+    .line 103
+    nop
+
+    .line 104
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
         :pswitch_1
-        :pswitch_0
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
+        :pswitch_7
         :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
     .end packed-switch
 .end method
 
@@ -1463,11 +1532,6 @@
     .line 12
     .line 13
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 14
-    .line 15
-    .line 16
     return-void
 .end method
 
@@ -1502,7 +1566,7 @@
     .locals 4
 
     .line 0
-    invoke-static {p1}, LX/5Ix;->a(Ljava/lang/Class;)LX/5Ix;
+    invoke-static {p1}, LX/59f;->a(Ljava/lang/Class;)LX/59f;
 
     .line 1
     .line 2
@@ -1510,7 +1574,7 @@
     move-result-object v3
 
     .line 4
-    sget-object v0, LX/5Ix;->b:LX/5Ix;
+    sget-object v0, LX/59f;->b:LX/59f;
 
     .line 5
     .line 6
@@ -1534,7 +1598,7 @@
 
     .line 14
     .line 15
-    iget v0, v3, LX/5Ix;->i:I
+    iget v0, v3, LX/59f;->j:I
 
     .line 16
     .line 17
@@ -1626,6 +1690,53 @@
     return-void
 .end method
 
+.method public getEarth()Lcom/google/ar/core/Earth;
+    .locals 5
+
+    .line 0
+    iget-wide v0, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 1
+    .line 2
+    invoke-direct {p0, v0, v1}, Lcom/google/ar/core/Session;->nativeAcquireEarth(J)J
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-wide v3
+
+    .line 6
+    const-wide/16 v1, 0x0
+
+    .line 7
+    .line 8
+    cmp-long v0, v3, v1
+
+    .line 9
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    new-instance v0, Lcom/google/ar/core/Earth;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, v3, v4, p0}, Lcom/google/ar/core/Earth;-><init>(JLcom/google/ar/core/Session;)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
+
+    .line 18
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 19
+    return-object v0
+.end method
+
 .method public getPlaybackStatus()Lcom/google/ar/core/PlaybackStatus;
     .locals 2
 
@@ -1700,7 +1811,7 @@
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 8
     .line 9
@@ -1765,7 +1876,7 @@
     array-length v5, v6
 
     .line 11
-    invoke-static {v5}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v5}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 12
     .line 13
@@ -1819,7 +1930,7 @@
 
     .line 36
     :cond_1
-    invoke-static {}, LX/4BF;->A0y()Ljava/lang/IllegalArgumentException;
+    invoke-static {}, LX/434;->A0q()Ljava/lang/IllegalArgumentException;
 
     .line 37
     .line 38
@@ -1946,6 +2057,29 @@
     return v0
 .end method
 
+.method public isGeospatialModeSupported(Lcom/google/ar/core/Config$GeospatialMode;)Z
+    .locals 3
+
+    .line 0
+    iget-wide v1, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
+
+    .line 1
+    .line 2
+    iget v0, p1, Lcom/google/ar/core/Config$GeospatialMode;->nativeCode:I
+
+    .line 3
+    .line 4
+    invoke-virtual {p0, v1, v2, v0}, Lcom/google/ar/core/Session;->nativeIsGeospatialModeSupported(JI)Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+.end method
+
 .method public isSharedCameraUsed()Z
     .locals 1
 
@@ -1954,7 +2088,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 3
     .line 4
@@ -1991,6 +2125,9 @@
 .method public native nativeAcquireAllTrackables(JI)[J
 .end method
 
+.method public native nativeCheckVpsAvailabilityAsync(JDDLcom/google/ar/core/VpsAvailabilityFuture$CallbackWrapper;)[J
+.end method
+
 .method public native nativeDestroySessionWrapper(J)V
 .end method
 
@@ -2001,6 +2138,9 @@
 .end method
 
 .method public native nativeIsDepthModeSupportedPrivate(JI)Z
+.end method
+
+.method public native nativeIsGeospatialModeSupported(JI)Z
 .end method
 
 .method public native nativeReleaseSessionOwnership(J)J
@@ -2139,7 +2279,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 14
     .line 15
@@ -2243,7 +2383,7 @@
 
     .line 10
     :cond_0
-    invoke-static {}, LX/4BF;->A0y()Ljava/lang/IllegalArgumentException;
+    invoke-static {}, LX/434;->A0q()Ljava/lang/IllegalArgumentException;
 
     .line 11
     .line 12

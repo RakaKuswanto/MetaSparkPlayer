@@ -1,109 +1,88 @@
-.class public final LX/2sK;
-.super Ljava/lang/Object;
+.class public final LX/2Sk;
+.super Ljava/io/OutputStream;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "PushWakefulExecutor$1"
 
 
 # instance fields
-.field public final synthetic A00:Landroid/os/PowerManager$WakeLock;
-
-.field public final synthetic A01:LX/2eI;
-
-.field public final synthetic A02:Ljava/lang/Runnable;
+.field public A00:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/PowerManager$WakeLock;LX/2eI;Ljava/lang/Runnable;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p2, p0, LX/2sK;->A01:LX/2eI;
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     .line 1
     .line 2
-    iput-object p3, p0, LX/2sK;->A02:Ljava/lang/Runnable;
-
     .line 3
+    const/4 v0, 0x0
+
     .line 4
-    iput-object p1, p0, LX/2sK;->A00:Landroid/os/PowerManager$WakeLock;
+    iput v0, p0, LX/2Sk;->A00:I
 
     .line 5
     .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final write(I)V
+    .locals 1
 
     .line 0
-    const-string v0, "PushWakefulExecutor.run"
+    iget v0, p0, LX/2Sk;->A00:I
 
     .line 1
     .line 2
-    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+    add-int/lit8 v0, v0, 0x1
 
     .line 3
     .line 4
+    iput v0, p0, LX/2Sk;->A00:I
+
     .line 5
-    :try_start_0
-    iget-object v0, p0, LX/2sK;->A02:Ljava/lang/Runnable;
-
     .line 6
-    .line 7
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 8
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/2sK;->A00:Landroid/os/PowerManager$WakeLock;
-
-    .line 11
-    .line 12
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
-    .line 16
-    .line 17
-    .line 18
     return-void
+.end method
 
-    .line 19
-    :catchall_0
-    move-exception v1
+.method public final write([B)V
+    .locals 2
 
-    .line 20
-    iget-object v0, p0, LX/2sK;->A00:Landroid/os/PowerManager$WakeLock;
+    .line 268435456
+    iget v1, p0, LX/2Sk;->A00:I
 
-    .line 21
-    .line 22
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+    .line 268435457
+    .line 268435458
+    array-length v0, p1
 
-    .line 23
-    .line 24
-    .line 25
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+    .line 268435459
+    add-int/2addr v1, v0
 
-    .line 26
-    .line 27
-    .line 28
-    throw v1
+    .line 268435460
+    iput v1, p0, LX/2Sk;->A00:I
+
+    .line 268435461
+    .line 268435462
+    return-void
+.end method
+
+.method public final write([BII)V
+    .locals 1
+
+    .line 536870912
+    iget v0, p0, LX/2Sk;->A00:I
+
+    .line 536870913
+    .line 536870914
+    add-int/2addr v0, p3
+
+    .line 536870915
+    iput v0, p0, LX/2Sk;->A00:I
+
+    .line 536870916
+    .line 536870917
+    return-void
 .end method

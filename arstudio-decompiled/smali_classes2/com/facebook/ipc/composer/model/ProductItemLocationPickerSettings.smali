@@ -33,21 +33,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x5
+    const/16 v0, 0x2a
 
     .line 1
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
-
     .line 2
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/ipc/composer/model/ProductItemLocationPickerSettings;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -60,7 +61,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -71,7 +72,7 @@
     const/4 v0, 0x1
 
     .line 8
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 9
     .line 10
@@ -83,7 +84,7 @@
 
     .line 13
     .line 14
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 15
     .line 16
@@ -95,7 +96,7 @@
 
     .line 19
     .line 20
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 21
     .line 22
@@ -212,7 +213,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A04(Z)I
+    invoke-static {v0}, LX/1O4;->A03(Z)I
 
     .line 3
     .line 4
@@ -224,27 +225,41 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 11
-    move-result v1
-
     .line 12
-    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ProductItemLocationPickerSettings;->A02:Z
-
     .line 13
-    .line 14
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
-
-    .line 15
-    .line 16
-    .line 17
     move-result v0
 
+    .line 14
+    add-int/2addr v1, v0
+
+    .line 15
+    iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ProductItemLocationPickerSettings;->A02:Z
+
+    .line 16
+    .line 17
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 18
-    return v0
+    .line 19
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    add-int/2addr v1, v0
+
+    .line 24
+    return v1
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V

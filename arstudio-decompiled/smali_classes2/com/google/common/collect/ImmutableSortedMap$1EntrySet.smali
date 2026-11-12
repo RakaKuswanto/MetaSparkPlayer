@@ -19,6 +19,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableSortedMap;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;->this$0:Lcom/google/common/collect/ImmutableSortedMap;
@@ -35,7 +43,7 @@
 
 
 # virtual methods
-.method public final iterator()LX/1bX;
+.method public final iterator()LX/1tw;
     .locals 1
 
     .line 0
@@ -47,7 +55,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 5
     .line 6
@@ -70,7 +78,7 @@
     move-result-object v0
 
     .line 268435460
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 268435461
     .line 268435462
@@ -78,5 +86,20 @@
     move-result-object v0
 
     .line 268435464
+    return-object v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableMapEntrySet;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     return-object v0
 .end method

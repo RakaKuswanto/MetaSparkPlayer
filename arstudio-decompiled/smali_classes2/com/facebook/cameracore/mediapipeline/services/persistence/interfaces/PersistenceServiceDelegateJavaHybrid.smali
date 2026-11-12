@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final mDelegate:LX/3hX;
+.field public final mDelegate:LX/3So;
 
 
 # direct methods
-.method public constructor <init>(LX/3hX;)V
+.method public constructor <init>(LX/3So;)V
     .locals 1
 
     .line 0
@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;->mDelegate:LX/3hX;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;->mDelegate:LX/3So;
 
     .line 4
     .line 5
@@ -41,59 +41,71 @@
 
 
 # virtual methods
-.method public get(Ljava/lang/String;)Ljava/lang/String;
+.method public get(Ljava/lang/String;Lcom/facebook/native_bridge/NativeDataPromise;)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;->mDelegate:LX/3hX;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;->mDelegate:LX/3So;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1}, LX/3hX;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1, p2}, LX/3So;->get(Ljava/lang/String;Lcom/facebook/native_bridge/NativeDataPromise;)V
 
     .line 3
     .line 4
     .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
+    return-void
 .end method
 
-.method public remove(Ljava/lang/String;)Z
-    .locals 1
+.method public getV2(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/facebook/native_bridge/NativeDataPromise;)V
+    .locals 0
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;->mDelegate:LX/3hX;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, LX/3hX;->remove(Ljava/lang/String;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    return v0
+    return-void
 .end method
 
-.method public set(Ljava/lang/String;Ljava/lang/String;)Z
+.method public remove(Ljava/lang/String;Lcom/facebook/native_bridge/NativeDataPromise;)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;->mDelegate:LX/3hX;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;->mDelegate:LX/3So;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2}, LX/3hX;->set(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v0, p1, p2}, LX/3So;->remove(Ljava/lang/String;Lcom/facebook/native_bridge/NativeDataPromise;)V
 
     .line 3
     .line 4
     .line 5
-    move-result v0
+    return-void
+.end method
 
-    .line 6
-    return v0
+.method public removeV2(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
+    .locals 0
+
+    .line 0
+    return-void
+.end method
+
+.method public set(Ljava/lang/String;Ljava/lang/String;Lcom/facebook/native_bridge/NativeDataPromise;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/persistence/interfaces/PersistenceServiceDelegateJavaHybrid;->mDelegate:LX/3So;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2, p3}, LX/3So;->set(Ljava/lang/String;Ljava/lang/String;Lcom/facebook/native_bridge/NativeDataPromise;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public setV2(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
+    .locals 0
+
+    .line 0
+    return-void
 .end method

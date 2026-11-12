@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract summary()LX/3Vh;
+.method public abstract summary()LX/39T;
 .end method

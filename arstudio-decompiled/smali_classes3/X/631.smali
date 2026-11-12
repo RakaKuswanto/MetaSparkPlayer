@@ -1,104 +1,429 @@
-.class public final LX/631;
-.super Ljava/lang/Object;
+.class public final enum LX/631;
+.super Ljava/lang/Enum;
 .source ""
 
 
+# static fields
+.field public static final synthetic $VALUES:[LX/631;
+
+.field public static final enum CAPTURE:LX/631;
+
+.field public static final enum CAPTURE_IMAGE:LX/631;
+
+.field public static final enum OVERLAY:LX/631;
+
+.field public static final enum PEER:LX/631;
+
+.field public static final enum PREVIEW:LX/631;
+
+.field public static final enum VIRTUAL:LX/631;
+
+
 # instance fields
-.field public final A00:Landroid/media/AudioAttributes;
+.field public final mOrder:I
 
 
 # direct methods
-.method public constructor <init>(LX/63A;)V
+.method public static synthetic $values()[LX/631;
     .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x6
 
     .line 1
+    new-array v2, v0, [LX/631;
+
     .line 2
     .line 3
-    new-instance v0, Landroid/media/AudioAttributes$Builder;
+    sget-object v1, LX/631;->VIRTUAL:LX/631;
 
     .line 4
     .line 5
-    invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
+    const/4 v0, 0x0
 
     .line 6
+    aput-object v1, v2, v0
+
     .line 7
     .line 8
-    const/4 v1, 0x0
+    sget-object v1, LX/631;->PREVIEW:LX/631;
 
     .line 9
-    invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
-
     .line 10
-    .line 11
-    .line 12
-    move-result-object v0
+    const/4 v0, 0x1
 
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
     .line 13
-    invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
+    sget-object v1, LX/631;->CAPTURE:LX/631;
 
     .line 14
     .line 15
+    const/4 v0, 0x2
+
     .line 16
-    move-result-object v1
+    aput-object v1, v2, v0
 
     .line 17
-    iget v0, p1, LX/63A;->A02:I
-
     .line 18
+    sget-object v1, LX/631;->CAPTURE_IMAGE:LX/631;
+
     .line 19
-    invoke-virtual {v1, v0}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
-
     .line 20
-    .line 21
-    .line 22
-    move-result-object v2
+    const/4 v0, 0x3
 
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
     .line 23
-    sget v1, Lcom/google/android/exoplayer2/util/Util;->A00:I
+    sget-object v1, LX/631;->OVERLAY:LX/631;
 
     .line 24
     .line 25
-    const/16 v0, 0x1d
+    const/4 v0, 0x4
 
     .line 26
-    .line 27
-    if-lt v1, v0, :cond_0
+    aput-object v1, v2, v0
 
+    .line 27
+    .line 28
+    sget-object v1, LX/631;->PEER:LX/631;
+
+    .line 29
+    .line 30
+    const/4 v0, 0x5
+
+    .line 31
+    aput-object v1, v2, v0
+
+    .line 32
+    .line 33
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v2, "VIRTUAL"
+
+    .line 1
+    .line 2
+    const/4 v3, 0x0
+
+    .line 3
+    const/4 v1, -0x1
+
+    .line 4
+    new-instance v0, LX/631;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v2, v3, v1}, LX/631;-><init>(Ljava/lang/String;II)V
+
+    .line 7
+    .line 8
+    .line 9
+    sput-object v0, LX/631;->VIRTUAL:LX/631;
+
+    .line 10
+    .line 11
+    const-string v1, "PREVIEW"
+
+    .line 12
+    .line 13
+    const/4 v2, 0x1
+
+    .line 14
+    new-instance v0, LX/631;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v1, v2, v3}, LX/631;-><init>(Ljava/lang/String;II)V
+
+    .line 17
+    .line 18
+    .line 19
+    sput-object v0, LX/631;->PREVIEW:LX/631;
+
+    .line 20
+    .line 21
+    const-string v1, "CAPTURE"
+
+    .line 22
+    .line 23
+    const/4 v3, 0x2
+
+    .line 24
+    new-instance v0, LX/631;
+
+    .line 25
+    .line 26
+    invoke-direct {v0, v1, v3, v2}, LX/631;-><init>(Ljava/lang/String;II)V
+
+    .line 27
     .line 28
     .line 29
-    invoke-static {v2}, LX/64C;->A00(Landroid/media/AudioAttributes$Builder;)V
+    sput-object v0, LX/631;->CAPTURE:LX/631;
 
     .line 30
     .line 31
-    .line 32
-    const/16 v0, 0x20
+    const-string v1, "CAPTURE_IMAGE"
 
+    .line 32
     .line 33
+    const/4 v2, 0x3
+
     .line 34
-    if-lt v1, v0, :cond_0
+    new-instance v0, LX/631;
 
     .line 35
     .line 36
-    invoke-static {v2}, LX/64B;->A00(Landroid/media/AudioAttributes$Builder;)V
+    invoke-direct {v0, v1, v2, v3}, LX/631;-><init>(Ljava/lang/String;II)V
 
     .line 37
     .line 38
     .line 39
-    :cond_0
-    invoke-virtual {v2}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+    sput-object v0, LX/631;->CAPTURE_IMAGE:LX/631;
 
     .line 40
     .line 41
-    .line 42
-    move-result-object v0
+    const-string v1, "OVERLAY"
 
+    .line 42
     .line 43
-    iput-object v0, p0, LX/631;->A00:Landroid/media/AudioAttributes;
+    const/4 v3, 0x4
 
     .line 44
+    new-instance v0, LX/631;
+
     .line 45
+    .line 46
+    invoke-direct {v0, v1, v3, v2}, LX/631;-><init>(Ljava/lang/String;II)V
+
+    .line 47
+    .line 48
+    .line 49
+    sput-object v0, LX/631;->OVERLAY:LX/631;
+
+    .line 50
+    .line 51
+    const-string v2, "PEER"
+
+    .line 52
+    .line 53
+    const/4 v1, 0x5
+
+    .line 54
+    new-instance v0, LX/631;
+
+    .line 55
+    .line 56
+    invoke-direct {v0, v2, v1, v3}, LX/631;-><init>(Ljava/lang/String;II)V
+
+    .line 57
+    .line 58
+    .line 59
+    sput-object v0, LX/631;->PEER:LX/631;
+
+    .line 60
+    .line 61
+    invoke-static {}, LX/631;->$values()[LX/631;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v0
+
+    .line 65
+    sput-object v0, LX/631;->$VALUES:[LX/631;
+
+    .line 66
+    .line 67
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput p3, p0, LX/631;->mOrder:I
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static forOutput(LX/632;)LX/631;
+    .locals 2
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    packed-switch v0, :pswitch_data_0
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    const-string v0, "Not FrameTargetHint for output: "
+
+    .line 12
+    .line 13
+    invoke-static {p0, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    throw v0
+
+    .line 22
+    :pswitch_0
+    sget-object v0, LX/631;->PREVIEW:LX/631;
+
+    .line 23
+    .line 24
+    return-object v0
+
+    .line 25
+    :pswitch_1
+    sget-object v0, LX/631;->CAPTURE:LX/631;
+
+    .line 26
+    .line 27
+    return-object v0
+
+    .line 28
+    :pswitch_2
+    sget-object v0, LX/631;->CAPTURE_IMAGE:LX/631;
+
+    .line 29
+    .line 30
+    return-object v0
+
+    .line 31
+    :pswitch_3
+    sget-object v0, LX/631;->OVERLAY:LX/631;
+
+    .line 32
+    .line 33
+    return-object v0
+
+    .line 34
+    :pswitch_4
+    sget-object v0, LX/631;->PEER:LX/631;
+
+    .line 35
+    .line 36
+    return-object v0
+
+    .line 37
+    :pswitch_5
+    sget-object v0, LX/631;->VIRTUAL:LX/631;
+
+    .line 38
+    .line 39
+    return-object v0
+
+    .line 40
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+    .end packed-switch
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/631;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/631;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/631;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/631;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/631;->$VALUES:[LX/631;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/631;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getOrder()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/631;->mOrder:I
+
+    .line 1
+    .line 2
+    return v0
 .end method

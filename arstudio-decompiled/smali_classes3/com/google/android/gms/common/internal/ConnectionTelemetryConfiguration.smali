@@ -26,21 +26,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x7
+    const/16 v0, 0x48
 
     .line 1
-    invoke-static {v0}, LX/58O;->A02(I)LX/58O;
-
     .line 2
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/google/android/gms/common/internal/ConnectionTelemetryConfiguration;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -70,7 +71,7 @@
     .locals 3
 
     .line 0
-    invoke-static {p1}, LX/57v;->A00(Landroid/os/Parcel;)I
+    invoke-static {p1}, LX/51b;->A00(Landroid/os/Parcel;)I
 
     .line 1
     .line 2
@@ -85,7 +86,7 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-static {p1, v1, v0, p2}, LX/57v;->A07(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
+    invoke-static {p1, v1, v0, p2}, LX/51b;->A05(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
 
     .line 8
     .line 9
@@ -97,7 +98,7 @@
     const/4 v0, 0x2
 
     .line 13
-    invoke-static {p1, v0, v1}, LX/57v;->A06(Landroid/os/Parcel;IZ)V
+    invoke-static {p1, v0, v1}, LX/51b;->A04(Landroid/os/Parcel;IZ)V
 
     .line 14
     .line 15
@@ -109,7 +110,7 @@
     const/4 v0, 0x3
 
     .line 19
-    invoke-static {p1, v0, v1}, LX/57v;->A06(Landroid/os/Parcel;IZ)V
+    invoke-static {p1, v0, v1}, LX/51b;->A04(Landroid/os/Parcel;IZ)V
 
     .line 20
     .line 21
@@ -125,7 +126,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1, v0}, LX/57v;->A01(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, LX/51b;->A01(Landroid/os/Parcel;I)I
 
     .line 28
     .line 29
@@ -138,7 +139,7 @@
     .line 32
     .line 33
     .line 34
-    invoke-static {p1, v0}, LX/57v;->A03(Landroid/os/Parcel;I)V
+    invoke-static {p1, v0}, LX/51b;->A02(Landroid/os/Parcel;I)V
 
     .line 35
     .line 36
@@ -151,7 +152,7 @@
     const/4 v0, 0x5
 
     .line 40
-    invoke-static {p1, v0, v1}, LX/57v;->A04(Landroid/os/Parcel;II)V
+    invoke-static {p1, v0, v1}, LX/51b;->A03(Landroid/os/Parcel;II)V
 
     .line 41
     .line 42
@@ -167,7 +168,7 @@
 
     .line 47
     .line 48
-    invoke-static {p1, v0}, LX/57v;->A01(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, LX/51b;->A01(Landroid/os/Parcel;I)I
 
     .line 49
     .line 50
@@ -180,13 +181,13 @@
     .line 53
     .line 54
     .line 55
-    invoke-static {p1, v0}, LX/57v;->A03(Landroid/os/Parcel;I)V
+    invoke-static {p1, v0}, LX/51b;->A02(Landroid/os/Parcel;I)V
 
     .line 56
     .line 57
     .line 58
     :cond_1
-    invoke-static {p1, v2}, LX/57v;->A03(Landroid/os/Parcel;I)V
+    invoke-static {p1, v2}, LX/51b;->A02(Landroid/os/Parcel;I)V
 
     .line 59
     .line 60

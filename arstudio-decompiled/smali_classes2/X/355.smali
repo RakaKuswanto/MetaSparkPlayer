@@ -4,17 +4,13 @@
 
 
 # instance fields
-.field public A00:I
+.field public final A00:LX/2pn;
 
-.field public A01:Ljava/lang/Object;
-
-.field public A02:Ljava/lang/String;
-
-.field public A03:Ljava/lang/String;
+.field public final A01:LX/0I5;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/0I5;LX/2pn;)V
     .locals 0
 
     .line 0
@@ -23,222 +19,258 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
-
-.method public static A00(Lorg/json/JSONArray;)Ljava/util/LinkedList;
-    .locals 6
-
-    .line 0
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v5
+    iput-object p2, p0, LX/355;->A00:LX/2pn;
 
     .line 4
-    const/4 v4, 0x0
-
     .line 5
-    :goto_0
-    invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
+    iput-object p1, p0, LX/355;->A01:LX/0I5;
 
     .line 6
     .line 7
-    .line 8
-    move-result v0
-
-    .line 9
-    if-ge v4, v0, :cond_1
-
-    .line 10
-    .line 11
-    invoke-virtual {p0, v4}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v3
-
-    .line 15
-    new-instance v2, LX/355;
-
-    .line 16
-    .line 17
-    invoke-direct {v2}, LX/355;-><init>()V
-
-    .line 18
-    .line 19
-    .line 20
-    const-string v0, "config"
-
-    .line 21
-    .line 22
-    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    iput-object v0, v2, LX/355;->A02:Ljava/lang/String;
-
-    .line 27
-    .line 28
-    const-string/jumbo v0, "key"
-
-    .line 29
-    .line 30
-    .line 31
-    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    .line 32
-    .line 33
-    .line 34
-    move-result v0
-
-    .line 35
-    iput v0, v2, LX/355;->A00:I
-
-    .line 36
-    .line 37
-    const-string/jumbo v0, "value"
-
-    .line 38
-    .line 39
-    .line 40
-    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->opt(Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v1
-
-    .line 44
-    iput-object v1, v2, LX/355;->A01:Ljava/lang/Object;
-
-    .line 45
-    .line 46
-    sget-object v0, Lorg/json/JSONObject;->NULL:Ljava/lang/Object;
-
-    .line 47
-    .line 48
-    if-ne v1, v0, :cond_0
-
-    .line 49
-    .line 50
-    const/4 v0, 0x0
-
-    .line 51
-    iput-object v0, v2, LX/355;->A01:Ljava/lang/Object;
-
-    .line 52
-    .line 53
-    :cond_0
-    const-string/jumbo v0, "param_name"
-
-    .line 54
-    .line 55
-    .line 56
-    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 57
-    .line 58
-    .line 59
-    move-result-object v0
-
-    .line 60
-    iput-object v0, v2, LX/355;->A03:Ljava/lang/String;
-
-    .line 61
-    .line 62
-    invoke-virtual {v5, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 63
-    .line 64
-    .line 65
-    add-int/lit8 v4, v4, 0x1
-
-    .line 66
-    .line 67
-    goto :goto_0
-
-    .line 68
-    :cond_1
-    return-object v5
+    return-void
 .end method
 
 
 # virtual methods
-.method public final A01()Landroid/util/Pair;
-    .locals 3
+.method public final A00(JJ)V
+    .locals 8
 
     .line 0
-    iget v2, p0, LX/355;->A00:I
+    const-wide/16 v1, 0x4e20
 
     .line 1
     .line 2
-    const/4 v0, -0x1
+    cmp-long v0, p1, v1
 
     .line 3
-    if-eq v2, v0, :cond_0
-
     .line 4
+    if-ltz v0, :cond_3
+
     .line 5
-    const/16 v0, 0x4000
-
     .line 6
+    const-wide/16 v1, 0x14
+
     .line 7
-    if-lt v2, v0, :cond_1
-
     .line 8
+    cmp-long v0, p3, v1
+
     .line 9
-    :cond_0
-    iget-object v1, p0, LX/355;->A03:Ljava/lang/String;
-
     .line 10
+    if-ltz v0, :cond_3
+
     .line 11
-    if-eqz v1, :cond_1
-
     .line 12
+    const-wide/16 v0, 0x2710
+
     .line 13
-    iget-object v0, p0, LX/355;->A02:Ljava/lang/String;
-
     .line 14
-    .line 15
-    invoke-static {v0, v1}, LX/0Yj;->A0A(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+    div-long v2, p1, v0
 
+    .line 15
     .line 16
+    const-wide/16 v0, 0xa
+
     .line 17
     .line 18
-    move-result-object v0
+    div-long v0, p3, v0
 
     .line 19
-    return-object v0
-
     .line 20
-    :cond_1
-    iget-object v1, p0, LX/355;->A02:Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     .line 21
     .line 22
-    invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
     .line 23
+    move-result-wide v0
+
     .line 24
+    long-to-int v4, v0
+
     .line 25
-    move-result-object v0
+    int-to-long v0, v4
 
     .line 26
-    invoke-static {v1, v0}, LX/0Yj;->A0A(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+    div-long v2, p1, v0
 
     .line 27
     .line 28
-    .line 29
-    move-result-object v0
+    div-long v0, p3, v0
 
+    .line 29
     .line 30
-    return-object v0
+    add-int/lit8 v7, v4, -0x1
+
+    .line 31
+    .line 32
+    :goto_0
+    if-lez v7, :cond_3
+
+    .line 33
+    .line 34
+    const-wide/16 v5, 0x2710
+
+    .line 35
+    .line 36
+    cmp-long v4, v2, v5
+
+    .line 37
+    .line 38
+    if-ltz v4, :cond_0
+
+    .line 39
+    .line 40
+    const-wide/16 v5, 0xa
+
+    .line 41
+    .line 42
+    cmp-long v4, v0, v5
+
+    .line 43
+    .line 44
+    if-gez v4, :cond_1
+
+    .line 45
+    .line 46
+    :cond_0
+    const-wide/32 v5, 0xc350
+
+    .line 47
+    .line 48
+    .line 49
+    cmp-long v4, v2, v5
+
+    .line 50
+    .line 51
+    if-ltz v4, :cond_2
+
+    .line 52
+    .line 53
+    const-wide/16 v5, 0x0
+
+    .line 54
+    .line 55
+    cmp-long v4, v0, v5
+
+    .line 56
+    .line 57
+    if-lez v4, :cond_2
+
+    .line 58
+    .line 59
+    :cond_1
+    iget-object v4, p0, LX/355;->A00:LX/2pn;
+
+    .line 60
+    .line 61
+    invoke-virtual {v4, v2, v3, v0, v1}, LX/2pn;->A05(JJ)V
+
+    .line 62
+    .line 63
+    .line 64
+    :cond_2
+    add-int/lit8 v7, v7, -0x1
+
+    .line 65
+    .line 66
+    sub-long/2addr p1, v2
+
+    .line 67
+    sub-long/2addr p3, v0
+
+    .line 68
+    goto :goto_0
+
+    .line 69
+    :cond_3
+    const-wide/16 v1, 0x2710
+
+    .line 70
+    .line 71
+    cmp-long v0, p1, v1
+
+    .line 72
+    .line 73
+    if-ltz v0, :cond_4
+
+    .line 74
+    .line 75
+    const-wide/16 v1, 0xa
+
+    .line 76
+    .line 77
+    cmp-long v0, p3, v1
+
+    .line 78
+    .line 79
+    if-gez v0, :cond_5
+
+    .line 80
+    .line 81
+    :cond_4
+    const-wide/32 v1, 0xc350
+
+    .line 82
+    .line 83
+    .line 84
+    cmp-long v0, p1, v1
+
+    .line 85
+    .line 86
+    if-ltz v0, :cond_7
+
+    .line 87
+    .line 88
+    const-wide/16 v1, 0x0
+
+    .line 89
+    .line 90
+    cmp-long v0, p3, v1
+
+    .line 91
+    .line 92
+    if-lez v0, :cond_7
+
+    .line 93
+    .line 94
+    :cond_5
+    :goto_1
+    iget-object v0, p0, LX/355;->A00:LX/2pn;
+
+    .line 95
+    .line 96
+    invoke-virtual {v0, p1, p2, p3, p4}, LX/2pn;->A05(JJ)V
+
+    .line 97
+    .line 98
+    .line 99
+    :cond_6
+    return-void
+
+    .line 100
+    :cond_7
+    const-wide/16 v1, 0x2710
+
+    .line 101
+    .line 102
+    cmp-long v0, p1, v1
+
+    .line 103
+    .line 104
+    if-ltz v0, :cond_6
+
+    .line 105
+    .line 106
+    const-wide/16 v1, 0x0
+
+    .line 107
+    .line 108
+    cmp-long v0, p3, v1
+
+    .line 109
+    .line 110
+    if-lez v0, :cond_6
+
+    .line 111
+    .line 112
+    goto :goto_1
 .end method

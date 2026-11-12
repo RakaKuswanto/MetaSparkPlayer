@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/4RY;
+.implements LX/4Ti;
 
 
 # instance fields

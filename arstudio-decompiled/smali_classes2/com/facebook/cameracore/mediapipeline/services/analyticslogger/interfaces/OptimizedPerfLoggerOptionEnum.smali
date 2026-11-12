@@ -18,93 +18,129 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public static synthetic $values()[Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+    .locals 3
 
     .line 0
-    const-string v0, "USE_DEFAULT"
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    const/4 v6, 0x0
+    new-array v2, v0, [Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
+    .line 2
     .line 3
-    new-instance v5, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->USE_DEFAULT:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
     .line 4
     .line 5
-    invoke-direct {v5, v0, v6, v6}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;-><init>(Ljava/lang/String;II)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->OVERRIDE_ENABLE_OPTIMIZED:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->OVERRIDE_DISABLE_OPTIMIZED:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "USE_DEFAULT"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;-><init>(Ljava/lang/String;II)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v5, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->USE_DEFAULT:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->USE_DEFAULT:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
     .line 9
     .line 10
-    const-string v0, "OVERRIDE_ENABLE_OPTIMIZED"
+    const-string v2, "OVERRIDE_ENABLE_OPTIMIZED"
 
     .line 11
     .line 12
-    const/4 v4, 0x1
+    const/4 v1, 0x1
 
     .line 13
-    new-instance v3, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
     .line 14
     .line 15
-    invoke-direct {v3, v0, v4, v4}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;-><init>(Ljava/lang/String;II)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v3, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->OVERRIDE_ENABLE_OPTIMIZED:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->OVERRIDE_ENABLE_OPTIMIZED:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
     .line 19
     .line 20
-    const-string v0, "OVERRIDE_DISABLE_OPTIMIZED"
+    const-string v2, "OVERRIDE_DISABLE_OPTIMIZED"
 
     .line 21
     .line 22
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
     .line 23
-    new-instance v1, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+    new-instance v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
     .line 24
     .line 25
-    invoke-direct {v1, v0, v2, v2}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;-><init>(Ljava/lang/String;II)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v1, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->OVERRIDE_DISABLE_OPTIMIZED:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->OVERRIDE_DISABLE_OPTIMIZED:Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
     .line 29
     .line 30
-    const/4 v0, 0x3
+    invoke-static {}, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->$values()[Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
     .line 31
-    new-array v0, v0, [Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
-
     .line 32
     .line 33
-    aput-object v5, v0, v6
+    move-result-object v0
 
     .line 34
-    .line 35
-    aput-object v3, v0, v4
-
-    .line 36
-    .line 37
-    aput-object v1, v0, v2
-
-    .line 38
-    .line 39
     sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;->$VALUES:[Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/OptimizedPerfLoggerOptionEnum;
 
-    .line 40
-    .line 41
+    .line 35
+    .line 36
     return-void
 .end method
 

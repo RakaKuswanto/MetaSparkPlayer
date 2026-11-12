@@ -3,31 +3,27 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/webrtc/TextureBufferImpl;
 
-.field public final synthetic f$1:Lorg/webrtc/TextureBufferImpl$RefCountMonitor;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/TextureBufferImpl;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
+.method public synthetic constructor <init>(Lorg/webrtc/TextureBufferImpl;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda0;->f$0:Lorg/webrtc/TextureBufferImpl;
 
-    iput-object p2, p0, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda0;->f$1:Lorg/webrtc/TextureBufferImpl$RefCountMonitor;
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final call()Ljava/lang/Object;
     .locals 2
 
     .line 0
@@ -35,14 +31,17 @@
 
     .line 1
     .line 2
-    iget-object v0, p0, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda0;->f$1:Lorg/webrtc/TextureBufferImpl$RefCountMonitor;
+    iget-object v0, v1, Lorg/webrtc/TextureBufferImpl;->yuvConverter:Lorg/webrtc/YuvConverter;
 
     .line 3
     .line 4
-    invoke-interface {v0, v1}, Lorg/webrtc/TextureBufferImpl$RefCountMonitor;->onDestroy(Lorg/webrtc/TextureBufferImpl;)V
+    invoke-virtual {v0, v1}, Lorg/webrtc/YuvConverter;->convert(Lorg/webrtc/VideoFrame$TextureBuffer;)Lorg/webrtc/VideoFrame$I420Buffer;
 
     .line 5
     .line 6
     .line 7
-    return-void
+    move-result-object v0
+
+    .line 8
+    return-object v0
 .end method

@@ -17,6 +17,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableCollection;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "collection"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

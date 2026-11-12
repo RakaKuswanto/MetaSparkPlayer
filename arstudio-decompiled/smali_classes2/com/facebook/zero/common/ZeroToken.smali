@@ -17,7 +17,7 @@
 
 .field public final A01:I
 
-.field public final A02:LX/1lk;
+.field public final A02:LX/1lI;
 
 .field public final A03:Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;
 
@@ -62,18 +62,18 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 23
+    .locals 24
 
     .line 0
     sget-object v8, Lcom/google/common/collect/RegularImmutableSet;->A05:Lcom/google/common/collect/RegularImmutableSet;
 
     .line 1
     .line 2
-    new-instance v2, LX/1lk;
+    new-instance v2, LX/1lI;
 
     .line 3
     .line 4
-    invoke-direct {v2}, LX/1lk;-><init>()V
+    invoke-direct {v2}, LX/1lI;-><init>()V
 
     .line 5
     .line 6
@@ -165,30 +165,35 @@
 
     .line 45
     .line 46
-    invoke-direct/range {v0 .. v22}, Lcom/facebook/zero/common/ZeroToken;-><init>(Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;LX/1lk;Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableSet;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    move/from16 v23, v22
 
     .line 47
     .line 48
-    .line 49
-    sput-object v0, Lcom/facebook/zero/common/ZeroToken;->A0N:Lcom/facebook/zero/common/ZeroToken;
+    invoke-direct/range {v0 .. v23}, Lcom/facebook/zero/common/ZeroToken;-><init>(Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;LX/1lI;Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableSet;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
 
+    .line 49
     .line 50
     .line 51
-    const/4 v0, 0x3
+    sput-object v0, Lcom/facebook/zero/common/ZeroToken;->A0N:Lcom/facebook/zero/common/ZeroToken;
 
     .line 52
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
-
     .line 53
+    const/16 v0, 0x4e
+
     .line 54
     .line 55
-    move-result-object v0
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 56
-    sput-object v0, Lcom/facebook/zero/common/ZeroToken;->CREATOR:Landroid/os/Parcelable$Creator;
-
     .line 57
     .line 58
+    move-result-object v0
+
+    .line 59
+    sput-object v0, Lcom/facebook/zero/common/ZeroToken;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 60
+    .line 61
     return-void
 .end method
 
@@ -293,7 +298,7 @@
     move-result-object v0
 
     .line 49
-    invoke-static {v0}, LX/6Aa;->A00(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSet;
+    invoke-static {v0}, LX/6QN;->A00(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSet;
 
     .line 50
     .line 51
@@ -430,7 +435,7 @@
 
     .line 117
     .line 118
-    invoke-static {}, LX/0Ye;->A0K()Lcom/google/common/collect/ImmutableMap$Builder;
+    invoke-static {}, LX/0X2;->A0X()Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 119
     .line 120
@@ -438,11 +443,11 @@
     move-result-object v3
 
     .line 122
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 123
     .line 124
-    invoke-static {v0}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    invoke-static {v0}, LX/001;->A0d(Ljava/util/AbstractMap;)Ljava/util/Iterator;
 
     .line 125
     .line 126
@@ -459,11 +464,11 @@
     move-result v0
 
     .line 132
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 133
     .line 134
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 135
     .line 136
@@ -496,19 +501,19 @@
 
     .line 150
     :cond_0
-    invoke-virtual {v3}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+    const/4 v0, 0x0
 
     .line 151
-    .line 152
-    .line 153
-    move-result-object v0
-
-    .line 154
     goto :goto_1
 
-    .line 155
+    .line 152
     :cond_1
-    const/4 v0, 0x0
+    invoke-virtual {v3}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+
+    .line 153
+    .line 154
+    .line 155
+    move-result-object v0
 
     .line 156
     :goto_1
@@ -565,7 +570,7 @@
     .line 181
     .line 182
     :try_start_0
-    invoke-static {}, LX/27s;->A00()LX/27s;
+    invoke-static {}, LX/40i;->A01()LX/40i;
 
     .line 183
     .line 184
@@ -577,7 +582,7 @@
 
     .line 187
     .line 188
-    invoke-virtual {v1, v2, v0}, LX/28I;->A0A(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v2, v0}, LX/40h;->A0B(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 189
     .line 190
@@ -601,7 +606,7 @@
     move-exception v2
 
     .line 197
-    const-class v1, LX/1VM;
+    const-class v1, LX/1pg;
 
     .line 198
     .line 199
@@ -609,7 +614,7 @@
 
     .line 200
     .line 201
-    invoke-static {v1, v0, v2}, LX/0Jt;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 202
     .line 203
@@ -722,257 +727,257 @@
     move-result-object v10
 
     .line 259
-    const-string v0, "cooldown_in_sec"
+    const-string/jumbo v0, "cooldown_in_sec"
 
     .line 260
     .line 261
+    .line 262
     invoke-virtual {v4, v0}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    .line 262
     .line 263
     .line 264
+    .line 265
     move-result-wide v6
 
-    .line 265
+    .line 266
     const-string/jumbo v0, "logo_url"
 
-    .line 266
     .line 267
     .line 268
+    .line 269
     invoke-virtual {v4, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 269
     .line 270
     .line 271
+    .line 272
     move-result-object v11
 
-    .line 272
-    new-instance v4, LX/1ln;
-
     .line 273
-    .line 274
-    invoke-direct/range {v4 .. v11}, LX/1ln;-><init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v4, LX/1pi;
 
+    .line 274
     .line 275
+    invoke-direct/range {v4 .. v11}, LX/1pi;-><init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
     .line 276
     .line 277
+    .line 278
     invoke-virtual {v3, v4}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
-    .line 278
     .line 279
     .line 280
+    .line 281
     add-int/lit8 v1, v1, 0x1
 
-    .line 281
     .line 282
+    .line 283
     goto :goto_3
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 283
+    .line 284
     :catch_1
     move-exception v2
 
-    .line 284
-    const-string v1, "ZeroStatusUpdateContentRetriever"
-
     .line 285
-    .line 286
-    const-string v0, "Error de-serializing status update content string"
+    const-string/jumbo v1, "ZeroStatusUpdateContentRetriever"
 
+    .line 286
     .line 287
     .line 288
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v0, "Error de-serializing status update content string"
 
     .line 289
     .line 290
+    invoke-static {v1, v0, v2}, LX/0Il;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 291
+    .line 292
+    .line 293
     :cond_2
     invoke-virtual {v3}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
-    .line 292
-    .line 293
     .line 294
+    .line 295
+    .line 296
     move-result-object v0
 
-    .line 295
-    iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A06:Lcom/google/common/collect/ImmutableList;
-
-    .line 296
     .line 297
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A06:Lcom/google/common/collect/ImmutableList;
 
     .line 298
     .line 299
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 300
+    .line 301
+    .line 302
     move-result-object v2
 
-    .line 301
-    :try_start_2
-    invoke-static {}, LX/27s;->A00()LX/27s;
-
-    .line 302
     .line 303
+    :try_start_2
+    invoke-static {}, LX/40i;->A01()LX/40i;
+
     .line 304
+    .line 305
+    .line 306
     move-result-object v1
 
-    .line 305
-    const-class v0, Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;
-
-    .line 306
     .line 307
-    invoke-virtual {v1, v2, v0}, LX/28I;->A0A(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    const-class v0, Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;
 
     .line 308
     .line 309
+    invoke-virtual {v1, v2, v0}, LX/40h;->A0B(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
     .line 310
+    .line 311
+    .line 312
     move-result-object v0
 
-    .line 311
+    .line 313
     check-cast v0, Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;
 
-    .line 312
-    .line 313
+    .line 314
+    .line 315
     goto :goto_4
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 314
+    .line 316
     :catch_2
     const/4 v0, 0x0
 
-    .line 315
+    .line 317
     :goto_4
     iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0M:Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;
 
-    .line 316
-    .line 317
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
     .line 318
     .line 319
-    .line 320
-    move-result-object v0
-
-    .line 321
-    invoke-static {v0}, LX/1ll;->A00(Ljava/lang/String;)LX/1lk;
-
-    .line 322
-    .line 323
-    .line 324
-    move-result-object v0
-
-    .line 325
-    iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lk;
-
-    .line 326
-    .line 327
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 320
+    .line 321
+    .line 322
+    move-result-object v0
+
+    .line 323
+    invoke-static {v0}, LX/1lH;->A00(Ljava/lang/String;)LX/1lI;
+
+    .line 324
+    .line 325
+    .line 326
+    move-result-object v0
+
+    .line 327
+    iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lI;
 
     .line 328
     .line 329
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 330
+    .line 331
+    .line 332
     move-result-object v0
 
-    .line 331
+    .line 333
     iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0D:Ljava/lang/String;
 
-    .line 332
-    .line 333
+    .line 334
+    .line 335
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;LX/1lk;Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableSet;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 2
+.method public constructor <init>(Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;LX/1lI;Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableSet;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
+    .locals 1
 
-    const/4 v0, 0x0
-
-    .line 268927540
+    .line 268557276
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268927541
+    .line 268557277
     iput-object p9, p0, Lcom/facebook/zero/common/ZeroToken;->A09:Ljava/lang/String;
 
-    .line 268927542
+    .line 268557278
     iput-object p10, p0, Lcom/facebook/zero/common/ZeroToken;->A0J:Ljava/lang/String;
 
-    .line 268927543
+    .line 268557279
     iput-object p11, p0, Lcom/facebook/zero/common/ZeroToken;->A0I:Ljava/lang/String;
 
-    .line 268927544
+    .line 268557280
     iput-object p12, p0, Lcom/facebook/zero/common/ZeroToken;->A0C:Ljava/lang/String;
 
-    .line 268927545
+    .line 268557281
     iput-object p13, p0, Lcom/facebook/zero/common/ZeroToken;->A0A:Ljava/lang/String;
 
-    .line 268927546
-    move-object/from16 v1, p14
+    .line 268557282
+    iput-object p14, p0, Lcom/facebook/zero/common/ZeroToken;->A0B:Ljava/lang/String;
 
-    iput-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0B:Ljava/lang/String;
-
-    .line 268927547
+    .line 268557283
     iput-object p8, p0, Lcom/facebook/zero/common/ZeroToken;->A08:Lcom/google/common/collect/ImmutableSet;
 
-    .line 268927548
-    iput-object p2, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lk;
+    .line 268557284
+    iput-object p2, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lI;
 
-    .line 268927549
+    .line 268557285
     iput-object p4, p0, Lcom/facebook/zero/common/ZeroToken;->A05:Lcom/google/common/collect/ImmutableList;
 
-    .line 268927550
-    move-object/from16 v1, p15
+    .line 268557286
+    move-object/from16 v0, p15
 
-    iput-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0L:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0L:Ljava/lang/String;
 
-    .line 268927551
+    .line 268557287
     iput-object p5, p0, Lcom/facebook/zero/common/ZeroToken;->A04:Lcom/google/common/collect/ImmutableList;
 
-    .line 268927552
+    .line 268557288
     iput-object p7, p0, Lcom/facebook/zero/common/ZeroToken;->A07:Lcom/google/common/collect/ImmutableMap;
 
-    .line 268927553
-    move-object/from16 v1, p18
+    .line 268557289
+    move-object/from16 v0, p18
 
-    iput-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0H:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0H:Ljava/lang/String;
 
-    .line 268927554
-    move-object/from16 v1, p19
+    .line 268557290
+    move-object/from16 v0, p19
 
-    iput-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0G:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0G:Ljava/lang/String;
 
-    .line 268927555
+    .line 268557291
+    move/from16 v0, p23
+
     iput v0, p0, Lcom/facebook/zero/common/ZeroToken;->A00:I
 
-    .line 268927556
+    .line 268557292
     move/from16 v0, p22
 
     iput v0, p0, Lcom/facebook/zero/common/ZeroToken;->A01:I
 
-    .line 268927557
+    .line 268557293
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0K:Ljava/lang/String;
 
-    .line 268927558
+    .line 268557294
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0F:Ljava/lang/String;
 
-    .line 268927559
+    .line 268557295
     move-object/from16 v0, p20
 
     iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0E:Ljava/lang/String;
 
-    .line 268927560
+    .line 268557296
     iput-object p3, p0, Lcom/facebook/zero/common/ZeroToken;->A03:Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;
 
-    .line 268927561
+    .line 268557297
     iput-object p6, p0, Lcom/facebook/zero/common/ZeroToken;->A06:Lcom/google/common/collect/ImmutableList;
 
-    .line 268927562
+    .line 268557298
     iput-object p1, p0, Lcom/facebook/zero/common/ZeroToken;->A0M:Lcom/facebook/zero/common/ZeroDogfoodingSettingsParams;
 
-    .line 268927563
+    .line 268557299
     move-object/from16 v0, p21
 
     iput-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A0D:Ljava/lang/String;
@@ -1145,7 +1150,7 @@
 
     .line 74
     .line 75
-    invoke-static {v0, v1}, LX/0Ye;->A1X(ILjava/lang/Object;)Z
+    invoke-static {v0, v1}, LX/0X2;->A1Q(ILjava/lang/Object;)Z
 
     .line 76
     .line 77
@@ -1177,11 +1182,11 @@
 
     .line 90
     .line 91
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lk;
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lI;
 
     .line 92
     .line 93
-    iget-object v0, p1, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lk;
+    iget-object v0, p1, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lI;
 
     .line 94
     .line 95
@@ -1385,7 +1390,7 @@
 
     .line 194
     .line 195
-    invoke-static {v1, v0}, LX/0Yf;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0X3;->A1Z(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 196
     .line 197
@@ -1479,168 +1484,158 @@
 
     .line 35
     .line 36
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2, v0}, LX/0X5;->A1R([Ljava/lang/Object;I)V
 
     .line 37
     .line 38
     .line 39
-    move-result-object v1
-
-    .line 40
-    const/4 v0, 0x6
-
-    .line 41
-    aput-object v1, v2, v0
-
-    .line 42
-    .line 43
     iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A08:Lcom/google/common/collect/ImmutableSet;
 
-    .line 44
-    .line 45
+    .line 40
+    .line 41
     const/4 v0, 0x7
 
-    .line 46
+    .line 42
     aput-object v1, v2, v0
+
+    .line 43
+    .line 44
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lI;
+
+    .line 45
+    .line 46
+    const/16 v0, 0x8
 
     .line 47
     .line 48
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lk;
+    aput-object v1, v2, v0
 
     .line 49
     .line 50
-    const/16 v0, 0x8
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A05:Lcom/google/common/collect/ImmutableList;
 
     .line 51
     .line 52
-    aput-object v1, v2, v0
+    const/16 v0, 0x9
 
     .line 53
     .line 54
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A05:Lcom/google/common/collect/ImmutableList;
+    aput-object v1, v2, v0
 
     .line 55
     .line 56
-    const/16 v0, 0x9
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0L:Ljava/lang/String;
 
     .line 57
     .line 58
-    aput-object v1, v2, v0
+    const/16 v0, 0xa
 
     .line 59
     .line 60
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0L:Ljava/lang/String;
+    aput-object v1, v2, v0
 
     .line 61
     .line 62
-    const/16 v0, 0xa
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A04:Lcom/google/common/collect/ImmutableList;
 
     .line 63
     .line 64
-    aput-object v1, v2, v0
+    const/16 v0, 0xb
 
     .line 65
     .line 66
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A04:Lcom/google/common/collect/ImmutableList;
+    aput-object v1, v2, v0
 
     .line 67
     .line 68
-    const/16 v0, 0xb
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0K:Ljava/lang/String;
 
     .line 69
     .line 70
-    aput-object v1, v2, v0
+    const/16 v0, 0xc
 
     .line 71
     .line 72
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0K:Ljava/lang/String;
+    aput-object v1, v2, v0
 
     .line 73
     .line 74
-    const/16 v0, 0xc
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0F:Ljava/lang/String;
 
     .line 75
     .line 76
-    aput-object v1, v2, v0
+    const/16 v0, 0xd
 
     .line 77
     .line 78
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0F:Ljava/lang/String;
+    aput-object v1, v2, v0
 
     .line 79
     .line 80
-    const/16 v0, 0xd
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A07:Lcom/google/common/collect/ImmutableMap;
 
     .line 81
     .line 82
-    aput-object v1, v2, v0
+    const/16 v0, 0xe
 
     .line 83
     .line 84
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A07:Lcom/google/common/collect/ImmutableMap;
+    aput-object v1, v2, v0
 
     .line 85
     .line 86
-    const/16 v0, 0xe
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0H:Ljava/lang/String;
 
     .line 87
     .line 88
-    aput-object v1, v2, v0
+    const/16 v0, 0xf
 
     .line 89
     .line 90
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0H:Ljava/lang/String;
+    aput-object v1, v2, v0
 
     .line 91
     .line 92
-    const/16 v0, 0xf
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0G:Ljava/lang/String;
 
     .line 93
     .line 94
-    aput-object v1, v2, v0
+    const/16 v0, 0x10
 
     .line 95
     .line 96
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0G:Ljava/lang/String;
+    aput-object v1, v2, v0
 
     .line 97
     .line 98
-    const/16 v0, 0x10
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0E:Ljava/lang/String;
 
     .line 99
     .line 100
-    aput-object v1, v2, v0
+    const/16 v0, 0x11
 
     .line 101
     .line 102
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0E:Ljava/lang/String;
+    aput-object v1, v2, v0
 
     .line 103
     .line 104
-    const/16 v0, 0x11
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0D:Ljava/lang/String;
 
     .line 105
     .line 106
-    aput-object v1, v2, v0
+    const/16 v0, 0x12
 
     .line 107
     .line 108
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0D:Ljava/lang/String;
+    invoke-static {v1, v2, v0}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
 
     .line 109
     .line 110
-    const/16 v0, 0x12
-
     .line 111
-    .line 112
-    invoke-static {v1, v2, v0}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
-
-    .line 113
-    .line 114
-    .line 115
     move-result v0
 
-    .line 116
+    .line 112
     return v0
 .end method
 
@@ -1660,209 +1655,203 @@
 
     .line 5
     .line 6
-    const-string v0, "campaignId"
+    const-string/jumbo v0, "campaignId"
 
     .line 7
     .line 8
+    .line 9
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 9
     .line 10
     .line 11
+    .line 12
     iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0J:Ljava/lang/String;
 
-    .line 12
     .line 13
+    .line 14
     const-string/jumbo v0, "status"
 
-    .line 14
     .line 15
     .line 16
+    .line 17
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0I:Ljava/lang/String;
 
-    .line 20
     .line 21
+    .line 22
     const-string/jumbo v0, "regStatus"
 
-    .line 22
     .line 23
     .line 24
+    .line 25
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 25
     .line 26
     .line 27
+    .line 28
     iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0C:Ljava/lang/String;
 
-    .line 28
     .line 29
-    const-string v0, "carrierName"
-
     .line 30
-    .line 31
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "carrierName"
 
+    .line 31
     .line 32
     .line 33
-    .line 34
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0A:Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 34
     .line 35
     .line 36
-    const-string v0, "carrierId"
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0A:Ljava/lang/String;
 
     .line 37
     .line 38
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "carrierId"
 
     .line 39
     .line 40
     .line 41
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0B:Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 42
     .line 43
-    const-string v0, "carrierLogoUrl"
-
     .line 44
-    .line 45
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0B:Ljava/lang/String;
 
+    .line 45
     .line 46
+    const-string/jumbo v0, "carrierLogoUrl"
+
     .line 47
     .line 48
-    iget v1, p0, Lcom/facebook/zero/common/ZeroToken;->A01:I
-
     .line 49
-    .line 50
-    const-string/jumbo v0, "ttl"
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 50
     .line 51
     .line 52
-    .line 53
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget v1, p0, Lcom/facebook/zero/common/ZeroToken;->A01:I
 
+    .line 53
     .line 54
+    const-string/jumbo v0, "ttl"
+
     .line 55
     .line 56
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A08:Lcom/google/common/collect/ImmutableSet;
-
     .line 57
-    .line 58
-    const-string v0, "enabledUiFeatures"
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 58
     .line 59
     .line 60
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A08:Lcom/google/common/collect/ImmutableSet;
 
     .line 61
     .line 62
-    .line 63
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lk;
+    const-string/jumbo v0, "enabledUiFeatures"
 
+    .line 63
     .line 64
     .line 65
-    const-string v0, "enabledFeaturesWithExperiments"
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 66
     .line 67
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
-
     .line 68
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lI;
+
     .line 69
     .line 70
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A05:Lcom/google/common/collect/ImmutableList;
+    const-string/jumbo v0, "enabledFeaturesWithExperiments"
 
     .line 71
     .line 72
-    const-string/jumbo v0, "rewriteRules"
-
     .line 73
-    .line 74
-    .line 75
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 74
+    .line 75
     .line 76
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A05:Lcom/google/common/collect/ImmutableList;
+
     .line 77
     .line 78
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0L:Ljava/lang/String;
+    const-string/jumbo v0, "rewriteRules"
 
     .line 79
     .line 80
-    const-string/jumbo v0, "unregistered_reason"
-
     .line 81
-    .line 82
-    .line 83
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 82
+    .line 83
     .line 84
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0L:Ljava/lang/String;
+
     .line 85
     .line 86
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A04:Lcom/google/common/collect/ImmutableList;
+    const-string/jumbo v0, "unregistered_reason"
 
     .line 87
     .line 88
-    const-string v0, "backupRewriteRules"
-
     .line 89
-    .line 90
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 90
     .line 91
     .line 92
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A04:Lcom/google/common/collect/ImmutableList;
+
     .line 93
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0K:Ljava/lang/String;
-
     .line 94
-    .line 95
-    const-string/jumbo v0, "tokenHash"
+    const-string/jumbo v0, "backupRewriteRules"
 
+    .line 95
     .line 96
     .line 97
-    .line 98
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 98
     .line 99
     .line 100
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0K:Ljava/lang/String;
+
     .line 101
-    iget v1, p0, Lcom/facebook/zero/common/ZeroToken;->A00:I
-
     .line 102
-    .line 103
-    const-string/jumbo v0, "requestTime"
+    const-string/jumbo v0, "tokenHash"
 
+    .line 103
     .line 104
     .line 105
-    .line 106
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 106
     .line 107
     .line 108
+    iget v1, p0, Lcom/facebook/zero/common/ZeroToken;->A00:I
+
     .line 109
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0F:Ljava/lang/String;
-
     .line 110
-    .line 111
-    const-string v0, "fastTokenHash"
+    const-string/jumbo v0, "requestTime"
 
+    .line 111
     .line 112
     .line 113
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 114
     .line 115
     .line 116
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A07:Lcom/google/common/collect/ImmutableMap;
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0F:Ljava/lang/String;
 
     .line 117
     .line 118
-    const-string/jumbo v0, "poolPricingMap"
+    const-string/jumbo v0, "fastTokenHash"
 
     .line 119
     .line 120
@@ -1872,11 +1861,11 @@
     .line 122
     .line 123
     .line 124
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0H:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A07:Lcom/google/common/collect/ImmutableMap;
 
     .line 125
     .line 126
-    const-string/jumbo v0, "mqttHost"
+    const-string/jumbo v0, "poolPricingMap"
 
     .line 127
     .line 128
@@ -1886,75 +1875,93 @@
     .line 130
     .line 131
     .line 132
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0G:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0H:Ljava/lang/String;
 
     .line 133
     .line 134
-    const-string v0, "fbnsHost"
+    const-string/jumbo v0, "mqttHost"
 
     .line 135
     .line 136
+    .line 137
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 137
     .line 138
     .line 139
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0E:Ljava/lang/String;
-
     .line 140
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0G:Ljava/lang/String;
+
     .line 141
-    const-string v0, "eligibilityHash"
-
     .line 142
-    .line 143
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "fbnsHost"
 
+    .line 143
     .line 144
     .line 145
-    .line 146
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A03:Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 146
     .line 147
     .line 148
-    const-string v0, "ZeroTrafficEnforcementConfig"
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0E:Ljava/lang/String;
 
     .line 149
     .line 150
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "eligibilityHash"
 
     .line 151
     .line 152
     .line 153
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A06:Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 154
     .line 155
-    const-string/jumbo v0, "statusUpdateContent"
-
     .line 156
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A03:Lcom/facebook/zero/common/ZeroTrafficEnforcementConfig;
+
     .line 157
     .line 158
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "ZeroTrafficEnforcementConfig"
 
     .line 159
     .line 160
     .line 161
-    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0D:Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 162
     .line 163
-    const-string v0, "chatDHost"
-
     .line 164
-    .line 165
-    invoke-static {v2, v1, v0}, LX/0Yg;->A0j(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A06:Lcom/google/common/collect/ImmutableList;
 
+    .line 165
     .line 166
+    const-string/jumbo v0, "statusUpdateContent"
+
     .line 167
     .line 168
+    .line 169
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
+    .line 170
+    .line 171
+    .line 172
+    iget-object v1, p0, Lcom/facebook/zero/common/ZeroToken;->A0D:Ljava/lang/String;
+
+    .line 173
+    .line 174
+    const-string/jumbo v0, "chatDHost"
+
+    .line 175
+    .line 176
+    .line 177
+    invoke-static {v2, v1, v0}, LX/0X5;->A0c(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 178
+    .line 179
+    .line 180
     move-result-object v0
 
-    .line 169
+    .line 181
     return-object v0
 .end method
 
@@ -2096,7 +2103,7 @@
     .line 72
     .line 73
     .line 74
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 75
     .line 76
@@ -2159,7 +2166,7 @@
     .line 107
     .line 108
     :try_start_0
-    invoke-static {}, LX/27s;->A00()LX/27s;
+    invoke-static {}, LX/40i;->A01()LX/40i;
 
     .line 109
     .line 110
@@ -2167,7 +2174,7 @@
     move-result-object v0
 
     .line 112
-    invoke-virtual {v0, v1}, LX/28I;->A0B(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, LX/40h;->A0C(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 113
     .line 114
@@ -2184,7 +2191,7 @@
     move-exception v2
 
     .line 118
-    const-class v1, LX/1VM;
+    const-class v1, LX/1pg;
 
     .line 119
     .line 120
@@ -2192,7 +2199,7 @@
 
     .line 121
     .line 122
-    invoke-static {v1, v0, v2}, LX/0Jt;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 123
     .line 124
@@ -2212,7 +2219,7 @@
 
     .line 131
     .line 132
-    invoke-static {v0}, LX/1lj;->A00(Lcom/google/common/collect/ImmutableList;)Ljava/lang/String;
+    invoke-static {v0}, LX/1pZ;->A00(Lcom/google/common/collect/ImmutableList;)Ljava/lang/String;
 
     .line 133
     .line 134
@@ -2234,7 +2241,7 @@
     .line 142
     .line 143
     :try_start_1
-    invoke-static {}, LX/27s;->A00()LX/27s;
+    invoke-static {}, LX/40i;->A01()LX/40i;
 
     .line 144
     .line 145
@@ -2242,7 +2249,7 @@
     move-result-object v0
 
     .line 147
-    invoke-virtual {v0, v1}, LX/28I;->A0B(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, LX/40h;->A0C(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 148
     .line 149
@@ -2259,7 +2266,7 @@
     move-exception v2
 
     .line 153
-    const-class v1, LX/1lp;
+    const-class v1, LX/1pO;
 
     .line 154
     .line 155
@@ -2267,7 +2274,7 @@
 
     .line 156
     .line 157
-    invoke-static {v1, v0, v2}, LX/0Jt;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 158
     .line 159
@@ -2283,11 +2290,11 @@
     .line 163
     .line 164
     .line 165
-    iget-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lk;
+    iget-object v0, p0, Lcom/facebook/zero/common/ZeroToken;->A02:LX/1lI;
 
     .line 166
     .line 167
-    invoke-static {v0}, LX/1ll;->A01(LX/1lk;)Ljava/lang/String;
+    invoke-static {v0}, LX/1lH;->A01(LX/1lI;)Ljava/lang/String;
 
     .line 168
     .line 169

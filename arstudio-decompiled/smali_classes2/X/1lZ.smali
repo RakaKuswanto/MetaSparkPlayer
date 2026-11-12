@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/28i;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -18,5 +21,13 @@
 
 
 # virtual methods
-.method public abstract A00(LX/1kB;)Lcom/facebook/fbservice/service/OperationResult;
+.method public final AJ5()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    const-string v0, "742725890006429"
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

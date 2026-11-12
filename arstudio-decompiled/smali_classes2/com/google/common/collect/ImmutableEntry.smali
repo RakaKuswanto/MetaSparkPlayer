@@ -1,5 +1,5 @@
 .class public Lcom/google/common/collect/ImmutableEntry;
-.super LX/1cE;
+.super LX/1qp;
 .source ""
 
 # interfaces
@@ -19,9 +19,19 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1cE;-><init>()V
+    invoke-direct {p0}, LX/1qp;-><init>()V
 
     .line 1
     .line 2

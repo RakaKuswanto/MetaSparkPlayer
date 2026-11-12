@@ -1,20 +1,17 @@
-.class public final LX/37a;
+.class public interface abstract LX/37a;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/3Il;
+.implements LX/39U;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract isAvailable()Z
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract sendRequest(Lcom/facebook/tigon/iface/TigonRequest;Lcom/facebook/tigon/TigonBodyProvider;Lcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonRequestToken;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract sendRequest(Lcom/facebook/tigon/iface/TigonRequest;[Ljava/nio/ByteBuffer;ILcom/facebook/tigon/TigonCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/tigon/TigonRequestToken;
 .end method

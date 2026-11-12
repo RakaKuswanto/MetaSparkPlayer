@@ -1,4 +1,4 @@
-.class public final Lcom/facebook/debug/tracer/Tracer;
+.class public abstract Lcom/facebook/debug/tracer/Tracer;
 .super Ljava/lang/Object;
 .source ""
 
@@ -12,11 +12,11 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/0KD;
+    new-instance v0, LX/0JB;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/0KD;-><init>()V
+    invoke-direct {v0}, LX/0JB;-><init>()V
 
     .line 3
     .line 4
@@ -51,7 +51,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p2, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -98,13 +98,13 @@
 
     .line 21
     .line 22
-    invoke-static {p0, v0, p1}, LX/0Jt;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p0, v0, p1}, LX/0Il;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 23
     .line 24
     .line 25
     :goto_0
-    invoke-static {p2}, LX/0PS;->A06(Ljava/lang/Object;)V
+    invoke-static {p2}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 26
     .line 27
@@ -125,7 +125,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p0, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -172,13 +172,13 @@
 
     .line 21
     .line 22
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 23
     .line 24
     .line 25
     :goto_0
-    invoke-static {p0}, LX/0PS;->A06(Ljava/lang/Object;)V
+    invoke-static {p0}, LX/0WV;->A07(Ljava/lang/Object;)V
 
     .line 26
     .line 27
@@ -196,72 +196,64 @@
     .locals 5
 
     .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
     const-wide/16 v2, 0x20
 
-    .line 5
-    .line 6
+    .line 1
+    .line 2
     invoke-static {v2, v3}, Lcom/facebook/systrace/Systrace;->A0C(J)Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-eqz v0, :cond_0
 
     .line 7
     .line 8
-    .line 9
-    move-result v0
-
-    .line 10
-    if-eqz v0, :cond_0
-
-    .line 11
-    .line 12
     :try_start_0
     invoke-static {p0, p1}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 13
-    .line 14
-    .line 15
+    .line 9
+    .line 10
+    .line 11
     move-result-object p0
 
-    .line 16
+    .line 12
     goto :goto_0
     :try_end_0
     .catch Ljava/util/IllegalFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 17
+    .line 13
     :catch_0
     move-exception v4
 
-    .line 18
+    .line 14
     const-string v1, "Tracer"
+
+    .line 15
+    .line 16
+    const-string v0, "Bad format string"
+
+    .line 17
+    .line 18
+    invoke-static {v1, v0, v4}, LX/0Il;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 19
     .line 20
-    const-string v0, "Bad format string"
-
     .line 21
-    .line 22
-    invoke-static {v1, v0, v4}, LX/0Jt;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :goto_0
+    invoke-static {p0}, LX/0WV;->A07(Ljava/lang/Object;)V
 
+    .line 22
     .line 23
     .line 24
-    .line 25
-    :goto_0
-    invoke-static {p0}, LX/0PS;->A06(Ljava/lang/Object;)V
-
-    .line 26
-    .line 27
-    .line 28
     invoke-static {v2, v3, p0}, Lcom/facebook/systrace/Systrace;->A02(JLjava/lang/String;)V
 
-    .line 29
-    .line 30
-    .line 31
+    .line 25
+    .line 26
+    .line 27
     :cond_0
     return-void
 .end method

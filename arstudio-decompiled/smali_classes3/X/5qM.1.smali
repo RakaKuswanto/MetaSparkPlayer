@@ -1,191 +1,257 @@
-.class public final LX/5qM;
-.super Landroid/media/AudioDeviceCallback;
+.class public final LX/5Qm;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/4zT;
 
 
 # instance fields
-.field public final synthetic A00:LX/5pn;
+.field public A00:Ljava/lang/Object;
+
+.field public A01:Ljava/lang/Object;
+
+.field public final A02:I
 
 
 # direct methods
-.method public constructor <init>(LX/5pn;)V
+.method public constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5qM;->A00:LX/5pn;
+    iput p2, p0, LX/5Qm;->A02:I
 
     .line 1
     .line 2
-    invoke-direct {p0}, Landroid/media/AudioDeviceCallback;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
     .line 5
+    iput-object p3, p0, LX/5Qm;->A00:Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/5Qm;->A01:Ljava/lang/Object;
+
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAudioDevicesAdded([Landroid/media/AudioDeviceInfo;)V
-    .locals 5
+.method public final get()Ljava/lang/Object;
+    .locals 6
 
     .line 0
-    array-length v4, p1
+    iget v0, p0, LX/5Qm;->A02:I
 
     .line 1
-    const/4 v3, 0x0
-
     .line 2
-    :goto_0
-    if-ge v3, v4, :cond_0
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    aget-object v1, p1, v3
+    iget-object v3, p0, LX/5Qm;->A00:Ljava/lang/Object;
 
     .line 5
     .line 6
-    invoke-virtual {v1}, Landroid/media/AudioDeviceInfo;->getType()I
+    check-cast v3, LX/4zm;
 
     .line 7
     .line 8
+    iget-object v2, p0, LX/5Qm;->A01:Ljava/lang/Object;
+
     .line 9
-    iget-object v0, p0, LX/5qM;->A00:LX/5pn;
-
     .line 10
+    check-cast v2, LX/4zf;
+
     .line 11
-    iget-object v2, v0, LX/5pn;->A0F:LX/5pw;
-
     .line 12
-    .line 13
-    invoke-virtual {v1}, Landroid/media/AudioDeviceInfo;->getType()I
+    iget-object v1, v2, LX/4zf;->A02:LX/4zw;
 
+    .line 13
     .line 14
+    new-instance v0, LX/4ze;
+
     .line 15
     .line 16
-    move-result v0
+    invoke-direct {v0, v3, v2}, LX/4ze;-><init>(LX/4zm;LX/4zf;)V
 
     .line 17
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     .line 18
     .line 19
+    invoke-interface {v1, v0}, LX/4zw;->A63(LX/4zm;)Ljava/lang/Object;
+
     .line 20
+    .line 21
+    .line 22
     move-result-object v1
 
-    .line 21
-    const/4 v0, 0x1
-
-    .line 22
-    iput-object v1, v2, LX/5pw;->A02:Ljava/lang/Integer;
-
     .line 23
+    return-object v1
+
     .line 24
-    iput-boolean v0, v2, LX/5pw;->A04:Z
+    :cond_0
+    iget-object v5, p0, LX/5Qm;->A00:Ljava/lang/Object;
 
     .line 25
     .line 26
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    check-cast v5, LX/4zH;
 
     .line 27
     .line 28
-    .line 29
-    move-result-wide v0
+    iget-object v4, p0, LX/5Qm;->A01:Ljava/lang/Object;
 
+    .line 29
     .line 30
-    iput-wide v0, v2, LX/5pw;->A00:J
+    check-cast v4, Landroid/content/Context;
 
     .line 31
     .line 32
-    add-int/lit8 v3, v3, 0x1
+    invoke-static {v5}, LX/4zH;->A01(LX/4zH;)V
 
     .line 33
     .line 34
-    goto :goto_0
-
     .line 35
-    :cond_0
-    return-void
-.end method
+    iget-object v1, v5, LX/4zH;->A04:Ljava/lang/String;
 
-.method public final onAudioDevicesRemoved([Landroid/media/AudioDeviceInfo;)V
-    .locals 5
+    .line 36
+    .line 37
+    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
 
-    .line 0
-    array-length v4, p1
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v0
 
-    .line 1
-    const/4 v3, 0x0
+    .line 41
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    .line 2
-    :goto_0
-    if-ge v3, v4, :cond_0
-
-    .line 3
-    .line 4
-    aget-object v1, p1, v3
-
-    .line 5
-    .line 6
-    invoke-virtual {v1}, Landroid/media/AudioDeviceInfo;->getType()I
-
-    .line 7
-    .line 8
-    .line 9
-    iget-object v0, p0, LX/5qM;->A00:LX/5pn;
-
-    .line 10
-    .line 11
-    iget-object v2, v0, LX/5pn;->A0F:LX/5pw;
-
-    .line 12
-    .line 13
-    invoke-virtual {v1}, Landroid/media/AudioDeviceInfo;->getType()I
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 18
-    .line 19
-    .line 20
+    .line 42
+    .line 43
+    .line 44
     move-result-object v1
 
-    .line 21
+    .line 45
+    if-nez v1, :cond_2
+
+    .line 46
+    .line 47
+    const/4 v3, 0x0
+
+    .line 48
+    :goto_0
+    const-string v2, "+"
+
+    .line 49
+    .line 50
+    invoke-static {v5}, LX/4zH;->A01(LX/4zH;)V
+
+    .line 51
+    .line 52
+    .line 53
+    iget-object v0, v5, LX/4zH;->A01:LX/4Ix;
+
+    .line 54
+    .line 55
+    iget-object v1, v0, LX/4Ix;->A00:Ljava/lang/String;
+
+    .line 56
+    .line 57
+    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v0
+
+    .line 61
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v1
+
+    .line 65
+    if-nez v1, :cond_1
+
+    .line 66
+    .line 67
     const/4 v0, 0x0
 
-    .line 22
-    iput-object v1, v2, LX/5pw;->A02:Ljava/lang/Integer;
+    .line 68
+    :goto_1
+    invoke-static {v3, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 23
-    .line 24
-    iput-boolean v0, v2, LX/5pw;->A04:Z
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v2
 
-    .line 25
-    .line 26
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    .line 72
+    iget-object v1, v5, LX/4zH;->A02:LX/4zX;
 
-    .line 27
-    .line 28
-    .line 29
-    move-result-wide v0
+    .line 73
+    .line 74
+    const-class v0, LX/6dX;
 
-    .line 30
-    iput-wide v0, v2, LX/5pw;->A00:J
+    .line 75
+    .line 76
+    invoke-virtual {v1, v0}, LX/4zm;->A04(Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 31
-    .line 32
-    add-int/lit8 v3, v3, 0x1
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
 
-    .line 33
-    .line 34
+    .line 80
+    check-cast v0, LX/6dX;
+
+    .line 81
+    .line 82
+    new-instance v1, LX/0nI;
+
+    .line 83
+    .line 84
+    invoke-direct {v1, v4, v0, v2}, LX/0nI;-><init>(Landroid/content/Context;LX/6dX;Ljava/lang/String;)V
+
+    .line 85
+    .line 86
+    .line 87
+    return-object v1
+
+    .line 88
+    :cond_1
+    const/16 v0, 0xb
+
+    .line 89
+    .line 90
+    invoke-static {v1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v0
+
+    .line 94
+    goto :goto_1
+
+    .line 95
+    :cond_2
+    const/16 v0, 0xb
+
+    .line 96
+    .line 97
+    invoke-static {v1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    .line 98
+    .line 99
+    .line 100
+    move-result-object v3
+
+    .line 101
     goto :goto_0
-
-    .line 35
-    :cond_0
-    return-void
 .end method

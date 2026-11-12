@@ -1,10 +1,10 @@
 .class public Lcom/facebook/fbservice/service/BlueService;
-.super LX/2iv;
+.super LX/2EE;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/0Na;
+.field public final A00:LX/0RP;
 
 
 # direct methods
@@ -12,16 +12,16 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/2iv;-><init>()V
+    invoke-direct {p0}, LX/2EE;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->ADj:I
+    sget v0, LX/2I6;->AAF:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -29,7 +29,7 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/fbservice/service/BlueService;->A00:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/fbservice/service/BlueService;->A00:LX/0RP;
 
     .line 10
     .line 11
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public final A06(Landroid/content/Intent;II)I
+.method public final A07(Landroid/content/Intent;II)I
     .locals 3
 
     .line 0
@@ -77,11 +77,11 @@
 
     .line 15
     .line 16
-    iget-object v0, p0, Lcom/facebook/fbservice/service/BlueService;->A00:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/fbservice/service/BlueService;->A00:LX/0RP;
 
     .line 17
     .line 18
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 19
     .line 20
@@ -121,7 +121,7 @@
     return v2
 .end method
 
-.method public final A07()V
+.method public final A08()V
     .locals 1
 
     .line 0
@@ -135,7 +135,7 @@
     .line 4
     .line 5
     :try_start_0
-    invoke-super {p0}, LX/2iv;->A07()V
+    invoke-super {p0}, LX/2EE;->A08()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -162,20 +162,20 @@
     throw v0
 .end method
 
-.method public final A08()V
+.method public final A09()V
     .locals 1
 
     .line 0
-    invoke-super {p0}, LX/2iv;->A08()V
+    invoke-super {p0}, LX/2EE;->A09()V
 
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/fbservice/service/BlueService;->A00:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/fbservice/service/BlueService;->A00:LX/0RP;
 
     .line 4
     .line 5
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 6
     .line 7

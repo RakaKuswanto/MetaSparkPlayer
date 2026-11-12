@@ -2,94 +2,67 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/widget/AbsListView$OnScrollListener;
+
+
+# instance fields
+.field public final synthetic A00:Landroid/view/View;
+
+.field public final synthetic A01:Landroid/view/View;
+
+.field public final synthetic A02:LX/4Ku;
+
 
 # direct methods
-.method public static A00(Landroid/graphics/PorterDuff$Mode;I)Landroid/graphics/PorterDuff$Mode;
-    .locals 1
+.method public constructor <init>(Landroid/view/View;Landroid/view/View;LX/4Ku;)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x3
+    iput-object p3, p0, LX/4Ky;->A02:LX/4Ku;
 
     .line 1
-    if-eq p1, v0, :cond_2
-
     .line 2
-    .line 3
-    const/4 v0, 0x5
+    iput-object p1, p0, LX/4Ky;->A01:Landroid/view/View;
 
+    .line 3
     .line 4
-    if-eq p1, v0, :cond_1
+    iput-object p2, p0, LX/4Ky;->A00:Landroid/view/View;
 
     .line 5
     .line 6
-    const/16 v0, 0x9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
     .line 8
-    if-eq p1, v0, :cond_0
-
     .line 9
-    .line 10
-    packed-switch p1, :pswitch_data_0
+    return-void
+.end method
 
-    .line 11
-    .line 12
-    .line 13
-    return-object p0
 
-    .line 14
-    :pswitch_0
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->ADD:Landroid/graphics/PorterDuff$Mode;
+# virtual methods
+.method public final onScroll(Landroid/widget/AbsListView;III)V
+    .locals 2
 
-    .line 15
-    .line 16
-    return-object p0
+    .line 0
+    iget-object v1, p0, LX/4Ky;->A01:Landroid/view/View;
 
-    .line 17
-    :pswitch_1
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SCREEN:Landroid/graphics/PorterDuff$Mode;
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/4Ky;->A00:Landroid/view/View;
 
-    .line 18
-    .line 19
-    return-object p0
+    .line 3
+    .line 4
+    invoke-static {p1, v1, v0}, LX/4Ku;->A01(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    .line 20
-    :pswitch_2
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
 
-    .line 21
-    .line 22
-    return-object p0
+.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
+    .locals 0
 
-    .line 23
-    :cond_0
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
-
-    .line 24
-    .line 25
-    return-object p0
-
-    .line 26
-    :cond_1
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    .line 27
-    .line 28
-    return-object p0
-
-    .line 29
-    :cond_2
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_OVER:Landroid/graphics/PorterDuff$Mode;
-
-    .line 30
-    .line 31
-    return-object p0
-
-    .line 32
-    :pswitch_data_0
-    .packed-switch 0xe
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

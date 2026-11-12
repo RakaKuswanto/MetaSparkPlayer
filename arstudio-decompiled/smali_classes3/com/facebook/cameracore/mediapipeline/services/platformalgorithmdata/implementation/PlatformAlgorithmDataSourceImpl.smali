@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public listener:LX/5Ve;
+.field public listener:LX/689;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceImpl;->listener:LX/5Ve;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceImpl;->listener:LX/689;
 
     .line 2
     .line 3
@@ -41,7 +41,7 @@
 
     .line 4
     .line 5
-    invoke-interface {v0}, LX/5Ve;->onCloseSession()V
+    invoke-interface {v0}, LX/689;->onCloseSession()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -65,7 +65,7 @@
     throw v0
 .end method
 
-.method public declared-synchronized registerListener(LX/5Ve;)V
+.method public declared-synchronized registerListener(LX/689;)V
     .locals 1
 
     .line 0
@@ -76,12 +76,12 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 3
     .line 4
     .line 5
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceImpl;->listener:LX/5Ve;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceImpl;->listener:LX/689;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -111,7 +111,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceImpl;->listener:LX/5Ve;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceImpl;->listener:LX/689;
 
     .line 2
     .line 3
@@ -128,7 +128,7 @@
     move-object v5, p5
 
     .line 8
-    invoke-interface/range {v0 .. v5}, LX/5Ve;->onFrameUpdate(JJLcom/facebook/onecamera/components/arcore/alwayson/recording/interfaces/PlatformAlgorithmAlwaysOnDataSource;)V
+    invoke-interface/range {v0 .. v5}, LX/689;->onFrameUpdate(JJLcom/facebook/onecamera/components/arcore/alwayson/recording/interfaces/PlatformAlgorithmAlwaysOnDataSource;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -159,12 +159,12 @@
     const/4 v0, 0x0
 
     .line 268435457
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 268435458
     .line 268435459
     .line 268435460
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceImpl;->listener:LX/5Ve;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/platformalgorithmdata/implementation/PlatformAlgorithmDataSourceImpl;->listener:LX/689;
 
     .line 268435461
     .line 268435462
@@ -172,7 +172,7 @@
 
     .line 268435463
     .line 268435464
-    invoke-interface {v0, p1}, LX/5Ve;->onFrameUpdate(Lcom/facebook/onecamera/components/arcore/alwayson/recording/interfaces/PlatformAlgorithmAlwaysOnDataSource;)V
+    invoke-interface {v0, p1}, LX/689;->onFrameUpdate(Lcom/facebook/onecamera/components/arcore/alwayson/recording/interfaces/PlatformAlgorithmAlwaysOnDataSource;)V
 
     .line 268435465
     .line 268435466

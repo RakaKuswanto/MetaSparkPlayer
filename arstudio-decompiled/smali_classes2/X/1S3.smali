@@ -1,94 +1,32 @@
-.class public final LX/1S3;
+.class public abstract LX/1S3;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/io/FilenameFilter;
-
-
-# instance fields
-.field public final synthetic A00:[Ljava/lang/String;
-
 
 # direct methods
-.method public constructor <init>([Ljava/lang/String;)V
-    .locals 0
+.method public static A00(Lcom/google/common/collect/ImmutableList;Ljava/lang/Enum;)Lcom/google/common/collect/ImmutableList;
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/1S3;->A00:[Ljava/lang/String;
+    new-instance v2, Lcom/google/common/collect/ImmutableList$Builder;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v2}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    return-void
-.end method
-
-.method public static A00(Ljava/lang/String;[Ljava/lang/String;)[Ljava/io/File;
-    .locals 2
-
-    .line 0
-    new-instance v1, Ljava/io/File;
-
-    .line 1
-    .line 2
-    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    new-instance v0, LX/1S3;
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 6
     .line 7
-    invoke-direct {v0, p1}, LX/1S3;-><init>([Ljava/lang/String;)V
-
     .line 8
+    move-result-object v1
+
     .line 9
-    .line 10
-    invoke-virtual {v1, v0}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
-    .locals 5
-
-    .line 0
-    iget-object v4, p0, LX/1S3;->A00:[Ljava/lang/String;
-
-    .line 1
-    .line 2
-    array-length v3, v4
-
-    .line 3
-    const/4 v2, 0x0
-
-    .line 4
-    const/4 v1, 0x0
-
-    .line 5
     :goto_0
-    if-ge v1, v3, :cond_0
-
-    .line 6
-    .line 7
-    aget-object v0, v4, v1
-
-    .line 8
-    .line 9
-    invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 10
     .line 11
@@ -96,21 +34,42 @@
     move-result v0
 
     .line 13
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 14
     .line 15
-    const/4 v2, 0x1
+    invoke-static {v1}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 16
-    :cond_0
-    return v2
-
     .line 17
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
     .line 18
+    move-result-object v0
+
     .line 19
+    invoke-static {p1, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    invoke-virtual {v2, v0}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+
+    .line 24
+    .line 25
+    .line 26
     goto :goto_0
+
+    .line 27
+    :cond_0
+    invoke-virtual {v2}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    return-object v0
 .end method

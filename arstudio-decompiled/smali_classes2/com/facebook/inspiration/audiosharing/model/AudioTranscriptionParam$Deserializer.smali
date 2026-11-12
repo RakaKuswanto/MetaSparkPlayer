@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 7
 
     .line 0
-    const/4 v3, 0x0
+    const/4 v5, 0x0
 
     .line 1
     const/4 v1, 0x0
@@ -33,7 +33,7 @@
     .line 3
     .line 4
     .line 5
-    move-result-object v5
+    move-result-object v4
 
     .line 6
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
@@ -41,7 +41,7 @@
     .line 7
     .line 8
     .line 9
-    move-result-object v4
+    move-result-object v3
 
     .line 10
     const-string v2, ""
@@ -50,7 +50,7 @@
     .line 12
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 13
     .line 14
@@ -58,7 +58,7 @@
     move-result-object v6
 
     .line 16
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 17
     .line 18
@@ -66,7 +66,7 @@
 
     .line 19
     .line 20
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 21
     .line 22
@@ -88,14 +88,14 @@
     .line 30
     .line 31
     :cond_1
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 32
     .line 33
     .line 34
     :cond_2
     :goto_0
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 35
     .line 36
@@ -103,7 +103,7 @@
     move-result-object v6
 
     .line 38
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 39
     .line 40
@@ -115,195 +115,203 @@
 
     .line 43
     :sswitch_0
-    const-string v0, "character_based"
+    const-string/jumbo v0, "detailed_transcriptions"
 
     .line 44
     .line 45
+    .line 46
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 46
     .line 47
     .line 48
-    move-result v0
-
     .line 49
-    if-eqz v0, :cond_1
+    move-result v0
 
     .line 50
-    .line 51
-    invoke-virtual {p1}, LX/27m;->A15()Z
-
-    .line 52
-    .line 53
-    .line 54
-    move-result v1
-
-    .line 55
-    goto :goto_0
-
-    .line 56
-    :sswitch_1
-    const-string/jumbo v0, "original_transcriptions"
-
-    .line 57
-    .line 58
-    .line 59
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 60
-    .line 61
-    .line 62
-    move-result v0
-
-    .line 63
     if-eqz v0, :cond_1
 
-    .line 64
-    .line 65
+    .line 51
+    .line 52
     const-class v0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionTokenParam;
+
+    .line 53
+    .line 54
+    invoke-static {p1, v5, p2, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v4
+
+    .line 58
+    const-string/jumbo v0, "detailedTranscriptions"
+
+    .line 59
+    .line 60
+    .line 61
+    invoke-static {v4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 62
+    .line 63
+    .line 64
+    goto :goto_0
+
+    .line 65
+    :sswitch_1
+    const-string/jumbo v0, "shortwave_id"
 
     .line 66
     .line 67
-    invoke-static {p1, v3, p2, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
-
     .line 68
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 69
     .line 70
-    move-result-object v4
-
     .line 71
-    const-string/jumbo v0, "originalTranscriptions"
+    move-result v0
 
     .line 72
+    if-eqz v0, :cond_1
+
     .line 73
     .line 74
-    invoke-static {v0, v4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 75
     .line 76
     .line 77
-    goto :goto_0
+    move-result-object v2
 
     .line 78
-    :sswitch_2
-    const-string/jumbo v0, "shortwave_id"
+    const-string/jumbo v0, "shortwaveId"
 
     .line 79
     .line 80
     .line 81
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 82
     .line 83
     .line 84
-    move-result v0
+    goto :goto_0
 
     .line 85
-    if-eqz v0, :cond_1
+    :sswitch_2
+    const-string/jumbo v0, "original_transcriptions"
 
     .line 86
     .line 87
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 88
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 89
     .line 90
-    move-result-object v2
-
     .line 91
-    const-string/jumbo v0, "shortwaveId"
+    move-result v0
 
     .line 92
+    if-eqz v0, :cond_1
+
     .line 93
     .line 94
-    invoke-static {v0, v2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    const-class v0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionTokenParam;
 
     .line 95
     .line 96
+    invoke-static {p1, v5, p2, v0}, LX/27L;->A05(LX/3oD;LX/27M;LX/6HS;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+
     .line 97
-    goto :goto_0
-
     .line 98
-    :sswitch_3
-    const-string v0, "detailed_transcriptions"
-
     .line 99
+    move-result-object v3
+
     .line 100
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string/jumbo v0, "originalTranscriptions"
 
     .line 101
     .line 102
     .line 103
-    move-result v0
+    invoke-static {v3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 104
-    if-eqz v0, :cond_1
-
     .line 105
     .line 106
-    const-class v0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionTokenParam;
+    goto :goto_0
 
     .line 107
-    .line 108
-    invoke-static {p1, v3, p2, v0}, LX/1Tc;->A00(LX/27m;LX/1Te;LX/2DN;Ljava/lang/Class;)Lcom/google/common/collect/ImmutableList;
+    :sswitch_3
+    const-string/jumbo v0, "character_based"
 
+    .line 108
     .line 109
     .line 110
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 111
-    move-result-object v5
-
     .line 112
-    const-string v0, "detailedTranscriptions"
-
     .line 113
+    move-result v0
+
     .line 114
-    invoke-static {v0, v5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    if-eqz v0, :cond_1
 
     .line 115
     .line 116
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
     .line 117
+    .line 118
+    .line 119
+    move-result v1
+
+    .line 120
     goto :goto_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 118
+    .line 121
     :goto_1
     new-instance v0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionParam;
 
-    .line 119
-    .line 120
-    invoke-direct {v0, v5, v4, v2, v1}, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionParam;-><init>(Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Z)V
-
-    .line 121
     .line 122
     .line 123
-    return-object v0
+    invoke-direct {v0, v4, v3, v2, v1}, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionParam;-><init>(Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Z)V
 
     .line 124
+    .line 125
+    .line 126
+    return-object v0
+
+    .line 127
     :catch_0
     move-exception v1
 
-    .line 125
+    .line 128
     const-class v0, Lcom/facebook/inspiration/audiosharing/model/AudioTranscriptionParam;
 
-    .line 126
-    .line 127
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
-    .line 128
     .line 129
     .line 130
-    throw v3
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 131
-    nop
-
     .line 132
+    .line 133
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 134
+    .line 135
+    .line 136
+    move-result-object v0
+
+    .line 137
+    throw v0
+
+    .line 138
     :sswitch_data_0
     .sparse-switch
-        -0x6d2dd0e3 -> :sswitch_0
-        -0x6aea81b1 -> :sswitch_1
-        0x39498825 -> :sswitch_2
-        0x59e5b990 -> :sswitch_3
+        -0x6d2dd0e3 -> :sswitch_3
+        -0x6aea81b1 -> :sswitch_2
+        0x39498825 -> :sswitch_1
+        0x59e5b990 -> :sswitch_0
     .end sparse-switch
 .end method

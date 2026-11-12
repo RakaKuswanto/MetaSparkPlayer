@@ -1,180 +1,167 @@
-.class public final LX/40p;
-.super Ljava/lang/Object;
+.class public abstract LX/40p;
+.super Ljava/io/Reader;
 .source ""
-
-# interfaces
-.implements LX/42k;
 
 
 # instance fields
-.field public final A00:LX/1Nw;
+.field public A00:I
 
-.field public final A01:Ljava/util/Set;
+.field public A01:I
+
+.field public A02:Ljava/io/InputStream;
+
+.field public A03:[B
+
+.field public A04:[C
+
+.field public final A05:LX/40l;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>(LX/40l;Ljava/io/InputStream;[BII)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/40p;->A00:LX/1Nw;
+    const/4 v0, 0x0
 
     .line 4
+    iput-object v0, p0, LX/40p;->A04:[C
+
     .line 5
-    sget v0, LX/2eq;->A3r:I
-
     .line 6
-    .line 7
-    invoke-static {v0}, LX/1z6;->A0Y(I)Ljava/util/Set;
+    iput-object p1, p0, LX/40p;->A05:LX/40l;
 
+    .line 7
     .line 8
+    iput-object p2, p0, LX/40p;->A02:Ljava/io/InputStream;
+
     .line 9
     .line 10
-    move-result-object v0
+    iput-object p3, p0, LX/40p;->A03:[B
 
     .line 11
-    iput-object v0, p0, LX/40p;->A01:Ljava/util/Set;
-
     .line 12
+    iput p4, p0, LX/40p;->A01:I
+
     .line 13
+    .line 14
+    iput p5, p0, LX/40p;->A00:I
+
+    .line 15
+    .line 16
     return-void
 .end method
 
 
 # virtual methods
-.method public final AU5(LX/41I;LX/41X;)V
+.method public final close()V
     .locals 3
 
     .line 0
-    invoke-static {p1, p2}, LX/0PS;->A09(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v2, p0, LX/40p;->A02:Ljava/io/InputStream;
 
     .line 1
     .line 2
-    .line 3
-    iget-object v0, p0, LX/40p;->A01:Ljava/util/Set;
+    if-eqz v2, :cond_1
 
+    .line 3
     .line 4
+    const/4 v0, 0x0
+
     .line 5
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iput-object v0, p0, LX/40p;->A02:Ljava/io/InputStream;
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v2
+    iget-object v1, p0, LX/40p;->A03:[B
 
+    .line 8
     .line 9
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v1, :cond_0
 
     .line 10
     .line 11
-    .line 12
-    move-result v0
+    iput-object v0, p0, LX/40p;->A03:[B
 
+    .line 12
     .line 13
-    if-eqz v0, :cond_0
+    iget-object v0, p0, LX/40p;->A05:LX/40l;
 
     .line 14
     .line 15
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, LX/40l;->A02([B)V
 
     .line 16
     .line 17
     .line 18
-    move-result-object v1
+    :cond_0
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
     .line 19
-    check-cast v1, LX/42j;
-
     .line 20
     .line 21
-    invoke-virtual {p1}, LX/41I;->A00()LX/44p;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    invoke-interface {v1, v0, p2}, LX/42j;->AYp(LX/44p;LX/41X;)V
-
-    .line 26
-    .line 27
-    .line 28
-    goto :goto_0
-
-    .line 29
-    :cond_0
+    :cond_1
     return-void
 .end method
 
-.method public final AU8(LX/41S;LX/41I;)V
+.method public final read()I
     .locals 3
 
     .line 0
-    invoke-static {p2, p1}, LX/0PS;->A09(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v0, p0, LX/40p;->A04:[C
 
     .line 1
     .line 2
+    const/4 v2, 0x1
+
     .line 3
-    iget-object v0, p0, LX/40p;->A01:Ljava/util/Set;
+    if-nez v0, :cond_0
 
     .line 4
     .line 5
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    new-array v0, v2, [C
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v2
+    iput-object v0, p0, LX/40p;->A04:[C
 
+    .line 8
     .line 9
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    :cond_0
+    const/4 v1, 0x0
 
     .line 10
+    invoke-virtual {p0, v0, v1, v2}, Ljava/io/Reader;->read([CII)I
+
     .line 11
     .line 12
+    .line 13
     move-result v0
 
-    .line 13
-    if-eqz v0, :cond_0
-
     .line 14
-    .line 15
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-ge v0, v2, :cond_1
 
+    .line 15
     .line 16
+    const/4 v0, -0x1
+
     .line 17
+    return v0
+
     .line 18
-    move-result-object v1
+    :cond_1
+    iget-object v0, p0, LX/40p;->A04:[C
 
     .line 19
-    check-cast v1, LX/42j;
-
     .line 20
+    aget-char v0, v0, v1
+
     .line 21
-    invoke-virtual {p2}, LX/41I;->A00()LX/44p;
-
     .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    invoke-interface {v1, p1, v0}, LX/42j;->AYk(LX/41S;LX/44p;)V
-
-    .line 26
-    .line 27
-    .line 28
-    goto :goto_0
-
-    .line 29
-    :cond_0
-    return-void
+    return v0
 .end method

@@ -34,157 +34,181 @@
 .method public constructor <init>(IIIILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
     .locals 2
 
-    .line 269218210
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 269218211
+    .line 1
+    .line 2
+    .line 3
     iput p1, p0, Lorg/webrtc/TextureBufferImpl;->unscaledWidth:I
 
-    .line 269218212
+    .line 4
+    .line 5
     iput p2, p0, Lorg/webrtc/TextureBufferImpl;->unscaledHeight:I
 
-    .line 269218213
+    .line 6
+    .line 7
     iput p3, p0, Lorg/webrtc/TextureBufferImpl;->width:I
 
-    .line 269218214
+    .line 8
+    .line 9
     iput p4, p0, Lorg/webrtc/TextureBufferImpl;->height:I
 
-    .line 269218215
+    .line 10
+    .line 11
     iput-object p5, p0, Lorg/webrtc/TextureBufferImpl;->type:Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
-    .line 269218216
+    .line 12
+    .line 13
     iput p6, p0, Lorg/webrtc/TextureBufferImpl;->id:I
 
-    .line 269218217
+    .line 14
+    .line 15
     iput-object p7, p0, Lorg/webrtc/TextureBufferImpl;->transformMatrix:Landroid/graphics/Matrix;
 
-    .line 269218218
+    .line 16
+    .line 17
     iput-object p8, p0, Lorg/webrtc/TextureBufferImpl;->toI420Handler:Landroid/os/Handler;
 
-    .line 269218219
+    .line 18
+    .line 19
     iput-object p9, p0, Lorg/webrtc/TextureBufferImpl;->yuvConverter:Lorg/webrtc/YuvConverter;
 
-    .line 269218220
-    new-instance v1, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda0;
+    .line 20
+    .line 21
+    new-instance v1, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda1;
 
-    invoke-direct {v1, p0, p10}, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda0;-><init>(Lorg/webrtc/TextureBufferImpl;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
+    .line 22
+    .line 23
+    invoke-direct {v1, p0, p10}, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda1;-><init>(Lorg/webrtc/TextureBufferImpl;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
 
+    .line 24
+    .line 25
+    .line 26
     new-instance v0, Lorg/webrtc/RefCountDelegate;
 
+    .line 27
+    .line 28
     invoke-direct {v0, v1}, Lorg/webrtc/RefCountDelegate;-><init>(Ljava/lang/Runnable;)V
 
+    .line 29
+    .line 30
+    .line 31
     iput-object v0, p0, Lorg/webrtc/TextureBufferImpl;->refCountDelegate:Lorg/webrtc/RefCountDelegate;
 
-    .line 269218221
+    .line 32
+    .line 33
     iput-object p10, p0, Lorg/webrtc/TextureBufferImpl;->refCountMonitor:Lorg/webrtc/TextureBufferImpl$RefCountMonitor;
 
+    .line 34
+    .line 35
     return-void
 .end method
 
 .method public constructor <init>(IILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Ljava/lang/Runnable;)V
     .locals 11
 
-    .line 0
+    .line 536870912
     new-instance v10, Lorg/webrtc/TextureBufferImpl$1;
 
-    .line 1
-    .line 2
+    .line 536870913
+    .line 536870914
     move-object/from16 v0, p8
 
-    .line 3
-    .line 4
+    .line 536870915
+    .line 536870916
     invoke-direct {v10, v0}, Lorg/webrtc/TextureBufferImpl$1;-><init>(Ljava/lang/Runnable;)V
 
-    .line 5
-    .line 6
-    .line 7
+    .line 536870917
+    .line 536870918
+    .line 536870919
     move-object v0, p0
 
-    .line 8
+    .line 536870920
     move v1, p1
 
-    .line 9
+    .line 536870921
     move v2, p2
 
-    .line 10
+    .line 536870922
     move-object v5, p3
 
-    .line 11
+    .line 536870923
     move v6, p4
 
-    .line 12
+    .line 536870924
     move-object/from16 v7, p5
 
-    .line 13
-    .line 14
+    .line 536870925
+    .line 536870926
     move-object/from16 v8, p6
 
-    .line 15
-    .line 16
+    .line 536870927
+    .line 536870928
     move-object/from16 v9, p7
 
-    .line 17
-    .line 18
+    .line 536870929
+    .line 536870930
     move v3, p1
 
-    .line 19
+    .line 536870931
     move v4, p2
 
-    .line 20
+    .line 536870932
     invoke-direct/range {v0 .. v10}, Lorg/webrtc/TextureBufferImpl;-><init>(IIIILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
 
-    .line 21
-    .line 22
-    .line 23
+    .line 536870933
+    .line 536870934
+    .line 536870935
     return-void
 .end method
 
 .method public constructor <init>(IILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
     .locals 11
 
-    .line 536870912
+    .line 268435456
     move-object v0, p0
 
-    .line 536870913
+    .line 268435457
     move v1, p1
 
-    .line 536870914
+    .line 268435458
     move v2, p2
 
-    .line 536870915
+    .line 268435459
     move-object v5, p3
 
-    .line 536870916
+    .line 268435460
     move v6, p4
 
-    .line 536870917
+    .line 268435461
     move-object/from16 v7, p5
 
-    .line 536870918
-    .line 536870919
+    .line 268435462
+    .line 268435463
     move-object/from16 v8, p6
 
-    .line 536870920
-    .line 536870921
+    .line 268435464
+    .line 268435465
     move-object/from16 v9, p7
 
-    .line 536870922
-    .line 536870923
+    .line 268435466
+    .line 268435467
     move-object/from16 v10, p8
 
-    .line 536870924
-    .line 536870925
+    .line 268435468
+    .line 268435469
     move v3, p1
 
-    .line 536870926
+    .line 268435470
     move v4, p2
 
-    .line 536870927
+    .line 268435471
     invoke-direct/range {v0 .. v10}, Lorg/webrtc/TextureBufferImpl;-><init>(IIIILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Lorg/webrtc/TextureBufferImpl$RefCountMonitor;)V
 
-    .line 536870928
-    .line 536870929
-    .line 536870930
+    .line 268435472
+    .line 268435473
+    .line 268435474
     return-void
 .end method
 
@@ -315,7 +339,7 @@
     .locals 10
 
     .line 0
-    invoke-static {}, LX/4BF;->A0O()Landroid/graphics/Matrix;
+    invoke-static {}, LX/435;->A01()Landroid/graphics/Matrix;
 
     .line 1
     .line 2
@@ -667,11 +691,11 @@
 
     .line 1
     .line 2
-    new-instance v0, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda1;
+    new-instance v0, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda0;
 
     .line 3
     .line 4
-    invoke-direct {v0, p0}, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda1;-><init>(Lorg/webrtc/TextureBufferImpl;)V
+    invoke-direct {v0, p0}, Lorg/webrtc/TextureBufferImpl$$ExternalSyntheticLambda0;-><init>(Lorg/webrtc/TextureBufferImpl;)V
 
     .line 5
     .line 6

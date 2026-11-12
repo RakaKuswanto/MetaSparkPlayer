@@ -3,227 +3,224 @@
 .source ""
 
 # interfaces
-.implements LX/1WO;
+.implements LX/1DG;
 
 
 # instance fields
-.field public final A00:LX/2BN;
+.field public final synthetic A00:Lcom/facebook/mqttlite/MqttServiceDelegate;
 
 
 # direct methods
-.method public constructor <init>(LX/2BN;)V
+.method public constructor <init>(Lcom/facebook/mqttlite/MqttServiceDelegate;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/2AU;->A00:Lcom/facebook/mqttlite/MqttServiceDelegate;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/2AU;->A00:LX/2BN;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     .line 4
     .line 5
     return-void
 .end method
 
-.method public static final A00(Lcom/google/gson/Gson;Lcom/google/gson/annotations/JsonAdapter;LX/2BN;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
-    .locals 3
+
+# virtual methods
+.method public final onSharedPreferenceChanged(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/28F;)V
+    .locals 7
 
     .line 0
-    invoke-interface {p1}, Lcom/google/gson/annotations/JsonAdapter;->value()Ljava/lang/Class;
+    iget-object v6, p0, LX/2AU;->A00:Lcom/facebook/mqttlite/MqttServiceDelegate;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    iget-object v0, v6, Lcom/facebook/mqttlite/MqttServiceDelegate;->A02:LX/0RP;
 
+    .line 3
     .line 4
-    new-instance v0, Lcom/google/gson/reflect/TypeToken;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 5
     .line 6
-    invoke-direct {v0, v1}, Lcom/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V
-
     .line 7
-    .line 8
-    .line 9
-    invoke-virtual {p2, v0}, LX/2BN;->A01(Lcom/google/gson/reflect/TypeToken;)LX/2AP;
-
-    .line 10
-    .line 11
-    .line 12
     move-result-object v0
 
-    .line 13
-    invoke-interface {v0}, LX/2AP;->A7M()Ljava/lang/Object;
+    .line 8
+    check-cast v0, LX/0gG;
 
+    .line 9
+    .line 10
+    iget-object v0, v0, LX/0gG;->A00:LX/0lu;
+
+    .line 11
+    .line 12
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
+    .line 13
     .line 14
     .line 15
-    .line 16
     move-result-object v2
 
-    .line 17
-    invoke-interface {p1}, Lcom/google/gson/annotations/JsonAdapter;->nullSafe()Z
+    .line 16
+    const-wide v0, 0x81023200021752L
 
+    .line 17
     .line 18
     .line 19
     .line 20
-    move-result v1
-
     .line 21
-    instance-of v0, v2, Lcom/google/gson/TypeAdapter;
+    invoke-static {v2, v0, v1}, LX/302;->A0K(LX/302;J)Z
 
     .line 22
     .line 23
-    if-eqz v0, :cond_0
-
     .line 24
+    move-result v0
+
     .line 25
-    check-cast v2, Lcom/google/gson/TypeAdapter;
+    if-eqz v0, :cond_0
 
     .line 26
     .line 27
-    :goto_0
-    if-eqz v2, :cond_1
+    return-void
 
     .line 28
+    :cond_0
+    iget-object v0, v6, Lcom/facebook/mqttlite/MqttServiceDelegate;->A0P:LX/0RP;
+
     .line 29
-    if-eqz v1, :cond_1
-
     .line 30
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 31
-    const/4 v1, 0x4
-
     .line 32
-    new-instance v0, LX/1qc;
-
     .line 33
+    move-result-object v0
+
     .line 34
-    invoke-direct {v0, v2, v1}, LX/1qc;-><init>(Ljava/lang/Object;I)V
+    check-cast v0, LX/1DO;
 
     .line 35
     .line 36
+    invoke-virtual {v0}, LX/1DO;->A01()Z
+
     .line 37
-    return-object v0
-
     .line 38
-    :cond_0
-    instance-of v0, v2, LX/1WO;
-
     .line 39
+    move-result v5
+
     .line 40
-    if-eqz v0, :cond_2
+    invoke-static {}, LX/002;->A0D()Lorg/json/JSONObject;
 
     .line 41
     .line 42
-    check-cast v2, LX/1WO;
-
     .line 43
+    move-result-object v4
+
     .line 44
-    invoke-interface {v2, p0, p3}, LX/1WO;->create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
+    :try_start_0
+    invoke-static {}, LX/0Qb;->A00()LX/0Qb;
 
     .line 45
     .line 46
     .line 47
-    move-result-object v2
+    move-result-object v0
 
     .line 48
-    goto :goto_0
+    invoke-virtual {v0, v5}, LX/0Qb;->A01(Z)Ljava/lang/Long;
 
     .line 49
-    :cond_1
-    return-object v2
-
     .line 50
-    :cond_2
-    const-string p1, "Invalid attempt to bind an instance of "
-
     .line 51
+    move-result-object v1
+
     .line 52
-    invoke-static {v2}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    if-eqz v1, :cond_1
 
     .line 53
     .line 54
+    const-string/jumbo v0, "request_id"
+
     .line 55
-    move-result-object p0
-
     .line 56
-    const-string v2, " as a @JsonAdapter for "
-
     .line 57
-    .line 58
-    invoke-virtual {p3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v4, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
+    .line 58
     .line 59
     .line 60
+    const-string/jumbo v0, "client_request_id"
+
     .line 61
-    move-result-object v1
-
     .line 62
-    const-string v0, ". @JsonAdapter value must be a TypeAdapter, TypeAdapterFactory, JsonSerializer or JsonDeserializer."
-
     .line 63
-    .line 64
-    invoke-static {p1, p0, v2, v1, v0}, LX/0Yf;->A0T(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-virtual {v4, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
+    .line 64
     .line 65
     .line 66
+    :cond_1
+    const-string/jumbo v0, "make_user_available_when_in_foreground"
+
     .line 67
-    move-result-object v0
-
     .line 68
-    throw v0
-.end method
+    .line 69
+    invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
+    .line 70
+    .line 71
+    .line 72
+    iget-object v3, v6, Lcom/facebook/mqttlite/MqttServiceDelegate;->A05:LX/2Ai;
 
-# virtual methods
-.method public final create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
-    .locals 2
+    .line 73
+    .line 74
+    const-string v2, "/set_client_settings"
 
-    .line 0
-    iget-object v1, p2, Lcom/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
+    .line 75
+    .line 76
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 1
-    .line 2
-    const-class v0, Lcom/google/gson/annotations/JsonAdapter;
-
-    .line 3
-    .line 4
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
-
-    .line 5
-    .line 6
-    .line 7
+    .line 77
+    .line 78
+    .line 79
     move-result-object v1
 
-    .line 8
-    check-cast v1, Lcom/google/gson/annotations/JsonAdapter;
+    .line 80
+    sget-object v0, LX/0RA;->FIRE_AND_FORGET:LX/0RA;
 
-    .line 9
-    .line 10
-    if-nez v1, :cond_0
+    .line 81
+    .line 82
+    invoke-virtual {v3, v0, v2, v1}, LX/0TS;->A0J(LX/0RA;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
-    .line 12
-    const/4 v0, 0x0
+    .line 83
+    .line 84
+    .line 85
+    iget-object v0, v6, Lcom/facebook/mqttlite/MqttServiceDelegate;->A0O:LX/0RP;
 
-    .line 13
-    return-object v0
+    .line 86
+    .line 87
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    .line 14
-    :cond_0
-    iget-object v0, p0, LX/2AU;->A00:LX/2BN;
-
-    .line 15
-    .line 16
-    invoke-static {p1, v1, v0, p2}, LX/2AU;->A00(Lcom/google/gson/Gson;Lcom/google/gson/annotations/JsonAdapter;LX/2BN;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
-
-    .line 17
-    .line 18
-    .line 19
+    .line 88
+    .line 89
+    .line 90
     move-result-object v0
 
-    .line 20
-    return-object v0
+    .line 91
+    check-cast v0, LX/1DS;
+
+    .line 92
+    .line 93
+    invoke-virtual {v0, v5}, LX/1DS;->A02(Z)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch LX/0Rg; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 94
+    .line 95
+    .line 96
+    :catch_0
+    return-void
 .end method

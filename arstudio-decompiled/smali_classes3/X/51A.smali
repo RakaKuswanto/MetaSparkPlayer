@@ -1,17 +1,8 @@
-.class public final LX/51A;
+.class public interface abstract LX/51A;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static A00:LX/51B;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract Aqn(Lcom/google/android/gms/common/ConnectionResult;)V
 .end method

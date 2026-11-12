@@ -3,11 +3,51 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">Баракчада %1$s \"Жакты\" белгиси</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s жактыруу</item>
-        <item quantity="one">%1$s киши жактырды</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d күн мурда</item>
+        <item quantity="one">1 күн мурда</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d күн</item>
+        <item quantity="one">1 күн</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d күн</item>
+        <item quantity="one">1 күн</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d саат</item>
+        <item quantity="one">1 саат</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d мүнөт</item>
+        <item quantity="one">1 мүнөт</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d жума</item>
+        <item quantity="one">1 жума</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d жыл</item>
+        <item quantity="one">1 жыл</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d саат мурун</item>
+        <item quantity="one">1 саат мурун</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d с.</item>
+        <item quantity="one">1 с.</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d саат</item>
+        <item quantity="one">1 саат</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d с.</item>
+        <item quantity="one">1 с.</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d саат мурун</item>
         <item quantity="one">1 саат мурун</item>
     </plurals>
@@ -19,8 +59,60 @@
         <item quantity="other">%1$d мүнөттөн кийин</item>
         <item quantity="one">1 мүнөттөн кийин</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d мүн.мурун</item>
+        <item quantity="one">1 мүн.мурун</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d мүнөт мурун</item>
         <item quantity="one">1 мүнөт мурун</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d мүн.</item>
+        <item quantity="one">1 мүн.</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d мүн.</item>
+        <item quantity="one">1 мүн.</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d ай мурун</item>
+        <item quantity="one">1 ай мурун</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d секунд мурун</item>
+        <item quantity="one">1 секунд</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d жума мурун</item>
+        <item quantity="one">1 жума мурун</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d жыл мурун</item>
+        <item quantity="one">1 жыл мурун</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">%1$d күн мурун баш баккансыз</item>
+        <item quantity="one">Сиз 1 күн мурун баш баккансыз</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Сиз %1$d саат мурун баш баккансыз</item>
+        <item quantity="one">Сиз 1 саат мурун баш баккансыз</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Сиз %1$d мүнөт мурун баш баккансыз</item>
+        <item quantity="one">Сиз 1 мүнөт мурун баш баккансыз</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">%1$d ай мурун баш баккансыз</item>
+        <item quantity="one">1 ай мурун баш баккансыз</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Сиз %1$d апта мурун баш баккансыз</item>
+        <item quantity="one">Сиз 1 апта мурун баш баккансыз</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">%1$d жыл мурун баш баккансыз</item>
+        <item quantity="one">1 жыл мурун баш баккансыз</item>
     </plurals>
 </resources>

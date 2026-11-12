@@ -2961,6 +2961,7 @@
     .line 1469
     return-void
 
+    .line 1470
     :array_0
     .array-data 2
         0xf7s

@@ -1,5 +1,5 @@
 .class public Lcom/facebook/arstudio/player/appcomponentmanager/PlayerAppComponentReceiver;
-.super LX/0Ax;
+.super LX/0BO;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/0Ax;-><init>()V
+    invoke-direct {p0}, LX/0BO;-><init>()V
 
     .line 1
     .line 2

@@ -1,0 +1,180 @@
+.class public Lcom/facebook/msys/mcd/MediaUploadJobDetail;
+.super Ljava/lang/Object;
+.source ""
+
+
+# instance fields
+.field public final mNativeHolder:Lcom/facebook/simplejni/NativeHolder;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 0
+
+    .line 0
+    invoke-static {}, LX/4GD;->A00()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/facebook/simplejni/NativeHolder;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, Lcom/facebook/msys/mcd/MediaUploadJobDetail;->mNativeHolder:Lcom/facebook/simplejni/NativeHolder;
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method private native equalsNative(JLjava/lang/Object;J)Z
+.end method
+
+.method private native getConfigNative(J)Lcom/facebook/msys/mcd/MediaUploadConfig;
+.end method
+
+.method private native getContentSourceNative(J)Lcom/facebook/msys/mcd/MediaUploadContentSource;
+.end method
+
+.method private native getTokenNative(J)Ljava/lang/String;
+.end method
+
+.method private native hashCodeNative(J)I
+.end method
+
+.method public static native initNativeHolder(Lcom/facebook/msys/mcd/MediaUploadContentSource;Lcom/facebook/msys/mcd/MediaUploadConfig;Ljava/lang/String;)Lcom/facebook/simplejni/NativeHolder;
+.end method
+
+.method private native toStringNative(J)Ljava/lang/String;
+.end method
+
+
+# virtual methods
+.method public equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    .line 0
+    move-object v1, p0
+
+    .line 1
+    move-object v4, p1
+
+    .line 2
+    if-ne p0, p1, :cond_0
+
+    .line 3
+    .line 4
+    const/4 v0, 0x1
+
+    .line 5
+    return v0
+
+    .line 6
+    :cond_0
+    if-eqz p1, :cond_1
+
+    .line 7
+    .line 8
+    instance-of v0, p1, Lcom/facebook/msys/mcd/MediaUploadJobDetail;
+
+    .line 9
+    .line 10
+    if-eqz v0, :cond_1
+
+    .line 11
+    .line 12
+    iget-object v0, p0, Lcom/facebook/msys/mcd/MediaUploadJobDetail;->mNativeHolder:Lcom/facebook/simplejni/NativeHolder;
+
+    .line 13
+    .line 14
+    iget-wide v2, v0, Lcom/facebook/simplejni/NativeHolder;->mNativePointer:J
+
+    .line 15
+    .line 16
+    move-object v0, v4
+
+    .line 17
+    check-cast v0, Lcom/facebook/msys/mcd/MediaUploadJobDetail;
+
+    .line 18
+    .line 19
+    iget-object v0, v0, Lcom/facebook/msys/mcd/MediaUploadJobDetail;->mNativeHolder:Lcom/facebook/simplejni/NativeHolder;
+
+    .line 20
+    .line 21
+    iget-wide v5, v0, Lcom/facebook/simplejni/NativeHolder;->mNativePointer:J
+
+    .line 22
+    .line 23
+    invoke-direct/range {v1 .. v6}, Lcom/facebook/msys/mcd/MediaUploadJobDetail;->equalsNative(JLjava/lang/Object;J)Z
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    return v0
+
+    .line 28
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 29
+    return v0
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/msys/mcd/MediaUploadJobDetail;->mNativeHolder:Lcom/facebook/simplejni/NativeHolder;
+
+    .line 1
+    .line 2
+    iget-wide v0, v0, Lcom/facebook/simplejni/NativeHolder;->mNativePointer:J
+
+    .line 3
+    .line 4
+    invoke-direct {p0, v0, v1}, Lcom/facebook/msys/mcd/MediaUploadJobDetail;->hashCodeNative(J)I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/msys/mcd/MediaUploadJobDetail;->mNativeHolder:Lcom/facebook/simplejni/NativeHolder;
+
+    .line 1
+    .line 2
+    iget-wide v0, v0, Lcom/facebook/simplejni/NativeHolder;->mNativePointer:J
+
+    .line 3
+    .line 4
+    invoke-direct {p0, v0, v1}, Lcom/facebook/msys/mcd/MediaUploadJobDetail;->toStringNative(J)Ljava/lang/String;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method

@@ -38,11 +38,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x27
+    const/16 v0, 0x26
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -58,7 +58,7 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 268435456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -66,26 +66,30 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    invoke-static {}, LX/0Yf;->A0Z()Ljava/lang/Long;
+    const-wide/16 v0, 0x0
 
     .line 268435460
     .line 268435461
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
     .line 268435462
+    .line 268435463
+    .line 268435464
     move-result-object v0
 
-    .line 268435463
-    iput-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryNewEmailsMethodResult;->mEarAttemptId:Ljava/lang/Long;
-
-    .line 268435464
     .line 268435465
-    const-string v0, ""
+    iput-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryNewEmailsMethodResult;->mEarAttemptId:Ljava/lang/Long;
 
     .line 268435466
     .line 268435467
-    iput-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryNewEmailsMethodResult;->mSessionId:Ljava/lang/String;
+    const-string v0, ""
 
     .line 268435468
     .line 268435469
+    iput-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryNewEmailsMethodResult;->mSessionId:Ljava/lang/String;
+
+    .line 268435470
+    .line 268435471
     return-void
 .end method
 
@@ -98,7 +102,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/0Yi;->A0e(Landroid/os/Parcel;)Ljava/lang/Long;
+    invoke-static {p1}, LX/0X5;->A0W(Landroid/os/Parcel;)Ljava/lang/Long;
 
     .line 4
     .line 5

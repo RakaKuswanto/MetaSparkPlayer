@@ -122,7 +122,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0}, LX/001;->A1N(I)Z
+    invoke-static {v0}, LX/001;->A1M(I)Z
 
     .line 31
     .line 32

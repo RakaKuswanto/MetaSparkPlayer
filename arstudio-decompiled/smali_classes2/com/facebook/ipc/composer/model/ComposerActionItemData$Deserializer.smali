@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 6
 
     .line 0
@@ -33,7 +33,7 @@
     .line 3
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 4
     .line 5
@@ -41,7 +41,7 @@
     move-result-object v4
 
     .line 7
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 8
     .line 9
@@ -49,7 +49,7 @@
 
     .line 10
     .line 11
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 12
     .line 13
@@ -95,7 +95,7 @@
 
     .line 34
     :cond_1
-    invoke-static {v5}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0R(Ljava/lang/String;)Z
+    invoke-static {v5}, LX/0X6;->A1V(Ljava/lang/String;)Z
 
     .line 35
     .line 36
@@ -107,7 +107,7 @@
 
     .line 39
     .line 40
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
 
     .line 41
     .line 42
@@ -136,7 +136,7 @@
 
     .line 53
     .line 54
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    invoke-virtual {p1}, LX/3oD;->A19()Z
 
     .line 55
     .line 56
@@ -165,11 +165,11 @@
 
     .line 67
     .line 68
-    const-class v0, LX/1Bq;
+    const-class v0, LX/1Xi;
 
     .line 69
     .line 70
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     .line 71
     .line 72
@@ -177,13 +177,13 @@
     move-result-object v3
 
     .line 74
-    check-cast v3, LX/1Bq;
+    check-cast v3, LX/1Xi;
 
     .line 75
     .line 76
     :cond_3
     :goto_1
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 77
     .line 78
@@ -191,7 +191,7 @@
     move-result-object v4
 
     .line 80
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 81
     .line 82
@@ -203,7 +203,7 @@
 
     .line 85
     :cond_4
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
 
     .line 86
     .line 87
@@ -218,7 +218,7 @@
 
     .line 90
     .line 91
-    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/ipc/composer/model/ComposerActionItemData;-><init>(LX/1Bq;Ljava/lang/String;Z)V
+    invoke-direct {v0, v3, v2, v1}, Lcom/facebook/ipc/composer/model/ComposerActionItemData;-><init>(LX/1Xi;Ljava/lang/String;Z)V
 
     .line 92
     .line 93
@@ -234,13 +234,18 @@
 
     .line 97
     .line 98
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 99
     .line 100
     .line 101
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 102
+    .line 103
+    .line 104
+    move-result-object v0
+
+    .line 105
     throw v0
 .end method

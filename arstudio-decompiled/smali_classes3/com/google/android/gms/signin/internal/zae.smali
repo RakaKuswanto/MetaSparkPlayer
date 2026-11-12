@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract Art(Lcom/google/android/gms/signin/internal/zak;)V
+.method public abstract Aqi(Lcom/google/android/gms/signin/internal/zak;)V
 .end method

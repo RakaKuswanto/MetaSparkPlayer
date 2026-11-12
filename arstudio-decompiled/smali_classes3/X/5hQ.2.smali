@@ -1,132 +1,405 @@
-.class public final LX/5hQ;
-.super LX/5jU;
+.class public abstract LX/5hQ;
+.super LX/5hR;
 .source ""
 
 # interfaces
-.implements LX/5hq;
+.implements LX/6ef;
+.implements LX/5hV;
 
 
 # instance fields
-.field public A00:LX/5hA;
+.field public final arity:I
 
-.field public A01:LX/5hr;
-
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Na;
+.field public final flags:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;II)V
+    .locals 7
 
     .line 0
-    invoke-direct {p0, p1}, LX/5jU;-><init>(Landroid/content/Context;)V
+    and-int/lit8 v1, p6, 0x1
 
     .line 1
     .line 2
+    const/4 v0, 0x1
+
     .line 3
-    sget v0, LX/2eq;->Ab7:I
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
     .line 6
+    move-result v6
+
     .line 7
+    move-object v1, p0
+
     .line 8
-    move-result-object v0
+    move-object v2, p1
 
     .line 9
-    iput-object v0, p0, LX/5hQ;->A03:LX/0Na;
+    move-object v3, p2
 
     .line 10
+    move-object v4, p3
+
     .line 11
-    sget v0, LX/2eq;->Ab8:I
+    move-object v5, p4
 
     .line 12
-    .line 13
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-direct/range {v1 .. v6}, LX/5hR;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
 
+    .line 13
     .line 14
     .line 15
-    .line 16
-    move-result-object v0
+    iput p5, p0, LX/5hQ;->arity:I
 
+    .line 16
     .line 17
-    iput-object v0, p0, LX/5hQ;->A02:LX/0Na;
+    shr-int/lit8 v0, p6, 0x1
 
     .line 18
     .line 19
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    iput v0, p0, LX/5hQ;->flags:I
 
     .line 20
     .line 21
-    .line 22
-    move-result-object v1
-
-    .line 23
-    check-cast v1, LX/5h9;
-
-    .line 24
-    .line 25
-    iget-object v0, p0, LX/5hQ;->A03:LX/0Na;
-
-    .line 26
-    .line 27
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 28
-    .line 29
-    .line 30
-    new-instance v0, LX/5hA;
-
-    .line 31
-    .line 32
-    invoke-direct {v0, p1, v1, p0}, LX/5hA;-><init>(Landroid/content/Context;LX/5h9;LX/5hq;)V
-
-    .line 33
-    .line 34
-    .line 35
-    iput-object v0, p0, LX/5hQ;->A00:LX/5hA;
-
-    .line 36
-    .line 37
     return-void
 .end method
 
 
 # virtual methods
-.method public setProjectionType(LX/32N;)V
+.method public final AAY()I
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/5hQ;->A00:LX/5hA;
+    iget v0, p0, LX/5hQ;->arity:I
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1}, LX/5hA;->A02(LX/32N;)V
+    return v0
+.end method
 
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x1
+
+    .line 1
+    if-eq p1, p0, :cond_0
+
+    .line 2
     .line 3
+    instance-of v0, p1, LX/5hQ;
+
     .line 4
     .line 5
-    return-void
+    const/4 v1, 0x0
+
+    .line 6
+    if-eqz v0, :cond_2
+
+    .line 7
+    .line 8
+    check-cast p1, LX/5hQ;
+
+    .line 9
+    .line 10
+    iget-object v1, p0, LX/5hR;->name:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    iget-object v0, p1, LX/5hR;->name:Ljava/lang/String;
+
+    .line 13
+    .line 14
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    if-eqz v0, :cond_1
+
+    .line 19
+    .line 20
+    iget-object v1, p0, LX/5hR;->signature:Ljava/lang/String;
+
+    .line 21
+    .line 22
+    iget-object v0, p1, LX/5hR;->signature:Ljava/lang/String;
+
+    .line 23
+    .line 24
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v0
+
+    .line 28
+    if-eqz v0, :cond_1
+
+    .line 29
+    .line 30
+    iget v1, p0, LX/5hQ;->flags:I
+
+    .line 31
+    .line 32
+    iget v0, p1, LX/5hQ;->flags:I
+
+    .line 33
+    .line 34
+    if-ne v1, v0, :cond_1
+
+    .line 35
+    .line 36
+    iget v1, p0, LX/5hQ;->arity:I
+
+    .line 37
+    .line 38
+    iget v0, p1, LX/5hQ;->arity:I
+
+    .line 39
+    .line 40
+    if-ne v1, v0, :cond_1
+
+    .line 41
+    .line 42
+    iget-object v1, p0, LX/5hR;->receiver:Ljava/lang/Object;
+
+    .line 43
+    .line 44
+    iget-object v0, p1, LX/5hR;->receiver:Ljava/lang/Object;
+
+    .line 45
+    .line 46
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 47
+    .line 48
+    .line 49
+    move-result v0
+
+    .line 50
+    if-eqz v0, :cond_1
+
+    .line 51
+    .line 52
+    invoke-virtual {p0}, LX/5hR;->A01()LX/6bN;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v1
+
+    .line 56
+    invoke-virtual {p1}, LX/5hR;->A01()LX/6bN;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v0
+
+    .line 60
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 61
+    .line 62
+    .line 63
+    move-result v0
+
+    .line 64
+    if-eqz v0, :cond_1
+
+    .line 65
+    .line 66
+    :cond_0
+    return v2
+
+    .line 67
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 68
+    return v2
+
+    .line 69
+    :cond_2
+    instance-of v0, p1, LX/5hV;
+
+    .line 70
+    .line 71
+    if-eqz v0, :cond_3
+
+    .line 72
+    .line 73
+    invoke-virtual {p0}, LX/5hR;->A00()LX/5hW;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v0
+
+    .line 77
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 78
+    .line 79
+    .line 80
+    move-result v2
+
+    .line 81
+    return v2
+
+    .line 82
+    :cond_3
+    return v1
 .end method
 
-.method public setVideoTimeProvider(LX/5hp;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
     .line 0
-    return-void
-.end method
-
-.method public setViewportController(LX/5hr;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/5hQ;->A01:LX/5hr;
+    invoke-virtual {p0}, LX/5hR;->A01()LX/6bN;
 
     .line 1
     .line 2
-    return-void
+    .line 3
+    move-result-object v0
+
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v1, 0x0
+
+    .line 7
+    :goto_0
+    iget-object v0, p0, LX/5hR;->name:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v1
+
+    .line 13
+    iget-object v0, p0, LX/5hR;->signature:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    invoke-static {v0, v1}, LX/434;->A0K(Ljava/lang/String;I)I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    return v0
+
+    .line 20
+    :cond_0
+    invoke-virtual {p0}, LX/5hR;->A01()LX/6bN;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    invoke-static {v0}, LX/0X6;->A06(Ljava/lang/Object;)I
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v1
+
+    .line 28
+    goto :goto_0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    invoke-virtual {p0}, LX/5hR;->A00()LX/5hW;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    if-eq v0, p0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+
+    .line 11
+    :cond_0
+    iget-object v2, p0, LX/5hR;->name:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    const-string v0, "<init>"
+
+    .line 14
+    .line 15
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    if-eqz v0, :cond_1
+
+    .line 20
+    .line 21
+    const-string v0, "constructor (Kotlin reflection is not available)"
+
+    .line 22
+    .line 23
+    return-object v0
+
+    .line 24
+    :cond_1
+    const-string v1, "function "
+
+    .line 25
+    .line 26
+    const-string v0, " (Kotlin reflection is not available)"
+
+    .line 27
+    .line 28
+    invoke-static {v1, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    return-object v0
 .end method

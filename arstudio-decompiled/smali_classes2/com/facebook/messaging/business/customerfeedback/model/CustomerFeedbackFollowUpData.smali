@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final A00:LX/0bI;
+.field public final A00:LX/13y;
 
 .field public final A01:Ljava/lang/String;
 
@@ -21,22 +21,21 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x39
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
+    .line 2
     .line 3
     .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
+    .line 5
     sput-object v0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackFollowUpData;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 6
     .line 7
-    .line 8
     return-void
 .end method
 
@@ -57,11 +56,11 @@
     move-result-object v0
 
     .line 7
-    check-cast v0, LX/0bI;
+    check-cast v0, LX/13y;
 
     .line 8
     .line 9
-    iput-object v0, p0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackFollowUpData;->A00:LX/0bI;
+    iput-object v0, p0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackFollowUpData;->A00:LX/13y;
 
     .line 10
     .line 11
@@ -97,12 +96,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackFollowUpData;->A00:LX/0bI;
+    iget-object v0, p0, Lcom/facebook/messaging/business/customerfeedback/model/CustomerFeedbackFollowUpData;->A00:LX/13y;
 
     .line 5
     .line 6

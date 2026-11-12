@@ -1,39 +1,23 @@
-.class public final LX/42i;
-.super Ljava/io/IOException;
+.class public abstract LX/42i;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 6
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    const-string v0, "File was not written completely. Expected: "
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
-    const-string v1, ", found: "
-
     .line 3
-    .line 4
-    move-wide v2, p1
-
-    .line 5
-    move-wide v4, p3
-
-    .line 6
-    invoke-static/range {v0 .. v5}, LX/00I;->A0I(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
-
-    .line 7
-    .line 8
-    .line 9
     move-result-object v0
 
-    .line 10
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    .line 11
-    .line 12
-    .line 13
-    return-void
+    .line 4
+    throw v0
 .end method

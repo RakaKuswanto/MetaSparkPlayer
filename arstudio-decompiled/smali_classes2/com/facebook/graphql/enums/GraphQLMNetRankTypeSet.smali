@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMNetRankTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMNetRankTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x34
+    const/16 v0, 0x35
 
     .line 1
     .line 2
@@ -220,7 +220,7 @@
 
     .line 99
     .line 100
-    const-string v0, "MESSENGER_BLENDED_KEYPRESS"
+    const-string v0, "MESSENGER_BCF_FREQUENTS"
 
     .line 101
     .line 102
@@ -232,7 +232,7 @@
 
     .line 105
     .line 106
-    const-string v0, "MESSENGER_BLENDED_NULLSTATE"
+    const-string v0, "MESSENGER_BLENDED_KEYPRESS"
 
     .line 107
     .line 108
@@ -244,7 +244,7 @@
 
     .line 111
     .line 112
-    const-string v0, "MESSENGER_BROADCAST_FLOW_TOP_THREADS"
+    const-string v0, "MESSENGER_BLENDED_NULLSTATE"
 
     .line 113
     .line 114
@@ -256,7 +256,7 @@
 
     .line 117
     .line 118
-    const-string v0, "MESSENGER_CARRIER_MESSAGING"
+    const-string v0, "MESSENGER_BROADCAST_FLOW_TOP_THREADS"
 
     .line 119
     .line 120
@@ -268,7 +268,7 @@
 
     .line 123
     .line 124
-    const-string v0, "MESSENGER_CLOSE_CONNECTION"
+    const-string v0, "MESSENGER_CARRIER_MESSAGING"
 
     .line 125
     .line 126
@@ -280,7 +280,7 @@
 
     .line 129
     .line 130
-    const-string v0, "MESSENGER_COMMUNITY_TAB_UNJOINED_COMMUNITIES"
+    const-string v0, "MESSENGER_CLOSE_CONNECTION"
 
     .line 131
     .line 132
@@ -292,7 +292,7 @@
 
     .line 135
     .line 136
-    const-string v0, "MESSENGER_GAME_SEARCH"
+    const-string v0, "MESSENGER_COMMUNITY_TAB_UNJOINED_COMMUNITIES"
 
     .line 137
     .line 138
@@ -304,7 +304,7 @@
 
     .line 141
     .line 142
-    const-string v0, "MESSENGER_GROUP_SEARCH"
+    const-string v0, "MESSENGER_GAME_SEARCH"
 
     .line 143
     .line 144
@@ -316,7 +316,7 @@
 
     .line 147
     .line 148
-    const-string v0, "MESSENGER_INBOX_BIRTHDAY_ITEM"
+    const-string v0, "MESSENGER_GROUP_SEARCH"
 
     .line 149
     .line 150
@@ -328,7 +328,7 @@
 
     .line 153
     .line 154
-    const-string v0, "MESSENGER_INBOX_THREADS"
+    const-string v0, "MESSENGER_INBOX_BIRTHDAY_ITEM"
 
     .line 155
     .line 156
@@ -340,7 +340,7 @@
 
     .line 159
     .line 160
-    const-string v0, "MESSENGER_MONTAGE_SEEN_SHEET"
+    const-string v0, "MESSENGER_INBOX_THREADS"
 
     .line 161
     .line 162
@@ -352,7 +352,7 @@
 
     .line 165
     .line 166
-    const-string v0, "MESSENGER_NON_CONTACT_SEARCH"
+    const-string v0, "MESSENGER_MONTAGE_SEEN_SHEET"
 
     .line 167
     .line 168
@@ -364,7 +364,7 @@
 
     .line 171
     .line 172
-    const-string v0, "MESSENGER_NOTIF_QP_TARGETING_UPSELL_TYPE"
+    const-string v0, "MESSENGER_NON_CONTACT_SEARCH"
 
     .line 173
     .line 174
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "MESSENGER_OMNIPICKER_KEYPRESS"
+    const-string v0, "MESSENGER_NOTIF_QP_TARGETING_UPSELL_TYPE"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "MESSENGER_OMNIPICKER_NULLSTATE"
+    const-string v0, "MESSENGER_OMNIPICKER_KEYPRESS"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "MESSENGER_PAGE_SEARCH"
+    const-string v0, "MESSENGER_OMNIPICKER_NULLSTATE"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "MESSENGER_PENDING_REQUEST"
+    const-string v0, "MESSENGER_PAGE_SEARCH"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "MESSENGER_ROOM_INVITE"
+    const-string v0, "MESSENGER_PENDING_REQUEST"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "MESSENGER_ROOM_INVITE_GROUP"
+    const-string v0, "MESSENGER_ROOM_INVITE"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "MESSENGER_ROOM_INVITE_SEARCH"
+    const-string v0, "MESSENGER_ROOM_INVITE_GROUP"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "MESSENGER_SEARCH_BOOTSTRAP"
+    const-string v0, "MESSENGER_ROOM_INVITE_SEARCH"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "MESSENGER_SENDS_28D"
+    const-string v0, "MESSENGER_SEARCH_BOOTSTRAP"
 
     .line 227
     .line 228
@@ -484,7 +484,7 @@
 
     .line 231
     .line 232
-    const-string v0, "MESSENGER_SHARE_SHEET"
+    const-string v0, "MESSENGER_SENDS_28D"
 
     .line 233
     .line 234
@@ -496,7 +496,7 @@
 
     .line 237
     .line 238
-    const-string v0, "MESSENGER_TRENDING_STICKERS"
+    const-string v0, "MESSENGER_SHARE_SHEET"
 
     .line 239
     .line 240
@@ -508,7 +508,7 @@
 
     .line 243
     .line 244
-    const-string v0, "MESSENGER_UNIV_NULLSTATE_BLEND"
+    const-string v0, "MESSENGER_TRENDING_STICKERS"
 
     .line 245
     .line 246
@@ -520,7 +520,7 @@
 
     .line 249
     .line 250
-    const-string v0, "MESSENGER_USER_SEARCH"
+    const-string v0, "MESSENGER_UNIV_NULLSTATE_BLEND"
 
     .line 251
     .line 252
@@ -532,7 +532,7 @@
 
     .line 255
     .line 256
-    const-string v0, "MESSENGER_USER_SEARCH_NULLSTATE"
+    const-string v0, "MESSENGER_USER_SEARCH"
 
     .line 257
     .line 258
@@ -544,7 +544,7 @@
 
     .line 261
     .line 262
-    const-string v0, "MLITE_DIODE_PROMOTION"
+    const-string v0, "MESSENGER_USER_SEARCH_NULLSTATE"
 
     .line 263
     .line 264
@@ -556,7 +556,7 @@
 
     .line 267
     .line 268
-    const-string v0, "MONTAGE_AND_ACTIVE_NOW"
+    const-string v0, "MLITE_DIODE_PROMOTION"
 
     .line 269
     .line 270
@@ -568,7 +568,7 @@
 
     .line 273
     .line 274
-    const-string v0, "MONTAGE_USER"
+    const-string v0, "MONTAGE_AND_ACTIVE_NOW"
 
     .line 275
     .line 276
@@ -580,7 +580,7 @@
 
     .line 279
     .line 280
-    const-string v0, "PSTN_TOP_CONTACTS"
+    const-string v0, "MONTAGE_USER"
 
     .line 281
     .line 282
@@ -592,7 +592,7 @@
 
     .line 285
     .line 286
-    const-string v0, "RTC_GROWTH"
+    const-string v0, "PSTN_TOP_CONTACTS"
 
     .line 287
     .line 288
@@ -604,7 +604,7 @@
 
     .line 291
     .line 292
-    const-string v0, "RTC_SEQUENTIAL_TOP_CONTACTS"
+    const-string v0, "RTC_GROWTH"
 
     .line 293
     .line 294
@@ -616,7 +616,7 @@
 
     .line 297
     .line 298
-    const-string v0, "RTC_TOP_CONTACTS"
+    const-string v0, "RTC_SEQUENTIAL_TOP_CONTACTS"
 
     .line 299
     .line 300
@@ -628,22 +628,35 @@
 
     .line 303
     .line 304
-    const-string v0, "WWW_NULLSTATE"
+    const-string v0, "RTC_TOP_CONTACTS"
 
     .line 305
     .line 306
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 307
     .line 308
-    .line 309
-    move-result-object v0
+    const/16 v1, 0x34
 
+    .line 309
     .line 310
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMNetRankTypeSet;->A00:Ljava/util/Set;
+    const-string/jumbo v0, "WWW_NULLSTATE"
 
     .line 311
     .line 312
+    .line 313
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 314
+    .line 315
+    .line 316
+    move-result-object v0
+
+    .line 317
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMNetRankTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 318
+    .line 319
     return-void
 .end method
 
@@ -659,11 +672,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMNetRankTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMNetRankTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

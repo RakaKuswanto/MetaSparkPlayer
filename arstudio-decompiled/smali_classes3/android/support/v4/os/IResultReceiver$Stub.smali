@@ -47,7 +47,7 @@
     const/4 v2, 0x1
 
     .line 3
-    if-lt p1, v2, :cond_1
+    if-lt p1, v2, :cond_2
 
     .line 4
     .line 5
@@ -56,7 +56,7 @@
     .line 6
     .line 7
     .line 8
-    if-gt p1, v0, :cond_0
+    if-gt p1, v0, :cond_1
 
     .line 9
     .line 10
@@ -65,7 +65,7 @@
     .line 11
     .line 12
     .line 13
-    if-ne p1, v2, :cond_1
+    if-ne p1, v2, :cond_2
 
     .line 14
     .line 15
@@ -74,59 +74,57 @@
     .line 16
     .line 17
     .line 18
-    move-result v1
+    sget-object v1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     .line 19
-    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
     .line 20
-    .line 21
-    invoke-static {p2, v0}, LX/0Yd;->A0G(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
+    .line 21
     .line 22
     .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    check-cast v0, Landroid/os/Bundle;
-
-    .line 26
-    .line 27
-    invoke-interface {p0, v1, v0}, Landroid/support/v4/os/IResultReceiver;->Akk(ILandroid/os/Bundle;)V
-
-    .line 28
-    .line 29
-    .line 30
-    return v2
-
-    .line 31
-    :cond_0
-    const v0, 0x5f4e5446
-
-    .line 32
-    .line 33
-    .line 34
-    if-ne p1, v0, :cond_1
-
-    .line 35
-    .line 36
-    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 37
-    .line 38
-    .line 39
-    return v2
-
-    .line 40
-    :cond_1
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 41
-    .line 42
-    .line 43
     move-result v0
 
-    .line 44
+    .line 24
+    if-eqz v0, :cond_0
+
+    .line 25
+    .line 26
+    invoke-interface {v1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    .line 27
+    .line 28
+    .line 29
+    :cond_0
+    return v2
+
+    .line 30
+    :cond_1
+    const v0, 0x5f4e5446
+
+    .line 31
+    .line 32
+    .line 33
+    if-ne p1, v0, :cond_2
+
+    .line 34
+    .line 35
+    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 36
+    .line 37
+    .line 38
+    return v2
+
+    .line 39
+    :cond_2
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 40
+    .line 41
+    .line 42
+    move-result v0
+
+    .line 43
     return v0
 .end method

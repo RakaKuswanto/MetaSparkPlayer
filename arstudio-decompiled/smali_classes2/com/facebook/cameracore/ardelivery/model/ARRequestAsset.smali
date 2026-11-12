@@ -13,11 +13,11 @@
 # instance fields
 .field public final A00:J
 
-.field public final A01:LX/1R9;
+.field public final A01:LX/1c0;
 
-.field public final A02:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
+.field public final A02:LX/1RV;
 
-.field public final A03:Ljava/lang/Integer;
+.field public final A03:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
 
 .field public final A04:Ljava/lang/String;
 
@@ -45,11 +45,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1e
+    const/16 v0, 0x18
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -90,16 +90,16 @@
     move-result-object v1
 
     .line 11
-    new-instance v0, LX/1R9;
+    new-instance v0, LX/1c0;
 
     .line 12
     .line 13
-    invoke-direct {v0, v1}, LX/1R9;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v0, v1}, LX/1c0;-><init>(Ljava/nio/ByteBuffer;)V
 
     .line 14
     .line 15
     .line 16
-    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1R9;
+    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1c0;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -149,7 +149,7 @@
     move-result v0
 
     .line 40
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 41
     .line 42
@@ -237,92 +237,229 @@
     move-result-object v0
 
     .line 84
-    invoke-static {v0}, LX/0Yg;->A0T(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+    if-nez v0, :cond_0
 
     .line 85
     .line 86
-    .line 87
-    move-result-object v0
+    const/4 v0, 0x0
 
-    .line 88
+    .line 87
+    :goto_0
     iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A0A:Lcom/google/common/collect/ImmutableList;
 
+    .line 88
     .line 89
-    .line 90
-    invoke-static {p1}, LX/0Yg;->A1P(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X5;->A1V(Landroid/os/Parcel;)Z
 
+    .line 90
     .line 91
     .line 92
-    .line 93
     move-result v0
 
-    .line 94
+    .line 93
     iput-boolean v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A08:Z
 
+    .line 94
     .line 95
-    .line 96
     const-class v0, Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
 
+    .line 96
     .line 97
-    .line 98
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
+    .line 98
     .line 99
     .line 100
-    .line 101
     move-result-object v0
 
-    .line 102
+    .line 101
     check-cast v0, Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
 
+    .line 102
     .line 103
+    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
+
     .line 104
-    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
-
     .line 105
+    invoke-static {}, LX/1RV;->values()[LX/1RV;
+
     .line 106
-    const/4 v0, 0x2
-
     .line 107
-    invoke-static {v0}, LX/014;->A00(I)[Ljava/lang/Integer;
-
     .line 108
-    .line 109
-    .line 110
     move-result-object v1
 
-    .line 111
+    .line 109
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
+    .line 110
+    .line 111
     .line 112
-    .line 113
-    .line 114
     move-result v0
 
-    .line 115
+    .line 113
     aget-object v0, v1, v0
+
+    .line 114
+    .line 115
+    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:LX/1RV;
 
     .line 116
     .line 117
-    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Ljava/lang/Integer;
-
-    .line 118
-    .line 119
     return-void
 
+    .line 118
+    :cond_0
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+
+    .line 119
     .line 120
+    .line 121
+    move-result-object v0
+
+    .line 122
+    goto :goto_0
+
+    .line 123
     :catch_0
     move-exception v0
 
-    .line 121
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    .line 122
-    .line 123
     .line 124
-    move-result-object v0
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 125
+    .line 126
+    .line 127
+    move-result-object v0
+
+    .line 128
+    throw v0
+.end method
+
+.method public constructor <init>(Lcom/facebook/cameracore/ardelivery/model/ARAssetType;Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;LX/1RV;Lcom/facebook/cameracore/ardelivery/model/EffectAssetType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;JJZ)V
+    .locals 13
+
+    const/4 v0, 0x0
+
+    .line 268672907
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    move-object/from16 v8, p5
+
+    move-object v4, p2
+
+    if-eqz p2, :cond_1
+
+    .line 268672908
+    const/4 v1, 0x0
+
+    .line 268672909
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    .line 268672910
+    new-instance v2, LX/1c0;
+
+    move-object/from16 v12, p12
+
+    move-object/from16 v11, p11
+
+    move-object/from16 v10, p7
+
+    move-object v3, p1
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v9, p6
+
+    move-object v7, v6
+
+    invoke-direct/range {v2 .. v12}, LX/1c0;-><init>(Lcom/facebook/cameracore/ardelivery/model/ARAssetType;Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;Lcom/facebook/cameracore/ardelivery/model/EffectAssetType;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v2, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1c0;
+
+    .line 268672911
+    move-object/from16 v2, p9
+
+    iput-object v2, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A05:Ljava/lang/String;
+
+    .line 268672912
+    move-object/from16 v2, p8
+
+    iput-object v2, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A0C:Ljava/lang/String;
+
+    .line 268672913
+    move-object/from16 v2, p10
+
+    iput-object v2, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A04:Ljava/lang/String;
+
+    .line 268672914
+    iput-boolean v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A07:Z
+
+    .line 268672915
+    iput-object v8, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A0B:Ljava/lang/String;
+
+    .line 268672916
+    move-wide/from16 v2, p16
+
+    iput-wide v2, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A00:J
+
+    .line 268672917
+    move-wide/from16 v2, p18
+
+    iput-wide v2, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A09:J
+
+    .line 268672918
+    move-object/from16 v0, p14
+
+    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A06:Ljava/util/List;
+
+    .line 268672919
+    move-object/from16 v0, p13
+
+    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A0D:Ljava/lang/String;
+
+    if-nez p15, :cond_0
+
+    move-object v0, v1
+
+    .line 268672920
+    :goto_0
+    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A0A:Lcom/google/common/collect/ImmutableList;
+
+    .line 268672921
+    iput-object v1, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
+
+    .line 268672922
+    move/from16 v0, p20
+
+    iput-boolean v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A08:Z
+
+    .line 268672923
+    move-object/from16 v0, p3
+
+    iput-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:LX/1RV;
+
+    return-void
+
+    .line 268672924
+    :cond_0
+    invoke-static/range {p15 .. p15}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 268672925
+    :cond_1
+    const-string v0, "Compression method must not be null: id="
+
+    .line 268672926
+    invoke-static {v0, v8}, LX/004;->A03(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    move-result-object v0
+
+    .line 268672927
     throw v0
 .end method
 
@@ -366,7 +503,7 @@
 
     .line 10
     .line 11
-    iget-object v1, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
+    iget-object v1, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
 
     .line 12
     .line 13
@@ -374,7 +511,7 @@
 
     .line 14
     .line 15
-    iget-object v0, p1, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
+    iget-object v0, p1, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
 
     .line 16
     .line 17
@@ -386,19 +523,19 @@
 
     .line 20
     :goto_0
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1R9;
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1c0;
 
     .line 21
     .line 22
-    iget-object v1, v0, LX/1R9;->A09:Ljava/lang/String;
+    iget-object v1, v0, LX/1c0;->A08:Ljava/lang/String;
 
     .line 23
     .line 24
-    iget-object v0, p1, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1R9;
+    iget-object v0, p1, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1c0;
 
     .line 25
     .line 26
-    iget-object v0, v0, LX/1R9;->A09:Ljava/lang/String;
+    iget-object v0, v0, LX/1c0;->A08:Ljava/lang/String;
 
     .line 27
     .line 28
@@ -426,7 +563,7 @@
 
     .line 39
     .line 40
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 41
     .line 42
@@ -451,7 +588,7 @@
 
     .line 51
     .line 52
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 53
     .line 54
@@ -476,7 +613,7 @@
 
     .line 63
     .line 64
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 65
     .line 66
@@ -513,7 +650,7 @@
 
     .line 81
     .line 82
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 83
     .line 84
@@ -526,11 +663,11 @@
 
     .line 87
     .line 88
-    iget-object v1, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:LX/1RV;
 
     .line 89
     .line 90
-    iget-object v0, p1, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Ljava/lang/Integer;
+    iget-object v0, p1, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:LX/1RV;
 
     .line 91
     .line 92
@@ -583,7 +720,7 @@
 
     .line 115
     .line 116
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 117
     .line 118
@@ -730,7 +867,7 @@
 
     .line 180
     .line 181
-    iget-object v0, p1, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
+    iget-object v0, p1, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
 
     .line 182
     .line 183
@@ -770,11 +907,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1R9;
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1c0;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/1R9;->A09:Ljava/lang/String;
+    iget-object v0, v0, LX/1c0;->A08:Ljava/lang/String;
 
     .line 3
     .line 4
@@ -793,7 +930,7 @@
     .locals 6
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -811,11 +948,11 @@
     .line 8
     .line 9
     .line 10
-    iget-object v5, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1R9;
+    iget-object v5, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1c0;
 
     .line 11
     .line 12
-    iget-object v0, v5, LX/1R9;->A09:Ljava/lang/String;
+    iget-object v0, v5, LX/1c0;->A08:Ljava/lang/String;
 
     .line 13
     .line 14
@@ -833,7 +970,7 @@
     .line 20
     .line 21
     .line 22
-    iget-object v0, v5, LX/1R9;->A0B:Ljava/lang/String;
+    iget-object v0, v5, LX/1c0;->A0A:Ljava/lang/String;
 
     .line 23
     .line 24
@@ -851,7 +988,7 @@
     .line 30
     .line 31
     .line 32
-    iget-object v0, v5, LX/1R9;->A0A:Ljava/lang/String;
+    iget-object v0, v5, LX/1c0;->A09:Ljava/lang/String;
 
     .line 33
     .line 34
@@ -869,7 +1006,7 @@
     .line 40
     .line 41
     .line 42
-    iget-object v0, v5, LX/1R9;->A08:Ljava/lang/String;
+    iget-object v0, v5, LX/1c0;->A07:Ljava/lang/String;
 
     .line 43
     .line 44
@@ -887,7 +1024,7 @@
     .line 50
     .line 51
     .line 52
-    iget-object v2, v5, LX/1R9;->A02:Lcom/facebook/cameracore/ardelivery/model/ARAssetType;
+    iget-object v2, v5, LX/1c0;->A02:Lcom/facebook/cameracore/ardelivery/model/ARAssetType;
 
     .line 53
     .line 54
@@ -905,7 +1042,7 @@
     .line 60
     .line 61
     .line 62
-    invoke-virtual {v5}, LX/1R9;->A02()Ljava/lang/String;
+    invoke-virtual {v5}, LX/1c0;->A02()Ljava/lang/String;
 
     .line 63
     .line 64
@@ -927,7 +1064,7 @@
     .line 72
     .line 73
     .line 74
-    iget-object v0, v5, LX/1R9;->A03:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
+    iget-object v0, v5, LX/1c0;->A03:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
 
     .line 75
     .line 76
@@ -999,7 +1136,7 @@
     .line 112
     .line 113
     .line 114
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:LX/1RV;
 
     .line 115
     .line 116
@@ -1045,7 +1182,7 @@
     .line 137
     .line 138
     .line 139
-    iget-object v0, v5, LX/1R9;->A06:Ljava/lang/Boolean;
+    iget-object v0, v5, LX/1c0;->A05:Ljava/lang/Boolean;
 
     .line 140
     .line 141
@@ -1119,34 +1256,14 @@
 
     .line 177
     :cond_1
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     .line 178
     .line 179
     .line 180
-    move-result v0
+    move-result-object v0
 
     .line 181
-    rsub-int/lit8 v0, v0, 0x1
-
-    .line 182
-    .line 183
-    if-eqz v0, :cond_2
-
-    .line 184
-    .line 185
-    const-string v0, "MD5"
-
-    .line 186
-    .line 187
-    goto :goto_0
-
-    .line 188
-    :cond_2
-    const-string v0, "SHA256"
-
-    .line 189
-    .line 190
     goto :goto_0
 .end method
 
@@ -1154,7 +1271,7 @@
     .locals 5
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1R9;
+    iget-object v1, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1c0;
 
     .line 1
     .line 2
@@ -1182,34 +1299,34 @@
     .line 14
     .line 15
     .line 16
-    iget-object v0, v1, LX/1R9;->A09:Ljava/lang/String;
+    iget-object v0, v1, LX/1c0;->A08:Ljava/lang/String;
 
     .line 17
     .line 18
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 19
     .line 20
     .line 21
-    iget-object v0, v1, LX/1R9;->A0A:Ljava/lang/String;
+    iget-object v0, v1, LX/1c0;->A09:Ljava/lang/String;
 
     .line 22
     .line 23
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 24
     .line 25
     .line 26
-    iget-object v0, v1, LX/1R9;->A0B:Ljava/lang/String;
+    iget-object v0, v1, LX/1c0;->A0A:Ljava/lang/String;
 
     .line 27
     .line 28
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 29
     .line 30
     .line 31
-    iget-object v0, v1, LX/1R9;->A02:Lcom/facebook/cameracore/ardelivery/model/ARAssetType;
+    iget-object v0, v1, LX/1c0;->A02:Lcom/facebook/cameracore/ardelivery/model/ARAssetType;
 
     .line 32
     .line 33
@@ -1221,12 +1338,12 @@
     move-result-object v0
 
     .line 37
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 38
     .line 39
     .line 40
-    invoke-virtual {v1}, LX/1R9;->A02()Ljava/lang/String;
+    invoke-virtual {v1}, LX/1c0;->A02()Ljava/lang/String;
 
     .line 41
     .line 42
@@ -1234,21 +1351,21 @@
     move-result-object v0
 
     .line 44
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 45
     .line 46
     .line 47
-    iget-object v0, v1, LX/1R9;->A0C:Ljava/lang/String;
+    iget-object v0, v1, LX/1c0;->A0B:Ljava/lang/String;
 
     .line 48
     .line 49
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 50
     .line 51
     .line 52
-    iget-object v0, v1, LX/1R9;->A03:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
+    iget-object v0, v1, LX/1c0;->A03:Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset$CompressionMethod;
 
     .line 53
     .line 54
@@ -1260,12 +1377,12 @@
     move-result-object v0
 
     .line 58
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 59
     .line 60
     .line 61
-    iget v0, v1, LX/1R9;->A01:I
+    iget v0, v1, LX/1c0;->A01:I
 
     .line 62
     .line 63
@@ -1274,16 +1391,16 @@
     .line 64
     .line 65
     .line 66
-    iget-object v0, v1, LX/1R9;->A08:Ljava/lang/String;
+    iget-object v0, v1, LX/1c0;->A07:Ljava/lang/String;
 
     .line 67
     .line 68
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 69
     .line 70
     .line 71
-    iget-object v0, v1, LX/1R9;->A07:Ljava/lang/Boolean;
+    iget-object v0, v1, LX/1c0;->A06:Ljava/lang/Boolean;
 
     .line 72
     .line 73
@@ -1295,16 +1412,16 @@
     move-result-object v0
 
     .line 77
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 78
     .line 79
     .line 80
-    iget-object v0, v1, LX/1R9;->A05:LX/0w6;
+    iget-object v0, v1, LX/1c0;->A04:LX/1AA;
 
     .line 81
     .line 82
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     .line 83
     .line 84
@@ -1312,12 +1429,12 @@
 
     .line 85
     :goto_0
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 86
     .line 87
     .line 88
-    iget-object v0, v1, LX/1R9;->A06:Ljava/lang/Boolean;
+    iget-object v0, v1, LX/1c0;->A05:Ljava/lang/Boolean;
 
     .line 89
     .line 90
@@ -1329,16 +1446,16 @@
     move-result-object v0
 
     .line 94
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 95
     .line 96
     .line 97
-    iget-object v0, v1, LX/1R9;->A0D:Ljava/lang/String;
+    iget-object v0, v1, LX/1c0;->A0C:Ljava/lang/String;
 
     .line 98
     .line 99
-    invoke-static {v0, v2}, LX/1R9;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
+    invoke-static {v0, v2}, LX/1c0;->A01(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
     .line 100
     .line 101
@@ -1471,7 +1588,7 @@
     .line 170
     .line 171
     .line 172
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Lcom/facebook/cameracore/ardelivery/model/SparkVisionCapability;
 
     .line 173
     .line 174
@@ -1483,39 +1600,34 @@
     .line 176
     .line 177
     .line 178
-    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A03:Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A02:LX/1RV;
 
     .line 179
     .line 180
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1}, LX/0X6;->A05(Ljava/lang/Enum;I)I
 
     .line 181
     .line 182
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
     .line 183
+    move-result v0
+
     .line 184
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
     .line 185
-    move-result v1
-
     .line 186
-    :cond_0
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
     .line 187
-    .line 188
-    .line 189
     return-void
 
-    .line 190
-    :cond_1
+    .line 188
+    :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
+    .line 189
+    .line 190
     .line 191
-    .line 192
-    .line 193
     move-result-object v0
 
-    .line 194
+    .line 192
     goto :goto_0
 .end method

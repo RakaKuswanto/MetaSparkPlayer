@@ -28,6 +28,8 @@
 
 .field public final persistentCacheEnabled:Z
 
+.field public pqcKexExperimentConfig:I
+
 .field public preferredCompressionAlgorithm:Ljava/lang/String;
 
 .field public final sendEarlyData:Z
@@ -36,8 +38,8 @@
 
 
 # direct methods
-.method public constructor <init>(ZIZLcom/facebook/proxygen/PersistentSSLCacheSettings;ZZIZZLjava/lang/String;IZIZLjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(ZIZLcom/facebook/proxygen/PersistentSSLCacheSettings;ZZIZZLjava/lang/String;IZIZLjava/lang/String;I)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -101,9 +103,21 @@
 
     .line 30
     .line 31
-    iput-object p15, p0, Lcom/facebook/proxygen/FizzSettings;->echPolicy:Ljava/lang/String;
+    move-object/from16 v0, p15
 
     .line 32
     .line 33
+    iput-object v0, p0, Lcom/facebook/proxygen/FizzSettings;->echPolicy:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    move/from16 v0, p16
+
+    .line 36
+    .line 37
+    iput v0, p0, Lcom/facebook/proxygen/FizzSettings;->pqcKexExperimentConfig:I
+
+    .line 38
+    .line 39
     return-void
 .end method

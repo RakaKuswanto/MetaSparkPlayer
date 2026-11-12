@@ -1,10 +1,10 @@
 .class public abstract Landroidx/work/Worker;
-.super LX/5La;
+.super LX/5ka;
 .source ""
 
 
 # instance fields
-.field public A00:LX/5ND;
+.field public A00:LX/5mC;
 
 
 # direct methods
@@ -22,7 +22,7 @@
     .end annotation
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/5La;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
+    invoke-direct {p0, p1, p2}, LX/5ka;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
     .line 1
     .line 2

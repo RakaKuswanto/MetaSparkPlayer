@@ -4,23 +4,25 @@
 
 
 # instance fields
-.field public A00:F
+.field public final A00:I
 
-.field public A01:F
+.field public final A01:I
 
-.field public A02:J
+.field public final A02:I
 
-.field public A03:LX/41L;
+.field public final A03:I
 
-.field public A04:Z
+.field public final A04:I
 
-.field public A05:Z
+.field public final A05:[I
 
-.field public final A06:F
+.field public final A06:[LX/41j;
+
+.field public final A07:[LX/41m;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(LX/41V;)V
     .locals 1
 
     .line 0
@@ -29,46 +31,123 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+    iget v0, p1, LX/41V;->A02:I
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    iput v0, p0, LX/41Z;->A02:I
 
+    .line 6
     .line 7
-    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+    iget v0, p1, LX/41V;->A04:I
 
     .line 8
     .line 9
-    .line 10
-    move-result v0
+    iput v0, p0, LX/41Z;->A04:I
 
+    .line 10
     .line 11
-    int-to-float v0, v0
+    iget-object v0, p1, LX/41V;->A08:[I
 
     .line 12
-    iput v0, p0, LX/41Z;->A06:F
-
     .line 13
-    .line 14
-    const/4 v0, 0x0
+    iput-object v0, p0, LX/41Z;->A05:[I
 
+    .line 14
     .line 15
-    iput-object v0, p0, LX/41Z;->A03:LX/41L;
+    iget-object v0, p1, LX/41V;->A0A:[LX/41m;
 
     .line 16
     .line 17
-    const/4 v0, 0x0
+    iput-object v0, p0, LX/41Z;->A07:[LX/41m;
 
     .line 18
-    iput-boolean v0, p0, LX/41Z;->A04:Z
-
     .line 19
-    .line 20
-    iput-boolean v0, p0, LX/41Z;->A05:Z
+    iget-object v0, p1, LX/41V;->A09:[LX/41j;
 
+    .line 20
     .line 21
+    iput-object v0, p0, LX/41Z;->A06:[LX/41j;
+
     .line 22
+    .line 23
+    iget v0, p1, LX/41V;->A00:I
+
+    .line 24
+    .line 25
+    iput v0, p0, LX/41Z;->A00:I
+
+    .line 26
+    .line 27
+    iget v0, p1, LX/41V;->A01:I
+
+    .line 28
+    .line 29
+    iput v0, p0, LX/41Z;->A01:I
+
+    .line 30
+    .line 31
+    iget v0, p1, LX/41V;->A03:I
+
+    .line 32
+    .line 33
+    iput v0, p0, LX/41Z;->A03:I
+
+    .line 34
+    .line 35
+    return-void
+.end method
+
+.method public constructor <init>([I[LX/41m;)V
+    .locals 3
+
+    .line 268435456
+    const/4 v2, 0x0
+
+    .line 268435457
+    const/16 v1, 0x3f
+
+    .line 268435458
+    .line 268435459
+    const/4 v0, 0x0
+
+    .line 268435460
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    iput v2, p0, LX/41Z;->A02:I
+
+    .line 268435464
+    .line 268435465
+    iput v1, p0, LX/41Z;->A04:I
+
+    .line 268435466
+    .line 268435467
+    iput-object p1, p0, LX/41Z;->A05:[I
+
+    .line 268435468
+    .line 268435469
+    iput-object p2, p0, LX/41Z;->A07:[LX/41m;
+
+    .line 268435470
+    .line 268435471
+    iput-object v0, p0, LX/41Z;->A06:[LX/41j;
+
+    .line 268435472
+    .line 268435473
+    iput v2, p0, LX/41Z;->A00:I
+
+    .line 268435474
+    .line 268435475
+    iput v2, p0, LX/41Z;->A01:I
+
+    .line 268435476
+    .line 268435477
+    iput v2, p0, LX/41Z;->A03:I
+
+    .line 268435478
+    .line 268435479
     return-void
 .end method

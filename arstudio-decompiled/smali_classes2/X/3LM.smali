@@ -1,25 +1,17 @@
-.class public final LX/3LM;
+.class public interface abstract LX/3Lm;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nw;
+# virtual methods
+.method public abstract decodeFromEncodedImage(LX/3Mp;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;)LX/3Nf;
+.end method
 
+.method public abstract decodeFromEncodedImageWithColorSpace(LX/3Mp;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;Landroid/graphics/ColorSpace;)LX/3Nf;
+.end method
 
-# direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 0
+.method public abstract decodeJPEGFromEncodedImage(LX/3Mp;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;I)LX/3Nf;
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/3LM;->A00:LX/1Nw;
-
-    .line 4
-    .line 5
-    return-void
+.method public abstract decodeJPEGFromEncodedImageWithColorSpace(LX/3Mp;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;ILandroid/graphics/ColorSpace;)LX/3Nf;
 .end method

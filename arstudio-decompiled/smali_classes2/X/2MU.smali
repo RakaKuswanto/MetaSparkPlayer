@@ -1,33 +1,8 @@
-.class public final LX/2MU;
-.super LX/2Ky;
+.class public interface abstract LX/2MU;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/2MU;
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, LX/2MU;
-
-    invoke-direct {v0}, LX/2MU;-><init>()V
-
-    sput-object v0, LX/2MU;->A00:LX/2MU;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/2Ky;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract get()Ljava/lang/Object;
 .end method

@@ -16,14 +16,20 @@
 
 
 # instance fields
-.field public transient A00:I
-
-.field public final transient A01:Ljava/lang/Object;
+.field public final transient A00:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "element"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
@@ -36,40 +42,47 @@
     .line 4
     .line 5
     .line 6
-    iput-object p1, p0, Lcom/google/common/collect/SingletonImmutableSet;->A01:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:Ljava/lang/Object;
 
     .line 7
     .line 8
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Object;I)V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, Lcom/google/common/collect/SingletonImmutableSet;->A01:Ljava/lang/Object;
-
-    .line 268435460
-    .line 268435461
-    iput p2, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:I
-
-    .line 268435462
-    .line 268435463
-    return-void
-.end method
-
 
 # virtual methods
-.method public final contains(Ljava/lang/Object;)Z
+.method public final asList()Lcom/google/common/collect/ImmutableList;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A01:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "target"
+        }
+    .end annotation
+
+    .line 0
+    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -86,9 +99,19 @@
 
 .method public final copyIntoArray([Ljava/lang/Object;I)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dst",
+            "offset"
+        }
+    .end annotation
 
     .line 0
-    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A01:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -107,71 +130,70 @@
     .locals 1
 
     .line 0
-    iget v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:I
+    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:Ljava/lang/Object;
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A01:Ljava/lang/Object;
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final iterator()LX/1tw;
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    if-eqz v1, :cond_0
+
+    .line 3
+    .line 4
+    new-instance v0, LX/216;
 
     .line 5
     .line 6
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-direct {v0, v1}, LX/216;-><init>(Ljava/lang/Object;)V
 
     .line 7
     .line 8
     .line 9
-    move-result v0
+    return-object v0
 
     .line 10
-    iput v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:I
+    :cond_0
+    new-instance v0, LX/218;
 
     .line 11
     .line 12
-    :cond_0
-    return v0
-.end method
+    invoke-direct {v0}, LX/218;-><init>()V
 
-.method public final iterator()LX/1bX;
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, Lcom/google/common/collect/SingletonImmutableSet;->A01:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    new-instance v0, LX/1KD;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/1KD;-><init>(Ljava/lang/Object;)V
-
-    .line 5
-    .line 6
-    .line 7
+    .line 13
+    .line 14
+    .line 15
     return-object v0
 .end method
 
 .method public final bridge synthetic iterator()Ljava/util/Iterator;
-    .locals 2
+    .locals 1
 
     .line 268435456
-    iget-object v1, p0, Lcom/google/common/collect/SingletonImmutableSet;->A01:Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 268435457
     .line 268435458
-    new-instance v0, LX/1KD;
-
     .line 268435459
-    .line 268435460
-    invoke-direct {v0, v1}, LX/1KD;-><init>(Ljava/lang/Object;)V
+    move-result-object v0
 
-    .line 268435461
-    .line 268435462
-    .line 268435463
+    .line 268435460
     return-object v0
 .end method
 
@@ -187,7 +209,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/0Yf;->A0l()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/0X4;->A0r()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -195,22 +217,41 @@
     move-result-object v1
 
     .line 4
-    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A01:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->A00:Ljava/lang/Object;
 
     .line 5
     .line 6
-    invoke-static {v1, v0}, LX/001;->A10(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/001;->A11(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
 
     .line 7
     .line 8
     .line 9
-    invoke-static {v1}, LX/001;->A0N(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const/16 v0, 0x5d
 
     .line 10
     .line 11
+    invoke-static {v1, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
     .line 12
+    .line 13
+    .line 14
     move-result-object v0
 
-    .line 13
+    .line 15
+    return-object v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableSet;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     return-object v0
 .end method

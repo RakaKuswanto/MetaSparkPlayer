@@ -24,11 +24,11 @@
     const/4 v1, 0x3
 
     .line 1
-    new-instance v0, LX/04O;
+    new-instance v0, LX/0Wv;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/04O;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Wv;-><init>(I)V
 
     .line 4
     .line 5
@@ -57,7 +57,7 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Landroidx/fragment/app/BackStackState;->A01:Ljava/util/List;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackState;->A00:Ljava/util/List;
 
     .line 8
     .line 9
@@ -73,7 +73,7 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, Landroidx/fragment/app/BackStackState;->A00:Ljava/util/List;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackState;->A01:Ljava/util/List;
 
     .line 16
     .line 17
@@ -94,7 +94,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/fragment/app/BackStackState;->A01:Ljava/util/List;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackState;->A00:Ljava/util/List;
 
     .line 1
     .line 2
@@ -103,7 +103,7 @@
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Landroidx/fragment/app/BackStackState;->A00:Ljava/util/List;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackState;->A01:Ljava/util/List;
 
     .line 6
     .line 7

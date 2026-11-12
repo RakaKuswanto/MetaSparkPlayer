@@ -103,7 +103,7 @@
 
     .line 40
     :cond_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 41
     .line 42
@@ -148,7 +148,7 @@
     .line 63
     .line 64
     .line 65
-    invoke-static {v3, v1, v2}, LX/0Yg;->A0s(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+    invoke-static {v3, v1, v2}, LX/0X5;->A0h(Ljava/lang/StringBuilder;J)Ljava/lang/String;
 
     .line 66
     .line 67
@@ -156,7 +156,7 @@
     move-result-object v0
 
     .line 69
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 70
     .line 71
@@ -173,7 +173,7 @@
     .line 75
     .line 76
     .line 77
-    invoke-static {v0, p1}, LX/00I;->A02(Ljava/lang/String;I)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0, p1}, LX/004;->A02(Ljava/lang/String;I)Ljava/lang/IllegalArgumentException;
 
     .line 78
     .line 79
@@ -190,7 +190,7 @@
     .line 83
     .line 84
     .line 85
-    invoke-static {p2, p3, v0}, LX/00I;->A0A(JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2, p3}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
     .line 86
     .line 87
@@ -198,7 +198,7 @@
     move-result-object v0
 
     .line 89
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 90
     .line 91
@@ -407,86 +407,89 @@
 
     .line 98
     :cond_1
-    const-string v10, "ZIP Central Directory overlaps with End of Central Directory. CD end: "
+    const-string/jumbo v10, "ZIP Central Directory overlaps with End of Central Directory. CD end: "
 
     .line 99
     .line 100
+    .line 101
     const-string v11, ", EoCD start: "
 
-    .line 101
     .line 102
+    .line 103
     move-wide v14, v8
 
-    .line 103
-    invoke-static/range {v10 .. v15}, LX/00I;->A0I(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
-
     .line 104
+    invoke-static/range {v10 .. v15}, LX/004;->A0F(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
+
     .line 105
     .line 106
-    move-result-object v1
-
     .line 107
-    new-instance v0, Lv2signature/ZipFormatException;
+    move-result-object v1
 
     .line 108
-    .line 109
-    invoke-direct {v0, v1}, Lv2signature/ZipFormatException;-><init>(Ljava/lang/String;)V
-
-    .line 110
-    .line 111
-    .line 112
-    throw v0
-
-    .line 113
-    :cond_2
-    const-string v0, "ZIP Central Directory start offset out of range: "
-
-    .line 114
-    .line 115
-    const-string v1, ". ZIP End of Central Directory offset: "
-
-    .line 116
-    .line 117
-    move-wide v2, v4
-
-    .line 118
-    move-wide v4, v8
-
-    .line 119
-    invoke-static/range {v0 .. v5}, LX/00I;->A0I(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
-
-    .line 120
-    .line 121
-    .line 122
-    move-result-object v1
-
-    .line 123
     new-instance v0, Lv2signature/ZipFormatException;
 
-    .line 124
-    .line 125
+    .line 109
+    .line 110
     invoke-direct {v0, v1}, Lv2signature/ZipFormatException;-><init>(Ljava/lang/String;)V
+
+    .line 111
+    .line 112
+    .line 113
+    throw v0
+
+    .line 114
+    :cond_2
+    const-string/jumbo v0, "ZIP Central Directory start offset out of range: "
+
+    .line 115
+    .line 116
+    .line 117
+    const-string v1, ". ZIP End of Central Directory offset: "
+
+    .line 118
+    .line 119
+    move-wide v2, v4
+
+    .line 120
+    move-wide v4, v8
+
+    .line 121
+    invoke-static/range {v0 .. v5}, LX/004;->A0F(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
+
+    .line 122
+    .line 123
+    .line 124
+    move-result-object v1
+
+    .line 125
+    new-instance v0, Lv2signature/ZipFormatException;
 
     .line 126
     .line 127
+    invoke-direct {v0, v1}, Lv2signature/ZipFormatException;-><init>(Ljava/lang/String;)V
+
     .line 128
+    .line 129
+    .line 130
     throw v0
 
-    .line 129
-    :cond_3
-    const-string v1, "ZIP End of Central Directory record not found"
-
-    .line 130
     .line 131
-    new-instance v0, Lv2signature/ZipFormatException;
+    :cond_3
+    const-string/jumbo v1, "ZIP End of Central Directory record not found"
 
     .line 132
     .line 133
-    invoke-direct {v0, v1}, Lv2signature/ZipFormatException;-><init>(Ljava/lang/String;)V
-
     .line 134
+    new-instance v0, Lv2signature/ZipFormatException;
+
     .line 135
     .line 136
+    invoke-direct {v0, v1}, Lv2signature/ZipFormatException;-><init>(Ljava/lang/String;)V
+
+    .line 137
+    .line 138
+    .line 139
     throw v0
 .end method
 
@@ -529,170 +532,173 @@
 
     .line 16
     .line 17
-    invoke-static {v7, v8, v0, v1}, LX/0Yj;->A03(JJ)I
+    invoke-static {v7, v8, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     .line 18
     .line 19
     .line 20
-    move-result v0
+    move-result-wide v1
 
     .line 21
-    add-int/lit8 v2, v0, 0x16
+    long-to-int v0, v1
 
     .line 22
+    add-int/lit8 v2, v0, 0x16
+
     .line 23
+    .line 24
     int-to-long v0, v2
 
-    .line 24
+    .line 25
     sub-long/2addr v3, v0
 
-    .line 25
+    .line 26
     invoke-static {p0, v2, v3, v4}, Lv2signature/V2SignatureUtils;->A00(Ljava/io/RandomAccessFile;IJ)Ljava/nio/ByteBuffer;
 
-    .line 26
     .line 27
     .line 28
+    .line 29
     move-result-object v11
 
-    .line 29
+    .line 30
     sget-object v10, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
-    .line 30
     .line 31
+    .line 32
     invoke-virtual {v11, v10}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 32
     .line 33
     .line 34
+    .line 35
     invoke-static {v11}, Lv2signature/V2SignatureUtils;->A04(Ljava/nio/ByteBuffer;)V
 
-    .line 35
     .line 36
     .line 37
+    .line 38
     invoke-virtual {v11}, Ljava/nio/Buffer;->capacity()I
 
-    .line 38
     .line 39
     .line 40
+    .line 41
     move-result v8
 
-    .line 41
+    .line 42
     const/16 v0, 0x16
 
-    .line 42
     .line 43
+    .line 44
     if-lt v8, v0, :cond_0
 
-    .line 44
     .line 45
+    .line 46
     sub-int/2addr v8, v0
 
-    .line 46
+    .line 47
     invoke-static {v8, v9}, Ljava/lang/Math;->min(II)I
 
-    .line 47
     .line 48
     .line 49
+    .line 50
     move-result v7
 
-    .line 50
+    .line 51
     const/4 v2, 0x0
 
-    .line 51
+    .line 52
     :goto_0
     if-gt v2, v7, :cond_0
 
-    .line 52
     .line 53
+    .line 54
     sub-int v5, v8, v2
 
-    .line 54
     .line 55
+    .line 56
     invoke-virtual {v11, v5}, Ljava/nio/ByteBuffer;->getInt(I)I
 
-    .line 56
     .line 57
     .line 58
+    .line 59
     move-result v1
 
-    .line 59
+    .line 60
     const v0, 0x6054b50
 
-    .line 60
     .line 61
     .line 62
+    .line 63
     if-ne v1, v0, :cond_1
 
-    .line 63
     .line 64
+    .line 65
     add-int/lit8 v0, v5, 0x14
 
-    .line 65
     .line 66
+    .line 67
     invoke-virtual {v11, v0}, Ljava/nio/ByteBuffer;->getShort(I)S
 
-    .line 67
     .line 68
     .line 69
+    .line 70
     move-result v0
 
-    .line 70
+    .line 71
     and-int/2addr v0, v9
 
-    .line 71
+    .line 72
     if-ne v0, v2, :cond_1
 
-    .line 72
     .line 73
+    .line 74
     const/4 v0, -0x1
 
-    .line 74
+    .line 75
     if-eq v5, v0, :cond_0
 
-    .line 75
     .line 76
+    .line 77
     invoke-virtual {v11, v5}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
-    .line 77
     .line 78
     .line 79
+    .line 80
     invoke-virtual {v11}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    .line 80
     .line 81
     .line 82
+    .line 83
     move-result-object v2
 
-    .line 83
+    .line 84
     invoke-virtual {v2, v10}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 84
     .line 85
     .line 86
+    .line 87
     int-to-long v0, v5
 
-    .line 87
+    .line 88
     add-long/2addr v3, v0
 
-    .line 88
+    .line 89
     new-instance v6, Lv2signature/ZipSection;
 
-    .line 89
     .line 90
+    .line 91
     invoke-direct {v6, v2, v3, v4}, Lv2signature/ZipSection;-><init>(Ljava/nio/ByteBuffer;J)V
 
-    .line 91
     .line 92
     .line 93
+    .line 94
     :cond_0
     return-object v6
 
-    .line 94
+    .line 95
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
-    .line 95
     .line 96
+    .line 97
     goto :goto_0
 .end method
 
@@ -947,7 +953,7 @@
 
     .line 123
     .line 124
-    invoke-static/range {v7 .. v12}, LX/00I;->A0I(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
+    invoke-static/range {v7 .. v12}, LX/004;->A0F(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
 
     .line 125
     .line 126
@@ -972,7 +978,7 @@
 
     .line 135
     .line 136
-    invoke-static {v0, v1, v2}, LX/00I;->A0A(JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
     .line 137
     .line 138
@@ -997,7 +1003,7 @@
 
     .line 147
     .line 148
-    invoke-static {v11, v12, v0}, LX/00I;->A0A(JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v11, v12}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
     .line 149
     .line 150
@@ -1039,7 +1045,7 @@
 
     .line 167
     .line 168
-    invoke-static {v0, v1, v2}, LX/00I;->A0A(JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/004;->A0A(Ljava/lang/String;J)Ljava/lang/String;
 
     .line 169
     .line 170
@@ -1060,31 +1066,32 @@
 
     .line 178
     :cond_5
-    const-string v1, "ZIP Central Directory is not immediately followed by End of Central Directory. CD end: "
+    const-string/jumbo v1, "ZIP Central Directory is not immediately followed by End of Central Directory. CD end: "
 
     .line 179
     .line 180
+    .line 181
     const-string v2, ", EoCD start: "
 
-    .line 181
     .line 182
-    invoke-static/range {v1 .. v6}, LX/00I;->A0I(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
-
     .line 183
+    invoke-static/range {v1 .. v6}, LX/004;->A0F(Ljava/lang/String;Ljava/lang/String;JJ)Ljava/lang/String;
+
     .line 184
     .line 185
+    .line 186
     move-result-object v1
 
-    .line 186
+    .line 187
     new-instance v0, Lv2signature/V2SignatureNotFoundException;
 
-    .line 187
     .line 188
+    .line 189
     invoke-direct {v0, v1}, Lv2signature/V2SignatureNotFoundException;-><init>(Ljava/lang/String;)V
 
-    .line 189
     .line 190
     .line 191
+    .line 192
     throw v0
 .end method
 
@@ -1116,7 +1123,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 12
     .line 13
@@ -1443,7 +1450,7 @@
     move-result v1
 
     .line 150
-    invoke-static {p0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 151
     .line 152
@@ -1466,7 +1473,7 @@
     .line 161
     .line 162
     .line 163
-    invoke-static {v2, v0, v1}, LX/001;->A0L(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/001;->A0P(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
     .line 164
     .line 165
@@ -1487,7 +1494,7 @@
 
     .line 173
     :cond_5
-    invoke-static {p0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 174
     .line 175
@@ -1505,7 +1512,7 @@
     .line 181
     .line 182
     .line 183
-    invoke-static {v0, v1, v2}, LX/0Yg;->A0s(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, LX/0X5;->A0h(Ljava/lang/StringBuilder;J)Ljava/lang/String;
 
     .line 184
     .line 185
@@ -1535,7 +1542,7 @@
     .line 196
     .line 197
     .line 198
-    invoke-static {v1, v0, p1}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0, p1}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 199
     .line 200

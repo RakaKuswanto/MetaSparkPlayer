@@ -1,61 +1,45 @@
 .class public final LX/41D;
-.super Ljava/lang/Object;
+.super LX/6HX;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/42g;
-
-.field public final A01:LX/67S;
-
-.field public final A02:LX/31M;
-
-.field public final A03:Ljava/util/LinkedHashSet;
+# static fields
+.field public static final serialVersionUID:J = 0x1L
 
 
 # direct methods
-.method public constructor <init>(LX/42g;LX/31M;)V
-    .locals 1
+.method public constructor <init>(LX/3oD;LX/3MM;LX/41D;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p1, p2, p3}, LX/6HX;-><init>(LX/3oD;LX/3MM;LX/6HX;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(LX/41D;LX/6Jn;)V
+    .locals 0
+
+    .line 536870912
+    invoke-direct {p0, p1, p2}, LX/6HX;-><init>(LX/6HX;LX/6Jn;)V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    return-void
+.end method
+
+.method public constructor <init>(LX/6Jn;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/6HX;-><init>(LX/6Jn;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/41D;->A00:LX/42g;
-
-    .line 4
-    .line 5
-    iput-object p2, p0, LX/41D;->A02:LX/31M;
-
-    .line 6
-    .line 7
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    .line 8
-    .line 9
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    .line 10
-    .line 11
-    .line 12
-    iput-object v0, p0, LX/41D;->A03:Ljava/util/LinkedHashSet;
-
-    .line 13
-    .line 14
-    new-instance v0, LX/41n;
-
-    .line 15
-    .line 16
-    invoke-direct {v0, p0}, LX/41n;-><init>(LX/41D;)V
-
-    .line 17
-    .line 18
-    .line 19
-    iput-object v0, p0, LX/41D;->A01:LX/67S;
-
-    .line 20
-    .line 21
     return-void
 .end method

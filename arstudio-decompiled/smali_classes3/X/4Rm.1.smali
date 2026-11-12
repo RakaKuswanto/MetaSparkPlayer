@@ -3,42 +3,75 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "BottomSheetDialog$dismiss$1"
-
-
-# instance fields
-.field public final synthetic A00:LX/4Rj;
+.implements LX/4Rq;
 
 
 # direct methods
-.method public constructor <init>(LX/4Rj;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, LX/4Rm;->A00:LX/4Rj;
-
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final A6M(Landroid/content/Context;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;Lorg/xmlpull/v1/XmlPullParser;)Landroid/graphics/drawable/Drawable;
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/4Rm;->A00:LX/4Rj;
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/4Rj;->A02(LX/4Rj;)V
-
     .line 3
+    move-result-object v1
+
     .line 4
+    new-instance v0, LX/4XP;
+
     .line 5
-    return-void
+    .line 6
+    invoke-direct {v0}, LX/4XP;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {v0, v1, p4, p3, p2}, LX/4XP;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
+
+    .line 10
+    .line 11
+    .line 12
+    return-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 13
+    :catch_0
+    move-exception v2
+
+    .line 14
+    const-string v1, "VdcInflateDelegate"
+
+    .line 15
+    .line 16
+    const-string v0, "Exception while inflating <vector>"
+
+    .line 17
+    .line 18
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 19
+    .line 20
+    .line 21
+    const/4 v0, 0x0
+
+    .line 22
+    return-object v0
 .end method

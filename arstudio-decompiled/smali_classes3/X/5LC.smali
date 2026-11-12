@@ -1,18 +1,28 @@
-.class public interface abstract LX/5LC;
+.class public final LX/5LC;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5LK;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract AXr(LX/5Kk;Z)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "id",
-            "needsReschedule"
-        }
-    .end annotation
+.method public final ARn()V
+    .locals 0
+
+    return-void
 .end method

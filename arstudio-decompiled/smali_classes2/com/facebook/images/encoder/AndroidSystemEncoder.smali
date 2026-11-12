@@ -3,20 +3,18 @@
 .source ""
 
 # interfaces
-.implements LX/3Ge;
+.implements LX/338;
 .implements Lcom/facebook/common/callercontext/CallerContextable;
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
+.field public final A01:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
@@ -25,7 +23,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A03()LX/0Zq;
+    invoke-static {}, LX/0lf;->A03()LX/0lf;
 
     .line 4
     .line 5
@@ -33,11 +31,11 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A01:LX/0RP;
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Zq;->A02()LX/0Zq;
+    invoke-static {}, LX/0lf;->A02()LX/0lf;
 
     .line 10
     .line 11
@@ -45,28 +43,16 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A00:LX/0RP;
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    iput-object v0, p0, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A00:LX/1zG;
-
-    .line 20
-    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final A7B(Landroid/graphics/Bitmap;Ljava/io/OutputStream;)Z
+.method public final A5S(Landroid/graphics/Bitmap;Ljava/io/OutputStream;)Z
     .locals 9
 
     .line 0
@@ -74,425 +60,420 @@
 
     .line 1
     .line 2
-    const-string v5, "compressPng"
+    const-string/jumbo v5, "compressPng"
 
     .line 3
     .line 4
+    .line 5
     const/16 v2, 0x64
 
-    .line 5
     .line 6
+    .line 7
     const-class v1, Lcom/facebook/images/encoder/AndroidSystemEncoder;
 
-    .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A01:LX/0Na;
-
     .line 9
-    .line 10
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    iget-object v0, p0, Lcom/facebook/images/encoder/AndroidSystemEncoder;->A00:LX/0RP;
 
+    .line 10
     .line 11
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
     .line 12
     .line 13
+    .line 14
     move-result-object v4
 
-    .line 14
-    check-cast v4, LX/0JA;
-
     .line 15
+    check-cast v4, LX/0I5;
+
     .line 16
+    .line 17
     const/4 v0, 0x3
 
-    .line 17
-    invoke-static {v4, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 18
+    invoke-static {v4, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 19
     .line 20
+    .line 21
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 21
     .line 22
     .line 23
-    move-result-object v1
-
     .line 24
-    const-string/jumbo v0, "mobile_image_transcode"
+    move-result-object v1
 
     .line 25
+    const-string/jumbo v0, "mobile_image_transcode"
+
     .line 26
     .line 27
-    invoke-static {v0}, LX/2h6;->A02(Ljava/lang/String;)LX/2h6;
-
     .line 28
+    invoke-static {v0}, LX/2j8;->A02(Ljava/lang/String;)LX/2j8;
+
     .line 29
     .line 30
+    .line 31
     move-result-object v6
 
-    .line 31
+    .line 32
     const-wide/16 v7, -0x1
 
-    .line 32
     .line 33
-    const-string v0, "class_name"
-
     .line 34
-    .line 35
-    invoke-virtual {v6, v0, v1}, LX/2h6;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    const-string/jumbo v0, "class_name"
 
+    .line 35
     .line 36
     .line 37
-    .line 38
-    const-string/jumbo v0, "function_name"
+    invoke-virtual {v6, v0, v1}, LX/2j8;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 38
     .line 39
     .line 40
-    .line 41
-    invoke-virtual {v6, v0, v5}, LX/2h6;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    const-string/jumbo v0, "function_name"
 
+    .line 41
     .line 42
     .line 43
-    .line 44
-    const-string/jumbo v0, "os.arch"
+    invoke-virtual {v6, v0, v5}, LX/2j8;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 44
     .line 45
     .line 46
-    .line 47
-    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v0, "os.arch"
 
+    .line 47
     .line 48
     .line 49
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
     .line 50
+    .line 51
+    .line 52
     move-result-object v1
 
-    .line 51
-    const-string v0, "cpu_arch"
-
-    .line 52
     .line 53
-    invoke-virtual {v6, v0, v1}, LX/2h6;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    const-string/jumbo v0, "cpu_arch"
 
     .line 54
     .line 55
     .line 56
-    sget-object v0, LX/0tH;->BITMAP:LX/0tH;
+    invoke-virtual {v6, v0, v1}, LX/2j8;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 57
     .line 58
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
     .line 59
+    sget-object v0, LX/3O7;->BITMAP:LX/3O7;
+
     .line 60
     .line 61
-    move-result-object v1
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 62
-    const-string/jumbo v0, "input_type"
-
     .line 63
     .line 64
+    move-result-object v1
+
     .line 65
-    invoke-virtual {v6, v0, v1}, LX/2h6;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    const-string/jumbo v0, "input_type"
 
     .line 66
     .line 67
     .line 68
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getByteCount()I
+    invoke-virtual {v6, v0, v1}, LX/2j8;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
     .line 70
     .line 71
-    move-result v0
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getByteCount()I
 
     .line 72
+    .line 73
+    .line 74
+    move-result v0
+
+    .line 75
     int-to-long v0, v0
 
-    .line 73
-    const-string/jumbo v5, "input_length"
-
-    .line 74
-    .line 75
     .line 76
-    invoke-virtual {v6, v5, v0, v1}, LX/2h6;->A0D(Ljava/lang/String;J)V
+    const-string/jumbo v5, "input_length"
 
     .line 77
     .line 78
     .line 79
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-virtual {v6, v5, v0, v1}, LX/2j8;->A0D(Ljava/lang/String;J)V
 
     .line 80
     .line 81
     .line 82
-    move-result v5
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     .line 83
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
     .line 84
     .line 85
+    move-result v5
+
     .line 86
-    move-result v1
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     .line 87
-    const-string/jumbo v0, "input_width"
-
     .line 88
     .line 89
+    move-result v1
+
     .line 90
-    invoke-virtual {v6, v0, v5}, LX/2h6;->A0C(Ljava/lang/String;I)V
+    const-string/jumbo v0, "input_width"
 
     .line 91
     .line 92
     .line 93
-    const-string/jumbo v0, "input_height"
+    invoke-virtual {v6, v0, v5}, LX/2j8;->A0C(Ljava/lang/String;I)V
 
     .line 94
     .line 95
     .line 96
-    invoke-virtual {v6, v0, v1}, LX/2h6;->A0C(Ljava/lang/String;I)V
+    const-string/jumbo v0, "input_height"
 
     .line 97
     .line 98
     .line 99
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v6, v0, v1}, LX/2j8;->A0C(Ljava/lang/String;I)V
 
     .line 100
     .line 101
     .line 102
-    move-result-object v0
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 103
-    if-eqz v0, :cond_0
-
     .line 104
     .line 105
-    invoke-static {v0}, LX/0Yi;->A0p(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
     .line 106
+    if-eqz v0, :cond_0
+
     .line 107
     .line 108
-    move-result-object v1
+    invoke-static {v0}, LX/0X5;->A0e(Ljava/lang/String;)Ljava/lang/String;
 
     .line 109
-    const-string/jumbo v0, "output_type"
-
     .line 110
     .line 111
+    move-result-object v1
+
     .line 112
-    invoke-virtual {v6, v0, v1}, LX/2h6;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    const-string/jumbo v0, "output_type"
 
     .line 113
     .line 114
     .line 115
-    :cond_0
-    :try_start_0
-    sget-object v1, LX/0qY;->PLATFORM:LX/0qY;
+    invoke-virtual {v6, v0, v1}, LX/2j8;->A0E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 116
     .line 117
-    invoke-interface {v4}, LX/0JA;->now()J
-
     .line 118
+    :cond_0
+    :try_start_0
+    sget-object v1, LX/125;->PLATFORM:LX/125;
+
     .line 119
     .line 120
-    move-result-wide v7
+    invoke-interface {v4}, LX/0I5;->now()J
 
     .line 121
-    const-string/jumbo v0, "transcoder_name"
-
     .line 122
     .line 123
+    move-result-wide v7
+
     .line 124
-    invoke-virtual {v6, v1, v0}, LX/2h6;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string/jumbo v0, "transcoder_name"
 
     .line 125
     .line 126
     .line 127
-    const-string/jumbo v0, "transcoder_quality"
+    invoke-virtual {v6, v1, v0}, LX/2j8;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 128
     .line 129
     .line 130
-    invoke-virtual {v6, v0, v2}, LX/2h6;->A0C(Ljava/lang/String;I)V
+    const-string/jumbo v0, "transcoder_quality"
 
     .line 131
     .line 132
     .line 133
-    invoke-virtual {p1, v3, v2, p2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    invoke-virtual {v6, v0, v2}, LX/2j8;->A0C(Ljava/lang/String;I)V
 
     .line 134
     .line 135
     .line 136
-    move-result v5
+    invoke-virtual {p1, v3, v2, p2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     .line 137
-    const-string/jumbo v0, "transcoder_success"
-
     .line 138
     .line 139
+    move-result v5
+
     .line 140
-    invoke-virtual {v6, v0, v5}, LX/2h6;->A0G(Ljava/lang/String;Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string/jumbo v0, "transcoder_success"
 
     .line 141
     .line 142
     .line 143
-    invoke-interface {v4}, LX/0JA;->now()J
+    invoke-virtual {v6, v0, v5}, LX/2j8;->A0G(Ljava/lang/String;Z)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 144
     .line 145
     .line 146
-    move-result-wide v3
+    invoke-interface {v4}, LX/0I5;->now()J
 
     .line 147
+    .line 148
+    .line 149
+    move-result-wide v3
+
+    .line 150
     sub-long/2addr v3, v7
 
-    .line 148
+    .line 151
     const-wide/16 v1, -0x1
 
-    .line 149
-    .line 150
+    .line 152
+    .line 153
     cmp-long v0, v7, v1
 
-    .line 151
-    .line 152
+    .line 154
+    .line 155
     if-eqz v0, :cond_1
 
-    .line 153
-    .line 154
-    invoke-static {v6, p0, v3, v4}, LX/21T;->A01(LX/2h6;Lcom/facebook/images/encoder/AndroidSystemEncoder;J)V
-
-    .line 155
     .line 156
     .line 157
-    return v5
+    invoke-static {v6, p0, v3, v4}, LX/2j2;->A02(LX/2j8;Lcom/facebook/images/encoder/AndroidSystemEncoder;J)V
 
     .line 158
-    :cond_1
-    const-string v0, "Check failed."
-
     .line 159
     .line 160
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    return v5
 
     .line 161
+    :cond_1
+    invoke-static {}, LX/0X5;->A0V()Ljava/lang/IllegalStateException;
+
     .line 162
     .line 163
+    .line 164
     move-result-object v0
 
-    .line 164
+    .line 165
     throw v0
 
-    .line 165
+    .line 166
     :catch_0
     move-exception v3
 
-    .line 166
+    .line 167
     const/4 v1, 0x0
 
-    .line 167
+    .line 168
     :try_start_1
     const-string/jumbo v0, "transcoder_success"
 
-    .line 168
     .line 169
     .line 170
-    invoke-virtual {v6, v0, v1}, LX/2h6;->A0G(Ljava/lang/String;Z)V
-
     .line 171
+    invoke-virtual {v6, v0, v1}, LX/2j8;->A0G(Ljava/lang/String;Z)V
+
     .line 172
     .line 173
+    .line 174
     const-string/jumbo v2, "transcoder_exception_message"
 
-    .line 174
     .line 175
     .line 176
+    .line 177
     const-string/jumbo v1, "transcoder_exception"
 
-    .line 177
     .line 178
     .line 179
-    invoke-static {v3}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
-
     .line 180
+    invoke-static {v3}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
+
     .line 181
     .line 182
-    move-result-object v0
-
     .line 183
-    invoke-virtual {v6, v1, v0}, LX/2h6;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
     .line 184
+    invoke-virtual {v6, v1, v0}, LX/2j8;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 185
     .line 186
+    .line 187
     invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    .line 187
     .line 188
     .line 189
+    .line 190
     move-result-object v0
 
-    .line 190
-    invoke-virtual {v6, v2, v0}, LX/2h6;->A0E(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 191
+    invoke-virtual {v6, v2, v0}, LX/2j8;->A0E(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 192
     .line 193
+    .line 194
     throw v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 194
+    .line 195
     :catchall_0
     move-exception v5
 
-    .line 195
-    invoke-interface {v4}, LX/0JA;->now()J
-
     .line 196
+    invoke-interface {v4}, LX/0I5;->now()J
+
     .line 197
     .line 198
+    .line 199
     move-result-wide v3
 
-    .line 199
+    .line 200
     sub-long/2addr v3, v7
 
-    .line 200
+    .line 201
     const-wide/16 v1, -0x1
 
-    .line 201
     .line 202
+    .line 203
     cmp-long v0, v7, v1
 
-    .line 203
     .line 204
+    .line 205
     if-eqz v0, :cond_2
 
-    .line 205
     .line 206
-    invoke-static {v6, p0, v3, v4}, LX/21T;->A01(LX/2h6;Lcom/facebook/images/encoder/AndroidSystemEncoder;J)V
-
     .line 207
+    invoke-static {v6, p0, v3, v4}, LX/2j2;->A02(LX/2j8;Lcom/facebook/images/encoder/AndroidSystemEncoder;J)V
+
     .line 208
     .line 209
+    .line 210
     throw v5
 
-    .line 210
-    :cond_2
-    const-string v0, "Check failed."
-
     .line 211
-    .line 212
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    :cond_2
+    invoke-static {}, LX/0X5;->A0V()Ljava/lang/IllegalStateException;
 
+    .line 212
     .line 213
     .line 214
-    .line 215
     move-result-object v0
 
-    .line 216
+    .line 215
     throw v0
 .end method

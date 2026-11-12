@@ -49,11 +49,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x2e
+    const/16 v0, 0x2d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -257,7 +257,7 @@
 
     .line 92
     .line 93
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 94
     .line 95
@@ -275,63 +275,88 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
     .locals 1
 
-    .line 268925183
+    .line 268435456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268925184
+    .line 268435457
+    .line 268435458
+    .line 268435459
     iput-object p1, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A0C:Ljava/lang/String;
 
-    .line 268925185
+    .line 268435460
+    .line 268435461
     iput-object p2, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A09:Ljava/lang/String;
 
-    .line 268925186
+    .line 268435462
+    .line 268435463
     iput-object p3, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A0D:Ljava/lang/String;
 
-    .line 268925187
+    .line 268435464
+    .line 268435465
     invoke-static/range {p15 .. p15}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
+    .line 268435466
+    .line 268435467
+    .line 268435468
     move-result-object v0
 
+    .line 268435469
     iput-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A0B:Ljava/lang/String;
 
-    .line 268925188
+    .line 268435470
+    .line 268435471
     iput-object p5, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A01:Ljava/lang/String;
 
-    .line 268925189
+    .line 268435472
+    .line 268435473
     iput-object p6, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A00:Ljava/lang/String;
 
-    .line 268925190
+    .line 268435474
+    .line 268435475
     iput-object p7, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A08:Ljava/lang/String;
 
-    .line 268925191
+    .line 268435476
+    .line 268435477
     iput-object p4, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A0E:Ljava/lang/String;
 
-    .line 268925192
+    .line 268435478
+    .line 268435479
     iput-object p8, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A03:Ljava/lang/String;
 
-    .line 268925193
+    .line 268435480
+    .line 268435481
     iput-object p9, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A05:Ljava/lang/String;
 
-    .line 268925194
+    .line 268435482
+    .line 268435483
     iput-object p10, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A0A:Ljava/lang/String;
 
-    .line 268925195
+    .line 268435484
+    .line 268435485
     iput-object p11, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A02:Ljava/lang/String;
 
-    .line 268925196
+    .line 268435486
+    .line 268435487
     iput-object p12, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A06:Ljava/lang/String;
 
-    .line 268925197
+    .line 268435488
+    .line 268435489
     iput-object p13, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A04:Ljava/lang/String;
 
-    .line 268925198
+    .line 268435490
+    .line 268435491
     iput-object p14, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A07:Ljava/lang/String;
 
-    .line 268925199
+    .line 268435492
+    .line 268435493
     move/from16 v0, p16
 
+    .line 268435494
+    .line 268435495
     iput-boolean v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryValidateCodeMethod$Params;->A0F:Z
 
+    .line 268435496
+    .line 268435497
     return-void
 .end method
 

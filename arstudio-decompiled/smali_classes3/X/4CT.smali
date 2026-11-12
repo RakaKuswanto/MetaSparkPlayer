@@ -1,36 +1,58 @@
-.class public final LX/4CT;
-.super LX/02T;
+.class public abstract LX/4CT;
+.super LX/4nZ;
 .source ""
 
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SSLDialogFragment"
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public A00:LX/4BG;
+.field public A00:J
+
+.field public A01:Z
+
+.field public A02:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/02T;-><init>()V
+    invoke-direct {p0}, LX/4nZ;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    const-wide/16 v0, -0x1
+
+    .line 4
+    .line 5
+    iput-wide v0, p0, LX/4CT;->A00:J
+
+    .line 6
+    .line 7
+    const/4 v0, 0x0
+
+    .line 8
+    iput-boolean v0, p0, LX/4CT;->A01:Z
+
+    .line 9
+    .line 10
+    iput-boolean v0, p0, LX/4CT;->A02:Z
+
+    .line 11
+    .line 12
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0J(Landroid/os/Bundle;)Landroid/app/Dialog;
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
     .line 0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -38,73 +60,43 @@
     move-result-object v0
 
     .line 4
-    new-instance v1, Landroid/app/AlertDialog$Builder;
+    check-cast v0, Ljava/lang/Number;
 
     .line 5
     .line 6
-    invoke-direct {v1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    if-eqz v0, :cond_0
 
     .line 7
     .line 8
-    .line 9
-    const v0, 0x7f12005e
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
+    .line 9
     .line 10
     .line 11
+    move-result-wide v3
+
     .line 12
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+    iget-wide v1, p0, LX/4CT;->A00:J
 
     .line 13
     .line 14
-    .line 15
-    move-result-object v1
+    cmp-long v0, v3, v1
 
+    .line 15
     .line 16
-    const v0, 0x7f12005c
+    if-eqz v0, :cond_0
 
     .line 17
     .line 18
-    .line 19
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+    iput-wide v3, p0, LX/4CT;->A00:J
 
+    .line 19
     .line 20
+    invoke-virtual {p0}, LX/4nZ;->notifyDataSetChanged()V
+
     .line 21
     .line 22
-    move-result-object v3
-
     .line 23
-    const v2, 0x7f12005d
-
-    .line 24
-    .line 25
-    .line 26
-    const/4 v1, 0x3
-
-    .line 27
-    new-instance v0, LX/6PR;
-
-    .line 28
-    .line 29
-    invoke-direct {v0, p0, v1}, LX/6PR;-><init>(Ljava/lang/Object;I)V
-
-    .line 30
-    .line 31
-    .line 32
-    invoke-virtual {v3, v2, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 33
-    .line 34
-    .line 35
-    move-result-object v0
-
-    .line 36
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    return-object v0
+    :cond_0
+    return-void
 .end method

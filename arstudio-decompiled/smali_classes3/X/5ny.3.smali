@@ -1,30 +1,17 @@
-.class public final LX/5ny;
+.class public interface abstract LX/5ny;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5o7;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
 
 # virtual methods
-.method public final AKt()I
-    .locals 1
+.method public abstract AUV()V
+.end method
 
-    const/4 v0, -0x1
+.method public abstract AVz(Ljava/lang/Throwable;)V
+.end method
 
-    return v0
+.method public abstract AYj(Ljava/lang/Object;)V
+.end method
+
+.method public abstract Abg(LX/5nt;)V
 .end method

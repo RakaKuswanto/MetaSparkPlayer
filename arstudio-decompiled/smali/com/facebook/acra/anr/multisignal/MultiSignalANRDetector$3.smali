@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0X1;
+.implements LX/0U3;
 
 
 # instance fields

@@ -1,20 +1,17 @@
-.class public interface abstract LX/4lv;
+.class public abstract LX/4lV;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A9B()V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract ATa(LX/4nC;LX/4qW;II)V
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract ATg(Landroid/view/ViewGroup;)V
-.end method
-
-.method public abstract AnD(II)V
-.end method
-
-.method public abstract AqE(Landroid/view/ViewGroup;)V
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

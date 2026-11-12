@@ -12,13 +12,13 @@
 
 .field public A03:Z
 
-.field public final A04:LX/0Na;
+.field public final A04:LX/0RP;
 
-.field public final A05:LX/0Na;
+.field public final A05:LX/0RP;
 
-.field public final A06:LX/0Na;
+.field public final A06:LX/0RP;
 
-.field public final A07:LX/1sa;
+.field public final A07:LX/1DG;
 
 
 # direct methods
@@ -45,7 +45,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 10
     .line 11
@@ -53,11 +53,11 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A06:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A06:LX/0RP;
 
     .line 14
     .line 15
-    invoke-static {}, LX/0Zq;->A07()LX/0Zq;
+    invoke-static {}, LX/0lf;->A06()LX/0lf;
 
     .line 16
     .line 17
@@ -65,15 +65,15 @@
     move-result-object v0
 
     .line 19
-    iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A05:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A05:LX/0RP;
 
     .line 20
     .line 21
-    sget v0, LX/2eq;->Agf:I
+    sget v0, LX/2I6;->AYP:I
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 24
     .line 25
@@ -81,20 +81,20 @@
     move-result-object v0
 
     .line 27
-    iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A04:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A04:LX/0RP;
 
     .line 28
     .line 29
-    new-instance v0, LX/1UO;
+    new-instance v0, LX/0Xs;
 
     .line 30
     .line 31
-    invoke-direct {v0, p0, v1}, LX/1UO;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/0Xs;-><init>(Ljava/lang/Object;I)V
 
     .line 32
     .line 33
     .line 34
-    iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A07:LX/1sa;
+    iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A07:LX/1DG;
 
     .line 35
     .line 36
@@ -110,451 +110,457 @@
 
 
 # virtual methods
-.method public final A0K(Landroid/os/Bundle;)V
+.method public final A1I(Landroid/os/Bundle;)V
     .locals 7
 
     .line 0
-    const v0, 0x7f0d0023
+    invoke-static {p0}, Lcom/facebook/base/activity/FbFragmentActivity;->A0D(Lcom/facebook/base/activity/FbFragmentActivity;)LX/2Sv;
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p0, v0}, Lcom/facebook/base/activity/FbFragmentActivity;->setContentView(I)V
+    const v0, 0x7f0c0023
 
     .line 4
     .line 5
     .line 6
-    const/4 v4, 0x1
+    invoke-virtual {p0, v0}, Lcom/facebook/base/activity/FbFragmentActivity;->setContentView(I)V
 
     .line 7
-    const-string/jumbo v1, "launch_effect_list_when_exit"
-
     .line 8
     .line 9
+    const/4 v4, 0x1
+
     .line 10
-    if-nez p1, :cond_0
+    const-string/jumbo v1, "launch_effect_list_when_exit"
 
     .line 11
     .line 12
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
     .line 13
+    if-nez p1, :cond_0
+
     .line 14
     .line 15
-    move-result-object v0
+    invoke-static {p0}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 16
-    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
     .line 17
     .line 18
+    move-result-object v0
+
     .line 19
-    move-result v0
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
     :goto_0
     iput-boolean v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A01:Z
 
-    .line 21
-    .line 22
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()LX/0Sf;
-
-    .line 23
     .line 24
     .line 25
-    move-result-object v1
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()LX/0VG;
 
     .line 26
-    const v0, 0x7f0a039f
-
     .line 27
     .line 28
+    move-result-object v1
+
     .line 29
-    invoke-virtual {v1, v0}, LX/0Sf;->A0R(I)Landroidx/fragment/app/Fragment;
+    const v0, 0x7f090348
 
     .line 30
     .line 31
     .line 32
-    move-result-object v0
+    invoke-virtual {v1, v0}, LX/0VG;->A0R(I)Landroidx/fragment/app/Fragment;
 
     .line 33
-    if-eqz v0, :cond_4
-
     .line 34
     .line 35
-    check-cast v0, Lcom/facebook/auth/login/ui/AuthNavigationController;
+    move-result-object v0
 
     .line 36
+    if-eqz v0, :cond_4
+
     .line 37
+    .line 38
+    check-cast v0, Lcom/facebook/auth/login/ui/AuthNavigationController;
+
+    .line 39
+    .line 40
     iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A00:Lcom/facebook/auth/login/ui/AuthNavigationController;
 
-    .line 38
-    .line 39
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    .line 40
     .line 41
     .line 42
-    move-result-object v3
+    invoke-static {p0}, LX/2Sv;->A00(Lcom/facebook/base/activity/FbFragmentActivity;)Landroid/content/Intent;
 
     .line 43
-    if-eqz v3, :cond_2
-
     .line 44
     .line 45
-    const-string/jumbo v2, "orca:loginparam:LoginFragmentState"
+    move-result-object v3
 
     .line 46
+    if-eqz v3, :cond_2
+
     .line 47
     .line 48
-    invoke-virtual {v3, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v2, "orca:loginparam:LoginFragmentState"
 
     .line 49
     .line 50
     .line 51
-    move-result-object v1
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     .line 52
+    .line 53
+    .line 54
+    move-result-object v1
+
+    .line 55
     const/4 v0, 0x0
 
-    .line 53
-    if-eqz v1, :cond_1
-
-    .line 54
-    .line 55
-    goto :goto_1
-
     .line 56
-    :cond_0
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+    if-eqz v1, :cond_1
 
     .line 57
     .line 58
+    goto :goto_1
+
     .line 59
-    move-result v0
+    :cond_0
+    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     .line 60
+    .line 61
+    .line 62
+    move-result v0
+
+    .line 63
     goto :goto_0
 
-    .line 61
+    .line 64
     :goto_1
     :try_start_0
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 62
-    .line 63
-    .line 64
+    .line 65
+    .line 66
+    .line 67
     move-result-object v0
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 65
+    .line 68
     :catch_0
     :cond_1
     iput-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A02:Ljava/lang/Class;
 
-    .line 66
-    .line 67
-    invoke-virtual {v3, v2}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
-
-    .line 68
     .line 69
     .line 70
-    :cond_2
-    iget-boolean v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A03:Z
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
 
     .line 71
     .line 72
+    .line 73
+    :cond_2
+    iget-boolean v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A03:Z
+
+    .line 74
+    .line 75
     if-nez v0, :cond_3
 
-    .line 73
-    .line 74
+    .line 76
+    .line 77
     const-class v1, Lcom/facebook/arstudio/player/login/PlayerFirstPartySsoViewGroup;
 
-    .line 75
-    .line 76
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
-
-    .line 77
     .line 78
     .line 79
-    move-result-object v0
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 80
-    new-instance v6, Lcom/facebook/auth/login/ui/AuthFragmentConfig;
-
     .line 81
     .line 82
-    invoke-direct {v6, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentConfig;-><init>(Landroid/os/Bundle;Ljava/lang/Class;)V
+    move-result-object v0
 
     .line 83
+    new-instance v6, Lcom/facebook/auth/login/ui/AuthFragmentConfig;
+
     .line 84
     .line 85
-    const-class v1, Lcom/facebook/arstudio/player/login/PlayerPasswordCredentialsViewGroup;
+    invoke-direct {v6, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentConfig;-><init>(Landroid/os/Bundle;Ljava/lang/Class;)V
 
     .line 86
     .line 87
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
-
     .line 88
+    const-class v1, Lcom/facebook/arstudio/player/login/PlayerPasswordCredentialsViewGroup;
+
     .line 89
     .line 90
-    move-result-object v0
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 91
-    new-instance v5, Lcom/facebook/auth/login/ui/AuthFragmentConfig;
-
     .line 92
     .line 93
-    invoke-direct {v5, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentConfig;-><init>(Landroid/os/Bundle;Ljava/lang/Class;)V
+    move-result-object v0
 
     .line 94
+    new-instance v5, Lcom/facebook/auth/login/ui/AuthFragmentConfig;
+
     .line 95
     .line 96
-    const-class v1, Lcom/facebook/arstudio/player/login/PlayerLoginApprovalViewGroup;
+    invoke-direct {v5, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentConfig;-><init>(Landroid/os/Bundle;Ljava/lang/Class;)V
 
     .line 97
     .line 98
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
-
     .line 99
+    const-class v1, Lcom/facebook/arstudio/player/login/PlayerLoginApprovalViewGroup;
+
     .line 100
     .line 101
-    move-result-object v0
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 102
-    new-instance v3, Lcom/facebook/auth/login/ui/AuthFragmentConfig;
-
     .line 103
     .line 104
-    invoke-direct {v3, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentConfig;-><init>(Landroid/os/Bundle;Ljava/lang/Class;)V
+    move-result-object v0
 
     .line 105
+    new-instance v3, Lcom/facebook/auth/login/ui/AuthFragmentConfig;
+
     .line 106
     .line 107
-    const-class v1, Lcom/facebook/arstudio/player/login/PlayerSilentLoginViewGroup;
+    invoke-direct {v3, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentConfig;-><init>(Landroid/os/Bundle;Ljava/lang/Class;)V
 
     .line 108
     .line 109
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
-
     .line 110
+    const-class v1, Lcom/facebook/arstudio/player/login/PlayerSilentLoginViewGroup;
+
     .line 111
     .line 112
-    move-result-object v0
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 113
-    new-instance v2, Lcom/facebook/auth/login/ui/AuthFragmentConfig;
-
     .line 114
     .line 115
-    invoke-direct {v2, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentConfig;-><init>(Landroid/os/Bundle;Ljava/lang/Class;)V
+    move-result-object v0
 
     .line 116
+    new-instance v2, Lcom/facebook/auth/login/ui/AuthFragmentConfig;
+
     .line 117
     .line 118
-    invoke-static {}, LX/0Ye;->A0K()Lcom/google/common/collect/ImmutableMap$Builder;
+    invoke-direct {v2, v0, v1}, Lcom/facebook/auth/login/ui/AuthFragmentConfig;-><init>(Landroid/os/Bundle;Ljava/lang/Class;)V
 
     .line 119
     .line 120
     .line 121
-    move-result-object v1
+    invoke-static {}, LX/0X2;->A0X()Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 122
-    const-class v0, Lcom/facebook/auth/login/ui/FirstPartySsoFragment;
-
     .line 123
     .line 124
-    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    move-result-object v1
 
     .line 125
+    const-class v0, Lcom/facebook/auth/login/ui/FirstPartySsoFragment;
+
     .line 126
     .line 127
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     .line 128
-    invoke-virtual {v1, v0, v6}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
-
     .line 129
     .line 130
+    move-result-object v0
+
     .line 131
-    const-class v0, Lcom/facebook/auth/login/ui/PasswordCredentialsFragment;
+    invoke-virtual {v1, v0, v6}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 132
     .line 133
-    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
     .line 134
+    const-class v0, Lcom/facebook/auth/login/ui/PasswordCredentialsFragment;
+
     .line 135
     .line 136
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     .line 137
-    invoke-virtual {v1, v0, v5}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
-
     .line 138
     .line 139
+    move-result-object v0
+
     .line 140
-    const-class v0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;
+    invoke-virtual {v1, v0, v5}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 141
     .line 142
-    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
     .line 143
+    const-class v0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;
+
     .line 144
     .line 145
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     .line 146
-    invoke-virtual {v1, v0, v3}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
-
     .line 147
     .line 148
+    move-result-object v0
+
     .line 149
-    const-class v0, Lcom/facebook/auth/login/ui/SilentLoginFragment;
+    invoke-virtual {v1, v0, v3}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 150
     .line 151
-    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
     .line 152
+    const-class v0, Lcom/facebook/auth/login/ui/SilentLoginFragment;
+
     .line 153
     .line 154
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     .line 155
-    invoke-static {v1, v0, v2}, LX/0Yh;->A0K(Lcom/google/common/collect/ImmutableMap$Builder;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
-
     .line 156
     .line 157
+    move-result-object v0
+
     .line 158
-    move-result-object v3
+    invoke-static {v1, v0, v2}, LX/0X5;->A0P(Lcom/google/common/collect/ImmutableMap$Builder;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
 
     .line 159
-    const v0, 0x7f1201f6
-
     .line 160
     .line 161
+    move-result-object v3
+
     .line 162
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    const v0, 0x7f1101c3
 
     .line 163
     .line 164
     .line 165
-    move-result-object v0
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 166
-    new-instance v1, LX/3f0;
-
     .line 167
     .line 168
-    invoke-direct {v1, p0, v0}, LX/3f0;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    move-result-object v0
 
     .line 169
+    new-instance v1, LX/32G;
+
     .line 170
     .line 171
-    new-instance v0, LX/3Hr;
+    invoke-direct {v1, p0, v0}, LX/32G;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 172
     .line 173
-    invoke-direct {v0, v1}, LX/3Hr;-><init>(LX/3JT;)V
-
     .line 174
+    new-instance v0, LX/2w0;
+
     .line 175
     .line 176
-    new-instance v2, LX/3FJ;
+    invoke-direct {v0, v1}, LX/2w0;-><init>(LX/2Ek;)V
 
     .line 177
     .line 178
-    invoke-direct {v2, v0, v3}, LX/3FJ;-><init>(LX/3Hr;Lcom/google/common/collect/ImmutableMap;)V
-
     .line 179
+    new-instance v2, LX/2vk;
+
     .line 180
     .line 181
-    new-instance v1, LX/3Fq;
+    invoke-direct {v2, v0, v3}, LX/2vk;-><init>(LX/2w0;Lcom/google/common/collect/ImmutableMap;)V
 
     .line 182
     .line 183
-    invoke-direct {v1, p0}, LX/3Fq;-><init>(Lcom/facebook/arstudio/player/login/LoginActivity;)V
-
     .line 184
+    new-instance v1, LX/2xm;
+
     .line 185
     .line 186
-    iget-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A00:Lcom/facebook/auth/login/ui/AuthNavigationController;
+    invoke-direct {v1, p0}, LX/2xm;-><init>(Lcom/facebook/arstudio/player/login/LoginActivity;)V
 
     .line 187
     .line 188
-    iput-object v2, v0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/3FJ;
-
     .line 189
-    .line 190
-    iput-object v1, v0, Lcom/facebook/base/fragment/AbstractNavigableFragmentController;->selfListener:LX/3iL;
+    iget-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A00:Lcom/facebook/auth/login/ui/AuthNavigationController;
 
+    .line 190
     .line 191
+    iput-object v2, v0, Lcom/facebook/auth/login/ui/AuthNavigationController;->config:LX/2vk;
+
     .line 192
+    .line 193
+    iput-object v1, v0, Lcom/facebook/base/fragment/AbstractNavigableFragmentController;->selfListener:LX/2xo;
+
+    .line 194
+    .line 195
     iput-boolean v4, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A03:Z
 
-    .line 193
-    .line 194
-    :cond_3
-    iget-object v3, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A06:LX/0Na;
-
-    .line 195
     .line 196
-    invoke-static {v3}, LX/0Yd;->A0B(LX/0Na;)LX/1hU;
-
     .line 197
+    :cond_3
+    iget-object v3, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A06:LX/0RP;
+
     .line 198
     .line 199
-    move-result-object v1
+    invoke-static {v3}, LX/0X1;->A0C(LX/0RP;)LX/1D7;
 
     .line 200
-    sget-object v2, LX/3eT;->A0b:LX/1b2;
-
     .line 201
     .line 202
-    const/4 v0, 0x0
+    move-result-object v1
 
     .line 203
-    invoke-static {v1, v2, v0}, LX/0Yd;->A0h(LX/1hU;LX/1b2;Z)V
+    sget-object v2, LX/3bB;->A0b:LX/28F;
 
     .line 204
     .line 205
+    const/4 v0, 0x0
+
     .line 206
-    invoke-static {v3}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {v1, v2, v0}, LX/0X2;->A18(LX/1D7;LX/28F;Z)V
 
     .line 207
     .line 208
     .line 209
-    move-result-object v1
+    invoke-static {v3}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 210
-    iget-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A07:LX/1sa;
-
     .line 211
     .line 212
-    invoke-interface {v1, v0, v2}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AiM(LX/1hT;LX/1b2;)V
+    move-result-object v1
 
     .line 213
+    iget-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A07:LX/1DG;
+
     .line 214
     .line 215
-    return-void
+    invoke-interface {v1, v0, v2}, Lcom/facebook/prefs/shared/FbSharedPreferences;->Agj(LX/1D3;LX/28F;)V
 
     .line 216
-    :cond_4
-    const-string v0, "can\'t find the fragment by R.id.login_fragment_controller"
-
     .line 217
     .line 218
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    return-void
 
     .line 219
+    :cond_4
+    const-string/jumbo v0, "can\'t find the fragment by R.id.login_fragment_controller"
+
     .line 220
     .line 221
+    .line 222
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 223
+    .line 224
+    .line 225
     move-result-object v0
 
-    .line 222
+    .line 226
     throw v0
 .end method
 
@@ -597,73 +603,74 @@
 
     .line 4
     .line 5
-    const-string v3, "com.facebook.fragment.FRAGMENT_ACTION"
+    const-string/jumbo v3, "com.facebook.fragment.FRAGMENT_ACTION"
 
     .line 6
     .line 7
+    .line 8
     const/4 v2, 0x0
 
-    .line 8
+    .line 9
     if-eqz v0, :cond_1
 
-    .line 9
     .line 10
+    .line 11
     new-instance v1, Landroid/content/Intent;
 
-    .line 11
     .line 12
+    .line 13
     invoke-direct {v1, v3, v2, p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 13
     .line 14
     .line 15
+    .line 16
     iput-object v2, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A02:Ljava/lang/Class;
 
-    .line 16
     .line 17
+    .line 18
     :goto_0
     iget-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A00:Lcom/facebook/auth/login/ui/AuthNavigationController;
 
-    .line 18
     .line 19
+    .line 20
     invoke-virtual {v0, v1}, Lcom/facebook/base/fragment/AbstractNavigableFragmentController;->start(Landroid/content/Intent;)V
 
-    .line 20
     .line 21
     .line 22
+    .line 23
     :cond_0
     return-void
 
-    .line 23
+    .line 24
     :cond_1
     iget-object v0, p0, Lcom/facebook/arstudio/player/login/LoginActivity;->A00:Lcom/facebook/auth/login/ui/AuthNavigationController;
 
-    .line 24
     .line 25
-    invoke-virtual {v0}, LX/3e4;->isActive()Z
-
     .line 26
+    invoke-virtual {v0}, LX/3FR;->isActive()Z
+
     .line 27
     .line 28
+    .line 29
     move-result v0
 
-    .line 29
+    .line 30
     if-nez v0, :cond_0
 
-    .line 30
     .line 31
+    .line 32
     const-class v0, Lcom/facebook/auth/login/ui/FirstPartySsoFragment;
 
-    .line 32
     .line 33
+    .line 34
     new-instance v1, Landroid/content/Intent;
 
-    .line 34
     .line 35
+    .line 36
     invoke-direct {v1, v3, v2, p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 36
     .line 37
     .line 38
+    .line 39
     goto :goto_0
 .end method

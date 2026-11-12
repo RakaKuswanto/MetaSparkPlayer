@@ -2,118 +2,46 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
 
 # instance fields
-.field public final synthetic A00:LX/5mH;
+.field public A00:J
 
-.field public final synthetic A01:Landroid/hardware/camera2/CaptureRequest$Builder;
+.field public final A01:I
 
-.field public final synthetic A02:LX/5mO;
+.field public final A02:I
 
-.field public final synthetic A03:LX/5nH;
+.field public final A03:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/hardware/camera2/CaptureRequest$Builder;LX/5mH;LX/5mO;LX/5nH;)V
-    .locals 0
+.method public constructor <init>(IILjava/lang/String;)V
+    .locals 2
 
     .line 0
-    iput-object p2, p0, LX/5mt;->A00:LX/5mH;
-
-    .line 1
-    .line 2
-    iput-object p4, p0, LX/5mt;->A03:LX/5nH;
-
-    .line 3
-    .line 4
-    iput-object p1, p0, LX/5mt;->A01:Landroid/hardware/camera2/CaptureRequest$Builder;
-
-    .line 5
-    .line 6
-    iput-object p3, p0, LX/5mt;->A02:LX/5mO;
-
-    .line 7
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
-    .line 10
-    .line 11
-    return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic call()Ljava/lang/Object;
-    .locals 4
-
-    .line 0
-    iget-object v3, p0, LX/5mt;->A03:LX/5nH;
-
     .line 1
     .line 2
-    if-eqz v3, :cond_0
-
     .line 3
+    const-wide/16 v0, -0x1
+
     .line 4
-    iget-object v2, p0, LX/5mt;->A01:Landroid/hardware/camera2/CaptureRequest$Builder;
-
     .line 5
+    iput-wide v0, p0, LX/5mt;->A00:J
+
     .line 6
-    if-eqz v2, :cond_0
-
     .line 7
+    iput p1, p0, LX/5mt;->A01:I
+
     .line 8
-    sget-object v1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_TRIGGER:Landroid/hardware/camera2/CaptureRequest$Key;
-
     .line 9
-    .line 10
-    const/4 v0, 0x1
+    iput p2, p0, LX/5mt;->A02:I
 
+    .line 10
     .line 11
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p3, p0, LX/5mt;->A03:Ljava/lang/String;
 
     .line 12
     .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    invoke-virtual {v2, v1, v0}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
-
-    .line 16
-    .line 17
-    .line 18
-    invoke-virtual {v2}, Landroid/hardware/camera2/CaptureRequest$Builder;->build()Landroid/hardware/camera2/CaptureRequest;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v1
-
-    .line 22
-    iget-object v2, p0, LX/5mt;->A02:LX/5mO;
-
-    .line 23
-    .line 24
-    const/4 v0, 0x0
-
-    .line 25
-    invoke-interface {v3, v1, v0, v2}, LX/5nH;->A6d(Landroid/hardware/camera2/CaptureRequest;Landroid/os/Handler;LX/5nK;)I
-
-    .line 26
-    .line 27
-    .line 28
-    return-object v2
-
-    .line 29
-    :cond_0
-    iget-object v2, p0, LX/5mt;->A02:LX/5mO;
-
-    .line 30
-    .line 31
-    return-object v2
+    return-void
 .end method

@@ -1,37 +1,11 @@
-.class public final LX/5Pv;
+.class public interface abstract LX/5Pv;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3aS;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
 
 # virtual methods
-.method public final AJH(I)I
-    .locals 1
+.method public abstract AoE(LX/5Fy;)I
+.end method
 
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_0
-
-    if-eq p1, v0, :cond_0
-
-    const/4 v0, 0x5
-
-    :cond_0
-    return v0
+.method public abstract getName()Ljava/lang/String;
 .end method

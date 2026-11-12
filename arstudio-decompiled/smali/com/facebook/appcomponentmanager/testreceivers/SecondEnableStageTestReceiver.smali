@@ -1,5 +1,5 @@
 .class public Lcom/facebook/appcomponentmanager/testreceivers/SecondEnableStageTestReceiver;
-.super LX/0B7;
+.super LX/0BY;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/0B7;-><init>()V
+    invoke-direct {p0}, LX/0BY;-><init>()V
 
     .line 1
     .line 2

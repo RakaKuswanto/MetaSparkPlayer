@@ -1,230 +1,139 @@
-.class public final LX/3fs;
+.class public abstract LX/3fS;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/mqtt/service/MqttPublishExtListener;
 
+# static fields
+.field public static A00:Ljava/lang/reflect/Method;
 
-# instance fields
-.field public final synthetic A00:Lcom/facebook/mqtt/service/ipc/IMqttPublishExtListener$Stub$Proxy;
+.field public static A01:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/mqtt/service/ipc/IMqttPublishExtListener$Stub$Proxy;)V
-    .locals 0
+.method public static A00(Landroid/content/res/Resources;)V
+    .locals 6
 
     .line 0
-    iput-object p1, p0, LX/3fs;->A00:Lcom/facebook/mqtt/service/ipc/IMqttPublishExtListener$Stub$Proxy;
+    sget-boolean v0, LX/3fS;->A01:Z
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v5, 0x1
 
     .line 3
+    if-nez v0, :cond_1
+
     .line 4
     .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onPublishAttempt(IIIII)V
-    .locals 5
-
-    .line 0
-    iget-object v1, p0, LX/3fs;->A00:Lcom/facebook/mqtt/service/ipc/IMqttPublishExtListener$Stub$Proxy;
-
-    .line 1
-    .line 2
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v4
+    :try_start_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 6
-    :try_start_0
-    const-string v0, "com.facebook.mqtt.service.ipc.IMqttPublishExtListener"
-
     .line 7
-    .line 8
-    invoke-virtual {v4, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    const/16 v0, 0x18
 
+    .line 8
     .line 9
+    if-ge v1, v0, :cond_0
+
     .line 10
     .line 11
-    invoke-virtual {v4, p1}, Landroid/os/Parcel;->writeInt(I)V
+    const-string/jumbo v4, "flush"
 
     .line 12
     .line 13
     .line 14
-    invoke-virtual {v4, p2}, Landroid/os/Parcel;->writeInt(I)V
+    :goto_0
+    const-string/jumbo v0, "androidx.appcompat.app.ResourcesFlusher"
 
     .line 15
     .line 16
     .line 17
-    invoke-virtual {v4, p3}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     .line 18
     .line 19
     .line 20
-    invoke-virtual {v4, p4}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 21
-    .line 22
-    .line 23
-    invoke-virtual {v4, p5}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 24
-    .line 25
-    .line 26
-    iget-object v3, v1, Lcom/facebook/mqtt/service/ipc/IMqttPublishExtListener$Stub$Proxy;->A00:Landroid/os/IBinder;
-
-    .line 27
-    .line 28
-    const/4 v2, 0x2
-
-    .line 29
-    const/4 v1, 0x0
-
-    .line 30
-    const/4 v0, 0x1
-
-    .line 31
-    invoke-interface {v3, v2, v4, v1, v0}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 32
-    .line 33
-    .line 34
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 35
-    .line 36
-    .line 37
-    return-void
-
-    .line 38
-    :catchall_0
-    move-exception v0
-
-    .line 39
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 40
-    .line 41
-    .line 42
-    throw v0
-.end method
-
-.method public final onPublishCompleted(IIIIIZI)V
-    .locals 4
-
-    .line 0
-    iget-object v1, p0, LX/3fs;->A00:Lcom/facebook/mqtt/service/ipc/IMqttPublishExtListener$Stub$Proxy;
-
-    .line 1
-    .line 2
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    .line 3
-    .line 4
-    .line 5
     move-result-object v3
 
-    .line 6
-    :try_start_0
-    const-string v0, "com.facebook.mqtt.service.ipc.IMqttPublishExtListener"
-
-    .line 7
-    .line 8
-    invoke-virtual {v3, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 9
-    .line 10
-    .line 11
-    invoke-virtual {v3, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 12
-    .line 13
-    .line 14
-    invoke-virtual {v3, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 15
-    .line 16
-    .line 17
-    invoke-virtual {v3, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 18
-    .line 19
-    .line 20
-    invoke-virtual {v3, p4}, Landroid/os/Parcel;->writeInt(I)V
-
     .line 21
+    new-array v2, v5, [Ljava/lang/Class;
+
     .line 22
     .line 23
-    invoke-virtual {v3, p5}, Landroid/os/Parcel;->writeInt(I)V
+    const/4 v1, 0x0
+
+    .line 24
+    const-class v0, Landroid/content/res/Resources;
+
+    .line 25
+    .line 26
+    invoke-static {v3, v0, v4, v2, v1}, LX/0X6;->A11(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    invoke-virtual {v0, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 31
+    .line 32
+    .line 33
+    sput-object v0, LX/3fS;->A00:Ljava/lang/reflect/Method;
+
+    .line 34
+    .line 35
+    goto :goto_1
+
+    .line 36
+    :cond_0
+    const-string/jumbo v4, "flushNougats"
+
+    .line 37
+    .line 38
+    .line 39
+    goto :goto_0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
-    .line 25
-    .line 26
-    const/4 v2, 0x1
-
-    .line 27
-    invoke-static {p6}, LX/001;->A1L(I)Z
-
-    .line 28
-    .line 29
-    .line 30
-    move-result v0
-
-    .line 31
-    :try_start_1
-    invoke-virtual {v3, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 32
-    .line 33
-    .line 34
-    invoke-virtual {v3, p7}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 35
-    .line 36
-    .line 37
-    iget-object v1, v1, Lcom/facebook/mqtt/service/ipc/IMqttPublishExtListener$Stub$Proxy;->A00:Landroid/os/IBinder;
-
-    .line 38
-    .line 39
-    const/4 v0, 0x0
-
     .line 40
-    invoke-interface {v1, v2, v3, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :catchall_0
+    :goto_1
+    sput-boolean v5, LX/3fS;->A01:Z
 
     .line 41
     .line 42
-    .line 43
-    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
+    :cond_1
+    sget-object v2, LX/3fS;->A00:Ljava/lang/reflect/Method;
 
+    .line 43
     .line 44
+    if-eqz v2, :cond_2
+
     .line 45
     .line 46
-    return-void
+    const/4 v1, 0x0
 
     .line 47
-    :catchall_0
-    move-exception v0
+    :try_start_1
+    invoke-static {p0, v5}, LX/0X4;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 48
-    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
-
     .line 49
     .line 50
+    move-result-object v0
+
     .line 51
-    throw v0
+    invoke-virtual {v2, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 52
+    .line 53
+    .line 54
+    :catchall_1
+    :cond_2
+    return-void
 .end method

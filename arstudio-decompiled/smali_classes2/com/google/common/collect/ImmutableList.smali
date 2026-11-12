@@ -23,7 +23,9 @@
 
 
 # static fields
-.field public static final EMPTY_ITR:LX/1dA;
+.field public static final EMPTY_ITR:LX/210;
+
+.field public static final serialVersionUID:J = -0x35014542L
 
 
 # direct methods
@@ -38,16 +40,16 @@
     const/4 v1, 0x0
 
     .line 3
-    new-instance v0, LX/1bY;
+    new-instance v0, LX/1qg;
 
     .line 4
     .line 5
-    invoke-direct {v0, v2, v1}, LX/1bY;-><init>(Lcom/google/common/collect/ImmutableList;I)V
+    invoke-direct {v0, v2, v1}, LX/1qg;-><init>(Lcom/google/common/collect/ImmutableList;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v0, Lcom/google/common/collect/ImmutableList;->EMPTY_ITR:LX/1dA;
+    sput-object v0, Lcom/google/common/collect/ImmutableList;->EMPTY_ITR:LX/210;
 
     .line 9
     .line 10
@@ -68,6 +70,14 @@
 
 .method public static asImmutableList([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
     .line 0
     array-length v0, p0
@@ -86,6 +96,16 @@
 
 .method public static asImmutableList([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "elements",
+            "length"
+        }
+    .end annotation
 
     .line 268435456
     if-nez p1, :cond_0
@@ -134,12 +154,20 @@
 
 .method public static varargs construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
     .line 0
     array-length v0, p0
 
     .line 1
-    invoke-static {p0, v0}, LX/1eI;->A00([Ljava/lang/Object;I)V
+    invoke-static {p0, v0}, LX/21v;->A00([Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -157,72 +185,88 @@
 
 .method public static copyOf(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
-    .line 268435456
+    .line 536870912
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
+    .line 536870913
+    .line 536870914
+    .line 536870915
     instance-of v0, p0, Ljava/util/Collection;
 
-    .line 268435460
-    .line 268435461
+    .line 536870916
+    .line 536870917
     if-eqz v0, :cond_0
 
-    .line 268435462
-    .line 268435463
+    .line 536870918
+    .line 536870919
     check-cast p0, Ljava/util/Collection;
 
-    .line 268435464
-    .line 268435465
+    .line 536870920
+    .line 536870921
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
-    .line 268435466
-    .line 268435467
-    .line 268435468
+    .line 536870922
+    .line 536870923
+    .line 536870924
     move-result-object v0
 
-    .line 268435469
+    .line 536870925
     return-object v0
 
-    .line 268435470
+    .line 536870926
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 268435471
-    .line 268435472
-    .line 268435473
+    .line 536870927
+    .line 536870928
+    .line 536870929
     move-result-object v0
 
-    .line 268435474
+    .line 536870930
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList;
 
-    .line 268435475
-    .line 268435476
-    .line 268435477
+    .line 536870931
+    .line 536870932
+    .line 536870933
     move-result-object v0
 
-    .line 268435478
+    .line 536870934
     return-object v0
 .end method
 
 .method public static copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
-    .line 805803436
+    .line 805600988
     instance-of v0, p0, Lcom/google/common/collect/ImmutableCollection;
 
     if-eqz v0, :cond_1
 
-    .line 805803437
+    .line 805600989
     check-cast p0, Lcom/google/common/collect/ImmutableCollection;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->asList()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
 
-    .line 805803438
+    .line 805600990
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->A0B()Z
 
     move-result v0
@@ -240,7 +284,7 @@
     :cond_0
     return-object p0
 
-    .line 805803439
+    .line 805600991
     :cond_1
     invoke-interface {p0}, Ljava/util/Collection;->toArray()[Ljava/lang/Object;
 
@@ -255,6 +299,14 @@
 
 .method public static copyOf(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
     .line 0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -345,54 +397,62 @@
 
 .method public static copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "elements"
+        }
+    .end annotation
 
-    .line 536870912
+    .line 268435456
     array-length v0, p0
 
-    .line 536870913
+    .line 268435457
     if-nez v0, :cond_0
 
-    .line 536870914
-    .line 536870915
+    .line 268435458
+    .line 268435459
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
-    .line 536870916
-    .line 536870917
-    .line 536870918
+    .line 268435460
+    .line 268435461
+    .line 268435462
     move-result-object v0
 
-    .line 536870919
+    .line 268435463
     return-object v0
 
-    .line 536870920
+    .line 268435464
     :cond_0
     invoke-virtual {p0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 536870921
-    .line 536870922
-    .line 536870923
+    .line 268435465
+    .line 268435466
+    .line 268435467
     move-result-object v0
 
-    .line 536870924
+    .line 268435468
     check-cast v0, [Ljava/lang/Object;
 
-    .line 536870925
-    .line 536870926
+    .line 268435469
+    .line 268435470
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 536870927
-    .line 536870928
-    .line 536870929
+    .line 268435471
+    .line 268435472
+    .line 268435473
     move-result-object v0
 
-    .line 536870930
+    .line 268435474
     return-object v0
 .end method
 
 .method public static of()Lcom/google/common/collect/ImmutableList;
     .locals 1
 
-    .line 497261
+    .line 488380
     sget-object v0, Lcom/google/common/collect/RegularImmutableList;->A02:Lcom/google/common/collect/ImmutableList;
 
     return-object v0
@@ -400,13 +460,21 @@
 
 .method public static of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "element"
+        }
+    .end annotation
 
-    .line 497262
+    .line 488381
     invoke-static {p0}, LX/001;->A1a(Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 497263
+    .line 488382
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -416,16 +484,26 @@
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2"
+        }
+    .end annotation
 
-    .line 497429
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    .line 488423
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 497430
+    .line 488424
     invoke-static {v0, p0, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 497431
+    .line 488425
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -435,21 +513,33 @@
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3"
+        }
+    .end annotation
 
-    .line 497450
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
+    .line 488426
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 497451
+    .line 488427
     invoke-static {v1, p0, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 497452
+    .line 488428
     const/4 v0, 0x2
 
     aput-object p2, v1, v0
 
-    .line 497453
+    .line 488429
     invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -459,19 +549,29 @@
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3",
+            "e4"
+        }
+    .end annotation
 
-    .line 497432
-    invoke-static {}, LX/0Yj;->A0s()[Ljava/lang/Object;
+    const/4 v0, 0x4
 
-    move-result-object v0
+    new-array v0, v0, [Ljava/lang/Object;
 
-    .line 497433
-    invoke-static {v0, p0, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 488430
+    invoke-static {p0, p1, p2, p3, v0}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497434
-    invoke-static {v0, p2, p3}, LX/0Ye;->A1Q([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 497435
+    .line 488431
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -480,20 +580,38 @@
 .end method
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-    .locals 1
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5"
+        }
+    .end annotation
 
     const/4 v0, 0x5
 
-    new-array v0, v0, [Ljava/lang/Object;
+    new-array v1, v0, [Ljava/lang/Object;
 
-    .line 497436
-    invoke-static {v0, p0, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 488445
+    invoke-static {p0, p1, p2, p3, v1}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497437
-    invoke-static {p2, p3, p4, v0}, LX/0Yc;->A1R(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 488446
+    const/4 v0, 0x4
 
-    .line 497438
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    aput-object p4, v1, v0
+
+    .line 488447
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
@@ -502,18 +620,36 @@
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6"
+        }
+    .end annotation
 
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 497439
-    invoke-static {v0, p0, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 488432
+    invoke-static {p0, p1, p2, p3, v0}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497440
-    invoke-static {p2, p3, p4, p5, v0}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 488433
+    invoke-static {v0, p4, p5}, LX/0X3;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 497441
+    .line 488434
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -522,25 +658,40 @@
 .end method
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-    .locals 2
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7"
+        }
+    .end annotation
 
     const/4 v0, 0x7
 
-    new-array v1, v0, [Ljava/lang/Object;
+    new-array v0, v0, [Ljava/lang/Object;
 
-    .line 497454
-    invoke-static {v1, p0, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 488435
+    invoke-static {p0, p1, p2, p3, v0}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497455
-    invoke-static {p2, p3, p4, p5, v1}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 488436
+    invoke-static {p4, p5, p6, v0}, LX/0X1;->A1K(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497456
-    const/4 v0, 0x6
-
-    aput-object p6, v1, v0
-
-    .line 497457
-    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    .line 488437
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
@@ -549,21 +700,40 @@
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8"
+        }
+    .end annotation
 
     const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 497442
-    invoke-static {v0, p0, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 488438
+    invoke-static {p0, p1, p2, p3, v0}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497443
-    invoke-static {p2, p3, p4, p5, v0}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 488439
+    invoke-static {p4, p5, p6, p7, v0}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497444
-    invoke-static {v0, p6, p7}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 497445
+    .line 488440
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -573,6 +743,30 @@
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9"
+        }
+    .end annotation
 
     const-string p8, "-journal"
 
@@ -596,21 +790,18 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 497458
-    invoke-static {v1, p8, p7}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 488448
+    invoke-static {p8, p7, p6, p5, v1}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497459
-    invoke-static {p6, p5, p4, p3, v1}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 488449
+    invoke-static {p4, p3, p2, p1, v1}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497460
-    invoke-static {v1, p2, p1}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 497461
+    .line 488450
     const/16 v0, 0x8
 
     aput-object p0, v1, v0
 
-    .line 497462
+    .line 488451
     invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -620,21 +811,47 @@
 
 .method public static of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10"
+        }
+    .end annotation
 
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 497446
-    invoke-static {v0, p0, p1}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 488441
+    invoke-static {p0, p1, p2, p3, v0}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497447
-    invoke-static {p2, p3, p4, p5, v0}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 488442
+    invoke-static {p4, p5, p6, p7, v0}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497448
-    invoke-static {p6, p7, p8, p9, v0}, LX/0Yc;->A0R(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 488443
+    invoke-static {v0, p8, p9}, LX/0X1;->A1U([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 497449
+    .line 488444
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -644,51 +861,71 @@
 
 .method public static varargs of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "others"
+        }
+    .end annotation
 
-    .line 497463
+    .line 488452
     move-object/from16 v4, p12
 
     array-length v3, v4
 
     const/4 v2, 0x0
 
-    const v0, 0x7ffffff3
-
-    .line 497464
-    invoke-static {v3, v0}, LX/0Yf;->A1S(II)Z
-
-    move-result v1
-
-    .line 497465
-    const-string/jumbo v0, "the total number of elements must fit in an int"
-
-    invoke-static {v1, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
-
-    .line 497466
+    .line 488453
     const/16 v1, 0xc
 
     add-int/lit8 v0, v3, 0xc
 
-    .line 497467
-    invoke-static {p0, p1, v0}, LX/002;->A0T(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
+    .line 488454
+    invoke-static {p0, p1, v0}, LX/002;->A0H(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 497468
-    invoke-static {p2, p3, p4, p5, v0}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 488455
+    invoke-static {v0, p2, p3}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 497469
-    invoke-static {v0, p6, p7}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 488456
+    invoke-static {p4, p5, p6, p7, v0}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497470
+    .line 488457
     move-object/from16 p0, p11
 
-    invoke-static {p8, p9, p10, p0, v0}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {p8, p9, p10, p0, v0}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 497471
+    .line 488458
     invoke-static {v4, v2, v0, v1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 497472
+    .line 488459
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -697,22 +934,25 @@
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
-    .locals 2
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
-    const-string v1, "Use SerializedForm"
+    invoke-static {}, LX/0X6;->A0d()Ljava/io/InvalidObjectException;
 
     .line 1
     .line 2
-    new-instance v0, Ljava/io/InvalidObjectException;
-
     .line 3
-    .line 4
-    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 5
-    .line 6
-    .line 7
+    .line 4
     throw v0
 .end method
 
@@ -720,9 +960,19 @@
 # virtual methods
 .method public final add(ILjava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "element"
+        }
+    .end annotation
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -735,9 +985,19 @@
 
 .method public final addAll(ILjava/util/Collection;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "newElements"
+        }
+    .end annotation
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -756,6 +1016,14 @@
 
 .method public contains(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList;->indexOf(Ljava/lang/Object;)I
@@ -766,7 +1034,7 @@
     move-result v0
 
     .line 4
-    invoke-static {v0}, LX/0Ye;->A1W(I)Z
+    invoke-static {v0}, LX/0X2;->A1P(I)Z
 
     .line 5
     .line 6
@@ -779,6 +1047,16 @@
 
 .method public copyIntoArray([Ljava/lang/Object;I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dst",
+            "offset"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
@@ -829,6 +1107,14 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "obj"
+        }
+    .end annotation
 
     .line 0
     if-eq p1, p0, :cond_3
@@ -850,7 +1136,7 @@
 
     .line 8
     .line 9
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
     .line 10
     .line 11
@@ -1061,7 +1347,7 @@
     move-result-object v0
 
     .line 14
-    invoke-static {v0, v1}, LX/0Yh;->A04(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X5;->A02(Ljava/lang/Object;I)I
 
     .line 15
     .line 16
@@ -1090,6 +1376,14 @@
 
 .method public indexOf(Ljava/lang/Object;)I
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     if-eqz p1, :cond_2
@@ -1104,7 +1398,7 @@
 
     .line 5
     .line 6
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
     .line 7
     .line 8
@@ -1208,11 +1502,11 @@
     return v1
 .end method
 
-.method public iterator()LX/1bX;
+.method public iterator()LX/1tw;
     .locals 1
 
     .line 0
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->listIterator()LX/1dA;
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->listIterator()LX/210;
 
     .line 1
     .line 2
@@ -1227,7 +1521,7 @@
     .locals 1
 
     .line 268435456
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 268435457
     .line 268435458
@@ -1240,6 +1534,14 @@
 
 .method public lastIndexOf(Ljava/lang/Object;)I
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     if-eqz p1, :cond_3
@@ -1254,7 +1556,7 @@
 
     .line 5
     .line 6
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
     .line 7
     .line 8
@@ -1295,7 +1597,7 @@
 
     .line 25
     :cond_1
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
     .line 26
     .line 27
@@ -1362,14 +1664,14 @@
     return v1
 .end method
 
-.method public listIterator()LX/1dA;
+.method public listIterator()LX/210;
     .locals 1
 
     .line 536870912
     const/4 v0, 0x0
 
     .line 536870913
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->listIterator(I)LX/1dA;
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->listIterator(I)LX/210;
 
     .line 536870914
     .line 536870915
@@ -1380,8 +1682,16 @@
     return-object v0
 .end method
 
-.method public listIterator(I)LX/1dA;
+.method public listIterator(I)LX/210;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
@@ -1409,7 +1719,7 @@
 
     .line 12
     .line 13
-    sget-object v0, Lcom/google/common/collect/ImmutableList;->EMPTY_ITR:LX/1dA;
+    sget-object v0, Lcom/google/common/collect/ImmutableList;->EMPTY_ITR:LX/210;
 
     .line 14
     .line 15
@@ -1417,11 +1727,11 @@
 
     .line 16
     :cond_0
-    new-instance v0, LX/1bY;
+    new-instance v0, LX/1qg;
 
     .line 17
     .line 18
-    invoke-direct {v0, p0, p1}, LX/1bY;-><init>(Lcom/google/common/collect/ImmutableList;I)V
+    invoke-direct {v0, p0, p1}, LX/1qg;-><init>(Lcom/google/common/collect/ImmutableList;I)V
 
     .line 19
     .line 20
@@ -1433,7 +1743,7 @@
     .locals 1
 
     .line 805306368
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->listIterator()LX/1dA;
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->listIterator()LX/210;
 
     .line 805306369
     .line 805306370
@@ -1446,9 +1756,17 @@
 
 .method public bridge synthetic listIterator(I)Ljava/util/ListIterator;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 268435456
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList;->listIterator(I)LX/1dA;
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList;->listIterator(I)LX/210;
 
     .line 268435457
     .line 268435458
@@ -1461,9 +1779,17 @@
 
 .method public final remove(I)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -1511,9 +1837,19 @@
 
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "element"
+        }
+    .end annotation
 
     .line 0
-    invoke-static {}, LX/002;->A0F()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -1526,6 +1862,16 @@
 
 .method public subList(II)Lcom/google/common/collect/ImmutableList;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "fromIndex",
+            "toIndex"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
@@ -1590,6 +1936,16 @@
 
 .method public bridge synthetic subList(II)Ljava/util/List;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "fromIndex",
+            "toIndex"
+        }
+    .end annotation
 
     .line 268435456
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableList;->subList(II)Lcom/google/common/collect/ImmutableList;
@@ -1605,6 +1961,16 @@
 
 .method public subListUnchecked(II)Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "fromIndex",
+            "toIndex"
+        }
+    .end annotation
 
     .line 0
     sub-int/2addr p2, p1

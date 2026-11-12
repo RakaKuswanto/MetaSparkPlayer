@@ -4,26 +4,14 @@
 
 
 # instance fields
-.field public A00:I
+.field public final A00:Landroid/os/Handler;
 
-.field public A01:I
-
-.field public A02:I
-
-.field public A03:I
-
-.field public A04:I
-
-.field public A05:I
-
-.field public A06:Z
-
-.field public A07:Z
+.field public final A01:LX/4ck;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Landroid/os/Handler;LX/4ck;)V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,119 +19,78 @@
     .line 1
     .line 2
     .line 3
-    const/4 v1, 0x0
+    iput-object p2, p0, LX/4cF;->A01:LX/4ck;
 
     .line 4
-    iput v1, p0, LX/4cF;->A03:I
-
     .line 5
+    iput-object p1, p0, LX/4cF;->A00:Landroid/os/Handler;
+
     .line 6
-    iput v1, p0, LX/4cF;->A04:I
-
     .line 7
-    .line 8
-    const/high16 v0, -0x80000000
-
-    .line 9
-    .line 10
-    iput v0, p0, LX/4cF;->A05:I
-
-    .line 11
-    .line 12
-    iput v0, p0, LX/4cF;->A00:I
-
-    .line 13
-    .line 14
-    iput v1, p0, LX/4cF;->A01:I
-
-    .line 15
-    .line 16
-    iput v1, p0, LX/4cF;->A02:I
-
-    .line 17
-    .line 18
-    iput-boolean v1, p0, LX/4cF;->A07:Z
-
-    .line 19
-    .line 20
-    iput-boolean v1, p0, LX/4cF;->A06:Z
-
-    .line 21
-    .line 22
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(II)V
-    .locals 2
+.method public final A00(LX/4cO;)V
+    .locals 4
 
     .line 0
-    iput p1, p0, LX/4cF;->A05:I
+    iget v3, p1, LX/4cO;->A00:I
 
     .line 1
     .line 2
-    iput p2, p0, LX/4cF;->A00:I
+    if-nez v3, :cond_0
 
     .line 3
     .line 4
-    const/4 v0, 0x1
+    iget-object v3, p1, LX/4cO;->A01:Landroid/graphics/Typeface;
 
     .line 5
-    iput-boolean v0, p0, LX/4cF;->A06:Z
-
     .line 6
+    iget-object v0, p0, LX/4cF;->A01:LX/4ck;
+
     .line 7
-    iget-boolean v1, p0, LX/4cF;->A07:Z
-
     .line 8
+    iget-object v2, p0, LX/4cF;->A00:Landroid/os/Handler;
+
     .line 9
-    const/high16 v0, -0x80000000
-
     .line 10
+    new-instance v1, LX/4cI;
+
     .line 11
-    if-eqz v1, :cond_2
-
     .line 12
-    .line 13
-    if-eq p2, v0, :cond_0
+    invoke-direct {v1, v3, p0, v0}, LX/4cI;-><init>(Landroid/graphics/Typeface;LX/4cF;LX/4ck;)V
 
+    .line 13
     .line 14
     .line 15
-    iput p2, p0, LX/4cF;->A03:I
+    :goto_0
+    invoke-virtual {v2, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 16
     .line 17
-    :cond_0
-    if-eq p1, v0, :cond_1
-
     .line 18
+    return-void
+
     .line 19
-    iput p1, p0, LX/4cF;->A04:I
+    :cond_0
+    iget-object v0, p0, LX/4cF;->A01:LX/4ck;
 
     .line 20
     .line 21
-    :cond_1
-    return-void
+    iget-object v2, p0, LX/4cF;->A00:Landroid/os/Handler;
 
     .line 22
-    :cond_2
-    if-eq p1, v0, :cond_3
-
     .line 23
+    new-instance v1, LX/4cK;
+
     .line 24
-    iput p1, p0, LX/4cF;->A03:I
-
     .line 25
-    .line 26
-    :cond_3
-    if-eq p2, v0, :cond_1
+    invoke-direct {v1, p0, v0, v3}, LX/4cK;-><init>(LX/4cF;LX/4ck;I)V
 
+    .line 26
     .line 27
     .line 28
-    iput p2, p0, LX/4cF;->A04:I
-
-    .line 29
-    .line 30
-    return-void
+    goto :goto_0
 .end method

@@ -1,70 +1,27 @@
-.class public final LX/5zC;
+.class public final LX/5zc;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5zL;
-
-
-# static fields
-.field public static final A06:Lcom/google/common/base/Supplier;
-
-.field public static final A07:Ljava/util/Random;
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public A00:Lcom/google/android/exoplayer2/Timeline;
+.field public A00:I
 
-.field public A01:LX/5zM;
+.field public A01:I
 
-.field public final A02:LX/60i;
+.field public final A02:Ljava/lang/Object;
 
-.field public final A03:LX/5zN;
-
-.field public final A04:Lcom/google/common/base/Supplier;
-
-.field public final A05:Ljava/util/HashMap;
+.field public final synthetic A03:LX/5zN;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/5zN;Ljava/lang/Object;)V
+    .locals 0
 
     .line 0
-    new-instance v0, LX/5Cr;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/5Cr;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/5zC;->A06:Lcom/google/common/base/Supplier;
-
-    .line 6
-    .line 7
-    new-instance v0, Ljava/util/Random;
-
-    .line 8
-    .line 9
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
-
-    .line 10
-    .line 11
-    .line 12
-    sput-object v0, LX/5zC;->A07:Ljava/util/Random;
-
-    .line 13
-    .line 14
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/5zC;->A06:Lcom/google/common/base/Supplier;
+    iput-object p1, p0, LX/5zc;->A03:LX/5zN;
 
     .line 1
     .line 2
@@ -73,55 +30,133 @@
     .line 3
     .line 4
     .line 5
-    iput-object v0, p0, LX/5zC;->A04:Lcom/google/common/base/Supplier;
+    iput-object p2, p0, LX/5zc;->A02:Ljava/lang/Object;
 
     .line 6
     .line 7
-    new-instance v0, LX/5zN;
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A00(LX/5wr;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/5zc;->A02:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v1
+
+    .line 3
+    if-eqz p1, :cond_0
+
+    .line 4
+    .line 5
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    const/16 v0, 0x1e
+
+    .line 7
     .line 8
+    goto :goto_1
+
     .line 9
-    invoke-direct {v0}, LX/5zN;-><init>()V
+    :goto_0
+    :try_start_0
+    iget-object v0, p1, LX/5wr;->A04:Ljava/lang/Integer;
 
     .line 10
     .line 11
+    if-eqz v0, :cond_0
+
     .line 12
-    iput-object v0, p0, LX/5zC;->A03:LX/5zN;
-
     .line 13
-    .line 14
-    new-instance v0, LX/60i;
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
+    .line 14
     .line 15
     .line 16
-    invoke-direct {v0}, LX/60i;-><init>()V
+    move-result v0
 
     .line 17
+    :goto_1
+    iput v0, p0, LX/5zc;->A01:I
+
     .line 18
     .line 19
-    iput-object v0, p0, LX/5zC;->A02:LX/60i;
+    iput v0, p0, LX/5zc;->A00:I
 
     .line 20
     .line 21
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    monitor-exit v1
 
     .line 22
+    return-void
+
     .line 23
+    :catchall_0
+    move-exception v0
+
     .line 24
-    move-result-object v0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 25
-    iput-object v0, p0, LX/5zC;->A05:Ljava/util/HashMap;
+    throw v0
+.end method
 
-    .line 26
-    .line 27
-    sget-object v0, Lcom/google/android/exoplayer2/Timeline;->A00:Lcom/google/android/exoplayer2/Timeline;
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
-    .line 28
-    .line 29
-    iput-object v0, p0, LX/5zC;->A00:Lcom/google/android/exoplayer2/Timeline;
+    .line 0
+    check-cast p1, [I
 
-    .line 30
-    .line 31
-    return-void
+    .line 1
+    .line 2
+    check-cast p2, [I
+
+    .line 3
+    .line 4
+    const/4 v0, 0x1
+
+    .line 5
+    aget v1, p1, v0
+
+    .line 6
+    .line 7
+    aget v0, p2, v0
+
+    .line 8
+    .line 9
+    if-ne v1, v0, :cond_0
+
+    .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    aget v1, p1, v0
+
+    .line 13
+    .line 14
+    aget v0, p2, v0
+
+    .line 15
+    .line 16
+    sub-int/2addr v1, v0
+
+    .line 17
+    return v1
+
+    .line 18
+    :cond_0
+    sub-int/2addr v1, v0
+
+    .line 19
+    return v1
 .end method

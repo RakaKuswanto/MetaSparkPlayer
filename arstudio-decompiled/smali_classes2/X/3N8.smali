@@ -1,4 +1,4 @@
-.class public final LX/3N8;
+.class public final LX/3n8;
 .super Ljava/lang/Object;
 .source ""
 

@@ -4,20 +4,12 @@
 
 
 # instance fields
-.field public final A00:Ljava/util/BitSet;
-
-.field public final A01:Ljava/util/Map;
-
-.field public final A02:Ljava/util/Map;
-
-.field public final A03:Ljava/util/Map;
-
-.field public final A04:Landroid/content/Context;
+.field public A00:Landroid/content/Context;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,19 +17,39 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iput-object p1, p0, LX/4MM;->A00:Landroid/content/Context;
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v0
+    return-void
+.end method
 
+
+# virtual methods
+.method public final A00()Z
+    .locals 3
+
+    .line 0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 1
+    .line 2
+    const/4 v1, 0x1
+
+    .line 3
+    const/16 v0, 0x13
+
+    .line 4
+    .line 5
+    if-ge v2, v0, :cond_0
+
+    .line 6
     .line 7
-    iput-object v0, p0, LX/4MM;->A03:Ljava/util/Map;
+    iget-object v0, p0, LX/4MM;->A00:Landroid/content/Context;
 
     .line 8
     .line 9
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     .line 10
     .line 11
@@ -45,41 +57,18 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, LX/4MM;->A02:Ljava/util/Map;
+    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->hasPermanentMenuKey()Z
 
     .line 14
     .line 15
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
     .line 16
+    move-result v0
+
     .line 17
+    xor-int/lit8 v1, v0, 0x1
+
     .line 18
-    move-result-object v0
-
     .line 19
-    iput-object v0, p0, LX/4MM;->A01:Ljava/util/Map;
-
-    .line 20
-    .line 21
-    const/4 v1, 0x3
-
-    .line 22
-    new-instance v0, Ljava/util/BitSet;
-
-    .line 23
-    .line 24
-    invoke-direct {v0, v1}, Ljava/util/BitSet;-><init>(I)V
-
-    .line 25
-    .line 26
-    .line 27
-    iput-object v0, p0, LX/4MM;->A00:Ljava/util/BitSet;
-
-    .line 28
-    .line 29
-    iput-object p1, p0, LX/4MM;->A04:Landroid/content/Context;
-
-    .line 30
-    .line 31
-    return-void
+    :cond_0
+    return v1
 .end method

@@ -20,7 +20,7 @@
     .locals 8
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -196,32 +196,44 @@
 
     .line 78
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 79
     :try_start_5
     invoke-virtual {v5}, Ljava/io/Reader;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 80
     .line 81
     .line 82
-    :catchall_1
-    :try_start_6
-    throw v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    goto :goto_2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 83
-    :catchall_2
+    :catchall_1
     move-exception v0
 
     .line 84
-    invoke-virtual {v6}, Ljava/lang/Process;->destroy()V
+    :try_start_6
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 85
     .line 86
     .line 87
+    :goto_2
+    throw v1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    .line 88
+    :catchall_2
+    move-exception v0
+
+    .line 89
+    invoke-virtual {v6}, Ljava/lang/Process;->destroy()V
+
+    .line 90
+    .line 91
+    .line 92
     throw v0
 .end method

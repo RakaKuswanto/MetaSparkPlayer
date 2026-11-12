@@ -2,318 +2,234 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/08E;
+
+
+# instance fields
+.field public final A00:Landroid/content/Context;
+
+.field public final A01:LX/08F;
+
+.field public final A02:I
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;LX/08F;)V
+    .locals 1
 
-    sparse-switch p0, :sswitch_data_0
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p0, "UNDEFINED_QPL_EVENT"
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/0IP;->A00:Landroid/content/Context;
 
-    return-object p0
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/0IP;->A01:LX/08F;
 
-    :sswitch_0
-    const-string p0, "RP_AUDIO_PACKET_DROP_RTCP_SRTP_SESSION"
+    .line 6
+    .line 7
+    monitor-enter p2
 
-    return-object p0
+    .line 8
+    :try_start_0
+    iget v0, p2, LX/08F;->A00:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :sswitch_1
-    const-string p0, "RP_AUDIO_NETEQ_BLACKBOX"
+    .line 9
+    .line 10
+    monitor-exit p2
 
-    return-object p0
+    .line 11
+    iput v0, p0, LX/0IP;->A02:I
 
-    :sswitch_2
-    const-string p0, "RP_AUDIO_PACKET_DROP_DEMUXING_FAILED"
+    .line 12
+    .line 13
+    return-void
 
-    return-object p0
+    .line 14
+    :catchall_0
+    move-exception v0
 
-    :sswitch_3
-    const-string p0, "RP_AUDIO_PACKET_DROP_SRTP_DECRYPT"
+    .line 15
+    monitor-exit p2
 
-    return-object p0
+    .line 16
+    throw v0
+.end method
 
-    :sswitch_4
-    const-string p0, "RP_AUDIO_PACKET_THRU_CONNECTION"
 
-    return-object p0
+# virtual methods
+.method public final AgO(Ljava/lang/UnsatisfiedLinkError;[LX/0CG;)Z
+    .locals 5
 
-    :sswitch_5
-    const-string p0, "RP_AUDIO_AUDIO_DOLBY_STATS"
+    .line 0
+    iget-object v4, p0, LX/0IP;->A00:Landroid/content/Context;
 
-    return-object p0
+    .line 1
+    .line 2
+    invoke-virtual {v4}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    :sswitch_6
-    const-string p0, "RP_AUDIO_PACKET_DROP_RTP_DEMUXER"
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    return-object p0
+    .line 6
+    iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
-    :sswitch_7
-    const-string p0, "RP_AUDIO_PACKET_DROP_WRONG_SIZE"
+    .line 7
+    .line 8
+    invoke-static {v1}, LX/001;->A1U(Ljava/lang/String;)Z
 
-    return-object p0
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
 
-    :sswitch_8
-    const-string p0, "RP_AUDIO_PACKET_DROP_ALLOC_SEQEUNCE"
+    .line 12
+    if-eqz v0, :cond_0
 
-    return-object p0
+    .line 13
+    .line 14
+    iget-object v0, p0, LX/0IP;->A01:LX/08F;
 
-    :sswitch_9
-    const-string p0, "RP_AUDIO_STALL_RECOVERY"
+    .line 15
+    .line 16
+    invoke-virtual {v0, v1}, LX/08F;->A01(Ljava/lang/String;)Z
 
-    return-object p0
+    .line 17
+    .line 18
+    .line 19
+    move-result v1
 
-    :sswitch_a
-    const-string p0, "RP_AUDIO_PACKET_THRU_DTLS_TRANSPORT"
+    .line 20
+    const/4 v0, 0x1
 
-    return-object p0
+    .line 21
+    if-nez v1, :cond_1
 
-    :sswitch_b
-    const-string p0, "RP_AUDIO_SURVEY_RAW_LOGCAT"
-
-    return-object p0
-
-    :sswitch_c
-    const-string p0, "RP_AUDIO_PACKET_DROP_PARSING_FAILED"
-
-    return-object p0
-
-    :sswitch_d
-    const-string p0, "RP_AUDIO_PACKET_DROP_UDP_PORT"
-
-    return-object p0
-
-    :sswitch_e
-    const-string p0, "RP_AUDIO_PACKET_DROP_TCP_PORT"
-
-    return-object p0
-
-    :sswitch_f
-    const-string p0, "RP_AUDIO_PACKET_DROP"
-
-    return-object p0
-
-    :sswitch_10
-    const-string p0, "RP_AUDIO_AUDIO_MANAGER_EVENT"
-
-    return-object p0
-
-    :sswitch_11
-    const-string p0, "RP_AUDIO_OPUS_DECODER_BITRATE_STATS_ERROR"
-
-    return-object p0
-
-    :sswitch_12
-    const-string p0, "RP_AUDIO_PACKET_DROP_AUDIO_RCV_STREAM"
-
-    return-object p0
-
-    :sswitch_13
-    const-string p0, "RP_AUDIO_AUDIO_RECEIVER_STATS"
-
-    return-object p0
-
-    :sswitch_14
-    const-string p0, "RP_AUDIO_ADM_RECORD"
-
-    return-object p0
-
-    :sswitch_15
-    const-string p0, "RP_AUDIO_PACKET_DROP_EDGERAY_PORT"
-
-    return-object p0
-
-    :sswitch_16
-    const-string p0, "RP_AUDIO_PACKET_RCVD_ALLOC_SEQEUNCE"
-
-    return-object p0
-
-    :sswitch_17
-    const-string p0, "RP_AUDIO_AUDIO_OBOE"
-
-    return-object p0
-
-    :sswitch_18
-    const-string p0, "RP_AUDIO_ADM_PLAYOUT"
-
-    return-object p0
-
-    :sswitch_19
-    const-string p0, "RP_AUDIO_UX_AUDIO_CONTROL"
-
-    return-object p0
-
-    :sswitch_1a
-    const-string p0, "RP_AUDIO_PACKET_THRU_CALL"
-
-    return-object p0
-
-    :sswitch_1b
-    const-string p0, "RP_AUDIO_PACKET_THRU_RTP_TRANSPORT"
-
-    return-object p0
-
-    :sswitch_1c
-    const-string p0, "RP_AUDIO_PACKET_DROP_P2P_TRANSPORT"
-
-    return-object p0
-
-    :sswitch_1d
-    const-string p0, "RP_AUDIO_PACKET_DROP_TURN_PORT"
-
-    return-object p0
-
-    :sswitch_1e
-    const-string p0, "RP_AUDIO_ADM_OBJECT"
-
-    return-object p0
-
-    :sswitch_1f
-    const-string p0, "RP_AUDIO_PACKET_DROP_CHANNEL"
-
-    return-object p0
-
-    :sswitch_20
-    const-string p0, "RP_AUDIO_PACKET_DROP_RTP_SENDER"
-
-    return-object p0
-
-    :sswitch_21
-    const-string p0, "RP_AUDIO_AUDIO_MODULE_PLAYOUT"
-
-    return-object p0
-
-    :sswitch_22
-    const-string p0, "RP_AUDIO_NO_AUDIO_CAPTURED"
-
-    return-object p0
-
-    :sswitch_23
-    const-string p0, "RP_AUDIO_VOICE_ENGINE"
-
-    return-object p0
-
-    :sswitch_24
-    const-string p0, "RP_AUDIO_APM_CREATION"
-
-    return-object p0
-
-    :sswitch_25
-    const-string p0, "RP_AUDIO_RP_LOG_HELPER_EVENT"
-
-    return-object p0
-
-    :sswitch_26
-    const-string p0, "RP_AUDIO_AUDIO_STATUS_DETECTED"
-
-    return-object p0
-
-    :sswitch_27
-    const-string p0, "RP_AUDIO_AUDIO_ERROR_LOGGER"
-
-    return-object p0
-
-    :sswitch_28
-    const-string p0, "RP_AUDIO_AUDIO_PROCESSING_STATS"
-
-    return-object p0
-
-    :sswitch_29
-    const-string p0, "RP_AUDIO_PACKET_THRU_RTP_DEMUXER"
-
-    return-object p0
-
-    :sswitch_2a
-    const-string p0, "RP_AUDIO_PACKET_DROP_RTP_SRTP_SESSION"
-
-    return-object p0
-
-    :sswitch_2b
-    const-string p0, "RP_AUDIO_PACKET_DROP_WRONG_TYPE"
-
-    return-object p0
-
-    :sswitch_2c
-    const-string p0, "RP_AUDIO_PACKET_DROP_SRTP_INACTIVE"
-
-    return-object p0
-
-    :sswitch_2d
-    const-string p0, "RP_AUDIO_AUDIO_SENDER_STATS"
-
-    return-object p0
-
-    :sswitch_2e
-    const-string p0, "RP_AUDIO_APP_STATUS"
-
-    return-object p0
-
-    :sswitch_2f
-    const-string p0, "RP_AUDIO_ADM_CREATION"
-
-    return-object p0
-
-    :sswitch_30
-    const-string p0, "RP_AUDIO_MEDIA_CHANNEL"
-
-    return-object p0
-
-    :sswitch_31
-    const-string p0, "RP_AUDIO_PACKET_CHANNEL_RECEIVE"
-
-    return-object p0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x674 -> :sswitch_31
-        0x6f9 -> :sswitch_30
-        0x702 -> :sswitch_2f
-        0x943 -> :sswitch_2e
-        0xbd6 -> :sswitch_2d
-        0xcec -> :sswitch_2c
-        0xe57 -> :sswitch_2b
-        0xf67 -> :sswitch_2a
-        0xfe4 -> :sswitch_29
-        0x1017 -> :sswitch_28
-        0x1020 -> :sswitch_27
-        0x1097 -> :sswitch_26
-        0x1334 -> :sswitch_25
-        0x1364 -> :sswitch_24
-        0x1384 -> :sswitch_23
-        0x163c -> :sswitch_22
-        0x16bf -> :sswitch_21
-        0x1715 -> :sswitch_20
-        0x1802 -> :sswitch_1f
-        0x1886 -> :sswitch_1e
-        0x1aa2 -> :sswitch_1d
-        0x1c04 -> :sswitch_1c
-        0x1c70 -> :sswitch_1b
-        0x1d44 -> :sswitch_1a
-        0x1dec -> :sswitch_19
-        0x2085 -> :sswitch_18
-        0x20c5 -> :sswitch_17
-        0x21f1 -> :sswitch_16
-        0x226c -> :sswitch_15
-        0x2287 -> :sswitch_14
-        0x23a3 -> :sswitch_13
-        0x254d -> :sswitch_12
-        0x25f5 -> :sswitch_11
-        0x26a6 -> :sswitch_10
-        0x26ab -> :sswitch_f
-        0x2762 -> :sswitch_e
-        0x2a6f -> :sswitch_d
-        0x2f01 -> :sswitch_c
-        0x2f39 -> :sswitch_b
-        0x328d -> :sswitch_a
-        0x33e9 -> :sswitch_9
-        0x34d5 -> :sswitch_8
-        0x376f -> :sswitch_7
-        0x3843 -> :sswitch_6
-        0x38ae -> :sswitch_5
-        0x39b3 -> :sswitch_4
-        0x3b79 -> :sswitch_3
-        0x3c9a -> :sswitch_2
-        0x3d9c -> :sswitch_1
-        0x3dee -> :sswitch_0
-    .end sparse-switch
+    .line 22
+    .line 23
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 24
+    :cond_1
+    const/4 v3, 0x1
+
+    .line 25
+    if-eqz v0, :cond_3
+
+    .line 26
+    .line 27
+    const/4 v2, 0x0
+
+    .line 28
+    :goto_0
+    array-length v0, p2
+
+    .line 29
+    if-ge v2, v0, :cond_4
+
+    .line 30
+    .line 31
+    aget-object v1, p2, v2
+
+    .line 32
+    .line 33
+    instance-of v0, v1, LX/0Hd;
+
+    .line 34
+    .line 35
+    if-eqz v0, :cond_2
+
+    .line 36
+    .line 37
+    check-cast v1, LX/0Hd;
+
+    .line 38
+    .line 39
+    invoke-interface {v1, v4}, LX/0Hd;->AgN(Landroid/content/Context;)LX/0CG;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v0
+
+    .line 43
+    aput-object v0, p2, v2
+
+    .line 44
+    .line 45
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
+
+    .line 46
+    .line 47
+    goto :goto_0
+
+    .line 48
+    :cond_3
+    iget v2, p0, LX/0IP;->A02:I
+
+    .line 49
+    .line 50
+    iget-object v1, p0, LX/0IP;->A01:LX/08F;
+
+    .line 51
+    .line 52
+    monitor-enter v1
+
+    .line 53
+    :try_start_0
+    iget v0, v1, LX/08F;->A00:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 54
+    .line 55
+    monitor-exit v1
+
+    .line 56
+    if-eq v2, v0, :cond_5
+
+    .line 57
+    .line 58
+    const-string v1, "soloader.recovery.DetectDataAppMove"
+
+    .line 59
+    .line 60
+    const-string v0, "Context was updated (perhaps by another thread)"
+
+    .line 61
+    .line 62
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 63
+    .line 64
+    .line 65
+    :cond_4
+    return v3
+
+    .line 66
+    :cond_5
+    const/4 v3, 0x0
+
+    .line 67
+    return v3
+
+    .line 68
+    :catchall_0
+    move-exception v0
+
+    .line 69
+    monitor-exit v1
+
+    .line 70
+    throw v0
 .end method

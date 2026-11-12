@@ -30,7 +30,7 @@
     const/4 v0, 0x6
 
     .line 1
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 2
     .line 3

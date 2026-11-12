@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public final serializer()LX/2LY;
+.method public final serializer()LX/5cW;
     .locals 1
 
     .line 0
-    invoke-static {}, Lcom/shopify/checkout/models/errors/violations/InventoryErrorCode;->access$get$cachedSerializer$delegate$cp()LX/0tD;
+    invoke-static {}, Lcom/shopify/checkout/models/errors/violations/InventoryErrorCode;->access$get$cachedSerializer$delegate$cp()LX/3gS;
 
     .line 1
     .line 2
@@ -30,7 +30,7 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {v0}, LX/0tD;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, LX/3gS;->getValue()Ljava/lang/Object;
 
     .line 5
     .line 6
@@ -38,7 +38,7 @@
     move-result-object v0
 
     .line 8
-    check-cast v0, LX/2LY;
+    check-cast v0, LX/5cW;
 
     .line 9
     .line 10

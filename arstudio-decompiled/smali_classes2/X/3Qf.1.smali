@@ -1,24 +1,33 @@
-.class public interface abstract LX/3Qf;
+.class public final LX/3Qf;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3XI;
-.implements LX/3XH;
+
+# static fields
+.field public static final synthetic A00:LX/3Qf;
 
 
-# virtual methods
-.method public abstract A5M(Ljava/lang/Object;)V
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/3Qf;
+
+    invoke-direct {v0}, LX/3Qf;-><init>()V
+
+    sput-object v0, LX/3Qf;->A00:LX/3Qf;
+
+    return-void
 .end method
 
-.method public abstract AjN(Ljava/lang/Object;)V
-.end method
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract ApM(LX/3Qv;LX/3Rq;Ljava/lang/Runnable;Ljava/lang/String;)LX/3QZ;
-.end method
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract ApN(LX/3Qv;Ljava/lang/Runnable;Ljava/lang/String;Ljava/util/concurrent/ExecutorService;)LX/3QZ;
-.end method
-
-.method public abstract ApO(LX/3Qv;LX/3Rq;Ljava/lang/String;Ljava/util/concurrent/Callable;)LX/3QZ;
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

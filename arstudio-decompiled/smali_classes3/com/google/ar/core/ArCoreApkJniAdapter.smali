@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
@@ -24,125 +24,181 @@
 
     .line 5
     .line 6
-    const-class v1, Ljava/lang/IllegalArgumentException;
+    sget-object v0, LX/4xj;->b:LX/4xj;
 
     .line 7
     .line 8
-    sget-object v0, LX/55a;->b:LX/55a;
+    iget v0, v0, LX/4xj;->G:I
 
     .line 9
     .line 10
-    iget v0, v0, LX/55a;->E:I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 11
     .line 12
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1L(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
-
     .line 13
+    move-result-object v1
+
     .line 14
+    const-class v0, Ljava/lang/IllegalArgumentException;
+
     .line 15
-    const-class v1, Lcom/google/ar/core/exceptions/ResourceExhaustedException;
-
     .line 16
-    .line 17
-    sget-object v0, LX/55a;->l:LX/55a;
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 17
     .line 18
     .line 19
-    iget v0, v0, LX/55a;->E:I
+    sget-object v0, LX/4xj;->n:LX/4xj;
 
     .line 20
     .line 21
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1L(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
+    iget v0, v0, LX/4xj;->G:I
 
     .line 22
     .line 23
-    .line 24
-    const-class v1, Lcom/google/ar/core/exceptions/UnavailableArcoreNotInstalledException;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    .line 24
     .line 25
     .line 26
-    sget-object v0, LX/55a;->z:LX/55a;
+    move-result-object v1
 
     .line 27
+    const-class v0, Lcom/google/ar/core/exceptions/ResourceExhaustedException;
+
     .line 28
-    iget v0, v0, LX/55a;->E:I
-
     .line 29
-    .line 30
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1L(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 30
     .line 31
     .line 32
+    sget-object v0, LX/4xj;->B:LX/4xj;
+
     .line 33
-    const-class v1, Lcom/google/ar/core/exceptions/UnavailableDeviceNotCompatibleException;
-
     .line 34
+    iget v0, v0, LX/4xj;->G:I
+
     .line 35
-    sget-object v0, LX/55a;->A:LX/55a;
-
     .line 36
-    .line 37
-    iget v0, v0, LX/55a;->E:I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    .line 37
     .line 38
     .line 39
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1L(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
+    move-result-object v1
 
     .line 40
+    const-class v0, Lcom/google/ar/core/exceptions/UnavailableArcoreNotInstalledException;
+
     .line 41
     .line 42
-    const-class v1, Lcom/google/ar/core/exceptions/UnavailableApkTooOldException;
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 43
     .line 44
-    sget-object v0, LX/55a;->B:LX/55a;
-
     .line 45
+    sget-object v0, LX/4xj;->C:LX/4xj;
+
     .line 46
-    iget v0, v0, LX/55a;->E:I
-
     .line 47
-    .line 48
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1L(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
+    iget v0, v0, LX/4xj;->G:I
 
+    .line 48
     .line 49
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
     .line 50
     .line 51
-    const-class v1, Lcom/google/ar/core/exceptions/UnavailableSdkTooOldException;
-
     .line 52
+    move-result-object v1
+
     .line 53
-    sget-object v0, LX/55a;->C:LX/55a;
+    const-class v0, Lcom/google/ar/core/exceptions/UnavailableDeviceNotCompatibleException;
 
     .line 54
     .line 55
-    iget v0, v0, LX/55a;->E:I
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 56
     .line 57
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1L(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
-
     .line 58
+    sget-object v0, LX/4xj;->D:LX/4xj;
+
     .line 59
     .line 60
-    const-class v1, Lcom/google/ar/core/exceptions/UnavailableUserDeclinedInstallationException;
+    iget v0, v0, LX/4xj;->G:I
 
     .line 61
     .line 62
-    sget-object v0, LX/55a;->D:LX/55a;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 63
     .line 64
-    iget v0, v0, LX/55a;->E:I
-
     .line 65
+    move-result-object v1
+
     .line 66
-    invoke-static {v1, v2, v0}, LX/0Yd;->A1L(Ljava/lang/Object;Ljava/util/AbstractMap;I)V
+    const-class v0, Lcom/google/ar/core/exceptions/UnavailableApkTooOldException;
 
     .line 67
     .line 68
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 69
+    .line 70
+    .line 71
+    sget-object v0, LX/4xj;->E:LX/4xj;
+
+    .line 72
+    .line 73
+    iget v0, v0, LX/4xj;->G:I
+
+    .line 74
+    .line 75
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 76
+    .line 77
+    .line 78
+    move-result-object v1
+
+    .line 79
+    const-class v0, Lcom/google/ar/core/exceptions/UnavailableSdkTooOldException;
+
+    .line 80
+    .line 81
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 82
+    .line 83
+    .line 84
+    sget-object v0, LX/4xj;->F:LX/4xj;
+
+    .line 85
+    .line 86
+    iget v0, v0, LX/4xj;->G:I
+
+    .line 87
+    .line 88
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 89
+    .line 90
+    .line 91
+    move-result-object v1
+
+    .line 92
+    const-class v0, Lcom/google/ar/core/exceptions/UnavailableUserDeclinedInstallationException;
+
+    .line 93
+    .line 94
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 95
+    .line 96
+    .line 97
     return-void
 .end method
 
@@ -155,11 +211,11 @@
 .end method
 
 .method public static checkAvailability(Landroid/content/Context;)I
-    .locals 2
+    .locals 3
 
     .line 0
     :try_start_0
-    sget-object v0, LX/55D;->A06:LX/55D;
+    sget-object v0, LX/4xI;->A06:LX/4xI;
 
     .line 1
     .line 2
@@ -197,19 +253,19 @@
     .line 15
     .line 16
     .line 17
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v2, Lcom/google/ar/core/ArCoreApkJniAdapter;->a:Ljava/util/Map;
 
     .line 18
     .line 19
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     .line 20
-    move-result-object p0
-
     .line 21
-    sget-object v1, Lcom/google/ar/core/ArCoreApkJniAdapter;->a:Ljava/util/Map;
-
     .line 22
+    move-result-object v1
+
     .line 23
-    invoke-interface {v1, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {v2, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     .line 24
     .line 25
@@ -221,7 +277,7 @@
 
     .line 28
     .line 29
-    invoke-interface {v1, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 30
     .line 31

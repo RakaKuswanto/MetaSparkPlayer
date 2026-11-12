@@ -8,157 +8,75 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
 
 # virtual methods
-.method public detectionIntervalTimeMs()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract detectionIntervalTimeMs()I
 .end method
 
-.method public detectorToUse()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract detectorToUse()I
 .end method
 
-.method public getForegroundCheckPeriod()I
-    .locals 1
-
-    const/4 v0, 0x5
-
-    return v0
+.method public abstract getForegroundCheckPeriod()I
 .end method
 
-.method public getRecoveryTimeout()I
-    .locals 1
-
-    const/4 v0, -0x1
-
-    return v0
+.method public abstract getRecoveryTimeout()I
 .end method
 
-.method public provideDexStatus()V
-    .locals 0
-
-    return-void
+.method public abstract provideDexStatus()V
 .end method
 
-.method public provideLooperMonitorInfo()V
-    .locals 0
-
-    return-void
+.method public abstract provideLooperMonitorInfo()V
 .end method
 
-.method public provideLooperProfileInfo()V
-    .locals 0
-
-    return-void
+.method public abstract provideLooperProfileInfo()V
 .end method
 
-.method public provideStats()V
-    .locals 0
-
-    return-void
+.method public abstract provideStats()V
 .end method
 
-.method public reportSoftError(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    return-void
+.method public abstract reportSoftError(Ljava/lang/String;Ljava/lang/Throwable;)V
 .end method
 
-.method public shouldANRDetectorRun()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldANRDetectorRun()Z
 .end method
 
-.method public shouldAvoidMutexOnSignalHandler()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldAvoidMutexOnSignalHandler()Z
 .end method
 
-.method public shouldCollectAndUploadANRReports()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldCollectAndUploadANRReports()Z
 .end method
 
-.method public shouldDedupDiskPersistence()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldDedupDiskPersistence()Z
 .end method
 
-.method public shouldLogOnSignalHandler()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldLogOnSignalHandler()Z
 .end method
 
-.method public shouldLogProcessPositionInAnrTraceFile()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldLogProcessPositionInAnrTraceFile()Z
 .end method
 
-.method public shouldRecordSignalTime()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldRecordSignalTime()Z
 .end method
 
-.method public shouldReportSoftErrors()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldReportSoftErrors()Z
 .end method
 
-.method public shouldRunANRDetectorOnBrowserProcess()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldRunANRDetectorOnBrowserProcess()Z
 .end method
 
-.method public shouldUploadSystemANRTraces()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract shouldUploadSystemANRTraces()Z
 .end method

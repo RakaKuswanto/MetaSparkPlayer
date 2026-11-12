@@ -18,141 +18,191 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 11
+.method public static synthetic $values()[Lorg/webrtc/legacy/Logging$Severity;
+    .locals 3
 
     .line 0
-    const-string v0, "LS_VERBOSE"
+    const/4 v0, 0x5
 
     .line 1
-    .line 2
-    const/4 v10, 0x0
+    new-array v2, v0, [Lorg/webrtc/legacy/Logging$Severity;
 
+    .line 2
     .line 3
-    new-instance v9, Lorg/webrtc/legacy/Logging$Severity;
+    sget-object v1, Lorg/webrtc/legacy/Logging$Severity;->LS_VERBOSE:Lorg/webrtc/legacy/Logging$Severity;
 
     .line 4
     .line 5
-    invoke-direct {v9, v0, v10}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lorg/webrtc/legacy/Logging$Severity;->LS_INFO:Lorg/webrtc/legacy/Logging$Severity;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lorg/webrtc/legacy/Logging$Severity;->LS_WARNING:Lorg/webrtc/legacy/Logging$Severity;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, Lorg/webrtc/legacy/Logging$Severity;->LS_ERROR:Lorg/webrtc/legacy/Logging$Severity;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    sget-object v1, Lorg/webrtc/legacy/Logging$Severity;->LS_NONE:Lorg/webrtc/legacy/Logging$Severity;
+
+    .line 24
+    .line 25
+    const/4 v0, 0x4
+
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
+    .line 28
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "LS_VERBOSE"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lorg/webrtc/legacy/Logging$Severity;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v9, Lorg/webrtc/legacy/Logging$Severity;->LS_VERBOSE:Lorg/webrtc/legacy/Logging$Severity;
+    sput-object v0, Lorg/webrtc/legacy/Logging$Severity;->LS_VERBOSE:Lorg/webrtc/legacy/Logging$Severity;
 
     .line 9
     .line 10
-    const-string v0, "LS_INFO"
+    const-string v2, "LS_INFO"
 
     .line 11
     .line 12
-    const/4 v8, 0x1
+    const/4 v1, 0x1
 
     .line 13
-    new-instance v7, Lorg/webrtc/legacy/Logging$Severity;
+    new-instance v0, Lorg/webrtc/legacy/Logging$Severity;
 
     .line 14
     .line 15
-    invoke-direct {v7, v0, v8}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v7, Lorg/webrtc/legacy/Logging$Severity;->LS_INFO:Lorg/webrtc/legacy/Logging$Severity;
+    sput-object v0, Lorg/webrtc/legacy/Logging$Severity;->LS_INFO:Lorg/webrtc/legacy/Logging$Severity;
 
     .line 19
     .line 20
-    const-string v0, "LS_WARNING"
+    const-string v2, "LS_WARNING"
 
     .line 21
     .line 22
-    const/4 v6, 0x2
+    const/4 v1, 0x2
 
     .line 23
-    new-instance v5, Lorg/webrtc/legacy/Logging$Severity;
+    new-instance v0, Lorg/webrtc/legacy/Logging$Severity;
 
     .line 24
     .line 25
-    invoke-direct {v5, v0, v6}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v5, Lorg/webrtc/legacy/Logging$Severity;->LS_WARNING:Lorg/webrtc/legacy/Logging$Severity;
+    sput-object v0, Lorg/webrtc/legacy/Logging$Severity;->LS_WARNING:Lorg/webrtc/legacy/Logging$Severity;
 
     .line 29
     .line 30
-    const-string v0, "LS_ERROR"
+    const-string v2, "LS_ERROR"
 
     .line 31
     .line 32
-    const/4 v4, 0x3
+    const/4 v1, 0x3
 
     .line 33
-    new-instance v3, Lorg/webrtc/legacy/Logging$Severity;
+    new-instance v0, Lorg/webrtc/legacy/Logging$Severity;
 
     .line 34
     .line 35
-    invoke-direct {v3, v0, v4}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
 
     .line 36
     .line 37
     .line 38
-    sput-object v3, Lorg/webrtc/legacy/Logging$Severity;->LS_ERROR:Lorg/webrtc/legacy/Logging$Severity;
+    sput-object v0, Lorg/webrtc/legacy/Logging$Severity;->LS_ERROR:Lorg/webrtc/legacy/Logging$Severity;
 
     .line 39
     .line 40
-    const-string v0, "LS_NONE"
+    const-string v2, "LS_NONE"
 
     .line 41
     .line 42
-    const/4 v2, 0x4
+    const/4 v1, 0x4
 
     .line 43
-    new-instance v1, Lorg/webrtc/legacy/Logging$Severity;
+    new-instance v0, Lorg/webrtc/legacy/Logging$Severity;
 
     .line 44
     .line 45
-    invoke-direct {v1, v0, v2}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lorg/webrtc/legacy/Logging$Severity;-><init>(Ljava/lang/String;I)V
 
     .line 46
     .line 47
     .line 48
-    sput-object v1, Lorg/webrtc/legacy/Logging$Severity;->LS_NONE:Lorg/webrtc/legacy/Logging$Severity;
+    sput-object v0, Lorg/webrtc/legacy/Logging$Severity;->LS_NONE:Lorg/webrtc/legacy/Logging$Severity;
 
     .line 49
     .line 50
-    const/4 v0, 0x5
+    invoke-static {}, Lorg/webrtc/legacy/Logging$Severity;->$values()[Lorg/webrtc/legacy/Logging$Severity;
 
     .line 51
-    new-array v0, v0, [Lorg/webrtc/legacy/Logging$Severity;
-
     .line 52
     .line 53
-    aput-object v9, v0, v10
+    move-result-object v0
 
     .line 54
-    .line 55
-    aput-object v7, v0, v8
-
-    .line 56
-    .line 57
-    aput-object v5, v0, v6
-
-    .line 58
-    .line 59
-    aput-object v3, v0, v4
-
-    .line 60
-    .line 61
-    aput-object v1, v0, v2
-
-    .line 62
-    .line 63
     sput-object v0, Lorg/webrtc/legacy/Logging$Severity;->$VALUES:[Lorg/webrtc/legacy/Logging$Severity;
 
-    .line 64
-    .line 65
+    .line 55
+    .line 56
     return-void
 .end method
 

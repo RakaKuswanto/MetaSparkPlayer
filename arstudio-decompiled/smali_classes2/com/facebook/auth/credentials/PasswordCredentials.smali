@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/1wM;
 
 
 # static fields
@@ -14,7 +13,7 @@
 # instance fields
 .field public A00:I
 
-.field public final A01:LX/1ZJ;
+.field public final A01:LX/2PV;
 
 .field public final A02:Ljava/lang/String;
 
@@ -28,11 +27,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x50
+    const/16 v0, 0x4f
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -47,7 +46,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1ZJ;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(LX/2PV;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     .line 268435456
@@ -64,7 +63,7 @@
 
     .line 268435462
     .line 268435463
-    iput-object p1, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A01:LX/1ZJ;
+    iput-object p1, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A01:LX/2PV;
 
     .line 268435464
     .line 268435465
@@ -78,7 +77,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1ZJ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+.method public constructor <init>(LX/2PV;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
     .line 536870912
@@ -95,7 +94,7 @@
 
     .line 536870918
     .line 536870919
-    iput-object p1, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A01:LX/1ZJ;
+    iput-object p1, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A01:LX/2PV;
 
     .line 536870920
     .line 536870921
@@ -143,7 +142,7 @@
 
     .line 14
     .line 15
-    invoke-static {}, LX/1ZJ;->values()[LX/1ZJ;
+    invoke-static {}, LX/2PV;->values()[LX/2PV;
 
     .line 16
     .line 17
@@ -163,7 +162,7 @@
 
     .line 24
     .line 25
-    iput-object v0, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A01:LX/1ZJ;
+    iput-object v0, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A01:LX/2PV;
 
     .line 26
     .line 27
@@ -192,17 +191,6 @@
     return v0
 .end method
 
-.method public final getPassword()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A03:Ljava/lang/String;
-
-    .line 1
-    .line 2
-    return-object v0
-.end method
-
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
@@ -225,11 +213,11 @@
     .line 8
     .line 9
     .line 10
-    iget-object v0, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A01:LX/1ZJ;
+    iget-object v0, p0, Lcom/facebook/auth/credentials/PasswordCredentials;->A01:LX/2PV;
 
     .line 11
     .line 12
-    invoke-static {p1, v0}, LX/0Yh;->A0p(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X3;->A12(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 13
     .line 14

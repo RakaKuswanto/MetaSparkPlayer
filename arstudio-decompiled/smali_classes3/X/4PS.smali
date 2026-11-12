@@ -1,114 +1,204 @@
 .class public final LX/4PS;
-.super Landroid/app/DialogFragment;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:Landroid/app/Dialog;
+.field public final A00:LX/012;
 
-.field public A01:Landroid/content/DialogInterface$OnCancelListener;
+.field public final A01:LX/01r;
 
-.field public A02:Landroid/app/Dialog;
+.field public final A02:Ljava/util/ArrayList;
+
+.field public final A03:Ljava/util/HashSet;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4PS;->A01:Landroid/content/DialogInterface$OnCancelListener;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
-
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
-    return-void
-.end method
-
-.method public final onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 2
 
     .line 0
-    iget-object v0, p0, LX/4PS;->A00:Landroid/app/Dialog;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    if-nez v0, :cond_0
-
     .line 3
-    .line 4
-    const/4 v0, 0x0
+    const/16 v1, 0xa
 
+    .line 4
     .line 5
-    invoke-virtual {p0, v0}, Landroid/app/DialogFragment;->setShowsDialog(Z)V
+    new-instance v0, LX/0Ma;
 
     .line 6
     .line 7
-    .line 8
-    iget-object v0, p0, LX/4PS;->A02:Landroid/app/Dialog;
+    invoke-direct {v0, v1}, LX/0Ma;-><init>(I)V
 
+    .line 8
     .line 9
     .line 10
-    if-nez v0, :cond_0
+    iput-object v0, p0, LX/4PS;->A01:LX/01r;
 
     .line 11
     .line 12
-    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
+    new-instance v0, LX/012;
+
+    .line 13
+    .line 14
+    invoke-direct {v0}, LX/012;-><init>()V
+
+    .line 15
+    .line 16
+    .line 17
+    iput-object v0, p0, LX/4PS;->A00:LX/012;
+
+    .line 18
+    .line 19
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    iput-object v0, p0, LX/4PS;->A02:Ljava/util/ArrayList;
+
+    .line 24
+    .line 25
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    iput-object v0, p0, LX/4PS;->A03:Ljava/util/HashSet;
+
+    .line 30
+    .line 31
+    return-void
+.end method
+
+.method public static A00(LX/4PS;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V
+    .locals 4
+
+    .line 0
+    invoke-virtual {p2, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-nez v0, :cond_2
+
+    .line 5
+    .line 6
+    invoke-virtual {p3, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-nez v0, :cond_1
+
+    .line 11
+    .line 12
+    invoke-virtual {p3, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 13
     .line 14
     .line 15
-    move-result-object v1
+    iget-object v0, p0, LX/4PS;->A00:LX/012;
 
     .line 16
-    invoke-static {v1}, LX/51D;->A02(Ljava/lang/Object;)V
-
     .line 17
+    invoke-virtual {v0, p1}, LX/012;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 18
     .line 19
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
     .line 20
+    move-result-object v3
+
     .line 21
-    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    check-cast v3, Ljava/util/AbstractList;
 
     .line 22
     .line 23
-    .line 24
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    if-eqz v3, :cond_0
 
+    .line 24
     .line 25
+    const/4 v2, 0x0
+
     .line 26
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->size()I
+
     .line 27
+    .line 28
+    .line 29
+    move-result v1
+
+    .line 30
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    .line 31
+    .line 32
+    invoke-virtual {v3, v2}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 33
+    .line 34
+    .line 35
     move-result-object v0
 
-    .line 28
-    iput-object v0, p0, LX/4PS;->A02:Landroid/app/Dialog;
+    .line 36
+    invoke-static {p0, v0, p2, p3}, LX/4PS;->A00(LX/4PS;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V
 
-    .line 29
-    .line 30
+    .line 37
+    .line 38
+    .line 39
+    add-int/lit8 v2, v2, 0x1
+
+    .line 40
+    .line 41
+    goto :goto_0
+
+    .line 42
     :cond_0
-    return-object v0
+    invoke-virtual {p3, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    .line 43
+    .line 44
+    .line 45
+    invoke-virtual {p2, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 46
+    .line 47
+    .line 48
+    return-void
+
+    .line 49
+    :cond_1
+    const-string v0, "This graph contains cyclic dependencies"
+
+    .line 50
+    .line 51
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v0
+
+    .line 55
+    throw v0
+
+    .line 56
+    :cond_2
+    return-void
 .end method

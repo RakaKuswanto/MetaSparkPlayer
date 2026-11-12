@@ -1,43 +1,32 @@
-.class public final LX/3mu;
-.super Landroid/os/Handler;
+.class public interface abstract LX/3mU;
+.super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final synthetic A00:LX/3ly;
-
-
-# direct methods
-.method public constructor <init>(LX/3ly;)V
-    .locals 0
-
-    .line 0
-    iput-object p1, p0, LX/3mu;->A00:LX/3ly;
-
-    .line 1
-    .line 2
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
+# interfaces
+.implements LX/3lk;
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 1
+.method public abstract A4d()Z
+.end method
 
-    .line 0
-    iget-object v0, p0, LX/3mu;->A00:LX/3ly;
+.method public abstract APa()Z
+.end method
 
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, LX/3ly;->A01(Landroid/os/Message;)V
+.method public abstract Al1(LX/3m5;Z)V
+.end method
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
+.method public abstract getAspectRatio()D
+.end method
+
+.method public abstract getCurrentPositionMs()I
+.end method
+
+.method public abstract getPlayerType()LX/28V;
+.end method
+
+.method public abstract getVideoId()Ljava/lang/String;
+.end method
+
+.method public abstract isPlaying()Z
 .end method

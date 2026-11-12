@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1Rj;
+.implements LX/2za;
 .implements Landroid/os/Parcelable;
 
 
@@ -26,17 +26,21 @@
 
 .field public final A06:Ljava/lang/String;
 
+.field public final A07:Z
+
+.field public final A08:Z
+
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    const/16 v0, 0x13
+    const/16 v0, 0xe
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -51,7 +55,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1Rj;)V
+.method public constructor <init>(LX/2za;)V
     .locals 1
 
     .line 268435456
@@ -60,7 +64,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    invoke-interface {p1}, LX/1Rj;->ABa()Lcom/google/common/collect/ImmutableList;
+    invoke-interface {p1}, LX/2za;->AA9()Lcom/google/common/collect/ImmutableList;
 
     .line 268435460
     .line 268435461
@@ -72,7 +76,7 @@
 
     .line 268435464
     .line 268435465
-    invoke-interface {p1}, LX/1Rj;->ADE()Lcom/google/common/collect/ImmutableList;
+    invoke-interface {p1}, LX/2za;->ABo()Lcom/google/common/collect/ImmutableList;
 
     .line 268435466
     .line 268435467
@@ -84,7 +88,7 @@
 
     .line 268435470
     .line 268435471
-    invoke-interface {p1}, LX/1Rj;->ADY()Ljava/lang/String;
+    invoke-interface {p1}, LX/2za;->ACA()Ljava/lang/String;
 
     .line 268435472
     .line 268435473
@@ -96,7 +100,7 @@
 
     .line 268435476
     .line 268435477
-    invoke-interface {p1}, LX/1Rj;->AEO()Ljava/lang/String;
+    invoke-interface {p1}, LX/2za;->ACx()Ljava/lang/String;
 
     .line 268435478
     .line 268435479
@@ -108,7 +112,7 @@
 
     .line 268435482
     .line 268435483
-    invoke-interface {p1}, LX/1Rj;->AQ7()Ljava/lang/Boolean;
+    invoke-interface {p1}, LX/2za;->AOh()Ljava/lang/Boolean;
 
     .line 268435484
     .line 268435485
@@ -120,7 +124,7 @@
 
     .line 268435488
     .line 268435489
-    invoke-interface {p1}, LX/1Rj;->ALI()Ljava/lang/String;
+    invoke-interface {p1}, LX/2za;->AJn()Ljava/lang/String;
 
     .line 268435490
     .line 268435491
@@ -132,7 +136,7 @@
 
     .line 268435494
     .line 268435495
-    invoke-interface {p1}, LX/1Rj;->AQu()Ljava/lang/Boolean;
+    invoke-interface {p1}, LX/2za;->APT()Ljava/lang/Boolean;
 
     .line 268435496
     .line 268435497
@@ -144,6 +148,30 @@
 
     .line 268435500
     .line 268435501
+    invoke-interface {p1}, LX/2za;->AKh()Z
+
+    .line 268435502
+    .line 268435503
+    .line 268435504
+    move-result v0
+
+    .line 268435505
+    iput-boolean v0, p0, Lcom/facebook/bugreporter/ConstBugReporterConfig;->A08:Z
+
+    .line 268435506
+    .line 268435507
+    invoke-interface {p1}, LX/2za;->AJs()Z
+
+    .line 268435508
+    .line 268435509
+    .line 268435510
+    move-result v0
+
+    .line 268435511
+    iput-boolean v0, p0, Lcom/facebook/bugreporter/ConstBugReporterConfig;->A07:Z
+
+    .line 268435512
+    .line 268435513
     return-void
 .end method
 
@@ -236,7 +264,7 @@
     move-result v0
 
     .line 43
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 44
     .line 45
@@ -268,7 +296,7 @@
 
     .line 58
     .line 59
-    invoke-static {p1}, LX/0Yg;->A1P(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1Y(Landroid/os/Parcel;)Z
 
     .line 60
     .line 61
@@ -288,12 +316,36 @@
 
     .line 68
     .line 69
+    invoke-static {p1}, LX/0X1;->A1Y(Landroid/os/Parcel;)Z
+
+    .line 70
+    .line 71
+    .line 72
+    move-result v0
+
+    .line 73
+    iput-boolean v0, p0, Lcom/facebook/bugreporter/ConstBugReporterConfig;->A08:Z
+
+    .line 74
+    .line 75
+    invoke-static {p1}, LX/0X5;->A1V(Landroid/os/Parcel;)Z
+
+    .line 76
+    .line 77
+    .line 78
+    move-result v0
+
+    .line 79
+    iput-boolean v0, p0, Lcom/facebook/bugreporter/ConstBugReporterConfig;->A07:Z
+
+    .line 80
+    .line 81
     return-void
 .end method
 
 
 # virtual methods
-.method public final ABa()Lcom/google/common/collect/ImmutableList;
+.method public final AA9()Lcom/google/common/collect/ImmutableList;
     .locals 1
 
     .line 0
@@ -304,7 +356,7 @@
     return-object v0
 .end method
 
-.method public final ADE()Lcom/google/common/collect/ImmutableList;
+.method public final ABo()Lcom/google/common/collect/ImmutableList;
     .locals 1
 
     .line 0
@@ -315,7 +367,7 @@
     return-object v0
 .end method
 
-.method public final ADY()Ljava/lang/String;
+.method public final ACA()Ljava/lang/String;
     .locals 1
 
     .line 0
@@ -326,7 +378,7 @@
     return-object v0
 .end method
 
-.method public final AEO()Ljava/lang/String;
+.method public final ACx()Ljava/lang/String;
     .locals 1
 
     .line 0
@@ -337,7 +389,7 @@
     return-object v0
 .end method
 
-.method public final ALI()Ljava/lang/String;
+.method public final AJn()Ljava/lang/String;
     .locals 1
 
     .line 0
@@ -348,7 +400,29 @@
     return-object v0
 .end method
 
-.method public final AQ7()Ljava/lang/Boolean;
+.method public final AJs()Z
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, Lcom/facebook/bugreporter/ConstBugReporterConfig;->A07:Z
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final AKh()Z
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, Lcom/facebook/bugreporter/ConstBugReporterConfig;->A08:Z
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final AOh()Ljava/lang/Boolean;
     .locals 1
 
     .line 0
@@ -359,7 +433,7 @@
     return-object v0
 .end method
 
-.method public final AQu()Ljava/lang/Boolean;
+.method public final APT()Ljava/lang/Boolean;
     .locals 1
 
     .line 0
@@ -467,5 +541,29 @@
     .line 43
     .line 44
     .line 45
+    iget-boolean v0, p0, Lcom/facebook/bugreporter/ConstBugReporterConfig;->A08:Z
+
+    .line 46
+    .line 47
+    int-to-byte v0, v0
+
+    .line 48
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    .line 49
+    .line 50
+    .line 51
+    iget-boolean v0, p0, Lcom/facebook/bugreporter/ConstBugReporterConfig;->A07:Z
+
+    .line 52
+    .line 53
+    int-to-byte v0, v0
+
+    .line 54
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    .line 55
+    .line 56
+    .line 57
     return-void
 .end method

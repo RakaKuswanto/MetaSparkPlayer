@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d ଦିନ ପୂର୍ବେ</item>
+        <item quantity="one">ଦିନେ ପୂର୍ବରୁ</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d ଦିନ</item>
+        <item quantity="one">1 ଦିନ</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d ଦିନ</item>
+        <item quantity="one">1 ଦିନ</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d ଘଣ୍ଟା</item>
+        <item quantity="one">1 ଘଣ୍ଟା</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d ମିନିଟ୍</item>
+        <item quantity="one">1 ମିନିଟ</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d ମାସ</item>
+        <item quantity="one">1 ମାସ</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d ସେକେଣ୍ଡ</item>
+        <item quantity="one">1 ସେକେଣ୍ଡ</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d weeks</item>
+        <item quantity="one">1 ସପ୍ତାହ</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">%1$d ଅଧିକ ଦିନ</item>
+        <item quantity="one">1 more day</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d years</item>
+        <item quantity="one">1 ବର୍ଷ</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ଘଣ୍ଟା ପୂର୍ବରୁ</item>
+        <item quantity="one">1 ଘଣ୍ଟା ପୂର୍ବେ</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d hrs</item>
+        <item quantity="one">1 ଘଣ୍ଟା</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$dଘ</item>
+        <item quantity="one">1h</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d ଘଣ୍ଟା</item>
+        <item quantity="one">1 ଘଣ୍ଟା</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d ମିନିଟ ଆଗରୁ</item>
+        <item quantity="one">1 minute ago</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d mins</item>
+        <item quantity="one">1 ମିନିଟ୍‌</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$dm</item>
+        <item quantity="one">1 ମାସ</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d months ago</item>
+        <item quantity="one">1 ମାସ ପୂର୍ବେ</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d ସେକେଣ୍ଡ ପୂର୍ବରୁ</item>
+        <item quantity="one">1 ସେକେଣ୍ଡ</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d ସପ୍ତାହ ପୂର୍ବେ</item>
+        <item quantity="one">1 week ago</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d hrs left</item>
+        <item quantity="one">1 ଘ ବାକି ରହିଛି</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d mins left</item>
+        <item quantity="one">1 ମି ବାକି ରହିଛି</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d ଅନେକ ବର୍ଷ ପୂର୍ବରୁ</item>
+        <item quantity="one">1 ବର୍ଷ ପୂର୍ବେ</item>
+    </plurals>
+</resources>

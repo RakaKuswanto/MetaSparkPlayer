@@ -1,5 +1,5 @@
 version: 2.12.1
-apkFileName: com.facebook.arstudio.player.apk
+apkFileName: meta-spark-player-187-0-0-8-277.apk
 usesFramework:
   ids:
   - 1
@@ -9,26 +9,26 @@ sdkInfo:
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 544792426
-  versionName: 175.0.0.28.488
+  versionCode: 621401422
+  versionName: 187.0.0.8.277
 doNotCompress:
 - arsc
 - m4a
 - ogg
 - png
 - app-update.properties
-- assets/com/facebook/fbwebrtc/b5e8b900ee7977b0136902f816f48f1f.meta
-- assets/com/facebook/fbwebrtc/multiway/ca36077a66105f06a4b627586a6b2ee2.meta
 - assets/fbandroid_graph_metadata.bin.xzs
 - assets/hand_pointer_keypoints_predict_medium.pb
 - assets/hand_pytorch_keypoints_predict.pb
 - assets/instance_seg_predict_net.pb
 - assets/lib/libs.spk.xz
 - assets/params_names_v4_u0.txt
-- assets/qe_lookup.bin
 - assets/seg_predict_net.pb
 - core-common.properties
 - core-facebook.properties
+- firebase-annotations.properties
+- firebase-common.properties
+- firebase-components.properties
 - okhttp3/internal/publicsuffix/publicsuffixes.gz
 - play-services-auth-api-phone.properties
 - play-services-auth-base.properties
@@ -37,6 +37,5 @@ doNotCompress:
 - play-services-basement.properties
 - play-services-fido.properties
 - play-services-location.properties
-- play-services-places-placereport.properties
 - play-services-tasks.properties
 - review.properties

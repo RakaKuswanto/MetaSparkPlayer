@@ -5,21 +5,21 @@
         <shape>
             <corners android:radius="@dimen/abc_action_bar_elevation_material" />
             <solid android:color="?sutro_usage_button_border" />
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="?fds_usage_always_white" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="?fds_usage_always_white" />
         </shape>
     </item>
     <item android:state_enabled="false">
         <shape>
             <corners android:radius="@dimen/abc_action_bar_elevation_material" />
             <solid android:color="@color/fbui_transparent" />
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="?fds_usage_disabled_button_background" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="?fds_usage_disabled_button_background" />
         </shape>
     </item>
     <item>
         <shape>
             <corners android:radius="@dimen/abc_action_bar_elevation_material" />
             <solid android:color="@color/fbui_transparent" />
-            <stroke android:width="@dimen/awareness_footer_divider_height" android:color="?fds_usage_always_white" />
+            <stroke android:width="@dimen/browser_menu_divider_height" android:color="?fds_usage_always_white" />
         </shape>
     </item>
 </selector>

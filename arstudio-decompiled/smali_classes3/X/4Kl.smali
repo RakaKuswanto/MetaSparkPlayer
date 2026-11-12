@@ -1,28 +1,35 @@
-.class public final LX/4Kl;
-.super Ljava/lang/Object;
+.class public final LX/4KL;
+.super Landroid/text/Editable$Factory;
 .source ""
-
-# interfaces
-.implements LX/4Is;
-
-
-# instance fields
-.field public final synthetic A00:LX/4Kg;
 
 
 # direct methods
-.method public constructor <init>(LX/4Kg;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4Kl;->A00:LX/4Kg;
+    invoke-direct {p0}, Landroid/text/Editable$Factory;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/4KK;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p0, p1}, LX/4KK;-><init>(LX/4KL;Ljava/lang/CharSequence;)V
 
     .line 3
     .line 4
     .line 5
-    return-void
+    return-object v0
 .end method

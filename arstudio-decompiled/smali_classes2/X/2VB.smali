@@ -1,22 +1,35 @@
-.class public interface abstract LX/2VB;
+.class public abstract LX/2VB;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/2VS;
-
 
 # static fields
-.field public static final A00:LX/2VM;
+.field public static final A00:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    sget-object v0, LX/2VM;->A00:LX/2VM;
+    .line 0
+    const-string v1, "TigonHttpClientAdapter"
 
-    sput-object v0, LX/2VB;->A00:LX/2VM;
+    .line 1
+    .line 2
+    const/4 v0, 0x3
 
+    .line 3
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    sput-boolean v0, LX/2VB;->A00:Z
+
+    .line 8
+    .line 9
     return-void
 .end method

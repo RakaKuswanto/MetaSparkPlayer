@@ -1,42 +1,61 @@
-.class public final LX/66G;
+.class public final synthetic LX/66G;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AREngineHelper$$ExternalSyntheticLambda0"
+
 
 # instance fields
-.field public A00:D
+.field public final synthetic A00:LX/613;
 
-.field public A01:J
-
-.field public final A02:I
-
-.field public final A03:LX/0J9;
+.field public final synthetic A01:LX/698;
 
 
 # direct methods
-.method public constructor <init>(LX/0J9;I)V
+.method public synthetic constructor <init>(LX/613;LX/698;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/66G;->A00:LX/613;
+
+    iput-object p2, p0, LX/66G;->A01:LX/698;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, LX/66G;->A00:LX/613;
 
     .line 1
     .line 2
+    iget-object v1, p0, LX/66G;->A01:LX/698;
+
     .line 3
-    iput-object p1, p0, LX/66G;->A03:LX/0J9;
-
     .line 4
+    iget-object v0, v0, LX/613;->A05:LX/68K;
+
     .line 5
-    iput p2, p0, LX/66G;->A02:I
-
     .line 6
-    .line 7
-    int-to-double v0, p2
+    if-eqz v0, :cond_0
 
+    .line 7
     .line 8
-    iput-wide v0, p0, LX/66G;->A00:D
+    invoke-interface {v0, v1}, LX/68K;->AaP(LX/698;)V
 
     .line 9
     .line 10
+    .line 11
+    :cond_0
     return-void
 .end method

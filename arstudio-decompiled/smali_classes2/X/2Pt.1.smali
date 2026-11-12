@@ -1,17 +1,17 @@
-.class public LX/2Pt;
-.super LX/2Qr;
+.class public interface abstract LX/2Pt;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract A3T()V
+.end method
 
-    .line 0
-    invoke-direct {p0}, LX/2Qr;-><init>()V
+.method public abstract A42(LX/2Py;Z)V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AAx()LX/2OK;
+.end method
+
+.method public abstract AG9()Ljava/lang/String;
 .end method

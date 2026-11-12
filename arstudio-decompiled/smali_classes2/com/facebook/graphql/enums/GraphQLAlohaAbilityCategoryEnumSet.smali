@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLAlohaAbilityCategoryEnumSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLAlohaAbilityCategoryEnumSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -412,34 +412,36 @@
 
     .line 195
     .line 196
-    const-string v0, "WEATHER"
+    const-string/jumbo v0, "WEATHER"
 
     .line 197
     .line 198
+    .line 199
     aput-object v0, v2, v1
 
-    .line 199
     .line 200
+    .line 201
     const/16 v1, 0x22
 
-    .line 201
     .line 202
-    const-string v0, "WEBSITE"
-
     .line 203
-    .line 204
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    const-string/jumbo v0, "WEBSITE"
 
+    .line 204
     .line 205
     .line 206
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 207
+    .line 208
+    .line 209
     move-result-object v0
 
-    .line 208
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAlohaAbilityCategoryEnumSet;->A00:Ljava/util/Set;
-
-    .line 209
     .line 210
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLAlohaAbilityCategoryEnumSet;->A00:Ljava/util/HashSet;
+
+    .line 211
+    .line 212
     return-void
 .end method
 
@@ -455,11 +457,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAlohaAbilityCategoryEnumSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLAlohaAbilityCategoryEnumSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

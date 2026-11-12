@@ -22,7 +22,8 @@
         <domain includeSubdomains="true">freebasics.com</domain>
         <domain includeSubdomains="true">internet.org</domain>
         <domain includeSubdomains="true">viewpointsfromfacebook.com</domain>
-        <pin-set expiration="2024-12-05">
+        <domain includeSubdomains="true">meta.com</domain>
+        <pin-set expiration="2025-07-11">
             <pin digest="SHA-256">x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=</pin>
             <pin digest="SHA-256">ICGRfpgmOUXIWcQ/HXPLQTkFPEFPoDyjvH7ohhQpjzs=</pin>
             <pin digest="SHA-256">grX4Ta9HpZx6tSHkmCrvpApTQGo67CYDnvprLg5yRME=</pin>

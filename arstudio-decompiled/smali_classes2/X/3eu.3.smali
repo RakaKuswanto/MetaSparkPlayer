@@ -1,0 +1,21 @@
+.class public abstract LX/3eu;
+.super Ljava/lang/Exception;
+.source ""
+
+
+# static fields
+.field public static final serialVersionUID:J = 0x7e7732f0a16c3d48L
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method

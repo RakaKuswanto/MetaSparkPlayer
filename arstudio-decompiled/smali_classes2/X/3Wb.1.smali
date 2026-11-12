@@ -1,78 +1,37 @@
 .class public final LX/3Wb;
-.super Ljava/lang/Object;
+.super LX/3VF;
 .source ""
 
-
-# instance fields
-.field public final A00:LX/3r6;
-
-.field public final A01:LX/3r7;
-
-.field public final A02:Ljava/lang/String;
+# interfaces
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(LX/3r6;LX/3r7;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 268435456
+    const v0, 0x2ad228ce
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/3Wb;->A00:LX/3r6;
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-direct {p0, v0}, LX/3VF;-><init>(I)V
 
-    .line 4
-    .line 5
-    iput-object p3, p0, LX/3Wb;->A02:Ljava/lang/String;
-
-    .line 6
-    .line 7
-    iput-object p2, p0, LX/3Wb;->A01:LX/3r7;
-
-    .line 8
-    .line 9
+    .line 268435460
+    .line 268435461
+    .line 268435462
     return-void
 .end method
 
-
-# virtual methods
-.method public final A00()Ljava/lang/String;
-    .locals 4
+.method public constructor <init>(I)V
+    .locals 0
 
     .line 0
-    iget-object v0, p0, LX/3Wb;->A00:LX/3r6;
+    invoke-direct {p0, p1}, LX/3VF;-><init>(I)V
 
     .line 1
     .line 2
-    iget-object v3, v0, LX/3r6;->value:Ljava/lang/String;
-
     .line 3
-    .line 4
-    const-string v2, "."
-
-    .line 5
-    .line 6
-    iget-object v1, p0, LX/3Wb;->A02:Ljava/lang/String;
-
-    .line 7
-    .line 8
-    iget-object v0, p0, LX/3Wb;->A01:LX/3r7;
-
-    .line 9
-    .line 10
-    iget-object v0, v0, LX/3r7;->value:Ljava/lang/String;
-
-    .line 11
-    .line 12
-    invoke-static {v3, v2, v1, v2, v0}, LX/00I;->A0O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    return-object v0
+    return-void
 .end method

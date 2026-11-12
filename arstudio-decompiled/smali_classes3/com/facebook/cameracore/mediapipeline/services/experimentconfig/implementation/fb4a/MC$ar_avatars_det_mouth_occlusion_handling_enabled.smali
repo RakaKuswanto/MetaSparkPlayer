@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xf738
 
-.field public static final __CONFIG__:I = 0x421
+.field public static final __CONFIG__:I = 0x3d4
 
-.field public static final gk_det_mouth_occlusion_handling_enabled:J = 0x81042100002b1fL
+.field public static final gk_det_mouth_occlusion_handling_enabled:J = 0x8103d400002684L
 
 
 # direct methods

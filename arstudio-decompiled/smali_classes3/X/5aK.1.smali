@@ -2,157 +2,105 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/68m;
+
 
 # instance fields
-.field public A00:J
+.field public final synthetic A00:LX/5zL;
 
-.field public A01:J
-
-.field public volatile A02:J
+.field public final synthetic A01:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(LX/5zL;Ljava/io/File;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/5aK;->A00:LX/5zL;
 
     .line 1
     .line 2
+    iput-object p2, p0, LX/5aK;->A01:Ljava/io/File;
+
     .line 3
-    const-wide/16 v0, 0x0
-
     .line 4
-    .line 5
-    iput-wide v0, p0, LX/5aK;->A01:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     .line 6
     .line 7
-    iput-wide v0, p0, LX/5aK;->A00:J
-
-    .line 8
-    .line 9
     return-void
 .end method
 
-.method public static A00(LX/5aK;)V
-    .locals 11
+
+# virtual methods
+.method public final AUB(LX/5VZ;)V
+    .locals 2
 
     .line 0
-    iget-wide v4, p0, LX/5aK;->A01:J
+    iget-object v0, p0, LX/5aK;->A00:LX/5zL;
 
     .line 1
     .line 2
-    const-wide/16 v9, 0x1
+    iget-object v0, v0, LX/3rw;->A00:LX/0RP;
 
     .line 3
     .line 4
-    const-string v8, "AnomalyDetector"
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
 
     .line 5
     .line 6
-    const-wide/16 v2, 0x0
-
     .line 7
+    move-result-object v1
+
     .line 8
-    cmp-long v0, v4, v2
+    const-string v0, "cameracore_capture_photo"
 
     .line 9
     .line 10
-    if-nez v0, :cond_0
+    invoke-interface {v1, v0, p1}, LX/0Ft;->softReport(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 11
     .line 12
-    const-string v0, "Detected Anomaly - all outputs disabled"
-
     .line 13
-    .line 14
-    invoke-static {v8, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    return-void
+.end method
 
-    .line 15
-    .line 16
-    .line 17
-    iget-wide v0, p0, LX/5aK;->A02:J
+.method public final AUE()V
+    .locals 2
 
-    .line 18
-    .line 19
-    add-long/2addr v0, v9
+    .line 0
+    iget-object v1, p0, LX/5aK;->A00:LX/5zL;
 
-    .line 20
-    iput-wide v0, p0, LX/5aK;->A02:J
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/5aK;->A01:Ljava/io/File;
 
-    .line 21
-    .line 22
-    :cond_0
-    iget-wide v6, p0, LX/5aK;->A01:J
+    .line 3
+    .line 4
+    invoke-virtual {v1, v0}, LX/3rw;->A07(Ljava/io/File;)V
 
-    .line 23
-    .line 24
-    iget-wide v4, p0, LX/5aK;->A00:J
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
 
-    .line 25
-    .line 26
-    cmp-long v0, v6, v4
+.method public final AUF(Landroid/graphics/Bitmap;Ljava/lang/String;)V
+    .locals 0
 
-    .line 27
-    .line 28
-    if-lez v0, :cond_1
+    .line 0
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 29
-    .line 30
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    .line 31
-    .line 32
-    .line 33
-    move-result-object v1
+.method public final AUG()V
+    .locals 0
 
-    .line 34
-    const/4 v0, 0x0
-
-    .line 35
-    invoke-static {v1, v0, v6, v7}, LX/001;->A1B([Ljava/lang/Object;IJ)V
-
-    .line 36
-    .line 37
-    .line 38
-    const/4 v0, 0x1
-
-    .line 39
-    invoke-static {v1, v0, v4, v5}, LX/001;->A1B([Ljava/lang/Object;IJ)V
-
-    .line 40
-    .line 41
-    .line 42
-    const-string v0, "Detected Anomaly - didn\'t complete all draws to output %d > %d"
-
-    .line 43
-    .line 44
-    invoke-static {v8, v0, v1}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 45
-    .line 46
-    .line 47
-    iget-wide v0, p0, LX/5aK;->A02:J
-
-    .line 48
-    .line 49
-    add-long/2addr v0, v9
-
-    .line 50
-    iput-wide v0, p0, LX/5aK;->A02:J
-
-    .line 51
-    .line 52
-    :cond_1
-    iput-wide v2, p0, LX/5aK;->A01:J
-
-    .line 53
-    .line 54
-    iput-wide v2, p0, LX/5aK;->A00:J
-
-    .line 55
-    .line 56
     return-void
 .end method

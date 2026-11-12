@@ -1,52 +1,34 @@
 .class public final LX/4yC;
-.super Ljava/lang/Object;
+.super LX/4yM;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "zza"
 
 
 # instance fields
-.field public final A00:Ljava/lang/Runnable;
+.field public final A00:LX/4yD;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/4yC;->A00:Ljava/lang/Runnable;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method public constructor <init>(LX/4yT;)V
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0, p1}, LX/4yM;-><init>(LX/4yT;)V
 
     .line 1
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
     .line 2
     .line 3
+    new-instance v0, LX/4yD;
+
     .line 4
-    iget-object v0, p0, LX/4yC;->A00:Ljava/lang/Runnable;
-
     .line 5
-    .line 6
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    invoke-direct {v0}, LX/4yD;-><init>()V
 
+    .line 6
     .line 7
     .line 8
+    iput-object v0, p0, LX/4yC;->A00:LX/4yD;
+
     .line 9
+    .line 10
     return-void
 .end method

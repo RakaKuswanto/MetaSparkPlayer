@@ -1,129 +1,140 @@
-.class public final LX/4Fx;
-.super Ljava/lang/Object;
+.class public final LX/4fX;
+.super LX/4fV;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ActivityCompat$1"
 
 
 # instance fields
-.field public final synthetic A00:I
+.field public A00:LX/2iI;
+    .annotation runtime Lcom/facebook/litho/annotations/Prop;
+        optional = true
+    .end annotation
+.end field
 
-.field public final synthetic A01:Landroid/app/Activity;
+.field public A01:LX/2iI;
+    .annotation runtime Lcom/facebook/litho/annotations/Prop;
+        optional = true
+    .end annotation
+.end field
 
-.field public final synthetic A02:[Ljava/lang/String;
+.field public A02:LX/2iJ;
+    .annotation runtime Lcom/facebook/litho/annotations/Prop;
+        optional = true
+    .end annotation
+.end field
+
+.field public A03:LX/4KI;
+    .annotation runtime Lcom/facebook/litho/annotations/Prop;
+        optional = true
+    .end annotation
+.end field
+
+.field public A04:Ljava/util/List;
+    .annotation runtime Lcom/facebook/litho/annotations/Prop;
+        optional = true
+    .end annotation
+.end field
+
+.field public A05:Z
+    .annotation runtime Lcom/facebook/litho/annotations/Prop;
+        optional = true
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;[Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(LX/2iI;LX/2iI;LX/4KI;Ljava/util/List;)V
+    .locals 3
 
-    .line 0
-    iput-object p2, p0, LX/4Fx;->A02:[Ljava/lang/String;
+    .line 268435456
+    const/4 v2, 0x0
 
-    .line 1
-    .line 2
-    iput-object p1, p0, LX/4Fx;->A01:Landroid/app/Activity;
+    .line 268435457
+    const/4 v1, 0x0
 
-    .line 3
-    .line 4
-    iput p3, p0, LX/4Fx;->A00:I
+    .line 268435458
+    const-string v0, "Row"
 
-    .line 5
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 268435459
+    .line 268435460
+    invoke-direct {p0, v0}, LX/4fV;-><init>(Ljava/lang/String;)V
 
-    .line 7
-    .line 8
-    .line 9
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    iput-object p1, p0, LX/4fX;->A00:LX/2iI;
+
+    .line 268435464
+    .line 268435465
+    iput-object p2, p0, LX/4fX;->A01:LX/2iI;
+
+    .line 268435466
+    .line 268435467
+    iput-object v2, p0, LX/4fX;->A02:LX/2iJ;
+
+    .line 268435468
+    .line 268435469
+    iput-object p3, p0, LX/4fX;->A03:LX/4KI;
+
+    .line 268435470
+    .line 268435471
+    iput-boolean v1, p0, LX/4fX;->A05:Z
+
+    .line 268435472
+    .line 268435473
+    iput-object p4, p0, LX/4fX;->A04:Ljava/util/List;
+
+    .line 268435474
+    .line 268435475
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 8
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
 
     .line 0
-    iget-object v7, p0, LX/4Fx;->A02:[Ljava/lang/String;
+    const/4 v1, 0x0
 
     .line 1
+    const/4 v0, 0x0
+
     .line 2
-    array-length v6, v7
+    if-nez p1, :cond_0
 
     .line 3
-    new-array v5, v6, [I
-
     .line 4
+    const-string p1, "Row"
+
     .line 5
-    iget-object v4, p0, LX/4Fx;->A01:Landroid/app/Activity;
-
     .line 6
-    .line 7
-    invoke-virtual {v4}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
+    :cond_0
+    invoke-direct {p0, p1}, LX/4fV;-><init>(Ljava/lang/String;)V
 
+    .line 7
     .line 8
     .line 9
-    .line 10
-    move-result-object v3
+    iput-object v1, p0, LX/4fX;->A00:LX/2iI;
 
+    .line 10
     .line 11
-    invoke-virtual {v4}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
+    iput-object v1, p0, LX/4fX;->A01:LX/2iI;
 
     .line 12
     .line 13
-    .line 14
-    move-result-object v2
+    iput-object v1, p0, LX/4fX;->A02:LX/2iJ;
 
+    .line 14
     .line 15
-    const/4 v1, 0x0
+    iput-object v1, p0, LX/4fX;->A03:LX/4KI;
 
     .line 16
-    :goto_0
-    if-ge v1, v6, :cond_0
-
     .line 17
+    iput-boolean v0, p0, LX/4fX;->A05:Z
+
     .line 18
-    aget-object v0, v7, v1
-
     .line 19
+    iput-object v1, p0, LX/4fX;->A04:Ljava/util/List;
+
     .line 20
-    invoke-virtual {v3, v0, v2}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 21
-    .line 22
-    .line 23
-    move-result v0
-
-    .line 24
-    aput v0, v5, v1
-
-    .line 25
-    .line 26
-    add-int/lit8 v1, v1, 0x1
-
-    .line 27
-    .line 28
-    goto :goto_0
-
-    .line 29
-    :cond_0
-    check-cast v4, LX/4Fz;
-
-    .line 30
-    .line 31
-    iget v0, p0, LX/4Fx;->A00:I
-
-    .line 32
-    .line 33
-    invoke-interface {v4, v0, v7, v5}, LX/4Fz;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
-
-    .line 34
-    .line 35
-    .line 36
     return-void
 .end method

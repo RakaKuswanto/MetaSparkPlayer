@@ -1,156 +1,306 @@
 .class public final LX/0IX;
-.super LX/00a;
+.super Ljava/io/FilterWriter;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/00a;
-
-.field public final A01:LX/03V;
-
-
 # direct methods
-.method public constructor <init>(LX/00a;LX/03V;)V
+.method public constructor <init>(Ljava/io/Writer;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/00a;-><init>()V
+    invoke-direct {p0, p1}, Ljava/io/FilterWriter;-><init>(Ljava/io/Writer;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/0IX;->A01:LX/03V;
-
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/0IX;->A00:LX/00a;
-
-    .line 6
-    .line 7
     return-void
 .end method
 
-
-# virtual methods
-.method public final A02(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
-    .locals 6
+.method public static A00(Ljava/io/Writer;C)V
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/0IX;->A00:LX/00a;
+    const/16 v0, 0xc
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2}, LX/00a;->A02(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
+    const/16 v1, 0x5c
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v5
+    if-eq p1, v0, :cond_3
 
+    .line 5
     .line 6
-    iget-object v4, p0, LX/0IX;->A01:LX/03V;
+    const/16 v0, 0xd
 
     .line 7
     .line 8
-    invoke-virtual {v4, p1, v5}, LX/03V;->A08(Landroid/content/Context;Landroid/content/Intent;)LX/06l;
+    if-eq p1, v0, :cond_2
 
     .line 9
     .line 10
-    .line 11
-    move-result-object v3
+    const/16 v0, 0x22
 
+    .line 11
     .line 12
-    iget-object v1, v4, LX/03V;->A00:LX/0IM;
+    if-eq p1, v0, :cond_1
 
     .line 13
     .line 14
-    iget-object v0, v4, LX/03V;->A01:Ljava/lang/String;
+    if-eq p1, v1, :cond_1
 
     .line 15
     .line 16
-    invoke-virtual {v1, p1, v5, v0}, LX/0IM;->A09(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
+    packed-switch p1, :pswitch_data_0
 
     .line 17
     .line 18
     .line 19
-    move-result-object v2
+    const/16 v0, 0x1f
 
     .line 20
-    if-nez v2, :cond_0
-
     .line 21
+    if-le p1, v0, :cond_0
+
     .line 22
-    const-string v1, "Unable to launch intent in the selected scope"
-
     .line 23
+    const/16 v0, 0x2028
+
     .line 24
-    new-instance v0, Ljava/lang/SecurityException;
-
     .line 25
-    .line 26
-    invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+    if-eq p1, v0, :cond_0
 
+    .line 26
     .line 27
+    const/16 v0, 0x2029
+
     .line 28
     .line 29
-    throw v0
+    if-ne p1, v0, :cond_4
 
     .line 30
-    :cond_0
-    invoke-static {p1, v4}, LX/03V;->A00(Landroid/content/Context;LX/03V;)V
-
     .line 31
+    :cond_0
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
+
     .line 32
     .line 33
-    invoke-static {p1, v5}, LX/0Ic;->A02(Landroid/content/Context;Landroid/content/Intent;)Z
-
     .line 34
+    move-result-object v1
+
     .line 35
+    const/4 v0, 0x0
+
     .line 36
-    move-result v0
+    invoke-static {v1, p1, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
 
     .line 37
-    if-eqz v0, :cond_1
-
     .line 38
     .line 39
-    iget-object v1, v1, LX/0IM;->A01:LX/06M;
+    const-string v0, "\\u%04x"
 
     .line 40
     .line 41
-    const-string v0, "Warning: launching intent with a non-Activity Context requires FLAG_ACTIVITY_NEW_TASK, or the Android Runtime will throw a AndroidRuntimeException. Adding the flag to prevent a crash. This might lead to unexpected behavior with the back button. Please pass in an Activity Context."
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 42
     .line 43
-    invoke-interface {v1, v0}, LX/06M;->AjY(Ljava/lang/String;)V
-
     .line 44
-    .line 45
-    .line 46
-    :cond_1
-    invoke-virtual {v4, p1, v5, v2, v3}, LX/03V;->A0C(Landroid/content/Context;Landroid/content/Intent;Landroid/content/Intent;LX/06l;)V
+    move-result-object v0
 
+    .line 45
+    :goto_0
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+
+    .line 46
     .line 47
     .line 48
+    return-void
+
     .line 49
-    return-object v2
+    :pswitch_0
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(I)V
+
+    .line 50
+    .line 51
+    .line 52
+    const-string v0, "n"
+
+    .line 53
+    .line 54
+    goto :goto_0
+
+    .line 55
+    :pswitch_1
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(I)V
+
+    .line 56
+    .line 57
+    .line 58
+    const/16 p1, 0x62
+
+    .line 59
+    .line 60
+    goto :goto_1
+
+    .line 61
+    :cond_1
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(I)V
+
+    .line 62
+    .line 63
+    .line 64
+    goto :goto_1
+
+    .line 65
+    :cond_2
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(I)V
+
+    .line 66
+    .line 67
+    .line 68
+    const/16 p1, 0x72
+
+    .line 69
+    .line 70
+    goto :goto_1
+
+    .line 71
+    :cond_3
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(I)V
+
+    .line 72
+    .line 73
+    .line 74
+    const/16 p1, 0x66
+
+    .line 75
+    .line 76
+    goto :goto_1
+
+    .line 77
+    :pswitch_2
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(I)V
+
+    .line 78
+    .line 79
+    .line 80
+    const/16 p1, 0x74
+
+    .line 81
+    .line 82
+    :cond_4
+    :goto_1
+    invoke-virtual {p0, p1}, Ljava/io/Writer;->write(I)V
+
+    .line 83
+    .line 84
+    .line 85
+    return-void
+
+    .line 86
+    :pswitch_data_0
+    .packed-switch 0x8
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final A04(Landroid/content/Intent;I)Ljava/lang/Object;
-    .locals 1
+
+# virtual methods
+.method public final write(I)V
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/0IX;->A00:LX/00a;
+    iget-object v1, p0, Ljava/io/FilterWriter;->out:Ljava/io/Writer;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2}, LX/00a;->A04(Landroid/content/Intent;I)Ljava/lang/Object;
+    int-to-char v0, p1
 
     .line 3
+    invoke-static {v1, v0}, LX/0IX;->A00(Ljava/io/Writer;C)V
+
     .line 4
     .line 5
-    move-result-object v0
-
     .line 6
-    return-object v0
+    return-void
+.end method
+
+.method public final write(Ljava/lang/String;II)V
+    .locals 2
+
+    .line 268435456
+    move v1, p2
+
+    .line 268435457
+    :goto_0
+    add-int v0, p2, p3
+
+    .line 268435458
+    .line 268435459
+    if-ge v1, v0, :cond_0
+
+    .line 268435460
+    .line 268435461
+    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
+
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    move-result v0
+
+    .line 268435465
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(I)V
+
+    .line 268435466
+    .line 268435467
+    .line 268435468
+    add-int/lit8 v1, v1, 0x1
+
+    .line 268435469
+    .line 268435470
+    goto :goto_0
+
+    .line 268435471
+    :cond_0
+    return-void
+.end method
+
+.method public final write([CII)V
+    .locals 2
+
+    .line 536870912
+    move v1, p2
+
+    .line 536870913
+    :goto_0
+    add-int v0, p2, p3
+
+    .line 536870914
+    .line 536870915
+    if-ge v1, v0, :cond_0
+
+    .line 536870916
+    .line 536870917
+    aget-char v0, p1, v1
+
+    .line 536870918
+    .line 536870919
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(I)V
+
+    .line 536870920
+    .line 536870921
+    .line 536870922
+    add-int/lit8 v1, v1, 0x1
+
+    .line 536870923
+    .line 536870924
+    goto :goto_0
+
+    .line 536870925
+    :cond_0
+    return-void
 .end method

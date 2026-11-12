@@ -1,232 +1,276 @@
-.class public final LX/41C;
-.super Ljava/lang/Object;
+.class public final enum LX/41C;
+.super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static A05:I
+.field public static final synthetic $VALUES:[LX/41C;
 
-.field public static A06:LX/41C;
+.field public static final enum CANONICALIZE_FIELD_NAMES:LX/41C;
 
-.field public static final A07:Ljava/lang/Object;
+.field public static final enum INTERN_FIELD_NAMES:LX/41C;
 
 
 # instance fields
-.field public A00:J
-
-.field public A01:LX/42g;
-
-.field public A02:Ljava/io/IOException;
-
-.field public A03:Ljava/lang/Integer;
-
-.field public A04:LX/41C;
+.field public final _defaultState:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/41C;->A07:Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static A00()LX/41C;
+.method public static synthetic $values()[LX/41C;
     .locals 3
 
     .line 0
-    sget-object v2, LX/41C;->A07:Ljava/lang/Object;
+    const/4 v0, 0x2
 
     .line 1
-    .line 2
-    monitor-enter v2
+    new-array v2, v0, [LX/41C;
 
+    .line 2
     .line 3
-    :try_start_0
-    sget-object v1, LX/41C;->A06:LX/41C;
+    sget-object v1, LX/41C;->INTERN_FIELD_NAMES:LX/41C;
 
     .line 4
     .line 5
-    if-eqz v1, :cond_0
+    const/4 v0, 0x0
 
     .line 6
-    .line 7
-    iget-object v0, v1, LX/41C;->A04:LX/41C;
+    aput-object v1, v2, v0
 
+    .line 7
+    .line 8
+    sget-object v1, LX/41C;->CANONICALIZE_FIELD_NAMES:LX/41C;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v3, "INTERN_FIELD_NAMES"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    const/4 v2, 0x1
+
+    .line 4
+    new-instance v0, LX/41C;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v3, v1, v2}, LX/41C;-><init>(Ljava/lang/String;IZ)V
+
+    .line 7
     .line 8
     .line 9
-    sput-object v0, LX/41C;->A06:LX/41C;
+    sput-object v0, LX/41C;->INTERN_FIELD_NAMES:LX/41C;
 
     .line 10
     .line 11
-    const/4 v0, 0x0
+    const-string v1, "CANONICALIZE_FIELD_NAMES"
 
     .line 12
-    iput-object v0, v1, LX/41C;->A04:LX/41C;
-
     .line 13
+    new-instance v0, LX/41C;
+
     .line 14
-    sget v0, LX/41C;->A05:I
-
     .line 15
-    .line 16
-    add-int/lit8 v0, v0, -0x1
+    invoke-direct {v0, v1, v2, v2}, LX/41C;-><init>(Ljava/lang/String;IZ)V
 
+    .line 16
     .line 17
     .line 18
-    sput v0, LX/41C;->A05:I
+    sput-object v0, LX/41C;->CANONICALIZE_FIELD_NAMES:LX/41C;
 
     .line 19
     .line 20
-    monitor-exit v2
+    invoke-static {}, LX/41C;->$values()[LX/41C;
 
     .line 21
-    return-object v1
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    sput-object v0, LX/41C;->$VALUES:[LX/41C;
+
+    .line 25
+    .line 26
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-boolean p3, p0, LX/41C;->_defaultState:Z
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public static collectDefaults()I
+    .locals 6
+
+    .line 0
+    invoke-static {}, LX/41C;->values()[LX/41C;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v5
+
+    .line 4
+    array-length v4, v5
+
+    .line 5
+    const/4 v3, 0x0
+
+    .line 6
+    const/4 v2, 0x0
+
+    .line 7
+    :goto_0
+    if-ge v3, v4, :cond_1
+
+    .line 8
+    .line 9
+    aget-object v1, v5, v3
+
+    .line 10
+    .line 11
+    invoke-virtual {v1}, LX/41C;->enabledByDefault()Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 16
+    .line 17
+    invoke-virtual {v1}, LX/41C;->getMask()I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    or-int/2addr v2, v0
 
     .line 22
     :cond_0
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    add-int/lit8 v3, v3, 0x1
 
     .line 23
-    new-instance v1, LX/41C;
-
     .line 24
+    goto :goto_0
+
     .line 25
-    invoke-direct {v1}, LX/41C;-><init>()V
+    :cond_1
+    return v2
+.end method
 
-    .line 26
-    .line 27
-    .line 28
-    return-object v1
+.method public static values()[LX/41C;
+    .locals 1
 
-    .line 29
-    :catchall_0
-    move-exception v0
+    .line 0
+    sget-object v0, LX/41C;->$VALUES:[LX/41C;
 
-    .line 30
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 31
-    throw v0
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/41C;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final A01()V
-    .locals 5
+.method public enabledByDefault()Z
+    .locals 1
 
     .line 0
-    sget-object v4, LX/41C;->A07:Ljava/lang/Object;
+    iget-boolean v0, p0, LX/41C;->_defaultState:Z
 
     .line 1
     .line 2
-    monitor-enter v4
+    return v0
+.end method
 
+.method public enabledIn(I)Z
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/41C;->getMask()I
+
+    .line 1
+    .line 2
     .line 3
-    :try_start_0
-    sget v3, LX/41C;->A05:I
+    move-result v0
 
     .line 4
+    and-int/2addr p1, v0
+
     .line 5
-    const/4 v0, 0x5
+    invoke-static {p1}, LX/001;->A1K(I)Z
 
     .line 6
-    if-ge v3, v0, :cond_1
-
     .line 7
     .line 8
-    const/4 v2, 0x0
+    move-result v0
 
     .line 9
-    iput-object v2, p0, LX/41C;->A01:LX/42g;
+    return v0
+.end method
 
-    .line 10
-    .line 11
-    const-wide/16 v0, 0x0
+.method public getMask()I
+    .locals 2
 
-    .line 12
-    .line 13
-    iput-wide v0, p0, LX/41C;->A00:J
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    .line 14
-    .line 15
-    iput-object v2, p0, LX/41C;->A02:Ljava/io/IOException;
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
 
-    .line 16
-    .line 17
-    iput-object v2, p0, LX/41C;->A03:Ljava/lang/Integer;
+    .line 4
+    const/4 v0, 0x1
 
-    .line 18
-    .line 19
-    add-int/lit8 v0, v3, 0x1
+    .line 5
+    shl-int/2addr v0, v1
 
-    .line 20
-    .line 21
-    sput v0, LX/41C;->A05:I
-
-    .line 22
-    .line 23
-    sget-object v0, LX/41C;->A06:LX/41C;
-
-    .line 24
-    .line 25
-    if-eqz v0, :cond_0
-
-    .line 26
-    .line 27
-    iput-object v0, p0, LX/41C;->A04:LX/41C;
-
-    .line 28
-    .line 29
-    :cond_0
-    sput-object p0, LX/41C;->A06:LX/41C;
-
-    .line 30
-    .line 31
-    :cond_1
-    monitor-exit v4
-
-    .line 32
-    return-void
-
-    .line 33
-    :catchall_0
-    move-exception v0
-
-    .line 34
-    monitor-exit v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 35
-    throw v0
+    .line 6
+    return v0
 .end method

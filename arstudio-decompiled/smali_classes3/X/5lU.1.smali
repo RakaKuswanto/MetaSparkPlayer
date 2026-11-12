@@ -1,53 +1,63 @@
-.class public final LX/5lU;
+.class public abstract LX/5Lu;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/media/MediaRecorder$OnInfoListener;
-
-
-# instance fields
-.field public final synthetic A00:LX/5ky;
-
 
 # direct methods
-.method public constructor <init>(LX/5ky;)V
-    .locals 0
+.method public static A00(Landroid/content/Context;)LX/5Q4;
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/5lU;->A00:LX/5ky;
+    invoke-static {p0}, LX/5Lo;->A00(Landroid/content/Context;)LX/5Lo;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    move-result-object v0
+
     .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onInfo(Landroid/media/MediaRecorder;II)V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/5lU;->A00:LX/5ky;
-
-    .line 1
-    .line 2
-    iget-object v1, v0, LX/5ky;->A03:LX/5la;
-
-    .line 3
-    .line 4
-    const/4 v0, 0x0
+    if-nez v0, :cond_0
 
     .line 5
-    invoke-interface {v1, p1, p2, p3, v0}, LX/5la;->AZk(Landroid/media/MediaRecorder;IIZ)V
-
     .line 6
+    const-string p0, "ExoPlayerImpl"
+
     .line 7
     .line 8
-    return-void
+    const-string v0, "MediaMetricsService unavailable."
+
+    .line 9
+    .line 10
+    invoke-static {p0, v0}, LX/5DZ;->A04(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 11
+    .line 12
+    .line 13
+    sget-object p0, Landroid/media/metrics/LogSessionId;->LOG_SESSION_ID_NONE:Landroid/media/metrics/LogSessionId;
+
+    .line 14
+    .line 15
+    :goto_0
+    new-instance v0, LX/5Q4;
+
+    .line 16
+    .line 17
+    invoke-direct {v0, p0}, LX/5Q4;-><init>(Landroid/media/metrics/LogSessionId;)V
+
+    .line 18
+    .line 19
+    .line 20
+    return-object v0
+
+    .line 21
+    :cond_0
+    invoke-virtual {v0}, LX/5Lo;->A01()Landroid/media/metrics/LogSessionId;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object p0
+
+    .line 25
+    goto :goto_0
 .end method

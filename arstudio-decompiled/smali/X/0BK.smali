@@ -1,17 +1,8 @@
-.class public final LX/0BK;
-.super LX/0Sf;
+.class public interface abstract LX/0BK;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, LX/0Sf;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract Aik(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
 .end method

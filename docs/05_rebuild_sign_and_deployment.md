@@ -21,8 +21,8 @@ Dokumen ini menjelaskan prosedur lengkap kompilasi ulang kode Java loader, patch
 
 ```mermaid
 flowchart TD
-    JAVA_SRC["build_loader/src/.../ArfxLoader.java"] -->|"javac (android.jar + brotli-dec.jar)"| CLASS_FILES["build_loader/bin/*.class"]
-    CLASS_FILES -->|"d8.bat DEX compiler"| DEX_FILE["build_loader/dex_out/classes.dex"]
+    JAVA_SRC["build_loader/src/.../*.java\n(ArfxLoader, ArfxListState, ArfxListController)"] -->|"javac -source 8 -target 8"| CLASS_FILES["build_loader/bin/*.class"]
+    CLASS_FILES -->|"d8.bat --min-api 16"| DEX_FILE["build_loader/dex_out/classes.dex"]
     DEX_FILE -->|"jar & apktool decode"| SMALI_OUT["dummy_decoded/smali/"]
     SMALI_OUT -->|"Copy-Item"| SMALI_TARGET["arstudio-decompiled/smali_classes4/"]
     
@@ -51,15 +51,25 @@ Script tersebut secara otomatis:
 
 ## 4. Eksekusi Manual Langkah demi Langkah (PowerShell)
 
-### Langkah 1: Kompilasi Ulang `ArfxLoader.java` ke DEX
-Jika Anda mengubah logika pada [`build_loader/src/com/facebook/arstudio/player/ArfxLoader.java`](file:///d:/RAKA%20KUSWANTO/1.%20PROJECTS/OTHER/REVERSE%20ENGINEERING/MetaSparkStudio/build_loader/src/com/facebook/arstudio/player/ArfxLoader.java):
+### Langkah 0 (Opsional): Jalankan Unit Test `ArfxListStateTest`
+```powershell
+New-Item -ItemType Directory -Force "build_loader\test_bin" | Out-Null
+javac -source 8 -target 8 -d "build_loader\test_bin" "build_loader\src\com\facebook\arstudio\player\ArfxListState.java" "build_loader\test\com\facebook\arstudio\player\ArfxListStateTest.java"
+java -cp "build_loader\test_bin" com.facebook.arstudio.player.ArfxListStateTest
+```
+
+### Langkah 1: Kompilasi Ulang Seluruh Modul Java Player ke DEX
+Jika Anda mengubah logika pada folder [`build_loader/src/com/facebook/arstudio/player/`](file:///d:/RAKA%20KUSWANTO/1.%20PROJECTS/OTHER/REVERSE%20ENGINEERING/MetaSparkStudio/build_loader/src/com/facebook/arstudio/player/) (`ArfxLoader.java`, `ArfxListState.java`, `ArfxListController.java`):
+
+> [!NOTE]
+> Skrip [`build_loader/compile_loader.bat`](file:///d:/RAKA%20KUSWANTO/1.%20PROJECTS/OTHER/REVERSE%20ENGINEERING/MetaSparkStudio/build_loader/compile_loader.bat) saat ini masih hanya mengompilasi `ArfxLoader.java` tanpa flag `-source 8 -target 8`. Gunakan perintah PowerShell di bawah ini agar seluruh kelas list controller ikut masuk ke DEX (perhatikan JDK lokal memakai `-source 8 -target 8`, bukan `--source 8`).
 
 ```powershell
-# 1. Kompilasi Java source ke bytecode .class
-javac -cp "C:\Users\TOS-46\AppData\Local\Android\Sdk\platforms\android-34\android.jar;brotli-dec.jar" -d "build_loader\bin" "build_loader\src\com\facebook\arstudio\player\ArfxLoader.java"
+# 1. Kompilasi seluruh Java source (Java 8 bytecode) ke .class
+javac -source 8 -target 8 -cp "C:\Users\TOS-46\AppData\Local\Android\Sdk\platforms\android-34\android.jar;brotli-dec.jar" -d "build_loader\bin" (Get-ChildItem "build_loader\src\com\facebook\arstudio\player\*.java").FullName
 
-# 2. Kompilasi .class dan library Brotli ke classes.dex
-& "C:\Users\TOS-46\AppData\Local\Android\Sdk\build-tools\34.0.0\d8.bat" --lib "C:\Users\TOS-46\AppData\Local\Android\Sdk\platforms\android-34\android.jar" --output "build_loader\dex_out" (Get-ChildItem -Recurse "build_loader\bin" -Filter "*.class").FullName "brotli-dec.jar"
+# 2. Kompilasi .class dan library Brotli ke classes.dex (min-api 16)
+& "C:\Users\TOS-46\AppData\Local\Android\Sdk\build-tools\34.0.0\d8.bat" --min-api 16 --lib "C:\Users\TOS-46\AppData\Local\Android\Sdk\platforms\android-34\android.jar" --output "build_loader\dex_out" (Get-ChildItem -Recurse "build_loader\bin" -Filter "*.class").FullName "brotli-dec.jar"
 ```
 
 ### Langkah 2: Disassemble DEX ke Smali & Sisipkan ke Target
@@ -134,4 +144,15 @@ Pada Samsung One UI 6 (Android 14), fitur *Wireless Debugging* merotasi nomor po
    * Pastikan direktori `/storage/emulated/0/Android/data/com.facebook.arstudio.player/files/mirror/` telah dibuat:
      ```powershell
      adb shell mkdir -p /storage/emulated/0/Android/data/com.facebook.arstudio.player/files/mirror
+     ```
+
+4. **File di `Download/ARFX/` Hilang atau Gagal Dihapus (Android 14 FUSE):**  
+   * *Penyebab:* Pada Android 14, file eksternal non-aplikasi di `/sdcard/Download/ARFX/` disembunyikan oleh FUSE / ditolak oleh `File.delete()` saat izin `MANAGE_EXTERNAL_STORAGE` tidak aktif.  
+   * *Solusi:* Tekan **"Buka Pengaturan"** pada dialog `"Izin Akses File Diperlukan"` (atau aktifkan **Allow access to manage all files** / **Akses Semua File** di Info Aplikasi Android). Setelah kembali ke player, `ArfxListController.onResume` otomatis mencoba ulang penghapusan yang tertunda.
+
+5. **Error `adb: more than one device/emulator` saat Wireless Debugging:**  
+   * *Penyebab:* Perangkat yang sama sering terdaftar ganda (`192.168.x.x:<port>` dan `adb-..._adb-tls-connect._tcp`).  
+   * *Solusi:* Sertakan serial target secara eksplisit dengan `-s`, misalnya:
+     ```powershell
+     adb -s 192.168.1.32:<port> install -r arstudio-modded.apk
      ```

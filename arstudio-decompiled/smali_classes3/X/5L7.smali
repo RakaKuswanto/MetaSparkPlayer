@@ -1,76 +1,50 @@
-.class public final LX/5L7;
+.class public interface abstract LX/5L7;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/5LL;
+.implements LX/5K1;
 
 
-# instance fields
-.field public final A00:LX/5LM;
-
-.field public final A01:LX/5MC;
-
-.field public final A02:LX/5KN;
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    const-string v0, "WMFgUpdater"
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/5M2;->A01(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+# virtual methods
+.method public abstract A5k(JJ)Z
 .end method
 
-.method public constructor <init>(Landroidx/work/impl/WorkDatabase;LX/5LM;LX/5KN;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "workDatabase",
-            "foregroundProcessor",
-            "taskExecutor"
-        }
-    .end annotation
+.method public abstract A7W(JZ)V
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract AA5(LX/5L9;J)J
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p2, p0, LX/5L7;->A00:LX/5LM;
+.method public abstract ABN()J
+.end method
 
-    .line 4
-    .line 5
-    iput-object p3, p0, LX/5L7;->A02:LX/5KN;
+.method public abstract AHe()J
+.end method
 
-    .line 6
-    .line 7
-    invoke-virtual {p1}, Landroidx/work/impl/WorkDatabase;->A0C()LX/5MC;
+.method public abstract ALn()LX/5K3;
+.end method
 
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
+.method public abstract APO()Z
+.end method
 
-    .line 11
-    iput-object v0, p0, LX/5L7;->A01:LX/5MC;
+.method public abstract ARo()V
+.end method
 
-    .line 12
-    .line 13
-    return-void
+.method public abstract Aea(J)J
+.end method
+
+.method public abstract Aem(LX/5Ku;J)V
+.end method
+
+.method public abstract Ag1()J
+.end method
+
+.method public abstract AgS(J)V
+.end method
+
+.method public abstract AjD(JZ)J
+.end method
+
+.method public abstract AjF([LX/5LA;[LX/5Jt;[Z[ZJ)J
 .end method

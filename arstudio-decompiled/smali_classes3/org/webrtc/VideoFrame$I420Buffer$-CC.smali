@@ -1,4 +1,4 @@
-.class public final synthetic Lorg/webrtc/VideoFrame$I420Buffer$-CC;
+.class public abstract synthetic Lorg/webrtc/VideoFrame$I420Buffer$-CC;
 .super Ljava/lang/Object;
 .source ""
 

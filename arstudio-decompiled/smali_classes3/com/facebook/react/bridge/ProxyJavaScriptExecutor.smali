@@ -1,4 +1,4 @@
-.class public Lcom/facebook/react/bridge/ProxyJavaScriptExecutor;
+.class public abstract Lcom/facebook/react/bridge/ProxyJavaScriptExecutor;
 .super Lcom/facebook/react/bridge/JavaScriptExecutor;
 .source ""
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/5OU;->A00()V
+    invoke-static {}, LX/4rv;->A00()V
 
     .line 1
     .line 2

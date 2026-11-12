@@ -1,44 +1,14 @@
-.class public final LX/2xn;
+.class public interface abstract LX/2xN;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "GrootPlayerImpl$recreateSurface$1"
-
-
-# instance fields
-.field public final synthetic A00:LX/46p;
-
-
-# direct methods
-.method public constructor <init>(LX/46p;)V
-    .locals 0
-
-    iput-object p1, p0, LX/2xn;->A00:LX/46p;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public abstract Aof(Landroid/database/Cursor;)LX/2vo;
+.end method
 
-    .line 0
-    iget-object v0, p0, LX/2xn;->A00:LX/46p;
+.method public abstract Aog(Landroid/database/Cursor;LX/2wj;LX/2x2;)LX/2xA;
+.end method
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/46p;->Afr()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-void
+.method public abstract Aoh(Landroid/database/Cursor;LX/2x2;)LX/2xA;
 .end method

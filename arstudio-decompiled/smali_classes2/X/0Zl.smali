@@ -1,38 +1,37 @@
-.class public final LX/0Zl;
+.class public abstract LX/0ZL;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
+# static fields
+.field public static final A00:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "BatteryNotLowTracker"
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/0HY;->A00()Ljava/util/UUID;
+    invoke-static {v0}, LX/5kg;->A01(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 3
     .line 4
     .line 5
+    move-result-object v0
+
     .line 6
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 7
     .line 8
     .line 9
-    move-result-object v0
+    sput-object v0, LX/0ZL;->A00:Ljava/lang/String;
 
     .line 10
-    iput-object v0, p0, LX/0Zl;->A00:LX/1zG;
-
     .line 11
-    .line 12
     return-void
 .end method

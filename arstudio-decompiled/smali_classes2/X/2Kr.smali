@@ -1,35 +1,46 @@
-.class public interface abstract LX/2Kr;
-.super Ljava/lang/Object;
+.class public final LX/2KR;
+.super LX/26h;
 .source ""
 
 
-# virtual methods
-.method public abstract ABp()Ljava/util/List;
-.end method
+# instance fields
+.field public final A00:LX/0RP;
 
-.method public abstract AEt(I)Ljava/util/List;
-.end method
 
-.method public abstract AEu(I)LX/2Kr;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 2
 
-.method public abstract AEv(Ljava/lang/String;)I
-.end method
+    .line 0
+    invoke-direct {p0}, LX/26h;-><init>()V
 
-.method public abstract AEx(I)Ljava/lang/String;
-.end method
+    .line 1
+    .line 2
+    .line 3
+    sget v0, LX/2I6;->A2f:I
 
-.method public abstract AEy()I
-.end method
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
-.method public abstract AHd()LX/2Kf;
-.end method
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
 
-.method public abstract AM3()Ljava/lang/String;
-.end method
+    .line 9
+    new-instance v0, LX/2KS;
 
-.method public abstract AQf()Z
-.end method
+    .line 10
+    .line 11
+    invoke-direct {v0, p0, v1}, LX/2KS;-><init>(LX/2KR;LX/0RP;)V
 
-.method public abstract AR4()Z
+    .line 12
+    .line 13
+    .line 14
+    iput-object v0, p0, LX/2KR;->A00:LX/0RP;
+
+    .line 15
+    .line 16
+    return-void
 .end method

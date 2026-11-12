@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMessengerPlatformMediaTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMessengerPlatformMediaTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x9
+    const/16 v0, 0xa
 
     .line 1
     .line 2
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "MP4"
+    const-string v0, "LOTTIE"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "PNG"
+    const-string v0, "MP4"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "POST"
+    const-string v0, "PNG"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "WEBM"
+    const-string v0, "POST"
 
     .line 41
     .line 42
@@ -112,22 +112,36 @@
 
     .line 45
     .line 46
-    const-string v0, "WEBP"
+    const-string/jumbo v0, "WEBM"
 
     .line 47
     .line 48
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 49
+    aput-object v0, v2, v1
+
     .line 50
     .line 51
-    move-result-object v0
+    const/16 v1, 0x9
 
     .line 52
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerPlatformMediaTypeSet;->A00:Ljava/util/Set;
-
     .line 53
+    const-string/jumbo v0, "WEBP"
+
     .line 54
+    .line 55
+    .line 56
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v0
+
+    .line 60
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerPlatformMediaTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 61
+    .line 62
     return-void
 .end method
 
@@ -143,11 +157,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerPlatformMediaTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerPlatformMediaTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

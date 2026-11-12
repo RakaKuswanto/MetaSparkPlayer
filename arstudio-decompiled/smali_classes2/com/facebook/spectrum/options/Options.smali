@@ -57,7 +57,7 @@
     const/4 v3, 0x1
 
     .line 1
-    if-eq p0, p1, :cond_9
+    if-eq p0, p1, :cond_7
 
     .line 2
     .line 3
@@ -113,11 +113,11 @@
 
     .line 26
     :cond_2
-    iget-object v1, p0, Lcom/facebook/spectrum/options/Options;->transformations:Lcom/facebook/spectrum/options/Transformations;
+    iget-object v1, p0, Lcom/facebook/spectrum/options/Options;->metadata:Lcom/facebook/spectrum/image/ImageMetadata;
 
     .line 27
     .line 28
-    iget-object v0, p1, Lcom/facebook/spectrum/options/Options;->transformations:Lcom/facebook/spectrum/options/Transformations;
+    iget-object v0, p1, Lcom/facebook/spectrum/options/Options;->metadata:Lcom/facebook/spectrum/image/ImageMetadata;
 
     .line 29
     .line 30
@@ -149,11 +149,11 @@
 
     .line 42
     :cond_4
-    iget-object v1, p0, Lcom/facebook/spectrum/options/Options;->metadata:Lcom/facebook/spectrum/image/ImageMetadata;
+    iget-object v1, p0, Lcom/facebook/spectrum/options/Options;->configuration:Lcom/facebook/spectrum/Configuration;
 
     .line 43
     .line 44
-    iget-object v0, p1, Lcom/facebook/spectrum/options/Options;->metadata:Lcom/facebook/spectrum/image/ImageMetadata;
+    iget-object v0, p1, Lcom/facebook/spectrum/options/Options;->configuration:Lcom/facebook/spectrum/Configuration;
 
     .line 45
     .line 46
@@ -185,58 +185,22 @@
 
     .line 58
     :cond_6
-    iget-object v1, p0, Lcom/facebook/spectrum/options/Options;->configuration:Lcom/facebook/spectrum/Configuration;
+    iget-object v1, p0, Lcom/facebook/spectrum/options/Options;->outputPixelSpecification:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 59
     .line 60
-    iget-object v0, p1, Lcom/facebook/spectrum/options/Options;->configuration:Lcom/facebook/spectrum/Configuration;
+    iget-object v0, p1, Lcom/facebook/spectrum/options/Options;->outputPixelSpecification:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
     .line 61
     .line 62
-    if-eqz v1, :cond_7
+    if-eq v1, v0, :cond_7
 
     .line 63
     .line 64
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 65
-    .line 66
-    .line 67
-    move-result v0
-
-    .line 68
-    if-nez v0, :cond_8
-
-    .line 69
-    .line 70
-    return v2
-
-    .line 71
-    :cond_7
-    if-eqz v0, :cond_8
-
-    .line 72
-    .line 73
-    return v2
-
-    .line 74
-    :cond_8
-    iget-object v1, p0, Lcom/facebook/spectrum/options/Options;->outputPixelSpecification:Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
-    .line 75
-    .line 76
-    iget-object v0, p1, Lcom/facebook/spectrum/options/Options;->outputPixelSpecification:Lcom/facebook/spectrum/image/ImagePixelSpecification;
-
-    .line 77
-    .line 78
-    if-eq v1, v0, :cond_9
-
-    .line 79
-    .line 80
     const/4 v3, 0x0
 
-    .line 81
-    :cond_9
+    .line 65
+    :cond_7
     return v3
 .end method
 
@@ -249,134 +213,113 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
-
-    .line 268435456
-    const-string v0, "Options"
-
-    .line 268435457
-    .line 268435458
-    invoke-virtual {p0, v0}, Lcom/facebook/spectrum/options/Options;->toString(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 268435459
-    .line 268435460
-    .line 268435461
-    move-result-object v0
-
-    .line 268435462
-    return-object v0
-.end method
-
-.method public toString(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .line 0
-    invoke-static {p1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "Options"
 
     .line 1
     .line 2
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 3
+    .line 4
+    .line 5
     move-result-object v1
 
-    .line 4
+    .line 6
     const-string/jumbo v0, "{encodeRequirement="
 
-    .line 5
-    .line 6
     .line 7
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 8
     .line 9
-    .line 10
-    iget-object v0, p0, Lcom/facebook/spectrum/options/Options;->encodeRequirement:Lcom/facebook/spectrum/requirements/EncodeRequirement;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 10
     .line 11
     .line 12
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/facebook/spectrum/options/Options;->encodeRequirement:Lcom/facebook/spectrum/requirements/EncodeRequirement;
 
     .line 13
     .line 14
-    .line 15
-    const-string v0, ", transformations="
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
+    .line 15
     .line 16
     .line 17
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ", transformations="
 
     .line 18
     .line 19
-    .line 20
-    iget-object v0, p0, Lcom/facebook/spectrum/options/Options;->transformations:Lcom/facebook/spectrum/options/Transformations;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 20
     .line 21
     .line 22
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
     .line 23
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     .line 24
     .line 25
+    .line 26
     const-string v0, ", metadata="
 
-    .line 26
     .line 27
+    .line 28
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 28
     .line 29
     .line 30
+    .line 31
     iget-object v0, p0, Lcom/facebook/spectrum/options/Options;->metadata:Lcom/facebook/spectrum/image/ImageMetadata;
 
-    .line 31
     .line 32
+    .line 33
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 33
     .line 34
     .line 35
+    .line 36
     const-string v0, ", configuration="
 
-    .line 36
     .line 37
+    .line 38
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 38
     .line 39
     .line 40
+    .line 41
     iget-object v0, p0, Lcom/facebook/spectrum/options/Options;->configuration:Lcom/facebook/spectrum/Configuration;
 
-    .line 41
     .line 42
+    .line 43
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 43
     .line 44
     .line 45
+    .line 46
     const-string v0, ", outputPixelSpecification="
 
-    .line 46
     .line 47
+    .line 48
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 48
     .line 49
     .line 50
+    .line 51
     iget-object v0, p0, Lcom/facebook/spectrum/options/Options;->outputPixelSpecification:Lcom/facebook/spectrum/image/ImagePixelSpecification;
 
-    .line 51
     .line 52
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 53
+    invoke-static {v0, v1}, LX/0X1;->A0O(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 54
     .line 55
-    invoke-static {v1}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 56
-    .line 57
-    .line 58
     move-result-object v0
 
-    .line 59
+    .line 57
     return-object v0
 .end method

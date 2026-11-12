@@ -1,60 +1,38 @@
-.class public final LX/2It;
+.class public final LX/2iT;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:Z
+# instance fields
+.field public final A00:Landroid/net/Uri;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/net/Uri;)V
+    .locals 1
 
     .line 0
-    :try_start_0
-    const-string v0, "android.os.Build"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
     .line 3
+    const-string/jumbo v0, "metainfo"
+
     .line 4
     .line 5
-    move-result-object v0
-
     .line 6
-    goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1, v0}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     .line 7
-    :catchall_0
-    move-exception v1
-
     .line 8
-    new-instance v0, LX/0IW;
-
     .line 9
+    move-result-object v0
+
     .line 10
-    invoke-direct {v0, v1}, LX/0IW;-><init>(Ljava/lang/Throwable;)V
+    iput-object v0, p0, LX/2iT;->A00:Landroid/net/Uri;
 
     .line 11
     .line 12
-    .line 13
-    :goto_0
-    instance-of v0, v0, LX/0IW;
-
-    .line 14
-    .line 15
-    xor-int/lit8 v0, v0, 0x1
-
-    .line 16
-    .line 17
-    sput-boolean v0, LX/2It;->A00:Z
-
-    .line 18
-    .line 19
     return-void
 .end method

@@ -4,17 +4,17 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/1SE;
+.implements LX/1es;
 
 
 # static fields
-.field public static final A0E:LX/1J7;
+.field public static final A0E:LX/1kJ;
 
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
 
 # instance fields
-.field public A00:LX/1J7;
+.field public A00:LX/1kJ;
 
 .field public A01:Lcom/facebook/payments/p2p/model/Amount;
 
@@ -22,13 +22,13 @@
 
 .field public A03:Lcom/facebook/payments/p2p/model/CommerceOrder;
 
-.field public A04:LX/0re;
+.field public A04:LX/1BQ;
 
 .field public A05:Lcom/facebook/payments/p2p/model/Receiver;
 
 .field public A06:Lcom/facebook/payments/p2p/model/Sender;
 
-.field public A07:LX/6E3;
+.field public A07:LX/6T1;
 
 .field public A08:Ljava/lang/String;
 
@@ -48,7 +48,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/1iv;->A00()Lcom/facebook/graphservice/factory/GraphQLServiceFactory;
+    invoke-static {}, LX/1nv;->A00()Lcom/facebook/graphservice/factory/GraphQLServiceFactory;
 
     .line 1
     .line 2
@@ -56,7 +56,7 @@
     move-result-object v3
 
     .line 4
-    const-class v1, LX/1JI;
+    const-class v1, LX/1hB;
 
     .line 5
     .line 6
@@ -69,7 +69,7 @@
     .line 9
     .line 10
     .line 11
-    invoke-virtual {v3, v0, v1, v2}, Lcom/facebook/graphservice/factory/GraphQLServiceFactory;->newTreeBuilder(Ljava/lang/String;Ljava/lang/Class;I)LX/19O;
+    invoke-virtual {v3, v0, v1, v2}, Lcom/facebook/graphservice/factory/GraphQLServiceFactory;->newTreeBuilder(Ljava/lang/String;Ljava/lang/Class;I)LX/1gF;
 
     .line 12
     .line 13
@@ -81,7 +81,7 @@
 
     .line 16
     .line 17
-    const-class v0, LX/1J7;
+    const-class v0, LX/1kJ;
 
     .line 18
     .line 19
@@ -93,19 +93,19 @@
     move-result-object v0
 
     .line 23
-    check-cast v0, LX/1J7;
+    check-cast v0, LX/1kJ;
 
     .line 24
     .line 25
-    sput-object v0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0E:LX/1J7;
+    sput-object v0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0E:LX/1kJ;
 
     .line 26
     .line 27
-    const/16 v0, 0x52
+    const/16 v0, 0x2a
 
     .line 28
     .line 29
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 30
     .line 31
@@ -136,7 +136,7 @@
 
     .line 268435461
     .line 268435462
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/0re;
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/1BQ;
 
     .line 268435463
     .line 268435464
@@ -152,7 +152,7 @@
 
     .line 268435469
     .line 268435470
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6E3;
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6T1;
 
     .line 268435471
     .line 268435472
@@ -172,7 +172,7 @@
 
     .line 268435479
     .line 268435480
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1J7;
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1kJ;
 
     .line 268435481
     .line 268435482
@@ -215,11 +215,11 @@
 
     .line 8
     .line 9
-    const-class v1, LX/0re;
+    const-class v0, LX/1BQ;
 
     .line 10
     .line 11
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-static {p1, v0}, LX/1PJ;->A01(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/lang/Enum;
 
     .line 12
     .line 13
@@ -227,233 +227,213 @@
     move-result-object v0
 
     .line 15
-    if-nez v0, :cond_0
+    check-cast v0, LX/1BQ;
 
     .line 16
     .line 17
-    const/4 v0, 0x0
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/1BQ;
 
     .line 18
-    :goto_0
-    check-cast v0, LX/0re;
-
     .line 19
-    .line 20
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/0re;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
+    .line 20
     .line 21
     .line 22
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result-object v0
 
     .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A09:Ljava/lang/String;
 
-    .line 27
-    .line 28
+    .line 24
+    .line 25
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
     .line 29
+    check-cast v0, LX/6T1;
+
     .line 30
     .line 31
-    move-result-object v0
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6T1;
 
     .line 32
-    check-cast v0, LX/6E3;
-
     .line 33
-    .line 34
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6E3;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
+    .line 34
     .line 35
     .line 36
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result-object v0
 
     .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0B:Ljava/lang/String;
 
-    .line 41
-    .line 42
+    .line 38
+    .line 39
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 43
-    .line 44
-    .line 45
+    .line 40
+    .line 41
+    .line 42
     move-result-object v0
 
-    .line 46
+    .line 43
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A08:Ljava/lang/String;
 
-    .line 47
-    .line 48
+    .line 44
+    .line 45
     const-class v0, Lcom/facebook/payments/p2p/model/Sender;
 
+    .line 46
+    .line 47
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 48
     .line 49
     .line 50
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    move-result-object v0
 
     .line 51
-    .line 52
-    .line 53
-    move-result-object v0
-
-    .line 54
     check-cast v0, Lcom/facebook/payments/p2p/model/Sender;
 
-    .line 55
-    .line 56
+    .line 52
+    .line 53
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A06:Lcom/facebook/payments/p2p/model/Sender;
 
-    .line 57
-    .line 58
+    .line 54
+    .line 55
     const-class v0, Lcom/facebook/payments/p2p/model/Receiver;
 
+    .line 56
+    .line 57
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 58
     .line 59
     .line 60
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    move-result-object v0
 
     .line 61
-    .line 62
-    .line 63
-    move-result-object v0
-
-    .line 64
     check-cast v0, Lcom/facebook/payments/p2p/model/Receiver;
 
-    .line 65
-    .line 66
+    .line 62
+    .line 63
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A05:Lcom/facebook/payments/p2p/model/Receiver;
 
-    .line 67
-    .line 68
+    .line 64
+    .line 65
     const-class v1, Lcom/facebook/payments/p2p/model/Amount;
 
+    .line 66
+    .line 67
+    invoke-static {p1, v1}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 68
     .line 69
     .line 70
-    invoke-static {p1, v1}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    move-result-object v0
 
     .line 71
+    check-cast v0, Lcom/facebook/payments/p2p/model/Amount;
+
     .line 72
     .line 73
-    move-result-object v0
-
-    .line 74
-    check-cast v0, Lcom/facebook/payments/p2p/model/Amount;
-
-    .line 75
-    .line 76
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A01:Lcom/facebook/payments/p2p/model/Amount;
 
+    .line 74
+    .line 75
+    invoke-static {p1, v1}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 76
     .line 77
     .line 78
-    invoke-static {p1, v1}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    move-result-object v0
 
     .line 79
-    .line 80
-    .line 81
-    move-result-object v0
-
-    .line 82
     check-cast v0, Lcom/facebook/payments/p2p/model/Amount;
 
-    .line 83
-    .line 84
+    .line 80
+    .line 81
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A02:Lcom/facebook/payments/p2p/model/Amount;
 
+    .line 82
+    .line 83
+    invoke-static {p1}, LX/1cw;->A00(Landroid/os/Parcel;)Lcom/facebook/graphservice/interfaces/Tree;
+
+    .line 84
     .line 85
     .line 86
-    invoke-static {p1}, LX/1KF;->A00(Landroid/os/Parcel;)Lcom/facebook/graphservice/interfaces/Tree;
-
-    .line 87
-    .line 88
-    .line 89
     move-result-object v0
 
+    .line 87
+    check-cast v0, LX/1kJ;
+
+    .line 88
+    .line 89
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1kJ;
+
     .line 90
-    check-cast v0, LX/1J7;
-
     .line 91
-    .line 92
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1J7;
+    invoke-static {p1}, LX/1cw;->A00(Landroid/os/Parcel;)Lcom/facebook/graphservice/interfaces/Tree;
 
+    .line 92
     .line 93
     .line 94
-    invoke-static {p1}, LX/1KF;->A00(Landroid/os/Parcel;)Lcom/facebook/graphservice/interfaces/Tree;
+    const-class v0, Lcom/facebook/payments/p2p/model/CommerceOrder;
 
     .line 95
     .line 96
-    .line 97
-    const-class v0, Lcom/facebook/payments/p2p/model/CommerceOrder;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
+    .line 97
     .line 98
     .line 99
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    move-result-object v0
 
     .line 100
-    .line 101
-    .line 102
-    move-result-object v0
-
-    .line 103
     check-cast v0, Lcom/facebook/payments/p2p/model/CommerceOrder;
 
-    .line 104
-    .line 105
+    .line 101
+    .line 102
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A03:Lcom/facebook/payments/p2p/model/CommerceOrder;
 
-    .line 106
-    .line 107
+    .line 103
+    .line 104
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 108
-    .line 109
-    .line 110
+    .line 105
+    .line 106
+    .line 107
     move-result-object v0
 
-    .line 111
+    .line 108
     iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0A:Ljava/lang/String;
 
+    .line 109
+    .line 110
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
+
+    .line 111
     .line 112
     .line 113
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
-    .line 114
-    .line 115
-    .line 116
     move-result v0
 
-    .line 117
+    .line 114
     iput-boolean v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0C:Z
 
-    .line 118
-    .line 119
+    .line 115
+    .line 116
     invoke-direct {p0}, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00()V
 
-    .line 120
-    .line 121
-    .line 122
+    .line 117
+    .line 118
+    .line 119
     return-void
-
-    .line 123
-    :cond_0
-    invoke-static {v1, v0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 124
-    .line 125
-    .line 126
-    move-result-object v0
-
-    .line 127
-    goto :goto_0
 .end method
 
 .method private final A00()V
@@ -481,7 +461,7 @@
     .line 9
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/0re;
+    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/1BQ;
 
     .line 12
     .line 13
@@ -489,12 +469,12 @@
 
     .line 14
     .line 15
-    sget-object v0, LX/0re;->UNKNOWN:LX/0re;
+    sget-object v0, LX/1BQ;->UNKNOWN:LX/1BQ;
 
     .line 16
     .line 17
     :cond_0
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/0re;
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/1BQ;
 
     .line 18
     .line 19
@@ -584,7 +564,7 @@
 
     .line 57
     .line 58
-    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6E3;
+    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6T1;
 
     .line 59
     .line 60
@@ -592,12 +572,12 @@
 
     .line 61
     .line 62
-    sget-object v0, LX/6E3;->UNKNOWN_STATUS:LX/6E3;
+    sget-object v0, LX/6T1;->UNKNOWN_STATUS:LX/6T1;
 
     .line 63
     .line 64
     :cond_6
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6E3;
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6T1;
 
     .line 65
     .line 66
@@ -635,7 +615,7 @@
 
     .line 81
     .line 82
-    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1J7;
+    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1kJ;
 
     .line 83
     .line 84
@@ -643,12 +623,12 @@
 
     .line 85
     .line 86
-    sget-object v0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0E:LX/1J7;
+    sget-object v0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0E:LX/1kJ;
 
     .line 87
     .line 88
     :cond_9
-    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1J7;
+    iput-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1kJ;
 
     .line 89
     .line 90
@@ -657,7 +637,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic Ag8()Ljava/lang/Object;
+.method public final bridge synthetic AeW()Ljava/lang/Object;
     .locals 0
 
     .line 0
@@ -703,7 +683,7 @@
     .line 10
     .line 11
     .line 12
-    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/0re;
+    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/1BQ;
 
     .line 13
     .line 14
@@ -749,158 +729,163 @@
 
     .line 37
     .line 38
-    const-string v0, "creation_time"
+    const-string/jumbo v0, "creation_time"
 
     .line 39
     .line 40
+    .line 41
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 41
     .line 42
     .line 43
-    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6E3;
-
     .line 44
+    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6T1;
+
     .line 45
+    .line 46
     const-string/jumbo v0, "transfer_status"
 
-    .line 46
     .line 47
     .line 48
+    .line 49
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
-    .line 49
     .line 50
     .line 51
+    .line 52
     iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A08:Ljava/lang/String;
 
-    .line 52
     .line 53
-    const-string v0, "completed_time"
-
     .line 54
-    .line 55
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "completed_time"
 
+    .line 55
     .line 56
     .line 57
-    .line 58
-    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0B:Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 58
     .line 59
     .line 60
-    const-string/jumbo v0, "updated_time"
+    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0B:Ljava/lang/String;
 
     .line 61
     .line 62
-    .line 63
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "updated_time"
 
+    .line 63
     .line 64
     .line 65
-    .line 66
-    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A01:Lcom/facebook/payments/p2p/model/Amount;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 66
     .line 67
     .line 68
-    const-string v0, "amount"
+    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A01:Lcom/facebook/payments/p2p/model/Amount;
 
     .line 69
     .line 70
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string/jumbo v0, "amount"
 
     .line 71
     .line 72
     .line 73
-    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A02:Lcom/facebook/payments/p2p/model/Amount;
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 74
     .line 75
-    const-string v0, "amount_fb_discount"
-
     .line 76
-    .line 77
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A02:Lcom/facebook/payments/p2p/model/Amount;
 
+    .line 77
     .line 78
+    const-string/jumbo v0, "amount_fb_discount"
+
     .line 79
     .line 80
-    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1J7;
-
     .line 81
-    .line 82
-    const-string/jumbo v0, "transfer_context"
-
-    .line 83
-    .line 84
-    .line 85
     invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 82
+    .line 83
+    .line 84
+    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1kJ;
+
+    .line 85
     .line 86
+    const-string/jumbo v0, "transfer_context"
+
     .line 87
     .line 88
-    const/4 v1, 0x0
-
     .line 89
-    const-string/jumbo v0, "platform_item"
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 90
     .line 91
     .line 92
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const/4 v1, 0x0
 
     .line 93
+    const-string/jumbo v0, "platform_item"
+
     .line 94
     .line 95
-    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A03:Lcom/facebook/payments/p2p/model/CommerceOrder;
-
     .line 96
-    .line 97
-    const-string v0, "commerce_order"
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 97
     .line 98
     .line 99
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A03:Lcom/facebook/payments/p2p/model/CommerceOrder;
 
     .line 100
     .line 101
-    .line 102
-    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0A:Ljava/lang/String;
+    const-string/jumbo v0, "commerce_order"
 
+    .line 102
     .line 103
     .line 104
-    const-string/jumbo v0, "order_id"
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 105
     .line 106
     .line 107
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-object v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0A:Ljava/lang/String;
 
     .line 108
     .line 109
-    .line 110
-    iget-boolean v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0C:Z
+    const-string/jumbo v0, "order_id"
 
+    .line 110
     .line 111
     .line 112
-    const-string/jumbo v0, "native_receipt_enabled"
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 113
     .line 114
     .line 115
-    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    iget-boolean v1, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A0C:Z
 
     .line 116
     .line 117
-    .line 118
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string/jumbo v0, "native_receipt_enabled"
 
+    .line 118
     .line 119
     .line 120
+    invoke-virtual {v2, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
     .line 121
+    .line 122
+    .line 123
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 124
+    .line 125
+    .line 126
     move-result-object v0
 
-    .line 122
+    .line 127
     return-object v0
 .end method
 
@@ -917,11 +902,11 @@
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/0re;
+    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A04:LX/1BQ;
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/15E;->A01(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/1PJ;->A03(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 8
     .line 9
@@ -935,7 +920,7 @@
     .line 13
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6E3;
+    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A07:LX/6T1;
 
     .line 16
     .line 17
@@ -998,11 +983,11 @@
     .line 48
     .line 49
     .line 50
-    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1J7;
+    iget-object v0, p0, Lcom/facebook/payments/p2p/model/PaymentTransaction;->A00:LX/1kJ;
 
     .line 51
     .line 52
-    invoke-static {p1, v0}, LX/1KF;->A04(Landroid/os/Parcel;LX/0yO;)V
+    invoke-static {p1, v0}, LX/1cw;->A05(Landroid/os/Parcel;LX/1H2;)V
 
     .line 53
     .line 54

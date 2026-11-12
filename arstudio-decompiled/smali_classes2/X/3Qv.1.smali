@@ -1,324 +1,88 @@
-.class public final enum LX/3Qv;
-.super Ljava/lang/Enum;
+.class public final LX/3Qv;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3R2;
 
-# static fields
-.field public static final synthetic $VALUES:[LX/3Qv;
 
-.field public static final enum APPLICATION_LOADED_HIGH_PRIORITY:LX/3Qv;
-
-.field public static final enum APPLICATION_LOADED_UI_IDLE:LX/3Qv;
-
-.field public static final enum APPLICATION_LOADED_UI_IDLE_HIGH_PRIORITY:LX/3Qv;
-
-.field public static final enum APPLICATION_LOADED_UI_IDLE_LOW_PRIORITY:LX/3Qv;
-
-.field public static final enum APPLICATION_LOADING:LX/3Qv;
-
-.field public static final enum STARTUP_INITIALIZATION:LX/3Qv;
+# instance fields
+.field public final A00:LX/3Qt;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 13
-
-    .line 0
-    const-string v0, "STARTUP_INITIALIZATION"
-
-    .line 1
-    .line 2
-    const/4 v12, 0x0
-
-    .line 3
-    new-instance v11, LX/3Qv;
-
-    .line 4
-    .line 5
-    invoke-direct {v11, v0, v12}, LX/3Qv;-><init>(Ljava/lang/String;I)V
-
-    .line 6
-    .line 7
-    .line 8
-    sput-object v11, LX/3Qv;->STARTUP_INITIALIZATION:LX/3Qv;
-
-    .line 9
-    .line 10
-    const-string v0, "APPLICATION_LOADING"
-
-    .line 11
-    .line 12
-    const/4 v10, 0x1
-
-    .line 13
-    new-instance v9, LX/3Qv;
-
-    .line 14
-    .line 15
-    invoke-direct {v9, v0, v10}, LX/3Qv;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v9, LX/3Qv;->APPLICATION_LOADING:LX/3Qv;
-
-    .line 19
-    .line 20
-    const-string v0, "APPLICATION_LOADED_HIGH_PRIORITY"
-
-    .line 21
-    .line 22
-    const/4 v8, 0x2
-
-    .line 23
-    new-instance v7, LX/3Qv;
-
-    .line 24
-    .line 25
-    invoke-direct {v7, v0, v8}, LX/3Qv;-><init>(Ljava/lang/String;I)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v7, LX/3Qv;->APPLICATION_LOADED_HIGH_PRIORITY:LX/3Qv;
-
-    .line 29
-    .line 30
-    const-string v0, "APPLICATION_LOADED_UI_IDLE_HIGH_PRIORITY"
-
-    .line 31
-    .line 32
-    const/4 v6, 0x3
-
-    .line 33
-    new-instance v5, LX/3Qv;
-
-    .line 34
-    .line 35
-    invoke-direct {v5, v0, v6}, LX/3Qv;-><init>(Ljava/lang/String;I)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v5, LX/3Qv;->APPLICATION_LOADED_UI_IDLE_HIGH_PRIORITY:LX/3Qv;
-
-    .line 39
-    .line 40
-    const-string v0, "APPLICATION_LOADED_UI_IDLE"
-
-    .line 41
-    .line 42
-    const/4 v4, 0x4
-
-    .line 43
-    new-instance v3, LX/3Qv;
-
-    .line 44
-    .line 45
-    invoke-direct {v3, v0, v4}, LX/3Qv;-><init>(Ljava/lang/String;I)V
-
-    .line 46
-    .line 47
-    .line 48
-    sput-object v3, LX/3Qv;->APPLICATION_LOADED_UI_IDLE:LX/3Qv;
-
-    .line 49
-    .line 50
-    const-string v0, "APPLICATION_LOADED_UI_IDLE_LOW_PRIORITY"
-
-    .line 51
-    .line 52
-    const/4 v2, 0x5
-
-    .line 53
-    new-instance v1, LX/3Qv;
-
-    .line 54
-    .line 55
-    invoke-direct {v1, v0, v2}, LX/3Qv;-><init>(Ljava/lang/String;I)V
-
-    .line 56
-    .line 57
-    .line 58
-    sput-object v1, LX/3Qv;->APPLICATION_LOADED_UI_IDLE_LOW_PRIORITY:LX/3Qv;
-
-    .line 59
-    .line 60
-    const/4 v0, 0x6
-
-    .line 61
-    new-array v0, v0, [LX/3Qv;
-
-    .line 62
-    .line 63
-    aput-object v11, v0, v12
-
-    .line 64
-    .line 65
-    aput-object v9, v0, v10
-
-    .line 66
-    .line 67
-    aput-object v7, v0, v8
-
-    .line 68
-    .line 69
-    aput-object v5, v0, v6
-
-    .line 70
-    .line 71
-    aput-object v3, v0, v4
-
-    .line 72
-    .line 73
-    aput-object v1, v0, v2
-
-    .line 74
-    .line 75
-    sput-object v0, LX/3Qv;->$VALUES:[LX/3Qv;
-
-    .line 76
-    .line 77
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(LX/3Qt;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/3Qv;->A00:LX/3Qt;
+
+    .line 4
+    .line 5
     return-void
-.end method
-
-.method public static fromIndex(I)LX/3Qv;
-    .locals 2
-
-    .line 0
-    invoke-static {}, LX/3Qv;->values()[LX/3Qv;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    if-ltz p0, :cond_0
-
-    .line 5
-    .line 6
-    array-length v0, v1
-
-    .line 7
-    if-ge p0, v0, :cond_0
-
-    .line 8
-    .line 9
-    aget-object v0, v1, p0
-
-    .line 10
-    .line 11
-    return-object v0
-
-    .line 12
-    :cond_0
-    sget-object v0, LX/3Qv;->APPLICATION_LOADED_UI_IDLE:LX/3Qv;
-
-    .line 13
-    .line 14
-    return-object v0
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/3Qv;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/3Qv;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/3Qv;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/3Qv;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/3Qv;->$VALUES:[LX/3Qv;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/3Qv;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public isIdlePriority()Z
-    .locals 3
+.method public final ASU(LX/3Qx;LX/3R1;)V
+    .locals 2
 
     .line 0
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    move-result v2
+    iget-object v1, p0, LX/3Qv;->A00:LX/3Qt;
 
     .line 4
-    const/4 v1, 0x1
-
     .line 5
-    const/4 v0, 0x4
+    invoke-virtual {p1}, LX/3Qx;->A00()LX/3R3;
 
     .line 6
-    if-eq v2, v0, :cond_0
-
     .line 7
     .line 8
-    const/4 v0, 0x5
+    move-result-object v0
 
     .line 9
-    if-eq v2, v0, :cond_0
+    invoke-virtual {v1, v0, p2}, LX/3Qt;->A01(LX/3R3;LX/3R1;)V
 
     .line 10
     .line 11
-    const/4 v0, 0x3
-
     .line 12
-    if-eq v2, v0, :cond_0
+    return-void
+.end method
 
-    .line 13
-    .line 14
-    const/4 v1, 0x0
+.method public final ASY(LX/3Qz;LX/3Qx;)V
+    .locals 2
 
-    .line 15
-    :cond_0
-    return v1
+    .line 0
+    invoke-static {p2, p1}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/3Qv;->A00:LX/3Qt;
+
+    .line 4
+    .line 5
+    invoke-virtual {p2}, LX/3Qx;->A00()LX/3R3;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    invoke-virtual {v1, p1, v0}, LX/3Qt;->A00(LX/3Qz;LX/3R3;)V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
 .end method

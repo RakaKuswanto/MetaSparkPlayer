@@ -12,7 +12,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0Ye;->A0d()Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {}, LX/0X2;->A0r()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 1
     .line 2

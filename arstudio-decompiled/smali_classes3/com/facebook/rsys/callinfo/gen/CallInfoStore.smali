@@ -5,20 +5,23 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method
 
 
 # virtual methods
-.method public abstract readCallInfo(Ljava/lang/String;Lcom/facebook/rsys/callinfo/gen/CallInfoReadCallback;)V
+.method public abstract readCallInfo(Ljava/lang/String;ZLcom/facebook/rsys/callinfo/gen/CallInfoReadCallback;)V
 .end method
 
 .method public abstract readUserProfiles(Ljava/util/ArrayList;Ljava/lang/String;Lcom/facebook/rsys/callinfo/gen/UserProfilesReadCallback;)V

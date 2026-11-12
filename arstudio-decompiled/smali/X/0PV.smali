@@ -1,427 +1,785 @@
 .class public final LX/0PV;
-.super Ljava/lang/Object;
+.super Lcom/facebook/quicklog/MarkerEditor;
 .source ""
+
+# interfaces
+.implements Lcom/facebook/quicklog/PointEditor;
+
+
+# instance fields
+.field public final A00:I
+
+.field public final A01:I
+
+.field public final A02:Ljava/util/ArrayList;
+
+.field public final A03:LX/0PR;
 
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public constructor <init>(LX/0PR;II)V
     .locals 1
 
-    const/16 v0, 0x1d
+    .line 0
+    invoke-direct {p0}, Lcom/facebook/quicklog/MarkerEditor;-><init>()V
 
-    if-eq p0, v0, :cond_7
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
-    const/16 v0, 0x1e
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
 
-    if-eq p0, v0, :cond_6
+    .line 7
+    iput-object v0, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    const/16 v0, 0x25
+    .line 8
+    .line 9
+    iput-object p1, p0, LX/0PV;->A03:LX/0PR;
 
-    if-eq p0, v0, :cond_5
+    .line 10
+    .line 11
+    iput p2, p0, LX/0PV;->A01:I
 
-    const/16 v0, 0x26
+    .line 12
+    .line 13
+    iput p3, p0, LX/0PV;->A00:I
 
-    if-eq p0, v0, :cond_4
+    .line 14
+    .line 15
+    return-void
+.end method
 
-    const/16 v0, 0x3a
+.method public static A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
+    .locals 6
 
-    if-eq p0, v0, :cond_3
+    .line 0
+    const-wide/16 v4, 0x0
 
-    const/16 v0, 0x3b
+    .line 1
+    .line 2
+    new-instance v0, LX/0QJ;
 
-    if-eq p0, v0, :cond_2
+    .line 3
+    .line 4
+    move-object v1, p0
 
-    const/16 v0, 0x3d
+    .line 5
+    move-object v2, p1
 
-    if-eq p0, v0, :cond_1
+    .line 6
+    move v3, p3
 
-    const/16 v0, 0x3e
+    .line 7
+    invoke-direct/range {v0 .. v5}, LX/0QJ;-><init>(Ljava/lang/Object;Ljava/lang/String;IJ)V
 
-    if-eq p0, v0, :cond_0
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {p2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    packed-switch p0, :pswitch_data_0
+    .line 11
+    .line 12
+    .line 13
+    return-void
+.end method
 
-    sparse-switch p0, :sswitch_data_0
 
-    packed-switch p0, :pswitch_data_1
+# virtual methods
+.method public final addPointData(Ljava/lang/String;D)Lcom/facebook/quicklog/PointEditor;
+    .locals 3
 
-    packed-switch p0, :pswitch_data_2
+    .line 57436
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    packed-switch p0, :pswitch_data_3
+    invoke-static {p2, p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    const-string v0, "UNDEFINED_QPL_EVENT"
+    move-result-object v1
 
-    return-object v0
+    const/16 v0, 0x15
 
-    :pswitch_0
-    const-string v0, "NOTIFICATIONS_NOTIFICATION_TAPPED_ANDROID"
+    .line 57437
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57438
+    return-object p0
+.end method
 
-    :pswitch_1
-    const-string v0, "NOTIFICATIONS_NOTIFICATION_TAPPED"
+.method public final addPointData(Ljava/lang/String;F)Lcom/facebook/quicklog/PointEditor;
+    .locals 3
 
-    return-object v0
+    .line 57463
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :pswitch_2
-    const-string v0, "NOTIFICATIONS_FBLITE_PUSH_NTA"
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    return-object v0
+    move-result-object v1
 
-    :pswitch_3
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_REALTIME_EVENT_RECEIVED"
+    const/16 v0, 0x14
 
-    return-object v0
+    .line 57464
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :pswitch_4
-    const-string v0, "NOTIFICATIONS_TIME_TILL_TRACE"
+    .line 57465
+    return-object p0
+.end method
 
-    return-object v0
+.method public final addPointData(Ljava/lang/String;I)Lcom/facebook/quicklog/PointEditor;
+    .locals 3
 
-    :pswitch_5
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_TAB_TTRC"
+    .line 57460
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :pswitch_6
-    const-string v0, "NOTIFICATIONS_TIME_TILL_BADGE"
+    move-result-object v1
 
-    return-object v0
+    const/16 v0, 0x12
 
-    :pswitch_7
-    const-string v0, "NOTIFICATIONS_PREINIT_NOTIFICATIONS_TAB"
+    .line 57461
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57462
+    return-object p0
+.end method
 
-    :pswitch_8
-    const-string v0, "NOTIFICATIONS_PERMALINK_IN_APP_NOTIFICATION_HEAD_LOAD"
+.method public final addPointData(Ljava/lang/String;J)Lcom/facebook/quicklog/PointEditor;
+    .locals 3
 
-    return-object v0
+    .line 57439
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :pswitch_9
-    const-string v0, "NOTIFICATIONS_PERMALINK_NOTIFICATION_HEAD_LOAD"
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object v0
+    move-result-object v1
 
-    :pswitch_a
-    const-string v0, "NOTIFICATIONS_NOTIFICATION_HEAD_LOAD"
+    const/16 v0, 0x13
 
-    return-object v0
+    .line 57440
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :pswitch_b
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_TAIL_LOAD_TTI"
+    .line 57441
+    return-object p0
+.end method
 
-    return-object v0
+.method public final addPointData(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/PointEditor;
+    .locals 2
 
-    :pswitch_c
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_PTR_TTI"
+    .line 57475
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    const/16 v0, 0x11
 
-    :pswitch_d
-    const-string v0, "NOTIFICATIONS_MQTT_WAKE_UP"
+    .line 57476
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57477
+    return-object p0
+.end method
 
-    :pswitch_e
-    const-string v0, "NOTIFICATIONS_NOTIFICATION_HANDLER"
+.method public final addPointData(Ljava/lang/String;Z)Lcom/facebook/quicklog/PointEditor;
+    .locals 3
 
-    return-object v0
+    .line 57466
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :pswitch_f
-    const-string v0, "NOTIFICATIONS_PERMALINK_REDIRECT_FALLBACK_URL"
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    return-object v0
+    move-result-object v1
 
-    :pswitch_10
-    const-string v0, "NOTIFICATIONS_NOTIFICATION_SYNC_ERROR"
+    const/16 v0, 0x16
 
-    return-object v0
+    .line 57467
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :pswitch_11
-    const-string v0, "NOTIFICATIONS_OPEN_NOTIFICATION_TAB_TTI"
+    .line 57468
+    return-object p0
+.end method
 
-    return-object v0
+.method public final addPointData(Ljava/lang/String;[D)Lcom/facebook/quicklog/PointEditor;
+    .locals 2
 
-    :sswitch_0
-    const-string v0, "NOTIFICATIONS_PERMALINK_PUSH_REDIRECT_LOGGER"
+    .line 57478
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    const/16 v0, 0x1b
 
-    :sswitch_1
-    const-string v0, "NOTIFICATIONS_PUSH_NOTIF_RENDER"
+    .line 57479
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57480
+    return-object p0
+.end method
 
-    :sswitch_2
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_SURFACE_TAILLOAD"
+.method public final addPointData(Ljava/lang/String;[F)Lcom/facebook/quicklog/PointEditor;
+    .locals 2
 
-    return-object v0
+    .line 57481
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :sswitch_3
-    const-string v0, "NOTIFICATIONS_TIME_TO_GET_INTENT_TARGET"
+    const/16 v0, 0x1a
 
-    return-object v0
+    .line 57482
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :sswitch_4
-    const-string v0, "NOTIFICATIONS_JEWEL_NAVIGATION"
+    .line 57483
+    return-object p0
+.end method
 
-    return-object v0
+.method public final addPointData(Ljava/lang/String;[I)Lcom/facebook/quicklog/PointEditor;
+    .locals 2
 
-    :sswitch_5
-    const-string v0, "NOTIFICATIONS_MINI_FEED_TTRC"
+    .line 57484
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    const/16 v0, 0x17
 
-    :sswitch_6
-    const-string v0, "NOTIFICATIONS_TOP_UPDATES_WIDGET_LOAD"
+    .line 57485
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57486
+    return-object p0
+.end method
 
-    :sswitch_7
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_TAB_RENDERED"
+.method public final addPointData(Ljava/lang/String;[J)Lcom/facebook/quicklog/PointEditor;
+    .locals 2
 
-    return-object v0
+    .line 57487
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :sswitch_8
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_RESPONSE_RETRY"
+    const/16 v0, 0x19
 
-    return-object v0
+    .line 57488
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :sswitch_9
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_JEWEL_RENDERED"
+    .line 57489
+    return-object p0
+.end method
 
-    return-object v0
+.method public final addPointData(Ljava/lang/String;[Ljava/lang/String;)Lcom/facebook/quicklog/PointEditor;
+    .locals 2
 
-    :sswitch_a
-    const-string v0, "NOTIFICATIONS_APP_WIDGET_LOAD"
+    .line 57490
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    const/16 v0, 0x18
 
-    :sswitch_b
-    const-string v0, "NOTIFICATIONS_THIN_CLIENT_PERF"
+    .line 57491
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57492
+    return-object p0
+.end method
 
-    :sswitch_c
-    const-string v0, "NOTIFICATIONS_PUSH_THIN_FOOTER_PERFORMANCE_LOGGER"
+.method public final addPointData(Ljava/lang/String;[Z)Lcom/facebook/quicklog/PointEditor;
+    .locals 2
 
-    return-object v0
+    .line 57493
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :sswitch_d
-    const-string v0, "NOTIFICATIONS_DISCOVER_SCREEN_TTRC"
+    const/16 v0, 0x1c
 
-    return-object v0
+    .line 57494
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :sswitch_e
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_GROUP_MALL_NAV_KEYPRESS_ANDROID"
+    .line 57495
+    return-object p0
+.end method
 
-    return-object v0
+.method public final annotate(Ljava/lang/String;D)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 3
 
-    :sswitch_f
-    const-string v0, "NOTIFICATIONS_PUSH_LAND_TO_FEED"
+    .line 57445
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    invoke-static {p2, p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    :sswitch_10
-    const-string v0, "NOTIFICATIONS_PUSH_LAND_TO_FEED_NT_VIEW_RENDER"
+    move-result-object v1
 
-    return-object v0
+    const/4 v0, 0x4
 
-    :sswitch_11
-    const-string v0, "NOTIFICATIONS_NOTIFICATION_DEBUG"
+    .line 57446
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57447
+    return-object p0
+.end method
 
-    :sswitch_12
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_SURFACE_TTRC"
+.method public final annotate(Ljava/lang/String;I)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 3
 
-    return-object v0
+    .line 57457
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :sswitch_13
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_RESPONSE_RECEIVED"
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-object v0
+    move-result-object v1
 
-    :sswitch_14
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_RENDERED"
+    const/4 v0, 0x2
 
-    return-object v0
+    .line 57458
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :sswitch_15
-    const-string v0, "NOTIFICATIONS_CONVERSATION_HUB_LOAD"
+    .line 57459
+    return-object p0
+.end method
 
-    return-object v0
+.method public final annotate(Ljava/lang/String;J)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 3
 
-    :sswitch_16
-    const-string v0, "NOTIFICATIONS_SHOW_NOTIFICATION_IN_SYSTEM_TRAY"
+    .line 57442
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :sswitch_17
-    const-string v0, "NOTIFICATIONS_NOTIF_SCROLL_LOAD"
+    move-result-object v1
 
-    return-object v0
+    const/4 v0, 0x3
 
-    :pswitch_12
-    const-string v0, "NOTIFICATIONS_NOTIF_LIST_LOAD_TIME_WARM"
+    .line 57443
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57444
+    return-object p0
+.end method
 
-    :pswitch_13
-    const-string v0, "NOTIFICATIONS_NOTIF_LIST_LOAD_TIME_COLD"
+.method public final annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 2
 
-    return-object v0
+    .line 57505
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :pswitch_14
-    const-string v0, "NOTIFICATIONS_NOTIF_PERMALINK_REFRESH_STORY_TIME"
+    const/4 v0, 0x1
 
-    return-object v0
+    .line 57506
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :pswitch_15
-    const-string v0, "NOTIFICATIONS_NOTIF_LOCKSCREEN_PERMALINK_LOAD_TIME"
+    .line 57507
+    return-object p0
+.end method
 
-    return-object v0
+.method public final annotate(Ljava/lang/String;Z)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 3
 
-    :pswitch_16
-    const-string v0, "NOTIFICATIONS_NOTIF_JSON_DESERIALIZE"
+    .line 57469
+    iget-object v2, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :pswitch_17
-    const-string v0, "NOTIFICATIONS_PULL_TO_REFRESH_LOAD_TIME"
+    move-result-object v1
 
-    return-object v0
+    const/4 v0, 0x5
 
-    :pswitch_18
-    const-string v0, "NOTIFICATIONS_POLL_NOTIF"
+    .line 57470
+    invoke-static {v1, p1, v2, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57471
+    return-object p0
+.end method
 
-    :pswitch_19
-    const-string v0, "NOTIFICATIONS_NOTIF_NEW_FETCH_FROM_SERVER"
+.method public final annotate(Ljava/lang/String;[D)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 2
 
-    return-object v0
+    .line 57496
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :pswitch_1a
-    const-string v0, "NOTIFICATIONS_NOTIF_FULL_FETCH_FROM_SERVER"
+    const/16 v0, 0x9
 
-    return-object v0
+    .line 57497
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :pswitch_1b
-    const-string v0, "NOTIFICATIONS_NOTIF_GET_FROM_DISK"
+    .line 57498
+    return-object p0
+.end method
 
-    return-object v0
+.method public final annotate(Ljava/lang/String;[I)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 2
 
-    :cond_0
-    const-string v0, "NOTIFICATIONS_TIME_TILL_TRAY"
+    .line 57508
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    const/4 v0, 0x7
 
-    :cond_1
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_MUTATION_ATTEMPT"
+    .line 57509
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57510
+    return-object p0
+.end method
 
-    :cond_2
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_BADGE_COUNT_CHANGED"
+.method public final annotate(Ljava/lang/String;[J)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 2
 
-    return-object v0
+    .line 57499
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :cond_3
-    const-string v0, "NOTIFICATIONS_NOTIFICATIONS_LOAD_ATTEMPT"
+    const/16 v0, 0x8
 
-    return-object v0
+    .line 57500
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :cond_4
-    const-string v0, "NOTIFICATIONS_NOTIF_DELTA_ONLY_FETCH"
+    .line 57501
+    return-object p0
+.end method
 
-    return-object v0
+.method public final annotate(Ljava/lang/String;[Ljava/lang/String;)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 2
 
-    :cond_5
-    const-string v0, "NOTIFICATIONS_CREATE_LAUNCH_CONFIG"
+    .line 57511
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    return-object v0
+    const/4 v0, 0x6
 
-    :cond_6
-    const-string v0, "NOTIFICATIONS_PERMALINK_FROM_PRELOAD_CAROUSEL_LOAD"
+    .line 57512
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    return-object v0
+    .line 57513
+    return-object p0
+.end method
 
-    :cond_7
-    const-string v0, "NOTIFICATIONS_SEE_POST_FROM_HEAD_LOAD"
+.method public final annotate(Ljava/lang/String;[Z)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 2
 
-    return-object v0
+    .line 57502
+    iget-object v1, p0, LX/0PV;->A02:Ljava/util/ArrayList;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-    .end packed-switch
+    const/16 v0, 0xa
 
-    :sswitch_data_0
-    .sparse-switch
-        0xd -> :sswitch_17
-        0xf -> :sswitch_16
-        0x28 -> :sswitch_15
-        0x2f -> :sswitch_14
-        0x34 -> :sswitch_13
-        0xf39 -> :sswitch_12
-        0x1295 -> :sswitch_11
-        0x16a7 -> :sswitch_10
-        0x1a3c -> :sswitch_f
-        0x1b5c -> :sswitch_e
-        0x1b79 -> :sswitch_d
-        0x2172 -> :sswitch_c
-        0x22cb -> :sswitch_b
-        0x27bb -> :sswitch_a
-        0x2b2b -> :sswitch_9
-        0x2c8f -> :sswitch_8
-        0x2caf -> :sswitch_7
-        0x2e4d -> :sswitch_6
-        0x3017 -> :sswitch_5
-        0x3551 -> :sswitch_4
-        0x394b -> :sswitch_3
-        0x3a6e -> :sswitch_2
-        0x3b77 -> :sswitch_1
-        0x3fa8 -> :sswitch_0
-    .end sparse-switch
+    .line 57503
+    invoke-static {p2, p1, v1, v0}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
 
-    :pswitch_data_1
-    .packed-switch 0x12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-    .end packed-switch
+    .line 57504
+    return-object p0
+.end method
 
-    :pswitch_data_2
-    .packed-switch 0x20
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-    .end packed-switch
+.method public final isSampled()Z
+    .locals 1
 
-    :pswitch_data_3
-    .packed-switch 0x40
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final markerEditingCompleted()V
+    .locals 9
+
+    .line 0
+    move-object v1, p0
+
+    .line 1
+    iget-object v0, p0, LX/0PV;->A03:LX/0PR;
+
+    .line 2
+    .line 3
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 4
+    .line 5
+    const/16 v4, 0xd
+
+    .line 6
+    .line 7
+    const/4 v5, 0x0
+
+    .line 8
+    const-wide/16 v7, 0x0
+
+    .line 9
+    .line 10
+    const-string v2, ""
+
+    .line 11
+    .line 12
+    move v6, v5
+
+    .line 13
+    invoke-static/range {v0 .. v8}, LX/0PR;->A03(LX/0PR;Ljava/lang/Object;Ljava/lang/String;Ljava/util/concurrent/TimeUnit;IIIJ)V
+
+    .line 14
+    .line 15
+    .line 16
+    return-void
+.end method
+
+.method public final point(Ljava/lang/String;Ljava/lang/String;J)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 7
+
+    .line 0
+    iget-object v0, p0, LX/0PV;->A02:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    const/16 v4, 0xb
+
+    .line 3
+    .line 4
+    new-instance v1, LX/0QJ;
+
+    .line 5
+    .line 6
+    move-object v3, p1
+
+    .line 7
+    move-object v2, p2
+
+    .line 8
+    move-wide v5, p3
+
+    .line 9
+    invoke-direct/range {v1 .. v6}, LX/0QJ;-><init>(Ljava/lang/Object;Ljava/lang/String;IJ)V
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 13
+    .line 14
+    .line 15
+    return-object p0
+.end method
+
+.method public final pointCustomTimestamp(J)Lcom/facebook/quicklog/PointEditor;
+    .locals 7
+
+    .line 0
+    iget-object v0, p0, LX/0PV;->A02:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    const/16 v4, 0x10
+
+    .line 3
+    .line 4
+    const-string v3, ""
+
+    .line 5
+    .line 6
+    const/4 v2, 0x0
+
+    .line 7
+    new-instance v1, LX/0QJ;
+
+    .line 8
+    .line 9
+    move-wide v5, p1
+
+    .line 10
+    invoke-direct/range {v1 .. v6}, LX/0QJ;-><init>(Ljava/lang/Object;Ljava/lang/String;IJ)V
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 14
+    .line 15
+    .line 16
+    return-object p0
+.end method
+
+.method public final pointEditingCompleted()Lcom/facebook/quicklog/MarkerEditor;
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/0PV;->A02:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    const/16 v2, 0xe
+
+    .line 3
+    .line 4
+    const-string v1, ""
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    invoke-static {v0, v1, v3, v2}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-object p0
+.end method
+
+.method public final pointEditor(Ljava/lang/String;)Lcom/facebook/quicklog/PointEditor;
+    .locals 7
+
+    .line 0
+    iget-object v0, p0, LX/0PV;->A02:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-wide v5
+
+    .line 6
+    const/16 v4, 0xd
+
+    .line 7
+    .line 8
+    const/4 v2, 0x0
+
+    .line 9
+    new-instance v1, LX/0QJ;
+
+    .line 10
+    .line 11
+    move-object v3, p1
+
+    .line 12
+    invoke-direct/range {v1 .. v6}, LX/0QJ;-><init>(Ljava/lang/Object;Ljava/lang/String;IJ)V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    return-object p0
+.end method
+
+.method public final pointShouldIncludeMetadata(Z)Lcom/facebook/quicklog/PointEditor;
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/0PV;->A02:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    const/16 v1, 0xf
+
+    .line 7
+    .line 8
+    const-string v0, ""
+
+    .line 9
+    .line 10
+    invoke-static {v2, v0, v3, v1}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-object p0
+.end method
+
+.method public final pointWithMetadata(Ljava/lang/String;Ljava/lang/String;J)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 7
+
+    .line 0
+    iget-object v0, p0, LX/0PV;->A02:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    const/16 v4, 0xc
+
+    .line 3
+    .line 4
+    new-instance v1, LX/0QJ;
+
+    .line 5
+    .line 6
+    move-object v3, p1
+
+    .line 7
+    move-object v2, p2
+
+    .line 8
+    move-wide v5, p3
+
+    .line 9
+    invoke-direct/range {v1 .. v6}, LX/0QJ;-><init>(Ljava/lang/Object;Ljava/lang/String;IJ)V
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 13
+    .line 14
+    .line 15
+    return-object p0
+.end method
+
+.method public final setSurviveUserSwitch(Z)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/0PV;->A02:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    const/16 v1, 0x1d
+
+    .line 7
+    .line 8
+    const-string v0, ""
+
+    .line 9
+    .line 10
+    invoke-static {v2, v0, v3, v1}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-object p0
+.end method
+
+.method public final withLevel(I)Lcom/facebook/quicklog/MarkerEditor;
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/0PV;->A02:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    const/4 v1, 0x0
+
+    .line 7
+    const-string v0, ""
+
+    .line 8
+    .line 9
+    invoke-static {v2, v0, v3, v1}, LX/0PV;->A00(Ljava/lang/Object;Ljava/lang/String;Ljava/util/AbstractCollection;I)V
+
+    .line 10
+    .line 11
+    .line 12
+    return-object p0
 .end method

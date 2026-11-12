@@ -62,8 +62,6 @@
 
 .field public static final enum SINGLE_VIDEO:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
-.field public static final enum SOUNDBITE_METADATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
-
 .field public static final enum TEXT_ONLY:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
 .field public static final enum UNKNOWN:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
@@ -79,7 +77,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 37
+    .locals 36
 
     .line 0
     const-string v1, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -94,10 +92,10 @@
     .line 4
     .line 5
     .line 6
-    move-result-object v36
+    move-result-object v15
 
     .line 7
-    sput-object v36, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 8
     .line 9
@@ -113,10 +111,10 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v35
+    move-result-object v14
 
     .line 16
-    sput-object v35, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->ACHIEVEMENT_DATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->ACHIEVEMENT_DATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 17
     .line 18
@@ -132,10 +130,10 @@
     .line 22
     .line 23
     .line 24
-    move-result-object v15
+    move-result-object v35
 
     .line 25
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->BRAND_LED_GROUPS_EXCLUSIVE_PRODUCT:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v35, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->BRAND_LED_GROUPS_EXCLUSIVE_PRODUCT:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 26
     .line 27
@@ -151,10 +149,10 @@
     .line 31
     .line 32
     .line 33
-    move-result-object v14
+    move-result-object v34
 
     .line 34
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->CANVAS_POST:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v34, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->CANVAS_POST:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 35
     .line 36
@@ -170,10 +168,10 @@
     .line 40
     .line 41
     .line 42
-    move-result-object v34
+    move-result-object v33
 
     .line 43
-    sput-object v34, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->CHALLENGE_CHECK_IN_ACHIEVEMENT:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v33, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->CHALLENGE_CHECK_IN_ACHIEVEMENT:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 44
     .line 45
@@ -189,10 +187,10 @@
     .line 49
     .line 50
     .line 51
-    move-result-object v33
+    move-result-object v32
 
     .line 52
-    sput-object v33, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->CHALLENGE_CYCLE_CELEBRATION:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v32, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->CHALLENGE_CYCLE_CELEBRATION:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 53
     .line 54
@@ -208,10 +206,10 @@
     .line 58
     .line 59
     .line 60
-    move-result-object v32
+    move-result-object v31
 
     .line 61
-    sput-object v32, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->CHALLENGE_FINAL_ACHIEVEMENT:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v31, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->CHALLENGE_FINAL_ACHIEVEMENT:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 62
     .line 63
@@ -227,10 +225,10 @@
     .line 67
     .line 68
     .line 69
-    move-result-object v31
+    move-result-object v30
 
     .line 70
-    sput-object v31, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->DOC:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v30, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->DOC:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 71
     .line 72
@@ -247,10 +245,10 @@
     .line 77
     .line 78
     .line 79
-    move-result-object v30
+    move-result-object v29
 
     .line 80
-    sput-object v30, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->FB_COLLECTIBLE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v29, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->FB_COLLECTIBLE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 81
     .line 82
@@ -267,10 +265,10 @@
     .line 87
     .line 88
     .line 89
-    move-result-object v29
+    move-result-object v28
 
     .line 90
-    sput-object v29, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->FILE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v28, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->FILE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 91
     .line 92
@@ -287,10 +285,10 @@
     .line 97
     .line 98
     .line 99
-    move-result-object v28
+    move-result-object v27
 
     .line 100
-    sput-object v28, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->FISHBOWL:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v27, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->FISHBOWL:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 101
     .line 102
@@ -307,10 +305,10 @@
     .line 107
     .line 108
     .line 109
-    move-result-object v27
+    move-result-object v26
 
     .line 110
-    sput-object v27, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->GRATITUDE_METADATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v26, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->GRATITUDE_METADATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 111
     .line 112
@@ -327,10 +325,10 @@
     .line 117
     .line 118
     .line 119
-    move-result-object v26
+    move-result-object v25
 
     .line 120
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->JOB_OPENING:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v25, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->JOB_OPENING:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 121
     .line 122
@@ -347,10 +345,10 @@
     .line 127
     .line 128
     .line 129
-    move-result-object v25
+    move-result-object v24
 
     .line 130
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->LEARNING_MODULE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v24, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->LEARNING_MODULE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 131
     .line 132
@@ -367,10 +365,10 @@
     .line 137
     .line 138
     .line 139
-    move-result-object v24
+    move-result-object v23
 
     .line 140
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->LEARNING_QUIZ:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->LEARNING_QUIZ:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 141
     .line 142
@@ -387,10 +385,10 @@
     .line 147
     .line 148
     .line 149
-    move-result-object v23
+    move-result-object v22
 
     .line 150
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->LIFE_EVENT:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->LIFE_EVENT:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 151
     .line 152
@@ -407,10 +405,10 @@
     .line 157
     .line 158
     .line 159
-    move-result-object v22
+    move-result-object v21
 
     .line 160
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->MULTIMEDIA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->MULTIMEDIA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 161
     .line 162
@@ -427,10 +425,10 @@
     .line 167
     .line 168
     .line 169
-    move-result-object v21
+    move-result-object v20
 
     .line 170
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->MULTI_PHOTO:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->MULTI_PHOTO:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 171
     .line 172
@@ -447,10 +445,10 @@
     .line 177
     .line 178
     .line 179
-    move-result-object v20
+    move-result-object v19
 
     .line 180
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->MULTI_SHARES:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->MULTI_SHARES:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 181
     .line 182
@@ -467,10 +465,10 @@
     .line 187
     .line 188
     .line 189
-    move-result-object v19
+    move-result-object v13
 
     .line 190
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->NEON_CREATE_DATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->NEON_CREATE_DATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 191
     .line 192
@@ -487,10 +485,10 @@
     .line 197
     .line 198
     .line 199
-    move-result-object v18
+    move-result-object v12
 
     .line 200
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->NOTE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->NOTE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 201
     .line 202
@@ -507,10 +505,10 @@
     .line 207
     .line 208
     .line 209
-    move-result-object v13
+    move-result-object v11
 
     .line 210
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->OFFER:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->OFFER:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 211
     .line 212
@@ -527,10 +525,10 @@
     .line 217
     .line 218
     .line 219
-    move-result-object v12
+    move-result-object v10
 
     .line 220
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->OFFER_DATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->OFFER_DATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 221
     .line 222
@@ -547,10 +545,10 @@
     .line 227
     .line 228
     .line 229
-    move-result-object v11
+    move-result-object v9
 
     .line 230
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->PHOTO_SET:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->PHOTO_SET:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 231
     .line 232
@@ -567,10 +565,10 @@
     .line 237
     .line 238
     .line 239
-    move-result-object v10
+    move-result-object v8
 
     .line 240
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->PRODUCT_ITEM:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->PRODUCT_ITEM:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 241
     .line 242
@@ -587,10 +585,10 @@
     .line 247
     .line 248
     .line 249
-    move-result-object v9
+    move-result-object v7
 
     .line 250
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->QUESTION:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->QUESTION:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 251
     .line 252
@@ -607,10 +605,10 @@
     .line 257
     .line 258
     .line 259
-    move-result-object v8
+    move-result-object v6
 
     .line 260
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->SINGLE_PHOTO:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->SINGLE_PHOTO:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 261
     .line 262
@@ -627,10 +625,10 @@
     .line 267
     .line 268
     .line 269
-    move-result-object v7
+    move-result-object v5
 
     .line 270
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->SINGLE_SHARE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->SINGLE_SHARE:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 271
     .line 272
@@ -647,14 +645,14 @@
     .line 277
     .line 278
     .line 279
-    move-result-object v6
+    move-result-object v4
 
     .line 280
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->SINGLE_VIDEO:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->SINGLE_VIDEO:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 281
     .line 282
-    const-string v1, "SOUNDBITE_METADATA"
+    const-string v1, "TEXT_ONLY"
 
     .line 283
     .line 284
@@ -667,14 +665,14 @@
     .line 287
     .line 288
     .line 289
-    move-result-object v5
+    move-result-object v18
 
     .line 290
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->SOUNDBITE_METADATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->TEXT_ONLY:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 291
     .line 292
-    const-string v1, "TEXT_ONLY"
+    const-string v1, "UNKNOWN"
 
     .line 293
     .line 294
@@ -687,207 +685,173 @@
     .line 297
     .line 298
     .line 299
-    move-result-object v4
+    move-result-object v17
 
     .line 300
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->TEXT_ONLY:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->UNKNOWN:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 301
     .line 302
-    const-string v1, "UNKNOWN"
+    const-string/jumbo v0, "WORKPLACE_OPEN_ROLES_METADATA"
 
     .line 303
     .line 304
-    const/16 v0, 0x1f
-
     .line 305
+    const/16 v3, 0x1f
+
     .line 306
-    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
-
     .line 307
-    .line 308
-    .line 309
-    move-result-object v17
-
-    .line 310
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->UNKNOWN:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
-
-    .line 311
-    .line 312
-    const-string v0, "WORKPLACE_OPEN_ROLES_METADATA"
-
-    .line 313
-    .line 314
-    const/16 v3, 0x20
-
-    .line 315
-    .line 316
     invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
-    .line 317
-    .line 318
-    .line 319
+    .line 308
+    .line 309
+    .line 310
     move-result-object v16
 
-    .line 320
+    .line 311
     sput-object v16, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->WORKPLACE_OPEN_ROLES_METADATA:Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
-    .line 321
-    .line 322
-    const/16 v0, 0x21
+    .line 312
+    .line 313
+    const/16 v0, 0x20
 
+    .line 314
+    .line 315
+    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+
+    .line 316
+    .line 317
+    move-object/from16 v1, v35
+
+    .line 318
+    .line 319
+    move-object/from16 v0, v34
+
+    .line 320
+    .line 321
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 322
     .line 323
     .line 324
-    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
+    move-object/from16 v15, v33
 
     .line 325
     .line 326
-    move-object/from16 v1, v36
+    move-object/from16 v14, v32
 
     .line 327
     .line 328
-    move-object/from16 v0, v35
+    move-object/from16 v1, v31
 
     .line 329
     .line 330
-    invoke-static {v2, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v0, v30
 
     .line 331
     .line 332
-    .line 333
-    move-object/from16 v1, v34
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 333
     .line 334
     .line 335
-    move-object/from16 v0, v33
+    move-object/from16 v15, v29
 
     .line 336
     .line 337
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v28
 
     .line 338
     .line 339
+    move-object/from16 v1, v27
+
     .line 340
-    move-object/from16 v1, v32
-
     .line 341
+    move-object/from16 v0, v26
+
     .line 342
-    move-object/from16 v0, v31
-
     .line 343
-    .line 344
-    invoke-static {v2, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 344
     .line 345
     .line 346
+    const/16 v0, 0xc
+
     .line 347
-    move-object/from16 v15, v30
-
     .line 348
+    aput-object v25, v2, v0
+
     .line 349
-    move-object/from16 v14, v29
-
     .line 350
+    move-object/from16 v15, v24
+
     .line 351
-    move-object/from16 v1, v28
-
     .line 352
+    move-object/from16 v14, v23
+
     .line 353
-    move-object/from16 v0, v27
-
     .line 354
-    .line 355
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v22
 
+    .line 355
     .line 356
+    move-object/from16 v0, v21
+
     .line 357
     .line 358
-    move-object/from16 v1, v26
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 359
     .line 360
-    move-object/from16 v0, v25
-
     .line 361
-    .line 362
-    invoke-static {v2, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v1, v20
 
+    .line 362
     .line 363
+    move-object/from16 v0, v19
+
     .line 364
     .line 365
-    move-object/from16 v15, v24
+    invoke-static {v1, v0, v13, v12, v2}, LX/0X1;->A19(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 366
     .line 367
-    move-object/from16 v14, v23
-
     .line 368
-    .line 369
-    move-object/from16 v1, v22
+    invoke-static {v11, v10, v9, v8, v2}, LX/0X1;->A1A(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 369
     .line 370
     .line 371
-    move-object/from16 v0, v21
+    invoke-static {v7, v6, v5, v4, v2}, LX/0X1;->A1B(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 372
     .line 373
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
     .line 374
+    const/16 v0, 0x1d
+
     .line 375
     .line 376
-    const/16 v0, 0x12
+    aput-object v18, v2, v0
 
     .line 377
     .line 378
-    aput-object v20, v2, v0
+    const/16 v0, 0x1e
 
     .line 379
     .line 380
-    move-object/from16 v1, v19
+    aput-object v17, v2, v0
 
     .line 381
     .line 382
-    move-object/from16 v0, v18
+    aput-object v16, v2, v3
 
     .line 383
     .line 384
-    invoke-static {v1, v0, v13, v12, v2}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    sput-object v2, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
 
     .line 385
     .line 386
-    .line 387
-    invoke-static {v11, v10, v9, v8, v2}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 388
-    .line 389
-    .line 390
-    invoke-static {v2, v7, v6}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 391
-    .line 392
-    .line 393
-    invoke-static {v2, v5, v4}, LX/0Yf;->A1N([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 394
-    .line 395
-    .line 396
-    const/16 v0, 0x1f
-
-    .line 397
-    .line 398
-    aput-object v17, v2, v0
-
-    .line 399
-    .line 400
-    aput-object v16, v2, v3
-
-    .line 401
-    .line 402
-    sput-object v2, Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLPostAttachmentType;
-
-    .line 403
-    .line 404
     return-void
 .end method
 
@@ -931,7 +895,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

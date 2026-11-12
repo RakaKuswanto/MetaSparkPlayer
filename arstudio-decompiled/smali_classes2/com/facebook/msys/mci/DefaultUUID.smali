@@ -25,7 +25,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0Ye;->A0R()Ljava/lang/String;
+    invoke-static {}, LX/0X2;->A0c()Ljava/lang/String;
 
     .line 1
     .line 2

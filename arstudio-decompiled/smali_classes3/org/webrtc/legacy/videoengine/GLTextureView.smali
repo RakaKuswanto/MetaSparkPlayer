@@ -74,7 +74,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    invoke-static {p0}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {p0}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     .line 268435460
     .line 268435461
@@ -103,7 +103,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {p0}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     .line 4
     .line 5
@@ -253,7 +253,7 @@
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 8
     .line 9
@@ -292,30 +292,20 @@
     .line 3
     .line 4
     invoke-virtual {v0}, Lorg/webrtc/legacy/videoengine/GLTextureView$GLThread;->requestExitAndWait()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 5
     .line 6
     .line 7
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+    return-void
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 8
-    .line 9
-    .line 10
-    return-void
-
-    .line 11
     :catchall_0
     move-exception v0
 
-    .line 12
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 13
-    .line 14
-    .line 15
+    .line 9
     throw v0
 .end method
 
@@ -681,37 +671,37 @@
 .method public setEGLConfigChooser(IIIIII)V
     .locals 1
 
-    .line 536870912
+    .line 268435456
     new-instance v0, Lorg/webrtc/legacy/videoengine/GLTextureView$ComponentSizeChooser;
 
-    .line 536870913
-    .line 536870914
+    .line 268435457
+    .line 268435458
     invoke-direct/range {v0 .. v7}, Lorg/webrtc/legacy/videoengine/GLTextureView$ComponentSizeChooser;-><init>(Lorg/webrtc/legacy/videoengine/GLTextureView;IIIIII)V
 
-    .line 536870915
-    .line 536870916
-    .line 536870917
+    .line 268435459
+    .line 268435460
+    .line 268435461
     invoke-virtual {p0, v0}, Lorg/webrtc/legacy/videoengine/GLTextureView;->setEGLConfigChooser(Lorg/webrtc/legacy/videoengine/GLTextureView$EGLConfigChooser;)V
 
-    .line 536870918
-    .line 536870919
-    .line 536870920
+    .line 268435462
+    .line 268435463
+    .line 268435464
     return-void
 .end method
 
 .method public setEGLConfigChooser(Lorg/webrtc/legacy/videoengine/GLTextureView$EGLConfigChooser;)V
     .locals 0
 
-    .line 268435456
+    .line 536870912
     invoke-direct {p0}, Lorg/webrtc/legacy/videoengine/GLTextureView;->checkRenderThreadState()V
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
+    .line 536870913
+    .line 536870914
+    .line 536870915
     iput-object p1, p0, Lorg/webrtc/legacy/videoengine/GLTextureView;->mEGLConfigChooser:Lorg/webrtc/legacy/videoengine/GLTextureView$EGLConfigChooser;
 
-    .line 268435460
-    .line 268435461
+    .line 536870916
+    .line 536870917
     return-void
 .end method
 
@@ -799,7 +789,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 20
     .line 21

@@ -10,16 +10,16 @@
 .method public abstract applyOptimistic(Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end method
 
-.method public abstract applyOptimisticBuilder(LX/19O;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract applyOptimisticBuilder(LX/1gF;Lcom/facebook/graphservice/interfaces/Tree;Lcom/facebook/graphservice/interfaces/GraphQLConsistency$MutationPublisherRequest;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end method
 
 .method public abstract publish(Lcom/facebook/graphservice/interfaces/Tree;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end method
 
-.method public abstract publishBuilder(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract publishBuilder(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end method
 
-.method public abstract publishBuilderWithFullConsistency(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract publishBuilderWithFullConsistency(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end method
 
 .method public abstract publishWithFullConsistency(Lcom/facebook/graphservice/interfaces/Tree;)Lcom/google/common/util/concurrent/ListenableFuture;

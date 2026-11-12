@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLCurrencyCodeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLCurrencyCodeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -688,22 +688,23 @@
 
     .line 333
     .line 334
-    const-string v0, "ZAR"
+    const-string/jumbo v0, "ZAR"
 
     .line 335
     .line 336
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 337
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 338
     .line 339
+    .line 340
     move-result-object v0
 
-    .line 340
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCurrencyCodeSet;->A00:Ljava/util/Set;
-
     .line 341
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLCurrencyCodeSet;->A00:Ljava/util/HashSet;
+
     .line 342
+    .line 343
     return-void
 .end method
 
@@ -719,11 +720,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCurrencyCodeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLCurrencyCodeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

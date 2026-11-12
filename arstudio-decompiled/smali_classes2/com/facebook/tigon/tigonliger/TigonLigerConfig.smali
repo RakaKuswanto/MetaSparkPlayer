@@ -12,8 +12,6 @@
 
 .field public final combinableResponseHeaders:[Ljava/lang/String;
 
-.field public final createUnusedCopyOfTigonRequestInfoForOnBodyCallbacks:Z
-
 .field public final disableBackgroundRetry:Z
 
 .field public final disablePrioritizationForVideo:Z
@@ -22,15 +20,13 @@
 
 .field public final enableHttpPriorityTrackingService:Z
 
-.field public final enableImageFetchHighHttp3Priority:Z
-
 .field public final enableLoggingBackgroundRetry:Z
 
 .field public final enableOrchestrationHttp3PriorityUpdate:Z
 
-.field public final exportTigonLoggingIds:Z
+.field public final enableShadowModeOnInitialPriority:Z
 
-.field public final forceThirdPartyHttpsInterceptorEnabled:Z
+.field public final exportTigonLoggingIds:Z
 
 .field public final forwardableHeaders:[Ljava/lang/String;
 
@@ -45,8 +41,6 @@
 .field public final httpPriorityIncrementalEnabled:Z
 
 .field public final isHttpPriorityEnabled:Z
-
-.field public final isPurposeBasedHttpPrioritizedEnabled:Z
 
 .field public final logAdditionalQueueInfo:Z
 
@@ -102,11 +96,13 @@
 
 .field public final urlValidationSoftErrorSamplingFrequency:I
 
+.field public final useNewOrchestrationService:Z
+
 .field public final useOnBodyExperimental:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 8
 
     .line 0
@@ -115,21 +111,21 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A9s:I
+    sget v0, LX/2I6;->A6q:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 6
     .line 7
     .line 8
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 9
     .line 10
     .line 11
-    invoke-static {}, LX/1z6;->A0Q()Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {}, LX/2I6;->A0Z()Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 12
     .line 13
@@ -146,7 +142,7 @@
     .line 18
     .line 19
     .line 20
-    invoke-static {}, LX/1zI;->A00()Landroid/content/Context;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 21
     .line 22
@@ -157,85 +153,82 @@
     const/4 v4, 0x0
 
     .line 25
-    invoke-static {v0}, LX/0Yh;->A0D(Landroid/content/Context;)LX/0PR;
+    invoke-static {v0, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 26
     .line 27
     .line 28
-    move-result-object v7
+    invoke-static {v0}, LX/0DH;->A01(Landroid/content/Context;)LX/0Qq;
 
     .line 29
-    iget v3, v7, LX/0PR;->A0W:I
-
     .line 30
     .line 31
-    if-gez v3, :cond_3
+    move-result-object v1
 
     .line 32
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
     .line 33
-    const/4 v2, 0x0
-
     .line 34
-    const-string v1, "bogus_weight"
-
     .line 35
+    move-result-object v0
+
     .line 36
-    :goto_0
-    const v0, 0x386d38bb
+    invoke-static {v0, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 37
     .line 38
     .line 39
-    invoke-static {v0, v1, v3}, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->A00(ILjava/lang/String;I)V
+    invoke-static {v0}, LX/0DH;->A01(Landroid/content/Context;)LX/0Qq;
 
     .line 40
     .line 41
     .line 42
-    :cond_0
-    iput v2, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->flowTimeWeight:I
+    move-result-object v7
 
     .line 43
+    iget v3, v1, LX/0Qq;->A0A:I
+
     .line 44
-    iget v2, v7, LX/0PR;->A0V:I
-
     .line 45
+    if-gez v3, :cond_3
+
     .line 46
-    const-string/jumbo v1, "mhrfbc"
-
     .line 47
-    .line 48
-    .line 49
-    if-gez v2, :cond_1
+    const/4 v2, 0x0
 
+    .line 48
+    const-string/jumbo v1, "bogus_weight"
+
+    .line 49
     .line 50
     .line 51
-    const v0, 0x386d3e46    # 5.65632E-5f
+    :goto_0
+    const v0, 0x386d38bb
 
     .line 52
     .line 53
     .line 54
-    invoke-static {v0, v1, v2}, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->A00(ILjava/lang/String;I)V
+    invoke-static {v1, v0, v3}, LX/2I6;->A0d(Ljava/lang/String;II)V
 
     .line 55
     .line 56
     .line 57
-    const/4 v2, 0x0
+    :cond_0
+    iput v2, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->flowTimeWeight:I
 
     .line 58
-    :cond_1
-    iput v2, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->httpMeasurementWeight:I
-
     .line 59
+    iget v2, v7, LX/0Qq;->A09:I
+
     .line 60
-    iget v2, v7, LX/0PR;->A05:I
-
     .line 61
-    .line 62
-    const-string v1, "celltower"
+    const-string/jumbo v1, "mhrfbc"
 
+    .line 62
     .line 63
     .line 64
-    if-gez v2, :cond_2
+    if-gez v2, :cond_1
 
     .line 65
     .line 66
@@ -244,7 +237,7 @@
     .line 67
     .line 68
     .line 69
-    invoke-static {v0, v1, v2}, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->A00(ILjava/lang/String;I)V
+    invoke-static {v1, v0, v2}, LX/2I6;->A0d(Ljava/lang/String;II)V
 
     .line 70
     .line 71
@@ -252,442 +245,406 @@
     const/4 v2, 0x0
 
     .line 73
-    :cond_2
-    iput v2, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->cellTowerInfoWeight:I
+    :cond_1
+    iput v2, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->mhrFbcWeight:I
 
     .line 74
     .line 75
-    const/16 v0, 0x1388
+    iget v2, v7, LX/0Qq;->A01:I
 
     .line 76
     .line 77
-    iput v0, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->certDataWeight:I
+    const-string/jumbo v1, "celltower"
 
     .line 78
     .line 79
-    sget-object v0, LX/2SX;->A0V:LX/1b2;
-
     .line 80
-    .line 81
-    invoke-interface {v6, v0, v4}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ACf(LX/1b2;Z)Z
+    if-gez v2, :cond_2
 
+    .line 81
     .line 82
+    const v0, 0x386d3e46    # 5.65632E-5f
+
     .line 83
     .line 84
-    move-result v0
-
     .line 85
-    iput-boolean v0, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->printTraceEvents:Z
+    invoke-static {v1, v0, v2}, LX/2I6;->A0d(Ljava/lang/String;II)V
 
     .line 86
     .line 87
-    iput-boolean v4, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->enableEndToEndTracingForTa:Z
-
     .line 88
+    const/4 v2, 0x0
+
     .line 89
-    iput-boolean v4, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->triggerMobileHttpRequestLoggingForTa:Z
+    :cond_2
+    iput v2, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->cellTowerInfoWeight:I
 
     .line 90
     .line 91
-    iput-object v5, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->tigonSamplingPolicy:Lcom/facebook/tigon/iface/TigonSamplingPolicy;
+    const/16 v0, 0x1388
 
     .line 92
     .line 93
-    sget-object v0, LX/388;->A00:[Ljava/lang/String;
+    iput v0, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->certDataWeight:I
 
     .line 94
     .line 95
-    iput-object v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->forwardableHeaders:[Ljava/lang/String;
+    sget-object v0, LX/1lC;->A0U:LX/28F;
 
     .line 96
     .line 97
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->exportTigonLoggingIds:Z
+    invoke-interface {v6, v0, v4}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ABB(LX/28F;Z)Z
 
     .line 98
     .line 99
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->mobileHttpRequestTriggerEnabled:Z
-
     .line 100
+    move-result v0
+
     .line 101
-    const-string v0, ""
+    iput-boolean v0, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->printTraceEvents:Z
 
     .line 102
     .line 103
-    iput-object v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->triggeredLoggingAllowList:Ljava/lang/String;
+    iput-boolean v4, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->enableEndToEndTracingForTa:Z
 
     .line 104
     .line 105
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->triggerE2eTracingWithMhr:Z
+    iput-boolean v4, v5, Lcom/facebook/tigon/iface/TigonSamplingPolicy;->triggerMobileHttpRequestLoggingForTa:Z
 
     .line 106
     .line 107
-    const-wide/32 v0, 0x8000
+    iput-object v5, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->tigonSamplingPolicy:Lcom/facebook/tigon/iface/TigonSamplingPolicy;
 
     .line 108
     .line 109
+    sget-object v0, LX/6f1;->A00:[Ljava/lang/String;
+
     .line 110
-    iput-wide v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->maxStreamingCachedBufferSize:J
-
     .line 111
+    iput-object v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->forwardableHeaders:[Ljava/lang/String;
+
     .line 112
-    const-wide/16 v0, 0x1000
-
     .line 113
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->exportTigonLoggingIds:Z
+
     .line 114
-    iput-wide v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->streamingBufferSize:J
-
     .line 115
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->mobileHttpRequestTriggerEnabled:Z
+
     .line 116
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->trafficShapingEnableEventsLogging:Z
-
     .line 117
+    const-string v0, ""
+
     .line 118
-    const/16 v0, 0xf
-
     .line 119
+    iput-object v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->triggeredLoggingAllowList:Ljava/lang/String;
+
     .line 120
-    iput v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->transientErrorRetryLimit:I
-
     .line 121
-    .line 122
-    const/4 v5, 0x2
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->triggerE2eTracingWithMhr:Z
 
+    .line 122
     .line 123
-    iput v5, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->nonTransientErrorRetryLimit:I
+    const-wide/32 v0, 0x8000
 
     .line 124
     .line 125
-    const/16 v0, 0xa
-
     .line 126
+    iput-wide v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->maxStreamingCachedBufferSize:J
+
     .line 127
-    iput v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryDelayMinMs:I
-
     .line 128
+    const-wide/16 v0, 0x1000
+
     .line 129
-    const/16 v0, 0x64
-
     .line 130
+    iput-wide v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->streamingBufferSize:J
+
     .line 131
-    iput v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryDelayMaxMs:I
-
     .line 132
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->trafficShapingEnableEventsLogging:Z
+
     .line 133
-    const-wide/high16 v0, 0x3ff8000000000000L    # 1.5
-
     .line 134
+    const/16 v0, 0xf
+
     .line 135
-    iput-wide v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryGrowthFactor:D
-
     .line 136
-    .line 137
-    const-string v0, "429,503"
+    iput v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->transientErrorRetryLimit:I
 
+    .line 137
     .line 138
+    const/4 v5, 0x2
+
     .line 139
-    iput-object v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryStatusCodesStr:Ljava/lang/String;
+    iput v5, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->nonTransientErrorRetryLimit:I
 
     .line 140
     .line 141
-    const/4 v0, 0x5
+    const/16 v0, 0xa
 
     .line 142
-    iput v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->serverErrorRetryLimit:I
-
     .line 143
+    iput v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryDelayMinMs:I
+
     .line 144
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryOnTimeout:Z
-
     .line 145
-    .line 146
-    const/4 v3, 0x1
+    const/16 v0, 0x64
 
+    .line 146
     .line 147
-    iput-boolean v3, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryOnTransient:Z
+    iput v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryDelayMaxMs:I
 
     .line 148
     .line 149
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableLoggingBackgroundRetry:Z
+    const-wide/high16 v0, 0x3ff8000000000000L    # 1.5
 
     .line 150
     .line 151
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->disableBackgroundRetry:Z
+    iput-wide v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryGrowthFactor:D
 
     .line 152
     .line 153
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->removeAuthTokenIfNotAllowlisted:Z
+    const-string v0, "429,503"
 
     .line 154
     .line 155
-    const/4 v2, 0x3
+    iput-object v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryStatusCodesStr:Ljava/lang/String;
 
     .line 156
-    new-array v1, v2, [Ljava/lang/String;
-
     .line 157
+    const/4 v0, 0x5
+
     .line 158
-    const-string v0, "facebook.com"
+    iput v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->serverErrorRetryLimit:I
 
     .line 159
     .line 160
-    aput-object v0, v1, v4
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryOnTimeout:Z
 
     .line 161
     .line 162
-    const-string/jumbo v0, "workplace.com"
+    const/4 v3, 0x1
 
     .line 163
+    iput-boolean v3, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryOnTransient:Z
+
     .line 164
     .line 165
-    aput-object v0, v1, v3
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableLoggingBackgroundRetry:Z
 
     .line 166
     .line 167
-    const-string v0, "fbpigeon.com"
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->disableBackgroundRetry:Z
 
     .line 168
     .line 169
-    aput-object v0, v1, v5
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->removeAuthTokenIfNotAllowlisted:Z
 
     .line 170
     .line 171
-    iput-object v1, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->authTokenAllowlistedDomains:[Ljava/lang/String;
+    const/4 v2, 0x3
 
     .line 172
+    new-array v1, v2, [Ljava/lang/String;
+
     .line 173
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->quicRetryTransient:Z
-
     .line 174
-    .line 175
-    iput-boolean v3, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->bidirectionalStreamingEnabled:Z
+    const-string/jumbo v0, "facebook.com"
 
+    .line 175
     .line 176
     .line 177
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->headerValidationEnabled:Z
+    aput-object v0, v1, v4
 
     .line 178
     .line 179
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->headerValidationRejectRequestWithInvalidHeadersEnabled:Z
+    const-string/jumbo v0, "workplace.com"
 
     .line 180
     .line 181
-    iput v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->headerValidationSampleWeight:I
-
     .line 182
+    aput-object v0, v1, v3
+
     .line 183
-    iput v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->headerValidationSeverity:I
-
     .line 184
-    .line 185
-    iput-boolean v3, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->authHeaderValidationEnabled:Z
+    const-string/jumbo v0, "fbpigeon.com"
 
+    .line 185
     .line 186
     .line 187
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->urlValidationEnabled:Z
+    aput-object v0, v1, v5
 
     .line 188
     .line 189
-    iput v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->urlValidationSoftErrorSamplingFrequency:I
+    iput-object v1, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->authTokenAllowlistedDomains:[Ljava/lang/String;
 
     .line 190
     .line 191
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->isHttpPriorityEnabled:Z
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->quicRetryTransient:Z
 
     .line 192
     .line 193
-    iput v2, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->maxNumRedirectCount:I
+    iput-boolean v3, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->bidirectionalStreamingEnabled:Z
 
     .line 194
     .line 195
-    sget-object v0, LX/3WD;->A00:[I
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->headerValidationEnabled:Z
 
     .line 196
     .line 197
-    iput-object v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->redirectErrorCodes:[I
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->headerValidationRejectRequestWithInvalidHeadersEnabled:Z
 
     .line 198
     .line 199
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->isPurposeBasedHttpPrioritizedEnabled:Z
+    iput v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->headerValidationSampleWeight:I
 
     .line 200
     .line 201
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->logAdditionalQueueInfo:Z
+    iput v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->headerValidationSeverity:I
 
     .line 202
     .line 203
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableImageFetchHighHttp3Priority:Z
+    iput-boolean v3, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->authHeaderValidationEnabled:Z
 
     .line 204
     .line 205
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->thirdPartyRequestSanitizationInterceptorEnabled:Z
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->urlValidationEnabled:Z
 
     .line 206
     .line 207
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->forceThirdPartyHttpsInterceptorEnabled:Z
+    iput v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->urlValidationSoftErrorSamplingFrequency:I
 
     .line 208
     .line 209
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableOrchestrationHttp3PriorityUpdate:Z
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->isHttpPriorityEnabled:Z
 
     .line 210
     .line 211
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->disablePrioritizationForVideo:Z
+    iput v2, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->maxNumRedirectCount:I
 
     .line 212
     .line 213
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->reprioritizationEnabled:Z
+    sget-object v0, LX/39X;->A00:[I
 
     .line 214
     .line 215
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->httpPriorityIncrementalEnabled:Z
+    iput-object v0, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->redirectErrorCodes:[I
 
     .line 216
     .line 217
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->qplEnabled:Z
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->logAdditionalQueueInfo:Z
 
     .line 218
     .line 219
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryErrorDNSgetaddrinfo:Z
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->thirdPartyRequestSanitizationInterceptorEnabled:Z
 
     .line 220
     .line 221
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->useOnBodyExperimental:Z
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableOrchestrationHttp3PriorityUpdate:Z
 
     .line 222
     .line 223
-    iput-boolean v3, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableCrashReporter:Z
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->disablePrioritizationForVideo:Z
 
     .line 224
     .line 225
-    invoke-static {}, LX/0Yj;->A0v()[Ljava/lang/String;
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->reprioritizationEnabled:Z
 
     .line 226
     .line 227
-    .line 228
-    move-result-object v1
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->httpPriorityIncrementalEnabled:Z
 
+    .line 228
     .line 229
-    const-string v0, "Set-Cookie"
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->qplEnabled:Z
 
     .line 230
     .line 231
-    aput-object v0, v1, v4
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->retryErrorDNSgetaddrinfo:Z
 
     .line 232
     .line 233
-    const-string v0, "Transfer-Encoding"
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->useOnBodyExperimental:Z
 
     .line 234
     .line 235
-    aput-object v0, v1, v3
+    iput-boolean v3, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableCrashReporter:Z
 
     .line 236
     .line 237
-    const-string v0, "Vary"
+    invoke-static {}, LX/0X7;->A0z()[Ljava/lang/String;
 
     .line 238
     .line 239
-    aput-object v0, v1, v5
-
     .line 240
+    move-result-object v1
+
     .line 241
-    const-string v0, "X-FB-Stats-Contexts"
+    const-string v0, "Set-Cookie"
 
     .line 242
     .line 243
-    aput-object v0, v1, v2
+    aput-object v0, v1, v4
 
     .line 244
     .line 245
-    iput-object v1, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->combinableResponseHeaders:[Ljava/lang/String;
+    const-string v0, "Transfer-Encoding"
 
     .line 246
     .line 247
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableHttpPriorityTrackingService:Z
+    aput-object v0, v1, v3
 
     .line 248
     .line 249
-    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->createUnusedCopyOfTigonRequestInfoForOnBodyCallbacks:Z
+    const-string v0, "Vary"
 
     .line 250
     .line 251
-    return-void
+    aput-object v0, v1, v5
 
     .line 252
-    :cond_3
-    move v2, v3
-
     .line 253
-    if-nez v3, :cond_0
+    const-string/jumbo v0, "X-FB-Stats-Contexts"
 
     .line 254
     .line 255
-    const-string/jumbo v1, "kill_switch"
-
     .line 256
+    aput-object v0, v1, v2
+
     .line 257
     .line 258
-    goto/16 :goto_0
-.end method
+    iput-object v1, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->combinableResponseHeaders:[Ljava/lang/String;
 
-.method public static A00(ILjava/lang/String;I)V
-    .locals 2
+    .line 259
+    .line 260
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableHttpPriorityTrackingService:Z
 
-    .line 0
-    sget v1, LX/2eq;->A6T:I
+    .line 261
+    .line 262
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->useNewOrchestrationService:Z
 
-    .line 1
-    .line 2
-    invoke-static {}, LX/1zI;->A00()Landroid/content/Context;
+    .line 263
+    .line 264
+    iput-boolean v4, p0, Lcom/facebook/tigon/tigonliger/TigonLigerConfig;->enableShadowModeOnInitialPriority:Z
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    invoke-static {v0, v1}, LX/1zE;->A09(Landroid/content/Context;I)Ljava/lang/Object;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v0
-
-    .line 10
-    check-cast v0, LX/0Vp;
-
-    .line 11
-    .line 12
-    invoke-interface {v0, p1, p0}, LX/0Vp;->A6L(Ljava/lang/String;I)LX/0Wu;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    const-string/jumbo v1, "original_weight"
-
-    .line 17
-    .line 18
-    .line 19
-    check-cast v0, LX/357;
-
-    .line 20
-    .line 21
-    iget-object v0, v0, LX/357;->A00:Lcom/facebook/quicklog/EventBuilder;
-
-    .line 22
-    .line 23
-    invoke-interface {v0, v1, p2}, Lcom/facebook/quicklog/EventBuilder;->annotate(Ljava/lang/String;I)Lcom/facebook/quicklog/EventBuilder;
-
-    .line 24
-    .line 25
-    .line 26
-    invoke-interface {v0}, Lcom/facebook/quicklog/EventBuilder;->report()V
-
-    .line 27
-    .line 28
-    .line 29
+    .line 265
+    .line 266
     return-void
+
+    .line 267
+    :cond_3
+    move v2, v3
+
+    .line 268
+    if-nez v3, :cond_0
+
+    .line 269
+    .line 270
+    const-string/jumbo v1, "kill_switch"
+
+    .line 271
+    .line 272
+    .line 273
+    goto/16 :goto_0
 .end method

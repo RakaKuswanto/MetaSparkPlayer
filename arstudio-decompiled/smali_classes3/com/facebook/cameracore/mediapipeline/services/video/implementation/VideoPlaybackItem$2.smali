@@ -151,7 +151,7 @@
     .line 56
     .line 57
     :cond_2
-    iget-object v0, v2, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/554;
+    iget-object v0, v2, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/5a7;
 
     .line 58
     .line 59
@@ -159,7 +159,7 @@
 
     .line 60
     .line 61
-    invoke-virtual {v0}, LX/554;->A00()V
+    invoke-virtual {v0}, LX/5a7;->A00()V
 
     .line 62
     .line 63
@@ -168,7 +168,7 @@
 
     .line 65
     .line 66
-    iput-object v1, v0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/554;
+    iput-object v1, v0, Lcom/facebook/cameracore/mediapipeline/services/video/implementation/VideoPlaybackItem;->mTexture:LX/5a7;
 
     .line 67
     .line 68

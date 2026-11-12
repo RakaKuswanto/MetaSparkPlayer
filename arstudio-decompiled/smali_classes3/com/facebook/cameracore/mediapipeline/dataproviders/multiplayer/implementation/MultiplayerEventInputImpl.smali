@@ -3,11 +3,11 @@
 .source ""
 
 # interfaces
-.implements LX/5UC;
+.implements LX/6Ah;
 
 
 # instance fields
-.field public delegate:LX/5U9;
+.field public delegate:LX/67W;
 
 
 # direct methods
@@ -32,12 +32,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/5U9;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/67W;
 
     .line 5
     .line 6
@@ -45,7 +45,7 @@
 
     .line 7
     .line 8
-    invoke-interface {v0, p1}, LX/5U9;->queueMessage(Ljava/util/Map;)V
+    invoke-interface {v0, p1}, LX/67W;->queueMessage(Ljava/util/Map;)V
 
     .line 9
     .line 10
@@ -54,11 +54,11 @@
     return-void
 .end method
 
-.method public setDelegate(LX/5U9;)V
+.method public setDelegate(LX/67W;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/5U9;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/67W;
 
     .line 1
     .line 2
@@ -72,7 +72,7 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/5U9;
+    iput-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/67W;
 
     .line 2
     .line 3
@@ -86,12 +86,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/5U9;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/67W;
 
     .line 5
     .line 6
@@ -99,7 +99,7 @@
 
     .line 7
     .line 8
-    invoke-interface {v0, p1}, LX/5U9;->updateParticipants([Ljava/lang/String;)V
+    invoke-interface {v0, p1}, LX/67W;->updateParticipants([Ljava/lang/String;)V
 
     .line 9
     .line 10
@@ -115,12 +115,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/5U9;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/multiplayer/implementation/MultiplayerEventInputImpl;->delegate:LX/67W;
 
     .line 5
     .line 6
@@ -128,7 +128,7 @@
 
     .line 7
     .line 8
-    invoke-interface {v0, p1}, LX/5U9;->updateState(Ljava/util/Map;)V
+    invoke-interface {v0, p1}, LX/67W;->updateState(Ljava/util/Map;)V
 
     .line 9
     .line 10

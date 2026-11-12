@@ -1,13 +1,6 @@
-.class public final LX/3BA;
-.super Ljava/lang/Object;
+.class public final LX/3Ba;
+.super Ljava/lang/ThreadLocal;
 .source ""
-
-# interfaces
-.implements LX/0TB;
-
-
-# static fields
-.field public static A00:LX/3BA;
 
 
 # direct methods
@@ -15,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     .line 1
     .line 2
@@ -25,14 +18,17 @@
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 0
+.method public final bridge synthetic initialValue()Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    const/16 v0, 0x400
 
     .line 1
     .line 2
+    new-array v0, v0, [C
+
     .line 3
-    return-void
+    .line 4
+    return-object v0
 .end method

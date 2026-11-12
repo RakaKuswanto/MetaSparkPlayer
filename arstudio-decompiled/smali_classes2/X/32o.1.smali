@@ -1,664 +1,293 @@
-.class public final LX/32o;
-.super LX/339;
+.class public abstract LX/32o;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
-
-.field public final A02:LX/0Na;
-
-.field public final A03:LX/0Na;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
-
-.field public final A06:LX/0Na;
-
-.field public final A07:LX/0Na;
-
-.field public final A08:LX/0Na;
-
-
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public static A00(J)I
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, LX/339;-><init>()V
+    const/16 v0, 0x3e
 
     .line 1
     .line 2
+    ushr-long v4, p0, v0
+
     .line 3
-    sget v0, LX/2eq;->A5B:I
-
     .line 4
-    .line 5
-    const/4 v1, 0x0
+    const-wide/16 v2, 0x1
 
+    .line 5
     .line 6
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    and-long/2addr v4, v2
 
     .line 7
+    cmp-long v1, v4, v2
+
     .line 8
     .line 9
-    move-result-object v0
+    const/16 v0, 0x10
 
     .line 10
-    iput-object v0, p0, LX/32o;->A03:LX/0Na;
-
     .line 11
+    ushr-long/2addr p0, v0
+
     .line 12
-    sget v0, LX/2eq;->AXb:I
+    if-nez v1, :cond_0
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    const-wide v0, 0xffffffffL
 
     .line 15
     .line 16
     .line 17
-    move-result-object v0
-
     .line 18
-    iput-object v0, p0, LX/32o;->A06:LX/0Na;
-
     .line 19
+    and-long/2addr p0, v0
+
     .line 20
-    sget v0, LX/2eq;->AXa:I
+    long-to-int v0, p0
 
     .line 21
-    .line 22
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    and-int/lit16 v0, v0, 0xfff
 
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    iput-object v0, p0, LX/32o;->A07:LX/0Na;
-
-    .line 27
-    .line 28
-    invoke-static {}, LX/0Zq;->A02()LX/0Zq;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    iput-object v0, p0, LX/32o;->A04:LX/0Na;
-
-    .line 33
-    .line 34
-    sget v0, LX/2eq;->AVf:I
-
-    .line 35
-    .line 36
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 37
-    .line 38
-    .line 39
-    move-result-object v0
-
-    .line 40
-    iput-object v0, p0, LX/32o;->A02:LX/0Na;
-
-    .line 41
-    .line 42
-    sget v0, LX/2eq;->AXc:I
-
-    .line 43
-    .line 44
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
-
-    .line 45
-    .line 46
-    .line 47
-    move-result-object v0
-
-    .line 48
-    iput-object v0, p0, LX/32o;->A08:LX/0Na;
-
-    .line 49
-    .line 50
-    sget v0, LX/2eq;->A89:I
-
-    .line 51
-    .line 52
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 53
-    .line 54
-    .line 55
-    move-result-object v0
-
-    .line 56
-    iput-object v0, p0, LX/32o;->A01:LX/0Na;
-
-    .line 57
-    .line 58
-    sget v0, LX/2eq;->A4z:I
-
-    .line 59
-    .line 60
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
-
-    .line 61
-    .line 62
-    .line 63
-    move-result-object v0
-
-    .line 64
-    iput-object v0, p0, LX/32o;->A05:LX/0Na;
-
-    .line 65
-    .line 66
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 67
-    .line 68
-    .line 69
-    move-result-object v0
-
-    .line 70
-    iput-object v0, p0, LX/32o;->A00:LX/1zG;
-
-    .line 71
-    .line 72
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AfV()LX/33B;
-    .locals 13
-
-    .line 0
-    iget-object v0, p0, LX/32o;->A08:LX/0Na;
-
-    .line 1
-    .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    invoke-static {v0}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-wide v0
-
-    .line 10
-    iget-object v2, p0, LX/32o;->A01:LX/0Na;
-
-    .line 11
-    .line 12
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v4
-
-    .line 16
-    check-cast v4, LX/2lX;
-
-    .line 17
-    .line 18
-    iget-object v2, p0, LX/32o;->A05:LX/0Na;
-
-    .line 19
-    .line 20
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 21
     .line 22
     .line 23
-    move-result-object v3
+    return v0
 
     .line 24
-    check-cast v3, LX/2er;
-
-    .line 25
-    .line 26
-    monitor-enter v4
-
-    .line 27
-    :try_start_0
-    iget-boolean v2, v4, LX/2lX;->A01:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 28
-    .line 29
-    monitor-exit v4
-
-    .line 30
-    if-nez v2, :cond_0
-
-    .line 31
-    .line 32
-    invoke-virtual {v4}, LX/2lX;->A02()V
-
-    .line 33
-    .line 34
-    .line 35
     :cond_0
-    invoke-virtual {v3}, LX/2er;->APA()V
-
-    .line 36
-    .line 37
-    .line 38
-    :try_start_1
-    sget v2, LX/2eq;->AXi:I
-
-    .line 39
-    .line 40
-    invoke-static {v2}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v4
-
-    .line 44
-    check-cast v4, LX/32q;
-
-    .line 45
-    .line 46
-    iget-object v2, v4, LX/32q;->A02:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 47
-    .line 48
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    .line 49
-    .line 50
-    .line 51
-    move-result v2
-
-    .line 52
-    if-nez v2, :cond_1
-
-    .line 53
-    .line 54
-    const/4 v3, 0x1
-
-    .line 55
-    const-string v2, "MqttController"
-
-    .line 56
-    .line 57
-    invoke-virtual {v4, v2, v3}, LX/32q;->Aoo(Ljava/lang/String;Z)V
-
-    .line 58
-    .line 59
-    .line 60
-    :cond_1
-    sget v2, LX/2eq;->AXU:I
-
-    .line 61
-    .line 62
-    invoke-static {v2}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v9
-
-    .line 66
-    check-cast v9, LX/30I;
-
-    .line 67
-    .line 68
-    iget-object v2, p0, LX/32o;->A03:LX/0Na;
-
-    .line 69
-    .line 70
-    invoke-static {v2}, LX/0Yj;->A06(LX/0Na;)Landroid/content/Context;
-
-    .line 71
-    .line 72
-    .line 73
-    move-result-object v7
-
-    .line 74
-    iget-object v2, p0, LX/32o;->A07:LX/0Na;
-
-    .line 75
-    .line 76
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 77
-    .line 78
-    .line 79
-    move-result-object v11
-
-    .line 80
-    check-cast v11, LX/32m;
-
-    .line 81
-    .line 82
-    iget-object v2, p0, LX/32o;->A02:LX/0Na;
-
-    .line 83
-    .line 84
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 85
-    .line 86
-    .line 87
-    move-result-object v10
-
-    .line 88
-    check-cast v10, LX/2wV;
-
-    .line 89
-    .line 90
-    iget-object v2, p0, LX/32o;->A06:LX/0Na;
-
-    .line 91
-    .line 92
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 93
-    .line 94
-    .line 95
-    move-result-object v12
-
-    .line 96
-    check-cast v12, LX/0ax;
-
-    .line 97
-    .line 98
-    iget-object v2, p0, LX/32o;->A04:LX/0Na;
-
-    .line 99
-    .line 100
-    invoke-interface {v2}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 101
-    .line 102
-    .line 103
-    move-result-object v8
-
-    .line 104
-    check-cast v8, LX/0JA;
-
-    .line 105
-    .line 106
-    new-instance v6, LX/32y;
-
-    .line 107
-    .line 108
-    invoke-direct/range {v6 .. v12}, LX/32y;-><init>(Landroid/content/Context;LX/0JA;Lcom/facebook/mqtt/service/MqttSubscribeListener;LX/2wV;LX/32m;LX/0ax;)V
-
-    .line 109
-    .line 110
-    .line 111
-    monitor-enter v6
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_2
-
-    .line 112
-    :try_start_2
-    iget-object v2, v6, LX/32y;->A00:Lcom/facebook/mqtt/service/ipc/IMqttXplatService;
-
-    .line 113
-    .line 114
-    if-eqz v2, :cond_2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 115
-    .line 116
-    :try_start_3
-    invoke-interface {v2}, Lcom/facebook/mqtt/service/ipc/IMqttXplatService;->isConnectedOrConnecting()Z
-
-    .line 117
-    .line 118
-    .line 119
-    move-result v2
-
-    .line 120
-    if-eqz v2, :cond_2
-
-    .line 121
-    .line 122
-    goto :goto_1
-    :try_end_3
-    .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    .line 123
-    :catch_0
-    :try_start_4
-    move-exception v2
-
-    .line 124
-    invoke-static {v2}, LX/32y;->A00(Ljava/lang/RuntimeException;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    .line 125
-    .line 126
-    .line 127
-    :cond_2
-    :try_start_5
-    iget-object v5, v6, LX/32y;->A05:LX/32m;
-
-    .line 128
-    .line 129
-    iget-object v3, v6, LX/32y;->A01:Landroid/content/Context;
-
-    .line 130
-    .line 131
-    const-class v2, Lcom/facebook/mqtt/service/MqttServiceV2;
-
-    .line 132
-    .line 133
-    invoke-static {v3, v2}, LX/0Yj;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    .line 134
-    .line 135
-    .line 136
-    move-result-object v2
-
-    .line 137
-    iget-object v4, v6, LX/32y;->A04:LX/331;
-
-    .line 138
-    .line 139
-    invoke-virtual {v5, v3, v2, v4}, LX/32m;->A02(Landroid/content/Context;Landroid/content/Intent;Landroid/content/ServiceConnection;)LX/3Dk;
-
-    .line 140
-    .line 141
-    .line 142
-    move-result-object v3
-
-    .line 143
-    iget-boolean v2, v3, LX/3Dk;->A01:Z
-
-    .line 144
-    .line 145
-    if-eqz v2, :cond_6
-
-    .line 146
-    .line 147
-    iget-object v2, v3, LX/3Dk;->A00:Landroid/os/IBinder;
-
-    .line 148
-    .line 149
-    if-eqz v2, :cond_4
-
-    .line 150
-    .line 151
-    const-string v0, "com.facebook.mqtt.service.ipc.IMqttXplatService"
-
-    .line 152
-    .line 153
-    invoke-interface {v2, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    .line 154
-    .line 155
-    .line 156
-    move-result-object v1
-
-    .line 157
-    if-eqz v1, :cond_3
-
-    .line 158
-    .line 159
-    instance-of v0, v1, Lcom/facebook/mqtt/service/ipc/IMqttXplatService;
-
-    .line 160
-    .line 161
-    if-eqz v0, :cond_3
-
-    .line 162
-    .line 163
-    check-cast v1, Lcom/facebook/mqtt/service/ipc/IMqttXplatService;
-
-    .line 164
-    .line 165
-    :goto_0
-    iput-object v1, v6, LX/32y;->A00:Lcom/facebook/mqtt/service/ipc/IMqttXplatService;
-
-    .line 166
-    .line 167
-    goto :goto_1
-
-    .line 168
-    :cond_3
-    new-instance v1, Lcom/facebook/mqtt/service/ipc/IMqttXplatService$Stub$Proxy;
-
-    .line 169
-    .line 170
-    invoke-direct {v1, v2}, Lcom/facebook/mqtt/service/ipc/IMqttXplatService$Stub$Proxy;-><init>(Landroid/os/IBinder;)V
-
-    .line 171
-    .line 172
-    .line 173
-    goto :goto_0
-
-    .line 174
-    :cond_4
-    iget-object v3, v4, LX/331;->A00:Ljava/util/concurrent/CountDownLatch;
-
-    .line 175
-    .line 176
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    .line 177
-    .line 178
-    invoke-static {v3, v2, v0, v1}, LX/20y;->A01(Ljava/util/concurrent/CountDownLatch;Ljava/util/concurrent/TimeUnit;J)Z
-
-    .line 179
-    .line 180
-    .line 181
+    invoke-static {p0, p1}, LX/0X5;->A00(J)I
+
+    .line 25
+    .line 26
+    .line 27
     move-result v0
 
-    .line 182
-    if-nez v0, :cond_5
+    .line 28
+    return v0
+.end method
 
-    .line 183
-    .line 184
-    goto :goto_2
-    :try_end_5
-    .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_1
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+.method public static A01(IIIIZZZ)J
+    .locals 11
 
-    .line 185
-    :cond_5
-    :goto_1
-    :try_start_6
-    monitor-exit v6
+    .line 0
+    int-to-long v0, p3
 
-    .line 186
-    return-object v6
-    :try_end_6
-    .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_2
+    .line 1
+    const/16 v2, 0x36
 
-    .line 187
-    :catch_1
-    move-exception v0
+    .line 2
+    .line 3
+    shl-long/2addr v0, v2
 
-    .line 188
-    :try_start_7
-    invoke-static {v0}, LX/32y;->A00(Ljava/lang/RuntimeException;)V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+    .line 4
+    const-wide/16 v9, 0x0
 
-    .line 189
-    .line 190
-    .line 191
-    :cond_6
-    :goto_2
-    :try_start_8
-    monitor-exit v6
+    .line 5
+    .line 6
+    if-eqz p5, :cond_1
 
-    .line 192
-    const-class v1, LX/32o;
+    .line 7
+    .line 8
+    const-wide/high16 v7, 0x1000000000000000L
 
-    .line 193
-    .line 194
-    const-string v0, "Failed to bind to XplatService"
+    .line 9
+    .line 10
+    :goto_0
+    int-to-long v3, p0
 
-    .line 195
-    .line 196
-    invoke-static {v1, v0}, LX/0Jt;->A01(Ljava/lang/Class;Ljava/lang/String;)V
+    .line 11
+    const/16 v2, 0x30
 
-    .line 197
-    .line 198
-    .line 199
-    return-object v6
+    .line 12
+    .line 13
+    shl-long/2addr v3, v2
 
-    .line 200
-    :catchall_0
-    move-exception v0
+    .line 14
+    invoke-static/range {p6 .. p6}, LX/0X3;->A09(I)J
 
-    .line 201
-    monitor-exit v6
+    .line 15
+    .line 16
+    .line 17
+    move-result-wide v5
 
-    .line 202
-    throw v0
-    :try_end_8
-    .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_2
+    .line 18
+    const/16 v2, 0x3d
 
-    .line 203
-    :catch_2
-    move-exception v0
+    .line 19
+    .line 20
+    shl-long/2addr v5, v2
 
-    .line 204
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    .line 21
+    if-eqz p4, :cond_0
 
-    .line 205
-    .line 206
-    .line 207
-    move-result-object v0
+    .line 22
+    .line 23
+    const-wide/16 v9, 0x1
 
-    .line 208
-    throw v0
+    .line 24
+    .line 25
+    :cond_0
+    const/16 v2, 0x3e
 
-    .line 209
-    :catchall_1
-    move-exception v0
+    .line 26
+    .line 27
+    shl-long/2addr v9, v2
 
-    .line 210
-    monitor-exit v4
+    .line 28
+    or-long/2addr v9, v5
 
-    .line 211
-    throw v0
+    .line 29
+    or-long/2addr v9, v7
+
+    .line 30
+    or-long/2addr v0, v9
+
+    .line 31
+    or-long/2addr v0, v3
+
+    .line 32
+    int-to-long v4, p1
+
+    .line 33
+    const-wide v2, 0xffffffffL
+
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    and-long/2addr v4, v2
+
+    .line 39
+    const/16 v2, 0x10
+
+    .line 40
+    .line 41
+    shl-long/2addr v4, v2
+
+    .line 42
+    or-long/2addr v0, v4
+
+    .line 43
+    int-to-long v2, p2
+
+    .line 44
+    or-long/2addr v0, v2
+
+    .line 45
+    return-wide v0
+
+    .line 46
+    :cond_1
+    const-wide/16 v7, 0x0
+
+    .line 47
+    .line 48
+    goto :goto_0
+.end method
+
+.method public static A02([[JJ)J
+    .locals 11
+
+    .line 0
+    const/16 v10, 0x30
+
+    .line 1
+    .line 2
+    ushr-long v0, p1, v10
+
+    .line 3
+    .line 4
+    const-wide/16 v8, 0x3f
+
+    .line 5
+    .line 6
+    and-long/2addr v0, v8
+
+    .line 7
+    long-to-int v7, v0
+
+    .line 8
+    add-int/lit8 v1, v7, -0x1
+
+    .line 9
+    .line 10
+    invoke-static {p1, p2}, LX/0X5;->A00(J)I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v2
+
+    .line 14
+    const-wide/16 v5, 0x0
+
+    .line 15
+    .line 16
+    if-ltz v1, :cond_0
+
+    .line 17
+    .line 18
+    array-length v0, p0
+
+    .line 19
+    if-ge v1, v0, :cond_0
+
+    .line 20
+    .line 21
+    if-ltz v2, :cond_0
+
+    .line 22
+    .line 23
+    aget-object v1, p0, v1
+
+    .line 24
+    .line 25
+    if-eqz v1, :cond_0
+
+    .line 26
+    .line 27
+    array-length v0, v1
+
+    .line 28
+    if-ge v2, v0, :cond_0
+
+    .line 29
+    .line 30
+    aget-wide v3, v1, v2
+
+    .line 31
+    .line 32
+    cmp-long v0, v3, v5
+
+    .line 33
+    .line 34
+    if-eqz v0, :cond_1
+
+    .line 35
+    .line 36
+    ushr-long v1, v3, v10
+
+    .line 37
+    .line 38
+    and-long/2addr v1, v8
+
+    .line 39
+    long-to-int v0, v1
+
+    .line 40
+    if-eq v0, v7, :cond_1
+
+    .line 41
+    .line 42
+    :cond_0
+    return-wide v5
+
+    .line 43
+    :cond_1
+    return-wide v3
 .end method

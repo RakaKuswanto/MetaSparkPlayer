@@ -1,20 +1,13 @@
-.class public final LX/2cn;
+.class public final LX/2cN;
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:Ljava/util/HashSet;
-
-.field public final A01:LX/2Zh;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:[I
+# interfaces
+.implements LX/18h;
 
 
 # direct methods
-.method public constructor <init>(LX/2Zh;Ljava/lang/String;[I)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -23,17 +16,27 @@
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/2cn;->A02:Ljava/lang/String;
+    return-void
+.end method
 
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/2cn;->A01:LX/2Zh;
 
-    .line 6
-    .line 7
-    iput-object p3, p0, LX/2cn;->A03:[I
+# virtual methods
+.method public final ACC()I
+    .locals 1
 
-    .line 8
-    .line 9
+    const/16 v0, 0x107a
+
+    return v0
+.end method
+
+.method public final AUc(I)V
+    .locals 0
+
+    .line 0
+    invoke-static {}, LX/0X4;->A0x()V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

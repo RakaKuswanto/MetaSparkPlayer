@@ -2,243 +2,268 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static A00:I = 0x10e
 
-# instance fields
-.field public final synthetic A00:LX/4LP;
+.field public static A01:Ljava/lang/String; = "/sdcard/e2e/media/fineYoungGentleman.jpg"
 
-.field public final synthetic A01:Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;
+.field public static A02:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public constructor <init>(LX/4LP;Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4J3;->A00:LX/4LP;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/4J3;->A01:Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;
-
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public static A00()Z
     .locals 5
 
     .line 0
-    iget-object v3, p0, LX/4J3;->A00:LX/4LP;
+    const-class v4, LX/4J3;
 
     .line 1
     .line 2
-    iget-object v1, v3, LX/4L4;->A03:LX/4L2;
+    monitor-enter v4
 
     .line 3
+    :try_start_0
+    sget-object v0, LX/4J3;->A02:Ljava/lang/Boolean;
+
     .line 4
-    const-string v0, "CLICK_EDIT_BUTTON_IN_SAVE_DIALOG"
-
     .line 5
+    if-nez v0, :cond_1
+
     .line 6
-    invoke-static {v1, v0}, LX/4L2;->A0B(LX/4L2;Ljava/lang/String;)LX/4Lq;
-
     .line 7
-    .line 8
-    .line 9
-    move-result-object v1
+    const/4 v3, 0x0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
+    :try_start_1
+    const-string v0, "com.facebook.endtoend.EndToEnd"
+
+    .line 9
     .line 10
-    iget-object v0, v3, LX/4L4;->A08:Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     .line 11
     .line 12
-    iput-object v0, v1, LX/4Lq;->A07:Ljava/lang/String;
-
     .line 13
+    move-result-object v2
+
     .line 14
-    invoke-virtual {v1}, LX/4Lq;->A00()LX/4Ls;
+    const-string v1, "isRunningEndToEndTest"
 
     .line 15
     .line 16
-    .line 17
-    move-result-object v1
+    new-array v0, v3, [Ljava/lang/Class;
 
+    .line 17
     .line 18
-    iget-object v0, v3, LX/4L4;->A03:LX/4L2;
+    invoke-virtual {v2, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     .line 19
     .line 20
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 21
+    move-result-object v1
+
     .line 22
+    const/4 v0, 0x0
+
     .line 23
-    iget-object v0, v3, LX/4L4;->A03:LX/4L2;
+    invoke-static {v0, v1}, LX/0X6;->A0k(Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
 
     .line 24
     .line 25
-    invoke-virtual {v0}, LX/4L2;->A0D()Landroid/os/Bundle;
-
     .line 26
-    .line 27
-    .line 28
     move-result-object v0
 
+    .line 27
+    check-cast v0, Ljava/lang/Boolean;
+
+    .line 28
     .line 29
-    invoke-static {v0, v1}, LX/4LK;->A06(Landroid/os/Bundle;LX/4Ls;)V
+    if-eqz v0, :cond_0
 
     .line 30
     .line 31
-    .line 32
-    invoke-static {}, LX/0Yj;->A07()Landroid/content/Intent;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
+    .line 32
     .line 33
     .line 34
+    move-result v0
+
     .line 35
-    move-result-object v4
+    if-eqz v0, :cond_0
 
     .line 36
-    invoke-virtual {v3}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
     .line 37
+    sget-object v0, LX/4J3;->A01:Ljava/lang/String;
+
     .line 38
     .line 39
-    move-result-object v1
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 40
-    const-string v0, "com.facebook.onsitesignals.autofill.AutofillFullScreenActivity"
-
     .line 41
     .line 42
-    invoke-virtual {v4, v1, v0}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+    move-result-object v0
 
     .line 43
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
     .line 44
     .line 45
-    const-string v1, "activity_resource"
-
     .line 46
+    move-result v0
+
     .line 47
-    const-string v0, "edit_autofill"
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 48
     .line 49
-    invoke-virtual {v4, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
     .line 50
+    move-result-object v0
+
     .line 51
+    goto :goto_0
+
     .line 52
-    invoke-static {v3}, LX/4Jb;->A0B(Landroidx/fragment/app/Fragment;)Z
+    :cond_0
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 53
     .line 54
     .line 55
-    move-result v1
+    move-result-object v0
 
     .line 56
-    const-string v0, "BrowserLiteIntent.EXTRA_ENABLE_DARK_MODE"
+    goto :goto_0
+    :try_end_1
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 57
-    .line 58
-    invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    :catch_0
+    :try_start_2
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 58
     .line 59
     .line 60
+    move-result-object v0
+
     .line 61
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    :goto_0
+    sput-object v0, LX/4J3;->A02:Ljava/lang/Boolean;
 
     .line 62
     .line 63
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
     .line 64
-    move-result-object v2
-
     .line 65
-    iget-object v0, p0, LX/4J3;->A01:Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;
-
     .line 66
+    move-result v0
+
     .line 67
-    invoke-virtual {v0}, Lcom/facebook/browser/lite/extensions/autofill/model/AutofillData;->A02()Lorg/json/JSONObject;
+    monitor-exit v4
 
     .line 68
+    return v0
+
     .line 69
+    :catchall_0
+    move-exception v0
+
     .line 70
-    move-result-object v0
+    monitor-exit v4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 71
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    throw v0
+.end method
 
-    .line 72
-    .line 73
-    .line 74
-    move-result-object v1
+.method public static A01()[B
+    .locals 4
 
-    .line 75
-    const-string v0, "BrowserLiteIntent.EXTRA_AUTOFILL_ENTRY_JSON_STRING"
+    .line 0
+    :try_start_0
+    sget-object v0, LX/4J3;->A01:Ljava/lang/String;
 
-    .line 76
-    .line 77
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
-    .line 78
-    .line 79
-    .line 80
-    const-string v1, "BrowserLiteIntent.EXTRA_AUTOFILL_EDIT_AUTOFILL_ENTRY_REQUEST_SOURCE"
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 81
-    .line 82
-    const-string v0, "save_autofill_request_fragment"
+    .line 6
+    new-instance v3, Ljava/io/FileInputStream;
 
-    .line 83
-    .line 84
-    invoke-virtual {v2, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    .line 7
+    .line 8
+    invoke-direct {v3, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 85
-    .line 86
-    .line 87
-    invoke-virtual {v4, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Ljava/io/File;->length()J
 
-    .line 88
-    .line 89
-    .line 90
-    invoke-virtual {v3}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    .line 12
+    .line 13
+    .line 14
+    move-result-wide v1
 
-    .line 91
-    .line 92
-    .line 93
-    move-result-object v1
+    .line 15
+    long-to-int v0, v1
 
-    .line 94
-    const/16 v0, 0x3e8
+    .line 16
+    new-array v0, v0, [B
 
-    .line 95
-    .line 96
-    invoke-static {v1, v4, v0}, LX/0AP;->A00(Landroid/app/Activity;Landroid/content/Intent;I)V
+    .line 17
+    .line 18
+    invoke-virtual {v3, v0}, Ljava/io/InputStream;->read([B)I
 
-    .line 97
-    .line 98
-    .line 99
-    const/4 v0, 0x0
+    .line 19
+    .line 20
+    .line 21
+    return-object v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 100
-    iput-object v0, v3, LX/4L4;->A02:Landroid/content/DialogInterface$OnDismissListener;
+    .line 22
+    :catch_0
+    move-exception v0
 
-    .line 101
-    .line 102
-    invoke-virtual {v3}, LX/02T;->A0E()V
+    .line 23
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
-    .line 103
-    .line 104
-    .line 105
-    return-void
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    throw v0
 .end method

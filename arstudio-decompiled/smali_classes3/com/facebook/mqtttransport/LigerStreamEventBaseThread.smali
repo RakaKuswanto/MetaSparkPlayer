@@ -16,7 +16,7 @@
     .locals 2
 
     .line 0
-    const-class v1, LX/67F;
+    const-class v1, LX/6GQ;
 
     .line 1
     .line 2
@@ -24,7 +24,7 @@
 
     .line 3
     :try_start_0
-    sget-boolean v0, LX/67F;->A00:Z
+    sget-boolean v0, LX/6GQ;->A00:Z
 
     .line 4
     .line 5
@@ -36,7 +36,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 10
     .line 11
@@ -44,7 +44,7 @@
     const/4 v0, 0x1
 
     .line 13
-    sput-boolean v0, LX/67F;->A00:Z
+    sput-boolean v0, LX/6GQ;->A00:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -141,11 +141,11 @@
 
     .line 21
     .line 22
-    new-instance v1, LX/67E;
+    new-instance v1, LX/6GP;
 
     .line 23
     .line 24
-    invoke-direct {v1, v2, p0, p1}, LX/67E;-><init>(Lcom/facebook/mqtttransport/LigerStreamEventBaseThread;J)V
+    invoke-direct {v1, v2, p0, p1}, LX/6GP;-><init>(Lcom/facebook/mqtttransport/LigerStreamEventBaseThread;J)V
 
     .line 25
     .line 26

@@ -2,87 +2,171 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentActivity$1"
-
 
 # instance fields
-.field public final synthetic A00:Landroidx/activity/ComponentActivity;
+.field public final A00:F
+
+.field public final A01:F
+
+.field public final A02:F
+
+.field public final A03:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/activity/ComponentActivity;)V
-    .locals 0
+.method public constructor <init>(Landroid/window/BackEvent;)V
+    .locals 4
 
     .line 0
-    iput-object p1, p0, LX/005;->A00:Landroidx/activity/ComponentActivity;
+    invoke-static {p1}, LX/003;->A01(Landroid/window/BackEvent;)F
 
     .line 1
     .line 2
+    .line 3
+    move-result v3
+
+    .line 4
+    invoke-static {p1}, LX/003;->A02(Landroid/window/BackEvent;)F
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v2
+
+    .line 8
+    invoke-static {p1}, LX/003;->A00(Landroid/window/BackEvent;)F
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v1
+
+    .line 12
+    invoke-static {p1}, LX/003;->A03(Landroid/window/BackEvent;)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
+    .line 17
+    .line 18
+    .line 19
+    iput v3, p0, LX/005;->A01:F
+
+    .line 20
+    .line 21
+    iput v2, p0, LX/005;->A02:F
+
+    .line 22
+    .line 23
+    iput v1, p0, LX/005;->A00:F
+
+    .line 24
+    .line 25
+    iput v0, p0, LX/005;->A03:I
+
+    .line 26
+    .line 27
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     .line 0
-    :try_start_0
-    iget-object v0, p0, LX/005;->A00:Landroidx/activity/ComponentActivity;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
-    invoke-static {v0}, Landroidx/activity/ComponentActivity;->A02(Landroidx/activity/ComponentActivity;)V
-
     .line 3
-    .line 4
-    .line 5
-    return-void
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 6
-    :catch_0
-    move-exception v2
-
-    .line 7
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    .line 8
-    .line 9
-    .line 10
     move-result-object v1
 
+    .line 4
+    const-string v0, "BackEventCompat{touchX="
+
+    .line 5
+    .line 6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    iget v0, p0, LX/005;->A01:F
+
+    .line 10
     .line 11
-    const-string v0, "Can not perform this action after onSaveInstanceState"
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     .line 12
     .line 13
-    invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
     .line 14
+    const-string v0, ", touchY="
+
     .line 15
     .line 16
-    move-result v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 17
-    if-nez v0, :cond_0
-
     .line 18
     .line 19
-    throw v2
+    iget v0, p0, LX/005;->A02:F
 
     .line 20
-    :cond_0
-    return-void
+    .line 21
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 22
+    .line 23
+    .line 24
+    const-string v0, ", progress="
+
+    .line 25
+    .line 26
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 27
+    .line 28
+    .line 29
+    iget v0, p0, LX/005;->A00:F
+
+    .line 30
+    .line 31
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 32
+    .line 33
+    .line 34
+    const-string v0, ", swipeEdge="
+
+    .line 35
+    .line 36
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 37
+    .line 38
+    .line 39
+    iget v0, p0, LX/005;->A03:I
+
+    .line 40
+    .line 41
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-static {v1}, LX/001;->A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v0
+
+    .line 48
+    return-object v0
 .end method

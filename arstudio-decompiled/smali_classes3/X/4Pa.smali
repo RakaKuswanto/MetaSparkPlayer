@@ -1,3 +1,3 @@
-.class public interface abstract LX/4Pa;
-.super Ljava/lang/Object;
+.class public abstract LX/4Pa;
+.super Landroid/widget/LinearLayout;
 .source ""

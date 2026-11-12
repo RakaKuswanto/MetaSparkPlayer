@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/3Ak;
+.implements LX/2Su;
 
 
 # direct methods
@@ -21,20 +21,29 @@
 
 
 # virtual methods
-.method public final AAN(Lcom/facebook/bugreporter/core/BugReport;Ljava/lang/Exception;)V
-    .locals 0
+.method public final AWS(Ljava/io/IOException;)V
+    .locals 2
 
+    .line 0
+    const-string v1, "InProcessUploadScheduler"
+
+    .line 1
+    .line 2
+    const-string v0, "Failed to upload batch, it will not be retried"
+
+    .line 3
+    .line 4
+    invoke-static {v1, v0, p1}, LX/0Il;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
-.method public final AAO(Lcom/facebook/bugreporter/core/BugReport;Ljava/lang/String;I)V
+.method public final Abi()V
     .locals 0
 
-    return-void
-.end method
-
-.method public final ApT(Lcom/facebook/bugreporter/core/BugReport;Ljava/lang/String;)V
-    .locals 0
-
+    .line 0
     return-void
 .end method

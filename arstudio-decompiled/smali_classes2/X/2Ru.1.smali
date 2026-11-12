@@ -1,82 +1,84 @@
 .class public final LX/2Ru;
-.super LX/2Rt;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/util/Iterator;
 
-# instance fields
-.field public final A00:I
 
-.field public final A01:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Z
-
-.field public final A04:Ljava/lang/String;
+# static fields
+.field public static final A00:LX/2Ru;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;Lcom/facebook/stash/core/FileStash;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p2}, LX/2Rt;-><init>(Lcom/facebook/stash/core/FileStash;)V
+    new-instance v0, LX/2Ru;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p3, p0, LX/2Ru;->A02:Ljava/lang/String;
+    invoke-direct {v0}, LX/2Ru;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    iput-object p1, p0, LX/2Ru;->A01:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
+    sput-object v0, LX/2Ru;->A00:LX/2Ru;
 
     .line 6
     .line 7
-    iput-boolean p5, p0, LX/2Ru;->A03:Z
-
-    .line 8
-    .line 9
-    invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
-
-    .line 10
-    .line 11
-    .line 12
-    move-result v0
-
-    .line 13
-    iput v0, p0, LX/2Ru;->A00:I
-
-    .line 14
-    .line 15
-    iput-object p4, p0, LX/2Ru;->A04:Ljava/lang/String;
-
-    .line 16
-    .line 17
     return-void
 .end method
 
-.method public static A02(LX/2Ru;II)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    iget-object v1, p0, LX/2Ru;->A04:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    if-eqz v1, :cond_0
-
     .line 3
-    .line 4
-    iget-object v0, p0, LX/2Ru;->A01:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
-
-    .line 5
-    .line 6
-    invoke-interface {v0, p2, p1, v1}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerLinkPivot(IILjava/lang/String;)V
-
-    .line 7
-    .line 8
-    .line 9
-    :cond_0
     return-void
+.end method
+
+
+# virtual methods
+.method public final hasNext()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/0X7;->A0h()Ljava/util/NoSuchElementException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method

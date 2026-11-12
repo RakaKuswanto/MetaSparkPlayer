@@ -3,92 +3,41 @@
 .source ""
 
 
+# static fields
+.field public static final A00:LX/0Vw;
+
+
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0x4f8
+    new-instance v0, LX/0Vw;
 
-    if-eq p0, v0, :cond_8
+    invoke-direct {v0}, LX/0Vw;-><init>()V
 
-    const/16 v0, 0x584
+    sput-object v0, LX/0Vw;->A00:LX/0Vw;
 
-    if-eq p0, v0, :cond_7
+    return-void
+.end method
 
-    const/16 v0, 0xbcc
+.method public constructor <init>()V
+    .locals 0
 
-    if-eq p0, v0, :cond_6
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x19a6
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    if-eq p0, v0, :cond_5
 
-    const/16 v0, 0x1ab1
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x1d87
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x2b42
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x3424
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x3b54
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "AUGMENT_GRAPH_GET_AUGMENT_GROUP"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "AUGMENT_GRAPH_GET_AUGMENT_GROUPS"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "AUGMENT_GRAPH_DESTROY_AUGMENT_GROUP"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "AUGMENT_GRAPH_REMOVE_AUGMENT_FROM_GROUP"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "AUGMENT_GRAPH_CREATE_AUGMENT_GROUP"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "AUGMENT_GRAPH_UPDATE_AUGMENT_GROUP_AUGMENT_PLACEMENT"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "AUGMENT_GRAPH_FELIOS_GRAPHQL_REQUEST"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "AUGMENT_GRAPH_ADD_AUGMENT_TO_GROUP"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "AUGMENT_GRAPH_GET_OR_CREATE_AUGMENT_GROUP_WITH_DOOR_ID"
+    const-string v0, "X.0Vw"
 
     return-object v0
 .end method

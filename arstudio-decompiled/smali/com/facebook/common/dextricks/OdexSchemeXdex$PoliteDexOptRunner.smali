@@ -133,7 +133,7 @@
     array-length v0, v1
 
     .line 28
-    invoke-static {p1, v1, v0}, LX/0HL;->A04(Ljava/io/InputStream;[BI)I
+    invoke-static {p1, v1, v0}, LX/0GR;->A04(Ljava/io/InputStream;[BI)I
 
     .line 29
     .line 30
@@ -194,7 +194,7 @@
 
     .line 57
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 58
     :try_start_1
@@ -205,12 +205,23 @@
     .line 59
     .line 60
     .line 61
+    throw v1
+
+    .line 62
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 63
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 64
+    .line 65
+    .line 66
+    throw v1
 .end method
 
 .method public startSubprocess(Lcom/facebook/forker/ProcessBuilder;)Lcom/facebook/forker/Process;
-    .locals 2
+    .locals 3
 
     .line 0
     iget-object v0, p0, Lcom/facebook/common/dextricks/OdexSchemeXdex$PoliteDexOptRunner;->mOptimizationSession:Lcom/facebook/common/dextricks/DexStore$OptimizationSession;
@@ -225,11 +236,11 @@
 
     .line 5
     .line 6
-    new-instance v1, Lcom/facebook/common/dextricks/Prio$With;
+    new-instance v2, Lcom/facebook/common/dextricks/Prio$With;
 
     .line 7
     .line 8
-    invoke-direct {v1, v0}, Lcom/facebook/common/dextricks/Prio$With;-><init>(Lcom/facebook/common/dextricks/Prio;)V
+    invoke-direct {v2, v0}, Lcom/facebook/common/dextricks/Prio$With;-><init>(Lcom/facebook/common/dextricks/Prio;)V
 
     .line 9
     .line 10
@@ -245,7 +256,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 15
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/Prio$With;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/Prio$With;->close()V
 
     .line 16
     .line 17
@@ -254,19 +265,30 @@
 
     .line 19
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 20
     :try_start_1
-    invoke-virtual {v1}, Lcom/facebook/common/dextricks/Prio$With;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/dextricks/Prio$With;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 21
     .line 22
     .line 23
+    throw v1
+
+    .line 24
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 25
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 26
+    .line 27
+    .line 28
+    throw v1
 .end method
 
 .method public waitForDexOpt(Lcom/facebook/forker/Process;I)V

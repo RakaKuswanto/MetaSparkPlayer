@@ -1,4 +1,4 @@
-.class public final synthetic LX/5vh;
+.class public final LX/5vH;
 .super Ljava/lang/Object;
 .source ""
 
@@ -7,21 +7,27 @@
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "DefaultDrmSessionManager$ReferenceCountListenerImpl$$ExternalSyntheticLambda0"
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "InputFramesProvider$4"
 
 
 # instance fields
-.field public final synthetic A00:LX/5vT;
+.field public final synthetic A00:LX/5v1;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5vT;)V
+.method public constructor <init>(LX/5v1;)V
     .locals 0
 
+    .line 0
+    iput-object p1, p0, LX/5vH;->A00:LX/5v1;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/5vh;->A00:LX/5vT;
-
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method
 
@@ -30,9 +36,15 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, LX/5vh;->A00:LX/5vT;
+    .line 0
+    iget-object v0, p0, LX/5vH;->A00:LX/5v1;
 
-    invoke-static {v0}, LX/5vd;->A00(LX/5vT;)V
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/5v1;->A05(LX/5v1;)V
 
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

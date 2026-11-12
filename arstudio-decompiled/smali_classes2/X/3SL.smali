@@ -1,130 +1,164 @@
 .class public final LX/3SL;
-.super Ljava/lang/Object;
+.super LX/3SM;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/proxygen/AnalyticsLogger;
+
+# static fields
+.field public static final A01:LX/3SL;
+
+.field public static final A02:LX/3SL;
 
 
 # instance fields
-.field public A00:LX/0Vd;
-
-.field public final A01:LX/0Uj;
-
-.field public final A02:LX/0U3;
-
-.field public final A03:LX/0Mk;
+.field public final A00:Z
 
 
 # direct methods
-.method public constructor <init>(LX/0Uj;LX/0U3;LX/0Mk;)V
+.method public static constructor <clinit>()V
+    .locals 2
+
+    .line 0
+    const/4 v1, 0x1
+
+    .line 1
+    new-instance v0, LX/3SL;
+
+    .line 2
+    .line 3
+    invoke-direct {v0, v1}, LX/3SL;-><init>(Z)V
+
+    .line 4
+    .line 5
+    .line 6
+    sput-object v0, LX/3SL;->A02:LX/3SL;
+
+    .line 7
+    .line 8
+    const/4 v1, 0x0
+
+    .line 9
+    new-instance v0, LX/3SL;
+
+    .line 10
+    .line 11
+    invoke-direct {v0, v1}, LX/3SL;-><init>(Z)V
+
+    .line 12
+    .line 13
+    .line 14
+    sput-object v0, LX/3SL;->A01:LX/3SL;
+
+    .line 15
+    .line 16
+    return-void
+.end method
+
+.method public constructor <init>(Z)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/3SM;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3SL;->A01:LX/0Uj;
+    iput-boolean p1, p0, LX/3SL;->A00:Z
 
     .line 4
     .line 5
-    iput-object p3, p0, LX/3SL;->A03:LX/0Mk;
-
-    .line 6
-    .line 7
-    iput-object p2, p0, LX/3SL;->A02:LX/0U3;
-
-    .line 8
-    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final reportEvent(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public final A3s()LX/3ns;
+    .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, LX/3SL;->A00:Z
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
+    if-eqz v0, :cond_0
 
+    .line 3
     .line 4
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
+    sget-object v0, LX/3ns;->VALUE_TRUE:LX/3ns;
 
     .line 5
     .line 6
+    return-object v0
+
     .line 7
-    move-result v0
+    :cond_0
+    sget-object v0, LX/3ns;->VALUE_FALSE:LX/3ns;
 
     .line 8
-    if-lez v0, :cond_0
-
     .line 9
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 0
+    const/4 v3, 0x1
+
+    .line 1
+    if-eq p1, p0, :cond_0
+
+    .line 2
+    .line 3
+    const/4 v2, 0x0
+
+    .line 4
+    if-eqz p1, :cond_1
+
+    .line 5
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
     .line 10
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 11
     .line 12
     .line 13
-    move-result-object v1
+    move-result-object v0
 
     .line 14
-    const-string/jumbo v0, "settings"
+    if-ne v1, v0, :cond_1
 
     .line 15
     .line 16
-    .line 17
-    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v1, p0, LX/3SL;->A00:Z
 
+    .line 17
     .line 18
+    check-cast p1, LX/3SL;
+
     .line 19
     .line 20
-    :cond_0
-    iget-object v0, p0, LX/3SL;->A00:LX/0Vd;
+    iget-boolean v0, p1, LX/3SL;->A00:Z
 
     .line 21
     .line 22
-    if-eqz v0, :cond_1
+    if-eq v1, v0, :cond_0
 
     .line 23
     .line 24
-    iget-object v0, v0, LX/0Vd;->A02:LX/0Ve;
+    const/4 v3, 0x0
 
     .line 25
+    :cond_0
+    return v3
+
     .line 26
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v1
-
-    .line 30
-    const-string/jumbo v0, "network_type"
-
-    .line 31
-    .line 32
-    .line 33
-    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 34
-    .line 35
-    .line 36
     :cond_1
-    iget-object v0, p0, LX/3SL;->A01:LX/0Uj;
-
-    .line 37
-    .line 38
-    invoke-virtual {v0, p2, p1}, LX/0Uj;->A0I(Ljava/lang/String;Ljava/util/Map;)V
-
-    .line 39
-    .line 40
-    .line 41
-    return-void
+    return v2
 .end method

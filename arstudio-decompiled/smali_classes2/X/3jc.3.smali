@@ -1,238 +1,306 @@
-.class public final LX/3jc;
-.super Ljava/lang/Object;
+.class public final enum LX/3jc;
+.super Ljava/lang/Enum;
 .source ""
 
 
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/3jc;
+
+.field public static final enum LIVE_SHOPPING_METADATA:LX/3jc;
+
+.field public static final enum SEARCH_RESULTS:LX/3jc;
+
+.field public static final enum SEARCH_TYPEAHEAD:LX/3jc;
+
+.field public static final enum SHOPS_TAB_REFERRAL_CODE:LX/3jc;
+
+.field public static final enum VIDEO_ATTRIBUTION:LX/3jc;
+
+.field public static final enum WATCH_NS_EXPLORE:LX/3jc;
+
+
+# instance fields
+.field public final value:Ljava/lang/String;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static final synthetic $values()[LX/3jc;
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x6
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+    new-array v2, v0, [LX/3jc;
+
+    sget-object v1, LX/3jc;->LIVE_SHOPPING_METADATA:LX/3jc;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3jc;->SEARCH_TYPEAHEAD:LX/3jc;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3jc;->SEARCH_RESULTS:LX/3jc;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3jc;->SHOPS_TAB_REFERRAL_CODE:LX/3jc;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3jc;->VIDEO_ATTRIBUTION:LX/3jc;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/3jc;->WATCH_NS_EXPLORE:LX/3jc;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-.method public static final synthetic A00(LX/3jc;Ljava/lang/String;LX/0Cl;)Ljava/security/KeyPair;
-    .locals 5
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 0
-    const/16 v4, 0xc
+    const-string v3, "LIVE_SHOPPING_METADATA"
 
     .line 1
     .line 2
-    monitor-enter p0
+    const/4 v2, 0x0
 
     .line 3
-    :try_start_0
-    const-string v1, "RSA"
+    const-string/jumbo v1, "live_shopping_metadata"
 
     .line 4
     .line 5
-    const-string v0, "AndroidKeyStore"
-
     .line 6
-    .line 7
-    invoke-static {v1, v0}, Ljava/security/KeyPairGenerator;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/KeyPairGenerator;
+    new-instance v0, LX/3jc;
 
+    .line 7
     .line 8
+    invoke-direct {v0, v3, v2, v1}, LX/3jc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 9
     .line 10
-    move-result-object v3
-
     .line 11
-    invoke-static {v3}, LX/0PS;->A03(Ljava/lang/Object;)V
+    sput-object v0, LX/3jc;->LIVE_SHOPPING_METADATA:LX/3jc;
 
     .line 12
     .line 13
-    .line 14
-    sget-object v2, LX/3je;->A01:LX/0tD;
+    const-string v3, "SEARCH_TYPEAHEAD"
 
+    .line 14
     .line 15
+    const/4 v2, 0x1
+
     .line 16
-    invoke-static {v2}, LX/0Yi;->A0j(LX/0tD;)Ljava/lang/Object;
+    const-string/jumbo v1, "search_typeahead_sid"
 
     .line 17
     .line 18
     .line 19
-    move-result-object v0
+    new-instance v0, LX/3jc;
 
     .line 20
-    check-cast v0, Ljava/security/KeyStore;
-
     .line 21
-    .line 22
-    invoke-virtual {v0, p1}, Ljava/security/KeyStore;->containsAlias(Ljava/lang/String;)Z
+    invoke-direct {v0, v3, v2, v1}, LX/3jc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 22
     .line 23
     .line 24
-    .line 25
-    move-result v0
+    sput-object v0, LX/3jc;->SEARCH_TYPEAHEAD:LX/3jc;
 
+    .line 25
     .line 26
-    if-nez v0, :cond_1
+    const-string v3, "SEARCH_RESULTS"
 
     .line 27
     .line 28
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v2, 0x2
 
     .line 29
-    .line 30
-    const/16 v0, 0x17
+    const-string/jumbo v1, "search_results_session_id"
 
+    .line 30
     .line 31
     .line 32
-    if-lt v1, v0, :cond_0
+    new-instance v0, LX/3jc;
 
     .line 33
     .line 34
-    new-instance v1, Landroid/security/keystore/KeyGenParameterSpec$Builder;
+    invoke-direct {v0, v3, v2, v1}, LX/3jc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 35
     .line 36
-    invoke-direct {v1, p1, v4}, Landroid/security/keystore/KeyGenParameterSpec$Builder;-><init>(Ljava/lang/String;I)V
-
     .line 37
+    sput-object v0, LX/3jc;->SEARCH_RESULTS:LX/3jc;
+
     .line 38
     .line 39
-    invoke-interface {p2, v1}, LX/0Cl;->APg(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v3, "SHOPS_TAB_REFERRAL_CODE"
 
     .line 40
     .line 41
+    const/4 v2, 0x3
+
     .line 42
-    const/16 v0, 0x800
+    const-string/jumbo v1, "shops_tab_referral_code"
 
     .line 43
     .line 44
-    invoke-virtual {v1, v0}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setKeySize(I)Landroid/security/keystore/KeyGenParameterSpec$Builder;
-
     .line 45
+    new-instance v0, LX/3jc;
+
     .line 46
     .line 47
-    invoke-virtual {v1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->build()Landroid/security/keystore/KeyGenParameterSpec;
+    invoke-direct {v0, v3, v2, v1}, LX/3jc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 48
     .line 49
     .line 50
-    move-result-object v0
+    sput-object v0, LX/3jc;->SHOPS_TAB_REFERRAL_CODE:LX/3jc;
 
     .line 51
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 52
+    const-string v3, "VIDEO_ATTRIBUTION"
+
     .line 53
     .line 54
-    check-cast v0, Ljava/security/spec/AlgorithmParameterSpec;
+    const/4 v2, 0x4
 
     .line 55
-    .line 56
-    invoke-virtual {v3, v0}, Ljava/security/KeyPairGenerator;->initialize(Ljava/security/spec/AlgorithmParameterSpec;)V
+    const-string/jumbo v1, "matched_video_id"
 
+    .line 56
     .line 57
     .line 58
-    .line 59
-    :cond_0
-    invoke-virtual {v3}, Ljava/security/KeyPairGeneratorSpi;->generateKeyPair()Ljava/security/KeyPair;
+    new-instance v0, LX/3jc;
 
+    .line 59
     .line 60
+    invoke-direct {v0, v3, v2, v1}, LX/3jc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 61
     .line 62
-    move-result-object v0
-
     .line 63
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    sput-object v0, LX/3jc;->VIDEO_ATTRIBUTION:LX/3jc;
 
     .line 64
     .line 65
+    const-string v3, "WATCH_NS_EXPLORE"
+
     .line 66
-    :cond_1
-    invoke-static {v2}, LX/0Yi;->A0j(LX/0tD;)Ljava/lang/Object;
-
     .line 67
+    const/4 v2, 0x5
+
     .line 68
+    const-string/jumbo v1, "watch_ns_explore_sid"
+
     .line 69
-    move-result-object v1
-
     .line 70
-    check-cast v1, Ljava/security/KeyStore;
-
     .line 71
-    .line 72
-    invoke-virtual {v1, p1}, Ljava/security/KeyStore;->getCertificate(Ljava/lang/String;)Ljava/security/cert/Certificate;
+    new-instance v0, LX/3jc;
 
+    .line 72
     .line 73
+    invoke-direct {v0, v3, v2, v1}, LX/3jc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 74
     .line 75
-    move-result-object v0
-
     .line 76
-    invoke-virtual {v0}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+    sput-object v0, LX/3jc;->WATCH_NS_EXPLORE:LX/3jc;
 
     .line 77
     .line 78
+    invoke-static {}, LX/3jc;->$values()[LX/3jc;
+
     .line 79
-    move-result-object v2
-
     .line 80
-    const/4 v0, 0x0
-
     .line 81
-    invoke-virtual {v1, p1, v0}, Ljava/security/KeyStore;->getEntry(Ljava/lang/String;Ljava/security/KeyStore$ProtectionParameter;)Ljava/security/KeyStore$Entry;
+    move-result-object v0
 
     .line 82
+    sput-object v0, LX/3jc;->$VALUES:[LX/3jc;
+
     .line 83
     .line 84
-    move-result-object v1
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
     .line 85
-    const-string/jumbo v0, "null cannot be cast to non-null type java.security.KeyStore.PrivateKeyEntry"
-
     .line 86
     .line 87
+    move-result-object v0
+
     .line 88
-    invoke-static {v1, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    sput-object v0, LX/3jc;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
     .line 89
     .line 90
-    .line 91
-    check-cast v1, Ljava/security/KeyStore$PrivateKeyEntry;
+    return-void
+.end method
 
-    .line 92
-    .line 93
-    invoke-virtual {v1}, Ljava/security/KeyStore$PrivateKeyEntry;->getPrivateKey()Ljava/security/PrivateKey;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    .line 94
-    .line 95
-    .line 96
-    move-result-object v1
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 97
-    new-instance v0, Ljava/security/KeyPair;
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/3jc;->value:Ljava/lang/String;
 
-    .line 98
-    .line 99
-    invoke-direct {v0, v2, v1}, Ljava/security/KeyPair;-><init>(Ljava/security/PublicKey;Ljava/security/PrivateKey;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 4
+    .line 5
+    return-void
+.end method
 
-    .line 100
-    .line 101
-    .line 102
-    monitor-exit p0
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
 
-    .line 103
+    sget-object v0, LX/3jc;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
     return-object v0
+.end method
 
-    .line 104
-    :catchall_0
-    move-exception v0
+.method public static valueOf(Ljava/lang/String;)LX/3jc;
+    .locals 1
 
-    .line 105
-    monitor-exit p0
+    const-class v0, LX/3jc;
 
-    .line 106
-    throw v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/3jc;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/3jc;
+    .locals 1
+
+    sget-object v0, LX/3jc;->$VALUES:[LX/3jc;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/3jc;
+
+    return-object v0
 .end method

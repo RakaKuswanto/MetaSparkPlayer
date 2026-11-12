@@ -1,4 +1,4 @@
-.class public synthetic Lorg/webrtc/Logging$1;
+.class public abstract synthetic Lorg/webrtc/Logging$1;
 .super Ljava/lang/Object;
 .source ""
 
@@ -36,7 +36,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0, v1}, LX/4BD;->A1D(Ljava/lang/Enum;[I)V
+    invoke-static {v0, v1}, LX/431;->A1A(Ljava/lang/Enum;[I)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -45,11 +45,11 @@
     .line 14
     :catch_0
     :try_start_1
-    sget-object v0, Lorg/webrtc/Logging$Severity;->LS_ERROR_CANDIDATE:Lorg/webrtc/Logging$Severity;
+    sget-object v0, Lorg/webrtc/Logging$Severity;->LS_WARNING:Lorg/webrtc/Logging$Severity;
 
     .line 15
     .line 16
-    invoke-static {v0, v1}, LX/4BD;->A1E(Ljava/lang/Enum;[I)V
+    invoke-static {v0, v1}, LX/431;->A1B(Ljava/lang/Enum;[I)V
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -58,11 +58,11 @@
     .line 19
     :catch_1
     :try_start_2
-    sget-object v0, Lorg/webrtc/Logging$Severity;->LS_WARNING:Lorg/webrtc/Logging$Severity;
+    sget-object v0, Lorg/webrtc/Logging$Severity;->LS_INFO:Lorg/webrtc/Logging$Severity;
 
     .line 20
     .line 21
-    invoke-static {v0, v1}, LX/4BD;->A1F(Ljava/lang/Enum;[I)V
+    invoke-static {v0, v1}, LX/431;->A1C(Ljava/lang/Enum;[I)V
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -70,18 +70,5 @@
     .line 23
     .line 24
     :catch_2
-    :try_start_3
-    sget-object v0, Lorg/webrtc/Logging$Severity;->LS_INFO:Lorg/webrtc/Logging$Severity;
-
-    .line 25
-    .line 26
-    invoke-static {v0, v1}, LX/4BE;->A1K(Ljava/lang/Enum;[I)V
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    .line 27
-    .line 28
-    .line 29
-    :catch_3
     return-void
 .end method

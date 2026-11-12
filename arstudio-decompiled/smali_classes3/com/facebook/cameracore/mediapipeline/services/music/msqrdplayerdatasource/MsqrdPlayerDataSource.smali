@@ -607,7 +607,7 @@
 .end method
 
 .method private startListening()V
-    .locals 3
+    .locals 5
 
     .line 0
     const/4 v0, 0x1
@@ -617,23 +617,49 @@
 
     .line 2
     .line 3
-    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/music/msqrdplayerdatasource/MsqrdPlayerDataSource;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/facebook/cameracore/mediapipeline/services/music/msqrdplayerdatasource/MsqrdPlayerDataSource;->mContext:Landroid/content/Context;
 
     .line 4
     .line 5
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/music/msqrdplayerdatasource/MsqrdPlayerDataSource;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/facebook/cameracore/mediapipeline/services/music/msqrdplayerdatasource/MsqrdPlayerDataSource;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     .line 6
     .line 7
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/music/msqrdplayerdatasource/MsqrdPlayerDataSource;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/facebook/cameracore/mediapipeline/services/music/msqrdplayerdatasource/MsqrdPlayerDataSource;->mIntentFilter:Landroid/content/IntentFilter;
 
     .line 8
     .line 9
-    invoke-static {v1, v2, v0}, LX/0DT;->A00(Landroid/content/BroadcastReceiver;Landroid/content/Context;Landroid/content/IntentFilter;)V
+    invoke-static {v4, v2}, LX/431;->A1F(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 10
     .line 11
     .line 12
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 13
+    .line 14
+    const/16 v0, 0x22
+
+    .line 15
+    .line 16
+    if-lt v1, v0, :cond_0
+
+    .line 17
+    .line 18
+    invoke-static {v3, v4, v2}, LX/0Ci;->A00(Landroid/content/BroadcastReceiver;Landroid/content/Context;Landroid/content/IntentFilter;)V
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
+
+    .line 22
+    :cond_0
+    invoke-virtual {v4, v3, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 23
+    .line 24
+    .line 25
     return-void
 .end method
 

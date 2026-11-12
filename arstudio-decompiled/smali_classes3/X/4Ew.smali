@@ -1,21 +1,28 @@
-.class public final LX/4Ew;
-.super LX/4Em;
+.class public abstract LX/4EW;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A00:Ljava/util/concurrent/atomic/AtomicInteger;
+
+
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    const-string v0, "ACTION_LAUNCH_APP"
+    invoke-static {}, LX/0X6;->A1A()Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4Em;-><init>(Ljava/lang/String;)V
-
     .line 3
+    move-result-object v0
+
     .line 4
+    sput-object v0, LX/4EW;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 5
+    .line 6
     return-void
 .end method

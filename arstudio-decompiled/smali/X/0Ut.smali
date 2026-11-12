@@ -1,329 +1,999 @@
-.class public final LX/0Ut;
-.super Ljava/lang/Object;
+.class public final LX/0UT;
+.super LX/06a;
 .source ""
 
 
-# instance fields
-.field public A00:J
-
-.field public A01:J
-
-.field public A02:J
-
-.field public final A03:LX/0VU;
-
-.field public final A04:LX/0Uj;
-
-.field public final A05:Lcom/facebook/rti/common/time/RealtimeSinceBootClock;
-
-.field public final A06:Z
-
-
 # direct methods
-.method public constructor <init>(LX/0VU;Lcom/facebook/rti/common/time/RealtimeSinceBootClock;LX/0Uj;Z)V
-    .locals 7
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/06a;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const-wide/16 v0, -0x1
-
-    .line 4
-    .line 5
-    iput-wide v0, p0, LX/0Ut;->A00:J
-
-    .line 6
-    .line 7
-    const-wide/16 v2, 0x0
-
-    .line 8
-    .line 9
-    iput-wide v2, p0, LX/0Ut;->A02:J
-
-    .line 10
-    .line 11
-    iput-wide v0, p0, LX/0Ut;->A01:J
-
-    .line 12
-    .line 13
-    iput-object p3, p0, LX/0Ut;->A04:LX/0Uj;
-
-    .line 14
-    .line 15
-    iput-object p2, p0, LX/0Ut;->A05:Lcom/facebook/rti/common/time/RealtimeSinceBootClock;
-
-    .line 16
-    .line 17
-    iput-boolean p4, p0, LX/0Ut;->A06:Z
-
-    .line 18
-    .line 19
-    iput-object p1, p0, LX/0Ut;->A03:LX/0VU;
-
-    .line 20
-    .line 21
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-wide v1
-
-    .line 25
-    sget-object v6, LX/0VT;->MQTT_RADIO_ACTIVE_TIME:LX/0VT;
-
-    .line 26
-    .line 27
-    invoke-interface {p1, v6}, LX/0VU;->ABA(LX/0VT;)LX/0VV;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    const-string v5, "last_log_ms"
-
-    .line 32
-    .line 33
-    invoke-interface {v0, v5, v1, v2}, LX/0VV;->getLong(Ljava/lang/String;J)J
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-wide v3
-
-    .line 37
-    cmp-long v0, v3, v1
-
-    .line 38
-    .line 39
-    if-ltz v0, :cond_0
-
-    .line 40
-    .line 41
-    invoke-static {p1, v6}, LX/001;->A05(LX/0VU;LX/0VT;)LX/0VX;
-
-    .line 42
-    .line 43
-    .line 44
-    move-result-object v0
-
-    .line 45
-    invoke-interface {v0, v5, v1, v2}, LX/0VX;->AhH(Ljava/lang/String;J)LX/0VX;
-
-    .line 46
-    .line 47
-    .line 48
-    invoke-interface {v0}, LX/0VX;->commit()V
-
-    .line 49
-    .line 50
-    .line 51
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized A00()V
-    .locals 12
+.method public final A02(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    monitor-enter p0
+    if-eqz p1, :cond_0
 
     .line 1
-    :try_start_0
-    iget-boolean v0, p0, LX/0Ut;->A06:Z
-
     .line 2
+    check-cast p1, Landroid/transition/Transition;
+
     .line 3
-    if-eqz v0, :cond_3
-
     .line 4
-    .line 5
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-virtual {p1}, Landroid/transition/Transition;->clone()Landroid/transition/Transition;
 
+    .line 5
     .line 6
     .line 7
+    move-result-object v0
+
     .line 8
-    move-result-wide v1
+    return-object v0
 
     .line 9
-    iget-wide v7, p0, LX/0Ut;->A00:J
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 10
+    return-object v0
+.end method
+
+.method public final A03(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    if-nez p1, :cond_0
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    return-object v0
+
+    .line 4
+    :cond_0
+    new-instance v0, Landroid/transition/TransitionSet;
+
+    .line 5
+    .line 6
+    invoke-direct {v0}, Landroid/transition/TransitionSet;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    check-cast p1, Landroid/transition/Transition;
 
     .line 10
     .line 11
-    const-wide/16 v3, 0x0
+    invoke-virtual {v0, p1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
     .line 12
     .line 13
-    cmp-long v0, v7, v3
+    .line 14
+    return-object v0
+.end method
 
+.method public final A04(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    check-cast p1, Landroid/transition/Transition;
+
+    .line 1
+    .line 2
+    check-cast p2, Landroid/transition/Transition;
+
+    .line 3
+    .line 4
+    check-cast p3, Landroid/transition/Transition;
+
+    .line 5
+    .line 6
+    if-eqz p1, :cond_2
+
+    .line 7
+    .line 8
+    if-eqz p2, :cond_0
+
+    .line 9
+    .line 10
+    new-instance v0, Landroid/transition/TransitionSet;
+
+    .line 11
+    .line 12
+    invoke-direct {v0}, Landroid/transition/TransitionSet;-><init>()V
+
+    .line 13
     .line 14
     .line 15
-    if-gez v0, :cond_0
+    invoke-virtual {v0, p1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
     .line 16
     .line 17
-    iput-wide v1, p0, LX/0Ut;->A00:J
-
     .line 18
+    move-result-object v0
+
     .line 19
-    iput-wide v1, p0, LX/0Ut;->A01:J
+    invoke-virtual {v0, p2}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
     .line 20
     .line 21
-    goto/16 :goto_1
-
     .line 22
+    move-result-object v1
+
     .line 23
-    :cond_0
-    sub-long v5, v1, v7
+    const/4 v0, 0x1
 
     .line 24
-    .line 25
-    iput-wide v1, p0, LX/0Ut;->A00:J
+    invoke-virtual {v1, v0}, Landroid/transition/TransitionSet;->setOrdering(I)Landroid/transition/TransitionSet;
 
+    .line 25
     .line 26
     .line 27
-    const-wide/16 v3, 0x2710
+    move-result-object p1
 
     .line 28
+    :cond_0
+    :goto_0
+    if-eqz p3, :cond_3
+
     .line 29
-    cmp-long v0, v5, v3
-
     .line 30
+    new-instance v0, Landroid/transition/TransitionSet;
+
     .line 31
-    if-lez v0, :cond_1
-
     .line 32
-    .line 33
-    iget-wide v8, p0, LX/0Ut;->A02:J
+    invoke-direct {v0}, Landroid/transition/TransitionSet;-><init>()V
 
+    .line 33
     .line 34
     .line 35
-    add-long/2addr v8, v3
+    if-eqz p1, :cond_1
 
     .line 36
-    goto :goto_0
-
     .line 37
-    :cond_1
-    iget-wide v8, p0, LX/0Ut;->A02:J
+    invoke-virtual {v0, p1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
     .line 38
     .line 39
-    add-long/2addr v8, v5
-
     .line 40
-    :goto_0
-    iput-wide v8, p0, LX/0Ut;->A02:J
+    :cond_1
+    invoke-virtual {v0, p3}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
     .line 41
     .line 42
-    iget-wide v3, p0, LX/0Ut;->A01:J
-
     .line 43
+    return-object v0
+
     .line 44
-    sub-long v5, v1, v3
+    :cond_2
+    const/4 p1, 0x0
 
     .line 45
-    .line 46
-    const-wide/16 v3, 0x4e20
+    if-eqz p2, :cond_0
 
+    .line 46
     .line 47
+    move-object p1, p2
+
     .line 48
-    cmp-long v0, v5, v3
+    goto :goto_0
 
     .line 49
-    .line 50
-    if-lez v0, :cond_2
+    :cond_3
+    return-object p1
+.end method
 
-    .line 51
-    .line 52
-    iget-object v11, p0, LX/0Ut;->A03:LX/0VU;
+.method public final A05(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 53
-    .line 54
-    sget-object v10, LX/0VT;->MQTT_RADIO_ACTIVE_TIME:LX/0VT;
+    .line 0
+    new-instance v0, Landroid/transition/TransitionSet;
 
-    .line 55
-    .line 56
-    invoke-interface {v11, v10}, LX/0VU;->ABA(LX/0VT;)LX/0VV;
+    .line 1
+    .line 2
+    invoke-direct {v0}, Landroid/transition/TransitionSet;-><init>()V
 
-    .line 57
-    .line 58
-    .line 59
+    .line 3
+    .line 4
+    .line 5
+    if-eqz p1, :cond_0
+
+    .line 6
+    .line 7
+    check-cast p1, Landroid/transition/Transition;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, p1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    if-eqz p2, :cond_1
+
+    .line 13
+    .line 14
+    check-cast p2, Landroid/transition/Transition;
+
+    .line 15
+    .line 16
+    invoke-virtual {v0, p2}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+
+    .line 17
+    .line 18
+    .line 19
+    :cond_1
+    if-eqz p3, :cond_2
+
+    .line 20
+    .line 21
+    check-cast p3, Landroid/transition/Transition;
+
+    .line 22
+    .line 23
+    invoke-virtual {v0, p3}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+
+    .line 24
+    .line 25
+    .line 26
+    :cond_2
+    return-object v0
+.end method
+
+.method public final A06(Landroid/graphics/Rect;Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    if-eqz p2, :cond_0
+
+    .line 1
+    .line 2
+    check-cast p2, Landroid/transition/Transition;
+
+    .line 3
+    .line 4
+    new-instance v0, LX/06Y;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p1, p0}, LX/06Y;-><init>(Landroid/graphics/Rect;LX/0UT;)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {p2, v0}, Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    return-void
+.end method
+
+.method public final A07(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    if-eqz p2, :cond_0
+
+    .line 1
+    .line 2
+    check-cast p2, Landroid/transition/Transition;
+
+    .line 3
+    .line 4
+    invoke-virtual {p2, p1}, Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
+
+    .line 5
+    .line 6
+    .line 7
+    :cond_0
+    return-void
+.end method
+
+.method public final A08(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    check-cast p2, Landroid/transition/Transition;
+
+    .line 3
+    .line 4
+    new-instance v1, Landroid/graphics/Rect;
+
+    .line 5
+    .line 6
+    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {p1, v1}, LX/06a;->A00(Landroid/view/View;Landroid/graphics/Rect;)V
+
+    .line 10
+    .line 11
+    .line 12
+    new-instance v0, LX/06U;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, v1, p0}, LX/06U;-><init>(Landroid/graphics/Rect;LX/0UT;)V
+
+    .line 15
+    .line 16
+    .line 17
+    invoke-virtual {p2, v0}, Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
+
+    .line 18
+    .line 19
+    .line 20
+    :cond_0
+    return-void
+.end method
+
+.method public final A09(Landroid/view/View;Ljava/lang/Object;Ljava/util/ArrayList;)V
+    .locals 1
+
+    .line 0
+    check-cast p2, Landroid/transition/Transition;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/06V;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, p1, p0, p3}, LX/06V;-><init>(Landroid/view/View;LX/0UT;Ljava/util/ArrayList;)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {p2, v0}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final A0A(Landroid/view/View;Ljava/lang/Object;Ljava/util/ArrayList;)V
+    .locals 4
+
+    .line 0
+    check-cast p2, Landroid/transition/TransitionSet;
+
+    .line 1
+    .line 2
+    invoke-virtual {p2}, Landroid/transition/TransitionSet;->getTargets()Ljava/util/List;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v3
+
+    .line 6
+    invoke-interface {v3}, Ljava/util/List;->clear()V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v2
+
+    .line 13
+    const/4 v1, 0x0
+
+    .line 14
+    :goto_0
+    if-ge v1, v2, :cond_0
+
+    .line 15
+    .line 16
+    invoke-virtual {p3, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    .line 19
     move-result-object v0
 
+    .line 20
+    check-cast v0, Landroid/view/View;
+
+    .line 21
+    .line 22
+    invoke-static {v0, v3}, LX/06a;->A01(Landroid/view/View;Ljava/util/List;)V
+
+    .line 23
+    .line 24
+    .line 25
+    add-int/lit8 v1, v1, 0x1
+
+    .line 26
+    .line 27
+    goto :goto_0
+
+    .line 28
+    :cond_0
+    invoke-interface {v3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p3, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {p0, p2, p3}, LX/06a;->A0E(Ljava/lang/Object;Ljava/util/ArrayList;)V
+
+    .line 35
+    .line 36
+    .line 37
+    return-void
+.end method
+
+.method public final A0B(Landroid/view/ViewGroup;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    check-cast p2, Landroid/transition/Transition;
+
+    .line 1
+    .line 2
+    invoke-static {p1, p2}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final A0C(LX/4q6;Landroidx/fragment/app/Fragment;Ljava/lang/Object;Ljava/lang/Runnable;)V
+    .locals 1
+
+    .line 0
+    check-cast p3, Landroid/transition/Transition;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/06X;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, p0, p4}, LX/06X;-><init>(LX/0UT;Ljava/lang/Runnable;)V
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {p3, v0}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final A0D(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 8
+
+    .line 0
+    check-cast p1, Landroid/transition/Transition;
+
+    .line 1
+    .line 2
+    new-instance v0, LX/06W;
+
+    .line 3
+    .line 4
+    move-object v1, p0
+
+    .line 5
+    move-object v2, p2
+
+    .line 6
+    move-object v3, p3
+
+    .line 7
+    move-object v4, p4
+
+    .line 8
+    move-object v5, p5
+
+    .line 9
+    move-object v6, p6
+
+    .line 10
+    move-object v7, p7
+
+    .line 11
+    invoke-direct/range {v0 .. v7}, LX/06W;-><init>(LX/0UT;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-virtual {p1, v0}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    .line 15
+    .line 16
+    .line 17
+    return-void
+.end method
+
+.method public final A0E(Ljava/lang/Object;Ljava/util/ArrayList;)V
+    .locals 3
+
+    .line 0
+    check-cast p1, Landroid/transition/Transition;
+
+    .line 1
+    .line 2
+    if-eqz p1, :cond_5
+
+    .line 3
+    .line 4
+    instance-of v0, p1, Landroid/transition/TransitionSet;
+
+    .line 5
+    .line 6
+    const/4 v2, 0x0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    check-cast p1, Landroid/transition/TransitionSet;
+
+    .line 10
+    .line 11
+    invoke-virtual {p1}, Landroid/transition/TransitionSet;->getTransitionCount()I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    :goto_0
+    if-ge v2, v1, :cond_5
+
+    .line 16
+    .line 17
+    invoke-virtual {p1, v2}, Landroid/transition/TransitionSet;->getTransitionAt(I)Landroid/transition/Transition;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    invoke-virtual {p0, v0, p2}, LX/06a;->A0E(Ljava/lang/Object;Ljava/util/ArrayList;)V
+
+    .line 22
+    .line 23
+    .line 24
+    add-int/lit8 v2, v2, 0x1
+
+    .line 25
+    .line 26
+    goto :goto_0
+
+    .line 27
+    :cond_0
+    invoke-virtual {p1}, Landroid/transition/Transition;->getTargetIds()Ljava/util/List;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    if-eqz v0, :cond_1
+
+    .line 32
+    .line 33
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 34
+    .line 35
+    .line 36
+    move-result v0
+
+    .line 37
+    if-eqz v0, :cond_5
+
+    .line 38
+    .line 39
+    :cond_1
+    invoke-virtual {p1}, Landroid/transition/Transition;->getTargetNames()Ljava/util/List;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v0
+
+    .line 43
+    if-eqz v0, :cond_2
+
+    .line 44
+    .line 45
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 46
+    .line 47
+    .line 48
+    move-result v0
+
+    .line 49
+    if-eqz v0, :cond_5
+
+    .line 50
+    .line 51
+    :cond_2
+    invoke-virtual {p1}, Landroid/transition/Transition;->getTargetTypes()Ljava/util/List;
+
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v0
+
+    .line 55
+    if-eqz v0, :cond_3
+
+    .line 56
+    .line 57
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 58
+    .line 59
     .line 60
-    const-string v7, "total_wake_ms"
+    move-result v0
 
     .line 61
+    if-eqz v0, :cond_5
+
     .line 62
-    const-wide/16 v5, 0x0
-
     .line 63
-    .line 64
-    invoke-interface {v0, v7, v5, v6}, LX/0VV;->getLong(Ljava/lang/String;J)J
+    :cond_3
+    invoke-virtual {p1}, Landroid/transition/Transition;->getTargets()Ljava/util/List;
 
+    .line 64
     .line 65
     .line 66
+    move-result-object v0
+
     .line 67
-    move-result-wide v3
+    if-eqz v0, :cond_4
 
     .line 68
-    add-long/2addr v8, v3
-
     .line 69
-    iput-wide v8, p0, LX/0Ut;->A02:J
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     .line 70
     .line 71
-    invoke-static {v11, v10}, LX/001;->A05(LX/0VU;LX/0VT;)LX/0VX;
+    .line 72
+    move-result v0
+
+    .line 73
+    if-eqz v0, :cond_5
+
+    .line 74
+    .line 75
+    :cond_4
+    invoke-virtual {p2}, Ljava/util/AbstractCollection;->size()I
+
+    .line 76
+    .line 77
+    .line 78
+    move-result v1
+
+    .line 79
+    :goto_1
+    if-ge v2, v1, :cond_5
+
+    .line 80
+    .line 81
+    invoke-virtual {p2, v2}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v0
+
+    .line 85
+    check-cast v0, Landroid/view/View;
+
+    .line 86
+    .line 87
+    invoke-virtual {p1, v0}, Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
+
+    .line 88
+    .line 89
+    .line 90
+    add-int/lit8 v2, v2, 0x1
+
+    .line 91
+    .line 92
+    goto :goto_1
+
+    .line 93
+    :cond_5
+    return-void
+.end method
+
+.method public final A0F(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 1
+
+    .line 0
+    check-cast p1, Landroid/transition/TransitionSet;
+
+    .line 1
+    .line 2
+    if-eqz p1, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {p1}, Landroid/transition/TransitionSet;->getTargets()Ljava/util/List;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {p1}, Landroid/transition/TransitionSet;->getTargets()Ljava/util/List;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    invoke-interface {v0, p3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {p0, p1, p2, p3}, LX/0UT;->A0H(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+
+    .line 19
+    .line 20
+    .line 21
+    :cond_0
+    return-void
+.end method
+
+.method public final A0G(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 0
+    instance-of v0, p1, Landroid/transition/Transition;
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final A0H(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 4
+
+    .line 0
+    check-cast p1, Landroid/transition/Transition;
+
+    .line 1
+    .line 2
+    instance-of v0, p1, Landroid/transition/TransitionSet;
+
+    .line 3
+    .line 4
+    const/4 v3, 0x0
+
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 6
+    .line 7
+    check-cast p1, Landroid/transition/TransitionSet;
+
+    .line 8
+    .line 9
+    invoke-virtual {p1}, Landroid/transition/TransitionSet;->getTransitionCount()I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v1
+
+    .line 13
+    :goto_0
+    if-ge v3, v1, :cond_5
+
+    .line 14
+    .line 15
+    invoke-virtual {p1, v3}, Landroid/transition/TransitionSet;->getTransitionAt(I)Landroid/transition/Transition;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-virtual {p0, v0, p2, p3}, LX/0UT;->A0H(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+
+    .line 20
+    .line 21
+    .line 22
+    add-int/lit8 v3, v3, 0x1
+
+    .line 23
+    .line 24
+    goto :goto_0
+
+    .line 25
+    :cond_0
+    invoke-virtual {p1}, Landroid/transition/Transition;->getTargetIds()Ljava/util/List;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    if-eqz v0, :cond_1
+
+    .line 30
+    .line 31
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 32
+    .line 33
+    .line 34
+    move-result v0
+
+    .line 35
+    if-eqz v0, :cond_5
+
+    .line 36
+    .line 37
+    :cond_1
+    invoke-virtual {p1}, Landroid/transition/Transition;->getTargetNames()Ljava/util/List;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
+    if-eqz v0, :cond_2
+
+    .line 42
+    .line 43
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 44
+    .line 45
+    .line 46
+    move-result v0
+
+    .line 47
+    if-eqz v0, :cond_5
+
+    .line 48
+    .line 49
+    :cond_2
+    invoke-virtual {p1}, Landroid/transition/Transition;->getTargetTypes()Ljava/util/List;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v0
+
+    .line 53
+    if-eqz v0, :cond_3
+
+    .line 54
+    .line 55
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 56
+    .line 57
+    .line 58
+    move-result v0
+
+    .line 59
+    if-eqz v0, :cond_5
+
+    .line 60
+    .line 61
+    :cond_3
+    invoke-virtual {p1}, Landroid/transition/Transition;->getTargets()Ljava/util/List;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v2
+
+    .line 65
+    if-eqz v2, :cond_5
+
+    .line 66
+    .line 67
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    .line 68
+    .line 69
+    .line 70
+    move-result v1
+
+    .line 71
+    invoke-virtual {p2}, Ljava/util/AbstractCollection;->size()I
 
     .line 72
     .line 73
     .line 74
-    move-result-object v0
+    move-result v0
 
     .line 75
-    iget-wide v3, p0, LX/0Ut;->A02:J
+    if-ne v1, v0, :cond_5
 
     .line 76
     .line 77
-    invoke-interface {v0, v7, v3, v4}, LX/0VX;->AhH(Ljava/lang/String;J)LX/0VX;
+    invoke-interface {v2, p2}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
 
     .line 78
     .line 79
     .line 80
-    invoke-interface {v0}, LX/0VX;->commit()V
+    move-result v0
 
     .line 81
+    if-eqz v0, :cond_5
+
     .line 82
     .line 83
-    iput-wide v5, p0, LX/0Ut;->A02:J
+    if-eqz p3, :cond_4
 
     .line 84
     .line 85
-    iput-wide v1, p0, LX/0Ut;->A01:J
+    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
 
     .line 86
     .line 87
-    :cond_2
-    iget-object v7, p0, LX/0Ut;->A03:LX/0VU;
-
     .line 88
+    move-result v1
+
     .line 89
-    sget-object v6, LX/0VT;->MQTT_RADIO_ACTIVE_TIME:LX/0VT;
+    :goto_1
+    if-ge v3, v1, :cond_4
 
     .line 90
     .line 91
-    invoke-interface {v7, v6}, LX/0VU;->ABA(LX/0VT;)LX/0VV;
+    invoke-virtual {p3, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
     .line 92
     .line 93
@@ -331,161 +1001,60 @@
     move-result-object v0
 
     .line 95
-    const-string v5, "last_log_ms"
+    check-cast v0, Landroid/view/View;
 
     .line 96
     .line 97
-    invoke-interface {v0, v5, v1, v2}, LX/0VV;->getLong(Ljava/lang/String;J)J
+    invoke-virtual {p1, v0}, Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
 
     .line 98
     .line 99
     .line 100
-    move-result-wide v3
+    add-int/lit8 v3, v3, 0x1
 
     .line 101
-    sub-long v8, v1, v3
-
     .line 102
+    goto :goto_1
+
     .line 103
-    const-wide/32 v3, 0x36ee80
+    :cond_4
+    invoke-virtual {p2}, Ljava/util/AbstractCollection;->size()I
 
     .line 104
     .line 105
     .line 106
-    cmp-long v0, v8, v3
+    move-result v1
 
     .line 107
+    :goto_2
+    add-int/lit8 v1, v1, -0x1
+
     .line 108
-    if-lez v0, :cond_3
-
     .line 109
+    if-ltz v1, :cond_5
+
     .line 110
-    iget-object v8, p0, LX/0Ut;->A04:LX/0Uj;
-
     .line 111
-    .line 112
-    invoke-interface {v7, v6}, LX/0VU;->ABA(LX/0VT;)LX/0VV;
+    invoke-virtual {p2, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
+    .line 112
     .line 113
     .line 114
-    .line 115
     move-result-object v0
+
+    .line 115
+    check-cast v0, Landroid/view/View;
 
     .line 116
-    const-string v11, "total_wake_ms"
-
     .line 117
-    .line 118
-    const-wide/16 v3, 0x0
+    invoke-virtual {p1, v0}, Landroid/transition/Transition;->removeTarget(Landroid/view/View;)Landroid/transition/Transition;
 
+    .line 118
     .line 119
     .line 120
-    invoke-interface {v0, v11, v3, v4}, LX/0VV;->getLong(Ljava/lang/String;J)J
+    goto :goto_2
 
     .line 121
-    .line 122
-    .line 123
-    move-result-wide v9
-
-    .line 124
-    const/4 v0, 0x2
-
-    .line 125
-    new-array v4, v0, [Ljava/lang/String;
-
-    .line 126
-    .line 127
-    const/4 v0, 0x0
-
-    .line 128
-    aput-object v11, v4, v0
-
-    .line 129
-    .line 130
-    invoke-static {v9, v10}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    .line 131
-    .line 132
-    .line 133
-    move-result-object v3
-
-    .line 134
-    const/4 v0, 0x1
-
-    .line 135
-    aput-object v3, v4, v0
-
-    .line 136
-    .line 137
-    invoke-static {v4}, LX/0Wr;->A01([Ljava/lang/String;)Ljava/util/HashMap;
-
-    .line 138
-    .line 139
-    .line 140
-    move-result-object v3
-
-    .line 141
-    const-string v0, "mqtt_radio_active_time"
-
-    .line 142
-    .line 143
-    invoke-virtual {v8, v0, v3}, LX/0Uj;->A0I(Ljava/lang/String;Ljava/util/Map;)V
-
-    .line 144
-    .line 145
-    .line 146
-    invoke-static {v7, v6}, LX/001;->A05(LX/0VU;LX/0VT;)LX/0VX;
-
-    .line 147
-    .line 148
-    .line 149
-    move-result-object v0
-
-    .line 150
-    invoke-interface {v0}, LX/0VX;->A6p()LX/0VX;
-
-    .line 151
-    .line 152
-    .line 153
-    invoke-interface {v0}, LX/0VX;->commit()V
-
-    .line 154
-    .line 155
-    .line 156
-    invoke-static {v7, v6}, LX/001;->A05(LX/0VU;LX/0VT;)LX/0VX;
-
-    .line 157
-    .line 158
-    .line 159
-    move-result-object v0
-
-    .line 160
-    invoke-interface {v0, v5, v1, v2}, LX/0VX;->AhH(Ljava/lang/String;J)LX/0VX;
-
-    .line 161
-    .line 162
-    .line 163
-    invoke-interface {v0}, LX/0VX;->commit()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 164
-    .line 165
-    .line 166
-    :cond_3
-    :goto_1
-    monitor-exit p0
-
-    .line 167
+    :cond_5
     return-void
-
-    .line 168
-    :catchall_0
-    move-exception v0
-
-    .line 169
-    monitor-exit p0
-
-    .line 170
-    throw v0
 .end method

@@ -22,7 +22,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yi;->A17()Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {}, LX/0X6;->A1A()Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 4
     .line 5
@@ -122,6 +122,9 @@
 .method public native getVideoFrame()Lorg/webrtc/VideoFrame;
 .end method
 
+.method public native onFrameReadyToRender()V
+.end method
+
 .method public native onFrameRendered()V
 .end method
 
@@ -160,7 +163,7 @@
 
     .line 12
     .line 13
-    invoke-virtual {v0}, Lcom/facebook/simplejni/NativeHolder$Destructor;->destruct()V
+    invoke-virtual {v0}, LX/5oi;->destruct()V
 
     .line 14
     .line 15

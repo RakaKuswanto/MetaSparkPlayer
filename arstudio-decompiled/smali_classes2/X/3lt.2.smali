@@ -2,263 +2,119 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static A05:LX/3lt;
-
-.field public static final A06:Ljava/lang/Object;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "VideoStateManager$debugVideoStates$1"
 
 
 # instance fields
-.field public A00:I
+.field public final synthetic A00:LX/3tA;
 
-.field public A01:I
-
-.field public A02:LX/3lt;
-
-.field public A03:Z
-
-.field public final A04:[LX/0OQ;
+.field public final synthetic A01:LX/3q0;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(LX/3tA;LX/3q0;)V
+    .locals 0
 
-    .line 0
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    iput-object p2, p0, LX/3lt;->A01:LX/3q0;
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
+    iput-object p1, p0, LX/3lt;->A00:LX/3tA;
 
-    .line 4
-    sput-object v0, LX/3lt;->A06:Ljava/lang/Object;
-
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    if-lez p1, :cond_0
-
-    .line 4
-    .line 5
-    new-array v0, p1, [LX/0OQ;
-
-    .line 6
-    .line 7
-    iput-object v0, p0, LX/3lt;->A04:[LX/0OQ;
-
-    .line 8
-    .line 9
-    const/4 v0, 0x0
-
-    .line 10
-    iput v0, p0, LX/3lt;->A01:I
-
-    .line 11
-    .line 12
-    iput-boolean v0, p0, LX/3lt;->A03:Z
-
-    .line 13
-    .line 14
-    iput v0, p0, LX/3lt;->A00:I
-
-    .line 15
-    .line 16
-    const/4 v0, 0x0
-
-    .line 17
-    iput-object v0, p0, LX/3lt;->A02:LX/3lt;
-
-    .line 18
-    .line 19
     return-void
-
-    .line 20
-    :cond_0
-    const-string v1, "Invalid batch Size of "
-
-    .line 21
-    .line 22
-    const-string v0, " was given."
-
-    .line 23
-    .line 24
-    invoke-static {v1, v0, p1}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final A00()V
-    .locals 4
+.method public final run()V
+    .locals 3
 
     .line 0
-    const/4 v2, 0x0
+    iget-object v0, p0, LX/3lt;->A01:LX/3q0;
 
     .line 1
-    const/4 v1, 0x0
-
     .line 2
-    :goto_0
-    iget v0, p0, LX/3lt;->A01:I
+    new-instance v2, Lcom/facebook/video/fbgrootplayer/FbGrootDebugDataModel;
 
     .line 3
     .line 4
-    if-ge v1, v0, :cond_1
+    invoke-direct {v2, v0}, Lcom/facebook/video/fbgrootplayer/FbGrootDebugDataModel;-><init>(LX/3q0;)V
 
     .line 5
     .line 6
-    iget-object v0, p0, LX/3lt;->A04:[LX/0OQ;
-
     .line 7
+    iget-object v0, v2, Lcom/facebook/video/fbgrootplayer/FbGrootDebugDataModel;->videoStates:Lcom/google/common/collect/ImmutableList;
+
     .line 8
-    aget-object v0, v0, v1
-
     .line 9
-    .line 10
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
+    .line 10
     .line 11
     .line 12
-    invoke-virtual {v0}, LX/0Ji;->A01()V
+    move-result-object v1
 
     .line 13
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
     .line 14
     .line 15
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
     .line 16
+    move-result v0
+
     .line 17
-    goto :goto_0
+    if-eqz v0, :cond_0
 
     .line 18
-    :cond_1
-    iput v2, p0, LX/3lt;->A01:I
-
     .line 19
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 20
-    const/4 v0, 0x0
-
     .line 21
-    iput-object v0, p0, LX/3lt;->A02:LX/3lt;
-
     .line 22
+    goto :goto_0
+
     .line 23
-    iput v2, p0, LX/3lt;->A00:I
+    :cond_0
+    iget-object v0, v2, Lcom/facebook/video/fbgrootplayer/FbGrootDebugDataModel;->transitionNodes:Lcom/google/common/collect/ImmutableList;
 
     .line 24
     .line 25
-    iput-boolean v2, p0, LX/3lt;->A03:Z
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 26
     .line 27
-    sget-object v3, LX/3lt;->A06:Ljava/lang/Object;
-
     .line 28
+    move-result-object v1
+
     .line 29
-    monitor-enter v3
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 30
-    :try_start_0
-    sget-object v2, LX/3lt;->A05:LX/3lt;
-
     .line 31
     .line 32
-    if-eqz v2, :cond_2
+    move-result v0
 
     .line 33
+    if-eqz v0, :cond_1
+
     .line 34
-    const/16 v1, 0xf
-
     .line 35
-    .line 36
-    iget v0, v2, LX/3lt;->A00:I
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 36
     .line 37
     .line 38
-    if-gt v1, v0, :cond_2
-
-    .line 39
-    .line 40
-    :goto_1
-    monitor-exit v3
-
-    .line 41
-    goto :goto_2
-
-    .line 42
-    :cond_2
-    iput-object v2, p0, LX/3lt;->A02:LX/3lt;
-
-    .line 43
-    .line 44
-    const/4 v1, 0x1
-
-    .line 45
-    if-eqz v2, :cond_3
-
-    .line 46
-    .line 47
-    iget v0, v2, LX/3lt;->A00:I
-
-    .line 48
-    .line 49
-    add-int/2addr v1, v0
-
-    .line 50
-    :cond_3
-    iput v1, p0, LX/3lt;->A00:I
-
-    .line 51
-    .line 52
-    sput-object p0, LX/3lt;->A05:LX/3lt;
-
-    .line 53
-    .line 54
     goto :goto_1
 
-    .line 55
-    :goto_2
+    .line 39
+    :cond_1
     return-void
-
-    .line 56
-    :catchall_0
-    move-exception v0
-
-    .line 57
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 58
-    throw v0
 .end method

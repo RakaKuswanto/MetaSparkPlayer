@@ -25,9 +25,9 @@
 
 .field public final A06:Lcom/facebook/messaging/business/common/calltoaction/model/CTAUserConfirmation;
 
-.field public final A07:LX/0rf;
+.field public final A07:LX/17T;
 
-.field public final A08:LX/0pb;
+.field public final A08:LX/14n;
 
 .field public final A09:Lcom/facebook/messaging/business/mdotme/model/PlatformRefParams;
 
@@ -61,22 +61,21 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x38
+    const/4 v0, 0x2
 
     .line 1
-    .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
+    .line 2
     .line 3
     .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
+    .line 5
     sput-object v0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 6
     .line 7
-    .line 8
     return-void
 .end method
 
@@ -117,7 +116,7 @@
 
     .line 16
     .line 17
-    invoke-static {p1, v1}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v1}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 18
     .line 19
@@ -133,7 +132,7 @@
 
     .line 24
     .line 25
-    invoke-static {p1, v1}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v1}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 26
     .line 27
@@ -177,7 +176,7 @@
 
     .line 46
     :try_start_0
-    invoke-static {v1}, LX/0pb;->valueOf(Ljava/lang/String;)LX/0pb;
+    invoke-static {v1}, LX/14n;->valueOf(Ljava/lang/String;)LX/14n;
 
     .line 47
     .line 48
@@ -196,7 +195,7 @@
     .line 52
     :catch_0
     :goto_0
-    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/0pb;
+    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/14n;
 
     .line 53
     .line 54
@@ -217,7 +216,7 @@
     .line 61
     .line 62
     .line 63
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 64
     .line 65
@@ -229,7 +228,7 @@
 
     .line 68
     .line 69
-    invoke-static {p1}, LX/0Yc;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
 
     .line 70
     .line 71
@@ -241,7 +240,7 @@
 
     .line 74
     .line 75
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
 
     .line 76
     .line 77
@@ -257,7 +256,7 @@
 
     .line 82
     .line 83
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 84
     .line 85
@@ -277,7 +276,7 @@
 
     .line 92
     .line 93
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 94
     .line 95
@@ -297,7 +296,7 @@
 
     .line 102
     .line 103
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 104
     .line 105
@@ -317,7 +316,7 @@
 
     .line 112
     .line 113
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 114
     .line 115
@@ -349,7 +348,7 @@
 
     .line 128
     .line 129
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 130
     .line 131
@@ -369,7 +368,7 @@
 
     .line 138
     .line 139
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 140
     .line 141
@@ -405,11 +404,11 @@
     move-result-object v0
 
     .line 157
-    check-cast v0, LX/0rf;
+    check-cast v0, LX/17T;
 
     .line 158
     .line 159
-    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/0rf;
+    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/17T;
 
     .line 160
     .line 161
@@ -417,7 +416,7 @@
 
     .line 162
     .line 163
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 164
     .line 165
@@ -449,7 +448,7 @@
 
     .line 178
     .line 179
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {p1, v0}, LX/0X4;->A0e(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 180
     .line 181
@@ -457,46 +456,38 @@
     move-result-object v0
 
     .line 183
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    check-cast v0, Ljava/lang/Long;
 
     .line 184
     .line 185
-    .line 186
-    move-result-object v0
+    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0B:Ljava/lang/Long;
 
+    .line 186
     .line 187
-    check-cast v0, Ljava/lang/Long;
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 188
     .line 189
-    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0B:Ljava/lang/Long;
-
     .line 190
+    move-result-object v0
+
     .line 191
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0H:Ljava/lang/String;
 
     .line 192
     .line 193
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
     .line 194
+    .line 195
+    .line 196
     move-result-object v0
 
-    .line 195
-    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0H:Ljava/lang/String;
-
-    .line 196
     .line 197
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0C:Ljava/lang/String;
 
     .line 198
     .line 199
-    .line 200
-    move-result-object v0
-
-    .line 201
-    iput-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0C:Ljava/lang/String;
-
-    .line 202
-    .line 203
     return-void
 .end method
 
@@ -528,7 +519,7 @@
 
     .line 5
     .line 6
-    invoke-static {p0, p1}, LX/0Ye;->A1a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, LX/0X2;->A1X(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 7
     .line 8
@@ -588,7 +579,7 @@
 
     .line 35
     .line 36
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 37
     .line 38
@@ -608,7 +599,7 @@
 
     .line 45
     .line 46
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 47
     .line 48
@@ -628,7 +619,7 @@
 
     .line 55
     .line 56
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 57
     .line 58
@@ -648,7 +639,7 @@
 
     .line 65
     .line 66
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 67
     .line 68
@@ -660,11 +651,11 @@
 
     .line 71
     .line 72
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/0pb;
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/14n;
 
     .line 73
     .line 74
-    iget-object v0, p1, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/0pb;
+    iget-object v0, p1, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/14n;
 
     .line 75
     .line 76
@@ -680,7 +671,7 @@
 
     .line 81
     .line 82
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 83
     .line 84
@@ -700,7 +691,7 @@
 
     .line 91
     .line 92
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 93
     .line 94
@@ -720,7 +711,7 @@
 
     .line 101
     .line 102
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 103
     .line 104
@@ -740,7 +731,7 @@
 
     .line 111
     .line 112
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 113
     .line 114
@@ -760,7 +751,7 @@
 
     .line 121
     .line 122
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 123
     .line 124
@@ -780,7 +771,7 @@
 
     .line 131
     .line 132
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 133
     .line 134
@@ -800,7 +791,7 @@
 
     .line 141
     .line 142
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 143
     .line 144
@@ -812,11 +803,11 @@
 
     .line 147
     .line 148
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/0rf;
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/17T;
 
     .line 149
     .line 150
-    iget-object v0, p1, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/0rf;
+    iget-object v0, p1, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/17T;
 
     .line 151
     .line 152
@@ -832,7 +823,7 @@
 
     .line 157
     .line 158
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 159
     .line 160
@@ -852,7 +843,7 @@
 
     .line 167
     .line 168
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 169
     .line 170
@@ -872,7 +863,7 @@
 
     .line 177
     .line 178
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 179
     .line 180
@@ -892,7 +883,7 @@
 
     .line 187
     .line 188
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 189
     .line 190
@@ -912,7 +903,7 @@
 
     .line 197
     .line 198
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 199
     .line 200
@@ -995,7 +986,7 @@
 
     .line 23
     .line 24
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/0pb;
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/14n;
 
     .line 25
     .line 26
@@ -1020,214 +1011,224 @@
 
     .line 34
     .line 35
-    invoke-static {v2, v0}, LX/0Yi;->A1P([Ljava/lang/Object;Z)V
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 36
     .line 37
     .line 38
-    iget-boolean v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0J:Z
+    move-result-object v1
 
     .line 39
+    const/4 v0, 0x6
+
     .line 40
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    aput-object v1, v2, v0
 
     .line 41
     .line 42
-    .line 43
-    move-result-object v1
+    iget-boolean v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0J:Z
 
+    .line 43
     .line 44
-    const/4 v0, 0x7
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 45
-    aput-object v1, v2, v0
-
     .line 46
     .line 47
-    iget-boolean v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0L:Z
+    move-result-object v1
 
     .line 48
+    const/4 v0, 0x7
+
     .line 49
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    aput-object v1, v2, v0
 
     .line 50
     .line 51
-    .line 52
-    move-result-object v1
+    iget-boolean v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0L:Z
 
+    .line 52
     .line 53
-    const/16 v0, 0x8
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 54
     .line 55
-    aput-object v1, v2, v0
-
     .line 56
+    move-result-object v1
+
     .line 57
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A06:Lcom/facebook/messaging/business/common/calltoaction/model/CTAUserConfirmation;
+    const/16 v0, 0x8
 
     .line 58
     .line 59
-    const/16 v0, 0x9
+    aput-object v1, v2, v0
 
     .line 60
     .line 61
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A06:Lcom/facebook/messaging/business/common/calltoaction/model/CTAUserConfirmation;
 
     .line 62
     .line 63
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A05:Lcom/facebook/messaging/business/common/calltoaction/model/CTAPaymentInfo;
+    const/16 v0, 0x9
 
     .line 64
     .line 65
-    const/16 v0, 0xa
+    aput-object v1, v2, v0
 
     .line 66
     .line 67
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A05:Lcom/facebook/messaging/business/common/calltoaction/model/CTAPaymentInfo;
 
     .line 68
     .line 69
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A04:Lcom/facebook/messaging/business/common/calltoaction/model/CTAInformationIdentify;
+    const/16 v0, 0xa
 
     .line 70
     .line 71
-    const/16 v0, 0xb
+    aput-object v1, v2, v0
 
     .line 72
     .line 73
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A04:Lcom/facebook/messaging/business/common/calltoaction/model/CTAInformationIdentify;
 
     .line 74
     .line 75
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0F:Ljava/lang/String;
+    const/16 v0, 0xb
 
     .line 76
     .line 77
-    const/16 v0, 0xc
+    aput-object v1, v2, v0
 
     .line 78
     .line 79
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0F:Ljava/lang/String;
 
     .line 80
     .line 81
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0A:Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;
+    const/16 v0, 0xc
 
     .line 82
     .line 83
-    const/16 v0, 0xd
+    aput-object v1, v2, v0
 
     .line 84
     .line 85
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0A:Lcom/facebook/xapp/messaging/browser/model/MessengerWebViewParams;
 
     .line 86
     .line 87
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A02:Lcom/facebook/messaging/business/common/calltoaction/model/CTABrandedCameraParams;
+    const/16 v0, 0xd
 
     .line 88
     .line 89
-    const/16 v0, 0xe
+    aput-object v1, v2, v0
 
     .line 90
     .line 91
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A02:Lcom/facebook/messaging/business/common/calltoaction/model/CTABrandedCameraParams;
 
     .line 92
     .line 93
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0G:Ljava/lang/String;
+    const/16 v0, 0xe
 
     .line 94
     .line 95
-    const/16 v0, 0xf
+    aput-object v1, v2, v0
 
     .line 96
     .line 97
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0G:Ljava/lang/String;
 
     .line 98
     .line 99
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/0rf;
+    const/16 v0, 0xf
 
     .line 100
     .line 101
-    const/16 v0, 0x10
+    aput-object v1, v2, v0
 
     .line 102
     .line 103
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/17T;
 
     .line 104
     .line 105
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A03:Lcom/facebook/messaging/business/common/calltoaction/model/CTACustomerFeedback;
+    const/16 v0, 0x10
 
     .line 106
     .line 107
-    const/16 v0, 0x11
+    aput-object v1, v2, v0
 
     .line 108
     .line 109
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A03:Lcom/facebook/messaging/business/common/calltoaction/model/CTACustomerFeedback;
 
     .line 110
     .line 111
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0D:Ljava/lang/String;
+    const/16 v0, 0x11
 
     .line 112
     .line 113
-    const/16 v0, 0x12
+    aput-object v1, v2, v0
 
     .line 114
     .line 115
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0D:Ljava/lang/String;
 
     .line 116
     .line 117
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0B:Ljava/lang/Long;
+    const/16 v0, 0x12
 
     .line 118
     .line 119
-    const/16 v0, 0x13
+    aput-object v1, v2, v0
 
     .line 120
     .line 121
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0B:Ljava/lang/Long;
 
     .line 122
     .line 123
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0H:Ljava/lang/String;
+    const/16 v0, 0x13
 
     .line 124
     .line 125
-    const/16 v0, 0x14
+    aput-object v1, v2, v0
 
     .line 126
     .line 127
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0H:Ljava/lang/String;
 
     .line 128
     .line 129
-    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0C:Ljava/lang/String;
+    const/16 v0, 0x14
 
     .line 130
     .line 131
-    const/16 v0, 0x15
+    aput-object v1, v2, v0
 
     .line 132
     .line 133
-    aput-object v1, v2, v0
+    iget-object v1, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A0C:Ljava/lang/String;
 
     .line 134
     .line 135
-    invoke-static {v2}, Ljava/util/Arrays;->deepHashCode([Ljava/lang/Object;)I
+    const/16 v0, 0x15
 
     .line 136
     .line 137
+    aput-object v1, v2, v0
+
     .line 138
+    .line 139
+    invoke-static {v2}, Ljava/util/Arrays;->deepHashCode([Ljava/lang/Object;)I
+
+    .line 140
+    .line 141
+    .line 142
     move-result v0
 
-    .line 139
+    .line 143
     return v0
 .end method
 
@@ -1238,7 +1239,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -1279,7 +1280,7 @@
     .line 22
     .line 23
     .line 24
-    iget-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/0pb;
+    iget-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A08:LX/14n;
 
     .line 25
     .line 26
@@ -1408,7 +1409,7 @@
     .line 92
     .line 93
     .line 94
-    iget-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/0rf;
+    iget-object v0, p0, Lcom/facebook/messaging/business/common/calltoaction/model/CallToAction;->A07:LX/17T;
 
     .line 95
     .line 96

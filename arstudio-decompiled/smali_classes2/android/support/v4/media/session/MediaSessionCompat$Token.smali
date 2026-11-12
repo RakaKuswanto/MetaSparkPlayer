@@ -22,7 +22,7 @@
     const/4 v0, 0x5
 
     .line 1
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 2
     .line 3
@@ -140,7 +140,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yd;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A08(Ljava/lang/Object;)I
 
     .line 3
     .line 4

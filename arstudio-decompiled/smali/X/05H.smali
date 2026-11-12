@@ -1,56 +1,85 @@
-.class public final LX/05H;
+.class public final LX/05h;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "Fragment$4"
+.implements LX/6TM;
 
 
 # instance fields
 .field public final synthetic A00:Landroidx/fragment/app/Fragment;
 
-.field public final synthetic A01:LX/06P;
-
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/Fragment;LX/06P;)V
+.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/05H;->A00:Landroidx/fragment/app/Fragment;
+    iput-object p1, p0, LX/05h;->A00:Landroidx/fragment/app/Fragment;
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/05H;->A01:LX/06P;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/05H;->A01:LX/06P;
+    iget-object v2, p0, LX/05h;->A00:Landroidx/fragment/app/Fragment;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/06P;->A0A()V
+    iget-object v1, v2, Landroidx/fragment/app/Fragment;->mHost:LX/03d;
 
     .line 3
     .line 4
+    instance-of v0, v1, LX/00a;
+
     .line 5
-    return-void
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    check-cast v1, LX/00a;
+
+    .line 9
+    .line 10
+    invoke-interface {v1}, LX/00a;->AA2()LX/00Z;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+
+    .line 15
+    :cond_0
+    invoke-virtual {v2}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->AA2()LX/00Z;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    return-object v0
 .end method

@@ -139,7 +139,7 @@
     .line 15
     .line 16
     :try_start_0
-    sget-object v0, LX/4xQ;->A02:Ljava/lang/reflect/Field;
+    sget-object v0, LX/4KX;->A02:Ljava/lang/reflect/Field;
 
     .line 17
     .line 18
@@ -167,7 +167,7 @@
 
     .line 29
     .line 30
-    sget-object v0, LX/4xQ;->A01:Ljava/lang/reflect/Field;
+    sget-object v0, LX/4KX;->A01:Ljava/lang/reflect/Field;
 
     .line 31
     .line 32
@@ -179,60 +179,64 @@
     move-result-object v2
 
     .line 36
-    sget-object v1, LX/4xQ;->A00:Landroid/os/Handler;
+    sget-object v1, LX/4KX;->A00:Landroid/os/Handler;
 
     .line 37
     .line 38
-    new-instance v0, LX/4xS;
+    new-instance v0, LX/4KZ;
 
     .line 39
     .line 40
-    invoke-direct {v0, v2, v3}, LX/4xS;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v2, v3}, LX/4KZ;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 41
     .line 42
     .line 43
     invoke-virtual {v1, v0}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 44
     .line 45
     .line 46
-    const/4 v0, 0x1
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 47
-    iput-boolean v0, p0, Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;->A04:Z
-
-    .line 48
-    .line 49
-    const/4 v0, 0x0
-
-    .line 50
-    iput-object v0, p0, Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;->A00:Ljava/lang/Object;
-
-    .line 51
-    .line 52
-    return-void
-
-    .line 53
     :catchall_0
     move-exception v2
 
-    .line 54
+    .line 48
     const-string v1, "ActivityRecreator"
 
-    .line 55
-    .line 56
+    .line 49
+    .line 50
     const-string v0, "Exception while fetching field values"
 
-    .line 57
-    .line 58
+    .line 51
+    .line 52
     invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 53
+    .line 54
+    .line 55
+    return-void
+
+    .line 56
+    :goto_0
+    const/4 v0, 0x1
+
+    .line 57
+    iput-boolean v0, p0, Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;->A04:Z
+
+    .line 58
     .line 59
+    const/4 v0, 0x0
+
     .line 60
+    iput-object v0, p0, Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;->A00:Ljava/lang/Object;
+
     .line 61
+    .line 62
     :cond_0
     return-void
 .end method

@@ -1,54 +1,73 @@
-.class public final LX/0So;
-.super LX/05W;
+.class public final LX/0SO;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic A00:LX/0Sf;
+.field public final synthetic A00:LX/0SM;
+
+.field public final synthetic A01:Ljava/net/Socket;
+
+.field public final synthetic A02:Ljava/net/Socket;
 
 
 # direct methods
-.method public constructor <init>(LX/0Sf;)V
+.method public constructor <init>(LX/0SM;Ljava/net/Socket;Ljava/net/Socket;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/0So;->A00:LX/0Sf;
+    iput-object p1, p0, LX/0SO;->A00:LX/0SM;
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/05W;-><init>()V
+    iput-object p2, p0, LX/0SO;->A01:Ljava/net/Socket;
 
     .line 3
     .line 4
+    iput-object p3, p0, LX/0SO;->A02:Ljava/net/Socket;
+
     .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
-    .locals 1
+.method public final bridge synthetic call()Ljava/lang/Object;
+    .locals 4
 
     .line 0
-    iget-object v0, p0, LX/0So;->A00:LX/0Sf;
+    iget-object v3, p0, LX/0SO;->A00:LX/0SM;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/0Sf;->A04:LX/0Su;
+    iget-object v2, p0, LX/0SO;->A01:Ljava/net/Socket;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/0Su;->A01:Landroid/content/Context;
+    iget-object v1, v3, LX/0SM;->A03:Ljava/net/InetAddress;
 
     .line 5
     .line 6
-    invoke-static {v0, p2}, LX/05S;->A00(Landroid/content/Context;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    iget-object v0, p0, LX/0SO;->A02:Ljava/net/Socket;
 
     .line 7
     .line 8
-    .line 9
-    move-result-object v0
+    invoke-static {v3, v1, v2, v0}, LX/0SM;->A00(LX/0SM;Ljava/net/InetAddress;Ljava/net/Socket;Ljava/net/Socket;)V
 
+    .line 9
     .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
     return-object v0
 .end method

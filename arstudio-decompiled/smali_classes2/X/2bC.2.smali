@@ -1,39 +1,61 @@
-.class public final LX/2bC;
-.super LX/2cA;
+.class public final LX/2bc;
+.super LX/308;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nm;
-
-.field public final A01:LX/1Nw;
+# static fields
+.field public static final A00:Lcom/google/common/collect/ImmutableList;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, LX/2cA;-><init>()V
+    sget-object v2, LX/2bd;->A00:LX/36S;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/2bC;->A01:LX/1Nw;
+    sget-object v1, LX/2bd;->A01:LX/36S;
 
+    .line 3
+    .line 4
+    sget-object v0, LX/2bd;->A02:LX/36S;
+
+    .line 5
+    .line 6
+    invoke-static {v2, v1, v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    sput-object v0, LX/2bc;->A00:Lcom/google/common/collect/ImmutableList;
+
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/2bc;->A00:Lcom/google/common/collect/ImmutableList;
+
+    .line 1
+    .line 2
+    const-string/jumbo v0, "preferences"
+
+    .line 3
     .line 4
     .line 5
-    invoke-static {}, LX/1Nl;->A02()LX/1Nm;
+    invoke-direct {p0, v0, v1}, LX/308;-><init>(Ljava/lang/String;Lcom/google/common/collect/ImmutableList;)V
 
     .line 6
     .line 7
     .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/2bC;->A00:LX/1Nm;
-
-    .line 10
-    .line 11
     return-void
 .end method

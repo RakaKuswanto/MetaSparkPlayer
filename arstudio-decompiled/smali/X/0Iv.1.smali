@@ -2,129 +2,71 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/08O;
+
 
 # direct methods
-.method public static varargs A00(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    if-eqz p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
+    .line 3
     return-void
+.end method
+
+
+# virtual methods
+.method public final AKp()I
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/0FZ;->A07:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     .line 3
-    :cond_0
-    invoke-static {p1, p2}, Lcom/facebook/common/stringformat/StringFormatUtil;->formatStrLocaleSafe(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
+.end method
+
+.method public final AQe(Ljava/lang/String;I)Z
+    .locals 2
+
+    .line 0
+    and-int/lit8 v1, p2, 0x1
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    if-eqz v1, :cond_0
 
     .line 4
     .line 5
-    .line 6
-    move-result-object p0
+    const/16 v0, 0x10
 
+    .line 6
     .line 7
-    invoke-static {p0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    :cond_0
+    invoke-static {p1, v0}, LX/0FZ;->A0D(Ljava/lang/String;I)Z
 
     .line 8
     .line 9
     .line 10
-    move-result-object p0
+    move-result v0
 
     .line 11
-    throw p0
-.end method
-
-.method public static A01(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 0
-
-    .line 0
-    if-eqz p1, :cond_0
-
-    .line 1
-    .line 2
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-static {p0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object p0
-
-    .line 7
-    throw p0
-.end method
-
-.method public static A02(Z)V
-    .locals 0
-
-    .line 0
-    if-eqz p0, :cond_0
-
-    .line 1
-    .line 2
-    return-void
-
-    .line 3
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    .line 4
-    .line 5
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    throw p0
-.end method
-
-.method public static A03(Z)V
-    .locals 0
-
-    .line 0
-    if-eqz p0, :cond_0
-
-    .line 1
-    .line 2
-    return-void
-
-    .line 3
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 4
-    .line 5
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    throw p0
-.end method
-
-.method public static A04(ZLjava/lang/String;)V
-    .locals 0
-
-    .line 0
-    if-eqz p0, :cond_0
-
-    .line 1
-    .line 2
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-static {p1}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 4
-    .line 5
-    .line 6
-    move-result-object p0
-
-    .line 7
-    throw p0
+    return v0
 .end method

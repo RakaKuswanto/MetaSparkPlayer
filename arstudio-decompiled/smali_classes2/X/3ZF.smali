@@ -1,17 +1,66 @@
-.class public abstract LX/3ZF;
+.class public final LX/3ZF;
 .super Ljava/lang/Object;
 .source ""
 
 
+# instance fields
+.field public final A00:Landroid/graphics/Bitmap$Config;
+
+.field public final A01:Landroid/util/SparseArray;
+
+.field public final A02:LX/3Ue;
+
+.field public final A03:LX/3M6;
+
+.field public final A04:Ljava/util/concurrent/ExecutorService;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/Bitmap$Config;LX/3Ue;LX/3M6;Ljava/util/concurrent/ExecutorService;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
     .line 1
+    invoke-static {p3, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 2
     .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    .line 6
+    .line 7
+    iput-object p3, p0, LX/3ZF;->A03:LX/3M6;
+
+    .line 8
+    .line 9
+    iput-object p2, p0, LX/3ZF;->A02:LX/3Ue;
+
+    .line 10
+    .line 11
+    iput-object p1, p0, LX/3ZF;->A00:Landroid/graphics/Bitmap$Config;
+
+    .line 12
+    .line 13
+    iput-object p4, p0, LX/3ZF;->A04:Ljava/util/concurrent/ExecutorService;
+
+    .line 14
+    .line 15
+    new-instance v0, Landroid/util/SparseArray;
+
+    .line 16
+    .line 17
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    .line 18
+    .line 19
+    .line 20
+    iput-object v0, p0, LX/3ZF;->A01:Landroid/util/SparseArray;
+
+    .line 21
+    .line 22
     return-void
 .end method

@@ -1,62 +1,37 @@
 .class public final LX/3VW;
-.super Ljava/lang/Object;
+.super LX/3VF;
 .source ""
 
-
-# instance fields
-.field public final A00:Landroid/util/SparseBooleanArray;
-
-.field public final A01:[I
-
-.field public final synthetic A02:LX/3VR;
+# interfaces
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;LX/3VR;[I)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    const v0, 0x7611259a
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    invoke-direct {p0, v0}, LX/3VF;-><init>(I)V
+
+    .line 268435460
+    .line 268435461
+    .line 268435462
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
 
     .line 0
-    iput-object p2, p0, LX/3VW;->A02:LX/3VR;
+    invoke-direct {p0, p1}, LX/3VF;-><init>(I)V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    new-instance v2, Landroid/util/SparseBooleanArray;
-
-    .line 6
-    .line 7
-    invoke-direct {v2}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    .line 8
-    .line 9
-    .line 10
-    iput-object v2, p0, LX/3VW;->A00:Landroid/util/SparseBooleanArray;
-
-    .line 11
-    .line 12
-    invoke-static {p1}, LX/3VR;->A00(Landroid/content/res/Resources;)I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v1
-
-    .line 16
-    const/4 v0, 0x1
-
-    .line 17
-    invoke-virtual {v2, v1, v0}, Landroid/util/SparseBooleanArray;->put(IZ)V
-
-    .line 18
-    .line 19
-    .line 20
-    iput-object p3, p0, LX/3VW;->A01:[I
-
-    .line 21
-    .line 22
     return-void
 .end method

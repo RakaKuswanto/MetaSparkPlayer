@@ -18,50 +18,97 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 8
+.method public static synthetic $values()[Lcom/facebook/prefs/theme/ThemePreferences$State;
+    .locals 3
 
     .line 0
-    const-string v0, "ON"
+    const/4 v0, 0x3
+
+    .line 1
+    new-array v2, v0, [Lcom/facebook/prefs/theme/ThemePreferences$State;
+
+    .line 2
+    .line 3
+    sget-object v1, Lcom/facebook/prefs/theme/ThemePreferences$State;->ON:Lcom/facebook/prefs/theme/ThemePreferences$State;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/prefs/theme/ThemePreferences$State;->OFF:Lcom/facebook/prefs/theme/ThemePreferences$State;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/prefs/theme/ThemePreferences$State;->SYSTEM:Lcom/facebook/prefs/theme/ThemePreferences$State;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v3, "ON"
 
     .line 1
     .line 2
-    const/4 v7, 0x0
+    const/4 v1, 0x0
 
     .line 3
-    const/4 v6, 0x1
+    const/4 v2, 0x1
 
     .line 4
-    new-instance v5, Lcom/facebook/prefs/theme/ThemePreferences$State;
+    new-instance v0, Lcom/facebook/prefs/theme/ThemePreferences$State;
 
     .line 5
     .line 6
-    invoke-direct {v5, v0, v7, v6}, Lcom/facebook/prefs/theme/ThemePreferences$State;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v1, v2}, Lcom/facebook/prefs/theme/ThemePreferences$State;-><init>(Ljava/lang/String;II)V
 
     .line 7
     .line 8
     .line 9
-    sput-object v5, Lcom/facebook/prefs/theme/ThemePreferences$State;->ON:Lcom/facebook/prefs/theme/ThemePreferences$State;
+    sput-object v0, Lcom/facebook/prefs/theme/ThemePreferences$State;->ON:Lcom/facebook/prefs/theme/ThemePreferences$State;
 
     .line 10
     .line 11
-    const-string v0, "OFF"
+    const-string v1, "OFF"
 
     .line 12
     .line 13
-    const/4 v4, 0x2
+    const/4 v3, 0x2
 
     .line 14
-    new-instance v3, Lcom/facebook/prefs/theme/ThemePreferences$State;
+    new-instance v0, Lcom/facebook/prefs/theme/ThemePreferences$State;
 
     .line 15
     .line 16
-    invoke-direct {v3, v0, v6, v4}, Lcom/facebook/prefs/theme/ThemePreferences$State;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/facebook/prefs/theme/ThemePreferences$State;-><init>(Ljava/lang/String;II)V
 
     .line 17
     .line 18
     .line 19
-    sput-object v3, Lcom/facebook/prefs/theme/ThemePreferences$State;->OFF:Lcom/facebook/prefs/theme/ThemePreferences$State;
+    sput-object v0, Lcom/facebook/prefs/theme/ThemePreferences$State;->OFF:Lcom/facebook/prefs/theme/ThemePreferences$State;
 
     .line 20
     .line 21
@@ -69,42 +116,34 @@
 
     .line 22
     .line 23
-    const/4 v0, 0x3
+    const/4 v1, 0x3
 
     .line 24
-    new-instance v1, Lcom/facebook/prefs/theme/ThemePreferences$State;
+    new-instance v0, Lcom/facebook/prefs/theme/ThemePreferences$State;
 
     .line 25
     .line 26
-    invoke-direct {v1, v2, v4, v0}, Lcom/facebook/prefs/theme/ThemePreferences$State;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v3, v1}, Lcom/facebook/prefs/theme/ThemePreferences$State;-><init>(Ljava/lang/String;II)V
 
     .line 27
     .line 28
     .line 29
-    sput-object v1, Lcom/facebook/prefs/theme/ThemePreferences$State;->SYSTEM:Lcom/facebook/prefs/theme/ThemePreferences$State;
+    sput-object v0, Lcom/facebook/prefs/theme/ThemePreferences$State;->SYSTEM:Lcom/facebook/prefs/theme/ThemePreferences$State;
 
     .line 30
     .line 31
-    new-array v0, v0, [Lcom/facebook/prefs/theme/ThemePreferences$State;
+    invoke-static {}, Lcom/facebook/prefs/theme/ThemePreferences$State;->$values()[Lcom/facebook/prefs/theme/ThemePreferences$State;
 
     .line 32
     .line 33
-    aput-object v5, v0, v7
-
     .line 34
+    move-result-object v0
+
     .line 35
-    aput-object v3, v0, v6
+    sput-object v0, Lcom/facebook/prefs/theme/ThemePreferences$State;->$VALUES:[Lcom/facebook/prefs/theme/ThemePreferences$State;
 
     .line 36
     .line 37
-    aput-object v1, v0, v4
-
-    .line 38
-    .line 39
-    sput-object v0, Lcom/facebook/prefs/theme/ThemePreferences$State;->$VALUES:[Lcom/facebook/prefs/theme/ThemePreferences$State;
-
-    .line 40
-    .line 41
     return-void
 .end method
 

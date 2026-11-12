@@ -1,4 +1,4 @@
-.class public final LX/5v8;
+.class public final LX/5V8;
 .super Ljava/lang/Object;
 .source ""
 
@@ -6,17 +6,13 @@
 # instance fields
 .field public final A00:I
 
-.field public final A01:J
+.field public final A01:I
 
-.field public final A02:J
-
-.field public final A03:J
-
-.field public final A04:J
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(IJJJJ)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
     .line 0
@@ -25,25 +21,17 @@
     .line 1
     .line 2
     .line 3
-    iput-wide p2, p0, LX/5v8;->A01:J
+    iput-object p1, p0, LX/5V8;->A02:Ljava/lang/String;
 
     .line 4
     .line 5
-    iput-wide p4, p0, LX/5v8;->A02:J
+    iput p2, p0, LX/5V8;->A00:I
 
     .line 6
     .line 7
-    iput p1, p0, LX/5v8;->A00:I
+    iput p3, p0, LX/5V8;->A01:I
 
     .line 8
     .line 9
-    iput-wide p6, p0, LX/5v8;->A04:J
-
-    .line 10
-    .line 11
-    iput-wide p8, p0, LX/5v8;->A03:J
-
-    .line 12
-    .line 13
     return-void
 .end method

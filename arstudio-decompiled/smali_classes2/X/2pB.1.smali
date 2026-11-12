@@ -1,17 +1,146 @@
-.class public final LX/2pB;
+.class public final LX/2Pb;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/3BD;
+# static fields
+.field public static final A01:LX/1GO;
 
-.field public A01:LX/1zG;
+.field public static final A02:LX/1GO;
+
+.field public static final A03:LX/1GO;
+
+.field public static final A04:LX/1GO;
+
+
+# instance fields
+.field public final A00:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    sget-object v2, LX/1GN;->A0B:LX/1GO;
+
+    .line 1
+    .line 2
+    const-string/jumbo v0, "facebook/v2/"
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v2, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    const-string/jumbo v1, "encrypted_backup_enabled"
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-virtual {v0, v1}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    sput-object v0, LX/2Pb;->A02:LX/1GO;
+
+    .line 17
+    .line 18
+    const-string/jumbo v0, "messenger/v2/"
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v2, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    invoke-virtual {v0, v1}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    sput-object v0, LX/2Pb;->A03:LX/1GO;
+
+    .line 30
+    .line 31
+    const-string/jumbo v0, "noop/v2/"
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v2, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-virtual {v0, v1}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v0
+
+    .line 42
+    sput-object v0, LX/2Pb;->A04:LX/1GO;
+
+    .line 43
+    .line 44
+    const-string/jumbo v0, "config/neue/"
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-virtual {v2, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-object v1
+
+    .line 51
+    const-string/jumbo v0, "encrypted_backup_local_status"
+
+    .line 52
+    .line 53
+    .line 54
+    invoke-virtual {v1, v0}, LX/1GO;->A0E(Ljava/lang/String;)LX/1GO;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    sput-object v0, LX/2Pb;->A01:LX/1GO;
+
+    .line 59
+    .line 60
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,127 +148,17 @@
     .line 1
     .line 2
     .line 3
-    const/4 v1, 0x0
+    invoke-static {}, LX/2I6;->A0N()LX/0lu;
 
     .line 4
-    new-instance v0, LX/3BD;
-
     .line 5
     .line 6
-    invoke-direct {v0, v1}, LX/3BD;-><init>(Ljava/lang/Object;)V
-
-    .line 7
-    .line 8
-    .line 9
-    iput-object v0, p0, LX/2pB;->A00:LX/3BD;
-
-    .line 10
-    .line 11
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 12
-    .line 13
-    .line 14
     move-result-object v0
 
-    .line 15
-    iput-object v0, p0, LX/2pB;->A01:LX/1zG;
-
-    .line 16
-    .line 17
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A00(Ljava/lang/String;)V
-    .locals 3
-
-    .line 0
-    const-string v0, "NavigationLoggerTapCore.setLastNavigationTapPoint"
-
-    .line 1
-    .line 2
-    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
-
-    .line 3
-    .line 4
-    .line 5
-    :try_start_0
-    new-instance v0, LX/3BD;
-
-    .line 6
     .line 7
-    invoke-direct {v0, p1}, LX/3BD;-><init>(Ljava/lang/Object;)V
+    iput-object v0, p0, LX/2Pb;->A00:LX/0lu;
 
     .line 8
     .line 9
-    .line 10
-    iput-object v0, p0, LX/2pB;->A00:LX/3BD;
-
-    .line 11
-    .line 12
-    const-string/jumbo v0, "foreground"
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 16
-    .line 17
-    .line 18
-    move-result v0
-
-    .line 19
-    if-eqz v0, :cond_0
-
-    .line 20
-    .line 21
-    sget v0, LX/2eq;->A6E:I
-
-    .line 22
-    .line 23
-    iget-object v2, p0, LX/2pB;->A01:LX/1zG;
-
-    .line 24
-    .line 25
-    invoke-static {v2, v0}, LX/1zE;->A04(LX/1zG;I)LX/1tK;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v1
-
-    .line 29
-    sget v0, LX/2eq;->AD5:I
-
-    .line 30
-    .line 31
-    invoke-static {v1, v2, v0}, LX/1z1;->A02(LX/1tK;LX/1zG;I)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 32
-    .line 33
-    .line 34
-    :cond_0
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
-    .line 35
-    .line 36
-    .line 37
     return-void
-
-    .line 38
-    :catchall_0
-    move-exception v0
-
-    .line 39
-    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
-
-    .line 40
-    .line 41
-    .line 42
-    throw v0
 .end method

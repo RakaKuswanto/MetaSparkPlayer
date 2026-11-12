@@ -316,22 +316,23 @@
 
     .line 147
     .line 148
-    const-string v0, "WOW"
+    const-string/jumbo v0, "WOW"
 
     .line 149
     .line 150
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 151
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 152
     .line 153
+    .line 154
     move-result-object v0
 
-    .line 154
+    .line 155
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLGroupsContentAlertsTriggerTypeSet;->A00:Ljava/util/Set;
 
-    .line 155
     .line 156
+    .line 157
     return-void
 .end method
 

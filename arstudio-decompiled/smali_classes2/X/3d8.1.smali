@@ -1,83 +1,76 @@
 .class public final LX/3d8;
-.super Ljava/lang/Object;
+.super Landroid/database/Observable;
 .source ""
 
 
 # direct methods
-.method public static A00(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    if-nez p0, :cond_1
+    invoke-direct {p0}, Landroid/database/Observable;-><init>()V
 
     .line 1
     .line 2
-    const/4 p0, 0x0
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00()V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
     .line 3
-    :cond_0
-    return-object p0
-
     .line 4
-    :cond_1
-    const-string v0, "--"
-
     .line 5
+    move-result v1
+
     .line 6
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    :goto_0
+    add-int/lit8 v1, v1, -0x1
 
     .line 7
     .line 8
-    .line 9
-    move-result v0
+    if-ltz v1, :cond_0
 
+    .line 9
     .line 10
-    if-eqz v0, :cond_2
+    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     .line 11
     .line 12
-    const/4 v1, 0x2
+    invoke-virtual {v0, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
     .line 13
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
     .line 14
     .line 15
+    move-result-object v0
+
     .line 16
-    move-result v0
+    check-cast v0, LX/3eF;
 
     .line 17
-    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
     .line 18
+    iget-object v0, v0, LX/3eF;->A00:LX/3dT;
+
     .line 19
     .line 20
-    move-result-object p0
+    invoke-virtual {v0}, LX/4nZ;->notifyDataSetChanged()V
 
     .line 21
-    return-object p0
-
     .line 22
-    :cond_2
-    const-string v0, "-"
-
     .line 23
-    .line 24
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v0
-
-    .line 28
-    if-eqz v0, :cond_0
-
-    .line 29
-    .line 30
-    const/4 v1, 0x1
-
-    .line 31
     goto :goto_0
+
+    .line 24
+    :cond_0
+    return-void
 .end method

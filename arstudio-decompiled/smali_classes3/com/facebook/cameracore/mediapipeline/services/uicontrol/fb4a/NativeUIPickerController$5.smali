@@ -1,5 +1,5 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController$5;
-.super LX/4uZ;
+.super LX/4oH;
 .source ""
 
 
@@ -24,7 +24,7 @@
 
     .line 3
     .line 4
-    invoke-direct {p0}, LX/4uZ;-><init>()V
+    invoke-direct {p0}, LX/4oH;-><init>()V
 
     .line 5
     .line 6
@@ -140,11 +140,11 @@
     int-to-float v4, v0
 
     .line 14
-    iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView;->A0C:LX/4tf;
+    iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView;->A08:LX/4nW;
 
     .line 15
     .line 16
-    invoke-virtual {v2}, LX/4tf;->A05()I
+    invoke-virtual {v2}, LX/4nW;->A05()I
 
     .line 17
     .line 18
@@ -161,7 +161,7 @@
 
     .line 23
     .line 24
-    invoke-virtual {v2, v1}, LX/4tf;->A07(I)Landroid/view/View;
+    invoke-virtual {v2, v1}, LX/4nW;->A07(I)Landroid/view/View;
 
     .line 25
     .line 26
@@ -273,7 +273,7 @@
 
     .line 75
     .line 76
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->A0H:LX/4ta;
+    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->A0E:LX/4nQ;
 
     .line 77
     .line 78
@@ -281,7 +281,7 @@
 
     .line 79
     .line 80
-    invoke-virtual {v0, v3}, LX/4ta;->getPosition(Landroid/view/View;)I
+    invoke-virtual {v0, v3}, LX/4nQ;->getPosition(Landroid/view/View;)I
 
     .line 81
     .line 82
@@ -297,7 +297,7 @@
 
     .line 87
     .line 88
-    invoke-virtual {v0, v1}, LX/4sv;->getItemViewType(I)I
+    invoke-virtual {v0, v1}, LX/4nZ;->getItemViewType(I)I
 
     .line 89
     .line 90
@@ -305,7 +305,7 @@
     move-result v0
 
     .line 92
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 93
     .line 94

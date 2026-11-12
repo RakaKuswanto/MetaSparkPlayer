@@ -1,33 +1,113 @@
-.class public final LX/2zK;
-.super LX/3Ye;
+.class public final LX/2ZK;
+.super LX/2ZT;
 .source ""
-
-
-# instance fields
-.field public final A00:LX/0ZF;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 6
 
     .line 0
-    invoke-direct {p0}, LX/3Ye;-><init>()V
+    sget v0, LX/2I6;->AX9:I
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/1z6;->A0M()LX/0ZF;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
+    .line 3
     .line 4
     .line 5
+    move-result-object v5
+
     .line 6
-    move-result-object v0
+    check-cast v5, LX/3Hr;
 
     .line 7
-    iput-object v0, p0, LX/2zK;->A00:LX/0ZF;
-
     .line 8
+    sget v0, LX/2I6;->AX8:I
+
     .line 9
+    .line 10
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v4
+
+    .line 18
+    const-string/jumbo v3, "graph_cursors"
+
+    .line 19
+    .line 20
+    .line 21
+    const-wide/32 v0, 0x500000
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v1
+
+    .line 28
+    const/16 v0, 0x6400
+
+    .line 29
+    .line 30
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    new-instance v2, LX/3J1;
+
+    .line 35
+    .line 36
+    invoke-direct {v2, v0, v1, v3}, LX/3J1;-><init>(Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/String;)V
+
+    .line 37
+    .line 38
+    .line 39
+    const v1, 0x28c2931a
+
+    .line 40
+    .line 41
+    .line 42
+    const/4 v0, 0x2
+
+    .line 43
+    invoke-static {v4, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 44
+    .line 45
+    .line 46
+    invoke-virtual {v5, v2, v4, v1}, LX/3Hr;->A00(LX/3J1;Lcom/google/common/collect/ImmutableList;I)LX/3Iy;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
+    .line 50
+    invoke-direct {p0, v0}, LX/2ZT;-><init>(LX/3Iy;)V
+
+    .line 51
+    .line 52
+    .line 53
     return-void
 .end method

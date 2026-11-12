@@ -13,19 +13,19 @@
 # instance fields
 .field public final A00:I
 
-.field public final A01:Ljava/util/ArrayList;
+.field public final A01:I
 
 .field public final A02:I
 
 .field public final A03:I
 
-.field public final A04:I
+.field public final A04:Ljava/lang/CharSequence;
 
 .field public final A05:Ljava/lang/CharSequence;
 
-.field public final A06:Ljava/lang/CharSequence;
+.field public final A06:Ljava/lang/String;
 
-.field public final A07:Ljava/lang/String;
+.field public final A07:Ljava/util/ArrayList;
 
 .field public final A08:Ljava/util/ArrayList;
 
@@ -48,11 +48,11 @@
     const/4 v1, 0x2
 
     .line 1
-    new-instance v0, LX/04O;
+    new-instance v0, LX/0Wv;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/04O;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Wv;-><init>(I)V
 
     .line 4
     .line 5
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/0UC;)V
+.method public constructor <init>(LX/0CF;)V
     .locals 11
 
     .line 0
@@ -73,7 +73,7 @@
     .line 1
     .line 2
     .line 3
-    iget-object v8, p1, LX/060;->A0B:Ljava/util/ArrayList;
+    iget-object v8, p1, LX/06R;->A0A:Ljava/util/ArrayList;
 
     .line 4
     .line 5
@@ -97,7 +97,7 @@
 
     .line 14
     .line 15
-    iget-boolean v0, p1, LX/060;->A0E:Z
+    iget-boolean v0, p1, LX/06R;->A0D:Z
 
     .line 16
     .line 17
@@ -105,7 +105,7 @@
 
     .line 18
     .line 19
-    invoke-static {v7}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v7}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 20
     .line 21
@@ -113,7 +113,7 @@
     move-result-object v5
 
     .line 23
-    iput-object v5, p0, Landroidx/fragment/app/BackStackRecordState;->A01:Ljava/util/ArrayList;
+    iput-object v5, p0, Landroidx/fragment/app/BackStackRecordState;->A07:Ljava/util/ArrayList;
 
     .line 24
     .line 25
@@ -152,7 +152,7 @@
     move-result-object v10
 
     .line 41
-    check-cast v10, LX/05z;
+    check-cast v10, LX/06Q;
 
     .line 42
     .line 43
@@ -160,7 +160,7 @@
 
     .line 44
     .line 45
-    iget v0, v10, LX/05z;->A00:I
+    iget v0, v10, LX/06Q;->A00:I
 
     .line 46
     .line 47
@@ -168,7 +168,7 @@
 
     .line 48
     .line 49
-    iget-object v0, v10, LX/05z;->A05:Landroidx/fragment/app/Fragment;
+    iget-object v0, v10, LX/06Q;->A05:Landroidx/fragment/app/Fragment;
 
     .line 50
     .line 51
@@ -190,7 +190,7 @@
 
     .line 59
     .line 60
-    iget-boolean v0, v10, LX/05z;->A08:Z
+    iget-boolean v0, v10, LX/06Q;->A08:Z
 
     .line 61
     .line 62
@@ -202,7 +202,7 @@
 
     .line 65
     .line 66
-    iget v0, v10, LX/05z;->A01:I
+    iget v0, v10, LX/06Q;->A01:I
 
     .line 67
     .line 68
@@ -214,7 +214,7 @@
 
     .line 71
     .line 72
-    iget v0, v10, LX/05z;->A02:I
+    iget v0, v10, LX/06Q;->A02:I
 
     .line 73
     .line 74
@@ -226,7 +226,7 @@
 
     .line 77
     .line 78
-    iget v0, v10, LX/05z;->A03:I
+    iget v0, v10, LX/06Q;->A03:I
 
     .line 79
     .line 80
@@ -238,7 +238,7 @@
 
     .line 83
     .line 84
-    iget v0, v10, LX/05z;->A04:I
+    iget v0, v10, LX/06Q;->A04:I
 
     .line 85
     .line 86
@@ -246,7 +246,7 @@
 
     .line 87
     .line 88
-    iget-object v0, v10, LX/05z;->A07:LX/06f;
+    iget-object v0, v10, LX/06Q;->A07:LX/076;
 
     .line 89
     .line 90
@@ -262,7 +262,7 @@
 
     .line 95
     .line 96
-    iget-object v0, v10, LX/05z;->A06:LX/06f;
+    iget-object v0, v10, LX/06Q;->A06:LX/076;
 
     .line 97
     .line 98
@@ -293,63 +293,63 @@
 
     .line 109
     :cond_1
-    iget v0, p1, LX/060;->A07:I
+    iget v0, p1, LX/06R;->A06:I
 
     .line 110
     .line 111
-    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A04:I
+    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A03:I
 
     .line 112
     .line 113
-    iget-object v0, p1, LX/060;->A0A:Ljava/lang/String;
+    iget-object v0, p1, LX/06R;->A09:Ljava/lang/String;
 
     .line 114
     .line 115
-    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A07:Ljava/lang/String;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A06:Ljava/lang/String;
 
     .line 116
     .line 117
-    iget v0, p1, LX/0UC;->A01:I
+    iget v0, p1, LX/0CF;->A00:I
 
     .line 118
     .line 119
-    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A00:I
+    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A02:I
 
     .line 120
     .line 121
-    iget v0, p1, LX/060;->A02:I
+    iget v0, p1, LX/06R;->A01:I
 
     .line 122
     .line 123
-    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A03:I
+    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A01:I
 
     .line 124
     .line 125
-    iget-object v0, p1, LX/060;->A09:Ljava/lang/CharSequence;
+    iget-object v0, p1, LX/06R;->A08:Ljava/lang/CharSequence;
 
     .line 126
     .line 127
-    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A06:Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A05:Ljava/lang/CharSequence;
 
     .line 128
     .line 129
-    iget v0, p1, LX/060;->A01:I
+    iget v0, p1, LX/06R;->A00:I
 
     .line 130
     .line 131
-    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A02:I
+    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A00:I
 
     .line 132
     .line 133
-    iget-object v0, p1, LX/060;->A08:Ljava/lang/CharSequence;
+    iget-object v0, p1, LX/06R;->A07:Ljava/lang/CharSequence;
 
     .line 134
     .line 135
-    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A05:Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A04:Ljava/lang/CharSequence;
 
     .line 136
     .line 137
-    iget-object v0, p1, LX/060;->A0C:Ljava/util/ArrayList;
+    iget-object v0, p1, LX/06R;->A0B:Ljava/util/ArrayList;
 
     .line 138
     .line 139
@@ -357,7 +357,7 @@
 
     .line 140
     .line 141
-    iget-object v0, p1, LX/060;->A0D:Ljava/util/ArrayList;
+    iget-object v0, p1, LX/06R;->A0C:Ljava/util/ArrayList;
 
     .line 142
     .line 143
@@ -365,7 +365,7 @@
 
     .line 144
     .line 145
-    iget-boolean v0, p1, LX/060;->A0F:Z
+    iget-boolean v0, p1, LX/06R;->A0F:Z
 
     .line 146
     .line 147
@@ -381,7 +381,7 @@
 
     .line 151
     .line 152
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 153
     .line 154
@@ -421,7 +421,7 @@
     move-result-object v0
 
     .line 268435469
-    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A01:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A07:Ljava/util/ArrayList;
 
     .line 268435470
     .line 268435471
@@ -457,7 +457,7 @@
     move-result v0
 
     .line 268435487
-    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A04:I
+    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A03:I
 
     .line 268435488
     .line 268435489
@@ -469,7 +469,7 @@
     move-result-object v0
 
     .line 268435493
-    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A07:Ljava/lang/String;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A06:Ljava/lang/String;
 
     .line 268435494
     .line 268435495
@@ -481,7 +481,7 @@
     move-result v0
 
     .line 268435499
-    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A00:I
+    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A02:I
 
     .line 268435500
     .line 268435501
@@ -493,7 +493,7 @@
     move-result v0
 
     .line 268435505
-    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A03:I
+    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A01:I
 
     .line 268435506
     .line 268435507
@@ -513,7 +513,7 @@
 
     .line 268435514
     .line 268435515
-    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A06:Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A05:Ljava/lang/CharSequence;
 
     .line 268435516
     .line 268435517
@@ -525,7 +525,7 @@
     move-result v0
 
     .line 268435521
-    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A02:I
+    iput v0, p0, Landroidx/fragment/app/BackStackRecordState;->A00:I
 
     .line 268435522
     .line 268435523
@@ -541,7 +541,7 @@
 
     .line 268435528
     .line 268435529
-    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A05:Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A04:Ljava/lang/CharSequence;
 
     .line 268435530
     .line 268435531
@@ -577,7 +577,7 @@
     move-result v0
 
     .line 268435547
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 268435548
     .line 268435549
@@ -594,15 +594,15 @@
 
 
 # virtual methods
-.method public final A00(LX/0Sf;)LX/0UC;
+.method public final A00(LX/0VG;)LX/0CF;
     .locals 9
 
     .line 0
-    new-instance v5, LX/0UC;
+    new-instance v5, LX/0CF;
 
     .line 1
     .line 2
-    invoke-direct {v5, p1}, LX/0UC;-><init>(LX/0Sf;)V
+    invoke-direct {v5, p1}, LX/0CF;-><init>(LX/0VG;)V
 
     .line 3
     .line 4
@@ -628,11 +628,11 @@
 
     .line 12
     .line 13
-    new-instance v6, LX/05z;
+    new-instance v6, LX/06Q;
 
     .line 14
     .line 15
-    invoke-direct {v6}, LX/05z;-><init>()V
+    invoke-direct {v6}, LX/06Q;-><init>()V
 
     .line 16
     .line 17
@@ -645,11 +645,11 @@
 
     .line 21
     .line 22
-    iput v0, v6, LX/05z;->A00:I
+    iput v0, v6, LX/06Q;->A00:I
 
     .line 23
     .line 24
-    invoke-static {}, LX/06f;->values()[LX/06f;
+    invoke-static {}, LX/076;->values()[LX/076;
 
     .line 25
     .line 26
@@ -669,11 +669,11 @@
 
     .line 33
     .line 34
-    iput-object v0, v6, LX/05z;->A07:LX/06f;
+    iput-object v0, v6, LX/06Q;->A07:LX/076;
 
     .line 35
     .line 36
-    invoke-static {}, LX/06f;->values()[LX/06f;
+    invoke-static {}, LX/076;->values()[LX/076;
 
     .line 37
     .line 38
@@ -693,7 +693,7 @@
 
     .line 45
     .line 46
-    iput-object v0, v6, LX/05z;->A06:LX/06f;
+    iput-object v0, v6, LX/06Q;->A06:LX/076;
 
     .line 47
     .line 48
@@ -713,7 +713,7 @@
 
     .line 55
     :cond_0
-    iput-boolean v4, v6, LX/05z;->A08:Z
+    iput-boolean v4, v6, LX/06Q;->A08:Z
 
     .line 56
     .line 57
@@ -725,7 +725,7 @@
 
     .line 60
     .line 61
-    iput v4, v6, LX/05z;->A01:I
+    iput v4, v6, LX/06Q;->A01:I
 
     .line 62
     .line 63
@@ -737,7 +737,7 @@
 
     .line 66
     .line 67
-    iput v3, v6, LX/05z;->A02:I
+    iput v3, v6, LX/06Q;->A02:I
 
     .line 68
     .line 69
@@ -749,7 +749,7 @@
 
     .line 72
     .line 73
-    iput v2, v6, LX/05z;->A03:I
+    iput v2, v6, LX/06Q;->A03:I
 
     .line 74
     .line 75
@@ -761,27 +761,27 @@
 
     .line 78
     .line 79
-    iput v0, v6, LX/05z;->A04:I
+    iput v0, v6, LX/06Q;->A04:I
 
     .line 80
     .line 81
-    iput v4, v5, LX/060;->A03:I
+    iput v4, v5, LX/06R;->A02:I
 
     .line 82
     .line 83
-    iput v3, v5, LX/060;->A04:I
+    iput v3, v5, LX/06R;->A03:I
 
     .line 84
     .line 85
-    iput v2, v5, LX/060;->A05:I
+    iput v2, v5, LX/06R;->A04:I
 
     .line 86
     .line 87
-    iput v0, v5, LX/060;->A06:I
+    iput v0, v5, LX/06R;->A05:I
 
     .line 88
     .line 89
-    invoke-virtual {v5, v6}, LX/060;->A04(LX/05z;)V
+    invoke-virtual {v5, v6}, LX/06R;->A04(LX/06Q;)V
 
     .line 90
     .line 91
@@ -794,55 +794,55 @@
 
     .line 95
     :cond_1
-    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A04:I
+    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A03:I
 
     .line 96
     .line 97
-    iput v0, v5, LX/060;->A07:I
+    iput v0, v5, LX/06R;->A06:I
 
     .line 98
     .line 99
-    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A07:Ljava/lang/String;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A06:Ljava/lang/String;
 
     .line 100
     .line 101
-    iput-object v0, v5, LX/060;->A0A:Ljava/lang/String;
+    iput-object v0, v5, LX/06R;->A09:Ljava/lang/String;
 
     .line 102
     .line 103
-    iput-boolean v4, v5, LX/060;->A0E:Z
+    iput-boolean v4, v5, LX/06R;->A0D:Z
 
     .line 104
     .line 105
-    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A03:I
+    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A01:I
 
     .line 106
     .line 107
-    iput v0, v5, LX/060;->A02:I
+    iput v0, v5, LX/06R;->A01:I
 
     .line 108
     .line 109
-    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A06:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A05:Ljava/lang/CharSequence;
 
     .line 110
     .line 111
-    iput-object v0, v5, LX/060;->A09:Ljava/lang/CharSequence;
+    iput-object v0, v5, LX/06R;->A08:Ljava/lang/CharSequence;
 
     .line 112
     .line 113
-    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A02:I
+    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A00:I
 
     .line 114
     .line 115
-    iput v0, v5, LX/060;->A01:I
+    iput v0, v5, LX/06R;->A00:I
 
     .line 116
     .line 117
-    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A05:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A04:Ljava/lang/CharSequence;
 
     .line 118
     .line 119
-    iput-object v0, v5, LX/060;->A08:Ljava/lang/CharSequence;
+    iput-object v0, v5, LX/06R;->A07:Ljava/lang/CharSequence;
 
     .line 120
     .line 121
@@ -850,7 +850,7 @@
 
     .line 122
     .line 123
-    iput-object v0, v5, LX/060;->A0C:Ljava/util/ArrayList;
+    iput-object v0, v5, LX/06R;->A0B:Ljava/util/ArrayList;
 
     .line 124
     .line 125
@@ -858,7 +858,7 @@
 
     .line 126
     .line 127
-    iput-object v0, v5, LX/060;->A0D:Ljava/util/ArrayList;
+    iput-object v0, v5, LX/06R;->A0C:Ljava/util/ArrayList;
 
     .line 128
     .line 129
@@ -866,15 +866,15 @@
 
     .line 130
     .line 131
-    iput-boolean v0, v5, LX/060;->A0F:Z
+    iput-boolean v0, v5, LX/06R;->A0F:Z
 
     .line 132
     .line 133
-    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A00:I
+    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A02:I
 
     .line 134
     .line 135
-    iput v0, v5, LX/0UC;->A01:I
+    iput v0, v5, LX/0CF;->A00:I
 
     .line 136
     .line 137
@@ -882,7 +882,7 @@
 
     .line 138
     :goto_1
-    iget-object v1, p0, Landroidx/fragment/app/BackStackRecordState;->A01:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroidx/fragment/app/BackStackRecordState;->A07:Ljava/util/ArrayList;
 
     .line 139
     .line 140
@@ -898,7 +898,7 @@
 
     .line 145
     .line 146
-    invoke-static {v1, v3}, LX/002;->A0D(Ljava/util/AbstractList;I)Ljava/lang/String;
+    invoke-static {v1, v3}, LX/001;->A0T(Ljava/util/AbstractList;I)Ljava/lang/String;
 
     .line 147
     .line 148
@@ -910,7 +910,7 @@
 
     .line 151
     .line 152
-    iget-object v0, v5, LX/060;->A0B:Ljava/util/ArrayList;
+    iget-object v0, v5, LX/06R;->A0A:Ljava/util/ArrayList;
 
     .line 153
     .line 154
@@ -922,11 +922,11 @@
     move-result-object v1
 
     .line 158
-    check-cast v1, LX/05z;
+    check-cast v1, LX/06Q;
 
     .line 159
     .line 160
-    invoke-virtual {p1, v2}, LX/0Sf;->A0S(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    invoke-virtual {p1, v2}, LX/0VG;->A0S(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     .line 161
     .line 162
@@ -934,7 +934,7 @@
     move-result-object v0
 
     .line 164
-    iput-object v0, v1, LX/05z;->A05:Landroidx/fragment/app/Fragment;
+    iput-object v0, v1, LX/06Q;->A05:Landroidx/fragment/app/Fragment;
 
     .line 165
     .line 166
@@ -947,7 +947,7 @@
 
     .line 169
     :cond_3
-    invoke-virtual {v5, v4}, LX/0UC;->A0C(I)V
+    invoke-virtual {v5, v4}, LX/0CF;->A0C(I)V
 
     .line 170
     .line 171
@@ -976,7 +976,7 @@
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A01:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A07:Ljava/util/ArrayList;
 
     .line 6
     .line 7
@@ -1003,7 +1003,7 @@
     .line 18
     .line 19
     .line 20
-    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A04:I
+    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A03:I
 
     .line 21
     .line 22
@@ -1012,7 +1012,7 @@
     .line 23
     .line 24
     .line 25
-    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A07:Ljava/lang/String;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A06:Ljava/lang/String;
 
     .line 26
     .line 27
@@ -1021,7 +1021,7 @@
     .line 28
     .line 29
     .line 30
-    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A00:I
+    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A02:I
 
     .line 31
     .line 32
@@ -1030,7 +1030,7 @@
     .line 33
     .line 34
     .line 35
-    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A03:I
+    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A01:I
 
     .line 36
     .line 37
@@ -1039,7 +1039,7 @@
     .line 38
     .line 39
     .line 40
-    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A06:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A05:Ljava/lang/CharSequence;
 
     .line 41
     .line 42
@@ -1051,7 +1051,7 @@
     .line 44
     .line 45
     .line 46
-    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A02:I
+    iget v0, p0, Landroidx/fragment/app/BackStackRecordState;->A00:I
 
     .line 47
     .line 48
@@ -1060,7 +1060,7 @@
     .line 49
     .line 50
     .line 51
-    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A05:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/fragment/app/BackStackRecordState;->A04:Ljava/lang/CharSequence;
 
     .line 52
     .line 53

@@ -1,318 +1,237 @@
-.class public LX/2Vh;
+.class public final LX/2vH;
 .super Ljava/lang/Object;
 .source ""
 
-
-# static fields
-.field public static final synthetic A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+# interfaces
+.implements LX/30t;
 
 
 # instance fields
-.field public volatile synthetic _cur:Ljava/lang/Object;
+.field public final A00:LX/0RP;
+
+.field public final A01:LX/0RP;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    const-class v2, LX/2Vh;
-
-    const-class v1, Ljava/lang/Object;
-
-    const-string v0, "_cur"
-
-    invoke-static {v2, v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, LX/2Vh;->A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 3
+    .locals 1
 
     .line 0
-    const/4 v2, 0x0
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
     .line 2
     .line 3
+    sget v0, LX/2I6;->ANV:I
+
     .line 4
-    const/16 v1, 0x8
-
     .line 5
-    .line 6
-    new-instance v0, LX/2Vg;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
+    .line 6
     .line 7
     .line 8
-    invoke-direct {v0, v1, v2}, LX/2Vg;-><init>(IZ)V
+    move-result-object v0
 
     .line 9
+    iput-object v0, p0, LX/2vH;->A01:LX/0RP;
+
     .line 10
     .line 11
-    iput-object v0, p0, LX/2Vh;->_cur:Ljava/lang/Object;
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 12
     .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    iput-object v0, p0, LX/2vH;->A00:LX/0RP;
+
+    .line 16
+    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()I
+.method public final getExtraFileFromWorkerThread(Ljava/io/File;Lcom/facebook/auth/usersession/FbUserSession;)Ljava/util/Map;
     .locals 7
 
     .line 0
-    iget-object v0, p0, LX/2Vh;->_cur:Ljava/lang/Object;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
-    check-cast v0, LX/2Vg;
-
     .line 3
+    move-result-object v5
+
     .line 4
-    iget-wide v3, v0, LX/2Vg;->_state:J
+    const-string/jumbo v4, "bugreport_debug.txt"
 
     .line 5
     .line 6
-    const-wide/32 v5, 0x3fffffff
-
     .line 7
+    invoke-static {p1, v4}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
     .line 8
     .line 9
-    and-long/2addr v5, v3
-
     .line 10
-    const/4 v0, 0x0
+    move-result-object v0
 
     .line 11
-    shr-long/2addr v5, v0
+    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     .line 12
-    long-to-int v2, v5
-
     .line 13
-    const-wide v0, 0xfffffffc0000000L
-
     .line 14
+    move-result-object v6
+
     .line 15
+    invoke-static {v0}, LX/0X7;->A0Q(Ljava/io/File;)Ljava/io/FileOutputStream;
+
     .line 16
     .line 17
     .line 18
-    and-long/2addr v3, v0
+    move-result-object v3
 
     .line 19
-    const/16 v0, 0x1e
+    new-instance v0, Ljava/io/OutputStreamWriter;
 
     .line 20
     .line 21
-    shr-long/2addr v3, v0
+    invoke-direct {v0, v3}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
     .line 22
-    long-to-int v1, v3
-
     .line 23
-    sub-int/2addr v1, v2
-
     .line 24
-    const v0, 0x3fffffff    # 1.9999999f
+    new-instance v2, Ljava/io/PrintWriter;
 
     .line 25
     .line 26
+    invoke-direct {v2, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
+
     .line 27
-    and-int/2addr v0, v1
-
     .line 28
-    return v0
-.end method
+    .line 29
+    const-string v0, "RageShakeDetector.isEnabled: "
 
-.method public final A01()Ljava/lang/Object;
-    .locals 4
+    .line 30
+    .line 31
+    invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 0
-    :goto_0
-    iget-object v3, p0, LX/2Vh;->_cur:Ljava/lang/Object;
+    .line 32
+    .line 33
+    .line 34
+    iget-object v0, p0, LX/2vH;->A01:LX/0RP;
 
-    .line 1
-    .line 2
-    check-cast v3, LX/2Vg;
+    .line 35
+    .line 36
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    .line 3
-    .line 4
-    invoke-virtual {v3}, LX/2Vg;->A03()Ljava/lang/Object;
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
 
-    .line 5
-    .line 6
-    .line 7
+    .line 40
+    check-cast v0, LX/2vG;
+
+    .line 41
+    .line 42
+    iget-boolean v0, v0, LX/2vG;->A01:Z
+
+    .line 43
+    .line 44
+    invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Z)V
+
+    .line 45
+    .line 46
+    .line 47
+    const-string v0, "BugReporterPrefKeys.RAGESHAKE_ENABLE: "
+
+    .line 48
+    .line 49
+    invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    .line 50
+    .line 51
+    .line 52
+    iget-object v0, p0, LX/2vH;->A00:LX/0RP;
+
+    .line 53
+    .line 54
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+
+    .line 55
+    .line 56
+    .line 57
     move-result-object v1
 
-    .line 8
-    sget-object v0, LX/2Vg;->A04:LX/2VG;
+    .line 58
+    sget-object v0, LX/2vL;->A07:LX/28F;
 
-    .line 9
-    .line 10
-    if-eq v1, v0, :cond_0
+    .line 59
+    .line 60
+    invoke-interface {v1, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->ABC(LX/28F;)Lcom/facebook/common/util/TriState;
 
-    .line 11
-    .line 12
-    return-object v1
-
-    .line 13
-    :cond_0
-    sget-object v2, LX/2Vh;->A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    .line 14
-    .line 15
-    invoke-static {v3}, LX/2Vg;->A00(LX/2Vg;)J
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-wide v0
-
-    .line 19
-    invoke-static {v3, v0, v1}, LX/2Vg;->A01(LX/2Vg;J)LX/2Vg;
-
-    .line 20
-    .line 21
-    .line 22
+    .line 61
+    .line 62
+    .line 63
     move-result-object v0
 
-    .line 23
-    invoke-static {p0, v3, v0, v2}, LX/5Qv;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)Z
+    .line 64
+    invoke-virtual {v0}, Lcom/facebook/common/util/TriState;->asBooleanObject()Ljava/lang/Boolean;
 
-    .line 24
-    .line 25
-    .line 26
-    goto :goto_0
-.end method
-
-.method public final A02()V
-    .locals 4
-
-    .line 0
-    :goto_0
-    iget-object v3, p0, LX/2Vh;->_cur:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    check-cast v3, LX/2Vg;
-
-    .line 3
-    .line 4
-    invoke-virtual {v3}, LX/2Vg;->A04()Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    if-eqz v0, :cond_0
-
-    .line 9
-    .line 10
-    return-void
-
-    .line 11
-    :cond_0
-    sget-object v2, LX/2Vh;->A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    .line 12
-    .line 13
-    invoke-static {v3}, LX/2Vg;->A00(LX/2Vg;)J
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-wide v0
-
-    .line 17
-    invoke-static {v3, v0, v1}, LX/2Vg;->A01(LX/2Vg;J)LX/2Vg;
-
-    .line 18
-    .line 19
-    .line 20
+    .line 65
+    .line 66
+    .line 67
     move-result-object v0
 
-    .line 21
-    invoke-static {p0, v3, v0, v2}, LX/5Qv;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)Z
+    .line 68
+    invoke-virtual {v2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 22
-    .line 23
-    .line 24
-    goto :goto_0
+    .line 69
+    .line 70
+    .line 71
+    invoke-virtual {v2}, Ljava/io/Writer;->close()V
+
+    .line 72
+    .line 73
+    .line 74
+    invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
+
+    .line 75
+    .line 76
+    .line 77
+    invoke-static {v6, v4, v5}, LX/0X3;->A1L(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)V
+
+    .line 78
+    .line 79
+    .line 80
+    return-object v5
 .end method
 
-.method public final A03(Ljava/lang/Object;)Z
-    .locals 4
+.method public final getName()Ljava/lang/String;
+    .locals 1
 
-    .line 0
-    :goto_0
-    iget-object v3, p0, LX/2Vh;->_cur:Ljava/lang/Object;
+    const-string v0, "BugReporterAttachment"
 
-    .line 1
-    .line 2
-    check-cast v3, LX/2Vg;
+    return-object v0
+.end method
 
-    .line 3
-    .line 4
-    invoke-virtual {v3, p1}, LX/2Vg;->A02(Ljava/lang/Object;)I
+.method public final isMemoryIntensive()Z
+    .locals 1
 
-    .line 5
-    .line 6
-    .line 7
-    move-result v1
-
-    .line 8
-    const/4 v0, 0x1
-
-    .line 9
-    if-eqz v1, :cond_0
-
-    .line 10
-    .line 11
-    if-eq v1, v0, :cond_1
-
-    .line 12
-    .line 13
     const/4 v0, 0x0
 
-    .line 14
-    :cond_0
     return v0
+.end method
 
-    .line 15
-    :cond_1
-    sget-object v2, LX/2Vh;->A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.method public final shouldSendAsync()Z
+    .locals 1
 
-    .line 16
-    .line 17
-    invoke-static {v3}, LX/2Vg;->A00(LX/2Vg;)J
+    const/4 v0, 0x0
 
-    .line 18
-    .line 19
-    .line 20
-    move-result-wide v0
-
-    .line 21
-    invoke-static {v3, v0, v1}, LX/2Vg;->A01(LX/2Vg;J)LX/2Vg;
-
-    .line 22
-    .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    invoke-static {p0, v3, v0, v2}, LX/5Qv;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)Z
-
-    .line 26
-    .line 27
-    .line 28
-    goto :goto_0
+    return v0
 .end method

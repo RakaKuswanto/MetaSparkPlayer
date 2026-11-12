@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1dg;
+.implements LX/21e;
 
 
 # static fields
@@ -19,6 +19,18 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableMap;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "map",
+            "size",
+            "valueComparator"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/ImmutableMultimap;-><init>(Lcom/google/common/collect/ImmutableMap;I)V
@@ -39,6 +51,16 @@
 
 .method public static A00(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSetMultimap;
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mapEntries",
+            "valueComparator"
+        }
+    .end annotation
 
     .line 0
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
@@ -103,7 +125,7 @@
 
     .line 28
     .line 29
-    invoke-static {v3}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v3}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 30
     .line 31
@@ -171,7 +193,7 @@
 
     .line 62
     :cond_2
-    invoke-virtual {v5}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+    invoke-virtual {v5}, Lcom/google/common/collect/ImmutableMap$Builder;->buildOrThrow()Lcom/google/common/collect/ImmutableMap;
 
     .line 63
     .line 64
@@ -193,6 +215,14 @@
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
@@ -224,7 +254,7 @@
 
     .line 14
     .line 15
-    invoke-static {}, LX/0Ye;->A0K()Lcom/google/common/collect/ImmutableMap$Builder;
+    invoke-static {}, LX/0X2;->A0X()Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 16
     .line 17
@@ -251,119 +281,117 @@
     move-result-object v4
 
     .line 27
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 28
     .line 29
     .line 30
-    move-result v3
+    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     .line 31
-    if-lez v3, :cond_3
-
     .line 32
     .line 33
-    if-nez v6, :cond_1
+    move-result v3
 
     .line 34
+    if-lez v3, :cond_3
+
     .line 35
-    new-instance v0, LX/1fp;
-
     .line 36
-    .line 37
-    invoke-direct {v0}, LX/1fp;-><init>()V
+    if-nez v6, :cond_1
 
+    .line 37
     .line 38
+    new-instance v0, LX/23U;
+
     .line 39
     .line 40
+    invoke-direct {v0}, LX/23U;-><init>()V
+
+    .line 41
+    .line 42
+    .line 43
     :goto_1
     const/4 v2, 0x0
 
-    .line 41
+    .line 44
     :cond_0
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
-    .line 42
-    .line 43
-    .line 44
-    move-result-object v1
-
     .line 45
-    invoke-virtual {v0, v1}, LX/1fp;->A01(Ljava/lang/Object;)LX/1fp;
-
     .line 46
     .line 47
+    move-result-object v1
+
     .line 48
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 49
     .line 50
-    if-lt v2, v3, :cond_0
-
     .line 51
-    .line 52
-    invoke-virtual {v0}, LX/1fp;->A03()Lcom/google/common/collect/ImmutableSet;
+    invoke-virtual {v0, v1}, LX/23U;->A04(Ljava/lang/Object;)LX/23U;
 
+    .line 52
     .line 53
     .line 54
-    .line 55
-    move-result-object v1
+    add-int/lit8 v2, v2, 0x1
 
+    .line 55
     .line 56
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
+    if-lt v2, v3, :cond_0
 
     .line 57
     .line 58
+    invoke-virtual {v0}, LX/23U;->A06()Lcom/google/common/collect/ImmutableSet;
+
     .line 59
-    move-result v0
-
     .line 60
-    if-ne v0, v3, :cond_2
-
     .line 61
+    move-result-object v1
+
     .line 62
-    invoke-virtual {v8, v4, v1}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
 
     .line 63
     .line 64
     .line 65
-    add-int/2addr v5, v3
+    move-result v0
 
     .line 66
-    add-int/lit8 v7, v7, 0x1
+    if-ne v0, v3, :cond_2
 
     .line 67
     .line 68
-    goto :goto_0
+    invoke-virtual {v8, v4, v1}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 69
-    :cond_1
-    new-instance v0, LX/1fn;
-
     .line 70
     .line 71
-    invoke-direct {v0, v6}, LX/1fn;-><init>(Ljava/util/Comparator;)V
+    add-int/2addr v5, v3
 
     .line 72
+    add-int/lit8 v7, v7, 0x1
+
     .line 73
     .line 74
-    goto :goto_1
+    goto :goto_0
 
     .line 75
-    :cond_2
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    :cond_1
+    new-instance v0, LX/23W;
 
     .line 76
     .line 77
+    invoke-direct {v0, v6}, LX/23W;-><init>(Ljava/util/Comparator;)V
+
     .line 78
-    move-result-object v1
-
     .line 79
-    const-string v0, "Duplicate key-value pairs exist for key "
-
     .line 80
+    goto :goto_1
+
     .line 81
-    invoke-static {v4, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    :cond_2
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 82
     .line 83
@@ -371,126 +399,123 @@
     move-result-object v1
 
     .line 85
-    new-instance v0, Ljava/io/InvalidObjectException;
+    const-string v0, "Duplicate key-value pairs exist for key "
 
     .line 86
     .line 87
-    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-static {v4, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 88
     .line 89
     .line 90
-    throw v0
+    move-result-object v1
 
     .line 91
-    :cond_3
-    const-string v0, "Invalid value count "
+    new-instance v0, Ljava/io/InvalidObjectException;
 
     .line 92
     .line 93
-    invoke-static {v0, v3}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
     .line 94
     .line 95
     .line 96
-    move-result-object v1
+    throw v0
 
     .line 97
-    new-instance v0, Ljava/io/InvalidObjectException;
+    :cond_3
+    const-string v0, "Invalid value count "
 
     .line 98
     .line 99
-    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v3}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 100
     .line 101
     .line 102
-    throw v0
+    move-result-object v1
 
     .line 103
-    :cond_4
-    :try_start_0
-    invoke-virtual {v8}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+    new-instance v0, Ljava/io/InvalidObjectException;
 
     .line 104
     .line 105
+    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+
     .line 106
-    move-result-object v1
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-
     .line 107
-    sget-object v0, LX/1f0;->A00:LX/1ez;
-
     .line 108
+    throw v0
+
     .line 109
-    invoke-virtual {v0, p0, v1}, LX/1ez;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    :cond_4
+    :try_start_0
+    invoke-virtual {v8}, Lcom/google/common/collect/ImmutableMap$Builder;->buildOrThrow()Lcom/google/common/collect/ImmutableMap;
 
     .line 110
     .line 111
     .line 112
-    sget-object v0, LX/1f0;->A01:LX/1ez;
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 113
+    sget-object v0, LX/22Z;->A00:LX/22U;
+
     .line 114
-    :try_start_1
-    iget-object v1, v0, LX/1ez;->A00:Ljava/lang/reflect/Field;
-
     .line 115
-    .line 116
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, p0, v1}, LX/22U;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 116
     .line 117
     .line 118
+    sget-object v0, LX/22Z;->A01:LX/22U;
+
     .line 119
+    .line 120
+    :try_start_1
+    iget-object v1, v0, LX/22U;->A00:Ljava/lang/reflect/Field;
+
+    .line 121
+    .line 122
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 123
+    .line 124
+    .line 125
     move-result-object v0
 
-    .line 120
+    .line 126
     invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 121
-    .line 122
-    .line 123
-    sget-object v1, LX/1f2;->A00:LX/1ez;
-
-    .line 124
-    .line 125
-    if-nez v6, :cond_5
-
-    .line 126
     .line 127
-    sget-object v0, Lcom/google/common/collect/RegularImmutableSet;->A05:Lcom/google/common/collect/RegularImmutableSet;
-
     .line 128
     .line 129
-    :goto_2
-    invoke-virtual {v1, p0, v0}, LX/1ez;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+    sget-object v1, LX/22V;->A00:LX/22U;
 
     .line 130
     .line 131
-    .line 132
-    return-void
+    if-nez v6, :cond_5
 
+    .line 132
     .line 133
-    :cond_5
-    invoke-static {v6}, Lcom/google/common/collect/ImmutableSortedSet;->A06(Ljava/util/Comparator;)Lcom/google/common/collect/RegularImmutableSortedSet;
+    sget-object v0, Lcom/google/common/collect/RegularImmutableSet;->A05:Lcom/google/common/collect/RegularImmutableSet;
 
     .line 134
     .line 135
+    :goto_2
+    invoke-virtual {v1, p0, v0}, LX/22U;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
+
     .line 136
-    move-result-object v0
-
     .line 137
-    goto :goto_2
-
     .line 138
-    :catch_0
-    move-exception v0
+    return-void
 
     .line 139
-    invoke-static {v0}, LX/0Yj;->A0L(Ljava/lang/Object;)Ljava/lang/AssertionError;
+    :cond_5
+    invoke-static {v6}, Lcom/google/common/collect/ImmutableSortedSet;->A06(Ljava/util/Comparator;)Lcom/google/common/collect/RegularImmutableSortedSet;
 
     .line 140
     .line 141
@@ -498,68 +523,91 @@
     move-result-object v0
 
     .line 143
-    throw v0
+    goto :goto_2
 
     .line 144
-    :catch_1
-    move-exception v2
+    :catch_0
+    move-exception v0
 
     .line 145
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-static {v0}, LX/0X7;->A0R(Ljava/lang/Object;)Ljava/lang/AssertionError;
 
     .line 146
     .line 147
     .line 148
-    move-result-object v1
+    move-result-object v0
 
     .line 149
-    new-instance v0, Ljava/io/InvalidObjectException;
+    throw v0
 
     .line 150
+    :catch_1
+    move-exception v2
+
     .line 151
-    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     .line 152
     .line 153
     .line 154
-    invoke-virtual {v0, v2}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    move-result-object v1
 
     .line 155
+    new-instance v0, Ljava/io/InvalidObjectException;
+
     .line 156
     .line 157
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
     .line 158
+    .line 159
+    .line 160
+    invoke-virtual {v0, v2}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    .line 161
+    .line 162
+    .line 163
+    move-result-object v0
+
+    .line 164
     throw v0
 
-    .line 159
+    .line 165
     :cond_6
     const-string v0, "Invalid key count "
 
-    .line 160
-    .line 161
-    invoke-static {v0, v9}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
-
-    .line 162
-    .line 163
-    .line 164
-    move-result-object v1
-
-    .line 165
-    new-instance v0, Ljava/io/InvalidObjectException;
-
     .line 166
     .line 167
-    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v9}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 168
     .line 169
     .line 170
+    move-result-object v1
+
+    .line 171
+    new-instance v0, Ljava/io/InvalidObjectException;
+
+    .line 172
+    .line 173
+    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+
+    .line 174
+    .line 175
+    .line 176
     throw v0
 .end method
 
 .method private writeObject(Ljava/io/ObjectOutputStream;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
 
     .line 0
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
@@ -597,7 +645,7 @@
     .line 16
     .line 17
     .line 18
-    invoke-static {p0, p1}, LX/1f3;->A01(LX/1dg;Ljava/io/ObjectOutputStream;)V
+    invoke-static {p0, p1}, LX/22T;->A01(LX/21e;Ljava/io/ObjectOutputStream;)V
 
     .line 19
     .line 20
@@ -643,8 +691,16 @@
     return-object v0
 .end method
 
-.method public final bridge synthetic ABI(Ljava/lang/Object;)Ljava/util/Collection;
+.method public final bridge synthetic A9o(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "key"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultimap;->A01:Lcom/google/common/collect/ImmutableMap;
@@ -676,4 +732,27 @@
     .line 12
     .line 13
     return-object v1
+.end method
+
+.method public final bridge synthetic AhR(Ljava/lang/Object;)Ljava/util/Collection;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 0
+    invoke-static {}, LX/002;->A09()Ljava/lang/UnsupportedOperationException;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method

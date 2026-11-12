@@ -1,41 +1,68 @@
-.class public final LX/24s;
-.super Ljava/lang/Object;
+.class public abstract LX/24s;
+.super LX/228;
 .source ""
 
+# interfaces
+.implements Ljava/util/concurrent/ConcurrentMap;
 
-# static fields
-.field public static final A00:LX/24w;
 
-.field public static final A01:LX/24w;
-
-.field public static final A02:LX/24w;
-
-.field public static final A03:LX/24w;
-
-.field public static final A04:LX/24w;
-
-.field public static final A05:LX/24w;
-
-.field public static final A06:LX/24w;
-
-.field public static final A07:LX/24w;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "LX/228<",
+        "TK;TV;>;",
+        "Ljava/util/concurrent/ConcurrentMap<",
+        "TK;TV;>;"
+    }
+.end annotation
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const-string/jumbo v0, "tab_id"
+    invoke-direct {p0}, LX/228;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const-string v2, "TEXT"
+    return-void
+.end method
+
+
+# virtual methods
+.method public final putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 0
+    move-object v0, p0
+
+    .line 1
+    check-cast v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
+
+    .line 2
+    .line 3
+    iget-object v0, v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->A00:Ljava/util/concurrent/ConcurrentMap;
 
     .line 4
     .line 5
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -43,135 +70,115 @@
     move-result-object v0
 
     .line 9
-    sput-object v0, LX/24s;->A03:LX/24w;
+    return-object v0
+.end method
 
-    .line 10
-    .line 11
-    const-string/jumbo v1, "tab_index"
+.method public final remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
 
-    .line 12
-    .line 13
-    .line 14
-    const-string v0, "INTEGER"
+    .line 0
+    move-object v0, p0
 
-    .line 15
-    .line 16
-    invoke-static {v1, v0}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    .line 1
+    check-cast v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
 
-    .line 17
-    .line 18
-    .line 19
+    .line 2
+    .line 3
+    iget-object v0, v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->A00:Ljava/util/concurrent/ConcurrentMap;
+
+    .line 4
+    .line 5
+    invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ConcurrentMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    return v0
+.end method
+
+.method public final replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 0
+    move-object v0, p0
+
+    .line 1
+    check-cast v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
+
+    .line 2
+    .line 3
+    iget-object v0, v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->A00:Ljava/util/concurrent/ConcurrentMap;
+
+    .line 4
+    .line 5
+    invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ConcurrentMap;->replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
     move-result-object v0
 
-    .line 20
-    sput-object v0, LX/24s;->A04:LX/24w;
+    .line 9
+    return-object v0
+.end method
 
-    .line 21
-    .line 22
-    const-string/jumbo v0, "tab_url"
+.method public final replace(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "oldValue",
+            "newValue"
+        }
+    .end annotation
 
-    .line 23
-    .line 24
-    .line 25
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    .line 268435456
+    move-object v0, p0
 
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v0
+    .line 268435457
+    check-cast v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
 
-    .line 29
-    sput-object v0, LX/24s;->A06:LX/24w;
+    .line 268435458
+    .line 268435459
+    iget-object v0, v0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->A00:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 30
-    .line 31
-    const-string/jumbo v0, "tab_title"
+    .line 268435460
+    .line 268435461
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/ConcurrentMap;->replace(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 32
-    .line 33
-    .line 34
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    move-result v0
 
-    .line 35
-    .line 36
-    .line 37
-    move-result-object v0
-
-    .line 38
-    sput-object v0, LX/24s;->A05:LX/24w;
-
-    .line 39
-    .line 40
-    const-string/jumbo v0, "preview_filename"
-
-    .line 41
-    .line 42
-    .line 43
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
-
-    .line 44
-    .line 45
-    .line 46
-    move-result-object v0
-
-    .line 47
-    sput-object v0, LX/24s;->A02:LX/24w;
-
-    .line 48
-    .line 49
-    const-string v0, "favicon_filename"
-
-    .line 50
-    .line 51
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
-
-    .line 52
-    .line 53
-    .line 54
-    move-result-object v0
-
-    .line 55
-    sput-object v0, LX/24s;->A00:LX/24w;
-
-    .line 56
-    .line 57
-    const-string/jumbo v1, "last_accessed_timestamp"
-
-    .line 58
-    .line 59
-    .line 60
-    const-string v0, "LONG"
-
-    .line 61
-    .line 62
-    invoke-static {v1, v0}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    sput-object v0, LX/24s;->A01:LX/24w;
-
-    .line 67
-    .line 68
-    const-string/jumbo v0, "webview_bundle_filename"
-
-    .line 69
-    .line 70
-    .line 71
-    invoke-static {v0, v2}, LX/24w;->A00(Ljava/lang/String;Ljava/lang/String;)LX/24w;
-
-    .line 72
-    .line 73
-    .line 74
-    move-result-object v0
-
-    .line 75
-    sput-object v0, LX/24s;->A07:LX/24w;
-
-    .line 76
-    .line 77
-    return-void
+    .line 268435465
+    return v0
 .end method

@@ -1,35 +1,17 @@
-.class public interface abstract LX/3z9;
-.super Ljava/lang/Object;
+.class public final LX/3z9;
+.super LX/3nV;
 .source ""
 
 
-# virtual methods
-.method public abstract close()V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract copy(ILX/3z9;II)V
-.end method
+    .line 0
+    invoke-direct {p0}, LX/3nV;-><init>()V
 
-.method public abstract getByteBuffer()Ljava/nio/ByteBuffer;
-.end method
-
-.method public abstract getNativePtr()J
-.end method
-
-.method public abstract getSize()I
-.end method
-
-.method public abstract getUniqueId()J
-.end method
-
-.method public abstract isClosed()Z
-.end method
-
-.method public abstract read(I)B
-.end method
-
-.method public abstract read(I[BII)I
-.end method
-
-.method public abstract write(I[BII)I
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

@@ -1,48 +1,90 @@
-.class public final LX/0D0;
+.class public abstract LX/0D0;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:J
-
-.field public final A01:J
-
-.field public final A02:Ljava/lang/Object;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;J)V
-    .locals 2
+.method public static A00(Ljava/util/Map;)Lorg/json/JSONObject;
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/0D0;->A02:Ljava/lang/Object;
+    move-result v0
 
     .line 4
-    .line 5
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    if-nez v0, :cond_0
 
+    .line 5
     .line 6
+    invoke-static {}, LX/002;->A0D()Lorg/json/JSONObject;
+
     .line 7
     .line 8
-    move-result-wide v0
-
     .line 9
-    iput-wide v0, p0, LX/0D0;->A00:J
+    move-result-object v3
 
     .line 10
+    invoke-static {p0}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
+
     .line 11
-    add-long/2addr v0, p2
-
     .line 12
-    iput-wide v0, p0, LX/0D0;->A01:J
-
     .line 13
+    move-result-object v2
+
     .line 14
-    return-void
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    if-eqz v0, :cond_1
+
+    .line 19
+    .line 20
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    invoke-static {v0}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v1
+
+    .line 28
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 33
+    .line 34
+    .line 35
+    goto :goto_0
+
+    .line 36
+    :cond_0
+    const/4 v3, 0x0
+
+    .line 37
+    :cond_1
+    return-object v3
 .end method

@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 6
 
     .line 0
@@ -34,7 +34,7 @@
     .line 4
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 5
     .line 6
@@ -42,7 +42,7 @@
     move-result-object v3
 
     .line 8
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 9
     .line 10
@@ -50,7 +50,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -97,157 +97,164 @@
 
     .line 36
     :cond_1
-    const-string v0, "check_box_label"
+    const-string/jumbo v0, "check_box_label"
 
     .line 37
     .line 38
+    .line 39
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 39
     .line 40
     .line 41
+    .line 42
     move-result v0
 
-    .line 42
+    .line 43
     if-eqz v0, :cond_4
 
-    .line 43
     .line 44
-    invoke-static {p1}, LX/1Tc;->A02(LX/27m;)Ljava/lang/String;
-
     .line 45
+    invoke-static {p1}, LX/27L;->A0D(LX/3oD;)Ljava/lang/String;
+
     .line 46
     .line 47
+    .line 48
     move-result-object v4
 
-    .line 48
-    const-string v0, "checkBoxLabel"
-
     .line 49
-    .line 50
-    invoke-static {v0, v4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string/jumbo v0, "checkBoxLabel"
 
+    .line 50
     .line 51
     .line 52
+    invoke-static {v4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 53
+    .line 54
+    .line 55
     goto :goto_1
 
-    .line 54
+    .line 56
     :cond_2
     const-string/jumbo v0, "is_marketplace_available"
 
-    .line 55
-    .line 56
     .line 57
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 58
     .line 59
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 60
+    .line 61
+    .line 62
     move-result v0
 
-    .line 61
-    if-eqz v0, :cond_4
-
-    .line 62
     .line 63
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    if-eqz v0, :cond_4
 
     .line 64
     .line 65
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
     .line 66
+    .line 67
+    .line 68
     move-result v1
 
-    .line 67
+    .line 69
     goto :goto_1
 
-    .line 68
+    .line 70
     :goto_0
     const-string/jumbo v0, "is_enabled"
 
-    .line 69
-    .line 70
     .line 71
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 72
     .line 73
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     .line 74
+    .line 75
+    .line 76
     move-result v0
 
-    .line 75
-    if-eqz v0, :cond_4
-
-    .line 76
     .line 77
-    invoke-virtual {p1}, LX/27m;->A15()Z
+    if-eqz v0, :cond_4
 
     .line 78
     .line 79
+    invoke-virtual {p1}, LX/3oD;->A19()Z
+
     .line 80
+    .line 81
+    .line 82
     move-result v2
 
-    .line 81
+    .line 83
     :cond_3
     :goto_1
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
-    .line 82
-    .line 83
     .line 84
+    .line 85
+    .line 86
     move-result-object v3
 
-    .line 85
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
-
-    .line 86
     .line 87
-    if-ne v3, v0, :cond_0
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
     .line 88
     .line 89
-    goto :goto_2
+    if-ne v3, v0, :cond_0
 
     .line 90
-    :cond_4
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
-
     .line 91
+    goto :goto_2
+
     .line 92
+    :cond_4
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
+
     .line 93
+    .line 94
+    .line 95
     goto :goto_1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 94
+    .line 96
     :goto_2
     new-instance v0, Lcom/facebook/ipc/composer/model/MarketplaceCrossPostSettingModel;
 
-    .line 95
-    .line 96
-    invoke-direct {v0, v4, v2, v1}, Lcom/facebook/ipc/composer/model/MarketplaceCrossPostSettingModel;-><init>(Ljava/lang/String;ZZ)V
-
     .line 97
     .line 98
+    invoke-direct {v0, v4, v2, v1}, Lcom/facebook/ipc/composer/model/MarketplaceCrossPostSettingModel;-><init>(Ljava/lang/String;ZZ)V
+
     .line 99
+    .line 100
+    .line 101
     return-object v0
 
-    .line 100
+    .line 102
     :catch_0
     move-exception v1
 
-    .line 101
-    const-class v0, Lcom/facebook/ipc/composer/model/MarketplaceCrossPostSettingModel;
-
-    .line 102
     .line 103
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
+    const-class v0, Lcom/facebook/ipc/composer/model/MarketplaceCrossPostSettingModel;
 
     .line 104
     .line 105
-    .line 106
-    const/4 v0, 0x0
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
+    .line 106
     .line 107
+    .line 108
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 109
+    .line 110
+    .line 111
+    move-result-object v0
+
+    .line 112
     throw v0
 .end method

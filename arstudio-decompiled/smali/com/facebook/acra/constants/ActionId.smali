@@ -370,427 +370,427 @@
     return-object p0
 
     :pswitch_0
-    const-string p0, "START"
+    const-string p0, "VIDEO_REQUESTED_PLAYING"
 
     return-object p0
 
     :pswitch_1
-    const-string p0, "SUCCESS"
+    const-string p0, "VIDEO_DISPLAYED"
 
     return-object p0
 
     :pswitch_2
-    const-string p0, "FAIL"
+    const-string p0, "CONNECTIVITY_CHANGED"
 
     return-object p0
 
     :pswitch_3
-    const-string p0, "CANCEL"
+    const-string p0, "ASYNC_ACTION_FAIL"
 
     return-object p0
 
     :pswitch_4
-    const-string p0, "DRAW_COMPLETE"
+    const-string p0, "ASYNC_ACTION_SUCCESS"
 
     return-object p0
 
     :pswitch_5
-    const-string p0, "ON_RESUME"
+    const-string p0, "DISPLAYED_ON_SCREEN"
 
     return-object p0
 
     :pswitch_6
-    const-string p0, "ACTIVITY_CREATED"
+    const-string p0, "DISPLAYED"
 
     return-object p0
 
     :pswitch_7
-    const-string p0, "CONSISTENCY_MODEL_UPDATER"
+    const-string p0, "VIEW_DID_APPEAR_BEGIN"
 
     return-object p0
 
     :pswitch_8
-    const-string p0, "SEND_MESSAGE"
+    const-string p0, "ON_ATTACH_FRAGMENT"
 
     return-object p0
 
     :pswitch_9
-    const-string p0, "SUCCESS_COLD"
+    const-string p0, "ASYNC_FAIL"
 
     return-object p0
 
     :pswitch_a
-    const-string p0, "SUCCESS_WARM"
+    const-string p0, "ASNYC_FAILED"
 
     return-object p0
 
     :pswitch_b
-    const-string p0, "UI_IDLE"
+    const-string p0, "OFFLINE"
 
     return-object p0
 
     :pswitch_c
-    const-string p0, "PHASE_ONE"
+    const-string p0, "FAIL_FILE_TOO_LARGE"
 
     return-object p0
 
     :pswitch_d
-    const-string p0, "PHASE_TWO"
+    const-string p0, "NOTIFY_SUBSCRIBERS"
 
     return-object p0
 
     :pswitch_e
-    const-string p0, "DEQUEUE"
+    const-string p0, "WAIT_FOR_BLOCKERS"
 
     return-object p0
 
     :pswitch_f
-    const-string p0, "NETWORK_COMPLETE"
+    const-string p0, "SERVICE_ON_START_COMMAND"
 
     return-object p0
 
     :pswitch_10
-    const-string p0, "MEMORY_CACHE_VISIT"
+    const-string p0, "FUTURE_LISTENERS_COMPLETE"
 
     return-object p0
 
     :pswitch_11
-    const-string p0, "DISK_CACHE_VISIT"
+    const-string p0, "APPLY_FINISHED_LIST_AGAIN"
 
     return-object p0
 
     :pswitch_12
-    const-string p0, "CONSISTENCY_UPDATE"
+    const-string p0, "APPLY_FINISHED_LIST"
 
     return-object p0
 
     :pswitch_13
-    const-string p0, "RETURN_TO_CALLER"
+    const-string p0, "APPLY_OPTIMISTICS"
 
     return-object p0
 
     :pswitch_14
-    const-string p0, "PHOTO_UPLOAD_COMPLETE"
+    const-string p0, "POPULATE_CONSISTENCY_MEMORY_CACHE"
 
     return-object p0
 
     :pswitch_15
-    const-string p0, "USER_NAVIGATION_CANCELLATION"
+    const-string p0, "NETWORK_RESPONSE_INITIAL_SCAN"
 
     return-object p0
 
     :pswitch_16
-    const-string p0, "DB_FETCH"
+    const-string p0, "PRIVACY_VIOLATION"
 
     return-object p0
 
     :pswitch_17
-    const-string p0, "SERVER_FETCH"
+    const-string p0, "FORMAT_ERROR"
 
     return-object p0
 
     :pswitch_18
-    const-string p0, "SUCCESS_CACHE"
+    const-string p0, "FILE_SYSTEM_FAIL"
 
     return-object p0
 
     :pswitch_19
-    const-string p0, "SUCCESS_DB"
+    const-string p0, "END_START_ACTIVITY"
 
     return-object p0
 
     :pswitch_1a
-    const-string p0, "SUCCESS_NETWORK"
+    const-string p0, "BEGIN_START_ACTIVITY"
 
     return-object p0
 
     :pswitch_1b
-    const-string p0, "SUCCESS_LOCAL_UNSPECIFIED"
+    const-string p0, "ACTIVITY_START"
 
     return-object p0
 
     :pswitch_1c
-    const-string p0, "CACHE_UPDATED"
+    const-string p0, "ACTIVITY_RESUME"
 
     return-object p0
 
     :pswitch_1d
-    const-string p0, "DB_UPDATED"
+    const-string p0, "PREV_ACTIVITY_PAUSE"
 
     return-object p0
 
     :pswitch_1e
-    const-string p0, "DATA_RECEIVED"
+    const-string p0, "MESSENGER_THREAD_LIST_DISPLAYED"
 
     return-object p0
 
     :pswitch_1f
-    const-string p0, "DRAW_VIEW"
+    const-string p0, "MESSENGER_THREAD_LIST_LOADED"
 
     return-object p0
 
     :pswitch_20
-    const-string p0, "DATA_EMPTY"
+    const-string p0, "APP_FIRST_VIEW_CONTROLLER"
 
     return-object p0
 
     :pswitch_21
-    const-string p0, "CACHE_FETCH"
+    const-string p0, "MESSENGER_DELTA_REQUEST"
 
     return-object p0
 
     :pswitch_22
-    const-string p0, "PREPARE_BEGIN"
+    const-string p0, "MQTT_DISCONNECTED"
 
     return-object p0
 
     :pswitch_23
-    const-string p0, "PREPARE_END"
+    const-string p0, "MQTT_CONNECTED"
 
     return-object p0
 
     :pswitch_24
-    const-string p0, "ASYNC_BEGIN"
+    const-string p0, "MQTT_CONNECTING"
 
     return-object p0
 
     :pswitch_25
-    const-string p0, "ASYNC_END"
+    const-string p0, "APP_MAIN"
 
     return-object p0
 
     :pswitch_26
-    const-string p0, "REMOVE_BEGIN"
+    const-string p0, "APP_DID_ENTER_BACKGROUND"
 
     return-object p0
 
     :pswitch_27
-    const-string p0, "REMOVE_END"
+    const-string p0, "APP_WILL_ENTER_FOREGROUND"
 
     return-object p0
 
     :pswitch_28
-    const-string p0, "BROADCAST_DONE"
+    const-string p0, "APP_DID_BECOME_ACTIVE"
 
     return-object p0
 
     :pswitch_29
-    const-string p0, "ON_RESUME_END"
+    const-string p0, "APP_DID_FINISH_LAUNCHING"
 
     return-object p0
 
     :pswitch_2a
-    const-string p0, "ON_ATTACH_END"
+    const-string p0, "MESSENGER_QUEUE_CREATION"
 
     return-object p0
 
     :pswitch_2b
-    const-string p0, "ON_FRAGMENT_CREATE_END"
+    const-string p0, "RTMP_FIRST_KEY_FRAME_RECEIVED"
 
     return-object p0
 
     :pswitch_2c
-    const-string p0, "ON_CREATE_VIEW_END"
+    const-string p0, "LOAD_VIEW_BEGIN"
 
     return-object p0
 
     :pswitch_2d
-    const-string p0, "ON_ACTIVITY_CREATED_END"
+    const-string p0, "COMPONENTS_DATA_SOURCE_DID_END_UPDATES"
 
     return-object p0
 
     :pswitch_2e
-    const-string p0, "ON_START_END"
+    const-string p0, "COMPONENTS_DATA_SOURCE_WILL_BEGIN_UPDATES"
 
     return-object p0
 
     :pswitch_2f
-    const-string p0, "QUEUED"
+    const-string p0, "VIEW_DID_LOAD_BEGIN"
 
     return-object p0
 
     :pswitch_30
-    const-string p0, "IN_PROGRESS"
+    const-string p0, "VIEW_WILL_APPEAR_BEGIN"
 
     return-object p0
 
     :pswitch_31
-    const-string p0, "INIT"
+    const-string p0, "CARD_DATA_LOADED"
 
     return-object p0
 
     :pswitch_32
-    const-string p0, "UNKNOWN"
+    const-string p0, "HEADER_DATA_LOADED"
 
     return-object p0
 
     :pswitch_33
-    const-string p0, "RETRY_AFTER_FAILURE"
+    const-string p0, "VIDEO_SET_RENDERER_CONTEXT"
 
     return-object p0
 
     :pswitch_34
-    const-string p0, "RETRY_AFTER_RECONNECT"
+    const-string p0, "RTMP_CONNECTION_INTERCEPTED"
 
     return-object p0
 
     :pswitch_35
-    const-string p0, "QUEUEING_BEGIN"
+    const-string p0, "RTMP_CONNECTION_FAILED"
 
     return-object p0
 
     :pswitch_36
-    const-string p0, "QUEUEING_SUCCESS"
+    const-string p0, "RTMP_CONNECTION_CONNECTED"
 
     return-object p0
 
     :pswitch_37
-    const-string p0, "QUEUEING_FAIL"
+    const-string p0, "VIDEO_PLAYING"
 
     return-object p0
 
     :pswitch_38
-    const-string p0, "MESSAGE_UPDATE_START"
+    const-string p0, "RTMP_STREAM_PREPARED"
 
     return-object p0
 
     :pswitch_39
-    const-string p0, "MESSAGE_UPDATE_END"
+    const-string p0, "CONTROLLER_INITIATED"
 
     return-object p0
 
     :pswitch_3a
-    const-string p0, "PHOTO_CAPTURED"
+    const-string p0, "TIMEOUT"
 
     return-object p0
 
     :pswitch_3b
-    const-string p0, "MEDIA_PREVIEW_VISIBLE"
+    const-string p0, "MISSED_EVENT"
 
     return-object p0
 
     :pswitch_3c
-    const-string p0, "COUNTER"
+    const-string p0, "NEW_START_FOUND"
 
     return-object p0
 
     :pswitch_3d
-    const-string p0, "INTERACTION_LOAD_TIMELINE_HEADER"
+    const-string p0, "RTMP_CONNECTION_RELEASE"
 
     return-object p0
 
     :pswitch_3e
-    const-string p0, "INTERACTION_LOAD_EVENT_PERMALINK"
+    const-string p0, "RTMP_CONNECTION_REQUESTED"
 
     return-object p0
 
     :pswitch_3f
-    const-string p0, "INTERACTION_LOAD_GROUPS_FEED"
+    const-string p0, "REQUESTED_PLAYING"
 
     return-object p0
 
     :pswitch_40
-    const-string p0, "INTERACTION_LOAD_PAGE_HEADER"
+    const-string p0, "RTMP_PACKET_RECEIVED"
 
     return-object p0
 
     :pswitch_41
-    const-string p0, "INTERACTION_LOAD_PAGE_HEADER_ADMIN"
+    const-string p0, "QUERY_READY"
 
     return-object p0
 
     :pswitch_42
-    const-string p0, "INTERACTION_LOAD_PERMALINK"
+    const-string p0, "ABORTED"
 
     return-object p0
 
     :pswitch_43
-    const-string p0, "INTERACTION_OPEN_COMPOSER"
+    const-string p0, "ACTION_BAR_COMPLETE"
 
     return-object p0
 
     :pswitch_44
-    const-string p0, "INTERACTION_OPEN_MEDIA_PICKER"
+    const-string p0, "LEGACY_MARKER"
 
     return-object p0
 
     :pswitch_45
-    const-string p0, "INTERACTION_OPEN_PHOTO_GALLERY"
+    const-string p0, "DATA_LOAD_START"
 
     return-object p0
 
     :pswitch_46
-    const-string p0, "INTERACTION_OPEN_CHECK_IN"
+    const-string p0, "ON_VIEW_CREATED_END"
 
     return-object p0
 
     :pswitch_47
-    const-string p0, "INTERACTION_LOAD_WEB_VIEW"
+    const-string p0, "NEWSFEED_PROCESS_RESPONSE"
 
     return-object p0
 
     :pswitch_48
-    const-string p0, "INTENT_MAPPED"
+    const-string p0, "EDGE_PROCESSING_BEGIN"
 
     return-object p0
 
     :pswitch_49
-    const-string p0, "ACTIVITY_LAUNCHED"
+    const-string p0, "NETWORK_RESPONSE"
 
     return-object p0
 
     :pswitch_4a
-    const-string p0, "ACTIVITY_PAUSED"
+    const-string p0, "NETWORK_FAILED"
 
     return-object p0
 
     :pswitch_4b
-    const-string p0, "ACTIVITY_STARTED"
+    const-string p0, "INTERRUPTED"
 
     return-object p0
 
     :pswitch_4c
-    const-string p0, "ACTIVITY_RESUMED"
+    const-string p0, "MAIN_COMPLETE"
 
     return-object p0
 
     :pswitch_4d
-    const-string p0, "FRAGMENT_CREATED"
+    const-string p0, "UDP_REQUEST_SEND"
 
     return-object p0
 
     :pswitch_4e
-    const-string p0, "FRAGMENT_RESUMED"
+    const-string p0, "ANIMATION_END"
 
     return-object p0
 
     :pswitch_4f
-    const-string p0, "ACTIVITY_ON_CREATE"
+    const-string p0, "SEARCH_TYPEAHEAD"
 
     return-object p0
 
     :pswitch_50
-    const-string p0, "INTENT_MAPPING_BEGIN"
+    const-string p0, "MINIPREVIEW_COMPLETE"
 
     return-object p0
 
     :pswitch_51
-    const-string p0, "FRAGMENT_ON_CREATE"
+    const-string p0, "PHOTO_DOWNLOAD_COMPLETE"
 
     return-object p0
 
     :pswitch_52
-    const-string p0, "FRAGMENT_NEW_INSTANCE"
+    const-string p0, "FINALLY"
 
     return-object p0
 
     :pswitch_53
-    const-string p0, "MARKER_SWAPPED"
+    const-string p0, "METHOD_INVOKE"
 
     return-object p0
 
     :pswitch_54
-    const-string p0, "FRAGMENT_INSTANCE_CREATED"
+    const-string p0, "ERROR"
 
     return-object p0
 
@@ -800,427 +800,427 @@
     return-object p0
 
     :pswitch_56
-    const-string p0, "ERROR"
+    const-string p0, "FRAGMENT_INSTANCE_CREATED"
 
     return-object p0
 
     :pswitch_57
-    const-string p0, "METHOD_INVOKE"
+    const-string p0, "MARKER_SWAPPED"
 
     return-object p0
 
     :pswitch_58
-    const-string p0, "FINALLY"
+    const-string p0, "FRAGMENT_NEW_INSTANCE"
 
     return-object p0
 
     :pswitch_59
-    const-string p0, "PHOTO_DOWNLOAD_COMPLETE"
+    const-string p0, "FRAGMENT_ON_CREATE"
 
     return-object p0
 
     :pswitch_5a
-    const-string p0, "MINIPREVIEW_COMPLETE"
+    const-string p0, "INTENT_MAPPING_BEGIN"
 
     return-object p0
 
     :pswitch_5b
-    const-string p0, "SEARCH_TYPEAHEAD"
+    const-string p0, "ACTIVITY_ON_CREATE"
 
     return-object p0
 
     :pswitch_5c
-    const-string p0, "ANIMATION_END"
+    const-string p0, "FRAGMENT_RESUMED"
 
     return-object p0
 
     :pswitch_5d
-    const-string p0, "UDP_REQUEST_SEND"
+    const-string p0, "FRAGMENT_CREATED"
 
     return-object p0
 
     :pswitch_5e
-    const-string p0, "MAIN_COMPLETE"
+    const-string p0, "ACTIVITY_RESUMED"
 
     return-object p0
 
     :pswitch_5f
-    const-string p0, "INTERRUPTED"
+    const-string p0, "ACTIVITY_STARTED"
 
     return-object p0
 
     :pswitch_60
-    const-string p0, "NETWORK_FAILED"
+    const-string p0, "ACTIVITY_PAUSED"
 
     return-object p0
 
     :pswitch_61
-    const-string p0, "NETWORK_RESPONSE"
+    const-string p0, "ACTIVITY_LAUNCHED"
 
     return-object p0
 
     :pswitch_62
-    const-string p0, "EDGE_PROCESSING_BEGIN"
+    const-string p0, "INTENT_MAPPED"
 
     return-object p0
 
     :pswitch_63
-    const-string p0, "NEWSFEED_PROCESS_RESPONSE"
+    const-string p0, "INTERACTION_LOAD_WEB_VIEW"
 
     return-object p0
 
     :pswitch_64
-    const-string p0, "ON_VIEW_CREATED_END"
+    const-string p0, "INTERACTION_OPEN_CHECK_IN"
 
     return-object p0
 
     :pswitch_65
-    const-string p0, "DATA_LOAD_START"
+    const-string p0, "INTERACTION_OPEN_PHOTO_GALLERY"
 
     return-object p0
 
     :pswitch_66
-    const-string p0, "LEGACY_MARKER"
+    const-string p0, "INTERACTION_OPEN_MEDIA_PICKER"
 
     return-object p0
 
     :pswitch_67
-    const-string p0, "ACTION_BAR_COMPLETE"
+    const-string p0, "INTERACTION_OPEN_COMPOSER"
 
     return-object p0
 
     :pswitch_68
-    const-string p0, "ABORTED"
+    const-string p0, "INTERACTION_LOAD_PERMALINK"
 
     return-object p0
 
     :pswitch_69
-    const-string p0, "QUERY_READY"
+    const-string p0, "INTERACTION_LOAD_PAGE_HEADER_ADMIN"
 
     return-object p0
 
     :pswitch_6a
-    const-string p0, "RTMP_PACKET_RECEIVED"
+    const-string p0, "INTERACTION_LOAD_PAGE_HEADER"
 
     return-object p0
 
     :pswitch_6b
-    const-string p0, "REQUESTED_PLAYING"
+    const-string p0, "INTERACTION_LOAD_GROUPS_FEED"
 
     return-object p0
 
     :pswitch_6c
-    const-string p0, "RTMP_CONNECTION_REQUESTED"
+    const-string p0, "INTERACTION_LOAD_EVENT_PERMALINK"
 
     return-object p0
 
     :pswitch_6d
-    const-string p0, "RTMP_CONNECTION_RELEASE"
+    const-string p0, "INTERACTION_LOAD_TIMELINE_HEADER"
 
     return-object p0
 
     :pswitch_6e
-    const-string p0, "NEW_START_FOUND"
+    const-string p0, "COUNTER"
 
     return-object p0
 
     :pswitch_6f
-    const-string p0, "MISSED_EVENT"
+    const-string p0, "MEDIA_PREVIEW_VISIBLE"
 
     return-object p0
 
     :pswitch_70
-    const-string p0, "TIMEOUT"
+    const-string p0, "PHOTO_CAPTURED"
 
     return-object p0
 
     :pswitch_71
-    const-string p0, "CONTROLLER_INITIATED"
+    const-string p0, "MESSAGE_UPDATE_END"
 
     return-object p0
 
     :pswitch_72
-    const-string p0, "RTMP_STREAM_PREPARED"
+    const-string p0, "MESSAGE_UPDATE_START"
 
     return-object p0
 
     :pswitch_73
-    const-string p0, "VIDEO_PLAYING"
+    const-string p0, "QUEUEING_FAIL"
 
     return-object p0
 
     :pswitch_74
-    const-string p0, "RTMP_CONNECTION_CONNECTED"
+    const-string p0, "QUEUEING_SUCCESS"
 
     return-object p0
 
     :pswitch_75
-    const-string p0, "RTMP_CONNECTION_FAILED"
+    const-string p0, "QUEUEING_BEGIN"
 
     return-object p0
 
     :pswitch_76
-    const-string p0, "RTMP_CONNECTION_INTERCEPTED"
+    const-string p0, "RETRY_AFTER_RECONNECT"
 
     return-object p0
 
     :pswitch_77
-    const-string p0, "VIDEO_SET_RENDERER_CONTEXT"
+    const-string p0, "RETRY_AFTER_FAILURE"
 
     return-object p0
 
     :pswitch_78
-    const-string p0, "HEADER_DATA_LOADED"
+    const-string p0, "UNKNOWN"
 
     return-object p0
 
     :pswitch_79
-    const-string p0, "CARD_DATA_LOADED"
+    const-string p0, "INIT"
 
     return-object p0
 
     :pswitch_7a
-    const-string p0, "VIEW_WILL_APPEAR_BEGIN"
+    const-string p0, "IN_PROGRESS"
 
     return-object p0
 
     :pswitch_7b
-    const-string p0, "VIEW_DID_LOAD_BEGIN"
+    const-string p0, "QUEUED"
 
     return-object p0
 
     :pswitch_7c
-    const-string p0, "COMPONENTS_DATA_SOURCE_WILL_BEGIN_UPDATES"
+    const-string p0, "ON_START_END"
 
     return-object p0
 
     :pswitch_7d
-    const-string p0, "COMPONENTS_DATA_SOURCE_DID_END_UPDATES"
+    const-string p0, "ON_ACTIVITY_CREATED_END"
 
     return-object p0
 
     :pswitch_7e
-    const-string p0, "LOAD_VIEW_BEGIN"
+    const-string p0, "ON_CREATE_VIEW_END"
 
     return-object p0
 
     :pswitch_7f
-    const-string p0, "RTMP_FIRST_KEY_FRAME_RECEIVED"
+    const-string p0, "ON_FRAGMENT_CREATE_END"
 
     return-object p0
 
     :pswitch_80
-    const-string p0, "MESSENGER_QUEUE_CREATION"
+    const-string p0, "ON_ATTACH_END"
 
     return-object p0
 
     :pswitch_81
-    const-string p0, "APP_DID_FINISH_LAUNCHING"
+    const-string p0, "ON_RESUME_END"
 
     return-object p0
 
     :pswitch_82
-    const-string p0, "APP_DID_BECOME_ACTIVE"
+    const-string p0, "BROADCAST_DONE"
 
     return-object p0
 
     :pswitch_83
-    const-string p0, "APP_WILL_ENTER_FOREGROUND"
+    const-string p0, "REMOVE_END"
 
     return-object p0
 
     :pswitch_84
-    const-string p0, "APP_DID_ENTER_BACKGROUND"
+    const-string p0, "REMOVE_BEGIN"
 
     return-object p0
 
     :pswitch_85
-    const-string p0, "APP_MAIN"
+    const-string p0, "ASYNC_END"
 
     return-object p0
 
     :pswitch_86
-    const-string p0, "MQTT_CONNECTING"
+    const-string p0, "ASYNC_BEGIN"
 
     return-object p0
 
     :pswitch_87
-    const-string p0, "MQTT_CONNECTED"
+    const-string p0, "PREPARE_END"
 
     return-object p0
 
     :pswitch_88
-    const-string p0, "MQTT_DISCONNECTED"
+    const-string p0, "PREPARE_BEGIN"
 
     return-object p0
 
     :pswitch_89
-    const-string p0, "MESSENGER_DELTA_REQUEST"
+    const-string p0, "CACHE_FETCH"
 
     return-object p0
 
     :pswitch_8a
-    const-string p0, "APP_FIRST_VIEW_CONTROLLER"
+    const-string p0, "DATA_EMPTY"
 
     return-object p0
 
     :pswitch_8b
-    const-string p0, "MESSENGER_THREAD_LIST_LOADED"
+    const-string p0, "DRAW_VIEW"
 
     return-object p0
 
     :pswitch_8c
-    const-string p0, "MESSENGER_THREAD_LIST_DISPLAYED"
+    const-string p0, "DATA_RECEIVED"
 
     return-object p0
 
     :pswitch_8d
-    const-string p0, "PREV_ACTIVITY_PAUSE"
+    const-string p0, "DB_UPDATED"
 
     return-object p0
 
     :pswitch_8e
-    const-string p0, "ACTIVITY_RESUME"
+    const-string p0, "CACHE_UPDATED"
 
     return-object p0
 
     :pswitch_8f
-    const-string p0, "ACTIVITY_START"
+    const-string p0, "SUCCESS_LOCAL_UNSPECIFIED"
 
     return-object p0
 
     :pswitch_90
-    const-string p0, "BEGIN_START_ACTIVITY"
+    const-string p0, "SUCCESS_NETWORK"
 
     return-object p0
 
     :pswitch_91
-    const-string p0, "END_START_ACTIVITY"
+    const-string p0, "SUCCESS_DB"
 
     return-object p0
 
     :pswitch_92
-    const-string p0, "FILE_SYSTEM_FAIL"
+    const-string p0, "SUCCESS_CACHE"
 
     return-object p0
 
     :pswitch_93
-    const-string p0, "FORMAT_ERROR"
+    const-string p0, "SERVER_FETCH"
 
     return-object p0
 
     :pswitch_94
-    const-string p0, "PRIVACY_VIOLATION"
+    const-string p0, "DB_FETCH"
 
     return-object p0
 
     :pswitch_95
-    const-string p0, "NETWORK_RESPONSE_INITIAL_SCAN"
+    const-string p0, "USER_NAVIGATION_CANCELLATION"
 
     return-object p0
 
     :pswitch_96
-    const-string p0, "POPULATE_CONSISTENCY_MEMORY_CACHE"
+    const-string p0, "PHOTO_UPLOAD_COMPLETE"
 
     return-object p0
 
     :pswitch_97
-    const-string p0, "APPLY_OPTIMISTICS"
+    const-string p0, "RETURN_TO_CALLER"
 
     return-object p0
 
     :pswitch_98
-    const-string p0, "APPLY_FINISHED_LIST"
+    const-string p0, "CONSISTENCY_UPDATE"
 
     return-object p0
 
     :pswitch_99
-    const-string p0, "APPLY_FINISHED_LIST_AGAIN"
+    const-string p0, "DISK_CACHE_VISIT"
 
     return-object p0
 
     :pswitch_9a
-    const-string p0, "FUTURE_LISTENERS_COMPLETE"
+    const-string p0, "MEMORY_CACHE_VISIT"
 
     return-object p0
 
     :pswitch_9b
-    const-string p0, "SERVICE_ON_START_COMMAND"
+    const-string p0, "NETWORK_COMPLETE"
 
     return-object p0
 
     :pswitch_9c
-    const-string p0, "WAIT_FOR_BLOCKERS"
+    const-string p0, "DEQUEUE"
 
     return-object p0
 
     :pswitch_9d
-    const-string p0, "NOTIFY_SUBSCRIBERS"
+    const-string p0, "PHASE_TWO"
 
     return-object p0
 
     :pswitch_9e
-    const-string p0, "FAIL_FILE_TOO_LARGE"
+    const-string p0, "PHASE_ONE"
 
     return-object p0
 
     :pswitch_9f
-    const-string p0, "OFFLINE"
+    const-string p0, "UI_IDLE"
 
     return-object p0
 
     :pswitch_a0
-    const-string p0, "ASNYC_FAILED"
+    const-string p0, "SUCCESS_WARM"
 
     return-object p0
 
     :pswitch_a1
-    const-string p0, "ASYNC_FAIL"
+    const-string p0, "SUCCESS_COLD"
 
     return-object p0
 
     :pswitch_a2
-    const-string p0, "ON_ATTACH_FRAGMENT"
+    const-string p0, "SEND_MESSAGE"
 
     return-object p0
 
     :pswitch_a3
-    const-string p0, "VIEW_DID_APPEAR_BEGIN"
+    const-string p0, "CONSISTENCY_MODEL_UPDATER"
 
     return-object p0
 
     :pswitch_a4
-    const-string p0, "DISPLAYED"
+    const-string p0, "ACTIVITY_CREATED"
 
     return-object p0
 
     :pswitch_a5
-    const-string p0, "DISPLAYED_ON_SCREEN"
+    const-string p0, "ON_RESUME"
 
     return-object p0
 
     :pswitch_a6
-    const-string p0, "ASYNC_ACTION_SUCCESS"
+    const-string p0, "DRAW_COMPLETE"
 
     return-object p0
 
     :pswitch_a7
-    const-string p0, "ASYNC_ACTION_FAIL"
+    const-string p0, "CANCEL"
 
     return-object p0
 
     :pswitch_a8
-    const-string p0, "CONNECTIVITY_CHANGED"
+    const-string p0, "FAIL"
 
     return-object p0
 
     :pswitch_a9
-    const-string p0, "VIDEO_DISPLAYED"
+    const-string p0, "SUCCESS"
 
     return-object p0
 
     :pswitch_aa
-    const-string p0, "VIDEO_REQUESTED_PLAYING"
+    const-string p0, "START"
 
     return-object p0
 
@@ -1228,176 +1228,176 @@
 
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-        :pswitch_9
-        :pswitch_a
-        :pswitch_b
-        :pswitch_c
-        :pswitch_d
-        :pswitch_e
-        :pswitch_f
-        :pswitch_10
-        :pswitch_11
-        :pswitch_12
-        :pswitch_13
-        :pswitch_14
-        :pswitch_15
-        :pswitch_16
-        :pswitch_17
-        :pswitch_18
-        :pswitch_19
-        :pswitch_1a
-        :pswitch_1b
-        :pswitch_1c
-        :pswitch_1d
-        :pswitch_1e
-        :pswitch_1f
-        :pswitch_20
-        :pswitch_21
-        :pswitch_22
-        :pswitch_23
-        :pswitch_24
-        :pswitch_25
-        :pswitch_26
-        :pswitch_27
-        :pswitch_28
-        :pswitch_29
-        :pswitch_2a
-        :pswitch_2b
-        :pswitch_2c
-        :pswitch_2d
-        :pswitch_2e
-        :pswitch_2f
-        :pswitch_30
-        :pswitch_31
-        :pswitch_32
-        :pswitch_33
-        :pswitch_34
-        :pswitch_35
-        :pswitch_36
-        :pswitch_37
-        :pswitch_38
-        :pswitch_39
-        :pswitch_3a
-        :pswitch_3b
-        :pswitch_3c
-        :pswitch_3d
-        :pswitch_3e
-        :pswitch_3f
-        :pswitch_40
-        :pswitch_41
-        :pswitch_42
-        :pswitch_43
-        :pswitch_44
-        :pswitch_45
-        :pswitch_46
-        :pswitch_47
-        :pswitch_48
-        :pswitch_49
-        :pswitch_4a
-        :pswitch_4b
-        :pswitch_4c
-        :pswitch_4d
-        :pswitch_4e
-        :pswitch_4f
-        :pswitch_50
-        :pswitch_51
-        :pswitch_52
-        :pswitch_53
-        :pswitch_54
-        :pswitch_55
-        :pswitch_56
-        :pswitch_57
-        :pswitch_58
-        :pswitch_59
-        :pswitch_5a
-        :pswitch_5b
-        :pswitch_5c
-        :pswitch_5d
-        :pswitch_5e
-        :pswitch_5f
-        :pswitch_60
-        :pswitch_61
-        :pswitch_62
-        :pswitch_63
-        :pswitch_64
-        :pswitch_65
-        :pswitch_66
-        :pswitch_67
-        :pswitch_68
-        :pswitch_69
-        :pswitch_6a
-        :pswitch_6b
-        :pswitch_6c
-        :pswitch_6d
-        :pswitch_6e
-        :pswitch_6f
-        :pswitch_70
-        :pswitch_71
-        :pswitch_72
-        :pswitch_73
-        :pswitch_74
-        :pswitch_75
-        :pswitch_76
-        :pswitch_77
-        :pswitch_78
-        :pswitch_79
-        :pswitch_7a
-        :pswitch_7b
-        :pswitch_7c
-        :pswitch_7d
-        :pswitch_7e
-        :pswitch_7f
-        :pswitch_80
-        :pswitch_81
-        :pswitch_82
-        :pswitch_83
-        :pswitch_84
-        :pswitch_85
-        :pswitch_86
-        :pswitch_87
-        :pswitch_88
-        :pswitch_89
-        :pswitch_8a
-        :pswitch_8b
-        :pswitch_8c
-        :pswitch_8d
-        :pswitch_8e
-        :pswitch_8f
-        :pswitch_90
-        :pswitch_91
-        :pswitch_92
-        :pswitch_93
-        :pswitch_94
-        :pswitch_95
-        :pswitch_96
-        :pswitch_97
-        :pswitch_98
-        :pswitch_99
-        :pswitch_9a
-        :pswitch_9b
-        :pswitch_9c
-        :pswitch_9d
-        :pswitch_9e
-        :pswitch_9f
-        :pswitch_a0
-        :pswitch_a1
-        :pswitch_a2
-        :pswitch_a3
-        :pswitch_a4
-        :pswitch_a5
-        :pswitch_a6
-        :pswitch_a7
-        :pswitch_a8
-        :pswitch_a9
         :pswitch_aa
+        :pswitch_a9
+        :pswitch_a8
+        :pswitch_a7
+        :pswitch_a6
+        :pswitch_a5
+        :pswitch_a4
+        :pswitch_a3
+        :pswitch_a2
+        :pswitch_a1
+        :pswitch_a0
+        :pswitch_9f
+        :pswitch_9e
+        :pswitch_9d
+        :pswitch_9c
+        :pswitch_9b
+        :pswitch_9a
+        :pswitch_99
+        :pswitch_98
+        :pswitch_97
+        :pswitch_96
+        :pswitch_95
+        :pswitch_94
+        :pswitch_93
+        :pswitch_92
+        :pswitch_91
+        :pswitch_90
+        :pswitch_8f
+        :pswitch_8e
+        :pswitch_8d
+        :pswitch_8c
+        :pswitch_8b
+        :pswitch_8a
+        :pswitch_89
+        :pswitch_88
+        :pswitch_87
+        :pswitch_86
+        :pswitch_85
+        :pswitch_84
+        :pswitch_83
+        :pswitch_82
+        :pswitch_81
+        :pswitch_80
+        :pswitch_7f
+        :pswitch_7e
+        :pswitch_7d
+        :pswitch_7c
+        :pswitch_7b
+        :pswitch_7a
+        :pswitch_79
+        :pswitch_78
+        :pswitch_77
+        :pswitch_76
+        :pswitch_75
+        :pswitch_74
+        :pswitch_73
+        :pswitch_72
+        :pswitch_71
+        :pswitch_70
+        :pswitch_6f
+        :pswitch_6e
+        :pswitch_6d
+        :pswitch_6c
+        :pswitch_6b
+        :pswitch_6a
+        :pswitch_69
+        :pswitch_68
+        :pswitch_67
+        :pswitch_66
+        :pswitch_65
+        :pswitch_64
+        :pswitch_63
+        :pswitch_62
+        :pswitch_61
+        :pswitch_60
+        :pswitch_5f
+        :pswitch_5e
+        :pswitch_5d
+        :pswitch_5c
+        :pswitch_5b
+        :pswitch_5a
+        :pswitch_59
+        :pswitch_58
+        :pswitch_57
+        :pswitch_56
+        :pswitch_55
+        :pswitch_54
+        :pswitch_53
+        :pswitch_52
+        :pswitch_51
+        :pswitch_50
+        :pswitch_4f
+        :pswitch_4e
+        :pswitch_4d
+        :pswitch_4c
+        :pswitch_4b
+        :pswitch_4a
+        :pswitch_49
+        :pswitch_48
+        :pswitch_47
+        :pswitch_46
+        :pswitch_45
+        :pswitch_44
+        :pswitch_43
+        :pswitch_42
+        :pswitch_41
+        :pswitch_40
+        :pswitch_3f
+        :pswitch_3e
+        :pswitch_3d
+        :pswitch_3c
+        :pswitch_3b
+        :pswitch_3a
+        :pswitch_39
+        :pswitch_38
+        :pswitch_37
+        :pswitch_36
+        :pswitch_35
+        :pswitch_34
+        :pswitch_33
+        :pswitch_32
+        :pswitch_31
+        :pswitch_30
+        :pswitch_2f
+        :pswitch_2e
+        :pswitch_2d
+        :pswitch_2c
+        :pswitch_2b
+        :pswitch_2a
+        :pswitch_29
+        :pswitch_28
+        :pswitch_27
+        :pswitch_26
+        :pswitch_25
+        :pswitch_24
+        :pswitch_23
+        :pswitch_22
+        :pswitch_21
+        :pswitch_20
+        :pswitch_1f
+        :pswitch_1e
+        :pswitch_1d
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
     .end packed-switch
 .end method

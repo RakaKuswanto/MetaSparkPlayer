@@ -2,49 +2,72 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MetadataStoreImpl$2"
-
 
 # instance fields
-.field public final synthetic A00:LX/2QZ;
+.field public final A00:Lcom/facebook/auth/credentials/PasswordCredentials;
+
+.field public final A01:Ljava/lang/String;
+
+.field public final A02:Ljava/lang/String;
+
+.field public final A03:Ljava/lang/String;
+
+.field public final A04:Ljava/lang/String;
+
+.field public final A05:Ljava/lang/String;
+
+.field public final A06:Ljava/lang/String;
+
+.field public final A07:Ljava/lang/String;
+
+.field public final A08:Z
 
 
 # direct methods
-.method public constructor <init>(LX/2QZ;)V
+.method public constructor <init>(Lcom/facebook/auth/credentials/PasswordCredentials;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/2Qm;->A00:LX/2QZ;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/2Qm;->A00:LX/2QZ;
-
     .line 1
     .line 2
-    invoke-static {v0}, LX/2QZ;->A00(LX/2QZ;)V
-
     .line 3
+    iput-object p1, p0, LX/2Qm;->A00:Lcom/facebook/auth/credentials/PasswordCredentials;
+
     .line 4
     .line 5
+    iput-object p2, p0, LX/2Qm;->A07:Ljava/lang/String;
+
+    .line 6
+    .line 7
+    iput-object p3, p0, LX/2Qm;->A01:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    iput-boolean p9, p0, LX/2Qm;->A08:Z
+
+    .line 10
+    .line 11
+    iput-object p4, p0, LX/2Qm;->A02:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    iput-object p5, p0, LX/2Qm;->A05:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    iput-object p6, p0, LX/2Qm;->A03:Ljava/lang/String;
+
+    .line 16
+    .line 17
+    iput-object p7, p0, LX/2Qm;->A06:Ljava/lang/String;
+
+    .line 18
+    .line 19
+    iput-object p8, p0, LX/2Qm;->A04:Ljava/lang/String;
+
+    .line 20
+    .line 21
     return-void
 .end method

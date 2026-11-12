@@ -1,50 +1,41 @@
 .class public final LX/4kH;
-.super Ljava/lang/Object;
+.super LX/4i8;
 .source ""
 
 
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentTree$UpdateStateSyncRunnable"
+
+
+# instance fields
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:Z
+
+.field public final synthetic A02:Lcom/facebook/litho/ComponentTree;
+
+
 # direct methods
-.method public static final A00(LX/4mm;Ljava/lang/String;)LX/4ja;
-    .locals 2
+.method public constructor <init>(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
+    .locals 0
 
     .line 0
-    if-eqz p0, :cond_0
+    iput-object p1, p0, LX/4kH;->A02:Lcom/facebook/litho/ComponentTree;
 
     .line 1
     .line 2
-    new-instance v1, LX/4mP;
+    invoke-direct {p0}, LX/4i8;-><init>()V
 
     .line 3
     .line 4
-    invoke-direct {v1, p1}, LX/4mP;-><init>(Ljava/lang/String;)V
-
     .line 5
+    iput-object p2, p0, LX/4kH;->A00:Ljava/lang/String;
+
     .line 6
     .line 7
-    new-instance v0, LX/4ja;
+    iput-boolean p3, p0, LX/4kH;->A01:Z
 
     .line 8
     .line 9
-    invoke-direct {v0, v1, p0}, LX/4ja;-><init>(LX/4mP;LX/4mm;)V
-
-    .line 10
-    .line 11
-    .line 12
-    return-object v0
-
-    .line 13
-    :cond_0
-    const-string v0, "Required value was null."
-
-    .line 14
-    .line 15
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v0
-
-    .line 19
-    throw v0
+    return-void
 .end method

@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Lcom/facebook/react/bridge/Callback;
+
 
 # instance fields
 .field public final mHybridData:Lcom/facebook/jni/HybridData;

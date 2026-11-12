@@ -1,49 +1,48 @@
-.class public final LX/3At;
+.class public abstract LX/3At;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/1ij;
-
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static A00(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x1000
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ADa()I
-    .locals 1
-
-    const v0, 0xc13b
-
-    return v0
-.end method
-
-.method public final AWH(I)V
-    .locals 2
-
-    .line 0
-    const-class v1, LX/3Zx;
-
-    .line 1
-    .line 2
-    const/4 v0, 0x0
+    new-array v2, v0, [B
 
     .line 3
-    invoke-static {v1, v0}, LX/1z6;->A0X(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
-
     .line 4
+    :goto_0
+    invoke-virtual {p0, v2}, Ljava/io/InputStream;->read([B)I
+
     .line 5
     .line 6
+    .line 7
+    move-result v1
+
+    .line 8
+    const/4 v0, -0x1
+
+    .line 9
+    if-eq v1, v0, :cond_0
+
+    .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    invoke-virtual {p1, v2, v0, v1}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 13
+    .line 14
+    .line 15
+    goto :goto_0
+
+    .line 16
+    :cond_0
     return-void
 .end method

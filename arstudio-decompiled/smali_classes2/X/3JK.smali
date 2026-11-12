@@ -2,13 +2,12 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final A00:LX/1Nw;
+# interfaces
+.implements LX/3JE;
 
 
 # direct methods
-.method public constructor <init>(LX/1Nw;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -17,9 +16,49 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3JK;->A00:LX/1Nw;
+    return-void
+.end method
 
-    .line 4
-    .line 5
+
+# virtual methods
+.method public final APL(I)Z
+    .locals 1
+
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final AQ4(Ljava/lang/String;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AV2(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AWx(Ljava/lang/String;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AXD(Ljava/lang/String;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AaN(Ljava/lang/String;II)V
+    .locals 0
+
     return-void
 .end method

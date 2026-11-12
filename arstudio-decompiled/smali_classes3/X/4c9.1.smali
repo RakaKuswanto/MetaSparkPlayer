@@ -2,85 +2,47 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4d0;
-
 
 # instance fields
-.field public final synthetic A00:LX/4bP;
+.field public A00:LX/4fk;
+
+.field public A01:LX/4b8;
+
+.field public A02:Z
 
 
 # direct methods
-.method public constructor <init>(LX/4bP;)V
+.method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    const/4 v0, 0x0
+
+    .line 268435457
+    invoke-direct {p0, v0, v0}, LX/4c9;-><init>(LX/4fk;LX/4b8;)V
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    return-void
+.end method
+
+.method public constructor <init>(LX/4fk;LX/4b8;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4c9;->A00:LX/4bP;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AW6(LX/4ay;Z)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/4c9;->A00:LX/4bP;
-
     .line 1
     .line 2
-    invoke-virtual {v0, p1}, LX/4bP;->A0V(LX/4ay;)V
-
     .line 3
+    iput-object p2, p0, LX/4c9;->A01:LX/4b8;
+
     .line 4
     .line 5
-    return-void
-.end method
+    iput-object p1, p0, LX/4c9;->A00:LX/4fk;
 
-.method public final AaO(LX/4ay;)Z
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/4c9;->A00:LX/4bP;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/4bP;->A07:Landroid/view/Window;
-
-    .line 3
-    .line 4
-    invoke-virtual {v0}, Landroid/view/Window;->getCallback()Landroid/view/Window$Callback;
-
-    .line 5
     .line 6
     .line 7
-    move-result-object v1
-
-    .line 8
-    if-eqz v1, :cond_0
-
-    .line 9
-    .line 10
-    const/16 v0, 0x6c
-
-    .line 11
-    .line 12
-    invoke-interface {v1, v0, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
-
-    .line 13
-    .line 14
-    .line 15
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 16
-    return v0
+    return-void
 .end method

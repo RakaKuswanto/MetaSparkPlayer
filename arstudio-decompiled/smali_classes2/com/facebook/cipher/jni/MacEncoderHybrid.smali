@@ -1,4 +1,4 @@
-.class public Lcom/facebook/cipher/jni/MacEncoderHybrid;
+.class public abstract Lcom/facebook/cipher/jni/MacEncoderHybrid;
 .super Ljava/lang/Object;
 .source ""
 

@@ -49,7 +49,6 @@
     .line 15
     return-void
 
-    .line 16
     :array_0
     .array-data 4
         0x0
@@ -87,22 +86,31 @@
 
     .line 268435468
     .line 268435469
-    invoke-static {v1, p1, p2}, LX/4BE;->A1X([FFF)V
+    const/4 v0, 0x0
 
     .line 268435470
+    aput p1, v1, v0
+
     .line 268435471
     .line 268435472
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
     .line 268435473
-    aput p3, v1, v0
+    aput p2, v1, v0
 
     .line 268435474
     .line 268435475
-    iput-object v1, p0, Lcom/google/ar/core/Pose;->translation:[F
+    const/4 v0, 0x2
 
     .line 268435476
+    aput p3, v1, v0
+
     .line 268435477
+    .line 268435478
+    iput-object v1, p0, Lcom/google/ar/core/Pose;->translation:[F
+
+    .line 268435479
+    .line 268435480
     return-void
 .end method
 
@@ -177,10 +185,10 @@
     .locals 13
 
     .line 0
-    const/4 v6, 0x0
+    const/4 v10, 0x0
 
     .line 1
-    cmpl-float v0, p2, v6
+    cmpl-float v0, p2, v10
 
     .line 2
     .line 3
@@ -234,17 +242,15 @@
 
     .line 24
     .line 25
-    aget v0, v0, v2
+    invoke-static {v0, p2, v1, v2}, LX/434;->A04([FFFI)F
 
     .line 26
     .line 27
-    mul-float/2addr v0, p2
-
     .line 28
-    add-float/2addr v1, v0
+    move-result v0
 
     .line 29
-    aput v1, v7, v2
+    aput v0, v7, v2
 
     .line 30
     .line 31
@@ -284,7 +290,7 @@
     mul-float/2addr v8, v0
 
     .line 49
-    iget v1, v5, Lcom/google/ar/core/Quaternion;->y:F
+    iget v9, v5, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 50
     .line 51
@@ -292,41 +298,41 @@
 
     .line 52
     .line 53
-    mul-float/2addr v1, v0
+    mul-float/2addr v9, v0
 
     .line 54
-    add-float/2addr v8, v1
+    iget v6, v5, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 55
-    iget v1, v5, Lcom/google/ar/core/Quaternion;->z:F
-
     .line 56
-    .line 57
     iget v0, v3, Lcom/google/ar/core/Quaternion;->z:F
 
+    .line 57
     .line 58
+    mul-float/2addr v6, v0
+
     .line 59
-    mul-float/2addr v1, v0
+    iget v1, v5, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 60
-    add-float/2addr v8, v1
-
     .line 61
-    iget v1, v5, Lcom/google/ar/core/Quaternion;->w:F
+    iget v0, v3, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 62
     .line 63
-    iget v0, v3, Lcom/google/ar/core/Quaternion;->w:F
+    mul-float/2addr v1, v0
 
     .line 64
+    add-float/2addr v8, v9
+
     .line 65
-    mul-float/2addr v1, v0
+    add-float/2addr v8, v6
 
     .line 66
     add-float/2addr v8, v1
 
     .line 67
-    cmpg-float v0, v8, v6
+    cmpg-float v0, v8, v10
 
     .line 68
     .line 69
@@ -475,182 +481,182 @@
     double-to-float v4, v0
 
     .line 135
-    mul-float/2addr v4, v12
-
-    .line 136
     mul-float/2addr p2, v6
 
-    .line 137
+    .line 136
     float-to-double v0, p2
 
-    .line 138
+    .line 137
     invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
 
+    .line 138
     .line 139
     .line 140
-    .line 141
     move-result-wide v0
 
-    .line 142
+    .line 141
     double-to-float p2, v0
 
-    .line 143
+    .line 142
     mul-float/2addr p2, v12
+
+    .line 143
+    mul-float/2addr v4, v12
 
     .line 144
     :cond_3
-    iget v10, v5, Lcom/google/ar/core/Quaternion;->x:F
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     .line 145
     .line 146
-    mul-float/2addr v10, v4
+    iget v10, v5, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 147
-    iget v0, v3, Lcom/google/ar/core/Quaternion;->x:F
-
     .line 148
+    mul-float/2addr v10, v4
+
     .line 149
-    mul-float/2addr v0, p2
+    iget v6, v3, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 150
-    add-float/2addr v10, v0
-
     .line 151
-    iput v10, v2, Lcom/google/ar/core/Quaternion;->x:F
+    mul-float/2addr v6, p2
 
     .line 152
+    add-float/2addr v10, v6
+
     .line 153
-    iget v9, v5, Lcom/google/ar/core/Quaternion;->y:F
+    iput v10, v2, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 154
     .line 155
-    mul-float/2addr v9, v4
+    iget v9, v5, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 156
-    iget v0, v3, Lcom/google/ar/core/Quaternion;->y:F
-
     .line 157
+    mul-float/2addr v9, v4
+
     .line 158
-    mul-float/2addr v0, p2
+    iget v6, v3, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 159
-    add-float/2addr v9, v0
-
     .line 160
-    iput v9, v2, Lcom/google/ar/core/Quaternion;->y:F
+    mul-float/2addr v6, p2
 
     .line 161
+    add-float/2addr v9, v6
+
     .line 162
-    iget v8, v5, Lcom/google/ar/core/Quaternion;->z:F
+    iput v9, v2, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 163
     .line 164
-    mul-float/2addr v8, v4
+    iget v8, v5, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 165
-    iget v0, v3, Lcom/google/ar/core/Quaternion;->z:F
-
     .line 166
+    mul-float/2addr v8, v4
+
     .line 167
-    mul-float/2addr v0, p2
+    iget v6, v3, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 168
-    add-float/2addr v8, v0
-
     .line 169
-    iput v8, v2, Lcom/google/ar/core/Quaternion;->z:F
+    mul-float/2addr v6, p2
 
     .line 170
+    add-float/2addr v8, v6
+
     .line 171
-    iget v0, v5, Lcom/google/ar/core/Quaternion;->w:F
+    iput v8, v2, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 172
     .line 173
-    mul-float/2addr v4, v0
+    iget v5, v5, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 174
-    iget v0, v3, Lcom/google/ar/core/Quaternion;->w:F
-
     .line 175
+    mul-float/2addr v4, v5
+
     .line 176
-    mul-float/2addr p2, v0
+    iget v3, v3, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 177
-    add-float/2addr v4, p2
-
     .line 178
-    iput v4, v2, Lcom/google/ar/core/Quaternion;->w:F
+    mul-float/2addr p2, v3
 
     .line 179
+    add-float/2addr v4, p2
+
     .line 180
-    const-wide/high16 v5, 0x3ff0000000000000L    # 1.0
+    iput v4, v2, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 181
     .line 182
-    mul-float v1, v10, v10
+    mul-float v5, v10, v10
 
     .line 183
     .line 184
-    mul-float v0, v9, v9
+    mul-float v3, v9, v9
 
     .line 185
     .line 186
-    add-float/2addr v1, v0
+    add-float/2addr v5, v3
 
     .line 187
-    mul-float v0, v8, v8
+    mul-float v3, v8, v8
 
     .line 188
     .line 189
-    add-float/2addr v1, v0
+    add-float/2addr v5, v3
 
     .line 190
-    mul-float v0, v4, v4
+    mul-float v3, v4, v4
 
     .line 191
     .line 192
-    add-float/2addr v1, v0
+    add-float/2addr v5, v3
 
     .line 193
-    float-to-double v0, v1
+    float-to-double v5, v5
 
     .line 194
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->sqrt(D)D
 
     .line 195
     .line 196
     .line 197
-    move-result-wide v0
+    move-result-wide v5
 
     .line 198
-    div-double/2addr v5, v0
+    div-double/2addr v0, v5
 
     .line 199
-    double-to-float v0, v5
+    double-to-float v3, v0
 
     .line 200
-    mul-float/2addr v10, v0
+    mul-float/2addr v10, v3
 
     .line 201
     iput v10, v2, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 202
     .line 203
-    mul-float/2addr v9, v0
+    mul-float/2addr v9, v3
 
     .line 204
     iput v9, v2, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 205
     .line 206
-    mul-float/2addr v8, v0
+    mul-float/2addr v8, v3
 
     .line 207
     iput v8, v2, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 208
     .line 209
-    mul-float/2addr v4, v0
+    mul-float/2addr v4, v3
 
     .line 210
     iput v4, v2, Lcom/google/ar/core/Quaternion;->w:F
@@ -757,35 +763,44 @@
 
     .line 2
     .line 3
-    invoke-static {v2, p0, p1}, LX/4BE;->A1X([FFF)V
+    const/4 v0, 0x0
 
     .line 4
+    aput p0, v2, v0
+
     .line 5
     .line 6
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
     .line 7
-    aput p2, v2, v0
+    aput p1, v2, v0
 
     .line 8
     .line 9
-    sget-object v0, Lcom/google/ar/core/Pose;->IDENTITY:Lcom/google/ar/core/Pose;
+    const/4 v0, 0x2
 
     .line 10
+    aput p2, v2, v0
+
     .line 11
+    .line 12
+    sget-object v0, Lcom/google/ar/core/Pose;->IDENTITY:Lcom/google/ar/core/Pose;
+
+    .line 13
+    .line 14
     iget-object v1, v0, Lcom/google/ar/core/Pose;->quaternion:Lcom/google/ar/core/Quaternion;
 
-    .line 12
-    .line 13
+    .line 15
+    .line 16
     new-instance v0, Lcom/google/ar/core/Pose;
 
-    .line 14
-    .line 15
-    invoke-direct {v0, v2, v1}, Lcom/google/ar/core/Pose;-><init>([FLcom/google/ar/core/Quaternion;)V
-
-    .line 16
     .line 17
     .line 18
+    invoke-direct {v0, v2, v1}, Lcom/google/ar/core/Pose;-><init>([FLcom/google/ar/core/Quaternion;)V
+
+    .line 19
+    .line 20
+    .line 21
     return-object v0
 .end method
 
@@ -926,7 +941,7 @@
     .line 43
     .line 44
     .line 45
-    iget v0, v13, Lcom/google/ar/core/Quaternion;->x:F
+    iget v4, v13, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 46
     .line 47
@@ -934,36 +949,36 @@
 
     .line 48
     .line 49
-    iget v14, v13, Lcom/google/ar/core/Quaternion;->y:F
+    mul-float/2addr v4, v11
 
     .line 50
+    iget v14, v13, Lcom/google/ar/core/Quaternion;->y:F
+
     .line 51
+    .line 52
     iget v8, v12, Lcom/google/ar/core/Quaternion;->z:F
 
-    .line 52
     .line 53
+    .line 54
+    mul-float v3, v14, v8
+
+    .line 55
+    .line 56
     iget v7, v13, Lcom/google/ar/core/Quaternion;->z:F
 
-    .line 54
-    .line 55
+    .line 57
+    .line 58
     iget v2, v12, Lcom/google/ar/core/Quaternion;->y:F
 
-    .line 56
-    .line 57
-    iget v6, v13, Lcom/google/ar/core/Quaternion;->w:F
-
-    .line 58
     .line 59
-    mul-float/2addr v0, v11
-
     .line 60
-    invoke-static {v14, v8, v0, v7, v2}, LX/4BE;->A03(FFFFF)F
+    mul-float v1, v7, v2
 
     .line 61
     .line 62
-    .line 63
-    move-result v1
+    iget v6, v13, Lcom/google/ar/core/Quaternion;->w:F
 
+    .line 63
     .line 64
     iget v0, v12, Lcom/google/ar/core/Quaternion;->x:F
 
@@ -972,23 +987,25 @@
     mul-float/2addr v0, v6
 
     .line 67
-    add-float/2addr v1, v0
+    add-float/2addr v4, v3
 
     .line 68
-    iput v1, v9, Lcom/google/ar/core/Quaternion;->x:F
+    sub-float/2addr v4, v1
 
     .line 69
+    add-float/2addr v4, v0
+
     .line 70
-    iget v5, v13, Lcom/google/ar/core/Quaternion;->x:F
+    iput v4, v9, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 71
     .line 72
-    neg-float v4, v5
+    iget v5, v13, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 73
-    iget v3, v12, Lcom/google/ar/core/Quaternion;->x:F
-
     .line 74
+    neg-float v4, v5
+
     .line 75
     mul-float v1, v4, v8
 
@@ -997,102 +1014,106 @@
     mul-float/2addr v14, v11
 
     .line 78
-    add-float/2addr v1, v14
+    iget v3, v12, Lcom/google/ar/core/Quaternion;->x:F
 
     .line 79
+    .line 80
     mul-float v0, v7, v3
 
-    .line 80
     .line 81
-    add-float/2addr v1, v0
-
     .line 82
     mul-float/2addr v2, v6
 
     .line 83
-    add-float/2addr v1, v2
+    add-float/2addr v1, v14
 
     .line 84
-    iput v1, v9, Lcom/google/ar/core/Quaternion;->y:F
+    add-float/2addr v1, v0
 
     .line 85
+    add-float/2addr v1, v2
+
     .line 86
-    iget v2, v12, Lcom/google/ar/core/Quaternion;->y:F
+    iput v1, v9, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 87
     .line 88
-    iget v1, v13, Lcom/google/ar/core/Quaternion;->y:F
+    iget v1, v12, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 89
     .line 90
-    mul-float/2addr v5, v2
+    mul-float/2addr v5, v1
 
     .line 91
-    mul-float v0, v1, v3
+    iget v2, v13, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 92
     .line 93
-    sub-float/2addr v5, v0
+    mul-float v0, v2, v3
 
     .line 94
-    mul-float/2addr v7, v11
-
     .line 95
-    add-float/2addr v5, v7
+    mul-float/2addr v7, v11
 
     .line 96
     mul-float/2addr v8, v6
 
     .line 97
-    add-float/2addr v5, v8
+    sub-float/2addr v5, v0
 
     .line 98
-    iput v5, v9, Lcom/google/ar/core/Quaternion;->z:F
+    add-float/2addr v5, v7
 
     .line 99
+    add-float/2addr v5, v8
+
     .line 100
-    mul-float/2addr v4, v3
+    iput v5, v9, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 101
-    mul-float/2addr v1, v2
-
     .line 102
-    sub-float/2addr v4, v1
+    mul-float/2addr v4, v3
 
     .line 103
-    iget v1, v13, Lcom/google/ar/core/Quaternion;->z:F
+    mul-float/2addr v2, v1
 
     .line 104
+    iget v1, v13, Lcom/google/ar/core/Quaternion;->z:F
+
     .line 105
+    .line 106
     iget v0, v12, Lcom/google/ar/core/Quaternion;->z:F
 
-    .line 106
     .line 107
-    mul-float/2addr v1, v0
-
     .line 108
-    sub-float/2addr v4, v1
+    mul-float/2addr v1, v0
 
     .line 109
     mul-float/2addr v6, v11
 
     .line 110
-    add-float/2addr v4, v6
+    sub-float/2addr v4, v2
 
     .line 111
-    iput v4, v9, Lcom/google/ar/core/Quaternion;->w:F
+    sub-float/2addr v4, v1
 
     .line 112
+    add-float/2addr v4, v6
+
     .line 113
-    new-instance v0, Lcom/google/ar/core/Pose;
+    iput v4, v9, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 114
     .line 115
-    invoke-direct {v0, v10, v9}, Lcom/google/ar/core/Pose;-><init>([FLcom/google/ar/core/Quaternion;)V
+    new-instance v0, Lcom/google/ar/core/Pose;
 
     .line 116
     .line 117
+    invoke-direct {v0, v10, v9}, Lcom/google/ar/core/Pose;-><init>([FLcom/google/ar/core/Quaternion;)V
+
     .line 118
+    .line 119
+    .line 120
     return-object v0
 .end method
 
@@ -1637,47 +1658,47 @@
 
     .line 3
     .line 4
-    iget v2, v0, Lcom/google/ar/core/Quaternion;->y:F
+    mul-float v5, v3, v3
 
     .line 5
     .line 6
-    iget v6, v0, Lcom/google/ar/core/Quaternion;->z:F
+    iget v2, v0, Lcom/google/ar/core/Quaternion;->y:F
 
     .line 7
     .line 8
-    iget v7, v0, Lcom/google/ar/core/Quaternion;->w:F
+    mul-float v4, v2, v2
 
     .line 9
     .line 10
-    mul-float v4, v3, v3
+    iget v6, v0, Lcom/google/ar/core/Quaternion;->z:F
 
     .line 11
     .line 12
-    mul-float v0, v2, v2
+    mul-float v1, v6, v6
 
     .line 13
     .line 14
-    add-float/2addr v4, v0
+    iget v7, v0, Lcom/google/ar/core/Quaternion;->w:F
 
     .line 15
-    mul-float v0, v6, v6
-
     .line 16
-    .line 17
-    add-float/2addr v4, v0
-
-    .line 18
     mul-float v0, v7, v7
 
+    .line 17
+    .line 18
+    add-float/2addr v5, v4
+
     .line 19
+    add-float/2addr v5, v1
+
     .line 20
-    add-float/2addr v4, v0
+    add-float/2addr v5, v0
 
     .line 21
     const/4 v0, 0x0
 
     .line 22
-    cmpl-float v1, v4, v0
+    cmpl-float v1, v5, v0
 
     .line 23
     .line 24
@@ -1689,7 +1710,7 @@
 
     .line 27
     .line 28
-    div-float/2addr v0, v4
+    div-float/2addr v0, v5
 
     .line 29
     :cond_0
@@ -1853,48 +1874,48 @@
 
     .line 102
     .line 103
-    add-int/lit8 v1, p2, 0xc
-
-    .line 104
-    .line 105
     const/4 v0, 0x0
 
+    .line 104
+    aget v1, v2, v0
+
+    .line 105
     .line 106
-    aget v0, v2, v0
+    add-int/lit8 v0, p2, 0xc
 
     .line 107
     .line 108
-    aput v0, p1, v1
+    aput v1, p1, v0
 
     .line 109
     .line 110
-    add-int/lit8 v1, p2, 0xd
-
-    .line 111
-    .line 112
     const/4 v0, 0x1
 
+    .line 111
+    aget v1, v2, v0
+
+    .line 112
     .line 113
-    aget v0, v2, v0
+    add-int/lit8 v0, p2, 0xd
 
     .line 114
     .line 115
-    aput v0, p1, v1
+    aput v1, p1, v0
 
     .line 116
     .line 117
-    add-int/lit8 v1, p2, 0xe
-
-    .line 118
-    .line 119
     const/4 v0, 0x2
 
+    .line 118
+    aget v1, v2, v0
+
+    .line 119
     .line 120
-    aget v0, v2, v0
+    add-int/lit8 v0, p2, 0xe
 
     .line 121
     .line 122
-    aput v0, p1, v1
+    aput v1, p1, v0
 
     .line 123
     .line 124
@@ -1962,7 +1983,7 @@
 
     .line 9
     .line 10
-    invoke-static {v2, v0, v1}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
+    invoke-static {v2, v0, v1}, LX/431;->A1S([Ljava/lang/Object;FI)V
 
     .line 11
     .line 12
@@ -1974,7 +1995,7 @@
 
     .line 15
     .line 16
-    invoke-static {v2, v0, v1}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
+    invoke-static {v2, v0, v1}, LX/431;->A1S([Ljava/lang/Object;FI)V
 
     .line 17
     .line 18
@@ -1986,7 +2007,7 @@
 
     .line 21
     .line 22
-    invoke-static {v2, v0, v1}, LX/0Yi;->A1K([Ljava/lang/Object;FI)V
+    invoke-static {v2, v0, v1}, LX/431;->A1S([Ljava/lang/Object;FI)V
 
     .line 23
     .line 24

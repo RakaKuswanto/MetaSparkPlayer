@@ -6,29 +6,27 @@
 # instance fields
 .field public A00:J
 
-.field public A01:LX/1xg;
+.field public A01:LX/2Ui;
 
-.field public A02:LX/1zG;
+.field public final A02:LX/2fU;
 
-.field public final A03:LX/3Ea;
+.field public final A03:LX/2fN;
 
-.field public final A04:LX/3Di;
+.field public final A04:LX/0Ft;
 
-.field public final A05:LX/0Gk;
+.field public final A05:LX/3fV;
 
-.field public final A06:LX/3EH;
+.field public final A06:LX/2Xu;
 
-.field public final A07:LX/2fq;
+.field public final A07:Lcom/facebook/prefs/shared/FbSharedPreferences;
 
-.field public final A08:Lcom/facebook/prefs/shared/FbSharedPreferences;
+.field public final A08:LX/2eD;
 
-.field public final A09:LX/48s;
-
-.field public volatile A0A:Z
+.field public volatile A09:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 7
 
     .line 0
@@ -40,144 +38,132 @@
     const/4 v0, 0x0
 
     .line 4
-    iput-boolean v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A0A:Z
+    iput-boolean v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A09:Z
 
     .line 5
     .line 6
-    invoke-static {p1, v0}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
+    sget v0, LX/2I6;->A9R:I
 
     .line 7
     .line 8
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 9
-    move-result-object v0
-
     .line 10
-    iput-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A02:LX/1zG;
-
     .line 11
+    move-result-object v6
+
     .line 12
-    sget v0, LX/2eq;->ACp:I
+    check-cast v6, LX/2Xu;
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {}, LX/2I6;->A0Z()Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 15
     .line 16
     .line 17
-    move-result-object v6
+    move-result-object v5
 
     .line 18
-    check-cast v6, LX/2fq;
+    invoke-static {}, LX/2I6;->A0I()LX/3fV;
 
     .line 19
     .line 20
-    invoke-static {}, LX/1z6;->A0Q()Lcom/facebook/prefs/shared/FbSharedPreferences;
-
     .line 21
-    .line 22
-    .line 23
-    move-result-object v5
-
-    .line 24
-    invoke-static {}, LX/1z6;->A0G()LX/3EH;
-
-    .line 25
-    .line 26
-    .line 27
     move-result-object v4
 
-    .line 28
-    invoke-static {}, LX/1z6;->A0F()LX/48s;
+    .line 22
+    invoke-static {}, LX/2I6;->A0H()LX/2eD;
 
-    .line 29
-    .line 30
-    .line 31
+    .line 23
+    .line 24
+    .line 25
     move-result-object v3
 
+    .line 26
+    invoke-static {}, LX/2I6;->A07()LX/0Ft;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v2
+
+    .line 30
+    sget v0, LX/2I6;->A9G:I
+
+    .line 31
     .line 32
-    invoke-static {}, LX/1z6;->A06()LX/0Gk;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 33
     .line 34
     .line 35
-    move-result-object v2
+    move-result-object v1
 
     .line 36
-    sget v0, LX/2eq;->ACd:I
+    check-cast v1, LX/2fN;
 
     .line 37
     .line 38
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    sget v0, LX/2I6;->A1h:I
 
     .line 39
     .line 40
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 41
-    move-result-object v1
-
     .line 42
-    check-cast v1, LX/3Di;
-
     .line 43
+    move-result-object v0
+
     .line 44
-    sget v0, LX/2eq;->ACo:I
+    check-cast v0, LX/2fU;
 
     .line 45
     .line 46
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iput-object v5, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A07:Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 47
     .line 48
-    .line 49
-    move-result-object v0
+    iput-object v4, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A05:LX/3fV;
 
+    .line 49
     .line 50
-    check-cast v0, LX/3Ea;
+    iput-object v3, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A08:LX/2eD;
 
     .line 51
     .line 52
-    iput-object v5, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A08:Lcom/facebook/prefs/shared/FbSharedPreferences;
+    iput-object v6, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A06:LX/2Xu;
 
     .line 53
     .line 54
-    iput-object v4, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A06:LX/3EH;
+    iput-object v2, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A04:LX/0Ft;
 
     .line 55
     .line 56
-    iput-object v3, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A09:LX/48s;
+    iput-object v1, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A03:LX/2fN;
 
     .line 57
     .line 58
-    iput-object v6, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A07:LX/2fq;
+    iput-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A02:LX/2fU;
 
     .line 59
     .line 60
-    iput-object v2, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A05:LX/0Gk;
+    const-wide/16 v0, -0x1
 
     .line 61
     .line 62
-    iput-object v1, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A04:LX/3Di;
+    iput-wide v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A00:J
 
     .line 63
     .line 64
-    iput-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A03:LX/3Ea;
-
-    .line 65
-    .line 66
-    const-wide/16 v0, -0x1
-
-    .line 67
-    .line 68
-    iput-wide v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A00:J
-
-    .line 69
-    .line 70
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized A00()LX/1xg;
+.method public final declared-synchronized A00()LX/2Ui;
     .locals 10
 
     .line 0
@@ -185,7 +171,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A01:LX/1xg;
+    iget-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A01:LX/2Ui;
 
     .line 2
     .line 3
@@ -193,182 +179,184 @@
 
     .line 4
     .line 5
-    iget-object v1, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A09:LX/48s;
+    iget-object v1, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A08:LX/2eD;
 
     .line 6
     .line 7
-    const-string v0, "analytics_periodic_events"
+    const-string/jumbo v0, "analytics_periodic_events"
 
     .line 8
     .line 9
-    invoke-virtual {v1, v0}, LX/48s;->A02(Ljava/lang/String;)LX/1xg;
-
     .line 10
+    invoke-virtual {v1, v0}, LX/2eD;->A01(Ljava/lang/String;)LX/2Ui;
+
     .line 11
     .line 12
+    .line 13
     move-result-object v1
 
-    .line 13
-    iput-object v1, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A01:LX/1xg;
-
     .line 14
-    .line 15
-    const-string v9, "client_periodic_lightprefs_migration"
+    iput-object v1, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A01:LX/2Ui;
 
+    .line 15
     .line 16
+    const-string/jumbo v9, "client_periodic_lightprefs_migration"
+
     .line 17
+    .line 18
+    .line 19
     const/4 v0, 0x0
 
-    .line 18
-    invoke-virtual {v1, v9, v0}, LX/1xg;->A0F(Ljava/lang/String;Z)Z
-
-    .line 19
     .line 20
+    invoke-virtual {v1, v9, v0}, LX/2Ui;->A0F(Ljava/lang/String;Z)Z
+
     .line 21
+    .line 22
+    .line 23
     move-result v0
 
-    .line 22
-    if-nez v0, :cond_1
-
-    .line 23
     .line 24
-    iget-object v8, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A08:Lcom/facebook/prefs/shared/FbSharedPreferences;
+    if-nez v0, :cond_1
 
     .line 25
     .line 26
-    sget-object v7, LX/2Sa;->A0G:LX/1b2;
+    iget-object v8, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A07:Lcom/facebook/prefs/shared/FbSharedPreferences;
 
     .line 27
     .line 28
-    invoke-interface {v8, v7}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AHc(LX/1b2;)Ljava/util/Set;
+    sget-object v7, LX/2WH;->A0F:LX/28F;
 
     .line 29
     .line 30
+    invoke-interface {v8, v7}, Lcom/facebook/prefs/shared/FbSharedPreferences;->AG7(LX/28F;)Ljava/util/Set;
+
     .line 31
+    .line 32
+    .line 33
     move-result-object v1
 
-    .line 32
-    iget-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A01:LX/1xg;
-
-    .line 33
     .line 34
-    invoke-static {v0}, LX/1xH;->A01(LX/1xg;)LX/1xH;
+    iget-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A01:LX/2Ui;
 
     .line 35
     .line 36
+    invoke-static {v0}, LX/2Uh;->A01(LX/2Ui;)LX/2Uh;
+
     .line 37
+    .line 38
+    .line 39
     move-result-object v6
 
-    .line 38
-    invoke-interface {v8}, Lcom/facebook/prefs/shared/FbSharedPreferences;->edit()LX/1hU;
-
-    .line 39
     .line 40
+    invoke-interface {v8}, Lcom/facebook/prefs/shared/FbSharedPreferences;->edit()LX/1D7;
+
     .line 41
+    .line 42
+    .line 43
     move-result-object v5
 
-    .line 42
+    .line 44
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    .line 43
-    .line 44
     .line 45
+    .line 46
+    .line 47
     move-result-object v4
 
-    .line 46
+    .line 48
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 47
-    .line 48
     .line 49
+    .line 50
+    .line 51
     move-result v0
 
-    .line 50
-    if-eqz v0, :cond_0
-
-    .line 51
     .line 52
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
     .line 53
     .line 54
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 55
+    .line 56
+    .line 57
     move-result-object v3
 
-    .line 56
-    check-cast v3, LX/1b2;
-
-    .line 57
     .line 58
-    invoke-virtual {v3, v7}, LX/1b3;->A0E(LX/1b3;)Ljava/lang/String;
+    check-cast v3, LX/28F;
 
     .line 59
     .line 60
+    invoke-virtual {v3, v7}, LX/28G;->A0C(LX/28G;)Ljava/lang/String;
+
     .line 61
+    .line 62
+    .line 63
     move-result-object v2
 
-    .line 62
-    invoke-static {v8, v3}, LX/0Yf;->A0B(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/1b2;)J
-
-    .line 63
     .line 64
+    invoke-static {v8, v3}, LX/0X3;->A0A(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/28F;)J
+
     .line 65
+    .line 66
+    .line 67
     move-result-wide v0
 
-    .line 66
-    invoke-virtual {v6, v2, v0, v1}, LX/1xH;->A0A(Ljava/lang/String;J)V
-
-    .line 67
     .line 68
-    .line 69
-    invoke-interface {v5, v3}, LX/1hU;->Aiq(LX/1b2;)LX/2O0;
+    invoke-virtual {v6, v2, v0, v1}, LX/2Uh;->A0A(Ljava/lang/String;J)V
 
+    .line 69
     .line 70
     .line 71
+    invoke-interface {v5, v3}, LX/1D7;->AhI(LX/28F;)LX/2Cv;
+
     .line 72
+    .line 73
+    .line 74
     goto :goto_0
 
-    .line 73
+    .line 75
     :cond_0
     const/4 v0, 0x1
 
-    .line 74
-    invoke-virtual {v6, v9, v0}, LX/1xH;->A0C(Ljava/lang/String;Z)V
-
-    .line 75
     .line 76
-    .line 77
-    invoke-virtual {v6}, LX/1xH;->A07()V
+    invoke-virtual {v6, v9, v0}, LX/2Uh;->A0C(Ljava/lang/String;Z)V
 
+    .line 77
     .line 78
     .line 79
-    .line 80
-    invoke-interface {v5}, LX/1hU;->commit()V
+    invoke-virtual {v6}, LX/2Uh;->A07()V
 
+    .line 80
     .line 81
     .line 82
+    invoke-interface {v5}, LX/1D7;->commit()V
+
     .line 83
+    .line 84
+    .line 85
     :cond_1
-    iget-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A01:LX/1xg;
+    iget-object v0, p0, Lcom/facebook/analytics/ClientPeriodicEventReporterManager;->A01:LX/2Ui;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 84
-    .line 85
+    .line 86
+    .line 87
     monitor-exit p0
 
-    .line 86
+    .line 88
     return-object v0
 
-    .line 87
+    .line 89
     :catchall_0
     move-exception v0
 
-    .line 88
+    .line 90
     monitor-exit p0
 
-    .line 89
+    .line 91
     throw v0
 .end method
 
@@ -402,7 +390,7 @@
     move-result-object v4
 
     .line 13
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
 
     .line 14
     .line 15
@@ -437,7 +425,7 @@
 
     .line 29
     .line 30
-    invoke-static {v4, v0, v3}, LX/0Jt;->A0A(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v3}, LX/0Il;->A0A(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 31
     .line 32

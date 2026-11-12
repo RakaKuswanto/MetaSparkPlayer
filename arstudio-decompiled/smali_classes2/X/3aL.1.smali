@@ -1,6 +1,12 @@
-.class public final LX/3aL;
+.class public final LX/3Al;
 .super Ljava/lang/Object;
 .source ""
+
+
+# static fields
+.field public static A00:Ljava/lang/String;
+
+.field public static A01:Z
 
 
 # direct methods

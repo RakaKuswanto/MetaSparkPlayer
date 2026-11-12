@@ -1,56 +1,395 @@
-.class public final LX/4Ft;
+.class public final LX/4fT;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/4Fu;
-
-
-# instance fields
-.field public final synthetic A00:LX/4Fs;
+.implements LX/4kK;
 
 
 # direct methods
-.method public constructor <init>(LX/4Fs;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, LX/4Ft;->A00:LX/4Fs;
-
+    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final AUQ(Ljava/util/Map;)V
-    .locals 2
+.method public final bridge synthetic A4C(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
     .line 0
-    const/4 v0, 0x0
+    check-cast p3, LX/4f9;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    invoke-static {p2, p3}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
+
     .line 3
     .line 4
-    iget-object v0, p0, LX/4Ft;->A00:LX/4Fs;
+    .line 5
+    iget-object v4, p3, LX/4f9;->A04:LX/4fg;
+
+    .line 6
+    .line 7
+    const-string v0, "null cannot be cast to non-null type com.facebook.litho.SpecGeneratedComponent"
+
+    .line 8
+    .line 9
+    invoke-static {v4, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 10
+    .line 11
+    .line 12
+    check-cast v4, LX/4fV;
+
+    .line 13
+    .line 14
+    iget-object v3, p3, LX/4f9;->A05:LX/4fk;
+
+    .line 15
+    .line 16
+    sget-object v0, LX/4fP;->A07:LX/4fO;
+
+    .line 17
+    .line 18
+    invoke-virtual {v0, p4}, LX/4fO;->A01(Ljava/lang/Object;)LX/42v;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v1
+
+    .line 22
+    if-eqz v3, :cond_0
+
+    .line 23
+    .line 24
+    const-string v0, "mount"
+
+    .line 25
+    .line 26
+    iput-object v0, v3, LX/4fk;->A09:Ljava/lang/String;
+
+    .line 27
+    .line 28
+    :cond_0
+    invoke-static {}, LX/433;->A1U()Z
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v2
+
+    .line 32
+    if-eqz v2, :cond_1
+
+    .line 33
+    .line 34
+    const-string v0, "onMount: "
+
+    .line 35
+    .line 36
+    invoke-static {v4, v0}, LX/431;->A13(LX/4fg;Ljava/lang/String;)V
+
+    .line 37
+    .line 38
+    .line 39
+    :cond_1
+    :try_start_0
+    invoke-virtual {v4, v3, v1, p2}, LX/4fV;->A0m(LX/4fk;LX/42v;Ljava/lang/Object;)V
+
+    .line 40
+    .line 41
+    .line 42
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 43
+    :catch_0
+    move-exception v0
+
+    .line 44
+    if-eqz v3, :cond_4
+
+    .line 45
+    .line 46
+    :try_start_1
+    invoke-static {v3, v0}, LX/4gQ;->A03(LX/4fk;Ljava/lang/Exception;)V
+
+    .line 47
+    .line 48
+    .line 49
+    goto :goto_1
+
+    .line 50
+    :goto_0
+    if-eqz v3, :cond_2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 51
+    .line 52
+    :goto_1
+    const/4 v0, 0x0
+
+    .line 53
+    iput-object v0, v3, LX/4fk;->A09:Ljava/lang/String;
+
+    .line 54
+    .line 55
+    :cond_2
+    if-eqz v2, :cond_3
+
+    .line 56
+    .line 57
+    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A00()V
+
+    .line 58
+    .line 59
+    .line 60
+    :cond_3
+    const/4 v0, 0x0
+
+    .line 61
+    return-object v0
+
+    .line 62
+    :cond_4
+    :try_start_2
+    throw v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 63
+    :catchall_0
+    move-exception v1
+
+    .line 64
+    if-eqz v3, :cond_5
+
+    .line 65
+    .line 66
+    const/4 v0, 0x0
+
+    .line 67
+    iput-object v0, v3, LX/4fk;->A09:Ljava/lang/String;
+
+    .line 68
+    .line 69
+    :cond_5
+    if-eqz v2, :cond_6
+
+    .line 70
+    .line 71
+    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A00()V
+
+    .line 72
+    .line 73
+    .line 74
+    :cond_6
+    throw v1
+.end method
+
+.method public final synthetic AD8()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-static {v0}, LX/4j1;->A00(Ljava/lang/Class;)Ljava/lang/String;
 
     .line 5
     .line 6
-    iget-object v1, v0, LX/4Fs;->A01:LX/4CF;
-
     .line 7
+    move-result-object v0
+
     .line 8
-    iget-object v0, v0, LX/4Fs;->A00:Landroid/os/Bundle;
+    return-object v0
+.end method
 
+.method public final bridge synthetic Amw(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 0
+    check-cast p1, LX/4fS;
+
+    .line 1
+    .line 2
+    check-cast p2, LX/4fS;
+
+    .line 3
+    .line 4
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v0, p2, LX/4f9;->A04:LX/4fg;
+
+    .line 8
     .line 9
-    .line 10
-    invoke-virtual {v1, v0, p1}, LX/4CF;->A0C(Landroid/os/Bundle;Ljava/util/Map;)V
+    instance-of v0, v0, LX/4ee;
 
+    .line 10
     .line 11
+    if-eqz v0, :cond_0
+
     .line 12
     .line 13
+    const/4 v0, 0x0
+
+    .line 14
+    return v0
+
+    .line 15
+    :cond_0
+    sget-object v0, LX/4fS;->A07:LX/4fQ;
+
+    .line 16
+    .line 17
+    invoke-virtual {v0, p1, p2, p3, p4}, LX/4fQ;->A00(LX/4fS;LX/4fS;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    return v0
+.end method
+
+.method public final bridge synthetic Aov(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 4
+
+    .line 0
+    check-cast p3, LX/4f9;
+
+    .line 1
+    .line 2
+    invoke-static {p2, p3}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v3, p3, LX/4f9;->A04:LX/4fg;
+
+    .line 6
+    .line 7
+    const-string v0, "null cannot be cast to non-null type com.facebook.litho.SpecGeneratedComponent"
+
+    .line 8
+    .line 9
+    invoke-static {v3, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 10
+    .line 11
+    .line 12
+    check-cast v3, LX/4fV;
+
+    .line 13
+    .line 14
+    iget-object v2, p3, LX/4f9;->A05:LX/4fk;
+
+    .line 15
+    .line 16
+    sget-object v0, LX/4fP;->A07:LX/4fO;
+
+    .line 17
+    .line 18
+    invoke-virtual {v0, p4}, LX/4fO;->A01(Ljava/lang/Object;)LX/42v;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v1
+
+    .line 22
+    invoke-static {}, LX/433;->A1U()Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result v0
+
+    .line 26
+    if-eqz v0, :cond_0
+
+    .line 27
+    .line 28
+    const-string v0, "onUnmount: "
+
+    .line 29
+    .line 30
+    invoke-static {v3, v0}, LX/431;->A13(LX/4fg;Ljava/lang/String;)V
+
+    .line 31
+    .line 32
+    .line 33
+    :cond_0
+    :try_start_0
+    invoke-virtual {v3, v2, v1, p2}, LX/4fV;->A0o(LX/4fk;LX/42v;Ljava/lang/Object;)V
+
+    .line 34
+    .line 35
+    .line 36
+    goto :goto_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 37
+    :catch_0
+    move-exception v0
+
+    .line 38
+    if-eqz v2, :cond_1
+
+    .line 39
+    .line 40
+    :try_start_1
+    invoke-static {v2, v0}, LX/4gQ;->A03(LX/4fk;Ljava/lang/Exception;)V
+
+    .line 41
+    .line 42
+    .line 43
+    goto :goto_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 44
+    :catchall_0
+    move-exception v0
+
+    .line 45
+    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A00()V
+
+    .line 46
+    .line 47
+    .line 48
+    throw v0
+
+    .line 49
+    :cond_1
+    :goto_0
+    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A00()V
+
+    .line 50
+    .line 51
+    .line 52
     return-void
 .end method

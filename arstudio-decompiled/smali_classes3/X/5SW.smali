@@ -2,139 +2,88 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0TN;
-
 
 # instance fields
-.field public A00:Z
+.field public A00:J
 
-.field public final synthetic A01:LX/5SU;
+.field public A01:J
+
+.field public A02:Z
+
+.field public A03:Z
+
+.field public A04:Z
 
 
 # direct methods
-.method public constructor <init>(LX/5SU;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    .line 0
-    iput-object p1, p0, LX/5SW;->A01:LX/5SU;
-
-    .line 1
-    .line 2
+    .line 268435456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    const/4 v0, 0x1
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const-wide/high16 v0, -0x8000000000000000L
 
-    .line 6
-    iput-boolean v0, p0, LX/5SW;->A00:Z
+    .line 268435460
+    .line 268435461
+    iput-wide v0, p0, LX/5SW;->A00:J
 
-    .line 7
-    .line 8
+    .line 268435462
+    .line 268435463
     return-void
 .end method
 
-
-# virtual methods
-.method public final ArB(Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 3
+.method public constructor <init>(LX/5SV;)V
+    .locals 2
 
     .line 0
-    iget-boolean v0, p0, LX/5SW;->A00:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
-
     .line 3
-    .line 4
-    const/4 v0, 0x0
+    iget-wide v0, p1, LX/5SV;->A01:J
 
+    .line 4
     .line 5
-    iput-boolean v0, p0, LX/5SW;->A00:Z
+    iput-wide v0, p0, LX/5SW;->A01:J
 
     .line 6
     .line 7
-    :goto_0
-    iget-object v0, p0, LX/5SW;->A01:LX/5SU;
+    iget-wide v0, p1, LX/5SV;->A00:J
 
     .line 8
     .line 9
-    iget-object v2, v0, LX/5SU;->A02:Ljava/lang/StringBuilder;
+    iput-wide v0, p0, LX/5SW;->A00:J
 
     .line 10
     .line 11
-    const/16 v1, 0x22
+    iget-boolean v0, p1, LX/5SV;->A03:Z
 
     .line 12
     .line 13
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iput-boolean v0, p0, LX/5SW;->A03:Z
 
     .line 14
     .line 15
-    .line 16
-    invoke-static {p1}, LX/5SI;->A0B(Ljava/lang/Object;)Ljava/lang/String;
+    iget-boolean v0, p1, LX/5SV;->A02:Z
 
+    .line 16
     .line 17
+    iput-boolean v0, p0, LX/5SW;->A02:Z
+
     .line 18
     .line 19
-    move-result-object v0
+    iget-boolean v0, p1, LX/5SV;->A04:Z
 
     .line 20
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 21
+    iput-boolean v0, p0, LX/5SW;->A04:Z
+
     .line 22
     .line 23
-    const-string v0, "\":\""
-
-    .line 24
-    .line 25
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 26
-    .line 27
-    .line 28
-    invoke-static {p2}, LX/5SI;->A0B(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 33
-    .line 34
-    .line 35
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 36
-    .line 37
-    .line 38
     return-void
-
-    .line 39
-    :cond_0
-    iget-object v0, p0, LX/5SW;->A01:LX/5SU;
-
-    .line 40
-    .line 41
-    iget-object v1, v0, LX/5SU;->A02:Ljava/lang/StringBuilder;
-
-    .line 42
-    .line 43
-    const/16 v0, 0x2c
-
-    .line 44
-    .line 45
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 46
-    .line 47
-    .line 48
-    goto :goto_0
 .end method

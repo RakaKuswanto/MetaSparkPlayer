@@ -1,19 +1,21 @@
-.class public final synthetic LX/1pl;
-.super Ljava/lang/Object;
+.class public final LX/1pl;
+.super LX/1gb;
 .source ""
 
-
-# instance fields
-.field public final synthetic A00:LX/26H;
+# interfaces
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1pw;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/26H;)V
+.method public constructor <init>(I[I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
-    iput-object p1, p0, LX/1pl;->A00:LX/26H;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

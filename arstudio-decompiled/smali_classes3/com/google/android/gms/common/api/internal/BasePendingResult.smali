@@ -1,5 +1,5 @@
 .class public abstract Lcom/google/android/gms/common/api/internal/BasePendingResult;
-.super LX/572;
+.super LX/514;
 .source ""
 
 
@@ -9,11 +9,11 @@
 
 
 # static fields
-.field public static final A0D:Ljava/lang/ThreadLocal;
+.field public static final A0C:Ljava/lang/ThreadLocal;
 
 
 # instance fields
-.field public A00:LX/57d;
+.field public A00:LX/519;
 
 .field public A01:Lcom/google/android/gms/common/api/Status;
 
@@ -33,11 +33,9 @@
 
 .field public final A09:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public final A0A:LX/57W;
+.field public final A0A:LX/4vU;
 
 .field public volatile A0B:Z
-
-.field public volatile A0C:LX/57e;
 
 
 # direct methods
@@ -45,132 +43,32 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/57a;
+    new-instance v0, LX/50z;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/57a;-><init>()V
+    invoke-direct {v0}, LX/50z;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A0D:Ljava/lang/ThreadLocal;
+    sput-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A0C:Ljava/lang/ThreadLocal;
 
     .line 6
     .line 7
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 2
-
-    .line 268435456
-    invoke-direct {p0}, LX/572;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
-
-    .line 268435460
-    .line 268435461
-    .line 268435462
-    move-result-object v0
-
-    .line 268435463
-    iput-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A05:Ljava/lang/Object;
-
-    .line 268435464
-    .line 268435465
-    invoke-static {}, LX/0Yh;->A0k()Ljava/util/concurrent/CountDownLatch;
-
-    .line 268435466
-    .line 268435467
-    .line 268435468
-    move-result-object v0
-
-    .line 268435469
-    iput-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A08:Ljava/util/concurrent/CountDownLatch;
-
-    .line 268435470
-    .line 268435471
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 268435472
-    .line 268435473
-    .line 268435474
-    move-result-object v0
-
-    .line 268435475
-    iput-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A07:Ljava/util/ArrayList;
-
-    .line 268435476
-    .line 268435477
-    invoke-static {}, LX/0Yj;->A0k()Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 268435478
-    .line 268435479
-    .line 268435480
-    move-result-object v0
-
-    .line 268435481
-    iput-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A09:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 268435482
-    .line 268435483
-    const/4 v0, 0x0
-
-    .line 268435484
-    iput-boolean v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A03:Z
-
-    .line 268435485
-    .line 268435486
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    .line 268435487
-    .line 268435488
-    .line 268435489
-    move-result-object v1
-
-    .line 268435490
-    new-instance v0, LX/57W;
-
-    .line 268435491
-    .line 268435492
-    invoke-direct {v0, v1}, LX/57W;-><init>(Landroid/os/Looper;)V
-
-    .line 268435493
-    .line 268435494
-    .line 268435495
-    iput-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A0A:LX/57W;
-
-    .line 268435496
-    .line 268435497
-    invoke-static {}, LX/4BF;->A15()Ljava/lang/ref/WeakReference;
-
-    .line 268435498
-    .line 268435499
-    .line 268435500
-    move-result-object v0
-
-    .line 268435501
-    iput-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A06:Ljava/lang/ref/WeakReference;
-
-    .line 268435502
-    .line 268435503
-    return-void
-.end method
-
-.method public constructor <init>(LX/59x;)V
+.method public constructor <init>(LX/51Q;)V
     .locals 2
 
     .line 0
-    invoke-direct {p0}, LX/572;-><init>()V
+    invoke-direct {p0}, LX/514;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -182,7 +80,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Yh;->A0k()Ljava/util/concurrent/CountDownLatch;
+    invoke-static {}, LX/0X5;->A0v()Ljava/util/concurrent/CountDownLatch;
 
     .line 10
     .line 11
@@ -194,7 +92,7 @@
 
     .line 14
     .line 15
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 16
     .line 17
@@ -206,7 +104,7 @@
 
     .line 20
     .line 21
-    invoke-static {}, LX/0Yj;->A0k()Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {}, LX/0X7;->A0o()Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 22
     .line 23
@@ -229,7 +127,7 @@
 
     .line 31
     .line 32
-    instance-of v0, p1, LX/56N;
+    instance-of v0, p1, LX/50Y;
 
     .line 33
     .line 34
@@ -240,33 +138,33 @@
     move-object v0, p1
 
     .line 37
-    check-cast v0, LX/56N;
+    check-cast v0, LX/50Y;
 
     .line 38
     .line 39
-    iget-object v0, v0, LX/56N;->A00:LX/56F;
+    iget-object v0, v0, LX/50Y;->A00:LX/50V;
 
     .line 40
     .line 41
-    iget-object v1, v0, LX/56F;->A02:Landroid/os/Looper;
+    iget-object v1, v0, LX/50V;->A02:Landroid/os/Looper;
 
     .line 42
     .line 43
     :goto_0
-    new-instance v0, LX/57W;
+    new-instance v0, LX/4vU;
 
     .line 44
     .line 45
-    invoke-direct {v0, v1}, LX/57W;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, LX/4vU;-><init>(Landroid/os/Looper;)V
 
     .line 46
     .line 47
     .line 48
-    iput-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A0A:LX/57W;
+    iput-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A0A:LX/4vU;
 
     .line 49
     .line 50
-    invoke-static {p1}, LX/0Yj;->A0V(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {p1}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     .line 51
     .line 52
@@ -285,11 +183,11 @@
     move-object v0, p1
 
     .line 58
-    check-cast v0, LX/59j;
+    check-cast v0, LX/52w;
 
     .line 59
     .line 60
-    iget-object v1, v0, LX/59j;->A06:Landroid/os/Looper;
+    iget-object v1, v0, LX/52w;->A06:Landroid/os/Looper;
 
     .line 61
     .line 62
@@ -308,15 +206,15 @@
     goto :goto_0
 .end method
 
-.method private final A00(LX/57d;)V
+.method private final A00(LX/519;)V
     .locals 5
 
     .line 0
-    iput-object p1, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A00:LX/57d;
+    iput-object p1, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A00:LX/519;
 
     .line 1
     .line 2
-    invoke-interface {p1}, LX/57d;->AMS()Lcom/google/android/gms/common/api/Status;
+    invoke-interface {p1}, LX/519;->AL1()Lcom/google/android/gms/common/api/Status;
 
     .line 3
     .line 4
@@ -365,7 +263,7 @@
     move-result-object v1
 
     .line 26
-    check-cast v1, LX/57T;
+    check-cast v1, LX/518;
 
     .line 27
     .line 28
@@ -373,7 +271,7 @@
 
     .line 29
     .line 30
-    invoke-interface {v1, v0}, LX/57T;->AWC(Lcom/google/android/gms/common/api/Status;)V
+    invoke-interface {v1, v0}, LX/518;->AUX(Lcom/google/android/gms/common/api/Status;)V
 
     .line 31
     .line 32
@@ -431,14 +329,14 @@
 
     .line 13
     .line 14
-    sget-object v1, Lcom/google/android/gms/common/api/Status;->A05:Lcom/google/android/gms/common/api/Status;
+    sget-object v1, Lcom/google/android/gms/common/api/Status;->A04:Lcom/google/android/gms/common/api/Status;
 
     .line 15
     .line 16
     move-object v2, p0
 
     .line 17
-    instance-of v0, p0, LX/57N;
+    instance-of v0, p0, LX/50v;
 
     .line 18
     .line 19
@@ -446,16 +344,16 @@
 
     .line 20
     .line 21
-    check-cast v2, LX/57N;
+    check-cast v2, LX/50v;
 
     .line 22
     .line 23
-    iget-object v1, v2, LX/57N;->A00:LX/57d;
+    iget-object v1, v2, LX/50v;->A00:LX/519;
 
     .line 24
     .line 25
     :cond_0
-    invoke-direct {p0, v1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A00(LX/57d;)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A00(LX/519;)V
 
     .line 26
     .line 27
@@ -479,7 +377,7 @@
     throw v0
 .end method
 
-.method public final A03(LX/57d;)V
+.method public final A03(LX/519;)V
     .locals 6
 
     .line 0
@@ -534,7 +432,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0}, LX/001;->A1M(I)Z
+    invoke-static {v0}, LX/001;->A1L(I)Z
 
     .line 25
     .line 26
@@ -551,7 +449,7 @@
 
     .line 31
     .line 32
-    invoke-static {v1, v0}, LX/51D;->A08(ZLjava/lang/Object;)V
+    invoke-static {v1, v0}, LX/4va;->A09(ZLjava/lang/Object;)V
 
     .line 33
     .line 34
@@ -568,12 +466,12 @@
 
     .line 40
     .line 41
-    invoke-static {v1, v0}, LX/51D;->A08(ZLjava/lang/Object;)V
+    invoke-static {v1, v0}, LX/4va;->A09(ZLjava/lang/Object;)V
 
     .line 42
     .line 43
     .line 44
-    invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A00(LX/57d;)V
+    invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A00(LX/519;)V
 
     .line 45
     .line 46
@@ -636,7 +534,7 @@
     move-object v1, p0
 
     .line 16
-    instance-of v0, p0, LX/57N;
+    instance-of v0, p0, LX/50v;
 
     .line 17
     .line 18
@@ -644,16 +542,16 @@
 
     .line 19
     .line 20
-    check-cast v1, LX/57N;
+    check-cast v1, LX/50v;
 
     .line 21
     .line 22
-    iget-object p1, v1, LX/57N;->A00:LX/57d;
+    iget-object p1, v1, LX/50v;->A00:LX/519;
 
     .line 23
     .line 24
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A03(LX/57d;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A03(LX/519;)V
 
     .line 25
     .line 26

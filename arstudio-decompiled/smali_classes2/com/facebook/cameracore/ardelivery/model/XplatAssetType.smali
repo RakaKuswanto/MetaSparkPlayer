@@ -62,158 +62,453 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 28
+.method public static synthetic $values()[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    .locals 3
 
     .line 0
-    const-string v2, "Unknown"
+    const/16 v0, 0x18
 
     .line 1
     .line 2
-    const/4 v1, 0x0
+    new-array v2, v0, [Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 3
-    new-instance v27, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 4
-    .line 5
-    move-object/from16 v0, v27
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Unknown:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
+    .line 5
     .line 6
+    const/4 v0, 0x0
+
     .line 7
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    aput-object v1, v2, v0
 
     .line 8
     .line 9
-    .line 10
-    sput-object v27, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Unknown:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->AREffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
+    .line 10
     .line 11
+    const/4 v0, 0x1
+
     .line 12
-    const-string v2, "AREffect"
+    aput-object v1, v2, v0
 
     .line 13
     .line 14
-    const/4 v1, 0x1
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Async:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 15
-    new-instance v26, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 16
+    const/4 v0, 0x2
+
     .line 17
-    move-object/from16 v0, v26
+    aput-object v1, v2, v0
 
     .line 18
     .line 19
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->StyleTransferEffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 20
     .line 21
+    const/4 v0, 0x3
+
     .line 22
-    sput-object v26, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->AREffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    aput-object v1, v2, v0
 
     .line 23
     .line 24
-    const-string v2, "Async"
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->LegacyEffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 25
     .line 26
-    const/4 v1, 0x2
+    const/4 v0, 0x4
 
     .line 27
-    new-instance v15, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    aput-object v1, v2, v0
 
     .line 28
     .line 29
-    invoke-direct {v15, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->ARLink:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 30
     .line 31
+    const/4 v0, 0x5
+
     .line 32
-    sput-object v15, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Async:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    aput-object v1, v2, v0
 
     .line 33
     .line 34
-    const-string v2, "StyleTransferEffect"
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Remote:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 35
     .line 36
-    const/4 v1, 0x3
+    const/4 v0, 0x6
 
     .line 37
-    new-instance v14, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    aput-object v1, v2, v0
 
     .line 38
     .line 39
-    invoke-direct {v14, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FaceTrackerModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 40
     .line 41
+    const/4 v0, 0x7
+
     .line 42
-    sput-object v14, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->StyleTransferEffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    aput-object v1, v2, v0
 
     .line 43
     .line 44
-    const-string v2, "LegacyEffect"
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->HairSegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 45
     .line 46
-    const/4 v1, 0x4
+    const/16 v0, 0x8
 
     .line 47
-    new-instance v25, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 48
+    aput-object v1, v2, v0
+
     .line 49
-    move-object/from16 v0, v25
-
     .line 50
-    .line 51
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->SegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
+    .line 51
     .line 52
+    const/16 v0, 0x9
+
     .line 53
     .line 54
-    sput-object v25, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->LegacyEffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    aput-object v1, v2, v0
 
     .line 55
     .line 56
-    const-string v2, "ARLink"
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->TargetRecognitionModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 57
     .line 58
-    const/4 v1, 0x5
+    const/16 v0, 0xa
 
     .line 59
-    new-instance v24, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 60
+    aput-object v1, v2, v0
+
     .line 61
-    move-object/from16 v0, v24
-
     .line 62
-    .line 63
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->XRayModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
+    .line 63
     .line 64
+    const/16 v0, 0xb
+
     .line 65
     .line 66
-    sput-object v24, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->ARLink:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    aput-object v1, v2, v0
 
     .line 67
     .line 68
-    const-string v2, "Remote"
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FittedExpressionTrackerModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 69
     .line 70
-    const/4 v1, 0x6
+    const/16 v0, 0xc
 
     .line 71
-    new-instance v23, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 72
+    aput-object v1, v2, v0
+
     .line 73
-    move-object/from16 v0, v23
+    .line 74
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->MSuggestionsCoreModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 75
+    .line 76
+    const/16 v0, 0xd
+
+    .line 77
+    .line 78
+    aput-object v1, v2, v0
+
+    .line 79
+    .line 80
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->NametagModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 81
+    .line 82
+    const/16 v0, 0xe
+
+    .line 83
+    .line 84
+    aput-object v1, v2, v0
+
+    .line 85
+    .line 86
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->PyTorchModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 87
+    .line 88
+    const/16 v0, 0xf
+
+    .line 89
+    .line 90
+    aput-object v1, v2, v0
+
+    .line 91
+    .line 92
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Caffe2Model:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 93
+    .line 94
+    const/16 v0, 0x10
+
+    .line 95
+    .line 96
+    aput-object v1, v2, v0
+
+    .line 97
+    .line 98
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->MulticlassSegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 99
+    .line 100
+    const/16 v0, 0x11
+
+    .line 101
+    .line 102
+    aput-object v1, v2, v0
+
+    .line 103
+    .line 104
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->ScriptingPackage:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 105
+    .line 106
+    const/16 v0, 0x12
+
+    .line 107
+    .line 108
+    aput-object v1, v2, v0
+
+    .line 109
+    .line 110
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Ocr2goCreditCardModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 111
+    .line 112
+    const/16 v0, 0x13
+
+    .line 113
+    .line 114
+    aput-object v1, v2, v0
+
+    .line 115
+    .line 116
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->RecognitionModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 117
+    .line 118
+    const/16 v0, 0x14
+
+    .line 119
+    .line 120
+    aput-object v1, v2, v0
+
+    .line 121
+    .line 122
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->AR3DObject:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 123
+    .line 124
+    const/16 v0, 0x15
+
+    .line 125
+    .line 126
+    aput-object v1, v2, v0
+
+    .line 127
+    .line 128
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->SparkVision:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 129
+    .line 130
+    const/16 v0, 0x16
+
+    .line 131
+    .line 132
+    aput-object v1, v2, v0
+
+    .line 133
+    .line 134
+    sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FittedExpressionTrackerRuntimeRigRetargetingConfig:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 135
+    .line 136
+    const/16 v0, 0x17
+
+    .line 137
+    .line 138
+    aput-object v1, v2, v0
+
+    .line 139
+    .line 140
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 6
+
+    .line 0
+    const-string v1, "Unknown"
+
+    .line 1
+    .line 2
+    const/4 v5, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1, v5, v5}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Unknown:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 9
+    .line 10
+    const-string v2, "AREffect"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->AREffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 19
+    .line 20
+    const-string v2, "Async"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Async:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 29
+    .line 30
+    const-string v2, "StyleTransferEffect"
+
+    .line 31
+    .line 32
+    const/4 v1, 0x3
+
+    .line 33
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->StyleTransferEffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 39
+    .line 40
+    const-string v2, "LegacyEffect"
+
+    .line 41
+    .line 42
+    const/4 v1, 0x4
+
+    .line 43
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 44
+    .line 45
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+
+    .line 46
+    .line 47
+    .line 48
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->LegacyEffect:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 49
+    .line 50
+    const-string v2, "ARLink"
+
+    .line 51
+    .line 52
+    const/4 v1, 0x5
+
+    .line 53
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 54
+    .line 55
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+
+    .line 56
+    .line 57
+    .line 58
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->ARLink:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 59
+    .line 60
+    const-string v2, "Remote"
+
+    .line 61
+    .line 62
+    const/4 v1, 0x6
+
+    .line 63
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 64
+    .line 65
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+
+    .line 66
+    .line 67
+    .line 68
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Remote:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 69
+    .line 70
+    const-string v2, "FaceTrackerModel"
+
+    .line 71
+    .line 72
+    const/4 v1, 0x7
+
+    .line 73
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 74
     .line 75
@@ -222,562 +517,417 @@
     .line 76
     .line 77
     .line 78
-    sput-object v23, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Remote:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FaceTrackerModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 79
     .line 80
-    const-string v2, "FaceTrackerModel"
+    const-string v2, "HairSegmentationModel"
 
     .line 81
     .line 82
-    const/4 v1, 0x7
-
-    .line 83
-    new-instance v22, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 84
-    .line 85
-    move-object/from16 v0, v22
-
-    .line 86
-    .line 87
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
-
-    .line 88
-    .line 89
-    .line 90
-    sput-object v22, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FaceTrackerModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 91
-    .line 92
-    const-string v2, "HairSegmentationModel"
-
-    .line 93
-    .line 94
     const/16 v1, 0x8
 
+    .line 83
+    .line 84
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 85
+    .line 86
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+
+    .line 87
+    .line 88
+    .line 89
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->HairSegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 90
+    .line 91
+    const-string v2, "SegmentationModel"
+
+    .line 92
+    .line 93
+    const/16 v1, 0x9
+
+    .line 94
     .line 95
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 96
-    new-instance v21, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 97
-    .line 98
-    move-object/from16 v0, v21
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 98
     .line 99
     .line 100
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->SegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 101
     .line 102
+    const-string v2, "TargetRecognitionModel"
+
     .line 103
-    sput-object v21, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->HairSegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 104
+    const/16 v1, 0xa
+
     .line 105
-    const-string v2, "SegmentationModel"
-
     .line 106
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 107
-    const/16 v1, 0x9
-
     .line 108
-    .line 109
-    new-instance v20, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 109
     .line 110
     .line 111
-    move-object/from16 v0, v20
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->TargetRecognitionModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 112
     .line 113
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    const-string/jumbo v2, "XRayModel"
 
     .line 114
     .line 115
     .line 116
-    sput-object v20, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->SegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    const/16 v1, 0xb
 
     .line 117
     .line 118
-    const-string v2, "TargetRecognitionModel"
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 119
     .line 120
-    const/16 v1, 0xa
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
     .line 121
     .line 122
-    new-instance v19, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 123
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->XRayModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 124
-    move-object/from16 v0, v19
-
     .line 125
-    .line 126
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    const-string v2, "FittedExpressionTrackerModel"
 
+    .line 126
     .line 127
+    const/16 v1, 0xc
+
     .line 128
     .line 129
-    sput-object v19, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->TargetRecognitionModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
     .line 130
     .line 131
-    const-string v2, "XRayModel"
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
     .line 132
     .line 133
-    const/16 v1, 0xb
-
     .line 134
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FittedExpressionTrackerModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 135
-    new-instance v18, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 136
+    const-string v2, "MSuggestionsCoreModel"
+
     .line 137
-    move-object/from16 v0, v18
-
     .line 138
-    .line 139
-    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    const/16 v1, 0xd
 
+    .line 139
     .line 140
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 141
     .line 142
-    sput-object v18, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->XRayModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
     .line 143
     .line 144
-    const-string v2, "FittedExpressionTrackerModel"
-
     .line 145
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->MSuggestionsCoreModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 146
-    const/16 v1, 0xc
-
     .line 147
+    const-string v2, "NametagModel"
+
     .line 148
-    new-instance v17, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 149
-    .line 150
-    move-object/from16 v0, v17
+    const/16 v1, 0xe
 
+    .line 150
     .line 151
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 152
+    .line 153
     invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
-    .line 153
     .line 154
     .line 155
-    sput-object v17, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FittedExpressionTrackerModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 156
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->NametagModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 157
-    const-string v2, "MSuggestionsCoreModel"
-
     .line 158
+    const-string v2, "PyTorchModel"
+
     .line 159
-    const/16 v1, 0xd
-
     .line 160
+    const/16 v1, 0xf
+
     .line 161
-    new-instance v16, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 162
-    .line 163
-    move-object/from16 v0, v16
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
+    .line 163
     .line 164
-    .line 165
     invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 165
     .line 166
     .line 167
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->PyTorchModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 168
-    sput-object v16, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->MSuggestionsCoreModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 169
+    const-string v2, "Caffe2Model"
+
     .line 170
-    const-string v1, "NametagModel"
-
     .line 171
+    const/16 v1, 0x10
+
     .line 172
-    const/16 v0, 0xe
-
     .line 173
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 174
-    new-instance v13, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 175
-    .line 176
-    invoke-direct {v13, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 176
     .line 177
     .line 178
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Caffe2Model:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 179
-    sput-object v13, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->NametagModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 180
+    const-string v2, "MulticlassSegmentationModel"
+
     .line 181
-    const-string v1, "PyTorchModel"
-
     .line 182
+    const/16 v1, 0x11
+
     .line 183
-    const/16 v0, 0xf
-
     .line 184
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 185
-    new-instance v12, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 186
-    .line 187
-    invoke-direct {v12, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 187
     .line 188
     .line 189
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->MulticlassSegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 190
-    sput-object v12, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->PyTorchModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 191
+    const-string v2, "ScriptingPackage"
+
     .line 192
-    const-string v1, "Caffe2Model"
-
     .line 193
+    const/16 v1, 0x12
+
     .line 194
-    const/16 v0, 0x10
-
     .line 195
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 196
-    new-instance v11, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 197
-    .line 198
-    invoke-direct {v11, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 198
     .line 199
     .line 200
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->ScriptingPackage:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 201
-    sput-object v11, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Caffe2Model:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 202
+    const-string v2, "Ocr2goCreditCardModel"
+
     .line 203
-    const-string v1, "MulticlassSegmentationModel"
-
     .line 204
+    const/16 v1, 0x13
+
     .line 205
-    const/16 v0, 0x11
-
     .line 206
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 207
-    new-instance v10, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 208
-    .line 209
-    invoke-direct {v10, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 209
     .line 210
     .line 211
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Ocr2goCreditCardModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 212
-    sput-object v10, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->MulticlassSegmentationModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 213
+    const-string v2, "RecognitionModel"
+
     .line 214
-    const-string v1, "ScriptingPackage"
-
     .line 215
+    const/16 v1, 0x14
+
     .line 216
-    const/16 v0, 0x12
-
     .line 217
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 218
-    new-instance v9, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 219
-    .line 220
-    invoke-direct {v9, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 220
     .line 221
     .line 222
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->RecognitionModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 223
-    sput-object v9, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->ScriptingPackage:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 224
+    const-string v2, "AR3DObject"
+
     .line 225
-    const-string v1, "Ocr2goCreditCardModel"
-
     .line 226
+    const/16 v1, 0x15
+
     .line 227
-    const/16 v0, 0x13
-
     .line 228
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 229
-    new-instance v8, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 230
-    .line 231
-    invoke-direct {v8, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 231
     .line 232
     .line 233
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->AR3DObject:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 234
-    sput-object v8, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->Ocr2goCreditCardModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 235
+    const-string v2, "SparkVision"
+
     .line 236
-    const-string v1, "RecognitionModel"
-
     .line 237
+    const/16 v1, 0x16
+
     .line 238
-    const/16 v0, 0x14
-
     .line 239
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 240
-    new-instance v7, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 241
-    .line 242
-    invoke-direct {v7, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 242
     .line 243
     .line 244
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->SparkVision:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 245
-    sput-object v7, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->RecognitionModel:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 246
+    const-string v2, "FittedExpressionTrackerRuntimeRigRetargetingConfig"
+
     .line 247
-    const-string v1, "AR3DObject"
-
     .line 248
+    const/16 v1, 0x17
+
     .line 249
-    const/16 v0, 0x15
-
     .line 250
+    new-instance v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 251
-    new-instance v6, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 252
-    .line 253
-    invoke-direct {v6, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
 
+    .line 253
     .line 254
     .line 255
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FittedExpressionTrackerRuntimeRigRetargetingConfig:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
     .line 256
-    sput-object v6, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->AR3DObject:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
     .line 257
-    .line 258
-    const-string v1, "SparkVision"
+    invoke-static {}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->$values()[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
+    .line 258
     .line 259
     .line 260
-    const/16 v0, 0x16
-
-    .line 261
-    .line 262
-    new-instance v5, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 263
-    .line 264
-    invoke-direct {v5, v1, v0, v0}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
-
-    .line 265
-    .line 266
-    .line 267
-    sput-object v5, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->SparkVision:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 268
-    .line 269
-    const-string v0, "FittedExpressionTrackerRuntimeRigRetargetingConfig"
-
-    .line 270
-    .line 271
-    const/16 v4, 0x17
-
-    .line 272
-    .line 273
-    new-instance v3, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 274
-    .line 275
-    invoke-direct {v3, v0, v4, v4}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;-><init>(Ljava/lang/String;II)V
-
-    .line 276
-    .line 277
-    .line 278
-    sput-object v3, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->FittedExpressionTrackerRuntimeRigRetargetingConfig:Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 279
-    .line 280
-    const/16 v0, 0x18
-
-    .line 281
-    .line 282
-    new-array v2, v0, [Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 283
-    .line 284
-    move-object/from16 v1, v27
-
-    .line 285
-    .line 286
-    move-object/from16 v0, v26
-
-    .line 287
-    .line 288
-    invoke-static {v2, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 289
-    .line 290
-    .line 291
-    move-object/from16 v1, v25
-
-    .line 292
-    .line 293
-    move-object/from16 v0, v24
-
-    .line 294
-    .line 295
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 296
-    .line 297
-    .line 298
-    move-object/from16 v1, v23
-
-    .line 299
-    .line 300
-    move-object/from16 v0, v22
-
-    .line 301
-    .line 302
-    invoke-static {v2, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 303
-    .line 304
-    .line 305
-    move-object/from16 v15, v21
-
-    .line 306
-    .line 307
-    move-object/from16 v14, v20
-
-    .line 308
-    .line 309
-    move-object/from16 v1, v19
-
-    .line 310
-    .line 311
-    move-object/from16 v0, v18
-
-    .line 312
-    .line 313
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 314
-    .line 315
-    .line 316
-    move-object/from16 v1, v17
-
-    .line 317
-    .line 318
-    move-object/from16 v0, v16
-
-    .line 319
-    .line 320
-    invoke-static {v2, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 321
-    .line 322
-    .line 323
-    invoke-static {v13, v12, v11, v10, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 324
-    .line 325
-    .line 326
-    const/16 v0, 0x12
-
-    .line 327
-    .line 328
-    aput-object v9, v2, v0
-
-    .line 329
-    .line 330
-    invoke-static {v8, v7, v6, v5, v2}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 331
-    .line 332
-    .line 333
-    aput-object v3, v2, v4
-
-    .line 334
-    .line 335
-    sput-object v2, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->$VALUES:[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 336
-    .line 337
-    invoke-static {}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->values()[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 338
-    .line 339
-    .line 340
     move-result-object v0
 
-    .line 341
-    array-length v0, v0
+    .line 261
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->$VALUES:[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
-    .line 342
-    new-array v0, v0, [Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 343
-    .line 344
-    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->cppValueToEnumArray:[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
-
-    .line 345
-    .line 346
+    .line 262
+    .line 263
     invoke-static {}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->values()[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
-    .line 347
-    .line 348
-    .line 349
-    move-result-object v5
+    .line 264
+    .line 265
+    .line 266
+    move-result-object v0
 
-    .line 350
-    array-length v4, v5
+    .line 267
+    array-length v0, v0
 
-    .line 351
-    const/4 v3, 0x0
+    .line 268
+    new-array v0, v0, [Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
-    .line 352
+    .line 269
+    .line 270
+    sput-object v0, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->cppValueToEnumArray:[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 271
+    .line 272
+    invoke-static {}, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->values()[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
+
+    .line 273
+    .line 274
+    .line 275
+    move-result-object v4
+
+    .line 276
+    array-length v3, v4
+
+    .line 277
     :goto_0
-    if-ge v3, v4, :cond_0
+    if-ge v5, v3, :cond_0
 
-    .line 353
-    .line 354
-    aget-object v2, v5, v3
+    .line 278
+    .line 279
+    aget-object v2, v4, v5
 
-    .line 355
-    .line 356
+    .line 280
+    .line 281
     sget-object v1, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->cppValueToEnumArray:[Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;
 
-    .line 357
-    .line 358
+    .line 282
+    .line 283
     iget v0, v2, Lcom/facebook/cameracore/ardelivery/model/XplatAssetType;->mCppValue:I
 
-    .line 359
-    .line 360
+    .line 284
+    .line 285
     aput-object v2, v1, v0
 
-    .line 361
-    .line 362
-    add-int/lit8 v3, v3, 0x1
+    .line 286
+    .line 287
+    add-int/lit8 v5, v5, 0x1
 
-    .line 363
-    .line 364
+    .line 288
+    .line 289
     goto :goto_0
 
-    .line 365
+    .line 290
     :cond_0
     return-void
 .end method
@@ -802,11 +952,11 @@
     .locals 3
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1R9;
+    iget-object p0, p0, Lcom/facebook/cameracore/ardelivery/model/ARRequestAsset;->A01:LX/1c0;
 
     .line 1
     .line 2
-    iget-object v2, p0, LX/1R9;->A02:Lcom/facebook/cameracore/ardelivery/model/ARAssetType;
+    iget-object v2, p0, LX/1c0;->A02:Lcom/facebook/cameracore/ardelivery/model/ARAssetType;
 
     .line 3
     .line 4
@@ -857,7 +1007,7 @@
 
     .line 24
     .line 25
-    invoke-static {v2, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 26
     .line 27
@@ -873,7 +1023,7 @@
 
     .line 32
     .line 33
-    iget-object v1, p0, LX/1R9;->A00:Lcom/facebook/cameracore/ardelivery/model/VersionedCapability;
+    iget-object v1, p0, LX/1c0;->A00:Lcom/facebook/cameracore/ardelivery/model/VersionedCapability;
 
     .line 34
     .line 35
@@ -881,7 +1031,7 @@
 
     .line 36
     .line 37
-    invoke-static {v1, v0}, LX/3ap;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/0H2;->A00(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 38
     .line 39
@@ -898,7 +1048,7 @@
 
     .line 45
     :cond_0
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 46
     .line 47
@@ -910,7 +1060,7 @@
 
     .line 50
     :cond_1
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 51
     .line 52
@@ -922,7 +1072,7 @@
 
     .line 55
     .line 56
-    invoke-static {v2, v0, v1}, LX/0Yc;->A03(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v2, v0, v1}, LX/0X1;->A0G(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
     .line 57
     .line 58
@@ -1019,7 +1169,7 @@
 
     .line 15
     .line 16
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 17
     .line 18

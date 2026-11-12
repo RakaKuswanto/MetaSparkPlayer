@@ -1,23 +1,21 @@
 .class public final Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;
-.super LX/2v2;
+.super LX/3GQ;
 .source ""
 
 # interfaces
-.implements LX/1ij;
+.implements LX/18h;
 
 
 # instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    invoke-static {}, LX/1zE;->A00()Landroid/content/Context;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 1
     .line 2
@@ -25,12 +23,12 @@
     move-result-object v0
 
     .line 4
-    invoke-direct {p0, v0}, LX/2v2;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, v0}, LX/3GQ;-><init>(Landroid/content/Context;)V
 
     .line 5
     .line 6
     .line 7
-    invoke-static {}, LX/0Zq;->A0H()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0E()LX/0lf;
 
     .line 8
     .line 9
@@ -38,22 +36,10 @@
     move-result-object v0
 
     .line 11
-    iput-object v0, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A00:LX/0RP;
 
     .line 12
     .line 13
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A00:LX/1zG;
-
-    .line 18
-    .line 19
     return-void
 .end method
 
@@ -65,11 +51,11 @@
 
     .line 1
     :try_start_0
-    iget-object v5, p0, LX/2v2;->A03:Landroid/content/Context;
+    iget-object v5, p0, LX/3GQ;->A03:Landroid/content/Context;
 
     .line 2
     .line 3
-    invoke-static {v5, p1}, LX/044;->A00(Landroid/content/Context;Ljava/lang/String;)[LX/044;
+    invoke-static {v5, p1}, LX/0UY;->A00(Landroid/content/Context;Ljava/lang/String;)[LX/0UY;
 
     .line 4
     .line 5
@@ -77,7 +63,7 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, LX/2v2;->A01:[LX/044;
+    iput-object v0, p0, LX/3GQ;->A01:[LX/0UY;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -90,7 +76,7 @@
 
     .line 11
     :try_start_1
-    invoke-static {p2}, LX/2v3;->A01(Ljava/lang/String;)[LX/2v3;
+    invoke-static {p2}, LX/0Nx;->A00(Ljava/lang/String;)[LX/0Nx;
 
     .line 12
     .line 13
@@ -98,7 +84,7 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, LX/2v2;->A02:[LX/2v3;
+    iput-object v0, p0, LX/3GQ;->A02:[LX/0Nx;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -111,7 +97,7 @@
 
     .line 19
     :try_start_2
-    invoke-static {p3}, LX/2so;->A00(Ljava/lang/String;)Ljava/util/HashMap;
+    invoke-static {p3}, LX/0TC;->A00(Ljava/lang/String;)Ljava/util/HashMap;
 
     .line 20
     .line 21
@@ -119,7 +105,7 @@
     move-result-object v0
 
     .line 23
-    iput-object v0, p0, LX/2v2;->A00:Ljava/util/Map;
+    iput-object v0, p0, LX/3GQ;->A00:Ljava/util/Map;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -128,7 +114,7 @@
     monitor-exit p0
 
     .line 26
-    invoke-virtual {p0}, LX/2v2;->AHG()[LX/044;
+    invoke-virtual {p0}, LX/3GQ;->AFp()[LX/0UY;
 
     .line 27
     .line 28
@@ -136,7 +122,7 @@
     move-result-object v4
 
     .line 30
-    invoke-virtual {p0}, LX/2v2;->AEK()[LX/2v3;
+    invoke-virtual {p0}, LX/3GQ;->ACu()[LX/0Nx;
 
     .line 31
     .line 32
@@ -144,7 +130,7 @@
     move-result-object v3
 
     .line 34
-    invoke-virtual {p0}, LX/2v2;->AEU()Ljava/util/Map;
+    invoke-virtual {p0}, LX/3GQ;->AD2()Ljava/util/Map;
 
     .line 35
     .line 36
@@ -152,7 +138,7 @@
     move-result-object v1
 
     .line 38
-    const-class v2, LX/04A;
+    const-class v2, LX/0TW;
 
     .line 39
     .line 40
@@ -160,117 +146,118 @@
 
     .line 41
     :try_start_3
-    new-instance v0, LX/0Hr;
+    new-instance v0, LX/0Je;
 
     .line 42
     .line 43
-    invoke-direct {v0, v1, v4, v3}, LX/0Hr;-><init>(Ljava/util/Map;[LX/044;[LX/2v3;)V
+    invoke-direct {v0, v1, v4, v3}, LX/0Je;-><init>(Ljava/util/Map;[LX/0UY;[LX/0Nx;)V
 
     .line 44
     .line 45
     .line 46
-    sput-object v0, LX/04A;->A00:LX/03X;
+    sput-object v0, LX/0TW;->A00:LX/03b;
 
     .line 47
     .line 48
-    const-string v1, "com.facebook.secure.switchoff"
+    const-string/jumbo v1, "com.facebook.secure.switchoff"
 
     .line 49
     .line 50
+    .line 51
     const/4 v0, 0x0
 
-    .line 51
+    .line 52
     invoke-virtual {v5, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    .line 52
     .line 53
     .line 54
-    move-result-object v0
-
     .line 55
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    move-result-object v0
 
     .line 56
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
     .line 57
     .line 58
-    move-result-object v1
-
     .line 59
-    const-string/jumbo v0, "last_criteria"
+    move-result-object v1
 
     .line 60
+    const-string/jumbo v0, "last_criteria"
+
     .line 61
     .line 62
+    .line 63
     invoke-interface {v1, v0, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 63
     .line 64
     .line 65
-    move-result-object v1
-
     .line 66
-    const-string/jumbo v0, "last_custom_config"
+    move-result-object v1
 
     .line 67
+    const-string/jumbo v0, "last_custom_config"
+
     .line 68
     .line 69
+    .line 70
     invoke-interface {v1, v0, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 70
     .line 71
     .line 72
+    .line 73
     move-result-object v1
 
-    .line 73
+    .line 74
     const-string/jumbo v0, "last_deeplink_config"
 
-    .line 74
     .line 75
     .line 76
+    .line 77
     invoke-interface {v1, v0, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 77
     .line 78
     .line 79
+    .line 80
     move-result-object v0
 
-    .line 80
+    .line 81
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 81
     .line 82
     .line 83
+    .line 84
     monitor-exit v2
 
-    .line 84
+    .line 85
     return-void
 
-    .line 85
+    .line 86
     :catchall_0
     move-exception v0
 
-    .line 86
+    .line 87
     monitor-exit v2
 
-    .line 87
+    .line 88
     throw v0
 
-    .line 88
+    .line 89
     :catchall_1
     move-exception v0
 
-    .line 89
+    .line 90
     monitor-exit p0
 
-    .line 90
+    .line 91
     throw v0
 .end method
 
 
 # virtual methods
-.method public final ADa()I
+.method public final ACC()I
     .locals 1
 
     const/16 v0, 0x520
@@ -278,15 +265,15 @@
     return v0
 .end method
 
-.method public final AWH(I)V
+.method public final AUc(I)V
     .locals 7
 
     .line 0
-    iget-object v6, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A01:LX/0Na;
+    iget-object v6, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A00:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v6}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v6}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 3
     .line 4
@@ -294,18 +281,18 @@
     move-result-object v2
 
     .line 6
-    const-wide v0, 0x8300240002001fL
+    const-wide v0, 0x83002200020026L
 
     .line 7
     .line 8
     .line 9
     .line 10
     .line 11
-    sget-object v5, LX/1Us;->A04:LX/1Us;
+    sget-object v5, LX/30J;->A04:LX/30J;
 
     .line 12
     .line 13
-    invoke-interface {v2, v5, v0, v1}, LX/35B;->AMh(LX/1Us;J)Ljava/lang/String;
+    invoke-interface {v2, v5, v0, v1}, LX/30K;->ALF(LX/30J;J)Ljava/lang/String;
 
     .line 14
     .line 15
@@ -313,7 +300,7 @@
     move-result-object v4
 
     .line 17
-    invoke-static {v6}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v6}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 18
     .line 19
@@ -321,14 +308,14 @@
     move-result-object v2
 
     .line 21
-    const-wide v0, 0x83002400050020L
+    const-wide v0, 0x83002200050027L
 
     .line 22
     .line 23
     .line 24
     .line 25
     .line 26
-    invoke-interface {v2, v5, v0, v1}, LX/35B;->AMh(LX/1Us;J)Ljava/lang/String;
+    invoke-interface {v2, v5, v0, v1}, LX/30K;->ALF(LX/30J;J)Ljava/lang/String;
 
     .line 27
     .line 28
@@ -336,7 +323,7 @@
     move-result-object v3
 
     .line 30
-    invoke-static {v6}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v6}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 31
     .line 32
@@ -344,14 +331,14 @@
     move-result-object v2
 
     .line 34
-    const-wide v0, 0x8300510006009dL
+    const-wide v0, 0x83004d000600acL
 
     .line 35
     .line 36
     .line 37
     .line 38
     .line 39
-    invoke-interface {v2, v5, v0, v1}, LX/35B;->AMh(LX/1Us;J)Ljava/lang/String;
+    invoke-interface {v2, v5, v0, v1}, LX/30K;->ALF(LX/30J;J)Ljava/lang/String;
 
     .line 40
     .line 41
@@ -367,15 +354,15 @@
     return-void
 .end method
 
-.method public final Anu()Z
+.method public final Amd()Z
     .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A01:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A00:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 3
     .line 4
@@ -383,14 +370,14 @@
     move-result-object v2
 
     .line 6
-    const-wide v0, 0x2081005100050503L    # 4.057632341254593E-152
+    const-wide v0, 0x2081004d000504a5L
 
     .line 7
     .line 8
     .line 9
     .line 10
     .line 11
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    invoke-static {v2, v0, v1}, LX/302;->A0L(Ljava/lang/Object;J)Z
 
     .line 12
     .line 13
@@ -401,15 +388,15 @@
     return v0
 .end method
 
-.method public final Anx()Z
+.method public final Ame()Z
     .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A01:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/secure/intentswitchoff/IntentSwitchOffMobileConfigDI;->A00:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0J(LX/0Na;)LX/35B;
+    invoke-static {v0}, LX/0X4;->A0N(LX/0RP;)LX/30K;
 
     .line 3
     .line 4
@@ -417,14 +404,14 @@
     move-result-object v2
 
     .line 6
-    const-wide v0, 0x8102270000185cL
+    const-wide v0, 0x8101ff0000155aL
 
     .line 7
     .line 8
     .line 9
     .line 10
     .line 11
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    invoke-static {v2, v0, v1}, LX/302;->A0L(Ljava/lang/Object;J)Z
 
     .line 12
     .line 13

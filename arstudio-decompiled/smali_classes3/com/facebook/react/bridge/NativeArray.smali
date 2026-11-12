@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5ON;
+.implements LX/4sC;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/5OU;->A00()V
+    invoke-static {}, LX/4rv;->A00()V
 
     .line 1
     .line 2

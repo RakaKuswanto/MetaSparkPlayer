@@ -1,17 +1,11 @@
-.class public final LX/3JG;
-.super LX/3Xj;
+.class public interface abstract LX/3JG;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3JA;
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
 
-    .line 0
-    invoke-direct {p0}, LX/3Xj;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+# virtual methods
+.method public abstract A3x(Lcom/facebook/stash/core/FileStash;)V
 .end method

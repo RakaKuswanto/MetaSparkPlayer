@@ -1,92 +1,479 @@
-.class public final synthetic LX/5L6;
+.class public final LX/5L6;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements LX/5LA;
 
 
 # instance fields
-.field public final synthetic A00:LX/5Kq;
+.field public A00:Z
 
-.field public final synthetic A01:Ljava/lang/String;
+.field public final A01:LX/5LA;
 
-.field public final synthetic A02:Ljava/util/ArrayList;
+.field public final synthetic A02:LX/5L5;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/5Kq;Ljava/lang/String;Ljava/util/ArrayList;)V
+.method public constructor <init>(LX/5L5;LX/5LA;)V
     .locals 0
 
+    .line 0
+    iput-object p1, p0, LX/5L6;->A02:LX/5L5;
+
+    .line 1
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, LX/5L6;->A00:LX/5Kq;
+    .line 3
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/5L6;->A01:LX/5LA;
 
-    iput-object p3, p0, LX/5L6;->A02:Ljava/util/ArrayList;
-
-    iput-object p2, p0, LX/5L6;->A01:Ljava/lang/String;
-
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 4
+.method public final ACc()Landroid/util/Pair;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final ALl(I)J
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5L6;->A00:LX/5Kq;
+    iget-object v0, p0, LX/5L6;->A01:LX/5LA;
 
     .line 1
     .line 2
-    iget-object v3, p0, LX/5L6;->A02:Ljava/util/ArrayList;
+    invoke-interface {v0, p1}, LX/5LA;->ALl(I)J
 
     .line 3
     .line 4
-    iget-object v2, p0, LX/5L6;->A01:Ljava/lang/String;
+    .line 5
+    move-result-wide v0
+
+    .line 6
+    return-wide v0
+.end method
+
+.method public final APH()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final APv()Z
+    .locals 5
+
+    .line 0
+    iget-object v0, p0, LX/5L6;->A02:LX/5L5;
+
+    .line 1
+    .line 2
+    iget-wide v3, v0, LX/5L5;->A01:J
+
+    .line 3
+    .line 4
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 5
     .line 6
-    iget-object v1, v0, LX/5Kq;->A02:Landroidx/work/impl/WorkDatabase;
-
     .line 7
     .line 8
-    invoke-virtual {v1}, Landroidx/work/impl/WorkDatabase;->A0D()LX/5LK;
-
     .line 9
+    cmp-long v0, v3, v1
+
     .line 10
     .line 11
-    move-result-object v0
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 12
-    invoke-interface {v0, v2}, LX/5LK;->AMu(Ljava/lang/String;)Ljava/util/ArrayList;
-
     .line 13
     .line 14
+    move-result v0
+
     .line 15
-    move-result-object v0
+    if-nez v0, :cond_0
 
     .line 16
-    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
     .line 17
+    iget-object v0, p0, LX/5L6;->A01:LX/5LA;
+
     .line 18
     .line 19
-    invoke-virtual {v1}, Landroidx/work/impl/WorkDatabase;->A0C()LX/5MC;
+    invoke-interface {v0}, LX/5LA;->APv()Z
 
     .line 20
     .line 21
     .line 22
-    move-result-object v0
+    move-result v1
 
     .line 23
-    invoke-interface {v0, v2}, LX/5MC;->AOI(Ljava/lang/String;)LX/5Lq;
+    const/4 v0, 0x1
 
     .line 24
+    if-nez v1, :cond_1
+
     .line 25
     .line 26
-    move-result-object v0
+    :cond_0
+    const/4 v0, 0x0
 
     .line 27
-    return-object v0
+    :cond_1
+    return v0
+.end method
+
+.method public final ARn()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5L6;->A01:LX/5LA;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/5LA;->ARn()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final Ag0(LX/5KY;LX/5Jq;I)I
+    .locals 12
+
+    .line 0
+    iget-object v7, p0, LX/5L6;->A02:LX/5L5;
+
+    .line 1
+    .line 2
+    iget-wide v0, v7, LX/5L5;->A01:J
+
+    .line 3
+    .line 4
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    cmp-long v2, v0, v3
+
+    .line 10
+    .line 11
+    invoke-static {v2}, LX/001;->A1K(I)Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    const/4 v1, -0x3
+
+    .line 16
+    if-eqz v0, :cond_0
+
+    .line 17
+    .line 18
+    return v1
+
+    .line 19
+    :cond_0
+    iget-boolean v0, p0, LX/5L6;->A00:Z
+
+    .line 20
+    .line 21
+    const/4 v5, -0x4
+
+    .line 22
+    if-eqz v0, :cond_1
+
+    .line 23
+    .line 24
+    const/4 v0, 0x4
+
+    .line 25
+    iput v0, p2, LX/5Kg;->A00:I
+
+    .line 26
+    .line 27
+    return v5
+
+    .line 28
+    :cond_1
+    iget-object v0, p0, LX/5L6;->A01:LX/5LA;
+
+    .line 29
+    .line 30
+    invoke-interface {v0, p1, p2, p3}, LX/5LA;->Ag0(LX/5KY;LX/5Jq;I)I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v6
+
+    .line 34
+    const/4 v4, -0x5
+
+    .line 35
+    const-wide/high16 v10, -0x8000000000000000L
+
+    .line 36
+    .line 37
+    if-ne v6, v4, :cond_6
+
+    .line 38
+    .line 39
+    iget-object v9, p1, LX/5KY;->A00:LX/5Fy;
+
+    .line 40
+    .line 41
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 42
+    .line 43
+    .line 44
+    iget v8, v9, LX/5Fy;->A08:I
+
+    .line 45
+    .line 46
+    if-nez v8, :cond_2
+
+    .line 47
+    .line 48
+    iget v0, v9, LX/5Fy;->A09:I
+
+    .line 49
+    .line 50
+    if-eqz v0, :cond_5
+
+    .line 51
+    .line 52
+    :cond_2
+    iget-wide v1, v7, LX/5L5;->A02:J
+
+    .line 53
+    .line 54
+    const-wide/16 v5, 0x0
+
+    .line 55
+    .line 56
+    const/4 v3, 0x0
+
+    .line 57
+    cmp-long v0, v1, v5
+
+    .line 58
+    .line 59
+    if-eqz v0, :cond_3
+
+    .line 60
+    .line 61
+    const/4 v8, 0x0
+
+    .line 62
+    :cond_3
+    iget-wide v1, v7, LX/5L5;->A00:J
+
+    .line 63
+    .line 64
+    cmp-long v0, v1, v10
+
+    .line 65
+    .line 66
+    if-nez v0, :cond_4
+
+    .line 67
+    .line 68
+    iget v3, v9, LX/5Fy;->A09:I
+
+    .line 69
+    .line 70
+    :cond_4
+    new-instance v0, LX/5Fx;
+
+    .line 71
+    .line 72
+    invoke-direct {v0, v9}, LX/5Fx;-><init>(LX/5Fy;)V
+
+    .line 73
+    .line 74
+    .line 75
+    iput v8, v0, LX/5Fx;->A06:I
+
+    .line 76
+    .line 77
+    iput v3, v0, LX/5Fx;->A07:I
+
+    .line 78
+    .line 79
+    invoke-static {v0}, LX/435;->A08(LX/5Fx;)LX/5Fy;
+
+    .line 80
+    .line 81
+    .line 82
+    move-result-object v0
+
+    .line 83
+    iput-object v0, p1, LX/5KY;->A00:LX/5Fy;
+
+    .line 84
+    .line 85
+    :cond_5
+    return v4
+
+    .line 86
+    :cond_6
+    iget-wide v3, v7, LX/5L5;->A00:J
+
+    .line 87
+    .line 88
+    cmp-long v0, v3, v10
+
+    .line 89
+    .line 90
+    if-eqz v0, :cond_7
+
+    .line 91
+    .line 92
+    if-ne v6, v5, :cond_8
+
+    .line 93
+    .line 94
+    iget-wide v1, p2, LX/5Jq;->A01:J
+
+    .line 95
+    .line 96
+    cmp-long v0, v1, v3
+
+    .line 97
+    .line 98
+    if-gez v0, :cond_9
+
+    .line 99
+    .line 100
+    :cond_7
+    return v6
+
+    .line 101
+    :cond_8
+    if-ne v6, v1, :cond_7
+
+    .line 102
+    .line 103
+    invoke-virtual {v7}, LX/5L5;->ABN()J
+
+    .line 104
+    .line 105
+    .line 106
+    move-result-wide v1
+
+    .line 107
+    cmp-long v0, v1, v10
+
+    .line 108
+    .line 109
+    if-nez v0, :cond_7
+
+    .line 110
+    .line 111
+    iget-boolean v0, p2, LX/5Jq;->A04:Z
+
+    .line 112
+    .line 113
+    if-nez v0, :cond_7
+
+    .line 114
+    .line 115
+    :cond_9
+    invoke-virtual {p2}, LX/5Kg;->A01()V
+
+    .line 116
+    .line 117
+    .line 118
+    const/4 v0, 0x4
+
+    .line 119
+    iput v0, p2, LX/5Kg;->A00:I
+
+    .line 120
+    .line 121
+    const/4 v0, 0x1
+
+    .line 122
+    iput-boolean v0, p0, LX/5L6;->A00:Z
+
+    .line 123
+    .line 124
+    return v5
+.end method
+
+.method public final An5(J)I
+    .locals 5
+
+    .line 0
+    iget-object v0, p0, LX/5L6;->A02:LX/5L5;
+
+    .line 1
+    .line 2
+    iget-wide v3, v0, LX/5L5;->A01:J
+
+    .line 3
+    .line 4
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    cmp-long v0, v3, v1
+
+    .line 10
+    .line 11
+    invoke-static {v0}, LX/001;->A1K(I)Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 16
+    .line 17
+    const/4 v0, -0x3
+
+    .line 18
+    return v0
+
+    .line 19
+    :cond_0
+    iget-object v0, p0, LX/5L6;->A01:LX/5LA;
+
+    .line 20
+    .line 21
+    invoke-interface {v0, p1, p2}, LX/5LA;->An5(J)I
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v0
+
+    .line 25
+    return v0
 .end method

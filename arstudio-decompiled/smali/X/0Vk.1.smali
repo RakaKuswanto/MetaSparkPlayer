@@ -2,76 +2,118 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "SerialExecutor$RunnableWrapper"
+
+
+# instance fields
+.field public final A00:Ljava/lang/Runnable;
+
+.field public final synthetic A01:LX/0Vp;
+
 
 # direct methods
-.method public static A00(Ljava/lang/CharSequence;)V
+.method public constructor <init>(LX/0Vp;Ljava/lang/Runnable;)V
     .locals 0
 
     .line 0
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    iput-object p1, p0, LX/0Vk;->A01:LX/0Vp;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
-    move-result p0
-
     .line 4
-    xor-int/lit8 p0, p0, 0x1
-
     .line 5
-    .line 6
-    invoke-static {p0}, LX/0Vk;->A01(Z)V
+    iput-object p2, p0, LX/0Vk;->A00:Ljava/lang/Runnable;
 
+    .line 6
     .line 7
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
     .line 8
     .line 9
+    .line 10
     return-void
 .end method
 
-.method public static A01(Z)V
-    .locals 0
+
+# virtual methods
+.method public final run()V
+    .locals 2
 
     .line 0
-    if-eqz p0, :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     .line 1
     .line 2
-    return-void
-
     .line 3
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-object v1, p0, LX/0Vk;->A01:LX/0Vp;
 
     .line 4
     .line 5
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-static {}, Landroid/os/SystemClock;->currentThreadTimeMillis()J
 
     .line 6
     .line 7
     .line 8
-    throw p0
-.end method
+    iget-object v0, p0, LX/0Vk;->A00:Ljava/lang/Runnable;
 
-.method public static A02(Z)V
-    .locals 0
+    .line 9
+    .line 10
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 0
-    if-eqz p0, :cond_0
+    .line 11
+    .line 12
+    .line 13
+    invoke-static {}, Landroid/os/SystemClock;->currentThreadTimeMillis()J
 
-    .line 1
-    .line 2
+    .line 14
+    .line 15
+    .line 16
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    .line 17
+    .line 18
+    .line 19
+    monitor-enter v1
+
+    .line 20
+    :try_start_0
+    const/4 v0, 0x0
+
+    .line 21
+    iput-boolean v0, v1, LX/0Vp;->A00:Z
+
+    .line 22
+    .line 23
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 24
+    invoke-static {v1}, LX/0Vp;->A01(LX/0Vp;)V
+
+    .line 25
+    .line 26
+    .line 27
     return-void
 
-    .line 3
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    .line 28
+    :catchall_0
+    move-exception v0
 
-    .line 4
-    .line 5
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+    .line 29
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
-    .line 7
-    .line 8
-    throw p0
+    .line 30
+    throw v0
 .end method

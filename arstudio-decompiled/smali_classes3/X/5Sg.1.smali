@@ -1,32 +1,17 @@
-.class public final LX/5Sg;
-.super Landroid/util/SparseIntArray;
+.class public interface abstract LX/5Sg;
+.super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/68M;
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0}, Landroid/util/SparseIntArray;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
+# virtual methods
+.method public abstract A4P()Landroidx/media/AudioAttributesImpl;
 .end method
 
-.method public constructor <init>(I)V
-    .locals 0
+.method public abstract Ak2(I)LX/5Sg;
+.end method
 
-    .line 0
-    invoke-direct {p0, p1}, Landroid/util/SparseIntArray;-><init>(I)V
+.method public abstract Akq(I)LX/5Sg;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AmF(I)LX/5Sg;
 .end method

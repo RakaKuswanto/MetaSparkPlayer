@@ -3,27 +3,32 @@
 .source ""
 
 
-# static fields
-.field public static final A00:Lcom/facebook/common/perftest/base/PerfTestConfigBase;
+# instance fields
+.field public final A00:LX/3Pj;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(LX/2nU;)V
     .locals 1
 
     .line 0
-    new-instance v0, Lcom/facebook/common/perftest/base/PerfTestConfigBase;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {v0}, Lcom/facebook/common/perftest/base/PerfTestConfigBase;-><init>()V
-
     .line 3
+    new-instance v0, LX/3La;
+
     .line 4
     .line 5
-    sput-object v0, LX/3LZ;->A00:Lcom/facebook/common/perftest/base/PerfTestConfigBase;
+    invoke-direct {v0, p0, p1}, LX/3La;-><init>(LX/3LZ;LX/2nU;)V
 
     .line 6
     .line 7
+    .line 8
+    iput-object v0, p0, LX/3LZ;->A00:LX/3Pj;
+
+    .line 9
+    .line 10
     return-void
 .end method

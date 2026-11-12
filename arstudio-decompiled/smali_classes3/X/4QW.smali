@@ -2,42 +2,31 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
-
 
 # direct methods
-.method public constructor <init>()V
+.method public static A00(Ljava/lang/String;)Landroid/os/LocaleList;
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result-object p0
+
+    .line 4
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
+.method public static A01(Landroid/os/LocaleList;Landroid/widget/TextView;)V
     .locals 0
 
-    return-void
-.end method
+    .line 0
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextLocales(Landroid/os/LocaleList;)V
 
-.method public abstract onAnimationEnd(Landroid/animation/Animator;)V
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

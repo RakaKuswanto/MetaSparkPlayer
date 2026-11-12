@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xd05f
 
-.field public static final __CONFIG__:I = 0x398
+.field public static final __CONFIG__:I = 0x34c
 
-.field public static final do_not_save_images:J = 0x20810398000127caL
+.field public static final do_not_save_images:J = 0x2081034c0001238dL
 
 
 # direct methods

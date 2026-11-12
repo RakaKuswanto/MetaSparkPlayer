@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field public A00:LX/3nd;
+.field public A00:LX/0bx;
 
 
 # direct methods
@@ -16,11 +16,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x27
+    const/16 v0, 0x54
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -65,7 +65,7 @@
     .locals 5
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->A00:LX/3nd;
+    iget-object v1, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->A00:LX/0bx;
 
     .line 1
     .line 2
@@ -76,20 +76,20 @@
 
     .line 4
     .line 5
-    iput-object v0, v1, LX/3ly;->A01:LX/3n7;
+    iput-object v0, v1, LX/0it;->A01:LX/0fx;
 
     .line 6
     .line 7
     :cond_0
-    iput-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->A00:LX/3nd;
+    iput-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->A00:LX/0bx;
 
     .line 8
     .line 9
-    iget-object v0, p0, Lcom/facebook/login/LoginMethodHandler;->A01:Lcom/facebook/login/LoginClient;
+    iget-object v0, p0, Lcom/facebook/login/LoginMethodHandler;->A00:Lcom/facebook/login/LoginClient;
 
     .line 10
     .line 11
-    iget-object v0, v0, Lcom/facebook/login/LoginClient;->A05:LX/1xX;
+    iget-object v0, v0, Lcom/facebook/login/LoginClient;->A04:LX/0aK;
 
     .line 12
     .line 13
@@ -97,11 +97,11 @@
 
     .line 14
     .line 15
-    iget-object v1, v0, LX/1xX;->A01:Landroid/view/View;
+    iget-object v1, v0, LX/0aK;->A00:Landroid/view/View;
 
     .line 16
     .line 17
-    const v0, 0x7f0a01fe
+    const v0, 0x7f0901d8
 
     .line 18
     .line 19
@@ -128,283 +128,286 @@
 
     .line 30
     .line 31
-    const-string v0, "com.facebook.platform.extra.PERMISSIONS"
+    const-string/jumbo v0, "com.facebook.platform.extra.PERMISSIONS"
 
     .line 32
     .line 33
+    .line 34
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    .line 34
     .line 35
     .line 36
+    .line 37
     move-result-object v4
 
-    .line 37
+    .line 38
     iget-object v1, p2, Lcom/facebook/login/LoginClient$Request;->A00:Ljava/util/Set;
 
-    .line 38
     .line 39
+    .line 40
     if-eqz v4, :cond_4
 
-    .line 40
     .line 41
+    .line 42
     invoke-virtual {v4, v1}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
 
-    .line 42
     .line 43
     .line 44
+    .line 45
     move-result v0
 
-    .line 45
+    .line 46
     if-eqz v0, :cond_4
 
-    .line 46
     .line 47
-    const-string v0, "com.facebook.platform.extra.USER_ID"
-
     .line 48
-    .line 49
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v0, "com.facebook.platform.extra.USER_ID"
 
+    .line 49
     .line 50
     .line 51
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
     .line 52
+    .line 53
+    .line 54
     move-result-object v0
 
-    .line 53
-    if-eqz v0, :cond_2
-
-    .line 54
     .line 55
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    if-eqz v0, :cond_2
 
     .line 56
     .line 57
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
     .line 58
+    .line 59
+    .line 60
     move-result v0
 
-    .line 59
-    if-nez v0, :cond_2
-
-    .line 60
     .line 61
-    sget-object v1, LX/26J;->FACEBOOK_APPLICATION_SERVICE:LX/26J;
+    if-nez v0, :cond_2
 
     .line 62
     .line 63
-    iget-object v0, p2, Lcom/facebook/login/LoginClient$Request;->A04:Ljava/lang/String;
+    sget-object v1, LX/0b1;->FACEBOOK_APPLICATION_SERVICE:LX/0b1;
 
     .line 64
     .line 65
-    invoke-static {p1, v1, v0}, Lcom/facebook/login/LoginMethodHandler;->A00(Landroid/os/Bundle;LX/26J;Ljava/lang/String;)Lcom/facebook/AccessToken;
+    iget-object v0, p2, Lcom/facebook/login/LoginClient$Request;->A04:Ljava/lang/String;
 
     .line 66
     .line 67
+    invoke-static {p1, v1, v0}, Lcom/facebook/login/LoginMethodHandler;->A00(Landroid/os/Bundle;LX/0b1;Ljava/lang/String;)Lcom/facebook/AccessToken;
+
     .line 68
+    .line 69
+    .line 70
     move-result-object v2
 
-    .line 69
-    iget-object v1, p0, Lcom/facebook/login/LoginMethodHandler;->A01:Lcom/facebook/login/LoginClient;
-
-    .line 70
     .line 71
-    iget-object v0, v1, Lcom/facebook/login/LoginClient;->A03:Lcom/facebook/login/LoginClient$Request;
+    iget-object v1, p0, Lcom/facebook/login/LoginMethodHandler;->A00:Lcom/facebook/login/LoginClient;
 
     .line 72
     .line 73
-    invoke-static {v2, v0}, Lcom/facebook/login/LoginClient$Result;->A00(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;)Lcom/facebook/login/LoginClient$Result;
+    iget-object v0, v1, Lcom/facebook/login/LoginClient;->A02:Lcom/facebook/login/LoginClient$Request;
 
     .line 74
     .line 75
+    invoke-static {v2, v0}, Lcom/facebook/login/LoginClient$Result;->A00(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;)Lcom/facebook/login/LoginClient$Result;
+
     .line 76
+    .line 77
+    .line 78
     move-result-object v0
 
-    .line 77
+    .line 79
     invoke-virtual {v1, v0}, Lcom/facebook/login/LoginClient;->A04(Lcom/facebook/login/LoginClient$Result;)V
 
-    .line 78
-    .line 79
     .line 80
+    .line 81
+    .line 82
     return-void
 
-    .line 81
-    :cond_2
-    iget-object v0, p0, Lcom/facebook/login/LoginMethodHandler;->A01:Lcom/facebook/login/LoginClient;
-
-    .line 82
     .line 83
-    iget-object v0, v0, Lcom/facebook/login/LoginClient;->A05:LX/1xX;
+    :cond_2
+    iget-object v0, p0, Lcom/facebook/login/LoginMethodHandler;->A00:Lcom/facebook/login/LoginClient;
 
     .line 84
     .line 85
-    if-eqz v0, :cond_3
+    iget-object v0, v0, Lcom/facebook/login/LoginClient;->A04:LX/0aK;
 
     .line 86
     .line 87
-    iget-object v1, v0, LX/1xX;->A01:Landroid/view/View;
+    if-eqz v0, :cond_3
 
     .line 88
     .line 89
-    const v0, 0x7f0a01fe
+    iget-object v1, v0, LX/0aK;->A00:Landroid/view/View;
 
     .line 90
     .line 91
-    .line 92
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const v0, 0x7f0901d8
 
+    .line 92
     .line 93
     .line 94
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
     .line 95
+    .line 96
+    .line 97
     move-result-object v1
 
-    .line 96
+    .line 98
     const/4 v0, 0x0
 
-    .line 97
+    .line 99
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 98
-    .line 99
     .line 100
-    :cond_3
-    const-string v0, "com.facebook.platform.extra.ACCESS_TOKEN"
-
     .line 101
     .line 102
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :cond_3
+    const-string/jumbo v0, "com.facebook.platform.extra.ACCESS_TOKEN"
 
     .line 103
     .line 104
     .line 105
-    move-result-object v1
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 106
-    new-instance v0, LX/2IC;
-
     .line 107
     .line 108
-    invoke-direct {v0, p1, p0, p2}, LX/2IC;-><init>(Landroid/os/Bundle;Lcom/facebook/login/GetTokenLoginMethodHandler;Lcom/facebook/login/LoginClient$Request;)V
+    move-result-object v1
 
     .line 109
+    new-instance v0, LX/0bV;
+
     .line 110
     .line 111
-    invoke-static {v0, v1}, LX/2Sz;->A0A(LX/1wj;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p0, p2}, LX/0bV;-><init>(Landroid/os/Bundle;Lcom/facebook/login/GetTokenLoginMethodHandler;Lcom/facebook/login/LoginClient$Request;)V
 
     .line 112
     .line 113
     .line 114
-    return-void
+    invoke-static {v0, v1}, LX/0bS;->A09(LX/0aR;Ljava/lang/String;)V
 
     .line 115
-    :cond_4
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
     .line 116
     .line 117
+    return-void
+
     .line 118
-    move-result-object v3
+    :cond_4
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 119
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
     .line 120
     .line 121
+    move-result-object v3
+
     .line 122
-    move-result-object v2
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     .line 123
+    .line 124
+    .line 125
+    move-result-object v2
+
+    .line 126
     :cond_5
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 124
-    .line 125
-    .line 126
-    move-result v0
-
     .line 127
-    if-eqz v0, :cond_6
-
     .line 128
     .line 129
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 130
-    .line 131
-    .line 132
-    move-result-object v1
-
-    .line 133
-    invoke-virtual {v4, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
-
-    .line 134
-    .line 135
-    .line 136
     move-result v0
 
-    .line 137
-    if-nez v0, :cond_5
+    .line 130
+    if-eqz v0, :cond_6
 
+    .line 131
+    .line 132
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 133
+    .line 134
+    .line 135
+    move-result-object v1
+
+    .line 136
+    invoke-virtual {v4, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    .line 137
     .line 138
     .line 139
-    invoke-virtual {v3, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    move-result v0
 
     .line 140
+    if-nez v0, :cond_5
+
     .line 141
     .line 142
-    goto :goto_0
+    invoke-virtual {v3, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     .line 143
+    .line 144
+    .line 145
+    goto :goto_0
+
+    .line 146
     :cond_6
     invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    .line 144
-    .line 145
-    .line 146
-    move-result v0
-
     .line 147
-    if-nez v0, :cond_7
-
     .line 148
     .line 149
-    const-string v0, ","
+    move-result v0
 
     .line 150
-    .line 151
-    invoke-static {v0, v3}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+    if-nez v0, :cond_7
 
+    .line 151
     .line 152
+    const-string v0, ","
+
     .line 153
     .line 154
-    move-result-object v1
+    invoke-static {v0, v3}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     .line 155
-    const-string/jumbo v0, "new_permissions"
-
     .line 156
     .line 157
+    move-result-object v1
+
     .line 158
-    invoke-virtual {p0, v0, v1}, Lcom/facebook/login/LoginMethodHandler;->A04(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string/jumbo v0, "new_permissions"
 
     .line 159
     .line 160
     .line 161
-    :cond_7
-    iput-object v3, p2, Lcom/facebook/login/LoginClient$Request;->A00:Ljava/util/Set;
+    invoke-virtual {p0, v0, v1}, Lcom/facebook/login/LoginMethodHandler;->A04(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 162
     .line 163
-    :cond_8
-    iget-object v0, p0, Lcom/facebook/login/LoginMethodHandler;->A01:Lcom/facebook/login/LoginClient;
-
     .line 164
-    .line 165
-    invoke-virtual {v0}, Lcom/facebook/login/LoginClient;->A02()V
+    :cond_7
+    iput-object v3, p2, Lcom/facebook/login/LoginClient$Request;->A00:Ljava/util/Set;
 
+    .line 165
     .line 166
+    :cond_8
+    iget-object v0, p0, Lcom/facebook/login/LoginMethodHandler;->A00:Lcom/facebook/login/LoginClient;
+
     .line 167
     .line 168
+    invoke-virtual {v0}, Lcom/facebook/login/LoginClient;->A02()V
+
+    .line 169
+    .line 170
+    .line 171
     return-void
 .end method
 

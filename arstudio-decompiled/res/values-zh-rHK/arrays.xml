@@ -8,6 +8,7 @@
         <item>搜尋</item>
         <item>通知</item>
         <item>精選內容分頁</item>
+        <item>限時動態</item>
         <item>其他</item>
     </string-array>
 </resources>

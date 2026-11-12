@@ -4,11 +4,87 @@
         <item quantity="other">%1$s pagina-vind-ik-leuks</item>
         <item quantity="one">%1$s pagina-vind-ik-leuk</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s vind-ik-leuks</item>
-        <item quantity="one">%1$s vind-ik-leuk</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">%1$d dagen geleden</item>
+        <item quantity="one">1 dag geleden</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d dagen</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d dagen</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d uur</item>
+        <item quantity="one">1 uur</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d minuten</item>
+        <item quantity="one">1 minuut</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d maanden</item>
+        <item quantity="one">1 maand</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d seconden</item>
+        <item quantity="one">1 seconde</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d weken</item>
+        <item quantity="one">1 week</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">nog %1$d dagen</item>
+        <item quantity="one">nog 1 dag</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">nog %1$d uur</item>
+        <item quantity="one">nog 1 uur</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">nog %1$d minuten</item>
+        <item quantity="one">nog 1 minuut</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">nog %1$d maanden</item>
+        <item quantity="one">nog 1 maand</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">nog %1$d seconden</item>
+        <item quantity="one">nog 1 seconde</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">nog %1$d weken</item>
+        <item quantity="one">nog 1 week</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">nog %1$d jaar</item>
+        <item quantity="one">nog 1 jaar</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d jaar</item>
+        <item quantity="one">1 jaar</item>
     </plurals>
     <plurals name="time_hours_ago">
+        <item quantity="other">%1$d uur geleden</item>
+        <item quantity="one">1 uur geleden</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d uur</item>
+        <item quantity="one">1 uur</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d u.</item>
+        <item quantity="one">1 u.</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d uur</item>
+        <item quantity="one">1 uur</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
         <item quantity="other">%1$d uur geleden</item>
         <item quantity="one">1 uur geleden</item>
     </plurals>
@@ -20,8 +96,68 @@
         <item quantity="other">%1$d minuten vanaf nu</item>
         <item quantity="one">1 minuut vanaf nu</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">%1$d min. geleden</item>
+        <item quantity="one">1 min. geleden</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">%1$d minuten geleden</item>
         <item quantity="one">1 minuut geleden</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d minuten</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">%1$d maanden geleden</item>
+        <item quantity="one">1 maand geleden</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">%1$d seconden geleden</item>
+        <item quantity="one">1 seconde</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">%1$d weken geleden</item>
+        <item quantity="one">1 week geleden</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d uur resterend</item>
+        <item quantity="one">1 uur resterend</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d minuten resterend</item>
+        <item quantity="one">1 minuut resterend</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">%1$d jaar geleden</item>
+        <item quantity="one">1 jaar geleden</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">%1$d dagen geleden een bezoek gebracht</item>
+        <item quantity="one">1 dag geleden een bezoek gebracht</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">%1$d uur geleden een bezoek gebracht</item>
+        <item quantity="one">1 uur geleden een bezoek gebracht</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">%1$d minuten geleden een bezoek gebracht</item>
+        <item quantity="one">1 minuut geleden een bezoek gebracht</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">%1$d maanden geleden een bezoek gebracht</item>
+        <item quantity="one">1 maand geleden een bezoek gebracht</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">%1$d weken geleden een bezoek gebracht</item>
+        <item quantity="one">1 week geleden een bezoek gebracht</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">%1$d jaar geleden een bezoek gebracht</item>
+        <item quantity="one">1 jaar geleden een bezoek gebracht</item>
     </plurals>
 </resources>

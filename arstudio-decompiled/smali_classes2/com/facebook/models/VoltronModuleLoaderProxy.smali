@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final mVoltronModuleLoader:LX/1uF;
+.field public final mVoltronModuleLoader:LX/1oU;
 
 
 # direct methods
-.method public constructor <init>(LX/1uF;)V
+.method public constructor <init>(LX/1oU;)V
     .locals 0
 
     .line 0
@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/models/VoltronModuleLoaderProxy;->mVoltronModuleLoader:LX/1uF;
+    iput-object p1, p0, Lcom/facebook/models/VoltronModuleLoaderProxy;->mVoltronModuleLoader:LX/1oU;
 
     .line 4
     .line 5
@@ -30,7 +30,7 @@
     .locals 3
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/models/VoltronModuleLoaderProxy;->mVoltronModuleLoader:LX/1uF;
+    iget-object v0, p0, Lcom/facebook/models/VoltronModuleLoaderProxy;->mVoltronModuleLoader:LX/1oU;
 
     .line 1
     .line 2
@@ -38,7 +38,7 @@
 
     .line 3
     .line 4
-    invoke-static {}, LX/0Yj;->A0I()Lcom/google/common/util/concurrent/SettableFuture;
+    invoke-static {}, LX/0X7;->A0O()Lcom/google/common/util/concurrent/SettableFuture;
 
     .line 5
     .line 6
@@ -58,7 +58,7 @@
     .line 12
     .line 13
     .line 14
-    invoke-virtual {v2, v0}, LX/5QT;->set(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, LX/5q5;->set(Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -67,7 +67,7 @@
 
     .line 18
     :cond_0
-    invoke-interface {v0}, LX/1uF;->loadModule()Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-interface {v0}, LX/1oU;->loadModule()Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 19
     .line 20
@@ -82,7 +82,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/models/VoltronModuleLoaderProxy;->mVoltronModuleLoader:LX/1uF;
+    iget-object v0, p0, Lcom/facebook/models/VoltronModuleLoaderProxy;->mVoltronModuleLoader:LX/1oU;
 
     .line 1
     .line 2
@@ -97,7 +97,7 @@
 
     .line 6
     :cond_0
-    invoke-interface {v0}, LX/1uF;->requireLoad()Z
+    invoke-interface {v0}, LX/1oU;->requireLoad()Z
 
     .line 7
     .line 8

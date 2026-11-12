@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/List;
-.implements LX/0QV;
+.implements LX/0Wm;
 
 
 # annotations
@@ -14,12 +14,8 @@
         "Ljava/util/List<",
         "Lkotlinx/serialization/json/JsonElement;",
         ">;",
-        "LX/0QV;"
+        "LX/0Wm;"
     }
-.end annotation
-
-.annotation runtime Lkotlinx/serialization/Serializable;
-    with = Lkotlinx/serialization/json/JsonArraySerializer;
 .end annotation
 
 
@@ -59,7 +55,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
@@ -82,7 +78,7 @@
     .locals 1
 
     .line 268435456
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 268435457
     .line 268435458
@@ -97,7 +93,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -112,7 +108,7 @@
     .locals 1
 
     .line 268435456
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 268435457
     .line 268435458
@@ -127,7 +123,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -142,7 +138,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -175,7 +171,7 @@
     const/4 v0, 0x0
 
     .line 7
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 8
     .line 9
@@ -200,7 +196,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     iget-object v0, p0, Lkotlinx/serialization/json/JsonArray;->A00:Ljava/util/List;
 
@@ -219,7 +215,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0, p1}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 3
     .line 4
@@ -290,7 +286,7 @@
     const/4 v0, 0x0
 
     .line 7
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 8
     .line 9
@@ -356,7 +352,7 @@
     const/4 v0, 0x0
 
     .line 7
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 8
     .line 9
@@ -404,7 +400,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -419,7 +415,7 @@
     .locals 1
 
     .line 268435456
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 268435457
     .line 268435458
@@ -434,7 +430,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -449,7 +445,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -464,7 +460,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -479,7 +475,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -513,7 +509,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/001;->A0U()Ljava/lang/UnsupportedOperationException;
+    invoke-static {}, LX/001;->A0Z()Ljava/lang/UnsupportedOperationException;
 
     .line 1
     .line 2
@@ -539,7 +535,7 @@
 .method public final toArray()[Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p0}, LX/0Nc;->A00(Ljava/util/Collection;)[Ljava/lang/Object;
+    invoke-static {p0}, LX/0WM;->A00(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -551,9 +547,9 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    invoke-static {p0, p1}, LX/0Nc;->A01(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, LX/0WM;->A01(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -572,24 +568,26 @@
 
     .line 3
     .line 4
-    const-string v2, "["
+    const-string/jumbo v2, "["
 
     .line 5
     .line 6
-    const-string v1, "]"
-
     .line 7
+    const-string/jumbo v1, "]"
+
     .line 8
+    .line 9
+    .line 10
     const/4 v0, 0x0
 
-    .line 9
-    invoke-static {v3, v2, v1, v4, v0}, LX/00L;->A02(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Iterable;LX/0Cl;)Ljava/lang/String;
-
-    .line 10
     .line 11
+    invoke-static {v3, v2, v1, v4, v0}, LX/00Q;->A02(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Iterable;LX/0GZ;)Ljava/lang/String;
+
     .line 12
+    .line 13
+    .line 14
     move-result-object v0
 
-    .line 13
+    .line 15
     return-object v0
 .end method

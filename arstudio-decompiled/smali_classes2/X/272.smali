@@ -1,135 +1,199 @@
-.class public final LX/272;
-.super LX/26u;
+.class public final enum LX/272;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public final A00:D
+# static fields
+.field public static final synthetic $VALUES:[LX/272;
+
+.field public static final enum COLD_START:LX/272;
+
+.field public static final enum CONNECTIVITY_CHANGED:LX/272;
+
+.field public static final enum JOB_SCHEDULER:LX/272;
 
 
 # direct methods
-.method public constructor <init>(D)V
-    .locals 0
+.method public static synthetic $values()[LX/272;
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, LX/26u;-><init>()V
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    .line 3
-    iput-wide p1, p0, LX/272;->A00:D
-
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    .line 0
-    const/4 v4, 0x1
-
-    .line 1
-    if-eq p1, p0, :cond_0
+    new-array v2, v0, [LX/272;
 
     .line 2
     .line 3
-    const/4 v2, 0x0
+    sget-object v1, LX/272;->COLD_START:LX/272;
 
     .line 4
-    if-eqz p1, :cond_1
-
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    aput-object v1, v2, v0
 
     .line 7
     .line 8
-    .line 9
-    move-result-object v1
+    sget-object v1, LX/272;->CONNECTIVITY_CHANGED:LX/272;
 
+    .line 9
     .line 10
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x1
 
     .line 11
+    aput-object v1, v2, v0
+
     .line 12
     .line 13
-    move-result-object v0
+    sget-object v1, LX/272;->JOB_SCHEDULER:LX/272;
 
     .line 14
-    if-ne v1, v0, :cond_1
-
     .line 15
+    const/4 v0, 0x2
+
     .line 16
-    check-cast p1, LX/272;
+    aput-object v1, v2, v0
 
     .line 17
     .line 18
-    iget-wide v2, p1, LX/272;->A00:D
-
-    .line 19
-    .line 20
-    iget-wide v0, p0, LX/272;->A00:D
-
-    .line 21
-    .line 22
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Double;->compare(DD)I
-
-    .line 23
-    .line 24
-    .line 25
-    move-result v0
-
-    .line 26
-    if-eqz v0, :cond_0
-
-    .line 27
-    .line 28
-    const/4 v4, 0x0
-
-    .line 29
-    :cond_0
-    return v4
-
-    .line 30
-    :cond_1
-    return v2
+    return-object v2
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iget-wide v0, p0, LX/272;->A00:D
+    const-string v2, "COLD_START"
 
     .line 1
     .line 2
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/272;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/272;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/272;->COLD_START:LX/272;
+
+    .line 9
+    .line 10
+    const-string v2, "CONNECTIVITY_CHANGED"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/272;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/272;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/272;->CONNECTIVITY_CHANGED:LX/272;
+
+    .line 19
+    .line 20
+    const-string v2, "JOB_SCHEDULER"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/272;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/272;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/272;->JOB_SCHEDULER:LX/272;
+
+    .line 29
+    .line 30
+    invoke-static {}, LX/272;->$values()[LX/272;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    sput-object v0, LX/272;->$VALUES:[LX/272;
+
+    .line 35
+    .line 36
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/272;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/272;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4
     .line 5
-    move-result-wide v2
+    move-result-object v0
 
     .line 6
-    long-to-int v1, v2
+    check-cast v0, LX/272;
 
     .line 7
-    const/16 v0, 0x20
-
     .line 8
-    .line 9
-    shr-long/2addr v2, v0
+    return-object v0
+.end method
 
-    .line 10
-    long-to-int v0, v2
+.method public static values()[LX/272;
+    .locals 1
 
-    .line 11
-    xor-int/2addr v1, v0
+    .line 0
+    sget-object v0, LX/272;->$VALUES:[LX/272;
 
-    .line 12
-    return v1
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/272;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method

@@ -1,60 +1,20 @@
-.class public final synthetic LX/00C;
+.class public abstract LX/00C;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentActivity$ReportFullyDrawnExecutorApi16Impl$$ExternalSyntheticLambda0"
-
-
-# instance fields
-.field public final synthetic A00:LX/0XP;
-
 
 # direct methods
-.method public synthetic constructor <init>(LX/0XP;)V
+.method public static A00(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/00C;->A00:LX/0XP;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
     .line 0
-    iget-object v1, p0, LX/00C;->A00:LX/0XP;
+    invoke-virtual {p0}, Landroid/app/Activity;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
 
     .line 1
     .line 2
-    iget-object v0, v1, LX/0XP;->A01:Ljava/lang/Runnable;
-
     .line 3
+    move-result-object p0
+
     .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    .line 7
-    .line 8
-    .line 9
-    const/4 v0, 0x0
-
-    .line 10
-    iput-object v0, v1, LX/0XP;->A01:Ljava/lang/Runnable;
-
-    .line 11
-    .line 12
-    :cond_0
-    return-void
+    return-object p0
 .end method

@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A0Z(LX/27m;LX/2DN;)Ljava/lang/Object;
+.method public final bridge synthetic A0O(LX/3oD;LX/6HS;)Ljava/lang/Object;
     .locals 7
 
     .line 0
@@ -31,7 +31,7 @@
     const/4 v1, 0x0
 
     .line 3
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 4
     .line 5
@@ -41,7 +41,7 @@
     .line 7
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, LX/27m;->A0q()LX/270;
+    invoke-virtual {p1}, LX/3oD;->A0t()LX/3ns;
 
     .line 8
     .line 9
@@ -49,7 +49,7 @@
     move-result-object v5
 
     .line 11
-    sget-object v0, LX/270;->FIELD_NAME:LX/270;
+    sget-object v0, LX/3ns;->FIELD_NAME:LX/3ns;
 
     .line 12
     .line 13
@@ -57,7 +57,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/27m;->A06(LX/27m;)Ljava/lang/String;
+    invoke-static {p1}, LX/3oD;->A07(LX/3oD;)Ljava/lang/String;
 
     .line 16
     .line 17
@@ -104,167 +104,175 @@
 
     .line 39
     :cond_1
-    const-string v0, "color"
+    const-string/jumbo v0, "color"
 
     .line 40
     .line 41
+    .line 42
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 42
     .line 43
     .line 44
+    .line 45
     move-result v0
 
-    .line 45
+    .line 46
     if-eqz v0, :cond_4
 
-    .line 46
     .line 47
-    invoke-virtual {p1}, LX/27m;->A0i()I
-
     .line 48
+    invoke-virtual {p1}, LX/3oD;->A0k()I
+
     .line 49
     .line 50
+    .line 51
     move-result v2
 
-    .line 51
+    .line 52
     goto :goto_1
 
-    .line 52
+    .line 53
     :cond_2
     const-string/jumbo v0, "size"
 
-    .line 53
     .line 54
     .line 55
+    .line 56
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 56
     .line 57
     .line 58
-    move-result v0
-
     .line 59
-    if-eqz v0, :cond_4
+    move-result v0
 
     .line 60
-    .line 61
-    invoke-virtual {p1}, LX/27m;->A0g()F
-
-    .line 62
-    .line 63
-    .line 64
-    move-result v1
-
-    .line 65
-    goto :goto_1
-
-    .line 66
-    :goto_0
-    const-string v0, "brush_type"
-
-    .line 67
-    .line 68
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 69
-    .line 70
-    .line 71
-    move-result v0
-
-    .line 72
     if-eqz v0, :cond_4
 
+    .line 61
+    .line 62
+    invoke-virtual {p1}, LX/3oD;->A0g()F
+
+    .line 63
+    .line 64
+    .line 65
+    move-result v1
+
+    .line 66
+    goto :goto_1
+
+    .line 67
+    :goto_0
+    const-string/jumbo v0, "brush_type"
+
+    .line 68
+    .line 69
+    .line 70
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 71
+    .line 72
     .line 73
+    move-result v0
+
     .line 74
-    const-class v0, LX/10v;
+    if-eqz v0, :cond_4
 
     .line 75
     .line 76
-    invoke-static {p1, p2, v0}, LX/1Tc;->A01(LX/27m;LX/2DN;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    const-class v0, LX/1GF;
 
     .line 77
     .line 78
+    invoke-static {p1, p2, v0}, LX/27L;->A0C(LX/3oD;LX/6HS;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
     .line 79
+    .line 80
+    .line 81
     move-result-object v3
 
-    .line 80
-    check-cast v3, LX/10v;
-
-    .line 81
     .line 82
-    const-string v0, "brushType"
+    check-cast v3, LX/1GF;
 
     .line 83
     .line 84
-    invoke-static {v3, v0, v4}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->A0L(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
+    const-string/jumbo v0, "brushType"
 
     .line 85
     .line 86
     .line 87
-    move-result-object v4
+    invoke-static {v3, v0, v4}, LX/1O4;->A08(Ljava/lang/Object;Ljava/lang/String;Ljava/util/HashSet;)Ljava/util/HashSet;
 
     .line 88
-    :cond_3
-    :goto_1
-    invoke-static {p1}, LX/1Oj;->A00(LX/27m;)LX/270;
-
     .line 89
     .line 90
+    move-result-object v4
+
     .line 91
-    move-result-object v5
+    :cond_3
+    :goto_1
+    invoke-static {p1}, LX/1c4;->A00(LX/3oD;)LX/3ns;
 
     .line 92
-    sget-object v0, LX/270;->END_OBJECT:LX/270;
-
     .line 93
     .line 94
-    if-ne v5, v0, :cond_0
+    move-result-object v5
 
     .line 95
-    .line 96
-    goto :goto_2
+    sget-object v0, LX/3ns;->END_OBJECT:LX/3ns;
 
+    .line 96
     .line 97
-    :cond_4
-    invoke-virtual {p1}, LX/27m;->A1B()LX/27m;
+    if-ne v5, v0, :cond_0
 
     .line 98
     .line 99
+    goto :goto_2
+
     .line 100
+    :cond_4
+    invoke-virtual {p1}, LX/3oD;->A1G()LX/3oD;
+
+    .line 101
+    .line 102
+    .line 103
     goto :goto_1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 101
+    .line 104
     :goto_2
     new-instance v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;
 
-    .line 102
-    .line 103
-    invoke-direct {v0, v3, v4, v1, v2}, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;-><init>(LX/10v;Ljava/util/Set;FI)V
-
-    .line 104
     .line 105
     .line 106
-    return-object v0
+    invoke-direct {v0, v3, v4, v1, v2}, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;-><init>(LX/1GF;Ljava/util/Set;FI)V
 
     .line 107
+    .line 108
+    .line 109
+    return-object v0
+
+    .line 110
     :catch_0
     move-exception v1
 
-    .line 108
+    .line 111
     const-class v0, Lcom/facebook/videocodec/effects/model/DoodleLineMetadata;
 
-    .line 109
-    .line 110
-    invoke-static {p1, v0, v1}, LX/24h;->A01(LX/27m;Ljava/lang/Class;Ljava/lang/Exception;)V
-
-    .line 111
     .line 112
     .line 113
-    const/4 v0, 0x0
+    invoke-static {p1, v0, v1}, LX/35O;->A01(LX/3oD;Ljava/lang/Class;Ljava/lang/Exception;)V
 
     .line 114
+    .line 115
+    .line 116
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 117
+    .line 118
+    .line 119
+    move-result-object v0
+
+    .line 120
     throw v0
 .end method

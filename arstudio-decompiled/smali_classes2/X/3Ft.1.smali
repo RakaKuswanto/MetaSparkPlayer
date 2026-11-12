@@ -1,17 +1,17 @@
-.class public final LX/3Ft;
-.super Ljava/io/IOException;
+.class public interface abstract LX/3Ft;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract AAX()LX/3Ft;
+.end method
 
-    .line 0
-    invoke-direct {p0}, Ljava/io/IOException;-><init>()V
+.method public abstract AFf()LX/3Fi;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AKJ()LX/3Fs;
+.end method
+
+.method public abstract AKL()LX/3Fl;
 .end method

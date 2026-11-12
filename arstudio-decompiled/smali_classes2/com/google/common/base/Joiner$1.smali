@@ -12,6 +12,18 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Joiner;Lcom/google/common/base/Joiner;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "prototype",
+            "val$nullText"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/base/Joiner$1;->this$0:Lcom/google/common/base/Joiner;
@@ -34,6 +46,14 @@
 # virtual methods
 .method public toString(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "part"
+        }
+    .end annotation
 
     .line 0
     if-nez p1, :cond_0
@@ -65,19 +85,28 @@
 
 .method public useForNull(Ljava/lang/String;)Lcom/google/common/base/Joiner;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nullText"
+        }
+    .end annotation
 
     .line 0
-    const-string v0, "already specified useForNull"
+    const-string/jumbo v0, "already specified useForNull"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yj;->A0U(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
-
     .line 3
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
+
     .line 4
     .line 5
+    .line 6
     move-result-object v0
 
-    .line 6
+    .line 7
     throw v0
 .end method

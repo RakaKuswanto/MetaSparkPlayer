@@ -32,19 +32,19 @@
 .method public constructor <init>(IZZZ)V
     .locals 0
 
-    .line 537366598
+    .line 536988881
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 537366599
+    .line 536988882
     iput p1, p0, Lcom/facebook/spectrum/requirements/RotateRequirement;->degrees:I
 
-    .line 537366600
+    .line 536988883
     iput-boolean p2, p0, Lcom/facebook/spectrum/requirements/RotateRequirement;->flipHorizontally:Z
 
-    .line 537366601
+    .line 536988884
     iput-boolean p3, p0, Lcom/facebook/spectrum/requirements/RotateRequirement;->flipVertically:Z
 
-    .line 537366602
+    .line 536988885
     iput-boolean p4, p0, Lcom/facebook/spectrum/requirements/RotateRequirement;->forceUpOrientation:Z
 
     return-void
@@ -180,7 +180,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -260,7 +260,7 @@
     .line 42
     .line 43
     .line 44
-    invoke-static {v1}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1}, LX/001;->A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 45
     .line 46

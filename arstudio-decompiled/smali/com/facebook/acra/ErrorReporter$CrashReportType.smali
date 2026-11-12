@@ -34,8 +34,66 @@
 
 
 # direct methods
+.method public static synthetic $values()[Lcom/facebook/acra/ErrorReporter$CrashReportType;
+    .locals 3
+
+    .line 0
+    const/4 v0, 0x4
+
+    .line 1
+    new-array v2, v0, [Lcom/facebook/acra/ErrorReporter$CrashReportType;
+
+    .line 2
+    .line 3
+    sget-object v1, Lcom/facebook/acra/ErrorReporter$CrashReportType;->ACRA_CRASH_REPORT:Lcom/facebook/acra/ErrorReporter$CrashReportType;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/acra/ErrorReporter$CrashReportType;->NATIVE_CRASH_REPORT:Lcom/facebook/acra/ErrorReporter$CrashReportType;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/acra/ErrorReporter$CrashReportType;->ANR_REPORT:Lcom/facebook/acra/ErrorReporter$CrashReportType;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, Lcom/facebook/acra/ErrorReporter$CrashReportType;->CACHED_ANR_REPORT:Lcom/facebook/acra/ErrorReporter$CrashReportType;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
-    .locals 31
+    .locals 24
 
     .line 0
     new-instance v10, Lcom/facebook/acra/ErrorReporter$AcraReportHandler;
@@ -208,16 +266,16 @@
 
     .line 87
     .line 88
-    new-instance v28, Lcom/facebook/acra/ErrorReporter$CachedANRReportHandler;
+    new-instance v21, Lcom/facebook/acra/ErrorReporter$CachedANRReportHandler;
 
     .line 89
     .line 90
-    invoke-direct/range {v28 .. v28}, Lcom/facebook/acra/ErrorReporter$CachedANRReportHandler;-><init>()V
+    invoke-direct/range {v21 .. v21}, Lcom/facebook/acra/ErrorReporter$CachedANRReportHandler;-><init>()V
 
     .line 91
     .line 92
     .line 93
-    new-array v1, v13, [Ljava/lang/String;
+    new-array v2, v13, [Ljava/lang/String;
 
     .line 94
     .line 95
@@ -225,90 +283,63 @@
 
     .line 96
     .line 97
-    aput-object v0, v1, v5
+    aput-object v0, v2, v5
 
     .line 98
     .line 99
-    new-array v0, v13, [Ljava/lang/String;
+    new-array v1, v13, [Ljava/lang/String;
 
     .line 100
     .line 101
-    const-string v2, ".cachedreport"
+    const-string v0, ".cachedreport"
 
     .line 102
     .line 103
-    aput-object v2, v0, v5
+    aput-object v0, v1, v5
 
     .line 104
     .line 105
-    const-string v22, "CACHED_ANR_REPORT"
+    const-string v15, "CACHED_ANR_REPORT"
 
     .line 106
     .line 107
-    const/16 v23, 0x3
+    const/16 v16, 0x3
 
     .line 108
     .line 109
-    new-instance v21, Lcom/facebook/acra/ErrorReporter$CrashReportType;
+    new-instance v14, Lcom/facebook/acra/ErrorReporter$CrashReportType;
 
     .line 110
     .line 111
-    move/from16 v24, v17
+    move-object/from16 v22, v2
 
     .line 112
     .line 113
-    move-wide/from16 v25, v18
+    move-object/from16 v23, v1
 
     .line 114
     .line 115
-    move-object/from16 v27, v20
+    invoke-direct/range {v14 .. v23}, Lcom/facebook/acra/ErrorReporter$CrashReportType;-><init>(Ljava/lang/String;IIJLjava/lang/String;Lcom/facebook/acra/ErrorReporter$ReportHandler;[Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 116
     .line 117
-    move-object/from16 v29, v1
-
     .line 118
+    sput-object v14, Lcom/facebook/acra/ErrorReporter$CrashReportType;->CACHED_ANR_REPORT:Lcom/facebook/acra/ErrorReporter$CrashReportType;
+
     .line 119
-    move-object/from16 v30, v0
-
     .line 120
-    .line 121
-    invoke-direct/range {v21 .. v30}, Lcom/facebook/acra/ErrorReporter$CrashReportType;-><init>(Ljava/lang/String;IIJLjava/lang/String;Lcom/facebook/acra/ErrorReporter$ReportHandler;[Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-static {}, Lcom/facebook/acra/ErrorReporter$CrashReportType;->$values()[Lcom/facebook/acra/ErrorReporter$CrashReportType;
 
+    .line 121
     .line 122
     .line 123
+    move-result-object v0
+
     .line 124
-    sput-object v21, Lcom/facebook/acra/ErrorReporter$CrashReportType;->CACHED_ANR_REPORT:Lcom/facebook/acra/ErrorReporter$CrashReportType;
+    sput-object v0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->$VALUES:[Lcom/facebook/acra/ErrorReporter$CrashReportType;
 
     .line 125
     .line 126
-    const/4 v0, 0x4
-
-    .line 127
-    new-array v0, v0, [Lcom/facebook/acra/ErrorReporter$CrashReportType;
-
-    .line 128
-    .line 129
-    aput-object v3, v0, v5
-
-    .line 130
-    .line 131
-    aput-object v11, v0, v13
-
-    .line 132
-    .line 133
-    aput-object v14, v0, v16
-
-    .line 134
-    .line 135
-    aput-object v21, v0, v23
-
-    .line 136
-    .line 137
-    sput-object v0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->$VALUES:[Lcom/facebook/acra/ErrorReporter$CrashReportType;
-
-    .line 138
-    .line 139
     return-void
 .end method
 
@@ -321,7 +352,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -360,7 +391,22 @@
     return-void
 .end method
 
-.method public static synthetic access$1200(Lcom/facebook/acra/ErrorReporter$CrashReportType;Landroid/content/Context;)Lcom/facebook/acra/Spool$Snapshot;
+.method public static synthetic access$1400(Lcom/facebook/acra/ErrorReporter$CrashReportType;Landroid/content/Context;)Lcom/facebook/acra/Spool;
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1}, Lcom/facebook/acra/ErrorReporter$CrashReportType;->getSpool(Landroid/content/Context;)Lcom/facebook/acra/Spool;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object p0
+
+    .line 4
+    return-object p0
+.end method
+
+.method public static synthetic access$1500(Lcom/facebook/acra/ErrorReporter$CrashReportType;Landroid/content/Context;)Lcom/facebook/acra/Spool$Snapshot;
     .locals 0
 
     .line 0
@@ -375,7 +421,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$1400(Lcom/facebook/acra/ErrorReporter$CrashReportType;)Ljava/lang/String;
+.method public static synthetic access$1800(Lcom/facebook/acra/ErrorReporter$CrashReportType;)Ljava/lang/String;
     .locals 0
 
     .line 0
@@ -386,7 +432,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$1600(Lcom/facebook/acra/ErrorReporter$CrashReportType;)I
+.method public static synthetic access$2000(Lcom/facebook/acra/ErrorReporter$CrashReportType;)I
     .locals 0
 
     .line 0
@@ -397,7 +443,7 @@
     return p0
 .end method
 
-.method public static synthetic access$1700(Lcom/facebook/acra/ErrorReporter$CrashReportType;)J
+.method public static synthetic access$2100(Lcom/facebook/acra/ErrorReporter$CrashReportType;)J
     .locals 1
 
     .line 0
@@ -406,28 +452,6 @@
     .line 1
     .line 2
     return-wide v0
-.end method
-
-.method public static synthetic access$2000(Lcom/facebook/acra/ErrorReporter$CrashReportType;)[Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->fileExtensions:[Ljava/lang/String;
-
-    .line 1
-    .line 2
-    return-object p0
-.end method
-
-.method public static synthetic access$2100(Lcom/facebook/acra/ErrorReporter$CrashReportType;)[Ljava/lang/String;
-    .locals 0
-
-    .line 0
-    iget-object p0, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->extraFileExtensions:[Ljava/lang/String;
-
-    .line 1
-    .line 2
-    return-object p0
 .end method
 
 .method private getPendingCrashReports(Landroid/content/Context;)Lcom/facebook/acra/Spool$Snapshot;
@@ -447,7 +471,7 @@
     .line 5
     .line 6
     .line 7
-    invoke-virtual {p0, p1}, Lcom/facebook/acra/ErrorReporter$CrashReportType;->getSpool(Landroid/content/Context;)Lcom/facebook/acra/Spool;
+    invoke-direct {p0, p1}, Lcom/facebook/acra/ErrorReporter$CrashReportType;->getSpool(Landroid/content/Context;)Lcom/facebook/acra/Spool;
 
     .line 8
     .line 9
@@ -473,6 +497,70 @@
 
     .line 20
     return-object v0
+.end method
+
+.method private getSpool(Landroid/content/Context;)Lcom/facebook/acra/Spool;
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->mLock:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    monitor-enter v2
+
+    .line 3
+    :try_start_0
+    iget-object v1, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->mSpool:Lcom/facebook/acra/Spool;
+
+    .line 4
+    .line 5
+    if-nez v1, :cond_0
+
+    .line 6
+    .line 7
+    iget v0, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->directoryConfigId:I
+
+    .line 8
+    .line 9
+    invoke-static {p1, v0}, LX/0Jr;->A00(Landroid/content/Context;I)Ljava/io/File;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    new-instance v1, Lcom/facebook/acra/Spool;
+
+    .line 14
+    .line 15
+    invoke-direct {v1, v0}, Lcom/facebook/acra/Spool;-><init>(Ljava/io/File;)V
+
+    .line 16
+    .line 17
+    .line 18
+    iput-object v1, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->mSpool:Lcom/facebook/acra/Spool;
+
+    .line 19
+    .line 20
+    :cond_0
+    monitor-exit v2
+
+    .line 21
+    return-object v1
+
+    .line 22
+    :catchall_0
+    move-exception v0
+
+    .line 23
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 24
+    throw v0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/acra/ErrorReporter$CrashReportType;
@@ -532,68 +620,4 @@
     .line 1
     .line 2
     return-object v0
-.end method
-
-.method public getSpool(Landroid/content/Context;)Lcom/facebook/acra/Spool;
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->mLock:Ljava/lang/Object;
-
-    .line 1
-    .line 2
-    monitor-enter v2
-
-    .line 3
-    :try_start_0
-    iget-object v1, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->mSpool:Lcom/facebook/acra/Spool;
-
-    .line 4
-    .line 5
-    if-nez v1, :cond_0
-
-    .line 6
-    .line 7
-    iget v0, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->directoryConfigId:I
-
-    .line 8
-    .line 9
-    invoke-static {p1, v0}, LX/0YP;->A00(Landroid/content/Context;I)Ljava/io/File;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    new-instance v1, Lcom/facebook/acra/Spool;
-
-    .line 14
-    .line 15
-    invoke-direct {v1, v0}, Lcom/facebook/acra/Spool;-><init>(Ljava/io/File;)V
-
-    .line 16
-    .line 17
-    .line 18
-    iput-object v1, p0, Lcom/facebook/acra/ErrorReporter$CrashReportType;->mSpool:Lcom/facebook/acra/Spool;
-
-    .line 19
-    .line 20
-    :cond_0
-    monitor-exit v2
-
-    .line 21
-    return-object v1
-
-    .line 22
-    :catchall_0
-    move-exception v0
-
-    .line 23
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 24
-    throw v0
 .end method

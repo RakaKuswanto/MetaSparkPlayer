@@ -1,96 +1,201 @@
 .class public final LX/3cG;
-.super LX/4Pz;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/3f0;
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/arstudio/player/EffectInfoActivity;
+.field public A00:I
+
+.field public A01:Landroid/content/Context;
+
+.field public A02:LX/3c4;
+
+.field public A03:LX/1rU;
+
+.field public final A04:LX/0RP;
+
+.field public final A05:LX/0RP;
+
+.field public final A06:LX/0RP;
+
+.field public final A07:LX/0RP;
+
+.field public final A08:Ljava/util/ArrayList;
+
+.field public volatile A09:Ljava/net/InetAddress;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/arstudio/player/EffectInfoActivity;I)V
-    .locals 0
+.method public constructor <init>(LX/3Ft;)V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/3cG;->A00:Lcom/facebook/arstudio/player/EffectInfoActivity;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0, p2}, LX/4Pz;-><init>(I)V
-
     .line 3
+    sget v0, LX/2I6;->A2x:I
+
     .line 4
     .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    invoke-static {v2, v0}, LX/3FX;->A02(LX/1rU;I)LX/3FX;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    iput-object v0, p0, LX/3cG;->A07:LX/0RP;
+
+    .line 11
+    .line 12
+    sget v0, LX/2I6;->A2S:I
+
+    .line 13
+    .line 14
+    invoke-static {v2, v2, v0}, LX/3Fa;->A06(Landroid/content/Context;LX/1rU;I)Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v1
+
+    .line 18
+    check-cast v1, Landroid/content/Context;
+
+    .line 19
+    .line 20
+    iput-object v1, p0, LX/3cG;->A01:Landroid/content/Context;
+
+    .line 21
+    .line 22
+    sget v0, LX/2I6;->AGs:I
+
+    .line 23
+    .line 24
+    invoke-static {v1, v0}, LX/3FW;->A00(Landroid/content/Context;I)LX/3FW;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    iput-object v0, p0, LX/3cG;->A05:LX/0RP;
+
+    .line 29
+    .line 30
+    sget v0, LX/2I6;->AGt:I
+
+    .line 31
+    .line 32
+    invoke-static {v1, v0}, LX/3FW;->A00(Landroid/content/Context;I)LX/3FW;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
+
+    .line 36
+    iput-object v0, p0, LX/3cG;->A06:LX/0RP;
+
+    .line 37
+    .line 38
+    sget v0, LX/2I6;->AGn:I
+
+    .line 39
+    .line 40
+    invoke-static {v2, v0}, LX/3FX;->A02(LX/1rU;I)LX/3FX;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    iput-object v0, p0, LX/3cG;->A04:LX/0RP;
+
+    .line 45
+    .line 46
+    const/4 v0, 0x1
+
+    .line 47
+    iput v0, p0, LX/3cG;->A00:I
+
+    .line 48
+    .line 49
+    iput-object v2, p0, LX/3cG;->A09:Ljava/net/InetAddress;
+
+    .line 50
+    .line 51
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v0
+
+    .line 55
+    iput-object v0, p0, LX/3cG;->A08:Ljava/util/ArrayList;
+
+    .line 56
+    .line 57
+    invoke-static {p1}, LX/1rU;->A00(LX/3Ft;)LX/1rU;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v0
+
+    .line 61
+    iput-object v0, p0, LX/3cG;->A03:LX/1rU;
+
+    .line 62
+    .line 63
     return-void
 .end method
 
-
-# virtual methods
-.method public final A00(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)Z
-    .locals 4
+.method public static A00(LX/3cG;II)V
+    .locals 2
 
     .line 0
-    invoke-static {p1}, Landroidx/recyclerview/widget/RecyclerView;->A02(Landroid/view/View;)I
+    iput p1, p0, LX/3cG;->A00:I
 
     .line 1
     .line 2
-    .line 3
-    move-result v0
+    iget-object v0, p0, LX/3cG;->A07:LX/0RP;
 
+    .line 3
     .line 4
-    const/4 v3, 0x1
+    invoke-static {v0}, LX/0X5;->A0A(LX/0RP;)Landroid/os/Handler;
 
     .line 5
-    add-int/lit8 v2, v0, 0x1
-
     .line 6
     .line 7
-    iget-object v1, p0, LX/3cG;->A00:Lcom/facebook/arstudio/player/EffectInfoActivity;
+    move-result-object v1
 
     .line 8
+    new-instance v0, LX/3cK;
+
     .line 9
-    iget-object v0, v1, Lcom/facebook/arstudio/player/EffectInfoActivity;->A01:LX/3cw;
-
     .line 10
-    .line 11
-    iget-object v0, v0, LX/3cw;->A00:Ljava/util/List;
+    invoke-direct {v0, p0, p1, p2}, LX/3cK;-><init>(LX/3cG;II)V
 
+    .line 11
     .line 12
     .line 13
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 14
     .line 15
     .line 16
-    move-result v0
-
-    .line 17
-    if-ge v2, v0, :cond_0
-
-    .line 18
-    .line 19
-    iget-object v0, v1, Lcom/facebook/arstudio/player/EffectInfoActivity;->A01:LX/3cw;
-
-    .line 20
-    .line 21
-    invoke-virtual {v0, v2}, LX/4sv;->getItemViewType(I)I
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v0
-
-    .line 25
-    if-nez v0, :cond_0
-
-    .line 26
-    .line 27
-    return v3
-
-    .line 28
-    :cond_0
-    const/4 v3, 0x0
-
-    .line 29
-    return v3
+    return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lcom/google/common/collect/StandardTable;
-.super LX/1bQ;
+.super LX/1qQ;
 .source ""
 
 # interfaces
@@ -21,9 +21,19 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Supplier;Ljava/util/Map;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "backingMap",
+            "factory"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, LX/1bQ;-><init>()V
+    invoke-direct {p0}, LX/1qQ;-><init>()V
 
     .line 1
     .line 2
@@ -43,6 +53,16 @@
 # virtual methods
 .method public final A02(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "rowKey",
+            "columnKey"
+        }
+    .end annotation
 
     .line 0
     if-eqz p1, :cond_0
@@ -53,7 +73,7 @@
 
     .line 3
     .line 4
-    invoke-super {p0, p1, p2}, LX/1bQ;->A02(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-super {p0, p1, p2}, LX/1qQ;->A02(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
     .line 6

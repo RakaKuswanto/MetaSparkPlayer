@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_days_ago">
+        <item quantity="other">Kwanaki %1$d da suka gabata</item>
+        <item quantity="one">kwana 1 da ya wuce</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">kwanaki %1$d</item>
+        <item quantity="one">Kwana 1</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">kwanaki %1$d</item>
+        <item quantity="one">Kwana 1</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">awanni %1$d</item>
+        <item quantity="one">Awa 1</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">Mintuna %1$d</item>
+        <item quantity="one">minti 1</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">Watanni %1$d</item>
+        <item quantity="one">Wata 1</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">Sakwan %1$d</item>
+        <item quantity="one">Sakwan 1</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">Makonni %1$d</item>
+        <item quantity="one">Mako 1</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Ƙarin kwanaki %1$d</item>
+        <item quantity="one">Ƙarin kwana 1</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">Saura minti %1$d</item>
+        <item quantity="one">1 more minute</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">%1$d more months</item>
+        <item quantity="one">Karin wata 1</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">Shekaru %1$d</item>
+        <item quantity="one">Shekara 1</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">Awoyi%1$dda suka wuce</item>
+        <item quantity="one">Away 1 da ta wuce</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">Awanni %1$d</item>
+        <item quantity="one">Awa 1</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">Awa %1$d</item>
+        <item quantity="one">1h</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">Awanni %1$d</item>
+        <item quantity="one">Awa 1</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">%1$d awanni da suka wuce</item>
+        <item quantity="one">1 hr ago</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">Awanni %1$d daga yanzu</item>
+        <item quantity="one">1 hour from now</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">mintuna %1$d daga yanzu</item>
+        <item quantity="one">1 minute from now</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">Mintuna %1$d da suka gabata</item>
+        <item quantity="one">Minti 1 da ya wuce</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">Mintuna %1$d</item>
+        <item quantity="one">minti 1</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d</item>
+        <item quantity="one">m1</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">watanni %1$d da suka gabata</item>
+        <item quantity="one">Wata 1 da Ya Gabata</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">sakwan %1$d da suka wuce</item>
+        <item quantity="one">Sakwan 1</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">Makonni %1$d da Suka Gabata</item>
+        <item quantity="one">1 week ago</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d hrs left</item>
+        <item quantity="one">awa 1 ta rage</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">%1$d mins left</item>
+        <item quantity="one">minti 1 ya rage</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">Shekaru %1$d da suka wuce</item>
+        <item quantity="one">Shekara 1 da ta Wuce</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">You visited %1$d years ago</item>
+        <item quantity="one">Ka ziyarta shekara 1 da ta gabata</item>
+    </plurals>
+</resources>

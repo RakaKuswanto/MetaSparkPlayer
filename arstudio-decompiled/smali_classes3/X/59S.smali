@@ -1,29 +1,17 @@
 .class public final LX/59S;
-.super Ljava/lang/Object;
+.super Ljava/io/IOException;
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/util/Random;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/io/IOException;)V
+    .locals 0
 
     .line 0
-    new-instance v0, Ljava/util/Random;
+    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
     .line 1
     .line 2
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/59S;->A00:Ljava/util/Random;
-
-    .line 6
-    .line 7
     return-void
 .end method

@@ -2,79 +2,38 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/mqtt/service/MqttPublishListener;
-
 
 # instance fields
-.field public final synthetic A00:LX/30Q;
+.field public final A00:Lcom/facebook/prefs/shared/FbSharedPreferences;
 
-.field public final synthetic A01:Z
+.field public final A01:LX/28F;
 
 
 # direct methods
-.method public constructor <init>(LX/30Q;Z)V
-    .locals 0
+.method public constructor <init>(LX/28F;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/30o;->A00:LX/30Q;
-
-    .line 1
-    .line 2
-    iput-boolean p2, p0, LX/30o;->A01:Z
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onFailure(II)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onSuccess(I)V
-    .locals 2
-
-    .line 0
-    sget v0, LX/2eq;->AX2:I
-
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
     .line 3
+    invoke-static {}, LX/2I6;->A0Z()Lcom/facebook/prefs/shared/FbSharedPreferences;
+
     .line 4
     .line 5
-    move-result-object v1
-
     .line 6
-    check-cast v1, LX/30O;
+    move-result-object v0
 
     .line 7
+    iput-object v0, p0, LX/30o;->A00:Lcom/facebook/prefs/shared/FbSharedPreferences;
+
     .line 8
-    iget-boolean v0, p0, LX/30o;->A01:Z
-
     .line 9
+    iput-object p1, p0, LX/30o;->A01:LX/28F;
+
     .line 10
-    invoke-virtual {v1, v0}, LX/30O;->A01(Z)V
-
     .line 11
-    .line 12
-    .line 13
-    return-void
-.end method
-
-.method public final onTimeout(IZ)V
-    .locals 0
-
     return-void
 .end method

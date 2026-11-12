@@ -3,35 +3,11 @@
 .source ""
 
 
-# static fields
-.field public static final A01:LX/2a8;
-
-
 # instance fields
-.field public A00:Ljava/util/HashMap;
+.field public final A00:LX/0RP;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/2a8;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/2a8;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/2a8;->A01:LX/2a8;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 1
 
@@ -41,12 +17,21 @@
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x0
+    sget v0, LX/2I6;->A2y:I
 
     .line 4
-    iput-object v0, p0, LX/2a8;->A00:Ljava/util/HashMap;
-
     .line 5
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/2a8;->A00:LX/0RP;
+
+    .line 10
+    .line 11
     return-void
 .end method

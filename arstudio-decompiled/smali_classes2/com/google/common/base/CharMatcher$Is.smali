@@ -10,6 +10,14 @@
 # direct methods
 .method public constructor <init>(C)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "match"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0}, Lcom/google/common/base/CharMatcher$FastMatcher;-><init>()V
@@ -28,13 +36,21 @@
 # virtual methods
 .method public matches(C)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "c"
+        }
+    .end annotation
 
     .line 0
     iget-char v0, p0, Lcom/google/common/base/CharMatcher$Is;->match:C
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/001;->A1O(II)Z
+    invoke-static {p1, v0}, LX/001;->A1N(II)Z
 
     .line 3
     .line 4
@@ -130,7 +146,7 @@
 
     .line 36
     .line 37
-    invoke-static {v7, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 38
     .line 39
@@ -140,7 +156,6 @@
     .line 41
     return-object v0
 
-    .line 42
     :array_0
     .array-data 2
         0x5cs

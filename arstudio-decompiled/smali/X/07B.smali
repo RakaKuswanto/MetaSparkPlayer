@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract AcD(ILjava/lang/Object;)V
+.method public abstract getLifecycle()LX/077;
 .end method

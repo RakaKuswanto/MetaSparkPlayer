@@ -2,10 +2,7 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/0H9;
-
 
 # virtual methods
-.method public abstract AC0()I
+.method public abstract A4W(Ljava/lang/Object;Ljava/lang/Object;)V
 .end method

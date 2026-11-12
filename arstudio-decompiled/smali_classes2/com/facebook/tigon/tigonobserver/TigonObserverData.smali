@@ -15,13 +15,13 @@
 
 .field public mRequestId:J
 
-.field public mResponse:LX/3Ro;
+.field public mResponse:LX/388;
 
 .field public mSentRequest:Lcom/facebook/tigon/iface/TigonRequest;
 
 .field public mSubmittedRequest:Lcom/facebook/tigon/iface/TigonRequest;
 
-.field public mSummary:LX/3Vh;
+.field public mSummary:LX/39T;
 
 
 # direct methods
@@ -58,7 +58,7 @@
 
     .line 14
     .line 15
-    invoke-static {p4, p5}, LX/3Of;->A03([BI)Lcom/facebook/tigon/iface/TigonRequestBuilder$Impl;
+    invoke-static {p4, p5}, LX/37f;->A03([BI)Lcom/facebook/tigon/iface/TigonRequestBuilder$Impl;
 
     .line 16
     .line 17
@@ -85,7 +85,7 @@
 
     .line 2
     .line 3
-    invoke-static {p1, p2}, LX/3Of;->A01([BI)LX/3P1;
+    invoke-static {p1, p2}, LX/37f;->A01([BI)LX/37m;
 
     .line 4
     .line 5
@@ -93,7 +93,7 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mSummary:LX/3Vh;
+    iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mSummary:LX/39T;
 
     .line 8
     .line 9
@@ -104,7 +104,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/3Of;->A00([BI)Lcom/facebook/tigon/TigonError;
+    invoke-static {p1, p2}, LX/37f;->A00([BI)Lcom/facebook/tigon/TigonError;
 
     .line 1
     .line 2
@@ -116,7 +116,7 @@
 
     .line 5
     .line 6
-    invoke-static {p3, p4}, LX/3Of;->A01([BI)LX/3P1;
+    invoke-static {p3, p4}, LX/37f;->A01([BI)LX/37m;
 
     .line 7
     .line 8
@@ -124,7 +124,7 @@
     move-result-object v0
 
     .line 10
-    iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mSummary:LX/3Vh;
+    iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mSummary:LX/39T;
 
     .line 11
     .line 12
@@ -135,16 +135,16 @@
     .locals 3
 
     .line 0
-    new-instance v0, LX/3Qu;
+    new-instance v0, LX/382;
 
     .line 1
     .line 2
-    invoke-direct {v0, p1, p2}, LX/3Qu;-><init>([BI)V
+    invoke-direct {v0, p1, p2}, LX/382;-><init>([BI)V
 
     .line 3
     .line 4
     .line 5
-    invoke-static {v0}, LX/3Pd;->A05(LX/3Qu;)I
+    invoke-static {v0}, LX/37t;->A05(LX/382;)I
 
     .line 6
     .line 7
@@ -152,7 +152,7 @@
     move-result v2
 
     .line 9
-    invoke-static {v0}, LX/3Pd;->A08(LX/3Qu;)Ljava/util/HashMap;
+    invoke-static {v0}, LX/37t;->A08(LX/382;)Ljava/util/HashMap;
 
     .line 10
     .line 11
@@ -160,16 +160,16 @@
     move-result-object v1
 
     .line 13
-    new-instance v0, LX/3Ro;
+    new-instance v0, LX/388;
 
     .line 14
     .line 15
-    invoke-direct {v0, v1, v2}, LX/3Ro;-><init>(Ljava/util/Map;I)V
+    invoke-direct {v0, v2, v1}, LX/388;-><init>(ILjava/util/Map;)V
 
     .line 16
     .line 17
     .line 18
-    iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mResponse:LX/3Ro;
+    iput-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mResponse:LX/388;
 
     .line 19
     .line 20
@@ -184,7 +184,7 @@
 
     .line 1
     .line 2
-    invoke-static {p2, p3}, LX/3Of;->A03([BI)Lcom/facebook/tigon/iface/TigonRequestBuilder$Impl;
+    invoke-static {p2, p3}, LX/37f;->A03([BI)Lcom/facebook/tigon/iface/TigonRequestBuilder$Impl;
 
     .line 3
     .line 4
@@ -245,11 +245,11 @@
     return-wide v0
 .end method
 
-.method public response()LX/3Ro;
+.method public response()LX/388;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mResponse:LX/3Ro;
+    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mResponse:LX/388;
 
     .line 1
     .line 2
@@ -267,11 +267,11 @@
     return-object v0
 .end method
 
-.method public summary()LX/3Vh;
+.method public summary()LX/39T;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mSummary:LX/3Vh;
+    iget-object v0, p0, Lcom/facebook/tigon/tigonobserver/TigonObserverData;->mSummary:LX/39T;
 
     .line 1
     .line 2

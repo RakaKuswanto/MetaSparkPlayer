@@ -1,96 +1,96 @@
-.class public final synthetic LX/3rt;
-.super Ljava/lang/Object;
+.class public final LX/3rT;
+.super LX/41M;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RequestPerfQplLoggingListener$$ExternalSyntheticLambda2"
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/common/callercontext/CallerContext;
+.field public A00:I
 
-.field public final synthetic A01:Lcom/facebook/common/callercontext/ContextChain;
+.field public A01:LX/3uZ;
 
-.field public final synthetic A02:LX/3oy;
+.field public A02:LX/1qE;
 
-.field public final synthetic A03:LX/41f;
+.field public A03:LX/3t1;
 
-.field public final synthetic A04:Ljava/lang/String;
+.field public A04:LX/3v1;
+
+.field public A05:Z
+
+.field public transient A06:LX/41I;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/facebook/common/callercontext/CallerContext;Lcom/facebook/common/callercontext/ContextChain;LX/3oy;LX/41f;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(LX/1qE;LX/3v1;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    const/4 v3, 0x0
 
-    iput-object p3, p0, LX/3rt;->A02:LX/3oy;
+    .line 1
+    invoke-direct {p0, v3}, LX/41M;-><init>(I)V
 
-    iput-object p4, p0, LX/3rt;->A03:LX/41f;
+    .line 2
+    .line 3
+    .line 4
+    const/4 v2, 0x0
 
-    iput-object p1, p0, LX/3rt;->A00:Lcom/facebook/common/callercontext/CallerContext;
+    .line 5
+    iput-object v2, p0, LX/3rT;->A01:LX/3uZ;
 
-    iput-object p2, p0, LX/3rt;->A01:Lcom/facebook/common/callercontext/ContextChain;
+    .line 6
+    .line 7
+    iput-object p2, p0, LX/3rT;->A04:LX/3v1;
 
-    iput-object p5, p0, LX/3rt;->A04:Ljava/lang/String;
+    .line 8
+    .line 9
+    const/4 v1, -0x1
 
+    .line 10
+    iput v1, p0, LX/3rT;->A00:I
+
+    .line 11
+    .line 12
+    iput-object p1, p0, LX/3rT;->A02:LX/1qE;
+
+    .line 13
+    .line 14
+    new-instance v0, LX/3t1;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v2, v3, v1, v1}, LX/3t1;-><init>(LX/3t1;III)V
+
+    .line 17
+    .line 18
+    .line 19
+    iput-object v0, p0, LX/3rT;->A03:LX/3t1;
+
+    .line 20
+    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final close()V
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/3rt;->A02:LX/3oy;
+    iget-boolean v0, p0, LX/3rT;->A05:Z
 
     .line 1
     .line 2
-    iget-object v4, p0, LX/3rt;->A03:LX/41f;
+    if-nez v0, :cond_0
 
     .line 3
     .line 4
-    iget-object v2, p0, LX/3rt;->A00:Lcom/facebook/common/callercontext/CallerContext;
+    const/4 v0, 0x1
 
     .line 5
+    iput-boolean v0, p0, LX/3rT;->A05:Z
+
     .line 6
-    iget-object v3, p0, LX/3rt;->A01:Lcom/facebook/common/callercontext/ContextChain;
-
     .line 7
-    .line 8
-    iget-object v1, v0, LX/3oy;->A01:LX/3of;
-
-    .line 9
-    .line 10
-    iget-object v0, v0, LX/3oy;->A02:LX/0Na;
-
-    .line 11
-    .line 12
-    invoke-static {v0}, LX/0Yg;->A0M(LX/0Na;)Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    invoke-interface {v0}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->currentMonotonicTimestampNanos()J
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-wide v5
-
-    .line 20
-    invoke-virtual/range {v1 .. v6}, LX/3of;->A04(Lcom/facebook/common/callercontext/CallerContext;Lcom/facebook/common/callercontext/ContextChain;LX/41f;J)V
-
-    .line 21
-    .line 22
-    .line 23
+    :cond_0
     return-void
 .end method

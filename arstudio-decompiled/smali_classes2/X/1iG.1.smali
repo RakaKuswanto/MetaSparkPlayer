@@ -1,256 +1,250 @@
-.class public final LX/1iG;
+.class public abstract LX/1ig;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/1Nm;
-
-.field public final A01:LX/1Nm;
-
-.field public final A02:LX/1Nm;
-
-.field public final A03:LX/1dN;
-
-.field public final A04:LX/1Nw;
-
-
 # direct methods
-.method public constructor <init>(LX/1dN;LX/1Nw;)V
-    .locals 1
+.method public static final A00(LX/1kJ;J)Lcom/google/common/collect/ImmutableList;
+    .locals 14
 
     .line 0
-    const/4 v0, 0x2
+    const/4 v9, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    if-eqz p0, :cond_2
 
     .line 2
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v2, LX/1kJ;
 
+    .line 4
     .line 5
+    const v1, -0x30accdee
+
     .line 6
     .line 7
-    iput-object p2, p0, LX/1iG;->A04:LX/1Nw;
-
     .line 8
-    .line 9
-    iput-object p1, p0, LX/1iG;->A03:LX/1dN;
-
-    .line 10
-    .line 11
-    sget v0, LX/2eq;->A6A:I
-
-    .line 12
-    .line 13
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
-
-    .line 17
-    iput-object v0, p0, LX/1iG;->A00:LX/1Nm;
-
-    .line 18
-    .line 19
-    invoke-static {}, LX/1Nl;->A07()LX/1Nm;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    iput-object v0, p0, LX/1iG;->A01:LX/1Nm;
-
-    .line 24
-    .line 25
-    sget v0, LX/2eq;->A7h:I
-
-    .line 26
-    .line 27
-    invoke-static {v0}, LX/1Nl;->A08(I)LX/1Nm;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    iput-object v0, p0, LX/1iG;->A02:LX/1Nm;
-
-    .line 32
-    .line 33
-    return-void
-.end method
-
-.method public static final A00(LX/1pa;LX/1iG;Ljava/lang/String;LX/1iH;)V
-    .locals 4
-
-    .line 0
-    iget-object v3, p1, LX/1iG;->A03:LX/1dN;
-
-    .line 1
-    .line 2
-    instance-of v0, v3, LX/1pX;
-
-    .line 3
-    .line 4
-    if-nez v0, :cond_1
-
-    .line 5
-    .line 6
-    iget-object v0, p1, LX/1iG;->A02:LX/1Nm;
-
-    .line 7
-    .line 8
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    const v0, -0x16609c2f
 
     .line 9
     .line 10
     .line 11
-    move-result-object v0
+    invoke-static {p0, v2, v1, v0}, LX/0X5;->A0F(LX/1gb;Ljava/lang/Class;II)LX/1gb;
 
     .line 12
-    check-cast v0, LX/1dJ;
-
     .line 13
     .line 14
-    invoke-interface {v0}, LX/1dJ;->AIH()Lcom/facebook/auth/viewercontext/ViewerContext;
+    move-result-object v3
 
     .line 15
+    if-eqz v3, :cond_2
+
     .line 16
     .line 17
-    move-result-object v1
+    const v1, 0x1a2fb797
 
     .line 18
-    sget-object v0, Lcom/facebook/auth/viewercontext/ViewerContext;->A01:Lcom/facebook/auth/viewercontext/ViewerContext;
-
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const v0, -0x1951cbc7
 
     .line 21
     .line 22
     .line 23
-    move-result v0
+    invoke-static {v3, v2, v1, v0}, LX/0X5;->A0F(LX/1gb;Ljava/lang/Class;II)LX/1gb;
 
     .line 24
-    if-eqz v0, :cond_0
-
     .line 25
     .line 26
-    iget-object v0, p1, LX/1iG;->A01:LX/1Nm;
+    move-result-object v3
 
     .line 27
-    .line 28
-    invoke-static {v0}, LX/1Nm;->A05(LX/1Nm;)LX/0Gk;
+    if-eqz v3, :cond_2
 
+    .line 28
     .line 29
+    const v1, 0x5be4a56
+
     .line 30
     .line 31
-    move-result-object v2
-
     .line 32
-    const-string v1, "attribution_sdk:GraphQLAttributionEventsClient"
+    const v0, 0x168ddf68
 
     .line 33
     .line 34
-    const-string/jumbo v0, "viewer context is null for event "
-
     .line 35
+    invoke-virtual {v3, v1, v2, v0}, LX/1gb;->getCachedTreeList(ILjava/lang/Class;I)Lcom/google/common/collect/ImmutableList;
+
     .line 36
     .line 37
-    invoke-static {v2, v0, p2, v1}, LX/0Yi;->A1B(LX/0Gk;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 38
-    .line 39
-    .line 40
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 41
-    .line 42
-    .line 43
     move-result-object v0
 
+    .line 39
+    if-eqz v0, :cond_2
+
+    .line 40
+    .line 41
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
+
+    .line 42
+    .line 43
     .line 44
-    invoke-static {p2, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    move-result-object v3
 
     .line 45
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
+
     .line 46
     .line 47
-    move-result-object v1
-
     .line 48
-    const/4 v0, 0x0
+    move-result-object v5
 
     .line 49
-    invoke-interface {p3, v1, v0}, LX/1iH;->AY4(Ljava/lang/String;Ljava/lang/Throwable;)V
+    :cond_0
+    :goto_0
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     .line 50
     .line 51
     .line 52
-    return-void
+    move-result v0
 
     .line 53
-    :cond_0
-    iput-object v1, p0, LX/1pa;->A00:Lcom/facebook/auth/viewercontext/ViewerContext;
+    if-eqz v0, :cond_1
 
     .line 54
     .line 55
-    :cond_1
-    const-wide v0, 0x2a0cb037cbb0dL
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 56
     .line 57
     .line 58
+    move-result-object v4
+
     .line 59
+    check-cast v4, LX/1gb;
+
     .line 60
-    new-instance v2, LX/37j;
-
     .line 61
-    .line 62
-    invoke-direct {v2, v0, v1}, LX/37j;-><init>(J)V
+    const v0, 0x33ae02
 
+    .line 62
     .line 63
     .line 64
-    .line 65
-    iput-object v2, p0, LX/1j2;->A06:LX/37j;
+    const v1, -0x31985104
 
+    .line 65
     .line 66
     .line 67
-    const/4 v0, 0x0
+    invoke-virtual {v4, v0, v2, v1}, LX/1gb;->getCachedNullableTree(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
 
     .line 68
-    new-instance v1, LX/1cQ;
-
     .line 69
     .line 70
-    invoke-direct {v1, p1, p3, p2, v0}, LX/1cQ;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;I)V
+    move-result-object v7
 
     .line 71
+    check-cast v7, LX/1kJ;
+
     .line 72
     .line 73
-    iget-object v0, p1, LX/1iG;->A00:LX/1Nm;
+    if-eqz v7, :cond_0
 
     .line 74
     .line 75
-    invoke-static {v0}, LX/1Nm;->A0F(LX/1Nm;)Ljava/util/concurrent/Executor;
+    iget v0, v7, Lcom/facebook/graphservice/tree/TreeJNI;->mTypeTag:I
 
     .line 76
     .line 77
-    .line 78
-    move-result-object v0
+    if-ne v0, v1, :cond_0
 
+    .line 78
     .line 79
-    invoke-interface {v3, p0, v1, v0}, LX/1dN;->AAP(LX/46D;LX/1RS;Ljava/util/concurrent/Executor;)V
+    const v1, -0x3da22f77
 
     .line 80
     .line 81
     .line 82
-    return-void
+    invoke-virtual {v7, v1}, LX/1gb;->getCachedNullableString(I)Ljava/lang/String;
+
+    .line 83
+    .line 84
+    .line 85
+    move-result-object v0
+
+    .line 86
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
+
+    .line 87
+    .line 88
+    .line 89
+    move-result p0
+
+    .line 90
+    invoke-virtual {v7, v1}, LX/1gb;->getCachedNullableString(I)Ljava/lang/String;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v8
+
+    .line 94
+    const v0, 0x354c2c
+
+    .line 95
+    .line 96
+    .line 97
+    invoke-virtual {v7, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getIntValue(I)I
+
+    .line 98
+    .line 99
+    .line 100
+    move-result v10
+
+    .line 101
+    const v0, -0xdd2782d
+
+    .line 102
+    .line 103
+    .line 104
+    invoke-virtual {v7, v0}, Lcom/facebook/graphservice/tree/TreeJNI;->getIntValue(I)I
+
+    .line 105
+    .line 106
+    .line 107
+    move-result v11
+
+    .line 108
+    new-instance v6, Lcom/facebook/interstitial/api/GraphQLInterstitialsResult;
+
+    .line 109
+    .line 110
+    move-wide v12, p1
+
+    .line 111
+    invoke-direct/range {v6 .. v14}, Lcom/facebook/interstitial/api/GraphQLInterstitialsResult;-><init>(LX/1kJ;Ljava/lang/String;Ljava/lang/String;IIJZ)V
+
+    .line 112
+    .line 113
+    .line 114
+    invoke-virtual {v3, v6}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+
+    .line 115
+    .line 116
+    .line 117
+    goto :goto_0
+
+    .line 118
+    :cond_1
+    invoke-virtual {v3}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
+
+    .line 119
+    .line 120
+    .line 121
+    move-result-object v9
+
+    .line 122
+    :cond_2
+    return-object v9
 .end method

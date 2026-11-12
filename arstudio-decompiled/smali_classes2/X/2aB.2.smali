@@ -3,67 +3,53 @@
 .source ""
 
 
+# instance fields
+.field public final A00:LX/0RP;
+
+.field public final A01:LX/0RP;
+
+
 # direct methods
-.method public static A00(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;I)I
-    .locals 0
-
-    .line 0
-    if-nez p0, :cond_0
-
-    .line 1
-    .line 2
-    const/4 p0, 0x1
-
-    .line 3
-    return p0
-
-    .line 4
-    :cond_0
-    invoke-virtual {p0, p1, p3, p2}, Landroid/app/AppOpsManager;->checkOpNoThrow(Ljava/lang/String;ILjava/lang/String;)I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result p0
-
-    .line 8
-    return p0
-.end method
-
-.method public static A01(Landroid/content/Context;)Landroid/app/AppOpsManager;
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    const-class v0, Landroid/app/AppOpsManager;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
     .line 3
+    sget v0, LX/2I6;->AMf:I
+
     .line 4
     .line 5
-    move-result-object v0
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 6
-    check-cast v0, Landroid/app/AppOpsManager;
-
     .line 7
     .line 8
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public static A02(Landroid/content/Context;)Ljava/lang/String;
-    .locals 0
+    .line 9
+    iput-object v0, p0, LX/2aB;->A00:LX/0RP;
 
-    .line 0
-    invoke-virtual {p0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
+    .line 10
+    .line 11
+    sget v0, LX/2I6;->AMg:I
 
-    .line 1
-    .line 2
-    .line 3
-    move-result-object p0
+    .line 12
+    .line 13
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
-    .line 4
-    return-object p0
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    iput-object v0, p0, LX/2aB;->A01:LX/0RP;
+
+    .line 18
+    .line 19
+    return-void
 .end method

@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/5WZ;
+.implements LX/5pC;
 
 
 # instance fields
@@ -35,6 +35,12 @@
 
 
 # virtual methods
+.method public addListener(LX/5p8;)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public getExecutionMode()Lcom/facebook/cameracore/mediapipeline/dataproviders/motion/interfaces/MotionDataSource$ExecutionMode;
     .locals 1
 
@@ -79,12 +85,6 @@
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public setListener(LX/5Wg;)V
-    .locals 0
-
-    return-void
 .end method
 
 .method public start()V

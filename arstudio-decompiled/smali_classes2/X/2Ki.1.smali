@@ -1,33 +1,25 @@
 .class public final LX/2Ki;
-.super LX/2Kg;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/2Ki;
+# instance fields
+.field public final synthetic A00:LX/2TF;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, LX/2Ki;
-
-    invoke-direct {v0}, LX/2Ki;-><init>()V
-
-    sput-object v0, LX/2Ki;->A00:LX/2Ki;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(LX/2TF;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/2Kg;-><init>()V
+    iput-object p1, p0, LX/2Ki;->A00:LX/2TF;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
     return-void
 .end method

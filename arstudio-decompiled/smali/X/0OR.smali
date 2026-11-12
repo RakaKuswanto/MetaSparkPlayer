@@ -1,71 +1,49 @@
 .class public final LX/0OR;
-.super LX/0Ji;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/0W7;
 
 
 # instance fields
-.field public final A00:Ljava/util/ArrayList;
+.field public final A00:Landroid/content/SharedPreferences;
+
+.field public final A01:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Z)V
+    .locals 3
 
     .line 0
-    const/16 v0, 0x10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/0Ji;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/0OR;->A01:Landroid/content/Context;
+
     .line 4
     .line 5
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    :try_start_0
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 6
     .line 7
     .line 8
-    move-result-object v0
+    const/4 v0, 0x0
 
     .line 9
-    iput-object v0, p0, LX/0OR;->A00:Ljava/util/ArrayList;
+    if-eqz p3, :cond_0
 
     .line 10
     .line 11
-    return-void
-.end method
+    const/4 v0, 0x4
 
-.method public static A00(LX/0OR;Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/0Ji;->A04:Z
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    iget-object v0, p0, LX/0OR;->A00:Ljava/util/ArrayList;
-
-    .line 5
-    .line 6
-    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    const-string v0, "Expected object to be mutable"
-
-    .line 11
     .line 12
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    :cond_0
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     .line 13
     .line 14
@@ -73,259 +51,283 @@
     move-result-object v0
 
     .line 16
-    throw v0
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 17
+    .line 18
+    .line 19
+    goto :goto_0
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 20
+    :catch_0
+    move-exception v2
+
+    .line 21
+    const-string v1, "SharedPreferencesManager"
+
+    .line 22
+    .line 23
+    const-string v0, "DeadObjectException initializing SharedPreferences"
+
+    .line 24
+    .line 25
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 26
+    .line 27
+    .line 28
+    const/4 v0, 0x0
+
+    .line 29
+    :goto_0
+    iput-object v0, p0, LX/0OR;->A00:Landroid/content/SharedPreferences;
+
+    .line 30
+    .line 31
+    return-void
 .end method
 
 
 # virtual methods
-.method public final A04()V
-    .locals 1
+.method public final A7v()LX/0W9;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/0OR;->A00:Ljava/util/ArrayList;
+    iget-object v0, p0, LX/0OR;->A00:Landroid/content/SharedPreferences;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->clear()V
+    if-nez v0, :cond_0
 
     .line 3
     .line 4
-    .line 5
-    return-void
-.end method
-
-.method public final A05()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/0Ji;->A01:LX/0Jj;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/0Jj;->A00:LX/0Bt;
-
-    .line 3
-    .line 4
-    invoke-virtual {v0, p0}, LX/0XG;->AiS(Ljava/lang/Object;)Z
+    const-string v1, "SharedPreferencesManager"
 
     .line 5
     .line 6
-    .line 7
-    return-void
-.end method
-
-.method public final A06()V
-    .locals 5
-
-    .line 0
-    iget-object v4, p0, LX/0OR;->A00:Ljava/util/ArrayList;
-
-    .line 1
-    .line 2
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v3
-
-    .line 6
-    const/4 v2, 0x0
+    const-string v0, "sharedPreferences is null, returning NoOpEditorImpl"
 
     .line 7
-    :goto_0
-    if-ge v2, v3, :cond_1
-
     .line 8
-    .line 9
-    invoke-virtual {v4, v2}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 9
     .line 10
     .line 11
-    .line 12
-    move-result-object v1
+    new-instance v1, LX/0OS;
 
+    .line 12
     .line 13
-    instance-of v0, v1, LX/0Ji;
+    invoke-direct {v1}, LX/0OS;-><init>()V
 
     .line 14
     .line 15
-    if-eqz v0, :cond_0
-
     .line 16
+    return-object v1
+
     .line 17
-    check-cast v1, LX/0Ji;
-
-    .line 18
-    .line 19
-    invoke-virtual {v1}, LX/0Ji;->A03()V
-
-    .line 20
-    .line 21
-    .line 22
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    .line 23
-    .line 24
-    goto :goto_0
-
-    .line 25
-    :cond_1
-    return-void
-.end method
-
-.method public final A07(I)V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/0OR;->A00:Ljava/util/ArrayList;
-
-    .line 1
-    .line 2
-    invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v1
-
-    .line 6
-    sub-int/2addr v1, p1
-
-    .line 7
-    :goto_0
-    add-int/lit8 v0, v1, -0x1
-
-    .line 8
-    .line 9
-    if-lez v1, :cond_0
-
-    .line 10
-    .line 11
-    invoke-static {v2}, LX/001;->A13(Ljava/util/AbstractList;)V
-
-    .line 12
-    .line 13
-    .line 14
-    move v1, v0
-
-    .line 15
-    goto :goto_0
-
-    .line 16
-    :cond_0
-    invoke-virtual {v2}, Ljava/util/ArrayList;->trimToSize()V
-
-    .line 17
     .line 18
-    .line 19
-    return-void
-.end method
-
-.method public final A0B()LX/0OR;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/0Ji;->A01:LX/0Jj;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/0Jj;->A01()LX/0OR;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    invoke-virtual {p0, v0}, LX/0OR;->A0D(LX/0Ji;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-object v0
-.end method
-
-.method public final A0C()LX/0OQ;
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/0Ji;->A01:LX/0Jj;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, LX/0Jj;->A02()LX/0OQ;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    invoke-virtual {p0, v0}, LX/0OR;->A0D(LX/0Ji;)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-object v0
-.end method
-
-.method public final A0D(LX/0Ji;)V
-    .locals 1
-
-    .line 0
-    const-string v0, "subParams cannot be null!"
-
-    .line 1
-    .line 2
-    invoke-static {v0, p1}, LX/0Qb;->A01(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 3
-    .line 4
-    .line 5
-    iget-boolean v0, p0, LX/0Ji;->A04:Z
-
-    .line 6
-    .line 7
-    if-eqz v0, :cond_0
-
-    .line 8
-    .line 9
-    invoke-virtual {p1}, LX/0Ji;->A02()V
-
-    .line 10
-    .line 11
-    .line 12
-    invoke-static {p0, p1}, LX/0OR;->A00(LX/0OR;Ljava/lang/Object;)V
-
-    .line 13
-    .line 14
-    .line 15
-    invoke-virtual {p1}, LX/0Ji;->A02()V
-
-    .line 16
-    .line 17
-    .line 18
-    iput-object p0, p1, LX/0Ji;->A00:LX/0Ji;
-
     .line 19
     .line 20
-    return-void
+    move-result-object v0
 
     .line 21
-    :cond_0
-    const-string v0, "Expected object to be mutable"
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
     .line 24
+    new-instance v1, LX/0OX;
+
     .line 25
     .line 26
-    move-result-object v0
+    invoke-direct {v1, v0}, LX/0OX;-><init>(Landroid/content/SharedPreferences$Editor;)V
 
     .line 27
-    throw v0
+    .line 28
+    .line 29
+    return-object v1
+.end method
+
+.method public final getAll()Ljava/util/Map;
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/0OR;->A00:Landroid/content/SharedPreferences;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    const-string v1, "SharedPreferencesManager"
+
+    .line 5
+    .line 6
+    const-string v0, "sharedPreferences is null, returning empty map"
+
+    .line 7
+    .line 8
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {}, LX/24f;->A04()LX/24e;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    return-object v0
+
+    .line 16
+    :cond_0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 21
+    .line 22
+    .line 23
+    return-object v0
+.end method
+
+.method public final getBoolean(Ljava/lang/String;Z)Z
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/0OR;->A00:Landroid/content/SharedPreferences;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    const-string v1, "SharedPreferencesManager"
+
+    .line 5
+    .line 6
+    const-string v0, "sharedPreferences is null, returning default boolean value"
+
+    .line 7
+    .line 8
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return p2
+
+    .line 12
+    :cond_0
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    return v0
+.end method
+
+.method public final getLong(Ljava/lang/String;J)J
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/0OR;->A00:Landroid/content/SharedPreferences;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    const-string v1, "SharedPreferencesManager"
+
+    .line 5
+    .line 6
+    const-string v0, "sharedPreferences is null, returning default long value"
+
+    .line 7
+    .line 8
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-wide p2
+
+    .line 12
+    :cond_0
+    invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-wide v0
+
+    .line 16
+    return-wide v0
+.end method
+
+.method public final getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/0OR;->A00:Landroid/content/SharedPreferences;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
+    .line 4
+    const-string v1, "SharedPreferencesManager"
+
+    .line 5
+    .line 6
+    const-string v0, "sharedPreferences is null, returning default string value"
+
+    .line 7
+    .line 8
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    :cond_0
+    return-object p2
+
+    .line 12
+    :cond_1
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    if-eqz v0, :cond_0
+
+    .line 17
+    .line 18
+    return-object v0
 .end method

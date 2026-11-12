@@ -1,33 +1,21 @@
 .class public final LX/1VC;
-.super LX/1VB;
+.super LX/1gb;
 .source ""
 
-
-# instance fields
-.field public final A00:Lcom/facebook/iabadscontext/IABAdsContext;
+# interfaces
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/iabadscontext/IABAdsContext;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(I[I)V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x2
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
-    invoke-static {p2, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
-    .line 4
-    invoke-direct {p0, p1, p2}, LX/1VB;-><init>(Lcom/facebook/iabadscontext/IABAdsContext;Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/1VC;->A00:Lcom/facebook/iabadscontext/IABAdsContext;
-
-    .line 8
-    .line 9
     return-void
 .end method

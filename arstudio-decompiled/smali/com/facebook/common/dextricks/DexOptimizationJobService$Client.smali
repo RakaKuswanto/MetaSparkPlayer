@@ -61,7 +61,7 @@
     move-exception v1
 
     .line 18
-    invoke-static {v1}, LX/002;->A0R(Ljava/lang/Throwable;)Z
+    invoke-static {v1}, LX/001;->A1V(Ljava/lang/Throwable;)Z
 
     .line 19
     .line 20
@@ -234,7 +234,7 @@
     move-exception v1
 
     .line 64
-    invoke-static {v1}, LX/002;->A0R(Ljava/lang/Throwable;)Z
+    invoke-static {v1}, LX/001;->A1V(Ljava/lang/Throwable;)Z
 
     .line 65
     .line 66

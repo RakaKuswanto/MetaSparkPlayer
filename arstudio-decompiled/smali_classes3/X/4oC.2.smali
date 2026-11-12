@@ -1,87 +1,49 @@
 .class public final LX/4oC;
-.super LX/0ru;
+.super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:LX/4n6;
+.field public A00:J
 
-.field public final A01:LX/4qm;
+.field public A01:J
 
-.field public final A02:LX/4lL;
-
-.field public final A03:LX/4ok;
-
-.field public final A04:LX/4qJ;
-
-.field public final A05:Ljava/lang/String;
-
-.field public final A06:Z
-
-.field public final A07:Z
-
-.field public final A08:Z
-
-.field public final A09:Z
+.field public final A02:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(LX/4qm;LX/4lL;LX/4ok;LX/4n6;LX/4qJ;Ljava/lang/String;ZZZZ)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    invoke-static {p4, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
-    .line 4
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
+    .line 4
     .line 5
     .line 6
+    move-result-object v0
+
     .line 7
-    iput-object p4, p0, LX/4oC;->A00:LX/4n6;
+    iput-object v0, p0, LX/4oC;->A02:Ljava/util/ArrayList;
 
     .line 8
     .line 9
-    iput-boolean p7, p0, LX/4oC;->A06:Z
+    const-wide/16 v0, 0x0
 
     .line 10
     .line 11
-    iput-boolean p8, p0, LX/4oC;->A08:Z
+    iput-wide v0, p0, LX/4oC;->A01:J
 
     .line 12
     .line 13
-    iput-boolean p9, p0, LX/4oC;->A09:Z
+    iput-wide v0, p0, LX/4oC;->A00:J
 
     .line 14
     .line 15
-    iput-object p5, p0, LX/4oC;->A04:LX/4qJ;
-
-    .line 16
-    .line 17
-    iput-boolean p10, p0, LX/4oC;->A07:Z
-
-    .line 18
-    .line 19
-    iput-object p2, p0, LX/4oC;->A02:LX/4lL;
-
-    .line 20
-    .line 21
-    iput-object p6, p0, LX/4oC;->A05:Ljava/lang/String;
-
-    .line 22
-    .line 23
-    iput-object p1, p0, LX/4oC;->A01:LX/4qm;
-
-    .line 24
-    .line 25
-    iput-object p3, p0, LX/4oC;->A03:LX/4ok;
-
-    .line 26
-    .line 27
     return-void
 .end method

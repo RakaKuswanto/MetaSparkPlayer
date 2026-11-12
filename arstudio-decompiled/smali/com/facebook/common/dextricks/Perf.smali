@@ -12,10 +12,6 @@
 
 .field public static final DEXSTORE_LOAD_ALL:Ljava/lang/String; = "DLL2_dexstore_load_all"
 
-.field public static final DITTO_PATCH_APPLY:Ljava/lang/String; = "DLL2_ditto_apply"
-
-.field public static final DITTO_PATCH_GET:Ljava/lang/String; = "DLL2_ditto_get"
-
 .field public static final MANIFEST_LOAD:Ljava/lang/String; = "DLL2_manifest_load"
 
 .field public static final MDCL_INSTALL:Ljava/lang/String; = "DLL2_multidex_class_loader_subsequent_"

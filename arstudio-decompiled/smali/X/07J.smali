@@ -1,4 +1,4 @@
-.class public final LX/07J;
+.class public abstract LX/07J;
 .super Ljava/lang/Object;
 .source ""
 

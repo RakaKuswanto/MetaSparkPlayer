@@ -16,7 +16,7 @@
 
 .field public final mErrorData:Ljava/lang/String;
 
-.field public final mErrorDomain:LX/1dO;
+.field public final mErrorDomain:LX/1yl;
 
 .field public final mErrorMessage:Ljava/lang/String;
 
@@ -40,11 +40,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x51
+    const/16 v0, 0x47
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 3
     .line 4
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1dO;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZ)V
+.method public constructor <init>(LX/1yl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZ)V
     .locals 0
 
     .line 268435456
@@ -92,7 +92,7 @@
 
     .line 268435470
     .line 268435471
-    iput-object p1, p0, Lcom/facebook/http/protocol/ApiErrorResult;->mErrorDomain:LX/1dO;
+    iput-object p1, p0, Lcom/facebook/http/protocol/ApiErrorResult;->mErrorDomain:LX/1yl;
 
     .line 268435472
     .line 268435473
@@ -208,7 +208,7 @@
 
     .line 44
     .line 45
-    const-class v1, LX/1dO;
+    const-class v1, LX/1yl;
 
     .line 46
     .line 47
@@ -228,11 +228,11 @@
     move-result-object v0
 
     .line 55
-    check-cast v0, LX/1dO;
+    check-cast v0, LX/1yl;
 
     .line 56
     .line 57
-    iput-object v0, p0, Lcom/facebook/http/protocol/ApiErrorResult;->mErrorDomain:LX/1dO;
+    iput-object v0, p0, Lcom/facebook/http/protocol/ApiErrorResult;->mErrorDomain:LX/1yl;
 
     .line 58
     .line 59
@@ -511,7 +511,7 @@
     .line 33
     .line 34
     .line 35
-    iget-object v0, p0, Lcom/facebook/http/protocol/ApiErrorResult;->mErrorDomain:LX/1dO;
+    iget-object v0, p0, Lcom/facebook/http/protocol/ApiErrorResult;->mErrorDomain:LX/1yl;
 
     .line 36
     .line 37

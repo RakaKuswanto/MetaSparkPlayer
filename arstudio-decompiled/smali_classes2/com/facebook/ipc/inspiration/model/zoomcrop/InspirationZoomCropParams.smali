@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/18Z;
 
 
 # annotations
@@ -42,17 +41,19 @@
 
 .field public final A09:Z
 
+.field public final A0A:Z
+
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    const/16 v0, 0x16
+    const/16 v0, 0x41
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -67,7 +68,7 @@
     return-void
 .end method
 
-.method public constructor <init>(FFFFFFIIZZ)V
+.method public constructor <init>(FFFFFFIIZZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -79,6 +80,8 @@
     iput-boolean p9, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A08:Z
 
     iput-boolean p10, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A09:Z
+
+    iput-boolean p11, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A0A:Z
 
     iput p3, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
 
@@ -104,142 +107,149 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0s(Ljava/lang/Object;)V
+    invoke-static {p1, p0}, LX/0X2;->A00(Landroid/os/Parcel;Ljava/lang/Object;)F
 
     .line 4
     .line 5
     .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
     iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A00:F
 
+    .line 8
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    .line 10
     .line 11
     .line 12
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
     iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A01:F
 
+    .line 14
+    .line 15
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 16
     .line 17
     .line 18
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    .line 19
-    .line 20
-    .line 21
     move-result v1
 
-    .line 22
+    .line 19
     const/4 v0, 0x1
 
+    .line 20
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
+
+    .line 21
+    .line 22
     .line 23
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    move-result v0
 
     .line 24
-    .line 25
-    .line 26
-    move-result v0
-
-    .line 27
     iput-boolean v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A08:Z
 
+    .line 25
+    .line 26
+    invoke-static {p1}, LX/0X1;->A1X(Landroid/os/Parcel;)Z
+
+    .line 27
     .line 28
     .line 29
-    invoke-static {p1}, LX/0Yd;->A1W(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 30
-    .line 31
-    .line 32
-    move-result v0
-
-    .line 33
     iput-boolean v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A09:Z
 
+    .line 31
+    .line 32
+    invoke-static {p1}, LX/0X2;->A1S(Landroid/os/Parcel;)Z
+
+    .line 33
     .line 34
     .line 35
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 36
+    iput-boolean v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A0A:Z
+
     .line 37
     .line 38
-    move-result v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     .line 39
-    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
-
     .line 40
     .line 41
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
 
     .line 42
+    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
+
     .line 43
     .line 44
-    move-result v0
-
-    .line 45
-    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
-
-    .line 46
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
+    .line 45
+    .line 46
+    .line 47
+    move-result v0
+
     .line 48
+    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
+
     .line 49
     .line 50
-    move-result v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 51
-    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
-
     .line 52
     .line 53
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 54
+    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
+
     .line 55
     .line 56
-    move-result v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     .line 57
-    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
-
     .line 58
     .line 59
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    move-result v0
 
     .line 60
+    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
+
     .line 61
     .line 62
-    move-result v0
-
-    .line 63
-    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
-
-    .line 64
-    .line 65
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
-    .line 66
-    .line 67
-    .line 68
+    .line 63
+    .line 64
+    .line 65
     move-result v0
 
-    .line 69
-    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+    .line 66
+    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
 
+    .line 67
+    .line 68
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    .line 69
     .line 70
     .line 71
+    move-result v0
+
+    .line 72
+    iput v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+
+    .line 73
+    .line 74
     return-void
 .end method
 
@@ -335,39 +345,39 @@
 
     .line 37
     .line 38
-    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
+    iget-boolean v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A0A:Z
 
     .line 39
     .line 40
-    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
+    iget-boolean v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A0A:Z
 
     .line 41
     .line 42
-    cmpl-float v0, v1, v0
+    if-ne v1, v0, :cond_0
 
     .line 43
     .line 44
-    if-nez v0, :cond_0
+    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
 
     .line 45
     .line 46
-    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
+    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
 
     .line 47
     .line 48
-    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
+    cmpl-float v0, v1, v0
 
     .line 49
     .line 50
-    if-ne v1, v0, :cond_0
+    if-nez v0, :cond_0
 
     .line 51
     .line 52
-    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
+    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
 
     .line 53
     .line 54
-    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
+    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
 
     .line 55
     .line 56
@@ -375,58 +385,70 @@
 
     .line 57
     .line 58
-    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
+    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
 
     .line 59
     .line 60
-    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
+    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
 
     .line 61
     .line 62
-    cmpl-float v0, v1, v0
+    if-ne v1, v0, :cond_0
 
     .line 63
     .line 64
-    if-nez v0, :cond_0
+    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
 
     .line 65
     .line 66
-    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
+    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
 
     .line 67
     .line 68
-    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
+    cmpl-float v0, v1, v0
 
     .line 69
     .line 70
-    cmpl-float v0, v1, v0
+    if-nez v0, :cond_0
 
     .line 71
     .line 72
-    if-nez v0, :cond_0
+    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
 
     .line 73
     .line 74
-    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
 
     .line 75
     .line 76
-    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+    cmpl-float v0, v1, v0
 
     .line 77
     .line 78
-    cmpl-float v0, v1, v0
+    if-nez v0, :cond_0
 
     .line 79
     .line 80
-    if-eqz v0, :cond_1
+    iget v1, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
 
     .line 81
     .line 82
+    iget v0, p1, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+
+    .line 83
+    .line 84
+    cmpl-float v0, v1, v0
+
+    .line 85
+    .line 86
+    if-eqz v0, :cond_1
+
+    .line 87
+    .line 88
     :cond_0
     return v2
 
-    .line 83
+    .line 89
     :cond_1
     return v3
 .end method
@@ -455,7 +477,7 @@
 
     .line 9
     .line 10
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 11
     .line 12
@@ -467,39 +489,41 @@
 
     .line 15
     .line 16
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 17
     .line 18
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 19
-    move-result v1
-
     .line 20
-    iget-boolean v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A09:Z
-
     .line 21
+    move-result v0
+
     .line 22
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    add-int/2addr v1, v0
 
     .line 23
+    iget-boolean v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A09:Z
+
     .line 24
     .line 25
-    move-result v1
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 26
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
-
     .line 27
-    .line 28
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
+    .line 28
     .line 29
     .line 30
+    move-result v0
+
     .line 31
-    move-result v1
+    add-int/2addr v1, v0
 
     .line 32
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
+    iget-boolean v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A0A:Z
 
     .line 33
     .line 34
@@ -507,56 +531,87 @@
 
     .line 35
     .line 36
-    add-int/2addr v1, v0
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 37
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
-
     .line 38
     .line 39
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v0
 
     .line 40
-    .line 41
     add-int/2addr v1, v0
 
+    .line 41
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
+
     .line 42
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
-
     .line 43
-    .line 44
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
+    .line 44
     .line 45
     .line 46
-    .line 47
     move-result v1
+
+    .line 47
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
 
     .line 48
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
-
     .line 49
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 50
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
-
     .line 51
-    .line 52
-    .line 53
-    move-result v1
+    add-int/2addr v1, v0
 
+    .line 52
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
+
+    .line 53
     .line 54
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 55
     .line 56
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    add-int/2addr v1, v0
 
     .line 57
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
+
     .line 58
     .line 59
-    move-result v0
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 60
+    .line 61
+    .line 62
+    move-result v1
+
+    .line 63
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
+
+    .line 64
+    .line 65
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 66
+    .line 67
+    .line 68
+    move-result v1
+
+    .line 69
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+
+    .line 70
+    .line 71
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
+
+    .line 72
+    .line 73
+    .line 74
+    move-result v0
+
+    .line 75
     return v0
 .end method
 
@@ -600,25 +655,25 @@
     .line 18
     .line 19
     .line 20
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
+    iget-boolean v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A0A:Z
 
     .line 21
     .line 22
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 23
     .line 24
     .line 25
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A02:F
 
     .line 26
     .line 27
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
     .line 28
     .line 29
     .line 30
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A06:I
 
     .line 31
     .line 32
@@ -627,16 +682,16 @@
     .line 33
     .line 34
     .line 35
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A07:I
 
     .line 36
     .line 37
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 38
     .line 39
     .line 40
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A03:F
 
     .line 41
     .line 42
@@ -645,7 +700,7 @@
     .line 43
     .line 44
     .line 45
-    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A04:F
 
     .line 46
     .line 47
@@ -654,5 +709,14 @@
     .line 48
     .line 49
     .line 50
+    iget v0, p0, Lcom/facebook/ipc/inspiration/model/zoomcrop/InspirationZoomCropParams;->A05:F
+
+    .line 51
+    .line 52
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    .line 53
+    .line 54
+    .line 55
     return-void
 .end method

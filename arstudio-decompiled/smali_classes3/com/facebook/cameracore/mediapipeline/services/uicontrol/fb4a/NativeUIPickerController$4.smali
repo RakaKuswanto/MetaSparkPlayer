@@ -1,5 +1,5 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController$4;
-.super LX/4ti;
+.super LX/4nI;
 .source ""
 
 
@@ -28,7 +28,7 @@
 
     .line 5
     .line 6
-    invoke-direct {p0, p2}, LX/4ti;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, LX/4nI;-><init>(Landroid/content/Context;)V
 
     .line 7
     .line 8

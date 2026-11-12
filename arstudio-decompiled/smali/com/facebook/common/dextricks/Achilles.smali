@@ -23,7 +23,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -56,6 +56,42 @@
     .line 9
     .line 10
     return-void
+.end method
+
+.method public static addTosharedLibraryLoadersAfter(Ldalvik/system/BaseDexClassLoader;Ljava/lang/ClassLoader;)Z
+    .locals 3
+
+    .line 0
+    new-instance v2, Lcom/facebook/common/dextricks/Achilles$Arrow;
+
+    .line 1
+    .line 2
+    invoke-direct {v2, p0, p1}, Lcom/facebook/common/dextricks/Achilles$Arrow;-><init>(Ldalvik/system/BaseDexClassLoader;Ljava/lang/ClassLoader;)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {}, Lcom/facebook/common/dextricks/Achilles;->addccl()J
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-wide v0
+
+    .line 9
+    invoke-static {v2, v0, v1}, Lcom/facebook/common/dextricks/Achilles;->attack(Ljava/lang/Object;J)V
+
+    .line 10
+    .line 11
+    .line 12
+    iget-boolean v0, v2, Lcom/facebook/common/dextricks/Achilles$Arrow;->sharedLibraryLoadersAfterAppended:Z
+
+    .line 13
+    .line 14
+    return v0
+.end method
+
+.method public static native addccl()J
 .end method
 
 .method public static attack(Ljava/lang/Object;J)V
@@ -132,28 +168,33 @@
 
     .line 33
     .line 34
-    :goto_0
-    iget-object v2, v3, Lcom/facebook/common/dextricks/Achilles;->exc:Ljava/lang/Throwable;
+    invoke-static {v0, v1}, Lcom/facebook/common/dextricks/Mlog;->i(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 35
     .line 36
+    .line 37
+    :goto_0
+    iget-object v2, v3, Lcom/facebook/common/dextricks/Achilles;->exc:Ljava/lang/Throwable;
+
+    .line 38
+    .line 39
     if-eqz v2, :cond_0
 
-    .line 37
-    .line 38
+    .line 40
+    .line 41
     const-string v1, "Achilles"
 
-    .line 39
-    .line 40
+    .line 42
+    .line 43
     const-string v0, "Caught exception in Achilles thread"
 
-    .line 41
-    .line 42
-    invoke-static {v1, v0, v2}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 43
     .line 44
     .line 45
+    invoke-static {v1, v0, v2}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 46
+    .line 47
+    .line 48
     :cond_0
     return-void
 .end method

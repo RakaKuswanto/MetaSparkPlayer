@@ -1,270 +1,337 @@
 .class public final LX/56d;
-.super Ljava/lang/Object;
+.super Lcom/google/gson/stream/JsonReader;
 .source ""
 
 
-# instance fields
-.field public final A00:Ljava/util/Map;
+# static fields
+.field public static final A04:Ljava/lang/Object;
 
-.field public final A01:Ljava/util/Map;
+.field public static final A05:Ljava/io/Reader;
+
+
+# instance fields
+.field public A00:I
+
+.field public A01:[I
+
+.field public A02:[Ljava/lang/Object;
+
+.field public A03:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/6Ya;
 
     .line 1
     .line 2
-    .line 3
-    new-instance v0, Ljava/util/WeakHashMap;
+    invoke-direct {v0}, LX/6Ya;-><init>()V
 
+    .line 3
     .line 4
     .line 5
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    sput-object v0, LX/56d;->A05:Ljava/io/Reader;
 
     .line 6
     .line 7
-    .line 8
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
+    .line 8
     .line 9
     .line 10
-    .line 11
     move-result-object v0
 
+    .line 11
+    sput-object v0, LX/56d;->A04:Ljava/lang/Object;
+
     .line 12
-    iput-object v0, p0, LX/56d;->A00:Ljava/util/Map;
+    .line 13
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/google/gson/JsonElement;)V
+    .locals 2
+
+    .line 0
+    sget-object v0, LX/56d;->A05:Ljava/io/Reader;
+
+    .line 1
+    .line 2
+    invoke-direct {p0, v0}, Lcom/google/gson/stream/JsonReader;-><init>(Ljava/io/Reader;)V
+
+    .line 3
+    .line 4
+    .line 5
+    const/16 v1, 0x20
+
+    .line 6
+    .line 7
+    new-array v0, v1, [Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/56d;->A02:[Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    iput v0, p0, LX/56d;->A00:I
 
     .line 13
     .line 14
-    new-instance v0, Ljava/util/WeakHashMap;
+    new-array v0, v1, [Ljava/lang/String;
 
     .line 15
     .line 16
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    iput-object v0, p0, LX/56d;->A03:[Ljava/lang/String;
 
     .line 17
     .line 18
-    .line 19
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+    new-array v0, v1, [I
 
+    .line 19
     .line 20
+    iput-object v0, p0, LX/56d;->A01:[I
+
     .line 21
     .line 22
-    move-result-object v0
+    invoke-static {p0, p1}, LX/56d;->A03(LX/56d;Ljava/lang/Object;)V
 
     .line 23
-    iput-object v0, p0, LX/56d;->A01:Ljava/util/Map;
-
     .line 24
     .line 25
     return-void
 .end method
 
-.method public static final A00(Lcom/google/android/gms/common/api/Status;LX/56d;Z)V
+.method public static A00(LX/56d;)Ljava/lang/Object;
     .locals 4
 
     .line 0
-    iget-object v1, p1, LX/56d;->A00:Ljava/util/Map;
+    iget-object v3, p0, LX/56d;->A02:[Ljava/lang/Object;
 
     .line 1
     .line 2
-    monitor-enter v1
+    iget v0, p0, LX/56d;->A00:I
 
     .line 3
-    :try_start_0
-    new-instance v0, Ljava/util/HashMap;
-
     .line 4
-    .line 5
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    add-int/lit8 v2, v0, -0x1
 
+    .line 5
     .line 6
+    iput v2, p0, LX/56d;->A00:I
+
     .line 7
     .line 8
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    aget-object v1, v3, v2
 
     .line 9
-    iget-object v1, p1, LX/56d;->A01:Ljava/util/Map;
-
     .line 10
+    const/4 v0, 0x0
+
     .line 11
-    monitor-enter v1
+    aput-object v0, v3, v2
 
     .line 12
-    :try_start_1
-    new-instance v3, Ljava/util/HashMap;
+    .line 13
+    return-object v1
+.end method
+
+.method public static A01(LX/56d;Z)Ljava/lang/String;
+    .locals 6
+
+    .line 0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v3
+
+    .line 4
+    const/16 v0, 0x24
+
+    .line 5
+    .line 6
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 7
+    .line 8
+    .line 9
+    const/4 v2, 0x0
+
+    .line 10
+    :goto_0
+    iget v5, p0, LX/56d;->A00:I
+
+    .line 11
+    .line 12
+    if-ge v2, v5, :cond_4
 
     .line 13
     .line 14
-    invoke-direct {v3, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    iget-object v4, p0, LX/56d;->A02:[Ljava/lang/Object;
 
     .line 15
     .line 16
-    .line 17
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    aget-object v1, v4, v2
 
+    .line 17
     .line 18
-    invoke-static {v0}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    instance-of v0, v1, Lcom/google/gson/JsonArray;
 
     .line 19
     .line 20
-    .line 21
-    move-result-object v2
+    if-eqz v0, :cond_3
 
+    .line 21
     .line 22
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    add-int/lit8 v2, v2, 0x1
 
     .line 23
     .line 24
-    .line 25
-    move-result v0
+    if-ge v2, v5, :cond_2
 
+    .line 25
     .line 26
-    if-eqz v0, :cond_2
+    aget-object v0, v4, v2
 
     .line 27
     .line 28
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    instance-of v0, v0, Ljava/util/Iterator;
 
     .line 29
     .line 30
-    .line 31
-    move-result-object v1
+    if-eqz v0, :cond_2
 
+    .line 31
     .line 32
-    if-nez p2, :cond_1
+    iget-object v0, p0, LX/56d;->A01:[I
 
     .line 33
     .line 34
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    aget v1, v0, v2
 
     .line 35
     .line 36
-    .line 37
-    move-result-object v0
+    if-eqz p1, :cond_1
 
+    .line 37
     .line 38
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    if-lez v1, :cond_1
 
     .line 39
     .line 40
-    .line 41
-    move-result v0
+    add-int/lit8 v0, v5, -0x1
 
+    .line 41
     .line 42
-    if-eqz v0, :cond_0
+    if-eq v2, v0, :cond_0
 
     .line 43
     .line 44
-    :cond_1
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    add-int/lit8 v0, v5, -0x2
 
     .line 45
     .line 46
-    .line 47
-    move-result-object v0
+    if-ne v2, v0, :cond_1
 
+    .line 47
     .line 48
-    check-cast v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;
+    :cond_0
+    add-int/lit8 v1, v1, -0x1
 
     .line 49
     .line 50
-    invoke-virtual {v0, p0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->A04(Lcom/google/android/gms/common/api/Status;)V
+    :cond_1
+    const/16 v0, 0x5b
 
     .line 51
     .line 52
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     .line 53
-    goto :goto_0
-
     .line 54
-    :cond_2
-    invoke-static {v3}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
-
     .line 55
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     .line 56
     .line 57
-    move-result-object v2
-
     .line 58
-    :cond_3
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    const/16 v0, 0x5d
 
     .line 59
     .line 60
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     .line 61
-    move-result v0
-
     .line 62
-    if-eqz v0, :cond_5
-
     .line 63
+    :cond_2
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
     .line 64
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
-
     .line 65
-    .line 66
-    .line 67
-    move-result-object v1
+    goto :goto_0
 
+    .line 66
+    :cond_3
+    instance-of v0, v1, LX/6WI;
+
+    .line 67
     .line 68
-    if-nez p2, :cond_4
+    if-eqz v0, :cond_2
 
     .line 69
     .line 70
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    add-int/lit8 v2, v2, 0x1
 
     .line 71
     .line 72
-    .line 73
-    move-result-object v0
+    if-ge v2, v5, :cond_2
 
+    .line 73
     .line 74
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    aget-object v0, v4, v2
 
     .line 75
     .line 76
-    .line 77
-    move-result v0
+    instance-of v0, v0, Ljava/util/Iterator;
 
+    .line 77
     .line 78
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     .line 79
     .line 80
-    :cond_4
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    const/16 v0, 0x2e
 
     .line 81
     .line 82
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     .line 83
-    move-result-object v1
-
     .line 84
-    check-cast v1, LX/5C4;
-
     .line 85
+    iget-object v0, p0, LX/56d;->A03:[Ljava/lang/String;
+
     .line 86
-    new-instance v0, LX/6Hd;
-
     .line 87
-    .line 88
-    invoke-direct {v0, p0}, LX/6Hd;-><init>(Lcom/google/android/gms/common/api/Status;)V
+    aget-object v0, v0, v2
 
+    .line 88
     .line 89
+    if-eqz v0, :cond_2
+
     .line 90
     .line 91
-    invoke-virtual {v1, v0}, LX/5C4;->A00(Ljava/lang/Exception;)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 92
     .line 93
@@ -272,32 +339,220 @@
     goto :goto_1
 
     .line 95
-    :cond_5
-    return-void
+    :cond_4
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 96
-    :catchall_0
-    move-exception v0
-
     .line 97
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
     .line 98
-    throw v0
+    move-result-object v0
 
     .line 99
-    :catchall_1
-    move-exception v0
+    return-object v0
+.end method
 
-    .line 100
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+.method public static A02(LX/56d;Ljava/lang/Integer;)V
+    .locals 2
 
-    .line 101
+    .line 0
+    invoke-virtual {p0}, Lcom/google/gson/stream/JsonReader;->A0J()Ljava/lang/Integer;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    if-ne v0, p1, :cond_0
+
+    .line 5
+    .line 6
+    return-void
+
+    .line 7
+    :cond_0
+    invoke-static {p1}, LX/6Xc;->A00(Ljava/lang/Integer;)Ljava/lang/String;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    invoke-static {p0}, LX/431;->A0f(Lcom/google/gson/stream/JsonReader;)Ljava/lang/String;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    invoke-static {p0, v1, v0}, LX/431;->A0V(LX/56d;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
     throw v0
+.end method
+
+.method public static A03(LX/56d;Ljava/lang/Object;)V
+    .locals 3
+
+    .line 0
+    iget v1, p0, LX/56d;->A00:I
+
+    .line 1
+    .line 2
+    iget-object v2, p0, LX/56d;->A02:[Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    array-length v0, v2
+
+    .line 5
+    if-ne v1, v0, :cond_0
+
+    .line 6
+    .line 7
+    mul-int/lit8 v1, v1, 0x2
+
+    .line 8
+    .line 9
+    invoke-static {v2, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/56d;->A02:[Ljava/lang/Object;
+
+    .line 14
+    .line 15
+    iget-object v0, p0, LX/56d;->A01:[I
+
+    .line 16
+    .line 17
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    iput-object v0, p0, LX/56d;->A01:[I
+
+    .line 22
+    .line 23
+    iget-object v0, p0, LX/56d;->A03:[Ljava/lang/String;
+
+    .line 24
+    .line 25
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    check-cast v0, [Ljava/lang/String;
+
+    .line 30
+    .line 31
+    iput-object v0, p0, LX/56d;->A03:[Ljava/lang/String;
+
+    .line 32
+    .line 33
+    :cond_0
+    iget-object v2, p0, LX/56d;->A02:[Ljava/lang/Object;
+
+    .line 34
+    .line 35
+    iget v1, p0, LX/56d;->A00:I
+
+    .line 36
+    .line 37
+    add-int/lit8 v0, v1, 0x1
+
+    .line 38
+    .line 39
+    iput v0, p0, LX/56d;->A00:I
+
+    .line 40
+    .line 41
+    aput-object p1, v2, v1
+
+    .line 42
+    .line 43
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    .line 0
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v3
+
+    .line 4
+    const-string v2, " at path "
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    invoke-static {p0, v0}, LX/56d;->A01(LX/56d;Z)Ljava/lang/String;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    invoke-static {v2}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v1
+
+    .line 19
+    invoke-static {v3}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    return-object v0
 .end method

@@ -1,19 +1,18 @@
-.class public final LX/67g;
+.class public final LX/67G;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/698;
+
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:Ljava/util/Map;
-
-.field public final A02:[Ljava/lang/String;
+.field public A00:LX/5rO;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Map;[Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -21,20 +20,26 @@
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/67g;->A02:[Ljava/lang/String;
-
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/67g;->A01:Ljava/util/Map;
-
-    .line 6
-    .line 7
-    array-length v0, p2
-
-    .line 8
-    iput v0, p0, LX/67g;->A00:I
-
-    .line 9
-    .line 10
     return-void
+.end method
+
+
+# virtual methods
+.method public final deliverOnRenderThread()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getType()LX/61j;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/61j;->INPUT_PREVIEW:LX/61j;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

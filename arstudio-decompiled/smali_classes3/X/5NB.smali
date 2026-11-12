@@ -1,417 +1,293 @@
-.class public final LX/5NB;
-.super Ljava/lang/Object;
+.class public final enum LX/5NB;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/5YN;
+
+# static fields
+.field public static final synthetic $VALUES:[LX/5NB;
+
+.field public static final enum ABOVE_HIGH_WATERMARK:LX/5NB;
+
+.field public static final enum BUFFER_DRAINING_ABOVE_LOW_WATERMARK:LX/5NB;
+
+.field public static final enum PAUSED:LX/5NB;
+
+.field public static final enum TARGET_BUFFER_SIZE_REACHED:LX/5NB;
+
+.field public static final enum UNKNOWN:LX/5NB;
 
 
 # instance fields
-.field public A00:Ljava/lang/Object;
-
-.field public A01:Ljava/lang/Object;
-
-.field public A02:Ljava/lang/Object;
-
-.field public A03:Ljava/lang/Object;
-
-.field public final A04:I
+.field public final value:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-    .locals 0
+.method public static synthetic $values()[LX/5NB;
+    .locals 3
 
     .line 0
-    iput p5, p0, LX/5NB;->A04:I
+    const/4 v0, 0x5
 
     .line 1
+    new-array v2, v0, [LX/5NB;
+
     .line 2
-    iput-object p3, p0, LX/5NB;->A00:Ljava/lang/Object;
-
     .line 3
-    .line 4
-    iput-object p4, p0, LX/5NB;->A01:Ljava/lang/Object;
+    sget-object v1, LX/5NB;->UNKNOWN:LX/5NB;
 
+    .line 4
     .line 5
+    const/4 v0, 0x0
+
     .line 6
-    iput-object p1, p0, LX/5NB;->A03:Ljava/lang/Object;
+    aput-object v1, v2, v0
 
     .line 7
     .line 8
-    iput-object p2, p0, LX/5NB;->A02:Ljava/lang/Object;
+    sget-object v1, LX/5NB;->PAUSED:LX/5NB;
 
     .line 9
     .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
     .line 11
+    aput-object v1, v2, v0
+
     .line 12
     .line 13
-    return-void
+    sget-object v1, LX/5NB;->BUFFER_DRAINING_ABOVE_LOW_WATERMARK:LX/5NB;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, LX/5NB;->ABOVE_HIGH_WATERMARK:LX/5NB;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    sget-object v1, LX/5NB;->TARGET_BUFFER_SIZE_REACHED:LX/5NB;
+
+    .line 24
+    .line 25
+    const/4 v0, 0x4
+
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
+    .line 28
+    return-object v2
 .end method
 
-
-# virtual methods
-.method public final AXY(Ljava/lang/Throwable;)V
+.method public static constructor <clinit>()V
     .locals 4
 
     .line 0
-    iget v0, p0, LX/5NB;->A04:I
+    const-string v3, "UNKNOWN"
 
     .line 1
     .line 2
-    iget-object v3, p0, LX/5NB;->A00:Ljava/lang/Object;
+    const/4 v2, 0x0
 
     .line 3
+    const-string v1, "unknown"
+
     .line 4
-    check-cast v3, LX/5og;
-
     .line 5
+    new-instance v0, LX/5NB;
+
     .line 6
-    if-eqz v0, :cond_0
-
     .line 7
-    .line 8
-    iget-object v2, p0, LX/5NB;->A02:Ljava/lang/Object;
+    invoke-direct {v0, v3, v2, v1}, LX/5NB;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 8
     .line 9
     .line 10
-    const/4 v1, 0x4
+    sput-object v0, LX/5NB;->UNKNOWN:LX/5NB;
 
     .line 11
-    new-instance v0, LX/6Pv;
-
     .line 12
+    const-string v3, "PAUSED"
+
     .line 13
-    invoke-direct {v0, p1, v1, v2}, LX/6Pv;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
     .line 14
-    .line 15
-    .line 16
-    invoke-virtual {v3, v0}, LX/5og;->A06(LX/5oe;)V
+    const/4 v2, 0x1
 
+    .line 15
+    const-string v1, "paused"
+
+    .line 16
     .line 17
+    new-instance v0, LX/5NB;
+
     .line 18
     .line 19
-    return-void
+    invoke-direct {v0, v3, v2, v1}, LX/5NB;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 20
-    :cond_0
-    iget-object v0, p0, LX/5NB;->A01:Ljava/lang/Object;
-
     .line 21
     .line 22
-    check-cast v0, LX/5oX;
+    sput-object v0, LX/5NB;->PAUSED:LX/5NB;
 
     .line 23
     .line 24
-    iput-object v0, v3, LX/5og;->A0A:LX/5oX;
+    const-string v3, "BUFFER_DRAINING_ABOVE_LOW_WATERMARK"
 
     .line 25
     .line 26
-    new-instance v0, LX/5oR;
+    const/4 v2, 0x2
 
     .line 27
-    .line 28
-    invoke-direct {v0, p1}, LX/5oR;-><init>(Ljava/lang/Throwable;)V
+    const-string v1, "buffer_draining_above_low_watermark"
 
+    .line 28
     .line 29
+    new-instance v0, LX/5NB;
+
     .line 30
     .line 31
-    invoke-virtual {v3, v0}, LX/5og;->A04(LX/5e7;)V
+    invoke-direct {v0, v3, v2, v1}, LX/5NB;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 32
     .line 33
     .line 34
-    iget-object v0, p0, LX/5NB;->A02:Ljava/lang/Object;
+    sput-object v0, LX/5NB;->BUFFER_DRAINING_ABOVE_LOW_WATERMARK:LX/5NB;
 
     .line 35
     .line 36
-    check-cast v0, LX/5oe;
+    const-string v3, "ABOVE_HIGH_WATERMARK"
 
     .line 37
     .line 38
-    invoke-interface {v0}, LX/5oe;->AYC()V
+    const/4 v2, 0x3
 
     .line 39
+    const-string v1, "above_high_watermark"
+
     .line 40
     .line 41
-    return-void
-.end method
-
-.method public final AdJ()V
-    .locals 7
-
-    .line 0
-    iget v0, p0, LX/5NB;->A04:I
-
-    .line 1
-    .line 2
-    iget-object v6, p0, LX/5NB;->A00:Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    check-cast v6, LX/5og;
-
-    .line 5
-    .line 6
-    if-eqz v0, :cond_3
-
-    .line 7
-    .line 8
-    iget-object v0, p0, LX/5NB;->A01:Ljava/lang/Object;
-
-    .line 9
-    .line 10
-    check-cast v0, Ljava/util/List;
-
-    .line 11
-    .line 12
-    iget-object v4, p0, LX/5NB;->A03:Ljava/lang/Object;
-
-    .line 13
-    .line 14
-    check-cast v4, LX/5YN;
-
-    .line 15
-    .line 16
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
-    .line 17
-    .line 18
-    .line 19
-    move-result-object v5
-
-    .line 20
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 21
-    .line 22
-    .line 23
-    move-result-object v2
-
-    .line 24
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v0
-
-    .line 28
-    if-eqz v0, :cond_2
-
-    .line 29
-    .line 30
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 31
-    .line 32
-    .line 33
-    move-result-object v0
-
-    .line 34
-    check-cast v0, LX/5ox;
-
-    .line 35
-    .line 36
-    iget-object v1, v6, LX/5og;->A05:Ljava/util/Map;
-
-    .line 37
-    .line 38
-    invoke-interface {v0}, LX/5ox;->ANP()LX/5jA;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
+    new-instance v0, LX/5NB;
 
     .line 42
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 43
+    invoke-direct {v0, v3, v2, v1}, LX/5NB;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
     .line 44
     .line 45
-    move-result-object v3
-
     .line 46
-    check-cast v3, LX/5om;
+    sput-object v0, LX/5NB;->ABOVE_HIGH_WATERMARK:LX/5NB;
 
     .line 47
     .line 48
-    if-eqz v3, :cond_0
+    const-string v3, "TARGET_BUFFER_SIZE_REACHED"
 
     .line 49
     .line 50
-    invoke-interface {v3}, LX/5om;->AQ3()Z
+    const/4 v2, 0x4
 
     .line 51
+    const-string v1, "target_buffer_size_reached"
+
     .line 52
     .line 53
-    move-result v0
+    new-instance v0, LX/5NB;
 
     .line 54
-    if-eqz v0, :cond_0
-
     .line 55
-    .line 56
-    invoke-interface {v3}, LX/5om;->AJX()LX/5oy;
+    invoke-direct {v0, v3, v2, v1}, LX/5NB;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 56
     .line 57
     .line 58
-    .line 59
-    move-result-object v1
+    sput-object v0, LX/5NB;->TARGET_BUFFER_SIZE_REACHED:LX/5NB;
 
+    .line 59
     .line 60
-    if-eqz v1, :cond_1
+    invoke-static {}, LX/5NB;->$values()[LX/5NB;
 
     .line 61
     .line 62
-    invoke-interface {v3}, LX/5om;->ANP()LX/5jA;
-
     .line 63
+    move-result-object v0
+
     .line 64
+    sput-object v0, LX/5NB;->$VALUES:[LX/5NB;
+
     .line 65
-    move-result-object v0
-
     .line 66
-    invoke-virtual {v5, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
+.end method
 
-    .line 67
-    .line 68
-    .line 69
-    goto :goto_0
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    .line 70
-    :cond_1
-    const/16 v2, 0x520a
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 71
-    .line 72
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/5NB;->value:Ljava/lang/String;
 
-    .line 73
-    .line 74
-    .line 75
-    move-result-object v1
+    .line 4
+    .line 5
+    return-void
+.end method
 
-    .line 76
-    const-string v0, "One of the configured tracks "
+.method public static valueOf(Ljava/lang/String;)LX/5NB;
+    .locals 1
 
-    .line 77
-    .line 78
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 0
+    const-class v0, LX/5NB;
 
-    .line 79
-    .line 80
-    .line 81
-    invoke-interface {v3}, LX/5om;->ANP()LX/5jA;
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 82
-    .line 83
-    .line 84
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 85
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 6
+    check-cast v0, LX/5NB;
 
-    .line 86
-    .line 87
-    .line 88
-    const-string v0, " has null Output MediaFormatProvider"
+    .line 7
+    .line 8
+    return-object v0
+.end method
 
-    .line 89
-    .line 90
-    invoke-static {v0, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+.method public static values()[LX/5NB;
+    .locals 1
 
-    .line 91
-    .line 92
-    .line 93
-    move-result-object v1
+    .line 0
+    sget-object v0, LX/5NB;->$VALUES:[LX/5NB;
 
-    .line 94
-    new-instance v0, LX/5oR;
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 95
-    .line 96
-    invoke-direct {v0, v2, v1}, LX/5oR;-><init>(ILjava/lang/String;)V
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 97
-    .line 98
-    .line 99
-    invoke-interface {v4, v0}, LX/5YN;->AXY(Ljava/lang/Throwable;)V
+    .line 6
+    check-cast v0, [LX/5NB;
 
-    .line 100
-    .line 101
-    .line 102
-    return-void
-
-    .line 103
-    :cond_2
-    iget-object v1, v6, LX/5og;->A03:LX/5oh;
-
-    .line 104
-    .line 105
-    iput-object v5, v1, LX/5oh;->A05:Ljava/util/HashMap;
-
-    .line 106
-    .line 107
-    sget-object v0, LX/5oh;->A0I:LX/5ow;
-
-    .line 108
-    .line 109
-    invoke-virtual {v1, v0}, LX/5oh;->A03(LX/5ow;)V
-
-    .line 110
-    .line 111
-    .line 112
-    const/4 v0, 0x0
-
-    .line 113
-    iput-boolean v0, v1, LX/5oh;->A0G:Z
-
-    .line 114
-    .line 115
-    invoke-interface {v4}, LX/5YN;->AdJ()V
-
-    .line 116
-    .line 117
-    .line 118
-    return-void
-
-    .line 119
-    :cond_3
-    iget-object v2, p0, LX/5NB;->A02:Ljava/lang/Object;
-
-    .line 120
-    .line 121
-    check-cast v2, LX/5oe;
-
-    .line 122
-    .line 123
-    iget-object v1, p0, LX/5NB;->A03:Ljava/lang/Object;
-
-    .line 124
-    .line 125
-    check-cast v1, LX/5Yh;
-
-    .line 126
-    .line 127
-    iget-object v0, p0, LX/5NB;->A01:Ljava/lang/Object;
-
-    .line 128
-    .line 129
-    check-cast v0, LX/5oX;
-
-    .line 130
-    .line 131
-    invoke-virtual {v6, v1, v0, v2}, LX/5og;->A05(LX/5Yh;LX/5oX;LX/5oe;)V
-
-    .line 132
-    .line 133
-    .line 134
-    return-void
+    .line 7
+    .line 8
+    return-object v0
 .end method

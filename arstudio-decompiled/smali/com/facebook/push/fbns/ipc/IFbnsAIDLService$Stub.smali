@@ -105,7 +105,7 @@
 
     .line 31
     .line 32
-    invoke-interface {p0, v0}, Lcom/facebook/push/fbns/ipc/IFbnsAIDLService;->AqM(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)V
+    invoke-interface {p0, v0}, Lcom/facebook/push/fbns/ipc/IFbnsAIDLService;->ApB(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)V
 
     .line 33
     .line 34
@@ -150,7 +150,7 @@
 
     .line 51
     .line 52
-    invoke-interface {p0, v0}, Lcom/facebook/push/fbns/ipc/IFbnsAIDLService;->AhP(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)Lcom/facebook/push/fbns/ipc/FbnsAIDLResult;
+    invoke-interface {p0, v0}, Lcom/facebook/push/fbns/ipc/IFbnsAIDLService;->Afj(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)Lcom/facebook/push/fbns/ipc/FbnsAIDLResult;
 
     .line 53
     .line 54

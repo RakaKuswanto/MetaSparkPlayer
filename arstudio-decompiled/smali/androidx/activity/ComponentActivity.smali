@@ -1,49 +1,46 @@
-.class public Landroidx/activity/ComponentActivity;
+.class public abstract Landroidx/activity/ComponentActivity;
 .super Landroidx/core/app/ComponentActivity;
 .source ""
 
 # interfaces
-.implements LX/06k;
-.implements LX/06q;
-.implements LX/0SI;
-.implements LX/0b7;
-.implements LX/00V;
-.implements LX/6MC;
-.implements LX/6MB;
-.implements LX/6MA;
-.implements LX/6M9;
-.implements LX/02U;
-.implements LX/0Xm;
-.implements LX/00P;
-.implements LX/6Ed;
-.implements LX/00J;
-.implements LX/6Eh;
+.implements LX/07B;
+.implements LX/07H;
+.implements LX/08K;
+.implements LX/4vO;
+.implements LX/00a;
+.implements LX/6bn;
+.implements LX/6bm;
+.implements LX/6bl;
+.implements LX/02c;
+.implements LX/6be;
+.implements LX/0QB;
+.implements LX/00U;
 
 
 # instance fields
-.field public A00:LX/06p;
+.field public A00:LX/00M;
 
-.field public A01:Z
+.field public A01:LX/07G;
 
 .field public A02:Z
 
-.field public final A03:LX/00B;
+.field public A03:Z
 
-.field public final A04:LX/5Q4;
+.field public final A04:LX/00E;
 
-.field public final A05:LX/00K;
+.field public final A05:LX/6EX;
 
-.field public final A06:LX/0SQ;
+.field public final A06:LX/00P;
 
-.field public final A07:LX/07W;
+.field public final A07:LX/0Kj;
 
-.field public final A08:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final A08:LX/07x;
 
-.field public final A09:LX/00H;
+.field public final A09:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final A0A:LX/00U;
+.field public final A0A:LX/00Z;
 
-.field public final A0B:LX/02W;
+.field public final A0B:LX/02e;
 
 .field public final A0C:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -58,7 +55,7 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 6
+    .locals 7
 
     .line 0
     invoke-direct {p0}, Landroidx/core/app/ComponentActivity;-><init>()V
@@ -66,398 +63,400 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/00K;
+    new-instance v0, LX/00P;
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/00K;-><init>()V
+    invoke-direct {v0}, LX/00P;-><init>()V
 
     .line 6
     .line 7
     .line 8
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A05:LX/00K;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A06:LX/00P;
 
     .line 9
     .line 10
-    new-instance v1, LX/004;
+    new-instance v1, LX/007;
 
     .line 11
     .line 12
-    invoke-direct {v1, p0}, LX/004;-><init>(Landroidx/activity/ComponentActivity;)V
+    invoke-direct {v1, p0}, LX/007;-><init>(Landroidx/activity/ComponentActivity;)V
 
     .line 13
     .line 14
     .line 15
-    new-instance v0, LX/02W;
+    new-instance v0, LX/02e;
 
     .line 16
     .line 17
-    invoke-direct {v0, v1}, LX/02W;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v0, v1}, LX/02e;-><init>(Ljava/lang/Runnable;)V
 
     .line 18
     .line 19
     .line 20
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02W;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02e;
 
     .line 21
     .line 22
-    new-instance v0, LX/0SQ;
+    new-instance v0, LX/0Kj;
 
     .line 23
     .line 24
-    invoke-direct {v0, p0}, LX/0SQ;-><init>(LX/06k;)V
+    invoke-direct {v0, p0}, LX/0Kj;-><init>(LX/07B;)V
 
     .line 25
     .line 26
     .line 27
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A06:LX/0SQ;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A07:LX/0Kj;
 
     .line 28
     .line 29
-    new-instance v5, LX/07W;
+    new-instance v6, LX/07x;
 
     .line 30
     .line 31
-    invoke-direct {v5, p0}, LX/07W;-><init>(LX/0SI;)V
+    invoke-direct {v6, p0}, LX/07x;-><init>(LX/08K;)V
 
     .line 32
     .line 33
     .line 34
-    iput-object v5, p0, Landroidx/activity/ComponentActivity;->A07:LX/07W;
+    iput-object v6, p0, Landroidx/activity/ComponentActivity;->A08:LX/07x;
 
     .line 35
     .line 36
-    new-instance v1, LX/005;
+    const/4 v0, 0x0
 
     .line 37
-    .line 38
-    invoke-direct {v1, p0}, LX/005;-><init>(Landroidx/activity/ComponentActivity;)V
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/00M;
 
+    .line 38
     .line 39
+    new-instance v2, LX/0Ql;
+
     .line 40
     .line 41
-    new-instance v0, LX/00H;
+    invoke-direct {v2, p0}, LX/0Ql;-><init>(Landroidx/activity/ComponentActivity;)V
 
     .line 42
     .line 43
-    invoke-direct {v0, v1}, LX/00H;-><init>(Ljava/lang/Runnable;)V
-
     .line 44
+    iput-object v2, p0, Landroidx/activity/ComponentActivity;->A04:LX/00E;
+
     .line 45
     .line 46
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A09:LX/00H;
+    new-instance v1, LX/0Ck;
 
     .line 47
     .line 48
-    new-instance v2, LX/0XP;
+    invoke-direct {v1, p0}, LX/0Ck;-><init>(Landroidx/activity/ComponentActivity;)V
 
     .line 49
     .line 50
-    invoke-direct {v2, p0}, LX/0XP;-><init>(Landroidx/activity/ComponentActivity;)V
-
     .line 51
+    new-instance v0, LX/6EX;
+
     .line 52
     .line 53
-    iput-object v2, p0, Landroidx/activity/ComponentActivity;->A03:LX/00B;
+    invoke-direct {v0, v2, v1}, LX/6EX;-><init>(Ljava/util/concurrent/Executor;LX/0Gw;)V
 
     .line 54
     .line 55
-    new-instance v1, LX/0CY;
-
     .line 56
-    .line 57
-    invoke-direct {v1, p0}, LX/0CY;-><init>(Landroidx/activity/ComponentActivity;)V
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A05:LX/6EX;
 
+    .line 57
     .line 58
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 59
     .line 60
-    new-instance v0, LX/5Q4;
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     .line 61
     .line 62
-    invoke-direct {v0, v2, v1}, LX/5Q4;-><init>(Ljava/util/concurrent/Executor;LX/0Cw;)V
-
     .line 63
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A09:Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 64
     .line 65
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A04:LX/5Q4;
+    new-instance v0, LX/0Qo;
 
     .line 66
     .line 67
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v0, p0}, LX/0Qo;-><init>(Landroidx/activity/ComponentActivity;)V
 
     .line 68
     .line 69
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
-
     .line 70
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00Z;
+
     .line 71
     .line 72
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A08:Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 73
     .line 74
-    new-instance v0, LX/0Vr;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 75
     .line 76
-    invoke-direct {v0, p0}, LX/0Vr;-><init>(Landroidx/activity/ComponentActivity;)V
-
     .line 77
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0C:Ljava/util/concurrent/CopyOnWriteArrayList;
+
     .line 78
     .line 79
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00U;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 80
     .line 81
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 82
     .line 83
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
     .line 84
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0G:Ljava/util/concurrent/CopyOnWriteArrayList;
+
     .line 85
     .line 86
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0C:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 87
     .line 88
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 89
     .line 90
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
     .line 91
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0E:Ljava/util/concurrent/CopyOnWriteArrayList;
+
     .line 92
     .line 93
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0G:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 94
     .line 95
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 96
     .line 97
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
     .line 98
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0D:Ljava/util/concurrent/CopyOnWriteArrayList;
+
     .line 99
     .line 100
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0E:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 101
     .line 102
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 103
     .line 104
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
     .line 105
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0F:Ljava/util/concurrent/CopyOnWriteArrayList;
+
     .line 106
     .line 107
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0D:Ljava/util/concurrent/CopyOnWriteArrayList;
+    const/4 v4, 0x0
 
     .line 108
+    iput-boolean v4, p0, Landroidx/activity/ComponentActivity;->A02:Z
+
     .line 109
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
     .line 110
-    .line 111
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    iput-boolean v4, p0, Landroidx/activity/ComponentActivity;->A03:Z
 
+    .line 111
     .line 112
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A07:LX/0Kj;
+
     .line 113
     .line 114
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A0F:Ljava/util/concurrent/CopyOnWriteArrayList;
+    if-eqz v1, :cond_2
 
     .line 115
     .line 116
-    const/4 v4, 0x0
+    sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 117
-    iput-boolean v4, p0, Landroidx/activity/ComponentActivity;->A01:Z
-
     .line 118
+    const/16 v3, 0x13
+
     .line 119
-    iput-boolean v4, p0, Landroidx/activity/ComponentActivity;->A02:Z
-
     .line 120
+    if-lt v5, v3, :cond_0
+
     .line 121
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A06:LX/0SQ;
-
     .line 122
+    new-instance v0, LX/0TV;
+
     .line 123
-    if-eqz v1, :cond_2
-
     .line 124
-    .line 125
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {v0, p0, v4}, LX/0TV;-><init>(Ljava/lang/Object;I)V
 
+    .line 125
     .line 126
     .line 127
-    const/16 v2, 0x13
+    invoke-virtual {v1, v0}, LX/077;->A09(LX/07A;)V
 
     .line 128
     .line 129
-    if-lt v3, v2, :cond_0
-
     .line 130
-    .line 131
-    new-instance v0, Landroidx/activity/ComponentActivity$3;
+    :cond_0
+    iget-object v2, p0, Landroidx/activity/ComponentActivity;->A07:LX/0Kj;
 
+    .line 131
     .line 132
+    const/4 v1, 0x1
+
     .line 133
-    invoke-direct {v0, p0}, Landroidx/activity/ComponentActivity$3;-><init>(Landroidx/activity/ComponentActivity;)V
+    new-instance v0, LX/0TV;
 
     .line 134
     .line 135
-    .line 136
-    invoke-virtual {v1, v0}, LX/06g;->A08(LX/06j;)V
+    invoke-direct {v0, p0, v1}, LX/0TV;-><init>(Ljava/lang/Object;I)V
 
+    .line 136
     .line 137
     .line 138
-    .line 139
-    :cond_0
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A06:LX/0SQ;
+    invoke-virtual {v2, v0}, LX/077;->A09(LX/07A;)V
 
+    .line 139
     .line 140
     .line 141
-    new-instance v0, Landroidx/activity/ComponentActivity$4;
+    iget-object v2, p0, Landroidx/activity/ComponentActivity;->A07:LX/0Kj;
 
     .line 142
     .line 143
-    invoke-direct {v0, p0}, Landroidx/activity/ComponentActivity$4;-><init>(Landroidx/activity/ComponentActivity;)V
+    const/4 v1, 0x2
 
     .line 144
+    new-instance v0, LX/0TV;
+
     .line 145
     .line 146
-    invoke-virtual {v1, v0}, LX/06g;->A08(LX/06j;)V
+    invoke-direct {v0, p0, v1}, LX/0TV;-><init>(Ljava/lang/Object;I)V
 
     .line 147
     .line 148
     .line 149
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A06:LX/0SQ;
+    invoke-virtual {v2, v0}, LX/077;->A09(LX/07A;)V
 
     .line 150
     .line 151
-    new-instance v0, Landroidx/activity/ComponentActivity$5;
-
     .line 152
-    .line 153
-    invoke-direct {v0, p0}, Landroidx/activity/ComponentActivity$5;-><init>(Landroidx/activity/ComponentActivity;)V
+    invoke-virtual {v6}, LX/07x;->A00()V
 
+    .line 153
     .line 154
     .line 155
-    .line 156
-    invoke-virtual {v1, v0}, LX/06g;->A08(LX/06j;)V
+    invoke-static {p0}, LX/4sV;->A01(LX/08K;)V
 
+    .line 156
     .line 157
     .line 158
-    .line 159
-    invoke-virtual {v5}, LX/07W;->A00()V
+    if-gt v3, v5, :cond_1
 
+    .line 159
     .line 160
+    const/16 v0, 0x17
+
     .line 161
     .line 162
-    invoke-static {p0}, LX/4wI;->A02(LX/0SI;)V
+    if-gt v5, v0, :cond_1
 
     .line 163
     .line 164
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A07:LX/0Kj;
+
     .line 165
-    if-gt v2, v3, :cond_1
-
     .line 166
+    new-instance v0, LX/0Cd;
+
     .line 167
-    const/16 v0, 0x17
-
     .line 168
-    .line 169
-    if-gt v3, v0, :cond_1
+    invoke-direct {v0, p0}, LX/0Cd;-><init>(Landroid/app/Activity;)V
 
+    .line 169
     .line 170
     .line 171
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A06:LX/0SQ;
+    invoke-virtual {v1, v0}, LX/077;->A09(LX/07A;)V
 
     .line 172
     .line 173
-    new-instance v0, Landroidx/activity/ImmLeaksCleaner;
-
     .line 174
-    .line 175
-    invoke-direct {v0, p0}, Landroidx/activity/ImmLeaksCleaner;-><init>(Landroid/app/Activity;)V
+    :cond_1
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A08:LX/07x;
 
+    .line 175
     .line 176
+    iget-object v2, v0, LX/07x;->A01:LX/07v;
+
     .line 177
     .line 178
-    invoke-virtual {v1, v0}, LX/06g;->A08(LX/06j;)V
+    new-instance v1, LX/0Mg;
 
     .line 179
     .line 180
-    .line 181
-    :cond_1
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A07:LX/07W;
+    invoke-direct {v1, p0, v4}, LX/0Mg;-><init>(Ljava/lang/Object;I)V
 
+    .line 181
     .line 182
     .line 183
-    iget-object v2, v0, LX/07W;->A01:LX/07U;
+    const-string v0, "android:support:activity-result"
 
     .line 184
     .line 185
-    new-instance v1, LX/00f;
+    invoke-virtual {v2, v1, v0}, LX/07v;->A03(LX/07u;Ljava/lang/String;)V
 
     .line 186
     .line 187
-    invoke-direct {v1, p0, v4}, LX/00f;-><init>(Ljava/lang/Object;I)V
-
     .line 188
+    new-instance v0, LX/0Qp;
+
     .line 189
     .line 190
-    const-string v0, "android:support:activity-result"
+    invoke-direct {v0, p0}, LX/0Qp;-><init>(Landroidx/activity/ComponentActivity;)V
 
     .line 191
     .line 192
-    invoke-virtual {v2, v1, v0}, LX/07U;->A03(LX/07T;Ljava/lang/String;)V
-
     .line 193
+    invoke-virtual {p0, v0}, Landroidx/activity/ComponentActivity;->A13(LX/00R;)V
+
     .line 194
     .line 195
-    new-instance v0, LX/0Uf;
-
     .line 196
-    .line 197
-    invoke-direct {v0, p0}, LX/0Uf;-><init>(Landroidx/activity/ComponentActivity;)V
-
-    .line 198
-    .line 199
-    .line 200
-    invoke-virtual {p0, v0}, Landroidx/activity/ComponentActivity;->A0B(LX/00M;)V
-
-    .line 201
-    .line 202
-    .line 203
     return-void
 
-    .line 204
+    .line 197
     :cond_2
     const-string v0, "getLifecycle() returned null in ComponentActivity\'s constructor. Please make sure you are lazily constructing your Lifecycle in the first call to getLifecycle() rather than relying on field initialization."
 
-    .line 205
-    .line 206
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    .line 198
+    .line 199
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
-    .line 207
-    .line 208
-    .line 209
+    .line 200
+    .line 201
+    .line 202
     move-result-object v0
 
-    .line 210
+    .line 203
     throw v0
 .end method
 
-.method private A01()V
+.method public static synthetic A01(Landroidx/activity/ComponentActivity;)LX/00M;
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Landroidx/activity/ComponentActivity;->A00:LX/00M;
+
+    .line 1
+    .line 2
+    return-object p0
+.end method
+
+.method private final A02()V
     .locals 3
 
     .line 0
@@ -472,12 +471,12 @@
     const/4 v2, 0x0
 
     .line 5
-    invoke-static {v1, v2}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v2}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 6
     .line 7
     .line 8
-    const v0, 0x7f0a0619
+    const v0, 0x7f09054b
 
     .line 9
     .line 10
@@ -495,12 +494,12 @@
     move-result-object v1
 
     .line 18
-    invoke-static {v1, v2}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v2}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 19
     .line 20
     .line 21
-    const v0, 0x7f0a061c
+    const v0, 0x7f09054e
 
     .line 22
     .line 23
@@ -518,12 +517,12 @@
     move-result-object v1
 
     .line 31
-    invoke-static {v1, v2}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v2}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 32
     .line 33
     .line 34
-    const v0, 0x7f0a061b
+    const v0, 0x7f09054d
 
     .line 35
     .line 36
@@ -541,12 +540,12 @@
     move-result-object v1
 
     .line 44
-    invoke-static {v1, v2}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v2}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 45
     .line 46
     .line 47
-    const v0, 0x7f0a061a
+    const v0, 0x7f09054c
 
     .line 48
     .line 49
@@ -564,12 +563,12 @@
     move-result-object v1
 
     .line 57
-    invoke-static {v1, v2}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v2}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 58
     .line 59
     .line 60
-    const v0, 0x7f0a04ee
+    const v0, 0x7f090430
 
     .line 61
     .line 62
@@ -582,7 +581,7 @@
     return-void
 .end method
 
-.method public static synthetic A02(Landroidx/activity/ComponentActivity;)V
+.method public static synthetic A03(Landroidx/activity/ComponentActivity;)V
     .locals 0
 
     .line 0
@@ -596,28 +595,28 @@
 
 
 # virtual methods
-.method public final synthetic A03()Landroid/os/Bundle;
+.method public final synthetic A04()Landroid/os/Bundle;
     .locals 5
 
     .line 0
-    new-instance v2, Landroid/os/Bundle;
+    new-instance v4, Landroid/os/Bundle;
 
     .line 1
     .line 2
-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    iget-object v4, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00U;
+    iget-object v3, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00Z;
 
     .line 6
     .line 7
-    iget-object v3, v4, LX/00U;->A03:Ljava/util/Map;
+    iget-object v2, v3, LX/00Z;->A02:Ljava/util/Map;
 
     .line 8
     .line 9
-    invoke-interface {v3}, Ljava/util/Map;->values()Ljava/util/Collection;
+    invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     .line 10
     .line 11
@@ -625,7 +624,7 @@
     move-result-object v0
 
     .line 13
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 14
     .line 15
@@ -637,12 +636,12 @@
 
     .line 18
     .line 19
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 20
     .line 21
     .line 22
-    invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     .line 23
     .line 24
@@ -650,7 +649,7 @@
     move-result-object v0
 
     .line 26
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 27
     .line 28
@@ -662,16 +661,16 @@
 
     .line 31
     .line 32
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 33
     .line 34
     .line 35
-    iget-object v0, v4, LX/00U;->A00:Ljava/util/ArrayList;
+    iget-object v0, v3, LX/00Z;->A00:Ljava/util/ArrayList;
 
     .line 36
     .line 37
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 38
     .line 39
@@ -683,12 +682,12 @@
 
     .line 42
     .line 43
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 44
     .line 45
     .line 46
-    iget-object v0, v4, LX/00U;->A02:Landroid/os/Bundle;
+    iget-object v0, v3, LX/00Z;->A01:Landroid/os/Bundle;
 
     .line 47
     .line 48
@@ -708,28 +707,15 @@
 
     .line 55
     .line 56
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 57
     .line 58
     .line 59
-    iget-object v1, v4, LX/00U;->A01:Ljava/util/Random;
-
-    .line 60
-    .line 61
-    const-string v0, "KEY_COMPONENT_ACTIVITY_RANDOM_OBJECT"
-
-    .line 62
-    .line 63
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
-
-    .line 64
-    .line 65
-    .line 66
-    return-object v2
+    return-object v4
 .end method
 
-.method public final synthetic A08()LX/0UG;
+.method public final synthetic A10()LX/0Vw;
     .locals 1
 
     .line 0
@@ -744,11 +730,11 @@
     return-object v0
 .end method
 
-.method public final A09()V
+.method public final A11()V
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/06p;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A01:LX/07G;
 
     .line 1
     .line 2
@@ -764,7 +750,7 @@
     move-result-object v0
 
     .line 8
-    check-cast v0, LX/00A;
+    check-cast v0, LX/00D;
 
     .line 9
     .line 10
@@ -772,16 +758,16 @@
 
     .line 11
     .line 12
-    iget-object v0, v0, LX/00A;->A00:LX/06p;
+    iget-object v0, v0, LX/00D;->A00:LX/07G;
 
     .line 13
     .line 14
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/06p;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A01:LX/07G;
 
     .line 15
     .line 16
     :cond_0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/06p;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A01:LX/07G;
 
     .line 17
     .line 18
@@ -789,16 +775,16 @@
 
     .line 19
     .line 20
-    new-instance v0, LX/06p;
+    new-instance v0, LX/07G;
 
     .line 21
     .line 22
-    invoke-direct {v0}, LX/06p;-><init>()V
+    invoke-direct {v0}, LX/07G;-><init>()V
 
     .line 23
     .line 24
     .line 25
-    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/06p;
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A01:LX/07G;
 
     .line 26
     .line 27
@@ -806,15 +792,15 @@
     return-void
 .end method
 
-.method public final synthetic A0A()V
+.method public final synthetic A12()V
     .locals 2
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A07:LX/07W;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A08:LX/07x;
 
     .line 1
     .line 2
-    iget-object v1, v0, LX/07W;->A01:LX/07U;
+    iget-object v1, v0, LX/07x;->A01:LX/07v;
 
     .line 3
     .line 4
@@ -822,7 +808,7 @@
 
     .line 5
     .line 6
-    invoke-virtual {v1, v0}, LX/07U;->A00(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-virtual {v1, v0}, LX/07v;->A00(Ljava/lang/String;)Landroid/os/Bundle;
 
     .line 7
     .line 8
@@ -834,11 +820,11 @@
 
     .line 11
     .line 12
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00U;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00Z;
 
     .line 13
     .line 14
-    invoke-virtual {v0, v1}, LX/00U;->A03(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, LX/00Z;->A03(Landroid/os/Bundle;)V
 
     .line 15
     .line 16
@@ -847,15 +833,15 @@
     return-void
 .end method
 
-.method public final A0B(LX/00M;)V
+.method public final A13(LX/00R;)V
     .locals 2
 
     .line 0
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A05:LX/00K;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A06:LX/00P;
 
     .line 1
     .line 2
-    iget-object v0, v1, LX/00K;->A01:Landroid/content/Context;
+    iget-object v0, v1, LX/00P;->A01:Landroid/content/Context;
 
     .line 3
     .line 4
@@ -863,13 +849,13 @@
 
     .line 5
     .line 6
-    invoke-interface {p1, v0}, LX/00M;->AWS(Landroid/content/Context;)V
+    invoke-interface {p1, v0}, LX/00R;->AUo(Landroid/content/Context;)V
 
     .line 7
     .line 8
     .line 9
     :cond_0
-    iget-object v0, v1, LX/00K;->A00:Ljava/util/Set;
+    iget-object v0, v1, LX/00P;->A00:Ljava/util/Set;
 
     .line 10
     .line 11
@@ -881,7 +867,7 @@
     return-void
 .end method
 
-.method public final A0C(LX/01d;)V
+.method public final A14(LX/01m;)V
     .locals 1
 
     .line 0
@@ -897,15 +883,15 @@
     return-void
 .end method
 
-.method public final A55(LX/02f;)V
+.method public final A37(LX/02n;)V
     .locals 2
 
     .line 0
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02W;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02e;
 
     .line 1
     .line 2
-    iget-object v0, v1, LX/02W;->A01:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, v1, LX/02e;->A02:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 3
     .line 4
@@ -914,7 +900,7 @@
     .line 5
     .line 6
     .line 7
-    iget-object v0, v1, LX/02W;->A00:Ljava/lang/Runnable;
+    iget-object v0, v1, LX/02e;->A00:Ljava/lang/Runnable;
 
     .line 8
     .line 9
@@ -926,7 +912,7 @@
     return-void
 .end method
 
-.method public final A56(LX/01d;)V
+.method public final A39(LX/01m;)V
     .locals 1
 
     .line 0
@@ -942,7 +928,7 @@
     return-void
 .end method
 
-.method public final A57(LX/01d;)V
+.method public final A3A(LX/01m;)V
     .locals 1
 
     .line 0
@@ -958,7 +944,7 @@
     return-void
 .end method
 
-.method public final A58(LX/01d;)V
+.method public final A3B(LX/01m;)V
     .locals 1
 
     .line 0
@@ -974,7 +960,7 @@
     return-void
 .end method
 
-.method public final A5B(LX/01d;)V
+.method public final A3E(LX/01m;)V
     .locals 1
 
     .line 0
@@ -990,45 +976,116 @@
     return-void
 .end method
 
-.method public final ABW()LX/00U;
+.method public final AA2()LX/00Z;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00U;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00Z;
 
     .line 1
     .line 2
     return-object v0
 .end method
 
-.method public final AJK()LX/00H;
-    .locals 1
+.method public final AHp()LX/00M;
+    .locals 2
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A09:LX/00H;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/00M;
 
     .line 1
     .line 2
-    return-object v0
-.end method
-
-.method public final AjA(LX/02f;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02W;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, LX/02W;->A02(LX/02f;)V
+    if-nez v0, :cond_0
 
     .line 3
     .line 4
+    new-instance v1, LX/00A;
+
     .line 5
+    .line 6
+    invoke-direct {v1, p0}, LX/00A;-><init>(Landroidx/activity/ComponentActivity;)V
+
+    .line 7
+    .line 8
+    .line 9
+    new-instance v0, LX/00M;
+
+    .line 10
+    .line 11
+    invoke-direct {v0, v1}, LX/00M;-><init>(Ljava/lang/Runnable;)V
+
+    .line 12
+    .line 13
+    .line 14
+    iput-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/00M;
+
+    .line 15
+    .line 16
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A07:LX/0Kj;
+
+    .line 17
+    .line 18
+    new-instance v0, LX/0Ch;
+
+    .line 19
+    .line 20
+    invoke-direct {v0, p0}, LX/0Ch;-><init>(Landroidx/activity/ComponentActivity;)V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v1, v0}, LX/077;->A09(LX/07A;)V
+
+    .line 24
+    .line 25
+    .line 26
+    :cond_0
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/00M;
+
+    .line 27
+    .line 28
+    return-object v0
+.end method
+
+.method public final Ahf(LX/02n;)V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02e;
+
+    .line 1
+    .line 2
+    iget-object v0, v1, LX/02e;->A02:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 3
+    .line 4
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 5
+    .line 6
+    .line 7
+    iget-object v0, v1, LX/02e;->A01:Ljava/util/Map;
+
+    .line 8
+    .line 9
+    invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    .line 12
+    iget-object v0, v1, LX/02e;->A00:Ljava/lang/Runnable;
+
+    .line 13
+    .line 14
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    .line 15
+    .line 16
+    .line 17
     return-void
 .end method
 
-.method public final AjB(LX/01d;)V
+.method public final Ahg(LX/01m;)V
     .locals 1
 
     .line 0
@@ -1044,7 +1101,7 @@
     return-void
 .end method
 
-.method public final AjC(LX/01d;)V
+.method public final Ahh(LX/01m;)V
     .locals 1
 
     .line 0
@@ -1060,7 +1117,7 @@
     return-void
 .end method
 
-.method public final AjD(LX/01d;)V
+.method public final Ahi(LX/01m;)V
     .locals 1
 
     .line 0
@@ -1076,7 +1133,7 @@
     return-void
 .end method
 
-.method public final AjG(LX/01d;)V
+.method public final Ahl(LX/01m;)V
     .locals 1
 
     .line 0
@@ -1096,12 +1153,12 @@
     .locals 2
 
     .line 0
-    invoke-direct {p0}, Landroidx/activity/ComponentActivity;->A01()V
+    invoke-direct {p0}, Landroidx/activity/ComponentActivity;->A02()V
 
     .line 1
     .line 2
     .line 3
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A03:LX/00B;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A04:LX/00E;
 
     .line 4
     .line 5
@@ -1113,7 +1170,7 @@
     move-result-object v0
 
     .line 9
-    invoke-interface {v1, v0}, LX/00B;->Aqx(Landroid/view/View;)V
+    invoke-interface {v1, v0}, LX/00E;->Apx(Landroid/view/View;)V
 
     .line 10
     .line 11
@@ -1126,15 +1183,15 @@
     return-void
 .end method
 
-.method public final getDefaultViewModelCreationExtras()LX/4wP;
+.method public final getDefaultViewModelCreationExtras()LX/4sa;
     .locals 3
 
     .line 0
-    new-instance v2, LX/4wO;
+    new-instance v2, LX/4sZ;
 
     .line 1
     .line 2
-    invoke-direct {v2}, LX/4wO;-><init>()V
+    invoke-direct {v2}, LX/4sZ;-><init>()V
 
     .line 3
     .line 4
@@ -1151,7 +1208,7 @@
 
     .line 10
     .line 11
-    sget-object v1, LX/4wL;->A02:LX/4wb;
+    sget-object v1, LX/4sW;->A02:LX/4sk;
 
     .line 12
     .line 13
@@ -1163,26 +1220,26 @@
     move-result-object v0
 
     .line 17
-    invoke-virtual {v2, v1, v0}, LX/4wO;->A01(LX/4wb;Ljava/lang/Object;)V
+    invoke-virtual {v2, v1, v0}, LX/4sZ;->A01(LX/4sk;Ljava/lang/Object;)V
 
     .line 18
     .line 19
     .line 20
     :cond_0
-    sget-object v0, LX/4wI;->A01:LX/4wb;
+    sget-object v0, LX/4sV;->A01:LX/4sk;
 
     .line 21
     .line 22
-    invoke-virtual {v2, v0, p0}, LX/4wO;->A01(LX/4wb;Ljava/lang/Object;)V
+    invoke-virtual {v2, v0, p0}, LX/4sZ;->A01(LX/4sk;Ljava/lang/Object;)V
 
     .line 23
     .line 24
     .line 25
-    sget-object v0, LX/4wI;->A02:LX/4wb;
+    sget-object v0, LX/4sV;->A02:LX/4sk;
 
     .line 26
     .line 27
-    invoke-virtual {v2, v0, p0}, LX/4wO;->A01(LX/4wb;Ljava/lang/Object;)V
+    invoke-virtual {v2, v0, p0}, LX/4sZ;->A01(LX/4sk;Ljava/lang/Object;)V
 
     .line 28
     .line 29
@@ -1219,7 +1276,7 @@
 
     .line 45
     .line 46
-    sget-object v1, LX/4wI;->A00:LX/4wb;
+    sget-object v1, LX/4sV;->A00:LX/4sk;
 
     .line 47
     .line 48
@@ -1239,7 +1296,7 @@
     move-result-object v0
 
     .line 56
-    invoke-virtual {v2, v1, v0}, LX/4wO;->A01(LX/4wb;Ljava/lang/Object;)V
+    invoke-virtual {v2, v1, v0}, LX/4sZ;->A01(LX/4sk;Ljava/lang/Object;)V
 
     .line 57
     .line 58
@@ -1248,33 +1305,33 @@
     return-object v2
 .end method
 
-.method public final getLifecycle()LX/06g;
+.method public final getLifecycle()LX/077;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A06:LX/0SQ;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A07:LX/0Kj;
 
     .line 1
     .line 2
     return-object v0
 .end method
 
-.method public final getSavedStateRegistry()LX/07U;
+.method public final getSavedStateRegistry()LX/07v;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A07:LX/07W;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A08:LX/07x;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/07W;->A01:LX/07U;
+    iget-object v0, v0, LX/07x;->A01:LX/07v;
 
     .line 3
     .line 4
     return-object v0
 .end method
 
-.method public final getViewModelStore()LX/06p;
+.method public final getViewModelStore()LX/07G;
     .locals 1
 
     .line 0
@@ -1290,12 +1347,12 @@
 
     .line 5
     .line 6
-    invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->A09()V
+    invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->A11()V
 
     .line 7
     .line 8
     .line 9
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/06p;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A01:LX/07G;
 
     .line 10
     .line 11
@@ -1307,7 +1364,7 @@
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 15
     .line 16
@@ -1322,11 +1379,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00U;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00Z;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p3, p1, p2}, LX/00U;->A06(Landroid/content/Intent;II)Z
+    invoke-virtual {v0, p3, p1, p2}, LX/00Z;->A06(Landroid/content/Intent;II)Z
 
     .line 3
     .line 4
@@ -1351,15 +1408,19 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A09:LX/00H;
+    invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->AHp()LX/00M;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/00H;->A03()V
-
     .line 3
+    move-result-object v0
+
     .line 4
+    invoke-virtual {v0}, LX/00M;->A07()V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
@@ -1405,11 +1466,11 @@
     move-result-object v0
 
     .line 19
-    check-cast v0, LX/01d;
+    check-cast v0, LX/01m;
 
     .line 20
     .line 21
-    invoke-interface {v0, p1}, LX/01d;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, LX/01m;->accept(Ljava/lang/Object;)V
 
     .line 22
     .line 23
@@ -1425,24 +1486,24 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A07:LX/07W;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A08:LX/07x;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1}, LX/07W;->A01(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, LX/07x;->A01(Landroid/os/Bundle;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A05:LX/00K;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A06:LX/00P;
 
     .line 6
     .line 7
-    iput-object p0, v0, LX/00K;->A01:Landroid/content/Context;
+    iput-object p0, v0, LX/00P;->A01:Landroid/content/Context;
 
     .line 8
     .line 9
-    iget-object v0, v0, LX/00K;->A00:Ljava/util/Set;
+    iget-object v0, v0, LX/00P;->A00:Ljava/util/Set;
 
     .line 10
     .line 11
@@ -1475,11 +1536,11 @@
     move-result-object v0
 
     .line 25
-    check-cast v0, LX/00M;
+    check-cast v0, LX/00R;
 
     .line 26
     .line 27
-    invoke-interface {v0, p0}, LX/00M;->AWS(Landroid/content/Context;)V
+    invoke-interface {v0, p0}, LX/00R;->AUo(Landroid/content/Context;)V
 
     .line 28
     .line 29
@@ -1493,41 +1554,11 @@
     .line 32
     .line 33
     .line 34
-    invoke-static {p0}, LX/4xF;->A00(Landroid/app/Activity;)V
+    invoke-static {p0}, LX/5ha;->A00(Landroid/app/Activity;)V
 
     .line 35
     .line 36
     .line 37
-    invoke-static {}, LX/4Ok;->A01()Z
-
-    .line 38
-    .line 39
-    .line 40
-    move-result v0
-
-    .line 41
-    if-eqz v0, :cond_1
-
-    .line 42
-    .line 43
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A09:LX/00H;
-
-    .line 44
-    .line 45
-    invoke-static {p0}, LX/009;->A00(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
-
-    .line 46
-    .line 47
-    .line 48
-    move-result-object v0
-
-    .line 49
-    invoke-virtual {v1, v0}, LX/00H;->A05(Landroid/window/OnBackInvokedDispatcher;)V
-
-    .line 50
-    .line 51
-    .line 52
-    :cond_1
     return-void
 .end method
 
@@ -1544,7 +1575,7 @@
     .line 3
     .line 4
     .line 5
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02W;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02e;
 
     .line 6
     .line 7
@@ -1556,7 +1587,7 @@
     move-result-object v0
 
     .line 11
-    invoke-virtual {v1, p2, v0}, LX/02W;->A01(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {v1, p2, v0}, LX/02e;->A01(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 12
     .line 13
@@ -1595,11 +1626,11 @@
 
     .line 9
     .line 10
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02W;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02e;
 
     .line 11
     .line 12
-    invoke-virtual {v0, p2}, LX/02W;->A03(Landroid/view/MenuItem;)Z
+    invoke-virtual {v0, p2}, LX/02e;->A02(Landroid/view/MenuItem;)Z
 
     .line 13
     .line 14
@@ -1617,11 +1648,11 @@
     return v0
 .end method
 
-.method public final onMultiWindowModeChanged(Z)V
+.method public onMultiWindowModeChanged(Z)V
     .locals 3
 
     .line 0
-    iget-boolean v0, p0, Landroidx/activity/ComponentActivity;->A01:Z
+    iget-boolean v0, p0, Landroidx/activity/ComponentActivity;->A02:Z
 
     .line 1
     .line 2
@@ -1662,20 +1693,20 @@
     move-result-object v1
 
     .line 20
-    check-cast v1, LX/01d;
+    check-cast v1, LX/01m;
 
     .line 21
     .line 22
-    new-instance v0, LX/1ms;
+    new-instance v0, LX/0in;
 
     .line 23
     .line 24
-    invoke-direct {v0, p1}, LX/1ms;-><init>(Z)V
+    invoke-direct {v0, p1}, LX/0in;-><init>(Z)V
 
     .line 25
     .line 26
     .line 27
-    invoke-interface {v1, v0}, LX/01d;->accept(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, LX/01m;->accept(Ljava/lang/Object;)V
 
     .line 28
     .line 29
@@ -1694,7 +1725,7 @@
     const/4 v0, 0x1
 
     .line 268435457
-    iput-boolean v0, p0, Landroidx/activity/ComponentActivity;->A01:Z
+    iput-boolean v0, p0, Landroidx/activity/ComponentActivity;->A02:Z
 
     .line 268435458
     .line 268435459
@@ -1709,7 +1740,7 @@
     .line 268435461
     .line 268435462
     .line 268435463
-    iput-boolean v1, p0, Landroidx/activity/ComponentActivity;->A01:Z
+    iput-boolean v1, p0, Landroidx/activity/ComponentActivity;->A02:Z
 
     .line 268435464
     .line 268435465
@@ -1746,20 +1777,20 @@
     move-result-object v1
 
     .line 268435481
-    check-cast v1, LX/01d;
+    check-cast v1, LX/01m;
 
     .line 268435482
     .line 268435483
-    new-instance v0, LX/1ms;
+    new-instance v0, LX/0in;
 
     .line 268435484
     .line 268435485
-    invoke-direct {v0, p1, p2}, LX/1ms;-><init>(ZLandroid/content/res/Configuration;)V
+    invoke-direct {v0, p1, p2}, LX/0in;-><init>(ZLandroid/content/res/Configuration;)V
 
     .line 268435486
     .line 268435487
     .line 268435488
-    invoke-interface {v1, v0}, LX/01d;->accept(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, LX/01m;->accept(Ljava/lang/Object;)V
 
     .line 268435489
     .line 268435490
@@ -1775,7 +1806,7 @@
     move-exception v0
 
     .line 268435494
-    iput-boolean v1, p0, Landroidx/activity/ComponentActivity;->A01:Z
+    iput-boolean v1, p0, Landroidx/activity/ComponentActivity;->A02:Z
 
     .line 268435495
     .line 268435496
@@ -1824,11 +1855,11 @@
     move-result-object v0
 
     .line 19
-    check-cast v0, LX/01d;
+    check-cast v0, LX/01m;
 
     .line 20
     .line 21
-    invoke-interface {v0, p1}, LX/01d;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, LX/01m;->accept(Ljava/lang/Object;)V
 
     .line 22
     .line 23
@@ -1844,11 +1875,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02W;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02e;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/02W;->A01:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, v0, LX/02e;->A02:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 3
     .line 4
@@ -1881,19 +1912,19 @@
     move-result-object v0
 
     .line 18
-    check-cast v0, LX/02f;
+    check-cast v0, LX/02n;
 
     .line 19
     .line 20
-    check-cast v0, LX/0Sp;
+    check-cast v0, LX/00O;
 
     .line 21
     .line 22
-    iget-object v0, v0, LX/0Sp;->A00:LX/0Sf;
+    iget-object v0, v0, LX/00O;->A00:LX/0VG;
 
     .line 23
     .line 24
-    invoke-virtual {v0, p2}, LX/0Sf;->A0o(Landroid/view/Menu;)V
+    invoke-virtual {v0, p2}, LX/0VG;->A0o(Landroid/view/Menu;)V
 
     .line 25
     .line 26
@@ -1914,7 +1945,7 @@
     .locals 3
 
     .line 0
-    iget-boolean v0, p0, Landroidx/activity/ComponentActivity;->A02:Z
+    iget-boolean v0, p0, Landroidx/activity/ComponentActivity;->A03:Z
 
     .line 1
     .line 2
@@ -1955,20 +1986,20 @@
     move-result-object v1
 
     .line 20
-    check-cast v1, LX/01d;
+    check-cast v1, LX/01m;
 
     .line 21
     .line 22
-    new-instance v0, LX/1mt;
+    new-instance v0, LX/0io;
 
     .line 23
     .line 24
-    invoke-direct {v0, p1}, LX/1mt;-><init>(Z)V
+    invoke-direct {v0, p1}, LX/0io;-><init>(Z)V
 
     .line 25
     .line 26
     .line 27
-    invoke-interface {v1, v0}, LX/01d;->accept(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, LX/01m;->accept(Ljava/lang/Object;)V
 
     .line 28
     .line 29
@@ -1987,7 +2018,7 @@
     const/4 v0, 0x1
 
     .line 268435457
-    iput-boolean v0, p0, Landroidx/activity/ComponentActivity;->A02:Z
+    iput-boolean v0, p0, Landroidx/activity/ComponentActivity;->A03:Z
 
     .line 268435458
     .line 268435459
@@ -2002,7 +2033,7 @@
     .line 268435461
     .line 268435462
     .line 268435463
-    iput-boolean v1, p0, Landroidx/activity/ComponentActivity;->A02:Z
+    iput-boolean v1, p0, Landroidx/activity/ComponentActivity;->A03:Z
 
     .line 268435464
     .line 268435465
@@ -2039,20 +2070,20 @@
     move-result-object v1
 
     .line 268435481
-    check-cast v1, LX/01d;
+    check-cast v1, LX/01m;
 
     .line 268435482
     .line 268435483
-    new-instance v0, LX/1mt;
+    new-instance v0, LX/0io;
 
     .line 268435484
     .line 268435485
-    invoke-direct {v0, p1, p2}, LX/1mt;-><init>(ZLandroid/content/res/Configuration;)V
+    invoke-direct {v0, p1, p2}, LX/0io;-><init>(ZLandroid/content/res/Configuration;)V
 
     .line 268435486
     .line 268435487
     .line 268435488
-    invoke-interface {v1, v0}, LX/01d;->accept(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, LX/01m;->accept(Ljava/lang/Object;)V
 
     .line 268435489
     .line 268435490
@@ -2068,7 +2099,7 @@
     move-exception v0
 
     .line 268435494
-    iput-boolean v1, p0, Landroidx/activity/ComponentActivity;->A02:Z
+    iput-boolean v1, p0, Landroidx/activity/ComponentActivity;->A03:Z
 
     .line 268435495
     .line 268435496
@@ -2088,11 +2119,11 @@
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02W;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A0B:LX/02e;
 
     .line 6
     .line 7
-    invoke-virtual {v0, p3}, LX/02W;->A00(Landroid/view/Menu;)V
+    invoke-virtual {v0, p3}, LX/02e;->A00(Landroid/view/Menu;)V
 
     .line 8
     .line 9
@@ -2108,7 +2139,7 @@
     .locals 3
 
     .line 0
-    iget-object v2, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00U;
+    iget-object v2, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00Z;
 
     .line 1
     .line 2
@@ -2148,7 +2179,7 @@
     const/4 v0, -0x1
 
     .line 20
-    invoke-virtual {v2, v1, p1, v0}, LX/00U;->A06(Landroid/content/Intent;II)Z
+    invoke-virtual {v2, v1, p1, v0}, LX/00Z;->A06(Landroid/content/Intent;II)Z
 
     .line 21
     .line 22
@@ -2188,7 +2219,7 @@
     const/4 v1, 0x0
 
     .line 1
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A00:LX/06p;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A01:LX/07G;
 
     .line 2
     .line 3
@@ -2204,7 +2235,7 @@
     move-result-object v0
 
     .line 9
-    check-cast v0, LX/00A;
+    check-cast v0, LX/00D;
 
     .line 10
     .line 11
@@ -2212,7 +2243,7 @@
 
     .line 12
     .line 13
-    iget-object v0, v0, LX/00A;->A00:LX/06p;
+    iget-object v0, v0, LX/00D;->A00:LX/07G;
 
     .line 14
     .line 15
@@ -2225,16 +2256,16 @@
 
     .line 18
     :cond_1
-    new-instance v1, LX/00A;
+    new-instance v1, LX/00D;
 
     .line 19
     .line 20
-    invoke-direct {v1}, LX/00A;-><init>()V
+    invoke-direct {v1}, LX/00D;-><init>()V
 
     .line 21
     .line 22
     .line 23
-    iput-object v0, v1, LX/00A;->A00:LX/06p;
+    iput-object v0, v1, LX/00D;->A00:LX/07G;
 
     .line 24
     .line 25
@@ -2245,7 +2276,7 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A06:LX/0SQ;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A07:LX/0Kj;
 
     .line 1
     .line 2
@@ -2253,11 +2284,11 @@
 
     .line 3
     .line 4
-    sget-object v0, LX/06f;->CREATED:LX/06f;
+    sget-object v0, LX/076;->CREATED:LX/076;
 
     .line 5
     .line 6
-    invoke-static {v0, v1}, LX/06g;->A00(LX/06f;LX/0SQ;)V
+    invoke-static {v0, v1}, LX/077;->A00(LX/076;LX/0Kj;)V
 
     .line 7
     .line 8
@@ -2268,23 +2299,23 @@
     .line 10
     .line 11
     .line 12
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A07:LX/07W;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A08:LX/07x;
 
     .line 13
     .line 14
     const/4 v0, 0x0
 
     .line 15
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 16
     .line 17
     .line 18
-    iget-object v0, v1, LX/07W;->A01:LX/07U;
+    iget-object v0, v1, LX/07x;->A01:LX/07v;
 
     .line 19
     .line 20
-    invoke-virtual {v0, p1}, LX/07U;->A02(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, LX/07v;->A02(Landroid/os/Bundle;)V
 
     .line 21
     .line 22
@@ -2334,7 +2365,7 @@
     move-result-object v1
 
     .line 19
-    check-cast v1, LX/01d;
+    check-cast v1, LX/01m;
 
     .line 20
     .line 21
@@ -2346,7 +2377,7 @@
     move-result-object v0
 
     .line 25
-    invoke-interface {v1, v0}, LX/01d;->accept(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, LX/01m;->accept(Ljava/lang/Object;)V
 
     .line 26
     .line 27
@@ -2358,11 +2389,11 @@
     return-void
 .end method
 
-.method public final registerForActivityResult(LX/00a;LX/00O;)LX/00Q;
+.method public final registerForActivityResult(LX/00f;LX/00T;)LX/00V;
     .locals 3
 
     .line 0
-    iget-object v2, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00U;
+    iget-object v2, p0, Landroidx/activity/ComponentActivity;->A0A:LX/00Z;
 
     .line 1
     .line 2
@@ -2370,7 +2401,7 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A08:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A09:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 5
     .line 6
@@ -2382,7 +2413,7 @@
     move-result v0
 
     .line 10
-    invoke-static {v1, v0}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 11
     .line 12
@@ -2390,7 +2421,7 @@
     move-result-object v0
 
     .line 14
-    invoke-virtual {v2, p2, p1, p0, v0}, LX/00U;->A01(LX/00O;LX/00a;LX/06k;Ljava/lang/String;)LX/0Xt;
+    invoke-virtual {v2, p2, p1, p0, v0}, LX/00Z;->A01(LX/00T;LX/00f;LX/07B;Ljava/lang/String;)LX/0Po;
 
     .line 15
     .line 16
@@ -2406,7 +2437,7 @@
 
     .line 0
     :try_start_0
-    invoke-static {}, LX/07f;->A02()Z
+    invoke-static {}, LX/086;->A02()Z
 
     .line 1
     .line 2
@@ -2422,7 +2453,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/07f;->A01(Ljava/lang/String;)V
+    invoke-static {v0}, LX/086;->A01(Ljava/lang/String;)V
 
     .line 9
     .line 10
@@ -2448,7 +2479,7 @@
 
     .line 20
     .line 21
-    invoke-static {p0, v0}, LX/01W;->A01(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v0}, LX/01f;->A01(Landroid/content/Context;Ljava/lang/String;)I
 
     .line 22
     .line 23
@@ -2467,18 +2498,18 @@
     .line 29
     .line 30
     :cond_2
-    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A04:LX/5Q4;
+    iget-object v0, p0, Landroidx/activity/ComponentActivity;->A05:LX/6EX;
 
     .line 31
     .line 32
-    invoke-virtual {v0}, LX/5Q4;->A00()V
+    invoke-virtual {v0}, LX/6EX;->A00()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 33
     .line 34
     .line 35
-    invoke-static {}, LX/07f;->A00()V
+    invoke-static {}, LX/086;->A00()V
 
     .line 36
     .line 37
@@ -2490,7 +2521,7 @@
     move-exception v0
 
     .line 40
-    invoke-static {}, LX/07f;->A00()V
+    invoke-static {}, LX/086;->A00()V
 
     .line 41
     .line 42
@@ -2502,12 +2533,12 @@
     .locals 2
 
     .line 0
-    invoke-direct {p0}, Landroidx/activity/ComponentActivity;->A01()V
+    invoke-direct {p0}, Landroidx/activity/ComponentActivity;->A02()V
 
     .line 1
     .line 2
     .line 3
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A03:LX/00B;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A04:LX/00E;
 
     .line 4
     .line 5
@@ -2519,7 +2550,7 @@
     move-result-object v0
 
     .line 9
-    invoke-interface {v1, v0}, LX/00B;->Aqx(Landroid/view/View;)V
+    invoke-interface {v1, v0}, LX/00E;->Apx(Landroid/view/View;)V
 
     .line 10
     .line 11
@@ -2536,12 +2567,12 @@
     .locals 2
 
     .line 536870912
-    invoke-direct {p0}, Landroidx/activity/ComponentActivity;->A01()V
+    invoke-direct {p0}, Landroidx/activity/ComponentActivity;->A02()V
 
     .line 536870913
     .line 536870914
     .line 536870915
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A03:LX/00B;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A04:LX/00E;
 
     .line 536870916
     .line 536870917
@@ -2553,7 +2584,7 @@
     move-result-object v0
 
     .line 536870921
-    invoke-interface {v1, v0}, LX/00B;->Aqx(Landroid/view/View;)V
+    invoke-interface {v1, v0}, LX/00E;->Apx(Landroid/view/View;)V
 
     .line 536870922
     .line 536870923
@@ -2570,12 +2601,12 @@
     .locals 2
 
     .line 268435456
-    invoke-direct {p0}, Landroidx/activity/ComponentActivity;->A01()V
+    invoke-direct {p0}, Landroidx/activity/ComponentActivity;->A02()V
 
     .line 268435457
     .line 268435458
     .line 268435459
-    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A03:LX/00B;
+    iget-object v1, p0, Landroidx/activity/ComponentActivity;->A04:LX/00E;
 
     .line 268435460
     .line 268435461
@@ -2587,7 +2618,7 @@
     move-result-object v0
 
     .line 268435465
-    invoke-interface {v1, v0}, LX/00B;->Aqx(Landroid/view/View;)V
+    invoke-interface {v1, v0}, LX/00E;->Apx(Landroid/view/View;)V
 
     .line 268435466
     .line 268435467

@@ -35,11 +35,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5c
+    const/16 v0, 0x1d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -63,7 +63,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -99,7 +99,7 @@
 
     .line 19
     .line 20
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 21
     .line 22
@@ -126,7 +126,7 @@
 
     .line 31
     .line 32
-    invoke-static {}, LX/0nj;->values()[LX/0nj;
+    invoke-static {}, LX/115;->values()[LX/115;
 
     .line 33
     .line 34
@@ -179,7 +179,7 @@
 
     .line 57
     .line 58
-    invoke-static {p1}, LX/0Yd;->A0I(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X1;->A0K(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 59
     .line 60
@@ -199,7 +199,7 @@
     move-result v3
 
     .line 68
-    new-array v2, v3, [LX/0nj;
+    new-array v2, v3, [LX/115;
 
     .line 69
     .line 70
@@ -208,7 +208,7 @@
 
     .line 71
     .line 72
-    invoke-static {}, LX/0nj;->values()[LX/0nj;
+    invoke-static {}, LX/115;->values()[LX/115;
 
     .line 73
     .line 74
@@ -264,7 +264,7 @@
 
     const-string/jumbo v0, "sproutMetadata"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/ipc/composer/model/InlineSproutsSurfaceInfo;->A01:Lcom/google/common/collect/ImmutableMap;
 
@@ -272,7 +272,7 @@
 
     const-string/jumbo v0, "sprouts"
 
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/facebook/ipc/composer/model/InlineSproutsSurfaceInfo;->A00:Lcom/google/common/collect/ImmutableList;
 
@@ -323,7 +323,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -343,7 +343,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -363,7 +363,7 @@
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -383,7 +383,7 @@
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 45
     .line 46
@@ -411,7 +411,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -427,7 +427,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -446,7 +446,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -465,7 +465,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 29
     .line 30
@@ -487,7 +487,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 3
     .line 4
@@ -496,7 +496,7 @@
 
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/0Yd;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableMap;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0F(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableMap;)LX/1tw;
 
     .line 8
     .line 9
@@ -517,7 +517,7 @@
 
     .line 16
     .line 17
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 18
     .line 19
@@ -533,73 +533,90 @@
     move-result-object v0
 
     .line 25
-    check-cast v0, LX/0nj;
+    check-cast v0, LX/115;
 
     .line 26
     .line 27
-    invoke-static {p1, v0, v1, p2}, LX/0Ye;->A0h(Landroid/os/Parcel;Ljava/lang/Enum;Ljava/util/Map$Entry;I)V
+    invoke-static {p1, v0}, LX/0X3;->A12(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 28
     .line 29
     .line 30
-    goto :goto_0
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     .line 31
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/InlineSproutsSurfaceInfo;->A03:Ljava/lang/String;
-
     .line 32
     .line 33
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    move-result-object v0
 
     .line 34
+    check-cast v0, Landroid/os/Parcelable;
+
     .line 35
     .line 36
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/InlineSproutsSurfaceInfo;->A00:Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     .line 37
     .line 38
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
-
     .line 39
-    .line 40
-    .line 41
-    move-result-object v1
+    goto :goto_0
 
+    .line 40
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/InlineSproutsSurfaceInfo;->A03:Ljava/lang/String;
+
+    .line 41
     .line 42
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 43
     .line 44
     .line 45
-    move-result v0
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/InlineSproutsSurfaceInfo;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 46
-    if-eqz v0, :cond_1
-
     .line 47
-    .line 48
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
+    .line 48
     .line 49
     .line 50
+    move-result-object v1
+
     .line 51
-    move-result-object v0
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 52
-    check-cast v0, LX/0nj;
-
     .line 53
     .line 54
-    invoke-static {p1, v0}, LX/0Yh;->A0p(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    move-result v0
 
     .line 55
+    if-eqz v0, :cond_1
+
     .line 56
     .line 57
-    goto :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 58
+    .line 59
+    .line 60
+    move-result-object v0
+
+    .line 61
+    check-cast v0, LX/115;
+
+    .line 62
+    .line 63
+    invoke-static {p1, v0}, LX/0X3;->A12(Landroid/os/Parcel;Ljava/lang/Enum;)V
+
+    .line 64
+    .line 65
+    .line 66
+    goto :goto_1
+
+    .line 67
     :cond_1
     return-void
 .end method

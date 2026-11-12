@@ -2,23 +2,79 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5Eu;
-
 
 # instance fields
-.field public final A00:Z
+.field public A00:I
 
-.field public final A01:Z
+.field public final A01:I
 
-.field public final A02:Z
+.field public final A02:Ljava/lang/String;
 
-.field public final A03:Z
+.field public final A03:Ljava/lang/String;
+
+.field public final A04:Ljava/lang/String;
+
+.field public final A05:Ljava/lang/String;
+
+.field public final A06:Ljava/lang/String;
+
+.field public final A07:Ljava/lang/String;
+
+.field public final A08:Ljava/lang/String;
+
+.field public final A09:Z
+
+.field public final A0A:Z
+
+.field public final A0B:Z
+
+.field public final A0C:Z
+
+.field public final A0D:Z
+
+.field public final A0E:Z
+
+.field public final A0F:Z
+
+.field public final A0G:Z
+
+.field public final A0H:Z
+
+.field public final A0I:Z
+
+.field public final A0J:Z
+
+.field public final A0K:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public static constructor <clinit>()V
+    .locals 2
+
+    .line 0
+    new-instance v1, LX/5F8;
+
+    .line 1
+    .line 2
+    invoke-direct {v1}, LX/5F8;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    new-instance v0, LX/5F7;
+
+    .line 6
+    .line 7
+    invoke-direct {v0, v1}, LX/5F7;-><init>(LX/5F8;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public constructor <init>(LX/5F8;)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,689 +82,845 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->A6G:I
+    iget-object v0, p1, LX/5F8;->A06:Ljava/lang/String;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iput-object v0, p0, LX/5F7;->A07:Ljava/lang/String;
 
     .line 6
     .line 7
-    .line 8
-    move-result-object v2
+    iget-boolean v0, p1, LX/5F8;->A0G:Z
 
+    .line 8
     .line 9
-    check-cast v2, LX/35B;
+    iput-boolean v0, p0, LX/5F7;->A0H:Z
 
     .line 10
     .line 11
-    const-wide v0, 0x2081012c00170fa5L
+    iget-boolean v0, p1, LX/5F8;->A0H:Z
 
     .line 12
     .line 13
+    iput-boolean v0, p0, LX/5F7;->A0I:Z
+
     .line 14
     .line 15
-    .line 16
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    iget-boolean v0, p1, LX/5F8;->A0D:Z
 
+    .line 16
     .line 17
+    iput-boolean v0, p0, LX/5F7;->A0E:Z
+
     .line 18
     .line 19
-    move-result v0
+    iget-boolean v0, p1, LX/5F8;->A0C:Z
 
     .line 20
-    iput-boolean v0, p0, LX/5F7;->A00:Z
-
     .line 21
-    .line 22
-    const-wide v0, 0x2081012c00140fa3L    # 4.058429889268233E-152
+    iput-boolean v0, p0, LX/5F7;->A0D:Z
 
+    .line 22
     .line 23
+    iget-boolean v0, p1, LX/5F8;->A0B:Z
+
     .line 24
     .line 25
+    iput-boolean v0, p0, LX/5F7;->A0C:Z
+
     .line 26
     .line 27
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    iget-boolean v0, p1, LX/5F8;->A0A:Z
 
     .line 28
     .line 29
-    .line 30
-    move-result v0
+    iput-boolean v0, p0, LX/5F7;->A0B:Z
 
+    .line 30
     .line 31
-    iput-boolean v0, p0, LX/5F7;->A02:Z
+    iget-boolean v0, p1, LX/5F8;->A09:Z
 
     .line 32
     .line 33
-    const-wide v0, 0x2081012c00180fa6L    # 4.058429889490511E-152
+    iput-boolean v0, p0, LX/5F7;->A0A:Z
 
     .line 34
     .line 35
+    iget-boolean v0, p1, LX/5F8;->A08:Z
+
     .line 36
     .line 37
-    .line 38
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    iput-boolean v0, p0, LX/5F7;->A09:Z
 
+    .line 38
     .line 39
+    iget-boolean v0, p1, LX/5F8;->A0I:Z
+
     .line 40
     .line 41
-    move-result v0
+    iput-boolean v0, p0, LX/5F7;->A0J:Z
 
     .line 42
-    iput-boolean v0, p0, LX/5F7;->A03:Z
-
     .line 43
-    .line 44
-    const-wide v0, 0x2081012c00150fa4L    # 4.058429889323803E-152
+    iget-object v0, p1, LX/5F8;->A04:Ljava/lang/String;
 
+    .line 44
     .line 45
+    iput-object v0, p0, LX/5F7;->A05:Ljava/lang/String;
+
     .line 46
     .line 47
+    iget-object v0, p1, LX/5F8;->A05:Ljava/lang/String;
+
     .line 48
     .line 49
-    invoke-interface {v2, v0, v1}, LX/35B;->ACd(J)Z
+    iput-object v0, p0, LX/5F7;->A06:Ljava/lang/String;
 
     .line 50
     .line 51
-    .line 52
-    move-result v0
+    iget-object v0, p1, LX/5F8;->A03:Ljava/lang/String;
 
+    .line 52
     .line 53
-    iput-boolean v0, p0, LX/5F7;->A01:Z
+    iput-object v0, p0, LX/5F7;->A04:Ljava/lang/String;
 
     .line 54
     .line 55
+    iget-object v0, p1, LX/5F8;->A07:Ljava/lang/String;
+
+    .line 56
+    .line 57
+    iput-object v0, p0, LX/5F7;->A08:Ljava/lang/String;
+
+    .line 58
+    .line 59
+    iget-object v0, p1, LX/5F8;->A01:Ljava/lang/String;
+
+    .line 60
+    .line 61
+    iput-object v0, p0, LX/5F7;->A02:Ljava/lang/String;
+
+    .line 62
+    .line 63
+    iget-boolean v0, p1, LX/5F8;->A0F:Z
+
+    .line 64
+    .line 65
+    iput-boolean v0, p0, LX/5F7;->A0G:Z
+
+    .line 66
+    .line 67
+    iget v0, p1, LX/5F8;->A00:I
+
+    .line 68
+    .line 69
+    iput v0, p0, LX/5F7;->A01:I
+
+    .line 70
+    .line 71
+    iget-boolean v0, p1, LX/5F8;->A0E:Z
+
+    .line 72
+    .line 73
+    iput-boolean v0, p0, LX/5F7;->A0F:Z
+
+    .line 74
+    .line 75
+    iget-boolean v0, p1, LX/5F8;->A0J:Z
+
+    .line 76
+    .line 77
+    iput-boolean v0, p0, LX/5F7;->A0K:Z
+
+    .line 78
+    .line 79
+    iget-object v0, p1, LX/5F8;->A02:Ljava/lang/String;
+
+    .line 80
+    .line 81
+    iput-object v0, p0, LX/5F7;->A03:Ljava/lang/String;
+
+    .line 82
+    .line 83
     return-void
-.end method
-
-.method public static final A00()LX/5F7;
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/5F7;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/5F7;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final A8I()LX/5Ep;
-    .locals 18
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    const/4 v3, 0x1
 
     .line 1
+    if-eq p0, p1, :cond_3
+
     .line 2
     .line 3
-    move-result-object v1
+    const/4 v2, 0x0
 
     .line 4
-    new-instance v3, LX/5FI;
+    if-eqz p1, :cond_0
 
     .line 5
     .line 6
-    invoke-direct {v3}, LX/5FI;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
     .line 8
     .line 9
-    const-wide/16 v4, 0x3e9
+    move-result-object v1
 
     .line 10
-    .line 11
-    const-wide/16 v6, 0x1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 11
     .line 12
     .line 13
-    const-wide/16 v8, 0x0
+    move-result-object v0
 
     .line 14
+    if-ne v1, v0, :cond_0
+
     .line 15
-    new-instance v2, LX/5FC;
-
     .line 16
-    .line 17
-    invoke-direct/range {v2 .. v9}, LX/5FC;-><init>(LX/5Er;JJJ)V
+    check-cast p1, LX/5F7;
 
+    .line 17
     .line 18
+    iget v1, p0, LX/5F7;->A00:I
+
     .line 19
     .line 20
-    new-instance v0, LX/5Ew;
+    if-eqz v1, :cond_1
 
     .line 21
     .line 22
-    invoke-direct {v0, v2}, LX/5Ew;-><init>(LX/5Er;)V
+    iget v0, p1, LX/5F7;->A00:I
 
     .line 23
     .line 24
-    .line 25
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
+    .line 25
     .line 26
+    if-eq v1, v0, :cond_1
+
     .line 27
     .line 28
-    new-instance v3, LX/5FI;
+    :cond_0
+    return v2
 
     .line 29
-    .line 30
-    invoke-direct {v3}, LX/5FI;-><init>()V
+    :cond_1
+    iget-object v1, p0, LX/5F7;->A07:Ljava/lang/String;
 
+    .line 30
     .line 31
+    iget-object v0, p1, LX/5F7;->A07:Ljava/lang/String;
+
     .line 32
     .line 33
-    const-wide/16 v4, 0xfb
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 34
     .line 35
-    new-instance v2, LX/5FC;
-
     .line 36
+    move-result v0
+
     .line 37
-    invoke-direct/range {v2 .. v9}, LX/5FC;-><init>(LX/5Er;JJJ)V
+    if-eqz v0, :cond_2
 
     .line 38
     .line 39
+    iget-boolean v1, p0, LX/5F7;->A0H:Z
+
     .line 40
-    new-instance v0, LX/5Ew;
-
     .line 41
-    .line 42
-    invoke-direct {v0, v2}, LX/5Ew;-><init>(LX/5Er;)V
+    iget-boolean v0, p1, LX/5F7;->A0H:Z
 
+    .line 42
     .line 43
+    if-ne v1, v0, :cond_2
+
     .line 44
     .line 45
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    iget-boolean v1, p0, LX/5F7;->A0I:Z
 
     .line 46
     .line 47
+    iget-boolean v0, p1, LX/5F7;->A0I:Z
+
     .line 48
-    new-instance v11, LX/5F5;
-
     .line 49
-    .line 50
-    invoke-direct {v11}, LX/5F5;-><init>()V
+    if-ne v1, v0, :cond_2
 
+    .line 50
     .line 51
+    iget-boolean v1, p0, LX/5F7;->A0E:Z
+
     .line 52
     .line 53
-    new-instance v10, LX/5FC;
+    iget-boolean v0, p1, LX/5F7;->A0E:Z
 
     .line 54
     .line 55
-    move-wide v12, v6
+    if-ne v1, v0, :cond_2
 
     .line 56
-    move-wide v14, v6
-
     .line 57
-    move-wide/from16 v16, v8
+    iget-boolean v1, p0, LX/5F7;->A0D:Z
 
     .line 58
     .line 59
-    invoke-direct/range {v10 .. v17}, LX/5FC;-><init>(LX/5Er;JJJ)V
+    iget-boolean v0, p1, LX/5F7;->A0D:Z
 
     .line 60
     .line 61
+    if-ne v1, v0, :cond_2
+
     .line 62
-    new-instance v0, LX/5FJ;
-
     .line 63
-    .line 64
-    invoke-direct {v0, v10}, LX/5FJ;-><init>(LX/5Er;)V
+    iget-boolean v1, p0, LX/5F7;->A0C:Z
 
+    .line 64
     .line 65
+    iget-boolean v0, p1, LX/5F7;->A0C:Z
+
     .line 66
     .line 67
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    if-ne v1, v0, :cond_2
 
     .line 68
     .line 69
+    iget-boolean v1, p0, LX/5F7;->A0B:Z
+
     .line 70
-    move-object/from16 v8, p0
-
     .line 71
+    iget-boolean v0, p1, LX/5F7;->A0B:Z
+
     .line 72
-    iget-boolean v0, v8, LX/5F7;->A02:Z
-
     .line 73
+    if-ne v1, v0, :cond_2
+
     .line 74
-    if-eqz v0, :cond_0
-
     .line 75
+    iget-boolean v1, p0, LX/5F7;->A0A:Z
+
     .line 76
-    new-instance v3, LX/5FH;
-
     .line 77
-    .line 78
-    invoke-direct {v3}, LX/5FH;-><init>()V
+    iget-boolean v0, p1, LX/5F7;->A0A:Z
 
+    .line 78
     .line 79
+    if-ne v1, v0, :cond_2
+
     .line 80
     .line 81
-    const-string v2, "origin"
+    iget-boolean v1, p0, LX/5F7;->A09:Z
 
     .line 82
     .line 83
-    new-instance v0, LX/5Ex;
+    iget-boolean v0, p1, LX/5F7;->A09:Z
 
     .line 84
     .line 85
-    invoke-direct {v0, v2}, LX/5Ex;-><init>(Ljava/lang/String;)V
+    if-ne v1, v0, :cond_2
 
     .line 86
     .line 87
+    iget-boolean v1, p0, LX/5F7;->A0J:Z
+
     .line 88
-    new-instance v2, LX/5Eo;
-
     .line 89
-    .line 90
-    invoke-direct {v2, v3, v0}, LX/5Eo;-><init>(LX/5Er;LX/5Ex;)V
+    iget-boolean v0, p1, LX/5F7;->A0J:Z
 
+    .line 90
     .line 91
+    if-ne v1, v0, :cond_2
+
     .line 92
     .line 93
-    new-instance v0, LX/5FJ;
+    iget-object v1, p0, LX/5F7;->A05:Ljava/lang/String;
 
     .line 94
     .line 95
-    invoke-direct {v0, v2}, LX/5FJ;-><init>(LX/5Er;)V
+    iget-object v0, p1, LX/5F7;->A05:Ljava/lang/String;
 
     .line 96
     .line 97
-    .line 98
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 98
     .line 99
     .line 100
+    move-result v0
+
     .line 101
-    new-instance v3, LX/5FH;
+    if-eqz v0, :cond_2
 
     .line 102
     .line 103
-    invoke-direct {v3}, LX/5FH;-><init>()V
+    iget-object v1, p0, LX/5F7;->A06:Ljava/lang/String;
 
     .line 104
     .line 105
+    iget-object v0, p1, LX/5F7;->A06:Ljava/lang/String;
+
     .line 106
-    const/16 v0, 0x42
-
     .line 107
-    .line 108
-    invoke-static {v0}, LX/0Yb;->A00(I)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 108
     .line 109
     .line 110
+    move-result v0
+
     .line 111
-    move-result-object v2
+    if-eqz v0, :cond_2
 
     .line 112
-    new-instance v0, LX/5Ex;
-
     .line 113
-    .line 114
-    invoke-direct {v0, v2}, LX/5Ex;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, LX/5F7;->A04:Ljava/lang/String;
 
+    .line 114
     .line 115
+    iget-object v0, p1, LX/5F7;->A04:Ljava/lang/String;
+
     .line 116
     .line 117
-    new-instance v2, LX/5Es;
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 118
     .line 119
-    invoke-direct {v2, v3, v0}, LX/5Es;-><init>(LX/5Er;LX/5Ex;)V
-
     .line 120
+    move-result v0
+
     .line 121
+    if-eqz v0, :cond_2
+
     .line 122
-    new-instance v0, LX/5FJ;
-
     .line 123
-    .line 124
-    invoke-direct {v0, v2}, LX/5FJ;-><init>(LX/5Er;)V
+    iget-object v1, p0, LX/5F7;->A08:Ljava/lang/String;
 
+    .line 124
     .line 125
+    iget-object v0, p1, LX/5F7;->A08:Ljava/lang/String;
+
     .line 126
     .line 127
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 128
     .line 129
     .line 130
-    :cond_0
-    iget-boolean v0, v8, LX/5F7;->A03:Z
+    move-result v0
 
     .line 131
+    if-eqz v0, :cond_2
+
     .line 132
-    if-eqz v0, :cond_1
-
     .line 133
+    iget-object v1, p0, LX/5F7;->A02:Ljava/lang/String;
+
     .line 134
-    const-string v12, "imageWidth"
-
     .line 135
+    iget-object v0, p1, LX/5F7;->A02:Ljava/lang/String;
+
     .line 136
-    const-wide/16 v5, -0x1
-
     .line 137
-    .line 138
-    new-instance v7, LX/5Ey;
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 138
     .line 139
     .line 140
-    invoke-direct {v7, v12, v5, v6}, LX/5Ey;-><init>(Ljava/lang/String;J)V
+    move-result v0
 
     .line 141
+    if-eqz v0, :cond_2
+
     .line 142
     .line 143
-    const-string v11, "imageHeight"
+    iget-boolean v1, p0, LX/5F7;->A0G:Z
 
     .line 144
     .line 145
-    new-instance v4, LX/5Ey;
+    iget-boolean v0, p1, LX/5F7;->A0G:Z
 
     .line 146
     .line 147
-    invoke-direct {v4, v11, v5, v6}, LX/5Ey;-><init>(Ljava/lang/String;J)V
+    if-ne v1, v0, :cond_2
 
     .line 148
     .line 149
+    iget v1, p0, LX/5F7;->A01:I
+
     .line 150
-    const-string v10, "viewWidth"
-
     .line 151
+    iget v0, p1, LX/5F7;->A01:I
+
     .line 152
-    new-instance v3, LX/5Ey;
-
     .line 153
-    .line 154
-    invoke-direct {v3, v10, v5, v6}, LX/5Ey;-><init>(Ljava/lang/String;J)V
+    if-ne v1, v0, :cond_2
 
+    .line 154
     .line 155
+    iget-boolean v1, p0, LX/5F7;->A0F:Z
+
     .line 156
     .line 157
-    const-string v9, "viewHeight"
+    iget-boolean v0, p1, LX/5F7;->A0F:Z
 
     .line 158
     .line 159
-    new-instance v0, LX/5Ey;
+    if-ne v1, v0, :cond_2
 
     .line 160
     .line 161
-    invoke-direct {v0, v9, v5, v6}, LX/5Ey;-><init>(Ljava/lang/String;J)V
+    iget-boolean v1, p0, LX/5F7;->A0K:Z
 
     .line 162
     .line 163
+    iget-boolean v0, p1, LX/5F7;->A0K:Z
+
     .line 164
-    new-instance v2, LX/5FK;
-
     .line 165
-    .line 166
-    invoke-direct {v2, v7, v4, v3, v0}, LX/5FK;-><init>(LX/5Er;LX/5Er;LX/5Er;LX/5Er;)V
+    if-ne v1, v0, :cond_2
 
+    .line 166
     .line 167
+    iget-object v1, p0, LX/5F7;->A03:Ljava/lang/String;
+
     .line 168
     .line 169
-    new-instance v0, LX/5FJ;
+    iget-object v0, p1, LX/5F7;->A03:Ljava/lang/String;
 
     .line 170
     .line 171
-    invoke-direct {v0, v2}, LX/5FJ;-><init>(LX/5Er;)V
+    invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->A0P(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 172
     .line 173
     .line 174
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    move-result v0
 
     .line 175
-    .line 176
-    .line 177
-    new-instance v7, LX/5Ey;
-
-    .line 178
-    .line 179
-    invoke-direct {v7, v12, v5, v6}, LX/5Ey;-><init>(Ljava/lang/String;J)V
-
-    .line 180
-    .line 181
-    .line 182
-    new-instance v4, LX/5Ey;
-
-    .line 183
-    .line 184
-    invoke-direct {v4, v11, v5, v6}, LX/5Ey;-><init>(Ljava/lang/String;J)V
-
-    .line 185
-    .line 186
-    .line 187
-    new-instance v3, LX/5Ey;
-
-    .line 188
-    .line 189
-    invoke-direct {v3, v10, v5, v6}, LX/5Ey;-><init>(Ljava/lang/String;J)V
-
-    .line 190
-    .line 191
-    .line 192
-    new-instance v0, LX/5Ey;
-
-    .line 193
-    .line 194
-    invoke-direct {v0, v9, v5, v6}, LX/5Ey;-><init>(Ljava/lang/String;J)V
-
-    .line 195
-    .line 196
-    .line 197
-    new-instance v2, LX/5FL;
-
-    .line 198
-    .line 199
-    invoke-direct {v2, v7, v4, v3, v0}, LX/5FL;-><init>(LX/5Er;LX/5Er;LX/5Er;LX/5Er;)V
-
-    .line 200
-    .line 201
-    .line 202
-    new-instance v0, LX/5FJ;
-
-    .line 203
-    .line 204
-    invoke-direct {v0, v2}, LX/5FJ;-><init>(LX/5Er;)V
-
-    .line 205
-    .line 206
-    .line 207
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 208
-    .line 209
-    .line 210
-    :cond_1
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 211
-    .line 212
-    .line 213
-    move-result-object v3
-
-    .line 214
-    new-instance v0, LX/5FG;
-
-    .line 215
-    .line 216
-    invoke-direct {v0}, LX/5FG;-><init>()V
-
-    .line 217
-    .line 218
-    .line 219
-    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 220
-    .line 221
-    .line 222
-    new-instance v0, LX/5FH;
-
-    .line 223
-    .line 224
-    invoke-direct {v0}, LX/5FH;-><init>()V
-
-    .line 225
-    .line 226
-    .line 227
-    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 228
-    .line 229
-    .line 230
-    new-instance v0, LX/5FF;
-
-    .line 231
-    .line 232
-    invoke-direct {v0}, LX/5FF;-><init>()V
-
-    .line 233
-    .line 234
-    .line 235
-    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 236
-    .line 237
-    .line 238
-    const-string v2, "mountSurface"
-
-    .line 239
-    .line 240
-    new-instance v0, LX/5Ex;
-
-    .line 241
-    .line 242
-    invoke-direct {v0, v2}, LX/5Ex;-><init>(Ljava/lang/String;)V
-
-    .line 243
-    .line 244
-    .line 245
-    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 246
-    .line 247
-    .line 248
-    iget-boolean v0, v8, LX/5F7;->A01:Z
-
-    .line 249
-    .line 250
     if-eqz v0, :cond_2
 
-    .line 251
-    .line 252
-    const/16 v0, 0x49
+    .line 176
+    .line 177
+    return v3
 
-    .line 253
-    .line 254
-    invoke-static {v0}, LX/0Yb;->A00(I)Ljava/lang/String;
-
-    .line 255
-    .line 256
-    .line 257
-    move-result-object v2
-
-    .line 258
-    new-instance v0, LX/5Ex;
-
-    .line 259
-    .line 260
-    invoke-direct {v0, v2}, LX/5Ex;-><init>(Ljava/lang/String;)V
-
-    .line 261
-    .line 262
-    .line 263
-    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 264
-    .line 265
-    .line 266
+    .line 178
     :cond_2
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
-    .line 267
-    new-array v0, v5, [LX/5Ev;
-
-    .line 268
-    .line 269
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 270
-    .line 271
-    .line 272
-    move-result-object v4
-
-    .line 273
-    check-cast v4, [LX/5Ev;
-
-    .line 274
-    .line 275
-    new-array v0, v5, [LX/5Et;
-
-    .line 276
-    .line 277
-    invoke-virtual {v3, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 278
-    .line 279
-    .line 280
-    move-result-object v3
-
-    .line 281
-    check-cast v3, [LX/5Et;
-
-    .line 282
-    .line 283
-    const-string v2, "images_outliers_android"
-
-    .line 284
-    .line 285
-    const v0, 0x28b0001
-
-    .line 286
-    .line 287
-    .line 288
-    invoke-static {}, LX/4BF;->A1Q()[I
-
-    .line 289
-    .line 290
-    .line 291
-    move-result-object v1
-
-    .line 292
-    aput v0, v1, v5
-
-    .line 293
-    .line 294
-    new-instance v0, LX/5Ep;
-
-    .line 295
-    .line 296
-    invoke-direct {v0, v2, v1, v4, v3}, LX/5Ep;-><init>(Ljava/lang/String;[I[LX/5Ev;[LX/5Et;)V
-
-    .line 297
-    .line 298
-    .line 299
-    return-object v0
+    .line 179
+    :cond_3
+    return v3
 .end method
 
-.method public final isEnabled()Z
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
     .line 0
-    iget-boolean v0, p0, LX/5F7;->A00:Z
+    iget v1, p0, LX/5F7;->A00:I
 
     .line 1
     .line 2
-    return v0
+    if-nez v1, :cond_1
+
+    .line 3
+    .line 4
+    const/16 v1, 0x20f
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5F7;->A07:Ljava/lang/String;
+
+    .line 7
+    .line 8
+    const/4 v2, 0x0
+
+    .line 9
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    add-int/2addr v1, v0
+
+    .line 14
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 15
+    .line 16
+    iget-boolean v0, p0, LX/5F7;->A0H:Z
+
+    .line 17
+    .line 18
+    add-int/2addr v1, v0
+
+    .line 19
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 20
+    .line 21
+    iget-boolean v0, p0, LX/5F7;->A0I:Z
+
+    .line 22
+    .line 23
+    add-int/2addr v1, v0
+
+    .line 24
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 25
+    .line 26
+    iget-boolean v0, p0, LX/5F7;->A0E:Z
+
+    .line 27
+    .line 28
+    add-int/2addr v1, v0
+
+    .line 29
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 30
+    .line 31
+    iget-boolean v0, p0, LX/5F7;->A0D:Z
+
+    .line 32
+    .line 33
+    add-int/2addr v1, v0
+
+    .line 34
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 35
+    .line 36
+    iget-boolean v0, p0, LX/5F7;->A0C:Z
+
+    .line 37
+    .line 38
+    add-int/2addr v1, v0
+
+    .line 39
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 40
+    .line 41
+    iget-boolean v0, p0, LX/5F7;->A0B:Z
+
+    .line 42
+    .line 43
+    add-int/2addr v1, v0
+
+    .line 44
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 45
+    .line 46
+    iget-boolean v0, p0, LX/5F7;->A0A:Z
+
+    .line 47
+    .line 48
+    add-int/2addr v1, v0
+
+    .line 49
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 50
+    .line 51
+    iget-boolean v0, p0, LX/5F7;->A09:Z
+
+    .line 52
+    .line 53
+    add-int/2addr v1, v0
+
+    .line 54
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 55
+    .line 56
+    iget-boolean v0, p0, LX/5F7;->A0J:Z
+
+    .line 57
+    .line 58
+    add-int/2addr v1, v0
+
+    .line 59
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 60
+    .line 61
+    iget-object v0, p0, LX/5F7;->A05:Ljava/lang/String;
+
+    .line 62
+    .line 63
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 64
+    .line 65
+    .line 66
+    move-result v0
+
+    .line 67
+    add-int/2addr v1, v0
+
+    .line 68
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 69
+    .line 70
+    iget-object v0, p0, LX/5F7;->A06:Ljava/lang/String;
+
+    .line 71
+    .line 72
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 73
+    .line 74
+    .line 75
+    move-result v0
+
+    .line 76
+    add-int/2addr v1, v0
+
+    .line 77
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 78
+    .line 79
+    iget-object v0, p0, LX/5F7;->A04:Ljava/lang/String;
+
+    .line 80
+    .line 81
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 82
+    .line 83
+    .line 84
+    move-result v0
+
+    .line 85
+    add-int/2addr v1, v0
+
+    .line 86
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 87
+    .line 88
+    iget-object v0, p0, LX/5F7;->A08:Ljava/lang/String;
+
+    .line 89
+    .line 90
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 91
+    .line 92
+    .line 93
+    move-result v0
+
+    .line 94
+    add-int/2addr v1, v0
+
+    .line 95
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 96
+    .line 97
+    iget-object v0, p0, LX/5F7;->A02:Ljava/lang/String;
+
+    .line 98
+    .line 99
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
+
+    .line 100
+    .line 101
+    .line 102
+    move-result v0
+
+    .line 103
+    add-int/2addr v1, v0
+
+    .line 104
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 105
+    .line 106
+    iget-boolean v0, p0, LX/5F7;->A0G:Z
+
+    .line 107
+    .line 108
+    add-int/2addr v1, v0
+
+    .line 109
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 110
+    .line 111
+    iget v0, p0, LX/5F7;->A01:I
+
+    .line 112
+    .line 113
+    add-int/2addr v1, v0
+
+    .line 114
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 115
+    .line 116
+    iget-boolean v0, p0, LX/5F7;->A0F:Z
+
+    .line 117
+    .line 118
+    add-int/2addr v1, v0
+
+    .line 119
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 120
+    .line 121
+    iget-boolean v0, p0, LX/5F7;->A0K:Z
+
+    .line 122
+    .line 123
+    add-int/2addr v1, v0
+
+    .line 124
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 125
+    .line 126
+    iget-object v0, p0, LX/5F7;->A03:Ljava/lang/String;
+
+    .line 127
+    .line 128
+    if-eqz v0, :cond_0
+
+    .line 129
+    .line 130
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    .line 131
+    .line 132
+    .line 133
+    move-result v2
+
+    .line 134
+    :cond_0
+    add-int/2addr v1, v2
+
+    .line 135
+    iput v1, p0, LX/5F7;->A00:I
+
+    .line 136
+    .line 137
+    :cond_1
+    return v1
 .end method

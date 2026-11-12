@@ -1,98 +1,111 @@
-.class public final LX/4hj;
+.class public final synthetic LX/4hJ;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+.implements LX/0GZ;
 
 
-# static fields
-.field public static final A00:Ljava/util/concurrent/atomic/AtomicInteger;
+# instance fields
+.field public final synthetic A00:Lcom/facebook/litho/ComponentTree;
+
+.field public final synthetic A01:Ljava/lang/String;
+
+.field public final synthetic A02:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/4hj;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p1, p0, LX/4hJ;->A00:Lcom/facebook/litho/ComponentTree;
+
+    iput-object p2, p0, LX/4hJ;->A01:Ljava/lang/String;
+
+    iput-boolean p3, p0, LX/4hJ;->A02:Z
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
     .line 0
-    sget-object v0, LX/4hj;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v0, p0, LX/4hJ;->A00:Lcom/facebook/litho/ComponentTree;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+    iget-object v3, p0, LX/4hJ;->A01:Ljava/lang/String;
 
     .line 3
     .line 4
-    .line 5
-    move-result v2
+    iget-boolean v2, p0, LX/4hJ;->A02:Z
 
+    .line 5
     .line 6
-    const/16 v0, 0x17
+    check-cast p1, Ljava/util/Map;
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
     .line 9
     .line 10
-    .line 11
-    move-result-object v1
+    if-eqz v0, :cond_0
 
+    .line 11
     .line 12
-    const-string v0, "measurement-"
+    invoke-virtual {v0}, LX/4fg;->A0H()Ljava/lang/String;
 
     .line 13
     .line 14
-    invoke-static {v0, v1, v2}, LX/001;->A0L(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
-
     .line 15
-    .line 16
-    .line 17
     move-result-object v1
 
+    .line 16
+    :goto_0
+    const-string v0, "root"
+
+    .line 17
     .line 18
-    new-instance v0, LX/4hi;
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 19
     .line 20
-    invoke-direct {v0, p1, v1}, LX/4hi;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
     .line 21
+    const-string v0, "attribution"
+
     .line 22
     .line 23
+    invoke-interface {p1, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 24
+    .line 25
+    .line 26
+    xor-int/lit8 v0, v2, 0x1
+
+    .line 27
+    .line 28
+    invoke-static {p1, v0}, LX/433;->A1R(Ljava/util/Map;Z)V
+
+    .line 29
+    .line 30
+    .line 31
+    sget-object v0, LX/0Vw;->A00:LX/0Vw;
+
+    .line 32
+    .line 33
     return-object v0
+
+    .line 34
+    :cond_0
+    const-string v1, ""
+
+    .line 35
+    .line 36
+    goto :goto_0
 .end method

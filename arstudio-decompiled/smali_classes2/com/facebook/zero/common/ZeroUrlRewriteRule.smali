@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/1SE;
+.implements LX/1es;
 
 
 # static fields
@@ -26,21 +26,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x4
+    const/16 v0, 0x4f
 
     .line 1
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
-
     .line 2
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/facebook/zero/common/ZeroUrlRewriteRule;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -160,29 +161,24 @@
 
     .line 268435466
     .line 268435467
-    if-eqz p1, :cond_0
+    invoke-static {p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     .line 268435468
     .line 268435469
-    invoke-static {p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
     .line 268435470
-    .line 268435471
-    .line 268435472
     move-result-object v0
 
-    .line 268435473
+    .line 268435471
     iput-object v0, p0, Lcom/facebook/zero/common/ZeroUrlRewriteRule;->A01:Ljava/util/regex/Pattern;
 
-    .line 268435474
-    .line 268435475
-    :cond_0
+    .line 268435472
+    .line 268435473
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic Ag8()Ljava/lang/Object;
+.method public final bridge synthetic AeW()Ljava/lang/Object;
     .locals 1
 
     .line 0
@@ -269,7 +265,7 @@
 
     .line 22
     .line 23
-    invoke-static {v1, v0}, LX/0Yf;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0X3;->A1Z(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 24
     .line 25
@@ -285,7 +281,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -308,7 +304,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0, v2}, LX/0Ye;->A08(Ljava/lang/Object;[Ljava/lang/Object;)I
+    invoke-static {v2, v0}, LX/0X2;->A0D([Ljava/lang/Object;Ljava/lang/Object;)I
 
     .line 12
     .line 13
@@ -354,7 +350,7 @@
     .line 15
     .line 16
     .line 17
-    invoke-static {v2, v1, v0}, LX/0Yg;->A0j(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v0}, LX/0X5;->A0c(Lcom/google/common/base/MoreObjects$ToStringHelper;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
 
     .line 18
     .line 19

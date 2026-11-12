@@ -3,8 +3,8 @@
 .source ""
 
 # interfaces
-.implements LX/3Ic;
-.implements LX/3gd;
+.implements LX/2iy;
+.implements LX/32E;
 .implements Lcom/facebook/common/callercontext/CallerContextable;
 
 
@@ -19,27 +19,27 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public authenticateOperation:LX/3Ey;
+.field public authenticateOperation:LX/2FE;
 
 .field public email:Ljava/lang/String;
 
-.field public mCheckApprovedMachineOperation:LX/3Ey;
+.field public mCheckApprovedMachineOperation:LX/2FE;
 
 .field public mCheckedApprovedMachineBundle:Landroid/os/Bundle;
 
-.field public mErrorDialogs:LX/35A;
+.field public mErrorDialogs:LX/2vW;
 
-.field public mErrorHandlerView:LX/3jM;
+.field public mErrorHandlerView:LX/2wF;
 
-.field public final mFbErrorReporter:LX/0Na;
+.field public final mFbErrorReporter:LX/0RP;
 
-.field public final mFbSharedPreferences:LX/0Na;
+.field public final mFbSharedPreferences:LX/0RP;
 
 .field public mLoginApprovalResendCodeBundle:Landroid/os/Bundle;
 
-.field public mLoginApprovalResendCodeOperation:LX/3Ey;
+.field public mLoginApprovalResendCodeOperation:LX/2FE;
 
 .field public mLoginErrorData:Lcom/facebook/auth/login/ui/LoginErrorData;
 
@@ -47,7 +47,7 @@
 
 .field public mPollRunnable:Ljava/lang/Runnable;
 
-.field public monitor:LX/2Uk;
+.field public monitor:LX/1ou;
 
 
 # direct methods
@@ -60,7 +60,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
 
     .line 4
     .line 5
@@ -68,11 +68,11 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mFbErrorReporter:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mFbErrorReporter:LX/0RP;
 
     .line 8
     .line 9
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 10
     .line 11
@@ -80,7 +80,7 @@
     move-result-object v0
 
     .line 13
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mFbSharedPreferences:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mFbSharedPreferences:LX/0RP;
 
     .line 14
     .line 15
@@ -133,32 +133,33 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->monitor:LX/2Uk;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->monitor:LX/1ou;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/2Uk;->A00()V
+    invoke-virtual {v0}, LX/1ou;->A00()V
 
     .line 3
     .line 4
     .line 5
-    const-string v0, "com.facebook.orca.login.AuthStateMachineMonitor.AUTH_COMPLETE"
+    const-string/jumbo v0, "com.facebook.orca.login.AuthStateMachineMonitor.AUTH_COMPLETE"
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/0Yj;->A09(Ljava/lang/String;)Landroid/content/Intent;
-
     .line 8
+    invoke-static {v0}, LX/0X7;->A09(Ljava/lang/String;)Landroid/content/Intent;
+
     .line 9
     .line 10
+    .line 11
     move-result-object v0
 
-    .line 11
+    .line 12
     invoke-virtual {p0, v0}, Lcom/facebook/base/fragment/AbstractNavigableFragment;->finish(Landroid/content/Intent;)V
 
-    .line 12
     .line 13
     .line 14
+    .line 15
     return-void
 .end method
 
@@ -215,7 +216,7 @@
 
     .line 20
     .line 21
-    invoke-static {v2}, LX/0Yg;->A0d(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {v2}, LX/0X4;->A0f(Ljava/util/List;)Ljava/lang/Object;
 
     .line 22
     .line 23
@@ -253,11 +254,11 @@
 
     .line 39
     :cond_1
-    new-instance v0, LX/1l4;
+    new-instance v0, LX/26F;
 
     .line 40
     .line 41
-    invoke-direct {v0}, LX/1l4;-><init>()V
+    invoke-direct {v0}, LX/26F;-><init>()V
 
     .line 42
     .line 43
@@ -269,11 +270,11 @@
     .locals 4
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mCheckApprovedMachineOperation:LX/3Ey;
+    iget-object v3, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mCheckApprovedMachineOperation:LX/2FE;
 
     .line 1
     .line 2
-    invoke-virtual {v3}, LX/3Ey;->A03()Z
+    invoke-virtual {v3}, LX/2FE;->A03()Z
 
     .line 3
     .line 4
@@ -301,15 +302,16 @@
     move-result-object v1
 
     .line 16
-    const-string v0, "check_approved_machine"
+    const-string/jumbo v0, "check_approved_machine"
 
     .line 17
     .line 18
-    invoke-virtual {v3, v2, v1, v0}, LX/3Ey;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
-
     .line 19
+    invoke-virtual {v3, v2, v1, v0}, LX/2FE;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
+
     .line 20
     .line 21
+    .line 22
     :cond_0
     return-void
 .end method
@@ -318,7 +320,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -349,18 +351,18 @@
     return-object v1
 .end method
 
-.method public static getAuthAnalyticsLoggerProps()LX/2Js;
+.method public static getAuthAnalyticsLoggerProps()LX/1zT;
     .locals 2
 
     .line 0
     const/4 v1, 0x1
 
     .line 1
-    new-instance v0, LX/1U7;
+    new-instance v0, LX/0Xj;
 
     .line 2
     .line 3
-    invoke-direct {v0, v1}, LX/1U7;-><init>(I)V
+    invoke-direct {v0, v1}, LX/0Xj;-><init>(I)V
 
     .line 4
     .line 5
@@ -368,7 +370,7 @@
     return-object v0
 .end method
 
-.method private getIAuthAnalyticsLoggerSocket()LX/2Jq;
+.method private getIAuthAnalyticsLoggerSocket()LX/1zS;
     .locals 2
 
     .line 0
@@ -380,11 +382,11 @@
     move-result-object v1
 
     .line 4
-    new-instance v0, LX/2Jq;
+    new-instance v0, LX/1zS;
 
     .line 5
     .line 6
-    invoke-direct {v0, v1}, LX/2Jq;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, LX/1zS;-><init>(Landroid/content/Context;)V
 
     .line 7
     .line 8
@@ -393,25 +395,25 @@
 .end method
 
 .method private reportLoginApprovalError(ILjava/lang/Throwable;)V
-    .locals 8
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->getIAuthAnalyticsLoggerSocket()LX/2Jq;
+    invoke-direct {p0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->getIAuthAnalyticsLoggerSocket()LX/1zS;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    move-result-object v1
 
     .line 4
-    const/4 v7, 0x0
+    const/4 v0, 0x0
 
     .line 5
-    iput v7, v0, LX/2Jm;->A00:I
+    iput v0, v1, LX/1zR;->A00:I
 
     .line 6
     .line 7
-    invoke-virtual {v0}, LX/2Jm;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 8
     .line 9
@@ -439,83 +441,92 @@
     move-result-object v1
 
     .line 21
-    check-cast v1, LX/2Jq;
+    check-cast v1, LX/1zS;
 
     .line 22
     .line 23
     const/4 v0, 0x1
 
     .line 24
-    invoke-static {v1, v0}, LX/3e4;->A03(LX/2Jq;I)V
+    invoke-static {v1, v0}, LX/3FR;->A02(LX/1zS;I)V
 
     .line 25
     .line 26
     .line 27
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
     throw v0
 
-    .line 29
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mFbErrorReporter:LX/0Na;
-
-    .line 30
-    .line 31
-    invoke-static {v0}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
-
     .line 32
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mFbErrorReporter:LX/0RP;
+
     .line 33
     .line 34
-    move-result-object v1
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
 
     .line 35
-    const-string v0, "LoginApprovalFragment_"
-
     .line 36
     .line 37
-    invoke-static {v0, p1}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    move-result-object v2
 
     .line 38
+    const-string v0, "LoginApprovalFragment_"
+
     .line 39
     .line 40
-    move-result-object v3
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 41
-    const-string/jumbo v0, "login approval error: "
-
     .line 42
     .line 43
+    move-result-object v1
+
     .line 44
-    invoke-static {v0, p1}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    const-string/jumbo v0, "login approval error: "
 
     .line 45
     .line 46
     .line 47
-    move-result-object v4
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
 
     .line 48
-    const/16 v6, 0x3e8
-
     .line 49
     .line 50
-    new-instance v2, LX/0Gs;
+    move-result-object v0
 
     .line 51
+    invoke-static {v1, v0}, LX/0G0;->A02(Ljava/lang/String;Ljava/lang/String;)LX/0G2;
+
     .line 52
-    move-object v5, p2
-
     .line 53
-    invoke-direct/range {v2 .. v7}, LX/0Gs;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;IZ)V
-
     .line 54
-    .line 55
-    .line 56
-    invoke-interface {v1, v2}, LX/0Gk;->AoV(LX/0Gs;)V
+    move-result-object v1
 
+    .line 55
+    iput-object p2, v1, LX/0G2;->A04:Ljava/lang/Throwable;
+
+    .line 56
     .line 57
+    const/16 v0, 0x3e8
+
     .line 58
     .line 59
+    iput v0, v1, LX/0G2;->A00:I
+
+    .line 60
+    .line 61
+    invoke-static {v2, v1}, LX/0X3;->A16(LX/0Ft;LX/0G2;)V
+
+    .line 62
+    .line 63
+    .line 64
     return-void
 .end method
 
@@ -545,11 +556,11 @@
     .line 10
     .line 11
     :cond_0
-    new-instance v3, LX/3FV;
+    new-instance v3, LX/2vp;
 
     .line 12
     .line 13
-    invoke-direct {v3, p0}, LX/3FV;-><init>(Lcom/facebook/auth/login/ui/LoginApprovalFragment;)V
+    invoke-direct {v3, p0}, LX/2vp;-><init>(Lcom/facebook/auth/login/ui/LoginApprovalFragment;)V
 
     .line 14
     .line 15
@@ -595,11 +606,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mFbSharedPreferences:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mFbSharedPreferences:LX/0RP;
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/0Yd;->A0L(LX/0Na;)Ljava/lang/String;
+    invoke-static {v0}, LX/0X2;->A0e(LX/0RP;)Ljava/lang/String;
 
     .line 9
     .line 10
@@ -646,7 +657,7 @@
     .line 30
     .line 31
     .line 32
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 33
     .line 34
@@ -658,47 +669,49 @@
 
     .line 37
     .line 38
-    const-string v0, "checkApprovedMachineParams"
+    const-string/jumbo v0, "checkApprovedMachineParams"
 
     .line 39
     .line 40
+    .line 41
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 41
     .line 42
     .line 43
-    const-string v0, "checkedApprovedMachineOperation"
-
     .line 44
-    .line 45
-    invoke-static {p0, v0}, LX/3Ey;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/3Ey;
+    const-string/jumbo v0, "checkedApprovedMachineOperation"
 
+    .line 45
     .line 46
     .line 47
+    invoke-static {p0, v0}, LX/2FE;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/2FE;
+
     .line 48
+    .line 49
+    .line 50
     move-result-object v2
 
-    .line 49
-    iput-object v2, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mCheckApprovedMachineOperation:LX/3Ey;
-
-    .line 50
     .line 51
-    const/4 v1, 0x1
+    iput-object v2, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mCheckApprovedMachineOperation:LX/2FE;
 
     .line 52
-    new-instance v0, LX/1sy;
-
     .line 53
+    const/4 v1, 0x1
+
     .line 54
-    invoke-direct {v0, p0, v1}, LX/1sy;-><init>(Ljava/lang/Object;I)V
+    new-instance v0, LX/0ZD;
 
     .line 55
     .line 56
-    .line 57
-    iput-object v0, v2, LX/3Ey;->A02:LX/3FZ;
+    invoke-direct {v0, p0, v1}, LX/0ZD;-><init>(Ljava/lang/Object;I)V
 
+    .line 57
     .line 58
     .line 59
+    iput-object v0, v2, LX/2FE;->A02:LX/2Ei;
+
+    .line 60
+    .line 61
     return-void
 .end method
 
@@ -711,7 +724,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0, v0}, LX/3Ey;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/3Ey;
+    invoke-static {p0, v0}, LX/2FE;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/2FE;
 
     .line 4
     .line 5
@@ -719,27 +732,27 @@
     move-result-object v2
 
     .line 7
-    iput-object v2, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mLoginApprovalResendCodeOperation:LX/3Ey;
+    iput-object v2, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mLoginApprovalResendCodeOperation:LX/2FE;
 
     .line 8
     .line 9
     const/4 v1, 0x2
 
     .line 10
-    new-instance v0, LX/1sy;
+    new-instance v0, LX/0ZD;
 
     .line 11
     .line 12
-    invoke-direct {v0, p0, v1}, LX/1sy;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {v0, p0, v1}, LX/0ZD;-><init>(Ljava/lang/Object;I)V
 
     .line 13
     .line 14
     .line 15
-    iput-object v0, v2, LX/3Ey;->A02:LX/3FZ;
+    iput-object v0, v2, LX/2FE;->A02:LX/2Ei;
 
     .line 16
     .line 17
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 18
     .line 19
@@ -797,11 +810,11 @@
     .locals 4
 
     .line 0
-    iget-object v1, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/1x7;
+    iget-object v1, p1, Lcom/facebook/fbservice/service/ServiceException;->errorCode:LX/26P;
 
     .line 1
     .line 2
-    sget-object v0, LX/1x7;->API_ERROR:LX/1x7;
+    sget-object v0, LX/26P;->API_ERROR:LX/26P;
 
     .line 3
     .line 4
@@ -850,11 +863,11 @@
     .line 25
     .line 26
     .line 27
-    iget-object v3, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mErrorDialogs:LX/35A;
+    iget-object v3, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mErrorDialogs:LX/2vW;
 
     .line 28
     .line 29
-    invoke-static {p0}, LX/0Yh;->A0B(Landroidx/fragment/app/Fragment;)Landroid/content/res/Resources;
+    invoke-static {p0}, LX/0X6;->A0D(Landroidx/fragment/app/Fragment;)Landroid/content/res/Resources;
 
     .line 30
     .line 31
@@ -865,7 +878,7 @@
     const/4 v2, 0x0
 
     .line 34
-    const v0, 0x7f1201e1
+    const v0, 0x7f1101ae
 
     .line 35
     .line 36
@@ -878,21 +891,21 @@
     move-result-object v1
 
     .line 41
-    new-instance v0, LX/3Fr;
+    new-instance v0, LX/2vz;
 
     .line 42
     .line 43
-    invoke-direct {v0, v2, v1}, LX/3Fr;-><init>(Lcom/facebook/fbservice/service/ServiceException;Ljava/lang/String;)V
+    invoke-direct {v0, v2, v1}, LX/2vz;-><init>(Lcom/facebook/fbservice/service/ServiceException;Ljava/lang/String;)V
 
     .line 44
     .line 45
     .line 46
     :goto_0
-    iget-object v1, v3, LX/35A;->A01:Landroid/content/Context;
+    iget-object v1, v3, LX/2vW;->A01:Landroid/content/Context;
 
     .line 47
     .line 48
-    invoke-virtual {v3, v1, v0}, LX/35A;->A00(Landroid/content/Context;LX/3Fr;)V
+    invoke-virtual {v3, v1, v0}, LX/2vW;->A00(Landroid/content/Context;LX/2vz;)V
 
     .line 49
     .line 50
@@ -909,11 +922,11 @@
     .line 54
     .line 55
     .line 56
-    iget-object v3, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mErrorDialogs:LX/35A;
+    iget-object v3, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mErrorDialogs:LX/2vW;
 
     .line 57
     .line 58
-    iget-object v0, v3, LX/35A;->A01:Landroid/content/Context;
+    iget-object v0, v3, LX/2vW;->A01:Landroid/content/Context;
 
     .line 59
     .line 60
@@ -925,11 +938,11 @@
     const/4 v1, 0x0
 
     .line 64
-    new-instance v0, LX/3Fr;
+    new-instance v0, LX/2vz;
 
     .line 65
     .line 66
-    invoke-direct {v0, p1, v1}, LX/3Fr;-><init>(Lcom/facebook/fbservice/service/ServiceException;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, LX/2vz;-><init>(Lcom/facebook/fbservice/service/ServiceException;Ljava/lang/String;)V
 
     .line 67
     .line 68
@@ -941,7 +954,7 @@
     .locals 2
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->getIAuthAnalyticsLoggerSocket()LX/2Jq;
+    invoke-direct {p0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->getIAuthAnalyticsLoggerSocket()LX/1zS;
 
     .line 1
     .line 2
@@ -952,11 +965,11 @@
     const/4 v0, 0x0
 
     .line 5
-    iput v0, v1, LX/2Jm;->A00:I
+    iput v0, v1, LX/1zR;->A00:I
 
     .line 6
     .line 7
-    invoke-virtual {v1}, LX/2Jm;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 8
     .line 9
@@ -984,30 +997,35 @@
     move-result-object v1
 
     .line 21
-    check-cast v1, LX/2Jq;
+    check-cast v1, LX/1zS;
 
     .line 22
     .line 23
     const/4 v0, 0x1
 
     .line 24
-    invoke-static {v1, v0}, LX/3e4;->A03(LX/2Jq;I)V
+    invoke-static {v1, v0}, LX/3FR;->A02(LX/1zS;I)V
 
     .line 25
     .line 26
     .line 27
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
     throw v0
 
-    .line 29
+    .line 32
     :cond_0
     invoke-direct {p0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->authComplete()V
 
-    .line 30
-    .line 31
-    .line 32
+    .line 33
+    .line 34
+    .line 35
     return-void
 .end method
 
@@ -1021,6 +1039,16 @@
     .locals 0
 
     return-void
+.end method
+
+.method public synthetic analyticsProviderEnabled()Z
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x1
+
+    .line 1
+    return v0
 .end method
 
 .method public canResendCode()Z
@@ -1074,15 +1102,15 @@
     return v0
 .end method
 
-.method public doGenericLogin(Landroid/os/Bundle;Ljava/lang/String;LX/3JT;)V
+.method public doGenericLogin(Landroid/os/Bundle;Ljava/lang/String;LX/2Ek;)V
     .locals 2
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->authenticateOperation:LX/3Ey;
+    iget-object v1, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->authenticateOperation:LX/2FE;
 
     .line 1
     .line 2
-    invoke-virtual {v1}, LX/3Ey;->A03()Z
+    invoke-virtual {v1}, LX/2FE;->A03()Z
 
     .line 3
     .line 4
@@ -1098,20 +1126,20 @@
 
     .line 9
     .line 10
-    invoke-virtual {v1, p3}, LX/3Ey;->A02(LX/3JT;)V
+    invoke-virtual {v1, p3}, LX/2FE;->A02(LX/2Ek;)V
 
     .line 11
     .line 12
     .line 13
     :cond_0
-    iget-object v1, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->authenticateOperation:LX/3Ey;
+    iget-object v1, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->authenticateOperation:LX/2FE;
 
     .line 14
     .line 15
     const/4 v0, 0x0
 
     .line 16
-    invoke-virtual {v1, p1, v0, p2}, LX/3Ey;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
+    invoke-virtual {v1, p1, v0, p2}, LX/2FE;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
 
     .line 17
     .line 18
@@ -1120,11 +1148,11 @@
     return-void
 .end method
 
-.method public doLogin(Ljava/lang/String;LX/3JT;)V
+.method public doLogin(Ljava/lang/String;LX/2Ek;)V
     .locals 2
 
     .line 0
-    sget-object v1, LX/1ZJ;->TWO_FACTOR:LX/1ZJ;
+    sget-object v1, LX/2PV;->TWO_FACTOR:LX/2PV;
 
     .line 1
     .line 2
@@ -1132,7 +1160,7 @@
 
     .line 3
     .line 4
-    invoke-virtual {p0, v0, p1, v1}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->getLoginParamBundle(Ljava/lang/String;Ljava/lang/String;LX/1ZJ;)Landroid/os/Bundle;
+    invoke-virtual {p0, v0, p1, v1}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->getLoginParamBundle(Ljava/lang/String;Ljava/lang/String;LX/2PV;)Landroid/os/Bundle;
 
     .line 5
     .line 6
@@ -1140,15 +1168,16 @@
     move-result-object v1
 
     .line 8
-    const-string v0, "auth_password"
+    const-string/jumbo v0, "auth_password"
 
     .line 9
     .line 10
-    invoke-virtual {p0, v1, v0, p2}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->doGenericLogin(Landroid/os/Bundle;Ljava/lang/String;LX/3JT;)V
-
     .line 11
+    invoke-virtual {p0, v1, v0, p2}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->doGenericLogin(Landroid/os/Bundle;Ljava/lang/String;LX/2Ek;)V
+
     .line 12
     .line 13
+    .line 14
     return-void
 .end method
 
@@ -1164,37 +1193,38 @@
     move-result-object v4
 
     .line 4
-    const-string v3, "auth_password"
+    const-string/jumbo v3, "auth_password"
 
     .line 5
     .line 6
+    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    .line 7
     .line 8
     .line 9
+    .line 10
     move-result-object v2
 
-    .line 10
-    const v1, 0x7f1201ed
-
     .line 11
+    const v1, 0x7f1101ba
+
     .line 12
     .line 13
-    new-instance v0, LX/3f0;
-
     .line 14
-    .line 15
-    invoke-direct {v0, v2, v1}, LX/3f0;-><init>(Landroid/content/Context;I)V
+    new-instance v0, LX/32G;
 
+    .line 15
     .line 16
+    invoke-direct {v0, v2, v1}, LX/32G;-><init>(Landroid/content/Context;I)V
+
     .line 17
     .line 18
-    invoke-virtual {p0, v4, v3, v0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->doGenericLogin(Landroid/os/Bundle;Ljava/lang/String;LX/3JT;)V
-
     .line 19
+    invoke-virtual {p0, v4, v3, v0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->doGenericLogin(Landroid/os/Bundle;Ljava/lang/String;LX/2Ek;)V
+
     .line 20
     .line 21
+    .line 22
     return-void
 .end method
 
@@ -1228,11 +1258,11 @@
     return-object v0
 .end method
 
-.method public getLoginParamBundle(Ljava/lang/String;Ljava/lang/String;LX/1ZJ;)Landroid/os/Bundle;
+.method public getLoginParamBundle(Ljava/lang/String;Ljava/lang/String;LX/2PV;)Landroid/os/Bundle;
     .locals 10
 
     .line 0
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 1
     .line 2
@@ -1240,7 +1270,7 @@
     move-result-object v3
 
     .line 4
-    sget-object v5, LX/1ZJ;->TWO_FACTOR:LX/1ZJ;
+    sget-object v5, LX/2PV;->TWO_FACTOR:LX/2PV;
 
     .line 5
     .line 6
@@ -1254,7 +1284,7 @@
 
     .line 9
     .line 10
-    sget-object v0, LX/1ZJ;->WORK_ACCOUNT_PASSWORD:LX/1ZJ;
+    sget-object v0, LX/2PV;->WORK_ACCOUNT_PASSWORD:LX/2PV;
 
     .line 11
     .line 12
@@ -1262,7 +1292,7 @@
 
     .line 13
     .line 14
-    sget-object v0, LX/1ZJ;->WORK_USERNAME_WITH_PERSONAL_PASSWORD:LX/1ZJ;
+    sget-object v0, LX/2PV;->WORK_USERNAME_WITH_PERSONAL_PASSWORD:LX/2PV;
 
     .line 15
     .line 16
@@ -1274,7 +1304,7 @@
 
     .line 19
     .line 20
-    invoke-direct {v4, p3, p1, p2}, Lcom/facebook/auth/credentials/PasswordCredentials;-><init>(LX/1ZJ;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, p3, p1, p2}, Lcom/facebook/auth/credentials/PasswordCredentials;-><init>(LX/2PV;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 21
     .line 22
@@ -1318,7 +1348,7 @@
 
     .line 41
     .line 42
-    invoke-direct/range {v4 .. v9}, Lcom/facebook/auth/credentials/TwoFactorCredentials;-><init>(LX/1ZJ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v4 .. v9}, Lcom/facebook/auth/credentials/TwoFactorCredentials;-><init>(LX/2PV;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 43
     .line 44
@@ -1329,7 +1359,7 @@
 .method public getOperationType()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "auth_password"
+    const-string/jumbo v0, "auth_password"
 
     return-object v0
 .end method
@@ -1358,11 +1388,11 @@
 
     .line 9
     .line 10
-    sget-object v0, LX/1ZJ;->TRANSIENT_TOKEN:LX/1ZJ;
+    sget-object v0, LX/2PV;->TRANSIENT_TOKEN:LX/2PV;
 
     .line 11
     .line 12
-    invoke-virtual {p0, v2, v1, v0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->getLoginParamBundle(Ljava/lang/String;Ljava/lang/String;LX/1ZJ;)Landroid/os/Bundle;
+    invoke-virtual {p0, v2, v1, v0}, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->getLoginParamBundle(Ljava/lang/String;Ljava/lang/String;LX/2PV;)Landroid/os/Bundle;
 
     .line 13
     .line 14
@@ -1373,11 +1403,11 @@
     return-object v0
 .end method
 
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 1
 
     .line 0
-    invoke-static {}, LX/37j;->A00()LX/37j;
+    invoke-static {}, LX/2uz;->A00()LX/2uz;
 
     .line 1
     .line 2
@@ -1392,7 +1422,7 @@
     .locals 1
 
     .line 0
-    const-class v0, LX/3gd;
+    const-class v0, LX/32E;
 
     .line 1
     .line 2
@@ -1416,11 +1446,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AJz:I
+    sget v0, LX/2I6;->AJz:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -1428,15 +1458,15 @@
     move-result-object v0
 
     .line 9
-    check-cast v0, LX/2Uk;
+    check-cast v0, LX/1ou;
 
     .line 10
     .line 11
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->monitor:LX/2Uk;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->monitor:LX/1ou;
 
     .line 12
     .line 13
-    sget v1, LX/2eq;->Agq:I
+    sget v1, LX/2I6;->AYa:I
 
     .line 14
     .line 15
@@ -1448,7 +1478,7 @@
     move-result-object v0
 
     .line 19
-    invoke-static {v0, v1}, LX/1zD;->A01(Landroid/content/Context;I)Ljava/lang/Object;
+    invoke-static {v0, v1}, LX/3Fb;->A02(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 20
     .line 21
@@ -1456,11 +1486,11 @@
     move-result-object v0
 
     .line 23
-    check-cast v0, LX/35A;
+    check-cast v0, LX/2vW;
 
     .line 24
     .line 25
-    iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mErrorDialogs:LX/35A;
+    iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mErrorDialogs:LX/2vW;
 
     .line 26
     .line 27
@@ -1524,63 +1554,64 @@
     .line 57
     .line 58
     :cond_0
-    const-string v0, "authenticateOperation"
+    const-string/jumbo v0, "authenticateOperation"
 
     .line 59
     .line 60
-    invoke-static {p0, v0}, LX/3Ey;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/3Ey;
-
     .line 61
+    invoke-static {p0, v0}, LX/2FE;->A00(Landroidx/fragment/app/Fragment;Ljava/lang/String;)LX/2FE;
+
     .line 62
     .line 63
+    .line 64
     move-result-object v2
 
-    .line 64
-    iput-object v2, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->authenticateOperation:LX/3Ey;
-
     .line 65
+    iput-object v2, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->authenticateOperation:LX/2FE;
+
     .line 66
+    .line 67
     const/4 v1, 0x0
 
-    .line 67
-    new-instance v0, LX/1sy;
-
     .line 68
-    .line 69
-    invoke-direct {v0, p0, v1}, LX/1sy;-><init>(Ljava/lang/Object;I)V
+    new-instance v0, LX/0ZD;
 
+    .line 69
     .line 70
+    invoke-direct {v0, p0, v1}, LX/0ZD;-><init>(Ljava/lang/Object;I)V
+
     .line 71
     .line 72
-    iput-object v0, v2, LX/3Ey;->A02:LX/3FZ;
-
     .line 73
+    iput-object v0, v2, LX/2FE;->A02:LX/2Ei;
+
     .line 74
+    .line 75
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireArguments()Landroid/os/Bundle;
 
-    .line 75
     .line 76
     .line 77
+    .line 78
     move-result-object v1
 
-    .line 78
+    .line 79
     const-string/jumbo v0, "orca:authparam:email"
 
-    .line 79
     .line 80
     .line 81
+    .line 82
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 82
     .line 83
     .line 84
+    .line 85
     move-result-object v0
 
-    .line 85
+    .line 86
     iput-object v0, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->email:Ljava/lang/String;
 
-    .line 86
     .line 87
+    .line 88
     return-void
 .end method
 
@@ -1660,15 +1691,15 @@
     return-void
 .end method
 
-.method public resendCode(LX/3JT;LX/3FZ;)V
+.method public resendCode(LX/2Ek;LX/2Ei;)V
     .locals 4
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mLoginApprovalResendCodeOperation:LX/3Ey;
+    iget-object v1, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mLoginApprovalResendCodeOperation:LX/2FE;
 
     .line 1
     .line 2
-    invoke-virtual {v1}, LX/3Ey;->A03()Z
+    invoke-virtual {v1}, LX/2FE;->A03()Z
 
     .line 3
     .line 4
@@ -1680,16 +1711,16 @@
 
     .line 7
     .line 8
-    invoke-virtual {v1, p1}, LX/3Ey;->A02(LX/3JT;)V
+    invoke-virtual {v1, p1}, LX/2FE;->A02(LX/2Ek;)V
 
     .line 9
     .line 10
     .line 11
-    iget-object v3, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mLoginApprovalResendCodeOperation:LX/3Ey;
+    iget-object v3, p0, Lcom/facebook/auth/login/ui/LoginApprovalFragment;->mLoginApprovalResendCodeOperation:LX/2FE;
 
     .line 12
     .line 13
-    iput-object p2, v3, LX/3Ey;->A02:LX/3FZ;
+    iput-object p2, v3, LX/2FE;->A02:LX/2Ei;
 
     .line 14
     .line 15
@@ -1714,7 +1745,7 @@
     .line 24
     .line 25
     .line 26
-    invoke-virtual {v3, v2, v1, v0}, LX/3Ey;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
+    invoke-virtual {v3, v2, v1, v0}, LX/2FE;->A01(Landroid/os/Bundle;Lcom/facebook/common/callercontext/CallerContext;Ljava/lang/String;)V
 
     .line 27
     .line 28

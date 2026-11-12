@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field public final synthetic A00:LX/0Zv;
+.field public final synthetic A00:LX/2WN;
 
 
 # direct methods
-.method public constructor <init>(LX/0Zv;)V
+.method public constructor <init>(LX/2WN;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Lcom/facebook/codelayouts/LayoutCache$ActivityCallbacks;->A00:LX/0Zv;
+    iput-object p1, p0, Lcom/facebook/codelayouts/LayoutCache$ActivityCallbacks;->A00:LX/2WN;
 
     .line 1
     .line 2
@@ -39,7 +39,7 @@
     .locals 7
 
     .line 0
-    iget-object v6, p0, Lcom/facebook/codelayouts/LayoutCache$ActivityCallbacks;->A00:LX/0Zv;
+    iget-object v6, p0, Lcom/facebook/codelayouts/LayoutCache$ActivityCallbacks;->A00:LX/2WN;
 
     .line 1
     .line 2
@@ -47,11 +47,11 @@
 
     .line 3
     :try_start_0
-    iget-object v5, v6, LX/0Zv;->A01:Ljava/util/Map;
+    iget-object v5, v6, LX/2WN;->A00:Ljava/util/Map;
 
     .line 4
     .line 5
-    invoke-static {v5}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {v5}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 6
     .line 7
@@ -73,7 +73,7 @@
 
     .line 14
     .line 15
-    invoke-static {v4}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v4}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 16
     .line 17

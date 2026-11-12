@@ -1,37 +1,60 @@
-.class public final LX/5Dt;
+.class public final LX/5dT;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/5cW;
 
-# instance fields
-.field public A00:J
 
-.field public final A01:LX/55C;
+# static fields
+.field public static final A00:LX/5dT;
+
+.field public static final A01:LX/6Xn;
 
 
 # direct methods
-.method public constructor <init>(LX/55C;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    new-instance v0, LX/5dT;
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    invoke-static {p1}, LX/51D;->A02(Ljava/lang/Object;)V
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/5dT;-><init>()V
 
-    .line 268435460
-    .line 268435461
-    .line 268435462
-    iput-object p1, p0, LX/5Dt;->A01:LX/55C;
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/5dT;->A00:LX/5dT;
 
-    .line 268435463
-    .line 268435464
+    .line 6
+    .line 7
+    sget-object v2, LX/5dU;->A00:LX/5dU;
+
+    .line 8
+    .line 9
+    const-string v1, "kotlin.Double"
+
+    .line 10
+    .line 11
+    new-instance v0, LX/6b8;
+
+    .line 12
+    .line 13
+    invoke-direct {v0, v1, v2}, LX/6b8;-><init>(Ljava/lang/String;LX/6bU;)V
+
+    .line 14
+    .line 15
+    .line 16
+    sput-object v0, LX/5dT;->A01:LX/6Xn;
+
+    .line 17
+    .line 18
     return-void
 .end method
 
-.method public constructor <init>(LX/55C;J)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -40,66 +63,49 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1}, LX/51D;->A02(Ljava/lang/Object;)V
-
-    .line 4
-    .line 5
-    .line 6
-    iput-object p1, p0, LX/5Dt;->A01:LX/55C;
-
-    .line 7
-    .line 8
-    iput-wide p2, p0, LX/5Dt;->A00:J
-
-    .line 9
-    .line 10
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(J)Z
-    .locals 6
+.method public final bridge synthetic A7J(LX/5dV;)Ljava/lang/Object;
+    .locals 2
 
     .line 0
-    iget-wide v4, p0, LX/5Dt;->A00:J
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-interface {p1}, LX/5dV;->A6m()D
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-wide v0
+
+    .line 8
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
+.end method
+
+.method public final AD9()LX/6Xn;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/5dT;->A01:LX/6Xn;
 
     .line 1
     .line 2
-    const/4 v3, 0x1
-
-    .line 3
-    const-wide/16 v1, 0x0
-
-    .line 4
-    .line 5
-    cmp-long v0, v4, v1
-
-    .line 6
-    .line 7
-    if-eqz v0, :cond_0
-
-    .line 8
-    .line 9
-    invoke-static {v4, v5}, LX/0Yi;->A0C(J)J
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-wide v1
-
-    .line 13
-    cmp-long v0, v1, p1
-
-    .line 14
-    .line 15
-    if-gtz v0, :cond_0
-
-    .line 16
-    .line 17
-    const/4 v3, 0x0
-
-    .line 18
-    :cond_0
-    return v3
+    return-object v0
 .end method

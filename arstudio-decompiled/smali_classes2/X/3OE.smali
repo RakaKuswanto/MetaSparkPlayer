@@ -2,192 +2,422 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3Of;
+
+
+# instance fields
+.field public final A00:LX/2Wv;
+
 
 # direct methods
-.method public static A00(LX/3Ro;Ljava/io/InputStream;)Lorg/apache/http/entity/InputStreamEntity;
-    .locals 4
+.method public constructor <init>(LX/2Wv;)V
+    .locals 0
 
     .line 0
-    iget-object p0, p0, LX/3Ro;->A01:Ljava/util/Map;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const-string v0, "Content-Length"
+    .line 3
+    iput-object p1, p0, LX/3OE;->A00:LX/2Wv;
+
+    .line 4
+    .line 5
+    return-void
+.end method
+
+
+# virtual methods
+.method public final AUP()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final AWE(LX/3Og;)V
+    .locals 8
+
+    .line 0
+    iget-object v5, p0, LX/3OE;->A00:LX/2Wv;
+
+    .line 1
+    .line 2
+    iget-object v0, p1, LX/3Og;->A01:LX/3JP;
 
     .line 3
     .line 4
-    invoke-static {v0, p0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    iget-wide v3, p1, LX/3Og;->A00:J
 
     .line 5
     .line 6
-    .line 7
-    move-result-object v0
+    const/4 v6, 0x1
 
-    .line 8
+    .line 7
     if-eqz v0, :cond_0
 
+    .line 8
     .line 9
-    .line 10
-    :try_start_0
-    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
+    .line 10
     .line 11
     .line 12
+    move-result v7
+
     .line 13
-    move-result-wide v2
+    const/4 v0, 0x0
 
     .line 14
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    const-wide/16 v1, 0x1
 
     .line 15
-    :catch_0
-    :cond_0
-    const-wide/16 v2, -0x1
-
     .line 16
+    if-eq v7, v0, :cond_3
+
     .line 17
-    :goto_0
-    new-instance v1, Lorg/apache/http/entity/InputStreamEntity;
-
     .line 18
+    if-eq v7, v6, :cond_2
+
     .line 19
-    invoke-direct {v1, p1, v2, v3}, Lorg/apache/http/entity/InputStreamEntity;-><init>(Ljava/io/InputStream;J)V
-
     .line 20
-    .line 21
-    .line 22
-    const-string v0, "Content-Encoding"
+    const/4 v0, 0x2
 
+    .line 21
+    if-eq v7, v0, :cond_1
+
+    .line 22
     .line 23
+    const/4 v0, 0x3
+
     .line 24
-    invoke-static {v0, p0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    if-ne v7, v0, :cond_0
 
     .line 25
     .line 26
-    .line 27
-    move-result-object v0
+    sget-object v0, LX/3OF;->EVICTIONS_ON_CACHE_MANAGER_TRIMMED_CALL:LX/3OF;
 
+    .line 27
     .line 28
-    if-eqz v0, :cond_1
+    invoke-static {v0, v5, v1, v2}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
 
     .line 29
     .line 30
-    invoke-virtual {v1, v0}, Lorg/apache/http/entity/AbstractHttpEntity;->setContentEncoding(Ljava/lang/String;)V
-
     .line 31
+    sget-object v2, LX/3OF;->EVICTIONS_ON_CACHE_MANAGER_TRIMMED_ITEM:LX/3OF;
+
     .line 32
     .line 33
-    :cond_1
-    const-string v0, "Content-Type"
+    int-to-long v0, v6
 
     .line 34
-    .line 35
-    invoke-static {v0, p0}, LX/0Yg;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+    invoke-static {v2, v5, v0, v1}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
 
+    .line 35
     .line 36
     .line 37
-    .line 38
-    move-result-object v0
+    sget-object v0, LX/3OF;->EVICTIONS_ON_CACHE_MANAGER_TRIMMED_SIZE:LX/3OF;
 
+    .line 38
     .line 39
-    if-eqz v0, :cond_2
+    :goto_0
+    invoke-static {v0, v5, v3, v4}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
 
     .line 40
     .line 41
-    invoke-virtual {v1, v0}, Lorg/apache/http/entity/AbstractHttpEntity;->setContentType(Ljava/lang/String;)V
+    .line 42
+    :cond_0
+    return-void
+
+    .line 43
+    :cond_1
+    sget-object v0, LX/3OF;->EVICTIONS_ON_USER_FORCED_CALL:LX/3OF;
+
+    .line 44
+    .line 45
+    invoke-static {v0, v5, v1, v2}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
+    .line 46
+    .line 47
+    .line 48
+    sget-object v2, LX/3OF;->EVICTIONS_ON_USER_FORCED_ITEM:LX/3OF;
+
+    .line 49
+    .line 50
+    int-to-long v0, v6
+
+    .line 51
+    invoke-static {v2, v5, v0, v1}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
+    .line 52
+    .line 53
+    .line 54
+    sget-object v0, LX/3OF;->EVICTIONS_ON_USER_FORCED_SIZE:LX/3OF;
+
+    .line 55
+    .line 56
+    goto :goto_0
+
+    .line 57
+    :cond_2
+    sget-object v0, LX/3OF;->EVICTIONS_ON_CONTENT_STALE_CALL:LX/3OF;
+
+    .line 58
+    .line 59
+    invoke-static {v0, v5, v1, v2}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
+    .line 60
+    .line 61
+    .line 62
+    sget-object v2, LX/3OF;->EVICTIONS_ON_CONTENT_STALE_ITEM:LX/3OF;
+
+    .line 63
+    .line 64
+    int-to-long v0, v6
+
+    .line 65
+    invoke-static {v2, v5, v0, v1}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
+    .line 66
+    .line 67
+    .line 68
+    sget-object v0, LX/3OF;->EVICTIONS_ON_CONTENT_STALE_SIZE:LX/3OF;
+
+    .line 69
+    .line 70
+    goto :goto_0
+
+    .line 71
+    :cond_3
+    sget-object v0, LX/3OF;->EVICTIONS_ON_CACHE_FULL_CALL:LX/3OF;
+
+    .line 72
+    .line 73
+    invoke-static {v0, v5, v1, v2}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
+    .line 74
+    .line 75
+    .line 76
+    sget-object v2, LX/3OF;->EVICTIONS_ON_CACHE_FULL_ITEM:LX/3OF;
+
+    .line 77
+    .line 78
+    int-to-long v0, v6
+
+    .line 79
+    invoke-static {v2, v5, v0, v1}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
+    .line 80
+    .line 81
+    .line 82
+    sget-object v0, LX/3OF;->EVICTIONS_ON_CACHE_FULL_SIZE:LX/3OF;
+
+    .line 83
+    .line 84
+    goto :goto_0
+.end method
+
+.method public final AX2(LX/3Og;)V
+    .locals 10
+
+    .line 0
+    iget-object v9, p0, LX/3OE;->A00:LX/2Wv;
+
+    .line 1
+    .line 2
+    sget-object v8, LX/3OF;->HIT_TIME_MS:LX/3OF;
+
+    .line 3
+    .line 4
+    iget-object v0, v9, LX/2Wv;->A01:LX/0I5;
+
+    .line 5
+    .line 6
+    invoke-interface {v0}, LX/0I5;->now()J
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-wide v5
+
+    .line 10
+    iget-object v7, v9, LX/2Wv;->A03:Ljava/lang/ThreadLocal;
+
+    .line 11
+    .line 12
+    invoke-virtual {v7}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    check-cast v0, Ljava/lang/Number;
+
+    .line 17
+    .line 18
+    if-eqz v0, :cond_0
+
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-wide v3
+
+    .line 24
+    const-wide/16 v1, 0x0
+
+    .line 25
+    .line 26
+    cmp-long v0, v3, v1
+
+    .line 27
+    .line 28
+    if-lez v0, :cond_0
+
+    .line 29
+    .line 30
+    sub-long/2addr v5, v3
+
+    .line 31
+    invoke-static {v8, v9, v5, v6}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v7}, Ljava/lang/ThreadLocal;->remove()V
+
+    .line 35
+    .line 36
+    .line 37
+    :cond_0
+    const-wide/16 v1, 0x1
+
+    .line 38
+    .line 39
+    sget-object v0, LX/3OF;->HITS_COUNT:LX/3OF;
+
+    .line 40
+    .line 41
+    invoke-static {v0, v9, v1, v2}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
 
     .line 42
     .line 43
     .line 44
-    :cond_2
-    return-object v1
+    return-void
 .end method
 
-.method public static A01(LX/3Ro;)Lorg/apache/http/message/BasicHttpResponse;
+.method public final AYG(LX/3Og;)V
     .locals 4
 
     .line 0
-    iget v3, p0, LX/3Ro;->A00:I
+    iget-object v3, p0, LX/3OE;->A00:LX/2Wv;
 
     .line 1
     .line 2
-    sget-object v0, LX/3RW;->A00:Landroid/util/SparseArray;
+    const-wide/16 v1, 0x1
 
     .line 3
     .line 4
-    invoke-virtual {v0, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    sget-object v0, LX/3OF;->MISSES_COUNT:LX/3OF;
 
     .line 5
     .line 6
+    invoke-static {v0, v3, v1, v2}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
     .line 7
-    move-result-object v1
-
     .line 8
-    check-cast v1, Ljava/lang/String;
-
     .line 9
+    iget-object v0, v3, LX/2Wv;->A03:Ljava/lang/ThreadLocal;
+
     .line 10
-    if-nez v1, :cond_0
-
     .line 11
-    .line 12
-    invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->remove()V
 
+    .line 12
     .line 13
     .line 14
-    .line 15
-    move-result-object v1
+    return-void
+.end method
 
-    .line 16
-    :cond_0
-    sget-object v0, Lorg/apache/http/HttpVersion;->HTTP_1_1:Lorg/apache/http/HttpVersion;
+.method public final AaB(LX/3Og;)V
+    .locals 4
 
-    .line 17
-    .line 18
-    new-instance v2, Lorg/apache/http/message/BasicHttpResponse;
+    .line 0
+    iget-object v3, p0, LX/3OE;->A00:LX/2Wv;
 
-    .line 19
-    .line 20
-    invoke-direct {v2, v0, v3, v1}, Lorg/apache/http/message/BasicHttpResponse;-><init>(Lorg/apache/http/ProtocolVersion;ILjava/lang/String;)V
+    .line 1
+    .line 2
+    sget-object v2, LX/3OF;->READ_EXCEPTION_COUNT:LX/3OF;
 
-    .line 21
-    .line 22
-    .line 23
-    iget-object v0, p0, LX/3Ro;->A01:Ljava/util/Map;
+    .line 3
+    .line 4
+    const-wide/16 v0, 0x1
 
-    .line 24
-    .line 25
-    invoke-static {v0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    .line 5
+    .line 6
+    invoke-static {v2, v3, v0, v1}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
 
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v1
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
 
-    .line 29
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+.method public final Ado(LX/3Og;)V
+    .locals 4
 
-    .line 30
-    .line 31
-    .line 32
-    move-result v0
+    .line 0
+    iget-object v3, p0, LX/3OE;->A00:LX/2Wv;
 
-    .line 33
-    if-eqz v0, :cond_1
+    .line 1
+    .line 2
+    sget-object v2, LX/3OF;->WRITE_ATTEMPTS:LX/3OF;
 
-    .line 34
-    .line 35
-    invoke-static {v1, v2}, LX/0Ye;->A1O(Ljava/util/Iterator;Lorg/apache/http/message/AbstractHttpMessage;)V
+    .line 3
+    .line 4
+    const-wide/16 v0, 0x1
 
-    .line 36
-    .line 37
-    .line 38
-    goto :goto_0
+    .line 5
+    .line 6
+    invoke-static {v2, v3, v0, v1}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
 
-    .line 39
-    :cond_1
-    return-object v2
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public final Adp(LX/3Og;)V
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/3OE;->A00:LX/2Wv;
+
+    .line 1
+    .line 2
+    sget-object v2, LX/3OF;->WRITE_EXCEPTION_COUNT:LX/3OF;
+
+    .line 3
+    .line 4
+    const-wide/16 v0, 0x1
+
+    .line 5
+    .line 6
+    invoke-static {v2, v3, v0, v1}, LX/2Wv;->A00(LX/3OF;LX/2Wv;J)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public final Adq(LX/3Og;)V
+    .locals 0
+
+    return-void
 .end method

@@ -1,30 +1,93 @@
-.class public final LX/3xs;
-.super LX/3yc;
+.class public final LX/3xS;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "ListenerDispatcher$30"
 
 
 # instance fields
-.field public final A00:Landroid/content/ContentResolver;
+.field public final synthetic A00:LX/3wv;
+
+.field public final synthetic A01:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/ContentResolver;LX/3yt;Ljava/util/concurrent/Executor;)V
+.method public constructor <init>(LX/3wv;Z)V
     .locals 0
 
     .line 0
-    invoke-static {p3, p2, p1}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    iput-object p1, p0, LX/3xS;->A00:LX/3wv;
 
     .line 1
     .line 2
-    .line 3
-    invoke-direct {p0, p2, p3}, LX/3yc;-><init>(LX/3yt;Ljava/util/concurrent/Executor;)V
+    iput-boolean p2, p0, LX/3xS;->A01:Z
 
+    .line 3
     .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 5
     .line 6
-    iput-object p1, p0, LX/3xs;->A00:Landroid/content/ContentResolver;
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/3xS;->A00:LX/3wv;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/3wv;->A00(LX/3wv;)Ljava/util/Iterator;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     .line 7
     .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-static {v2}, LX/0X6;->A0X(Ljava/util/Iterator;)LX/3xA;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v1
+
+    .line 16
+    iget-boolean v0, p0, LX/3xS;->A01:Z
+
+    .line 17
+    .line 18
+    invoke-interface {v1, v0}, LX/3xA;->Aba(Z)V
+
+    .line 19
+    .line 20
+    .line 21
+    goto :goto_0
+
+    .line 22
+    :cond_0
     return-void
 .end method

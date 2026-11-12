@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 
@@ -101,322 +101,234 @@
 .method public constructor <init>(IIIIIIIIZZZZZLcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;Ljava/lang/Object;)V
     .locals 1
 
+    .line 0
     const/16 v0, 0xe
 
-    invoke-static {p14, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    .line 1
+    .line 2
+    invoke-static {p14, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    .line 268929307
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    .line 3
+    .line 4
+    .line 5
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
-    .line 268929308
+    .line 6
+    .line 7
+    .line 8
     iput p1, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->leftPadding:I
 
-    .line 268929309
+    .line 9
+    .line 10
     iput p2, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->rightPadding:I
 
-    .line 268929310
+    .line 11
+    .line 12
     iput p3, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->topPadding:I
 
-    .line 268929311
+    .line 13
+    .line 14
     iput p4, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->bottomPadding:I
 
-    .line 268929312
+    .line 15
+    .line 16
     iput p5, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->horizontalSpacing:I
 
-    .line 268929313
+    .line 17
+    .line 18
     iput p6, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->verticalSpacing:I
 
-    .line 268929314
+    .line 19
+    .line 20
     iput p7, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->bottomInset:I
 
-    .line 268929315
+    .line 21
+    .line 22
     iput p8, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->itemHeightOffset:I
 
-    .line 268929316
+    .line 23
+    .line 24
     iput-boolean p9, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->disablesFloatingSelfView:Z
 
-    .line 268929317
+    .line 25
+    .line 26
     iput-boolean p10, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->skipsDefaultGridLayout:Z
 
-    .line 268929318
+    .line 27
+    .line 28
     iput-boolean p11, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->forcesHorizontalLayoutForTwoPersonLayout:Z
 
-    .line 268929319
+    .line 29
+    .line 30
     iput-boolean p12, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->appliesPaddingToFullscreenLayout:Z
 
-    .line 268929320
+    .line 31
+    .line 32
     iput-boolean p13, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->aspectFillFullscreenSingleItem:Z
 
-    .line 268929321
+    .line 33
+    .line 34
     iput-object p14, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->selfViewLocation:Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;
 
-    .line 268929322
+    .line 35
+    .line 36
     move-object/from16 v0, p15
 
+    .line 37
+    .line 38
     iput-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->layoutExtras:Ljava/lang/Object;
 
+    .line 39
+    .line 40
     return-void
 .end method
 
 .method public synthetic constructor <init>(IIIIIIIIZZZZZLcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-    .locals 18
+    .locals 17
 
-    .line 0
-    move/from16 v11, p9
-
-    .line 1
-    .line 2
-    move/from16 v12, p10
-
-    .line 3
-    .line 4
-    move/from16 v13, p11
-
-    .line 5
-    .line 6
-    move/from16 v14, p12
-
-    .line 7
-    .line 8
-    move-object/from16 v16, p14
-
-    .line 9
-    .line 10
-    move-object/from16 v17, p15
-
-    .line 11
-    .line 12
     move/from16 v0, p16
 
-    .line 13
-    .line 14
-    and-int/lit8 v1, p16, 0x1
+    move-object/from16 v16, p15
 
-    .line 15
-    .line 16
-    const/4 v15, 0x0
-
-    .line 17
     move/from16 v2, p1
 
-    .line 18
-    .line 19
-    invoke-static {v2, v1}, LX/0Yj;->A02(II)I
+    move-object/from16 v15, p14
 
-    .line 20
-    .line 21
-    .line 22
-    move-result v3
+    move/from16 v3, p2
 
-    .line 23
-    and-int/lit8 v1, p16, 0x2
+    move/from16 v4, p3
 
-    .line 24
-    .line 25
-    move/from16 v2, p2
+    move/from16 v5, p4
 
-    .line 26
-    .line 27
-    invoke-static {v2, v1}, LX/0Yj;->A02(II)I
+    move/from16 v6, p5
 
-    .line 28
-    .line 29
-    .line 30
-    move-result v4
+    move/from16 v7, p6
 
-    .line 31
-    and-int/lit8 v1, p16, 0x4
+    move/from16 v8, p7
 
-    .line 32
-    .line 33
-    move/from16 v2, p3
+    move/from16 v9, p8
 
-    .line 34
-    .line 35
-    invoke-static {v2, v1}, LX/0Yj;->A02(II)I
+    move/from16 v10, p9
 
-    .line 36
-    .line 37
-    .line 38
-    move-result v5
+    move/from16 v11, p10
 
-    .line 39
-    and-int/lit8 v1, p16, 0x8
+    move/from16 v12, p11
 
-    .line 40
-    .line 41
-    move/from16 v2, p4
+    move/from16 v13, p12
 
-    .line 42
-    .line 43
-    invoke-static {v2, v1}, LX/0Yj;->A02(II)I
+    and-int/lit8 v1, p16, 0x1
 
-    .line 44
-    .line 45
-    .line 46
-    move-result v6
-
-    .line 47
-    and-int/lit8 v1, p16, 0x10
-
-    .line 48
-    .line 49
-    move/from16 v2, p5
-
-    .line 50
-    .line 51
-    invoke-static {v2, v1}, LX/0Yj;->A02(II)I
-
-    .line 52
-    .line 53
-    .line 54
-    move-result v7
-
-    .line 55
-    and-int/lit8 v1, p16, 0x20
-
-    .line 56
-    .line 57
-    move/from16 v2, p6
-
-    .line 58
-    .line 59
-    invoke-static {v2, v1}, LX/0Yj;->A02(II)I
-
-    .line 60
-    .line 61
-    .line 62
-    move-result v8
-
-    .line 63
-    and-int/lit8 v1, p16, 0x40
-
-    .line 64
-    .line 65
-    move/from16 v2, p7
-
-    .line 66
-    .line 67
-    invoke-static {v2, v1}, LX/0Yj;->A02(II)I
-
-    .line 68
-    .line 69
-    .line 70
-    move-result v9
-
-    .line 71
-    and-int/lit16 v1, v0, 0x80
-
-    .line 72
-    .line 73
-    move/from16 v2, p8
-
-    .line 74
-    .line 75
-    invoke-static {v2, v1}, LX/0Yj;->A02(II)I
-
-    .line 76
-    .line 77
-    .line 78
-    move-result v10
-
-    .line 79
-    and-int/lit16 v1, v0, 0x100
-
-    .line 80
-    .line 81
-    if-eqz v1, :cond_0
-
-    .line 82
-    .line 83
-    const/4 v11, 0x0
-
-    .line 84
-    :cond_0
-    and-int/lit16 v1, v0, 0x200
-
-    .line 85
-    .line 86
-    if-eqz v1, :cond_1
-
-    .line 87
-    .line 88
-    const/4 v12, 0x0
-
-    .line 89
-    :cond_1
-    and-int/lit16 v1, v0, 0x400
-
-    .line 90
-    .line 91
-    if-eqz v1, :cond_2
-
-    .line 92
-    .line 93
-    const/4 v13, 0x0
-
-    .line 94
-    :cond_2
-    and-int/lit16 v1, v0, 0x800
-
-    .line 95
-    .line 96
-    if-eqz v1, :cond_3
-
-    .line 97
-    .line 98
     const/4 v14, 0x0
 
-    .line 99
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x0
+
+    :cond_0
+    and-int/lit8 v1, p16, 0x2
+
+    if-eqz v1, :cond_1
+
+    const/4 v3, 0x0
+
+    :cond_1
+    and-int/lit8 v1, p16, 0x4
+
+    if-eqz v1, :cond_2
+
+    const/4 v4, 0x0
+
+    :cond_2
+    and-int/lit8 v1, p16, 0x8
+
+    if-eqz v1, :cond_3
+
+    const/4 v5, 0x0
+
     :cond_3
-    and-int/lit16 v1, v0, 0x1000
+    and-int/lit8 v1, p16, 0x10
 
-    .line 100
-    .line 101
-    if-nez v1, :cond_4
+    if-eqz v1, :cond_4
 
-    .line 102
-    .line 103
-    move/from16 v15, p13
+    const/4 v6, 0x0
 
-    .line 104
-    .line 105
     :cond_4
-    and-int/lit16 v1, v0, 0x2000
+    and-int/lit8 v1, p16, 0x20
 
-    .line 106
-    .line 107
     if-eqz v1, :cond_5
 
-    .line 108
-    .line 109
-    sget-object v16, Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;->TOP_RIGHT:Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;
+    const/4 v7, 0x0
 
-    .line 110
-    .line 111
     :cond_5
+    and-int/lit8 v1, p16, 0x40
+
+    if-eqz v1, :cond_6
+
+    const/4 v8, 0x0
+
+    :cond_6
+    and-int/lit16 v1, v0, 0x80
+
+    if-eqz v1, :cond_7
+
+    const/4 v9, 0x0
+
+    :cond_7
+    and-int/lit16 v1, v0, 0x100
+
+    if-eqz v1, :cond_8
+
+    const/4 v10, 0x0
+
+    :cond_8
+    and-int/lit16 v1, v0, 0x200
+
+    if-eqz v1, :cond_9
+
+    const/4 v11, 0x0
+
+    :cond_9
+    and-int/lit16 v1, v0, 0x400
+
+    if-eqz v1, :cond_a
+
+    const/4 v12, 0x0
+
+    :cond_a
+    and-int/lit16 v1, v0, 0x800
+
+    if-eqz v1, :cond_b
+
+    const/4 v13, 0x0
+
+    :cond_b
+    and-int/lit16 v1, v0, 0x1000
+
+    if-nez v1, :cond_c
+
+    .line 268634278
+    move/from16 v14, p13
+
+    :cond_c
+    and-int/lit16 v1, v0, 0x2000
+
+    if-eqz v1, :cond_d
+
+    sget-object v15, Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;->TOP_RIGHT:Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;
+
+    :cond_d
     and-int/lit16 v0, v0, 0x4000
 
-    .line 112
-    .line 113
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_e
 
-    .line 114
-    .line 115
-    const/16 v17, 0x0
+    const/16 v16, 0x0
 
-    .line 116
-    .line 117
-    :cond_6
-    move-object/from16 v2, p0
+    .line 268634279
+    :cond_e
+    move-object/from16 v1, p0
 
-    .line 118
-    .line 119
-    invoke-direct/range {v2 .. v17}, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;-><init>(IIIIIIIIZZZZZLcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;Ljava/lang/Object;)V
+    invoke-direct/range {v1 .. v16}, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;-><init>(IIIIIIIIZZZZZLcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;Ljava/lang/Object;)V
 
-    .line 120
-    .line 121
-    .line 122
     return-void
 .end method
 
@@ -722,7 +634,7 @@
 
     move-object/from16 v14, p14
 
-    invoke-static {v14, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v14, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     new-instance v0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;
 
@@ -862,7 +774,7 @@
 
     iget-object v0, p1, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->layoutExtras:Ljava/lang/Object;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1041,7 +953,7 @@
 .end method
 
 .method public hashCode()I
-    .locals 3
+    .locals 2
 
     .line 0
     iget v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->leftPadding:I
@@ -1133,17 +1045,14 @@
 
     .line 40
     .line 41
-    const/4 v2, 0x1
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 42
-    if-eqz v0, :cond_0
-
     .line 43
     .line 44
-    const/4 v0, 0x1
+    move-result v0
 
     .line 45
-    :cond_0
     add-int/2addr v1, v0
 
     .line 46
@@ -1155,105 +1064,105 @@
 
     .line 49
     .line 50
-    if-eqz v0, :cond_1
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 51
     .line 52
-    const/4 v0, 0x1
-
     .line 53
-    :cond_1
-    add-int/2addr v1, v0
+    move-result v0
 
     .line 54
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 55
-    .line 56
-    iget-boolean v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->forcesHorizontalLayoutForTwoPersonLayout:Z
-
-    .line 57
-    .line 58
-    if-eqz v0, :cond_2
-
-    .line 59
-    .line 60
-    const/4 v0, 0x1
-
-    .line 61
-    :cond_2
     add-int/2addr v1, v0
 
-    .line 62
+    .line 55
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 56
+    .line 57
+    iget-boolean v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->forcesHorizontalLayoutForTwoPersonLayout:Z
+
+    .line 58
+    .line 59
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
+    .line 60
+    .line 61
+    .line 62
+    move-result v0
+
     .line 63
+    add-int/2addr v1, v0
+
     .line 64
-    iget-boolean v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->appliesPaddingToFullscreenLayout:Z
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 65
     .line 66
-    if-eqz v0, :cond_3
+    iget-boolean v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->appliesPaddingToFullscreenLayout:Z
 
     .line 67
     .line 68
-    const/4 v0, 0x1
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 69
-    :cond_3
+    .line 70
+    .line 71
+    move-result v0
+
+    .line 72
     add-int/2addr v1, v0
 
-    .line 70
+    .line 73
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 71
-    .line 72
+    .line 74
+    .line 75
     iget-boolean v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->aspectFillFullscreenSingleItem:Z
 
-    .line 73
-    .line 74
-    if-nez v0, :cond_4
-
-    .line 75
     .line 76
-    const/4 v2, 0x0
-
     .line 77
-    :cond_4
-    add-int/2addr v1, v2
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 78
-    mul-int/lit8 v1, v1, 0x1f
-
     .line 79
     .line 80
-    iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->selfViewLocation:Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;
+    move-result v0
 
     .line 81
+    add-int/2addr v1, v0
+
     .line 82
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 83
     .line 84
-    .line 85
-    move-result v1
+    iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->selfViewLocation:Lcom/facebook/rtc/views/omnigrid/GridSelfViewLocation;
 
+    .line 85
     .line 86
-    iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->layoutExtras:Ljava/lang/Object;
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 87
     .line 88
-    invoke-static {v0}, LX/0Yd;->A02(Ljava/lang/Object;)I
-
     .line 89
-    .line 90
-    .line 91
-    move-result v0
+    move-result v1
 
+    .line 90
+    iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutConfigForLayoutInput;->layoutExtras:Ljava/lang/Object;
+
+    .line 91
     .line 92
-    add-int/2addr v1, v0
+    invoke-static {v0}, LX/0X2;->A08(Ljava/lang/Object;)I
 
     .line 93
+    .line 94
+    .line 95
+    move-result v0
+
+    .line 96
+    add-int/2addr v1, v0
+
+    .line 97
     return v1
 .end method
 

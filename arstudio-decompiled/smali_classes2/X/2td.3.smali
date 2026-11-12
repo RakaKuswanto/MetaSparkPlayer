@@ -1,14 +1,44 @@
-.class public abstract LX/2td;
-.super LX/2pF;
+.class public final LX/2td;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A02:LX/2td;
+
+
+# instance fields
+.field public A00:I
+
+.field public A01:I
+
+
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/2td;
+
+    .line 1
+    .line 2
+    invoke-direct {v0}, LX/2td;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/2td;->A02:LX/2td;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/2pF;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
@@ -18,130 +48,152 @@
 
 
 # virtual methods
-.method public final A03()Ljava/lang/String;
-    .locals 4
+.method public final declared-synchronized A00()I
+    .locals 3
 
     .line 0
-    move-object v3, p0
+    monitor-enter p0
 
     .line 1
-    instance-of v1, p0, LX/2oz;
+    :try_start_0
+    iget v0, p0, LX/2td;->A01:I
 
     .line 2
     .line 3
-    if-eqz v1, :cond_2
+    if-nez v0, :cond_2
 
     .line 4
     .line 5
-    move-object v0, v3
+    const/4 v2, -0x1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 6
-    check-cast v0, LX/2oz;
+    :try_start_1
+    const-string v0, "/sys/devices/system/cpu/possible"
 
     .line 7
     .line 8
-    iget-object v2, v0, LX/2oz;->A09:Ljava/lang/String;
+    invoke-static {v0}, LX/2te;->A00(Ljava/lang/String;)I
 
     .line 9
     .line 10
-    :goto_0
-    if-eqz v1, :cond_1
-
     .line 11
+    move-result v0
+
     .line 12
-    check-cast v3, LX/2oz;
+    if-ne v0, v2, :cond_0
 
     .line 13
     .line 14
-    iget-object v1, v3, LX/2oz;->A08:Ljava/lang/String;
+    const-string v0, "/sys/devices/system/cpu/present"
 
     .line 15
     .line 16
-    :goto_1
-    if-eqz v1, :cond_0
+    invoke-static {v0}, LX/2te;->A00(Ljava/lang/String;)I
 
     .line 17
     .line 18
-    const-string v0, "Application"
-
     .line 19
+    move-result v0
+
     .line 20
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_0
+    if-ne v0, v2, :cond_1
 
     .line 21
     .line 22
-    .line 23
-    move-result v0
+    const-string v0, "/sys/devices/system/cpu/"
 
+    .line 23
     .line 24
-    if-nez v0, :cond_0
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 25
     .line 26
-    const-string v0, "FolderBookmark"
-
     .line 27
+    move-result-object v1
+
     .line 28
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sget-object v0, LX/2te;->A00:Ljava/io/FileFilter;
 
     .line 29
     .line 30
+    invoke-virtual {v1, v0}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
+
     .line 31
-    move-result v0
-
     .line 32
-    if-nez v0, :cond_0
-
     .line 33
+    move-result-object v0
+
     .line 34
-    const-string/jumbo v0, "settings"
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 35
     .line 36
     .line 37
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    array-length v0, v0
 
     .line 38
-    .line 39
-    .line 40
-    move-result v0
+    :cond_1
+    move v2, v0
+    :try_end_1
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 39
+    :catch_0
+    :try_start_2
+    iput v2, p0, LX/2td;->A01:I
+
+    .line 40
     .line 41
-    if-eqz v0, :cond_3
+    goto :goto_0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 42
+    :catch_1
+    move-exception v2
+
     .line 43
-    :cond_0
-    return-object v2
+    :try_start_3
+    const-string v1, "ProcessorInfoUtil"
 
     .line 44
-    :cond_1
-    check-cast v3, LX/2oy;
-
     .line 45
+    const-string v0, "Unable to get reliable CPU Core count"
+
     .line 46
-    iget-object v1, v3, LX/2oy;->A06:Ljava/lang/String;
-
     .line 47
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 48
-    goto :goto_1
-
     .line 49
-    :cond_2
-    move-object v0, v3
-
     .line 50
-    check-cast v0, LX/2oy;
+    :goto_0
+    iget v0, p0, LX/2td;->A01:I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 51
     .line 52
-    iget-object v2, v0, LX/2oy;->A07:Ljava/lang/String;
+    :cond_2
+    monitor-exit p0
 
     .line 53
+    return v0
+
     .line 54
-    goto :goto_0
+    :catchall_0
+    move-exception v0
 
     .line 55
-    :cond_3
-    return-object v1
+    monitor-exit p0
+
+    .line 56
+    throw v0
 .end method

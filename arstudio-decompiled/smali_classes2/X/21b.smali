@@ -1,83 +1,130 @@
-.class public final LX/21b;
-.super Ljava/lang/Object;
+.class public final LX/21B;
+.super Ljava/util/AbstractSequentialList;
 .source ""
 
-# interfaces
-.implements LX/21f;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/AbstractSequentialList<",
+        "TV;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field public final A00:LX/21Z;
+.field public final synthetic A00:Lcom/google/common/collect/LinkedListMultimap;
+
+.field public final synthetic A01:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(LX/21Z;)V
+.method public constructor <init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$key"
+        }
+    .end annotation
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/21B;->A00:Lcom/google/common/collect/LinkedListMultimap;
 
     .line 1
     .line 2
-    .line 3
-    iput-object p1, p0, LX/21b;->A00:LX/21Z;
+    iput-object p2, p0, LX/21B;->A01:Ljava/lang/Object;
 
+    .line 3
     .line 4
+    invoke-direct {p0}, Ljava/util/AbstractSequentialList;-><init>()V
+
     .line 5
+    .line 6
+    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final AOa(LX/1wh;LX/1k7;LX/27m;)LX/21j;
-    .locals 2
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
-    iget-object v1, p2, LX/1k7;->A03:Ljava/lang/String;
+    iget-object v2, p0, LX/21B;->A00:Lcom/google/common/collect/LinkedListMultimap;
 
     .line 1
     .line 2
-    const-string v0, "All operations in a streaming batch must be named"
+    iget-object v1, p0, LX/21B;->A01:Ljava/lang/Object;
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, LX/21C;
 
     .line 5
     .line 6
-    .line 7
-    iget-object v0, p0, LX/21b;->A00:LX/21Z;
+    invoke-direct {v0, v2, v1, p1}, LX/21C;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;I)V
 
+    .line 7
     .line 8
     .line 9
-    invoke-virtual {v0, p1, p2, p3}, LX/21Z;->AOa(LX/1wh;LX/1k7;LX/27m;)LX/21j;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
     return-object v0
 .end method
 
-.method public final Agf(LX/0OQ;)V
+.method public final size()I
     .locals 2
 
     .line 0
-    const-string/jumbo v1, "flush"
+    iget-object v0, p0, LX/21B;->A00:Lcom/google/common/collect/LinkedListMultimap;
 
     .line 1
     .line 2
+    iget-object v1, v0, Lcom/google/common/collect/LinkedListMultimap;->A04:Ljava/util/Map;
+
     .line 3
-    const-string v0, "1"
-
     .line 4
-    .line 5
-    invoke-static {p1, v0, v1}, LX/0OQ;->A00(LX/0OQ;Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v0, p0, LX/21B;->A01:Ljava/lang/Object;
 
+    .line 5
     .line 6
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 7
     .line 8
-    return-void
+    .line 9
+    move-result-object v0
+
+    .line 10
+    check-cast v0, LX/21I;
+
+    .line 11
+    .line 12
+    if-nez v0, :cond_0
+
+    .line 13
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    return v0
+
+    .line 16
+    :cond_0
+    iget v0, v0, LX/21I;->A00:I
+
+    .line 17
+    .line 18
+    return v0
 .end method

@@ -1,44 +1,94 @@
-.class public final synthetic LX/4pi;
-.super Ljava/lang/Object;
+.class public final LX/4pi;
+.super LX/4pg;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ComponentTree$$ExternalSyntheticLambda1"
-
-
-# instance fields
-.field public final synthetic A00:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic A01:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 0
+    invoke-direct {p0}, LX/4pg;-><init>()V
 
-    iput-object p2, p0, LX/4pi;->A01:Landroid/view/View;
-
-    iput-object p1, p0, LX/4pi;->A00:Landroid/graphics/drawable/Drawable;
-
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final A00(Landroid/view/View;)F
+    .locals 1
 
-    iget-object v1, p0, LX/4pi;->A01:Landroid/view/View;
+    .line 0
+    invoke-virtual {p1}, Landroid/view/View;->getTransitionAlpha()F
 
-    iget-object v0, p0, LX/4pi;->A00:Landroid/graphics/drawable/Drawable;
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
 
-    invoke-static {v0, v1}, Lcom/facebook/litho/ComponentTree;->A03(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    .line 4
+    return v0
+.end method
 
+.method public final A01(Landroid/graphics/Matrix;Landroid/view/View;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p2, p1}, Landroid/view/View;->transformMatrixToGlobal(Landroid/graphics/Matrix;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final A02(Landroid/graphics/Matrix;Landroid/view/View;)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p2, p1}, Landroid/view/View;->transformMatrixToLocal(Landroid/graphics/Matrix;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final A05(Landroid/view/View;F)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionAlpha(F)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final A06(Landroid/view/View;I)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionVisibility(I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final A07(Landroid/view/View;IIII)V
+    .locals 0
+
+    .line 0
+    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->setLeftTopRightBottom(IIII)V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

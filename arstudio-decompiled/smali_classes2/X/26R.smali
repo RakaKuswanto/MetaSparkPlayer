@@ -1,88 +1,166 @@
-.class public final LX/26R;
-.super Ljava/lang/Object;
+.class public final enum LX/26R;
+.super Ljava/lang/Enum;
 .source ""
 
 
+# static fields
+.field public static final synthetic $VALUES:[LX/26R;
+
+.field public static final enum GET:LX/26R;
+
+.field public static final enum POST:LX/26R;
+
+
 # direct methods
-.method public static final A00(LX/26S;)Ljava/util/HashMap;
+.method public static synthetic $values()[LX/26R;
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    const/4 v0, 0x2
+
+    .line 1
+    new-array v2, v0, [LX/26R;
+
+    .line 2
+    .line 3
+    sget-object v1, LX/26R;->POST:LX/26R;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/26R;->GET:LX/26R;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "POST"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, LX/26R;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, LX/26R;-><init>(Ljava/lang/String;I)V
+
+    .line 6
+    .line 7
+    .line 8
+    sput-object v0, LX/26R;->POST:LX/26R;
+
+    .line 9
+    .line 10
+    const-string v2, "GET"
+
+    .line 11
+    .line 12
+    const/4 v1, 0x1
+
+    .line 13
+    new-instance v0, LX/26R;
+
+    .line 14
+    .line 15
+    invoke-direct {v0, v2, v1}, LX/26R;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/26R;->GET:LX/26R;
+
+    .line 19
+    .line 20
+    invoke-static {}, LX/26R;->$values()[LX/26R;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    sput-object v0, LX/26R;->$VALUES:[LX/26R;
+
+    .line 25
+    .line 26
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v2
+    return-void
+.end method
 
+.method public static valueOf(Ljava/lang/String;)LX/26R;
+    .locals 1
+
+    .line 0
+    const-class v0, LX/26R;
+
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
     .line 4
-    iget-object v1, p0, LX/26S;->A03:Ljava/lang/String;
-
     .line 5
+    move-result-object v0
+
     .line 6
-    const-string/jumbo v0, "qt_locale"
+    check-cast v0, LX/26R;
 
     .line 7
     .line 8
-    .line 9
-    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    .line 10
-    .line 11
-    .line 12
-    iget-object v1, p0, LX/26S;->A04:Ljava/lang/String;
+.method public static values()[LX/26R;
+    .locals 1
 
-    .line 13
-    .line 14
-    const-string/jumbo v0, "qt_user_id"
+    .line 0
+    sget-object v0, LX/26R;->$VALUES:[LX/26R;
 
-    .line 15
-    .line 16
-    .line 17
-    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 18
-    .line 19
-    .line 20
-    iget-object v1, p0, LX/26S;->A01:Lcom/google/common/base/Optional;
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 21
-    .line 22
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->isPresent()Z
+    .line 6
+    check-cast v0, [LX/26R;
 
-    .line 23
-    .line 24
-    .line 25
-    move-result v0
-
-    .line 26
-    if-eqz v0, :cond_0
-
-    .line 27
-    .line 28
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v1
-
-    .line 32
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 33
-    .line 34
-    .line 35
-    const-string/jumbo v0, "qt_client_checksum"
-
-    .line 36
-    .line 37
-    .line 38
-    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 39
-    .line 40
-    .line 41
-    :cond_0
-    return-object v2
+    .line 7
+    .line 8
+    return-object v0
 .end method

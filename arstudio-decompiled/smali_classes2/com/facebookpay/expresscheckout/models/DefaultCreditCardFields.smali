@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final A00:LX/5If;
+.field public final A00:LX/4KN;
     .annotation runtime Lcom/google/gson/annotations/SerializedName;
         value = "cardType"
     .end annotation
@@ -29,11 +29,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x18
+    const/16 v0, 0x5d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -55,7 +55,7 @@
     const/4 v0, 0x0
 
     .line 268435457
-    invoke-direct {p0, v0, v0}, Lcom/facebookpay/expresscheckout/models/DefaultCreditCardFields;-><init>(LX/5If;Ljava/lang/String;)V
+    invoke-direct {p0, v0, v0}, Lcom/facebookpay/expresscheckout/models/DefaultCreditCardFields;-><init>(LX/4KN;Ljava/lang/String;)V
 
     .line 268435458
     .line 268435459
@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/5If;Ljava/lang/String;)V
+.method public constructor <init>(LX/4KN;Ljava/lang/String;)V
     .locals 0
 
     .line 0
@@ -72,7 +72,7 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebookpay/expresscheckout/models/DefaultCreditCardFields;->A00:LX/5If;
+    iput-object p1, p0, Lcom/facebookpay/expresscheckout/models/DefaultCreditCardFields;->A00:LX/4KN;
 
     .line 4
     .line 5
@@ -100,12 +100,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    iget-object v1, p0, Lcom/facebookpay/expresscheckout/models/DefaultCreditCardFields;->A00:LX/5If;
+    iget-object v1, p0, Lcom/facebookpay/expresscheckout/models/DefaultCreditCardFields;->A00:LX/4KN;
 
     .line 5
     .line 6
@@ -140,7 +140,7 @@
     .line 19
     .line 20
     .line 21
-    invoke-static {p1, v1}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v1}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 22
     .line 23

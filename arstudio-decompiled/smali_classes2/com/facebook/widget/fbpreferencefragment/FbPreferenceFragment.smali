@@ -1,5 +1,5 @@
 .class public abstract Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;
-.super LX/3e4;
+.super LX/3FR;
 .source ""
 
 
@@ -28,16 +28,16 @@
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/3e4;-><init>()V
+    invoke-direct {p0}, LX/3FR;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/3gW;
+    new-instance v0, LX/3bZ;
 
     .line 4
     .line 5
-    invoke-direct {v0, p0}, LX/3gW;-><init>(Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;)V
+    invoke-direct {v0, p0}, LX/3bZ;-><init>(Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;)V
 
     .line 6
     .line 7
@@ -49,73 +49,80 @@
     return-void
 .end method
 
-.method public static A07(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
-    .locals 2
+.method public static A06(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
+    .locals 3
 
     .line 0
     :try_start_0
-    const-class v1, Landroid/preference/PreferenceManager;
+    const-class v2, Landroid/preference/PreferenceManager;
 
     .line 1
     .line 2
-    const-string/jumbo v0, "getPreferenceScreen"
+    const-string/jumbo v1, "getPreferenceScreen"
 
     .line 3
     .line 4
     .line 5
-    invoke-static {v1, v0}, LX/0Yj;->A0W(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
+    const/4 v0, 0x0
 
     .line 6
+    new-array v0, v0, [Ljava/lang/Class;
+
     .line 7
     .line 8
-    move-result-object v1
+    invoke-virtual {v2, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     .line 9
+    .line 10
+    .line 11
+    move-result-object v1
+
+    .line 12
     const/4 v0, 0x1
 
-    .line 10
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    .line 11
-    .line 12
     .line 13
-    invoke-static {p0, v1}, LX/0Yi;->A0i(Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 14
     .line 15
     .line 16
-    move-result-object v0
+    invoke-static {p0, v1}, LX/0X6;->A0k(Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
 
     .line 17
-    check-cast v0, Landroid/preference/PreferenceScreen;
-
     .line 18
     .line 19
+    move-result-object v0
+
+    .line 20
+    check-cast v0, Landroid/preference/PreferenceScreen;
+
+    .line 21
+    .line 22
     return-object v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 20
-    :catch_0
-    move-exception p0
-
-    .line 21
-    const-string v1, "PreferenceManagerCompat"
-
-    .line 22
     .line 23
-    const-string v0, "Couldn\'t call PreferenceManager.getPreferenceScreen by reflection"
+    :catch_0
+    move-exception v2
 
     .line 24
-    .line 25
-    invoke-static {v1, v0, p0}, LX/0Jt;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v1, "PreferenceManagerCompat"
 
+    .line 25
     .line 26
+    const-string v0, "Couldn\'t call PreferenceManager.getPreferenceScreen by reflection"
+
     .line 27
     .line 28
-    const/4 v0, 0x0
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 29
+    .line 30
+    .line 31
+    const/4 v0, 0x0
+
+    .line 32
     return-object v0
 .end method
 
@@ -150,7 +157,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A07(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
+    invoke-static {v0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A06(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
 
     .line 3
     .line 4
@@ -188,77 +195,75 @@
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
     .line 3
     .line 4
-    return-void
-
-    .line 5
-    :cond_0
     iget-object v1, p0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
+    .line 5
     .line 6
-    .line 7
     if-eqz v1, :cond_3
 
+    .line 7
     .line 8
-    .line 9
     const v0, 0x102000a
 
+    .line 9
     .line 10
     .line 11
-    .line 12
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
+    .line 12
     .line 13
     .line 14
-    .line 15
     move-result-object v1
 
-    .line 16
+    .line 15
     instance-of v0, v1, Landroid/widget/ListView;
 
+    .line 16
     .line 17
-    .line 18
     if-eqz v0, :cond_2
 
+    .line 18
     .line 19
-    .line 20
     check-cast v1, Landroid/widget/ListView;
 
+    .line 20
     .line 21
-    .line 22
     iput-object v1, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mList:Landroid/widget/ListView;
 
+    .line 22
     .line 23
-    .line 24
     if-eqz v1, :cond_1
 
+    .line 24
     .line 25
-    .line 26
     iget-object v1, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mHandler:Landroid/os/Handler;
 
+    .line 26
     .line 27
-    .line 28
     iget-object v0, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mRequestFocus:Ljava/lang/Runnable;
 
+    .line 28
     .line 29
-    .line 30
     invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 30
     .line 31
     .line 32
-    .line 33
+    :cond_0
     return-void
 
-    .line 34
+    .line 33
     :cond_1
-    const-string v0, "Your content must have a ListView whose id attribute is \'android.R.id.list\'"
+    const-string/jumbo v0, "Your content must have a ListView whose id attribute is \'android.R.id.list\'"
 
+    .line 34
     .line 35
     .line 36
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 37
     .line 38
@@ -274,7 +279,7 @@
 
     .line 42
     .line 43
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 44
     .line 45
@@ -290,7 +295,7 @@
 
     .line 49
     .line 50
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 51
     .line 52
@@ -365,7 +370,7 @@
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 8
     .line 9
@@ -391,7 +396,7 @@
 
     .line 4
     .line 5
-    invoke-static {v7}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A07(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
+    invoke-static {v7}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A06(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
 
     .line 6
     .line 7
@@ -434,7 +439,7 @@
     const/4 v0, 0x1
 
     .line 25
-    invoke-static {v5, v1, v4, v2, v0}, LX/0Yh;->A0h(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
+    invoke-static {v5, v1, v4, v2, v0}, LX/0X6;->A11(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
 
     .line 26
     .line 27
@@ -447,7 +452,7 @@
     .line 30
     .line 31
     .line 32
-    invoke-static {p1, v6, v3}, LX/002;->A0T(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {p1, v6, v3}, LX/002;->A0H(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 33
     .line 34
@@ -484,7 +489,7 @@
 
     .line 47
     .line 48
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 49
     .line 50
@@ -566,7 +571,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A07(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
+    invoke-static {v0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A06(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
 
     .line 3
     .line 4
@@ -577,7 +582,7 @@
     return-object v0
 .end method
 
-.method public getPrivacyContext()LX/37j;
+.method public getPrivacyContext()LX/2uz;
     .locals 3
 
     .line 0
@@ -588,11 +593,11 @@
     .line 3
     .line 4
     .line 5
-    new-instance v0, LX/37j;
+    new-instance v0, LX/2uz;
 
     .line 6
     .line 7
-    invoke-direct {v0, v1, v2}, LX/37j;-><init>(J)V
+    invoke-direct {v0, v1, v2}, LX/2uz;-><init>(J)V
 
     .line 8
     .line 9
@@ -633,43 +638,44 @@
 
     .line 13
     .line 14
-    const-string v0, "android:preferences"
+    const-string/jumbo v0, "android:preferences"
 
     .line 15
     .line 16
+    .line 17
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     move-result-object v1
 
-    .line 20
+    .line 21
     if-eqz v1, :cond_1
 
-    .line 21
     .line 22
+    .line 23
     iget-object v0, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mPreferenceManager:Landroid/preference/PreferenceManager;
 
-    .line 23
     .line 24
-    invoke-static {v0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A07(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
-
     .line 25
+    invoke-static {v0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A06(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
+
     .line 26
     .line 27
+    .line 28
     move-result-object v0
 
-    .line 28
+    .line 29
     if-eqz v0, :cond_1
 
-    .line 29
     .line 30
+    .line 31
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->restoreHierarchyState(Landroid/os/Bundle;)V
 
-    .line 31
     .line 32
     .line 33
+    .line 34
     :cond_1
     return-void
 .end method
@@ -678,7 +684,7 @@
     .locals 9
 
     .line 0
-    invoke-super {p0, p1, p2, p3}, LX/3e4;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, LX/3FR;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 1
     .line 2
@@ -692,108 +698,111 @@
 
     .line 6
     .line 7
-    const-string v6, "dispatchActivityResult"
+    const-string/jumbo v6, "dispatchActivityResult"
 
     .line 8
     .line 9
+    .line 10
     const/4 v5, 0x3
 
-    .line 10
+    .line 11
     new-array v1, v5, [Ljava/lang/Class;
 
-    .line 11
     .line 12
+    .line 13
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 13
     .line 14
+    .line 15
     const/4 v4, 0x0
 
-    .line 15
+    .line 16
     aput-object v0, v1, v4
 
-    .line 16
     .line 17
+    .line 18
     const/4 v3, 0x1
 
-    .line 18
+    .line 19
     aput-object v0, v1, v3
 
-    .line 19
     .line 20
+    .line 21
     const-class v0, Landroid/content/Intent;
 
-    .line 21
     .line 22
+    .line 23
     const/4 v2, 0x2
 
-    .line 23
-    invoke-static {v7, v0, v6, v1, v2}, LX/0Yh;->A0h(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
-
     .line 24
+    invoke-static {v7, v0, v6, v1, v2}, LX/0X6;->A11(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
+
     .line 25
     .line 26
+    .line 27
     move-result-object v1
 
-    .line 27
+    .line 28
     invoke-virtual {v1, v3}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    .line 28
     .line 29
     .line 30
+    .line 31
     new-array v0, v5, [Ljava/lang/Object;
 
-    .line 31
     .line 32
-    invoke-static {v0, p1, v4, p2, v3}, LX/0Yc;->A1V([Ljava/lang/Object;IIII)V
-
     .line 33
+    invoke-static {v0, p1, v4, p2, v3}, LX/0X1;->A1T([Ljava/lang/Object;IIII)V
+
     .line 34
     .line 35
+    .line 36
     aput-object p3, v0, v2
 
-    .line 36
     .line 37
+    .line 38
     invoke-virtual {v1, v8, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     .line 39
     .line 40
+    .line 41
     return-void
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 41
+    .line 42
     :catch_0
     move-exception v2
 
-    .line 42
+    .line 43
     const-string v1, "PreferenceManagerCompat"
 
-    .line 43
     .line 44
+    .line 45
     const-string v0, "Couldn\'t call PreferenceManager.dispatchActivityResult by reflection"
 
-    .line 45
     .line 46
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     .line 47
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 48
     .line 49
+    .line 50
     return-void
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
-    return-object v0
+    move-result-object v0
+
+    throw v0
 .end method
 
 .method public onDestroy()V
-    .locals 4
+    .locals 5
 
     .line 0
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
@@ -801,69 +810,74 @@
     .line 1
     .line 2
     .line 3
-    iget-object v3, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mPreferenceManager:Landroid/preference/PreferenceManager;
+    iget-object v4, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mPreferenceManager:Landroid/preference/PreferenceManager;
 
     .line 4
     .line 5
     :try_start_0
-    const-class v1, Landroid/preference/PreferenceManager;
+    const-class v3, Landroid/preference/PreferenceManager;
 
     .line 6
     .line 7
-    const-string v0, "dispatchActivityDestroy"
+    const-string/jumbo v1, "dispatchActivityDestroy"
 
     .line 8
     .line 9
+    .line 10
     const/4 v2, 0x0
 
-    .line 10
-    invoke-static {v1, v0}, LX/0Yj;->A0W(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
-
     .line 11
+    new-array v0, v2, [Ljava/lang/Class;
+
     .line 12
     .line 13
-    move-result-object v1
+    invoke-virtual {v3, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
     const/4 v0, 0x1
 
-    .line 15
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    .line 16
-    .line 17
     .line 18
-    new-array v0, v2, [Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 19
     .line 20
-    invoke-virtual {v1, v3, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 21
+    new-array v0, v2, [Ljava/lang/Object;
+
     .line 22
     .line 23
+    invoke-virtual {v1, v4, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 24
+    .line 25
+    .line 26
     return-void
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 24
+    .line 27
     :catch_0
     move-exception v2
 
-    .line 25
+    .line 28
     const-string v1, "PreferenceManagerCompat"
 
-    .line 26
-    .line 27
+    .line 29
+    .line 30
     const-string v0, "Couldn\'t call PreferenceManager.dispatchActivityDestroy by reflection"
 
-    .line 28
-    .line 29
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 30
     .line 31
     .line 32
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 33
+    .line 34
+    .line 35
     return-void
 .end method
 
@@ -915,36 +929,36 @@
     .locals 6
 
     .line 0
-    new-instance v0, LX/3gV;
+    const/4 v5, 0x1
 
     .line 1
-    .line 2
-    invoke-direct {v0, p0}, LX/3gV;-><init>(Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;)V
+    new-instance v0, LX/0ZH;
 
+    .line 2
     .line 3
+    invoke-direct {v0, p0, v5}, LX/0ZH;-><init>(Ljava/lang/Object;I)V
+
     .line 4
     .line 5
+    .line 6
     iput-object v0, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mHandler:Landroid/os/Handler;
 
-    .line 6
     .line 7
+    .line 8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    .line 8
     .line 9
     .line 10
-    move-result-object v5
-
     .line 11
-    :try_start_0
-    const-class v4, Landroid/preference/PreferenceManager;
+    move-result-object v4
 
     .line 12
-    .line 13
-    const/4 v3, 0x1
+    :try_start_0
+    const-class v3, Landroid/preference/PreferenceManager;
 
+    .line 13
     .line 14
-    new-array v1, v3, [Ljava/lang/Class;
+    new-array v1, v5, [Ljava/lang/Class;
 
     .line 15
     .line 16
@@ -959,7 +973,7 @@
 
     .line 20
     .line 21
-    invoke-virtual {v4, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-virtual {v3, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     .line 22
     .line 23
@@ -967,16 +981,16 @@
     move-result-object v1
 
     .line 25
-    invoke-virtual {v1, v3}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-virtual {v1, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 26
     .line 27
     .line 28
-    new-array v0, v3, [Ljava/lang/Object;
+    new-array v0, v5, [Ljava/lang/Object;
 
     .line 29
     .line 30
-    aput-object v5, v0, v2
+    aput-object v4, v0, v2
 
     .line 31
     .line 32
@@ -1009,7 +1023,7 @@
 
     .line 43
     .line 44
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 45
     .line 46
@@ -1029,7 +1043,7 @@
     .locals 2
 
     .line 0
-    invoke-super {p0, p1}, LX/3e4;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, LX/3FR;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 1
     .line 2
@@ -1038,7 +1052,7 @@
 
     .line 4
     .line 5
-    invoke-static {v0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A07(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
+    invoke-static {v0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->A06(Landroid/preference/PreferenceManager;)Landroid/preference/PreferenceScreen;
 
     .line 6
     .line 7
@@ -1050,7 +1064,7 @@
 
     .line 10
     .line 11
-    invoke-static {}, LX/0Yi;->A0H()Landroid/os/Bundle;
+    invoke-static {}, LX/0X6;->A0F()Landroid/os/Bundle;
 
     .line 12
     .line 13
@@ -1063,21 +1077,22 @@
     .line 16
     .line 17
     .line 18
-    const-string v0, "android:preferences"
+    const-string/jumbo v0, "android:preferences"
 
     .line 19
     .line 20
+    .line 21
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 21
     .line 22
     .line 23
+    .line 24
     :cond_0
     return-void
 .end method
 
 .method public onStop()V
-    .locals 4
+    .locals 5
 
     .line 0
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onStop()V
@@ -1085,69 +1100,74 @@
     .line 1
     .line 2
     .line 3
-    iget-object v3, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mPreferenceManager:Landroid/preference/PreferenceManager;
+    iget-object v4, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mPreferenceManager:Landroid/preference/PreferenceManager;
 
     .line 4
     .line 5
     :try_start_0
-    const-class v1, Landroid/preference/PreferenceManager;
+    const-class v3, Landroid/preference/PreferenceManager;
 
     .line 6
     .line 7
-    const-string v0, "dispatchActivityStop"
+    const-string/jumbo v1, "dispatchActivityStop"
 
     .line 8
     .line 9
+    .line 10
     const/4 v2, 0x0
 
-    .line 10
-    invoke-static {v1, v0}, LX/0Yj;->A0W(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;
-
     .line 11
+    new-array v0, v2, [Ljava/lang/Class;
+
     .line 12
     .line 13
-    move-result-object v1
+    invoke-virtual {v3, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
     const/4 v0, 0x1
 
-    .line 15
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    .line 16
-    .line 17
     .line 18
-    new-array v0, v2, [Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 19
     .line 20
-    invoke-virtual {v1, v3, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 21
+    new-array v0, v2, [Ljava/lang/Object;
+
     .line 22
     .line 23
+    invoke-virtual {v1, v4, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 24
+    .line 25
+    .line 26
     return-void
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 24
+    .line 27
     :catch_0
     move-exception v2
 
-    .line 25
+    .line 28
     const-string v1, "PreferenceManagerCompat"
 
-    .line 26
-    .line 27
+    .line 29
+    .line 30
     const-string v0, "Couldn\'t call PreferenceManager.dispatchActivityStop by reflection"
 
-    .line 28
-    .line 29
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 30
     .line 31
     .line 32
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 33
+    .line 34
+    .line 35
     return-void
 .end method
 
@@ -1183,90 +1203,82 @@
 
     .line 12
     .line 13
-    invoke-static {v4, v0, v3, v1, v5}, LX/0Yh;->A0h(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
+    invoke-static {v4, v0, v3, v1, v5}, LX/0X6;->A11(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
 
     .line 14
     .line 15
     .line 16
-    move-result-object v1
+    move-result-object v0
 
     .line 17
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     .line 18
     .line 19
     .line 20
-    new-array v0, v2, [Ljava/lang/Object;
+    invoke-static {p1, v6, v0}, LX/0X6;->A0j(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Method;)Ljava/lang/Object;
 
     .line 21
     .line 22
-    aput-object p1, v0, v5
-
     .line 23
+    move-result-object v0
+
     .line 24
-    invoke-virtual {v1, v6, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
 
     .line 25
     .line 26
     .line 27
-    move-result-object v0
+    move-result v0
 
     .line 28
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
     .line 29
     .line 30
-    .line 31
-    move-result v0
-
-    .line 32
-    if-eqz v0, :cond_0
-
-    .line 33
-    .line 34
     if-eqz p1, :cond_0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 31
+    .line 32
+    iput-boolean v2, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mHavePrefs:Z
+
+    .line 33
+    .line 34
+    iget-boolean v0, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mInitDone:Z
+
     .line 35
     .line 36
-    iput-boolean v2, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mHavePrefs:Z
+    if-eqz v0, :cond_0
 
     .line 37
     .line 38
-    iget-boolean v0, p0, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->mInitDone:Z
+    invoke-direct {p0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->postBindPreferences()V
 
     .line 39
     .line 40
-    if-eqz v0, :cond_0
-
     .line 41
-    .line 42
-    invoke-direct {p0}, Lcom/facebook/widget/fbpreferencefragment/FbPreferenceFragment;->postBindPreferences()V
-
-    .line 43
-    .line 44
-    .line 45
+    :cond_0
     return-void
 
-    .line 46
+    .line 42
     :catch_0
     move-exception v2
 
-    .line 47
+    .line 43
     const-string v1, "PreferenceManagerCompat"
+
+    .line 44
+    .line 45
+    const-string v0, "Couldn\'t call PreferenceManager.setPreferences by reflection"
+
+    .line 46
+    .line 47
+    invoke-static {v1, v0, v2}, LX/0Il;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 48
     .line 49
-    const-string v0, "Couldn\'t call PreferenceManager.setPreferences by reflection"
-
     .line 50
-    .line 51
-    invoke-static {v1, v0, v2}, LX/0Jt;->A0H(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 52
-    .line 53
-    .line 54
-    :cond_0
     return-void
 .end method

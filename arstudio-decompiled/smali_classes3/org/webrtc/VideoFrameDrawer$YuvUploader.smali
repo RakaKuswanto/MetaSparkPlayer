@@ -215,40 +215,40 @@
     const/4 v4, 0x3
 
     .line 1
-    new-array v1, v4, [I
+    new-array v3, v4, [I
 
     .line 2
     .line 3
     const/4 v0, 0x0
 
     .line 4
-    aput p1, v1, v0
+    aput p1, v3, v0
 
     .line 5
     .line 6
     const/4 v6, 0x2
 
     .line 7
-    div-int/lit8 v2, p1, 0x2
+    div-int/lit8 v1, p1, 0x2
 
     .line 8
     .line 9
     const/4 v5, 0x1
 
     .line 10
-    aput v2, v1, v5
+    aput v1, v3, v5
 
     .line 11
     .line 12
-    aput v2, v1, v6
+    aput v1, v3, v6
 
     .line 13
     .line 14
-    new-array v3, v4, [I
+    new-array v1, v4, [I
 
     .line 15
     .line 16
-    aput p2, v3, v0
+    aput p2, v1, v0
 
     .line 17
     .line 18
@@ -256,11 +256,11 @@
 
     .line 19
     .line 20
-    aput v2, v3, v5
+    aput v2, v1, v5
 
     .line 21
     .line 22
-    aput v2, v3, v6
+    aput v2, v1, v6
 
     .line 23
     .line 24
@@ -271,264 +271,252 @@
 
     .line 26
     :cond_0
-    aget v5, p3, v7
+    aget v2, p3, v7
 
     .line 27
     .line 28
-    aget v2, v1, v7
+    aget v5, v3, v7
 
     .line 29
     .line 30
-    if-le v5, v2, :cond_1
+    if-le v2, v5, :cond_1
 
     .line 31
     .line 32
-    aget v5, v1, v7
+    aget v2, v1, v7
 
     .line 33
     .line 34
-    aget v2, v3, v7
-
-    .line 35
-    .line 36
     mul-int/2addr v5, v2
 
-    .line 37
+    .line 35
     invoke-static {v6, v5}, Ljava/lang/Math;->max(II)I
 
+    .line 36
+    .line 37
     .line 38
-    .line 39
-    .line 40
     move-result v6
 
-    .line 41
+    .line 39
     :cond_1
     add-int/lit8 v7, v7, 0x1
 
+    .line 40
+    .line 41
+    if-lt v7, v4, :cond_0
+
     .line 42
     .line 43
-    if-lt v7, v4, :cond_0
+    move-object/from16 v2, p0
 
     .line 44
     .line 45
-    move-object/from16 v2, p0
+    if-lez v6, :cond_3
 
     .line 46
     .line 47
-    if-lez v6, :cond_3
+    iget-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->copyBuffer:Ljava/nio/ByteBuffer;
 
     .line 48
     .line 49
-    iget-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->copyBuffer:Ljava/nio/ByteBuffer;
+    if-eqz v5, :cond_2
 
     .line 50
     .line 51
-    if-eqz v5, :cond_2
+    invoke-virtual {v5}, Ljava/nio/Buffer;->capacity()I
 
     .line 52
     .line 53
-    invoke-virtual {v5}, Ljava/nio/Buffer;->capacity()I
-
     .line 54
-    .line 55
-    .line 56
     move-result v5
 
-    .line 57
+    .line 55
     if-ge v5, v6, :cond_3
 
-    .line 58
-    .line 59
+    .line 56
+    .line 57
     :cond_2
     invoke-static {v6}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
+    .line 58
+    .line 59
     .line 60
-    .line 61
-    .line 62
     move-result-object v5
 
-    .line 63
+    .line 61
     iput-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->copyBuffer:Ljava/nio/ByteBuffer;
 
-    .line 64
-    .line 65
+    .line 62
+    .line 63
     :cond_3
     iget-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
 
+    .line 64
+    .line 65
+    const/16 v8, 0xde1
+
     .line 66
     .line 67
-    const/16 v8, 0xde1
+    if-nez v5, :cond_4
 
     .line 68
     .line 69
-    if-nez v5, :cond_4
+    new-array v5, v4, [I
 
     .line 70
     .line 71
-    new-array v5, v4, [I
+    iput-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
 
     .line 72
     .line 73
-    iput-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
-
-    .line 74
-    .line 75
     const/4 v7, 0x0
 
-    .line 76
+    .line 74
     :goto_0
     iget-object v6, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
 
-    .line 77
-    .line 78
+    .line 75
+    .line 76
     invoke-static {v8}, Lorg/webrtc/GlUtil;->generateTexture(I)I
 
+    .line 77
+    .line 78
     .line 79
-    .line 80
-    .line 81
     move-result v5
 
-    .line 82
+    .line 80
     aput v5, v6, v7
+
+    .line 81
+    .line 82
+    add-int/lit8 v7, v7, 0x1
 
     .line 83
     .line 84
-    add-int/lit8 v7, v7, 0x1
+    if-ge v7, v4, :cond_4
 
     .line 85
     .line 86
-    if-ge v7, v4, :cond_4
-
-    .line 87
-    .line 88
     goto :goto_0
 
-    .line 89
+    .line 87
     :cond_4
     const v5, 0x84c0
 
+    .line 88
+    .line 89
     .line 90
-    .line 91
-    .line 92
     add-int/2addr v5, v0
 
-    .line 93
+    .line 91
     invoke-static {v5}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
+    .line 92
+    .line 93
     .line 94
+    iget-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
+
     .line 95
     .line 96
-    iget-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
+    aget v5, v5, v0
 
     .line 97
     .line 98
-    aget v5, v5, v0
+    invoke-static {v8, v5}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     .line 99
     .line 100
-    invoke-static {v8, v5}, Landroid/opengl/GLES20;->glBindTexture(II)V
-
     .line 101
+    aget v10, p3, v0
+
     .line 102
     .line 103
-    aget v6, p3, v0
+    aget v12, v3, v0
 
     .line 104
     .line 105
-    aget v5, v1, v0
+    if-ne v10, v12, :cond_5
 
     .line 106
     .line 107
-    if-ne v6, v5, :cond_5
+    aget-object v5, p4, v0
 
     .line 108
     .line 109
-    aget-object v5, p4, v0
-
-    .line 110
-    .line 111
     :goto_1
     const/4 v9, 0x0
 
-    .line 112
+    .line 110
     const/16 v10, 0x1909
+
+    .line 111
+    .line 112
+    aget v11, v3, v0
 
     .line 113
     .line 114
-    aget v11, v1, v0
+    aget v12, v1, v0
 
     .line 115
     .line 116
-    aget v12, v3, v0
+    const/16 v15, 0x1401
 
     .line 117
     .line 118
-    const/16 v15, 0x1401
-
-    .line 119
-    .line 120
     move v13, v9
 
-    .line 121
+    .line 119
     move v14, v10
 
-    .line 122
+    .line 120
     move-object/from16 v16, v5
+
+    .line 121
+    .line 122
+    invoke-static/range {v8 .. v16}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     .line 123
     .line 124
-    invoke-static/range {v8 .. v16}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
-
     .line 125
+    add-int/lit8 v0, v0, 0x1
+
     .line 126
     .line 127
-    add-int/lit8 v0, v0, 0x1
+    if-lt v0, v4, :cond_4
 
     .line 128
     .line 129
-    if-lt v0, v4, :cond_4
+    iget-object v0, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
 
     .line 130
     .line 131
-    iget-object v0, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->yuvTextures:[I
-
-    .line 132
-    .line 133
     return-object v0
 
-    .line 134
+    .line 132
     :cond_5
     aget-object v9, p4, v0
 
+    .line 133
+    .line 134
+    iget-object v11, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->copyBuffer:Ljava/nio/ByteBuffer;
+
     .line 135
     .line 136
-    aget v10, p3, v0
+    aget v14, v1, v0
 
     .line 137
     .line 138
-    iget-object v11, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->copyBuffer:Ljava/nio/ByteBuffer;
+    move v13, v12
 
     .line 139
-    .line 140
-    aget v12, v1, v0
+    invoke-static/range {v9 .. v14}, Lorg/webrtc/YuvHelper;->nativeCopyPlane(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;III)V
 
+    .line 140
     .line 141
     .line 142
-    aget v14, v3, v0
+    iget-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->copyBuffer:Ljava/nio/ByteBuffer;
 
     .line 143
     .line 144
-    move v13, v12
-
-    .line 145
-    invoke-static/range {v9 .. v14}, Lorg/webrtc/YuvHelper;->nativeCopyPlane(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;III)V
-
-    .line 146
-    .line 147
-    .line 148
-    iget-object v5, v2, Lorg/webrtc/VideoFrameDrawer$YuvUploader;->copyBuffer:Ljava/nio/ByteBuffer;
-
-    .line 149
-    .line 150
     goto :goto_1
 .end method

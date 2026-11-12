@@ -19,11 +19,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x57
+    const/16 v0, 0x31
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -47,7 +47,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 4
     .line 5
@@ -55,109 +55,101 @@
     move-result-object v1
 
     .line 7
-    const-class v0, LX/15E;
+    const-class v0, LX/1PJ;
 
     .line 8
     .line 9
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {p1, v0, v1}, LX/0X5;->A13(Landroid/os/Parcel;Ljava/lang/Class;Ljava/util/Map;)V
 
     .line 10
     .line 11
     .line 12
-    move-result-object v0
+    invoke-static {}, LX/0X2;->A0X()Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 13
-    invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->readMap(Ljava/util/Map;Ljava/lang/ClassLoader;)V
-
     .line 14
     .line 15
+    move-result-object v3
+
     .line 16
-    invoke-static {}, LX/0Ye;->A0K()Lcom/google/common/collect/ImmutableMap$Builder;
+    invoke-static {v1}, LX/001;->A0d(Ljava/util/AbstractMap;)Ljava/util/Iterator;
 
     .line 17
     .line 18
     .line 19
-    move-result-object v3
+    move-result-object v2
 
     .line 20
-    invoke-static {v1}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     .line 21
     .line 22
     .line 23
-    move-result-object v2
+    move-result v0
 
     .line 24
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_0
 
     .line 25
     .line 26
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+
     .line 27
-    move-result v0
-
     .line 28
-    if-eqz v0, :cond_0
-
     .line 29
+    move-result-object v0
+
     .line 30
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     .line 31
     .line 32
     .line 33
-    move-result-object v0
+    move-result-object v1
 
     .line 34
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     .line 35
     .line 36
     .line 37
-    move-result-object v1
+    move-result-object v0
 
     .line 38
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    check-cast v0, Ljava/util/Collection;
 
     .line 39
     .line 40
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+
     .line 41
+    .line 42
+    .line 43
     move-result-object v0
 
-    .line 42
-    check-cast v0, Ljava/util/Collection;
-
-    .line 43
     .line 44
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {v3, v1, v0}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     .line 45
     .line 46
     .line 47
-    move-result-object v0
+    goto :goto_0
 
     .line 48
-    invoke-virtual {v3, v1, v0}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
+    :cond_0
+    invoke-virtual {v3}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
 
     .line 49
     .line 50
     .line 51
-    goto :goto_0
+    move-result-object v0
 
     .line 52
-    :cond_0
-    invoke-virtual {v3}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;->A00:Lcom/google/common/collect/ImmutableMap;
 
     .line 53
     .line 54
-    .line 55
-    move-result-object v0
-
-    .line 56
-    iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/AdditionalFields;->A00:Lcom/google/common/collect/ImmutableMap;
-
-    .line 57
-    .line 58
     return-void
 .end method
 
@@ -203,7 +195,7 @@
 
     .line 1
     .line 2
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 3
     .line 4
@@ -211,7 +203,7 @@
     move-result-object v3
 
     .line 6
-    invoke-static {v0}, LX/0Yg;->A0V(Lcom/google/common/collect/ImmutableMap;)LX/1bX;
+    invoke-static {v0}, LX/0X3;->A0S(Lcom/google/common/collect/ImmutableMap;)LX/1tw;
 
     .line 7
     .line 8
@@ -232,7 +224,7 @@
 
     .line 15
     .line 16
-    invoke-static {v2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 17
     .line 18
@@ -260,7 +252,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 31
     .line 32

@@ -20,6 +20,14 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$1"
+        }
+    .end annotation
 
     .line 0
     iput-object p1, p0, Lcom/google/common/collect/ImmutableSortedMap$1EntrySet$1;->this$1:Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;
@@ -36,6 +44,14 @@
 
 .method private final A00(I)Ljava/util/AbstractMap$SimpleImmutableEntry;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSortedMap$1EntrySet$1;->this$1:Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;
@@ -106,6 +122,14 @@
 
 .method public final bridge synthetic get(I)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     .line 0
     invoke-direct {p0, p1}, Lcom/google/common/collect/ImmutableSortedMap$1EntrySet$1;->A00(I)Ljava/util/AbstractMap$SimpleImmutableEntry;
@@ -140,4 +164,19 @@
 
     .line 8
     return v0
+.end method
+
+.method public writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->writeReplace()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
 .end method

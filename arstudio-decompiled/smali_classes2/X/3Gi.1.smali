@@ -1,50 +1,67 @@
-.class public final LX/3Gi;
-.super LX/4wN;
+.class public abstract synthetic LX/3gi;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:Ljava/lang/String;
-
-.field public final A01:LX/6IW;
-
-.field public final A02:LX/2nA;
+# static fields
+.field public static final synthetic A00:[I
 
 
 # direct methods
-.method public constructor <init>(LX/2nA;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, LX/4wN;-><init>()V
+    invoke-static {}, LX/3gk;->values()[LX/3gk;
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/3Gi;->A02:LX/2nA;
+    move-result-object v0
 
-    .line 4
-    .line 5
-    const-string v1, ""
+    array-length v0, v0
 
-    .line 6
-    .line 7
-    new-instance v0, LX/6IW;
+    new-array v2, v0, [I
 
-    .line 8
-    .line 9
-    invoke-direct {v0, v1}, LX/6IW;-><init>(Ljava/lang/Object;)V
+    :try_start_0
+    sget-object v0, LX/3gk;->BoundCardEnterCvv:LX/3gk;
 
-    .line 10
-    .line 11
-    .line 12
-    iput-object v0, p0, LX/3Gi;->A01:LX/6IW;
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    .line 13
-    .line 14
-    iput-object v1, p0, LX/3Gi;->A00:Ljava/lang/String;
+    move-result v1
 
-    .line 15
-    .line 16
+    const/4 v0, 0x1
+
+    aput v0, v2, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, LX/3gk;->UnboundCardEnterPan:LX/3gk;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v0, 0x2
+
+    aput v0, v2, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, LX/3gk;->UnboundCardEnterPanAndCvv:LX/3gk;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v0, 0x3
+
+    aput v0, v2, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v2, LX/3gi;->A00:[I
+
     return-void
 .end method

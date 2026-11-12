@@ -1,100 +1,106 @@
 .class public final LX/4cK;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CallbackWithHandler$2"
 
 
 # instance fields
-.field public final synthetic A00:LX/4b9;
+.field public final synthetic A00:I
+
+.field public final synthetic A01:LX/4cF;
+
+.field public final synthetic A02:LX/4ck;
 
 
 # direct methods
-.method public constructor <init>(LX/4b9;)V
-    .locals 1
+.method public constructor <init>(LX/4cF;LX/4ck;I)V
+    .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4cK;->A00:LX/4b9;
+    iput-object p1, p0, LX/4cK;->A01:LX/4cF;
 
     .line 1
     .line 2
-    new-instance v0, Landroid/os/Handler;
+    iput-object p2, p0, LX/4cK;->A02:LX/4ck;
 
     .line 3
     .line 4
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+    iput p3, p0, LX/4cK;->A00:I
 
     .line 5
     .line 6
-    .line 7
-    invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     .line 8
     .line 9
-    .line 10
     return-void
 .end method
 
 
 # virtual methods
-.method public final deliverSelfNotifications()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final onChange(Z)V
-    .locals 2
+.method public final run()V
+    .locals 4
 
     .line 0
-    iget-object v1, p0, LX/4cK;->A00:LX/4b9;
+    iget-object v0, p0, LX/4cK;->A02:LX/4ck;
 
     .line 1
     .line 2
-    iget-boolean v0, v1, LX/4b9;->A05:Z
+    iget v3, p0, LX/4cK;->A00:I
 
     .line 3
     .line 4
-    if-eqz v0, :cond_0
+    check-cast v0, LX/4cV;
 
     .line 5
     .line 6
-    iget-object v0, v1, LX/4b9;->A02:Landroid/database/Cursor;
+    iget-object v2, v0, LX/4cV;->A00:LX/4cJ;
 
     .line 7
     .line 8
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
     .line 9
     .line 10
-    invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
+    instance-of v0, v2, LX/4WA;
 
     .line 11
     .line 12
-    .line 13
-    move-result v0
+    if-eqz v0, :cond_0
 
+    .line 13
     .line 14
-    if-nez v0, :cond_0
+    check-cast v2, LX/4WA;
 
     .line 15
     .line 16
-    iget-object v0, v1, LX/4b9;->A02:Landroid/database/Cursor;
+    iget-object v1, v2, LX/4WA;->A00:LX/4VY;
 
     .line 17
     .line 18
-    invoke-interface {v0}, Landroid/database/Cursor;->requery()Z
+    const/4 v0, 0x1
 
     .line 19
+    iput-boolean v0, v1, LX/4VY;->A02:Z
+
     .line 20
     .line 21
-    move-result v0
+    iget-object v0, v2, LX/4WA;->A01:LX/4Wf;
 
     .line 22
-    iput-boolean v0, v1, LX/4b9;->A06:Z
-
     .line 23
+    invoke-virtual {v0, v3}, LX/4Wf;->A01(I)V
+
     .line 24
+    .line 25
+    .line 26
     :cond_0
     return-void
 .end method

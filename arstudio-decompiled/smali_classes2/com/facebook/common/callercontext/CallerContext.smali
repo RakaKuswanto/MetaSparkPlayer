@@ -48,11 +48,11 @@
 
     .line 6
     .line 7
-    const/16 v0, 0x25
+    const/16 v0, 0x1f
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 10
     .line 11
@@ -70,27 +70,27 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1611109987
+    .line 1610734027
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 1611109988
+    .line 1610734028
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A03:Ljava/lang/String;
 
-    .line 1611109989
+    .line 1610734029
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A02:Ljava/lang/String;
 
-    .line 1611109990
+    .line 1610734030
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A05:Ljava/lang/String;
 
-    .line 1611109991
+    .line 1610734031
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A04:Ljava/lang/String;
 
-    .line 1611109992
+    .line 1610734032
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A01:Lcom/facebook/common/callercontext/ContextChain;
 
-    .line 1611109993
+    .line 1610734033
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A06:Ljava/util/Map;
 
     return-void
@@ -157,7 +157,7 @@
 
     .line 28
     .line 29
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 30
     .line 31
@@ -263,39 +263,39 @@
 .method public constructor <init>(Lcom/facebook/common/callercontext/ContextChain;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 805306368
+    .line 1073741824
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 805306369
-    .line 805306370
-    .line 805306371
+    .line 1073741825
+    .line 1073741826
+    .line 1073741827
     iput-object p2, p0, Lcom/facebook/common/callercontext/CallerContext;->A03:Ljava/lang/String;
 
-    .line 805306372
-    .line 805306373
+    .line 1073741828
+    .line 1073741829
     iput-object p3, p0, Lcom/facebook/common/callercontext/CallerContext;->A02:Ljava/lang/String;
 
-    .line 805306374
-    .line 805306375
+    .line 1073741830
+    .line 1073741831
     iput-object p4, p0, Lcom/facebook/common/callercontext/CallerContext;->A04:Ljava/lang/String;
 
-    .line 805306376
-    .line 805306377
+    .line 1073741832
+    .line 1073741833
     iput-object p5, p0, Lcom/facebook/common/callercontext/CallerContext;->A05:Ljava/lang/String;
 
-    .line 805306378
-    .line 805306379
+    .line 1073741834
+    .line 1073741835
     iput-object p1, p0, Lcom/facebook/common/callercontext/CallerContext;->A01:Lcom/facebook/common/callercontext/ContextChain;
 
-    .line 805306380
-    .line 805306381
+    .line 1073741836
+    .line 1073741837
     const/4 v0, 0x0
 
-    .line 805306382
+    .line 1073741838
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A06:Ljava/util/Map;
 
-    .line 805306383
-    .line 805306384
+    .line 1073741839
+    .line 1073741840
     return-void
 .end method
 
@@ -343,75 +343,81 @@
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 805306368
     const/4 v1, 0x0
 
-    .line 1342674508
+    .line 805306369
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1342674509
+    .line 805306370
+    .line 805306371
+    .line 805306372
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1342674510
-    invoke-static {p1}, LX/0JP;->A00(Ljava/lang/Class;)Ljava/lang/String;
+    .line 805306373
+    .line 805306374
+    .line 805306375
+    invoke-static {p1}, LX/0IH;->A00(Ljava/lang/Class;)Ljava/lang/String;
 
+    .line 805306376
+    .line 805306377
+    .line 805306378
     move-result-object v0
 
+    .line 805306379
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A03:Ljava/lang/String;
 
-    .line 1342674511
+    .line 805306380
+    .line 805306381
     iput-object p2, p0, Lcom/facebook/common/callercontext/CallerContext;->A02:Ljava/lang/String;
 
-    .line 1342674512
+    .line 805306382
+    .line 805306383
     iput-object p3, p0, Lcom/facebook/common/callercontext/CallerContext;->A04:Ljava/lang/String;
 
-    .line 1342674513
+    .line 805306384
+    .line 805306385
     iput-object p4, p0, Lcom/facebook/common/callercontext/CallerContext;->A05:Ljava/lang/String;
 
-    .line 1342674514
+    .line 805306386
+    .line 805306387
     iput-object v1, p0, Lcom/facebook/common/callercontext/CallerContext;->A01:Lcom/facebook/common/callercontext/ContextChain;
 
-    .line 1342674515
+    .line 805306388
+    .line 805306389
     iput-object v1, p0, Lcom/facebook/common/callercontext/CallerContext;->A06:Ljava/util/Map;
 
+    .line 805306390
+    .line 805306391
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1073741824
+    .line 1342298919
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1073741825
-    .line 1073741826
-    .line 1073741827
+    .line 1342298920
     iput-object p1, p0, Lcom/facebook/common/callercontext/CallerContext;->A03:Ljava/lang/String;
 
-    .line 1073741828
-    .line 1073741829
+    .line 1342298921
     iput-object p2, p0, Lcom/facebook/common/callercontext/CallerContext;->A02:Ljava/lang/String;
 
-    .line 1073741830
-    .line 1073741831
+    .line 1342298922
     iput-object p3, p0, Lcom/facebook/common/callercontext/CallerContext;->A04:Ljava/lang/String;
 
-    .line 1073741832
-    .line 1073741833
+    .line 1342298923
     iput-object p4, p0, Lcom/facebook/common/callercontext/CallerContext;->A05:Ljava/lang/String;
 
-    .line 1073741834
-    .line 1073741835
     const/4 v0, 0x0
 
-    .line 1073741836
+    .line 1342298924
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A01:Lcom/facebook/common/callercontext/ContextChain;
 
-    .line 1073741837
-    .line 1073741838
+    .line 1342298925
     iput-object v0, p0, Lcom/facebook/common/callercontext/CallerContext;->A06:Ljava/util/Map;
 
-    .line 1073741839
-    .line 1073741840
     return-void
 .end method
 
@@ -434,35 +440,14 @@
     return-object v0
 .end method
 
-.method public static A01(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/common/callercontext/CallerContext;
-    .locals 2
-
-    .line 0
-    const-string/jumbo v1, "unknown"
-
-    .line 1
-    .line 2
-    .line 3
-    new-instance v0, Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 4
-    .line 5
-    invoke-direct {v0, p0, v1, p1, v1}, Lcom/facebook/common/callercontext/CallerContext;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 6
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static A02(Ljava/lang/String;)Lcom/facebook/common/callercontext/CallerContext;
+.method public static A01(Ljava/lang/String;)Lcom/facebook/common/callercontext/CallerContext;
     .locals 5
 
     .line 0
     move-object v2, p0
 
     .line 1
-    invoke-static {p0}, Lcom/facebook/common/callercontext/CallerContext;->A03(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/facebook/common/callercontext/CallerContext;->A02(Ljava/lang/String;)V
 
     .line 2
     .line 3
@@ -491,7 +476,7 @@
     return-object v0
 .end method
 
-.method public static A03(Ljava/lang/String;)V
+.method public static A02(Ljava/lang/String;)V
     .locals 0
 
     .line 0
@@ -515,28 +500,29 @@
 
     .line 9
     :cond_0
-    const-string p0, "callingClassName for the CallerContext cannot be null nor empty."
+    const-string/jumbo p0, "callingClassName for the CallerContext cannot be null nor empty."
 
     .line 10
     .line 11
-    invoke-static {p0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
     .line 12
+    invoke-static {p0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 13
     .line 14
+    .line 15
     move-result-object p0
 
-    .line 15
+    .line 16
     throw p0
 .end method
 
 
 # virtual methods
-.method public A04()LX/3y8;
+.method public A03()LX/3Ry;
     .locals 3
 
     .line 0
-    invoke-static {p0}, LX/001;->A0G(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0K(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 1
     .line 2
@@ -544,11 +530,11 @@
     move-result-object v0
 
     .line 4
-    new-instance v2, LX/3y8;
+    new-instance v2, LX/3Ry;
 
     .line 5
     .line 6
-    invoke-direct {v2, v0}, LX/3y8;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, LX/3Ry;-><init>(Ljava/lang/String;)V
 
     .line 7
     .line 8
@@ -561,7 +547,7 @@
 
     .line 12
     .line 13
-    invoke-static {v2, v1, v0}, LX/3y8;->A00(LX/3y8;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1, v0}, LX/3Ry;->A00(LX/3Ry;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     .line 15
@@ -574,7 +560,7 @@
 
     .line 19
     .line 20
-    invoke-static {v2, v1, v0}, LX/3y8;->A00(LX/3y8;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1, v0}, LX/3Ry;->A00(LX/3Ry;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     .line 22
@@ -587,7 +573,7 @@
 
     .line 26
     .line 27
-    invoke-static {v2, v1, v0}, LX/3y8;->A00(LX/3y8;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1, v0}, LX/3Ry;->A00(LX/3Ry;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 28
     .line 29
@@ -600,7 +586,7 @@
 
     .line 33
     .line 34
-    invoke-static {v2, v1, v0}, LX/3y8;->A00(LX/3y8;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1, v0}, LX/3Ry;->A00(LX/3Ry;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 35
     .line 36
@@ -613,7 +599,7 @@
 
     .line 40
     .line 41
-    invoke-static {v2, v1, v0}, LX/3y8;->A00(LX/3y8;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1, v0}, LX/3Ry;->A00(LX/3Ry;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 42
     .line 43
@@ -626,7 +612,7 @@
 
     .line 47
     .line 48
-    invoke-static {v2, v1, v0}, LX/3y8;->A00(LX/3y8;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1, v0}, LX/3Ry;->A00(LX/3Ry;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 49
     .line 50
@@ -676,7 +662,7 @@
 
     .line 12
     .line 13
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 14
     .line 15
@@ -696,7 +682,7 @@
 
     .line 22
     .line 23
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 24
     .line 25
@@ -716,7 +702,7 @@
 
     .line 32
     .line 33
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 34
     .line 35
@@ -736,7 +722,7 @@
 
     .line 42
     .line 43
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 44
     .line 45
@@ -756,7 +742,7 @@
 
     .line 52
     .line 53
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 54
     .line 55
@@ -776,7 +762,7 @@
 
     .line 62
     .line 63
-    invoke-static {v1, v0}, LX/3IJ;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/3L4;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 64
     .line 65
@@ -822,7 +808,7 @@
     .line 8
     .line 9
     :cond_0
-    sget-boolean v0, LX/3aW;->A00:Z
+    sget-boolean v0, LX/2pY;->A00:Z
 
     .line 10
     .line 11
@@ -896,7 +882,7 @@
 
     .line 42
     .line 43
-    invoke-static {v0, v2, v1}, LX/0Yh;->A06(Ljava/lang/Object;[Ljava/lang/Object;I)I
+    invoke-static {v0, v2, v1}, LX/0X5;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)I
 
     .line 44
     .line 45
@@ -922,7 +908,7 @@
 
     .line 53
     .line 54
-    invoke-static {v0}, LX/0Yd;->A05(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0C(Ljava/lang/String;)I
 
     .line 55
     .line 56
@@ -938,7 +924,7 @@
 
     .line 61
     .line 62
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 63
     .line 64
@@ -957,7 +943,7 @@
 
     .line 70
     .line 71
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 72
     .line 73
@@ -976,7 +962,7 @@
 
     .line 79
     .line 80
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 81
     .line 82
@@ -995,7 +981,7 @@
 
     .line 88
     .line 89
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 90
     .line 91
@@ -1014,7 +1000,7 @@
 
     .line 97
     .line 98
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 99
     .line 100
@@ -1032,7 +1018,7 @@
     .locals 1
 
     .line 0
-    invoke-virtual {p0}, Lcom/facebook/common/callercontext/CallerContext;->A04()LX/3y8;
+    invoke-virtual {p0}, Lcom/facebook/common/callercontext/CallerContext;->A03()LX/3Ry;
 
     .line 1
     .line 2

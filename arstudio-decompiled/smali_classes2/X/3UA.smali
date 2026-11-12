@@ -1,41 +1,25 @@
 .class public final LX/3UA;
-.super Ljava/lang/Object;
+.super LX/3UQ;
 .source ""
-
-# interfaces
-.implements LX/6Ls;
 
 
 # instance fields
-.field public final A00:LX/3QA;
+.field public final A00:LX/0GZ;
 
 
 # direct methods
-.method public constructor <init>(LX/3QA;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;LX/0GZ;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/3UQ;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3UA;->A00:LX/3QA;
+    iput-object p3, p0, LX/3UA;->A00:LX/0GZ;
 
     .line 4
     .line 5
     return-void
-.end method
-
-
-# virtual methods
-.method public final AB0()I
-    .locals 1
-
-    .line 0
-    const/16 v0, 0x14
-
-    .line 1
-    .line 2
-    return v0
 .end method

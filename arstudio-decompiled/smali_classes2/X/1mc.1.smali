@@ -1,164 +1,284 @@
 .class public final LX/1mc;
-.super Ljava/lang/Object;
+.super LX/6cX;
 .source ""
-
-# interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field public A00:Ljava/lang/Object;
+.field public final A00:LX/0RP;
 
-.field public final A01:I
+.field public final A01:LX/0RP;
+
+.field public final A02:LX/0RP;
+
+.field public final A03:LX/0RP;
+
+.field public final A04:LX/0RP;
+
+.field public final A05:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/content/res/Resources;LX/0RP;LX/0RP;LX/0RP;LX/0RP;LX/0RP;)V
+    .locals 4
 
     .line 0
-    iput p2, p0, LX/1mc;->A01:I
+    invoke-direct {p0, p2, p3}, LX/6cX;-><init>(Landroid/content/res/Resources;LX/0RP;)V
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/1mc;->A00:Ljava/lang/Object;
-
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, LX/1mc;->A03:LX/0RP;
 
+    .line 4
     .line 5
+    iput-object p4, p0, LX/1mc;->A05:LX/0RP;
+
     .line 6
     .line 7
+    iput-object p5, p0, LX/1mc;->A04:LX/0RP;
+
+    .line 8
+    .line 9
+    iput-object p6, p0, LX/1mc;->A01:LX/0RP;
+
+    .line 10
+    .line 11
+    iput-object p7, p0, LX/1mc;->A02:LX/0RP;
+
+    .line 12
+    .line 13
+    invoke-interface {p6}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    check-cast v0, LX/3A2;
+
+    .line 18
+    .line 19
+    invoke-virtual {v0, p1, p0}, LX/3A2;->A03(Landroid/content/Context;Landroid/content/res/Resources;)V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-interface {p6}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v3
+
+    .line 26
+    check-cast v3, LX/3A2;
+
+    .line 27
+    .line 28
+    invoke-interface {p4}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    check-cast v0, LX/1jY;
+
+    .line 33
+    .line 34
+    iget-object v2, v0, LX/1jY;->A0F:Lcom/google/common/util/concurrent/SettableFuture;
+
+    .line 35
+    .line 36
+    const/4 v0, 0x6
+
+    .line 37
+    new-instance v1, LX/0YH;
+
+    .line 38
+    .line 39
+    invoke-direct {v1, v3, v0}, LX/0YH;-><init>(Ljava/lang/Object;I)V
+
+    .line 40
+    .line 41
+    .line 42
+    iget-object v0, v3, LX/3A2;->A03:LX/0RP;
+
+    .line 43
+    .line 44
+    invoke-static {v0, v1, v2}, LX/3fC;->A00(LX/0RP;LX/1tL;Lcom/google/common/util/concurrent/ListenableFuture;)V
+
+    .line 45
+    .line 46
+    .line 47
+    new-instance v1, LX/1me;
+
+    .line 48
+    .line 49
+    invoke-direct {v1, p1, p2, p0}, LX/1me;-><init>(Landroid/content/Context;Landroid/content/res/Resources;LX/1mc;)V
+
+    .line 50
+    .line 51
+    .line 52
+    new-instance v0, LX/05L;
+
+    .line 53
+    .line 54
+    invoke-direct {v0, v1}, LX/05L;-><init>(LX/0VC;)V
+
+    .line 55
+    .line 56
+    .line 57
+    iput-object v0, p0, LX/1mc;->A00:LX/0RP;
+
+    .line 58
+    .line 59
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 15
+.method public final getDrawable(I)Landroid/graphics/drawable/Drawable;
+    .locals 4
 
     .line 0
-    iget v0, p0, LX/1mc;->A01:I
+    const-string v0, "Resources.getDrawable"
 
     .line 1
     .line 2
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
 
     .line 3
     .line 4
     .line 5
-    iget-object v6, p0, LX/1mc;->A00:Ljava/lang/Object;
+    :try_start_0
+    iget-object v0, p0, LX/1mc;->A02:LX/0RP;
 
     .line 6
     .line 7
-    check-cast v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 8
     .line 9
-    iget-boolean v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mIsSending:Z
-
     .line 10
+    move-result-object v0
+
     .line 11
-    const/4 v3, 0x1
+    check-cast v0, Lcom/facebook/resources/impl/logger/DrawableCounterLogger;
 
     .line 12
-    if-nez v0, :cond_0
-
     .line 13
-    .line 14
-    iput-boolean v3, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mIsSending:Z
+    invoke-virtual {v0, p1}, Lcom/facebook/resources/impl/logger/DrawableCounterLogger;->A01(I)V
 
+    .line 14
     .line 15
     .line 16
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReporterFunnelLogger:LX/0Na;
+    const/4 v3, 0x0
 
     .line 17
+    const/4 v2, 0x0
+
     .line 18
-    invoke-static {v0}, LX/0Yi;->A0K(LX/0Na;)LX/34T;
+    :goto_0
+    sget-object v1, LX/1md;->A00:[I
 
     .line 19
     .line 20
+    const/4 v0, 0x2
+
     .line 21
-    move-result-object v1
+    if-ge v2, v0, :cond_1
 
     .line 22
-    const-string v0, "bug_report_form_submit_clicked"
-
     .line 23
-    .line 24
-    invoke-virtual {v1, v0}, LX/34T;->A02(Ljava/lang/String;)V
+    aget v0, v1, v2
 
+    .line 24
     .line 25
+    if-ne v0, p1, :cond_0
+
     .line 26
     .line 27
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReportPerfLogger:LX/0Na;
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
     .line 28
     .line 29
-    invoke-static {v0}, LX/0Yi;->A0L(LX/0Na;)LX/346;
+    invoke-direct {v1, v3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     .line 30
     .line 31
     .line 32
-    move-result-object v1
+    goto :goto_1
 
     .line 33
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReportBuilder:LX/344;
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
     .line 34
     .line 35
-    iget-object v7, v0, LX/344;->A0Y:Ljava/lang/String;
+    goto :goto_0
 
     .line 36
+    :cond_1
+    const/4 v1, 0x0
+
     .line 37
-    iget-object v4, v0, LX/344;->A09:LX/0pU;
+    :goto_1
+    if-nez v1, :cond_a
 
     .line 38
     .line 39
-    iget-object v0, v1, LX/346;->A01:LX/0Na;
+    iget-object v2, p0, LX/1mc;->A01:LX/0RP;
 
     .line 40
     .line 41
-    invoke-static {v0}, LX/0Yg;->A0P(LX/0Na;)Lcom/facebook/quicklog/QuickPerformanceLogger;
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 42
     .line 43
     .line 44
-    move-result-object v1
+    move-result-object v0
 
     .line 45
-    const v5, 0x1d20018
+    check-cast v0, LX/3A2;
 
     .line 46
     .line 47
-    .line 48
-    const-string/jumbo v0, "submit_button_pressed"
+    iget-object v0, v0, LX/3A2;->A01:[I
 
+    .line 48
     .line 49
+    if-eqz v0, :cond_2
+
     .line 50
     .line 51
-    invoke-interface {v1, v5, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markEventBuilder(ILjava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
+    invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([II)I
 
     .line 52
     .line 53
     .line 54
-    move-result-object v0
+    move-result v1
 
     .line 55
-    const-string v2, "bug_report_id"
+    const/4 v0, 0x1
 
     .line 56
+    if-gez v1, :cond_3
+
     .line 57
-    invoke-interface {v0, v2, v7}, Lcom/facebook/quicklog/EventBuilder;->annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
-
     .line 58
-    .line 59
-    .line 60
-    move-result-object v1
+    :cond_2
+    const/4 v0, 0x0
 
+    .line 59
+    :cond_3
+    if-eqz v0, :cond_5
+
+    .line 60
     .line 61
-    invoke-virtual {v4}, LX/0pU;->getName()Ljava/lang/String;
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 62
     .line 63
@@ -166,309 +286,1168 @@
     move-result-object v0
 
     .line 65
-    const-string/jumbo v4, "source"
+    check-cast v0, LX/3A2;
 
     .line 66
     .line 67
-    .line 68
-    invoke-static {v1, v4, v0}, LX/0Yf;->A12(Lcom/facebook/quicklog/EventBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, p1}, LX/3A2;->A00(Landroid/content/res/Resources;LX/3A2;I)Landroid/util/Pair;
 
+    .line 68
     .line 69
     .line 70
+    move-result-object v0
+
     .line 71
-    invoke-virtual {v6}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     .line 72
     .line 73
-    .line 74
-    move-result-object v0
+    if-eqz v1, :cond_4
 
+    .line 74
     .line 75
-    invoke-static {v0}, LX/36e;->A00(Landroid/app/Activity;)V
+    check-cast v1, Landroid/graphics/drawable/Drawable;
 
     .line 76
     .line 77
+    goto :goto_2
+
     .line 78
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReportBuilder:LX/344;
+    :cond_4
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     .line 79
     .line 80
-    iget-object v0, v0, LX/344;->A0N:Ljava/lang/String;
+    check-cast v0, Landroid/graphics/drawable/Drawable$ConstantState;
 
     .line 81
     .line 82
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
 
     .line 83
     .line 84
     .line 85
-    move-result v0
-
-    .line 86
-    if-eqz v0, :cond_1
-
-    .line 87
-    .line 88
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReporterFunnelLogger:LX/0Na;
-
-    .line 89
-    .line 90
-    invoke-static {v0}, LX/0Yi;->A0K(LX/0Na;)LX/34T;
-
-    .line 91
-    .line 92
-    .line 93
     move-result-object v1
 
+    .line 86
+    goto :goto_2
+
+    .line 87
+    :cond_5
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 88
+    .line 89
+    .line 90
+    move-result-object v0
+
+    .line 91
+    check-cast v0, LX/3A2;
+
+    .line 92
+    .line 93
+    iget-object v0, v0, LX/3A2;->A02:[I
+
     .line 94
-    const-string v0, "bug_report_form_no_description"
-
     .line 95
-    .line 96
-    invoke-virtual {v1, v0}, LX/34T;->A02(Ljava/lang/String;)V
+    if-eqz v0, :cond_6
 
+    .line 96
     .line 97
+    invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([II)I
+
     .line 98
     .line 99
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mToaster:LX/0Na;
-
     .line 100
+    move-result v1
+
     .line 101
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    const/4 v0, 0x1
 
     .line 102
+    if-gez v1, :cond_7
+
     .line 103
     .line 104
-    move-result-object v4
+    :cond_6
+    const/4 v0, 0x0
 
     .line 105
-    check-cast v4, LX/2n8;
+    :cond_7
+    if-eqz v0, :cond_9
 
     .line 106
     .line 107
-    const/4 v2, 0x0
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 108
-    const/4 v1, 0x0
-
     .line 109
-    const v0, 0x7f120153
-
     .line 110
-    .line 111
-    .line 112
-    invoke-static {v4, v2, v0, v3}, LX/2n8;->A00(LX/2n8;Ljava/lang/CharSequence;IZ)V
+    move-result-object v0
 
+    .line 111
+    check-cast v0, LX/3A2;
+
+    .line 112
     .line 113
+    invoke-virtual {v0, p0, p1}, LX/3A2;->A02(Landroid/content/res/Resources;I)Landroid/util/Pair;
+
     .line 114
     .line 115
-    iput-boolean v1, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mIsSending:Z
-
     .line 116
+    move-result-object v0
+
     .line 117
-    :cond_0
-    :goto_0
-    const/4 v0, 0x1
+    iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     .line 118
-    return v0
-
     .line 119
-    :cond_1
-    invoke-static {v6}, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->access$1300(Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;)Z
+    if-eqz v1, :cond_8
 
     .line 120
     .line 121
-    .line 122
-    move-result v0
+    check-cast v1, Landroid/graphics/drawable/Drawable;
 
+    .line 122
     .line 123
-    if-eqz v0, :cond_2
+    goto :goto_2
 
     .line 124
-    .line 125
-    invoke-static {v6}, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->access$1400(Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;)V
+    :cond_8
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
+    .line 125
     .line 126
+    check-cast v0, Landroid/graphics/drawable/Drawable$ConstantState;
+
     .line 127
     .line 128
-    :cond_2
-    invoke-static {v6}, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->access$1500(Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;)V
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
 
     .line 129
     .line 130
     .line 131
-    invoke-static {v6}, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->access$1600(Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;)V
+    move-result-object v1
 
     .line 132
-    .line 133
-    .line 134
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReporterUserFlowLogger:LX/0Na;
+    goto :goto_2
 
+    .line 133
+    :cond_9
+    invoke-super {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    .line 134
     .line 135
     .line 136
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 137
+    :cond_a
+    :goto_2
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
     .line 138
     .line 139
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReporterUserFlowLogger:LX/0Na;
+    .line 140
+    return-object v1
+
+    .line 141
+    :catchall_0
+    move-exception v0
+
+    .line 142
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 143
+    .line 144
+    .line 145
+    throw v0
+.end method
+
+.method public final getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 4
+
+    .line 268435456
+    const-string v0, "Resources.getDrawable_withTheme"
+
+    .line 268435457
+    .line 268435458
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    :try_start_0
+    iget-object v0, p0, LX/1mc;->A02:LX/0RP;
+
+    .line 268435462
+    .line 268435463
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    move-result-object v0
+
+    .line 268435467
+    check-cast v0, Lcom/facebook/resources/impl/logger/DrawableCounterLogger;
+
+    .line 268435468
+    .line 268435469
+    invoke-virtual {v0, p1}, Lcom/facebook/resources/impl/logger/DrawableCounterLogger;->A01(I)V
+
+    .line 268435470
+    .line 268435471
+    .line 268435472
+    const/4 v3, 0x0
+
+    .line 268435473
+    const/4 v2, 0x0
+
+    .line 268435474
+    :goto_0
+    sget-object v1, LX/1md;->A00:[I
+
+    .line 268435475
+    .line 268435476
+    const/4 v0, 0x2
+
+    .line 268435477
+    if-ge v2, v0, :cond_1
+
+    .line 268435478
+    .line 268435479
+    aget v0, v1, v2
+
+    .line 268435480
+    .line 268435481
+    if-ne v0, p1, :cond_0
+
+    .line 268435482
+    .line 268435483
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+
+    .line 268435484
+    .line 268435485
+    invoke-direct {v1, v3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    .line 268435486
+    .line 268435487
+    .line 268435488
+    goto :goto_1
+
+    .line 268435489
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    .line 268435490
+    .line 268435491
+    goto :goto_0
+
+    .line 268435492
+    :cond_1
+    const/4 v1, 0x0
+
+    .line 268435493
+    :goto_1
+    if-nez v1, :cond_a
+
+    .line 268435494
+    .line 268435495
+    iget-object v2, p0, LX/1mc;->A01:LX/0RP;
+
+    .line 268435496
+    .line 268435497
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 268435498
+    .line 268435499
+    .line 268435500
+    move-result-object v0
+
+    .line 268435501
+    check-cast v0, LX/3A2;
+
+    .line 268435502
+    .line 268435503
+    iget-object v0, v0, LX/3A2;->A01:[I
+
+    .line 268435504
+    .line 268435505
+    if-eqz v0, :cond_2
+
+    .line 268435506
+    .line 268435507
+    invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([II)I
+
+    .line 268435508
+    .line 268435509
+    .line 268435510
+    move-result v1
+
+    .line 268435511
+    const/4 v0, 0x1
+
+    .line 268435512
+    if-gez v1, :cond_3
+
+    .line 268435513
+    .line 268435514
+    :cond_2
+    const/4 v0, 0x0
+
+    .line 268435515
+    :cond_3
+    if-eqz v0, :cond_5
+
+    .line 268435516
+    .line 268435517
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 268435518
+    .line 268435519
+    .line 268435520
+    move-result-object v0
+
+    .line 268435521
+    check-cast v0, LX/3A2;
+
+    .line 268435522
+    .line 268435523
+    invoke-static {p0, v0, p1}, LX/3A2;->A00(Landroid/content/res/Resources;LX/3A2;I)Landroid/util/Pair;
+
+    .line 268435524
+    .line 268435525
+    .line 268435526
+    move-result-object v0
+
+    .line 268435527
+    iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    .line 268435528
+    .line 268435529
+    if-eqz v1, :cond_4
+
+    .line 268435530
+    .line 268435531
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    .line 268435532
+    .line 268435533
+    goto :goto_2
+
+    .line 268435534
+    :cond_4
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    .line 268435535
+    .line 268435536
+    check-cast v0, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    .line 268435537
+    .line 268435538
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+
+    .line 268435539
+    .line 268435540
+    .line 268435541
+    move-result-object v1
+
+    .line 268435542
+    goto :goto_2
+
+    .line 268435543
+    :cond_5
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 268435544
+    .line 268435545
+    .line 268435546
+    move-result-object v0
+
+    .line 268435547
+    check-cast v0, LX/3A2;
+
+    .line 268435548
+    .line 268435549
+    iget-object v0, v0, LX/3A2;->A02:[I
+
+    .line 268435550
+    .line 268435551
+    if-eqz v0, :cond_6
+
+    .line 268435552
+    .line 268435553
+    invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([II)I
+
+    .line 268435554
+    .line 268435555
+    .line 268435556
+    move-result v1
+
+    .line 268435557
+    const/4 v0, 0x1
+
+    .line 268435558
+    if-gez v1, :cond_7
+
+    .line 268435559
+    .line 268435560
+    :cond_6
+    const/4 v0, 0x0
+
+    .line 268435561
+    :cond_7
+    if-eqz v0, :cond_9
+
+    .line 268435562
+    .line 268435563
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 268435564
+    .line 268435565
+    .line 268435566
+    move-result-object v0
+
+    .line 268435567
+    check-cast v0, LX/3A2;
+
+    .line 268435568
+    .line 268435569
+    invoke-virtual {v0, p0, p1}, LX/3A2;->A02(Landroid/content/res/Resources;I)Landroid/util/Pair;
+
+    .line 268435570
+    .line 268435571
+    .line 268435572
+    move-result-object v0
+
+    .line 268435573
+    iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    .line 268435574
+    .line 268435575
+    if-eqz v1, :cond_8
+
+    .line 268435576
+    .line 268435577
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    .line 268435578
+    .line 268435579
+    goto :goto_2
+
+    .line 268435580
+    :cond_8
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    .line 268435581
+    .line 268435582
+    check-cast v0, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    .line 268435583
+    .line 268435584
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+
+    .line 268435585
+    .line 268435586
+    .line 268435587
+    move-result-object v1
+
+    .line 268435588
+    goto :goto_2
+
+    .line 268435589
+    :cond_9
+    invoke-super {p0, p1, p2}, LX/6cX;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    .line 268435590
+    .line 268435591
+    .line 268435592
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 268435593
+    :cond_a
+    :goto_2
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 268435594
+    .line 268435595
+    .line 268435596
+    return-object v1
+
+    .line 268435597
+    :catchall_0
+    move-exception v0
+
+    .line 268435598
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 268435599
+    .line 268435600
+    .line 268435601
+    throw v0
+.end method
+
+.method public final getLayout(I)Landroid/content/res/XmlResourceParser;
+    .locals 1
+
+    .line 0
+    :try_start_0
+    const-string v0, "DownloadedFbResources::getLayout"
+
+    .line 1
+    .line 2
+    invoke-static {v0}, Lcom/facebook/debug/tracer/Tracer;->A02(Ljava/lang/String;)V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/1mc;->A00:LX/0RP;
+
+    .line 6
+    .line 7
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-super {p0, p1}, Landroid/content/res/Resources;->getLayout(I)Landroid/content/res/XmlResourceParser;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 14
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 15
+    .line 16
+    .line 17
+    return-object v0
+
+    .line 18
+    :catchall_0
+    move-exception v0
+
+    .line 19
+    invoke-static {}, Lcom/facebook/debug/tracer/Tracer;->A00()V
+
+    .line 20
+    .line 21
+    .line 22
+    throw v0
+.end method
+
+.method public final getQuantityString(II)Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getQuantityText(II)Ljava/lang/CharSequence;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final varargs getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 4
+
+    .line 268435456
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getQuantityText(II)Ljava/lang/CharSequence;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result-object v3
+
+    .line 268435464
+    :try_start_0
+    iget-object v0, p0, LX/1mc;->A05:LX/0RP;
+
+    .line 268435465
+    .line 268435466
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 268435467
+    .line 268435468
+    .line 268435469
+    move-result-object v1
+
+    .line 268435470
+    check-cast v1, LX/1jY;
+
+    .line 268435471
+    .line 268435472
+    const-string/jumbo v0, "getLocale"
+
+    .line 268435473
+    .line 268435474
+    .line 268435475
+    invoke-static {v1, v0}, LX/1jY;->A01(LX/1jY;Ljava/lang/String;)V
+
+    .line 268435476
+    .line 268435477
+    .line 268435478
+    iget-object v0, v1, LX/1jY;->A0G:Ljava/util/Locale;
+
+    .line 268435479
+    .line 268435480
+    invoke-static {v0, v3, p3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 268435481
+    .line 268435482
+    .line 268435483
+    move-result-object v0
+
+    .line 268435484
+    return-object v0
+    :try_end_0
+    .catch Ljava/util/IllegalFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 268435485
+    :catch_0
+    move-exception v2
+
+    .line 268435486
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
+    .line 268435487
+    .line 268435488
+    .line 268435489
+    move-result-object v1
+
+    .line 268435490
+    const-string v0, "IllegalFormat: (ID #0x"
+
+    .line 268435491
+    .line 268435492
+    invoke-static {v0, v1, p1}, LX/0X2;->A1K(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
+
+    .line 268435493
+    .line 268435494
+    .line 268435495
+    const-string v0, " : "
+
+    .line 268435496
+    .line 268435497
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 268435498
+    .line 268435499
+    .line 268435500
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 268435501
+    .line 268435502
+    .line 268435503
+    const-string v0, ") "
+
+    .line 268435504
+    .line 268435505
+    invoke-static {v0, v3, v1}, LX/0X1;->A0R(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 268435506
+    .line 268435507
+    .line 268435508
+    move-result-object v0
+
+    .line 268435509
+    invoke-static {v0, v2}, LX/0X7;->A0W(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    .line 268435510
+    .line 268435511
+    .line 268435512
+    move-result-object v0
+
+    .line 268435513
+    throw v0
+.end method
+
+.method public final getQuantityText(II)Ljava/lang/CharSequence;
+    .locals 20
+
+    .line 0
+    move/from16 v3, p1
+
+    .line 1
+    .line 2
+    if-eqz p1, :cond_a
+
+    .line 3
+    .line 4
+    move-object/from16 v1, p0
+
+    .line 5
+    .line 6
+    move/from16 v7, p2
+
+    .line 7
+    .line 8
+    invoke-virtual {v1, v7}, LX/6cX;->A00(I)Ljava/lang/CharSequence;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    invoke-static {v0}, LX/1mg;->fromFakeText(Ljava/lang/CharSequence;)LX/1mg;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v15
+
+    .line 16
+    iget-object v0, v1, LX/1mc;->A04:LX/0RP;
+
+    .line 17
+    .line 18
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v9
+
+    .line 22
+    check-cast v9, Lcom/facebook/resources/impl/StringResourcesFetcher;
+
+    .line 23
+    .line 24
+    const/high16 v1, -0x10000
+
+    .line 25
+    .line 26
+    and-int v1, v1, p1
+
+    .line 27
+    .line 28
+    const/high16 v0, 0x7f0f0000
+
+    .line 29
+    .line 30
+    if-ne v1, v0, :cond_9
+
+    .line 31
+    .line 32
+    invoke-static {v9}, Lcom/facebook/resources/impl/StringResourcesFetcher;->A00(Lcom/facebook/resources/impl/StringResourcesFetcher;)I
+
+    .line 33
+    .line 34
+    .line 35
+    move-result v8
+
+    .line 36
+    iget-object v0, v9, Lcom/facebook/resources/impl/StringResourcesFetcher;->A03:LX/0RP;
+
+    .line 37
+    .line 38
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v1
+
+    .line 42
+    check-cast v1, LX/1jY;
+
+    .line 43
+    .line 44
+    const-string/jumbo v0, "getActiveResources"
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-static {v1, v0}, LX/1jY;->A01(LX/1jY;Ljava/lang/String;)V
+
+    .line 48
+    .line 49
+    .line 50
+    new-instance v6, LX/1jf;
+
+    .line 51
+    .line 52
+    invoke-direct {v6, v1}, LX/1jf;-><init>(LX/1jY;)V
+
+    .line 53
+    .line 54
+    .line 55
+    :cond_0
+    :goto_0
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 56
+    .line 57
+    .line 58
+    move-result v0
+
+    .line 59
+    if-eqz v0, :cond_8
+
+    .line 60
+    .line 61
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v2
+
+    .line 65
+    check-cast v2, LX/1kk;
+
+    .line 66
+    .line 67
+    if-eqz v2, :cond_0
+
+    .line 68
+    .line 69
+    :try_start_0
+    check-cast v2, LX/1mm;
+
+    .line 70
+    .line 71
+    const/4 v0, 0x2
+
+    .line 72
+    invoke-static {v15, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 73
+    .line 74
+    .line 75
+    iget-object v10, v2, LX/1mm;->A02:Ljava/lang/String;
+
+    .line 76
+    .line 77
+    iget-object v0, v2, LX/1mm;->A03:LX/0VC;
+
+    .line 78
+    .line 79
+    invoke-interface {v0}, LX/0VC;->get()Ljava/lang/Object;
+
+    .line 80
+    .line 81
+    .line 82
+    move-result-object v0
+
+    .line 83
+    invoke-static {v10, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 84
+    .line 85
+    .line 86
+    move-result v0
+
+    .line 87
+    if-eqz v0, :cond_7
+    :try_end_0
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 88
+    .line 89
+    :try_start_1
+    iget-object v5, v2, LX/1mm;->A01:LX/1mj;
+
+    .line 90
+    .line 91
+    iget-object v4, v5, LX/1mj;->A01:Ljava/util/Map;
+
+    .line 92
+    .line 93
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 94
+    .line 95
+    .line 96
+    move-result-object v1
+
+    .line 97
+    invoke-interface {v4, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 98
+    .line 99
+    .line 100
+    move-result v0
+
+    .line 101
+    if-eqz v0, :cond_5
+
+    .line 102
+    .line 103
+    iget-object v11, v5, LX/1mj;->A00:LX/1mk;
+
+    .line 104
+    .line 105
+    invoke-interface {v4, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 106
+    .line 107
+    .line 108
+    move-result-object v0
+
+    .line 109
+    invoke-static {v0}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 110
+    .line 111
+    .line 112
+    invoke-static {v0}, LX/002;->A00(Ljava/lang/Object;)I
+
+    .line 113
+    .line 114
+    .line 115
+    move-result v4
+
+    .line 116
+    const/4 v1, 0x0
+
+    .line 117
+    const/4 v5, 0x0
+
+    .line 118
+    const/16 v13, 0x8
+
+    .line 119
+    .line 120
+    invoke-virtual {v11, v13}, LX/1mq;->A02(I)I
+
+    .line 121
+    .line 122
+    .line 123
+    move-result v0
+
+    .line 124
+    if-eqz v0, :cond_1
+
+    .line 125
+    .line 126
+    invoke-static {v11, v0, v4}, LX/1mq;->A00(LX/1mq;II)I
+
+    .line 127
+    .line 128
+    .line 129
+    move-result v5
+
+    .line 130
+    iget-object v1, v11, LX/1mq;->A01:Ljava/nio/ByteBuffer;
+
+    .line 131
+    .line 132
+    :cond_1
+    const/4 v11, 0x0
+
+    .line 133
+    const/4 v12, 0x0
+
+    .line 134
+    const/4 v4, 0x6
+
+    .line 135
+    invoke-static {v1, v5}, LX/0X7;->A04(Ljava/nio/ByteBuffer;I)I
+
+    .line 136
+    .line 137
+    .line 138
+    move-result v14
+
+    .line 139
+    invoke-virtual {v1, v14}, Ljava/nio/ByteBuffer;->getShort(I)S
 
     .line 140
     .line 141
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 142
+    move-result v0
+
     .line 143
+    if-ge v4, v0, :cond_2
+
     .line 144
-    iget-object v0, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReportSender:LX/0Na;
-
     .line 145
-    .line 146
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    add-int/lit8 v0, v14, 0x6
 
+    .line 146
     .line 147
+    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->getShort(I)S
+
     .line 148
     .line 149
-    move-result-object v9
-
     .line 150
-    check-cast v9, LX/34B;
+    move-result v0
 
     .line 151
+    if-eqz v0, :cond_2
+
     .line 152
-    invoke-virtual {v6}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
     .line 153
+    add-int/2addr v0, v5
+
     .line 154
+    invoke-static {v1, v0}, LX/0X7;->A03(Ljava/nio/ByteBuffer;I)I
+
     .line 155
-    move-result-object v8
-
     .line 156
-    iget-object v10, v6, Lcom/facebook/bugreporter/activity/bugreport/BugReportFragment;->mBugReportBuilder:LX/344;
-
     .line 157
+    move-result v12
+
     .line 158
-    const/4 v0, 0x3
+    move-object v11, v1
 
     .line 159
-    new-instance v12, LX/1bo;
+    const/4 v0, 0x1
 
     .line 160
+    goto :goto_1
+
     .line 161
-    invoke-direct {v12, p0, v0}, LX/1bo;-><init>(Ljava/lang/Object;I)V
+    :cond_2
+    const/4 v0, 0x0
 
     .line 162
+    :goto_1
+    if-nez v0, :cond_3
+
     .line 163
     .line 164
-    iget-object v0, v9, LX/34B;->A06:LX/0Na;
+    new-instance v0, Ljava/lang/NullPointerException;
 
     .line 165
     .line 166
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     .line 167
     .line 168
     .line 169
-    move-result-object v11
+    invoke-static {v0}, LX/0WV;->A0H(Ljava/lang/Throwable;)V
 
     .line 170
-    iget-object v1, v9, LX/34B;->A09:LX/0Na;
-
     .line 171
     .line 172
-    invoke-interface {v1}, LX/0Na;->get()Ljava/lang/Object;
+    goto :goto_2
 
     .line 173
+    :cond_3
+    invoke-virtual {v15}, Ljava/lang/Enum;->ordinal()I
+
     .line 174
     .line 175
-    move-result-object v0
-
     .line 176
-    if-eqz v0, :cond_3
+    move-result v0
 
     .line 177
-    .line 178
-    invoke-interface {v1}, LX/0Na;->get()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
+    .line 178
     .line 179
     .line 180
-    .line 181
-    const-string/jumbo v0, "shouldSanitize"
+    const-string v0, "Unexpected PluralCategory"
 
+    .line 181
     .line 182
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
     .line 183
     .line 184
-    invoke-static {v0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
     .line 185
-    .line 186
-    .line 187
     move-result-object v0
 
-    .line 188
+    .line 186
+    :goto_2
     throw v0
 
+    .line 187
+    :pswitch_0
+    new-instance v5, LX/1mt;
+
+    .line 188
     .line 189
-    :cond_3
-    iget-object v13, v10, LX/344;->A0Y:Ljava/lang/String;
+    invoke-direct {v5}, LX/1mt;-><init>()V
 
     .line 190
     .line 191
-    iget-object v0, v9, LX/34B;->A05:LX/0Na;
-
     .line 192
-    .line 193
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    const/16 v4, 0xe
 
+    .line 193
     .line 194
+    invoke-static {v11, v12}, LX/0X7;->A04(Ljava/nio/ByteBuffer;I)I
+
     .line 195
     .line 196
-    move-result-object v6
-
     .line 197
-    check-cast v6, LX/35X;
+    move-result v1
 
     .line 198
-    .line 199
-    invoke-static {v13}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-virtual {v11, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
 
+    .line 199
     .line 200
     .line 201
+    move-result v0
+
     .line 202
-    move-result-wide v0
+    if-ge v4, v0, :cond_4
 
     .line 203
-    invoke-static {v6, v0, v1}, LX/35X;->A00(LX/35X;J)J
-
     .line 204
+    add-int/lit8 v0, v1, 0xe
+
     .line 205
     .line 206
-    move-result-wide v0
+    goto :goto_3
 
     .line 207
-    invoke-static {v6}, LX/35X;->A01(LX/35X;)Lcom/facebook/quicklog/reliability/UserFlowLogger;
+    :pswitch_1
+    new-instance v5, LX/1mt;
 
     .line 208
     .line 209
+    invoke-direct {v5}, LX/1mt;-><init>()V
+
     .line 210
-    move-result-object v7
-
     .line 211
-    const-string v6, "SendBugReport"
-
     .line 212
-    .line 213
-    invoke-interface {v7, v0, v1, v6}, Lcom/facebook/quicklog/reliability/UserFlowLogger;->flowMarkPoint(JLjava/lang/String;)V
+    const/16 v4, 0xc
 
+    .line 213
     .line 214
+    invoke-static {v11, v12}, LX/0X7;->A04(Ljava/nio/ByteBuffer;I)I
+
     .line 215
     .line 216
-    iget-object v0, v10, LX/344;->A0N:Ljava/lang/String;
-
     .line 217
+    move-result v1
+
     .line 218
-    invoke-static {v0}, Lcom/google/common/base/Platform;->stringIsNullOrEmpty(Ljava/lang/String;)Z
+    invoke-virtual {v11, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
 
     .line 219
     .line 220
@@ -476,730 +1455,1274 @@
     move-result v0
 
     .line 222
-    if-eqz v0, :cond_4
+    if-ge v4, v0, :cond_4
 
     .line 223
     .line 224
-    iget-object v0, v9, LX/34B;->A0D:LX/0Na;
+    add-int/lit8 v0, v1, 0xc
 
     .line 225
     .line 226
-    invoke-static {v0}, LX/0Yi;->A0K(LX/0Na;)LX/34T;
+    goto :goto_3
 
     .line 227
+    :pswitch_2
+    new-instance v5, LX/1mt;
+
     .line 228
     .line 229
-    move-result-object v1
+    invoke-direct {v5}, LX/1mt;-><init>()V
 
     .line 230
-    const-string v0, "bug_report_form_no_description"
-
     .line 231
     .line 232
-    invoke-virtual {v1, v0}, LX/34T;->A02(Ljava/lang/String;)V
+    const/16 v4, 0xa
 
     .line 233
     .line 234
-    .line 235
-    iget-object v0, v9, LX/34B;->A0J:LX/0Na;
+    invoke-static {v11, v12}, LX/0X7;->A04(Ljava/nio/ByteBuffer;I)I
 
+    .line 235
     .line 236
     .line 237
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    move-result v1
 
     .line 238
+    invoke-virtual {v11, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
+
     .line 239
     .line 240
-    move-result-object v2
-
     .line 241
-    check-cast v2, LX/2n8;
+    move-result v0
 
     .line 242
-    .line 243
-    const/4 v1, 0x0
+    if-ge v4, v0, :cond_4
 
+    .line 243
     .line 244
-    const v0, 0x7f120153
+    add-int/lit8 v0, v1, 0xa
 
     .line 245
     .line 246
+    goto :goto_3
+
     .line 247
-    invoke-static {v2, v1, v0, v3}, LX/2n8;->A00(LX/2n8;Ljava/lang/CharSequence;IZ)V
+    :pswitch_3
+    new-instance v5, LX/1mt;
 
     .line 248
     .line 249
-    .line 250
-    goto/16 :goto_0
+    invoke-direct {v5}, LX/1mt;-><init>()V
 
+    .line 250
     .line 251
     .line 252
-    :cond_4
-    iget-object v0, v9, LX/34B;->A07:LX/0Na;
+    invoke-static {v11, v12}, LX/0X7;->A04(Ljava/nio/ByteBuffer;I)I
 
     .line 253
     .line 254
-    invoke-static {v0}, LX/0Yi;->A0L(LX/0Na;)LX/346;
-
     .line 255
+    move-result v1
+
     .line 256
+    invoke-virtual {v11, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
+
     .line 257
-    move-result-object v0
-
     .line 258
-    iget-object v7, v10, LX/344;->A09:LX/0pU;
-
     .line 259
+    move-result v0
+
     .line 260
-    iget-object v6, v0, LX/346;->A01:LX/0Na;
+    if-ge v13, v0, :cond_4
 
     .line 261
     .line 262
-    invoke-static {v6}, LX/0Yg;->A0P(LX/0Na;)Lcom/facebook/quicklog/QuickPerformanceLogger;
+    add-int/lit8 v0, v1, 0x8
 
     .line 263
     .line 264
+    goto :goto_3
+
     .line 265
-    move-result-object v1
+    :pswitch_4
+    new-instance v5, LX/1mt;
 
     .line 266
-    const-string/jumbo v0, "finalize_start"
-
     .line 267
+    invoke-direct {v5}, LX/1mt;-><init>()V
+
     .line 268
     .line 269
-    invoke-interface {v1, v5, v0}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markEventBuilder(ILjava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
-
     .line 270
+    invoke-static {v11, v12}, LX/0X7;->A04(Ljava/nio/ByteBuffer;I)I
+
     .line 271
     .line 272
-    move-result-object v1
-
     .line 273
-    invoke-virtual {v7}, LX/0pU;->getName()Ljava/lang/String;
-
-    .line 274
-    .line 275
-    .line 276
-    move-result-object v0
-
-    .line 277
-    invoke-interface {v1, v4, v0}, Lcom/facebook/quicklog/EventBuilder;->annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
-
-    .line 278
-    .line 279
-    .line 280
-    move-result-object v0
-
-    .line 281
-    invoke-static {v0, v2, v13}, LX/0Yf;->A12(Lcom/facebook/quicklog/EventBuilder;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 282
-    .line 283
-    .line 284
-    invoke-static {v6}, LX/0Yg;->A0P(LX/0Na;)Lcom/facebook/quicklog/QuickPerformanceLogger;
-
-    .line 285
-    .line 286
-    .line 287
-    move-result-object v2
-
-    .line 288
-    invoke-static {v13}, LX/37B;->A00(Ljava/lang/String;)I
-
-    .line 289
-    .line 290
-    .line 291
     move-result v1
 
+    .line 274
+    invoke-virtual {v11, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    .line 275
+    .line 276
+    .line 277
+    move-result v0
+
+    .line 278
+    if-ge v4, v0, :cond_4
+
+    .line 279
+    .line 280
+    add-int/lit8 v0, v1, 0x6
+
+    .line 281
+    .line 282
+    goto :goto_3
+
+    .line 283
+    :pswitch_5
+    new-instance v5, LX/1mt;
+
+    .line 284
+    .line 285
+    invoke-direct {v5}, LX/1mt;-><init>()V
+
+    .line 286
+    .line 287
+    .line 288
+    const/4 v4, 0x4
+
+    .line 289
+    invoke-static {v11, v12}, LX/0X7;->A04(Ljava/nio/ByteBuffer;I)I
+
+    .line 290
+    .line 291
     .line 292
-    const v0, 0x1d20006
+    move-result v1
 
     .line 293
+    invoke-virtual {v11, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
+
     .line 294
     .line 295
-    const/4 v5, 0x0
-
     .line 296
-    invoke-interface {v2, v0, v1, v5}, Lcom/facebook/quicklog/QuickPerformanceLogger;->markerStart(IIZ)V
+    move-result v0
 
     .line 297
+    if-ge v4, v0, :cond_4
+
     .line 298
     .line 299
-    iget-object v4, v9, LX/34B;->A0D:LX/0Na;
+    add-int/lit8 v0, v1, 0x4
 
     .line 300
     .line 301
-    invoke-static {v4}, LX/0Yi;->A0K(LX/0Na;)LX/34T;
+    goto :goto_3
 
     .line 302
+    :cond_4
+    const/4 v5, 0x0
+
     .line 303
+    goto :goto_4
+
     .line 304
-    move-result-object v1
+    :goto_3
+    invoke-virtual {v11, v0}, Ljava/nio/ByteBuffer;->getShort(I)S
 
     .line 305
-    const-string/jumbo v0, "finalize_bug_report"
-
     .line 306
     .line 307
+    move-result v0
+
     .line 308
-    invoke-virtual {v1, v0}, LX/34T;->A02(Ljava/lang/String;)V
+    if-eqz v0, :cond_4
 
     .line 309
     .line 310
+    add-int/2addr v0, v12
+
     .line 311
-    invoke-static {v4}, LX/0Yi;->A0K(LX/0Na;)LX/34T;
+    invoke-static {v11, v0}, LX/0X7;->A03(Ljava/nio/ByteBuffer;I)I
 
     .line 312
     .line 313
     .line 314
-    move-result-object v2
+    move-result v0
 
     .line 315
-    iget-object v0, v10, LX/344;->A0n:Ljava/util/List;
+    iput v0, v5, LX/1mq;->A00:I
 
     .line 316
     .line 317
-    if-eqz v0, :cond_5
+    iput-object v11, v5, LX/1mq;->A01:Ljava/nio/ByteBuffer;
 
     .line 318
     .line 319
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    :goto_4
+    invoke-static {v5}, Lcom/google/common/base/Optional;->fromNullable(Ljava/lang/Object;)Lcom/google/common/base/Optional;
 
     .line 320
     .line 321
     .line 322
-    move-result v5
+    move-result-object v1
 
     .line 323
-    :cond_5
-    invoke-static {v5}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/google/common/base/Optional;->isPresent()Z
 
     .line 324
     .line 325
     .line 326
-    move-result-object v1
+    move-result v0
 
     .line 327
-    const-string/jumbo v0, "photos_count"
+    if-eqz v0, :cond_5
 
     .line 328
     .line 329
-    .line 330
-    invoke-virtual {v2, v0, v1}, LX/34T;->A04(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1}, LX/0X6;->A0i(Lcom/google/common/base/Optional;)Ljava/lang/Object;
 
+    .line 330
     .line 331
     .line 332
+    move-result-object v1
+
     .line 333
-    invoke-static {v4}, LX/0Yi;->A0K(LX/0Na;)LX/34T;
+    check-cast v1, LX/1mt;
 
     .line 334
     .line 335
+    invoke-static {v1, v8}, LX/1mm;->A00(LX/1mt;I)Lcom/google/common/base/Optional;
+
     .line 336
-    move-result-object v2
-
     .line 337
-    iget-object v0, v10, LX/344;->A07:Landroid/net/Uri;
-
     .line 338
+    move-result-object v4
+
     .line 339
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    if-eqz v8, :cond_6
 
     .line 340
     .line 341
+    invoke-virtual {v4}, Lcom/google/common/base/Optional;->isPresent()Z
+
     .line 342
-    move-result v1
-
     .line 343
-    iget-object v0, v10, LX/344;->A0o:Ljava/util/List;
-
     .line 344
+    move-result v0
+
     .line 345
-    if-eqz v0, :cond_6
+    if-nez v0, :cond_6
 
     .line 346
     .line 347
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    const/4 v0, 0x0
 
     .line 348
+    invoke-static {v1, v0}, LX/1mm;->A00(LX/1mt;I)Lcom/google/common/base/Optional;
+
     .line 349
     .line 350
-    move-result v0
-
     .line 351
-    add-int/2addr v1, v0
+    move-result-object v4
 
     .line 352
-    :cond_6
-    invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    goto :goto_5
 
     .line 353
+    :cond_5
+    sget-object v4, Lcom/google/common/base/Absent;->INSTANCE:Lcom/google/common/base/Absent;
+
     .line 354
     .line 355
-    move-result-object v1
+    invoke-static {v4}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 356
-    const-string/jumbo v0, "videos_count"
-
     .line 357
     .line 358
-    .line 359
-    invoke-virtual {v2, v0, v1}, LX/34T;->A04(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_6
+    :goto_5
+    invoke-virtual {v4}, Lcom/google/common/base/Optional;->isPresent()Z
 
+    .line 359
     .line 360
     .line 361
+    move-result v0
+
     .line 362
-    const v0, 0x7f12015b
+    if-eqz v0, :cond_7
 
     .line 363
     .line 364
-    .line 365
-    invoke-virtual {v8, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    iget-object v2, v2, LX/1mm;->A00:LX/1mp;
 
+    .line 365
     .line 366
+    invoke-static {v4}, LX/0X6;->A0i(Lcom/google/common/base/Optional;)Ljava/lang/Object;
+
     .line 367
     .line 368
-    move-result-object v0
-
     .line 369
-    const/4 v14, 0x0
+    move-result-object v1
 
     .line 370
-    invoke-static {v0, v14}, LX/3f1;->A02(Ljava/lang/String;Z)LX/3f1;
+    check-cast v1, LX/1mu;
 
     .line 371
     .line 372
+    const/4 v0, 0x3
+
     .line 373
-    move-result-object v0
+    invoke-static {v1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 374
-    iput-object v0, v9, LX/34B;->A0K:LX/3f1;
-
     .line 375
     .line 376
-    iget-object v2, v9, LX/34B;->A0K:LX/3f1;
+    iget-object v0, v2, LX/1mp;->A02:LX/0lu;
 
     .line 377
     .line 378
-    sget-object v1, LX/0pU;->GROUPS_SUPPORT:LX/0pU;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 379
     .line 380
-    iget-object v0, v10, LX/344;->A09:LX/0pU;
-
     .line 381
+    move-result-object v0
+
     .line 382
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast v0, LX/2XP;
 
     .line 383
     .line 384
-    .line 385
-    move-result v1
+    new-instance v14, LX/1mn;
 
+    .line 385
     .line 386
-    const v0, 0x7f12015c
+    move/from16 v18, v3
 
     .line 387
     .line 388
+    move/from16 v19, v8
+
     .line 389
-    if-eqz v1, :cond_7
-
     .line 390
-    .line 391
-    const v0, 0x7f1202ac
+    move-object/from16 v16, v2
 
+    .line 391
     .line 392
+    move-object/from16 v17, v1
+
     .line 393
     .line 394
-    :cond_7
-    invoke-virtual {v8, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-direct/range {v14 .. v19}, LX/1mn;-><init>(LX/1mg;LX/1mp;LX/1mu;II)V
 
     .line 395
     .line 396
     .line 397
-    move-result-object v0
+    invoke-virtual {v0, v14}, LX/3AI;->execute(Ljava/lang/Runnable;)V
 
     .line 398
-    invoke-virtual {v2, v0}, LX/3f1;->A0c(Ljava/lang/CharSequence;)V
-
     .line 399
     .line 400
-    .line 401
-    instance-of v0, v8, Landroid/app/Activity;
+    invoke-virtual {v4}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
 
+    .line 401
     .line 402
     .line 403
-    if-nez v0, :cond_9
+    move-result-object v2
 
     .line 404
-    .line 405
-    iget-object v2, v9, LX/34B;->A0K:LX/3f1;
+    invoke-static {v2}, LX/0WV;->A07(Ljava/lang/Object;)V
 
+    .line 405
     .line 406
     .line 407
-    const/16 v1, 0x7d2
+    check-cast v2, LX/1mu;
 
     .line 408
     .line 409
-    sget-boolean v0, LX/3Hh;->A00:Z
+    const/4 v0, 0x4
 
     .line 410
-    .line 411
-    if-eqz v0, :cond_8
+    invoke-virtual {v2, v0}, LX/1mq;->A02(I)I
 
+    .line 411
     .line 412
     .line 413
-    const/16 v1, 0x7f6
+    move-result v1
 
     .line 414
-    .line 415
-    :cond_8
-    invoke-virtual {v2, v1}, LX/3f1;->A0b(I)V
+    if-eqz v1, :cond_7
 
+    .line 415
     .line 416
+    iget v0, v2, LX/1mq;->A00:I
+
     .line 417
     .line 418
-    :cond_9
-    instance-of v0, v8, LX/3J9;
+    add-int/2addr v1, v0
 
     .line 419
-    .line 420
-    if-eqz v0, :cond_a
+    invoke-virtual {v2, v1}, LX/1mq;->A05(I)Ljava/lang/String;
 
+    .line 420
     .line 421
     .line 422
-    iget-object v2, v9, LX/34B;->A0K:LX/3f1;
+    move-result-object v10
 
     .line 423
+    goto :goto_6
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_1
+
     .line 424
-    move-object v0, v8
+    :catch_0
+    :try_start_2
+    move-exception v5
 
     .line 425
-    check-cast v0, LX/3J9;
+    sget-object v4, LX/1mm;->A04:Ljava/lang/String;
 
     .line 426
     .line 427
-    invoke-interface {v0}, LX/3J9;->getSupportFragmentManager()LX/0Sf;
+    const/4 v0, 0x4
 
     .line 428
+    new-array v2, v0, [Ljava/lang/Object;
+
     .line 429
     .line 430
-    move-result-object v0
+    const/4 v0, 0x0
 
     .line 431
-    new-instance v1, LX/0UC;
+    invoke-static {v2, v3, v0}, LX/001;->A1A([Ljava/lang/Object;II)V
 
     .line 432
     .line 433
-    invoke-direct {v1, v0}, LX/0UC;-><init>(LX/0Sf;)V
-
     .line 434
-    .line 435
-    .line 436
-    const-string v0, "BugReportSenderProgressDialogFragment"
+    const/4 v1, 0x1
 
+    .line 435
+    invoke-static {v8}, LX/14w;->A01(I)Ljava/lang/String;
+
+    .line 436
     .line 437
     .line 438
-    invoke-virtual {v1, v2, v0}, LX/060;->A03(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    move-result-object v0
 
     .line 439
+    aput-object v0, v2, v1
+
     .line 440
     .line 441
-    invoke-static {v1, v3}, LX/0UC;->A00(LX/0UC;Z)V
+    invoke-static {v2, v15, v10}, LX/0X3;->A1V([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 442
     .line 443
     .line 444
-    :cond_a
-    iget-object v2, v9, LX/34B;->A0F:LX/0Na;
+    const-string v0, "Failed to get QT plural resource. resource_id : %d, gender : %s, category : %s userId : %s"
 
     .line 445
     .line 446
-    invoke-static {v2}, LX/0Yi;->A0b(LX/0Na;)LX/1iJ;
+    invoke-static {v4, v0, v5, v2}, LX/0Il;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 447
     .line 448
     .line 449
-    move-result-object v1
+    :cond_7
+    const/4 v10, 0x0
 
     .line 450
-    new-instance v0, LX/1it;
+    :goto_6
+    if-eqz v10, :cond_0
 
     .line 451
     .line 452
-    invoke-direct {v0, v9, v3, v10}, LX/1it;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    return-object v10
+    :try_end_2
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_1
 
     .line 453
-    .line 454
-    .line 455
-    invoke-interface {v1, v0}, LX/1iJ;->ApL(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
+    :catch_1
+    move-exception v5
 
+    .line 454
+    const-string v4, "IndexOutOfBoundsException: (ID #0x"
+
+    .line 455
     .line 456
+    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
     .line 457
     .line 458
-    move-result-object v0
-
     .line 459
-    new-instance v7, LX/1dl;
+    move-result-object v2
 
     .line 460
-    .line 461
-    invoke-direct/range {v7 .. v14}, LX/1dl;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;I)V
+    const-string v1, ", gender : "
 
+    .line 461
     .line 462
+    const-string v0, ")"
+
     .line 463
     .line 464
-    invoke-static {v2, v7, v0}, LX/1xZ;->A00(LX/0Na;LX/1RS;Lcom/google/common/util/concurrent/ListenableFuture;)V
+    invoke-static {v8, v4, v2, v1, v0}, LX/004;->A07(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 465
     .line 466
     .line 467
-    goto/16 :goto_0
+    move-result-object v1
 
     .line 468
-    .line 469
-    :pswitch_0
-    invoke-static {}, LX/4CF;->A00()LX/4CF;
+    const-string/jumbo v0, "i18n_StringResourcesFetcher"
 
+    .line 469
     .line 470
     .line 471
+    invoke-static {v0, v1, v5}, LX/0Il;->A0F(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     .line 472
-    move-result-object v5
-
     .line 473
-    const/4 v2, 0x0
-
     .line 474
-    invoke-interface/range {p1 .. p1}, Landroid/view/MenuItem;->getItemId()I
+    goto/16 :goto_0
 
     .line 475
     .line 476
-    .line 477
-    move-result v1
+    :cond_8
+    :try_start_3
+    iget-object v0, v9, Lcom/facebook/resources/impl/StringResourcesFetcher;->A01:LX/0RP;
 
+    .line 477
     .line 478
-    const/4 v0, 0x3
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 479
-    if-ne v1, v0, :cond_b
-
     .line 480
     .line 481
-    iget-object v0, p0, LX/1mc;->A00:Ljava/lang/Object;
+    move-result-object v0
 
     .line 482
+    check-cast v0, Landroid/content/res/Resources;
+
     .line 483
-    check-cast v0, LX/2eG;
-
     .line 484
-    .line 485
-    invoke-static {v0, v2}, LX/2eG;->A01(LX/2eG;Z)V
+    invoke-virtual {v0, v3, v7}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
+    .line 485
     .line 486
     .line 487
+    move-result-object v10
+
     .line 488
-    :cond_b
-    iget-object v4, p0, LX/1mc;->A00:Ljava/lang/Object;
+    iget-object v0, v9, Lcom/facebook/resources/impl/StringResourcesFetcher;->A02:LX/0RP;
 
     .line 489
     .line 490
-    check-cast v4, LX/2eG;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 491
     .line 492
-    invoke-interface/range {p1 .. p1}, Landroid/view/MenuItem;->getItemId()I
-
     .line 493
-    .line 494
-    .line 495
-    move-result v2
+    move-result-object v6
 
+    .line 494
+    check-cast v6, LX/1kf;
+
+    .line 495
     .line 496
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    const-string/jumbo v5, "arsc"
 
     .line 497
     .line 498
     .line 499
-    move-result-object v3
+    const/4 v0, 0x3
 
     .line 500
-    iget-object v1, v4, LX/2eG;->A03:Lcom/facebook/feed/browserads/model/BrowserAdInfo;
+    invoke-static {v5, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 501
     .line 502
-    const-string v0, "BROWSER_AD_INFO_ID"
-
     .line 503
-    .line 504
-    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
+    .line 504
     .line 505
     .line 506
+    move-result-object v4
+
     .line 507
-    if-lez v2, :cond_c
+    const/4 v0, 0x2
 
     .line 508
-    .line 509
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v2, v0, [I
 
+    .line 509
     .line 510
+    const/4 v1, 0x0
+
     .line 511
+    const/4 v0, 0x1
+
     .line 512
-    move-result-object v1
+    aput v0, v2, v1
 
     .line 513
-    const-string v0, "BROWSER_AD_STORY_ACTION_MENU_ITEM_ID"
-
     .line 514
-    .line 515
-    invoke-virtual {v3, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    aput p2, v2, v0
 
+    .line 515
     .line 516
+    invoke-static {v6, v4, v5, v2, v8}, LX/1ke;->A01(LX/1kf;Ljava/lang/String;Ljava/lang/String;[II)V
+
     .line 517
     .line 518
-    :cond_c
-    iget-object v2, v4, LX/4DM;->A03:LX/4Ed;
-
     .line 519
+    return-object v10
+    :try_end_3
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_3 .. :try_end_3} :catch_2
+
     .line 520
-    const/4 v0, 0x0
+    :catch_2
+    move-exception v6
 
     .line 521
-    if-nez v2, :cond_d
+    iget-object v0, v9, Lcom/facebook/resources/impl/StringResourcesFetcher;->A02:LX/0RP;
 
     .line 522
     .line 523
-    move-object v1, v0
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 524
-    :goto_1
-    const-string v2, "BROWSER_AD_STORY_ACTION_MENU_CLICK"
-
     .line 525
     .line 526
-    invoke-virtual {v5, v1, v0, v2, v3}, LX/4CF;->A0A(Landroid/os/Bundle;Lcom/facebook/privacy/zone/policy/ZonePolicy;Ljava/lang/String;Ljava/util/Map;)V
+    move-result-object v5
 
     .line 527
+    check-cast v5, LX/1kf;
+
     .line 528
     .line 529
-    goto/16 :goto_0
+    const-string/jumbo v4, "not_found_error"
 
     .line 530
     .line 531
-    :cond_d
-    check-cast v2, LX/4BG;
-
     .line 532
+    const/4 v0, 0x3
+
     .line 533
-    iget-object v1, v2, LX/4BG;->A08:Landroid/os/Bundle;
+    invoke-static {v4, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 534
     .line 535
-    iget-object v0, v2, LX/4BG;->A0X:Lcom/facebook/privacy/zone/policy/ZonePolicy;
-
     .line 536
+    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
     .line 537
-    goto :goto_1
-
     .line 538
-    :pswitch_1
-    iget-object v2, p0, LX/1mc;->A00:Ljava/lang/Object;
-
     .line 539
+    move-result-object v3
+
     .line 540
-    check-cast v2, Landroid/content/Context;
+    const/4 v0, 0x2
 
     .line 541
-    .line 542
-    const-class v0, Lcom/facebook/arstudio/player/AboutActivity;
+    new-array v2, v0, [I
 
+    .line 542
     .line 543
+    const/4 v1, 0x0
+
     .line 544
-    goto :goto_2
+    const/4 v0, 0x1
 
     .line 545
-    :pswitch_2
-    iget-object v2, p0, LX/1mc;->A00:Ljava/lang/Object;
+    aput v0, v2, v1
 
     .line 546
     .line 547
-    check-cast v2, Landroid/content/Context;
+    aput p2, v2, v0
 
     .line 548
     .line 549
-    const-class v0, Lcom/facebook/arstudio/player/settings/PlayerSettingsActivity;
+    invoke-static {v5, v3, v4, v2, v8}, LX/1ke;->A01(LX/1kf;Ljava/lang/String;Ljava/lang/String;[II)V
 
     .line 550
     .line 551
-    :goto_2
-    invoke-static {v2, v0}, LX/0Yj;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
     .line 552
-    .line 553
-    .line 554
-    move-result-object v1
+    throw v6
 
+    .line 553
+    :cond_9
+    iget-object v0, v9, Lcom/facebook/resources/impl/StringResourcesFetcher;->A01:LX/0RP;
+
+    .line 554
     .line 555
-    goto :goto_3
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 556
-    :pswitch_3
-    iget-object v2, p0, LX/1mc;->A00:Ljava/lang/Object;
-
     .line 557
     .line 558
-    check-cast v2, Landroid/app/Activity;
+    move-result-object v0
 
     .line 559
+    check-cast v0, Landroid/content/res/Resources;
+
     .line 560
-    const-class v0, Lcom/facebook/arstudio/player/MainActivity;
-
     .line 561
-    .line 562
-    invoke-static {v2, v0}, LX/0Yj;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-virtual {v0, v3, v7}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
+    .line 562
     .line 563
     .line 564
+    move-result-object v10
+
     .line 565
-    move-result-object v1
+    return-object v10
 
     .line 566
-    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    :cond_a
+    const-string v1, "Resource id 0x0 requested, this probably means a string resource is missing"
 
     .line 567
     .line 568
-    .line 569
-    move-result-object v0
+    new-instance v0, Landroid/content/res/Resources$NotFoundException;
 
+    .line 569
     .line 570
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->putExtras(Landroid/content/Intent;)Landroid/content/Intent;
+    invoke-direct {v0, v1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
     .line 571
     .line 572
     .line 573
-    :goto_3
-    invoke-static {}, LX/0Yf;->A0K()LX/01m;
+    throw v0
 
     .line 574
-    .line 575
-    .line 576
-    move-result-object v0
-
-    .line 577
-    invoke-virtual {v0, v2, v1}, LX/0Ic;->A05(Landroid/content/Context;Landroid/content/Intent;)Z
-
-    .line 578
-    .line 579
-    .line 580
-    goto/16 :goto_0
-
-    .line 581
-    .line 582
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public final getString(I)Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final varargs getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 3
+
+    .line 268435456
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result-object v2
+
+    .line 268435464
+    iget-object v0, p0, LX/1mc;->A05:LX/0RP;
+
+    .line 268435465
+    .line 268435466
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 268435467
+    .line 268435468
+    .line 268435469
+    move-result-object v1
+
+    .line 268435470
+    check-cast v1, LX/1jY;
+
+    .line 268435471
+    .line 268435472
+    const-string/jumbo v0, "getLocale"
+
+    .line 268435473
+    .line 268435474
+    .line 268435475
+    invoke-static {v1, v0}, LX/1jY;->A01(LX/1jY;Ljava/lang/String;)V
+
+    .line 268435476
+    .line 268435477
+    .line 268435478
+    iget-object v0, v1, LX/1jY;->A0G:Ljava/util/Locale;
+
+    .line 268435479
+    .line 268435480
+    invoke-static {v0, v2, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 268435481
+    .line 268435482
+    .line 268435483
+    move-result-object v0
+
+    .line 268435484
+    return-object v0
+.end method
+
+.method public final getStringArray(I)[Ljava/lang/String;
+    .locals 5
+
+    .line 0
+    if-eqz p1, :cond_2
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/1mc;->A04:LX/0RP;
+
+    .line 3
+    .line 4
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v4
+
+    .line 8
+    check-cast v4, Lcom/facebook/resources/impl/StringResourcesFetcher;
+
+    .line 9
+    .line 10
+    const/high16 v1, -0x1000000
+
+    .line 11
+    .line 12
+    and-int/2addr v1, p1
+
+    .line 13
+    const/high16 v0, 0x7f000000
+
+    .line 14
+    .line 15
+    if-ne v1, v0, :cond_1
+
+    .line 16
+    .line 17
+    invoke-static {v4}, Lcom/facebook/resources/impl/StringResourcesFetcher;->A00(Lcom/facebook/resources/impl/StringResourcesFetcher;)I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v3
+
+    .line 21
+    iget-object v0, v4, Lcom/facebook/resources/impl/StringResourcesFetcher;->A03:LX/0RP;
+
+    .line 22
+    .line 23
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v2
+
+    .line 27
+    check-cast v2, LX/1jY;
+
+    .line 28
+    .line 29
+    const-string/jumbo v0, "getActiveResources"
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-static {v2, v0}, LX/1jY;->A01(LX/1jY;Ljava/lang/String;)V
+
+    .line 33
+    .line 34
+    .line 35
+    new-instance v1, LX/1jf;
+
+    .line 36
+    .line 37
+    invoke-direct {v1, v2}, LX/1jf;-><init>(LX/1jY;)V
+
+    .line 38
+    .line 39
+    .line 40
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v0
+
+    .line 44
+    if-eqz v0, :cond_0
+
+    .line 45
+    .line 46
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 47
+    .line 48
+    .line 49
+    goto :goto_0
+
+    .line 50
+    :cond_0
+    :try_start_0
+    iget-object v0, v4, Lcom/facebook/resources/impl/StringResourcesFetcher;->A01:LX/0RP;
+
+    .line 51
+    .line 52
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v0
+
+    .line 56
+    check-cast v0, Landroid/content/res/Resources;
+
+    .line 57
+    .line 58
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    .line 59
+    .line 60
+    .line 61
+    move-result-object v2
+
+    .line 62
+    iget-object v0, v4, Lcom/facebook/resources/impl/StringResourcesFetcher;->A02:LX/0RP;
+
+    .line 63
+    .line 64
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 65
+    .line 66
+    .line 67
+    move-result-object v1
+
+    .line 68
+    check-cast v1, LX/1kf;
+
+    .line 69
+    .line 70
+    const-string/jumbo v0, "arsc"
+
+    .line 71
+    .line 72
+    .line 73
+    invoke-static {v1, v0, p1, v3}, LX/1ke;->A00(LX/1kf;Ljava/lang/String;II)V
+
+    .line 74
+    .line 75
+    .line 76
+    return-object v2
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 77
+    :catch_0
+    move-exception v2
+
+    .line 78
+    iget-object v0, v4, Lcom/facebook/resources/impl/StringResourcesFetcher;->A02:LX/0RP;
+
+    .line 79
+    .line 80
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 81
+    .line 82
+    .line 83
+    move-result-object v1
+
+    .line 84
+    check-cast v1, LX/1kf;
+
+    .line 85
+    .line 86
+    const-string/jumbo v0, "not_found_error"
+
+    .line 87
+    .line 88
+    .line 89
+    invoke-static {v1, v0, p1, v3}, LX/1ke;->A00(LX/1kf;Ljava/lang/String;II)V
+
+    .line 90
+    .line 91
+    .line 92
+    throw v2
+
+    .line 93
+    :cond_1
+    iget-object v0, v4, Lcom/facebook/resources/impl/StringResourcesFetcher;->A01:LX/0RP;
+
+    .line 94
+    .line 95
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 96
+    .line 97
+    .line 98
+    move-result-object v0
+
+    .line 99
+    check-cast v0, Landroid/content/res/Resources;
+
+    .line 100
+    .line 101
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    .line 102
+    .line 103
+    .line 104
+    move-result-object v2
+
+    .line 105
+    return-object v2
+
+    .line 106
+    :cond_2
+    const-string v1, "Resource id 0x0 requested, this probably means a string resource is missing"
+
+    .line 107
+    .line 108
+    new-instance v0, Landroid/content/res/Resources$NotFoundException;
+
+    .line 109
+    .line 110
+    invoke-direct {v0, v1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    .line 111
+    .line 112
+    .line 113
+    throw v0
+.end method
+
+.method public final getText(I)Ljava/lang/CharSequence;
+    .locals 2
+
+    .line 0
+    if-eqz p1, :cond_0
+
+    .line 1
+    .line 2
+    iget-object v0, p0, LX/1mc;->A04:LX/0RP;
+
+    .line 3
+    .line 4
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    check-cast v0, Lcom/facebook/resources/impl/StringResourcesFetcher;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0, p1}, Lcom/facebook/resources/impl/StringResourcesFetcher;->A01(I)Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+
+    .line 15
+    :cond_0
+    const-string v1, "Resource id 0x0 requested, this probably means a string resource is missing"
+
+    .line 16
+    .line 17
+    new-instance v0, Landroid/content/res/Resources$NotFoundException;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, v1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    .line 20
+    .line 21
+    .line 22
+    throw v0
+.end method
+
+.method public final getText(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .line 268435456
+    if-eqz p1, :cond_0
+
+    .line 268435457
+    .line 268435458
+    iget-object v0, p0, LX/1mc;->A04:LX/0RP;
+
+    .line 268435459
+    .line 268435460
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    move-result-object v0
+
+    .line 268435464
+    check-cast v0, Lcom/facebook/resources/impl/StringResourcesFetcher;
+
+    .line 268435465
+    .line 268435466
+    invoke-virtual {v0, p1}, Lcom/facebook/resources/impl/StringResourcesFetcher;->A01(I)Ljava/lang/String;
+
+    .line 268435467
+    .line 268435468
+    .line 268435469
+    move-result-object v0
+
+    .line 268435470
+    if-eqz v0, :cond_0
+
+    .line 268435471
+    .line 268435472
+    return-object v0
+
+    .line 268435473
+    :cond_0
+    return-object p2
+.end method
+
+.method public final getTextArray(I)[Ljava/lang/CharSequence;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final openRawResource(I)Ljava/io/InputStream;
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/1mc;->A01:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/3A2;
+
+    .line 7
+    .line 8
+    iget-object v0, v0, LX/3A2;->A01:[I
+
+    .line 9
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([II)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    if-ltz v0, :cond_0
+
+    .line 17
+    .line 18
+    const-string v0, "CD_"
+
+    .line 19
+    .line 20
+    invoke-static {v0, p1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v1
+
+    .line 28
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    .line 29
+    .line 30
+    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    .line 31
+    .line 32
+    .line 33
+    return-object v0
+
+    .line 34
+    :cond_0
+    invoke-super {p0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    return-object v0
 .end method

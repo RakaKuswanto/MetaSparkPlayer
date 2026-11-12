@@ -1,137 +1,134 @@
 .class public final LX/4Z5;
-.super LX/4Yx;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source ""
 
 
 # instance fields
-.field public final A00:Z
+.field public A00:Z
 
-.field public final A01:Z
+.field public final A01:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;ZZ)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0, p1}, LX/4Yx;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-boolean p2, p0, LX/4Z5;->A01:Z
+    const/4 v0, 0x0
 
     .line 4
-    .line 5
-    iput-boolean p3, p0, LX/4Z5;->A00:Z
+    iput-boolean v0, p0, LX/4Z5;->A00:Z
 
+    .line 5
     .line 6
+    iput-object p1, p0, LX/4Z5;->A01:Landroid/view/View;
+
     .line 7
+    .line 8
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 6
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
 
     .line 0
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    iget-object v2, p0, LX/4Z5;->A01:Landroid/view/View;
 
     .line 1
     .line 2
-    .line 3
-    move-result v5
+    const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 3
     .line 4
-    invoke-static {p0}, LX/4BF;->A09(Landroid/graphics/drawable/Drawable;)I
+    sget-object v0, LX/4pf;->A02:LX/4Z4;
 
     .line 5
     .line 6
+    invoke-virtual {v0, v2, v1}, LX/4Z4;->A05(Landroid/view/View;F)V
+
     .line 7
-    move-result v0
-
     .line 8
-    int-to-float v4, v0
-
     .line 9
-    const/high16 v1, 0x40000000    # 2.0f
+    iget-boolean v0, p0, LX/4Z5;->A00:Z
 
     .line 10
     .line 11
-    div-float/2addr v4, v1
+    if-eqz v0, :cond_0
 
     .line 12
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    .line 13
+    const/4 v1, 0x0
+
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    invoke-virtual {v2, v1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_0
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/4Z5;->A01:Landroid/view/View;
+
+    .line 1
+    .line 2
+    invoke-virtual {v2}, Landroid/view/View;->hasOverlappingRendering()Z
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-virtual {v2}, Landroid/view/View;->getLayerType()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    if-nez v0, :cond_0
 
     .line 13
     .line 14
+    const/4 v0, 0x1
+
     .line 15
-    move-result-object v0
+    iput-boolean v0, p0, LX/4Z5;->A00:Z
 
     .line 16
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
-
     .line 17
+    const/4 v1, 0x2
+
     .line 18
+    const/4 v0, 0x0
+
     .line 19
-    move-result v0
+    invoke-virtual {v2, v1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
     .line 20
-    int-to-float v3, v0
-
     .line 21
-    div-float/2addr v3, v1
-
     .line 22
-    iget-boolean v0, p0, LX/4Z5;->A00:Z
-
-    .line 23
-    .line 24
-    const/high16 v2, -0x40800000    # -1.0f
-
-    .line 25
-    .line 26
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 27
-    .line 28
-    if-eqz v0, :cond_0
-
-    .line 29
-    .line 30
-    const/high16 v1, -0x40800000    # -1.0f
-
-    .line 31
-    .line 32
     :cond_0
-    iget-boolean v0, p0, LX/4Z5;->A01:Z
-
-    .line 33
-    .line 34
-    if-nez v0, :cond_1
-
-    .line 35
-    .line 36
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    .line 37
-    .line 38
-    :cond_1
-    invoke-virtual {p1, v1, v2, v4, v3}, Landroid/graphics/Canvas;->scale(FFFF)V
-
-    .line 39
-    .line 40
-    .line 41
-    invoke-super {p0, p1}, LX/4Yx;->draw(Landroid/graphics/Canvas;)V
-
-    .line 42
-    .line 43
-    .line 44
-    invoke-virtual {p1, v5}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    .line 45
-    .line 46
-    .line 47
     return-void
 .end method

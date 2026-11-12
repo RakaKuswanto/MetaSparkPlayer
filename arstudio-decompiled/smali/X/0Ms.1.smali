@@ -1,49 +1,53 @@
-.class public LX/0Ms;
+.class public abstract LX/0Ms;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/0Af;
-
-.field public A01:LX/0Lx;
-
-.field public A02:LX/0Uj;
-
-.field public A03:LX/0U3;
-
-.field public A04:Ljava/lang/String;
-
-.field public volatile A05:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static A00(Ljava/lang/Object;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p0, :cond_0
 
     .line 1
     .line 2
+    return-void
+
     .line 3
-    const-string v0, ""
+    :cond_0
+    new-instance p0, Ljava/lang/AssertionError;
 
     .line 4
     .line 5
-    iput-object v0, p0, LX/0Ms;->A05:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
 
     .line 6
     .line 7
-    return-void
+    .line 8
+    throw p0
 .end method
 
+.method public static A01(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public A00(LX/0Mk;)LX/0Mx;
-    .locals 1
+    .line 0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x0
+    .line 1
+    .line 2
+    return-void
 
-    return-object v0
+    .line 3
+    :cond_0
+    new-instance p0, Ljava/lang/AssertionError;
+
+    .line 4
+    .line 5
+    invoke-direct {p0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    .line 6
+    .line 7
+    .line 8
+    throw p0
 .end method

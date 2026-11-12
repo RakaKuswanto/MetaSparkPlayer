@@ -1,10 +1,10 @@
 .class public final Lcom/facebook/cameracore/mediapipeline/services/weather/fb4a/graphql/FBInspirationWeatherQueryResponseImpl$Viewer$InspirationsData$Weather$Astronomy;
-.super LX/1Bn;
+.super LX/1gb;
 .source ""
 
 # interfaces
 .implements Lcom/facebook/graphservice/interfaces/Tree;
-.implements LX/0yO;
+.implements LX/1H2;
 
 
 # static fields
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1Bn;-><init>(I[I)V
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2

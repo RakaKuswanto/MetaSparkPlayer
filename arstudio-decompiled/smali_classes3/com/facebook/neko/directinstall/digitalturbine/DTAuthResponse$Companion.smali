@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public final serializer()LX/2LY;
+.method public final serializer()LX/5cW;
     .locals 1
 
     .line 0
-    sget-object v0, LX/6CR;->A00:LX/6CR;
+    sget-object v0, LX/5ho;->A00:LX/5ho;
 
     .line 1
     .line 2

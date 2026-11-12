@@ -1,48 +1,20 @@
-.class public final synthetic LX/03b;
+.class public interface abstract LX/03b;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
-
-
-# instance fields
-.field public final synthetic A00:Landroid/view/View;
-
-.field public final synthetic A01:LX/03j;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroid/view/View;LX/03j;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, LX/03b;->A01:LX/03j;
-
-    iput-object p1, p0, LX/03b;->A00:Landroid/view/View;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public abstract ACu()[LX/0Nx;
+.end method
 
-    .line 0
-    iget-object v1, p0, LX/03b;->A01:LX/03j;
+.method public abstract AD2()Ljava/util/Map;
+.end method
 
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/03b;->A00:Landroid/view/View;
+.method public abstract AFp()[LX/0UY;
+.end method
 
-    .line 3
-    .line 4
-    invoke-interface {v1, v0}, LX/03j;->AUn(Landroid/view/View;)V
+.method public abstract Amd()Z
+.end method
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
+.method public abstract Ame()Z
 .end method

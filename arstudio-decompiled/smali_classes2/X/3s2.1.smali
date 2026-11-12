@@ -1,130 +1,146 @@
 .class public final LX/3s2;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source ""
-
-# interfaces
-.implements LX/6Ls;
 
 
 # instance fields
-.field public final A00:Ljava/util/List;
+.field public A00:Landroid/widget/FrameLayout;
 
-.field public final A01:Ljava/util/List;
-
-.field public final A02:Ljava/util/List;
+.field public final A01:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3s2;->A00:Ljava/util/List;
+    invoke-static {}, LX/0X7;->A0o()Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 4
     .line 5
-    iput-object p2, p0, LX/3s2;->A01:Ljava/util/List;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    iput-object p3, p0, LX/3s2;->A02:Ljava/util/List;
+    iput-object v0, p0, LX/3s2;->A01:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 8
     .line 9
+    invoke-static {}, LX/1ot;->A00()LX/3tj;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 14
+    .line 15
+    .line 16
+    new-instance v3, Landroid/widget/FrameLayout;
+
+    .line 17
+    .line 18
+    invoke-direct {v3, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    .line 19
+    .line 20
+    .line 21
+    iput-object v3, p0, LX/3s2;->A00:Landroid/widget/FrameLayout;
+
+    .line 22
+    .line 23
+    const/16 v2, 0x10
+
+    .line 24
+    .line 25
+    const/4 v1, -0x2
+
+    .line 26
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    .line 27
+    .line 28
+    invoke-direct {v0, v1, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {v3, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 32
+    .line 33
+    .line 34
+    iget-object v0, p0, LX/3s2;->A00:Landroid/widget/FrameLayout;
+
+    .line 35
+    .line 36
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 37
+    .line 38
+    .line 39
     return-void
 .end method
 
 
 # virtual methods
-.method public final AB0()I
+.method public getAttachedVideoStateKey()LX/3tA;
     .locals 1
 
     .line 0
-    const/16 v0, 0x9
+    iget-object v0, p0, LX/3s2;->A01:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 1
     .line 2
-    return v0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/3tA;
+
+    .line 7
+    .line 8
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public setVideoStateKey(Ljava/lang/String;Lcom/facebook/video/common/playerorigin/PlayerOrigin;)V
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v1
+    iget-object v1, p0, LX/3s2;->A01:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 4
-    const-string v0, "HuddleRosterEvent{activeSpeakers="
-
     .line 5
-    .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, LX/3tA;
 
+    .line 6
     .line 7
+    invoke-direct {v0, p1, p2}, LX/3tA;-><init>(Ljava/lang/String;Lcom/facebook/video/common/playerorigin/PlayerOrigin;)V
+
     .line 8
     .line 9
-    iget-object v0, p0, LX/3s2;->A00:Ljava/util/List;
-
     .line 10
-    .line 11
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
+    .line 11
     .line 12
     .line 13
-    .line 14
-    const-string v0, ", mutedSpeakers="
-
-    .line 15
-    .line 16
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 17
-    .line 18
-    .line 19
-    iget-object v0, p0, LX/3s2;->A01:Ljava/util/List;
-
-    .line 20
-    .line 21
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 22
-    .line 23
-    .line 24
-    const-string v0, ", unmutedSpeakers="
-
-    .line 25
-    .line 26
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 27
-    .line 28
-    .line 29
-    iget-object v0, p0, LX/3s2;->A02:Ljava/util/List;
-
-    .line 30
-    .line 31
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 32
-    .line 33
-    .line 34
-    invoke-static {v1}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 35
-    .line 36
-    .line 37
-    move-result-object v0
-
-    .line 38
-    return-object v0
+    return-void
 .end method

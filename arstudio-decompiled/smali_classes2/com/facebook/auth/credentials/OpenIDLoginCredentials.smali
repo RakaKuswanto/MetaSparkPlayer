@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final A00:LX/1Pq;
+.field public final A00:LX/2R0;
 
 .field public final A01:Lcom/facebook/openidconnect/model/OpenIDCredential;
 
@@ -23,11 +23,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x4f
+    const/16 v0, 0x4e
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -67,7 +67,7 @@
 
     .line 10
     .line 11
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
 
     .line 12
     .line 13
@@ -91,11 +91,11 @@
     move-result-object v0
 
     .line 23
-    check-cast v0, LX/1Pq;
+    check-cast v0, LX/2R0;
 
     .line 24
     .line 25
-    iput-object v0, p0, Lcom/facebook/auth/credentials/OpenIDLoginCredentials;->A00:LX/1Pq;
+    iput-object v0, p0, Lcom/facebook/auth/credentials/OpenIDLoginCredentials;->A00:LX/2R0;
 
     .line 26
     .line 27
@@ -137,7 +137,7 @@
     .line 9
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/auth/credentials/OpenIDLoginCredentials;->A00:LX/1Pq;
+    iget-object v0, p0, Lcom/facebook/auth/credentials/OpenIDLoginCredentials;->A00:LX/2R0;
 
     .line 12
     .line 13

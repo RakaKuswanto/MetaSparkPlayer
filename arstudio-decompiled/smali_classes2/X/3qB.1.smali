@@ -1,5 +1,5 @@
-.class public final LX/3qB;
-.super LX/3oD;
+.class public final LX/3Qb;
+.super Ljava/lang/Object;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3oD;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

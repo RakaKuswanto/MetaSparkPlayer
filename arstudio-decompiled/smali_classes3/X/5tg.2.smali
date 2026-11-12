@@ -1,8 +1,8 @@
-.class public interface abstract LX/5tg;
+.class public interface abstract LX/5tG;
 .super Ljava/lang/Object;
 .source ""
 
 
 # virtual methods
-.method public abstract apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract AZm(LX/5uZ;)V
 .end method

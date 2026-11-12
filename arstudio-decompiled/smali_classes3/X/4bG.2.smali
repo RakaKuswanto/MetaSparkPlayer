@@ -3,185 +3,125 @@
 .source ""
 
 # interfaces
-.implements LX/4cl;
-
-
-# instance fields
-.field public final synthetic A00:LX/4b1;
+.implements LX/4aI;
 
 
 # direct methods
-.method public constructor <init>(LX/4b1;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/4bG;->A00:LX/4b1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AZ8(Landroid/view/MenuItem;LX/4ay;)V
-    .locals 7
+.method public final A5I(LX/4D6;)Lcom/facebook/dsp/core/ColorData;
+    .locals 1
 
-    .line 0
-    iget-object v1, p0, LX/4bG;->A00:LX/4b1;
-
-    .line 1
-    .line 2
-    iget-object v5, v1, LX/4b1;->A0F:Landroid/os/Handler;
-
-    .line 3
-    .line 4
     const/4 v0, 0x0
 
-    .line 5
-    invoke-virtual {v5, v0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    .line 6
-    .line 7
-    .line 8
-    iget-object v6, v1, LX/4b1;->A0M:Ljava/util/List;
-
-    .line 9
-    .line 10
-    invoke-interface {v6}, Ljava/util/List;->size()I
-
-    .line 11
-    .line 12
-    .line 13
-    move-result v4
-
-    .line 14
-    const/4 v3, 0x0
-
-    .line 15
-    :goto_0
-    const/4 v2, -0x1
-
-    .line 16
-    if-ge v3, v4, :cond_1
-
-    .line 17
-    .line 18
-    invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v1
-
-    .line 22
-    check-cast v1, LX/4cb;
-
-    .line 23
-    .line 24
-    iget-object v1, v1, LX/4cb;->A01:LX/4ay;
-
-    .line 25
-    .line 26
-    if-ne p2, v1, :cond_2
-
-    .line 27
-    .line 28
-    if-eq v3, v2, :cond_1
-
-    .line 29
-    .line 30
-    add-int/lit8 v2, v3, 0x1
-
-    .line 31
-    .line 32
-    invoke-interface {v6}, Ljava/util/List;->size()I
-
-    .line 33
-    .line 34
-    .line 35
-    move-result v1
-
-    .line 36
-    if-ge v2, v1, :cond_0
-
-    .line 37
-    .line 38
-    invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-
-    .line 42
-    check-cast v0, LX/4cb;
-
-    .line 43
-    .line 44
-    :cond_0
-    new-instance v4, LX/4bz;
-
-    .line 45
-    .line 46
-    invoke-direct {v4, p1, p0, v0, p2}, LX/4bz;-><init>(Landroid/view/MenuItem;LX/4bG;LX/4cb;LX/4ay;)V
-
-    .line 47
-    .line 48
-    .line 49
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-wide v2
-
-    .line 53
-    const-wide/16 v0, 0xc8
-
-    .line 54
-    .line 55
-    add-long/2addr v2, v0
-
-    .line 56
-    invoke-virtual {v5, v4, p2, v2, v3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
-
-    .line 57
-    .line 58
-    .line 59
-    :cond_1
-    return-void
-
-    .line 60
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
-    .line 61
-    .line 62
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public final AZ9(Landroid/view/MenuItem;LX/4ay;)V
+.method public final A5t(LX/4aT;)Ljava/lang/Integer;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AIH()LX/6Vc;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4bG;->A00:LX/4b1;
+    sget-object v0, LX/6Vc;->DEFAULT:LX/6Vc;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/4b1;->A0F:Landroid/os/Handler;
+    return-object v0
+.end method
 
+.method public final Ama(LX/4aV;)LX/4aY;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final An3(LX/4aU;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final AnK(LX/4aG;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final Aou(LX/4ah;)LX/4ak;
+    .locals 4
+
+    .line 0
+    invoke-static {p1}, LX/431;->A0B(Ljava/lang/Enum;)I
+
+    .line 1
+    .line 2
     .line 3
+    move-result v1
+
     .line 4
-    invoke-virtual {v0, p2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    const/16 v0, 0xb
 
     .line 5
     .line 6
+    if-ne v1, v0, :cond_0
+
     .line 7
-    return-void
+    .line 8
+    sget-object v3, LX/4bc;->FB_SANS:LX/4bc;
+
+    .line 9
+    .line 10
+    const/high16 v2, 0x41e00000    # 28.0f
+
+    .line 11
+    .line 12
+    sget-object v1, LX/4aS;->BOLD:LX/4aS;
+
+    .line 13
+    .line 14
+    const/high16 v0, 0x42000000    # 32.0f
+
+    .line 15
+    .line 16
+    invoke-static {v1, v3, v0, v2}, LX/4ak;->A00(LX/4aS;Ljava/lang/Object;FF)LX/4ak;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    return-object v0
+
+    .line 21
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 22
+    return-object v0
 .end method

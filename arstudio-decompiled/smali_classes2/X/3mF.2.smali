@@ -1,45 +1,59 @@
 .class public final LX/3mF;
-.super LX/38q;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbSubtitleView$3"
 
 
 # instance fields
-.field public final A00:Ljava/io/File;
-
-.field public final A01:Ljava/io/FileOutputStream;
-
-.field public final synthetic A02:LX/3lI;
+.field public final synthetic A00:LX/3m9;
 
 
 # direct methods
-.method public constructor <init>(LX/3lP;LX/3lI;Ljava/io/File;)V
-    .locals 1
+.method public constructor <init>(LX/3m9;)V
+    .locals 0
+
+    iput-object p1, p0, LX/3mF;->A00:LX/3m9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
 
     .line 0
-    invoke-static {p3}, LX/0Yj;->A0K(Ljava/io/File;)Ljava/io/FileOutputStream;
+    iget-object v0, p0, LX/3mF;->A00:LX/3m9;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    iget-object v1, v0, LX/3m9;->A0B:Landroid/widget/TextView;
 
+    .line 3
     .line 4
-    iput-object p2, p0, LX/3mF;->A02:LX/3lI;
+    const/4 v0, 0x0
 
     .line 5
-    .line 6
-    invoke-direct {p0, p1, p2, v0}, LX/38q;-><init>(LX/3lP;LX/38p;Ljava/io/OutputStream;)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 6
     .line 7
     .line 8
+    const/4 v0, 0x0
+
     .line 9
-    iput-object p3, p0, LX/3mF;->A00:Ljava/io/File;
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 10
     .line 11
-    iput-object v0, p0, LX/3mF;->A01:Ljava/io/FileOutputStream;
-
     .line 12
-    .line 13
     return-void
 .end method

@@ -1,9 +1,9 @@
 .class public abstract Lcom/facebook/graphql/modelutil/BaseModel;
-.super LX/19y;
+.super LX/1ga;
 .source ""
 
 # interfaces
-.implements LX/0yO;
+.implements LX/1H2;
 
 
 # static fields
@@ -15,7 +15,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -34,7 +34,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/19y;-><init>(I[I)V
+    invoke-direct {p0, p1, p2}, LX/1ga;-><init>(I[I)V
 
     .line 1
     .line 2
@@ -60,7 +60,7 @@
 
     .line 5
     .line 6
-    invoke-super {p0}, LX/19y;->getTypeName()Ljava/lang/String;
+    invoke-super {p0}, LX/1ga;->getTypeName()Ljava/lang/String;
 
     .line 7
     .line 8
@@ -106,7 +106,7 @@
 
     .line 11
     :cond_0
-    invoke-static {p0}, LX/001;->A0H(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 12
     .line 13
@@ -114,7 +114,7 @@
     move-result-object v2
 
     .line 15
-    invoke-static {p0}, LX/0Yh;->A0P(Ljava/lang/Object;)Ljava/lang/Integer;
+    invoke-static {p0}, LX/0X4;->A0d(Ljava/lang/Object;)Ljava/lang/Integer;
 
     .line 16
     .line 17

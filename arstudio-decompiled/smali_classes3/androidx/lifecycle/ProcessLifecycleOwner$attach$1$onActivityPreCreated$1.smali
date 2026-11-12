@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public final synthetic this$0:LX/4xH;
+.field public final synthetic this$0:LX/5hc;
 
 
 # direct methods
-.method public constructor <init>(LX/4xH;)V
+.method public constructor <init>(LX/5hc;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Landroidx/lifecycle/ProcessLifecycleOwner$attach$1$onActivityPreCreated$1;->this$0:LX/4xH;
+    iput-object p1, p0, Landroidx/lifecycle/ProcessLifecycleOwner$attach$1$onActivityPreCreated$1;->this$0:LX/5hc;
 
     .line 1
     .line 2
@@ -30,11 +30,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner$attach$1$onActivityPreCreated$1;->this$0:LX/4xH;
+    iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner$attach$1$onActivityPreCreated$1;->this$0:LX/5hc;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/4xH;->A00()V
+    invoke-virtual {v0}, LX/5hc;->A00()V
 
     .line 3
     .line 4
@@ -46,11 +46,11 @@
     .locals 3
 
     .line 0
-    iget-object v2, p0, Landroidx/lifecycle/ProcessLifecycleOwner$attach$1$onActivityPreCreated$1;->this$0:LX/4xH;
+    iget-object v2, p0, Landroidx/lifecycle/ProcessLifecycleOwner$attach$1$onActivityPreCreated$1;->this$0:LX/5hc;
 
     .line 1
     .line 2
-    iget v0, v2, LX/4xH;->A01:I
+    iget v0, v2, LX/5hc;->A01:I
 
     .line 3
     .line 4
@@ -61,7 +61,7 @@
 
     .line 6
     .line 7
-    iput v0, v2, LX/4xH;->A01:I
+    iput v0, v2, LX/5hc;->A01:I
 
     .line 8
     .line 9
@@ -69,7 +69,7 @@
 
     .line 10
     .line 11
-    iget-boolean v0, v2, LX/4xH;->A04:Z
+    iget-boolean v0, v2, LX/5hc;->A04:Z
 
     .line 12
     .line 13
@@ -77,15 +77,15 @@
 
     .line 14
     .line 15
-    iget-object v1, v2, LX/4xH;->A05:LX/0SQ;
+    iget-object v1, v2, LX/5hc;->A05:LX/0Kj;
 
     .line 16
     .line 17
-    sget-object v0, LX/06e;->ON_START:LX/06e;
+    sget-object v0, LX/075;->ON_START:LX/075;
 
     .line 18
     .line 19
-    invoke-virtual {v1, v0}, LX/0SQ;->A0A(LX/06e;)V
+    invoke-virtual {v1, v0}, LX/0Kj;->A0B(LX/075;)V
 
     .line 20
     .line 21
@@ -93,7 +93,7 @@
     const/4 v0, 0x0
 
     .line 23
-    iput-boolean v0, v2, LX/4xH;->A04:Z
+    iput-boolean v0, v2, LX/5hc;->A04:Z
 
     .line 24
     .line 25

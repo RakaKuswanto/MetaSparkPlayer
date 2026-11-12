@@ -1,26 +1,71 @@
-.class public interface abstract LX/21V;
+.class public abstract LX/21v;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A4S(Ljava/lang/String;Z)LX/23t;
-.end method
+# direct methods
+.method public static A00([Ljava/lang/Object;I)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "array",
+            "length"
+        }
+    .end annotation
 
-.method public abstract A4V(Ljava/lang/String;ZZ)LX/38O;
-.end method
+    .line 0
+    const/4 v1, 0x0
 
-.method public abstract ASF(LX/2h6;)V
-.end method
+    .line 1
+    :goto_0
+    if-ge v1, p1, :cond_1
 
-.method public abstract ASQ(LX/2h6;)V
-.end method
+    .line 2
+    .line 3
+    aget-object v0, p0, v1
 
-.method public abstract ASW(LX/2h6;)V
-.end method
+    .line 4
+    .line 5
+    if-eqz v0, :cond_0
 
-.method public abstract ASX(LX/2h6;)V
-.end method
+    .line 6
+    .line 7
+    add-int/lit8 v1, v1, 0x1
 
-.method public abstract ASm(LX/2h6;)V
+    .line 8
+    .line 9
+    goto :goto_0
+
+    .line 10
+    :cond_0
+    const-string/jumbo v0, "at index "
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-static {v0, v1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    throw v0
+
+    .line 22
+    :cond_1
+    return-void
 .end method

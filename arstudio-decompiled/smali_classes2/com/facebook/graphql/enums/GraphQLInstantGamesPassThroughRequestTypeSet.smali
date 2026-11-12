@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLInstantGamesPassThroughRequestTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLInstantGamesPassThroughRequestTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x50
+    const/16 v0, 0x54
 
     .line 1
     .line 2
@@ -376,7 +376,7 @@
 
     .line 177
     .line 178
-    const-string v0, "GET_LIVE_MATCH_INFO"
+    const-string v0, "GET_IS_ZERO_PERMISSION_SESSION"
 
     .line 179
     .line 180
@@ -388,7 +388,7 @@
 
     .line 183
     .line 184
-    const-string v0, "GET_LIVE_STREAMS"
+    const-string v0, "GET_LIVE_MATCH_INFO"
 
     .line 185
     .line 186
@@ -400,7 +400,7 @@
 
     .line 189
     .line 190
-    const-string v0, "GET_PLAYER_GAMING_SQUADS"
+    const-string v0, "GET_LIVE_STREAMS"
 
     .line 191
     .line 192
@@ -412,7 +412,7 @@
 
     .line 195
     .line 196
-    const-string v0, "GET_PLAYER_STATS"
+    const-string v0, "GET_PLAYER_GAMING_SQUADS"
 
     .line 197
     .line 198
@@ -424,7 +424,7 @@
 
     .line 201
     .line 202
-    const-string v0, "GET_SIGNED_PLAYER_INFO"
+    const-string v0, "GET_PLAYER_GENDER"
 
     .line 203
     .line 204
@@ -436,7 +436,7 @@
 
     .line 207
     .line 208
-    const-string v0, "GET_TOURNAMENTS"
+    const-string v0, "GET_PLAYER_STATS"
 
     .line 209
     .line 210
@@ -448,7 +448,7 @@
 
     .line 213
     .line 214
-    const-string v0, "GET_TOURNAMENT_INFO"
+    const-string v0, "GET_SIGNED_PLAYER_INFO"
 
     .line 215
     .line 216
@@ -460,7 +460,7 @@
 
     .line 219
     .line 220
-    const-string v0, "GET_USER_UNLOCKED_ACHIEVEMENTS"
+    const-string v0, "GET_TOURNAMENTS"
 
     .line 221
     .line 222
@@ -472,7 +472,7 @@
 
     .line 225
     .line 226
-    const-string v0, "HEARTBEAT"
+    const-string v0, "GET_TOURNAMENT_INFO"
 
     .line 227
     .line 228
@@ -484,7 +484,7 @@
 
     .line 231
     .line 232
-    const-string v0, "HIGH_AD_RATE"
+    const-string v0, "GET_USER_UNLOCKED_ACHIEVEMENTS"
 
     .line 233
     .line 234
@@ -496,7 +496,7 @@
 
     .line 237
     .line 238
-    const-string v0, "INCREMENT_PLAYER_STATS"
+    const-string v0, "HEARTBEAT"
 
     .line 239
     .line 240
@@ -508,7 +508,7 @@
 
     .line 243
     .line 244
-    const-string v0, "JOIN_ROOM"
+    const-string v0, "HIGH_AD_RATE"
 
     .line 245
     .line 246
@@ -520,7 +520,7 @@
 
     .line 249
     .line 250
-    const-string v0, "LEADERBOARD_FETCH"
+    const-string v0, "INCREMENT_PLAYER_STATS"
 
     .line 251
     .line 252
@@ -532,7 +532,7 @@
 
     .line 255
     .line 256
-    const-string v0, "LEADERBOARD_OPERATION"
+    const-string v0, "JOIN_ROOM"
 
     .line 257
     .line 258
@@ -544,7 +544,7 @@
 
     .line 261
     .line 262
-    const-string v0, "LEADERBOARD_UPDATE"
+    const-string v0, "LEADERBOARD_FETCH"
 
     .line 263
     .line 264
@@ -556,7 +556,7 @@
 
     .line 267
     .line 268
-    const-string v0, "LOG_PLUGIN_CUSTOM_EVENT"
+    const-string v0, "LEADERBOARD_OPERATION"
 
     .line 269
     .line 270
@@ -568,7 +568,7 @@
 
     .line 273
     .line 274
-    const-string v0, "MESSENGER_GAME_UPDATE_OPT_IN_OPERATION"
+    const-string v0, "LEADERBOARD_UPDATE"
 
     .line 275
     .line 276
@@ -580,7 +580,7 @@
 
     .line 279
     .line 280
-    const-string v0, "OFF_PLATFORM_CONTEXT_UPDATE"
+    const-string v0, "LOG_PLUGIN_CUSTOM_EVENT"
 
     .line 281
     .line 282
@@ -592,7 +592,7 @@
 
     .line 285
     .line 286
-    const-string v0, "PAYMENTS_CANCEL_SUBSCRIPTION"
+    const-string v0, "MESSENGER_GAME_UPDATE_OPT_IN_OPERATION"
 
     .line 287
     .line 288
@@ -604,7 +604,7 @@
 
     .line 291
     .line 292
-    const-string v0, "PAYMENTS_FETCH_SUBSCRIPTIONS"
+    const-string v0, "OFF_PLATFORM_CONTEXT_UPDATE"
 
     .line 293
     .line 294
@@ -616,7 +616,7 @@
 
     .line 297
     .line 298
-    const-string v0, "PLATFORM_INIT"
+    const-string v0, "PAYMENTS_CANCEL_SUBSCRIPTION"
 
     .line 299
     .line 300
@@ -628,7 +628,7 @@
 
     .line 303
     .line 304
-    const-string v0, "PLAYER_CAN_SUBSCRIBE_GAME_BOT"
+    const-string v0, "PAYMENTS_FETCH_SUBSCRIPTIONS"
 
     .line 305
     .line 306
@@ -640,7 +640,7 @@
 
     .line 309
     .line 310
-    const-string v0, "PLAYER_IS_SUBSCRIBED_GAME_BOT"
+    const-string v0, "PLATFORM_INIT"
 
     .line 311
     .line 312
@@ -652,7 +652,7 @@
 
     .line 315
     .line 316
-    const-string v0, "POST_SESSION_SCORE"
+    const-string v0, "PLAYER_CAN_SUBSCRIBE_GAME_BOT"
 
     .line 317
     .line 318
@@ -664,7 +664,7 @@
 
     .line 321
     .line 322
-    const-string v0, "POST_TOURNAMENT_SCORE"
+    const-string v0, "PLAYER_IS_SUBSCRIBED_GAME_BOT"
 
     .line 323
     .line 324
@@ -676,7 +676,7 @@
 
     .line 327
     .line 328
-    const-string v0, "POST_USER_ACHIEVEMENT"
+    const-string v0, "POST_SESSION_SCORE"
 
     .line 329
     .line 330
@@ -688,7 +688,7 @@
 
     .line 333
     .line 334
-    const-string v0, "QE_LOG_EXPOSURE"
+    const-string v0, "POST_TOURNAMENT_SCORE"
 
     .line 335
     .line 336
@@ -700,7 +700,7 @@
 
     .line 339
     .line 340
-    const-string v0, "QE_PARAM_NO_EXPOSURE_FETCH"
+    const-string v0, "POST_USER_ACHIEVEMENT"
 
     .line 341
     .line 342
@@ -712,7 +712,7 @@
 
     .line 345
     .line 346
-    const-string v0, "RECORD_CAN_CREATE_SHORTCUT"
+    const-string v0, "QE_LOG_EXPOSURE"
 
     .line 347
     .line 348
@@ -724,7 +724,7 @@
 
     .line 351
     .line 352
-    const-string v0, "RECORD_GET_CONTEXT_INFO"
+    const-string v0, "QE_PARAM_NO_EXPOSURE_FETCH"
 
     .line 353
     .line 354
@@ -736,7 +736,7 @@
 
     .line 357
     .line 358
-    const-string v0, "RECORD_GET_ENTRYPOINT_DATA"
+    const-string v0, "RECORD_CAN_CREATE_SHORTCUT"
 
     .line 359
     .line 360
@@ -748,7 +748,7 @@
 
     .line 363
     .line 364
-    const-string v0, "RECORD_GET_PLATFORM"
+    const-string v0, "RECORD_GET_CONTEXT_INFO"
 
     .line 365
     .line 366
@@ -760,7 +760,7 @@
 
     .line 369
     .line 370
-    const-string v0, "RECORD_GET_PLAYER_ID"
+    const-string v0, "RECORD_GET_ENTRYPOINT_DATA"
 
     .line 371
     .line 372
@@ -772,7 +772,7 @@
 
     .line 375
     .line 376
-    const-string v0, "RECORD_GET_SDK_VERSION"
+    const-string v0, "RECORD_GET_PLATFORM"
 
     .line 377
     .line 378
@@ -784,7 +784,7 @@
 
     .line 381
     .line 382
-    const-string v0, "RECORD_LOAD_CAMERA_EFFECT"
+    const-string v0, "RECORD_GET_PLAYER_ID"
 
     .line 383
     .line 384
@@ -796,7 +796,7 @@
 
     .line 387
     .line 388
-    const-string v0, "RECORD_LOG_EVENT"
+    const-string v0, "RECORD_GET_PLAY_STYLE"
 
     .line 389
     .line 390
@@ -808,7 +808,7 @@
 
     .line 393
     .line 394
-    const-string v0, "RECORD_MATCH_PLAYER_ASYNC_PROMISE_RESULT"
+    const-string v0, "RECORD_GET_SDK_VERSION"
 
     .line 395
     .line 396
@@ -820,7 +820,7 @@
 
     .line 399
     .line 400
-    const-string v0, "RECORD_PLUGIN_REQUEST_STAR_SEND"
+    const-string v0, "RECORD_LOAD_CAMERA_EFFECT"
 
     .line 401
     .line 402
@@ -832,7 +832,7 @@
 
     .line 405
     .line 406
-    const-string v0, "RECORD_SCREENSHOT_PROVIDER"
+    const-string v0, "RECORD_LOG_EVENT"
 
     .line 407
     .line 408
@@ -844,7 +844,7 @@
 
     .line 411
     .line 412
-    const-string v0, "RECORD_SET_SESSION_DATA"
+    const-string v0, "RECORD_MATCH_PLAYER_ASYNC_PROMISE_RESULT"
 
     .line 413
     .line 414
@@ -856,7 +856,7 @@
 
     .line 417
     .line 418
-    const-string v0, "RECORD_SUBSCRIBE_BOT_ASYNC_DIALOG"
+    const-string v0, "RECORD_PLUGIN_REQUEST_STAR_SEND"
 
     .line 419
     .line 420
@@ -868,7 +868,7 @@
 
     .line 423
     .line 424
-    const-string v0, "RECORD_SWITCH_GAME_ASYNC_DIALOG"
+    const-string v0, "RECORD_SCREENSHOT_PROVIDER"
 
     .line 425
     .line 426
@@ -880,7 +880,7 @@
 
     .line 429
     .line 430
-    const-string v0, "RECORD_SWITCH_NATIVE_GAME_ASYNC_DIALOG"
+    const-string v0, "RECORD_SET_SESSION_DATA"
 
     .line 431
     .line 432
@@ -892,7 +892,7 @@
 
     .line 435
     .line 436
-    const-string v0, "SAVE_HIGHLIGHT"
+    const-string v0, "RECORD_SUBSCRIBE_BOT_ASYNC_DIALOG"
 
     .line 437
     .line 438
@@ -904,7 +904,7 @@
 
     .line 441
     .line 442
-    const-string v0, "SDK_EVENT"
+    const-string v0, "RECORD_SWITCH_GAME_ASYNC_DIALOG"
 
     .line 443
     .line 444
@@ -916,7 +916,7 @@
 
     .line 447
     .line 448
-    const-string v0, "SET_PLAYER_STATS"
+    const-string v0, "RECORD_SWITCH_NATIVE_GAME_ASYNC_DIALOG"
 
     .line 449
     .line 450
@@ -928,7 +928,7 @@
 
     .line 453
     .line 454
-    const-string v0, "SHOULD_SHOW_COPLAY_CUSTOM_UPDATE_CONSENT"
+    const-string v0, "SAVE_HIGHLIGHT"
 
     .line 455
     .line 456
@@ -940,7 +940,7 @@
 
     .line 459
     .line 460
-    const-string v0, "STORE_SENDER_INFO"
+    const-string v0, "SDK_EVENT"
 
     .line 461
     .line 462
@@ -952,7 +952,7 @@
 
     .line 465
     .line 466
-    const-string v0, "SWITCH_GAME"
+    const-string v0, "SET_PLAYER_STATS"
 
     .line 467
     .line 468
@@ -964,22 +964,70 @@
 
     .line 471
     .line 472
-    const-string v0, "UPDATE"
+    const-string v0, "SHIELD_GET_PARAM_DATA"
 
     .line 473
     .line 474
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 475
     .line 476
-    .line 477
-    move-result-object v0
+    const/16 v1, 0x50
 
+    .line 477
     .line 478
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGamesPassThroughRequestTypeSet;->A00:Ljava/util/Set;
+    const-string v0, "SHIELD_INIT"
 
     .line 479
     .line 480
+    aput-object v0, v2, v1
+
+    .line 481
+    .line 482
+    const/16 v1, 0x51
+
+    .line 483
+    .line 484
+    const-string v0, "STORE_SENDER_INFO"
+
+    .line 485
+    .line 486
+    aput-object v0, v2, v1
+
+    .line 487
+    .line 488
+    const/16 v1, 0x52
+
+    .line 489
+    .line 490
+    const-string v0, "SWITCH_GAME"
+
+    .line 491
+    .line 492
+    aput-object v0, v2, v1
+
+    .line 493
+    .line 494
+    const/16 v1, 0x53
+
+    .line 495
+    .line 496
+    const-string v0, "UPDATE"
+
+    .line 497
+    .line 498
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 499
+    .line 500
+    .line 501
+    move-result-object v0
+
+    .line 502
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGamesPassThroughRequestTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 503
+    .line 504
     return-void
 .end method
 
@@ -995,11 +1043,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGamesPassThroughRequestTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLInstantGamesPassThroughRequestTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

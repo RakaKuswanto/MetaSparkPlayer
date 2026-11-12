@@ -14,7 +14,7 @@
         isCommonProp = false
         optional = false
         overrideCommonPropBehavior = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
+        resType = .enum LX/2Xc;->NONE:LX/2Xc;
         varArg = ""
     .end subannotation
 .end annotation
@@ -24,7 +24,7 @@
 .method public abstract docString()Ljava/lang/String;
 .end method
 
-.method public abstract resType()LX/4Y9;
+.method public abstract resType()LX/2Xc;
 .end method
 
 .method public abstract varArg()Ljava/lang/String;

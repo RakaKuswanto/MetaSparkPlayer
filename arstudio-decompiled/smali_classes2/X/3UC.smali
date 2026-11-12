@@ -3,15 +3,11 @@
 .source ""
 
 # interfaces
-.implements LX/6Ls;
-
-
-# instance fields
-.field public final A00:LX/3R5;
+.implements LX/3vQ;
 
 
 # direct methods
-.method public constructor <init>(LX/3R5;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -20,22 +16,77 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3UC;->A00:LX/3R5;
-
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final AB0()I
+.method public final A4k()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final A4m()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final Aee()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final Aef()LX/3Ti;
     .locals 1
 
     .line 0
-    const/16 v0, 0xd
+    sget-object v0, LX/3Ti;->MEMORY_DECODED:LX/3Ti;
 
     .line 1
     .line 2
+    return-object v0
+.end method
+
+.method public final Aeg()LX/3Ti;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/3Ti;->MEMORY_DECODED:LX/3Ti;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final Aei()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final Aej()I
+    .locals 1
+
+    const/4 v0, 0x3
+
+    return v0
+.end method
+
+.method public final Aew()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
     return v0
 .end method

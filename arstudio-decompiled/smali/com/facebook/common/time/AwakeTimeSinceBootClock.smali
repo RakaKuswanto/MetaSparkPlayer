@@ -3,8 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0JA;
-.implements LX/0JB;
+.implements LX/0I5;
 
 
 # static fields
@@ -57,18 +56,13 @@
 
 
 # virtual methods
-.method public now()J
+.method public synthetic now()J
     .locals 2
 
-    .line 0
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    invoke-static {p0}, LX/0I3;->$default$now(LX/0I5;)J
 
-    .line 1
-    .line 2
-    .line 3
     move-result-wide v0
 
-    .line 4
     return-wide v0
 .end method
 

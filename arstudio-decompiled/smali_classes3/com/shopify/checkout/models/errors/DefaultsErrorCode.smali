@@ -3,16 +3,12 @@
 .source ""
 
 
-# annotations
-.annotation runtime Lkotlinx/serialization/Serializable;
-    with = Lcom/shopify/checkout/models/errors/DefaultsErrorCodeSerializer;
-.end annotation
-
-
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/shopify/checkout/models/errors/DefaultsErrorCode;
 
-.field public static final $cachedSerializer$delegate:LX/0tD;
+.field public static final $cachedSerializer$delegate:LX/3gS;
 
 .field public static final enum AddressMissingCountry:Lcom/shopify/checkout/models/errors/DefaultsErrorCode;
 
@@ -144,38 +140,51 @@
 
     .line 41
     .line 42
-    new-instance v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode$Companion;
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
     .line 43
     .line 44
-    invoke-direct {v0}, Lcom/shopify/checkout/models/errors/DefaultsErrorCode$Companion;-><init>()V
-
     .line 45
-    .line 46
-    .line 47
-    sput-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode;->Companion:Lcom/shopify/checkout/models/errors/DefaultsErrorCode$Companion;
-
-    .line 48
-    .line 49
-    sget-object v1, LX/6MG;->PUBLICATION:LX/6MG;
-
-    .line 50
-    .line 51
-    const/4 v0, 0x3
-
-    .line 52
-    invoke-static {v1, v0}, LX/4wr;->A00(LX/6MG;I)LX/0tD;
-
-    .line 53
-    .line 54
-    .line 55
     move-result-object v0
 
-    .line 56
-    sput-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode;->$cachedSerializer$delegate:LX/0tD;
+    .line 46
+    sput-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
+    .line 47
+    .line 48
+    new-instance v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode$Companion;
+
+    .line 49
+    .line 50
+    invoke-direct {v0}, Lcom/shopify/checkout/models/errors/DefaultsErrorCode$Companion;-><init>()V
+
+    .line 51
+    .line 52
+    .line 53
+    sput-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode;->Companion:Lcom/shopify/checkout/models/errors/DefaultsErrorCode$Companion;
+
+    .line 54
+    .line 55
+    sget-object v1, LX/2G8;->PUBLICATION:LX/2G8;
+
+    .line 56
     .line 57
+    const/16 v0, 0x14
+
     .line 58
+    .line 59
+    invoke-static {v1, v0}, LX/4Kh;->A00(LX/2G8;I)LX/3gS;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v0
+
+    .line 63
+    sput-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode;->$cachedSerializer$delegate:LX/3gS;
+
+    .line 64
+    .line 65
     return-void
 .end method
 
@@ -195,14 +204,22 @@
     return-void
 .end method
 
-.method public static final synthetic access$get$cachedSerializer$delegate$cp()LX/0tD;
+.method public static final synthetic access$get$cachedSerializer$delegate$cp()LX/3gS;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode;->$cachedSerializer$delegate:LX/0tD;
+    sget-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode;->$cachedSerializer$delegate:LX/3gS;
 
     .line 1
     .line 2
+    return-object v0
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/shopify/checkout/models/errors/DefaultsErrorCode;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
     return-object v0
 .end method
 

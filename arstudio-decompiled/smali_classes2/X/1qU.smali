@@ -3,67 +3,70 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SubtitlesRequestAPI$3"
+.implements LX/1yO;
 
 
 # instance fields
-.field public final synthetic A00:LX/3qJ;
-
-.field public final synthetic A01:LX/1qS;
-
-.field public final synthetic A02:Ljava/lang/Throwable;
+.field public final A00:LX/1ol;
 
 
 # direct methods
-.method public constructor <init>(LX/3qJ;LX/1qS;Ljava/lang/Throwable;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     .line 0
-    iput-object p2, p0, LX/1qU;->A01:LX/1qS;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/1qU;->A00:LX/3qJ;
-
     .line 3
+    const/16 v1, 0xa
+
     .line 4
-    iput-object p3, p0, LX/1qU;->A02:Ljava/lang/Throwable;
-
     .line 5
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, LX/1ol;
 
+    .line 6
     .line 7
+    invoke-direct {v0, v1}, LX/1ol;-><init>(I)V
+
     .line 8
     .line 9
+    .line 10
+    iput-object v0, p0, LX/1qU;->A00:LX/1ol;
+
+    .line 11
+    .line 12
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final AIC()Ljava/util/TreeMap;
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/1qU;->A00:LX/3qJ;
+    iget-object v2, p0, LX/1qU;->A00:LX/1ol;
 
     .line 1
     .line 2
-    iget-object v1, v0, LX/3qJ;->A00:Lcom/facebook/video/plugins/SubtitlePlugin;
+    new-instance v1, Ljava/util/TreeMap;
 
     .line 3
     .line 4
-    const/4 v0, 0x0
+    invoke-direct {v1}, Ljava/util/TreeMap;-><init>()V
 
     .line 5
-    invoke-virtual {v1, v0}, Lcom/facebook/video/plugins/SubtitlePlugin;->setSubtitles(LX/2XV;)V
-
     .line 6
     .line 7
+    iget-object v0, v2, Lcom/facebook/graphql/calls/GraphQlCallInput;->A00:LX/0V6;
+
     .line 8
-    return-void
+    .line 9
+    invoke-static {v0, v2, v1}, Lcom/facebook/graphql/calls/GraphQlCallInput;->A02(LX/0V6;Lcom/facebook/graphql/calls/GraphQlCallInput;Ljava/util/Map;)V
+
+    .line 10
+    .line 11
+    .line 12
+    return-object v1
 .end method

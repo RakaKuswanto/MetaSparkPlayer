@@ -1,11 +1,8 @@
-.class public interface abstract LX/2tj;
+.class public interface abstract LX/2tJ;
 .super Ljava/lang/Object;
 .source ""
 
 
 # virtual methods
-.method public abstract A9Y(Ljava/lang/Object;)V
-.end method
-
-.method public abstract A9Z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract Amo(Ljava/lang/String;)Z
 .end method

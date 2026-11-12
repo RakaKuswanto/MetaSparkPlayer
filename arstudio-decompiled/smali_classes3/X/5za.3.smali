@@ -1,11 +1,68 @@
-.class public interface abstract LX/5za;
+.class public final LX/5za;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# virtual methods
-.method public abstract AN1()Lcom/google/android/exoplayer2/Timeline;
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "CameraCaptureCoordinator$10"
+
+
+# instance fields
+.field public final synthetic A00:LX/5zN;
+
+
+# direct methods
+.method public constructor <init>(LX/5zN;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/5za;->A00:LX/5zN;
+
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method
 
-.method public abstract ANU()Ljava/lang/Object;
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .line 0
+    iget-object v1, p0, LX/5za;->A00:LX/5zN;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    iput-object v0, v1, LX/5zN;->A05:LX/5xp;
+
+    .line 4
+    .line 5
+    iput-object v0, v1, LX/5zN;->A01:LX/5wr;
+
+    .line 6
+    .line 7
+    iput-object v0, v1, LX/5zN;->A08:LX/5x1;
+
+    .line 8
+    .line 9
+    iput-object v0, v1, LX/5zN;->A02:LX/5zJ;
+
+    .line 10
+    .line 11
+    iput-object v0, v1, LX/5zN;->A0H:LX/5u4;
+
+    .line 12
+    .line 13
+    return-void
 .end method

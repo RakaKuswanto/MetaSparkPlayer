@@ -1,146 +1,95 @@
-.class public final LX/4iS;
-.super LX/4me;
+.class public abstract LX/4iS;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
+# static fields
+.field public static final A00:Landroid/view/animation/Interpolator;
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public static final A01:LX/4kx;
 
-.field public A01:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
+.field public static final A02:LX/4kx;
 
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public static final A03:LX/4kx;
 
-.field public A02:I
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A03:LX/4nC;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xc
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A04:LX/4nC;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xc
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A05:LX/1bH;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A06:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = true
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A07:Z
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0x3
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
+.field public static final A04:LX/6YL;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    const-string v0, "SurveySingleResponseOptionComponent"
+    sget-object v0, LX/4lG;->A02:LX/4lG;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
+    new-instance v2, LX/4jX;
 
     .line 3
     .line 4
+    invoke-direct {v2, v0}, LX/4jX;-><init>(LX/4lG;)V
+
     .line 5
-    const/4 v1, 0x0
-
     .line 6
-    iput-boolean v1, p0, LX/4iS;->A06:Z
-
     .line 7
-    .line 8
-    const/4 v0, 0x0
+    sput-object v2, LX/4iS;->A03:LX/4kx;
 
+    .line 8
     .line 9
-    iput-object v0, p0, LX/4iS;->A03:LX/4nC;
+    sget-object v1, LX/4lG;->A03:LX/4lG;
 
     .line 10
     .line 11
-    sget v0, LX/4ke;->A00:I
+    new-instance v0, LX/4jX;
 
     .line 12
     .line 13
-    iput v0, p0, LX/4iS;->A00:I
+    invoke-direct {v0, v1}, LX/4jX;-><init>(LX/4lG;)V
 
     .line 14
     .line 15
-    const v0, 0x7f070022
-
     .line 16
+    sput-object v0, LX/4iS;->A02:LX/4kx;
+
     .line 17
     .line 18
-    iput v0, p0, LX/4iS;->A01:I
+    sget-object v0, LX/6YL;->LOCAL:LX/6YL;
 
     .line 19
     .line 20
-    iput v1, p0, LX/4iS;->A02:I
+    sput-object v0, LX/4iS;->A04:LX/6YL;
 
     .line 21
     .line 22
+    sput-object v2, LX/4iS;->A01:LX/4kx;
+
+    .line 23
+    .line 24
+    new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
+
+    .line 25
+    .line 26
+    invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
+
+    .line 27
+    .line 28
+    .line 29
+    sput-object v0, LX/4iS;->A00:Landroid/view/animation/Interpolator;
+
+    .line 30
+    .line 31
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
     return-void
 .end method

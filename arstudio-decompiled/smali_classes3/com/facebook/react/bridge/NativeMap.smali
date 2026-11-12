@@ -3,20 +3,37 @@
 .source ""
 
 
+# static fields
+.field public static final Companion:LX/4s7;
+
+
 # instance fields
-.field public mHybridData:Lcom/facebook/jni/HybridData;
+.field public final mHybridData:Lcom/facebook/jni/HybridData;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-static {}, LX/5OU;->A00()V
+    new-instance v0, LX/4s7;
 
     .line 1
     .line 2
+    invoke-direct {v0}, LX/4s7;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
+    sput-object v0, Lcom/facebook/react/bridge/NativeMap;->Companion:LX/4s7;
+
+    .line 6
+    .line 7
+    invoke-static {}, LX/4rv;->A00()V
+
+    .line 8
+    .line 9
+    .line 10
     return-void
 .end method
 

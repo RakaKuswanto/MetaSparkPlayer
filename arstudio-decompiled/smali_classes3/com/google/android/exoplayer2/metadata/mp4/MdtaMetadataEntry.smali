@@ -25,11 +25,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x50
+    const/16 v0, 0x2f
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
 
     .line 3
     .line 4
@@ -134,7 +134,7 @@
 
 
 # virtual methods
-.method public final synthetic AOK()[B
+.method public final synthetic AMs()[B
     .locals 1
 
     .line 0
@@ -144,7 +144,7 @@
     return-object v0
 .end method
 
-.method public final synthetic AOL()Lcom/google/android/exoplayer2/Format;
+.method public final synthetic AMt()LX/5Fy;
     .locals 1
 
     .line 0
@@ -154,7 +154,7 @@
     return-object v0
 .end method
 
-.method public final synthetic Ag1(LX/60r;)V
+.method public final synthetic AeP(LX/5Qb;)V
     .locals 0
 
     return-void
@@ -297,51 +297,59 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yf;->A06(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     .line 3
     .line 4
     .line 5
-    move-result v1
+    move-result v0
 
     .line 6
-    iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;->A03:[B
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 7
     .line 8
+    .line 9
+    move-result v1
+
+    .line 10
+    iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;->A03:[B
+
+    .line 11
+    .line 12
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
 
-    .line 9
-    .line 10
-    .line 11
-    move-result v0
-
-    .line 12
-    add-int/2addr v1, v0
-
     .line 13
-    mul-int/lit8 v1, v1, 0x1f
-
     .line 14
     .line 15
-    iget v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;->A00:I
+    move-result v0
 
     .line 16
-    .line 17
     add-int/2addr v1, v0
 
-    .line 18
+    .line 17
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 18
     .line 19
-    .line 20
-    iget v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;->A01:I
+    iget v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;->A00:I
 
+    .line 20
     .line 21
-    .line 22
     add-int/2addr v1, v0
 
+    .line 22
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 23
+    .line 24
+    iget v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;->A01:I
+
+    .line 25
+    .line 26
+    add-int/2addr v1, v0
+
+    .line 27
     return v1
 .end method
 
@@ -357,7 +365,7 @@
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 5
     .line 6
@@ -365,7 +373,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 9
     .line 10

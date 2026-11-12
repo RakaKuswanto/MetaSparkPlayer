@@ -3,33 +3,80 @@
 .source ""
 
 
-# instance fields
-.field public A00:Landroid/view/View;
+# static fields
+.field public static A00:Lcom/facebook/rendercore/MountItemsPool$PoolsActivityCallback;
 
-.field public A01:Landroid/widget/ImageView;
+.field public static final A01:Ljava/lang/Object;
 
-.field public A02:Landroid/widget/ProgressBar;
+.field public static final A02:Ljava/util/Map;
 
-.field public A03:Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataModel;
+.field public static final A03:Ljava/util/WeakHashMap;
 
-.field public A04:LX/41N;
-
-.field public A05:LX/4Qk;
-
-.field public A06:Z
-
-.field public A07:Z
-
-.field public final A08:Landroid/content/Context;
-
-.field public final A09:Landroid/view/View;
-
-.field public final A0A:LX/4Ed;
+.field public static final A04:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/View;Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataModel;LX/4Ed;Z)V
-    .locals 8
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    sput-object v0, LX/4K4;->A01:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x4
+
+    .line 7
+    invoke-static {v0}, LX/0X7;->A0b(I)Ljava/util/HashMap;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    sput-object v0, LX/4K4;->A02:Ljava/util/Map;
+
+    .line 12
+    .line 13
+    new-instance v0, Ljava/util/WeakHashMap;
+
+    .line 14
+    .line 15
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/4K4;->A03:Ljava/util/WeakHashMap;
+
+    .line 19
+    .line 20
+    invoke-static {}, LX/435;->A0B()Ljava/lang/ThreadLocal;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    sput-object v0, LX/4K4;->A04:Ljava/lang/ThreadLocal;
+
+    .line 25
+    .line 26
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,417 +84,343 @@
     .line 1
     .line 2
     .line 3
-    const/4 v2, 0x0
+    return-void
+.end method
+
+.method public static final A00(Landroid/content/Context;LX/4K5;I)LX/4K6;
+    .locals 6
+
+    .line 0
+    invoke-interface {p1}, LX/4K5;->APo()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
 
     .line 4
-    iput-boolean v2, p0, LX/4K4;->A06:Z
+    const/4 v5, 0x0
 
     .line 5
+    if-nez v0, :cond_5
+
     .line 6
-    iput-object p1, p0, LX/4K4;->A08:Landroid/content/Context;
-
     .line 7
+    if-lez p2, :cond_5
+
     .line 8
-    iput-object p2, p0, LX/4K4;->A09:Landroid/view/View;
-
     .line 9
-    .line 10
-    iput-object p4, p0, LX/4K4;->A0A:LX/4Ed;
+    sget-object v4, LX/4K4;->A01:Ljava/lang/Object;
 
+    .line 10
     .line 11
+    monitor-enter v4
+
     .line 12
-    iput-object p3, p0, LX/4K4;->A03:Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataModel;
+    :try_start_0
+    sget-object v2, LX/4K4;->A02:Ljava/util/Map;
 
     .line 13
     .line 14
-    iput-boolean p5, p0, LX/4K4;->A07:Z
+    invoke-interface {v2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 15
     .line 16
-    const/4 v4, 0x1
-
     .line 17
-    iput-boolean v4, p0, LX/4K4;->A06:Z
+    move-result-object v3
 
     .line 18
-    .line 19
-    const v0, 0x7f0a036a
+    check-cast v3, Ljava/util/Map;
 
+    .line 19
     .line 20
+    if-nez v3, :cond_3
+
     .line 21
     .line 22
-    invoke-static {p2, v0}, LX/4BF;->A0c(Landroid/view/View;I)Landroid/view/ViewStub;
+    move-object v1, p0
 
     .line 23
+    :goto_0
+    instance-of v0, v1, Landroid/content/ContextWrapper;
+
     .line 24
     .line 25
-    move-result-object v1
+    if-eqz v0, :cond_0
 
     .line 26
-    const v0, 0x7f0d00ce
-
     .line 27
+    instance-of v0, v1, Landroid/app/Activity;
+
     .line 28
     .line 29
-    invoke-static {v1, v0}, LX/4BE;->A0X(Landroid/view/ViewStub;I)Landroid/view/View;
+    if-nez v0, :cond_0
 
     .line 30
     .line 31
-    .line 32
-    move-result-object v0
+    instance-of v0, v1, Landroid/app/Application;
 
+    .line 32
     .line 33
-    iput-object v0, p0, LX/4K4;->A00:Landroid/view/View;
+    if-nez v0, :cond_0
 
     .line 34
     .line 35
-    iget-object v7, p0, LX/4K4;->A03:Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataModel;
+    instance-of v0, v1, Landroid/app/Service;
 
     .line 36
     .line 37
-    iget-object v0, v7, Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataModel;->A00:Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataDisplay;
+    if-nez v0, :cond_0
 
     .line 38
     .line 39
-    iget-object v1, v0, Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataDisplay;->A08:Ljava/lang/String;
+    check-cast v1, Landroid/content/ContextWrapper;
 
     .line 40
     .line 41
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     .line 42
     .line 43
     .line 44
-    move-result v0
+    move-result-object v1
 
     .line 45
-    if-eqz v0, :cond_0
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 46
     .line 47
-    const-string v1, "#000000"
-
     .line 48
+    goto :goto_0
+
     .line 49
     :cond_0
-    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    sget-object v0, LX/4K4;->A03:Ljava/util/WeakHashMap;
 
     .line 50
     .line 51
+    invoke-virtual {v0, v1}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+
     .line 52
-    move-result v5
-
     .line 53
-    iget-object v1, p0, LX/4K4;->A00:Landroid/view/View;
-
     .line 54
+    move-result v0
+
     .line 55
-    const v0, 0x7f0a0369
+    if-eqz v0, :cond_1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 56
     .line 57
+    monitor-exit v4
+
     .line 58
-    invoke-static {v1, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
+    return-object v5
 
     .line 59
+    :cond_1
+    :try_start_1
+    sget-object v0, LX/4K4;->A00:Lcom/facebook/rendercore/MountItemsPool$PoolsActivityCallback;
+
     .line 60
     .line 61
-    move-result-object v0
+    if-nez v0, :cond_2
 
     .line 62
-    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
     .line 63
+    new-instance v0, Lcom/facebook/rendercore/MountItemsPool$PoolsActivityCallback;
+
     .line 64
     .line 65
-    move-result-object v0
+    invoke-direct {v0}, Lcom/facebook/rendercore/MountItemsPool$PoolsActivityCallback;-><init>()V
 
     .line 66
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
-
     .line 67
     .line 68
-    invoke-virtual {v0, v5}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+    sput-object v0, LX/4K4;->A00:Lcom/facebook/rendercore/MountItemsPool$PoolsActivityCallback;
 
     .line 69
     .line 70
-    .line 71
-    iget-object v3, p0, LX/4K4;->A08:Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
+    .line 71
     .line 72
     .line 73
-    const v0, 0x7f0800b4
+    move-result-object v1
 
     .line 74
+    const/16 v0, 0x12
+
     .line 75
     .line 76
-    invoke-static {v3, v0}, LX/4F2;->A02(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, LX/000;->A00(I)Ljava/lang/String;
 
     .line 77
     .line 78
     .line 79
-    move-result-object v1
+    move-result-object v0
 
     .line 80
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 81
     .line 82
-    invoke-virtual {v1, v5, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
-
     .line 83
+    check-cast v1, Landroid/app/Application;
+
     .line 84
     .line 85
-    iget-object v6, p0, LX/4K4;->A00:Landroid/view/View;
+    sget-object v0, LX/4K4;->A00:Lcom/facebook/rendercore/MountItemsPool$PoolsActivityCallback;
 
     .line 86
     .line 87
-    iget-object v5, v7, Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataModel;->A00:Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataDisplay;
+    invoke-virtual {v1, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     .line 88
     .line 89
-    iget-object v0, v5, Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataDisplay;->A00:Ljava/lang/Boolean;
-
     .line 90
-    .line 91
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    :cond_2
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
+    .line 91
     .line 92
     .line 93
+    move-result-object v3
+
     .line 94
-    move-result v0
+    invoke-interface {v2, p0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 95
-    if-eqz v0, :cond_1
-
     .line 96
     .line 97
-    const v0, 0x7f0a0496
+    :cond_3
+    invoke-interface {p1}, LX/4K5;->AIm()Ljava/lang/Class;
 
     .line 98
     .line 99
     .line 100
-    invoke-static {v6, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
-
-    .line 101
-    .line 102
-    .line 103
     move-result-object v1
 
+    .line 101
+    invoke-interface {v3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 102
+    .line 103
     .line 104
-    check-cast v1, LX/41N;
+    move-result-object v0
 
     .line 105
+    check-cast v0, LX/4K6;
+
     .line 106
-    iput-object v1, p0, LX/4K4;->A04:LX/41N;
-
     .line 107
+    if-nez v0, :cond_4
+
     .line 108
-    iget-object v0, v5, Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataDisplay;->A06:Ljava/lang/String;
-
     .line 109
-    .line 110
-    invoke-virtual {v1, v0}, LX/41N;->setImageURI(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, LX/4K5;->A6Y(I)LX/4K6;
 
+    .line 110
     .line 111
     .line 112
+    move-result-object v0
+
     .line 113
-    const v0, 0x7f0a0497
+    if-nez v0, :cond_4
 
     .line 114
     .line 115
-    .line 116
-    invoke-static {v6, v0}, LX/4BF;->A0p(Landroid/view/View;I)LX/4Qk;
+    new-instance v0, LX/4Pb;
 
+    .line 116
     .line 117
+    invoke-direct {v0, v1, p2}, LX/4Pb;-><init>(Ljava/lang/Class;I)V
+
     .line 118
     .line 119
-    move-result-object v1
-
     .line 120
-    iput-object v1, p0, LX/4K4;->A05:LX/4Qk;
+    :cond_4
+    invoke-interface {v3, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 121
     .line 122
-    iget-object v0, v5, Lcom/facebook/browser/lite/extensions/ldp/model/LDPChromeDataDisplay;->A07:Ljava/lang/String;
-
     .line 123
+    monitor-exit v4
+
     .line 124
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return-object v0
 
     .line 125
+    :catchall_0
+    move-exception v0
+
     .line 126
+    monitor-exit v4
+
     .line 127
-    :cond_1
-    iget-object v1, p0, LX/4K4;->A00:Landroid/view/View;
+    throw v0
 
     .line 128
-    .line 129
-    const v0, 0x7f0a01f7
-
-    .line 130
-    .line 131
-    .line 132
-    invoke-static {v1, v0}, LX/4BF;->A0e(Landroid/view/View;I)Landroid/widget/ImageView;
-
-    .line 133
-    .line 134
-    .line 135
-    move-result-object v0
-
-    .line 136
-    iput-object v0, p0, LX/4K4;->A01:Landroid/widget/ImageView;
-
-    .line 137
-    .line 138
-    invoke-virtual {v0, v4}, Landroid/view/View;->setClickable(Z)V
-
-    .line 139
-    .line 140
-    .line 141
-    iget-object v1, p0, LX/4K4;->A01:Landroid/widget/ImageView;
-
-    .line 142
-    .line 143
-    const v0, 0x7f0800b6
-
-    .line 144
-    .line 145
-    .line 146
-    invoke-static {v3, v0}, LX/4F2;->A02(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    .line 147
-    .line 148
-    .line 149
-    move-result-object v0
-
-    .line 150
-    invoke-virtual {v1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    .line 151
-    .line 152
-    .line 153
-    iget-object v1, p0, LX/4K4;->A01:Landroid/widget/ImageView;
-
-    .line 154
-    .line 155
-    const v0, 0x7f0807d5
-
-    .line 156
-    .line 157
-    .line 158
-    invoke-static {v3, v1, v0}, LX/4F2;->A04(Landroid/content/Context;Landroid/widget/ImageView;I)V
-
-    .line 159
-    .line 160
-    .line 161
-    iget-object v1, p0, LX/4K4;->A01:Landroid/widget/ImageView;
-
-    .line 162
-    .line 163
-    const v0, 0x7f120049
-
-    .line 164
-    .line 165
-    .line 166
-    invoke-static {v3, v1, v0}, LX/4BF;->A1D(Landroid/content/Context;Landroid/view/View;I)V
-
-    .line 167
-    .line 168
-    .line 169
-    iget-object v1, p0, LX/4K4;->A01:Landroid/widget/ImageView;
-
-    .line 170
-    .line 171
-    const/16 v0, 0x43
-
-    .line 172
-    .line 173
-    invoke-static {v1, p0, v0}, LX/6PP;->A01(Landroid/view/View;Ljava/lang/Object;I)V
-
-    .line 174
-    .line 175
-    .line 176
-    iget-object v1, p0, LX/4K4;->A00:Landroid/view/View;
-
-    .line 177
-    .line 178
-    const v0, 0x7f0a036f
-
-    .line 179
-    .line 180
-    .line 181
-    invoke-static {v1, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
-
-    .line 182
-    .line 183
-    .line 184
-    move-result-object v0
-
-    .line 185
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    .line 186
-    .line 187
-    iput-object v0, p0, LX/4K4;->A02:Landroid/widget/ProgressBar;
-
-    .line 188
-    .line 189
-    invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setProgress(I)V
-
-    .line 190
-    .line 191
-    .line 192
-    const v0, 0x7f0a036b
-
-    .line 193
-    .line 194
-    .line 195
-    invoke-static {v1, v0}, LX/03G;->A0B(Landroid/view/View;I)Landroid/view/View;
-
-    .line 196
-    .line 197
-    .line 198
-    move-result-object v1
-
-    .line 199
-    iget-boolean v0, p0, LX/4K4;->A07:Z
-
-    .line 200
-    .line 201
-    invoke-static {v0}, LX/4BD;->A04(I)I
-
-    .line 202
-    .line 203
-    .line 204
-    move-result v0
-
-    .line 205
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 206
-    .line 207
-    .line 208
-    return-void
+    :cond_5
+    return-object v5
 .end method
 
-
-# virtual methods
-.method public final A00(I)V
-    .locals 2
+.method public static final A01(Landroid/content/Context;LX/4K5;)Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/4K4;->A02:Landroid/widget/ProgressBar;
-
-    .line 1
-    .line 2
     const/4 v0, 0x1
 
-    .line 3
-    invoke-virtual {v1, p1, v0}, Landroid/widget/ProgressBar;->setProgress(IZ)V
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
+    .line 3
     .line 4
+    invoke-interface {p1}, LX/4K5;->AeN()I
+
     .line 5
     .line 6
-    return-void
+    .line 7
+    move-result v0
+
+    .line 8
+    invoke-static {p0, p1, v0}, LX/4K4;->A00(Landroid/content/Context;LX/4K5;I)LX/4K6;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    if-eqz v0, :cond_0
+
+    .line 13
+    .line 14
+    invoke-interface {v0, p1}, LX/4K6;->A2W(LX/4K5;)Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    if-nez v0, :cond_1
+
+    .line 19
+    .line 20
+    :cond_0
+    invoke-interface {p1, p0}, LX/4K5;->A6W(Landroid/content/Context;)Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    :cond_1
+    return-object v0
 .end method

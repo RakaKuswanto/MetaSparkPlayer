@@ -1,103 +1,97 @@
-.class public final LX/2Jj;
-.super LX/2Jh;
+.class public final synthetic LX/2Jj;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "FbFragmentActivityImpl$$ExternalSyntheticLambda4"
 
 
 # instance fields
-.field public final synthetic A00:LX/2Jf;
+.field public final synthetic A00:Landroid/view/MotionEvent;
 
 
 # direct methods
-.method public constructor <init>(LX/2Jf;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/view/MotionEvent;)V
+    .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/2Jj;->A00:LX/2Jf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    iget-object v0, p1, LX/2Jf;->A00:LX/2Jd;
+    iput-object p1, p0, LX/2Jj;->A00:Landroid/view/MotionEvent;
 
-    .line 3
-    .line 4
-    invoke-direct {p0, v0}, LX/2Jh;-><init>(LX/2Jd;)V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic next()Ljava/lang/Object;
-    .locals 3
+.method public final run()V
+    .locals 4
 
     .line 0
-    iget-object v2, p0, LX/2Jh;->A02:LX/2Je;
+    iget-object v2, p0, LX/2Jj;->A00:Landroid/view/MotionEvent;
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/2Jh;->A03:LX/2Jd;
+    sget-object v3, LX/2J2;->A03:LX/2J2;
 
     .line 3
     .line 4
-    iget-object v0, v1, LX/2Jd;->header:LX/2Je;
+    invoke-virtual {v2}, Landroid/view/MotionEvent;->getAction()I
 
     .line 5
     .line 6
-    if-eq v2, v0, :cond_1
-
     .line 7
+    move-result v1
+
     .line 8
-    iget v1, v1, LX/2Jd;->modCount:I
+    const/4 v0, 0x1
 
     .line 9
-    .line 10
-    iget v0, p0, LX/2Jh;->A00:I
-
-    .line 11
-    .line 12
     if-ne v1, v0, :cond_0
 
+    .line 10
+    .line 11
+    invoke-virtual {v2}, Landroid/view/InputEvent;->getEventTime()J
+
+    .line 12
     .line 13
     .line 14
-    iget-object v0, v2, LX/2Je;->A04:LX/2Je;
+    move-result-wide v1
 
     .line 15
+    iget-object v0, v3, LX/2J2;->A02:Ljava/util/concurrent/atomic/AtomicLong;
+
     .line 16
-    iput-object v0, p0, LX/2Jh;->A02:LX/2Je;
-
     .line 17
-    .line 18
-    iput-object v2, p0, LX/2Jh;->A01:LX/2Je;
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
+    .line 18
     .line 19
     .line 20
-    return-object v2
+    iget-object v2, v3, LX/2J2;->A01:Ljava/util/concurrent/atomic/AtomicLong;
 
     .line 21
-    :cond_0
-    new-instance v0, Ljava/util/ConcurrentModificationException;
-
     .line 22
-    .line 23
-    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
+    iget-object v0, v3, LX/2J2;->A00:LX/0I5;
 
+    .line 23
     .line 24
+    invoke-interface {v0}, LX/0I5;->now()J
+
     .line 25
     .line 26
-    throw v0
-
     .line 27
-    :cond_1
-    invoke-static {}, LX/0Yj;->A0d()Ljava/util/NoSuchElementException;
+    move-result-wide v0
 
     .line 28
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
     .line 29
     .line 30
-    move-result-object v0
-
     .line 31
-    throw v0
+    :cond_0
+    return-void
 .end method

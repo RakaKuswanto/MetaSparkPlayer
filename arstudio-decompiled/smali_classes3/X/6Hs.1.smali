@@ -1,71 +1,38 @@
 .class public final LX/6Hs;
-.super Ljava/lang/Object;
+.super LX/6Lh;
 .source ""
 
 # interfaces
-.implements LX/5ui;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final serialVersionUID:J = 0x1L
+
+
+# instance fields
+.field public final _delegate:Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+.field public final _keyClass:Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/fasterxml/jackson/databind/JsonDeserializer;Ljava/lang/Class;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/6Lh;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput-object p2, p0, LX/6Hs;->_keyClass:Ljava/lang/Class;
 
-
-# virtual methods
-.method public final bridge synthetic Afe(Landroid/net/Uri;Ljava/io/InputStream;)Ljava/lang/Object;
-    .locals 2
-
-    .line 0
-    new-instance v1, Ljava/io/InputStreamReader;
-
-    .line 1
-    .line 2
-    invoke-direct {v1, p2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
-
-    .line 3
     .line 4
     .line 5
-    new-instance v0, Ljava/io/BufferedReader;
+    iput-object p1, p0, LX/6Hs;->_delegate:Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     .line 6
     .line 7
-    invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
-
-    .line 8
-    .line 9
-    .line 10
-    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->A0E(Ljava/lang/String;)J
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-wide v0
-
-    .line 18
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    return-object v0
+    return-void
 .end method

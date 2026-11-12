@@ -1,10 +1,10 @@
-.class public final Lcom/facebook/models/EvaluatorManager;
+.class public abstract Lcom/facebook/models/EvaluatorManager;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final Companion:LX/1uO;
+.field public static final Companion:LX/0mM;
 
 
 # instance fields
@@ -16,16 +16,16 @@
     .locals 1
 
     .line 0
-    new-instance v0, LX/1uO;
+    new-instance v0, LX/0mM;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/1uO;-><init>()V
+    invoke-direct {v0}, LX/0mM;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/models/EvaluatorManager;->Companion:LX/1uO;
+    sput-object v0, Lcom/facebook/models/EvaluatorManager;->Companion:LX/0mM;
 
     .line 6
     .line 7
@@ -34,7 +34,7 @@
     .line 8
     .line 9
     .line 10
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
 
     .line 11
     .line 12

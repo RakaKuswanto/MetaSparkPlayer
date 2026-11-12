@@ -1,47 +1,29 @@
 .class public final LX/0a0;
-.super Ljava/lang/Object;
+.super Ljava/lang/Exception;
 .source ""
 
 
 # instance fields
-.field public A00:LX/1zG;
-
-.field public final A01:LX/0Na;
+.field public final errorCode:I
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x9
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/0Zq;->A0D()LX/0Zq;
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
+    .line 3
     .line 4
     .line 5
+    iput v0, p0, LX/0a0;->errorCode:I
+
     .line 6
-    move-result-object v0
-
     .line 7
-    iput-object v0, p0, LX/0a0;->A01:LX/0Na;
-
-    .line 8
-    .line 9
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 10
-    .line 11
-    .line 12
-    move-result-object v0
-
-    .line 13
-    iput-object v0, p0, LX/0a0;->A00:LX/1zG;
-
-    .line 14
-    .line 15
     return-void
 .end method

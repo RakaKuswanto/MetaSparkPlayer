@@ -1,62 +1,68 @@
 .class public final LX/37y;
-.super LX/4uZ;
+.super Lcom/facebook/tigon/TigonXplatBodyProvider;
 .source ""
 
 
 # instance fields
-.field public final synthetic A00:LX/37p;
+.field public final A00:Lorg/apache/http/HttpEntity;
+
+.field public final A01:I
+
+.field public final A02:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(LX/37p;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lorg/apache/http/HttpEntity;I)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/37y;->A00:LX/37p;
+    invoke-direct {p0}, Lcom/facebook/tigon/TigonXplatBodyProvider;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/4uZ;-><init>()V
-
     .line 3
+    iput-object p2, p0, LX/37y;->A00:Lorg/apache/http/HttpEntity;
+
     .line 4
     .line 5
+    iput-object p1, p0, LX/37y;->A02:Ljava/util/concurrent/Executor;
+
+    .line 6
+    .line 7
+    iput p3, p0, LX/37y;->A01:I
+
+    .line 8
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 2
+.method public final beginStream(Lcom/facebook/tigon/TigonBodyStream;)V
+    .locals 3
 
     .line 0
-    iget-object v1, p0, LX/37y;->A00:LX/37p;
+    iget-object v2, p0, LX/37y;->A02:Ljava/util/concurrent/Executor;
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    iget v1, p0, LX/37y;->A01:I
 
     .line 3
-    invoke-static {v1, p2, v0}, LX/37p;->A03(LX/37p;IZ)V
-
     .line 4
+    new-instance v0, LX/37z;
+
     .line 5
     .line 6
-    return-void
-.end method
+    invoke-direct {v0, p1, p0, v1}, LX/37z;-><init>(Lcom/facebook/tigon/TigonBodyStream;LX/37y;I)V
 
-.method public final onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 1
+    .line 7
+    .line 8
+    .line 9
+    invoke-interface {v2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 0
-    iget-object v0, p0, LX/37y;->A00:LX/37p;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p3}, LX/37p;->A05(I)V
-
-    .line 3
-    .line 4
-    .line 5
+    .line 10
+    .line 11
+    .line 12
     return-void
 .end method

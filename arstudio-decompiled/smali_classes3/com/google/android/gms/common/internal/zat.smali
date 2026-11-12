@@ -22,21 +22,22 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x3
+    const/16 v0, 0x44
 
     .line 1
-    invoke-static {v0}, LX/58O;->A02(I)LX/58O;
-
     .line 2
+    invoke-static {v0}, LX/51p;->A02(I)LX/51p;
+
     .line 3
     .line 4
+    .line 5
     move-result-object v0
 
-    .line 5
+    .line 6
     sput-object v0, Lcom/google/android/gms/common/internal/zat;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 6
     .line 7
+    .line 8
     return-void
 .end method
 
@@ -74,66 +75,58 @@
     .locals 3
 
     .line 0
-    invoke-static {p1}, LX/57v;->A00(Landroid/os/Parcel;)I
+    iget v0, p0, Lcom/google/android/gms/common/internal/zat;->A00:I
 
     .line 1
     .line 2
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;->A01(Landroid/os/Parcel;I)I
+
     .line 3
+    .line 4
+    .line 5
     move-result v2
 
-    .line 4
-    iget v1, p0, Lcom/google/android/gms/common/internal/zat;->A00:I
-
-    .line 5
     .line 6
-    const/4 v0, 0x1
-
-    .line 7
-    invoke-static {p1, v0, v1}, LX/57v;->A04(Landroid/os/Parcel;II)V
-
-    .line 8
-    .line 9
-    .line 10
     iget-object v1, p0, Lcom/google/android/gms/common/internal/zat;->A02:Landroid/accounts/Account;
 
-    .line 11
-    .line 12
+    .line 7
+    .line 8
     const/4 v0, 0x2
 
-    .line 13
-    invoke-static {p1, v1, v0, p2}, LX/57v;->A07(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
+    .line 9
+    invoke-static {p1, v1, v0, p2}, LX/51b;->A05(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
 
-    .line 14
-    .line 15
-    .line 16
+    .line 10
+    .line 11
+    .line 12
     iget v1, p0, Lcom/google/android/gms/common/internal/zat;->A01:I
 
-    .line 17
-    .line 18
+    .line 13
+    .line 14
     const/4 v0, 0x3
 
-    .line 19
-    invoke-static {p1, v0, v1}, LX/57v;->A04(Landroid/os/Parcel;II)V
+    .line 15
+    invoke-static {p1, v0, v1}, LX/51b;->A03(Landroid/os/Parcel;II)V
 
-    .line 20
-    .line 21
-    .line 22
+    .line 16
+    .line 17
+    .line 18
     iget-object v1, p0, Lcom/google/android/gms/common/internal/zat;->A03:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
-    .line 23
-    .line 24
+    .line 19
+    .line 20
     const/4 v0, 0x4
 
-    .line 25
-    invoke-static {p1, v1, v0, p2}, LX/57v;->A07(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
+    .line 21
+    invoke-static {p1, v1, v0, p2}, LX/51b;->A05(Landroid/os/Parcel;Landroid/os/Parcelable;II)V
 
+    .line 22
+    .line 23
+    .line 24
+    invoke-static {p1, v2}, LX/51b;->A02(Landroid/os/Parcel;I)V
+
+    .line 25
     .line 26
     .line 27
-    .line 28
-    invoke-static {p1, v2}, LX/57v;->A03(Landroid/os/Parcel;I)V
-
-    .line 29
-    .line 30
-    .line 31
     return-void
 .end method

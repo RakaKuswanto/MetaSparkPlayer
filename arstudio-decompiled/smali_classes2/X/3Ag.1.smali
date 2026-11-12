@@ -1,36 +1,13 @@
-.class public final LX/3Ag;
+.class public abstract LX/3ag;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/0Gk;
+# static fields
+.field public static A00:LX/2MU;
 
-.field public final A01:LX/2n8;
+.field public static A01:LX/2MU;
 
+.field public static A02:LX/2MU;
 
-# direct methods
-.method public constructor <init>(LX/0Gk;LX/2n8;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p1, p2}, LX/0Yc;->A0M(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 1
-    .line 2
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    .line 5
-    .line 6
-    iput-object p1, p0, LX/3Ag;->A00:LX/0Gk;
-
-    .line 7
-    .line 8
-    iput-object p2, p0, LX/3Ag;->A01:LX/2n8;
-
-    .line 9
-    .line 10
-    return-void
-.end method
+.field public static A03:LX/2MU;

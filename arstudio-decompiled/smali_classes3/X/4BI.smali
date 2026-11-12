@@ -1,112 +1,98 @@
-.class public final LX/4BI;
+.class public abstract LX/4BI;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
-
 
 # static fields
-.field public static A02:LX/4BI;
-
-
-# instance fields
-.field public A00:LX/4Bz;
-
-.field public A01:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public static A00:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+.method public static A00(Landroid/content/Context;)Z
     .locals 5
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yd;->A1Z(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v4, 0x0
 
     .line 1
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
     .line 2
     .line 3
-    move-result v1
-
     .line 4
-    iget-object v0, p0, LX/4BI;->A00:LX/4Bz;
+    move-result-object v3
 
     .line 5
+    const/4 v2, 0x1
+
     .line 6
-    if-eqz v0, :cond_3
+    sget-object v0, LX/4BI;->A00:Ljava/lang/Boolean;
 
     .line 7
     .line 8
-    new-instance v4, LX/4Bw;
+    if-nez v0, :cond_0
 
     .line 9
     .line 10
-    invoke-direct {v4, p2}, LX/4Bw;-><init>(Ljava/lang/Throwable;)V
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 11
     .line 12
+    const/16 v0, 0x1d
+
     .line 13
-    iget-object v3, v0, LX/4Bz;->A00:LX/4BG;
-
     .line 14
+    if-le v1, v0, :cond_1
+
     .line 15
-    iget-object v2, v3, LX/4BG;->A0W:LX/4BH;
-
     .line 16
-    .line 17
-    iget-boolean v0, v2, LX/4BH;->A0b:Z
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 17
     .line 18
     .line 19
-    if-eqz v0, :cond_0
+    move-result-object v0
 
     .line 20
+    :goto_0
+    sput-object v0, LX/4BI;->A00:Ljava/lang/Boolean;
+
     .line 21
-    iput-boolean v1, v2, LX/4BH;->A0U:Z
-
     .line 22
-    .line 23
     :cond_0
-    invoke-virtual {v4}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
+    .line 23
     .line 24
     .line 25
+    move-result v0
+
     .line 26
-    move-result-object v1
+    return v0
 
     .line 27
-    iget-boolean v0, v2, LX/4BH;->A0b:Z
+    :cond_1
+    const/16 v0, 0x18
 
     .line 28
     .line 29
-    if-eqz v0, :cond_1
+    if-ge v1, v0, :cond_2
 
     .line 30
     .line 31
-    iput-object v1, v2, LX/4BH;->A0M:Ljava/lang/String;
+    sput-object v3, LX/4BI;->A00:Ljava/lang/Boolean;
 
     .line 32
     .line 33
-    :cond_1
-    iget-object v2, v3, LX/4BG;->A0W:LX/4BH;
+    move-object v0, v3
 
     .line 34
+    goto :goto_1
+
     .line 35
-    invoke-static {v4}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+    :cond_2
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     .line 36
     .line 37
@@ -114,61 +100,37 @@
     move-result-object v1
 
     .line 39
-    iget-boolean v0, v2, LX/4BH;->A0b:Z
+    if-eqz v1, :cond_3
 
     .line 40
     .line 41
-    if-eqz v0, :cond_2
+    const-string v0, "android.hardware.camera.level.full"
 
     .line 42
     .line 43
-    iput-object v1, v2, LX/4BH;->A0N:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     .line 44
     .line 45
-    :cond_2
-    invoke-static {}, LX/4CF;->A00()LX/4CF;
-
     .line 46
-    .line 47
-    .line 48
-    move-result-object v1
+    move-result v0
 
+    .line 47
+    if-eqz v0, :cond_3
+
+    .line 48
     .line 49
-    iget-object v0, v3, LX/4BG;->A0W:LX/4BH;
+    const/4 v4, 0x1
 
     .line 50
-    .line 51
-    invoke-virtual {v0}, LX/4BH;->A02()Lcom/facebook/iabeventlogging/model/IABEvent;
+    :cond_3
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    .line 51
     .line 52
     .line 53
-    .line 54
     move-result-object v0
 
-    .line 55
-    invoke-static {v3, v1, v0}, LX/4BG;->A0D(LX/4BG;LX/4CF;Lcom/facebook/iabeventlogging/model/IABEvent;)V
-
-    .line 56
-    .line 57
-    .line 58
-    move-object p2, v4
-
-    .line 59
-    :cond_3
-    iget-object v0, p0, LX/4BI;->A01:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    .line 60
-    .line 61
-    if-eqz v0, :cond_4
-
-    .line 62
-    .line 63
-    invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-
-    .line 64
-    .line 65
-    .line 66
-    :cond_4
-    return-void
+    .line 54
+    goto :goto_0
 .end method

@@ -11,9 +11,9 @@
 
 
 # instance fields
-.field public A00:I
+.field public final A00:Lcom/google/common/collect/ImmutableList;
 
-.field public final A01:Lcom/google/common/collect/ImmutableList;
+.field public final A01:I
 
 
 # direct methods
@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x49
+    const/16 v0, 0x1e
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -49,7 +49,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
     .line 5
@@ -82,22 +82,27 @@
     move-result-object v0
 
     .line 20
-    iput-object v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:Lcom/google/common/collect/ImmutableList;
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 21
     .line 22
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
     .line 23
+    iput-object v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:Lcom/google/common/collect/ImmutableList;
+
     .line 24
     .line 25
-    move-result v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 26
-    iput v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:I
-
     .line 27
     .line 28
+    move-result v0
+
+    .line 29
+    iput v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:I
+
+    .line 30
+    .line 31
     return-void
 .end method
 
@@ -113,11 +118,11 @@
     .line 268435458
     .line 268435459
     .line 268435460
-    iput-object p1, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:Lcom/google/common/collect/ImmutableList;
+    iput-object p1, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 268435461
     .line 268435462
-    iput v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:I
+    iput v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:I
 
     .line 268435463
     .line 268435464
@@ -149,15 +154,15 @@
 
     .line 4
     .line 5
-    check-cast p1, Lcom/facebook/navigation/tabbar/state/NavigationConfig;
+    iget-object v1, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 6
     .line 7
-    iget-object v1, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:Lcom/google/common/collect/ImmutableList;
+    check-cast p1, Lcom/facebook/navigation/tabbar/state/NavigationConfig;
 
     .line 8
     .line 9
-    iget-object v0, p1, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:Lcom/google/common/collect/ImmutableList;
+    iget-object v0, p1, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 10
     .line 11
@@ -173,11 +178,11 @@
 
     .line 16
     .line 17
-    iget v1, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:I
+    iget v1, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:I
 
     .line 18
     .line 19
-    iget v0, p1, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:I
+    iget v0, p1, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:I
 
     .line 20
     .line 21
@@ -196,7 +201,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 1
     .line 2
@@ -204,7 +209,7 @@
     move-result-object v2
 
     .line 4
-    iget-object v1, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:Lcom/google/common/collect/ImmutableList;
+    iget-object v1, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:Lcom/google/common/collect/ImmutableList;
 
     .line 5
     .line 6
@@ -215,7 +220,7 @@
 
     .line 8
     .line 9
-    iget v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:I
+    iget v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:I
 
     .line 10
     .line 11
@@ -239,23 +244,31 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:Lcom/google/common/collect/ImmutableList;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 2
     .line 3
     .line 4
+    iget-object v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:Lcom/google/common/collect/ImmutableList;
+
     .line 5
-    iget v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A00:I
-
     .line 6
-    .line 7
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
+    .line 7
     .line 8
     .line 9
+    iget v0, p0, Lcom/facebook/navigation/tabbar/state/NavigationConfig;->A01:I
+
     .line 10
+    .line 11
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 12
+    .line 13
+    .line 14
     return-void
 .end method

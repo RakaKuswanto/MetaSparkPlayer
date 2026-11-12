@@ -1,447 +1,239 @@
-.class public final LX/29I;
-.super LX/26q;
+.class public final LX/29i;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final A01:LX/29I;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "VideoRealtimeMsgPipe$publishInternal$r$1$onSuccess$1"
 
 
 # instance fields
-.field public final A00:Ljava/lang/String;
+.field public final synthetic A00:I
+
+.field public final synthetic A01:J
+
+.field public final synthetic A02:LX/29k;
+
+.field public final synthetic A03:LX/1fB;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 0
-    const-string v1, ""
-
-    .line 1
-    .line 2
-    new-instance v0, LX/29I;
-
-    .line 3
-    .line 4
-    invoke-direct {v0, v1}, LX/29I;-><init>(Ljava/lang/String;)V
-
-    .line 5
-    .line 6
-    .line 7
-    sput-object v0, LX/29I;->A01:LX/29I;
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(LX/29k;LX/1fB;IJ)V
     .locals 0
 
-    .line 0
-    invoke-direct {p0}, LX/26q;-><init>()V
+    iput-object p2, p0, LX/29i;->A03:LX/1fB;
 
-    .line 1
-    .line 2
-    .line 3
-    iput-object p1, p0, LX/29I;->A00:Ljava/lang/String;
+    iput p3, p0, LX/29i;->A00:I
 
-    .line 4
-    .line 5
+    iput-object p1, p0, LX/29i;->A02:LX/29k;
+
+    iput-wide p4, p0, LX/29i;->A01:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
-.end method
-
-.method public static A03(Ljava/lang/String;)LX/29I;
-    .locals 1
-
-    .line 0
-    if-nez p0, :cond_0
-
-    .line 1
-    .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    return-object v0
-
-    .line 4
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    if-nez v0, :cond_1
-
-    .line 9
-    .line 10
-    sget-object v0, LX/29I;->A01:LX/29I;
-
-    .line 11
-    .line 12
-    return-object v0
-
-    .line 13
-    :cond_1
-    new-instance v0, LX/29I;
-
-    .line 14
-    .line 15
-    invoke-direct {v0, p0}, LX/29I;-><init>(Ljava/lang/String;)V
-
-    .line 16
-    .line 17
-    .line 18
-    return-object v0
-.end method
-
-.method public static final A04(Ljava/lang/String;IC)V
-    .locals 3
-
-    .line 0
-    const/16 v0, 0x20
-
-    .line 1
-    .line 2
-    if-gt p2, v0, :cond_1
-
-    .line 3
-    .line 4
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v2
-
-    .line 8
-    const-string v0, "Illegal white space character (code 0x"
-
-    .line 9
-    .line 10
-    invoke-static {v0, v2, p2}, LX/0Yd;->A1Q(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
-
-    .line 11
-    .line 12
-    .line 13
-    const-string v0, ") as character #"
-
-    .line 14
-    .line 15
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 16
-    .line 17
-    .line 18
-    add-int/lit8 v0, p1, 0x1
-
-    .line 19
-    .line 20
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 21
-    .line 22
-    .line 23
-    const-string v1, " of 4-char base64 unit: can only used between units"
-
-    .line 24
-    .line 25
-    :goto_0
-    invoke-static {v1, v2}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v2
-
-    .line 29
-    if-eqz p0, :cond_0
-
-    .line 30
-    .line 31
-    const-string v0, ": "
-
-    .line 32
-    .line 33
-    invoke-static {v2, v0, p0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 34
-    .line 35
-    .line 36
-    move-result-object v2
-
-    .line 37
-    :cond_0
-    sget-object v1, LX/1TA;->A01:LX/1TA;
-
-    .line 38
-    .line 39
-    new-instance v0, LX/1gu;
-
-    .line 40
-    .line 41
-    invoke-direct {v0, v1, v2}, LX/1gu;-><init>(LX/1TA;Ljava/lang/String;)V
-
-    .line 42
-    .line 43
-    .line 44
-    throw v0
-
-    .line 45
-    :cond_1
-    const/16 v0, 0x3d
-
-    .line 46
-    .line 47
-    if-ne p2, v0, :cond_2
-
-    .line 48
-    .line 49
-    invoke-static {p1, v0}, LX/0Yg;->A0w(IC)Ljava/lang/StringBuilder;
-
-    .line 50
-    .line 51
-    .line 52
-    move-result-object v2
-
-    .line 53
-    const-string v1, " of 4-char base64 unit: padding only legal as 3rd or 4th character"
-
-    .line 54
-    .line 55
-    goto :goto_0
-
-    .line 56
-    :cond_2
-    invoke-static {p2}, Ljava/lang/Character;->isDefined(C)Z
-
-    .line 57
-    .line 58
-    .line 59
-    move-result v0
-
-    .line 60
-    const-string v1, ") in base64 content"
-
-    .line 61
-    .line 62
-    if-eqz v0, :cond_3
-
-    .line 63
-    .line 64
-    invoke-static {p2}, Ljava/lang/Character;->isISOControl(C)Z
-
-    .line 65
-    .line 66
-    .line 67
-    move-result v0
-
-    .line 68
-    if-nez v0, :cond_3
-
-    .line 69
-    .line 70
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 71
-    .line 72
-    .line 73
-    move-result-object v2
-
-    .line 74
-    const-string v0, "Illegal character \'"
-
-    .line 75
-    .line 76
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 77
-    .line 78
-    .line 79
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 80
-    .line 81
-    .line 82
-    const-string v0, "\' (code 0x"
-
-    .line 83
-    .line 84
-    :goto_1
-    invoke-static {v0, v2, p2}, LX/0Yd;->A1Q(Ljava/lang/String;Ljava/lang/StringBuilder;I)V
-
-    .line 85
-    .line 86
-    .line 87
-    goto :goto_0
-
-    .line 88
-    :cond_3
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 89
-    .line 90
-    .line 91
-    move-result-object v2
-
-    .line 92
-    const-string v0, "Illegal character (code 0x"
-
-    .line 93
-    .line 94
-    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final run()V
+    .locals 13
 
     .line 0
-    if-ne p1, p0, :cond_0
+    iget-object v6, p0, LX/29i;->A03:LX/1fB;
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    iget v5, p0, LX/29i;->A00:I
 
     .line 3
-    return v0
-
     .line 4
-    :cond_0
-    const/4 v2, 0x0
+    iget-object v8, p0, LX/29i;->A02:LX/29k;
 
     .line 5
-    if-eqz p1, :cond_1
-
     .line 6
-    .line 7
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v9, p0, LX/29i;->A01:J
 
+    .line 7
     .line 8
+    if-eqz v8, :cond_0
+
     .line 9
     .line 10
-    move-result-object v1
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 11
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 12
     .line 13
+    move-result-object v2
+
     .line 14
-    move-result-object v0
+    iget-object v1, v6, LX/1fB;->A06:Ljava/util/Map;
 
     .line 15
-    if-ne v1, v0, :cond_1
-
     .line 16
+    iget-object v0, v6, LX/1fB;->A04:LX/0lu;
+
     .line 17
-    check-cast p1, LX/29I;
-
     .line 18
-    .line 19
-    iget-object v1, p1, LX/29I;->A00:Ljava/lang/String;
+    invoke-static {v0}, LX/0lu;->A02(LX/0lu;)J
 
+    .line 19
     .line 20
     .line 21
-    iget-object v0, p0, LX/29I;->A00:Ljava/lang/String;
+    move-result-wide v11
 
     .line 22
-    .line 23
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v7, LX/29m;
 
+    .line 23
     .line 24
+    invoke-direct/range {v7 .. v12}, LX/29m;-><init>(LX/29k;JJ)V
+
     .line 25
     .line 26
-    move-result v0
-
     .line 27
-    return v0
+    invoke-interface {v1, v2, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 28
-    :cond_1
-    return v2
-.end method
+    .line 29
+    .line 30
+    iget-object v0, v6, LX/1fB;->A01:LX/0RP;
 
-.method public final hashCode()I
-    .locals 1
+    .line 31
+    .line 32
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    .line 0
-    iget-object v0, p0, LX/29I;->A00:Ljava/lang/String;
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v4
 
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    .line 36
+    check-cast v4, Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    .line 37
+    .line 38
+    new-instance v3, LX/29j;
 
-    .line 6
-    return v0
-.end method
+    .line 39
+    .line 40
+    invoke-direct {v3, v6, v5}, LX/29j;-><init>(LX/1fB;I)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    .line 41
+    .line 42
+    .line 43
+    const/4 v0, 0x5
 
-    .line 0
-    iget-object v2, p0, LX/29I;->A00:Ljava/lang/String;
+    .line 44
+    int-to-long v1, v0
 
-    .line 1
-    .line 2
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    .line 45
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
+    .line 46
+    .line 47
+    invoke-interface {v4, v3, v1, v2, v0}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    .line 6
-    add-int/lit8 v1, v0, 0x2
+    .line 48
+    .line 49
+    .line 50
+    iget-object v1, v8, LX/29k;->A00:LX/29o;
 
-    .line 7
-    .line 8
-    shr-int/lit8 v0, v0, 0x4
+    .line 51
+    .line 52
+    check-cast v1, LX/29p;
 
-    .line 9
-    .line 10
-    add-int/2addr v1, v0
+    .line 53
+    .line 54
+    iget-object v0, v1, LX/29p;->A01:LX/0RP;
 
-    .line 11
-    invoke-static {v1}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
+    .line 55
+    .line 56
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v1
-
-    .line 15
-    const/16 v0, 0x22
-
-    .line 16
-    .line 17
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 18
-    .line 19
-    .line 20
-    invoke-static {v1, v2}, LX/29Z;->A00(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 21
-    .line 22
-    .line 23
-    invoke-static {v1, v0}, LX/0Yh;->A0b(Ljava/lang/StringBuilder;C)Ljava/lang/String;
-
-    .line 24
-    .line 25
-    .line 26
+    .line 57
+    .line 58
+    .line 59
     move-result-object v0
 
-    .line 27
-    return-object v0
+    .line 60
+    check-cast v0, LX/0hf;
+
+    .line 61
+    .line 62
+    invoke-virtual {v0}, LX/0hf;->A00()Z
+
+    .line 63
+    .line 64
+    .line 65
+    move-result v0
+
+    .line 66
+    if-eqz v0, :cond_0
+
+    .line 67
+    .line 68
+    iget-object v0, v1, LX/29p;->A05:LX/0lu;
+
+    .line 69
+    .line 70
+    invoke-static {v0}, LX/0lu;->A03(LX/0lu;)LX/0B4;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v1
+
+    .line 74
+    const-string/jumbo v0, "cvc_v3_mqtt_event"
+
+    .line 75
+    .line 76
+    .line 77
+    invoke-interface {v1, v0}, LX/0B4;->A2Y(Ljava/lang/String;)LX/0B8;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v2
+
+    .line 81
+    invoke-interface {v2}, LX/0B8;->isSampled()Z
+
+    .line 82
+    .line 83
+    .line 84
+    move-result v0
+
+    .line 85
+    if-eqz v0, :cond_0
+
+    .line 86
+    .line 87
+    const-string/jumbo v1, "mqtt_publish_success"
+
+    .line 88
+    .line 89
+    .line 90
+    const-string/jumbo v0, "name"
+
+    .line 91
+    .line 92
+    .line 93
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 94
+    .line 95
+    .line 96
+    invoke-interface {v2}, LX/0B8;->AQk()V
+
+    .line 97
+    .line 98
+    .line 99
+    :cond_0
+    return-void
 .end method

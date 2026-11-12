@@ -1,33 +1,20 @@
 .class public final LX/2rt;
-.super Ljava/lang/Object;
+.super LX/2rq;
 .source ""
-
-# interfaces
-.implements LX/3Ka;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AFt(Landroid/content/Context;)Lcom/google/common/collect/ImmutableMap;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/google/common/collect/RegularImmutableMap;->A03:Lcom/google/common/collect/ImmutableMap;
+    const/4 v0, 0x0
 
     .line 1
+    invoke-direct {p0, v0}, LX/2rq;-><init>(LX/35E;)V
+
     .line 2
-    return-object v0
+    .line 3
+    .line 4
+    return-void
 .end method

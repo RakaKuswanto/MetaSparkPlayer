@@ -2,102 +2,65 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DialogFragment$1"
+
+
+# instance fields
+.field public final synthetic A00:LX/02j;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(LX/02j;)V
+    .locals 0
 
-    const/16 v0, 0x5d7
+    .line 0
+    iput-object p1, p0, LX/05Z;->A00:LX/02j;
 
-    if-eq p0, v0, :cond_9
+    .line 1
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x7a1
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
 
-    if-eq p0, v0, :cond_8
 
-    const/16 v0, 0x904
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    if-eq p0, v0, :cond_7
+    .line 0
+    iget-object v0, p0, LX/05Z;->A00:LX/02j;
 
-    const/16 v0, 0x151e
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/02j;->A01(LX/02j;)Landroid/content/DialogInterface$OnDismissListener;
 
-    if-eq p0, v0, :cond_6
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
 
-    const/16 v0, 0x1c91
+    .line 6
+    invoke-static {v0}, LX/02j;->A00(LX/02j;)Landroid/app/Dialog;
 
-    if-eq p0, v0, :cond_5
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
 
-    const/16 v0, 0x22fb
+    .line 10
+    invoke-interface {v1, v0}, Landroid/content/DialogInterface$OnDismissListener;->onDismiss(Landroid/content/DialogInterface;)V
 
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x2a0d
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x34fa
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x3611
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x37a1
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_LIKE_AN_ANSWER"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_ASK_A_QUESTION"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_ANSWER_A_QUESTION"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_SCREEN_TTRC"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_LAZY_LOAD_PDP_MODULE"
-
-    return-object v0
-
-    :cond_5
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_UNLIKE_A_QUESTION"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_LIKE_A_QUESTION"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_DELETE_A_QUESTION"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_UNLIKE_AN_ANSWER"
-
-    return-object v0
-
-    :cond_9
-    const-string v0, "IG_SHOPS_QUESTIONS_AND_ANSWERS_ALL_QNA_PAGINATION"
-
-    return-object v0
+    .line 11
+    .line 12
+    .line 13
+    return-void
 .end method

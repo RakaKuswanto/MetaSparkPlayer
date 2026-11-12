@@ -1,349 +1,119 @@
-.class public final enum LX/5Dw;
-.super Ljava/lang/Enum;
+.class public final LX/5DW;
+.super LX/5DU;
 .source ""
 
 
 # static fields
-.field public static final enum zzya:LX/5Dw;
+.field public static final A02:J
 
-.field public static final enum zzyb:LX/5Dw;
+.field public static final A03:Ljava/nio/CharBuffer;
 
-.field public static final enum zzyc:LX/5Dw;
+.field public static final A04:Ljava/nio/CharBuffer;
 
-.field public static final enum zzyd:LX/5Dw;
+.field public static final A05:Ljava/nio/CharBuffer;
 
-.field public static final enum zzye:LX/5Dw;
 
-.field public static final enum zzyf:LX/5Dw;
+# instance fields
+.field public A00:LX/5DV;
 
-.field public static final synthetic zzyg:[LX/5Dw;
+.field public final A01:Ljava/nio/CharBuffer;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 13
+    .locals 2
 
     .line 0
-    const-string v0, "NONE"
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
     .line 1
     .line 2
-    const/4 v12, 0x0
-
     .line 3
-    new-instance v11, LX/5Dw;
+    move-result v0
 
     .line 4
+    int-to-long v0, v0
+
     .line 5
-    invoke-direct {v11, v0, v12}, LX/5Dw;-><init>(Ljava/lang/String;I)V
+    sput-wide v0, LX/5DW;->A02:J
 
     .line 6
     .line 7
+    const-string v0, "wlan0"
+
     .line 8
-    sput-object v11, LX/5Dw;->zzya:LX/5Dw;
-
     .line 9
-    .line 10
-    const-string v0, "BATCH_BY_SESSION"
+    invoke-static {v0}, Ljava/nio/CharBuffer;->wrap(Ljava/lang/CharSequence;)Ljava/nio/CharBuffer;
 
+    .line 10
     .line 11
     .line 12
-    const/4 v10, 0x1
-
-    .line 13
-    new-instance v9, LX/5Dw;
-
-    .line 14
-    .line 15
-    invoke-direct {v9, v0, v10}, LX/5Dw;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v9, LX/5Dw;->zzyb:LX/5Dw;
-
-    .line 19
-    .line 20
-    const-string v0, "BATCH_BY_TIME"
-
-    .line 21
-    .line 22
-    const/4 v8, 0x2
-
-    .line 23
-    new-instance v7, LX/5Dw;
-
-    .line 24
-    .line 25
-    invoke-direct {v7, v0, v8}, LX/5Dw;-><init>(Ljava/lang/String;I)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v7, LX/5Dw;->zzyc:LX/5Dw;
-
-    .line 29
-    .line 30
-    const-string v0, "BATCH_BY_BRUTE_FORCE"
-
-    .line 31
-    .line 32
-    const/4 v6, 0x3
-
-    .line 33
-    new-instance v5, LX/5Dw;
-
-    .line 34
-    .line 35
-    invoke-direct {v5, v0, v6}, LX/5Dw;-><init>(Ljava/lang/String;I)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v5, LX/5Dw;->zzyd:LX/5Dw;
-
-    .line 39
-    .line 40
-    const-string v0, "BATCH_BY_COUNT"
-
-    .line 41
-    .line 42
-    const/4 v4, 0x4
-
-    .line 43
-    new-instance v3, LX/5Dw;
-
-    .line 44
-    .line 45
-    invoke-direct {v3, v0, v4}, LX/5Dw;-><init>(Ljava/lang/String;I)V
-
-    .line 46
-    .line 47
-    .line 48
-    sput-object v3, LX/5Dw;->zzye:LX/5Dw;
-
-    .line 49
-    .line 50
-    const-string v0, "BATCH_BY_SIZE"
-
-    .line 51
-    .line 52
-    const/4 v2, 0x5
-
-    .line 53
-    new-instance v1, LX/5Dw;
-
-    .line 54
-    .line 55
-    invoke-direct {v1, v0, v2}, LX/5Dw;-><init>(Ljava/lang/String;I)V
-
-    .line 56
-    .line 57
-    .line 58
-    sput-object v1, LX/5Dw;->zzyf:LX/5Dw;
-
-    .line 59
-    .line 60
-    const/4 v0, 0x6
-
-    .line 61
-    new-array v0, v0, [LX/5Dw;
-
-    .line 62
-    .line 63
-    aput-object v11, v0, v12
-
-    .line 64
-    .line 65
-    aput-object v9, v0, v10
-
-    .line 66
-    .line 67
-    aput-object v7, v0, v8
-
-    .line 68
-    .line 69
-    aput-object v5, v0, v6
-
-    .line 70
-    .line 71
-    aput-object v3, v0, v4
-
-    .line 72
-    .line 73
-    aput-object v1, v0, v2
-
-    .line 74
-    .line 75
-    sput-object v0, LX/5Dw;->zzyg:[LX/5Dw;
-
-    .line 76
-    .line 77
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static values()[LX/5Dw;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/5Dw;->zzyg:[LX/5Dw;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
-    check-cast v0, [LX/5Dw;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static zzz(Ljava/lang/String;)LX/5Dw;
-    .locals 1
-
-    .line 0
-    const-string v0, "BATCH_BY_SESSION"
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 7
-    .line 8
-    sget-object v0, LX/5Dw;->zzyb:LX/5Dw;
-
-    .line 9
-    .line 10
-    return-object v0
-
-    .line 11
-    :cond_0
-    const-string v0, "BATCH_BY_TIME"
-
-    .line 12
     .line 13
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    sput-object v0, LX/5DW;->A05:Ljava/nio/CharBuffer;
 
     .line 14
     .line 15
-    .line 16
-    move-result v0
+    const-string v0, "dummy0"
 
+    .line 16
     .line 17
-    if-eqz v0, :cond_1
+    invoke-static {v0}, Ljava/nio/CharBuffer;->wrap(Ljava/lang/CharSequence;)Ljava/nio/CharBuffer;
 
     .line 18
     .line 19
-    sget-object v0, LX/5Dw;->zzyc:LX/5Dw;
-
     .line 20
+    move-result-object v0
+
     .line 21
-    return-object v0
+    sput-object v0, LX/5DW;->A03:Ljava/nio/CharBuffer;
 
     .line 22
-    :cond_1
-    const-string v0, "BATCH_BY_BRUTE_FORCE"
-
     .line 23
-    .line 24
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    const-string v0, "lo"
 
+    .line 24
     .line 25
+    invoke-static {v0}, Ljava/nio/CharBuffer;->wrap(Ljava/lang/CharSequence;)Ljava/nio/CharBuffer;
+
     .line 26
     .line 27
-    move-result v0
-
     .line 28
-    if-eqz v0, :cond_2
+    move-result-object v0
 
     .line 29
+    sput-object v0, LX/5DW;->A04:Ljava/nio/CharBuffer;
+
     .line 30
-    sget-object v0, LX/5Dw;->zzyd:LX/5Dw;
-
     .line 31
-    .line 32
-    return-object v0
+    return-void
+.end method
 
-    .line 33
-    :cond_2
-    const-string v0, "BATCH_BY_COUNT"
+.method public constructor <init>()V
+    .locals 1
 
-    .line 34
-    .line 35
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    .line 0
+    invoke-direct {p0}, LX/5DU;-><init>()V
 
-    .line 36
-    .line 37
-    .line 38
-    move-result v0
+    .line 1
+    .line 2
+    .line 3
+    const/16 v0, 0x80
 
-    .line 39
-    if-eqz v0, :cond_3
+    .line 4
+    .line 5
+    invoke-static {v0}, Ljava/nio/CharBuffer;->allocate(I)Ljava/nio/CharBuffer;
 
-    .line 40
-    .line 41
-    sget-object v0, LX/5Dw;->zzye:LX/5Dw;
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
 
-    .line 42
-    .line 43
-    return-object v0
+    .line 9
+    iput-object v0, p0, LX/5DW;->A01:Ljava/nio/CharBuffer;
 
-    .line 44
-    :cond_3
-    const-string v0, "BATCH_BY_SIZE"
-
-    .line 45
-    .line 46
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    .line 47
-    .line 48
-    .line 49
-    move-result v0
-
-    .line 50
-    if-eqz v0, :cond_4
-
-    .line 51
-    .line 52
-    sget-object v0, LX/5Dw;->zzyf:LX/5Dw;
-
-    .line 53
-    .line 54
-    return-object v0
-
-    .line 55
-    :cond_4
-    sget-object v0, LX/5Dw;->zzya:LX/5Dw;
-
-    .line 56
-    .line 57
-    return-object v0
+    .line 10
+    .line 11
+    return-void
 .end method

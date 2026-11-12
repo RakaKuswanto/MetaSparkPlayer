@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0y()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A12()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -34,77 +34,78 @@
     const/4 v1, 0x1
 
     .line 10
-    const-string v0, "WHEEL_CHAIR"
+    const-string/jumbo v0, "WHEEL_CHAIR"
 
     .line 11
     .line 12
+    .line 13
     aput-object v0, v2, v1
 
-    .line 13
     .line 14
+    .line 15
     const/4 v1, 0x2
 
-    .line 15
+    .line 16
     const-string v0, "COMPANION"
 
-    .line 16
     .line 17
+    .line 18
     aput-object v0, v2, v1
 
-    .line 18
     .line 19
+    .line 20
     const/4 v1, 0x3
 
-    .line 20
+    .line 21
     const-string v0, "LOVE_SEAT_LEFT"
 
-    .line 21
     .line 22
+    .line 23
     aput-object v0, v2, v1
 
-    .line 23
     .line 24
+    .line 25
     const/4 v1, 0x4
 
-    .line 25
+    .line 26
     const-string v0, "LOVE_SEAT_RIGHT"
 
-    .line 26
     .line 27
+    .line 28
     aput-object v0, v2, v1
 
-    .line 28
     .line 29
+    .line 30
     const/4 v1, 0x5
 
-    .line 30
+    .line 31
     const-string v0, "CANNOT_RESERVE"
 
-    .line 31
     .line 32
+    .line 33
     aput-object v0, v2, v1
 
-    .line 33
     .line 34
+    .line 35
     const/4 v1, 0x6
 
-    .line 35
+    .line 36
     const-string v0, "NOT_A_SEAT"
 
-    .line 36
     .line 37
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 38
+    invoke-static {v0, v2, v1}, LX/0X1;->A0V(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 39
     .line 40
+    .line 41
     move-result-object v0
 
-    .line 41
+    .line 42
     sput-object v0, Lcom/facebook/graphql/enums/GraphQLMovieSeatTypeSet;->A00:Ljava/util/Set;
 
-    .line 42
     .line 43
+    .line 44
     return-void
 .end method
 

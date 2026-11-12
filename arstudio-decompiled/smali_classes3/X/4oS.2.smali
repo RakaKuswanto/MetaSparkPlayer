@@ -1,39 +1,21 @@
-.class public final LX/4oS;
-.super LX/4o3;
+.class public abstract LX/4oS;
+.super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:I
-
-
 # direct methods
-.method public constructor <init>(LX/4jn;I)V
-    .locals 2
+.method public static final A02(LX/0GL;)LX/4oo;
+    .locals 1
 
     .line 0
-    const/4 v0, 0x1
+    new-instance v0, LX/4oo;
 
     .line 1
-    new-array v1, v0, [LX/4jn;
-
     .line 2
+    invoke-direct {v0, p0}, LX/4oo;-><init>(LX/0GL;)V
+
     .line 3
-    const/4 v0, 0x0
-
     .line 4
-    aput-object p1, v1, v0
-
     .line 5
-    .line 6
-    invoke-direct {p0, v1}, LX/4o3;-><init>([LX/4jn;)V
-
-    .line 7
-    .line 8
-    .line 9
-    iput p2, p0, LX/4oS;->A00:I
-
-    .line 10
-    .line 11
-    return-void
+    return-object v0
 .end method

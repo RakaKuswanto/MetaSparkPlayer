@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/0HE;
+.implements LX/0GK;
 
 
 # direct methods
@@ -39,7 +39,7 @@
     return v0
 .end method
 
-.method public handleUncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;LX/0H2;)I
+.method public handleUncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;LX/0G9;)I
     .locals 1
 
     .line 0

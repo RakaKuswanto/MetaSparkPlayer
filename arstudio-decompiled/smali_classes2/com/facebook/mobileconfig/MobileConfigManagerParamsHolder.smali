@@ -16,7 +16,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/0Yh;->A0l()V
+    invoke-static {}, LX/0X4;->A0y()V
 
     .line 1
     .line 2
@@ -59,6 +59,9 @@
 .method public native setAdditionalParamsMapDirs(Ljava/lang/String;)V
 .end method
 
+.method public native setAvoidRenamingCachesOnStart(Z)V
+.end method
+
 .method public native setBufferPathPostfix(Ljava/lang/String;)V
 .end method
 
@@ -95,19 +98,25 @@
 .method public native setOTAOneQueryHashPath(Ljava/lang/String;)V
 .end method
 
-.method public native setOTAParamsMapPath(Ljava/lang/String;)V
-.end method
-
 .method public native setQueryHashOptimization(Z)V
 .end method
 
+.method public native setShouldIncludeStableSpecWithExposure(Z)V
+.end method
+
 .method public native setShouldLogAccessWithoutExposures(Z)V
+.end method
+
+.method public native setShouldSortPackageParamsMaps(Z)V
 .end method
 
 .method public native setShouldUseOTAResource(Z)V
 .end method
 
 .method public native setUniverseType(I)Z
+.end method
+
+.method public native setUseFileRepo(Z)V
 .end method
 
 .method public native setUseParamsMapV4(Z)V

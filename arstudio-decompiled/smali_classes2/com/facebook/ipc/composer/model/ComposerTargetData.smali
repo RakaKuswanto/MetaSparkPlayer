@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/14J;
 
 
 # annotations
@@ -20,7 +19,7 @@
 # static fields
 .field public static volatile A0A:Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;
 
-.field public static volatile A0B:LX/0ry;
+.field public static volatile A0B:LX/14u;
 
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -28,7 +27,7 @@
 # instance fields
 .field public final A00:J
 
-.field public final A01:LX/19Y;
+.field public final A01:LX/1TS;
 
 .field public final A02:Ljava/lang/String;
 
@@ -42,7 +41,7 @@
 
 .field public final A07:Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;
 
-.field public final A08:LX/0ry;
+.field public final A08:LX/14u;
 
 .field public final A09:Ljava/util/Set;
 
@@ -52,11 +51,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x4c
+    const/16 v0, 0xa
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -80,7 +79,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -94,7 +93,7 @@
     const/4 v0, 0x1
 
     .line 9
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 10
     .line 11
@@ -106,7 +105,7 @@
 
     .line 14
     .line 15
-    invoke-static {p1}, LX/0Yh;->A1Z(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X2;->A1R(Landroid/os/Parcel;)Z
 
     .line 16
     .line 17
@@ -174,7 +173,7 @@
 
     .line 47
     .line 48
-    iput-object v3, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/19Y;
+    iput-object v3, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/1TS;
 
     .line 49
     .line 50
@@ -220,7 +219,7 @@
 
     .line 69
     .line 70
-    invoke-static {}, LX/0ry;->values()[LX/0ry;
+    invoke-static {}, LX/14u;->values()[LX/14u;
 
     .line 71
     .line 72
@@ -241,11 +240,11 @@
     .line 79
     .line 80
     :cond_0
-    iput-object v3, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A08:LX/0ry;
+    iput-object v3, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A08:LX/14u;
 
     .line 81
     .line 82
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 83
     .line 84
@@ -266,98 +265,99 @@
 
     .line 91
     .line 92
-    invoke-static {p1, v1, v2}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v1}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 93
     .line 94
     .line 95
-    move-result v2
+    add-int/lit8 v2, v2, 0x1
 
     .line 96
+    .line 97
     goto :goto_3
 
-    .line 97
+    .line 98
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 98
     .line 99
     .line 100
-    move-result-object v0
-
     .line 101
-    iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A04:Ljava/lang/String;
+    move-result-object v0
 
     .line 102
+    iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A04:Ljava/lang/String;
+
     .line 103
+    .line 104
     goto :goto_2
 
-    .line 104
-    :cond_2
-    invoke-static {p1}, LX/1KF;->A00(Landroid/os/Parcel;)Lcom/facebook/graphservice/interfaces/Tree;
-
     .line 105
+    :cond_2
+    invoke-static {p1}, LX/1cw;->A00(Landroid/os/Parcel;)Lcom/facebook/graphservice/interfaces/Tree;
+
     .line 106
     .line 107
+    .line 108
     move-result-object v0
 
-    .line 108
-    check-cast v0, LX/19Y;
-
     .line 109
-    .line 110
-    iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/19Y;
+    check-cast v0, LX/1TS;
 
+    .line 110
     .line 111
+    iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/1TS;
+
     .line 112
+    .line 113
     goto :goto_1
 
-    .line 113
+    .line 114
     :cond_3
     invoke-static {}, Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;->values()[Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;
 
-    .line 114
     .line 115
     .line 116
+    .line 117
     move-result-object v1
 
-    .line 117
+    .line 118
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 118
     .line 119
     .line 120
+    .line 121
     move-result v0
 
-    .line 121
+    .line 122
     aget-object v0, v1, v0
 
-    .line 122
     .line 123
+    .line 124
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A07:Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;
 
-    .line 124
     .line 125
+    .line 126
     goto :goto_0
 
-    .line 126
+    .line 127
     :cond_4
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 127
     .line 128
     .line 129
+    .line 130
     move-result-object v0
 
-    .line 130
+    .line 131
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A09:Ljava/util/Set;
 
-    .line 131
     .line 132
+    .line 133
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;LX/19Y;LX/0ry;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;JZZ)V
+.method public constructor <init>(Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;LX/1TS;LX/14u;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;JZZ)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -370,23 +370,23 @@
 
     const-string/jumbo v0, "targetName"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A02:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A07:Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;
 
-    iput-object p2, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/19Y;
+    iput-object p2, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/1TS;
 
     const-string/jumbo v0, "targetProfilePicUrl"
 
-    invoke-static {v0, p5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p5, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p5, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A03:Ljava/lang/String;
 
     iput-object p6, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A04:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A08:LX/0ry;
+    iput-object p3, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A08:LX/14u;
 
     invoke-static {p7}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -488,7 +488,7 @@
     return-object v0
 .end method
 
-.method public final A01()LX/0ry;
+.method public final A01()LX/14u;
     .locals 2
 
     .line 0
@@ -513,7 +513,7 @@
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A08:LX/0ry;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A08:LX/14u;
 
     .line 12
     .line 13
@@ -521,7 +521,7 @@
 
     .line 14
     :cond_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A0B:LX/0ry;
+    sget-object v0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A0B:LX/14u;
 
     .line 15
     .line 16
@@ -533,7 +533,7 @@
 
     .line 19
     :try_start_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A0B:LX/0ry;
+    sget-object v0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A0B:LX/14u;
 
     .line 20
     .line 21
@@ -541,11 +541,11 @@
 
     .line 22
     .line 23
-    sget-object v0, LX/0ry;->UNDIRECTED:LX/0ry;
+    sget-object v0, LX/14u;->UNDIRECTED:LX/14u;
 
     .line 24
     .line 25
-    sput-object v0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A0B:LX/0ry;
+    sput-object v0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A0B:LX/14u;
 
     .line 26
     .line 27
@@ -570,7 +570,7 @@
     .line 32
     :cond_2
     :goto_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A0B:LX/0ry;
+    sget-object v0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A0B:LX/14u;
 
     .line 33
     .line 34
@@ -659,7 +659,7 @@
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -691,15 +691,15 @@
 
     .line 49
     .line 50
-    iget-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/19Y;
+    iget-object v1, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/1TS;
 
     .line 51
     .line 52
-    iget-object v0, p1, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/19Y;
+    iget-object v0, p1, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/1TS;
 
     .line 53
     .line 54
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 55
     .line 56
@@ -719,7 +719,7 @@
 
     .line 63
     .line 64
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 65
     .line 66
@@ -739,7 +739,7 @@
 
     .line 73
     .line 74
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 75
     .line 76
@@ -751,7 +751,7 @@
 
     .line 79
     .line 80
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01()LX/0ry;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01()LX/14u;
 
     .line 81
     .line 82
@@ -759,7 +759,7 @@
     move-result-object v1
 
     .line 84
-    invoke-virtual {p1}, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01()LX/0ry;
+    invoke-virtual {p1}, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01()LX/14u;
 
     .line 85
     .line 86
@@ -780,14 +780,14 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 4
 
     .line 0
     iget-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A05:Z
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A04(Z)I
+    invoke-static {v0}, LX/1O4;->A03(Z)I
 
     .line 3
     .line 4
@@ -799,156 +799,158 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v2, v1, 0x1f
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 11
-    move-result v2
-
     .line 12
-    iget-wide v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A00:J
-
     .line 13
+    move-result v0
+
     .line 14
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    add-int/2addr v2, v0
 
     .line 15
+    iget-wide v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A00:J
+
     .line 16
     .line 17
-    move-result v1
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 18
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A02:Ljava/lang/String;
-
     .line 19
     .line 20
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v1
 
     .line 21
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A02:Ljava/lang/String;
+
     .line 22
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 23
-    .line 24
-    .line 25
-    move-result v0
-
-    .line 26
-    add-int/2addr v1, v0
-
-    .line 27
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A00()Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;
-
-    .line 28
-    .line 29
-    .line 30
-    move-result-object v0
-
-    .line 31
-    const/4 v2, -0x1
-
-    .line 32
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
-
-    .line 33
-    .line 34
-    .line 35
-    move-result v0
-
-    .line 36
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 37
-    .line 38
+    .line 24
+    .line 25
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
+
+    .line 29
     add-int/2addr v1, v0
 
+    .line 30
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A00()Lcom/facebook/graphql/enums/GraphQLGroupPostStatus;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    const/4 v3, -0x1
+
+    .line 35
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v0
+
     .line 39
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/19Y;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 40
     .line 41
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 42
-    .line 43
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/1TS;
 
+    .line 43
     .line 44
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 45
     .line 46
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 47
-    add-int/2addr v1, v0
-
     .line 48
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A03:Ljava/lang/String;
-
     .line 49
+    move-result v0
+
     .line 50
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 51
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A03:Ljava/lang/String;
+
     .line 52
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 53
-    .line 54
-    .line 55
-    move-result v0
-
-    .line 56
-    add-int/2addr v1, v0
-
-    .line 57
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A04:Ljava/lang/String;
-
-    .line 58
-    .line 59
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 60
-    .line 61
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    .line 54
+    .line 55
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
-    .line 62
-    .line 63
-    .line 64
+    .line 56
+    .line 57
+    .line 58
     move-result v0
 
-    .line 65
+    .line 59
     add-int/2addr v1, v0
 
-    .line 66
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01()LX/0ry;
+    .line 60
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A04:Ljava/lang/String;
 
+    .line 61
+    .line 62
+    mul-int/lit8 v2, v1, 0x1f
+
+    .line 63
+    .line 64
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 65
+    .line 66
     .line 67
+    move-result v0
+
     .line 68
+    add-int/2addr v2, v0
+
     .line 69
-    move-result-object v0
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01()LX/14u;
 
     .line 70
-    if-eqz v0, :cond_0
-
     .line 71
     .line 72
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    move-result-object v0
 
     .line 73
+    invoke-static {v0, v3}, LX/0X6;->A05(Ljava/lang/Enum;I)I
+
     .line 74
     .line 75
-    move-result v2
-
     .line 76
-    :cond_0
-    mul-int/lit8 v0, v1, 0x1f
+    move-result v1
 
     .line 77
-    .line 78
-    add-int/2addr v0, v2
+    mul-int/lit8 v0, v2, 0x1f
 
+    .line 78
     .line 79
+    add-int/2addr v0, v1
+
+    .line 80
     return v0
 .end method
 
@@ -996,16 +998,16 @@
 
     .line 21
     .line 22
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 23
     .line 24
     .line 25
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/19Y;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A01:LX/1TS;
 
     .line 26
     .line 27
-    invoke-static {p1, v0}, LX/0Yd;->A0a(Landroid/os/Parcel;LX/0yO;)V
+    invoke-static {p1, v0}, LX/0X1;->A0Z(Landroid/os/Parcel;LX/1H2;)V
 
     .line 28
     .line 29
@@ -1023,16 +1025,16 @@
 
     .line 36
     .line 37
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 38
     .line 39
     .line 40
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A08:LX/0ry;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerTargetData;->A08:LX/14u;
 
     .line 41
     .line 42
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 43
     .line 44
@@ -1041,7 +1043,7 @@
 
     .line 46
     .line 47
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
     .line 48
     .line 49
@@ -1062,7 +1064,7 @@
 
     .line 56
     .line 57
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 58
     .line 59

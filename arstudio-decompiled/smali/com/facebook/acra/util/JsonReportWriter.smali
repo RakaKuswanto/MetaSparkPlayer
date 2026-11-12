@@ -21,27 +21,27 @@
 .end method
 
 .method public static writeGzipJsonReport(Ljava/util/Map;Ljava/util/Map;Ljava/io/OutputStream;)V
-    .locals 2
+    .locals 1
 
     .line 268435456
-    new-instance v1, Ljava/util/zip/GZIPOutputStream;
+    new-instance v0, Ljava/util/zip/GZIPOutputStream;
 
     .line 268435457
     .line 268435458
-    invoke-direct {v1, p2}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v0, p2}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 268435459
     .line 268435460
     .line 268435461
     :try_start_0
-    invoke-static {p0, p1, v1}, Lcom/facebook/acra/util/JsonReportWriter;->writeJsonReport(Ljava/util/Map;Ljava/util/Map;Ljava/io/OutputStream;)V
+    invoke-static {p0, p1, v0}, Lcom/facebook/acra/util/JsonReportWriter;->writeJsonReport(Ljava/util/Map;Ljava/util/Map;Ljava/io/OutputStream;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 268435462
     .line 268435463
     .line 268435464
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
     .line 268435465
     .line 268435466
@@ -50,19 +50,30 @@
 
     .line 268435468
     :catchall_0
-    move-exception v0
+    move-exception p0
 
     .line 268435469
     :try_start_1
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 268435470
     .line 268435471
     .line 268435472
+    throw p0
+
+    .line 268435473
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 268435474
+    invoke-static {p0, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 268435475
+    .line 268435476
+    .line 268435477
+    throw p0
 .end method
 
 .method public static writeGzipJsonReport(Ljava/util/Map;Ljava/util/Map;Ljava/io/File;)Z
@@ -73,11 +84,11 @@
 
     .line 1
     :try_start_0
-    new-instance v1, Ljava/io/FileOutputStream;
+    new-instance v0, Ljava/io/FileOutputStream;
 
     .line 2
     .line 3
-    invoke-direct {v1, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v0, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -85,7 +96,7 @@
     .line 5
     .line 6
     :try_start_1
-    invoke-static {p0, p1, v1}, Lcom/facebook/acra/util/JsonReportWriter;->writeGzipJsonReport(Ljava/util/Map;Ljava/util/Map;Ljava/io/OutputStream;)V
+    invoke-static {p0, p1, v0}, Lcom/facebook/acra/util/JsonReportWriter;->writeGzipJsonReport(Ljava/util/Map;Ljava/util/Map;Ljava/io/OutputStream;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -93,7 +104,7 @@
     .line 8
     .line 9
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -109,60 +120,72 @@
 
     .line 16
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 17
     :try_start_3
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
     .line 18
     .line 19
     .line 20
-    :catchall_1
-    :try_start_4
-    throw v0
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+    goto :goto_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 21
-    :catch_0
-    move-exception p1
+    :catchall_1
+    move-exception v0
 
     .line 22
-    sget-object p0, Lcom/facebook/acra/util/JsonReportWriter;->LOG_TAG:Ljava/lang/String;
+    :try_start_4
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     .line 23
     .line 24
-    new-array v2, v2, [Ljava/lang/Object;
-
     .line 25
+    :goto_0
+    throw v1
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
     .line 26
-    invoke-virtual {p2}, Ljava/io/File;->getPath()Ljava/lang/String;
+    :catch_0
+    move-exception p1
 
     .line 27
+    sget-object p0, Lcom/facebook/acra/util/JsonReportWriter;->LOG_TAG:Ljava/lang/String;
+
     .line 28
     .line 29
-    move-result-object v0
+    new-array v2, v2, [Ljava/lang/Object;
 
     .line 30
-    const/4 v1, 0x0
-
     .line 31
-    aput-object v0, v2, v1
+    invoke-virtual {p2}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     .line 32
     .line 33
-    const-string v0, "Could not write report %s"
-
     .line 34
+    move-result-object v0
+
     .line 35
-    invoke-static {p0, v0, p1, v2}, LX/0Jt;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
     .line 36
+    aput-object v0, v2, v1
+
     .line 37
     .line 38
+    const-string v0, "Could not write report %s"
+
+    .line 39
+    .line 40
+    invoke-static {p0, v0, p1, v2}, LX/0Il;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+
+    .line 41
+    .line 42
+    .line 43
     return v1
 .end method
 
@@ -206,7 +229,7 @@
     .line 18
     .line 19
     .line 20
-    invoke-static {p0}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {p0}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 21
     .line 22
@@ -233,7 +256,7 @@
 
     .line 31
     .line 32
-    invoke-static {v4}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {v4}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 33
     .line 34
@@ -277,7 +300,7 @@
 
     .line 53
     .line 54
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 55
     .line 56
@@ -286,7 +309,7 @@
 
     .line 58
     :cond_0
-    invoke-static {v3}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v3}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 59
     .line 60
@@ -302,7 +325,7 @@
     move-result-object v1
 
     .line 66
-    invoke-static {v3}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {v3}, LX/002;->A08(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 67
     .line 68
@@ -319,7 +342,7 @@
 
     .line 74
     :cond_1
-    invoke-static {p1}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-static {p1}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 75
     .line 76
@@ -340,7 +363,7 @@
 
     .line 83
     .line 84
-    invoke-static {p2}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-static {p2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 85
     .line 86
@@ -423,7 +446,7 @@
     move-result-object v1
 
     .line 125
-    invoke-static {p1}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {p1}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 126
     .line 127
@@ -453,7 +476,7 @@
     move-exception v4
 
     .line 138
-    invoke-static {p1}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {p1}, LX/001;->A0V(Ljava/util/Map$Entry;)Ljava/lang/String;
 
     .line 139
     .line 140
@@ -499,7 +522,7 @@
 
     .line 161
     .line 162
-    invoke-static {v3, v0, v4, v2}, LX/0Jt;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v4, v2}, LX/0Il;->A0M(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 163
     .line 164

@@ -34,14 +34,15 @@
     .locals 1
 
     .line 0
-    const/4 v0, 0x0
+    const-string v0, ""
 
     .line 1
+    .line 2
     invoke-direct {p0, v0}, Lcom/google/common/collect/Cut;-><init>(Ljava/lang/Comparable;)V
 
-    .line 2
     .line 3
     .line 4
+    .line 5
     return-void
 .end method
 
@@ -60,6 +61,14 @@
 # virtual methods
 .method public final A00(Lcom/google/common/collect/Cut;)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 

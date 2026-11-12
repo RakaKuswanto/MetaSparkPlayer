@@ -1,106 +1,130 @@
-.class public final enum LX/4Hq;
-.super Ljava/lang/Enum;
+.class public abstract LX/4Hq;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/4Hq;
-
-.field public static final enum DOWN:LX/4Hq;
-
-.field public static final enum UP:LX/4Hq;
-
-
 # direct methods
-.method public static final synthetic $values()[LX/4Hq;
-    .locals 3
-
-    const/4 v0, 0x2
-
-    new-array v2, v0, [LX/4Hq;
-
-    sget-object v1, LX/4Hq;->UP:LX/4Hq;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    sget-object v1, LX/4Hq;->DOWN:LX/4Hq;
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
-.method public static constructor <clinit>()V
+.method public static A00(Landroid/content/Context;Ljava/lang/String;I)I
     .locals 3
 
     .line 0
-    const-string v2, "UP"
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
 
     .line 1
     .line 2
-    const/4 v1, 0x0
-
     .line 3
-    new-instance v0, LX/4Hq;
+    move-result-object v1
 
     .line 4
-    .line 5
-    invoke-direct {v0, v2, v1}, LX/4Hq;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
+    .line 5
     .line 6
     .line 7
+    move-result-object v0
+
     .line 8
-    sput-object v0, LX/4Hq;->UP:LX/4Hq;
+    const/4 v2, 0x1
 
     .line 9
-    .line 10
-    const-string v2, "DOWN"
+    invoke-virtual {v0, p2, v1, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
+    .line 10
     .line 11
     .line 12
-    const/4 v1, 0x1
+    move-result v0
 
     .line 13
-    new-instance v0, LX/4Hq;
+    if-eqz v0, :cond_0
 
     .line 14
     .line 15
-    invoke-direct {v0, v2, v1}, LX/4Hq;-><init>(Ljava/lang/String;I)V
+    iget v0, v1, Landroid/util/TypedValue;->data:I
 
     .line 16
     .line 17
+    return v0
+
     .line 18
-    sput-object v0, LX/4Hq;->DOWN:LX/4Hq;
+    :cond_0
+    invoke-static {p1}, LX/431;->A1b(Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 19
     .line 20
-    invoke-static {}, LX/4Hq;->$values()[LX/4Hq;
-
     .line 21
+    move-result-object v1
+
     .line 22
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
     .line 23
+    .line 24
+    .line 25
     move-result-object v0
 
-    .line 24
-    sput-object v0, LX/4Hq;->$VALUES:[LX/4Hq;
-
-    .line 25
     .line 26
-    return-void
+    invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    aput-object v0, v1, v2
+
+    .line 31
+    .line 32
+    const-string v0, "%1$s requires a value for the %2$s attribute to be set in your app theme. You can either set the attribute in your theme or update your theme to inherit from Theme.MaterialComponents (or a descendant)."
+
+    .line 33
+    .line 34
+    invoke-static {v0, v1}, LX/433;->A0h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/IllegalArgumentException;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    throw v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public static A01(Landroid/view/View;I)I
+    .locals 2
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     .line 1
     .line 2
     .line 3
-    return-void
+    move-result-object v1
+
+    .line 4
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    invoke-static {v1, v0, p1}, LX/4Hq;->A00(Landroid/content/Context;Ljava/lang/String;I)I
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    return v0
 .end method

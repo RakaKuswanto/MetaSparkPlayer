@@ -1,50 +1,52 @@
-.class public final LX/1xI;
-.super Ljava/lang/Object;
+.class public final LX/1Xi;
+.super LX/1gb;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "LightSharedPreferencesImpl$EditorImpl$1"
-
-
-# instance fields
-.field public final synthetic A00:LX/1xH;
+.implements LX/3eB;
+.implements LX/1H2;
 
 
 # direct methods
-.method public constructor <init>(LX/1xH;)V
+.method public constructor <init>(I[I)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/1xI;->A00:LX/1xH;
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final AJK()Lcom/google/common/collect/ImmutableList;
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/1xI;->A00:LX/1xH;
+    const-class v2, LX/1Xn;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1xH;->A03(LX/1xH;)V
+    const v1, -0x37ed112a
 
     .line 3
     .line 4
     .line 5
-    return-void
+    const v0, -0x486a3f1b
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, v1, v2, v0}, LX/1gb;->getCachedTreeList(ILjava/lang/Class;I)Lcom/google/common/collect/ImmutableList;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    return-object v0
 .end method

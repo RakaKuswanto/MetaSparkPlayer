@@ -1,6 +1,9 @@
-.class public final LX/5Vu;
+.class public final LX/5VU;
 .super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/5VT;
 
 
 # direct methods

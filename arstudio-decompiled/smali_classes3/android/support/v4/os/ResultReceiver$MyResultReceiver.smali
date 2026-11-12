@@ -23,12 +23,3 @@
     .line 5
     return-void
 .end method
-
-
-# virtual methods
-.method public final Akk(ILandroid/os/Bundle;)V
-    .locals 0
-
-    .line 0
-    return-void
-.end method

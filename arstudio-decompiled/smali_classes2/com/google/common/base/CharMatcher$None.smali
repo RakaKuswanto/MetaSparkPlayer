@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final INSTANCE:Lcom/google/common/base/CharMatcher$None;
+.field public static final INSTANCE:Lcom/google/common/base/CharMatcher;
 
 
 # direct methods
@@ -21,7 +21,7 @@
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/google/common/base/CharMatcher$None;->INSTANCE:Lcom/google/common/base/CharMatcher$None;
+    sput-object v0, Lcom/google/common/base/CharMatcher$None;->INSTANCE:Lcom/google/common/base/CharMatcher;
 
     .line 6
     .line 7
@@ -48,6 +48,16 @@
 # virtual methods
 .method public indexIn(Ljava/lang/CharSequence;I)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "sequence",
+            "start"
+        }
+    .end annotation
 
     .line 0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -71,8 +81,47 @@
 
 .method public matches(C)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "c"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
+    return v0
+.end method
+
+.method public matchesAllOf(Ljava/lang/CharSequence;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "sequence"
+        }
+    .end annotation
+
+    .line 0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    invoke-static {v0}, LX/001;->A1L(I)Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
     return v0
 .end method

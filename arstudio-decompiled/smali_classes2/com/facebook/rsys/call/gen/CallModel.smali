@@ -36,6 +36,8 @@
 
 .field public final inviteRequestedVideo:Z
 
+.field public final joinAttemptSent:Z
+
 .field public final joinMode:I
 
 .field public final maxParticipantsReached:Z
@@ -64,270 +66,466 @@
 
 
 # direct methods
-.method public constructor <init>(IJJJJZZIILcom/facebook/rsys/call/gen/CallParticipant;Ljava/util/ArrayList;Lcom/facebook/rsys/callcontext/gen/CallContext;Lcom/facebook/rsys/callinfo/gen/CallInfo;ZZZLjava/lang/String;Ljava/util/ArrayList;Ljava/util/Map;Ljava/util/ArrayList;IIJJJIILjava/lang/String;Z)V
-    .locals 35
+.method public constructor <init>(IJJJJZZIILcom/facebook/rsys/call/gen/CallParticipant;Ljava/util/ArrayList;Lcom/facebook/rsys/callcontext/gen/CallContext;Lcom/facebook/rsys/callinfo/gen/CallInfo;ZZZLjava/lang/String;Ljava/util/ArrayList;Ljava/util/Map;Ljava/util/ArrayList;IIJJJIILjava/lang/String;ZZ)V
+    .locals 36
 
-    .line 465028
-    move-object/from16 v11, p0
+    .line 0
+    move-object/from16 v9, p0
 
-    invoke-direct {v11}, Ljava/lang/Object;-><init>()V
+    .line 1
+    .line 2
+    invoke-direct {v9}, Ljava/lang/Object;-><init>()V
 
-    .line 465029
-    move/from16 v34, p1
+    .line 3
+    .line 4
+    .line 5
+    move/from16 v1, p1
 
-    invoke-static/range {v34 .. v34}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 6
+    .line 7
+    invoke-static {v1}, LX/0X4;->A0z(I)V
 
-    move-result-object v2
+    .line 8
+    .line 9
+    .line 10
+    move-wide/from16 v34, p2
 
-    .line 465030
-    move-wide/from16 v0, p2
+    .line 11
+    .line 12
+    invoke-static/range {v34 .. v35}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v2, v0, v1}, LX/0Yf;->A17(Ljava/lang/Object;J)V
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
 
-    .line 465031
+    .line 16
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 17
+    .line 18
+    .line 19
     move-wide/from16 v32, p4
 
+    .line 20
+    .line 21
     invoke-static/range {v32 .. v33}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v2
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
 
-    .line 465032
-    move-wide/from16 v6, p6
+    .line 25
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2, v6, v7}, LX/0Yf;->A17(Ljava/lang/Object;J)V
+    .line 26
+    .line 27
+    .line 28
+    move-wide/from16 v30, p6
 
-    .line 465033
-    move-wide/from16 v30, p8
-
+    .line 29
+    .line 30
     invoke-static/range {v30 .. v31}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v2
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
 
-    .line 465034
-    move/from16 v14, p10
+    .line 34
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move/from16 v13, p11
+    .line 35
+    .line 36
+    .line 37
+    move-wide/from16 v28, p8
 
-    invoke-static {v2, v14, v13}, LX/0Yc;->A1S(Ljava/lang/Object;ZZ)V
+    .line 38
+    .line 39
+    invoke-static/range {v28 .. v29}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 465035
-    move/from16 v29, p12
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v0
 
-    invoke-static/range {v29 .. v29}, LX/0Yg;->A12(I)V
+    .line 43
+    move/from16 v13, p10
 
-    .line 465036
-    move/from16 v28, p13
+    .line 44
+    .line 45
+    move/from16 v12, p11
 
-    invoke-static/range {v28 .. v28}, LX/0Yg;->A12(I)V
+    .line 46
+    .line 47
+    invoke-static {v0, v13, v12}, LX/0X1;->A1M(Ljava/lang/Object;ZZ)V
 
-    .line 465037
-    move-object/from16 v27, p14
+    .line 48
+    .line 49
+    .line 50
+    move/from16 v27, p12
 
-    invoke-virtual/range {v27 .. v27}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 51
+    .line 52
+    invoke-static/range {v27 .. v27}, LX/0X4;->A0z(I)V
 
-    .line 465038
-    move-object/from16 v26, p15
+    .line 53
+    .line 54
+    .line 55
+    move/from16 v26, p13
 
-    invoke-virtual/range {v26 .. v26}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 56
+    .line 57
+    invoke-static/range {v26 .. v26}, LX/0X4;->A0z(I)V
 
-    .line 465039
-    move-object/from16 v25, p16
+    .line 58
+    .line 59
+    .line 60
+    move-object/from16 v25, p14
 
+    .line 61
+    .line 62
     invoke-virtual/range {v25 .. v25}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 465040
+    .line 63
+    .line 64
+    .line 65
+    move-object/from16 v24, p15
+
+    .line 66
+    .line 67
+    invoke-virtual/range {v24 .. v24}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 68
+    .line 69
+    .line 70
+    move-object/from16 v23, p16
+
+    .line 71
+    .line 72
+    invoke-virtual/range {v23 .. v23}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 73
+    .line 74
+    .line 75
     move/from16 v10, p18
 
-    move-object/from16 v12, p17
+    .line 76
+    .line 77
+    move-object/from16 v11, p17
 
-    move/from16 v9, p19
+    .line 78
+    .line 79
+    move/from16 v8, p19
 
-    invoke-static {v12, v10, v9}, LX/0Yc;->A1S(Ljava/lang/Object;ZZ)V
+    .line 80
+    .line 81
+    invoke-static {v11, v10, v8}, LX/0X1;->A1M(Ljava/lang/Object;ZZ)V
 
-    .line 465041
-    move/from16 v24, p20
+    .line 82
+    .line 83
+    .line 84
+    move/from16 v22, p20
 
-    invoke-static/range {v24 .. v24}, LX/0Yf;->A1H(Z)V
+    .line 85
+    .line 86
+    invoke-static/range {v22 .. v22}, LX/0X4;->A1H(Z)V
 
-    .line 465042
-    move/from16 v5, p25
+    .line 87
+    .line 88
+    .line 89
+    move/from16 v6, p25
 
-    move-object/from16 v8, p22
+    .line 90
+    .line 91
+    move-object/from16 v7, p22
 
-    invoke-static {v8, v5}, LX/0Yd;->A0l(Ljava/lang/Object;I)V
+    .line 92
+    .line 93
+    invoke-static {v7, v6}, LX/0X2;->A1D(Ljava/lang/Object;I)V
 
-    .line 465043
-    move/from16 v23, p26
+    .line 94
+    .line 95
+    .line 96
+    move/from16 v21, p26
 
-    invoke-static/range {v23 .. v23}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 97
+    .line 98
+    invoke-static/range {v21 .. v21}, LX/0X4;->A0z(I)V
 
-    move-result-object v2
+    .line 99
+    .line 100
+    .line 101
+    move-wide/from16 v19, p27
 
-    .line 465044
-    move-wide/from16 v3, p27
-
-    invoke-static {v2, v3, v4}, LX/0Yf;->A17(Ljava/lang/Object;J)V
-
-    .line 465045
-    move-wide/from16 v21, p29
-
-    invoke-static/range {v21 .. v22}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    .line 465046
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 465047
-    move-wide/from16 v19, p31
-
+    .line 102
+    .line 103
     invoke-static/range {v19 .. v20}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v15
+    .line 104
+    .line 105
+    .line 106
+    move-result-object v0
 
-    .line 465048
-    move/from16 v2, p33
+    .line 107
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v15, v2}, LX/0Yd;->A0l(Ljava/lang/Object;I)V
+    .line 108
+    .line 109
+    .line 110
+    move-wide/from16 v17, p29
 
-    .line 465049
-    move/from16 v18, p34
+    .line 111
+    .line 112
+    invoke-static/range {v17 .. v18}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static/range {v18 .. v18}, LX/0Yg;->A12(I)V
+    .line 113
+    .line 114
+    .line 115
+    move-result-object v0
 
-    .line 465050
-    move-object/from16 v17, p35
+    .line 116
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 117
+    .line 118
+    .line 119
+    move-wide/from16 v14, p31
 
-    .line 465051
-    move/from16 v16, p36
+    .line 120
+    .line 121
+    invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static/range {v16 .. v16}, LX/0Yf;->A1H(Z)V
+    .line 122
+    .line 123
+    .line 124
+    move-result-object v0
 
-    .line 465052
-    move/from16 v15, v34
+    .line 125
+    move/from16 v5, p33
 
-    iput v15, v11, Lcom/facebook/rsys/call/gen/CallModel;->inCallState:I
+    .line 126
+    .line 127
+    invoke-static {v0, v5}, LX/0X2;->A1D(Ljava/lang/Object;I)V
 
-    .line 465053
-    iput-wide v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->callCreatedTimestampMs:J
+    .line 128
+    .line 129
+    .line 130
+    move/from16 v16, p34
 
-    .line 465054
+    .line 131
+    .line 132
+    invoke-static/range {v16 .. v16}, LX/0X4;->A0z(I)V
+
+    .line 133
+    .line 134
+    .line 135
+    move/from16 v2, p37
+
+    .line 136
+    .line 137
+    move/from16 v3, p36
+
+    .line 138
+    .line 139
+    move-object/from16 v4, p35
+
+    .line 140
+    .line 141
+    invoke-static {v4, v3, v2}, LX/0X1;->A1M(Ljava/lang/Object;ZZ)V
+
+    .line 142
+    .line 143
+    .line 144
+    iput v1, v9, Lcom/facebook/rsys/call/gen/CallModel;->inCallState:I
+
+    .line 145
+    .line 146
+    move-wide/from16 v0, v34
+
+    .line 147
+    .line 148
+    iput-wide v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->callCreatedTimestampMs:J
+
+    .line 149
+    .line 150
     move-wide/from16 v0, v32
 
-    iput-wide v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->callAnsweredTimestampMs:J
+    .line 151
+    .line 152
+    iput-wide v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->callAnsweredTimestampMs:J
 
-    .line 465055
-    iput-wide v6, v11, Lcom/facebook/rsys/call/gen/CallModel;->callConnectedTimestampMs:J
-
-    .line 465056
+    .line 153
+    .line 154
     move-wide/from16 v0, v30
 
-    iput-wide v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->callEndedTimestampMs:J
+    .line 155
+    .line 156
+    iput-wide v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->callConnectedTimestampMs:J
 
-    .line 465057
-    iput-boolean v14, v11, Lcom/facebook/rsys/call/gen/CallModel;->inviteRequestedVideo:Z
+    .line 157
+    .line 158
+    move-wide/from16 v0, v28
 
-    .line 465058
-    iput-boolean v13, v11, Lcom/facebook/rsys/call/gen/CallModel;->acceptRemoteVideoEnabled:Z
+    .line 159
+    .line 160
+    iput-wide v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->callEndedTimestampMs:J
 
-    .line 465059
-    move/from16 v0, v29
+    .line 161
+    .line 162
+    iput-boolean v13, v9, Lcom/facebook/rsys/call/gen/CallModel;->inviteRequestedVideo:Z
 
-    iput v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->requiredVideoEscalationConsent:I
+    .line 163
+    .line 164
+    iput-boolean v12, v9, Lcom/facebook/rsys/call/gen/CallModel;->acceptRemoteVideoEnabled:Z
 
-    .line 465060
-    move/from16 v0, v28
+    .line 165
+    .line 166
+    move/from16 v0, v27
 
-    iput v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->callStartedWithCamera:I
+    .line 167
+    .line 168
+    iput v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->requiredVideoEscalationConsent:I
 
-    .line 465061
-    move-object/from16 v0, v27
+    .line 169
+    .line 170
+    move/from16 v0, v26
 
-    iput-object v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->selfParticipant:Lcom/facebook/rsys/call/gen/CallParticipant;
+    .line 171
+    .line 172
+    iput v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->callStartedWithCamera:I
 
-    .line 465062
-    move-object/from16 v0, v26
-
-    iput-object v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->remoteParticipants:Ljava/util/ArrayList;
-
-    .line 465063
+    .line 173
+    .line 174
     move-object/from16 v0, v25
 
-    iput-object v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->callContext:Lcom/facebook/rsys/callcontext/gen/CallContext;
+    .line 175
+    .line 176
+    iput-object v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->selfParticipant:Lcom/facebook/rsys/call/gen/CallParticipant;
 
-    .line 465064
-    iput-object v12, v11, Lcom/facebook/rsys/call/gen/CallModel;->callInfo:Lcom/facebook/rsys/callinfo/gen/CallInfo;
+    .line 177
+    .line 178
+    move-object/from16 v0, v24
 
-    .line 465065
-    iput-boolean v10, v11, Lcom/facebook/rsys/call/gen/CallModel;->maxParticipantsReached:Z
+    .line 179
+    .line 180
+    iput-object v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->remoteParticipants:Ljava/util/ArrayList;
 
-    .line 465066
-    iput-boolean v9, v11, Lcom/facebook/rsys/call/gen/CallModel;->canSendMultipleVideoStreams:Z
+    .line 181
+    .line 182
+    move-object/from16 v0, v23
 
-    .line 465067
-    move/from16 v0, v24
+    .line 183
+    .line 184
+    iput-object v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->callContext:Lcom/facebook/rsys/callcontext/gen/CallContext;
 
-    iput-boolean v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->canSendScreenshareStream:Z
+    .line 185
+    .line 186
+    iput-object v11, v9, Lcom/facebook/rsys/call/gen/CallModel;->callInfo:Lcom/facebook/rsys/callinfo/gen/CallInfo;
 
-    .line 465068
+    .line 187
+    .line 188
+    iput-boolean v10, v9, Lcom/facebook/rsys/call/gen/CallModel;->maxParticipantsReached:Z
+
+    .line 189
+    .line 190
+    iput-boolean v8, v9, Lcom/facebook/rsys/call/gen/CallModel;->canSendMultipleVideoStreams:Z
+
+    .line 191
+    .line 192
+    move/from16 v0, v22
+
+    .line 193
+    .line 194
+    iput-boolean v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->canSendScreenshareStream:Z
+
+    .line 195
+    .line 196
     move-object/from16 v0, p21
 
-    iput-object v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->sharedCallId:Ljava/lang/String;
+    .line 197
+    .line 198
+    iput-object v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->sharedCallId:Ljava/lang/String;
 
-    .line 465069
-    iput-object v8, v11, Lcom/facebook/rsys/call/gen/CallModel;->notifications:Ljava/util/ArrayList;
+    .line 199
+    .line 200
+    iput-object v7, v9, Lcom/facebook/rsys/call/gen/CallModel;->notifications:Ljava/util/ArrayList;
 
-    .line 465070
+    .line 201
+    .line 202
     move-object/from16 v0, p23
 
-    iput-object v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->userCapabilities:Ljava/util/Map;
+    .line 203
+    .line 204
+    iput-object v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->userCapabilities:Ljava/util/Map;
 
-    .line 465071
+    .line 205
+    .line 206
     move-object/from16 v0, p24
 
-    iput-object v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->initialDataMessages:Ljava/util/ArrayList;
+    .line 207
+    .line 208
+    iput-object v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->initialDataMessages:Ljava/util/ArrayList;
 
-    .line 465072
-    iput v5, v11, Lcom/facebook/rsys/call/gen/CallModel;->connectionQuality:I
+    .line 209
+    .line 210
+    iput v6, v9, Lcom/facebook/rsys/call/gen/CallModel;->connectionQuality:I
 
-    .line 465073
-    move/from16 v0, v23
+    .line 211
+    .line 212
+    move/from16 v0, v21
 
-    iput v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->initialDirection:I
+    .line 213
+    .line 214
+    iput v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->initialDirection:I
 
-    .line 465074
-    iput-wide v3, v11, Lcom/facebook/rsys/call/gen/CallModel;->rejoinAttempts:J
-
-    .line 465075
-    move-wide/from16 v0, v21
-
-    iput-wide v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->rejoinTotalAttempts:J
-
-    .line 465076
+    .line 215
+    .line 216
     move-wide/from16 v0, v19
 
-    iput-wide v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->numSuccessfulRejoins:J
+    .line 217
+    .line 218
+    iput-wide v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->rejoinAttempts:J
 
-    .line 465077
-    iput v2, v11, Lcom/facebook/rsys/call/gen/CallModel;->transferState:I
+    .line 219
+    .line 220
+    move-wide/from16 v0, v17
 
-    .line 465078
-    move/from16 v0, v18
+    .line 221
+    .line 222
+    iput-wide v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->rejoinTotalAttempts:J
 
-    iput v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->joinMode:I
+    .line 223
+    .line 224
+    iput-wide v14, v9, Lcom/facebook/rsys/call/gen/CallModel;->numSuccessfulRejoins:J
 
-    .line 465079
-    move-object/from16 v0, v17
+    .line 225
+    .line 226
+    iput v5, v9, Lcom/facebook/rsys/call/gen/CallModel;->transferState:I
 
-    iput-object v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->clientEndpointId:Ljava/lang/String;
-
-    .line 465080
+    .line 227
+    .line 228
     move/from16 v0, v16
 
-    iput-boolean v0, v11, Lcom/facebook/rsys/call/gen/CallModel;->supportsSctp:Z
+    .line 229
+    .line 230
+    iput v0, v9, Lcom/facebook/rsys/call/gen/CallModel;->joinMode:I
 
+    .line 231
+    .line 232
+    iput-object v4, v9, Lcom/facebook/rsys/call/gen/CallModel;->clientEndpointId:Ljava/lang/String;
+
+    .line 233
+    .line 234
+    iput-boolean v3, v9, Lcom/facebook/rsys/call/gen/CallModel;->supportsSctp:Z
+
+    .line 235
+    .line 236
+    iput-boolean v2, v9, Lcom/facebook/rsys/call/gen/CallModel;->joinAttemptSent:Z
+
+    .line 237
+    .line 238
     return-void
 .end method
 
@@ -506,108 +704,108 @@
 
     .line 78
     .line 79
+    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->joinAttemptSent:Z
+
+    .line 80
+    .line 81
+    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->joinAttemptSent:Z
+
+    .line 82
+    .line 83
+    if-ne v1, v0, :cond_4
+
+    .line 84
+    .line 85
     :cond_2
     return v5
 
-    .line 80
+    .line 86
     :cond_3
     check-cast p1, Lcom/facebook/rsys/call/gen/CallModel;
 
-    .line 81
-    .line 82
-    iget v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->inCallState:I
-
-    .line 83
-    .line 84
-    iget v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->inCallState:I
-
-    .line 85
-    .line 86
-    if-ne v1, v0, :cond_4
-
     .line 87
     .line 88
-    iget-wide v3, p0, Lcom/facebook/rsys/call/gen/CallModel;->callCreatedTimestampMs:J
+    iget v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->inCallState:I
 
     .line 89
     .line 90
-    iget-wide v1, p1, Lcom/facebook/rsys/call/gen/CallModel;->callCreatedTimestampMs:J
+    iget v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->inCallState:I
 
     .line 91
     .line 92
-    cmp-long v0, v3, v1
+    if-ne v1, v0, :cond_4
 
     .line 93
     .line 94
-    if-nez v0, :cond_4
+    iget-wide v3, p0, Lcom/facebook/rsys/call/gen/CallModel;->callCreatedTimestampMs:J
 
     .line 95
     .line 96
-    iget-wide v3, p0, Lcom/facebook/rsys/call/gen/CallModel;->callAnsweredTimestampMs:J
+    iget-wide v1, p1, Lcom/facebook/rsys/call/gen/CallModel;->callCreatedTimestampMs:J
 
     .line 97
     .line 98
-    iget-wide v1, p1, Lcom/facebook/rsys/call/gen/CallModel;->callAnsweredTimestampMs:J
+    cmp-long v0, v3, v1
 
     .line 99
     .line 100
-    cmp-long v0, v3, v1
+    if-nez v0, :cond_4
 
     .line 101
     .line 102
-    if-nez v0, :cond_4
+    iget-wide v3, p0, Lcom/facebook/rsys/call/gen/CallModel;->callAnsweredTimestampMs:J
 
     .line 103
     .line 104
-    iget-wide v3, p0, Lcom/facebook/rsys/call/gen/CallModel;->callConnectedTimestampMs:J
+    iget-wide v1, p1, Lcom/facebook/rsys/call/gen/CallModel;->callAnsweredTimestampMs:J
 
     .line 105
     .line 106
-    iget-wide v1, p1, Lcom/facebook/rsys/call/gen/CallModel;->callConnectedTimestampMs:J
+    cmp-long v0, v3, v1
 
     .line 107
     .line 108
-    cmp-long v0, v3, v1
+    if-nez v0, :cond_4
 
     .line 109
     .line 110
-    if-nez v0, :cond_4
+    iget-wide v3, p0, Lcom/facebook/rsys/call/gen/CallModel;->callConnectedTimestampMs:J
 
     .line 111
     .line 112
-    iget-wide v3, p0, Lcom/facebook/rsys/call/gen/CallModel;->callEndedTimestampMs:J
+    iget-wide v1, p1, Lcom/facebook/rsys/call/gen/CallModel;->callConnectedTimestampMs:J
 
     .line 113
     .line 114
-    iget-wide v1, p1, Lcom/facebook/rsys/call/gen/CallModel;->callEndedTimestampMs:J
+    cmp-long v0, v3, v1
 
     .line 115
     .line 116
-    cmp-long v0, v3, v1
+    if-nez v0, :cond_4
 
     .line 117
     .line 118
-    if-nez v0, :cond_4
+    iget-wide v3, p0, Lcom/facebook/rsys/call/gen/CallModel;->callEndedTimestampMs:J
 
     .line 119
     .line 120
-    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->inviteRequestedVideo:Z
+    iget-wide v1, p1, Lcom/facebook/rsys/call/gen/CallModel;->callEndedTimestampMs:J
 
     .line 121
     .line 122
-    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->inviteRequestedVideo:Z
+    cmp-long v0, v3, v1
 
     .line 123
     .line 124
-    if-ne v1, v0, :cond_4
+    if-nez v0, :cond_4
 
     .line 125
     .line 126
-    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->acceptRemoteVideoEnabled:Z
+    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->inviteRequestedVideo:Z
 
     .line 127
     .line 128
-    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->acceptRemoteVideoEnabled:Z
+    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->inviteRequestedVideo:Z
 
     .line 129
     .line 130
@@ -615,11 +813,11 @@
 
     .line 131
     .line 132
-    iget v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->requiredVideoEscalationConsent:I
+    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->acceptRemoteVideoEnabled:Z
 
     .line 133
     .line 134
-    iget v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->requiredVideoEscalationConsent:I
+    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->acceptRemoteVideoEnabled:Z
 
     .line 135
     .line 136
@@ -627,11 +825,11 @@
 
     .line 137
     .line 138
-    iget v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->callStartedWithCamera:I
+    iget v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->requiredVideoEscalationConsent:I
 
     .line 139
     .line 140
-    iget v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->callStartedWithCamera:I
+    iget v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->requiredVideoEscalationConsent:I
 
     .line 141
     .line 142
@@ -639,103 +837,103 @@
 
     .line 143
     .line 144
-    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->selfParticipant:Lcom/facebook/rsys/call/gen/CallParticipant;
+    iget v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->callStartedWithCamera:I
 
     .line 145
     .line 146
-    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->selfParticipant:Lcom/facebook/rsys/call/gen/CallParticipant;
+    iget v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->callStartedWithCamera:I
 
     .line 147
     .line 148
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v0, :cond_4
 
     .line 149
     .line 150
-    .line 151
-    move-result v0
+    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->selfParticipant:Lcom/facebook/rsys/call/gen/CallParticipant;
 
+    .line 151
     .line 152
-    if-eqz v0, :cond_4
+    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->selfParticipant:Lcom/facebook/rsys/call/gen/CallParticipant;
 
     .line 153
     .line 154
-    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->remoteParticipants:Ljava/util/ArrayList;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 155
     .line 156
-    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->remoteParticipants:Ljava/util/ArrayList;
-
     .line 157
+    move-result v0
+
     .line 158
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_4
 
     .line 159
     .line 160
-    .line 161
-    move-result v0
+    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->remoteParticipants:Ljava/util/ArrayList;
 
+    .line 161
     .line 162
-    if-eqz v0, :cond_4
+    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->remoteParticipants:Ljava/util/ArrayList;
 
     .line 163
     .line 164
-    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->callContext:Lcom/facebook/rsys/callcontext/gen/CallContext;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 165
     .line 166
-    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->callContext:Lcom/facebook/rsys/callcontext/gen/CallContext;
-
     .line 167
+    move-result v0
+
     .line 168
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_4
 
     .line 169
     .line 170
-    .line 171
-    move-result v0
+    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->callContext:Lcom/facebook/rsys/callcontext/gen/CallContext;
 
+    .line 171
     .line 172
-    if-eqz v0, :cond_4
+    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->callContext:Lcom/facebook/rsys/callcontext/gen/CallContext;
 
     .line 173
     .line 174
-    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->callInfo:Lcom/facebook/rsys/callinfo/gen/CallInfo;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 175
     .line 176
-    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->callInfo:Lcom/facebook/rsys/callinfo/gen/CallInfo;
-
     .line 177
+    move-result v0
+
     .line 178
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_4
 
     .line 179
     .line 180
-    .line 181
-    move-result v0
+    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->callInfo:Lcom/facebook/rsys/callinfo/gen/CallInfo;
 
+    .line 181
     .line 182
-    if-eqz v0, :cond_4
+    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->callInfo:Lcom/facebook/rsys/callinfo/gen/CallInfo;
 
     .line 183
     .line 184
-    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->maxParticipantsReached:Z
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 185
     .line 186
-    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->maxParticipantsReached:Z
-
     .line 187
+    move-result v0
+
     .line 188
-    if-ne v1, v0, :cond_4
+    if-eqz v0, :cond_4
 
     .line 189
     .line 190
-    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->canSendMultipleVideoStreams:Z
+    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->maxParticipantsReached:Z
 
     .line 191
     .line 192
-    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->canSendMultipleVideoStreams:Z
+    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->maxParticipantsReached:Z
 
     .line 193
     .line 194
@@ -743,11 +941,11 @@
 
     .line 195
     .line 196
-    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->canSendScreenshareStream:Z
+    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->canSendMultipleVideoStreams:Z
 
     .line 197
     .line 198
-    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->canSendScreenshareStream:Z
+    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->canSendMultipleVideoStreams:Z
 
     .line 199
     .line 200
@@ -755,113 +953,125 @@
 
     .line 201
     .line 202
-    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->sharedCallId:Ljava/lang/String;
+    iget-boolean v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->canSendScreenshareStream:Z
 
     .line 203
     .line 204
-    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->sharedCallId:Ljava/lang/String;
+    iget-boolean v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->canSendScreenshareStream:Z
 
     .line 205
     .line 206
-    if-nez v1, :cond_5
+    if-ne v1, v0, :cond_4
 
     .line 207
     .line 208
-    if-eqz v0, :cond_6
+    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->sharedCallId:Ljava/lang/String;
 
     .line 209
     .line 210
+    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->sharedCallId:Ljava/lang/String;
+
+    .line 211
+    .line 212
+    if-nez v1, :cond_5
+
+    .line 213
+    .line 214
+    if-eqz v0, :cond_6
+
+    .line 215
+    .line 216
     :cond_4
     :goto_0
     const/4 v5, 0x0
 
-    .line 211
+    .line 217
     return v5
 
-    .line 212
+    .line 218
     :cond_5
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 213
-    .line 214
-    .line 215
-    move-result v0
-
-    .line 216
-    if-eqz v0, :cond_4
-
-    .line 217
-    .line 218
-    :cond_6
-    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->notifications:Ljava/util/ArrayList;
-
     .line 219
     .line 220
-    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->notifications:Ljava/util/ArrayList;
-
     .line 221
+    move-result v0
+
     .line 222
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_4
 
     .line 223
     .line 224
-    .line 225
-    move-result v0
+    :cond_6
+    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->notifications:Ljava/util/ArrayList;
 
+    .line 225
     .line 226
-    if-eqz v0, :cond_4
+    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->notifications:Ljava/util/ArrayList;
 
     .line 227
     .line 228
-    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->userCapabilities:Ljava/util/Map;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 229
     .line 230
-    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->userCapabilities:Ljava/util/Map;
-
     .line 231
+    move-result v0
+
     .line 232
-    if-nez v1, :cond_7
+    if-eqz v0, :cond_4
 
     .line 233
     .line 234
-    if-eqz v0, :cond_8
+    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->userCapabilities:Ljava/util/Map;
 
     .line 235
     .line 236
-    goto :goto_0
+    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->userCapabilities:Ljava/util/Map;
 
     .line 237
+    .line 238
+    if-nez v1, :cond_7
+
+    .line 239
+    .line 240
+    if-eqz v0, :cond_8
+
+    .line 241
+    .line 242
+    goto :goto_0
+
+    .line 243
     :cond_7
     invoke-interface {v1, v0}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
-    .line 238
-    .line 239
-    .line 240
-    move-result v0
-
-    .line 241
-    if-eqz v0, :cond_4
-
-    .line 242
-    .line 243
-    :cond_8
-    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->initialDataMessages:Ljava/util/ArrayList;
-
     .line 244
     .line 245
-    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->initialDataMessages:Ljava/util/ArrayList;
-
     .line 246
+    move-result v0
+
     .line 247
-    if-nez v1, :cond_0
+    if-eqz v0, :cond_4
 
     .line 248
     .line 249
-    if-eqz v0, :cond_1
+    :cond_8
+    iget-object v1, p0, Lcom/facebook/rsys/call/gen/CallModel;->initialDataMessages:Ljava/util/ArrayList;
 
     .line 250
     .line 251
+    iget-object v0, p1, Lcom/facebook/rsys/call/gen/CallModel;->initialDataMessages:Ljava/util/ArrayList;
+
+    .line 252
+    .line 253
+    if-nez v1, :cond_0
+
+    .line 254
+    .line 255
+    if-eqz v0, :cond_1
+
+    .line 256
+    .line 257
     goto :goto_0
 .end method
 
@@ -873,7 +1083,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A00(I)I
+    invoke-static {v0}, LX/0X4;->A00(I)I
 
     .line 3
     .line 4
@@ -977,7 +1187,7 @@
 
     .line 51
     .line 52
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 53
     .line 54
@@ -989,7 +1199,7 @@
 
     .line 57
     .line 58
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 59
     .line 60
@@ -1001,7 +1211,7 @@
 
     .line 63
     .line 64
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 65
     .line 66
@@ -1013,7 +1223,7 @@
 
     .line 69
     .line 70
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 71
     .line 72
@@ -1058,7 +1268,7 @@
 
     .line 90
     .line 91
-    invoke-static {v0}, LX/0Yd;->A04(Ljava/lang/String;)I
+    invoke-static {v0}, LX/0X2;->A0B(Ljava/lang/String;)I
 
     .line 92
     .line 93
@@ -1077,7 +1287,7 @@
 
     .line 99
     .line 100
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 101
     .line 102
@@ -1108,7 +1318,7 @@
 
     .line 113
     .line 114
-    invoke-static {v0}, LX/0Yi;->A05(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X7;->A02(Ljava/lang/Object;)I
 
     .line 115
     .line 116
@@ -1207,7 +1417,7 @@
 
     .line 160
     .line 161
-    invoke-static {v0, v1}, LX/001;->A02(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, LX/0X4;->A05(Ljava/lang/String;I)I
 
     .line 162
     .line 163
@@ -1222,18 +1432,29 @@
     add-int/2addr v1, v0
 
     .line 168
-    return v1
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 169
+    .line 170
+    iget-boolean v0, p0, Lcom/facebook/rsys/call/gen/CallModel;->joinAttemptSent:Z
+
+    .line 171
+    .line 172
+    add-int/2addr v1, v0
+
+    .line 173
+    return v1
+
+    .line 174
     :cond_0
     invoke-interface {v0}, Ljava/util/Map;->hashCode()I
 
-    .line 170
-    .line 171
-    .line 172
+    .line 175
+    .line 176
+    .line 177
     move-result v0
 
-    .line 173
+    .line 178
     goto :goto_0
 .end method
 
@@ -1241,7 +1462,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -1771,13 +1992,26 @@
     .line 292
     .line 293
     .line 294
-    invoke-static {v2}, LX/0Ye;->A0X(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const-string v0, ",joinAttemptSent="
 
     .line 295
     .line 296
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 297
+    .line 298
+    .line 299
+    iget-boolean v0, p0, Lcom/facebook/rsys/call/gen/CallModel;->joinAttemptSent:Z
+
+    .line 300
+    .line 301
+    invoke-static {v2, v0}, LX/0X2;->A0m(Ljava/lang/StringBuilder;Z)Ljava/lang/String;
+
+    .line 302
+    .line 303
+    .line 304
     move-result-object v0
 
-    .line 298
+    .line 305
     return-object v0
 .end method

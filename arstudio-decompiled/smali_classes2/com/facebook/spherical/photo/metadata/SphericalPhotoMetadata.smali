@@ -67,11 +67,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1d
+    const/16 v0, 0x9
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/16R;->A00(I)LX/16R;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -95,7 +95,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -143,7 +143,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 28
     .line 29
@@ -327,7 +327,7 @@
 
     .line 117
     .line 118
-    invoke-static {p1}, LX/0Yd;->A0I(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X1;->A0K(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 119
     .line 120
@@ -706,7 +706,7 @@
 
     .line 131
     .line 132
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 133
     .line 134
@@ -726,7 +726,7 @@
 
     .line 141
     .line 142
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 143
     .line 144
@@ -807,267 +807,274 @@
 
     .line 20
     .line 21
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 22
     .line 23
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 24
-    move-result v1
-
     .line 25
-    iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0C:I
-
     .line 26
-    .line 27
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v0
 
-    .line 28
-    .line 29
+    .line 27
     add-int/2addr v1, v0
 
+    .line 28
+    iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0C:I
+
+    .line 29
     .line 30
-    iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0D:I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 31
     .line 32
-    mul-int/lit8 v2, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 33
-    .line 34
-    add-int/2addr v2, v0
+    iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0D:I
 
+    .line 34
     .line 35
-    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A00:D
+    mul-int/lit8 v2, v1, 0x1f
 
     .line 36
     .line 37
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    add-int/2addr v2, v0
 
     .line 38
+    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A00:D
+
     .line 39
     .line 40
-    move-result-wide v0
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     .line 41
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
-
     .line 42
     .line 43
+    move-result-wide v0
+
     .line 44
-    move-result v2
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 45
-    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A01:D
-
     .line 46
     .line 47
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    move-result v2
 
     .line 48
+    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A01:D
+
     .line 49
     .line 50
-    move-result-wide v0
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     .line 51
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
-
     .line 52
     .line 53
+    move-result-wide v0
+
     .line 54
-    move-result v2
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 55
-    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A02:D
-
     .line 56
     .line 57
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    move-result v2
 
     .line 58
+    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A02:D
+
     .line 59
     .line 60
-    move-result-wide v0
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     .line 61
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
-
     .line 62
     .line 63
+    move-result-wide v0
+
     .line 64
-    move-result v2
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 65
-    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A03:D
-
     .line 66
     .line 67
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    move-result v2
 
     .line 68
+    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A03:D
+
     .line 69
     .line 70
-    move-result-wide v0
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     .line 71
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
-
     .line 72
     .line 73
+    move-result-wide v0
+
     .line 74
-    move-result v2
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 75
-    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A04:D
-
     .line 76
     .line 77
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    move-result v2
 
     .line 78
+    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A04:D
+
     .line 79
     .line 80
-    move-result-wide v0
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     .line 81
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
-
     .line 82
     .line 83
+    move-result-wide v0
+
     .line 84
-    move-result v2
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 85
-    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A05:D
-
     .line 86
     .line 87
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+    move-result v2
 
     .line 88
+    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A05:D
+
     .line 89
     .line 90
-    move-result-wide v0
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     .line 91
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
-
     .line 92
     .line 93
+    move-result-wide v0
+
     .line 94
-    move-result v2
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 95
-    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A06:D
-
     .line 96
     .line 97
-    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    .line 98
-    .line 99
-    .line 100
-    move-result-wide v0
-
-    .line 101
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
-
-    .line 102
-    .line 103
-    .line 104
     move-result v2
 
-    .line 105
-    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A07:D
+    .line 98
+    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A06:D
 
-    .line 106
-    .line 107
+    .line 99
+    .line 100
     invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    .line 108
-    .line 109
-    .line 110
+    .line 101
+    .line 102
+    .line 103
     move-result-wide v0
 
-    .line 111
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    .line 104
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
+    .line 105
+    .line 106
+    .line 107
+    move-result v2
+
+    .line 108
+    iget-wide v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A07:D
+
+    .line 109
+    .line 110
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    .line 111
     .line 112
     .line 113
+    move-result-wide v0
+
     .line 114
-    move-result v1
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 115
-    iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0E:I
-
     .line 116
     .line 117
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v1
 
     .line 118
-    .line 119
-    add-int/2addr v1, v0
+    iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0E:I
 
+    .line 119
     .line 120
-    iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0F:I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 121
     .line 122
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 123
-    .line 124
     add-int/2addr v1, v0
 
+    .line 123
+    iget v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0F:I
+
+    .line 124
     .line 125
-    iget-object v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0H:Ljava/lang/String;
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 126
     .line 127
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 128
-    .line 129
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 130
-    .line 131
-    .line 132
-    move-result v0
-
-    .line 133
     add-int/2addr v1, v0
 
+    .line 128
+    iget-object v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0H:Ljava/lang/String;
+
+    .line 129
+    .line 130
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 131
+    .line 132
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 133
     .line 134
-    iget-object v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0I:Ljava/lang/String;
-
     .line 135
-    .line 136
-    mul-int/lit8 v2, v1, 0x1f
-
-    .line 137
-    .line 138
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 139
-    .line 140
-    .line 141
     move-result v0
 
+    .line 136
+    add-int/2addr v1, v0
+
+    .line 137
+    iget-object v0, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0I:Ljava/lang/String;
+
+    .line 138
+    .line 139
+    mul-int/lit8 v2, v1, 0x1f
+
+    .line 140
+    .line 141
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
     .line 142
+    .line 143
+    .line 144
+    move-result v0
+
+    .line 145
     add-int/2addr v2, v0
 
-    .line 143
+    .line 146
     iget v1, p0, Lcom/facebook/spherical/photo/metadata/SphericalPhotoMetadata;->A0G:I
 
-    .line 144
-    .line 145
+    .line 147
+    .line 148
     mul-int/lit8 v0, v2, 0x1f
 
-    .line 146
-    .line 147
+    .line 149
+    .line 150
     add-int/2addr v0, v1
 
-    .line 148
+    .line 151
     return v0
 .end method
 
@@ -1232,7 +1239,7 @@
 
     .line 86
     .line 87
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 88
     .line 89
@@ -1241,7 +1248,7 @@
 
     .line 91
     .line 92
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 93
     .line 94

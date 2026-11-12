@@ -1,1078 +1,1160 @@
 .class public final LX/5Q9;
-.super LX/5vr;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements Landroid/os/Handler$Callback;
 
 
 # instance fields
-.field public A00:I
+.field public A00:LX/5MQ;
 
-.field public A01:I
+.field public A01:Z
 
-.field public A02:Ljava/util/List;
+.field public A02:LX/6ap;
 
-.field public A03:J
+.field public final A03:LX/5QG;
 
-.field public A04:LX/5Q7;
+.field public final A04:LX/5OE;
 
-.field public A05:Z
+.field public final A05:LX/5Sh;
 
-.field public final A06:Landroid/os/Handler;
+.field public final A06:Ljava/util/HashMap;
 
-.field public final A07:LX/5QD;
+.field public final A07:Ljava/util/IdentityHashMap;
 
-.field public final A08:[Lcom/google/android/exoplayer2/metadata/Metadata;
+.field public final A08:Ljava/util/List;
 
-.field public final A09:LX/2ig;
+.field public final A09:Ljava/util/Map;
 
-.field public final A0A:LX/5QC;
+.field public final A0A:Ljava/util/Set;
 
-.field public final A0B:[J
+.field public final A0B:LX/5Q4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Looper;LX/2ig;LX/5QD;Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(LX/5QG;LX/5OE;LX/5Q4;LX/5Sh;)V
+    .locals 3
 
     .line 0
-    const/4 v1, 0x5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
-    invoke-direct {p0, v1}, LX/5vr;-><init>(I)V
-
     .line 2
     .line 3
+    iput-object p3, p0, LX/5Q9;->A0B:LX/5Q4;
+
     .line 4
-    iput-object p3, p0, LX/5Q9;->A07:LX/5QD;
-
     .line 5
-    .line 6
-    if-nez p1, :cond_0
+    iput-object p1, p0, LX/5Q9;->A03:LX/5QG;
 
+    .line 6
     .line 7
-    .line 8
     const/4 v0, 0x0
 
+    .line 8
+    new-instance v2, Ljava/util/Random;
+
     .line 9
-    :goto_0
-    iput-object v0, p0, LX/5Q9;->A06:Landroid/os/Handler;
-
     .line 10
-    .line 11
-    iput-object p2, p0, LX/5Q9;->A09:LX/2ig;
+    invoke-direct {v2}, Ljava/util/Random;-><init>()V
 
+    .line 11
     .line 12
     .line 13
-    new-instance v0, LX/5QC;
+    new-array v1, v0, [I
 
     .line 14
     .line 15
-    invoke-direct {v0}, LX/5QC;-><init>()V
+    new-instance v0, LX/5MO;
 
     .line 16
     .line 17
-    .line 18
-    iput-object v0, p0, LX/5Q9;->A0A:LX/5QC;
+    invoke-direct {v0, v2, v1}, LX/5MO;-><init>(Ljava/util/Random;[I)V
 
+    .line 18
     .line 19
     .line 20
-    new-array v0, v1, [Lcom/google/android/exoplayer2/metadata/Metadata;
+    iput-object v0, p0, LX/5Q9;->A00:LX/5MQ;
 
     .line 21
     .line 22
-    iput-object v0, p0, LX/5Q9;->A08:[Lcom/google/android/exoplayer2/metadata/Metadata;
+    new-instance v0, Ljava/util/IdentityHashMap;
 
     .line 23
     .line 24
-    new-array v0, v1, [J
+    invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
 
     .line 25
     .line 26
-    iput-object v0, p0, LX/5Q9;->A0B:[J
-
     .line 27
+    iput-object v0, p0, LX/5Q9;->A07:Ljava/util/IdentityHashMap;
+
     .line 28
-    if-eqz p4, :cond_1
-
     .line 29
-    .line 30
-    invoke-virtual {p4}, Ljava/lang/String;->isEmpty()Z
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
+    .line 30
     .line 31
     .line 32
+    move-result-object v0
+
     .line 33
-    move-result v0
+    iput-object v0, p0, LX/5Q9;->A09:Ljava/util/Map;
 
     .line 34
-    if-nez v0, :cond_1
-
     .line 35
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
     .line 36
-    goto :goto_1
-
     .line 37
-    :cond_0
-    new-instance v0, Landroid/os/Handler;
-
     .line 38
+    move-result-object v0
+
     .line 39
-    invoke-direct {v0, p1, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+    iput-object v0, p0, LX/5Q9;->A08:Ljava/util/List;
 
     .line 40
     .line 41
-    .line 42
-    goto :goto_0
+    iput-object p2, p0, LX/5Q9;->A04:LX/5OE;
 
+    .line 42
     .line 43
-    :goto_1
-    :try_start_0
-    invoke-static {p4}, LX/5K2;->A00(Ljava/lang/String;)Ljava/util/ArrayList;
+    iput-object p4, p0, LX/5Q9;->A05:LX/5Sh;
 
     .line 44
     .line 45
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
+
     .line 46
+    .line 47
+    .line 48
     move-result-object v0
 
-    .line 47
-    iput-object v0, p0, LX/5Q9;->A02:Ljava/util/List;
-
-    .line 48
     .line 49
-    return-void
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object v0, p0, LX/5Q9;->A06:Ljava/util/HashMap;
 
     .line 50
-    :catch_0
-    const-string v1, "MetadataRenderer"
-
     .line 51
-    .line 52
-    const-string v0, "Error in parsing IMF spec"
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
+    .line 52
     .line 53
     .line 54
-    invoke-static {v1, v0}, LX/52Q;->A04(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
     .line 55
+    iput-object v0, p0, LX/5Q9;->A0A:Ljava/util/Set;
+
     .line 56
     .line 57
-    :cond_1
     return-void
 .end method
 
-.method private A00(Lcom/google/android/exoplayer2/metadata/Metadata;Ljava/util/List;)V
-    .locals 6
+.method private A00(LX/5QB;)V
+    .locals 7
 
     .line 0
-    const/4 v4, 0x0
+    iget-object v4, p1, LX/5QB;->A02:LX/5Ll;
 
     .line 1
-    :goto_0
-    iget-object v5, p1, Lcom/google/android/exoplayer2/metadata/Metadata;->A01:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
-
     .line 2
-    .line 3
-    array-length v0, v5
+    new-instance v3, LX/5QC;
 
+    .line 3
     .line 4
-    if-ge v4, v0, :cond_2
+    invoke-direct {v3, p0}, LX/5QC;-><init>(LX/5Q9;)V
 
     .line 5
     .line 6
-    aget-object v0, v5, v4
-
     .line 7
-    .line 8
-    invoke-interface {v0}, Lcom/google/android/exoplayer2/metadata/Metadata$Entry;->AOL()Lcom/google/android/exoplayer2/Format;
+    new-instance v6, LX/5RQ;
 
+    .line 8
     .line 9
+    invoke-direct {v6, p1, p0}, LX/5RQ;-><init>(LX/5QB;LX/5Q9;)V
+
     .line 10
     .line 11
-    move-result-object v2
-
     .line 12
-    if-eqz v2, :cond_1
+    iget-object v1, p0, LX/5Q9;->A06:Ljava/util/HashMap;
 
     .line 13
     .line 14
-    iget-object v1, p0, LX/5Q9;->A09:LX/2ig;
+    new-instance v0, LX/5QE;
 
     .line 15
     .line 16
-    invoke-interface {v1, v2}, LX/2ig;->ApY(Lcom/google/android/exoplayer2/Format;)Z
+    invoke-direct {v0, v6, v3, v4}, LX/5QE;-><init>(LX/5RQ;LX/5MJ;LX/5Li;)V
 
     .line 17
     .line 18
     .line 19
-    move-result v0
+    invoke-virtual {v1, p1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 20
-    if-eqz v0, :cond_1
-
     .line 21
     .line 22
-    invoke-interface {v1, v2}, LX/2ig;->A7w(Lcom/google/android/exoplayer2/Format;)LX/5Q6;
+    const/4 v5, 0x0
 
     .line 23
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
     .line 24
     .line 25
-    move-result-object v3
-
     .line 26
-    aget-object v0, v5, v4
+    move-result-object v0
 
     .line 27
-    .line 28
-    invoke-interface {v0}, Lcom/google/android/exoplayer2/metadata/Metadata$Entry;->AOK()[B
+    if-nez v0, :cond_0
 
+    .line 28
     .line 29
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
     .line 30
     .line 31
-    move-result-object v2
-
     .line 32
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
     .line 33
+    :cond_0
+    invoke-static {v5, v0}, LX/435;->A05(Landroid/os/Handler$Callback;Landroid/os/Looper;)Landroid/os/Handler;
+
     .line 34
     .line 35
-    iget-object v1, p0, LX/5Q9;->A0A:LX/5QC;
-
     .line 36
+    move-result-object v2
+
     .line 37
-    invoke-virtual {v1}, LX/52p;->A01()V
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 38
     .line 39
     .line 40
-    array-length v0, v2
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 41
-    invoke-virtual {v1, v0}, LX/5K0;->A04(I)V
-
     .line 42
     .line 43
+    iget-object v0, v4, LX/5Lf;->A04:LX/5Le;
+
     .line 44
-    iget-object v0, v1, LX/5K0;->A02:Ljava/nio/ByteBuffer;
-
     .line 45
-    .line 46
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    iget-object v1, v0, LX/5Le;->A02:Ljava/util/concurrent/CopyOnWriteArrayList;
 
+    .line 46
     .line 47
+    new-instance v0, LX/5MI;
+
     .line 48
     .line 49
-    invoke-virtual {v1}, LX/5K0;->A03()V
+    invoke-direct {v0, v2, v6}, LX/5MI;-><init>(Landroid/os/Handler;LX/5Lx;)V
 
     .line 50
     .line 51
     .line 52
-    invoke-virtual {v3, v1}, LX/5Q6;->A8N(LX/5QC;)Lcom/google/android/exoplayer2/metadata/Metadata;
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     .line 53
     .line 54
     .line 55
-    move-result-object v0
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     .line 56
-    if-eqz v0, :cond_0
-
     .line 57
     .line 58
-    invoke-direct {p0, v0, p2}, LX/5Q9;->A00(Lcom/google/android/exoplayer2/metadata/Metadata;Ljava/util/List;)V
+    move-result-object v0
 
     .line 59
+    if-nez v0, :cond_1
+
     .line 60
     .line 61
-    :cond_0
-    :goto_1
-    add-int/lit8 v4, v4, 0x1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     .line 62
     .line 63
-    goto :goto_0
-
     .line 64
-    :cond_1
-    aget-object v0, v5, v4
+    move-result-object v0
 
     .line 65
-    .line 66
-    invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :cond_1
+    invoke-static {v5, v0}, LX/435;->A05(Landroid/os/Handler$Callback;Landroid/os/Looper;)Landroid/os/Handler;
 
+    .line 66
     .line 67
     .line 68
+    move-result-object v2
+
     .line 69
-    goto :goto_1
+    iget-object v0, v4, LX/5Lf;->A03:LX/5Lh;
 
     .line 70
+    .line 71
+    iget-object v1, v0, LX/5Lh;->A02:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 72
+    .line 73
+    new-instance v0, LX/5MH;
+
+    .line 74
+    .line 75
+    invoke-direct {v0, v2, v6}, LX/5MH;-><init>(Landroid/os/Handler;LX/5M9;)V
+
+    .line 76
+    .line 77
+    .line 78
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 79
+    .line 80
+    .line 81
+    iget-object v1, p0, LX/5Q9;->A02:LX/6ap;
+
+    .line 82
+    .line 83
+    iget-object v0, p0, LX/5Q9;->A0B:LX/5Q4;
+
+    .line 84
+    .line 85
+    invoke-interface {v4, v0, v3, v1}, LX/5Li;->Aev(LX/5Q4;LX/5MJ;LX/6ap;)V
+
+    .line 86
+    .line 87
+    .line 88
+    return-void
+.end method
+
+.method public static A01(LX/5QB;LX/5Q9;)V
+    .locals 3
+
+    .line 0
+    iget-boolean v0, p0, LX/5QB;->A01:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/5QB;->A04:Ljava/util/List;
+
+    .line 5
+    .line 6
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-eqz v0, :cond_0
+
+    .line 11
+    .line 12
+    iget-object v0, p1, LX/5Q9;->A06:Ljava/util/HashMap;
+
+    .line 13
+    .line 14
+    invoke-virtual {v0, p0}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v2
+
+    .line 18
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 19
+    .line 20
+    .line 21
+    check-cast v2, LX/5QE;
+
+    .line 22
+    .line 23
+    iget-object v1, v2, LX/5QE;->A02:LX/5Li;
+
+    .line 24
+    .line 25
+    iget-object v0, v2, LX/5QE;->A01:LX/5MJ;
+
+    .line 26
+    .line 27
+    invoke-interface {v1, v0}, LX/5Li;->Agy(LX/5MJ;)V
+
+    .line 28
+    .line 29
+    .line 30
+    iget-object v0, v2, LX/5QE;->A00:LX/5RQ;
+
+    .line 31
+    .line 32
+    invoke-interface {v1, v0}, LX/5Li;->AhY(LX/5Lx;)V
+
+    .line 33
+    .line 34
+    .line 35
+    invoke-interface {v1, v0}, LX/5Li;->AhW(LX/5M9;)V
+
+    .line 36
+    .line 37
+    .line 38
+    iget-object v0, p1, LX/5Q9;->A0A:Ljava/util/Set;
+
+    .line 39
+    .line 40
+    invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 41
+    .line 42
+    .line 43
+    :cond_0
+    return-void
+.end method
+
+.method public static A02(LX/5Q9;)V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/5Q9;->A0A:Ljava/util/Set;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-eqz v0, :cond_2
+
+    .line 11
+    .line 12
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v1
+
+    .line 16
+    check-cast v1, LX/5QB;
+
+    .line 17
+    .line 18
+    iget-object v0, v1, LX/5QB;->A04:Ljava/util/List;
+
+    .line 19
+    .line 20
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v0
+
+    .line 24
+    if-eqz v0, :cond_0
+
+    .line 25
+    .line 26
+    iget-object v0, p0, LX/5Q9;->A06:Ljava/util/HashMap;
+
+    .line 27
+    .line 28
+    invoke-virtual {v0, v1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    check-cast v0, LX/5QE;
+
+    .line 33
+    .line 34
+    if-eqz v0, :cond_1
+
+    .line 35
+    .line 36
+    iget-object v1, v0, LX/5QE;->A02:LX/5Li;
+
+    .line 37
+    .line 38
+    iget-object v0, v0, LX/5QE;->A01:LX/5MJ;
+
+    .line 39
+    .line 40
+    invoke-interface {v1, v0}, LX/5Li;->A7Q(LX/5MJ;)V
+
+    .line 41
+    .line 42
+    .line 43
+    :cond_1
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+
+    .line 44
+    .line 45
+    .line 46
+    goto :goto_0
+
+    .line 47
+    :cond_2
+    return-void
+.end method
+
+.method public static A03(LX/5Q9;II)V
+    .locals 7
+
+    .line 0
+    const/4 v5, 0x1
+
+    .line 1
+    sub-int/2addr p2, v5
+
+    .line 2
+    :goto_0
+    if-lt p2, p1, :cond_2
+
+    .line 3
+    .line 4
+    iget-object v6, p0, LX/5Q9;->A08:Ljava/util/List;
+
+    .line 5
+    .line 6
+    invoke-interface {v6, p2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v4
+
+    .line 10
+    check-cast v4, LX/5QB;
+
+    .line 11
+    .line 12
+    iget-object v1, p0, LX/5Q9;->A09:Ljava/util/Map;
+
+    .line 13
+    .line 14
+    iget-object v0, v4, LX/5QB;->A03:Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 17
+    .line 18
+    .line 19
+    iget-object v0, v4, LX/5QB;->A02:LX/5Ll;
+
+    .line 20
+    .line 21
+    iget-object v0, v0, LX/5Ll;->A01:LX/5Lm;
+
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->A03()I
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    neg-int v3, v0
+
+    .line 28
+    move v2, p2
+
+    .line 29
+    :goto_1
+    invoke-interface {v6}, Ljava/util/List;->size()I
+
+    .line 30
+    .line 31
+    .line 32
+    move-result v0
+
+    .line 33
+    if-ge v2, v0, :cond_0
+
+    .line 34
+    .line 35
+    invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v1
+
+    .line 39
+    check-cast v1, LX/5QB;
+
+    .line 40
+    .line 41
+    iget v0, v1, LX/5QB;->A00:I
+
+    .line 42
+    .line 43
+    add-int/2addr v0, v3
+
+    .line 44
+    iput v0, v1, LX/5QB;->A00:I
+
+    .line 45
+    .line 46
+    add-int/lit8 v2, v2, 0x1
+
+    .line 47
+    .line 48
+    goto :goto_1
+
+    .line 49
+    :cond_0
+    iput-boolean v5, v4, LX/5QB;->A01:Z
+
+    .line 50
+    .line 51
+    iget-boolean v0, p0, LX/5Q9;->A01:Z
+
+    .line 52
+    .line 53
+    if-eqz v0, :cond_1
+
+    .line 54
+    .line 55
+    invoke-static {v4, p0}, LX/5Q9;->A01(LX/5QB;LX/5Q9;)V
+
+    .line 56
+    .line 57
+    .line 58
+    :cond_1
+    add-int/lit8 p2, p2, -0x1
+
+    .line 59
+    .line 60
+    goto :goto_0
+
+    .line 61
     :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0N([Lcom/google/android/exoplayer2/Format;JJ)V
-    .locals 2
+.method public final A04()Lcom/google/android/exoplayer2/Timeline;
+    .locals 4
 
     .line 0
-    iget-object v1, p0, LX/5Q9;->A09:LX/2ig;
+    iget-object v3, p0, LX/5Q9;->A08:Ljava/util/List;
 
     .line 1
     .line 2
-    const/4 v0, 0x0
+    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     .line 3
-    aget-object v0, p1, v0
-
     .line 4
     .line 5
-    invoke-interface {v1, v0}, LX/2ig;->A7w(Lcom/google/android/exoplayer2/Format;)LX/5Q6;
+    move-result v0
 
     .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/5Q9;->A04:LX/5Q7;
-
-    .line 10
-    .line 11
-    return-void
-.end method
-
-.method public final A0Q()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/5Q9;->A08:[Lcom/google/android/exoplayer2/metadata/Metadata;
-
-    .line 1
-    .line 2
-    const/4 v1, 0x0
-
-    .line 3
-    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 4
-    .line 5
-    .line 6
-    const/4 v0, 0x0
-
-    .line 7
-    iput v0, p0, LX/5Q9;->A01:I
-
-    .line 8
-    .line 9
-    iput v0, p0, LX/5Q9;->A00:I
-
-    .line 10
-    .line 11
-    iput-object v1, p0, LX/5Q9;->A04:LX/5Q7;
-
-    .line 12
-    .line 13
-    return-void
-.end method
-
-.method public final A0R(JZ)V
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/5Q9;->A08:[Lcom/google/android/exoplayer2/metadata/Metadata;
-
-    .line 1
-    .line 2
-    const/4 v0, 0x0
-
-    .line 3
-    invoke-static {v1, v0}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 4
-    .line 5
-    .line 6
-    const/4 v0, 0x0
-
-    .line 7
-    iput v0, p0, LX/5Q9;->A01:I
-
-    .line 8
-    .line 9
-    iput v0, p0, LX/5Q9;->A00:I
-
-    .line 10
-    .line 11
-    iput-boolean v0, p0, LX/5Q9;->A05:Z
-
-    .line 12
-    .line 13
-    return-void
-.end method
-
-.method public final AQE()Z
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/5Q9;->A05:Z
-
-    .line 1
-    .line 2
-    return v0
-.end method
-
-.method public final ARL()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final AjP(JJ)V
-    .locals 9
-
-    .line 0
-    iget-object v0, p0, LX/5Q9;->A02:Ljava/util/List;
-
-    .line 1
-    .line 2
     if-eqz v0, :cond_0
 
-    .line 3
-    .line 4
-    invoke-static {p1, p2}, Lcom/google/android/exoplayer2/util/Util;->A08(J)J
-
-    .line 5
-    .line 6
     .line 7
-    move-result-wide v3
-
     .line 8
-    iget-object v2, p0, LX/5Q9;->A06:Landroid/os/Handler;
+    sget-object v1, Lcom/google/android/exoplayer2/Timeline;->A00:Lcom/google/android/exoplayer2/Timeline;
 
     .line 9
     .line 10
-    if-eqz v2, :cond_6
+    return-object v1
 
     .line 11
+    :cond_0
+    const/4 v2, 0x0
+
     .line 12
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     .line 13
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :goto_0
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
     .line 14
     .line 15
     .line 16
-    move-result-object v0
+    move-result v0
 
     .line 17
-    invoke-static {v2, v0, v1}, LX/4BD;->A15(Landroid/os/Handler;Ljava/lang/Object;I)V
+    if-ge v2, v0, :cond_1
 
     .line 18
     .line 19
-    .line 20
-    :cond_0
-    iget-boolean v0, p0, LX/5Q9;->A05:Z
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
+    .line 20
     .line 21
     .line 22
-    const/4 v6, 0x5
+    move-result-object v0
 
     .line 23
-    const/4 v5, 0x1
+    check-cast v0, LX/5QB;
 
     .line 24
-    if-nez v0, :cond_1
-
     .line 25
+    iput v1, v0, LX/5QB;->A00:I
+
     .line 26
-    iget v0, p0, LX/5Q9;->A00:I
-
     .line 27
+    iget-object v0, v0, LX/5QB;->A02:LX/5Ll;
+
     .line 28
-    if-ge v0, v6, :cond_1
-
     .line 29
+    iget-object v0, v0, LX/5Ll;->A01:LX/5Lm;
+
     .line 30
-    iget-object v7, p0, LX/5Q9;->A0A:LX/5QC;
-
     .line 31
-    .line 32
-    invoke-virtual {v7}, LX/52p;->A01()V
+    invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->A03()I
 
+    .line 32
     .line 33
     .line 34
+    move-result v0
+
     .line 35
-    iget-object v2, p0, LX/5vr;->A0C:LX/5QB;
+    add-int/2addr v1, v0
 
     .line 36
-    .line 37
-    const/4 v0, 0x0
+    add-int/lit8 v2, v2, 0x1
 
+    .line 37
     .line 38
-    iput-object v0, v2, LX/5QB;->A01:LX/5vG;
+    goto :goto_0
 
     .line 39
+    :cond_1
+    iget-object v0, p0, LX/5Q9;->A00:LX/5MQ;
+
     .line 40
-    iput-object v0, v2, LX/5QB;->A00:Lcom/google/android/exoplayer2/Format;
-
     .line 41
-    .line 42
-    const/4 v0, 0x0
+    new-instance v1, LX/5MN;
 
+    .line 42
     .line 43
-    invoke-virtual {p0, v2, v7, v0}, LX/5vr;->A0K(LX/5QB;LX/5K0;I)I
+    invoke-direct {v1, v0, v3}, LX/5MN;-><init>(LX/5MQ;Ljava/util/Collection;)V
 
     .line 44
     .line 45
     .line 46
-    move-result v1
+    return-object v1
+.end method
+
+.method public final A05(LX/5MQ;Ljava/util/List;I)Lcom/google/android/exoplayer2/Timeline;
+    .locals 6
+
+    .line 0
+    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-nez v0, :cond_4
+
+    .line 5
+    .line 6
+    iput-object p1, p0, LX/5Q9;->A00:LX/5MQ;
+
+    .line 7
+    .line 8
+    move v2, p3
+
+    .line 9
+    :goto_0
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    add-int/2addr v0, p3
+
+    .line 14
+    if-ge v2, v0, :cond_4
+
+    .line 15
+    .line 16
+    sub-int v0, v2, p3
+
+    .line 17
+    .line 18
+    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v3
+
+    .line 22
+    check-cast v3, LX/5QB;
+
+    .line 23
+    .line 24
+    if-lez v2, :cond_3
+
+    .line 25
+    .line 26
+    iget-object v1, p0, LX/5Q9;->A08:Ljava/util/List;
+
+    .line 27
+    .line 28
+    add-int/lit8 v0, v2, -0x1
+
+    .line 29
+    .line 30
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v1
+
+    .line 34
+    check-cast v1, LX/5QB;
+
+    .line 35
+    .line 36
+    iget-object v0, v1, LX/5QB;->A02:LX/5Ll;
+
+    .line 37
+    .line 38
+    iget-object v0, v0, LX/5Ll;->A01:LX/5Lm;
+
+    .line 39
+    .line 40
+    iget v1, v1, LX/5QB;->A00:I
+
+    .line 41
+    .line 42
+    invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->A03()I
+
+    .line 43
+    .line 44
+    .line 45
+    move-result v0
+
+    .line 46
+    add-int/2addr v1, v0
 
     .line 47
-    const/4 v0, -0x4
+    :goto_1
+    iput v1, v3, LX/5QB;->A00:I
 
     .line 48
-    if-ne v1, v0, :cond_5
-
     .line 49
+    const/4 v0, 0x0
+
     .line 50
-    invoke-static {v7}, LX/52p;->A00(LX/52p;)Z
+    iput-boolean v0, v3, LX/5QB;->A01:Z
 
     .line 51
     .line 52
-    .line 53
-    move-result v0
+    iget-object v0, v3, LX/5QB;->A04:Ljava/util/List;
 
+    .line 53
     .line 54
-    if-eqz v0, :cond_4
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 55
     .line 56
-    iput-boolean v5, p0, LX/5Q9;->A05:Z
-
     .line 57
+    iget-object v0, v3, LX/5QB;->A02:LX/5Ll;
+
     .line 58
-    :cond_1
-    :goto_0
-    iget v0, p0, LX/5Q9;->A00:I
-
     .line 59
+    iget-object v0, v0, LX/5Ll;->A01:LX/5Lm;
+
     .line 60
-    if-lez v0, :cond_2
-
     .line 61
-    .line 62
-    iget-object v0, p0, LX/5Q9;->A0B:[J
+    invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->A03()I
 
+    .line 62
     .line 63
     .line 64
-    iget v3, p0, LX/5Q9;->A01:I
+    move-result v5
 
     .line 65
+    move v4, v2
+
     .line 66
-    aget-wide v1, v0, v3
+    :goto_2
+    iget-object v1, p0, LX/5Q9;->A08:Ljava/util/List;
 
     .line 67
     .line 68
-    cmp-long v0, v1, p1
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
     .line 69
     .line 70
-    if-gtz v0, :cond_2
-
     .line 71
+    move-result v0
+
     .line 72
-    iget-object v8, p0, LX/5Q9;->A08:[Lcom/google/android/exoplayer2/metadata/Metadata;
+    if-ge v4, v0, :cond_0
 
     .line 73
     .line 74
-    aget-object v7, v8, v3
+    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 75
     .line 76
-    sub-long/2addr p1, v1
-
     .line 77
-    invoke-static {p1, p2}, Lcom/google/android/exoplayer2/util/Util;->A08(J)J
+    move-result-object v1
 
     .line 78
+    check-cast v1, LX/5QB;
+
     .line 79
     .line 80
-    move-result-wide v1
+    iget v0, v1, LX/5QB;->A00:I
 
     .line 81
-    iget-object v4, p0, LX/5Q9;->A06:Landroid/os/Handler;
-
     .line 82
+    add-int/2addr v0, v5
+
     .line 83
-    if-eqz v4, :cond_3
+    iput v0, v1, LX/5QB;->A00:I
 
     .line 84
     .line 85
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    add-int/lit8 v4, v4, 0x1
 
     .line 86
     .line 87
+    goto :goto_2
+
     .line 88
-    move-result-object v3
+    :cond_0
+    invoke-interface {v1, v2, v3}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     .line 89
-    const/4 v0, 0x0
-
     .line 90
-    aput-object v7, v3, v0
-
     .line 91
-    .line 92
-    invoke-static {v3, v5, v1, v2}, LX/001;->A1B([Ljava/lang/Object;IJ)V
+    iget-object v1, p0, LX/5Q9;->A09:Ljava/util/Map;
 
+    .line 92
     .line 93
+    iget-object v0, v3, LX/5QB;->A03:Ljava/lang/Object;
+
     .line 94
     .line 95
-    invoke-static {v4, v3, v0}, LX/4BD;->A15(Landroid/os/Handler;Ljava/lang/Object;I)V
+    invoke-interface {v1, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 96
     .line 97
     .line 98
-    :goto_1
-    iget v1, p0, LX/5Q9;->A01:I
+    iget-boolean v0, p0, LX/5Q9;->A01:Z
 
     .line 99
     .line 100
-    const/4 v0, 0x0
+    if-eqz v0, :cond_1
 
     .line 101
-    aput-object v0, v8, v1
-
     .line 102
-    .line 103
-    add-int/lit8 v0, v1, 0x1
+    invoke-direct {p0, v3}, LX/5Q9;->A00(LX/5QB;)V
 
+    .line 103
     .line 104
     .line 105
-    rem-int/2addr v0, v6
+    iget-object v0, p0, LX/5Q9;->A07:Ljava/util/IdentityHashMap;
 
     .line 106
-    iput v0, p0, LX/5Q9;->A01:I
-
     .line 107
-    .line 108
-    iget v0, p0, LX/5Q9;->A00:I
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->isEmpty()Z
 
+    .line 108
     .line 109
     .line 110
-    sub-int/2addr v0, v5
+    move-result v0
 
     .line 111
-    iput v0, p0, LX/5Q9;->A00:I
+    if-eqz v0, :cond_2
 
     .line 112
     .line 113
-    :cond_2
-    return-void
+    iget-object v0, p0, LX/5Q9;->A0A:Ljava/util/Set;
 
     .line 114
-    :cond_3
-    iget-object v0, p0, LX/5Q9;->A07:LX/5QD;
-
     .line 115
-    .line 116
-    invoke-interface {v0, v7, v1, v2}, LX/5QD;->AZs(Lcom/google/android/exoplayer2/metadata/Metadata;J)V
+    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 116
     .line 117
     .line 118
-    .line 119
-    goto :goto_1
+    :cond_1
+    :goto_3
+    add-int/lit8 v2, v2, 0x1
 
+    .line 119
     .line 120
-    :cond_4
-    const/high16 v1, -0x80000000
+    goto :goto_0
 
     .line 121
+    :cond_2
+    iget-object v0, p0, LX/5Q9;->A06:Ljava/util/HashMap;
+
     .line 122
-    iget v0, v7, LX/52p;->A00:I
-
     .line 123
+    invoke-virtual {v0, v3}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 124
-    and-int/2addr v0, v1
-
     .line 125
-    invoke-static {v0, v1}, LX/001;->A1O(II)Z
-
     .line 126
-    .line 127
-    .line 128
-    move-result v0
+    move-result-object v0
 
+    .line 127
+    check-cast v0, LX/5QE;
+
+    .line 128
     .line 129
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
     .line 130
     .line 131
-    iget-wide v0, p0, LX/5Q9;->A03:J
+    iget-object v1, v0, LX/5QE;->A02:LX/5Li;
 
     .line 132
     .line 133
-    iput-wide v0, v7, LX/5QC;->A00:J
+    iget-object v0, v0, LX/5QE;->A01:LX/5MJ;
 
     .line 134
     .line 135
-    invoke-virtual {v7}, LX/5K0;->A03()V
+    invoke-interface {v1, v0}, LX/5Li;->A7Q(LX/5MJ;)V
 
     .line 136
     .line 137
     .line 138
-    iget-object v0, p0, LX/5Q9;->A04:LX/5Q7;
+    goto :goto_3
 
     .line 139
-    .line 140
-    invoke-interface {v0, v7}, LX/5Q7;->A8N(LX/5QC;)Lcom/google/android/exoplayer2/metadata/Metadata;
-
-    .line 141
-    .line 142
-    .line 143
-    move-result-object v1
-
-    .line 144
-    if-eqz v1, :cond_1
-
-    .line 145
-    .line 146
-    iget-object v0, v1, Lcom/google/android/exoplayer2/metadata/Metadata;->A01:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
-
-    .line 147
-    .line 148
-    array-length v0, v0
-
-    .line 149
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 150
-    .line 151
-    .line 152
-    move-result-object v2
-
-    .line 153
-    invoke-direct {p0, v1, v2}, LX/5Q9;->A00(Lcom/google/android/exoplayer2/metadata/Metadata;Ljava/util/List;)V
-
-    .line 154
-    .line 155
-    .line 156
-    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    .line 157
-    .line 158
-    .line 159
-    move-result v0
-
-    .line 160
-    if-nez v0, :cond_1
-
-    .line 161
-    .line 162
-    new-instance v1, Lcom/google/android/exoplayer2/metadata/Metadata;
-
-    .line 163
-    .line 164
-    invoke-direct {v1, v2}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>(Ljava/util/List;)V
-
-    .line 165
-    .line 166
-    .line 167
-    iget v4, p0, LX/5Q9;->A01:I
-
-    .line 168
-    .line 169
-    iget v3, p0, LX/5Q9;->A00:I
-
-    .line 170
-    .line 171
-    add-int/2addr v4, v3
-
-    .line 172
-    rem-int/2addr v4, v6
-
-    .line 173
-    iget-object v0, p0, LX/5Q9;->A08:[Lcom/google/android/exoplayer2/metadata/Metadata;
-
-    .line 174
-    .line 175
-    aput-object v1, v0, v4
-
-    .line 176
-    .line 177
-    iget-object v2, p0, LX/5Q9;->A0B:[J
-
-    .line 178
-    .line 179
-    iget-wide v0, v7, LX/5K0;->A01:J
-
-    .line 180
-    .line 181
-    aput-wide v0, v2, v4
-
-    .line 182
-    .line 183
-    add-int/lit8 v0, v3, 0x1
-
-    .line 184
-    .line 185
-    iput v0, p0, LX/5Q9;->A00:I
-
-    .line 186
-    .line 187
-    goto/16 :goto_0
-
-    .line 188
-    .line 189
-    :cond_5
-    const/4 v0, -0x5
-
-    .line 190
-    if-ne v1, v0, :cond_1
-
-    .line 191
-    .line 192
-    iget-object v0, v2, LX/5QB;->A00:Lcom/google/android/exoplayer2/Format;
-
-    .line 193
-    .line 194
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 195
-    .line 196
-    .line 197
-    iget-wide v0, v0, Lcom/google/android/exoplayer2/Format;->A0M:J
-
-    .line 198
-    .line 199
-    iput-wide v0, p0, LX/5Q9;->A03:J
-
-    .line 200
-    .line 201
-    goto/16 :goto_0
-
-    .line 202
-    .line 203
-    :cond_6
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 204
-    .line 205
-    .line 206
-    move-result-object v1
-
-    .line 207
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 208
-    .line 209
-    .line 210
-    move-result v0
-
-    .line 211
-    if-eqz v0, :cond_0
-
-    .line 212
-    .line 213
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 214
-    .line 215
-    .line 216
-    goto :goto_2
-.end method
-
-.method public final ApX(Lcom/google/android/exoplayer2/Format;)I
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/5Q9;->A09:LX/2ig;
-
-    .line 1
-    .line 2
-    invoke-interface {v0, p1}, LX/2ig;->ApY(Lcom/google/android/exoplayer2/Format;)Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    if-eqz v0, :cond_2
-
-    .line 7
-    .line 8
-    iget v1, p1, Lcom/google/android/exoplayer2/Format;->A07:I
-
-    .line 9
-    .line 10
-    if-eqz v1, :cond_0
-
-    .line 11
-    .line 12
-    const/4 v0, 0x2
-
-    .line 13
-    const/4 v2, 0x2
-
-    .line 14
-    if-ne v1, v0, :cond_1
-
-    .line 15
-    .line 16
-    :cond_0
-    const/4 v2, 0x4
-
-    .line 17
-    :cond_1
-    :goto_0
+    :cond_3
     const/4 v1, 0x0
 
-    .line 18
-    const/16 v0, 0x80
+    .line 140
+    goto :goto_1
 
-    .line 19
-    .line 20
-    or-int/2addr v2, v1
+    .line 141
+    :cond_4
+    invoke-virtual {p0}, LX/5Q9;->A04()Lcom/google/android/exoplayer2/Timeline;
 
-    .line 21
-    or-int/2addr v2, v0
+    .line 142
+    .line 143
+    .line 144
+    move-result-object v0
 
-    .line 22
-    return v2
-
-    .line 23
-    :cond_2
-    const/4 v2, 0x0
-
-    .line 24
-    goto :goto_0
-.end method
-
-.method public final getName()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "MetadataRenderer"
-
+    .line 145
     return-object v0
 .end method
 
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 5
+.method public final A06(LX/6ap;)V
+    .locals 4
 
     .line 0
-    iget v0, p1, Landroid/os/Message;->what:I
+    iget-boolean v0, p0, LX/5Q9;->A01:Z
 
     .line 1
     .line 2
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
     .line 3
-    if-eqz v0, :cond_1
+    xor-int/lit8 v0, v0, 0x1
 
     .line 4
     .line 5
-    if-ne v0, v4, :cond_0
+    invoke-static {v0}, LX/55g;->A05(Z)V
 
     .line 6
     .line 7
-    iget-object v0, p0, LX/5Q9;->A02:Ljava/util/List;
-
     .line 8
-    .line 9
-    if-eqz v0, :cond_2
+    iput-object p1, p0, LX/5Q9;->A02:LX/6ap;
 
+    .line 9
     .line 10
+    const/4 v2, 0x0
+
     .line 11
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    :goto_0
+    iget-object v1, p0, LX/5Q9;->A08:Ljava/util/List;
 
     .line 12
     .line 13
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
     .line 14
-    move-result-object v1
-
     .line 15
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 16
-    .line 17
-    .line 18
     move-result v0
 
+    .line 17
+    if-ge v2, v0, :cond_0
+
+    .line 18
     .line 19
-    if-eqz v0, :cond_2
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 20
     .line 21
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 22
-    .line 23
-    .line 24
-    goto :goto_0
+    move-result-object v1
 
+    .line 23
+    check-cast v1, LX/5QB;
+
+    .line 24
     .line 25
-    :cond_0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
+    invoke-direct {p0, v1}, LX/5Q9;->A00(LX/5QB;)V
 
     .line 26
     .line 27
     .line 28
-    move-result-object v0
+    iget-object v0, p0, LX/5Q9;->A0A:Ljava/util/Set;
 
     .line 29
-    throw v0
-
     .line 30
-    :cond_1
-    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 31
     .line 32
-    check-cast v1, [Ljava/lang/Object;
-
     .line 33
-    .line 34
-    const/4 v0, 0x0
+    add-int/lit8 v2, v2, 0x1
 
+    .line 34
     .line 35
-    aget-object v3, v1, v0
+    goto :goto_0
 
     .line 36
+    :cond_0
+    iput-boolean v3, p0, LX/5Q9;->A01:Z
+
     .line 37
-    check-cast v3, Lcom/google/android/exoplayer2/metadata/Metadata;
-
     .line 38
-    .line 39
-    aget-object v0, v1, v4
-
-    .line 40
-    .line 41
-    invoke-static {v0}, LX/002;->A01(Ljava/lang/Object;)J
-
-    .line 42
-    .line 43
-    .line 44
-    move-result-wide v1
-
-    .line 45
-    iget-object v0, p0, LX/5Q9;->A07:LX/5QD;
-
-    .line 46
-    .line 47
-    invoke-interface {v0, v3, v1, v2}, LX/5QD;->AZs(Lcom/google/android/exoplayer2/metadata/Metadata;J)V
-
-    .line 48
-    .line 49
-    .line 50
-    :cond_2
-    return v4
+    return-void
 .end method

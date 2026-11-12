@@ -1,6 +1,9 @@
-.class public final LX/3Xv;
+.class public abstract LX/3Xv;
 .super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements LX/3Y0;
 
 
 # direct methods

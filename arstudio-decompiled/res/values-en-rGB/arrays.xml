@@ -8,6 +8,7 @@
         <item>Search</item>
         <item>Notifications</item>
         <item>Highlights tab</item>
+        <item>Stories</item>
         <item>Other</item>
     </string-array>
 </resources>

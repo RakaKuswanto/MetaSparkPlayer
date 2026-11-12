@@ -73,80 +73,83 @@
     return-void
 .end method
 
-.method public constructor <init>(FFFF)V
-    .locals 6
+.method public constructor <init>(FFF)V
+    .locals 7
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x0
 
     .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 2
     .line 3
+    .line 4
     float-to-double v2, p1
 
-    .line 4
+    .line 5
     const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
 
-    .line 5
     .line 6
+    .line 7
     mul-double/2addr v2, v0
 
-    .line 7
+    .line 8
     invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
 
-    .line 8
     .line 9
     .line 10
+    .line 11
     move-result-wide v4
 
-    .line 11
+    .line 12
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
-    .line 12
     .line 13
     .line 14
+    .line 15
     move-result-wide v0
 
-    .line 15
+    .line 16
     double-to-float v3, v0
 
-    .line 16
+    .line 17
     invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
-    .line 17
     .line 18
     .line 19
+    .line 20
     move-result-wide v1
 
-    .line 20
+    .line 21
     double-to-float v0, v1
 
-    .line 21
+    .line 22
     iput v0, p0, Lcom/facebook/spherical/util/Quaternion;->w:F
 
-    .line 22
     .line 23
-    mul-float/2addr p2, v3
-
     .line 24
-    iput p2, p0, Lcom/facebook/spherical/util/Quaternion;->x:F
+    mul-float/2addr v6, v3
 
     .line 25
-    .line 26
-    mul-float/2addr p3, v3
+    iput v6, p0, Lcom/facebook/spherical/util/Quaternion;->x:F
 
+    .line 26
     .line 27
-    iput p3, p0, Lcom/facebook/spherical/util/Quaternion;->y:F
+    mul-float/2addr p2, v3
 
     .line 28
-    .line 29
-    mul-float/2addr p4, v3
+    iput p2, p0, Lcom/facebook/spherical/util/Quaternion;->y:F
 
+    .line 29
     .line 30
-    iput p4, p0, Lcom/facebook/spherical/util/Quaternion;->z:F
+    mul-float/2addr p3, v3
 
     .line 31
+    iput p3, p0, Lcom/facebook/spherical/util/Quaternion;->z:F
+
     .line 32
+    .line 33
     return-void
 .end method
 
@@ -198,22 +201,22 @@
     sub-float/2addr v8, v0
 
     .line 20
-    iget v3, p1, Lcom/facebook/spherical/util/Quaternion;->z:F
+    iget v11, p1, Lcom/facebook/spherical/util/Quaternion;->z:F
 
     .line 21
     .line 22
-    iget v11, p0, Lcom/facebook/spherical/util/Quaternion;->z:F
+    iget v3, p0, Lcom/facebook/spherical/util/Quaternion;->z:F
 
     .line 23
     .line 24
-    mul-float v0, v3, v11
+    mul-float v0, v11, v3
 
     .line 25
     .line 26
     sub-float/2addr v8, v0
 
     .line 27
-    mul-float v1, v10, v6
+    mul-float v2, v10, v6
 
     .line 28
     .line 29
@@ -221,75 +224,85 @@
 
     .line 30
     .line 31
-    add-float/2addr v1, v0
+    add-float/2addr v2, v0
 
     .line 32
-    invoke-static {v5, v11, v1, v3, v4}, LX/4BE;->A03(FFFFF)F
+    mul-float v0, v5, v3
 
     .line 33
     .line 34
+    add-float/2addr v2, v0
+
     .line 35
-    move-result v2
+    mul-float v0, v11, v4
 
     .line 36
-    mul-float v1, v10, v4
-
     .line 37
+    sub-float/2addr v2, v0
+
     .line 38
-    mul-float v0, v7, v11
+    mul-float v1, v10, v4
 
     .line 39
     .line 40
-    sub-float/2addr v1, v0
+    mul-float v0, v7, v3
 
     .line 41
+    .line 42
+    sub-float/2addr v1, v0
+
+    .line 43
     mul-float v0, v5, v9
 
-    .line 42
-    .line 43
-    add-float/2addr v1, v0
-
     .line 44
-    mul-float v0, v3, v6
-
     .line 45
-    .line 46
     add-float/2addr v1, v0
+
+    .line 46
+    mul-float v0, v11, v6
 
     .line 47
-    mul-float/2addr v10, v11
-
     .line 48
-    invoke-static {v7, v4, v10, v5, v6}, LX/4BE;->A03(FFFFF)F
+    add-float/2addr v1, v0
 
     .line 49
+    mul-float/2addr v10, v3
+
     .line 50
+    mul-float/2addr v7, v4
+
     .line 51
-    move-result v0
+    add-float/2addr v10, v7
 
     .line 52
-    mul-float/2addr v3, v9
+    mul-float/2addr v5, v6
 
     .line 53
-    add-float/2addr v0, v3
+    sub-float/2addr v10, v5
 
     .line 54
-    iput v8, p0, Lcom/facebook/spherical/util/Quaternion;->w:F
+    mul-float/2addr v11, v9
 
     .line 55
+    add-float/2addr v10, v11
+
     .line 56
-    iput v2, p0, Lcom/facebook/spherical/util/Quaternion;->x:F
+    iput v8, p0, Lcom/facebook/spherical/util/Quaternion;->w:F
 
     .line 57
     .line 58
-    iput v1, p0, Lcom/facebook/spherical/util/Quaternion;->y:F
+    iput v2, p0, Lcom/facebook/spherical/util/Quaternion;->x:F
 
     .line 59
     .line 60
-    iput v0, p0, Lcom/facebook/spherical/util/Quaternion;->z:F
+    iput v1, p0, Lcom/facebook/spherical/util/Quaternion;->y:F
 
     .line 61
     .line 62
+    iput v10, p0, Lcom/facebook/spherical/util/Quaternion;->z:F
+
+    .line 63
+    .line 64
     return-void
 .end method
 
@@ -297,7 +310,7 @@
     .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -377,7 +390,7 @@
     .line 42
     .line 43
     .line 44
-    invoke-static {v1}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1}, LX/001;->A0R(Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 45
     .line 46

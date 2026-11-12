@@ -1,23 +1,28 @@
-.class public LX/61I;
+.class public abstract LX/61i;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/62t;
+
 
 # instance fields
-.field public final A00:I
+.field public A00:LX/66w;
 
-.field public final A01:I
+.field public A01:Landroid/view/Surface;
 
-.field public final A02:I
+.field public final A02:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public final A03:J
+.field public final A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final A04:Ljava/lang/Object;
+.field public final A04:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public volatile A05:Z
 
 
 # direct methods
-.method public constructor <init>(LX/61I;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,262 +30,359 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p1, LX/61I;->A04:Ljava/lang/Object;
+    const/4 v2, 0x0
 
     .line 4
+    const/4 v1, 0x0
+
     .line 5
-    iput-object v0, p0, LX/61I;->A04:Ljava/lang/Object;
+    invoke-static {v1}, LX/0X7;->A0l(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 6
     .line 7
-    iget v0, p1, LX/61I;->A00:I
-
     .line 8
+    move-result-object v0
+
     .line 9
-    iput v0, p0, LX/61I;->A00:I
+    iput-object v0, p0, LX/61i;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 10
     .line 11
-    iget v0, p1, LX/61I;->A01:I
+    invoke-static {v1}, LX/0X7;->A0l(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 12
     .line 13
-    iput v0, p0, LX/61I;->A01:I
-
     .line 14
+    move-result-object v0
+
     .line 15
-    iget-wide v0, p1, LX/61I;->A03:J
+    iput-object v0, p0, LX/61i;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 16
     .line 17
-    iput-wide v0, p0, LX/61I;->A03:J
+    invoke-static {v2}, LX/0X7;->A0p(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 18
     .line 19
-    iget v0, p1, LX/61I;->A02:I
-
     .line 20
+    move-result-object v0
+
     .line 21
-    iput v0, p0, LX/61I;->A02:I
+    iput-object v0, p0, LX/61i;->A02:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 22
     .line 23
-    return-void
-.end method
+    const/4 v0, 0x1
 
-.method public constructor <init>(Ljava/lang/Object;IIIJ)V
-    .locals 0
+    .line 24
+    iput-boolean v0, p0, LX/61i;->A05:Z
 
-    .line 268435456
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    iput-object p1, p0, LX/61I;->A04:Ljava/lang/Object;
-
-    .line 268435460
-    .line 268435461
-    iput p2, p0, LX/61I;->A00:I
-
-    .line 268435462
-    .line 268435463
-    iput p3, p0, LX/61I;->A01:I
-
-    .line 268435464
-    .line 268435465
-    iput-wide p5, p0, LX/61I;->A03:J
-
-    .line 268435466
-    .line 268435467
-    iput p4, p0, LX/61I;->A02:I
-
-    .line 268435468
-    .line 268435469
+    .line 25
+    .line 26
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public declared-synchronized A4a()Z
+    .locals 2
 
     .line 0
-    const/4 v5, 0x1
+    monitor-enter p0
 
     .line 1
-    if-eq p0, p1, :cond_2
+    :try_start_0
+    iget-object v0, p0, LX/61i;->A00:LX/66w;
 
     .line 2
     .line 3
-    instance-of v1, p1, LX/61I;
+    if-eqz v0, :cond_0
 
     .line 4
     .line 5
-    const/4 v0, 0x0
+    iget-boolean v1, p0, LX/61i;->A05:Z
 
     .line 6
-    if-nez v1, :cond_0
+    .line 7
+    const/4 v0, 0x1
+
+    .line 8
+    if-nez v1, :cond_1
+
+    .line 9
+    .line 10
+    :cond_0
+    const/4 v0, 0x0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 11
+    :cond_1
+    monitor-exit p0
+
+    .line 12
+    return v0
+
+    .line 13
+    :catchall_0
+    move-exception v0
+
+    .line 14
+    monitor-exit p0
+
+    .line 15
+    throw v0
+.end method
+
+.method public final ANw(Landroid/view/Surface;LX/63H;)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/61i;->A00:LX/66w;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_1
+
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/61i;->A01:Landroid/view/Surface;
+
+    .line 5
+    .line 6
+    if-ne v0, p1, :cond_0
 
     .line 7
     .line 8
-    return v0
+    const-string v1, "BaseVideoOutput"
 
     .line 9
-    :cond_0
-    check-cast p1, LX/61I;
-
     .line 10
+    const-string v0, "GLSurface already created, high chance it might cause an issue"
+
     .line 11
-    iget-object v1, p0, LX/61I;->A04:Ljava/lang/Object;
-
     .line 12
-    .line 13
-    iget-object v0, p1, LX/61I;->A04:Ljava/lang/Object;
+    invoke-static {v1, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 13
     .line 14
     .line 15
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    return-void
 
     .line 16
+    :cond_0
+    invoke-virtual {p0}, LX/61i;->release()V
+
     .line 17
     .line 18
-    move-result v0
-
     .line 19
-    if-eqz v0, :cond_1
+    :cond_1
+    if-eqz p1, :cond_2
 
     .line 20
     .line 21
-    iget v1, p0, LX/61I;->A00:I
+    invoke-virtual {p1}, Landroid/view/Surface;->isValid()Z
 
     .line 22
     .line 23
-    iget v0, p1, LX/61I;->A00:I
-
     .line 24
+    move-result v0
+
     .line 25
-    if-ne v1, v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 26
     .line 27
-    iget v1, p0, LX/61I;->A01:I
+    invoke-interface {p2, p1}, LX/63H;->A6S(Landroid/view/Surface;)LX/66w;
 
     .line 28
     .line 29
-    iget v0, p1, LX/61I;->A01:I
-
     .line 30
+    move-result-object v0
+
     .line 31
-    if-ne v1, v0, :cond_1
+    iput-object v0, p0, LX/61i;->A00:LX/66w;
 
     .line 32
     .line 33
-    iget-wide v3, p0, LX/61I;->A03:J
+    iput-object p1, p0, LX/61i;->A01:Landroid/view/Surface;
 
     .line 34
     .line 35
-    iget-wide v1, p1, LX/61I;->A03:J
+    iget-object v1, p0, LX/61i;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 36
     .line 37
-    cmp-long v0, v3, v1
+    const/4 v0, 0x1
 
     .line 38
-    .line 39
-    if-nez v0, :cond_1
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 39
     .line 40
     .line 41
-    iget v1, p0, LX/61I;->A02:I
+    :cond_2
+    iget-object v1, p0, LX/61i;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 42
     .line 43
-    iget v0, p1, LX/61I;->A02:I
+    const/4 v0, 0x0
 
     .line 44
-    .line 45
-    if-ne v1, v0, :cond_1
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 45
     .line 46
     .line 47
-    return v5
-
-    .line 48
-    :cond_1
-    const/4 v5, 0x0
-
-    .line 49
-    :cond_2
-    return v5
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public Abz()V
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/61I;->A04:Ljava/lang/Object;
+    iget-object v2, p0, LX/61i;->A03:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/4 v1, 0x0
+
+    .line 3
+    const/4 v0, 0x1
+
+    .line 4
+    invoke-virtual {v2, v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public getHeight()I
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/61i;->A00:LX/66w;
+
+    .line 1
+    .line 2
+    if-eqz v2, :cond_0
 
     .line 3
     .line 4
-    .line 5
-    move-result v0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    .line 5
     .line 6
-    invoke-static {v0}, LX/0Yg;->A00(I)I
+    const/16 v0, 0x18
 
     .line 7
     .line 8
-    .line 9
-    move-result v1
+    if-lt v1, v0, :cond_0
 
+    .line 9
     .line 10
-    iget v0, p0, LX/61I;->A00:I
+    invoke-interface {v2}, LX/66w;->getHeight()I
 
     .line 11
     .line 12
-    add-int/2addr v1, v0
+    .line 13
+    move-result v0
+
+    .line 14
+    return v0
+
+    .line 15
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 16
+    return v0
+.end method
+
+.method public getWidth()I
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/61i;->A00:LX/66w;
+
+    .line 1
+    .line 2
+    if-eqz v2, :cond_0
+
+    .line 3
+    .line 4
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 5
+    .line 6
+    const/16 v0, 0x18
+
+    .line 7
+    .line 8
+    if-lt v1, v0, :cond_0
+
+    .line 9
+    .line 10
+    invoke-interface {v2}, LX/66w;->getWidth()I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result v0
+
+    .line 14
+    return v0
+
+    .line 15
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 16
+    return v0
+.end method
+
+.method public release()V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/61i;->A00:LX/66w;
+
+    .line 1
+    .line 2
+    const/4 v2, 0x0
+
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    invoke-interface {v0}, LX/66w;->release()V
+
+    .line 6
+    .line 7
+    .line 8
+    iput-object v2, p0, LX/61i;->A00:LX/66w;
+
+    .line 9
+    .line 10
+    :cond_0
+    iget-object v1, p0, LX/61i;->A04:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    .line 11
+    .line 12
+    const/4 v0, 0x0
 
     .line 13
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     .line 14
     .line 15
-    iget v0, p0, LX/61I;->A01:I
-
     .line 16
+    iput-object v2, p0, LX/61i;->A01:Landroid/view/Surface;
+
     .line 17
-    add-int/2addr v1, v0
-
     .line 18
-    mul-int/lit8 v3, v1, 0x1f
-
-    .line 19
-    .line 20
-    iget-wide v1, p0, LX/61I;->A03:J
-
-    .line 21
-    .line 22
-    long-to-int v0, v1
-
-    .line 23
-    add-int/2addr v3, v0
-
-    .line 24
-    mul-int/lit8 v1, v3, 0x1f
-
-    .line 25
-    .line 26
-    iget v0, p0, LX/61I;->A02:I
-
-    .line 27
-    .line 28
-    add-int/2addr v1, v0
-
-    .line 29
-    return v1
+    return-void
 .end method

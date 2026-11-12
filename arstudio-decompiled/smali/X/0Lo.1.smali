@@ -1,314 +1,305 @@
-.class public final enum LX/0Lo;
-.super Ljava/lang/Enum;
+.class public final LX/0Lo;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements LX/0UV;
-
-
-# static fields
-.field public static final synthetic $VALUES:[LX/0Lo;
-
-.field public static final enum ConnectTriggerReason:LX/0Lo;
-
-.field public static final enum ConnectingMs:LX/0Lo;
-
-.field public static final enum CountConnectAttempt:LX/0Lo;
-
-.field public static final enum CountSuccessfulConnection:LX/0Lo;
-
-.field public static final enum LastConnectFailureReason:LX/0Lo;
-
-.field public static final enum LastDisconnectReason:LX/0Lo;
 
 
 # instance fields
-.field public final mJsonKey:Ljava/lang/String;
+.field public final A00:Ljava/lang/String;
 
-.field public final mType:Ljava/lang/Class;
+.field public final A01:Ljava/lang/String;
+
+.field public final A02:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 15
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    const-class v2, Ljava/util/concurrent/atomic/AtomicLong;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const-string v1, "CountSuccessfulConnection"
-
     .line 3
-    .line 4
-    const/4 v13, 0x0
+    iput-object p1, p0, LX/0Lo;->A02:Ljava/lang/String;
 
+    .line 4
     .line 5
-    const-string v0, "sc"
+    iput-object p2, p0, LX/0Lo;->A00:Ljava/lang/String;
 
     .line 6
     .line 7
-    new-instance v12, LX/0Lo;
+    iput-object p3, p0, LX/0Lo;->A01:Ljava/lang/String;
 
     .line 8
     .line 9
-    invoke-direct {v12, v1, v13, v0, v2}, LX/0Lo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;)V
+    return-void
+.end method
+
+.method public static A00(Ljava/nio/CharBuffer;)V
+    .locals 3
+
+    .line 0
+    invoke-virtual {p0}, Ljava/nio/Buffer;->limit()I
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v1
+
+    .line 4
+    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    sub-int/2addr v1, v0
+
+    .line 9
+    const/4 v0, 0x4
 
     .line 10
+    if-ge v1, v0, :cond_1
+
     .line 11
     .line 12
-    sput-object v12, LX/0Lo;->CountSuccessfulConnection:LX/0Lo;
+    if-lez v1, :cond_1
 
     .line 13
     .line 14
-    const-string v1, "CountConnectAttempt"
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 15
     .line 16
-    const/4 v11, 0x1
-
     .line 17
-    const-string v0, "ca"
+    move-result-object v1
 
     .line 18
+    const/16 v0, 0xa
+
     .line 19
-    new-instance v10, LX/0Lo;
-
     .line 20
-    .line 21
-    invoke-direct {v10, v1, v11, v0, v2}, LX/0Lo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;)V
+    :try_start_0
+    invoke-static {v1, v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
+    .line 21
     .line 22
     .line 23
+    move-result v1
+
     .line 24
-    sput-object v10, LX/0Lo;->CountConnectAttempt:LX/0Lo;
+    if-ltz v1, :cond_0
 
     .line 25
     .line 26
-    const-string v1, "ConnectingMs"
+    const/16 v0, 0xff
 
     .line 27
     .line 28
-    const/4 v9, 0x2
+    if-gt v1, v0, :cond_0
 
     .line 29
-    const-string v0, "ce"
-
     .line 30
+    return-void
+
     .line 31
-    new-instance v8, LX/0Lo;
+    :cond_0
+    const-string v0, "IPV4 octet value must be between 0 and 255, got "
 
     .line 32
     .line 33
-    invoke-direct {v8, v1, v9, v0, v2}, LX/0Lo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, LX/004;->A02(Ljava/lang/String;I)Ljava/lang/IllegalArgumentException;
 
     .line 34
     .line 35
     .line 36
-    sput-object v8, LX/0Lo;->ConnectingMs:LX/0Lo;
+    move-result-object v0
 
     .line 37
+    throw v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 38
-    const-class v14, Ljava/lang/String;
+    :catch_0
+    move-exception v2
 
     .line 39
-    .line 40
-    const-string v1, "ConnectTriggerReason"
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
+    .line 40
     .line 41
     .line 42
-    const/4 v7, 0x3
+    move-result-object v1
 
     .line 43
-    const-string v0, "tr"
+    const-string v0, "Unable to parse decimal octet "
 
     .line 44
     .line 45
-    new-instance v6, LX/0Lo;
+    invoke-static {p0, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 46
     .line 47
-    invoke-direct {v6, v1, v7, v0, v14}, LX/0Lo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;)V
-
     .line 48
+    move-result-object v1
+
     .line 49
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
     .line 50
-    sput-object v6, LX/0Lo;->ConnectTriggerReason:LX/0Lo;
-
     .line 51
-    .line 52
-    const-string v1, "LastConnectFailureReason"
+    invoke-direct {v0, v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 52
     .line 53
     .line 54
-    const/4 v5, 0x4
+    throw v0
 
     .line 55
-    const-string v0, "fr"
+    :cond_1
+    const-string v0, "IPV4 octet must contain between 1 and 3 digits"
 
     .line 56
     .line 57
-    new-instance v4, LX/0Lo;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 58
     .line 59
-    invoke-direct {v4, v1, v5, v0, v14}, LX/0Lo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;)V
-
     .line 60
+    move-result-object v0
+
     .line 61
-    .line 62
-    sput-object v4, LX/0Lo;->LastConnectFailureReason:LX/0Lo;
-
-    .line 63
-    .line 64
-    const-string v3, "LastDisconnectReason"
-
-    .line 65
-    .line 66
-    const/4 v2, 0x5
-
-    .line 67
-    const-string v0, "dr"
-
-    .line 68
-    .line 69
-    new-instance v1, LX/0Lo;
-
-    .line 70
-    .line 71
-    invoke-direct {v1, v3, v2, v0, v14}, LX/0Lo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;)V
-
-    .line 72
-    .line 73
-    .line 74
-    sput-object v1, LX/0Lo;->LastDisconnectReason:LX/0Lo;
-
-    .line 75
-    .line 76
-    const/4 v0, 0x6
-
-    .line 77
-    new-array v0, v0, [LX/0Lo;
-
-    .line 78
-    .line 79
-    aput-object v12, v0, v13
-
-    .line 80
-    .line 81
-    aput-object v10, v0, v11
-
-    .line 82
-    .line 83
-    aput-object v8, v0, v9
-
-    .line 84
-    .line 85
-    aput-object v6, v0, v7
-
-    .line 86
-    .line 87
-    aput-object v4, v0, v5
-
-    .line 88
-    .line 89
-    aput-object v1, v0, v2
-
-    .line 90
-    .line 91
-    sput-object v0, LX/0Lo;->$VALUES:[LX/0Lo;
-
-    .line 92
-    .line 93
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;)V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 1
-    .line 2
-    .line 3
-    iput-object p3, p0, LX/0Lo;->mJsonKey:Ljava/lang/String;
-
-    .line 4
-    .line 5
-    iput-object p4, p0, LX/0Lo;->mType:Ljava/lang/Class;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/0Lo;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/0Lo;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/0Lo;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/0Lo;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/0Lo;->$VALUES:[LX/0Lo;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/0Lo;
-
-    .line 7
-    .line 8
-    return-object v0
+    throw v0
 .end method
 
 
 # virtual methods
-.method public getKey()Ljava/lang/String;
-    .locals 1
+.method public final A01()Ljava/lang/String;
+    .locals 3
 
     .line 0
-    iget-object v0, p0, LX/0Lo;->mJsonKey:Ljava/lang/String;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
+    .line 3
+    move-result-object v2
+
+    .line 4
+    iget-object v0, p0, LX/0Lo;->A02:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
+    const-string v1, "@"
+
+    .line 13
+    .line 14
+    const-string v0, "<REDACTED>"
+
+    .line 15
+    .line 16
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 20
+    .line 21
+    .line 22
+    :cond_0
+    iget-object v1, p0, LX/0Lo;->A00:Ljava/lang/String;
+
+    .line 23
+    .line 24
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v0
+
+    .line 28
+    if-nez v0, :cond_1
+
+    .line 29
+    .line 30
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 31
+    .line 32
+    .line 33
+    :cond_1
+    iget-object v1, p0, LX/0Lo;->A01:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v0
+
+    .line 39
+    if-nez v0, :cond_2
+
+    .line 40
+    .line 41
+    const-string v0, ":"
+
+    .line 42
+    .line 43
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 44
+    .line 45
+    .line 46
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 47
+    .line 48
+    .line 49
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 50
+    .line 51
+    .line 52
+    move-result-object v0
+
+    .line 53
     return-object v0
 .end method
 
-.method public getValueType()Ljava/lang/Class;
+.method public final toString()Ljava/lang/String;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/0Lo;->mType:Ljava/lang/Class;
+    invoke-virtual {p0}, LX/0Lo;->A01()Ljava/lang/String;
 
     .line 1
     .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
     return-object v0
 .end method

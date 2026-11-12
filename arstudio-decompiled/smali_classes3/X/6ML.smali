@@ -1,33 +1,57 @@
-.class public final LX/6ML;
-.super Ljava/lang/RuntimeException;
+.class public final enum LX/6ML;
+.super LX/6MG;
 .source ""
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static A00()LX/6ML;
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
     .line 0
-    new-instance v0, LX/6ML;
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, p1, p2, v0}, LX/6MG;-><init>(Ljava/lang/String;ILX/6MN;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public translateName(Ljava/lang/reflect/Field;)Ljava/lang/String;
+    .locals 2
+
+    .line 0
+    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/6ML;-><init>()V
-
     .line 3
+    move-result-object v1
+
     .line 4
+    const/16 v0, 0x20
+
     .line 5
+    .line 6
+    invoke-static {v1, v0}, LX/6MG;->separateCamelCase(Ljava/lang/String;C)Ljava/lang/String;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {v0}, LX/6MG;->upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
     return-object v0
 .end method

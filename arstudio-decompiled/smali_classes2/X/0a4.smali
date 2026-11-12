@@ -1,51 +1,17 @@
-.class public final LX/0a4;
+.class public interface abstract LX/0a4;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public A00:LX/1zG;
+# virtual methods
+.method public abstract AAW()Ljava/lang/String;
+.end method
 
-.field public final A01:LX/0Na;
+.method public abstract ADp()Ljava/lang/String;
+.end method
 
+.method public abstract AME()Ljava/lang/String;
+.end method
 
-# direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 1
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    sget v0, LX/2eq;->AYf:I
-
-    .line 4
-    .line 5
-    invoke-static {v0}, LX/1zT;->A00(I)LX/1zT;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/0a4;->A01:LX/0Na;
-
-    .line 10
-    .line 11
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, LX/0a4;->A00:LX/1zG;
-
-    .line 16
-    .line 17
-    return-void
+.method public abstract getUserAgent()Ljava/lang/String;
 .end method

@@ -2,146 +2,119 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/4HA;
-
 
 # instance fields
-.field public final A00:LX/4GN;
+.field public A00:I
 
-.field public final A01:LX/4DB;
+.field public A01:Landroid/content/Context;
+
+.field public A02:Ljava/lang/ref/WeakReference;
+
+.field public A03:Z
+
+.field public final A04:Landroid/view/WindowManager;
 
 
 # direct methods
-.method public constructor <init>(LX/4GN;LX/4DB;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
+    .line 2
+    .line 3
+    sget-object v0, LX/4IJ;->DEFAULT:LX/4IJ;
+
+    .line 4
     .line 5
+    iget v0, v0, LX/4IJ;->timeMs:I
+
     .line 6
     .line 7
-    iput-object p1, p0, LX/4IH;->A00:LX/4GN;
+    iput v0, p0, LX/4IH;->A00:I
 
     .line 8
     .line 9
-    iput-object p2, p0, LX/4IH;->A01:LX/4DB;
+    invoke-static {p1}, LX/433;->A0R(Landroid/content/Context;)Landroid/view/WindowManager;
 
     .line 10
     .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/4IH;->A04:Landroid/view/WindowManager;
+
+    .line 14
+    .line 15
+    iput-object p1, p0, LX/4IH;->A01:Landroid/content/Context;
+
+    .line 16
+    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final AGm(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method public final A00()V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x0
+    iget-object v1, p0, LX/4IH;->A02:Ljava/lang/ref/WeakReference;
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
+    if-eqz v1, :cond_0
+
     .line 3
     .line 4
-    const v0, 0x7f080624
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     .line 5
     .line 6
     .line 7
-    invoke-static {p1, v0}, LX/4F2;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    move-result-object v0
 
     .line 8
+    if-eqz v0, :cond_0
+
     .line 9
     .line 10
-    move-result-object v0
+    iget-boolean v0, p0, LX/4IH;->A03:Z
 
     .line 11
-    return-object v0
-.end method
+    .line 12
+    if-eqz v0, :cond_0
 
-.method public final AJL()Landroid/view/View$OnClickListener;
-    .locals 1
+    .line 13
+    .line 14
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    .line 0
-    const/16 v0, 0x11
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v1
 
-    .line 1
-    .line 2
-    invoke-static {p0, v0}, LX/6PP;->A00(Ljava/lang/Object;I)LX/6PP;
+    .line 18
+    check-cast v1, LX/4IC;
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    .line 19
+    .line 20
+    iget-object v0, v1, LX/4IC;->A03:LX/4AL;
 
-    .line 6
-    return-object v0
-.end method
+    .line 21
+    .line 22
+    iget v0, v0, LX/4AL;->value:I
 
-.method public final AJa(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+    .line 23
+    .line 24
+    invoke-virtual {v1, v0}, LX/4IC;->A03(I)V
 
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 2
-    .line 3
-    .line 4
-    const v0, 0x7f080620
-
-    .line 5
-    .line 6
-    .line 7
-    invoke-static {p1, v0}, LX/4F2;->A01(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    return-object v0
-.end method
-
-.method public final AMd()I
-    .locals 1
-
-    .line 0
-    const v0, 0x7f120023
-
-    .line 1
-    .line 2
-    .line 3
-    return v0
-.end method
-
-.method public final synthetic AQ9()Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    return v0
-.end method
-
-.method public final AaL(Ljava/lang/String;)V
-    .locals 0
-
+    .line 25
+    .line 26
+    .line 27
+    :cond_0
     return-void
 .end method

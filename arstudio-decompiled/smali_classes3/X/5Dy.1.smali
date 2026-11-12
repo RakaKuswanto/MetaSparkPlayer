@@ -3,62 +3,50 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "zzak"
+.implements LX/5Dq;
 
 
 # instance fields
-.field public final synthetic A00:LX/5Dg;
+.field public final A00:LX/5E2;
 
-.field public final synthetic A01:LX/5EA;
+.field public final A01:Ljava/lang/String;
+
+.field public final A02:Z
+
+.field public final A03:Z
+
+.field public final A04:Z
 
 
 # direct methods
-.method public constructor <init>(LX/5Dg;LX/5EA;)V
+.method public constructor <init>(LX/5E2;Ljava/lang/String;ZZZ)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/5Dy;->A00:LX/5Dg;
-
-    .line 1
-    .line 2
-    iput-object p2, p0, LX/5Dy;->A01:LX/5EA;
-
-    .line 3
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    .line 0
-    iget-object v0, p0, LX/5Dy;->A00:LX/5Dg;
-
     .line 1
     .line 2
-    iget-object v1, v0, LX/5Dg;->A00:LX/5DN;
-
     .line 3
+    iput-object p2, p0, LX/5Dy;->A01:Ljava/lang/String;
+
     .line 4
-    iget-object v0, p0, LX/5Dy;->A01:LX/5EA;
-
     .line 5
-    .line 6
-    invoke-virtual {v1, v0}, LX/5DN;->A0K(LX/5EA;)V
+    iput-object p1, p0, LX/5Dy;->A00:LX/5E2;
 
+    .line 6
     .line 7
+    iput-boolean p3, p0, LX/5Dy;->A03:Z
+
     .line 8
     .line 9
+    iput-boolean p4, p0, LX/5Dy;->A02:Z
+
+    .line 10
+    .line 11
+    iput-boolean p5, p0, LX/5Dy;->A04:Z
+
+    .line 12
+    .line 13
     return-void
 .end method

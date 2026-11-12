@@ -1,36 +1,43 @@
-.class public abstract LX/06x;
-.super Ljava/lang/Object;
+.class public final LX/06x;
+.super LX/0Qm;
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/util/List;
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     .line 0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-direct {p0, p1, p2}, LX/0Qm;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A00(Landroid/content/Context;)Ljava/io/InputStream;
+    .locals 2
+
+    .line 0
+    invoke-super {p0, p1}, LX/0D6;->A00(Landroid/content/Context;)Ljava/io/InputStream;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
 
     .line 4
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
+    new-instance v0, Lcom/facebook/xzdecoder/XzInputStream;
 
     .line 5
     .line 6
+    invoke-direct {v0, v1}, Lcom/facebook/xzdecoder/XzInputStream;-><init>(Ljava/io/InputStream;)V
+
     .line 7
-    move-result-object v0
-
     .line 8
-    sput-object v0, LX/06x;->A00:Ljava/util/List;
-
     .line 9
-    .line 10
-    return-void
+    return-object v0
 .end method

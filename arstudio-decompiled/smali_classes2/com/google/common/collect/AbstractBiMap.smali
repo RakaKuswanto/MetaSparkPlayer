@@ -1,9 +1,9 @@
 .class public abstract Lcom/google/common/collect/AbstractBiMap;
-.super LX/1cx;
+.super LX/228;
 .source ""
 
 # interfaces
-.implements LX/1cG;
+.implements LX/1rr;
 .implements Ljava/io/Serializable;
 
 
@@ -15,9 +15,9 @@
         "V:",
         "Ljava/lang/Object;",
         ">",
-        "LX/1cx<",
+        "LX/228<",
         "TK;TV;>;",
-        "LX/1cG<",
+        "LX/1rr<",
         "TK;TV;>;",
         "Ljava/io/Serializable;"
     }

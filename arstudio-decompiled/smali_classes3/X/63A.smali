@@ -3,172 +3,414 @@
 .source ""
 
 # interfaces
-.implements LX/6Ly;
-
-
-# static fields
-.field public static final A03:LX/63A;
+.implements LX/62u;
 
 
 # instance fields
-.field public A00:LX/631;
+.field public A00:LX/5z4;
 
-.field public final A01:I
+.field public final A01:Z
 
-.field public final A02:I
+.field public volatile A02:I
+
+.field public volatile A03:I
+
+.field public volatile A04:I
+
+.field public volatile A05:I
+
+.field public volatile A06:Landroid/graphics/SurfaceTexture;
+
+.field public volatile A07:Z
+
+.field public volatile A08:Z
+
+.field public volatile A09:Landroid/view/Surface;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Landroid/graphics/SurfaceTexture;)V
     .locals 2
 
-    .line 0
-    const/4 v1, 0x1
+    .line 268435456
+    const/4 v1, 0x0
 
-    .line 1
-    new-instance v0, LX/63A;
+    .line 268435457
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    .line 3
-    invoke-direct {v0, v1}, LX/63A;-><init>(I)V
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    iput v1, p0, LX/63A;->A03:I
 
-    .line 4
-    .line 5
-    .line 6
-    sput-object v0, LX/63A;->A03:LX/63A;
+    .line 268435461
+    .line 268435462
+    iput-object p1, p0, LX/63A;->A06:Landroid/graphics/SurfaceTexture;
 
-    .line 7
-    .line 8
+    .line 268435463
+    .line 268435464
+    const/4 v0, 0x1
+
+    .line 268435465
+    iput-boolean v0, p0, LX/63A;->A01:Z
+
+    .line 268435466
+    .line 268435467
+    iput-boolean v0, p0, LX/63A;->A07:Z
+
+    .line 268435468
+    .line 268435469
+    iput-boolean v1, p0, LX/63A;->A08:Z
+
+    .line 268435470
+    .line 268435471
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 1
+.method public constructor <init>(Landroid/view/Surface;Z)V
+    .locals 2
 
     .line 0
-    const/4 v0, 0x1
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1
     .line 2
     .line 3
+    const/4 v1, 0x0
+
     .line 4
-    iput p1, p0, LX/63A;->A02:I
+    iput v1, p0, LX/63A;->A03:I
 
     .line 5
     .line 6
-    iput v0, p0, LX/63A;->A01:I
+    iput-object p1, p0, LX/63A;->A09:Landroid/view/Surface;
 
     .line 7
     .line 8
+    iput-boolean p2, p0, LX/63A;->A01:Z
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    iput-boolean v0, p0, LX/63A;->A07:Z
+
+    .line 12
+    .line 13
+    iput-boolean v1, p0, LX/63A;->A08:Z
+
+    .line 14
+    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final AHv()I
+    .locals 1
 
     .line 0
-    const/4 v3, 0x1
+    iget v0, p0, LX/63A;->A02:I
 
     .line 1
-    if-eq p0, p1, :cond_0
-
     .line 2
-    .line 3
-    const/4 v2, 0x0
-
-    .line 4
-    if-eqz p1, :cond_1
-
-    .line 5
-    .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
-    .line 10
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    if-ne v1, v0, :cond_1
-
-    .line 15
-    .line 16
-    check-cast p1, LX/63A;
-
-    .line 17
-    .line 18
-    iget v1, p0, LX/63A;->A02:I
-
-    .line 19
-    .line 20
-    iget v0, p1, LX/63A;->A02:I
-
-    .line 21
-    .line 22
-    if-eq v1, v0, :cond_0
-
-    .line 23
-    .line 24
-    const/4 v3, 0x0
-
-    .line 25
-    :cond_0
-    return v3
-
-    .line 26
-    :cond_1
-    return v2
+    return v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final AI5()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/63A;->A03:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final AJu()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/63A;->A04:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final ALM()Landroid/graphics/SurfaceTexture;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/63A;->A06:Landroid/graphics/SurfaceTexture;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final ALe()LX/5z4;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/63A;->A00:LX/5z4;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final ALf()I
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/63A;->A05:I
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final AP7()Z
+    .locals 1
+
+    .line 0
+    iget-boolean v0, p0, LX/63A;->A08:Z
+
+    .line 1
+    .line 2
+    return v0
+.end method
+
+.method public final AQN()Z
+    .locals 1
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {v0}, LX/0Yg;->A00(I)I
+    return v0
+.end method
+
+.method public final AkK(Z)V
+    .locals 0
+
+    .line 0
+    iput-boolean p1, p0, LX/63A;->A07:Z
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final Al7(I)V
+    .locals 0
+
+    .line 0
+    iput p1, p0, LX/63A;->A02:I
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final AlC(I)V
+    .locals 0
+
+    .line 0
+    iput p1, p0, LX/63A;->A03:I
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final Am9(LX/5z4;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/63A;->A00:LX/5z4;
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public final declared-synchronized getSurface()Landroid/view/Surface;
+    .locals 2
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v1, p0, LX/63A;->A06:Landroid/graphics/SurfaceTexture;
 
     .line 2
     .line 3
-    .line 4
-    move-result v0
+    iget-object v0, p0, LX/63A;->A09:Landroid/view/Surface;
 
+    .line 4
     .line 5
-    mul-int/lit8 v1, v0, 0x1f
+    if-nez v0, :cond_0
 
     .line 6
     .line 7
-    iget v0, p0, LX/63A;->A02:I
+    if-eqz v1, :cond_0
 
     .line 8
     .line 9
-    add-int/2addr v1, v0
+    new-instance v0, Landroid/view/Surface;
 
     .line 10
-    mul-int/lit8 v0, v1, 0x1f
-
     .line 11
-    .line 12
-    add-int/lit8 v0, v0, 0x1
+    invoke-direct {v0, v1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
+    .line 12
     .line 13
     .line 14
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object v0, p0, LX/63A;->A09:Landroid/view/Surface;
 
     .line 15
     .line 16
+    :cond_0
+    iget-object v0, p0, LX/63A;->A09:Landroid/view/Surface;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 17
+    .line 18
+    monitor-exit p0
+
+    .line 19
+    return-object v0
+
+    .line 20
+    :catchall_0
+    move-exception v0
+
+    .line 21
+    monitor-exit p0
+
+    .line 22
+    throw v0
+.end method
+
+.method public final declared-synchronized isEnabled()Z
+    .locals 1
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-boolean v0, p0, LX/63A;->A07:Z
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_1
+
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/63A;->A09:Landroid/view/Surface;
+
+    .line 6
+    .line 7
+    if-nez v0, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/63A;->A06:Landroid/graphics/SurfaceTexture;
+
+    .line 10
+    .line 11
+    if-eqz v0, :cond_1
+
+    .line 12
+    .line 13
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 14
+    goto :goto_0
+
+    .line 15
+    :cond_1
+    const/4 v0, 0x0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 16
+    :goto_0
+    monitor-exit p0
+
+    .line 17
     return v0
+
+    .line 18
+    :catchall_0
+    move-exception v0
+
+    .line 19
+    monitor-exit p0
+
+    .line 20
+    throw v0
+.end method
+
+.method public final declared-synchronized release()V
+    .locals 3
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v2, p0, LX/63A;->A09:Landroid/view/Surface;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    if-eqz v2, :cond_0
+
+    .line 5
+    .line 6
+    iget-boolean v0, p0, LX/63A;->A01:Z
+
+    .line 7
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    .line 10
+    invoke-virtual {v2}, Landroid/view/Surface;->release()V
+
+    .line 11
+    .line 12
+    .line 13
+    iput-object v1, p0, LX/63A;->A09:Landroid/view/Surface;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 14
+    .line 15
+    :cond_0
+    monitor-exit p0
+
+    .line 16
+    return-void
+
+    .line 17
+    :catchall_0
+    move-exception v0
+
+    .line 18
+    monitor-exit p0
+
+    .line 19
+    throw v0
 .end method

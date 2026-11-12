@@ -2,517 +2,532 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/694;
+
 
 # instance fields
-.field public final A00:Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
+.field public A00:Ljava/lang/Object;
+
+.field public final A01:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;IIIIIIIZZZZ)V
-    .locals 22
+.method public constructor <init>(Ljava/lang/Object;I)V
+    .locals 0
 
-    .line 649091
-    move/from16 v13, p6
+    .line 0
+    iput p2, p0, LX/5HC;->A01:I
 
-    move-object/from16 v3, p0
+    .line 1
+    .line 2
+    iput-object p1, p0, LX/5HC;->A00:Ljava/lang/Object;
 
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+    .line 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v14, 0x0
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
 
-    .line 649092
-    const-string v1, ","
 
-    const/4 v10, 0x0
+# virtual methods
+.method public final AVu(LX/5VZ;)V
+    .locals 13
 
-    move-object/from16 v2, p1
+    .line 0
+    iget v0, p0, LX/5HC;->A01:I
 
-    if-eqz p1, :cond_4
+    .line 1
+    .line 2
+    move-object v5, p1
 
-    .line 649093
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    .line 3
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v9
+    .line 4
+    .line 5
+    .line 6
+    iget-object v2, p0, LX/5HC;->A00:Ljava/lang/Object;
 
-    .line 649094
-    const-string v0, "NONE"
+    .line 7
+    .line 8
+    check-cast v2, LX/6CD;
 
-    .line 649095
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 649096
-    invoke-static {v2, v1}, LX/0Yf;->A0o(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v0
-
-    .line 649097
-    invoke-virtual {v9, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
-    :cond_0
-    :goto_0
-    move-object/from16 v0, p2
-
-    if-eqz p2, :cond_1
-
-    .line 649098
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    move-result-object v10
-
-    .line 649099
-    invoke-static {v0, v1}, LX/0Yf;->A0o(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v0
-
-    .line 649100
-    invoke-virtual {v10, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
-    .line 649101
-    :cond_1
-    if-lez p6, :cond_3
-
-    .line 649102
-    invoke-static {v13}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
-
-    move-result v2
-
-    .line 649103
-    invoke-static {v13}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
-
-    move-result v1
-
-    add-int/2addr v2, v1
-
-    const/16 v0, 0x1f
-
-    if-ge v2, v0, :cond_2
-
-    rsub-int/lit8 v0, v1, 0x20
-
-    const/4 v13, 0x1
-
-    shl-int/2addr v13, v0
-
-    .line 649104
-    :cond_2
-    new-instance v0, Ljava/util/Random;
-
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
-
-    invoke-virtual {v0, v13}, Ljava/util/Random;->nextInt(I)I
-
-    move-result v14
-
-    .line 649105
-    :cond_3
-    const-class v2, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
-
+    .line 9
+    .line 10
     monitor-enter v2
 
-    goto :goto_1
+    .line 11
+    :try_start_0
+    const/4 v0, 0x1
 
-    .line 649106
-    :cond_4
-    move-object v9, v10
+    .line 12
+    iput-boolean v0, v2, LX/6CD;->A02:Z
 
+    .line 13
+    .line 14
+    iget-object v1, v2, LX/6CD;->A04:LX/694;
+
+    .line 15
+    .line 16
+    iget-object v0, v2, LX/6CD;->A03:Landroid/os/Handler;
+
+    .line 17
+    .line 18
+    invoke-static {v0, p1, v1}, LX/6CS;->A00(Landroid/os/Handler;LX/5VZ;LX/694;)V
+
+    .line 19
+    .line 20
+    .line 21
+    :goto_0
+    iget-object v1, v2, LX/6CD;->A05:Ljava/util/LinkedList;
+
+    .line 22
+    .line 23
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    if-nez v0, :cond_0
+
+    .line 28
+    .line 29
+    invoke-virtual {v1}, Ljava/util/LinkedList;->pop()Ljava/lang/Object;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    check-cast v0, Ljava/lang/Runnable;
+
+    .line 34
+    .line 35
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    .line 36
+    .line 37
+    .line 38
     goto :goto_0
 
-    .line 649107
-    :goto_1
-    :try_start_0
-    sget-object v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->sInstance:Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
-
-    if-nez v0, :cond_5
-
-    .line 649108
-    new-instance v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
-
-    move/from16 v1, p12
-
-    move/from16 v4, p3
-
-    invoke-direct {v0, v4, v1}, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;-><init>(IZ)V
-
-    sput-object v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->sInstance:Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
-
-    const/4 v1, 0x1
-
-    .line 649109
-    sput-boolean v1, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->sCountingObjects:Z
-
-    .line 649110
-    :cond_5
-    sget-boolean v1, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->sCountingObjects:Z
-
-    if-nez v1, :cond_6
-
-    .line 649111
-    const/4 v0, 0x0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    :cond_6
+    .line 39
+    :cond_0
     monitor-exit v2
 
-    .line 649112
-    iput-object v0, v3, LX/5HC;->A00:Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;
+    .line 40
+    return-void
 
-    if-eqz v0, :cond_11
-
-    .line 649113
-    iget-boolean v1, v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mTrackObjectCount:Z
-
-    if-eqz v1, :cond_10
-
-    .line 649114
-    monitor-enter v0
-
-    .line 649115
-    :try_start_1
-    iget-boolean v1, v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mInitialized:Z
-
-    if-nez v1, :cond_f
-
-    .line 649116
-    iget v5, v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mCurrentObjectCountBufferSize:I
-
-    const/4 v2, 0x0
-
-    iget v3, v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mNumberOfAllocationMaps:I
-
-    .line 649117
-    const-class v8, LX/0H0;
-
-    monitor-enter v8
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 649118
-    :try_start_2
-    const/16 v1, 0xf0
-
-    .line 649119
-    invoke-static {v1}, LX/0Yj;->A0S(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    .line 649120
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/16 v6, 0x2c
-
-    .line 649121
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 649122
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 649123
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 649124
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ",("
-
-    .line 649125
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v5, 0x0
-
-    if-nez v9, :cond_7
-
-    goto :goto_3
-
-    .line 649126
-    :cond_7
-    invoke-virtual {v9}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    const/4 v3, 0x1
-
-    :goto_2
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    .line 649127
-    invoke-static {v7}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 649128
-    if-nez v3, :cond_8
-
-    .line 649129
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 649130
-    :cond_8
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x0
-
-    goto :goto_2
-
-    .line 649131
-    :goto_3
-    const-string v1, "null"
-
-    .line 649132
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 649133
-    :cond_9
-    const-string v1, "),("
-
-    .line 649134
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-nez v10, :cond_a
-
-    goto :goto_5
-
-    .line 649135
-    :cond_a
-    invoke-virtual {v10}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    const/4 v3, 0x1
-
-    :goto_4
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_c
-
-    .line 649136
-    invoke-static {v7}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 649137
-    if-nez v3, :cond_b
-
-    .line 649138
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 649139
-    :cond_b
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x0
-
-    goto :goto_4
-
-    .line 649140
-    :goto_5
-    const-string v1, "null"
-
-    .line 649141
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 649142
-    :cond_c
-    const-string v1, "),"
-
-    .line 649143
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 649144
-    move/from16 v11, p4
-
-    move/from16 v12, p5
-
-    invoke-static {v4, v6, v11, v12}, LX/4BE;->A1P(Ljava/lang/StringBuilder;CII)V
-
-    .line 649145
-    invoke-static {v4, v6, v13, v14}, LX/4BE;->A1P(Ljava/lang/StringBuilder;CII)V
-
-    .line 649146
-    move/from16 v15, p10
-
-    if-eqz p10, :cond_d
-
-    const/4 v2, 0x1
-
-    .line 649147
-    :cond_d
-    move/from16 v3, p7
-
-    invoke-static {v4, v6, v2, v3}, LX/4BE;->A1P(Ljava/lang/StringBuilder;CII)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 649148
-    move/from16 v17, p11
-
-    invoke-static/range {v17 .. v17}, LX/001;->A1L(I)Z
-
-    move-result v1
-
-    .line 649149
-    :try_start_3
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 649150
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move/from16 v18, p13
-
-    if-eqz p13, :cond_e
-
-    const/4 v5, 0x1
-
-    .line 649151
-    :cond_e
-    move/from16 v2, p8
-
-    invoke-static {v4, v6, v5, v2}, LX/4BE;->A1P(Ljava/lang/StringBuilder;CII)V
-
-    .line 649152
-    move/from16 v1, p9
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 649153
-    sget-object v7, LX/0LF;->A5t:LX/04m;
-
-    .line 649154
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    sget-object v5, LX/0Ly;->CRITICAL_REPORT:LX/0Ly;
-
-    .line 649155
-    new-instance v4, LX/0OC;
-
-    invoke-direct {v4, v7, v5, v6}, LX/0OC;-><init>(LX/0L8;LX/0Ly;Ljava/lang/String;)V
-
-    .line 649156
-    invoke-static {v4}, LX/0My;->A00(LX/0OC;)V
-
-    goto :goto_6
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    .line 649157
+    .line 41
     :catchall_0
-    :try_start_4
-    move-exception v1
-
-    monitor-exit v8
-
-    throw v1
-
-    :goto_6
-    monitor-exit v8
-
-    .line 649158
-    const/4 v5, 0x1
-
-    .line 649159
-    iget-object v6, v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mDeallocationMonitor:LX/0NR;
-
-    const/4 v7, 0x0
-
-    iget v8, v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mNumberOfAllocationMaps:I
-
-    const-class v21, Lcom/facebook/memory/javamemtracker/ObjectCountStats;
-
-    move/from16 v16, v3
-
-    move/from16 v19, v2
-
-    move/from16 v20, v1
-
-    invoke-static/range {v5 .. v21}, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->nativeInitialize(ZLjava/lang/Object;IILjava/util/List;Ljava/util/List;IIIIZIZZIILjava/lang/Class;)V
-
-    .line 649160
-    iget-object v4, v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mDeallocationMonitor:LX/0NR;
-
-    .line 649161
-    new-instance v3, Ljava/lang/ref/ReferenceQueue;
-
-    invoke-direct {v3}, Ljava/lang/ref/ReferenceQueue;-><init>()V
-
-    iput-object v3, v4, LX/0NR;->A02:Ljava/lang/ref/ReferenceQueue;
-
-    .line 649162
-    sget-object v1, LX/0NR;->A09:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v2
-
-    new-instance v1, LX/0R3;
-
-    invoke-direct {v1, v4, v3, v2}, LX/0R3;-><init>(LX/0NR;Ljava/lang/ref/ReferenceQueue;I)V
-
-    iput-object v1, v4, LX/0NR;->A01:LX/0R3;
-
-    .line 649163
-    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
-
-    .line 649164
-    new-instance v1, LX/0Qy;
-
-    invoke-direct {v1, v4}, LX/0Qy;-><init>(LX/0NR;)V
-
-    iput-object v1, v4, LX/0NR;->A00:LX/0Qy;
-
-    .line 649165
-    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
-
-    .line 649166
-    iput-boolean v5, v0, Lcom/facebook/memory/javamemtracker/JavaMemoryTrackerForMetrics;->mInitialized:Z
-
-    .line 649167
-    :cond_f
-    monitor-exit v0
-
-    return-void
-
-    :catchall_1
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw v1
-
-    .line 649168
-    :cond_10
-    const-string v0, "Not tracking object counts"
-
-    .line 649169
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    move-result-object v1
-
-    .line 649170
-    throw v1
-
-    .line 649171
-    :cond_11
-    return-void
-
-    .line 649172
-    :catchall_2
     move-exception v0
 
+    .line 42
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 43
+    throw v0
+
+    .line 44
+    :pswitch_0
+    iget-object v3, p0, LX/5HC;->A00:Ljava/lang/Object;
+
+    .line 45
+    .line 46
+    check-cast v3, LX/5nH;
+
+    .line 47
+    .line 48
+    iget-object v2, v3, LX/5nH;->A00:Ljava/lang/Object;
+
+    .line 49
+    .line 50
+    check-cast v2, LX/6Bm;
+
+    .line 51
+    .line 52
+    iget-object v1, v2, LX/6Bm;->A0C:LX/5Im;
+
+    .line 53
+    .line 54
+    const-string v0, "aoAPe"
+
+    .line 55
+    .line 56
+    invoke-virtual {v1, v0}, LX/5Im;->A02(Ljava/lang/String;)V
+
+    .line 57
+    .line 58
+    .line 59
+    invoke-virtual {v2}, LX/6Bm;->release()V
+
+    .line 60
+    .line 61
+    .line 62
+    iget-object v4, v2, LX/6Bm;->A0F:LX/6CK;
+
+    .line 63
+    .line 64
+    const-string v7, "AudioRecordingTrack"
+
+    .line 65
+    .line 66
+    invoke-static {v2}, LX/434;->A0P(Ljava/lang/Object;)J
+
+    .line 67
+    .line 68
+    .line 69
+    move-result-wide v11
+
+    .line 70
+    const-string v6, "start_recording_audio_failed"
+
+    .line 71
+    .line 72
+    const-string v8, ""
+
+    .line 73
+    .line 74
+    const-string v9, "start"
+
+    .line 75
+    .line 76
+    const/4 v10, 0x0
+
+    .line 77
+    invoke-interface/range {v4 .. v12}, LX/6CK;->ARG(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+
+    .line 78
+    .line 79
+    .line 80
+    iget-object v0, v3, LX/5nH;->A01:Ljava/lang/Object;
+
+    .line 81
+    .line 82
+    check-cast v0, LX/694;
+
+    .line 83
+    .line 84
+    invoke-interface {v0, p1}, LX/694;->AVu(LX/5VZ;)V
+
+    .line 85
+    .line 86
+    .line 87
+    :pswitch_1
+    return-void
+
+    .line 88
+    :pswitch_2
+    iget-object v0, p0, LX/5HC;->A00:Ljava/lang/Object;
+
+    .line 89
+    .line 90
+    check-cast v0, LX/602;
+
+    .line 91
+    .line 92
+    iget-object v4, v0, LX/602;->A0I:LX/60J;
+
+    .line 93
+    .line 94
+    invoke-static {v0}, LX/434;->A0P(Ljava/lang/Object;)J
+
+    .line 95
+    .line 96
+    .line 97
+    move-result-wide v11
+
+    .line 98
+    iget-object v1, p1, LX/5VZ;->mExtras:Ljava/util/Map;
+
+    .line 99
+    .line 100
+    if-eqz v1, :cond_1
+
+    .line 101
+    .line 102
+    const-string v0, "fba_error_code"
+
+    .line 103
+    .line 104
+    invoke-static {v0, v1}, LX/0X4;->A0m(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/String;
+
+    .line 105
+    .line 106
+    .line 107
+    move-result-object v10
+
+    .line 108
+    :goto_1
+    const-string v6, "audio_pipeline_pause_failed"
+
+    .line 109
+    .line 110
+    const-string v7, "AudioPipelineController"
+
+    .line 111
+    .line 112
+    const-string v8, "low"
+
+    .line 113
+    .line 114
+    move-object v9, v7
+
+    .line 115
+    invoke-interface/range {v4 .. v12}, LX/60J;->AQu(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+
+    .line 116
+    .line 117
+    .line 118
+    return-void
+
+    .line 119
+    :cond_1
+    const/4 v10, 0x0
+
+    .line 120
+    goto :goto_1
+
+    .line 121
+    nop
+
+    .line 122
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final Abi()V
+    .locals 13
+
+    .line 0
+    iget v0, p0, LX/5HC;->A01:I
+
+    .line 1
+    .line 2
+    packed-switch v0, :pswitch_data_0
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v2, p0, LX/5HC;->A00:Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    check-cast v2, LX/6CD;
+
+    .line 8
+    .line 9
+    monitor-enter v2
+
+    .line 10
+    :try_start_0
+    iget-object v1, v2, LX/6CD;->A06:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 11
+    .line 12
+    const/4 v0, 0x1
+
+    .line 13
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v1
+
+    .line 17
+    iget-boolean v0, v2, LX/6CD;->A02:Z
+
+    .line 18
+    .line 19
+    if-nez v0, :cond_0
+
+    .line 20
+    .line 21
+    iget-boolean v0, v2, LX/6CD;->A01:Z
+
+    .line 22
+    .line 23
+    if-eqz v0, :cond_0
+
+    .line 24
+    .line 25
+    iget v0, v2, LX/6CD;->A00:I
+
+    .line 26
+    .line 27
+    if-ne v1, v0, :cond_0
+
+    .line 28
+    .line 29
+    iget-object v1, v2, LX/6CD;->A04:LX/694;
+
+    .line 30
+    .line 31
+    iget-object v0, v2, LX/6CD;->A03:Landroid/os/Handler;
+
+    .line 32
+    .line 33
+    invoke-static {v1, v0}, LX/6CS;->A01(LX/694;Landroid/os/Handler;)V
+
+    .line 34
+    .line 35
+    .line 36
+    :cond_0
     monitor-exit v2
 
+    .line 37
+    return-void
+
+    .line 38
+    :catchall_0
+    move-exception v0
+
+    .line 39
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 40
     throw v0
+
+    .line 41
+    :pswitch_0
+    iget-object v0, p0, LX/5HC;->A00:Ljava/lang/Object;
+
+    .line 42
+    .line 43
+    check-cast v0, LX/601;
+
+    .line 44
+    .line 45
+    invoke-virtual {v0}, LX/601;->A0W()V
+
+    .line 46
+    .line 47
+    .line 48
+    :pswitch_1
+    return-void
+
+    .line 49
+    :pswitch_2
+    iget-object v3, p0, LX/5HC;->A00:Ljava/lang/Object;
+
+    .line 50
+    .line 51
+    check-cast v3, LX/5nH;
+
+    .line 52
+    .line 53
+    iget-object v2, v3, LX/5nH;->A00:Ljava/lang/Object;
+
+    .line 54
+    .line 55
+    check-cast v2, LX/6Bm;
+
+    .line 56
+    .line 57
+    iget-object v1, v2, LX/6Bm;->A0C:LX/5Im;
+
+    .line 58
+    .line 59
+    const-string v0, "aoAPs"
+
+    .line 60
+    .line 61
+    invoke-virtual {v1, v0}, LX/5Im;->A02(Ljava/lang/String;)V
+
+    .line 62
+    .line 63
+    .line 64
+    iget-object v4, v2, LX/6Bm;->A0F:LX/6CK;
+
+    .line 65
+    .line 66
+    const/16 v1, 0x13
+
+    .line 67
+    .line 68
+    const-string v0, "recording_start_audio_ready"
+
+    .line 69
+    .line 70
+    invoke-interface {v4, v1, v0}, LX/6CK;->ARE(ILjava/lang/String;)V
+
+    .line 71
+    .line 72
+    .line 73
+    const-string v7, "AudioRecordingTrack"
+
+    .line 74
+    .line 75
+    invoke-static {v2}, LX/434;->A0P(Ljava/lang/Object;)J
+
+    .line 76
+    .line 77
+    .line 78
+    move-result-wide v11
+
+    .line 79
+    const-string v6, "start_recording_audio_finished"
+
+    .line 80
+    .line 81
+    const-string v8, ""
+
+    .line 82
+    .line 83
+    const/4 v5, 0x0
+
+    .line 84
+    move-object v9, v5
+
+    .line 85
+    move-object v10, v5
+
+    .line 86
+    invoke-interface/range {v4 .. v12}, LX/6CK;->ARG(LX/5VZ;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+
+    .line 87
+    .line 88
+    .line 89
+    iget-object v0, v3, LX/5nH;->A01:Ljava/lang/Object;
+
+    .line 90
+    .line 91
+    check-cast v0, LX/694;
+
+    .line 92
+    .line 93
+    invoke-interface {v0}, LX/694;->Abi()V
+
+    .line 94
+    .line 95
+    .line 96
+    return-void
+
+    .line 97
+    nop
+
+    .line 98
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_2
+    .end packed-switch
 .end method

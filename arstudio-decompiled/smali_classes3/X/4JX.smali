@@ -1,78 +1,319 @@
-.class public final LX/4JX;
-.super Landroid/widget/FrameLayout;
+.class public final LX/4Jx;
+.super Landroid/content/ContextWrapper;
 .source ""
 
 
-# instance fields
-.field public A00:Z
+# static fields
+.field public static A05:Landroid/content/res/Configuration;
 
-.field public final synthetic A01:LX/4JQ;
+
+# instance fields
+.field public A00:I
+
+.field public A01:Landroid/content/res/Configuration;
+
+.field public A02:Landroid/content/res/Resources;
+
+.field public A03:Landroid/content/res/Resources$Theme;
+
+.field public A04:Landroid/view/LayoutInflater;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/4JQ;)V
+.method public constructor <init>()V
     .locals 1
 
-    .line 0
+    .line 268435456
     const/4 v0, 0x0
 
-    .line 1
-    iput-object p2, p0, LX/4JX;->A01:LX/4JQ;
+    .line 268435457
+    invoke-direct {p0, v0}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+
+    .line 1
     .line 2
     .line 3
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput p2, p0, LX/4Jx;->A00:I
 
     .line 4
     .line 5
-    .line 6
-    const/4 v0, 0x0
+    return-void
+.end method
 
+.method private A00()V
+    .locals 3
+
+    .line 0
+    iget-object v0, p0, LX/4Jx;->A03:Landroid/content/res/Resources$Theme;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    invoke-virtual {p0}, LX/4Jx;->getResources()Landroid/content/res/Resources;
+
+    .line 5
+    .line 6
     .line 7
-    iput-boolean v0, p0, LX/4JX;->A00:Z
+    move-result-object v0
 
     .line 8
+    invoke-virtual {v0}, Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+
     .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    iput-object v0, p0, LX/4Jx;->A03:Landroid/content/res/Resources$Theme;
+
+    .line 13
+    .line 14
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v1
+
+    .line 22
+    if-eqz v1, :cond_0
+
+    .line 23
+    .line 24
+    iget-object v0, p0, LX/4Jx;->A03:Landroid/content/res/Resources$Theme;
+
+    .line 25
+    .line 26
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+
+    .line 27
+    .line 28
+    .line 29
+    :cond_0
+    iget-object v2, p0, LX/4Jx;->A03:Landroid/content/res/Resources$Theme;
+
+    .line 30
+    .line 31
+    iget v1, p0, LX/4Jx;->A00:I
+
+    .line 32
+    .line 33
+    const/4 v0, 0x1
+
+    .line 34
+    invoke-virtual {v2, v1, v0}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    .line 35
+    .line 36
+    .line 37
     return-void
+.end method
+
+.method public static A01(Landroid/content/res/Configuration;)Z
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/4Jx;->A05:Landroid/content/res/Configuration;
+
+    .line 1
+    .line 2
+    if-nez v1, :cond_0
+
+    .line 3
+    .line 4
+    new-instance v1, Landroid/content/res/Configuration;
+
+    .line 5
+    .line 6
+    invoke-direct {v1}, Landroid/content/res/Configuration;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    const/4 v0, 0x0
+
+    .line 10
+    iput v0, v1, Landroid/content/res/Configuration;->fontScale:F
+
+    .line 11
+    .line 12
+    sput-object v1, LX/4Jx;->A05:Landroid/content/res/Configuration;
+
+    .line 13
+    .line 14
+    :cond_0
+    invoke-virtual {p0, v1}, Landroid/content/res/Configuration;->equals(Landroid/content/res/Configuration;)Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    return v0
 .end method
 
 
 # virtual methods
-.method public final dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+.method public final A02(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/4Jx;->A02:Landroid/content/res/Resources;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4Jx;->A01:Landroid/content/res/Configuration;
+
+    .line 5
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    .line 8
+    new-instance v0, Landroid/content/res/Configuration;
+
+    .line 9
+    .line 10
+    invoke-direct {v0, p1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+
+    .line 11
+    .line 12
+    .line 13
+    iput-object v0, p0, LX/4Jx;->A01:Landroid/content/res/Configuration;
+
+    .line 14
+    .line 15
+    return-void
+
+    .line 16
+    :cond_0
+    const-string v0, "Override configuration has already been set"
+
+    .line 17
+    .line 18
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    throw v0
+
+    .line 23
+    :cond_1
+    const-string v0, "getResources() or getAssets() has already been called"
+
+    .line 24
+    .line 25
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    throw v0
+.end method
+
+.method public final attachBaseContext(Landroid/content/Context;)V
+    .locals 0
+
+    .line 0
+    invoke-super {p0, p1}, Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final getAssets()Landroid/content/res/AssetManager;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/4Jx;->getResources()Landroid/content/res/Resources;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final getResources()Landroid/content/res/Resources;
     .locals 4
 
     .line 0
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    iget-object v3, p0, LX/4Jx;->A02:Landroid/content/res/Resources;
 
     .line 1
     .line 2
-    .line 3
-    move-result v3
-
-    .line 4
-    const/4 v2, 0x1
-
-    .line 5
     if-nez v3, :cond_1
 
-    .line 6
-    .line 7
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+    .line 3
+    .line 4
+    iget-object v2, p0, LX/4Jx;->A01:Landroid/content/res/Configuration;
 
+    .line 5
+    .line 6
+    if-eqz v2, :cond_0
+
+    .line 7
     .line 8
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
     .line 9
     .line 10
-    move-result v1
+    const/16 v0, 0x1a
 
     .line 11
-    const/4 v0, 0x4
-
     .line 12
-    if-ne v1, v0, :cond_1
+    if-lt v1, v0, :cond_2
 
     .line 13
     .line 14
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
+    invoke-static {v2}, LX/4Jx;->A01(Landroid/content/res/Configuration;)Z
 
     .line 15
     .line 16
@@ -80,335 +321,267 @@
     move-result v0
 
     .line 18
-    if-ne v0, v2, :cond_1
+    if-eqz v0, :cond_3
 
     .line 19
     .line 20
-    iget-object v1, p0, LX/4JX;->A01:LX/4JQ;
+    :cond_0
+    invoke-super {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     .line 21
     .line 22
-    iget-boolean v0, v1, LX/4JQ;->A0S:Z
-
     .line 23
+    move-result-object v3
+
     .line 24
-    if-eqz v0, :cond_0
+    :goto_0
+    iput-object v3, p0, LX/4Jx;->A02:Landroid/content/res/Resources;
 
     .line 25
     .line 26
-    invoke-virtual {v1}, LX/4JQ;->A05()V
-
-    .line 27
-    .line 28
-    .line 29
-    :cond_0
-    const/4 v3, 0x1
-
-    .line 30
     :cond_1
-    return v3
-.end method
+    return-object v3
 
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 1
-
-    .line 0
-    invoke-super {p0, p1}, Landroid/view/View;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
-    .line 1
-    .line 2
-    .line 3
-    const/4 v0, 0x1
-
-    .line 4
-    iput-boolean v0, p0, LX/4JX;->A00:Z
-
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public final onLayout(ZIIII)V
-    .locals 1
-
-    .line 0
-    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
-
-    .line 1
-    .line 2
-    .line 3
-    iget-boolean v0, p0, LX/4JX;->A00:Z
-
-    .line 4
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    .line 7
-    iget-object v0, p0, LX/4JX;->A01:LX/4JQ;
-
-    .line 8
-    .line 9
-    invoke-virtual {v0}, LX/4JQ;->A07()V
-
-    .line 10
-    .line 11
-    .line 12
-    const/4 v0, 0x0
-
-    .line 13
-    iput-boolean v0, p0, LX/4JX;->A00:Z
-
-    .line 14
-    .line 15
-    :cond_0
-    return-void
-.end method
-
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 7
-
-    .line 0
-    iget-object v2, p0, LX/4JX;->A01:LX/4JQ;
-
-    .line 1
-    .line 2
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_4
-
-    .line 5
-    .line 6
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
-    const/4 v6, 0x1
-
-    .line 11
-    if-nez v0, :cond_2
-
-    .line 12
-    .line 13
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    .line 14
-    .line 15
-    .line 16
-    move-result v0
-
-    .line 17
-    float-to-int v1, v0
-
-    .line 18
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    .line 19
-    .line 20
-    .line 21
-    move-result v0
-
-    .line 22
-    float-to-int v5, v0
-
-    .line 23
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
-
-    .line 24
-    .line 25
-    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
-
-    .line 26
     .line 27
-    .line 28
-    move-result v3
+    :cond_2
+    const/16 v0, 0x11
 
+    .line 28
     .line 29
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
+    if-ge v1, v0, :cond_3
 
     .line 30
     .line 31
-    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+    invoke-super {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     .line 32
     .line 33
     .line 34
-    move-result v4
+    move-result-object v3
 
     .line 35
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     .line 36
     .line 37
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
-
     .line 38
-    .line 39
-    .line 40
-    move-result v0
+    move-result-object v0
 
+    .line 39
+    new-instance v2, Landroid/content/res/Configuration;
+
+    .line 40
     .line 41
-    add-int/2addr v0, v4
+    invoke-direct {v2, v0}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
     .line 42
-    if-lt v5, v0, :cond_0
-
     .line 43
     .line 44
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
+    iget-object v0, p0, LX/4Jx;->A01:Landroid/content/res/Configuration;
 
     .line 45
     .line 46
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v2, v0}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
 
     .line 47
     .line 48
     .line 49
-    move-result v0
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
     .line 50
-    add-int/2addr v4, v0
-
     .line 51
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
-
     .line 52
+    move-result-object v1
+
     .line 53
-    invoke-static {v0, v4}, LX/4BF;->A0D(Landroid/view/View;I)I
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     .line 54
     .line 55
     .line 56
-    move-result v0
+    move-result-object v0
 
     .line 57
-    if-ge v5, v0, :cond_0
+    new-instance v3, Landroid/content/res/Resources;
 
     .line 58
     .line 59
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
+    invoke-direct {v3, v1, v0, v2}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
 
     .line 60
     .line 61
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
-
     .line 62
-    .line 63
-    .line 64
-    move-result v0
+    goto :goto_0
 
+    .line 63
+    :cond_3
+    iget-object v0, p0, LX/4Jx;->A01:Landroid/content/res/Configuration;
+
+    .line 64
     .line 65
-    add-int/2addr v0, v3
+    invoke-static {v0, p0}, LX/4Jy;->A00(Landroid/content/res/Configuration;LX/4Jx;)Landroid/content/Context;
 
     .line 66
-    if-lt v1, v0, :cond_0
-
     .line 67
     .line 68
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
+    move-result-object v0
 
     .line 69
-    .line 70
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
+    .line 70
     .line 71
     .line 72
+    move-result-object v3
+
     .line 73
+    goto :goto_0
+.end method
+
+.method public final getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    const-string v0, "layout_inflater"
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 3
+    .line 4
+    .line 5
     move-result v0
 
-    .line 74
-    add-int/2addr v3, v0
-
-    .line 75
-    iget-object v0, v2, LX/4JQ;->A0G:LX/4Jk;
-
-    .line 76
-    .line 77
-    invoke-static {v0, v3}, LX/4BF;->A0A(Landroid/view/View;I)I
-
-    .line 78
-    .line 79
-    .line 80
-    move-result v0
-
-    .line 81
-    if-lt v1, v0, :cond_4
-
-    .line 82
-    .line 83
-    :cond_0
-    iget-boolean v0, v2, LX/4JQ;->A0S:Z
-
-    .line 84
-    .line 85
+    .line 6
     if-eqz v0, :cond_1
 
-    .line 86
-    .line 87
-    invoke-virtual {v2}, LX/4JQ;->A05()V
+    .line 7
+    .line 8
+    iget-object v0, p0, LX/4Jx;->A04:Landroid/view/LayoutInflater;
 
-    .line 88
-    .line 89
-    .line 90
+    .line 9
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v0
+
+    .line 16
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    invoke-virtual {v0, p0}, Landroid/view/LayoutInflater;->cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    iput-object v0, p0, LX/4Jx;->A04:Landroid/view/LayoutInflater;
+
+    .line 25
+    .line 26
+    :cond_0
+    return-object v0
+
+    .line 27
     :cond_1
-    return v6
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
-    .line 91
-    :cond_2
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
 
-    .line 92
-    .line 93
-    .line 94
-    move-result v1
+    .line 31
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 95
-    const/4 v0, 0x4
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
 
-    .line 96
-    if-ne v1, v0, :cond_4
+    .line 35
+    return-object v0
+.end method
 
-    .line 97
-    .line 98
-    iget-boolean v0, v2, LX/4JQ;->A0S:Z
+.method public final getTheme()Landroid/content/res/Resources$Theme;
+    .locals 1
 
-    .line 99
-    .line 100
-    if-eqz v0, :cond_3
+    .line 0
+    iget-object v0, p0, LX/4Jx;->A03:Landroid/content/res/Resources$Theme;
 
-    .line 101
-    .line 102
-    invoke-virtual {v2}, LX/4JQ;->A05()V
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
 
-    .line 103
-    .line 104
-    .line 105
-    :cond_3
-    iget-boolean v0, v2, LX/4JQ;->A0Q:Z
+    .line 3
+    .line 4
+    iget v0, p0, LX/4Jx;->A00:I
 
-    .line 106
-    .line 107
-    if-eqz v0, :cond_4
+    .line 5
+    .line 6
+    if-nez v0, :cond_0
 
-    .line 108
-    .line 109
-    return v6
+    .line 7
+    .line 8
+    const v0, 0x7f12021a
 
-    .line 110
-    :cond_4
-    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    .line 9
+    .line 10
+    .line 11
+    iput v0, p0, LX/4Jx;->A00:I
 
-    .line 111
-    .line 112
-    .line 113
-    move-result v6
+    .line 12
+    .line 13
+    :cond_0
+    invoke-direct {p0}, LX/4Jx;->A00()V
 
-    .line 114
-    return v6
+    .line 14
+    .line 15
+    .line 16
+    iget-object v0, p0, LX/4Jx;->A03:Landroid/content/res/Resources$Theme;
+
+    .line 17
+    .line 18
+    :cond_1
+    return-object v0
+.end method
+
+.method public final setTheme(I)V
+    .locals 1
+
+    .line 0
+    iget v0, p0, LX/4Jx;->A00:I
+
+    .line 1
+    .line 2
+    if-eq v0, p1, :cond_0
+
+    .line 3
+    .line 4
+    iput p1, p0, LX/4Jx;->A00:I
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, LX/4Jx;->A00()V
+
+    .line 7
+    .line 8
+    .line 9
+    :cond_0
+    return-void
 .end method

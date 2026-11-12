@@ -1,82 +1,60 @@
 .class public final LX/4vl;
-.super LX/4sH;
+.super Ljava/lang/Object;
 .source ""
-
-# interfaces
-.implements LX/4vq;
 
 
 # instance fields
-.field public A00:J
+.field public A00:F
 
-.field public A01:J
+.field public A01:F
 
-.field public A02:J
+.field public A02:I
 
-.field public final A03:J
+.field public A03:I
+
+.field public A04:Z
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/4sH;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    const-wide/high16 v0, -0x8000000000000000L
+    const/4 v0, 0x0
 
     .line 4
+    iput-boolean v0, p0, LX/4vl;->A04:Z
+
     .line 5
-    iput-wide v0, p0, LX/4vl;->A02:J
-
     .line 6
+    iput v0, p0, LX/4vl;->A03:I
+
     .line 7
-    iput-wide v0, p0, LX/4vl;->A00:J
-
     .line 8
+    iput v0, p0, LX/4vl;->A02:I
+
     .line 9
-    iput-wide v0, p0, LX/4vl;->A01:J
-
     .line 10
-    .line 11
-    int-to-long v0, p1
+    const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 11
     .line 12
-    iput-wide v0, p0, LX/4vl;->A03:J
+    iput v0, p0, LX/4vl;->A00:F
 
     .line 13
     .line 14
+    const/high16 v0, 0x7fc00000    # Float.NaN
+
+    .line 15
+    .line 16
+    iput v0, p0, LX/4vl;->A01:F
+
+    .line 17
+    .line 18
     return-void
-.end method
-
-
-# virtual methods
-.method public final AQS()Z
-    .locals 5
-
-    .line 0
-    iget-wide v3, p0, LX/4vl;->A01:J
-
-    .line 1
-    .line 2
-    iget-wide v1, p0, LX/4vl;->A00:J
-
-    .line 3
-    .line 4
-    cmp-long v0, v3, v1
-
-    .line 5
-    .line 6
-    invoke-static {v0}, LX/0Ye;->A1W(I)Z
-
-    .line 7
-    .line 8
-    .line 9
-    move-result v0
-
-    .line 10
-    return v0
 .end method

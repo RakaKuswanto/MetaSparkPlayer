@@ -3,7 +3,15 @@
 .source ""
 
 # interfaces
-.implements LX/3aS;
+.implements LX/5Ps;
+.implements LX/5St;
+.implements LX/5Q3;
+
+
+# instance fields
+.field public A00:LX/5Ps;
+
+.field public A01:LX/5Q3;
 
 
 # direct methods
@@ -21,19 +29,78 @@
 
 
 # virtual methods
-.method public final AJH(I)I
+.method public final AN5(ILjava/lang/Object;)V
     .locals 1
 
-    const/4 v0, 0x1
+    .line 0
+    const/4 v0, 0x7
 
-    if-ltz p1, :cond_0
+    .line 1
+    if-eq p1, v0, :cond_1
 
-    if-gt p1, v0, :cond_0
+    .line 2
+    .line 3
+    const/16 v0, 0x8
 
-    return v0
+    .line 4
+    .line 5
+    if-ne p1, v0, :cond_0
 
+    .line 6
+    .line 7
+    check-cast p2, LX/5Q3;
+
+    .line 8
+    .line 9
+    iput-object p2, p0, LX/5Pt;->A01:LX/5Q3;
+
+    .line 10
+    .line 11
     :cond_0
-    const/4 v0, 0x5
+    return-void
 
-    return v0
+    .line 12
+    :cond_1
+    check-cast p2, LX/5Ps;
+
+    .line 13
+    .line 14
+    iput-object p2, p0, LX/5Pt;->A00:LX/5Ps;
+
+    .line 15
+    .line 16
+    return-void
+.end method
+
+.method public final AdI(Landroid/media/MediaFormat;LX/5Fy;JJ)V
+    .locals 7
+
+    .line 0
+    iget-object v0, p0, LX/5Pt;->A00:LX/5Ps;
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    move-object v1, p1
+
+    .line 5
+    move-object v2, p2
+
+    .line 6
+    move-wide v3, p3
+
+    .line 7
+    move-wide v5, p5
+
+    .line 8
+    invoke-interface/range {v0 .. v6}, LX/5Ps;->AdI(Landroid/media/MediaFormat;LX/5Fy;JJ)V
+
+    .line 9
+    .line 10
+    .line 11
+    :cond_0
+    return-void
 .end method

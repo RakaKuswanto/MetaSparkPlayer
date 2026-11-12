@@ -22,6 +22,8 @@
 
 .field public static final PAYMENT_RESPONSE:Ljava/lang/String; = "paymentResponse"
 
+.field public static final START_CHECKOUT:Ljava/lang/String; = "StartCheckout"
+
 
 # direct methods
 .method public static constructor <clinit>()V

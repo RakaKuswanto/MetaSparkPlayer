@@ -1,139 +1,124 @@
 .class public final LX/6J6;
-.super LX/6MF;
+.super LX/6I2;
 .source ""
 
 
 # instance fields
-.field public final A00:Ljava/util/List;
+.field public final A00:LX/6I2;
+
+.field public final A01:[Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>(LX/6J6;Ljava/lang/Object;)V
-    .locals 2
-
-    .line 268435456
-    invoke-direct {p0}, LX/6MF;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    if-eqz p1, :cond_0
-
-    .line 268435460
-    .line 268435461
-    iget-object v0, p1, LX/6J6;->A00:Ljava/util/List;
-
-    .line 268435462
-    .line 268435463
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    .line 268435464
-    .line 268435465
-    .line 268435466
-    move-result v0
-
-    .line 268435467
-    add-int/lit8 v0, v0, 0x1
-
-    .line 268435468
-    .line 268435469
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
-
-    .line 268435470
-    .line 268435471
-    .line 268435472
-    move-result-object v0
-
-    .line 268435473
-    iget-object v1, p1, LX/6J6;->A00:Ljava/util/List;
-
-    .line 268435474
-    .line 268435475
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
-    .line 268435476
-    .line 268435477
-    .line 268435478
-    :goto_0
-    invoke-virtual {v0, p2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 268435479
-    .line 268435480
-    .line 268435481
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    .line 268435482
-    .line 268435483
-    .line 268435484
-    move-result-object v0
-
-    .line 268435485
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 268435486
-    .line 268435487
-    .line 268435488
-    iput-object v0, p0, LX/6J6;->A00:Ljava/util/List;
-
-    .line 268435489
-    .line 268435490
-    return-void
-
-    .line 268435491
-    :cond_0
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
-    .line 268435492
-    .line 268435493
-    .line 268435494
-    move-result-object v0
-
-    .line 268435495
-    goto :goto_0
-.end method
-
-.method public constructor <init>(LX/6J6;Ljava/lang/Object;I)V
+.method public constructor <init>(LX/6I2;[Ljava/lang/Class;)V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/6MF;-><init>()V
+    iget-object v0, p1, LX/6I2;->A06:LX/41S;
 
     .line 1
     .line 2
-    .line 3
-    iget-object v0, p1, LX/6J6;->A00:Ljava/util/List;
+    invoke-direct {p0, v0, p1}, LX/6I2;-><init>(LX/41S;LX/6I2;)V
 
+    .line 3
     .line 4
     .line 5
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    iput-object p1, p0, LX/6J6;->A00:LX/6I2;
 
     .line 6
     .line 7
+    iput-object p2, p0, LX/6J6;->A01:[Ljava/lang/Class;
+
     .line 8
-    move-result-object v0
+    .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final A04(LX/40d;LX/6Hz;Ljava/lang/Object;)V
+    .locals 5
+
+    .line 0
+    iget-object v4, p2, LX/6Hz;->_serializationView:Ljava/lang/Class;
+
+    .line 1
+    .line 2
+    if-eqz v4, :cond_1
+
+    .line 3
+    .line 4
+    const/4 v3, 0x0
+
+    .line 5
+    iget-object v2, p0, LX/6J6;->A01:[Ljava/lang/Class;
+
+    .line 6
+    .line 7
+    array-length v1, v2
+
+    .line 8
+    :goto_0
+    if-ge v3, v1, :cond_0
 
     .line 9
-    invoke-virtual {v0, p3, p2}, Ljava/util/AbstractList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
     .line 10
+    aget-object v0, v2, v3
+
     .line 11
     .line 12
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, v4}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     .line 13
     .line 14
     .line 15
-    move-result-object v0
+    move-result v0
 
     .line 16
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    if-nez v0, :cond_0
 
     .line 17
     .line 18
-    .line 19
-    iput-object v0, p0, LX/6J6;->A00:Ljava/util/List;
+    add-int/lit8 v3, v3, 0x1
 
+    .line 19
     .line 20
+    goto :goto_0
+
     .line 21
+    :cond_0
+    if-ne v3, v1, :cond_1
+
+    .line 22
+    .line 23
+    return-void
+
+    .line 24
+    :cond_1
+    iget-object v0, p0, LX/6J6;->A00:LX/6I2;
+
+    .line 25
+    .line 26
+    invoke-virtual {v0, p1, p2, p3}, LX/6I2;->A04(LX/40d;LX/6Hz;Ljava/lang/Object;)V
+
+    .line 27
+    .line 28
+    .line 29
+    return-void
+.end method
+
+.method public final A06(Lcom/fasterxml/jackson/databind/JsonSerializer;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/6J6;->A00:LX/6I2;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1}, LX/6I2;->A06(Lcom/fasterxml/jackson/databind/JsonSerializer;)V
+
+    .line 3
+    .line 4
+    .line 5
     return-void
 .end method

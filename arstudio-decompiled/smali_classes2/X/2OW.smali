@@ -1,126 +1,109 @@
-.class public final LX/2OW;
+.class public final LX/2Ow;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FBRemoteWipeController$1"
-
 
 # instance fields
-.field public final synthetic A00:LX/2OV;
+.field public A00:LX/1rU;
+
+.field public final A01:LX/0RP;
+
+.field public final A02:LX/0RP;
+
+.field public final A03:LX/0RP;
+
+.field public final A04:LX/0RP;
+
+.field public final A05:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>(LX/2OV;)V
-    .locals 0
+.method public constructor <init>(LX/3Ft;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/2OW;->A00:LX/2OV;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 10
-
-    .line 0
-    const-string/jumbo v6, "removalCount"
-
     .line 1
     .line 2
     .line 3
-    iget-object v9, p0, LX/2OW;->A00:LX/2OV;
+    invoke-static {}, LX/0lf;->A0F()LX/0lf;
 
     .line 4
     .line 5
-    iget-object v0, v9, LX/2OV;->A03:LX/0Na;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    invoke-static {v0}, LX/0Yg;->A0M(LX/0Na;)Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
+    iput-object v0, p0, LX/2Ow;->A01:LX/0RP;
 
     .line 8
     .line 9
-    .line 10
-    move-result-object v5
+    sget v0, LX/2I6;->AAK:I
 
+    .line 10
     .line 11
-    const/4 v4, 0x2
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 12
-    const v3, 0x24b3abb
-
     .line 13
     .line 14
+    move-result-object v0
+
     .line 15
-    :try_start_0
-    invoke-interface {v5, v3}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerStart(I)V
+    iput-object v0, p0, LX/2Ow;->A05:LX/0RP;
 
     .line 16
     .line 17
-    .line 18
-    invoke-virtual {v9}, LX/2Os;->A01()Ljava/util/Map;
+    sget v0, LX/2I6;->A6h:I
 
+    .line 18
     .line 19
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 20
     .line 21
-    move-result-object v0
-
     .line 22
-    invoke-static {v0}, LX/0Yj;->A0Y(Ljava/util/Map;)Ljava/util/HashMap;
+    move-result-object v0
 
     .line 23
+    iput-object v0, p0, LX/2Ow;->A03:LX/0RP;
+
     .line 24
     .line 25
-    move-result-object v0
+    sget v0, LX/2I6;->A3V:I
 
     .line 26
-    invoke-static {v0}, LX/001;->A0W(Ljava/util/AbstractMap;)Ljava/util/Iterator;
-
     .line 27
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 28
     .line 29
-    move-result-object v8
-
     .line 30
-    const/4 v7, 0x0
+    move-result-object v0
 
     .line 31
-    :goto_0
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    iput-object v0, p0, LX/2Ow;->A02:LX/0RP;
 
     .line 32
     .line 33
-    .line 34
-    move-result v0
+    sget v0, LX/2I6;->AJm:I
 
+    .line 34
     .line 35
-    if-eqz v0, :cond_0
+    invoke-static {v0}, LX/3FX;->A00(I)LX/3FX;
 
     .line 36
     .line 37
-    invoke-static {v8}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
-
     .line 38
-    .line 39
-    .line 40
-    move-result-object v2
+    move-result-object v0
 
+    .line 39
+    iput-object v0, p0, LX/2Ow;->A04:LX/0RP;
+
+    .line 40
     .line 41
-    invoke-static {v2}, LX/001;->A0Q(Ljava/util/Map$Entry;)Ljava/lang/String;
+    invoke-static {p1}, LX/1rU;->A00(LX/3Ft;)LX/1rU;
 
     .line 42
     .line 43
@@ -128,80 +111,344 @@
     move-result-object v0
 
     .line 45
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    iput-object v0, p0, LX/2Ow;->A00:LX/1rU;
 
     .line 46
     .line 47
-    .line 48
-    move-result-object v1
+    return-void
+.end method
 
-    .line 49
-    invoke-static {v2}, LX/002;->A0E(Ljava/util/Map$Entry;)Ljava/lang/String;
 
-    .line 50
-    .line 51
-    .line 52
+# virtual methods
+.method public final A00()V
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, LX/2Ow;->A03:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
+    .line 6
+    check-cast v0, Lcom/facebook/http/common/FbHttpRequestProcessor;
+
+    .line 7
+    .line 8
+    invoke-static {v0}, Lcom/facebook/http/common/FbHttpRequestProcessor;->A00(Lcom/facebook/http/common/FbHttpRequestProcessor;)LX/2Iv;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    iget-object v0, v0, LX/2Iv;->A00:LX/0RP;
+
+    .line 13
+    .line 14
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    check-cast v0, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;
+
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Lcom/facebook/http/internal/tigonengine/TigonHttpClientAdapterImpl;->abortOutstandingRequests()V
+
+    .line 21
+    .line 22
+    .line 23
+    iget-object v0, p0, LX/2Ow;->A05:LX/0RP;
+
+    .line 24
+    .line 25
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v3
+
+    .line 29
+    check-cast v3, LX/2PQ;
+
+    .line 30
+    .line 31
+    monitor-enter v3
+
+    .line 32
+    :try_start_0
+    iget-object v2, v3, LX/2PQ;->A02:LX/0RP;
+
+    .line 33
+    .line 34
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 35
+    .line 36
+    .line 37
+    iget-boolean v0, v3, LX/2PQ;->A00:Z
+
+    .line 38
+    .line 39
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
+
+    .line 40
+    .line 41
+    .line 42
+    :catch_0
+    :goto_0
+    iget-object v1, v3, LX/2PQ;->A04:Ljava/util/Set;
+
+    .line 43
+    .line 44
+    invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
+
+    .line 45
+    .line 46
+    .line 47
+    move-result v0
+
+    .line 48
+    if-nez v0, :cond_1
+
+    .line 49
+    .line 50
+    invoke-interface {v1}, Ljava/util/Set;->size()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 51
+    .line 52
     .line 53
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    :try_start_1
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 54
     .line 55
     .line 56
-    move-result-object v0
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     .line 57
-    invoke-virtual {v9, v1, v0}, LX/2OV;->A02(Ljava/lang/String;Ljava/lang/String;)Z
-
     .line 58
     .line 59
+    move-result-object v1
+
     .line 60
-    move-result v0
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 61
-    add-int/2addr v7, v0
-
     .line 62
-    goto :goto_0
-
     .line 63
-    :cond_0
-    int-to-long v0, v7
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v0
 
     .line 64
-    invoke-interface {v5, v3, v6, v0, v1}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;J)V
+    if-eqz v0, :cond_0
 
     .line 65
     .line 66
-    .line 67
-    invoke-interface {v5, v3, v4}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 67
     .line 68
     .line 69
+    goto :goto_1
+
     .line 70
-    return-void
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->wait()V
 
     .line 71
-    :catchall_0
-    move-exception v2
-
     .line 72
-    const-wide/16 v0, -0x1
-
     .line 73
+    goto :goto_0
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     .line 74
-    invoke-interface {v5, v3, v6, v0, v1}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(ILjava/lang/String;J)V
+    :cond_1
+    :try_start_2
+    invoke-interface {v2}, LX/0RP;->get()Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 75
     .line 76
     .line 77
-    invoke-interface {v5, v3, v4}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerEnd(IS)V
+    monitor-exit v3
 
     .line 78
+    sget v1, LX/2I6;->A2S:I
+
     .line 79
     .line 80
-    throw v2
+    iget-object v0, p0, LX/2Ow;->A00:LX/1rU;
+
+    .line 81
+    .line 82
+    invoke-static {v0, v1}, LX/0X3;->A0f(LX/1rU;I)Ljava/lang/Object;
+
+    .line 83
+    .line 84
+    .line 85
+    move-result-object v1
+
+    .line 86
+    check-cast v1, Landroid/content/Context;
+
+    .line 87
+    .line 88
+    sget v0, LX/2I6;->AJn:I
+
+    .line 89
+    .line 90
+    invoke-static {v1, v0}, LX/3Fb;->A02(Landroid/content/Context;I)Ljava/lang/Object;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v0
+
+    .line 94
+    check-cast v0, LX/2R4;
+
+    .line 95
+    .line 96
+    invoke-interface {v0}, LX/2R4;->Aq4()V
+
+    .line 97
+    .line 98
+    .line 99
+    return-void
+
+    .line 100
+    :catchall_0
+    move-exception v0
+
+    .line 101
+    monitor-exit v3
+
+    .line 102
+    throw v0
+.end method
+
+.method public final A01()V
+    .locals 6
+
+    .line 0
+    iget-object v0, p0, LX/2Ow;->A05:LX/0RP;
+
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v5
+
+    .line 6
+    check-cast v5, LX/2PQ;
+
+    .line 7
+    .line 8
+    monitor-enter v5
+
+    .line 9
+    const/4 v4, 0x1
+
+    .line 10
+    :try_start_0
+    iput-boolean v4, v5, LX/2PQ;->A00:Z
+
+    .line 11
+    .line 12
+    iget-object v0, v5, LX/2PQ;->A03:LX/0RP;
+
+    .line 13
+    .line 14
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    .line 17
+    iget-object v3, v5, LX/2PQ;->A01:Landroid/content/Context;
+
+    .line 18
+    .line 19
+    const-class v2, Lcom/facebook/fbservice/service/BlueServiceJobIntentService;
+
+    .line 20
+    .line 21
+    invoke-static {v3, v2}, LX/0X7;->A08(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v1
+
+    .line 25
+    const-string v0, "Orca.DRAIN"
+
+    .line 26
+    .line 27
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-static {v3, v2, v4, v1}, LX/2E8;->A00(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 31
+    .line 32
+    .line 33
+    monitor-exit v5
+
+    .line 34
+    iget-object v0, p0, LX/2Ow;->A03:LX/0RP;
+
+    .line 35
+    .line 36
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v0
+
+    .line 40
+    check-cast v0, Lcom/facebook/http/common/FbHttpRequestProcessor;
+
+    .line 41
+    .line 42
+    iput-boolean v4, v0, Lcom/facebook/http/common/FbHttpRequestProcessor;->A0A:Z
+
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception v0
+
+    .line 46
+    monitor-exit v5
+
+    .line 47
+    throw v0
 .end method

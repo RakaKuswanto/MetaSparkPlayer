@@ -1,25 +1,37 @@
-.class public final LX/2BU;
-.super LX/2BR;
+.class public final LX/2bU;
+.super LX/2el;
 .source ""
 
 
 # instance fields
-.field public final synthetic A00:Ljava/lang/reflect/Method;
+.field public final A00:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/reflect/Method;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/2BU;->A00:Ljava/lang/reflect/Method;
+    invoke-direct {p0}, LX/2el;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/2BR;-><init>()V
-
     .line 3
+    sget v0, LX/2I6;->ADY:I
+
     .line 4
     .line 5
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, LX/2bU;->A00:LX/0lu;
+
+    .line 10
+    .line 11
     return-void
 .end method

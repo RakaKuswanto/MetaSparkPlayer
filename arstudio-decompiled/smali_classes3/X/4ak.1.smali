@@ -1,29 +1,32 @@
-.class public final LX/4ak;
+.class public abstract LX/4Ak;
 .super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A00:Ljava/lang/String;
+
+
 # direct methods
-.method public static A00(Landroid/widget/PopupWindow;I)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
+    const-class v0, LX/4Ak;
 
     .line 1
     .line 2
+    invoke-static {v0}, LX/0X3;->A0k(Ljava/lang/Object;)Ljava/lang/String;
+
     .line 3
-    return-void
-.end method
+    .line 4
+    .line 5
+    move-result-object v0
 
-.method public static A01(Landroid/widget/PopupWindow;Z)V
-    .locals 0
+    .line 6
+    sput-object v0, LX/4Ak;->A00:Ljava/lang/String;
 
-    .line 0
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setOverlapAnchor(Z)V
-
-    .line 1
-    .line 2
-    .line 3
+    .line 7
+    .line 8
     return-void
 .end method

@@ -1,143 +1,129 @@
 .class public final LX/4bX;
-.super LX/4bo;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/4ck;
-
-
-# instance fields
-.field public A00:LX/4cR;
-
-.field public A01:Ljava/lang/ref/WeakReference;
-
-.field public final A02:Landroid/content/Context;
-
-.field public final A03:LX/4ay;
-
-.field public final synthetic A04:LX/4bR;
+.implements LX/4aI;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;LX/4bR;LX/4cR;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    iput-object p2, p0, LX/4bX;->A04:LX/4bR;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/4bo;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    iput-object p1, p0, LX/4bX;->A02:Landroid/content/Context;
-
-    .line 6
-    .line 7
-    iput-object p3, p0, LX/4bX;->A00:LX/4cR;
-
-    .line 8
-    .line 9
-    new-instance v1, LX/4ay;
-
-    .line 10
-    .line 11
-    invoke-direct {v1, p1}, LX/4ay;-><init>(Landroid/content/Context;)V
-
-    .line 12
-    .line 13
-    .line 14
-    const/4 v0, 0x1
-
-    .line 15
-    iput v0, v1, LX/4ay;->A00:I
-
-    .line 16
-    .line 17
-    iput-object v1, p0, LX/4bX;->A03:LX/4ay;
-
-    .line 18
-    .line 19
-    invoke-virtual {v1, p0}, LX/4ay;->A0B(LX/4ck;)V
-
-    .line 20
-    .line 21
-    .line 22
     return-void
 .end method
 
 
 # virtual methods
-.method public final AZo(Landroid/view/MenuItem;LX/4ay;)Z
+.method public final A5I(LX/4D6;)Lcom/facebook/dsp/core/ColorData;
     .locals 1
 
-    .line 0
-    iget-object v0, p0, LX/4bX;->A00:LX/4cR;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-interface {v0, p1, p0}, LX/4cR;->AUN(Landroid/view/MenuItem;LX/4bo;)Z
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    return v0
-
-    .line 9
-    :cond_0
     const/4 v0, 0x0
 
-    .line 10
-    return v0
+    return-object v0
 .end method
 
-.method public final AZp(LX/4ay;)V
+.method public final A5t(LX/4aT;)Ljava/lang/Integer;
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x0
+
+    .line 1
+    invoke-static {p1}, LX/434;->A0I(Ljava/lang/Enum;)I
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v1
+
+    .line 5
+    const/4 v0, 0x6
+
+    .line 6
+    if-eq v1, v0, :cond_0
+
+    .line 7
+    .line 8
+    const/16 v0, 0x8
+
+    .line 9
+    .line 10
+    if-eq v1, v0, :cond_0
+
+    .line 11
+    .line 12
+    const/16 v0, 0x9
+
+    .line 13
+    .line 14
+    if-eq v1, v0, :cond_0
+
+    .line 15
+    .line 16
+    const/4 v0, 0x0
+
+    .line 17
+    return-object v0
+
+    .line 18
+    :cond_0
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v0
+
+    .line 22
+    return-object v0
+.end method
+
+.method public final AIH()LX/6Vc;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4bX;->A00:LX/4cR;
+    sget-object v0, LX/6Vc;->MARKETPLACE_PRODUCT_TILE_SECTION_BLUEPRINT:LX/6Vc;
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    return-object v0
+.end method
 
-    .line 3
-    .line 4
-    invoke-virtual {p0}, LX/4bo;->A01()V
+.method public final Ama(LX/4aV;)LX/4aY;
+    .locals 1
 
-    .line 5
-    .line 6
-    .line 7
-    iget-object v0, p0, LX/4bX;->A04:LX/4bR;
+    const/4 v0, 0x0
 
-    .line 8
-    .line 9
-    iget-object v0, v0, LX/4bR;->A09:Landroidx/appcompat/widget/ActionBarContextView;
+    return-object v0
+.end method
 
-    .line 10
-    .line 11
-    iget-object v0, v0, LX/4bU;->A01:LX/4bJ;
+.method public final An3(LX/4aU;)Ljava/lang/Float;
+    .locals 1
 
-    .line 12
-    .line 13
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
-    .line 14
-    .line 15
-    invoke-virtual {v0}, LX/4bJ;->A04()Z
+    return-object v0
+.end method
 
-    .line 16
-    .line 17
-    .line 18
-    :cond_0
-    return-void
+.method public final AnK(LX/4aG;)Ljava/lang/Float;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final Aou(LX/4ah;)LX/4ak;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

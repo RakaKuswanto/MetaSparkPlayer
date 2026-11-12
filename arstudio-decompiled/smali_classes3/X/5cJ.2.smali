@@ -1,444 +1,242 @@
-.class public final LX/5cJ;
-.super Ljava/lang/Object;
+.class public final enum LX/5cJ;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/5eY;
-.implements LX/5gM;
-.implements LX/5gL;
+
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/5cJ;
+
+.field public static final enum LIST:LX/5cJ;
+
+.field public static final enum MAP:LX/5cJ;
+
+.field public static final enum OBJ:LX/5cJ;
+
+.field public static final enum POLY_OBJ:LX/5cJ;
 
 
 # instance fields
-.field public A00:I
+.field public final begin:C
 
-.field public A01:I
-
-.field public final A02:LX/5cr;
-
-.field public final A03:LX/5cb;
-
-.field public final A04:LX/5dp;
-
-.field public final A05:[F
-
-.field public final A06:Z
+.field public final end:C
 
 
 # direct methods
-.method public constructor <init>(LX/5cb;LX/5dp;)V
-    .locals 1
+.method public static final synthetic $values()[LX/5cJ;
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
-    .line 1
-    .line 2
-    .line 3
-    new-instance v0, LX/5cr;
+    new-array v2, v0, [LX/5cJ;
 
-    .line 4
-    .line 5
-    invoke-direct {v0}, LX/5cr;-><init>()V
+    sget-object v1, LX/5cJ;->OBJ:LX/5cJ;
 
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/5cJ;->A02:LX/5cr;
+    const/4 v0, 0x0
 
-    .line 9
-    .line 10
-    const/16 v0, 0x10
+    aput-object v1, v2, v0
 
-    .line 11
-    .line 12
-    new-array v0, v0, [F
+    sget-object v1, LX/5cJ;->LIST:LX/5cJ;
 
-    .line 13
-    .line 14
-    iput-object v0, p0, LX/5cJ;->A05:[F
+    const/4 v0, 0x1
 
-    .line 15
-    .line 16
-    iput-object p1, p0, LX/5cJ;->A03:LX/5cb;
+    aput-object v1, v2, v0
 
-    .line 17
-    .line 18
-    iput-object p2, p0, LX/5cJ;->A04:LX/5dp;
+    sget-object v1, LX/5cJ;->MAP:LX/5cJ;
 
-    .line 19
-    .line 20
-    invoke-static {}, LX/4zU;->A00()Z
+    const/4 v0, 0x2
 
-    .line 21
-    .line 22
-    .line 23
-    move-result v0
+    aput-object v1, v2, v0
 
-    .line 24
-    iput-boolean v0, p0, LX/5cJ;->A06:Z
+    sget-object v1, LX/5cJ;->POLY_OBJ:LX/5cJ;
 
-    .line 25
-    .line 26
-    return-void
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-
-# virtual methods
-.method public final A5k(LX/5cU;)V
-    .locals 4
+.method public static constructor <clinit>()V
+    .locals 7
 
     .line 0
-    iget-object v3, p0, LX/5cJ;->A02:LX/5cr;
+    const-string v2, "OBJ"
 
     .line 1
     .line 2
-    iget-object v0, v3, LX/5cr;->A04:LX/554;
+    const/4 v1, 0x0
 
     .line 3
+    const/16 v6, 0x7b
+
     .line 4
-    if-nez v0, :cond_0
-
     .line 5
+    const/16 v5, 0x7d
+
     .line 6
-    iget-boolean v0, p0, LX/5cJ;->A06:Z
-
     .line 7
+    new-instance v0, LX/5cJ;
+
     .line 8
-    const-string v1, "SurfaceInput"
-
     .line 9
-    .line 10
-    if-eqz v0, :cond_1
+    invoke-direct {v0, v2, v1, v6, v5}, LX/5cJ;-><init>(Ljava/lang/String;ICC)V
 
+    .line 10
     .line 11
     .line 12
-    new-instance v2, LX/553;
+    sput-object v0, LX/5cJ;->OBJ:LX/5cJ;
 
     .line 13
     .line 14
-    invoke-direct {v2, v1}, LX/553;-><init>(Ljava/lang/String;)V
+    const-string v2, "LIST"
 
     .line 15
     .line 16
+    const/4 v1, 0x1
+
     .line 17
-    iput-object v2, v3, LX/5cr;->A04:LX/554;
+    const/16 v4, 0x5b
 
     .line 18
     .line 19
-    iget-object v0, p0, LX/5cJ;->A04:LX/5dp;
+    const/16 v3, 0x5d
 
     .line 20
     .line 21
-    iget-object v1, v2, LX/553;->A00:LX/554;
+    new-instance v0, LX/5cJ;
 
     .line 22
     .line 23
-    :goto_0
-    iget v1, v1, LX/554;->A00:I
+    invoke-direct {v0, v2, v1, v4, v3}, LX/5cJ;-><init>(Ljava/lang/String;ICC)V
 
     .line 24
     .line 25
-    iput v1, v0, LX/5dp;->A00:I
-
     .line 26
+    sput-object v0, LX/5cJ;->LIST:LX/5cJ;
+
     .line 27
-    iget v1, p0, LX/5cJ;->A01:I
-
     .line 28
-    .line 29
-    if-lez v1, :cond_0
+    const-string v2, "MAP"
 
+    .line 29
     .line 30
+    const/4 v1, 0x2
+
     .line 31
-    iget v0, p0, LX/5cJ;->A00:I
+    new-instance v0, LX/5cJ;
 
     .line 32
     .line 33
-    if-lez v0, :cond_0
+    invoke-direct {v0, v2, v1, v6, v5}, LX/5cJ;-><init>(Ljava/lang/String;ICC)V
 
     .line 34
     .line 35
-    invoke-virtual {v2, v1, v0}, LX/554;->A01(II)V
-
     .line 36
+    sput-object v0, LX/5cJ;->MAP:LX/5cJ;
+
     .line 37
     .line 38
-    :cond_0
-    return-void
+    const-string v2, "POLY_OBJ"
 
     .line 39
-    :cond_1
-    iget-object v0, p0, LX/5cJ;->A04:LX/5dp;
-
     .line 40
+    const/4 v1, 0x3
+
     .line 41
-    invoke-static {v1}, LX/552;->A00(Ljava/lang/String;)LX/554;
+    new-instance v0, LX/5cJ;
 
     .line 42
     .line 43
+    invoke-direct {v0, v2, v1, v4, v3}, LX/5cJ;-><init>(Ljava/lang/String;ICC)V
+
     .line 44
-    move-result-object v1
-
     .line 45
-    move-object v2, v1
-
     .line 46
-    iput-object v1, v3, LX/5cr;->A04:LX/554;
+    sput-object v0, LX/5cJ;->POLY_OBJ:LX/5cJ;
 
     .line 47
     .line 48
-    goto :goto_0
-.end method
+    invoke-static {}, LX/5cJ;->$values()[LX/5cJ;
 
-.method public final A9B()V
-    .locals 2
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
 
-    .line 0
-    iget-object v1, p0, LX/5cJ;->A02:LX/5cr;
+    .line 52
+    sput-object v0, LX/5cJ;->$VALUES:[LX/5cJ;
 
-    .line 1
-    .line 2
-    iget-object v0, v1, LX/5cr;->A04:LX/554;
+    .line 53
+    .line 54
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
 
-    .line 5
-    .line 6
-    invoke-virtual {v0}, LX/554;->A00()V
+    .line 58
+    sput-object v0, LX/5cJ;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 7
-    .line 8
-    .line 9
-    const/4 v0, 0x0
-
-    .line 10
-    iput-object v0, v1, LX/5cr;->A04:LX/554;
-
-    .line 11
-    .line 12
-    :cond_0
-    iget-object v1, p0, LX/5cJ;->A04:LX/5dp;
-
-    .line 13
-    .line 14
-    const/4 v0, 0x0
-
-    .line 15
-    iput v0, v1, LX/5dp;->A00:I
-
-    .line 16
-    .line 17
+    .line 59
+    .line 60
     return-void
 .end method
 
-.method public final AG4()LX/5cr;
-    .locals 4
+.method public constructor <init>(Ljava/lang/String;ICC)V
+    .locals 0
 
     .line 0
-    :try_start_0
-    iget-object v3, p0, LX/5cJ;->A04:LX/5dp;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
-    iget-object v0, v3, LX/5dp;->A03:Landroid/graphics/SurfaceTexture;
-
     .line 3
+    iput-char p3, p0, LX/5cJ;->begin:C
+
     .line 4
-    if-eqz v0, :cond_0
-
     .line 5
+    iput-char p4, p0, LX/5cJ;->end:C
+
     .line 6
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-
     .line 7
-    .line 8
-    .line 9
-    :cond_0
-    iget-object v1, p0, LX/5cJ;->A05:[F
+    return-void
+.end method
 
-    .line 10
-    .line 11
-    iget-object v0, v3, LX/5dp;->A03:Landroid/graphics/SurfaceTexture;
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
 
-    .line 12
-    .line 13
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v0, LX/5cJ;->$ENTRIES:Lkotlin/enums/EnumEntries;
 
-    .line 14
-    .line 15
-    .line 16
-    invoke-virtual {v0, v1}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
-
-    .line 17
-    .line 18
-    .line 19
-    iget-object v0, p0, LX/5cJ;->A03:LX/5cb;
-
-    .line 20
-    .line 21
-    invoke-virtual {v0, v1}, LX/5cb;->A07([F)V
-
-    .line 22
-    .line 23
-    .line 24
-    iget-object v2, p0, LX/5cJ;->A02:LX/5cr;
-
-    .line 25
-    .line 26
-    invoke-virtual {v0}, LX/5cb;->A05()LX/5eS;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v0
-
-    .line 30
-    iput-object v0, v2, LX/5cr;->A05:LX/5eS;
-
-    .line 31
-    .line 32
-    iget-object v0, v3, LX/5dp;->A03:Landroid/graphics/SurfaceTexture;
-
-    .line 33
-    .line 34
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 35
-    .line 36
-    .line 37
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
-
-    .line 38
-    .line 39
-    .line 40
-    move-result-wide v0
-
-    .line 41
-    iput-wide v0, v2, LX/5cr;->A03:J
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 42
-    .line 43
-    :catch_0
-    iget-object v0, p0, LX/5cJ;->A02:LX/5cr;
-
-    .line 44
-    .line 45
     return-object v0
 .end method
 
-.method public final APE(LX/5cV;)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)LX/5cJ;
+    .locals 1
 
-    return-void
-.end method
+    const-class v0, LX/5cJ;
 
-.method public final AqV(IIIIIIIZ)LX/5eS;
-    .locals 10
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 0
-    iput p1, p0, LX/5cJ;->A01:I
-
-    .line 1
-    .line 2
-    iput p2, p0, LX/5cJ;->A00:I
-
-    .line 3
-    .line 4
-    iget-object v1, p0, LX/5cJ;->A02:LX/5cr;
-
-    .line 5
-    .line 6
-    iget-object v0, v1, LX/5cr;->A04:LX/554;
-
-    .line 7
-    .line 8
-    if-eqz v0, :cond_0
-
-    .line 9
-    .line 10
-    invoke-virtual {v0, p1, p2}, LX/554;->A01(II)V
-
-    .line 11
-    .line 12
-    .line 13
-    :cond_0
-    iget-object v2, p0, LX/5cJ;->A03:LX/5cb;
-
-    .line 14
-    .line 15
-    iget v3, p0, LX/5cJ;->A01:I
-
-    .line 16
-    .line 17
-    iget v4, p0, LX/5cJ;->A00:I
-
-    .line 18
-    .line 19
-    const/4 v7, 0x0
-
-    .line 20
-    move v5, p3
-
-    .line 21
-    move v6, p4
-
-    .line 22
-    move v8, v7
-
-    .line 23
-    move v9, v7
-
-    .line 24
-    invoke-virtual/range {v2 .. v9}, LX/5cb;->A06(IIIIIZZ)V
-
-    .line 25
-    .line 26
-    .line 27
-    iput p5, v1, LX/5cr;->A02:I
-
-    .line 28
-    .line 29
-    move/from16 v0, p6
-
-    .line 30
-    .line 31
-    iput v0, v1, LX/5cr;->A01:I
-
-    .line 32
-    .line 33
-    move/from16 v0, p7
-
-    .line 34
-    .line 35
-    iput v0, v1, LX/5cr;->A00:I
-
-    .line 36
-    .line 37
-    move/from16 v0, p8
-
-    .line 38
-    .line 39
-    iput-boolean v0, v1, LX/5cr;->A06:Z
-
-    .line 40
-    .line 41
-    invoke-virtual {v2}, LX/5cb;->A05()LX/5eS;
-
-    .line 42
-    .line 43
-    .line 44
     move-result-object v0
 
-    .line 45
+    check-cast v0, LX/5cJ;
+
     return-object v0
 .end method
 
-.method public final release()V
-    .locals 0
+.method public static values()[LX/5cJ;
+    .locals 1
 
-    return-void
+    sget-object v0, LX/5cJ;->$VALUES:[LX/5cJ;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/5cJ;
+
+    return-object v0
 .end method

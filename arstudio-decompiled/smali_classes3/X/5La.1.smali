@@ -1,236 +1,332 @@
-.class public abstract LX/5La;
+.class public final LX/5La;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public A00:Landroid/content/Context;
+.field public final A00:F
 
-.field public A01:Landroidx/work/WorkerParameters;
+.field public final A01:F
 
-.field public A02:Z
+.field public final A02:J
 
-.field public volatile A03:Z
+.field public final A03:J
+
+.field public final A04:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "appContext",
-            "workerParams"
-        }
-    .end annotation
+.method public constructor <init>(FFJJJ)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput-wide p7, p0, LX/5La;->A04:J
+
+    .line 268435460
+    .line 268435461
+    iput-wide p5, p0, LX/5La;->A03:J
+
+    .line 268435462
+    .line 268435463
+    iput-wide p3, p0, LX/5La;->A02:J
+
+    .line 268435464
+    .line 268435465
+    iput p2, p0, LX/5La;->A01:F
+
+    .line 268435466
+    .line 268435467
+    iput p1, p0, LX/5La;->A00:F
+
+    .line 268435468
+    .line 268435469
+    return-void
+.end method
+
+.method public constructor <init>(LX/5Lb;)V
+    .locals 8
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-wide v5, p1, LX/5Lb;->A04:J
 
     .line 1
     .line 2
+    iget-wide v3, p1, LX/5Lb;->A03:J
+
     .line 3
-    if-eqz p1, :cond_1
-
     .line 4
+    iget-wide v1, p1, LX/5Lb;->A02:J
+
     .line 5
-    if-eqz p2, :cond_0
-
     .line 6
+    iget v7, p1, LX/5Lb;->A01:F
+
     .line 7
-    iput-object p1, p0, LX/5La;->A00:Landroid/content/Context;
-
     .line 8
+    iget v0, p1, LX/5Lb;->A00:F
+
     .line 9
-    iput-object p2, p0, LX/5La;->A01:Landroidx/work/WorkerParameters;
-
     .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 11
-    return-void
-
     .line 12
-    :cond_0
-    const-string v0, "WorkerParameters is null"
-
     .line 13
-    .line 14
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    iput-wide v5, p0, LX/5La;->A04:J
 
+    .line 14
     .line 15
+    iput-wide v3, p0, LX/5La;->A03:J
+
     .line 16
     .line 17
-    move-result-object v0
+    iput-wide v1, p0, LX/5La;->A02:J
 
     .line 18
-    throw v0
-
     .line 19
-    :cond_1
-    const-string v0, "Application Context is null"
+    iput v7, p0, LX/5La;->A01:F
 
     .line 20
     .line 21
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    iput v0, p0, LX/5La;->A00:F
 
     .line 22
     .line 23
-    .line 24
-    move-result-object v0
-
-    .line 25
-    throw v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final A00()LX/5ND;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
     .line 0
-    instance-of v0, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;
+    const/4 v5, 0x1
 
     .line 1
+    if-eq p0, p1, :cond_2
+
     .line 2
-    if-eqz v0, :cond_0
-
     .line 3
-    .line 4
-    move-object v2, p0
+    instance-of v1, p1, LX/5La;
 
+    .line 4
     .line 5
-    check-cast v2, Landroidx/work/impl/workers/ConstraintTrackingWorker;
+    const/4 v0, 0x0
 
     .line 6
-    .line 7
-    iget-object v0, v2, LX/5La;->A01:Landroidx/work/WorkerParameters;
+    if-nez v1, :cond_0
 
+    .line 7
     .line 8
+    return v0
+
     .line 9
-    iget-object v1, v0, Landroidx/work/WorkerParameters;->A04:Ljava/util/concurrent/Executor;
+    :cond_0
+    check-cast p1, LX/5La;
 
     .line 10
     .line 11
-    new-instance v0, LX/5LX;
+    iget-wide v3, p0, LX/5La;->A04:J
 
     .line 12
     .line 13
-    invoke-direct {v0, v2}, LX/5LX;-><init>(Landroidx/work/impl/workers/ConstraintTrackingWorker;)V
+    iget-wide v1, p1, LX/5La;->A04:J
 
     .line 14
     .line 15
-    .line 16
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    cmp-long v0, v3, v1
 
+    .line 16
     .line 17
+    if-nez v0, :cond_1
+
     .line 18
     .line 19
-    iget-object v0, v2, Landroidx/work/impl/workers/ConstraintTrackingWorker;->A02:LX/5ND;
+    iget-wide v3, p0, LX/5La;->A03:J
 
     .line 20
     .line 21
-    return-object v0
+    iget-wide v1, p1, LX/5La;->A03:J
 
     .line 22
-    :cond_0
-    move-object v2, p0
-
     .line 23
-    check-cast v2, Landroidx/work/Worker;
+    cmp-long v0, v3, v1
 
     .line 24
     .line 25
-    new-instance v0, LX/5ND;
+    if-nez v0, :cond_1
 
     .line 26
     .line 27
-    invoke-direct {v0}, LX/5ND;-><init>()V
+    iget-wide v3, p0, LX/5La;->A02:J
 
     .line 28
     .line 29
+    iget-wide v1, p1, LX/5La;->A02:J
+
     .line 30
-    iput-object v0, v2, Landroidx/work/Worker;->A00:LX/5ND;
-
     .line 31
+    cmp-long v0, v3, v1
+
     .line 32
-    iget-object v0, v2, LX/5La;->A01:Landroidx/work/WorkerParameters;
-
     .line 33
+    if-nez v0, :cond_1
+
     .line 34
-    iget-object v1, v0, Landroidx/work/WorkerParameters;->A04:Ljava/util/concurrent/Executor;
-
     .line 35
+    iget v1, p0, LX/5La;->A01:F
+
     .line 36
-    new-instance v0, LX/5MD;
-
     .line 37
-    .line 38
-    invoke-direct {v0, v2}, LX/5MD;-><init>(Landroidx/work/Worker;)V
+    iget v0, p1, LX/5La;->A01:F
 
+    .line 38
     .line 39
+    cmpl-float v0, v1, v0
+
     .line 40
     .line 41
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    if-nez v0, :cond_1
 
     .line 42
     .line 43
-    .line 44
-    iget-object v0, v2, Landroidx/work/Worker;->A00:LX/5ND;
+    iget v1, p0, LX/5La;->A00:F
 
+    .line 44
     .line 45
+    iget v0, p1, LX/5La;->A00:F
+
     .line 46
-    return-object v0
+    .line 47
+    cmpl-float v0, v1, v0
+
+    .line 48
+    .line 49
+    if-nez v0, :cond_1
+
+    .line 50
+    .line 51
+    return v5
+
+    .line 52
+    :cond_1
+    const/4 v5, 0x0
+
+    .line 53
+    :cond_2
+    return v5
 .end method
 
-.method public final A01()V
-    .locals 2
+.method public final hashCode()I
+    .locals 5
 
     .line 0
-    instance-of v0, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;
+    iget-wide v0, p0, LX/5La;->A04:J
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1}, LX/434;->A06(J)I
 
     .line 3
     .line 4
-    move-object v0, p0
-
     .line 5
-    check-cast v0, Landroidx/work/impl/workers/ConstraintTrackingWorker;
+    move-result v2
 
     .line 6
+    iget-wide v0, p0, LX/5La;->A03:J
+
     .line 7
-    iget-object v1, v0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->A00:LX/5La;
-
     .line 8
-    .line 9
-    if-eqz v1, :cond_0
+    invoke-static {v0, v1, v2}, LX/001;->A00(JI)I
 
+    .line 9
     .line 10
     .line 11
-    iget-boolean v0, v1, LX/5La;->A03:Z
+    move-result v2
 
     .line 12
+    iget-wide v0, p0, LX/5La;->A02:J
+
     .line 13
-    if-nez v0, :cond_0
-
     .line 14
+    invoke-static {v0, v1, v2}, LX/001;->A00(JI)I
+
     .line 15
-    const/4 v0, 0x1
-
     .line 16
-    iput-boolean v0, v1, LX/5La;->A03:Z
-
     .line 17
+    move-result v2
+
     .line 18
-    invoke-virtual {v1}, LX/5La;->A01()V
+    iget v1, p0, LX/5La;->A01:F
 
     .line 19
     .line 20
+    const/4 v4, 0x0
+
     .line 21
+    const/4 v3, 0x0
+
+    .line 22
+    cmpl-float v0, v1, v3
+
+    .line 23
+    .line 24
+    if-eqz v0, :cond_1
+
+    .line 25
+    .line 26
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    :goto_0
+    add-int/2addr v2, v0
+
+    .line 31
+    mul-int/lit8 v2, v2, 0x1f
+
+    .line 32
+    .line 33
+    iget v1, p0, LX/5La;->A00:F
+
+    .line 34
+    .line 35
+    cmpl-float v0, v1, v3
+
+    .line 36
+    .line 37
+    if-eqz v0, :cond_0
+
+    .line 38
+    .line 39
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    .line 40
+    .line 41
+    .line 42
+    move-result v4
+
+    .line 43
     :cond_0
-    return-void
+    add-int/2addr v2, v4
+
+    .line 44
+    return v2
+
+    .line 45
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 46
+    goto :goto_0
 .end method

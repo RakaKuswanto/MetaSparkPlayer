@@ -20,7 +20,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 5
     .line 6
@@ -28,7 +28,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/46G;)V
+.method public constructor <init>(LX/0a9;)V
     .locals 38
 
     .line 0
@@ -45,7 +45,7 @@
 
     .line 6
     .line 7
-    iget v0, v10, LX/46G;->cacheTtlSeconds:I
+    iget v0, v10, LX/0a9;->cacheTtlSeconds:I
 
     .line 8
     .line 9
@@ -53,7 +53,7 @@
 
     .line 10
     .line 11
-    iget v0, v10, LX/46G;->freshCacheTtlSeconds:I
+    iget v0, v10, LX/0a9;->freshCacheTtlSeconds:I
 
     .line 12
     .line 13
@@ -61,7 +61,7 @@
 
     .line 14
     .line 15
-    iget-object v0, v10, LX/46G;->additionalHttpHeaders:Ljava/util/Map;
+    iget-object v0, v10, LX/0a9;->additionalHttpHeaders:Ljava/util/Map;
 
     .line 16
     .line 17
@@ -69,7 +69,7 @@
 
     .line 18
     .line 19
-    iget v0, v10, LX/46G;->networkTimeoutSeconds:I
+    iget v0, v10, LX/0a9;->networkTimeoutSeconds:I
 
     .line 20
     .line 21
@@ -77,7 +77,7 @@
 
     .line 22
     .line 23
-    iget v0, v10, LX/46G;->retryPolicy:I
+    iget v0, v10, LX/0a9;->retryPolicy:I
 
     .line 24
     .line 25
@@ -85,67 +85,67 @@
 
     .line 26
     .line 27
-    iget-boolean v15, v10, LX/46G;->terminateAfterFreshResponse:Z
+    iget-boolean v15, v10, LX/0a9;->terminateAfterFreshResponse:Z
 
     .line 28
     .line 29
-    iget-object v14, v10, LX/46G;->friendlyNameOverride:Ljava/lang/String;
+    iget-object v14, v10, LX/0a9;->friendlyNameOverride:Ljava/lang/String;
 
     .line 30
     .line 31
-    iget-object v13, v10, LX/46G;->privacyFeature:Ljava/lang/String;
+    iget-object v13, v10, LX/0a9;->privacyFeature:Ljava/lang/String;
 
     .line 32
     .line 33
-    iget-object v12, v10, LX/46G;->locale:Ljava/lang/String;
+    iget-object v12, v10, LX/0a9;->locale:Ljava/lang/String;
 
     .line 34
     .line 35
-    iget-boolean v11, v10, LX/46G;->parseOnClientExecutor:Z
+    iget-boolean v11, v10, LX/0a9;->parseOnClientExecutor:Z
 
     .line 36
     .line 37
-    iget-object v9, v10, LX/46G;->analyticTags:[Ljava/lang/String;
+    iget-object v9, v10, LX/0a9;->analyticTags:[Ljava/lang/String;
 
     .line 38
     .line 39
-    iget v8, v10, LX/46G;->requestPurpose:I
+    iget v8, v10, LX/0a9;->requestPurpose:I
 
     .line 40
     .line 41
-    iget-boolean v7, v10, LX/46G;->ensureCacheWrite:Z
+    iget-boolean v7, v10, LX/0a9;->ensureCacheWrite:Z
 
     .line 42
     .line 43
-    iget-boolean v6, v10, LX/46G;->onlyCacheInitialNetworkResponse:Z
+    iget-boolean v6, v10, LX/0a9;->onlyCacheInitialNetworkResponse:Z
 
     .line 44
     .line 45
-    iget-boolean v5, v10, LX/46G;->enableOfflineCaching:Z
+    iget-boolean v5, v10, LX/0a9;->enableOfflineCaching:Z
 
     .line 46
     .line 47
-    iget-boolean v4, v10, LX/46G;->markHttpRequestReplaySafe:Z
+    iget-boolean v4, v10, LX/0a9;->markHttpRequestReplaySafe:Z
 
     .line 48
     .line 49
-    iget-object v3, v10, LX/46G;->adaptiveFetchClientParams:Ljava/util/Map;
+    iget-object v3, v10, LX/0a9;->adaptiveFetchClientParams:Ljava/util/Map;
 
     .line 50
     .line 51
-    iget-object v2, v10, LX/46G;->clientTraceId:Ljava/lang/String;
+    iget-object v2, v10, LX/0a9;->clientTraceId:Ljava/lang/String;
 
     .line 52
     .line 53
-    iget-object v1, v10, LX/46G;->overrideRequestURL:Ljava/lang/String;
+    iget-object v1, v10, LX/0a9;->overrideRequestURL:Ljava/lang/String;
 
     .line 54
     .line 55
-    iget v0, v10, LX/46G;->subscriptionTargetId:I
+    iget-boolean v0, v10, LX/0a9;->enableAsyncQuery:Z
 
     .line 56
     .line 57
-    iget-boolean v10, v10, LX/46G;->enableAsyncQuery:Z
+    iget-object v10, v10, LX/0a9;->sequencingKey:Ljava/lang/String;
 
     .line 58
     .line 59
@@ -165,7 +165,7 @@
 
     .line 66
     .line 67
-    move/from16 v32, v10
+    move-object/from16 v32, v10
 
     .line 68
     .line 69
@@ -229,7 +229,7 @@
 
     .line 98
     .line 99
-    invoke-static/range {v12 .. v32}, Lcom/facebook/graphservice/GraphQLConfigHintsJNI;->initHybridData(IILjava/util/Map;IIZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z[Ljava/lang/String;IZZZZLjava/util/Map;Ljava/lang/String;Ljava/lang/String;IZ)Lcom/facebook/jni/HybridData;
+    invoke-static/range {v12 .. v32}, Lcom/facebook/graphservice/GraphQLConfigHintsJNI;->initHybridData(IILjava/util/Map;IIZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z[Ljava/lang/String;IZZZZLjava/util/Map;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Lcom/facebook/jni/HybridData;
 
     .line 100
     .line 101
@@ -248,5 +248,5 @@
     return-void
 .end method
 
-.method public static native initHybridData(IILjava/util/Map;IIZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z[Ljava/lang/String;IZZZZLjava/util/Map;Ljava/lang/String;Ljava/lang/String;IZ)Lcom/facebook/jni/HybridData;
+.method public static native initHybridData(IILjava/util/Map;IIZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z[Ljava/lang/String;IZZZZLjava/util/Map;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Lcom/facebook/jni/HybridData;
 .end method

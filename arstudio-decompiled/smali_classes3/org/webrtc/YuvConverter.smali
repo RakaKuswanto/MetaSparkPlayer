@@ -208,7 +208,7 @@
 
     .line 38
     .line 39
-    invoke-static {}, LX/4BF;->A0O()Landroid/graphics/Matrix;
+    invoke-static {}, LX/435;->A01()Landroid/graphics/Matrix;
 
     .line 40
     .line 41
@@ -576,7 +576,7 @@
     move-exception v0
 
     .line 226
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 227
     .line 228
@@ -618,40 +618,70 @@
     .locals 3
 
     .line 0
-    :try_start_0
-    invoke-direct {p0, p1}, Lorg/webrtc/YuvConverter;->convertInternal(Lorg/webrtc/VideoFrame$TextureBuffer;)Lorg/webrtc/VideoFrame$I420Buffer;
+    const-string v2, "YuvConverter"
 
     .line 1
     .line 2
+    :try_start_0
+    invoke-direct {p0, p1}, Lorg/webrtc/YuvConverter;->convertInternal(Lorg/webrtc/VideoFrame$TextureBuffer;)Lorg/webrtc/VideoFrame$I420Buffer;
+
     .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 4
+    .line 6
     return-object v0
     :try_end_0
-    .catch Landroid/opengl/GLException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 5
-    :catch_0
-    move-exception v2
-
-    .line 6
-    const-string v1, "YuvConverter"
+    .catch Landroid/opengl/GLException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 7
+    :catch_0
+    move-exception v1
+
     .line 8
-    const-string v0, "Failed to convert TextureBuffer"
+    const-string v0, "Java Error in YuvConverter.convert. Rethrowing"
 
     .line 9
     .line 10
-    invoke-static {v1, v0, v2}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_0
 
     .line 11
+    :catch_1
+    move-exception v1
+
     .line 12
+    const-string v0, "Generic exception in YuvConverter.convert. Rethrowing"
+
     .line 13
+    .line 14
+    :goto_0
+    invoke-static {v2, v0, v1}, Lorg/webrtc/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 15
+    .line 16
+    .line 17
+    throw v1
+
+    .line 18
+    :catch_2
+    move-exception v1
+
+    .line 19
+    const-string v0, "Failed to convert TextureBuffer"
+
+    .line 20
+    .line 21
+    invoke-static {v2, v0, v1}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 22
+    .line 23
+    .line 24
     const/4 v0, 0x0
 
-    .line 14
+    .line 25
     return-object v0
 .end method
 

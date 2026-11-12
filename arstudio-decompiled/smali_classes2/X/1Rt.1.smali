@@ -1,14 +1,23 @@
-.class public final LX/1Rt;
+.class public final LX/1rt;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/1Rv;
+
+# instance fields
+.field public final A00:J
+
+.field public final A01:J
+
+.field public final A02:J
+
+.field public final A03:LX/0Sa;
+
+.field public final A04:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(LX/0Sa;JJJ)V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -16,98 +25,261 @@
     .line 1
     .line 2
     .line 3
+    iput-object p1, p0, LX/1rt;->A03:LX/0Sa;
+
+    .line 4
+    .line 5
+    iput-wide p2, p0, LX/1rt;->A02:J
+
+    .line 6
+    .line 7
+    iput-wide p4, p0, LX/1rt;->A00:J
+
+    .line 8
+    .line 9
+    iput-wide p6, p0, LX/1rt;->A01:J
+
+    .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    iput-boolean v0, p0, LX/1rt;->A04:Z
+
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public constructor <init>(LX/0Sa;JJJZ)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput-object p1, p0, LX/1rt;->A03:LX/0Sa;
+
+    .line 268435460
+    .line 268435461
+    iput-wide p2, p0, LX/1rt;->A02:J
+
+    .line 268435462
+    .line 268435463
+    iput-wide p4, p0, LX/1rt;->A00:J
+
+    .line 268435464
+    .line 268435465
+    iput-wide p6, p0, LX/1rt;->A01:J
+
+    .line 268435466
+    .line 268435467
+    iput-boolean p8, p0, LX/1rt;->A04:Z
+
+    .line 268435468
+    .line 268435469
     return-void
 .end method
 
 
 # virtual methods
-.method public final Aga(LX/1Rw;)Lcom/facebook/arstudio/player/model/EffectInfo;
-    .locals 14
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     .line 0
-    invoke-virtual {p1}, LX/1Rw;->A02()Ljava/lang/String;
+    const/4 v6, 0x1
+
+    .line 1
+    if-eq p0, p1, :cond_1
+
+    .line 2
+    .line 3
+    const/4 v5, 0x0
+
+    .line 4
+    if-eqz p1, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v1
+
+    .line 10
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    if-ne v1, v0, :cond_0
+
+    .line 15
+    .line 16
+    check-cast p1, LX/1rt;
+
+    .line 17
+    .line 18
+    iget-object v1, p0, LX/1rt;->A03:LX/0Sa;
+
+    .line 19
+    .line 20
+    iget-object v0, p1, LX/1rt;->A03:LX/0Sa;
+
+    .line 21
+    .line 22
+    if-ne v1, v0, :cond_0
+
+    .line 23
+    .line 24
+    iget-wide v3, p0, LX/1rt;->A00:J
+
+    .line 25
+    .line 26
+    iget-wide v1, p1, LX/1rt;->A00:J
+
+    .line 27
+    .line 28
+    cmp-long v0, v3, v1
+
+    .line 29
+    .line 30
+    if-nez v0, :cond_0
+
+    .line 31
+    .line 32
+    iget-wide v3, p0, LX/1rt;->A01:J
+
+    .line 33
+    .line 34
+    iget-wide v1, p1, LX/1rt;->A01:J
+
+    .line 35
+    .line 36
+    cmp-long v0, v3, v1
+
+    .line 37
+    .line 38
+    if-nez v0, :cond_0
+
+    .line 39
+    .line 40
+    iget-boolean v1, p0, LX/1rt;->A04:Z
+
+    .line 41
+    .line 42
+    iget-boolean v0, p1, LX/1rt;->A04:Z
+
+    .line 43
+    .line 44
+    if-eq v1, v0, :cond_1
+
+    .line 45
+    .line 46
+    :cond_0
+    return v5
+
+    .line 47
+    :cond_1
+    return v6
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    .line 0
+    invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v6
+    move-result-object v3
 
     .line 4
-    invoke-virtual {p1}, LX/1Rw;->A02()Ljava/lang/String;
+    iget-object v1, p0, LX/1rt;->A03:LX/0Sa;
 
     .line 5
     .line 6
+    const-string/jumbo v0, "mConnectionState"
+
     .line 7
-    move-result-object v5
-
     .line 8
-    invoke-virtual {p1}, LX/1Rw;->A02()Ljava/lang/String;
-
     .line 9
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
     .line 10
     .line 11
-    move-result-object v7
-
     .line 12
-    iget v0, p1, LX/1Rw;->A00:I
+    iget-wide v1, p0, LX/1rt;->A02:J
 
     .line 13
     .line 14
-    int-to-long v12, v0
+    const-string/jumbo v0, "mServiceGeneratedMs"
 
     .line 15
-    const/4 v1, 0x0
-
     .line 16
-    sget-object v2, Lcom/google/common/collect/RegularImmutableMap;->A03:Lcom/google/common/collect/ImmutableMap;
-
     .line 17
-    .line 18
-    const-string v0, "displayName"
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 18
     .line 19
     .line 20
-    invoke-static {v0, v5}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    iget-wide v1, p0, LX/1rt;->A00:J
 
     .line 21
     .line 22
-    .line 23
-    const-string/jumbo v0, "id"
+    const-string/jumbo v0, "mLastConnectionMs"
 
+    .line 23
     .line 24
     .line 25
-    .line 26
-    invoke-static {v0, v6}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 26
     .line 27
     .line 28
-    .line 29
-    const/4 v10, -0x1
+    iget-wide v1, p0, LX/1rt;->A01:J
 
+    .line 29
     .line 30
-    const/4 v11, 0x2
+    const-string/jumbo v0, "mLastDisconnectMs"
 
     .line 31
-    new-instance v0, Lcom/facebook/arstudio/player/model/EffectInfo;
-
     .line 32
     .line 33
-    move-object v3, v2
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     .line 34
-    move-object v4, v1
-
     .line 35
-    move-object v8, v1
-
     .line 36
-    move-object v9, v1
+    iget-boolean v1, p0, LX/1rt;->A04:Z
 
     .line 37
-    invoke-direct/range {v0 .. v13}, Lcom/facebook/arstudio/player/model/EffectInfo;-><init>(Lcom/facebook/arstudio/player/model/PackageCompressionInfo;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableMap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJ)V
-
     .line 38
+    const-string/jumbo v0, "mClockSkewDetected"
+
     .line 39
     .line 40
+    .line 41
+    invoke-virtual {v3, v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Z)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v0
+
+    .line 48
     return-object v0
 .end method

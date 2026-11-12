@@ -1,51 +1,227 @@
-.class public final LX/1lc;
-.super Ljava/lang/Object;
+.class public final enum LX/1lc;
+.super Ljava/lang/Enum;
 .source ""
 
 
-# instance fields
-.field public A00:I
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
-.field public A01:Ljava/util/Map;
+.field public static final synthetic $VALUES:[LX/1lc;
 
-.field public final A02:LX/0rn;
+.field public static final Companion:LX/1le;
 
-.field public final synthetic A03:LX/487;
+.field public static final enum NOT_FETCHED:LX/1lc;
+
+.field public static final enum OPT_IN:LX/1lc;
+
+.field public static final enum OPT_OUT:LX/1lc;
+
+.field public static final enum UNDECIDED:LX/1lc;
 
 
 # direct methods
-.method public constructor <init>(LX/487;LX/0rn;I)V
-    .locals 1
+.method public static final synthetic $values()[LX/1lc;
+    .locals 3
+
+    const/4 v0, 0x4
+
+    new-array v2, v0, [LX/1lc;
+
+    sget-object v1, LX/1lc;->NOT_FETCHED:LX/1lc;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1lc;->UNDECIDED:LX/1lc;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1lc;->OPT_IN:LX/1lc;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1lc;->OPT_OUT:LX/1lc;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/1lc;->A03:LX/487;
+    const-string v2, "NOT_FETCHED"
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/1lc;
+
     .line 4
     .line 5
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-direct {v0, v2, v1}, LX/1lc;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    move-result-object v0
+    sput-object v0, LX/1lc;->NOT_FETCHED:LX/1lc;
 
     .line 9
-    iput-object v0, p0, LX/1lc;->A01:Ljava/util/Map;
-
     .line 10
-    .line 11
-    iput p3, p0, LX/1lc;->A00:I
+    const-string v2, "UNDECIDED"
 
+    .line 11
     .line 12
+    const/4 v1, 0x1
+
     .line 13
-    iput-object p2, p0, LX/1lc;->A02:LX/0rn;
+    new-instance v0, LX/1lc;
 
     .line 14
     .line 15
+    invoke-direct {v0, v2, v1}, LX/1lc;-><init>(Ljava/lang/String;I)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/1lc;->UNDECIDED:LX/1lc;
+
+    .line 19
+    .line 20
+    const-string v2, "OPT_IN"
+
+    .line 21
+    .line 22
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/1lc;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/1lc;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/1lc;->OPT_IN:LX/1lc;
+
+    .line 29
+    .line 30
+    const-string v2, "OPT_OUT"
+
+    .line 31
+    .line 32
+    const/4 v1, 0x3
+
+    .line 33
+    new-instance v0, LX/1lc;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1}, LX/1lc;-><init>(Ljava/lang/String;I)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, LX/1lc;->OPT_OUT:LX/1lc;
+
+    .line 39
+    .line 40
+    invoke-static {}, LX/1lc;->$values()[LX/1lc;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v0
+
+    .line 44
+    sput-object v0, LX/1lc;->$VALUES:[LX/1lc;
+
+    .line 45
+    .line 46
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
+    .line 50
+    sput-object v0, LX/1lc;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 51
+    .line 52
+    new-instance v0, LX/1le;
+
+    .line 53
+    .line 54
+    invoke-direct {v0}, LX/1le;-><init>()V
+
+    .line 55
+    .line 56
+    .line 57
+    sput-object v0, LX/1lc;->Companion:LX/1le;
+
+    .line 58
+    .line 59
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/1lc;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/1lc;
+    .locals 1
+
+    const-class v0, LX/1lc;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/1lc;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/1lc;
+    .locals 1
+
+    sget-object v0, LX/1lc;->$VALUES:[LX/1lc;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/1lc;
+
+    return-object v0
 .end method

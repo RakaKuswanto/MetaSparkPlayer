@@ -1,40 +1,46 @@
 .class public final LX/3bU;
-.super LX/3bV;
+.super LX/3f7;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "TrustedListenableFutureTask$TrustedFutureInterruptibleTask"
-
-
 # instance fields
-.field public final callable:Ljava/util/concurrent/Callable;
+.field public final A00:Landroid/app/Application$ActivityLifecycleCallbacks;
 
-.field public final synthetic this$0:LX/3bT;
+.field public final A01:Landroid/app/Application;
+
+.field public final A02:LX/3bS;
 
 
 # direct methods
-.method public constructor <init>(LX/3bT;Ljava/util/concurrent/Callable;)V
-    .locals 0
+.method public constructor <init>(Landroid/app/Application;LX/3bS;)V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/3bU;->this$0:LX/3bT;
+    invoke-direct {p0}, LX/3f7;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, LX/3bV;-><init>()V
-
     .line 3
+    new-instance v0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;
+
     .line 4
     .line 5
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, p0}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker$AutomaticTrackerICSAndBeyond$1;-><init>(LX/3bU;)V
 
     .line 6
     .line 7
     .line 8
-    iput-object p2, p0, LX/3bU;->callable:Ljava/util/concurrent/Callable;
+    iput-object v0, p0, LX/3bU;->A00:Landroid/app/Application$ActivityLifecycleCallbacks;
 
     .line 9
     .line 10
+    iput-object p1, p0, LX/3bU;->A01:Landroid/app/Application;
+
+    .line 11
+    .line 12
+    iput-object p2, p0, LX/3bU;->A02:LX/3bS;
+
+    .line 13
+    .line 14
     return-void
 .end method

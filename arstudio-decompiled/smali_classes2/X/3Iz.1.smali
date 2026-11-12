@@ -1,28 +1,25 @@
 .class public final LX/3Iz;
-.super Ljava/lang/Object;
+.super LX/3IM;
 .source ""
 
-# interfaces
-.implements LX/3Mg;
+
+# instance fields
+.field public final A00:J
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(LX/3IL;Ljava/lang/String;J)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, LX/3IM;-><init>(LX/3F1;Ljava/lang/String;)V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput-wide p3, p0, LX/3Iz;->A00:J
 
-
-# virtual methods
-.method public final AP4(I)V
-    .locals 0
-
+    .line 4
+    .line 5
     return-void
 .end method

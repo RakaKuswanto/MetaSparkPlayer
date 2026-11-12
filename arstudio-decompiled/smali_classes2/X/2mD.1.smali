@@ -1,56 +1,102 @@
-.class public final LX/2mD;
-.super LX/2mE;
+.class public final LX/2Md;
+.super LX/2j2;
 .source ""
 
 
-# instance fields
-.field public A00:LX/0Na;
-
-.field public final A01:Landroid/content/Context;
+# static fields
+.field public static A00:LX/2Md;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/IntentFilter;LX/3E8;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, LX/2j2;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(LX/2j1;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0, p2, p3}, LX/2mE;-><init>(Landroid/content/IntentFilter;LX/3E8;)V
+    invoke-direct {p0, p1}, LX/2j2;-><init>(LX/2j1;)V
 
     .line 1
     .line 2
     .line 3
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
+.end method
 
+.method public static A00(LX/2j1;)LX/2Md;
+    .locals 2
+
+    .line 0
+    sget-object v0, LX/2Md;->A00:LX/2Md;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
     .line 4
+    const-class v1, LX/2Md;
+
     .line 5
     .line 6
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    monitor-enter v1
 
     .line 7
+    :try_start_0
+    sget-object v0, LX/2Md;->A00:LX/2Md;
+
     .line 8
     .line 9
-    move-result-object v1
+    if-nez v0, :cond_0
 
     .line 10
-    iput-object v1, p0, LX/2mD;->A01:Landroid/content/Context;
-
     .line 11
+    new-instance v0, LX/2Md;
+
     .line 12
-    sget v0, LX/2eq;->A82:I
-
     .line 13
-    .line 14
-    invoke-static {v1, v0}, LX/1zT;->A01(Landroid/content/Context;I)LX/1zT;
+    invoke-direct {v0, p0}, LX/2Md;-><init>(LX/2j1;)V
 
+    .line 14
     .line 15
     .line 16
-    .line 17
-    move-result-object v0
+    sput-object v0, LX/2Md;->A00:LX/2Md;
 
+    .line 17
     .line 18
-    iput-object v0, p0, LX/2mD;->A00:LX/0Na;
+    :cond_0
+    monitor-exit v1
 
     .line 19
+    goto :goto_0
+
     .line 20
-    return-void
+    :catchall_0
+    move-exception v0
+
+    .line 21
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 22
+    throw v0
+
+    .line 23
+    :cond_1
+    :goto_0
+    sget-object v0, LX/2Md;->A00:LX/2Md;
+
+    .line 24
+    .line 25
+    return-object v0
 .end method

@@ -1,25 +1,20 @@
-.class public final LX/2YN;
-.super Ljava/lang/Object;
+.class public abstract LX/2YN;
+.super LX/6VK;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/2YJ;
-
-
 # direct methods
-.method public constructor <init>(LX/2YJ;)V
-    .locals 0
+.method public constructor <init>(LX/4fg;LX/4fk;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
     .line 1
+    invoke-direct {p0, p1, p2, v0}, LX/6VK;-><init>(LX/4fg;LX/4fk;I)V
+
     .line 2
     .line 3
-    iput-object p1, p0, LX/2YN;->A00:LX/2YJ;
-
     .line 4
-    .line 5
     return-void
 .end method

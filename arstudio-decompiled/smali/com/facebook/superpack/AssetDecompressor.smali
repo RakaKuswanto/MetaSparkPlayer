@@ -22,6 +22,9 @@
 .method public static native decompress_legacy(Ljava/io/InputStream;Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 .end method
 
+.method public static native decompress_range(Landroid/content/res/AssetManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)[Ljava/lang/String;
+.end method
+
 .method public static native get_architecture()I
 .end method
 

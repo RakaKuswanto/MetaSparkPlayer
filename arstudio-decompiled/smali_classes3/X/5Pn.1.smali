@@ -2,8 +2,13 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3aS;
+
+# instance fields
+.field public A00:J
+
+.field public A01:J
+
+.field public A02:Z
 
 
 # direct methods
@@ -17,19 +22,4 @@
     .line 2
     .line 3
     return-void
-.end method
-
-
-# virtual methods
-.method public final AJH(I)I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_0
-
-    const/4 v0, 0x5
-
-    :cond_0
-    return v0
 .end method

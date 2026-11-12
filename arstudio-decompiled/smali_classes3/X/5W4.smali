@@ -1,17 +1,17 @@
-.class public final LX/5W4;
+.class public interface abstract LX/5W4;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/io/Closeable;
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public abstract Afv(LX/5WA;J)J
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AoR()LX/5Vy;
+.end method
+
+.method public abstract close()V
 .end method

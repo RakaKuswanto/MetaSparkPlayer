@@ -4,122 +4,116 @@
 
 
 # instance fields
-.field public final A00:Landroid/media/AudioTrack$StreamEventCallback;
+.field public A00:I
 
-.field public final A01:Landroid/os/Handler;
+.field public A01:Z
 
-.field public final synthetic A02:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
+.field public final A02:LX/61G;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)V
-    .locals 2
+.method public constructor <init>(LX/61G;)V
+    .locals 0
 
     .line 0
-    iput-object p1, p0, LX/633;->A02:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    iput-object p1, p0, LX/633;->A02:LX/61G;
+
     .line 4
     .line 5
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    .line 6
-    .line 7
-    .line 8
-    move-result-object v1
-
-    .line 9
-    new-instance v0, Landroid/os/Handler;
-
-    .line 10
-    .line 11
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    .line 12
-    .line 13
-    .line 14
-    iput-object v0, p0, LX/633;->A01:Landroid/os/Handler;
-
-    .line 15
-    .line 16
-    new-instance v0, LX/637;
-
-    .line 17
-    .line 18
-    invoke-direct {v0, p0, p1}, LX/637;-><init>(LX/633;Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)V
-
-    .line 19
-    .line 20
-    .line 21
-    iput-object v0, p0, LX/633;->A00:Landroid/media/AudioTrack$StreamEventCallback;
-
-    .line 22
-    .line 23
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Landroid/media/AudioTrack;)V
-    .locals 3
+.method public final A00(LX/5rO;)V
+    .locals 4
 
     .line 0
-    iget-object v2, p0, LX/633;->A01:Landroid/os/Handler;
+    if-eqz p1, :cond_1
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    iget-object v3, p0, LX/633;->A02:LX/61G;
 
     .line 3
-    new-instance v1, LX/6Pu;
-
     .line 4
-    .line 5
-    invoke-direct {v1, v2, v0}, LX/6Pu;-><init>(Ljava/lang/Object;I)V
+    invoke-virtual {v3}, LX/61G;->A02()Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
 
+    .line 5
     .line 6
     .line 7
+    move-result-object v0
+
     .line 8
-    iget-object v0, p0, LX/633;->A00:Landroid/media/AudioTrack$StreamEventCallback;
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;->mEffectManifest:Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectManifest;
 
     .line 9
     .line 10
-    invoke-virtual {p1, v1, v0}, Landroid/media/AudioTrack;->registerStreamEventCallback(Ljava/util/concurrent/Executor;Landroid/media/AudioTrack$StreamEventCallback;)V
+    iget-boolean v0, v0, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectManifest;->frameDataNeeded:Z
 
     .line 11
     .line 12
+    if-eqz v0, :cond_1
+
     .line 13
-    return-void
-.end method
+    .line 14
+    invoke-virtual {p1}, LX/5rO;->get()Ljava/lang/Object;
 
-.method public final A01(Landroid/media/AudioTrack;)V
-    .locals 2
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
 
-    .line 0
-    iget-object v0, p0, LX/633;->A00:Landroid/media/AudioTrack$StreamEventCallback;
+    .line 18
+    check-cast v0, LX/5ut;
 
-    .line 1
-    .line 2
-    invoke-virtual {p1, v0}, Landroid/media/AudioTrack;->unregisterStreamEventCallback(Landroid/media/AudioTrack$StreamEventCallback;)V
+    .line 19
+    .line 20
+    iget v2, p0, LX/633;->A00:I
 
-    .line 3
-    .line 4
-    .line 5
-    iget-object v1, p0, LX/633;->A01:Landroid/os/Handler;
+    .line 21
+    .line 22
+    if-eqz v0, :cond_0
 
-    .line 6
-    .line 7
-    const/4 v0, 0x0
+    .line 23
+    .line 24
+    iget v1, v0, LX/5ut;->A01:I
 
-    .line 8
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    .line 25
+    .line 26
+    const/4 v0, -0x1
 
-    .line 9
-    .line 10
-    .line 11
+    .line 27
+    if-eq v1, v0, :cond_0
+
+    .line 28
+    .line 29
+    move v2, v1
+
+    .line 30
+    :cond_0
+    iget-boolean v1, p0, LX/633;->A01:Z
+
+    .line 31
+    .line 32
+    invoke-virtual {v3}, LX/61G;->A02()Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v0
+
+    .line 36
+    invoke-virtual {v0, p1, v2, v1}, Lcom/facebook/cameracore/mediapipeline/arengineservices/interfaces/EffectServiceHost;->updateFrame(LX/5rO;IZ)V
+
+    .line 37
+    .line 38
+    .line 39
+    :cond_1
     return-void
 .end method

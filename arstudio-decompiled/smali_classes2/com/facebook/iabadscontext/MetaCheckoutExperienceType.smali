@@ -7,6 +7,8 @@
 
 
 # static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
 .field public static final synthetic $VALUES:[Lcom/facebook/iabadscontext/MetaCheckoutExperienceType;
 
 .field public static final enum BAU_WEB_CHECKOUT:Lcom/facebook/iabadscontext/MetaCheckoutExperienceType;
@@ -123,22 +125,34 @@
 
     .line 35
     .line 36
-    const/16 v0, 0x59
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
 
     .line 37
     .line 38
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
-
     .line 39
-    .line 40
-    .line 41
     move-result-object v0
 
+    .line 40
+    sput-object v0, Lcom/facebook/iabadscontext/MetaCheckoutExperienceType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 41
     .line 42
-    sput-object v0, Lcom/facebook/iabadscontext/MetaCheckoutExperienceType;->CREATOR:Landroid/os/Parcelable$Creator;
+    const/16 v0, 0x54
 
     .line 43
     .line 44
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v0
+
+    .line 48
+    sput-object v0, Lcom/facebook/iabadscontext/MetaCheckoutExperienceType;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 49
+    .line 50
     return-void
 .end method
 
@@ -152,6 +166,14 @@
     .line 2
     .line 3
     return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, Lcom/facebook/iabadscontext/MetaCheckoutExperienceType;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/iabadscontext/MetaCheckoutExperienceType;
@@ -199,12 +221,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-static {p1, p0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, p0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 5
     .line 6

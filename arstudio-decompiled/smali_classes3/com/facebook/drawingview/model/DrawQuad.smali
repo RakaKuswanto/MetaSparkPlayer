@@ -23,15 +23,15 @@
     .locals 2
 
     .line 0
-    const/16 v1, 0x35
+    const/16 v1, 0x2b
 
     .line 1
     .line 2
-    new-instance v0, LX/1QO;
+    new-instance v0, LX/1b7;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/1QO;-><init>(I)V
+    invoke-direct {v0, v1}, LX/1b7;-><init>(I)V
 
     .line 5
     .line 6

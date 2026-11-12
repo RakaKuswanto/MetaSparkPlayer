@@ -1,35 +1,99 @@
 .class public final LX/2K3;
-.super LX/2KE;
+.super LX/2Jp;
 .source ""
 
 
+# instance fields
+.field public A00:Ljava/lang/Runnable;
+
+
 # direct methods
-.method public constructor <init>(LX/2Kr;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x1
+    invoke-direct {p0}, LX/2Jp;-><init>()V
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
     .line 2
     .line 3
-    .line 4
-    invoke-direct {p0, p1}, LX/2KE;-><init>(LX/2Kr;)V
-
-    .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 
 # virtual methods
-.method public final AM3()Ljava/lang/String;
+.method public final A01()LX/2Jz;
     .locals 1
 
-    const-string/jumbo v0, "kotlin.Array"
+    .line 0
+    iget-object v0, p0, LX/2K3;->A00:Ljava/lang/Runnable;
 
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    const-string v0, "No callable or runnable was supplied to JobOrchestrator"
+
+    .line 5
+    .line 6
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    throw v0
+
+    .line 11
+    :cond_0
+    iget-object v0, p0, LX/2Jp;->A03:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    if-eqz v0, :cond_1
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    if-eqz v0, :cond_1
+
+    .line 20
+    .line 21
+    new-instance v0, LX/2Jz;
+
+    .line 22
+    .line 23
+    invoke-direct {v0, p0}, LX/2Jz;-><init>(LX/2K3;)V
+
+    .line 24
+    .line 25
+    .line 26
     return-object v0
+
+    .line 27
+    :cond_1
+    const-string v0, "No description was supplied to JobOrchestrator"
+
+    .line 28
+    .line 29
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    throw v0
 .end method

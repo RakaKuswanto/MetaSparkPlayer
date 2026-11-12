@@ -1,40 +1,84 @@
 .class public final LX/4cy;
-.super Ljava/lang/Object;
+.super LX/4JO;
 .source ""
 
 
+# instance fields
+.field public A00:Ljava/lang/String;
+
+.field public A01:Ljava/lang/String;
+
+.field public A02:Ljava/lang/String;
+
+
 # direct methods
-.method public static A00(Ljava/lang/Object;)Landroid/os/LocaleList;
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    check-cast p0, Landroid/app/LocaleManager;
+    invoke-direct {p0}, LX/4JO;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {p0}, Landroid/app/LocaleManager;->getApplicationLocales()Landroid/os/LocaleList;
-
     .line 3
-    .line 4
-    .line 5
-    move-result-object p0
-
-    .line 6
-    return-object p0
+    return-void
 .end method
 
-.method public static A01(Landroid/os/LocaleList;Ljava/lang/Object;)V
-    .locals 0
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
     .line 0
-    check-cast p1, Landroid/app/LocaleManager;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 1
     .line 2
-    invoke-virtual {p1, p0}, Landroid/app/LocaleManager;->setApplicationLocales(Landroid/os/LocaleList;)V
-
     .line 3
+    move-result-object v2
+
     .line 4
+    iget-object v1, p0, LX/4cy;->A00:Ljava/lang/String;
+
     .line 5
-    return-void
+    .line 6
+    const-string v0, "network"
+
+    .line 7
+    .line 8
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    .line 11
+    iget-object v1, p0, LX/4cy;->A01:Ljava/lang/String;
+
+    .line 12
+    .line 13
+    const-string v0, "action"
+
+    .line 14
+    .line 15
+    invoke-virtual {v2, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    .line 18
+    iget-object v1, p0, LX/4cy;->A02:Ljava/lang/String;
+
+    .line 19
+    .line 20
+    const-string v0, "target"
+
+    .line 21
+    .line 22
+    invoke-static {v0, v1, v2}, LX/4JO;->A01(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/AbstractMap;)Ljava/lang/String;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    return-object v0
 .end method

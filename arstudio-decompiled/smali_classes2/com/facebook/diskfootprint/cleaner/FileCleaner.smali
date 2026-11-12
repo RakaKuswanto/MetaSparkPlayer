@@ -3,25 +3,25 @@
 .source ""
 
 # interfaces
-.implements LX/1yJ;
+.implements LX/201;
 
 
 # static fields
-.field public static volatile A0B:Ljava/lang/Boolean;
+.field public static volatile A0A:Ljava/lang/Boolean;
 
 
 # instance fields
 .field public A00:J
 
-.field public A01:LX/1zG;
+.field public final A01:Landroid/content/Context;
 
-.field public final A02:Landroid/content/Context;
+.field public final A02:LX/0RP;
 
-.field public final A03:LX/0Na;
+.field public final A03:LX/0RP;
 
-.field public final A04:LX/0Na;
+.field public final A04:LX/0RP;
 
-.field public final A05:LX/0Na;
+.field public final A05:Ljava/util/List;
 
 .field public final A06:Ljava/util/List;
 
@@ -29,9 +29,7 @@
 
 .field public final A08:Ljava/util/List;
 
-.field public final A09:Ljava/util/List;
-
-.field public final A0A:LX/0Na;
+.field public final A09:LX/0RP;
 
 
 # direct methods
@@ -39,7 +37,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/0Yf;->A0O()Ljava/lang/Boolean;
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
 
     .line 1
     .line 2
@@ -47,14 +45,14 @@
     move-result-object v0
 
     .line 4
-    sput-object v0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A0B:Ljava/lang/Boolean;
+    sput-object v0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A0A:Ljava/lang/Boolean;
 
     .line 5
     .line 6
     return-void
 .end method
 
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 6
 
     .line 0
@@ -63,7 +61,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A00()LX/0Zq;
+    invoke-static {}, LX/0lf;->A00()LX/0lf;
 
     .line 4
     .line 5
@@ -71,87 +69,87 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A0A:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A09:LX/0RP;
 
     .line 8
     .line 9
-    sget v1, LX/2eq;->A5B:I
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A01:LX/1zG;
-
     .line 12
+    move-result-object v0
+
     .line 13
-    invoke-static {v0, v1}, LX/1zE;->A03(LX/1zG;I)Landroid/content/Context;
+    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A01:Landroid/content/Context;
 
     .line 14
     .line 15
-    .line 16
-    move-result-object v0
+    sget v0, LX/2I6;->A8F:I
 
+    .line 16
     .line 17
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A02:Landroid/content/Context;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 18
     .line 19
-    sget v0, LX/2eq;->ABX:I
-
     .line 20
+    move-result-object v0
+
     .line 21
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A04:LX/0RP;
 
     .line 22
     .line 23
+    invoke-static {}, LX/0lf;->A0C()LX/0lf;
+
     .line 24
+    .line 25
+    .line 26
     move-result-object v0
 
-    .line 25
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A05:LX/0Na;
-
-    .line 26
     .line 27
-    invoke-static {}, LX/0Zq;->A0F()LX/0Zq;
+    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A02:LX/0RP;
 
     .line 28
     .line 29
-    .line 30
-    move-result-object v0
+    sget v0, LX/2I6;->A8E:I
 
+    .line 30
     .line 31
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A03:LX/0Na;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 32
     .line 33
-    sget v1, LX/2eq;->ABU:I
-
     .line 34
+    move-result-object v2
+
     .line 35
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A01:LX/1zG;
+    iput-object v2, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A03:LX/0RP;
 
     .line 36
     .line 37
-    invoke-static {v0, v1}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    const-wide/16 v0, 0x0
 
     .line 38
     .line 39
-    .line 40
-    move-result-object v0
+    iput-wide v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A00:J
 
+    .line 40
     .line 41
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A04:LX/0Na;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 42
     .line 43
-    const-wide/16 v0, 0x0
-
     .line 44
+    move-result-object v0
+
     .line 45
-    iput-wide v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A00:J
+    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A07:Ljava/util/List;
 
     .line 46
     .line 47
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 48
     .line 49
@@ -159,11 +157,11 @@
     move-result-object v0
 
     .line 51
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A01:LX/1zG;
+    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A08:Ljava/util/List;
 
     .line 52
     .line 53
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 54
     .line 55
@@ -171,11 +169,11 @@
     move-result-object v0
 
     .line 57
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A08:Ljava/util/List;
+    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A06:Ljava/util/List;
 
     .line 58
     .line 59
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 60
     .line 61
@@ -183,11 +181,11 @@
     move-result-object v0
 
     .line 63
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A09:Ljava/util/List;
+    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A05:Ljava/util/List;
 
     .line 64
     .line 65
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-virtual {v2}, LX/3FX;->get()Ljava/lang/Object;
 
     .line 66
     .line 67
@@ -195,217 +193,198 @@
     move-result-object v0
 
     .line 69
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A07:Ljava/util/List;
+    check-cast v0, LX/203;
 
     .line 70
     .line 71
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    iget-object v0, v0, LX/203;->A00:LX/0lu;
 
     .line 72
     .line 73
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
+
     .line 74
-    move-result-object v0
-
     .line 75
-    iput-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A06:Ljava/util/List;
-
     .line 76
+    move-result-object v2
+
     .line 77
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A04:LX/0Na;
+    const-wide v0, 0x8300bd000b0106L
 
     .line 78
     .line 79
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
     .line 80
     .line 81
     .line 82
-    move-result-object v0
+    invoke-static {v2, v0, v1}, LX/302;->A0C(LX/302;J)Ljava/lang/String;
 
     .line 83
-    check-cast v0, LX/1yB;
-
     .line 84
     .line 85
-    iget-object v0, v0, LX/1yB;->A00:LX/1Nm;
-
-    .line 86
-    .line 87
-    invoke-static {v0}, LX/1Nm;->A09(LX/1Nm;)LX/35B;
-
-    .line 88
-    .line 89
-    .line 90
-    move-result-object v2
-
-    .line 91
-    const-wide v0, 0x8300cc000b0103L
-
-    .line 92
-    .line 93
-    .line 94
-    .line 95
-    .line 96
-    invoke-static {v2, v0, v1}, LX/0Yi;->A0l(LX/35B;J)Ljava/lang/String;
-
-    .line 97
-    .line 98
-    .line 99
     move-result-object v1
 
-    .line 100
-    invoke-static {v1}, LX/1sR;->A02(Ljava/lang/CharSequence;)Z
+    .line 86
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
-    .line 101
-    .line 102
-    .line 103
+    .line 87
+    .line 88
+    .line 89
+    invoke-static {v1}, LX/3ED;->A02(Ljava/lang/CharSequence;)Z
+
+    .line 90
+    .line 91
+    .line 92
     move-result v0
 
-    .line 104
+    .line 93
     if-nez v0, :cond_4
 
-    .line 105
-    .line 106
-    invoke-static {v1}, LX/0Yi;->A1b(Ljava/lang/String;)[Ljava/lang/String;
+    .line 94
+    .line 95
+    const-string v0, ","
 
-    .line 107
-    .line 108
-    .line 109
+    .line 96
+    .line 97
+    invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    .line 98
+    .line 99
+    .line 100
     move-result-object v5
 
-    .line 110
+    .line 101
     array-length v4, v5
 
-    .line 111
+    .line 102
     const/4 v3, 0x0
 
-    .line 112
+    .line 103
     :goto_0
     if-ge v3, v4, :cond_4
 
-    .line 113
-    .line 114
+    .line 104
+    .line 105
     aget-object v2, v5, v3
 
-    .line 115
-    .line 116
-    invoke-static {v2}, LX/1sR;->A01(Ljava/lang/CharSequence;)Z
+    .line 106
+    .line 107
+    invoke-static {v2}, LX/3ED;->A01(Ljava/lang/CharSequence;)Z
 
-    .line 117
-    .line 118
-    .line 119
+    .line 108
+    .line 109
+    .line 110
     move-result v0
 
-    .line 120
+    .line 111
     if-nez v0, :cond_0
 
-    .line 121
-    .line 122
+    .line 112
+    .line 113
     const-string v0, "/app_"
 
-    .line 123
-    .line 124
+    .line 114
+    .line 115
     invoke-virtual {v2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    .line 116
+    .line 117
+    .line 118
+    move-result v0
+
+    .line 119
+    if-eqz v0, :cond_1
+
+    .line 120
+    .line 121
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A07:Ljava/util/List;
+
+    .line 122
+    .line 123
+    const/4 v1, 0x5
+
+    .line 124
+    :goto_1
+    invoke-virtual {v2, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     .line 125
     .line 126
     .line 127
-    move-result v0
-
-    .line 128
-    if-eqz v0, :cond_1
-
-    .line 129
-    .line 130
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A08:Ljava/util/List;
-
-    .line 131
-    .line 132
-    const/4 v1, 0x5
-
-    .line 133
-    :goto_1
-    invoke-virtual {v2, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    .line 134
-    .line 135
-    .line 136
     move-result-object v2
 
-    .line 137
+    .line 128
     :goto_2
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 138
-    .line 139
-    .line 140
+    .line 129
+    .line 130
+    .line 131
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
-    .line 141
-    .line 142
+    .line 132
+    .line 133
     goto :goto_0
 
-    .line 143
+    .line 134
     :cond_1
     const-string v0, "/files/"
 
-    .line 144
-    .line 145
+    .line 135
+    .line 136
     invoke-virtual {v2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    .line 146
-    .line 147
-    .line 148
+    .line 137
+    .line 138
+    .line 139
     move-result v0
 
-    .line 149
+    .line 140
     const/4 v1, 0x7
 
-    .line 150
+    .line 141
     if-eqz v0, :cond_2
 
-    .line 151
-    .line 152
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A09:Ljava/util/List;
+    .line 142
+    .line 143
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A08:Ljava/util/List;
 
-    .line 153
-    .line 154
+    .line 144
+    .line 145
     goto :goto_1
 
-    .line 155
+    .line 146
     :cond_2
     const-string v0, "/cache/"
 
-    .line 156
-    .line 157
+    .line 147
+    .line 148
     invoke-virtual {v2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    .line 149
+    .line 150
+    .line 151
+    move-result v0
+
+    .line 152
+    if-eqz v0, :cond_3
+
+    .line 153
+    .line 154
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A06:Ljava/util/List;
+
+    .line 155
+    .line 156
+    goto :goto_1
+
+    .line 157
+    :cond_3
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A05:Ljava/util/List;
 
     .line 158
     .line 159
-    .line 160
-    move-result v0
-
-    .line 161
-    if-eqz v0, :cond_3
-
-    .line 162
-    .line 163
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A07:Ljava/util/List;
-
-    .line 164
-    .line 165
-    goto :goto_1
-
-    .line 166
-    :cond_3
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A06:Ljava/util/List;
-
-    .line 167
-    .line 168
     goto :goto_2
 
-    .line 169
+    .line 160
     :cond_4
     return-void
 .end method
@@ -438,7 +417,7 @@
     move-result-object v3
 
     .line 12
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 13
     .line 14
@@ -476,7 +455,7 @@
     move-result-wide v0
 
     .line 32
-    invoke-static {v2, v0, v1}, LX/0Yg;->A0s(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/0X5;->A0h(Ljava/lang/StringBuilder;J)Ljava/lang/String;
 
     .line 33
     .line 34
@@ -484,7 +463,7 @@
     move-result-object v0
 
     .line 36
-    invoke-static {v3, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v3, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 37
     .line 38
@@ -497,11 +476,11 @@
     .line 41
     .line 42
     .line 43
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A0A:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A09:LX/0RP;
 
     .line 44
     .line 45
-    invoke-static {v0}, LX/0Yg;->A11(LX/0Na;)Ljava/util/concurrent/Executor;
+    invoke-static {v0}, LX/0X4;->A0w(LX/0RP;)Ljava/util/concurrent/Executor;
 
     .line 46
     .line 47
@@ -509,11 +488,11 @@
     move-result-object v1
 
     .line 49
-    new-instance v0, LX/1y9;
+    new-instance v0, LX/209;
 
     .line 50
     .line 51
-    invoke-direct {v0, p0, v2}, LX/1y9;-><init>(Lcom/facebook/diskfootprint/cleaner/FileCleaner;Ljava/io/File;)V
+    invoke-direct {v0, p0, v2}, LX/209;-><init>(Lcom/facebook/diskfootprint/cleaner/FileCleaner;Ljava/io/File;)V
 
     .line 52
     .line 53
@@ -529,15 +508,15 @@
 
 
 # virtual methods
-.method public final AeT(J)V
+.method public final Act(J)V
     .locals 10
 
     .line 0
-    iget-object v3, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A04:LX/0Na;
+    iget-object v3, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A03:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v3}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v3}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -565,11 +544,11 @@
 
     .line 15
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A03:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A02:LX/0RP;
 
     .line 16
     .line 17
-    invoke-static {v0}, LX/0Yd;->A06(LX/0Na;)J
+    invoke-static {v0}, LX/0X1;->A03(LX/0RP;)J
 
     .line 18
     .line 19
@@ -585,7 +564,7 @@
 
     .line 24
     .line 25
-    invoke-interface {v3}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v3}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 26
     .line 27
@@ -593,15 +572,15 @@
     move-result-object v0
 
     .line 29
-    check-cast v0, LX/1yB;
+    check-cast v0, LX/203;
 
     .line 30
     .line 31
-    iget-object v0, v0, LX/1yB;->A00:LX/1Nm;
+    iget-object v0, v0, LX/203;->A00:LX/0lu;
 
     .line 32
     .line 33
-    invoke-static {v0}, LX/1Nm;->A08(LX/1Nm;)LX/0ZF;
+    invoke-static {v0}, LX/0lu;->A05(LX/0lu;)LX/302;
 
     .line 34
     .line 35
@@ -609,14 +588,14 @@
     move-result-object v2
 
     .line 37
-    const-wide v0, 0x8200cc001f0417L
+    const-wide v0, 0x8200bd001f03c1L
 
     .line 38
     .line 39
     .line 40
     .line 41
     .line 42
-    invoke-interface {v2, v0, v1}, LX/35B;->AIM(J)J
+    invoke-static {v2, v0, v1}, LX/302;->A02(LX/302;J)J
 
     .line 43
     .line 44
@@ -656,7 +635,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 59
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A08:Ljava/util/List;
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A07:Ljava/util/List;
 
     .line 60
     .line 61
@@ -681,7 +660,7 @@
 
     .line 70
     .line 71
-    invoke-static {v6}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    invoke-static {v6}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 72
     .line 73
@@ -693,7 +672,7 @@
 
     .line 76
     :try_start_1
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A02:Landroid/content/Context;
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A01:Landroid/content/Context;
 
     .line 77
     .line 78
@@ -735,7 +714,7 @@
 
     .line 94
     .line 95
-    invoke-static {v2, v0, v3, v1}, LX/0Jt;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v1}, LX/0Il;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 96
     .line 97
@@ -744,7 +723,7 @@
 
     .line 99
     :cond_1
-    iget-object v6, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A02:Landroid/content/Context;
+    iget-object v6, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A01:Landroid/content/Context;
 
     .line 100
     .line 101
@@ -756,7 +735,7 @@
     move-result-object v5
 
     .line 105
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A09:Ljava/util/List;
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A08:Ljava/util/List;
 
     .line 106
     .line 107
@@ -781,7 +760,7 @@
 
     .line 116
     .line 117
-    invoke-static {v4}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    invoke-static {v4}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 118
     .line 119
@@ -790,7 +769,7 @@
 
     .line 121
     :try_start_2
-    invoke-static {v5, v1}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v5, v1}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 122
     .line 123
@@ -816,7 +795,7 @@
 
     .line 131
     .line 132
-    invoke-static {v1, v7}, LX/0Yg;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v1, v7}, LX/0X4;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 133
     .line 134
@@ -828,7 +807,7 @@
 
     .line 137
     .line 138
-    invoke-static {v2, v0, v3, v1}, LX/0Jt;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v1}, LX/0Il;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 139
     .line 140
@@ -845,7 +824,7 @@
     move-result-object v5
 
     .line 146
-    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A07:Ljava/util/List;
+    iget-object v0, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A06:Ljava/util/List;
 
     .line 147
     .line 148
@@ -870,7 +849,7 @@
 
     .line 157
     .line 158
-    invoke-static {v4}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    invoke-static {v4}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 159
     .line 160
@@ -879,7 +858,7 @@
 
     .line 162
     :try_start_3
-    invoke-static {v5, v1}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v5, v1}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 163
     .line 164
@@ -905,7 +884,7 @@
 
     .line 172
     .line 173
-    invoke-static {v1, v7}, LX/0Yg;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v1, v7}, LX/0X4;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 174
     .line 175
@@ -917,7 +896,7 @@
 
     .line 178
     .line 179
-    invoke-static {v2, v0, v3, v1}, LX/0Jt;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v1}, LX/0Il;->A0L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 180
     .line 181
@@ -938,7 +917,7 @@
 
     .line 188
     .line 189
-    invoke-static {v1}, LX/1sR;->A01(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, LX/3ED;->A01(Ljava/lang/CharSequence;)Z
 
     .line 190
     .line 191
@@ -950,7 +929,7 @@
 
     .line 194
     .line 195
-    invoke-static {v1}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 196
     .line 197
@@ -970,7 +949,7 @@
 
     .line 204
     .line 205
-    iget-object v1, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A06:Ljava/util/List;
+    iget-object v1, p0, Lcom/facebook/diskfootprint/cleaner/FileCleaner;->A05:Ljava/util/List;
 
     .line 206
     .line 207
@@ -1008,7 +987,7 @@
 
     .line 222
     .line 223
-    invoke-static {v2}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
+    invoke-static {v2}, LX/001;->A0U(Ljava/util/Iterator;)Ljava/lang/String;
 
     .line 224
     .line 225
@@ -1016,7 +995,7 @@
     move-result-object v0
 
     .line 227
-    invoke-static {v3, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v3, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 228
     .line 229
@@ -1036,7 +1015,7 @@
 
     .line 236
     .line 237
-    invoke-static {v1}, LX/1eM;->A00(Ljava/io/File;)V
+    invoke-static {v1}, LX/1no;->A00(Ljava/io/File;)V
 
     .line 238
     .line 239
@@ -1046,7 +1025,7 @@
     .line 241
     .line 242
     .line 243
-    invoke-static {v1}, LX/1eM;->A00(Ljava/io/File;)V
+    invoke-static {v1}, LX/1no;->A00(Ljava/io/File;)V
 
     .line 244
     .line 245

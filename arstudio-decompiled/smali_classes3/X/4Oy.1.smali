@@ -1,14 +1,14 @@
-.class public final LX/4Oy;
+.class public abstract LX/4oY;
 .super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public static A00(Landroid/graphics/Point;Landroid/view/Display;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    invoke-virtual {p1, p0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2

@@ -10,6 +10,10 @@
 
 .field public static final enum FOR_SALE_RANKED_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
+.field public static final enum GROUP_BUNDLES_GIFR_RELATED_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+
+.field public static final enum GROUP_BUNDLES_RELATED_GROUPS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+
 .field public static final enum HIGHLIGHTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
 .field public static final enum LESSON_COMPLETE:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
@@ -77,7 +81,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 36
+    .locals 38
 
     .line 0
     const-string v1, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -92,10 +96,10 @@
     .line 4
     .line 5
     .line 6
-    move-result-object v35
+    move-result-object v15
 
     .line 7
-    sput-object v35, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 8
     .line 9
@@ -111,10 +115,10 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v34
+    move-result-object v14
 
     .line 16
-    sput-object v34, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->FOR_SALE_RANKED_LISTINGS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->FOR_SALE_RANKED_LISTINGS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 17
     .line 18
@@ -130,14 +134,14 @@
     .line 22
     .line 23
     .line 24
-    move-result-object v15
+    move-result-object v37
 
     .line 25
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->FOR_SALE_RANKED_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v37, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->FOR_SALE_RANKED_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 26
     .line 27
-    const-string v1, "HIGHLIGHTS"
+    const-string v1, "GROUP_BUNDLES_GIFR_RELATED_POSTS"
 
     .line 28
     .line 29
@@ -149,14 +153,14 @@
     .line 31
     .line 32
     .line 33
-    move-result-object v14
+    move-result-object v36
 
     .line 34
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->HIGHLIGHTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v36, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->GROUP_BUNDLES_GIFR_RELATED_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 35
     .line 36
-    const-string v1, "LESSON_COMPLETE"
+    const-string v1, "GROUP_BUNDLES_RELATED_GROUPS"
 
     .line 37
     .line 38
@@ -168,14 +172,14 @@
     .line 40
     .line 41
     .line 42
-    move-result-object v33
+    move-result-object v35
 
     .line 43
-    sput-object v33, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->LESSON_COMPLETE:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v35, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->GROUP_BUNDLES_RELATED_GROUPS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 44
     .line 45
-    const-string v1, "LISTING"
+    const-string v1, "HIGHLIGHTS"
 
     .line 46
     .line 47
@@ -187,14 +191,14 @@
     .line 49
     .line 50
     .line 51
-    move-result-object v32
+    move-result-object v34
 
     .line 52
-    sput-object v32, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->LISTING:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v34, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->HIGHLIGHTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 53
     .line 54
-    const-string v1, "LOW_ENGAGEMENT_POSTS"
+    const-string v1, "LESSON_COMPLETE"
 
     .line 55
     .line 56
@@ -206,14 +210,14 @@
     .line 58
     .line 59
     .line 60
-    move-result-object v31
+    move-result-object v33
 
     .line 61
-    sput-object v31, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->LOW_ENGAGEMENT_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v33, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->LESSON_COMPLETE:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 62
     .line 63
-    const-string v1, "MEDIA_POSTS"
+    const-string v1, "LISTING"
 
     .line 64
     .line 65
@@ -225,14 +229,14 @@
     .line 67
     .line 68
     .line 69
-    move-result-object v30
+    move-result-object v32
 
     .line 70
-    sput-object v30, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->MEDIA_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v32, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->LISTING:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 71
     .line 72
-    const-string v1, "MEMBER_BIO_POSTS"
+    const-string v1, "LOW_ENGAGEMENT_POSTS"
 
     .line 73
     .line 74
@@ -245,14 +249,14 @@
     .line 77
     .line 78
     .line 79
-    move-result-object v29
+    move-result-object v31
 
     .line 80
-    sput-object v29, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->MEMBER_BIO_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v31, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->LOW_ENGAGEMENT_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 81
     .line 82
-    const-string v1, "MORE_FROM_GROUPS"
+    const-string v1, "MEDIA_POSTS"
 
     .line 83
     .line 84
@@ -265,14 +269,14 @@
     .line 87
     .line 88
     .line 89
-    move-result-object v28
+    move-result-object v30
 
     .line 90
-    sput-object v28, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->MORE_FROM_GROUPS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v30, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->MEDIA_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 91
     .line 92
-    const-string v1, "MOST_POPULAR"
+    const-string v1, "MEMBER_BIO_POSTS"
 
     .line 93
     .line 94
@@ -285,14 +289,14 @@
     .line 97
     .line 98
     .line 99
-    move-result-object v27
+    move-result-object v29
 
     .line 100
-    sput-object v27, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->MOST_POPULAR:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v29, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->MEMBER_BIO_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 101
     .line 102
-    const-string v1, "NEARBY_LISTINGS"
+    const-string v1, "MORE_FROM_GROUPS"
 
     .line 103
     .line 104
@@ -305,14 +309,14 @@
     .line 107
     .line 108
     .line 109
-    move-result-object v26
+    move-result-object v28
 
     .line 110
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->NEARBY_LISTINGS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v28, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->MORE_FROM_GROUPS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 111
     .line 112
-    const-string v1, "NEW_LISTINGS"
+    const-string v1, "MOST_POPULAR"
 
     .line 113
     .line 114
@@ -325,14 +329,14 @@
     .line 117
     .line 118
     .line 119
-    move-result-object v25
+    move-result-object v27
 
     .line 120
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->NEW_LISTINGS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v27, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->MOST_POPULAR:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 121
     .line 122
-    const-string v1, "NEW_POSTS"
+    const-string v1, "NEARBY_LISTINGS"
 
     .line 123
     .line 124
@@ -345,14 +349,14 @@
     .line 127
     .line 128
     .line 129
-    move-result-object v24
+    move-result-object v26
 
     .line 130
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->NEW_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v26, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->NEARBY_LISTINGS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 131
     .line 132
-    const-string v1, "NOTIFICATIONS"
+    const-string v1, "NEW_LISTINGS"
 
     .line 133
     .line 134
@@ -365,14 +369,14 @@
     .line 137
     .line 138
     .line 139
-    move-result-object v23
+    move-result-object v25
 
     .line 140
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->NOTIFICATIONS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v25, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->NEW_LISTINGS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 141
     .line 142
-    const-string v1, "OLDER_POSTS"
+    const-string v1, "NEW_POSTS"
 
     .line 143
     .line 144
@@ -385,14 +389,14 @@
     .line 147
     .line 148
     .line 149
-    move-result-object v22
+    move-result-object v24
 
     .line 150
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->OLDER_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v24, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->NEW_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 151
     .line 152
-    const-string v1, "OTHER_MEMBERS"
+    const-string v1, "NOTIFICATIONS"
 
     .line 153
     .line 154
@@ -405,14 +409,14 @@
     .line 157
     .line 158
     .line 159
-    move-result-object v21
+    move-result-object v23
 
     .line 160
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->OTHER_MEMBERS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->NOTIFICATIONS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 161
     .line 162
-    const-string v1, "PHOTO_POSTS"
+    const-string v1, "OLDER_POSTS"
 
     .line 163
     .line 164
@@ -425,14 +429,14 @@
     .line 167
     .line 168
     .line 169
-    move-result-object v20
+    move-result-object v22
 
     .line 170
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->PHOTO_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->OLDER_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 171
     .line 172
-    const-string v1, "PINNED_POST_HEADER"
+    const-string v1, "OTHER_MEMBERS"
 
     .line 173
     .line 174
@@ -445,14 +449,14 @@
     .line 177
     .line 178
     .line 179
-    move-result-object v19
+    move-result-object v21
 
     .line 180
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->PINNED_POST_HEADER:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->OTHER_MEMBERS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 181
     .line 182
-    const-string v1, "RANKED_POSTS"
+    const-string v1, "PHOTO_POSTS"
 
     .line 183
     .line 184
@@ -465,14 +469,14 @@
     .line 187
     .line 188
     .line 189
-    move-result-object v18
+    move-result-object v20
 
     .line 190
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RANKED_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->PHOTO_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 191
     .line 192
-    const-string v1, "RECENTLY_SEEN"
+    const-string v1, "PINNED_POST_HEADER"
 
     .line 193
     .line 194
@@ -485,14 +489,14 @@
     .line 197
     .line 198
     .line 199
-    move-result-object v17
+    move-result-object v19
 
     .line 200
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RECENTLY_SEEN:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->PINNED_POST_HEADER:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 201
     .line 202
-    const-string v1, "RECENT_ACTIVITY"
+    const-string v1, "RANKED_POSTS"
 
     .line 203
     .line 204
@@ -505,14 +509,14 @@
     .line 207
     .line 208
     .line 209
-    move-result-object v13
+    move-result-object v18
 
     .line 210
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RECENT_ACTIVITY:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RANKED_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 211
     .line 212
-    const-string v1, "RECENT_LISTING_ACTIVITY"
+    const-string v1, "RECENTLY_SEEN"
 
     .line 213
     .line 214
@@ -525,14 +529,14 @@
     .line 217
     .line 218
     .line 219
-    move-result-object v12
+    move-result-object v17
 
     .line 220
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RECENT_LISTING_ACTIVITY:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RECENTLY_SEEN:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 221
     .line 222
-    const-string v1, "RECENT_PHOTOS"
+    const-string v1, "RECENT_ACTIVITY"
 
     .line 223
     .line 224
@@ -545,14 +549,14 @@
     .line 227
     .line 228
     .line 229
-    move-result-object v11
+    move-result-object v13
 
     .line 230
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RECENT_PHOTOS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RECENT_ACTIVITY:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 231
     .line 232
-    const-string v1, "SHARED_GROUP_POST"
+    const-string v1, "RECENT_LISTING_ACTIVITY"
 
     .line 233
     .line 234
@@ -565,14 +569,14 @@
     .line 237
     .line 238
     .line 239
-    move-result-object v10
+    move-result-object v12
 
     .line 240
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->SHARED_GROUP_POST:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RECENT_LISTING_ACTIVITY:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 241
     .line 242
-    const-string v1, "SHARED_GROUP_POST_FROM_MSGR"
+    const-string v1, "RECENT_PHOTOS"
 
     .line 243
     .line 244
@@ -585,14 +589,14 @@
     .line 247
     .line 248
     .line 249
-    move-result-object v9
+    move-result-object v11
 
     .line 250
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->SHARED_GROUP_POST_FROM_MSGR:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->RECENT_PHOTOS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 251
     .line 252
-    const-string v1, "SUGGESTED_POST"
+    const-string v1, "SHARED_GROUP_POST"
 
     .line 253
     .line 254
@@ -605,14 +609,14 @@
     .line 257
     .line 258
     .line 259
-    move-result-object v8
+    move-result-object v10
 
     .line 260
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->SUGGESTED_POST:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->SHARED_GROUP_POST:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 261
     .line 262
-    const-string v1, "TOP_POSTS"
+    const-string v1, "SHARED_GROUP_POST_FROM_MSGR"
 
     .line 263
     .line 264
@@ -625,14 +629,14 @@
     .line 267
     .line 268
     .line 269
-    move-result-object v7
+    move-result-object v9
 
     .line 270
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->TOP_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->SHARED_GROUP_POST_FROM_MSGR:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 271
     .line 272
-    const-string v1, "VIDEO_POSTS"
+    const-string v1, "SUGGESTED_POST"
 
     .line 273
     .line 274
@@ -645,14 +649,14 @@
     .line 277
     .line 278
     .line 279
-    move-result-object v6
+    move-result-object v8
 
     .line 280
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->VIDEO_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->SUGGESTED_POST:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 281
     .line 282
-    const-string v1, "WHALE_GROUP_TOP_POST"
+    const-string v1, "TOP_POSTS"
 
     .line 283
     .line 284
@@ -665,14 +669,14 @@
     .line 287
     .line 288
     .line 289
-    move-result-object v5
+    move-result-object v7
 
     .line 290
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->WHALE_GROUP_TOP_POST:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->TOP_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 291
     .line 292
-    const-string v1, "YOUR_GROUPS_FEED"
+    const-string v1, "VIDEO_POSTS"
 
     .line 293
     .line 294
@@ -685,179 +689,220 @@
     .line 297
     .line 298
     .line 299
-    move-result-object v4
+    move-result-object v6
 
     .line 300
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->YOUR_GROUPS_FEED:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->VIDEO_POSTS:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 301
     .line 302
-    const-string v0, "YOUR_NEW_GROUP"
+    const-string/jumbo v1, "WHALE_GROUP_TOP_POST"
 
     .line 303
     .line 304
-    const/16 v3, 0x1f
-
     .line 305
-    .line 306
-    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    const/16 v0, 0x1f
 
+    .line 306
     .line 307
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+
     .line 308
     .line 309
-    move-result-object v16
-
     .line 310
-    sput-object v16, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->YOUR_NEW_GROUP:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    move-result-object v5
 
     .line 311
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->WHALE_GROUP_TOP_POST:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+
     .line 312
-    const/16 v0, 0x20
-
     .line 313
-    .line 314
-    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+    const-string/jumbo v1, "YOUR_GROUPS_FEED"
 
+    .line 314
     .line 315
     .line 316
-    move-object/from16 v1, v35
+    const/16 v0, 0x20
 
     .line 317
     .line 318
-    move-object/from16 v0, v34
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 319
     .line 320
-    invoke-static {v2, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
     .line 321
+    move-result-object v4
+
     .line 322
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->YOUR_GROUPS_FEED:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
+
     .line 323
-    move-object/from16 v1, v33
-
     .line 324
-    .line 325
-    move-object/from16 v0, v32
+    const-string/jumbo v0, "YOUR_NEW_GROUP"
 
+    .line 325
     .line 326
     .line 327
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    const/16 v3, 0x21
 
     .line 328
     .line 329
-    .line 330
-    move-object/from16 v1, v31
+    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
+    .line 330
     .line 331
     .line 332
-    move-object/from16 v0, v30
+    move-result-object v16
 
     .line 333
-    .line 334
-    invoke-static {v2, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    sput-object v16, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->YOUR_NEW_GROUP:Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
+    .line 334
     .line 335
+    const/16 v0, 0x22
+
     .line 336
     .line 337
-    move-object/from16 v15, v29
+    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
     .line 338
     .line 339
-    move-object/from16 v14, v28
+    move-object/from16 v1, v37
 
     .line 340
     .line 341
-    move-object/from16 v1, v27
+    move-object/from16 v0, v36
 
     .line 342
     .line 343
-    move-object/from16 v0, v26
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 344
     .line 345
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
     .line 346
+    move-object/from16 v15, v35
+
     .line 347
     .line 348
-    move-object/from16 v1, v25
+    move-object/from16 v14, v34
 
     .line 349
     .line 350
-    move-object/from16 v0, v24
+    move-object/from16 v1, v33
 
     .line 351
     .line 352
-    invoke-static {v2, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v0, v32
 
     .line 353
     .line 354
-    .line 355
-    move-object/from16 v15, v23
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 355
     .line 356
     .line 357
-    move-object/from16 v14, v22
+    move-object/from16 v15, v31
 
     .line 358
     .line 359
-    move-object/from16 v1, v21
+    move-object/from16 v14, v30
 
     .line 360
     .line 361
-    move-object/from16 v0, v20
+    move-object/from16 v1, v29
 
     .line 362
     .line 363
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v0, v28
 
     .line 364
     .line 365
-    .line 366
-    const/16 v0, 0x12
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 366
     .line 367
     .line 368
-    aput-object v19, v2, v0
+    const/16 v0, 0xc
 
     .line 369
     .line 370
-    move-object/from16 v1, v18
+    aput-object v27, v2, v0
 
     .line 371
     .line 372
-    move-object/from16 v0, v17
+    move-object/from16 v15, v26
 
     .line 373
     .line 374
-    invoke-static {v1, v0, v13, v12, v2}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v14, v25
 
     .line 375
     .line 376
-    .line 377
-    invoke-static {v11, v10, v9, v8, v2}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v24
 
+    .line 377
     .line 378
+    move-object/from16 v0, v23
+
     .line 379
     .line 380
-    invoke-static {v2, v7, v6}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 381
     .line 382
     .line 383
-    invoke-static {v2, v5, v4}, LX/0Yf;->A1N([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v15, v22
 
     .line 384
     .line 385
+    move-object/from16 v14, v21
+
     .line 386
+    .line 387
+    move-object/from16 v1, v20
+
+    .line 388
+    .line 389
+    move-object/from16 v0, v19
+
+    .line 390
+    .line 391
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A19(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 392
+    .line 393
+    .line 394
+    move-object/from16 v1, v18
+
+    .line 395
+    .line 396
+    move-object/from16 v0, v17
+
+    .line 397
+    .line 398
+    invoke-static {v1, v0, v13, v12, v2}, LX/0X1;->A1A(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 399
+    .line 400
+    .line 401
+    invoke-static {v11, v10, v9, v8, v2}, LX/0X1;->A1B(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 402
+    .line 403
+    .line 404
+    invoke-static {v7, v6, v5, v4, v2}, LX/0X1;->A1C(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 405
+    .line 406
+    .line 407
     aput-object v16, v2, v3
 
-    .line 387
-    .line 388
+    .line 408
+    .line 409
     sput-object v2, Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLGroupsSectionHeaderType;
 
-    .line 389
-    .line 390
+    .line 410
+    .line 411
     return-void
 .end method
 
@@ -901,7 +946,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

@@ -1,37 +1,64 @@
-.class public final LX/4VK;
-.super LX/4VY;
+.class public final LX/4Vk;
+.super LX/4W6;
 .source ""
 
 
 # instance fields
-.field public final A00:F
+.field public final A00:Landroid/text/TextWatcher;
 
-.field public final A01:F
+.field public final A01:LX/4Wn;
 
-.field public final A02:LX/4VO;
+.field public final A02:LX/4Wo;
 
 
 # direct methods
-.method public constructor <init>(LX/4VO;FF)V
-    .locals 0
+.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/4VY;-><init>()V
+    invoke-direct {p0, p1}, LX/4W6;-><init>(Lcom/google/android/material/textfield/TextInputLayout;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4VK;->A02:LX/4VO;
+    new-instance v0, LX/4Vz;
 
     .line 4
     .line 5
-    iput p2, p0, LX/4VK;->A00:F
+    invoke-direct {v0, p0}, LX/4Vz;-><init>(LX/4Vk;)V
 
     .line 6
     .line 7
-    iput p3, p0, LX/4VK;->A01:F
-
     .line 8
+    iput-object v0, p0, LX/4Vk;->A00:Landroid/text/TextWatcher;
+
     .line 9
+    .line 10
+    new-instance v0, LX/4Vv;
+
+    .line 11
+    .line 12
+    invoke-direct {v0, p0}, LX/4Vv;-><init>(LX/4Vk;)V
+
+    .line 13
+    .line 14
+    .line 15
+    iput-object v0, p0, LX/4Vk;->A01:LX/4Wn;
+
+    .line 16
+    .line 17
+    new-instance v0, LX/4W5;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, p0}, LX/4W5;-><init>(LX/4Vk;)V
+
+    .line 20
+    .line 21
+    .line 22
+    iput-object v0, p0, LX/4Vk;->A02:LX/4Wo;
+
+    .line 23
+    .line 24
     return-void
 .end method

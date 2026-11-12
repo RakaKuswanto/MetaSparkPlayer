@@ -6,39 +6,37 @@
 # instance fields
 .field public A00:Landroid/content/Context;
 
-.field public A01:LX/1zG;
+.field public final A01:LX/1pp;
 
-.field public final A02:LX/1mT;
+.field public final A02:LX/1rn;
 
-.field public final A03:LX/1da;
+.field public final A03:LX/2EQ;
 
-.field public final A04:LX/3kG;
+.field public final A04:Lcom/facebook/common/network/FbNetworkManager;
 
-.field public final A05:Lcom/facebook/common/network/FbNetworkManager;
+.field public final A05:LX/24v;
 
-.field public final A06:LX/1pr;
+.field public final A06:LX/2Yw;
 
-.field public final A07:LX/24O;
+.field public final A07:LX/0RP;
 
-.field public final A08:LX/0Na;
+.field public final A08:LX/0RP;
 
-.field public final A09:LX/0Na;
+.field public final A09:Ljava/util/Map;
 
-.field public final A0A:Ljava/util/Map;
+.field public final A0A:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final A0B:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final A0B:LX/2Ue;
 
-.field public final A0C:LX/2sj;
+.field public final A0C:LX/0RP;
 
-.field public final A0D:LX/0Na;
+.field public final A0D:LX/2Z4;
 
-.field public final A0E:LX/24Q;
-
-.field public volatile A0F:Z
+.field public volatile A0E:Z
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 2
 
     .line 0
@@ -47,11 +45,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AEj:I
+    sget v0, LX/2I6;->ABA:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -59,19 +57,19 @@
     move-result-object v0
 
     .line 9
-    check-cast v0, LX/1pr;
+    check-cast v0, LX/24v;
 
     .line 10
     .line 11
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A06:LX/1pr;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A05:LX/24v;
 
     .line 12
     .line 13
-    sget v0, LX/2eq;->AEh:I
+    sget v0, LX/2I6;->AB8:I
 
     .line 14
     .line 15
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 16
     .line 17
@@ -79,11 +77,11 @@
     move-result-object v0
 
     .line 19
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A09:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A08:LX/0RP;
 
     .line 20
     .line 21
-    invoke-static {}, LX/0Zq;->A06()LX/0Zq;
+    invoke-static {}, LX/0lf;->A05()LX/0lf;
 
     .line 22
     .line 23
@@ -91,15 +89,15 @@
     move-result-object v0
 
     .line 25
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0D:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0C:LX/0RP;
 
     .line 26
     .line 27
-    sget v0, LX/2eq;->A5t:I
+    sget v0, LX/2I6;->A37:I
 
     .line 28
     .line 29
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 30
     .line 31
@@ -107,19 +105,19 @@
     move-result-object v0
 
     .line 33
-    check-cast v0, LX/2sj;
+    check-cast v0, LX/2Ue;
 
     .line 34
     .line 35
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0C:LX/2sj;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0B:LX/2Ue;
 
     .line 36
     .line 37
-    sget v0, LX/2eq;->A0M:I
+    sget v0, LX/2I6;->A0E:I
 
     .line 38
     .line 39
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 40
     .line 41
@@ -131,15 +129,15 @@
 
     .line 44
     .line 45
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A05:Lcom/facebook/common/network/FbNetworkManager;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A04:Lcom/facebook/common/network/FbNetworkManager;
 
     .line 46
     .line 47
-    sget v0, LX/2eq;->AEy:I
+    sget v0, LX/2I6;->ABO:I
 
     .line 48
     .line 49
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 50
     .line 51
@@ -147,19 +145,19 @@
     move-result-object v0
 
     .line 53
-    check-cast v0, LX/24O;
+    check-cast v0, LX/2Yw;
 
     .line 54
     .line 55
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A07:LX/24O;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A06:LX/2Yw;
 
     .line 56
     .line 57
-    sget v0, LX/2eq;->AEz:I
+    sget v0, LX/2I6;->ABP:I
 
     .line 58
     .line 59
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 60
     .line 61
@@ -167,130 +165,126 @@
     move-result-object v0
 
     .line 63
-    check-cast v0, LX/24Q;
+    check-cast v0, LX/2Z4;
 
     .line 64
     .line 65
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0E:LX/24Q;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0D:LX/2Z4;
 
     .line 66
     .line 67
-    invoke-static {}, LX/1zE;->A00()Landroid/content/Context;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 68
     .line 69
     .line 70
-    move-result-object v0
+    move-result-object v1
 
     .line 71
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A00:Landroid/content/Context;
+    iput-object v1, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A00:Landroid/content/Context;
 
     .line 72
     .line 73
-    invoke-static {v0}, LX/1zD;->A00(Landroid/content/Context;)LX/1mT;
+    sget v0, LX/2I6;->A5H:I
 
     .line 74
     .line 75
+    invoke-static {v1, v0}, LX/3Fb;->A02(Landroid/content/Context;I)Ljava/lang/Object;
+
     .line 76
+    .line 77
+    .line 78
     move-result-object v0
 
-    .line 77
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A02:LX/1mT;
-
-    .line 78
     .line 79
-    invoke-static {}, LX/0Zq;->A00()LX/0Zq;
+    check-cast v0, LX/1pp;
 
     .line 80
     .line 81
-    .line 82
-    move-result-object v0
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A01:LX/1pp;
 
+    .line 82
     .line 83
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A08:LX/0Na;
+    invoke-static {}, LX/0lf;->A00()LX/0lf;
 
     .line 84
     .line 85
-    sget v0, LX/2eq;->AEx:I
-
     .line 86
+    move-result-object v0
+
     .line 87
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A07:LX/0RP;
 
     .line 88
     .line 89
-    .line 90
-    move-result-object v0
+    sget v0, LX/2I6;->ABN:I
 
+    .line 90
     .line 91
-    check-cast v0, LX/3kG;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 92
     .line 93
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A04:LX/3kG;
-
     .line 94
+    move-result-object v0
+
     .line 95
-    const/16 v1, 0x64
+    check-cast v0, LX/2EQ;
 
     .line 96
     .line 97
-    new-instance v0, LX/1da;
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A03:LX/2EQ;
 
     .line 98
     .line 99
-    invoke-direct {v0, v1}, LX/1da;-><init>(I)V
+    const/16 v1, 0x64
 
     .line 100
     .line 101
+    new-instance v0, LX/1rn;
+
     .line 102
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A03:LX/1da;
-
     .line 103
+    invoke-direct {v0, v1}, LX/1rn;-><init>(I)V
+
     .line 104
-    const/4 v1, 0x0
-
     .line 105
-    iput-boolean v1, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0F:Z
-
     .line 106
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A02:LX/1rn;
+
     .line 107
-    invoke-static {v1}, LX/0Yi;->A16(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
-
     .line 108
-    .line 109
-    .line 110
-    move-result-object v0
+    const/4 v0, 0x0
 
+    .line 109
+    iput-boolean v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0E:Z
+
+    .line 110
     .line 111
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0B:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v0}, LX/0X7;->A0l(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 112
     .line 113
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
-
     .line 114
-    .line 115
-    .line 116
     move-result-object v0
 
+    .line 115
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0A:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    .line 116
     .line 117
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0A:Ljava/util/Map;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 118
     .line 119
-    invoke-static {p1, v1}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
-
     .line 120
-    .line 121
-    .line 122
     move-result-object v0
 
-    .line 123
-    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A01:LX/1zG;
+    .line 121
+    iput-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A09:Ljava/util/Map;
 
-    .line 124
-    .line 125
+    .line 122
+    .line 123
     return-void
 .end method
 
@@ -298,7 +292,7 @@
     .locals 12
 
     .line 0
-    iget-object v2, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A04:LX/3kG;
+    iget-object v2, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A03:LX/2EQ;
 
     .line 1
     .line 2
@@ -306,7 +300,7 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0B:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0A:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 5
     .line 6
@@ -338,7 +332,7 @@
     move-result-wide v11
 
     .line 20
-    invoke-static {}, LX/3kV;->A00()LX/3Mq;
+    invoke-static {}, LX/27I;->A00()LX/27J;
 
     .line 21
     .line 22
@@ -346,7 +340,7 @@
     move-result-object v4
 
     .line 24
-    invoke-static {}, LX/0E5;->A01()I
+    invoke-static {}, LX/0DC;->A01()I
 
     .line 25
     .line 26
@@ -354,57 +348,58 @@
     move-result v1
 
     .line 28
-    const-string v0, "__VERSION_CODE"
+    const-string/jumbo v0, "__VERSION_CODE"
 
     .line 29
     .line 30
-    invoke-virtual {v4, v0, v1}, LX/3Mq;->A00(Ljava/lang/String;I)V
-
     .line 31
+    invoke-virtual {v4, v0, v1}, LX/27J;->A00(Ljava/lang/String;I)V
+
     .line 32
     .line 33
+    .line 34
     const-wide/16 v7, -0x1
 
-    .line 34
     .line 35
-    const v5, 0x7f0a0348
-
     .line 36
+    const v5, 0x7f09030e
+
     .line 37
     .line 38
+    .line 39
     const-wide/16 v9, 0x0
 
-    .line 39
     .line 40
+    .line 41
     const/4 v6, 0x1
 
-    .line 41
-    new-instance v3, LX/3kP;
-
     .line 42
-    .line 43
-    invoke-direct/range {v3 .. v13}, LX/3kP;-><init>(LX/3Mq;IIJJJZ)V
+    new-instance v3, LX/27G;
 
+    .line 43
     .line 44
+    invoke-direct/range {v3 .. v13}, LX/27G;-><init>(LX/27J;IIJJJZ)V
+
     .line 45
     .line 46
-    invoke-static {v2, v5}, LX/3kG;->A00(LX/3kG;I)Ljava/lang/Class;
-
     .line 47
+    invoke-static {v2, v5}, LX/2EQ;->A00(LX/2EQ;I)Ljava/lang/Class;
+
     .line 48
     .line 49
+    .line 50
     move-result-object v0
 
-    .line 50
+    .line 51
     if-eqz v0, :cond_0
 
-    .line 51
     .line 52
-    invoke-virtual {v2, v3, v0}, LX/3kG;->A01(LX/3kP;Ljava/lang/Class;)V
-
     .line 53
+    invoke-virtual {v2, v3, v0}, LX/2EQ;->A01(LX/27G;Ljava/lang/Class;)V
+
     .line 54
     .line 55
+    .line 56
     :cond_0
     return-void
 .end method
@@ -419,7 +414,7 @@
 
     .line 1
     .line 2
-    iget-boolean v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0F:Z
+    iget-boolean v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0E:Z
 
     .line 3
     .line 4
@@ -427,11 +422,11 @@
 
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0C:LX/2sj;
+    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0B:LX/2Ue;
 
     .line 7
     .line 8
-    invoke-virtual {v0}, LX/2sj;->A02()Z
+    invoke-virtual {v0}, LX/2Ue;->A02()Z
 
     .line 9
     .line 10
@@ -447,7 +442,7 @@
 
     .line 15
     :try_start_0
-    iget-boolean v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0F:Z
+    iget-boolean v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0E:Z
 
     .line 16
     .line 17
@@ -455,7 +450,7 @@
 
     .line 18
     .line 19
-    invoke-static {}, LX/1zI;->A00()Landroid/content/Context;
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
 
     .line 20
     .line 21
@@ -463,11 +458,11 @@
     move-result-object v5
 
     .line 23
-    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A09:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A08:LX/0RP;
 
     .line 24
     .line 25
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 26
     .line 27
@@ -475,15 +470,15 @@
     move-result-object v0
 
     .line 29
-    check-cast v0, LX/1xv;
+    check-cast v0, LX/275;
 
     .line 30
     .line 31
-    iget-object v0, v0, LX/1xv;->A02:LX/0Ix;
+    iget-object v0, v0, LX/275;->A02:LX/0Hq;
 
     .line 32
     .line 33
-    invoke-virtual {v0}, LX/0Ix;->A03()Z
+    invoke-virtual {v0}, LX/0Hq;->A03()Z
 
     .line 34
     .line 35
@@ -498,11 +493,11 @@
 
     .line 39
     .line 40
-    iget-object v4, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A07:LX/24O;
+    iget-object v4, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A06:LX/2Yw;
 
     .line 41
     .line 42
-    invoke-virtual {v4}, LX/24O;->A02()Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {v4}, LX/2Yw;->A02()Lcom/google/common/collect/ImmutableList;
 
     .line 43
     .line 44
@@ -510,7 +505,7 @@
     move-result-object v8
 
     .line 46
-    invoke-virtual {v8}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1bX;
+    invoke-virtual {v8}, Lcom/google/common/collect/ImmutableCollection;->iterator()LX/1tw;
 
     .line 47
     .line 48
@@ -540,11 +535,11 @@
     move-result-object v6
 
     .line 60
-    check-cast v6, LX/1t8;
+    check-cast v6, LX/1xe;
 
     .line 61
     .line 62
-    instance-of v0, v6, LX/1t5;
+    instance-of v0, v6, LX/1xc;
 
     .line 63
     .line 64
@@ -552,7 +547,7 @@
 
     .line 65
     .line 66
-    iget-object v2, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0A:Ljava/util/Map;
+    iget-object v2, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A09:Ljava/util/Map;
 
     .line 67
     .line 68
@@ -568,15 +563,15 @@
 
     .line 73
     .line 74
-    iget-object v1, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A06:LX/1pr;
+    iget-object v1, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A05:LX/24v;
 
     .line 75
     .line 76
-    new-instance v0, LX/1qo;
+    new-instance v0, LX/1wL;
 
     .line 77
     .line 78
-    invoke-direct {v0, v1}, LX/1qo;-><init>(LX/1pr;)V
+    invoke-direct {v0, v1}, LX/1wL;-><init>(LX/24v;)V
 
     .line 79
     .line 80
@@ -586,7 +581,7 @@
     .line 82
     .line 83
     .line 84
-    invoke-virtual {v0}, LX/1qo;->A00()V
+    invoke-virtual {v0}, LX/1wL;->A00()V
 
     .line 85
     .line 86
@@ -595,7 +590,7 @@
 
     .line 88
     :cond_1
-    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A04:LX/3kG;
+    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A03:LX/2EQ;
 
     .line 89
     .line 90
@@ -603,162 +598,169 @@
 
     .line 91
     .line 92
-    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A02:LX/1mT;
+    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A01:LX/1pp;
 
     .line 93
     .line 94
-    check-cast v0, LX/2xZ;
+    invoke-static {v0}, LX/1Ct;->A01(Ljava/lang/Object;)LX/1Ct;
 
     .line 95
     .line 96
-    new-instance v2, LX/24c;
-
     .line 97
-    .line 98
-    invoke-direct {v2, v0}, LX/24c;-><init>(LX/2xZ;)V
+    move-result-object v2
 
-    .line 99
-    .line 100
-    .line 101
+    .line 98
     const/4 v0, 0x7
 
-    .line 102
-    new-instance v1, LX/1nq;
+    .line 99
+    new-instance v1, LX/0Z1;
 
+    .line 100
+    .line 101
+    invoke-direct {v1, p0, v0}, LX/0Z1;-><init>(Ljava/lang/Object;I)V
+
+    .line 102
     .line 103
     .line 104
-    invoke-direct {v1, p0, v0}, LX/1nq;-><init>(Ljava/lang/Object;I)V
+    const-string/jumbo v0, "com.facebook.orca.ACTION_NETWORK_CONNECTIVITY_CHANGED"
 
     .line 105
     .line 106
     .line 107
-    const-string v0, "com.facebook.orca.ACTION_NETWORK_CONNECTIVITY_CHANGED"
+    invoke-static {v2, v1, v0}, LX/1Ct;->A02(LX/1Ct;LX/0Lj;Ljava/lang/String;)V
 
     .line 108
     .line 109
-    invoke-virtual {v2, v1, v0}, LX/24c;->A04(LX/05i;Ljava/lang/String;)V
-
     .line 110
+    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A04:Lcom/facebook/common/network/FbNetworkManager;
+
     .line 111
     .line 112
-    invoke-static {v2}, LX/24c;->A01(LX/24c;)V
+    invoke-virtual {v0}, Lcom/facebook/common/network/FbNetworkManager;->A0H()Z
 
     .line 113
     .line 114
     .line 115
-    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A05:Lcom/facebook/common/network/FbNetworkManager;
-
-    .line 116
-    .line 117
-    invoke-virtual {v0}, Lcom/facebook/common/network/FbNetworkManager;->A0G()Z
-
-    .line 118
-    .line 119
-    .line 120
     move-result v0
 
-    .line 121
+    .line 116
     if-eqz v0, :cond_2
 
+    .line 117
+    .line 118
+    sget-object v0, LX/272;->COLD_START:LX/272;
+
+    .line 119
+    .line 120
+    invoke-virtual {v4, v5, v0}, LX/2Yw;->A03(Landroid/content/Context;LX/272;)LX/5qa;
+
+    .line 121
     .line 122
     .line 123
-    sget-object v0, LX/014;->A00:Ljava/lang/Integer;
+    :cond_2
+    :goto_1
+    iput-boolean v3, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0E:Z
 
     .line 124
     .line 125
-    invoke-virtual {v4, v5, v0}, LX/24O;->A03(Landroid/content/Context;Ljava/lang/Integer;)LX/5Ou;
-
-    .line 126
-    .line 127
-    .line 128
-    :cond_2
-    :goto_1
-    iput-boolean v3, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0F:Z
-
-    .line 129
-    .line 130
     :cond_3
     monitor-exit p0
 
-    .line 131
+    .line 126
     goto :goto_2
 
-    .line 132
+    .line 127
     :cond_4
     invoke-virtual {v8}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    .line 133
-    .line 134
-    .line 135
+    .line 128
+    .line 129
+    .line 130
     move-result v0
 
-    .line 136
+    .line 131
     if-nez v0, :cond_2
 
-    .line 137
-    .line 138
+    .line 132
+    .line 133
     const/4 v0, 0x0
 
-    .line 139
+    .line 134
     invoke-static {p0, v0}, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A00(Lcom/facebook/graphql/executor/OfflineMutationsManager;Z)V
 
-    .line 140
-    .line 141
-    .line 142
+    .line 135
+    .line 136
+    .line 137
     goto :goto_1
 
-    .line 143
+    .line 138
     :goto_2
     return-void
 
-    .line 144
+    .line 139
     :catchall_0
     move-exception v0
 
-    .line 145
+    .line 140
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 146
+    .line 141
     throw v0
 
-    .line 147
+    .line 142
     :cond_5
-    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0D:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/graphql/executor/OfflineMutationsManager;->A0C:LX/0RP;
 
-    .line 148
-    .line 149
-    invoke-static {v0}, LX/0Yg;->A0D(LX/0Na;)LX/0Gk;
+    .line 143
+    .line 144
+    invoke-static {v0}, LX/0X4;->A0I(LX/0RP;)LX/0Ft;
 
-    .line 150
-    .line 151
-    .line 152
+    .line 145
+    .line 146
+    .line 147
     move-result-object v3
 
-    .line 153
+    .line 148
     const-string/jumbo v2, "offline"
 
-    .line 154
-    .line 155
-    .line 156
+    .line 149
+    .line 150
+    .line 151
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
+    .line 152
+    .line 153
+    .line 154
+    move-result-object v0
+
+    .line 155
+    const-string v1, " used on UI thread before initialized"
+
+    .line 156
     .line 157
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 158
     .line 159
-    move-result-object v1
-
     .line 160
-    const-string v0, " used on UI thread before initialized"
+    move-result-object v0
 
     .line 161
-    .line 162
-    invoke-static {v3, v1, v0, v2}, LX/0Yi;->A1B(LX/0Gk;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 162
     .line 163
     .line 164
+    move-result-object v0
+
     .line 165
+    invoke-interface {v3, v2, v0}, LX/0Ft;->AnC(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 166
+    .line 167
+    .line 168
     :cond_6
     return-void
 .end method

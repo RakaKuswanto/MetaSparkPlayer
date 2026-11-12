@@ -13,7 +13,7 @@
 # instance fields
 .field public final A00:I
 
-.field public final A01:LX/1Q6;
+.field public final A01:LX/2Qs;
 
 
 # direct methods
@@ -21,11 +21,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1c
+    const/16 v0, 0x1b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1Q6;I)V
+.method public constructor <init>(LX/2Qs;I)V
     .locals 0
 
     .line 268435456
@@ -49,7 +49,7 @@
     .line 268435457
     .line 268435458
     .line 268435459
-    iput-object p1, p0, Lcom/facebook/account/login/encryption/protocol/PasswordEncryptionKeyFetchMethod$Params;->A01:LX/1Q6;
+    iput-object p1, p0, Lcom/facebook/account/login/encryption/protocol/PasswordEncryptionKeyFetchMethod$Params;->A01:LX/2Qs;
 
     .line 268435460
     .line 268435461
@@ -77,7 +77,7 @@
     move-result-object v0
 
     .line 7
-    invoke-static {v0}, LX/1Q6;->valueOf(Ljava/lang/String;)LX/1Q6;
+    invoke-static {v0}, LX/2Qs;->valueOf(Ljava/lang/String;)LX/2Qs;
 
     .line 8
     .line 9
@@ -85,7 +85,7 @@
     move-result-object v0
 
     .line 11
-    iput-object v0, p0, Lcom/facebook/account/login/encryption/protocol/PasswordEncryptionKeyFetchMethod$Params;->A01:LX/1Q6;
+    iput-object v0, p0, Lcom/facebook/account/login/encryption/protocol/PasswordEncryptionKeyFetchMethod$Params;->A01:LX/2Qs;
 
     .line 12
     .line 13
@@ -118,11 +118,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/account/login/encryption/protocol/PasswordEncryptionKeyFetchMethod$Params;->A01:LX/1Q6;
+    iget-object v0, p0, Lcom/facebook/account/login/encryption/protocol/PasswordEncryptionKeyFetchMethod$Params;->A01:LX/2Qs;
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X2;->A0x(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 3
     .line 4

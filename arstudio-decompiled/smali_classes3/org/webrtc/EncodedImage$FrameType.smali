@@ -18,50 +18,97 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 9
+.method public static synthetic $values()[Lorg/webrtc/EncodedImage$FrameType;
+    .locals 3
 
     .line 0
-    const-string v0, "EmptyFrame"
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    const/4 v8, 0x0
+    new-array v2, v0, [Lorg/webrtc/EncodedImage$FrameType;
 
+    .line 2
     .line 3
-    new-instance v7, Lorg/webrtc/EncodedImage$FrameType;
+    sget-object v1, Lorg/webrtc/EncodedImage$FrameType;->EmptyFrame:Lorg/webrtc/EncodedImage$FrameType;
 
     .line 4
     .line 5
-    invoke-direct {v7, v0, v8, v8}, Lorg/webrtc/EncodedImage$FrameType;-><init>(Ljava/lang/String;II)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameKey:Lorg/webrtc/EncodedImage$FrameType;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameDelta:Lorg/webrtc/EncodedImage$FrameType;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v2, "EmptyFrame"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lorg/webrtc/EncodedImage$FrameType;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1, v1}, Lorg/webrtc/EncodedImage$FrameType;-><init>(Ljava/lang/String;II)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v7, Lorg/webrtc/EncodedImage$FrameType;->EmptyFrame:Lorg/webrtc/EncodedImage$FrameType;
+    sput-object v0, Lorg/webrtc/EncodedImage$FrameType;->EmptyFrame:Lorg/webrtc/EncodedImage$FrameType;
 
     .line 9
     .line 10
-    const-string v0, "VideoFrameKey"
+    const-string v3, "VideoFrameKey"
 
     .line 11
     .line 12
-    const/4 v6, 0x1
+    const/4 v2, 0x1
 
     .line 13
-    const/4 v5, 0x3
+    const/4 v1, 0x3
 
     .line 14
-    new-instance v4, Lorg/webrtc/EncodedImage$FrameType;
+    new-instance v0, Lorg/webrtc/EncodedImage$FrameType;
 
     .line 15
     .line 16
-    invoke-direct {v4, v0, v6, v5}, Lorg/webrtc/EncodedImage$FrameType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/EncodedImage$FrameType;-><init>(Ljava/lang/String;II)V
 
     .line 17
     .line 18
     .line 19
-    sput-object v4, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameKey:Lorg/webrtc/EncodedImage$FrameType;
+    sput-object v0, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameKey:Lorg/webrtc/EncodedImage$FrameType;
 
     .line 20
     .line 21
@@ -72,42 +119,34 @@
     const/4 v2, 0x2
 
     .line 24
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
     .line 25
-    new-instance v1, Lorg/webrtc/EncodedImage$FrameType;
+    new-instance v0, Lorg/webrtc/EncodedImage$FrameType;
 
     .line 26
     .line 27
-    invoke-direct {v1, v3, v2, v0}, Lorg/webrtc/EncodedImage$FrameType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v3, v2, v1}, Lorg/webrtc/EncodedImage$FrameType;-><init>(Ljava/lang/String;II)V
 
     .line 28
     .line 29
     .line 30
-    sput-object v1, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameDelta:Lorg/webrtc/EncodedImage$FrameType;
+    sput-object v0, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameDelta:Lorg/webrtc/EncodedImage$FrameType;
 
     .line 31
     .line 32
-    new-array v0, v5, [Lorg/webrtc/EncodedImage$FrameType;
+    invoke-static {}, Lorg/webrtc/EncodedImage$FrameType;->$values()[Lorg/webrtc/EncodedImage$FrameType;
 
     .line 33
     .line 34
-    aput-object v7, v0, v8
-
     .line 35
+    move-result-object v0
+
     .line 36
-    aput-object v4, v0, v6
+    sput-object v0, Lorg/webrtc/EncodedImage$FrameType;->$VALUES:[Lorg/webrtc/EncodedImage$FrameType;
 
     .line 37
     .line 38
-    aput-object v1, v0, v2
-
-    .line 39
-    .line 40
-    sput-object v0, Lorg/webrtc/EncodedImage$FrameType;->$VALUES:[Lorg/webrtc/EncodedImage$FrameType;
-
-    .line 41
-    .line 42
     return-void
 .end method
 
@@ -182,7 +221,7 @@
 
     .line 21
     .line 22
-    invoke-static {v0, p0}, LX/00I;->A02(Ljava/lang/String;I)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0, p0}, LX/004;->A02(Ljava/lang/String;I)Ljava/lang/IllegalArgumentException;
 
     .line 23
     .line 24

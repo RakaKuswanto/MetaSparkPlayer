@@ -2,36 +2,21 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
+
 
 # instance fields
-.field public A00:I
+.field public A00:Landroid/os/Handler;
 
-.field public A01:I
+.field public volatile A01:LX/60O;
 
-.field public A02:J
-
-.field public A03:Landroid/os/Looper;
-
-.field public A04:Ljava/lang/Object;
-
-.field public A05:Z
-
-.field public A06:Z
-
-.field public A07:Z
-
-.field public final A08:LX/61s;
-
-.field public final A09:Lcom/google/android/exoplayer2/Timeline;
-
-.field public final A0A:LX/61q;
-
-.field public final A0B:LX/65p;
+.field public volatile A02:LX/60q;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Looper;LX/61q;LX/61s;Lcom/google/android/exoplayer2/Timeline;LX/65p;I)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,175 +24,37 @@
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/611;->A0A:LX/61q;
-
-    .line 4
-    .line 5
-    iput-object p3, p0, LX/611;->A08:LX/61s;
-
-    .line 6
-    .line 7
-    iput-object p4, p0, LX/611;->A09:Lcom/google/android/exoplayer2/Timeline;
-
-    .line 8
-    .line 9
-    iput-object p1, p0, LX/611;->A03:Landroid/os/Looper;
-
-    .line 10
-    .line 11
-    iput-object p5, p0, LX/611;->A0B:LX/65p;
-
-    .line 12
-    .line 13
-    iput p6, p0, LX/611;->A00:I
-
-    .line 14
-    .line 15
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    .line 16
-    .line 17
-    .line 18
-    .line 19
-    .line 20
-    iput-wide v0, p0, LX/611;->A02:J
-
-    .line 21
-    .line 22
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()V
+.method public final onAudioFocusChange(I)V
     .locals 2
 
     .line 0
-    iget-boolean v0, p0, LX/611;->A07:Z
+    iget-object v1, p0, LX/611;->A00:Landroid/os/Handler;
 
     .line 1
     .line 2
-    const/4 v1, 0x1
-
-    .line 3
-    xor-int/lit8 v0, v0, 0x1
-
-    .line 4
-    .line 5
-    invoke-static {v0}, LX/5PE;->A06(Z)V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-boolean v1, p0, LX/611;->A07:Z
-
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/611;->A0A:LX/61q;
-
-    .line 11
-    .line 12
-    invoke-interface {v0, p0}, LX/61q;->Akp(LX/611;)V
-
-    .line 13
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public final A01(I)V
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/611;->A07:Z
-
-    .line 1
-    .line 2
-    xor-int/lit8 v0, v0, 0x1
+    if-eqz v1, :cond_0
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/5PE;->A06(Z)V
+    new-instance v0, LX/610;
 
     .line 5
     .line 6
-    .line 7
-    iput p1, p0, LX/611;->A01:I
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final A02(Ljava/lang/Object;)V
-    .locals 1
-
-    .line 0
-    iget-boolean v0, p0, LX/611;->A07:Z
-
-    .line 1
-    .line 2
-    xor-int/lit8 v0, v0, 0x1
-
-    .line 3
-    .line 4
-    invoke-static {v0}, LX/5PE;->A06(Z)V
-
-    .line 5
-    .line 6
-    .line 7
-    iput-object p1, p0, LX/611;->A04:Ljava/lang/Object;
-
-    .line 8
-    .line 9
-    return-void
-.end method
-
-.method public final declared-synchronized A03(Z)V
-    .locals 1
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-boolean v0, p0, LX/611;->A05:Z
-
-    .line 2
-    .line 3
-    or-int/2addr p1, v0
-
-    .line 4
-    iput-boolean p1, p0, LX/611;->A05:Z
-
-    .line 5
-    .line 6
-    const/4 v0, 0x1
+    invoke-direct {v0, p0, p1}, LX/610;-><init>(LX/611;I)V
 
     .line 7
-    iput-boolean v0, p0, LX/611;->A06:Z
-
     .line 8
     .line 9
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 10
     .line 11
     .line 12
-    monitor-exit p0
-
-    .line 13
+    :cond_0
     return-void
-
-    .line 14
-    :catchall_0
-    move-exception v0
-
-    .line 15
-    monitor-exit p0
-
-    .line 16
-    throw v0
 .end method

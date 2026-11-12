@@ -40,7 +40,7 @@
 
     .line 2
     .line 3
-    iget-object v0, p1, LX/1RR;->A03:Ljava/lang/Object;
+    iget-object v0, p1, LX/1eR;->A03:Ljava/lang/Object;
 
     .line 4
     .line 5
@@ -193,7 +193,7 @@
     .line 80
     .line 81
     .line 82
-    invoke-virtual {v1, v0}, LX/1Bn;->getCachedString(I)Ljava/lang/String;
+    invoke-virtual {v1, v0}, LX/1gb;->getCachedNullableString(I)Ljava/lang/String;
 
     .line 83
     .line 84
@@ -265,7 +265,7 @@
     .line 115
     .line 116
     .line 117
-    invoke-virtual {v5, v0}, LX/1Bn;->getCachedString(I)Ljava/lang/String;
+    invoke-virtual {v5, v0}, LX/1gb;->getCachedNullableString(I)Ljava/lang/String;
 
     .line 118
     .line 119

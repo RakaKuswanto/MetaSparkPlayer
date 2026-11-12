@@ -1,81 +1,61 @@
-.class public final synthetic LX/37A;
+.class public LX/37A;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "AsyncMetadataHelper$$ExternalSyntheticLambda0"
-
 
 # instance fields
-.field public final synthetic A00:LX/3Yw;
+.field public final A00:Landroid/content/Context;
 
-.field public final synthetic A01:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final A01:LX/2Wt;
 
-.field public final synthetic A02:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final A02:LX/39r;
+
+.field public final A03:Lcom/facebook/http/common/FbHttpRequestProcessor;
+
+.field public final A04:LX/2W1;
+
+.field public final A05:LX/0RP;
+
+.field public final A06:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(LX/3Yw;Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/ListenableFuture;)V
+.method public constructor <init>(Landroid/content/Context;LX/2Wt;LX/39r;Lcom/facebook/http/common/FbHttpRequestProcessor;LX/2W1;LX/0RP;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, LX/37A;->A00:LX/3Yw;
-
-    iput-object p2, p0, LX/37A;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
-
-    iput-object p3, p0, LX/37A;->A02:Lcom/google/common/util/concurrent/ListenableFuture;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
     .line 0
-    iget-object v2, p0, LX/37A;->A00:LX/3Yw;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iget-object v1, p0, LX/37A;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
-
     .line 3
+    iput-object p1, p0, LX/37A;->A00:Landroid/content/Context;
+
     .line 4
-    iget-object v0, p0, LX/37A;->A02:Lcom/google/common/util/concurrent/ListenableFuture;
-
     .line 5
-    .line 6
-    :try_start_0
-    invoke-interface {v1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+    iput-object p4, p0, LX/37A;->A03:Lcom/facebook/http/common/FbHttpRequestProcessor;
 
+    .line 6
     .line 7
+    iput-object p7, p0, LX/37A;->A06:Ljava/lang/String;
+
     .line 8
     .line 9
-    move-result-object v1
+    iput-object p2, p0, LX/37A;->A01:LX/2Wt;
 
     .line 10
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
     .line 11
+    iput-object p6, p0, LX/37A;->A05:LX/0RP;
+
     .line 12
     .line 13
-    move-result-object v0
+    iput-object p5, p0, LX/37A;->A04:LX/2W1;
 
     .line 14
-    invoke-interface {v2, v1, v0}, LX/3Yw;->A8r(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 15
+    iput-object p3, p0, LX/37A;->A02:LX/39r;
+
     .line 16
     .line 17
-    :catch_0
     return-void
 .end method

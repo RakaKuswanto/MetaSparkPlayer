@@ -1,102 +1,240 @@
-.class public final LX/1hY;
-.super Ljava/lang/Object;
+.class public final enum LX/1hy;
+.super Ljava/lang/Enum;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "ClientSubscriptionManager$1"
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
 
+.field public static final synthetic $VALUES:[LX/1hy;
 
-# instance fields
-.field public final synthetic A00:LX/1ha;
+.field public static final enum BINARY:LX/1hy;
 
-.field public final synthetic A01:Lcom/google/common/collect/ImmutableList;
+.field public static final enum CES:LX/1hy;
 
-.field public final synthetic A02:Lcom/google/common/collect/ImmutableList;
+.field public static final enum CSAT:LX/1hy;
 
-.field public final synthetic A03:Z
+.field public static final enum FREE_FORM:LX/1hy;
+
+.field public static final enum NPS:LX/1hy;
 
 
 # direct methods
-.method public constructor <init>(LX/1ha;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Z)V
-    .locals 0
+.method public static final synthetic $values()[LX/1hy;
+    .locals 3
 
-    .line 0
-    iput-object p1, p0, LX/1hY;->A00:LX/1ha;
+    const/4 v0, 0x5
 
-    .line 1
-    .line 2
-    iput-boolean p4, p0, LX/1hY;->A03:Z
+    new-array v2, v0, [LX/1hy;
 
-    .line 3
-    .line 4
-    iput-object p2, p0, LX/1hY;->A01:Lcom/google/common/collect/ImmutableList;
+    sget-object v1, LX/1hy;->CSAT:LX/1hy;
 
-    .line 5
-    .line 6
-    iput-object p3, p0, LX/1hY;->A02:Lcom/google/common/collect/ImmutableList;
+    const/4 v0, 0x0
 
-    .line 7
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    aput-object v1, v2, v0
 
-    .line 9
-    .line 10
-    .line 11
-    return-void
+    sget-object v1, LX/1hy;->CES:LX/1hy;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1hy;->NPS:LX/1hy;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1hy;->BINARY:LX/1hy;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/1hy;->FREE_FORM:LX/1hy;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 5
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iget-object v4, p0, LX/1hY;->A00:LX/1ha;
+    const-string v2, "CSAT"
 
     .line 1
     .line 2
-    iget-boolean v0, p0, LX/1hY;->A03:Z
+    const/4 v1, 0x0
 
     .line 3
+    new-instance v0, LX/1hy;
+
     .line 4
-    iput-boolean v0, v4, LX/1ha;->A01:Z
-
     .line 5
-    .line 6
-    iget-object v3, p0, LX/1hY;->A01:Lcom/google/common/collect/ImmutableList;
+    invoke-direct {v0, v2, v1}, LX/1hy;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     .line 7
     .line 8
-    iget-object v2, p0, LX/1hY;->A02:Lcom/google/common/collect/ImmutableList;
+    sput-object v0, LX/1hy;->CSAT:LX/1hy;
 
     .line 9
     .line 10
-    invoke-static {v4, v3, v2}, LX/1ha;->A00(LX/1ha;Ljava/util/List;Ljava/util/List;)V
+    const-string v2, "CES"
 
     .line 11
     .line 12
+    const/4 v1, 0x1
+
     .line 13
-    iget-object v1, v4, LX/1ha;->A00:LX/1hZ;
+    new-instance v0, LX/1hy;
 
     .line 14
     .line 15
-    if-eqz v1, :cond_0
+    invoke-direct {v0, v2, v1}, LX/1hy;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
-    iget-boolean v0, v4, LX/1ha;->A01:Z
-
     .line 18
-    .line 19
-    invoke-interface {v1, v3, v2, v0}, LX/1hZ;->AqT(Ljava/util/List;Ljava/util/List;Z)V
+    sput-object v0, LX/1hy;->CES:LX/1hy;
 
+    .line 19
     .line 20
+    const-string v2, "NPS"
+
     .line 21
     .line 22
-    :cond_0
+    const/4 v1, 0x2
+
+    .line 23
+    new-instance v0, LX/1hy;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v2, v1}, LX/1hy;-><init>(Ljava/lang/String;I)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, LX/1hy;->NPS:LX/1hy;
+
+    .line 29
+    .line 30
+    const-string v2, "BINARY"
+
+    .line 31
+    .line 32
+    const/4 v1, 0x3
+
+    .line 33
+    new-instance v0, LX/1hy;
+
+    .line 34
+    .line 35
+    invoke-direct {v0, v2, v1}, LX/1hy;-><init>(Ljava/lang/String;I)V
+
+    .line 36
+    .line 37
+    .line 38
+    sput-object v0, LX/1hy;->BINARY:LX/1hy;
+
+    .line 39
+    .line 40
+    const-string v2, "FREE_FORM"
+
+    .line 41
+    .line 42
+    const/4 v1, 0x4
+
+    .line 43
+    new-instance v0, LX/1hy;
+
+    .line 44
+    .line 45
+    invoke-direct {v0, v2, v1}, LX/1hy;-><init>(Ljava/lang/String;I)V
+
+    .line 46
+    .line 47
+    .line 48
+    sput-object v0, LX/1hy;->FREE_FORM:LX/1hy;
+
+    .line 49
+    .line 50
+    invoke-static {}, LX/1hy;->$values()[LX/1hy;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v0
+
+    .line 54
+    sput-object v0, LX/1hy;->$VALUES:[LX/1hy;
+
+    .line 55
+    .line 56
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v0
+
+    .line 60
+    sput-object v0, LX/1hy;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 61
+    .line 62
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/1hy;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/1hy;
+    .locals 1
+
+    const-class v0, LX/1hy;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/1hy;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/1hy;
+    .locals 1
+
+    sget-object v0, LX/1hy;->$VALUES:[LX/1hy;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/1hy;
+
+    return-object v0
 .end method

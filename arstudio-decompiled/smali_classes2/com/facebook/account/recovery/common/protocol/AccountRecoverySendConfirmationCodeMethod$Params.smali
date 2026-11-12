@@ -41,11 +41,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x2a
+    const/16 v0, 0x29
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1PM;->A00(I)LX/1PM;
+    invoke-static {v0}, LX/2Nf;->A00(I)LX/2Nf;
 
     .line 3
     .line 4
@@ -117,7 +117,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 28
     .line 29
@@ -137,7 +137,7 @@
 
     .line 36
     .line 37
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 38
     .line 39
@@ -169,7 +169,7 @@
 
     .line 52
     .line 53
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 54
     .line 55
@@ -213,7 +213,7 @@
 
     .line 74
     .line 75
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 76
     .line 77
@@ -302,105 +302,73 @@
 
     .line 21
     .line 22
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {p1, v0}, LX/0X6;->A1G(Landroid/os/Parcel;Ljava/lang/Boolean;)V
 
     .line 23
     .line 24
     .line 25
-    move-result v0
-
-    .line 26
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 27
-    .line 28
-    .line 29
     iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A03:Ljava/lang/Boolean;
 
-    .line 30
-    .line 31
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 26
+    .line 27
+    invoke-static {p1, v0}, LX/0X6;->A1G(Landroid/os/Parcel;Ljava/lang/Boolean;)V
 
+    .line 28
+    .line 29
+    .line 30
+    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A07:Ljava/lang/String;
+
+    .line 31
     .line 32
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
     .line 33
     .line 34
-    move-result v0
-
     .line 35
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A04:Ljava/lang/Boolean;
 
     .line 36
     .line 37
-    .line 38
-    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A07:Ljava/lang/String;
+    invoke-static {p1, v0}, LX/0X6;->A1G(Landroid/os/Parcel;Ljava/lang/Boolean;)V
 
+    .line 38
     .line 39
     .line 40
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A05:Ljava/lang/String;
 
     .line 41
     .line 42
-    .line 43
-    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A04:Ljava/lang/Boolean;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 43
     .line 44
     .line 45
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A06:Ljava/lang/String;
 
     .line 46
     .line 47
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
     .line 48
-    move-result v0
-
     .line 49
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
     .line 50
+    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A02:Ljava/lang/Boolean;
+
     .line 51
     .line 52
-    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A05:Ljava/lang/String;
+    invoke-static {p1, v0}, LX/0X6;->A1G(Landroid/os/Parcel;Ljava/lang/Boolean;)V
 
     .line 53
     .line 54
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
     .line 55
+    iget v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A00:I
+
     .line 56
     .line 57
-    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A06:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 58
     .line 59
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
     .line 60
-    .line 61
-    .line 62
-    iget-object v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A02:Ljava/lang/Boolean;
-
-    .line 63
-    .line 64
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 65
-    .line 66
-    .line 67
-    move-result v0
-
-    .line 68
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 69
-    .line 70
-    .line 71
-    iget v0, p0, Lcom/facebook/account/recovery/common/protocol/AccountRecoverySendConfirmationCodeMethod$Params;->A00:I
-
-    .line 72
-    .line 73
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 74
-    .line 75
-    .line 76
     return-void
 .end method

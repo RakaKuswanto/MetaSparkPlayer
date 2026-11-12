@@ -1,327 +1,193 @@
-.class public final LX/6Ni;
+.class public LX/6Ni;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:J
+.field public A00:J
 
-.field public final A01:J
+.field public A01:Ljava/lang/Integer;
 
-.field public final A02:Ljava/lang/String;
+.field public A02:Ljava/lang/Integer;
 
-.field public final A03:Ljava/lang/String;
+.field public A03:Ljava/lang/String;
 
-.field public final A04:Ljava/util/Map;
+.field public A04:Ljava/lang/String;
+
+.field public A05:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-wide v2
-
-    .line 4
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-wide v0
-
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    .line 10
-    .line 11
-    iput-object p2, p0, LX/6Ni;->A03:Ljava/lang/String;
-
-    .line 12
-    .line 13
-    iput-object p3, p0, LX/6Ni;->A02:Ljava/lang/String;
-
-    .line 14
-    .line 15
-    iput-object p1, p0, LX/6Ni;->A04:Ljava/util/Map;
-
-    .line 16
-    .line 17
-    iput-wide v2, p0, LX/6Ni;->A01:J
-
-    .line 18
-    .line 19
-    iput-wide v0, p0, LX/6Ni;->A00:J
-
-    .line 20
-    .line 21
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v6, 0x1
-
-    if-eq p0, p1, :cond_1
-
-    instance-of v0, p1, LX/6Ni;
-
-    const/4 v5, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, LX/6Ni;
-
-    iget-object v1, p0, LX/6Ni;->A03:Ljava/lang/String;
-
-    iget-object v0, p1, LX/6Ni;->A03:Ljava/lang/String;
-
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, LX/6Ni;->A02:Ljava/lang/String;
-
-    iget-object v0, p1, LX/6Ni;->A02:Ljava/lang/String;
-
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, LX/6Ni;->A04:Ljava/util/Map;
-
-    iget-object v0, p1, LX/6Ni;->A04:Ljava/util/Map;
-
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-wide v3, p0, LX/6Ni;->A01:J
-
-    iget-wide v1, p1, LX/6Ni;->A01:J
-
-    cmp-long v0, v3, v1
-
-    if-nez v0, :cond_0
-
-    iget-wide v3, p0, LX/6Ni;->A00:J
-
-    iget-wide v1, p1, LX/6Ni;->A00:J
-
-    cmp-long v0, v3, v1
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    return v5
-
-    :cond_1
-    return v6
-.end method
-
-.method public final hashCode()I
-    .locals 3
+.method public static A00(LX/6Ni;Lorg/json/JSONObject;)V
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/6Ni;->A03:Ljava/lang/String;
+    const-string v0, "name"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yi;->A06(Ljava/lang/String;)I
+    const/4 v1, 0x0
 
     .line 3
-    .line 4
-    .line 5
-    move-result v1
-
-    .line 6
-    iget-object v0, p0, LX/6Ni;->A02:Ljava/lang/String;
-
-    .line 7
-    .line 8
-    invoke-static {v0, v1}, LX/001;->A02(Ljava/lang/String;I)I
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v1
-
-    .line 12
-    iget-object v0, p0, LX/6Ni;->A04:Ljava/util/Map;
-
-    .line 13
-    .line 14
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v2
-
-    .line 18
-    iget-wide v0, p0, LX/6Ni;->A01:J
-
-    .line 19
-    .line 20
-    invoke-static {v0, v1, v2}, LX/001;->A00(JI)I
-
-    .line 21
-    .line 22
-    .line 23
-    move-result v2
-
-    .line 24
-    iget-wide v0, p0, LX/6Ni;->A00:J
-
-    .line 25
-    .line 26
-    invoke-static {v0, v1, v2}, LX/4BE;->A0D(JI)I
-
-    .line 27
-    .line 28
-    .line 29
-    move-result v0
-
-    .line 30
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v2
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 4
-    const-string v0, "EventData(type="
-
     .line 5
     .line 6
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     .line 7
+    iput-object v0, p0, LX/6Ni;->A04:Ljava/lang/String;
+
     .line 8
     .line 9
-    iget-object v0, p0, LX/6Ni;->A03:Ljava/lang/String;
+    const-string v0, "cctype"
 
     .line 10
     .line 11
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 12
     .line 13
     .line 14
-    const-string v0, ", renderStateId="
+    move-result-object v0
 
     .line 15
-    .line 16
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, LX/6Ni;->A03:Ljava/lang/String;
 
+    .line 16
     .line 17
+    const-string v0, "policy_id"
+
     .line 18
     .line 19
-    iget-object v0, p0, LX/6Ni;->A02:Ljava/lang/String;
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 20
     .line 21
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 22
+    move-result-object v0
+
     .line 23
+    iput-object v0, p0, LX/6Ni;->A05:Ljava/lang/String;
+
     .line 24
-    const-string v0, ", attributes="
-
     .line 25
-    .line 26
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "version"
 
+    .line 26
     .line 27
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
     .line 28
     .line 29
-    iget-object v0, p0, LX/6Ni;->A04:Ljava/util/Map;
-
     .line 30
+    move-result v0
+
     .line 31
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
     .line 32
     .line 33
-    .line 34
-    const/16 v0, 0xc
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
+    .line 34
     .line 35
     .line 36
-    invoke-static {v0}, LX/0Yb;->A00(I)Ljava/lang/String;
+    move-result v0
 
     .line 37
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
     .line 38
     .line 39
+    .line 40
     move-result-object v0
 
-    .line 40
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 41
+    :goto_0
+    iput-object v0, p0, LX/6Ni;->A02:Ljava/lang/Integer;
+
     .line 42
     .line 43
-    iget-wide v0, p0, LX/6Ni;->A01:J
+    const-string v1, "sample_rate"
 
     .line 44
     .line 45
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     .line 46
     .line 47
     .line 48
-    const-string v0, ", startTime="
+    move-result v0
 
     .line 49
-    .line 50
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
+    .line 50
     .line 51
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
     .line 52
     .line 53
-    iget-wide v0, p0, LX/6Ni;->A00:J
-
     .line 54
+    move-result v0
+
     .line 55
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 56
     .line 57
     .line 58
-    const/16 v0, 0x29
-
-    .line 59
-    .line 60
-    invoke-static {v2, v0}, LX/0Yh;->A0b(Ljava/lang/StringBuilder;C)Ljava/lang/String;
-
-    .line 61
-    .line 62
-    .line 63
     move-result-object v0
 
+    .line 59
+    :goto_1
+    iput-object v0, p0, LX/6Ni;->A01:Ljava/lang/Integer;
+
+    .line 60
+    .line 61
+    const-string v0, "timestamp"
+
+    .line 62
+    .line 63
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
+
     .line 64
-    return-object v0
+    .line 65
+    .line 66
+    move-result-wide v0
+
+    .line 67
+    iput-wide v0, p0, LX/6Ni;->A00:J
+
+    .line 68
+    .line 69
+    return-void
+
+    .line 70
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 71
+    goto :goto_1
+
+    .line 72
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 73
+    goto :goto_0
 .end method

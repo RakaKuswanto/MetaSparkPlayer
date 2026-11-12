@@ -1,91 +1,107 @@
-.class public final enum LX/4Hc;
-.super Ljava/lang/Enum;
+.class public final LX/4hC;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final synthetic $VALUES:[LX/4Hc;
+# instance fields
+.field public A00:I
 
-.field public static final enum BUSINESS_LOGO:LX/4Hc;
+.field public A01:LX/4fd;
 
-.field public static final enum FACEBOOK_LOGO:LX/4Hc;
+.field public A02:LX/4fd;
+
+.field public A03:LX/4iS;
+
+.field public A04:LX/4gK;
+
+.field public A05:Z
+
+.field public final A06:Ljava/lang/String;
+
+.field public final A07:Ljava/util/HashSet;
+
+.field public final A08:Ljava/util/Map;
+
+.field public final A09:Ljava/util/Map;
+
+.field public final A0A:Ljava/util/Map;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     .line 0
-    const-string v0, "FACEBOOK_LOGO"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const/4 v4, 0x0
-
     .line 3
-    new-instance v3, LX/4Hc;
+    invoke-static {}, LX/0X7;->A0f()Ljava/util/LinkedHashMap;
 
     .line 4
     .line 5
-    invoke-direct {v3, v0, v4}, LX/4Hc;-><init>(Ljava/lang/String;I)V
-
     .line 6
+    move-result-object v0
+
     .line 7
+    iput-object v0, p0, LX/4hC;->A09:Ljava/util/Map;
+
     .line 8
-    sput-object v3, LX/4Hc;->FACEBOOK_LOGO:LX/4Hc;
-
     .line 9
-    .line 10
-    const-string v0, "BUSINESS_LOGO"
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
+    .line 10
     .line 11
     .line 12
-    const/4 v2, 0x1
+    move-result-object v0
 
     .line 13
-    new-instance v1, LX/4Hc;
+    iput-object v0, p0, LX/4hC;->A0A:Ljava/util/Map;
 
     .line 14
     .line 15
-    invoke-direct {v1, v0, v2}, LX/4Hc;-><init>(Ljava/lang/String;I)V
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 16
     .line 17
     .line 18
-    sput-object v1, LX/4Hc;->BUSINESS_LOGO:LX/4Hc;
+    move-result-object v0
 
     .line 19
-    .line 20
-    const/4 v0, 0x2
+    iput-object v0, p0, LX/4hC;->A08:Ljava/util/Map;
 
+    .line 20
     .line 21
-    new-array v0, v0, [LX/4Hc;
+    const/4 v0, -0x1
 
     .line 22
+    iput v0, p0, LX/4hC;->A00:I
+
     .line 23
-    aput-object v3, v0, v4
-
     .line 24
-    .line 25
-    aput-object v1, v0, v2
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
+    .line 25
     .line 26
     .line 27
-    sput-object v0, LX/4Hc;->$VALUES:[LX/4Hc;
+    move-result-object v0
 
     .line 28
+    iput-object v0, p0, LX/4hC;->A07:Ljava/util/HashSet;
+
     .line 29
-    return-void
-.end method
+    .line 30
+    const/4 v0, 0x0
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+    .line 31
+    iput-boolean v0, p0, LX/4hC;->A05:Z
 
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 32
+    .line 33
+    iput-object p1, p0, LX/4hC;->A06:Ljava/lang/String;
 
-    .line 1
-    .line 2
-    .line 3
+    .line 34
+    .line 35
     return-void
 .end method

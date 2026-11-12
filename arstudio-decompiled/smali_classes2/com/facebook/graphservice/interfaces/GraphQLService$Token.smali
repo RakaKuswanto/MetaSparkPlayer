@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/1oe;
+.implements LX/1vl;
 
 
 # virtual methods

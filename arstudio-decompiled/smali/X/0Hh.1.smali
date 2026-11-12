@@ -1,193 +1,132 @@
-.class public final LX/0Hh;
-.super Ljava/lang/Object;
+.class public abstract LX/0Hh;
+.super Landroid/app/Service;
 .source ""
+
+# interfaces
+.implements LX/0Hw;
+
+
+# static fields
+.field public static final A01:Ljava/util/Set;
 
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:Ljava/lang/String;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Ljava/util/List;
-
-.field public final A04:Ljava/util/List;
+.field public A00:LX/0Hg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;I)V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 1
     .line 2
     .line 3
-    iput p5, p0, LX/0Hh;->A00:I
+    move-result-object v0
 
     .line 4
+    sput-object v0, LX/0Hh;->A01:Ljava/util/Set;
+
     .line 5
-    invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
     .line 6
-    .line 7
-    .line 8
-    move-result-object v0
-
-    .line 9
-    iput-object v0, p0, LX/0Hh;->A03:Ljava/util/List;
-
-    .line 10
-    .line 11
-    iput-object p4, p0, LX/0Hh;->A04:Ljava/util/List;
-
-    .line 12
-    .line 13
-    iput-object p1, p0, LX/0Hh;->A02:Ljava/lang/String;
-
-    .line 14
-    .line 15
-    iput-object p2, p0, LX/0Hh;->A01:Ljava/lang/String;
-
-    .line 16
-    .line 17
-    invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
-
-    .line 18
-    .line 19
-    .line 20
-    move-result v0
-
-    .line 21
-    if-nez v0, :cond_0
-
-    .line 22
-    .line 23
     return-void
-
-    .line 24
-    :cond_0
-    const-string v0, "At least one package name is required"
-
-    .line 25
-    .line 26
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v0
-
-    .line 30
-    throw v0
 .end method
 
-.method public static A00(Landroid/content/Context;Ljava/lang/String;)LX/0Hh;
+.method public constructor <init>()V
     .locals 1
 
     .line 0
-    const/16 v0, 0x40
+    invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     .line 1
     .line 2
-    :try_start_0
-    invoke-static {p0, p1, v0}, LX/06A;->A02(Landroid/content/Context;Ljava/lang/String;I)LX/06K;
-
     .line 3
+    invoke-static {p0}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
+
     .line 4
     .line 5
-    move-result-object v0
-
     .line 6
-    invoke-static {v0}, LX/0Hh;->A01(LX/06K;)LX/0Hh;
+    move-result-object v0
 
     .line 7
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
     .line 8
     .line 9
-    move-result-object v0
-
     .line 10
-    return-object v0
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    .line 11
-    :catch_0
-    const-string v0, "Unable to get packageInfo for package "
+.method public static A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+    .locals 0
 
-    .line 12
-    .line 13
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 0
+    invoke-static {p1}, LX/0CA;->A01(Ljava/lang/String;)V
 
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v0
+    .line 1
+    .line 2
+    .line 3
+    invoke-direct {p0}, LX/0Hh;->A01()LX/0Hg;
 
-    .line 17
-    invoke-static {p1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 18
-    .line 19
-    .line 20
+    .line 4
+    .line 5
+    .line 6
     move-result-object p0
 
-    .line 21
-    new-instance v0, LX/0Am;
-
-    .line 22
-    .line 23
-    invoke-direct {v0, p0}, LX/0Am;-><init>(Ljava/lang/String;)V
-
-    .line 24
-    .line 25
-    .line 26
-    throw v0
+    .line 7
+    return-object p0
 .end method
 
-.method public static A01(LX/06K;)LX/0Hh;
+.method private final declared-synchronized A01()LX/0Hg;
     .locals 6
 
     .line 0
-    invoke-virtual {p0}, LX/06K;->A01()LX/05r;
+    move-object v5, p0
 
     .line 1
+    monitor-enter v5
+
     .line 2
+    :try_start_0
+    invoke-static {}, LX/0MW;->A00()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
     .line 3
-    move-result-object v0
-
     .line 4
-    if-eqz v0, :cond_3
-
     .line 5
+    :try_start_1
+    iget-object v1, p0, LX/0Hh;->A00:LX/0Hg;
+
     .line 6
-    iget-object v1, v0, LX/05r;->A00:Ljava/util/List;
-
     .line 7
-    .line 8
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    if-nez v1, :cond_2
 
+    .line 8
     .line 9
+    const-string v0, "AsyncService.getDelegateInstance()"
+
     .line 10
     .line 11
-    move-result v0
+    invoke-static {v0}, LX/0CA;->A01(Ljava/lang/String;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 12
-    if-nez v0, :cond_2
-
     .line 13
     .line 14
-    iget-object v2, p0, LX/06K;->A00:Landroid/content/pm/ApplicationInfo;
+    :try_start_2
+    invoke-virtual {p0}, LX/0Hh;->A02()Ljava/lang/String;
 
     .line 15
     .line 16
-    if-eqz v2, :cond_1
-
     .line 17
+    move-result-object v0
+
     .line 18
-    invoke-static {v1}, LX/001;->A0V(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     .line 19
     .line 20
@@ -195,625 +134,841 @@
     move-result-object v4
 
     .line 22
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    const/4 v3, 0x1
 
     .line 23
+    new-array v1, v3, [Ljava/lang/Class;
+
     .line 24
     .line 25
-    move-result-object v1
+    const-class v0, LX/0Hh;
 
     .line 26
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
     .line 27
-    .line 28
-    .line 29
-    move-result v0
+    const/4 v2, 0x0
 
+    .line 28
+    aput-object v0, v1, v2
+
+    .line 29
     .line 30
-    if-eqz v0, :cond_0
+    invoke-virtual {v4, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     .line 31
     .line 32
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
     .line 33
-    .line 34
-    .line 35
-    move-result-object v0
+    move-result-object v1
 
+    .line 34
+    new-array v0, v3, [Ljava/lang/Object;
+
+    .line 35
     .line 36
-    check-cast v0, Landroid/content/pm/Signature;
+    aput-object p0, v0, v2
 
     .line 37
     .line 38
-    invoke-virtual {v0}, Landroid/content/pm/Signature;->toByteArray()[B
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 39
     .line 40
     .line 41
-    move-result-object v0
+    move-result-object v1
 
     .line 42
-    invoke-static {v0}, LX/0Hd;->A01([B)LX/0Hd;
+    const-string v0, "null cannot be cast to non-null type com.facebook.startup.services.AsyncServiceDelegate"
 
     .line 43
     .line 44
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 45
-    move-result-object v0
-
     .line 46
-    invoke-virtual {v4, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 47
+    check-cast v1, LX/0Hg;
+    :try_end_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_2 .. :try_end_2} :catch_4
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/lang/InstantiationException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
     .line 48
     .line 49
-    goto :goto_0
+    :try_start_3
+    invoke-static {}, LX/0CA;->A00()V
 
     .line 50
-    :cond_0
-    iget v5, v2, Landroid/content/pm/ApplicationInfo;->uid:I
-
     .line 51
     .line 52
-    iget-object v0, p0, LX/06K;->A01:Ljava/lang/String;
+    iput-object v1, p0, LX/0Hh;->A00:LX/0Hg;
 
     .line 53
     .line 54
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    goto :goto_2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 55
-    .line 56
-    .line 57
-    move-result-object v3
+    :catch_0
+    move-exception v0
 
+    .line 56
+    :try_start_4
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    .line 57
     .line 58
-    iget-object v1, p0, LX/06K;->A02:Ljava/lang/String;
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
 
     .line 59
     .line 60
-    const/4 v2, 0x0
-
     .line 61
-    new-instance v0, LX/0Hh;
+    goto :goto_1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     .line 62
+    :catch_1
+    move-exception v0
+
     .line 63
-    invoke-direct/range {v0 .. v5}, LX/0Hh;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;I)V
+    goto :goto_0
 
     .line 64
-    .line 65
-    .line 66
-    return-object v0
+    :catch_2
+    move-exception v0
 
+    .line 65
+    :try_start_5
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    .line 66
     .line 67
-    :cond_1
-    const-string v1, "Unable to construct AppIdentity -- package applicationInfo is null"
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
 
     .line 68
     .line 69
-    new-instance v0, Ljava/lang/SecurityException;
-
     .line 70
+    goto :goto_1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
     .line 71
-    invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+    :catch_3
+    move-exception v0
 
     .line 72
+    :try_start_6
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
     .line 73
     .line 74
-    throw v0
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
 
     .line 75
-    :cond_2
-    const-string v1, "Unable to construct AppIdentity -- packageInfo does not have any signatures. Make sure you called getPackageInfo() with GET_SIGNATURES or GET_CERTIFICATES flag."
-
     .line 76
     .line 77
-    new-instance v0, LX/0Bf;
+    goto :goto_1
 
     .line 78
+    :catch_4
+    move-exception v0
+
     .line 79
-    invoke-direct {v0, v1}, LX/0Bf;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     .line 80
     .line 81
     .line 82
-    throw v0
+    move-result-object v1
 
     .line 83
-    :cond_3
-    const-string v1, "Unable to construct AppIdentity -- signingInfo was null. Make sure you called getPackageInfo() with GET_SIGNATURES or GET_CERTIFICATES flag."
+    if-nez v1, :cond_0
 
     .line 84
     .line 85
-    new-instance v0, LX/0Bf;
+    move-object v1, v0
 
     .line 86
-    .line 87
-    invoke-direct {v0, v1}, LX/0Bf;-><init>(Ljava/lang/String;)V
+    :cond_0
+    instance-of v0, v1, Ljava/lang/RuntimeException;
 
+    .line 87
     .line 88
+    if-eqz v0, :cond_1
+
     .line 89
     .line 90
+    check-cast v1, Ljava/lang/RuntimeException;
+
+    .line 91
+    .line 92
+    goto :goto_1
+
+    .line 93
+    :goto_0
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    .line 94
+    .line 95
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 96
+    .line 97
+    .line 98
+    :goto_1
+    throw v1
+
+    .line 99
+    :cond_1
+    invoke-static {v1}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    .line 100
+    .line 101
+    .line 102
+    move-result-object v0
+
+    .line 103
+    throw v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    .line 104
+    :catchall_0
+    :try_start_7
+    move-exception v0
+
+    .line 105
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 106
+    .line 107
+    .line 108
+    throw v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    .line 109
+    :cond_2
+    :goto_2
+    :try_start_8
+    invoke-static {v1}, LX/0WV;->A07(Ljava/lang/Object;)V
+
+    .line 110
+    .line 111
+    .line 112
+    invoke-virtual {v1}, LX/0Hg;->A0G()V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+
+    .line 113
+    .line 114
+    .line 115
+    monitor-exit v5
+
+    .line 116
+    return-object v1
+
+    .line 117
+    :catchall_1
+    move-exception v0
+
+    .line 118
+    :try_start_9
+    throw v0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    .line 119
+    :catchall_2
+    move-exception v0
+
+    .line 120
+    monitor-exit v5
+
+    .line 121
     throw v0
 .end method
 
 
 # virtual methods
-.method public final A02()LX/0Hd;
-    .locals 2
-
-    .line 0
-    iget-object v1, p0, LX/0Hh;->A04:Ljava/util/List;
-
-    .line 1
-    .line 2
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
-    .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 7
-    .line 8
-    const/4 v0, 0x0
-
-    .line 9
-    return-object v0
-
-    .line 10
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 11
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    check-cast v0, LX/0Hd;
-
-    .line 16
-    .line 17
-    return-object v0
+.method public abstract A02()Ljava/lang/String;
 .end method
 
-.method public final A03()Ljava/lang/String;
-    .locals 2
+.method public final A03()V
+    .locals 0
 
     .line 0
-    iget-object v1, p0, LX/0Hh;->A03:Ljava/util/List;
+    invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     .line 1
     .line 2
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
     .line 3
-    .line 4
-    .line 5
-    move-result v0
-
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    .line 8
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    invoke-static {v0}, LX/001;->A0P(Ljava/util/Iterator;)Ljava/lang/String;
-
-    .line 13
-    .line 14
-    .line 15
-    move-result-object v0
-
-    .line 16
-    return-object v0
-
-    .line 17
-    :cond_0
-    const-string v0, "Invalid AppIdentity object: no package names"
-
-    .line 18
-    .line 19
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 20
-    .line 21
-    .line 22
-    move-result-object v0
-
-    .line 23
-    throw v0
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final A04()V
+    .locals 0
 
     .line 0
-    const/4 v3, 0x1
+    invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
     .line 1
-    if-eq p0, p1, :cond_0
-
     .line 2
     .line 3
-    const/4 v2, 0x0
-
-    .line 4
-    if-eqz p1, :cond_2
-
-    .line 5
-    .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v1
-
-    .line 10
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    if-ne v1, v0, :cond_2
-
-    .line 15
-    .line 16
-    check-cast p1, LX/0Hh;
-
-    .line 17
-    .line 18
-    iget v1, p0, LX/0Hh;->A00:I
-
-    .line 19
-    .line 20
-    iget v0, p1, LX/0Hh;->A00:I
-
-    .line 21
-    .line 22
-    if-ne v1, v0, :cond_1
-
-    .line 23
-    .line 24
-    iget-object v1, p0, LX/0Hh;->A03:Ljava/util/List;
-
-    .line 25
-    .line 26
-    iget-object v0, p1, LX/0Hh;->A03:Ljava/util/List;
-
-    .line 27
-    .line 28
-    invoke-interface {v1, v0}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    .line 29
-    .line 30
-    .line 31
-    move-result v0
-
-    .line 32
-    if-eqz v0, :cond_1
-
-    .line 33
-    .line 34
-    iget-object v1, p0, LX/0Hh;->A04:Ljava/util/List;
-
-    .line 35
-    .line 36
-    iget-object v0, p1, LX/0Hh;->A04:Ljava/util/List;
-
-    .line 37
-    .line 38
-    invoke-static {v1, v0}, LX/01f;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 39
-    .line 40
-    .line 41
-    move-result v0
-
-    .line 42
-    if-eqz v0, :cond_1
-
-    .line 43
-    .line 44
-    iget-object v1, p0, LX/0Hh;->A02:Ljava/lang/String;
-
-    .line 45
-    .line 46
-    iget-object v0, p1, LX/0Hh;->A02:Ljava/lang/String;
-
-    .line 47
-    .line 48
-    invoke-static {v1, v0}, LX/01f;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 49
-    .line 50
-    .line 51
-    move-result v0
-
-    .line 52
-    if-eqz v0, :cond_1
-
-    .line 53
-    .line 54
-    iget-object v1, p0, LX/0Hh;->A01:Ljava/lang/String;
-
-    .line 55
-    .line 56
-    iget-object v0, p1, LX/0Hh;->A01:Ljava/lang/String;
-
-    .line 57
-    .line 58
-    invoke-static {v1, v0}, LX/01f;->A00(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 59
-    .line 60
-    .line 61
-    move-result v0
-
-    .line 62
-    if-eqz v0, :cond_1
-
-    .line 63
-    .line 64
-    :cond_0
-    return v3
-
-    .line 65
-    :cond_1
-    const/4 v3, 0x0
-
-    .line 66
-    return v3
-
-    .line 67
-    :cond_2
-    return v2
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final A05()V
+    .locals 0
 
     .line 0
-    const/4 v0, 0x5
+    invoke-super {p0}, Landroid/app/Service;->stopSelf()V
 
     .line 1
-    new-array v2, v0, [Ljava/lang/Object;
-
     .line 2
     .line 3
-    iget v0, p0, LX/0Hh;->A00:I
+    return-void
+.end method
 
-    .line 4
-    .line 5
-    invoke-static {v2, v0}, LX/001;->A18([Ljava/lang/Object;I)V
+.method public final A06(Landroid/content/Intent;)V
+    .locals 0
 
-    .line 6
-    .line 7
-    .line 8
-    iget-object v1, p0, LX/0Hh;->A03:Ljava/util/List;
+    .line 0
+    invoke-super {p0, p1}, Landroid/app/Service;->onRebind(Landroid/content/Intent;)V
 
-    .line 9
-    .line 10
-    const/4 v0, 0x1
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    .line 11
-    aput-object v1, v2, v0
+.method public final A07(Landroid/content/Intent;I)V
+    .locals 0
 
-    .line 12
-    .line 13
-    iget-object v1, p0, LX/0Hh;->A04:Ljava/util/List;
+    .line 0
+    invoke-super {p0, p1, p2}, Landroid/app/Service;->onStart(Landroid/content/Intent;I)V
 
-    .line 14
-    .line 15
-    const/4 v0, 0x2
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    .line 16
-    aput-object v1, v2, v0
+.method public final A08(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .locals 0
 
-    .line 17
-    .line 18
-    iget-object v1, p0, LX/0Hh;->A02:Ljava/lang/String;
+    .line 0
+    invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 19
-    .line 20
-    const/4 v0, 0x3
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
 
-    .line 21
-    aput-object v1, v2, v0
+.method public final A09(Landroid/content/Intent;)Z
+    .locals 1
 
-    .line 22
-    .line 23
-    iget-object v1, p0, LX/0Hh;->A01:Ljava/lang/String;
+    .line 0
+    invoke-super {p0, p1}, Landroid/app/Service;->onUnbind(Landroid/content/Intent;)Z
 
-    .line 24
-    .line 25
-    const/4 v0, 0x4
-
-    .line 26
-    aput-object v1, v2, v0
-
-    .line 27
-    .line 28
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    .line 29
-    .line 30
-    .line 31
+    .line 1
+    .line 2
+    .line 3
     move-result v0
 
-    .line 32
+    .line 4
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final AJ9(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     .line 0
-    invoke-virtual {p0}, LX/0Hh;->A02()LX/0Hd;
+    const/4 v0, 0x0
 
     .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
     .line 2
     .line 3
-    move-result-object v3
-
     .line 4
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-direct {p0}, LX/0Hh;->A01()LX/0Hg;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v2
+    move-result-object v0
 
     .line 8
-    const-string v0, "AppIdentity{uid="
+    invoke-virtual {v0, p1}, LX/0Hg;->AJ9(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 9
     .line 10
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 11
+    move-result-object v0
 
+    .line 12
+    return-object v0
+.end method
+
+.method public final Ala(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-direct {p0}, LX/0Hh;->A01()LX/0Hg;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    invoke-virtual {v0, p1, p2}, LX/0Hg;->Ala(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+.method public final attachBaseContext(Landroid/content/Context;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    const-string v0, "AsyncService.attachBaseContext()"
+
+    .line 5
+    .line 6
+    invoke-static {v0}, LX/0CA;->A01(Ljava/lang/String;)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-super {p0, p1}, Landroid/app/Service;->attachBaseContext(Landroid/content/Context;)V
+
+    .line 10
     .line 11
     .line 12
-    .line 13
-    iget v0, p0, LX/0Hh;->A00:I
+    invoke-direct {p0}, LX/0Hh;->A01()LX/0Hg;
 
+    .line 13
     .line 14
     .line 15
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {}, LX/0CA;->A00()V
 
     .line 16
     .line 17
     .line 18
-    const-string v0, ", packageNames="
+    return-void
+.end method
 
-    .line 19
-    .line 20
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .locals 1
 
-    .line 21
-    .line 22
-    .line 23
-    iget-object v0, p0, LX/0Hh;->A03:Ljava/util/List;
+    .line 0
+    invoke-static {p1, p2}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 24
-    .line 25
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 1
+    .line 2
+    .line 3
+    const/4 v0, 0x2
 
-    .line 26
-    .line 27
-    .line 28
-    const-string v0, ", sha2="
+    .line 4
+    invoke-static {p3, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
-    .line 29
-    .line 30
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 5
+    .line 6
+    .line 7
+    const-string v0, "AsyncService.dump()"
 
-    .line 31
-    .line 32
-    .line 33
-    const-string v1, "null"
+    .line 8
+    .line 9
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
 
-    .line 34
-    .line 35
-    if-nez v3, :cond_2
-
-    .line 36
-    .line 37
-    move-object v0, v1
-
-    .line 38
-    :goto_0
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 39
-    .line 40
-    .line 41
-    const-string v0, ", version="
-
-    .line 42
-    .line 43
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 44
-    .line 45
-    .line 46
-    iget-object v0, p0, LX/0Hh;->A02:Ljava/lang/String;
-
-    .line 47
-    .line 48
-    if-nez v0, :cond_0
-
-    .line 49
-    .line 50
-    move-object v0, v1
-
-    .line 51
-    :cond_0
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 52
-    .line 53
-    .line 54
-    const-string v0, ", domain="
-
-    .line 55
-    .line 56
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 57
-    .line 58
-    .line 59
-    iget-object v0, p0, LX/0Hh;->A01:Ljava/lang/String;
-
-    .line 60
-    .line 61
-    if-eqz v0, :cond_1
-
-    .line 62
-    .line 63
-    move-object v1, v0
-
-    .line 64
-    :cond_1
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 65
-    .line 66
-    .line 67
-    invoke-static {v2}, LX/001;->A0O(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 68
-    .line 69
-    .line 70
+    .line 10
+    .line 11
+    .line 12
     move-result-object v0
 
-    .line 71
+    .line 13
+    invoke-virtual {v0, p1, p2, p3}, LX/0Hg;->A0J(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+.end method
+
+.method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onBind()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0, p1}, LX/0Hg;->A0D(Landroid/content/Intent;)Landroid/os/IBinder;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 11
+    .line 12
+    .line 13
     return-object v0
+.end method
 
-    .line 72
-    :cond_2
-    iget-object v0, v3, LX/0Hd;->sha256Hash:Ljava/lang/String;
+.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 1
 
-    .line 73
-    .line 74
-    goto :goto_0
+    .line 0
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    const-string v0, "AsyncService.onConfigurationChanged()"
+
+    .line 5
+    .line 6
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    iget-object v0, v0, LX/0Hg;->A01:LX/0Hh;
+
+    .line 11
+    .line 12
+    invoke-super {v0, p1}, Landroid/app/Service;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 16
+    .line 17
+    .line 18
+    return-void
+.end method
+
+.method public final onCreate()V
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onCreate()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0}, LX/0Hg;->A0E()V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public final onDestroy()V
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onDestroy()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0}, LX/0Hg;->A0F()V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public final onLowMemory()V
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onLowMemory()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    iget-object v0, v0, LX/0Hg;->A01:LX/0Hh;
+
+    .line 7
+    .line 8
+    invoke-super {v0}, Landroid/app/Service;->onLowMemory()V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public final onRebind(Landroid/content/Intent;)V
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onRebind()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0, p1}, LX/0Hg;->A0H(Landroid/content/Intent;)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public final onStart(Landroid/content/Intent;I)V
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onStart()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0, p1, p2}, LX/0Hg;->A0I(Landroid/content/Intent;I)V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method public onStartCommand(Landroid/content/Intent;II)I
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onStartCommand()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0, p1, p2, p3}, LX/0Hg;->A0C(Landroid/content/Intent;II)I
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 11
+    .line 12
+    .line 13
+    return v0
+.end method
+
+.method public final onTaskRemoved(Landroid/content/Intent;)V
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onTaskRemoved()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    iget-object v0, v0, LX/0Hg;->A01:LX/0Hh;
+
+    .line 7
+    .line 8
+    invoke-super {v0, p1}, Landroid/app/Service;->onTaskRemoved(Landroid/content/Intent;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public final onTrimMemory(I)V
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onTrimMemory()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    iget-object v0, v0, LX/0Hg;->A01:LX/0Hh;
+
+    .line 7
+    .line 8
+    invoke-super {v0, p1}, Landroid/app/Service;->onTrimMemory(I)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public final onUnbind(Landroid/content/Intent;)Z
+    .locals 1
+
+    .line 0
+    const-string v0, "AsyncService.onUnbind()"
+
+    .line 1
+    .line 2
+    invoke-static {p0, v0}, LX/0Hh;->A00(LX/0Hh;Ljava/lang/String;)LX/0Hg;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0, p1}, LX/0Hg;->A0K(Landroid/content/Intent;)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    invoke-static {}, LX/0CA;->A00()V
+
+    .line 11
+    .line 12
+    .line 13
+    return v0
 .end method

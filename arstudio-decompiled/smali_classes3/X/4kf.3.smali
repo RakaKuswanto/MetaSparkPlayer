@@ -1,28 +1,38 @@
-.class public final LX/4kf;
+.class public final synthetic LX/4kf;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final A00:I
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "RecyclerBinder$$ExternalSyntheticLambda0"
+
+
+# instance fields
+.field public final synthetic A00:LX/4gd;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public synthetic constructor <init>(LX/4gd;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/4kf;->A00:LX/4gd;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 1
 
-    .line 0
-    sget-object v0, LX/4Nn;->PRIMARY_TEXT:LX/4Nn;
+    iget-object v0, p0, LX/4kf;->A00:LX/4gd;
 
-    .line 1
-    .line 2
-    iget v0, v0, LX/4Nn;->attr:I
+    invoke-virtual {v0}, LX/4gd;->A03()V
 
-    .line 3
-    .line 4
-    sput v0, LX/4kf;->A00:I
-
-    .line 5
-    .line 6
     return-void
 .end method

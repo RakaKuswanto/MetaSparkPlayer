@@ -1,425 +1,194 @@
-.class public final LX/5p1;
+.class public abstract LX/5P1;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5oq;
 
+# static fields
+.field public static A00:Ljava/lang/reflect/Constructor;
 
-# instance fields
-.field public A00:I
+.field public static A01:Ljava/lang/reflect/Constructor;
 
-.field public A01:Landroid/media/MediaMuxer;
+.field public static A02:Ljava/lang/reflect/Method;
 
-.field public volatile A02:Z
+.field public static A03:Ljava/lang/reflect/Method;
 
-.field public volatile A03:Z
-
-.field public volatile A04:Z
-
-.field public volatile A05:Z
-
-.field public volatile A06:Z
+.field public static A04:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static A00()V
+    .locals 5
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, LX/5P1;->A00:Ljava/lang/reflect/Constructor;
 
     .line 1
     .line 2
+    const-string v2, "build"
+
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A7E(Ljava/lang/String;)V
-    .locals 2
-
-    .line 0
-    const/4 v1, 0x0
-
-    .line 1
-    new-instance v0, Landroid/media/MediaMuxer;
-
-    .line 2
-    .line 3
-    invoke-direct {v0, p1, v1}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
-
     .line 4
+    const/4 v3, 0x0
+
     .line 5
+    if-eqz v0, :cond_0
+
     .line 6
-    iput-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
-
     .line 7
+    sget-object v0, LX/5P1;->A04:Ljava/lang/reflect/Method;
+
     .line 8
-    iput-boolean v1, p0, LX/5p1;->A03:Z
-
     .line 9
+    if-eqz v0, :cond_0
+
     .line 10
-    iput-boolean v1, p0, LX/5p1;->A04:Z
-
     .line 11
-    .line 12
-    iput-boolean v1, p0, LX/5p1;->A02:Z
+    sget-object v0, LX/5P1;->A02:Ljava/lang/reflect/Method;
 
+    .line 12
     .line 13
+    if-nez v0, :cond_1
+
     .line 14
-    iput-boolean v1, p0, LX/5p1;->A06:Z
-
     .line 15
-    .line 16
-    iput-boolean v1, p0, LX/5p1;->A05:Z
-
-    .line 17
-    .line 18
-    return-void
-.end method
-
-.method public final AA1()V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    :try_start_0
-    invoke-virtual {v0}, Landroid/media/MediaMuxer;->stop()V
-
-    .line 5
-    .line 6
-    .line 7
-    iget-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
-
-    .line 8
-    .line 9
-    invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 10
-    .line 11
-    .line 12
-    :catch_0
     :cond_0
-    return-void
-.end method
-
-.method public final Al7(Landroid/media/MediaFormat;)V
-    .locals 1
-
-    .line 0
-    const-string v0, "VideoOnlyMuxer does not accept an audio format."
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    throw v0
-.end method
-
-.method public final AmR(I)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-virtual {v0, p1}, Landroid/media/MediaMuxer;->setOrientationHint(I)V
-
-    .line 5
-    .line 6
-    .line 7
-    :cond_0
-    return-void
-.end method
-
-.method public final AnZ(Landroid/media/MediaFormat;)V
-    .locals 1
-
-    .line 0
-    iget-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 3
-    .line 4
-    invoke-virtual {v0, p1}, Landroid/media/MediaMuxer;->addTrack(Landroid/media/MediaFormat;)I
-
-    .line 5
-    .line 6
-    .line 7
-    move-result v0
-
-    .line 8
-    iput v0, p0, LX/5p1;->A00:I
-
-    .line 9
-    .line 10
-    const/4 v0, 0x1
-
-    .line 11
-    iput-boolean v0, p0, LX/5p1;->A04:Z
-
-    .line 12
-    .line 13
-    :cond_0
-    return-void
-.end method
-
-.method public final Ap3([I)I
-    .locals 3
-
-    .line 0
-    iget-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
-
-    .line 1
-    .line 2
-    if-eqz v0, :cond_4
-
-    .line 3
-    .line 4
-    iget-boolean v0, p0, LX/5p1;->A04:Z
-
-    .line 5
-    .line 6
-    if-eqz v0, :cond_3
-
-    .line 7
-    .line 8
-    iget-boolean v0, p0, LX/5p1;->A03:Z
-
-    .line 9
-    .line 10
-    if-nez v0, :cond_3
-
-    .line 11
-    .line 12
-    iget-boolean v0, p0, LX/5p1;->A02:Z
-
-    .line 13
-    .line 14
-    const/4 v2, 0x4
-
-    .line 15
-    if-eqz v0, :cond_0
+    const-string v0, "com.google.android.exoplayer2.effect.ScaleAndRotateTransformation$Builder"
 
     .line 16
     .line 17
-    const/4 v2, 0x5
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     .line 18
-    :cond_0
-    :goto_0
-    if-nez v2, :cond_1
-
     .line 19
     .line 20
-    iget-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
+    move-result-object v4
 
     .line 21
-    .line 22
-    invoke-virtual {v0}, Landroid/media/MediaMuxer;->stop()V
+    new-array v0, v3, [Ljava/lang/Class;
 
+    .line 22
     .line 23
+    invoke-virtual {v4, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
     .line 24
     .line 25
-    iget-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
-
     .line 26
+    move-result-object v0
+
     .line 27
-    invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
+    sput-object v0, LX/5P1;->A00:Ljava/lang/reflect/Constructor;
 
     .line 28
     .line 29
+    const/4 v0, 0x1
+
     .line 30
-    :cond_1
-    :goto_1
-    const/4 v1, 0x0
+    new-array v1, v0, [Ljava/lang/Class;
 
     .line 31
-    iput-boolean v1, p0, LX/5p1;->A03:Z
-
     .line 32
-    .line 33
-    const/4 v0, 0x0
+    sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
+    .line 33
     .line 34
-    iput-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
+    aput-object v0, v1, v3
 
     .line 35
     .line 36
-    iput v1, p0, LX/5p1;->A00:I
+    const-string v0, "setRotationDegrees"
 
     .line 37
     .line 38
-    if-eqz v2, :cond_2
+    invoke-virtual {v4, v0, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     .line 39
     .line 40
-    iget-boolean v0, p0, LX/5p1;->A05:Z
-
     .line 41
+    move-result-object v0
+
     .line 42
-    if-nez v0, :cond_2
+    sput-object v0, LX/5P1;->A04:Ljava/lang/reflect/Method;
 
     .line 43
     .line 44
-    iget-boolean v0, p0, LX/5p1;->A06:Z
+    new-array v0, v3, [Ljava/lang/Class;
 
     .line 45
     .line 46
-    if-eqz v0, :cond_5
+    invoke-virtual {v4, v2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     .line 47
     .line 48
-    add-int/lit8 v2, v2, 0x14
-
     .line 49
-    .line 50
-    :cond_2
-    return v2
-
-    .line 51
-    :cond_3
-    const/4 v2, 0x0
-
-    .line 52
-    goto :goto_0
-
-    .line 53
-    :cond_4
-    const/4 v2, 0x1
-
-    .line 54
-    goto :goto_1
-
-    .line 55
-    :cond_5
-    add-int/lit8 v2, v2, 0xa
-
-    .line 56
-    .line 57
-    return v2
-.end method
-
-.method public final ArV(Landroid/media/MediaCodec$BufferInfo;Ljava/nio/ByteBuffer;)V
-    .locals 1
-
-    .line 0
-    const-string v0, "VideoOnlyMuxer does not have audio to write."
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 3
-    .line 4
-    .line 5
     move-result-object v0
 
-    .line 6
-    throw v0
-.end method
+    .line 50
+    sput-object v0, LX/5P1;->A02:Ljava/lang/reflect/Method;
 
-.method public final Arm(Landroid/media/MediaCodec$BufferInfo;Ljava/nio/ByteBuffer;)V
-    .locals 3
+    .line 51
+    .line 52
+    :cond_1
+    sget-object v0, LX/5P1;->A01:Ljava/lang/reflect/Constructor;
 
-    .line 0
-    const/4 v2, 0x1
+    .line 53
+    .line 54
+    if-eqz v0, :cond_2
 
-    .line 1
-    iput-boolean v2, p0, LX/5p1;->A02:Z
+    .line 55
+    .line 56
+    sget-object v0, LX/5P1;->A03:Ljava/lang/reflect/Method;
 
-    .line 2
-    .line 3
-    iget v0, p1, Landroid/media/MediaCodec$BufferInfo;->flags:I
+    .line 57
+    .line 58
+    if-nez v0, :cond_3
 
-    .line 4
-    .line 5
-    and-int/lit8 v0, v0, 0x2
+    .line 59
+    .line 60
+    :cond_2
+    const-string v0, "com.google.android.exoplayer2.effect.DefaultVideoFrameProcessor$Factory$Builder"
 
-    .line 6
-    .line 7
-    if-nez v0, :cond_0
+    .line 61
+    .line 62
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 8
-    .line 9
-    iget-object v1, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
+    .line 63
+    .line 64
+    .line 65
+    move-result-object v1
 
-    .line 10
-    .line 11
-    if-eqz v1, :cond_0
+    .line 66
+    new-array v0, v3, [Ljava/lang/Class;
 
-    .line 12
-    .line 13
-    iget v0, p0, LX/5p1;->A00:I
+    .line 67
+    .line 68
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    .line 14
-    .line 15
-    invoke-virtual {v1, v0, p2, p1}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v0
 
-    .line 16
-    .line 17
-    .line 18
-    iput-boolean v2, p0, LX/5p1;->A03:Z
+    .line 72
+    sput-object v0, LX/5P1;->A01:Ljava/lang/reflect/Constructor;
 
-    .line 19
-    .line 20
-    :cond_0
-    return-void
-.end method
+    .line 73
+    .line 74
+    new-array v0, v3, [Ljava/lang/Class;
 
-.method public final start()V
-    .locals 2
+    .line 75
+    .line 76
+    invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    .line 0
-    const/4 v1, 0x1
+    .line 77
+    .line 78
+    .line 79
+    move-result-object v0
 
-    .line 1
-    iput-boolean v1, p0, LX/5p1;->A06:Z
+    .line 80
+    sput-object v0, LX/5P1;->A03:Ljava/lang/reflect/Method;
 
-    .line 2
-    .line 3
-    iget-object v0, p0, LX/5p1;->A01:Landroid/media/MediaMuxer;
-
-    .line 4
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    .line 7
-    invoke-virtual {v0}, Landroid/media/MediaMuxer;->start()V
-
-    .line 8
-    .line 9
-    .line 10
-    iput-boolean v1, p0, LX/5p1;->A05:Z
-
-    .line 11
-    .line 12
-    :cond_0
+    .line 81
+    .line 82
+    :cond_3
     return-void
 .end method

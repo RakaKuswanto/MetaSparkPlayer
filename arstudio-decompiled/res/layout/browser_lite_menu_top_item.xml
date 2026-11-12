@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<X.4FD android:layout_gravity="center_vertical" android:orientation="horizontal" style="@style/BrowserLiteMenuTopItem"
+<X.482 android:layout_gravity="center_vertical" android:orientation="horizontal" style="@style/BrowserLiteMenuTopItem"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <ImageButton android:id="@id/go_forward" android:src="@drawable/fb_ic_arrow_right_outline_24" style="@style/BrowserLiteMenuTopImageItem" />
     <ImageButton android:id="@id/browser_refresh" android:src="@drawable/fb_ic_refresh_right_outline_24" style="@style/BrowserLiteMenuTopImageItem" />
     <ImageButton android:id="@id/browser_share_time_line" android:src="@drawable/fb_ic_share_outline_24" style="@style/BrowserLiteMenuTopImageItem" />
     <ImageButton android:id="@id/browser_save_link" style="@style/BrowserLiteMenuTopImageItem" />
-</X.4FD>
+</X.482>

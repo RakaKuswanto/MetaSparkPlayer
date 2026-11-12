@@ -121,11 +121,6 @@
     .line 14
     .line 15
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    .line 16
-    .line 17
-    .line 18
     return-void
 .end method
 
@@ -149,7 +144,7 @@
     move-result-object v1
 
     .line 8
-    invoke-static {p1, v1}, LX/4BD;->A1U(Ljava/util/UUID;Ljava/nio/ByteBuffer;)V
+    invoke-static {p1, v1}, LX/432;->A1S(Ljava/util/UUID;Ljava/nio/ByteBuffer;)V
 
     .line 9
     .line 10

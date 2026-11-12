@@ -1,60 +1,505 @@
 .class public final LX/2Y5;
-.super LX/2Y3;
+.super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements LX/2Ww;
-
-
-# instance fields
-.field public final A00:LX/2Y3;
-
-.field public final A01:Ljava/util/concurrent/Executor;
-
-.field public final A02:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final A03:Z
-
-.field public final A04:[LX/2Y3;
+.implements LX/35i;
 
 
 # direct methods
-.method public constructor <init>(LX/2Y3;Ljava/util/concurrent/Executor;[LX/2Y3;Z)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/2Y3;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yf;->A0q()Ljava/util/concurrent/atomic/AtomicInteger;
+    return-void
+.end method
+
+.method public static A00()J
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "always_upload_scheduler_params"
+
+    .line 1
+    .line 2
+    .line 3
+    const/4 v0, 0x0
 
     .line 4
+    invoke-static {v1, v0, v0}, Lcom/facebook/endtoend/EndToEnd;->A01(Ljava/lang/String;ZZ)Ljava/lang/String;
+
     .line 5
     .line 6
-    move-result-object v0
-
     .line 7
-    iput-object v0, p0, LX/2Y5;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result-object v1
 
     .line 8
-    .line 9
-    iput-object p3, p0, LX/2Y5;->A04:[LX/2Y3;
+    const-string/jumbo v0, "true"
 
+    .line 9
     .line 10
     .line 11
-    iput-object p2, p0, LX/2Y5;->A01:Ljava/util/concurrent/Executor;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 12
     .line 13
-    iput-boolean p4, p0, LX/2Y5;->A03:Z
-
     .line 14
+    move-result v0
+
     .line 15
-    iput-object p1, p0, LX/2Y5;->A00:LX/2Y3;
+    if-eqz v0, :cond_0
 
     .line 16
     .line 17
-    return-void
+    const-wide/16 v0, 0x0
+
+    .line 18
+    .line 19
+    return-wide v0
+
+    .line 20
+    :cond_0
+    const-wide v0, 0x7fffffffffffffffL
+
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    return-wide v0
+.end method
+
+
+# virtual methods
+.method public final A8L()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AAD()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ABH()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ADf()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ADi()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final ADw()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, ""
+
+    return-object v0
+.end method
+
+.method public final AE0()J
+    .locals 2
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    return-wide v0
+.end method
+
+.method public final AE3()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final AEj()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final AF7()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AF8()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AF9()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AFA()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AFD()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AFE()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AFF()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AFG()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AFH()I
+    .locals 1
+
+    const v0, 0x7fffffff
+
+    return v0
+.end method
+
+.method public final AFI()I
+    .locals 1
+
+    const v0, 0x7fffffff
+
+    return v0
+.end method
+
+.method public final AI8()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AIK()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final AJR()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AJS()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AJT()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AJU()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AJW()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AJX()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AJY()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AJZ()J
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/2Y5;->A00()J
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-wide v0
+
+    .line 4
+    return-wide v0
+.end method
+
+.method public final AJa()I
+    .locals 1
+
+    const v0, 0x7fffffff
+
+    return v0
+.end method
+
+.method public final AJb()I
+    .locals 1
+
+    const v0, 0x7fffffff
+
+    return v0
+.end method
+
+.method public final AKg()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final AL5()Ljava/util/Set;
+    .locals 1
+
+    .line 0
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    return-object v0
+.end method
+
+.method public final AOu()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AP3()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final AP4()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

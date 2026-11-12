@@ -16,7 +16,7 @@
     .line 1
     .line 2
     .line 3
-    const-string v0, "androidx.room.IMultiInstanceInvalidationService"
+    sget-object v0, Landroidx/room/IMultiInstanceInvalidationService;->A00:Ljava/lang/String;
 
     .line 4
     .line 5
@@ -40,12 +40,12 @@
     .locals 11
 
     .line 0
-    const/4 v4, 0x1
+    sget-object v1, Landroidx/room/IMultiInstanceInvalidationService;->A00:Ljava/lang/String;
 
     .line 1
-    const-string v1, "androidx.room.IMultiInstanceInvalidationService"
-
     .line 2
+    const/4 v4, 0x1
+
     .line 3
     if-lt p1, v4, :cond_c
 
@@ -106,7 +106,7 @@
 
     .line 31
     .line 32
-    invoke-static {v10, v4}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v10, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 33
     .line 34
@@ -127,7 +127,7 @@
 
     .line 41
     .line 42
-    invoke-static {v7, v9}, LX/0Yg;->A0e(Ljava/util/Map;I)Ljava/lang/Object;
+    invoke-static {v7, v9}, LX/0X4;->A0h(Ljava/util/Map;I)Ljava/lang/Object;
 
     .line 43
     .line 44
@@ -191,12 +191,12 @@
 
     .line 70
     .line 71
-    invoke-static {v1, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 72
     .line 73
     .line 74
-    invoke-static {v1}, LX/0Yh;->A03(Ljava/lang/Object;)I
+    invoke-static {v1}, LX/0X5;->A01(Ljava/lang/Object;)I
 
     .line 75
     .line 76
@@ -204,7 +204,7 @@
     move-result v1
 
     .line 78
-    invoke-static {v7, v1}, LX/0Yg;->A0e(Ljava/util/Map;I)Ljava/lang/Object;
+    invoke-static {v7, v1}, LX/0X4;->A0h(Ljava/util/Map;I)Ljava/lang/Object;
 
     .line 79
     .line 80
@@ -263,7 +263,7 @@
 
     .line 104
     :try_start_3
-    const-string v0, "androidx.room.IMultiInstanceInvalidationCallback"
+    sget-object v0, Landroidx/room/IMultiInstanceInvalidationCallback;->A00:Ljava/lang/String;
 
     .line 105
     .line 106
@@ -417,7 +417,7 @@
     const/4 v0, 0x0
 
     .line 166
-    invoke-static {v1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 167
     .line 168
@@ -437,7 +437,7 @@
 
     .line 175
     :cond_4
-    const-string v0, "androidx.room.IMultiInstanceInvalidationCallback"
+    sget-object v0, Landroidx/room/IMultiInstanceInvalidationCallback;->A00:Ljava/lang/String;
 
     .line 176
     .line 177
@@ -559,7 +559,7 @@
     const/4 v0, 0x0
 
     .line 229
-    invoke-static {v1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {v1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 230
     .line 231
@@ -586,7 +586,7 @@
 
     .line 241
     :cond_7
-    const-string v0, "androidx.room.IMultiInstanceInvalidationCallback"
+    sget-object v0, Landroidx/room/IMultiInstanceInvalidationCallback;->A00:Ljava/lang/String;
 
     .line 242
     .line 243

@@ -21,7 +21,7 @@
 
 .field public final A01:I
 
-.field public final A02:LX/2sC;
+.field public final A02:LX/2yj;
 
 .field public final A03:Ljava/lang/String;
 
@@ -35,99 +35,101 @@
     .locals 3
 
     .line 0
-    sget-object v2, LX/20F;->A02:Ljava/lang/String;
+    sget-object v2, LX/1zk;->A02:Ljava/lang/String;
 
     .line 1
     .line 2
-    const-string v1, "bugreport"
+    const-string/jumbo v1, "bugreport"
 
     .line 3
     .line 4
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 5
+    invoke-static {v2}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 6
     .line 7
-    move-result-object v0
-
     .line 8
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    move-result-object v0
 
     .line 9
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 10
     .line 11
-    move-result-object v0
-
     .line 12
-    sput-object v0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A07:Ljava/lang/String;
+    move-result-object v0
 
     .line 13
+    sput-object v0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A07:Ljava/lang/String;
+
     .line 14
+    .line 15
     const-string/jumbo v1, "internsettings"
 
-    .line 15
     .line 16
     .line 17
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 18
+    invoke-static {v2}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 19
     .line 20
-    move-result-object v0
-
     .line 21
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    move-result-object v0
 
     .line 22
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
     .line 23
     .line 24
-    move-result-object v0
-
     .line 25
-    sput-object v0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A08:Ljava/lang/String;
+    move-result-object v0
 
     .line 26
+    sput-object v0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A08:Ljava/lang/String;
+
     .line 27
-    const-string v1, "adhocqueries"
-
     .line 28
-    .line 29
-    invoke-static {v2}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v1, "adhocqueries"
 
+    .line 29
     .line 30
     .line 31
+    invoke-static {v2}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 32
-    move-result-object v0
-
     .line 33
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 34
-    .line 35
-    .line 36
     move-result-object v0
 
-    .line 37
-    sput-object v0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A06:Ljava/lang/String;
+    .line 35
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
+    .line 36
+    .line 37
     .line 38
+    move-result-object v0
+
     .line 39
-    const/16 v0, 0x15
+    sput-object v0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A06:Ljava/lang/String;
 
     .line 40
     .line 41
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    const/16 v0, 0x10
 
     .line 42
     .line 43
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
+
     .line 44
+    .line 45
+    .line 46
     move-result-object v0
 
-    .line 45
+    .line 47
     sput-object v0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 46
-    .line 47
+    .line 48
+    .line 49
     return-void
 .end method
 
@@ -184,15 +186,15 @@
     move-result-object v0
 
     .line 25
-    check-cast v0, LX/2sC;
+    check-cast v0, LX/2yj;
 
     .line 26
     .line 27
-    iput-object v0, p0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A02:LX/2sC;
+    iput-object v0, p0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A02:LX/2yj;
 
     .line 28
     .line 29
-    invoke-static {p1}, LX/0Yc;->A1a(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1Y(Landroid/os/Parcel;)Z
 
     .line 30
     .line 31
@@ -260,7 +262,7 @@
     .line 13
     .line 14
     .line 15
-    iget-object v0, p0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A02:LX/2sC;
+    iget-object v0, p0, Lcom/facebook/bugreporter/activity/chooser/ChooserOption;->A02:LX/2yj;
 
     .line 16
     .line 17

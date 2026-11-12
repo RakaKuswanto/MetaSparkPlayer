@@ -16,23 +16,24 @@
     .locals 2
 
     .line 0
-    const-string v1, "bitmap"
+    const-string/jumbo v1, "bitmap"
 
     .line 1
     .line 2
+    .line 3
     new-instance v0, Lcom/facebook/spectrum/image/ImageFormat;
 
-    .line 3
     .line 4
+    .line 5
     invoke-direct {v0, v1}, Lcom/facebook/spectrum/image/ImageFormat;-><init>(Ljava/lang/String;)V
 
-    .line 5
     .line 6
     .line 7
+    .line 8
     sput-object v0, Lcom/facebook/spectrum/image/ImageFormat;->BITMAP:Lcom/facebook/spectrum/image/ImageFormat;
 
-    .line 8
     .line 9
+    .line 10
     return-void
 .end method
 

@@ -1,18 +1,18 @@
 .class public final LX/1gu;
-.super LX/1gt;
+.super LX/1gb;
 .source ""
 
-
-# static fields
-.field public static final serialVersionUID:J = 0x7bL
+# interfaces
+.implements Lcom/facebook/graphservice/interfaces/Tree;
+.implements LX/1gy;
 
 
 # direct methods
-.method public constructor <init>(LX/1TA;Ljava/lang/String;)V
+.method public constructor <init>(I[I)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p1, p2}, LX/1gt;-><init>(LX/1TA;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, LX/1gb;-><init>(I[I)V
 
     .line 1
     .line 2
@@ -20,14 +20,37 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1TA;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
 
-    .line 268435456
-    invoke-direct {p0, p1, p2, p3}, LX/1gt;-><init>(LX/1TA;Ljava/lang/String;Ljava/lang/Throwable;)V
+# virtual methods
+.method public final A3p()LX/3i2;
+    .locals 3
 
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
+    .line 0
+    const-class v2, LX/1gw;
+
+    .line 1
+    .line 2
+    const v1, 0x278e5af2
+
+    .line 3
+    .line 4
+    .line 5
+    const v0, -0x67d9f147
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, v1, v2, v0}, LX/1gb;->getCachedNullableReinterpret(ILjava/lang/Class;I)Lcom/facebook/graphservice/tree/TreeJNI;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v0
+
+    .line 12
+    check-cast v0, LX/3i2;
+
+    .line 13
+    .line 14
+    return-object v0
 .end method

@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLJoinableVideoChatsVisibilityModeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLJoinableVideoChatsVisibilityModeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/0Yj;->A0v()[Ljava/lang/String;
+    invoke-static {}, LX/0X7;->A0z()[Ljava/lang/String;
 
     .line 1
     .line 2
@@ -35,7 +35,7 @@
 
     .line 10
     .line 11
-    invoke-static {v2, v0}, LX/0Yf;->A1M([Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v2, v0}, LX/0X2;->A1O([Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 12
     .line 13
@@ -43,22 +43,23 @@
     const/4 v1, 0x3
 
     .line 15
-    const-string v0, "WHITELISTED_PARTICIPANTS"
+    const-string/jumbo v0, "WHITELISTED_PARTICIPANTS"
 
     .line 16
     .line 17
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
-
     .line 18
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
     .line 19
     .line 20
+    .line 21
     move-result-object v0
 
-    .line 21
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLJoinableVideoChatsVisibilityModeSet;->A00:Ljava/util/Set;
-
     .line 22
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLJoinableVideoChatsVisibilityModeSet;->A00:Ljava/util/HashSet;
+
     .line 23
+    .line 24
     return-void
 .end method
 
@@ -74,11 +75,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLJoinableVideoChatsVisibilityModeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLJoinableVideoChatsVisibilityModeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

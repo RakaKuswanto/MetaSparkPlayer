@@ -37,11 +37,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x3b
+    const/16 v0, 0x59
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
 
     .line 3
     .line 4
@@ -65,7 +65,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -73,7 +73,7 @@
     move-result-object v3
 
     .line 7
-    invoke-static {p1}, LX/1KF;->A02(Landroid/os/Parcel;)Ljava/util/ArrayList;
+    invoke-static {p1}, LX/1cw;->A01(Landroid/os/Parcel;)Lcom/google/common/collect/ImmutableList;
 
     .line 8
     .line 9
@@ -81,130 +81,122 @@
     move-result-object v0
 
     .line 11
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+    iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A01:Lcom/google/common/collect/ImmutableList;
 
     .line 12
     .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A01:Lcom/google/common/collect/ImmutableList;
-
-    .line 16
-    .line 17
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 18
-    .line 19
-    .line 20
+    .line 14
+    .line 15
+    .line 16
     move-result v0
 
-    .line 21
+    .line 17
     const/4 v2, 0x0
 
+    .line 18
+    invoke-static {v0}, LX/0X3;->A1X(I)Z
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
     .line 22
-    invoke-static {v0}, LX/0Ye;->A1V(I)Z
+    iput-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A04:Z
 
     .line 23
     .line 24
-    .line 25
-    move-result v0
-
-    .line 26
-    iput-boolean v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A04:Z
-
-    .line 27
-    .line 28
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A03:Ljava/lang/String;
 
     .line 29
     .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A03:Ljava/lang/String;
-
-    .line 33
-    .line 34
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v0
+
+    .line 34
+    if-nez v0, :cond_0
 
     .line 35
     .line 36
-    .line 37
-    move-result v0
-
-    .line 38
-    if-nez v0, :cond_0
-
-    .line 39
-    .line 40
     const/4 v0, 0x0
 
-    .line 41
+    .line 37
     :goto_0
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A00:Lcom/facebook/graphql/model/GraphQLPage;
 
-    .line 42
-    .line 43
+    .line 38
+    .line 39
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 40
+    .line 41
+    .line 42
+    move-result v1
+
+    .line 43
+    new-array v0, v1, [Lcom/facebook/ipc/composer/model/ComposerPageRecommendationSelectedTag;
 
     .line 44
     .line 45
-    .line 46
-    move-result v1
-
-    .line 47
-    new-array v0, v1, [Lcom/facebook/ipc/composer/model/ComposerPageRecommendationSelectedTag;
-
-    .line 48
-    .line 49
     :goto_1
     if-ge v2, v1, :cond_1
 
-    .line 50
-    .line 51
-    invoke-static {p1, v3, v0, v2}, LX/0Yf;->A04(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
+    .line 46
+    .line 47
+    invoke-static {p1, v3, v0, v2}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
-    .line 52
-    .line 53
-    .line 54
+    .line 48
+    .line 49
+    .line 50
     move-result v2
 
-    .line 55
+    .line 51
     goto :goto_1
 
-    .line 56
+    .line 52
     :cond_0
-    invoke-static {p1}, LX/1KF;->A00(Landroid/os/Parcel;)Lcom/facebook/graphservice/interfaces/Tree;
+    invoke-static {p1}, LX/1cw;->A00(Landroid/os/Parcel;)Lcom/facebook/graphservice/interfaces/Tree;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object v0
+
+    .line 56
+    check-cast v0, Lcom/facebook/graphql/model/GraphQLPage;
 
     .line 57
     .line 58
-    .line 59
-    move-result-object v0
-
-    .line 60
-    check-cast v0, Lcom/facebook/graphql/model/GraphQLPage;
-
-    .line 61
-    .line 62
     goto :goto_0
 
-    .line 63
+    .line 59
     :cond_1
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 64
-    .line 65
-    .line 66
+    .line 60
+    .line 61
+    .line 62
     move-result-object v0
 
-    .line 67
+    .line 63
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A02:Lcom/google/common/collect/ImmutableList;
 
-    .line 68
-    .line 69
+    .line 64
+    .line 65
     return-void
 .end method
 
@@ -213,9 +205,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "availablePageRecommendationTags"
+    const-string/jumbo v0, "availablePageRecommendationTags"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A01:Lcom/google/common/collect/ImmutableList;
 
@@ -223,7 +215,7 @@
 
     const-string/jumbo v0, "recommendationType"
 
-    invoke-static {v0, p4}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p4, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A03:Ljava/lang/String;
 
@@ -231,7 +223,7 @@
 
     const-string/jumbo v0, "selectedTags"
 
-    invoke-static {v0, p3}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p3, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A02:Lcom/google/common/collect/ImmutableList;
 
@@ -282,7 +274,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -314,7 +306,7 @@
 
     .line 29
     .line 30
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 31
     .line 32
@@ -334,7 +326,7 @@
 
     .line 39
     .line 40
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 41
     .line 42
@@ -354,7 +346,7 @@
 
     .line 49
     .line 50
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 51
     .line 52
@@ -382,7 +374,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -394,71 +386,78 @@
 
     .line 7
     .line 8
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 11
-    move-result v1
-
     .line 12
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A03:Ljava/lang/String;
-
     .line 13
+    move-result v0
+
     .line 14
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 15
-    .line 16
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A03:Ljava/lang/String;
 
+    .line 16
     .line 17
+    mul-int/lit8 v1, v1, 0x1f
+
     .line 18
     .line 19
-    move-result v0
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
-    add-int/2addr v1, v0
-
     .line 21
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A00:Lcom/facebook/graphql/model/GraphQLPage;
-
     .line 22
+    move-result v0
+
     .line 23
-    mul-int/lit8 v1, v1, 0x1f
+    add-int/2addr v1, v0
 
     .line 24
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A00:Lcom/facebook/graphql/model/GraphQLPage;
+
     .line 25
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 26
-    .line 27
-    .line 28
-    move-result v0
-
-    .line 29
-    add-int/2addr v1, v0
-
-    .line 30
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A02:Lcom/google/common/collect/ImmutableList;
-
-    .line 31
-    .line 32
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 33
-    .line 34
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    .line 27
+    .line 28
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
-    .line 35
-    .line 36
-    .line 37
+    .line 29
+    .line 30
+    .line 31
     move-result v0
 
-    .line 38
+    .line 32
     add-int/2addr v1, v0
 
+    .line 33
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/ComposerPageRecommendationModel;->A02:Lcom/google/common/collect/ImmutableList;
+
+    .line 34
+    .line 35
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 36
+    .line 37
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
+    .line 38
     .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    add-int/2addr v1, v0
+
+    .line 42
     return v1
 .end method
 
@@ -470,7 +469,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/1KF;->A05(Landroid/os/Parcel;Ljava/util/List;)V
+    invoke-static {p1, v0}, LX/1cw;->A06(Landroid/os/Parcel;Ljava/util/List;)V
 
     .line 3
     .line 4
@@ -514,7 +513,7 @@
 
     .line 24
     .line 25
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 26
     .line 27
@@ -564,7 +563,7 @@
     .line 47
     .line 48
     .line 49
-    invoke-static {p1, v1}, LX/1KF;->A04(Landroid/os/Parcel;LX/0yO;)V
+    invoke-static {p1, v1}, LX/1cw;->A05(Landroid/os/Parcel;LX/1H2;)V
 
     .line 50
     .line 51

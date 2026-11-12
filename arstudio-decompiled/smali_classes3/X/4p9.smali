@@ -1,29 +1,49 @@
-.class public final LX/4p9;
-.super LX/4on;
+.class public abstract LX/4P9;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "SectionTree$2"
-
-
-# instance fields
-.field public final synthetic A00:LX/4nM;
+.field public static final A00:[Lcom/google/android/gms/common/zzj;
 
 
 # direct methods
-.method public constructor <init>(LX/4nM;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/4p9;->A00:LX/4nM;
+    const/4 v0, 0x2
 
     .line 1
-    .line 2
-    invoke-direct {p0}, LX/4on;-><init>()V
+    new-array v2, v0, [Lcom/google/android/gms/common/zzj;
 
+    .line 2
     .line 3
+    sget-object v1, LX/54g;->A03:Lcom/google/android/gms/common/zzl;
+
     .line 4
     .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, LX/54g;->A04:Lcom/google/android/gms/common/zzl;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sput-object v2, LX/4P9;->A00:[Lcom/google/android/gms/common/zzj;
+
+    .line 14
+    .line 15
     return-void
 .end method

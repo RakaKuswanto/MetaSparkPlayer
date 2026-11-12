@@ -6,9 +6,9 @@
 # static fields
 .field public static final CONFIG_ID:I = 0xc681
 
-.field public static final __CONFIG__:I = 0x36c
+.field public static final __CONFIG__:I = 0x32a
 
-.field public static final gatekeeper:J = 0x81036c00022712L
+.field public static final gatekeeper:J = 0x81032a000222beL
 
 
 # direct methods

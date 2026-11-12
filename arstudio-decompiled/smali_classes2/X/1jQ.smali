@@ -1,225 +1,392 @@
-.class public final LX/1jQ;
-.super Ljava/lang/Object;
+.class public final enum LX/1Jq;
+.super Ljava/lang/Enum;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/lang/reflect/Method;
+.field public static final synthetic $VALUES:[LX/1Jq;
 
-.field public static A01:Z
+.field public static final enum CREDIT:LX/1Jq;
+
+.field public static final enum DEBIT:LX/1Jq;
+
+.field public static final enum PREPAID:LX/1Jq;
+
+.field public static final enum UNKNOWN:LX/1Jq;
+
+
+# instance fields
+.field public final values:Ljava/util/List;
 
 
 # direct methods
-.method public static final A00(Landroid/app/Activity;)V
-    .locals 2
+.method public static synthetic $values()[LX/1Jq;
+    .locals 3
 
     .line 0
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/4 v0, 0x4
 
     .line 1
+    new-array v2, v0, [LX/1Jq;
+
     .line 2
     .line 3
-    move-result-object v1
+    sget-object v1, LX/1Jq;->DEBIT:LX/1Jq;
 
     .line 4
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 5
-    .line 6
-    .line 7
-    invoke-static {v1}, LX/1jQ;->A01(Landroid/content/res/Resources;)V
+    const/4 v0, 0x0
 
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
     .line 8
+    sget-object v1, LX/1Jq;->CREDIT:LX/1Jq;
+
     .line 9
     .line 10
-    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+    const/4 v0, 0x1
 
     .line 11
+    aput-object v1, v2, v0
+
     .line 12
     .line 13
-    move-result-object v0
+    sget-object v1, LX/1Jq;->PREPAID:LX/1Jq;
 
     .line 14
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
     .line 15
-    .line 16
-    .line 17
-    move-result-object v0
+    const/4 v0, 0x2
 
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
     .line 18
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    sget-object v1, LX/1Jq;->UNKNOWN:LX/1Jq;
 
     .line 19
     .line 20
+    const/4 v0, 0x3
+
     .line 21
-    if-eq v1, v0, :cond_0
+    aput-object v1, v2, v0
 
     .line 22
     .line 23
-    invoke-static {v0}, LX/1jQ;->A01(Landroid/content/res/Resources;)V
-
-    .line 24
-    .line 25
-    .line 26
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
-
-    .line 27
-    .line 28
-    .line 29
-    move-result-object v0
-
-    .line 30
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 31
-    .line 32
-    .line 33
-    move-result-object v0
-
-    .line 34
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 35
-    .line 36
-    .line 37
-    if-eq v1, v0, :cond_1
-
-    .line 38
-    .line 39
-    invoke-static {v0}, LX/1jQ;->A01(Landroid/content/res/Resources;)V
-
-    .line 40
-    .line 41
-    .line 42
-    :cond_1
-    return-void
+    return-object v2
 .end method
 
-.method public static A01(Landroid/content/res/Resources;)V
+.method public static constructor <clinit>()V
     .locals 6
 
     .line 0
-    sget-boolean v0, LX/1jQ;->A01:Z
+    const/4 v5, 0x2
 
     .line 1
-    .line 2
-    const/4 v5, 0x1
+    new-array v2, v5, [Ljava/lang/String;
 
+    .line 2
     .line 3
-    if-nez v0, :cond_1
+    const/4 v4, 0x0
 
     .line 4
+    const-string v1, "DEBIT"
+
     .line 5
-    :try_start_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
     .line 6
+    aput-object v1, v2, v4
+
     .line 7
-    const/16 v0, 0x18
-
     .line 8
-    .line 9
-    if-ge v1, v0, :cond_0
+    const-string v0, "CREDIT_CARD_CATEGORY_DEBIT"
 
+    .line 9
     .line 10
+    const/4 v3, 0x1
+
     .line 11
-    const-string/jumbo v4, "flush"
+    aput-object v0, v2, v3
 
     .line 12
     .line 13
+    new-instance v0, LX/1Jq;
+
     .line 14
+    .line 15
+    invoke-direct {v0, v1, v4, v2}, LX/1Jq;-><init>(Ljava/lang/String;I[Ljava/lang/String;)V
+
+    .line 16
+    .line 17
+    .line 18
+    sput-object v0, LX/1Jq;->DEBIT:LX/1Jq;
+
+    .line 19
+    .line 20
+    new-array v2, v5, [Ljava/lang/String;
+
+    .line 21
+    .line 22
+    const-string v1, "CREDIT"
+
+    .line 23
+    .line 24
+    aput-object v1, v2, v4
+
+    .line 25
+    .line 26
+    const-string v0, "CREDIT_CARD_CATEGORY_CREDIT"
+
+    .line 27
+    .line 28
+    aput-object v0, v2, v3
+
+    .line 29
+    .line 30
+    new-instance v0, LX/1Jq;
+
+    .line 31
+    .line 32
+    invoke-direct {v0, v1, v3, v2}, LX/1Jq;-><init>(Ljava/lang/String;I[Ljava/lang/String;)V
+
+    .line 33
+    .line 34
+    .line 35
+    sput-object v0, LX/1Jq;->CREDIT:LX/1Jq;
+
+    .line 36
+    .line 37
+    new-array v2, v5, [Ljava/lang/String;
+
+    .line 38
+    .line 39
+    const-string v1, "PREPAID"
+
+    .line 40
+    .line 41
+    aput-object v1, v2, v4
+
+    .line 42
+    .line 43
+    const-string v0, "CREDIT_CARD_CATEGORY_PREPAID"
+
+    .line 44
+    .line 45
+    aput-object v0, v2, v3
+
+    .line 46
+    .line 47
+    new-instance v0, LX/1Jq;
+
+    .line 48
+    .line 49
+    invoke-direct {v0, v1, v5, v2}, LX/1Jq;-><init>(Ljava/lang/String;I[Ljava/lang/String;)V
+
+    .line 50
+    .line 51
+    .line 52
+    sput-object v0, LX/1Jq;->PREPAID:LX/1Jq;
+
+    .line 53
+    .line 54
+    new-array v3, v3, [Ljava/lang/String;
+
+    .line 55
+    .line 56
+    const-string v2, "UNKNOWN"
+
+    .line 57
+    .line 58
+    aput-object v2, v3, v4
+
+    .line 59
+    .line 60
+    const/4 v1, 0x3
+
+    .line 61
+    new-instance v0, LX/1Jq;
+
+    .line 62
+    .line 63
+    invoke-direct {v0, v2, v1, v3}, LX/1Jq;-><init>(Ljava/lang/String;I[Ljava/lang/String;)V
+
+    .line 64
+    .line 65
+    .line 66
+    sput-object v0, LX/1Jq;->UNKNOWN:LX/1Jq;
+
+    .line 67
+    .line 68
+    invoke-static {}, LX/1Jq;->$values()[LX/1Jq;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v0
+
+    .line 72
+    sput-object v0, LX/1Jq;->$VALUES:[LX/1Jq;
+
+    .line 73
+    .line 74
+    return-void
+.end method
+
+.method public varargs constructor <init>(Ljava/lang/String;I[Ljava/lang/String;)V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {p3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/1Jq;->values:Ljava/util/List;
+
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public static forValue(Ljava/lang/String;)LX/1Jq;
+    .locals 6
+
+    .line 0
+    invoke-static {}, LX/1Jq;->values()[LX/1Jq;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v5
+
+    .line 4
+    array-length v4, v5
+
+    .line 5
+    const/4 v3, 0x0
+
+    .line 6
     :goto_0
-    const-string v0, "androidx.appcompat.app.ResourcesFlusher"
+    if-ge v3, v4, :cond_0
+
+    .line 7
+    .line 8
+    aget-object v2, v5, v3
+
+    .line 9
+    .line 10
+    invoke-virtual {v2}, LX/1Jq;->getValues()Ljava/util/List;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v1
+
+    .line 14
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     .line 15
     .line 16
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     .line 17
     .line 18
     .line 19
-    move-result-object v3
+    move-result-object v0
 
     .line 20
-    new-array v2, v5, [Ljava/lang/Class;
+    invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     .line 21
     .line 22
-    const/4 v1, 0x0
-
     .line 23
-    const-class v0, Landroid/content/res/Resources;
+    move-result v0
 
     .line 24
-    .line 25
-    invoke-static {v3, v0, v4, v2, v1}, LX/0Yh;->A0h(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;I)Ljava/lang/reflect/Method;
+    if-nez v0, :cond_1
 
+    .line 25
     .line 26
+    add-int/lit8 v3, v3, 0x1
+
     .line 27
     .line 28
-    move-result-object v0
+    goto :goto_0
 
     .line 29
-    invoke-virtual {v0, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :cond_0
+    sget-object v2, LX/1Jq;->UNKNOWN:LX/1Jq;
 
     .line 30
     .line 31
-    .line 32
-    sput-object v0, LX/1jQ;->A00:Ljava/lang/reflect/Method;
-
-    .line 33
-    .line 34
-    goto :goto_1
-
-    .line 35
-    :cond_0
-    const-string/jumbo v4, "flushNougats"
-
-    .line 36
-    .line 37
-    .line 38
-    goto :goto_0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 39
-    :catchall_0
-    :goto_1
-    sput-boolean v5, LX/1jQ;->A01:Z
-
-    .line 40
-    .line 41
     :cond_1
-    sget-object v2, LX/1jQ;->A00:Ljava/lang/reflect/Method;
+    return-object v2
+.end method
 
-    .line 42
-    .line 43
-    if-eqz v2, :cond_2
+.method public static valueOf(Ljava/lang/String;)LX/1Jq;
+    .locals 1
 
-    .line 44
-    .line 45
-    const/4 v1, 0x0
+    .line 0
+    const-class v0, LX/1Jq;
 
-    .line 46
-    :try_start_1
-    invoke-static {p0, v5}, LX/0Yg;->A1Y(Ljava/lang/Object;I)[Ljava/lang/Object;
+    .line 1
+    .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 47
-    .line 48
-    .line 49
+    .line 3
+    .line 4
+    .line 5
     move-result-object v0
 
-    .line 50
-    invoke-virtual {v2, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .line 6
+    check-cast v0, LX/1Jq;
 
-    .line 51
-    .line 52
-    .line 53
-    :catchall_1
-    :cond_2
-    return-void
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/1Jq;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/1Jq;->$VALUES:[LX/1Jq;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/1Jq;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getValues()Ljava/util/List;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/1Jq;->values:Ljava/util/List;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method

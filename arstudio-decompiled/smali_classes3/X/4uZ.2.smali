@@ -1,31 +1,22 @@
-.class public abstract LX/4uZ;
+.class public final synthetic LX/4uZ;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/4ua;
+
+
+# instance fields
+.field public final synthetic A00:LX/4uW;
+
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(LX/4uW;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 0
+    iput-object p1, p0, LX/4uZ;->A00:LX/4uW;
 
     return-void
 .end method

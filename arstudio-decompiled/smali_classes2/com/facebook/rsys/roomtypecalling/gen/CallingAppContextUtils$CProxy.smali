@@ -16,7 +16,7 @@
     return-void
 .end method
 
-.method public static native createCallContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/util/HashSet;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/rsys/callcontext/gen/CallContext;
+.method public static native createCallContext(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/util/HashSet;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lcom/facebook/rsys/callcontext/gen/CallContext;
 .end method
 
 .method public static native createCallContextFromJson(Ljava/lang/String;Ljava/lang/String;[B)Lcom/facebook/rsys/callcontext/gen/CallContext;
@@ -41,6 +41,9 @@
 .end method
 
 .method public static native getImmersiveModeDoorId(Lcom/facebook/rsys/callcontext/gen/CallContext;)Ljava/lang/String;
+.end method
+
+.method public static native getIsMetaAiCall(Lcom/facebook/rsys/callcontext/gen/CallContext;)Z
 .end method
 
 .method public static native getLinkUrl(Lcom/facebook/rsys/callcontext/gen/CallContext;)Ljava/lang/String;

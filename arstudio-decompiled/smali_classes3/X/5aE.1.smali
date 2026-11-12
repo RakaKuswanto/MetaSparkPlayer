@@ -1,134 +1,239 @@
-.class public final LX/5aE;
+.class public final LX/5ae;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements LX/3gS;
+.implements Ljava/io/Serializable;
 
 
 # static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaPipelineController$RenderManagerDelegateImpl$3"
+.field public static final A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
 
 # instance fields
-.field public final synthetic A00:LX/5aD;
+.field public volatile _value:Ljava/lang/Object;
+
+.field public final final:Ljava/lang/Object;
+
+.field public volatile initializer:LX/0Gw;
 
 
 # direct methods
-.method public constructor <init>(LX/5aD;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    iput-object p1, p0, LX/5aE;->A00:LX/5aD;
+    const-class v2, LX/5ae;
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v1, Ljava/lang/Object;
 
     .line 3
     .line 4
+    const-string v0, "_value"
+
     .line 5
+    .line 6
+    invoke-static {v2, v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    sput-object v0, LX/5ae;->A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    .line 11
+    .line 12
     return-void
+.end method
+
+.method public constructor <init>(LX/0Gw;)V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/5ae;->initializer:LX/0Gw;
+
+    .line 4
+    .line 5
+    sget-object v0, LX/5ag;->A00:LX/5ag;
+
+    .line 6
+    .line 7
+    iput-object v0, p0, LX/5ae;->_value:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/5ae;->final:Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method private final writeReplace()Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    invoke-virtual {p0}, LX/5ae;->getValue()Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    new-instance v0, LX/5af;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v1}, LX/5af;-><init>(Ljava/lang/Object;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final APJ()Z
+    .locals 2
 
     .line 0
-    iget-object v0, p0, LX/5aE;->A00:LX/5aD;
+    iget-object v1, p0, LX/5ae;->_value:Ljava/lang/Object;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/5aD;->A00:LX/5a1;
+    sget-object v0, LX/5ag;->A00:LX/5ag;
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/5a1;->A01:LX/5aM;
+    invoke-static {v1, v0}, LX/0X4;->A1V(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 5
     .line 6
-    if-eqz v0, :cond_0
+    .line 7
+    move-result v0
+
+    .line 8
+    return v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 3
+
+    .line 0
+    iget-object v2, p0, LX/5ae;->_value:Ljava/lang/Object;
+
+    .line 1
+    .line 2
+    sget-object v1, LX/5ag;->A00:LX/5ag;
+
+    .line 3
+    .line 4
+    if-ne v2, v1, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/5ae;->initializer:LX/0Gw;
 
     .line 7
     .line 8
-    iget-object v4, v0, LX/5aM;->A00:LX/5b7;
+    if-eqz v0, :cond_1
 
     .line 9
     .line 10
-    iget-object v3, v4, LX/5a1;->A0I:Landroid/content/Context;
+    invoke-interface {v0}, LX/0Gw;->invoke()Ljava/lang/Object;
 
     .line 11
     .line 12
-    sget-object v2, LX/5bO;->A04:Ljava/util/List;
-
     .line 13
+    move-result-object v2
+
     .line 14
-    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    sget-object v0, LX/5ae;->A00:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     .line 15
     .line 16
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    invoke-static {p0, v1, v2, v0}, LX/5by;->A00(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)Z
 
     .line 17
     .line 18
     .line 19
-    move-result-object v0
+    move-result v0
 
     .line 20
-    invoke-virtual {v1, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    if-eqz v0, :cond_1
 
     .line 21
     .line 22
-    .line 23
-    move-result-object v0
-
-    .line 24
-    invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    .line 25
-    .line 26
-    .line 27
-    move-result v0
-
-    .line 28
-    if-nez v0, :cond_0
-
-    .line 29
-    .line 30
-    invoke-static {v3}, LX/0KJ;->A00(Landroid/content/Context;)I
-
-    .line 31
-    .line 32
-    .line 33
-    move-result v1
-
-    .line 34
-    const/16 v0, 0x7dc
-
-    .line 35
-    .line 36
-    if-le v1, v0, :cond_0
-
-    .line 37
-    .line 38
-    iget-object v1, v4, LX/5b7;->A04:LX/5pn;
-
-    .line 39
-    .line 40
-    if-eqz v1, :cond_0
-
-    .line 41
-    .line 42
     const/4 v0, 0x0
 
-    .line 43
-    invoke-virtual {v1, v0, v0}, LX/5pn;->A06(LX/5ow;Landroid/os/Handler;)V
+    .line 23
+    iput-object v0, p0, LX/5ae;->initializer:LX/0Gw;
 
-    .line 44
-    .line 45
-    .line 46
+    .line 24
+    .line 25
     :cond_0
-    return-void
+    return-object v2
+
+    .line 26
+    :cond_1
+    iget-object v2, p0, LX/5ae;->_value:Ljava/lang/Object;
+
+    .line 27
+    .line 28
+    return-object v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/5ae;->APJ()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {p0}, LX/5ae;->getValue()Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+
+    .line 15
+    :cond_0
+    const-string v0, "Lazy value not initialized yet."
+
+    .line 16
+    .line 17
+    return-object v0
 .end method

@@ -31,10 +31,46 @@
     return-void
 .end method
 
+.method private readObject(Ljava/io/ObjectInputStream;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stream"
+        }
+    .end annotation
+
+    .line 0
+    const-string v1, "Use EntrySetSerializedForm"
+
+    .line 1
+    .line 2
+    new-instance v0, Ljava/io/InvalidObjectException;
+
+    .line 3
+    .line 4
+    invoke-direct {v0, v1}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    throw v0
+.end method
+
 
 # virtual methods
 .method public final contains(Ljava/lang/Object;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
 
     .line 0
     instance-of v0, p1, Ljava/util/Map$Entry;

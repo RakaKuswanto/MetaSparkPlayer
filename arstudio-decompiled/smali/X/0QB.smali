@@ -3,33 +3,9 @@
 .source ""
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements LX/07B;
 
 
 # virtual methods
-.method public abstract AE9()I
-.end method
-
-.method public abstract AED()J
-.end method
-
-.method public abstract AJj()I
-.end method
-
-.method public abstract AJl()J
-.end method
-
-.method public abstract AMs()Ljava/lang/String;
-.end method
-
-.method public abstract ANO()I
-.end method
-
-.method public abstract AOO()Ljava/util/Iterator;
-.end method
-
-.method public abstract AS5()Ljava/util/Iterator;
-.end method
-
-.method public abstract close()V
+.method public abstract AHp()LX/00M;
 .end method

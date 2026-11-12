@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="time_days_ago">
+        <item quantity="other">ojapo %1$d ára</item>
+        <item quantity="one">ojapohína peteï aravo</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d ára</item>
+        <item quantity="one">1 ára</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d ára</item>
+        <item quantity="one">1 ára</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d aravo</item>
+        <item quantity="one">1 Aravo</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">"%1$d aravo'i"</item>
+        <item quantity="one">"1 aravo'i"</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d jasy</item>
+        <item quantity="one">1 jasy</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">1 aravo´i</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d arapokôindy</item>
+        <item quantity="one">1 arapokôindy</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">%1$d ára miêve</item>
+        <item quantity="one">1 more day</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d years</item>
+        <item quantity="one">1 ary</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">ojapohína %1$d aravo</item>
+        <item quantity="one">Ojapo peteï aravo</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d aravo</item>
+        <item quantity="one">1 aravo</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">%1$d aravo</item>
+        <item quantity="one">1 aravo</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">ojapohína %1$d aravo</item>
+        <item quantity="one">"ojapohína peteï aravo'i"</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">"%1$d aravo'i"</item>
+        <item quantity="one">"1 aravo'i"</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$dm</item>
+        <item quantity="one">"1 aravo'i"</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">Ojapo %1$d jasy</item>
+        <item quantity="one">Ojapo 1 jasy</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">ojapohína %1$d segúndo</item>
+        <item quantity="one">1 aravo´i</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">ojapo %1$d arapokôindy</item>
+        <item quantity="one">1 week ago</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">%1$d hrs left</item>
+        <item quantity="one">Hemby 1 aravóntema</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">Ojapo %1$d ary</item>
+        <item quantity="one">Ojapo 1 ary</item>
+    </plurals>
+</resources>

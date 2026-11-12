@@ -7,10 +7,10 @@
 .method public abstract lookup(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end method
 
-.method public abstract publishBuilder(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract publishBuilder(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end method
 
-.method public abstract publishBuilderWithFullConsistency(LX/19O;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract publishBuilderWithFullConsistency(LX/1gF;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end method
 
 .method public abstract subscribe(Ljava/lang/Object;Lcom/facebook/graphservice/interfaces/GraphQLService$DataCallbacks;Ljava/util/concurrent/Executor;)Lcom/facebook/graphservice/interfaces/GraphQLService$Token;

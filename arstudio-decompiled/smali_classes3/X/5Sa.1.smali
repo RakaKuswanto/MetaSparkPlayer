@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/facebook/quicklog/EventBuilder;
+.implements LX/5S6;
 
 
 # direct methods
@@ -21,88 +21,30 @@
 
 
 # virtual methods
-.method public final annotate(Ljava/lang/String;D)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;I)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;J)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;Z)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[D)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[I)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[J)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[Ljava/lang/String;)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final annotate(Ljava/lang/String;[Z)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final isSampled()Z
+.method public final AMh()F
     .locals 1
 
-    const/4 v0, 0x0
+    const/high16 v0, 0x3f800000    # 1.0f
 
     return v0
 .end method
 
-.method public final report()V
+.method public final Ajb(LX/5Rd;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final setActionId(S)Lcom/facebook/quicklog/EventBuilder;
-    .locals 0
+.method public final ApJ(ZI)I
+    .locals 1
 
-    return-object p0
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public final setLevel(I)Lcom/facebook/quicklog/EventBuilder;
+.method public final release()V
     .locals 0
 
-    return-object p0
+    return-void
 .end method

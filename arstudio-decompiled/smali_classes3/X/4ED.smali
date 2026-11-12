@@ -1,23 +1,13 @@
-.class public final LX/4ED;
+.class public abstract LX/4ED;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final serialVersionUID:J = 0x2L
-
-
-# instance fields
-.field public final mHeight:J
-
-.field public final mWidth:J
+.implements LX/4c8;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -26,13 +16,5 @@
     .line 1
     .line 2
     .line 3
-    iput-wide p1, p0, LX/4ED;->mWidth:J
-
-    .line 4
-    .line 5
-    iput-wide p3, p0, LX/4ED;->mHeight:J
-
-    .line 6
-    .line 7
     return-void
 .end method

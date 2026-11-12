@@ -1,372 +1,249 @@
-.class public final LX/4as;
-.super Ljava/lang/Object;
+.class public final enum LX/4aS;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements LX/4d0;
-.implements Landroid/content/DialogInterface$OnClickListener;
-.implements Landroid/content/DialogInterface$OnDismissListener;
-.implements Landroid/content/DialogInterface$OnKeyListener;
+
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/4aS;
+
+.field public static final enum BOLD:LX/4aS;
+
+.field public static final enum MEDIUM:LX/4aS;
+
+.field public static final enum NORMAL:LX/4aS;
+
+.field public static final enum SEMIBOLD:LX/4aS;
 
 
 # instance fields
-.field public A00:LX/4an;
-
-.field public A01:LX/4ar;
-
-.field public A02:LX/4ay;
+.field public final value:I
 
 
 # direct methods
-.method public constructor <init>(LX/4ay;)V
+.method public static final synthetic $values()[LX/4aS;
+    .locals 3
+
+    const/4 v0, 0x4
+
+    new-array v2, v0, [LX/4aS;
+
+    sget-object v1, LX/4aS;->NORMAL:LX/4aS;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4aS;->MEDIUM:LX/4aS;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4aS;->SEMIBOLD:LX/4aS;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/4aS;->BOLD:LX/4aS;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 0
+    const-string v3, "NORMAL"
+
+    .line 1
+    .line 2
+    const/4 v2, 0x0
+
+    .line 3
+    const/16 v1, 0x190
+
+    .line 4
+    .line 5
+    new-instance v0, LX/4aS;
+
+    .line 6
+    .line 7
+    invoke-direct {v0, v3, v2, v1}, LX/4aS;-><init>(Ljava/lang/String;II)V
+
+    .line 8
+    .line 9
+    .line 10
+    sput-object v0, LX/4aS;->NORMAL:LX/4aS;
+
+    .line 11
+    .line 12
+    const-string v3, "MEDIUM"
+
+    .line 13
+    .line 14
+    const/4 v2, 0x1
+
+    .line 15
+    const/16 v1, 0x1f4
+
+    .line 16
+    .line 17
+    new-instance v0, LX/4aS;
+
+    .line 18
+    .line 19
+    invoke-direct {v0, v3, v2, v1}, LX/4aS;-><init>(Ljava/lang/String;II)V
+
+    .line 20
+    .line 21
+    .line 22
+    sput-object v0, LX/4aS;->MEDIUM:LX/4aS;
+
+    .line 23
+    .line 24
+    const-string v3, "SEMIBOLD"
+
+    .line 25
+    .line 26
+    const/4 v2, 0x2
+
+    .line 27
+    const/16 v1, 0x258
+
+    .line 28
+    .line 29
+    new-instance v0, LX/4aS;
+
+    .line 30
+    .line 31
+    invoke-direct {v0, v3, v2, v1}, LX/4aS;-><init>(Ljava/lang/String;II)V
+
+    .line 32
+    .line 33
+    .line 34
+    sput-object v0, LX/4aS;->SEMIBOLD:LX/4aS;
+
+    .line 35
+    .line 36
+    const-string v3, "BOLD"
+
+    .line 37
+    .line 38
+    const/4 v2, 0x3
+
+    .line 39
+    const/16 v1, 0x2bc
+
+    .line 40
+    .line 41
+    new-instance v0, LX/4aS;
+
+    .line 42
+    .line 43
+    invoke-direct {v0, v3, v2, v1}, LX/4aS;-><init>(Ljava/lang/String;II)V
+
+    .line 44
+    .line 45
+    .line 46
+    sput-object v0, LX/4aS;->BOLD:LX/4aS;
+
+    .line 47
+    .line 48
+    invoke-static {}, LX/4aS;->$values()[LX/4aS;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    sput-object v0, LX/4aS;->$VALUES:[LX/4aS;
+
+    .line 53
+    .line 54
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    sput-object v0, LX/4aS;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 59
+    .line 60
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/4as;->A02:LX/4ay;
+    iput p3, p0, LX/4aS;->value:I
 
     .line 4
     .line 5
     return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/4aS;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/4aS;
+    .locals 1
+
+    const-class v0, LX/4aS;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/4aS;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/4aS;
+    .locals 1
+
+    sget-object v0, LX/4aS;->$VALUES:[LX/4aS;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/4aS;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final AW6(LX/4ay;Z)V
+.method public final getValue()I
     .locals 1
 
     .line 0
-    if-nez p2, :cond_0
+    iget v0, p0, LX/4aS;->value:I
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/4as;->A02:LX/4ay;
-
-    .line 3
-    .line 4
-    if-ne p1, v0, :cond_1
-
-    .line 5
-    .line 6
-    :cond_0
-    iget-object v0, p0, LX/4as;->A00:LX/4an;
-
-    .line 7
-    .line 8
-    if-eqz v0, :cond_1
-
-    .line 9
-    .line 10
-    invoke-virtual {v0}, LX/4bZ;->dismiss()V
-
-    .line 11
-    .line 12
-    .line 13
-    :cond_1
-    return-void
-.end method
-
-.method public final AaO(LX/4ay;)Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
     return v0
-.end method
-
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 4
-
-    .line 0
-    iget-object v3, p0, LX/4as;->A02:LX/4ay;
-
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/4as;->A01:LX/4ar;
-
-    .line 3
-    .line 4
-    iget-object v0, v1, LX/4ar;->A03:LX/4au;
-
-    .line 5
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    .line 8
-    new-instance v0, LX/4au;
-
-    .line 9
-    .line 10
-    invoke-direct {v0, v1}, LX/4au;-><init>(LX/4ar;)V
-
-    .line 11
-    .line 12
-    .line 13
-    iput-object v0, v1, LX/4ar;->A03:LX/4au;
-
-    .line 14
-    .line 15
-    :cond_0
-    invoke-virtual {v0, p2}, LX/4au;->getItem(I)Ljava/lang/Object;
-
-    .line 16
-    .line 17
-    .line 18
-    move-result-object v2
-
-    .line 19
-    check-cast v2, LX/4ax;
-
-    .line 20
-    .line 21
-    const/4 v1, 0x0
-
-    .line 22
-    const/4 v0, 0x0
-
-    .line 23
-    invoke-virtual {v3, v2, v0, v1}, LX/4ay;->A0J(Landroid/view/MenuItem;LX/4c6;I)Z
-
-    .line 24
-    .line 25
-    .line 26
-    return-void
-.end method
-
-.method public final onDismiss(Landroid/content/DialogInterface;)V
-    .locals 3
-
-    .line 0
-    iget-object v2, p0, LX/4as;->A01:LX/4ar;
-
-    .line 1
-    .line 2
-    iget-object v1, p0, LX/4as;->A02:LX/4ay;
-
-    .line 3
-    .line 4
-    const/4 v0, 0x1
-
-    .line 5
-    invoke-virtual {v2, v1, v0}, LX/4ar;->AW6(LX/4ay;Z)V
-
-    .line 6
-    .line 7
-    .line 8
-    return-void
-.end method
-
-.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 2
-
-    .line 0
-    const/16 v0, 0x52
-
-    .line 1
-    .line 2
-    if-eq p2, v0, :cond_0
-
-    .line 3
-    .line 4
-    const/4 v0, 0x4
-
-    .line 5
-    if-ne p2, v0, :cond_2
-
-    .line 6
-    .line 7
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    .line 8
-    .line 9
-    .line 10
-    move-result v0
-
-    .line 11
-    const/4 v1, 0x1
-
-    .line 12
-    if-nez v0, :cond_1
-
-    .line 13
-    .line 14
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getRepeatCount()I
-
-    .line 15
-    .line 16
-    .line 17
-    move-result v0
-
-    .line 18
-    if-nez v0, :cond_1
-
-    .line 19
-    .line 20
-    iget-object v0, p0, LX/4as;->A00:LX/4an;
-
-    .line 21
-    .line 22
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    .line 23
-    .line 24
-    .line 25
-    move-result-object v0
-
-    .line 26
-    if-eqz v0, :cond_2
-
-    .line 27
-    .line 28
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
-    if-eqz v0, :cond_2
-
-    .line 33
-    .line 34
-    invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
-
-    .line 35
-    .line 36
-    .line 37
-    move-result-object v0
-
-    .line 38
-    if-eqz v0, :cond_2
-
-    .line 39
-    .line 40
-    invoke-virtual {v0, p3, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
-
-    .line 41
-    .line 42
-    .line 43
-    return v1
-
-    .line 44
-    :cond_1
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    .line 45
-    .line 46
-    .line 47
-    move-result v0
-
-    .line 48
-    if-ne v0, v1, :cond_2
-
-    .line 49
-    .line 50
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->isCanceled()Z
-
-    .line 51
-    .line 52
-    .line 53
-    move-result v0
-
-    .line 54
-    if-nez v0, :cond_2
-
-    .line 55
-    .line 56
-    iget-object v0, p0, LX/4as;->A00:LX/4an;
-
-    .line 57
-    .line 58
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    .line 59
-    .line 60
-    .line 61
-    move-result-object v0
-
-    .line 62
-    if-eqz v0, :cond_2
-
-    .line 63
-    .line 64
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    .line 65
-    .line 66
-    .line 67
-    move-result-object v0
-
-    .line 68
-    if-eqz v0, :cond_2
-
-    .line 69
-    .line 70
-    invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
-
-    .line 71
-    .line 72
-    .line 73
-    move-result-object v0
-
-    .line 74
-    if-eqz v0, :cond_2
-
-    .line 75
-    .line 76
-    invoke-virtual {v0, p3}, Landroid/view/KeyEvent$DispatcherState;->isTracking(Landroid/view/KeyEvent;)Z
-
-    .line 77
-    .line 78
-    .line 79
-    move-result v0
-
-    .line 80
-    if-eqz v0, :cond_2
-
-    .line 81
-    .line 82
-    iget-object v0, p0, LX/4as;->A02:LX/4ay;
-
-    .line 83
-    .line 84
-    invoke-virtual {v0, v1}, LX/4ay;->A0D(Z)V
-
-    .line 85
-    .line 86
-    .line 87
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    .line 88
-    .line 89
-    .line 90
-    return v1
-
-    .line 91
-    :cond_2
-    iget-object v1, p0, LX/4as;->A02:LX/4ay;
-
-    .line 92
-    .line 93
-    const/4 v0, 0x0
-
-    .line 94
-    invoke-virtual {v1, p2, p3, v0}, LX/4ay;->performShortcut(ILandroid/view/KeyEvent;I)Z
-
-    .line 95
-    .line 96
-    .line 97
-    move-result v1
-
-    .line 98
-    return v1
 .end method

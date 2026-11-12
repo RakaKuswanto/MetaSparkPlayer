@@ -37,11 +37,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x2e
+    const/16 v0, 0x5b
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -65,7 +65,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -128,7 +128,7 @@
 
     .line 31
     .line 32
-    invoke-static {p1, v6, v1, v0}, LX/0Yf;->A04(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
+    invoke-static {p1, v6, v1, v0}, LX/0X2;->A05(Landroid/os/Parcel;Ljava/lang/ClassLoader;[Ljava/lang/Object;I)I
 
     .line 33
     .line 34
@@ -164,7 +164,7 @@
 
     .line 47
     .line 48
-    invoke-static {p1, v0, v2, v1}, LX/0Yf;->A03(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
+    invoke-static {p1, v0, v2, v1}, LX/0X2;->A04(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
 
     .line 49
     .line 50
@@ -205,7 +205,7 @@
 
     .line 65
     .line 66
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 67
     .line 68
@@ -226,30 +226,31 @@
 
     .line 75
     .line 76
-    invoke-static {p1, v1, v4}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v1}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 77
     .line 78
     .line 79
-    move-result v4
+    add-int/lit8 v4, v4, 0x1
 
     .line 80
+    .line 81
     goto :goto_3
 
-    .line 81
+    .line 82
     :cond_4
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 82
     .line 83
     .line 84
+    .line 85
     move-result-object v0
 
-    .line 85
+    .line 86
     iput-object v0, p0, Lcom/facebook/media/model/features/MediaFeatures;->A02:Ljava/util/Set;
 
-    .line 86
     .line 87
+    .line 88
     return-void
 .end method
 
@@ -281,87 +282,88 @@
 
     .line 1
     .line 2
-    const-string v0, "faces"
+    const-string/jumbo v0, "faces"
 
     .line 3
     .line 4
+    .line 5
     invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    .line 5
     .line 6
     .line 7
+    .line 8
     move-result v0
 
-    .line 8
+    .line 9
     if-eqz v0, :cond_0
 
-    .line 9
     .line 10
+    .line 11
     iget-object v0, p0, Lcom/facebook/media/model/features/MediaFeatures;->A00:Lcom/google/common/collect/ImmutableList;
 
-    .line 11
     .line 12
+    .line 13
     return-object v0
 
-    .line 13
+    .line 14
     :cond_0
     sget-object v0, Lcom/facebook/media/model/features/MediaFeatures;->A03:Lcom/google/common/collect/ImmutableList;
 
-    .line 14
     .line 15
+    .line 16
     if-nez v0, :cond_2
 
-    .line 16
     .line 17
+    .line 18
     monitor-enter p0
 
-    .line 18
+    .line 19
     :try_start_0
     sget-object v0, Lcom/facebook/media/model/features/MediaFeatures;->A03:Lcom/google/common/collect/ImmutableList;
 
-    .line 19
     .line 20
+    .line 21
     if-nez v0, :cond_1
 
-    .line 21
     .line 22
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
-
     .line 23
+    invoke-static {}, LX/0X6;->A0b()Lcom/google/common/collect/ImmutableList;
+
     .line 24
     .line 25
+    .line 26
     move-result-object v0
 
-    .line 26
+    .line 27
     sput-object v0, Lcom/facebook/media/model/features/MediaFeatures;->A03:Lcom/google/common/collect/ImmutableList;
 
-    .line 27
     .line 28
+    .line 29
     :cond_1
     monitor-exit p0
 
-    .line 29
+    .line 30
     goto :goto_0
 
-    .line 30
+    .line 31
     :catchall_0
     move-exception v0
 
-    .line 31
+    .line 32
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 32
+    .line 33
     throw v0
 
-    .line 33
+    .line 34
     :cond_2
     :goto_0
     sget-object v0, Lcom/facebook/media/model/features/MediaFeatures;->A03:Lcom/google/common/collect/ImmutableList;
 
-    .line 34
     .line 35
+    .line 36
     return-object v0
 .end method
 
@@ -418,7 +420,7 @@
 
     .line 22
     .line 23
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+    invoke-static {}, LX/0X6;->A0b()Lcom/google/common/collect/ImmutableList;
 
     .line 24
     .line 25
@@ -508,7 +510,7 @@
     move-result-object v0
 
     .line 18
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 19
     .line 20
@@ -536,7 +538,7 @@
     move-result-object v0
 
     .line 32
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 33
     .line 34
@@ -568,7 +570,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 5
     .line 6
@@ -588,7 +590,7 @@
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 15
     .line 16
@@ -641,7 +643,7 @@
 
     .line 16
     .line 17
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
     .line 18
     .line 19
@@ -662,7 +664,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 28
     .line 29
@@ -671,7 +673,7 @@
 
     .line 31
     :cond_2
-    invoke-static {p1, v0}, LX/0Yc;->A01(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0E(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 32
     .line 33
@@ -713,7 +715,7 @@
 
     .line 51
     :cond_3
-    invoke-static {p1, v0}, LX/0Yc;->A01(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0E(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 52
     .line 53

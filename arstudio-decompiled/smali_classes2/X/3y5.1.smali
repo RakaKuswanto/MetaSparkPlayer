@@ -1,30 +1,31 @@
 .class public final LX/3y5;
-.super LX/3yc;
+.super LX/3nV;
 .source ""
 
 
 # instance fields
-.field public final A00:Landroid/content/res/Resources;
+.field public final A00:Ljava/lang/String;
+
+.field public final A01:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;LX/3yt;Ljava/util/concurrent/Executor;)V
+.method public constructor <init>(Ljava/lang/String;Lcom/facebook/video/common/playerorigin/PlayerOrigin;)V
     .locals 0
 
     .line 0
-    invoke-static {p3, p2, p1}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p0}, LX/3nV;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-direct {p0, p2, p3}, LX/3yc;-><init>(LX/3yt;Ljava/util/concurrent/Executor;)V
+    iput-object p1, p0, LX/3y5;->A00:Ljava/lang/String;
 
     .line 4
     .line 5
-    .line 6
-    iput-object p1, p0, LX/3y5;->A00:Landroid/content/res/Resources;
+    iput-object p2, p0, LX/3y5;->A01:Lcom/facebook/video/common/playerorigin/PlayerOrigin;
 
+    .line 6
     .line 7
-    .line 8
     return-void
 .end method

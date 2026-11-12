@@ -1,79 +1,60 @@
-.class public final LX/2Ae;
-.super LX/2B2;
+.class public final LX/2ae;
+.super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public final synthetic A00:LX/2Ar;
-
-.field public final synthetic A01:Lcom/google/gson/Gson;
-
-.field public final synthetic A02:Lcom/google/gson/TypeAdapter;
-
-.field public final synthetic A03:Lcom/google/gson/reflect/TypeToken;
-
-.field public final synthetic A04:Ljava/lang/reflect/Field;
-
-.field public final synthetic A05:Ljava/lang/reflect/Method;
-
-.field public final synthetic A06:Z
-
-.field public final synthetic A07:Z
-
-.field public final synthetic A08:Z
-
-.field public final synthetic A09:Z
+# interfaces
+.implements LX/18h;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;LX/2Ar;Lcom/google/gson/reflect/TypeToken;Ljava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Field;Ljava/lang/reflect/Method;ZZZZZZ)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
-    iput-object p3, p0, LX/2Ae;->A00:LX/2Ar;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    iput-boolean p11, p0, LX/2Ae;->A06:Z
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final ACC()I
+    .locals 1
+
+    const/16 v0, 0x7480
+
+    return v0
+.end method
+
+.method public final AUc(I)V
+    .locals 2
+
+    .line 0
+    const-class v0, LX/6S9;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X3;->A0g(Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 3
     .line 4
-    iput-object p8, p0, LX/2Ae;->A05:Ljava/lang/reflect/Method;
-
     .line 5
+    move-result-object v1
+
     .line 6
-    iput-object p7, p0, LX/2Ae;->A04:Ljava/lang/reflect/Field;
+    check-cast v1, LX/6SA;
 
     .line 7
     .line 8
-    iput-boolean p12, p0, LX/2Ae;->A09:Z
+    const/4 v0, 0x0
 
     .line 9
+    iput-boolean v0, v1, LX/6SA;->A0Q:Z
+
     .line 10
-    iput-object p2, p0, LX/2Ae;->A02:Lcom/google/gson/TypeAdapter;
-
     .line 11
-    .line 12
-    iput-object p1, p0, LX/2Ae;->A01:Lcom/google/gson/Gson;
-
-    .line 13
-    .line 14
-    iput-object p4, p0, LX/2Ae;->A03:Lcom/google/gson/reflect/TypeToken;
-
-    .line 15
-    .line 16
-    iput-boolean p13, p0, LX/2Ae;->A07:Z
-
-    .line 17
-    .line 18
-    iput-boolean p14, p0, LX/2Ae;->A08:Z
-
-    .line 19
-    .line 20
-    invoke-direct {p0, p5, p6, p9, p10}, LX/2B2;-><init>(Ljava/lang/String;Ljava/lang/String;ZZ)V
-
-    .line 21
-    .line 22
-    .line 23
     return-void
 .end method

@@ -1,17 +1,19 @@
-.class public final LX/5xf;
+.class public final LX/5xF;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:Landroid/media/MediaCodec$CryptoInfo$Pattern;
+.field public A00:I
 
-.field public final A01:Landroid/media/MediaCodec$CryptoInfo;
+.field public A01:J
+
+.field public A02:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/media/MediaCodec$CryptoInfo;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -19,50 +21,79 @@
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/5xf;->A01:Landroid/media/MediaCodec$CryptoInfo;
-
-    .line 4
-    .line 5
-    const/4 v1, 0x0
-
-    .line 6
-    new-instance v0, Landroid/media/MediaCodec$CryptoInfo$Pattern;
-
-    .line 7
-    .line 8
-    invoke-direct {v0, v1, v1}, Landroid/media/MediaCodec$CryptoInfo$Pattern;-><init>(II)V
-
-    .line 9
-    .line 10
-    .line 11
-    iput-object v0, p0, LX/5xf;->A00:Landroid/media/MediaCodec$CryptoInfo$Pattern;
-
-    .line 12
-    .line 13
     return-void
 .end method
 
-.method public static synthetic A00(LX/5xf;II)V
-    .locals 2
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
     .line 0
-    iget-object v1, p0, LX/5xf;->A00:Landroid/media/MediaCodec$CryptoInfo$Pattern;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
-    invoke-virtual {v1, p1, p2}, Landroid/media/MediaCodec$CryptoInfo$Pattern;->set(II)V
-
     .line 3
+    move-result-object v2
+
     .line 4
+    const-string v0, "Sensor Settings: Frame Duration: "
+
     .line 5
-    iget-object v0, p0, LX/5xf;->A01:Landroid/media/MediaCodec$CryptoInfo;
-
     .line 6
-    .line 7
-    invoke-virtual {v0, v1}, Landroid/media/MediaCodec$CryptoInfo;->setPattern(Landroid/media/MediaCodec$CryptoInfo$Pattern;)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     .line 8
     .line 9
+    iget-wide v0, p0, LX/5xF;->A02:J
+
     .line 10
-    return-void
+    .line 11
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    .line 12
+    .line 13
+    .line 14
+    const-string v0, " Exposure Time: "
+
+    .line 15
+    .line 16
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 17
+    .line 18
+    .line 19
+    iget-wide v0, p0, LX/5xF;->A01:J
+
+    .line 20
+    .line 21
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    .line 22
+    .line 23
+    .line 24
+    const-string v0, " ISO: "
+
+    .line 25
+    .line 26
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 27
+    .line 28
+    .line 29
+    iget v0, p0, LX/5xF;->A00:I
+
+    .line 30
+    .line 31
+    invoke-static {v2, v0}, LX/0X5;->A0g(Ljava/lang/StringBuilder;I)Ljava/lang/String;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
+
+    .line 35
+    return-object v0
 .end method

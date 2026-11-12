@@ -1,23 +1,23 @@
-.class public final LX/2iC;
+.class public final LX/2Ic;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:LX/0Gk;
+.field public A00:LX/1rU;
 
-.field public final A01:Lcom/facebook/common/network/FbNetworkManager;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/0JA;
+.field public final A02:LX/0RP;
 
-.field public final A03:LX/2i7;
+.field public final A03:LX/0RP;
 
-.field public final A04:LX/0Gd;
+.field public final A04:LX/0RP;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 7
+.method public constructor <init>(LX/3Ft;)V
+    .locals 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,101 +25,94 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/1z6;->A06()LX/0Gk;
+    sget v0, LX/2I6;->AL0:I
 
     .line 4
     .line 5
+    const/4 v1, 0x0
+
     .line 6
-    move-result-object v1
+    invoke-static {v1, v0}, LX/3FX;->A02(LX/1rU;I)LX/3FX;
 
     .line 7
-    const/16 v0, 0x38
-
     .line 8
     .line 9
-    invoke-static {p0, v0}, LX/1Tn;->A00(Ljava/lang/Object;I)LX/1Tn;
+    move-result-object v0
 
     .line 10
+    iput-object v0, p0, LX/2Ic;->A02:LX/0RP;
+
     .line 11
     .line 12
-    move-result-object v6
+    sget v0, LX/2I6;->AKz:I
 
     .line 13
-    sget v0, LX/2eq;->A0M:I
-
     .line 14
-    .line 15
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
+    .line 15
     .line 16
     .line 17
+    move-result-object v0
+
     .line 18
-    move-result-object v5
+    iput-object v0, p0, LX/2Ic;->A01:LX/0RP;
 
     .line 19
-    check-cast v5, Lcom/facebook/common/network/FbNetworkManager;
-
     .line 20
+    sget v0, LX/2I6;->AL2:I
+
     .line 21
-    sget v0, LX/2eq;->A8k:I
-
     .line 22
-    .line 23
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v1, v0}, LX/3FX;->A02(LX/1rU;I)LX/3FX;
 
+    .line 23
     .line 24
     .line 25
+    move-result-object v2
+
     .line 26
-    move-result-object v4
+    iput-object v2, p0, LX/2Ic;->A04:LX/0RP;
 
     .line 27
-    check-cast v4, LX/2i7;
-
     .line 28
-    .line 29
-    invoke-static {}, LX/1z6;->A0B()LX/0JA;
+    sget v0, LX/2I6;->AL1:I
 
+    .line 29
     .line 30
+    invoke-static {v1, v0}, LX/3FX;->A02(LX/1rU;I)LX/3FX;
+
     .line 31
     .line 32
-    move-result-object v3
-
     .line 33
-    iput-object v1, p0, LX/2iC;->A00:LX/0Gk;
+    move-result-object v1
 
     .line 34
+    iput-object v1, p0, LX/2Ic;->A03:LX/0RP;
+
     .line 35
-    sget-object v2, Lcom/google/common/base/Predicates$ObjectPredicate;->NOT_NULL:Lcom/google/common/base/Predicates$ObjectPredicate;
-
     .line 36
+    invoke-static {p1}, LX/1rU;->A00(LX/3Ft;)LX/1rU;
+
     .line 37
-    const/4 v1, 0x1
-
     .line 38
-    new-instance v0, LX/1U4;
-
     .line 39
+    move-result-object v0
+
     .line 40
-    invoke-direct {v0, v6, v1, v2}, LX/1U4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput-object v0, p0, LX/2Ic;->A00:LX/1rU;
 
     .line 41
     .line 42
-    .line 43
-    iput-object v0, p0, LX/2iC;->A04:LX/0Gd;
+    invoke-virtual {v2}, LX/3FX;->get()Ljava/lang/Object;
 
+    .line 43
     .line 44
     .line 45
-    iput-object v5, p0, LX/2iC;->A01:Lcom/facebook/common/network/FbNetworkManager;
+    invoke-virtual {v1}, LX/3FX;->get()Ljava/lang/Object;
 
     .line 46
     .line 47
-    iput-object v4, p0, LX/2iC;->A03:LX/2i7;
-
     .line 48
-    .line 49
-    iput-object v3, p0, LX/2iC;->A02:LX/0JA;
-
-    .line 50
-    .line 51
     return-void
 .end method

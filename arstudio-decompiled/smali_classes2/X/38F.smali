@@ -2,57 +2,34 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FrameCallbackWrapper$2"
-
 
 # instance fields
-.field public final synthetic A00:LX/6J4;
+.field public final A00:J
+
+.field public final A01:J
+
+.field public final A02:Ljava/util/Set;
+
+.field public final A03:Z
+
+.field public final A04:Z
 
 
 # direct methods
-.method public constructor <init>(LX/6J4;)V
+.method public constructor <init>(Ljava/util/Set;JJZZ)V
     .locals 0
 
-    .line 0
-    iput-object p1, p0, LX/38F;->A00:LX/6J4;
-
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    .line 4
-    .line 5
-    return-void
-.end method
+    iput-wide p2, p0, LX/38F;->A00:J
 
+    iput-boolean p7, p0, LX/38F;->A04:Z
 
-# virtual methods
-.method public final run()V
-    .locals 3
+    iput-wide p4, p0, LX/38F;->A01:J
 
-    .line 0
-    iget-object v2, p0, LX/38F;->A00:LX/6J4;
+    iput-object p1, p0, LX/38F;->A02:Ljava/util/Set;
 
-    .line 1
-    .line 2
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    iput-boolean p6, p0, LX/38F;->A03:Z
 
-    .line 3
-    .line 4
-    .line 5
-    move-result-wide v0
-
-    .line 6
-    invoke-virtual {v2, v0, v1}, LX/6J4;->A02(J)V
-
-    .line 7
-    .line 8
-    .line 9
     return-void
 .end method

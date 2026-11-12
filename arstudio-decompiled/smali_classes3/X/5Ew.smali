@@ -1,17 +1,11 @@
-.class public LX/5Ew;
-.super LX/5Ev;
+.class public interface abstract LX/5EW;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>(LX/5Er;)V
-    .locals 0
+# virtual methods
+.method public abstract Ab2(Ljava/lang/Object;)V
+.end method
 
-    .line 0
-    invoke-direct {p0, p1}, LX/5Ev;-><init>(LX/5F6;)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract Ab3(Ljava/io/IOException;)V
 .end method

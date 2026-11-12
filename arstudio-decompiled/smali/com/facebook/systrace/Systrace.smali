@@ -1,4 +1,4 @@
-.class public final Lcom/facebook/systrace/Systrace;
+.class public abstract Lcom/facebook/systrace/Systrace;
 .super Ljava/lang/Object;
 .source ""
 
@@ -19,7 +19,7 @@
     const/4 v4, 0x1
 
     .line 1
-    sget-boolean v0, LX/0Aq;->A03:Z
+    sget-boolean v0, LX/0BH;->A03:Z
 
     .line 2
     .line 3
@@ -27,11 +27,11 @@
 
     .line 4
     .line 5
-    sget-object v2, LX/0Aq;->A02:Ljava/lang/reflect/Method;
+    sget-object v2, LX/0BH;->A02:Ljava/lang/reflect/Method;
 
     .line 6
     .line 7
-    invoke-static {v2}, LX/0Qb;->A00(Ljava/lang/Object;)V
+    invoke-static {v2}, LX/0Ms;->A00(Ljava/lang/Object;)V
 
     .line 8
     .line 9
@@ -48,16 +48,16 @@
     .line 14
     .line 15
     .line 16
-    invoke-static {v2, v1}, LX/0Aq;->A00(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v1}, LX/0BH;->A00(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 17
     .line 18
     .line 19
     :cond_0
-    const/4 v0, 0x5
+    const/4 v5, 0x0
 
     .line 20
-    invoke-static {v0}, LX/0YE;->A00(I)V
+    invoke-static {v5}, LX/0Kr;->A01(Z)V
 
     .line 21
     .line 22
@@ -75,11 +75,11 @@
 
     .line 29
     .line 30
-    new-instance v0, LX/0Nb;
+    new-instance v0, LX/01G;
 
     .line 31
     .line 32
-    invoke-direct {v0}, LX/0Nb;-><init>()V
+    invoke-direct {v0}, LX/01G;-><init>()V
 
     .line 33
     .line 34
@@ -88,107 +88,92 @@
 
     .line 36
     .line 37
-    const/4 v5, 0x0
-
-    .line 38
     const/4 v3, 0x2
 
-    .line 39
+    .line 38
     const/4 v0, 0x3
 
-    .line 40
+    .line 39
     new-array v2, v0, [[Ljava/lang/String;
 
+    .line 40
     .line 41
-    .line 42
     new-array v1, v3, [Ljava/lang/String;
 
+    .line 42
     .line 43
-    .line 44
     const-string v0, "com.facebook.common.fury.FBSystraceReqContextLifecycleCallbacks.onActivate"
 
+    .line 44
     .line 45
-    .line 46
     aput-object v0, v1, v5
 
+    .line 46
     .line 47
-    .line 48
     const-string v0, "com.facebook.common.fury.FBSystraceReqContextLifecycleCallbacks.onDeactivate"
 
+    .line 48
     .line 49
-    .line 50
     aput-object v0, v1, v4
 
+    .line 50
     .line 51
-    .line 52
     aput-object v1, v2, v5
 
+    .line 52
     .line 53
-    .line 54
     new-array v1, v3, [Ljava/lang/String;
 
+    .line 54
     .line 55
-    .line 56
     const-string v0, "com.facebook.common.plugins.fblogging.FbPluginsLogger.pluginMarkerStart"
 
+    .line 56
     .line 57
-    .line 58
     aput-object v0, v1, v5
 
+    .line 58
     .line 59
-    .line 60
     const-string v0, "com.facebook.common.plugins.fblogging.FbPluginsLogger.pluginMarkerEnd"
 
+    .line 60
     .line 61
-    .line 62
     aput-object v0, v1, v4
 
+    .line 62
     .line 63
-    .line 64
     aput-object v1, v2, v4
 
+    .line 64
     .line 65
-    .line 66
     new-array v1, v3, [Ljava/lang/String;
 
+    .line 66
     .line 67
-    .line 68
     const-string v0, "com.facebook.common.plugins.fblogging.FbPluginsLogger.onSocketGetPluginsStart"
 
+    .line 68
     .line 69
-    .line 70
     aput-object v0, v1, v5
 
+    .line 70
     .line 71
-    .line 72
     const-string v0, "com.facebook.common.plugins.fblogging.FbPluginsLogger.onSocketGetPluginsEnd"
 
+    .line 72
     .line 73
-    .line 74
     aput-object v0, v1, v4
 
+    .line 74
     .line 75
-    .line 76
     aput-object v1, v2, v3
 
+    .line 76
     .line 77
-    .line 78
     sput-object v2, Lcom/facebook/systrace/Systrace;->A02:[[Ljava/lang/String;
 
+    .line 78
     .line 79
-    .line 80
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
     return-void
 .end method
 
@@ -208,7 +193,7 @@
 
     .line 5
     .line 6
-    invoke-static {}, LX/0N2;->A00()V
+    invoke-static {}, LX/0Kq;->A00()V
 
     .line 7
     .line 8
@@ -264,7 +249,7 @@
 
     .line 20
     .line 21
-    invoke-static {p0}, LX/0XH;->A00(Ljava/lang/String;)V
+    invoke-static {p0}, LX/0LE;->A00(Ljava/lang/String;)V
 
     .line 22
     .line 23
@@ -319,7 +304,7 @@
 
     .line 20
     .line 21
-    invoke-static {p2, p0}, LX/0XR;->A00(Ljava/lang/String;C)LX/0XR;
+    invoke-static {p2, p0}, LX/0LC;->A00(Ljava/lang/String;C)LX/0LC;
 
     .line 22
     .line 23
@@ -327,7 +312,7 @@
     move-result-object p0
 
     .line 25
-    invoke-static {p0}, LX/001;->A0m(Ljava/lang/Object;)V
+    invoke-static {p0}, LX/001;->A0u(Ljava/lang/Object;)V
 
     .line 26
     .line 27
@@ -420,7 +405,7 @@
 
     .line 22
     .line 23
-    invoke-static {p2, v0}, LX/0XR;->A00(Ljava/lang/String;C)LX/0XR;
+    invoke-static {p2, v0}, LX/0LC;->A00(Ljava/lang/String;C)LX/0LC;
 
     .line 24
     .line 25
@@ -432,17 +417,17 @@
 
     .line 28
     .line 29
-    invoke-static {v1, v0, p0, p1}, LX/001;->A0j(LX/0XR;IJ)V
+    invoke-static {v1, v0, p0, p1}, LX/001;->A0p(LX/0LC;IJ)V
 
     .line 30
     .line 31
     .line 32
-    invoke-virtual {v1, p3}, LX/0XR;->A01(I)V
+    invoke-virtual {v1, p3}, LX/0LC;->A01(I)V
 
     .line 33
     .line 34
     .line 35
-    invoke-static {v1}, LX/001;->A0m(Ljava/lang/Object;)V
+    invoke-static {v1}, LX/001;->A0u(Ljava/lang/Object;)V
 
     .line 36
     .line 37
@@ -505,7 +490,7 @@
 
     .line 24
     .line 25
-    invoke-static {p0, v0}, LX/0XR;->A00(Ljava/lang/String;C)LX/0XR;
+    invoke-static {p0, v0}, LX/0LC;->A00(Ljava/lang/String;C)LX/0LC;
 
     .line 26
     .line 27
@@ -513,12 +498,12 @@
     move-result-object v0
 
     .line 29
-    invoke-virtual {v0, v1}, LX/0XR;->A01(I)V
+    invoke-virtual {v0, v1}, LX/0LC;->A01(I)V
 
     .line 30
     .line 31
     .line 32
-    invoke-static {v0}, LX/001;->A0m(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/001;->A0u(Ljava/lang/Object;)V
 
     .line 33
     .line 34
@@ -551,7 +536,7 @@
 
     .line 10
     .line 11
-    invoke-static {p2, p3}, LX/0P2;->A00(J)J
+    invoke-static {p2, p3}, LX/01E;->A00(J)J
 
     .line 12
     .line 13
@@ -593,7 +578,7 @@
 
     .line 10
     .line 11
-    invoke-static {p2, p3}, LX/0P2;->A00(J)J
+    invoke-static {p2, p3}, LX/01E;->A00(J)J
 
     .line 12
     .line 13
@@ -627,7 +612,7 @@
 
     .line 26
     .line 27
-    invoke-static {p0, v0}, LX/0XR;->A00(Ljava/lang/String;C)LX/0XR;
+    invoke-static {p0, v0}, LX/0LC;->A00(Ljava/lang/String;C)LX/0LC;
 
     .line 28
     .line 29
@@ -643,17 +628,17 @@
 
     .line 34
     .line 35
-    invoke-static {p0, v0, v3, v4}, LX/001;->A0j(LX/0XR;IJ)V
+    invoke-static {p0, v0, v3, v4}, LX/001;->A0p(LX/0LC;IJ)V
 
     .line 36
     .line 37
     .line 38
-    invoke-virtual {p0, p1}, LX/0XR;->A01(I)V
+    invoke-virtual {p0, p1}, LX/0LC;->A01(I)V
 
     .line 39
     .line 40
     .line 41
-    invoke-static {p0}, LX/001;->A0m(Ljava/lang/Object;)V
+    invoke-static {p0}, LX/001;->A0u(Ljava/lang/Object;)V
 
     .line 42
     .line 43
@@ -716,7 +701,7 @@
 
     .line 24
     .line 25
-    invoke-static {p0, v0}, LX/0XR;->A00(Ljava/lang/String;C)LX/0XR;
+    invoke-static {p0, v0}, LX/0LC;->A00(Ljava/lang/String;C)LX/0LC;
 
     .line 26
     .line 27
@@ -728,22 +713,22 @@
 
     .line 30
     .line 31
-    invoke-static {p0, v0, v1, v2}, LX/001;->A0j(LX/0XR;IJ)V
+    invoke-static {p0, v0, v1, v2}, LX/001;->A0p(LX/0LC;IJ)V
 
     .line 32
     .line 33
     .line 34
-    invoke-virtual {p0, p1}, LX/0XR;->A01(I)V
+    invoke-virtual {p0, p1}, LX/0LC;->A01(I)V
 
     .line 35
     .line 36
     .line 37
-    invoke-virtual {p0, p2}, LX/0XR;->A03(Ljava/lang/String;)V
+    invoke-virtual {p0, p2}, LX/0LC;->A03(Ljava/lang/String;)V
 
     .line 38
     .line 39
     .line 40
-    invoke-static {p0}, LX/001;->A0m(Ljava/lang/Object;)V
+    invoke-static {p0}, LX/001;->A0u(Ljava/lang/Object;)V
 
     .line 41
     .line 42
@@ -802,7 +787,7 @@
 
     .line 22
     .line 23
-    invoke-static {p0, v0}, LX/0XR;->A00(Ljava/lang/String;C)LX/0XR;
+    invoke-static {p0, v0}, LX/0LC;->A00(Ljava/lang/String;C)LX/0LC;
 
     .line 24
     .line 25
@@ -814,22 +799,22 @@
 
     .line 28
     .line 29
-    invoke-virtual {v1, v0}, LX/0XR;->A02(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, LX/0LC;->A02(Ljava/lang/String;)V
 
     .line 30
     .line 31
     .line 32
-    invoke-virtual {v1, p1}, LX/0XR;->A01(I)V
+    invoke-virtual {v1, p1}, LX/0LC;->A01(I)V
 
     .line 33
     .line 34
     .line 35
-    invoke-virtual {v1, p2}, LX/0XR;->A03(Ljava/lang/String;)V
+    invoke-virtual {v1, p2}, LX/0LC;->A03(Ljava/lang/String;)V
 
     .line 36
     .line 37
     .line 38
-    invoke-static {v1}, LX/001;->A0m(Ljava/lang/Object;)V
+    invoke-static {v1}, LX/001;->A0u(Ljava/lang/Object;)V
 
     .line 39
     .line 40
@@ -888,7 +873,7 @@
 
     .line 22
     .line 23
-    invoke-static {p0, v0}, LX/0XR;->A00(Ljava/lang/String;C)LX/0XR;
+    invoke-static {p0, v0}, LX/0LC;->A00(Ljava/lang/String;C)LX/0LC;
 
     .line 24
     .line 25
@@ -896,17 +881,17 @@
     move-result-object v0
 
     .line 27
-    invoke-virtual {v0, p1}, LX/0XR;->A01(I)V
+    invoke-virtual {v0, p1}, LX/0LC;->A01(I)V
 
     .line 28
     .line 29
     .line 30
-    invoke-virtual {v0, p2}, LX/0XR;->A03(Ljava/lang/String;)V
+    invoke-virtual {v0, p2}, LX/0LC;->A03(Ljava/lang/String;)V
 
     .line 31
     .line 32
     .line 33
-    invoke-static {v0}, LX/001;->A0m(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/001;->A0u(Ljava/lang/Object;)V
 
     .line 34
     .line 35
@@ -935,7 +920,7 @@
 
     .line 8
     .line 9
-    invoke-static {p5, p6}, LX/0P2;->A00(J)J
+    invoke-static {p5, p6}, LX/01E;->A00(J)J
 
     .line 10
     .line 11
@@ -969,7 +954,7 @@
 
     .line 24
     .line 25
-    invoke-static {p0, v0}, LX/0XR;->A00(Ljava/lang/String;C)LX/0XR;
+    invoke-static {p0, v0}, LX/0LC;->A00(Ljava/lang/String;C)LX/0LC;
 
     .line 26
     .line 27
@@ -985,22 +970,22 @@
 
     .line 32
     .line 33
-    invoke-static {p0, v0, v1, v2}, LX/001;->A0j(LX/0XR;IJ)V
+    invoke-static {p0, v0, v1, v2}, LX/001;->A0p(LX/0LC;IJ)V
 
     .line 34
     .line 35
     .line 36
-    invoke-virtual {p0, p2}, LX/0XR;->A01(I)V
+    invoke-virtual {p0, p2}, LX/0LC;->A01(I)V
 
     .line 37
     .line 38
     .line 39
-    invoke-virtual {p0, p1}, LX/0XR;->A03(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, LX/0LC;->A03(Ljava/lang/String;)V
 
     .line 40
     .line 41
     .line 42
-    invoke-static {p0}, LX/001;->A0m(Ljava/lang/Object;)V
+    invoke-static {p0}, LX/001;->A0u(Ljava/lang/Object;)V
 
     .line 43
     .line 44
@@ -1012,7 +997,7 @@
     .locals 5
 
     .line 0
-    sget-wide v0, LX/0YE;->A01:J
+    sget-wide v0, LX/0Kr;->A01:J
 
     .line 1
     .line 2

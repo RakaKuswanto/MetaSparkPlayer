@@ -1,77 +1,25 @@
-.class public final LX/3xJ;
-.super Ljava/lang/Object;
+.class public final LX/3Xj;
+.super LX/3Xv;
 .source ""
 
-# interfaces
-.implements LX/01i;
 
-
-# static fields
-.field public static A00:I = 0x4000
-
-.field public static final A01:Ljava/lang/ThreadLocal;
+# instance fields
+.field public final A00:LX/3Xy;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/3xT;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/3xT;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/3xJ;->A01:Ljava/lang/ThreadLocal;
-
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(LX/3Xy;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, LX/3Xv;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    iput-object p1, p0, LX/3Xj;->A00:LX/3Xy;
 
-
-# virtual methods
-.method public final bridge synthetic A4O()Ljava/lang/Object;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/3xJ;->A01:Ljava/lang/ThreadLocal;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    .line 3
     .line 4
     .line 5
-    move-result-object v0
-
-    .line 6
-    return-object v0
-.end method
-
-.method public final bridge synthetic AiS(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x1
-
-    .line 1
-    return v0
+    return-void
 .end method

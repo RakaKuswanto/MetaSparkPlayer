@@ -2,93 +2,159 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/08E;
+
+
+# instance fields
+.field public final A00:Landroid/content/Context;
+
+.field public final A01:LX/08F;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;LX/08F;)V
+    .locals 0
 
-    const/16 v0, 0x8be
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p0, v0, :cond_8
+    .line 1
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/0IV;->A00:Landroid/content/Context;
 
-    const/16 v0, 0x1a12
+    .line 4
+    .line 5
+    iput-object p2, p0, LX/0IV;->A01:LX/08F;
 
-    if-eq p0, v0, :cond_7
+    .line 6
+    .line 7
+    return-void
+.end method
 
-    const/16 v0, 0x1d99
 
-    if-eq p0, v0, :cond_6
+# virtual methods
+.method public final AgO(Ljava/lang/UnsatisfiedLinkError;[LX/0CG;)Z
+    .locals 3
 
-    const/16 v0, 0x1dd4
+    .line 0
+    iget-object v0, p0, LX/0IV;->A00:Landroid/content/Context;
 
-    if-eq p0, v0, :cond_5
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    const/16 v0, 0x1edb
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    if-eq p0, v0, :cond_4
+    .line 6
+    iget-object v2, v0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
-    const/16 v0, 0x265b
+    .line 7
+    .line 8
+    invoke-static {v2}, LX/001;->A1U(Ljava/lang/String;)Z
 
-    if-eq p0, v0, :cond_3
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
 
-    const/16 v0, 0x2a03
+    .line 12
+    if-eqz v0, :cond_0
 
-    if-eq p0, v0, :cond_2
+    .line 13
+    .line 14
+    const-string v0, "Base apk exists: "
 
-    const/16 v0, 0x3567
+    .line 15
+    .line 16
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eq p0, v0, :cond_1
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
 
-    const/16 v0, 0x3801
+    .line 20
+    invoke-static {v2, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-    if-eq p0, v0, :cond_0
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v1
 
-    const-string v0, "UNDEFINED_QPL_EVENT"
+    .line 24
+    const-string v0, "soloader.recovery.CheckBaseApkExists"
 
-    return-object v0
+    .line 25
+    .line 26
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 27
+    .line 28
+    .line 29
+    const/4 v0, 0x0
+
+    .line 30
+    return v0
+
+    .line 31
     :cond_0
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_HOST_BROADCAST_START"
+    const-string v0, "Base apk does not exist: "
 
-    return-object v0
+    .line 32
+    .line 33
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :cond_1
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_LATE_JOINER_BROADCAST_STARTED"
+    .line 34
+    .line 35
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_HOST_BROADCAST_END"
+    .line 39
+    .line 40
+    .line 41
+    const-string v0, ". "
 
-    return-object v0
+    .line 42
+    .line 43
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_3
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_JOINER_BROADCAST_STARTED"
+    .line 44
+    .line 45
+    .line 46
+    iget-object v0, p0, LX/0IV;->A01:LX/08F;
 
-    return-object v0
+    .line 47
+    .line 48
+    invoke-virtual {v0, v1}, LX/08F;->A00(Ljava/lang/StringBuilder;)V
 
-    :cond_4
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_JOINER_BROADCAST_ENDED"
+    .line 49
+    .line 50
+    .line 51
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    return-object v0
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v1
 
-    :cond_5
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_JOINER_BROADCAST_CONSENT"
+    .line 55
+    new-instance v0, LX/0Jf;
 
-    return-object v0
+    .line 56
+    .line 57
+    invoke-direct {v0, v1, p1}, LX/0Jf;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_6
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_HOST_BROADCAST_CONSENT"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_HOST_BROADCAST_CANCEL"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "RP_CLASS_CATCHUP_CLASS_CATCHUP_HOST_BROADCAST_CREATE"
-
-    return-object v0
+    .line 58
+    .line 59
+    .line 60
+    throw v0
 .end method

@@ -4,17 +4,13 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/Class;
+.field public static volatile A00:Z
 
-.field public static volatile sClassNameTracingEnabled:Z
+.field public static volatile A01:Z
 
-.field public static volatile sEnabled:Z
+.field public static volatile A02:Z
 
-.field public static volatile sEverEnabled:Z
-
-.field public static volatile sNativeEnabled:Z
-
-.field public static volatile sSystraceEnabled:Z
+.field public static volatile A03:Z
 
 
 # direct methods
@@ -22,28 +18,20 @@
     .locals 1
 
     .line 0
-    const-class v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;
+    new-instance v0, LX/0Q3;
 
     .line 1
     .line 2
-    sput-object v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->TAG:Ljava/lang/Class;
+    invoke-direct {v0}, LX/0Q3;-><init>()V
 
     .line 3
     .line 4
-    new-instance v0, LX/0Op;
-
     .line 5
-    .line 6
-    invoke-direct {v0}, LX/0Op;-><init>()V
+    invoke-static {v0}, LX/0Kr;->A00(LX/0LF;)V
 
+    .line 6
     .line 7
     .line 8
-    .line 9
-    invoke-static {v0}, LX/0YE;->A01(LX/0XE;)V
-
-    .line 10
-    .line 11
-    .line 12
     return-void
 .end method
 
@@ -59,11 +47,209 @@
     return-void
 .end method
 
+.method public static A00(I)V
+    .locals 5
+
+    .line 0
+    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A02:Z
+
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
+
+    .line 3
+    .line 4
+    const v0, -0x6f6f4186
+
+    .line 5
+    .line 6
+    .line 7
+    int-to-long v3, v0
+
+    .line 8
+    const-wide v0, 0xffffffffL
+
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    and-long/2addr v3, v0
+
+    .line 14
+    int-to-long v1, p0
+
+    .line 15
+    const/16 v0, 0x20
+
+    .line 16
+    .line 17
+    shl-long/2addr v1, v0
+
+    .line 18
+    or-long/2addr v1, v3
+
+    .line 19
+    const/4 v0, 0x0
+
+    .line 20
+    invoke-static {v0}, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLoggerNativeHolder;->classLoadStarted(Ljava/lang/String;)V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-static {v1, v2}, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLoggerNativeHolder;->classLoaded(J)V
+
+    .line 24
+    .line 25
+    .line 26
+    :cond_0
+    return-void
+.end method
+
+.method public static A01(Z)V
+    .locals 5
+
+    .line 0
+    sput-boolean p0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A03:Z
+
+    .line 1
+    .line 2
+    sget-boolean p0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A02:Z
+
+    .line 3
+    .line 4
+    const/4 v4, 0x0
+
+    .line 5
+    const/4 v3, 0x1
+
+    .line 6
+    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A03:Z
+
+    .line 7
+    .line 8
+    invoke-static {v0}, LX/001;->A1K(I)Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v2
+
+    .line 12
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 13
+    .line 14
+    const/16 v0, 0x1a
+
+    .line 15
+    .line 16
+    if-eq v1, v0, :cond_0
+
+    .line 17
+    .line 18
+    const/16 v0, 0x1b
+
+    .line 19
+    .line 20
+    if-ne v1, v0, :cond_1
+
+    .line 21
+    .line 22
+    :cond_0
+    sput-boolean v3, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A00:Z
+
+    .line 23
+    .line 24
+    :cond_1
+    if-nez v2, :cond_2
+
+    .line 25
+    .line 26
+    if-eqz p0, :cond_4
+
+    .line 27
+    .line 28
+    :cond_2
+    xor-int/lit8 v0, p0, 0x1
+
+    .line 29
+    .line 30
+    sget-boolean v1, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A03:Z
+
+    .line 31
+    .line 32
+    if-eqz v0, :cond_3
+
+    .line 33
+    .line 34
+    :try_start_0
+    const-string v0, "classtracing"
+
+    .line 35
+    .line 36
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 37
+    .line 38
+    .line 39
+    :cond_3
+    invoke-static {v4, v1}, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLoggerNativeHolder;->configureTracing(ZZ)V
+
+    .line 40
+    .line 41
+    .line 42
+    const/4 v2, 0x1
+
+    .line 43
+    goto :goto_0
+
+    .line 44
+    :catch_0
+    const/4 v2, 0x0
+
+    .line 45
+    :cond_4
+    :goto_0
+    sput-boolean v2, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A02:Z
+
+    .line 46
+    .line 47
+    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A02:Z
+
+    .line 48
+    .line 49
+    if-eqz v0, :cond_5
+
+    .line 50
+    .line 51
+    sget-boolean v0, Lcom/facebook/common/dextricks/classid/ClassId;->sInitialized:Z
+
+    .line 52
+    .line 53
+    if-eqz v0, :cond_5
+
+    .line 54
+    .line 55
+    const/4 v4, 0x1
+
+    .line 56
+    :cond_5
+    sput-boolean v4, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A01:Z
+
+    .line 57
+    .line 58
+    return-void
+.end method
+
 .method public static beginClassLoad(Ljava/lang/String;)V
     .locals 1
 
     .line 0
-    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sEnabled:Z
+    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A01:Z
 
     .line 1
     .line 2
@@ -84,7 +270,7 @@
     .locals 4
 
     .line 0
-    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sEnabled:Z
+    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A01:Z
 
     .line 1
     .line 2
@@ -105,7 +291,7 @@
     .line 9
     .line 10
     .line 11
-    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sClassNameTracingEnabled:Z
+    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A00:Z
 
     .line 12
     .line 13
@@ -249,7 +435,7 @@
     .locals 1
 
     .line 0
-    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sEnabled:Z
+    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A01:Z
 
     .line 1
     .line 2
@@ -263,151 +449,5 @@
     .line 6
     .line 7
     :cond_0
-    return-void
-.end method
-
-.method public static setLogToSystrace(Z)V
-    .locals 5
-
-    .line 0
-    sput-boolean p0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sSystraceEnabled:Z
-
-    .line 1
-    .line 2
-    sget-boolean p0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sNativeEnabled:Z
-
-    .line 3
-    .line 4
-    const/4 v4, 0x0
-
-    .line 5
-    const/4 v3, 0x1
-
-    .line 6
-    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sSystraceEnabled:Z
-
-    .line 7
-    .line 8
-    invoke-static {v0}, LX/001;->A1L(I)Z
-
-    .line 9
-    .line 10
-    .line 11
-    move-result v2
-
-    .line 12
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 13
-    .line 14
-    const/16 v0, 0x1a
-
-    .line 15
-    .line 16
-    if-eq v1, v0, :cond_0
-
-    .line 17
-    .line 18
-    const/16 v0, 0x1b
-
-    .line 19
-    .line 20
-    if-ne v1, v0, :cond_1
-
-    .line 21
-    .line 22
-    :cond_0
-    sput-boolean v3, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sClassNameTracingEnabled:Z
-
-    .line 23
-    .line 24
-    :cond_1
-    if-nez v2, :cond_2
-
-    .line 25
-    .line 26
-    if-eqz p0, :cond_4
-
-    .line 27
-    .line 28
-    :cond_2
-    sput-boolean v3, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sEverEnabled:Z
-
-    .line 29
-    .line 30
-    xor-int/lit8 v0, p0, 0x1
-
-    .line 31
-    .line 32
-    sget-boolean v1, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sSystraceEnabled:Z
-
-    .line 33
-    .line 34
-    if-eqz v0, :cond_3
-
-    .line 35
-    .line 36
-    :try_start_0
-    const-string v0, "classtracing"
-
-    .line 37
-    .line 38
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
-    .line 39
-    .line 40
-    .line 41
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 42
-    :catch_0
-    const/4 v2, 0x0
-
-    .line 43
-    goto :goto_1
-
-    .line 44
-    :cond_3
-    :goto_0
-    invoke-static {v4, v1}, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLoggerNativeHolder;->configureTracing(ZZ)V
-
-    .line 45
-    .line 46
-    .line 47
-    const/4 v2, 0x1
-
-    .line 48
-    :cond_4
-    :goto_1
-    sput-boolean v2, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sNativeEnabled:Z
-
-    .line 49
-    .line 50
-    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sNativeEnabled:Z
-
-    .line 51
-    .line 52
-    if-eqz v0, :cond_5
-
-    .line 53
-    .line 54
-    sget-boolean v0, Lcom/facebook/common/dextricks/classid/ClassId;->sInitialized:Z
-
-    .line 55
-    .line 56
-    if-eqz v0, :cond_5
-
-    .line 57
-    .line 58
-    const/4 v4, 0x1
-
-    .line 59
-    :cond_5
-    sput-boolean v4, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sEnabled:Z
-
-    .line 60
-    .line 61
     return-void
 .end method

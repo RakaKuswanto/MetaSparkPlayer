@@ -1,81 +1,97 @@
-.class public Lcom/facebook/bugreporter/core/scheduler/AlarmsBroadcastReceiver;
-.super LX/01N;
+.class public final Lcom/facebook/bugreporter/core/scheduler/AlarmsBroadcastReceiver;
+.super LX/01s;
 .source ""
 
 
 # instance fields
-.field public A00:LX/0Na;
+.field public final A00:LX/0lu;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/01N;-><init>()V
+    invoke-direct {p0}, LX/01s;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    sget v0, LX/2I6;->ALN:I
+
+    .line 4
+    .line 5
+    invoke-static {v0}, LX/0jq;->A00(I)LX/0lu;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, Lcom/facebook/bugreporter/core/scheduler/AlarmsBroadcastReceiver;->A00:LX/0lu;
+
+    .line 10
+    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final A01(Landroid/content/Context;Landroid/content/Intent;LX/04w;)V
+.method public final A01(Landroid/content/Context;Landroid/content/Intent;LX/0QS;)V
     .locals 3
 
     .line 0
-    sget v0, LX/2eq;->AQD:I
+    iget-object v0, p0, Lcom/facebook/bugreporter/core/scheduler/AlarmsBroadcastReceiver;->A00:LX/0lu;
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/1zT;->A01(Landroid/content/Context;I)LX/1zT;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 3
     .line 4
     .line 5
-    move-result-object v0
+    move-result-object v2
 
     .line 6
-    iput-object v0, p0, Lcom/facebook/bugreporter/core/scheduler/AlarmsBroadcastReceiver;->A00:LX/0Na;
+    check-cast v2, LX/17E;
 
     .line 7
     .line 8
-    invoke-virtual {v0}, LX/1zT;->get()Ljava/lang/Object;
+    iget-object v0, v2, LX/17E;->A02:LX/0lu;
 
     .line 9
     .line 10
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
+
     .line 11
-    move-result-object v2
-
     .line 12
-    check-cast v2, LX/2nV;
-
     .line 13
+    move-result-object v1
+
     .line 14
-    iget-object v0, v2, LX/2nV;->A03:LX/0Na;
+    check-cast v1, LX/26x;
 
     .line 15
     .line 16
-    invoke-static {v0}, LX/0Yi;->A0b(LX/0Na;)LX/1iJ;
+    new-instance v0, LX/17D;
 
     .line 17
     .line 18
+    invoke-direct {v0, v2}, LX/17D;-><init>(LX/17E;)V
+
     .line 19
-    move-result-object v1
-
     .line 20
-    new-instance v0, LX/2qg;
-
     .line 21
-    .line 22
-    invoke-direct {v0, v2}, LX/2qg;-><init>(LX/2nV;)V
+    invoke-interface {v1, v0}, LX/26x;->Ao4(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
 
+    .line 22
     .line 23
     .line 24
+    move-result-object v0
+
     .line 25
-    invoke-interface {v1, v0}, LX/1iJ;->ApK(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 26
     .line 27

@@ -8,7 +8,7 @@
 
 .field public static final sOurAddedDexElements:Ljava/util/Map;
 
-.field public static sRegisteredClassLoaderCallback:LX/0JL;
+.field public static sRegisteredClassLoaderCallback:LX/0ID;
 
 
 # instance fields
@@ -32,7 +32,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 1
     .line 2
@@ -44,7 +44,7 @@
 
     .line 5
     .line 6
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 7
     .line 8
@@ -148,7 +148,7 @@
 
     .line 9
     .line 10
-    invoke-static {v2, v1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 11
     .line 12
@@ -285,7 +285,7 @@
 
     .line 58
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 59
     if-eqz v4, :cond_1
@@ -294,34 +294,57 @@
     .line 61
     :try_start_3
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 62
     .line 63
     .line 64
-    :catchall_1
-    :cond_1
-    :try_start_4
-    throw v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+    goto :goto_1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 65
-    :catchall_2
+    :catchall_1
     move-exception v0
 
     .line 66
+    :try_start_4
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 67
+    .line 68
+    .line 69
+    :cond_1
+    :goto_1
+    throw v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    .line 70
+    :catchall_2
+    move-exception v1
+
+    .line 71
     :try_start_5
     invoke-virtual {p0}, Ljava/util/zip/ZipFile;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 67
-    .line 68
-    .line 69
+    .line 72
+    .line 73
+    .line 74
+    throw v1
+
+    .line 75
     :catchall_3
-    throw v0
+    move-exception v0
+
+    .line 76
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 77
+    .line 78
+    .line 79
+    throw v1
 .end method
 
 .method private disableReporter()Ljava/lang/Object;
@@ -363,7 +386,7 @@
     .locals 6
 
     .line 0
-    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->sEnabled:Z
+    sget-boolean v0, Lcom/facebook/common/dextricks/classtracing/logger/ClassTracingLogger;->A01:Z
 
     .line 1
     .line 2
@@ -371,7 +394,7 @@
 
     .line 3
     .line 4
-    sget-object v0, LX/0JK;->A07:LX/0JK;
+    sget-object v0, LX/0IC;->A07:LX/0IC;
 
     .line 5
     .line 6
@@ -380,7 +403,7 @@
     .line 7
     .line 8
     :try_start_0
-    const-class v0, LX/0JK;
+    const-class v0, LX/0IC;
 
     .line 9
     .line 10
@@ -392,16 +415,16 @@
     move-result-object v1
 
     .line 14
-    new-instance v0, LX/0JK;
+    new-instance v0, LX/0IC;
 
     .line 15
     .line 16
-    invoke-direct {v0, v1}, LX/0JK;-><init>(Ljava/lang/ClassLoader;)V
+    invoke-direct {v0, v1}, LX/0IC;-><init>(Ljava/lang/ClassLoader;)V
 
     .line 17
     .line 18
     .line 19
-    sput-object v0, LX/0JK;->A07:LX/0JK;
+    sput-object v0, LX/0IC;->A07:LX/0IC;
 
     .line 20
     .line 21
@@ -430,7 +453,7 @@
     .line 30
     :cond_0
     :goto_0
-    sget-object v4, LX/0JK;->A07:LX/0JK;
+    sget-object v4, LX/0IC;->A07:LX/0IC;
 
     .line 31
     .line 32
@@ -438,7 +461,7 @@
 
     .line 33
     .line 34
-    sget-object v0, Lcom/facebook/common/dextricks/OdexSchemeOreo;->sRegisteredClassLoaderCallback:LX/0JL;
+    sget-object v0, Lcom/facebook/common/dextricks/OdexSchemeOreo;->sRegisteredClassLoaderCallback:LX/0ID;
 
     .line 35
     .line 36
@@ -446,16 +469,16 @@
 
     .line 37
     .line 38
-    new-instance v3, LX/0OX;
+    new-instance v3, LX/0VZ;
 
     .line 39
     .line 40
-    invoke-direct {v3}, LX/0OX;-><init>()V
+    invoke-direct {v3}, LX/0VZ;-><init>()V
 
     .line 41
     .line 42
     .line 43
-    sput-object v3, Lcom/facebook/common/dextricks/OdexSchemeOreo;->sRegisteredClassLoaderCallback:LX/0JL;
+    sput-object v3, Lcom/facebook/common/dextricks/OdexSchemeOreo;->sRegisteredClassLoaderCallback:LX/0ID;
 
     .line 44
     .line 45
@@ -463,7 +486,7 @@
 
     .line 46
     :try_start_1
-    iget-object v2, v4, LX/0JK;->A02:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v2, v4, LX/0IC;->A02:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 47
     .line 48
@@ -494,7 +517,7 @@
 
     .line 60
     .line 61
-    invoke-static {v0}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 62
     .line 63
@@ -578,7 +601,7 @@
     .line 101
     :catch_1
     :try_start_3
-    iget-object v3, v4, LX/0JK;->A00:Ljava/lang/ClassLoader;
+    iget-object v3, v4, LX/0IC;->A00:Ljava/lang/ClassLoader;
 
     .line 102
     .line 103
@@ -645,7 +668,7 @@
     .line 132
     .line 133
     :try_start_4
-    iget-object v0, v4, LX/0JK;->A01:Ljava/lang/reflect/Field;
+    iget-object v0, v4, LX/0IC;->A01:Ljava/lang/reflect/Field;
 
     .line 134
     .line 135
@@ -654,7 +677,7 @@
     .line 136
     .line 137
     .line 138
-    iput-boolean v5, v4, LX/0JK;->A03:Z
+    iput-boolean v5, v4, LX/0IC;->A03:Z
 
     .line 139
     .line 140
@@ -737,7 +760,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/002;->A03(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, LX/002;->A01(Ljava/lang/String;)Ljava/io/File;
 
     .line 7
     .line 8
@@ -803,7 +826,7 @@
 
     .line 15
     .line 16
-    sget-boolean v0, LX/0I1;->A08:Z
+    sget-boolean v0, LX/0HL;->A08:Z
 
     .line 17
     .line 18
@@ -913,7 +936,7 @@
 
     .line 20
     .line 21
-    invoke-static {v2, v0, v1}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 22
     .line 23
@@ -1119,7 +1142,7 @@
     move-result-object v0
 
     .line 16
-    invoke-static {v1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 17
     .line 18
@@ -1212,7 +1235,7 @@
     move-result-object v0
 
     .line 59
-    invoke-static {v3, v2, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 60
     .line 61
@@ -1220,7 +1243,7 @@
     move-result-object v0
 
     .line 63
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 64
     .line 65
@@ -1233,7 +1256,7 @@
     .line 68
     .line 69
     .line 70
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 71
     .line 72
@@ -1449,7 +1472,7 @@
     .locals 3
 
     .line 0
-    sget-object v2, LX/0Ko;->A00:Lcom/facebook/acra/ErrorReporter$2;
+    sget-object v2, LX/0Jg;->A00:Lcom/facebook/acra/ErrorReporter$2;
 
     .line 1
     .line 2
@@ -1457,7 +1480,7 @@
 
     .line 3
     .line 4
-    sget-object v1, LX/0LF;->A74:LX/04m;
+    sget-object v1, LX/0KB;->A7P:LX/065;
 
     .line 5
     .line 6
@@ -1470,12 +1493,12 @@
     .line 9
     .line 10
     .line 11
-    invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/ErrorReporter$2;->putLazyCustomData(LX/0L8;LX/0Gd;)V
+    invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/ErrorReporter$2;->putLazyCustomData(LX/0K4;LX/0VC;)V
 
     .line 12
     .line 13
     .line 14
-    sget-object v2, LX/0JK;->A07:LX/0JK;
+    sget-object v2, LX/0IC;->A07:LX/0IC;
 
     .line 15
     .line 16
@@ -1490,7 +1513,7 @@
 
     .line 20
     :try_start_0
-    iget-boolean v0, v2, LX/0JK;->A03:Z
+    iget-boolean v0, v2, LX/0IC;->A03:Z
 
     .line 21
     .line 22
@@ -1531,7 +1554,7 @@
 
     .line 35
     :cond_1
-    sget-object v0, LX/0LF;->A84:LX/04m;
+    sget-object v0, LX/0KB;->A8S:LX/065;
 
     .line 36
     .line 37
@@ -1544,7 +1567,7 @@
     .line 40
     .line 41
     :goto_1
-    iget-object v0, v0, LX/0L8;->A00:Ljava/lang/String;
+    iget-object v0, v0, LX/0K4;->A00:Ljava/lang/String;
 
     .line 42
     .line 43
@@ -1686,7 +1709,7 @@
     .line 51
     .line 52
     .line 53
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 54
     .line 55
@@ -1694,7 +1717,7 @@
     move-result-object v8
 
     .line 57
-    invoke-static {v9}, LX/002;->A0I(I)Ljava/util/ArrayList;
+    invoke-static {v9}, LX/002;->A0A(I)Ljava/util/ArrayList;
 
     .line 58
     .line 59
@@ -2000,7 +2023,7 @@
 
     .line 207
     .line 208
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 209
     .line 210
@@ -2041,7 +2064,7 @@
 
     .line 11
     .line 12
-    invoke-static {v2, v0, v1}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 13
     .line 14
@@ -2129,7 +2152,7 @@
 
     .line 54
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 55
     if-eqz v4, :cond_1
@@ -2144,12 +2167,23 @@
     .line 58
     .line 59
     .line 60
+    throw v1
+
+    .line 61
     :catchall_1
+    move-exception v0
+
+    .line 62
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 63
+    .line 64
+    .line 65
     :cond_1
-    throw v0
+    throw v1
 .end method
 
-.method public configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/MultiDexClassLoader$Configuration;)V
+.method public configureClassLoader(Ljava/io/File;Lcom/facebook/common/dextricks/ClassLoaderConfiguration;)V
     .locals 0
 
     return-void
@@ -2214,7 +2248,7 @@
     move-exception v0
 
     .line 8
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A07(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     .line 9
     .line 10
@@ -2264,7 +2298,7 @@
 
     .line 16
     .line 17
-    invoke-static {v1, v0, p1}, LX/00I;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
+    invoke-static {v1, v0, p1}, LX/004;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     .line 18
     .line 19
@@ -2280,7 +2314,7 @@
 
     .line 23
     .line 24
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 25
     .line 26
@@ -2312,7 +2346,7 @@
 
     .line 39
     .line 40
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 41
     .line 42
@@ -2324,7 +2358,7 @@
 
     .line 45
     .line 46
-    invoke-static {v2, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, LX/001;->A0M(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 47
     .line 48
@@ -2357,7 +2391,7 @@
 
     .line 61
     .line 62
-    invoke-static {v1, v0, v2}, LX/00I;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
+    invoke-static {v1, v0, v2}, LX/004;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     .line 63
     .line 64
@@ -2468,7 +2502,7 @@
     const/4 v3, 0x0
 
     .line 13
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     .line 14
     .line 15
@@ -2751,114 +2785,118 @@
     .line 121
     .line 122
     invoke-static {v4, v0, v2}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     .line 123
     .line 124
     .line 125
-    invoke-static {v9}, Lcom/facebook/common/dextricks/DalvikInternals;->toggleBlockDex2Oat(Z)Z
+    goto :goto_3
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     .line 126
-    .line 127
-    .line 128
-    move-result v0
-
-    .line 129
-    if-nez v0, :cond_9
-
-    .line 130
-    .line 131
-    invoke-static {v4, v5, v3}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 132
-    .line 133
-    .line 134
-    goto :goto_3
-
-    .line 135
     :catchall_2
     move-exception v1
 
-    .line 136
+    .line 127
     invoke-static {v9}, Lcom/facebook/common/dextricks/DalvikInternals;->toggleBlockDex2Oat(Z)Z
 
-    .line 137
-    .line 138
-    .line 139
+    .line 128
+    .line 129
+    .line 130
     move-result v0
 
-    .line 140
-    if-nez v0, :cond_a
+    .line 131
+    if-nez v0, :cond_8
 
-    .line 141
-    .line 142
+    .line 132
+    .line 133
     invoke-static {v4, v5, v3}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 143
-    .line 144
-    .line 145
+    .line 134
+    .line 135
+    .line 136
+    :cond_8
     throw v1
 
-    .line 146
-    :cond_8
+    .line 137
+    :cond_9
     const-string v0, "Unknown Application ClassLoader: "
 
-    .line 147
-    .line 148
+    .line 138
+    .line 139
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 149
-    .line 150
-    .line 151
+    .line 140
+    .line 141
+    .line 142
     move-result-object v1
 
-    .line 152
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 143
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 153
-    .line 154
-    .line 155
+    .line 144
+    .line 145
+    .line 146
     move-result-object v0
 
-    .line 156
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 147
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
-    .line 157
-    .line 158
-    .line 159
+    .line 148
+    .line 149
+    .line 150
     move-result-object v0
 
-    .line 160
+    .line 151
     invoke-static {v4, v0, v3}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 152
+    .line 153
+    .line 154
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
+
+    .line 155
+    .line 156
+    .line 157
+    move-result-object v2
+
+    .line 158
+    goto :goto_4
+
+    .line 159
+    :goto_3
+    invoke-static {v9}, Lcom/facebook/common/dextricks/DalvikInternals;->toggleBlockDex2Oat(Z)Z
+
+    .line 160
     .line 161
     .line 162
+    move-result v0
+
     .line 163
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    if-nez v0, :cond_a
 
     .line 164
     .line 165
-    .line 166
-    move-result-object v2
+    invoke-static {v4, v5, v3}, Lcom/facebook/common/dextricks/DexTricksErrorReporter;->reportSampledSoftError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 166
     .line 167
-    :cond_9
-    :goto_3
+    .line 168
+    :cond_a
+    :goto_4
     const-string v0, "[FBDex101] Unknown Application ClassLoader or failed to merge dex, app bound to crash with NoClassDef"
 
-    .line 168
     .line 169
+    .line 170
     new-instance v1, Ljava/lang/RuntimeException;
 
-    .line 170
     .line 171
+    .line 172
     invoke-direct {v1, v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 172
     .line 173
     .line 174
-    :cond_a
+    .line 175
     throw v1
 .end method
 
@@ -3264,7 +3302,7 @@
     const/4 v1, 0x0
 
     .line 51
-    invoke-static {v8, v6, v3}, LX/002;->A0T(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v8, v6, v3}, LX/002;->A0H(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 52
     .line 53
@@ -3350,7 +3388,7 @@
     move-result-object v6
 
     .line 13
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    invoke-static {}, LX/001;->A0c()Ljava/util/HashMap;
 
     .line 14
     .line 15
@@ -3468,7 +3506,7 @@
 
     .line 68
     .line 69
-    invoke-static {v1, v0, v2}, LX/00I;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
+    invoke-static {v1, v0, v2}, LX/004;->A01(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     .line 70
     .line 71

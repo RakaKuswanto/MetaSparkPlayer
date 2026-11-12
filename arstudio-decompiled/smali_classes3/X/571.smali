@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract Ary(Lcom/google/android/gms/common/ConnectionResult;)V
+.method public abstract readNumber(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;
 .end method

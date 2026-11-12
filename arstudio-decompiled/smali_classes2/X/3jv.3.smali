@@ -1,55 +1,49 @@
 .class public final LX/3jv;
-.super LX/3jw;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:LX/3jv;
+# instance fields
+.field public final A00:I
 
-.field public static final A01:Ljava/lang/String;
+.field public final A01:I
+
+.field public final A02:J
+
+.field public final A03:Ljava/lang/String;
+
+.field public final A04:[J
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    new-instance v0, LX/3jv;
-
-    .line 1
-    .line 2
-    invoke-direct {v0}, LX/3jv;-><init>()V
-
-    .line 3
-    .line 4
-    .line 5
-    sput-object v0, LX/3jv;->A00:LX/3jv;
-
-    .line 6
-    .line 7
-    invoke-static {}, LX/3Ph;->A00()Ljava/lang/String;
-
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
-
-    .line 11
-    sput-object v0, LX/3jv;->A01:Ljava/lang/String;
-
-    .line 12
-    .line 13
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/String;[JIIJ)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3jw;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
+    iput-object p2, p0, LX/3jv;->A04:[J
+
+    .line 4
+    .line 5
+    iput p3, p0, LX/3jv;->A00:I
+
+    .line 6
+    .line 7
+    iput-object p1, p0, LX/3jv;->A03:Ljava/lang/String;
+
+    .line 8
+    .line 9
+    iput p4, p0, LX/3jv;->A01:I
+
+    .line 10
+    .line 11
+    iput-wide p5, p0, LX/3jv;->A02:J
+
+    .line 12
+    .line 13
     return-void
 .end method

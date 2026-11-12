@@ -1,72 +1,86 @@
-.class public final LX/5FH;
+.class public abstract LX/5FH;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/5Er;
-.implements LX/5Et;
+
+# static fields
+.field public static final A00:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x5
 
     .line 1
+    new-array v2, v0, [Ljava/lang/String;
+
     .line 2
     .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final AEc(LX/0TQ;)Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    invoke-interface {p1}, LX/0TQ;->AHf()S
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
+    const/4 v1, 0x0
 
     .line 4
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const-string v0, "en"
 
     .line 5
     .line 6
+    aput-object v0, v2, v1
+
     .line 7
+    .line 8
+    const/4 v1, 0x1
+
+    .line 9
+    const-string v0, "es"
+
+    .line 10
+    .line 11
+    aput-object v0, v2, v1
+
+    .line 12
+    .line 13
+    const/4 v1, 0x2
+
+    .line 14
+    const-string v0, "fr"
+
+    .line 15
+    .line 16
+    aput-object v0, v2, v1
+
+    .line 17
+    .line 18
+    const/4 v1, 0x3
+
+    .line 19
+    const-string v0, "de"
+
+    .line 20
+    .line 21
+    aput-object v0, v2, v1
+
+    .line 22
+    .line 23
+    const/4 v1, 0x4
+
+    .line 24
+    const-string v0, "it"
+
+    .line 25
+    .line 26
+    invoke-static {v0, v2, v1}, LX/0X5;->A0r(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/List;
+
+    .line 27
+    .line 28
+    .line 29
     move-result-object v0
 
-    .line 8
-    return-object v0
-.end method
+    .line 30
+    sput-object v0, LX/5FH;->A00:Ljava/util/List;
 
-.method public final ANj(LX/0TQ;)J
-    .locals 2
-
-    .line 0
-    invoke-interface {p1}, LX/0TQ;->AHf()S
-
-    .line 1
-    .line 2
-    .line 3
-    move-result v0
-
-    .line 4
-    int-to-long v0, v0
-
-    .line 5
-    return-wide v0
-.end method
-
-.method public final getName()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "action_id"
-
-    return-object v0
+    .line 31
+    .line 32
+    return-void
 .end method

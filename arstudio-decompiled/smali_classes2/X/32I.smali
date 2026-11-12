@@ -1,33 +1,14 @@
-.class public final LX/32I;
-.super LX/21T;
+.class public interface abstract LX/32I;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static A00:LX/32I;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 268435456
-    invoke-direct {p0}, LX/21T;-><init>()V
-
-    .line 268435457
-    .line 268435458
-    .line 268435459
-    return-void
+# virtual methods
+.method public abstract A8l(Lcom/facebook/bugreporter/core/model/BugReport;Ljava/lang/Exception;)V
 .end method
 
-.method public constructor <init>(LX/21U;)V
-    .locals 0
+.method public abstract A8m(Lcom/facebook/bugreporter/core/model/BugReport;Ljava/lang/String;I)V
+.end method
 
-    .line 0
-    invoke-direct {p0, p1}, LX/21T;-><init>(LX/21U;)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AoA(Lcom/facebook/bugreporter/core/model/BugReport;Ljava/lang/String;)V
 .end method

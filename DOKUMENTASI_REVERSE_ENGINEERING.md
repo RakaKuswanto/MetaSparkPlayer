@@ -2,8 +2,8 @@
 
 > **Proyek:** Meta Spark Studio Player Offline Filter Loader & Auto-Patcher  
 > **Target Device:** Samsung Galaxy A54 5G (`SM-A546E`, Android 14 / One UI 6)  
-> **Versi Target APK:** Meta Spark Studio Player v175 (`com.facebook.arstudio.player`)  
-> **Terakhir Diperbarui:** 11 November 2026  
+> **Versi Target APK:** Meta Spark Studio Player v187 (`187.0.0.8.277`, `arm64-v8a`, `com.facebook.arstudio.player`) *(dimigrasi dari v175 `armeabi-v7a`)*  
+> **Terakhir Diperbarui:** 12 November 2026  
 
 ---
 
@@ -17,8 +17,9 @@ Melalui proses reverse engineering dan patching ini, aplikasi telah dimodifikasi
    - `.arexport` (bundle export dari Meta Spark Studio Desktop).
    - `.arfx` standar (ZIP archive).
    - `.arfx` raw dari CDN Instagram/Facebook (Brotli-compressed TAR / `.tar.br` / `.bin`).
-3. **Mengatasi masalah *"Can't Load Project / A system issue prevented Meta Spark Studio Player from opening the project"*** secara otomatis menggunakan in-memory AST/JSON patcher.
+3. **Mengatasi masalah *"Can't Load Project / A system issue prevented Meta Spark Studio Player from opening the project"*** secara otomatis menggunakan patcher in-memory `manifest.json` ke `"requiredSdkVersion": "187.0"`.
 4. **Mengisi daftar riwayat (History List) secara otomatis**, sehingga setiap filter yang pernah dimuat dapat dibuka kembali kapan saja dari menu utama aplikasi dengan satu sentuhan.
+5. **Pencarian Real-Time, Multi-Select (`Pilih`) On-Demand, & Batch Delete**: Menyaring daftar filter (`title` / nama file), memilih banyak item dengan pembatasan aman *Opsi A* (hanya item terlihat), dan menghapus sekaligus dari `mirror/` maupun `Download/ARFX/` (beserta panduan izin Android 14 `MANAGE_EXTERNAL_STORAGE`).
 
 ---
 
@@ -62,29 +63,21 @@ Dalam ekosistem Meta Spark AR, terdapat 4 jenis format container filter:
   com.facebook.cameracore.common.exception.EffectsFrameworkException: Failed to load effect: This SDK version is not supported: 131.0
   ```
 - **Penyebab Utama:**
-  Engine render C++ native (`libdistractmerged.so` dan `libgraphicsengine-arengineservices-alleffectservicehost-native.so`) membaca `manifest.json` dan memverifikasi atribut `"requiredSdkVersion"`. Player v175 menolak filter yang mencantumkan SDK versi lama (seperti 78.0 atau 131.0).
-- **Solusi Permanen:**
+  Engine render C++ native (`libdistractmerged.so` dan `libgraphicsengine-arengineservices-alleffectservicehost-native.so`) membaca `manifest.json` dan memverifikasi atribut `"requiredSdkVersion"`. Player menolak filter yang versi SDK-nya tidak sesuai dengan batas binary engine yang terpasang.
+- **Solusi Permanen (`v187`):**
   `ArfxLoader` secara otomatis mengintersepsi `manifest.json` di dalam ZIP/TAR dan menimpa string:
-  `"requiredSdkVersion": "175.0"` sebelum file diserahkan ke camera core engine.
+  `"requiredSdkVersion": "187.0"` sebelum file diserahkan ke camera core engine (pada basis v175 sebelumnya digunakan `"175.0"`).
 
 ---
 
-### Permasalahan 2: Daftar Efek / History Selalu Kosong
+### Permasalahan 2: Daftar Efek, Pencarian, & Penghapusan Massal di `EffectListActivity`
 
-- **Gejala:** Filter berhasil dimuat ke kamera, namun saat menekan tombol *Back*, daftar riwayat di `EffectListActivity` tetap kosong.
-- **Penyelidikan Decompilasi Smali:**
-  Pada `MsqrdEffectListFragment.smali` dan AsyncTask `1t2.1.smali` (`pswitch_1`):
-  ```smali
-  const-string/jumbo v0, "mirror"
-  invoke-static {v7, v0}, LX/1S8;->A00(Landroid/content/Context;Ljava/lang/String;)Lcom/google/common/collect/ImmutableList;
-  ```
-  `LX/1S8.A00` mengeksekusi `context.getExternalFilesDir("mirror")`, yang mengarah ke path:
-  `/storage/emulated/0/Android/data/com.facebook.arstudio.player/files/mirror/`
-  Fragment kemudian memindai semua file di folder tersebut yang berakhiran `[".arfx", ".arfxmirror", ".mirror"]`.
-- **Solusi Permanen:**
-  `ArfxLoader` tidak lagi menyimpan output ke direktori `cache/` sementara, melainkan langsung menyimpannya ke direktori mirror eksternal:
-  `activity.getExternalFilesDir("mirror") + "/" + cleanName + ".arfx"`.
-  Dengan demikian, `EffectListActivity` secara otomatis mendeteksi file tersebut saat `onResume()` dan menampilkannya di daftar History lengkap dengan icon Meta Spark dan waktu import.
+- **Penyelidikan Decompilasi Smali (`v187`):**
+  - Pemuatan riwayat di `MsqrdEffectListFragment` ditangani AsyncTask `X/3hA.2.smali` cabang `:pswitch_1` (`LX/3dS` dengan list `A01` dan observer `LX/3d8` di `A00`; item individual menyimpan path pada `A04` dan judul pada `A03 -> A07`), sementara `:pswitch_0` dipakai oleh `EffectHistoryActivity`.
+  - Player memindai file berakhiran `.arfx` / `.arfxmirror` / `.mirror` dari `/storage/emulated/0/Android/data/com.facebook.arstudio.player/files/mirror/` serta `/storage/emulated/0/Download/ARFX/` (catatan: Android 14 FUSE menyembunyikan/menolak hapus file eksternal di `Download/ARFX/` jika izin `MANAGE_EXTERNAL_STORAGE` tidak aktif).
+- **Solusi Permanen (`ArfxLoader`, `ArfxListState`, & `ArfxListController`):**
+  1. `ArfxLoader` langsung menyimpan output ter-patch ke `getExternalFilesDir("mirror") + "/" + cleanName + ".arfx"`.
+  2. `ArfxListController` + `ArfxListState` menyisipkan search bar (`"Cari filter..."` + tombol `"✕"`), tombol `"Pilih"` on-demand (`CheckBox` `View.GONE` di mode normal agar *hold* tetap memunculkan `"Effect Properties"` / `"Delete"`), pembatasan *Opsi A* (`Pilih Semua` hanya item terlihat; perubahan query memangkas pilihan tersembunyi), penghapusan rekursif `.mirror*`, sinkronisasi `onItemDeleted` di `LX/3cP`, dan dialog `"Izin Akses File Diperlukan"` -> `"Buka Pengaturan"` (`MANAGE_APP_ALL_FILES_ACCESS_PERMISSION`) + auto-retry di `onResume`.
 
 ---
 
@@ -96,11 +89,12 @@ Dalam ekosistem Meta Spark AR, terdapat 4 jenis format container filter:
 
 ---
 
-## 4. Implementasi Modul: `ArfxLoader.java`
+## 4. Implementasi Modul Java (`ArfxLoader`, `ArfxListState`, & `ArfxListController`)
 
-Modul Java kustom yang di-inject ke dalam APK:
-- **Lokasi Source:** [`build_loader/src/com/facebook/arstudio/player/ArfxLoader.java`](file:///d:/RAKA%20KUSWANTO/1.%20PROJECTS/OTHER/REVERSE%20ENGINEERING/MetaSparkStudio/build_loader/src/com/facebook/arstudio/player/ArfxLoader.java)
-- **Target Smali:** `arstudio-decompiled/smali_classes4/com/facebook/arstudio/player/ArfxLoader.smali`
+Modul Java kustom yang di-inject ke dalam `smali_classes4/com/facebook/arstudio/player/`:
+- **Filter Loader & Patcher:** [`build_loader/src/com/facebook/arstudio/player/ArfxLoader.java`](file:///d:/RAKA%20KUSWANTO/1.%20PROJECTS/OTHER/REVERSE%20ENGINEERING/MetaSparkStudio/build_loader/src/com/facebook/arstudio/player/ArfxLoader.java) (`TARGET_SDK_VERSION = "187.0"`)
+- **State Pencarian & Multi-Select:** [`build_loader/src/com/facebook/arstudio/player/ArfxListState.java`](file:///d:/RAKA%20KUSWANTO/1.%20PROJECTS/OTHER/REVERSE%20ENGINEERING/MetaSparkStudio/build_loader/src/com/facebook/arstudio/player/ArfxListState.java) + [`ArfxListStateTest.java`](file:///d:/RAKA%20KUSWANTO/1.%20PROJECTS/OTHER/REVERSE%20ENGINEERING/MetaSparkStudio/build_loader/test/com/facebook/arstudio/player/ArfxListStateTest.java)
+- **Controller UI & Batch Delete:** [`build_loader/src/com/facebook/arstudio/player/ArfxListController.java`](file:///d:/RAKA%20KUSWANTO/1.%20PROJECTS/OTHER/REVERSE%20ENGINEERING/MetaSparkStudio/build_loader/src/com/facebook/arstudio/player/ArfxListController.java)
 
 ### Alur Kerja `ArfxLoader`:
 ```mermaid
@@ -111,11 +105,11 @@ flowchart TD
     D -- "PK 0x03 0x04 (ZIP)" --> E{"Ada inner *@etc.arfx / *.arfx?"}
     E -- "Ya (.arexport)" --> F["Ekstrak inner *@etc.arfx (Android GPU)"]
     E -- "Tidak (.arfx biasa)" --> G["Proses ZIP langsung"]
-    F --> H["Repackage ZIP + Patch manifest.json (requiredSdkVersion: 175.0)"]
+    F --> H["Repackage ZIP + Patch manifest.json (requiredSdkVersion: 187.0)"]
     G --> H
     D -- "Bukan ZIP (Brotli / TAR)" --> I["Dekompresi BrotliInputStream"]
     I --> J["Parse TAR Header & Stream Data"]
-    J --> K["Intersepsi manifest.json + Patch ke 175.0"]
+    J --> K["Intersepsi manifest.json + Patch ke 187.0"]
     K --> L["Konversi ke ZIP (.arfx)"]
     H --> M["Simpan ke /Android/data/com.facebook.arstudio.player/files/mirror/<Name>.arfx"]
     L --> M
@@ -125,50 +119,30 @@ flowchart TD
 
 ---
 
-## 5. Hooking & Titik Injeksi Smali
+## 5. Hooking & Titik Injeksi Smali (`v187`)
 
-### A. Tombol UI & Picker Hook (`EffectListActivity.smali`)
-- **Lokasi File:** `arstudio-decompiled/smali_classes2/com/facebook/arstudio/player/EffectListActivity.smali`
-- **Injeksi Tombol:** Pada `onCreate`, ditambahkan `Button` dengan label `"PILIH FILE ARFX (STORAGE)"` di atas header list. Saat diklik, mengirimkan Intent:
-  ```java
-  Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-  intent.setType("*/*");
-  startActivityForResult(intent, 0x7123);
-  ```
-- **Injeksi `onActivityResult`:**
-  ```smali
-  .method public onActivityResult(IILandroid/content/Intent;)V
-      .locals 4
-      invoke-super {p0, p1, p2, p3}, Lcom/facebook/base/activity/FbFragmentActivity;->onActivityResult(IILandroid/content/Intent;)V
-
-      const/16 v0, 0x7123
-      if-ne p1, v0, :cond_out
-      const/4 v0, -0x1
-      if-ne p2, v0, :cond_out
-      if-eqz p3, :cond_out
-
-      invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-      move-result-object v3
-      if-eqz v3, :cond_out
-
-      invoke-static {p0, v3}, Lcom/facebook/arstudio/player/ArfxLoader;->load(Landroid/app/Activity;Landroid/net/Uri;)V
-
-      :cond_out
-      return-void
-  .end method
-  ```
+### A. Picker, Lifecycle, & Search/Multi-Select UI Hooks
+- **`EffectListActivity.smali`**:
+  - `onCreate`: Menyisipkan tombol `"PILIH FILE ARFX (STORAGE)"` (`btn_pick_arfx`) dan memanggil `ArfxListController.attachToActivity(p0)`.
+  - `onResume`: Memanggil `ArfxListController.onResume(p0)` (termasuk auto-retry hapus `Download/` setelah izin *All Files Access* diberikan).
+  - `onActivityResult`: Menangani request code `0x7123` dan memanggil `ArfxLoader.load(p0, v3)`.
+- **`X/3Yt.1.smali`**: Memanggil `ArfxListController.attachToActivity(v3)` saat inisialisasi header tombol picker.
+- **`X/3hA.2.smali`**:
+  - `:pswitch_1` (`MsqrdEffectListFragment` saja): Memanggil `ArfxListController.onEffectsLoaded(v2)` pada objek koleksi `LX/3dS` sebelum update adapter.
+  - `LX/3cP`: Memanggil `ArfxListController.onItemDeleted(path)` saat single-delete bawaan dijalankan.
+- **`X/3dT.2.smali` & `X/3dV.2.smali`**: Melepas `final` pada `onCreateViewHolder`, membungkus item dengan `CheckBox` on-demand (`wrapItemView`), membuka wrapper sebelum cast `LX/3ff`/`LX/4Uu` (`unwrapContentView`), dan men-sync tampilan seleksi via `bindItemView`.
+- **`X/3cg.3.smali` & `X/3dY.2.smali`**: `AXM` men-toggle pilihan saat `isSelectionMode()` aktif; `onLongClick` mengembalikan `true` saat mode pilih agar menu popover tidak mengganggu.
 
 ### B. Launching Kamera (`MainActivity.smali`)
 - **Lokasi File:** `arstudio-decompiled/smali_classes2/com/facebook/arstudio/player/MainActivity.smali`
 - Parameter Intent yang diproses:
   - `msqrd_path`: Path absolut file filter (`/storage/.../mirror/<Name>.arfx`).
   - `effect_id`: Nama unik effect untuk caching & tracking.
-- `MainActivity` secara langsung mengirim path ini ke kamera core tanpa melalui validasi jaringan Meta Spark.
 
 ### C. Android Manifest (`AndroidManifest.xml`)
-- `android:debuggable="true"` (memungkinkan debugging logcat dan `run-as`).
+- `android:debuggable="false"` (wajib `false` pada build `v187` `arm64-v8a` agar berjalan bersih di One UI 6 / Android 14 tanpa dialog kompatibilitas).
 - `android:requestLegacyExternalStorage="true"`.
-- Permission: `READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`, `CAMERA`.
+- Permission: `CAMERA`, `RECORD_AUDIO`, `READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`, `MANAGE_EXTERNAL_STORAGE`.
 
 ---
 
@@ -177,33 +151,36 @@ flowchart TD
 Semua langkah eksekusi dilakukan dari direktori kerja:
 `d:\RAKA KUSWANTO\1. PROJECTS\OTHER\REVERSE ENGINEERING\MetaSparkStudio`
 
-### 1. Kompilasi Modul Java ke DEX:
+### 1. Jalankan Unit Test `ArfxListStateTest`:
 ```powershell
-javac -cp "C:\Users\TOS-46\AppData\Local\Android\Sdk\platforms\android-34\android.jar;brotli-dec.jar" -d "build_loader\bin" "build_loader\src\com\facebook\arstudio\player\ArfxLoader.java"
-
-& "C:\Users\TOS-46\AppData\Local\Android\Sdk\build-tools\34.0.0\d8.bat" --lib "C:\Users\TOS-46\AppData\Local\Android\Sdk\platforms\android-34\android.jar" --output "build_loader\dex_out" (Get-ChildItem -Recurse "build_loader\bin" -Filter "*.class").FullName "brotli-dec.jar"
+New-Item -ItemType Directory -Force "build_loader\test_bin" | Out-Null
+javac -source 8 -target 8 -d "build_loader\test_bin" "build_loader\src\com\facebook\arstudio\player\ArfxListState.java" "build_loader\test\com\facebook\arstudio\player\ArfxListStateTest.java"
+java -cp "build_loader\test_bin" com.facebook.arstudio.player.ArfxListStateTest
 ```
 
-### 2. Konversi DEX ke Smali:
+### 2. Kompilasi Seluruh Modul Java ke DEX:
+```powershell
+javac -source 8 -target 8 -cp "C:\Users\TOS-46\AppData\Local\Android\Sdk\platforms\android-34\android.jar;brotli-dec.jar" -d "build_loader\bin" (Get-ChildItem "build_loader\src\com\facebook\arstudio\player\*.java").FullName
+
+& "C:\Users\TOS-46\AppData\Local\Android\Sdk\build-tools\34.0.0\d8.bat" --min-api 16 --lib "C:\Users\TOS-46\AppData\Local\Android\Sdk\platforms\android-34\android.jar" --output "build_loader\dex_out" (Get-ChildItem -Recurse "build_loader\bin" -Filter "*.class").FullName "brotli-dec.jar"
+```
+
+### 3. Konversi DEX ke Smali:
 ```powershell
 jar -cf dummy.apk -C "build_loader\dex_out" classes.dex
 java -jar apktool_2.12.1.jar d -r -f dummy.apk -o dummy_decoded
 Copy-Item -Recurse -Force "dummy_decoded\smali\*" "arstudio-decompiled\smali_classes4\"
 ```
 
-### 3. Rebuild APK Mod:
+### 4. Rebuild & Sign APK Mod (`build.bat`):
 ```powershell
-java -jar apktool_2.12.1.jar b arstudio-decompiled -o arstudio-modded.apk
+.\build.bat
 ```
-
-### 4. Sign APK:
-```powershell
-java -jar uber-apk-signer-1.3.0.jar --apks arstudio-modded.apk --ks my-debug.keystore --ksAlias mykey --ksPass 123456 --ksKeyPass 123456 --allowResign --overwrite
-```
+*(Menjalankan `apktool_2.12.1.jar b arstudio-decompiled -o arstudio-modded.apk` dan `uber-apk-signer-1.3.0.jar --allowResign --overwrite` dengan `my-debug.keystore`.)*
 
 ### 5. Install ke HP via ADB:
 ```powershell
-adb install -r arstudio-modded.apk
+adb -s 192.168.1.32:<port> install -r arstudio-modded.apk
 ```
 
 ---
@@ -217,9 +194,10 @@ adb install -r arstudio-modded.apk
 | **Keystore & Key Pass** | `123456` |
 | **Subject Keystore** | `CN=raka kuswanto` |
 | **App External Mirror Dir** | `/storage/emulated/0/Android/data/com.facebook.arstudio.player/files/mirror/` |
+| **App Public Download Dir** | `/storage/emulated/0/Download/ARFX/` (memerlukan `MANAGE_EXTERNAL_STORAGE` di Android 14) |
 | **App Internal Cache Dir** | `/data/data/com.facebook.arstudio.player/cache/` |
-| **Source Java Patcher** | `build_loader/src/com/facebook/arstudio/player/ArfxLoader.java` |
-| **Decompiled Smali Root** | `arstudio-decompiled/` |
+| **Source Java Loader & List** | `build_loader/src/com/facebook/arstudio/player/` (`ArfxLoader.java`, `ArfxListState.java`, `ArfxListController.java`) |
+| **Decompiled Smali Root** | `arstudio-decompiled/` (`v187` `arm64-v8a`) |
 | **Final Modded APK** | `arstudio-modded.apk` |
 
 ---
@@ -232,11 +210,15 @@ adb install -r arstudio-modded.apk
 
 2. **Error: `adb device offline` atau Port Berubah**
    * *Penyebab:* Fitur Wireless Debugging Android 14 merotasi port secara dinamis saat Wi-Fi reconnect atau toggle dimatikan.
-   * *Solusi:* Jalankan `adb mdns services` untuk melihat port terbaru, lalu jalankan `adb connect 192.168.1.32:<port_baru>`.
+   * *Solusi:* Jalankan `adb mdns services` untuk melihat port terbaru, lalu jalankan `adb -s 192.168.1.32:<port_baru> ...`.
 
 3. **Filter Tidak Muncul Efeknya (Hanya Kamera Polos)**
    * *Penyebab:* File `.arexport` dibuat untuk iOS saja (`*@pvr.arfx`) tanpa versi Android (`*@etc.arfx` atau `@uncompressed.arfx`).
    * *Solusi:* Pastikan proyek Spark Studio diekspor dengan menargetkan Android, atau ekstrak dan simpan varian uncompressed.
+
+4. **Filter di `Download/ARFX/` Gagal Dihapus atau Hilang (Android 14 FUSE)**
+   * *Penyebab:* Izin *Akses Semua File* (`MANAGE_EXTERNAL_STORAGE`) belum aktif sehingga Android 14 menyembunyikan/memblokir `File.delete()` terhadap file publik milik aplikasi lain.
+   * *Solusi:* Tekan **"Buka Pengaturan"** pada dialog `"Izin Akses File Diperlukan"`, aktifkan izin untuk Meta Spark Player, lalu kembali ke aplikasi (penghapusan tertunda otomatis dijalankan ulang di `onResume`).
 
 ---
 

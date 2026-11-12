@@ -139,7 +139,7 @@
 
     .line 19
     :cond_1
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 20
     .line 21
@@ -206,7 +206,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -230,7 +230,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -327,7 +327,7 @@
 
     .line 40
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 41
     :try_start_1
@@ -338,8 +338,19 @@
     .line 42
     .line 43
     .line 44
+    throw v1
+
+    .line 45
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 46
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 47
+    .line 48
+    .line 49
+    throw v1
 .end method
 
 .method public static readOrMakeDefault(Landroid/content/Context;Ljava/io/File;)Lcom/facebook/common/dextricks/DexStore$OptimizationHistoryLog;
@@ -406,7 +417,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -433,7 +444,7 @@
 
     .line 1
     .line 2
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 3
     .line 4
@@ -521,7 +532,7 @@
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 5
     .line 6
@@ -537,7 +548,7 @@
 
     .line 10
     .line 11
-    invoke-static {p1, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p1, v0}, LX/001;->A09(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     .line 12
     .line 13
@@ -568,7 +579,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 3
     .line 4
@@ -603,7 +614,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 11
     .line 12
@@ -637,7 +648,7 @@
 
     .line 8
     .line 9
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 10
     .line 11
@@ -710,7 +721,7 @@
     .locals 5
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -740,7 +751,7 @@
 
     .line 15
     .line 16
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 17
     .line 18
@@ -955,30 +966,34 @@
     .line 131
     .line 132
     .line 133
-    invoke-static {v2}, LX/001;->A0N(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const/16 v0, 0x5d
 
     .line 134
     .line 135
+    invoke-static {v2, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
     .line 136
+    .line 137
+    .line 138
     move-result-object v0
 
-    .line 137
+    .line 139
     return-object v0
 
-    .line 138
+    .line 140
     :cond_0
     const-string v0, "None"
 
-    .line 139
-    .line 140
+    .line 141
+    .line 142
     goto :goto_1
 
-    .line 141
+    .line 143
     :cond_1
     const-string v0, "failure"
 
-    .line 142
-    .line 143
+    .line 144
+    .line 145
     goto :goto_0
 .end method
 
@@ -1055,7 +1070,7 @@
 
     .line 35
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     .line 36
     :try_start_1
@@ -1066,6 +1081,17 @@
     .line 37
     .line 38
     .line 39
+    throw v1
+
+    .line 40
     :catchall_1
-    throw v0
+    move-exception v0
+
+    .line 41
+    invoke-static {v1, v0}, LX/07U;->A00(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    .line 42
+    .line 43
+    .line 44
+    throw v1
 .end method

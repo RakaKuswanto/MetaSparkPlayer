@@ -20,7 +20,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 5
     .line 6
@@ -28,7 +28,7 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/46G;Ljava/lang/String;Ljava/lang/String;JLcom/facebook/nativeutil/NativeMap;Ljava/lang/Class;ILcom/facebook/graphservice/asset/GraphServiceAsset;Z)V
+.method public constructor <init>(LX/0a9;Ljava/lang/String;Ljava/lang/String;JLcom/facebook/nativeutil/NativeMap;Ljava/lang/Class;ILcom/facebook/graphservice/asset/GraphServiceAsset;Z)V
     .locals 10
 
     .line 0
@@ -53,7 +53,7 @@
 
     .line 10
     .line 11
-    invoke-direct {v0, p1}, Lcom/facebook/graphservice/GraphQLConfigHintsJNI;-><init>(LX/46G;)V
+    invoke-direct {v0, p1}, Lcom/facebook/graphservice/GraphQLConfigHintsJNI;-><init>(LX/0a9;)V
 
     .line 12
     .line 13

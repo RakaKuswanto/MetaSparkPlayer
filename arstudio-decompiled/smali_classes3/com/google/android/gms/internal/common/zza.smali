@@ -1,4 +1,4 @@
-.class public Lcom/google/android/gms/internal/common/zza;
+.class public abstract Lcom/google/android/gms/internal/common/zza;
 .super Ljava/lang/Object;
 .source ""
 

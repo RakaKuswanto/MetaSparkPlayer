@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/65w;->A00()V
+    invoke-static {}, LX/4Gp;->A00()V
 
     .line 1
     .line 2
@@ -29,4 +29,7 @@
 .end method
 
 .method public static native deleteDatabaseFilesForPathNative(Ljava/lang/String;)V
+.end method
+
+.method public static native encryptAndDeleteDatabaseNative(JLjava/lang/String;)V
 .end method

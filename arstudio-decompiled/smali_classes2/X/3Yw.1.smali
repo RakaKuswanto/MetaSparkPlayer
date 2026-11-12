@@ -1,8 +1,20 @@
-.class public interface abstract LX/3Yw;
+.class public abstract LX/3Yw;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A8r(Ljava/lang/Object;Ljava/lang/Object;)V
+# direct methods
+.method public static A00(Landroid/app/Activity;Ljava/lang/String;)Z
+    .locals 0
+
+    .line 0
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result p0
+
+    .line 4
+    return p0
 .end method

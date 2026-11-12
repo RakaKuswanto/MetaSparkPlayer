@@ -7,8 +7,8 @@
 
 
 # virtual methods
-.method public abstract AhP(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)Lcom/facebook/push/fbns/ipc/FbnsAIDLResult;
+.method public abstract Afj(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)Lcom/facebook/push/fbns/ipc/FbnsAIDLResult;
 .end method
 
-.method public abstract AqM(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)V
+.method public abstract ApB(Lcom/facebook/push/fbns/ipc/FbnsAIDLRequest;)V
 .end method

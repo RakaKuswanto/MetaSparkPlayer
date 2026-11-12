@@ -6,32 +6,30 @@
 # instance fields
 .field public A00:Lcom/facebook/device/resourcemonitor/DataUsageBytes;
 
-.field public A01:LX/2jL;
+.field public A01:LX/2MG;
 
-.field public A02:LX/1zG;
+.field public A02:Z
 
-.field public A03:Z
+.field public final A03:LX/2pk;
 
-.field public final A04:LX/0Gk;
+.field public final A04:LX/0RP;
 
-.field public final A05:LX/2pe;
+.field public final A05:Ljava/util/concurrent/ConcurrentMap;
 
-.field public final A06:LX/0Na;
+.field public final A06:LX/0Ft;
 
-.field public final A07:Ljava/util/concurrent/ConcurrentMap;
+.field public final A07:LX/2Hh;
 
-.field public final A08:LX/1yQ;
+.field public final A08:Lcom/facebook/device/DeviceConditionHelper;
 
-.field public final A09:Lcom/facebook/device/DeviceConditionHelper;
+.field public final A09:Lcom/facebook/device/resourcemonitor/ResourceMonitor;
 
-.field public final A0A:Lcom/facebook/device/resourcemonitor/ResourceMonitor;
-
-.field public final A0B:Ljava/lang/Runtime;
+.field public final A0A:Ljava/lang/Runtime;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 5
+.method public constructor <init>()V
+    .locals 11
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +37,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A04()LX/0Zq;
+    invoke-static {}, LX/0lf;->A04()LX/0lf;
 
     .line 4
     .line 5
@@ -47,203 +45,220 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A06:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A04:LX/0RP;
 
     .line 8
     .line 9
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    sget v0, LX/2I6;->A8y:I
 
     .line 10
     .line 11
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
     .line 12
-    move-result-object v0
-
     .line 13
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A02:LX/1zG;
-
     .line 14
+    move-result-object v3
+
     .line 15
-    sget v0, LX/2eq;->ACI:I
+    check-cast v3, Lcom/facebook/device/resourcemonitor/ResourceMonitor;
 
     .line 16
     .line 17
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    sget v1, LX/2I6;->A8z:I
 
     .line 18
     .line 19
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
     .line 20
-    move-result-object v3
-
     .line 21
-    check-cast v3, Lcom/facebook/device/resourcemonitor/ResourceMonitor;
-
     .line 22
+    move-result-object v0
+
     .line 23
-    sget v1, LX/2eq;->ACJ:I
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
 
     .line 24
     .line 25
-    const/4 v0, 0x0
-
     .line 26
-    invoke-static {v0, v0, v1}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
-
-    .line 27
-    .line 28
-    .line 29
     move-result-object v1
 
-    .line 30
+    .line 27
     check-cast v1, Ljava/lang/Runtime;
 
-    .line 31
-    .line 32
-    sget v0, LX/2eq;->ACF:I
+    .line 28
+    .line 29
+    sget v0, LX/2I6;->A8w:I
 
+    .line 30
+    .line 31
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 32
     .line 33
     .line 34
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 35
-    .line 36
-    .line 37
     move-result-object v4
 
-    .line 38
+    .line 35
     check-cast v4, Lcom/facebook/device/DeviceConditionHelper;
 
+    .line 36
+    .line 37
+    invoke-static {}, LX/2I6;->A07()LX/0Ft;
+
+    .line 38
     .line 39
     .line 40
-    invoke-static {}, LX/1z6;->A06()LX/0Gk;
-
-    .line 41
-    .line 42
-    .line 43
     move-result-object v2
 
-    .line 44
-    sget v0, LX/2eq;->ACG:I
+    .line 41
+    sget v0, LX/2I6;->A8x:I
 
+    .line 42
+    .line 43
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
+
+    .line 44
     .line 45
     .line 46
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
-    .line 47
-    .line 48
-    .line 49
     move-result-object v0
 
+    .line 47
+    check-cast v0, LX/2pk;
+
+    .line 48
+    .line 49
+    iput-object v3, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A09:Lcom/facebook/device/resourcemonitor/ResourceMonitor;
+
     .line 50
-    check-cast v0, LX/2pe;
-
     .line 51
+    iput-object v1, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A0A:Ljava/lang/Runtime;
+
     .line 52
-    iput-object v3, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A0A:Lcom/facebook/device/resourcemonitor/ResourceMonitor;
-
     .line 53
+    iput-object v4, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A08:Lcom/facebook/device/DeviceConditionHelper;
+
     .line 54
-    iput-object v1, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A0B:Ljava/lang/Runtime;
-
     .line 55
-    .line 56
-    iput-object v4, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A09:Lcom/facebook/device/DeviceConditionHelper;
+    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A03:LX/2pk;
 
+    .line 56
     .line 57
+    const/4 v6, 0x0
+
     .line 58
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A05:LX/2pe;
+    sget-object v8, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     .line 59
     .line 60
-    sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
-
-    .line 61
-    .line 62
     const/4 v3, 0x1
 
-    .line 63
-    invoke-static {v0}, LX/0Yh;->A0L(Lcom/google/common/collect/MapMakerInternalMap$Strength;)Lcom/google/common/collect/MapMakerInternalMap;
+    .line 61
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 62
+    .line 63
     .line 64
+    new-instance v7, LX/25H;
+
     .line 65
     .line 66
-    move-result-object v0
+    invoke-direct {v7}, LX/25H;-><init>()V
 
     .line 67
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A07:Ljava/util/concurrent/ConcurrentMap;
-
     .line 68
     .line 69
-    sget-object v0, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->MY_APP:Lcom/facebook/device/resourcemonitor/MonitoredProcess;
+    const/4 v9, -0x1
 
     .line 70
-    .line 71
-    iget v1, v0, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->uid:I
+    new-instance v5, Lcom/google/common/collect/MapMakerInternalMap;
 
+    .line 71
     .line 72
+    move v10, v9
+
     .line 73
-    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A05:LX/2pe;
+    invoke-direct/range {v5 .. v10}, Lcom/google/common/collect/MapMakerInternalMap;-><init>(Lcom/google/common/base/Equivalence;LX/24r;Lcom/google/common/collect/MapMakerInternalMap$Strength;II)V
 
     .line 74
     .line 75
-    invoke-virtual {v0, v1}, LX/2pe;->A02(I)Lcom/facebook/device/resourcemonitor/DataUsageBytes;
-
     .line 76
+    iput-object v5, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A05:Ljava/util/concurrent/ConcurrentMap;
+
     .line 77
     .line 78
-    move-result-object v0
+    sget-object v0, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->MY_APP:Lcom/facebook/device/resourcemonitor/MonitoredProcess;
 
     .line 79
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A00:Lcom/facebook/device/resourcemonitor/DataUsageBytes;
-
     .line 80
+    iget v1, v0, Lcom/facebook/device/resourcemonitor/MonitoredProcess;->uid:I
+
     .line 81
-    new-instance v0, LX/2jL;
-
     .line 82
-    .line 83
-    invoke-direct {v0}, LX/2jL;-><init>()V
+    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A03:LX/2pk;
 
+    .line 83
     .line 84
+    invoke-virtual {v0, v1}, LX/2pk;->A02(I)Lcom/facebook/device/resourcemonitor/DataUsageBytes;
+
     .line 85
     .line 86
-    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A01:LX/2jL;
-
     .line 87
+    move-result-object v0
+
     .line 88
-    iput-object v2, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A04:LX/0Gk;
+    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A00:Lcom/facebook/device/resourcemonitor/DataUsageBytes;
 
     .line 89
     .line 90
-    new-instance v2, LX/2Zz;
+    new-instance v0, LX/2MG;
 
     .line 91
     .line 92
-    invoke-direct {v2, p0}, LX/2Zz;-><init>(Lcom/facebook/device/resourcemonitor/ResourceManager;)V
+    invoke-direct {v0}, LX/2MG;-><init>()V
 
     .line 93
     .line 94
     .line 95
-    iput-object v2, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A08:LX/1yQ;
+    iput-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A01:LX/2MG;
 
     .line 96
     .line 97
-    iget-object v1, v4, Lcom/facebook/device/DeviceConditionHelper;->A02:Ljava/util/concurrent/ConcurrentMap;
+    iput-object v2, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A06:LX/0Ft;
 
     .line 98
     .line 99
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    new-instance v2, LX/2Hg;
 
     .line 100
     .line 101
+    invoke-direct {v2, p0}, LX/2Hg;-><init>(Lcom/facebook/device/resourcemonitor/ResourceManager;)V
+
     .line 102
-    move-result-object v0
-
     .line 103
-    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
     .line 104
+    iput-object v2, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A07:LX/2Hh;
+
     .line 105
     .line 106
+    iget-object v1, v4, Lcom/facebook/device/DeviceConditionHelper;->A02:Ljava/util/concurrent/ConcurrentMap;
+
+    .line 107
+    .line 108
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 109
+    .line 110
+    .line 111
+    move-result-object v0
+
+    .line 112
+    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 113
+    .line 114
+    .line 115
     return-void
 .end method
 
@@ -265,11 +280,11 @@
 
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A05:LX/2pe;
+    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A03:LX/2pk;
 
     .line 6
     .line 7
-    invoke-virtual {v0, v1}, LX/2pe;->A02(I)Lcom/facebook/device/resourcemonitor/DataUsageBytes;
+    invoke-virtual {v0, v1}, LX/2pk;->A02(I)Lcom/facebook/device/resourcemonitor/DataUsageBytes;
 
     .line 8
     .line 9
@@ -277,11 +292,11 @@
     move-result-object v7
 
     .line 11
-    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A06:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A04:LX/0RP;
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Ye;->A1Z(LX/0Na;)Z
+    invoke-static {v0}, LX/0X4;->A1S(LX/0RP;)Z
 
     .line 14
     .line 15
@@ -319,7 +334,7 @@
 
     .line 31
     .line 32
-    iget-boolean v1, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A03:Z
+    iget-boolean v1, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A02:Z
 
     .line 33
     .line 34
@@ -327,7 +342,7 @@
 
     .line 35
     .line 36
-    iget-object v5, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A01:LX/2jL;
+    iget-object v5, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A01:LX/2MG;
 
     .line 37
     .line 38
@@ -335,14 +350,14 @@
 
     .line 39
     .line 40
-    iget-wide v1, v5, LX/2jL;->A02:J
+    iget-wide v1, v5, LX/2MG;->A02:J
 
     .line 41
     .line 42
     add-long/2addr v1, v3
 
     .line 43
-    iput-wide v1, v5, LX/2jL;->A02:J
+    iput-wide v1, v5, LX/2MG;->A02:J
 
     .line 44
     .line 45
@@ -350,19 +365,19 @@
 
     .line 46
     .line 47
-    iget-wide v0, v5, LX/2jL;->A03:J
+    iget-wide v0, v5, LX/2MG;->A03:J
 
     .line 48
     .line 49
     add-long/2addr v0, v2
 
     .line 50
-    iput-wide v0, v5, LX/2jL;->A03:J
+    iput-wide v0, v5, LX/2MG;->A03:J
 
     .line 51
     .line 52
     :goto_1
-    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A09:Lcom/facebook/device/DeviceConditionHelper;
+    iget-object v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A08:Lcom/facebook/device/DeviceConditionHelper;
 
     .line 53
     .line 54
@@ -374,7 +389,7 @@
     move-result v0
 
     .line 58
-    iput-boolean v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A03:Z
+    iput-boolean v0, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A02:Z
 
     .line 59
     .line 60
@@ -382,7 +397,7 @@
 
     .line 61
     :cond_0
-    iget-object v5, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A01:LX/2jL;
+    iget-object v5, p0, Lcom/facebook/device/resourcemonitor/ResourceManager;->A01:LX/2MG;
 
     .line 62
     .line 63
@@ -390,14 +405,14 @@
 
     .line 64
     .line 65
-    iget-wide v1, v5, LX/2jL;->A00:J
+    iget-wide v1, v5, LX/2MG;->A00:J
 
     .line 66
     .line 67
     add-long/2addr v1, v3
 
     .line 68
-    iput-wide v1, v5, LX/2jL;->A00:J
+    iput-wide v1, v5, LX/2MG;->A00:J
 
     .line 69
     .line 70
@@ -405,14 +420,14 @@
 
     .line 71
     .line 72
-    iget-wide v0, v5, LX/2jL;->A01:J
+    iget-wide v0, v5, LX/2MG;->A01:J
 
     .line 73
     .line 74
     add-long/2addr v0, v2
 
     .line 75
-    iput-wide v0, v5, LX/2jL;->A01:J
+    iput-wide v0, v5, LX/2MG;->A01:J
 
     .line 76
     .line 77

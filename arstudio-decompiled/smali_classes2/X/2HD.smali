@@ -1,16 +1,18 @@
-.class public final LX/2HD;
+.class public final LX/2Hd;
 .super Ljava/lang/Object;
 .source ""
 
 
 # instance fields
-.field public final A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
+.field public final A00:I
 
-.field public final A01:Ljava/lang/Class;
+.field public final A01:I
+
+.field public final A02:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/JsonSerializer;Ljava/lang/Class;)V
+.method public constructor <init>(III)V
     .locals 0
 
     .line 0
@@ -19,13 +21,17 @@
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/2HD;->A01:Ljava/lang/Class;
+    iput p1, p0, LX/2Hd;->A00:I
 
     .line 4
     .line 5
-    iput-object p1, p0, LX/2HD;->A00:Lcom/fasterxml/jackson/databind/JsonSerializer;
+    iput p2, p0, LX/2Hd;->A02:I
 
     .line 6
     .line 7
+    iput p3, p0, LX/2Hd;->A01:I
+
+    .line 8
+    .line 9
     return-void
 .end method

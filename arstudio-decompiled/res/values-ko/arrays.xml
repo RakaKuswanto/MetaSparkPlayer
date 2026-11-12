@@ -8,6 +8,7 @@
         <item>검색</item>
         <item>알림</item>
         <item>하이라이트 탭</item>
+        <item>스토리</item>
         <item>기타</item>
     </string-array>
 </resources>

@@ -1,11 +1,15 @@
-.class public interface abstract LX/4d0;
+.class public abstract LX/4d0;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AW6(LX/4ay;Z)V
-.end method
+# static fields
+.field public static A00:Landroid/animation/LayoutTransition;
 
-.method public abstract AaO(LX/4ay;)Z
-.end method
+.field public static A01:Ljava/lang/reflect/Field;
+
+.field public static A02:Ljava/lang/reflect/Method;
+
+.field public static A03:Z
+
+.field public static A04:Z

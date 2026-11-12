@@ -43,63 +43,63 @@
 
     .line 8
     .line 9
-    invoke-static {v2}, LX/001;->A14(Ljava/util/AbstractMap;)V
+    sget-object v1, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     .line 10
     .line 11
+    const-string v0, "B"
+
     .line 12
-    sget-object v1, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
-
     .line 13
-    .line 14
-    const-string v0, "V"
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 14
     .line 15
     .line 16
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v1, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
     .line 17
     .line 18
+    const-string v0, "C"
+
     .line 19
-    sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
     .line 20
-    .line 21
-    const-string v0, "Z"
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 21
     .line 22
     .line 23
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v1, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     .line 24
     .line 25
+    const-string v0, "S"
+
     .line 26
-    new-instance v2, Ljava/util/HashMap;
-
     .line 27
-    .line 28
-    invoke-direct {v2, v3}, Ljava/util/HashMap;-><init>(I)V
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 28
     .line 29
     .line 30
+    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
     .line 31
-    sput-object v2, Lcom/facebook/common/jit/common/MethodInfo;->A06:Ljava/util/Map;
-
     .line 32
+    const-string v0, "I"
+
     .line 33
-    const/16 v0, 0x42
-
     .line 34
-    .line 35
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 35
     .line 36
     .line 37
-    .line 38
-    move-result-object v1
+    sget-object v1, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
+    .line 38
     .line 39
-    sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
+    const-string v0, "J"
 
     .line 40
     .line 41
@@ -108,174 +108,260 @@
     .line 42
     .line 43
     .line 44
-    const/16 v0, 0x43
+    sget-object v1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     .line 45
     .line 46
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    const-string v0, "F"
 
     .line 47
     .line 48
-    .line 49
-    move-result-object v1
-
-    .line 50
-    sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
-
-    .line 51
-    .line 52
     invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 49
+    .line 50
+    .line 51
+    sget-object v1, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
+
+    .line 52
     .line 53
+    const-string v0, "D"
+
     .line 54
     .line 55
-    const/16 v0, 0x53
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 56
     .line 57
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
-
     .line 58
+    sget-object v1, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+
     .line 59
     .line 60
-    move-result-object v1
+    const-string v0, "V"
 
     .line 61
-    sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
-
     .line 62
-    .line 63
     invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 63
     .line 64
     .line 65
+    sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
     .line 66
-    const/16 v0, 0x49
-
     .line 67
-    .line 68
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    const-string v0, "Z"
 
+    .line 68
     .line 69
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 70
     .line 71
-    move-result-object v1
-
     .line 72
-    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    new-instance v2, Ljava/util/HashMap;
 
     .line 73
     .line 74
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2, v3}, Ljava/util/HashMap;-><init>(I)V
 
     .line 75
     .line 76
     .line 77
-    const/16 v0, 0x4a
+    sput-object v2, Lcom/facebook/common/jit/common/MethodInfo;->A06:Ljava/util/Map;
 
     .line 78
     .line 79
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    const/16 v0, 0x42
 
     .line 80
     .line 81
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
     .line 82
+    .line 83
+    .line 84
     move-result-object v1
 
-    .line 83
-    sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    .line 84
     .line 85
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     .line 86
     .line 87
-    .line 88
-    const/16 v0, 0x46
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 88
     .line 89
     .line 90
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    const/16 v0, 0x43
 
     .line 91
     .line 92
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
     .line 93
+    .line 94
+    .line 95
     move-result-object v1
 
-    .line 94
-    sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
-
-    .line 95
     .line 96
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
     .line 97
     .line 98
-    .line 99
-    const/16 v0, 0x44
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 99
     .line 100
     .line 101
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    const/16 v0, 0x53
 
     .line 102
     .line 103
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
     .line 104
+    .line 105
+    .line 106
     move-result-object v1
 
-    .line 105
-    sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
-
-    .line 106
     .line 107
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     .line 108
     .line 109
-    .line 110
-    const/16 v0, 0x56
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 110
     .line 111
     .line 112
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    const/16 v0, 0x49
 
     .line 113
     .line 114
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
     .line 115
+    .line 116
+    .line 117
     move-result-object v1
 
-    .line 116
-    sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
-
-    .line 117
     .line 118
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     .line 119
     .line 120
-    .line 121
-    const/16 v0, 0x5a
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 121
     .line 122
     .line 123
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    const/16 v0, 0x4a
 
     .line 124
     .line 125
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
     .line 126
+    .line 127
+    .line 128
     move-result-object v1
 
-    .line 127
-    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    .line 128
     .line 129
-    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     .line 130
     .line 131
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 132
+    .line 133
+    .line 134
+    const/16 v0, 0x46
+
+    .line 135
+    .line 136
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    .line 137
+    .line 138
+    .line 139
+    move-result-object v1
+
+    .line 140
+    sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+
+    .line 141
+    .line 142
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 143
+    .line 144
+    .line 145
+    const/16 v0, 0x44
+
+    .line 146
+    .line 147
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    .line 148
+    .line 149
+    .line 150
+    move-result-object v1
+
+    .line 151
+    sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
+
+    .line 152
+    .line 153
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 154
+    .line 155
+    .line 156
+    const/16 v0, 0x56
+
+    .line 157
+    .line 158
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    .line 159
+    .line 160
+    .line 161
+    move-result-object v1
+
+    .line 162
+    sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+
+    .line 163
+    .line 164
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 165
+    .line 166
+    .line 167
+    const/16 v0, 0x5a
+
+    .line 168
+    .line 169
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    .line 170
+    .line 171
+    .line 172
+    move-result-object v1
+
+    .line 173
+    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    .line 174
+    .line 175
+    invoke-virtual {v2, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 176
+    .line 177
+    .line 178
     return-void
 .end method
 
@@ -451,7 +537,7 @@
     move-result v0
 
     .line 14
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 15
     .line 16
@@ -489,7 +575,7 @@
 
     .line 33
     :goto_0
-    invoke-static {v0, v3}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v3}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 34
     .line 35
@@ -551,7 +637,7 @@
     .locals 4
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -621,7 +707,7 @@
     move-result-object v0
 
     .line 34
-    invoke-static {v0, v3}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v3}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 35
     .line 36
@@ -633,14 +719,14 @@
 .end method
 
 .method public static A02(Ljava/lang/Class;Ljava/util/List;I)Z
-    .locals 5
+    .locals 4
 
     .line 0
     if-lez p2, :cond_3
 
     .line 1
     .line 2
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 3
     .line 4
@@ -648,7 +734,7 @@
     move-result-object v2
 
     .line 6
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     .line 7
     const/4 v1, 0x0
@@ -696,7 +782,7 @@
 
     .line 28
     .line 29
-    invoke-static {v1}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 30
     .line 31
@@ -745,11 +831,11 @@
     .line 53
     .line 54
     .line 55
-    move-result-object v3
+    move-result-object v0
 
     .line 56
     :try_start_0
-    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     .line 57
     .line 58
@@ -779,70 +865,71 @@
     move-exception v2
 
     .line 68
-    const/4 v0, 0x1
+    invoke-static {}, LX/002;->A0F()[Ljava/lang/Object;
 
     .line 69
-    new-array v1, v0, [Ljava/lang/Object;
-
     .line 70
     .line 71
-    aput-object v3, v1, v4
-
-    .line 72
-    .line 73
-    const-string v0, "Cannot find array class: %s"
-
-    .line 74
-    .line 75
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 76
-    .line 77
-    .line 78
     move-result-object v1
 
+    .line 72
+    aput-object v0, v1, v3
+
+    .line 73
+    .line 74
+    const-string v0, "Cannot find array class: %s"
+
+    .line 75
+    .line 76
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 77
+    .line 78
     .line 79
-    const-string v0, "JitMethodInfo"
+    move-result-object v1
 
     .line 80
+    const-string v0, "JitMethodInfo"
+
     .line 81
+    .line 82
     invoke-static {v0, v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 82
     .line 83
     .line 84
+    .line 85
     :cond_2
     const/4 v0, 0x0
 
-    .line 85
+    .line 86
     return v0
 
-    .line 86
+    .line 87
     :cond_3
     const-string v1, "Array count "
 
-    .line 87
     .line 88
+    .line 89
     const-string v0, " is not valid"
 
-    .line 89
     .line 90
-    invoke-static {v1, v0, p2}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
-
     .line 91
+    invoke-static {v1, v0, p2}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+
     .line 92
     .line 93
-    move-result-object v0
-
     .line 94
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    move-result-object v0
 
     .line 95
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 96
     .line 97
+    .line 98
     move-result-object v0
 
-    .line 98
+    .line 99
     throw v0
 .end method
 
@@ -919,7 +1006,7 @@
 
     .line 31
     .line 32
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 33
     .line 34
@@ -953,7 +1040,7 @@
 
     .line 45
     .line 46
-    invoke-static {p0, p1, v4}, LX/002;->A0T(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {p0, p1, v4}, LX/002;->A0H(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 47
     .line 48
@@ -965,61 +1052,69 @@
 
     .line 51
     .line 52
-    invoke-static {v1, v3, v0}, LX/001;->A0z(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 53
     .line 54
     .line 55
-    goto :goto_5
+    move-result-object v0
 
     .line 56
+    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 57
+    .line 58
+    .line 59
+    goto :goto_5
+
+    .line 60
     :cond_1
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
-    .line 57
-    .line 58
+    .line 61
+    .line 62
     :goto_3
     if-ge v1, v8, :cond_7
 
-    .line 59
-    .line 60
+    .line 63
+    .line 64
     invoke-virtual {p2, v1}, Ljava/lang/String;->charAt(I)C
 
-    .line 61
-    .line 62
-    .line 63
+    .line 65
+    .line 66
+    .line 67
     move-result v7
 
-    .line 64
+    .line 68
     const/4 v9, 0x0
 
-    .line 65
+    .line 69
     :goto_4
     const/16 v0, 0x5b
 
-    .line 66
-    .line 67
-    if-ne v7, v0, :cond_2
-
-    .line 68
-    .line 69
-    add-int/lit8 v9, v9, 0x1
-
     .line 70
     .line 71
-    add-int/lit8 v1, v1, 0x1
+    if-ne v7, v0, :cond_2
 
     .line 72
     .line 73
-    invoke-virtual {p2, v1}, Ljava/lang/String;->charAt(I)C
+    add-int/lit8 v9, v9, 0x1
 
     .line 74
     .line 75
+    add-int/lit8 v1, v1, 0x1
+
     .line 76
+    .line 77
+    invoke-virtual {p2, v1}, Ljava/lang/String;->charAt(I)C
+
+    .line 78
+    .line 79
+    .line 80
     move-result v7
 
-    .line 77
+    .line 81
     goto :goto_4
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
@@ -1027,30 +1122,22 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_5
     .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_5
 
-    .line 78
-    :cond_2
-    invoke-static {v9}, LX/001;->A1N(I)Z
-
-    .line 79
-    .line 80
-    .line 81
-    move-result v10
-
     .line 82
-    :try_start_1
-    sget-object v2, Lcom/facebook/common/jit/common/MethodInfo;->A06:Ljava/util/Map;
+    :cond_2
+    invoke-static {v9}, LX/001;->A1M(I)Z
 
     .line 83
     .line 84
-    invoke-static {v7}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
-
     .line 85
-    .line 86
-    .line 87
-    move-result-object v0
+    move-result v10
 
+    .line 86
+    :try_start_1
+    sget-object v2, Lcom/facebook/common/jit/common/MethodInfo;->A06:Ljava/util/Map;
+
+    .line 87
     .line 88
-    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v7}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
     .line 89
     .line 90
@@ -1058,84 +1145,92 @@
     move-result-object v0
 
     .line 92
-    check-cast v0, Ljava/lang/Class;
+    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 93
     .line 94
-    if-eqz v0, :cond_4
-
     .line 95
+    move-result-object v0
+
     .line 96
-    if-eqz v10, :cond_3
+    check-cast v0, Ljava/lang/Class;
 
     .line 97
     .line 98
-    goto :goto_0
+    if-eqz v0, :cond_4
 
     .line 99
+    .line 100
+    if-eqz v10, :cond_3
+
+    .line 101
+    .line 102
+    goto :goto_0
+
+    .line 103
     :cond_3
     invoke-virtual {v6, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    .line 100
-    .line 101
-    .line 102
+    .line 104
+    .line 105
+    .line 106
     goto :goto_2
 
-    .line 103
+    .line 107
     :cond_4
     const/16 v0, 0x4c
 
-    .line 104
-    .line 105
-    if-ne v7, v0, :cond_0
-
-    .line 106
-    .line 107
-    const/16 v0, 0x3b
-
     .line 108
     .line 109
-    invoke-virtual {p2, v0, v1}, Ljava/lang/String;->indexOf(II)I
+    if-ne v7, v0, :cond_0
 
     .line 110
     .line 111
-    .line 112
-    move-result v7
+    const/16 v0, 0x3b
 
+    .line 112
     .line 113
-    if-ltz v7, :cond_0
+    invoke-virtual {p2, v0, v1}, Ljava/lang/String;->indexOf(II)I
 
     .line 114
     .line 115
-    add-int/lit8 v0, v1, 0x1
-
     .line 116
+    move-result v7
+
     .line 117
-    if-le v7, v0, :cond_0
+    if-ltz v7, :cond_0
 
     .line 118
     .line 119
-    invoke-virtual {p2, v0, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    add-int/lit8 v0, v1, 0x1
 
     .line 120
     .line 121
-    .line 122
-    move-result-object v2
+    if-le v7, v0, :cond_0
 
+    .line 122
     .line 123
-    const/16 v1, 0x2f
+    invoke-virtual {p2, v0, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     .line 124
     .line 125
-    const/16 v0, 0x2e
-
     .line 126
+    move-result-object v2
+
     .line 127
-    invoke-virtual {v2, v1, v0}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+    const/16 v1, 0x2f
 
     .line 128
     .line 129
+    const/16 v0, 0x2e
+
     .line 130
+    .line 131
+    invoke-virtual {v2, v1, v0}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    .line 132
+    .line 133
+    .line 134
     move-result-object v0
     :try_end_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_4
@@ -1143,20 +1238,20 @@
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_5
     .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_5
 
-    .line 131
+    .line 135
     :try_start_2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 132
-    .line 133
-    .line 134
-    move-result-object v0
-
-    .line 135
-    if-eqz v0, :cond_0
-
     .line 136
     .line 137
+    .line 138
+    move-result-object v0
+
+    .line 139
+    if-eqz v0, :cond_0
+
+    .line 140
+    .line 141
     if-eqz v10, :cond_5
     :try_end_2
     .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1166,139 +1261,139 @@
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_5
     .catch Ljava/lang/Error; {:try_start_2 .. :try_end_2} :catch_5
 
-    .line 138
-    .line 139
+    .line 142
+    .line 143
     :try_start_3
     invoke-static {v0, v6, v9}, Lcom/facebook/common/jit/common/MethodInfo;->A02(Ljava/lang/Class;Ljava/util/List;I)Z
 
-    .line 140
-    .line 141
-    .line 142
-    move-result v0
-
-    .line 143
-    if-nez v0, :cond_6
-
     .line 144
     .line 145
+    .line 146
+    move-result v0
+
+    .line 147
+    if-nez v0, :cond_6
+
+    .line 148
+    .line 149
     goto :goto_1
 
-    .line 146
+    .line 150
     :cond_5
     invoke-virtual {v6, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    .line 147
-    .line 148
-    .line 149
+    .line 151
+    .line 152
+    .line 153
     :cond_6
     add-int/lit8 v1, v7, 0x1
 
-    .line 150
-    .line 151
+    .line 154
+    .line 155
     goto :goto_3
 
-    .line 152
+    .line 156
     :cond_7
     invoke-virtual {v6}, Ljava/util/AbstractCollection;->size()I
 
-    .line 153
-    .line 154
-    .line 155
-    move-result v0
-
-    .line 156
-    new-array v0, v0, [Ljava/lang/Class;
-
     .line 157
     .line 158
-    invoke-virtual {v6, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
     .line 159
-    .line 160
-    .line 161
-    move-result-object v6
+    move-result v0
 
+    .line 160
+    new-array v0, v0, [Ljava/lang/Class;
+
+    .line 161
     .line 162
-    check-cast v6, [Ljava/lang/Class;
+    invoke-virtual {v6, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 163
     .line 164
-    if-eqz v6, :cond_0
-
     .line 165
+    move-result-object v6
+
     .line 166
-    goto :goto_6
+    check-cast v6, [Ljava/lang/Class;
 
     .line 167
+    .line 168
+    if-eqz v6, :cond_0
+
+    .line 169
+    .line 170
+    goto :goto_6
+
+    .line 171
     :goto_5
     return-object v12
 
-    .line 168
+    .line 172
     :goto_6
     const/4 v7, 0x0
 
-    .line 169
-    if-eqz v5, :cond_11
-
-    .line 170
-    .line 171
-    const-string v0, "<clinit>"
-
-    .line 172
     .line 173
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v5, :cond_11
 
     .line 174
     .line 175
-    .line 176
-    move-result v0
+    const-string v0, "<clinit>"
 
+    .line 176
     .line 177
-    if-eqz v0, :cond_8
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 178
     .line 179
-    sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
-
     .line 180
+    move-result v0
+
     .line 181
-    invoke-static {v0, v6}, Lcom/facebook/common/jit/common/MethodInfo;->A01(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+    if-eqz v0, :cond_8
 
     .line 182
     .line 183
-    .line 184
-    move-result-object v0
+    sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
+    .line 184
     .line 185
-    new-instance v7, Lcom/facebook/common/jit/common/MethodInfo;
+    invoke-static {v0, v6}, Lcom/facebook/common/jit/common/MethodInfo;->A01(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     .line 186
     .line 187
-    invoke-direct {v7, v5, p1, v0}, Lcom/facebook/common/jit/common/MethodInfo;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 188
-    .line 189
-    .line 190
-    return-object v7
+    move-result-object v0
 
+    .line 189
+    new-instance v7, Lcom/facebook/common/jit/common/MethodInfo;
+
+    .line 190
     .line 191
-    :cond_8
-    const-string v0, "<init>"
+    invoke-direct {v7, v5, p1, v0}, Lcom/facebook/common/jit/common/MethodInfo;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 192
     .line 193
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 194
-    .line 195
-    .line 196
-    move-result v0
+    return-object v7
 
+    .line 195
+    :cond_8
+    const-string v0, "<init>"
+
+    .line 196
     .line 197
-    if-nez v0, :cond_b
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 198
     .line 199
+    .line 200
+    move-result v0
+
+    .line 201
+    if-nez v0, :cond_b
+
+    .line 202
+    .line 203
     move-object v8, v5
     :try_end_3
     .catch Ljava/lang/ClassNotFoundException; {:try_start_3 .. :try_end_3} :catch_4
@@ -1306,21 +1401,21 @@
     .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_5
     .catch Ljava/lang/Error; {:try_start_3 .. :try_end_3} :catch_5
 
-    .line 200
+    .line 204
     :goto_7
     :try_start_4
     invoke-virtual {v5, p1, v6}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    .line 201
-    .line 202
-    .line 203
-    move-result-object v2
-
-    .line 204
-    if-eqz v2, :cond_9
-
     .line 205
     .line 206
+    .line 207
+    move-result-object v2
+
+    .line 208
+    if-eqz v2, :cond_9
+
+    .line 209
+    .line 210
     goto :goto_8
     :try_end_4
     .catch Ljava/lang/NoSuchMethodException; {:try_start_4 .. :try_end_4} :catch_1
@@ -1329,53 +1424,45 @@
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_5
     .catch Ljava/lang/Error; {:try_start_4 .. :try_end_4} :catch_5
 
-    .line 207
+    .line 211
     :catch_1
     :cond_9
     :try_start_5
     invoke-virtual {v8}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
-    .line 208
-    .line 209
-    .line 210
+    .line 212
+    .line 213
+    .line 214
     move-result-object v1
 
-    .line 211
+    .line 215
     move-object v0, v8
 
-    .line 212
+    .line 216
     move-object v8, v1
 
-    .line 213
+    .line 217
     if-eqz v1, :cond_a
 
-    .line 214
-    .line 215
+    .line 218
+    .line 219
     if-eq v1, v0, :cond_a
 
-    .line 216
-    .line 217
-    goto :goto_7
-
-    .line 218
-    :goto_8
-    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
-
-    .line 219
     .line 220
     .line 221
-    move-result-object v1
+    goto :goto_7
 
     .line 222
-    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
+    :goto_8
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
 
     .line 223
     .line 224
     .line 225
-    move-result-object v0
+    move-result-object v1
 
     .line 226
-    invoke-static {v0, v1}, Lcom/facebook/common/jit/common/MethodInfo;->A01(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     .line 227
     .line 228
@@ -1383,29 +1470,37 @@
     move-result-object v0
 
     .line 230
-    new-instance v7, Lcom/facebook/common/jit/common/MethodInfo;
+    invoke-static {v0, v1}, Lcom/facebook/common/jit/common/MethodInfo;->A01(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     .line 231
     .line 232
-    invoke-direct {v7, v5, p1, v0, v2}, Lcom/facebook/common/jit/common/MethodInfo;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Method;)V
-
     .line 233
-    .line 234
-    .line 235
-    return-object v7
+    move-result-object v0
 
+    .line 234
+    new-instance v7, Lcom/facebook/common/jit/common/MethodInfo;
+
+    .line 235
     .line 236
-    :cond_a
-    invoke-static {v6}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v7, v5, p1, v0, v2}, Lcom/facebook/common/jit/common/MethodInfo;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Method;)V
 
     .line 237
     .line 238
     .line 239
-    invoke-static {v6}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+    return-object v7
 
     .line 240
+    :cond_a
+    invoke-static {v6}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
     .line 241
     .line 242
+    .line 243
+    invoke-static {v6}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 244
+    .line 245
+    .line 246
     return-object v7
     :try_end_5
     .catch Ljava/lang/ClassNotFoundException; {:try_start_5 .. :try_end_5} :catch_4
@@ -1413,21 +1508,21 @@
     .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_5
     .catch Ljava/lang/Error; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 243
+    .line 247
     :cond_b
     :try_start_6
     invoke-virtual {v5, v6}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    .line 244
-    .line 245
-    .line 246
-    move-result-object v2
-
-    .line 247
-    if-eqz v2, :cond_c
-
     .line 248
     .line 249
+    .line 250
+    move-result-object v2
+
+    .line 251
+    if-eqz v2, :cond_c
+
+    .line 252
+    .line 253
     goto :goto_a
     :try_end_6
     .catch Ljava/lang/NoSuchMethodException; {:try_start_6 .. :try_end_6} :catch_2
@@ -1436,49 +1531,49 @@
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_5
     .catch Ljava/lang/Error; {:try_start_6 .. :try_end_6} :catch_5
 
-    .line 250
+    .line 254
     :catch_2
     :cond_c
     :try_start_7
     invoke-virtual {v5}, Ljava/lang/Class;->getEnclosingClass()Ljava/lang/Class;
 
-    .line 251
-    .line 252
-    .line 253
-    move-result-object v0
-
-    .line 254
-    if-eqz v0, :cond_11
-
     .line 255
     .line 256
-    array-length v1, v6
-
     .line 257
-    add-int/lit8 v0, v1, 0x1
+    move-result-object v0
 
     .line 258
-    .line 259
-    if-lt v0, v0, :cond_f
+    if-eqz v0, :cond_11
 
+    .line 259
     .line 260
+    array-length v1, v6
+
     .line 261
-    if-lt v1, v1, :cond_10
+    add-int/lit8 v0, v1, 0x1
 
     .line 262
     .line 263
-    const/4 v0, 0x0
+    if-lt v0, v0, :cond_f
 
     .line 264
+    .line 265
+    if-lt v1, v1, :cond_10
+
+    .line 266
+    .line 267
+    const/4 v0, 0x0
+
+    .line 268
     :goto_9
     if-ge v0, v1, :cond_d
 
-    .line 265
-    .line 266
+    .line 269
+    .line 270
     add-int/lit8 v0, v0, 0x1
 
-    .line 267
-    .line 268
+    .line 271
+    .line 272
     goto :goto_9
     :try_end_7
     .catch Ljava/lang/ClassNotFoundException; {:try_start_7 .. :try_end_7} :catch_4
@@ -1486,21 +1581,21 @@
     .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_7} :catch_5
     .catch Ljava/lang/Error; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 269
+    .line 273
     :cond_d
     :try_start_8
     invoke-virtual {v5, v6}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    .line 270
-    .line 271
-    .line 272
-    move-result-object v2
-
-    .line 273
-    if-nez v2, :cond_e
-
     .line 274
     .line 275
+    .line 276
+    move-result-object v2
+
+    .line 277
+    if-nez v2, :cond_e
+
+    .line 278
+    .line 279
     goto :goto_b
     :try_end_8
     .catch Ljava/lang/NoSuchMethodException; {:try_start_8 .. :try_end_8} :catch_3
@@ -1509,45 +1604,35 @@
     .catch Ljava/lang/RuntimeException; {:try_start_8 .. :try_end_8} :catch_5
     .catch Ljava/lang/Error; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 276
+    .line 280
     :cond_e
     :goto_a
     :try_start_9
     invoke-virtual {v2}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
-    .line 277
-    .line 278
-    .line 279
-    move-result-object v1
-
-    .line 280
-    sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
-
     .line 281
     .line 282
-    invoke-static {v0, v1}, Lcom/facebook/common/jit/common/MethodInfo;->A01(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
-
     .line 283
-    .line 284
-    .line 285
-    move-result-object v0
+    move-result-object v1
 
+    .line 284
+    sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+
+    .line 285
     .line 286
-    new-instance v7, Lcom/facebook/common/jit/common/MethodInfo;
+    invoke-static {v0, v1}, Lcom/facebook/common/jit/common/MethodInfo;->A01(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     .line 287
     .line 288
-    invoke-direct {v7, v5, p1, v0, v2}, Lcom/facebook/common/jit/common/MethodInfo;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Constructor;)V
-
     .line 289
-    .line 290
-    .line 291
-    return-object v7
+    move-result-object v0
 
+    .line 290
+    new-instance v7, Lcom/facebook/common/jit/common/MethodInfo;
+
+    .line 291
     .line 292
-    :catch_3
-    :goto_b
-    invoke-static {v6}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v7, v5, p1, v0, v2}, Lcom/facebook/common/jit/common/MethodInfo;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/reflect/Constructor;)V
 
     .line 293
     .line 294
@@ -1555,39 +1640,49 @@
     return-object v7
 
     .line 296
-    :cond_f
-    const-string v0, "Dest array is not big enough"
+    :catch_3
+    :goto_b
+    invoke-static {v6}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     .line 297
     .line 298
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
     .line 299
-    .line 300
-    .line 301
-    move-result-object v0
+    return-object v7
 
+    .line 300
+    :cond_f
+    const-string v0, "Dest array is not big enough"
+
+    .line 301
     .line 302
-    goto :goto_c
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 303
+    .line 304
+    .line 305
+    move-result-object v0
+
+    .line 306
+    goto :goto_c
+
+    .line 307
     :cond_10
     const-string v0, "Src array lacks the num of needed elements"
 
-    .line 304
-    .line 305
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 306
-    .line 307
     .line 308
+    .line 309
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 310
+    .line 311
+    .line 312
     move-result-object v0
 
-    .line 309
+    .line 313
     :goto_c
     throw v0
 
-    .line 310
+    .line 314
     :cond_11
     return-object v7
     :try_end_9
@@ -1596,80 +1691,80 @@
     .catch Ljava/lang/RuntimeException; {:try_start_9 .. :try_end_9} :catch_5
     .catch Ljava/lang/Error; {:try_start_9 .. :try_end_9} :catch_5
 
-    .line 311
+    .line 315
     :catch_4
     move-exception v2
 
-    .line 312
+    .line 316
     :try_start_a
     const-string v1, "Cannot find class: %s for method: %s sig: %s"
 
-    .line 313
-    .line 314
-    invoke-static {p0, p1, v4}, LX/002;->A0T(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    .line 315
-    .line 316
     .line 317
-    move-result-object v0
-
     .line 318
-    aput-object p2, v0, v11
+    invoke-static {p0, p1, v4}, LX/002;->A0H(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 319
     .line 320
-    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
     .line 321
-    .line 322
-    .line 323
     move-result-object v0
 
+    .line 322
+    aput-object p2, v0, v11
+
+    .line 323
     .line 324
-    invoke-static {v3, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 325
     .line 326
     .line 327
+    move-result-object v0
+
+    .line 328
+    invoke-static {v3, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 329
+    .line 330
+    .line 331
     return-object v12
     :try_end_a
     .catch Ljava/lang/RuntimeException; {:try_start_a .. :try_end_a} :catch_5
     .catch Ljava/lang/Error; {:try_start_a .. :try_end_a} :catch_5
 
-    .line 328
+    .line 332
     :catch_5
     move-exception v2
 
-    .line 329
-    invoke-static {p0, p1, v4}, LX/002;->A0T(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    .line 330
-    .line 331
-    .line 332
-    move-result-object v1
-
     .line 333
-    aput-object p2, v1, v11
+    invoke-static {p0, p1, v4}, LX/002;->A0H(Ljava/lang/Object;Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 334
     .line 335
-    const-string v0, "Programming Error: class: %s for method: %s sig: %s"
-
     .line 336
+    move-result-object v1
+
     .line 337
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    aput-object p2, v1, v11
 
     .line 338
     .line 339
-    .line 340
-    move-result-object v0
+    const-string v0, "Programming Error: class: %s for method: %s sig: %s"
 
+    .line 340
     .line 341
-    invoke-static {v3, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 342
     .line 343
     .line 344
+    move-result-object v0
+
+    .line 345
+    invoke-static {v3, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 346
+    .line 347
+    .line 348
     :cond_12
     return-object v12
 .end method
@@ -2149,42 +2244,46 @@
     .line 70
     .line 71
     .line 72
-    invoke-static {v3}, LX/001;->A0N(Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const/16 v0, 0x5d
 
     .line 73
     .line 74
+    invoke-static {v3, v0}, LX/001;->A0S(Ljava/lang/StringBuilder;C)Ljava/lang/String;
+
     .line 75
+    .line 76
+    .line 77
     move-result-object v0
 
-    .line 76
+    .line 78
     return-object v0
 
-    .line 77
+    .line 79
     :cond_2
     iget-object v1, p0, Lcom/facebook/common/jit/common/MethodInfo;->A03:Ljava/lang/reflect/Constructor;
 
-    .line 78
-    .line 79
-    if-eqz v1, :cond_1
-
     .line 80
     .line 81
-    const-string v0, "constructor: "
+    if-eqz v1, :cond_1
 
     .line 82
     .line 83
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "constructor: "
 
     .line 84
     .line 85
-    .line 86
-    invoke-virtual {v1}, Ljava/lang/reflect/Constructor;->getName()Ljava/lang/String;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 86
     .line 87
     .line 88
+    invoke-virtual {v1}, Ljava/lang/reflect/Constructor;->getName()Ljava/lang/String;
+
     .line 89
+    .line 90
+    .line 91
     move-result-object v0
 
-    .line 90
+    .line 92
     goto :goto_0
 .end method

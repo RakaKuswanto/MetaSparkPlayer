@@ -1,50 +1,41 @@
-.class public final LX/66V;
-.super Ljava/lang/Object;
+.class public final LX/66v;
+.super LX/5VZ;
 .source ""
 
 
-# instance fields
-.field public final A00:LX/66Q;
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
+# direct methods
+.method public constructor <init>()V
     .locals 2
 
+    .line 268435456
+    const-string v1, "Cannot take snapshot. mInput is null"
+
+    .line 268435457
+    .line 268435458
+    const/16 v0, 0x7530
+
+    .line 268435459
+    .line 268435460
+    invoke-direct {p0, v0, v1}, LX/5VZ;-><init>(ILjava/lang/String;)V
+
+    .line 268435461
+    .line 268435462
+    .line 268435463
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    const/16 v0, 0x7530
 
     .line 1
     .line 2
+    invoke-direct {p0, v0, p1, p2}, LX/5VZ;-><init>(ILjava/lang/String;Ljava/lang/Throwable;)V
+
     .line 3
-    move-result-object v1
-
     .line 4
-    const-string v0, "Removed["
-
     .line 5
-    .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 7
-    .line 8
-    .line 9
-    iget-object v0, p0, LX/66V;->A00:LX/66Q;
-
-    .line 10
-    .line 11
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 12
-    .line 13
-    .line 14
-    invoke-static {v1}, LX/001;->A0N(Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    return-object v0
+    return-void
 .end method

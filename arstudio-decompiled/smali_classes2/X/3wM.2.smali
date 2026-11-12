@@ -1,17 +1,17 @@
-.class public final LX/3wM;
-.super LX/3u5;
+.class public interface abstract LX/3wM;
+.super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/3v8;
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
 
-    .line 0
-    invoke-direct {p0}, LX/3u5;-><init>()V
+# virtual methods
+.method public abstract Ac6()V
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract Ac7(Ljava/lang/IllegalArgumentException;)V
+.end method
+
+.method public abstract Ac8(Landroid/view/Surface;)V
 .end method

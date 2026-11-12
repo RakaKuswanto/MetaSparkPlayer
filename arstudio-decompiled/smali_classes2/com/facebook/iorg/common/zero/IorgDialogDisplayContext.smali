@@ -19,108 +19,145 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public static synthetic $values()[Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+    .locals 3
 
     .line 0
-    const-string v0, "IORG_APP"
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    const/4 v6, 0x0
+    new-array v2, v0, [Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
+    .line 2
     .line 3
-    new-instance v5, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+    sget-object v1, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->IORG_APP:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
     .line 4
     .line 5
-    invoke-direct {v5, v0, v6}, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->EXTERNAL_REQUEST:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->FROM_BACKGROUND:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "IORG_APP"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1}, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;-><init>(Ljava/lang/String;I)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v5, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->IORG_APP:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+    sput-object v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->IORG_APP:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
     .line 9
     .line 10
-    const-string v0, "EXTERNAL_REQUEST"
+    const-string v2, "EXTERNAL_REQUEST"
 
     .line 11
     .line 12
-    const/4 v4, 0x1
+    const/4 v1, 0x1
 
     .line 13
-    new-instance v3, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+    new-instance v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
     .line 14
     .line 15
-    invoke-direct {v3, v0, v4}, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;-><init>(Ljava/lang/String;I)V
 
     .line 16
     .line 17
     .line 18
-    sput-object v3, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->EXTERNAL_REQUEST:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+    sput-object v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->EXTERNAL_REQUEST:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
     .line 19
     .line 20
-    const-string v0, "FROM_BACKGROUND"
+    const-string v2, "FROM_BACKGROUND"
 
     .line 21
     .line 22
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
     .line 23
-    new-instance v1, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+    new-instance v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
     .line 24
     .line 25
-    invoke-direct {v1, v0, v2}, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;-><init>(Ljava/lang/String;I)V
 
     .line 26
     .line 27
     .line 28
-    sput-object v1, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->FROM_BACKGROUND:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
+    sput-object v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->FROM_BACKGROUND:Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
     .line 29
     .line 30
-    const/4 v0, 0x3
+    invoke-static {}, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->$values()[Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
     .line 31
-    new-array v0, v0, [Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
-
     .line 32
     .line 33
-    aput-object v5, v0, v6
+    move-result-object v0
 
     .line 34
-    .line 35
-    aput-object v3, v0, v4
-
-    .line 36
-    .line 37
-    aput-object v1, v0, v2
-
-    .line 38
-    .line 39
     sput-object v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->$VALUES:[Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;
 
+    .line 35
+    .line 36
+    const/16 v0, 0x21
+
+    .line 37
+    .line 38
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
+
+    .line 39
     .line 40
     .line 41
-    const/4 v0, 0x6
+    move-result-object v0
 
     .line 42
-    invoke-static {v0}, LX/11r;->A00(I)LX/11r;
+    sput-object v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->CREATOR:Landroid/os/Parcelable$Creator;
 
     .line 43
     .line 44
-    .line 45
-    move-result-object v0
-
-    .line 46
-    sput-object v0, Lcom/facebook/iorg/common/zero/IorgDialogDisplayContext;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    .line 47
-    .line 48
     return-void
 .end method
 
@@ -196,7 +233,7 @@
     .locals 0
 
     .line 0
-    invoke-static {p1, p0}, LX/0Yh;->A0p(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, p0}, LX/0X3;->A12(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 1
     .line 2

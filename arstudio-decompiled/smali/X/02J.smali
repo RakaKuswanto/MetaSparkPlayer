@@ -1,77 +1,62 @@
 .class public final LX/02J;
-.super Ljava/lang/Object;
+.super LX/042;
 .source ""
 
 
 # direct methods
-.method public static A00(II)I
-    .locals 2
+.method public constructor <init>(LX/0KC;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
+    .locals 0
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0, p1, p2, p3, p4}, LX/042;-><init>(LX/0KC;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
 
     .line 1
     .line 2
-    const/16 v0, 0x11
-
     .line 3
-    .line 4
-    if-lt v1, v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-static {p0, p1}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
-
-    .line 7
-    .line 8
-    .line 9
-    move-result p0
-
-    .line 10
-    return p0
-
-    .line 11
-    :cond_0
-    const v0, -0x800001
-
-    .line 12
-    .line 13
-    .line 14
-    and-int/2addr p0, v0
-
-    .line 15
-    return p0
+    return-void
 .end method
 
-.method public static A01(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
-    .locals 2
+.method public constructor <init>(LX/0KC;Ljava/util/List;Ljava/util/List;)V
+    .locals 1
+
+    .line 268435456
+    const/4 v0, 0x0
+
+    .line 268435457
+    invoke-direct {p0, p1, v0, p2, p3}, LX/042;-><init>(LX/0KC;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic A06(Ljava/lang/String;)LX/042;
+    .locals 4
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v3, p0, LX/042;->A00:LX/0KC;
 
     .line 1
     .line 2
-    const/16 v0, 0x11
+    iget-object v2, p0, LX/042;->A03:Ljava/util/List;
 
     .line 3
     .line 4
-    if-lt v1, v0, :cond_0
+    iget-object v1, p0, LX/042;->A02:Ljava/util/List;
 
     .line 5
     .line 6
-    invoke-static/range {p0 .. p5}, LX/02I;->A00(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    new-instance v0, LX/02J;
 
     .line 7
     .line 8
+    invoke-direct {v0, v3, p1, v2, v1}, LX/02J;-><init>(LX/0KC;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
+
     .line 9
-    return-void
-
     .line 10
-    :cond_0
-    invoke-static {p0, p1, p2, p3, p4}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
-
     .line 11
-    .line 12
-    .line 13
-    return-void
+    return-object v0
 .end method

@@ -1,83 +1,95 @@
-.class public LX/4v9;
-.super LX/4vD;
+.class public final LX/4v9;
+.super LX/4vQ;
 .source ""
 
-
-# static fields
-.field public static A00:Z = true
+# interfaces
+.implements LX/0GZ;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, LX/4vD;-><init>()V
+    const/4 v0, 0x1
 
-    .line 1
-    .line 2
-    .line 3
+    invoke-direct {p0, v0}, LX/4vQ;-><init>(I)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public A06(Landroid/view/View;I)V
+.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    check-cast p1, Landroidx/window/sidecar/SidecarDisplayFeature;
 
     .line 1
     .line 2
-    const/16 v0, 0x1c
+    const/4 v0, 0x0
 
     .line 3
-    .line 4
-    if-ne v1, v0, :cond_1
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
+    .line 4
     .line 5
     .line 6
-    invoke-super {p0, p1, p2}, LX/4fy;->A06(Landroid/view/View;I)V
+    invoke-virtual {p1}, Landroidx/window/sidecar/SidecarDisplayFeature;->getRect()Landroid/graphics/Rect;
 
     .line 7
     .line 8
     .line 9
-    :cond_0
-    return-void
+    move-result-object v0
 
     .line 10
-    :cond_1
-    sget-boolean v0, LX/4v9;->A00:Z
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     .line 11
     .line 12
-    if-eqz v0, :cond_0
-
     .line 13
+    move-result v0
+
     .line 14
-    :try_start_0
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionVisibility(I)V
+    if-nez v0, :cond_0
 
     .line 15
     .line 16
+    invoke-virtual {p1}, Landroidx/window/sidecar/SidecarDisplayFeature;->getRect()Landroid/graphics/Rect;
+
     .line 17
-    goto :goto_0
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 18
-    :catch_0
-    const/4 v0, 0x0
-
     .line 19
-    sput-boolean v0, LX/4v9;->A00:Z
+    move-result-object v0
 
     .line 20
-    .line 21
-    return-void
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
+    .line 21
     .line 22
-    :goto_0
-    return-void
+    .line 23
+    move-result v1
+
+    .line 24
+    const/4 v0, 0x0
+
+    .line 25
+    if-eqz v1, :cond_1
+
+    .line 26
+    .line 27
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 28
+    :cond_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    return-object v0
 .end method

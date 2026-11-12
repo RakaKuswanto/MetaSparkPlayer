@@ -1,134 +1,196 @@
 .class public final LX/2Z8;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source ""
-
-# interfaces
-.implements LX/2aS;
 
 
 # instance fields
-.field public A00:Ljava/util/List;
+.field public final A00:LX/2ZE;
 
-.field public A01:Ljava/util/List;
+.field public final A01:LX/2Yu;
 
-.field public A02:LX/1zG;
-
-.field public final A03:Landroid/util/SparseArray;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
-
-.field public final A06:Ljava/util/Deque;
-
-.field public final A07:Ljava/util/Set;
+.field public final A02:LX/2ZG;
 
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
-    .locals 2
+.method public constructor <init>(LX/2ZE;LX/2Yu;LX/2ZG;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->Aa4:I
+    iput-object p2, p0, LX/2Z8;->A01:LX/2Yu;
 
     .line 4
     .line 5
-    const/4 v1, 0x0
+    iput-object p1, p0, LX/2Z8;->A00:LX/2ZE;
 
     .line 6
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    .line 7
+    iput-object p3, p0, LX/2Z8;->A02:LX/2ZG;
+
+    .line 8
+    .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 7
+
+    .line 0
+    iget-object v5, p0, LX/2Z8;->A02:LX/2ZG;
+
+    .line 1
+    .line 2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-wide v0
+
+    .line 6
+    iput-wide v0, v5, LX/2ZP;->A00:J
 
     .line 7
     .line 8
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getResultCode()I
+
     .line 9
-    move-result-object v0
-
     .line 10
-    iput-object v0, p0, LX/2Z8;->A04:LX/0Na;
-
     .line 11
+    move-result v2
+
     .line 12
-    sget v0, LX/2eq;->AaS:I
+    const/4 v1, 0x1
 
     .line 13
+    const/4 v0, -0x1
+
     .line 14
-    invoke-static {v1, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    if-ne v2, v0, :cond_2
 
     .line 15
     .line 16
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getResultData()Ljava/lang/String;
+
     .line 17
-    move-result-object v0
-
     .line 18
-    iput-object v0, p0, LX/2Z8;->A05:LX/0Na;
-
     .line 19
+    move-result-object v6
+
     .line 20
-    invoke-static {}, LX/0Yg;->A10()Ljava/util/Set;
+    invoke-virtual {p0, v1}, Landroid/content/BroadcastReceiver;->getResultExtras(Z)Landroid/os/Bundle;
 
     .line 21
     .line 22
     .line 23
-    move-result-object v0
+    move-result-object v4
 
     .line 24
-    iput-object v0, p0, LX/2Z8;->A07:Ljava/util/Set;
+    const-wide v1, 0x7fffffffffffffffL
 
     .line 25
     .line 26
-    new-instance v0, Landroid/util/SparseArray;
-
     .line 27
     .line 28
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
     .line 29
+    const-string/jumbo v0, "timestamp"
+
     .line 30
     .line 31
-    iput-object v0, p0, LX/2Z8;->A03:Landroid/util/SparseArray;
-
     .line 32
-    .line 33
-    invoke-static {}, LX/0Yj;->A0c()Ljava/util/LinkedList;
+    invoke-virtual {v4, v0, v1, v2}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
 
+    .line 33
     .line 34
     .line 35
+    move-result-wide v2
+
     .line 36
-    move-result-object v0
+    const-string/jumbo v0, "origin"
 
     .line 37
-    iput-object v0, p0, LX/2Z8;->A06:Ljava/util/Deque;
-
     .line 38
     .line 39
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-virtual {v4, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 40
     .line 41
     .line 42
-    move-result-object v0
+    move-result-object v1
 
     .line 43
-    iput-object v0, p0, LX/2Z8;->A00:Ljava/util/List;
+    new-instance v0, LX/2Mc;
 
     .line 44
     .line 45
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
+    invoke-direct {v0, v6, v2, v3, v1}, LX/2Mc;-><init>(Ljava/lang/String;JLjava/lang/String;)V
 
     .line 46
     .line 47
     .line 48
-    move-result-object v0
+    iput-object v0, v5, LX/2ZG;->A00:LX/2Mc;
 
     .line 49
-    iput-object v0, p0, LX/2Z8;->A02:LX/1zG;
-
     .line 50
+    iget-object v0, p0, LX/2Z8;->A01:LX/2Yu;
+
     .line 51
+    .line 52
+    invoke-virtual {v0, v5}, LX/2Yu;->A00(LX/2ZG;)V
+
+    .line 53
+    .line 54
+    .line 55
+    :goto_0
+    iget-object v0, p0, LX/2Z8;->A01:LX/2Yu;
+
+    .line 56
+    .line 57
+    iget-object v0, v0, LX/2Yu;->A01:LX/2MX;
+
+    .line 58
+    .line 59
+    if-eqz v0, :cond_0
+
+    .line 60
+    .line 61
+    invoke-virtual {v0}, LX/2MX;->A02()V
+
+    .line 62
+    .line 63
+    .line 64
+    :cond_0
+    iget-object v0, p0, LX/2Z8;->A00:LX/2ZE;
+
+    .line 65
+    .line 66
+    if-eqz v0, :cond_1
+
+    .line 67
+    .line 68
+    invoke-virtual {v0, v5}, LX/2ZE;->A00(LX/2ZP;)V
+
+    .line 69
+    .line 70
+    .line 71
+    :cond_1
     return-void
+
+    .line 72
+    :cond_2
+    sget-object v0, LX/2ZH;->FAILED:LX/2ZH;
+
+    .line 73
+    .line 74
+    iput-object v0, v5, LX/2ZP;->A01:LX/2ZH;
+
+    .line 75
+    .line 76
+    goto :goto_0
 .end method

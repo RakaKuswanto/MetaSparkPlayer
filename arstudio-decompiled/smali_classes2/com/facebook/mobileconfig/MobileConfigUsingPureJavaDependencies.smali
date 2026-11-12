@@ -1,4 +1,4 @@
-.class public Lcom/facebook/mobileconfig/MobileConfigUsingPureJavaDependencies;
+.class public abstract Lcom/facebook/mobileconfig/MobileConfigUsingPureJavaDependencies;
 .super Ljava/lang/Object;
 .source ""
 
@@ -12,7 +12,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/0Yh;->A0l()V
+    invoke-static {}, LX/0X4;->A0y()V
 
     .line 1
     .line 2

@@ -43,11 +43,11 @@
 
     .line 9
     .line 10
-    const/16 v0, 0x40
+    const/16 v0, 0x3b
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1b7;->A01(I)LX/1b7;
 
     .line 13
     .line 14
@@ -85,11 +85,11 @@
 
     .line 10
     .line 11
-    iput-object p2, p0, Lcom/facebook/fbtrace/FbTraceNode;->A01:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/fbtrace/FbTraceNode;->A00:Ljava/lang/String;
 
     .line 12
     .line 13
-    iput-object p3, p0, Lcom/facebook/fbtrace/FbTraceNode;->A00:Ljava/lang/String;
+    iput-object p3, p0, Lcom/facebook/fbtrace/FbTraceNode;->A01:Ljava/lang/String;
 
     .line 14
     .line 15
@@ -119,7 +119,7 @@
     .line 3
     .line 4
     .line 5
-    iget-object v0, p0, Lcom/facebook/fbtrace/FbTraceNode;->A01:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/fbtrace/FbTraceNode;->A00:Ljava/lang/String;
 
     .line 6
     .line 7
@@ -128,7 +128,7 @@
     .line 8
     .line 9
     .line 10
-    iget-object v0, p0, Lcom/facebook/fbtrace/FbTraceNode;->A00:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/fbtrace/FbTraceNode;->A01:Ljava/lang/String;
 
     .line 11
     .line 12

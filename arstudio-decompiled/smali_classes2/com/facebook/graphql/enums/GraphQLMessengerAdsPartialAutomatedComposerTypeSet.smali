@@ -1,10 +1,10 @@
-.class public Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedComposerTypeSet;
+.class public final Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedComposerTypeSet;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static A00:Ljava/util/Set;
+.field public static final A00:Ljava/util/HashSet;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .line 0
-    const/16 v0, 0x10
+    const/16 v0, 0x11
 
     .line 1
     .line 2
@@ -67,7 +67,7 @@
     const/4 v1, 0x4
 
     .line 25
-    const-string v0, "DEFAULT"
+    const-string v0, "DATE_TIME"
 
     .line 26
     .line 27
@@ -78,7 +78,7 @@
     const/4 v1, 0x5
 
     .line 30
-    const-string v0, "DOB"
+    const-string v0, "DEFAULT"
 
     .line 31
     .line 32
@@ -89,7 +89,7 @@
     const/4 v1, 0x6
 
     .line 35
-    const-string v0, "EMAIL"
+    const-string v0, "DOB"
 
     .line 36
     .line 37
@@ -100,7 +100,7 @@
     const/4 v1, 0x7
 
     .line 40
-    const-string v0, "FIRST_NAME"
+    const-string v0, "EMAIL"
 
     .line 41
     .line 42
@@ -112,7 +112,7 @@
 
     .line 45
     .line 46
-    const-string v0, "FOCUS_MODE"
+    const-string v0, "FIRST_NAME"
 
     .line 47
     .line 48
@@ -124,7 +124,7 @@
 
     .line 51
     .line 52
-    const-string v0, "FULL_NAME"
+    const-string v0, "FOCUS_MODE"
 
     .line 53
     .line 54
@@ -136,7 +136,7 @@
 
     .line 57
     .line 58
-    const-string v0, "JOB_TITLE"
+    const-string v0, "FULL_NAME"
 
     .line 59
     .line 60
@@ -148,7 +148,7 @@
 
     .line 63
     .line 64
-    const-string v0, "LAST_NAME"
+    const-string v0, "JOB_TITLE"
 
     .line 65
     .line 66
@@ -160,7 +160,7 @@
 
     .line 69
     .line 70
-    const-string v0, "NUMERIC"
+    const-string v0, "LAST_NAME"
 
     .line 71
     .line 72
@@ -172,7 +172,7 @@
 
     .line 75
     .line 76
-    const-string v0, "OTP_NUMERIC"
+    const-string v0, "NUMERIC"
 
     .line 77
     .line 78
@@ -184,7 +184,7 @@
 
     .line 81
     .line 82
-    const-string v0, "STATE"
+    const-string v0, "SLIDER"
 
     .line 83
     .line 84
@@ -196,22 +196,35 @@
 
     .line 87
     .line 88
-    const-string v0, "ZIP_NUMERIC"
+    const-string v0, "STATE"
 
     .line 89
     .line 90
-    invoke-static {v0, v2, v1}, LX/0Yc;->A07(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+    aput-object v0, v2, v1
 
     .line 91
     .line 92
-    .line 93
-    move-result-object v0
+    const/16 v1, 0x10
 
+    .line 93
     .line 94
-    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedComposerTypeSet;->A00:Ljava/util/Set;
+    const-string/jumbo v0, "ZIP_NUMERIC"
 
     .line 95
     .line 96
+    .line 97
+    invoke-static {v0, v2, v1}, LX/1fN;->A03(Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/util/HashSet;
+
+    .line 98
+    .line 99
+    .line 100
+    move-result-object v0
+
+    .line 101
+    sput-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedComposerTypeSet;->A00:Ljava/util/HashSet;
+
+    .line 102
+    .line 103
     return-void
 .end method
 
@@ -227,11 +240,11 @@
     return-void
 .end method
 
-.method public static getSet()Ljava/util/Set;
+.method public static final getSet()Ljava/util/Set;
     .locals 1
 
     .line 0
-    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedComposerTypeSet;->A00:Ljava/util/Set;
+    sget-object v0, Lcom/facebook/graphql/enums/GraphQLMessengerAdsPartialAutomatedComposerTypeSet;->A00:Ljava/util/HashSet;
 
     .line 1
     .line 2

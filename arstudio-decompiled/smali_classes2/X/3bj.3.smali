@@ -3,70 +3,13 @@
 .source ""
 
 
-# static fields
-.field public static final A0E:J
-
-
 # instance fields
-.field public A00:Landroid/content/Context;
-
-.field public A01:I
-
-.field public A02:Landroid/net/LocalServerSocket;
-
-.field public A03:LX/1zG;
-
-.field public final A04:LX/0Na;
-
-.field public final A05:LX/0Na;
-
-.field public final A06:LX/0Na;
-
-.field public final A07:Ljava/lang/Object;
-
-.field public final A08:Ljava/lang/String;
-
-.field public final A09:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-.field public final A0A:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public volatile A0B:Landroid/net/LocalSocket;
-
-.field public volatile A0C:LX/3bz;
-
-.field public volatile A0D:LX/3c8;
+.field public final A00:LX/0lu;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 0
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    .line 1
-    .line 2
-    const-wide/16 v0, 0x1
-
-    .line 3
-    .line 4
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-wide v0
-
-    .line 8
-    sput-wide v0, LX/3bj;->A0E:J
-
-    .line 9
-    .line 10
-    return-void
-.end method
-
-.method public constructor <init>(LX/1zC;Ljava/lang/String;)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -74,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Yj;->A0i()Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {}, LX/2I6;->A0L()LX/0lu;
 
     .line 4
     .line 5
@@ -82,128 +25,284 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, LX/3bj;->A0A:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object v0, p0, LX/3bj;->A00:LX/0lu;
 
     .line 8
     .line 9
-    sget v0, LX/2eq;->A5B:I
+    return-void
+.end method
+
+.method private final A00(LX/3bl;LX/3bo;LX/3bn;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, LX/3bj;->A00:LX/0lu;
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0lu;->A03(LX/0lu;)LX/0B4;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v1
+
+    .line 6
+    const-string/jumbo v0, "meta_account_web_client_event"
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-interface {v1, v0}, LX/0B4;->A2Y(Ljava/lang/String;)LX/0B8;
 
     .line 10
     .line 11
-    const/4 v2, 0x0
-
     .line 12
-    invoke-static {v2, v2, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    move-result-object v3
 
     .line 13
+    invoke-interface {v3}, LX/0B8;->isSampled()Z
+
     .line 14
     .line 15
-    move-result-object v1
-
     .line 16
-    check-cast v1, Landroid/content/Context;
+    move-result v0
 
     .line 17
+    if-eqz v0, :cond_1
+
     .line 18
-    iput-object v1, p0, LX/3bj;->A00:Landroid/content/Context;
-
     .line 19
-    .line 20
-    sget v0, LX/2eq;->AMr:I
+    invoke-static {}, LX/0X7;->A0f()Ljava/util/LinkedHashMap;
 
+    .line 20
     .line 21
     .line 22
-    invoke-static {v1, v0}, LX/1zU;->A00(Landroid/content/Context;I)LX/1zU;
+    move-result-object v2
 
     .line 23
+    if-eqz p5, :cond_0
+
     .line 24
     .line 25
-    move-result-object v0
+    const-string/jumbo v0, "user_id"
 
     .line 26
-    iput-object v0, p0, LX/3bj;->A04:LX/0Na;
-
     .line 27
     .line 28
-    sget v0, LX/2eq;->AMs:I
+    invoke-interface {v2, v0, p5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 29
     .line 30
-    invoke-static {v1, v0}, LX/1zU;->A00(Landroid/content/Context;I)LX/1zU;
-
     .line 31
+    :cond_0
+    const-string/jumbo v0, "method"
+
     .line 32
     .line 33
-    move-result-object v0
-
     .line 34
-    iput-object v0, p0, LX/3bj;->A05:LX/0Na;
+    invoke-interface {v2, v0, p6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 35
     .line 36
-    sget v0, LX/2eq;->A5j:I
-
     .line 37
-    .line 38
-    invoke-static {v2, v0}, LX/1zT;->A02(LX/1zG;I)LX/1zT;
+    sget-object v1, LX/3bm;->TW_META_TOKEN_STORE_ANDROID:LX/3bm;
 
+    .line 38
     .line 39
+    const-string/jumbo v0, "event_flow"
+
     .line 40
     .line 41
-    move-result-object v0
-
     .line 42
-    iput-object v0, p0, LX/3bj;->A06:LX/0Na;
+    invoke-interface {v3, v1, v0}, LX/0B8;->A2q(LX/0B2;Ljava/lang/String;)V
 
     .line 43
     .line 44
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
     .line 45
-    .line 46
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    invoke-static {}, LX/0X2;->A0c()Ljava/lang/String;
 
+    .line 46
     .line 47
     .line 48
+    move-result-object v1
+
     .line 49
-    iput-object v0, p0, LX/3bj;->A09:Ljava/util/concurrent/CopyOnWriteArrayList;
+    const-string/jumbo v0, "event_id"
 
     .line 50
     .line 51
-    const/4 v1, 0x0
-
     .line 52
-    iput v1, p0, LX/3bj;->A01:I
+    invoke-interface {v3, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 53
     .line 54
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
-
     .line 55
+    const-string/jumbo v0, "event_name"
+
     .line 56
     .line 57
-    move-result-object v0
-
     .line 58
-    iput-object v0, p0, LX/3bj;->A07:Ljava/lang/Object;
+    invoke-interface {v3, p1, v0}, LX/0B8;->A2q(LX/0B2;Ljava/lang/String;)V
 
     .line 59
     .line 60
-    invoke-static {p1, v1}, LX/1zG;->A01(LX/1zC;I)LX/1zG;
-
     .line 61
+    const-string/jumbo v0, "event_type"
+
     .line 62
     .line 63
-    move-result-object v0
-
     .line 64
-    iput-object v0, p0, LX/3bj;->A03:LX/1zG;
+    invoke-interface {v3, p2, v0}, LX/0B8;->A2q(LX/0B2;Ljava/lang/String;)V
 
     .line 65
     .line 66
-    iput-object p2, p0, LX/3bj;->A08:Ljava/lang/String;
-
     .line 67
+    const-string/jumbo v0, "step"
+
     .line 68
+    .line 69
+    .line 70
+    invoke-interface {v3, p3, v0}, LX/0B8;->A2q(LX/0B2;Ljava/lang/String;)V
+
+    .line 71
+    .line 72
+    .line 73
+    if-eqz p4, :cond_2
+
+    .line 74
+    .line 75
+    invoke-static {p4}, LX/0X3;->A0c(Ljava/lang/String;)Ljava/lang/Long;
+
+    .line 76
+    .line 77
+    .line 78
+    move-result-object v1
+
+    .line 79
+    :goto_0
+    const-string/jumbo v0, "account_id"
+
+    .line 80
+    .line 81
+    .line 82
+    invoke-interface {v3, v0, v1}, LX/0B8;->A34(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 83
+    .line 84
+    .line 85
+    const-string/jumbo v0, "error_reason"
+
+    .line 86
+    .line 87
+    .line 88
+    invoke-interface {v3, v0, p7}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 89
+    .line 90
+    .line 91
+    const-string/jumbo v0, "additional_data"
+
+    .line 92
+    .line 93
+    .line 94
+    invoke-interface {v3, v0, v2}, LX/0B8;->A35(Ljava/lang/String;Ljava/util/Map;)V
+
+    .line 95
+    .line 96
+    .line 97
+    invoke-interface {v3}, LX/0B8;->AQk()V
+
+    .line 98
+    .line 99
+    .line 100
+    :cond_1
+    return-void
+
+    .line 101
+    :cond_2
+    const/4 v1, 0x0
+
+    .line 102
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final A01(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 8
+
+    .line 0
+    sget-object v1, LX/3bl;->TW_TOKEN_STORE_SAVE_CREDENTIALS_DISK_SUCCESS:LX/3bl;
+
+    .line 1
+    .line 2
+    sget-object v3, LX/3bn;->TW_TOKEN_STORE_INTIALIZE:LX/3bn;
+
+    .line 3
+    .line 4
+    sget-object v2, LX/3bo;->SUCCESS:LX/3bo;
+
+    .line 5
+    .line 6
+    const/4 v7, 0x0
+
+    .line 7
+    move-object v0, p0
+
+    .line 8
+    move-object v4, p1
+
+    .line 9
+    move-object v5, p2
+
+    .line 10
+    move-object v6, p3
+
+    .line 11
+    invoke-direct/range {v0 .. v7}, LX/3bj;->A00(LX/3bl;LX/3bo;LX/3bn;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public final A02(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 8
+
+    .line 0
+    sget-object v1, LX/3bl;->TW_TOKEN_STORE_SAVE_CREDENTIALS_DISK_FAILED:LX/3bl;
+
+    .line 1
+    .line 2
+    sget-object v3, LX/3bn;->TW_TOKEN_STORE_INTIALIZE:LX/3bn;
+
+    .line 3
+    .line 4
+    sget-object v2, LX/3bo;->ERROR:LX/3bo;
+
+    .line 5
+    .line 6
+    move-object v0, p0
+
+    .line 7
+    move-object v7, p1
+
+    .line 8
+    move-object v4, p2
+
+    .line 9
+    move-object v5, p3
+
+    .line 10
+    move-object v6, p4
+
+    .line 11
+    invoke-direct/range {v0 .. v7}, LX/3bj;->A00(LX/3bl;LX/3bo;LX/3bn;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 12
+    .line 13
+    .line 14
     return-void
 .end method

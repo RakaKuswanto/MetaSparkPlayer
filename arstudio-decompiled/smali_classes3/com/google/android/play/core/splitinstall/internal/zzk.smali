@@ -1,4 +1,4 @@
-.class public Lcom/google/android/play/core/splitinstall/internal/zzk;
+.class public abstract Lcom/google/android/play/core/splitinstall/internal/zzk;
 .super Ljava/lang/Object;
 .source ""
 

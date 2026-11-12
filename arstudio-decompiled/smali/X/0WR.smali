@@ -3,36 +3,42 @@
 .source ""
 
 # interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+.implements LX/066;
 
 
 # instance fields
-.field public final A00:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final A00:I
+
+.field public final A01:I
+
+.field public final A02:Ljava/lang/String;
+
+.field public final synthetic A03:LX/0VG;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(LX/0VG;Ljava/lang/String;II)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, LX/0WR;->A03:LX/0VG;
 
     .line 1
     .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     .line 3
-    const/4 v1, 0x1
-
     .line 4
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
     .line 5
-    .line 6
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    iput-object p2, p0, LX/0WR;->A02:Ljava/lang/String;
 
+    .line 6
     .line 7
+    iput p3, p0, LX/0WR;->A01:I
+
     .line 8
     .line 9
-    iput-object v0, p0, LX/0WR;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput p4, p0, LX/0WR;->A00:I
 
     .line 10
     .line 11
@@ -41,42 +47,90 @@
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 2
+.method public final A9S(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
+    .locals 8
 
     .line 0
-    const-string v1, "RtiExecutor #"
+    iget-object v2, p0, LX/0WR;->A03:LX/0VG;
 
     .line 1
     .line 2
-    iget-object v0, p0, LX/0WR;->A00:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v1, v2, LX/0VG;->A02:Landroidx/fragment/app/Fragment;
 
     .line 3
     .line 4
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    if-eqz v1, :cond_0
 
     .line 5
     .line 6
-    .line 7
-    move-result v0
+    iget v0, p0, LX/0WR;->A01:I
 
+    .line 7
     .line 8
-    invoke-static {v1, v0}, LX/00I;->A0D(Ljava/lang/String;I)Ljava/lang/String;
+    if-gez v0, :cond_0
 
     .line 9
     .line 10
-    .line 11
-    move-result-object v1
+    iget-object v0, p0, LX/0WR;->A02:Ljava/lang/String;
 
+    .line 11
     .line 12
-    new-instance v0, LX/0WP;
+    if-nez v0, :cond_0
 
     .line 13
     .line 14
-    invoke-direct {v0, p1, v1}, LX/0WP;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()LX/0VG;
 
     .line 15
     .line 16
     .line 17
-    return-object v0
+    move-result-object v0
+
+    .line 18
+    invoke-virtual {v0}, LX/0VG;->A18()Z
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    if-eqz v0, :cond_0
+
+    .line 23
+    .line 24
+    const/4 v0, 0x0
+
+    .line 25
+    return v0
+
+    .line 26
+    :cond_0
+    iget-object v3, p0, LX/0WR;->A02:Ljava/lang/String;
+
+    .line 27
+    .line 28
+    iget v6, p0, LX/0WR;->A01:I
+
+    .line 29
+    .line 30
+    iget v7, p0, LX/0WR;->A00:I
+
+    .line 31
+    .line 32
+    move-object v4, p1
+
+    .line 33
+    move-object v5, p2
+
+    .line 34
+    invoke-virtual/range {v2 .. v7}, LX/0VG;->A1E(Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;II)Z
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    return v0
 .end method

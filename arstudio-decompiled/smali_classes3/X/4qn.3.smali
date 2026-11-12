@@ -1,11 +1,17 @@
-.class public interface abstract LX/4qn;
-.super Ljava/lang/Object;
+.class public final LX/4qn;
+.super LX/6b2;
 .source ""
 
 
-# virtual methods
-.method public abstract A4P(LX/1jT;)Ljava/lang/Object;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract AiS(Ljava/lang/Object;)Z
+    .line 0
+    invoke-direct {p0}, LX/6b2;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
 .end method

@@ -1,84 +1,100 @@
-.class public final LX/3pb;
-.super LX/3p4;
+.class public final LX/3pB;
+.super LX/3pF;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/common/callercontext/CallerContextable;
 
-
-# static fields
-.field public static final A00:Lcom/facebook/common/callercontext/CallerContext;
-
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "RVPFallbackVideoPluginManager"
+# instance fields
+.field public final A00:LX/3pM;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(LX/3pM;)V
+    .locals 0
 
     .line 0
-    const-class v2, LX/3pb;
+    invoke-direct {p0}, LX/3pF;-><init>()V
 
     .line 1
     .line 2
-    const-string v1, "cover_image"
-
     .line 3
+    iput-object p1, p0, LX/3pB;->A00:LX/3pM;
+
     .line 4
-    new-instance v0, Lcom/facebook/common/callercontext/CallerContext;
-
     .line 5
-    .line 6
-    invoke-direct {v0, v2, v1, v1, v1}, Lcom/facebook/common/callercontext/CallerContext;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 7
-    .line 8
-    .line 9
-    sput-object v0, LX/3pb;->A00:Lcom/facebook/common/callercontext/CallerContext;
-
-    .line 10
-    .line 11
     return-void
 .end method
 
-.method public constructor <init>(LX/2sj;LX/0Na;LX/0uy;LX/3oQ;LX/3hk;)V
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
     .line 0
-    invoke-direct/range {p0 .. p5}, LX/3p4;-><init>(LX/2sj;LX/0Na;LX/0uy;LX/3oQ;LX/3hk;)V
+    const/4 v2, 0x1
 
     .line 1
+    if-eq p1, p0, :cond_0
+
     .line 2
     .line 3
-    invoke-virtual {p4}, Landroid/view/View;->getContext()Landroid/content/Context;
+    instance-of v0, p1, LX/3pB;
 
     .line 4
     .line 5
-    .line 6
-    move-result-object v2
+    if-eqz v0, :cond_1
 
+    .line 6
     .line 7
-    sget-object v1, LX/3pb;->A00:Lcom/facebook/common/callercontext/CallerContext;
+    check-cast p1, LX/3pB;
 
     .line 8
     .line 9
-    new-instance v0, Lcom/facebook/video/plugins/CoverImagePlugin;
+    iget-object v1, p1, LX/3pB;->A00:LX/3pM;
 
     .line 10
     .line 11
-    invoke-direct {v0, v2, v1}, Lcom/facebook/video/plugins/CoverImagePlugin;-><init>(Landroid/content/Context;Lcom/facebook/common/callercontext/CallerContext;)V
+    iget-object v0, p0, LX/3pB;->A00:LX/3pM;
 
     .line 12
     .line 13
-    .line 14
-    new-instance v0, LX/3oZ;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
+    .line 14
     .line 15
     .line 16
-    invoke-direct {v0, v2}, LX/3oZ;-><init>(Landroid/content/Context;)V
+    move-result v0
 
     .line 17
+    if-eqz v0, :cond_1
+
     .line 18
     .line 19
-    return-void
+    :cond_0
+    return v2
+
+    .line 20
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 21
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/3pB;->A00:LX/3pM;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    .line 3
+    .line 4
+    .line 5
+    move-result v0
+
+    .line 6
+    return v0
 .end method

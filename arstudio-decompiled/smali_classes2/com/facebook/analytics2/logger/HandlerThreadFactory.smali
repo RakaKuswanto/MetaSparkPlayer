@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract A7o(Ljava/lang/String;I)Landroid/os/HandlerThread;
+.method public abstract A67(Ljava/lang/String;I)Landroid/os/HandlerThread;
 .end method

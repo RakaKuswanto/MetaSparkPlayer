@@ -18,93 +18,131 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public static synthetic $values()[Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+    .locals 3
 
     .line 0
-    const-string v0, "RAW"
+    const/4 v0, 0x3
 
     .line 1
-    .line 2
-    const/4 v6, 0x0
+    new-array v2, v0, [Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
 
+    .line 2
     .line 3
-    new-instance v5, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+    sget-object v1, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->RAW:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
 
     .line 4
     .line 5
-    invoke-direct {v5, v0, v6, v6}, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;-><init>(Ljava/lang/String;II)V
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->ZLIB:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->ZLIB_OPTIONAL:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 0
+    const-string v2, "RAW"
+
+    .line 1
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;-><init>(Ljava/lang/String;II)V
 
     .line 6
     .line 7
     .line 8
-    sput-object v5, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->RAW:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+    sput-object v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->RAW:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
 
     .line 9
     .line 10
-    const-string v0, "ZLIB"
+    const-string/jumbo v2, "ZLIB"
 
     .line 11
     .line 12
-    const/4 v4, 0x1
-
     .line 13
-    new-instance v3, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+    const/4 v1, 0x1
 
     .line 14
-    .line 15
-    invoke-direct {v3, v0, v4, v4}, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;-><init>(Ljava/lang/String;II)V
+    new-instance v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
 
+    .line 15
     .line 16
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;-><init>(Ljava/lang/String;II)V
+
     .line 17
     .line 18
-    sput-object v3, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->ZLIB:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
-
     .line 19
+    sput-object v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->ZLIB:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+
     .line 20
-    const-string v0, "ZLIB_OPTIONAL"
-
     .line 21
+    const-string/jumbo v2, "ZLIB_OPTIONAL"
+
     .line 22
-    const/4 v2, 0x2
-
     .line 23
-    new-instance v1, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
-
     .line 24
+    const/4 v1, 0x2
+
     .line 25
-    invoke-direct {v1, v0, v2, v2}, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;-><init>(Ljava/lang/String;II)V
+    new-instance v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
 
     .line 26
     .line 27
-    .line 28
-    sput-object v1, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->ZLIB_OPTIONAL:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
+    invoke-direct {v0, v2, v1, v1}, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;-><init>(Ljava/lang/String;II)V
 
+    .line 28
     .line 29
     .line 30
-    const/4 v0, 0x3
+    sput-object v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->ZLIB_OPTIONAL:Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
 
     .line 31
-    new-array v0, v0, [Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
-
     .line 32
-    .line 33
-    aput-object v5, v0, v6
+    invoke-static {}, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->$values()[Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
 
+    .line 33
     .line 34
     .line 35
-    aput-object v3, v0, v4
+    move-result-object v0
 
     .line 36
-    .line 37
-    aput-object v1, v0, v2
-
-    .line 38
-    .line 39
     sput-object v0, Lcom/facebook/proxygen/ConnectionParams$PublishFormat;->$VALUES:[Lcom/facebook/proxygen/ConnectionParams$PublishFormat;
 
-    .line 40
-    .line 41
+    .line 37
+    .line 38
     return-void
 .end method
 

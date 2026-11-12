@@ -7,15 +7,15 @@
 
 
 # static fields
-.field public static final A00:LX/2XL;
+.field public static final A00:LX/3cf;
 
-.field public static final A01:LX/2XL;
+.field public static final A01:LX/3cf;
 
-.field public static final A02:LX/2XL;
+.field public static final A02:LX/3cf;
 
-.field public static final A03:LX/2XL;
+.field public static final A03:LX/3cf;
 
-.field public static final A04:LX/2XL;
+.field public static final A04:LX/3cf;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0, v1}, LX/2XL;->A00(J)LX/2XL;
+    invoke-static {v0, v1}, LX/3cf;->A00(J)LX/3cf;
 
     .line 3
     .line 4
@@ -35,7 +35,7 @@
     move-result-object v0
 
     .line 6
-    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A02:LX/2XL;
+    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A02:LX/3cf;
 
     .line 7
     .line 8
@@ -43,7 +43,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0, v1}, LX/2XL;->A00(J)LX/2XL;
+    invoke-static {v0, v1}, LX/3cf;->A00(J)LX/3cf;
 
     .line 11
     .line 12
@@ -51,7 +51,7 @@
     move-result-object v0
 
     .line 14
-    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A01:LX/2XL;
+    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A01:LX/3cf;
 
     .line 15
     .line 16
@@ -59,7 +59,7 @@
 
     .line 17
     .line 18
-    invoke-static {v0, v1}, LX/2XL;->A00(J)LX/2XL;
+    invoke-static {v0, v1}, LX/3cf;->A00(J)LX/3cf;
 
     .line 19
     .line 20
@@ -67,7 +67,7 @@
     move-result-object v0
 
     .line 22
-    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A00:LX/2XL;
+    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A00:LX/3cf;
 
     .line 23
     .line 24
@@ -75,7 +75,7 @@
 
     .line 25
     .line 26
-    invoke-static {v0, v1}, LX/2XL;->A00(J)LX/2XL;
+    invoke-static {v0, v1}, LX/3cf;->A00(J)LX/3cf;
 
     .line 27
     .line 28
@@ -83,7 +83,7 @@
     move-result-object v0
 
     .line 30
-    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A03:LX/2XL;
+    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A03:LX/3cf;
 
     .line 31
     .line 32
@@ -91,7 +91,7 @@
 
     .line 33
     .line 34
-    invoke-static {v0, v1}, LX/2XL;->A00(J)LX/2XL;
+    invoke-static {v0, v1}, LX/3cf;->A00(J)LX/3cf;
 
     .line 35
     .line 36
@@ -99,7 +99,7 @@
     move-result-object v0
 
     .line 38
-    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A04:LX/2XL;
+    sput-object v0, Lcom/facebook/arstudio/player/mirror/frame/MSQFrameHeader$FrameType;->A04:LX/3cf;
 
     .line 39
     .line 40

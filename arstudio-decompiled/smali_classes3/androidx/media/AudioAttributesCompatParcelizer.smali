@@ -16,7 +16,7 @@
     return-void
 .end method
 
-.method public static read(LX/4gJ;)Landroidx/media/AudioAttributesCompat;
+.method public static read(LX/4eL;)Landroidx/media/AudioAttributesCompat;
     .locals 3
 
     .line 0
@@ -36,7 +36,7 @@
     const/4 v0, 0x1
 
     .line 8
-    invoke-virtual {p0, v0}, LX/4gJ;->A09(I)Z
+    invoke-virtual {p0, v0}, LX/4eL;->A09(I)Z
 
     .line 9
     .line 10
@@ -48,7 +48,7 @@
 
     .line 13
     .line 14
-    invoke-virtual {p0}, LX/4gJ;->A04()LX/6Lj;
+    invoke-virtual {p0}, LX/4eL;->A04()LX/6bB;
 
     .line 15
     .line 16
@@ -68,7 +68,7 @@
     return-object v2
 .end method
 
-.method public static write(Landroidx/media/AudioAttributesCompat;LX/4gJ;)V
+.method public static write(Landroidx/media/AudioAttributesCompat;LX/4eL;)V
     .locals 1
 
     .line 0
@@ -79,12 +79,12 @@
     const/4 v0, 0x1
 
     .line 3
-    invoke-virtual {p1, v0}, LX/4gJ;->A05(I)V
+    invoke-virtual {p1, v0}, LX/4eL;->A05(I)V
 
     .line 4
     .line 5
     .line 6
-    invoke-virtual {p1, p0}, LX/4gJ;->A08(LX/6Lj;)V
+    invoke-virtual {p1, p0}, LX/4eL;->A08(LX/6bB;)V
 
     .line 7
     .line 8

@@ -1,75 +1,163 @@
-.class public final LX/22H;
-.super Ljava/lang/Object;
+.class public abstract LX/22H;
+.super LX/225;
 .source ""
+
+# interfaces
+.implements Ljava/util/Queue;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<E:",
+        "Ljava/lang/Object;",
+        ">",
+        "LX/225<",
+        "TE;>;",
+        "Ljava/util/Queue<",
+        "TE;>;"
+    }
+.end annotation
 
 
 # direct methods
-.method public static A00(Lorg/apache/http/client/methods/HttpUriRequest;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 0
-    instance-of v0, p0, Lorg/apache/http/HttpEntityEnclosingRequest;
+    invoke-direct {p0}, LX/225;-><init>()V
 
     .line 1
     .line 2
-    if-eqz v0, :cond_1
-
     .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final element()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    move-object v0, p0
+
+    .line 1
+    check-cast v0, Lcom/google/common/collect/EvictingQueue;
+
+    .line 2
+    .line 3
+    iget-object v0, v0, Lcom/google/common/collect/EvictingQueue;->delegate:Ljava/util/Queue;
+
     .line 4
-    check-cast p0, Lorg/apache/http/HttpEntityEnclosingRequest;
-
     .line 5
-    .line 6
-    invoke-interface {p0}, Lorg/apache/http/HttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
+    invoke-interface {v0}, Ljava/util/Queue;->element()Ljava/lang/Object;
 
+    .line 6
     .line 7
     .line 8
+    move-result-object v0
+
     .line 9
-    move-result-object p0
+    return-object v0
+.end method
 
-    .line 10
-    :goto_0
-    instance-of v0, p0, LX/22I;
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
-    .line 11
-    .line 12
-    if-eqz v0, :cond_0
+    .line 0
+    invoke-virtual {p0, p1}, LX/225;->add(Ljava/lang/Object;)Z
 
-    .line 13
-    .line 14
-    check-cast p0, LX/22I;
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
 
-    .line 15
-    .line 16
-    invoke-virtual {p0}, LX/22I;->A00()Lorg/apache/http/HttpEntity;
+    .line 4
+    return v0
+.end method
 
-    .line 17
-    .line 18
-    .line 19
-    move-result-object p0
+.method public final peek()Ljava/lang/Object;
+    .locals 1
 
-    .line 20
-    goto :goto_0
+    .line 0
+    move-object v0, p0
 
-    .line 21
-    :cond_0
-    instance-of v0, p0, LX/22G;
+    .line 1
+    check-cast v0, Lcom/google/common/collect/EvictingQueue;
 
-    .line 22
-    .line 23
-    if-eqz v0, :cond_1
+    .line 2
+    .line 3
+    iget-object v0, v0, Lcom/google/common/collect/EvictingQueue;->delegate:Ljava/util/Queue;
 
-    .line 24
-    .line 25
-    check-cast p0, LX/22G;
+    .line 4
+    .line 5
+    invoke-interface {v0}, Ljava/util/Queue;->peek()Ljava/lang/Object;
 
-    .line 26
-    .line 27
-    invoke-interface {p0}, LX/22G;->release()V
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
 
-    .line 28
-    .line 29
-    .line 30
-    :cond_1
-    return-void
+    .line 9
+    return-object v0
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    move-object v0, p0
+
+    .line 1
+    check-cast v0, Lcom/google/common/collect/EvictingQueue;
+
+    .line 2
+    .line 3
+    iget-object v0, v0, Lcom/google/common/collect/EvictingQueue;->delegate:Ljava/util/Queue;
+
+    .line 4
+    .line 5
+    invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    return-object v0
+.end method
+
+.method public final remove()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    move-object v0, p0
+
+    .line 1
+    check-cast v0, Lcom/google/common/collect/EvictingQueue;
+
+    .line 2
+    .line 3
+    iget-object v0, v0, Lcom/google/common/collect/EvictingQueue;->delegate:Ljava/util/Queue;
+
+    .line 4
+    .line 5
+    invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    return-object v0
 .end method

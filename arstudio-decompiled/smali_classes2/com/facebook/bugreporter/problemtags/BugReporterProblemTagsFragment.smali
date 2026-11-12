@@ -1,12 +1,12 @@
 .class public final Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;
-.super LX/3e4;
+.super LX/3FR;
 .source ""
 
 
 # static fields
-.field public static final synthetic $$delegatedProperties:[LX/2TZ;
+.field public static final synthetic $$delegatedProperties:[LX/5hU;
 
-.field public static final Companion:LX/2ol;
+.field public static final Companion:LX/3aR;
 
 .field public static final FRAGMENT_TAG:Ljava/lang/String; = "problem_tags_fragment"
 
@@ -14,9 +14,9 @@
 
 
 # instance fields
-.field public final problemTagsAndQuestion$delegate:LX/1Nm;
+.field public final problemTagsAndQuestion$delegate:LX/0lu;
 
-.field public final tagClickListener:LX/0Cl;
+.field public final tagClickListener:LX/0GZ;
 
 .field public taggedProblemsSet:Ljava/util/Set;
 
@@ -29,7 +29,7 @@
     const/4 v0, 0x1
 
     .line 1
-    new-array v3, v0, [LX/2TZ;
+    new-array v3, v0, [LX/5hU;
 
     .line 2
     .line 3
@@ -47,25 +47,25 @@
     .line 9
     .line 10
     .line 11
-    invoke-static {v2, v1, v0, v3}, LX/2TS;->A00(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v0, v3}, LX/0X2;->A1A(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 12
     .line 13
     .line 14
-    sput-object v3, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->$$delegatedProperties:[LX/2TZ;
+    sput-object v3, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->$$delegatedProperties:[LX/5hU;
 
     .line 15
     .line 16
-    new-instance v0, LX/2ol;
+    new-instance v0, LX/3aR;
 
     .line 17
     .line 18
-    invoke-direct {v0}, LX/2ol;-><init>()V
+    invoke-direct {v0}, LX/3aR;-><init>()V
 
     .line 19
     .line 20
     .line 21
-    sput-object v0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->Companion:LX/2ol;
+    sput-object v0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->Companion:LX/3aR;
 
     .line 22
     .line 23
@@ -73,68 +73,57 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/3e4;-><init>()V
+    invoke-direct {p0}, LX/3FR;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AQG:I
+    sget v0, LX/2I6;->A0G:I
 
     .line 4
     .line 5
-    new-instance v1, LX/1zT;
+    invoke-static {v0}, LX/0jq;->A00(I)LX/0lu;
 
     .line 6
     .line 7
-    invoke-direct {v1, p0, v0}, LX/1zT;-><init>(LX/0Qd;I)V
-
     .line 8
-    .line 9
-    .line 10
-    new-instance v0, LX/1Nm;
+    move-result-object v0
 
+    .line 9
+    iput-object v0, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->problemTagsAndQuestion$delegate:LX/0lu;
+
+    .line 10
     .line 11
+    const/4 v0, 0x7
+
     .line 12
-    invoke-direct {v0, v1}, LX/1Nm;-><init>(LX/0Na;)V
+    invoke-static {p0, v0}, LX/3hq;->A01(Ljava/lang/Object;I)LX/3hq;
 
     .line 13
     .line 14
     .line 15
-    iput-object v0, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->problemTagsAndQuestion$delegate:LX/1Nm;
+    move-result-object v0
 
     .line 16
+    iput-object v0, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->tagClickListener:LX/0GZ;
+
     .line 17
-    const/4 v1, 0x5
-
     .line 18
-    new-instance v0, LX/2NK;
-
-    .line 19
-    .line 20
-    invoke-direct {v0, p0, v1}, LX/2NK;-><init>(Ljava/lang/Object;I)V
-
-    .line 21
-    .line 22
-    .line 23
-    iput-object v0, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->tagClickListener:LX/0Cl;
-
-    .line 24
-    .line 25
     return-void
 .end method
 
-.method private final getProblemTagsAndQuestion()LX/3KY;
+.method private final getProblemTagsAndQuestion()LX/0cP;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->problemTagsAndQuestion$delegate:LX/1Nm;
+    iget-object v0, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->problemTagsAndQuestion$delegate:LX/0lu;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1Nm;->A0D(LX/1Nm;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0lu;->A09(LX/0lu;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -142,7 +131,7 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/3KY;
+    check-cast v0, LX/0cP;
 
     .line 7
     .line 8
@@ -180,10 +169,10 @@
 
 # virtual methods
 .method public final createOrGetTaggedProblemsSetBundle(Landroid/os/Bundle;)Ljava/util/Set;
-    .locals 3
+    .locals 1
 
     .line 0
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
     .line 1
     .line 2
@@ -197,65 +186,42 @@
     .line 6
     .line 7
     .line 8
-    move-result-object v2
+    move-result-object v0
 
     .line 9
-    if-eqz v2, :cond_1
+    if-eqz v0, :cond_0
 
     .line 10
     .line 11
-    instance-of v1, v2, Ljava/util/Collection;
+    invoke-static {v0}, LX/00Q;->A0B(Ljava/lang/Iterable;)Ljava/util/Set;
 
     .line 12
     .line 13
-    new-instance v0, Ljava/util/LinkedHashSet;
-
     .line 14
+    move-result-object v0
+
     .line 15
-    if-eqz v1, :cond_0
+    return-object v0
 
     .line 16
-    .line 17
-    invoke-direct {v0, v2}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    .line 18
-    .line 19
-    .line 20
-    return-object v0
-
-    .line 21
     :cond_0
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    .line 22
-    .line 23
-    .line 24
-    invoke-static {v2, v0}, LX/00L;->A0C(Ljava/lang/Iterable;Ljava/util/Collection;)V
-
-    .line 25
-    .line 26
-    .line 27
-    return-object v0
-
-    .line 28
-    :cond_1
     new-instance v0, Ljava/util/LinkedHashSet;
 
-    .line 29
-    .line 30
+    .line 17
+    .line 18
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 31
-    .line 32
-    .line 33
+    .line 19
+    .line 20
+    .line 21
     return-object v0
 .end method
 
-.method public final getTagClickListener()LX/0Cl;
+.method public final getTagClickListener()LX/0GZ;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->tagClickListener:LX/0Cl;
+    iget-object v0, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->tagClickListener:LX/0GZ;
 
     .line 1
     .line 2
@@ -306,14 +272,19 @@
     .line 6
     .line 7
     .line 8
-    invoke-static {v0}, LX/0PS;->A0D(Ljava/lang/String;)V
+    invoke-static {v0}, LX/0WV;->A0F(Ljava/lang/String;)V
 
     .line 9
     .line 10
     .line 11
-    const/4 v0, 0x0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
     .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
     throw v0
 .end method
 
@@ -344,12 +315,12 @@
     .locals 6
 
     .line 0
-    invoke-direct {p0}, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->getProblemTagsAndQuestion()LX/3KY;
+    invoke-direct {p0}, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->getProblemTagsAndQuestion()LX/0cP;
 
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Yh;->A0B(Landroidx/fragment/app/Fragment;)Landroid/content/res/Resources;
+    invoke-static {p0}, LX/0X6;->A0D(Landroidx/fragment/app/Fragment;)Landroid/content/res/Resources;
 
     .line 4
     .line 5
@@ -357,12 +328,12 @@
     move-result-object v1
 
     .line 7
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 8
     .line 9
     .line 10
-    const v0, 0x7f1201fb
+    const v0, 0x7f1101c8
 
     .line 11
     .line 12
@@ -375,17 +346,17 @@
     move-result-object v5
 
     .line 17
-    invoke-static {v5}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v5}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 18
     .line 19
     .line 20
-    invoke-direct {p0}, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->getProblemTagsAndQuestion()LX/3KY;
+    invoke-direct {p0}, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->getProblemTagsAndQuestion()LX/0cP;
 
     .line 21
     .line 22
     .line 23
-    invoke-static {p0}, LX/0Yh;->A0B(Landroidx/fragment/app/Fragment;)Landroid/content/res/Resources;
+    invoke-static {p0}, LX/0X6;->A0D(Landroidx/fragment/app/Fragment;)Landroid/content/res/Resources;
 
     .line 24
     .line 25
@@ -393,7 +364,7 @@
     move-result-object v1
 
     .line 27
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v1}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 28
     .line 29
@@ -411,17 +382,17 @@
     move-result-object v0
 
     .line 37
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
 
     .line 38
     .line 39
     .line 40
-    invoke-static {v0}, LX/1T8;->A01([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, LX/3j0;->A00([Ljava/lang/Object;)Ljava/util/List;
 
     .line 41
     .line 42
     .line 43
-    move-result-object v4
+    move-result-object v3
 
     .line 44
     invoke-virtual {p0, p3}, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->createOrGetTaggedProblemsSetBundle(Landroid/os/Bundle;)Ljava/util/Set;
@@ -437,7 +408,7 @@
     .line 49
     .line 50
     .line 51
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     .line 52
     .line 53
@@ -445,11 +416,11 @@
     move-result-object v0
 
     .line 55
-    new-instance v3, LX/4mm;
+    new-instance v4, LX/4fk;
 
     .line 56
     .line 57
-    invoke-direct {v3, v0}, LX/4mm;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v0}, LX/4fk;-><init>(Landroid/content/Context;)V
 
     .line 58
     .line 59
@@ -462,7 +433,7 @@
     move-result-object v0
 
     .line 64
-    invoke-static {v0}, LX/00L;->A0A(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {v0}, LX/00Q;->A0C(Ljava/lang/Iterable;)Ljava/util/Set;
 
     .line 65
     .line 66
@@ -470,27 +441,81 @@
     move-result-object v2
 
     .line 68
-    iget-object v1, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->tagClickListener:LX/0Cl;
+    iget-object v1, p0, Lcom/facebook/bugreporter/problemtags/BugReporterProblemTagsFragment;->tagClickListener:LX/0GZ;
 
     .line 69
     .line 70
-    new-instance v0, LX/4iO;
+    new-instance v0, LX/4Z8;
 
     .line 71
     .line 72
-    invoke-direct {v0, v5, v4, v2, v1}, LX/4iO;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/Set;LX/0Cl;)V
+    invoke-direct {v0, v5, v3, v2, v1}, LX/4Z8;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/Set;LX/0GZ;)V
 
     .line 73
     .line 74
     .line 75
-    invoke-static {p0, v0, v3}, LX/3e4;->A00(Landroidx/fragment/app/Fragment;LX/4mg;LX/4mm;)Lcom/facebook/litho/LithoView;
+    const/4 v3, 0x0
 
     .line 76
+    invoke-static {v0, v4, v3}, Lcom/facebook/litho/ComponentTree;->A01(LX/4fg;LX/4fk;LX/4kF;)LX/4gY;
+
     .line 77
     .line 78
+    .line 79
+    move-result-object v1
+
+    .line 80
+    invoke-static {}, LX/0X3;->A0U()Ljava/lang/Boolean;
+
+    .line 81
+    .line 82
+    .line 83
     move-result-object v0
 
-    .line 79
+    .line 84
+    iput-object v0, v1, LX/4gY;->A07:Ljava/lang/Boolean;
+
+    .line 85
+    .line 86
+    invoke-virtual {v1}, LX/4gY;->A00()Lcom/facebook/litho/ComponentTree;
+
+    .line 87
+    .line 88
+    .line 89
+    move-result-object v2
+
+    .line 90
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v0
+
+    .line 94
+    new-instance v1, LX/4fk;
+
+    .line 95
+    .line 96
+    invoke-direct {v1, v0}, LX/4fk;-><init>(Landroid/content/Context;)V
+
+    .line 97
+    .line 98
+    .line 99
+    new-instance v0, Lcom/facebook/litho/LithoView;
+
+    .line 100
+    .line 101
+    invoke-direct {v0, v1, v3}, Lcom/facebook/litho/LithoView;-><init>(LX/4fk;Landroid/util/AttributeSet;)V
+
+    .line 102
+    .line 103
+    .line 104
+    invoke-virtual {v0, v2}, Lcom/facebook/litho/LithoView;->A0O(Lcom/facebook/litho/ComponentTree;)V
+
+    .line 105
+    .line 106
+    .line 107
     return-object v0
 .end method
 
@@ -501,12 +526,12 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3
     .line 4
-    invoke-super {p0, p1}, LX/3e4;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, LX/3FR;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 5
     .line 6
@@ -519,7 +544,7 @@
     move-result-object v0
 
     .line 11
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 12
     .line 13
@@ -547,7 +572,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 2
     .line 3

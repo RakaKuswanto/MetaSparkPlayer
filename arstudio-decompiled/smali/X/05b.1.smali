@@ -3,23 +3,19 @@
 .source ""
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "FragmentManager$5"
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field public final synthetic A00:LX/0Sf;
+.field public final synthetic A00:LX/02j;
 
 
 # direct methods
-.method public constructor <init>(LX/0Sf;)V
+.method public constructor <init>(LX/02j;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, LX/05b;->A00:LX/0Sf;
+    iput-object p1, p0, LX/05b;->A00:LX/02j;
 
     .line 1
     .line 2
@@ -33,21 +29,31 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
 
     .line 0
-    iget-object v1, p0, LX/05b;->A00:LX/0Sf;
+    iget-object v1, p0, LX/05b;->A00:LX/02j;
 
     .line 1
     .line 2
-    const/4 v0, 0x1
+    invoke-static {v1}, LX/02j;->A00(LX/02j;)Landroid/app/Dialog;
 
     .line 3
-    invoke-virtual {v1, v0}, LX/0Sf;->A17(Z)V
-
     .line 4
     .line 5
+    move-result-object v0
+
     .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    invoke-virtual {v1, v0}, LX/02j;->onDismiss(Landroid/content/DialogInterface;)V
+
+    .line 9
+    .line 10
+    .line 11
+    :cond_0
     return-void
 .end method

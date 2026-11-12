@@ -1,10 +1,13 @@
-.class public final LX/2o6;
+.class public final LX/2O6;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2SR;
+
 
 # static fields
-.field public static A00:Lcom/facebook/quicklog/reliability/UserFlowLogger;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "AccountRecoveryActivationsMethod"
 
 
 # direct methods
@@ -20,102 +23,129 @@
     return-void
 .end method
 
-.method public static final declared-synchronized A00()V
-    .locals 5
+
+# virtual methods
+.method public final bridge synthetic AJo(Ljava/lang/Object;)LX/2SB;
+    .locals 3
 
     .line 0
-    const-class v4, LX/2o6;
+    check-cast p1, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryActivationsParams;
 
     .line 1
     .line 2
-    monitor-enter v4
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 3
-    :try_start_0
-    invoke-static {}, Lcom/facebook/quicklog/reliability/UserFlowJNIProvider;->isInitialized()Z
-
     .line 4
     .line 5
+    move-result-object v2
+
     .line 6
-    move-result v0
+    iget-object v1, p1, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryActivationsParams;->A01:Ljava/lang/String;
 
     .line 7
-    if-nez v0, :cond_2
-
     .line 8
-    .line 9
-    sget-object v3, LX/2o6;->A00:Lcom/facebook/quicklog/reliability/UserFlowLogger;
+    const-string/jumbo v0, "sfdid"
 
+    .line 9
     .line 10
     .line 11
-    if-nez v3, :cond_0
+    invoke-static {v0, v1, v2}, LX/0X1;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
     .line 12
     .line 13
-    sget-object v2, Lcom/facebook/quicklog/QuickPerformanceLoggerProvider;->A00:Lcom/facebook/quicklog/QuickPerformanceLogger;
-
     .line 14
+    iget-object v1, p1, Lcom/facebook/account/recovery/common/protocol/AccountRecoveryActivationsParams;->A00:Ljava/lang/String;
+
     .line 15
-    if-eqz v2, :cond_1
-
     .line 16
+    const-string/jumbo v0, "fdid"
+
     .line 17
-    const/4 v1, 0x1
-
     .line 18
-    const/4 v0, 0x0
-
     .line 19
-    new-instance v3, LX/358;
+    invoke-static {v0, v1, v2}, LX/0X1;->A1P(Ljava/lang/String;Ljava/lang/String;Ljava/util/AbstractCollection;)V
 
     .line 20
     .line 21
-    invoke-direct {v3, v2, v1, v0}, LX/358;-><init>(Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;ZZ)V
-
     .line 22
+    invoke-static {}, LX/2SA;->A05()LX/2SA;
+
     .line 23
     .line 24
-    sput-object v3, LX/2o6;->A00:Lcom/facebook/quicklog/reliability/UserFlowLogger;
-
     .line 25
+    move-result-object v1
+
     .line 26
-    :cond_0
-    invoke-static {v3}, Lcom/facebook/quicklog/reliability/UserFlowJNIProvider;->setUserFlowLogger(Lcom/facebook/quicklog/reliability/UserFlowLogger;)V
+    const-string/jumbo v0, "fdrActivations"
 
     .line 27
     .line 28
     .line 29
-    goto :goto_0
+    invoke-static {v1, v0}, LX/2SA;->A06(LX/2SA;Ljava/lang/String;)V
 
     .line 30
-    :cond_1
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
-
     .line 31
     .line 32
+    const-string/jumbo v0, "fdr/activations"
+
     .line 33
-    move-result-object v0
-
     .line 34
-    throw v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 35
-    :cond_2
-    :goto_0
-    monitor-exit v4
+    invoke-static {v1, v0, v2}, LX/2SA;->A04(LX/2SA;Ljava/lang/String;Ljava/util/List;)LX/2SB;
 
     .line 36
-    return-void
-
     .line 37
-    :catchall_0
-    move-exception v0
-
     .line 38
-    monitor-exit v4
+    move-result-object v0
 
     .line 39
-    throw v0
+    return-object v0
+.end method
+
+.method public final bridge synthetic AK1(LX/2NB;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    invoke-static {p1}, LX/2NB;->A00(LX/2NB;)LX/2Rs;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    const-string/jumbo v0, "success"
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-virtual {v1, v0}, LX/2Rs;->A0E(Ljava/lang/String;)LX/2Rs;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    invoke-static {v1, v0}, Lcom/facebook/common/util/JSONUtil;->A06(LX/2Rs;Z)Z
+
+    .line 13
+    .line 14
+    .line 15
+    move-result v0
+
+    .line 16
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v0
+
+    .line 20
+    return-object v0
 .end method

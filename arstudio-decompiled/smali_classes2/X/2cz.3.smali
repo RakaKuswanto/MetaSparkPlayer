@@ -2,23 +2,12 @@
 .super Ljava/lang/Object;
 .source ""
 
-
-# instance fields
-.field public A00:LX/48W;
-
-.field public A01:LX/5vC;
-
-.field public A02:Ljava/lang/String;
-
-.field public A03:Z
-
-.field public A04:Z
-
-.field public A05:Z
+# interfaces
+.implements LX/18h;
 
 
 # direct methods
-.method public constructor <init>(LX/48W;LX/5vC;Ljava/lang/String;ZZZ)V
+.method public constructor <init>()V
     .locals 0
 
     .line 0
@@ -27,29 +16,34 @@
     .line 1
     .line 2
     .line 3
-    iput-object p2, p0, LX/2cz;->A01:LX/5vC;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final ACC()I
+    .locals 1
+
+    const/16 v0, 0x974
+
+    return v0
+.end method
+
+.method public final AUc(I)V
+    .locals 2
+
+    .line 0
+    const-class v1, LX/2ot;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-static {v1, v0}, LX/3Fc;->A04(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;
 
     .line 4
     .line 5
-    iput-object p1, p0, LX/2cz;->A00:LX/48W;
-
     .line 6
-    .line 7
-    iput-object p3, p0, LX/2cz;->A02:Ljava/lang/String;
-
-    .line 8
-    .line 9
-    iput-boolean p4, p0, LX/2cz;->A04:Z
-
-    .line 10
-    .line 11
-    iput-boolean p5, p0, LX/2cz;->A03:Z
-
-    .line 12
-    .line 13
-    iput-boolean p6, p0, LX/2cz;->A05:Z
-
-    .line 14
-    .line 15
     return-void
 .end method

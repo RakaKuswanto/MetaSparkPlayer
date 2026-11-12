@@ -2,5 +2,5 @@
 <LinearLayout android:orientation="vertical" android:background="?fds_usage_surface_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <include android:id="@id/bug_report_toolbar" layout="@layout/action_bar_toolbar_elevated" />
-    <X.2eO android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:cacheColorHint="@color/abc_decor_view_status_guard_light" android:divider="@null" android:layout_weight="1.0" />
+    <X.4Oa android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:cacheColorHint="@color/abc_decor_view_status_guard_light" android:divider="@null" android:layout_weight="1.0" />
 </LinearLayout>

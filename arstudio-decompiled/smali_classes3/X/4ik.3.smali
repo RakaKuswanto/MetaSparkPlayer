@@ -1,62 +1,90 @@
 .class public final LX/4ik;
-.super LX/4me;
+.super Lcom/facebook/yoga/YogaNodeJNIBase;
 .source ""
-
-
-# instance fields
-.field public A00:LX/4nC;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xc
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
-
-.field public A01:LX/1bI;
-    .annotation runtime Lcom/facebook/litho/annotations/Comparable;
-        type = 0xd
-    .end annotation
-
-    .annotation runtime Lcom/facebook/litho/annotations/Prop;
-        optional = false
-        resType = .enum LX/4Y9;->NONE:LX/4Y9;
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0}, Lcom/facebook/yoga/YogaNodeJNIBase;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    return-void
+.end method
+
+.method public constructor <init>(LX/4ly;)V
+    .locals 2
 
     .line 0
-    const-string v0, "SurveyIconScaleQuestionComponent"
+    check-cast p1, LX/4jh;
 
     .line 1
     .line 2
-    invoke-direct {p0, v0}, LX/4me;-><init>(Ljava/lang/String;)V
+    iget-wide v0, p1, LX/4jh;->A00:J
 
     .line 3
     .line 4
+    invoke-static {v0, v1}, Lcom/facebook/yoga/YogaNative;->jni_YGNodeNewWithConfigJNI(J)J
+
     .line 5
+    .line 6
+    .line 7
+    move-result-wide v0
+
+    .line 8
+    invoke-direct {p0, v0, v1}, Lcom/facebook/yoga/YogaNodeJNIBase;-><init>(J)V
+
+    .line 9
+    .line 10
+    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A0L()LX/4mg;
-    .locals 1
+.method public final finalize()V
+    .locals 5
 
     .line 0
-    invoke-super {p0}, LX/4mg;->A0L()LX/4mg;
+    :try_start_0
+    iget-wide v3, p0, Lcom/facebook/yoga/YogaNodeJNIBase;->mNativePointer:J
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v0
+    const-wide/16 v1, 0x0
 
+    .line 3
     .line 4
-    return-object v0
+    cmp-long v0, v3, v1
+
+    .line 5
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    iput-wide v1, p0, Lcom/facebook/yoga/YogaNodeJNIBase;->mNativePointer:J
+
+    .line 9
+    .line 10
+    invoke-static {v3, v4}, Lcom/facebook/yoga/YogaNative;->jni_YGNodeFinalizeJNI(J)V
+
+    .line 11
+    .line 12
+    .line 13
+    :cond_0
+    return-void
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 14
+    :catchall_0
+    move-exception v0
+
+    .line 15
+    throw v0
 .end method

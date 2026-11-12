@@ -31,11 +31,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x30
+    const/16 v0, 0x5d
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -59,35 +59,30 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0s(Ljava/lang/Object;)V
+    invoke-static {p1, p0}, LX/0X2;->A00(Landroid/os/Parcel;Ljava/lang/Object;)F
 
     .line 4
     .line 5
     .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
-
-    .line 7
-    .line 8
-    .line 9
     move-result v0
 
-    .line 10
+    .line 7
     iput v0, p0, Lcom/facebook/media/model/features/XRayConcept;->A00:F
 
-    .line 11
-    .line 12
+    .line 8
+    .line 9
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 13
-    .line 14
-    .line 15
+    .line 10
+    .line 11
+    .line 12
     move-result-object v0
 
-    .line 16
+    .line 13
     iput-object v0, p0, Lcom/facebook/media/model/features/XRayConcept;->A01:Ljava/lang/String;
 
-    .line 17
-    .line 18
+    .line 14
+    .line 15
     return-void
 .end method
 
@@ -100,7 +95,7 @@
 
     const-string/jumbo v0, "name"
 
-    invoke-static {v0, p1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/facebook/media/model/features/XRayConcept;->A01:Ljava/lang/String;
 
@@ -167,7 +162,7 @@
 
     .line 21
     .line 22
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 23
     .line 24
@@ -215,7 +210,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 13
     .line 14

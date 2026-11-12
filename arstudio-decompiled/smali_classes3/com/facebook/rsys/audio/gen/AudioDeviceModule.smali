@@ -18,7 +18,13 @@
 
 
 # virtual methods
+.method public abstract startPlayout()V
+.end method
+
 .method public abstract startRecording()V
+.end method
+
+.method public abstract stopPlayout()V
 .end method
 
 .method public abstract stopRecording()V

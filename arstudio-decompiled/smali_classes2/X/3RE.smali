@@ -1,186 +1,227 @@
-.class public final LX/3RE;
+.class public abstract LX/3RE;
 .super Ljava/lang/Object;
 .source ""
 
 
-# instance fields
-.field public final A00:J
-
-.field public final A01:J
-
-.field public final A02:J
-
-.field public final A03:J
-
-.field public final A04:Ljava/lang/String;
+# static fields
+.field public static final A00:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JJJJ)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string/jumbo v0, "^/l/([a-zA-Z0-9_.-]*)(?:;|/)(.*)$"
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3RE;->A04:Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     .line 4
     .line 5
-    iput-wide p2, p0, LX/3RE;->A00:J
-
     .line 6
+    move-result-object v0
+
     .line 7
-    iput-wide p4, p0, LX/3RE;->A03:J
+    sput-object v0, LX/3RE;->A00:Ljava/util/regex/Pattern;
 
     .line 8
     .line 9
-    iput-wide p6, p0, LX/3RE;->A02:J
-
-    .line 10
-    .line 11
-    iput-wide p8, p0, LX/3RE;->A01:J
-
-    .line 12
-    .line 13
     return-void
 .end method
 
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public static A00(Landroid/net/Uri;)Landroid/net/Uri;
+    .locals 2
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v3
+    move-result-object v1
 
     .line 4
-    const-string/jumbo v0, "id="
+    const-string v0, "/l/"
 
     .line 5
     .line 6
-    .line 7
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
+    .line 7
     .line 8
     .line 9
+    move-result v0
+
     .line 10
-    iget-object v0, p0, LX/3RE;->A04:Ljava/lang/String;
+    if-eqz v0, :cond_1
 
     .line 11
     .line 12
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v1, LX/3RE;->A00:Ljava/util/regex/Pattern;
 
     .line 13
     .line 14
-    .line 15
-    const-string v2, ","
+    invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
+    .line 15
     .line 16
     .line 17
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     .line 18
+    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
     .line 19
     .line 20
-    const-string v0, "bw="
-
     .line 21
+    move-result-object v1
+
     .line 22
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
     .line 23
     .line 24
     .line 25
-    iget-wide v0, p0, LX/3RE;->A00:J
+    move-result v0
 
     .line 26
+    if-eqz v0, :cond_0
+
     .line 27
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
     .line 28
-    .line 29
-    .line 30
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x2
 
+    .line 29
+    invoke-virtual {v1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    .line 30
     .line 31
     .line 32
+    move-result-object v1
+
     .line 33
-    const-string/jumbo v0, "ttfb="
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 34
     .line 35
     .line 36
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p0
 
     .line 37
+    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
     .line 38
     .line 39
-    iget-wide v0, p0, LX/3RE;->A03:J
-
     .line 40
+    move-result-object v0
+
     .line 41
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
     .line 42
     .line 43
-    .line 44
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v0, "http://"
 
+    .line 44
     .line 45
     .line 46
-    .line 47
-    const-string/jumbo v0, "ts="
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 47
     .line 48
     .line 49
+    move-result-object v0
+
     .line 50
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 51
     .line 52
     .line 53
-    iget-wide v0, p0, LX/3RE;->A02:J
+    move-result-object v0
 
     .line 54
-    .line 55
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
+    .line 55
     .line 56
     .line 57
+    move-result-object p0
+
     .line 58
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-object p0
 
     .line 59
+    :cond_1
+    const-string/jumbo v0, "u"
+
     .line 60
     .line 61
-    const-string v0, "bwt="
-
     .line 62
-    .line 63
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
+    .line 63
     .line 64
     .line 65
+    move-result-object v1
+
     .line 66
-    iget-wide v0, p0, LX/3RE;->A01:J
+    if-eqz v1, :cond_0
 
     .line 67
     .line 68
-    invoke-static {v3, v0, v1}, LX/0Yg;->A0s(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     .line 69
     .line 70
     .line 71
-    move-result-object v0
+    move-result-object p0
 
     .line 72
-    return-object v0
+    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v0
+
+    .line 76
+    if-nez v0, :cond_0
+
+    .line 77
+    .line 78
+    const-string/jumbo v0, "http://"
+
+    .line 79
+    .line 80
+    .line 81
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v0
+
+    .line 85
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v0
+
+    .line 89
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    .line 90
+    .line 91
+    .line 92
+    move-result-object p0
+
+    .line 93
+    return-object p0
 .end method

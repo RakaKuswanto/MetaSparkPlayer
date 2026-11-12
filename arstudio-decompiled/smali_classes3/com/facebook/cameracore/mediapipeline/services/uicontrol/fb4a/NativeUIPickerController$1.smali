@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements LX/4Wa;
+.implements LX/4Yv;
 
 
 # instance fields
@@ -37,7 +37,7 @@
 
     .line 1
     .line 2
-    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnGalleryPickerSelectedListener:LX/4h3;
+    iget-object v0, v0, Lcom/facebook/cameracore/mediapipeline/services/uicontrol/fb4a/NativeUIPickerController;->mOnGalleryPickerSelectedListener:LX/4my;
 
     .line 3
     .line 4
@@ -45,7 +45,7 @@
 
     .line 5
     .line 6
-    invoke-interface {v0}, LX/4h3;->onGalleryClick()V
+    invoke-interface {v0}, LX/4my;->onGalleryClick()V
 
     .line 7
     .line 8

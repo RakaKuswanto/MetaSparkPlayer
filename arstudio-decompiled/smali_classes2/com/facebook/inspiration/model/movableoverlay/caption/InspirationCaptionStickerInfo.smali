@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements LX/18h;
 
 
 # annotations
@@ -50,11 +49,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x60
+    const/16 v0, 0x13
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1QO;->A01(I)LX/1QO;
+    invoke-static {v0}, LX/1Ly;->A00(I)LX/1Ly;
 
     .line 3
     .line 4
@@ -78,7 +77,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p1, p0}, LX/0Yc;->A00(Landroid/os/Parcel;Ljava/lang/Object;)I
+    invoke-static {p1, p0}, LX/0X1;->A01(Landroid/os/Parcel;Ljava/lang/Object;)I
 
     .line 4
     .line 5
@@ -129,7 +128,7 @@
 
     .line 26
     .line 27
-    invoke-static {p1, v0, v3, v1}, LX/0Yf;->A03(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
+    invoke-static {p1, v0, v3, v1}, LX/0X2;->A04(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;[Ljava/lang/Object;I)I
 
     .line 28
     .line 29
@@ -165,7 +164,7 @@
 
     .line 43
     .line 44
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
 
     .line 45
     .line 46
@@ -177,127 +176,100 @@
 
     .line 49
     .line 50
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {p1}, LX/0X3;->A0I(Landroid/os/Parcel;)Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
 
     .line 51
     .line 52
     .line 53
-    move-result v0
+    move-result-object v0
 
     .line 54
-    if-nez v0, :cond_1
+    iput-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A08:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
 
     .line 55
     .line 56
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     .line 57
-    :goto_1
-    iput-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A08:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
-
     .line 58
     .line 59
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
 
     .line 60
-    .line 61
-    .line 62
-    move-result v0
-
-    .line 63
     iput v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A03:I
 
+    .line 61
+    .line 62
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 63
     .line 64
     .line 65
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
 
     .line 66
-    .line 67
-    .line 68
-    move-result v0
-
-    .line 69
     iput v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A04:I
 
+    .line 67
+    .line 68
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 69
     .line 70
     .line 71
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
 
     .line 72
-    .line 73
-    .line 74
-    move-result v0
-
-    .line 75
     iput v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A05:I
 
+    .line 73
+    .line 74
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
+
+    .line 75
     .line 76
     .line 77
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
-
-    .line 78
-    .line 79
-    .line 80
     move-result-object v1
 
-    .line 81
+    .line 78
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 82
-    .line 83
-    .line 84
+    .line 79
+    .line 80
+    .line 81
     move-result v0
 
-    .line 85
-    :goto_2
-    if-ge v2, v0, :cond_2
+    .line 82
+    :goto_1
+    if-ge v2, v0, :cond_1
 
+    .line 83
+    .line 84
+    invoke-static {p1, v1}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
+
+    .line 85
     .line 86
     .line 87
-    invoke-static {p1, v1, v2}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    add-int/lit8 v2, v2, 0x1
 
     .line 88
     .line 89
+    goto :goto_1
+
     .line 90
-    move-result v2
+    :cond_1
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     .line 91
-    goto :goto_2
-
     .line 92
-    :cond_1
-    sget-object v0, Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;->CREATOR:Landroid/os/Parcelable$Creator;
-
     .line 93
+    move-result-object v0
+
     .line 94
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    iput-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A09:Ljava/util/Set;
 
     .line 95
     .line 96
-    .line 97
-    move-result-object v0
-
-    .line 98
-    check-cast v0, Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
-
-    .line 99
-    .line 100
-    goto :goto_1
-
-    .line 101
-    :cond_2
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    .line 102
-    .line 103
-    .line 104
-    move-result-object v0
-
-    .line 105
-    iput-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A09:Ljava/util/Set;
-
-    .line 106
-    .line 107
     return-void
 .end method
 
@@ -310,9 +282,9 @@
 
     iput p6, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A02:I
 
-    const-string v0, "detailedTranscriptions"
+    const-string/jumbo v0, "detailedTranscriptions"
 
-    invoke-static {v0, p2}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A06:Lcom/google/common/collect/ImmutableList;
 
@@ -340,111 +312,90 @@
 
 # virtual methods
 .method public final A00()Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
-    .locals 6
+    .locals 1
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A09:Ljava/util/Set;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A09:Ljava/util/Set;
 
     .line 1
     .line 2
-    const-string/jumbo v0, "overlayPosition"
+    invoke-static {v0}, LX/0X6;->A1Z(Ljava/util/Set;)Z
 
     .line 3
     .line 4
     .line 5
-    invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    .line 6
-    .line 7
-    .line 8
     move-result v0
 
-    .line 9
+    .line 6
     if-eqz v0, :cond_0
 
-    .line 10
-    .line 11
+    .line 7
+    .line 8
     iget-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A08:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
 
-    .line 12
-    .line 13
+    .line 9
+    .line 10
     return-object v0
 
-    .line 14
+    .line 11
     :cond_0
     sget-object v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A0A:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
 
-    .line 15
-    .line 16
+    .line 12
+    .line 13
     if-nez v0, :cond_2
 
-    .line 17
-    .line 18
+    .line 14
+    .line 15
     monitor-enter p0
 
-    .line 19
+    .line 16
     :try_start_0
     sget-object v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A0A:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
 
-    .line 20
-    .line 21
+    .line 17
+    .line 18
     if-nez v0, :cond_1
 
+    .line 19
+    .line 20
+    invoke-static {}, LX/0X3;->A0H()Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
+
+    .line 21
     .line 22
     .line 23
-    const/4 v1, 0x0
+    move-result-object v0
 
     .line 24
-    new-instance v0, Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
+    sput-object v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A0A:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
 
     .line 25
     .line 26
-    move v2, v1
-
-    .line 27
-    move v3, v1
-
-    .line 28
-    move v4, v1
-
-    .line 29
-    move v5, v1
-
-    .line 30
-    invoke-direct/range {v0 .. v5}, Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;-><init>(FFFFF)V
-
-    .line 31
-    .line 32
-    .line 33
-    sput-object v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A0A:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
-
-    .line 34
-    .line 35
     :cond_1
     monitor-exit p0
 
-    .line 36
+    .line 27
     goto :goto_0
 
-    .line 37
+    .line 28
     :catchall_0
     move-exception v0
 
-    .line 38
+    .line 29
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 39
+    .line 30
     throw v0
 
-    .line 40
+    .line 31
     :cond_2
     :goto_0
     sget-object v0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A0A:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
 
-    .line 41
-    .line 42
+    .line 32
+    .line 33
     return-object v0
 .end method
 
@@ -514,7 +465,7 @@
 
     .line 25
     .line 26
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 27
     .line 28
@@ -570,7 +521,7 @@
     move-result-object v0
 
     .line 54
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 55
     .line 56
@@ -657,7 +608,7 @@
 
     .line 12
     .line 13
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 14
     .line 15
@@ -672,7 +623,7 @@
 
     .line 19
     .line 20
-    invoke-static {v1, v0}, LX/0Ye;->A01(IF)I
+    invoke-static {v1, v0}, LX/0X2;->A01(IF)I
 
     .line 21
     .line 22
@@ -684,70 +635,77 @@
 
     .line 25
     .line 26
-    invoke-static {v1, v0}, LX/1SG;->A01(IZ)I
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 27
     .line 28
+    invoke-static {v0}, LX/0X3;->A01(I)I
+
     .line 29
-    move-result v1
-
     .line 30
-    invoke-virtual {p0}, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A00()Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
-
     .line 31
-    .line 32
-    .line 33
-    move-result-object v0
-
-    .line 34
-    mul-int/lit8 v2, v1, 0x1f
-
-    .line 35
-    .line 36
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
-    .line 37
-    .line 38
-    .line 39
     move-result v0
 
+    .line 32
+    add-int/2addr v1, v0
+
+    .line 33
+    invoke-virtual {p0}, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A00()Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    mul-int/lit8 v2, v1, 0x1f
+
+    .line 38
+    .line 39
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
+
     .line 40
+    .line 41
+    .line 42
+    move-result v0
+
+    .line 43
     add-int/2addr v2, v0
 
-    .line 41
+    .line 44
     iget v1, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A03:I
 
-    .line 42
-    .line 43
-    mul-int/lit8 v0, v2, 0x1f
-
-    .line 44
     .line 45
-    add-int/2addr v0, v1
-
     .line 46
-    iget v1, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A04:I
+    mul-int/lit8 v0, v2, 0x1f
 
     .line 47
     .line 48
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 49
-    .line 50
     add-int/2addr v0, v1
 
+    .line 49
+    iget v1, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A04:I
+
+    .line 50
     .line 51
-    iget v1, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A05:I
+    mul-int/lit8 v0, v0, 0x1f
 
     .line 52
     .line 53
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 54
-    .line 55
     add-int/2addr v0, v1
 
+    .line 54
+    iget v1, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A05:I
+
+    .line 55
     .line 56
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 57
+    .line 58
+    add-int/2addr v0, v1
+
+    .line 59
     return v0
 .end method
 
@@ -777,7 +735,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1, v0}, LX/0Yd;->A0C(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1bX;
+    invoke-static {p1, v0}, LX/0X1;->A0D(Landroid/os/Parcel;Lcom/google/common/collect/ImmutableCollection;)LX/1tw;
 
     .line 13
     .line 14
@@ -837,100 +795,75 @@
     .line 40
     .line 41
     .line 42
-    iget-object v1, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A08:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
+    iget-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A08:Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;
 
     .line 43
     .line 44
-    if-nez v1, :cond_1
+    invoke-static {p1, v0, p2}, LX/0X1;->A0b(Landroid/os/Parcel;Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;I)V
 
     .line 45
     .line 46
-    const/4 v0, 0x0
-
     .line 47
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A03:I
 
     .line 48
     .line 49
-    .line 50
-    :goto_1
-    iget v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A03:I
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 50
     .line 51
     .line 52
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A04:I
 
     .line 53
     .line 54
-    .line 55
-    iget v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A04:I
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 55
     .line 56
     .line 57
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A05:I
 
     .line 58
     .line 59
-    .line 60
-    iget v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A05:I
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 60
     .line 61
     .line 62
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A09:Ljava/util/Set;
 
     .line 63
     .line 64
-    .line 65
-    iget-object v0, p0, Lcom/facebook/inspiration/model/movableoverlay/caption/InspirationCaptionStickerInfo;->A09:Ljava/util/Set;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
+    .line 65
     .line 66
     .line 67
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
-
-    .line 68
-    .line 69
-    .line 70
     move-result-object v1
 
-    .line 71
-    :goto_2
+    .line 68
+    :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 72
-    .line 73
-    .line 74
+    .line 69
+    .line 70
+    .line 71
     move-result v0
 
-    .line 75
-    if-eqz v0, :cond_2
+    .line 72
+    if-eqz v0, :cond_1
 
+    .line 73
+    .line 74
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
+
+    .line 75
     .line 76
     .line 77
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
-
-    .line 78
-    .line 79
-    .line 80
-    goto :goto_2
-
-    .line 81
-    :cond_1
-    const/4 v0, 0x1
-
-    .line 82
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 83
-    .line 84
-    .line 85
-    invoke-virtual {v1, p1, p2}, Lcom/facebook/inspiration/model/movableoverlay/common/InspirationOverlayPosition;->writeToParcel(Landroid/os/Parcel;I)V
-
-    .line 86
-    .line 87
-    .line 88
     goto :goto_1
 
-    .line 89
-    :cond_2
+    .line 78
+    :cond_1
     return-void
 .end method

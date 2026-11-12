@@ -1,171 +1,143 @@
-.class public final LX/2Eq;
-.super LX/2Db;
+.class public abstract LX/2eQ;
+.super Ljava/lang/Object;
 .source ""
 
 
+# static fields
+.field public static final A04:Landroid/graphics/Rect;
+
+
+# instance fields
+.field public A00:Landroid/os/Handler;
+
+.field public A01:Landroid/os/HandlerThread;
+
+.field public A02:Z
+
+.field public final A03:LX/2hE;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, LX/2Db;-><init>()V
+    new-instance v0, Landroid/graphics/Rect;
 
     .line 1
     .line 2
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
     .line 3
+    .line 4
+    .line 5
+    sput-object v0, LX/2eQ;->A04:Landroid/graphics/Rect;
+
+    .line 6
+    .line 7
     return-void
 .end method
 
-
-# virtual methods
-.method public final A03(LX/2C2;LX/2EI;LX/2Ha;)LX/2DT;
+.method public constructor <init>(Landroid/content/res/Resources;LX/2hE;Z)V
     .locals 2
 
     .line 0
-    invoke-static {p2}, LX/2Db;->A00(LX/2EI;)LX/2DT;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    move-result-object v0
+    iput-object p2, p0, LX/2eQ;->A03:LX/2hE;
 
     .line 4
-    if-nez v0, :cond_0
-
     .line 5
-    .line 6
-    iget-object v1, p2, LX/2EI;->_class:Ljava/lang/Class;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
+    .line 6
     .line 7
     .line 8
-    const-class v0, Lcom/fasterxml/jackson/databind/annotation/JsonDeserialize;
+    const v0, 0x7f07006a
 
     .line 9
     .line 10
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
-
     .line 11
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
     .line 12
     .line 13
-    move-result-object v0
-
     .line 14
-    check-cast v0, Lcom/fasterxml/jackson/databind/annotation/JsonDeserialize;
+    if-eqz p3, :cond_0
 
     .line 15
     .line 16
-    if-eqz v0, :cond_1
+    iget-boolean v0, p0, LX/2eQ;->A02:Z
 
     .line 17
     .line 18
-    invoke-interface {v0}, Lcom/fasterxml/jackson/databind/annotation/JsonDeserialize;->using()Ljava/lang/Class;
-
-    .line 19
-    .line 20
-    .line 21
-    move-result-object v0
-
-    .line 22
-    if-eqz v0, :cond_1
-
-    .line 23
-    .line 24
-    invoke-static {p2, p1, p3}, LX/2Db;->A01(LX/2EI;LX/2C4;LX/2Ha;)LX/2DT;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    :cond_0
-    return-object v0
-
-    .line 29
-    :cond_1
-    invoke-super {p0, p1, p2, p3}, LX/2Db;->A03(LX/2C2;LX/2EI;LX/2Ha;)LX/2DT;
-
-    .line 30
-    .line 31
-    .line 32
-    move-result-object v0
-
-    .line 33
-    return-object v0
-.end method
-
-.method public final A04(LX/2EI;LX/2C1;LX/2Ha;)LX/2DT;
-    .locals 2
-
-    .line 0
-    invoke-static {p1}, LX/2Db;->A00(LX/2EI;)LX/2DT;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
-    .line 6
-    iget-object v1, p1, LX/2EI;->_class:Ljava/lang/Class;
-
-    .line 7
-    .line 8
-    const-class v0, Lcom/fasterxml/jackson/databind/annotation/JsonSerialize;
-
-    .line 9
-    .line 10
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
-
-    .line 11
-    .line 12
-    .line 13
-    move-result-object v0
-
-    .line 14
-    check-cast v0, Lcom/fasterxml/jackson/databind/annotation/JsonSerialize;
-
-    .line 15
-    .line 16
-    if-eqz v0, :cond_1
-
-    .line 17
-    .line 18
-    invoke-interface {v0}, Lcom/fasterxml/jackson/databind/annotation/JsonSerialize;->using()Ljava/lang/Class;
-
     .line 19
     .line 20
+    const/4 v0, 0x1
+
     .line 21
-    move-result-object v0
+    iput-boolean v0, p0, LX/2eQ;->A02:Z
 
     .line 22
-    if-eqz v0, :cond_1
-
     .line 23
-    .line 24
-    invoke-static {p1, p2, p3}, LX/2Db;->A01(LX/2EI;LX/2C4;LX/2Ha;)LX/2DT;
+    const-string v1, "SoftInputDetectorNoDi"
 
+    .line 24
     .line 25
+    new-instance v0, Landroid/os/HandlerThread;
+
     .line 26
     .line 27
-    move-result-object v0
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     .line 28
-    :cond_0
-    return-object v0
-
     .line 29
-    :cond_1
-    invoke-super {p0, p1, p2, p3}, LX/2Db;->A04(LX/2EI;LX/2C1;LX/2Ha;)LX/2DT;
-
     .line 30
+    iput-object v0, p0, LX/2eQ;->A01:Landroid/os/HandlerThread;
+
     .line 31
     .line 32
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 33
-    return-object v0
+    .line 34
+    .line 35
+    iget-object v0, p0, LX/2eQ;->A01:Landroid/os/HandlerThread;
+
+    .line 36
+    .line 37
+    invoke-static {v0}, LX/0X3;->A0D(Landroid/os/HandlerThread;)Landroid/os/Handler;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
+    iput-object v0, p0, LX/2eQ;->A00:Landroid/os/Handler;
+
+    .line 42
+    .line 43
+    :cond_0
+    const v0, 0x7f07005c
+
+    .line 44
+    .line 45
+    .line 46
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 47
+    .line 48
+    .line 49
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    .line 50
+    .line 51
+    .line 52
+    return-void
 .end method

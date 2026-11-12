@@ -4,71 +4,14 @@
 
 
 # static fields
-.field public static final A03:[LX/270;
+.field public static A01:LX/285;
 
 
 # instance fields
-.field public A00:J
-
-.field public A01:LX/285;
-
-.field public final A02:[Ljava/lang/Object;
+.field public final A00:Ljava/util/List;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
-
-    .line 0
-    const/16 v0, 0x10
-
-    .line 1
-    .line 2
-    new-array v4, v0, [LX/270;
-
-    .line 3
-    .line 4
-    sput-object v4, LX/285;->A03:[LX/270;
-
-    .line 5
-    .line 6
-    invoke-static {}, LX/270;->values()[LX/270;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v3
-
-    .line 10
-    array-length v2, v3
-
-    .line 11
-    const/4 v1, 0x1
-
-    .line 12
-    sub-int/2addr v2, v1
-
-    .line 13
-    const/16 v0, 0xf
-
-    .line 14
-    .line 15
-    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
-
-    .line 16
-    .line 17
-    .line 18
-    move-result v0
-
-    .line 19
-    invoke-static {v3, v1, v4, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 20
-    .line 21
-    .line 22
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 1
 
@@ -78,17 +21,111 @@
     .line 1
     .line 2
     .line 3
-    const/16 v0, 0x10
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 4
     .line 5
-    new-array v0, v0, [Ljava/lang/Object;
-
     .line 6
+    move-result-object v0
+
     .line 7
-    iput-object v0, p0, LX/285;->A02:[Ljava/lang/Object;
+    iput-object v0, p0, LX/285;->A00:Ljava/util/List;
 
     .line 8
     .line 9
     return-void
+.end method
+
+
+# virtual methods
+.method public final A00(Ljava/lang/String;)V
+    .locals 3
+
+    .line 0
+    const/4 v2, 0x0
+
+    .line 1
+    invoke-static {p1, v2}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v1, p0, LX/285;->A00:Ljava/util/List;
+
+    .line 5
+    .line 6
+    monitor-enter v1
+
+    .line 7
+    :try_start_0
+    invoke-static {v1}, LX/00Q;->A08(Ljava/lang/Iterable;)Ljava/util/List;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 11
+    monitor-exit v1
+
+    .line 12
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v1
+
+    .line 16
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    if-eqz v0, :cond_0
+
+    .line 21
+    .line 22
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    check-cast v0, LX/286;
+
+    .line 27
+    .line 28
+    iget-object v0, v0, LX/286;->A00:LX/287;
+
+    .line 29
+    .line 30
+    invoke-static {v0, p1, v2}, LX/27r;->A00(LX/27r;Ljava/lang/String;I)V
+
+    .line 31
+    .line 32
+    .line 33
+    goto :goto_0
+
+    .line 34
+    :cond_0
+    return-void
+
+    .line 35
+    :catchall_0
+    move-exception v0
+
+    .line 36
+    monitor-exit v1
+
+    .line 37
+    throw v0
 .end method

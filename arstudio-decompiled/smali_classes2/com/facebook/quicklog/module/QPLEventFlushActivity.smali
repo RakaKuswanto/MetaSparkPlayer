@@ -8,9 +8,9 @@
 
 
 # instance fields
-.field public _UL_mInjectionContext:LX/1zG;
+.field public _UL_mInjectionContext:LX/1rU;
 
-.field public mLogger:LX/0Na;
+.field public mLogger:LX/0RP;
 
 
 # direct methods
@@ -32,7 +32,7 @@
     .locals 2
 
     .line 0
-    invoke-static {p0}, LX/0Yi;->A1R(Landroid/app/Activity;)Z
+    invoke-static {p0}, LX/0X6;->A1S(Landroid/app/Activity;)Z
 
     .line 1
     .line 2
@@ -49,11 +49,11 @@
     .line 7
     .line 8
     .line 9
-    sget v0, LX/2eq;->A6y:I
+    sget v0, LX/2I6;->A47:I
 
     .line 10
     .line 11
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 12
     .line 13
@@ -61,155 +61,118 @@
     move-result-object v0
 
     .line 15
-    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLEventFlushActivity;->mLogger:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/quicklog/module/QPLEventFlushActivity;->mLogger:LX/0RP;
 
     .line 16
     .line 17
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, LX/0lf;->get()Ljava/lang/Object;
 
     .line 18
     .line 19
     .line 20
-    move-result-object v1
+    move-result-object v0
 
     .line 21
-    check-cast v1, LX/38N;
+    check-cast v0, LX/35D;
 
     .line 22
     .line 23
-    iget-object v0, v1, LX/38N;->A01:LX/394;
+    iget-object v1, v0, LX/35D;->A0B:LX/3Bf;
 
     .line 24
     .line 25
-    invoke-interface {v0}, LX/394;->AQz()Z
+    iget-object v0, v1, LX/3Bf;->A04:LX/35d;
 
     .line 26
     .line 27
+    invoke-interface {v0}, LX/35d;->APY()Z
+
     .line 28
+    .line 29
+    .line 30
     move-result v0
 
-    .line 29
-    if-eqz v0, :cond_2
-
-    .line 30
     .line 31
-    iget-object v0, v1, LX/38N;->A0D:LX/3lB;
+    if-eqz v0, :cond_2
 
     .line 32
     .line 33
-    invoke-virtual {v0}, LX/3lB;->A05()LX/3lE;
+    iget-object v0, v1, LX/3Bf;->A02:LX/3Bl;
 
     .line 34
     .line 35
-    .line 36
-    move-result-object v0
+    if-eqz v0, :cond_2
 
+    .line 36
     .line 37
-    if-eqz v0, :cond_3
+    iget-object v0, v0, LX/3Bl;->A00:LX/3BQ;
 
     .line 38
     .line 39
-    iget-object v0, v0, LX/3lE;->A00:LX/3lD;
+    if-eqz v0, :cond_2
 
     .line 40
     .line 41
-    if-eqz v0, :cond_3
+    iget-object v1, v0, LX/3BQ;->A01:LX/3BZ;
 
     .line 42
     .line 43
-    iget-object v1, v0, LX/3lD;->A01:LX/3mj;
+    instance-of v0, v1, LX/3CM;
 
     .line 44
     .line 45
-    :goto_0
-    instance-of v0, v1, LX/3lj;
+    if-eqz v0, :cond_1
 
     .line 46
     .line 47
-    if-eqz v0, :cond_1
+    check-cast v1, LX/3CM;
 
     .line 48
     .line 49
-    check-cast v1, LX/3lj;
+    invoke-virtual {v1}, LX/3CM;->A02()V
 
     .line 50
     .line 51
-    invoke-virtual {v1}, LX/3lj;->A02()V
-
     .line 52
+    :goto_0
+    const-string v0, "Events uploaded"
+
     .line 53
     .line 54
     :goto_1
-    const-string v0, "Events uploaded"
+    invoke-virtual {p0, v0}, Lcom/facebook/quicklog/module/QPLEventFlushActivity;->toastResult(Ljava/lang/String;)V
 
     .line 55
     .line 56
-    :goto_2
-    invoke-virtual {p0, v0}, Lcom/facebook/quicklog/module/QPLEventFlushActivity;->toastResult(Ljava/lang/String;)V
-
     .line 57
-    .line 58
-    .line 59
     :cond_0
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
+    .line 58
+    .line 59
     .line 60
-    .line 61
-    .line 62
     return-void
 
-    .line 63
+    .line 61
     :cond_1
-    check-cast v1, LX/3lk;
+    check-cast v1, LX/3CO;
+
+    .line 62
+    .line 63
+    invoke-virtual {v1}, LX/3CO;->A04()V
 
     .line 64
     .line 65
-    invoke-virtual {v1}, LX/3lk;->A04()V
-
     .line 66
-    .line 67
-    .line 68
-    goto :goto_1
-
-    .line 69
-    :cond_2
-    iget-object v0, v1, LX/38N;->A0D:LX/3lB;
-
-    .line 70
-    .line 71
-    invoke-virtual {v0}, LX/3lB;->A04()LX/3lK;
-
-    .line 72
-    .line 73
-    .line 74
-    move-result-object v0
-
-    .line 75
-    if-eqz v0, :cond_3
-
-    .line 76
-    .line 77
-    iget-object v0, v0, LX/3lK;->A00:LX/3m7;
-
-    .line 78
-    .line 79
-    if-eqz v0, :cond_3
-
-    .line 80
-    .line 81
-    iget-object v1, v0, LX/3m7;->A01:LX/3mj;
-
-    .line 82
-    .line 83
     goto :goto_0
 
-    .line 84
-    :cond_3
+    .line 67
+    :cond_2
     const-string v0, "Unable to schedule analytics upload"
 
-    .line 85
-    .line 86
-    goto :goto_2
+    .line 68
+    .line 69
+    goto :goto_1
 .end method
 
 .method public toastResult(Ljava/lang/String;)V
@@ -220,12 +183,12 @@
 
     .line 1
     .line 2
-    invoke-static {v0, p1}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     .line 4
     .line 5
-    invoke-static {p0, p1}, LX/0Ye;->A0g(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, LX/0X3;->A0y(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 6
     .line 7

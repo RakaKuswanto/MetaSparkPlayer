@@ -1,24 +1,17 @@
-.class public final LX/1ln;
+.class public final LX/1lN;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/2SK;
+
 
 # instance fields
-.field public final A00:J
-
-.field public final A01:Ljava/lang/String;
-
-.field public final A02:Ljava/lang/String;
-
-.field public final A03:Ljava/lang/String;
-
-.field public final A04:Ljava/lang/String;
-
-.field public final A05:Ljava/lang/String;
+.field public final A00:LX/2oe;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(LX/2oe;)V
     .locals 0
 
     .line 0
@@ -27,188 +20,197 @@
     .line 1
     .line 2
     .line 3
-    iput-object p4, p0, LX/1ln;->A05:Ljava/lang/String;
+    iput-object p1, p0, LX/1lN;->A00:LX/2oe;
 
     .line 4
     .line 5
-    iput-object p5, p0, LX/1ln;->A04:Ljava/lang/String;
-
-    .line 6
-    .line 7
-    iput-object p6, p0, LX/1ln;->A01:Ljava/lang/String;
-
-    .line 8
-    .line 9
-    iput-object p1, p0, LX/1ln;->A02:Ljava/lang/String;
-
-    .line 10
-    .line 11
-    iput-wide p2, p0, LX/1ln;->A00:J
-
-    .line 12
-    .line 13
-    iput-object p7, p0, LX/1ln;->A03:Ljava/lang/String;
-
-    .line 14
-    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final AAR()Landroid/net/Uri$Builder;
+    .locals 2
 
     .line 0
-    const/4 v5, 0x0
+    const-string/jumbo v1, "https://b-api."
 
     .line 1
-    if-eqz p1, :cond_1
-
     .line 2
     .line 3
-    const/4 v0, 0x1
+    const-string/jumbo v0, "facebook.com"
 
     .line 4
-    if-ne p1, p0, :cond_0
+    .line 5
+    .line 6
+    invoke-static {v1, v0}, LX/0X2;->A0G(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    return-object v0
+.end method
+
+.method public final AAS()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final ADE()[Ljava/lang/String;
+    .locals 3
+
+    .line 0
+    invoke-static {}, LX/0X7;->A0x()[Ljava/lang/String;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v2
+
+    .line 4
+    const-string/jumbo v1, "facebook.com"
 
     .line 5
     .line 6
-    return v0
-
     .line 7
-    :cond_0
-    instance-of v0, p1, LX/1ln;
+    const/4 v0, 0x0
 
     .line 8
+    aput-object v1, v2, v0
+
     .line 9
-    if-eqz v0, :cond_1
+    .line 10
+    return-object v2
+.end method
+
+.method public final AEs()Landroid/net/Uri$Builder;
+    .locals 2
+
+    .line 0
+    const-string/jumbo v1, "https://b-graph."
+
+    .line 1
+    .line 2
+    .line 3
+    const-string/jumbo v0, "facebook.com"
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-static {v1, v0}, LX/0X2;->A0G(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
 
     .line 10
-    .line 11
-    iget-object v1, p0, LX/1ln;->A05:Ljava/lang/String;
+    return-object v0
+.end method
 
-    .line 12
-    .line 13
-    check-cast p1, LX/1ln;
+.method public final AEt()Landroid/net/Uri$Builder;
+    .locals 1
 
-    .line 14
-    .line 15
-    iget-object v0, p1, LX/1ln;->A05:Ljava/lang/String;
+    .line 0
+    const-string v0, "BootstrapHttpConfig should be used only for graph and api requests"
 
-    .line 16
-    .line 17
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
-    .line 18
-    .line 19
-    .line 20
-    move-result v0
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 21
-    if-eqz v0, :cond_1
+    .line 6
+    throw v0
+.end method
 
-    .line 22
-    .line 23
-    iget-object v1, p0, LX/1ln;->A04:Ljava/lang/String;
+.method public final AEw()Landroid/net/Uri$Builder;
+    .locals 1
 
-    .line 24
-    .line 25
-    iget-object v0, p1, LX/1ln;->A04:Ljava/lang/String;
+    .line 0
+    const-string v0, "BootstrapHttpConfig should be used only for graph and api requests"
 
-    .line 26
-    .line 27
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
-    .line 28
-    .line 29
-    .line 30
-    move-result v0
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 31
-    if-eqz v0, :cond_1
+    .line 6
+    throw v0
+.end method
 
-    .line 32
-    .line 33
-    iget-object v1, p0, LX/1ln;->A01:Ljava/lang/String;
+.method public final AHO()Landroid/net/Uri$Builder;
+    .locals 1
 
-    .line 34
-    .line 35
-    iget-object v0, p1, LX/1ln;->A01:Ljava/lang/String;
+    .line 0
+    const-string v0, "BootstrapHttpConfig should be used only for graph and api requests"
 
-    .line 36
-    .line 37
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
-    .line 38
-    .line 39
-    .line 40
-    move-result v0
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 41
-    if-eqz v0, :cond_1
+    .line 6
+    throw v0
+.end method
 
-    .line 42
-    .line 43
-    iget-object v1, p0, LX/1ln;->A02:Ljava/lang/String;
+.method public final AKN()Landroid/net/Uri$Builder;
+    .locals 2
 
-    .line 44
-    .line 45
-    iget-object v0, p1, LX/1ln;->A02:Ljava/lang/String;
+    .line 0
+    const-string/jumbo v1, "https://b-graph.secure."
 
-    .line 46
-    .line 47
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 1
+    .line 2
+    .line 3
+    const-string/jumbo v0, "facebook.com"
 
-    .line 48
-    .line 49
-    .line 50
-    move-result v0
+    .line 4
+    .line 5
+    .line 6
+    invoke-static {v1, v0}, LX/0X2;->A0G(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 51
-    if-eqz v0, :cond_1
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
 
-    .line 52
-    .line 53
-    iget-object v1, p0, LX/1ln;->A03:Ljava/lang/String;
+    .line 10
+    return-object v0
+.end method
 
-    .line 54
-    .line 55
-    iget-object v0, p1, LX/1ln;->A03:Ljava/lang/String;
+.method public final AKO()Landroid/net/Uri$Builder;
+    .locals 1
 
-    .line 56
-    .line 57
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 0
+    const-string v0, "BootstrapHttpConfig should be used only for graph and api requests"
 
-    .line 58
-    .line 59
-    .line 60
-    move-result v0
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/0X7;->A0Z(Ljava/lang/String;)Ljava/lang/UnsupportedOperationException;
 
-    .line 61
-    if-eqz v0, :cond_1
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
 
-    .line 62
-    .line 63
-    iget-wide v3, p0, LX/1ln;->A00:J
-
-    .line 64
-    .line 65
-    iget-wide v1, p1, LX/1ln;->A00:J
-
-    .line 66
-    .line 67
-    cmp-long v0, v3, v1
-
-    .line 68
-    .line 69
-    if-nez v0, :cond_1
-
-    .line 70
-    .line 71
-    const/4 v5, 0x1
-
-    .line 72
-    :cond_1
-    return v5
+    .line 6
+    throw v0
 .end method

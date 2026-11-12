@@ -3,30 +3,29 @@
 .source ""
 
 # interfaces
-.implements LX/0J3;
-.implements LX/3J8;
-.implements LX/3JH;
-.implements LX/3i7;
+.implements LX/0Hw;
+.implements LX/2Dl;
+.implements LX/2E0;
 
 
 # instance fields
-.field public A00:LX/0Na;
+.field public A00:LX/0RP;
 
-.field public A01:LX/05V;
+.field public A01:LX/05u;
 
-.field public A02:LX/0Na;
+.field public A02:LX/0RP;
 
-.field public A03:LX/0Na;
+.field public A03:LX/0RP;
 
-.field public A04:LX/0Na;
+.field public A04:LX/0RP;
 
-.field public A05:LX/0Na;
+.field public A05:LX/0RP;
 
-.field public A06:LX/0Na;
+.field public A06:LX/0RP;
 
-.field public final A07:LX/0J4;
+.field public final A07:LX/0Hx;
 
-.field public final A08:LX/0Na;
+.field public final A08:LX/0RP;
 
 
 # direct methods
@@ -39,24 +38,24 @@
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/0J4;
+    new-instance v0, LX/0Hx;
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/0J4;-><init>()V
+    invoke-direct {v0}, LX/0Hx;-><init>()V
 
     .line 6
     .line 7
     .line 8
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A07:LX/0J4;
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A07:LX/0Hx;
 
     .line 9
     .line 10
-    sget v0, LX/2eq;->AOF:I
+    sget v0, LX/2I6;->AIG:I
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 13
     .line 14
@@ -64,18 +63,18 @@
     move-result-object v0
 
     .line 16
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A08:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A08:LX/0RP;
 
     .line 17
     .line 18
     return-void
 .end method
 
-.method public static A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+.method public static A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
     .locals 0
 
     .line 0
-    iget-object p0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A00:LX/0Na;
+    iget-object p0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A00:LX/0RP;
 
     .line 1
     .line 2
@@ -84,7 +83,7 @@
     .line 3
     .line 4
     .line 5
-    invoke-interface {p0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {p0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -92,14 +91,14 @@
     move-result-object p0
 
     .line 9
-    check-cast p0, LX/3e6;
+    check-cast p0, LX/2T2;
 
     .line 10
     .line 11
     return-object p0
 .end method
 
-.method public static A02(Landroid/content/Context;Landroid/preference/PreferenceGroup;LX/1b3;I)LX/2Ua;
+.method public static A01(Landroid/content/Context;Landroid/preference/PreferenceGroup;LX/28G;I)LX/3GU;
     .locals 3
 
     .line 0
@@ -111,16 +110,16 @@
     move-result-object v2
 
     .line 4
-    new-instance v1, LX/2Ua;
+    new-instance v1, LX/3GU;
 
     .line 5
     .line 6
-    invoke-direct {v1, p0}, LX/2Ua;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, LX/3GU;-><init>(Landroid/content/Context;)V
 
     .line 7
     .line 8
     .line 9
-    invoke-virtual {p2}, LX/1b3;->A0D()Ljava/lang/String;
+    invoke-virtual {p2}, LX/28G;->A0B()Ljava/lang/String;
 
     .line 10
     .line 11
@@ -148,15 +147,15 @@
 
 
 # virtual methods
-.method public final AKe(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final AJ9(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A07:LX/0J4;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A07:LX/0Hx;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1}, LX/0J4;->A00(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, LX/0Hx;->A00(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -167,11 +166,11 @@
     return-object v0
 .end method
 
-.method public final AOc(Ljava/lang/Throwable;)Z
+.method public final ANB(Ljava/lang/Throwable;)Z
     .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -179,7 +178,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1}, LX/3e6;->A0a(Ljava/lang/Throwable;)Z
+    invoke-virtual {v0, p1}, LX/2T2;->A0a(Ljava/lang/Throwable;)Z
 
     .line 5
     .line 6
@@ -190,15 +189,15 @@
     return v0
 .end method
 
-.method public final AiG(LX/32l;)V
+.method public final Agc(LX/2Dn;)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A03:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A03:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0a(LX/0Na;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X6;->A0h(LX/0RP;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -206,11 +205,11 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/32s;
+    check-cast v0, LX/2E1;
 
     .line 7
     .line 8
-    invoke-virtual {v0, p1}, LX/32s;->A01(LX/32l;)V
+    invoke-virtual {v0, p1}, LX/2E1;->A01(LX/2Dn;)V
 
     .line 9
     .line 10
@@ -218,15 +217,15 @@
     return-void
 .end method
 
-.method public final Ams(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final Ala(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A07:LX/0J4;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A07:LX/0Hx;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2}, LX/0J4;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, LX/0Hx;->A01(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
     .line 4
@@ -243,11 +242,11 @@
     .line 1
     .line 2
     .line 3
-    sget v0, LX/2eq;->AOA:I
+    sget v0, LX/2I6;->AIE:I
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
 
     .line 6
     .line 7
@@ -255,15 +254,15 @@
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A02:LX/0RP;
 
     .line 10
     .line 11
-    sget v0, LX/2eq;->A96:I
+    sget v0, LX/2I6;->A66:I
 
     .line 12
     .line 13
-    invoke-static {p0, v0}, LX/1zT;->A01(Landroid/content/Context;I)LX/1zT;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 14
     .line 15
@@ -271,79 +270,80 @@
     move-result-object v0
 
     .line 17
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A03:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A03:LX/0RP;
 
     .line 18
     .line 19
-    sget v0, LX/2eq;->AO3:I
+    sget v1, LX/2I6;->AIB:I
 
     .line 20
     .line 21
-    invoke-static {p0, v0}, LX/1zT;->A01(Landroid/content/Context;I)LX/1zT;
+    new-instance v0, LX/3FX;
 
     .line 22
     .line 23
+    invoke-direct {v0, p0, v1}, LX/3FX;-><init>(Landroid/content/Context;I)V
+
     .line 24
-    move-result-object v0
-
     .line 25
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A00:LX/0Na;
-
     .line 26
-    .line 27
-    invoke-static {}, LX/0Zq;->A09()LX/0Zq;
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A00:LX/0RP;
 
+    .line 27
     .line 28
+    invoke-static {}, LX/0lf;->A08()LX/0lf;
+
     .line 29
     .line 30
-    move-result-object v0
-
     .line 31
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A04:LX/0Na;
+    move-result-object v0
 
     .line 32
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A04:LX/0RP;
+
     .line 33
-    sget v0, LX/2eq;->ANi:I
-
     .line 34
-    .line 35
-    invoke-static {v0}, LX/0Zq;->A0J(I)LX/0Zq;
+    sget v0, LX/2I6;->AGc:I
 
+    .line 35
     .line 36
+    invoke-static {v0}, LX/0lf;->A0G(I)LX/0lf;
+
     .line 37
     .line 38
+    .line 39
     move-result-object v0
 
-    .line 39
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A05:LX/0Na;
-
     .line 40
-    .line 41
-    invoke-static {}, LX/1vu;->A01()LX/1vx;
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A05:LX/0RP;
 
+    .line 41
     .line 42
+    invoke-static {}, LX/1xv;->A00()Lcom/facebook/auth/usersession/FbUserSession;
+
     .line 43
     .line 44
+    .line 45
     move-result-object v2
 
-    .line 45
-    sget v1, LX/2eq;->AOE:I
-
     .line 46
+    sget v1, LX/2I6;->AIF:I
+
     .line 47
-    new-instance v0, LX/1ui;
-
     .line 48
-    .line 49
-    invoke-direct {v0, p0, v2, v1}, LX/1ui;-><init>(Landroid/content/Context;LX/1vx;I)V
+    new-instance v0, LX/16a;
 
+    .line 49
     .line 50
+    invoke-direct {v0, p0, v2, v1}, LX/16a;-><init>(Landroid/content/Context;Lcom/facebook/auth/usersession/FbUserSession;I)V
+
     .line 51
     .line 52
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A06:LX/0Na;
-
     .line 53
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A06:LX/0RP;
+
     .line 54
+    .line 55
     return-void
 .end method
 
@@ -351,7 +351,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p3, p1, p4}, LX/4Xv;->A05(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;)Z
+    invoke-static {p3, p1, p4}, LX/3fu;->A04(Ljava/io/PrintWriter;Ljava/lang/String;[Ljava/lang/String;)Z
 
     .line 1
     .line 2
@@ -381,7 +381,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -389,7 +389,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, LX/3e6;->A0C()V
+    invoke-virtual {v0}, LX/2T2;->A0C()V
 
     .line 8
     .line 9
@@ -401,11 +401,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A05:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A05:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0a(LX/0Na;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X6;->A0h(LX/0RP;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -437,7 +437,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -445,7 +445,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1, p2, p3}, LX/3e6;->A0M(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, LX/2T2;->A0M(IILandroid/content/Intent;)V
 
     .line 8
     .line 9
@@ -462,11 +462,11 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A06:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A06:LX/0RP;
 
     .line 4
     .line 5
-    invoke-static {v0}, LX/0Yg;->A0a(LX/0Na;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X6;->A0h(LX/0RP;)Ljava/lang/Object;
 
     .line 6
     .line 7
@@ -474,7 +474,7 @@
     move-result-object v4
 
     .line 9
-    check-cast v4, LX/33U;
+    check-cast v4, LX/3Hg;
 
     .line 10
     .line 11
@@ -515,7 +515,7 @@
 
     .line 27
     .line 28
-    invoke-virtual {v4}, LX/33U;->A05()Z
+    invoke-virtual {v4}, LX/3Hg;->A05()Z
 
     .line 29
     .line 30
@@ -523,16 +523,16 @@
     move-result v0
 
     .line 32
-    invoke-virtual {v4, p1, v0}, LX/33U;->A04(Landroid/content/res/Resources$Theme;Z)V
+    invoke-virtual {v4, p1, v0}, LX/3Hg;->A04(Landroid/content/res/Resources$Theme;Z)V
 
     .line 33
     .line 34
     .line 35
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A06:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A06:LX/0RP;
 
     .line 36
     .line 37
-    invoke-static {v0}, LX/0Yg;->A0a(LX/0Na;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X6;->A0h(LX/0RP;)Ljava/lang/Object;
 
     .line 38
     .line 39
@@ -540,7 +540,7 @@
     move-result-object v2
 
     .line 41
-    check-cast v2, LX/33U;
+    check-cast v2, LX/3Hg;
 
     .line 42
     .line 43
@@ -560,7 +560,7 @@
     move-result-object v1
 
     .line 51
-    iget-boolean v0, v2, LX/33U;->A01:Z
+    iget-boolean v0, v2, LX/3Hg;->A01:Z
 
     .line 52
     .line 53
@@ -568,45 +568,48 @@
 
     .line 54
     .line 55
-    iput-boolean v3, v2, LX/33U;->A01:Z
+    iput-boolean v3, v2, LX/3Hg;->A01:Z
 
     .line 56
     .line 57
-    invoke-static {}, LX/33W;->A01()I
+    const/4 v0, 0x0
 
     .line 58
+    invoke-static {v0}, LX/2KX;->A00(Z)I
+
     .line 59
     .line 60
+    .line 61
     move-result v0
 
-    .line 61
+    .line 62
     invoke-virtual {v1, v0, v3}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
 
-    .line 62
     .line 63
     .line 64
-    :cond_0
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A06:LX/0Na;
-
     .line 65
-    .line 66
-    invoke-static {v0}, LX/0Yg;->A0a(LX/0Na;)Ljava/lang/Object;
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A06:LX/0RP;
 
+    .line 66
     .line 67
+    invoke-static {v0}, LX/0X6;->A0h(LX/0RP;)Ljava/lang/Object;
+
     .line 68
     .line 69
+    .line 70
     move-result-object v0
 
-    .line 70
-    check-cast v0, LX/33U;
-
     .line 71
-    .line 72
-    invoke-virtual {v0}, LX/33U;->A05()Z
+    check-cast v0, LX/3Hg;
 
+    .line 72
     .line 73
+    invoke-virtual {v0}, LX/3Hg;->A05()Z
+
     .line 74
     .line 75
+    .line 76
     return-void
 .end method
 
@@ -614,7 +617,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -622,7 +625,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, LX/3e6;->A0V()Z
+    invoke-virtual {v0}, LX/2T2;->A0V()Z
 
     .line 5
     .line 6
@@ -652,7 +655,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -660,7 +663,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1}, LX/3e6;->A0O(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1}, LX/2T2;->A0O(Landroid/content/res/Configuration;)V
 
     .line 8
     .line 9
@@ -677,7 +680,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -685,7 +688,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, LX/3e6;->A0E()V
+    invoke-virtual {v0}, LX/2T2;->A0E()V
 
     .line 8
     .line 9
@@ -694,7 +697,7 @@
 .end method
 
 .method public final onCreate(Landroid/os/Bundle;)V
-    .locals 12
+    .locals 11
 
     .line 0
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -702,27 +705,27 @@
     .line 1
     .line 2
     .line 3
-    move-result-object v1
+    move-result-object v2
 
     .line 4
-    const/4 v4, 0x0
+    const/4 v1, 0x0
 
     .line 5
     const-string v0, ":android:show_fragment"
 
     .line 6
     .line 7
-    invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 8
     .line 9
     .line 10
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->setIntent(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Landroid/app/Activity;->setIntent(Landroid/content/Intent;)V
 
     .line 11
     .line 12
     .line 13
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 14
     .line 15
@@ -730,33 +733,33 @@
     move-result-object v0
 
     .line 17
-    iput-object p0, v0, LX/3e6;->A01:Landroid/app/Activity;
+    iput-object p0, v0, LX/2T2;->A01:Landroid/app/Activity;
 
     .line 18
     .line 19
-    new-instance v1, LX/3gQ;
+    new-instance v1, LX/2Jf;
 
     .line 20
     .line 21
-    invoke-direct {v1, p0}, LX/3gQ;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, p0}, LX/2Jf;-><init>(Landroid/app/Activity;)V
 
     .line 22
     .line 23
     .line 24
-    new-instance v0, LX/05V;
+    new-instance v0, LX/05u;
 
     .line 25
     .line 26
-    invoke-direct {v0, v1}, LX/05V;-><init>(LX/0Su;)V
+    invoke-direct {v0, v1}, LX/05u;-><init>(LX/03d;)V
 
     .line 27
     .line 28
     .line 29
-    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    iput-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 30
     .line 31
-    invoke-virtual {v0}, LX/05V;->A00()V
+    invoke-virtual {v0}, LX/05u;->A00()V
 
     .line 32
     .line 33
@@ -783,7 +786,7 @@
 
     .line 44
     :cond_1
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 45
     .line 46
@@ -791,7 +794,7 @@
     move-result-object v0
 
     .line 48
-    invoke-virtual {v0, p1}, LX/3e6;->A0Y(Landroid/os/Bundle;)Z
+    invoke-virtual {v0, p1}, LX/2T2;->A0Y(Landroid/os/Bundle;)Z
 
     .line 49
     .line 50
@@ -817,908 +820,931 @@
 
     .line 61
     .line 62
-    const-string v0, "android:support:fragments"
+    const-string/jumbo v0, "android:support:fragments"
 
     .line 63
     .line 64
+    .line 65
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    .line 65
     .line 66
     .line 67
+    .line 68
     move-result-object v3
 
-    .line 68
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
-
     .line 69
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
+
     .line 70
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
-
     .line 71
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
+
     .line 72
-    iget-object v2, v0, LX/0Su;->A03:LX/0Sf;
-
     .line 73
+    iget-object v2, v0, LX/03d;->A03:LX/0VG;
+
     .line 74
-    iget-object v0, v2, LX/0Sf;->A04:LX/0Su;
-
     .line 75
-    .line 76
-    instance-of v0, v0, LX/06q;
+    iget-object v0, v2, LX/0VG;->A04:LX/03d;
 
+    .line 76
     .line 77
+    instance-of v0, v0, LX/07H;
+
     .line 78
+    .line 79
     if-eqz v0, :cond_2
 
-    .line 79
     .line 80
-    const-string v0, "You must use restoreSaveState when your FragmentHostCallback implements ViewModelStoreOwner"
-
     .line 81
-    .line 82
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    const-string/jumbo v0, "You must use restoreSaveState when your FragmentHostCallback implements ViewModelStoreOwner"
 
+    .line 82
     .line 83
     .line 84
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
     .line 85
+    .line 86
+    .line 87
     move-result-object v0
 
-    .line 86
-    invoke-static {v2, v0}, LX/0Sf;->A0G(LX/0Sf;Ljava/lang/RuntimeException;)V
-
-    .line 87
     .line 88
+    invoke-static {v2, v0}, LX/0VG;->A0G(LX/0VG;Ljava/lang/RuntimeException;)V
+
     .line 89
-    throw v4
-
     .line 90
-    :cond_2
-    iget-object v1, v2, LX/0Sf;->A05:LX/05m;
-
     .line 91
-    .line 92
-    iget-object v0, v1, LX/05m;->A03:Ljava/util/HashMap;
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
 
+    .line 92
     .line 93
     .line 94
-    invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
+    move-result-object v0
 
     .line 95
-    .line 96
-    .line 97
-    iget-object v0, v1, LX/05m;->A02:Ljava/util/HashMap;
+    throw v0
 
+    .line 96
+    :cond_2
+    iget-object v1, v2, LX/0VG;->A05:LX/06D;
+
+    .line 97
     .line 98
+    iget-object v0, v1, LX/06D;->A03:Ljava/util/HashMap;
+
     .line 99
+    .line 100
     invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
 
-    .line 100
     .line 101
     .line 102
-    iget-object v0, v1, LX/05m;->A04:Ljava/util/HashMap;
-
     .line 103
+    iget-object v0, v1, LX/06D;->A02:Ljava/util/HashMap;
+
     .line 104
+    .line 105
     invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
 
-    .line 105
     .line 106
     .line 107
-    invoke-virtual {v2, v3}, LX/0Sf;->A0n(Landroid/os/Parcelable;)V
-
     .line 108
+    iget-object v0, v1, LX/06D;->A04:Ljava/util/HashMap;
+
     .line 109
     .line 110
-    :cond_3
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
 
     .line 111
     .line 112
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
-
     .line 113
-    .line 114
-    iget-object v0, v0, LX/0Su;->A03:LX/0Sf;
+    invoke-virtual {v2, v3}, LX/0VG;->A0n(Landroid/os/Parcelable;)V
 
+    .line 114
     .line 115
     .line 116
-    invoke-virtual {v0}, LX/0Sf;->A0e()V
+    :cond_3
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 117
     .line 118
-    .line 119
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
 
+    .line 119
     .line 120
+    iget-object v0, v0, LX/03d;->A03:LX/0VG;
+
     .line 121
     .line 122
-    move-result-object v0
+    invoke-virtual {v0}, LX/0VG;->A0c()V
 
     .line 123
-    invoke-virtual {v0, p1}, LX/3e6;->A0X(Landroid/os/Bundle;)Z
-
     .line 124
     .line 125
-    .line 126
-    invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
+    .line 126
     .line 127
     .line 128
+    move-result-object v0
+
     .line 129
-    move-result v0
+    invoke-virtual {v0, p1}, LX/2T2;->A0X(Landroid/os/Bundle;)Z
 
     .line 130
-    if-nez v0, :cond_0
-
     .line 131
     .line 132
-    move-object v5, p0
+    invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     .line 133
-    check-cast v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;
-
     .line 134
     .line 135
-    const v0, 0x7f120331
+    move-result v0
 
     .line 136
+    if-nez v0, :cond_0
+
     .line 137
     .line 138
-    invoke-virtual {v5, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    move-object v4, p0
 
     .line 139
+    check-cast v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;
+
     .line 140
     .line 141
-    move-result-object v0
+    const v0, 0x7f1102de
 
     .line 142
-    invoke-virtual {v5, v0}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
-
     .line 143
     .line 144
-    .line 145
-    invoke-static {}, LX/0Zq;->A0G()LX/0Zq;
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
+    .line 145
     .line 146
     .line 147
-    .line 148
     move-result-object v0
 
-    .line 149
-    iput-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0Na;
+    .line 148
+    invoke-virtual {v4, v0}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 149
     .line 150
     .line 151
-    sget v0, LX/2eq;->AdW:I
+    invoke-static {}, LX/0lf;->A0D()LX/0lf;
 
     .line 152
     .line 153
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
-
     .line 154
-    .line 155
-    .line 156
     move-result-object v0
 
+    .line 155
+    iput-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0RP;
+
+    .line 156
     .line 157
-    check-cast v0, LX/1qJ;
+    sget v0, LX/2I6;->AVJ:I
 
     .line 158
     .line 159
-    iput-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A02:LX/1qJ;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 160
     .line 161
-    sget v0, LX/2eq;->AQK:I
-
     .line 162
+    move-result-object v0
+
     .line 163
-    invoke-static {v5, v0}, LX/1zU;->A00(Landroid/content/Context;I)LX/1zU;
+    check-cast v0, LX/1of;
 
     .line 164
     .line 165
-    .line 166
-    move-result-object v0
+    iput-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A02:LX/1of;
 
+    .line 166
     .line 167
-    iput-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A01:LX/0Na;
+    sget v0, LX/2I6;->ALk:I
 
     .line 168
     .line 169
-    invoke-virtual {v5}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-static {v4, v0}, LX/3FW;->A00(Landroid/content/Context;I)LX/3FW;
 
     .line 170
     .line 171
     .line 172
-    move-result-object v1
+    move-result-object v0
 
     .line 173
-    const-string v0, "autoplay_value"
+    iput-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A01:LX/0RP;
 
     .line 174
     .line 175
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     .line 176
     .line 177
     .line 178
-    move-result-object v7
+    move-result-object v1
 
     .line 179
-    if-eqz v7, :cond_4
+    const-string/jumbo v0, "autoplay_value"
 
     .line 180
     .line 181
-    :try_start_0
-    invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
     .line 182
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
     .line 183
     .line 184
-    move-result v1
-
     .line 185
-    if-ltz v1, :cond_4
+    move-result-object v6
 
     .line 186
-    .line 187
-    invoke-static {}, LX/1qJ;->values()[LX/1qJ;
+    if-eqz v6, :cond_4
 
+    .line 187
     .line 188
+    :try_start_0
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
     .line 189
     .line 190
-    move-result-object v0
-
     .line 191
-    array-length v0, v0
+    move-result v1
 
     .line 192
-    if-ge v1, v0, :cond_4
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    if-ltz v1, :cond_4
 
     .line 193
     .line 194
-    invoke-static {}, LX/1qJ;->values()[LX/1qJ;
+    invoke-static {}, LX/1of;->values()[LX/1of;
 
     .line 195
     .line 196
     .line 197
-    move-result-object v1
+    move-result-object v0
 
     .line 198
-    invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    array-length v0, v0
 
     .line 199
+    if-ge v1, v0, :cond_4
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
     .line 200
     .line 201
-    move-result v0
+    invoke-static {}, LX/1of;->values()[LX/1of;
 
     .line 202
-    aget-object v0, v1, v0
-
     .line 203
     .line 204
-    invoke-virtual {v5, v0}, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A01(LX/1qJ;)V
+    move-result-object v1
 
     .line 205
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
     .line 206
     .line 207
-    invoke-virtual {v5}, Lcom/facebook/base/activity/FbPreferenceActivity;->finish()V
-
     .line 208
-    .line 209
-    .line 210
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    move-result v0
 
+    .line 209
+    aget-object v0, v1, v0
+
+    .line 210
     .line 211
+    invoke-virtual {v4, v0}, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03(LX/1of;)V
+
     .line 212
     .line 213
-    move-result-object v6
-
     .line 214
-    iget-object v2, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A07:LX/0ZF;
+    invoke-virtual {v4}, Lcom/facebook/base/activity/FbPreferenceActivity;->finish()V
 
     .line 215
     .line 216
-    const-wide v0, 0x83002700010021L
-
     .line 217
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
+
     .line 218
     .line 219
     .line 220
+    move-result-object v5
+
     .line 221
-    invoke-static {v2, v0, v1}, LX/0Yj;->A0Q(LX/35B;J)Ljava/lang/String;
+    iget-object v3, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A07:LX/302;
 
     .line 222
     .line 223
+    const-wide v1, 0x83002500010028L
+
     .line 224
-    move-result-object v0
-
     .line 225
-    const/4 v3, 0x0
-
     .line 226
-    aput-object v0, v6, v3
-
     .line 227
     .line 228
-    const/4 v2, 0x1
+    const-string v0, ""
 
     .line 229
-    invoke-static {}, LX/1qJ;->values()[LX/1qJ;
-
     .line 230
+    invoke-virtual {v3, v1, v2, v0}, LX/302;->AL6(JLjava/lang/String;)Ljava/lang/String;
+
     .line 231
     .line 232
-    move-result-object v1
-
     .line 233
-    invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    .line 234
-    .line 235
-    .line 236
-    move-result v0
-
-    .line 237
-    aget-object v0, v1, v0
-
-    .line 238
-    .line 239
-    aput-object v0, v6, v2
-
-    .line 240
-    .line 241
-    const-string v0, "%s %s"
-
-    .line 242
-    .line 243
-    invoke-static {v0, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 244
-    .line 245
-    .line 246
-    move-result-object v2
-
-    .line 247
-    invoke-virtual {v5}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    .line 248
-    .line 249
-    .line 250
     move-result-object v0
 
-    .line 251
-    invoke-static {v0, v3}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    .line 234
+    const/4 v3, 0x0
 
-    .line 252
-    .line 253
-    .line 254
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    .line 235
+    aput-object v0, v5, v3
 
-    .line 255
-    .line 256
-    .line 257
+    .line 236
+    .line 237
+    const/4 v2, 0x1
+
+    .line 238
+    invoke-static {}, LX/1of;->values()[LX/1of;
+
+    .line 239
+    .line 240
+    .line 241
     move-result-object v1
 
+    .line 242
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    .line 243
+    .line 244
+    .line 245
+    move-result v0
+
+    .line 246
+    aget-object v0, v1, v0
+
+    .line 247
+    .line 248
+    aput-object v0, v5, v2
+
+    .line 249
+    .line 250
+    const-string v0, "%s %s"
+
+    .line 251
+    .line 252
+    invoke-static {v0, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 253
+    .line 254
+    .line 255
+    move-result-object v2
+
+    .line 256
+    invoke-virtual {v4}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    .line 257
     .line 258
-    invoke-static {v1}, LX/0PS;->A07(Ljava/lang/Object;)V
-
     .line 259
-    .line 260
-    .line 261
-    new-instance v0, LX/3Rv;
+    move-result-object v0
 
+    .line 260
+    invoke-static {v0, v3}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 261
     .line 262
     .line 263
-    invoke-direct {v0, v1}, LX/3Rv;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     .line 264
     .line 265
     .line 266
-    invoke-virtual {v0}, LX/3Rv;->A06()Z
+    move-result-object v1
 
     .line 267
+    invoke-static {v1}, LX/0WV;->A07(Ljava/lang/Object;)V
+
     .line 268
     .line 269
-    invoke-static {v1, v2, v3}, LX/0Yh;->A0m(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-
     .line 270
+    new-instance v0, LX/1ki;
+
     .line 271
     .line 272
-    :catch_0
-    :cond_4
-    invoke-virtual {v5}, Landroid/preference/PreferenceActivity;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-direct {v0, v1}, LX/1ki;-><init>(Landroid/content/Context;)V
 
     .line 273
     .line 274
     .line 275
-    move-result-object v0
+    invoke-virtual {v0}, LX/1ki;->A03()Z
 
     .line 276
-    invoke-virtual {v0, v5}, Landroid/preference/PreferenceManager;->createPreferenceScreen(Landroid/content/Context;)Landroid/preference/PreferenceScreen;
-
     .line 277
     .line 278
+    invoke-static {v1, v2, v3}, LX/0X5;->A0z(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
     .line 279
-    move-result-object v3
-
     .line 280
-    invoke-virtual {v5, v3}, Landroid/preference/PreferenceActivity;->setPreferenceScreen(Landroid/preference/PreferenceScreen;)V
-
     .line 281
+    :catch_0
+    :cond_4
+    invoke-virtual {v4}, Landroid/preference/PreferenceActivity;->getPreferenceManager()Landroid/preference/PreferenceManager;
+
     .line 282
     .line 283
-    new-instance v11, LX/2UZ;
-
     .line 284
+    move-result-object v0
+
     .line 285
-    invoke-direct {v11, v5}, LX/2UZ;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0, v4}, Landroid/preference/PreferenceManager;->createPreferenceScreen(Landroid/content/Context;)Landroid/preference/PreferenceScreen;
 
     .line 286
     .line 287
     .line 288
-    const v0, 0x7f12032f
+    move-result-object v3
 
     .line 289
+    invoke-virtual {v4, v3}, Landroid/preference/PreferenceActivity;->setPreferenceScreen(Landroid/preference/PreferenceScreen;)V
+
     .line 290
     .line 291
-    invoke-virtual {v5, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
     .line 292
+    new-instance v10, LX/3GT;
+
     .line 293
     .line 294
-    move-result-object v10
+    invoke-direct {v10, v4}, LX/3GT;-><init>(Landroid/content/Context;)V
 
     .line 295
-    const-string v9, "\n\n"
-
     .line 296
     .line 297
-    const v8, 0x7f120330
+    const v0, 0x7f1102dc
 
     .line 298
     .line 299
     .line 300
-    const/4 v7, 0x1
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 301
-    new-array v2, v7, [Ljava/lang/Object;
-
     .line 302
     .line 303
-    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result-object v9
 
     .line 304
+    const-string v8, "\n\n"
+
     .line 305
     .line 306
-    move-result-object v1
+    const v7, 0x7f1102dd
 
     .line 307
-    const v0, 0x7f1201a7
-
     .line 308
     .line 309
+    const/4 v6, 0x1
+
     .line 310
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    new-array v2, v6, [Ljava/lang/Object;
 
     .line 311
     .line 312
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
     .line 313
-    move-result-object v0
-
     .line 314
-    const/4 v6, 0x0
-
     .line 315
-    aput-object v0, v2, v6
+    move-result-object v1
 
     .line 316
-    .line 317
-    invoke-virtual {v5, v8, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    const v0, 0x7f110178
 
+    .line 317
     .line 318
     .line 319
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
     .line 320
-    move-result-object v0
-
     .line 321
-    invoke-static {v10, v9, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
     .line 322
-    .line 323
-    .line 324
     move-result-object v0
+
+    .line 323
+    const/4 v5, 0x0
+
+    .line 324
+    aput-object v0, v2, v5
 
     .line 325
-    invoke-virtual {v11, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
     .line 326
+    invoke-virtual {v4, v7, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
     .line 327
     .line 328
-    invoke-virtual {v11, v6}, Landroid/preference/Preference;->setEnabled(Z)V
-
     .line 329
-    .line 330
-    .line 331
-    invoke-virtual {v3, v11}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
+    move-result-object v0
 
+    .line 330
+    invoke-static {v9, v8, v0}, LX/004;->A0G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 331
     .line 332
     .line 333
+    move-result-object v0
+
     .line 334
-    new-instance v1, Landroid/preference/PreferenceCategory;
+    invoke-virtual {v10, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 335
     .line 336
-    invoke-direct {v1, v5}, Landroid/preference/PreferenceCategory;-><init>(Landroid/content/Context;)V
-
     .line 337
+    invoke-virtual {v10, v5}, Landroid/preference/Preference;->setEnabled(Z)V
+
     .line 338
     .line 339
-    const v0, 0x7f12032d
-
     .line 340
+    invoke-virtual {v3, v10}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
+
     .line 341
     .line 342
-    invoke-virtual {v5, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
     .line 343
+    new-instance v1, Landroid/preference/PreferenceCategory;
+
     .line 344
     .line 345
-    move-result-object v0
+    invoke-direct {v1, v4}, Landroid/preference/PreferenceCategory;-><init>(Landroid/content/Context;)V
 
     .line 346
-    invoke-virtual {v1, v0}, Landroid/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
-
     .line 347
     .line 348
-    .line 349
-    invoke-virtual {v3, v1}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
+    const v0, 0x7f1102da
 
+    .line 349
     .line 350
     .line 351
-    .line 352
-    sget-object v1, LX/2SW;->A05:LX/1b2;
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
+    .line 352
     .line 353
     .line 354
-    const v0, 0x7f12032a
-
-    .line 355
-    .line 356
-    .line 357
-    invoke-static {v5, v3, v1, v0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A02(Landroid/content/Context;Landroid/preference/PreferenceGroup;LX/1b3;I)LX/2Ua;
-
-    .line 358
-    .line 359
-    .line 360
     move-result-object v0
 
+    .line 355
+    invoke-virtual {v1, v0}, Landroid/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    .line 356
+    .line 357
+    .line 358
+    invoke-virtual {v3, v1}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
+
+    .line 359
+    .line 360
     .line 361
-    iput-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/2Ua;
+    sget-object v1, LX/1og;->A05:LX/28F;
 
     .line 362
     .line 363
-    sget-object v1, LX/2SW;->A0A:LX/1b2;
+    const v0, 0x7f1102d7
 
     .line 364
     .line 365
-    const v0, 0x7f120332
-
     .line 366
+    invoke-static {v4, v3, v1, v0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Landroid/content/Context;Landroid/preference/PreferenceGroup;LX/28G;I)LX/3GU;
+
     .line 367
     .line 368
-    invoke-static {v5, v3, v1, v0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A02(Landroid/content/Context;Landroid/preference/PreferenceGroup;LX/1b3;I)LX/2Ua;
-
     .line 369
-    .line 370
-    .line 371
     move-result-object v0
 
+    .line 370
+    iput-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/3GU;
+
+    .line 371
     .line 372
-    iput-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/2Ua;
+    sget-object v1, LX/1og;->A0A:LX/28F;
 
     .line 373
     .line 374
-    sget-object v1, LX/2SW;->A08:LX/1b2;
+    const v0, 0x7f1102df
 
     .line 375
     .line 376
-    const v0, 0x7f12032e
-
     .line 377
+    invoke-static {v4, v3, v1, v0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Landroid/content/Context;Landroid/preference/PreferenceGroup;LX/28G;I)LX/3GU;
+
     .line 378
     .line 379
-    invoke-static {v5, v3, v1, v0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A02(Landroid/content/Context;Landroid/preference/PreferenceGroup;LX/1b3;I)LX/2Ua;
-
     .line 380
-    .line 381
-    .line 382
     move-result-object v0
 
+    .line 381
+    iput-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/3GU;
+
+    .line 382
     .line 383
-    iput-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/2Ua;
+    sget-object v1, LX/1og;->A08:LX/28F;
 
     .line 384
     .line 385
-    iget-object v2, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A08:Lcom/facebook/video/settings/VideoAutoplaySettingsServerMigrationHelper;
+    const v0, 0x7f1102db
 
     .line 386
     .line 387
-    iget-object v1, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A02:LX/1qJ;
-
     .line 388
-    .line 389
-    iget-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0Na;
+    invoke-static {v4, v3, v1, v0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Landroid/content/Context;Landroid/preference/PreferenceGroup;LX/28G;I)LX/3GU;
 
+    .line 389
     .line 390
     .line 391
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    move-result-object v0
 
     .line 392
+    iput-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/3GU;
+
     .line 393
     .line 394
-    move-result-object v0
+    iget-object v2, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A08:Lcom/facebook/video/settings/VideoAutoplaySettingsServerMigrationHelper;
 
     .line 395
-    invoke-virtual {v2, v0, v1}, Lcom/facebook/video/settings/VideoAutoplaySettingsServerMigrationHelper;->A01(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/1qJ;)LX/1qJ;
-
     .line 396
+    iget-object v1, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A02:LX/1of;
+
     .line 397
     .line 398
-    move-result-object v2
+    iget-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0RP;
 
     .line 399
-    iget-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0Na;
-
     .line 400
-    .line 401
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
 
+    .line 401
     .line 402
     .line 403
-    .line 404
-    move-result-object v1
-
-    .line 405
-    iget-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A06:LX/0Na;
-
-    .line 406
-    .line 407
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
-
-    .line 408
-    .line 409
-    .line 410
     move-result-object v0
 
-    .line 411
-    check-cast v0, LX/0ty;
+    .line 404
+    invoke-virtual {v2, v0, v1}, Lcom/facebook/video/settings/VideoAutoplaySettingsServerMigrationHelper;->A03(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/1of;)LX/1of;
 
+    .line 405
+    .line 406
+    .line 407
+    move-result-object v2
+
+    .line 408
+    iget-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00:LX/0RP;
+
+    .line 409
+    .line 410
+    invoke-static {v0}, LX/0X4;->A0R(LX/0RP;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+
+    .line 411
     .line 412
     .line 413
-    invoke-static {v1, v0, v2}, LX/1qI;->A02(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/0ty;LX/1qJ;)V
+    move-result-object v1
 
     .line 414
+    iget-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A06:LX/0RP;
+
     .line 415
     .line 416
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 417
     .line 418
     .line 419
-    move-result v1
+    move-result-object v0
 
     .line 420
-    if-eq v1, v6, :cond_6
+    check-cast v0, LX/0jY;
 
     .line 421
     .line 422
-    const/4 v0, 0x2
+    invoke-static {v1, v0, v2}, LX/1od;->A02(Lcom/facebook/prefs/shared/FbSharedPreferences;LX/0jY;LX/1of;)V
 
     .line 423
-    if-eq v1, v0, :cond_5
-
     .line 424
     .line 425
-    iget-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/2Ua;
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     .line 426
     .line 427
-    :goto_0
-    invoke-virtual {v0, v7}, Landroid/preference/TwoStatePreference;->setChecked(Z)V
-
     .line 428
+    move-result v1
+
     .line 429
+    if-eq v1, v5, :cond_6
+
     .line 430
-    invoke-static {v0, v5}, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A00(Landroid/preference/Preference;Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
-
     .line 431
+    const/4 v0, 0x2
+
     .line 432
+    if-eq v1, v0, :cond_5
+
     .line 433
-    new-instance v1, LX/2UZ;
-
     .line 434
-    .line 435
-    invoke-direct {v1, v5}, LX/2UZ;-><init>(Landroid/content/Context;)V
+    iget-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/3GU;
 
+    .line 435
     .line 436
+    :goto_0
+    invoke-virtual {v0, v6}, Landroid/preference/TwoStatePreference;->setChecked(Z)V
+
     .line 437
     .line 438
-    const v0, 0x7f12032b
-
     .line 439
+    invoke-static {v0, v4}, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A02(Landroid/preference/Preference;Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
+
     .line 440
     .line 441
-    invoke-virtual {v5, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
     .line 442
+    new-instance v1, LX/3GT;
+
     .line 443
     .line 444
-    move-result-object v0
+    invoke-direct {v1, v4}, LX/3GT;-><init>(Landroid/content/Context;)V
 
     .line 445
-    invoke-virtual {v1, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
     .line 446
     .line 447
-    .line 448
-    invoke-virtual {v1, v6}, Landroid/preference/Preference;->setEnabled(Z)V
+    const v0, 0x7f1102d8
 
+    .line 448
     .line 449
     .line 450
-    .line 451
-    invoke-virtual {v3, v1}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
+    .line 451
     .line 452
     .line 453
+    move-result-object v0
+
     .line 454
-    new-instance v0, Landroid/preference/PreferenceCategory;
+    invoke-virtual {v1, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 455
     .line 456
-    invoke-direct {v0, v5}, Landroid/preference/PreferenceCategory;-><init>(Landroid/content/Context;)V
-
     .line 457
+    invoke-virtual {v1, v5}, Landroid/preference/Preference;->setEnabled(Z)V
+
     .line 458
     .line 459
-    invoke-virtual {v3, v0}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
-
     .line 460
+    invoke-virtual {v3, v1}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
+
     .line 461
     .line 462
-    iget-object v1, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/2Ua;
-
     .line 463
+    new-instance v0, Landroid/preference/PreferenceCategory;
+
     .line 464
-    new-instance v0, LX/2Ub;
-
     .line 465
-    .line 466
-    invoke-direct {v0, v5}, LX/2Ub;-><init>(Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
+    invoke-direct {v0, v4}, Landroid/preference/PreferenceCategory;-><init>(Landroid/content/Context;)V
 
+    .line 466
     .line 467
     .line 468
-    .line 469
-    invoke-virtual {v1, v0}, Landroid/preference/Preference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
+    invoke-virtual {v3, v0}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
+    .line 469
     .line 470
     .line 471
+    iget-object v1, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/3GU;
+
     .line 472
-    iget-object v1, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/2Ua;
-
     .line 473
+    new-instance v0, LX/34Y;
+
     .line 474
-    new-instance v0, LX/2Ub;
-
     .line 475
-    .line 476
-    invoke-direct {v0, v5}, LX/2Ub;-><init>(Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
+    invoke-direct {v0, v4}, LX/34Y;-><init>(Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
 
+    .line 476
     .line 477
     .line 478
-    .line 479
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
+    .line 479
     .line 480
     .line 481
+    iget-object v1, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/3GU;
+
     .line 482
-    iget-object v1, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/2Ua;
-
     .line 483
+    new-instance v0, LX/34Y;
+
     .line 484
-    new-instance v0, LX/2Ub;
-
     .line 485
-    .line 486
-    invoke-direct {v0, v5}, LX/2Ub;-><init>(Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
+    invoke-direct {v0, v4}, LX/34Y;-><init>(Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
 
+    .line 486
     .line 487
     .line 488
-    .line 489
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
+    .line 489
     .line 490
     .line 491
-    .line 492
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    iget-object v1, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A04:LX/3GU;
 
+    .line 492
     .line 493
+    new-instance v0, LX/34Y;
+
     .line 494
     .line 495
-    move-result-object v0
+    invoke-direct {v0, v4}, LX/34Y;-><init>(Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;)V
 
     .line 496
-    invoke-virtual {v0}, LX/3e6;->A0D()V
-
     .line 497
     .line 498
-    .line 499
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    invoke-virtual {v1, v0}, Landroid/preference/Preference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
+    .line 499
     .line 500
     .line 501
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 502
     .line 503
-    iget-object v0, v0, LX/0Su;->A03:LX/0Sf;
-
     .line 504
+    move-result-object v0
+
     .line 505
-    invoke-virtual {v0}, LX/0Sf;->A0d()V
+    invoke-virtual {v0}, LX/2T2;->A0D()V
 
     .line 506
     .line 507
     .line 508
-    sget v0, LX/2eq;->AO4:I
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 509
     .line 510
-    invoke-static {p0, v4, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
 
     .line 511
     .line 512
-    .line 513
-    move-result-object v1
+    iget-object v0, v0, LX/03d;->A03:LX/0VG;
 
+    .line 513
     .line 514
-    check-cast v1, LX/2rL;
+    invoke-virtual {v0}, LX/0VG;->A0a()V
 
     .line 515
     .line 516
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A04:LX/0Na;
-
     .line 517
-    .line 518
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v1, LX/2I6;->AIJ:I
 
+    .line 518
     .line 519
+    invoke-static {}, LX/3Ff;->A00()Landroid/content/Context;
+
     .line 520
     .line 521
-    invoke-virtual {v1, v0}, LX/2rL;->A00(LX/0Na;)V
-
     .line 522
+    move-result-object v0
+
     .line 523
+    invoke-static {v0, v1}, LX/0X3;->A0e(Landroid/content/Context;I)Ljava/lang/Object;
+
     .line 524
-    return-void
-
     .line 525
-    :cond_5
-    iget-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/2Ua;
-
     .line 526
+    move-result-object v1
+
     .line 527
-    goto :goto_0
+    check-cast v1, LX/2YF;
 
     .line 528
-    :cond_6
-    iget-object v0, v5, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/2Ua;
-
     .line 529
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A04:LX/0RP;
+
     .line 530
+    .line 531
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 532
+    .line 533
+    .line 534
+    invoke-virtual {v1, p0, v0}, LX/2YF;->A00(Landroid/app/Activity;LX/0RP;)V
+
+    .line 535
+    .line 536
+    .line 537
+    return-void
+
+    .line 538
+    :cond_5
+    iget-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A05:LX/3GU;
+
+    .line 539
+    .line 540
+    goto :goto_0
+
+    .line 541
+    :cond_6
+    iget-object v0, v4, Lcom/facebook/video/settings/VideoAutoPlaySettingsActivity;->A03:LX/3GU;
+
+    .line 542
+    .line 543
     goto :goto_0
 .end method
 
@@ -1726,7 +1752,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -1734,7 +1760,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1}, LX/3e6;->A08(I)Landroid/app/Dialog;
+    invoke-virtual {v0, p1}, LX/2T2;->A08(I)Landroid/app/Dialog;
 
     .line 5
     .line 6
@@ -1762,7 +1788,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -1770,7 +1796,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1}, LX/3e6;->A0Q(Landroid/view/Menu;)V
+    invoke-virtual {v0, p1}, LX/2T2;->A0Q(Landroid/view/Menu;)V
 
     .line 5
     .line 6
@@ -1791,11 +1817,11 @@
 
     .line 0
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A03:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A03:LX/0RP;
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A0a(LX/0Na;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X6;->A0h(LX/0RP;)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -1803,33 +1829,33 @@
     move-result-object v0
 
     .line 6
-    check-cast v0, LX/32s;
+    check-cast v0, LX/2E1;
 
     .line 7
     .line 8
-    invoke-virtual {v0}, LX/32s;->A00()V
+    invoke-virtual {v0}, LX/2E1;->A00()V
 
     .line 9
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 12
     .line 13
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
 
     .line 14
     .line 15
-    iget-object v0, v0, LX/0Su;->A03:LX/0Sf;
+    iget-object v0, v0, LX/03d;->A03:LX/0VG;
 
     .line 16
     .line 17
-    invoke-virtual {v0}, LX/0Sf;->A0f()V
+    invoke-virtual {v0}, LX/0VG;->A0d()V
 
     .line 18
     .line 19
     .line 20
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 21
     .line 22
@@ -1837,7 +1863,7 @@
     move-result-object v0
 
     .line 24
-    invoke-virtual {v0}, LX/3e6;->A0F()V
+    invoke-virtual {v0}, LX/2T2;->A0F()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1865,10 +1891,10 @@
 .end method
 
 .method public final onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 2
+    .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -1876,62 +1902,46 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p2, p1}, LX/3e6;->A0A(Landroid/view/KeyEvent;I)Lcom/google/common/base/Optional;
+    invoke-virtual {v0, p2, p1}, LX/2T2;->A0A(Landroid/view/KeyEvent;I)Ljava/lang/Boolean;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v1
+    move-result-object v0
 
     .line 8
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->isPresent()Z
+    if-eqz v0, :cond_0
 
     .line 9
     .line 10
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
     .line 11
-    move-result v0
-
     .line 12
-    if-eqz v0, :cond_0
-
     .line 13
-    .line 14
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
-
-    .line 19
-    .line 20
-    .line 21
     move-result v0
 
-    .line 22
+    .line 14
     return v0
 
-    .line 23
+    .line 15
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
-    .line 24
-    .line 25
-    .line 26
+    .line 16
+    .line 17
+    .line 18
     move-result v0
 
-    .line 27
+    .line 19
     return v0
 .end method
 
 .method public final onKeyUp(ILandroid/view/KeyEvent;)Z
-    .locals 2
+    .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -1939,54 +1949,38 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p2, p1}, LX/3e6;->A0B(Landroid/view/KeyEvent;I)Lcom/google/common/base/Optional;
+    invoke-virtual {v0, p2, p1}, LX/2T2;->A0B(Landroid/view/KeyEvent;I)Ljava/lang/Boolean;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v1
+    move-result-object v0
 
     .line 8
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->isPresent()Z
+    if-eqz v0, :cond_0
 
     .line 9
     .line 10
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
     .line 11
-    move-result v0
-
     .line 12
-    if-eqz v0, :cond_0
-
     .line 13
-    .line 14
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
-
-    .line 19
-    .line 20
-    .line 21
     move-result v0
 
-    .line 22
+    .line 14
     return v0
 
-    .line 23
+    .line 15
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
-    .line 24
-    .line 25
-    .line 26
+    .line 16
+    .line 17
+    .line 18
     move-result v0
 
-    .line 27
+    .line 19
     return v0
 .end method
 
@@ -1994,11 +1988,11 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A08:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A08:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -2018,7 +2012,7 @@
     const/4 v0, 0x0
 
     .line 12
-    invoke-virtual {v1, p0, p1, v0, p0}, LX/037;->A01(Landroid/content/Context;Landroid/content/Intent;LX/3Bg;Ljava/lang/Object;)Z
+    invoke-virtual {v1, p0, p1, v0, p0}, LX/0Vz;->A01(Landroid/content/Context;Landroid/content/Intent;LX/03C;Ljava/lang/Object;)Z
 
     .line 13
     .line 14
@@ -2040,11 +2034,11 @@
 
     .line 23
     .line 24
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A02:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A02:LX/0RP;
 
     .line 25
     .line 26
-    invoke-static {v0}, LX/0Yg;->A0a(LX/0Na;)Ljava/lang/Object;
+    invoke-static {v0}, LX/0X6;->A0h(LX/0RP;)Ljava/lang/Object;
 
     .line 27
     .line 28
@@ -2052,7 +2046,7 @@
     move-result-object v1
 
     .line 30
-    check-cast v1, LX/1bk;
+    check-cast v1, LX/1qx;
 
     .line 31
     .line 32
@@ -2064,7 +2058,7 @@
     move-result-object v0
 
     .line 36
-    invoke-virtual {v1, v0}, LX/1bk;->A00(Ljava/lang/reflect/AnnotatedElement;)Z
+    invoke-virtual {v1, v0}, LX/1qx;->A00(Ljava/lang/reflect/AnnotatedElement;)Z
 
     .line 37
     .line 38
@@ -2080,7 +2074,7 @@
 
     .line 43
     :cond_0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 44
     .line 45
@@ -2088,7 +2082,7 @@
     move-result-object v0
 
     .line 47
-    invoke-virtual {v0, p1}, LX/3e6;->A0N(Landroid/content/Intent;)V
+    invoke-virtual {v0, p1}, LX/2T2;->A0N(Landroid/content/Intent;)V
 
     .line 48
     .line 49
@@ -2100,7 +2094,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -2108,7 +2102,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1}, LX/3e6;->A0Z(Landroid/view/MenuItem;)Z
+    invoke-virtual {v0, p1}, LX/2T2;->A0Z(Landroid/view/MenuItem;)Z
 
     .line 5
     .line 6
@@ -2147,27 +2141,27 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 4
     .line 5
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
 
     .line 6
     .line 7
-    iget-object v1, v0, LX/0Su;->A03:LX/0Sf;
+    iget-object v1, v0, LX/03d;->A03:LX/0VG;
 
     .line 8
     .line 9
     const/4 v0, 0x5
 
     .line 10
-    invoke-static {v1, v0}, LX/0Sf;->A0F(LX/0Sf;I)V
+    invoke-static {v1, v0}, LX/0VG;->A0F(LX/0VG;I)V
 
     .line 11
     .line 12
     .line 13
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 14
     .line 15
@@ -2175,7 +2169,7 @@
     move-result-object v0
 
     .line 17
-    invoke-virtual {v0}, LX/3e6;->A0G()V
+    invoke-virtual {v0}, LX/2T2;->A0G()V
 
     .line 18
     .line 19
@@ -2192,7 +2186,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -2200,7 +2194,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1, p2}, LX/3e6;->A0U(ZLandroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1, p2}, LX/2T2;->A0U(ZLandroid/content/res/Configuration;)V
 
     .line 8
     .line 9
@@ -2217,7 +2211,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -2225,7 +2219,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1}, LX/3e6;->A0P(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, LX/2T2;->A0P(Landroid/os/Bundle;)V
 
     .line 8
     .line 9
@@ -2237,7 +2231,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -2245,7 +2239,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p2, p1}, LX/3e6;->A0W(Landroid/app/Dialog;I)Z
+    invoke-virtual {v0, p2, p1}, LX/2T2;->A0W(Landroid/app/Dialog;I)Z
 
     .line 5
     .line 6
@@ -2270,7 +2264,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -2278,7 +2272,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0, p1}, LX/3e6;->A0R(Landroid/view/Menu;)V
+    invoke-virtual {v0, p1}, LX/2T2;->A0R(Landroid/view/Menu;)V
 
     .line 5
     .line 6
@@ -2303,24 +2297,24 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 4
     .line 5
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/0Su;->A03:LX/0Sf;
+    iget-object v0, v0, LX/03d;->A03:LX/0VG;
 
     .line 8
     .line 9
-    invoke-virtual {v0}, LX/0Sf;->A0g()V
+    invoke-virtual {v0}, LX/0VG;->A0g()V
 
     .line 10
     .line 11
     .line 12
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 13
     .line 14
@@ -2328,7 +2322,7 @@
     move-result-object v0
 
     .line 16
-    invoke-virtual {v0}, LX/3e6;->A0H()V
+    invoke-virtual {v0}, LX/2T2;->A0H()V
 
     .line 17
     .line 18
@@ -2353,19 +2347,19 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 4
     .line 5
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/0Su;->A03:LX/0Sf;
+    iget-object v0, v0, LX/03d;->A03:LX/0VG;
 
     .line 8
     .line 9
-    invoke-virtual {v0}, LX/0Sf;->A0O()Landroid/os/Bundle;
+    invoke-virtual {v0}, LX/0VG;->A0O()Landroid/os/Bundle;
 
     .line 10
     .line 11
@@ -2377,24 +2371,25 @@
 
     .line 14
     .line 15
-    const-string v0, "android:support:fragments"
+    const-string/jumbo v0, "android:support:fragments"
 
     .line 16
     .line 17
+    .line 18
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 18
     .line 19
     .line 20
+    .line 21
     :cond_0
     return-void
 .end method
 
 .method public final onSearchRequested()Z
-    .locals 2
+    .locals 1
 
     .line 0
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 1
     .line 2
@@ -2402,54 +2397,38 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, LX/3e6;->A09()Lcom/google/common/base/Optional;
+    invoke-virtual {v0}, LX/2T2;->A09()Ljava/lang/Boolean;
 
     .line 5
     .line 6
     .line 7
-    move-result-object v1
+    move-result-object v0
 
     .line 8
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->isPresent()Z
+    if-eqz v0, :cond_0
 
     .line 9
     .line 10
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
     .line 11
-    move-result v0
-
     .line 12
-    if-eqz v0, :cond_0
-
     .line 13
-    .line 14
-    invoke-virtual {v1}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
-
-    .line 15
-    .line 16
-    .line 17
-    move-result-object v0
-
-    .line 18
-    invoke-static {v0}, LX/002;->A0Q(Ljava/lang/Object;)Z
-
-    .line 19
-    .line 20
-    .line 21
     move-result v0
 
-    .line 22
+    .line 14
     return v0
 
-    .line 23
+    .line 15
     :cond_0
     invoke-super {p0}, Landroid/app/Activity;->onSearchRequested()Z
 
-    .line 24
-    .line 25
-    .line 26
+    .line 16
+    .line 17
+    .line 18
     move-result v0
 
-    .line 27
+    .line 19
     return v0
 .end method
 
@@ -2462,24 +2441,24 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 4
     .line 5
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/0Su;->A03:LX/0Sf;
+    iget-object v0, v0, LX/03d;->A03:LX/0VG;
 
     .line 8
     .line 9
-    invoke-virtual {v0}, LX/0Sf;->A0h()V
+    invoke-virtual {v0}, LX/0VG;->A0h()V
 
     .line 10
     .line 11
     .line 12
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 13
     .line 14
@@ -2487,7 +2466,7 @@
     move-result-object v0
 
     .line 16
-    invoke-virtual {v0}, LX/3e6;->A0I()V
+    invoke-virtual {v0}, LX/2T2;->A0I()V
 
     .line 17
     .line 18
@@ -2504,24 +2483,24 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05V;
+    iget-object v0, p0, Lcom/facebook/base/activity/FbPreferenceActivity;->A01:LX/05u;
 
     .line 4
     .line 5
-    iget-object v0, v0, LX/05V;->A00:LX/0Su;
+    iget-object v0, v0, LX/05u;->A00:LX/03d;
 
     .line 6
     .line 7
-    iget-object v0, v0, LX/0Su;->A03:LX/0Sf;
+    iget-object v0, v0, LX/03d;->A03:LX/0VG;
 
     .line 8
     .line 9
-    invoke-virtual {v0}, LX/0Sf;->A0i()V
+    invoke-virtual {v0}, LX/0VG;->A0i()V
 
     .line 10
     .line 11
     .line 12
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 13
     .line 14
@@ -2529,7 +2508,7 @@
     move-result-object v0
 
     .line 16
-    invoke-virtual {v0}, LX/3e6;->A0J()V
+    invoke-virtual {v0}, LX/2T2;->A0J()V
 
     .line 17
     .line 18
@@ -2546,7 +2525,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -2554,7 +2533,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1, p2}, LX/3e6;->A0S(Ljava/lang/CharSequence;I)V
+    invoke-virtual {v0, p1, p2}, LX/2T2;->A0S(Ljava/lang/CharSequence;I)V
 
     .line 8
     .line 9
@@ -2571,7 +2550,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -2579,7 +2558,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, LX/3e6;->A0K()V
+    invoke-virtual {v0}, LX/2T2;->A0K()V
 
     .line 8
     .line 9
@@ -2596,7 +2575,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -2604,7 +2583,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, LX/3e6;->A0L()V
+    invoke-virtual {v0}, LX/2T2;->A0L()V
 
     .line 8
     .line 9
@@ -2621,7 +2600,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A01(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/3e6;
+    invoke-static {p0}, Lcom/facebook/base/activity/FbPreferenceActivity;->A00(Lcom/facebook/base/activity/FbPreferenceActivity;)LX/2T2;
 
     .line 4
     .line 5
@@ -2629,7 +2608,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1}, LX/3e6;->A0T(Z)V
+    invoke-virtual {v0, p1}, LX/2T2;->A0T(Z)V
 
     .line 8
     .line 9

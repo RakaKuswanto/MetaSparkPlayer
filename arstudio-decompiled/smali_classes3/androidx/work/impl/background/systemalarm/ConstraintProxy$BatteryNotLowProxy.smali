@@ -1,5 +1,5 @@
 .class public Landroidx/work/impl/background/systemalarm/ConstraintProxy$BatteryNotLowProxy;
-.super LX/5KR;
+.super LX/5kr;
 .source ""
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5KR;-><init>()V
+    invoke-direct {p0}, LX/5kr;-><init>()V
 
     .line 1
     .line 2

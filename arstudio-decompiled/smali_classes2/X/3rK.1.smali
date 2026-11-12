@@ -1,99 +1,81 @@
-.class public final LX/3rK;
-.super Ljava/lang/Object;
+.class public LX/3Rk;
+.super LX/3Rp;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "HDMIConnectionListener$3"
 
 
 # instance fields
-.field public final synthetic A00:LX/3pu;
+.field public final A00:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(LX/3pu;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    iput-object p1, p0, LX/3rK;->A00:LX/3pu;
+    invoke-direct {p0}, LX/3Rp;-><init>()V
 
     .line 1
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
+    const/4 v0, 0x2
+
     .line 4
+    invoke-static {v0}, LX/002;->A0A(I)Ljava/util/ArrayList;
+
     .line 5
+    .line 6
+    .line 7
+    move-result-object v0
+
+    .line 8
+    iput-object v0, p0, LX/3Rk;->A00:Ljava/util/List;
+
+    .line 9
+    .line 10
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final declared-synchronized A00(LX/3Rr;)V
+    .locals 1
 
     .line 0
-    iget-object v1, p0, LX/3rK;->A00:LX/3pu;
+    monitor-enter p0
 
     .line 1
+    :try_start_0
+    const/4 v0, 0x0
+
     .line 2
-    iget-object v0, v1, LX/3pu;->A02:LX/0Na;
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/0Yg;->A06(LX/0Na;)Landroid/content/Context;
-
     .line 5
+    iget-object v0, p0, LX/3Rk;->A00:Ljava/util/List;
+
     .line 6
     .line 7
-    move-result-object v3
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 8
-    iget-object v0, v1, LX/3pu;->A03:Ljava/util/concurrent/atomic/AtomicReference;
-
     .line 9
     .line 10
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    monitor-exit p0
 
     .line 11
+    return-void
+
     .line 12
+    :catchall_0
+    move-exception v0
+
     .line 13
-    move-result-object v2
+    monitor-exit p0
 
     .line 14
-    check-cast v2, Landroid/content/BroadcastReceiver;
-
-    .line 15
-    .line 16
-    const-string v0, "android.intent.action.HDMI_PLUGGED"
-
-    .line 17
-    .line 18
-    new-instance v1, Landroid/content/IntentFilter;
-
-    .line 19
-    .line 20
-    invoke-direct {v1, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    .line 21
-    .line 22
-    .line 23
-    const/4 v0, 0x0
-
-    .line 24
-    invoke-static {v3, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
-
-    .line 25
-    .line 26
-    .line 27
-    invoke-virtual {v3, v2, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    .line 28
-    .line 29
-    .line 30
-    return-void
+    throw v0
 .end method

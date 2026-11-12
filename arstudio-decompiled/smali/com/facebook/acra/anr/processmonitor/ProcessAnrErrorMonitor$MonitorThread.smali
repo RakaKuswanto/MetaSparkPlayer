@@ -42,7 +42,7 @@
 
     .line 5
     .line 6
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
@@ -50,7 +50,7 @@
     move-result-object v0
 
     .line 10
-    invoke-static {v1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 11
     .line 12
@@ -63,7 +63,7 @@
     .line 15
     .line 16
     .line 17
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 18
     .line 19
@@ -75,7 +75,7 @@
 
     .line 22
     .line 23
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 24
     .line 25
@@ -252,7 +252,7 @@
 
     .line 29
     .line 30
-    invoke-static {}, LX/002;->A0S()[Ljava/lang/Object;
+    invoke-static {}, LX/002;->A0G()[Ljava/lang/Object;
 
     .line 31
     .line 32
@@ -269,7 +269,7 @@
 
     .line 38
     .line 39
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 40
     .line 41
@@ -563,165 +563,165 @@
     .line 87
     .line 88
     goto :goto_2
-
-    .line 89
-    :goto_6
-    if-eqz v9, :cond_7
-
-    .line 90
-    .line 91
-    return-void
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 92
+    .line 89
     :catchall_0
     move-exception v0
 
-    .line 93
+    .line 90
     :try_start_3
     monitor-exit v5
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 94
+    .line 91
     throw v0
 
-    .line 95
+    .line 92
     :cond_7
     new-instance v5, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;
 
+    .line 93
+    .line 94
+    invoke-direct {v5}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;-><init>()V
+
+    .line 95
     .line 96
     .line 97
-    invoke-direct {v5}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;-><init>()V
+    iput-boolean v6, v5, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mAnrConfirmed:Z
 
     .line 98
     .line 99
-    .line 100
-    iput-boolean v6, v5, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mAnrConfirmed:Z
-
-    .line 101
-    .line 102
     iput v6, v5, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
 
-    .line 103
-    .line 104
+    .line 100
+    .line 101
     :cond_8
     invoke-virtual {p0, v5}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->checkIteration(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;)Z
 
-    .line 105
-    .line 106
-    .line 107
+    .line 102
+    .line 103
+    .line 104
     move-result v0
 
-    .line 108
+    .line 105
     if-eqz v0, :cond_d
 
-    .line 109
-    .line 110
+    .line 106
+    .line 107
     iget-object v4, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mMonitorLock:Ljava/lang/Object;
 
-    .line 111
-    .line 112
+    .line 108
+    .line 109
     monitor-enter v4
 
-    .line 113
+    .line 110
     :try_start_4
     iget-boolean v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mStopRequested:Z
 
-    .line 114
-    .line 115
+    .line 111
+    .line 112
     if-nez v0, :cond_c
 
-    .line 116
-    .line 117
+    .line 113
+    .line 114
     iget-object v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
 
-    .line 118
-    .line 119
+    .line 115
+    .line 116
     iget v3, v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mPollingTime:I
 
-    .line 120
-    .line 121
+    .line 117
+    .line 118
     :cond_9
     iget-boolean v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mPauseRequested:Z
 
-    .line 122
-    .line 123
+    .line 119
+    .line 120
     if-eqz v0, :cond_a
 
-    .line 124
-    .line 125
+    .line 121
+    .line 122
     const/4 v3, 0x0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 126
+    .line 123
     :cond_a
     :try_start_5
     iget-object v2, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mMonitorLock:Ljava/lang/Object;
 
-    .line 127
-    .line 128
+    .line 124
+    .line 125
     int-to-long v0, v3
 
-    .line 129
+    .line 126
     invoke-virtual {v2, v0, v1}, Ljava/lang/Object;->wait(J)V
     :try_end_5
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 130
-    .line 131
-    .line 132
+    .line 127
+    .line 128
+    .line 129
     :catch_1
     :try_start_6
     iget-boolean v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mPauseRequested:Z
 
-    .line 133
-    .line 134
+    .line 130
+    .line 131
     if-eqz v0, :cond_b
 
-    .line 135
-    .line 136
+    .line 132
+    .line 133
     iget-boolean v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mStopRequested:Z
 
-    .line 137
-    .line 138
+    .line 134
+    .line 135
     if-eqz v0, :cond_9
 
-    .line 139
-    .line 140
+    .line 136
+    .line 137
     :cond_b
     iget-boolean v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mStopRequested:Z
 
-    .line 141
-    .line 142
+    .line 138
+    .line 139
     :cond_c
     monitor-exit v4
 
-    .line 143
+    .line 140
     if-eqz v0, :cond_8
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 144
-    .line 145
+    .line 141
+    .line 142
     iget-object v2, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
 
-    .line 146
-    .line 147
+    .line 143
+    .line 144
     sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->STOP_REQUESTED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
-    .line 148
-    .line 149
+    .line 145
+    .line 146
     iget-object v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mListener:Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;
 
-    .line 150
-    .line 151
+    .line 147
+    .line 148
     invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
 
+    .line 149
+    .line 150
+    .line 151
+    return-void
+
     .line 152
+    :goto_6
+    if-eqz v9, :cond_7
+
     .line 153
     .line 154
     :cond_d
@@ -933,14 +933,14 @@
     .line 20
     .line 21
     .line 22
-    move-result-object v3
+    move-result-object v2
 
     .line 23
-    iget-object v2, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
+    iget-object v3, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
 
     .line 24
     .line 25
-    iget-object v0, v2, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mQueryDurationHistory:[J
+    iget-object v0, v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mQueryDurationHistory:[J
 
     .line 26
     .line 27
@@ -959,7 +959,7 @@
     sub-long/2addr v0, v7
 
     .line 34
-    invoke-static {v2, v0, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->access$200(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;J)V
+    invoke-static {v3, v0, v1}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->access$200(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;J)V
 
     .line 35
     .line 36
@@ -977,7 +977,7 @@
 
     .line 42
     .line 43
-    const-string v2, "Starting process monitor checks for process \'%s\'"
+    const-string v3, "Starting process monitor checks for process \'%s\'"
 
     .line 44
     .line 45
@@ -997,7 +997,7 @@
 
     .line 52
     .line 53
-    invoke-static {v7, v2, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v3, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 54
     .line 55
@@ -1006,7 +1006,7 @@
 
     .line 57
     .line 58
-    iget-object v2, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
+    iget-object v3, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
 
     .line 59
     .line 60
@@ -1018,7 +1018,7 @@
 
     .line 63
     .line 64
-    invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
+    invoke-virtual {v3, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1026,7 +1026,7 @@
     .line 66
     .line 67
     :cond_2
-    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     .line 68
     .line 69
@@ -1034,11 +1034,11 @@
     move-result v0
 
     .line 71
-    if-nez v0, :cond_6
+    if-nez v0, :cond_5
 
     .line 72
     .line 73
-    invoke-virtual {v3}, Ljava/util/LinkedList;->getFirst()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/util/LinkedList;->getFirst()Ljava/lang/Object;
 
     .line 74
     .line 75
@@ -1050,11 +1050,11 @@
 
     .line 78
     .line 79
-    iget-object v2, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
+    iget-object v3, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
 
     .line 80
     .line 81
-    iget-object v1, v2, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mProcessName:Ljava/lang/String;
+    iget-object v1, v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mProcessName:Ljava/lang/String;
 
     .line 82
     .line 83
@@ -1070,7 +1070,7 @@
     move-result v0
 
     .line 89
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     .line 90
     .line 91
@@ -1078,7 +1078,7 @@
 
     .line 92
     .line 93
-    if-nez v0, :cond_5
+    if-nez v0, :cond_7
 
     .line 94
     .line 95
@@ -1090,7 +1090,7 @@
 
     .line 98
     .line 99
-    sget-object v2, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->LOG_TAG:Ljava/lang/String;
+    sget-object v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->LOG_TAG:Ljava/lang/String;
 
     .line 100
     .line 101
@@ -1118,7 +1118,7 @@
 
     .line 112
     .line 113
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 114
     .line 115
@@ -1131,7 +1131,7 @@
 
     .line 119
     .line 120
-    iget-object v2, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mListener:Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;
+    iget-object v3, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mListener:Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;
 
     .line 121
     .line 122
@@ -1143,14 +1143,14 @@
 
     .line 125
     .line 126
-    invoke-virtual {v6, v4, v2, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v6, v4, v3, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 127
     .line 128
     .line 129
     :cond_3
     :goto_0
-    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     .line 130
     .line 131
@@ -1170,7 +1170,7 @@
 
     .line 138
     .line 139
-    invoke-direct {p0, v3, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->maybeLogAnrStateFromOtherProcesses(Ljava/util/LinkedList;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->maybeLogAnrStateFromOtherProcesses(Ljava/util/LinkedList;Ljava/lang/String;)V
 
     .line 140
     .line 141
@@ -1185,97 +1185,97 @@
 
     .line 146
     :cond_5
-    iget v0, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
+    iget-boolean v0, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mAnrConfirmed:Z
 
     .line 147
     .line 148
-    add-int/lit8 v1, v0, 0x1
+    if-eqz v0, :cond_6
 
     .line 149
     .line 150
-    iput v1, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->LOG_TAG:Ljava/lang/String;
 
     .line 151
     .line 152
-    iget v0, v2, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mMaxNumberOfChecksAfterError:I
+    const-string v0, "On error cleared"
 
     .line 153
     .line 154
-    if-lez v0, :cond_3
+    invoke-static {v1, v0}, LX/0Il;->A0D(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 155
     .line 156
-    if-lt v1, v0, :cond_3
-
     .line 157
-    .line 158
-    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_AFTER_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    iget-object v3, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
 
+    .line 158
     .line 159
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_CLEARED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+
     .line 160
+    .line 161
     iget-object v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->mListener:Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;
 
-    .line 161
     .line 162
-    invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
-
     .line 163
+    invoke-virtual {v3, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
+
     .line 164
     .line 165
-    sget-object v2, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->LOG_TAG:Ljava/lang/String;
-
     .line 166
-    .line 167
-    new-array v1, v5, [Ljava/lang/Object;
-
-    .line 168
-    .line 169
     iget-object v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
 
+    .line 167
+    .line 168
+    iget-boolean v5, v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mContinuousMonitoring:Z
+
+    .line 169
     .line 170
+    if-eqz v5, :cond_3
+
     .line 171
-    iget-object v0, v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mProcessName:Ljava/lang/String;
-
     .line 172
+    iput-boolean v4, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mAnrConfirmed:Z
+
     .line 173
-    aput-object v0, v1, v4
-
     .line 174
-    .line 175
-    const-string v0, "Stopping checks for \'%s\' because of MAX_NUMBER_AFTER_ERROR"
+    iput v4, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
 
+    .line 175
     .line 176
+    goto :goto_0
+
     .line 177
-    goto :goto_1
+    :cond_6
+    iget v0, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
 
     .line 178
-    :cond_6
-    iget-boolean v0, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mAnrConfirmed:Z
-
     .line 179
+    add-int/lit8 v1, v0, 0x1
+
     .line 180
-    if-eqz v0, :cond_7
-
     .line 181
+    iput v1, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
+
     .line 182
-    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->LOG_TAG:Ljava/lang/String;
-
     .line 183
+    iget-object v3, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
+
     .line 184
-    const-string v0, "On error cleared"
-
     .line 185
-    .line 186
-    invoke-static {v1, v0}, LX/0Jt;->A0D(Ljava/lang/String;Ljava/lang/String;)V
+    iget v0, v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mMaxNumberOfChecksBeforeError:I
 
+    .line 186
     .line 187
+    if-lez v0, :cond_3
+
     .line 188
     .line 189
-    iget-object v2, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
+    if-lt v1, v0, :cond_3
 
     .line 190
     .line 191
-    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->ERROR_CLEARED:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_BEFORE_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 192
     .line 193
@@ -1283,52 +1283,52 @@
 
     .line 194
     .line 195
-    invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
+    invoke-virtual {v3, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
 
     .line 196
     .line 197
     .line 198
-    iget-object v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
+    sget-object v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->LOG_TAG:Ljava/lang/String;
 
     .line 199
     .line 200
-    iget-boolean v5, v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mContinuousMonitoring:Z
+    new-array v1, v5, [Ljava/lang/Object;
 
     .line 201
     .line 202
-    if-eqz v5, :cond_3
+    iget-object v0, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
 
     .line 203
     .line 204
-    iput-boolean v4, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mAnrConfirmed:Z
+    iget-object v0, v0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mProcessName:Ljava/lang/String;
 
     .line 205
     .line 206
-    iput v4, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
+    aput-object v0, v1, v4
 
     .line 207
     .line 208
-    goto :goto_0
+    const-string v0, "Stopping checks for \'%s\' because of MAX_NUMBER_BEFORE_ERROR"
 
     .line 209
+    .line 210
+    goto :goto_1
+
+    .line 211
     :cond_7
     iget v0, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
 
-    .line 210
-    .line 211
-    add-int/lit8 v1, v0, 0x1
-
     .line 212
     .line 213
-    iput v1, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
+    add-int/lit8 v1, v0, 0x1
 
     .line 214
     .line 215
-    iget-object v2, p0, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$MonitorThread;->this$0:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;
+    iput v1, p1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$AnrCheckState;->mCount:I
 
     .line 216
     .line 217
-    iget v0, v2, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mMaxNumberOfChecksBeforeError:I
+    iget v0, v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->mMaxNumberOfChecksAfterError:I
 
     .line 218
     .line 219
@@ -1340,7 +1340,7 @@
 
     .line 222
     .line 223
-    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_BEFORE_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
+    sget-object v1, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;->MAX_NUMBER_AFTER_ERROR:Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;
 
     .line 224
     .line 225
@@ -1348,12 +1348,12 @@
 
     .line 226
     .line 227
-    invoke-virtual {v2, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
+    invoke-virtual {v3, v1, v0}, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->updateStateAndMaybeCallListener(Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor$StateChangeReason;Lcom/facebook/acra/anr/processmonitor/ProcessErrorStateListener;)V
 
     .line 228
     .line 229
     .line 230
-    sget-object v2, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->LOG_TAG:Ljava/lang/String;
+    sget-object v3, Lcom/facebook/acra/anr/processmonitor/ProcessAnrErrorMonitor;->LOG_TAG:Ljava/lang/String;
 
     .line 231
     .line 232
@@ -1373,12 +1373,12 @@
 
     .line 239
     .line 240
-    const-string v0, "Stopping checks for \'%s\' because of MAX_NUMBER_BEFORE_ERROR"
+    const-string v0, "Stopping checks for \'%s\' because of MAX_NUMBER_AFTER_ERROR"
 
     .line 241
     .line 242
     :goto_1
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v1}, LX/0Il;->A0P(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 243
     .line 244
@@ -1393,7 +1393,7 @@
     move-exception v3
 
     .line 248
-    invoke-static {v3}, LX/002;->A0R(Ljava/lang/Throwable;)Z
+    invoke-static {v3}, LX/001;->A1V(Ljava/lang/Throwable;)Z
 
     .line 249
     .line 250
@@ -1470,7 +1470,7 @@
 
     .line 285
     .line 286
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v1}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 287
     .line 288
@@ -1497,7 +1497,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 3
     .line 4

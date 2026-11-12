@@ -1,255 +1,108 @@
 .class public final LX/52t;
-.super Ljava/lang/Object;
+.super LX/52r;
 .source ""
-
-# interfaces
-.implements LX/5Z5;
 
 
 # instance fields
-.field public final A00:Landroid/content/res/Resources;
+.field public final A00:LX/53g;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;LX/555;LX/554;LX/50X;)V
+    .locals 2
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p5}, LX/52r;-><init>(Landroid/content/Context;Landroid/os/Looper;LX/555;LX/554;LX/50X;)V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/52t;->A00:Landroid/content/res/Resources;
+    iget-object v1, p0, LX/52r;->A01:LX/552;
 
     .line 4
     .line 5
-    return-void
-.end method
-
-.method private A00(I)Ljava/lang/String;
-    .locals 5
-
-    .line 0
-    iget-object v0, p0, LX/52t;->A00:Landroid/content/res/Resources;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    new-instance v0, LX/53g;
 
     .line 6
-    new-instance v4, Ljava/io/InputStreamReader;
-
     .line 7
-    .line 8
-    invoke-direct {v4, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {v0, p1, v1}, LX/53g;-><init>(Landroid/content/Context;LX/552;)V
 
+    .line 8
     .line 9
     .line 10
+    iput-object v0, p0, LX/52t;->A00:LX/53g;
+
     .line 11
-    :try_start_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
     .line 12
-    .line 13
-    .line 14
-    move-result-object v3
-
-    .line 15
-    const/16 v0, 0x800
-
-    .line 16
-    .line 17
-    invoke-static {v0}, Ljava/nio/CharBuffer;->allocate(I)Ljava/nio/CharBuffer;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v2
-
-    .line 21
-    :goto_0
-    invoke-virtual {v4, v2}, Ljava/io/Reader;->read(Ljava/nio/CharBuffer;)I
-
-    .line 22
-    .line 23
-    .line 24
-    move-result v1
-
-    .line 25
-    const/4 v0, -0x1
-
-    .line 26
-    if-eq v1, v0, :cond_0
-
-    .line 27
-    .line 28
-    invoke-virtual {v2}, Ljava/nio/Buffer;->flip()Ljava/nio/Buffer;
-
-    .line 29
-    .line 30
-    .line 31
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 32
-    .line 33
-    .line 34
-    invoke-virtual {v2}, Ljava/nio/Buffer;->clear()Ljava/nio/Buffer;
-
-    .line 35
-    .line 36
-    .line 37
-    goto :goto_0
-
-    .line 38
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 42
-    :try_start_1
-    invoke-virtual {v4}, Ljava/io/Reader;->close()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 43
-    .line 44
-    .line 45
-    :catch_0
-    return-object v0
-
-    .line 46
-    :catch_1
-    move-exception v0
-
-    .line 47
-    :try_start_2
-    invoke-static {v0}, LX/002;->A0C(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    .line 48
-    .line 49
-    .line 50
-    move-result-object v0
-
-    .line 51
-    throw v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 52
-    :catchall_0
-    move-exception v0
-
-    .line 53
-    :try_start_3
-    invoke-virtual {v4}, Ljava/io/Reader;->close()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
-
-    .line 54
-    .line 55
-    .line 56
-    :catch_2
-    throw v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final A7h(IIZ)LX/5hE;
-    .locals 2
+.method public final A7X()V
+    .locals 12
 
     .line 0
-    invoke-direct {p0, p2}, LX/52t;->A00(I)Ljava/lang/String;
+    iget-object v3, p0, LX/52t;->A00:LX/53g;
 
     .line 1
     .line 2
-    .line 3
-    move-result-object v1
-
-    .line 4
-    invoke-direct {p0, p1}, LX/52t;->A00(I)Ljava/lang/String;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    invoke-virtual {p0, v0, v1, p3}, LX/52t;->A7i(Ljava/lang/String;Ljava/lang/String;Z)LX/5hE;
-
-    .line 9
-    .line 10
-    .line 11
-    move-result-object v0
-
-    .line 12
-    return-object v0
-.end method
-
-.method public final A7i(Ljava/lang/String;Ljava/lang/String;Z)LX/5hE;
-    .locals 5
-
-    .line 0
-    if-nez p3, :cond_0
-
-    .line 1
-    .line 2
-    const-string v0, "\n"
+    monitor-enter v3
 
     .line 3
-    .line 4
-    invoke-virtual {p2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    :try_start_0
+    invoke-virtual {p0}, LX/51v;->isConnected()Z
 
+    .line 4
     .line 5
     .line 6
+    move-result v0
+
     .line 7
-    move-result-object v4
+    if-eqz v0, :cond_4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
     .line 8
-    const/4 v3, 0x0
-
     .line 9
-    aget-object v2, v4, v3
+    :try_start_1
+    iget-object v4, v3, LX/53g;->A01:Ljava/util/Map;
 
     .line 10
     .line 11
-    const-string v1, "#extension GL_OES_EGL_image_external : require"
+    monitor-enter v4
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
     .line 12
+    :try_start_2
+    invoke-static {v4}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
+
     .line 13
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 14
     .line 15
+    move-result-object v2
+
     .line 16
-    move-result v0
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     .line 17
-    if-eqz v0, :cond_1
-
     .line 18
     .line 19
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    .line 20
-    .line 21
-    .line 22
     move-result v0
 
+    .line 20
+    const/4 v6, 0x0
+
+    .line 21
+    if-eqz v0, :cond_1
+
+    .line 22
     .line 23
-    invoke-static {v0, p2}, LX/0Yj;->A0P(ILjava/lang/String;)Ljava/lang/String;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 24
     .line 25
@@ -257,136 +110,151 @@
     move-result-object v1
 
     .line 27
-    :goto_0
-    const-string v0, "samplerExternalOES"
+    check-cast v1, Lcom/google/android/gms/internal/location/zzaw;
 
     .line 28
     .line 29
-    const-string v2, "sampler2D"
+    if-eqz v1, :cond_0
 
     .line 30
     .line 31
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, v3, LX/53g;->A00:LX/552;
 
     .line 32
     .line 33
-    .line 34
-    move-result-object v1
+    check-cast v0, LX/52s;
 
+    .line 34
     .line 35
-    const-string v0, "__samplerExternal2DY2YEXT"
+    iget-object v0, v0, LX/52s;->A00:LX/52r;
 
     .line 36
     .line 37
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, LX/51v;->A04()Landroid/os/IInterface;
 
     .line 38
     .line 39
     .line 40
-    move-result-object p2
+    move-result-object v0
 
     .line 41
-    :cond_0
-    new-instance v0, LX/5hE;
+    check-cast v0, Lcom/google/android/gms/internal/location/zzal;
 
     .line 42
     .line 43
-    invoke-direct {v0, p1, p2}, LX/5hE;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     .line 44
     .line 45
     .line 46
-    return-object v0
+    move-result-object v7
 
     .line 47
-    :cond_1
-    const-string v0, "#version 300 es"
+    const/4 v11, 0x2
 
     .line 48
-    .line 49
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v5, Lcom/google/android/gms/internal/location/zzbe;
 
+    .line 49
     .line 50
+    move-object v8, v6
+
     .line 51
+    move-object v9, v6
+
     .line 52
-    move-result v0
+    move-object v10, v6
 
     .line 53
-    if-eqz v0, :cond_5
+    invoke-direct/range {v5 .. v11}, Lcom/google/android/gms/internal/location/zzbe;-><init>(Landroid/app/PendingIntent;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/os/IBinder;Lcom/google/android/gms/internal/location/zzbc;I)V
 
     .line 54
     .line 55
-    const/4 v2, 0x2
-
     .line 56
-    aget-object v0, v4, v2
+    invoke-interface {v0, v5}, Lcom/google/android/gms/internal/location/zzal;->Ar1(Lcom/google/android/gms/internal/location/zzbe;)V
 
     .line 57
     .line 58
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
     .line 59
+    goto :goto_0
+
     .line 60
+    :cond_1
+    invoke-interface {v4}, Ljava/util/Map;->clear()V
+
     .line 61
-    move-result v0
-
     .line 62
-    if-eqz v0, :cond_4
-
     .line 63
+    monitor-exit v4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
     .line 64
-    const-string v0, ""
+    :try_start_3
+    iget-object v2, v3, LX/53g;->A03:Ljava/util/Map;
 
     .line 65
     .line 66
-    invoke-static {v0}, LX/0Yj;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-enter v2
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
     .line 67
+    :try_start_4
+    invoke-static {v2}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
+
     .line 68
     .line 69
+    .line 70
     move-result-object v1
 
-    .line 70
-    :goto_1
-    array-length v0, v4
-
     .line 71
-    if-ge v3, v0, :cond_3
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 72
     .line 73
-    if-eq v3, v2, :cond_2
-
     .line 74
+    move-result v0
+
     .line 75
-    aget-object v0, v4, v3
+    if-eqz v0, :cond_2
 
     .line 76
     .line 77
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 78
     .line 79
     .line 80
-    const/16 v0, 0xa
+    goto :goto_1
 
     .line 81
-    .line 82
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    :cond_2
+    invoke-interface {v2}, Ljava/util/Map;->clear()V
 
+    .line 82
     .line 83
     .line 84
+    monitor-exit v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
     .line 85
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
+    :try_start_5
+    iget-object v2, v3, LX/53g;->A02:Ljava/util/Map;
 
     .line 86
     .line 87
-    goto :goto_1
+    monitor-enter v2
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
     .line 88
-    :cond_3
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :try_start_6
+    invoke-static {v2}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 89
     .line 90
@@ -394,37 +262,121 @@
     move-result-object v1
 
     .line 92
-    goto :goto_0
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 93
-    :cond_4
-    const-string v0, "Fragment shader\'s fourth line must be:\n#extension GL_OES_EGL_image_external : require"
-
     .line 94
     .line 95
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    move-result v0
 
     .line 96
+    if-eqz v0, :cond_3
+
     .line 97
     .line 98
-    move-result-object v0
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 99
-    throw v0
-
     .line 100
-    :cond_5
-    const-string v0, "Fragment shader\'s first line must be:\n#extension GL_OES_EGL_image_external : require"
-
     .line 101
+    goto :goto_2
+
     .line 102
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    :cond_3
+    invoke-interface {v2}, Ljava/util/Map;->clear()V
 
     .line 103
     .line 104
     .line 105
-    move-result-object v0
+    monitor-exit v2
 
     .line 106
+    goto :goto_4
+
+    .line 107
+    :catchall_0
+    move-exception v0
+
+    .line 108
+    monitor-exit v2
+
+    .line 109
+    goto :goto_3
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    .line 110
+    :catchall_1
+    move-exception v0
+
+    .line 111
+    :try_start_7
+    monitor-exit v2
+
+    .line 112
+    goto :goto_3
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    .line 113
+    :catchall_2
+    move-exception v0
+
+    .line 114
+    :try_start_8
+    monitor-exit v4
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+
+    .line 115
+    :goto_3
+    :try_start_9
+    throw v0
+    :try_end_9
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_0
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    .line 116
+    :catch_0
+    move-exception v2
+
+    .line 117
+    :try_start_a
+    const-string v1, "LocationClientImpl"
+
+    .line 118
+    .line 119
+    const-string v0, "Client disconnected before listeners could be cleaned up"
+
+    .line 120
+    .line 121
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 122
+    .line 123
+    .line 124
+    :cond_4
+    :goto_4
+    invoke-super {p0}, LX/51v;->A7X()V
+
+    .line 125
+    .line 126
+    .line 127
+    monitor-exit v3
+
+    .line 128
+    return-void
+
+    .line 129
+    :catchall_3
+    move-exception v0
+
+    .line 130
+    monitor-exit v3
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_3
+
+    .line 131
     throw v0
 .end method

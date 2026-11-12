@@ -2,79 +2,98 @@
 .super Ljava/lang/Enum;
 .source ""
 
+# interfaces
+.implements LX/0B2;
+
 
 # static fields
 .field public static final synthetic $VALUES:[LX/17y;
 
-.field public static final enum MEDIA_ID:LX/17y;
+.field public static final enum ACCOUNT_ITEM:LX/17y;
+
+.field public static final enum DEVICE_ITEM:LX/17y;
 
 
 # instance fields
-.field public final label:Ljava/lang/String;
+.field public final mValue:J
 
 
 # direct methods
-.method public static final synthetic $values()[LX/17y;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    new-array v2, v0, [LX/17y;
-
-    sget-object v1, LX/17y;->MEDIA_ID:LX/17y;
-
-    const/4 v0, 0x0
-
-    aput-object v1, v2, v0
-
-    return-object v2
-.end method
-
 .method public static constructor <clinit>()V
-    .locals 4
+    .locals 7
 
     .line 0
-    const-string v3, "MEDIA_ID"
+    const-string v2, "ACCOUNT_ITEM"
 
     .line 1
     .line 2
-    const/4 v2, 0x0
+    const/4 v6, 0x0
 
     .line 3
-    const-string/jumbo v1, "media_id"
+    const-wide/16 v0, 0x1
 
     .line 4
     .line 5
+    new-instance v5, LX/17y;
+
     .line 6
-    new-instance v0, LX/17y;
-
     .line 7
-    .line 8
-    invoke-direct {v0, v3, v2, v1}, LX/17y;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v5, v2, v6, v0, v1}, LX/17y;-><init>(Ljava/lang/String;IJ)V
 
+    .line 8
     .line 9
     .line 10
+    sput-object v5, LX/17y;->ACCOUNT_ITEM:LX/17y;
+
     .line 11
-    sput-object v0, LX/17y;->MEDIA_ID:LX/17y;
-
     .line 12
+    const-string v0, "DEVICE_ITEM"
+
     .line 13
-    invoke-static {}, LX/17y;->$values()[LX/17y;
-
     .line 14
-    .line 15
-    .line 16
-    move-result-object v0
+    const/4 v4, 0x1
 
+    .line 15
+    const-wide/16 v2, 0x2
+
+    .line 16
     .line 17
-    sput-object v0, LX/17y;->$VALUES:[LX/17y;
+    new-instance v1, LX/17y;
 
     .line 18
     .line 19
+    invoke-direct {v1, v0, v4, v2, v3}, LX/17y;-><init>(Ljava/lang/String;IJ)V
+
+    .line 20
+    .line 21
+    .line 22
+    sput-object v1, LX/17y;->DEVICE_ITEM:LX/17y;
+
+    .line 23
+    .line 24
+    const/4 v0, 0x2
+
+    .line 25
+    new-array v0, v0, [LX/17y;
+
+    .line 26
+    .line 27
+    aput-object v5, v0, v6
+
+    .line 28
+    .line 29
+    aput-object v1, v0, v4
+
+    .line 30
+    .line 31
+    sput-object v0, LX/17y;->$VALUES:[LX/17y;
+
+    .line 32
+    .line 33
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;IJ)V
     .locals 0
 
     .line 0
@@ -83,22 +102,91 @@
     .line 1
     .line 2
     .line 3
-    iput-object p3, p0, LX/17y;->label:Ljava/lang/String;
+    iput-wide p3, p0, LX/17y;->mValue:J
 
     .line 4
     .line 5
     return-void
 .end method
 
-
-# virtual methods
-.method public final getLabel()Ljava/lang/String;
+.method public static valueOf(Ljava/lang/String;)LX/17y;
     .locals 1
 
     .line 0
-    iget-object v0, p0, LX/17y;->label:Ljava/lang/String;
+    const-class v0, LX/17y;
 
     .line 1
     .line 2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, LX/17y;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+.method public static values()[LX/17y;
+    .locals 1
+
+    .line 0
+    sget-object v0, LX/17y;->$VALUES:[LX/17y;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    check-cast v0, [LX/17y;
+
+    .line 7
+    .line 8
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getValue()Ljava/lang/Long;
+    .locals 2
+
+    .line 0
+    iget-wide v0, p0, LX/17y;->mValue:J
+
+    .line 1
+    .line 2
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public bridge synthetic getValue()Ljava/lang/Object;
+    .locals 1
+
+    .line 268435456
+    invoke-virtual {p0}, LX/17y;->getValue()Ljava/lang/Long;
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result-object v0
+
+    .line 268435460
     return-object v0
 .end method

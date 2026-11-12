@@ -1,73 +1,46 @@
 .class public final LX/2OI;
-.super LX/1wb;
+.super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "CollectiveAuthOperationListenerImpl$28"
-
-
 # instance fields
-.field public final synthetic A00:LX/2OB;
-
-.field public final synthetic A01:Z
+.field public final A00:LX/2Nc;
 
 
 # direct methods
-.method public constructor <init>(LX/2OB;Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/util/concurrent/atomic/AtomicInteger;Z)V
-    .locals 10
+.method public constructor <init>()V
+    .locals 4
 
     .line 0
-    const-string v3, "LogoutComplete"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const-string v4, "AccountSwitchPerfLogger"
-
     .line 3
-    .line 4
-    const-string/jumbo v5, "onLogoutComplete"
+    sget-object v3, Lcom/google/common/collect/RegularImmutableMap;->A03:Lcom/google/common/collect/ImmutableMap;
 
+    .line 4
     .line 5
+    const-string/jumbo v2, "local_default_group"
+
     .line 6
     .line 7
-    const v8, 0x94000b
-
     .line 8
-    .line 9
-    .line 10
-    const-string/jumbo v6, "type"
+    const/4 v1, 0x0
 
+    .line 9
+    new-instance v0, LX/2Nc;
+
+    .line 10
     .line 11
+    invoke-direct {v0, v3, v2, v1, v1}, LX/2Nc;-><init>(Lcom/google/common/collect/ImmutableMap;Ljava/lang/String;ZZ)V
+
     .line 12
     .line 13
-    const/4 v9, 0x1
-
     .line 14
-    move-object v0, p0
+    iput-object v0, p0, LX/2OI;->A00:LX/2Nc;
 
     .line 15
-    iput-object p1, p0, LX/2OI;->A00:LX/2OB;
-
     .line 16
-    .line 17
-    iput-boolean p5, p0, LX/2OI;->A01:Z
-
-    .line 18
-    .line 19
-    move-object v1, p2
-
-    .line 20
-    move-object v2, p3
-
-    .line 21
-    move-object v7, p4
-
-    .line 22
-    invoke-direct/range {v0 .. v9}, LX/1wb;-><init>(Lcom/facebook/quicklog/QuickPerformanceLogger;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;IZ)V
-
-    .line 23
-    .line 24
-    .line 25
     return-void
 .end method

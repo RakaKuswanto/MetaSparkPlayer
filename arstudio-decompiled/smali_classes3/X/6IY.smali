@@ -1,163 +1,107 @@
-.class public final enum LX/6IY;
-.super Ljava/lang/Enum;
+.class public final LX/6IY;
+.super LX/6IG;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/6IY;
+.field public static final serialVersionUID:J = 0x1L
 
-.field public static final enum ALLOW:LX/6IY;
 
-.field public static final enum PREVENT:LX/6IY;
+# instance fields
+.field public final _creator:Ljava/lang/reflect/Constructor;
 
-.field public static final enum PREVENT_WHEN_EMPTY:LX/6IY;
+.field public final _delegate:LX/6IG;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(LX/6IG;Ljava/lang/reflect/Constructor;)V
+    .locals 0
+
+    .line 536870912
+    invoke-direct {p0, p1}, LX/6IG;-><init>(LX/6IG;)V
+
+    .line 536870913
+    .line 536870914
+    .line 536870915
+    iput-object p1, p0, LX/6IY;->_delegate:LX/6IG;
+
+    .line 536870916
+    .line 536870917
+    iput-object p2, p0, LX/6IY;->_creator:Ljava/lang/reflect/Constructor;
+
+    .line 536870918
+    .line 536870919
+    return-void
+.end method
+
+.method public constructor <init>(LX/6IY;Ljava/lang/String;)V
+    .locals 1
 
     .line 0
-    const-string v0, "ALLOW"
+    invoke-direct {p0, p1, p2}, LX/6IG;-><init>(LX/6IG;Ljava/lang/String;)V
 
     .line 1
     .line 2
-    const/4 v6, 0x0
-
     .line 3
-    new-instance v5, LX/6IY;
+    iget-object v0, p1, LX/6IY;->_delegate:LX/6IG;
 
     .line 4
     .line 5
-    invoke-direct {v5, v0, v6}, LX/6IY;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v0, p2}, LX/6IG;->A02(Ljava/lang/String;)LX/6IG;
 
     .line 6
     .line 7
     .line 8
-    sput-object v5, LX/6IY;->ALLOW:LX/6IY;
+    move-result-object v0
 
     .line 9
+    iput-object v0, p0, LX/6IY;->_delegate:LX/6IG;
+
     .line 10
-    const-string v0, "PREVENT_WHEN_EMPTY"
-
     .line 11
-    .line 12
-    const/4 v4, 0x1
+    iget-object v0, p1, LX/6IY;->_creator:Ljava/lang/reflect/Constructor;
 
+    .line 12
     .line 13
-    new-instance v3, LX/6IY;
+    iput-object v0, p0, LX/6IY;->_creator:Ljava/lang/reflect/Constructor;
 
     .line 14
     .line 15
-    invoke-direct {v3, v0, v4}, LX/6IY;-><init>(Ljava/lang/String;I)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v3, LX/6IY;->PREVENT_WHEN_EMPTY:LX/6IY;
-
-    .line 19
-    .line 20
-    const-string v0, "PREVENT"
-
-    .line 21
-    .line 22
-    const/4 v2, 0x2
-
-    .line 23
-    new-instance v1, LX/6IY;
-
-    .line 24
-    .line 25
-    invoke-direct {v1, v0, v2}, LX/6IY;-><init>(Ljava/lang/String;I)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v1, LX/6IY;->PREVENT:LX/6IY;
-
-    .line 29
-    .line 30
-    const/4 v0, 0x3
-
-    .line 31
-    new-array v0, v0, [LX/6IY;
-
-    .line 32
-    .line 33
-    aput-object v5, v0, v6
-
-    .line 34
-    .line 35
-    aput-object v3, v0, v4
-
-    .line 36
-    .line 37
-    aput-object v1, v0, v2
-
-    .line 38
-    .line 39
-    sput-object v0, LX/6IY;->$VALUES:[LX/6IY;
-
-    .line 40
-    .line 41
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(Lcom/fasterxml/jackson/databind/JsonDeserializer;LX/6IY;)V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 268435456
+    invoke-direct {p0, p1, p2}, LX/6IG;-><init>(Lcom/fasterxml/jackson/databind/JsonDeserializer;LX/6IG;)V
 
-    .line 1
-    .line 2
-    .line 3
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iget-object v0, p2, LX/6IY;->_delegate:LX/6IG;
+
+    .line 268435460
+    .line 268435461
+    invoke-virtual {v0, p1}, LX/6IG;->A01(Lcom/fasterxml/jackson/databind/JsonDeserializer;)LX/6IG;
+
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    move-result-object v0
+
+    .line 268435465
+    iput-object v0, p0, LX/6IY;->_delegate:LX/6IG;
+
+    .line 268435466
+    .line 268435467
+    iget-object v0, p2, LX/6IY;->_creator:Ljava/lang/reflect/Constructor;
+
+    .line 268435468
+    .line 268435469
+    iput-object v0, p0, LX/6IY;->_creator:Ljava/lang/reflect/Constructor;
+
+    .line 268435470
+    .line 268435471
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)LX/6IY;
-    .locals 1
-
-    .line 0
-    const-class v0, LX/6IY;
-
-    .line 1
-    .line 2
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, LX/6IY;
-
-    .line 7
-    .line 8
-    return-object v0
-.end method
-
-.method public static values()[LX/6IY;
-    .locals 1
-
-    .line 0
-    sget-object v0, LX/6IY;->$VALUES:[LX/6IY;
-
-    .line 1
-    .line 2
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    check-cast v0, [LX/6IY;
-
-    .line 7
-    .line 8
-    return-object v0
 .end method

@@ -1,156 +1,84 @@
-.class public final LX/5MB;
+.class public final synthetic LX/5MB;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaSourceEventListener$EventDispatcher$$ExternalSyntheticLambda2"
+
+
+# instance fields
+.field public final synthetic A00:LX/5Fy;
+
+.field public final synthetic A01:LX/5Fy;
+
+.field public final synthetic A02:LX/5Lx;
+
+.field public final synthetic A03:Ljava/io/IOException;
+
+.field public final synthetic A04:Ljava/lang/String;
+
+.field public final synthetic A05:Ljava/lang/String;
+
 
 # direct methods
-.method public static final A00(Ljava/lang/String;I)LX/5Lt;
-    .locals 3
+.method public synthetic constructor <init>(LX/5Fy;LX/5Fy;LX/5Lx;Ljava/io/IOException;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    .line 0
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    invoke-static {p0, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    iput-object p3, p0, LX/5MB;->A02:LX/5Lx;
 
-    .line 2
-    .line 3
-    .line 4
-    sget-object v2, LX/5Lt;->A08:Ljava/util/TreeMap;
+    iput-object p1, p0, LX/5MB;->A00:LX/5Fy;
 
-    .line 5
-    .line 6
-    monitor-enter v2
+    iput-object p2, p0, LX/5MB;->A01:LX/5Fy;
 
-    .line 7
-    :try_start_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p5, p0, LX/5MB;->A04:Ljava/lang/String;
 
-    .line 8
-    .line 9
-    .line 10
-    move-result-object v0
+    iput-object p6, p0, LX/5MB;->A05:Ljava/lang/String;
 
-    .line 11
-    invoke-virtual {v2, v0}, Ljava/util/TreeMap;->ceilingEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
+    iput-object p4, p0, LX/5MB;->A03:Ljava/io/IOException;
 
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v1
-
-    .line 15
-    if-eqz v1, :cond_0
-
-    .line 16
-    .line 17
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v0
-
-    .line 21
-    invoke-virtual {v2, v0}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 22
-    .line 23
-    .line 24
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    .line 25
-    .line 26
-    .line 27
-    move-result-object v0
-
-    .line 28
-    check-cast v0, LX/5Lt;
-
-    .line 29
-    .line 30
-    iput-object p0, v0, LX/5Lt;->A07:Ljava/lang/String;
-
-    .line 31
-    .line 32
-    iput p1, v0, LX/5Lt;->A00:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 33
-    .line 34
-    monitor-exit v2
-
-    .line 35
-    return-object v0
-
-    .line 36
-    :cond_0
-    monitor-exit v2
-
-    .line 37
-    new-instance v0, LX/5Lt;
-
-    .line 38
-    .line 39
-    invoke-direct {v0, p1}, LX/5Lt;-><init>(I)V
-
-    .line 40
-    .line 41
-    .line 42
-    iput-object p0, v0, LX/5Lt;->A07:Ljava/lang/String;
-
-    .line 43
-    .line 44
-    iput p1, v0, LX/5Lt;->A00:I
-
-    .line 45
-    .line 46
-    return-object v0
-
-    .line 47
-    :catchall_0
-    move-exception v0
-
-    .line 48
-    monitor-exit v2
-
-    .line 49
-    throw v0
+    return-void
 .end method
 
-.method public static A01(Ljava/lang/String;Ljava/lang/String;)LX/5Lt;
-    .locals 2
+
+# virtual methods
+.method public final run()V
+    .locals 6
 
     .line 0
-    const/4 v1, 0x1
+    iget-object v0, p0, LX/5MB;->A02:LX/5Lx;
 
     .line 1
-    invoke-static {p0, v1}, LX/5MB;->A00(Ljava/lang/String;I)LX/5Lt;
-
     .line 2
+    iget-object v1, p0, LX/5MB;->A00:LX/5Fy;
+
     .line 3
     .line 4
-    move-result-object v0
+    iget-object v2, p0, LX/5MB;->A01:LX/5Fy;
 
     .line 5
-    if-nez p1, :cond_0
-
     .line 6
-    .line 7
-    invoke-virtual {v0, v1}, LX/5Lt;->A67(I)V
+    iget-object v4, p0, LX/5MB;->A04:Ljava/lang/String;
 
+    .line 7
     .line 8
+    iget-object v5, p0, LX/5MB;->A05:Ljava/lang/String;
+
     .line 9
     .line 10
-    return-object v0
+    iget-object v3, p0, LX/5MB;->A03:Ljava/io/IOException;
 
     .line 11
-    :cond_0
-    invoke-virtual {v0, v1, p1}, LX/5Lt;->A68(ILjava/lang/String;)V
-
     .line 12
+    invoke-interface/range {v0 .. v5}, LX/5Lx;->AcP(LX/5Fy;LX/5Fy;Ljava/io/IOException;Ljava/lang/String;Ljava/lang/String;)V
+
     .line 13
     .line 14
-    return-object v0
+    .line 15
+    return-void
 .end method

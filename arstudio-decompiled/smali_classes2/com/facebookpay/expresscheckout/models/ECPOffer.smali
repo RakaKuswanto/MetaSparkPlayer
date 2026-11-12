@@ -47,11 +47,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x1c
+    const/16 v0, 0x5f
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1LM;->A01(I)LX/1LM;
+    invoke-static {v0}, LX/1Yp;->A00(I)LX/1Yp;
 
     .line 3
     .line 4
@@ -67,47 +67,44 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    .locals 0
 
     .line 0
-    invoke-static {p1, p2, p3}, LX/0Yc;->A0O(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2, p3}, LX/0X1;->A12(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
     .line 3
-    const/4 v0, 0x4
+    invoke-static {p4, p5}, LX/0X1;->A10(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 4
-    invoke-static {p4, v0, p5}, LX/0Yd;->A0n(Ljava/lang/Object;ILjava/lang/Object;)V
-
     .line 5
     .line 6
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     .line 8
     .line 9
-    .line 10
     iput-object p1, p0, Lcom/facebookpay/expresscheckout/models/ECPOffer;->A02:Ljava/lang/String;
 
+    .line 10
     .line 11
-    .line 12
     iput-object p2, p0, Lcom/facebookpay/expresscheckout/models/ECPOffer;->A04:Ljava/lang/String;
 
+    .line 12
     .line 13
-    .line 14
     iput-object p3, p0, Lcom/facebookpay/expresscheckout/models/ECPOffer;->A03:Ljava/lang/String;
 
+    .line 14
     .line 15
-    .line 16
     iput-object p4, p0, Lcom/facebookpay/expresscheckout/models/ECPOffer;->A00:Ljava/lang/String;
 
+    .line 16
     .line 17
-    .line 18
     iput-object p5, p0, Lcom/facebookpay/expresscheckout/models/ECPOffer;->A01:Ljava/lang/String;
 
+    .line 18
     .line 19
-    .line 20
     return-void
 .end method
 
@@ -126,7 +123,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     iget-object v0, p0, Lcom/facebookpay/expresscheckout/models/ECPOffer;->A02:Ljava/lang/String;
 

@@ -140,8 +140,807 @@
 
 
 # direct methods
+.method public static synthetic $values()[Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    .locals 3
+
+    .line 0
+    const/16 v0, 0x42
+
+    .line 1
+    .line 2
+    new-array v2, v0, [Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 3
+    .line 4
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->None:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    aput-object v1, v2, v0
+
+    .line 8
+    .line 9
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Message:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 10
+    .line 11
+    const/4 v0, 0x1
+
+    .line 12
+    aput-object v1, v2, v0
+
+    .line 13
+    .line 14
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Connect:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 15
+    .line 16
+    const/4 v0, 0x2
+
+    .line 17
+    aput-object v1, v2, v0
+
+    .line 18
+    .line 19
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnectTimeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 20
+    .line 21
+    const/4 v0, 0x3
+
+    .line 22
+    aput-object v1, v2, v0
+
+    .line 23
+    .line 24
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Read:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 25
+    .line 26
+    const/4 v0, 0x4
+
+    .line 27
+    aput-object v1, v2, v0
+
+    .line 28
+    .line 29
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Write:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 30
+    .line 31
+    const/4 v0, 0x5
+
+    .line 32
+    aput-object v1, v2, v0
+
+    .line 33
+    .line 34
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Timeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 35
+    .line 36
+    const/4 v0, 0x6
+
+    .line 37
+    aput-object v1, v2, v0
+
+    .line 38
+    .line 39
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Handshake:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 40
+    .line 41
+    const/4 v0, 0x7
+
+    .line 42
+    aput-object v1, v2, v0
+
+    .line 43
+    .line 44
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->NoServer:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 45
+    .line 46
+    const/16 v0, 0x8
+
+    .line 47
+    .line 48
+    aput-object v1, v2, v0
+
+    .line 49
+    .line 50
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxRedirects:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 51
+    .line 52
+    const/16 v0, 0x9
+
+    .line 53
+    .line 54
+    aput-object v1, v2, v0
+
+    .line 55
+    .line 56
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->InvalidRedirect:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 57
+    .line 58
+    const/16 v0, 0xa
+
+    .line 59
+    .line 60
+    aput-object v1, v2, v0
+
+    .line 61
+    .line 62
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ResponseAction:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 63
+    .line 64
+    const/16 v0, 0xb
+
+    .line 65
+    .line 66
+    aput-object v1, v2, v0
+
+    .line 67
+    .line 68
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxConnects:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 69
+    .line 70
+    const/16 v0, 0xc
+
+    .line 71
+    .line 72
+    aput-object v1, v2, v0
+
+    .line 73
+    .line 74
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Dropped:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 75
+    .line 76
+    const/16 v0, 0xd
+
+    .line 77
+    .line 78
+    aput-object v1, v2, v0
+
+    .line 79
+    .line 80
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Connection:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 81
+    .line 82
+    const/16 v0, 0xe
+
+    .line 83
+    .line 84
+    aput-object v1, v2, v0
+
+    .line 85
+    .line 86
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnectionReset:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 87
+    .line 88
+    const/16 v0, 0xf
+
+    .line 89
+    .line 90
+    aput-object v1, v2, v0
+
+    .line 91
+    .line 92
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseHeader:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 93
+    .line 94
+    const/16 v0, 0x10
+
+    .line 95
+    .line 96
+    aput-object v1, v2, v0
+
+    .line 97
+    .line 98
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseBody:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 99
+    .line 100
+    const/16 v0, 0x11
+
+    .line 101
+    .line 102
+    aput-object v1, v2, v0
+
+    .line 103
+    .line 104
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EOF:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 105
+    .line 106
+    const/16 v0, 0x12
+
+    .line 107
+    .line 108
+    aput-object v1, v2, v0
+
+    .line 109
+    .line 110
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientRenegotiation:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 111
+    .line 112
+    const/16 v0, 0x13
+
+    .line 113
+    .line 114
+    aput-object v1, v2, v0
+
+    .line 115
+    .line 116
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Unknown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 117
+    .line 118
+    const/16 v0, 0x14
+
+    .line 119
+    .line 120
+    aput-object v1, v2, v0
+
+    .line 121
+    .line 122
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->BadDecompress:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 123
+    .line 124
+    const/16 v0, 0x15
+
+    .line 125
+    .line 126
+    aput-object v1, v2, v0
+
+    .line 127
+    .line 128
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->SSL:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 129
+    .line 130
+    const/16 v0, 0x16
+
+    .line 131
+    .line 132
+    aput-object v1, v2, v0
+
+    .line 133
+    .line 134
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->StreamAbort:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 135
+    .line 136
+    const/16 v0, 0x17
+
+    .line 137
+    .line 138
+    aput-object v1, v2, v0
+
+    .line 139
+    .line 140
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->StreamUnacknowledged:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 141
+    .line 142
+    const/16 v0, 0x18
+
+    .line 143
+    .line 144
+    aput-object v1, v2, v0
+
+    .line 145
+    .line 146
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->WriteTimeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 147
+    .line 148
+    const/16 v0, 0x19
+
+    .line 149
+    .line 150
+    aput-object v1, v2, v0
+
+    .line 151
+    .line 152
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AddressPrivate:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 153
+    .line 154
+    const/16 v0, 0x1a
+
+    .line 155
+    .line 156
+    aput-object v1, v2, v0
+
+    .line 157
+    .line 158
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AddressFamilyNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 159
+    .line 160
+    const/16 v0, 0x1b
+
+    .line 161
+    .line 162
+    aput-object v1, v2, v0
+
+    .line 163
+    .line 164
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSResolutionErr:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 165
+    .line 166
+    const/16 v0, 0x1c
+
+    .line 167
+    .line 168
+    aput-object v1, v2, v0
+
+    .line 169
+    .line 170
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSNoResults:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 171
+    .line 172
+    const/16 v0, 0x1d
+
+    .line 173
+    .line 174
+    aput-object v1, v2, v0
+
+    .line 175
+    .line 176
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MalformedInput:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 177
+    .line 178
+    const/16 v0, 0x1e
+
+    .line 179
+    .line 180
+    aput-object v1, v2, v0
+
+    .line 181
+    .line 182
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->UnsupportedExpectation:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 183
+    .line 184
+    const/16 v0, 0x1f
+
+    .line 185
+    .line 186
+    aput-object v1, v2, v0
+
+    .line 187
+    .line 188
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MethodNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 189
+    .line 190
+    const/16 v0, 0x20
+
+    .line 191
+    .line 192
+    aput-object v1, v2, v0
+
+    .line 193
+    .line 194
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->UnsupportedScheme:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 195
+    .line 196
+    const/16 v0, 0x21
+
+    .line 197
+    .line 198
+    aput-object v1, v2, v0
+
+    .line 199
+    .line 200
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Shutdown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 201
+    .line 202
+    const/16 v0, 0x22
+
+    .line 203
+    .line 204
+    aput-object v1, v2, v0
+
+    .line 205
+    .line 206
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->IngressStateTransition:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 207
+    .line 208
+    const/16 v0, 0x23
+
+    .line 209
+    .line 210
+    aput-object v1, v2, v0
+
+    .line 211
+    .line 212
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientSilent:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 213
+    .line 214
+    const/16 v0, 0x24
+
+    .line 215
+    .line 216
+    aput-object v1, v2, v0
+
+    .line 217
+    .line 218
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Canceled:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 219
+    .line 220
+    const/16 v0, 0x25
+
+    .line 221
+    .line 222
+    aput-object v1, v2, v0
+
+    .line 223
+    .line 224
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseResponse:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 225
+    .line 226
+    const/16 v0, 0x26
+
+    .line 227
+    .line 228
+    aput-object v1, v2, v0
+
+    .line 229
+    .line 230
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnRefused:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 231
+    .line 232
+    const/16 v0, 0x27
+
+    .line 233
+    .line 234
+    aput-object v1, v2, v0
+
+    .line 235
+    .line 236
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherServer:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 237
+    .line 238
+    const/16 v0, 0x28
+
+    .line 239
+    .line 240
+    aput-object v1, v2, v0
+
+    .line 241
+    .line 242
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherClient:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 243
+    .line 244
+    const/16 v0, 0x29
+
+    .line 245
+    .line 246
+    aput-object v1, v2, v0
+
+    .line 247
+    .line 248
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherCancelled:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 249
+    .line 250
+    const/16 v0, 0x2a
+
+    .line 251
+    .line 252
+    aput-object v1, v2, v0
+
+    .line 253
+    .line 254
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSshutdown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 255
+    .line 256
+    const/16 v0, 0x2b
+
+    .line 257
+    .line 258
+    aput-object v1, v2, v0
+
+    .line 259
+    .line 260
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSgetaddrinfo:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 261
+    .line 262
+    const/16 v0, 0x2c
+
+    .line 263
+    .line 264
+    aput-object v1, v2, v0
+
+    .line 265
+    .line 266
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSthreadpool:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 267
+    .line 268
+    const/16 v0, 0x2d
+
+    .line 269
+    .line 270
+    aput-object v1, v2, v0
+
+    .line 271
+    .line 272
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSunimplemented:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 273
+    .line 274
+    const/16 v0, 0x2e
+
+    .line 275
+    .line 276
+    aput-object v1, v2, v0
+
+    .line 277
+    .line 278
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Network:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 279
+    .line 280
+    const/16 v0, 0x2f
+
+    .line 281
+    .line 282
+    aput-object v1, v2, v0
+
+    .line 283
+    .line 284
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Configuration:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 285
+    .line 286
+    const/16 v0, 0x30
+
+    .line 287
+    .line 288
+    aput-object v1, v2, v0
+
+    .line 289
+    .line 290
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EarlyDataRejected:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 291
+    .line 292
+    const/16 v0, 0x31
+
+    .line 293
+    .line 294
+    aput-object v1, v2, v0
+
+    .line 295
+    .line 296
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EarlyDataFailed:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 297
+    .line 298
+    const/16 v0, 0x32
+
+    .line 299
+    .line 300
+    aput-object v1, v2, v0
+
+    .line 301
+    .line 302
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AuthRequired:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 303
+    .line 304
+    const/16 v0, 0x33
+
+    .line 305
+    .line 306
+    aput-object v1, v2, v0
+
+    .line 307
+    .line 308
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Unauthorized:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 309
+    .line 310
+    const/16 v0, 0x34
+
+    .line 311
+    .line 312
+    aput-object v1, v2, v0
+
+    .line 313
+    .line 314
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EgressEOMSeenOnParentStream:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 315
+    .line 316
+    const/16 v0, 0x35
+
+    .line 317
+    .line 318
+    aput-object v1, v2, v0
+
+    .line 319
+    .line 320
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->TransportIsDraining:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 321
+    .line 322
+    const/16 v0, 0x36
+
+    .line 323
+    .line 324
+    aput-object v1, v2, v0
+
+    .line 325
+    .line 326
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParentStreamNotExist:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 327
+    .line 328
+    const/16 v0, 0x37
+
+    .line 329
+    .line 330
+    aput-object v1, v2, v0
+
+    .line 331
+    .line 332
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->CreatingStream:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 333
+    .line 334
+    const/16 v0, 0x38
+
+    .line 335
+    .line 336
+    aput-object v1, v2, v0
+
+    .line 337
+    .line 338
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->PushNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 339
+    .line 340
+    const/16 v0, 0x39
+
+    .line 341
+    .line 342
+    aput-object v1, v2, v0
+
+    .line 343
+    .line 344
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxConcurrentOutgoingStreamLimitReached:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 345
+    .line 346
+    const/16 v0, 0x3a
+
+    .line 347
+    .line 348
+    aput-object v1, v2, v0
+
+    .line 349
+    .line 350
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->BadSocket:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 351
+    .line 352
+    const/16 v0, 0x3b
+
+    .line 353
+    .line 354
+    aput-object v1, v2, v0
+
+    .line 355
+    .line 356
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DuplicatedStreamId:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 357
+    .line 358
+    const/16 v0, 0x3c
+
+    .line 359
+    .line 360
+    aput-object v1, v2, v0
+
+    .line 361
+    .line 362
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientTransactionGone:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 363
+    .line 364
+    const/16 v0, 0x3d
+
+    .line 365
+    .line 366
+    aput-object v1, v2, v0
+
+    .line 367
+    .line 368
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->NetworkSwitch:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 369
+    .line 370
+    const/16 v0, 0x3e
+
+    .line 371
+    .line 372
+    aput-object v1, v2, v0
+
+    .line 373
+    .line 374
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Forbidden:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 375
+    .line 376
+    const/16 v0, 0x3f
+
+    .line 377
+    .line 378
+    aput-object v1, v2, v0
+
+    .line 379
+    .line 380
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->InternalError:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 381
+    .line 382
+    const/16 v0, 0x40
+
+    .line 383
+    .line 384
+    aput-object v1, v2, v0
+
+    .line 385
+    .line 386
+    sget-object v1, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Max:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
+    .line 387
+    .line 388
+    const/16 v0, 0x41
+
+    .line 389
+    .line 390
+    aput-object v1, v2, v0
+
+    .line 391
+    .line 392
+    return-object v2
+.end method
+
 .method public static constructor <clinit>()V
-    .locals 70
+    .locals 2
 
     .line 0
     const-string v1, "None"
@@ -151,15 +950,15 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 4
     .line 5
     .line 6
-    move-result-object v69
+    move-result-object v0
 
     .line 7
-    sput-object v69, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->None:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->None:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 8
     .line 9
@@ -170,15 +969,15 @@
     const/4 v0, 0x1
 
     .line 12
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 13
     .line 14
     .line 15
-    move-result-object v68
+    move-result-object v0
 
     .line 16
-    sput-object v68, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Message:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Message:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 17
     .line 18
@@ -189,15 +988,15 @@
     const/4 v0, 0x2
 
     .line 21
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 22
     .line 23
     .line 24
-    move-result-object v3
+    move-result-object v0
 
     .line 25
-    sput-object v3, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Connect:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Connect:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 26
     .line 27
@@ -208,15 +1007,15 @@
     const/4 v0, 0x3
 
     .line 30
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 31
     .line 32
     .line 33
-    move-result-object v2
+    move-result-object v0
 
     .line 34
-    sput-object v2, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnectTimeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnectTimeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 35
     .line 36
@@ -227,1562 +1026,1249 @@
     const/4 v0, 0x4
 
     .line 39
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 40
     .line 41
     .line 42
-    move-result-object v67
+    move-result-object v0
 
     .line 43
-    sput-object v67, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Read:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Read:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 44
     .line 45
-    const-string v1, "Write"
+    const-string/jumbo v1, "Write"
 
     .line 46
     .line 47
+    .line 48
     const/4 v0, 0x5
 
-    .line 48
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 49
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 50
     .line 51
-    move-result-object v66
-
     .line 52
-    sput-object v66, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Write:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 53
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Write:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 54
+    .line 55
     const-string v1, "Timeout"
 
-    .line 55
     .line 56
+    .line 57
     const/4 v0, 0x6
 
-    .line 57
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 58
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 59
     .line 60
-    move-result-object v65
-
     .line 61
-    sput-object v65, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Timeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 62
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Timeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 63
+    .line 64
     const-string v1, "Handshake"
 
-    .line 64
     .line 65
+    .line 66
     const/4 v0, 0x7
 
-    .line 66
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 67
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 68
     .line 69
-    move-result-object v64
-
     .line 70
-    sput-object v64, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Handshake:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 71
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Handshake:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 72
+    .line 73
     const-string v1, "NoServer"
 
-    .line 73
     .line 74
+    .line 75
     const/16 v0, 0x8
 
-    .line 75
     .line 76
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 77
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 78
     .line 79
-    move-result-object v63
-
     .line 80
-    sput-object v63, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->NoServer:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 81
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->NoServer:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 82
+    .line 83
     const-string v1, "MaxRedirects"
 
-    .line 83
     .line 84
+    .line 85
     const/16 v0, 0x9
 
-    .line 85
     .line 86
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 87
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 88
     .line 89
-    move-result-object v62
-
     .line 90
-    sput-object v62, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxRedirects:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 91
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxRedirects:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 92
+    .line 93
     const-string v1, "InvalidRedirect"
 
-    .line 93
     .line 94
+    .line 95
     const/16 v0, 0xa
 
-    .line 95
     .line 96
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 97
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 98
     .line 99
-    move-result-object v61
-
     .line 100
-    sput-object v61, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->InvalidRedirect:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 101
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->InvalidRedirect:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 102
+    .line 103
     const-string v1, "ResponseAction"
 
-    .line 103
     .line 104
+    .line 105
     const/16 v0, 0xb
 
-    .line 105
     .line 106
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 107
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 108
     .line 109
-    move-result-object v60
-
     .line 110
-    sput-object v60, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ResponseAction:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 111
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ResponseAction:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 112
+    .line 113
     const-string v1, "MaxConnects"
 
-    .line 113
     .line 114
+    .line 115
     const/16 v0, 0xc
 
-    .line 115
     .line 116
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 117
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 118
     .line 119
-    move-result-object v59
-
     .line 120
-    sput-object v59, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxConnects:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 121
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxConnects:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 122
+    .line 123
     const-string v1, "Dropped"
 
-    .line 123
     .line 124
+    .line 125
     const/16 v0, 0xd
 
-    .line 125
     .line 126
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 127
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 128
     .line 129
-    move-result-object v58
-
     .line 130
-    sput-object v58, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Dropped:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 131
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Dropped:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 132
+    .line 133
     const-string v1, "Connection"
 
-    .line 133
     .line 134
+    .line 135
     const/16 v0, 0xe
 
-    .line 135
     .line 136
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 137
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 138
     .line 139
-    move-result-object v57
-
     .line 140
-    sput-object v57, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Connection:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 141
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Connection:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 142
+    .line 143
     const-string v1, "ConnectionReset"
 
-    .line 143
     .line 144
+    .line 145
     const/16 v0, 0xf
 
-    .line 145
     .line 146
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 147
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 148
     .line 149
-    move-result-object v56
-
     .line 150
-    sput-object v56, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnectionReset:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 151
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnectionReset:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 152
+    .line 153
     const-string v1, "ParseHeader"
 
-    .line 153
     .line 154
+    .line 155
     const/16 v0, 0x10
 
-    .line 155
     .line 156
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 157
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 158
     .line 159
-    move-result-object v55
-
     .line 160
-    sput-object v55, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseHeader:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 161
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseHeader:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 162
+    .line 163
     const-string v1, "ParseBody"
 
-    .line 163
     .line 164
+    .line 165
     const/16 v0, 0x11
 
-    .line 165
     .line 166
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 167
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 168
     .line 169
-    move-result-object v54
-
     .line 170
-    sput-object v54, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseBody:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 171
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseBody:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 172
+    .line 173
     const-string v1, "EOF"
 
-    .line 173
     .line 174
+    .line 175
     const/16 v0, 0x12
 
-    .line 175
     .line 176
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 177
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 178
     .line 179
-    move-result-object v53
-
     .line 180
-    sput-object v53, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EOF:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 181
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EOF:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 182
+    .line 183
     const-string v1, "ClientRenegotiation"
 
-    .line 183
     .line 184
+    .line 185
     const/16 v0, 0x13
 
-    .line 185
     .line 186
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 187
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 188
     .line 189
-    move-result-object v52
-
     .line 190
-    sput-object v52, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientRenegotiation:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 191
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientRenegotiation:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 192
+    .line 193
     const-string v1, "Unknown"
 
-    .line 193
     .line 194
+    .line 195
     const/16 v0, 0x14
 
-    .line 195
     .line 196
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 197
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 198
     .line 199
-    move-result-object v51
-
     .line 200
-    sput-object v51, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Unknown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 201
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Unknown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 202
+    .line 203
     const-string v1, "BadDecompress"
 
-    .line 203
     .line 204
+    .line 205
     const/16 v0, 0x15
 
-    .line 205
     .line 206
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 207
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 208
     .line 209
-    move-result-object v50
-
     .line 210
-    sput-object v50, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->BadDecompress:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 211
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->BadDecompress:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 212
+    .line 213
     const-string v1, "SSL"
 
-    .line 213
     .line 214
+    .line 215
     const/16 v0, 0x16
 
-    .line 215
     .line 216
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 217
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 218
     .line 219
-    move-result-object v49
-
     .line 220
-    sput-object v49, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->SSL:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 221
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->SSL:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 222
+    .line 223
     const-string v1, "StreamAbort"
 
-    .line 223
     .line 224
+    .line 225
     const/16 v0, 0x17
 
-    .line 225
     .line 226
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 227
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 228
     .line 229
-    move-result-object v48
-
     .line 230
-    sput-object v48, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->StreamAbort:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 231
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->StreamAbort:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 232
+    .line 233
     const-string v1, "StreamUnacknowledged"
 
-    .line 233
     .line 234
+    .line 235
     const/16 v0, 0x18
 
-    .line 235
     .line 236
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 237
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 238
     .line 239
-    move-result-object v47
-
     .line 240
-    sput-object v47, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->StreamUnacknowledged:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    move-result-object v0
 
     .line 241
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->StreamUnacknowledged:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 242
-    const-string v1, "WriteTimeout"
-
     .line 243
-    .line 244
-    const/16 v0, 0x19
+    const-string/jumbo v1, "WriteTimeout"
 
+    .line 244
     .line 245
     .line 246
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x19
 
     .line 247
     .line 248
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 249
-    move-result-object v46
-
     .line 250
-    sput-object v46, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->WriteTimeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 251
+    move-result-object v0
+
     .line 252
-    const-string v1, "AddressPrivate"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->WriteTimeout:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 253
     .line 254
-    const/16 v0, 0x1a
+    const-string v1, "AddressPrivate"
 
     .line 255
     .line 256
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x1a
 
     .line 257
     .line 258
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 259
-    move-result-object v45
-
     .line 260
-    sput-object v45, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AddressPrivate:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 261
+    move-result-object v0
+
     .line 262
-    const-string v1, "AddressFamilyNotSupported"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AddressPrivate:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 263
     .line 264
-    const/16 v0, 0x1b
+    const-string v1, "AddressFamilyNotSupported"
 
     .line 265
     .line 266
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x1b
 
     .line 267
     .line 268
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 269
-    move-result-object v44
-
     .line 270
-    sput-object v44, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AddressFamilyNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 271
+    move-result-object v0
+
     .line 272
-    const-string v1, "DNSResolutionErr"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AddressFamilyNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 273
     .line 274
-    const/16 v0, 0x1c
+    const-string v1, "DNSResolutionErr"
 
     .line 275
     .line 276
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x1c
 
     .line 277
     .line 278
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 279
-    move-result-object v43
-
     .line 280
-    sput-object v43, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSResolutionErr:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 281
+    move-result-object v0
+
     .line 282
-    const-string v1, "DNSNoResults"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSResolutionErr:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 283
     .line 284
-    const/16 v0, 0x1d
+    const-string v1, "DNSNoResults"
 
     .line 285
     .line 286
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x1d
 
     .line 287
     .line 288
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 289
-    move-result-object v42
-
     .line 290
-    sput-object v42, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSNoResults:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 291
+    move-result-object v0
+
     .line 292
-    const-string v1, "MalformedInput"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSNoResults:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 293
     .line 294
-    const/16 v0, 0x1e
+    const-string v1, "MalformedInput"
 
     .line 295
     .line 296
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x1e
 
     .line 297
     .line 298
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 299
-    move-result-object v41
-
     .line 300
-    sput-object v41, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MalformedInput:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 301
+    move-result-object v0
+
     .line 302
-    const-string v1, "UnsupportedExpectation"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MalformedInput:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 303
     .line 304
-    const/16 v0, 0x1f
+    const-string v1, "UnsupportedExpectation"
 
     .line 305
     .line 306
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x1f
 
     .line 307
     .line 308
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 309
-    move-result-object v40
-
     .line 310
-    sput-object v40, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->UnsupportedExpectation:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 311
+    move-result-object v0
+
     .line 312
-    const-string v1, "MethodNotSupported"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->UnsupportedExpectation:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 313
     .line 314
-    const/16 v0, 0x20
+    const-string v1, "MethodNotSupported"
 
     .line 315
     .line 316
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x20
 
     .line 317
     .line 318
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 319
-    move-result-object v39
-
     .line 320
-    sput-object v39, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MethodNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 321
+    move-result-object v0
+
     .line 322
-    const-string v1, "UnsupportedScheme"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MethodNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 323
     .line 324
-    const/16 v0, 0x21
+    const-string v1, "UnsupportedScheme"
 
     .line 325
     .line 326
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x21
 
     .line 327
     .line 328
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 329
-    move-result-object v38
-
     .line 330
-    sput-object v38, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->UnsupportedScheme:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 331
+    move-result-object v0
+
     .line 332
-    const-string v1, "Shutdown"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->UnsupportedScheme:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 333
     .line 334
-    const/16 v0, 0x22
+    const-string v1, "Shutdown"
 
     .line 335
     .line 336
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x22
 
     .line 337
     .line 338
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 339
-    move-result-object v37
-
     .line 340
-    sput-object v37, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Shutdown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 341
+    move-result-object v0
+
     .line 342
-    const-string v1, "IngressStateTransition"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Shutdown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 343
     .line 344
-    const/16 v0, 0x23
+    const-string v1, "IngressStateTransition"
 
     .line 345
     .line 346
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x23
 
     .line 347
     .line 348
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 349
-    move-result-object v36
-
     .line 350
-    sput-object v36, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->IngressStateTransition:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 351
+    move-result-object v0
+
     .line 352
-    const-string v1, "ClientSilent"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->IngressStateTransition:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 353
     .line 354
-    const/16 v0, 0x24
+    const-string v1, "ClientSilent"
 
     .line 355
     .line 356
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x24
 
     .line 357
     .line 358
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 359
-    move-result-object v35
-
     .line 360
-    sput-object v35, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientSilent:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 361
+    move-result-object v0
+
     .line 362
-    const-string v1, "Canceled"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientSilent:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 363
     .line 364
-    const/16 v0, 0x25
+    const-string v1, "Canceled"
 
     .line 365
     .line 366
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x25
 
     .line 367
     .line 368
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 369
-    move-result-object v34
-
     .line 370
-    sput-object v34, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Canceled:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 371
+    move-result-object v0
+
     .line 372
-    const-string v1, "ParseResponse"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Canceled:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 373
     .line 374
-    const/16 v0, 0x26
+    const-string v1, "ParseResponse"
 
     .line 375
     .line 376
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x26
 
     .line 377
     .line 378
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 379
-    move-result-object v33
-
     .line 380
-    sput-object v33, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseResponse:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 381
+    move-result-object v0
+
     .line 382
-    const-string v1, "ConnRefused"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParseResponse:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 383
     .line 384
-    const/16 v0, 0x27
+    const-string v1, "ConnRefused"
 
     .line 385
     .line 386
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x27
 
     .line 387
     .line 388
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 389
-    move-result-object v32
-
     .line 390
-    sput-object v32, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnRefused:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 391
+    move-result-object v0
+
     .line 392
-    const-string v1, "DNSOtherServer"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ConnRefused:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 393
     .line 394
-    const/16 v0, 0x28
+    const-string v1, "DNSOtherServer"
 
     .line 395
     .line 396
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x28
 
     .line 397
     .line 398
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 399
-    move-result-object v31
-
     .line 400
-    sput-object v31, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherServer:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 401
+    move-result-object v0
+
     .line 402
-    const-string v1, "DNSOtherClient"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherServer:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 403
     .line 404
-    const/16 v0, 0x29
+    const-string v1, "DNSOtherClient"
 
     .line 405
     .line 406
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x29
 
     .line 407
     .line 408
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 409
-    move-result-object v30
-
     .line 410
-    sput-object v30, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherClient:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 411
+    move-result-object v0
+
     .line 412
-    const-string v1, "DNSOtherCancelled"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherClient:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 413
     .line 414
-    const/16 v0, 0x2a
+    const-string v1, "DNSOtherCancelled"
 
     .line 415
     .line 416
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x2a
 
     .line 417
     .line 418
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 419
-    move-result-object v29
-
     .line 420
-    sput-object v29, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherCancelled:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 421
+    move-result-object v0
+
     .line 422
-    const-string v1, "DNSshutdown"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSOtherCancelled:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 423
     .line 424
-    const/16 v0, 0x2b
+    const-string v1, "DNSshutdown"
 
     .line 425
     .line 426
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x2b
 
     .line 427
     .line 428
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 429
-    move-result-object v28
-
     .line 430
-    sput-object v28, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSshutdown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 431
+    move-result-object v0
+
     .line 432
-    const-string v1, "DNSgetaddrinfo"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSshutdown:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 433
     .line 434
-    const/16 v0, 0x2c
+    const-string v1, "DNSgetaddrinfo"
 
     .line 435
     .line 436
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x2c
 
     .line 437
     .line 438
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 439
-    move-result-object v27
-
     .line 440
-    sput-object v27, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSgetaddrinfo:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 441
+    move-result-object v0
+
     .line 442
-    const-string v1, "DNSthreadpool"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSgetaddrinfo:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 443
     .line 444
-    const/16 v0, 0x2d
+    const-string v1, "DNSthreadpool"
 
     .line 445
     .line 446
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x2d
 
     .line 447
     .line 448
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 449
-    move-result-object v26
-
     .line 450
-    sput-object v26, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSthreadpool:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 451
+    move-result-object v0
+
     .line 452
-    const-string v1, "DNSunimplemented"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSthreadpool:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 453
     .line 454
-    const/16 v0, 0x2e
+    const-string v1, "DNSunimplemented"
 
     .line 455
     .line 456
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x2e
 
     .line 457
     .line 458
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 459
-    move-result-object v25
-
     .line 460
-    sput-object v25, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSunimplemented:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 461
+    move-result-object v0
+
     .line 462
-    const-string v1, "Network"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DNSunimplemented:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 463
     .line 464
-    const/16 v0, 0x2f
+    const-string v1, "Network"
 
     .line 465
     .line 466
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x2f
 
     .line 467
     .line 468
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 469
-    move-result-object v24
-
     .line 470
-    sput-object v24, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Network:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 471
+    move-result-object v0
+
     .line 472
-    const-string v1, "Configuration"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Network:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 473
     .line 474
-    const/16 v0, 0x30
+    const-string v1, "Configuration"
 
     .line 475
     .line 476
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x30
 
     .line 477
     .line 478
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 479
-    move-result-object v23
-
     .line 480
-    sput-object v23, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Configuration:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 481
+    move-result-object v0
+
     .line 482
-    const-string v1, "EarlyDataRejected"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Configuration:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 483
     .line 484
-    const/16 v0, 0x31
+    const-string v1, "EarlyDataRejected"
 
     .line 485
     .line 486
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x31
 
     .line 487
     .line 488
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 489
-    move-result-object v22
-
     .line 490
-    sput-object v22, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EarlyDataRejected:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 491
+    move-result-object v0
+
     .line 492
-    const-string v1, "EarlyDataFailed"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EarlyDataRejected:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 493
     .line 494
-    const/16 v0, 0x32
+    const-string v1, "EarlyDataFailed"
 
     .line 495
     .line 496
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x32
 
     .line 497
     .line 498
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 499
-    move-result-object v21
-
     .line 500
-    sput-object v21, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EarlyDataFailed:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 501
+    move-result-object v0
+
     .line 502
-    const-string v1, "AuthRequired"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EarlyDataFailed:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 503
     .line 504
-    const/16 v0, 0x33
+    const-string v1, "AuthRequired"
 
     .line 505
     .line 506
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x33
 
     .line 507
     .line 508
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 509
-    move-result-object v20
-
     .line 510
-    sput-object v20, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AuthRequired:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 511
+    move-result-object v0
+
     .line 512
-    const-string v1, "Unauthorized"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->AuthRequired:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 513
     .line 514
-    const/16 v0, 0x34
+    const-string v1, "Unauthorized"
 
     .line 515
     .line 516
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x34
 
     .line 517
     .line 518
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 519
-    move-result-object v19
-
     .line 520
-    sput-object v19, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Unauthorized:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 521
+    move-result-object v0
+
     .line 522
-    const-string v1, "EgressEOMSeenOnParentStream"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Unauthorized:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 523
     .line 524
-    const/16 v0, 0x35
+    const-string v1, "EgressEOMSeenOnParentStream"
 
     .line 525
     .line 526
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x35
 
     .line 527
     .line 528
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 529
-    move-result-object v18
-
     .line 530
-    sput-object v18, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EgressEOMSeenOnParentStream:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 531
+    move-result-object v0
+
     .line 532
-    const-string v1, "TransportIsDraining"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->EgressEOMSeenOnParentStream:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 533
     .line 534
-    const/16 v0, 0x36
+    const-string v1, "TransportIsDraining"
 
     .line 535
     .line 536
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x36
 
     .line 537
     .line 538
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 539
-    move-result-object v17
-
     .line 540
-    sput-object v17, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->TransportIsDraining:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 541
+    move-result-object v0
+
     .line 542
-    const-string v1, "ParentStreamNotExist"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->TransportIsDraining:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 543
     .line 544
-    const/16 v0, 0x37
+    const-string v1, "ParentStreamNotExist"
 
     .line 545
     .line 546
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x37
 
     .line 547
     .line 548
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 549
-    move-result-object v15
-
     .line 550
-    sput-object v15, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParentStreamNotExist:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 551
+    move-result-object v0
+
     .line 552
-    const-string v1, "CreatingStream"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ParentStreamNotExist:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 553
     .line 554
-    const/16 v0, 0x38
+    const-string v1, "CreatingStream"
 
     .line 555
     .line 556
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x38
 
     .line 557
     .line 558
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 559
-    move-result-object v14
-
     .line 560
-    sput-object v14, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->CreatingStream:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 561
+    move-result-object v0
+
     .line 562
-    const-string v1, "PushNotSupported"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->CreatingStream:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 563
     .line 564
-    const/16 v0, 0x39
+    const-string v1, "PushNotSupported"
 
     .line 565
     .line 566
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x39
 
     .line 567
     .line 568
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 569
-    move-result-object v13
-
     .line 570
-    sput-object v13, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->PushNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 571
+    move-result-object v0
+
     .line 572
-    const-string v1, "MaxConcurrentOutgoingStreamLimitReached"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->PushNotSupported:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 573
     .line 574
-    const/16 v0, 0x3a
+    const-string v1, "MaxConcurrentOutgoingStreamLimitReached"
 
     .line 575
     .line 576
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x3a
 
     .line 577
     .line 578
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 579
-    move-result-object v12
-
     .line 580
-    sput-object v12, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxConcurrentOutgoingStreamLimitReached:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 581
+    move-result-object v0
+
     .line 582
-    const-string v1, "BadSocket"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->MaxConcurrentOutgoingStreamLimitReached:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 583
     .line 584
-    const/16 v0, 0x3b
+    const-string v1, "BadSocket"
 
     .line 585
     .line 586
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x3b
 
     .line 587
     .line 588
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 589
-    move-result-object v11
-
     .line 590
-    sput-object v11, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->BadSocket:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 591
+    move-result-object v0
+
     .line 592
-    const-string v1, "DuplicatedStreamId"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->BadSocket:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 593
     .line 594
-    const/16 v0, 0x3c
+    const-string v1, "DuplicatedStreamId"
 
     .line 595
     .line 596
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x3c
 
     .line 597
     .line 598
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 599
-    move-result-object v10
-
     .line 600
-    sput-object v10, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DuplicatedStreamId:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 601
+    move-result-object v0
+
     .line 602
-    const-string v1, "ClientTransactionGone"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->DuplicatedStreamId:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 603
     .line 604
-    const/16 v0, 0x3d
+    const-string v1, "ClientTransactionGone"
 
     .line 605
     .line 606
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x3d
 
     .line 607
     .line 608
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 609
-    move-result-object v9
-
     .line 610
-    sput-object v9, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientTransactionGone:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 611
+    move-result-object v0
+
     .line 612
-    const-string v1, "NetworkSwitch"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->ClientTransactionGone:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 613
     .line 614
-    const/16 v0, 0x3e
+    const-string v1, "NetworkSwitch"
 
     .line 615
     .line 616
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x3e
 
     .line 617
     .line 618
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 619
-    move-result-object v8
-
     .line 620
-    sput-object v8, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->NetworkSwitch:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 621
+    move-result-object v0
+
     .line 622
-    const-string v1, "Forbidden"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->NetworkSwitch:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 623
     .line 624
-    const/16 v0, 0x3f
+    const-string v1, "Forbidden"
 
     .line 625
     .line 626
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x3f
 
     .line 627
     .line 628
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 629
-    move-result-object v7
-
     .line 630
-    sput-object v7, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Forbidden:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 631
+    move-result-object v0
+
     .line 632
-    const-string v1, "InternalError"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Forbidden:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 633
     .line 634
-    const/16 v0, 0x40
+    const-string v1, "InternalError"
 
     .line 635
     .line 636
-    invoke-static {v1, v0}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x40
 
     .line 637
     .line 638
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 639
-    move-result-object v6
-
     .line 640
-    sput-object v6, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->InternalError:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 641
+    move-result-object v0
+
     .line 642
-    const-string v0, "Max"
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->InternalError:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 643
     .line 644
-    const/16 v5, 0x41
+    const-string v1, "Max"
 
     .line 645
     .line 646
-    invoke-static {v0, v5}, LX/0Yj;->A0G(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    const/16 v0, 0x41
 
     .line 647
     .line 648
+    invoke-static {v1, v0}, LX/0X7;->A0J(Ljava/lang/String;I)Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+
     .line 649
-    move-result-object v16
-
     .line 650
-    sput-object v16, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Max:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
     .line 651
+    move-result-object v0
+
     .line 652
-    const/16 v0, 0x42
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->Max:Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 653
     .line 654
-    new-array v4, v0, [Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
+    invoke-static {}, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->$values()[Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 655
     .line 656
-    move-object/from16 v1, v69
-
     .line 657
+    move-result-object v0
+
     .line 658
-    move-object/from16 v0, v68
+    sput-object v0, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->$VALUES:[Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
 
     .line 659
     .line 660
-    invoke-static {v4, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 661
-    .line 662
-    .line 663
-    move-object/from16 v1, v67
-
-    .line 664
-    .line 665
-    move-object/from16 v0, v66
-
-    .line 666
-    .line 667
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 668
-    .line 669
-    .line 670
-    move-object/from16 v1, v65
-
-    .line 671
-    .line 672
-    move-object/from16 v0, v64
-
-    .line 673
-    .line 674
-    invoke-static {v4, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 675
-    .line 676
-    .line 677
-    move-object/from16 v3, v63
-
-    .line 678
-    .line 679
-    move-object/from16 v2, v62
-
-    .line 680
-    .line 681
-    move-object/from16 v1, v61
-
-    .line 682
-    .line 683
-    move-object/from16 v0, v60
-
-    .line 684
-    .line 685
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 686
-    .line 687
-    .line 688
-    move-object/from16 v1, v59
-
-    .line 689
-    .line 690
-    move-object/from16 v0, v58
-
-    .line 691
-    .line 692
-    invoke-static {v4, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 693
-    .line 694
-    .line 695
-    move-object/from16 v3, v57
-
-    .line 696
-    .line 697
-    move-object/from16 v2, v56
-
-    .line 698
-    .line 699
-    move-object/from16 v1, v55
-
-    .line 700
-    .line 701
-    move-object/from16 v0, v54
-
-    .line 702
-    .line 703
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 704
-    .line 705
-    .line 706
-    const/16 v0, 0x12
-
-    .line 707
-    .line 708
-    aput-object v53, v4, v0
-
-    .line 709
-    .line 710
-    move-object/from16 v3, v52
-
-    .line 711
-    .line 712
-    move-object/from16 v2, v51
-
-    .line 713
-    .line 714
-    move-object/from16 v1, v50
-
-    .line 715
-    .line 716
-    move-object/from16 v0, v49
-
-    .line 717
-    .line 718
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 719
-    .line 720
-    .line 721
-    move-object/from16 v3, v48
-
-    .line 722
-    .line 723
-    move-object/from16 v2, v47
-
-    .line 724
-    .line 725
-    move-object/from16 v1, v46
-
-    .line 726
-    .line 727
-    move-object/from16 v0, v45
-
-    .line 728
-    .line 729
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 730
-    .line 731
-    .line 732
-    move-object/from16 v1, v44
-
-    .line 733
-    .line 734
-    move-object/from16 v0, v43
-
-    .line 735
-    .line 736
-    invoke-static {v4, v1, v0}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 737
-    .line 738
-    .line 739
-    move-object/from16 v3, v42
-
-    .line 740
-    .line 741
-    move-object/from16 v2, v41
-
-    .line 742
-    .line 743
-    move-object/from16 v1, v40
-
-    .line 744
-    .line 745
-    move-object/from16 v0, v39
-
-    .line 746
-    .line 747
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0s(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 748
-    .line 749
-    .line 750
-    move-object/from16 v3, v38
-
-    .line 751
-    .line 752
-    move-object/from16 v2, v37
-
-    .line 753
-    .line 754
-    move-object/from16 v1, v36
-
-    .line 755
-    .line 756
-    move-object/from16 v0, v35
-
-    .line 757
-    .line 758
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0t(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 759
-    .line 760
-    .line 761
-    move-object/from16 v2, v34
-
-    .line 762
-    .line 763
-    move-object/from16 v1, v33
-
-    .line 764
-    .line 765
-    move-object/from16 v0, v32
-
-    .line 766
-    .line 767
-    invoke-static {v2, v1, v0, v4}, LX/001;->A0v(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 768
-    .line 769
-    .line 770
-    move-object/from16 v3, v31
-
-    .line 771
-    .line 772
-    move-object/from16 v2, v30
-
-    .line 773
-    .line 774
-    move-object/from16 v1, v29
-
-    .line 775
-    .line 776
-    move-object/from16 v0, v28
-
-    .line 777
-    .line 778
-    invoke-static {v3, v2, v1, v0, v4}, LX/001;->A0u(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 779
-    .line 780
-    .line 781
-    move-object/from16 v2, v27
-
-    .line 782
-    .line 783
-    move-object/from16 v1, v26
-
-    .line 784
-    .line 785
-    move-object/from16 v0, v25
-
-    .line 786
-    .line 787
-    invoke-static {v2, v1, v0, v4}, LX/0Yc;->A1P(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 788
-    .line 789
-    .line 790
-    move-object/from16 v3, v24
-
-    .line 791
-    .line 792
-    move-object/from16 v2, v23
-
-    .line 793
-    .line 794
-    move-object/from16 v1, v22
-
-    .line 795
-    .line 796
-    move-object/from16 v0, v21
-
-    .line 797
-    .line 798
-    invoke-static {v3, v2, v1, v0, v4}, LX/0Yc;->A0S(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 799
-    .line 800
-    .line 801
-    move-object/from16 v3, v20
-
-    .line 802
-    .line 803
-    move-object/from16 v2, v19
-
-    .line 804
-    .line 805
-    move-object/from16 v1, v18
-
-    .line 806
-    .line 807
-    move-object/from16 v0, v17
-
-    .line 808
-    .line 809
-    invoke-static {v3, v2, v1, v0, v4}, LX/0Yc;->A0T(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 810
-    .line 811
-    .line 812
-    invoke-static {v4, v15, v14}, LX/0Yd;->A1V([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 813
-    .line 814
-    .line 815
-    invoke-static {v13, v12, v11, v10, v4}, LX/0Yc;->A0U(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 816
-    .line 817
-    .line 818
-    invoke-static {v9, v8, v7, v6, v4}, LX/0Yc;->A0V(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 819
-    .line 820
-    .line 821
-    aput-object v16, v4, v5
-
-    .line 822
-    .line 823
-    sput-object v4, Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;->$VALUES:[Lcom/facebook/proxygen/HTTPRequestError$ProxygenError;
-
-    .line 824
-    .line 825
     return-void
 .end method
 

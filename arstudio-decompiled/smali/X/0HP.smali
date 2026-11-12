@@ -1,230 +1,536 @@
-.class public final enum LX/0HP;
-.super Ljava/lang/Enum;
+.class public abstract LX/0HP;
+.super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final synthetic $VALUES:[LX/0HP;
-
-.field public static final enum CertainlyNotHidden:LX/0HP;
-
-.field public static final enum LikelyHidden:LX/0HP;
-
-.field public static final enum Unknown:LX/0HP;
-
-.field public static final enum UnlikelyHidden:LX/0HP;
-
-
-# instance fields
-.field public final maybeHidden:Z
-
-.field public final maybeNotHidden:Z
+.field public static A00:LX/0HQ;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 9
-
-    .line 0
-    const-string v0, "Unknown"
-
-    .line 1
-    .line 2
-    const/4 v8, 0x0
-
-    .line 3
-    const/4 v7, 0x1
-
-    .line 4
-    new-instance v6, LX/0HP;
-
-    .line 5
-    .line 6
-    invoke-direct {v6, v0, v8, v7, v7}, LX/0HP;-><init>(Ljava/lang/String;IZZ)V
-
-    .line 7
-    .line 8
-    .line 9
-    sput-object v6, LX/0HP;->Unknown:LX/0HP;
-
-    .line 10
-    .line 11
-    const-string v0, "CertainlyNotHidden"
-
-    .line 12
-    .line 13
-    new-instance v5, LX/0HP;
-
-    .line 14
-    .line 15
-    invoke-direct {v5, v0, v7, v7, v8}, LX/0HP;-><init>(Ljava/lang/String;IZZ)V
-
-    .line 16
-    .line 17
-    .line 18
-    sput-object v5, LX/0HP;->CertainlyNotHidden:LX/0HP;
-
-    .line 19
-    .line 20
-    const-string v0, "UnlikelyHidden"
-
-    .line 21
-    .line 22
-    const/4 v4, 0x2
-
-    .line 23
-    new-instance v3, LX/0HP;
-
-    .line 24
-    .line 25
-    invoke-direct {v3, v0, v4, v7, v7}, LX/0HP;-><init>(Ljava/lang/String;IZZ)V
-
-    .line 26
-    .line 27
-    .line 28
-    sput-object v3, LX/0HP;->UnlikelyHidden:LX/0HP;
-
-    .line 29
-    .line 30
-    const-string v0, "LikelyHidden"
-
-    .line 31
-    .line 32
-    const/4 v2, 0x3
-
-    .line 33
-    new-instance v1, LX/0HP;
-
-    .line 34
-    .line 35
-    invoke-direct {v1, v0, v2, v8, v7}, LX/0HP;-><init>(Ljava/lang/String;IZZ)V
-
-    .line 36
-    .line 37
-    .line 38
-    sput-object v1, LX/0HP;->LikelyHidden:LX/0HP;
-
-    .line 39
-    .line 40
-    const/4 v0, 0x4
-
-    .line 41
-    new-array v0, v0, [LX/0HP;
-
-    .line 42
-    .line 43
-    aput-object v6, v0, v8
-
-    .line 44
-    .line 45
-    aput-object v5, v0, v7
-
-    .line 46
-    .line 47
-    aput-object v3, v0, v4
-
-    .line 48
-    .line 49
-    aput-object v1, v0, v2
-
-    .line 50
-    .line 51
-    sput-object v0, LX/0HP;->$VALUES:[LX/0HP;
-
-    .line 52
-    .line 53
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IZZ)V
     .locals 1
 
     .line 0
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object v0, LX/0W1;->A01:LX/0W1;
 
     .line 1
     .line 2
+    sput-object v0, LX/0HP;->A00:LX/0HQ;
+
     .line 3
-    if-nez p3, :cond_0
-
     .line 4
-    .line 5
-    const/4 v0, 0x0
-
-    .line 6
-    if-eqz p4, :cond_1
-
-    .line 7
-    .line 8
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 9
-    :cond_1
-    invoke-static {v0}, LX/0Iv;->A02(Z)V
-
-    .line 10
-    .line 11
-    .line 12
-    iput-boolean p3, p0, LX/0HP;->maybeNotHidden:Z
-
-    .line 13
-    .line 14
-    iput-boolean p4, p0, LX/0HP;->maybeHidden:Z
-
-    .line 15
-    .line 16
     return-void
 .end method
 
-
-# virtual methods
-.method public reallyTryToSeeIfHidden()Z
+.method public static A00(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 2
 
     .line 0
-    sget-object v0, LX/0HP;->LikelyHidden:LX/0HP;
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
 
     .line 1
     .line 2
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 v0, 0x6
 
     .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
     .line 4
     .line 5
+    .line 6
     move-result v0
 
-    .line 6
-    const/4 v1, 0x1
-
     .line 7
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 8
     .line 9
-    iget-boolean v0, p0, LX/0HP;->maybeNotHidden:Z
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     .line 10
     .line 11
-    if-nez v0, :cond_1
-
     .line 12
+    move-result-object v0
+
     .line 13
-    iget-boolean v0, p0, LX/0HP;->maybeHidden:Z
+    invoke-interface {v1, v0, p1}, LX/0HQ;->A7t(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 14
     .line 15
-    if-eqz v0, :cond_1
-
     .line 16
-    .line 17
     :cond_0
-    return v1
+    return-void
+.end method
+
+.method public static A01(Ljava/lang/Class;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x5
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-interface {v1, v0, p1}, LX/0HQ;->Aq2(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_0
+    return-void
+.end method
+
+.method public static A02(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x5
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-interface {v1, v0, p1, p2}, LX/0HQ;->Aq3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_0
+    return-void
+.end method
+
+.method public static A03(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x6
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-interface {v1, v0, p1, p2}, LX/0HQ;->Aqd(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_0
+    return-void
+.end method
+
+.method public static varargs A04(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    const/4 v1, 0x5
+
+    .line 1
+    sget-object v0, LX/0HP;->A00:LX/0HQ;
+
+    .line 2
+    .line 3
+    invoke-interface {v0, v1}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-static {p1, p3}, LX/001;->A0Q(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-static {p0, v0, p2}, LX/0HP;->A02(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_0
+    return-void
+.end method
+
+.method public static varargs A05(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 3
+
+    .line 0
+    sget-object v2, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x6
+
+    .line 3
+    invoke-interface {v2, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v1
+
+    .line 13
+    invoke-static {p1, p2}, LX/001;->A0Q(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-interface {v2, v1, v0}, LX/0HQ;->A7t(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 18
-    :cond_1
-    const/4 v1, 0x0
-
     .line 19
-    return v1
+    .line 20
+    :cond_0
+    return-void
+.end method
+
+.method public static varargs A06(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 3
+
+    .line 0
+    sget-object v2, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x5
+
+    .line 3
+    invoke-interface {v2, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v1
+
+    .line 13
+    invoke-static {p1, p2}, LX/001;->A0Q(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-interface {v2, v1, v0}, LX/0HQ;->Aq2(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 18
+    .line 19
+    .line 20
+    :cond_0
+    return-void
+.end method
+
+.method public static A07(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x6
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-interface {v1, p0, p1}, LX/0HQ;->A7t(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    return-void
+.end method
+
+.method public static A08(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x5
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-interface {v1, p0, p1}, LX/0HQ;->Aq2(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    return-void
+.end method
+
+.method public static A09(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x6
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-interface {v1, p0, p1, p2}, LX/0HQ;->A7u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    return-void
+.end method
+
+.method public static varargs A0A(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x6
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-static {p1, p2}, LX/001;->A0Q(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-interface {v1, p0, v0}, LX/0HQ;->A7t(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_0
+    return-void
+.end method
+
+.method public static varargs A0B(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x5
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-static {p1, p2}, LX/001;->A0Q(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-interface {v1, p0, v0}, LX/0HQ;->Aq2(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_0
+    return-void
+.end method
+
+.method public static varargs A0C(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    .line 0
+    sget-object v1, LX/0HP;->A00:LX/0HQ;
+
+    .line 1
+    .line 2
+    const/4 v0, 0x6
+
+    .line 3
+    invoke-interface {v1, v0}, LX/0HQ;->APR(I)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    invoke-static {p1, p2}, LX/001;->A0Q(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-interface {v1, p0, v0}, LX/0HQ;->Aqc(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_0
+    return-void
 .end method

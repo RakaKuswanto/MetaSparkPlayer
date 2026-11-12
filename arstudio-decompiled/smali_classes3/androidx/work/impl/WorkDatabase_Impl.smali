@@ -4,21 +4,19 @@
 
 
 # instance fields
-.field public volatile A00:LX/5NC;
+.field public volatile A00:LX/5mL;
 
-.field public volatile A01:LX/5LH;
+.field public volatile A01:LX/5jm;
 
-.field public volatile A02:LX/5LJ;
+.field public volatile A02:LX/5m3;
 
-.field public volatile A03:LX/5LN;
+.field public volatile A03:LX/5mW;
 
-.field public volatile A04:LX/5LO;
+.field public volatile A04:LX/5jn;
 
-.field public volatile A05:LX/5MC;
+.field public volatile A05:LX/5kq;
 
-.field public volatile A06:LX/5LK;
-
-.field public volatile A07:LX/5NK;
+.field public volatile A06:LX/5mK;
 
 
 # direct methods

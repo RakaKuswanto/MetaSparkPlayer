@@ -1,168 +1,178 @@
-.class public final LX/3qN;
+.class public abstract LX/3Qn;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/2xV;
-
-
-# instance fields
-.field public A00:LX/46o;
-
-.field public A01:Lcom/facebook/video/heroplayer/ipc/ParcelableFormat;
-
-.field public A02:Lcom/facebook/video/heroplayer/ipc/ParcelableFormat;
-
-.field public A03:LX/3qM;
-
-.field public final A04:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final A05:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final A06:LX/3WN;
-
 
 # direct methods
-.method public constructor <init>(LX/3WN;)V
-    .locals 2
+.method public static A00(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    .locals 3
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, LX/3qN;->A06:LX/3WN;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 4
     .line 5
-    const-string v1, "Unset"
-
     .line 6
-    .line 7
-    invoke-static {v1}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
+    const/16 v0, 0x1000
 
+    .line 7
     .line 8
+    new-array v2, v0, [B
+
     .line 9
     .line 10
-    move-result-object v0
+    :goto_0
+    invoke-virtual {p0, v2}, Ljava/io/InputStream;->read([B)I
 
     .line 11
-    iput-object v0, p0, LX/3qN;->A05:Ljava/util/concurrent/atomic/AtomicReference;
-
     .line 12
     .line 13
-    invoke-static {v1}, LX/0Yj;->A0l(Ljava/lang/Object;)Ljava/util/concurrent/atomic/AtomicReference;
+    move-result v1
 
     .line 14
+    const/4 v0, -0x1
+
     .line 15
+    if-ne v1, v0, :cond_0
+
     .line 16
-    move-result-object v0
-
     .line 17
-    iput-object v0, p0, LX/3qN;->A04:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 18
-    .line 19
     return-void
-.end method
-
-
-# virtual methods
-.method public final A65(LX/46o;)V
-    .locals 2
-
-    .line 0
-    if-eqz p1, :cond_0
-
-    .line 1
-    .line 2
-    iget-object v0, p0, LX/3qN;->A00:LX/46o;
-
-    .line 3
-    .line 4
-    if-eq v0, p1, :cond_0
-
-    .line 5
-    .line 6
-    iput-object p1, p0, LX/3qN;->A00:LX/46o;
-
-    .line 7
-    .line 8
-    new-instance v1, LX/3qM;
-
-    .line 9
-    .line 10
-    invoke-direct {v1, p0}, LX/3qM;-><init>(LX/3qN;)V
-
-    .line 11
-    .line 12
-    .line 13
-    iput-object v1, p0, LX/3qN;->A03:LX/3qM;
-
-    .line 14
-    .line 15
-    iget-object v0, p1, LX/46o;->A0G:LX/47T;
-
-    .line 16
-    .line 17
-    iget-object v0, v0, LX/47T;->A00:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     .line 18
+    :cond_0
+    const/4 v0, 0x0
+
     .line 19
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v2, v0, v1}, Ljava/io/OutputStream;->write([BII)V
 
     .line 20
     .line 21
     .line 22
-    :cond_0
-    return-void
+    goto :goto_0
 .end method
 
-.method public final Aq8()V
-    .locals 2
+.method public static A01(Ljava/io/InputStream;I)[B
+    .locals 5
 
     .line 0
-    iget-object v0, p0, LX/3qN;->A00:LX/46o;
+    new-array v4, p1, [B
 
     .line 1
     .line 2
-    if-eqz v0, :cond_0
+    move v3, p1
 
     .line 3
+    :goto_0
+    const/4 v2, -0x1
+
     .line 4
-    iget-object v1, p0, LX/3qN;->A03:LX/3qM;
+    if-lez v3, :cond_1
 
     .line 5
     .line 6
-    if-eqz v1, :cond_0
+    sub-int v1, p1, v3
 
     .line 7
     .line 8
-    iget-object v0, v0, LX/46o;->A0G:LX/47T;
+    invoke-virtual {p0, v4, v1, v3}, Ljava/io/InputStream;->read([BII)I
 
     .line 9
     .line 10
-    iget-object v0, v0, LX/47T;->A00:Ljava/util/concurrent/CopyOnWriteArraySet;
-
     .line 11
+    move-result v0
+
     .line 12
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+    if-ne v0, v2, :cond_0
 
     .line 13
     .line 14
+    invoke-static {v4, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+
     .line 15
-    :cond_0
-    const/4 v0, 0x0
-
     .line 16
-    iput-object v0, p0, LX/3qN;->A03:LX/3qM;
-
     .line 17
+    move-result-object v2
+
     .line 18
-    iput-object v0, p0, LX/3qN;->A00:LX/46o;
+    return-object v2
 
     .line 19
+    :cond_0
+    sub-int/2addr v3, v0
+
     .line 20
-    return-void
+    goto :goto_0
+
+    .line 21
+    :cond_1
+    invoke-virtual {p0}, Ljava/io/InputStream;->read()I
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v0
+
+    .line 25
+    if-ne v0, v2, :cond_2
+
+    .line 26
+    .line 27
+    return-object v4
+
+    .line 28
+    :cond_2
+    new-instance v1, LX/3Qo;
+
+    .line 29
+    .line 30
+    invoke-direct {v1}, LX/3Qo;-><init>()V
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write(I)V
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-static {p0, v1}, LX/3Qn;->A00(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->size()I
+
+    .line 40
+    .line 41
+    .line 42
+    move-result v0
+
+    .line 43
+    add-int/2addr v0, p1
+
+    .line 44
+    new-array v2, v0, [B
+
+    .line 45
+    .line 46
+    const/4 v0, 0x0
+
+    .line 47
+    invoke-static {v4, v0, v2, v0, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 48
+    .line 49
+    .line 50
+    invoke-virtual {v1, v2, p1}, LX/3Qo;->A00([BI)V
+
+    .line 51
+    .line 52
+    .line 53
+    return-object v2
 .end method

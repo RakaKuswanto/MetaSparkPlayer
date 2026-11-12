@@ -1,33 +1,31 @@
 .class public final Lcom/facebook/quicklog/dataproviders/IoStatsProvider;
-.super LX/3X9;
+.super LX/2f8;
 .source ""
 
 
 # instance fields
-.field public A00:LX/1zG;
+.field public final A00:LX/0RP;
 
-.field public final A01:LX/0Na;
+.field public final A01:LX/0RP;
 
-.field public final A02:LX/0Na;
+.field public final A02:Ljava/util/concurrent/atomic/AtomicLong;
 
 .field public final A03:Ljava/util/concurrent/atomic/AtomicLong;
 
 .field public final A04:Ljava/util/concurrent/atomic/AtomicLong;
 
-.field public final A05:Ljava/util/concurrent/atomic/AtomicLong;
-
 
 # direct methods
-.method public constructor <init>(LX/1zC;)V
+.method public constructor <init>()V
     .locals 3
 
     .line 0
-    invoke-direct {p0}, LX/3X9;-><init>()V
+    invoke-direct {p0}, LX/2f8;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/0Zq;->A04()LX/0Zq;
+    invoke-static {}, LX/0lf;->A04()LX/0lf;
 
     .line 4
     .line 5
@@ -35,7 +33,7 @@
     move-result-object v0
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A01:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A00:LX/0RP;
 
     .line 8
     .line 9
@@ -52,7 +50,7 @@
     .line 14
     .line 15
     .line 16
-    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A03:Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A02:Ljava/util/concurrent/atomic/AtomicLong;
 
     .line 17
     .line 18
@@ -65,7 +63,7 @@
     .line 21
     .line 22
     .line 23
-    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A05:Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A04:Ljava/util/concurrent/atomic/AtomicLong;
 
     .line 24
     .line 25
@@ -78,15 +76,15 @@
     .line 28
     .line 29
     .line 30
-    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A04:Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A03:Ljava/util/concurrent/atomic/AtomicLong;
 
     .line 31
     .line 32
-    sget v0, LX/2eq;->AQR:I
+    sget v0, LX/2I6;->AKp:I
 
     .line 33
     .line 34
-    invoke-static {v0}, LX/1zT;->A00(I)LX/1zT;
+    invoke-static {v0}, LX/3FX;->A01(I)LX/3FX;
 
     .line 35
     .line 36
@@ -94,22 +92,10 @@
     move-result-object v0
 
     .line 38
-    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A02:LX/0Na;
+    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A01:LX/0RP;
 
     .line 39
     .line 40
-    invoke-static {p1}, LX/1zG;->A00(LX/1zC;)LX/1zG;
-
-    .line 41
-    .line 42
-    .line 43
-    move-result-object v0
-
-    .line 44
-    iput-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A00:LX/1zG;
-
-    .line 45
-    .line 46
     return-void
 .end method
 
@@ -117,11 +103,11 @@
     .locals 7
 
     .line 0
-    iget-object v4, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A02:LX/0Na;
+    iget-object v4, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A01:LX/0RP;
 
     .line 1
     .line 2
-    invoke-interface {v4}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v4}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -129,7 +115,7 @@
     move-result-object v3
 
     .line 6
-    check-cast v3, LX/36H;
+    check-cast v3, LX/2pt;
 
     .line 7
     .line 8
@@ -145,7 +131,7 @@
 
     .line 13
     :try_start_0
-    iget-wide v0, v3, LX/36H;->A00:J
+    iget-wide v0, v3, LX/2pt;->A00:J
 
     .line 14
     .line 15
@@ -169,7 +155,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 23
-    invoke-interface {v4}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v4}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 24
     .line 25
@@ -177,7 +163,7 @@
     move-result-object v1
 
     .line 27
-    check-cast v1, LX/36H;
+    check-cast v1, LX/2pt;
 
     .line 28
     .line 29
@@ -185,11 +171,11 @@
 
     .line 30
     :try_start_1
-    iget-object v0, v1, LX/36H;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object v0, v1, LX/2pt;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 31
     .line 32
-    invoke-static {v0}, LX/0Qb;->A00(Ljava/lang/Object;)V
+    invoke-static {v0}, LX/0Ms;->A00(Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -219,11 +205,11 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     .line 41
-    new-instance v3, LX/2gh;
+    new-instance v3, LX/3E2;
 
     .line 42
     .line 43
-    invoke-direct {v3}, LX/2gh;-><init>()V
+    invoke-direct {v3}, LX/3E2;-><init>()V
 
     .line 44
     .line 45
@@ -236,7 +222,7 @@
     move-result v0
 
     .line 50
-    iput v0, v3, LX/2gh;->A00:I
+    iput v0, v3, LX/3E2;->A00:I
 
     .line 51
     .line 52
@@ -248,7 +234,7 @@
     move-result v2
 
     .line 56
-    const/4 v0, 0x0
+    const/4 v0, 0x2
 
     .line 57
     invoke-static {v0}, LX/000;->A00(I)Ljava/lang/String;
@@ -263,7 +249,7 @@
 
     .line 62
     .line 63
-    invoke-static {v1, v0, v2}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 64
     .line 65
@@ -271,7 +257,7 @@
     move-result-object v0
 
     .line 67
-    invoke-static {v0}, LX/0Bl;->A00(Ljava/lang/String;)[J
+    invoke-static {v0}, LX/0C4;->A00(Ljava/lang/String;)[J
 
     .line 68
     .line 69
@@ -286,23 +272,23 @@
 
     .line 73
     .line 74
-    iput-wide v0, v3, LX/2gh;->A07:J
+    iput-wide v0, v3, LX/3E2;->A07:J
 
     .line 75
     .line 76
-    const/4 v0, 0x7
+    const/4 v0, 0x6
 
     .line 77
-    new-instance v1, LX/1it;
+    new-instance v1, LX/0Yd;
 
     .line 78
     .line 79
-    invoke-direct {v1, p0, v0, v3}, LX/1it;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v0, v3}, LX/0Yd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 80
     .line 81
     .line 82
-    invoke-interface {v4}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v4}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 83
     .line 84
@@ -310,11 +296,11 @@
     move-result-object v0
 
     .line 86
-    check-cast v0, LX/36H;
+    check-cast v0, LX/2pt;
 
     .line 87
     .line 88
-    invoke-virtual {v0, v1}, LX/36H;->A01(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {v0, v1}, LX/2pt;->A01(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 89
     .line 90
@@ -340,7 +326,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic A8q(LX/5SE;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public final bridge synthetic A70(LX/2Vl;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 5
 
     .line 0
@@ -360,27 +346,27 @@
 
     .line 7
     .line 8
-    iget-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A02:LX/0Na;
+    iget-object v0, p0, Lcom/facebook/quicklog/dataproviders/IoStatsProvider;->A01:LX/0RP;
 
     .line 9
     .line 10
-    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+    invoke-interface {v0}, LX/0RP;->get()Ljava/lang/Object;
 
     .line 11
     .line 12
     .line 13
-    move-result-object v4
+    move-result-object v2
 
     .line 14
-    check-cast v4, LX/36H;
+    check-cast v2, LX/2pt;
 
     .line 15
     .line 16
-    new-instance v3, LX/2gw;
+    new-instance v1, LX/3E0;
 
     .line 17
     .line 18
-    invoke-direct {v3, p1, p0}, LX/2gw;-><init>(LX/5SE;Lcom/facebook/quicklog/dataproviders/IoStatsProvider;)V
+    invoke-direct {v1, p1, p0}, LX/3E0;-><init>(LX/2Vl;Lcom/facebook/quicklog/dataproviders/IoStatsProvider;)V
 
     .line 19
     .line 20
@@ -402,51 +388,56 @@
     .line 28
     .line 29
     .line 30
-    move-result-object v0
+    move-result-object v4
 
     .line 31
-    new-instance v2, LX/375;
+    new-instance v3, LX/2q7;
 
     .line 32
     .line 33
-    invoke-direct {v2, v0}, LX/375;-><init>(Lcom/google/common/collect/ImmutableList;)V
+    invoke-direct {v3, v1, p2, p3}, LX/2q7;-><init>(LX/2qM;Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/ListenableFuture;)V
 
     .line 34
     .line 35
     .line 36
-    new-instance v1, LX/37A;
+    iget-object v2, v2, LX/2pt;->A02:Ljava/util/concurrent/ExecutorService;
 
     .line 37
     .line 38
-    invoke-direct {v1, v3, p2, p3}, LX/37A;-><init>(LX/3Yw;Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/ListenableFuture;)V
+    const/16 v0, 0xd
 
     .line 39
     .line 40
+    new-instance v1, LX/0Ye;
+
     .line 41
-    iget-object v0, v4, LX/36H;->A02:Ljava/util/concurrent/ExecutorService;
-
     .line 42
-    .line 43
-    invoke-virtual {v2, v1, v0}, LX/375;->A00(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)LX/5Qx;
+    invoke-direct {v1, v3, v0}, LX/0Ye;-><init>(Ljava/lang/Object;I)V
 
+    .line 43
     .line 44
     .line 45
-    .line 46
-    move-result-object v0
+    new-instance v0, LX/5qA;
 
+    .line 46
     .line 47
-    return-object v0
+    invoke-direct {v0, v4, v1, v2}, LX/5qA;-><init>(Lcom/google/common/collect/ImmutableCollection;Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)V
 
     .line 48
-    :cond_0
-    sget-object v0, LX/4cY;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
-
     .line 49
     .line 50
     return-object v0
+
+    .line 51
+    :cond_0
+    sget-object v0, LX/1yI;->A01:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 52
+    .line 53
+    return-object v0
 .end method
 
-.method public final AKg()Ljava/lang/String;
+.method public final AJA()Ljava/lang/String;
     .locals 1
 
     const-string/jumbo v0, "io_stats"
@@ -454,7 +445,7 @@
     return-object v0
 .end method
 
-.method public final AKh()I
+.method public final AJB()I
     .locals 1
 
     const/16 v0, 0xa
@@ -462,7 +453,7 @@
     return v0
 .end method
 
-.method public final AMG()Ljava/lang/Class;
+.method public final AKo()Ljava/lang/Class;
     .locals 1
 
     .line 0
@@ -473,7 +464,7 @@
     return-object v0
 .end method
 
-.method public final AQC(LX/2IY;)Z
+.method public final AOp(LX/3Jz;)Z
     .locals 1
 
     .line 0

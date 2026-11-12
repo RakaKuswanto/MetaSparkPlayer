@@ -1,95 +1,81 @@
-.class public final LX/5b5;
-.super Ljava/lang/Object;
+.class public abstract LX/5b5;
+.super LX/5bA;
 .source ""
 
 # interfaces
-.implements LX/5Wr;
+.implements LX/6ef;
 
 
 # instance fields
-.field public final A00:LX/5a4;
+.field public final arity:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(LX/5bD;I)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, LX/5bA;-><init>(LX/5bD;)V
 
     .line 1
     .line 2
     .line 3
-    new-instance v0, LX/5a4;
+    iput p2, p0, LX/5b5;->arity:I
 
     .line 4
     .line 5
-    invoke-direct {v0}, LX/5a4;-><init>()V
-
-    .line 6
-    .line 7
-    .line 8
-    iput-object v0, p0, LX/5b5;->A00:LX/5a4;
-
-    .line 9
-    .line 10
     return-void
 .end method
 
 
 # virtual methods
-.method public final AbI(LX/5Wi;)V
-    .locals 3
+.method public final AAY()I
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/5b5;->A00:LX/5a4;
+    iget v0, p0, LX/5b5;->arity:I
 
     .line 1
     .line 2
-    iget-object v2, v0, LX/5a4;->A00:Ljava/util/List;
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/5b1;->completion:LX/5bD;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
 
     .line 3
     .line 4
-    const/4 v1, 0x0
+    invoke-static {p0}, LX/4vR;->A00(LX/6ef;)Ljava/lang/String;
 
     .line 5
-    :goto_0
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
     .line 6
     .line 7
-    .line 8
-    move-result v0
-
-    .line 9
-    if-ge v1, v0, :cond_0
-
-    .line 10
-    .line 11
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 12
-    .line 13
-    .line 14
     move-result-object v0
 
+    .line 8
+    invoke-static {v0}, LX/0WV;->A04(Ljava/lang/Object;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-object v0
+
+    .line 12
+    :cond_0
+    invoke-super {p0}, LX/5b1;->toString()Ljava/lang/String;
+
+    .line 13
+    .line 14
     .line 15
-    check-cast v0, LX/5Wr;
+    move-result-object v0
 
     .line 16
-    .line 17
-    invoke-interface {v0, p1}, LX/5Wr;->AbI(LX/5Wi;)V
-
-    .line 18
-    .line 19
-    .line 20
-    add-int/lit8 v1, v1, 0x1
-
-    .line 21
-    .line 22
-    goto :goto_0
-
-    .line 23
-    :cond_0
-    return-void
+    return-object v0
 .end method

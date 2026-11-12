@@ -1,189 +1,225 @@
-.class public final LX/5UZ;
-.super Ljava/lang/Object;
+.class public final LX/5Uz;
+.super Landroid/media/MediaDataSource;
 .source ""
 
 
 # instance fields
-.field public A00:Ljava/util/Map;
+.field public A00:J
 
-.field public final A01:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;
+.field public final synthetic A01:LX/5Uy;
 
-.field public final A02:Lcom/facebook/cameracore/mediapipeline/dataproviders/handtracking/interfaces/HandTrackingDataProviderConfiguration;
-
-.field public final A03:Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataProviderConfiguration;
-
-.field public final A04:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;
-
-.field public final A05:Lcom/facebook/cameracore/mediapipeline/featureconfig/ProductFeatureConfig;
-
-.field public final A06:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;
-
-.field public final A07:Lcom/facebook/cameracore/mediapipeline/services/networking/interfaces/NetworkPolicyConfiguration;
-
-.field public final A08:Ljava/util/HashMap;
+.field public final synthetic A02:LX/5V0;
 
 
 # direct methods
-.method public constructor <init>(LX/5Ua;)V
-    .locals 2
+.method public constructor <init>(LX/5Uy;LX/5V0;)V
+    .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/5Uz;->A02:LX/5V0;
 
     .line 1
     .line 2
-    .line 3
-    invoke-static {}, LX/002;->A0K()Ljava/util/HashMap;
+    iput-object p1, p0, LX/5Uz;->A01:LX/5Uy;
 
+    .line 3
     .line 4
+    invoke-direct {p0}, Landroid/media/MediaDataSource;-><init>()V
+
     .line 5
     .line 6
-    move-result-object v1
-
     .line 7
-    iput-object v1, p0, LX/5UZ;->A08:Ljava/util/HashMap;
-
-    .line 8
-    .line 9
-    iget-object v0, p1, LX/5Ua;->A08:Ljava/util/HashMap;
-
-    .line 10
-    .line 11
-    invoke-virtual {v1, v0}, Ljava/util/AbstractMap;->putAll(Ljava/util/Map;)V
-
-    .line 12
-    .line 13
-    .line 14
-    iget-object v0, p1, LX/5Ua;->A00:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;
-
-    .line 15
-    .line 16
-    iput-object v0, p0, LX/5UZ;->A01:Lcom/facebook/cameracore/mediapipeline/dataproviders/facetracker/interfaces/FaceTrackerDataProviderConfiguration;
-
-    .line 17
-    .line 18
-    iget-object v0, p1, LX/5Ua;->A07:Ljava/util/Map;
-
-    .line 19
-    .line 20
-    iput-object v0, p0, LX/5UZ;->A00:Ljava/util/Map;
-
-    .line 21
-    .line 22
-    iget-object v0, p1, LX/5Ua;->A03:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;
-
-    .line 23
-    .line 24
-    iput-object v0, p0, LX/5UZ;->A04:Lcom/facebook/cameracore/mediapipeline/dataproviders/worldtracker/interfaces/WorldTrackerDataProviderConfiguration;
-
-    .line 25
-    .line 26
-    iget-object v0, p1, LX/5Ua;->A01:Lcom/facebook/cameracore/mediapipeline/dataproviders/handtracking/interfaces/HandTrackingDataProviderConfiguration;
-
-    .line 27
-    .line 28
-    iput-object v0, p0, LX/5UZ;->A02:Lcom/facebook/cameracore/mediapipeline/dataproviders/handtracking/interfaces/HandTrackingDataProviderConfiguration;
-
-    .line 29
-    .line 30
-    iget-object v0, p1, LX/5Ua;->A04:Lcom/facebook/cameracore/mediapipeline/featureconfig/ProductFeatureConfig;
-
-    .line 31
-    .line 32
-    iput-object v0, p0, LX/5UZ;->A05:Lcom/facebook/cameracore/mediapipeline/featureconfig/ProductFeatureConfig;
-
-    .line 33
-    .line 34
-    iget-object v0, p1, LX/5Ua;->A02:Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataProviderConfiguration;
-
-    .line 35
-    .line 36
-    iput-object v0, p0, LX/5UZ;->A03:Lcom/facebook/cameracore/mediapipeline/dataproviders/location/interfaces/LocationDataProviderConfiguration;
-
-    .line 37
-    .line 38
-    iget-object v0, p1, LX/5Ua;->A05:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;
-
-    .line 39
-    .line 40
-    iput-object v0, p0, LX/5UZ;->A06:Lcom/facebook/cameracore/mediapipeline/services/audio/interfaces/AudioServiceConfiguration;
-
-    .line 41
-    .line 42
-    iget-object v0, p1, LX/5Ua;->A06:Lcom/facebook/cameracore/mediapipeline/services/networking/interfaces/NetworkPolicyConfiguration;
-
-    .line 43
-    .line 44
-    iput-object v0, p0, LX/5UZ;->A07:Lcom/facebook/cameracore/mediapipeline/services/networking/interfaces/NetworkPolicyConfiguration;
-
-    .line 45
-    .line 46
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(LX/5TT;)LX/5Vj;
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final getSize()J
     .locals 2
 
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final readAt(J[BII)I
+    .locals 7
+
     .line 0
-    iget-object v0, p0, LX/5UZ;->A08:Ljava/util/HashMap;
+    if-nez p5, :cond_0
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v5, 0x0
 
     .line 3
-    .line 4
-    .line 5
-    move-result-object v0
+    return v5
 
+    .line 4
+    :cond_0
+    const-wide/16 v5, 0x0
+
+    .line 5
     .line 6
-    check-cast v0, LX/5Vj;
+    const/4 v4, -0x1
 
     .line 7
+    cmp-long v0, p1, v5
+
     .line 8
-    if-eqz v0, :cond_0
-
     .line 9
-    .line 10
-    return-object v0
+    if-ltz v0, :cond_5
 
+    .line 10
     .line 11
-    :cond_0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    :try_start_0
+    iget-wide v0, p0, LX/5Uz;->A00:J
 
     .line 12
     .line 13
-    .line 14
-    move-result-object v1
+    cmp-long v2, v0, p1
 
+    .line 14
     .line 15
-    const-string v0, "Invalid configuration key: "
+    if-eqz v2, :cond_2
 
     .line 16
     .line 17
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    cmp-long v2, v0, v5
 
     .line 18
     .line 19
-    .line 20
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-ltz v2, :cond_1
 
+    .line 20
     .line 21
+    iget-object v2, p0, LX/5Uz;->A01:LX/5Uy;
+
     .line 22
     .line 23
-    const-string v0, " Please use hasConfiguration() to check if the configuration is available."
+    iget-object v2, v2, LX/5Ux;->A04:Ljava/io/DataInputStream;
 
     .line 24
     .line 25
-    invoke-static {v0, v1}, LX/001;->A0B(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+    invoke-virtual {v2}, Ljava/io/InputStream;->available()I
 
     .line 26
     .line 27
     .line 28
-    move-result-object v0
+    move-result v2
 
     .line 29
-    throw v0
+    int-to-long v2, v2
+
+    .line 30
+    add-long/2addr v0, v2
+
+    .line 31
+    cmp-long v2, p1, v0
+
+    .line 32
+    .line 33
+    if-ltz v2, :cond_1
+
+    .line 34
+    .line 35
+    return v4
+
+    .line 36
+    :cond_1
+    iget-object v0, p0, LX/5Uz;->A01:LX/5Uy;
+
+    .line 37
+    .line 38
+    invoke-virtual {v0, p1, p2}, LX/5Uy;->A01(J)V
+
+    .line 39
+    .line 40
+    .line 41
+    iput-wide p1, p0, LX/5Uz;->A00:J
+
+    .line 42
+    .line 43
+    :cond_2
+    iget-object v2, p0, LX/5Uz;->A01:LX/5Uy;
+
+    .line 44
+    .line 45
+    iget-object v1, v2, LX/5Ux;->A04:Ljava/io/DataInputStream;
+
+    .line 46
+    .line 47
+    invoke-virtual {v1}, Ljava/io/InputStream;->available()I
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v0
+
+    .line 51
+    if-le p5, v0, :cond_3
+
+    .line 52
+    .line 53
+    invoke-virtual {v1}, Ljava/io/InputStream;->available()I
+
+    .line 54
+    .line 55
+    .line 56
+    move-result p5
+
+    .line 57
+    :cond_3
+    invoke-virtual {v2, p3, p4, p5}, Ljava/io/InputStream;->read([BII)I
+
+    .line 58
+    .line 59
+    .line 60
+    move-result v5
+
+    .line 61
+    if-ltz v5, :cond_4
+
+    .line 62
+    .line 63
+    iget-wide v2, p0, LX/5Uz;->A00:J
+
+    .line 64
+    .line 65
+    int-to-long v0, v5
+
+    .line 66
+    add-long/2addr v2, v0
+
+    .line 67
+    iput-wide v2, p0, LX/5Uz;->A00:J
+
+    .line 68
+    .line 69
+    return v5
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 70
+    :catch_0
+    :cond_4
+    const-wide/16 v0, -0x1
+
+    .line 71
+    .line 72
+    iput-wide v0, p0, LX/5Uz;->A00:J
+
+    .line 73
+    .line 74
+    return v4
+
+    .line 75
+    :cond_5
+    return v4
 .end method

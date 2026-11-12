@@ -1,87 +1,64 @@
 .class public final LX/4sZ;
-.super Ljava/lang/Object;
+.super LX/4sa;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final __redex_internal_original_name:Ljava/lang/String; = "InstructionsController$3"
-
-
-# instance fields
-.field public final synthetic A00:LX/4sW;
-
-.field public final synthetic A01:Lcom/facebook/arstudio/player/model/EffectFile;
 
 
 # direct methods
-.method public constructor <init>(LX/4sW;Lcom/facebook/arstudio/player/model/EffectFile;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
+
+    .line 268435456
+    sget-object v0, LX/4sc;->A00:LX/4sc;
+
+    .line 268435457
+    .line 268435458
+    invoke-direct {p0, v0}, LX/4sZ;-><init>(LX/4sa;)V
+
+    .line 268435459
+    .line 268435460
+    .line 268435461
+    return-void
+.end method
+
+.method public constructor <init>(LX/4sa;)V
+    .locals 2
 
     .line 0
-    iput-object p1, p0, LX/4sZ;->A00:LX/4sW;
+    invoke-direct {p0}, LX/4sa;-><init>()V
 
     .line 1
     .line 2
-    iput-object p2, p0, LX/4sZ;->A01:Lcom/facebook/arstudio/player/model/EffectFile;
-
     .line 3
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v1, p0, LX/4sa;->A00:Ljava/util/Map;
 
+    .line 4
     .line 5
+    iget-object v0, p1, LX/4sa;->A00:Ljava/util/Map;
+
     .line 6
     .line 7
+    invoke-interface {v1, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+
+    .line 8
+    .line 9
+    .line 10
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final A01(LX/4sk;Ljava/lang/Object;)V
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4sZ;->A00:LX/4sW;
+    iget-object v0, p0, LX/4sa;->A00:Ljava/util/Map;
 
     .line 1
     .line 2
-    invoke-virtual {v0}, LX/4sW;->AOy()V
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     .line 4
     .line 5
-    iget-object v1, v0, LX/4sW;->A08:Ljava/util/Map;
-
-    .line 6
-    .line 7
-    invoke-interface {v1}, Ljava/util/Map;->clear()V
-
-    .line 8
-    .line 9
-    .line 10
-    iget-object v0, p0, LX/4sZ;->A01:Lcom/facebook/arstudio/player/model/EffectFile;
-
-    .line 11
-    .line 12
-    iget-object v0, v0, Lcom/facebook/arstudio/player/model/EffectFile;->A03:Lcom/facebook/arstudio/player/model/EffectInfo;
-
-    .line 13
-    .line 14
-    iget-object v0, v0, Lcom/facebook/arstudio/player/model/EffectInfo;->A05:Lcom/google/common/collect/ImmutableMap;
-
-    .line 15
-    .line 16
-    if-eqz v0, :cond_0
-
-    .line 17
-    .line 18
-    invoke-interface {v1, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
-
-    .line 19
-    .line 20
-    .line 21
-    :cond_0
     return-void
 .end method

@@ -1,53 +1,45 @@
-.class public final LX/4Dh;
+.class public final LX/4dh;
 .super Ljava/lang/Object;
 .source ""
 
 
 # static fields
-.field public static final A00:Ljava/util/Vector;
+.field public static A0E:I
 
-.field public static final A01:Ljava/util/regex/Pattern;
+
+# instance fields
+.field public A00:D
+
+.field public A01:D
+
+.field public A02:D
+
+.field public A03:D
+
+.field public A04:D
+
+.field public A05:LX/4di;
+
+.field public A06:LX/4dv;
+
+.field public A07:Z
+
+.field public A08:Z
+
+.field public final A09:LX/4dy;
+
+.field public final A0A:LX/4dy;
+
+.field public final A0B:LX/4dy;
+
+.field public final A0C:Ljava/lang/String;
+
+.field public final A0D:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    const-string v0, "(?:\\sChrome/)(\\d{2,3})(?:\\.)"
-
-    .line 1
-    .line 2
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    .line 3
-    .line 4
-    .line 5
-    move-result-object v0
-
-    .line 6
-    sput-object v0, LX/4Dh;->A01:Ljava/util/regex/Pattern;
-
-    .line 7
-    .line 8
-    new-instance v0, Ljava/util/Vector;
-
-    .line 9
-    .line 10
-    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
-
-    .line 11
-    .line 12
-    .line 13
-    sput-object v0, LX/4Dh;->A00:Ljava/util/Vector;
-
-    .line 14
-    .line 15
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(LX/4di;)V
+    .locals 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,343 +47,496 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    new-instance v0, LX/4dy;
 
-.method public static A00(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    .line 0
-    if-eqz p0, :cond_0
-
-    .line 1
-    .line 2
-    const-string v1, "\\\"adid\\\":\\\""
-
-    .line 3
     .line 4
-    invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
     .line 5
+    invoke-direct {v0}, LX/4dy;-><init>()V
+
     .line 6
     .line 7
-    move-result v0
-
     .line 8
-    if-eqz v0, :cond_0
+    iput-object v0, p0, LX/4dh;->A09:LX/4dy;
 
     .line 9
     .line 10
-    invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    new-instance v0, LX/4dy;
 
     .line 11
     .line 12
+    invoke-direct {v0}, LX/4dy;-><init>()V
+
     .line 13
-    move-result v0
-
     .line 14
-    add-int/lit8 v0, v0, 0xb
-
     .line 15
-    .line 16
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    iput-object v0, p0, LX/4dh;->A0A:LX/4dy;
 
+    .line 16
     .line 17
+    new-instance v0, LX/4dy;
+
     .line 18
     .line 19
-    move-result-object p0
+    invoke-direct {v0}, LX/4dy;-><init>()V
 
     .line 20
-    const/4 v1, 0x0
-
     .line 21
-    const-string v0, "\\"
-
     .line 22
+    iput-object v0, p0, LX/4dh;->A0B:LX/4dy;
+
     .line 23
-    invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
     .line 24
-    .line 25
-    .line 26
-    move-result v0
+    const/4 v0, 0x1
 
+    .line 25
+    iput-boolean v0, p0, LX/4dh;->A08:Z
+
+    .line 26
     .line 27
-    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    const-wide v0, 0x3f747ae147ae147bL    # 0.005
 
     .line 28
     .line 29
     .line 30
-    move-result-object v0
-
     .line 31
-    return-object v0
-
     .line 32
-    :cond_0
-    const/4 v0, 0x0
+    iput-wide v0, p0, LX/4dh;->A02:D
 
     .line 33
-    return-object v0
+    .line 34
+    iput-wide v0, p0, LX/4dh;->A00:D
+
+    .line 35
+    .line 36
+    const-wide/16 v0, 0x0
+
+    .line 37
+    .line 38
+    iput-wide v0, p0, LX/4dh;->A04:D
+
+    .line 39
+    .line 40
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    .line 41
+    .line 42
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    .line 43
+    .line 44
+    .line 45
+    iput-object v0, p0, LX/4dh;->A0D:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    .line 46
+    .line 47
+    iput-object p1, p0, LX/4dh;->A05:LX/4di;
+
+    .line 48
+    .line 49
+    const-string v2, "spring:"
+
+    .line 50
+    .line 51
+    sget v1, LX/4dh;->A0E:I
+
+    .line 52
+    .line 53
+    add-int/lit8 v0, v1, 0x1
+
+    .line 54
+    .line 55
+    sput v0, LX/4dh;->A0E:I
+
+    .line 56
+    .line 57
+    invoke-static {v2, v1}, LX/004;->A09(Ljava/lang/String;I)Ljava/lang/String;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v0
+
+    .line 61
+    iput-object v0, p0, LX/4dh;->A0C:Ljava/lang/String;
+
+    .line 62
+    .line 63
+    sget-object v0, LX/4dv;->A02:LX/4dv;
+
+    .line 64
+    .line 65
+    invoke-virtual {p0, v0}, LX/4dh;->A04(LX/4dv;)V
+
+    .line 66
+    .line 67
+    .line 68
+    return-void
 .end method
 
-.method public static A01(Landroid/content/Context;)V
-    .locals 2
+.method public static final A00(LX/4dh;)Z
+    .locals 6
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v5, p0, LX/4dh;->A09:LX/4dy;
 
     .line 1
     .line 2
-    const/16 v0, 0x15
+    iget-wide v0, v5, LX/4dy;->A01:D
 
     .line 3
     .line 4
-    if-ge v1, v0, :cond_0
+    invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
 
     .line 5
     .line 6
-    invoke-static {p0}, Landroid/webkit/CookieSyncManager;->createInstance(Landroid/content/Context;)Landroid/webkit/CookieSyncManager;
-
     .line 7
-    .line 8
-    .line 9
-    invoke-static {}, LX/4Dt;->A00()LX/4Dv;
+    move-result-wide v3
 
+    .line 8
+    iget-wide v1, p0, LX/4dh;->A02:D
+
+    .line 9
     .line 10
+    cmpg-double v0, v3, v1
+
     .line 11
     .line 12
-    move-result-object v0
+    if-gtz v0, :cond_1
 
     .line 13
-    invoke-virtual {v0}, LX/4Dv;->Aiy()V
-
     .line 14
+    iget-wide v2, p0, LX/4dh;->A01:D
+
     .line 15
     .line 16
-    return-void
+    iget-wide v0, v5, LX/4dy;->A00:D
 
     .line 17
-    :cond_0
-    invoke-static {}, LX/4Dt;->A00()LX/4Dv;
-
     .line 18
+    sub-double/2addr v2, v0
+
     .line 19
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(D)D
+
     .line 20
-    move-result-object v0
-
     .line 21
-    invoke-static {v0}, LX/4Dh;->A06(LX/4Dv;)V
-
     .line 22
+    move-result-wide v3
+
     .line 23
+    iget-wide v1, p0, LX/4dh;->A00:D
+
     .line 24
-    return-void
+    .line 25
+    cmpg-double v0, v3, v1
+
+    .line 26
+    .line 27
+    if-lez v0, :cond_0
+
+    .line 28
+    .line 29
+    iget-object v0, p0, LX/4dh;->A06:LX/4dv;
+
+    .line 30
+    .line 31
+    iget-wide v3, v0, LX/4dv;->A01:D
+
+    .line 32
+    .line 33
+    const-wide/16 v1, 0x0
+
+    .line 34
+    .line 35
+    cmpl-double v0, v3, v1
+
+    .line 36
+    .line 37
+    if-nez v0, :cond_1
+
+    .line 38
+    .line 39
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 40
+    return v0
+
+    .line 41
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 42
+    return v0
 .end method
 
-.method public static A02(Landroid/content/Context;)V
-    .locals 2
+
+# virtual methods
+.method public final A01(D)V
+    .locals 4
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v1, p0, LX/4dh;->A05:LX/4di;
 
     .line 1
     .line 2
-    const/16 v0, 0x13
+    iput-wide p1, p0, LX/4dh;->A03:D
 
     .line 3
     .line 4
-    if-lt v1, v0, :cond_0
+    iget-object v3, p0, LX/4dh;->A09:LX/4dy;
 
     .line 5
     .line 6
-    invoke-static {p0}, Landroid/webkit/CookieSyncManager;->createInstance(Landroid/content/Context;)Landroid/webkit/CookieSyncManager;
+    iput-wide p1, v3, LX/4dy;->A00:D
 
     .line 7
     .line 8
-    .line 9
-    invoke-static {}, LX/4Dt;->A00()LX/4Dv;
+    iget-object v0, p0, LX/4dh;->A0C:Ljava/lang/String;
 
+    .line 9
     .line 10
+    invoke-virtual {v1, v0}, LX/4di;->A01(Ljava/lang/String;)V
+
     .line 11
     .line 12
-    move-result-object v0
-
     .line 13
-    :try_start_0
-    invoke-virtual {v0}, LX/4Dv;->flush()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, LX/4dh;->A0D:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     .line 14
     .line 15
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
     .line 16
-    :catch_0
+    .line 17
+    .line 18
+    move-result-object v1
+
+    .line 19
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    if-eqz v0, :cond_0
+
+    .line 24
+    .line 25
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    check-cast v0, LX/4dz;
+
+    .line 30
+    .line 31
+    invoke-interface {v0, p0}, LX/4dz;->AbE(LX/4dh;)V
+
+    .line 32
+    .line 33
+    .line 34
+    goto :goto_0
+
+    .line 35
     :cond_0
+    iget-wide v1, v3, LX/4dy;->A00:D
+
+    .line 36
+    .line 37
+    iput-wide v1, p0, LX/4dh;->A01:D
+
+    .line 38
+    .line 39
+    iget-object v0, p0, LX/4dh;->A0B:LX/4dy;
+
+    .line 40
+    .line 41
+    iput-wide v1, v0, LX/4dy;->A00:D
+
+    .line 42
+    .line 43
+    const-wide/16 v0, 0x0
+
+    .line 44
+    .line 45
+    iput-wide v0, v3, LX/4dy;->A01:D
+
+    .line 46
+    .line 47
     return-void
 .end method
 
-.method public static A03(Landroid/content/Context;Landroid/widget/TextView;I)V
-    .locals 2
-
-    .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 1
-    .line 2
-    const/16 v0, 0x17
-
-    .line 3
-    .line 4
-    if-lt v1, v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextAppearance(I)V
-
-    .line 7
-    .line 8
-    .line 9
-    return-void
-
-    .line 10
-    :cond_0
-    invoke-virtual {p1, p0, p2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
-
-    .line 11
-    .line 12
-    .line 13
-    return-void
-.end method
-
-.method public static A04(Landroid/content/Context;LX/4BH;Ljava/util/Map;)V
-    .locals 0
-
-    .line 0
-    invoke-static {p0, p1, p2}, LX/4Dm;->A00(Landroid/content/Context;LX/4BH;Ljava/util/Map;)V
-
-    .line 1
-    .line 2
-    .line 3
-    return-void
-.end method
-
-.method public static A05(Landroid/content/Context;Ljava/util/Map;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p0, v0, p1}, LX/4Dm;->A00(Landroid/content/Context;LX/4BH;Ljava/util/Map;)V
-
-    .line 2
-    .line 3
-    .line 4
-    return-void
-.end method
-
-.method public static A06(LX/4Dv;)V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    .line 1
-    :try_start_0
-    invoke-virtual {p0, v0}, LX/4Dv;->Aiz(LX/4Di;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 2
-    .line 3
-    .line 4
-    :catch_0
-    return-void
-.end method
-
-.method public static A07(LX/4Cd;)V
+.method public final A02(D)V
     .locals 3
 
     .line 0
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-wide v1, p0, LX/4dh;->A01:D
 
     .line 1
     .line 2
-    const/16 v0, 0x13
+    cmpl-double v0, v1, p1
 
     .line 3
     .line 4
-    if-ge v2, v0, :cond_0
+    if-nez v0, :cond_0
 
     .line 5
     .line 6
-    const-string v0, "accessibility"
+    invoke-static {p0}, LX/4dh;->A00(LX/4dh;)Z
 
     .line 7
     .line 8
-    check-cast p0, Lcom/facebook/browser/lite/webview/SystemWebView;
-
     .line 9
+    move-result v0
+
     .line 10
-    iget-object v1, p0, Lcom/facebook/browser/lite/webview/SystemWebView;->A02:LX/4CZ;
+    if-nez v0, :cond_1
 
     .line 11
     .line 12
-    invoke-virtual {v1, v0}, Landroid/webkit/WebView;->removeJavascriptInterface(Ljava/lang/String;)V
+    :cond_0
+    iget-object v2, p0, LX/4dh;->A05:LX/4di;
 
     .line 13
     .line 14
+    iget-object v0, p0, LX/4dh;->A09:LX/4dy;
+
     .line 15
-    const-string v0, "accessibilityTraversal"
-
     .line 16
-    .line 17
-    invoke-virtual {v1, v0}, Landroid/webkit/WebView;->removeJavascriptInterface(Ljava/lang/String;)V
+    iget-wide v0, v0, LX/4dy;->A00:D
 
+    .line 17
     .line 18
+    iput-wide v0, p0, LX/4dh;->A03:D
+
     .line 19
     .line 20
-    const/16 v0, 0x12
+    iput-wide p1, p0, LX/4dh;->A01:D
 
     .line 21
     .line 22
-    if-ge v2, v0, :cond_0
+    iget-object v0, p0, LX/4dh;->A0C:Ljava/lang/String;
 
     .line 23
     .line 24
-    const-string v0, "searchBoxJavaBridge_"
+    invoke-virtual {v2, v0}, LX/4di;->A01(Ljava/lang/String;)V
 
     .line 25
     .line 26
-    invoke-virtual {v1, v0}, Landroid/webkit/WebView;->removeJavascriptInterface(Ljava/lang/String;)V
-
     .line 27
+    iget-object v0, p0, LX/4dh;->A0D:Ljava/util/concurrent/CopyOnWriteArraySet;
+
     .line 28
     .line 29
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v1
+
+    .line 33
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 34
+    .line 35
+    .line 36
+    move-result v0
+
+    .line 37
+    if-eqz v0, :cond_1
+
+    .line 38
+    .line 39
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 40
+    .line 41
+    .line 42
+    goto :goto_0
+
+    .line 43
+    :cond_1
+    return-void
+.end method
+
+.method public final A03(D)V
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, LX/4dh;->A09:LX/4dy;
+
+    .line 1
+    .line 2
+    iget-wide v1, v3, LX/4dy;->A01:D
+
+    .line 3
+    .line 4
+    cmpl-double v0, p1, v1
+
+    .line 5
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    iget-object v1, p0, LX/4dh;->A05:LX/4di;
+
+    .line 9
+    .line 10
+    iput-wide p1, v3, LX/4dy;->A01:D
+
+    .line 11
+    .line 12
+    iget-object v0, p0, LX/4dh;->A0C:Ljava/lang/String;
+
+    .line 13
+    .line 14
+    invoke-virtual {v1, v0}, LX/4di;->A01(Ljava/lang/String;)V
+
+    .line 15
+    .line 16
+    .line 17
     :cond_0
     return-void
 .end method
 
-.method public static A08()Z
-    .locals 2
+.method public final A04(LX/4dv;)V
+    .locals 1
 
     .line 0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    if-eqz p1, :cond_0
 
     .line 1
     .line 2
-    const/16 v0, 0x15
+    iput-object p1, p0, LX/4dh;->A06:LX/4dv;
 
     .line 3
     .line 4
-    invoke-static {v1, v0}, LX/0Yf;->A1R(II)Z
+    return-void
 
     .line 5
+    :cond_0
+    const-string v0, "springConfig is required"
+
     .line 6
     .line 7
-    move-result v0
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 8
-    return v0
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    throw v0
 .end method

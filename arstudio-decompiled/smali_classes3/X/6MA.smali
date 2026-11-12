@@ -1,11 +1,20 @@
-.class public interface abstract LX/6MA;
+.class public abstract LX/6MA;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract A56(LX/01d;)V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.method public abstract AjB(LX/01d;)V
+    .line 0
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    throw v0
 .end method

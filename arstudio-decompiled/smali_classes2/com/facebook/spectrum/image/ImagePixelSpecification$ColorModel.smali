@@ -26,200 +26,239 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 20
+.method public static synthetic $values()[Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    .locals 3
 
     .line 0
-    const-string v2, "RGB"
+    const/4 v0, 0x5
+
+    .line 1
+    new-array v2, v0, [Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
+    .line 2
+    .line 3
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->RGB:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    aput-object v1, v2, v0
+
+    .line 7
+    .line 8
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    aput-object v1, v2, v0
+
+    .line 12
+    .line 13
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->CMYK:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x2
+
+    .line 16
+    aput-object v1, v2, v0
+
+    .line 17
+    .line 18
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->YCBCR:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
+    .line 19
+    .line 20
+    const/4 v0, 0x3
+
+    .line 21
+    aput-object v1, v2, v0
+
+    .line 22
+    .line 23
+    sget-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->YCBCRK:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
+    .line 24
+    .line 25
+    const/4 v0, 0x4
+
+    .line 26
+    aput-object v1, v2, v0
+
+    .line 27
+    .line 28
+    return-object v2
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 12
+
+    .line 0
+    const-string v1, "RGB"
 
     .line 1
     .line 2
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 3
-    const-string/jumbo v4, "rgb"
+    const-string/jumbo v3, "rgb"
 
     .line 4
     .line 5
     .line 6
-    const/4 v5, 0x3
+    const/4 v4, 0x3
 
     .line 7
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
     .line 8
-    new-instance v1, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    new-instance v0, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
     .line 9
     .line 10
-    invoke-direct/range {v1 .. v6}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
 
     .line 11
     .line 12
     .line 13
-    sput-object v1, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->RGB:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    sput-object v0, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->RGB:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
     .line 14
     .line 15
-    const-string v8, "GRAY"
+    const-string v4, "GRAY"
 
     .line 16
     .line 17
-    const-string/jumbo v10, "gray"
+    const-string/jumbo v6, "gray"
 
     .line 18
     .line 19
     .line 20
-    new-instance v7, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    new-instance v3, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
     .line 21
     .line 22
-    move v9, v6
+    move v7, v5
 
     .line 23
-    move v11, v6
+    move v8, v5
 
     .line 24
-    move v12, v6
+    invoke-direct/range {v3 .. v8}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
 
     .line 25
-    invoke-direct/range {v7 .. v12}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
-
     .line 26
     .line 27
+    sput-object v3, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
     .line 28
-    sput-object v7, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->GRAY:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
-
     .line 29
-    .line 30
-    const-string v9, "CMYK"
+    const-string v1, "CMYK"
 
+    .line 30
     .line 31
+    const/4 v2, 0x2
+
     .line 32
-    const/4 v10, 0x2
+    const-string/jumbo v3, "cmyk"
 
     .line 33
-    const-string v11, "cmyk"
-
     .line 34
     .line 35
-    const/4 v12, 0x4
+    const/4 v4, 0x4
 
     .line 36
-    new-instance v8, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    const/4 v5, 0x0
 
     .line 37
-    .line 38
-    move v13, v3
+    new-instance v0, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
+    .line 38
     .line 39
-    invoke-direct/range {v8 .. v13}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
 
     .line 40
     .line 41
     .line 42
-    sput-object v8, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->CMYK:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    sput-object v0, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->CMYK:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
     .line 43
     .line 44
-    const-string v14, "YCBCR"
+    const-string/jumbo v7, "YCBCR"
 
     .line 45
     .line 46
-    const-string/jumbo v16, "ycbcr"
-
     .line 47
-    .line 48
-    .line 49
-    new-instance v13, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    const/4 v8, 0x3
 
+    .line 48
+    const-string/jumbo v9, "ycbcr"
+
+    .line 49
     .line 50
     .line 51
-    move v15, v5
+    new-instance v6, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
     .line 52
-    move/from16 v17, v5
-
     .line 53
+    move v10, v8
+
     .line 54
-    move/from16 v18, v3
+    move v11, v5
 
     .line 55
-    .line 56
-    invoke-direct/range {v13 .. v18}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
+    invoke-direct/range {v6 .. v11}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
 
+    .line 56
     .line 57
     .line 58
+    sput-object v6, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->YCBCR:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+
     .line 59
-    sput-object v13, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->YCBCR:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
-
     .line 60
-    .line 61
-    const-string v15, "YCBCRK"
+    const-string/jumbo v1, "YCBCRK"
 
+    .line 61
     .line 62
     .line 63
-    const-string/jumbo v17, "ycbcrk"
+    const-string/jumbo v3, "ycbcrk"
 
     .line 64
     .line 65
     .line 66
-    new-instance v14, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    new-instance v0, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
     .line 67
     .line 68
-    move/from16 v16, v12
+    move v2, v4
 
     .line 69
-    .line 70
-    move/from16 v18, v12
+    invoke-direct/range {v0 .. v5}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
 
+    .line 70
     .line 71
     .line 72
-    move/from16 v19, v3
+    sput-object v0, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->YCBCRK:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
     .line 73
     .line 74
-    invoke-direct/range {v14 .. v19}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;-><init>(Ljava/lang/String;ILjava/lang/String;IZ)V
+    invoke-static {}, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->$values()[Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
     .line 75
     .line 76
     .line 77
-    sput-object v14, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->YCBCRK:Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
+    move-result-object v0
 
     .line 78
-    .line 79
-    const/4 v0, 0x5
-
-    .line 80
-    new-array v0, v0, [Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
-
-    .line 81
-    .line 82
-    aput-object v1, v0, v3
-
-    .line 83
-    .line 84
-    aput-object v7, v0, v6
-
-    .line 85
-    .line 86
-    aput-object v8, v0, v10
-
-    .line 87
-    .line 88
-    aput-object v13, v0, v5
-
-    .line 89
-    .line 90
-    aput-object v14, v0, v12
-
-    .line 91
-    .line 92
     sput-object v0, Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;->$VALUES:[Lcom/facebook/spectrum/image/ImagePixelSpecification$ColorModel;
 
-    .line 93
-    .line 94
+    .line 79
+    .line 80
     return-void
 .end method
 
@@ -322,7 +361,7 @@
 
     .line 31
     .line 32
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     .line 33
     .line 34

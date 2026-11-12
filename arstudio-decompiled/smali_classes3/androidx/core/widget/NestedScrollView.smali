@@ -3,15 +3,15 @@
 .source ""
 
 # interfaces
-.implements LX/02h;
-.implements LX/0BX;
-.implements LX/02t;
+.implements LX/02p;
+.implements LX/0Bp;
+.implements LX/031;
 
 
 # static fields
 .field public static final A0R:F
 
-.field public static final A0S:LX/4T9;
+.field public static final A0S:LX/4Q5;
 
 .field public static final A0T:[I
 
@@ -37,7 +37,7 @@
 
 .field public A09:Landroid/widget/OverScroller;
 
-.field public A0A:LX/4T8;
+.field public A0A:LX/4L0;
 
 .field public A0B:Z
 
@@ -63,9 +63,9 @@
 
 .field public final A0M:Landroid/graphics/Rect;
 
-.field public final A0N:LX/02i;
+.field public final A0N:LX/02q;
 
-.field public final A0O:LX/02k;
+.field public final A0O:LX/02s;
 
 .field public final A0P:[I
 
@@ -117,20 +117,20 @@
 
     .line 21
     .line 22
-    new-instance v0, LX/4T9;
+    new-instance v0, LX/4Q5;
 
     .line 23
     .line 24
-    invoke-direct {v0}, LX/4T9;-><init>()V
+    invoke-direct {v0}, LX/4Q5;-><init>()V
 
     .line 25
     .line 26
     .line 27
-    sput-object v0, Landroidx/core/widget/NestedScrollView;->A0S:LX/4T9;
+    sput-object v0, Landroidx/core/widget/NestedScrollView;->A0S:LX/4Q5;
 
     .line 28
     .line 29
-    invoke-static {}, LX/4BF;->A1Q()[I
+    invoke-static {}, LX/434;->A1Z()[I
 
     .line 30
     .line 31
@@ -176,7 +176,7 @@
     .locals 1
 
     .line 268435456
-    const v0, 0x7f0406a3
+    const v0, 0x7f0406bd
 
     .line 268435457
     .line 268435458
@@ -198,7 +198,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {}, LX/4BF;->A0R()Landroid/graphics/Rect;
+    invoke-static {}, LX/434;->A0R()Landroid/graphics/Rect;
 
     .line 4
     .line 5
@@ -277,7 +277,7 @@
 
     .line 39
     .line 40
-    invoke-static {p1, p2}, LX/4T5;->A02(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
+    invoke-static {p1, p2}, LX/4Q8;->A02(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
 
     .line 41
     .line 42
@@ -294,7 +294,7 @@
 
     .line 47
     .line 48
-    invoke-static {p1, p2}, LX/4T5;->A02(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
+    invoke-static {p1, p2}, LX/4Q8;->A02(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
 
     .line 49
     .line 50
@@ -307,221 +307,225 @@
 
     .line 53
     .line 54
-    invoke-static {p1}, LX/4BD;->A01(Landroid/content/Context;)F
+    invoke-static {p1}, LX/0X4;->A0G(Landroid/content/Context;)Landroid/util/DisplayMetrics;
 
     .line 55
     .line 56
     .line 57
-    move-result v1
+    move-result-object v0
 
     .line 58
-    const/high16 v0, 0x43200000    # 160.0f
+    iget v1, v0, Landroid/util/DisplayMetrics;->density:F
 
     .line 59
     .line 60
-    mul-float/2addr v1, v0
+    const/high16 v0, 0x43200000    # 160.0f
 
     .line 61
+    .line 62
+    mul-float/2addr v1, v0
+
+    .line 63
     const v0, 0x43c10b3d
 
-    .line 62
-    .line 63
     .line 64
+    .line 65
+    .line 66
     mul-float/2addr v1, v0
 
-    .line 65
+    .line 67
     const v0, 0x3f570a3d    # 0.84f
 
-    .line 66
-    .line 67
     .line 68
+    .line 69
+    .line 70
     mul-float/2addr v1, v0
 
-    .line 69
-    iput v1, p0, Landroidx/core/widget/NestedScrollView;->A0L:F
-
-    .line 70
     .line 71
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iput v1, p0, Landroidx/core/widget/NestedScrollView;->A0L:F
 
     .line 72
     .line 73
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
     .line 74
+    .line 75
+    .line 76
     move-result-object v1
 
-    .line 75
-    new-instance v0, Landroid/widget/OverScroller;
-
-    .line 76
     .line 77
-    invoke-direct {v0, v1}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;)V
+    new-instance v0, Landroid/widget/OverScroller;
 
     .line 78
     .line 79
-    .line 80
-    iput-object v0, p0, Landroidx/core/widget/NestedScrollView;->A09:Landroid/widget/OverScroller;
+    invoke-direct {v0, v1}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;)V
 
+    .line 80
     .line 81
     .line 82
-    invoke-virtual {p0, v2}, Landroid/view/View;->setFocusable(Z)V
+    iput-object v0, p0, Landroidx/core/widget/NestedScrollView;->A09:Landroid/widget/OverScroller;
 
     .line 83
     .line 84
-    .line 85
-    const/high16 v0, 0x40000
+    invoke-virtual {p0, v2}, Landroid/view/View;->setFocusable(Z)V
 
+    .line 85
     .line 86
     .line 87
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
+    const/high16 v0, 0x40000
 
     .line 88
     .line 89
-    .line 90
-    invoke-virtual {p0, v3}, Landroid/view/View;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
 
+    .line 90
     .line 91
     .line 92
-    .line 93
-    invoke-static {v1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+    invoke-virtual {p0, v3}, Landroid/view/View;->setWillNotDraw(Z)V
 
+    .line 93
     .line 94
     .line 95
+    invoke-static {v1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
     .line 96
+    .line 97
+    .line 98
     move-result-object v1
 
-    .line 97
+    .line 99
     invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
-    .line 98
-    .line 99
     .line 100
+    .line 101
+    .line 102
     move-result v0
 
-    .line 101
-    iput v0, p0, Landroidx/core/widget/NestedScrollView;->A05:I
-
-    .line 102
     .line 103
-    invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
+    iput v0, p0, Landroidx/core/widget/NestedScrollView;->A05:I
 
     .line 104
     .line 105
+    invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
+
     .line 106
+    .line 107
+    .line 108
     move-result v0
 
-    .line 107
-    iput v0, p0, Landroidx/core/widget/NestedScrollView;->A04:I
-
-    .line 108
     .line 109
-    invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
+    iput v0, p0, Landroidx/core/widget/NestedScrollView;->A04:I
 
     .line 110
     .line 111
+    invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
+
     .line 112
+    .line 113
+    .line 114
     move-result v0
 
-    .line 113
-    iput v0, p0, Landroidx/core/widget/NestedScrollView;->A03:I
-
-    .line 114
     .line 115
-    sget-object v0, Landroidx/core/widget/NestedScrollView;->A0T:[I
+    iput v0, p0, Landroidx/core/widget/NestedScrollView;->A03:I
 
     .line 116
     .line 117
-    invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    sget-object v0, Landroidx/core/widget/NestedScrollView;->A0T:[I
 
     .line 118
     .line 119
+    invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
     .line 120
+    .line 121
+    .line 122
     move-result-object v1
 
-    .line 121
+    .line 123
     invoke-virtual {v1, v3, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    .line 122
-    .line 123
     .line 124
+    .line 125
+    .line 126
     move-result v0
 
-    .line 125
+    .line 127
     invoke-virtual {p0, v0}, Landroidx/core/widget/NestedScrollView;->setFillViewport(Z)V
 
-    .line 126
-    .line 127
     .line 128
-    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
-
     .line 129
     .line 130
-    .line 131
-    new-instance v0, LX/02k;
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 131
     .line 132
     .line 133
-    invoke-direct {v0}, LX/02k;-><init>()V
+    new-instance v0, LX/02s;
 
     .line 134
     .line 135
-    .line 136
-    iput-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0O:LX/02k;
+    invoke-direct {v0}, LX/02s;-><init>()V
 
+    .line 136
     .line 137
     .line 138
-    new-instance v0, LX/02i;
+    iput-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0O:LX/02s;
 
     .line 139
     .line 140
-    invoke-direct {v0, p0}, LX/02i;-><init>(Landroid/view/View;)V
+    new-instance v0, LX/02q;
 
     .line 141
     .line 142
-    .line 143
-    iput-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    invoke-direct {v0, p0}, LX/02q;-><init>(Landroid/view/View;)V
 
+    .line 143
     .line 144
     .line 145
-    invoke-virtual {p0, v2}, Landroidx/core/widget/NestedScrollView;->setNestedScrollingEnabled(Z)V
+    iput-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 146
     .line 147
-    .line 148
-    sget-object v0, Landroidx/core/widget/NestedScrollView;->A0S:LX/4T9;
+    invoke-virtual {p0, v2}, Landroidx/core/widget/NestedScrollView;->setNestedScrollingEnabled(Z)V
 
+    .line 148
     .line 149
     .line 150
-    invoke-static {p0, v0}, LX/03G;->A0b(Landroid/view/View;LX/01q;)V
+    sget-object v0, Landroidx/core/widget/NestedScrollView;->A0S:LX/4Q5;
 
     .line 151
     .line 152
+    invoke-static {p0, v0}, LX/03U;->A0f(Landroid/view/View;LX/01z;)V
+
     .line 153
+    .line 154
+    .line 155
     return-void
 
-    .line 154
+    .line 156
     :cond_0
     new-instance v0, Landroid/widget/EdgeEffect;
 
-    .line 155
-    .line 156
-    invoke-direct {v0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
-
     .line 157
     .line 158
+    invoke-direct {v0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+
     .line 159
+    .line 160
+    .line 161
     goto :goto_1
 
-    .line 160
+    .line 162
     :cond_1
     new-instance v0, Landroid/widget/EdgeEffect;
 
-    .line 161
-    .line 162
-    invoke-direct {v0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
-
     .line 163
     .line 164
+    invoke-direct {v0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+
     .line 165
+    .line 166
+    .line 167
     goto :goto_0
 .end method
 
@@ -551,11 +555,11 @@
     const/4 v1, 0x2
 
     .line 10
-    iget-object v0, v5, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, v5, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 11
     .line 12
-    invoke-virtual {v0, v1, v3}, LX/02i;->A06(II)Z
+    invoke-virtual {v0, v1, v3}, LX/02q;->A06(II)Z
 
     .line 13
     .line 14
@@ -576,7 +580,7 @@
     const/4 v13, 0x0
 
     .line 22
-    iget-object v10, v5, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v10, v5, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 23
     .line 24
@@ -599,7 +603,7 @@
 
     .line 32
     .line 33
-    invoke-virtual/range {v15 .. v20}, LX/02i;->A07([I[IIII)Z
+    invoke-virtual/range {v15 .. v20}, LX/02q;->A07([I[IIII)Z
 
     .line 34
     .line 35
@@ -684,7 +688,7 @@
     const/4 v9, 0x0
 
     .line 72
-    invoke-direct {v5, v7, v13, v2, v1}, Landroidx/core/widget/NestedScrollView;->A07(IIII)Z
+    invoke-direct {v5, v7, v13, v2, v1}, Landroidx/core/widget/NestedScrollView;->A08(IIII)Z
 
     .line 73
     .line 74
@@ -700,7 +704,7 @@
 
     .line 79
     .line 80
-    iget-object v0, v10, LX/02i;->A00:Landroid/view/ViewParent;
+    iget-object v0, v10, LX/02q;->A00:Landroid/view/ViewParent;
 
     .line 81
     .line 82
@@ -739,7 +743,7 @@
 
     .line 96
     .line 97
-    invoke-static/range {v10 .. v17}, LX/02i;->A02(LX/02i;[I[IIIIII)Z
+    invoke-static/range {v10 .. v17}, LX/02q;->A02(LX/02q;[I[IIIIII)Z
 
     .line 98
     .line 99
@@ -784,7 +788,7 @@
     int-to-float v0, v0
 
     .line 118
-    invoke-static {v5, v0}, LX/4BF;->A01(Landroid/view/View;F)F
+    invoke-static {v5, v0}, LX/434;->A03(Landroid/view/View;F)F
 
     .line 119
     .line 120
@@ -795,7 +799,7 @@
     int-to-float v0, v8
 
     .line 123
-    invoke-static {v5, v0}, LX/4BF;->A00(Landroid/view/View;F)F
+    invoke-static {v5, v0}, LX/434;->A02(Landroid/view/View;F)F
 
     .line 124
     .line 125
@@ -803,7 +807,7 @@
     move-result v0
 
     .line 127
-    invoke-static {v2, v1, v0}, LX/4T4;->A01(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v2, v1, v0}, LX/4Q7;->A01(Landroid/widget/EdgeEffect;FF)F
 
     .line 128
     .line 129
@@ -895,7 +899,7 @@
 
     .line 171
     .line 172
-    invoke-virtual {v10, v3}, LX/02i;->A03(I)V
+    invoke-virtual {v10, v3}, LX/02q;->A03(I)V
 
     .line 173
     .line 174
@@ -933,7 +937,7 @@
     int-to-float v0, v7
 
     .line 191
-    invoke-static {v5, v0}, LX/4BF;->A01(Landroid/view/View;F)F
+    invoke-static {v5, v0}, LX/434;->A03(Landroid/view/View;F)F
 
     .line 192
     .line 193
@@ -948,7 +952,7 @@
     int-to-float v0, v8
 
     .line 198
-    invoke-static {v5, v0}, LX/4BF;->A00(Landroid/view/View;F)F
+    invoke-static {v5, v0}, LX/434;->A02(Landroid/view/View;F)F
 
     .line 199
     .line 200
@@ -959,7 +963,7 @@
     sub-float/2addr v1, v0
 
     .line 203
-    invoke-static {v6, v2, v1}, LX/4T4;->A01(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v6, v2, v1}, LX/4Q7;->A01(Landroid/widget/EdgeEffect;FF)F
 
     .line 204
     .line 205
@@ -972,7 +976,7 @@
 
     .line 209
     :cond_b
-    iget-object v0, v10, LX/02i;->A01:Landroid/view/ViewParent;
+    iget-object v0, v10, LX/02q;->A01:Landroid/view/ViewParent;
 
     .line 210
     .line 211
@@ -980,7 +984,7 @@
 .end method
 
 .method private final A01(Landroid/graphics/Rect;)I
-    .locals 11
+    .locals 10
 
     .line 0
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -1003,7 +1007,7 @@
     .line 8
     .line 9
     .line 10
-    move-result v7
+    move-result v2
 
     .line 11
     invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
@@ -1011,10 +1015,10 @@
     .line 12
     .line 13
     .line 14
-    move-result v5
+    move-result v6
 
     .line 15
-    add-int v10, v5, v7
+    add-int v9, v6, v2
 
     .line 16
     .line 17
@@ -1023,7 +1027,7 @@
     .line 18
     .line 19
     .line 20
-    move-result v9
+    move-result v7
 
     .line 21
     iget v0, p1, Landroid/graphics/Rect;->top:I
@@ -1034,7 +1038,7 @@
 
     .line 24
     .line 25
-    add-int/2addr v5, v9
+    add-int/2addr v6, v7
 
     .line 26
     :cond_0
@@ -1043,10 +1047,10 @@
     .line 27
     .line 28
     .line 29
-    move-result-object v6
+    move-result-object v5
 
     .line 30
-    invoke-static {v6}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v5}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 31
     .line 32
@@ -1054,61 +1058,318 @@
     move-result-object v4
 
     .line 34
-    iget v2, p1, Landroid/graphics/Rect;->bottom:I
+    iget v1, p1, Landroid/graphics/Rect;->bottom:I
 
     .line 35
     .line 36
-    invoke-virtual {v6}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
 
     .line 37
     .line 38
     .line 39
-    move-result v1
+    move-result v0
 
     .line 40
-    iget v0, v4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    invoke-static {v4, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
     .line 41
     .line 42
-    add-int/2addr v1, v0
-
     .line 43
-    iget v0, v4, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    move-result v0
 
     .line 44
+    move v3, v9
+
     .line 45
-    add-int/2addr v1, v0
+    if-ge v1, v0, :cond_1
 
     .line 46
-    move v3, v10
-
     .line 47
-    if-ge v2, v1, :cond_1
+    sub-int v3, v9, v7
 
     .line 48
     .line 49
-    sub-int v3, v10, v9
-
-    .line 50
-    .line 51
     :cond_1
     iget v1, p1, Landroid/graphics/Rect;->bottom:I
 
+    .line 50
+    .line 51
+    if-le v1, v3, :cond_4
+
     .line 52
     .line 53
-    if-le v1, v3, :cond_4
+    iget v0, p1, Landroid/graphics/Rect;->top:I
 
     .line 54
     .line 55
-    iget v0, p1, Landroid/graphics/Rect;->top:I
+    if-le v0, v6, :cond_4
 
     .line 56
     .line 57
-    if-le v0, v5, :cond_4
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     .line 58
     .line 59
+    .line 60
+    move-result v0
+
+    .line 61
+    if-le v0, v2, :cond_3
+
+    .line 62
+    .line 63
+    iget v2, p1, Landroid/graphics/Rect;->top:I
+
+    .line 64
+    .line 65
+    sub-int/2addr v2, v6
+
+    .line 66
+    :goto_0
+    invoke-virtual {v5}, Landroid/view/View;->getBottom()I
+
+    .line 67
+    .line 68
+    .line 69
+    move-result v1
+
+    .line 70
+    iget v0, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    .line 71
+    .line 72
+    add-int/2addr v1, v0
+
+    .line 73
+    sub-int/2addr v1, v9
+
+    .line 74
+    invoke-static {v2, v1}, Ljava/lang/Math;->min(II)I
+
+    .line 75
+    .line 76
+    .line 77
+    move-result v8
+
+    .line 78
+    :cond_2
+    return v8
+
+    .line 79
+    :cond_3
+    iget v2, p1, Landroid/graphics/Rect;->bottom:I
+
+    .line 80
+    .line 81
+    sub-int/2addr v2, v3
+
+    .line 82
+    goto :goto_0
+
+    .line 83
+    :cond_4
+    iget v0, p1, Landroid/graphics/Rect;->top:I
+
+    .line 84
+    .line 85
+    if-ge v0, v6, :cond_2
+
+    .line 86
+    .line 87
+    if-ge v1, v3, :cond_2
+
+    .line 88
+    .line 89
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    .line 90
+    .line 91
+    .line 92
+    move-result v0
+
+    .line 93
+    if-le v0, v2, :cond_5
+
+    .line 94
+    .line 95
+    iget v0, p1, Landroid/graphics/Rect;->bottom:I
+
+    .line 96
+    .line 97
+    sub-int/2addr v3, v0
+
+    .line 98
+    :goto_1
+    neg-int v1, v3
+
+    .line 99
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
+
+    .line 100
+    .line 101
+    .line 102
+    move-result v0
+
+    .line 103
+    neg-int v0, v0
+
+    .line 104
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    .line 105
+    .line 106
+    .line 107
+    move-result v8
+
+    .line 108
+    return v8
+
+    .line 109
+    :cond_5
+    iget v0, p1, Landroid/graphics/Rect;->top:I
+
+    .line 110
+    .line 111
+    sub-int v3, v6, v0
+
+    .line 112
+    .line 113
+    goto :goto_1
+.end method
+
+.method private final A02(I)V
+    .locals 5
+
+    .line 0
+    const/4 v4, 0x1
+
+    .line 1
+    const/4 v1, 0x0
+
+    .line 2
+    const/16 v0, 0x82
+
+    .line 3
+    .line 4
+    invoke-static {p1, v0}, LX/001;->A1N(II)Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v0
+
+    .line 8
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v3
+
+    .line 12
+    if-eqz v0, :cond_1
+
+    .line 13
+    .line 14
+    iget-object v2, p0, Landroidx/core/widget/NestedScrollView;->A0M:Landroid/graphics/Rect;
+
+    .line 15
+    .line 16
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    add-int/2addr v0, v3
+
+    .line 21
+    iput v0, v2, Landroid/graphics/Rect;->top:I
+
+    .line 22
+    .line 23
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v0
+
+    .line 27
+    if-lez v0, :cond_0
+
+    .line 28
+    .line 29
+    sub-int/2addr v0, v4
+
+    .line 30
+    invoke-static {p0, v0}, LX/432;->A0C(Landroid/view/ViewGroup;I)I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v1
+
+    .line 34
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    add-int/2addr v1, v0
+
+    .line 39
+    iget v0, v2, Landroid/graphics/Rect;->top:I
+
+    .line 40
+    .line 41
+    add-int/2addr v0, v3
+
+    .line 42
+    if-le v0, v1, :cond_0
+
+    .line 43
+    .line 44
+    sub-int/2addr v1, v3
+
+    .line 45
+    :goto_0
+    iput v1, v2, Landroid/graphics/Rect;->top:I
+
+    .line 46
+    .line 47
+    :cond_0
+    iget v1, v2, Landroid/graphics/Rect;->top:I
+
+    .line 48
+    .line 49
+    add-int v0, v1, v3
+
+    .line 50
+    .line 51
+    iput v0, v2, Landroid/graphics/Rect;->bottom:I
+
+    .line 52
+    .line 53
+    invoke-direct {p0, p1, v1, v0}, Landroidx/core/widget/NestedScrollView;->A07(III)Z
+
+    .line 54
+    .line 55
+    .line 56
+    return-void
+
+    .line 57
+    :cond_1
+    iget-object v2, p0, Landroidx/core/widget/NestedScrollView;->A0M:Landroid/graphics/Rect;
+
+    .line 58
+    .line 59
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     .line 60
     .line 61
@@ -1116,130 +1377,21 @@
     move-result v0
 
     .line 63
-    if-le v0, v7, :cond_3
+    sub-int/2addr v0, v3
 
     .line 64
+    iput v0, v2, Landroid/graphics/Rect;->top:I
+
     .line 65
-    iget v2, p1, Landroid/graphics/Rect;->top:I
-
     .line 66
+    if-gez v0, :cond_0
+
     .line 67
-    sub-int/2addr v2, v5
-
     .line 68
-    :goto_0
-    invoke-virtual {v6}, Landroid/view/View;->getBottom()I
-
-    .line 69
-    .line 70
-    .line 71
-    move-result v1
-
-    .line 72
-    iget v0, v4, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    .line 73
-    .line 74
-    add-int/2addr v1, v0
-
-    .line 75
-    sub-int/2addr v1, v10
-
-    .line 76
-    invoke-static {v2, v1}, Ljava/lang/Math;->min(II)I
-
-    .line 77
-    .line 78
-    .line 79
-    move-result v8
-
-    .line 80
-    :cond_2
-    return v8
-
-    .line 81
-    :cond_3
-    iget v2, p1, Landroid/graphics/Rect;->bottom:I
-
-    .line 82
-    .line 83
-    sub-int/2addr v2, v3
-
-    .line 84
     goto :goto_0
-
-    .line 85
-    :cond_4
-    iget v0, p1, Landroid/graphics/Rect;->top:I
-
-    .line 86
-    .line 87
-    if-ge v0, v5, :cond_2
-
-    .line 88
-    .line 89
-    if-ge v1, v3, :cond_2
-
-    .line 90
-    .line 91
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
-
-    .line 92
-    .line 93
-    .line 94
-    move-result v0
-
-    .line 95
-    if-le v0, v7, :cond_5
-
-    .line 96
-    .line 97
-    iget v0, p1, Landroid/graphics/Rect;->bottom:I
-
-    .line 98
-    .line 99
-    sub-int/2addr v3, v0
-
-    .line 100
-    :goto_1
-    neg-int v1, v3
-
-    .line 101
-    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
-
-    .line 102
-    .line 103
-    .line 104
-    move-result v0
-
-    .line 105
-    neg-int v0, v0
-
-    .line 106
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    .line 107
-    .line 108
-    .line 109
-    move-result v8
-
-    .line 110
-    return v8
-
-    .line 111
-    :cond_5
-    iget v0, p1, Landroid/graphics/Rect;->top:I
-
-    .line 112
-    .line 113
-    sub-int v3, v5, v0
-
-    .line 114
-    .line 115
-    goto :goto_1
 .end method
 
-.method private A02(I[II)V
+.method private A03(I[II)V
     .locals 8
 
     .line 0
@@ -1277,47 +1429,41 @@
 
     .line 15
     .line 16
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     .line 17
-    aget v0, p2, v1
+    invoke-static {p2, v0, v4}, LX/434;->A1T([III)V
 
     .line 18
     .line 19
-    add-int/2addr v0, v4
-
     .line 20
-    aput v0, p2, v1
-
-    .line 21
-    .line 22
     :cond_0
     sub-int v6, p1, v4
 
+    .line 21
+    .line 22
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
+
     .line 23
     .line 24
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
-
-    .line 25
-    .line 26
     const/4 v1, 0x0
 
-    .line 27
+    .line 25
     move v7, p3
 
-    .line 28
+    .line 26
     move v5, v3
 
-    .line 29
-    invoke-static/range {v0 .. v7}, LX/02i;->A02(LX/02i;[I[IIIIII)Z
+    .line 27
+    invoke-static/range {v0 .. v7}, LX/02q;->A02(LX/02q;[I[IIIIII)Z
 
+    .line 28
+    .line 29
     .line 30
-    .line 31
-    .line 32
     return-void
 .end method
 
-.method private A03(Landroid/view/MotionEvent;)V
+.method private A04(Landroid/view/MotionEvent;)V
     .locals 3
 
     .line 0
@@ -1345,7 +1491,7 @@
 
     .line 11
     .line 12
-    invoke-static {v2}, LX/001;->A1M(I)Z
+    invoke-static {v2}, LX/001;->A1L(I)Z
 
     .line 13
     .line 14
@@ -1397,7 +1543,7 @@
     return-void
 .end method
 
-.method public static A04(Landroidx/core/widget/NestedScrollView;IIZ)V
+.method public static A05(Landroidx/core/widget/NestedScrollView;IIZ)V
     .locals 6
 
     .line 0
@@ -1455,12 +1601,12 @@
     move-result-object v0
 
     .line 26
-    invoke-static {v0}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v0}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 27
     .line 28
     .line 29
-    move-result-object v2
+    move-result-object v1
 
     .line 30
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
@@ -1468,200 +1614,194 @@
     .line 31
     .line 32
     .line 33
-    move-result v1
+    move-result v0
 
     .line 34
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
     .line 35
     .line 36
-    add-int/2addr v1, v0
-
     .line 37
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    move-result v1
 
     .line 38
-    .line 39
-    add-int/2addr v1, v0
-
-    .line 40
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
+    .line 39
+    .line 40
     .line 41
+    move-result v0
+
     .line 42
+    invoke-static {p0, v0}, LX/431;->A06(Landroid/view/View;I)I
+
     .line 43
-    move-result v0
-
     .line 44
-    invoke-static {p0, v0}, LX/4BD;->A0B(Landroid/view/View;I)I
-
     .line 45
-    .line 46
-    .line 47
     move-result v0
 
-    .line 48
+    .line 46
     invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
+    .line 47
+    .line 48
     .line 49
-    .line 50
-    .line 51
     move-result v2
 
-    .line 52
-    invoke-static {v1, v0, v3}, LX/4BE;->A0B(III)I
+    .line 50
+    invoke-static {v1, v0, v3}, LX/433;->A09(III)I
 
+    .line 51
+    .line 52
     .line 53
-    .line 54
-    .line 55
     move-result v0
 
-    .line 56
+    .line 54
     add-int/2addr p2, v2
 
-    .line 57
-    invoke-static {p2, v0, v3}, LX/4BE;->A0C(III)I
+    .line 55
+    invoke-static {p2, v0, v3}, LX/432;->A02(III)I
 
+    .line 56
+    .line 57
     .line 58
-    .line 59
-    .line 60
     move-result v4
 
-    .line 61
+    .line 59
     sub-int/2addr v4, v2
 
-    .line 62
+    .line 60
     iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A09:Landroid/widget/OverScroller;
+
+    .line 61
+    .line 62
+    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     .line 63
     .line 64
-    invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
-
     .line 65
-    .line 66
-    .line 67
     move-result v1
 
-    .line 68
+    .line 66
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
 
+    .line 67
+    .line 68
     .line 69
-    .line 70
-    .line 71
     if-eqz p3, :cond_1
 
-    .line 72
-    .line 73
+    .line 70
+    .line 71
     const/4 v2, 0x2
 
-    .line 74
+    .line 72
     const/4 v1, 0x1
 
+    .line 73
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
+
+    .line 74
     .line 75
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    invoke-virtual {v0, v2, v1}, LX/02q;->A06(II)Z
 
     .line 76
     .line 77
-    invoke-virtual {v0, v2, v1}, LX/02i;->A06(II)Z
-
     .line 78
-    .line 79
-    .line 80
     :goto_0
     invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
+    .line 79
+    .line 80
     .line 81
-    .line 82
-    .line 83
     move-result v0
 
-    .line 84
+    .line 82
     iput v0, p0, Landroidx/core/widget/NestedScrollView;->A02:I
+
+    .line 83
+    .line 84
+    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
     .line 85
     .line 86
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
-
     .line 87
-    .line 88
-    .line 89
     :goto_1
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
+    .line 88
+    .line 89
     .line 90
-    .line 91
-    .line 92
     move-result-wide v0
 
-    .line 93
+    .line 91
     iput-wide v0, p0, Landroidx/core/widget/NestedScrollView;->A0F:J
 
-    .line 94
-    .line 95
+    .line 92
+    .line 93
     :cond_0
     return-void
 
-    .line 96
+    .line 94
     :cond_1
     const/4 v1, 0x1
 
+    .line 95
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
+
+    .line 96
     .line 97
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    invoke-virtual {v0, v1}, LX/02q;->A03(I)V
 
     .line 98
     .line 99
-    invoke-virtual {v0, v1}, LX/02i;->A03(I)V
-
     .line 100
-    .line 101
-    .line 102
     goto :goto_0
 
-    .line 103
+    .line 101
     :cond_2
     iget-object v1, p0, Landroidx/core/widget/NestedScrollView;->A09:Landroid/widget/OverScroller;
 
-    .line 104
-    .line 105
+    .line 102
+    .line 103
     invoke-virtual {v1}, Landroid/widget/OverScroller;->isFinished()Z
 
+    .line 104
+    .line 105
     .line 106
-    .line 107
-    .line 108
     move-result v0
 
-    .line 109
+    .line 107
     if-nez v0, :cond_3
+
+    .line 108
+    .line 109
+    invoke-virtual {v1}, Landroid/widget/OverScroller;->abortAnimation()V
 
     .line 110
     .line 111
-    invoke-virtual {v1}, Landroid/widget/OverScroller;->abortAnimation()V
-
     .line 112
-    .line 113
-    .line 114
     const/4 v1, 0x1
 
+    .line 113
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
+
+    .line 114
     .line 115
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    invoke-virtual {v0, v1}, LX/02q;->A03(I)V
 
     .line 116
     .line 117
-    invoke-virtual {v0, v1}, LX/02i;->A03(I)V
-
     .line 118
-    .line 119
-    .line 120
     :cond_3
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->scrollBy(II)V
 
+    .line 119
+    .line 120
     .line 121
-    .line 122
-    .line 123
     goto :goto_1
 .end method
 
-.method private final A05(I)Z
+.method private final A06(I)Z
     .locals 8
 
     .line 0
@@ -1670,14 +1810,14 @@
     .line 1
     .line 2
     .line 3
-    move-result-object v7
+    move-result-object v6
 
     .line 4
-    if-ne v7, p0, :cond_0
+    if-ne v6, p0, :cond_0
 
     .line 5
     .line 6
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
     .line 7
     :cond_0
@@ -1689,7 +1829,7 @@
     move-result-object v0
 
     .line 11
-    invoke-virtual {v0, p0, v7, p1}, Landroid/view/FocusFinder;->findNextFocus(Landroid/view/ViewGroup;Landroid/view/View;I)Landroid/view/View;
+    invoke-virtual {v0, p0, v6, p1}, Landroid/view/FocusFinder;->findNextFocus(Landroid/view/ViewGroup;Landroid/view/View;I)Landroid/view/View;
 
     .line 12
     .line 13
@@ -1702,7 +1842,7 @@
     .line 16
     .line 17
     .line 18
-    move-result v6
+    move-result v7
 
     .line 19
     const/4 v5, 0x0
@@ -1723,7 +1863,7 @@
     move-result v0
 
     .line 27
-    invoke-direct {p0, v1, v6, v0}, Landroidx/core/widget/NestedScrollView;->A09(Landroid/view/View;II)Z
+    invoke-direct {p0, v1, v7, v0}, Landroidx/core/widget/NestedScrollView;->A0A(Landroid/view/View;II)Z
 
     .line 28
     .line 29
@@ -1768,11 +1908,11 @@
     .line 50
     .line 51
     :goto_0
-    if-eqz v7, :cond_1
+    if-eqz v6, :cond_1
 
     .line 52
     .line 53
-    invoke-virtual {v7}, Landroid/view/View;->isFocused()Z
+    invoke-virtual {v6}, Landroid/view/View;->isFocused()Z
 
     .line 54
     .line 55
@@ -1792,7 +1932,7 @@
     move-result v0
 
     .line 63
-    invoke-direct {p0, v7, v5, v0}, Landroidx/core/widget/NestedScrollView;->A09(Landroid/view/View;II)Z
+    invoke-direct {p0, v6, v5, v0}, Landroidx/core/widget/NestedScrollView;->A0A(Landroid/view/View;II)Z
 
     .line 64
     .line 65
@@ -1860,7 +2000,7 @@
     move-result v0
 
     .line 97
-    if-ge v0, v6, :cond_3
+    if-ge v0, v7, :cond_3
 
     .line 98
     .line 99
@@ -1869,12 +2009,12 @@
     .line 100
     .line 101
     .line 102
-    move-result v6
+    move-result v7
 
     .line 103
     :cond_3
     :goto_1
-    if-nez v6, :cond_5
+    if-nez v7, :cond_5
 
     .line 104
     .line 105
@@ -1898,96 +2038,73 @@
 
     .line 113
     .line 114
-    invoke-virtual {p0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-static {p0, v5}, LX/432;->A0C(Landroid/view/ViewGroup;I)I
 
     .line 115
     .line 116
     .line 117
-    move-result-object v1
+    move-result v2
 
     .line 118
-    invoke-static {v1}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     .line 119
     .line 120
     .line 121
-    move-result-object v0
+    move-result v1
 
     .line 122
-    invoke-virtual {v1}, Landroid/view/View;->getBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     .line 123
     .line 124
     .line 125
-    move-result v2
+    move-result v0
 
     .line 126
-    iget v0, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    .line 127
-    .line 128
-    add-int/2addr v2, v0
-
-    .line 129
-    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
-
-    .line 130
-    .line 131
-    .line 132
-    move-result v1
-
-    .line 133
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    .line 134
-    .line 135
-    .line 136
-    move-result v0
-
-    .line 137
     add-int/2addr v1, v0
 
-    .line 138
-    invoke-static {p0, v1}, LX/4BF;->A0D(Landroid/view/View;I)I
+    .line 127
+    invoke-static {p0, v1}, LX/434;->A0D(Landroid/view/View;I)I
 
-    .line 139
-    .line 140
-    .line 141
+    .line 128
+    .line 129
+    .line 130
     move-result v0
 
-    .line 142
+    .line 131
     sub-int/2addr v2, v0
 
-    .line 143
-    invoke-static {v2, v6}, Ljava/lang/Math;->min(II)I
+    .line 132
+    invoke-static {v2, v7}, Ljava/lang/Math;->min(II)I
 
-    .line 144
-    .line 145
-    .line 146
-    move-result v6
+    .line 133
+    .line 134
+    .line 135
+    move-result v7
 
-    .line 147
+    .line 136
     goto :goto_1
 
-    .line 148
+    .line 137
     :cond_5
     if-eq p1, v3, :cond_6
 
-    .line 149
-    .line 150
-    neg-int v6, v6
+    .line 138
+    .line 139
+    neg-int v7, v7
 
-    .line 151
+    .line 140
     :cond_6
-    invoke-direct {p0, v6, v5, v4, v4}, Landroidx/core/widget/NestedScrollView;->A00(IIIZ)I
+    invoke-direct {p0, v7, v5, v4, v4}, Landroidx/core/widget/NestedScrollView;->A00(IIIZ)I
 
-    .line 152
-    .line 153
-    .line 154
+    .line 141
+    .line 142
+    .line 143
     goto :goto_0
 .end method
 
-.method private A06(III)Z
+.method private A07(III)Z
     .locals 18
 
     .line 0
@@ -2032,7 +2149,7 @@
 
     .line 18
     .line 19
-    invoke-static {v12, v0}, LX/001;->A1O(II)Z
+    invoke-static {v12, v0}, LX/001;->A1N(II)Z
 
     .line 20
     .line 21
@@ -2078,7 +2195,7 @@
 
     .line 39
     .line 40
-    invoke-static {v6, v3}, LX/4BF;->A0b(Ljava/util/AbstractList;I)Landroid/view/View;
+    invoke-static {v6, v3}, LX/434;->A0X(Ljava/util/AbstractList;I)Landroid/view/View;
 
     .line 41
     .line 42
@@ -2286,7 +2403,7 @@
     goto :goto_3
 .end method
 
-.method private final A07(IIII)Z
+.method private final A08(IIII)Z
     .locals 10
 
     .line 0
@@ -2298,157 +2415,154 @@
     .line 2
     .line 3
     .line 4
-    move-result v1
-
-    .line 5
     invoke-virtual {p0}, Landroidx/core/widget/NestedScrollView;->computeHorizontalScrollRange()I
 
+    .line 5
     .line 6
     .line 7
-    .line 8
     invoke-virtual {p0}, Landroidx/core/widget/NestedScrollView;->computeHorizontalScrollExtent()I
 
+    .line 8
     .line 9
     .line 10
-    .line 11
     const/4 v6, 0x0
 
-    .line 12
+    .line 11
     invoke-virtual {p0}, Landroidx/core/widget/NestedScrollView;->computeVerticalScrollRange()I
 
+    .line 12
     .line 13
     .line 14
-    .line 15
     invoke-virtual {p0}, Landroidx/core/widget/NestedScrollView;->computeVerticalScrollExtent()I
 
+    .line 15
     .line 16
     .line 17
-    .line 18
     add-int v5, p3, p1
 
+    .line 18
     .line 19
-    .line 20
     neg-int v0, v6
 
-    .line 21
+    .line 20
     if-le p2, v6, :cond_5
 
+    .line 21
     .line 22
-    .line 23
     const/4 v4, 0x0
 
-    .line 24
+    .line 23
     :goto_0
     const/4 v2, 0x1
 
-    .line 25
+    .line 24
     :goto_1
     if-le v5, p4, :cond_3
 
+    .line 25
     .line 26
-    .line 27
     move v5, p4
 
-    .line 28
+    .line 27
     :goto_2
     const/4 v1, 0x1
 
+    .line 28
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
+
     .line 29
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
-
     .line 30
-    .line 31
-    iget-object v0, v0, LX/02i;->A00:Landroid/view/ViewParent;
+    iget-object v0, v0, LX/02q;->A00:Landroid/view/ViewParent;
 
+    .line 31
     .line 32
-    .line 33
     if-nez v0, :cond_0
 
+    .line 33
     .line 34
-    .line 35
     iget-object v3, p0, Landroidx/core/widget/NestedScrollView;->A09:Landroid/widget/OverScroller;
 
+    .line 35
     .line 36
-    .line 37
     invoke-virtual {p0}, Landroidx/core/widget/NestedScrollView;->getScrollRange()I
 
+    .line 37
     .line 38
     .line 39
-    .line 40
     move-result v9
 
-    .line 41
+    .line 40
     move v7, v6
 
-    .line 42
+    .line 41
     move v8, v6
 
-    .line 43
+    .line 42
     invoke-virtual/range {v3 .. v9}, Landroid/widget/OverScroller;->springBack(IIIIII)Z
 
+    .line 43
     .line 44
     .line 45
-    .line 46
     :cond_0
     :goto_3
     invoke-virtual {p0, v4, v5, v2, v1}, Landroidx/core/widget/NestedScrollView;->onOverScrolled(IIZZ)V
 
+    .line 46
     .line 47
     .line 48
-    .line 49
     if-nez v2, :cond_1
 
+    .line 49
     .line 50
-    .line 51
     if-eqz v1, :cond_2
 
+    .line 51
     .line 52
-    .line 53
     :cond_1
     const/4 v6, 0x1
 
-    .line 54
+    .line 53
     :cond_2
     return v6
 
-    .line 55
+    .line 54
     :cond_3
     if-ge v5, v0, :cond_4
 
+    .line 55
     .line 56
-    .line 57
     move v5, v0
 
-    .line 58
+    .line 57
     goto :goto_2
 
-    .line 59
+    .line 58
     :cond_4
     const/4 v1, 0x0
 
-    .line 60
+    .line 59
     goto :goto_3
 
-    .line 61
+    .line 60
     :cond_5
     if-ge p2, v0, :cond_6
 
+    .line 61
     .line 62
-    .line 63
     move v4, v0
 
-    .line 64
+    .line 63
     goto :goto_0
 
-    .line 65
+    .line 64
     :cond_6
     const/4 v2, 0x0
 
-    .line 66
+    .line 65
     goto :goto_1
 .end method
 
-.method private A08(Landroid/view/MotionEvent;)Z
+.method private A09(Landroid/view/MotionEvent;)Z
     .locals 5
 
     .line 0
@@ -2456,7 +2570,7 @@
 
     .line 1
     .line 2
-    invoke-static {v1}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v1}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 3
     .line 4
@@ -2486,7 +2600,7 @@
     move-result v0
 
     .line 16
-    invoke-static {p0, v0}, LX/4BF;->A00(Landroid/view/View;F)F
+    invoke-static {p0, v0}, LX/434;->A02(Landroid/view/View;F)F
 
     .line 17
     .line 18
@@ -2494,7 +2608,7 @@
     move-result v0
 
     .line 20
-    invoke-static {v1, v3, v0}, LX/4T4;->A01(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v1, v3, v0}, LX/4Q7;->A01(Landroid/widget/EdgeEffect;FF)F
 
     .line 21
     .line 22
@@ -2507,7 +2621,7 @@
 
     .line 25
     .line 26
-    invoke-static {v2}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v2}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 27
     .line 28
@@ -2535,7 +2649,7 @@
     move-result v0
 
     .line 40
-    invoke-static {p0, v0}, LX/4BF;->A00(Landroid/view/View;F)F
+    invoke-static {p0, v0}, LX/434;->A02(Landroid/view/View;F)F
 
     .line 41
     .line 42
@@ -2546,7 +2660,7 @@
     sub-float/2addr v1, v0
 
     .line 45
-    invoke-static {v2, v3, v1}, LX/4T4;->A01(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v2, v3, v1}, LX/4Q7;->A01(Landroid/widget/EdgeEffect;FF)F
 
     .line 46
     .line 47
@@ -2565,7 +2679,7 @@
     return v1
 .end method
 
-.method private A09(Landroid/view/View;II)Z
+.method private A0A(Landroid/view/View;II)Z
     .locals 3
 
     .line 0
@@ -2635,7 +2749,7 @@
     return v0
 .end method
 
-.method public static A0A(Landroid/view/View;Landroid/view/View;)Z
+.method public static A0B(Landroid/view/View;Landroid/view/View;)Z
     .locals 3
 
     .line 0
@@ -2666,7 +2780,7 @@
 
     .line 12
     .line 13
-    invoke-static {v1, p1}, Landroidx/core/widget/NestedScrollView;->A0A(Landroid/view/View;Landroid/view/View;)Z
+    invoke-static {v1, p1}, Landroidx/core/widget/NestedScrollView;->A0B(Landroid/view/View;Landroid/view/View;)Z
 
     .line 14
     .line 15
@@ -2689,7 +2803,7 @@
     return v2
 .end method
 
-.method private A0B(Landroid/widget/EdgeEffect;I)Z
+.method private A0C(Landroid/widget/EdgeEffect;I)Z
     .locals 11
 
     .line 0
@@ -2700,7 +2814,7 @@
 
     .line 2
     .line 3
-    invoke-static {p1}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {p1}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 4
     .line 5
@@ -2842,7 +2956,7 @@
 
     .line 6
     .line 7
-    invoke-static {}, LX/4BF;->A0W()Landroid/util/TypedValue;
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
 
     .line 8
     .line 9
@@ -2886,7 +3000,7 @@
 
     .line 28
     .line 29
-    invoke-static {v3}, LX/4BD;->A0Q(Landroid/content/Context;)Landroid/util/DisplayMetrics;
+    invoke-static {v3}, LX/0X4;->A0G(Landroid/content/Context;)Landroid/util/DisplayMetrics;
 
     .line 30
     .line 31
@@ -2915,7 +3029,7 @@
 
     .line 41
     .line 42
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 43
     .line 44
@@ -2928,7 +3042,7 @@
 
 
 # virtual methods
-.method public A0C(I)V
+.method public A0D(I)V
     .locals 11
 
     .line 0
@@ -3002,11 +3116,11 @@
     const/4 v1, 0x1
 
     .line 32
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 33
     .line 34
-    invoke-virtual {v0, v2, v1}, LX/02i;->A06(II)Z
+    invoke-virtual {v0, v2, v1}, LX/02q;->A06(II)Z
 
     .line 35
     .line 36
@@ -3032,15 +3146,15 @@
     return-void
 .end method
 
-.method public final A0D(Landroid/view/KeyEvent;)Z
+.method public final A0E(Landroid/view/KeyEvent;)Z
     .locals 6
 
     .line 0
-    iget-object v4, p0, Landroidx/core/widget/NestedScrollView;->A0M:Landroid/graphics/Rect;
+    iget-object v5, p0, Landroidx/core/widget/NestedScrollView;->A0M:Landroid/graphics/Rect;
 
     .line 1
     .line 2
-    invoke-virtual {v4}, Landroid/graphics/Rect;->setEmpty()V
+    invoke-virtual {v5}, Landroid/graphics/Rect;->setEmpty()V
 
     .line 3
     .line 4
@@ -3053,14 +3167,14 @@
     move-result v0
 
     .line 9
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 10
     if-lez v0, :cond_0
 
     .line 11
     .line 12
-    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     .line 13
     .line 14
@@ -3068,12 +3182,12 @@
     move-result-object v0
 
     .line 16
-    invoke-static {v0}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v0}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 17
     .line 18
     .line 19
-    move-result-object v2
+    move-result-object v1
 
     .line 20
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
@@ -3081,284 +3195,286 @@
     .line 21
     .line 22
     .line 23
-    move-result v1
+    move-result v0
 
     .line 24
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
     .line 25
     .line 26
-    add-int/2addr v1, v0
-
     .line 27
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    move-result v1
 
     .line 28
-    .line 29
-    add-int/2addr v1, v0
-
-    .line 30
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
+    .line 29
+    .line 30
     .line 31
+    move-result v0
+
     .line 32
+    invoke-static {p0, v0}, LX/431;->A06(Landroid/view/View;I)I
+
     .line 33
-    move-result v0
-
     .line 34
-    invoke-static {p0, v0}, LX/4BD;->A0B(Landroid/view/View;I)I
-
     .line 35
-    .line 36
-    .line 37
     move-result v0
 
-    .line 38
+    .line 36
     if-le v1, v0, :cond_0
 
+    .line 37
+    .line 38
+    const/4 v2, 0x1
+
     .line 39
+    :cond_0
+    const/4 v3, 0x0
+
     .line 40
-    const/4 v3, 0x1
+    const/16 v4, 0x82
 
     .line 41
-    :cond_0
-    const/4 v1, 0x0
-
     .line 42
-    const/16 v5, 0x82
+    if-nez v2, :cond_3
 
     .line 43
     .line 44
-    if-nez v3, :cond_3
+    invoke-virtual {p0}, Landroid/view/View;->isFocused()Z
 
     .line 45
     .line 46
-    invoke-virtual {p0}, Landroid/view/View;->isFocused()Z
-
     .line 47
-    .line 48
-    .line 49
     move-result v0
 
-    .line 50
+    .line 48
     if-eqz v0, :cond_2
+
+    .line 49
+    .line 50
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     .line 51
     .line 52
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
-
     .line 53
-    .line 54
-    .line 55
-    move-result v2
+    move-result v1
 
-    .line 56
+    .line 54
     const/4 v0, 0x4
 
+    .line 55
+    if-eq v1, v0, :cond_2
+
+    .line 56
     .line 57
-    if-eq v2, v0, :cond_2
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->findFocus()Landroid/view/View;
 
     .line 58
     .line 59
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->findFocus()Landroid/view/View;
-
     .line 60
-    .line 61
-    .line 62
-    move-result-object v2
+    move-result-object v1
 
+    .line 61
+    if-ne v1, p0, :cond_1
+
+    .line 62
     .line 63
-    if-ne v2, p0, :cond_1
+    const/4 v1, 0x0
 
     .line 64
-    .line 65
-    const/4 v2, 0x0
-
-    .line 66
     :cond_1
     invoke-static {}, Landroid/view/FocusFinder;->getInstance()Landroid/view/FocusFinder;
 
+    .line 65
+    .line 66
     .line 67
+    move-result-object v0
+
     .line 68
+    invoke-virtual {v0, p0, v1, v4}, Landroid/view/FocusFinder;->findNextFocus(Landroid/view/ViewGroup;Landroid/view/View;I)Landroid/view/View;
+
     .line 69
-    move-result-object v0
-
     .line 70
-    invoke-virtual {v0, p0, v2, v5}, Landroid/view/FocusFinder;->findNextFocus(Landroid/view/ViewGroup;Landroid/view/View;I)Landroid/view/View;
-
     .line 71
-    .line 72
-    .line 73
     move-result-object v0
 
-    .line 74
+    .line 72
     if-eqz v0, :cond_2
+
+    .line 73
+    .line 74
+    if-eq v0, p0, :cond_2
 
     .line 75
     .line 76
-    if-eq v0, p0, :cond_2
+    invoke-virtual {v0, v4}, Landroid/view/View;->requestFocus(I)Z
 
     .line 77
     .line 78
-    invoke-virtual {v0, v5}, Landroid/view/View;->requestFocus(I)Z
-
     .line 79
-    .line 80
-    .line 81
     move-result v0
 
-    .line 82
+    .line 80
     if-eqz v0, :cond_2
 
+    .line 81
+    .line 82
+    const/4 v3, 0x1
+
     .line 83
-    .line 84
-    const/4 v1, 0x1
-
-    .line 85
     :cond_2
-    return v1
+    return v3
 
-    .line 86
+    .line 84
     :cond_3
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
+    .line 85
+    .line 86
     .line 87
-    .line 88
-    .line 89
     move-result v0
 
-    .line 90
+    .line 88
     if-nez v0, :cond_2
+
+    .line 89
+    .line 90
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     .line 91
     .line 92
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
-
     .line 93
-    .line 94
-    .line 95
-    move-result v3
+    move-result v2
 
-    .line 96
+    .line 94
     const/16 v0, 0x13
+
+    .line 95
+    .line 96
+    const/16 v1, 0x21
 
     .line 97
     .line 98
-    const/16 v2, 0x21
+    if-eq v2, v0, :cond_a
 
     .line 99
     .line 100
-    if-eq v3, v0, :cond_a
+    const/16 v0, 0x14
 
     .line 101
     .line 102
-    const/16 v0, 0x14
+    if-eq v2, v0, :cond_7
 
     .line 103
     .line 104
-    if-eq v3, v0, :cond_7
+    const/16 v0, 0x3e
 
     .line 105
     .line 106
-    const/16 v0, 0x3e
+    if-eq v2, v0, :cond_5
 
     .line 107
     .line 108
-    if-ne v3, v0, :cond_2
+    const/16 v0, 0x5c
 
     .line 109
     .line 110
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->isShiftPressed()Z
+    if-eq v2, v0, :cond_b
 
     .line 111
     .line 112
-    .line 113
-    move-result v0
+    const/16 v0, 0x5d
 
+    .line 113
     .line 114
-    if-eqz v0, :cond_4
+    if-eq v2, v0, :cond_8
 
     .line 115
     .line 116
-    const/16 v5, 0x21
+    const/16 v0, 0x7a
 
     .line 117
     .line 118
-    :cond_4
-    const/4 v2, 0x1
+    if-eq v2, v0, :cond_4
 
     .line 119
-    const/16 v0, 0x82
-
     .line 120
-    .line 121
-    invoke-static {v5, v0}, LX/001;->A1O(II)Z
+    const/16 v0, 0x7b
 
+    .line 121
     .line 122
+    if-eq v2, v0, :cond_6
+
     .line 123
     .line 124
-    move-result v0
+    return v3
 
     .line 125
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    :cond_4
+    invoke-direct {p0, v1}, Landroidx/core/widget/NestedScrollView;->A02(I)V
 
     .line 126
     .line 127
     .line 128
-    move-result v3
+    return v3
 
     .line 129
-    if-eqz v0, :cond_6
+    :cond_5
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->isShiftPressed()Z
 
     .line 130
     .line 131
-    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
-
     .line 132
-    .line 133
-    .line 134
     move-result v0
 
+    .line 133
+    if-eqz v0, :cond_6
+
+    .line 134
     .line 135
-    add-int/2addr v0, v3
+    const/16 v4, 0x21
 
     .line 136
-    iput v0, v4, Landroid/graphics/Rect;->top:I
-
     .line 137
-    .line 138
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    :cond_6
+    invoke-direct {p0, v4}, Landroidx/core/widget/NestedScrollView;->A02(I)V
 
+    .line 138
     .line 139
     .line 140
+    return v3
+
     .line 141
-    move-result v0
+    :cond_7
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->isAltPressed()Z
 
     .line 142
-    if-lez v0, :cond_5
-
     .line 143
     .line 144
-    sub-int/2addr v0, v2
+    move-result v0
 
     .line 145
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    if-nez v0, :cond_8
 
     .line 146
     .line 147
+    invoke-direct {p0, v4}, Landroidx/core/widget/NestedScrollView;->A06(I)Z
+
     .line 148
-    move-result-object v2
-
     .line 149
-    invoke-static {v2}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
-
     .line 150
+    move-result v3
+
     .line 151
+    return v3
+
     .line 152
-    move-result-object v0
+    :cond_8
+    const/4 v1, 0x1
 
     .line 153
-    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     .line 154
     .line 155
@@ -3366,283 +3482,139 @@
     move-result v2
 
     .line 157
-    iget v0, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    iput v3, v5, Landroid/graphics/Rect;->top:I
 
     .line 158
     .line 159
-    add-int/2addr v2, v0
+    iput v2, v5, Landroid/graphics/Rect;->bottom:I
 
     .line 160
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
     .line 161
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
     .line 162
     .line 163
+    .line 164
     move-result v0
 
-    .line 164
-    add-int/2addr v2, v0
-
     .line 165
-    iget v0, v4, Landroid/graphics/Rect;->top:I
+    if-lez v0, :cond_9
 
     .line 166
     .line 167
-    add-int/2addr v0, v3
+    sub-int/2addr v0, v1
 
     .line 168
-    if-le v0, v2, :cond_5
+    invoke-static {p0, v0}, LX/432;->A0C(Landroid/view/ViewGroup;I)I
 
     .line 169
     .line 170
-    sub-int/2addr v2, v3
-
     .line 171
-    iput v2, v4, Landroid/graphics/Rect;->top:I
+    move-result v1
 
     .line 172
-    .line 173
-    :cond_5
-    :goto_0
-    iget v2, v4, Landroid/graphics/Rect;->top:I
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
+    .line 173
     .line 174
     .line 175
-    add-int v0, v2, v3
+    move-result v0
 
     .line 176
+    add-int/2addr v1, v0
+
     .line 177
-    iput v0, v4, Landroid/graphics/Rect;->bottom:I
+    iput v1, v5, Landroid/graphics/Rect;->bottom:I
 
     .line 178
     .line 179
-    invoke-direct {p0, v5, v2, v0}, Landroidx/core/widget/NestedScrollView;->A06(III)Z
-
-    .line 180
-    .line 181
-    .line 182
-    return v1
-
-    .line 183
-    :cond_6
-    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
-
-    .line 184
-    .line 185
-    .line 186
-    move-result v0
-
-    .line 187
-    sub-int/2addr v0, v3
-
-    .line 188
-    iput v0, v4, Landroid/graphics/Rect;->top:I
-
-    .line 189
-    .line 190
-    if-gez v0, :cond_5
-
-    .line 191
-    .line 192
-    iput v1, v4, Landroid/graphics/Rect;->top:I
-
-    .line 193
-    .line 194
-    goto :goto_0
-
-    .line 195
-    :cond_7
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->isAltPressed()Z
-
-    .line 196
-    .line 197
-    .line 198
-    move-result v0
-
-    .line 199
-    if-nez v0, :cond_8
-
-    .line 200
-    .line 201
-    invoke-direct {p0, v5}, Landroidx/core/widget/NestedScrollView;->A05(I)Z
-
-    .line 202
-    .line 203
-    .line 204
-    move-result v1
-
-    .line 205
-    return v1
-
-    .line 206
-    :cond_8
-    const/4 v3, 0x1
-
-    .line 207
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    .line 208
-    .line 209
-    .line 210
-    move-result v2
-
-    .line 211
-    iput v1, v4, Landroid/graphics/Rect;->top:I
-
-    .line 212
-    .line 213
-    iput v2, v4, Landroid/graphics/Rect;->bottom:I
-
-    .line 214
-    .line 215
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    .line 216
-    .line 217
-    .line 218
-    move-result v0
-
-    .line 219
-    if-lez v0, :cond_9
-
-    .line 220
-    .line 221
-    sub-int/2addr v0, v3
-
-    .line 222
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    .line 223
-    .line 224
-    .line 225
-    move-result-object v1
-
-    .line 226
-    invoke-static {v1}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
-
-    .line 227
-    .line 228
-    .line 229
-    move-result-object v0
-
-    .line 230
-    invoke-virtual {v1}, Landroid/view/View;->getBottom()I
-
-    .line 231
-    .line 232
-    .line 233
-    move-result v1
-
-    .line 234
-    iget v0, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    .line 235
-    .line 236
-    add-int/2addr v1, v0
-
-    .line 237
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    .line 238
-    .line 239
-    .line 240
-    move-result v0
-
-    .line 241
-    add-int/2addr v1, v0
-
-    .line 242
-    iput v1, v4, Landroid/graphics/Rect;->bottom:I
-
-    .line 243
-    .line 244
     sub-int/2addr v1, v2
 
-    .line 245
-    iput v1, v4, Landroid/graphics/Rect;->top:I
+    .line 180
+    iput v1, v5, Landroid/graphics/Rect;->top:I
 
-    .line 246
-    .line 247
+    .line 181
+    .line 182
     :cond_9
-    iget v1, v4, Landroid/graphics/Rect;->top:I
+    iget v1, v5, Landroid/graphics/Rect;->top:I
 
-    .line 248
-    .line 249
-    iget v0, v4, Landroid/graphics/Rect;->bottom:I
+    .line 183
+    .line 184
+    iget v0, v5, Landroid/graphics/Rect;->bottom:I
 
-    .line 250
-    .line 251
-    invoke-direct {p0, v5, v1, v0}, Landroidx/core/widget/NestedScrollView;->A06(III)Z
+    .line 185
+    .line 186
+    invoke-direct {p0, v4, v1, v0}, Landroidx/core/widget/NestedScrollView;->A07(III)Z
 
-    .line 252
-    .line 253
-    .line 254
-    move-result v1
+    .line 187
+    .line 188
+    .line 189
+    move-result v3
 
-    .line 255
-    return v1
+    .line 190
+    return v3
 
-    .line 256
+    .line 191
     :cond_a
     invoke-virtual {p1}, Landroid/view/KeyEvent;->isAltPressed()Z
 
-    .line 257
-    .line 258
-    .line 259
+    .line 192
+    .line 193
+    .line 194
     move-result v0
 
-    .line 260
+    .line 195
     if-nez v0, :cond_b
 
-    .line 261
-    .line 262
-    invoke-direct {p0, v2}, Landroidx/core/widget/NestedScrollView;->A05(I)Z
+    .line 196
+    .line 197
+    invoke-direct {p0, v1}, Landroidx/core/widget/NestedScrollView;->A06(I)Z
 
-    .line 263
-    .line 264
-    .line 265
-    move-result v1
+    .line 198
+    .line 199
+    .line 200
+    move-result v3
 
-    .line 266
-    return v1
+    .line 201
+    return v3
 
-    .line 267
+    .line 202
     :cond_b
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
-    .line 268
-    .line 269
-    .line 270
+    .line 203
+    .line 204
+    .line 205
     move-result v0
 
-    .line 271
-    iput v1, v4, Landroid/graphics/Rect;->top:I
+    .line 206
+    iput v3, v5, Landroid/graphics/Rect;->top:I
 
-    .line 272
-    .line 273
-    iput v0, v4, Landroid/graphics/Rect;->bottom:I
+    .line 207
+    .line 208
+    iput v0, v5, Landroid/graphics/Rect;->bottom:I
 
-    .line 274
-    .line 275
-    invoke-direct {p0, v2, v1, v0}, Landroidx/core/widget/NestedScrollView;->A06(III)Z
+    .line 209
+    .line 210
+    invoke-direct {p0, v1, v3, v0}, Landroidx/core/widget/NestedScrollView;->A07(III)Z
 
-    .line 276
-    .line 277
-    .line 278
-    move-result v1
+    .line 211
+    .line 212
+    .line 213
+    move-result v3
 
-    .line 279
-    return v1
+    .line 214
+    return v3
 .end method
 
-.method public final Aa6(Landroid/view/View;[IIII)V
+.method public final AYV(Landroid/view/View;[IIII)V
     .locals 6
 
     .line 0
     const/4 v2, 0x0
 
     .line 1
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 2
     .line 3
@@ -3658,7 +3630,7 @@
     move v5, p5
 
     .line 7
-    invoke-virtual/range {v0 .. v5}, LX/02i;->A07([I[IIII)Z
+    invoke-virtual/range {v0 .. v5}, LX/02q;->A07([I[IIII)Z
 
     .line 8
     .line 9
@@ -3666,14 +3638,14 @@
     return-void
 .end method
 
-.method public final Aa7(Landroid/view/View;IIIII)V
+.method public final AYW(Landroid/view/View;IIIII)V
     .locals 1
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p5, v0, p6}, Landroidx/core/widget/NestedScrollView;->A02(I[II)V
+    invoke-direct {p0, p5, v0, p6}, Landroidx/core/widget/NestedScrollView;->A03(I[II)V
 
     .line 2
     .line 3
@@ -3681,11 +3653,11 @@
     return-void
 .end method
 
-.method public final Aa8(Landroid/view/View;[IIIIII)V
+.method public final AYX(Landroid/view/View;[IIIIII)V
     .locals 0
 
     .line 0
-    invoke-direct {p0, p6, p2, p7}, Landroidx/core/widget/NestedScrollView;->A02(I[II)V
+    invoke-direct {p0, p6, p2, p7}, Landroidx/core/widget/NestedScrollView;->A03(I[II)V
 
     .line 1
     .line 2
@@ -3693,11 +3665,11 @@
     return-void
 .end method
 
-.method public final Aa9(Landroid/view/View;Landroid/view/View;II)V
+.method public final AYY(Landroid/view/View;Landroid/view/View;II)V
     .locals 2
 
     .line 0
-    iget-object v1, p0, Landroidx/core/widget/NestedScrollView;->A0O:LX/02k;
+    iget-object v1, p0, Landroidx/core/widget/NestedScrollView;->A0O:LX/02s;
 
     .line 1
     .line 2
@@ -3708,7 +3680,7 @@
 
     .line 4
     .line 5
-    iput p3, v1, LX/02k;->A00:I
+    iput p3, v1, LX/02s;->A00:I
 
     .line 6
     .line 7
@@ -3716,11 +3688,11 @@
     const/4 v1, 0x2
 
     .line 8
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 9
     .line 10
-    invoke-virtual {v0, v1, p4}, LX/02i;->A06(II)Z
+    invoke-virtual {v0, v1, p4}, LX/02q;->A06(II)Z
 
     .line 11
     .line 12
@@ -3729,14 +3701,14 @@
 
     .line 14
     :cond_0
-    iput p3, v1, LX/02k;->A01:I
+    iput p3, v1, LX/02s;->A01:I
 
     .line 15
     .line 16
     goto :goto_0
 .end method
 
-.method public final Acz(Landroid/view/View;Landroid/view/View;II)Z
+.method public final AbO(Landroid/view/View;Landroid/view/View;II)Z
     .locals 1
 
     .line 0
@@ -3744,7 +3716,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 3
     .line 4
@@ -3755,11 +3727,11 @@
     return v0
 .end method
 
-.method public final Ad8(Landroid/view/View;I)V
+.method public final AbW(Landroid/view/View;I)V
     .locals 3
 
     .line 0
-    iget-object v2, p0, Landroidx/core/widget/NestedScrollView;->A0O:LX/02k;
+    iget-object v2, p0, Landroidx/core/widget/NestedScrollView;->A0O:LX/02s;
 
     .line 1
     .line 2
@@ -3773,16 +3745,16 @@
 
     .line 5
     .line 6
-    iput v1, v2, LX/02k;->A00:I
+    iput v1, v2, LX/02s;->A00:I
 
     .line 7
     .line 8
     :goto_0
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 9
     .line 10
-    invoke-virtual {v0, p2}, LX/02i;->A03(I)V
+    invoke-virtual {v0, p2}, LX/02q;->A03(I)V
 
     .line 11
     .line 12
@@ -3791,7 +3763,7 @@
 
     .line 14
     :cond_0
-    iput v1, v2, LX/02k;->A01:I
+    iput v1, v2, LX/02s;->A01:I
 
     .line 15
     .line 16
@@ -3801,40 +3773,40 @@
 .method public final addView(Landroid/view/View;)V
     .locals 1
 
-    .line 536870912
+    .line 805306368
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    .line 536870913
-    .line 536870914
-    .line 536870915
+    .line 805306369
+    .line 805306370
+    .line 805306371
     move-result v0
 
-    .line 536870916
+    .line 805306372
     if-gtz v0, :cond_0
 
-    .line 536870917
-    .line 536870918
+    .line 805306373
+    .line 805306374
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 536870919
-    .line 536870920
-    .line 536870921
+    .line 805306375
+    .line 805306376
+    .line 805306377
     return-void
 
-    .line 536870922
+    .line 805306378
     :cond_0
     const-string v0, "ScrollView can host only one direct child"
 
-    .line 536870923
-    .line 536870924
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    .line 805306379
+    .line 805306380
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
-    .line 536870925
-    .line 536870926
-    .line 536870927
+    .line 805306381
+    .line 805306382
+    .line 805306383
     move-result-object v0
 
-    .line 536870928
+    .line 805306384
     throw v0
 .end method
 
@@ -3867,7 +3839,7 @@
 
     .line 268435467
     .line 268435468
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 268435469
     .line 268435470
@@ -3907,7 +3879,7 @@
 
     .line 11
     .line 12
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 13
     .line 14
@@ -3921,40 +3893,40 @@
 .method public final addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 1
 
-    .line 805306368
+    .line 536870912
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    .line 805306369
-    .line 805306370
-    .line 805306371
+    .line 536870913
+    .line 536870914
+    .line 536870915
     move-result v0
 
-    .line 805306372
+    .line 536870916
     if-gtz v0, :cond_0
 
-    .line 805306373
-    .line 805306374
+    .line 536870917
+    .line 536870918
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 805306375
-    .line 805306376
-    .line 805306377
+    .line 536870919
+    .line 536870920
+    .line 536870921
     return-void
 
-    .line 805306378
+    .line 536870922
     :cond_0
     const-string v0, "ScrollView can host only one direct child"
 
-    .line 805306379
-    .line 805306380
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    .line 536870923
+    .line 536870924
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
-    .line 805306381
-    .line 805306382
-    .line 805306383
+    .line 536870925
+    .line 536870926
+    .line 536870927
     move-result-object v0
 
-    .line 805306384
+    .line 536870928
     throw v0
 .end method
 
@@ -4075,7 +4047,7 @@
 
     .line 33
     .line 34
-    invoke-static {v4}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v4}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 35
     .line 36
@@ -4116,7 +4088,7 @@
     div-float/2addr v3, v6
 
     .line 50
-    invoke-static {v4, v0, v7}, LX/4T4;->A01(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v4, v0, v7}, LX/4Q7;->A01(Landroid/widget/EdgeEffect;FF)F
 
     .line 51
     .line 52
@@ -4124,7 +4096,7 @@
     move-result v0
 
     .line 54
-    invoke-static {v3, v0}, LX/4BE;->A06(FF)I
+    invoke-static {v3, v0}, LX/433;->A05(FF)I
 
     .line 55
     .line 56
@@ -4167,7 +4139,7 @@
     const/4 v15, 0x0
 
     .line 73
-    iget-object v5, v1, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v5, v1, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 74
     .line 75
@@ -4189,7 +4161,7 @@
 
     .line 82
     .line 83
-    invoke-virtual/range {v13 .. v18}, LX/02i;->A07([I[IIII)Z
+    invoke-virtual/range {v13 .. v18}, LX/02q;->A07([I[IIII)Z
 
     .line 84
     .line 85
@@ -4229,7 +4201,7 @@
     move-result v0
 
     .line 103
-    invoke-direct {v1, v11, v0, v3, v4}, Landroidx/core/widget/NestedScrollView;->A07(IIII)Z
+    invoke-direct {v1, v11, v0, v3, v4}, Landroidx/core/widget/NestedScrollView;->A08(IIII)Z
 
     .line 104
     .line 105
@@ -4259,7 +4231,7 @@
     move v10, v8
 
     .line 117
-    invoke-static/range {v5 .. v12}, LX/02i;->A02(LX/02i;[I[IIIIII)Z
+    invoke-static/range {v5 .. v12}, LX/02q;->A02(LX/02q;[I[IIIIII)Z
 
     .line 118
     .line 119
@@ -4339,7 +4311,7 @@
     .line 154
     .line 155
     .line 156
-    invoke-virtual {v5, v12}, LX/02i;->A03(I)V
+    invoke-virtual {v5, v12}, LX/02q;->A03(I)V
 
     .line 157
     .line 158
@@ -4383,7 +4355,7 @@
 
     .line 175
     .line 176
-    invoke-static {v4}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v4}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 177
     .line 178
@@ -4416,7 +4388,7 @@
     .line 189
     .line 190
     :cond_8
-    invoke-virtual {v5, v12}, LX/02i;->A03(I)V
+    invoke-virtual {v5, v12}, LX/02q;->A03(I)V
 
     .line 191
     .line 192
@@ -4466,7 +4438,7 @@
 .end method
 
 .method public final computeVerticalScrollRange()I
-    .locals 5
+    .locals 4
 
     .line 0
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -4477,12 +4449,12 @@
     move-result v1
 
     .line 4
-    invoke-static {p0}, LX/4BD;->A08(Landroid/view/View;)I
+    invoke-static {p0}, LX/432;->A06(Landroid/view/View;)I
 
     .line 5
     .line 6
     .line 7
-    move-result v4
+    move-result v3
 
     .line 8
     invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
@@ -4493,89 +4465,66 @@
     move-result v0
 
     .line 12
-    sub-int/2addr v4, v0
+    sub-int/2addr v3, v0
 
     .line 13
     if-nez v1, :cond_0
 
     .line 14
     .line 15
-    return v4
+    return v3
 
     .line 16
     :cond_0
-    const/4 v3, 0x0
+    const/4 v0, 0x0
 
     .line 17
-    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-static {p0, v0}, LX/432;->A0C(Landroid/view/ViewGroup;I)I
 
     .line 18
     .line 19
     .line 20
-    move-result-object v1
+    move-result v2
 
     .line 21
-    invoke-static {v1}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     .line 22
     .line 23
     .line 24
-    move-result-object v0
+    move-result v1
 
     .line 25
-    invoke-virtual {v1}, Landroid/view/View;->getBottom()I
+    invoke-static {v2, v3, v0}, LX/433;->A09(III)I
 
     .line 26
     .line 27
     .line 28
-    move-result v2
+    move-result v0
 
     .line 29
-    iget v0, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    if-gez v1, :cond_2
 
     .line 30
     .line 31
-    add-int/2addr v2, v0
-
-    .line 32
-    invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
-
-    .line 33
-    .line 34
-    .line 35
-    move-result v1
-
-    .line 36
-    invoke-static {v2, v4, v3}, LX/4BE;->A0B(III)I
-
-    .line 37
-    .line 38
-    .line 39
-    move-result v0
-
-    .line 40
-    if-gez v1, :cond_2
-
-    .line 41
-    .line 42
     sub-int/2addr v2, v1
 
-    .line 43
+    .line 32
     :cond_1
     return v2
 
-    .line 44
+    .line 33
     :cond_2
     if-le v1, v0, :cond_1
 
-    .line 45
-    .line 46
+    .line 34
+    .line 35
     sub-int/2addr v1, v0
 
-    .line 47
+    .line 36
     add-int/2addr v2, v1
 
-    .line 48
+    .line 37
     return v2
 .end method
 
@@ -4595,7 +4544,7 @@
 
     .line 5
     .line 6
-    invoke-virtual {p0, p1}, Landroidx/core/widget/NestedScrollView;->A0D(Landroid/view/KeyEvent;)Z
+    invoke-virtual {p0, p1}, Landroidx/core/widget/NestedScrollView;->A0E(Landroid/view/KeyEvent;)Z
 
     .line 7
     .line 8
@@ -4622,11 +4571,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2, p3}, LX/02i;->A05(FFZ)Z
+    invoke-virtual {v0, p1, p2, p3}, LX/02q;->A05(FFZ)Z
 
     .line 3
     .line 4
@@ -4641,11 +4590,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p1, p2}, LX/02i;->A04(FF)Z
+    invoke-virtual {v0, p1, p2}, LX/02q;->A04(FF)Z
 
     .line 3
     .line 4
@@ -4663,7 +4612,7 @@
     const/4 v5, 0x0
 
     .line 1
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 2
     .line 3
@@ -4679,7 +4628,7 @@
     move-object v2, p4
 
     .line 7
-    invoke-virtual/range {v0 .. v5}, LX/02i;->A07([I[IIII)Z
+    invoke-virtual/range {v0 .. v5}, LX/02q;->A07([I[IIII)Z
 
     .line 8
     .line 9
@@ -4694,7 +4643,7 @@
     .locals 8
 
     .line 0
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 1
     .line 2
@@ -4719,7 +4668,7 @@
     move-object v1, p5
 
     .line 9
-    invoke-static/range {v0 .. v7}, LX/02i;->A02(LX/02i;[I[IIIIII)Z
+    invoke-static/range {v0 .. v7}, LX/02q;->A02(LX/02q;[I[IIIIII)Z
 
     .line 10
     .line 11
@@ -4810,7 +4759,7 @@
 
     .line 37
     .line 38
-    invoke-static {p0}, LX/4T7;->A00(Landroid/view/ViewGroup;)Z
+    invoke-static {p0}, LX/4QA;->A00(Landroid/view/ViewGroup;)Z
 
     .line 39
     .line 40
@@ -4826,7 +4775,7 @@
 
     .line 45
     :goto_0
-    invoke-static {p0}, LX/4T7;->A00(Landroid/view/ViewGroup;)Z
+    invoke-static {p0}, LX/4QA;->A00(Landroid/view/ViewGroup;)Z
 
     .line 46
     .line 47
@@ -4838,7 +4787,7 @@
 
     .line 50
     .line 51
-    invoke-static {p0}, LX/4BD;->A0A(Landroid/view/View;)I
+    invoke-static {p0}, LX/431;->A05(Landroid/view/View;)I
 
     .line 52
     .line 53
@@ -4968,7 +4917,7 @@
 
     .line 113
     .line 114
-    invoke-static {p0}, LX/4T7;->A00(Landroid/view/ViewGroup;)Z
+    invoke-static {p0}, LX/4QA;->A00(Landroid/view/ViewGroup;)Z
 
     .line 115
     .line 116
@@ -4981,7 +4930,7 @@
     .line 119
     .line 120
     :cond_3
-    invoke-static {p0}, LX/4BD;->A07(Landroid/view/View;)I
+    invoke-static {p0}, LX/431;->A04(Landroid/view/View;)I
 
     .line 121
     .line 122
@@ -5008,7 +4957,7 @@
     .line 131
     .line 132
     :cond_4
-    invoke-static {p0}, LX/4T7;->A00(Landroid/view/ViewGroup;)Z
+    invoke-static {p0}, LX/4QA;->A00(Landroid/view/ViewGroup;)Z
 
     .line 133
     .line 134
@@ -5020,7 +4969,7 @@
 
     .line 137
     .line 138
-    invoke-static {p0}, LX/4BD;->A0A(Landroid/view/View;)I
+    invoke-static {p0}, LX/431;->A05(Landroid/view/View;)I
 
     .line 139
     .line 140
@@ -5031,7 +4980,7 @@
     sub-int/2addr v3, v0
 
     .line 143
-    invoke-static {p0, v2}, LX/4BF;->A0D(Landroid/view/View;I)I
+    invoke-static {p0, v2}, LX/434;->A0D(Landroid/view/View;I)I
 
     .line 144
     .line 145
@@ -5102,7 +5051,7 @@
 
     .line 176
     :cond_8
-    invoke-static {p0}, LX/4BD;->A07(Landroid/view/View;)I
+    invoke-static {p0}, LX/431;->A04(Landroid/view/View;)I
 
     .line 177
     .line 178
@@ -5151,7 +5100,7 @@
 
     .line 8
     :cond_0
-    invoke-static {p0}, LX/4BF;->A0Z(Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-static {p0}, LX/434;->A0U(Landroid/view/ViewGroup;)Landroid/view/View;
 
     .line 9
     .line 10
@@ -5159,7 +5108,7 @@
     move-result-object v1
 
     .line 12
-    invoke-static {v1}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 13
     .line 14
@@ -5175,7 +5124,7 @@
     move-result v3
 
     .line 20
-    invoke-static {p0}, LX/4BD;->A08(Landroid/view/View;)I
+    invoke-static {p0}, LX/432;->A06(Landroid/view/View;)I
 
     .line 21
     .line 22
@@ -5191,7 +5140,7 @@
     move-result v1
 
     .line 28
-    iget v0, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     .line 29
     .line 30
@@ -5268,15 +5217,15 @@
     .locals 2
 
     .line 0
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0O:LX/02k;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0O:LX/02s;
 
     .line 1
     .line 2
-    iget v1, v0, LX/02k;->A01:I
+    iget v1, v0, LX/02s;->A01:I
 
     .line 3
     .line 4
-    iget v0, v0, LX/02k;->A00:I
+    iget v0, v0, LX/02s;->A00:I
 
     .line 5
     .line 6
@@ -5287,7 +5236,7 @@
 .end method
 
 .method public getScrollRange()I
-    .locals 4
+    .locals 3
 
     .line 0
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -5298,14 +5247,14 @@
     move-result v0
 
     .line 4
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 5
     if-lez v0, :cond_0
 
     .line 6
     .line 7
-    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     .line 8
     .line 9
@@ -5313,12 +5262,12 @@
     move-result-object v0
 
     .line 11
-    invoke-static {v0}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v0}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 12
     .line 13
     .line 14
-    move-result-object v2
+    move-result-object v1
 
     .line 15
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
@@ -5326,49 +5275,43 @@
     .line 16
     .line 17
     .line 18
-    move-result v1
+    move-result v0
 
     .line 19
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
     .line 20
     .line 21
-    add-int/2addr v1, v0
-
     .line 22
-    iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    move-result v1
 
     .line 23
-    .line 24
-    add-int/2addr v1, v0
-
-    .line 25
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
+    .line 24
+    .line 25
     .line 26
+    move-result v0
+
     .line 27
+    invoke-static {p0, v0}, LX/431;->A06(Landroid/view/View;I)I
+
     .line 28
-    move-result v0
-
     .line 29
-    invoke-static {p0, v0}, LX/4BD;->A0B(Landroid/view/View;I)I
-
     .line 30
-    .line 31
-    .line 32
     move-result v0
 
+    .line 31
+    invoke-static {v1, v0, v2}, LX/433;->A09(III)I
+
+    .line 32
     .line 33
-    invoke-static {v1, v0, v3}, LX/4BE;->A0B(III)I
-
     .line 34
-    .line 35
-    .line 36
-    move-result v3
+    move-result v2
 
-    .line 37
+    .line 35
     :cond_0
-    return v3
+    return v2
 .end method
 
 .method public getTopFadingEdgeStrength()F
@@ -5438,15 +5381,15 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 1
     .line 2
-    iget-object v0, v0, LX/02i;->A01:Landroid/view/ViewParent;
+    iget-object v0, v0, LX/02q;->A01:Landroid/view/ViewParent;
 
     .line 3
     .line 4
-    invoke-static {v0}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 5
     .line 6
@@ -5461,11 +5404,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 1
     .line 2
-    iget-boolean v0, v0, LX/02i;->A02:Z
+    iget-boolean v0, v0, LX/02q;->A02:Z
 
     .line 3
     .line 4
@@ -5484,7 +5427,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {p0}, LX/4BD;->A07(Landroid/view/View;)I
+    invoke-static {p0}, LX/431;->A04(Landroid/view/View;)I
 
     .line 5
     .line 6
@@ -5527,7 +5470,7 @@
     .locals 4
 
     .line 0
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-static {p1}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 1
     .line 2
@@ -5535,66 +5478,56 @@
     move-result-object v3
 
     .line 4
-    check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-static {p0}, LX/431;->A04(Landroid/view/View;)I
 
     .line 5
     .line 6
-    invoke-static {p0}, LX/4BD;->A07(Landroid/view/View;)I
-
     .line 7
+    move-result v0
+
     .line 8
+    invoke-static {v3, v0}, LX/432;->A0B(Landroid/view/ViewGroup$MarginLayoutParams;I)I
+
     .line 9
+    .line 10
+    .line 11
     move-result v1
 
-    .line 10
-    iget v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    .line 11
     .line 12
-    add-int/2addr v1, v0
+    add-int/2addr v1, p3
 
     .line 13
-    iget v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iget v0, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 14
     .line 15
-    add-int/2addr v1, v0
+    invoke-static {p2, v1, v0}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
 
     .line 16
-    add-int/2addr v1, p3
-
     .line 17
-    iget v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
-
     .line 18
+    move-result v2
+
     .line 19
-    invoke-static {p2, v1, v0}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
+    iget v1, v3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     .line 20
     .line 21
-    .line 22
-    move-result v2
+    iget v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
+    .line 22
     .line 23
-    iget v1, v3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+    add-int/2addr v1, v0
 
     .line 24
+    const/4 v0, 0x0
+
     .line 25
-    iget v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    invoke-static {p1, v1, v0, v2}, LX/432;->A1A(Landroid/view/View;III)V
 
     .line 26
     .line 27
-    add-int/2addr v1, v0
-
     .line 28
-    const/4 v0, 0x0
-
-    .line 29
-    invoke-static {p1, v1, v0, v2}, LX/4BD;->A1C(Landroid/view/View;III)V
-
-    .line 30
-    .line 31
-    .line 32
     return-void
 .end method
 
@@ -5663,7 +5596,7 @@
 
     .line 19
     .line 20
-    invoke-static {v0, v1}, LX/001;->A1O(II)Z
+    invoke-static {v0, v1}, LX/001;->A1N(II)Z
 
     .line 21
     .line 22
@@ -5739,7 +5672,7 @@
     and-int/2addr v1, v2
 
     .line 55
-    invoke-static {v1, v2}, LX/001;->A1O(II)Z
+    invoke-static {v1, v2}, LX/001;->A1N(II)Z
 
     .line 56
     .line 57
@@ -5879,7 +5812,7 @@
 
     .line 28
     .line 29
-    invoke-direct {p0, p1}, Landroidx/core/widget/NestedScrollView;->A03(Landroid/view/MotionEvent;)V
+    invoke-direct {p0, p1}, Landroidx/core/widget/NestedScrollView;->A04(Landroid/view/MotionEvent;)V
 
     .line 30
     .line 31
@@ -5922,7 +5855,7 @@
 
     .line 48
     .line 49
-    invoke-static {v1, v0, v3}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0, v3}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 50
     .line 51
@@ -5958,7 +5891,7 @@
 
     .line 65
     .line 66
-    invoke-static {v3, v0}, LX/4BF;->A05(II)I
+    invoke-static {v3, v0}, LX/433;->A08(II)I
 
     .line 67
     .line 68
@@ -6130,11 +6063,11 @@
     .line 149
     .line 150
     :cond_7
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 151
     .line 152
-    invoke-virtual {v0, v7}, LX/02i;->A03(I)V
+    invoke-virtual {v0, v7}, LX/02q;->A03(I)V
 
     .line 153
     .line 154
@@ -6302,7 +6235,7 @@
     .line 232
     .line 233
     .line 234
-    invoke-direct {p0, p1}, Landroidx/core/widget/NestedScrollView;->A08(Landroid/view/MotionEvent;)Z
+    invoke-direct {p0, p1}, Landroidx/core/widget/NestedScrollView;->A09(Landroid/view/MotionEvent;)Z
 
     .line 235
     .line 236
@@ -6334,11 +6267,11 @@
 
     .line 248
     .line 249
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 250
     .line 251
-    invoke-virtual {v0, v3, v7}, LX/02i;->A06(II)Z
+    invoke-virtual {v0, v3, v7}, LX/02q;->A06(II)Z
 
     .line 252
     .line 253
@@ -6357,7 +6290,7 @@
 
     .line 260
     :cond_b
-    invoke-direct {p0, p1}, Landroidx/core/widget/NestedScrollView;->A08(Landroid/view/MotionEvent;)Z
+    invoke-direct {p0, p1}, Landroidx/core/widget/NestedScrollView;->A09(Landroid/view/MotionEvent;)Z
 
     .line 261
     .line 262
@@ -6440,7 +6373,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0, p0}, Landroidx/core/widget/NestedScrollView;->A0A(Landroid/view/View;Landroid/view/View;)Z
+    invoke-static {v0, p0}, Landroidx/core/widget/NestedScrollView;->A0B(Landroid/view/View;Landroid/view/View;)Z
 
     .line 11
     .line 12
@@ -6557,7 +6490,7 @@
     move-result-object v0
 
     .line 69
-    invoke-static {v0}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v0}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 70
     .line 71
@@ -6570,121 +6503,115 @@
     .line 74
     .line 75
     .line 76
-    move-result v4
+    move-result v0
 
     .line 77
-    iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
     .line 78
     .line 79
-    add-int/2addr v4, v0
-
     .line 80
-    iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    move-result v4
 
     .line 81
-    .line 82
-    add-int/2addr v4, v0
-
-    .line 83
     :cond_2
     sub-int/2addr p5, p3
 
-    .line 84
-    invoke-static {p0, p5}, LX/4BD;->A0B(Landroid/view/View;I)I
+    .line 82
+    invoke-static {p0, p5}, LX/431;->A06(Landroid/view/View;I)I
 
+    .line 83
+    .line 84
     .line 85
-    .line 86
-    .line 87
     move-result v3
 
-    .line 88
+    .line 86
     invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
+    .line 87
+    .line 88
     .line 89
-    .line 90
-    .line 91
     move-result v2
 
-    .line 92
+    .line 90
     move v1, v2
 
-    .line 93
+    .line 91
     if-ge v3, v4, :cond_5
+
+    .line 92
+    .line 93
+    if-ltz v2, :cond_5
 
     .line 94
     .line 95
-    if-ltz v2, :cond_5
+    add-int v0, v3, v2
 
     .line 96
     .line 97
-    add-int v0, v3, v2
+    if-le v0, v4, :cond_3
 
     .line 98
     .line 99
-    if-le v0, v4, :cond_3
+    sub-int v1, v4, v3
 
     .line 100
     .line 101
-    sub-int v1, v4, v3
-
-    .line 102
-    .line 103
     :cond_3
     :goto_0
     if-eq v1, v2, :cond_4
 
-    .line 104
-    .line 105
+    .line 102
+    .line 103
     invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
+    .line 104
+    .line 105
     .line 106
-    .line 107
-    .line 108
     move-result v0
 
-    .line 109
+    .line 107
     invoke-virtual {p0, v0, v1}, Landroidx/core/widget/NestedScrollView;->scrollTo(II)V
 
+    .line 108
+    .line 109
     .line 110
-    .line 111
-    .line 112
     :cond_4
     invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
+    .line 111
+    .line 112
     .line 113
-    .line 114
-    .line 115
     move-result v1
 
-    .line 116
+    .line 114
     invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
+    .line 115
+    .line 116
     .line 117
-    .line 118
-    .line 119
     move-result v0
 
-    .line 120
+    .line 118
     invoke-virtual {p0, v1, v0}, Landroidx/core/widget/NestedScrollView;->scrollTo(II)V
 
+    .line 119
+    .line 120
     .line 121
-    .line 122
-    .line 123
     const/4 v0, 0x1
 
-    .line 124
+    .line 122
     iput-boolean v0, p0, Landroidx/core/widget/NestedScrollView;->A0J:Z
 
-    .line 125
-    .line 126
+    .line 123
+    .line 124
     return-void
 
-    .line 127
+    .line 125
     :cond_5
     const/4 v1, 0x0
 
-    .line 128
+    .line 126
     goto :goto_0
 .end method
 
@@ -6729,7 +6656,7 @@
 
     .line 18
     .line 19
-    invoke-static {p0}, LX/4BF;->A0Z(Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-static {p0}, LX/434;->A0U(Landroid/view/ViewGroup;)Landroid/view/View;
 
     .line 20
     .line 21
@@ -6737,7 +6664,7 @@
     move-result-object v4
 
     .line 23
-    invoke-static {v4}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v4}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 24
     .line 25
@@ -6761,7 +6688,7 @@
     move-result v0
 
     .line 35
-    invoke-static {p0, v0}, LX/4BD;->A0B(Landroid/view/View;I)I
+    invoke-static {p0, v0}, LX/431;->A06(Landroid/view/View;I)I
 
     .line 36
     .line 37
@@ -6769,14 +6696,14 @@
     move-result v2
 
     .line 39
-    iget v0, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    iget v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     .line 40
     .line 41
     sub-int/2addr v2, v0
 
     .line 42
-    iget v0, v3, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+    iget v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     .line 43
     .line 44
@@ -6787,49 +6714,43 @@
 
     .line 46
     .line 47
-    invoke-static {p0}, LX/4BD;->A07(Landroid/view/View;)I
+    invoke-static {p0}, LX/431;->A04(Landroid/view/View;)I
 
     .line 48
     .line 49
     .line 50
-    move-result v1
+    move-result v0
 
     .line 51
-    iget v0, v3, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+    invoke-static {v3, v0}, LX/432;->A0B(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
     .line 52
     .line 53
-    add-int/2addr v1, v0
-
     .line 54
-    iget v0, v3, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+    move-result v1
 
     .line 55
-    .line 56
-    add-int/2addr v1, v0
+    iget v0, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
 
+    .line 56
     .line 57
-    iget v0, v3, Landroid/widget/FrameLayout$LayoutParams;->width:I
+    invoke-static {p1, v1, v0}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
 
     .line 58
     .line 59
-    invoke-static {p1, v1, v0}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
-
     .line 60
-    .line 61
-    .line 62
     move-result v1
 
-    .line 63
+    .line 61
     const/high16 v0, 0x40000000    # 2.0f
+
+    .line 62
+    .line 63
+    invoke-static {v4, v2, v0, v1}, LX/432;->A1A(Landroid/view/View;III)V
 
     .line 64
     .line 65
-    invoke-static {v4, v2, v0, v1}, LX/4BD;->A1C(Landroid/view/View;III)V
-
     .line 66
-    .line 67
-    .line 68
     :cond_0
     return-void
 .end method
@@ -6859,7 +6780,7 @@
     float-to-int v0, p3
 
     .line 9
-    invoke-virtual {p0, v0}, Landroidx/core/widget/NestedScrollView;->A0C(I)V
+    invoke-virtual {p0, v0}, Landroidx/core/widget/NestedScrollView;->A0D(I)V
 
     .line 10
     .line 11
@@ -6872,11 +6793,11 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p2, p3}, LX/02i;->A04(FF)Z
+    invoke-virtual {v0, p2, p3}, LX/02q;->A04(FF)Z
 
     .line 3
     .line 4
@@ -6909,7 +6830,7 @@
     move-object v2, p4
 
     .line 6
-    invoke-virtual/range {v0 .. v5}, Landroidx/core/widget/NestedScrollView;->Aa6(Landroid/view/View;[IIII)V
+    invoke-virtual/range {v0 .. v5}, Landroidx/core/widget/NestedScrollView;->AYV(Landroid/view/View;[IIII)V
 
     .line 7
     .line 8
@@ -6927,7 +6848,7 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-direct {p0, p5, v0, v1}, Landroidx/core/widget/NestedScrollView;->A02(I[II)V
+    invoke-direct {p0, p5, v0, v1}, Landroidx/core/widget/NestedScrollView;->A03(I[II)V
 
     .line 3
     .line 4
@@ -6942,7 +6863,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/core/widget/NestedScrollView;->Aa9(Landroid/view/View;Landroid/view/View;II)V
+    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/core/widget/NestedScrollView;->AYY(Landroid/view/View;Landroid/view/View;II)V
 
     .line 2
     .line 3
@@ -7018,7 +6939,7 @@
     move-result v0
 
     .line 23
-    invoke-direct {p0, v2, v1, v0}, Landroidx/core/widget/NestedScrollView;->A09(Landroid/view/View;II)Z
+    invoke-direct {p0, v2, v1, v0}, Landroidx/core/widget/NestedScrollView;->A0A(Landroid/view/View;II)Z
 
     .line 24
     .line 25
@@ -7171,7 +7092,7 @@
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0A:LX/4T8;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0A:LX/4L0;
 
     .line 4
     .line 5
@@ -7179,19 +7100,19 @@
 
     .line 6
     .line 7
-    check-cast v0, LX/4cX;
+    check-cast v0, LX/4Kz;
 
     .line 8
     .line 9
-    iget-object v1, v0, LX/4cX;->A02:Landroid/view/View;
+    iget-object v1, v0, LX/4Kz;->A01:Landroid/view/View;
 
     .line 10
     .line 11
-    iget-object v0, v0, LX/4cX;->A01:Landroid/view/View;
+    iget-object v0, v0, LX/4Kz;->A00:Landroid/view/View;
 
     .line 12
     .line 13
-    invoke-static {p0, v1, v0}, LX/4am;->A01(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-static {p0, v1, v0}, LX/4Ku;->A01(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
     .line 14
     .line 15
@@ -7228,7 +7149,7 @@
     const/4 v2, 0x0
 
     .line 12
-    invoke-direct {p0, v1, v2, p4}, Landroidx/core/widget/NestedScrollView;->A09(Landroid/view/View;II)Z
+    invoke-direct {p0, v1, v2, p4}, Landroidx/core/widget/NestedScrollView;->A0A(Landroid/view/View;II)Z
 
     .line 13
     .line 14
@@ -7274,7 +7195,7 @@
 
     .line 35
     .line 36
-    invoke-static {p0, v2, v1, v2}, Landroidx/core/widget/NestedScrollView;->A04(Landroidx/core/widget/NestedScrollView;IIZ)V
+    invoke-static {p0, v2, v1, v2}, Landroidx/core/widget/NestedScrollView;->A05(Landroidx/core/widget/NestedScrollView;IIZ)V
 
     .line 37
     .line 38
@@ -7300,7 +7221,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 3
     .line 4
@@ -7318,7 +7239,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Landroidx/core/widget/NestedScrollView;->Ad8(Landroid/view/View;I)V
+    invoke-virtual {p0, p1, v0}, Landroidx/core/widget/NestedScrollView;->AbW(Landroid/view/View;I)V
 
     .line 2
     .line 3
@@ -7441,7 +7362,7 @@
 
     .line 50
     .line 51
-    invoke-direct {v4, v5}, Landroidx/core/widget/NestedScrollView;->A03(Landroid/view/MotionEvent;)V
+    invoke-direct {v4, v5}, Landroidx/core/widget/NestedScrollView;->A04(Landroid/view/MotionEvent;)V
 
     .line 52
     .line 53
@@ -7568,7 +7489,7 @@
 
     .line 110
     .line 111
-    invoke-static {v5, v0, v1}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v5, v0, v1}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 112
     .line 113
@@ -7615,7 +7536,7 @@
     move-result v0
 
     .line 133
-    invoke-static {v4, v0}, LX/4BF;->A00(Landroid/view/View;F)F
+    invoke-static {v4, v0}, LX/434;->A02(Landroid/view/View;F)F
 
     .line 134
     .line 135
@@ -7626,7 +7547,7 @@
     int-to-float v0, v8
 
     .line 138
-    invoke-static {v4, v0}, LX/4BF;->A01(Landroid/view/View;F)F
+    invoke-static {v4, v0}, LX/434;->A03(Landroid/view/View;F)F
 
     .line 139
     .line 140
@@ -7638,7 +7559,7 @@
 
     .line 143
     .line 144
-    invoke-static {v10}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v10}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 145
     .line 146
@@ -7660,7 +7581,7 @@
     neg-float v0, v12
 
     .line 154
-    invoke-static {v10, v0, v11}, LX/4T4;->A01(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v10, v0, v11}, LX/4Q7;->A01(Landroid/widget/EdgeEffect;FF)F
 
     .line 155
     .line 156
@@ -7672,7 +7593,7 @@
 
     .line 159
     :goto_1
-    invoke-static {v10}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v10}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 160
     .line 161
@@ -7705,7 +7626,7 @@
     int-to-float v0, v0
 
     .line 175
-    invoke-static {v1, v0}, LX/4BE;->A06(FF)I
+    invoke-static {v1, v0}, LX/433;->A05(FF)I
 
     .line 176
     .line 177
@@ -7834,7 +7755,7 @@
 
     .line 233
     .line 234
-    invoke-static {v10}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v10}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 235
     .line 236
@@ -7857,7 +7778,7 @@
     sub-float/2addr v0, v11
 
     .line 245
-    invoke-static {v10, v12, v0}, LX/4T4;->A01(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v10, v12, v0}, LX/4Q7;->A01(Landroid/widget/EdgeEffect;FF)F
 
     .line 246
     .line 247
@@ -7924,7 +7845,7 @@
 
     .line 276
     .line 277
-    invoke-static {v1}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v1}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 278
     .line 279
@@ -7940,7 +7861,7 @@
 
     .line 284
     .line 285
-    invoke-direct {v4, v1, v5}, Landroidx/core/widget/NestedScrollView;->A0B(Landroid/widget/EdgeEffect;I)Z
+    invoke-direct {v4, v1, v5}, Landroidx/core/widget/NestedScrollView;->A0C(Landroid/widget/EdgeEffect;I)Z
 
     .line 286
     .line 287
@@ -7957,7 +7878,7 @@
     .line 292
     :cond_e
     :goto_3
-    invoke-virtual {v4, v5}, Landroidx/core/widget/NestedScrollView;->A0C(I)V
+    invoke-virtual {v4, v5}, Landroidx/core/widget/NestedScrollView;->A0D(I)V
 
     .line 293
     .line 294
@@ -7996,11 +7917,11 @@
     .line 309
     .line 310
     :cond_10
-    iget-object v0, v4, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, v4, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 311
     .line 312
-    invoke-virtual {v0, v13}, LX/02i;->A03(I)V
+    invoke-virtual {v0, v13}, LX/02q;->A03(I)V
 
     .line 313
     .line 314
@@ -8032,7 +7953,7 @@
 
     .line 328
     .line 329
-    invoke-static {v1}, LX/4T4;->A00(Landroid/widget/EdgeEffect;)F
+    invoke-static {v1}, LX/4Q7;->A00(Landroid/widget/EdgeEffect;)F
 
     .line 330
     .line 331
@@ -8051,7 +7972,7 @@
 
     .line 337
     .line 338
-    invoke-direct {v4, v1, v5}, Landroidx/core/widget/NestedScrollView;->A0B(Landroid/widget/EdgeEffect;I)Z
+    invoke-direct {v4, v1, v5}, Landroidx/core/widget/NestedScrollView;->A0C(Landroid/widget/EdgeEffect;I)Z
 
     .line 339
     .line 340
@@ -8076,11 +7997,11 @@
     int-to-float v1, v5
 
     .line 349
-    iget-object v0, v4, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, v4, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 350
     .line 351
-    invoke-virtual {v0, v6, v1}, LX/02i;->A04(FF)Z
+    invoke-virtual {v0, v6, v1}, LX/02q;->A04(FF)Z
 
     .line 352
     .line 353
@@ -8240,11 +8161,11 @@
     .line 426
     .line 427
     .line 428
-    iget-object v0, v4, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, v4, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 429
     .line 430
-    invoke-virtual {v0, v2}, LX/02i;->A03(I)V
+    invoke-virtual {v0, v2}, LX/02q;->A03(I)V
 
     .line 431
     .line 432
@@ -8280,11 +8201,11 @@
     const/4 v1, 0x2
 
     .line 447
-    iget-object v0, v4, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, v4, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 448
     .line 449
-    invoke-virtual {v0, v1, v13}, LX/02i;->A06(II)Z
+    invoke-virtual {v0, v1, v13}, LX/02q;->A06(II)Z
 
     .line 450
     .line 451
@@ -8438,7 +8359,7 @@
 
     .line 36
     :cond_1
-    invoke-static {p0, v1, v2, v1}, Landroidx/core/widget/NestedScrollView;->A04(Landroidx/core/widget/NestedScrollView;IIZ)V
+    invoke-static {p0, v1, v2, v1}, Landroidx/core/widget/NestedScrollView;->A05(Landroidx/core/widget/NestedScrollView;IIZ)V
 
     .line 37
     .line 38
@@ -8518,20 +8439,20 @@
 
     .line 5
     .line 6
-    invoke-static {p0}, LX/4BF;->A0Z(Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-static {p0}, LX/434;->A0U(Landroid/view/ViewGroup;)Landroid/view/View;
 
     .line 7
     .line 8
     .line 9
-    move-result-object v1
+    move-result-object v5
 
     .line 10
-    invoke-static {v1}, LX/4BF;->A0d(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v5}, LX/433;->A0Q(Landroid/view/View;)Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 11
     .line 12
     .line 13
-    move-result-object v5
+    move-result-object v1
 
     .line 14
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
@@ -8542,7 +8463,7 @@
     move-result v0
 
     .line 18
-    invoke-static {p0, v0}, LX/4BD;->A0C(Landroid/view/View;I)I
+    invoke-static {p0, v0}, LX/431;->A07(Landroid/view/View;I)I
 
     .line 19
     .line 20
@@ -8550,155 +8471,143 @@
     move-result v4
 
     .line 22
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v5}, Landroid/view/View;->getWidth()I
 
     .line 23
     .line 24
     .line 25
-    move-result v3
+    move-result v0
 
     .line 26
-    iget v0, v5, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+    invoke-static {v1, v0}, LX/432;->A0B(Landroid/view/ViewGroup$MarginLayoutParams;I)I
 
     .line 27
     .line 28
-    add-int/2addr v3, v0
-
     .line 29
-    iget v0, v5, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+    move-result v3
 
     .line 30
-    .line 31
-    add-int/2addr v3, v0
-
-    .line 32
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
+    .line 31
+    .line 32
     .line 33
-    .line 34
-    .line 35
     move-result v0
 
-    .line 36
-    invoke-static {p0, v0}, LX/4BD;->A0B(Landroid/view/View;I)I
+    .line 34
+    invoke-static {p0, v0}, LX/431;->A06(Landroid/view/View;I)I
 
+    .line 35
+    .line 36
     .line 37
-    .line 38
-    .line 39
     move-result v2
 
-    .line 40
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    .line 38
+    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
 
+    .line 39
+    .line 40
     .line 41
+    move-result v0
+
     .line 42
+    invoke-static {v1, v0}, LX/432;->A0A(Landroid/view/ViewGroup$MarginLayoutParams;I)I
+
     .line 43
+    .line 44
+    .line 45
     move-result v1
 
-    .line 44
-    iget v0, v5, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    .line 45
     .line 46
-    add-int/2addr v1, v0
+    if-ge v4, v3, :cond_5
 
     .line 47
-    iget v0, v5, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
     .line 48
-    .line 49
-    add-int/2addr v1, v0
+    if-ltz p1, :cond_5
 
+    .line 49
     .line 50
-    if-ge v4, v3, :cond_5
+    add-int v0, v4, p1
 
     .line 51
     .line 52
-    if-ltz p1, :cond_5
+    if-le v0, v3, :cond_0
 
     .line 53
     .line 54
-    add-int v0, v4, p1
+    sub-int p1, v3, v4
 
     .line 55
     .line 56
-    if-le v0, v3, :cond_0
-
-    .line 57
-    .line 58
-    sub-int p1, v3, v4
-
-    .line 59
-    .line 60
     :cond_0
     :goto_0
     if-ge v2, v1, :cond_4
 
+    .line 57
+    .line 58
+    if-ltz p2, :cond_4
+
+    .line 59
+    .line 60
+    add-int v0, v2, p2
+
     .line 61
     .line 62
-    if-ltz p2, :cond_4
+    if-le v0, v1, :cond_1
 
     .line 63
     .line 64
-    add-int v0, v2, p2
+    sub-int p2, v1, v2
 
     .line 65
     .line 66
-    if-le v0, v1, :cond_1
-
-    .line 67
-    .line 68
-    sub-int p2, v1, v2
-
-    .line 69
-    .line 70
     :cond_1
     :goto_1
     invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
-    .line 71
-    .line 72
-    .line 73
+    .line 67
+    .line 68
+    .line 69
     move-result v0
 
-    .line 74
+    .line 70
     if-ne p1, v0, :cond_2
 
-    .line 75
-    .line 76
+    .line 71
+    .line 72
     invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
+
+    .line 73
+    .line 74
+    .line 75
+    move-result v0
+
+    .line 76
+    if-eq p2, v0, :cond_3
 
     .line 77
     .line 78
-    .line 79
-    move-result v0
-
-    .line 80
-    if-eq p2, v0, :cond_3
-
-    .line 81
-    .line 82
     :cond_2
     invoke-super {p0, p1, p2}, Landroid/view/View;->scrollTo(II)V
 
-    .line 83
-    .line 84
-    .line 85
+    .line 79
+    .line 80
+    .line 81
     :cond_3
     return-void
 
-    .line 86
+    .line 82
     :cond_4
     const/4 p2, 0x0
 
-    .line 87
+    .line 83
     goto :goto_1
 
-    .line 88
+    .line 84
     :cond_5
     const/4 p1, 0x0
 
-    .line 89
+    .line 85
     goto :goto_0
 .end method
 
@@ -8731,11 +8640,11 @@
     .locals 2
 
     .line 0
-    iget-object v1, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v1, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 1
     .line 2
-    iget-boolean v0, v1, LX/02i;->A02:Z
+    iget-boolean v0, v1, LX/02q;->A02:Z
 
     .line 3
     .line 4
@@ -8743,28 +8652,28 @@
 
     .line 5
     .line 6
-    iget-object v0, v1, LX/02i;->A04:Landroid/view/View;
+    iget-object v0, v1, LX/02q;->A04:Landroid/view/View;
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/03G;->A0Q(Landroid/view/View;)V
+    invoke-static {v0}, LX/03U;->A0U(Landroid/view/View;)V
 
     .line 9
     .line 10
     .line 11
     :cond_0
-    iput-boolean p1, v1, LX/02i;->A02:Z
+    iput-boolean p1, v1, LX/02q;->A02:Z
 
     .line 12
     .line 13
     return-void
 .end method
 
-.method public setOnScrollChangeListener(LX/4T8;)V
+.method public setOnScrollChangeListener(LX/4L0;)V
     .locals 0
 
     .line 0
-    iput-object p1, p0, Landroidx/core/widget/NestedScrollView;->A0A:LX/4T8;
+    iput-object p1, p0, Landroidx/core/widget/NestedScrollView;->A0A:LX/4L0;
 
     .line 1
     .line 2
@@ -8797,11 +8706,11 @@
     const/4 v1, 0x0
 
     .line 1
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 2
     .line 3
-    invoke-virtual {v0, p1, v1}, LX/02i;->A06(II)Z
+    invoke-virtual {v0, p1, v1}, LX/02q;->A06(II)Z
 
     .line 4
     .line 5
@@ -8819,11 +8728,11 @@
     const/4 v1, 0x0
 
     .line 1
-    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02i;
+    iget-object v0, p0, Landroidx/core/widget/NestedScrollView;->A0N:LX/02q;
 
     .line 2
     .line 3
-    invoke-virtual {v0, v1}, LX/02i;->A03(I)V
+    invoke-virtual {v0, v1}, LX/02q;->A03(I)V
 
     .line 4
     .line 5

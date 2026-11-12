@@ -3,4 +3,4 @@
 .source ""
 
 # interfaces
-.implements LX/5yU;
+.implements LX/5yQ;

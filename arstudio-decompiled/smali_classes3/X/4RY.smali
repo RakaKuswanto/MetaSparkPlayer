@@ -1,8 +1,6 @@
-.class public interface abstract LX/4RY;
-.super Ljava/lang/Object;
+.class public abstract LX/4RY;
+.super Landroid/text/SpannableStringBuilder;
 .source ""
 
-
-# virtual methods
-.method public abstract onDeleteKeyDown()V
-.end method
+# interfaces
+.implements LX/4RZ;

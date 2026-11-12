@@ -231,7 +231,7 @@
     .line 4
     .line 5
     :try_start_0
-    invoke-static {}, LX/001;->A0F()Ljava/lang/String;
+    invoke-static {}, LX/001;->A0J()Ljava/lang/String;
 
     .line 6
     .line 7

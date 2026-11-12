@@ -17,11 +17,11 @@
 
 
 # static fields
-.field public static volatile A0T:LX/1L5;
+.field public static volatile A0T:LX/15A;
 
-.field public static volatile A0U:LX/1L3;
+.field public static volatile A0U:LX/1dy;
 
-.field public static volatile A0V:LX/1L4;
+.field public static volatile A0V:LX/18b;
 
 .field public static volatile A0W:Ljava/lang/String;
 
@@ -77,11 +77,11 @@
 
 .field public final A0N:Ljava/lang/String;
 
-.field public final A0O:LX/1L5;
+.field public final A0O:LX/15A;
 
-.field public final A0P:LX/1L3;
+.field public final A0P:LX/1dy;
 
-.field public final A0Q:LX/1L4;
+.field public final A0Q:LX/18b;
 
 .field public final A0R:Ljava/lang/String;
 
@@ -93,11 +93,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x14
+    const/16 v0, 0x39
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1KB;->A00(I)LX/1KB;
 
     .line 3
     .line 4
@@ -112,16 +112,16 @@
     return-void
 .end method
 
-.method public constructor <init>(LX/1L5;Lcom/facebook/inspiration/model/fonts/InspirationFont;LX/1L3;LX/1L4;Lcom/facebook/ipc/composer/model/richtext/OverlayAnimationStyle;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;DD)V
+.method public constructor <init>(LX/15A;Lcom/facebook/inspiration/model/fonts/InspirationFont;LX/1dy;LX/18b;Lcom/facebook/ipc/composer/model/richtext/OverlayAnimationStyle;Lcom/google/common/collect/ImmutableList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;DD)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p7, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A05:Ljava/lang/String;
 
-    const-string v0, "backgroundColor"
+    const-string/jumbo v0, "backgroundColor"
 
-    invoke-static {v0, p8}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p8, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p8, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A06:Ljava/lang/String;
 
@@ -129,37 +129,37 @@
 
     const/4 v0, 0x4
 
-    invoke-static {v0}, LX/4BC;->A00(I)Ljava/lang/String;
+    invoke-static {v0}, LX/430;->A00(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, p10}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p10, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p10, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A08:Ljava/lang/String;
 
-    const-string v0, "backgroundGradientDirection"
+    const-string/jumbo v0, "backgroundGradientDirection"
 
-    invoke-static {v0, p11}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p11, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p11, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A09:Ljava/lang/String;
 
-    const-string v0, "backgroundImageUrl"
+    const-string/jumbo v0, "backgroundImageUrl"
 
-    invoke-static {v0, p12}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p12, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p12, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0A:Ljava/lang/String;
 
-    const-string v0, "color"
+    const-string/jumbo v0, "color"
 
-    invoke-static {v0, p13}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p13, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p13, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0B:Ljava/lang/String;
 
-    const-string v0, "customThumbnailUrl"
+    const-string/jumbo v0, "customThumbnailUrl"
 
     move-object/from16 v1, p14
 
-    invoke-static {v0, v1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0C:Ljava/lang/String;
 
@@ -169,7 +169,7 @@
 
     iput-wide v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00:D
 
-    iput-object p4, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/1L4;
+    iput-object p4, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/18b;
 
     iput-object p2, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02:Lcom/facebook/inspiration/model/fonts/InspirationFont;
 
@@ -185,7 +185,7 @@
 
     move-object/from16 v1, p17
 
-    invoke-static {v0, v1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0F:Ljava/lang/String;
 
@@ -211,7 +211,7 @@
 
     move-object/from16 v1, p22
 
-    invoke-static {v0, v1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0K:Ljava/lang/String;
 
@@ -223,15 +223,15 @@
 
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0R:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1L3;
+    iput-object p3, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1dy;
 
-    iput-object p1, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0O:LX/1L5;
+    iput-object p1, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0O:LX/15A;
 
     const-string/jumbo v0, "thumbnailImageUrl"
 
     move-object/from16 v1, p24
 
-    invoke-static {v0, v1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0L:Ljava/lang/String;
 
@@ -239,7 +239,7 @@
 
     move-object/from16 v1, p25
 
-    invoke-static {v0, v1}, LX/1SG;->A06(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v1, v0}, LX/1O4;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0M:Ljava/lang/String;
 
@@ -265,7 +265,7 @@
     .line 1
     .line 2
     .line 3
-    invoke-static {p0}, LX/0Ye;->A0M(Ljava/lang/Object;)Ljava/lang/ClassLoader;
+    invoke-static {p0}, LX/0X2;->A0Z(Ljava/lang/Object;)Ljava/lang/ClassLoader;
 
     .line 4
     .line 5
@@ -423,7 +423,7 @@
 
     .line 79
     .line 80
-    iput-object v2, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/1L4;
+    iput-object v2, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/18b;
 
     .line 81
     .line 82
@@ -629,7 +629,7 @@
 
     .line 177
     .line 178
-    iput-object v2, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1L3;
+    iput-object v2, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1dy;
 
     .line 179
     .line 180
@@ -646,7 +646,7 @@
 
     .line 185
     .line 186
-    invoke-static {}, LX/1L5;->values()[LX/1L5;
+    invoke-static {}, LX/15A;->values()[LX/15A;
 
     .line 187
     .line 188
@@ -667,7 +667,7 @@
     .line 195
     .line 196
     :cond_0
-    iput-object v2, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0O:LX/1L5;
+    iput-object v2, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0O:LX/15A;
 
     .line 197
     .line 198
@@ -695,7 +695,7 @@
 
     .line 209
     .line 210
-    invoke-static {p1}, LX/0Yd;->A0I(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, LX/0X1;->A0K(Landroid/os/Parcel;)Ljava/lang/String;
 
     .line 211
     .line 212
@@ -707,7 +707,7 @@
 
     .line 215
     .line 216
-    invoke-static {}, LX/002;->A0L()Ljava/util/HashSet;
+    invoke-static {}, LX/002;->A0C()Ljava/util/HashSet;
 
     .line 217
     .line 218
@@ -731,314 +731,307 @@
 
     .line 226
     .line 227
-    invoke-static {p1, v2, v0}, LX/0Ye;->A05(Landroid/os/Parcel;Ljava/util/AbstractCollection;I)I
+    invoke-static {p1, v2}, LX/0X1;->A0m(Landroid/os/Parcel;Ljava/util/AbstractCollection;)V
 
     .line 228
     .line 229
     .line 230
-    move-result v0
+    add-int/lit8 v0, v0, 0x1
 
     .line 231
+    .line 232
     goto :goto_e
 
-    .line 232
-    :cond_1
-    invoke-static {}, LX/1L3;->values()[LX/1L3;
-
     .line 233
+    :cond_1
+    invoke-static {}, LX/1dy;->values()[LX/1dy;
+
     .line 234
     .line 235
+    .line 236
     move-result-object v1
 
-    .line 236
+    .line 237
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 237
     .line 238
     .line 239
+    .line 240
     move-result v0
 
-    .line 240
+    .line 241
     aget-object v0, v1, v0
 
-    .line 241
     .line 242
-    iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1L3;
-
     .line 243
+    iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1dy;
+
     .line 244
+    .line 245
     goto :goto_d
 
-    .line 245
+    .line 246
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 246
     .line 247
     .line 248
+    .line 249
     move-result-object v0
 
-    .line 249
+    .line 250
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0R:Ljava/lang/String;
 
-    .line 250
     .line 251
+    .line 252
     goto :goto_c
 
-    .line 252
+    .line 253
     :cond_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 253
     .line 254
     .line 255
+    .line 256
     move-result-object v0
 
-    .line 256
+    .line 257
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0J:Ljava/lang/String;
 
-    .line 257
     .line 258
+    .line 259
     goto :goto_b
 
-    .line 259
+    .line 260
     :cond_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 260
     .line 261
     .line 262
+    .line 263
     move-result-object v0
 
-    .line 263
+    .line 264
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0I:Ljava/lang/String;
 
-    .line 264
     .line 265
+    .line 266
     goto :goto_a
 
-    .line 266
+    .line 267
     :cond_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 267
     .line 268
     .line 269
+    .line 270
     move-result-object v0
 
-    .line 270
+    .line 271
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0H:Ljava/lang/String;
 
-    .line 271
     .line 272
+    .line 273
     goto/16 :goto_9
 
-    .line 273
     .line 274
+    .line 275
     :cond_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 275
     .line 276
     .line 277
+    .line 278
     move-result-object v0
 
-    .line 278
+    .line 279
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0G:Ljava/lang/String;
 
-    .line 279
     .line 280
+    .line 281
     goto/16 :goto_8
 
-    .line 281
     .line 282
+    .line 283
     :cond_7
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    .line 283
     .line 284
     .line 285
+    .line 286
     move-result-object v0
 
-    .line 286
+    .line 287
     check-cast v0, Lcom/facebook/ipc/composer/model/richtext/OverlayAnimationStyle;
 
-    .line 287
     .line 288
+    .line 289
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A03:Lcom/facebook/ipc/composer/model/richtext/OverlayAnimationStyle;
 
-    .line 289
     .line 290
+    .line 291
     goto/16 :goto_7
 
-    .line 291
     .line 292
+    .line 293
     :cond_8
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 293
     .line 294
     .line 295
+    .line 296
     move-result-object v0
 
-    .line 296
+    .line 297
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0E:Ljava/lang/String;
 
-    .line 297
     .line 298
+    .line 299
     goto/16 :goto_6
 
-    .line 299
     .line 300
+    .line 301
     :cond_9
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 301
     .line 302
     .line 303
+    .line 304
     move-result-object v0
 
-    .line 304
+    .line 305
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0D:Ljava/lang/String;
 
-    .line 305
     .line 306
+    .line 307
     goto/16 :goto_5
 
-    .line 307
     .line 308
+    .line 309
     :cond_a
     sget-object v0, Lcom/facebook/inspiration/model/fonts/InspirationFont;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 309
     .line 310
+    .line 311
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    .line 311
     .line 312
     .line 313
-    move-result-object v0
-
     .line 314
-    check-cast v0, Lcom/facebook/inspiration/model/fonts/InspirationFont;
+    move-result-object v0
 
     .line 315
+    check-cast v0, Lcom/facebook/inspiration/model/fonts/InspirationFont;
+
     .line 316
+    .line 317
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02:Lcom/facebook/inspiration/model/fonts/InspirationFont;
 
-    .line 317
     .line 318
+    .line 319
     goto/16 :goto_4
 
-    .line 319
     .line 320
-    :cond_b
-    invoke-static {}, LX/1L4;->values()[LX/1L4;
-
     .line 321
+    :cond_b
+    invoke-static {}, LX/18b;->values()[LX/18b;
+
     .line 322
     .line 323
+    .line 324
     move-result-object v1
 
-    .line 324
+    .line 325
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    .line 325
     .line 326
     .line 327
+    .line 328
     move-result v0
 
-    .line 328
+    .line 329
     aget-object v0, v1, v0
 
-    .line 329
     .line 330
-    iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/1L4;
-
     .line 331
+    iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/18b;
+
     .line 332
+    .line 333
     goto/16 :goto_3
 
-    .line 333
     .line 334
-    :cond_c
-    invoke-static {p1}, LX/1KF;->A02(Landroid/os/Parcel;)Ljava/util/ArrayList;
-
     .line 335
+    :cond_c
+    invoke-static {p1}, LX/1cw;->A01(Landroid/os/Parcel;)Lcom/google/common/collect/ImmutableList;
+
     .line 336
     .line 337
-    move-result-object v0
-
     .line 338
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+    move-result-object v0
 
     .line 339
-    .line 340
-    .line 341
-    move-result-object v0
-
-    .line 342
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A04:Lcom/google/common/collect/ImmutableList;
 
-    .line 343
-    .line 344
+    .line 340
+    .line 341
     goto/16 :goto_2
 
-    .line 345
-    .line 346
+    .line 342
+    .line 343
     :cond_d
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 347
-    .line 348
-    .line 349
+    .line 344
+    .line 345
+    .line 346
     move-result-object v0
 
-    .line 350
+    .line 347
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A07:Ljava/lang/String;
 
-    .line 351
-    .line 352
+    .line 348
+    .line 349
     goto/16 :goto_1
 
-    .line 353
-    .line 354
+    .line 350
+    .line 351
     :cond_e
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 355
-    .line 356
-    .line 357
+    .line 352
+    .line 353
+    .line 354
     move-result-object v0
 
-    .line 358
+    .line 355
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A05:Ljava/lang/String;
 
-    .line 359
-    .line 360
+    .line 356
+    .line 357
     goto/16 :goto_0
 
-    .line 361
-    .line 362
+    .line 358
+    .line 359
     :cond_f
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    .line 363
-    .line 364
-    .line 365
+    .line 360
+    .line 361
+    .line 362
     move-result-object v0
 
-    .line 366
+    .line 363
     iput-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0S:Ljava/util/Set;
 
-    .line 367
-    .line 368
+    .line 364
+    .line 365
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()LX/1L5;
+.method public final A00()LX/15A;
     .locals 2
 
     .line 0
@@ -1063,7 +1056,7 @@
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0O:LX/1L5;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0O:LX/15A;
 
     .line 12
     .line 13
@@ -1071,7 +1064,7 @@
 
     .line 14
     :cond_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0T:LX/1L5;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0T:LX/15A;
 
     .line 15
     .line 16
@@ -1083,7 +1076,7 @@
 
     .line 19
     :try_start_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0T:LX/1L5;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0T:LX/15A;
 
     .line 20
     .line 21
@@ -1091,11 +1084,11 @@
 
     .line 22
     .line 23
-    sget-object v0, LX/1L5;->LIGHT:LX/1L5;
+    sget-object v0, LX/15A;->LIGHT:LX/15A;
 
     .line 24
     .line 25
-    sput-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0T:LX/1L5;
+    sput-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0T:LX/15A;
 
     .line 26
     .line 27
@@ -1120,14 +1113,14 @@
     .line 32
     :cond_2
     :goto_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0T:LX/1L5;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0T:LX/15A;
 
     .line 33
     .line 34
     return-object v0
 .end method
 
-.method public final A01()LX/1L3;
+.method public final A01()LX/1dy;
     .locals 2
 
     .line 0
@@ -1152,7 +1145,7 @@
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1L3;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1dy;
 
     .line 12
     .line 13
@@ -1160,7 +1153,7 @@
 
     .line 14
     :cond_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0U:LX/1L3;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0U:LX/1dy;
 
     .line 15
     .line 16
@@ -1172,7 +1165,7 @@
 
     .line 19
     :try_start_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0U:LX/1L3;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0U:LX/1dy;
 
     .line 20
     .line 21
@@ -1180,11 +1173,11 @@
 
     .line 22
     .line 23
-    sget-object v0, LX/1L3;->LEFT:LX/1L3;
+    sget-object v0, LX/1dy;->LEFT:LX/1dy;
 
     .line 24
     .line 25
-    sput-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0U:LX/1L3;
+    sput-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0U:LX/1dy;
 
     .line 26
     .line 27
@@ -1209,14 +1202,14 @@
     .line 32
     :cond_2
     :goto_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0U:LX/1L3;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0U:LX/1dy;
 
     .line 33
     .line 34
     return-object v0
 .end method
 
-.method public final A02()LX/1L4;
+.method public final A02()LX/18b;
     .locals 2
 
     .line 0
@@ -1241,7 +1234,7 @@
 
     .line 10
     .line 11
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/1L4;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/18b;
 
     .line 12
     .line 13
@@ -1249,7 +1242,7 @@
 
     .line 14
     :cond_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0V:LX/1L4;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0V:LX/18b;
 
     .line 15
     .line 16
@@ -1261,7 +1254,7 @@
 
     .line 19
     :try_start_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0V:LX/1L4;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0V:LX/18b;
 
     .line 20
     .line 21
@@ -1269,11 +1262,11 @@
 
     .line 22
     .line 23
-    sget-object v0, LX/1L4;->NORMAL:LX/1L4;
+    sget-object v0, LX/18b;->NORMAL:LX/18b;
 
     .line 24
     .line 25
-    sput-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0V:LX/1L4;
+    sput-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0V:LX/18b;
 
     .line 26
     .line 27
@@ -1298,7 +1291,7 @@
     .line 32
     :cond_2
     :goto_0
-    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0V:LX/1L4;
+    sget-object v0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0V:LX/18b;
 
     .line 33
     .line 34
@@ -1436,7 +1429,7 @@
 
     .line 13
     .line 14
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 15
     .line 16
@@ -1456,7 +1449,7 @@
 
     .line 23
     .line 24
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 25
     .line 26
@@ -1476,7 +1469,7 @@
 
     .line 33
     .line 34
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 35
     .line 36
@@ -1496,7 +1489,7 @@
 
     .line 43
     .line 44
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 45
     .line 46
@@ -1516,7 +1509,7 @@
 
     .line 53
     .line 54
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 55
     .line 56
@@ -1536,7 +1529,7 @@
 
     .line 63
     .line 64
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 65
     .line 66
@@ -1556,7 +1549,7 @@
 
     .line 73
     .line 74
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 75
     .line 76
@@ -1576,7 +1569,7 @@
 
     .line 83
     .line 84
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 85
     .line 86
@@ -1596,7 +1589,7 @@
 
     .line 93
     .line 94
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 95
     .line 96
@@ -1624,7 +1617,7 @@
 
     .line 107
     .line 108
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02()LX/1L4;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02()LX/18b;
 
     .line 109
     .line 110
@@ -1632,7 +1625,7 @@
     move-result-object v1
 
     .line 112
-    invoke-virtual {p1}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02()LX/1L4;
+    invoke-virtual {p1}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02()LX/18b;
 
     .line 113
     .line 114
@@ -1652,7 +1645,7 @@
 
     .line 121
     .line 122
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 123
     .line 124
@@ -1672,7 +1665,7 @@
 
     .line 131
     .line 132
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 133
     .line 134
@@ -1692,7 +1685,7 @@
 
     .line 141
     .line 142
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 143
     .line 144
@@ -1712,7 +1705,7 @@
 
     .line 151
     .line 152
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 153
     .line 154
@@ -1732,7 +1725,7 @@
 
     .line 161
     .line 162
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 163
     .line 164
@@ -1752,7 +1745,7 @@
 
     .line 171
     .line 172
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 173
     .line 174
@@ -1772,7 +1765,7 @@
 
     .line 181
     .line 182
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 183
     .line 184
@@ -1792,7 +1785,7 @@
 
     .line 191
     .line 192
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 193
     .line 194
@@ -1812,7 +1805,7 @@
 
     .line 201
     .line 202
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 203
     .line 204
@@ -1832,7 +1825,7 @@
 
     .line 211
     .line 212
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 213
     .line 214
@@ -1876,7 +1869,7 @@
     move-result-object v0
 
     .line 234
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 235
     .line 236
@@ -1888,7 +1881,7 @@
 
     .line 239
     .line 240
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A01()LX/1L3;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A01()LX/1dy;
 
     .line 241
     .line 242
@@ -1896,7 +1889,7 @@
     move-result-object v1
 
     .line 244
-    invoke-virtual {p1}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A01()LX/1L3;
+    invoke-virtual {p1}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A01()LX/1dy;
 
     .line 245
     .line 246
@@ -1908,7 +1901,7 @@
 
     .line 249
     .line 250
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00()LX/1L5;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00()LX/15A;
 
     .line 251
     .line 252
@@ -1916,7 +1909,7 @@
     move-result-object v1
 
     .line 254
-    invoke-virtual {p1}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00()LX/1L5;
+    invoke-virtual {p1}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00()LX/15A;
 
     .line 255
     .line 256
@@ -1936,7 +1929,7 @@
 
     .line 263
     .line 264
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 265
     .line 266
@@ -1956,7 +1949,7 @@
 
     .line 273
     .line 274
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 275
     .line 276
@@ -1976,7 +1969,7 @@
 
     .line 283
     .line 284
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 285
     .line 286
@@ -2004,7 +1997,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1SG;->A02(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/1O4;->A01(Ljava/lang/Object;)I
 
     .line 3
     .line 4
@@ -2020,7 +2013,7 @@
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 11
     .line 12
@@ -2039,7 +2032,7 @@
 
     .line 18
     .line 19
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 20
     .line 21
@@ -2058,7 +2051,7 @@
 
     .line 27
     .line 28
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 29
     .line 30
@@ -2077,7 +2070,7 @@
 
     .line 36
     .line 37
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 38
     .line 39
@@ -2096,7 +2089,7 @@
 
     .line 45
     .line 46
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 47
     .line 48
@@ -2115,7 +2108,7 @@
 
     .line 54
     .line 55
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 56
     .line 57
@@ -2134,7 +2127,7 @@
 
     .line 63
     .line 64
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 65
     .line 66
@@ -2153,7 +2146,7 @@
 
     .line 72
     .line 73
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 74
     .line 75
@@ -2176,7 +2169,7 @@
     move-result-wide v0
 
     .line 84
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 85
     .line 86
@@ -2184,7 +2177,7 @@
     move-result v1
 
     .line 88
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02()LX/1L4;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02()LX/18b;
 
     .line 89
     .line 90
@@ -2195,7 +2188,7 @@
     const/4 v3, -0x1
 
     .line 93
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
     .line 94
     .line 95
@@ -2218,7 +2211,7 @@
 
     .line 103
     .line 104
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 105
     .line 106
@@ -2237,7 +2230,7 @@
 
     .line 112
     .line 113
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 114
     .line 115
@@ -2256,7 +2249,7 @@
 
     .line 121
     .line 122
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 123
     .line 124
@@ -2275,7 +2268,7 @@
 
     .line 130
     .line 131
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 132
     .line 133
@@ -2294,7 +2287,7 @@
 
     .line 139
     .line 140
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 141
     .line 142
@@ -2313,7 +2306,7 @@
 
     .line 148
     .line 149
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 150
     .line 151
@@ -2332,7 +2325,7 @@
 
     .line 157
     .line 158
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 159
     .line 160
@@ -2351,7 +2344,7 @@
 
     .line 166
     .line 167
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 168
     .line 169
@@ -2370,7 +2363,7 @@
 
     .line 175
     .line 176
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 177
     .line 178
@@ -2389,7 +2382,7 @@
 
     .line 184
     .line 185
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 186
     .line 187
@@ -2412,7 +2405,7 @@
     move-result-wide v0
 
     .line 196
-    invoke-static {v0, v1, v2}, LX/0Ye;->A03(JI)I
+    invoke-static {v0, v1, v2}, LX/0X2;->A03(JI)I
 
     .line 197
     .line 198
@@ -2432,7 +2425,7 @@
 
     .line 205
     .line 206
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 207
     .line 208
@@ -2443,7 +2436,7 @@
     add-int/2addr v1, v0
 
     .line 211
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A01()LX/1L3;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A01()LX/1dy;
 
     .line 212
     .line 213
@@ -2451,7 +2444,7 @@
     move-result-object v0
 
     .line 215
-    invoke-static {v0}, LX/0Yd;->A01(Ljava/lang/Enum;)I
+    invoke-static {v0}, LX/0X1;->A02(Ljava/lang/Enum;)I
 
     .line 216
     .line 217
@@ -2466,7 +2459,7 @@
     add-int/2addr v1, v0
 
     .line 222
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00()LX/1L5;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00()LX/15A;
 
     .line 223
     .line 224
@@ -2474,83 +2467,78 @@
     move-result-object v0
 
     .line 226
-    if-eqz v0, :cond_0
+    invoke-static {v0, v3}, LX/0X6;->A05(Ljava/lang/Enum;I)I
 
     .line 227
     .line 228
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
     .line 229
-    .line 230
-    .line 231
-    move-result v3
+    move-result v0
 
-    .line 232
-    :cond_0
+    .line 230
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 233
-    .line 234
-    add-int/2addr v1, v3
+    .line 231
+    .line 232
+    add-int/2addr v1, v0
 
-    .line 235
+    .line 233
     iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0L:Ljava/lang/String;
+
+    .line 234
+    .line 235
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 236
     .line 237
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 238
     .line 239
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 240
-    .line 241
-    .line 242
     move-result v0
 
-    .line 243
+    .line 241
     add-int/2addr v1, v0
 
-    .line 244
+    .line 242
     iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0M:Ljava/lang/String;
+
+    .line 243
+    .line 244
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 245
     .line 246
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 247
     .line 248
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 249
-    .line 250
-    .line 251
     move-result v0
 
-    .line 252
+    .line 250
     add-int/2addr v1, v0
 
-    .line 253
+    .line 251
     iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0N:Ljava/lang/String;
+
+    .line 252
+    .line 253
+    mul-int/lit8 v1, v1, 0x1f
 
     .line 254
     .line 255
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, LX/0X2;->A09(Ljava/lang/Object;)I
 
     .line 256
     .line 257
-    invoke-static {v0}, LX/0Yd;->A03(Ljava/lang/Object;)I
-
     .line 258
-    .line 259
-    .line 260
     move-result v0
 
-    .line 261
+    .line 259
     add-int/2addr v1, v0
 
-    .line 262
+    .line 260
     return v1
 .end method
 
@@ -2558,7 +2546,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -2755,7 +2743,7 @@
     .line 107
     .line 108
     .line 109
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02()LX/1L4;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A02()LX/18b;
 
     .line 110
     .line 111
@@ -2997,7 +2985,7 @@
     .line 241
     .line 242
     .line 243
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A01()LX/1L3;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A01()LX/1dy;
 
     .line 244
     .line 245
@@ -3019,7 +3007,7 @@
     .line 253
     .line 254
     .line 255
-    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00()LX/1L5;
+    invoke-virtual {p0}, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A00()LX/15A;
 
     .line 256
     .line 257
@@ -3081,7 +3069,7 @@
 
     .line 288
     .line 289
-    invoke-static {v0, v2}, LX/0Yd;->A0S(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/0X2;->A0l(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 290
     .line 291
@@ -3106,7 +3094,7 @@
     const/4 v2, 0x1
 
     .line 4
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 5
     .line 6
@@ -3124,7 +3112,7 @@
 
     .line 13
     .line 14
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 15
     .line 16
@@ -3197,11 +3185,11 @@
     .line 52
     .line 53
     .line 54
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/1L4;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0Q:LX/18b;
 
     .line 55
     .line 56
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 57
     .line 58
@@ -3224,7 +3212,7 @@
 
     .line 67
     .line 68
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 69
     .line 70
@@ -3233,7 +3221,7 @@
 
     .line 72
     .line 73
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 74
     .line 75
@@ -3251,7 +3239,7 @@
 
     .line 82
     .line 83
-    invoke-static {p1, v0, p2}, LX/0Yc;->A08(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+    invoke-static {p1, v0, p2}, LX/0X1;->A0Y(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 84
     .line 85
@@ -3260,7 +3248,7 @@
 
     .line 87
     .line 88
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 89
     .line 90
@@ -3269,7 +3257,7 @@
 
     .line 92
     .line 93
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 94
     .line 95
@@ -3278,7 +3266,7 @@
 
     .line 97
     .line 98
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 99
     .line 100
@@ -3287,7 +3275,7 @@
 
     .line 102
     .line 103
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 104
     .line 105
@@ -3314,25 +3302,25 @@
 
     .line 117
     .line 118
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 119
     .line 120
     .line 121
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1L3;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0P:LX/1dy;
 
     .line 122
     .line 123
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 124
     .line 125
     .line 126
-    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0O:LX/1L5;
+    iget-object v0, p0, Lcom/facebook/ipc/composer/model/richtext/ComposerRichTextStyle;->A0O:LX/15A;
 
     .line 127
     .line 128
-    invoke-static {p1, v0}, LX/0Yc;->A0A(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/0X1;->A0f(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 129
     .line 130
@@ -3359,7 +3347,7 @@
 
     .line 142
     .line 143
-    invoke-static {p1, v0}, LX/0Yc;->A0E(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, v0}, LX/0X1;->A0l(Landroid/os/Parcel;Ljava/lang/String;)V
 
     .line 144
     .line 145
@@ -3368,7 +3356,7 @@
 
     .line 147
     .line 148
-    invoke-static {p1, v0}, LX/0Yd;->A0X(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
+    invoke-static {p1, v0}, LX/0X1;->A0W(Landroid/os/Parcel;Ljava/util/Set;)Ljava/util/Iterator;
 
     .line 149
     .line 150
@@ -3389,7 +3377,7 @@
 
     .line 157
     .line 158
-    invoke-static {p1, v1}, LX/0Yc;->A0F(Landroid/os/Parcel;Ljava/util/Iterator;)V
+    invoke-static {p1, v1}, LX/0X1;->A0o(Landroid/os/Parcel;Ljava/util/Iterator;)V
 
     .line 159
     .line 160
@@ -3417,7 +3405,7 @@
     .line 170
     .line 171
     .line 172
-    invoke-static {p1, v0}, LX/1KF;->A05(Landroid/os/Parcel;Ljava/util/List;)V
+    invoke-static {p1, v0}, LX/1cw;->A06(Landroid/os/Parcel;Ljava/util/List;)V
 
     .line 173
     .line 174

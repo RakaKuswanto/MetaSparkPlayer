@@ -17,7 +17,7 @@
     .line 1
     .line 2
     .line 3
-    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;->mDelegate:LX/5Vq;
+    iget-object v1, p1, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceConfiguration;->mDelegate:LX/68w;
 
     .line 4
     .line 5
@@ -25,7 +25,7 @@
 
     .line 6
     .line 7
-    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceDelegateWrapper;-><init>(LX/5Vq;)V
+    invoke-direct {v0, v1}, Lcom/facebook/cameracore/mediapipeline/services/haptic/HapticServiceDelegateWrapper;-><init>(LX/68w;)V
 
     .line 8
     .line 9

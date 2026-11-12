@@ -1,130 +1,129 @@
-.class public final LX/01E;
+.class public abstract LX/01E;
 .super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public static A00(I)Ljava/lang/String;
-    .locals 1
+# static fields
+.field public static volatile A00:Z
 
+
+# direct methods
+.method public static A00(J)J
+    .locals 8
+
+    .line 0
+    const-wide/16 v6, 0x1
+
+    .line 1
+    .line 2
+    sget-wide v0, LX/0Kr;->A01:J
+
+    .line 3
+    .line 4
+    and-long v4, v6, v0
+
+    .line 5
+    .line 6
+    const-wide/16 v2, 0x0
+
+    .line 7
+    .line 8
+    cmp-long v0, v4, v2
+
+    .line 9
+    .line 10
+    if-eqz v0, :cond_1
+
+    .line 11
+    .line 12
+    sget-boolean v0, LX/01E;->A00:Z
+
+    .line 13
+    .line 14
+    if-nez v0, :cond_1
+
+    .line 15
+    .line 16
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_c
+    .line 17
+    sput-boolean v0, LX/01E;->A00:Z
 
-    const/4 v0, 0x2
+    .line 18
+    .line 19
+    const-string v0, "fburl.com/fbsystrace"
 
-    if-eq p0, v0, :cond_b
+    .line 20
+    .line 21
+    invoke-static {v0}, Lcom/facebook/systrace/Systrace;->A05(Ljava/lang/String;)V
 
-    const/4 v0, 0x3
+    .line 22
+    .line 23
+    .line 24
+    const-string v0, "USE fbsystrace"
 
-    if-eq p0, v0, :cond_a
+    .line 25
+    .line 26
+    invoke-static {v0}, Lcom/facebook/systrace/Systrace;->A05(Ljava/lang/String;)V
 
-    const/4 v0, 0x4
+    .line 27
+    .line 28
+    .line 29
+    const-string v0, "DO NOT USE systrace"
 
-    if-eq p0, v0, :cond_9
+    .line 30
+    .line 31
+    invoke-static {v0}, Lcom/facebook/systrace/Systrace;->A05(Ljava/lang/String;)V
 
-    const/16 v0, 0x423
-
-    if-eq p0, v0, :cond_8
-
-    const/16 v0, 0x974
-
-    if-eq p0, v0, :cond_7
-
-    const/16 v0, 0xede
-
-    if-eq p0, v0, :cond_6
-
-    const/16 v0, 0x1542
-
-    if-eq p0, v0, :cond_5
-
-    const/16 v0, 0x15b5
-
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x1e0e
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x2b14
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x37e1
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x3e2c
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
-    return-object v0
-
+    .line 32
+    .line 33
+    .line 34
     :cond_0
-    const-string v0, "IG_APP_START_BROADCAST_RECEIVED_AFTER_REPLAY_COMPLETED"
+    :goto_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    return-object v0
+    .line 35
+    .line 36
+    .line 37
+    move-result-wide v0
 
+    .line 38
+    sub-long/2addr p0, v0
+
+    .line 39
+    return-wide p0
+
+    .line 40
     :cond_1
-    const-string v0, "IG_APP_START_IG_APP_SERVICES"
+    sget-boolean v0, LX/01E;->A00:Z
 
-    return-object v0
+    .line 41
+    .line 42
+    if-eqz v0, :cond_0
 
-    :cond_2
-    const-string v0, "IG_APP_START_IG_APP_SERVICES_EVENTS"
+    .line 43
+    .line 44
+    sget-wide v0, LX/0Kr;->A01:J
 
-    return-object v0
+    .line 45
+    .line 46
+    and-long/2addr v6, v0
 
-    :cond_3
-    const-string v0, "IG_APP_START_ASYNC_COLD_START_TIMEOUT"
+    .line 47
+    cmp-long v0, v6, v2
 
-    return-object v0
+    .line 48
+    .line 49
+    if-nez v0, :cond_0
 
-    :cond_4
-    const-string v0, "IG_APP_START_SLOW_APP_COMPONENT"
+    .line 50
+    .line 51
+    const/4 v0, 0x0
 
-    return-object v0
+    .line 52
+    sput-boolean v0, LX/01E;->A00:Z
 
-    :cond_5
-    const-string v0, "IG_APP_START_FBNS_INIT_ERROR"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "IG_APP_START_COLD_START_INTENT"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "IG_APP_START_APP_COMPONENT_FACTORY_COMPONENT"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "IG_APP_START_COLD_TO_TOUCH"
-
-    return-object v0
-
-    :cond_9
-    const-string v0, "IG_APP_START_SILENT_PUSH"
-
-    return-object v0
-
-    :cond_a
-    const-string v0, "IG_APP_START_BACKGROUND_COLDSTART_ATTEMPT"
-
-    return-object v0
-
-    :cond_b
-    const-string v0, "IG_APP_START_BACKGROUND_COLDSTART"
-
-    return-object v0
-
-    :cond_c
-    const-string v0, "IG_APP_START_COLD_TO_FEED"
-
-    return-object v0
+    .line 53
+    .line 54
+    goto :goto_0
 .end method

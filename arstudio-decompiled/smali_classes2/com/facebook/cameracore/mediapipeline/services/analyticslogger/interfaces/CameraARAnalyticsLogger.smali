@@ -51,5 +51,5 @@
 .method public abstract setInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lcom/facebook/cameracore/mediapipeline/services/analyticslogger/interfaces/EffectAnalyticsInfoEnums$EffectStartIntent;)V
 .end method
 
-.method public abstract setSessionListener(LX/3iM;)V
+.method public abstract setSessionListener(LX/2wE;)V
 .end method

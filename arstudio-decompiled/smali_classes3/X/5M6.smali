@@ -1,47 +1,68 @@
-.class public interface abstract LX/5M6;
+.class public final synthetic LX/5M6;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "DrmSessionEventListener$EventDispatcher$$ExternalSyntheticLambda2"
+
+
+# instance fields
+.field public final synthetic A00:I
+
+.field public final synthetic A01:LX/5Lh;
+
+.field public final synthetic A02:LX/5M9;
+
+
+# direct methods
+.method public synthetic constructor <init>(LX/5Lh;LX/5M9;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/5M6;->A01:LX/5Lh;
+
+    iput-object p2, p0, LX/5M6;->A02:LX/5M9;
+
+    iput p3, p0, LX/5M6;->A00:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract A60()V
-.end method
+.method public final run()V
+    .locals 4
 
-.method public abstract A61()V
-.end method
+    .line 0
+    iget-object v0, p0, LX/5M6;->A01:LX/5Lh;
 
-.method public abstract A79(Ljava/lang/String;)LX/6Lh;
-.end method
+    .line 1
+    .line 2
+    iget-object v3, p0, LX/5M6;->A02:LX/5M9;
 
-.method public abstract AA0()V
-.end method
+    .line 3
+    .line 4
+    iget v2, p0, LX/5M6;->A00:I
 
-.method public abstract AA9(Ljava/lang/String;)V
-.end method
+    .line 5
+    .line 6
+    iget v1, v0, LX/5Lh;->A00:I
 
-.method public abstract AAA(Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
+    .line 7
+    .line 8
+    iget-object v0, v0, LX/5Lh;->A01:LX/5RP;
 
-.method public abstract AP3()Z
-.end method
+    .line 9
+    .line 10
+    invoke-interface {v3, v0, v1, v2}, LX/5M9;->AVg(LX/5RP;II)V
 
-.method public abstract ARr()Z
-.end method
-
-.method public abstract AhN(LX/462;)Landroid/database/Cursor;
-.end method
-
-.method public abstract AhO(Ljava/lang/String;)Landroid/database/Cursor;
-.end method
-
-.method public abstract AnR()V
-.end method
-
-.method public abstract AqP(Landroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;I)I
-.end method
-
-.method public abstract isOpen()Z
+    .line 11
+    .line 12
+    .line 13
+    return-void
 .end method

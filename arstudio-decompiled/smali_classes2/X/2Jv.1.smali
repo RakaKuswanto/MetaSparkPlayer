@@ -2,213 +2,674 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Lcom/google/common/util/concurrent/ListenableFuture;
 
-# static fields
-.field public static final A00:[B
 
-.field public static final A01:[C
+# instance fields
+.field public A00:LX/2Jq;
 
-.field public static final A02:[C
+.field public A01:LX/2KD;
+
+.field public A02:Z
+
+.field public final A03:LX/1xp;
+
+.field public final A04:Ljava/util/concurrent/CountDownLatch;
+
+.field public volatile A05:Lcom/google/common/util/concurrent/ListenableFuture;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(LX/2Jq;)V
+    .locals 1
 
     .line 0
-    const/16 v0, 0x10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    new-array v6, v0, [C
-
     .line 3
-    .line 4
-    fill-array-data v6, :array_0
+    new-instance v0, LX/1xp;
 
+    .line 4
     .line 5
+    invoke-direct {v0}, LX/1xp;-><init>()V
+
     .line 6
     .line 7
-    const/16 v5, 0x100
-
     .line 8
-    .line 9
-    new-array v3, v5, [C
+    iput-object v0, p0, LX/2Jv;->A03:LX/1xp;
 
+    .line 9
     .line 10
+    const/4 v0, 0x0
+
     .line 11
-    sput-object v3, LX/2Jv;->A01:[C
+    iput-boolean v0, p0, LX/2Jv;->A02:Z
 
     .line 12
     .line 13
-    new-array v2, v5, [C
+    invoke-static {}, LX/0X5;->A0v()Ljava/util/concurrent/CountDownLatch;
 
     .line 14
     .line 15
-    sput-object v2, LX/2Jv;->A02:[C
-
     .line 16
+    move-result-object v0
+
     .line 17
-    const/4 v4, 0x0
+    iput-object v0, p0, LX/2Jv;->A04:Ljava/util/concurrent/CountDownLatch;
 
     .line 18
-    const/4 v1, 0x0
-
     .line 19
-    :cond_0
-    shr-int/lit8 v0, v1, 0x4
+    const/4 v0, 0x0
 
     .line 20
+    iput-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
     .line 21
-    and-int/lit8 v0, v0, 0xf
-
     .line 22
-    .line 23
-    invoke-static {v6, v3, v0, v1}, LX/0Yj;->A0o([C[CII)V
+    iput-object p1, p0, LX/2Jv;->A00:LX/2Jq;
 
+    .line 23
     .line 24
+    return-void
+.end method
+
+
+# virtual methods
+.method public final addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/2Jv;->A03:LX/1xp;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0, p1, p2}, LX/1xp;->A02(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final declared-synchronized cancel(Z)Z
+    .locals 6
+
+    .line 0
+    move-object v5, p0
+
+    .line 1
+    monitor-enter v5
+
+    .line 2
+    :try_start_0
+    iget-boolean v0, p0, LX/2Jv;->A02:Z
+
+    .line 3
+    .line 4
+    const/4 v4, 0x0
+
+    .line 5
+    if-nez v0, :cond_3
+
+    .line 6
+    .line 7
+    const/4 v4, 0x1
+
+    .line 8
+    iput-boolean v4, p0, LX/2Jv;->A02:Z
+
+    .line 9
+    .line 10
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 11
+    .line 12
+    if-nez v0, :cond_2
+
+    .line 13
+    .line 14
+    iget-object v0, p0, LX/2Jv;->A01:LX/2KD;
+
+    .line 15
+    .line 16
+    if-eqz v0, :cond_1
+
+    .line 17
+    .line 18
+    iget-object v1, p0, LX/2Jv;->A00:LX/2Jq;
+
+    .line 19
+    .line 20
+    iget-object v0, v0, LX/2KD;->A00:LX/2Ju;
+
+    .line 21
+    .line 22
+    iget v3, v1, LX/2Jq;->A00:I
+
+    .line 23
+    .line 24
+    iget-object v0, v0, LX/2Ju;->A00:Ljava/util/ArrayList;
+
     .line 25
     .line 26
-    and-int/lit8 v0, v1, 0xf
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
     .line 27
     .line 28
-    invoke-static {v6, v2, v0, v1}, LX/0Yj;->A0o([C[CII)V
-
     .line 29
-    .line 30
-    .line 31
-    add-int/lit8 v1, v1, 0x1
+    move-result-object v2
 
+    .line 30
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 31
     .line 32
     .line 33
-    if-lt v1, v5, :cond_0
+    move-result v0
 
     .line 34
+    if-eqz v0, :cond_1
+
     .line 35
-    const/16 v0, 0x67
-
     .line 36
-    .line 37
-    new-array v3, v0, [B
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 37
     .line 38
     .line 39
-    sput-object v3, LX/2Jv;->A00:[B
+    move-result-object v1
 
     .line 40
-    .line 41
-    const/4 v1, 0x0
+    check-cast v1, LX/2K7;
 
+    .line 41
     .line 42
-    :cond_1
-    const/4 v0, -0x1
+    instance-of v0, v1, LX/2Jy;
 
     .line 43
-    aput-byte v0, v3, v1
-
     .line 44
+    if-nez v0, :cond_1
+
     .line 45
-    add-int/lit8 v1, v1, 0x1
-
     .line 46
+    instance-of v0, v1, LX/2K1;
+
     .line 47
-    const/16 v0, 0x46
-
     .line 48
+    if-nez v0, :cond_0
+
     .line 49
-    if-le v1, v0, :cond_1
-
     .line 50
-    .line 51
-    const/4 v1, 0x0
+    check-cast v1, LX/2Jx;
 
+    .line 51
     .line 52
-    :goto_0
-    add-int/lit8 v0, v1, 0x30
+    iget-object v1, v1, LX/2Jx;->A00:Ljava/util/Map;
 
     .line 53
     .line 54
-    aput-byte v1, v3, v0
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 55
     .line 56
-    add-int/lit8 v0, v1, 0x1
-
     .line 57
+    move-result-object v0
+
     .line 58
-    int-to-byte v1, v0
+    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 59
-    const/16 v0, 0xa
-
     .line 60
     .line 61
-    if-ge v1, v0, :cond_2
+    move-result-object v0
 
     .line 62
+    invoke-static {v0}, LX/001;->A1Q(Ljava/lang/Object;)Z
+
     .line 63
-    goto :goto_0
-
     .line 64
-    :cond_2
-    add-int/lit8 v2, v4, 0x41
-
     .line 65
+    move-result v0
+
     .line 66
-    add-int/lit8 v0, v4, 0xa
+    if-eqz v0, :cond_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 67
     .line 68
-    int-to-byte v1, v0
+    :cond_1
+    :try_start_1
+    iget-object v0, p0, LX/2Jv;->A04:Ljava/util/concurrent/CountDownLatch;
 
     .line 69
-    aput-byte v1, v3, v2
-
     .line 70
-    .line 71
-    add-int/lit8 v0, v4, 0x61
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
+    .line 71
     .line 72
     .line 73
-    aput-byte v1, v3, v0
+    iget-object v0, p0, LX/2Jv;->A03:LX/1xp;
 
     .line 74
     .line 75
-    add-int/lit8 v0, v4, 0x1
+    invoke-virtual {v0}, LX/1xp;->A01()V
 
     .line 76
     .line 77
-    int-to-byte v4, v0
-
     .line 78
-    const/4 v0, 0x6
+    goto :goto_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 79
-    if-lt v4, v0, :cond_2
+    :catchall_0
+    move-exception v0
 
     .line 80
+    :try_start_2
+    throw v0
+
     .line 81
-    return-void
+    :cond_2
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 82
-    :array_0
-    .array-data 2
-        0x30s
-        0x31s
-        0x32s
-        0x33s
-        0x34s
-        0x35s
-        0x36s
-        0x37s
-        0x38s
-        0x39s
-        0x41s
-        0x42s
-        0x43s
-        0x44s
-        0x45s
-        0x46s
-    .end array-data
+    .line 83
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    .line 84
+    .line 85
+    .line 86
+    move-result v4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 87
+    :cond_3
+    :goto_0
+    monitor-exit v5
+
+    .line 88
+    return v4
+
+    .line 89
+    :catchall_1
+    move-exception v0
+
+    .line 90
+    monitor-exit v5
+
+    .line 91
+    throw v0
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 1
+
+    .line 268435456
+    invoke-virtual {p0}, LX/2Jv;->isCancelled()Z
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    move-result v0
+
+    .line 268435460
+    if-nez v0, :cond_3
+
+    .line 268435461
+    .line 268435462
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 268435463
+    .line 268435464
+    if-nez v0, :cond_0
+
+    .line 268435465
+    .line 268435466
+    :try_start_0
+    iget-object v0, p0, LX/2Jv;->A04:Ljava/util/concurrent/CountDownLatch;
+
+    .line 268435467
+    .line 268435468
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 268435469
+    .line 268435470
+    .line 268435471
+    :catch_0
+    :cond_0
+    invoke-virtual {p0}, LX/2Jv;->isCancelled()Z
+
+    .line 268435472
+    .line 268435473
+    .line 268435474
+    move-result v0
+
+    .line 268435475
+    if-nez v0, :cond_2
+
+    .line 268435476
+    .line 268435477
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 268435478
+    .line 268435479
+    if-eqz v0, :cond_1
+
+    .line 268435480
+    .line 268435481
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 268435482
+    .line 268435483
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    .line 268435484
+    .line 268435485
+    .line 268435486
+    move-result-object v0
+
+    .line 268435487
+    return-object v0
+
+    .line 268435488
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 268435489
+    return-object v0
+
+    .line 268435490
+    :cond_2
+    new-instance v0, Ljava/util/concurrent/CancellationException;
+
+    .line 268435491
+    .line 268435492
+    invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
+
+    .line 268435493
+    .line 268435494
+    .line 268435495
+    throw v0
+
+    .line 268435496
+    :cond_3
+    new-instance v0, Ljava/util/concurrent/CancellationException;
+
+    .line 268435497
+    .line 268435498
+    invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
+
+    .line 268435499
+    .line 268435500
+    .line 268435501
+    throw v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, LX/2Jv;->isCancelled()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    if-nez v0, :cond_3
+
+    .line 5
+    .line 6
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 7
+    .line 8
+    if-nez v0, :cond_0
+
+    .line 9
+    .line 10
+    :try_start_0
+    iget-object v0, p0, LX/2Jv;->A04:Ljava/util/concurrent/CountDownLatch;
+
+    .line 11
+    .line 12
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 13
+    .line 14
+    .line 15
+    :catch_0
+    :cond_0
+    invoke-virtual {p0}, LX/2Jv;->isCancelled()Z
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    if-nez v0, :cond_2
+
+    .line 20
+    .line 21
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 22
+    .line 23
+    if-eqz v0, :cond_1
+
+    .line 24
+    .line 25
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 26
+    .line 27
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v0
+
+    .line 31
+    return-object v0
+
+    .line 32
+    :cond_1
+    new-instance v0, Ljava/util/concurrent/TimeoutException;
+
+    .line 33
+    .line 34
+    invoke-direct {v0}, Ljava/util/concurrent/TimeoutException;-><init>()V
+
+    .line 35
+    .line 36
+    .line 37
+    throw v0
+
+    .line 38
+    :cond_2
+    new-instance v0, Ljava/util/concurrent/CancellationException;
+
+    .line 39
+    .line 40
+    invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
+
+    .line 41
+    .line 42
+    .line 43
+    throw v0
+
+    .line 44
+    :cond_3
+    new-instance v0, Ljava/util/concurrent/CancellationException;
+
+    .line 45
+    .line 46
+    invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw v0
+.end method
+
+.method public final declared-synchronized isCancelled()Z
+    .locals 1
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-boolean v0, p0, LX/2Jv;->A02:Z
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_1
+
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 10
+    .line 11
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isCancelled()Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 16
+    .line 17
+    goto :goto_0
+
+    .line 18
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 19
+    goto :goto_1
+
+    .line 20
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 21
+    :goto_1
+    monitor-exit p0
+
+    .line 22
+    return v0
+
+    .line 23
+    :catchall_0
+    move-exception v0
+
+    .line 24
+    monitor-exit p0
+
+    .line 25
+    throw v0
+.end method
+
+.method public final declared-synchronized isDone()Z
+    .locals 1
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-boolean v0, p0, LX/2Jv;->A02:Z
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_1
+
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, LX/2Jv;->A05:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 10
+    .line 11
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v0
+
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 16
+    .line 17
+    goto :goto_0
+
+    .line 18
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 19
+    goto :goto_1
+
+    .line 20
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 21
+    :goto_1
+    monitor-exit p0
+
+    .line 22
+    return v0
+
+    .line 23
+    :catchall_0
+    move-exception v0
+
+    .line 24
+    monitor-exit p0
+
+    .line 25
+    throw v0
 .end method

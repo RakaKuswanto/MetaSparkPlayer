@@ -3,13 +3,14 @@
 .source ""
 
 # interfaces
-.implements LX/4rC;
+.implements LX/4iL;
+.implements LX/4lM;
 
 
 # static fields
-.field public static final A0k:Ljava/lang/ThreadLocal;
+.field public static final A0f:Ljava/lang/ThreadLocal;
 
-.field public static volatile A0l:Landroid/os/Looper;
+.field public static volatile A0g:Landroid/os/Looper;
 
 
 # instance fields
@@ -21,31 +22,31 @@
 
 .field public A03:I
 
-.field public A04:LX/4mg;
+.field public A04:LX/4fg;
 
-.field public A05:LX/4pV;
+.field public A05:LX/4jZ;
 
-.field public A06:LX/4pP;
+.field public A06:LX/4jJ;
 
-.field public A07:LX/4q1;
+.field public A07:LX/4kH;
 
-.field public A08:LX/4mp;
+.field public A08:LX/4fd;
 
-.field public A09:LX/4mp;
+.field public A09:LX/4fd;
 
-.field public A0A:LX/4q2;
+.field public A0A:Lcom/facebook/litho/LithoView;
 
-.field public A0B:Lcom/facebook/litho/LithoView;
+.field public A0B:LX/4kF;
 
-.field public A0C:LX/4o1;
+.field public A0C:LX/4g3;
 
-.field public A0D:LX/4mu;
+.field public A0D:LX/4hT;
 
-.field public A0E:LX/4qJ;
+.field public A0E:LX/4gO;
 
-.field public A0F:LX/4qJ;
+.field public A0F:LX/4kh;
 
-.field public A0G:LX/4qJ;
+.field public A0G:LX/4kh;
 
 .field public A0H:Ljava/lang/String;
 
@@ -55,55 +56,45 @@
 
 .field public A0K:Z
 
-.field public A0L:Z
+.field public A0L:I
 
 .field public A0M:I
 
 .field public A0N:I
 
-.field public A0O:I
+.field public A0O:LX/4hT;
 
-.field public A0P:I
+.field public A0P:Z
 
-.field public A0Q:LX/2fW;
+.field public A0Q:Z
 
-.field public A0R:Z
+.field public final A0R:I
 
-.field public final A0S:I
+.field public final A0S:Landroid/view/accessibility/AccessibilityManager;
 
-.field public final A0T:Landroid/view/accessibility/AccessibilityManager;
+.field public final A0T:LX/4fk;
 
-.field public final A0U:LX/4mm;
+.field public final A0U:LX/4iD;
 
-.field public final A0V:LX/4q4;
+.field public final A0V:Ljava/lang/Object;
 
-.field public final A0W:LX/4oV;
+.field public final A0W:Ljava/lang/Object;
 
-.field public final A0X:Ljava/lang/Object;
+.field public final A0X:Ljava/lang/Runnable;
 
-.field public final A0Y:Ljava/lang/Object;
+.field public final A0Y:LX/4h1;
 
-.field public final A0Z:Ljava/lang/Runnable;
+.field public final A0Z:LX/4jf;
 
-.field public final A0a:Ljava/lang/Runnable;
+.field public final A0a:Ljava/lang/Object;
 
-.field public final A0b:LX/4nv;
+.field public final A0b:Ljava/lang/Object;
 
-.field public final A0c:LX/4pe;
+.field public final A0c:Ljava/util/List;
 
-.field public final A0d:Ljava/lang/Object;
+.field public final A0d:Ljava/util/List;
 
-.field public final A0e:Ljava/lang/Object;
-
-.field public final A0f:Ljava/util/List;
-
-.field public final A0g:Ljava/util/List;
-
-.field public final A0h:Z
-
-.field public volatile A0i:LX/4qr;
-
-.field public volatile A0j:LX/4qy;
+.field public volatile A0e:LX/4l8;
 
 
 # direct methods
@@ -111,125 +102,124 @@
     .locals 1
 
     .line 0
-    new-instance v0, Ljava/lang/ThreadLocal;
+    invoke-static {}, LX/435;->A0B()Ljava/lang/ThreadLocal;
 
     .line 1
     .line 2
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
     .line 3
-    .line 4
-    .line 5
-    sput-object v0, Lcom/facebook/litho/ComponentTree;->A0k:Ljava/lang/ThreadLocal;
+    move-result-object v0
 
+    .line 4
+    sput-object v0, Lcom/facebook/litho/ComponentTree;->A0f:Ljava/lang/ThreadLocal;
+
+    .line 5
     .line 6
-    .line 7
     return-void
 .end method
 
-.method public constructor <init>(LX/4mg;LX/4mm;LX/4qm;LX/4lL;LX/4q2;LX/4mu;LX/4n6;LX/4qJ;LX/4qJ;Ljava/lang/String;ZZZZ)V
+.method public constructor <init>(LX/4gY;)V
     .locals 19
 
     .line 0
-    move-object/from16 v5, p6
+    move-object/from16 v14, p0
 
     .line 1
     .line 2
-    move-object/from16 v4, p8
+    invoke-direct {v14}, Ljava/lang/Object;-><init>()V
 
     .line 3
     .line 4
-    move/from16 v16, p13
-
     .line 5
+    const/4 v5, 0x0
+
     .line 6
-    move-object/from16 v9, p3
+    iput-boolean v5, v14, Lcom/facebook/litho/ComponentTree;->A0J:Z
 
     .line 7
     .line 8
-    move-object/from16 v14, p10
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 9
     .line 10
-    const/4 v2, 0x0
-
     .line 11
-    move-object/from16 v1, p0
-
-    .line 12
-    .line 13
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    .line 14
-    .line 15
-    .line 16
-    const/4 v0, 0x0
-
-    .line 17
-    iput-boolean v0, v1, Lcom/facebook/litho/ComponentTree;->A0J:Z
-
-    .line 18
-    .line 19
-    new-instance v0, LX/4nn;
-
-    .line 20
-    .line 21
-    invoke-direct {v0, v1}, LX/4nn;-><init>(Lcom/facebook/litho/ComponentTree;)V
-
-    .line 22
-    .line 23
-    .line 24
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0a:Ljava/lang/Runnable;
-
-    .line 25
-    .line 26
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
-
-    .line 27
-    .line 28
-    .line 29
     move-result-object v0
 
+    .line 12
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0W:Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v1
+
+    .line 18
+    new-instance v0, LX/4iY;
+
+    .line 19
+    .line 20
+    invoke-direct {v0, v1}, LX/4iY;-><init>(Landroid/os/Looper;)V
+
+    .line 21
+    .line 22
+    .line 23
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0G:LX/4kh;
+
+    .line 24
+    .line 25
+    new-instance v0, LX/4kW;
+
+    .line 26
+    .line 27
+    invoke-direct {v0, v14}, LX/4kW;-><init>(Lcom/facebook/litho/ComponentTree;)V
+
+    .line 28
+    .line 29
     .line 30
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0Y:Ljava/lang/Object;
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Runnable;
 
     .line 31
     .line 32
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 33
     .line 34
     .line 35
-    move-result-object v3
+    move-result-object v0
 
     .line 36
-    new-instance v0, LX/4pF;
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0V:Ljava/lang/Object;
 
     .line 37
     .line 38
-    invoke-direct {v0, v3}, LX/4pF;-><init>(Landroid/os/Looper;)V
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 39
     .line 40
     .line 41
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0F:LX/4qJ;
+    move-result-object v0
 
     .line 42
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0a:Ljava/lang/Object;
+
     .line 43
-    new-instance v0, LX/4qL;
-
     .line 44
-    .line 45
-    invoke-direct {v0, v1}, LX/4qL;-><init>(Lcom/facebook/litho/ComponentTree;)V
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
+    .line 45
     .line 46
     .line 47
+    move-result-object v0
+
     .line 48
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0Z:Ljava/lang/Runnable;
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0b:Ljava/lang/Object;
 
     .line 49
     .line 50
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 51
     .line 52
@@ -237,11 +227,11 @@
     move-result-object v0
 
     .line 54
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Object;
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0d:Ljava/util/List;
 
     .line 55
     .line 56
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
 
     .line 57
     .line 58
@@ -249,584 +239,607 @@
     move-result-object v0
 
     .line 60
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0d:Ljava/lang/Object;
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0c:Ljava/util/List;
 
     .line 61
     .line 62
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    const/4 v0, -0x1
 
     .line 63
+    iput v0, v14, Lcom/facebook/litho/ComponentTree;->A0L:I
+
     .line 64
     .line 65
-    move-result-object v0
+    iput v0, v14, Lcom/facebook/litho/ComponentTree;->A00:I
 
     .line 66
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0e:Ljava/lang/Object;
-
     .line 67
-    .line 68
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    iput v0, v14, Lcom/facebook/litho/ComponentTree;->A03:I
 
+    .line 68
     .line 69
+    iput v0, v14, Lcom/facebook/litho/ComponentTree;->A01:I
+
     .line 70
     .line 71
-    move-result-object v0
+    new-instance v0, LX/4iD;
 
     .line 72
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0g:Ljava/util/List;
-
     .line 73
-    .line 74
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    invoke-direct {v0}, LX/4iD;-><init>()V
 
+    .line 74
     .line 75
     .line 76
-    .line 77
-    move-result-object v0
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0U:LX/4iD;
 
+    .line 77
     .line 78
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0f:Ljava/util/List;
+    move-object/from16 v3, p1
 
     .line 79
     .line 80
-    const/4 v0, -0x1
+    iget-object v0, v3, LX/4gY;->A01:LX/4fg;
 
     .line 81
-    iput v0, v1, Lcom/facebook/litho/ComponentTree;->A0M:I
-
     .line 82
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
     .line 83
-    iput v0, v1, Lcom/facebook/litho/ComponentTree;->A00:I
-
     .line 84
+    sget-object v0, LX/4il;->A06:Ljava/util/concurrent/atomic/AtomicInteger;
+
     .line 85
-    iput v0, v1, Lcom/facebook/litho/ComponentTree;->A03:I
-
     .line 86
-    .line 87
-    iput v0, v1, Lcom/facebook/litho/ComponentTree;->A01:I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
+    .line 87
     .line 88
     .line 89
-    iput v0, v1, Lcom/facebook/litho/ComponentTree;->A0N:I
+    move-result v0
 
     .line 90
+    iput v0, v14, Lcom/facebook/litho/ComponentTree;->A0R:I
+
     .line 91
-    new-instance v0, LX/4oV;
-
     .line 92
-    .line 93
-    invoke-direct {v0}, LX/4oV;-><init>()V
+    new-instance v2, LX/4CH;
 
+    .line 93
     .line 94
+    invoke-direct {v2, v0}, LX/4CH;-><init>(I)V
+
     .line 95
     .line 96
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0W:LX/4oV;
-
     .line 97
+    iget-object v0, v3, LX/4gY;->A06:LX/4gE;
+
     .line 98
-    move-object/from16 v0, p1
-
     .line 99
-    .line 100
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    iget-boolean v0, v0, LX/4gE;->A0H:Z
 
+    .line 100
     .line 101
+    const/4 v1, 0x0
+
     .line 102
-    sget-object v0, LX/4mY;->A06:Ljava/util/concurrent/atomic/AtomicInteger;
+    if-eqz v0, :cond_4
 
     .line 103
     .line 104
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    new-instance v0, LX/4h1;
 
     .line 105
     .line 106
+    invoke-direct {v0, v14}, LX/4h1;-><init>(Lcom/facebook/litho/ComponentTree;)V
+
     .line 107
-    move-result v0
-
     .line 108
-    iput v0, v1, Lcom/facebook/litho/ComponentTree;->A0S:I
-
     .line 109
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0Y:LX/4h1;
+
     .line 110
-    new-instance v11, LX/4ok;
-
     .line 111
-    .line 112
-    invoke-direct {v11, v0}, LX/4ok;-><init>(I)V
+    :goto_0
+    iget-object v0, v3, LX/4gY;->A02:LX/4lW;
 
+    .line 112
     .line 113
+    invoke-virtual {v14, v0}, Lcom/facebook/litho/ComponentTree;->A0H(LX/4lW;)V
+
     .line 114
     .line 115
-    move-object/from16 v3, p2
-
     .line 116
+    iget-object v0, v3, LX/4gY;->A05:LX/4gO;
+
     .line 117
-    if-nez p10, :cond_0
-
     .line 118
+    if-nez v0, :cond_0
+
     .line 119
-    iget-object v0, v3, LX/4mm;->A02:LX/4oC;
-
     .line 120
+    new-instance v0, LX/4gO;
+
     .line 121
-    iget-object v14, v0, LX/4oC;->A05:Ljava/lang/String;
-
     .line 122
-    .line 123
-    if-nez v14, :cond_0
+    invoke-direct {v0, v1}, LX/4gO;-><init>(LX/4gO;)V
 
+    .line 123
     .line 124
     .line 125
-    iget-object v0, v1, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    :cond_0
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
 
     .line 126
     .line 127
-    invoke-virtual {v0}, LX/4mg;->A0P()Ljava/lang/String;
+    sget-boolean v0, LX/4gE;->USE_INCREMENTAL_MOUNT_HELPER:Z
 
     .line 128
     .line 129
-    .line 130
-    move-result-object v14
+    if-eqz v0, :cond_3
 
+    .line 130
     .line 131
-    :cond_0
-    if-nez p3, :cond_1
+    new-instance v0, LX/4jf;
 
     .line 132
     .line 133
-    iget-object v0, v3, LX/4mm;->A02:LX/4oC;
+    invoke-direct {v0, v14}, LX/4jf;-><init>(Lcom/facebook/litho/ComponentTree;)V
 
     .line 134
     .line 135
-    iget-object v9, v0, LX/4oC;->A01:LX/4qm;
-
     .line 136
+    :goto_1
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0Z:LX/4jf;
+
     .line 137
-    :cond_1
-    sget-boolean v0, LX/4n6;->enableStateUpdatesBatching:Z
-
     .line 138
+    iput-object v1, v14, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
+
     .line 139
-    if-eqz v0, :cond_e
-
     .line 140
+    iget-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0G:LX/4kh;
+
     .line 141
-    new-instance v0, LX/4nv;
-
     .line 142
-    .line 143
-    invoke-direct {v0, v1}, LX/4nv;-><init>(Lcom/facebook/litho/ComponentTree;)V
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0G:LX/4kh;
 
+    .line 143
     .line 144
+    invoke-static {}, Lcom/facebook/litho/ComponentTree;->A00()Landroid/os/Looper;
+
     .line 145
     .line 146
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0b:LX/4nv;
-
     .line 147
+    move-result-object v1
+
     .line 148
-    :goto_0
-    sget-object v0, LX/4n6;->overrideLayoutDiffing:Ljava/lang/Boolean;
+    new-instance v0, LX/4iY;
 
     .line 149
     .line 150
-    if-eqz v0, :cond_d
+    invoke-direct {v0, v1}, LX/4iY;-><init>(Landroid/os/Looper;)V
 
     .line 151
     .line 152
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
     .line 153
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
+
     .line 154
     .line 155
-    move-result v0
+    iget-object v7, v3, LX/4gY;->A00:Landroid/content/Context;
 
     .line 156
-    iput-boolean v0, v1, Lcom/facebook/litho/ComponentTree;->A0h:Z
-
     .line 157
+    iget-object v1, v3, LX/4gY;->A06:LX/4gE;
+
     .line 158
-    :goto_1
-    if-nez p6, :cond_2
-
     .line 159
-    .line 160
-    new-instance v5, LX/4mu;
+    invoke-static {v7}, LX/4im;->A00(Landroid/content/Context;)Z
 
+    .line 160
     .line 161
     .line 162
-    invoke-direct {v5, v2}, LX/4mu;-><init>(LX/4mu;)V
+    move-result v0
 
     .line 163
+    new-instance v8, LX/4Kd;
+
     .line 164
     .line 165
-    :cond_2
-    iput-object v5, v1, Lcom/facebook/litho/ComponentTree;->A0D:LX/4mu;
+    invoke-direct {v8, v2, v1, v0}, LX/4Kd;-><init>(LX/4CH;LX/4gE;Z)V
 
     .line 166
     .line 167
-    sget-boolean v0, LX/4n6;->USE_INCREMENTAL_MOUNT_HELPER:Z
-
     .line 168
+    iget-object v1, v3, LX/4gY;->A04:LX/4iL;
+
     .line 169
-    if-eqz v0, :cond_c
-
     .line 170
-    .line 171
-    new-instance v0, LX/4pe;
+    if-nez v1, :cond_1
 
+    .line 171
     .line 172
+    move-object v1, v14
+
     .line 173
-    invoke-direct {v0, v1}, LX/4pe;-><init>(Lcom/facebook/litho/ComponentTree;)V
+    :cond_1
+    iget-object v11, v3, LX/4gY;->A09:LX/4hT;
 
     .line 174
     .line 175
+    const/4 v4, 0x1
+
     .line 176
-    :goto_2
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0c:LX/4pe;
+    invoke-static {v1, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 177
     .line 178
-    iput-object v4, v1, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
-
     .line 179
+    iget v0, v14, Lcom/facebook/litho/ComponentTree;->A0R:I
+
     .line 180
-    iget-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0F:LX/4qJ;
-
     .line 181
-    .line 182
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0F:LX/4qJ;
+    new-instance v9, LX/4il;
 
+    .line 182
     .line 183
+    move-object v13, v9
+
     .line 184
-    if-nez p8, :cond_3
+    move-object v15, v14
 
     .line 185
-    .line 186
-    invoke-static {}, Lcom/facebook/litho/ComponentTree;->A00()Landroid/os/Looper;
+    move-object/from16 v16, v14
 
+    .line 186
     .line 187
+    move-object/from16 v17, v1
+
     .line 188
     .line 189
-    move-result-object v0
+    move/from16 v18, v0
 
     .line 190
-    new-instance v4, LX/4pF;
-
     .line 191
-    .line 192
-    invoke-direct {v4, v0}, LX/4pF;-><init>(Landroid/os/Looper;)V
+    invoke-direct/range {v13 .. v18}, LX/4il;-><init>(Lcom/facebook/litho/ComponentTree;Lcom/facebook/litho/ComponentTree;Lcom/facebook/litho/ComponentTree;LX/4iL;I)V
 
+    .line 192
     .line 193
     .line 194
+    sget-object v0, LX/4gE;->defaultInstance:LX/4gE;
+
     .line 195
-    :cond_3
-    iput-object v4, v1, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
-
     .line 196
+    iget-boolean v0, v0, LX/4gE;->A0I:Z
+
     .line 197
-    move-object/from16 v0, p9
-
     .line 198
+    if-eqz v0, :cond_2
+
     .line 199
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0G:LX/4qJ;
-
     .line 200
+    iget-object v10, v3, LX/4gY;->A03:LX/4kF;
+
     .line 201
-    if-eqz p9, :cond_4
-
     .line 202
+    :goto_2
+    iget-object v12, v3, LX/4gY;->A08:LX/4hT;
+
     .line 203
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0G:LX/4qJ;
-
     .line 204
+    const-string v13, "root"
+
     .line 205
-    :cond_4
-    iget-object v0, v3, LX/4mm;->A0C:Landroid/content/Context;
-
     .line 206
-    .line 207
-    invoke-static {v0}, LX/4pC;->A00(Landroid/content/Context;)Z
+    new-instance v6, LX/4fk;
 
+    .line 207
     .line 208
+    invoke-direct/range {v6 .. v13}, LX/4fk;-><init>(Landroid/content/Context;LX/4Kd;LX/4il;LX/4kF;LX/4hT;LX/4hT;Ljava/lang/String;)V
+
     .line 209
     .line 210
-    move-result v15
-
     .line 211
-    sget-object v4, LX/4n6;->overrideReconciliation:Ljava/lang/Boolean;
+    iput-object v6, v14, Lcom/facebook/litho/ComponentTree;->A0T:LX/4fk;
 
     .line 212
     .line 213
-    if-eqz v4, :cond_5
+    sget-object v0, LX/4gE;->defaultInstance:LX/4gE;
 
     .line 214
     .line 215
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-boolean v0, v0, LX/4gE;->A0E:Z
 
     .line 216
     .line 217
-    .line 218
-    move-result v16
+    if-eqz v0, :cond_6
 
+    .line 218
     .line 219
-    :cond_5
-    iget-object v13, v1, Lcom/facebook/litho/ComponentTree;->A0G:LX/4qJ;
+    new-instance v0, LX/4hT;
 
     .line 220
     .line 221
-    if-eqz p11, :cond_6
+    invoke-direct {v0}, LX/4hT;-><init>()V
 
     .line 222
     .line 223
-    sget-boolean v4, LX/4n6;->isIncrementalMountGloballyDisabled:Z
-
     .line 224
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0D:LX/4hT;
+
     .line 225
-    const/16 v18, 0x1
-
     .line 226
+    sget-object v2, LX/6bP;->A00:LX/4K2;
+
     .line 227
-    if-eqz v4, :cond_7
-
     .line 228
+    new-instance v1, LX/4AW;
+
     .line 229
-    :cond_6
-    const/16 v18, 0x0
-
     .line 230
-    .line 231
-    :cond_7
-    new-instance v8, LX/4oC;
+    invoke-direct {v1}, LX/4AW;-><init>()V
 
+    .line 231
     .line 232
     .line 233
-    move/from16 v17, p14
+    invoke-static {v2, v5}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 234
     .line 235
-    move-object/from16 v10, p4
-
     .line 236
+    iget-object v0, v0, LX/4hT;->A00:Ljava/util/Map;
+
     .line 237
-    move-object/from16 v12, p7
-
     .line 238
-    .line 239
-    invoke-direct/range {v8 .. v18}, LX/4oC;-><init>(LX/4qm;LX/4lL;LX/4ok;LX/4n6;LX/4qJ;Ljava/lang/String;ZZZZ)V
+    invoke-static {v0}, LX/0WV;->A03(Ljava/lang/Object;)V
 
+    .line 239
     .line 240
     .line 241
-    .line 242
-    iget-object v6, v3, LX/4mm;->A07:LX/2fW;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 242
     .line 243
     .line 244
-    iget v4, v1, Lcom/facebook/litho/ComponentTree;->A0S:I
+    iget-object v0, v6, LX/4fk;->A07:LX/4hT;
 
     .line 245
     .line 246
-    new-instance v12, LX/4mY;
+    invoke-static {v0}, LX/4jM;->A00(LX/4hT;)LX/4hT;
 
     .line 247
     .line 248
-    move-object v13, v1
-
     .line 249
-    move-object v14, v1
+    move-result-object v2
 
     .line 250
-    move-object v15, v1
+    iget-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0D:LX/4hT;
 
     .line 251
-    move-object/from16 v16, v1
-
     .line 252
+    if-eqz v0, :cond_5
+
     .line 253
-    move/from16 v17, v4
-
     .line 254
-    .line 255
-    invoke-direct/range {v12 .. v17}, LX/4mY;-><init>(Lcom/facebook/litho/ComponentTree;Lcom/facebook/litho/ComponentTree;Lcom/facebook/litho/ComponentTree;Lcom/facebook/litho/ComponentTree;I)V
+    iget-object v1, v0, LX/4hT;->A00:Ljava/util/Map;
 
+    .line 255
     .line 256
+    invoke-static {v1}, LX/0WV;->A03(Ljava/lang/Object;)V
+
     .line 257
     .line 258
-    sget-boolean v4, LX/4n6;->enableFixForNestedComponentTree:Z
-
     .line 259
+    monitor-enter v1
+
     .line 260
-    move-object/from16 v7, p5
+    goto :goto_3
 
     .line 261
-    .line 262
-    if-eqz v4, :cond_b
+    :cond_2
+    iget-object v10, v14, Lcom/facebook/litho/ComponentTree;->A0B:LX/4kF;
 
+    .line 262
     .line 263
+    goto :goto_2
+
     .line 264
-    move-object v5, v7
+    :cond_3
+    move-object v0, v1
 
     .line 265
-    :goto_3
-    iget-object v4, v3, LX/4mm;->A06:LX/2fW;
+    goto/16 :goto_1
 
     .line 266
     .line 267
-    const-string v15, "root"
+    :cond_4
+    iput-object v1, v14, Lcom/facebook/litho/ComponentTree;->A0Y:LX/4h1;
 
     .line 268
     .line 269
-    new-instance v3, LX/4mm;
+    goto/16 :goto_0
 
     .line 270
     .line 271
-    move-object v10, v8
+    :goto_3
+    :try_start_0
+    iget-object v0, v2, LX/4hT;->A00:Ljava/util/Map;
 
     .line 272
-    move-object v13, v6
-
     .line 273
-    move-object v14, v4
+    invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 274
-    move-object v8, v3
-
     .line 275
-    move-object v9, v0
-
     .line 276
-    move-object v11, v5
+    monitor-exit v1
 
     .line 277
-    invoke-direct/range {v8 .. v15}, LX/4mm;-><init>(Landroid/content/Context;LX/4oC;LX/4q2;LX/4mY;LX/2fW;LX/2fW;Ljava/lang/String;)V
+    :cond_5
+    iput-object v2, v6, LX/4fk;->A07:LX/4hT;
 
     .line 278
     .line 279
+    iput-boolean v4, v6, LX/4fk;->A0B:Z
+
     .line 280
-    iput-object v3, v1, Lcom/facebook/litho/ComponentTree;->A0U:LX/4mm;
-
     .line 281
+    :cond_6
+    sget-object v0, LX/4gE;->defaultInstance:LX/4gE;
+
     .line 282
-    sget-boolean v0, LX/4n6;->isTimelineEnabled:Z
-
     .line 283
+    iget-boolean v0, v0, LX/4gE;->A0I:Z
+
     .line 284
-    if-eqz v0, :cond_a
-
     .line 285
+    if-eqz v0, :cond_7
+
     .line 286
-    new-instance v0, LX/4q4;
-
     .line 287
-    .line 288
-    invoke-direct {v0, v1}, LX/4q4;-><init>(Lcom/facebook/litho/ComponentTree;)V
+    iget-object v2, v6, LX/4fk;->A04:LX/4kF;
 
+    .line 288
     .line 289
+    :goto_4
+    if-eqz v2, :cond_a
+
     .line 290
     .line 291
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0V:LX/4q4;
+    move-object v1, v14
 
     .line 292
+    monitor-enter v1
+
     .line 293
-    :goto_4
-    sget-boolean v0, LX/4n6;->enableFixForNestedComponentTree:Z
+    goto :goto_5
 
     .line 294
-    .line 295
-    if-eqz v0, :cond_9
+    :cond_7
+    iget-object v2, v3, LX/4gY;->A03:LX/4kF;
 
+    .line 295
     .line 296
+    goto :goto_4
+
     .line 297
-    iget-object v0, v3, LX/4mm;->A03:LX/4q2;
+    :goto_5
+    :try_start_1
+    iget-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0B:LX/4kF;
 
     .line 298
     .line 299
-    if-eqz v0, :cond_8
+    if-nez v0, :cond_8
 
     .line 300
     .line 301
-    invoke-direct {v1, v0}, Lcom/facebook/litho/ComponentTree;->A0A(LX/4q2;)V
+    iput-object v2, v14, Lcom/facebook/litho/ComponentTree;->A0B:LX/4kF;
 
     .line 302
     .line 303
-    .line 304
-    :cond_8
-    :goto_5
-    iget-object v0, v3, LX/4mm;->A0C:Landroid/content/Context;
+    invoke-interface {v2, v14}, LX/4kF;->A2z(LX/4lM;)V
 
+    .line 304
     .line 305
     .line 306
-    invoke-static {v0}, LX/4BE;->A0a(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
+    sget-object v0, LX/4gE;->defaultInstance:LX/4gE;
 
     .line 307
     .line 308
-    .line 309
-    move-result-object v0
+    iget-boolean v0, v0, LX/4gE;->A0G:Z
 
+    .line 309
     .line 310
-    iput-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0T:Landroid/view/accessibility/AccessibilityManager;
+    if-nez v0, :cond_9
 
     .line 311
     .line 312
-    return-void
+    instance-of v0, v2, LX/4gf;
 
     .line 313
-    :cond_9
-    if-eqz p5, :cond_8
-
     .line 314
-    .line 315
-    invoke-direct {v1, v7}, Lcom/facebook/litho/ComponentTree;->A0A(LX/4q2;)V
+    if-eqz v0, :cond_9
 
+    .line 315
     .line 316
+    check-cast v2, LX/4gf;
+
     .line 317
     .line 318
-    goto :goto_5
+    invoke-virtual {v2}, LX/4gf;->A00()LX/07B;
 
     .line 319
-    :cond_a
-    iput-object v2, v1, Lcom/facebook/litho/ComponentTree;->A0V:LX/4q4;
-
     .line 320
     .line 321
-    goto :goto_4
+    move-result-object v0
 
     .line 322
-    :cond_b
-    iget-object v5, v1, Lcom/facebook/litho/ComponentTree;->A0A:LX/4q2;
+    if-eqz v0, :cond_9
 
     .line 323
     .line 324
-    goto :goto_3
+    invoke-virtual {v14, v0}, Lcom/facebook/litho/ComponentTree;->A0G(LX/07B;)V
 
     .line 325
-    :cond_c
-    move-object v0, v2
-
     .line 326
-    goto/16 :goto_2
-
     .line 327
+    goto :goto_6
+
     .line 328
-    :cond_d
-    move/from16 v0, p12
+    :cond_8
+    const-string v0, "Already subscribed"
 
     .line 329
     .line 330
-    iput-boolean v0, v1, Lcom/facebook/litho/ComponentTree;->A0h:Z
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 331
     .line 332
-    goto/16 :goto_1
-
     .line 333
+    move-result-object v0
+
     .line 334
-    :cond_e
-    iput-object v2, v1, Lcom/facebook/litho/ComponentTree;->A0b:LX/4nv;
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 335
+    :catchall_0
+    move-exception v0
+
     .line 336
-    goto/16 :goto_0
+    monitor-exit v1
+
+    .line 337
+    throw v0
+
+    .line 338
+    :cond_9
+    :goto_6
+    monitor-exit v1
+
+    .line 339
+    :cond_a
+    iget-object v0, v6, LX/4fk;->A0C:Landroid/content/Context;
+
+    .line 340
+    .line 341
+    invoke-static {v0}, LX/432;->A0W(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
+
+    .line 342
+    .line 343
+    .line 344
+    move-result-object v0
+
+    .line 345
+    iput-object v0, v14, Lcom/facebook/litho/ComponentTree;->A0S:Landroid/view/accessibility/AccessibilityManager;
+
+    .line 346
+    .line 347
+    return-void
 .end method
 
 .method public static declared-synchronized A00()Landroid/os/Looper;
@@ -841,7 +854,7 @@
 
     .line 3
     :try_start_0
-    sget-object v0, Lcom/facebook/litho/ComponentTree;->A0l:Landroid/os/Looper;
+    sget-object v0, Lcom/facebook/litho/ComponentTree;->A0g:Landroid/os/Looper;
 
     .line 4
     .line 5
@@ -853,7 +866,7 @@
 
     .line 8
     .line 9
-    sget v1, LX/4n6;->DEFAULT_BACKGROUND_THREAD_PRIORITY:I
+    sget v1, LX/4gE;->DEFAULT_BACKGROUND_THREAD_PRIORITY:I
 
     .line 10
     .line 11
@@ -866,7 +879,7 @@
     .line 14
     .line 15
     .line 16
-    invoke-static {v0}, LX/4BF;->A0U(Landroid/os/HandlerThread;)Landroid/os/Looper;
+    invoke-static {v0}, LX/433;->A0N(Landroid/os/HandlerThread;)Landroid/os/Looper;
 
     .line 17
     .line 18
@@ -874,12 +887,12 @@
     move-result-object v0
 
     .line 20
-    sput-object v0, Lcom/facebook/litho/ComponentTree;->A0l:Landroid/os/Looper;
+    sput-object v0, Lcom/facebook/litho/ComponentTree;->A0g:Landroid/os/Looper;
 
     .line 21
     .line 22
     :cond_0
-    sget-object v0, Lcom/facebook/litho/ComponentTree;->A0l:Landroid/os/Looper;
+    sget-object v0, Lcom/facebook/litho/ComponentTree;->A0g:Landroid/os/Looper;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -901,11 +914,40 @@
     throw v0
 .end method
 
-.method private A01()V
+.method public static A01(LX/4fg;LX/4fk;LX/4kF;)LX/4gY;
+    .locals 1
+
+    .line 0
+    new-instance v0, LX/4gY;
+
+    .line 1
+    .line 2
+    invoke-direct {v0, p1}, LX/4gY;-><init>(LX/4fk;)V
+
+    .line 3
+    .line 4
+    .line 5
+    if-eqz p0, :cond_0
+
+    .line 6
+    .line 7
+    iput-object p0, v0, LX/4gY;->A01:LX/4fg;
+
+    .line 8
+    .line 9
+    :cond_0
+    iput-object p2, v0, LX/4gY;->A03:LX/4kF;
+
+    .line 10
+    .line 11
+    return-object v0
+.end method
+
+.method private A02()V
     .locals 7
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
 
     .line 1
     .line 2
@@ -913,512 +955,542 @@
 
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 5
     .line 6
-    if-eq v1, v0, :cond_2
+    if-eq v1, v0, :cond_1
 
     .line 7
     .line 8
-    iput-object v1, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iput-object v1, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 9
     .line 10
-    iget-object v2, v1, LX/4mp;->A0H:Ljava/util/List;
+    if-eqz v0, :cond_0
 
     .line 11
     .line 12
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0i:LX/4qr;
+    iget-object v0, v0, LX/4fd;->A0I:LX/4g3;
 
     .line 13
     .line 14
-    if-eqz v0, :cond_c
+    iget-object v0, v0, LX/4g3;->A01:LX/4fg;
 
     .line 15
     .line 16
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0i:LX/4qr;
+    instance-of v0, v0, LX/4iH;
 
     .line 17
     .line 18
-    :cond_0
-    :goto_0
-    invoke-static {}, LX/4oe;->A00()V
+    if-eqz v0, :cond_2
 
     .line 19
     .line 20
+    :cond_0
+    iget-object v0, v1, LX/4fd;->A0I:LX/4g3;
+
     .line 21
-    iget-object v1, v0, LX/4qr;->A00:Ljava/util/Map;
-
     .line 22
+    iget-object v0, v0, LX/4g3;->A01:LX/4fg;
+
     .line 23
-    if-nez v1, :cond_3
-
     .line 24
+    instance-of v0, v0, LX/4iH;
+
     .line 25
-    if-nez v2, :cond_4
-
     .line 26
-    .line 27
-    :cond_1
-    :goto_1
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    if-eqz v0, :cond_2
 
+    .line 27
     .line 28
+    :cond_1
+    return-void
+
     .line 29
-    if-eqz v1, :cond_2
+    :cond_2
+    iget-object v1, v1, LX/4fd;->A0Q:Ljava/util/List;
 
     .line 30
     .line 31
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
 
     .line 32
-    iput-boolean v0, v1, LX/4mx;->A08:Z
-
     .line 33
-    .line 34
-    iget-object v0, v1, LX/4mx;->A0E:Landroid/graphics/Rect;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 34
     .line 35
     .line 36
-    invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
+    iget-object v6, v0, LX/4gO;->A00:LX/4l3;
 
     .line 37
     .line 38
+    invoke-static {}, LX/4hz;->A00()V
+
     .line 39
-    :cond_2
-    return-void
-
     .line 40
-    :cond_3
-    if-nez v2, :cond_4
-
     .line 41
-    .line 42
-    invoke-static {v1}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
+    iget-object v0, v6, LX/4l3;->A00:Ljava/util/Map;
 
+    .line 42
     .line 43
+    if-nez v0, :cond_4
+
     .line 44
     .line 45
-    move-result-object v2
+    if-nez v1, :cond_5
 
     .line 46
-    :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
     .line 47
+    :cond_3
+    :goto_0
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
+
     .line 48
     .line 49
-    move-result v1
+    if-eqz v1, :cond_1
 
     .line 50
-    if-eqz v1, :cond_a
-
     .line 51
+    const/4 v0, 0x1
+
     .line 52
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iput-boolean v0, v1, Lcom/facebook/litho/BaseMountingView;->A0A:Z
 
     .line 53
     .line 54
-    .line 55
-    move-result-object v1
+    iget-object v0, v1, Lcom/facebook/litho/BaseMountingView;->A0H:Landroid/graphics/Rect;
 
+    .line 55
     .line 56
-    check-cast v1, LX/4oq;
+    invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
     .line 57
     .line 58
-    invoke-virtual {v1}, LX/4oq;->A00()V
-
     .line 59
-    .line 60
-    .line 61
-    goto :goto_2
+    return-void
 
-    .line 62
+    .line 60
     :cond_4
-    invoke-static {}, LX/0Yj;->A0b()Ljava/util/LinkedHashMap;
+    if-nez v1, :cond_5
+
+    .line 61
+    .line 62
+    invoke-static {v0}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 63
     .line 64
     .line 65
-    move-result-object v6
+    move-result-object v1
 
     .line 66
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 67
     .line 68
     .line 69
-    move-result-object v3
+    move-result v0
 
     .line 70
-    :goto_3
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_b
 
     .line 71
     .line 72
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 73
-    move-result v1
-
     .line 74
-    if-eqz v1, :cond_5
-
     .line 75
+    move-result-object v0
+
     .line 76
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast v0, LX/4iE;
 
     .line 77
     .line 78
+    invoke-virtual {v0}, LX/4iE;->A00()V
+
     .line 79
-    move-result-object v2
-
     .line 80
-    move-object v1, v2
-
     .line 81
-    check-cast v1, LX/4oq;
+    goto :goto_1
 
     .line 82
-    .line 83
-    iget-object v1, v1, LX/4oq;->A02:Ljava/lang/String;
+    :cond_5
+    invoke-static {}, LX/0X7;->A0f()Ljava/util/LinkedHashMap;
 
+    .line 83
     .line 84
     .line 85
-    invoke-virtual {v6, v1, v2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v5
 
     .line 86
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
     .line 87
     .line 88
-    goto :goto_3
-
     .line 89
-    :cond_5
-    iget-object v1, v0, LX/4qr;->A00:Ljava/util/Map;
+    move-result-object v2
 
     .line 90
-    .line 91
-    if-eqz v1, :cond_9
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 91
     .line 92
     .line 93
-    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
+    move-result v0
 
     .line 94
+    if-eqz v0, :cond_6
+
     .line 95
     .line 96
-    move-result v1
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 97
-    if-nez v1, :cond_9
-
     .line 98
     .line 99
-    iget-object v5, v0, LX/4qr;->A00:Ljava/util/Map;
+    move-result-object v1
 
     .line 100
+    move-object v0, v1
+
     .line 101
-    if-eqz v5, :cond_1
+    check-cast v0, LX/4iE;
 
     .line 102
     .line 103
-    invoke-static {v5}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    iget-object v0, v0, LX/4iE;->A02:Ljava/lang/String;
 
     .line 104
     .line 105
+    invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 106
-    move-result-object v3
-
     .line 107
-    :cond_6
-    :goto_4
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
     .line 108
-    .line 109
-    .line 110
-    move-result v1
+    goto :goto_2
 
+    .line 109
+    :cond_6
+    iget-object v0, v6, LX/4l3;->A00:Ljava/util/Map;
+
+    .line 110
     .line 111
-    if-eqz v1, :cond_7
+    if-eqz v0, :cond_a
 
     .line 112
     .line 113
-    invoke-static {v3}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     .line 114
     .line 115
     .line 116
-    move-result-object v2
+    move-result v0
 
     .line 117
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    if-nez v0, :cond_a
 
     .line 118
     .line 119
-    .line 120
-    move-result-object v1
+    iget-object v4, v6, LX/4l3;->A00:Ljava/util/Map;
 
+    .line 120
     .line 121
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    if-eqz v4, :cond_3
 
     .line 122
     .line 123
+    invoke-static {v4}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
+
     .line 124
+    .line 125
+    .line 126
     move-result-object v2
 
-    .line 125
-    check-cast v2, LX/4oq;
-
-    .line 126
     .line 127
-    invoke-virtual {v6, v1}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+    :cond_7
+    :goto_3
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     .line 128
     .line 129
     .line 130
-    move-result v1
+    move-result v0
 
     .line 131
-    if-nez v1, :cond_6
+    if-eqz v0, :cond_8
 
     .line 132
     .line 133
-    invoke-virtual {v2}, LX/4oq;->A00()V
+    invoke-static {v2}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 134
     .line 135
     .line 136
-    goto :goto_4
+    move-result-object v1
 
     .line 137
-    :cond_7
-    invoke-static {v6}, LX/001;->A0Y(Ljava/util/Map;)Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     .line 138
     .line 139
     .line 140
-    move-result-object v4
+    move-result-object v0
 
     .line 141
-    :cond_8
-    :goto_5
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     .line 142
     .line 143
     .line 144
-    move-result v1
+    move-result-object v1
 
     .line 145
-    if-eqz v1, :cond_b
+    check-cast v1, LX/4iE;
 
     .line 146
     .line 147
-    invoke-static {v4}, LX/001;->A0Z(Ljava/util/Iterator;)Ljava/util/Map$Entry;
+    invoke-interface {v5, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     .line 148
     .line 149
     .line 150
-    move-result-object v2
+    move-result v0
 
     .line 151
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    if-nez v0, :cond_7
 
     .line 152
     .line 153
+    invoke-virtual {v1}, LX/4iE;->A00()V
+
     .line 154
-    move-result-object v1
-
     .line 155
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
     .line 156
+    goto :goto_3
+
     .line 157
+    :cond_8
+    invoke-static {v5}, LX/001;->A0f(Ljava/util/Map;)Ljava/util/Iterator;
+
     .line 158
+    .line 159
+    .line 160
     move-result-object v3
 
-    .line 159
-    check-cast v3, LX/4oq;
-
-    .line 160
     .line 161
-    invoke-interface {v5, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_9
+    :goto_4
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     .line 162
     .line 163
     .line 164
-    move-result-object v1
+    move-result v0
 
     .line 165
-    if-nez v1, :cond_8
+    if-eqz v0, :cond_c
 
     .line 166
     .line 167
-    iget-object v1, v3, LX/4oq;->A00:LX/4nU;
+    invoke-static {v3}, LX/001;->A0g(Ljava/util/Iterator;)Ljava/util/Map$Entry;
 
     .line 168
     .line 169
-    iget-object v2, v1, LX/4nU;->A04:LX/4mm;
-
     .line 170
+    move-result-object v1
+
     .line 171
-    :try_start_0
-    iget-object v1, v3, LX/4oq;->A01:LX/4me;
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     .line 172
     .line 173
-    invoke-virtual {v1, v2}, LX/4me;->A0l(LX/4mm;)V
-
     .line 174
+    move-result-object v0
+
     .line 175
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
     .line 176
-    goto :goto_5
+    .line 177
+    .line 178
+    move-result-object v2
+
+    .line 179
+    check-cast v2, LX/4iE;
+
+    .line 180
+    .line 181
+    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 182
+    .line 183
+    .line 184
+    move-result-object v0
+
+    .line 185
+    if-nez v0, :cond_9
+
+    .line 186
+    .line 187
+    iget-object v0, v2, LX/4iE;->A00:LX/4fz;
+
+    .line 188
+    .line 189
+    iget-object v1, v0, LX/4fz;->A04:LX/4fk;
+
+    .line 190
+    .line 191
+    :try_start_0
+    iget-object v0, v2, LX/4iE;->A01:LX/4fV;
+
+    .line 192
+    .line 193
+    invoke-virtual {v0, v1}, LX/4fV;->A0d(LX/4fk;)V
+
+    .line 194
+    .line 195
+    .line 196
+    goto :goto_4
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 177
-    :catch_0
-    move-exception v1
-
-    .line 178
-    invoke-static {v2, v1}, LX/6Mm;->A02(LX/4mm;Ljava/lang/Exception;)V
-
-    .line 179
-    .line 180
-    .line 181
-    goto :goto_5
-
-    .line 182
-    :cond_9
-    invoke-static {v6}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
-
-    .line 183
-    .line 184
-    .line 185
-    move-result-object v4
-
-    .line 186
-    :goto_6
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 187
-    .line 188
-    .line 189
-    move-result v1
-
-    .line 190
-    if-eqz v1, :cond_b
-
-    .line 191
-    .line 192
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 193
-    .line 194
-    .line 195
-    move-result-object v3
-
-    .line 196
-    check-cast v3, LX/4oq;
-
     .line 197
+    :catch_0
+    move-exception v0
+
     .line 198
-    iget-object v1, v3, LX/4oq;->A00:LX/4nU;
+    invoke-static {v1, v0}, LX/4gQ;->A03(LX/4fk;Ljava/lang/Exception;)V
 
     .line 199
     .line 200
-    iget-object v2, v1, LX/4nU;->A04:LX/4mm;
-
     .line 201
+    goto :goto_4
+
     .line 202
-    :try_start_1
-    iget-object v1, v3, LX/4oq;->A01:LX/4me;
+    :cond_a
+    invoke-static {v5}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 203
     .line 204
-    invoke-virtual {v1, v2}, LX/4me;->A0l(LX/4mm;)V
-
     .line 205
+    move-result-object v3
+
     .line 206
+    :goto_5
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
     .line 207
-    goto :goto_6
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
     .line 208
-    :catch_1
-    move-exception v1
-
     .line 209
-    invoke-static {v2, v1}, LX/6Mm;->A02(LX/4mm;Ljava/lang/Exception;)V
+    move-result v0
 
     .line 210
+    if-eqz v0, :cond_c
+
     .line 211
     .line 212
-    goto :goto_6
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 213
-    :cond_a
-    const/4 v6, 0x0
-
     .line 214
-    :cond_b
-    iput-object v6, v0, LX/4qr;->A00:Ljava/util/Map;
-
     .line 215
+    move-result-object v2
+
     .line 216
-    goto/16 :goto_1
+    check-cast v2, LX/4iE;
 
     .line 217
     .line 218
-    :cond_c
-    if-eqz v2, :cond_1
+    iget-object v0, v2, LX/4iE;->A00:LX/4fz;
 
     .line 219
     .line 220
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0i:LX/4qr;
+    iget-object v1, v0, LX/4fz;->A04:LX/4fk;
 
     .line 221
     .line 222
-    if-nez v0, :cond_0
+    :try_start_1
+    iget-object v0, v2, LX/4iE;->A01:LX/4fV;
 
     .line 223
     .line 224
-    new-instance v0, LX/4qr;
+    invoke-virtual {v0, v1}, LX/4fV;->A0d(LX/4fk;)V
 
     .line 225
     .line 226
-    invoke-direct {v0}, LX/4qr;-><init>()V
-
     .line 227
+    goto :goto_5
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
     .line 228
+    :catch_1
+    move-exception v0
+
     .line 229
-    iput-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0i:LX/4qr;
+    invoke-static {v1, v0}, LX/4gQ;->A03(LX/4fk;Ljava/lang/Exception;)V
 
     .line 230
     .line 231
+    .line 232
+    goto :goto_5
+
+    .line 233
+    :cond_b
+    const/4 v5, 0x0
+
+    .line 234
+    :cond_c
+    iput-object v5, v6, LX/4l3;->A00:Ljava/util/Map;
+
+    .line 235
+    .line 236
     goto/16 :goto_0
 
-    .line 232
-    .line 233
+    .line 237
+    .line 238
     :cond_d
     const-string v0, "Cannot promote null LayoutState!"
 
-    .line 234
-    .line 235
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    .line 239
+    .line 240
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
-    .line 236
-    .line 237
-    .line 238
+    .line 241
+    .line 242
+    .line 243
     move-result-object v0
 
-    .line 239
+    .line 244
     throw v0
 .end method
 
-.method public static synthetic A02(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+.method public static synthetic A03(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    .locals 1
+
+    .line 0
+    invoke-virtual {p1}, Landroid/view/View;->getOverlay()Landroid/view/ViewOverlay;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {v0, p0}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public static synthetic A04(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
     .locals 3
 
     .line 0
@@ -1459,11 +1531,11 @@
     .line 17
     .line 18
     .line 19
-    new-instance v2, LX/4pi;
+    new-instance v2, LX/4jm;
 
     .line 20
     .line 21
-    invoke-direct {v2, p0, p1}, LX/4pi;-><init>(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    invoke-direct {v2, p0, p1}, LX/4jm;-><init>(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
 
     .line 22
     .line 23
@@ -1480,31 +1552,11 @@
     return-void
 .end method
 
-.method public static synthetic A03(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
-    .locals 1
-
-    .line 0
-    invoke-virtual {p1}, Landroid/view/View;->getOverlay()Landroid/view/ViewOverlay;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    invoke-virtual {v0, p0}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
-
-    .line 5
-    .line 6
-    .line 7
-    return-void
-.end method
-
-.method public static A04(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/4qW;LX/2fW;IIIZ)V
+.method public static A05(LX/4fg;Lcom/facebook/litho/ComponentTree;LX/4ko;LX/4hT;IIIZ)V
     .locals 9
 
     .line 0
-    move-object v0, p0
+    move-object v1, p0
 
     .line 1
     const/4 v4, 0x0
@@ -1514,11 +1566,11 @@
 
     .line 3
     .line 4
-    new-instance v0, LX/4mS;
+    new-instance v1, LX/4iH;
 
     .line 5
     .line 6
-    invoke-direct {v0}, LX/4mS;-><init>()V
+    invoke-direct {v1}, LX/4iH;-><init>()V
 
     .line 7
     .line 8
@@ -1527,7 +1579,7 @@
     const/4 p0, 0x0
 
     .line 10
-    move-object v1, p1
+    move-object v0, p1
 
     .line 11
     move-object v2, p2
@@ -1552,7 +1604,7 @@
     move p1, p0
 
     .line 19
-    invoke-static/range {v0 .. v10}, Lcom/facebook/litho/ComponentTree;->A06(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/4qW;LX/2fW;Ljava/lang/String;IIIZZZ)V
+    invoke-direct/range {v0 .. v10}, Lcom/facebook/litho/ComponentTree;->A07(LX/4fg;LX/4ko;LX/4hT;Ljava/lang/String;IIIZZZ)V
 
     .line 20
     .line 21
@@ -1560,56 +1612,56 @@
     return-void
 .end method
 
-.method public static A05(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/4qW;LX/2fW;Ljava/lang/String;IIIZ)V
-    .locals 23
+.method public static A06(LX/4fg;Lcom/facebook/litho/ComponentTree;LX/4ko;LX/4hT;Ljava/lang/String;IIIZ)V
+    .locals 19
 
     .line 0
-    move-object/from16 v9, p1
+    move-object/from16 v2, p1
 
     .line 1
     .line 2
-    iget-object v2, v9, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Object;
+    iget-object v3, v2, Lcom/facebook/litho/ComponentTree;->A0V:Ljava/lang/Object;
 
     .line 3
     .line 4
-    monitor-enter v2
+    monitor-enter v3
 
     .line 5
     :try_start_0
-    iget-object v1, v9, Lcom/facebook/litho/ComponentTree;->A06:LX/4pP;
+    iget-object v1, v2, Lcom/facebook/litho/ComponentTree;->A06:LX/4jJ;
 
     .line 6
     .line 7
-    const/4 v7, 0x0
+    const/4 v12, 0x0
 
     .line 8
     if-eqz v1, :cond_0
 
     .line 9
     .line 10
-    iget-object v0, v9, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
+    iget-object v0, v2, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
 
     .line 11
     .line 12
-    invoke-interface {v0, v1}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 13
     .line 14
     .line 15
-    iput-object v7, v9, Lcom/facebook/litho/ComponentTree;->A06:LX/4pP;
+    iput-object v12, v2, Lcom/facebook/litho/ComponentTree;->A06:LX/4jJ;
 
     .line 16
     .line 17
     :cond_0
-    monitor-exit v2
+    monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
     .line 18
-    monitor-enter v9
+    monitor-enter v2
 
     .line 19
-    move-object/from16 v12, p0
+    move-object/from16 v10, p0
 
     .line 20
     .line 21
@@ -1618,29 +1670,29 @@
     .line 22
     .line 23
     :try_start_1
-    monitor-exit v9
+    monitor-exit v2
 
     .line 24
     return-void
 
     .line 25
     :cond_1
-    iget v11, v9, Lcom/facebook/litho/ComponentTree;->A0P:I
+    iget v15, v2, Lcom/facebook/litho/ComponentTree;->A0N:I
 
     .line 26
     .line 27
-    add-int/lit8 v0, v11, 0x1
+    add-int/lit8 v0, v15, 0x1
 
     .line 28
     .line 29
-    iput v0, v9, Lcom/facebook/litho/ComponentTree;->A0P:I
+    iput v0, v2, Lcom/facebook/litho/ComponentTree;->A0N:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     .line 30
     .line 31
     :try_start_2
-    iget-object v0, v9, Lcom/facebook/litho/ComponentTree;->A0D:LX/4mu;
+    iget-object v0, v2, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
 
     .line 32
     .line 33
@@ -1648,11 +1700,11 @@
 
     .line 34
     .line 35
-    new-instance v10, LX/4mu;
+    new-instance v13, LX/4gO;
 
     .line 36
     .line 37
-    invoke-direct {v10, v7}, LX/4mu;-><init>(LX/4mu;)V
+    invoke-direct {v13, v12}, LX/4gO;-><init>(LX/4gO;)V
 
     .line 38
     .line 39
@@ -1661,11 +1713,11 @@
 
     .line 41
     :cond_2
-    new-instance v10, LX/4mu;
+    new-instance v13, LX/4gO;
 
     .line 42
     .line 43
-    invoke-direct {v10, v0}, LX/4mu;-><init>(LX/4mu;)V
+    invoke-direct {v13, v0}, LX/4gO;-><init>(LX/4gO;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -1674,7 +1726,7 @@
     .line 46
     :goto_0
     :try_start_3
-    iget-object v0, v9, Lcom/facebook/litho/ComponentTree;->A0C:LX/4o1;
+    iget-object v0, v2, Lcom/facebook/litho/ComponentTree;->A0C:LX/4g3;
 
     .line 47
     .line 48
@@ -1682,16 +1734,16 @@
 
     .line 49
     .line 50
-    iget-object v7, v0, LX/4o1;->A03:LX/4mc;
+    iget-object v12, v0, LX/4g3;->A03:LX/4fY;
 
     .line 51
     .line 52
     :cond_3
-    iget-object v13, v9, Lcom/facebook/litho/ComponentTree;->A0U:LX/4mm;
+    iget-object v7, v2, Lcom/facebook/litho/ComponentTree;->A0T:LX/4fk;
 
     .line 53
     .line 54
-    new-instance v6, LX/4mm;
+    new-instance v11, LX/4fk;
 
     .line 55
     .line 56
@@ -1699,128 +1751,128 @@
 
     .line 57
     .line 58
-    invoke-direct {v6, v13, v0}, LX/4mm;-><init>(LX/4mm;LX/2fW;)V
+    invoke-direct {v11, v7, v0}, LX/4fk;-><init>(LX/4fk;LX/4hT;)V
 
     .line 59
     .line 60
     .line 61
-    monitor-exit v9
+    monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     .line 62
-    const/16 v0, 0x16
+    const/16 v1, 0x16
 
     .line 63
     .line 64
-    iget-object v5, v13, LX/4mm;->A02:LX/4oC;
+    iget-object v0, v7, LX/4fk;->A02:LX/4Kd;
 
     .line 65
     .line 66
-    iget-object v4, v5, LX/4oC;->A01:LX/4qm;
+    iget-object v0, v0, LX/4Kd;->A01:LX/4gE;
 
     .line 67
     .line 68
-    move-object/from16 v18, p4
+    iget-object v5, v0, LX/4gE;->A05:LX/6c9;
 
     .line 69
     .line 70
-    move/from16 v8, p5
+    move-object/from16 v14, p4
 
     .line 71
     .line 72
-    if-eqz v4, :cond_a
+    move/from16 v3, p5
 
     .line 73
     .line 74
-    invoke-interface {v4, v0}, LX/4qm;->ATq(I)LX/3tt;
+    if-eqz v5, :cond_9
 
     .line 75
     .line 76
+    invoke-static {v5, v1}, LX/6c9;->A00(LX/6c9;I)LX/6Zj;
+
     .line 77
-    move-result-object v3
-
     .line 78
-    if-eqz v3, :cond_4
-
     .line 79
+    move-result-object v4
+
     .line 80
-    invoke-virtual {v12}, LX/4mg;->A0P()Ljava/lang/String;
+    if-eqz v4, :cond_4
 
     .line 81
     .line 82
+    invoke-virtual {v10}, LX/4fg;->A0H()Ljava/lang/String;
+
     .line 83
+    .line 84
+    .line 85
     move-result-object v1
 
-    .line 84
-    const-string v0, "component"
-
-    .line 85
     .line 86
-    invoke-virtual {v3, v0, v1}, LX/3tt;->A00(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, "component"
 
     .line 87
     .line 88
-    .line 89
-    invoke-static {v8}, LX/4mp;->A00(I)Ljava/lang/String;
+    invoke-virtual {v4, v0, v1}, LX/6Zj;->A00(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 89
     .line 90
     .line 91
+    invoke-static {v3}, LX/4lc;->A00(I)Ljava/lang/String;
+
     .line 92
+    .line 93
+    .line 94
     move-result-object v1
 
-    .line 93
-    const-string v0, "source"
-
-    .line 94
     .line 95
-    invoke-virtual {v3, v0, v1}, LX/3tt;->A00(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, "source"
 
     .line 96
     .line 97
-    .line 98
-    invoke-static {}, LX/4oe;->A01()Z
+    invoke-virtual {v4, v0, v1}, LX/6Zj;->A00(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 98
     .line 99
     .line 100
+    invoke-static {}, LX/4hz;->A01()Z
+
     .line 101
+    .line 102
+    .line 103
     move-result v0
 
-    .line 102
-    xor-int/lit8 v15, v0, 0x1
-
-    .line 103
     .line 104
-    const-string v0, "is_background_layout"
+    xor-int/lit8 v9, v0, 0x1
 
     .line 105
     .line 106
-    iget-object v14, v3, LX/3tt;->A02:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
+    const-string v0, "is_background_layout"
 
     .line 107
     .line 108
-    iget v2, v3, LX/3tt;->A01:I
+    iget-object v8, v4, LX/6Zj;->A02:Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;
 
     .line 109
     .line 110
-    iget v1, v3, LX/3tt;->A00:I
+    iget v6, v4, LX/6Zj;->A01:I
 
     .line 111
     .line 112
-    invoke-interface {v14, v2, v1, v0, v15}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(IILjava/lang/String;Z)V
+    iget v1, v4, LX/6Zj;->A00:I
 
     .line 113
     .line 114
-    .line 115
-    const-string v15, "attribution"
+    invoke-interface {v8, v6, v1, v0, v9}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(IILjava/lang/String;Z)V
 
+    .line 115
     .line 116
     .line 117
-    move-object/from16 v0, v18
+    const-string v0, "attribution"
 
     .line 118
     .line 119
-    invoke-virtual {v3, v15, v0}, LX/3tt;->A00(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v0, v14}, LX/6Zj;->A00(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 120
     .line 121
@@ -1829,14 +1881,14 @@
 
     .line 123
     .line 124
-    invoke-interface {v14, v2, v1, v0, v11}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(IILjava/lang/String;I)V
+    invoke-interface {v8, v6, v1, v0, v15}, Lcom/facebook/quicklog/LightweightQuickPerformanceLogger;->markerAnnotate(IILjava/lang/String;I)V
 
     .line 125
     .line 126
     .line 127
     :cond_4
     :goto_1
-    iget-object v1, v12, LX/4mg;->A01:Ljava/lang/String;
+    iget-object v1, v10, LX/4fg;->A01:Ljava/lang/String;
 
     .line 128
     .line 129
@@ -1844,11 +1896,11 @@
 
     .line 130
     .line 131
-    iget-object v2, v13, LX/4mm;->A0C:Landroid/content/Context;
+    iget-object v6, v7, LX/4fk;->A0C:Landroid/content/Context;
 
     .line 132
     .line 133
-    invoke-static {v2}, LX/4mg;->A0F(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v6}, LX/4fg;->A08(Landroid/content/Context;)Ljava/lang/String;
 
     .line 134
     .line 135
@@ -1868,24 +1920,24 @@
 
     .line 142
     .line 143
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 144
     .line 145
     .line 146
-    move-result-object v14
+    move-result-object v7
 
     .line 147
     const-string v0, "ComponentTree context is different from root builder context, ComponentTree context="
 
     .line 148
     .line 149
-    invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 150
     .line 151
     .line 152
-    invoke-static {v2}, LX/4mg;->A0F(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v6}, LX/4fg;->A08(Landroid/content/Context;)Ljava/lang/String;
 
     .line 153
     .line 154
@@ -1893,7 +1945,7 @@
     move-result-object v0
 
     .line 156
-    invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 157
     .line 158
@@ -1902,12 +1954,12 @@
 
     .line 160
     .line 161
-    invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 162
     .line 163
     .line 164
-    invoke-virtual {v14, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 165
     .line 166
@@ -1916,12 +1968,12 @@
 
     .line 168
     .line 169
-    invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 170
     .line 171
     .line 172
-    invoke-virtual {v12}, LX/4mg;->A0P()Ljava/lang/String;
+    invoke-virtual {v10}, LX/4fg;->A0H()Ljava/lang/String;
 
     .line 173
     .line 174
@@ -1929,7 +1981,7 @@
     move-result-object v0
 
     .line 176
-    invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 177
     .line 178
@@ -1938,2228 +1990,1486 @@
 
     .line 180
     .line 181
-    invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 182
     .line 183
     .line 184
-    sget-object v0, LX/4mW;->A07:LX/4mX;
+    const/4 v8, 0x0
 
     .line 185
-    .line 186
-    invoke-virtual {v0, v9}, LX/4mX;->A02(Lcom/facebook/litho/ComponentTree;)LX/4mW;
+    sget-object v1, LX/4fx;->A08:LX/4fy;
 
+    .line 186
     .line 187
+    iget-object v0, v2, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
+
     .line 188
     .line 189
-    move-result-object v13
+    invoke-static {v1, v0}, LX/4fy;->A00(LX/4fy;LX/4fd;)LX/4fx;
 
     .line 190
-    if-nez v13, :cond_9
-
     .line 191
     .line 192
-    const/4 v0, 0x0
+    move-result-object v6
 
     .line 193
-    :goto_2
-    invoke-static {v0, v14}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    if-nez v6, :cond_8
 
     .line 194
     .line 195
+    const/4 v0, 0x0
+
     .line 196
-    move-result-object v2
+    :goto_2
+    invoke-static {v0, v7}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 197
-    sget-object v1, LX/4Yf;->ERROR:LX/4Yf;
-
     .line 198
     .line 199
-    const-string v0, "ComponentTree:CTContextIsDifferentFromRootBuilderContext"
+    move-result-object v6
 
     .line 200
-    .line 201
-    invoke-static {v1, v0, v2}, LX/4YE;->A00(LX/4Yf;Ljava/lang/String;Ljava/lang/String;)V
+    sget-object v1, LX/6bV;->ERROR:LX/6bV;
 
+    .line 201
     .line 202
+    const-string v0, "ComponentTree:CTContextIsDifferentFromRootBuilderContext"
+
     .line 203
     .line 204
-    :cond_5
-    if-eqz p5, :cond_7
+    invoke-static {v0, v6}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 205
     .line 206
-    const/4 v0, 0x2
-
     .line 207
-    if-eq v8, v0, :cond_7
+    invoke-static {v1, v0, v6}, LX/2bQ;->A00(LX/6bV;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 208
     .line 209
-    const/4 v0, 0x4
-
     .line 210
-    if-eq v8, v0, :cond_7
+    :cond_5
+    if-eqz p5, :cond_6
 
     .line 211
     .line 212
-    const/4 v0, 0x6
+    const/4 v0, 0x2
 
     .line 213
-    const/4 v2, 0x0
+    if-eq v3, v0, :cond_6
 
     .line 214
-    if-eq v8, v0, :cond_7
-
     .line 215
+    const/4 v0, 0x4
+
     .line 216
-    iget-object v1, v5, LX/4oC;->A00:LX/4n6;
+    if-eq v3, v0, :cond_6
 
     .line 217
     .line 218
-    iget-boolean v0, v1, LX/4n6;->A08:Z
+    const/4 v1, 0x6
 
     .line 219
+    const/4 v0, 0x0
+
     .line 220
-    if-nez v0, :cond_6
+    if-ne v3, v1, :cond_7
 
     .line 221
     .line 222
-    iget-boolean v0, v1, LX/4n6;->A06:Z
+    :cond_6
+    const/4 v0, 0x1
 
     .line 223
+    :cond_7
+    xor-int/lit8 p1, v0, 0x1
+
     .line 224
-    if-eqz v0, :cond_8
-
     .line 225
+    iget v0, v2, Lcom/facebook/litho/ComponentTree;->A0R:I
+
     .line 226
-    :cond_6
-    const/16 p1, 0x1
-
     .line 227
+    new-instance v9, LX/4fh;
+
     .line 228
-    :goto_3
-    iget v0, v9, Lcom/facebook/litho/ComponentTree;->A0S:I
-
     .line 229
+    move/from16 v16, p6
+
     .line 230
-    new-instance v13, LX/4mo;
-
     .line 231
+    move/from16 v17, p7
+
     .line 232
-    move/from16 v20, p6
-
     .line 233
+    move/from16 v18, v0
+
     .line 234
-    move/from16 v21, p7
-
     .line 235
+    move/from16 p0, v3
+
     .line 236
-    move/from16 v22, v0
-
     .line 237
-    .line 238
-    move/from16 p0, v8
+    invoke-direct/range {v9 .. v20}, LX/4fh;-><init>(LX/4fg;LX/4fk;LX/4fY;LX/4gO;Ljava/lang/String;IIIIIZ)V
 
+    .line 238
     .line 239
     .line 240
-    move/from16 v19, v11
+    iget-object v1, v2, Lcom/facebook/litho/ComponentTree;->A0d:Ljava/util/List;
 
     .line 241
     .line 242
-    move-object/from16 v16, v7
+    iget-object v0, v2, Lcom/facebook/litho/ComponentTree;->A0b:Ljava/lang/Object;
 
     .line 243
     .line 244
-    move-object/from16 v17, v10
+    invoke-static {v9, v0, v1, v3}, LX/4ib;->A01(LX/4ib;Ljava/lang/Object;Ljava/util/List;I)LX/4l6;
 
     .line 245
     .line 246
-    move-object v14, v12
-
     .line 247
-    move-object v15, v6
+    move-result-object v0
 
     .line 248
-    invoke-direct/range {v13 .. v24}, LX/4mo;-><init>(LX/4mg;LX/4mm;LX/4mc;LX/4mu;Ljava/lang/String;IIIIIZ)V
+    iget-object v6, v0, LX/4l6;->A00:LX/4lh;
 
     .line 249
     .line 250
+    check-cast v6, LX/4g3;
+
     .line 251
-    iget-object v1, v9, Lcom/facebook/litho/ComponentTree;->A0g:Ljava/util/List;
-
     .line 252
-    .line 253
-    iget-object v0, v9, Lcom/facebook/litho/ComponentTree;->A0e:Ljava/lang/Object;
+    if-eqz v6, :cond_f
 
+    .line 253
     .line 254
+    monitor-enter v2
+
     .line 255
-    invoke-static {v13, v0, v1, v8}, LX/4nd;->A01(LX/4nd;Ljava/lang/Object;Ljava/util/List;I)LX/4qS;
+    goto :goto_3
 
     .line 256
+    :cond_8
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
+
     .line 257
     .line 258
-    move-result-object v0
-
     .line 259
-    if-eqz v0, :cond_11
+    move-result-object v1
 
     .line 260
+    new-instance v0, LX/4g0;
+
     .line 261
-    iget-object v6, v0, LX/4qS;->A00:LX/4rX;
-
     .line 262
-    .line 263
-    check-cast v6, LX/4o1;
+    invoke-direct {v0}, LX/4g0;-><init>()V
 
+    .line 263
     .line 264
     .line 265
-    if-nez v6, :cond_b
+    invoke-static {v0, v6, v1, v8}, LX/4g0;->A00(LX/4g0;LX/4fx;Ljava/lang/StringBuilder;I)V
 
     .line 266
     .line 267
-    invoke-virtual {v9}, Lcom/facebook/litho/ComponentTree;->A0J()Z
-
     .line 268
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
     .line 269
     .line 270
-    move-result v1
-
     .line 271
-    if-nez v1, :cond_11
+    move-result-object v0
 
     .line 272
+    goto :goto_2
+
     .line 273
-    if-eqz v2, :cond_11
+    :cond_9
+    const/4 v4, 0x0
 
     .line 274
+    goto/16 :goto_1
+
     .line 275
-    iget-object v1, v5, LX/4oC;->A00:LX/4n6;
-
     .line 276
+    :goto_3
+    :try_start_4
+    iget-object v0, v2, Lcom/facebook/litho/ComponentTree;->A0C:LX/4g3;
+
     .line 277
-    iget-boolean v1, v1, LX/4n6;->A06:Z
-
     .line 278
+    move/from16 v11, p8
+
     .line 279
-    if-nez v1, :cond_11
-
     .line 280
-    .line 281
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_a
 
+    .line 281
     .line 282
+    iget v1, v0, LX/4g3;->A00:I
+
     .line 283
     .line 284
-    move-result-object v2
+    iget v0, v6, LX/4g3;->A00:I
 
     .line 285
-    const-string v1, "ResolveResult is null, but only async operations can return a null ResolveResult. Source: "
-
     .line 286
-    .line 287
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ge v1, v0, :cond_c
 
+    .line 287
     .line 288
+    :cond_a
+    iput-object v6, v2, Lcom/facebook/litho/ComponentTree;->A0C:LX/4g3;
+
     .line 289
     .line 290
-    invoke-static {v8}, LX/4mp;->A00(I)Ljava/lang/String;
+    iget-object v1, v2, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
 
     .line 291
     .line 292
-    .line 293
-    move-result-object v1
+    if-eqz v1, :cond_b
 
+    .line 293
     .line 294
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v6, LX/4g3;->A06:LX/4gO;
 
     .line 295
     .line 296
+    iget-object v1, v1, LX/4gO;->A05:LX/4gT;
+
     .line 297
-    const-string v1, ", message: "
-
     .line 298
-    .line 299
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, LX/4gO;->A05:LX/4gT;
 
+    .line 299
     .line 300
+    invoke-virtual {v1, v0}, LX/4gT;->A03(LX/4gT;)V
+
     .line 301
     .line 302
-    iget-object v0, v0, LX/4qS;->A01:Ljava/lang/String;
-
     .line 303
-    .line 304
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 305
-    .line 306
-    .line 307
-    const-string v0, ", current thread: "
-
-    .line 308
-    .line 309
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 310
-    .line 311
-    .line 312
-    invoke-static {}, LX/4BE;->A0o()Ljava/lang/String;
-
-    .line 313
-    .line 314
-    .line 315
-    move-result-object v0
-
-    .line 316
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 317
-    .line 318
-    .line 319
-    const-string v0, ". Root: "
-
-    .line 320
-    .line 321
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 322
-    .line 323
-    .line 324
-    invoke-virtual {v12}, LX/4mg;->A0P()Ljava/lang/String;
-
-    .line 325
-    .line 326
-    .line 327
-    move-result-object v0
-
-    .line 328
-    invoke-static {v0, v2}, LX/001;->A0D(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
-
-    .line 329
-    .line 330
-    .line 331
-    move-result-object v0
-
-    .line 332
-    throw v0
-
-    .line 333
-    :cond_7
-    const/4 v2, 0x1
-
-    .line 334
-    :cond_8
-    const/16 p1, 0x0
-
-    .line 335
-    .line 336
-    goto :goto_3
-
-    .line 337
-    :cond_9
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 338
-    .line 339
-    .line 340
-    move-result-object v2
-
-    .line 341
-    new-instance v1, LX/4mV;
-
-    .line 342
-    .line 343
-    invoke-direct {v1}, LX/4mV;-><init>()V
-
-    .line 344
-    .line 345
-    .line 346
-    const/4 v0, 0x0
-
-    .line 347
-    invoke-static {v1, v13, v2, v0}, LX/4mV;->A00(LX/4mV;LX/4mW;Ljava/lang/StringBuilder;I)V
-
-    .line 348
-    .line 349
-    .line 350
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 351
-    .line 352
-    .line 353
-    move-result-object v0
-
-    .line 354
-    goto/16 :goto_2
-
-    .line 355
-    .line 356
-    :cond_a
-    const/4 v3, 0x0
-
-    .line 357
-    goto/16 :goto_1
-
-    .line 358
-    .line 359
     :cond_b
-    monitor-enter v9
+    if-nez p8, :cond_c
 
-    .line 360
-    :try_start_4
-    iget-object v0, v9, Lcom/facebook/litho/ComponentTree;->A0C:LX/4o1;
-
-    .line 361
-    .line 362
-    move/from16 v7, p8
-
-    .line 363
-    .line 364
-    if-eqz v0, :cond_c
-
-    .line 365
-    .line 366
-    iget v1, v0, LX/4o1;->A00:I
-
-    .line 367
-    .line 368
-    iget v0, v6, LX/4o1;->A00:I
-
-    .line 369
-    .line 370
-    if-ge v1, v0, :cond_e
-
-    .line 371
-    .line 372
-    :cond_c
-    iput-object v6, v9, Lcom/facebook/litho/ComponentTree;->A0C:LX/4o1;
-
-    .line 373
-    .line 374
-    iget-object v1, v9, Lcom/facebook/litho/ComponentTree;->A0D:LX/4mu;
-
-    .line 375
-    .line 376
-    if-eqz v1, :cond_d
-
-    .line 377
-    .line 378
-    iget-object v0, v6, LX/4o1;->A06:LX/4mu;
-
-    .line 379
-    .line 380
-    iget-object v1, v1, LX/4mu;->A04:LX/4mt;
-
-    .line 381
-    .line 382
-    iget-object v0, v0, LX/4mu;->A04:LX/4mt;
-
-    .line 383
-    .line 384
-    invoke-virtual {v1, v0}, LX/4mt;->A03(LX/4mt;)V
-
-    .line 385
-    .line 386
-    .line 387
-    :cond_d
-    if-nez p8, :cond_e
-
-    .line 388
-    .line 389
+    .line 304
+    .line 305
     const/4 v0, 0x0
 
-    .line 390
-    iput v0, v9, Lcom/facebook/litho/ComponentTree;->A02:I
+    .line 306
+    iput v0, v2, Lcom/facebook/litho/ComponentTree;->A02:I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 391
-    .line 392
-    :cond_e
-    monitor-exit v9
+    .line 307
+    .line 308
+    :cond_c
+    monitor-exit v2
 
-    .line 393
-    if-eqz v4, :cond_f
+    .line 309
+    if-eqz v5, :cond_d
 
-    .line 394
-    .line 395
-    if-eqz v3, :cond_f
+    .line 310
+    .line 311
+    if-eqz v4, :cond_d
 
-    .line 396
-    .line 397
-    invoke-interface {v4, v3}, LX/4qm;->ASf(LX/3tt;)V
+    .line 312
+    .line 313
+    invoke-virtual {v5, v4}, LX/6c9;->A01(LX/6Zj;)V
 
-    .line 398
-    .line 399
-    .line 400
-    :cond_f
-    xor-int/lit8 v0, v2, 0x1
+    .line 314
+    .line 315
+    .line 316
+    :cond_d
+    move-object/from16 v7, p2
 
-    .line 401
-    .line 402
-    move-object/from16 v2, p2
+    .line 317
+    .line 318
+    if-eqz p5, :cond_e
 
-    .line 403
-    .line 404
-    if-eqz v0, :cond_10
+    .line 319
+    .line 320
+    const/4 v0, 0x2
 
-    .line 405
-    .line 406
-    if-eqz p2, :cond_10
+    .line 321
+    if-eq v3, v0, :cond_e
 
-    .line 407
-    .line 408
+    .line 322
+    .line 323
+    const/4 v0, 0x4
+
+    .line 324
+    if-eq v3, v0, :cond_e
+
+    .line 325
+    .line 326
+    const/4 v0, 0x6
+
+    .line 327
+    if-eq v3, v0, :cond_e
+
+    .line 328
+    .line 329
+    if-eqz p2, :cond_e
+
+    .line 330
+    .line 331
     const-string v1, "Cannot generate output for async layout calculation (source = "
 
-    .line 409
-    .line 410
+    .line 332
+    .line 333
     const-string v0, ")"
 
-    .line 411
-    .line 412
-    invoke-static {v1, v0, v8}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    .line 334
+    .line 335
+    invoke-static {v1, v0, v3}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
-    .line 413
-    .line 414
-    .line 415
+    .line 336
+    .line 337
+    .line 338
     move-result-object v0
 
-    .line 416
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    .line 339
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
-    .line 417
-    .line 418
-    .line 419
+    .line 340
+    .line 341
+    .line 342
     move-result-object v0
 
-    .line 420
+    .line 343
     throw v0
 
-    .line 421
+    .line 344
     :catchall_0
     move-exception v0
 
-    .line 422
-    monitor-exit v9
+    .line 345
+    monitor-exit v2
 
-    .line 423
+    .line 346
     throw v0
 
-    .line 424
-    :cond_10
-    move-object v0, v9
+    .line 347
+    :cond_e
+    move-object v5, v2
 
-    .line 425
-    move-object v1, v6
+    .line 348
+    move v8, v3
 
-    .line 426
-    move-object/from16 v3, v18
+    .line 349
+    move/from16 v9, v16
 
-    .line 427
-    .line 428
-    move v4, v8
+    .line 350
+    .line 351
+    move/from16 v10, v17
 
-    .line 429
-    move/from16 v5, v20
+    .line 352
+    .line 353
+    invoke-static/range {v5 .. v11}, Lcom/facebook/litho/ComponentTree;->A09(Lcom/facebook/litho/ComponentTree;LX/4g3;LX/4ko;IIIZ)V
 
-    .line 430
-    .line 431
-    move/from16 v6, v21
-
-    .line 432
-    .line 433
-    invoke-static/range {v0 .. v7}, Lcom/facebook/litho/ComponentTree;->A08(Lcom/facebook/litho/ComponentTree;LX/4o1;LX/4qW;Ljava/lang/String;IIIZ)V
-
-    .line 434
-    .line 435
-    .line 436
-    :cond_11
+    .line 354
+    .line 355
+    .line 356
+    :cond_f
     return-void
 
-    .line 437
+    .line 357
     :catchall_1
     move-exception v0
 
-    .line 438
+    .line 358
     :try_start_5
     throw v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 439
+    .line 359
     :catchall_2
     move-exception v0
 
-    .line 440
+    .line 360
     :try_start_6
-    monitor-exit v9
+    monitor-exit v2
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 441
+    .line 361
     throw v0
 
-    .line 442
+    .line 362
     :catchall_3
     move-exception v0
 
-    .line 443
+    .line 363
     :try_start_7
-    monitor-exit v2
+    monitor-exit v3
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 444
+    .line 364
     throw v0
 .end method
 
-.method public static A06(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/4qW;LX/2fW;Ljava/lang/String;IIIZZZ)V
-    .locals 23
+.method private A07(LX/4fg;LX/4ko;LX/4hT;Ljava/lang/String;IIIZZZ)V
+    .locals 22
 
     .line 0
-    move-object/from16 v9, p0
+    move-object/from16 v8, p1
 
     .line 1
     .line 2
-    const/4 v4, -0x1
+    const/4 v1, -0x1
 
     .line 3
-    move-object/from16 v8, p1
+    move-object/from16 v4, p0
 
     .line 4
     .line 5
-    monitor-enter v8
+    monitor-enter v4
 
     .line 6
     :try_start_0
-    sget-object v3, LX/6Kd;->VERBOSE:LX/6Kd;
+    const/4 v0, 0x3
 
     .line 7
+    new-instance v5, LX/6gr;
+
     .line 8
-    const-string v15, "Litho.RenderRequest"
-
     .line 9
-    .line 10
-    sget-object v1, LX/6NN;->A00:LX/6NN;
+    invoke-direct {v5, v4, v0}, LX/6gr;-><init>(Ljava/lang/Object;I)V
 
+    .line 10
     .line 11
     .line 12
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    sget-object v3, LX/17c;->VERBOSE:LX/17c;
 
     .line 13
     .line 14
-    .line 15
-    move-result-wide p0
+    new-instance v2, LX/4gZ;
 
+    .line 15
     .line 16
-    sget-object v11, LX/6NN;->A02:Ljava/util/concurrent/atomic/AtomicReference;
+    move-object/from16 v17, p4
 
     .line 17
     .line 18
-    invoke-virtual {v11}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    move/from16 v12, p5
 
     .line 19
     .line 20
-    .line 21
-    move-result-object v0
+    move/from16 v11, p6
 
+    .line 21
     .line 22
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
+    move/from16 v10, p7
 
     .line 23
     .line 24
-    .line 25
-    check-cast v0, LX/6Kd;
+    move/from16 v21, p10
 
+    .line 25
     .line 26
+    move-object v15, v2
+
     .line 27
-    invoke-virtual {v3, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    move-object/from16 v16, v8
 
     .line 28
     .line 29
-    .line 30
-    move-result v0
+    move/from16 v18, v10
 
+    .line 30
     .line 31
-    move-object/from16 v17, p4
+    move/from16 v19, v12
 
     .line 32
     .line 33
-    move/from16 v7, p5
+    move/from16 v20, v11
 
     .line 34
     .line 35
-    move/from16 v6, p6
+    invoke-direct/range {v15 .. v21}, LX/4gZ;-><init>(LX/4fg;Ljava/lang/String;IIIZ)V
 
     .line 36
     .line 37
-    move/from16 v5, p7
-
     .line 38
+    const-string v0, "Litho.RenderRequest"
+
     .line 39
-    if-ltz v0, :cond_9
-
     .line 40
-    .line 41
-    invoke-static {v1}, LX/6NN;->A01(LX/6NN;)Ljava/util/Set;
+    invoke-static {v3, v0, v5, v2}, LX/4fn;->A02(LX/17c;Ljava/lang/String;LX/0Gw;LX/0GZ;)V
 
+    .line 41
     .line 42
     .line 43
-    .line 44
-    move-result-object v0
+    iget-boolean v0, v4, Lcom/facebook/litho/ComponentTree;->A0Q:Z
 
+    .line 44
     .line 45
-    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
+    if-nez v0, :cond_1d
 
     .line 46
     .line 47
+    const/4 v9, 0x1
+
     .line 48
-    move-result v0
+    if-eqz p7, :cond_0
 
     .line 49
-    if-nez v0, :cond_9
-
     .line 50
-    .line 51
-    invoke-static {v1}, LX/6NN;->A01(LX/6NN;)Ljava/util/Set;
+    if-ne v10, v9, :cond_2
 
+    .line 51
     .line 52
+    :cond_0
+    iget v0, v4, Lcom/facebook/litho/ComponentTree;->A0L:I
+
     .line 53
     .line 54
-    move-result-object v0
+    if-ltz v0, :cond_1
 
     .line 55
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
-
     .line 56
+    const-string v0, "Setting an unversioned root after calling setVersionedRootAndSizeSpec is not supported. If this ComponentTree takes its version from a parent tree make sure to always call setVersionedRootAndSizeSpec"
+
     .line 57
     .line 58
-    move-result-object v14
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 59
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
     .line 60
     .line 61
+    move-result-object v0
+
     .line 62
-    move-result-object v10
+    :goto_0
+    throw v0
 
     .line 63
-    :cond_0
-    :goto_0
-    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+    :cond_1
+    iput v1, v4, Lcom/facebook/litho/ComponentTree;->A0L:I
 
     .line 64
     .line 65
-    .line 66
-    move-result v0
+    :cond_2
+    if-eqz p1, :cond_4
 
+    .line 66
     .line 67
-    if-eqz v0, :cond_2
+    iget-object v2, v4, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
 
     .line 68
     .line 69
-    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v2, :cond_4
 
     .line 70
     .line 71
-    .line 72
-    move-result-object v2
+    iget-object v0, v2, LX/4gO;->A05:LX/4gT;
 
+    .line 72
     .line 73
-    move-object v0, v2
+    invoke-virtual {v0}, LX/4gT;->A04()Z
 
     .line 74
-    check-cast v0, LX/6Ny;
-
     .line 75
     .line 76
-    iget-object v1, v0, LX/6Ny;->A00:[Ljava/lang/String;
+    move-result v0
 
     .line 77
-    .line 78
-    invoke-static {v15, v1}, LX/1T8;->A02(Ljava/lang/Object;[Ljava/lang/Object;)Z
+    if-nez v0, :cond_3
 
+    .line 78
     .line 79
+    iget-object v0, v2, LX/4gO;->A04:LX/4gT;
+
     .line 80
     .line 81
-    move-result v0
+    invoke-virtual {v0}, LX/4gT;->A04()Z
 
     .line 82
-    if-nez v0, :cond_1
-
     .line 83
     .line 84
-    const-string v0, "*"
+    move-result v0
 
     .line 85
-    .line 86
-    invoke-static {v0, v1}, LX/1T8;->A02(Ljava/lang/Object;[Ljava/lang/Object;)Z
+    if-eqz v0, :cond_4
 
+    .line 86
     .line 87
+    :cond_3
+    invoke-virtual {v8}, LX/4fg;->A0D()LX/4fg;
+
     .line 88
     .line 89
-    move-result v0
-
     .line 90
-    if-eqz v0, :cond_0
+    move-result-object v8
 
     .line 91
-    .line 92
-    :cond_1
-    invoke-virtual {v14, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    sget-object v0, LX/4fg;->A08:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 92
     .line 93
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
     .line 94
     .line 95
-    goto :goto_0
-
     .line 96
-    :cond_2
-    invoke-interface {v14}, Ljava/util/Collection;->isEmpty()Z
-
-    .line 97
-    .line 98
-    .line 99
     move-result v0
 
+    .line 97
+    iput v0, v8, LX/4fg;->A00:I
+
+    .line 98
+    .line 99
+    goto :goto_1
+
     .line 100
-    xor-int/lit8 v0, v0, 0x1
+    :cond_4
+    const/16 v16, 0x0
 
     .line 101
     .line 102
-    if-eqz v0, :cond_9
+    if-eqz p1, :cond_5
 
     .line 103
     .line 104
-    invoke-static {}, LX/0Yj;->A0b()Ljava/util/LinkedHashMap;
+    :goto_1
+    const/16 v16, 0x1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     .line 105
     .line 106
-    .line 107
-    move-result-object v2
+    :cond_5
+    move-object/from16 v5, p3
 
+    .line 107
     .line 108
-    move-object/from16 v18, v17
+    invoke-static {v5}, LX/001;->A1Q(Ljava/lang/Object;)Z
 
     .line 109
     .line 110
-    if-eqz p4, :cond_3
-
     .line 111
+    move-result v15
+
     .line 112
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/String;->length()I
+    invoke-static {v12, v1}, LX/431;->A1V(II)Z
 
     .line 113
     .line 114
     .line 115
-    move-result v0
+    move-result v14
 
     .line 116
-    if-lez v0, :cond_3
+    if-ne v11, v1, :cond_6
 
     .line 117
     .line 118
-    goto :goto_3
+    const/4 v9, 0x0
 
     .line 119
-    :cond_3
-    invoke-virtual {v11}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    :cond_6
+    if-eqz v8, :cond_8
 
     .line 120
     .line 121
+    move-object v0, v8
+
     .line 122
-    move-result-object v0
+    :goto_2
+    if-eqz v14, :cond_7
 
     .line 123
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 124
-    .line 125
-    .line 126
-    check-cast v0, LX/6Kd;
+    move v13, v12
 
+    .line 125
+    :goto_3
+    if-eqz v9, :cond_9
+
+    .line 126
     .line 127
+    move v7, v11
+
     .line 128
-    invoke-virtual {v0, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    goto :goto_4
 
     .line 129
+    :cond_7
+    :try_start_1
+    iget v13, v4, Lcom/facebook/litho/ComponentTree;->A03:I
+
     .line 130
     .line 131
-    move-result v0
+    goto :goto_3
 
     .line 132
-    if-lez v0, :cond_5
+    :cond_8
+    iget-object v0, v4, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
     .line 133
     .line 134
-    new-instance v0, Ljava/lang/RuntimeException;
+    goto :goto_2
 
     .line 135
-    .line 136
-    invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
+    :cond_9
+    iget v7, v4, Lcom/facebook/litho/ComponentTree;->A01:I
 
+    .line 136
     .line 137
+    :goto_4
+    iget-object v6, v4, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
+
     .line 138
     .line 139
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+    move-object/from16 v2, p2
 
     .line 140
     .line 141
-    .line 142
-    move-result-object v10
+    if-nez p10, :cond_a
 
+    .line 142
     .line 143
-    invoke-static {v10}, LX/0PS;->A03(Ljava/lang/Object;)V
+    if-eqz v0, :cond_a
 
     .line 144
     .line 145
-    .line 146
-    array-length v13, v10
+    if-eqz v6, :cond_a
 
+    .line 146
     .line 147
-    const/4 v1, 0x0
+    iget v3, v0, LX/4fg;->A00:I
 
     .line 148
-    :goto_1
-    if-ge v1, v13, :cond_5
-
     .line 149
+    iget-object v0, v6, LX/4fd;->A0I:LX/4g3;
+
     .line 150
-    aget-object v16, v10, v1
-
     .line 151
-    .line 152
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+    iget-object v0, v0, LX/4g3;->A01:LX/4fg;
 
+    .line 152
     .line 153
+    iget v0, v0, LX/4fg;->A00:I
+
     .line 154
     .line 155
-    move-result-object v12
+    if-ne v0, v3, :cond_a
 
     .line 156
-    invoke-static {v12}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 157
+    invoke-virtual {v6, v13, v7}, LX/4fd;->A01(II)Z
+
     .line 158
     .line 159
-    const-string v11, "com.facebook.litho.ComponentTree"
-
     .line 160
+    move-result v0
+
     .line 161
-    const/4 v0, 0x0
+    if-eqz v0, :cond_a
 
     .line 162
-    invoke-static {v12, v11, v0}, LX/1rq;->A0H(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
     .line 163
-    .line 164
-    .line 165
-    move-result v11
+    goto :goto_5
 
+    .line 164
+    :cond_a
+    if-eqz v14, :cond_b
+
+    .line 165
     .line 166
-    if-nez v11, :cond_4
+    iput v12, v4, Lcom/facebook/litho/ComponentTree;->A03:I
 
     .line 167
     .line 168
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+    :cond_b
+    if-eqz v9, :cond_c
 
     .line 169
     .line 170
-    .line 171
-    move-result-object v12
+    iput v11, v4, Lcom/facebook/litho/ComponentTree;->A01:I
 
+    .line 171
     .line 172
-    invoke-static {v12}, LX/0PS;->A03(Ljava/lang/Object;)V
+    :cond_c
+    if-eqz v16, :cond_d
 
     .line 173
     .line 174
+    iput-object v8, v4, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
     .line 175
-    const-string v11, "com.facebook.litho.debug."
-
     .line 176
-    .line 177
-    invoke-static {v12, v11, v0}, LX/1rq;->A0H(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    :cond_d
+    if-eqz p10, :cond_e
 
+    .line 177
     .line 178
+    iget-object v0, v4, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
     .line 179
     .line 180
-    move-result v11
+    if-eqz v0, :cond_e
 
     .line 181
-    if-nez v11, :cond_4
-
     .line 182
-    .line 183
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+    invoke-virtual {v0}, LX/4fg;->A0D()LX/4fg;
 
+    .line 183
     .line 184
     .line 185
+    move-result-object v3
+
     .line 186
-    move-result-object v12
+    sget-object v0, LX/4fg;->A08:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 187
-    invoke-static {v12}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 188
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
     .line 189
     .line 190
-    const-string v11, "com.facebook.rendercore.debug"
-
     .line 191
+    move-result v0
+
     .line 192
-    invoke-static {v12, v11, v0}, LX/1rq;->A0H(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    iput v0, v3, LX/4fg;->A00:I
 
     .line 193
     .line 194
-    .line 195
-    move-result v0
+    iput-object v3, v4, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
+    .line 195
     .line 196
-    if-nez v0, :cond_4
+    :cond_e
+    if-eqz v15, :cond_11
 
     .line 197
     .line 198
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    sget-object v0, LX/4gE;->defaultInstance:LX/4gE;
 
     .line 199
     .line 200
-    .line 201
-    move-result-object v0
+    iget-boolean v0, v0, LX/4gE;->A0E:Z
 
+    .line 201
     .line 202
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_10
 
     .line 203
     .line 204
-    goto :goto_2
+    invoke-static {v5}, LX/4jM;->A00(LX/4hT;)LX/4hT;
 
     .line 205
-    :cond_4
-    add-int/lit8 v1, v1, 0x1
-
     .line 206
     .line 207
-    goto :goto_1
+    move-result-object v5
 
     .line 208
-    :goto_2
-    move-object/from16 v18, v0
+    iget-object v0, v4, Lcom/facebook/litho/ComponentTree;->A0D:LX/4hT;
 
     .line 209
     .line 210
-    :cond_5
-    :goto_3
-    packed-switch p7, :pswitch_data_0
+    if-eqz v0, :cond_f
 
     .line 211
     .line 212
-    .line 213
-    goto :goto_4
+    iget-object v3, v0, LX/4hT;->A00:Ljava/util/Map;
 
+    .line 213
     .line 214
-    :pswitch_0
-    const-string v1, "set-root"
+    invoke-static {v3}, LX/0WV;->A03(Ljava/lang/Object;)V
 
     .line 215
     .line 216
-    goto :goto_5
-
     .line 217
-    :pswitch_1
-    const-string v1, "set-size"
+    monitor-enter v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
     .line 218
-    .line 219
-    goto :goto_5
+    :try_start_2
+    iget-object v0, v5, LX/4hT;->A00:Ljava/util/Map;
 
+    .line 219
     .line 220
-    :pswitch_2
-    const-string v1, "update-state"
+    invoke-interface {v0, v3}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     .line 221
     .line 222
-    goto :goto_5
-
     .line 223
-    :goto_4
-    const-string v1, "measure"
+    goto :goto_6
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 224
+    :catchall_0
+    :try_start_3
+    move-exception v0
+
     .line 225
-    :goto_5
-    const-string v0, "source"
+    monitor-exit v3
 
     .line 226
-    .line 227
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    goto/16 :goto_0
 
+    .line 227
     .line 228
+    :goto_5
+    if-eqz p2, :cond_1d
+
     .line 229
     .line 230
-    packed-switch p7, :pswitch_data_1
+    goto/16 :goto_9
 
     .line 231
     .line 232
+    :goto_6
+    monitor-exit v3
+
     .line 233
-    :pswitch_3
-    goto :goto_6
+    :cond_f
+    iget-object v0, v4, Lcom/facebook/litho/ComponentTree;->A0O:LX/4hT;
 
     .line 234
-    :pswitch_4
-    const-string v1, "sync"
-
     .line 235
+    invoke-virtual {v5, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
     .line 236
-    goto :goto_7
-
     .line 237
-    :goto_6
-    const-string v1, "async"
-
     .line 238
+    move-result v0
+
     .line 239
-    :goto_7
-    const-string v0, "execution-mode"
+    if-nez v0, :cond_11
 
     .line 240
     .line 241
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_10
+    iput-object v5, v4, Lcom/facebook/litho/ComponentTree;->A0O:LX/4hT;
 
     .line 242
     .line 243
+    :cond_11
+    iget v7, v4, Lcom/facebook/litho/ComponentTree;->A03:I
+
     .line 244
-    const-string v1, "attribution"
-
     .line 245
+    iget v6, v4, Lcom/facebook/litho/ComponentTree;->A01:I
+
     .line 246
-    move-object/from16 v0, v18
-
     .line 247
-    .line 248
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v14, v4, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
+    .line 248
     .line 249
+    iget-object v3, v4, Lcom/facebook/litho/ComponentTree;->A0O:LX/4hT;
+
     .line 250
     .line 251
-    if-eqz v9, :cond_6
+    monitor-exit v4
 
     .line 252
-    .line 253
-    goto :goto_8
+    if-eqz p8, :cond_12
 
+    .line 253
     .line 254
-    :cond_6
-    const-string v1, "null"
+    if-eqz p2, :cond_12
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
     .line 255
     .line 256
-    goto :goto_9
+    const-string v0, "The layout can\'t be calculated asynchronously if we need the Size back"
 
     .line 257
-    :goto_8
-    invoke-virtual {v9}, LX/4mg;->A0P()Ljava/lang/String;
-
     .line 258
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
     .line 259
     .line 260
-    move-result-object v1
-
     .line 261
-    :goto_9
-    const-string v0, "root"
+    move-result-object v0
 
     .line 262
+    throw v0
+
     .line 263
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_12
+    monitor-enter v4
 
     .line 264
+    :try_start_4
+    iget-object v8, v4, Lcom/facebook/litho/ComponentTree;->A0C:LX/4g3;
+
     .line 265
     .line 266
-    invoke-static/range {p10 .. p10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    monitor-exit v4
 
     .line 267
+    if-nez p7, :cond_13
+
     .line 268
     .line 269
-    move-result-object v1
+    if-ne v7, v1, :cond_13
 
     .line 270
-    const-string v0, "forced"
-
     .line 271
+    const/4 v9, 0x1
+
     .line 272
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v5, 0x1
 
     .line 273
+    if-eq v6, v1, :cond_14
+
     .line 274
     .line 275
-    if-ne v7, v4, :cond_7
+    :cond_13
+    move/from16 v9, p8
 
     .line 276
     .line 277
-    if-eq v6, v4, :cond_8
+    move v5, v10
 
     .line 278
-    .line 279
-    :cond_7
-    invoke-static {v7}, LX/6LU;->A00(I)Ljava/lang/String;
+    :cond_14
+    move/from16 v21, p9
 
+    .line 279
     .line 280
+    if-eqz v8, :cond_1a
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
+
     .line 281
     .line 282
-    move-result-object v1
+    iget-object v0, v8, LX/4g3;->A02:LX/4fk;
 
     .line 283
-    const-string v0, "widthSpec"
-
     .line 284
-    .line 285
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, LX/4fk;->A07:LX/4hT;
 
+    .line 285
     .line 286
+    if-eq v0, v3, :cond_15
+
     .line 287
     .line 288
-    invoke-static {v6}, LX/6LU;->A00(I)Ljava/lang/String;
+    sget-object v0, LX/4gE;->defaultInstance:LX/4gE;
 
     .line 289
     .line 290
-    .line 291
-    move-result-object v1
+    iget-boolean v0, v0, LX/4gE;->A0E:Z
 
+    .line 291
     .line 292
-    const-string v0, "heightSpec"
+    if-eqz v0, :cond_16
 
     .line 293
     .line 294
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v3, :cond_16
 
     .line 295
     .line 296
+    :cond_15
+    const/4 v1, 0x1
+
     .line 297
-    :cond_8
-    invoke-static {}, LX/1ra;->A00()Ljava/lang/String;
+    :goto_7
+    iget-object v0, v8, LX/4g3;->A01:LX/4fg;
 
     .line 298
     .line 299
-    .line 300
-    move-result-object v1
+    if-ne v0, v14, :cond_1a
 
+    .line 300
     .line 301
-    const-string v0, "stack"
+    if-eqz v1, :cond_1a
 
     .line 302
     .line 303
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v5, :cond_19
 
     .line 304
     .line 305
+    const/4 v0, 0x2
+
     .line 306
-    iget v0, v8, Lcom/facebook/litho/ComponentTree;->A0S:I
+    if-eq v5, v0, :cond_19
 
     .line 307
     .line 308
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const/4 v0, 0x4
 
     .line 309
+    if-eq v5, v0, :cond_19
+
     .line 310
     .line 311
-    move-result-object v21
+    const/4 v0, 0x6
 
     .line 312
-    new-instance v0, LX/1rX;
+    if-eq v5, v0, :cond_19
 
     .line 313
     .line 314
-    move-object/from16 v18, v0
+    if-nez p2, :cond_18
 
     .line 315
     .line 316
-    move-object/from16 v19, v3
+    iget-object v3, v4, Lcom/facebook/litho/ComponentTree;->A0V:Ljava/lang/Object;
 
     .line 317
     .line 318
-    move-object/from16 v20, v15
+    monitor-enter v3
 
     .line 319
+    goto :goto_8
+
     .line 320
-    move-object/from16 v22, v2
+    :cond_16
+    const/4 v1, 0x0
 
     .line 321
+    goto :goto_7
+
     .line 322
-    invoke-direct/range {v18 .. v24}, LX/1rX;-><init>(LX/6Kd;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+    :goto_8
+    :try_start_5
+    iget-object v1, v4, Lcom/facebook/litho/ComponentTree;->A05:LX/4jZ;
 
     .line 323
     .line 324
-    .line 325
-    invoke-interface {v14}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    if-eqz v1, :cond_17
 
+    .line 325
     .line 326
+    iget-object v0, v4, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
+
     .line 327
     .line 328
-    move-result-object v2
+    invoke-interface {v0, v1}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 329
-    :goto_a
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
     .line 330
     .line 331
-    .line 332
-    move-result v1
+    :cond_17
+    new-instance v2, LX/4jZ;
 
+    .line 332
     .line 333
-    if-eqz v1, :cond_9
+    move-object v9, v2
 
     .line 334
+    move-object v10, v4
+
     .line 335
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-object v11, v8
 
     .line 336
+    move-object/from16 v12, v17
+
     .line 337
     .line 338
-    move-result-object v1
+    move v13, v5
 
     .line 339
-    check-cast v1, LX/6Ny;
+    move v14, v7
 
     .line 340
+    move v15, v6
+
     .line 341
-    invoke-virtual {v1, v0}, LX/6Ny;->A00(LX/1rc;)V
+    move/from16 v16, v21
 
     .line 342
     .line 343
+    invoke-direct/range {v9 .. v16}, LX/4jZ;-><init>(Lcom/facebook/litho/ComponentTree;LX/4g3;Ljava/lang/String;IIIZ)V
+
     .line 344
-    goto :goto_a
-
     .line 345
-    :cond_9
-    iget-boolean v0, v8, Lcom/facebook/litho/ComponentTree;->A0L:Z
-
     .line 346
+    iput-object v2, v4, Lcom/facebook/litho/ComponentTree;->A05:LX/4jZ;
+
     .line 347
-    if-nez v0, :cond_26
-
     .line 348
-    .line 349
-    const/4 v11, 0x1
+    const-string v1, ""
 
+    .line 349
     .line 350
-    if-eqz p7, :cond_a
+    iget-object v0, v4, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
 
     .line 351
     .line 352
-    if-ne v5, v11, :cond_c
+    invoke-interface {v0, v2, v1}, LX/4kh;->AeQ(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     .line 353
     .line 354
-    :cond_a
-    iget v0, v8, Lcom/facebook/litho/ComponentTree;->A0M:I
-
     .line 355
+    monitor-exit v3
+
     .line 356
-    if-ltz v0, :cond_b
+    return-void
 
     .line 357
+    :catchall_1
+    move-exception v0
+
     .line 358
-    const-string v0, "Setting an unversioned root after calling setVersionedRootAndSizeSpec is not supported. If this ComponentTree takes its version from a parent tree make sure to always call setVersionedRootAndSizeSpec"
+    monitor-exit v3
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 359
+    throw v0
+
     .line 360
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    :cond_18
+    const-string v1, "Cannot generate output for async layout calculation (source = "
 
     .line 361
     .line 362
-    .line 363
-    move-result-object v0
+    const-string v0, ")"
 
+    .line 363
     .line 364
-    throw v0
+    invoke-static {v1, v0, v5}, LX/004;->A0E(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 365
-    :cond_b
-    iput v4, v8, Lcom/facebook/litho/ComponentTree;->A0M:I
-
     .line 366
     .line 367
-    :cond_c
-    if-eqz v9, :cond_e
+    move-result-object v0
 
     .line 368
-    .line 369
-    iget-object v1, v8, Lcom/facebook/litho/ComponentTree;->A0D:LX/4mu;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
+    .line 369
     .line 370
     .line 371
-    if-eqz v1, :cond_e
+    move-result-object v0
 
     .line 372
+    throw v0
+
     .line 373
-    iget-object v0, v1, LX/4mu;->A04:LX/4mt;
+    :cond_19
+    move-object v0, v4
 
     .line 374
+    move-object v1, v8
+
     .line 375
-    invoke-virtual {v0}, LX/4mt;->A04()Z
+    move v3, v5
 
     .line 376
+    move v4, v7
+
     .line 377
+    move v5, v6
+
     .line 378
-    move-result v0
+    move/from16 v6, v21
 
     .line 379
-    if-nez v0, :cond_d
-
     .line 380
-    .line 381
-    iget-object v0, v1, LX/4mu;->A03:LX/4mt;
+    invoke-static/range {v0 .. v6}, Lcom/facebook/litho/ComponentTree;->A09(Lcom/facebook/litho/ComponentTree;LX/4g3;LX/4ko;IIIZ)V
 
+    .line 381
     .line 382
     .line 383
-    invoke-virtual {v0}, LX/4mt;->A04()Z
+    return-void
 
     .line 384
+    :cond_1a
+    if-eqz v9, :cond_1c
+
     .line 385
     .line 386
-    move-result v0
+    iget-object v2, v4, Lcom/facebook/litho/ComponentTree;->A0V:Ljava/lang/Object;
 
     .line 387
-    if-eqz v0, :cond_e
-
     .line 388
+    monitor-enter v2
+
     .line 389
-    :cond_d
-    invoke-virtual {v9}, LX/4mg;->A0L()LX/4mg;
+    :try_start_6
+    iget-object v1, v4, Lcom/facebook/litho/ComponentTree;->A06:LX/4jJ;
 
     .line 390
     .line 391
-    .line 392
-    move-result-object v9
+    if-eqz v1, :cond_1b
 
+    .line 392
     .line 393
-    sget-object v0, LX/4mg;->A09:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v0, v4, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
 
     .line 394
     .line 395
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    invoke-interface {v0, v1}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 396
     .line 397
     .line 398
-    move-result v0
+    :cond_1b
+    new-instance v13, LX/4jJ;
 
     .line 399
-    iput v0, v9, LX/4mg;->A00:I
-
     .line 400
-    .line 401
-    goto :goto_b
+    move/from16 v19, v7
 
+    .line 401
     .line 402
-    :cond_e
-    const/16 v16, 0x0
+    move/from16 v20, v6
 
     .line 403
     .line 404
-    if-eqz v9, :cond_f
+    move-object v15, v4
 
     .line 405
+    move-object/from16 v16, v3
+
     .line 406
-    :goto_b
-    const/16 v16, 0x1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_3
-
     .line 407
+    move/from16 v18, v5
+
     .line 408
-    :cond_f
-    move-object/from16 v13, p3
-
     .line 409
-    .line 410
-    invoke-static {v13}, LX/001;->A1S(Ljava/lang/Object;)Z
+    invoke-direct/range {v13 .. v21}, LX/4jJ;-><init>(LX/4fg;Lcom/facebook/litho/ComponentTree;LX/4hT;Ljava/lang/String;IIIZ)V
 
+    .line 410
     .line 411
     .line 412
-    .line 413
-    move-result v15
+    iput-object v13, v4, Lcom/facebook/litho/ComponentTree;->A06:LX/4jJ;
 
+    .line 413
     .line 414
-    invoke-static {v7, v4}, LX/0Yi;->A1Q(II)Z
+    const-string v1, ""
 
     .line 415
     .line 416
-    .line 417
-    move-result v14
+    iget-object v0, v4, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
 
+    .line 417
     .line 418
-    if-ne v6, v4, :cond_10
+    invoke-interface {v0, v13, v1}, LX/4kh;->AeQ(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     .line 419
     .line 420
-    const/4 v11, 0x0
-
     .line 421
-    :cond_10
-    if-eqz v9, :cond_12
+    monitor-exit v2
 
     .line 422
+    return-void
+
     .line 423
-    move-object v0, v9
-
-    .line 424
-    :goto_c
-    if-eqz v14, :cond_11
-
-    .line 425
-    .line 426
-    move v10, v7
-
-    .line 427
-    :goto_d
-    if-eqz v11, :cond_13
-
-    .line 428
-    .line 429
-    move v3, v6
-
-    .line 430
-    goto :goto_e
-
-    .line 431
-    :cond_11
-    :try_start_1
-    iget v10, v8, Lcom/facebook/litho/ComponentTree;->A03:I
-
-    .line 432
-    .line 433
-    goto :goto_d
-
-    .line 434
-    :cond_12
-    iget-object v0, v8, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
-
-    .line 435
-    .line 436
-    goto :goto_c
-
-    .line 437
-    :cond_13
-    iget v3, v8, Lcom/facebook/litho/ComponentTree;->A01:I
-
-    .line 438
-    .line 439
-    :goto_e
-    iget-object v2, v8, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
-
-    .line 440
-    .line 441
-    move-object/from16 v12, p2
-
-    .line 442
-    .line 443
-    if-nez p10, :cond_14
-
-    .line 444
-    .line 445
-    if-eqz v0, :cond_14
-
-    .line 446
-    .line 447
-    if-eqz v2, :cond_14
-
-    .line 448
-    .line 449
-    iget v1, v0, LX/4mg;->A00:I
-
-    .line 450
-    .line 451
-    iget-object v0, v2, LX/4mp;->A0X:LX/4o1;
-
-    .line 452
-    .line 453
-    iget-object v0, v0, LX/4o1;->A01:LX/4mg;
-
-    .line 454
-    .line 455
-    iget v0, v0, LX/4mg;->A00:I
-
-    .line 456
-    .line 457
-    if-ne v0, v1, :cond_14
-
-    .line 458
-    .line 459
-    invoke-virtual {v2, v10, v3}, LX/4mp;->A01(II)Z
-
-    .line 460
-    .line 461
-    .line 462
-    move-result v0
-
-    .line 463
-    if-eqz v0, :cond_14
-
-    .line 464
-    .line 465
-    if-eqz p2, :cond_26
-
-    .line 466
-    .line 467
-    goto/16 :goto_f
-
-    .line 468
-    .line 469
-    :cond_14
-    if-eqz v14, :cond_15
-
-    .line 470
-    .line 471
-    iput v7, v8, Lcom/facebook/litho/ComponentTree;->A03:I
-
-    .line 472
-    .line 473
-    :cond_15
-    if-eqz v11, :cond_16
-
-    .line 474
-    .line 475
-    iput v6, v8, Lcom/facebook/litho/ComponentTree;->A01:I
-
-    .line 476
-    .line 477
-    :cond_16
-    if-eqz v16, :cond_17
-
-    .line 478
-    .line 479
-    iput-object v9, v8, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
-
-    .line 480
-    .line 481
-    :cond_17
-    if-eqz p10, :cond_18
-
-    .line 482
-    .line 483
-    iget-object v0, v8, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
-
-    .line 484
-    .line 485
-    if-eqz v0, :cond_18
-
-    .line 486
-    .line 487
-    invoke-virtual {v0}, LX/4mg;->A0L()LX/4mg;
-
-    .line 488
-    .line 489
-    .line 490
-    move-result-object v1
-
-    .line 491
-    sget-object v0, LX/4mg;->A09:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 492
-    .line 493
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    .line 494
-    .line 495
-    .line 496
-    move-result v0
-
-    .line 497
-    iput v0, v1, LX/4mg;->A00:I
-
-    .line 498
-    .line 499
-    iput-object v1, v8, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
-
-    .line 500
-    .line 501
-    :cond_18
-    if-eqz v15, :cond_19
-
-    .line 502
-    .line 503
-    iput-object v13, v8, Lcom/facebook/litho/ComponentTree;->A0Q:LX/2fW;
-
-    .line 504
-    .line 505
-    :cond_19
-    iget v7, v8, Lcom/facebook/litho/ComponentTree;->A03:I
-
-    .line 506
-    .line 507
-    iget v6, v8, Lcom/facebook/litho/ComponentTree;->A01:I
-
-    .line 508
-    .line 509
-    iget-object v11, v8, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
-
-    .line 510
-    .line 511
-    iget-object v10, v8, Lcom/facebook/litho/ComponentTree;->A0Q:LX/2fW;
-
-    .line 512
-    .line 513
-    iput v5, v8, Lcom/facebook/litho/ComponentTree;->A0N:I
-
-    .line 514
-    .line 515
-    monitor-exit v8
-
-    .line 516
-    if-eqz p8, :cond_1a
-
-    .line 517
-    .line 518
-    if-eqz p2, :cond_1a
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_3
-
-    .line 519
-    .line 520
-    const-string v0, "The layout can\'t be calculated asynchronously if we need the Size back"
-
-    .line 521
-    .line 522
-    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-
-    .line 523
-    .line 524
-    .line 525
-    move-result-object v0
-
-    .line 526
-    throw v0
-
-    .line 527
-    :cond_1a
-    monitor-enter v8
-
-    .line 528
-    :try_start_2
-    iget-object v9, v8, Lcom/facebook/litho/ComponentTree;->A0C:LX/4o1;
-
-    .line 529
-    .line 530
-    monitor-exit v8
-
-    .line 531
-    if-nez p7, :cond_1b
-
-    .line 532
-    .line 533
-    if-ne v7, v4, :cond_1b
-
-    .line 534
-    .line 535
-    const/4 v1, 0x1
-
-    .line 536
-    const/4 v3, 0x1
-
-    .line 537
-    if-eq v6, v4, :cond_1c
-
-    .line 538
-    .line 539
-    :cond_1b
-    move/from16 v1, p8
-
-    .line 540
-    .line 541
-    move v3, v5
-
-    .line 542
-    :cond_1c
-    move/from16 v21, p9
-
-    .line 543
-    .line 544
-    if-eqz v9, :cond_23
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    .line 545
-    .line 546
-    sget-boolean v0, LX/4n6;->isSkipRootCheckingEnabled:Z
-
-    .line 547
-    .line 548
-    if-eqz v0, :cond_1e
-
-    .line 549
-    .line 550
-    const/4 v0, 0x2
-
-    .line 551
-    if-eq v3, v0, :cond_1d
-
-    .line 552
-    .line 553
-    const/4 v0, 0x3
-
-    .line 554
-    if-eq v3, v0, :cond_1d
-
-    .line 555
-    .line 556
-    const/4 v0, 0x6
-
-    .line 557
-    if-eq v3, v0, :cond_1d
-
-    .line 558
-    .line 559
-    const/4 v0, 0x7
-
-    .line 560
-    if-ne v3, v0, :cond_1e
-
-    .line 561
-    .line 562
-    :cond_1d
-    iget-object v0, v8, Lcom/facebook/litho/ComponentTree;->A06:LX/4pP;
-
-    .line 563
-    .line 564
-    if-eqz v0, :cond_1f
-
-    .line 565
-    .line 566
-    :cond_1e
-    iget-object v0, v9, LX/4o1;->A01:LX/4mg;
-
-    .line 567
-    .line 568
-    if-ne v0, v11, :cond_23
-
-    .line 569
-    .line 570
-    iget-object v0, v9, LX/4o1;->A02:LX/4mm;
-
-    .line 571
-    .line 572
-    iget-object v0, v0, LX/4mm;->A07:LX/2fW;
-
-    .line 573
-    .line 574
-    if-ne v0, v10, :cond_23
-
-    .line 575
-    .line 576
-    if-eqz v3, :cond_22
-
-    .line 577
-    .line 578
-    :cond_1f
-    const/4 v0, 0x2
-
-    .line 579
-    if-eq v3, v0, :cond_22
-
-    .line 580
-    .line 581
-    const/4 v0, 0x4
-
-    .line 582
-    if-eq v3, v0, :cond_22
-
-    .line 583
-    .line 584
-    const/4 v0, 0x6
-
-    .line 585
-    if-eq v3, v0, :cond_22
-
-    .line 586
-    .line 587
-    if-nez p2, :cond_21
-
-    .line 588
-    .line 589
-    iget-object v4, v8, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Object;
-
-    .line 590
-    .line 591
-    monitor-enter v4
-
-    .line 592
-    :try_start_3
-    iget-object v1, v8, Lcom/facebook/litho/ComponentTree;->A05:LX/4pV;
-
-    .line 593
-    .line 594
-    if-eqz v1, :cond_20
-
-    .line 595
-    .line 596
-    iget-object v0, v8, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
-
-    .line 597
-    .line 598
-    invoke-interface {v0, v1}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
-
-    .line 599
-    .line 600
-    .line 601
-    :cond_20
-    new-instance v2, LX/4pV;
-
-    .line 602
-    .line 603
-    move-object v10, v2
-
-    .line 604
-    move-object v11, v8
-
-    .line 605
-    move-object v12, v9
-
-    .line 606
-    move-object/from16 v13, v17
-
-    .line 607
-    .line 608
-    move v14, v3
-
-    .line 609
-    move v15, v7
-
-    .line 610
-    move/from16 v16, v6
-
-    .line 611
-    .line 612
-    move/from16 v17, v21
-
-    .line 613
-    .line 614
-    invoke-direct/range {v10 .. v17}, LX/4pV;-><init>(Lcom/facebook/litho/ComponentTree;LX/4o1;Ljava/lang/String;IIIZ)V
-
-    .line 615
-    .line 616
-    .line 617
-    iput-object v2, v8, Lcom/facebook/litho/ComponentTree;->A05:LX/4pV;
-
-    .line 618
-    .line 619
-    const-string v1, ""
-
-    .line 620
-    .line 621
-    iget-object v0, v8, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
-
-    .line 622
-    .line 623
-    invoke-interface {v0, v2, v1}, LX/4qJ;->Ag2(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    .line 624
-    .line 625
-    .line 626
-    monitor-exit v4
-
-    .line 627
-    return-void
-
-    .line 628
-    :catchall_0
-    move-exception v0
-
-    .line 629
-    monitor-exit v4
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    .line 630
-    throw v0
-
-    .line 631
-    :cond_21
-    const-string v1, "Cannot generate output for async layout calculation (source = "
-
-    .line 632
-    .line 633
-    const-string v0, ")"
-
-    .line 634
-    .line 635
-    invoke-static {v1, v0, v3}, LX/00I;->A0H(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
-
-    .line 636
-    .line 637
-    .line 638
-    move-result-object v0
-
-    .line 639
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 640
-    .line 641
-    .line 642
-    move-result-object v0
-
-    .line 643
-    throw v0
-
-    .line 644
-    :cond_22
-    move-object v10, v12
-
-    .line 645
-    move-object/from16 v11, v17
-
-    .line 646
-    .line 647
-    move v12, v3
-
-    .line 648
-    move v13, v7
-
-    .line 649
-    move v14, v6
-
-    .line 650
-    move/from16 v15, v21
-
-    .line 651
-    .line 652
-    invoke-static/range {v8 .. v15}, Lcom/facebook/litho/ComponentTree;->A08(Lcom/facebook/litho/ComponentTree;LX/4o1;LX/4qW;Ljava/lang/String;IIIZ)V
-
-    .line 653
-    .line 654
-    .line 655
-    return-void
-
-    .line 656
-    :cond_23
-    if-eqz v1, :cond_25
-
-    .line 657
-    .line 658
-    iget-object v2, v8, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Object;
-
-    .line 659
-    .line 660
-    monitor-enter v2
-
-    .line 661
-    :try_start_4
-    iget-object v1, v8, Lcom/facebook/litho/ComponentTree;->A06:LX/4pP;
-
-    .line 662
-    .line 663
-    if-eqz v1, :cond_24
-
-    .line 664
-    .line 665
-    iget-object v0, v8, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
-
-    .line 666
-    .line 667
-    invoke-interface {v0, v1}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
-
-    .line 668
-    .line 669
-    .line 670
-    :cond_24
-    new-instance v13, LX/4pP;
-
-    .line 671
-    .line 672
-    move-object v14, v11
-
-    .line 673
-    move-object v15, v8
-
-    .line 674
-    move-object/from16 v16, v10
-
-    .line 675
-    .line 676
-    move/from16 v18, v3
-
-    .line 677
-    .line 678
-    move/from16 v19, v7
-
-    .line 679
-    .line 680
-    move/from16 v20, v6
-
-    .line 681
-    .line 682
-    invoke-direct/range {v13 .. v21}, LX/4pP;-><init>(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/2fW;Ljava/lang/String;IIIZ)V
-
-    .line 683
-    .line 684
-    .line 685
-    iput-object v13, v8, Lcom/facebook/litho/ComponentTree;->A06:LX/4pP;
-
-    .line 686
-    .line 687
-    const-string v1, ""
-
-    .line 688
-    .line 689
-    iget-object v0, v8, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
-
-    .line 690
-    .line 691
-    invoke-interface {v0, v13, v1}, LX/4qJ;->Ag2(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    .line 692
-    .line 693
-    .line 694
-    monitor-exit v2
-
-    .line 695
-    return-void
-
-    .line 696
-    :catchall_1
-    move-exception v0
-
-    .line 697
-    monitor-exit v2
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    .line 698
-    throw v0
-
-    .line 699
-    :cond_25
-    move-object v13, v11
-
-    .line 700
-    move-object v14, v8
-
-    .line 701
-    move-object v15, v12
-
-    .line 702
-    move-object/from16 v16, v10
-
-    .line 703
-    .line 704
-    move/from16 v18, v3
-
-    .line 705
-    .line 706
-    move/from16 v19, v7
-
-    .line 707
-    .line 708
-    move/from16 v20, v6
-
-    .line 709
-    .line 710
-    invoke-static/range {v13 .. v21}, Lcom/facebook/litho/ComponentTree;->A05(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/4qW;LX/2fW;Ljava/lang/String;IIIZ)V
-
-    .line 711
-    .line 712
-    .line 713
-    return-void
-
-    .line 714
     :catchall_2
     move-exception v0
 
-    .line 715
-    :try_start_5
-    monitor-exit v8
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    .line 424
+    monitor-exit v2
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 716
+    .line 425
     throw v0
 
-    .line 717
-    :goto_f
-    :try_start_6
-    iget v0, v2, LX/4mp;->A04:I
+    .line 426
+    :cond_1c
+    move-object v8, v14
 
-    .line 718
-    .line 719
-    iput v0, v12, LX/4qW;->A00:I
+    .line 427
+    move-object v9, v4
 
-    .line 720
-    .line 721
-    iget v0, v2, LX/4mp;->A05:I
+    .line 428
+    move-object v10, v2
 
-    .line 722
-    .line 723
-    iput v0, v12, LX/4qW;->A01:I
+    .line 429
+    move-object v11, v3
 
-    .line 724
-    .line 725
-    :cond_26
-    monitor-exit v8
+    .line 430
+    move-object/from16 v12, v17
 
-    .line 726
+    .line 431
+    .line 432
+    move v13, v5
+
+    .line 433
+    move v14, v7
+
+    .line 434
+    move v15, v6
+
+    .line 435
+    move/from16 v16, v21
+
+    .line 436
+    .line 437
+    invoke-static/range {v8 .. v16}, Lcom/facebook/litho/ComponentTree;->A06(LX/4fg;Lcom/facebook/litho/ComponentTree;LX/4ko;LX/4hT;Ljava/lang/String;IIIZ)V
+
+    .line 438
+    .line 439
+    .line 440
     return-void
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 727
+    .line 441
     :catchall_3
     move-exception v0
 
-    .line 728
+    .line 442
     :try_start_7
-    monitor-exit v8
+    monitor-exit v4
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 729
+    .line 443
     throw v0
 
-    .line 730
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_2
-    .end packed-switch
+    .line 444
+    :goto_9
+    :try_start_8
+    iget v0, v6, LX/4fd;->A09:I
 
-    .line 731
-    .line 732
-    .line 733
-    .line 734
-    .line 735
-    .line 736
-    .line 737
-    .line 738
-    .line 739
-    .line 740
-    .line 741
-    .line 742
-    .line 743
-    .line 744
-    .line 745
-    .line 746
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_4
-        :pswitch_3
-        :pswitch_4
-        :pswitch_3
-        :pswitch_4
-    .end packed-switch
+    .line 445
+    .line 446
+    iput v0, v2, LX/4ko;->A00:I
+
+    .line 447
+    .line 448
+    iget v0, v6, LX/4fd;->A0C:I
+
+    .line 449
+    .line 450
+    iput v0, v2, LX/4ko;->A01:I
+
+    .line 451
+    .line 452
+    :cond_1d
+    monitor-exit v4
+
+    .line 453
+    return-void
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+
+    .line 454
+    :catchall_4
+    move-exception v0
+
+    .line 455
+    :try_start_9
+    monitor-exit v4
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_4
+
+    .line 456
+    throw v0
 .end method
 
-.method public static A07(Lcom/facebook/litho/ComponentTree;)V
+.method public static A08(Lcom/facebook/litho/ComponentTree;)V
     .locals 5
 
     .line 0
-    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A03()Z
+    invoke-static {}, LX/433;->A1U()Z
 
     .line 1
     .line 2
@@ -4167,7 +3477,7 @@
     move-result v4
 
     .line 4
-    invoke-static {}, LX/4oe;->A00()V
+    invoke-static {}, LX/4hz;->A00()V
 
     .line 5
     .line 6
@@ -4180,7 +3490,7 @@
 
     .line 10
     .line 11
-    invoke-static {v0}, Lcom/facebook/litho/ComponentsSystrace;->A02(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/facebook/litho/ComponentsSystrace;->A01(Ljava/lang/String;)V
 
     .line 12
     .line 13
@@ -4190,7 +3500,7 @@
 
     .line 15
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
     .line 16
     .line 17
@@ -4202,7 +3512,7 @@
 
     .line 20
     .line 21
-    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A01()V
+    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A00()V
 
     .line 22
     .line 23
@@ -4215,7 +3525,7 @@
 
     .line 26
     :cond_2
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
 
     .line 27
     .line 28
@@ -4223,7 +3533,7 @@
 
     .line 29
     .line 30
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 31
     .line 32
@@ -4231,7 +3541,7 @@
 
     .line 33
     .line 34
-    invoke-direct {p0}, Lcom/facebook/litho/ComponentTree;->A01()V
+    invoke-direct {p0}, Lcom/facebook/litho/ComponentTree;->A02()V
 
     .line 35
     .line 36
@@ -4256,7 +3566,7 @@
 
     .line 42
     .line 43
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0j:LX/4qy;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0e:LX/4l8;
 
     .line 44
     .line 45
@@ -4264,14 +3574,14 @@
 
     .line 46
     .line 47
-    iget-object v1, v0, LX/4qy;->A00:LX/4nk;
+    iget-object v1, v0, LX/4l8;->A00:LX/4hU;
 
     .line 48
     .line 49
     const/4 v0, 0x0
 
     .line 50
-    invoke-static {v1, v0}, LX/4nk;->A0D(LX/4nk;I)V
+    invoke-static {v1, v0}, LX/4hU;->A0D(LX/4hU;I)V
 
     .line 51
     .line 52
@@ -4279,7 +3589,7 @@
     const/4 v0, 0x0
 
     .line 54
-    iput-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0j:LX/4qy;
+    iput-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0e:LX/4l8;
 
     .line 55
     .line 56
@@ -4292,7 +3602,7 @@
 
     .line 59
     .line 60
-    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0R:Z
+    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0P:Z
 
     .line 61
     .line 62
@@ -4300,7 +3610,7 @@
 
     .line 63
     .line 64
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 65
     .line 66
@@ -4312,7 +3622,7 @@
     move-result v3
 
     .line 70
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 71
     .line 72
@@ -4338,7 +3648,7 @@
 
     .line 81
     .line 82
-    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A01()V
+    invoke-static {}, Lcom/facebook/litho/ComponentsSystrace;->A00()V
 
     .line 83
     .line 84
@@ -4348,7 +3658,7 @@
 
     .line 86
     :cond_7
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 87
     .line 88
@@ -4356,7 +3666,7 @@
 
     .line 89
     .line 90
-    iget v0, v1, LX/4mp;->A05:I
+    iget v0, v1, LX/4fd;->A0C:I
 
     .line 91
     .line 92
@@ -4364,7 +3674,7 @@
 
     .line 93
     .line 94
-    iget v0, v1, LX/4mp;->A04:I
+    iget v0, v1, LX/4fd;->A09:I
 
     .line 95
     .line 96
@@ -4372,11 +3682,11 @@
 
     .line 97
     .line 98
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 99
     .line 100
-    invoke-virtual {v0}, LX/4mx;->A0U()Z
+    invoke-virtual {v0}, Lcom/facebook/litho/BaseMountingView;->A0N()Z
 
     .line 101
     .line 102
@@ -4385,7 +3695,7 @@
 
     .line 104
     :cond_8
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 105
     .line 106
@@ -4403,7 +3713,7 @@
 
     .line 111
     .line 112
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 113
     .line 114
@@ -4426,1635 +3736,954 @@
     throw v0
 .end method
 
-.method public static A08(Lcom/facebook/litho/ComponentTree;LX/4o1;LX/4qW;Ljava/lang/String;IIIZ)V
-    .locals 20
+.method public static A09(Lcom/facebook/litho/ComponentTree;LX/4g3;LX/4ko;IIIZ)V
+    .locals 12
 
     .line 0
-    move-object/from16 v3, p0
+    iget-object v3, p0, Lcom/facebook/litho/ComponentTree;->A0V:Ljava/lang/Object;
 
     .line 1
     .line 2
-    iget-object v4, v3, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Object;
+    monitor-enter v3
 
     .line 3
-    .line 4
-    monitor-enter v4
-
-    .line 5
     :try_start_0
-    iget-object v2, v3, Lcom/facebook/litho/ComponentTree;->A05:LX/4pV;
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A05:LX/4jZ;
+
+    .line 4
+    .line 5
+    const/4 v1, 0x0
 
     .line 6
-    .line 7
-    const/4 v0, 0x0
-
-    .line 8
     if-eqz v2, :cond_0
+
+    .line 7
+    .line 8
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
 
     .line 9
     .line 10
-    iget-object v1, v3, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
+    invoke-interface {v0, v2}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 11
     .line 12
-    invoke-interface {v1, v2}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
-
     .line 13
+    iput-object v1, p0, Lcom/facebook/litho/ComponentTree;->A05:LX/4jZ;
+
     .line 14
     .line 15
-    iput-object v0, v3, Lcom/facebook/litho/ComponentTree;->A05:LX/4pV;
+    :cond_0
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_5
 
     .line 16
+    monitor-enter p0
+
     .line 17
-    :cond_0
-    monitor-exit v4
+    :try_start_1
+    iget-object v6, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
 
     .line 18
-    move/from16 v2, p4
-
     .line 19
+    if-eqz v6, :cond_1
+
     .line 20
-    if-eqz p4, :cond_1
-
     .line 21
-    .line 22
-    const/4 v1, 0x2
+    iget-object v5, v6, LX/4fd;->A0G:LX/4lX;
 
+    .line 22
     .line 23
-    if-eq v2, v1, :cond_1
+    :goto_0
+    iget v11, p0, Lcom/facebook/litho/ComponentTree;->A0M:I
 
     .line 24
     .line 25
-    const/4 v1, 0x4
+    add-int/lit8 v0, v11, 0x1
 
     .line 26
-    if-eq v2, v1, :cond_1
-
     .line 27
-    .line 28
-    const/4 v1, 0x6
+    iput v0, p0, Lcom/facebook/litho/ComponentTree;->A0M:I
 
+    .line 28
     .line 29
-    const/4 v8, 0x0
+    monitor-exit p0
 
     .line 30
-    if-ne v2, v1, :cond_2
+    goto :goto_1
 
     .line 31
-    .line 32
     :cond_1
-    const/4 v8, 0x1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_7
+    move-object v5, v1
+
+    .line 32
+    goto :goto_0
 
     .line 33
-    :cond_2
-    monitor-enter v3
+    :goto_1
+    const/4 v0, -0x1
 
     .line 34
-    :try_start_1
-    iget-object v13, v3, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
+    move/from16 v8, p4
 
     .line 35
     .line 36
-    if-eqz v13, :cond_3
+    move/from16 v9, p5
 
     .line 37
     .line 38
-    monitor-enter v13
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_6
+    if-ne v8, v0, :cond_3
 
     .line 39
-    :try_start_2
-    iget-object v12, v13, LX/4mp;->A06:LX/4rh;
-
     .line 40
-    .line 41
-    goto :goto_0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    if-ne v9, v0, :cond_3
 
+    .line 41
     .line 42
-    :catchall_0
-    :try_start_3
-    move-exception v0
+    :cond_2
+    return-void
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
     .line 43
-    monitor-exit v13
+    :cond_3
+    move-object v7, p1
 
     .line 44
-    throw v0
+    iget-object v0, p1, LX/4g3;->A06:LX/4gO;
 
     .line 45
-    :cond_3
-    move-object v12, v0
-
     .line 46
-    goto :goto_1
+    iget-object v3, v0, LX/4gO;->A04:LX/4gT;
 
     .line 47
-    :goto_0
-    monitor-exit v13
-
     .line 48
-    :goto_1
-    iget v4, v3, Lcom/facebook/litho/ComponentTree;->A0O:I
+    iget-object v2, v3, LX/4gT;->A00:LX/4hm;
 
     .line 49
     .line 50
-    add-int/lit8 v1, v4, 0x1
+    monitor-enter v2
 
     .line 51
+    :try_start_2
+    iget-object v0, v2, LX/4hm;->A00:Ljava/util/Set;
+
     .line 52
-    iput v1, v3, Lcom/facebook/litho/ComponentTree;->A0O:I
-
     .line 53
-    .line 54
-    move-object/from16 v14, p1
+    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
+    .line 54
     .line 55
     .line 56
-    iget-object v1, v14, LX/4o1;->A02:LX/4mm;
+    monitor-exit v2
 
     .line 57
+    iget v10, p0, Lcom/facebook/litho/ComponentTree;->A0R:I
+
     .line 58
-    iget-object v10, v1, LX/4mm;->A07:LX/2fW;
-
     .line 59
-    .line 60
-    monitor-exit v3
+    new-instance v4, LX/4fe;
 
+    .line 60
     .line 61
-    const/4 v1, -0x1
+    invoke-direct/range {v4 .. v11}, LX/4fe;-><init>(LX/4lX;LX/4fd;LX/4g3;IIII)V
 
     .line 62
-    move/from16 v15, p5
-
     .line 63
     .line 64
-    move/from16 v6, p6
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0c:Ljava/util/List;
 
     .line 65
     .line 66
-    if-ne v15, v1, :cond_5
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0a:Ljava/lang/Object;
 
     .line 67
     .line 68
-    if-ne v6, v1, :cond_5
+    invoke-static {v4, v0, v2, p3}, LX/4ib;->A01(LX/4ib;Ljava/lang/Object;Ljava/util/List;I)LX/4l6;
 
     .line 69
     .line 70
-    :cond_4
-    return-void
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_6
-
     .line 71
-    :cond_5
-    iget-object v1, v14, LX/4o1;->A06:LX/4mu;
+    move-result-object v0
 
     .line 72
+    iget-object v6, v0, LX/4l6;->A00:LX/4lh;
+
     .line 73
-    iget-object v7, v1, LX/4mu;->A03:LX/4mt;
-
     .line 74
+    check-cast v6, LX/4fd;
+
     .line 75
-    iget-object v5, v7, LX/4mt;->A00:LX/4oQ;
-
     .line 76
-    .line 77
-    monitor-enter v5
+    if-eqz v6, :cond_2
 
+    .line 77
     .line 78
-    :try_start_4
-    iget-object v1, v5, LX/4oQ;->A00:Ljava/util/Set;
+    if-eqz p2, :cond_4
 
     .line 79
     .line 80
-    invoke-interface {v1, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_5
+    iget v0, v6, LX/4fd;->A0C:I
 
     .line 81
     .line 82
-    .line 83
-    monitor-exit v5
+    iput v0, p2, LX/4ko;->A01:I
 
+    .line 83
     .line 84
-    iget v5, v3, Lcom/facebook/litho/ComponentTree;->A0S:I
+    iget v0, v6, LX/4fd;->A09:I
 
     .line 85
     .line 86
-    iget-boolean v1, v3, Lcom/facebook/litho/ComponentTree;->A0h:Z
+    iput v0, p2, LX/4ko;->A00:I
 
     .line 87
     .line 88
-    new-instance v11, LX/4mn;
+    :cond_4
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0C:LX/4g3;
 
     .line 89
     .line 90
-    move/from16 v16, v6
+    if-ne p1, v0, :cond_2
 
     .line 91
     .line 92
-    move/from16 v17, v5
+    monitor-enter p0
 
     .line 93
-    .line 94
-    move/from16 v18, v4
+    :try_start_3
+    iget v0, p0, Lcom/facebook/litho/ComponentTree;->A00:I
 
+    .line 94
     .line 95
+    const/4 v3, 0x0
+
     .line 96
-    move/from16 v19, v1
+    if-le v11, v0, :cond_5
 
     .line 97
     .line 98
-    invoke-direct/range {v11 .. v19}, LX/4mn;-><init>(LX/4rh;LX/4mp;LX/4o1;IIIIZ)V
+    iget-boolean v0, v6, LX/4fd;->A05:Z
 
     .line 99
     .line 100
+    if-nez v0, :cond_5
+
     .line 101
-    iget-object v5, v3, Lcom/facebook/litho/ComponentTree;->A0f:Ljava/util/List;
-
     .line 102
+    iget v2, p0, Lcom/facebook/litho/ComponentTree;->A03:I
+
     .line 103
-    iget-object v1, v3, Lcom/facebook/litho/ComponentTree;->A0d:Ljava/lang/Object;
-
     .line 104
-    .line 105
-    invoke-static {v11, v1, v5, v2}, LX/4nd;->A01(LX/4nd;Ljava/lang/Object;Ljava/util/List;I)LX/4qS;
+    iget v0, p0, Lcom/facebook/litho/ComponentTree;->A01:I
 
+    .line 105
     .line 106
+    invoke-virtual {v6, v2, v0}, LX/4fd;->A01(II)Z
+
     .line 107
     .line 108
-    move-result-object v5
-
     .line 109
-    if-eqz v5, :cond_4
-
-    .line 110
-    .line 111
-    iget-object v7, v5, LX/4qS;->A00:LX/4rX;
-
-    .line 112
-    .line 113
-    check-cast v7, LX/4mp;
-
-    .line 114
-    .line 115
-    if-nez v7, :cond_6
-
-    .line 116
-    .line 117
-    invoke-virtual {v3}, Lcom/facebook/litho/ComponentTree;->A0J()Z
-
-    .line 118
-    .line 119
-    .line 120
     move-result v0
 
+    .line 110
+    if-eqz v0, :cond_5
+
+    .line 111
+    .line 112
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0S:Landroid/view/accessibility/AccessibilityManager;
+
+    .line 113
+    .line 114
+    invoke-static {v0}, LX/4IL;->A01(Landroid/view/accessibility/AccessibilityManager;)Z
+
+    .line 115
+    .line 116
+    .line 117
+    move-result v2
+
+    .line 118
+    iget-boolean v0, v6, LX/4fd;->A0d:Z
+
+    .line 119
+    .line 120
+    if-ne v2, v0, :cond_5
+
     .line 121
-    if-nez v0, :cond_4
-
     .line 122
+    iput v11, p0, Lcom/facebook/litho/ComponentTree;->A00:I
+
     .line 123
-    if-eqz v8, :cond_4
-
     .line 124
-    .line 125
-    iget-object v0, v3, Lcom/facebook/litho/ComponentTree;->A0U:LX/4mm;
+    invoke-virtual {v6}, LX/4fd;->A00()LX/4g7;
 
+    .line 125
     .line 126
     .line 127
-    iget-object v0, v0, LX/4mm;->A02:LX/4oC;
+    iput-object v6, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
 
     .line 128
     .line 129
-    iget-object v0, v0, LX/4oC;->A00:LX/4n6;
+    const/4 v0, 0x1
 
     .line 130
+    iput-boolean v0, v6, LX/4fd;->A05:Z
+
     .line 131
-    iget-boolean v0, v0, LX/4n6;->A06:Z
-
     .line 132
-    .line 133
-    if-nez v0, :cond_4
+    const-string v4, "Litho.LayoutCommitted"
 
+    .line 133
     .line 134
+    const/4 v0, 0x2
+
     .line 135
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    new-instance v2, LX/6gr;
 
     .line 136
     .line 137
+    invoke-direct {v2, p0, v0}, LX/6gr;-><init>(Ljava/lang/Object;I)V
+
     .line 138
-    move-result-object v1
-
     .line 139
-    const-string v0, "LayoutState is null, but only async operations can return a null LayoutState. Source: "
-
     .line 140
-    .line 141
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, LX/4hR;
 
+    .line 141
     .line 142
+    invoke-direct {v0, v6, v11, p3}, LX/4hR;-><init>(LX/4fd;II)V
+
     .line 143
     .line 144
-    invoke-static {v2}, LX/4mp;->A00(I)Ljava/lang/String;
-
     .line 145
+    invoke-static {v4, v2, v0}, LX/4fn;->A04(Ljava/lang/String;LX/0Gw;LX/0GZ;)V
+
     .line 146
     .line 147
-    move-result-object v0
-
     .line 148
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v10, 0x1
 
     .line 149
+    goto :goto_2
+
     .line 150
+    :cond_5
+    const/4 v10, 0x0
+
     .line 151
-    const-string v0, ", message: "
+    :goto_2
+    iget-object v0, v6, LX/4fd;->A0I:LX/4g3;
 
     .line 152
     .line 153
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v7, v0, LX/4g3;->A06:LX/4gO;
 
     .line 154
     .line 155
+    const/4 v0, 0x0
+
     .line 156
-    iget-object v0, v5, LX/4qS;->A01:Ljava/lang/String;
+    if-eqz v10, :cond_b
 
     .line 157
     .line 158
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v5, v6, LX/4fd;->A04:Ljava/util/List;
 
     .line 159
     .line 160
+    iput-object v1, v6, LX/4fd;->A04:Ljava/util/List;
+
     .line 161
-    const-string v0, ", current thread: "
-
     .line 162
-    .line 163
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, v6, LX/4fd;->A03:Ljava/util/List;
 
+    .line 163
     .line 164
+    iput-object v1, v6, LX/4fd;->A03:Ljava/util/List;
+
     .line 165
     .line 166
-    invoke-static {}, LX/4BE;->A0o()Ljava/lang/String;
+    iget-object v8, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
 
     .line 167
     .line 168
-    .line 169
-    move-result-object v0
+    if-eqz v8, :cond_8
 
+    .line 169
     .line 170
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, v8, LX/4gO;->A04:LX/4gT;
 
     .line 171
     .line 172
+    iget-object v1, v7, LX/4gO;->A04:LX/4gT;
+
     .line 173
-    const-string v0, ". Root: "
-
     .line 174
-    .line 175
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, LX/4gT;->A03(LX/4gT;)V
 
+    .line 175
     .line 176
     .line 177
-    .line 178
-    iget-object v0, v14, LX/4o1;->A01:LX/4mg;
+    iget-object v7, v8, LX/4gO;->A02:LX/6XZ;
 
+    .line 178
     .line 179
+    monitor-enter v7
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
     .line 180
-    invoke-virtual {v0}, LX/4mg;->A0P()Ljava/lang/String;
+    :try_start_4
+    invoke-virtual {v7}, LX/6XZ;->A00()V
 
     .line 181
     .line 182
     .line 183
-    move-result-object v0
+    if-eqz v4, :cond_6
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     .line 184
-    invoke-static {v0, v1}, LX/001;->A0D(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
-
     .line 185
+    :try_start_5
+    iget-object v1, v8, LX/4gO;->A01:LX/4ge;
+
     .line 186
     .line 187
-    move-result-object v0
+    invoke-virtual {v1, v4}, LX/4ge;->A02(Ljava/util/List;)V
 
     .line 188
-    throw v0
-
     .line 189
-    :cond_6
-    move-object/from16 v5, p2
-
     .line 190
+    :cond_6
+    if-eqz v5, :cond_7
+
     .line 191
-    if-eqz p2, :cond_7
-
     .line 192
-    .line 193
-    iget v1, v7, LX/4mp;->A05:I
+    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
+    .line 193
     .line 194
     .line 195
-    iput v1, v5, LX/4qW;->A01:I
+    move-result-object v9
 
     .line 196
-    .line 197
-    iget v1, v7, LX/4mp;->A04:I
+    :goto_3
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 197
     .line 198
     .line 199
-    iput v1, v5, LX/4qW;->A00:I
+    move-result v1
 
     .line 200
+    if-eqz v1, :cond_7
+
     .line 201
-    :cond_7
-    iget-object v1, v3, Lcom/facebook/litho/ComponentTree;->A0C:LX/4o1;
-
     .line 202
-    .line 203
-    if-ne v14, v1, :cond_4
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 203
     .line 204
     .line 205
-    iget-object v14, v14, LX/4o1;->A01:LX/4mg;
+    move-result-object v2
 
     .line 206
-    .line 207
-    monitor-enter v3
+    check-cast v2, LX/4fz;
 
+    .line 207
     .line 208
-    :try_start_5
-    iget v1, v3, Lcom/facebook/litho/ComponentTree;->A00:I
+    iget-object v5, v2, LX/4fz;->A03:LX/4fg;
 
     .line 209
     .line 210
-    const/4 v8, 0x0
+    const-string v1, "null cannot be cast to non-null type com.facebook.litho.SpecGeneratedComponent"
 
     .line 211
-    if-le v4, v1, :cond_8
-
     .line 212
-    .line 213
-    iget-boolean v1, v7, LX/4mp;->A0O:Z
+    invoke-static {v5, v1}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 213
     .line 214
     .line 215
-    if-nez v1, :cond_8
+    check-cast v5, LX/4fV;
 
     .line 216
     .line 217
-    iget v5, v3, Lcom/facebook/litho/ComponentTree;->A03:I
+    iget-object v4, v2, LX/4fz;->A04:LX/4fk;
 
     .line 218
     .line 219
-    iget v1, v3, Lcom/facebook/litho/ComponentTree;->A01:I
+    iget-object v2, v8, LX/4gO;->A01:LX/4ge;
 
     .line 220
     .line 221
-    invoke-virtual {v7, v5, v1}, LX/4mp;->A01(II)Z
+    invoke-virtual {v4}, LX/4fk;->A06()Ljava/lang/String;
 
     .line 222
     .line 223
     .line 224
-    move-result v1
+    move-result-object v1
 
     .line 225
-    if-eqz v1, :cond_8
+    invoke-virtual {v2, v4, v5, v1}, LX/4ge;->A01(LX/4fk;LX/4b8;Ljava/lang/String;)V
 
     .line 226
     .line 227
-    iget-object v1, v3, Lcom/facebook/litho/ComponentTree;->A0T:Landroid/view/accessibility/AccessibilityManager;
-
     .line 228
-    .line 229
-    invoke-static {v1}, LX/4KD;->A01(Landroid/view/accessibility/AccessibilityManager;)Z
+    invoke-virtual {v5, v4, v7}, LX/4fV;->A0i(LX/4fk;LX/6XZ;)V
 
+    .line 229
     .line 230
     .line 231
+    goto :goto_3
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
     .line 232
-    move-result v5
+    :cond_7
+    :try_start_6
+    monitor-exit v7
 
     .line 233
-    iget-boolean v1, v7, LX/4mp;->A0j:Z
+    iget-object v1, v8, LX/4gO;->A01:LX/4ge;
 
     .line 234
     .line 235
-    if-ne v5, v1, :cond_8
+    invoke-virtual {v1}, LX/4ge;->A00()V
 
     .line 236
     .line 237
-    iput v4, v3, Lcom/facebook/litho/ComponentTree;->A00:I
-
     .line 238
+    :cond_8
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0I:Ljava/util/List;
+
     .line 239
-    iput-object v7, v3, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
-
     .line 240
-    .line 241
-    const/4 v1, 0x1
+    if-eqz v1, :cond_9
 
+    .line 241
     .line 242
-    iput-boolean v1, v7, LX/4mp;->A0O:Z
+    iget v5, v6, LX/4fd;->A0C:I
 
     .line 243
     .line 244
-    const-string v6, "Litho.LayoutCommitted"
+    iget v4, v6, LX/4fd;->A09:I
 
     .line 245
     .line 246
-    new-instance v5, LX/6QA;
+    :goto_4
+    iget-object v1, v6, LX/4fd;->A0V:Ljava/util/Map;
 
     .line 247
     .line 248
-    invoke-direct {v5, v3, v8}, LX/6QA;-><init>(Lcom/facebook/litho/ComponentTree;I)V
+    invoke-static {v1}, LX/0X3;->A0q(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 249
     .line 250
     .line 251
-    new-instance v1, LX/4ob;
+    move-result-object v2
 
     .line 252
-    .line 253
-    invoke-direct {v1, v7, v4, v2}, LX/4ob;-><init>(LX/4mp;II)V
+    :goto_5
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
+    .line 253
     .line 254
     .line 255
+    move-result v1
+
     .line 256
-    invoke-static {v6, v5, v1}, LX/6NN;->A04(Ljava/lang/String;LX/0Cw;LX/0Cl;)V
+    if-eqz v1, :cond_a
 
     .line 257
     .line 258
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 259
-    const/4 v12, 0x1
-
     .line 260
-    goto :goto_2
-
     .line 261
-    :cond_8
-    const/4 v12, 0x0
+    move-result-object v1
 
     .line 262
-    :goto_2
-    iget-object v1, v7, LX/4mp;->A0X:LX/4o1;
+    check-cast v1, LX/4km;
 
     .line 263
     .line 264
-    iget-object v9, v1, LX/4o1;->A06:LX/4mu;
+    iput-object p0, v1, LX/4km;->A01:LX/4iL;
 
     .line 265
     .line 266
-    if-eqz v12, :cond_11
+    iput-object p0, v1, LX/4km;->A00:Lcom/facebook/litho/ComponentTree;
 
     .line 267
     .line 268
-    iget-object v6, v7, LX/4mp;->A0K:Ljava/util/List;
+    goto :goto_5
 
     .line 269
+    :cond_9
+    const/4 v5, 0x0
+
     .line 270
-    iput-object v0, v7, LX/4mp;->A0K:Ljava/util/List;
+    const/4 v4, 0x0
 
     .line 271
+    goto :goto_4
+
     .line 272
-    iget-object v5, v7, LX/4mp;->A0I:Ljava/util/List;
+    :cond_a
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0I:Ljava/util/List;
 
     .line 273
     .line 274
-    iput-object v0, v7, LX/4mp;->A0I:Ljava/util/List;
+    if-eqz v1, :cond_c
 
     .line 275
     .line 276
-    iget-object v4, v3, Lcom/facebook/litho/ComponentTree;->A0D:LX/4mu;
+    invoke-static {v1}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     .line 277
     .line 278
-    if-eqz v4, :cond_f
-
     .line 279
-    .line 280
-    iget-object v11, v3, Lcom/facebook/litho/ComponentTree;->A0V:LX/4q4;
-
-    .line 281
-    .line 282
-    if-eqz v11, :cond_9
-
-    .line 283
-    .line 284
-    new-instance v1, LX/4mu;
-
-    .line 285
-    .line 286
-    invoke-direct {v1, v4}, LX/4mu;-><init>(LX/4mu;)V
-
-    .line 287
-    .line 288
-    .line 289
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    .line 290
-    .line 291
-    .line 292
     move-result-object v0
 
-    .line 293
-    invoke-static {v0}, LX/0Yf;->A0h(Ljava/lang/Object;)Ljava/lang/String;
+    .line 280
+    goto :goto_6
 
+    .line 281
+    :cond_b
+    const/4 v5, 0x0
+
+    .line 282
+    const/4 v4, 0x0
+
+    .line 283
+    :cond_c
+    :goto_6
+    if-nez p6, :cond_d
+
+    .line 284
+    .line 285
+    iput v3, p0, Lcom/facebook/litho/ComponentTree;->A02:I
+
+    .line 286
+    .line 287
+    :cond_d
+    monitor-exit p0
+
+    .line 288
+    if-eqz v10, :cond_2
+
+    .line 289
+    .line 290
+    if-eqz v0, :cond_10
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    .line 291
+    .line 292
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    .line 293
     .line 294
     .line 295
+    move-result-object v3
+
     .line 296
-    move-result-object v17
+    :goto_7
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     .line 297
-    iget-object v0, v11, LX/4q4;->A00:Ljava/util/LinkedHashMap;
-
     .line 298
     .line 299
-    invoke-virtual {v0}, Ljava/util/AbstractMap;->size()I
+    move-result v0
 
     .line 300
+    if-eqz v0, :cond_10
+
     .line 301
     .line 302
-    move-result v19
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 303
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
     .line 304
     .line 305
+    move-result-object v2
+
     .line 306
-    move-result-wide p1
+    check-cast v2, LX/4lW;
 
     .line 307
-    new-instance v13, LX/4p1;
-
     .line 308
+    const/4 v0, 0x5
+
     .line 309
-    move-object/from16 v18, p3
+    if-eq p3, v0, :cond_e
 
     .line 310
     .line 311
-    move/from16 p0, v2
+    const/4 v1, 0x4
 
     .line 312
+    const/4 v0, 0x0
+
     .line 313
-    move-object v15, v10
+    if-ne p3, v1, :cond_f
 
     .line 314
-    move-object/from16 v16, v1
-
     .line 315
+    :cond_e
+    const/4 v0, 0x1
+
     .line 316
-    invoke-direct/range {v13 .. v22}, LX/4p1;-><init>(LX/4mg;LX/2fW;LX/4mu;Ljava/lang/String;Ljava/lang/String;IIJ)V
+    :cond_f
+    invoke-interface {v2, v11, v5, v4, v0}, LX/4lW;->Aay(IIIZ)V
 
     .line 317
     .line 318
     .line 319
-    iget-object v1, v13, LX/4p1;->A00:Ljava/lang/String;
+    goto :goto_7
 
     .line 320
+    :catchall_0
+    move-exception v0
+
     .line 321
-    invoke-virtual {v0, v1, v13}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_start_7
+    throw v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
     .line 322
+    :catchall_1
+    :try_start_8
+    move-exception v0
+
     .line 323
+    monitor-exit v7
+
     .line 324
-    :cond_9
-    iget-object v1, v4, LX/4mu;->A03:LX/4mt;
+    throw v0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
     .line 325
-    .line 326
-    iget-object v0, v9, LX/4mu;->A03:LX/4mt;
+    :cond_10
+    invoke-static {}, LX/4hz;->A01()Z
 
+    .line 326
     .line 327
     .line 328
-    invoke-virtual {v1, v0}, LX/4mt;->A03(LX/4mt;)V
+    move-result v0
 
     .line 329
+    if-eqz v0, :cond_11
+
     .line 330
     .line 331
-    iget-object v1, v4, LX/4mu;->A01:LX/4ol;
+    invoke-static {p0}, Lcom/facebook/litho/ComponentTree;->A08(Lcom/facebook/litho/ComponentTree;)V
 
     .line 332
     .line 333
-    monitor-enter v1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_4
-
     .line 334
-    :try_start_6
-    invoke-virtual {v1}, LX/4ol;->A00()V
+    return-void
 
     .line 335
+    :cond_11
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0G:LX/4kh;
+
     .line 336
     .line 337
-    if-eqz v5, :cond_a
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+    const-string v1, ""
 
     .line 338
     .line 339
-    :try_start_7
-    iget-object v0, v4, LX/4mu;->A00:LX/4nS;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Runnable;
 
     .line 340
     .line 341
-    invoke-virtual {v0, v5}, LX/4nS;->A02(Ljava/util/List;)V
+    invoke-interface {v2, v0, v1}, LX/4kh;->AeQ(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     .line 342
     .line 343
     .line 344
-    :cond_a
-    if-eqz v6, :cond_e
-
-    .line 345
-    .line 346
-    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 347
-    .line 348
-    .line 349
-    move-result-object v9
-
-    .line 350
-    :cond_b
-    :goto_3
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 351
-    .line 352
-    .line 353
-    move-result v0
-
-    .line 354
-    if-eqz v0, :cond_e
-
-    .line 355
-    .line 356
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 357
-    .line 358
-    .line 359
-    move-result-object v2
-
-    .line 360
-    check-cast v2, LX/4nU;
-
-    .line 361
-    .line 362
-    iget-object v5, v2, LX/4nU;->A03:LX/4mg;
-
-    .line 363
-    .line 364
-    const-string v0, "null cannot be cast to non-null type com.facebook.litho.SpecGeneratedComponent"
-
-    .line 365
-    .line 366
-    invoke-static {v5, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 367
-    .line 368
-    .line 369
-    check-cast v5, LX/4me;
-
-    .line 370
-    .line 371
-    iget-object v2, v2, LX/4nU;->A04:LX/4mm;
-
-    .line 372
-    .line 373
-    iget-object v6, v4, LX/4mu;->A00:LX/4nS;
-
-    .line 374
-    .line 375
-    invoke-virtual {v2}, LX/4mm;->A06()Ljava/lang/String;
-
-    .line 376
-    .line 377
-    .line 378
-    move-result-object v0
-
-    .line 379
-    invoke-virtual {v6, v2, v5, v0}, LX/4nS;->A01(LX/4mm;LX/4rE;Ljava/lang/String;)V
-
-    .line 380
-    .line 381
-    .line 382
-    instance-of v0, v5, LX/4f9;
-
-    .line 383
-    .line 384
-    if-eqz v0, :cond_c
-
-    .line 385
-    .line 386
-    check-cast v5, LX/4f9;
-
-    .line 387
-    .line 388
-    iget-object v0, v5, LX/4f9;->A0H:LX/4p5;
-
-    .line 389
-    .line 390
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 391
-    .line 392
-    .line 393
-    iget-object v0, v5, LX/4f9;->A0C:LX/4p5;
-
-    .line 394
-    .line 395
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 396
-    .line 397
-    .line 398
-    iget-object v0, v5, LX/4f9;->A0F:LX/4p5;
-
-    .line 399
-    .line 400
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 401
-    .line 402
-    .line 403
-    iget-object v0, v5, LX/4f9;->A0E:LX/4p5;
-
-    .line 404
-    .line 405
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 406
-    .line 407
-    .line 408
-    iget-object v0, v5, LX/4f9;->A0J:LX/4p5;
-
-    .line 409
-    .line 410
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 411
-    .line 412
-    .line 413
-    iget-object v0, v5, LX/4f9;->A0G:LX/4p5;
-
-    .line 414
-    .line 415
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 416
-    .line 417
-    .line 418
-    iget-object v0, v5, LX/4f9;->A0D:LX/4p5;
-
-    .line 419
-    .line 420
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 421
-    .line 422
-    .line 423
-    iget-object v0, v5, LX/4f9;->A0I:LX/4p5;
-
-    .line 424
-    .line 425
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 426
-    .line 427
-    .line 428
-    goto :goto_3
-
-    .line 429
-    :cond_c
-    instance-of v0, v5, LX/4f8;
-
-    .line 430
-    .line 431
-    if-eqz v0, :cond_d
-
-    .line 432
-    .line 433
-    check-cast v5, LX/4f8;
-
-    .line 434
-    .line 435
-    iget-object v0, v5, LX/4f8;->A0N:LX/4p5;
-
-    .line 436
-    .line 437
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 438
-    .line 439
-    .line 440
-    iget-object v0, v5, LX/4f8;->A0M:LX/4p5;
-
-    .line 441
-    .line 442
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 443
-    .line 444
-    .line 445
-    iget-object v0, v5, LX/4f8;->A0O:LX/4p5;
-
-    .line 446
-    .line 447
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 448
-    .line 449
-    .line 450
-    goto :goto_3
-
-    .line 451
-    :cond_d
-    instance-of v0, v5, LX/4lr;
-
-    .line 452
-    .line 453
-    if-eqz v0, :cond_b
-
-    .line 454
-    .line 455
-    check-cast v5, LX/4lr;
-
-    .line 456
-    .line 457
-    iget-object v0, v5, LX/4lr;->A07:LX/4p5;
-
-    .line 458
-    .line 459
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 460
-    .line 461
-    .line 462
-    iget-object v0, v5, LX/4lr;->A06:LX/4p5;
-
-    .line 463
-    .line 464
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 465
-    .line 466
-    .line 467
-    iget-object v0, v5, LX/4lr;->A05:LX/4p5;
-
-    .line 468
-    .line 469
-    invoke-static {v2, v0, v5, v1}, LX/4me;->A09(LX/4mm;LX/4p5;LX/4fC;LX/4ol;)V
-
-    .line 470
-    .line 471
-    .line 472
-    goto :goto_3
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    .line 473
-    :cond_e
-    :try_start_8
-    monitor-exit v1
-
-    .line 474
-    iget-object v0, v4, LX/4mu;->A00:LX/4nS;
-
-    .line 475
-    .line 476
-    invoke-virtual {v0}, LX/4nS;->A00()V
-
-    .line 477
-    .line 478
-    .line 479
-    :cond_f
-    iget-object v0, v7, LX/4mp;->A0d:Ljava/util/Map;
-
-    .line 480
-    .line 481
-    invoke-static {v0}, LX/0Ye;->A0a(Ljava/util/Map;)Ljava/util/Iterator;
-
-    .line 482
-    .line 483
-    .line 484
-    move-result-object v1
-
-    .line 485
-    :goto_4
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 486
-    .line 487
-    .line 488
-    move-result v0
-
-    .line 489
-    if-eqz v0, :cond_10
-
-    .line 490
-    .line 491
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 492
-    .line 493
-    .line 494
-    move-result-object v0
-
-    .line 495
-    check-cast v0, LX/4r4;
-
-    .line 496
-    .line 497
-    iput-object v3, v0, LX/4r4;->A01:Lcom/facebook/litho/ComponentTree;
-
-    .line 498
-    .line 499
-    iput-object v3, v0, LX/4r4;->A00:Lcom/facebook/litho/ComponentTree;
-
-    .line 500
-    .line 501
-    goto :goto_4
-
-    .line 502
-    :cond_10
-    iget-object v0, v3, Lcom/facebook/litho/ComponentTree;->A0I:Ljava/util/List;
-
-    .line 503
-    .line 504
-    if-eqz v0, :cond_11
-
-    .line 505
-    .line 506
-    invoke-static {v0}, LX/002;->A0J(Ljava/util/Collection;)Ljava/util/ArrayList;
-
-    .line 507
-    .line 508
-    .line 509
-    move-result-object v0
-
-    .line 510
-    goto :goto_5
-
-    .line 511
-    :cond_11
-    const/4 v0, 0x0
-
-    .line 512
-    :goto_5
-    if-nez p7, :cond_12
-
-    .line 513
-    .line 514
-    iput v8, v3, Lcom/facebook/litho/ComponentTree;->A02:I
-
-    .line 515
-    .line 516
-    :cond_12
-    monitor-exit v3
-
-    .line 517
-    if-eqz v12, :cond_4
-
-    .line 518
-    .line 519
-    if-eqz v0, :cond_15
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_4
-
-    .line 520
-    .line 521
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
-    .line 522
-    .line 523
-    .line 524
-    move-result-object v4
-
-    .line 525
-    :goto_6
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 526
-    .line 527
-    .line 528
-    move-result v0
-
-    .line 529
-    if-eqz v0, :cond_15
-
-    .line 530
-    .line 531
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 532
-    .line 533
-    .line 534
-    move-result-object v2
-
-    .line 535
-    check-cast v2, LX/4rj;
-
-    .line 536
-    .line 537
-    check-cast v2, LX/4p2;
-
-    .line 538
-    .line 539
-    iget-object v1, v2, LX/4p2;->A02:LX/4nk;
-
-    .line 540
-    .line 541
-    iget-object v0, v2, LX/4p2;->A01:LX/4om;
-
-    .line 542
-    .line 543
-    invoke-static {v0, v1}, LX/4nk;->A09(LX/4om;LX/4nk;)V
-
-    .line 544
-    .line 545
-    .line 546
-    iget-object v5, v2, LX/4p2;->A00:LX/4ni;
-
-    .line 547
-    .line 548
-    monitor-enter v5
-
-    .line 549
-    :try_start_9
-    iget-object v1, v5, LX/4ni;->A02:Lcom/facebook/litho/ComponentTree;
-
-    .line 550
-    .line 551
-    if-eqz v1, :cond_14
-
-    .line 552
-    .line 553
-    monitor-enter v1
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_5
-
-    .line 554
-    :try_start_a
-    iget-object v0, v1, Lcom/facebook/litho/ComponentTree;->A0I:Ljava/util/List;
-
-    .line 555
-    .line 556
-    if-eqz v0, :cond_13
-
-    .line 557
-    .line 558
-    invoke-interface {v0, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    .line 559
-    .line 560
-    .line 561
-    :cond_13
-    monitor-exit v1
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_3
-
-    .line 562
-    :cond_14
-    monitor-exit v5
-
-    .line 563
-    goto :goto_6
-
-    .line 564
-    :cond_15
-    invoke-static {}, LX/4oe;->A01()Z
-
-    .line 565
-    .line 566
-    .line 567
-    move-result v0
-
-    .line 568
-    if-eqz v0, :cond_16
-
-    .line 569
-    .line 570
-    invoke-static {v3}, Lcom/facebook/litho/ComponentTree;->A07(Lcom/facebook/litho/ComponentTree;)V
-
-    .line 571
-    .line 572
-    .line 573
-    :goto_7
-    iget-object v2, v3, Lcom/facebook/litho/ComponentTree;->A0G:LX/4qJ;
-
-    .line 574
-    .line 575
-    if-eqz v2, :cond_4
-
-    .line 576
-    .line 577
-    iget-object v1, v3, Lcom/facebook/litho/ComponentTree;->A0a:Ljava/lang/Runnable;
-
-    .line 578
-    .line 579
-    invoke-interface {v2, v1}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
-
-    .line 580
-    .line 581
-    .line 582
-    const-string v0, ""
-
-    .line 583
-    .line 584
-    invoke-interface {v2, v1, v0}, LX/4qJ;->Ag2(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    .line 585
-    .line 586
-    .line 587
     return-void
 
-    .line 588
-    :cond_16
-    iget-object v2, v3, Lcom/facebook/litho/ComponentTree;->A0F:LX/4qJ;
-
-    .line 589
-    .line 590
-    const-string v1, ""
-
-    .line 591
-    .line 592
-    iget-object v0, v3, Lcom/facebook/litho/ComponentTree;->A0Z:Ljava/lang/Runnable;
-
-    .line 593
-    .line 594
-    invoke-interface {v2, v0, v1}, LX/4qJ;->Ag2(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    .line 595
-    .line 596
-    .line 597
-    goto :goto_7
-
-    .line 598
-    :catchall_1
-    move-exception v0
-
-    .line 599
-    :try_start_b
-    throw v0
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_2
-
-    .line 600
+    .line 345
     :catchall_2
-    :try_start_c
     move-exception v0
 
-    .line 601
-    monitor-exit v1
+    .line 346
+    :try_start_9
+    monitor-exit p0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 602
+    .line 347
     throw v0
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_4
 
-    .line 603
+    .line 348
     :catchall_3
-    :try_start_d
     move-exception v0
 
-    .line 604
-    monitor-exit v1
-    :try_end_d
-    .catchall {:try_start_d .. :try_end_d} :catchall_3
+    .line 349
+    monitor-exit v2
 
-    .line 605
-    :try_start_e
+    .line 350
     throw v0
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_5
 
-    .line 606
+    .line 351
     :catchall_4
     move-exception v0
 
-    .line 607
-    :try_start_f
-    monitor-exit v3
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_4
+    .line 352
+    :try_start_a
+    monitor-exit p0
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_4
 
-    .line 608
+    .line 353
     throw v0
 
-    .line 609
+    .line 354
     :catchall_5
     move-exception v0
 
-    .line 610
-    monitor-exit v5
-
-    .line 611
-    throw v0
-
-    .line 612
-    :catchall_6
-    move-exception v0
-
-    .line 613
-    :try_start_10
+    .line 355
+    :try_start_b
     monitor-exit v3
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_6
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_5
 
-    .line 614
-    throw v0
-
-    .line 615
-    :catchall_7
-    move-exception v0
-
-    .line 616
-    :try_start_11
-    monitor-exit v4
-    :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_7
-
-    .line 617
+    .line 356
     throw v0
 .end method
 
-.method public static A09(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
-    .locals 4
+.method private A0A(Ljava/lang/String;Z)V
+    .locals 3
 
     .line 0
     const/4 v0, 0x0
 
     .line 1
-    const/4 v3, 0x1
+    new-instance v2, LX/6gr;
 
     .line 2
-    new-instance v2, LX/6QA;
-
     .line 3
-    .line 4
-    invoke-direct {v2, p0, v3}, LX/6QA;-><init>(Lcom/facebook/litho/ComponentTree;I)V
+    invoke-direct {v2, p0, v0}, LX/6gr;-><init>(Ljava/lang/Object;I)V
 
+    .line 4
     .line 5
     .line 6
+    new-instance v1, LX/4hJ;
+
     .line 7
-    new-instance v1, LX/4oD;
-
     .line 8
-    .line 9
-    invoke-direct {v1, p0, p1, v0}, LX/4oD;-><init>(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
+    invoke-direct {v1, p0, p1, v0}, LX/4hJ;-><init>(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
 
+    .line 9
     .line 10
     .line 11
-    .line 12
     const-string v0, "Litho.StateUpdateEnqueued"
 
-    .line 13
-    .line 14
-    invoke-static {v0, v2, v1}, LX/6NN;->A04(Ljava/lang/String;LX/0Cw;LX/0Cl;)V
-
-    .line 15
-    .line 16
-    .line 17
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0b:LX/4nv;
-
-    .line 18
-    .line 19
-    if-eqz v2, :cond_1
-
-    .line 20
-    .line 21
-    iget-object v0, v2, LX/4nv;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    .line 22
-    .line 23
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    .line 24
-    .line 25
-    .line 26
-    move-result v0
-
-    .line 27
-    if-nez v0, :cond_0
-
-    .line 28
-    .line 29
-    iget-object v1, v2, LX/4nv;->A04:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 30
-    .line 31
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 32
-    .line 33
-    .line 34
-    move-result-object v0
-
-    .line 35
-    if-eqz v0, :cond_0
-
-    .line 36
-    .line 37
-    iget-object v0, v2, LX/4nv;->A03:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 38
-    .line 39
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    .line 40
-    .line 41
-    .line 42
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 43
-    .line 44
-    .line 45
-    move-result-object v1
-
-    .line 46
-    check-cast v1, Landroid/view/Choreographer;
-
-    .line 47
-    .line 48
-    iget-object v0, v2, LX/4nv;->A00:Landroid/view/Choreographer$FrameCallback;
-
-    .line 49
-    .line 50
-    invoke-virtual {v1, v0}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
-
-    .line 51
-    .line 52
-    .line 53
-    :cond_0
-    return-void
-
-    .line 54
-    :cond_1
-    invoke-virtual {p0, p1, v3, p2}, Lcom/facebook/litho/ComponentTree;->A0H(Ljava/lang/String;ZZ)V
-
-    .line 55
-    .line 56
-    .line 57
-    return-void
-.end method
-
-.method private final declared-synchronized A0A(LX/4q2;)V
-    .locals 4
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:LX/4q2;
-
-    .line 2
-    .line 3
-    if-nez v0, :cond_3
-
-    .line 4
-    .line 5
-    iput-object p1, p0, Lcom/facebook/litho/ComponentTree;->A0A:LX/4q2;
-
-    .line 6
-    .line 7
-    invoke-interface {p1, p0}, LX/4q2;->A4w(LX/4rC;)V
-
-    .line 8
-    .line 9
-    .line 10
-    const/4 v3, 0x0
-
-    .line 11
-    instance-of v0, p1, LX/4r9;
-
     .line 12
     .line 13
-    if-eqz v0, :cond_0
+    invoke-static {v0, v2, v1}, LX/4fn;->A04(Ljava/lang/String;LX/0Gw;LX/0GZ;)V
 
     .line 14
     .line 15
-    check-cast p1, LX/4r9;
-
     .line 16
-    .line 17
-    invoke-interface {p1}, LX/4r9;->AHs()LX/06k;
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0Y:LX/4h1;
 
+    .line 17
     .line 18
+    if-eqz v2, :cond_1
+
     .line 19
     .line 20
-    move-result-object v3
+    iget-object v0, v2, LX/4h1;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 21
-    :cond_0
-    const-class v2, LX/06k;
-
     .line 22
-    .line 23
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0U:LX/4mm;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
+    .line 23
     .line 24
     .line 25
-    iget-boolean v0, v1, LX/4mm;->A0B:Z
+    move-result v0
 
     .line 26
+    if-nez v0, :cond_0
+
     .line 27
-    if-nez v0, :cond_1
-
     .line 28
+    iget-object v1, v2, LX/4h1;->A04:Ljava/util/concurrent/atomic/AtomicReference;
+
     .line 29
-    iget-object v0, v1, LX/4mm;->A07:LX/2fW;
-
     .line 30
-    .line 31
-    invoke-static {v0}, LX/2fT;->A00(LX/2fW;)LX/2fW;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
+    .line 31
     .line 32
     .line 33
-    .line 34
     move-result-object v0
 
+    .line 34
+    if-eqz v0, :cond_0
+
     .line 35
-    iput-object v0, v1, LX/4mm;->A07:LX/2fW;
-
     .line 36
-    .line 37
-    const/4 v0, 0x1
+    iget-object v0, v2, LX/4h1;->A03:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 37
     .line 38
-    iput-boolean v0, v1, LX/4mm;->A0B:Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     .line 39
     .line 40
-    :cond_1
-    iget-object v0, v1, LX/4mm;->A07:LX/2fW;
-
     .line 41
-    .line 42
-    if-eqz v0, :cond_2
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
+    .line 42
     .line 43
     .line 44
-    iget-object v0, v0, LX/2fW;->A00:Ljava/util/Map;
+    move-result-object v1
 
     .line 45
-    .line 46
-    invoke-static {v0}, LX/0PS;->A02(Ljava/lang/Object;)V
+    check-cast v1, Landroid/view/Choreographer;
 
+    .line 46
     .line 47
+    iget-object v0, v2, LX/4h1;->A00:Landroid/view/Choreographer$FrameCallback;
+
     .line 48
     .line 49
-    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1, v0}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
     .line 50
     .line 51
     .line 52
-    :cond_2
-    monitor-exit p0
-
-    .line 53
+    :cond_0
     return-void
 
+    .line 53
+    :cond_1
+    const/4 v0, 0x1
+
     .line 54
-    :cond_3
-    :try_start_1
-    const-string v0, "Already subscribed"
+    invoke-virtual {p0, p1, v0, p2}, Lcom/facebook/litho/ComponentTree;->A0I(Ljava/lang/String;ZZ)V
 
     .line 55
     .line 56
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
     .line 57
-    .line 58
-    .line 59
-    move-result-object v0
-
-    .line 60
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 61
-    :catchall_0
-    move-exception v0
-
-    .line 62
-    monitor-exit p0
-
-    .line 63
-    throw v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized A0B()LX/4mg;
+.method public final declared-synchronized A0B()LX/4gO;
     .locals 1
 
     .line 0
@@ -6062,7 +4691,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -6084,7 +4713,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized A0C()LX/4mu;
+.method public final declared-synchronized A0C()Ljava/lang/String;
     .locals 1
 
     .line 0
@@ -6092,37 +4721,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0D:LX/4mu;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2
-    .line 3
-    monitor-exit p0
-
-    .line 4
-    return-object v0
-
-    .line 5
-    :catchall_0
-    move-exception v0
-
-    .line 6
-    monitor-exit p0
-
-    .line 7
-    throw v0
-.end method
-
-.method public final declared-synchronized A0D()Ljava/lang/String;
-    .locals 1
-
-    .line 0
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
     .line 2
     .line 3
@@ -6134,7 +4733,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {v0}, LX/4mg;->A0P()Ljava/lang/String;
+    invoke-virtual {v0}, LX/4fg;->A0H()Ljava/lang/String;
 
     .line 7
     .line 8
@@ -6168,16 +4767,16 @@
     throw v0
 .end method
 
-.method public final A0E()V
+.method public final A0D()V
     .locals 5
 
     .line 0
-    invoke-static {}, LX/4oe;->A00()V
+    invoke-static {}, LX/4hz;->A00()V
 
     .line 1
     .line 2
     .line 3
-    iget-object v3, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v3, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 4
     .line 5
@@ -6196,7 +4795,7 @@
 
     .line 11
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0c:LX/4pe;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0Z:LX/4jf;
 
     .line 12
     .line 13
@@ -6204,305 +4803,313 @@
 
     .line 14
     .line 15
-    iget-object v0, v0, LX/4pe;->A01:Lcom/facebook/litho/ComponentTree;
+    iget-object v0, v0, LX/4jf;->A00:Lcom/facebook/litho/ComponentTree;
 
     .line 16
     .line 17
-    iget-object v0, v0, Lcom/facebook/litho/ComponentTree;->A0U:LX/4mm;
+    iget-object v0, v0, Lcom/facebook/litho/ComponentTree;->A0T:LX/4fk;
 
     .line 18
     .line 19
-    iget-object v0, v0, LX/4mm;->A02:LX/4oC;
+    iget-object v0, v0, LX/4fk;->A02:LX/4Kd;
 
     .line 20
     .line 21
-    iget-boolean v0, v0, LX/4oC;->A07:Z
+    iget-object v0, v0, LX/4Kd;->A01:LX/4gE;
 
     .line 22
     .line 23
-    if-eqz v0, :cond_0
+    iget-boolean v0, v0, LX/4gE;->A0J:Z
 
     .line 24
     .line 25
-    invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    if-eqz v0, :cond_0
 
     .line 26
     .line 27
+    invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
     .line 28
+    .line 29
+    .line 30
     move-result-object v0
 
-    .line 29
+    .line 31
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 30
-    .line 31
-    invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
-
     .line 32
     .line 33
+    invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+
     .line 34
+    .line 35
+    .line 36
     move-result-object v0
 
-    .line 35
+    .line 37
     goto :goto_0
 
-    .line 36
+    .line 38
     :cond_0
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 37
+    .line 39
     :try_start_1
     iput-boolean v1, p0, Lcom/facebook/litho/ComponentTree;->A0K:Z
 
-    .line 38
-    .line 39
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
-
     .line 40
     .line 41
-    if-eqz v1, :cond_1
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
 
     .line 42
     .line 43
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    if-eqz v1, :cond_1
 
     .line 44
     .line 45
-    if-eq v0, v1, :cond_1
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 46
     .line 47
-    invoke-direct {p0}, Lcom/facebook/litho/ComponentTree;->A01()V
+    if-eq v0, v1, :cond_1
 
     .line 48
     .line 49
-    .line 50
-    :cond_1
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    invoke-direct {p0}, Lcom/facebook/litho/ComponentTree;->A02()V
 
+    .line 50
     .line 51
     .line 52
-    if-eqz v0, :cond_4
+    :cond_1
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
     .line 53
     .line 54
+    if-eqz v0, :cond_4
+
+    .line 55
+    .line 56
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 55
-    :try_start_2
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
-
-    .line 56
     .line 57
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+    :try_start_2
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 58
     .line 59
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+
     .line 60
+    .line 61
+    .line 62
     move-result v4
 
-    .line 61
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
-
-    .line 62
     .line 63
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 64
     .line 65
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
     .line 66
+    .line 67
+    .line 68
     move-result v3
 
-    .line 67
+    .line 69
     if-nez v4, :cond_2
 
-    .line 68
-    .line 69
+    .line 70
+    .line 71
     goto :goto_1
 
-    .line 70
-    :cond_2
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
-
-    .line 71
     .line 72
-    if-eqz v1, :cond_3
+    :cond_2
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 73
     .line 74
-    iget v0, v1, LX/4mp;->A05:I
+    if-eqz v1, :cond_3
 
     .line 75
     .line 76
-    if-ne v0, v4, :cond_3
+    iget v0, v1, LX/4fd;->A0C:I
 
     .line 77
     .line 78
-    iget v0, v1, LX/4mp;->A04:I
+    if-ne v0, v4, :cond_3
 
     .line 79
     .line 80
-    if-ne v0, v3, :cond_3
+    iget v0, v1, LX/4fd;->A09:I
 
     .line 81
     .line 82
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    if-ne v0, v3, :cond_3
 
     .line 83
     .line 84
-    iget-boolean v0, v1, LX/4mx;->A08:Z
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 85
     .line 86
-    if-nez v0, :cond_3
+    iget-boolean v0, v1, Lcom/facebook/litho/BaseMountingView;->A0A:Z
 
     .line 87
     .line 88
-    invoke-virtual {v1}, LX/4mx;->A0O()V
+    if-nez v0, :cond_3
 
     .line 89
     .line 90
-    .line 91
-    goto :goto_2
+    iget-object v0, v1, Lcom/facebook/litho/BaseMountingView;->A0J:LX/4g8;
 
+    .line 91
     .line 92
-    :cond_3
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    invoke-virtual {v0}, LX/4g8;->A0F()V
 
     .line 93
     .line 94
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
     .line 95
-    .line 96
-    .line 97
     goto :goto_2
 
+    .line 96
+    :cond_3
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
+
+    .line 97
     .line 98
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    .line 99
+    .line 100
+    .line 101
+    goto :goto_2
+
+    .line 102
     :goto_1
     if-nez v3, :cond_2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 99
-    .line 100
+    .line 103
+    .line 104
     :goto_2
     iput-boolean v2, p0, Lcom/facebook/litho/ComponentTree;->A0J:Z
 
-    .line 101
-    .line 102
-    return-void
-
-    .line 103
-    :cond_4
-    :try_start_3
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 104
     .line 105
     .line 106
-    move-result-object v1
+    return-void
 
     .line 107
-    const-string v0, "Trying to attach a ComponentTree with a null root. Is released: "
+    :cond_4
+    :try_start_3
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 108
     .line 109
+    .line 110
+    move-result-object v1
+
+    .line 111
+    const-string v0, "Trying to attach a ComponentTree with a null root. Is released: "
+
+    .line 112
+    .line 113
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 110
-    .line 111
-    .line 112
-    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0L:Z
-
-    .line 113
     .line 114
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
     .line 115
     .line 116
+    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0Q:Z
+
     .line 117
-    const-string v0, ", Released Component name is: "
-
     .line 118
-    .line 119
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
+    .line 119
     .line 120
     .line 121
+    const-string v0, ", Released Component name is: "
+
     .line 122
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0H:Ljava/lang/String;
-
     .line 123
-    .line 124
-    invoke-static {v0, v1}, LX/001;->A0D(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 124
     .line 125
     .line 126
-    .line 127
-    move-result-object v0
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0H:Ljava/lang/String;
 
+    .line 127
     .line 128
-    throw v0
+    invoke-static {v0, v1}, LX/001;->A0G(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
 
     .line 129
+    .line 130
+    .line 131
+    move-result-object v0
+
+    .line 132
+    throw v0
+
+    .line 133
     :catchall_0
     move-exception v0
 
-    .line 130
+    .line 134
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 131
+    .line 135
     :try_start_4
     throw v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 132
+    .line 136
     :catchall_1
     move-exception v0
 
-    .line 133
+    .line 137
     iput-boolean v2, p0, Lcom/facebook/litho/ComponentTree;->A0J:Z
 
-    .line 134
-    .line 135
+    .line 138
+    .line 139
     throw v0
 
-    .line 136
+    .line 140
     :cond_5
     const-string v0, "Trying to attach a ComponentTree without a set View"
 
-    .line 137
-    .line 138
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
-
-    .line 139
-    .line 140
     .line 141
+    .line 142
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 143
+    .line 144
+    .line 145
     move-result-object v0
 
-    .line 142
+    .line 146
     throw v0
 .end method
 
-.method public final A0F()V
+.method public final A0E()V
     .locals 3
 
     .line 0
-    invoke-static {}, LX/4oe;->A00()V
+    invoke-static {}, LX/4hz;->A00()V
 
     .line 1
     .line 2
     .line 3
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0c:LX/4pe;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0Z:LX/4jf;
 
     .line 4
     .line 5
@@ -6510,95 +5117,99 @@
 
     .line 6
     .line 7
-    iget-object v2, v0, LX/4pe;->A00:Ljava/util/List;
+    iget-object v2, v0, LX/4jf;->A01:Ljava/util/List;
 
     .line 8
     .line 9
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 10
     .line 11
     .line 12
-    move-result v1
+    move-result-object v1
 
     .line 13
-    const/4 v0, 0x0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 14
-    if-ge v0, v1, :cond_0
-
     .line 15
     .line 16
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result v0
 
     .line 17
+    if-eqz v0, :cond_0
+
     .line 18
     .line 19
-    const-string v1, "clear"
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 20
     .line 21
-    new-instance v0, Ljava/lang/NullPointerException;
-
     .line 22
-    .line 23
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    const-string v0, "componentTree"
 
+    .line 23
     .line 24
+    invoke-static {v0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
     .line 25
     .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
     throw v0
 
-    .line 27
+    .line 29
     :cond_0
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 28
-    .line 29
     .line 30
+    .line 31
+    .line 32
     :cond_1
     monitor-enter p0
 
-    .line 31
+    .line 33
     const/4 v0, 0x0
 
-    .line 32
+    .line 34
     :try_start_0
     iput-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0K:Z
 
-    .line 33
-    .line 34
+    .line 35
+    .line 36
     monitor-exit p0
 
-    .line 35
+    .line 37
     return-void
 
-    .line 36
+    .line 38
     :catchall_0
     move-exception v0
 
-    .line 37
+    .line 39
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
+    .line 40
     throw v0
 .end method
 
-.method public final A0G()V
+.method public final A0F()V
     .locals 13
 
     .line 0
     move-object v12, p0
 
     .line 1
-    invoke-static {}, LX/4oe;->A00()V
+    invoke-static {}, LX/4hz;->A00()V
 
     .line 2
     .line 3
     .line 4
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 5
     .line 6
@@ -6606,7 +5217,7 @@
 
     .line 7
     .line 8
-    iget-boolean v0, v0, LX/4mx;->A09:Z
+    iget-boolean v0, v0, Lcom/facebook/litho/BaseMountingView;->A0B:Z
 
     .line 9
     .line 10
@@ -6618,7 +5229,7 @@
 
     .line 13
     .line 14
-    invoke-static {v0}, LX/002;->A07(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+    invoke-static {v0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
 
     .line 15
     .line 16
@@ -6634,7 +5245,7 @@
 
     .line 20
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0b:LX/4nv;
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0Y:LX/4h1;
 
     .line 21
     .line 22
@@ -6642,7 +5253,7 @@
 
     .line 23
     .line 24
-    iget-object v1, v2, LX/4nv;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v1, v2, LX/4h1;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 25
     .line 26
@@ -6654,24 +5265,24 @@
     .line 28
     .line 29
     .line 30
-    iget-object v0, v2, LX/4nv;->A05:Lcom/facebook/litho/ComponentTree;
+    iget-object v0, v2, LX/4h1;->A05:Lcom/facebook/litho/ComponentTree;
 
     .line 31
     .line 32
-    iget-object v1, v0, Lcom/facebook/litho/ComponentTree;->A0F:LX/4qJ;
+    iget-object v1, v0, Lcom/facebook/litho/ComponentTree;->A0G:LX/4kh;
 
     .line 33
     .line 34
-    iget-object v0, v2, LX/4nv;->A01:Ljava/lang/Runnable;
+    iget-object v0, v2, LX/4h1;->A01:Ljava/lang/Runnable;
 
     .line 35
     .line 36
-    invoke-interface {v1, v0}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v0}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 37
     .line 38
     .line 39
-    iget-object v1, v2, LX/4nv;->A04:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v1, v2, LX/4h1;->A04:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 40
     .line 41
@@ -6699,7 +5310,7 @@
 
     .line 52
     .line 53
-    iget-object v0, v2, LX/4nv;->A00:Landroid/view/Choreographer$FrameCallback;
+    iget-object v0, v2, LX/4h1;->A00:Landroid/view/Choreographer$FrameCallback;
 
     .line 54
     .line 55
@@ -6709,20 +5320,20 @@
     .line 57
     .line 58
     :cond_1
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0F:LX/4qJ;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0G:LX/4kh;
 
     .line 59
     .line 60
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0Z:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Runnable;
 
     .line 61
     .line 62
-    invoke-interface {v1, v0}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v0}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 63
     .line 64
     .line 65
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0X:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0V:Ljava/lang/Object;
 
     .line 66
     .line 67
@@ -6732,7 +5343,7 @@
 
     .line 68
     :try_start_1
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A06:LX/4pP;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A06:LX/4jJ;
 
     .line 69
     .line 70
@@ -6743,16 +5354,16 @@
 
     .line 72
     .line 73
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
 
     .line 74
     .line 75
-    invoke-interface {v0, v1}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 76
     .line 77
     .line 78
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A06:LX/4pP;
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A06:LX/4jJ;
 
     .line 79
     .line 80
@@ -6769,7 +5380,7 @@
 
     .line 82
     :try_start_3
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A05:LX/4pV;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A05:LX/4jZ;
 
     .line 83
     .line 84
@@ -6777,16 +5388,16 @@
 
     .line 85
     .line 86
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
 
     .line 87
     .line 88
-    invoke-interface {v0, v1}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 89
     .line 90
     .line 91
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A05:LX/4pV;
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A05:LX/4jZ;
 
     .line 92
     .line 93
@@ -6797,7 +5408,7 @@
 
     .line 94
     :try_start_4
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0Y:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0W:Ljava/lang/Object;
 
     .line 95
     .line 96
@@ -6807,7 +5418,7 @@
 
     .line 97
     :try_start_5
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A07:LX/4q1;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A07:LX/4kH;
 
     .line 98
     .line 99
@@ -6815,16 +5426,16 @@
 
     .line 100
     .line 101
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4qJ;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
 
     .line 102
     .line 103
-    invoke-interface {v0, v1}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
 
     .line 104
     .line 105
     .line 106
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A07:LX/4q1;
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A07:LX/4kH;
 
     .line 107
     .line 108
@@ -6835,7 +5446,7 @@
 
     .line 109
     :try_start_6
-    iget-object v3, p0, Lcom/facebook/litho/ComponentTree;->A0e:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/facebook/litho/ComponentTree;->A0b:Ljava/lang/Object;
 
     .line 110
     .line 111
@@ -6845,7 +5456,7 @@
 
     .line 112
     :try_start_7
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0g:Ljava/util/List;
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0d:Ljava/util/List;
 
     .line 113
     .line 114
@@ -6878,11 +5489,11 @@
     move-result-object v0
 
     .line 128
-    check-cast v0, LX/4nd;
+    check-cast v0, LX/4ib;
 
     .line 129
     .line 130
-    invoke-virtual {v0}, LX/4nd;->A04()V
+    invoke-virtual {v0}, LX/4ib;->A04()V
 
     .line 131
     .line 132
@@ -6902,7 +5513,7 @@
 
     .line 138
     :try_start_8
-    iget-object v3, p0, Lcom/facebook/litho/ComponentTree;->A0d:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/facebook/litho/ComponentTree;->A0a:Ljava/lang/Object;
 
     .line 139
     .line 140
@@ -6912,7 +5523,7 @@
 
     .line 141
     :try_start_9
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0f:Ljava/util/List;
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0c:Ljava/util/List;
 
     .line 142
     .line 143
@@ -6945,11 +5556,11 @@
     move-result-object v0
 
     .line 157
-    check-cast v0, LX/4nd;
+    check-cast v0, LX/4ib;
 
     .line 158
     .line 159
-    invoke-virtual {v0}, LX/4nd;->A04()V
+    invoke-virtual {v0}, LX/4ib;->A04()V
 
     .line 160
     .line 161
@@ -6969,575 +5580,1001 @@
 
     .line 167
     :try_start_a
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0G:LX/4qJ;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
     .line 168
     .line 169
-    if-eqz v1, :cond_7
+    if-eqz v0, :cond_7
 
     .line 170
     .line 171
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0a:Ljava/lang/Runnable;
+    invoke-virtual {v0}, LX/4fg;->A0H()Ljava/lang/String;
 
     .line 172
     .line 173
-    invoke-interface {v1, v0}, LX/4qJ;->Aiu(Ljava/lang/Runnable;)V
-
     .line 174
-    .line 175
-    .line 176
-    :cond_7
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
-
-    .line 177
-    .line 178
-    if-eqz v0, :cond_8
-
-    .line 179
-    .line 180
-    invoke-virtual {v0}, LX/4mg;->A0P()Ljava/lang/String;
-
-    .line 181
-    .line 182
-    .line 183
     move-result-object v0
 
-    .line 184
+    .line 175
     iput-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0H:Ljava/lang/String;
 
-    .line 185
-    .line 186
+    .line 176
+    .line 177
+    :cond_7
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
+
+    .line 178
+    .line 179
+    if-eqz v0, :cond_8
+
+    .line 180
+    .line 181
+    invoke-virtual {v0, v4}, Lcom/facebook/litho/LithoView;->A0O(Lcom/facebook/litho/ComponentTree;)V
+
+    .line 182
+    .line 183
+    .line 184
     :cond_8
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
-
-    .line 187
-    .line 188
-    if-eqz v0, :cond_9
-
-    .line 189
-    .line 190
-    invoke-virtual {v0, v4}, Lcom/facebook/litho/LithoView;->A0V(Lcom/facebook/litho/ComponentTree;)V
-
-    .line 191
-    .line 192
-    .line 193
-    :cond_9
     const/4 v0, 0x1
 
-    .line 194
-    iput-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0L:Z
+    .line 185
+    iput-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0Q:Z
 
-    .line 195
-    .line 196
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    .line 186
+    .line 187
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_7
 
-    .line 197
-    .line 198
+    .line 188
+    .line 189
     :try_start_b
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
 
-    .line 199
-    .line 200
-    if-eqz v0, :cond_d
+    .line 190
+    .line 191
+    if-eqz v1, :cond_c
 
-    .line 201
-    .line 202
-    iget-object v10, p0, Lcom/facebook/litho/ComponentTree;->A0W:LX/4oV;
+    .line 192
+    .line 193
+    iget-object v10, p0, Lcom/facebook/litho/ComponentTree;->A0U:LX/4iD;
 
-    .line 203
-    .line 204
-    iget-object v1, v0, LX/4mp;->A0C:LX/4pH;
-
-    .line 205
-    .line 206
-    if-eqz v1, :cond_d
-
-    .line 207
-    .line 208
+    .line 194
+    .line 195
     const/4 v0, 0x0
 
+    .line 196
+    invoke-static {v10, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 197
+    .line 198
+    .line 199
+    iget-object v0, v1, LX/4fd;->A0L:LX/4jB;
+
+    .line 200
+    .line 201
+    if-eqz v0, :cond_c
+
+    .line 202
+    .line 203
+    iget-object v9, v0, LX/4jB;->A00:LX/3gS;
+
+    .line 204
+    .line 205
+    invoke-interface {v9}, LX/3gS;->getValue()Ljava/lang/Object;
+
+    .line 206
+    .line 207
+    .line 208
+    move-result-object v0
+
     .line 209
-    invoke-static {v10, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    check-cast v0, Ljava/util/Map;
 
     .line 210
     .line 211
-    .line 212
-    iget-object v9, v1, LX/4pH;->A00:LX/0tD;
-
-    .line 213
-    .line 214
-    invoke-interface {v9}, LX/0tD;->getValue()Ljava/lang/Object;
-
-    .line 215
-    .line 216
-    .line 217
-    move-result-object v0
-
-    .line 218
-    check-cast v0, Ljava/util/Map;
-
-    .line 219
-    .line 220
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
+    .line 212
+    .line 213
+    .line 214
+    move-result v0
+
+    .line 215
+    if-nez v0, :cond_c
+
+    .line 216
+    .line 217
+    invoke-interface {v9}, LX/3gS;->getValue()Ljava/lang/Object;
+
+    .line 218
+    .line 219
+    .line 220
+    move-result-object v0
+
     .line 221
+    check-cast v0, Ljava/util/Map;
+
     .line 222
     .line 223
-    move-result v0
+    invoke-static {v0}, LX/0X3;->A0q(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 224
-    if-nez v0, :cond_d
-
     .line 225
     .line 226
-    invoke-interface {v9}, LX/0tD;->getValue()Ljava/lang/Object;
-
-    .line 227
-    .line 228
-    .line 229
-    move-result-object v0
-
-    .line 230
-    check-cast v0, Ljava/util/Map;
-
-    .line 231
-    .line 232
-    invoke-static {v0}, LX/0Ye;->A0a(Ljava/util/Map;)Ljava/util/Iterator;
-
-    .line 233
-    .line 234
-    .line 235
     move-result-object v11
 
-    .line 236
-    :cond_a
+    .line 227
+    :cond_9
     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 237
-    .line 238
-    .line 239
+    .line 228
+    .line 229
+    .line 230
     move-result v0
 
-    .line 240
-    if-eqz v0, :cond_d
+    .line 231
+    if-eqz v0, :cond_c
 
-    .line 241
-    .line 242
+    .line 232
+    .line 233
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 243
-    .line 244
-    .line 245
+    .line 234
+    .line 235
+    .line 236
     move-result-object v1
 
-    .line 246
-    invoke-interface {v9}, LX/0tD;->getValue()Ljava/lang/Object;
+    .line 237
+    invoke-interface {v9}, LX/3gS;->getValue()Ljava/lang/Object;
 
-    .line 247
-    .line 248
-    .line 249
+    .line 238
+    .line 239
+    .line 240
     move-result-object v0
 
-    .line 250
+    .line 241
     check-cast v0, Ljava/util/Map;
 
-    .line 251
-    .line 252
+    .line 242
+    .line 243
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 244
+    .line 245
+    .line 246
+    move-result-object v8
+
+    .line 247
+    if-eqz v8, :cond_b
+
+    .line 248
+    .line 249
+    check-cast v8, LX/4iF;
+
+    .line 250
+    .line 251
+    const/4 v7, 0x0
+
+    .line 252
+    iget-object v6, v8, LX/4iF;->A03:Ljava/util/List;
 
     .line 253
     .line 254
+    invoke-interface {v6}, Ljava/util/List;->size()I
+
     .line 255
-    move-result-object v8
-
     .line 256
-    if-eqz v8, :cond_c
-
     .line 257
+    move-result v5
+
     .line 258
-    check-cast v8, LX/4os;
+    :goto_2
+    if-ge v7, v5, :cond_9
 
     .line 259
     .line 260
-    const/4 v7, 0x0
-
-    .line 261
-    iget-object v6, v8, LX/4os;->A03:Ljava/util/List;
-
-    .line 262
-    .line 263
-    invoke-interface {v6}, Ljava/util/List;->size()I
-
-    .line 264
-    .line 265
-    .line 266
-    move-result v5
-
-    .line 267
-    :goto_2
-    if-ge v7, v5, :cond_a
-
-    .line 268
-    .line 269
     invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 270
-    .line 271
-    .line 272
+    .line 261
+    .line 262
+    .line 263
     move-result-object v0
 
-    .line 273
-    check-cast v0, LX/4nU;
+    .line 264
+    check-cast v0, LX/4fz;
 
+    .line 265
+    .line 266
+    iget-object v3, v0, LX/4fz;->A04:LX/4fk;
+
+    .line 267
+    .line 268
+    iget-object v2, v0, LX/4fz;->A03:LX/4fg;
+
+    .line 269
+    .line 270
+    const-string v0, "null cannot be cast to non-null type com.facebook.litho.SpecGeneratedComponent"
+
+    .line 271
+    .line 272
+    invoke-static {v2, v0}, LX/0WV;->A0B(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 273
     .line 274
     .line 275
-    iget-object v3, v0, LX/4nU;->A04:LX/4mm;
+    check-cast v2, LX/4fV;
 
     .line 276
     .line 277
-    iget-object v2, v0, LX/4nU;->A03:LX/4mg;
+    invoke-virtual {v3}, LX/4fk;->A06()Ljava/lang/String;
 
     .line 278
     .line 279
-    const-string v0, "null cannot be cast to non-null type com.facebook.litho.SpecGeneratedComponent"
-
     .line 280
+    move-result-object v0
+
     .line 281
-    invoke-static {v2, v0}, LX/0PS;->A0A(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v1, v8, LX/4iF;->A02:Ljava/lang/String;
 
     .line 282
     .line 283
-    .line 284
-    check-cast v2, LX/4me;
+    invoke-virtual {v10, v1, v0}, LX/4iD;->A00(Ljava/lang/String;Ljava/lang/String;)Z
 
+    .line 284
     .line 285
     .line 286
-    invoke-virtual {v3}, LX/4mm;->A06()Ljava/lang/String;
-
-    .line 287
-    .line 288
-    .line 289
-    move-result-object v0
-
-    .line 290
-    iget-object v1, v8, LX/4os;->A02:Ljava/lang/String;
-
-    .line 291
-    .line 292
-    invoke-static {v0}, LX/0PS;->A03(Ljava/lang/Object;)V
-
-    .line 293
-    .line 294
-    .line 295
-    invoke-virtual {v10, v2, v1, v0}, LX/4oV;->A00(LX/4mg;Ljava/lang/String;Ljava/lang/String;)Z
-
-    .line 296
-    .line 297
-    .line 298
     move-result v0
 
-    .line 299
-    if-eqz v0, :cond_b
+    .line 287
+    if-eqz v0, :cond_a
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 300
-    .line 301
+    .line 288
+    .line 289
     :try_start_c
-    iget-object v0, v8, LX/4os;->A00:LX/3iC;
+    iget-object v0, v8, LX/4iF;->A00:LX/42v;
 
-    .line 302
-    .line 303
-    invoke-virtual {v2, v3, v0, v1}, LX/4me;->A0w(LX/4mm;LX/3iC;Ljava/lang/String;)V
+    .line 290
+    .line 291
+    invoke-virtual {v2, v3, v0, v1}, LX/4fV;->A0q(LX/4fk;LX/42v;Ljava/lang/String;)V
 
-    .line 304
-    .line 305
-    .line 306
+    .line 292
+    .line 293
+    .line 294
     goto :goto_3
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
     .catchall {:try_start_c .. :try_end_c} :catchall_1
 
-    .line 307
+    .line 295
     :catch_0
     :try_start_d
     move-exception v0
 
-    .line 308
-    invoke-static {v3, v0}, LX/6Mm;->A02(LX/4mm;Ljava/lang/Exception;)V
+    .line 296
+    invoke-static {v3, v0}, LX/4gQ;->A03(LX/4fk;Ljava/lang/Exception;)V
 
-    .line 309
-    .line 310
-    .line 311
-    :cond_b
+    .line 297
+    .line 298
+    .line 299
+    :cond_a
     :goto_3
     add-int/lit8 v7, v7, 0x1
 
-    .line 312
-    .line 313
+    .line 300
+    .line 301
     goto :goto_2
 
-    .line 314
-    :cond_c
-    invoke-static {}, LX/0Yf;->A0U()Ljava/lang/IllegalStateException;
+    .line 302
+    :cond_b
+    invoke-static {}, LX/0X3;->A0W()Ljava/lang/IllegalStateException;
 
-    .line 315
-    .line 316
-    .line 317
+    .line 303
+    .line 304
+    .line 305
     move-result-object v0
 
-    .line 318
+    .line 306
     throw v0
 
-    .line 319
-    :cond_d
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0W:LX/4oV;
+    .line 307
+    :cond_c
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0U:LX/4iD;
 
-    .line 320
-    .line 321
-    iget-object v0, v0, LX/4oV;->A00:Ljava/util/Map;
+    .line 308
+    .line 309
+    iget-object v0, v0, LX/4iD;->A00:Ljava/util/Map;
 
-    .line 322
-    .line 323
+    .line 310
+    .line 311
     invoke-interface {v0}, Ljava/util/Map;->clear()V
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_1
 
+    .line 312
+    .line 313
+    .line 314
+    :try_start_e
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 315
+    .line 316
+    if-eqz v0, :cond_d
+
+    .line 317
+    .line 318
+    iget-object v2, v0, LX/4gO;->A00:LX/4l3;
+
+    .line 319
+    .line 320
+    :goto_4
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
+
+    .line 321
+    .line 322
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
+
+    .line 323
     .line 324
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
     .line 325
     .line 326
-    :try_start_e
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A0I:Ljava/util/List;
 
     .line 327
     .line 328
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
+    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A0C:LX/4g3;
 
     .line 329
     .line 330
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A0D:LX/4mu;
+    monitor-exit v12
 
     .line 331
+    goto :goto_5
+
     .line 332
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A0I:Ljava/util/List;
+    :cond_d
+    move-object v2, v4
 
     .line 333
-    .line 334
-    iput-object v4, p0, Lcom/facebook/litho/ComponentTree;->A0C:LX/4o1;
+    goto :goto_4
 
-    .line 335
-    .line 336
-    monitor-exit v12
+    .line 334
+    :goto_5
+    if-eqz v2, :cond_f
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_7
 
-    .line 337
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0i:LX/4qr;
+    .line 335
+    .line 336
+    invoke-static {}, LX/4hz;->A00()V
 
+    .line 337
     .line 338
     .line 339
-    if-eqz v0, :cond_f
+    iget-object v0, v2, LX/4l3;->A00:Ljava/util/Map;
 
     .line 340
     .line 341
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0i:LX/4qr;
+    if-eqz v0, :cond_e
 
     .line 342
     .line 343
-    invoke-static {}, LX/4oe;->A00()V
+    invoke-static {v0}, LX/0X2;->A0o(Ljava/util/Map;)Ljava/util/Iterator;
 
     .line 344
     .line 345
     .line 346
-    iget-object v0, v2, LX/4qr;->A00:Ljava/util/Map;
-
-    .line 347
-    .line 348
-    if-eqz v0, :cond_e
-
-    .line 349
-    .line 350
-    invoke-static {v0}, LX/0Ye;->A0Z(Ljava/util/Map;)Ljava/util/Iterator;
-
-    .line 351
-    .line 352
-    .line 353
     move-result-object v1
 
-    .line 354
-    :goto_4
+    .line 347
+    :goto_6
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 355
-    .line 356
-    .line 357
+    .line 348
+    .line 349
+    .line 350
     move-result v0
 
-    .line 358
+    .line 351
     if-eqz v0, :cond_e
 
-    .line 359
-    .line 360
+    .line 352
+    .line 353
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 361
-    .line 362
-    .line 363
+    .line 354
+    .line 355
+    .line 356
     move-result-object v0
 
+    .line 357
+    check-cast v0, LX/4iE;
+
+    .line 358
+    .line 359
+    invoke-virtual {v0}, LX/4iE;->A00()V
+
+    .line 360
+    .line 361
+    .line 362
+    goto :goto_6
+
+    .line 363
+    :cond_e
+    iput-object v4, v2, LX/4l3;->A00:Ljava/util/Map;
+
     .line 364
-    check-cast v0, LX/4oq;
-
     .line 365
-    .line 366
-    invoke-virtual {v0}, LX/4oq;->A00()V
+    :cond_f
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
 
+    .line 366
     .line 367
+    if-eqz v0, :cond_10
+
     .line 368
     .line 369
-    goto :goto_4
+    iget-object v1, v0, LX/4gO;->A02:LX/6XZ;
 
     .line 370
-    :cond_e
-    iput-object v4, v2, LX/4qr;->A00:Ljava/util/Map;
-
     .line 371
+    monitor-enter v1
+
     .line 372
-    :cond_f
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0D:LX/4mu;
+    :try_start_f
+    invoke-virtual {v1}, LX/6XZ;->A00()V
 
     .line 373
     .line 374
-    if-eqz v0, :cond_10
-
     .line 375
-    .line 376
-    iget-object v1, v0, LX/4mu;->A01:LX/4ol;
-
-    .line 377
-    .line 378
-    monitor-enter v1
-
-    .line 379
-    :try_start_f
-    invoke-virtual {v1}, LX/4ol;->A00()V
-
-    .line 380
-    .line 381
-    .line 382
-    goto :goto_5
+    goto :goto_7
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_0
 
-    .line 383
+    .line 376
     :catchall_0
     move-exception v0
 
-    .line 384
+    .line 377
     monitor-exit v1
 
-    .line 385
+    .line 378
     throw v0
 
-    .line 386
-    :goto_5
+    .line 379
+    :goto_7
     monitor-exit v1
 
-    .line 387
+    .line 380
     :cond_10
     return-void
 
-    .line 388
+    .line 381
     :catchall_1
     move-exception v0
 
-    .line 389
-    goto :goto_6
+    .line 382
+    goto :goto_8
 
-    .line 390
+    .line 383
     :catchall_2
     move-exception v0
 
-    .line 391
+    .line 384
     :try_start_10
     monitor-exit v3
 
-    .line 392
-    goto :goto_6
+    .line 385
+    goto :goto_8
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
-    .line 393
+    .line 386
     :catchall_3
     move-exception v0
 
-    .line 394
+    .line 387
     :try_start_11
     monitor-exit v3
 
-    .line 395
-    goto :goto_6
+    .line 388
+    goto :goto_8
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_3
 
-    .line 396
+    .line 389
     :catchall_4
     move-exception v0
 
-    .line 397
+    .line 390
     :try_start_12
     monitor-exit v2
 
-    .line 398
-    goto :goto_6
+    .line 391
+    goto :goto_8
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_4
 
-    .line 399
+    .line 392
     :catchall_5
     move-exception v0
 
-    .line 400
+    .line 393
     :try_start_13
     monitor-exit v2
 
-    .line 401
-    goto :goto_6
+    .line 394
+    goto :goto_8
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_5
 
-    .line 402
+    .line 395
     :catchall_6
     move-exception v0
 
-    .line 403
+    .line 396
     :try_start_14
     monitor-exit v2
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_6
 
-    .line 404
-    :goto_6
+    .line 397
+    :goto_8
     :try_start_15
     throw v0
 
-    .line 405
+    .line 398
     :catchall_7
     move-exception v0
 
-    .line 406
+    .line 399
     monitor-exit v12
     :try_end_15
     .catchall {:try_start_15 .. :try_end_15} :catchall_7
 
-    .line 407
+    .line 400
     throw v0
 .end method
 
-.method public final A0H(Ljava/lang/String;ZZ)V
-    .locals 13
+.method public final declared-synchronized A0G(LX/07B;)V
+    .locals 5
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    sget-object v0, LX/4gE;->defaultInstance:LX/4gE;
+
+    .line 2
+    .line 3
+    iget-boolean v0, v0, LX/4gE;->A0E:Z
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_5
+
+    .line 6
+    .line 7
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0T:LX/4fk;
+
+    .line 8
+    .line 9
+    iget-object v1, v0, LX/4fk;->A07:LX/4hT;
+
+    .line 10
+    .line 11
+    if-eqz v1, :cond_7
+
+    .line 12
+    .line 13
+    sget-object v2, LX/6bP;->A00:LX/4K2;
+
+    .line 14
+    .line 15
+    const/4 v0, 0x0
+
+    .line 16
+    invoke-static {v2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    iget-object v1, v1, LX/4hT;->A00:Ljava/util/Map;
+
+    .line 20
+    .line 21
+    invoke-interface {v1, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 22
+    .line 23
+    .line 24
+    move-result v0
+
+    .line 25
+    if-eqz v0, :cond_0
+
+    .line 26
+    .line 27
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v3
+
+    .line 31
+    :goto_0
+    check-cast v3, LX/4AW;
+
+    .line 32
+    .line 33
+    monitor-enter v3
+
+    .line 34
+    goto :goto_1
+
+    .line 35
+    :cond_0
+    invoke-interface {v2}, LX/4K2;->AD4()Ljava/lang/Object;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v3
+
+    .line 39
+    goto :goto_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 40
+    :goto_1
+    :try_start_1
+    invoke-static {}, LX/4h0;->A00()V
+
+    .line 41
+    .line 42
+    .line 43
+    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 44
+    .line 45
+    .line 46
+    move-result v0
+
+    .line 47
+    if-nez v0, :cond_4
+
+    .line 48
+    .line 49
+    iget-object v4, v3, LX/4AW;->A01:LX/07B;
+
+    .line 50
+    .line 51
+    if-eq p1, v4, :cond_3
+
+    .line 52
+    .line 53
+    if-eqz v4, :cond_1
+
+    .line 54
+    .line 55
+    iget-object v0, v3, LX/4AW;->A02:Ljava/util/Set;
+
+    .line 56
+    .line 57
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v2
+
+    .line 61
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 62
+    .line 63
+    .line 64
+    move-result v0
+
+    .line 65
+    if-eqz v0, :cond_1
+
+    .line 66
+    .line 67
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 68
+    .line 69
+    .line 70
+    move-result-object v1
+
+    .line 71
+    check-cast v1, LX/07A;
+
+    .line 72
+    .line 73
+    invoke-interface {v4}, LX/07B;->getLifecycle()LX/077;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v0
+
+    .line 77
+    invoke-virtual {v0, v1}, LX/077;->A0A(LX/07A;)V
+
+    .line 78
+    .line 79
+    .line 80
+    goto :goto_2
+
+    .line 81
+    :cond_1
+    invoke-interface {p1}, LX/07B;->getLifecycle()LX/077;
+
+    .line 82
+    .line 83
+    .line 84
+    move-result-object v2
+
+    .line 85
+    if-eqz v2, :cond_2
+
+    .line 86
+    .line 87
+    iget-object v0, v3, LX/4AW;->A02:Ljava/util/Set;
+
+    .line 88
+    .line 89
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 90
+    .line 91
+    .line 92
+    move-result-object v1
+
+    .line 93
+    :goto_3
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 94
+    .line 95
+    .line 96
+    move-result v0
+
+    .line 97
+    if-eqz v0, :cond_2
+
+    .line 98
+    .line 99
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 100
+    .line 101
+    .line 102
+    move-result-object v0
+
+    .line 103
+    check-cast v0, LX/07A;
+
+    .line 104
+    .line 105
+    invoke-virtual {v2, v0}, LX/077;->A09(LX/07A;)V
+
+    .line 106
+    .line 107
+    .line 108
+    goto :goto_3
+
+    .line 109
+    :cond_2
+    iput-object p1, v3, LX/4AW;->A01:LX/07B;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 110
+    .line 111
+    :cond_3
+    :try_start_2
+    monitor-exit v3
+
+    .line 112
+    goto :goto_4
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 113
+    :cond_4
+    :try_start_3
+    const-string v0, "Cannot set a LifecycleOwnerWrapper as its own delegate"
+
+    .line 114
+    .line 115
+    invoke-static {v0}, LX/001;->A0B(Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
+
+    .line 116
+    .line 117
+    .line 118
+    move-result-object v0
+
+    .line 119
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 120
+    :catchall_0
+    :try_start_4
+    move-exception v0
+
+    .line 121
+    monitor-exit v3
+
+    .line 122
+    throw v0
+
+    .line 123
+    :cond_5
+    sget-object v2, LX/6bP;->A00:LX/4K2;
+
+    .line 124
+    .line 125
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0T:LX/4fk;
+
+    .line 126
+    .line 127
+    iget-boolean v0, v1, LX/4fk;->A0B:Z
+
+    .line 128
+    .line 129
+    if-nez v0, :cond_6
+
+    .line 130
+    .line 131
+    iget-object v0, v1, LX/4fk;->A07:LX/4hT;
+
+    .line 132
+    .line 133
+    invoke-static {v0}, LX/4jM;->A00(LX/4hT;)LX/4hT;
+
+    .line 134
+    .line 135
+    .line 136
+    move-result-object v0
+
+    .line 137
+    iput-object v0, v1, LX/4fk;->A07:LX/4hT;
+
+    .line 138
+    .line 139
+    const/4 v0, 0x1
+
+    .line 140
+    iput-boolean v0, v1, LX/4fk;->A0B:Z
+
+    .line 141
+    .line 142
+    :cond_6
+    iget-object v1, v1, LX/4fk;->A07:LX/4hT;
+
+    .line 143
+    .line 144
+    if-eqz v1, :cond_7
+
+    .line 145
+    .line 146
+    const/4 v0, 0x0
+
+    .line 147
+    invoke-static {v2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 148
+    .line 149
+    .line 150
+    iget-object v0, v1, LX/4hT;->A00:Ljava/util/Map;
+
+    .line 151
+    .line 152
+    invoke-static {v0}, LX/0WV;->A03(Ljava/lang/Object;)V
+
+    .line 153
+    .line 154
+    .line 155
+    invoke-interface {v0, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    .line 156
+    .line 157
+    .line 158
+    :cond_7
+    :goto_4
+    monitor-exit p0
+
+    .line 159
+    return-void
+
+    .line 160
+    :catchall_1
+    move-exception v0
+
+    .line 161
+    monitor-exit p0
+
+    .line 162
+    throw v0
+.end method
+
+.method public final A0H(LX/4lW;)V
+    .locals 1
+
+    .line 0
+    if-eqz p1, :cond_1
+
+    .line 1
+    .line 2
+    monitor-enter p0
+
+    .line 3
+    :try_start_0
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0I:Ljava/util/List;
+
+    .line 4
+    .line 5
+    if-nez v0, :cond_0
+
+    .line 6
+    .line 7
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    iput-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0I:Ljava/util/List;
+
+    .line 12
+    .line 13
+    :cond_0
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 14
+    .line 15
+    .line 16
+    monitor-exit p0
+
+    .line 17
+    return-void
+
+    .line 18
+    :catchall_0
+    move-exception v0
+
+    .line 19
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 20
+    throw v0
+
+    .line 21
+    :cond_1
+    return-void
+.end method
+
+.method public final A0I(Ljava/lang/String;ZZ)V
+    .locals 14
 
     .line 0
     move-object v3, p0
@@ -7547,7 +6584,7 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
     .line 3
     .line 4
@@ -7562,7 +6599,7 @@
 
     .line 8
     :cond_0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0Q:LX/2fW;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0O:LX/4hT;
 
     .line 9
     .line 10
@@ -7574,26 +6611,26 @@
 
     .line 13
     :cond_1
-    invoke-static {v0}, LX/2fT;->A00(LX/2fW;)LX/2fW;
+    invoke-static {v0}, LX/4jM;->A00(LX/4hT;)LX/4hT;
 
     .line 14
     .line 15
     .line 16
-    move-result-object v5
+    move-result-object v6
 
     .line 17
     goto :goto_1
 
     .line 18
     :goto_0
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     .line 19
     :goto_1
-    move-object v6, p1
+    move-object v7, p1
 
     .line 20
-    move/from16 v11, p3
+    move/from16 v12, p3
 
     .line 21
     .line 22
@@ -7629,194 +6666,138 @@
 
     .line 37
     .line 38
-    invoke-static {v1, p1, v0}, LX/00I;->A0J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v0}, LX/431;->A0d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 39
     .line 40
     .line 41
-    move-result-object v2
+    move-result-object v0
 
     .line 42
-    sget-boolean v0, LX/4n6;->isDebugModeEnabled:Z
+    throw v0
 
     .line 43
+    :cond_2
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0Y:LX/4h1;
+
     .line 44
-    if-nez v0, :cond_5
-
     .line 45
+    if-eqz v2, :cond_3
+
     .line 46
-    sget-boolean v0, LX/4n6;->crashIfExceedingStateUpdateThreshold:Z
-
     .line 47
-    .line 48
-    if-nez v0, :cond_5
+    iget-object v1, v2, LX/4h1;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 48
     .line 49
+    const/4 v0, 0x0
+
     .line 50
-    sget-object v1, LX/4Yf;->FATAL:LX/4Yf;
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
     .line 51
     .line 52
-    const-string v0, "ComponentTree:StateUpdatesWhenLayoutInProgressExceedsThreshold:"
-
     .line 53
-    .line 54
-    invoke-static {v0}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, v2, LX/4h1;->A04:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 54
     .line 55
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
     .line 56
     .line 57
-    move-result-object v0
-
     .line 58
-    invoke-static {p1, v0}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    move-result-object v0
 
     .line 59
+    if-eqz v0, :cond_3
+
     .line 60
     .line 61
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     .line 62
-    invoke-static {v1, v0, v2}, LX/4YE;->A00(LX/4Yf;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 63
     .line 64
+    move-result-object v1
+
     .line 65
-    :cond_2
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0b:LX/4nv;
+    check-cast v1, Landroid/view/Choreographer;
 
     .line 66
     .line 67
-    if-eqz v2, :cond_3
+    iget-object v0, v2, LX/4h1;->A00:Landroid/view/Choreographer$FrameCallback;
 
     .line 68
     .line 69
-    iget-object v1, v2, LX/4nv;->A02:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {v1, v0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
     .line 70
     .line 71
-    const/4 v0, 0x0
-
     .line 72
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    .line 73
-    .line 74
-    .line 75
-    iget-object v1, v2, LX/4nv;->A04:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 76
-    .line 77
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 78
-    .line 79
-    .line 80
-    move-result-object v0
-
-    .line 81
-    if-eqz v0, :cond_3
-
-    .line 82
-    .line 83
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    .line 84
-    .line 85
-    .line 86
-    move-result-object v1
-
-    .line 87
-    check-cast v1, Landroid/view/Choreographer;
-
-    .line 88
-    .line 89
-    iget-object v0, v2, LX/4nv;->A00:Landroid/view/Choreographer$FrameCallback;
-
-    .line 90
-    .line 91
-    invoke-virtual {v1, v0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
-
-    .line 92
-    .line 93
-    .line 94
     :cond_3
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 95
-    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    .line 73
+    iget-object v4, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
 
-    .line 96
-    .line 97
-    const/4 v7, -0x1
+    .line 74
+    .line 75
+    const/4 v8, -0x1
 
-    .line 98
-    const/4 v4, 0x0
+    .line 76
+    const/4 v5, 0x0
 
-    .line 99
-    const/4 v9, 0x4
+    .line 77
+    const/4 v10, 0x4
 
-    .line 100
-    move v10, p2
+    .line 78
+    move/from16 v11, p2
 
-    .line 101
+    .line 79
+    .line 80
     if-eqz p2, :cond_4
 
-    .line 102
-    .line 103
-    const/4 v9, 0x5
+    .line 81
+    .line 82
+    const/4 v10, 0x5
 
-    .line 104
+    .line 83
     :cond_4
-    const/4 v12, 0x0
+    const/4 v13, 0x0
 
-    .line 105
-    move v8, v7
+    .line 84
+    move v9, v8
 
-    .line 106
-    invoke-static/range {v2 .. v12}, Lcom/facebook/litho/ComponentTree;->A06(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/4qW;LX/2fW;Ljava/lang/String;IIIZZZ)V
+    .line 85
+    invoke-direct/range {v3 .. v13}, Lcom/facebook/litho/ComponentTree;->A07(LX/4fg;LX/4ko;LX/4hT;Ljava/lang/String;IIIZZZ)V
 
-    .line 107
-    .line 108
-    .line 109
+    .line 86
+    .line 87
+    .line 88
     return-void
 
-    .line 110
-    :cond_5
-    :try_start_1
-    invoke-static {v2}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
-
-    .line 111
-    .line 112
-    .line 113
-    move-result-object v0
-
-    .line 114
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 115
+    .line 89
     :catchall_0
     move-exception v0
 
-    .line 116
-    :try_start_2
+    .line 90
+    :try_start_1
     monitor-exit v3
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 117
+    .line 91
     throw v0
 .end method
 
-.method public final A0I([IIIZ)V
+.method public final A0J([IIIZ)V
     .locals 26
 
     .line 0
-    invoke-static {}, LX/4oe;->A00()V
+    invoke-static {}, LX/4hz;->A00()V
 
     .line 1
     .line 2
@@ -7824,11 +6805,11 @@
     const/4 v13, 0x1
 
     .line 4
-    move-object/from16 v6, p0
+    move-object/from16 v5, p0
 
     .line 5
     .line 6
-    iput-boolean v13, v6, Lcom/facebook/litho/ComponentTree;->A0R:Z
+    iput-boolean v13, v5, Lcom/facebook/litho/ComponentTree;->A0P:Z
 
     .line 7
     .line 8
@@ -7836,13 +6817,13 @@
 
     .line 9
     :try_start_0
-    monitor-enter v6
+    monitor-enter v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     .line 10
     :try_start_1
-    iget-object v2, v6, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
+    iget-object v2, v5, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
 
     .line 11
     .line 12
@@ -7858,7 +6839,7 @@
 
     .line 17
     .line 18
-    iget-object v0, v6, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iget-object v0, v5, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 19
     .line 20
@@ -7866,7 +6847,7 @@
 
     .line 21
     .line 22
-    invoke-virtual {v2, v10, v11}, LX/4mp;->A01(II)Z
+    invoke-virtual {v2, v10, v11}, LX/4fd;->A01(II)Z
 
     .line 23
     .line 24
@@ -7878,11 +6859,11 @@
 
     .line 27
     .line 28
-    iget-object v0, v6, Lcom/facebook/litho/ComponentTree;->A0T:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v0, v5, Lcom/facebook/litho/ComponentTree;->A0S:Landroid/view/accessibility/AccessibilityManager;
 
     .line 29
     .line 30
-    invoke-static {v0}, LX/4KD;->A01(Landroid/view/accessibility/AccessibilityManager;)Z
+    invoke-static {v0}, LX/4IL;->A01(Landroid/view/accessibility/AccessibilityManager;)Z
 
     .line 31
     .line 32
@@ -7890,7 +6871,7 @@
     move-result v1
 
     .line 34
-    iget-boolean v0, v2, LX/4mp;->A0j:Z
+    iget-boolean v0, v2, LX/4fd;->A0d:Z
 
     .line 35
     .line 36
@@ -7898,13 +6879,13 @@
 
     .line 37
     .line 38
-    invoke-direct {v6}, Lcom/facebook/litho/ComponentTree;->A01()V
+    invoke-direct {v5}, Lcom/facebook/litho/ComponentTree;->A02()V
 
     .line 39
     .line 40
     .line 41
     :cond_0
-    iget-object v0, v6, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iget-object v0, v5, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 42
     .line 43
@@ -7912,708 +6893,514 @@
 
     .line 44
     .line 45
-    iget-object v0, v0, LX/4mp;->A0G:LX/4yF;
+    iget-wide v0, v0, LX/4fd;->A0D:J
 
     .line 46
     .line 47
-    iget-wide v0, v0, LX/4yF;->A00:J
+    invoke-static {v0, v1}, LX/4ir;->A01(J)I
 
     .line 48
     .line 49
-    invoke-static {v0, v1}, LX/4yG;->A01(J)I
-
     .line 50
-    .line 51
-    .line 52
     move-result v0
 
-    .line 53
+    .line 51
     if-ne v0, v10, :cond_1
+
+    .line 52
+    .line 53
+    iget-object v0, v5, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 54
     .line 55
-    iget-object v0, v6, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iget-wide v0, v0, LX/4fd;->A0D:J
 
     .line 56
     .line 57
-    iget-object v0, v0, LX/4mp;->A0G:LX/4yF;
+    invoke-static {v0, v1}, LX/4ir;->A00(J)I
 
     .line 58
     .line 59
-    iget-wide v0, v0, LX/4yF;->A00:J
-
     .line 60
-    .line 61
-    invoke-static {v0, v1}, LX/4yG;->A00(J)I
-
-    .line 62
-    .line 63
-    .line 64
     move-result v0
 
-    .line 65
+    .line 61
     const/4 v4, 0x1
 
-    .line 66
+    .line 62
     if-eq v0, v11, :cond_2
 
-    .line 67
-    .line 68
+    .line 63
+    .line 64
     :cond_1
     const/4 v4, 0x0
 
-    .line 69
+    .line 65
     :cond_2
-    iget-object v3, v6, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    iget-object v3, v5, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
+
+    .line 66
+    .line 67
+    iget-object v0, v5, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
+    .line 68
+    .line 69
+    if-eqz v0, :cond_3
 
     .line 70
     .line 71
-    iget-object v0, v6, Lcom/facebook/litho/ComponentTree;->A04:LX/4mg;
+    iget v1, v0, LX/4fg;->A00:I
 
     .line 72
     .line 73
-    if-eqz v0, :cond_3
-
-    .line 74
-    .line 75
-    iget v1, v0, LX/4mg;->A00:I
-
-    .line 76
-    .line 77
     goto :goto_0
 
-    .line 78
+    .line 74
     :cond_3
     const/4 v1, -0x1
 
-    .line 79
+    .line 75
     :goto_0
     if-eqz v3, :cond_4
 
+    .line 76
+    .line 77
+    iget-object v0, v3, LX/4fd;->A0I:LX/4g3;
+
+    .line 78
+    .line 79
+    iget-object v0, v0, LX/4g3;->A01:LX/4fg;
+
     .line 80
     .line 81
-    iget-object v0, v3, LX/4mp;->A0X:LX/4o1;
+    iget v0, v0, LX/4fg;->A00:I
 
     .line 82
     .line 83
-    iget-object v0, v0, LX/4o1;->A01:LX/4mg;
+    if-ne v0, v1, :cond_4
 
     .line 84
     .line 85
-    iget v0, v0, LX/4mg;->A00:I
+    invoke-virtual {v3, v10, v11}, LX/4fd;->A01(II)Z
 
     .line 86
     .line 87
-    if-ne v0, v1, :cond_4
-
     .line 88
+    move-result v0
+
     .line 89
-    invoke-virtual {v3, v10, v11}, LX/4mp;->A01(II)Z
+    if-eqz v0, :cond_4
 
     .line 90
     .line 91
-    .line 92
-    move-result v0
+    iget-object v0, v5, Lcom/facebook/litho/ComponentTree;->A0S:Landroid/view/accessibility/AccessibilityManager;
 
+    .line 92
     .line 93
-    if-eqz v0, :cond_4
+    invoke-static {v0}, LX/4IL;->A01(Landroid/view/accessibility/AccessibilityManager;)Z
 
     .line 94
     .line 95
-    iget-object v0, v6, Lcom/facebook/litho/ComponentTree;->A0T:Landroid/view/accessibility/AccessibilityManager;
-
     .line 96
+    move-result v2
+
     .line 97
-    invoke-static {v0}, LX/4KD;->A01(Landroid/view/accessibility/AccessibilityManager;)Z
+    iget-boolean v1, v3, LX/4fd;->A0d:Z
 
     .line 98
     .line 99
-    .line 100
-    move-result v2
-
-    .line 101
-    iget-boolean v1, v3, LX/4mp;->A0j:Z
-
-    .line 102
-    .line 103
     const/4 v0, 0x1
 
-    .line 104
+    .line 100
     if-eq v2, v1, :cond_5
 
-    .line 105
-    .line 106
+    .line 101
+    .line 102
     :cond_4
     const/4 v0, 0x0
 
-    .line 107
+    .line 103
     :cond_5
     if-nez v4, :cond_6
 
+    .line 104
+    .line 105
+    if-nez v0, :cond_6
+
+    .line 106
+    .line 107
+    iget-object v3, v5, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
+
     .line 108
     .line 109
-    if-nez v0, :cond_6
+    const-string v2, "RenderOnMainThreadStarted"
 
     .line 110
     .line 111
-    iget-object v3, v6, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    new-instance v1, LX/6gr;
 
     .line 112
     .line 113
-    const-string v2, "RenderOnMainThreadStarted"
+    invoke-direct {v1, v5, v13}, LX/6gr;-><init>(Ljava/lang/Object;I)V
 
     .line 114
     .line 115
-    const/4 v0, 0x2
-
     .line 116
-    new-instance v1, LX/6QA;
+    new-instance v0, LX/4gn;
 
     .line 117
     .line 118
-    invoke-direct {v1, v6, v0}, LX/6QA;-><init>(Lcom/facebook/litho/ComponentTree;I)V
+    invoke-direct {v0, v5, v3, v10, v11}, LX/4gn;-><init>(Lcom/facebook/litho/ComponentTree;LX/4fd;II)V
 
     .line 119
     .line 120
     .line 121
-    new-instance v0, LX/4nW;
+    invoke-static {v2, v1, v0}, LX/4fn;->A04(Ljava/lang/String;LX/0Gw;LX/0GZ;)V
 
     .line 122
     .line 123
-    invoke-direct {v0, v6, v3, v10, v11}, LX/4nW;-><init>(Lcom/facebook/litho/ComponentTree;LX/4mp;II)V
-
     .line 124
+    const/4 v0, 0x1
+
     .line 125
+    goto :goto_1
+
     .line 126
-    invoke-static {v2, v1, v0}, LX/6NN;->A04(Ljava/lang/String;LX/0Cw;LX/0Cl;)V
+    :cond_6
+    iget-object v1, v5, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 127
     .line 128
+    iget v0, v1, LX/4fd;->A0C:I
+
     .line 129
-    const/4 v0, 0x1
-
     .line 130
-    goto :goto_1
-
-    .line 131
-    :cond_6
-    iget-object v1, v6, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
-
-    .line 132
-    .line 133
-    iget v0, v1, LX/4mp;->A05:I
-
-    .line 134
-    .line 135
     aput v0, p1, v14
 
-    .line 136
-    .line 137
-    iget v0, v1, LX/4mp;->A04:I
+    .line 131
+    .line 132
+    iget v0, v1, LX/4fd;->A09:I
 
-    .line 138
-    .line 139
+    .line 133
+    .line 134
     aput v0, p1, v13
 
-    .line 140
-    .line 141
+    .line 135
+    .line 136
     const/4 v0, 0x0
 
-    .line 142
+    .line 137
     :goto_1
-    monitor-exit v6
+    monitor-exit v5
 
-    .line 143
+    .line 138
     move/from16 v25, p4
 
-    .line 144
-    .line 145
+    .line 139
+    .line 140
     if-nez v0, :cond_7
 
-    .line 146
-    .line 147
+    .line 141
+    .line 142
     if-nez p4, :cond_7
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 148
-    .line 149
+    .line 143
+    .line 144
     :try_start_2
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    .line 150
+    .line 145
     const/4 v12, 0x7
 
-    .line 151
-    move-object v7, v5
+    .line 146
+    move-object v7, v6
 
-    .line 152
-    move-object v8, v5
+    .line 147
+    move-object v8, v6
 
-    .line 153
-    move-object v9, v5
+    .line 148
+    move-object v9, v6
 
-    .line 154
+    .line 149
     move v15, v14
 
-    .line 155
-    invoke-static/range {v5 .. v15}, Lcom/facebook/litho/ComponentTree;->A06(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/4qW;LX/2fW;Ljava/lang/String;IIIZZZ)V
+    .line 150
+    invoke-direct/range {v5 .. v15}, Lcom/facebook/litho/ComponentTree;->A07(LX/4fg;LX/4ko;LX/4hT;Ljava/lang/String;IIIZZZ)V
 
+    .line 151
+    .line 152
+    .line 153
+    goto :goto_3
+
+    .line 154
+    :cond_7
+    sget-boolean v0, LX/4Kf;->A05:Z
+
+    .line 155
     .line 156
+    if-eqz v0, :cond_8
+
     .line 157
     .line 158
-    goto/16 :goto_3
+    invoke-static {}, LX/4hz;->A01()Z
 
     .line 159
     .line 160
-    :cond_7
-    sget-boolean v0, LX/4QH;->A05:Z
-
     .line 161
+    move-result v0
+
     .line 162
     if-eqz v0, :cond_8
 
     .line 163
     .line 164
-    invoke-static {}, LX/4oe;->A01()Z
+    iget-object v2, v5, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 165
     .line 166
-    .line 167
-    move-result v0
+    if-eqz v2, :cond_8
 
+    .line 167
     .line 168
-    if-eqz v0, :cond_8
+    const/high16 v0, -0x10000
 
     .line 169
     .line 170
-    iget-object v2, v6, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    new-instance v1, Landroid/graphics/drawable/PaintDrawable;
 
     .line 171
     .line 172
-    if-eqz v2, :cond_8
+    invoke-direct {v1, v0}, Landroid/graphics/drawable/PaintDrawable;-><init>(I)V
 
     .line 173
     .line 174
-    const/high16 v0, -0x10000
-
     .line 175
-    .line 176
-    new-instance v1, Landroid/graphics/drawable/PaintDrawable;
-
-    .line 177
-    .line 178
-    invoke-direct {v1, v0}, Landroid/graphics/drawable/PaintDrawable;-><init>(I)V
-
-    .line 179
-    .line 180
-    .line 181
     const/16 v0, 0x80
 
-    .line 182
-    .line 183
+    .line 176
+    .line 177
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
+    .line 178
+    .line 179
+    .line 180
+    new-instance v0, LX/4jl;
+
+    .line 181
+    .line 182
+    invoke-direct {v0, v1, v2}, LX/4jl;-><init>(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    .line 183
     .line 184
     .line 185
-    .line 186
-    new-instance v0, LX/4ph;
+    invoke-virtual {v2, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
+    .line 186
     .line 187
     .line 188
-    invoke-direct {v0, v1, v2}, LX/4ph;-><init>(Landroid/graphics/drawable/Drawable;Landroid/view/View;)V
+    :cond_8
+    new-instance v2, LX/4ko;
 
     .line 189
     .line 190
-    .line 191
-    invoke-virtual {v2, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-direct {v2}, LX/4ko;-><init>()V
 
+    .line 191
     .line 192
     .line 193
+    const/16 v16, 0x0
+
     .line 194
-    :cond_8
-    new-instance v3, LX/4qW;
-
     .line 195
-    .line 196
-    invoke-direct {v3}, LX/4qW;-><init>()V
-
-    .line 197
-    .line 198
-    .line 199
-    const/4 v15, 0x0
-
-    .line 200
     const/16 v22, 0x6
+
+    .line 196
+    .line 197
+    move-object v15, v5
+
+    .line 198
+    move-object/from16 v17, v2
+
+    .line 199
+    .line 200
+    move-object/from16 v18, v16
 
     .line 201
     .line 202
-    move-object/from16 v16, v6
+    move-object/from16 v19, v16
 
     .line 203
     .line 204
-    move-object/from16 v17, v3
+    move/from16 v20, v10
 
     .line 205
     .line 206
-    move-object/from16 v18, v15
+    move/from16 v21, v11
 
     .line 207
     .line 208
-    move-object/from16 v19, v15
+    move/from16 v23, v14
 
     .line 209
     .line 210
-    move/from16 v20, v10
+    move/from16 v24, v14
 
     .line 211
     .line 212
-    move/from16 v21, v11
+    invoke-direct/range {v15 .. v25}, Lcom/facebook/litho/ComponentTree;->A07(LX/4fg;LX/4ko;LX/4hT;Ljava/lang/String;IIIZZZ)V
 
     .line 213
     .line 214
-    move/from16 v23, v14
-
     .line 215
-    .line 216
-    move/from16 v24, v14
-
-    .line 217
-    .line 218
-    invoke-static/range {v15 .. v25}, Lcom/facebook/litho/ComponentTree;->A06(LX/4mg;Lcom/facebook/litho/ComponentTree;LX/4qW;LX/2fW;Ljava/lang/String;IIIZZZ)V
-
-    .line 219
-    .line 220
-    .line 221
-    monitor-enter v6
+    monitor-enter v5
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 222
+    .line 216
     :try_start_3
-    iget-boolean v0, v6, Lcom/facebook/litho/ComponentTree;->A0L:Z
+    iget-boolean v0, v5, Lcom/facebook/litho/ComponentTree;->A0Q:Z
+
+    .line 217
+    .line 218
+    if-nez v0, :cond_b
+
+    .line 219
+    .line 220
+    iget-object v1, v5, Lcom/facebook/litho/ComponentTree;->A08:LX/4fd;
+
+    .line 221
+    .line 222
+    iget-object v0, v5, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
 
     .line 223
     .line 224
-    if-nez v0, :cond_b
+    if-eq v1, v0, :cond_9
 
     .line 225
     .line 226
-    iget-object v1, v6, Lcom/facebook/litho/ComponentTree;->A08:LX/4mp;
+    invoke-direct {v5}, Lcom/facebook/litho/ComponentTree;->A02()V
 
     .line 227
     .line 228
-    iget-object v0, v6, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
-
     .line 229
+    :cond_9
+    iget-object v1, v5, Lcom/facebook/litho/ComponentTree;->A09:LX/4fd;
+
     .line 230
-    if-eq v1, v0, :cond_9
-
     .line 231
-    .line 232
-    invoke-direct {v6}, Lcom/facebook/litho/ComponentTree;->A01()V
+    if-eqz v1, :cond_a
 
+    .line 232
     .line 233
+    iget v0, v1, LX/4fd;->A0C:I
+
     .line 234
     .line 235
-    :cond_9
-    iget-object v1, v6, Lcom/facebook/litho/ComponentTree;->A09:LX/4mp;
+    aput v0, p1, v14
 
     .line 236
     .line 237
-    if-eqz v1, :cond_a
+    iget v0, v1, LX/4fd;->A09:I
 
     .line 238
     .line 239
-    iget v0, v1, LX/4mp;->A05:I
+    :goto_2
+    aput v0, p1, v13
 
     .line 240
     .line 241
-    aput v0, p1, v14
+    monitor-exit v5
 
     .line 242
+    goto :goto_3
+
     .line 243
-    iget v0, v1, LX/4mp;->A04:I
+    :cond_a
+    iget v0, v2, LX/4ko;->A01:I
 
     .line 244
     .line 245
-    aput v0, p1, v13
+    aput v0, p1, v14
 
     .line 246
     .line 247
-    :goto_2
-    monitor-exit v6
+    iget v0, v2, LX/4ko;->A00:I
 
     .line 248
-    goto :goto_3
-
     .line 249
-    :cond_a
-    iget v0, v3, LX/4qW;->A01:I
-
-    .line 250
-    .line 251
-    aput v0, p1, v14
-
-    .line 252
-    .line 253
-    iget v0, v3, LX/4qW;->A00:I
-
-    .line 254
-    .line 255
-    aput v0, p1, v13
-
-    .line 256
-    .line 257
-    sget-object v2, LX/4Yf;->ERROR:LX/4Yf;
-
-    .line 258
-    .line 259
-    const-string v1, "NullLayoutStateInMeasure"
-
-    .line 260
-    .line 261
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
-    .line 262
-    .line 263
-    .line 264
-    move-result-object v4
-
-    .line 265
-    const-string v0, "Measure Specs: ["
-
-    .line 266
-    .line 267
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 268
-    .line 269
-    .line 270
-    invoke-static {v10}, Landroid/view/View$MeasureSpec;->toString(I)Ljava/lang/String;
-
-    .line 271
-    .line 272
-    .line 273
-    move-result-object v0
-
-    .line 274
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 275
-    .line 276
-    .line 277
-    const-string v5, ", "
-
-    .line 278
-    .line 279
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 280
-    .line 281
-    .line 282
-    invoke-static {v11}, Landroid/view/View$MeasureSpec;->toString(I)Ljava/lang/String;
-
-    .line 283
-    .line 284
-    .line 285
-    move-result-object v0
-
-    .line 286
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 287
-    .line 288
-    .line 289
-    const-string v0, "], Current Specs: ["
-
-    .line 290
-    .line 291
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 292
-    .line 293
-    .line 294
-    iget v0, v6, Lcom/facebook/litho/ComponentTree;->A03:I
-
-    .line 295
-    .line 296
-    invoke-static {v0}, Landroid/view/View$MeasureSpec;->toString(I)Ljava/lang/String;
-
-    .line 297
-    .line 298
-    .line 299
-    move-result-object v0
-
-    .line 300
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 301
-    .line 302
-    .line 303
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 304
-    .line 305
-    .line 306
-    iget v0, v6, Lcom/facebook/litho/ComponentTree;->A01:I
-
-    .line 307
-    .line 308
-    invoke-static {v0}, Landroid/view/View$MeasureSpec;->toString(I)Ljava/lang/String;
-
-    .line 309
-    .line 310
-    .line 311
-    move-result-object v0
-
-    .line 312
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 313
-    .line 314
-    .line 315
-    const-string v0, "], Output [W: "
-
-    .line 316
-    .line 317
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 318
-    .line 319
-    .line 320
-    iget v0, v3, LX/4qW;->A01:I
-
-    .line 321
-    .line 322
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 323
-    .line 324
-    .line 325
-    const-string v0, ", H:"
-
-    .line 326
-    .line 327
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 328
-    .line 329
-    .line 330
-    iget v0, v3, LX/4qW;->A00:I
-
-    .line 331
-    .line 332
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 333
-    .line 334
-    .line 335
-    const-string v0, "], Last Layout Source: "
-
-    .line 336
-    .line 337
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 338
-    .line 339
-    .line 340
-    iget v0, v6, Lcom/facebook/litho/ComponentTree;->A0N:I
-
-    .line 341
-    .line 342
-    invoke-static {v0}, LX/4mp;->A00(I)Ljava/lang/String;
-
-    .line 343
-    .line 344
-    .line 345
-    move-result-object v0
-
-    .line 346
-    invoke-static {v0, v4}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    .line 347
-    .line 348
-    .line 349
-    move-result-object v0
-
-    .line 350
-    invoke-static {v2, v1, v0}, LX/4YE;->A00(LX/4Yf;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 351
-    .line 352
-    .line 353
     goto :goto_2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 354
+    .line 250
     :goto_3
-    iput-boolean v14, v6, Lcom/facebook/litho/ComponentTree;->A0R:Z
+    iput-boolean v14, v5, Lcom/facebook/litho/ComponentTree;->A0P:Z
 
-    .line 355
-    .line 356
+    .line 251
+    .line 252
     return-void
 
-    .line 357
+    .line 253
     :cond_b
     :try_start_4
     const-string v0, "Tree is released during measure!"
 
-    .line 358
-    .line 359
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    .line 254
+    .line 255
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
-    .line 360
-    .line 361
-    .line 362
+    .line 256
+    .line 257
+    .line 258
     move-result-object v0
 
-    .line 363
+    .line 259
     throw v0
 
-    .line 364
+    .line 260
     :catchall_0
     move-exception v0
 
-    .line 365
-    monitor-exit v6
+    .line 261
+    monitor-exit v5
 
-    .line 366
+    .line 262
     goto :goto_4
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 367
+    .line 263
     :catchall_1
     move-exception v0
 
-    .line 368
+    .line 264
     :try_start_5
-    monitor-exit v6
+    monitor-exit v5
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 369
+    .line 265
     :goto_4
     :try_start_6
     throw v0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 370
+    .line 266
     :catchall_2
     move-exception v0
 
-    .line 371
-    iput-boolean v14, v6, Lcom/facebook/litho/ComponentTree;->A0R:Z
+    .line 267
+    iput-boolean v14, v5, Lcom/facebook/litho/ComponentTree;->A0P:Z
 
-    .line 372
-    .line 373
+    .line 268
+    .line 269
     throw v0
 .end method
 
-.method public final declared-synchronized A0J()Z
+.method public final declared-synchronized A0K()Z
     .locals 1
 
     .line 0
@@ -8621,7 +7408,7 @@
 
     .line 1
     :try_start_0
-    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0L:Z
+    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0Q:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -8643,7 +7430,800 @@
     throw v0
 .end method
 
-.method public final AZz(LX/4pB;)V
+.method public final declared-synchronized A3j(LX/4iK;Ljava/lang/String;Z)LX/4iK;
+    .locals 3
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_1
+
+    .line 4
+    .line 5
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_1
+
+    .line 8
+    .line 9
+    invoke-static {p2, p1}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 10
+    .line 11
+    .line 12
+    if-eqz p3, :cond_0
+
+    .line 13
+    .line 14
+    iget-object v2, v0, LX/4gO;->A04:LX/4gT;
+
+    .line 15
+    .line 16
+    goto :goto_0
+
+    .line 17
+    :cond_0
+    iget-object v2, v0, LX/4gO;->A05:LX/4gT;
+
+    .line 18
+    .line 19
+    :goto_0
+    monitor-enter v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    .line 20
+    :try_start_1
+    monitor-enter v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 21
+    :try_start_2
+    iget-object v0, v2, LX/4gT;->A05:Ljava/util/Map;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 22
+    .line 23
+    :try_start_3
+    monitor-exit v2
+
+    .line 24
+    invoke-static {p2, v0}, LX/0X6;->A14(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 28
+    :try_start_4
+    monitor-exit v2
+
+    .line 29
+    if-eqz v1, :cond_1
+
+    .line 30
+    .line 31
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    .line 32
+    .line 33
+    .line 34
+    move-result v0
+
+    .line 35
+    if-nez v0, :cond_1
+
+    .line 36
+    .line 37
+    invoke-virtual {p1}, LX/4iK;->A00()LX/4iK;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object p1
+
+    .line 41
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v1
+
+    .line 45
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 46
+    .line 47
+    .line 48
+    move-result v0
+
+    .line 49
+    if-eqz v0, :cond_1
+
+    .line 50
+    .line 51
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 52
+    .line 53
+    .line 54
+    move-result-object v0
+
+    .line 55
+    check-cast v0, LX/3y7;
+
+    .line 56
+    .line 57
+    invoke-virtual {p1, v0}, LX/4iK;->A01(LX/3y7;)V
+
+    .line 58
+    .line 59
+    .line 60
+    goto :goto_1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    .line 61
+    :catchall_0
+    :try_start_5
+    move-exception v0
+
+    .line 62
+    monitor-exit v2
+
+    .line 63
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    .line 64
+    :catchall_1
+    :try_start_6
+    move-exception v0
+
+    .line 65
+    monitor-exit v2
+
+    .line 66
+    throw v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    .line 67
+    :cond_1
+    monitor-exit p0
+
+    .line 68
+    return-object p1
+
+    .line 69
+    :catchall_2
+    move-exception v0
+
+    .line 70
+    monitor-exit p0
+
+    .line 71
+    throw v0
+.end method
+
+.method public final A4f(Ljava/lang/String;LX/0GZ;IZ)Z
+    .locals 6
+
+    .line 0
+    invoke-virtual {p0}, Lcom/facebook/litho/ComponentTree;->A0B()LX/4gO;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    if-nez v0, :cond_1
+
+    .line 5
+    .line 6
+    const/4 v4, 0x0
+
+    .line 7
+    :cond_0
+    return v4
+
+    .line 8
+    :cond_1
+    invoke-static {p2, p1}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 9
+    .line 10
+    .line 11
+    if-eqz p4, :cond_2
+
+    .line 12
+    .line 13
+    iget-object v2, v0, LX/4gO;->A04:LX/4gT;
+
+    .line 14
+    .line 15
+    :goto_0
+    iget-object v1, v2, LX/4gT;->A08:Ljava/util/Map;
+
+    .line 16
+    .line 17
+    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    check-cast v0, LX/4iK;
+
+    .line 22
+    .line 23
+    check-cast v0, LX/4h5;
+
+    .line 24
+    .line 25
+    const/4 v4, 0x0
+
+    .line 26
+    if-eqz v0, :cond_0
+
+    .line 27
+    .line 28
+    iget-object v0, v0, LX/4h5;->A00:Ljava/util/List;
+
+    .line 29
+    .line 30
+    invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    if-eqz v0, :cond_0
+
+    .line 35
+    .line 36
+    monitor-enter v2
+
+    .line 37
+    goto :goto_1
+
+    .line 38
+    :cond_2
+    iget-object v2, v0, LX/4gO;->A05:LX/4gT;
+
+    .line 39
+    .line 40
+    goto :goto_0
+
+    .line 41
+    :goto_1
+    :try_start_0
+    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v5
+
+    .line 45
+    check-cast v5, LX/4iK;
+
+    .line 46
+    .line 47
+    const/4 v1, 0x0
+
+    .line 48
+    if-nez v5, :cond_3
+
+    .line 49
+    .line 50
+    goto :goto_4
+
+    .line 51
+    :cond_3
+    iget-object v0, v2, LX/4gT;->A09:Ljava/util/Map;
+
+    .line 52
+    .line 53
+    invoke-static {p1, v0}, LX/0X6;->A14(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v0
+
+    .line 57
+    if-eqz v0, :cond_4
+
+    .line 58
+    .line 59
+    invoke-static {v0}, LX/002;->A0B(Ljava/util/Collection;)Ljava/util/ArrayList;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 63
+    :cond_4
+    monitor-exit v2
+
+    .line 64
+    check-cast v5, LX/4h5;
+
+    .line 65
+    .line 66
+    if-eqz v1, :cond_5
+
+    .line 67
+    .line 68
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v3
+
+    .line 72
+    :goto_2
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 73
+    .line 74
+    .line 75
+    move-result v0
+
+    .line 76
+    if-eqz v0, :cond_5
+
+    .line 77
+    .line 78
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v1
+
+    .line 82
+    check-cast v1, LX/4kR;
+
+    .line 83
+    .line 84
+    invoke-static {v5, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 85
+    .line 86
+    .line 87
+    iget-object v0, v1, LX/4kR;->A01:LX/4h3;
+
+    .line 88
+    .line 89
+    iget v2, v0, LX/4h3;->A00:I
+
+    .line 90
+    .line 91
+    iget-object v1, v1, LX/4kR;->A00:LX/0GZ;
+
+    .line 92
+    .line 93
+    iget-object v0, v5, LX/4h5;->A00:Ljava/util/List;
+
+    .line 94
+    .line 95
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 96
+    .line 97
+    .line 98
+    move-result-object v0
+
+    .line 99
+    invoke-interface {v1, v0}, LX/0GZ;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 100
+    .line 101
+    .line 102
+    move-result-object v1
+
+    .line 103
+    new-instance v0, LX/4h5;
+
+    .line 104
+    .line 105
+    invoke-direct {v0, v5, v1, v2}, LX/4h5;-><init>(LX/4h5;Ljava/lang/Object;I)V
+
+    .line 106
+    .line 107
+    .line 108
+    move-object v5, v0
+
+    .line 109
+    goto :goto_2
+
+    .line 110
+    :cond_5
+    if-eqz v5, :cond_0
+
+    .line 111
+    .line 112
+    iget-object v0, v5, LX/4h5;->A00:Ljava/util/List;
+
+    .line 113
+    .line 114
+    invoke-interface {v0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 115
+    .line 116
+    .line 117
+    move-result-object v1
+
+    .line 118
+    invoke-interface {p2, v1}, LX/0GZ;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 119
+    .line 120
+    .line 121
+    move-result-object v0
+
+    .line 122
+    if-nez v1, :cond_6
+
+    .line 123
+    .line 124
+    if-nez v0, :cond_0
+
+    .line 125
+    .line 126
+    :goto_3
+    const/4 v4, 0x1
+
+    .line 127
+    return v4
+
+    .line 128
+    :cond_6
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 129
+    .line 130
+    .line 131
+    move-result v0
+
+    .line 132
+    if-eqz v0, :cond_0
+
+    .line 133
+    .line 134
+    goto :goto_3
+
+    .line 135
+    :goto_4
+    monitor-exit v2
+
+    .line 136
+    return v4
+
+    .line 137
+    :catchall_0
+    move-exception v0
+
+    .line 138
+    monitor-exit v2
+
+    .line 139
+    throw v0
+.end method
+
+.method public final declared-synchronized ABV(Ljava/lang/Object;Ljava/lang/String;IZ)Ljava/lang/Object;
+    .locals 5
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0Q:Z
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_6
+
+    .line 4
+    .line 5
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_6
+
+    .line 8
+    .line 9
+    invoke-static {p2, p1}, LX/431;->A1F(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 10
+    .line 11
+    .line 12
+    if-eqz p4, :cond_0
+
+    .line 13
+    .line 14
+    iget-object v4, v0, LX/4gO;->A04:LX/4gT;
+
+    .line 15
+    .line 16
+    goto :goto_0
+
+    .line 17
+    :cond_0
+    iget-object v4, v0, LX/4gO;->A05:LX/4gT;
+
+    .line 18
+    .line 19
+    :goto_0
+    monitor-enter v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 20
+    :try_start_1
+    sget-boolean v0, LX/4gE;->useNewCacheValueLogic:Z
+
+    .line 21
+    .line 22
+    if-eqz v0, :cond_2
+
+    .line 23
+    .line 24
+    new-instance v1, LX/6Wo;
+
+    .line 25
+    .line 26
+    invoke-direct {v1, p2, p3}, LX/6Wo;-><init>(Ljava/lang/String;I)V
+
+    .line 27
+    .line 28
+    .line 29
+    :goto_1
+    iget-object v0, v4, LX/4gT;->A02:Ljava/util/Map;
+
+    .line 30
+    .line 31
+    if-eqz v0, :cond_1
+
+    .line 32
+    .line 33
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v2
+
+    .line 37
+    :goto_2
+    instance-of v0, v2, LX/4kw;
+
+    .line 38
+    .line 39
+    if-eqz v0, :cond_5
+
+    .line 40
+    .line 41
+    check-cast v2, LX/4kw;
+
+    .line 42
+    .line 43
+    iget-object v0, v2, LX/4kw;->A01:Ljava/lang/Object;
+
+    .line 44
+    .line 45
+    invoke-static {v0, p1}, LX/4gR;->A02(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 46
+    .line 47
+    .line 48
+    move-result v0
+
+    .line 49
+    const/4 v3, 0x0
+
+    .line 50
+    if-eqz v0, :cond_4
+
+    .line 51
+    .line 52
+    iget v1, v2, LX/4kw;->A00:I
+
+    .line 53
+    .line 54
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    .line 55
+    .line 56
+    .line 57
+    move-result v0
+
+    .line 58
+    if-eq v1, v0, :cond_3
+
+    .line 59
+    .line 60
+    sget-object v2, LX/6bV;->ERROR:LX/6bV;
+
+    .line 61
+    .line 62
+    const-string v0, "Unexpected mutable value used as CachedValue dep: "
+
+    .line 63
+    .line 64
+    invoke-static {p1}, LX/001;->A0L(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 65
+    .line 66
+    .line 67
+    move-result-object v1
+
+    .line 68
+    invoke-static {v0}, LX/001;->A0Y(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v0
+
+    .line 72
+    invoke-static {v1, v0}, LX/001;->A0O(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v1
+
+    .line 76
+    const-string v0, "StateHandler:MutableTypeUsedAsCachedValueDep"
+
+    .line 77
+    .line 78
+    invoke-static {v2, v0, v1}, LX/2bQ;->A00(LX/6bV;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 79
+    .line 80
+    .line 81
+    goto :goto_3
+
+    .line 82
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 83
+    goto :goto_2
+
+    .line 84
+    :cond_2
+    new-instance v1, LX/6Wp;
+
+    .line 85
+    .line 86
+    invoke-direct {v1, p1, p2, p3}, LX/6Wp;-><init>(Ljava/lang/Object;Ljava/lang/String;I)V
+
+    .line 87
+    .line 88
+    .line 89
+    goto :goto_1
+
+    .line 90
+    :cond_3
+    iget-object v3, v2, LX/4kw;->A02:Ljava/lang/Object;
+
+    .line 91
+    .line 92
+    :cond_4
+    :goto_3
+    move-object v2, v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 93
+    :cond_5
+    :try_start_2
+    monitor-exit v4
+
+    .line 94
+    goto :goto_4
+
+    .line 95
+    :catchall_0
+    move-exception v0
+
+    .line 96
+    monitor-exit v4
+
+    .line 97
+    throw v0
+
+    .line 98
+    :cond_6
+    const/4 v2, 0x0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 99
+    :goto_4
+    monitor-exit p0
+
+    .line 100
+    return-object v2
+
+    .line 101
+    :catchall_1
+    move-exception v0
+
+    .line 102
+    monitor-exit p0
+
+    .line 103
+    throw v0
+.end method
+
+.method public final AP6()Z
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Lcom/facebook/litho/ComponentTree;->A0B()LX/4gO;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    return v0
+
+    .line 8
+    :cond_0
+    iget-object v0, v0, LX/4gO;->A06:LX/4lF;
+
+    .line 9
+    .line 10
+    iget-boolean v0, v0, LX/4lF;->A01:Z
+
+    .line 11
+    .line 12
+    return v0
+.end method
+
+.method public final AYK(LX/4i3;)V
     .locals 2
 
     .line 0
@@ -8658,14 +8238,14 @@
     const/4 v0, 0x0
 
     .line 5
-    if-eq v1, v0, :cond_1
+    if-eq v1, v0, :cond_2
 
     .line 6
     .line 7
     const/4 v0, 0x1
 
     .line 8
-    if-eq v1, v0, :cond_2
+    if-eq v1, v0, :cond_1
 
     .line 9
     .line 10
@@ -8676,12 +8256,12 @@
 
     .line 12
     .line 13
-    invoke-virtual {p0}, Lcom/facebook/litho/ComponentTree;->A0G()V
+    invoke-virtual {p0}, Lcom/facebook/litho/ComponentTree;->A0F()V
 
     .line 14
     .line 15
     .line 16
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:LX/4q2;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:LX/4kF;
 
     .line 17
     .line 18
@@ -8689,7 +8269,7 @@
 
     .line 19
     .line 20
-    invoke-interface {v0, p0}, LX/4q2;->Aj7(LX/4rC;)V
+    invoke-interface {v0, p0}, LX/4kF;->Ahc(LX/4lM;)V
 
     .line 21
     .line 22
@@ -8697,7 +8277,7 @@
     const/4 v0, 0x0
 
     .line 24
-    iput-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:LX/4q2;
+    iput-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:LX/4kF;
 
     .line 25
     .line 26
@@ -8706,7 +8286,7 @@
 
     .line 27
     :cond_1
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 28
     .line 29
@@ -8714,14 +8294,14 @@
 
     .line 30
     .line 31
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     .line 32
     goto :goto_0
 
     .line 33
     :cond_2
-    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 34
     .line 35
@@ -8729,11 +8309,11 @@
 
     .line 36
     .line 37
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 38
     :goto_0
-    invoke-virtual {v1, v0}, LX/4mx;->setVisibilityHintNonRecursive(Z)V
+    invoke-virtual {v1, v0}, Lcom/facebook/litho/BaseMountingView;->setVisibilityHintNonRecursive(Z)V
 
     .line 39
     .line 40
@@ -8742,7 +8322,7 @@
 
     .line 42
     :cond_3
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 43
     .line 44
@@ -8754,19 +8334,1117 @@
 
     .line 47
     .line 48
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0, v1}, LX/431;->A0X(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
 
     .line 49
     .line 50
     .line 51
-    invoke-static {p1, v1}, LX/001;->A0C(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/IllegalStateException;
+    move-result-object v0
+
+    .line 52
+    throw v0
+.end method
+
+.method public final declared-synchronized AfS(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;IZ)V
+    .locals 5
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0Q:Z
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_6
+
+    .line 4
+    .line 5
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_6
+
+    .line 8
+    .line 9
+    invoke-static {p3, p1}, LX/431;->A1F(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 10
+    .line 11
+    .line 12
+    if-eqz p5, :cond_0
+
+    .line 13
+    .line 14
+    iget-object v4, v0, LX/4gO;->A04:LX/4gT;
+
+    .line 15
+    .line 16
+    goto :goto_0
+
+    .line 17
+    :cond_0
+    iget-object v4, v0, LX/4gO;->A05:LX/4gT;
+
+    .line 18
+    .line 19
+    :goto_0
+    monitor-enter v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 20
+    :try_start_1
+    sget-boolean v0, LX/4gE;->useNewCacheValueLogic:Z
+
+    .line 21
+    .line 22
+    if-eqz v0, :cond_3
+
+    .line 23
+    .line 24
+    new-instance v3, LX/6Wo;
+
+    .line 25
+    .line 26
+    invoke-direct {v3, p3, p4}, LX/6Wo;-><init>(Ljava/lang/String;I)V
+
+    .line 27
+    .line 28
+    .line 29
+    iget-object v2, v4, LX/4gT;->A02:Ljava/util/Map;
+
+    .line 30
+    .line 31
+    if-nez p2, :cond_1
+
+    .line 32
+    .line 33
+    if-eqz v2, :cond_5
+
+    .line 34
+    .line 35
+    invoke-interface {v2, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 36
+    .line 37
+    .line 38
+    goto :goto_1
+
+    .line 39
+    :cond_1
+    if-nez v2, :cond_2
+
+    .line 40
+    .line 41
+    invoke-static {}, LX/0X7;->A0f()Ljava/util/LinkedHashMap;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v2
+
+    .line 45
+    iput-object v2, v4, LX/4gT;->A02:Ljava/util/Map;
+
+    .line 46
+    .line 47
+    :cond_2
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v1
+
+    .line 51
+    new-instance v0, LX/4kw;
 
     .line 52
     .line 53
+    invoke-direct {v0, p1, v1, p2}, LX/4kw;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
     .line 54
+    .line 55
+    .line 56
+    if-eqz v2, :cond_5
+
+    .line 57
+    .line 58
+    invoke-interface {v2, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 59
+    .line 60
+    .line 61
+    goto :goto_1
+
+    .line 62
+    :cond_3
+    if-eqz p2, :cond_5
+
+    .line 63
+    .line 64
+    new-instance v1, LX/6Wp;
+
+    .line 65
+    .line 66
+    invoke-direct {v1, p1, p3, p4}, LX/6Wp;-><init>(Ljava/lang/Object;Ljava/lang/String;I)V
+
+    .line 67
+    .line 68
+    .line 69
+    iget-object v0, v4, LX/4gT;->A02:Ljava/util/Map;
+
+    .line 70
+    .line 71
+    if-nez v0, :cond_4
+
+    .line 72
+    .line 73
+    invoke-static {}, LX/0X7;->A0f()Ljava/util/LinkedHashMap;
+
+    .line 74
+    .line 75
+    .line 76
     move-result-object v0
 
+    .line 77
+    iput-object v0, v4, LX/4gT;->A02:Ljava/util/Map;
+
+    .line 78
+    .line 79
+    :cond_4
+    invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 80
+    .line 81
+    .line 82
+    :cond_5
+    :goto_1
+    :try_start_2
+    monitor-exit v4
+
+    .line 83
+    goto :goto_2
+
+    .line 84
+    :catchall_0
+    move-exception v0
+
+    .line 85
+    monitor-exit v4
+
+    .line 86
+    throw v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 87
+    :cond_6
+    :goto_2
+    monitor-exit p0
+
+    .line 88
+    return-void
+
+    .line 89
+    :catchall_1
+    move-exception v0
+
+    .line 90
+    monitor-exit p0
+
+    .line 91
+    throw v0
+.end method
+
+.method public final Aho(Ljava/lang/String;Z)V
+    .locals 2
+
+    .line 0
+    iget-boolean v0, p0, Lcom/facebook/litho/ComponentTree;->A0Q:Z
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_1
+
+    .line 3
+    .line 4
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 5
+    .line 6
+    if-eqz v1, :cond_1
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 10
+    .line 11
+    .line 12
+    if-eqz p2, :cond_0
+
+    .line 13
+    .line 14
+    iget-object v1, v1, LX/4gO;->A04:LX/4gT;
+
+    .line 15
+    .line 16
+    :goto_0
+    monitor-enter v1
+
+    .line 17
+    goto :goto_1
+
+    .line 18
+    :cond_0
+    iget-object v1, v1, LX/4gO;->A05:LX/4gT;
+
+    .line 19
+    .line 20
+    goto :goto_0
+
+    .line 21
+    :goto_1
+    :try_start_0
+    iget-object v0, v1, LX/4gT;->A07:Ljava/util/Map;
+
+    .line 22
+    .line 23
+    invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 24
+    .line 25
+    .line 26
+    monitor-exit v1
+
+    .line 27
+    return-void
+
+    .line 28
+    :catchall_0
+    move-exception v0
+
+    .line 29
+    monitor-exit v1
+
+    .line 30
+    throw v0
+
+    .line 31
+    :cond_1
+    return-void
+.end method
+
+.method public final AkP(Z)V
+    .locals 1
+
+    .line 0
+    invoke-virtual {p0}, Lcom/facebook/litho/ComponentTree;->A0B()LX/4gO;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v0
+
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
+    .line 6
+    iget-object v0, v0, LX/4gO;->A06:LX/4lF;
+
+    .line 7
+    .line 8
+    iput-boolean p1, v0, LX/4lF;->A01:Z
+
+    .line 9
+    .line 10
+    :cond_0
+    return-void
+.end method
+
+.method public final ApL(LX/4kR;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .locals 3
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_0
+
+    .line 4
+    .line 5
+    monitor-exit p0
+
+    .line 6
+    return-void
+
+    .line 7
+    :cond_0
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 8
+    .line 9
+    if-eqz v0, :cond_3
+
+    .line 10
+    .line 11
+    invoke-static {p2, p1}, LX/0WV;->A0A(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 12
+    .line 13
+    .line 14
+    if-eqz p5, :cond_1
+
+    .line 15
+    .line 16
+    iget-object v2, v0, LX/4gO;->A04:LX/4gT;
+
+    .line 17
+    .line 18
+    goto :goto_0
+
+    .line 19
+    :cond_1
+    iget-object v2, v0, LX/4gO;->A05:LX/4gT;
+
+    .line 20
+    .line 21
+    :goto_0
+    monitor-enter v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 22
+    :try_start_1
+    iget-object v1, v2, LX/4gT;->A09:Ljava/util/Map;
+
+    .line 23
+    .line 24
+    invoke-static {p2, v1}, LX/0X6;->A14(Ljava/lang/Object;Ljava/util/Map;)Ljava/util/List;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    if-nez v0, :cond_2
+
+    .line 29
+    .line 30
+    invoke-static {}, LX/001;->A0a()Ljava/util/ArrayList;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v0
+
+    .line 34
+    invoke-interface {v1, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 35
+    .line 36
+    .line 37
+    :cond_2
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 38
+    .line 39
+    .line 40
+    goto :goto_1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 41
+    :catchall_0
+    :try_start_2
+    move-exception v0
+
+    .line 42
+    monitor-exit v2
+
+    .line 43
+    throw v0
+
+    .line 44
+    :goto_1
+    monitor-exit v2
+
+    .line 45
+    :cond_3
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 46
+    sget-object v2, LX/4i4;->A04:Ljava/util/concurrent/atomic/AtomicLong;
+
+    .line 47
+    .line 48
+    const-wide/16 v0, 0x1
+
+    .line 49
+    .line 50
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    .line 51
+    .line 52
+    .line 53
+    invoke-direct {p0, p3, p4}, Lcom/facebook/litho/ComponentTree;->A0A(Ljava/lang/String;Z)V
+
+    .line 54
     .line 55
+    .line 56
+    return-void
+
+    .line 57
+    :catchall_1
+    move-exception v0
+
+    .line 58
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 59
+    throw v0
+.end method
+
+.method public final ApW(LX/3y7;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .locals 7
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_0
+
+    .line 4
+    .line 5
+    monitor-exit p0
+
+    .line 6
+    return-void
+
+    .line 7
+    :cond_0
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 8
+    .line 9
+    const/4 v4, 0x0
+
+    .line 10
+    if-eqz v1, :cond_1
+
+    .line 11
+    .line 12
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0T:LX/4fk;
+
+    .line 13
+    .line 14
+    iget-object v0, v0, LX/4fk;->A02:LX/4Kd;
+
+    .line 15
+    .line 16
+    iget-object v0, v0, LX/4Kd;->A01:LX/4gE;
+
+    .line 17
+    .line 18
+    iget-boolean v0, v0, LX/4gE;->A0S:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 19
+    .line 20
+    invoke-static {v0}, LX/001;->A1L(I)Z
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v6
+
+    .line 24
+    :try_start_1
+    move-object v2, p1
+
+    .line 25
+    move-object v3, p2
+
+    .line 26
+    move v5, p5
+
+    .line 27
+    invoke-virtual/range {v1 .. v6}, LX/4gO;->A01(LX/3y7;Ljava/lang/String;ZZZ)Z
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v4
+
+    .line 31
+    :cond_1
+    monitor-exit p0
+
+    .line 32
+    if-eqz v4, :cond_2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 33
+    .line 34
+    sget-object v2, LX/4i4;->A04:Ljava/util/concurrent/atomic/AtomicLong;
+
+    .line 35
+    .line 36
+    const-wide/16 v0, 0x1
+
+    .line 37
+    .line 38
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-direct {p0, p3, p4}, Lcom/facebook/litho/ComponentTree;->A0A(Ljava/lang/String;Z)V
+
+    .line 42
+    .line 43
+    .line 44
+    :cond_2
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception v0
+
+    .line 46
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 47
+    throw v0
+.end method
+
+.method public final declared-synchronized ApX(LX/3y7;Ljava/lang/String;Z)V
+    .locals 7
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 6
+    .line 7
+    if-eqz v1, :cond_0
+
+    .line 8
+    .line 9
+    const/4 v4, 0x1
+
+    .line 10
+    const/4 v0, 0x0
+
+    .line 11
+    move-object v3, p2
+
+    .line 12
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 13
+    .line 14
+    .line 15
+    move-object v2, p1
+
+    .line 16
+    invoke-static {p1, v4}, LX/0WV;->A08(Ljava/lang/Object;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    move v5, p3
+
+    .line 20
+    move v6, v4
+
+    .line 21
+    invoke-virtual/range {v1 .. v6}, LX/4gO;->A01(LX/3y7;Ljava/lang/String;ZZZ)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 22
+    .line 23
+    .line 24
+    :cond_0
+    monitor-exit p0
+
+    .line 25
+    return-void
+
+    .line 26
+    :catchall_0
+    move-exception v0
+
+    .line 27
+    monitor-exit p0
+
+    .line 28
+    throw v0
+.end method
+
+.method public final ApY(LX/3y7;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .locals 7
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A04:LX/4fg;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_0
+
+    .line 4
+    .line 5
+    monitor-exit p0
+
+    .line 6
+    return-void
+
+    .line 7
+    :cond_0
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0E:LX/4gO;
+
+    .line 8
+    .line 9
+    const/4 v4, 0x0
+
+    .line 10
+    if-eqz v1, :cond_1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    .line 11
+    .line 12
+    :try_start_1
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0T:LX/4fk;
+
+    .line 13
+    .line 14
+    iget-object v0, v0, LX/4fk;->A02:LX/4Kd;
+
+    .line 15
+    .line 16
+    iget-object v0, v0, LX/4Kd;->A01:LX/4gE;
+
+    .line 17
+    .line 18
+    iget-boolean v0, v0, LX/4gE;->A0S:Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    .line 19
+    .line 20
+    invoke-static {v0}, LX/001;->A1L(I)Z
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v6
+
+    .line 24
+    :try_start_2
+    move-object v2, p1
+
+    .line 25
+    move-object v3, p2
+
+    .line 26
+    move v5, p5
+
+    .line 27
+    invoke-virtual/range {v1 .. v6}, LX/4gO;->A01(LX/3y7;Ljava/lang/String;ZZZ)Z
+
+    .line 28
+    .line 29
+    .line 30
+    move-result v4
+
+    .line 31
+    goto :goto_0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 32
+    :catch_0
+    move-exception v2
+
+    .line 33
+    :try_start_3
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A0T:LX/4fk;
+
+    .line 34
+    .line 35
+    iget-object v0, v1, LX/4fk;->A02:LX/4Kd;
+
+    .line 36
+    .line 37
+    iget-object v0, v0, LX/4Kd;->A01:LX/4gE;
+
+    .line 38
+    .line 39
+    iget-object v0, v0, LX/4gE;->A03:LX/4h4;
+
+    .line 40
+    .line 41
+    if-eqz v0, :cond_1
+
+    .line 42
+    .line 43
+    invoke-virtual {v0, v1, v2}, LX/4h4;->A02(LX/4fk;Ljava/lang/Exception;)V
+
+    .line 44
+    .line 45
+    .line 46
+    invoke-static {}, LX/00N;->createAndThrow()LX/00N;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v0
+
+    .line 50
+    throw v0
+
+    .line 51
+    :cond_1
+    :goto_0
+    monitor-exit p0
+
+    .line 52
+    if-eqz v4, :cond_7
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    .line 53
+    .line 54
+    sget-object v2, LX/4i4;->A05:Ljava/util/concurrent/atomic/AtomicLong;
+
+    .line 55
+    .line 56
+    const-wide/16 v0, 0x1
+
+    .line 57
+    .line 58
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    .line 59
+    .line 60
+    .line 61
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v2
+
+    .line 65
+    if-nez v2, :cond_3
+
+    .line 66
+    .line 67
+    const-string v1, "ComponentTree"
+
+    .line 68
+    .line 69
+    const-string v0, "You cannot update state synchronously from a thread without a looper, using the default background layout thread instead"
+
+    .line 70
+    .line 71
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 72
+    .line 73
+    .line 74
+    iget-object v3, p0, Lcom/facebook/litho/ComponentTree;->A0W:Ljava/lang/Object;
+
+    .line 75
+    .line 76
+    monitor-enter v3
+
+    .line 77
+    :try_start_4
+    iget-object v1, p0, Lcom/facebook/litho/ComponentTree;->A07:LX/4kH;
+
+    .line 78
+    .line 79
+    if-eqz v1, :cond_2
+
+    .line 80
+    .line 81
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
+
+    .line 82
+    .line 83
+    invoke-interface {v0, v1}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
+
+    .line 84
+    .line 85
+    .line 86
+    :cond_2
+    new-instance v2, LX/4kH;
+
+    .line 87
+    .line 88
+    invoke-direct {v2, p0, p3, p4}, LX/4kH;-><init>(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
+
+    .line 89
+    .line 90
+    .line 91
+    iput-object v2, p0, Lcom/facebook/litho/ComponentTree;->A07:LX/4kH;
+
+    .line 92
+    .line 93
+    const-string v1, ""
+
+    .line 94
+    .line 95
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0F:LX/4kh;
+
+    .line 96
+    .line 97
+    invoke-interface {v0, v2, v1}, LX/4kh;->AeQ(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    .line 98
+    .line 99
+    .line 100
+    monitor-exit v3
+
+    .line 101
+    return-void
+
+    .line 102
+    :catchall_0
+    move-exception v0
+
+    .line 103
+    monitor-exit v3
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    .line 104
+    throw v0
+
+    .line 105
+    :cond_3
+    sget-object v1, Lcom/facebook/litho/ComponentTree;->A0f:Ljava/lang/ThreadLocal;
+
+    .line 106
+    .line 107
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    .line 108
+    .line 109
+    .line 110
+    move-result-object v0
+
+    .line 111
+    check-cast v0, Ljava/lang/ref/Reference;
+
+    .line 112
+    .line 113
+    if-eqz v0, :cond_4
+
+    .line 114
+    .line 115
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 116
+    .line 117
+    .line 118
+    move-result-object v4
+
+    .line 119
+    check-cast v4, LX/4kh;
+
+    .line 120
+    .line 121
+    if-nez v4, :cond_5
+
+    .line 122
+    .line 123
+    :cond_4
+    new-instance v4, LX/4iY;
+
+    .line 124
+    .line 125
+    invoke-direct {v4, v2}, LX/4iY;-><init>(Landroid/os/Looper;)V
+
+    .line 126
+    .line 127
+    .line 128
+    invoke-static {v4}, LX/0X7;->A0a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+
+    .line 129
+    .line 130
+    .line 131
+    move-result-object v0
+
+    .line 132
+    invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    .line 133
+    .line 134
+    .line 135
+    :cond_5
+    const/4 v3, 0x1
+
+    .line 136
+    const/4 v0, 0x0
+
+    .line 137
+    new-instance v2, LX/6gr;
+
+    .line 138
+    .line 139
+    invoke-direct {v2, p0, v0}, LX/6gr;-><init>(Ljava/lang/Object;I)V
+
+    .line 140
+    .line 141
+    .line 142
+    new-instance v1, LX/4hJ;
+
+    .line 143
+    .line 144
+    invoke-direct {v1, p0, p3, v3}, LX/4hJ;-><init>(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
+
+    .line 145
+    .line 146
+    .line 147
+    const-string v0, "Litho.StateUpdateEnqueued"
+
+    .line 148
+    .line 149
+    invoke-static {v0, v2, v1}, LX/4fn;->A04(Ljava/lang/String;LX/0Gw;LX/0GZ;)V
+
+    .line 150
+    .line 151
+    .line 152
+    iget-object v2, p0, Lcom/facebook/litho/ComponentTree;->A0W:Ljava/lang/Object;
+
+    .line 153
+    .line 154
+    monitor-enter v2
+
+    .line 155
+    :try_start_5
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A07:LX/4kH;
+
+    .line 156
+    .line 157
+    if-eqz v0, :cond_6
+
+    .line 158
+    .line 159
+    invoke-interface {v4, v0}, LX/4kh;->AhM(Ljava/lang/Runnable;)V
+
+    .line 160
+    .line 161
+    .line 162
+    :cond_6
+    new-instance v1, LX/4kH;
+
+    .line 163
+    .line 164
+    invoke-direct {v1, p0, p3, p4}, LX/4kH;-><init>(Lcom/facebook/litho/ComponentTree;Ljava/lang/String;Z)V
+
+    .line 165
+    .line 166
+    .line 167
+    iput-object v1, p0, Lcom/facebook/litho/ComponentTree;->A07:LX/4kH;
+
+    .line 168
+    .line 169
+    const-string v0, ""
+
+    .line 170
+    .line 171
+    invoke-interface {v4, v1, v0}, LX/4kh;->AeQ(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    .line 172
+    .line 173
+    .line 174
+    monitor-exit v2
+
+    .line 175
+    return-void
+
+    .line 176
+    :catchall_1
+    move-exception v0
+
+    .line 177
+    monitor-exit v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    .line 178
+    throw v0
+
+    .line 179
+    :cond_7
+    return-void
+
+    .line 180
+    :catchall_2
+    move-exception v0
+
+    .line 181
+    :try_start_6
+    monitor-exit p0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    .line 182
     throw v0
 .end method
 
@@ -8774,7 +9452,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0B:Lcom/facebook/litho/LithoView;
+    iget-object v0, p0, Lcom/facebook/litho/ComponentTree;->A0A:Lcom/facebook/litho/LithoView;
 
     .line 1
     .line 2

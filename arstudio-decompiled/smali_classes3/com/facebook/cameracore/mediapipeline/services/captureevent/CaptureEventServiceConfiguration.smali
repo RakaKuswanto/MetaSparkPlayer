@@ -1,14 +1,14 @@
 .class public Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;
-.super LX/5Vj;
+.super LX/68F;
 .source ""
 
 
 # static fields
-.field public static final CAPTURE_EVENT_SERVICE_TYPE_KEY:LX/5TT;
+.field public static final CAPTURE_EVENT_SERVICE_TYPE_KEY:LX/67w;
 
 
 # instance fields
-.field public mCaptureEventInput:LX/5XD;
+.field public mCaptureEventInput:LX/4sx;
 
 
 # direct methods
@@ -16,36 +16,36 @@
     .locals 2
 
     .line 0
-    sget-object v1, LX/5Tk;->CaptureEventService:LX/5Tk;
+    sget-object v1, LX/63t;->CaptureEventService:LX/63t;
 
     .line 1
     .line 2
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 3
     .line 4
-    invoke-direct {v0, v1}, LX/5TT;-><init>(LX/5Tk;)V
+    invoke-direct {v0, v1}, LX/67w;-><init>(LX/63t;)V
 
     .line 5
     .line 6
     .line 7
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->CAPTURE_EVENT_SERVICE_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->CAPTURE_EVENT_SERVICE_TYPE_KEY:LX/67w;
 
     .line 8
     .line 9
     return-void
 .end method
 
-.method public constructor <init>(LX/5XD;)V
+.method public constructor <init>(LX/4sx;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/5Vj;-><init>()V
+    invoke-direct {p0}, LX/68F;-><init>()V
 
     .line 1
     .line 2
     .line 3
-    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->mCaptureEventInput:LX/5XD;
+    iput-object p1, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->mCaptureEventInput:LX/4sx;
 
     .line 4
     .line 5
@@ -70,11 +70,11 @@
     return-object v0
 .end method
 
-.method public getCaptureEventInput()LX/5XD;
+.method public getCaptureEventInput()LX/4sx;
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->mCaptureEventInput:LX/5XD;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->mCaptureEventInput:LX/4sx;
 
     .line 1
     .line 2
@@ -82,28 +82,22 @@
 .end method
 
 .method public stop()V
-    .locals 2
+    .locals 1
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->mCaptureEventInput:LX/5XD;
+    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventServiceConfiguration;->mCaptureEventInput:LX/4sx;
 
     .line 1
     .line 2
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 3
     .line 4
-    check-cast v1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;
+    invoke-interface {v0}, LX/4sx;->stop()V
 
     .line 5
     .line 6
-    const/4 v0, 0x0
-
     .line 7
-    iput-object v0, v1, Lcom/facebook/cameracore/mediapipeline/services/captureevent/CaptureEventInputImpl;->mListener:LX/4xD;
-
-    .line 8
-    .line 9
     :cond_0
     return-void
 .end method

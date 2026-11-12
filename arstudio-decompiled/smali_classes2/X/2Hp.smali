@@ -1,197 +1,234 @@
-.class public final LX/2Hp;
+.class public final LX/2HP;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:Ljava/lang/reflect/Method;
+# instance fields
+.field public final A00:LX/0RP;
 
-.field public static final A01:Ljava/lang/reflect/Method;
+.field public final A01:LX/0RP;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 10
+.method public constructor <init>()V
+    .locals 1
 
     .line 0
-    const-class v9, Ljava/lang/Throwable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    invoke-virtual {v9}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
-
     .line 3
+    invoke-static {}, LX/0lf;->A01()LX/0lf;
+
     .line 4
     .line 5
-    move-result-object v6
-
     .line 6
-    invoke-static {v6}, LX/0PS;->A03(Ljava/lang/Object;)V
+    move-result-object v0
 
     .line 7
+    iput-object v0, p0, LX/2HP;->A01:LX/0RP;
+
     .line 8
     .line 9
-    array-length v5, v6
+    invoke-static {}, LX/0lf;->A0B()LX/0lf;
 
     .line 10
-    const/4 v4, 0x0
-
     .line 11
-    const/4 v8, 0x0
-
     .line 12
-    :goto_0
-    const/4 v7, 0x0
+    move-result-object v0
 
     .line 13
-    if-ge v8, v5, :cond_4
+    iput-object v0, p0, LX/2HP;->A00:LX/0RP;
 
     .line 14
     .line 15
-    aget-object v3, v6, v8
+    return-void
+.end method
 
-    .line 16
-    .line 17
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    .line 18
-    .line 19
-    .line 20
-    move-result-object v1
+# virtual methods
+.method public final A00(LX/15e;Ljava/lang/String;IIZZ)V
+    .locals 4
 
-    .line 21
-    const-string v0, "addSuppressed"
+    .line 0
+    const/4 v3, 0x0
 
-    .line 22
-    .line 23
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 1
+    iget-object v0, p0, LX/2HP;->A00:LX/0RP;
 
-    .line 24
-    .line 25
-    .line 26
-    move-result v0
+    .line 2
+    .line 3
+    invoke-static {v0}, LX/0X5;->A0B(LX/0RP;)LX/0B4;
 
-    .line 27
-    if-eqz v0, :cond_3
-
-    .line 28
-    .line 29
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
-
-    .line 30
-    .line 31
-    .line 32
+    .line 4
+    .line 5
+    .line 6
     move-result-object v2
 
+    .line 7
+    sget-object v1, LX/2sY;->A03:LX/2sY;
+
+    .line 8
+    .line 9
+    const-string/jumbo v0, "zero_header_transparency"
+
+    .line 10
+    .line 11
+    .line 12
+    check-cast v2, LX/2sW;
+
+    .line 13
+    .line 14
+    invoke-virtual {v2, v1, v0}, LX/2sW;->A02(LX/2sY;Ljava/lang/String;)LX/0B8;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v2
+
+    .line 18
+    invoke-interface {v2}, LX/0B8;->isSampled()Z
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    if-eqz v0, :cond_0
+
+    .line 23
+    .line 24
+    iget-object v0, p0, LX/2HP;->A01:LX/0RP;
+
+    .line 25
+    .line 26
+    invoke-static {v0}, LX/2Ox;->A01(LX/0RP;)Ljava/lang/String;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v1
+
+    .line 30
+    const-string/jumbo v0, "datr_device_snaptu"
+
+    .line 31
+    .line 32
     .line 33
-    invoke-static {v2}, LX/0PS;->A03(Ljava/lang/Object;)V
+    invoke-interface {v2, v0, v1}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 34
     .line 35
     .line 36
-    array-length v1, v2
+    const-string/jumbo v0, "event"
 
     .line 37
-    const/4 v0, 0x1
-
     .line 38
-    if-ne v1, v0, :cond_2
-
     .line 39
-    .line 40
-    aget-object v0, v2, v4
+    invoke-interface {v2, p1, v0}, LX/0B8;->A2q(LX/0B2;Ljava/lang/String;)V
 
+    .line 40
     .line 41
     .line 42
-    :goto_1
-    invoke-static {v0, v9}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string/jumbo v0, "location"
 
     .line 43
     .line 44
     .line 45
-    move-result v0
+    invoke-interface {v2, v0, p2}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
-    if-eqz v0, :cond_3
-
     .line 47
     .line 48
-    :goto_2
-    sput-object v3, LX/2Hp;->A00:Ljava/lang/reflect/Method;
+    invoke-static {p5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 49
     .line 50
-    :goto_3
-    if-ge v4, v5, :cond_0
-
     .line 51
+    move-result-object v1
+
     .line 52
-    aget-object v2, v6, v4
+    const-string/jumbo v0, "has_banner_seen"
 
     .line 53
     .line 54
-    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
     .line 55
+    invoke-interface {v2, v0, v1}, LX/0B8;->A2l(Ljava/lang/String;Ljava/lang/Boolean;)V
+
     .line 56
     .line 57
-    move-result-object v1
-
     .line 58
-    const-string/jumbo v0, "getSuppressed"
+    const-string/jumbo v0, "consent_event"
 
     .line 59
     .line 60
     .line 61
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v2, v0, v3}, LX/0B8;->A3K(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 62
     .line 63
     .line 64
-    move-result v0
+    invoke-static {p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 65
-    if-eqz v0, :cond_1
-
     .line 66
     .line 67
-    move-object v7, v2
+    move-result-object v1
 
     .line 68
-    :cond_0
-    sput-object v7, LX/2Hp;->A01:Ljava/lang/reflect/Method;
+    const-string/jumbo v0, "is_consent_required"
 
     .line 69
     .line 70
-    return-void
-
     .line 71
-    :cond_1
-    add-int/lit8 v4, v4, 0x1
+    invoke-interface {v2, v0, v1}, LX/0B8;->A2l(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 72
     .line 73
-    goto :goto_3
-
     .line 74
-    :cond_2
-    const/4 v0, 0x0
+    invoke-static {p3}, LX/0X7;->A0T(I)Ljava/lang/Long;
 
     .line 75
-    goto :goto_1
-
     .line 76
-    :cond_3
-    add-int/lit8 v8, v8, 0x1
-
     .line 77
+    move-result-object v1
+
     .line 78
-    goto :goto_0
+    const-string/jumbo v0, "content_type"
 
     .line 79
-    :cond_4
-    move-object v3, v7
-
     .line 80
-    goto :goto_2
+    .line 81
+    invoke-interface {v2, v0, v1}, LX/0B8;->A34(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 82
+    .line 83
+    .line 84
+    invoke-static {p4}, LX/0X7;->A0T(I)Ljava/lang/Long;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object v1
+
+    .line 88
+    const-string/jumbo v0, "carrier_id"
+
+    .line 89
+    .line 90
+    .line 91
+    invoke-interface {v2, v0, v1}, LX/0B8;->A34(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 92
+    .line 93
+    .line 94
+    invoke-interface {v2}, LX/0B8;->AQk()V
+
+    .line 95
+    .line 96
+    .line 97
+    :cond_0
+    return-void
 .end method

@@ -48,7 +48,7 @@
     move-result-object p0
 
     .line 268435463
-    invoke-static {p0}, LX/002;->A09(Ljava/lang/String;)Ljava/lang/NullPointerException;
+    invoke-static {p0}, LX/002;->A04(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
     .line 268435464
     .line 268435465
@@ -71,14 +71,15 @@
 
     .line 3
     :cond_0
-    invoke-static {}, LX/0Yj;->A0M()Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
     .line 4
     .line 5
-    .line 6
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
 
+    .line 6
     .line 7
+    .line 8
     throw p0
 .end method
 
@@ -94,7 +95,7 @@
 
     .line 268435459
     :cond_0
-    invoke-static {p1}, LX/0Yf;->A0V(Ljava/lang/Object;)Ljava/lang/IllegalStateException;
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 268435460
     .line 268435461
@@ -102,5 +103,13 @@
     move-result-object p0
 
     .line 268435463
+    invoke-static {p0}, LX/001;->A0F(Ljava/lang/String;)Ljava/lang/IllegalStateException;
+
+    .line 268435464
+    .line 268435465
+    .line 268435466
+    move-result-object p0
+
+    .line 268435467
     throw p0
 .end method

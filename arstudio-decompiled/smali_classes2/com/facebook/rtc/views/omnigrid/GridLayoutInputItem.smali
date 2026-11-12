@@ -1,5 +1,5 @@
 .class public final Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;
-.super LX/0ru;
+.super LX/0NH;
 .source ""
 
 
@@ -27,12 +27,12 @@
     const/4 v0, 0x2
 
     .line 268435457
-    invoke-static {p3, v0, p4}, LX/0Yd;->A0m(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {p3, v0, p4}, LX/0X1;->A0y(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 268435458
     .line 268435459
     .line 268435460
-    invoke-direct {p0}, LX/0ru;-><init>()V
+    invoke-direct {p0}, LX/0NH;-><init>()V
 
     .line 268435461
     .line 268435462
@@ -65,7 +65,7 @@
 
     .line 268435476
     .line 268435477
-    invoke-static {p3, v0}, LX/001;->A1U(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p3, v0}, LX/001;->A1T(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 268435478
     .line 268435479
@@ -92,7 +92,7 @@
 
     .line 3
     .line 4
-    sget-object p4, LX/0w2;->A00:Lcom/facebook/rtc/views/omnigrid/GridItemSize;
+    sget-object p4, LX/1BV;->A00:Lcom/facebook/rtc/views/omnigrid/GridItemSize;
 
     .line 5
     .line 6
@@ -113,31 +113,31 @@
 
     .line 12
     .line 13
-    invoke-static {p6, v0}, LX/0Yj;->A02(II)I
+    if-eqz v0, :cond_2
 
     .line 14
     .line 15
-    .line 16
-    move-result p6
+    const/4 p6, 0x0
 
-    .line 17
+    .line 16
+    :cond_2
     and-int/lit8 v0, p8, 0x20
 
+    .line 17
     .line 18
-    .line 19
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
+    .line 19
     .line 20
-    .line 21
     const/4 p7, 0x0
 
-    .line 22
-    :cond_2
+    .line 21
+    :cond_3
     invoke-direct/range {p0 .. p7}, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;-><init>(JLcom/facebook/rtc/views/omnigrid/GridItemType;Lcom/facebook/rtc/views/omnigrid/GridItemSize;ZILjava/lang/Object;)V
 
+    .line 22
     .line 23
     .line 24
-    .line 25
     return-void
 .end method
 
@@ -241,7 +241,7 @@
     .line 41
     .line 42
     :cond_5
-    invoke-static {v3, v4}, LX/0Yc;->A0M(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v3, v4}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 43
     .line 44
@@ -318,7 +318,7 @@
     move-object v4, p4
 
     .line 2
-    invoke-static {p3, p4}, LX/0Yc;->A0M(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p3, p4}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
     .line 4
@@ -380,7 +380,7 @@
 
     iget-object v0, p1, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->videoSize:Lcom/facebook/rtc/views/omnigrid/GridItemSize;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -402,7 +402,7 @@
 
     iget-object v0, p1, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->extras:Ljava/lang/Object;
 
-    invoke-static {v1, v0}, LX/0PS;->A0F(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, LX/0WV;->A0I(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -471,100 +471,94 @@
 .end method
 
 .method public hashCode()I
-    .locals 4
+    .locals 2
 
     .line 0
-    iget-wide v2, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->id:J
+    iget-wide v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->id:J
 
     .line 1
     .line 2
-    const/16 v0, 0x20
+    invoke-static {v0, v1}, LX/0X6;->A03(J)I
 
     .line 3
     .line 4
-    ushr-long v0, v2, v0
-
     .line 5
+    move-result v0
+
     .line 6
-    xor-long/2addr v2, v0
+    mul-int/lit8 v1, v0, 0x1f
 
     .line 7
-    long-to-int v0, v2
-
     .line 8
-    mul-int/lit8 v1, v0, 0x1f
+    iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->itemType:Lcom/facebook/rtc/views/omnigrid/GridItemType;
 
     .line 9
     .line 10
-    iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->itemType:Lcom/facebook/rtc/views/omnigrid/GridItemType;
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 11
     .line 12
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
-
     .line 13
-    .line 14
-    .line 15
     move-result v1
 
-    .line 16
+    .line 14
     iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->videoSize:Lcom/facebook/rtc/views/omnigrid/GridItemSize;
+
+    .line 15
+    .line 16
+    invoke-static {v0, v1}, LX/0X2;->A0A(Ljava/lang/Object;I)I
 
     .line 17
     .line 18
-    invoke-static {v0, v1}, LX/0Ye;->A06(Ljava/lang/Object;I)I
-
     .line 19
-    .line 20
-    .line 21
     move-result v1
 
-    .line 22
+    .line 20
     iget-boolean v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->isVideoOff:Z
+
+    .line 21
+    .line 22
+    invoke-static {v0}, LX/0X3;->A01(I)I
 
     .line 23
     .line 24
-    if-eqz v0, :cond_0
-
     .line 25
-    .line 26
-    const/4 v0, 0x1
-
-    .line 27
-    :cond_0
-    add-int/2addr v1, v0
-
-    .line 28
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 29
-    .line 30
-    iget v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->priority:I
-
-    .line 31
-    .line 32
-    add-int/2addr v1, v0
-
-    .line 33
-    mul-int/lit8 v1, v1, 0x1f
-
-    .line 34
-    .line 35
-    iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->extras:Ljava/lang/Object;
-
-    .line 36
-    .line 37
-    invoke-static {v0}, LX/0Yd;->A02(Ljava/lang/Object;)I
-
-    .line 38
-    .line 39
-    .line 40
     move-result v0
 
-    .line 41
+    .line 26
     add-int/2addr v1, v0
 
-    .line 42
+    .line 27
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 28
+    .line 29
+    iget v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->priority:I
+
+    .line 30
+    .line 31
+    add-int/2addr v1, v0
+
+    .line 32
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 33
+    .line 34
+    iget-object v0, p0, Lcom/facebook/rtc/views/omnigrid/GridLayoutInputItem;->extras:Ljava/lang/Object;
+
+    .line 35
+    .line 36
+    invoke-static {v0}, LX/0X2;->A08(Ljava/lang/Object;)I
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v0
+
+    .line 40
+    add-int/2addr v1, v0
+
+    .line 41
     return v1
 .end method
 
@@ -594,7 +588,7 @@
     .locals 3
 
     .line 0
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
     .line 2
@@ -705,7 +699,7 @@
 
     .line 60
     .line 61
-    invoke-static {v0, v2}, LX/0Yc;->A05(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, LX/0X1;->A0N(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     .line 62
     .line 63

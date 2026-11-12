@@ -3,7 +3,7 @@
 .source ""
 
 # interfaces
-.implements Lcom/facebook/payments/paymentmethods/model/PaymentOption;
+.implements Landroid/os/Parcelable;
 
 
 # annotations
@@ -74,11 +74,11 @@
     .locals 1
 
     .line 0
-    const/16 v0, 0x5d
+    const/16 v0, 0x37
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+    invoke-static {v0}, LX/1Oo;->A00(I)LX/1Oo;
 
     .line 3
     .line 4
@@ -166,7 +166,7 @@
 .end method
 
 .method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    .locals 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -198,11 +198,11 @@
 
     .line 14
     .line 15
-    const-class v1, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement$Type;
+    const-class v0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement$Type;
 
     .line 16
     .line 17
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-static {p1, v0}, LX/1PJ;->A01(Landroid/os/Parcel;Ljava/lang/Class;)Ljava/lang/Enum;
 
     .line 18
     .line 19
@@ -210,151 +210,131 @@
     move-result-object v0
 
     .line 21
-    if-nez v0, :cond_0
+    check-cast v0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement$Type;
 
     .line 22
     .line 23
-    const/4 v0, 0x0
-
-    .line 24
-    :goto_0
-    check-cast v0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement$Type;
-
-    .line 25
-    .line 26
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->baType:Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement$Type;
 
+    .line 24
+    .line 25
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 26
     .line 27
     .line 28
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result-object v0
 
     .line 29
-    .line 30
-    .line 31
-    move-result-object v0
-
-    .line 32
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->cibConsentText:Ljava/lang/String;
 
+    .line 30
+    .line 31
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 32
     .line 33
     .line 34
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result-object v0
 
     .line 35
-    .line 36
-    .line 37
-    move-result-object v0
-
-    .line 38
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->cibTermsUrl:Ljava/lang/String;
 
+    .line 36
+    .line 37
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
+
+    .line 38
     .line 39
     .line 40
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 41
-    .line 42
-    .line 43
-    move-result v0
-
-    .line 44
     iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->isCibConversionNeeded:Z
 
+    .line 42
+    .line 43
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 44
     .line 45
     .line 46
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result-object v0
 
     .line 47
-    .line 48
-    .line 49
-    move-result-object v0
-
-    .line 50
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->A01:Ljava/lang/String;
 
+    .line 48
+    .line 49
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 50
     .line 51
     .line 52
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    move-result-object v0
 
     .line 53
-    .line 54
-    .line 55
-    move-result-object v0
-
-    .line 56
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->A03:Ljava/lang/String;
 
+    .line 54
+    .line 55
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
+
+    .line 56
     .line 57
     .line 58
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
+    move-result v0
 
     .line 59
-    .line 60
-    .line 61
-    move-result v0
-
-    .line 62
     iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->A04:Z
 
-    .line 63
-    .line 64
+    .line 60
+    .line 61
     const-class v0, Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
 
+    .line 62
+    .line 63
+    invoke-static {p1, v0}, LX/0X2;->A0I(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 64
     .line 65
     .line 66
-    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+    move-result-object v0
 
     .line 67
-    .line 68
-    .line 69
-    move-result-object v0
-
-    .line 70
     check-cast v0, Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
 
-    .line 71
-    .line 72
+    .line 68
+    .line 69
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->A00:Lcom/fbpay/hub/paymentmethods/api/FbPayPaymentDefaultInfo;
 
+    .line 70
+    .line 71
+    invoke-static {p1}, LX/0X1;->A1V(Landroid/os/Parcel;)Z
+
+    .line 72
     .line 73
     .line 74
-    invoke-static {p1}, LX/0Yc;->A1X(Landroid/os/Parcel;)Z
-
-    .line 75
-    .line 76
-    .line 77
     move-result v0
 
-    .line 78
+    .line 75
     iput-boolean v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->A05:Z
 
-    .line 79
-    .line 80
+    .line 76
+    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 81
-    .line 82
-    .line 83
+    .line 78
+    .line 79
+    .line 80
     move-result-object v0
 
-    .line 84
+    .line 81
     iput-object v0, p0, Lcom/facebook/payments/paymentmethods/model/PayPalBillingAgreement;->A02:Ljava/lang/String;
 
-    .line 85
-    .line 86
+    .line 82
+    .line 83
     return-void
-
-    .line 87
-    :cond_0
-    invoke-static {v1, v0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    .line 88
-    .line 89
-    .line 90
-    move-result-object v0
-
-    .line 91
-    goto :goto_0
 .end method
 
 
@@ -393,7 +373,7 @@
 
     .line 11
     .line 12
-    invoke-static {p1, v0}, LX/15E;->A01(Landroid/os/Parcel;Ljava/lang/Enum;)V
+    invoke-static {p1, v0}, LX/1PJ;->A03(Landroid/os/Parcel;Ljava/lang/Enum;)V
 
     .line 13
     .line 14

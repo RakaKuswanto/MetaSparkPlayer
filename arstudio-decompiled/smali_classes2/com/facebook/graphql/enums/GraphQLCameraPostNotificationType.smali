@@ -14,6 +14,8 @@
 
 .field public static final enum EXPIRY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
+.field public static final enum FB_NOTES_REACTION:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+
 .field public static final enum FEEDBACK_GIVEN:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
 .field public static final enum FINAL_REPORT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
@@ -77,7 +79,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 36
+    .locals 37
 
     .line 0
     const-string v1, "UNSET_OR_UNRECOGNIZED_ENUM_VALUE"
@@ -92,10 +94,10 @@
     .line 4
     .line 5
     .line 6
-    move-result-object v35
+    move-result-object v15
 
     .line 7
-    sput-object v35, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v15, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->UNSET_OR_UNRECOGNIZED_ENUM_VALUE:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 8
     .line 9
@@ -111,10 +113,10 @@
     .line 13
     .line 14
     .line 15
-    move-result-object v34
+    move-result-object v14
 
     .line 16
-    sput-object v34, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->CHANNEL_STORY_APPROVED:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v14, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->CHANNEL_STORY_APPROVED:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 17
     .line 18
@@ -130,10 +132,10 @@
     .line 22
     .line 23
     .line 24
-    move-result-object v15
+    move-result-object v36
 
     .line 25
-    sput-object v15, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->COMMENT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v36, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->COMMENT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 26
     .line 27
@@ -149,10 +151,10 @@
     .line 31
     .line 32
     .line 33
-    move-result-object v14
+    move-result-object v35
 
     .line 34
-    sput-object v14, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->COMMENT_NOTIF_FOR_REACTORS:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v35, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->COMMENT_NOTIF_FOR_REACTORS:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 35
     .line 36
@@ -168,14 +170,14 @@
     .line 40
     .line 41
     .line 42
-    move-result-object v33
+    move-result-object v34
 
     .line 43
-    sput-object v33, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->EXPIRY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v34, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->EXPIRY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 44
     .line 45
-    const-string v1, "FEEDBACK_GIVEN"
+    const-string v1, "FB_NOTES_REACTION"
 
     .line 46
     .line 47
@@ -187,14 +189,14 @@
     .line 49
     .line 50
     .line 51
-    move-result-object v32
+    move-result-object v33
 
     .line 52
-    sput-object v32, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->FEEDBACK_GIVEN:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v33, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->FB_NOTES_REACTION:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 53
     .line 54
-    const-string v1, "FINAL_REPORT"
+    const-string v1, "FEEDBACK_GIVEN"
 
     .line 55
     .line 56
@@ -206,14 +208,14 @@
     .line 58
     .line 59
     .line 60
-    move-result-object v31
+    move-result-object v32
 
     .line 61
-    sput-object v31, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->FINAL_REPORT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v32, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->FEEDBACK_GIVEN:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 62
     .line 63
-    const-string v1, "HIGH_COEFFICIENT_SAW_POST"
+    const-string v1, "FINAL_REPORT"
 
     .line 64
     .line 65
@@ -225,14 +227,14 @@
     .line 67
     .line 68
     .line 69
-    move-result-object v30
+    move-result-object v31
 
     .line 70
-    sput-object v30, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->HIGH_COEFFICIENT_SAW_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v31, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->FINAL_REPORT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 71
     .line 72
-    const-string v1, "NEW_BIRTHDAY_STORY_POST"
+    const-string v1, "HIGH_COEFFICIENT_SAW_POST"
 
     .line 73
     .line 74
@@ -245,14 +247,14 @@
     .line 77
     .line 78
     .line 79
-    move-result-object v29
+    move-result-object v30
 
     .line 80
-    sput-object v29, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_BIRTHDAY_STORY_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v30, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->HIGH_COEFFICIENT_SAW_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 81
     .line 82
-    const-string v1, "NEW_BIRTHDAY_STORY_POSTED_CELEBRATOR_ALERT"
+    const-string v1, "NEW_BIRTHDAY_STORY_POST"
 
     .line 83
     .line 84
@@ -265,14 +267,14 @@
     .line 87
     .line 88
     .line 89
-    move-result-object v28
+    move-result-object v29
 
     .line 90
-    sput-object v28, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_BIRTHDAY_STORY_POSTED_CELEBRATOR_ALERT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v29, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_BIRTHDAY_STORY_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 91
     .line 92
-    const-string v1, "NEW_EVENT_STORY_POST_FOR_REVIEW"
+    const-string v1, "NEW_BIRTHDAY_STORY_POSTED_CELEBRATOR_ALERT"
 
     .line 93
     .line 94
@@ -285,14 +287,14 @@
     .line 97
     .line 98
     .line 99
-    move-result-object v27
+    move-result-object v28
 
     .line 100
-    sput-object v27, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_EVENT_STORY_POST_FOR_REVIEW:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v28, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_BIRTHDAY_STORY_POSTED_CELEBRATOR_ALERT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 101
     .line 102
-    const-string v1, "NEW_HIGH_COEFFICIENT_EVENT_STORY_POST"
+    const-string v1, "NEW_EVENT_STORY_POST_FOR_REVIEW"
 
     .line 103
     .line 104
@@ -305,14 +307,14 @@
     .line 107
     .line 108
     .line 109
-    move-result-object v26
+    move-result-object v27
 
     .line 110
-    sput-object v26, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_HIGH_COEFFICIENT_EVENT_STORY_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v27, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_EVENT_STORY_POST_FOR_REVIEW:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 111
     .line 112
-    const-string v1, "NEW_HIGH_COEFFICIENT_POST"
+    const-string v1, "NEW_HIGH_COEFFICIENT_EVENT_STORY_POST"
 
     .line 113
     .line 114
@@ -325,14 +327,14 @@
     .line 117
     .line 118
     .line 119
-    move-result-object v25
+    move-result-object v26
 
     .line 120
-    sput-object v25, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_HIGH_COEFFICIENT_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v26, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_HIGH_COEFFICIENT_EVENT_STORY_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 121
     .line 122
-    const-string v1, "NEW_POST"
+    const-string v1, "NEW_HIGH_COEFFICIENT_POST"
 
     .line 123
     .line 124
@@ -345,14 +347,14 @@
     .line 127
     .line 128
     .line 129
-    move-result-object v24
+    move-result-object v25
 
     .line 130
-    sput-object v24, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v25, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_HIGH_COEFFICIENT_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 131
     .line 132
-    const-string v1, "PAGE_RESHARE_STORY_REPLY"
+    const-string v1, "NEW_POST"
 
     .line 133
     .line 134
@@ -365,14 +367,14 @@
     .line 137
     .line 138
     .line 139
-    move-result-object v23
+    move-result-object v24
 
     .line 140
-    sput-object v23, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_RESHARE_STORY_REPLY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v24, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->NEW_POST:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 141
     .line 142
-    const-string v1, "PAGE_STORIES_CARD_SHARE"
+    const-string v1, "PAGE_RESHARE_STORY_REPLY"
 
     .line 143
     .line 144
@@ -385,14 +387,14 @@
     .line 147
     .line 148
     .line 149
-    move-result-object v22
+    move-result-object v23
 
     .line 150
-    sput-object v22, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_STORIES_CARD_SHARE:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v23, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_RESHARE_STORY_REPLY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 151
     .line 152
-    const-string v1, "PAGE_STORIES_CARD_SHARE_REACT"
+    const-string v1, "PAGE_STORIES_CARD_SHARE"
 
     .line 153
     .line 154
@@ -405,14 +407,14 @@
     .line 157
     .line 158
     .line 159
-    move-result-object v21
+    move-result-object v22
 
     .line 160
-    sput-object v21, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_STORIES_CARD_SHARE_REACT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v22, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_STORIES_CARD_SHARE:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 161
     .line 162
-    const-string v1, "PAGE_STORY_FINAL_REPORT"
+    const-string v1, "PAGE_STORIES_CARD_SHARE_REACT"
 
     .line 163
     .line 164
@@ -425,14 +427,14 @@
     .line 167
     .line 168
     .line 169
-    move-result-object v20
+    move-result-object v21
 
     .line 170
-    sput-object v20, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_STORY_FINAL_REPORT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v21, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_STORIES_CARD_SHARE_REACT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 171
     .line 172
-    const-string v1, "PAGE_STORY_NEW_STORY_REPLY"
+    const-string v1, "PAGE_STORY_FINAL_REPORT"
 
     .line 173
     .line 174
@@ -445,14 +447,14 @@
     .line 177
     .line 178
     .line 179
-    move-result-object v19
+    move-result-object v20
 
     .line 180
-    sput-object v19, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_STORY_NEW_STORY_REPLY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v20, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_STORY_FINAL_REPORT:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 181
     .line 182
-    const-string v1, "POPULAR_UNCONNECTED_STORY"
+    const-string v1, "PAGE_STORY_NEW_STORY_REPLY"
 
     .line 183
     .line 184
@@ -465,14 +467,14 @@
     .line 187
     .line 188
     .line 189
-    move-result-object v18
+    move-result-object v13
 
     .line 190
-    sput-object v18, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->POPULAR_UNCONNECTED_STORY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v13, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PAGE_STORY_NEW_STORY_REPLY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 191
     .line 192
-    const-string v1, "PREDICTION_STORY_POSTED"
+    const-string v1, "POPULAR_UNCONNECTED_STORY"
 
     .line 193
     .line 194
@@ -485,14 +487,14 @@
     .line 197
     .line 198
     .line 199
-    move-result-object v17
+    move-result-object v12
 
     .line 200
-    sput-object v17, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PREDICTION_STORY_POSTED:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v12, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->POPULAR_UNCONNECTED_STORY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 201
     .line 202
-    const-string v1, "PREDICTION_STORY_RESULTS"
+    const-string v1, "PREDICTION_STORY_POSTED"
 
     .line 203
     .line 204
@@ -505,14 +507,14 @@
     .line 207
     .line 208
     .line 209
-    move-result-object v13
+    move-result-object v11
 
     .line 210
-    sput-object v13, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PREDICTION_STORY_RESULTS:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v11, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PREDICTION_STORY_POSTED:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 211
     .line 212
-    const-string v1, "PRODUCER_COMMENT_RESPONSE"
+    const-string v1, "PREDICTION_STORY_RESULTS"
 
     .line 213
     .line 214
@@ -525,14 +527,14 @@
     .line 217
     .line 218
     .line 219
-    move-result-object v12
+    move-result-object v10
 
     .line 220
-    sput-object v12, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PRODUCER_COMMENT_RESPONSE:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v10, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PREDICTION_STORY_RESULTS:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 221
     .line 222
-    const-string v1, "REPLY"
+    const-string v1, "PRODUCER_COMMENT_RESPONSE"
 
     .line 223
     .line 224
@@ -545,14 +547,14 @@
     .line 227
     .line 228
     .line 229
-    move-result-object v11
+    move-result-object v9
 
     .line 230
-    sput-object v11, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->REPLY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v9, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->PRODUCER_COMMENT_RESPONSE:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 231
     .line 232
-    const-string v1, "REQUESTED_STORIES_POSTED"
+    const-string v1, "REPLY"
 
     .line 233
     .line 234
@@ -565,14 +567,14 @@
     .line 237
     .line 238
     .line 239
-    move-result-object v10
+    move-result-object v8
 
     .line 240
-    sput-object v10, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->REQUESTED_STORIES_POSTED:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v8, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->REPLY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 241
     .line 242
-    const-string v1, "RESHARE_TO_STORY"
+    const-string v1, "REQUESTED_STORIES_POSTED"
 
     .line 243
     .line 244
@@ -585,14 +587,14 @@
     .line 247
     .line 248
     .line 249
-    move-result-object v9
+    move-result-object v7
 
     .line 250
-    sput-object v9, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->RESHARE_TO_STORY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v7, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->REQUESTED_STORIES_POSTED:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 251
     .line 252
-    const-string v1, "STORY_CHANNEL_INVITATION"
+    const-string v1, "RESHARE_TO_STORY"
 
     .line 253
     .line 254
@@ -605,14 +607,14 @@
     .line 257
     .line 258
     .line 259
-    move-result-object v8
+    move-result-object v6
 
     .line 260
-    sput-object v8, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->STORY_CHANNEL_INVITATION:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v6, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->RESHARE_TO_STORY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 261
     .line 262
-    const-string v1, "STORY_POSTED_EXPIRING_SOON"
+    const-string v1, "STORY_CHANNEL_INVITATION"
 
     .line 263
     .line 264
@@ -625,14 +627,14 @@
     .line 267
     .line 268
     .line 269
-    move-result-object v7
+    move-result-object v5
 
     .line 270
-    sput-object v7, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->STORY_POSTED_EXPIRING_SOON:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v5, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->STORY_CHANNEL_INVITATION:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 271
     .line 272
-    const-string v1, "STORY_POSTED_WITHOUT_COMMENTS_DELAY"
+    const-string v1, "STORY_POSTED_EXPIRING_SOON"
 
     .line 273
     .line 274
@@ -645,14 +647,14 @@
     .line 277
     .line 278
     .line 279
-    move-result-object v6
+    move-result-object v4
 
     .line 280
-    sput-object v6, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->STORY_POSTED_WITHOUT_COMMENTS_DELAY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v4, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->STORY_POSTED_EXPIRING_SOON:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 281
     .line 282
-    const-string v1, "TAGGED_WITH_STORY"
+    const-string v1, "STORY_POSTED_WITHOUT_COMMENTS_DELAY"
 
     .line 283
     .line 284
@@ -665,14 +667,14 @@
     .line 287
     .line 288
     .line 289
-    move-result-object v5
+    move-result-object v19
 
     .line 290
-    sput-object v5, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->TAGGED_WITH_STORY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v19, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->STORY_POSTED_WITHOUT_COMMENTS_DELAY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 291
     .line 292
-    const-string v1, "TRENDING_STORY"
+    const-string v1, "TAGGED_WITH_STORY"
 
     .line 293
     .line 294
@@ -685,179 +687,200 @@
     .line 297
     .line 298
     .line 299
-    move-result-object v4
+    move-result-object v18
 
     .line 300
-    sput-object v4, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->TRENDING_STORY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v18, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->TAGGED_WITH_STORY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 301
     .line 302
-    const-string v0, "TRENDING_STORY_PF_NOTIFS"
+    const-string v1, "TRENDING_STORY"
 
     .line 303
     .line 304
-    const/16 v3, 0x1f
+    const/16 v0, 0x1f
 
     .line 305
     .line 306
-    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    invoke-static {v1, v0}, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 307
     .line 308
     .line 309
-    move-result-object v16
+    move-result-object v17
 
     .line 310
-    sput-object v16, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->TRENDING_STORY_PF_NOTIFS:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    sput-object v17, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->TRENDING_STORY:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 311
     .line 312
-    const/16 v0, 0x20
+    const-string v0, "TRENDING_STORY_PF_NOTIFS"
 
     .line 313
     .line 314
-    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+    const/16 v3, 0x20
 
     .line 315
     .line 316
-    move-object/from16 v1, v35
+    invoke-static {v0, v3}, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->A00(Ljava/lang/String;I)Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 317
     .line 318
-    move-object/from16 v0, v34
-
     .line 319
+    move-result-object v16
+
     .line 320
-    invoke-static {v2, v1, v0}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    sput-object v16, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->TRENDING_STORY_PF_NOTIFS:Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
     .line 321
     .line 322
+    const/16 v0, 0x21
+
     .line 323
-    move-object/from16 v1, v33
-
     .line 324
+    new-array v2, v0, [Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
+
     .line 325
-    move-object/from16 v0, v32
-
     .line 326
-    .line 327
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v36
 
+    .line 327
     .line 328
+    move-object/from16 v0, v35
+
     .line 329
     .line 330
-    move-object/from16 v1, v31
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A15(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 331
     .line 332
-    move-object/from16 v0, v30
-
     .line 333
-    .line 334
-    invoke-static {v2, v1, v0}, LX/001;->A1E([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object/from16 v15, v34
 
+    .line 334
     .line 335
+    move-object/from16 v14, v33
+
     .line 336
     .line 337
-    move-object/from16 v15, v29
+    move-object/from16 v1, v32
 
     .line 338
     .line 339
-    move-object/from16 v14, v28
+    move-object/from16 v0, v31
 
     .line 340
     .line 341
-    move-object/from16 v1, v27
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A16(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 342
     .line 343
-    move-object/from16 v0, v26
-
     .line 344
-    .line 345
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v15, v30
 
+    .line 345
     .line 346
+    move-object/from16 v14, v29
+
     .line 347
     .line 348
-    move-object/from16 v1, v25
+    move-object/from16 v1, v28
 
     .line 349
     .line 350
-    move-object/from16 v0, v24
+    move-object/from16 v0, v27
 
     .line 351
     .line 352
-    invoke-static {v2, v1, v0}, LX/001;->A1F([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A17(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 353
     .line 354
     .line 355
-    move-object/from16 v15, v23
+    const/16 v0, 0xc
 
     .line 356
     .line 357
-    move-object/from16 v14, v22
+    aput-object v26, v2, v0
 
     .line 358
     .line 359
-    move-object/from16 v1, v21
+    move-object/from16 v15, v25
 
     .line 360
     .line 361
-    move-object/from16 v0, v20
+    move-object/from16 v14, v24
 
     .line 362
     .line 363
-    invoke-static {v15, v14, v1, v0, v2}, LX/001;->A0p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-object/from16 v1, v23
 
     .line 364
     .line 365
+    move-object/from16 v0, v22
+
     .line 366
-    const/16 v0, 0x12
-
     .line 367
-    .line 368
-    aput-object v19, v2, v0
+    invoke-static {v15, v14, v1, v0, v2}, LX/0X1;->A18(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    .line 368
     .line 369
     .line 370
-    move-object/from16 v1, v18
+    move-object/from16 v1, v21
 
     .line 371
     .line 372
-    move-object/from16 v0, v17
+    move-object/from16 v0, v20
 
     .line 373
     .line 374
-    invoke-static {v1, v0, v13, v12, v2}, LX/001;->A0q(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v13, v12, v2}, LX/0X1;->A19(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 375
     .line 376
     .line 377
-    invoke-static {v11, v10, v9, v8, v2}, LX/001;->A0r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v11, v10, v9, v8, v2}, LX/0X1;->A1A(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 378
     .line 379
     .line 380
-    invoke-static {v2, v7, v6}, LX/0Yc;->A1W([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v7, v6, v5, v4, v2}, LX/0X1;->A1B(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 381
     .line 382
     .line 383
-    invoke-static {v2, v5, v4}, LX/0Yf;->A1N([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/16 v0, 0x1d
 
     .line 384
     .line 385
+    aput-object v19, v2, v0
+
     .line 386
+    .line 387
+    const/16 v0, 0x1e
+
+    .line 388
+    .line 389
+    aput-object v18, v2, v0
+
+    .line 390
+    .line 391
+    const/16 v0, 0x1f
+
+    .line 392
+    .line 393
+    aput-object v17, v2, v0
+
+    .line 394
+    .line 395
     aput-object v16, v2, v3
 
-    .line 387
-    .line 388
+    .line 396
+    .line 397
     sput-object v2, Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;->$VALUES:[Lcom/facebook/graphql/enums/GraphQLCameraPostNotificationType;
 
-    .line 389
-    .line 390
+    .line 398
+    .line 399
     return-void
 .end method
 
@@ -901,7 +924,7 @@
 
     .line 1
     .line 2
-    invoke-static {p0, v0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
+    invoke-static {v0, p0}, Lcom/facebook/graphql/enums/EnumHelper;->A00(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/Enum;
 
     .line 3
     .line 4

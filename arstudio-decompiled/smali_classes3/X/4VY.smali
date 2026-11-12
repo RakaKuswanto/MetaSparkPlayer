@@ -1,34 +1,45 @@
-.class public abstract LX/4VY;
+.class public final LX/4VY;
 .super Ljava/lang/Object;
 .source ""
 
 
-# static fields
-.field public static final A00:Landroid/graphics/Matrix;
+# instance fields
+.field public A00:F
+
+.field public A01:Landroid/graphics/Typeface;
+
+.field public A02:Z
+
+.field public final A03:F
+
+.field public final A04:F
+
+.field public final A05:F
+
+.field public final A06:F
+
+.field public final A07:I
+
+.field public final A08:I
+
+.field public final A09:I
+
+.field public final A0A:Landroid/content/res/ColorStateList;
+
+.field public final A0B:Landroid/content/res/ColorStateList;
+
+.field public final A0C:Landroid/content/res/ColorStateList;
+
+.field public final A0D:Landroid/content/res/ColorStateList;
+
+.field public final A0E:Ljava/lang/String;
+
+.field public final A0F:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 0
-    invoke-static {}, LX/4BF;->A0O()Landroid/graphics/Matrix;
-
-    .line 1
-    .line 2
-    .line 3
-    move-result-object v0
-
-    .line 4
-    sput-object v0, LX/4VY;->A00:Landroid/graphics/Matrix;
-
-    .line 5
-    .line 6
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 5
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,731 +47,1058 @@
     .line 1
     .line 2
     .line 3
-    return-void
-.end method
+    const/4 v3, 0x0
 
-
-# virtual methods
-.method public final A00(Landroid/graphics/Canvas;Landroid/graphics/Matrix;LX/4VM;I)V
-    .locals 22
-
-    .line 0
-    move-object/from16 v2, p0
-
-    .line 1
-    .line 2
-    instance-of v1, v2, LX/4VK;
-
-    .line 3
     .line 4
-    move-object/from16 v0, p1
+    iput-boolean v3, p0, LX/4VY;->A02:Z
 
     .line 5
     .line 6
-    move-object/from16 v3, p2
+    sget-object v0, LX/4LY;->A0K:[I
 
     .line 7
     .line 8
-    move-object/from16 v4, p3
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     .line 9
     .line 10
-    move/from16 v7, p4
-
     .line 11
+    move-result-object v1
+
     .line 12
-    if-eqz v1, :cond_1
+    const/4 v2, 0x0
 
     .line 13
+    invoke-virtual {v1, v3, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
     .line 14
-    move-object v5, v2
-
     .line 15
-    check-cast v5, LX/4VK;
-
     .line 16
+    move-result v0
+
     .line 17
-    iget-object v11, v5, LX/4VK;->A02:LX/4VO;
+    iput v0, p0, LX/4VY;->A00:F
 
     .line 18
     .line 19
-    iget v2, v11, LX/4VO;->A01:F
+    const/4 v0, 0x3
 
     .line 20
-    .line 21
-    iget v10, v5, LX/4VK;->A01:F
+    invoke-static {p1, v1, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
+    .line 21
     .line 22
     .line 23
-    sub-float/2addr v2, v10
+    move-result-object v0
 
     .line 24
-    iget v1, v11, LX/4VO;->A00:F
+    iput-object v0, p0, LX/4VY;->A0B:Landroid/content/res/ColorStateList;
 
     .line 25
     .line 26
-    iget v9, v5, LX/4VK;->A00:F
+    const/4 v0, 0x4
 
     .line 27
+    invoke-static {p1, v1, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
     .line 28
-    sub-float/2addr v1, v9
-
     .line 29
-    float-to-double v5, v2
-
     .line 30
-    float-to-double v1, v1
+    move-result-object v0
 
     .line 31
-    invoke-static {v5, v6, v1, v2}, Ljava/lang/Math;->hypot(DD)D
+    iput-object v0, p0, LX/4VY;->A0C:Landroid/content/res/ColorStateList;
 
     .line 32
     .line 33
+    const/4 v0, 0x5
+
     .line 34
-    move-result-wide v1
+    invoke-static {p1, v1, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     .line 35
-    double-to-float v5, v1
-
     .line 36
-    const/4 v8, 0x0
-
     .line 37
-    new-instance v6, Landroid/graphics/RectF;
+    move-result-object v0
 
     .line 38
+    iput-object v0, p0, LX/4VY;->A0D:Landroid/content/res/ColorStateList;
+
     .line 39
-    invoke-direct {v6, v8, v8, v5, v8}, Landroid/graphics/RectF;-><init>(FFFF)V
-
     .line 40
-    .line 41
-    .line 42
-    new-instance v5, Landroid/graphics/Matrix;
+    const/4 v0, 0x2
 
+    .line 41
+    invoke-virtual {v1, v0, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    .line 42
     .line 43
     .line 44
-    invoke-direct {v5, v3}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+    move-result v0
 
     .line 45
+    iput v0, p0, LX/4VY;->A08:I
+
     .line 46
     .line 47
-    invoke-virtual {v5, v9, v10}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+    const/4 v0, 0x1
 
     .line 48
+    invoke-virtual {v1, v0, v0}, Landroid/content/res/TypedArray;->getInt(II)I
+
     .line 49
     .line 50
-    iget v2, v11, LX/4VO;->A01:F
-
     .line 51
+    move-result v0
+
     .line 52
-    sub-float/2addr v2, v10
+    iput v0, p0, LX/4VY;->A09:I
 
     .line 53
-    iget v1, v11, LX/4VO;->A00:F
-
     .line 54
-    .line 55
-    sub-float/2addr v1, v9
+    const/16 v0, 0xc
 
+    .line 55
     .line 56
-    div-float/2addr v2, v1
+    invoke-virtual {v1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     .line 57
-    float-to-double v1, v2
-
     .line 58
-    invoke-static {v1, v2}, Ljava/lang/Math;->atan(D)D
-
     .line 59
-    .line 60
-    .line 61
-    move-result-wide v1
+    move-result v0
 
+    .line 60
+    const/16 v4, 0xa
+
+    .line 61
     .line 62
-    invoke-static {v1, v2}, Ljava/lang/Math;->toDegrees(D)D
+    if-eqz v0, :cond_0
 
     .line 63
     .line 64
-    .line 65
-    move-result-wide v1
+    const/16 v4, 0xc
 
+    .line 65
     .line 66
-    double-to-float v3, v1
+    :cond_0
+    invoke-virtual {v1, v4, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     .line 67
-    invoke-virtual {v5, v3}, Landroid/graphics/Matrix;->preRotate(F)Z
-
     .line 68
     .line 69
+    move-result v0
+
     .line 70
-    iget v2, v6, Landroid/graphics/RectF;->bottom:F
+    iput v0, p0, LX/4VY;->A07:I
 
     .line 71
     .line 72
-    int-to-float v1, v7
+    invoke-virtual {v1, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     .line 73
-    add-float/2addr v2, v1
-
     .line 74
-    iput v2, v6, Landroid/graphics/RectF;->bottom:F
-
     .line 75
+    move-result-object v0
+
     .line 76
-    neg-int v1, v7
+    iput-object v0, p0, LX/4VY;->A0E:Ljava/lang/String;
 
     .line 77
-    int-to-float v1, v1
-
     .line 78
-    invoke-virtual {v6, v8, v1}, Landroid/graphics/RectF;->offset(FF)V
+    const/16 v0, 0xe
 
     .line 79
     .line 80
-    .line 81
-    sget-object v12, LX/4VM;->A0B:[I
+    invoke-virtual {v1, v0, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
+    .line 81
     .line 82
     .line 83
-    iget v2, v4, LX/4VM;->A00:I
+    const/4 v0, 0x6
 
     .line 84
+    invoke-static {p1, v1, v0}, LX/4Ph;->A00(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
     .line 85
-    const/4 v1, 0x0
-
     .line 86
-    aput v2, v12, v1
-
     .line 87
+    move-result-object v0
+
     .line 88
-    iget v2, v4, LX/4VM;->A01:I
+    iput-object v0, p0, LX/4VY;->A0A:Landroid/content/res/ColorStateList;
 
     .line 89
     .line 90
-    const/4 v1, 0x1
+    const/4 v0, 0x7
 
     .line 91
-    aput v2, v12, v1
+    invoke-virtual {v1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     .line 92
     .line 93
-    iget v2, v4, LX/4VM;->A02:I
-
     .line 94
+    move-result v0
+
     .line 95
-    const/4 v1, 0x2
+    iput v0, p0, LX/4VY;->A04:F
 
     .line 96
-    aput v2, v12, v1
-
     .line 97
+    const/16 v0, 0x8
+
     .line 98
-    iget-object v1, v4, LX/4VM;->A05:Landroid/graphics/Paint;
-
     .line 99
-    .line 100
-    iget v8, v6, Landroid/graphics/RectF;->left:F
+    invoke-virtual {v1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
+    .line 100
     .line 101
     .line 102
-    iget v9, v6, Landroid/graphics/RectF;->top:F
+    move-result v0
 
     .line 103
+    iput v0, p0, LX/4VY;->A05:F
+
     .line 104
-    iget v11, v6, Landroid/graphics/RectF;->bottom:F
-
     .line 105
+    const/16 v0, 0x9
+
     .line 106
-    sget-object v13, LX/4VM;->A09:[F
-
     .line 107
-    .line 108
-    sget-object v14, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+    invoke-virtual {v1, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
+    .line 108
     .line 109
     .line 110
-    new-instance v7, Landroid/graphics/LinearGradient;
+    move-result v0
 
     .line 111
-    .line 112
-    move v10, v8
+    iput v0, p0, LX/4VY;->A06:F
 
+    .line 112
     .line 113
-    invoke-direct/range {v7 .. v14}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 114
     .line 115
     .line 116
-    invoke-virtual {v1, v7}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 117
     .line 118
-    .line 119
-    invoke-virtual {v0}, Landroid/graphics/Canvas;->save()I
+    const/16 v0, 0x15
 
+    .line 119
     .line 120
+    if-lt v1, v0, :cond_1
+
     .line 121
     .line 122
-    invoke-virtual {v0, v5}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
+    sget-object v0, LX/4LY;->A0E:[I
 
     .line 123
     .line 124
-    .line 125
-    invoke-virtual {v0, v6, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
+    .line 125
     .line 126
     .line 127
+    move-result-object v1
+
     .line 128
-    :goto_0
-    invoke-virtual {v0}, Landroid/graphics/Canvas;->restore()V
+    invoke-virtual {v1, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     .line 129
     .line 130
     .line 131
-    :cond_0
-    return-void
+    move-result v0
 
     .line 132
-    :cond_1
-    instance-of v1, v2, LX/4VJ;
+    iput-boolean v0, p0, LX/4VY;->A0F:Z
 
     .line 133
     .line 134
-    if-eqz v1, :cond_4
+    invoke-virtual {v1, v3, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     .line 135
     .line 136
-    move-object v1, v2
-
     .line 137
-    check-cast v1, LX/4VJ;
+    move-result v0
 
     .line 138
+    iput v0, p0, LX/4VY;->A03:F
+
     .line 139
-    iget-object v1, v1, LX/4VJ;->A00:LX/4VN;
-
     .line 140
-    .line 141
-    iget v6, v1, LX/4VN;->A03:F
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 141
     .line 142
     .line 143
-    iget v5, v1, LX/4VN;->A04:F
+    :cond_1
+    return-void
+.end method
 
-    .line 144
-    .line 145
-    iget v10, v1, LX/4VN;->A01:F
+.method private final A00(Landroid/content/Context;)Landroid/graphics/Typeface;
+    .locals 8
 
-    .line 146
-    .line 147
-    iget v9, v1, LX/4VN;->A05:F
+    .line 0
+    iget-boolean v0, p0, LX/4VY;->A02:Z
 
-    .line 148
-    .line 149
-    iget v8, v1, LX/4VN;->A02:F
+    .line 1
+    .line 2
+    if-eqz v0, :cond_0
 
-    .line 150
-    .line 151
-    iget v1, v1, LX/4VN;->A00:F
+    .line 3
+    .line 4
+    iget-object v0, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
 
-    .line 152
-    .line 153
-    new-instance v2, Landroid/graphics/RectF;
+    .line 5
+    .line 6
+    return-object v0
 
-    .line 154
-    .line 155
-    invoke-direct {v2, v10, v9, v8, v1}, Landroid/graphics/RectF;-><init>(FFFF)V
+    .line 7
+    :cond_0
+    move-object v1, p1
 
-    .line 156
-    .line 157
-    .line 158
-    const/4 v14, 0x0
+    .line 8
+    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
 
-    .line 159
-    const/16 v20, 0x1
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
 
-    .line 160
-    .line 161
-    const/4 v13, 0x0
+    .line 12
+    if-nez v0, :cond_2
 
-    .line 162
-    cmpg-float v1, v5, v14
+    .line 13
+    .line 14
+    :try_start_0
+    iget v4, p0, LX/4VY;->A07:I
 
-    .line 163
-    .line 164
-    invoke-static {v1}, LX/0Yg;->A1N(I)Z
+    .line 15
+    .line 16
+    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
 
-    .line 165
-    .line 166
-    .line 167
-    move-result v12
+    .line 17
+    .line 18
+    .line 19
+    move-result v0
 
-    .line 168
-    iget-object v1, v4, LX/4VM;->A07:Landroid/graphics/Path;
+    .line 20
+    if-eqz v0, :cond_1
 
-    .line 169
-    .line 170
-    const/4 v10, 0x3
+    .line 21
+    .line 22
+    const/4 v1, 0x0
 
-    .line 171
-    const/4 v11, 0x2
+    .line 23
+    goto :goto_0
 
-    .line 172
-    if-eqz v12, :cond_3
+    .line 24
+    :cond_1
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
 
-    .line 173
-    .line 174
-    sget-object v17, LX/4VM;->A0A:[I
-
-    .line 175
-    .line 176
-    aput v13, v17, v13
-
-    .line 177
-    .line 178
-    iget v8, v4, LX/4VM;->A00:I
-
-    .line 179
-    .line 180
-    aput v8, v17, v20
-
-    .line 181
-    .line 182
-    iget v8, v4, LX/4VM;->A01:I
-
-    .line 183
-    .line 184
-    aput v8, v17, v11
-
-    .line 185
-    .line 186
-    iget v8, v4, LX/4VM;->A02:I
-
-    .line 187
-    .line 188
-    :goto_1
-    aput v8, v17, v10
-
-    .line 189
-    .line 190
-    invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
-
-    .line 191
-    .line 192
-    .line 193
-    move-result v16
-
-    .line 194
-    const/high16 v10, 0x40000000    # 2.0f
-
-    .line 195
-    .line 196
-    div-float v16, v16, v10
-
-    .line 197
-    .line 198
-    cmpg-float v8, v16, v14
-
-    .line 199
-    .line 200
-    if-lez v8, :cond_0
-
-    .line 201
-    .line 202
-    int-to-float v8, v7
-
-    .line 203
-    div-float v8, v8, v16
-
-    .line 204
-    .line 205
-    const/high16 v7, 0x3f800000    # 1.0f
-
-    .line 206
-    .line 207
-    sub-float v9, v7, v8
-
-    .line 208
-    .line 209
-    sub-float v8, v7, v9
-
-    .line 210
-    .line 211
-    div-float/2addr v8, v10
-
-    .line 212
-    add-float/2addr v8, v9
-
-    .line 213
-    sget-object v18, LX/4VM;->A08:[F
-
-    .line 214
-    .line 215
-    aput v9, v18, v20
-
-    .line 216
-    .line 217
-    aput v8, v18, v11
-
-    .line 218
-    .line 219
-    invoke-virtual {v2}, Landroid/graphics/RectF;->centerX()F
-
-    .line 220
-    .line 221
-    .line 222
-    move-result v14
-
-    .line 223
-    invoke-virtual {v2}, Landroid/graphics/RectF;->centerY()F
-
-    .line 224
-    .line 225
-    .line 226
-    move-result v15
-
-    .line 227
-    sget-object v19, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
-
-    .line 228
-    .line 229
-    new-instance v13, Landroid/graphics/RadialGradient;
-
-    .line 230
-    .line 231
-    invoke-direct/range {v13 .. v19}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
-
-    .line 232
-    .line 233
-    .line 234
-    iget-object v9, v4, LX/4VM;->A04:Landroid/graphics/Paint;
-
-    .line 235
-    .line 236
-    invoke-virtual {v9, v13}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    .line 237
-    .line 238
-    .line 239
-    invoke-virtual {v0}, Landroid/graphics/Canvas;->save()I
-
-    .line 240
-    .line 241
-    .line 242
-    invoke-virtual {v0, v3}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
-
-    .line 243
-    .line 244
-    .line 245
-    invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
-
-    .line 246
-    .line 247
-    .line 248
-    move-result v8
-
-    .line 249
-    invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
-
-    .line 250
-    .line 251
-    .line 252
-    move-result v3
-
-    .line 253
-    div-float/2addr v8, v3
-
-    .line 254
-    invoke-virtual {v0, v7, v8}, Landroid/graphics/Canvas;->scale(FF)V
-
-    .line 255
-    .line 256
-    .line 257
-    if-nez v12, :cond_2
-
-    .line 258
-    .line 259
-    sget-object v3, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
-
-    .line 260
-    .line 261
-    invoke-virtual {v0, v1, v3}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
-
-    .line 262
-    .line 263
-    .line 264
-    iget-object v3, v4, LX/4VM;->A03:Landroid/graphics/Paint;
-
-    .line 265
-    .line 266
-    invoke-virtual {v0, v1, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    .line 267
-    .line 268
-    .line 269
-    :cond_2
-    move/from16 v18, v6
-
-    .line 270
-    .line 271
-    move/from16 v19, v5
-
-    .line 272
-    .line 273
-    move-object/from16 v21, v9
-
-    .line 274
-    .line 275
-    move-object/from16 v16, v0
-
-    .line 276
-    .line 277
-    move-object/from16 v17, v2
-
-    .line 278
-    .line 279
-    invoke-virtual/range {v16 .. v21}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
-
-    .line 280
-    .line 281
-    .line 282
-    goto/16 :goto_0
-
-    .line 283
-    .line 284
-    :cond_3
-    invoke-virtual {v1}, Landroid/graphics/Path;->rewind()V
-
-    .line 285
-    .line 286
-    .line 287
-    invoke-virtual {v2}, Landroid/graphics/RectF;->centerX()F
-
-    .line 288
-    .line 289
-    .line 290
-    move-result v9
-
-    .line 291
-    invoke-virtual {v2}, Landroid/graphics/RectF;->centerY()F
-
-    .line 292
-    .line 293
-    .line 294
-    move-result v8
-
-    .line 295
-    invoke-virtual {v1, v9, v8}, Landroid/graphics/Path;->moveTo(FF)V
-
-    .line 296
-    .line 297
-    .line 298
-    invoke-virtual {v1, v2, v6, v5}, Landroid/graphics/Path;->arcTo(Landroid/graphics/RectF;FF)V
-
-    .line 299
-    .line 300
-    .line 301
-    invoke-virtual {v1}, Landroid/graphics/Path;->close()V
-
-    .line 302
-    .line 303
-    .line 304
-    neg-int v8, v7
-
-    .line 305
-    int-to-float v8, v8
-
-    .line 306
-    invoke-virtual {v2, v8, v8}, Landroid/graphics/RectF;->inset(FF)V
-
-    .line 307
-    .line 308
-    .line 309
-    sget-object v17, LX/4VM;->A0A:[I
-
-    .line 310
-    .line 311
-    aput v13, v17, v13
-
-    .line 312
-    .line 313
-    iget v8, v4, LX/4VM;->A02:I
-
-    .line 314
-    .line 315
-    aput v8, v17, v20
-
-    .line 316
-    .line 317
-    iget v8, v4, LX/4VM;->A01:I
-
-    .line 318
-    .line 319
-    aput v8, v17, v11
-
-    .line 320
-    .line 321
-    iget v8, v4, LX/4VM;->A00:I
-
-    .line 322
-    .line 323
-    goto/16 :goto_1
-
-    .line 324
-    .line 325
-    :cond_4
-    move-object v5, v2
-
-    .line 326
-    check-cast v5, LX/4VF;
-
-    .line 327
-    .line 328
-    iget-object v1, v5, LX/4VF;->A02:Ljava/util/List;
-
-    .line 329
-    .line 330
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 331
-    .line 332
-    .line 333
-    move-result-object v3
-
-    .line 334
-    :goto_2
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 335
-    .line 336
-    .line 337
-    move-result v1
-
-    .line 338
-    if-eqz v1, :cond_0
-
-    .line 339
-    .line 340
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 341
-    .line 342
-    .line 343
+    .line 25
+    .line 26
+    .line 27
     move-result-object v2
 
-    .line 344
-    check-cast v2, LX/4VY;
+    .line 28
+    const/4 v5, 0x0
 
-    .line 345
-    .line 346
-    iget-object v1, v5, LX/4VF;->A01:Landroid/graphics/Matrix;
+    .line 29
+    const/4 v3, 0x0
 
-    .line 347
-    .line 348
-    invoke-virtual {v2, v0, v1, v4, v7}, LX/4VY;->A00(Landroid/graphics/Canvas;Landroid/graphics/Matrix;LX/4VM;I)V
+    .line 30
+    move v6, v5
 
-    .line 349
-    .line 350
-    .line 351
-    goto :goto_2
+    .line 31
+    move v7, v5
+
+    .line 32
+    invoke-static/range {v1 .. v7}, LX/4cC;->A01(Landroid/content/Context;Landroid/util/TypedValue;LX/4cJ;IIZZ)Landroid/graphics/Typeface;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v1
+
+    .line 36
+    :goto_0
+    iput-object v1, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+
+    .line 37
+    .line 38
+    if-eqz v1, :cond_2
+
+    .line 39
+    .line 40
+    iget v0, p0, LX/4VY;->A08:I
+
+    .line 41
+    .line 42
+    invoke-static {v1, v0}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v0
+
+    .line 46
+    iput-object v0, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 47
+    .line 48
+    :catch_0
+    :cond_2
+    invoke-static {p0}, LX/4VY;->A01(LX/4VY;)V
+
+    .line 49
+    .line 50
+    .line 51
+    const/4 v0, 0x1
+
+    .line 52
+    iput-boolean v0, p0, LX/4VY;->A02:Z
+
+    .line 53
+    .line 54
+    iget-object v0, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+
+    .line 55
+    .line 56
+    return-object v0
+.end method
+
+.method public static A01(LX/4VY;)V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+
+    .line 1
+    .line 2
+    if-nez v0, :cond_0
+
+    .line 3
+    .line 4
+    iget-object v1, p0, LX/4VY;->A0E:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    if-eqz v1, :cond_0
+
+    .line 7
+    .line 8
+    iget v0, p0, LX/4VY;->A08:I
+
+    .line 9
+    .line 10
+    invoke-static {v1, v0}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    iput-object v0, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+
+    .line 15
+    .line 16
+    :cond_0
+    if-nez v0, :cond_1
+
+    .line 17
+    .line 18
+    iget v1, p0, LX/4VY;->A09:I
+
+    .line 19
+    .line 20
+    const/4 v0, 0x1
+
+    .line 21
+    if-eq v1, v0, :cond_4
+
+    .line 22
+    .line 23
+    const/4 v0, 0x2
+
+    .line 24
+    if-eq v1, v0, :cond_3
+
+    .line 25
+    .line 26
+    const/4 v0, 0x3
+
+    .line 27
+    if-eq v1, v0, :cond_2
+
+    .line 28
+    .line 29
+    sget-object v1, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
+
+    .line 30
+    .line 31
+    :goto_0
+    iput-object v1, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+
+    .line 32
+    .line 33
+    iget v0, p0, LX/4VY;->A08:I
+
+    .line 34
+    .line 35
+    invoke-static {v1, v0}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v0
+
+    .line 39
+    iput-object v0, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+
+    .line 40
+    .line 41
+    :cond_1
+    return-void
+
+    .line 42
+    :cond_2
+    sget-object v1, Landroid/graphics/Typeface;->MONOSPACE:Landroid/graphics/Typeface;
+
+    .line 43
+    .line 44
+    goto :goto_0
+
+    .line 45
+    :cond_3
+    sget-object v1, Landroid/graphics/Typeface;->SERIF:Landroid/graphics/Typeface;
+
+    .line 46
+    .line 47
+    goto :goto_0
+
+    .line 48
+    :cond_4
+    sget-object v1, Landroid/graphics/Typeface;->SANS_SERIF:Landroid/graphics/Typeface;
+
+    .line 49
+    .line 50
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final A02(Landroid/content/Context;Landroid/text/TextPaint;LX/4Wf;)V
+    .locals 5
+
+    .line 0
+    invoke-virtual {p0, p1, p2, p3}, LX/4VY;->A03(Landroid/content/Context;Landroid/text/TextPaint;LX/4Wf;)V
+
+    .line 1
+    .line 2
+    .line 3
+    iget-object v1, p0, LX/4VY;->A0B:Landroid/content/res/ColorStateList;
+
+    .line 4
+    .line 5
+    if-eqz v1, :cond_1
+
+    .line 6
+    .line 7
+    iget-object v0, p2, Landroid/text/TextPaint;->drawableState:[I
+
+    .line 8
+    .line 9
+    invoke-static {v1, v0}, LX/433;->A0B(Landroid/content/res/ColorStateList;[I)I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    :goto_0
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 14
+    .line 15
+    .line 16
+    iget v4, p0, LX/4VY;->A06:F
+
+    .line 17
+    .line 18
+    iget v3, p0, LX/4VY;->A04:F
+
+    .line 19
+    .line 20
+    iget v2, p0, LX/4VY;->A05:F
+
+    .line 21
+    .line 22
+    iget-object v1, p0, LX/4VY;->A0A:Landroid/content/res/ColorStateList;
+
+    .line 23
+    .line 24
+    if-eqz v1, :cond_0
+
+    .line 25
+    .line 26
+    iget-object v0, p2, Landroid/text/TextPaint;->drawableState:[I
+
+    .line 27
+    .line 28
+    invoke-static {v1, v0}, LX/433;->A0B(Landroid/content/res/ColorStateList;[I)I
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v0
+
+    .line 32
+    :goto_1
+    invoke-virtual {p2, v4, v3, v2, v0}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+
+    .line 33
+    .line 34
+    .line 35
+    return-void
+
+    .line 36
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 37
+    goto :goto_1
+
+    .line 38
+    :cond_1
+    const/high16 v0, -0x1000000
+
+    .line 39
+    .line 40
+    goto :goto_0
+.end method
+
+.method public final A03(Landroid/content/Context;Landroid/text/TextPaint;LX/4Wf;)V
+    .locals 8
+
+    .line 0
+    const/4 v7, 0x1
+
+    .line 1
+    iget v4, p0, LX/4VY;->A07:I
+
+    .line 2
+    .line 3
+    move-object v1, p1
+
+    .line 4
+    if-eqz v4, :cond_0
+
+    .line 5
+    .line 6
+    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-nez v0, :cond_0
+
+    .line 11
+    .line 12
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v2
+
+    .line 16
+    const/4 v5, 0x0
+
+    .line 17
+    const/4 v3, 0x0
+
+    .line 18
+    move v6, v5
+
+    .line 19
+    invoke-static/range {v1 .. v7}, LX/4cC;->A01(Landroid/content/Context;Landroid/util/TypedValue;LX/4cJ;IIZZ)Landroid/graphics/Typeface;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    if-eqz v0, :cond_0
+
+    .line 24
+    .line 25
+    invoke-direct {p0, p1}, LX/4VY;->A00(Landroid/content/Context;)Landroid/graphics/Typeface;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    invoke-virtual {p0, v0, p2}, LX/4VY;->A05(Landroid/graphics/Typeface;Landroid/text/TextPaint;)V
+
+    .line 30
+    .line 31
+    .line 32
+    return-void
+
+    .line 33
+    :cond_0
+    invoke-static {p0}, LX/4VY;->A01(LX/4VY;)V
+
+    .line 34
+    .line 35
+    .line 36
+    iget-object v0, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+
+    .line 37
+    .line 38
+    invoke-virtual {p0, v0, p2}, LX/4VY;->A05(Landroid/graphics/Typeface;Landroid/text/TextPaint;)V
+
+    .line 39
+    .line 40
+    .line 41
+    new-instance v0, LX/4WS;
+
+    .line 42
+    .line 43
+    invoke-direct {v0, p2, p0, p3}, LX/4WS;-><init>(Landroid/text/TextPaint;LX/4VY;LX/4Wf;)V
+
+    .line 44
+    .line 45
+    .line 46
+    invoke-virtual {p0, p1, v0}, LX/4VY;->A04(Landroid/content/Context;LX/4Wf;)V
+
+    .line 47
+    .line 48
+    .line 49
+    return-void
+.end method
+
+.method public final A04(Landroid/content/Context;LX/4Wf;)V
+    .locals 13
+
+    .line 0
+    const/4 v12, 0x1
+
+    .line 1
+    iget v5, p0, LX/4VY;->A07:I
+
+    .line 2
+    .line 3
+    move-object v2, p1
+
+    .line 4
+    if-eqz v5, :cond_1
+
+    .line 5
+    .line 6
+    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v0
+
+    .line 10
+    if-nez v0, :cond_1
+
+    .line 11
+    .line 12
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object v7
+
+    .line 16
+    const/4 v10, 0x0
+
+    .line 17
+    const/4 v8, 0x0
+
+    .line 18
+    move v11, v10
+
+    .line 19
+    move-object v6, p1
+
+    .line 20
+    move v9, v5
+
+    .line 21
+    invoke-static/range {v6 .. v12}, LX/4cC;->A01(Landroid/content/Context;Landroid/util/TypedValue;LX/4cJ;IIZZ)Landroid/graphics/Typeface;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    if-eqz v0, :cond_1
+
+    .line 26
+    .line 27
+    invoke-direct {p0, p1}, LX/4VY;->A00(Landroid/content/Context;)Landroid/graphics/Typeface;
+
+    .line 28
+    .line 29
+    .line 30
+    :cond_0
+    :goto_0
+    iget-boolean v0, p0, LX/4VY;->A02:Z
+
+    .line 31
+    .line 32
+    if-eqz v0, :cond_2
+
+    .line 33
+    .line 34
+    iget-object v0, p0, LX/4VY;->A01:Landroid/graphics/Typeface;
+
+    .line 35
+    .line 36
+    invoke-virtual {p2, v0, v12}, LX/4Wf;->A02(Landroid/graphics/Typeface;Z)V
+
+    .line 37
+    .line 38
+    .line 39
+    return-void
+
+    .line 40
+    :cond_1
+    invoke-static {p0}, LX/4VY;->A01(LX/4VY;)V
+
+    .line 41
+    .line 42
+    .line 43
+    if-nez v5, :cond_0
+
+    .line 44
+    .line 45
+    iput-boolean v12, p0, LX/4VY;->A02:Z
+
+    .line 46
+    .line 47
+    goto :goto_0
+
+    .line 48
+    :cond_2
+    :try_start_0
+    new-instance v4, LX/4WA;
+
+    .line 49
+    .line 50
+    invoke-direct {v4, p0, p2}, LX/4WA;-><init>(LX/4VY;LX/4Wf;)V
+
+    .line 51
+    .line 52
+    .line 53
+    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
+
+    .line 54
+    .line 55
+    .line 56
+    move-result v0
+
+    .line 57
+    if-eqz v0, :cond_3
+
+    .line 58
+    .line 59
+    const/4 v0, -0x4
+
+    .line 60
+    invoke-virtual {v4, v0}, LX/4cJ;->A00(I)V
+
+    .line 61
+    .line 62
+    .line 63
+    return-void
+
+    .line 64
+    :cond_3
+    invoke-static {}, LX/435;->A06()Landroid/util/TypedValue;
+
+    .line 65
+    .line 66
+    .line 67
+    move-result-object v3
+
+    .line 68
+    const/4 v6, 0x0
+
+    .line 69
+    move v7, v6
+
+    .line 70
+    move v8, v6
+
+    .line 71
+    invoke-static/range {v2 .. v8}, LX/4cC;->A01(Landroid/content/Context;Landroid/util/TypedValue;LX/4cJ;IIZZ)Landroid/graphics/Typeface;
+
+    .line 72
+    .line 73
+    .line 74
+    return-void
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 75
+    :catch_0
+    iput-boolean v12, p0, LX/4VY;->A02:Z
+
+    .line 76
+    .line 77
+    const/4 v0, -0x3
+
+    .line 78
+    invoke-virtual {p2, v0}, LX/4Wf;->A01(I)V
+
+    .line 79
+    .line 80
+    .line 81
+    return-void
+
+    .line 82
+    :catch_1
+    iput-boolean v12, p0, LX/4VY;->A02:Z
+
+    .line 83
+    .line 84
+    invoke-virtual {p2, v12}, LX/4Wf;->A01(I)V
+
+    .line 85
+    .line 86
+    .line 87
+    return-void
+.end method
+
+.method public final A05(Landroid/graphics/Typeface;Landroid/text/TextPaint;)V
+    .locals 3
+
+    .line 0
+    invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    .line 1
+    .line 2
+    .line 3
+    iget v2, p0, LX/4VY;->A08:I
+
+    .line 4
+    .line 5
+    invoke-virtual {p1}, Landroid/graphics/Typeface;->getStyle()I
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v0
+
+    .line 9
+    xor-int/lit8 v1, v0, -0x1
+
+    .line 10
+    .line 11
+    and-int/2addr v1, v2
+
+    .line 12
+    and-int/lit8 v0, v1, 0x1
+
+    .line 13
+    .line 14
+    invoke-static {v0}, LX/001;->A1K(I)Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v0
+
+    .line 18
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
+
+    .line 19
+    .line 20
+    .line 21
+    and-int/lit8 v1, v1, 0x2
+
+    .line 22
+    .line 23
+    const/4 v0, 0x0
+
+    .line 24
+    if-eqz v1, :cond_0
+
+    .line 25
+    .line 26
+    const/high16 v0, -0x41800000    # -0.25f
+
+    .line 27
+    .line 28
+    :cond_0
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setTextSkewX(F)V
+
+    .line 29
+    .line 30
+    .line 31
+    iget v0, p0, LX/4VY;->A00:F
+
+    .line 32
+    .line 33
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    .line 34
+    .line 35
+    .line 36
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 37
+    .line 38
+    const/16 v0, 0x15
+
+    .line 39
+    .line 40
+    if-lt v1, v0, :cond_1
+
+    .line 41
+    .line 42
+    iget-boolean v0, p0, LX/4VY;->A0F:Z
+
+    .line 43
+    .line 44
+    if-eqz v0, :cond_1
+
+    .line 45
+    .line 46
+    iget v0, p0, LX/4VY;->A03:F
+
+    .line 47
+    .line 48
+    invoke-virtual {p2, v0}, Landroid/text/TextPaint;->setLetterSpacing(F)V
+
+    .line 49
+    .line 50
+    .line 51
+    :cond_1
+    return-void
 .end method

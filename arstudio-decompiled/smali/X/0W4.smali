@@ -1,524 +1,774 @@
-.class public abstract LX/0W4;
-.super Ljava/lang/Object;
+.class public final enum LX/0W4;
+.super Ljava/lang/Enum;
 .source ""
 
-# interfaces
-.implements Ljava/io/Closeable;
+
+# static fields
+.field public static final synthetic $ENTRIES:Lkotlin/enums/EnumEntries;
+
+.field public static final synthetic $VALUES:[LX/0W4;
+
+.field public static final enum ADDRESSES:LX/0W4;
+
+.field public static final enum ANALYTICS:LX/0W4;
+
+.field public static final Companion:LX/0W6;
+
+.field public static final enum DEBUG:LX/0W4;
+
+.field public static final enum FBNS_NOTIFICATION_STORE:LX/0W4;
+
+.field public static final enum FBNS_STATE:LX/0W4;
+
+.field public static final enum FLAGS:LX/0W4;
+
+.field public static final enum GATEKEEPERS:LX/0W4;
+
+.field public static final enum IDS:LX/0W4;
+
+.field public static final enum KEYPAIR:LX/0W4;
+
+.field public static final enum LAST_HOST:LX/0W4;
+
+.field public static final enum MQTT_CONFIG:LX/0W4;
+
+.field public static final enum MQTT_RADIO_ACTIVE_TIME:LX/0W4;
+
+.field public static final enum OXYGEN_FBNS_CONFIG:LX/0W4;
+
+.field public static final enum REGISTRATIONS:LX/0W4;
+
+.field public static final enum RETRY:LX/0W4;
+
+.field public static final RTI_PREFIX:Ljava/lang/String; = "rti.mqtt."
+
+.field public static final enum RUNTIME_PARAMS:LX/0W4;
+
+.field public static final enum THREE_P_AUTH_PACKAGE_NAME_CONFIG:LX/0W4;
+
+.field public static final enum THREE_P_AUTH_SIGNATURE_CONFIG:LX/0W4;
+
+.field public static final enum TOKEN_STORE:LX/0W4;
+
+
+# instance fields
+.field public final key:Ljava/lang/String;
+
+.field public final multiProc:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static final synthetic $values()[LX/0W4;
+    .locals 3
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x13
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+    new-array v2, v0, [LX/0W4;
+
+    sget-object v1, LX/0W4;->ADDRESSES:LX/0W4;
+
+    const/4 v0, 0x0
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->ANALYTICS:LX/0W4;
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->FBNS_NOTIFICATION_STORE:LX/0W4;
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->FBNS_STATE:LX/0W4;
+
+    const/4 v0, 0x3
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->FLAGS:LX/0W4;
+
+    const/4 v0, 0x4
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->IDS:LX/0W4;
+
+    const/4 v0, 0x5
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->KEYPAIR:LX/0W4;
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->OXYGEN_FBNS_CONFIG:LX/0W4;
+
+    const/4 v0, 0x7
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->REGISTRATIONS:LX/0W4;
+
+    const/16 v0, 0x8
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->RETRY:LX/0W4;
+
+    const/16 v0, 0x9
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->GATEKEEPERS:LX/0W4;
+
+    const/16 v0, 0xa
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->MQTT_RADIO_ACTIVE_TIME:LX/0W4;
+
+    const/16 v0, 0xb
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->TOKEN_STORE:LX/0W4;
+
+    const/16 v0, 0xc
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->RUNTIME_PARAMS:LX/0W4;
+
+    const/16 v0, 0xd
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->DEBUG:LX/0W4;
+
+    const/16 v0, 0xe
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->MQTT_CONFIG:LX/0W4;
+
+    const/16 v0, 0xf
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->LAST_HOST:LX/0W4;
+
+    const/16 v0, 0x10
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->THREE_P_AUTH_PACKAGE_NAME_CONFIG:LX/0W4;
+
+    const/16 v0, 0x11
+
+    aput-object v1, v2, v0
+
+    sget-object v1, LX/0W4;->THREE_P_AUTH_SIGNATURE_CONFIG:LX/0W4;
+
+    const/16 v0, 0x12
+
+    aput-object v1, v2, v0
+
+    return-object v2
 .end method
 
-.method public static final A00(LX/0Vt;Ljava/io/File;[B)V
-    .locals 17
+.method public static constructor <clinit>()V
+    .locals 6
 
     .line 0
-    const-string v7, ")"
+    const-string v2, "ADDRESSES"
 
     .line 1
     .line 2
-    const-string v6, " (writable: "
+    const/4 v5, 0x0
 
     .line 3
+    const-string v1, "address"
+
     .line 4
-    const-string v5, " write permission from directory "
-
     .line 5
+    new-instance v0, LX/0W4;
+
     .line 6
-    const-string v16, "Error removing "
-
     .line 7
-    .line 8
-    const-string v4, "SoLoader"
+    invoke-direct {v0, v2, v5, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
+    .line 8
     .line 9
     .line 10
-    const-string v1, "extracting DSO "
+    sput-object v0, LX/0W4;->ADDRESSES:LX/0W4;
 
     .line 11
     .line 12
-    move-object/from16 v11, p0
+    const-string v2, "ANALYTICS"
 
     .line 13
     .line 14
-    iget-object v0, v11, LX/0Vt;->A00:LX/0Vs;
+    const/4 v4, 0x1
 
     .line 15
+    const-string v1, "analytics"
+
     .line 16
-    iget-object v0, v0, LX/0Vs;->A01:Ljava/lang/String;
-
     .line 17
-    .line 18
-    invoke-static {v1, v0}, LX/00I;->A0E(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v0, LX/0W4;
 
+    .line 18
     .line 19
+    invoke-direct {v0, v2, v4, v1, v4}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
     .line 20
     .line 21
-    const-string v2, "fb-UnpackingSoSource"
-
     .line 22
-    .line 23
-    invoke-static {v2}, LX/0Q6;->A00(Ljava/lang/String;)V
+    sput-object v0, LX/0W4;->ANALYTICS:LX/0W4;
 
+    .line 23
     .line 24
+    const-string v3, "FBNS_NOTIFICATION_STORE"
+
     .line 25
     .line 26
-    move-object/from16 v8, p1
+    const/4 v2, 0x2
 
     .line 27
-    .line 28
-    invoke-static {v8, v0}, LX/002;->A02(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    const-string v1, "fbns_notification_store"
 
+    .line 28
     .line 29
+    new-instance v0, LX/0W4;
+
     .line 30
     .line 31
-    move-result-object v3
+    invoke-direct {v0, v3, v2, v1, v4}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
     .line 32
-    const/4 v9, 0x0
-
     .line 33
-    :try_start_0
-    invoke-static {v3}, LX/001;->A0A(Ljava/io/File;)Ljava/io/RandomAccessFile;
-
     .line 34
+    sput-object v0, LX/0W4;->FBNS_NOTIFICATION_STORE:LX/0W4;
+
     .line 35
     .line 36
-    move-result-object v10
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    const-string v3, "FBNS_STATE"
 
     .line 37
-    :try_start_1
-    iget-object v13, v11, LX/0Vt;->A01:Ljava/io/InputStream;
-
     .line 38
+    const/4 v2, 0x3
+
     .line 39
-    invoke-virtual {v13}, Ljava/io/InputStream;->available()I
+    const-string v1, "fbns_state"
 
     .line 40
     .line 41
-    .line 42
-    move-result v0
+    new-instance v0, LX/0W4;
 
+    .line 42
     .line 43
-    const/4 v11, 0x1
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
     .line 44
-    if-le v0, v11, :cond_0
-
     .line 45
     .line 46
-    invoke-virtual {v10}, Ljava/io/RandomAccessFile;->getFD()Ljava/io/FileDescriptor;
+    sput-object v0, LX/0W4;->FBNS_STATE:LX/0W4;
 
     .line 47
     .line 48
-    .line 49
-    move-result-object v12
+    const-string v3, "FLAGS"
 
+    .line 49
     .line 50
-    int-to-long v0, v0
+    const/4 v2, 0x4
 
     .line 51
-    invoke-static {v12, v0, v1}, LX/0Vf;->A06(Ljava/io/FileDescriptor;J)V
+    const-string v1, "flags"
 
     .line 52
     .line 53
-    .line 54
-    :cond_0
-    const v14, 0x7fffffff
+    new-instance v0, LX/0W4;
 
+    .line 54
     .line 55
+    invoke-direct {v0, v3, v2, v1, v4}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
     .line 56
     .line 57
-    const/4 v12, 0x0
-
     .line 58
-    :goto_0
-    move-object/from16 v15, p2
+    sput-object v0, LX/0W4;->FLAGS:LX/0W4;
 
     .line 59
     .line 60
-    array-length v1, v15
+    const-string v3, "IDS"
 
     .line 61
-    sub-int v0, v14, v12
-
     .line 62
+    const/4 v2, 0x5
+
     .line 63
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+    const-string v1, "ids"
 
     .line 64
     .line 65
-    .line 66
-    move-result v0
+    new-instance v0, LX/0W4;
 
+    .line 66
     .line 67
-    invoke-virtual {v13, v15, v9, v0}, Ljava/io/InputStream;->read([BII)I
+    invoke-direct {v0, v3, v2, v1, v4}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
     .line 68
     .line 69
     .line 70
-    move-result v1
+    sput-object v0, LX/0W4;->IDS:LX/0W4;
 
     .line 71
-    const/4 v0, -0x1
-
     .line 72
-    if-eq v1, v0, :cond_1
+    const-string v3, "KEYPAIR"
 
     .line 73
     .line 74
-    invoke-virtual {v10, v15, v9, v1}, Ljava/io/RandomAccessFile;->write([BII)V
+    const/4 v2, 0x6
 
     .line 75
+    const-string v1, "keypair"
+
     .line 76
     .line 77
-    add-int/2addr v12, v1
+    new-instance v0, LX/0W4;
 
     .line 78
-    if-ge v12, v14, :cond_1
-
     .line 79
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
     .line 80
-    goto :goto_0
-
     .line 81
-    :cond_1
-    invoke-virtual {v10}, Ljava/io/RandomAccessFile;->getFilePointer()J
-
     .line 82
+    sput-object v0, LX/0W4;->KEYPAIR:LX/0W4;
+
     .line 83
     .line 84
-    move-result-wide v0
+    const-string v3, "OXYGEN_FBNS_CONFIG"
 
     .line 85
-    invoke-virtual {v10, v0, v1}, Ljava/io/RandomAccessFile;->setLength(J)V
-
     .line 86
-    .line 87
-    .line 88
-    invoke-virtual {v3, v11, v9}, Ljava/io/File;->setExecutable(ZZ)Z
+    const/4 v2, 0x7
 
+    .line 87
+    const-string v1, "oxygen_fbns_config"
+
+    .line 88
     .line 89
+    new-instance v0, LX/0W4;
+
     .line 90
     .line 91
-    move-result v0
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
     .line 92
-    if-eqz v0, :cond_3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
     .line 93
     .line 94
-    :try_start_2
-    invoke-virtual {v10}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    sput-object v0, LX/0W4;->OXYGEN_FBNS_CONFIG:LX/0W4;
 
     .line 95
     .line 96
-    .line 97
-    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+    const-string v3, "REGISTRATIONS"
 
+    .line 97
     .line 98
+    const/16 v2, 0x8
+
     .line 99
     .line 100
-    move-result v0
+    const-string v1, "registrations"
 
     .line 101
-    if-eqz v0, :cond_2
-
     .line 102
-    .line 103
-    invoke-virtual {v3, v9}, Ljava/io/File;->setWritable(Z)Z
+    new-instance v0, LX/0W4;
 
+    .line 103
     .line 104
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
     .line 105
     .line 106
-    move-result v0
-
     .line 107
-    if-nez v0, :cond_2
+    sput-object v0, LX/0W4;->REGISTRATIONS:LX/0W4;
 
     .line 108
     .line 109
-    invoke-static/range {v16 .. v16}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "RETRY"
 
     .line 110
     .line 111
-    .line 112
-    move-result-object v1
+    const/16 v2, 0x9
 
+    .line 112
     .line 113
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, "retry"
 
     .line 114
     .line 115
-    .line 116
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, LX/0W4;
 
+    .line 116
     .line 117
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
     .line 118
     .line 119
-    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 120
+    sput-object v0, LX/0W4;->RETRY:LX/0W4;
+
     .line 121
     .line 122
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "GATEKEEPERS"
 
     .line 123
     .line 124
-    .line 125
-    invoke-virtual {v8}, Ljava/io/File;->canWrite()Z
+    const/16 v2, 0xa
 
+    .line 125
     .line 126
+    const-string v1, "gk"
+
     .line 127
     .line 128
-    move-result v0
+    new-instance v0, LX/0W4;
 
     .line 129
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
     .line 130
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
     .line 131
     .line 132
-    invoke-static {v7, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
     .line 133
+    sput-object v0, LX/0W4;->GATEKEEPERS:LX/0W4;
+
     .line 134
     .line 135
-    move-result-object v0
+    const-string v3, "MQTT_RADIO_ACTIVE_TIME"
 
     .line 136
-    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 137
+    const/16 v2, 0xb
+
     .line 138
     .line 139
-    :cond_2
-    return-void
+    const-string v1, "mqtt_radio_active_time"
 
     .line 140
-    :cond_3
-    :try_start_3
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
-
     .line 141
+    new-instance v0, LX/0W4;
+
     .line 142
     .line 143
-    move-result-object v1
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
     .line 144
-    const-string v0, "cannot make file executable: "
-
     .line 145
     .line 146
-    invoke-static {v3, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    sput-object v0, LX/0W4;->MQTT_RADIO_ACTIVE_TIME:LX/0W4;
 
     .line 147
     .line 148
-    .line 149
-    move-result-object v0
+    const-string v3, "TOKEN_STORE"
 
+    .line 149
     .line 150
-    invoke-static {v0}, LX/002;->A05(Ljava/lang/String;)Ljava/io/IOException;
+    const/16 v2, 0xc
 
     .line 151
     .line 152
-    .line 153
-    move-result-object v0
+    const-string v1, "token_store"
 
+    .line 153
     .line 154
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    new-instance v0, LX/0W4;
 
     .line 155
-    :catchall_0
-    move-exception v0
-
     .line 156
-    :try_start_4
-    invoke-virtual {v10}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
     .line 157
     .line 158
     .line 159
-    :catchall_1
-    :try_start_5
-    throw v0
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    sput-object v0, LX/0W4;->TOKEN_STORE:LX/0W4;
 
     .line 160
-    :catch_0
-    move-exception v10
-
     .line 161
-    :try_start_6
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    const-string v3, "RUNTIME_PARAMS"
 
     .line 162
     .line 163
-    .line 164
-    move-result-object v1
+    const/16 v2, 0xd
 
+    .line 164
     .line 165
-    const-string v0, "error extracting dso  "
+    const-string v1, "runtime_params"
 
     .line 166
     .line 167
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, LX/0W4;
 
     .line 168
     .line 169
-    .line 170
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
+    .line 170
     .line 171
     .line 172
+    sput-object v0, LX/0W4;->RUNTIME_PARAMS:LX/0W4;
+
     .line 173
-    const-string v0, " due to: "
-
     .line 174
-    .line 175
-    invoke-static {v10, v0, v1}, LX/001;->A0I(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    const-string v3, "DEBUG"
 
+    .line 175
     .line 176
+    const/16 v2, 0xe
+
     .line 177
     .line 178
-    move-result-object v0
+    const-string v1, "mqtt_debug"
 
     .line 179
-    invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 180
+    new-instance v0, LX/0W4;
+
     .line 181
     .line 182
-    invoke-static {v3}, LX/0Vf;->A04(Ljava/io/File;)V
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
     .line 183
     .line 184
     .line 185
-    throw v10
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    sput-object v0, LX/0W4;->DEBUG:LX/0W4;
 
     .line 186
-    :catchall_2
-    move-exception v2
-
     .line 187
-    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+    const-string v3, "MQTT_CONFIG"
 
     .line 188
     .line 189
-    .line 190
-    move-result v0
+    const/16 v2, 0xf
 
+    .line 190
     .line 191
-    if-eqz v0, :cond_4
+    const-string v1, "mqtt_config"
 
     .line 192
     .line 193
-    invoke-virtual {v3, v9}, Ljava/io/File;->setWritable(Z)Z
+    new-instance v0, LX/0W4;
 
     .line 194
     .line 195
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
     .line 196
-    move-result v0
-
     .line 197
-    if-nez v0, :cond_4
-
     .line 198
-    .line 199
-    invoke-static/range {v16 .. v16}, LX/001;->A0T(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, LX/0W4;->MQTT_CONFIG:LX/0W4;
 
+    .line 199
     .line 200
+    const-string v3, "LAST_HOST"
+
     .line 201
     .line 202
-    move-result-object v1
+    const/16 v2, 0x10
 
     .line 203
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
     .line 204
+    const-string v1, "mqtt_last_host"
+
     .line 205
     .line 206
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, LX/0W4;
 
     .line 207
     .line 208
-    .line 209
-    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v3, v2, v1, v5}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
+    .line 209
     .line 210
     .line 211
-    .line 212
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, LX/0W4;->LAST_HOST:LX/0W4;
 
+    .line 212
     .line 213
+    const-string v3, "THREE_P_AUTH_PACKAGE_NAME_CONFIG"
+
     .line 214
     .line 215
-    invoke-virtual {v8}, Ljava/io/File;->canWrite()Z
+    const/16 v2, 0x11
 
     .line 216
     .line 217
-    .line 218
-    move-result v0
+    const-string v1, "third_party_auth_pn_config"
 
+    .line 218
     .line 219
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    new-instance v0, LX/0W4;
 
     .line 220
     .line 221
-    .line 222
-    invoke-static {v7, v1}, LX/001;->A0K(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-direct {v0, v3, v2, v1, v4}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
 
+    .line 222
     .line 223
     .line 224
-    .line 225
-    move-result-object v0
+    sput-object v0, LX/0W4;->THREE_P_AUTH_PACKAGE_NAME_CONFIG:LX/0W4;
 
+    .line 225
     .line 226
-    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v3, "THREE_P_AUTH_SIGNATURE_CONFIG"
 
     .line 227
     .line 228
+    const/16 v2, 0x12
+
     .line 229
-    :cond_4
-    throw v2
+    .line 230
+    const-string v1, "third_party_auth_sig_config"
+
+    .line 231
+    .line 232
+    new-instance v0, LX/0W4;
+
+    .line 233
+    .line 234
+    invoke-direct {v0, v3, v2, v1, v4}, LX/0W4;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    .line 235
+    .line 236
+    .line 237
+    sput-object v0, LX/0W4;->THREE_P_AUTH_SIGNATURE_CONFIG:LX/0W4;
+
+    .line 238
+    .line 239
+    invoke-static {}, LX/0W4;->$values()[LX/0W4;
+
+    .line 240
+    .line 241
+    .line 242
+    move-result-object v0
+
+    .line 243
+    sput-object v0, LX/0W4;->$VALUES:[LX/0W4;
+
+    .line 244
+    .line 245
+    invoke-static {v0}, LX/13R;->A00([Ljava/lang/Enum;)LX/24n;
+
+    .line 246
+    .line 247
+    .line 248
+    move-result-object v0
+
+    .line 249
+    sput-object v0, LX/0W4;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    .line 250
+    .line 251
+    new-instance v0, LX/0W6;
+
+    .line 252
+    .line 253
+    invoke-direct {v0}, LX/0W6;-><init>()V
+
+    .line 254
+    .line 255
+    .line 256
+    sput-object v0, LX/0W4;->Companion:LX/0W6;
+
+    .line 257
+    .line 258
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Z)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 1
+    .line 2
+    .line 3
+    iput-object p3, p0, LX/0W4;->key:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    iput-boolean p4, p0, LX/0W4;->multiProc:Z
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public static getEntries()Lkotlin/enums/EnumEntries;
+    .locals 1
+
+    sget-object v0, LX/0W4;->$ENTRIES:Lkotlin/enums/EnumEntries;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)LX/0W4;
+    .locals 1
+
+    const-class v0, LX/0W4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, LX/0W4;
+
+    return-object v0
+.end method
+
+.method public static values()[LX/0W4;
+    .locals 1
+
+    sget-object v0, LX/0W4;->$VALUES:[LX/0W4;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [LX/0W4;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public abstract A01(Ljava/io/File;)V
+.method public final getKey()Ljava/lang/String;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0W4;->key:Ljava/lang/String;
+
+    .line 1
+    .line 2
+    return-object v0
 .end method
 
-.method public abstract A02()[LX/0Vs;
-.end method
+.method public final getMultiProc()Z
+    .locals 1
 
-.method public close()V
-    .locals 0
+    .line 0
+    iget-boolean v0, p0, LX/0W4;->multiProc:Z
 
-    return-void
+    .line 1
+    .line 2
+    return v0
 .end method

@@ -217,7 +217,7 @@
 
     .line 7
     .line 8
-    invoke-static {}, LX/0Yj;->A0q()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0v()[Ljava/lang/Object;
 
     .line 9
     .line 10
@@ -372,669 +372,662 @@
 
     .line 8
     .line 9
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1, v6}, LX/433;->A1a([Ljava/lang/Object;I)Z
 
     .line 10
     .line 11
     .line 12
-    move-result-object v0
+    move-result v5
 
     .line 13
-    const/4 v5, 0x0
-
-    .line 14
-    aput-object v0, v1, v5
-
-    .line 15
-    .line 16
     move/from16 v3, p2
 
-    .line 17
-    .line 18
+    .line 14
+    .line 15
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 19
-    .line 20
-    .line 21
+    .line 16
+    .line 17
+    .line 18
     move-result-object v0
 
-    .line 22
+    .line 19
     const/4 v10, 0x1
 
-    .line 23
+    .line 20
     aput-object v0, v1, v10
 
-    .line 24
-    .line 25
+    .line 21
+    .line 22
     const-string v0, "initPlayout(sampleRate=%d, channels=%d)"
 
+    .line 23
+    .line 24
+    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 25
     .line 26
     .line 27
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    mul-int/lit8 v1, p2, 0x2
 
     .line 28
     .line 29
-    .line 30
-    mul-int/lit8 v1, p2, 0x2
-
-    .line 31
-    .line 32
     div-int/lit8 v0, p1, 0x64
+
+    .line 30
+    .line 31
+    mul-int/2addr v1, v0
+
+    .line 32
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     .line 33
     .line 34
-    mul-int/2addr v1, v0
-
     .line 35
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
-
-    .line 36
-    .line 37
-    .line 38
     move-result-object v0
 
-    .line 39
+    .line 36
     iput-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mByteBuffer:Ljava/nio/ByteBuffer;
 
-    .line 40
-    .line 41
+    .line 37
+    .line 38
     iget-object v2, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 42
-    .line 43
+    .line 39
+    .line 40
     new-array v1, v10, [Ljava/lang/Object;
 
-    .line 44
-    .line 45
+    .line 41
+    .line 42
     invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    .line 46
-    .line 47
-    .line 48
+    .line 43
+    .line 44
+    .line 45
     move-result v0
 
-    .line 49
+    .line 46
     invoke-static {v1, v0, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 47
+    .line 48
+    .line 49
+    const-string v0, "mByteBuffer.capacity: %d"
 
     .line 50
     .line 51
-    .line 52
-    const-string v0, "mByteBuffer.capacity: %d"
-
-    .line 53
-    .line 54
     invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 55
-    .line 56
-    .line 57
+    .line 52
+    .line 53
+    .line 54
     const/4 v7, 0x4
 
-    .line 58
+    .line 55
     if-ne v3, v8, :cond_0
 
-    .line 59
-    .line 60
+    .line 56
+    .line 57
     const/16 v7, 0xc
 
-    .line 61
-    .line 62
+    .line 58
+    .line 59
     :cond_0
     iget-object v2, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mByteBuffer:Ljava/nio/ByteBuffer;
 
-    .line 63
-    .line 64
+    .line 60
+    .line 61
     iget-wide v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mNativeAudioDevice:J
 
+    .line 62
+    .line 63
+    invoke-direct {v11, v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->nativeCacheDirectPlayoutBufferAddress(Ljava/nio/ByteBuffer;J)V
+
+    .line 64
     .line 65
     .line 66
-    invoke-direct {v11, v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->nativeCacheDirectPlayoutBufferAddress(Ljava/nio/ByteBuffer;J)V
+    invoke-static {v6, v7, v8}, Landroid/media/AudioTrack;->getMinBufferSize(III)I
 
     .line 67
     .line 68
     .line 69
-    invoke-static {v6, v7, v8}, Landroid/media/AudioTrack;->getMinBufferSize(III)I
-
-    .line 70
-    .line 71
-    .line 72
     move-result v3
 
-    .line 73
+    .line 70
     iget-object v2, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 74
-    .line 75
+    .line 71
+    .line 72
     new-array v1, v10, [Ljava/lang/Object;
 
+    .line 73
+    .line 74
+    invoke-static {v1, v3, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 75
     .line 76
     .line 77
-    invoke-static {v1, v3, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+    const-string v0, "AudioTrack.getMinBufferSize: %d"
 
     .line 78
     .line 79
-    .line 80
-    const-string v0, "AudioTrack.getMinBufferSize: %d"
+    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 80
     .line 81
     .line 82
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    mul-int/lit8 v9, v3, 0x2
 
     .line 83
     .line 84
-    .line 85
-    mul-int/lit8 v9, v3, 0x2
-
-    .line 86
-    .line 87
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
+
+    .line 85
+    .line 86
+    const/4 v3, 0x0
+
+    .line 87
+    if-eqz v0, :cond_1
 
     .line 88
     .line 89
-    const/4 v3, 0x0
-
-    .line 90
-    if-eqz v0, :cond_1
-
-    .line 91
-    .line 92
     iget-object v2, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 93
-    .line 94
+    .line 90
+    .line 91
     new-array v1, v5, [Ljava/lang/Object;
 
-    .line 95
-    .line 96
+    .line 92
+    .line 93
     const-string v0, "initPlayout() called twice without stopPlayout()"
 
+    .line 94
+    .line 95
+    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->warning(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 96
     .line 97
     .line 98
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->warning(Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 99
     .line 100
-    .line 101
-    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
 
+    .line 101
     .line 102
     .line 103
-    invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
+    iput-object v3, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 104
     .line 105
-    .line 106
-    iput-object v3, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
-
-    .line 107
-    .line 108
     :cond_1
     if-gtz v9, :cond_2
 
+    .line 106
+    .line 107
+    invoke-static {}, LX/1kS;->A00()Z
+
+    .line 108
     .line 109
     .line 110
-    invoke-static {}, LX/1vZ;->A00()Z
-
-    .line 111
-    .line 112
-    .line 113
     move-result v0
 
-    .line 114
+    .line 111
     if-eqz v0, :cond_2
 
-    .line 115
-    .line 116
+    .line 112
+    .line 113
     sget-object v2, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->TAG:Ljava/lang/String;
 
-    .line 117
-    .line 118
+    .line 114
+    .line 115
     new-array v1, v10, [Ljava/lang/Object;
 
+    .line 116
+    .line 117
+    invoke-static {v1, v9, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 118
     .line 119
     .line 120
-    invoke-static {v1, v9, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+    const-string v0, "Audio Hardware failure getMinBufferSize returned [%d]"
 
     .line 121
     .line 122
-    .line 123
-    const-string v0, "Audio Hardware failure getMinBufferSize returned [%d]"
+    invoke-static {v2, v0, v1}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 123
     .line 124
     .line 125
-    invoke-static {v2, v0, v1}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 126
-    .line 127
-    .line 128
     return v5
 
-    .line 129
+    .line 126
     :cond_2
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mByteBuffer:Ljava/nio/ByteBuffer;
 
+    .line 127
+    .line 128
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+
+    .line 129
     .line 130
     .line 131
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+    move-result v0
 
     .line 132
+    invoke-static {v0, v9}, LX/0X3;->A1Y(II)Z
+
     .line 133
     .line 134
-    move-result v0
-
     .line 135
-    invoke-static {v0, v9}, LX/001;->A1P(II)Z
-
-    .line 136
-    .line 137
-    .line 138
     move-result v2
 
-    .line 139
+    .line 136
     new-array v1, v8, [Ljava/lang/Object;
 
-    .line 140
-    .line 141
+    .line 137
+    .line 138
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mByteBuffer:Ljava/nio/ByteBuffer;
 
-    .line 142
-    .line 143
+    .line 139
+    .line 140
     invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    .line 144
-    .line 145
-    .line 146
+    .line 141
+    .line 142
+    .line 143
     move-result v0
 
+    .line 144
+    invoke-static {v1, v0, v5, v9, v10}, LX/0X1;->A1T([Ljava/lang/Object;IIII)V
+
+    .line 145
+    .line 146
     .line 147
-    invoke-static {v1, v0, v5, v9, v10}, LX/0Yc;->A1V([Ljava/lang/Object;IIII)V
+    const-string v0, "Buffer size too small %d >= %d"
 
     .line 148
     .line 149
-    .line 150
-    const-string v0, "Buffer size too small %d >= %d"
-
-    .line 151
-    .line 152
     invoke-direct {v11, v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 153
-    .line 154
-    .line 155
+    .line 150
+    .line 151
+    .line 152
     :try_start_0
     new-instance v4, Landroid/media/AudioTrack;
 
+    .line 153
+    .line 154
+    invoke-direct/range {v4 .. v10}, Landroid/media/AudioTrack;-><init>(IIIIII)V
+
+    .line 155
     .line 156
     .line 157
-    invoke-direct/range {v4 .. v10}, Landroid/media/AudioTrack;-><init>(IIIIII)V
+    iput-object v4, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 158
     .line 159
-    .line 160
-    iput-object v4, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
-
-    .line 161
-    .line 162
     goto :goto_0
     :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 163
+    .line 160
     :catch_0
     move-exception v2
 
-    .line 164
+    .line 161
     iget-object v1, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 165
-    .line 166
-    const-string v0, "new AudioTrack Unknown excption"
+    .line 162
+    .line 163
+    const-string v0, "new AudioTrack illegal argument"
 
-    .line 167
-    .line 168
+    .line 164
+    .line 165
     invoke-virtual {v1, v0, v2}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 169
-    .line 170
-    .line 171
+    .line 166
+    .line 167
+    .line 168
     goto :goto_0
 
-    .line 172
+    .line 169
     :catch_1
     move-exception v2
 
-    .line 173
+    .line 170
     iget-object v1, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 174
-    .line 175
-    const-string v0, "new AudioTrack illegal argument"
+    .line 171
+    .line 172
+    const-string v0, "new AudioTrack Unknown excption"
 
-    .line 176
-    .line 177
+    .line 173
+    .line 174
     invoke-virtual {v1, v0, v2}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 178
-    .line 179
-    .line 180
+    .line 175
+    .line 176
+    .line 177
     :goto_0
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
-    .line 181
-    .line 182
+    .line 178
+    .line 179
     if-nez v0, :cond_3
 
-    .line 183
-    .line 184
+    .line 180
+    .line 181
     iget-object v2, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 185
-    .line 186
+    .line 182
+    .line 183
     new-array v1, v5, [Ljava/lang/Object;
 
-    .line 187
-    .line 188
+    .line 184
+    .line 185
     const-string v0, "Failed to create a new AudioTrack instance"
 
-    .line 189
-    .line 190
+    .line 186
+    .line 187
     invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 191
-    .line 192
-    .line 193
+    .line 188
+    .line 189
+    .line 190
     return v5
 
-    .line 194
+    .line 191
     :cond_3
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getState()I
 
-    .line 195
-    .line 196
-    .line 197
+    .line 192
+    .line 193
+    .line 194
     move-result v0
 
-    .line 198
+    .line 195
     if-eq v0, v10, :cond_4
 
-    .line 199
-    .line 200
+    .line 196
+    .line 197
     iget-object v2, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
-    .line 201
-    .line 202
+    .line 198
+    .line 199
     new-array v1, v10, [Ljava/lang/Object;
 
-    .line 203
-    .line 204
+    .line 200
+    .line 201
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
-    .line 205
-    .line 206
+    .line 202
+    .line 203
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getState()I
 
-    .line 207
-    .line 208
-    .line 209
+    .line 204
+    .line 205
+    .line 206
     move-result v0
 
-    .line 210
+    .line 207
     invoke-static {v1, v0, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 208
+    .line 209
+    .line 210
+    const-string v0, "AudioTrack is not initialized (%d)"
 
     .line 211
     .line 212
-    .line 213
-    const-string v0, "AudioTrack is not initialized (%d)"
+    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 213
     .line 214
     .line 215
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->error(Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 216
     .line 217
-    .line 218
-    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
 
+    .line 218
     .line 219
     .line 220
-    invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
+    iput-object v3, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 221
     .line 222
-    .line 223
-    iput-object v3, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
-
-    .line 224
-    .line 225
     return v5
 
-    .line 226
+    .line 223
     :cond_4
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
+    .line 224
+    .line 225
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getPlayState()I
+
+    .line 226
     .line 227
     .line 228
-    invoke-virtual {v0}, Landroid/media/AudioTrack;->getPlayState()I
+    move-result v0
 
     .line 229
+    invoke-static {v0, v10}, LX/001;->A1N(II)Z
+
     .line 230
     .line 231
-    move-result v0
-
     .line 232
-    invoke-static {v0, v10}, LX/001;->A1O(II)Z
-
-    .line 233
-    .line 234
-    .line 235
     move-result v2
 
-    .line 236
+    .line 233
     new-array v1, v10, [Ljava/lang/Object;
 
-    .line 237
-    .line 238
+    .line 234
+    .line 235
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
-    .line 239
-    .line 240
+    .line 236
+    .line 237
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getPlayState()I
 
-    .line 241
-    .line 242
-    .line 243
+    .line 238
+    .line 239
+    .line 240
     move-result v0
 
-    .line 244
+    .line 241
     invoke-static {v1, v0, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 242
+    .line 243
+    .line 244
+    const-string v0, "Incorrect play state %d"
 
     .line 245
     .line 246
-    .line 247
-    const-string v0, "Incorrect play state %d"
+    invoke-direct {v11, v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
 
+    .line 247
     .line 248
     .line 249
-    invoke-direct {v11, v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 250
     .line 251
-    .line 252
-    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getStreamType()I
 
+    .line 252
     .line 253
     .line 254
-    invoke-virtual {v0}, Landroid/media/AudioTrack;->getStreamType()I
+    move-result v0
 
     .line 255
+    invoke-static {v0}, LX/001;->A1L(I)Z
+
     .line 256
     .line 257
-    move-result v0
-
     .line 258
-    invoke-static {v0}, LX/001;->A1M(I)Z
-
-    .line 259
-    .line 260
-    .line 261
     move-result v2
 
-    .line 262
+    .line 259
     new-array v1, v10, [Ljava/lang/Object;
 
-    .line 263
-    .line 264
+    .line 260
+    .line 261
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
-    .line 265
-    .line 266
+    .line 262
+    .line 263
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getStreamType()I
 
-    .line 267
-    .line 268
-    .line 269
+    .line 264
+    .line 265
+    .line 266
     move-result v0
 
-    .line 270
+    .line 267
     invoke-static {v1, v0, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 268
+    .line 269
+    .line 270
+    const-string v0, "Incorrect stream typei %d"
 
     .line 271
     .line 272
-    .line 273
-    const-string v0, "Incorrect stream typei %d"
+    invoke-direct {v11, v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
 
+    .line 273
     .line 274
     .line 275
-    invoke-direct {v11, v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->debugAssert(ZLjava/lang/String;[Ljava/lang/Object;)V
+    iget-object v2, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
 
     .line 276
     .line 277
-    .line 278
-    iget-object v2, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mLogger:Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;
+    invoke-static {}, LX/0X7;->A0w()[Ljava/lang/Object;
 
+    .line 278
     .line 279
     .line 280
-    invoke-static {}, LX/0Yj;->A0r()[Ljava/lang/Object;
-
-    .line 281
-    .line 282
-    .line 283
     move-result-object v1
 
-    .line 284
+    .line 281
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
-    .line 285
-    .line 286
+    .line 282
+    .line 283
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getAudioFormat()I
 
-    .line 287
-    .line 288
-    .line 289
+    .line 284
+    .line 285
+    .line 286
     move-result v0
 
-    .line 290
+    .line 287
     invoke-static {v1, v0, v5}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 288
+    .line 289
+    .line 290
+    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 291
     .line 292
-    .line 293
-    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
-
-    .line 294
-    .line 295
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getChannelCount()I
 
-    .line 296
-    .line 297
-    .line 298
+    .line 293
+    .line 294
+    .line 295
     move-result v0
 
-    .line 299
+    .line 296
     invoke-static {v1, v0, v10}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 297
+    .line 298
+    .line 299
+    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 300
     .line 301
-    .line 302
-    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
-
-    .line 303
-    .line 304
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getSampleRate()I
 
-    .line 305
-    .line 306
-    .line 307
+    .line 302
+    .line 303
+    .line 304
     move-result v0
 
-    .line 308
+    .line 305
     invoke-static {v1, v0, v8}, LX/001;->A1A([Ljava/lang/Object;II)V
+
+    .line 306
+    .line 307
+    .line 308
+    const-string v0, "AudioTrack audio format: %d channels: %d sample rate: %d"
 
     .line 309
     .line 310
-    .line 311
-    const-string v0, "AudioTrack audio format: %d channels: %d sample rate: %d"
+    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 311
     .line 312
     .line 313
-    invoke-virtual {v2, v0, v1}, Lorg/webrtc/legacy/voiceengine/WebRtcEngineLogger;->local(Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
     .line 314
     .line 315
-    .line 316
-    iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
-
-    .line 317
-    .line 318
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getSampleRate()I
 
-    .line 319
-    .line 320
-    .line 321
+    .line 316
+    .line 317
+    .line 318
     move-result v12
 
-    .line 322
+    .line 319
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mAudioTrack:Landroid/media/AudioTrack;
 
-    .line 323
-    .line 324
+    .line 320
+    .line 321
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getChannelCount()I
 
-    .line 325
-    .line 326
-    .line 327
+    .line 322
+    .line 323
+    .line 324
     move-result v13
 
-    .line 328
+    .line 325
     iget-object v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mContext:Landroid/content/Context;
 
-    .line 329
-    .line 330
+    .line 326
+    .line 327
     invoke-static {v0}, Lorg/webrtc/legacy/voiceengine/WebRtcAudioUtils;->isLowLatencyOutputSupported(Landroid/content/Context;)Z
 
-    .line 331
-    .line 332
-    .line 333
+    .line 328
+    .line 329
+    .line 330
     move-result v14
 
-    .line 334
+    .line 331
     iget-wide v0, v11, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->mNativeAudioDevice:J
+
+    .line 332
+    .line 333
+    move v15, v9
+
+    .line 334
+    move-wide/from16 v16, v0
 
     .line 335
     .line 336
-    move v15, v9
-
-    .line 337
-    move-wide/from16 v16, v0
-
-    .line 338
-    .line 339
     invoke-direct/range {v11 .. v17}, Lorg/webrtc/legacy/voiceengine/WebRtcCustomAudioTrack;->nativeCachePlayoutAudioParameters(IIZIJ)V
 
-    .line 340
-    .line 341
-    .line 342
+    .line 337
+    .line 338
+    .line 339
     return v10
 .end method
 
@@ -1133,7 +1126,7 @@
     const/4 v3, 0x1
 
     .line 35
-    invoke-static {v1, v0}, LX/001;->A1O(II)Z
+    invoke-static {v1, v0}, LX/001;->A1N(II)Z
 
     .line 36
     .line 37
@@ -1158,7 +1151,7 @@
 
     .line 47
     .line 48
-    invoke-static {v0}, LX/001;->A1T(Ljava/lang/Object;)Z
+    invoke-static {v0}, LX/001;->A1R(Ljava/lang/Object;)Z
 
     .line 49
     .line 50
@@ -1248,7 +1241,7 @@
 
     .line 1
     .line 2
-    invoke-static {}, LX/0Yj;->A0q()[Ljava/lang/Object;
+    invoke-static {}, LX/0X7;->A0v()[Ljava/lang/Object;
 
     .line 3
     .line 4

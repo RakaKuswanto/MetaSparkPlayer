@@ -20,9 +20,9 @@
 # instance fields
 .field public A00:J
 
-.field public A01:LX/6K2;
+.field public A01:LX/2iq;
 
-.field public A02:LX/6J4;
+.field public A02:LX/2vv;
 
 .field public final A03:Lcom/facebook/common/perftest/PerfTestConfig;
 
@@ -67,11 +67,11 @@
     .locals 4
 
     .line 0
-    sget v0, LX/2eq;->A8o:I
+    sget v0, LX/2I6;->A5p:I
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 3
     .line 4
@@ -83,11 +83,11 @@
 
     .line 7
     .line 8
-    sget v0, LX/2eq;->A8p:I
+    sget v0, LX/2I6;->A5q:I
 
     .line 9
     .line 10
-    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+    invoke-static {v0}, LX/3Fc;->A03(I)Ljava/lang/Object;
 
     .line 11
     .line 12
@@ -95,7 +95,7 @@
     move-result-object v2
 
     .line 14
-    check-cast v2, LX/6K2;
+    check-cast v2, LX/2iq;
 
     .line 15
     .line 16
@@ -112,7 +112,7 @@
 
     .line 22
     .line 23
-    sget-boolean v0, LX/1ib;->A01:Z
+    sget-boolean v0, LX/2Xp;->A01:Z
 
     .line 24
     .line 25
@@ -125,20 +125,20 @@
 
     .line 29
     .line 30
-    iput-object v2, p0, Lcom/facebook/common/perftest/DrawFrameLogger;->A01:LX/6K2;
+    iput-object v2, p0, Lcom/facebook/common/perftest/DrawFrameLogger;->A01:LX/2iq;
 
     .line 31
     .line 32
-    new-instance v0, LX/3F6;
+    new-instance v0, LX/2wL;
 
     .line 33
     .line 34
-    invoke-direct {v0, p0}, LX/3F6;-><init>(Lcom/facebook/common/perftest/DrawFrameLogger;)V
+    invoke-direct {v0, p0}, LX/2wL;-><init>(Lcom/facebook/common/perftest/DrawFrameLogger;)V
 
     .line 35
     .line 36
     .line 37
-    iput-object v0, p0, Lcom/facebook/common/perftest/DrawFrameLogger;->A02:LX/6J4;
+    iput-object v0, p0, Lcom/facebook/common/perftest/DrawFrameLogger;->A02:LX/2vv;
 
     .line 38
     .line 39
@@ -221,15 +221,15 @@
 .end method
 
 .method public static getFrameRateLogJSON()Lorg/json/JSONObject;
-    .locals 11
+    .locals 10
 
     .line 0
-    invoke-static {}, LX/002;->A0M()Lorg/json/JSONObject;
+    invoke-static {}, LX/002;->A0D()Lorg/json/JSONObject;
 
     .line 1
     .line 2
     .line 3
-    move-result-object v4
+    move-result-object v5
 
     .line 4
     sget-wide v1, Lcom/facebook/common/perftest/DrawFrameLogger;->A04:J
@@ -241,52 +241,52 @@
     .line 7
     .line 8
     .line 9
-    invoke-virtual {v4, v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v5, v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     .line 10
     .line 11
     .line 12
-    invoke-static {}, LX/0Yj;->A0n()Lorg/json/JSONArray;
+    invoke-static {}, LX/0X7;->A0q()Lorg/json/JSONArray;
 
     .line 13
     .line 14
     .line 15
-    move-result-object v6
+    move-result-object v7
 
     .line 16
-    invoke-static {}, LX/0Yj;->A0n()Lorg/json/JSONArray;
+    invoke-static {}, LX/0X7;->A0q()Lorg/json/JSONArray;
 
     .line 17
     .line 18
     .line 19
-    move-result-object v5
+    move-result-object v6
 
     .line 20
-    invoke-static {}, LX/0Yj;->A0n()Lorg/json/JSONArray;
+    invoke-static {}, LX/0X7;->A0q()Lorg/json/JSONArray;
 
     .line 21
     .line 22
     .line 23
-    move-result-object v3
+    move-result-object v4
 
     .line 24
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 25
     :goto_0
-    sget-object v1, Lcom/facebook/common/perftest/DrawFrameLogger;->A09:[J
+    sget-object v0, Lcom/facebook/common/perftest/DrawFrameLogger;->A09:[J
 
     .line 26
     .line 27
-    aget-wide v9, v1, v2
+    aget-wide v1, v0, v3
 
     .line 28
     .line 29
-    const-wide/16 v7, 0x0
+    const-wide/16 v8, 0x0
 
     .line 30
     .line 31
-    cmp-long v0, v9, v7
+    cmp-long v0, v1, v8
 
     .line 32
     .line 33
@@ -294,86 +294,82 @@
 
     .line 34
     .line 35
-    aget-wide v0, v1, v2
+    invoke-virtual {v7, v3, v1, v2}, Lorg/json/JSONArray;->put(IJ)Lorg/json/JSONArray;
 
     .line 36
     .line 37
-    invoke-virtual {v6, v2, v0, v1}, Lorg/json/JSONArray;->put(IJ)Lorg/json/JSONArray;
-
     .line 38
+    sget-object v0, Lcom/facebook/common/perftest/DrawFrameLogger;->A08:[J
+
     .line 39
     .line 40
-    sget-object v0, Lcom/facebook/common/perftest/DrawFrameLogger;->A08:[J
+    aget-wide v0, v0, v3
 
     .line 41
     .line 42
-    aget-wide v0, v0, v2
+    invoke-virtual {v6, v3, v0, v1}, Lorg/json/JSONArray;->put(IJ)Lorg/json/JSONArray;
 
     .line 43
     .line 44
-    invoke-virtual {v5, v2, v0, v1}, Lorg/json/JSONArray;->put(IJ)Lorg/json/JSONArray;
-
     .line 45
+    sget-object v0, Lcom/facebook/common/perftest/DrawFrameLogger;->A07:[J
+
     .line 46
     .line 47
-    sget-object v0, Lcom/facebook/common/perftest/DrawFrameLogger;->A07:[J
+    aget-wide v0, v0, v3
 
     .line 48
     .line 49
-    aget-wide v0, v0, v2
+    invoke-virtual {v4, v3, v0, v1}, Lorg/json/JSONArray;->put(IJ)Lorg/json/JSONArray;
 
     .line 50
     .line 51
-    invoke-virtual {v3, v2, v0, v1}, Lorg/json/JSONArray;->put(IJ)Lorg/json/JSONArray;
-
     .line 52
+    add-int/lit8 v3, v3, 0x1
+
     .line 53
     .line 54
-    add-int/lit8 v2, v2, 0x1
+    const/16 v0, 0x1770
 
     .line 55
     .line 56
-    const/16 v0, 0x1770
+    if-ge v3, v0, :cond_0
 
     .line 57
     .line 58
-    if-ge v2, v0, :cond_0
-
-    .line 59
-    .line 60
     goto :goto_0
 
-    .line 61
+    .line 59
     :cond_0
     const-string/jumbo v0, "frameTimestampBuffer"
 
+    .line 60
+    .line 61
     .line 62
+    invoke-virtual {v5, v0, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
     .line 63
     .line 64
-    invoke-virtual {v4, v0, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
     .line 65
-    .line 66
-    .line 67
     const-string/jumbo v0, "frameSystemTimeBuffer"
 
+    .line 66
+    .line 67
     .line 68
+    invoke-virtual {v5, v0, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
     .line 69
     .line 70
-    invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
     .line 71
-    .line 72
-    .line 73
     const-string/jumbo v0, "frameElapsedMsBuffer"
 
+    .line 72
+    .line 73
     .line 74
+    invoke-virtual {v5, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
     .line 75
     .line 76
-    invoke-virtual {v4, v0, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
     .line 77
-    .line 78
-    .line 79
-    return-object v4
+    return-object v5
 .end method

@@ -3,11 +3,69 @@
     <plurals name="__external__bondi_personalized_footer_facebook_like_count">
         <item quantity="other">%1$s допаѓања на страница</item>
     </plurals>
-    <plurals name="__external__pages_surface_info_subtitle_like">
-        <item quantity="other">%1$s допаѓања</item>
+    <plurals name="time_days_ago">
+        <item quantity="other">пред %1$d д.</item>
+    </plurals>
+    <plurals name="time_days_from_now">
+        <item quantity="other">%1$d дена</item>
+    </plurals>
+    <plurals name="time_duration_days">
+        <item quantity="other">%1$d дена</item>
+    </plurals>
+    <plurals name="time_duration_hours">
+        <item quantity="other">%1$d ч.</item>
+    </plurals>
+    <plurals name="time_duration_minutes">
+        <item quantity="other">%1$d мин.</item>
+    </plurals>
+    <plurals name="time_duration_months">
+        <item quantity="other">%1$d месеци</item>
+    </plurals>
+    <plurals name="time_duration_seconds">
+        <item quantity="other">%1$d секунди</item>
+    </plurals>
+    <plurals name="time_duration_weeks">
+        <item quantity="other">%1$d нед.</item>
+    </plurals>
+    <plurals name="time_duration_x_more_days">
+        <item quantity="other">Уште %1$d дена</item>
+    </plurals>
+    <plurals name="time_duration_x_more_hours">
+        <item quantity="other">уште %1$d часа</item>
+        <item quantity="one">уште %1$d час</item>
+    </plurals>
+    <plurals name="time_duration_x_more_minutes">
+        <item quantity="other">Уште %1$d минути</item>
+    </plurals>
+    <plurals name="time_duration_x_more_months">
+        <item quantity="other">уште %1$d месеци</item>
+    </plurals>
+    <plurals name="time_duration_x_more_seconds">
+        <item quantity="other">Уште %1$d сек.</item>
+    </plurals>
+    <plurals name="time_duration_x_more_weeks">
+        <item quantity="other">уште %1$d недели</item>
+    </plurals>
+    <plurals name="time_duration_x_more_years">
+        <item quantity="other">Уште %1$d години</item>
+    </plurals>
+    <plurals name="time_duration_years">
+        <item quantity="other">%1$d години</item>
     </plurals>
     <plurals name="time_hours_ago">
         <item quantity="other">пред %1$d ч.</item>
+    </plurals>
+    <plurals name="time_hours_ago_short">
+        <item quantity="other">%1$d ч.</item>
+    </plurals>
+    <plurals name="time_hours_ago_short_stories_style">
+        <item quantity="other">%1$d ч.</item>
+    </plurals>
+    <plurals name="time_hours_from_now_short">
+        <item quantity="other">пред %1$d ч.</item>
+    </plurals>
+    <plurals name="time_hrs_ago_short">
+        <item quantity="other">Пред %1$d ч.</item>
     </plurals>
     <plurals name="time_in_x_hours">
         <item quantity="other">Уште %1$d часа</item>
@@ -15,7 +73,52 @@
     <plurals name="time_in_x_minutes">
         <item quantity="other">%1$d минути од сега</item>
     </plurals>
+    <plurals name="time_mins_ago_short">
+        <item quantity="other">Пред %1$d мин.</item>
+    </plurals>
     <plurals name="time_minutes_ago">
         <item quantity="other">пред %1$d мин.</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short">
+        <item quantity="other">%1$d мин.</item>
+    </plurals>
+    <plurals name="time_minutes_ago_short_stories_style">
+        <item quantity="other">%1$d мин.</item>
+    </plurals>
+    <plurals name="time_months_ago">
+        <item quantity="other">пред %1$d мес.</item>
+    </plurals>
+    <plurals name="time_seconds_ago">
+        <item quantity="other">пред %1$d секунди</item>
+    </plurals>
+    <plurals name="time_weeks_ago">
+        <item quantity="other">пред %1$d нед.</item>
+    </plurals>
+    <plurals name="time_x_hours_left">
+        <item quantity="other">Уште%1$d ч.</item>
+    </plurals>
+    <plurals name="time_x_minutes_left">
+        <item quantity="other">Уште %1$d мин.</item>
+    </plurals>
+    <plurals name="time_years_ago">
+        <item quantity="other">пред %1$d год.</item>
+    </plurals>
+    <plurals name="visited_days_ago">
+        <item quantity="other">Го посети ова пред %1$d дена</item>
+    </plurals>
+    <plurals name="visited_hours_ago">
+        <item quantity="other">Го посети ова пред %1$d часа</item>
+    </plurals>
+    <plurals name="visited_minutes_ago">
+        <item quantity="other">Посети пред %1$d минути</item>
+    </plurals>
+    <plurals name="visited_months_ago">
+        <item quantity="other">Го посети ова пред %1$d месеци.</item>
+    </plurals>
+    <plurals name="visited_weeks_ago">
+        <item quantity="other">Го посети ова пред %1$d седмици</item>
+    </plurals>
+    <plurals name="visited_years_ago">
+        <item quantity="other">Го посети ова пред %1$d години</item>
     </plurals>
 </resources>

@@ -1,63 +1,48 @@
 .class public final LX/31f;
-.super Ljava/lang/Object;
+.super LX/3Q8;
 .source ""
 
-# interfaces
-.implements LX/1ij;
+
+# instance fields
+.field public final synthetic A00:Landroid/net/Uri;
+
+.field public final synthetic A01:LX/31r;
+
+.field public final synthetic A02:LX/31Z;
+
+.field public final synthetic A03:LX/3Op;
+
+.field public final synthetic A04:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/net/Uri;LX/31r;LX/31Z;LX/3Op;Ljava/lang/String;)V
     .locals 0
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, LX/31f;->A01:LX/31r;
 
     .line 1
     .line 2
-    .line 3
-    return-void
-.end method
-
-
-# virtual methods
-.method public final ADa()I
-    .locals 1
-
-    const v0, 0xfe06
-
-    return v0
-.end method
-
-.method public final AWH(I)V
-    .locals 2
-
-    .line 0
-    const-class v0, LX/3ZU;
-
-    .line 1
-    .line 2
-    invoke-static {v0}, LX/1z6;->A0W(Ljava/lang/Class;)Ljava/lang/Object;
+    iput-object p3, p0, LX/31f;->A02:LX/31Z;
 
     .line 3
     .line 4
-    .line 5
-    move-result-object v1
+    iput-object p1, p0, LX/31f;->A00:Landroid/net/Uri;
 
+    .line 5
     .line 6
-    check-cast v1, LX/31g;
+    iput-object p4, p0, LX/31f;->A03:LX/3Op;
 
     .line 7
     .line 8
-    const/4 v0, 0x0
+    iput-object p5, p0, LX/31f;->A04:Ljava/lang/String;
 
     .line 9
-    iput-boolean v0, v1, LX/31g;->A01:Z
-
     .line 10
-    .line 11
-    iput-boolean v0, v1, LX/31g;->A03:Z
+    invoke-direct {p0}, LX/3Q8;-><init>()V
 
+    .line 11
     .line 12
     .line 13
     return-void

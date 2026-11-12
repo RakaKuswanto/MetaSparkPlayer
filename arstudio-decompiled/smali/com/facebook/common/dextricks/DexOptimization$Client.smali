@@ -24,49 +24,48 @@
     .locals 4
 
     .line 0
-    invoke-static {p0}, LX/0J5;->A01(Landroid/content/Context;)V
+    invoke-static {p0}, LX/0Hy;->A00(Landroid/content/Context;)LX/0Hy;
 
     .line 1
     .line 2
     .line 3
-    sget-object v0, LX/0J5;->A07:LX/0J5;
+    move-result-object v0
 
     .line 4
-    .line 5
-    invoke-static {p0, p1, v0}, Lcom/facebook/common/dextricks/DexOptimization$Client;->getShouldDisableRestartProcessAfterDexOpt(Landroid/content/Context;Lcom/facebook/common/dextricks/DexStore;LX/0J5;)Z
+    invoke-static {p0, p1, v0}, Lcom/facebook/common/dextricks/DexOptimization$Client;->getShouldDisableRestartProcessAfterDexOpt(Landroid/content/Context;Lcom/facebook/common/dextricks/DexStore;LX/0Hy;)Z
 
+    .line 5
     .line 6
     .line 7
-    .line 8
     move-result v3
 
+    .line 8
+    iget v2, v0, LX/0Hy;->A00:I
+
     .line 9
-    iget v2, v0, LX/0J5;->A00:I
-
     .line 10
-    .line 11
-    iget-boolean v0, v0, LX/0J5;->A03:Z
+    iget-boolean v0, v0, LX/0Hy;->A05:Z
 
+    .line 11
     .line 12
-    .line 13
     new-instance v1, Lcom/facebook/common/dextricks/DexOptimizationMessageHandler;
 
+    .line 13
     .line 14
-    .line 15
     invoke-direct {v1, p0, v3, v2, v0}, Lcom/facebook/common/dextricks/DexOptimizationMessageHandler;-><init>(Landroid/content/Context;ZIZ)V
 
+    .line 15
     .line 16
     .line 17
-    .line 18
     new-instance v0, Landroid/os/Messenger;
 
+    .line 18
     .line 19
-    .line 20
     invoke-direct {v0, v1}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
 
+    .line 20
     .line 21
     .line 22
-    .line 23
     return-object v0
 .end method
 
@@ -138,11 +137,11 @@
     return-object v0
 .end method
 
-.method public static getShouldDisableRestartProcessAfterDexOpt(Landroid/content/Context;Lcom/facebook/common/dextricks/DexStore;LX/0J5;)Z
+.method public static getShouldDisableRestartProcessAfterDexOpt(Landroid/content/Context;Lcom/facebook/common/dextricks/DexStore;LX/0Hy;)Z
     .locals 2
 
     .line 0
-    iget-boolean v0, p2, LX/0J5;->A01:Z
+    iget-boolean v0, p2, LX/0Hy;->A01:Z
 
     .line 1
     .line 2
@@ -263,7 +262,7 @@
     move-result-object v0
 
     .line 36
-    invoke-static {p0, v5, v3, v0}, LX/01L;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    invoke-static {p0, v5, v3, v0}, LX/01T;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
 
     .line 37
     .line 38
@@ -278,7 +277,7 @@
     move-exception v1
 
     .line 41
-    invoke-static {v1}, LX/002;->A0R(Ljava/lang/Throwable;)Z
+    invoke-static {v1}, LX/001;->A1V(Ljava/lang/Throwable;)Z
 
     .line 42
     .line 43

@@ -2,55 +2,117 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/25R;
 
-# static fields
-.field public static final A00:LX/1b2;
 
-.field public static final A01:LX/1b2;
+# instance fields
+.field public final A00:LX/1ry;
+
+.field public final A01:Ljava/util/concurrent/ConcurrentMap;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 4
 
     .line 0
-    sget-object v1, LX/1b0;->A04:LX/1b2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1
     .line 2
-    const-string/jumbo v0, "graph_cursor/"
-
     .line 3
+    const/16 v3, 0x10
+
     .line 4
     .line 5
-    invoke-static {v1, v0}, LX/1b3;->A06(LX/1b3;Ljava/lang/String;)LX/1b2;
+    const/high16 v2, 0x3f400000    # 0.75f
 
     .line 6
     .line 7
+    const/4 v1, 0x4
+
     .line 8
-    move-result-object v1
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     .line 9
-    sput-object v1, LX/25Q;->A01:LX/1b2;
-
     .line 10
-    .line 11
-    const-string/jumbo v0, "flat_buffer_corrupt_flag"
+    invoke-direct {v0, v3, v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(IFI)V
 
+    .line 11
     .line 12
     .line 13
-    .line 14
-    invoke-static {v1, v0}, LX/1b3;->A06(LX/1b3;Ljava/lang/String;)LX/1b2;
+    iput-object v0, p0, LX/25Q;->A01:Ljava/util/concurrent/ConcurrentMap;
 
+    .line 14
     .line 15
+    const/16 v1, 0x14
+
     .line 16
     .line 17
-    move-result-object v0
+    new-instance v0, LX/1ry;
 
     .line 18
-    sput-object v0, LX/25Q;->A00:LX/1b2;
+    .line 19
+    invoke-direct {v0, v1}, LX/1ry;-><init>(I)V
+
+    .line 20
+    .line 21
+    .line 22
+    iput-object v0, p0, LX/25Q;->A00:LX/1ry;
+
+    .line 23
+    .line 24
+    return-void
+.end method
+
+
+# virtual methods
+.method public final ADr()Ljava/util/List;
+    .locals 2
+
+    .line 0
+    invoke-static {}, LX/0X7;->A0g()Ljava/util/LinkedList;
+
+    .line 1
+    .line 2
+    .line 3
+    move-result-object v1
+
+    .line 4
+    iget-object v0, p0, LX/25Q;->A00:LX/1ry;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, LX/1ry;->A00()Ljava/util/ArrayList;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v0
+
+    .line 10
+    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    .line 11
+    .line 12
+    .line 13
+    iget-object v0, p0, LX/25Q;->A01:Ljava/util/concurrent/ConcurrentMap;
+
+    .line 14
+    .line 15
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
 
     .line 19
+    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
     .line 20
-    return-void
+    .line 21
+    .line 22
+    return-object v1
 .end method

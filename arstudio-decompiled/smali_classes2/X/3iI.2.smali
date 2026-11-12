@@ -1,3 +1,33 @@
-.class public abstract LX/3iI;
-.super Ljava/lang/Object;
+.class public final LX/3iI;
+.super LX/3iH;
 .source ""
+
+
+# static fields
+.field public static final A00:LX/3iK;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LX/3iI;
+
+    invoke-direct {v0}, LX/3iI;-><init>()V
+
+    sput-object v0, LX/3iI;->A00:LX/3iK;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, LX/3iH;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method

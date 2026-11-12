@@ -1,17 +1,43 @@
-.class public final LX/3L4;
-.super LX/3L5;
+.class public abstract LX/3L4;
+.super Ljava/lang/Object;
 .source ""
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static A00(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
     .line 0
-    invoke-direct {p0}, LX/3L5;-><init>()V
+    if-eq p0, p1, :cond_0
 
     .line 1
     .line 2
+    if-eqz p0, :cond_1
+
     .line 3
-    return-void
+    .line 4
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 5
+    .line 6
+    .line 7
+    move-result p0
+
+    .line 8
+    if-eqz p0, :cond_1
+
+    .line 9
+    .line 10
+    :cond_0
+    const/4 p0, 0x1
+
+    .line 11
+    return p0
+
+    .line 12
+    :cond_1
+    const/4 p0, 0x0
+
+    .line 13
+    return p0
 .end method

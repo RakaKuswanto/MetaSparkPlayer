@@ -1,153 +1,79 @@
-.class public final LX/1JO;
-.super Ljava/lang/Object;
+.class public final LX/1Jo;
+.super Ljava/lang/RuntimeException;
 .source ""
 
 
 # direct methods
-.method public static final A00(Lcom/facebook/graphql/modelutil/GQLTypeModelWTreeShape1S0000000;)Z
-    .locals 4
+.method public constructor <init>(IIII)V
+    .locals 2
 
     .line 0
-    const/4 v3, 0x0
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 1
-    if-eqz p0, :cond_0
-
     .line 2
     .line 3
-    const v0, -0x41844b7c    # -0.2458058f
+    move-result-object v1
 
     .line 4
+    const-string v0, "Pool hard cap violation? Hard cap = "
+
     .line 5
     .line 6
-    invoke-virtual {p0, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0K(I)Z
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
     .line 8
     .line 9
-    move-result v0
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 10
-    if-eqz v0, :cond_0
-
     .line 11
     .line 12
-    const v2, -0x513fc49f
+    const-string v0, " Used size = "
 
     .line 13
     .line 14
-    .line 15
-    const-class v1, Lcom/facebook/graphql/modelutil/GQLTypeModelWTreeShape1S0000000;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 15
     .line 16
     .line 17
-    const v0, -0x40cfb30d
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 18
     .line 19
     .line 20
-    invoke-virtual {p0, v2, v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0E(ILjava/lang/Class;I)Lcom/google/common/collect/ImmutableList;
+    const-string v0, " Free size = "
 
     .line 21
     .line 22
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     .line 23
-    move-result-object v1
-
     .line 24
-    invoke-static {v1}, LX/0PS;->A03(Ljava/lang/Object;)V
-
     .line 25
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     .line 26
     .line 27
-    instance-of v0, v1, Ljava/util/Collection;
-
     .line 28
+    const-string v0, " Request size = "
+
     .line 29
-    if-eqz v0, :cond_1
-
     .line 30
-    .line 31
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-static {v0, v1, p4}, LX/001;->A0P(Ljava/lang/String;Ljava/lang/StringBuilder;I)Ljava/lang/String;
 
+    .line 31
     .line 32
     .line 33
+    move-result-object v0
+
     .line 34
-    move-result v0
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     .line 35
-    if-eqz v0, :cond_1
-
     .line 36
     .line 37
-    :cond_0
-    return v3
-
-    .line 38
-    :cond_1
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
-
-    .line 39
-    .line 40
-    .line 41
-    move-result-object v2
-
-    .line 42
-    :cond_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 43
-    .line 44
-    .line 45
-    move-result v0
-
-    .line 46
-    if-eqz v0, :cond_0
-
-    .line 47
-    .line 48
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 49
-    .line 50
-    .line 51
-    move-result-object v1
-
-    .line 52
-    check-cast v1, Lcom/facebook/graphql/modelutil/BaseModelWithTree;
-
-    .line 53
-    .line 54
-    const v0, -0x4169f1a6
-
-    .line 55
-    .line 56
-    .line 57
-    invoke-virtual {v1, v0}, Lcom/facebook/graphql/modelutil/BaseModelWithTree;->A0I(I)Ljava/lang/String;
-
-    .line 58
-    .line 59
-    .line 60
-    move-result-object v1
-
-    .line 61
-    const-string v0, "asr"
-
-    .line 62
-    .line 63
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 64
-    .line 65
-    .line 66
-    move-result v0
-
-    .line 67
-    if-eqz v0, :cond_2
-
-    .line 68
-    .line 69
-    const/4 v3, 0x1
-
-    .line 70
-    return v3
+    return-void
 .end method

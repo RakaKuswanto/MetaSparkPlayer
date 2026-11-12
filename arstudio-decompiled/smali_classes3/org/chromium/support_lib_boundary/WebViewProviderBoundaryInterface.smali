@@ -13,6 +13,9 @@
 .method public abstract createWebMessageChannel()[Ljava/lang/reflect/InvocationHandler;
 .end method
 
+.method public abstract getProfile()Ljava/lang/reflect/InvocationHandler;
+.end method
+
 .method public abstract getWebChromeClient()Landroid/webkit/WebChromeClient;
 .end method
 
@@ -32,6 +35,9 @@
 .end method
 
 .method public abstract removeWebMessageListener(Ljava/lang/String;)V
+.end method
+
+.method public abstract setProfile(Ljava/lang/String;)V
 .end method
 
 .method public abstract setWebViewRendererClient(Ljava/lang/reflect/InvocationHandler;)V

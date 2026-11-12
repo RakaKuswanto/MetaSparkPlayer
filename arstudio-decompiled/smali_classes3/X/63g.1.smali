@@ -1,41 +1,158 @@
-.class public interface abstract LX/63g;
+.class public final LX/63g;
 .super Ljava/lang/Object;
 .source ""
 
 
-# virtual methods
-.method public abstract AWm(Lcom/google/android/exoplayer2/Format;I)V
+# instance fields
+.field public A00:LX/68D;
+
+.field public A01:Z
+
+.field public A02:I
+
+.field public A03:I
+
+.field public final A04:Landroid/util/SparseArray;
+
+.field public final A05:Landroid/util/SparseArray;
+
+
+# direct methods
+.method public constructor <init>(LX/68D;)V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-static {}, LX/434;->A0S()Landroid/util/SparseArray;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iput-object v0, p0, LX/63g;->A04:Landroid/util/SparseArray;
+
+    .line 8
+    .line 9
+    invoke-static {}, LX/434;->A0S()Landroid/util/SparseArray;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, LX/63g;->A05:Landroid/util/SparseArray;
+
+    .line 14
+    .line 15
+    iput-object p1, p0, LX/63g;->A00:LX/68D;
+
+    .line 16
+    .line 17
+    invoke-interface {p1}, LX/68D;->ACW()I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    iput v0, p0, LX/63g;->A03:I
+
+    .line 22
+    .line 23
+    iget-object v0, p0, LX/63g;->A00:LX/68D;
+
+    .line 24
+    .line 25
+    invoke-interface {v0}, LX/68D;->ACV()I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v0
+
+    .line 29
+    iput v0, p0, LX/63g;->A02:I
+
+    .line 30
+    .line 31
+    return-void
 .end method
 
-.method public abstract AXI(IJ)V
-.end method
+.method public static A00(LX/63g;)V
+    .locals 3
 
-.method public abstract Abx(Ljava/lang/Object;J)V
-.end method
+    .line 0
+    iget-object v0, p0, LX/63g;->A00:LX/68D;
 
-.method public abstract Aej(Ljava/lang/Exception;)V
-.end method
+    .line 1
+    .line 2
+    invoke-interface {v0}, LX/68D;->ACW()I
 
-.method public abstract Aek(Ljava/lang/String;)V
-.end method
+    .line 3
+    .line 4
+    .line 5
+    move-result v2
 
-.method public abstract Aen(Ljava/lang/String;JJ)V
-.end method
+    .line 6
+    invoke-interface {v0}, LX/68D;->ACV()I
 
-.method public abstract Aeo(Ljava/lang/String;)V
-.end method
+    .line 7
+    .line 8
+    .line 9
+    move-result v1
 
-.method public abstract Aep(LX/62Y;)V
-.end method
+    .line 10
+    iget v0, p0, LX/63g;->A03:I
 
-.method public abstract Aeq(LX/62Y;)V
-.end method
+    .line 11
+    .line 12
+    if-ne v0, v2, :cond_0
 
-.method public abstract Aet(JI)V
-.end method
+    .line 13
+    .line 14
+    iget v0, p0, LX/63g;->A02:I
 
-.method public abstract Aeu(Lcom/google/android/exoplayer2/Format;LX/5PF;)V
-.end method
+    .line 15
+    .line 16
+    if-eq v0, v1, :cond_1
 
-.method public abstract Af3(LX/6NL;)V
+    .line 17
+    .line 18
+    :cond_0
+    iput v2, p0, LX/63g;->A03:I
+
+    .line 19
+    .line 20
+    iput v1, p0, LX/63g;->A02:I
+
+    .line 21
+    .line 22
+    iget-object v0, p0, LX/63g;->A04:Landroid/util/SparseArray;
+
+    .line 23
+    .line 24
+    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
+
+    .line 25
+    .line 26
+    .line 27
+    iget-object v0, p0, LX/63g;->A05:Landroid/util/SparseArray;
+
+    .line 28
+    .line 29
+    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
+
+    .line 30
+    .line 31
+    .line 32
+    :cond_1
+    return-void
 .end method

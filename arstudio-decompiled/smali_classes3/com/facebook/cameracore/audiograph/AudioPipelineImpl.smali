@@ -3,37 +3,37 @@
 .source ""
 
 # interfaces
-.implements LX/5pz;
+.implements LX/60q;
 
 
 # static fields
 .field public static final IS_UNIT_TEST:Z
 
-.field public static final sEmptyAudioPerfStatsProvider:LX/5rV;
+.field public static final sEmptyAudioPerfStatsProvider:LX/69d;
 
-.field public static final sEmptyStateCallback:LX/5rJ;
+.field public static final sEmptyStateCallback:LX/68o;
 
 .field public static sIsNativeLibLoaded:Z
 
 
 # instance fields
-.field public final mAudioDebugCallback:LX/5pg;
+.field public final mAudioDebugCallback:LX/5Ut;
 
-.field public final mAudioMixingCallback:LX/6J7;
+.field public final mAudioMixingCallback:LX/69H;
 
-.field public mAudioOutputCallback:LX/5qC;
+.field public mAudioOutputCallback:LX/60o;
 
 .field public final mAudioPipelineHandler:Landroid/os/Handler;
 
 .field public volatile mAudioPlayerThread:Landroid/os/Handler;
 
-.field public mAudioRecorder:LX/5q3;
+.field public mAudioRecorder:LX/63h;
 
-.field public mAudioRecorderCallback:LX/5pu;
+.field public mAudioRecorderCallback:LX/60G;
 
 .field public volatile mAudioRecorderThread:Landroid/os/Handler;
 
-.field public mAudioRenderPerfStats:LX/5pd;
+.field public mAudioRenderPerfStats:LX/5Us;
 
 .field public volatile mAudioTrack:Landroid/media/AudioTrack;
 
@@ -49,25 +49,25 @@
 
 .field public mIsManuallyProcessingGraph:Z
 
-.field public final mMobileConfigComponent:LX/5dv;
+.field public final mMobileConfigComponent:LX/5xk;
 
 .field public mPlatformNumChannels:I
 
-.field public final mPlatformOutputErrorCallback:LX/5pm;
+.field public final mPlatformOutputErrorCallback:LX/5Uv;
 
 .field public mPlatformSampleType:I
 
-.field public volatile mStartInputCallback:LX/5ow;
+.field public volatile mStartInputCallback:LX/694;
 
 .field public volatile mStartInputHandler:Landroid/os/Handler;
 
-.field public volatile mStopInputCallback:LX/5ow;
+.field public volatile mStopInputCallback:LX/694;
 
 .field public volatile mStopInputHandler:Landroid/os/Handler;
 
 .field public final mStopped:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final mThreadPool:LX/5c3;
+.field public final mThreadPool:LX/6At;
 
 .field public final mXplatControlsStartInput:Z
 
@@ -77,7 +77,7 @@
     .locals 1
 
     .line 0
-    invoke-static {}, LX/4BF;->A1N()Z
+    invoke-static {}, LX/434;->A1V()Z
 
     .line 1
     .line 2
@@ -89,36 +89,36 @@
 
     .line 5
     .line 6
-    new-instance v0, LX/5rJ;
+    new-instance v0, LX/68o;
 
     .line 7
     .line 8
-    invoke-direct {v0}, LX/5rJ;-><init>()V
+    invoke-direct {v0}, LX/68o;-><init>()V
 
     .line 9
     .line 10
     .line 11
-    sput-object v0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyStateCallback:LX/5rJ;
+    sput-object v0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyStateCallback:LX/68o;
 
     .line 12
     .line 13
-    new-instance v0, LX/5rK;
+    new-instance v0, LX/68n;
 
     .line 14
     .line 15
-    invoke-direct {v0}, LX/5rK;-><init>()V
+    invoke-direct {v0}, LX/68n;-><init>()V
 
     .line 16
     .line 17
     .line 18
-    sput-object v0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyAudioPerfStatsProvider:LX/5rV;
+    sput-object v0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyAudioPerfStatsProvider:LX/69d;
 
     .line 19
     .line 20
     return-void
 .end method
 
-.method public constructor <init>(IILX/5dv;ILX/6J7;LX/5pg;LX/5pm;LX/5rb;Landroid/os/Handler;LX/5c3;)V
+.method public constructor <init>(IILX/5xk;ILX/69H;LX/5Ut;LX/5Uv;LX/6B7;Landroid/os/Handler;LX/6At;)V
     .locals 4
 
     .line 0
@@ -136,7 +136,7 @@
     .line 6
     .line 7
     .line 8
-    invoke-static {}, LX/002;->A0A()Ljava/lang/Object;
+    invoke-static {}, LX/002;->A05()Ljava/lang/Object;
 
     .line 9
     .line 10
@@ -152,11 +152,11 @@
 
     .line 15
     .line 16
-    iput-object p10, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mThreadPool:LX/5c3;
+    iput-object p10, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mThreadPool:LX/6At;
 
     .line 17
     .line 18
-    invoke-static {}, LX/0Ye;->A0d()Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {}, LX/0X2;->A0r()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 19
     .line 20
@@ -171,7 +171,7 @@
     const/4 v1, 0x1
 
     .line 25
-    invoke-static {v1}, LX/0Yi;->A16(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v1}, LX/0X7;->A0l(Z)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 26
     .line 27
@@ -191,27 +191,27 @@
 
     .line 34
     .line 35
-    iput-object p5, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioMixingCallback:LX/6J7;
+    iput-object p5, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioMixingCallback:LX/69H;
 
     .line 36
     .line 37
-    iput-object p6, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5pg;
+    iput-object p6, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5Ut;
 
     .line 38
     .line 39
-    iput-object p3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5dv;
+    iput-object p3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5xk;
 
     .line 40
     .line 41
-    iput-object p7, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mPlatformOutputErrorCallback:LX/5pm;
+    iput-object p7, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mPlatformOutputErrorCallback:LX/5Uv;
 
     .line 42
     .line 43
-    const/16 v0, 0x3d
+    const/16 v0, 0x4b
 
     .line 44
     .line 45
-    invoke-interface {p3, v0}, LX/5dv;->AQO(I)Z
+    invoke-interface {p3, v0}, LX/5xk;->AP0(I)Z
 
     .line 46
     .line 47
@@ -337,15 +337,15 @@
 
     .line 31
     .line 32
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5dv;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5xk;
 
     .line 33
     .line 34
-    const/16 v0, 0x38
+    const/16 v0, 0x44
 
     .line 35
     .line 36
-    invoke-interface {v1, v0}, LX/5dv;->AQO(I)Z
+    invoke-interface {v1, v0}, LX/5xk;->AP0(I)Z
 
     .line 37
     .line 38
@@ -365,7 +365,7 @@
 
     .line 43
     .line 44
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 45
     .line 46
@@ -385,20 +385,20 @@
 .method private native initHybrid(IFIZ)Lcom/facebook/jni/HybridData;
 .end method
 
-.method public static reportException(ILjava/lang/String;LX/5ow;)V
+.method public static reportException(ILjava/lang/String;LX/694;)V
     .locals 3
 
     .line 0
-    new-instance v2, LX/5qY;
+    new-instance v2, LX/5Vn;
 
     .line 1
     .line 2
-    invoke-direct {v2, p1}, LX/5qY;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, p1}, LX/5Vn;-><init>(Ljava/lang/String;)V
 
     .line 3
     .line 4
     .line 5
-    invoke-static {p0}, LX/5rM;->A00(I)Ljava/lang/String;
+    invoke-static {p0}, LX/5Uu;->A00(I)Ljava/lang/String;
 
     .line 6
     .line 7
@@ -410,12 +410,12 @@
 
     .line 10
     .line 11
-    invoke-virtual {v2, v0, v1}, LX/5e7;->A03(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v0, v1}, LX/5VZ;->A03(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
     .line 13
     .line 14
-    invoke-interface {p2, v2}, LX/5ow;->AXT(LX/5e7;)V
+    invoke-interface {p2, v2}, LX/694;->AVu(LX/5VZ;)V
 
     .line 15
     .line 16
@@ -431,7 +431,7 @@
 
 
 # virtual methods
-.method public createFbaProcessingGraph(IILX/5qC;)I
+.method public createFbaProcessingGraph(IILX/60o;)I
     .locals 2
 
     .line 0
@@ -450,7 +450,7 @@
 
     .line 6
     .line 7
-    iput-object p3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/5qC;
+    iput-object p3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/60o;
 
     .line 8
     .line 9
@@ -504,7 +504,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 31
     .line 32
@@ -519,7 +519,7 @@
     return v1
 .end method
 
-.method public createManualProcessingGraph(IILX/5qC;)I
+.method public createManualProcessingGraph(IILX/60o;)I
     .locals 1
 
     .line 0
@@ -538,7 +538,7 @@
 
     .line 6
     .line 7
-    iput-object p3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/5qC;
+    iput-object p3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/60o;
 
     .line 8
     .line 9
@@ -592,7 +592,7 @@
 
     .line 29
     .line 30
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
     .line 31
     .line 32
@@ -610,7 +610,7 @@
     return v0
 .end method
 
-.method public fillAudioBuffer(LX/5pZ;)I
+.method public fillAudioBuffer(LX/5iu;)I
     .locals 17
 
     .line 0
@@ -633,7 +633,7 @@
 
     .line 8
     .line 9
-    iget-object v0, v7, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, v7, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 10
     .line 11
@@ -641,7 +641,7 @@
 
     .line 12
     .line 13
-    invoke-virtual {v0, v9}, LX/5q3;->A03(LX/5pZ;)I
+    invoke-virtual {v0, v9}, LX/63h;->A03(LX/5iu;)I
 
     .line 14
     .line 15
@@ -666,7 +666,7 @@
 
     .line 23
     .line 24
-    invoke-static {v0}, LX/5pC;->A00(I)I
+    invoke-static {v0}, LX/5Uw;->A00(I)I
 
     .line 25
     .line 26
@@ -677,7 +677,7 @@
     mul-int/2addr v6, v0
 
     .line 29
-    iget-object v2, v9, LX/5pZ;->A02:Ljava/nio/ByteBuffer;
+    iget-object v2, v9, LX/5iu;->A02:Ljava/nio/ByteBuffer;
 
     .line 30
     .line 31
@@ -733,7 +733,7 @@
 
     .line 55
     .line 56
-    iget-object v8, v7, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/5qC;
+    iget-object v8, v7, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/60o;
 
     .line 57
     .line 58
@@ -756,7 +756,7 @@
     int-to-long v13, v6
 
     .line 67
-    invoke-virtual/range {v8 .. v16}, LX/5qC;->A00(LX/5pZ;IIIJJ)V
+    invoke-virtual/range {v8 .. v16}, LX/60o;->A00(LX/5iu;IIIJJ)V
 
     .line 68
     .line 69
@@ -798,7 +798,7 @@
 
     .line 85
     .line 86
-    invoke-static {v3}, LX/5rM;->A00(I)Ljava/lang/String;
+    invoke-static {v3}, LX/5Uu;->A00(I)Ljava/lang/String;
 
     .line 87
     .line 88
@@ -814,7 +814,7 @@
 
     .line 93
     .line 94
-    invoke-static {v4, v0, v1}, LX/0Jt;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v0, v1}, LX/0Il;->A0O(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 95
     .line 96
@@ -827,7 +827,7 @@
 
     .line 99
     .line 100
-    invoke-static {v4, v0}, LX/0Jt;->A0C(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, LX/0Il;->A0C(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 101
     .line 102
@@ -848,7 +848,7 @@
     .locals 9
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/5qC;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/60o;
 
     .line 1
     .line 2
@@ -877,7 +877,7 @@
     move-wide v7, p4
 
     .line 13
-    invoke-virtual/range {v0 .. v8}, LX/5qC;->A01([BIIIJJ)V
+    invoke-virtual/range {v0 .. v8}, LX/60o;->A01([BIIIJJ)V
 
     .line 14
     .line 15
@@ -890,11 +890,11 @@
     .locals 8
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5pg;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5Ut;
 
     .line 1
     .line 2
-    iget-object v3, v0, LX/5pg;->A00:LX/5pn;
+    iget-object v3, v0, LX/5Ut;->A00:LX/602;
 
     .line 3
     .line 4
@@ -902,18 +902,18 @@
 
     .line 5
     .line 6
-    iget-object v2, v3, LX/5pn;->A0F:LX/5pw;
+    iget-object v2, v3, LX/602;->A0F:LX/60O;
 
     .line 7
     .line 8
-    iget-object v1, v3, LX/5pn;->A08:Landroid/media/AudioManager;
+    iget-object v1, v3, LX/602;->A08:Landroid/media/AudioManager;
 
     .line 9
     .line 10
     const/4 v0, 0x0
 
     .line 11
-    invoke-static {v1, v2, v0}, LX/5pw;->A00(Landroid/media/AudioManager;LX/5pw;LX/5pz;)Ljava/util/HashMap;
+    invoke-static {v1, v2, v0}, LX/60O;->A00(Landroid/media/AudioManager;LX/60O;LX/60q;)Ljava/util/HashMap;
 
     .line 12
     .line 13
@@ -930,11 +930,11 @@
     .line 18
     .line 19
     .line 20
-    iget-object v2, v3, LX/5pn;->A0H:LX/5dF;
+    iget-object v2, v3, LX/602;->A0I:LX/60J;
 
     .line 21
     .line 22
-    invoke-static {v3}, LX/4BF;->A0N(Ljava/lang/Object;)J
+    invoke-static {v3}, LX/434;->A0P(Ljava/lang/Object;)J
 
     .line 23
     .line 24
@@ -946,7 +946,7 @@
 
     .line 27
     .line 28
-    invoke-interface/range {v2 .. v7}, LX/5dF;->ASH(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
+    invoke-interface/range {v2 .. v7}, LX/60J;->AQv(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;J)V
 
     .line 29
     .line 30
@@ -960,10 +960,120 @@
 .method public native onReceivedAudioMixingMode(I)V
 .end method
 
+.method public onSubgraphInserted()V
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5Ut;
+
+    .line 1
+    .line 2
+    iget-object v0, v0, LX/5Ut;->A00:LX/602;
+
+    .line 3
+    .line 4
+    iget-object v0, v0, LX/602;->A0H:LX/69V;
+
+    .line 5
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    .line 8
+    iget-object v2, v0, LX/69V;->A00:LX/60J;
+
+    .line 9
+    .line 10
+    invoke-interface {v2}, LX/60J;->ABe()LX/63o;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    invoke-interface {v0}, LX/63o;->ADj()Ljava/util/List;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v1
+
+    .line 18
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    .line 19
+    .line 20
+    .line 21
+    move-result v0
+
+    .line 22
+    if-nez v0, :cond_1
+
+    .line 23
+    .line 24
+    invoke-static {v1}, LX/0X4;->A0f(Ljava/util/List;)Ljava/lang/Object;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v3
+
+    .line 28
+    check-cast v3, Ljava/lang/String;
+
+    .line 29
+    .line 30
+    :goto_0
+    invoke-interface {v2}, LX/60J;->AHr()LX/693;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v2
+
+    .line 34
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v1
+
+    .line 42
+    const-string v0, "subgraph_inserted"
+
+    .line 43
+    .line 44
+    invoke-interface {v2, v3, v0, v1}, LX/693;->updateAnnotation(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 45
+    .line 46
+    .line 47
+    :cond_0
+    return-void
+
+    .line 48
+    :cond_1
+    const-string v3, ""
+
+    .line 49
+    .line 50
+    goto :goto_0
+.end method
+
 .method public native pause()I
 .end method
 
-.method public declared-synchronized prepareRecorder(LX/5pY;LX/5rV;Landroid/os/Handler;LX/5ow;Landroid/os/Handler;)V
+.method public declared-synchronized prepareRecorder(LX/60U;LX/69d;Landroid/os/Handler;LX/694;Landroid/os/Handler;)V
     .locals 12
 
     .line 0
@@ -974,7 +1084,7 @@
     move-object v7, p1
 
     .line 2
-    iget v1, p1, LX/5pY;->A04:I
+    iget v1, p1, LX/60U;->A03:I
 
     .line 3
     .line 4
@@ -998,17 +1108,17 @@
 
     .line 13
     .line 14
-    new-instance v1, LX/5qY;
+    new-instance v1, LX/5Vn;
 
     .line 15
     .line 16
-    invoke-direct {v1, v5, v0}, LX/5qY;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, v5, v0}, LX/5Vn;-><init>(ILjava/lang/String;)V
 
     .line 17
     .line 18
     .line 19
     :goto_0
-    invoke-interface {v3, v1}, LX/5ow;->AXT(LX/5e7;)V
+    invoke-interface {v3, v1}, LX/694;->AVu(LX/5VZ;)V
 
     .line 20
     .line 21
@@ -1018,7 +1128,7 @@
     .line 23
     .line 24
     :cond_0
-    iget v0, p1, LX/5pY;->A02:I
+    iget v0, p1, LX/60U;->A01:I
 
     .line 25
     .line 26
@@ -1034,11 +1144,11 @@
 
     .line 31
     .line 32
-    new-instance v1, LX/5qY;
+    new-instance v1, LX/5Vn;
 
     .line 33
     .line 34
-    invoke-direct {v1, v5, v0}, LX/5qY;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, v5, v0}, LX/5Vn;-><init>(ILjava/lang/String;)V
 
     .line 35
     .line 36
@@ -1047,7 +1157,7 @@
 
     .line 38
     :cond_1
-    iget v0, p1, LX/5pY;->A01:I
+    iget v0, p1, LX/60U;->A00:I
 
     .line 39
     .line 40
@@ -1071,11 +1181,11 @@
 
     .line 49
     .line 50
-    new-instance v1, LX/5qY;
+    new-instance v1, LX/5Vn;
 
     .line 51
     .line 52
-    invoke-direct {v1, v5, v0}, LX/5qY;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, v5, v0}, LX/5Vn;-><init>(ILjava/lang/String;)V
 
     .line 53
     .line 54
@@ -1084,7 +1194,7 @@
 
     .line 56
     :cond_2
-    iget v2, p1, LX/5pY;->A03:I
+    iget v2, p1, LX/60U;->A02:I
 
     .line 57
     .line 58
@@ -1095,7 +1205,7 @@
     mul-int/2addr v1, v0
 
     .line 61
-    invoke-static {v4}, LX/5pC;->A00(I)I
+    invoke-static {v4}, LX/5Uw;->A00(I)I
 
     .line 62
     .line 63
@@ -1114,11 +1224,11 @@
 
     .line 69
     .line 70
-    new-instance v1, LX/5qY;
+    new-instance v1, LX/5Vn;
 
     .line 71
     .line 72
-    invoke-direct {v1, v5, v0}, LX/5qY;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, v5, v0}, LX/5Vn;-><init>(ILjava/lang/String;)V
 
     .line 73
     .line 74
@@ -1135,7 +1245,7 @@
 
     .line 79
     .line 80
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 81
     .line 82
@@ -1143,20 +1253,20 @@
 
     .line 83
     .line 84
-    new-instance v8, LX/5pu;
+    new-instance v8, LX/60G;
 
     .line 85
     .line 86
-    invoke-direct {v8, p0}, LX/5pu;-><init>(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
+    invoke-direct {v8, p0}, LX/60G;-><init>(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
 
     .line 87
     .line 88
     .line 89
-    iput-object v8, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/5pu;
+    iput-object v8, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/60G;
 
     .line 90
     .line 91
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5dv;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5xk;
 
     .line 92
     .line 93
@@ -1164,7 +1274,7 @@
 
     .line 94
     .line 95
-    invoke-interface {v1, v0}, LX/5dv;->ADp(I)I
+    invoke-interface {v1, v0}, LX/5xk;->ACN(I)I
 
     .line 96
     .line 97
@@ -1172,7 +1282,7 @@
     move-result v9
 
     .line 99
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5dv;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5xk;
 
     .line 100
     .line 101
@@ -1180,7 +1290,7 @@
 
     .line 102
     .line 103
-    invoke-interface {v1, v0}, LX/5dv;->AFk(I)J
+    invoke-interface {v1, v0}, LX/5xk;->AEK(I)J
 
     .line 104
     .line 105
@@ -1188,7 +1298,7 @@
     move-result-wide v10
 
     .line 107
-    new-instance v4, LX/5q3;
+    new-instance v4, LX/63h;
 
     .line 108
     .line 109
@@ -1198,38 +1308,38 @@
     move-object v5, p3
 
     .line 111
-    invoke-direct/range {v4 .. v11}, LX/5q3;-><init>(Landroid/os/Handler;LX/5rV;LX/5pY;LX/5qj;IJ)V
+    invoke-direct/range {v4 .. v11}, LX/63h;-><init>(Landroid/os/Handler;LX/69d;LX/60U;LX/660;IJ)V
 
     .line 112
     .line 113
     .line 114
-    iput-object v4, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iput-object v4, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 115
     .line 116
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5dv;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5xk;
 
     .line 117
     .line 118
-    const/16 v0, 0x38
+    const/16 v0, 0x44
 
     .line 119
     .line 120
-    invoke-interface {v1, v0}, LX/5dv;->AQO(I)Z
+    invoke-interface {v1, v0}, LX/5xk;->AP0(I)Z
 
     .line 121
     .line 122
     .line 123
     :cond_4
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 124
     .line 125
-    iget-object v1, v0, LX/5q3;->A0E:Ljava/lang/Integer;
+    iget-object v1, v0, LX/63h;->A0E:LX/64c;
 
     .line 126
     .line 127
-    sget-object v0, LX/014;->A00:Ljava/lang/Integer;
+    sget-object v0, LX/64c;->STOPPED:LX/64c;
 
     .line 128
     .line 129
@@ -1237,11 +1347,11 @@
 
     .line 130
     .line 131
-    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 132
     .line 133
-    iget-object v1, v2, LX/5q3;->A09:LX/4y6;
+    iget-object v1, v2, LX/63h;->A09:LX/5Im;
 
     .line 134
     .line 135
@@ -1249,7 +1359,7 @@
 
     .line 136
     .line 137
-    invoke-virtual {v1, v0}, LX/4y6;->A02(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, LX/5Im;->A02(Ljava/lang/String;)V
 
     .line 138
     .line 139
@@ -1258,20 +1368,20 @@
 
     .line 141
     .line 142
-    invoke-static {v4, v2}, LX/5q3;->A01(Landroid/os/Handler;LX/5q3;)V
+    invoke-static {v4, v2}, LX/63h;->A01(Landroid/os/Handler;LX/63h;)V
 
     .line 143
     .line 144
     .line 145
-    iget-object v1, v2, LX/5q3;->A06:Landroid/os/Handler;
+    iget-object v1, v2, LX/63h;->A06:Landroid/os/Handler;
 
     .line 146
     .line 147
-    new-instance v0, LX/5q9;
+    new-instance v0, LX/63i;
 
     .line 148
     .line 149
-    invoke-direct {v0, v4, v2, v3}, LX/5q9;-><init>(Landroid/os/Handler;LX/5q3;LX/5ow;)V
+    invoke-direct {v0, v4, v2, v3}, LX/63i;-><init>(Landroid/os/Handler;LX/63h;LX/694;)V
 
     .line 150
     .line 151
@@ -1285,7 +1395,7 @@
 
     .line 156
     :cond_5
-    invoke-interface {v3}, LX/5ow;->AdJ()V
+    invoke-interface {v3}, LX/694;->Abi()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1332,7 +1442,7 @@
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0Yg;->A1X(Ljava/util/concurrent/atomic/AtomicBoolean;)Z
+    invoke-static {v0}, LX/0X3;->A1b(Ljava/util/concurrent/atomic/AtomicBoolean;)Z
 
     .line 3
     .line 4
@@ -1344,7 +1454,7 @@
 
     .line 7
     .line 8
-    iget-object v3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 9
     .line 10
@@ -1355,7 +1465,7 @@
 
     .line 12
     .line 13
-    sget-object v1, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyStateCallback:LX/5rJ;
+    sget-object v1, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyStateCallback:LX/68o;
 
     .line 14
     .line 15
@@ -1363,12 +1473,12 @@
 
     .line 16
     .line 17
-    invoke-virtual {v3, v1, v0}, LX/5q3;->A05(LX/5ow;Landroid/os/Handler;)V
+    invoke-virtual {v3, v1, v0}, LX/63h;->A05(LX/694;Landroid/os/Handler;)V
 
     .line 18
     .line 19
     .line 20
-    iput-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iput-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 21
     .line 22
@@ -1396,11 +1506,11 @@
     .line 33
     .line 34
     :cond_1
-    iput-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/5pu;
+    iput-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/60G;
 
     .line 35
     .line 36
-    iput-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/5qC;
+    iput-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/60o;
 
     .line 37
     .line 38
@@ -1415,23 +1525,23 @@
     .locals 4
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioMixingCallback:LX/6J7;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioMixingCallback:LX/69H;
 
     .line 1
     .line 2
-    iget-object v0, v1, LX/6J7;->A00:LX/5pn;
+    iget-object v0, v1, LX/69H;->A00:LX/602;
 
     .line 3
     .line 4
-    iget-object v3, v0, LX/5pn;->A09:Landroid/os/Handler;
+    iget-object v3, v0, LX/602;->A09:Landroid/os/Handler;
 
     .line 5
     .line 6
-    new-instance v2, LX/6If;
+    new-instance v2, LX/675;
 
     .line 7
     .line 8
-    invoke-direct {v2, v1, p1}, LX/6If;-><init>(LX/6J7;I)V
+    invoke-direct {v2, v1, p1}, LX/675;-><init>(LX/69H;I)V
 
     .line 9
     .line 10
@@ -1455,7 +1565,7 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 1
     .line 2
@@ -1463,11 +1573,11 @@
 
     .line 3
     .line 4
-    iget-object v0, v0, LX/5q3;->A09:LX/4y6;
+    iget-object v0, v0, LX/63h;->A09:LX/5Im;
 
     .line 5
     .line 6
-    invoke-virtual {v0}, LX/4y6;->A01()Ljava/lang/String;
+    invoke-virtual {v0}, LX/5Im;->A01()Ljava/lang/String;
 
     .line 7
     .line 8
@@ -1485,11 +1595,11 @@
     return-object v0
 .end method
 
-.method public startInput(LX/5ow;Landroid/os/Handler;)V
+.method public startInput(LX/694;Landroid/os/Handler;)V
     .locals 6
 
     .line 0
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5pd;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5Us;
 
     .line 1
     .line 2
@@ -1511,18 +1621,18 @@
     move-result-object v0
 
     .line 10
-    iput-object v0, v1, LX/5pd;->A08:Ljava/lang/String;
+    iput-object v0, v1, LX/5Us;->A08:Ljava/lang/String;
 
     .line 11
     .line 12
-    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5pd;
+    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5Us;
 
     .line 13
     .line 14
     const/4 v1, 0x1
 
     .line 15
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5pg;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5Ut;
 
     .line 16
     .line 17
@@ -1530,22 +1640,22 @@
 
     .line 18
     .line 19
-    invoke-virtual {v0, v2, v1}, LX/5pg;->A01(LX/5pd;Z)V
+    invoke-virtual {v0, v2, v1}, LX/5Ut;->A01(LX/5Us;Z)V
 
     .line 20
     .line 21
     .line 22
     :cond_0
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5pd;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5Us;
 
     .line 23
     .line 24
-    invoke-virtual {v0}, LX/5pd;->A03()V
+    invoke-virtual {v0}, LX/5Us;->A03()V
 
     .line 25
     .line 26
     .line 27
-    iput-boolean v1, v0, LX/5pd;->A0A:Z
+    iput-boolean v1, v0, LX/5Us;->A0A:Z
 
     .line 28
     .line 29
@@ -1558,7 +1668,7 @@
 
     .line 32
     .line 33
-    iput-object p1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/5ow;
+    iput-object p1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/694;
 
     .line 34
     .line 35
@@ -1566,15 +1676,15 @@
 
     .line 36
     .line 37
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5dv;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mMobileConfigComponent:LX/5xk;
 
     .line 38
     .line 39
-    const/16 v0, 0x38
+    const/16 v0, 0x44
 
     .line 40
     .line 41
-    invoke-interface {v1, v0}, LX/5dv;->AQO(I)Z
+    invoke-interface {v1, v0}, LX/5xk;->AP0(I)Z
 
     .line 42
     .line 43
@@ -1614,7 +1724,7 @@
 
     .line 59
     .line 60
-    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/5ow;
+    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/694;
 
     .line 61
     .line 62
@@ -1627,7 +1737,7 @@
 
     .line 65
     .line 66
-    invoke-static {v4, v2, p1}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->reportException(ILjava/lang/String;LX/5ow;)V
+    invoke-static {v4, v2, p1}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->reportException(ILjava/lang/String;LX/694;)V
 
     .line 67
     .line 68
@@ -1637,7 +1747,7 @@
 
     .line 70
     :cond_3
-    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/5ow;
+    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/694;
 
     .line 71
     .line 72
@@ -1706,7 +1816,7 @@
     .line 101
     .line 102
     :cond_6
-    invoke-interface {p1}, LX/5ow;->AdJ()V
+    invoke-interface {p1}, LX/694;->Abi()V
 
     .line 103
     .line 104
@@ -1715,7 +1825,7 @@
 
     .line 106
     :cond_7
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 107
     .line 108
@@ -1723,7 +1833,7 @@
 
     .line 109
     .line 110
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/5pu;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/60G;
 
     .line 111
     .line 112
@@ -1731,7 +1841,7 @@
 
     .line 113
     .line 114
-    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/5qC;
+    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/60o;
 
     .line 115
     .line 116
@@ -1751,7 +1861,7 @@
 
     .line 123
     :goto_2
-    iget-object v0, v2, LX/5qC;->A00:LX/5rP;
+    iget-object v0, v2, LX/60o;->A00:LX/69E;
 
     .line 124
     .line 125
@@ -1759,11 +1869,11 @@
 
     .line 126
     .line 127
-    iget-object v0, v0, LX/5rP;->A00:LX/5q1;
+    iget-object v0, v0, LX/69E;->A00:LX/60f;
 
     .line 128
     .line 129
-    iget-object v0, v0, LX/5q1;->A0E:LX/5pd;
+    iget-object v0, v0, LX/60f;->A0E:LX/5Us;
 
     .line 130
     .line 131
@@ -1771,12 +1881,12 @@
 
     .line 132
     .line 133
-    iput-boolean v1, v0, LX/5pd;->A09:Z
+    iput-boolean v1, v0, LX/5Us;->A09:Z
 
     .line 134
     .line 135
     :cond_8
-    invoke-static {p0}, LX/5pu;->A00(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
+    invoke-static {p0}, LX/60G;->A00(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
 
     .line 136
     .line 137
@@ -1815,11 +1925,11 @@
     .line 154
     .line 155
     :cond_9
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 156
     .line 157
-    invoke-virtual {v0, p1, p2}, LX/5q3;->A04(LX/5ow;Landroid/os/Handler;)V
+    invoke-virtual {v0, p1, p2}, LX/63h;->A04(LX/694;Landroid/os/Handler;)V
 
     .line 158
     .line 159
@@ -1840,7 +1950,7 @@
 
     .line 166
     :cond_b
-    invoke-static {v0, v4, p1}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->reportException(ILjava/lang/String;LX/5ow;)V
+    invoke-static {v0, v4, p1}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->reportException(ILjava/lang/String;LX/694;)V
 
     .line 167
     .line 168
@@ -1853,16 +1963,16 @@
 
     .line 171
     .line 172
-    new-instance v0, LX/5qY;
+    new-instance v0, LX/5Vn;
 
     .line 173
     .line 174
-    invoke-direct {v0, v1}, LX/5qY;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, LX/5Vn;-><init>(Ljava/lang/String;)V
 
     .line 175
     .line 176
     .line 177
-    invoke-interface {p1, v0}, LX/5ow;->AXT(LX/5e7;)V
+    invoke-interface {p1, v0}, LX/694;->AVu(LX/5VZ;)V
 
     .line 178
     .line 179
@@ -1889,7 +1999,7 @@
 
     .line 6
     .line 7
-    iget-object v4, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/5ow;
+    iget-object v4, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/694;
 
     .line 8
     .line 9
@@ -1900,7 +2010,7 @@
     const/4 v6, 0x0
 
     .line 12
-    iput-object v6, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/5ow;
+    iput-object v6, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStartInputCallback:LX/694;
 
     .line 13
     .line 14
@@ -1917,298 +2027,297 @@
     .line 19
     .line 20
     :cond_0
-    iget v12, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mGraphSampleRate:I
+    sget-object v8, LX/60U;->A05:LX/67s;
 
     .line 21
     .line 22
-    iget v10, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mPlatformSampleType:I
+    iget v12, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mGraphSampleRate:I
 
     .line 23
     .line 24
-    iget v1, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mPlatformNumChannels:I
+    iget v10, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mPlatformSampleType:I
 
     .line 25
     .line 26
-    const/4 v0, 0x1
+    iget v1, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mPlatformNumChannels:I
 
     .line 27
+    .line 28
+    const/4 v0, 0x1
+
+    .line 29
     if-eq v1, v0, :cond_6
 
-    .line 28
-    .line 29
+    .line 30
+    .line 31
     const/4 v0, 0x2
 
-    .line 30
-    if-ne v1, v0, :cond_9
-
-    .line 31
     .line 32
-    const/16 v9, 0xc
+    if-ne v1, v0, :cond_9
 
     .line 33
     .line 34
-    :goto_0
-    iget v11, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mBufferSizeInSamples:I
+    const/16 v9, 0xc
 
     .line 35
     .line 36
-    mul-int/2addr v11, v1
+    :goto_0
+    iget v11, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mBufferSizeInSamples:I
 
     .line 37
-    invoke-static {v10}, LX/5pC;->A00(I)I
-
     .line 38
+    mul-int/2addr v11, v1
+
     .line 39
+    invoke-static {v10}, LX/5Uw;->A00(I)I
+
     .line 40
+    .line 41
+    .line 42
     move-result v0
 
-    .line 41
+    .line 43
     mul-int/2addr v11, v0
 
-    .line 42
-    const v8, 0xfa00
-
-    .line 43
     .line 44
+    new-instance v7, LX/60U;
+
     .line 45
-    new-instance v7, LX/5pY;
-
     .line 46
-    .line 47
-    invoke-direct/range {v7 .. v12}, LX/5pY;-><init>(IIIII)V
+    invoke-direct/range {v7 .. v12}, LX/60U;-><init>(LX/67s;IIII)V
 
+    .line 47
     .line 48
     .line 49
-    .line 50
     const-string v2, "audio_recorder"
 
+    .line 50
     .line 51
-    .line 52
     const/16 v1, -0x13
 
+    .line 52
     .line 53
+    sget-object v0, LX/55o;->A02:LX/55o;
+
     .line 54
-    sget-object v0, LX/54p;->A02:LX/54p;
-
     .line 55
-    .line 56
-    invoke-static {v6, v0, v2, v1}, LX/54p;->A00(Landroid/os/Handler$Callback;LX/54p;Ljava/lang/String;I)Landroid/os/Handler;
+    invoke-static {v6, v0, v2, v1}, LX/55o;->A00(Landroid/os/Handler$Callback;LX/55o;Ljava/lang/String;I)Landroid/os/Handler;
 
+    .line 56
     .line 57
     .line 58
-    .line 59
     move-result-object v1
 
+    .line 59
+    sget-object v15, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyAudioPerfStatsProvider:LX/69d;
+
     .line 60
-    sget-object v15, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyAudioPerfStatsProvider:LX/5rV;
-
     .line 61
-    .line 62
-    sget-object v17, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyStateCallback:LX/5rJ;
+    sget-object v17, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->sEmptyStateCallback:LX/68o;
 
+    .line 62
     .line 63
-    .line 64
     iget-object v0, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioPipelineHandler:Landroid/os/Handler;
 
+    .line 64
     .line 65
-    .line 66
     move-object v14, v7
 
-    .line 67
+    .line 66
     move-object/from16 v16, v1
 
+    .line 67
     .line 68
-    .line 69
     move-object/from16 v18, v0
 
+    .line 69
     .line 70
-    .line 71
-    invoke-virtual/range {v13 .. v18}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->prepareRecorder(LX/5pY;LX/5rV;Landroid/os/Handler;LX/5ow;Landroid/os/Handler;)V
+    invoke-virtual/range {v13 .. v18}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->prepareRecorder(LX/60U;LX/69d;Landroid/os/Handler;LX/694;Landroid/os/Handler;)V
 
+    .line 71
     .line 72
     .line 73
-    .line 74
     iput-object v1, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderThread:Landroid/os/Handler;
 
+    .line 74
     .line 75
-    .line 76
     :cond_1
-    iget-object v0, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
+    .line 76
     .line 77
+    if-eqz v0, :cond_7
+
     .line 78
-    if-eqz v0, :cond_7
-
     .line 79
-    .line 80
-    iget-object v0, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/5pu;
+    iget-object v0, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/60G;
 
+    .line 80
     .line 81
-    .line 82
     if-eqz v0, :cond_7
 
+    .line 82
     .line 83
-    .line 84
-    iget-object v2, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/5qC;
+    iget-object v2, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioOutputCallback:LX/60o;
 
+    .line 84
     .line 85
-    .line 86
     if-eqz v2, :cond_2
 
+    .line 86
     .line 87
-    .line 88
     sget-boolean v0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->IS_UNIT_TEST:Z
 
+    .line 88
     .line 89
-    .line 90
     if-eqz v0, :cond_5
 
+    .line 90
     .line 91
-    .line 92
     const/4 v1, 0x0
 
-    .line 93
+    .line 92
     :goto_1
-    iget-object v0, v2, LX/5qC;->A00:LX/5rP;
+    iget-object v0, v2, LX/60o;->A00:LX/69E;
 
+    .line 93
     .line 94
+    if-eqz v0, :cond_2
+
     .line 95
-    if-eqz v0, :cond_2
-
     .line 96
+    iget-object v0, v0, LX/69E;->A00:LX/60f;
+
     .line 97
-    iget-object v0, v0, LX/5rP;->A00:LX/5q1;
-
     .line 98
-    .line 99
-    iget-object v0, v0, LX/5q1;->A0E:LX/5pd;
+    iget-object v0, v0, LX/60f;->A0E:LX/5Us;
 
+    .line 99
     .line 100
-    .line 101
     if-eqz v0, :cond_2
 
+    .line 101
     .line 102
+    iput-boolean v1, v0, LX/5Us;->A09:Z
+
     .line 103
-    iput-boolean v1, v0, LX/5pd;->A09:Z
-
     .line 104
-    .line 105
     :cond_2
-    invoke-static {v13}, LX/5pu;->A00(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
+    invoke-static {v13}, LX/60G;->A00(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
 
+    .line 105
     .line 106
     .line 107
-    .line 108
     iget-object v0, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopped:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 108
     .line 109
-    .line 110
     invoke-virtual {v0, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 110
     .line 111
     .line 112
-    .line 113
-    iget-object v2, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v2, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
+    .line 113
     .line 114
-    .line 115
     const/4 v1, 0x1
 
+    .line 115
+    new-instance v0, LX/5EU;
+
     .line 116
-    new-instance v0, LX/56Q;
-
     .line 117
-    .line 118
-    invoke-direct {v0, v13, v1, v4}, LX/56Q;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, v13, v1, v4}, LX/5EU;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
+    .line 118
     .line 119
     .line 120
-    .line 121
     if-nez v3, :cond_3
 
+    .line 121
     .line 122
-    .line 123
     iget-object v3, v13, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioPipelineHandler:Landroid/os/Handler;
 
+    .line 123
     .line 124
-    .line 125
     :cond_3
-    invoke-virtual {v2, v0, v3}, LX/5q3;->A04(LX/5ow;Landroid/os/Handler;)V
+    invoke-virtual {v2, v0, v3}, LX/63h;->A04(LX/694;Landroid/os/Handler;)V
 
+    .line 125
     .line 126
     .line 127
-    .line 128
     :cond_4
     return v5
 
-    .line 129
+    .line 128
     :cond_5
     invoke-virtual {v13}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->isSubgraphInserted()Z
 
+    .line 129
     .line 130
     .line 131
-    .line 132
     move-result v1
 
-    .line 133
+    .line 132
     goto :goto_1
 
-    .line 134
+    .line 133
     :cond_6
     const/16 v9, 0x10
 
+    .line 134
     .line 135
-    .line 136
     goto :goto_0
 
-    .line 137
+    .line 136
     :cond_7
     if-eqz v4, :cond_8
 
+    .line 137
     .line 138
-    .line 139
     const-string v1, "AudioRecorder not created. Cannot start input."
 
+    .line 139
     .line 140
+    new-instance v0, LX/5Vn;
+
     .line 141
-    new-instance v0, LX/5qY;
-
     .line 142
-    .line 143
-    invoke-direct {v0, v1}, LX/5qY;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, LX/5Vn;-><init>(Ljava/lang/String;)V
 
+    .line 143
     .line 144
     .line 145
-    .line 146
-    invoke-interface {v4, v0}, LX/5ow;->AXT(LX/5e7;)V
+    invoke-interface {v4, v0}, LX/694;->AVu(LX/5VZ;)V
 
+    .line 146
     .line 147
     .line 148
-    .line 149
     return v5
 
-    .line 150
+    .line 149
     :cond_8
     const/16 v5, 0x22
 
+    .line 150
     .line 151
-    .line 152
     return v5
 
-    .line 153
+    .line 152
     :cond_9
     const-string v0, "Channel count not supported"
 
+    .line 153
     .line 154
-    .line 155
-    invoke-static {v0}, LX/002;->A0B(Ljava/lang/String;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, LX/002;->A06(Ljava/lang/String;)Ljava/lang/RuntimeException;
 
+    .line 155
     .line 156
     .line 157
-    .line 158
     move-result-object v0
 
-    .line 159
+    .line 158
     throw v0
 .end method
 
@@ -2231,7 +2340,7 @@
 
     .line 6
     .line 7
-    invoke-static {v0}, LX/5pC;->A00(I)I
+    invoke-static {v0}, LX/5Uw;->A00(I)I
 
     .line 8
     .line 9
@@ -2242,11 +2351,11 @@
     mul-int/2addr v1, v0
 
     .line 12
-    new-instance v7, LX/5qb;
+    new-instance v7, LX/5Vm;
 
     .line 13
     .line 14
-    invoke-direct {v7, p0, v1}, LX/5qb;-><init>(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;I)V
+    invoke-direct {v7, p0, v1}, LX/5Vm;-><init>(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;I)V
 
     .line 15
     .line 16
@@ -2262,11 +2371,11 @@
 
     .line 21
     .line 22
-    sget-object v0, LX/54p;->A02:LX/54p;
+    sget-object v0, LX/55o;->A02:LX/55o;
 
     .line 23
     .line 24
-    invoke-static {v6, v0, v2, v1}, LX/54p;->A00(Landroid/os/Handler$Callback;LX/54p;Ljava/lang/String;I)Landroid/os/Handler;
+    invoke-static {v6, v0, v2, v1}, LX/55o;->A00(Landroid/os/Handler$Callback;LX/55o;Ljava/lang/String;I)Landroid/os/Handler;
 
     .line 25
     .line 26
@@ -2278,7 +2387,7 @@
 
     .line 29
     .line 30
-    iget v8, v7, LX/5qq;->A00:I
+    iget v8, v7, LX/5Vl;->A00:I
 
     .line 31
     .line 32
@@ -2300,7 +2409,7 @@
 
     .line 39
     .line 40
-    invoke-static {v5, v4, v2, v3}, LX/5pC;->A01(IIJ)J
+    invoke-static {v2, v3, v5, v4}, LX/431;->A0F(JII)J
 
     .line 41
     .line 42
@@ -2325,23 +2434,23 @@
     int-to-long v2, v0
 
     .line 51
-    new-instance v1, LX/5pd;
+    new-instance v1, LX/5Us;
 
     .line 52
     .line 53
-    invoke-direct {v1, v4, v5, v2, v3}, LX/5pd;-><init>(JJ)V
+    invoke-direct {v1, v4, v5, v2, v3}, LX/5Us;-><init>(JJ)V
 
     .line 54
     .line 55
     .line 56
-    iput-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5pd;
+    iput-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5Us;
 
     .line 57
     .line 58
     const/4 v0, 0x1
 
     .line 59
-    iput-boolean v0, v1, LX/5pd;->A09:Z
+    iput-boolean v0, v1, LX/5Us;->A09:Z
 
     .line 60
     .line 61
@@ -2409,11 +2518,11 @@
 
     .line 83
     .line 84
-    new-instance v0, LX/5pv;
+    new-instance v0, LX/5Vk;
 
     .line 85
     .line 86
-    invoke-direct {v0, v7, p0}, LX/5pv;-><init>(LX/5qq;Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
+    invoke-direct {v0, v7, p0}, LX/5Vk;-><init>(LX/5Vl;Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
 
     .line 87
     .line 88
@@ -2460,20 +2569,20 @@
 
     .line 106
     .line 107
-    new-instance v1, LX/5qY;
+    new-instance v1, LX/5Vn;
 
     .line 108
     .line 109
-    invoke-direct {v1, v0}, LX/5qY;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, LX/5Vn;-><init>(Ljava/lang/String;)V
 
     .line 110
     .line 111
     .line 112
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mPlatformOutputErrorCallback:LX/5pm;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mPlatformOutputErrorCallback:LX/5Uv;
 
     .line 113
     .line 114
-    invoke-virtual {v0, v1}, LX/5pm;->A00(LX/5qY;)V
+    invoke-virtual {v0, v1}, LX/5Uv;->A00(LX/5Vn;)V
 
     .line 115
     .line 116
@@ -2511,7 +2620,7 @@
     throw v0
 .end method
 
-.method public stopInput(LX/5ow;Landroid/os/Handler;)V
+.method public stopInput(LX/694;Landroid/os/Handler;)V
     .locals 5
 
     .line 0
@@ -2523,7 +2632,7 @@
 
     .line 3
     .line 4
-    iput-object p1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/5ow;
+    iput-object p1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/694;
 
     .line 5
     .line 6
@@ -2566,7 +2675,7 @@
 
     .line 23
     .line 24
-    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/5ow;
+    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/694;
 
     .line 25
     .line 26
@@ -2580,7 +2689,7 @@
     .line 29
     .line 30
     :cond_0
-    invoke-interface {p1}, LX/5ow;->AdJ()V
+    invoke-interface {p1}, LX/694;->Abi()V
 
     .line 31
     .line 32
@@ -2590,7 +2699,7 @@
 
     .line 34
     :cond_2
-    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/5ow;
+    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/694;
 
     .line 35
     .line 36
@@ -2659,7 +2768,7 @@
     .line 65
     .line 66
     :cond_5
-    invoke-static {v4, v2, p1}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->reportException(ILjava/lang/String;LX/5ow;)V
+    invoke-static {v4, v2, p1}, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->reportException(ILjava/lang/String;LX/694;)V
 
     .line 67
     .line 68
@@ -2668,7 +2777,7 @@
 
     .line 70
     :cond_6
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 71
     .line 72
@@ -2680,16 +2789,16 @@
 
     .line 75
     .line 76
-    new-instance v0, LX/5qY;
+    new-instance v0, LX/5Vn;
 
     .line 77
     .line 78
-    invoke-direct {v0, v1}, LX/5qY;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, LX/5Vn;-><init>(Ljava/lang/String;)V
 
     .line 79
     .line 80
     .line 81
-    invoke-interface {p1, v0}, LX/5ow;->AXT(LX/5e7;)V
+    invoke-interface {p1, v0}, LX/694;->AVu(LX/5VZ;)V
 
     .line 82
     .line 83
@@ -2710,28 +2819,28 @@
     .line 89
     .line 90
     .line 91
-    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 92
     .line 93
     const/4 v1, 0x0
 
     .line 94
-    new-instance v0, LX/56Q;
+    new-instance v0, LX/5EU;
 
     .line 95
     .line 96
-    invoke-direct {v0, p0, v1, p1}, LX/56Q;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, LX/5EU;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 97
     .line 98
     .line 99
-    invoke-virtual {v2, v0, p2}, LX/5q3;->A05(LX/5ow;Landroid/os/Handler;)V
+    invoke-virtual {v2, v0, p2}, LX/63h;->A05(LX/694;Landroid/os/Handler;)V
 
     .line 100
     .line 101
     .line 102
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/5pu;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/60G;
 
     .line 103
     .line 104
@@ -2739,24 +2848,24 @@
 
     .line 105
     .line 106
-    iget-object v3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5pg;
+    iget-object v3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5Ut;
 
     .line 107
     .line 108
-    iget-object v2, v0, LX/5pu;->A01:Ljava/util/HashMap;
+    iget-object v2, v0, LX/60G;->A01:Ljava/util/HashMap;
 
     .line 109
     .line 110
-    iget-wide v0, v0, LX/5pu;->A00:J
+    iget-wide v0, v0, LX/60G;->A00:J
 
     .line 111
     .line 112
-    invoke-virtual {v3, v0, v1, v2}, LX/5pg;->A00(JLjava/util/HashMap;)V
+    invoke-virtual {v3, v0, v1, v2}, LX/5Ut;->A00(JLjava/util/HashMap;)V
 
     .line 113
     .line 114
     .line 115
-    invoke-static {p0}, LX/5pu;->A00(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
+    invoke-static {p0}, LX/60G;->A00(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
 
     .line 116
     .line 117
@@ -2779,7 +2888,7 @@
 
     .line 4
     .line 5
-    iget-object v4, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/5ow;
+    iget-object v4, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/694;
 
     .line 6
     .line 7
@@ -2790,7 +2899,7 @@
     const/4 v0, 0x0
 
     .line 10
-    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/5ow;
+    iput-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mStopInputCallback:LX/694;
 
     .line 11
     .line 12
@@ -2798,7 +2907,7 @@
 
     .line 13
     .line 14
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 15
     .line 16
@@ -2814,16 +2923,16 @@
 
     .line 21
     .line 22
-    new-instance v0, LX/5qY;
+    new-instance v0, LX/5Vn;
 
     .line 23
     .line 24
-    invoke-direct {v0, v1}, LX/5qY;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, LX/5Vn;-><init>(Ljava/lang/String;)V
 
     .line 25
     .line 26
     .line 27
-    invoke-interface {v4, v0}, LX/5ow;->AXT(LX/5e7;)V
+    invoke-interface {v4, v0}, LX/694;->AVu(LX/5VZ;)V
 
     .line 28
     .line 29
@@ -2845,18 +2954,18 @@
     .line 35
     .line 36
     .line 37
-    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/5q3;
+    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorder:LX/63h;
 
     .line 38
     .line 39
     const/4 v1, 0x2
 
     .line 40
-    new-instance v0, LX/56Q;
+    new-instance v0, LX/5EU;
 
     .line 41
     .line 42
-    invoke-direct {v0, p0, v1, v4}, LX/56Q;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, v4}, LX/5EU;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 43
     .line 44
@@ -2870,12 +2979,12 @@
     .line 48
     .line 49
     :cond_2
-    invoke-virtual {v2, v0, v3}, LX/5q3;->A05(LX/5ow;Landroid/os/Handler;)V
+    invoke-virtual {v2, v0, v3}, LX/63h;->A05(LX/694;Landroid/os/Handler;)V
 
     .line 50
     .line 51
     .line 52
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/5pu;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRecorderCallback:LX/60G;
 
     .line 53
     .line 54
@@ -2883,24 +2992,24 @@
 
     .line 55
     .line 56
-    iget-object v3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5pg;
+    iget-object v3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5Ut;
 
     .line 57
     .line 58
-    iget-object v2, v0, LX/5pu;->A01:Ljava/util/HashMap;
+    iget-object v2, v0, LX/60G;->A01:Ljava/util/HashMap;
 
     .line 59
     .line 60
-    iget-wide v0, v0, LX/5pu;->A00:J
+    iget-wide v0, v0, LX/60G;->A00:J
 
     .line 61
     .line 62
-    invoke-virtual {v3, v0, v1, v2}, LX/5pg;->A00(JLjava/util/HashMap;)V
+    invoke-virtual {v3, v0, v1, v2}, LX/5Ut;->A00(JLjava/util/HashMap;)V
 
     .line 63
     .line 64
     .line 65
-    invoke-static {p0}, LX/5pu;->A00(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
+    invoke-static {p0}, LX/60G;->A00(Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;)V
 
     .line 66
     .line 67
@@ -2930,7 +3039,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0, v1, v1}, LX/54p;->A01(Landroid/os/Handler;ZZ)V
+    invoke-static {v0, v1, v1}, LX/55o;->A01(Landroid/os/Handler;ZZ)V
 
     .line 9
     .line 10
@@ -2956,7 +3065,7 @@
 
     .line 19
     .line 20
-    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5pd;
+    iget-object v2, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5Us;
 
     .line 21
     .line 22
@@ -2991,7 +3100,7 @@
     int-to-long v0, v0
 
     .line 37
-    iput-wide v0, v2, LX/5pd;->A01:J
+    iput-wide v0, v2, LX/5Us;->A01:J
 
     .line 38
     .line 39
@@ -3011,7 +3120,7 @@
     .line 45
     .line 46
     :cond_2
-    iget-object v3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5pd;
+    iget-object v3, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5Us;
 
     .line 47
     .line 48
@@ -3038,15 +3147,15 @@
     .line 57
     .line 58
     :goto_1
-    iput-object v0, v3, LX/5pd;->A08:Ljava/lang/String;
+    iput-object v0, v3, LX/5Us;->A08:Ljava/lang/String;
 
     .line 59
     .line 60
-    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5pd;
+    iget-object v1, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5Us;
 
     .line 61
     .line 62
-    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5pg;
+    iget-object v0, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioDebugCallback:LX/5Ut;
 
     .line 63
     .line 64
@@ -3054,13 +3163,13 @@
 
     .line 65
     .line 66
-    invoke-virtual {v0, v1, v2}, LX/5pg;->A01(LX/5pd;Z)V
+    invoke-virtual {v0, v1, v2}, LX/5Ut;->A01(LX/5Us;Z)V
 
     .line 67
     .line 68
     .line 69
     :cond_3
-    iput-object v5, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5pd;
+    iput-object v5, p0, Lcom/facebook/cameracore/audiograph/AudioPipelineImpl;->mAudioRenderPerfStats:LX/5Us;
 
     .line 70
     .line 71
@@ -3088,7 +3197,7 @@
 
     .line 79
     .line 80
-    iput-wide v0, v2, LX/5pd;->A01:J
+    iput-wide v0, v2, LX/5Us;->A01:J
 
     .line 81
     .line 82

@@ -1,479 +1,578 @@
-.class public final LX/4Or;
-.super Ljava/lang/Object;
+.class public LX/4Or;
+.super Landroid/widget/SeekBar;
 .source ""
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field public A00:Ljava/lang/Integer;
-
-.field public final A01:Landroid/view/View;
-
-.field public final A02:LX/02T;
-
-.field public final A03:Landroid/view/GestureDetector;
-
-.field public final A04:LX/4Sl;
+.field public A00:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/View;LX/02T;)V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1
-    .line 2
-    .line 3
-    sget-object v0, LX/014;->A0M:Ljava/lang/Integer;
-
-    .line 4
-    .line 5
-    iput-object v0, p0, LX/4Or;->A00:Ljava/lang/Integer;
-
-    .line 6
-    .line 7
-    iput-object p3, p0, LX/4Or;->A02:LX/02T;
-
-    .line 8
-    .line 9
-    iput-object p2, p0, LX/4Or;->A01:Landroid/view/View;
-
-    .line 10
-    .line 11
-    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
-
-    .line 12
-    .line 13
-    .line 14
-    move-result-object v0
-
-    .line 15
-    new-instance v1, LX/4pA;
-
-    .line 16
-    .line 17
-    invoke-direct {v1, v0}, LX/4pA;-><init>(Landroid/view/Choreographer;)V
-
-    .line 18
-    .line 19
-    .line 20
-    new-instance v0, LX/4Ot;
-
-    .line 21
-    .line 22
-    invoke-direct {v0, v1}, LX/4Ot;-><init>(LX/4Sw;)V
-
-    .line 23
-    .line 24
-    .line 25
-    invoke-virtual {v0}, LX/4Sm;->A00()LX/4Sl;
-
-    .line 26
-    .line 27
-    .line 28
-    move-result-object v2
-
-    .line 29
-    const/4 v0, 0x1
-
-    .line 30
-    iput-boolean v0, v2, LX/4Sl;->A07:Z
-
-    .line 31
-    .line 32
-    iput-object v2, p0, LX/4Or;->A04:LX/4Sl;
-
-    .line 33
-    .line 34
+    .line 536870912
     const/4 v0, 0x0
 
-    .line 35
-    new-instance v1, LX/6PB;
+    .line 536870913
+    invoke-direct {p0, p1, v0}, LX/4Or;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 36
-    .line 37
-    invoke-direct {v1, p0, v0}, LX/6PB;-><init>(Ljava/lang/Object;I)V
-
-    .line 38
-    .line 39
-    .line 40
-    iget-object v0, v2, LX/4Sl;->A0D:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    .line 41
-    .line 42
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    .line 43
-    .line 44
-    .line 45
-    new-instance v1, LX/4Nz;
-
-    .line 46
-    .line 47
-    invoke-direct {v1, p0}, LX/4Nz;-><init>(LX/4Or;)V
-
-    .line 48
-    .line 49
-    .line 50
-    new-instance v0, Landroid/view/GestureDetector;
-
-    .line 51
-    .line 52
-    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-
-    .line 53
-    .line 54
-    .line 55
-    iput-object v0, p0, LX/4Or;->A03:Landroid/view/GestureDetector;
-
-    .line 56
-    .line 57
+    .line 536870914
+    .line 536870915
+    .line 536870916
     return-void
 .end method
 
-.method private A00()I
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    .line 268435456
+    const/4 v0, 0x0
+
+    .line 268435457
+    invoke-direct {p0, p1, p2, v0}, LX/4Or;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    .line 268435458
+    .line 268435459
+    .line 268435460
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4Or;->A02:LX/02T;
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1
     .line 2
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
     .line 3
+    new-instance v0, LX/4Os;
+
     .line 4
     .line 5
-    move-result-object v0
+    invoke-direct {v0, p0}, LX/4Os;-><init>(LX/4Or;)V
 
     .line 6
-    if-nez v0, :cond_0
-
     .line 7
     .line 8
-    const/4 v3, 0x0
+    invoke-static {p0, v0}, LX/03U;->A0f(Landroid/view/View;LX/01z;)V
 
     .line 9
-    return v3
-
     .line 10
-    :cond_0
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
     .line 11
-    .line 12
-    .line 13
-    move-result-object v4
-
-    .line 14
-    const/16 v3, 0x96
-
-    .line 15
-    .line 16
-    const-string v2, "navigation_bar_height"
-
-    .line 17
-    .line 18
-    const-string v1, "dimen"
-
-    .line 19
-    .line 20
-    const-string v0, "android"
-
-    .line 21
-    .line 22
-    invoke-virtual {v4, v2, v1, v0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 23
-    .line 24
-    .line 25
-    move-result v0
-
-    .line 26
-    if-lez v0, :cond_1
-
-    .line 27
-    .line 28
-    invoke-virtual {v4, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 29
-    .line 30
-    .line 31
-    move-result v3
-
-    .line 32
-    :cond_1
-    iget-object v0, p0, LX/4Or;->A01:Landroid/view/View;
-
-    .line 33
-    .line 34
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    .line 35
-    .line 36
-    .line 37
-    move-result v0
-
-    .line 38
-    add-int/2addr v3, v0
-
-    .line 39
-    return v3
+    return-void
 .end method
 
-.method public static A01(LX/4Or;D)V
+.method public static declared-synchronized A00(LX/4Or;I)Z
     .locals 3
 
     .line 0
-    iget-object v0, p0, LX/4Or;->A01:Landroid/view/View;
+    monitor-enter p0
 
     .line 1
-    .line 2
-    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
+    :try_start_0
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
 
+    .line 2
     .line 3
     .line 4
+    move-result v1
+
     .line 5
-    move-result v0
+    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 6
-    iget-object v2, p0, LX/4Or;->A04:LX/4Sl;
-
     .line 7
     .line 8
-    float-to-double v0, v0
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
 
     .line 9
-    invoke-virtual {v2, v0, v1}, LX/4Sl;->A01(D)V
-
     .line 10
     .line 11
+    move-result v0
+
     .line 12
-    iget-object v1, p0, LX/4Or;->A00:Ljava/lang/Integer;
+    const/4 v2, 0x0
 
     .line 13
+    if-eq v1, v0, :cond_0
+
     .line 14
-    sget-object v0, LX/014;->A00:Ljava/lang/Integer;
-
     .line 15
-    .line 16
-    if-ne v1, v0, :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
+    .line 16
     .line 17
     .line 18
+    move-result v1
+
+    .line 19
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    .line 20
+    .line 21
+    .line 22
+    move-result v0
+
+    .line 23
+    invoke-virtual {p0, v1, v0, v2, v2}, LX/4Or;->onSizeChanged(IIII)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 24
+    .line 25
+    .line 26
     const/4 v0, 0x1
 
-    .line 19
-    new-instance v1, LX/6PB;
-
-    .line 20
-    .line 21
-    invoke-direct {v1, p0, v0}, LX/6PB;-><init>(Ljava/lang/Object;I)V
-
-    .line 22
-    .line 23
-    .line 24
-    iget-object v0, v2, LX/4Sl;->A0D:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    .line 25
-    .line 26
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 27
+    monitor-exit p0
+
     .line 28
+    return v0
+
     .line 29
-    invoke-virtual {v2, p1, p2}, LX/4Sl;->A03(D)V
+    :cond_0
+    monitor-exit p0
 
     .line 30
+    return v2
+
     .line 31
+    :catchall_0
+    move-exception v0
+
     .line 32
-    invoke-direct {p0}, LX/4Or;->A00()I
+    monitor-exit p0
 
     .line 33
-    .line 34
-    .line 35
-    move-result v0
-
-    .line 36
-    int-to-double v0, v0
-
-    .line 37
-    :goto_0
-    invoke-virtual {v2, v0, v1}, LX/4Sl;->A02(D)V
-
-    .line 38
-    .line 39
-    .line 40
-    return-void
-
-    .line 41
-    :cond_0
-    invoke-virtual {v2, p1, p2}, LX/4Sl;->A03(D)V
-
-    .line 42
-    .line 43
-    .line 44
-    const-wide/16 v0, 0x0
-
-    .line 45
-    .line 46
-    goto :goto_0
-.end method
-
-.method public static A02(LX/4Or;F)V
-    .locals 4
-
-    .line 0
-    iget-object v0, p0, LX/4Or;->A02:LX/02T;
-
-    .line 1
-    .line 2
-    iget-object v0, v0, LX/02T;->A02:Landroid/app/Dialog;
-
-    .line 3
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    .line 6
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    .line 7
-    .line 8
-    .line 9
-    move-result-object v3
-
-    .line 10
-    if-eqz v3, :cond_0
-
-    .line 11
-    .line 12
-    invoke-direct {p0}, LX/4Or;->A00()I
-
-    .line 13
-    .line 14
-    .line 15
-    move-result v0
-
-    .line 16
-    int-to-float v2, v0
-
-    .line 17
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    .line 18
-    .line 19
-    sub-float v0, v2, p1
-
-    .line 20
-    .line 21
-    div-float/2addr v0, v2
-
-    .line 22
-    mul-float/2addr v0, v1
-
-    .line 23
-    invoke-virtual {v3, v0}, Landroid/view/Window;->setDimAmount(F)V
-
-    .line 24
-    .line 25
-    .line 26
-    :cond_0
-    return-void
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 3
+.method public getOnSeekBarChangeListener()Landroid/widget/SeekBar$OnSeekBarChangeListener;
+    .locals 1
 
     .line 0
-    iget-object v0, p0, LX/4Or;->A03:Landroid/view/GestureDetector;
+    iget-object v0, p0, LX/4Or;->A00:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     .line 1
     .line 2
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    return-object v0
+.end method
+
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 2
+
+    .line 0
+    const/high16 v0, -0x3d4c0000    # -90.0f
+
+    .line 1
+    .line 2
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->rotate(F)V
 
     .line 3
     .line 4
     .line 5
-    move-result v0
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     .line 6
-    const/4 v2, 0x1
-
     .line 7
-    if-nez v0, :cond_0
-
     .line 8
-    .line 9
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    .line 10
-    .line 11
-    .line 12
     move-result v0
 
-    .line 13
-    if-ne v0, v2, :cond_2
+    .line 9
+    neg-int v0, v0
 
+    .line 10
+    int-to-float v1, v0
+
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->translate(FF)V
+
+    .line 13
     .line 14
     .line 15
-    iget-object v1, p0, LX/4Or;->A00:Ljava/lang/Integer;
+    invoke-super {p0, p1}, Landroid/widget/AbsSeekBar;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 16
     .line 17
-    sget-object v0, LX/014;->A0M:Ljava/lang/Integer;
+    .line 18
+    return-void
+.end method
+
+.method public final declared-synchronized onMeasure(II)V
+    .locals 2
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-super {p0, p2, p1}, Landroid/widget/AbsSeekBar;->onMeasure(II)V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    .line 5
+    .line 6
+    .line 7
+    move-result v1
+
+    .line 8
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setMeasuredDimension(II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 13
+    .line 14
+    .line 15
+    monitor-exit p0
+
+    .line 16
+    return-void
+
+    .line 17
+    :catchall_0
+    move-exception v0
 
     .line 18
+    monitor-exit p0
+
     .line 19
+    throw v0
+.end method
+
+.method public final onSizeChanged(IIII)V
+    .locals 0
+
+    .line 0
+    invoke-super {p0, p2, p1, p4, p3}, Landroid/widget/AbsSeekBar;->onSizeChanged(IIII)V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 4
+
+    .line 0
+    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
+
+    .line 1
+    .line 2
+    .line 3
+    move-result v0
+
+    .line 4
+    const/4 v2, 0x0
+
+    .line 5
+    if-nez v0, :cond_0
+
+    .line 6
+    .line 7
+    return v2
+
+    .line 8
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v1
+
+    .line 12
+    const/4 v3, 0x1
+
+    .line 13
+    if-eqz v1, :cond_4
+
+    .line 14
+    .line 15
+    if-eq v1, v3, :cond_5
+
+    .line 16
+    .line 17
+    const/4 v0, 0x2
+
+    .line 18
     if-eq v1, v0, :cond_2
 
+    .line 19
     .line 20
+    const/4 v0, 0x3
+
     .line 21
-    sget-object v0, LX/014;->A0B:Ljava/lang/Integer;
+    if-eq v1, v0, :cond_5
 
     .line 22
     .line 23
-    if-ne v1, v0, :cond_1
+    :cond_1
+    return v3
 
     .line 24
-    .line 25
-    const-wide v0, -0x3f60c00000000000L    # -2000.0
+    :cond_2
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
+    .line 25
     .line 26
     .line 27
+    move-result-object v0
+
     .line 28
+    if-eqz v0, :cond_3
+
     .line 29
     .line 30
-    :goto_0
-    invoke-static {p0, v0, v1}, LX/4Or;->A01(LX/4Or;D)V
+    invoke-static {p0, v3}, LX/434;->A1Q(Landroid/view/View;Z)V
 
     .line 31
     .line 32
     .line 33
-    :cond_0
-    return v2
+    :cond_3
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
 
     .line 34
-    :cond_1
-    const-wide v0, 0x409f400000000000L    # 2000.0
+    .line 35
+    .line 36
+    move-result v2
+
+    .line 37
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v0
+
+    .line 41
+    int-to-float v1, v0
+
+    .line 42
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    .line 43
+    .line 44
+    .line 45
+    move-result v0
+
+    .line 46
+    mul-float/2addr v1, v0
+
+    .line 47
+    invoke-static {p0, v1}, LX/434;->A03(Landroid/view/View;F)F
+
+    .line 48
+    .line 49
+    .line 50
+    move-result v0
+
+    .line 51
+    float-to-int v0, v0
+
+    .line 52
+    sub-int/2addr v2, v0
+
+    .line 53
+    invoke-static {p0, v2}, LX/4Or;->A00(LX/4Or;I)Z
+
+    .line 54
+    .line 55
+    .line 56
+    iget-object v1, p0, LX/4Or;->A00:Landroid/widget/SeekBar$OnSeekBarChangeListener;
+
+    .line 57
+    .line 58
+    if-eqz v1, :cond_1
+
+    .line 59
+    .line 60
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
+
+    .line 61
+    .line 62
+    .line 63
+    move-result v0
+
+    .line 64
+    invoke-interface {v1, p0, v0, v3}, Landroid/widget/SeekBar$OnSeekBarChangeListener;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
+
+    .line 65
+    .line 66
+    .line 67
+    return v3
+
+    .line 68
+    :cond_4
+    invoke-virtual {p0, v3}, Landroid/view/View;->setPressed(Z)V
+
+    .line 69
+    .line 70
+    .line 71
+    iget-object v0, p0, LX/4Or;->A00:Landroid/widget/SeekBar$OnSeekBarChangeListener;
+
+    .line 72
+    .line 73
+    if-eqz v0, :cond_1
+
+    .line 74
+    .line 75
+    invoke-interface {v0, p0}, Landroid/widget/SeekBar$OnSeekBarChangeListener;->onStartTrackingTouch(Landroid/widget/SeekBar;)V
+
+    .line 76
+    .line 77
+    .line 78
+    return v3
+
+    .line 79
+    :cond_5
+    iget-object v0, p0, LX/4Or;->A00:Landroid/widget/SeekBar$OnSeekBarChangeListener;
+
+    .line 80
+    .line 81
+    if-eqz v0, :cond_6
+
+    .line 82
+    .line 83
+    invoke-interface {v0, p0}, Landroid/widget/SeekBar$OnSeekBarChangeListener;->onStopTrackingTouch(Landroid/widget/SeekBar;)V
+
+    .line 84
+    .line 85
+    .line 86
+    :cond_6
+    invoke-virtual {p0, v2}, Landroid/view/View;->setPressed(Z)V
+
+    .line 87
+    .line 88
+    .line 89
+    return v3
+.end method
+
+.method public setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
+    .locals 0
+
+    .line 0
+    iput-object p1, p0, LX/4Or;->A00:Landroid/widget/SeekBar$OnSeekBarChangeListener;
+
+    .line 1
+    .line 2
+    return-void
+.end method
+
+.method public declared-synchronized setProgress(I)V
+    .locals 4
+
+    .line 0
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    const/4 v3, 0x0
+
+    .line 6
+    invoke-static {p1, v0}, LX/431;->A1V(II)Z
+
+    .line 7
+    .line 8
+    .line 9
+    move-result v2
+
+    .line 10
+    :try_start_1
+    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    .line 14
+    .line 15
+    .line 16
+    move-result v1
+
+    .line 17
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v0
+
+    .line 21
+    invoke-virtual {p0, v1, v0, v3, v3}, LX/4Or;->onSizeChanged(IIII)V
+
+    .line 22
+    .line 23
+    .line 24
+    if-eqz v2, :cond_0
+
+    .line 25
+    .line 26
+    iget-object v1, p0, LX/4Or;->A00:Landroid/widget/SeekBar$OnSeekBarChangeListener;
+
+    .line 27
+    .line 28
+    if-eqz v1, :cond_0
+
+    .line 29
+    .line 30
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
+
+    .line 31
+    .line 32
+    .line 33
+    move-result v0
+
+    .line 34
+    invoke-interface {v1, p0, v0, v3}, Landroid/widget/SeekBar$OnSeekBarChangeListener;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 35
     .line 36
     .line 37
+    :cond_0
+    monitor-exit p0
+
     .line 38
+    return-void
+
     .line 39
-    goto :goto_0
+    :catchall_0
+    move-exception v0
 
     .line 40
-    :cond_2
-    const/4 v2, 0x0
+    monitor-exit p0
 
     .line 41
-    return v2
+    throw v0
 .end method

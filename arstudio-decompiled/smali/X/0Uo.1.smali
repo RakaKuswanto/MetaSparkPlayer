@@ -1,17 +1,26 @@
-.class public final LX/0Uo;
-.super LX/04Z;
+.class public interface abstract LX/0Uo;
+.super Ljava/lang/Object;
 .source ""
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract AAE()Ljava/lang/String;
+.end method
 
-    .line 0
-    invoke-direct {p0}, LX/04Z;-><init>()V
+.method public abstract AGw()Ljava/lang/Integer;
+.end method
 
-    .line 1
-    .line 2
-    .line 3
-    return-void
+.method public abstract AGx()Ljava/lang/Integer;
+.end method
+
+.method public abstract AGy()Ljava/lang/Integer;
+.end method
+
+.method public abstract AGz()Ljava/lang/Integer;
+.end method
+
+.method public abstract AHV()Ljava/lang/String;
+.end method
+
+.method public abstract AIT()Ljava/lang/Integer;
 .end method

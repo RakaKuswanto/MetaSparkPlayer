@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Lcom/facebook/msys/mci/CQLResultSet;
-
 
 # instance fields
 .field public final mNativeHolder:Lcom/facebook/simplejni/NativeHolder;
@@ -15,7 +12,7 @@
     .locals 0
 
     .line 0
-    invoke-static {}, LX/65w;->A00()V
+    invoke-static {}, LX/4Gp;->A00()V
 
     .line 1
     .line 2
@@ -39,52 +36,47 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public native allRowsEqual(Lcom/facebook/msys/mci/CQLResultSet;)Z
+.method private native allRowsEqualNative(JLcom/facebook/msys/mci/CQLResultSetImpl;J)Z
 .end method
 
-.method public native copy(II)Lcom/facebook/msys/mci/CQLResultSet;
+.method private native copyNative(JII)Lcom/facebook/msys/mci/CQLResultSetImpl;
 .end method
 
-.method public native getBlob(II)[B
+.method private native getBlobNative(JII)[B
 .end method
 
-.method public native getBoolean(II)Z
+.method private native getBooleanNative(JII)Z
 .end method
 
-.method public native getChildResultSet(II)Lcom/facebook/msys/mci/CQLResultSet;
+.method private native getChildResultSetNative(JII)Lcom/facebook/msys/mci/CQLResultSetImpl;
 .end method
 
-.method public native getCount()I
+.method private native getCountNative(J)I
 .end method
 
-.method public native getDouble(II)D
+.method private native getDoubleNative(JII)D
 .end method
 
-.method public native getInteger(II)I
+.method private native getIntegerNative(JII)I
 .end method
 
-.method public native getIsEncoded(I)Z
+.method private native getIsEncodedNative(JI)Z
 .end method
 
-.method public native getLong(II)J
+.method private native getLongNative(JII)J
 .end method
 
-.method public native getString(II)Ljava/lang/String;
+.method private native getStringNative(JII)Ljava/lang/String;
 .end method
 
-.method public native isNull(II)Z
+.method private native isNullNative(JII)Z
 .end method
 
-.method public native isSameObject(Lcom/facebook/msys/mci/CQLResultSet;)Z
+.method private native isSameObjectNative(JLcom/facebook/msys/mci/CQLResultSetImpl;J)Z
 .end method
 
-.method public native rowHashCode(I)J
+.method private native rowsEqualNative(JILcom/facebook/msys/mci/CQLResultSetImpl;JI)Z
 .end method
 
-.method public native rowsEqual(ILcom/facebook/msys/mci/CQLResultSet;I)Z
-.end method
-
-.method public native rowsSame(ILcom/facebook/msys/mci/CQLResultSet;I)Z
+.method private native rowsSameNative(JILcom/facebook/msys/mci/CQLResultSetImpl;JI)Z
 .end method

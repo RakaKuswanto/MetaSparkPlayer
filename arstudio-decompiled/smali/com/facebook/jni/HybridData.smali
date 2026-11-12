@@ -19,7 +19,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v1, v0}, LX/0WS;->A03(Ljava/lang/String;I)Z
+    invoke-static {v1, v0}, LX/0At;->A03(Ljava/lang/String;I)Z
 
     .line 4
     .line 5
@@ -74,7 +74,7 @@
 
     .line 7
     .line 8
-    invoke-static {v0}, LX/001;->A1L(I)Z
+    invoke-static {v0}, LX/001;->A1K(I)Z
 
     .line 9
     .line 10
@@ -97,7 +97,7 @@
 
     .line 2
     .line 3
-    invoke-virtual {v0}, Lcom/facebook/jni/HybridData$Destructor;->destruct()V
+    invoke-virtual {v0}, LX/0N1;->destruct()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

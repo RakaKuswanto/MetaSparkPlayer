@@ -12,15 +12,16 @@
     .locals 1
 
     .line 0
-    const-string v0, "appstatesyncer_jni"
+    const-string/jumbo v0, "appstatesyncer_jni"
 
     .line 1
     .line 2
-    invoke-static {v0}, LX/0VB;->A07(Ljava/lang/String;)V
-
     .line 3
+    invoke-static {v0}, LX/0FZ;->A08(Ljava/lang/String;)V
+
     .line 4
     .line 5
+    .line 6
     return-void
 .end method
 
@@ -56,25 +57,24 @@
 
 
 # virtual methods
-.method public notifyForegroundStateChange(LX/387;)V
+.method public notifyForegroundStateChange(LX/0wA;)V
     .locals 1
 
     .line 0
-    invoke-static {p1}, LX/387;->access$000(LX/387;)I
+    iget v0, p1, LX/0wA;->value:I
 
     .line 1
     .line 2
-    .line 3
-    move-result v0
-
-    .line 4
     invoke-direct {p0, v0}, Lcom/facebook/realtime/common/appstate/AppStateSyncer;->notifyForegroundStateChange(I)V
 
+    .line 3
+    .line 4
     .line 5
-    .line 6
-    .line 7
     return-void
 .end method
 
 .method public native notifyNetworkStateChange(Z)V
+.end method
+
+.method public native notifyNewInterface(JI)V
 .end method

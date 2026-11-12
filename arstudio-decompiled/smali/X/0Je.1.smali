@@ -2,93 +2,90 @@
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements LX/03b;
+
+
+# instance fields
+.field public final synthetic A00:Ljava/util/Map;
+
+.field public final synthetic A01:[LX/0UY;
+
+.field public final synthetic A02:[LX/0Nx;
+
 
 # direct methods
-.method public static A00(I)Ljava/lang/String;
+.method public constructor <init>(Ljava/util/Map;[LX/0UY;[LX/0Nx;)V
+    .locals 0
+
+    .line 0
+    iput-object p2, p0, LX/0Je;->A01:[LX/0UY;
+
+    .line 1
+    .line 2
+    iput-object p3, p0, LX/0Je;->A02:[LX/0Nx;
+
+    .line 3
+    .line 4
+    iput-object p1, p0, LX/0Je;->A00:Ljava/util/Map;
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final ACu()[LX/0Nx;
     .locals 1
 
-    const/4 v0, 0x3
+    .line 0
+    iget-object v0, p0, LX/0Je;->A02:[LX/0Nx;
 
-    if-eq p0, v0, :cond_8
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_7
-
-    const/16 v0, 0xf2d
-
-    if-eq p0, v0, :cond_6
-
-    const/16 v0, 0x10ba    # 6.0E-42f
-
-    if-eq p0, v0, :cond_5
-
-    const/16 v0, 0x1f95
-
-    if-eq p0, v0, :cond_4
-
-    const/16 v0, 0x3092
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x31f8
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x3421
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x3d07
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "UNDEFINED_QPL_EVENT"
-
+    .line 1
+    .line 2
     return-object v0
+.end method
 
-    :cond_0
-    const-string v0, "MESSENGER_COWATCH_MEDIA_SYNC_CONTENT_QUERY_ANDROID"
+.method public final AD2()Ljava/util/Map;
+    .locals 1
 
+    .line 0
+    iget-object v0, p0, LX/0Je;->A00:Ljava/util/Map;
+
+    .line 1
+    .line 2
     return-object v0
+.end method
 
-    :cond_1
-    const-string v0, "MESSENGER_COWATCH_BLOKS_AMD_TTRC"
+.method public final AFp()[LX/0UY;
+    .locals 1
 
+    .line 0
+    iget-object v0, p0, LX/0Je;->A01:[LX/0UY;
+
+    .line 1
+    .line 2
     return-object v0
+.end method
 
-    :cond_2
-    const-string v0, "MESSENGER_COWATCH_AVD_TAB_CONTENT_LOAD_TO_RENDER_ANDROID"
+.method public final Amd()Z
+    .locals 1
 
-    return-object v0
+    const/4 v0, 0x1
 
-    :cond_3
-    const-string v0, "MESSENGER_COWATCH_BLOKS_AMD_DETAIL_PAGE_TTRC"
+    return v0
+.end method
 
-    return-object v0
+.method public final Ame()Z
+    .locals 1
 
-    :cond_4
-    const-string v0, "MESSENGER_COWATCH_PLAYER_PLAY_TTI_ANDROID"
+    const/4 v0, 0x1
 
-    return-object v0
-
-    :cond_5
-    const-string v0, "MESSENGER_COWATCH_SUGGESTED_TAB_BLOKS_TTRC"
-
-    return-object v0
-
-    :cond_6
-    const-string v0, "MESSENGER_COWATCH_AVD_TAB_CONTENT_IG_ANDROID"
-
-    return-object v0
-
-    :cond_7
-    const-string v0, "MESSENGER_COWATCH_AVD_TAB_CONTENT_ANDROID"
-
-    return-object v0
-
-    :cond_8
-    const-string v0, "MESSENGER_COWATCH_AVD_TABS_TTI_ANDROID"
-
-    return-object v0
+    return v0
 .end method

@@ -1,189 +1,237 @@
-.class public final LX/1nK;
+.class public abstract LX/1nk;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
-
-# instance fields
-.field public A00:Ljava/lang/Object;
-
-.field public A01:Ljava/lang/Object;
-
-.field public final A02:I
+# static fields
+.field public static final A00:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    iput p2, p0, LX/1nK;->A02:I
+    const-string/jumbo v0, "[-_./;:]"
 
     .line 1
     .line 2
-    iput-object p1, p0, LX/1nK;->A00:Ljava/lang/Object;
-
     .line 3
-    .line 4
-    iput-object p3, p0, LX/1nK;->A01:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
+    .line 4
     .line 5
     .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
     .line 7
+    sput-object v0, LX/1nk;->A00:Ljava/util/regex/Pattern;
+
     .line 8
     .line 9
     return-void
 .end method
 
-
-# virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+.method public static A00(Ljava/lang/String;)I
+    .locals 5
 
     .line 0
-    iget v0, p0, LX/1nK;->A02:I
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     .line 1
     .line 2
-    packed-switch v0, :pswitch_data_0
-
     .line 3
+    move-result v4
+
     .line 4
+    const/4 v3, 0x0
+
     .line 5
-    iget-object v1, p0, LX/1nK;->A01:Ljava/lang/Object;
+    const/4 v1, 0x0
 
     .line 6
+    :goto_0
+    if-ge v3, v4, :cond_0
+
     .line 7
-    check-cast v1, Lcom/facebook/arstudio/player/model/EffectFile;
-
     .line 8
-    .line 9
-    iget-object v0, p0, LX/1nK;->A00:Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
+    .line 9
     .line 10
     .line 11
-    check-cast v0, LX/2eB;
+    move-result v2
 
     .line 12
+    const/16 v0, 0x39
+
     .line 13
-    iget-object v0, v0, LX/2eB;->A01:Lcom/facebook/arstudio/player/MsqrdEffectListFragment;
-
     .line 14
-    .line 15
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    if-gt v2, v0, :cond_0
 
+    .line 15
     .line 16
+    const/16 v0, 0x30
+
     .line 17
     .line 18
-    move-result-object v2
+    if-lt v2, v0, :cond_0
 
     .line 19
-    :goto_0
-    const-class v0, Lcom/facebook/arstudio/player/EffectInfoActivity;
-
     .line 20
-    .line 21
-    invoke-static {v2, v1, v0}, Lcom/facebook/arstudio/player/model/EffectFile;->A00(Landroid/content/Context;Lcom/facebook/arstudio/player/model/EffectFile;Ljava/lang/Class;)Landroid/content/Intent;
+    mul-int/lit8 v1, v1, 0xa
 
+    .line 21
     .line 22
+    add-int/lit8 v0, v2, -0x30
+
     .line 23
     .line 24
-    move-result-object v1
+    add-int/2addr v1, v0
 
     .line 25
-    invoke-static {}, LX/0Yf;->A0K()LX/01m;
+    add-int/lit8 v3, v3, 0x1
 
     .line 26
     .line 27
+    goto :goto_0
+
     .line 28
-    move-result-object v0
+    :cond_0
+    return v1
+.end method
+
+.method public static A01(Ljava/lang/String;)LX/1RP;
+    .locals 7
+
+    .line 0
+    const-string v0, "2.2.3"
+
+    .line 1
+    .line 2
+    const/4 v5, 0x0
+
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    .line 8
+    .line 9
+    .line 10
+    move-result v0
+
+    .line 11
+    if-nez v0, :cond_0
+
+    .line 12
+    .line 13
+    return-object v5
+
+    .line 14
+    :cond_0
+    sget-object v0, LX/1nk;->A00:Ljava/util/regex/Pattern;
+
+    .line 15
+    .line 16
+    invoke-virtual {v0, v1}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
+
+    .line 17
+    .line 18
+    .line 19
+    move-result-object v2
+
+    .line 20
+    const/4 v6, 0x0
+
+    .line 21
+    aget-object v0, v2, v6
+
+    .line 22
+    .line 23
+    invoke-static {v0}, LX/1nk;->A00(Ljava/lang/String;)I
+
+    .line 24
+    .line 25
+    .line 26
+    move-result v3
+
+    .line 27
+    array-length v1, v2
+
+    .line 28
+    const/4 v0, 0x1
 
     .line 29
-    invoke-virtual {v0, v2, v1}, LX/0Ic;->A05(Landroid/content/Context;Landroid/content/Intent;)Z
+    if-le v1, v0, :cond_2
 
     .line 30
     .line 31
-    .line 32
-    :goto_1
-    const/4 v0, 0x1
+    aget-object v0, v2, v0
 
+    .line 32
     .line 33
-    return v0
+    invoke-static {v0}, LX/1nk;->A00(Ljava/lang/String;)I
 
     .line 34
-    :pswitch_0
-    iget-object v0, p0, LX/1nK;->A00:Ljava/lang/Object;
-
     .line 35
     .line 36
-    check-cast v0, Lcom/facebook/arstudio/player/EffectInfoActivity;
+    move-result v4
 
     .line 37
+    const/4 v0, 0x2
+
     .line 38
-    iget-object v0, v0, Lcom/facebook/arstudio/player/EffectInfoActivity;->A06:LX/0Na;
+    if-le v1, v0, :cond_1
 
     .line 39
     .line 40
-    invoke-static {v0}, LX/0Yg;->A0L(LX/0Na;)Lcom/facebook/prefs/shared/FbSharedPreferences;
+    aget-object v0, v2, v0
 
     .line 41
     .line 42
+    invoke-static {v0}, LX/1nk;->A00(Ljava/lang/String;)I
+
     .line 43
-    move-result-object v2
-
     .line 44
-    iget-object v1, p0, LX/1nK;->A01:Ljava/lang/Object;
-
     .line 45
+    move-result v6
+
     .line 46
-    new-instance v0, Lcom/google/common/collect/SingletonImmutableSet;
+    const/4 v0, 0x3
 
     .line 47
-    .line 48
-    invoke-direct {v0, v1}, Lcom/google/common/collect/SingletonImmutableSet;-><init>(Ljava/lang/Object;)V
+    if-le v1, v0, :cond_1
 
+    .line 48
     .line 49
+    aget-object v5, v2, v0
+
     .line 50
     .line 51
-    invoke-interface {v2, v0}, Lcom/facebook/prefs/shared/FbSharedPreferences;->A6w(Ljava/util/Set;)V
+    :cond_1
+    :goto_0
+    new-instance v2, LX/1RP;
 
     .line 52
     .line 53
+    invoke-direct/range {v2 .. v7}, LX/1RP;-><init>(IILjava/lang/String;ILjava/lang/String;)V
+
     .line 54
-    goto :goto_1
-
     .line 55
-    :pswitch_1
-    iget-object v1, p0, LX/1nK;->A01:Ljava/lang/Object;
-
     .line 56
+    return-object v2
+
     .line 57
-    check-cast v1, Lcom/facebook/arstudio/player/model/EffectFile;
+    :cond_2
+    const/4 v4, 0x0
 
     .line 58
-    .line 59
-    iget-object v0, p0, LX/1nK;->A00:Ljava/lang/Object;
-
-    .line 60
-    .line 61
-    check-cast v0, LX/2eC;
-
-    .line 62
-    .line 63
-    iget-object v2, v0, LX/2eC;->A01:Lcom/facebook/arstudio/player/EffectHistoryActivity;
-
-    .line 64
-    .line 65
     goto :goto_0
-
-    .line 66
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

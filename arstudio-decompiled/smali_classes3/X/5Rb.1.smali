@@ -1,89 +1,76 @@
-.class public final LX/5Rb;
+.class public final synthetic LX/5Rb;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static A00:Ljava/util/ArrayList;
+.field public static final __redex_internal_original_name:Ljava/lang/String; = "MediaSourceList$ForwardingEventListener$$ExternalSyntheticLambda7"
+
+
+# instance fields
+.field public final synthetic A00:Landroid/util/Pair;
+
+.field public final synthetic A01:LX/5RQ;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Landroid/util/Pair;LX/5RQ;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    .line 2
-    .line 3
+    iput-object p2, p0, LX/5Rb;->A01:LX/5RQ;
+
+    iput-object p1, p0, LX/5Rb;->A00:Landroid/util/Pair;
+
     return-void
 .end method
 
-.method public static A00(Ljava/lang/Throwable;)V
-    .locals 3
+
+# virtual methods
+.method public final run()V
+    .locals 4
 
     .line 0
-    const-class v2, LX/5Rb;
+    iget-object v0, p0, LX/5Rb;->A01:LX/5RQ;
 
     .line 1
     .line 2
-    monitor-enter v2
+    iget-object v3, p0, LX/5Rb;->A00:Landroid/util/Pair;
 
     .line 3
-    :try_start_0
-    sget-object v1, LX/5Rb;->A00:Ljava/util/ArrayList;
-
     .line 4
+    iget-object v0, v0, LX/5RQ;->A01:LX/5Q9;
+
     .line 5
-    if-nez v1, :cond_0
-
     .line 6
-    .line 7
-    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+    iget-object v2, v0, LX/5Q9;->A04:LX/5OE;
 
+    .line 7
     .line 8
+    invoke-static {v3}, LX/432;->A05(Landroid/util/Pair;)I
+
     .line 9
     .line 10
-    move-result-object v1
-
     .line 11
-    sput-object v1, LX/5Rb;->A00:Ljava/util/ArrayList;
+    move-result v1
 
     .line 12
+    iget-object v0, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
+
     .line 13
-    :cond_0
-    new-instance v0, LX/5Rg;
-
     .line 14
-    .line 15
-    invoke-direct {v0, p0}, LX/5Rg;-><init>(Ljava/lang/Throwable;)V
+    check-cast v0, LX/5RP;
 
+    .line 15
     .line 16
+    invoke-interface {v2, v0, v1}, LX/5M9;->AVi(LX/5RP;I)V
+
     .line 17
     .line 18
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
     .line 19
-    .line 20
-    .line 21
-    monitor-exit v2
-
-    .line 22
     return-void
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 23
-    :catchall_0
-    move-exception v0
-
-    .line 24
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 25
-    throw v0
 .end method

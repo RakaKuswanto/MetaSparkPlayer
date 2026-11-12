@@ -1,14 +1,14 @@
 .class public final Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;
-.super LX/5Vj;
+.super LX/68F;
 .source ""
 
 
 # static fields
-.field public static final Companion:LX/6HI;
+.field public static final Companion:LX/4Au;
 
-.field public static final HAIR_SEGMENTATION_SERVICE_TYPE_KEY:LX/5TT;
+.field public static final HAIR_SEGMENTATION_SERVICE_TYPE_KEY:LX/67w;
 
-.field public static final PERSON_SEGMENTATION_SERVICE_TYPE_KEY:LX/5TT;
+.field public static final PERSON_SEGMENTATION_SERVICE_TYPE_KEY:LX/67w;
 
 
 # instance fields
@@ -26,20 +26,20 @@
     .locals 3
 
     .line 0
-    new-instance v0, LX/6HI;
+    new-instance v0, LX/4Au;
 
     .line 1
     .line 2
-    invoke-direct {v0}, LX/6HI;-><init>()V
+    invoke-direct {v0}, LX/4Au;-><init>()V
 
     .line 3
     .line 4
     .line 5
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->Companion:LX/6HI;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->Companion:LX/4Au;
 
     .line 6
     .line 7
-    sget-object v2, LX/5Tk;->PersonSegmentationDataProvider:LX/5Tk;
+    sget-object v2, LX/63t;->PersonSegmentationDataProvider:LX/63t;
 
     .line 8
     .line 9
@@ -47,20 +47,20 @@
 
     .line 10
     .line 11
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 12
     .line 13
-    invoke-direct {v0, v2, v1}, LX/5TT;-><init>(LX/5Tk;Ljava/lang/String;)V
+    invoke-direct {v0, v2, v1}, LX/67w;-><init>(LX/63t;Ljava/lang/String;)V
 
     .line 14
     .line 15
     .line 16
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->PERSON_SEGMENTATION_SERVICE_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->PERSON_SEGMENTATION_SERVICE_TYPE_KEY:LX/67w;
 
     .line 17
     .line 18
-    sget-object v2, LX/5Tk;->HairSegmentationDataProvider:LX/5Tk;
+    sget-object v2, LX/63t;->HairSegmentationDataProvider:LX/63t;
 
     .line 19
     .line 20
@@ -68,16 +68,16 @@
 
     .line 21
     .line 22
-    new-instance v0, LX/5TT;
+    new-instance v0, LX/67w;
 
     .line 23
     .line 24
-    invoke-direct {v0, v2, v1}, LX/5TT;-><init>(LX/5Tk;Ljava/lang/String;)V
+    invoke-direct {v0, v2, v1}, LX/67w;-><init>(LX/63t;Ljava/lang/String;)V
 
     .line 25
     .line 26
     .line 27
-    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->HAIR_SEGMENTATION_SERVICE_TYPE_KEY:LX/5TT;
+    sput-object v0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->HAIR_SEGMENTATION_SERVICE_TYPE_KEY:LX/67w;
 
     .line 28
     .line 29
@@ -88,7 +88,7 @@
     .locals 1
 
     .line 0
-    invoke-static {p1, p2}, LX/0Yc;->A0M(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, LX/0X1;->A0z(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 1
     .line 2
@@ -115,7 +115,7 @@
     const/4 v0, 0x1
 
     .line 268435459
-    invoke-static {p1, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p1, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 268435460
     .line 268435461
@@ -127,12 +127,12 @@
     const/4 v0, 0x2
 
     .line 268435465
-    invoke-static {p2, v0}, LX/0PS;->A08(Ljava/lang/Object;I)V
+    invoke-static {p2, v0}, LX/0WV;->A08(Ljava/lang/Object;I)V
 
     .line 268435466
     .line 268435467
     .line 268435468
-    invoke-direct {p0}, LX/5Vj;-><init>()V
+    invoke-direct {p0}, LX/68F;-><init>()V
 
     .line 268435469
     .line 268435470
@@ -149,7 +149,7 @@
 
     .line 268435476
     .line 268435477
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 268435478
     .line 268435479
@@ -166,12 +166,12 @@
     .line 268435484
     .line 268435485
     .line 268435486
-    invoke-static {v1, v3}, LX/4BF;->A1L(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {v1, v3}, LX/433;->A1N(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 268435487
     .line 268435488
     .line 268435489
-    invoke-static {p1, v1}, LX/001;->A0B(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+    invoke-static {p1, v1}, LX/001;->A0C(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
     .line 268435490
     .line 268435491
@@ -195,7 +195,7 @@
 
     .line 268435499
     .line 268435500
-    invoke-static {}, LX/001;->A0R()Ljava/lang/StringBuilder;
+    invoke-static {}, LX/001;->A0W()Ljava/lang/StringBuilder;
 
     .line 268435501
     .line 268435502
@@ -212,12 +212,12 @@
     .line 268435507
     .line 268435508
     .line 268435509
-    invoke-static {v1, v2}, LX/4BF;->A1L(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    invoke-static {v1, v2}, LX/433;->A1N(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 268435510
     .line 268435511
     .line 268435512
-    invoke-static {p2, v1}, LX/001;->A0B(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
+    invoke-static {p2, v1}, LX/001;->A0C(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/IllegalArgumentException;
 
     .line 268435513
     .line 268435514
@@ -251,24 +251,16 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationRoIDataSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
-    .line 536870912
     and-int/lit8 v0, p5, 0x8
 
-    .line 536870913
-    .line 536870914
     if-eqz v0, :cond_0
 
-    .line 536870915
-    .line 536870916
     const/4 p4, 0x0
 
-    .line 536870917
+    .line 537656246
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;-><init>(Ljava/lang/String;Ljava/lang/String;ZLcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationRoIDataSource;)V
 
-    .line 536870918
-    .line 536870919
-    .line 536870920
     return-void
 .end method
 
@@ -300,10 +292,9 @@
     .locals 1
 
     .line 0
-    iget-object v0, p0, Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationDataProviderConfiguration;->roIDataSource:Lcom/facebook/cameracore/mediapipeline/dataproviders/segmentation/interfaces/SegmentationRoIDataSource;
+    const/4 v0, 0x0
 
     .line 1
-    .line 2
     return-object v0
 .end method
 

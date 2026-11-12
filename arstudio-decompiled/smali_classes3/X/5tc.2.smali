@@ -1,14 +1,21 @@
-.class public interface abstract LX/5tc;
-.super Ljava/lang/Object;
+.class public final LX/5tC;
+.super LX/5t6;
 .source ""
 
 
-# virtual methods
-.method public abstract clear()V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.method public abstract offer(Ljava/lang/Object;)Z
-.end method
+    .line 0
+    const-string v0, "No cameras found on device"
 
-.method public abstract poll()Ljava/lang/Object;
+    .line 1
+    .line 2
+    invoke-direct {p0, v0}, LX/5t6;-><init>(Ljava/lang/String;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
 .end method

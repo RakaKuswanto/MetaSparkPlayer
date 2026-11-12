@@ -1,28 +1,32 @@
-.class public final LX/3J0;
+.class public abstract LX/3J0;
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements LX/3HN;
+
+# static fields
+.field public static final A00:LX/0lu;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, LX/2I6;->A3E:I
 
     .line 1
     .line 2
+    invoke-static {v0}, LX/0lN;->A00(I)LX/0lu;
+
     .line 3
-    return-void
-.end method
+    .line 4
+    .line 5
+    move-result-object v0
 
+    .line 6
+    sput-object v0, LX/3J0;->A00:LX/0lu;
 
-# virtual methods
-.method public final close()V
-    .locals 0
-
+    .line 7
+    .line 8
     return-void
 .end method
